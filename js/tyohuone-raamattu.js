@@ -210,7 +210,11 @@ export const RAAMATTU = {
           + 'viela oikeassa pelissa. Paasessio hoitaa Fablen tiedotuksen. '
           + 'Pulun pysyva aanivalinta 12.9.2026: Flicker - cheerful fairy & '
           + 'sparkly sweetness, voice_id piI8Kku0DcvcL6TTSeQt, moottori '
-          + 'eleven_v3. Horation aani ei muutu.',
+          + 'eleven_v3. Horation aani ei muutu. Hahmojen osuuksien '
+          + 'pituus saa vaihdella kaupungittain, mutta kaupunkiparin '
+          + 'kokonaispituus EI KASVA. Livian persoona nakyy sanoissa, '
+          + 'ei vain tageissa; hieman pidempi Pulu sovitetaan parin '
+          + 'yhteiseen mittaan Horation oivallukset sailyttaen.',
         'PAAHAHMO ON NIMETON PERILLINEN (omistajan paatos 28.8.2026 '
           + 'ilta, inventaarion jalkeen): pelaajan etunimea ja '
           + 'sukupuolta ei koskaan paljasteta - peli on samaistuttava '

@@ -722,8 +722,10 @@ Nykytila ja ehdotukset (päätoimittaja päättää; kaanonia ei muuteta tääll
 
 Taulukon merkkimäärät ja kestot ovat toteutuneen aineiston teknistä
 inventointia, eivät uusiin kaupunkipareihin sovellettava kiintiö.
-Horatio–Livia-tuotantomoduulin mukaan Pulun vastausta pidennetään yleensä
-noin yhdellä luontevalla lauseella ja yhteispituus arvioidaan kuuntelemalla.
+Horatio–Livia-tuotantomoduulin mukaan hahmojen osuuksien suhde saa
+vaihdella, mutta kaupunkiparin kokonaispituus ei kasva. Pulun hieman
+pidempi ja elävämpi puheenvuoro sovitetaan isoisän osuuteen yhteisen
+tekstimitan ja lopullisen mitatun kuuntelukeston mukaan, ei lausekiintiöllä.
 Kuiva ajo saa yhä raportoida merkkimäärät ja ajoitusriskit: pitkä kupla
 seisoo ruudulla pitkään, vaikka kupla odottaa puheen loppuun eikä katkaise
 lausetta.

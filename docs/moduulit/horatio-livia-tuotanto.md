@@ -81,15 +81,32 @@ Puhe on ymmärrettävää ja rentoa; vakiintuneet minä/sinä-pronominit säilyv
 Juorut, jännitys, rakkaus ja epävarmuus ovat vaihtelun aineksia, eivät
 kaikkien repliikkien pakollinen tarkistuslista.
 
+Omistajan 12.9.2026 hyväksymä elävöityssuunta: Livian persoona näkyy jo
+sanoissa, ei vasta TTS-tageissa. Hänelle annetaan tilaa yhdelle omalle
+kokemukselle, innostumiselle, pienelle harhautumiselle, haikeudelle tai
+epävarmuudelle. Lisäajatus voi pidentää hänen osuuttaan hieman, kun se
+mahtuu parin yhteiseen mittaan. Myös rauhallinen, lämmin Pulu on sama
+helposti innostuva hahmo; joka kaupunkiin ei pakoteta samaa mininäytelmää.
+
 ## Kuuntelun ja kuvatekstien pituus
 
-Isoisän tekstiä tiivistetään yleensä noin kahdella lauseella toistosta
-ja oivalluksen ympäriltä. Lyhyttä merkintää ei rikota lausekiintiön vuoksi.
-Pulun vastausta elävöitetään ja pidennetään yleensä noin yhdellä luontevalla
-lauseella. Tavoite ei ole pidempi kokonaisluenta: näkökulman ja äänen
-vaihto palauttaa kiinnostuksen, ja yhteispituus testataan kuuntelemalla.
-Vanhat 85/125 merkin tuotantokiintiöt eivät ohita tätä toimituksellista
-ohjetta; käyttöliittymän todelliset tekniset rajat tarkistetaan erikseen.
+Omistajan täsmennys 12.9.2026: isoisän ja Pulun osuuksien pituus saa
+vaihdella, mutta niiden KAUPUNKIKOHTAINEN KOKONAISPITUUS EI KASVA.
+Yhteinen mitta jaetaan sisällön mukaan: toisessa kaupungissa Horatio saa
+enemmän tilaa, toisessa Livia. Jos Pulu tarvitsee lisää tilaa, isoisän
+osuudesta tiivistetään toistoa ja oivalluksen ympäriltä. Hyvä oivallus
+säilyy. Erillisiä lausekiintiöitä tai kaikille samaa jakosuhdetta ei ole.
+
+Kaupunkikorttiin kirjataan vertailun lähtöversio sekä molempien tekstien
+ja summan ennen/jälkeen-sana- ja merkkimäärät. Vertailussa ovat saman
+kaupungin samat puheenvuorot, eivät eri kaupungit tai koko maanosan
+keskiarvot. Lukukatselmuksessa arvioidaan todellinen yhteinen tekstimitta;
+lopullinen kuuntelukesto varmennetaan vasta valmiista äänistä taukoineen
+ja puhujanvaihtoineen. Arvioita ei väitetä mitatuiksi sekunneiksi.
+Pelkkä välimerkkien yhdistäminen ei lyhennä puhetta, eikä puhenopeuden
+nostaminen ole kiertotie yhteismittaan. Vanhat 85/125 merkin
+tuotantokiintiöt eivät ohita tätä sääntöä; käyttöliittymän todelliset
+tekniset rajat ja pidemmän Pulun osuuden mobiililuettavuus tarkistetaan.
 
 - Lyhyt näkyvä kuvateksti: noin yksi lyhyt lause, ei lähdemerkintää.
   Aiempi noin 100 merkin ohje tukee nopeaa luettavuutta.
@@ -165,7 +182,8 @@ pilotin alussa nykyistä dataa hyödyntäen, ei uutta irrallista tietokantaa:
    lähde/tekijä/lisenssi, tiedostoversio ja hyväksyntä;
 5. reaktiot: pysyvä cueId, puhuja, täsmällinen tekstiankkuri/esiintymä,
    tavoiteltu tunne ja voimakkuus, eletoive, prioriteetti ja palautuminen;
-6. lopullinen ääniversio ja tekstitiiviste, kohdistustulos sekä testien tila;
+6. kaupunkiparin lähtöversio, molempien ja summan ennen/jälkeen-mitat,
+   lopullinen ääniversio ja tekstitiiviste, kohdistustulos sekä testien tila;
 7. seuraava siirto, tekijä ja mahdollinen este, jotta uusi sessio voi jatkaa.
 
 ### Fablelle yksi valmis julkaisuehdokas
@@ -180,9 +198,10 @@ animaatiot sekä yhteistestit. Mukaan tulee lyhyt käyttöönotto-ohje,
 palautussuunnitelma ja mahdolliset aidot puutteet.
 
 Fablen tavoiteltu työ on lopputarkistus, yhdistäminen ja julkaisu.
-Pulun äänenvalinta on tehty; mahdollisesti puuttuvaa maksullisen ajon
-lupaa ei arvata tämän tavoitteen vuoksi. Valmistellaan täsmällinen
-ajopaketti ja ilmoitetaan vain tarvittava ajovaihe. Äänetön tai vanhalla
+Pulun äänenvalinta on tehty; äänen valinta EI ole lupa generointiin.
+Maksulliset ääni- ja kuvageneroinnit tarvitsevat erillisen omistajan
+ajoluvan. Valmistellaan täsmällinen ajopaketti ja ilmoitetaan vain
+tarvittava ajovaihe. Äänetön tai vanhalla
 äänellä varustettu keskeneräinen ehdokas ei ole valmis yhteispaketti.
 Pääsessio hoitaa Fablen tiedotuksen; omistajan ei tarvitse välittää
 samoja ohjeita käsin.
