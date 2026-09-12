@@ -3237,6 +3237,16 @@ function avaaIsokuvaPaallys(ui, city, pohjakuva) {
  */
 function avaaIsoisanSarja(ui, city, pohjakuvat) {
   if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return false;
+  /*
+   * MERKINTÄ SIITÄ, ETTÄ SARJA ON OIKEASTI OLLUT RUUDULLA. Pulun
+   * myöhästynyt sarja (aloitaMyohastynytPuluSarja) saa avata oman
+   * päällyksensä VAIN saapumisen kulussa — eli kun isoisän kuvat on
+   * jo nähty. Ilman tätä porttia jokainen suora pakan nosto
+   * (naytaPulunKuvapakka ilman sarjaa) avaisi ison keskisarjan, ja
+   * kartan oma pakka jäisi nousematta.
+   */
+  ui.isoisanSarjaAjettu ??= new Set();
+  ui.isoisanSarjaAjettu.add(sarjanAvain(ui, city));
   const tila = avaaIsokuvaPaallys(ui, city, pohjakuvat[0]);
   const { aja, vaihda, ajastimet } = tila;
 
@@ -3331,6 +3341,11 @@ export function naytaLuentakuvasarja(ui, city) {
   return true;
 }
 
+/** Sarjan muistiavain: lauta ja kaupunki, kuten saapumiskuplalla. */
+function sarjanAvain(ui, city) {
+  return ui?.game?.pack ? `${ui.game.pack.id}:${city.id}` : city.id;
+}
+
 /** Kuinka usein kysytään, onko isoisän luenta jo alkanut. */
 const SARJAN_ALKUVAHTI_MS = 200;
 
@@ -3392,10 +3407,16 @@ export function aloitaPuluCamSarja(ui, city) {
    * kuin kerran (pakan nosto kutsuu samaa funktiota), ja ilman muistia
    * pulun kuvat lähtisivät toiselle kierrokselle pakan noston jälkeen.
    */
-  const avain = ui.game?.pack ? `${ui.game.pack.id}:${kaupunki.id}` : kaupunki.id;
+  const avain = sarjanAvain(ui, kaupunki);
   ui.puluCamSarjaNaytetty ??= new Set();
   if (ui.puluCamSarjaNaytetty.has(avain)) return false;
-  const tila = kesken ?? aloitaMyohastynytPuluSarja(ui, kaupunki);
+  /*
+   * MYÖHÄSTYNYT SARJA VAIN SAAPUMISEN KULUSSA. Jos isoisän sarjaa ei
+   * ole ollut ruudulla, tämä kutsu on tavallinen pakan nosto (kartan
+   * oma polku) eikä pulun kuvien iso vuoro — silloin ei avata mitään.
+   */
+  const tila = kesken
+    ?? (ui.isoisanSarjaAjettu?.has(avain) ? aloitaMyohastynytPuluSarja(ui, kaupunki) : null);
   if (!tila) return false;
   tila.puluAlkoi = true;
   ui.puluCamSarjaNaytetty.add(avain);
