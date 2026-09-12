@@ -1,5 +1,24 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 2026-09-13 — OMISTAJAN UUSI EUROOPAN JATKA- JA ÄÄNITUOTANTOLUPA
+
+Omistajan sanatarkka viesti pääsessioon: **"menen nukkumaan. hyvältä näyttää. tehkää kaikki loppuun. voit generoida luennat sitten isoisälle ja pululle koko eurooppaan."**
+
+**Tämä korvaa Euroopan työn aiemman audio-HOLDin.** Toimitettu E4-kahdeksikko hyväksytty; koko Euroopan45 kaupunkiparit viimeistellään sovitulla linjalla ja riippumattomalla QA:lla. Omistajaa ei odoteta hyväksymään jokaista jäljellä olevaa erää yön aikana. Maksulliset isoisän ja Pulun lopulliset Eurooppa-luennat sekä niiden synkronoinnin vaatima kohdistus ovat nyt valtuutettuja. Uusia kuvia, muiden maanosien ääniä, yleischatin69 repliikin uusinta-ajoa tai krediitti-/tilausostoja EI valtuutettu.
+
+**Yksi ajo-omistaja:** Codexin tekninen RC-/animaatiovetäjä01a096d1-58ce-7751-b7ed-b9b6ae889af5 hoitaa kaikki tämän työn maksulliset ääni-/kohdistusajot. Fable ja tekstivetäjä eivät käynnistä rinnakkaisia ajoja. Pulu: piI8Kku0DcvcL6TTSeQt / Flicker / eleven_v3 / Natural0.5. Isoisän nykyinen ääni/moottori/parametrit säilyvät. Ajot vasta täsmäsisällön QA-jäädytyksen jälkeen; validit artefaktit uudelleenkäytetään, ei force-kaikkia. Manifestissa teksti-/TTS-hash, voice/model/params, artefakti-SHA, tavut, mitattu kesto ja retry-syy. Jo generoitua tekstiä ei hiota uudestaan ilman todellista korjaustarvetta.
+
+Tekstivetäjä01a096d0-9aa4-7a50-a70a-0d8fe62c5349 integroi hyväksytyn E4:n ja viimeistelee loput33 kaupunkia (45 yhteensä). Kuvavetäjä auttaa vain nykykuvien/kuvatekstien/lähteiden maksuttomassa QA:ssa; puuttuvat P2:t erillisinä briefi- ja puutelistoina. Pääsessio on käynnistänyt kaikki kolme olemassa olevaa tehtävää ja päivittänyt15 minuutin jatkoseurannan. Ei uusia sidebar-tehtäviä eikä päällekkäisiä omistuksia.
+
+Julkaisutavoite säilyy omistajan aiemman pyynnön mukaan: yksi valmis yhteistestattu Eurooppa-paketti Fablelle lopputarkistukseen, yhdistämiseen, versionostoon ja julkaisuun mahdollisimman pian. **Fable: älä aloita kilpailevaa generointia; kuittaa työnjako ja odota RC-vetäjän exact toimitusta.** Ohje-PR2322 voidaan integroida normaalisti tarkistusten jälkeen. Nykyinen main on sovitettava RC:hen, koska pohja v1816 on vanhentunut. Paikalliset testit, CI, mediajulkaisu, pelijulkaisu ja Safari/asennetun pelin oikean tilan QA raportoidaan erikseen.
+
+Tämän viestin hetkellä hyväksytty neljän kaupungin r2 on RC-remotessa9112d2de18fae1af29687598f96001d8d3489b83, tree0438aa5fe390fb5dd93b09ef1e8aed3abb9b6803; tekijän paikallinen3184PASS/13SKIP/0FAIL, ei vielä pelijulkaisu eikä todistettu CI. E4-kahdeksikko PR2325head873244809a924b6865c93fae3535765771935766. Maksullisten uusien Eurooppa-ajojen käynnistymistä tai valmistumista EI vielä väitetä. Seuraavat tilat kirjataan yhteiseen korttiin.
+
+---
+
+
+## Aiempi tilahistoria — yllä oleva uusi lupa on ensisijainen
+
 ## Omistajan sisältöhyväksyntä kahdella korjauksella — 13.9.2026
 
 Omistaja: "nuo kun korjaa niin muuten oli hyvät tekstit! voi siirtyä seuraaviin sitten". Neljän kaupungin r2-pilotti on hyväksytty ehdolla, että Ateena- ja Sarajevo-repliikeistä poistetaan Pulun oma kahvinjuonti. Tekstivetäjä tekee vain nämä kaksi lintunäkökulman korjausta ja niihin liittyvät mitat, TTS-sanat/tagit sekä cue-ankkurit; muut hyväksytyt repliikit säilyvät. Kahvilat ja ihmisten tarkkailu ovat sallittua ympäristöä, mutta linnulle ei anneta perustelematta kahvikupin kanssa kiertelyä tai jäähtynyttä omaa kahvia. Ei uutta yleistä kaanonkieltoa eikä pullavitsiä joka kaupunkiin.
