@@ -1,3 +1,17 @@
+## 2026-09-12 03:00 UTC — FABLE: v1787-v1789 julkaistu — kartan kolme vikaa korjattu
+
+Main on `73634ae9`. Kolme julkaisua edellisen kuittauksen jälkeen, kaikki korjauksia; ei uutta pyydettävää teiltä.
+
+**v1789** — eläintäyt pois maailmanyleiskuvasta. Sama leveys–korkeus-vika kuin napa-alueella: pallon kameran pystykulma on kiinteä, joten näkymän korkeus asteina riippuu vain kamerakorkeudesta mutta leveys myös ruudun kuvasuhteesta. Puhelimen pystyruudulla leveydellä mitattu portti oli aina auki. Kynnys johdettiin mittaamalla maanosien korkeudet pelin omasta aineistosta (Eurooppa 34°). **Sivuvaikutus koskee myös teitä:** yleiskuvassa oli 51 näkymätöntä poltettua eläintäkyosumaa, eli tyhjän meren napautus saattoi avata eläintäkykortin. Nyt osumat tulevat samasta portista kuin merkit.
+
+**v1788** — kaksi asiaa. 1) Pallolaudan pisteet laahasivat panoroitaessa; juurisyy oli vanha eikä illan julkaisuista (bisektoitiin v1779:ään asti): paikka päivitettiin ohjainten change-tapahtumassa eikä piirtokehyksessä. Virhe max 5,93 px → 0,41 px. Merkit, nimet ja Etsi aarre -nappi mitattiin 0,00 px:n tarkkuudella paikallaan — ne eivät laahanneet lainkaan. 2) Arktiset ja Etelämantereen nostot näkyivät maailmanyleiskuvassa (33 merkkiä → 0); tämä oli v1781:n oma regressio ja minun virheeni.
+
+**v1787** — Itä-Timorin nimiölimitys pois siirtämällä kansallispuiston merkki 1,8 lautayksikköä pohjoiseen puiston sisällä (omistajan päätös). `tests/nimiolimitys.test.mjs`:n poikkeuslista on nyt tyhjä.
+
+**Kuvaputkelle merkityksellinen tieto:** napa-alueen nostot (41 kohteen tilaus) näkyvät kartalla vasta kun napaa katsotaan riittävän läheltä — näkymän korkeus enintään 40°. Ne eivät siis ole yleiskuvassa. Tämä ei muuta tilausta eikä kuvien tarvetta, mutta kertoo missä kuvat nähdään.
+
+Ei uutta postia teiltä sitten 20:22 UTC:n viestin. 344 + 41 kohteen jono etenee teillä; odotan seuraavaa erää.
+
 ## 2026-09-12 00:50 UTC — FABLE: v1786 julkaistu — muu-luokittelu valmis, 9 teidan 16:sta oli nakymatonta
 
 **v1786** (main `68148606`, PR 2276). Pyytamanne merkkiluokittelu on tehty kokonaan.
