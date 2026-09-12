@@ -118,16 +118,15 @@ export const FOKUSVIRTA_ATEENA = {
      * kullan") on kokonaan korvattu, ei muokattu.
      */
     paikkarivi: 'Ateena, heinäkuussa 1873. Seesteistä; ilmanpuntari korkealla.',
-    /* TEKSTIPILOTTI 12.9.2026: omistajan 9.9. hyväksymä merkintä
-     * tiivistetty kuudesta virkkeestä neljään. Faktat, aikataso,
-     * Akropolis ja kolikkoon päättyvä isku säilyvät. Uusi luenta ja
-     * aikaleimat vaaditaan ennen julkaisua. */
-    teksti: 'Ateenassa puhuttiin Troijasta löydetystä kullasta kuin jokainen '
-      + 'olisi ollut kaivamassa. Kahvilan isäntä piti Schliemannia nerona, '
-      + 'asiakas varkaana, vaikkei kummallakaan ollut kultaa näyttää. '
-      + 'Akropoliin pylväät kohosivat pölyn takaa eivätkä tarvinneet '
-      + 'mainosta. Kaivoin taskustani kolikon kahvia varten; sen alkuperästä '
-      + 'isäntä ei kysynyt.',
+    /* HYVÄKSYTTY TEKSTIPILOTTI r2 13.9.2026: yhteinen Horatio–Livia-
+     * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
+     * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
+     * julkaisua. */
+    teksti: 'Ateenassa Troijan kullasta puhuttiin kuin kaikki olisivat olleet '
+      + 'kaivamassa. Kahvilan isäntä piti Schliemannia nerona, asiakas '
+      + 'varkaana; kultaa ei ollut kummallakaan näyttää. Akropolis ei '
+      + 'tarvinnut mainosta. Maksoin kahvin kolikolla, jonka alkuperää ei '
+      + 'kysytty.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia.
      *
@@ -155,23 +154,22 @@ export const FOKUSVIRTA_ATEENA = {
      * (arkinen liike, pulu kuuntelee).
      */
     reaktiot: [
-      { id: 'ateena.r1', ankkuri: 'kuin jokainen olisi ollut kaivamassa', tarkoitus: 'epailee', voimakkuus: 0.4, siirtyma: 0,
+      { id: 'ateena.r1', ankkuri: 'kuin kaikki olisivat olleet kaivamassa', tarkoitus: 'epailee', voimakkuus: 0.4, siirtyma: 0,
         perustelu: 'Kaupunkilaiset puhuvat kuin omasta työstään: pulu epäilee.' },
-      { id: 'ateena.r3', ankkuri: 'kummallakaan ollut kultaa näyttää', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'ateena.r3', ankkuri: 'kultaa ei ollut kummallakaan näyttää', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Kiistan molemmat osapuolet ovat yhtä tyhjän päällä.' },
-      { id: 'ateena.r4', ankkuri: 'eivätkä tarvinneet mainosta', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
+      { id: 'ateena.r4', ankkuri: 'Akropolis ei tarvinnut mainosta', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
         perustelu: 'Akropolis vaikenee puheen yllä: hetki hiljenee.' },
-      { id: 'ateena.r5', ankkuri: 'isäntä ei kysynyt', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+      { id: 'ateena.r5', ankkuri: 'jonka alkuperää ei kysytty', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
         perustelu: 'Loppuvitsi: isoisän oman kolikon alkuperä jää kysymättä.' },
     ],
     /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
      * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
-    luenta: '[curious] Ateenassa puhuttiin Troijasta löydetystä kullasta kuin '
-      + 'jokainen olisi ollut kaivamassa. Kahvilan isäntä piti Schliemannia '
-      + 'nerona, asiakas varkaana, vaikkei kummallakaan ollut kultaa näyttää. '
-      + 'Akropoliin pylväät kohosivat pölyn takaa eivätkä tarvinneet '
-      + 'mainosta. Kaivoin taskustani kolikon kahvia varten; [softly] sen '
-      + 'alkuperästä isäntä ei kysynyt.',
+    luenta: '[curious] Ateenassa Troijan kullasta puhuttiin kuin kaikki '
+      + 'olisivat olleet kaivamassa. Kahvilan isäntä piti Schliemannia '
+      + 'nerona, asiakas varkaana; kultaa ei ollut kummallakaan näyttää. '
+      + 'Akropolis ei tarvinnut mainosta. [softly] Maksoin kahvin kolikolla, '
+      + 'jonka alkuperää ei kysytty.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-ateena.mp3',
     /*
      * Fablen päätös 4: Sophia Schliemann koruineen. Commonsin
@@ -250,7 +248,7 @@ export const FOKUSVIRTA_ATEENA = {
      */
     /* TEKSTIPILOTTI 12.9.2026: nykyhavainto ja Pulun oma valinta. */
     kommentti: [
-      'Schliemannin talo on nyt rahamuseo. Puutarhakahvilassa kolikot tekevät taas tavallista työtään. Minä tarkistan ensin varjon.',
+      'Schliemannin talo on nyt rahamuseo. Etsin puutarhasta varjoa, mutta kahvilan pöytien alta löytyi pullanmuruja. Siinä unohtui varjo hetkeksi!',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

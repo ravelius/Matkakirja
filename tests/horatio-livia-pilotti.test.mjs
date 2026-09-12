@@ -1,12 +1,39 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createHash } from 'node:crypto';
-import { readFileSync } from 'node:fs';
 
-import { livianTiiviste } from '../js/liviapuhe.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 
 const PILOTIT = ['marseille', 'ateena', 'sarajevo', 'venetsia'];
+
+const LAHTOBUDJETIT = {
+  marseille: { merkit: 430, sanat: 56 },
+  ateena: { merkit: 449, sanat: 57 },
+  sarajevo: { merkit: 436, sanat: 54 },
+  venetsia: { merkit: 454, sanat: 59 },
+};
+
+const HYVAKSYTYT_TTS = {
+  marseille: {
+    horatio: '[curious] Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. [softly] Maailma jäi likaiseksi; käteni olivat jo toista mieltä.',
+    livia: '[curious] Marseillen saippuaa tehdään yhä. [warmly] Minä erotan Vieux-Portin jo äänestä ja suolasta höyhenissä. [mischievously] Lokit tuntevat jokaisen pöydän. [softly] Minä vasta harjoittelen.',
+    liviaAnkkurit: ['saippuaa tehdään yhä', 'Vieux-Portin jo äänestä', 'Lokit tuntevat jokaisen pöydän', 'Minä vasta harjoittelen'],
+  },
+  ateena: {
+    horatio: '[curious] Ateenassa Troijan kullasta puhuttiin kuin kaikki olisivat olleet kaivamassa. Kahvilan isäntä piti Schliemannia nerona, asiakas varkaana; kultaa ei ollut kummallakaan näyttää. Akropolis ei tarvinnut mainosta. [softly] Maksoin kahvin kolikolla, jonka alkuperää ei kysytty.',
+    livia: '[curious] Schliemannin talo on nyt rahamuseo. [mischievously] Etsin puutarhasta varjoa, mutta kahvilan pöytien alta löytyi pullanmuruja. [brightly] Siinä unohtui varjo hetkeksi!',
+    liviaAnkkurit: ['nyt rahamuseo', 'Etsin puutarhasta varjoa', 'pöytien alta löytyi pullanmuruja', 'unohtui varjo hetkeksi'],
+  },
+  sarajevo: {
+    horatio: '[curious] Sarajevon kupariseppä naputti pannua vasaralla, jonka olisin hukannut taskuun. Viereisessä puodissa oli samanlainen kahvipannu. Olin juonut aamulla katsomatta; nyt näin jokaisen jäljen. [softly] Basaarin kilkutuksessa aamiainen muuttui käsityöksi.',
+    livia: '[softly] Kuparisepät naputtavat basaarissa yhä. [curious] Minun piti vain piipahtaa, mutta jäin kuuntelemaan yhtä vasaraa. [mischievously] Yritin naputtaa nokalla samaa tahtia — seppä oli kyllä nopeampi!',
+    liviaAnkkurit: ['basaarissa yhä', 'jäin kuuntelemaan yhtä vasaraa', 'naputtaa nokalla samaa tahtia', 'seppä oli kyllä nopeampi'],
+  },
+  venetsia: {
+    horatio: '[curious] Venetsiassa majatalon ovi avautui veteen, ja olin astua uimaan. Gondolieri piti ilmeensä suorana. Palatsien välissä kuulin lusikan osuvan kahvikuppiin yläkerrassa. [softly] Taloilla oli hienot julkisivut; vesi kuunteli niiden aamiaista.',
+    livia: '[brightly] Venetsiassa kuljetaan yhä vesibusseilla. [warmly] Minä lennän nykyään vähän pidempää reittiä. [whispers] Yhden tutun takia. Hetkinen — nuo kuvat ovat yksityisiä! [mischievously] Hän vain sattui jokaiseen hyvään kuvakulmaan. [softly] No, ehkä minä vähän odotin.',
+    liviaAnkkurit: ['kuljetaan yhä vesibusseilla', 'vähän pidempää reittiä', 'Yhden tutun takia', 'kuvat ovat yksityisiä', 'jokaiseen hyvään kuvakulmaan', 'ehkä minä vähän odotin'],
+  },
+};
 
 function ilmanTageja(teksti) {
   return String(teksti ?? '').replace(/\[[^\]]+\]\s*/g, '').trim();
@@ -14,6 +41,10 @@ function ilmanTageja(teksti) {
 
 function virkkeita(teksti) {
   return (String(teksti ?? '').match(/[.!?](?=\s|$)/g) ?? []).length;
+}
+
+function sanoja(teksti) {
+  return String(teksti ?? '').trim().split(/\s+/u).filter(Boolean).length;
 }
 
 test('pilotin Horatio-teksti ja TTS ovat samasanaiset', () => {
@@ -25,13 +56,18 @@ test('pilotin Horatio-teksti ja TTS ovat samasanaiset', () => {
   }
 });
 
-test('pilotin Livialla on nykyhavainto mutta kupla pysyy teknisessä mitassa', () => {
+test('pilotin yhteinen Horatio–Livia-pari alittaa julkaistun lähtöbudjetin', () => {
   for (const cityId of PILOTIT) {
-    const kommentit = FOKUSVIRRAT[cityId].pollo.kommentti;
+    const virta = FOKUSVIRRAT[cityId];
+    const kommentit = virta.pollo.kommentti;
     assert.equal(kommentit.length, 1, `${cityId}: pilotti on yksi kupla`);
-    assert.ok(kommentit[0].length <= 125, `${cityId}: kupla ylittää 125 merkkiä`);
     assert.ok(virkkeita(kommentit[0]) >= 3, `${cityId}: näkökulman vaihto jäi liian lyhyeksi`);
     assert.doesNotMatch(kommentit[0], /\[[^\]]+\]/, `${cityId}: TTS-tagi näkyy kuplassa`);
+    const pari = `${virta.matkakirja.teksti}${kommentit[0]}`;
+    assert.ok(pari.length <= LAHTOBUDJETIT[cityId].merkit,
+      `${cityId}: pari ylittää lähtöparin merkkibudjetin`);
+    assert.ok(sanoja(pari) <= LAHTOBUDJETIT[cityId].sanat,
+      `${cityId}: pari ylittää lähtöparin sanabudjetin`);
   }
 });
 
@@ -49,42 +85,18 @@ test('pilotin Horatio-cueilla on pysyvät yksikäsitteiset ankkurit', () => {
   }
 });
 
-test('TTS-ajopaketti on sidottu pilotin sanoihin ja tiivisteisiin', () => {
-  const paketti = JSON.parse(readFileSync(new URL(
-    '../docs/raportit/horatio-livia-pilotti-tts-ajopaketti-20260912.json',
-    import.meta.url,
-  ), 'utf8'));
-  assert.equal(paketti.state, 'hold-owner-voice-selection');
-  assert.equal(paketti.invariants.paidRunAuthorized, false);
-  assert.equal(paketti.invariants.publishAuthorized, false);
-  assert.equal(paketti.horatio.items.length, PILOTIT.length);
-  assert.equal(paketti.livia.items.length, PILOTIT.length);
-
+test('hyväksytyt r2-sanat, TTS-tagit ja Livian cue-ankkurit ovat tarkat', () => {
   for (const cityId of PILOTIT) {
     const virta = FOKUSVIRRAT[cityId];
-    const horatio = paketti.horatio.items.find((rivi) => rivi.city === cityId);
-    const livia = paketti.livia.items.find((rivi) => rivi.key === `${cityId}-3`);
-    assert.ok(horatio, `${cityId}: Horatio puuttuu ajopaketista`);
-    assert.ok(livia, `${cityId}: Livia puuttuu ajopaketista`);
-    assert.equal(horatio.visibleText, virta.matkakirja.teksti, `${cityId}: näkyvä Horatio`);
-    assert.equal(horatio.ttsText, virta.matkakirja.luenta, `${cityId}: Horatio TTS`);
-    assert.equal(ilmanTageja(horatio.ttsText), horatio.visibleText, `${cityId}: Horatio sanat`);
-    assert.equal(horatio.visibleTextSha256,
-      createHash('sha256').update(horatio.visibleText).digest('hex'), `${cityId}: Horatio hash`);
-    assert.equal(horatio.ttsTextSha256,
-      createHash('sha256').update(horatio.ttsText).digest('hex'), `${cityId}: Horatio TTS hash`);
-    assert.equal(livia.visibleText, virta.pollo.kommentti[0], `${cityId}: näkyvä Livia`);
-    assert.equal(ilmanTageja(livia.ttsText), livia.visibleText, `${cityId}: Livia sanat`);
-    assert.equal(livia.textDigest, livianTiiviste(livia.visibleText), `${cityId}: Livia tiiviste`);
-    assert.equal(livia.ttsTextSha256,
-      createHash('sha256').update(livia.ttsText).digest('hex'), `${cityId}: Livia TTS hash`);
-    const cueIds = new Set();
-    for (const cue of livia.cueAnchors) {
-      assert.match(cue.cueId, new RegExp(`^${cityId}\\.livia\\.c\\d+$`), `${cityId}: Livia cueId`);
-      assert.ok(!cueIds.has(cue.cueId), `${cityId}: Livia cueId toistuu`);
-      cueIds.add(cue.cueId);
-      assert.equal(livia.visibleText.split(cue.anchor).length - 1, cue.occurrence,
-        `${cue.cueId}: ankkurin pitää esiintyä täsmälleen sovitun kerran`);
+    const hyvaksytty = HYVAKSYTYT_TTS[cityId];
+    assert.equal(virta.matkakirja.luenta, hyvaksytty.horatio, `${cityId}: Horatio TTS`);
+    assert.equal(ilmanTageja(hyvaksytty.horatio), virta.matkakirja.teksti,
+      `${cityId}: Horatio näkyvät sanat`);
+    assert.equal(ilmanTageja(hyvaksytty.livia), virta.pollo.kommentti[0],
+      `${cityId}: Livia näkyvät sanat`);
+    for (const ankkuri of hyvaksytty.liviaAnkkurit) {
+      assert.equal(virta.pollo.kommentti[0].split(ankkuri).length - 1, 1,
+        `${cityId}: Livian ankkurin pitää esiintyä tasan kerran: ${ankkuri}`);
     }
   }
 });

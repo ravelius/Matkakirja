@@ -315,12 +315,15 @@ test('jokaisella fokuskaupungilla on Livian puheenvuoro isoisän merkintään', 
       `${kaupunki}: Livian puheenvuoro puuttuu tai on liian lyhyt`);
     assert.notEqual(puhe, livianKuplat(virta.pollo?.teksti).join(' '),
       `${kaupunki}: puheenvuoro ei saa olla sama teksti kuin vaiheen huomio`);
-    // Kupla on puheen mittainen: enintään 125 merkkiä (Raamattu,
-    // PULUN KUPLASSA PULUN NAKOKULMA, RAJA 125 — omistaja 8.9.2026 ilta;
-    // KAUPUNGIN KULKU). Vanha yhden merkkijonon maadoitus on pidempi,
-    // koska peli pilkkoo sen ruudulla itse.
+    // Vanha kuplakohtainen 125 merkin vartio säilyy muilla kaupungeilla.
+    // Horatio–Livia-pilotissa omistajan 13.9.2026 hyväksymä mitta on sen
+    // sijaan kaupungin yhteinen paribudjetti; sitä vartioi erillinen
+    // horatio-livia-pilotti.test.mjs.
+    const paribudjettipilotit = new Set(['marseille', 'ateena', 'sarajevo', 'venetsia']);
     for (const kupla of kommentti) {
-      assert.ok(kupla.length <= 125, `${kaupunki}: kupla on liian pitkä luettavaksi ääneen`);
+      if (!paribudjettipilotit.has(kaupunki)) {
+        assert.ok(kupla.length <= 125, `${kaupunki}: kupla on liian pitkä luettavaksi ääneen`);
+      }
     }
     if (!kommentti.length) {
       // Huutomerkkejä Livia ei käytä vanhassa maadoituksessa

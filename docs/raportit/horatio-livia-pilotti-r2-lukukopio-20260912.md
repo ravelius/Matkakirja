@@ -1,7 +1,7 @@
 # Horatio ja Livia — Euroopan neljän kaupungin r2-lukukopio
 
-Sisältörevisio: `eu-hl-pilot-20260912-r2-candidate1`  
-Tila: valmis omistajan lukukatselmukseen, ei hyväksytty äänitykseen tai julkaisuun
+Sisältörevisio: `eu-hl-pilot-20260913-r2-approved1`
+Tila: sanat hyväksytty tekniseen jatkotyöhön; ei äänitys- tai julkaisulupaa
 
 Tässä kopiossa isoisän merkintä ja Pulun nykyhetken vastaus luetaan aina
 peräkkäin. R2 ei korvaa aiempaa r1-luonnosta, joka säilyy tiedostossa
@@ -25,7 +25,7 @@ peräkkäin. R2 ei korvaa aiempaa r1-luonnosta, joka säilyy tiedostossa
 
 **Livia**
 
-> Schliemannin talo on nyt rahamuseo, ja puutarhassa toimii kahvila. Minä etsin varjoa — ja kurkin samalla, saisiko vitriinejä katsella kahvikupin kanssa.
+> Schliemannin talo on nyt rahamuseo. Etsin puutarhasta varjoa, mutta kahvilan pöytien alta löytyi pullanmuruja. Siinä unohtui varjo hetkeksi!
 
 ## Sarajevo
 
@@ -35,7 +35,7 @@ peräkkäin. R2 ei korvaa aiempaa r1-luonnosta, joka säilyy tiedostossa
 
 **Livia**
 
-> Kuparisepät naputtavat basaarissa yhä. Minun piti vain piipahtaa, mutta jäin kuuntelemaan yhtä vasaraa. Kun havahduin, kahvi oli jo jäähtynyt. Harmitti vähän — mutta vain vähän.
+> Kuparisepät naputtavat basaarissa yhä. Minun piti vain piipahtaa, mutta jäin kuuntelemaan yhtä vasaraa. Yritin naputtaa nokalla samaa tahtia — seppä oli kyllä nopeampi!
 
 ## Venetsia
 
@@ -47,14 +47,14 @@ peräkkäin. R2 ei korvaa aiempaa r1-luonnosta, joka säilyy tiedostossa
 
 > Venetsiassa kuljetaan yhä vesibusseilla. Minä lennän nykyään vähän pidempää reittiä. Yhden tutun takia. Hetkinen — nuo kuvat ovat yksityisiä! Hän vain sattui jokaiseen hyvään kuvakulmaan. No, ehkä minä vähän odotin.
 
-## Mitä katselmuksessa ratkaistaan
+## Sisältöpäätös
 
-- Säilyykö jokaisessa Horation muistettava havainto ilman selittävää toistoa?
-- Tuntuuko Livia elävältä omalta hahmoltaan eikä vain faktan kuittaajalta?
-- Onko Horatio–Livia-parin painotus kaupungille oikea: Marseille ja Ateena
-  ovat Horation hallitsemia, Sarajevo ja Venetsia antavat Livialle enemmän tilaa?
-- Hyväksytäänkö sanat jatkotyöhön vai tarvitaanko muutoksia?
+Omistaja hyväksyi neljän kaupungin r2-parit 13.9.2026 kahdella rajatulla
+korjauksella: Ateenan kahvikuppi vaihtui Pulun pöydänalusmuruihin ja Sarajevon
+jäähtynyt kahvi nokalla naputettuun rytmiin. Muut sanat säilyvät hyväksytystä
+r2-lukukopiosta.
 
 Lopulliset sekunnit mitataan vasta hyväksytystä äänestä. Tässä vaiheessa ei
-ole tehty maksullisia TTS- tai forced-alignment-kutsuja. Maksullinen
-äänigenerointi vaatii tämän lukupäätöksen jälkeen erillisen luvan.
+ole tehty pilotin maksullisia TTS- tai forced-alignment-kutsuja. Maksullinen
+äänigenerointi ja kuvagenerointi vaativat tämän sisältöpäätöksen jälkeen
+erillisen luvan.

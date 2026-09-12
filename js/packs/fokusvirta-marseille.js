@@ -181,14 +181,14 @@ export const FOKUSVIRTA_MARSEILLE = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Marseille, syyskuussa 1873. Mistral puhaltaa; puntari '
       + 'putoaa.',
-    /* TEKSTIPILOTTI 12.9.2026: kuusi virkettä tiivistetty viiteen.
-     * Satamatyön syy, hajut ja loppuisku säilyvät. Uusi luenta ja
-     * aikaleimat vaaditaan ennen julkaisua. */
-    teksti: 'Marseillen satamassa myytiin saippuaa tiiliskivinä. Kauppias '
-      + 'vakuutti, että niillä pesisi koko maailman. Hänen kyntensä olivat '
-      + 'mustat: hän oli auttanut laivan köysissä. Ostin palan, mutta terva, '
-      + 'kala ja suolavesi seurasivat majataloon. Maailma ei suostunut pesuun '
-      + 'yhdellä yrittämällä; käteni olivat jo toista mieltä.',
+    /* HYVÄKSYTTY TEKSTIPILOTTI r2 13.9.2026: yhteinen Horatio–Livia-
+     * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
+     * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
+     * julkaisua. */
+    teksti: 'Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko '
+      + 'maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. '
+      + 'Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. '
+      + 'Maailma jäi likaiseksi; käteni olivat jo toista mieltä.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -205,11 +205,11 @@ export const FOKUSVIRTA_MARSEILLE = {
      * lisäreaktiota.
      */
     reaktiot: [
-      { id: 'marseille.r1', ankkuri: 'saippuaa tiiliskivinä', tarkoitus: 'huvittuu', voimakkuus: 0.35, siirtyma: 0,
+      { id: 'marseille.r1', ankkuri: 'saippuaa myytiin tiiliskivinä', tarkoitus: 'huvittuu', voimakkuus: 0.35, siirtyma: 0,
         perustelu: 'Saippua tiilinä on ensimmäinen pieni hymy, ei vielä nauru.' },
-      { id: 'marseille.r2', ankkuri: 'pesisi koko maailman', tarkoitus: 'epailee', voimakkuus: 0.5, siirtyma: 0,
+      { id: 'marseille.r2', ankkuri: 'koko maailman pesuun', tarkoitus: 'epailee', voimakkuus: 0.5, siirtyma: 0,
         perustelu: 'Kauppiaan ylisana: pulu epäilee lempeästi.' },
-      { id: 'marseille.r3', ankkuri: 'kyntensä olivat mustat', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+      { id: 'marseille.r3', ankkuri: 'mustat kynnet', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
         perustelu: 'Ristiriita: saippuakauppiaan mustat kynnet.' },
       { id: 'marseille.r5', ankkuri: 'terva, kala ja suolavesi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Hajuluettelo seuraa majataloon: pulu huvittuu.' },
@@ -222,12 +222,11 @@ export const FOKUSVIRTA_MARSEILLE = {
     ],
     /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
      * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
-    luenta: '[curious] Marseillen satamassa myytiin saippuaa tiiliskivinä. '
-      + 'Kauppias vakuutti, että niillä pesisi koko maailman. Hänen kyntensä '
-      + 'olivat mustat: hän oli auttanut laivan köysissä. Ostin palan, mutta '
-      + 'terva, kala ja suolavesi seurasivat majataloon. [softly] Maailma ei '
-      + 'suostunut pesuun yhdellä yrittämällä; '
-      + 'käteni olivat jo toista mieltä.',
+    luenta: '[curious] Marseillen satamassa saippuaa myytiin tiiliskivinä, '
+      + 'kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat '
+      + 'köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat '
+      + 'majataloon. [softly] Maailma jäi likaiseksi; käteni olivat jo toista '
+      + 'mieltä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-marseille.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-marseille-r20260909-paper-v4;
@@ -314,7 +313,7 @@ export const FOKUSVIRTA_MARSEILLE = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* TEKSTIPILOTTI 12.9.2026: yksi sisältöön sidottu virke lisää. */
     kommentti: [
-      'Marseillen saippuaa tehdään yhä. Lokit eivät tunne puhdasta pöytää. Minä erotan sataman jo äänestä ja suolasta höyhenissä.',
+      'Marseillen saippuaa tehdään yhä. Minä erotan Vieux-Portin jo äänestä ja suolasta höyhenissä. Lokit tuntevat jokaisen pöydän. Minä vasta harjoittelen.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

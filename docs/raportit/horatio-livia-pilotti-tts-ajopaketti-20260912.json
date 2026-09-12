@@ -1,7 +1,8 @@
 {
   "schemaVersion": 1,
   "contentRevision": "eu-hl-pilot-20260912-r1",
-  "state": "hold-owner-voice-selection",
+  "state": "superseded-by-eu-hl-pilot-20260913-r2-approved1",
+  "supersededBy": "docs/raportit/horatio-livia-pilotti-r2-mittaraportti-20260912.md",
   "sourceTextCommit": "aa3a61d7b5c422d132f6ef06c1c64dfd521ebcc2",
   "cities": ["marseille", "ateena", "sarajevo", "venetsia"],
   "invariants": {
