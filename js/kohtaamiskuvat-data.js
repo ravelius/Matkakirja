@@ -151,7 +151,6 @@ export const kohtaamiskuvat = [
     tila: 'tarkistettu',
     // POIS KORTILTA 5.9.2026 (Fable): Yaran hyväksytty kuva 5.9.2026 korvaa kortilla; jää galleriaan.
     aktiivinen: false,
-    aktiivinen: false,
     alt: 'Nuori pyöräilijä pysähtyy kanavasillalle kesken Amsterdamin aamuruuhkan.',
     lyhyt: 'Nuori pyöräilijä pysähtyy kanavasillalle kypärä päässä, kun arvoitus tavoittaa hänet aamulla.',
     kuvateksti: 'Nuori pyöräilijä pysähtyy kanavasillalle kesken aamumatkan. Kypärä on yhä päässä ja pyörä käsissä, kun arvoitus tavoittaa hänet.',
