@@ -260,7 +260,7 @@ export const FOKUSVIRTA_VENETSIA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-01-r20260909-paikka-v2.jpg',
         lyhyt: 'Venetsia: vesibussi ja aivan sattumalta yksi paikallinen.',
-        selite: 'Punta della Doganan kärjestä näkyvät San Giorgio Maggioren saari ja sen edessä kulkeva vesibussi. Rannan paikallinen osui etualalle juuri peittämättä liikennettä.',
+        selite: 'Punta della Doganan kärjestä näkyvät San Giorgio Maggioren saari ja sen edessä kulkeva vesibussi. Paikallinen sattui etualalle niin sopivasti, että kuvan reunaan ilmestyi sydän — ehkä kameran asetus.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.pinaultcollection.com/palazzograssi/en/punta-della-dogana',
@@ -270,7 +270,7 @@ export const FOKUSVIRTA_VENETSIA = {
       },
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-02-r20260909-paikka-v2-v3.jpg',
-        lyhyt: 'Venetsia: paikallinen asettui taas etualalle.',
+        lyhyt: 'Venetsia: sama paikallinen, kaupunki on yllättävän pieni.',
         selite: 'Rio San Barnaban yli kuljetaan Ponte dei Pugnin siltaa pitkin ja tavara liikkuu veneellä sen alta. Paikallinen asettui taas etualalle, kun vaihdoin kuvakulmaa kanavan avaamiseksi.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
@@ -282,8 +282,8 @@ export const FOKUSVIRTA_VENETSIA = {
       },
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-03-r20260909-euv2-v1.jpg',
-        lyhyt: 'Venetsia: muru käänsi kameran pois aukiolta.',
-        selite: 'Campo Santa Margheritan kahvilapöydistä voi seurata aukion elämää nousematta tuolilta. Paikallinen laskeutui viereen, ja yksi muru käänsi kamerani pois aukiolta.',
+        lyhyt: 'Venetsia: aukion nimi on… tiedän kyllä aivan varmasti.',
+        selite: 'Campo Santa Margheritan kahvilapöydistä voi seurata aukion elämää nousematta tuolilta. Paikallinen laskeutui viereen, ja kamera unohti aukion — vaikka väitin tähtääväni yhteen muruun.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.cityscrolls.com/venice/campo-santa-margherita/',
@@ -294,7 +294,7 @@ export const FOKUSVIRTA_VENETSIA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-04-r20260909-euv1-v2.jpg',
         lyhyt: 'Venetsia: tämä kuva käsittelee kuulemma lentoreittejä.',
-        selite: 'Kanavan yllä vesi jäi alle ja sillan kaari odotti edessä suoralla lentoreitillä. Seurasin paikallista sillan suuntaan ja säästin kuvan, jossa siipien liike onnistui parhaiten.',
+        selite: 'Kanavan yllä vesi jäi alle ja sillan kaari odotti edessä suoralla lentoreitillä. Seurasin häntä tietenkin vain lentoreitin vuoksi; kuvan sydänasetukset tutkin myöhemmin.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://live.comune.venezia.it/index.php/it/2025/04/una-calle-una-storia-ponte-dei-pugni',
@@ -304,7 +304,7 @@ export const FOKUSVIRTA_VENETSIA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-05-r20260909-euv1-v1.jpg',
         lyhyt: 'Venetsia: nämä eivät kaikki kuuluneet esitykseen.',
-        selite: 'Aukion laidalla oli kaksi kuivaa paikkaa samalla ikkunalaudalla, ja paikallinen jätti toisen vapaaksi. Istuin siihen, vaikka viimeiseen kuvaan mahtui kaupungista lähinnä yhteinen taukomme.',
+        selite: 'Aukion laidalla oli kaksi kuivaa paikkaa samalla ikkunalaudalla, ja paikallinen jätti toisen vapaaksi. Istuin siihen — hetkinen, näitkö sinä jo tämänkin kuvan?',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.veneziaunica.it/sites/default/files/redazione-turismo/itinerari/documenti/Classic_Dorsoduro_EN.pdf',

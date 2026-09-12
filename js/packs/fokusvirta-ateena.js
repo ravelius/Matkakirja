@@ -97,7 +97,7 @@ export const FOKUSVIRTA_ATEENA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-ateena-r20260909-paper-v4.jpg",
       lyhyt: "Ateena, 1873. Kultakeskustelu jatkui ilman kultaa.",
-      selite: 'Kahvilapöydän kaksi keskustelijaa elehti Troijan löydöistä, kun kupit pysyivät pieninä heidän välissään. Akropolis nousi pölyn takana muistuttamassa, kuinka lähellä kahvipöytää vanha maailma täällä on.',
+      selite: 'Kahvilapöydän kaksi keskustelijaa elehti Troijan löydöistä, kun kupit pysyivät pieninä heidän välissään. Pölyn takana kohoava Akropolis muistutti, kuinka lähellä kahvipöytää vanha maailma täällä on.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.theacropolismuseum.gr/en"],
     },

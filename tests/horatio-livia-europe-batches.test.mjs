@@ -155,7 +155,7 @@ test('kaikkien 45 Euroopan kaupungin 149 nykykuvaa täyttävät kuvatekstirajauk
       `${image.osoite}: lyhyen selitteen pitää olla yksi sisältölause`);
   }
   assert.equal(FOKUSVIRRAT.venetsia.pollo.kuvat[1].lyhyt,
-    'Venetsia: paikallinen asettui taas etualalle.');
+    'Venetsia: sama paikallinen, kaupunki on yllättävän pieni.');
   assert.equal(FOKUSVIRRAT.venetsia.pollo.kuvat[2].lyhyt,
-    'Venetsia: muru käänsi kameran pois aukiolta.');
+    'Venetsia: aukion nimi on… tiedän kyllä aivan varmasti.');
 });
