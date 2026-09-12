@@ -124,8 +124,19 @@ Euroopan jokaisessa kaupungissa tarkistetaan isoisän kaksi luentakuvaa
 ja Pulun kaksi nykykuvaa: kuvan ja tekstin vastaavuus, aikataso sekä
 kuvaparin erilaiset havainnot. Lyhyt näkyvä kuvateksti on noin yksi
 lyhyt lause (aiempi noin 100 merkin ohje tukee nopeaa luettavuutta),
-ei puhuttua kertomusta toistava selostus. Pitkä selite, lähteet ja
-lisenssit säilyvät suurennoksessa. Puuttuvat toiset kuvat ja yli kahden
+ei puhuttua kertomusta toistava selostus.
+
+**Pitkän kuvatekstin täsmennys (omistajan vahvistus 12.9.2026):**
+pitkä saa olla enintään yhden lauseen lyhyttä pidempi, eli yleensä
+yhteensä noin kaksi lausetta. Lähdemerkintä tarvittavine tekijä- ja
+lisenssitietoineen tulee vain pitkään versioon; sitä ei näytetä
+lyhyessä eikä lasketa tekstiosuuden lausemäärään. Vanha pidempi
+selostus säilytetään tarvittaessa toimitusaineistossa tai historiassa,
+ei tämän rajan ylittävänä näkyvänä kuvatekstinä. Tämä korvaa näiden
+hahmokuvien osalta aiemman oletuksen pitkän selitteen säilyttämisestä
+sellaisenaan suurennoksessa.
+
+Puuttuvat toiset kuvat ja yli kahden
 kuvan albumit raportoidaan; Venetsian romanssialbumia ei karsita.
 
 **Työ on edelleen tauolla:** uudet teksti- ja animaatiosessiot
