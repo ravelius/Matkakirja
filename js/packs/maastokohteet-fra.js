@@ -146,6 +146,26 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'loire',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fra-maasto-loire-7d2bf0f03134.jpg',
+      lyhyt: 'Loiren leveä uoma ja matalat puustoiset rannat.',
+      selite: 'Loiren leveä uoma ja matalat puustoiset rannat.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Benjamin Smith (Commons user Benjism89)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Orl%C3%A9ans_-_River_Loire_-_4.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fra-maasto-loire-c38f7bfdd6e9.jpg',
+      lyhyt: 'Puisia jokiveneitä Loiren rannassa Orléansissa.',
+      selite: 'Puisia jokiveneitä Loiren rannassa Orléansissa.',
+      lahde: 'Valokuva: Benjamin Smith (Commons user Benjism89), Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Benjamin Smith (Commons user Benjism89)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Orl%C3%A9ans_-_River_Loire_-_4.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }],
     nimi: 'Loire',
     tyyppi: 'joki',
     kysymykset: [
@@ -167,6 +187,26 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'rhone',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fra-maasto-rhone-5c452abae760.jpg',
+      lyhyt: 'Rhône virtaa Saint-Vallierin rantatalojen ja metsäisen rinteen ohitse.',
+      selite: 'Rhône virtaa Saint-Vallierin rantatalojen ja metsäisen rinteen ohitse.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Krzysztof Golik',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Coast_of_Rh%C3%B4ne_in_Saint-Vallier_03.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/fra-maasto-rhone-181bfd18e8e2.jpg',
+      lyhyt: 'Rhône Saint-Vallierissa kaupungin ja metsäisten laaksonrinteiden välissä.',
+      selite: 'Rhône Saint-Vallierissa Drômen departementissa; kaupunki yhdellä rannalla sekä metsäisiä, pyöreitä laaksonrinteitä.',
+      lahde: 'Valokuva: Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Krzysztof Golik',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Coast_of_Rh%C3%B4ne_in_Saint-Vallier_03.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }],
     nimi: 'Rhône',
     tyyppi: 'joki',
     kysymykset: [
