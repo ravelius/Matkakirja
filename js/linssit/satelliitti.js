@@ -134,6 +134,10 @@
 
 import { html } from '../ui-apurit.js';
 import { polloKuplatPois, polloLinssiAlkoi, polloLinssiPaattyi } from '../pollo.js';
+import { hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream } from '../ambience-stream.js';
+import { LINSSIN_HILJENNYS } from '../siirtymamusiikki.js';
+import { stopDiaryVoice } from '../luenta.js';
+import { pysaytaLukija } from '../lukija.js';
 import { SATELLIITTI_KOHTEET, SATELLIITTI_LAHDE } from './satelliitti-data.js';
 import { avaaAvaruusnakyma } from './satelliitti-avaruus.js';
 
@@ -170,6 +174,52 @@ export function piilotaPulu(doc = document) {
        */
       if (!oliPiilossa) doc?.body?.classList?.remove(PULUN_PIILO_LUOKKA);
       try { polloLinssiPaattyi(); } catch { /* pöllöä ei ole asennettu */ }
+    },
+  };
+}
+
+/*
+ * ── LINSSI VAIENTAA MUUT ÄÄNET (omistaja 12.9.2026) ───────────────
+ *
+ * Sanatarkasti: *"Kun linssi lähtee käyntiin, niin se ei osaa vielä
+ * sammuttaa muita ääniä, jotka saattavat olla vielä taustalla
+ * menossa."*
+ *
+ * SAMA NELJÄ KUTSUA KUIN AIKAJANALINSSEILLÄ, EI UUTTA KONEISTOA
+ * (js/aikajana.js avaaAanimaailma / suljeAanimaailma):
+ *
+ *   • `hiljennaAmbienssi(LINSSIN_HILJENNYS)` vie pohjavireen,
+ *     visamusiikin ja radion alas YHDELLÄ nimetyllä syyllä. Syy on
+ *     joukon alkio eikä laskuri, joten kahdesti purettu linssi ei
+ *     nosta taustaa kahdesti — ja koska syy on SAMA 'linssi' kuin
+ *     aikajanalinsseillä, kaksi linssiä peräkkäin ei jätä taustaa
+ *     alas.
+ *   • `stopPlaceStream()` pysäyttää kaupungin äänimaiseman kokonaan
+ *     (pelkkä vaimennus jättäisi sen kuulumaan avaruudessa).
+ *   • `stopDiaryVoice(ui)` ja `pysaytaLukija()` katkaisevat kesken
+ *     olevan luennan — päiväkirjan kertojan ja lukijan.
+ *
+ * VOIMAKKUUSLOGIIKKAAN EI KOSKETA (se korjattiin v1815:ssä): tässä
+ * kutsutaan vain pelin omia funktioita, eikä yhtäkään gainia
+ * kirjoiteta suoraan.
+ *
+ * Palauttaa kahvan, jonka `pura` palauttaa äänimaailman pelin omasta
+ * tilasta (`ui.syncAmbience`), ei linssin muistamasta.
+ */
+export function vaiennaAanet(ui = null) {
+  let purettu = false;
+  try { hiljennaAmbienssi(LINSSIN_HILJENNYS); } catch { /* ääntä ei ole */ }
+  try { stopPlaceStream(); } catch { /* äänimaisemaa ei ole */ }
+  try { stopDiaryVoice(ui); } catch { /* luentaa ei ole */ }
+  try { pysaytaLukija(); } catch { /* lukijaa ei ole */ }
+  return {
+    /** Mittari savukkeelle ja testeille. */
+    hiljaa: () => !purettu,
+    pura() {
+      if (purettu) return;
+      purettu = true;
+      try { palautaAmbienssi(LINSSIN_HILJENNYS); } catch { /* ääntä ei ole */ }
+      try { if (!ui?.dead) ui?.syncAmbience?.(); } catch { /* maisemaa ei ole */ }
     },
   };
 }
@@ -248,17 +298,85 @@ export function paikkateksti(lat, lon) {
   return `${luku(lat)}° ${lat >= 0 ? 'N' : 'S'} · ${luku(lon)}° ${lon >= 0 ? 'E' : 'W'}`;
 }
 
-/** Oma tyylitiedosto sivulle, jos sitä ei vielä ole. */
-function lataaSatelliittiTyyli() {
-  if (typeof document === 'undefined') return;
-  if (document.getElementById(TYYLIN_TUNNUS)) return;
-  const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
-  if (!peruslinkki) return;
-  const linkki = document.createElement('link');
+/** Kriittisen varatyylin tunnus (ks. KRIITTINEN_TYYLI). */
+export const KRIITTISEN_TUNNUS = 'satelliitti-kriittinen';
+
+/*
+ * KRIITTINEN VARATYYLI — KOLME PIILOTUSTA, JOTKA EIVÄT SAA JÄÄDÄ
+ * VERKON VARAAN.
+ *
+ * OMISTAJA 12.9.2026: nimet ja pulu näkyivät julkaistussa pelissä,
+ * vaikka säännöt olivat css/satelliitti.css:ssä ja tiedosto oli
+ * palvelimella. Syy on siinä, ETTÄ TYYLI LADATAAN VERKOSTA LINKKINÄ:
+ *
+ *   • `lataaSatelliittiTyyli` etsi linkin valitsimella
+ *     `link[href*="styles.css"]`, ja jos sitä ei löytynyt, se palasi
+ *     HILJAA tekemättä mitään — koko tyyli jäi lataamatta ilman
+ *     ainuttakaan virhettä lokissa;
+ *   • linkin lataus on asynkroninen ja voi epäonnistua (verkko,
+ *     välimuisti, offline), eikä `<link>` kerro siitä kutsujalle;
+ *   • ja kun tyyliä ei ole, nimillä ja pululla EI OLE MITÄÄN
+ *     piilottavaa sääntöä — ne ovat ruudulla.
+ *
+ * Nämä kolme sääntöä ovat niin pienet, että ne kuuluvat sivulle
+ * SYNKRONISESTI eivätkä verkon yli. Ne ovat sanatarkka osajoukko
+ * css/satelliitti.css:stä (vartioitu: tests/satelliitti.test.mjs), ja
+ * varsinainen tyylitiedosto tuo ulkoasun päälle kuten ennenkin.
+ */
+export const KRIITTINEN_TYYLI = `
+.satelliitti-nimi { opacity: 0; }
+body.satelliitti-nimet .satelliitti-nimi { opacity: 1; }
+body.aikajana-pulu-piilossa .pollo-nappi,
+body.aikajana-pulu-piilossa .pollo-paneeli,
+body.aikajana-pulu-piilossa .pollo-kuplapino,
+body.aikajana-pulu-piilossa .pollo-kuplapino-kehys,
+body.aikajana-pulu-piilossa .livia-kasvot-pinta {
+  visibility: hidden;
+  pointer-events: none;
+}
+`;
+
+/**
+ * Oma tyylitiedosto sivulle, jos sitä ei vielä ole — JA kriittiset
+ * piilotukset aina inline-tyylinä (ks. KRIITTINEN_TYYLI).
+ *
+ * Palauttaa mittarin savukkeelle ja vartijoille: `{ kriittinen, linkki }`.
+ */
+export function lataaSatelliittiTyyli(doc = typeof document === 'undefined' ? null : document) {
+  if (!doc?.head) return { kriittinen: false, linkki: null };
+  /* 1. Kriittiset piilotukset heti, ilman verkkoa. */
+  if (!doc.getElementById(KRIITTISEN_TUNNUS)) {
+    const tyyli = doc.createElement('style');
+    tyyli.id = KRIITTISEN_TUNNUS;
+    tyyli.textContent = KRIITTINEN_TYYLI;
+    doc.head.appendChild(tyyli);
+  }
+  /* 2. Koko tyylitiedosto perässä, jos sivu on moduuliversio. */
+  const vanha = doc.getElementById(TYYLIN_TUNNUS);
+  if (vanha) return { kriittinen: true, linkki: vanha.href };
+  /*
+   * PERUSLINKKI ETSITÄÄN LAVEASTI: aiempi valitsin vaati nimenomaan
+   * "styles.css", ja kaikki muut sivut (yhden tiedoston versio,
+   * kuori, koekäyttö) jäivät ilman tyyliä ääneti. Nyt kelpaa mikä
+   * tahansa sivun oma tyylilinkki, ja viimeisenä keinona osoite
+   * lasketaan tämän moduulin omasta URLista — moduuli tietää itse,
+   * missä repo on.
+   */
+  const peruslinkki = doc.querySelector('link[rel="stylesheet"][href*="styles.css"]')
+    ?? doc.querySelector('link[rel="stylesheet"][href]');
+  let osoite = null;
+  try {
+    osoite = peruslinkki
+      ? new URL('satelliitti.css', peruslinkki.href).href
+      : new URL('../../css/satelliitti.css', import.meta.url).href;
+  } catch { osoite = null; }
+  if (!osoite) return { kriittinen: true, linkki: null };
+  const linkki = doc.createElement('link');
   linkki.id = TYYLIN_TUNNUS;
   linkki.rel = 'stylesheet';
-  linkki.href = new URL('satelliitti.css', peruslinkki.href).href;
-  document.head.appendChild(linkki);
+  linkki.href = osoite;
+  doc.head.appendChild(linkki);
+  return { kriittinen: true, linkki: osoite };
 }
 
 /** Ulkoinen linkki, joka ei vie pelaajaa pois pelistä. */
@@ -335,6 +453,30 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
   katselu.setAttribute('aria-modal', 'true');
   katselu.setAttribute('aria-label', `${kohde.nimi}: valokuva avaruudesta`);
 
+  /*
+   * ── KORTIN YLÄRAJA MITATAAN, EI ARVATA (vaakanäkymän vika) ────────
+   *
+   * MITATTU 12.9.2026 (844 × 390): linssin yläpalkki alkoi y = 11 ja
+   * loppui y = 72, mutta kortti alkoi y = 61 — eli kuvan yläreuna oli
+   * 11 pikseliä palkin ALLA. Syy on kahdessa eri koordinaatistossa:
+   * kortti on `position: fixed` (ikkunan nurkasta) ja palkki
+   * `position: absolute` KARTTARUUDUN sisällä, ja karttaruutu alkaa
+   * pelin omasta kehyksestä 8–11 px alempaa. CSS:n
+   * `top: var(--aikajana-palkki-korkeus)` on siis oikea KORKEUS mutta
+   * väärä PAIKKA — muuttuja kertoo palkin korkeuden, ei sen alareunan
+   * etäisyyttä ikkunan yläreunasta.
+   *
+   * Korkeus luetaan yhä muuttujasta (CSS:n oletusarvo), ja tämä lisää
+   * siihen palkin oman yläreunan mitattuna. Mittaus uusitaan ikkunan
+   * koon muuttuessa — laitteen kääntäminen on juuri se tilanne, jossa
+   * molemmat luvut muuttuvat.
+   */
+  const asemoiYlareuna = () => {
+    const r = palkki?.el?.getBoundingClientRect?.();
+    if (!r || !(r.height > 0)) { katselu.style.removeProperty('top'); return; }
+    katselu.style.top = `${Math.round(r.bottom)}px`;
+  };
+
   const havainnot = kohde.havainnot ?? [];
   let indeksi = oletusIndeksi(kohde);
   if (!havainnot[indeksi]) return null;
@@ -345,8 +487,40 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
   kuva.className = 'satelliitti-kuva';
   kuva.decoding = 'async';
   kuva.draggable = false;
-  const leima = html('span', 'satelliitti-leima', 'Valokuva avaruudesta · NASA');
-  lava.append(kuva, leima);
+  /*
+   * ── KUVAN OTSIKKO JA PÄIVÄYS (omistaja 12.9.2026) ────────────────
+   *
+   * Sanatarkasti: *"Tuossa ylälaidassa oleva teksti pitää korvata kuvan
+   * otsikolla, eli mitä kuvassa on. Ja sen alle voisi lisätä
+   * kuvauspäivämäärän"*.
+   *
+   * Tilalle meni "Valokuva avaruudesta · NASA". Se kertoi pelaajalle
+   * saman asian joka kerta — että kuva on valokuva ja NASAn — eikä
+   * KOSKAAN sitä, mitä kuvassa on. NASAn kuvat ovat public domainia,
+   * joten lähdemerkintä ei ole lisenssin vaatimus kuvan päällä: se
+   * kulkee info-napin takana (Aineisto, Lisenssi, Kuvatunnus, Lähde)
+   * kuten kaikki muukin lähdetieto.
+   *
+   * NIMI PYSYY, PÄIVÄYS VAIHTUU. Kohteen nimi on sama kaikissa saman
+   * pisteen otoksissa; kuvausaika on otoksen oma ja kirjoitetaan
+   * uudestaan joka vaihdossa (nayta).
+   *
+   * AIKAA EI KEKSITÄ. Päiväys tulee SAMASTA muotoilijasta kuin
+   * info-popupin "Kuvausaika" (aikateksti): kun aineistossa on pelkkä
+   * päivä, ruudulla on pelkkä päivä. Kellonaika näkyy vain, jos se on
+   * aineistossa, ja silloin aikavyöhyke sanotaan ääneen.
+   *
+   * KAKSI RIVIÄ, EI YKSI: otsikko on kuvan asia ja päiväys sen hetki.
+   * Luettavuus tummaa ja vaaleaa kuvaa vasten tulee omasta tummasta
+   * taustalaatikosta (css/satelliitti.css .satelliitti-otsake) — pelkkä
+   * tekstivarjo ei riitä lumipeitteisen tai pilvisen kuvan päällä.
+   */
+  const otsake = html('div', 'satelliitti-otsake');
+  const otsakeNimi = html('span', 'satelliitti-otsake-nimi', kohde.nimi);
+  const otsakeAika = html('span', 'satelliitti-otsake-aika');
+  otsake.append(otsakeNimi, otsakeAika);
+  otsake.setAttribute('aria-hidden', 'true');
+  lava.append(kuva, otsake);
 
   /* ---- alapalkki: pikkukuvat ylärivillä, napit alarivillä ---------- */
   const ala = html('div', 'satelliitti-ala');
@@ -371,6 +545,12 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
     edellinen, laskuri, seuraava, html('span', 'satelliitti-vali'), sulku);
   katselu.append(lava, ala);
   document.body.appendChild(katselu);
+  asemoiYlareuna();
+  const kokovahti = typeof ResizeObserver === 'function' && palkki?.el
+    ? new ResizeObserver(asemoiYlareuna) : null;
+  kokovahti?.observe(palkki.el);
+  window.addEventListener('resize', asemoiYlareuna);
+  window.addEventListener('orientationchange', asemoiYlareuna);
 
   /* ---- sulkeminen -------------------------------------------------- */
   let popup = null;
@@ -382,6 +562,9 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
   function sulje() {
     if (!katselu.isConnected) return;
     katselu.remove();
+    kokovahti?.disconnect?.();
+    window.removeEventListener('resize', asemoiYlareuna);
+    window.removeEventListener('orientationchange', asemoiYlareuna);
     document.removeEventListener('keydown', nappain);
     palkki?.nimeaKohde?.(null);
     onSuljettu?.();
@@ -630,6 +813,9 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
     }
     // ZOOM NOLLAUTUU OTOSTA VAIHDETTAESSA (omistajan vaatimus).
     if (vaihtui) nollaaZoom();
+    // Kuvauspäivämäärä otsikon alle (ks. otsake): sama muotoilija kuin
+    // info-popupin "Kuvausaika", eikä kelloa keksitä.
+    otsakeAika.textContent = aikateksti(h.aika);
     laskuri.textContent = havainnot.length > 1 ? `${indeksi + 1} / ${havainnot.length}` : '';
     edellinen.disabled = indeksi <= 0;
     seuraava.disabled = indeksi >= havainnot.length - 1;
@@ -755,6 +941,9 @@ function avaa(lauta, tila, ui) {
   // Pulu piiloon ja sen puheenvuorot jonoon (ks. tiedoston alku).
   const pulu = piilotaPulu();
 
+  // Muut äänet vaikenevat linssin ajaksi (ks. vaiennaAanet).
+  const aanet = vaiennaAanet(ui);
+
   const avaaKohde = (kohde) => {
     /*
      * SULKEVA NAPAUTUS EI AVAA UUTTA (v1783:n sääntö). Havaintoikkunan
@@ -785,6 +974,8 @@ function avaa(lauta, tila, ui) {
     avaruus,
     /** Pulun piilotuksen kahva (savukkeet ja vartijat). */
     pulu,
+    /** Äänien vaientamisen kahva (savukkeet ja vartijat). */
+    aanet,
     pura: () => {
       suljeKortti();
       // Pallon lähtötila takaisin ENSIN: kamera, pinta, ilmakehä,
@@ -792,6 +983,8 @@ function avaa(lauta, tila, ui) {
       avaruus?.pura?.();
       // Pulu takaisin ruudulle ja jonoon jääneet puheenvuorot ulos.
       pulu.pura();
+      // Äänimaailma takaisin pelin omasta tilasta.
+      aanet.pura();
       document.querySelectorAll('.satelliitti-vertailu').forEach((el) => el.remove());
       palkki.pura();
       lauta?.linssit?.pura?.(SATELLIITTI_OSA);

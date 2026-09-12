@@ -137,8 +137,40 @@ export function nimetNakyvat(korkeus, avaus, nyt = false) {
   return Boolean(nyt);
 }
 
-/** Zoomin lähin raja avauskorkeudesta: pallo täyttää ruudun, ei enempää. */
-export const ZOOMIN_LAHIN = 0.55;
+/*
+ * ── YKSI ZOOM-TASO LISÄÄ (omistaja 12.9.2026) ─────────────────────
+ *
+ * Sanatarkasti: *"Lisäksi tarvitaan ainakin yksi zoom-taso lisää,
+ * koska nyt pisteet ovat aivan liian lähellä toisiaan."*
+ *
+ * MITATTU, MIKSI 0,55 EI RIITTÄNYT. Kaista oli 0,55…1,30 × avaus.
+ * Puhelimella (374 × 828, avaus 4,49) lähin sallittu korkeus oli 2,47,
+ * jolloin pallon halkaisija ruudulla on 535 px. Kahden kohteen
+ * ruutuetäisyys on likimain (halkaisija / 2) × kulmaero radiaaneina,
+ * joten
+ *
+ *   pari                      kulmaero   0,55 × avaus   0,12 × avaus
+ *   ─────────────────────────┼──────────┼──────────────┼─────────────
+ *   Fuji – Tokio              0,91°      4 px           12 px
+ *   Etna – Italian saapas     3,56°      17 px          47 px
+ *
+ * ja hohtavan pisteen sädekehä on 46 px leveä: 17 px:n päässä olevat
+ * kaksi pistettä ovat yksi läiskä. 0,12:lla Etna ja saapas erottuvat
+ * omiksi renkaikseen (47 px > 46 px sädekehä), ja Fuji–Tokio erottuu
+ * kahdeksi ytimeksi saman hehkun sisällä — täyteen eroon tarvittaisiin
+ * 3 100 px:n halkaisija, mikä ei mahdu mihinkään ruutuun.
+ *
+ * POHJA ON ABSOLUUTTINEN EIKÄ SUHDELUKU. Suhdeluku yksin veisi
+ * työpöydällä (avaus 1,63) korkeuteen 0,196 ja laajalla ruudulla vielä
+ * alemmas — ja korkeus 0,1 on jo noin 640 km eli matalan radan
+ * korkeus. Sitä alemmas ei mennä: pallon pinnan läpi ei sukelleta eikä
+ * kamera saa joutua ilmakehän hehkun (ILMAKEHAN_KORKEUS 0,25) sisään
+ * niin syvälle, että hehku kääntyy kameran ympärille.
+ */
+/** Zoomin lähin raja avauskorkeudesta: yksi taso lisää (ks. yllä). */
+export const ZOOMIN_LAHIN = 0.12;
+/** Absoluuttinen lattia: matala rata, ei pinnan läpi (pallonsäteinä). */
+export const ZOOMIN_POHJA = 0.1;
 /** Zoomin kauin raja avauskorkeudesta: pallo pienenee, ei katoa. */
 export const ZOOMIN_KAUIN = 1.3;
 
@@ -207,10 +239,17 @@ export function halkaisijaRuudulla(alt, { korkeus, fov = AVARUUDEN_FOV } = {}) {
   return K * Math.tan(a) / Math.tan((fov / 2) * (Math.PI / 180));
 }
 
-/** Zoomirajat avauskorkeudesta: kapea kaista pallon ympärillä. */
+/**
+ * Zoomirajat avauskorkeudesta. Lähin raja on suhdeluku, jolla on
+ * absoluuttinen lattia (ZOOMIN_POHJA) — ks. ZOOMIN_LAHIN.
+ */
 export function zoomirajat(alt) {
   const a = Math.max(0.05, Number(alt) || 0.05);
-  return { min: a * ZOOMIN_LAHIN, max: a * ZOOMIN_KAUIN };
+  const min = Math.max(ZOOMIN_POHJA, a * ZOOMIN_LAHIN);
+  const max = a * ZOOMIN_KAUIN;
+  // Pieni avauskorkeus (hyvin matala ruutu) voisi viedä lattian katon
+  // yli; kaista ei saa kääntyä nurin.
+  return { min: Math.min(min, max * 0.95), max };
 }
 
 /* ═════════════════ 2. MAAN VÄRIT ════════════════════════════════ */
@@ -429,6 +468,136 @@ export function maapallonTekstuuri(asetukset = {}, doc = globalThis.document) {
   return kangas.toDataURL('image/png');
 }
 
+/* ═══════════ 2b. PELIN OMA RELIEFI PALLON PINNAKSI ══════════════ */
+
+/*
+ * OMISTAJA 12.9.2026, sanatarkasti: *"Katsoitko topografia linssistä,
+ * joka on jo aiemmin luotu peliin? Se varmaan sopisi aika hyvin kartan
+ * pohjan rakentamiseksi pallolle."*
+ *
+ * SOPII, JA SE ON JO PELISSÄ. `assets/linssit/topografia-pallo.webp`
+ * (4096 × 2048, 441 kt) on NOAA ETOPO1 -korkeusruudukko hypsometrisin
+ * värein ja luoteesta varjostettuna, uudelleenprojisoituna laudan
+ * Milleristä pallon tasaväliin (tools/tee-pallotopografia.mjs).
+ * Vesistölinssi käyttää sitä jo (js/linssit/vesistot.js), joten kuva on
+ * usein selaimen välimuistissa valmiiksi. Lisenssi on public domain
+ * (NOAA), ja viite kulkee js/packs/linssi-topografia-kuva.js:ssä.
+ *
+ * MITÄ TÄMÄ RATKAISEE. Generoitu maapeittomaski on VYÖHYKEVÄRI: se
+ * tietää leveysasteen muttei pituuspiiriä, joten Sahara jatkuu maapallon
+ * ympäri ja Andit eivät näy. Reliefissä on oikea maasto — vuoret,
+ * aavikot, merten syvyys — ja juuri se tekee pallosta tunnistettavan.
+ *
+ * ── KOLME ASIAA, JOTKA ON PAKKO HOITAA ───────────────────────────
+ *
+ *  1. NAVAT OVAT LÄPINÄKYVÄT. Lauta ulottuu vain −58°…76°, joten
+ *     kuvassa on alfaltaan nolla Etelämantereen ja pohjoisimman
+ *     arktisen kohdalla (tools/tee-pallotopografia.mjs sanoo tämän
+ *     suoraan). Pallolla se olisi REIKÄ mustaan — ja juuri se on tämän
+ *     linssin pahin virhe, koska taustalla on avaruus. GENEROITU MAA EI
+ *     SIIS KATOA VAAN JÄÄ POHJALLE: reliefi piirretään sen PÄÄLLE, ja
+ *     läpinäkyvien napojen kohdalla näkyy generoitu napajää
+ *     (JAAN_VARI, JAAVYOHYKE) kuten ennenkin. Sauma on kuvan oma
+ *     pehmeä alfareuna.
+ *  2. VALON KOMPENSAATIO. Pallon valo kertoo pinnan kirkkauden
+ *     kertoimella 1 + 0,6 · sin(lat) (ks. VALON_KOMPENSAATIO), ja
+ *     ilman vastakaavaa reliefin pohjoinen palaisi puhtaaksi
+ *     valkoiseksi samalla tavalla kuin generoitu napajää paloi.
+ *     Reliefin pikselit jaetaan siksi rivikohtaisella kertoimella
+ *     ENNEN päällepiirtoa — täsmälleen sama kaava kuin
+ *     maapallonVarit-funktiossa.
+ *  3. LATAUS EI SAA VIIVYTTÄÄ AVAUSTA. Linssi avautuu generoituun
+ *     Maahan heti, ja reliefi vaihtuu tilalle sitten kun se on ladattu.
+ *     Jos lataus ei onnistu (offline, kuva puuttuu), näkymä jää
+ *     generoituun Maahan eikä mitään rikkoudu.
+ *
+ * ILMAKEHÄ, TÄHDET JA KIILLON POISTO EIVÄT MUUTU: ne ovat pallon
+ * asetuksia eivätkä tekstuurin.
+ */
+
+/** Reliefikuvan osoite (js/packs/linssi-topografia-kuva.js). */
+export const RELIEFIN_OSOITE = 'assets/linssit/topografia-pallo.webp';
+
+/**
+ * Yhdistetyn tekstuurin mitat. 2048 × 1024 on kaksi kertaa generoidun
+ * (1024 × 512) tarkkuus ja puolet lähdekuvasta: pallo on ruudulla
+ * enimmillään noin 2 500 px leveä, joten tätä tarkempi ei näy, ja
+ * 8 Mt RGBA on puhelimelle kohtuullinen.
+ */
+export const RELIEFIN_LEVEYS = 2048;
+export const RELIEFIN_KORKEUS = 1024;
+
+/**
+ * Valon vastakaava reliefikuvan pikseleihin, rivi riviltä.
+ *
+ * PUHDAS FUNKTIO (tests/satelliitti-avaruus.test.mjs): saa ja palauttaa
+ * RGBA-taulukon. Rivi y vastaa leveysastetta 90 − (y + 0,5) / H · 180
+ * kuten kaikkialla muuallakin tässä tiedostossa.
+ */
+export function kompensoiValo(data, leveys, korkeus) {
+  const W = Math.max(1, Math.round(leveys));
+  const H = Math.max(1, Math.round(korkeus));
+  for (let y = 0; y < H; y += 1) {
+    const lat = 90 - ((y + 0.5) / H) * 180;
+    const valo = 1 + VALON_KOMPENSAATIO * Math.max(0, Math.sin((lat * Math.PI) / 180));
+    if (valo === 1) continue;
+    for (let x = 0; x < W; x += 1) {
+      const i = (y * W + x) * 4;
+      data[i] /= valo;
+      data[i + 1] /= valo;
+      data[i + 2] /= valo;
+    }
+  }
+  return data;
+}
+
+/**
+ * RELIEFI GENEROIDUN MAAN PÄÄLLE. Palauttaa lupauksen data-URLista tai
+ * nullista (lataus ei onnistunut, canvasia ei ole).
+ *
+ * @param {{ leveys?: number, korkeus?: number, osoite?: string }} asetukset
+ */
+export function reliefiTekstuuri({
+  leveys = RELIEFIN_LEVEYS, korkeus = RELIEFIN_KORKEUS, osoite = RELIEFIN_OSOITE,
+} = {}, doc = globalThis.document, ikkuna = globalThis) {
+  const kangas = doc?.createElement?.('canvas');
+  const ctx = kangas?.getContext?.('2d');
+  if (!ctx || !ikkuna?.Image) return Promise.resolve(null);
+  kangas.width = leveys;
+  kangas.height = korkeus;
+  /* 1. generoitu Maa pohjalle (napajää ja pilvet tulevat tästä) */
+  const perus = maapallonVarit({ leveys, korkeus });
+  ctx.putImageData(new ikkuna.ImageData(perus.data, perus.leveys, perus.korkeus), 0, 0);
+  return new Promise((valmis) => {
+    const kuva = new ikkuna.Image();
+    kuva.decoding = 'async';
+    // Kuva on samasta alkuperästä (repo), mutta crossOrigin pitää
+    // canvasin puhtaana myös silloin kun peli on avattu toiselta
+    // isännältä — likainen canvas ei anna toDataURLia lainkaan.
+    kuva.crossOrigin = 'anonymous';
+    kuva.addEventListener('error', () => valmis(null), { once: true });
+    kuva.addEventListener('load', () => {
+      try {
+        /* 2. reliefi omalle kankaalleen, valo kompensoitu */
+        const apu = doc.createElement('canvas');
+        apu.width = leveys;
+        apu.height = korkeus;
+        const actx = apu.getContext('2d');
+        actx.drawImage(kuva, 0, 0, leveys, korkeus);
+        const kuvadata = actx.getImageData(0, 0, leveys, korkeus);
+        kompensoiValo(kuvadata.data, leveys, korkeus);
+        actx.putImageData(kuvadata, 0, 0);
+        /* 3. päälle — läpinäkyvät navat jättävät generoidun Maan näkyviin */
+        ctx.drawImage(apu, 0, 0);
+        valmis(kangas.toDataURL('image/png'));
+      } catch {
+        valmis(null);
+      }
+    }, { once: true });
+    kuva.src = osoite;
+  });
+}
+
 /* ═════════════════ 3. NÄKYMÄN ASENNUS JA PURKU ══════════════════ */
 
 /** Avaruuden taustaväri (kangas pallon takana). */
@@ -561,6 +730,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   const kotelo = lauta?.kotelo;
   if (!pallo?.pointOfView) return null;
   const reduced = Boolean(ui?.reducedMotion);
+  /* Linssi on purettu: myöhässä saapuva reliefi ei enää kirjoita. */
+  let purettu = false;
 
   /* ---- lähtötila talteen ------------------------------------------- */
   const lahto = {
@@ -587,6 +758,21 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     pallo.globeTileEngineUrl(null);
     pallo.globeImageUrl(tekstuuri);
   }
+  /*
+   * RELIEFI PERÄSSÄ, EI ENNEN (ks. 2b). Avaus ei odota latausta: pallo
+   * on jo ruudulla generoituna, ja oikea maasto vaihtuu tilalle kun
+   * kuva saapuu. Jos linssi on jo suljettu (purettu), tekstuuria ei
+   * kirjoiteta — muuten reliefi ilmestyisi pelin omalle pallolle.
+   */
+  let reliefiPaalla = false;
+  reliefiTekstuuri({}, ikkuna.document, ikkuna)
+    .then((url) => {
+      if (!url || purettu || !tekstuuri) return;
+      reliefiPaalla = true;
+      pallo.globeImageUrl(url);
+      lauta?.heraa?.();
+    })
+    .catch(() => { /* reliefiä ei saatu: generoitu Maa jää */ });
   /*
    * KIILTO POIS. Pohjapallon materiaali on MeshPhongMaterial, jonka
    * specular on 0x111111 ja shininess 30 — paperikartalla se ei näy,
@@ -728,8 +914,10 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       nimienKynnys: +(alt * NIMIEN_KYNNYS).toFixed(3),
       pyyhkaisyja: pinnat.kertoja(),
       tekstuuri: Boolean(tekstuuri),
+      reliefi: reliefiPaalla,
     }),
     pura() {
+      purettu = true;
       kokovahti?.disconnect?.();
       if (kehys) ikkuna.cancelAnimationFrame?.(kehys);
       kehys = 0;
