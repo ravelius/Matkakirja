@@ -111,8 +111,8 @@ import { karttavaloKarkisymboli, piirraKarttavalo } from './karttavalot.js';
 import { asetaKuva, assetOsoite } from './media.js';
 import { kuvatekstiLyhyt, kuvatekstiPitka } from './kuvatekstit.js';
 import {
-  html, jaaKappaleiksi, linssiEstaa, nielaiseSulkevaNapautus, polloNimilappu,
-  suurennoksenMitat,
+  html, jaaKappaleiksi, kuunteleSulkevaNapautus, linssiEstaa, NAPAUTUKSEN_KESTO_MS,
+  nielaiseSulkevaNapautus, polloNimilappu, RAAHAUKSEN_KYNNYS, suurennoksenMitat,
 } from './ui-apurit.js';
 import { nostokuvaAloita, nostokuvaKortissa } from './nostokuva.js';
 import { piirraReaktiot } from './reaktiot.js';
@@ -5453,6 +5453,7 @@ function raahausTaiSulku(ui, popup, alku) {
   popup.puraEle?.();
   const alkuX = alku.clientX;
   const alkuY = alku.clientY;
+  const alkuHetki = alku.timeStamp || Date.now();
   const lahtoVasen = popup.offsetLeft;
   const lahtoYlin = popup.offsetTop;
   let raahaa = false;
@@ -5488,6 +5489,21 @@ function raahausTaiSulku(ui, popup, alku) {
       if (ui.fokuskohdeAuki?.popup === popup) ui.fokuskohdeAuki.raahattu = true;
       return;
     }
+    /*
+     * VETO EI OLE NAPAUTUS — EIKÄ SITÄ SAA PÄÄTELLÄ PELKÄSTÄ
+     * `raahaa`-LIPUSTA (mitattu 12.9.2026, iPad 834 x 1194: veto
+     * kortin OTSIKOSTA ylöspäin sulki kortin). Kosketuksessa
+     * pointermove-tapahtumia ei aina tule lainkaan — selain vie eleen
+     * vieritykseen ja lähettää parhaimmillaan pointercancelin, joskus
+     * pelkän pointerupin muualta ruudulta — jolloin `raahaa` jäi
+     * epätodeksi ja irrotus luettiin napautukseksi. Matka ja kesto
+     * luetaan siksi IRROTUKSESTA: sama sääntö ja sama kynnys kuin
+     * kortin ulkopuolisella sulkevalla napautuksella (ui-apurit
+     * kuunteleSulkevaNapautus, RAAHAUKSEN_KYNNYS).
+     */
+    const matka = Math.hypot(tapahtuma.clientX - alkuX, tapahtuma.clientY - alkuY);
+    const kesto = (tapahtuma.timeStamp || Date.now()) - alkuHetki;
+    if (matka >= RAAHAUKSEN_KYNNYS || kesto > NAPAUTUKSEN_KESTO_MS) return;
     sfx.play('paper');
     suljeFokuskohde(ui);
   };
@@ -5784,15 +5800,22 @@ function kuunteleKohdetta(ui, popup) {
       suljeFokuskohde(ui);
     }
   };
+  /*
+   * VETO EI OLE NAPAUTUS (omistaja 12.9.2026: *"Nosto häviää näkyvistä
+   * jos yrittää scrollata."*). `ulos` kertoo vain, VOISIKO tästä
+   * pointerdownista tulla sulkeva napautus; itse sulkeminen tapahtuu
+   * vasta `sulkeva`:ssa, kun sormi on noussut kynnyksen sisällä ja
+   * ajoissa (ui-apurit kuunteleSulkevaNapautus).
+   */
   const ulos = (tapahtuma) => {
-    if (popup.contains(tapahtuma.target)) return;
+    if (popup.contains(tapahtuma.target)) return false;
     /*
      * Suurennos on tämän kortin oma jatke, vaikka se asuu bodyssa
      * (js/kartta.js KELLUVA_UI: kelluvat pinnat ovat siellä samasta
      * syystä). Ilman tätä napautus suurennoksen päällä sulkisi kortin, ja
      * kuva kutistuisi paikkaan, jota ei enää ole.
      */
-    if (tapahtuma.target?.closest?.('.fokuskohde-zoom')) return;
+    if (tapahtuma.target?.closest?.('.fokuskohde-zoom')) return false;
     /*
      * PÖLLÖ EI SULJE KORTTIA (omistajan pelitesti 25.8.2026: *"kohteen
      * pop-up katoaa, kun painaa pöllönappia"*). Juurisyy oli tässä:
@@ -5804,7 +5827,7 @@ function kuunteleKohdetta(ui, popup) {
      */
     if (tapahtuma.target?.closest?.('.pollo-nappi, .pollo-paneeli')) {
       siirraKohdeMyohemmin(ui);
-      return;
+      return false;
     }
     /*
      * SULKEVA NAPAUTUS EI AVAA MITÄÄN UUTTA (omistaja 31.8.2026:
@@ -5836,11 +5859,18 @@ function kuunteleKohdetta(ui, popup) {
      * CLICKIÄ napautuksen KOHDALTA ja vain puolen sekunnin ajan
      * (ui-apurit nielaiseSulkevaNapautus): kynnyksen ylittänyt veto ei
      * tuota clickiä lainkaan, ja kartan oma raahausvahti nielee senkin
-     * (js/kartta.js raahattiin). Vetoele käyttäytyy siis täsmälleen
-     * kuten ennen tätä muutosta — myös se mitattu yksityiskohta, että
-     * kortin sulkeva veto itse ei vielä panoroi (sulku tapahtuu
-     * pointerdownissa); se on vanhaa käytöstä eikä nielun seurausta.
+     * (js/kartta.js raahattiin). Vetoele ei myöskään enää sulje
+     * korttia lainkaan (omistaja 12.9.2026, ks. `sulkeva` alla): veto
+     * panoroi karttaa ja kortti jää auki — sulku vaatii napautuksen.
      */
+    return true;
+  };
+  /*
+   * SULKEMINEN VASTA NAPAUTUKSESTA. Nielu tarvitsee ALKUPERÄISEN
+   * pointerdownin — sen kohde ratkaisee, oliko napautus kartalle, ja
+   * sen koordinaatit rajaavat nielun (ui-apurit nielaiseSulkevaNapautus).
+   */
+  const sulkeva = (tapahtuma) => {
     if (tapahtuma.target?.closest?.('#board')) nielaiseSulkevaNapautus(tapahtuma);
     suljeFokuskohde(ui);
   };
@@ -5865,13 +5895,15 @@ function kuunteleKohdetta(ui, popup) {
     }
   });
   document.addEventListener('keydown', nappain, true);
-  document.addEventListener('pointerdown', ulos, true);
+  const puraNapautus = kuunteleSulkevaNapautus(
+    document, { kelpaa: ulos, napautus: sulkeva }, { kaappaus: true },
+  );
   globalThis.addEventListener?.('resize', asemoi);
   globalThis.addEventListener?.('orientationchange', asemoi);
   vahti.observe(document.body, { childList: true, subtree: true });
   return () => {
     document.removeEventListener('keydown', nappain, true);
-    document.removeEventListener('pointerdown', ulos, true);
+    puraNapautus();
     popup.puraEle?.();
     globalThis.removeEventListener?.('resize', asemoi);
     globalThis.removeEventListener?.('orientationchange', asemoi);
