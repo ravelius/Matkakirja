@@ -29,7 +29,13 @@ Tekstivetäjä omistaa fokusvirtapakkien sisältömuutokset omassa työhaarassaa
 - Marseille P2 v2: kuvavetäjän ja tekstivetäjän visuaalinen/paritarkistus valmis, mediajulkaisu takaisinluettu (kuvavetäjän kuitti). https://media.matkakirja.app/matkakirja/pulu-cam/20260912/pulu-cam-marseille-02-v2-5218c67d5b38.jpg ; sha256 5218c67d5b3868d83854107900a88da7acd1597efc8d035a52401255daf52464. Toimitus output/pulu-p2-europe-20260912/marseille/handoff.json kuvatehtävän työhakemistossa. P1 säilyy. P2 EI vielä kytketty peliin; tulee tekstivetäjän yhteispilotin mukana. 36 puuttuvan P2:n tilauksesta 1 toimitettu mediaan, 35 vielä generoimatta.
 - Pulun pysyvä ääni VALITTU 12.9.2026: Flicker — cheerful fairy & sparkly sweetness, voice_id piI8Kku0DcvcL6TTSeQt, moottori eleven_v3. Horation ääni ei vaihdu. Ajolupa ja julkaisu ovat edelleen erillisiä portteja.
 
-## Sisältö-QA ja lukukopiot
+## R2-lukupaketti valmis käyttäjän tarkistukseen — 13.9.2026
+
+Tekstivetäjän eu-hl-pilot-20260912-r2-candidate1 on valmis lukukatselmukseen, remote 6401ba0bebb28436ee9e36f6d14d467976437e8c / draft PR #2325. Lukukopio: docs/raportit/horatio-livia-pilotti-r2-lukukopio-20260912.md tekstivetäjän haarassa. Erillinen mittaraportti: docs/raportit/horatio-livia-pilotti-r2-mittaraportti-20260912.md. Pääsessio luki kaikki parit ja tarkisti r2-mitat itsenäisesti: Marseille 401 merkkiä / 50 sanaa (lähtö 430/56), Ateena 413/53 (449/57), Sarajevo 415/52 (436/54), Venetsia 442/58 (454/59). RC-vetäjän riippumaton tagit 4/4 ja cue-ankkurit 17/17 PASS. Pääsessio toimittaa suoran lukulinkin käyttäjälle tässä vuorossa; valmistumisen kertailmoitusseuranta on tauotettu. TILA: odottaa käyttäjän sisältökatselmusta, EI hyväksytty RC-runtimeen, maksulliseen ajoon tai julkaisuun. Lukukopion tarkistuskysymyksen sisältöhyväksyntä ja ajolupa pyydetty erottamaan; repliikkejä ei muuteta tämän toimituksellisen korjauksen yhteydessä.
+
+RC-vetäjä raportoi teknisen regressiopäivityksen nyt myös remotessa: 34000613f6a9e1f3ab9c0a1560cb0c16c78f657f, neljä blobia SHA-varmennettu. Tämä on r1-RC:n tekninen muutos, ei r2-sisältöhyväksyntä.
+
+## Sisältö-QA ja lukukopiot (tausta ennen r2-toimitusta)
 
 Omistaja pyysi tekstit luettavaksi. Nykyiset 45 kaupungin tekstit (lähtö main e34a1171) ja neljän kaupungin r1-luonnokset on toimitettu erillisinä lukukopioina ja säilytetään. R1:n Horation tiivistys oli liian vähäinen (341→316, 346→337, 328→318, 348→348 merkkiä); välimerkkien yhdistäminen ei riitä.
 
