@@ -1,3 +1,23 @@
+## 2026-09-12 09:00 UTC — FABLE: SATELLIITTILINSSI JULKAISTU v1793:ssa
+
+Main `8ed2c11c`, PR 2284, CI vihrea. 06:24 UTC:n toimeksianto on toteutettu.
+
+**21 kohdetta, 136 havaintoa.** Kuvat tulevat ICEYEn omista osoitteista; repoon ei tuotu yhtaan kuvaa, ja jokainen osoite varmistetaan HEAD-kutsulla ennen aineistoon kirjoittamista. CC BY 4.0, tekija ICEYE. Ampariajoa ei tarvittu.
+
+**Suosituksesi useista kuvista toteutui, ja se osoittautui oikeaksi juuri siita syysta jonka nimesit.** Ryhmittely on geometrinen: leikkaus vahintaan puolet pienemmasta JA jalanjaljet kokoluokaltaan vertailukelpoisia. **Kokoehto oli valttamaton** — ilman sita yksi 300 km:n scan-kuva ketjutti kymmenen erillista 6 km:n spotlight-kohdetta yhdeksi, ja Skotlantiin syntyi 64 havainnon moykky. Panaman kanavan yhdeksan ruutua samalta ylilennolta ovat eri pisteita, kuten sanoit.
+
+Oletuskuvan saanto: tarkin kuvaustila, sitten pienin katselukulma, sitten uusin. Venetsiassa oletus on siksi vuoden 2026 kuva eika vanhempi jyrkempi, ja Krakovassa 17.9.2025 eika uusin 38,7 asteen rajaus — eli tasmalleen se, mita varoitit ("ei automaattisesti uusin heikkolaatuinen rajaus").
+
+Ylapalkin elinkaari otettiin Ihmisen matka- ja Keksinnot-linsseista kuten ohjeistit. Mitattu: palkkeja tasan 1, kartta ei kutistu, sulkiessa pelitila identtinen.
+
+Havaintokuva aukeaa kuva edella; vaiheenvaihdossa ja gallerian vaihdossa kuvan siirtyma on 0,0 px.
+
+**Selainsavuke loysi kolme oikeaa vikaa**, jotka eivat olisi nakyneet yksikkotesteissa: Matkakirjan ylapalkki ei piiloutunut, koska `css/aikajana.css` ladataan vasta aikajanalinssin mukana; hehkuvat pisteet jaivat DOMiin sulkemisen jalkeen; ja kuvateksti jai nayttamaan edellisen havainnon paivaysta gallerian vaihdon jalkeen. Kaikki korjattu ennen julkaisua.
+
+**Jatkoon:** loput noin 330 footprint-ryhmaa (yksi ankkuririvi per kohde), pikkukuvien peilaus amparim pienennettyina (Loch Etivella 51 ja Fort McMurrayssa 22 havaintoa, ja pikkukuvat ovat taysikokoisia 700 kt PNG:ita), seka VID-videot jotka ovat aineistossa mutta joita ei viela nayteta.
+
+Tahtitaivas, kaanteinen pallo ja NASA-aineisto ovat Raamatussa erillisena myohempana linssina, kuten sovittiin.
+
 ## 2026-09-12 08:15 UTC — FABLE: `kuvat`-kentan rakenne, jarjestyssaanto ja yksi rajaus
 
 Vastaus 07:21 UTC:n kysymykseen: *"Pelin kuvat-kentan tarkka rakenne tarkistetaan ennen ensimmaista kaksikuvatoimitusta."* Tassa se, tarkistettuna koodista (main 6528f80f), ei muistista.
