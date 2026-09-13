@@ -169,14 +169,14 @@ ylöspäin aukeava valikko.
 | kortti y | 526…625 | 628…819 |
 | kortti x | 41…349 | 402…998 |
 | karttaruutu | x 8…382, y 61…836 | x 11…1389, y 68…889 |
-| maan laatikon eteläreuna (y) | 461 | 500 |
+| maan laatikon eteläreuna (y) | 461 | 551 |
 | kortti lähemmällä zoomilla | 617 × 197 px (skaala 2,057) | 900 × 288 px (skaala 3,000 = katto) |
 
 **Luettavuus:** suunnitelman luku 3.0 kohta 3 vaatii uloimmalla
 zoomilla vähintään 240 css-px 400 px:n ruudulla. Mitattu **308 px
 390 px:n ruudulla** — reilusti yli. Kortti on kokonaan karttaruudun
 sisällä molemmilla kuvasuhteilla, ja sen yläreuna on maan laatikon
-eteläreunan alapuolella (390 px: 526 > 461; 1400 px: 628 > 500).
+eteläreunan alapuolella (390 px: 526 > 461; 1400 px: 628 > 551).
 
 **Ranskan kahdeksan otsikkoa ja niiden sivut** (kaikki napautettu
 oikealla hiiren napautuksella, sivu luettu `ui.lehtitila`sta):
@@ -197,41 +197,48 @@ kakkosesta — juuri niin kuin `avaaMaalehti` latoo pinonsa.
 
 ## 4. Mitä kuvissa NÄIN
 
-`docs/raportit/kuvat/karttauudistus-3-390.png` ja `…-1400.png`
-(kaksi kuvaa). Kuvat on RAJATTU maan eteläreunaan ja paneeliin: koko
-ruutu on PNG:nä 390 px:llä 416 kt ja 1400 px:llä 782 kt, ja raportin
-kuvakatto on 400 kt. Rajaus lasketaan mitatuista laatikoista.
+Kaksi kuvaa: `docs/raportit/kuvat/karttauudistus-3-390.png` (261 kt) ja
+`…-1400.png` (335 kt). Molemmat on RAJATTU paneelin ympäristöön, koska
+koko ruutu on PNG:nä 416 kt (390 px) ja 782 kt (1400 px) eli yli
+raportin 400 kt:n katon; rajaus lasketaan mitatuista laatikoista.
+Kuvat ovat pelin oikeaa näkymää — mitään ei ole piilotettu.
 
-**390 px.** Paneeli on kartan päällä Ranskan eteläpuolella, Madridin ja
-Barcelonan korkeudella, tummana läpikuultavana laattana. Vasemmassa
-laidassa lukee **RANSKA** kullanvärisenä, sen alla neljä lukua kahdessa
-sarakkeessa — VÄKILUKU 69 milj. (23./195), PINTA-ALA 610 000 km²
-(45./1…), DEMOKRATIA 0,80 · V-Dem (9./…), KESKITULO 45 000 $/v
-(23./189) — ja oikeassa laidassa **Lisää**-nappi omassa kehyksessään.
-Teksti on luettavaa ilman zoomausta, ja pienempi sija-luku on
-haaleampi kuten maataulussakin. Kartalla näkyvät samaan aikaan
-Edinburgh, Dublin, Lontoo, Madrid, Barcelona ja Tanger omine
-niminään, eli paneeli ei ole vienyt tilaa kaupunkinimiltä. Oikeassa
-alanurkassa on pöllö entisellä paikallaan.
+**390 px — paneeli on juuri niin kuin piti.** Ranskan eteläpuolella,
+Madridin ja Barcelonan korkeudella, on tumma läpikuultava laatta.
+Vasemmassa laidassa **RANSKA** kullanvärisenä, sen alla neljä lukua
+kahdessa sarakkeessa — VÄKILUKU 69 milj. (23./195), PINTA-ALA
+610 000 km² (45./1…), DEMOKRATIA 0,80 · V-Dem (9./…), KESKITULO
+45 000 $/v (23./189) — ja oikeassa laidassa **Lisää**-nappi omassa
+kehyksessään. Sija-luvut ovat pienempiä ja haaleampia kuten
+maataulussakin. Teksti on luettavaa ilman zoomausta. Samaan aikaan
+kartalla näkyvät Edinburgh, Dublin, Lontoo, Madrid, Barcelona ja
+Tanger omine niminään — paneeli ei ole vienyt tilaa kaupunkinimiltä.
+Oikeassa alanurkassa on pöllö entisellä paikallaan.
 
-**Se mitä NÄIN ja mikä on ongelma:** samassa kuvassa on
-matkapäiväkirjan lappu (`.fact-card`) — iso seepiavalokuva Pariisin
-Oopperasta ja kuvateksti *"Pariisi 1873: Ooppera harjoitteli
-juhlapukuaan."* Se peittää Ranskan lähes kokonaan ja sen kuvateksti
-menee paneelin RANSKA-otsikon päälle. Lappu on pelin omaa UI:ta, joka
-asettuu sille kartan nurkalle, jossa on eniten merta (js/kartta.js
-`placeFactCard`) — pallolaudalla Pariisissa se osuu keskelle ruutua.
-Paneeli itse on kokonaan näkyvissä ja luettavissa, mutta kapealla
-ruudulla nämä kaksi ovat päällekkäin. Ks. luku 6, avoin asia 1.
+**Mitä NÄIN ja mikä on ongelma.** Samassa kuvassa on matkapäiväkirjan
+lappu (`.fact-card`): iso seepiavalokuva Pariisin Oopperasta ja
+kuvateksti *"Pariisi 1873: Ooppera harjoitteli juhlapukuaan."* Se
+peittää Ranskan lähes kokonaan, ja sen kuvateksti kulkee paneelin
+RANSKA-otsikon päältä. Lappu asettuu sille kartan nurkalle, jossa on
+eniten merta (js/kartta.js `placeFactCard`) — pallolaudalla Pariisissa
+se osuu keskelle ruutua.
 
-**1400 px.** Sama kaluste kaksinkertaisena (596 px) maan eteläreunan
-alla. Kortin typografia kestää skaalauksen: teksti on kaksi kertaa
-isompaa eikä sumene, koska kyseessä on CSS-muunnos oikealle tekstille
-eikä bittikartta. **Myös työpöytäruudulla päiväkirjan valokuva on
-paneelin päällä** — se on siis leveän ruudunkin ongelma, ei vain
-puhelimen; tässä kuvassa siitä näkyy paneelin ylin kolmannes valokuvan
-alta ja alempi kaksi kolmannesta puhtaana. Kuvan alalaidassa on pelin
-MATKUSTA-nappi.
+**1400 px — sama kaluste kaksinkertaisena, mutta päiväkirja peittää
+sen.** Kortti on 596 px leveä (390 px:llä 308), ja sen typografia
+kestää skaalauksen: teksti on kaksi kertaa isompaa eikä sumene, koska
+kyseessä on CSS-muunnos oikealle tekstille eikä bittikartta. KUVASSA
+NÄKYY kuitenkin vain paneelin alin kolmannes — DEMOKRATIA 0,80 ·
+V-Dem (9./…), KESKITULO ja **Lisää**-nappi — koska sama
+päiväkirjavalokuva peittää kaksi ylempää kolmannesta. Kuvan
+alalaidassa on pelin MATKUSTA-nappi ja alimmalla rivillä kartan
+nimiä (TANGER, …GO).
+
+**Johtopäätös kuvista:** paneeli itse on mitoiltaan, paikaltaan ja
+luettavuudeltaan kunnossa molemmilla ruuduilla (mitat luvussa 3, savuke
+todentaa ne), mutta **matkapäiväkirjan lappu on sen päällä
+molemmilla** — leveällä ruudulla pahemmin kuin kapealla. Tämä ei ole
+erän 3 aiheuttama vika, mutta se on nyt näkyvä ja se pitää ratkaista.
+Ks. luku 6, avoin asia 1.
 
 ## 5. Portit
 
@@ -253,36 +260,50 @@ laatikon yhä maapolygoneista (nyt paneeli mukaan laajennettuna).
 
 ## 6. Avoimet asiat ja rajapinnat muihin eriin
 
-1. **Saapumiskortti peittää maan kapealla ruudulla** (ks. luku 4). Tämä
-   ei ole erän 3 aiheuttama — kortti oli siinä ennenkin — mutta
-   karttauudistuksessa se on nyt ristiriita: kartta on uusi
-   käyttöliittymä, ja iso kortti sen päällä vie sen. **Erä 4** (kaupungin
-   pop-up) ja **erä 5** (kaupunkilehden sivut nostoiksi) koskevat
-   täsmälleen tätä sisältöä, joten korjaus kuuluu niihin, ei tänne.
-   Fablelle päätettäväksi.
-2. **Uloszoomauksen esto (erä 2) ei ole vielä pelissä.** Paneelin
+1. **Matkapäiväkirjan lappu peittää maan ja maapaneelin** molemmilla
+   ruutukooilla (ks. luku 4). Lappu (`.fact-card`) hakee kartan
+   merisimmän nurkan (js/kartta.js `placeFactCard`), ja pallolaudalla
+   se osuu keskelle. Tämä ei ole erän 3 aiheuttama — lappu oli siinä
+   ennenkin — mutta karttauudistuksessa se on ristiriita: kartta on
+   uusi käyttöliittymä, ja iso lappu sen päällä vie sen. Korjaus on
+   joko lapun paikanhaku pallolaudalle (sijoitus maan laatikon
+   ULKOPUOLELLE, kuten paneeli) tai lapun kutistaminen oletuksena
+   pallolla. **En tehnyt kumpaakaan**, koska molemmat ovat
+   js/kartta.js:n ja pelin yleisen kalustelogiikan muutoksia eivätkä
+   kuulu tähän erään. Fablelle päätettäväksi.
+2. **Karttaruudun korkeus muuttuu saapumisen jälkeen.** Mitattu
+   savuketta tehdessä: 390 px:n ruudulla `pallolauta.kotelo`in korkeus
+   oli ensin 775 px ja myöhemmin 528 px, kun päiväkirjan lapun
+   valokuva latautui ja asettelu eli. Kamera ei aja saapumisrajausta
+   uudelleen ruudun koon muuttuessa (`mitoita` vain mitoittaa pallon),
+   joten laatikkoon sovitettu näkymä voi valua ruudun ulkopuolelle —
+   ensimmäisenä juuri alareunan paneeli. En koskenut tähän: se on
+   kameran ja koko laudan asia, ei erän 3. Savuke odottaa asettelun
+   vakaaksi ennen mittausta, jotta se mittaa paneelia eikä tätä.
+3. **Uloszoomauksen esto (erä 2) ei ole vielä pelissä.** Paneelin
    mitoitus on tehty sitä varten: "uloin zoomi" on tässä
-   saapumisnäkymä, jonka kamera laskee samasta laatikosta (× 1,05).
+   saapumisnäkymä, jonka kamera laskee samasta laatikosta
+   (`SAAPUMISRAJAUKSEN_MARGINAALI` 0,05 kummallekin laidalle).
    Kun erä 2 asettaa `zoomirajaSyrjaytys`in, sen on käytettävä
    **`saapumislaatikko`a** (paneeli mukana) eikä pelkkää maan laatikkoa
    — muuten pelaaja voi zoomata ulos vain siihen asti, että paneeli
    leikkautuu. Rajapinta on valmis: `paneelinLaatikko(bbox)` on
    viety js/pallolauta/maapaneeli.js:stä.
-3. **Erä 4 ja js/lehti.js.** Kosketin vain `avaaMaalehti`-funktiota ja
+4. **Erä 4 ja js/lehti.js.** Kosketin vain `avaaMaalehti`-funktiota ja
    lisäsin sen eteen apurin `maalehdenSivunumero`. ETUSIVUN osien
    irrotus (erä 4) on eri kohdassa tiedostoa; mergekonfliktia ei
    pitäisi tulla.
-4. **Kielirivi jäi pois paneelista.** Nurkan maataulussa on lisäksi
+5. **Kielirivi jäi pois paneelista.** Nurkan maataulussa on lisäksi
    kielet lippuineen; kartalla ne eivät mahdu 96 px:n korkuiseen
    korttiin ilman että luvut kutistuvat lukukelvottomiksi uloimmalla
    zoomilla. Kielet ovat maalehden "Maa numeroina" -sivulla, johon
    Lisää-valikko vie. Jos omistaja haluaa ne kartalle, kortti tarvitsee
    toisen rivin ja `MAAPANEELIN_KORKEUS_PX`:n noston (yksi vakio).
-5. **Paneeli peittää merta maan eteläpuolella.** Ranskalla se osuu
+6. **Paneeli peittää merta maan eteläpuolella.** Ranskalla se osuu
    Välimereen ja Espanjan pohjoisosaan. Jos jollain maalla se osuu
    naapurimaan päälle häiritsevästi, vaihtoehto on siirtää ankkuri
    sille kyljelle, jolla on eniten tilaa — se on yksi funktio
    (`paneelinAnkkuri`), mutta se pitäisi tehdä vasta kun omistaja on
    nähnyt tämän muutamalla maalla.
-6. **Piirroskuvitukset ja murrettu paletti** (PÄÄTÖKSET 2 kohta 1) ovat
+7. **Piirroskuvitukset ja murrettu paletti** (PÄÄTÖKSET 2 kohta 1) ovat
    erän 1b asia; tämä erä ei koskenut laattoihin eikä väriasteikkoon.
