@@ -30,20 +30,21 @@
  *                    mannerivihje-1, ateena-1, sofia-7). Tyhjä = kaikki.
  *   --pakota         generoi vaikka tiedosto on jo ämpärissä.
  *   --ei-vientia     generoi ja viimeistele, mutta jätä levylle.
- *   --tempo <luku>   puheen nopeutus ffmpegillä (oletus TEMPO).
+ *   --tempo <luku>   puheen nopeutus ffmpegillä (oletus 1,0 = ei mitään).
  *   --haku <nimi>    --aanet: listaa vain äänet, joiden nimessä on <nimi>.
  *                    Jos arvo on voice_id (20 merkkiä), haetaan nimi
  *                    suoraan tunnuksella.
  *
  * ------------------------------------------------------------------
- * MIKSI TEMPO TEHDÄÄN FFMPEGILLÄ
+ * FFMPEG-NOPEUTUS ON POISSA (omistaja 13.9.2026)
  * ------------------------------------------------------------------
  *
- * eleven_v3 on tageja ymmärtävä malli, mutta sillä ei ole nopeus-
- * säädintä (v2:n `speed` ei kuulu sen asetuksiin). Omistaja tilasi
- * NOPEAN puhujan, joten nopeutus tehdään viimeistelyketjussa
- * `atempo`-suodattimella: se on deterministinen, kuuluu samalta
- * jokaisessa ajossa eikä riipu siitä, mitä malli sattuu tekemään.
+ * Aiemmin viimeistelyketju nopeutti puhetta `atempo`-suodattimella,
+ * koska eleven_v3:lla ei ole nopeussäädintä. Omistaja otti tämän pois:
+ * "ota pulun äänestä fmpeg nopeutus pois". TEMPO on siksi 1,0 eikä
+ * `atempo` mene ketjuun lainkaan — ääni kuullaan sellaisena kuin malli
+ * sen tuottaa. Tahtia säädetään TAGEILLA, ei jälkikäsittelyllä.
+ * Lippu `--tempo` on yhä olemassa kokeiluja varten, mutta oletus on 1,0.
  * Elävyys tulee TAGEISTA; pysyvä vakausoletus on Natural 0,5. Muita
  * parametreja ei päätellä äänen nimestä.
  *
@@ -213,8 +214,12 @@ const SIMILARITY = 0.75;
 const STYLE = TAGIT_KAYTOSSA ? 0.6 : 0;
 /** Mallin oma nopeus (vain v2-perhe; v3 jättää kentän huomiotta). */
 const SPEED = 1.05;
-/** Nopeutus viimeistelyssä: v3:lla 1,08, v2:lla nopeus tulee mallista. */
-const TEMPO = TAGIT_KAYTOSSA ? 1.08 : 1.0;
+/**
+ * Nopeutus viimeistelyssä. 1,0 = ei nopeutusta: omistaja otti ffmpeg-
+ * nopeutuksen pois 13.9.2026. Arvolla 1 `atempo` jätetään pois koko
+ * suodatinketjusta, ei ajeta yksikkösuodattimena.
+ */
+const TEMPO = 1.0;
 /** Lopputauko, jonka ffmpeg leikkaa naksahduksen kanssa pois. */
 const LOPPUTAUKO = ' <break time="1.0s" />';
 
@@ -1299,7 +1304,7 @@ async function haeApista(puhe, aani, avain, kohde) {
 }
 
 /**
- * Viimeistelysuodatin: häivytykset päihin, nopeutus, tason korjaus ja
+ * Viimeistelysuodatin: häivytykset päihin, tason korjaus ja
  * hiljainen häntä. `kesto` on leikatun äänen pituus sekunteina.
  */
 export function viimeistelySuodatin({
@@ -1311,7 +1316,9 @@ export function viimeistelySuodatin({
   return [
     `afade=t=in:st=0:d=${h.toFixed(3)}`,
     `afade=t=out:st=${ulosAlkaa.toFixed(3)}:d=${h.toFixed(3)}`,
-    `atempo=${tempo.toFixed(3)}`,
+    // Nopeutus vain jos sitä on erikseen pyydetty: oletuksella 1,0
+    // atempo jää kokonaan pois eikä ääntä resamplata turhaan.
+    ...(tempo === 1 ? [] : [`atempo=${tempo.toFixed(3)}`]),
     `volume=${korjausDb.toFixed(2)}dB`,
     `apad=pad_dur=${padding.toFixed(3)}`,
   ].join(',');
@@ -1343,7 +1350,7 @@ export function kaikuSuodatin({ kesto = KAIUN_KESTO, vaimennus = KAIUN_VAIMENNUS
   ].join(';');
 }
 
-/** Leikkaa hiljaisuus, nopeuta, normalisoi taso ja koodaa mp3. */
+/** Leikkaa hiljaisuus, normalisoi taso ja koodaa mp3. */
 function viimeistele(lahde, kohde, tyokansio, tempo) {
   const wav = join(tyokansio, 'leikattu.wav');
   aja('ffmpeg', [
