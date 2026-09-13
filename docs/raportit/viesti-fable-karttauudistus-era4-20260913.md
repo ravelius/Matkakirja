@@ -67,33 +67,55 @@ kuten `piirraLeipateksti` ne latoo) — **merkki merkiltä, ei sisältövertailu
 
 ## 3. Mitatut luvut
 
+Savukkeesta `savuke-kaupunkipopup` (13.9.2026, 99/99 vihreä).
+
 | Mitta | Pariisi | Marseille |
 | --- | ---: | ---: |
 | Kohdekartan kohteita kortissa | 25 | 6 |
-| Turisti-infon etäisyys kaupunkipisteestä saapumisnäkymässä (390 px) | 39 px | 39 px |
-| Merkin mittakaava saapumisnäkymässä / lähikuvassa | 0,81 / 3,0 | 0,81 / 3,0 |
+| Turisti-infon etäisyys kaupunkipisteestä, 390 px | 39,0 px | 38,4 px |
+| Sama, 1400 px | 102,9 px | 99,5 px |
+| Merkin mittakaava saapumisnäkymässä / lähikuvassa, 390 px | 0,81 / 3,0 | 0,81 / 3,0 |
+| Sama, 1400 px | 0,75 / 3,0 | 0,75 / 3,0 |
+| Kohdekartan zoomikerroin plus-näppäimestä | 1,00 → 1,50 | 1,00 → 1,50 |
 | Kortin kerros / Pulun paneelin kerros | 6 / 41 | 6 / 41 |
 
-Ranskan saapumiskorkeus 390 px:n ruudulla on **0,627** pallonsädettä, ja
-ruudulla on noin **23 px yhtä kaaren astetta** kohti. Merkin siirto on
-1,5° pituutta (jaettuna leveysasteen kosinilla) ja 0,75° etelään.
+Ranskan **saapumiskorkeus** on 390 px:n ruudulla 0,627 ja 1400 px:n ruudulla
+0,251 pallonsädettä. Merkin siirto on 1,5° pituutta (jaettuna leveysasteen
+kosinilla) ja 0,75° etelään; se antaa 390 px:n saapumisnäkymässä 39 px:n eron
+kaupunkipisteeseen, eli merkki on kaupungin vieressä mutta selvästi eri
+napautuskohde (osumasäde on 44 px).
+
+Mittakaavan lattia (0,75) osuu työpöydällä saapumisnäkymässä ja katto (3,0)
+kummallakin ruudulla lähikuvassa — molemmat rajat ovat siis oikeasti
+käytössä eivätkä pelkkää varovaisuutta.
 
 ## 4. Savuke ja vastakokeet
 
 `tools/savukkeet/savuke-kaupunkipopup.mjs` — yhdeksän vartiota, ajettuna
-kahdella ruudulla (390 × 844 dpr 2 ja 1400 × 900) ja kahdessa kaupungissa.
-Napautukset ovat aitoja hiiren painalluksia siihen ruutupisteeseen, johon
-merkki projisoituu; savuke ei kutsu avaajia suoraan.
+kahdella ruudulla (390 × 844 dpr 2 ja 1400 × 900) ja kahdessa kaupungissa:
+**99/99 vihreä**. Napautukset ovat aitoja hiiren painalluksia siihen
+ruutupisteeseen, johon merkki projisoituu; savuke ei kutsu avaajia suoraan.
 
-- **Vihreä ajo:** ks. luku 4.1.
-- **Vastakoe 1 (ajetaan savukkeen sisällä):** Marseillen herokuvat poistetaan
-  lehtidatasta ajon aikana (dynaaminen `import` osuu samaan
-  moduuli-instanssiin kuin peli), kortti avataan uudelleen. Vaatimus: kortti
-  aukeaa silti JA hero-lohkon **korkeus on 0 px** (`hidden === true`).
-  Väite on nimenomaan lohkon korkeudesta, koska ilman `hero.hidden`-sääntöä
-  tyhjä kehys jäisi korttiin omalla marginaalillaan.
-- **Vastakoe 2 (käsin):** turisti-infon merkin kytkentä riisutaan
-  (`avaa`-kenttä pois datumista) → savuke punainen.
+**Vastakoe 1 — ohut lehti ilman herokuvia (ajetaan savukkeen sisällä).**
+Marseillen `kansikuvat`, `avauskuvat` ja `ennenNyt` poistetaan lehtidatasta
+kesken ajon (dynaaminen `import` osuu samaan moduuli-instanssiin kuin peli;
+mitattu: 3 kansikuvaa + 3 avauskuvaa → 0 + 0) ja kortti avataan uudelleen.
+Tulos: kortti aukeaa (`kortteja: 1`), **hero-lohkon korkeus on 0 px**
+(`hidden = true`), ja esittely ja kohdekartta ovat yhä kortissa. Väite on
+nimenomaan lohkon korkeudesta, koska ilman `hero.hidden`-sääntöä tyhjä kehys
+jäisi korttiin omalla marginaalillaan.
+
+**Vastakoe 2 — merkin kytkentä riisuttu (ajettu käsin 13.9.2026).**
+`paivitaTuristiInfo`-datumin `avaa`-kenttä poistettiin ja savuke ajettiin
+uudelleen: **71/75, neljä punaista** — "turisti-info-merkki on kartalla"
+kaatui kaikissa neljässä ajossa (kaksi kaupunkia × kaksi ruutua), ja
+merkistä riippuvat vartiot jäivät ajamatta. Kytkentä palautettiin heti, ja
+vihreä ajo (99/99) on tehty palautuksen jälkeen.
+
+**Kolmas punainen ajo, jota ei tilattu mutta joka kirjattakoon:** kohdekartan
+zoomin vartio hyväksyi ensin pelkän `zoomattu`-luokan, ja yhdessä ajossa
+muunnos oli silti identiteetti (kerroin 1,00). Vartio lukee nyt kertoimen
+muunnoksesta ja odottaa sitä — luvut taulukossa ovat siitä.
 
 ## 5. Löydökset
 
@@ -116,7 +138,20 @@ Samassa yhteydessä merkin siirto kasvatettiin 0,72°/0,36° → 1,5°/0,75°,
 koska ensimmäinen arvio antoi vain 18,6 px eroa eli kaksi kohdetta saman
 sormen alle.
 
-### 5.2 Kirjattavaksi Fablelle (ei korjattu, ei tämän erän työtä)
+### 5.2 Poltettu nimimuste söi turisti-infon napautuksen (korjattu)
+
+Osumajärjestyksen korjauksen jälkeen merkin napautus avasi yhä kaupungin
+pop-upin. Syy: `lahinMerkki` päättyy riviin `musteeseenOsunut(lat, lng) ??
+voittaja` — piirretty muste voittaa pelkän 44 px:n läheisyyden, ja
+**Pariisin poltettu nimimuste ulottui merkin alle**. Elävä kaupunginnimi
+olisi väistänyt (merkin laatikko on nimiladonnan varaus), mutta laattaan
+poltettu ei voi väistää.
+
+Korjaus on sama myönnytys, joka kohtaamispisteellä on jo: merkki, joka on
+kerran tarkoituksella siirretty sivuun kaupungin päältä, pitää paikkansa
+musteen yli. Yksi rivi `lahinMerkki`ssä, perustelu koodissa.
+
+### 5.3 Kirjattavaksi Fablelle (ei korjattu, ei tämän erän työtä)
 
 1. **Turisti-infon merkki ei ole kaupunkiruuhkan katon eikä nostojen
    sovittelun piirissä.** Suunnitelma (luku 3.3) sanoi merkin olevan
@@ -148,12 +183,31 @@ sormen alle.
 
 | Portti | Tulos |
 | --- | --- |
-| `npm test` | — |
+| `npm test` | **# pass 3293 · # fail 0** |
 | `node tools/tarkista-kaksoisavaimet.mjs` | ei kaksoisavaimia |
-| `node tools/tarkista-niputus.mjs` | niputus kunnossa: 388 moduulia, ei törmäyksiä |
-| `node tools/tarkista-savukkeet.mjs` | — |
-| `node tools/build-standalone.mjs` | dist/matkakirja.html syntyy (ei committoitu) |
+| `node tools/tarkista-niputus.mjs` | niputus kunnossa: 388 moduulia, 4171 top-level-julistusta, ei törmäyksiä |
+| `node tools/tarkista-savukkeet.mjs` | savukkeet kunnossa: 1502 ui-viittausta, 399 metodia, 533 kenttää |
+| `node tools/build-standalone.mjs` | dist/matkakirja.html syntyy (EI committoitu) |
+| `savuke-kaupunkipopup` | **99/99 vihreä** |
+
+`grep -rn '^<<<<<<<' js css tests tools` on tyhjä. Versiota ei nostettu.
 
 ## 7. Kuvakaappaukset
 
-`docs/raportit/kuvat/karttauudistus-4-*.png` (390 px, dpr 2).
+`docs/raportit/kuvat/karttauudistus-4-*.png` — neljä kuvaa, 390 × 844
+CSS-pikseliä, kukin alle 300 kt. Kaappaukset otetaan kortin AVAUSHETKESTÄ
+(ennen zoomin ja Pulun vartioita), jotta kuva näyttää kortin siinä asussa,
+jossa se aukeaa.
+
+- `…-pariisi-popup.png` ja `…-marseille-popup.png`: iso pop-up.
+- `…-pariisi-turisti-info.png` ja `…-marseille-turisti-info.png`: matkustusopas.
+
+**Silmätarkistuksen havainnot (ei korjattu, kirjattu Fablelle):**
+
+1. Turisti-infon kortissa (390 px) lehden oma "Matkaopas"-kulmanauha kulkee
+   MATKAILIJALLE-otsikon yli, ja kuvan viereinen tekstipalsta on kapea.
+   Kumpikin on lehden oman taiton käytös kapeammassa kehyksessä; korjaus on
+   `css/kaupunkinosto.css`:n mitoitusta, ei sisältöä.
+2. Kohdekartan miniatyyrit jäivät savukkeen ajossa osin lataamatta (ämpärin
+   429-vastaukset), joten kuvissa on täpliä piirrosten sijaan. Pelissä ne
+   latautuvat normaalisti (js/media.js sitkeä lataus).

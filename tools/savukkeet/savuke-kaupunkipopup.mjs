@@ -320,25 +320,56 @@ for (const ruutu of RUUDUT) {
       tieto(`${tunnus}: kohdekartan kohteita`, iso.kohteita);
     }
 
+    // Kuvakaappaus HETI avauksesta, ennen zoomia ja Pulun paneelia:
+    // raporttikuvan on näytettävä kortti siinä asussa, jossa se aukeaa.
+    if (KUVAKANSIO && ruutu.width === 390 && iso) {
+      await sivu.screenshot({
+        path: join(KUVAKANSIO, `karttauudistus-4-${kaupunki.id}-popup.png`),
+        // CSS-pikseleinä: dpr 2 nelinkertaistaisi tiedostokoon, ja
+        // raporttikuvan katto on 400 kt.
+        scale: 'css',
+      });
+    }
+
     /* --- vartio 3: kohdekartan zoom ----------------------------------- */
     if (iso?.kartta) {
-      const zoom = await sivu.evaluate(async () => {
+      /*
+       * KERROIN LUETAAN MUUNNOKSESTA, EI PELKÄSTÄ LUOKASTA. `zoomattu`
+       * kertoo vain, että tila vaihtui; lupaus on että KARTTA SUURENEE.
+       * Kerrointa odotetaan (siirtymä on animoitu, js/karttazoom.js),
+       * jottei mittaus osu liikkeen ensimmäiseen kehykseen — mitattu
+       * 13.9.2026: 350 ms:n kiinteä odotus antoi kerran identiteetin.
+       */
+      const lueKerroin = () => sivu.evaluate(() => {
+        const lava = document.querySelector('.kaupunkipopup-kartta .kartta-lava');
+        const m = new DOMMatrixReadOnly(getComputedStyle(lava).transform);
+        return m.a;
+      });
+      const ennen = await lueKerroin();
+      await sivu.evaluate(() => {
         const kehys = document.querySelector('.kaupunkipopup-kartta .kartta-kehys');
-        const lava = kehys.querySelector('.kartta-lava');
-        const ennen = getComputedStyle(lava).transform;
         kehys.focus();
         kehys.dispatchEvent(new KeyboardEvent('keydown', { key: '+', bubbles: true }));
-        await new Promise((v) => setTimeout(v, 350));
-        const jalkeen = getComputedStyle(lava).transform;
-        const zoomattu = kehys.classList.contains('zoomattu');
-        kehys.dispatchEvent(new KeyboardEvent('keydown', { key: '0', bubbles: true }));
-        await new Promise((v) => setTimeout(v, 350));
-        return { ennen, jalkeen, zoomattu, palasi: !kehys.classList.contains('zoomattu') };
       });
-      tieto(`${tunnus}: kartan muunnos`, `${zoom.ennen} → ${zoom.jalkeen}`);
-      vaadi(`${tunnus}: kohdekartan zoom toimii kortissa`,
-        zoom.zoomattu && zoom.jalkeen !== zoom.ennen, JSON.stringify(zoom));
-      vaadi(`${tunnus}: nolla palauttaa kartan`, zoom.palasi);
+      const kasvoi = await sivu.waitForFunction(() => {
+        const lava = document.querySelector('.kaupunkipopup-kartta .kartta-lava');
+        const m = new DOMMatrixReadOnly(getComputedStyle(lava).transform);
+        return m.a > 1.05;
+      }, null, { timeout: 3000 }).then(() => true).catch(() => false);
+      const jalkeen = await lueKerroin();
+      const zoomattu = await sivu.evaluate(() => document
+        .querySelector('.kaupunkipopup-kartta .kartta-kehys').classList.contains('zoomattu'));
+      tieto(`${tunnus}: kartan kerroin`, `${ennen.toFixed(2)} → ${jalkeen.toFixed(2)}`);
+      vaadi(`${tunnus}: kohdekartan zoom toimii kortissa`, kasvoi && zoomattu,
+        `kerroin ${jalkeen.toFixed(2)}, zoomattu ${zoomattu}`);
+      await sivu.evaluate(() => {
+        const kehys = document.querySelector('.kaupunkipopup-kartta .kartta-kehys');
+        kehys.dispatchEvent(new KeyboardEvent('keydown', { key: '0', bubbles: true }));
+      });
+      const palasi = await sivu.waitForFunction(() => !document
+        .querySelector('.kaupunkipopup-kartta .kartta-kehys').classList.contains('zoomattu'),
+      null, { timeout: 3000 }).then(() => true).catch(() => false);
+      vaadi(`${tunnus}: nolla palauttaa kartan`, palasi);
     }
 
     /* --- vartio 8: Pulu jää kortin päälle -----------------------------
@@ -381,12 +412,6 @@ for (const ruutu of RUUDUT) {
     vaadi(`${tunnus}: kortti jäi auki Pulun napista`,
       await sivu.evaluate(() => Boolean(document.querySelector('.kaupunkipopup-kaupunki'))));
 
-    if (KUVAKANSIO && ruutu.width === 390) {
-      await sivu.screenshot({
-        path: join(KUVAKANSIO, `karttauudistus-4-${kaupunki.id}-popup.png`),
-      });
-    }
-
     /* --- vartio 4: rasti sulkee --------------------------------------- */
     await sivu.click('.kaupunkipopup-sulje').catch(() => {});
     await sivu.waitForTimeout(400);
@@ -418,6 +443,7 @@ for (const ruutu of RUUDUT) {
         if (KUVAKANSIO && ruutu.width === 390) {
           await sivu.screenshot({
             path: join(KUVAKANSIO, `karttauudistus-4-${kaupunki.id}-turisti-info.png`),
+            scale: 'css',
           });
         }
       }
