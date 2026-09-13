@@ -2549,17 +2549,35 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
 }
 
 /* Lyhyt kuvateksti kiinni kuvan alalaidassa, kuten kartalla. */
+/*
+ * KUVATEKSTI ILMAN TAUSTAA (omistaja 13.9.2026, sanatarkasti: *"Ota
+ * kuvatekstin tausta pois. Eli teksti on vain sellaisenaan kuvan
+ * alla."*). Ennen tässä oli paperilaatta (vaalea tausta, varjo ja
+ * alakulmien pyöristys), joka jatkoi kuvaa omana palkkinaan kartan
+ * päällä.
+ *
+ * NEGATIIVINEN YLÄMARGINAALI POISTUI SAMALLA: se kiinnitti laatan
+ * kuvan alareunaan niin, ettei väliin jäänyt saumaa. Ilman laattaa
+ * sama luku vetäisi tekstin kuvan päälle.
+ *
+ * VALKOINEN HALO EIKÄ TAUSTALAATTA. Teksti on nyt kartan päällä, ja
+ * kartassa on tummia viivoja ja nimiä. Kevyt vaalea hehku pitää
+ * kirjaimet luettavina koskematta kartan omaan väriin — se ei ole
+ * palautettu tausta, vaan kirjainten oma reunus.
+ */
 .fokusvirta-isokuva-teksti {
-  margin: -0.6rem 0 0;
+  margin: 0.45rem 0 0;
   max-width: min(92vw, 46rem);
-  padding: 0.45rem 0.75rem;
-  border-radius: 0 0 12px 12px;
-  background: rgba(245, 240, 226, 0.94);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+  padding: 0 0.75rem;
   font-family: var(--font-luku);
   font-size: 0.95rem;
-  color: rgba(33, 29, 24, 0.84);
+  color: rgba(33, 29, 24, 0.92);
   text-align: center;
+  text-shadow:
+    0 1px 2px rgba(245, 240, 226, 0.95),
+    0 -1px 2px rgba(245, 240, 226, 0.95),
+    1px 0 2px rgba(245, 240, 226, 0.95),
+    -1px 0 2px rgba(245, 240, 226, 0.95);
 }
 
 /* PULU-CAM-sinetti isossa kuvassa: sama merkki kuin pakan korteissa,
