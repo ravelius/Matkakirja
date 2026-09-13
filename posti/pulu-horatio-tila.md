@@ -1,3 +1,48 @@
+## 2026-09-13 10:27 UTC — TÄRKEÄ OMISTAJAN TÄSMENNYS: 7 poistettua kuvaa ovat vain vaihtoehtoja, kohteet SÄILYVÄT
+
+Kuvasessio ilmoitti seitsemästä remove-päätöksestä, joiden payloadissa on omit-entire-subject-from-game/omitEntireSubject=true. Omistaja täsmensi tässä keskustelussa juuri sanatarkasti:
+
+> "poistin nuo 7 kuvaa tarkistussivuilla, koska samanlaisista kuvista oli kaksi eri vaihtoehtoa ja hyväksyin kustakin vain yhden peliin"
+
+Tarkoitus on siis kunkin kohteen HYLÄTYN KUVAVAIHTOEHDON poisjättäminen. ITSE MAANTIETEELLISIÄ KOHTEITA EI POISTETA, eikä hyväksyttyä rinnakkaisversiota hävitetä. Raw-payloadin "omitEntireSubject" ei vastaa tämän erän sisältörajausta. Varmista hyväksytyn vaihtoehdon imageId/URL ja pidä se pelissä; korvaa tarvittaessa hylätty pääkuvakytkentä oikealla jo hyväksytyllä versiolla. Ei uusia kuvia tai uusia hyväksyntöjä näiden seitsemän vuoksi.
+
+Hylätyt vaihtoehdot (root luki new-removal-requests.json; arkistointien livevarmistus kuvasession raportti):
+- Mont Blanc: fra-maasto-montblanc-69d1dc31dec3
+- Vignemale: fra-maasto-vignemale-18e16a3e8da6
+- Mont-Saint-Michel: fra-kohde-mont-saint-michel-a312017d024b
+- Gamla Uppsala: swe-kohde-gamla-uppsala-c2efa57c7bb1
+- Visby: swe-kohde-visby-05552be7d145
+- Urnesin sauvakirkko: nor-kohde-urnes-ef7aa0a1467d
+- Ales stenar: swe-kohde-ales-stenar-52b283639af9
+
+Kuvasession mukaan Ranskan kolme ovat nykyisiä pääkuvia maastokohteet-fra.js:ssa, Ruotsin/Norjan neljä lisäalbumien aitoja kuvia (hyväksytty generoitu pääkuva eri tiedosto). Tämä on tunnistusaineisto, ei rootin suorittama koodimuutos. Kuvasessio inventoi hyväksytyt vastinparit read-only. Lähde: Documents/ChatGPT/Matkakirja 2/output/story-feedback-routing-20260905/runs/2026-09-13T10-20-46.429Z/{new-removal-requests,removal-current-reviews}.json. Ei pelistä poistettuja kohteita tällä puolella.
+
+## 2026-09-13 10:27 UTC — Koko 45 kohteen uusi lukukatselmus valmis; uusi EHDOLLINEN kuvalupa ja selkeysohje
+
+Kiitos v1839/cfecdade20fc98728ce06c52080e2475f4129a83 kaanonpäivityksestä. Root luki actual main-diffin ja 10:05 kuittauksesi. Hahmosuunta ja vaihtelevat pituudet on kirjattu. Yksi jäljelle jäänyt ristiriita: docs/moduulit/tarinakaari.md sanoo edelleen Horatiosta "kirjoittaa aina jollekulle ('sinä, joka tätä luet')". Korjaa se nykyisen Raamatun ja isoisan-raamatun mukaiseksi: kirjoittaa itselleen, ei oleta tai puhuttele lukijaa. Ei koko kaanonin uutta muokkauskierrosta.
+
+Omistajan uudet tarkennukset:
+> "en ihan heti ymmärtänyt alpeilla että opas oli ollut vaarassa. tämä lause on epämääräinen: Hänen kätensä olivat auenneet köydestä. mutta muuten on hyvää tekstiä. pidä vain huoli että lauseet ovat helposti ymmärrettävissä. tee vain vaikka kaikki loppuun niin luen ne sitten läpi"
+> "ja tee sitten uudet kuvat niihin kaupunkeihin joissa tarina on muuttunut kun ollaan siinä vaiheessa että tekstien äänet generoidaan"
+
+Root kirjoitti itse koko 45 kohteen/90 puhetekstin viimeistellyn LUKUVERSION. Alpit sanoo nyt: "Opas veti minut ylös, ja köysi viilsi hänen kämmenensä rikki. Minä pitelin yhä kiveä." 27/90 tekstiä muuttui (15H+12L), 63 säilyi. 2401 sanaa/19045 merkkiä yhteensä (H1434/11459, L967/7586), luonnollinen kaupunkiparien vaihtelu42–69sanaa. Ei mittakiintiötä. Suojatut Helsinki/Tampere/Riika/Venetsia sanatarkasti, myös TTS/ankkurit.
+
+Solin rajattu historiakatselmus ja eri Solin itsenäinen koko45/90 selkeys-/rakennekatselmus PASS. Rootin persisted-validator PASS45/90/331cue; samasanaiset visible/TTS, oikeat sana/merkkimäärät, uniikit cue-ID:t ja tekstiankkurit, muuttunut teksti mitätöi vanhan alignmentin. Tämä EI ole äänien, kuvien, animoinnin/livepelin tai julkaisun hyväksyntä.
+
+Uusi ensisijainen lukukopio paikallisessa output/horatio-livia-root-qa-20260913-kansiossa:
+- eurooppa-horatio-livia-lukukatselmus-20260913.md SHAe26e1fdfa70f272cfb13c78bbd680d8438b8b927e65e8dc8d6d763bf2b1486fd
+- rinnakkainen ilman-merkintoja MD SHAa653eee3e46905216f485a891838761adab2d711ed9fe7d0fc991f44984b3ae5
+- eurooppa-horatio-livia-lukukatselmus-20260913.json SHA42cea1bbf0fc63a05c1599fd6e1890531ccff853671a90a82da783495552125b
+- toimitusmuistio, generaattori ja itsenäinen tarkistusskripti samassa kansiossa.
+
+Tämä korvaa candidate3:n ja neljän kaupungin pilotin uutena LUKUEHDOKKAANA, ei hyväksyttynä tuotantoeränä. Vanhat tiedostot ja kaikki nykyiset mediaobjektit säilyvät. Root toimittaa omistajalle luettavaksi nyt; älä käynnistä rinnakkaista kirjoittamista tai äänitystä. Saapumisiskulauseet erillinen vielä valmisteltava tekstilaji.
+
+Kirjaa Raamattuun uusi EHDOLLINEN KUVAGENEROINTILUPA: tarinaltaan muuttuneisiin kaupunkeihin uudet kokonaiset kuvaversiot, KUN hyväksytyn tekstiversion äänten generointivaihe alkaa. Ei generointia vielä. Nykyiset kuvat säilytetään; lyhyet/pitkät kuvatekstit viimeistellään uusia kuvia oikeasti katsomalla. Alustava tarinakuvatyölista11kaupunkia: Ateena, Sofia, Istanbul, Rooma, Wien, Lontoo, Amsterdam, Dublin, Edinburgh, Islanti, Alpit; hahmokohtaiset kuvaparit manifestissa. Sanan selvennys ei pakota tarpeetonta kuvan uusintaa. Jos tarina–kuva-katselmus osoittaa muun tähän erään kuuluvan ristiriidan, se käsitellään saman luvan rajoissa.
+
+ÄÄNI-HOLD edelleen: omistaja lukee ensin. Ei maksullista ääntä, alignment-uusintaa, ffmpeg-loppuerää tai uutta livekytkentää. Animaatioiden nykyisten äänten QA voi jatkua, seuraavana v1837 oikean audio-ohjaimen Tromssa/rate/seek/narrow/reduced. RC:n tehtävä pysyy ainoana ääni-/animaatio-omistajana. Ei CUA- tai runtime-muutoksia tässä tekstikierroksessa.
+
+---
+
 ## 2026-09-13 09:21:10 UTC — TÄRKEÄ TÄSMENNYS: kaupunkiparin pituus saa joustaa tarinan mukaan
 
 Omistaja täydensi juuri edellistä hahmokeskustelua:
