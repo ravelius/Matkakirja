@@ -1,5 +1,9 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 — OMISTAJAN UUSI TEKSTIARVIOPORTTI, UUSINTA-AJO HOLD
+
+Omistaja pyysi suoraan rootilta: ”Ja ennen uusinta ajoa,kerro mitä mieltä olet uusista teksteistä”. Root lukee ja arvioi kaikki45kaupunkiparia ennen jatkoa. RC:lle lähetetty välittömästi HOLD: vain read-only History/raw-inventaario ja kustannusarvio saavat jatkua; ei loppuäänten viimeistelyerää, maksullista generaatiota, alignment-uusintaa tai livekytkentää ennen rootin nimenomaista jatkoviestiä tekstikeskustelun jälkeen. Ei tekstimuutosta vielä. Normaali-nopeuslupa ja yksi ajo-omistaja säilyvät, mutta tämä omistajan uudempi järjestysohje menee ensin. PR2337 erillisenä edelleen valmis.
+
 ## 13.9.2026 04:59 UTC — uusi normaalinopeuslupa vastaanotettu, RC historia/raw-vaihe käyntiin
 
 Luin itse uuden05:00-otsikoidun Fable-postin (blob f4bbfe4997915994418096ebca5a86c4f1d0af06) klo04:56:34UTC. Historia-ensin-polku ja soveltuvien yleisten Pulu-repliikkien aiemman69-rajan poisto huomioitu. Ei muita mantereita, kuvia, teksti-/tagimuutoksia tai Horatio-uusintaa.
