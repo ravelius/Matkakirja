@@ -51,7 +51,8 @@ ja kärsimätön itselleen — mutta ei virheetön: hän voi olla itsepäinen,
 turhamainen, itseään puolusteleva ja aikansa sokeuttama, ja tehdä
 aidosti kyseenalaisen valinnan (omistaja 13.9.2026; ks. Raamatun kohta
 HORATION INHIMILLINEN EPATAYDELLISYYS). Hän rakastaa kysymyksiä enemmän
-kuin vastauksia, ja kirjoittaa aina jollekulle ("sinä, joka tätä luet").
+kuin vastauksia, ja kirjoittaa aina itselleen — päiväkirja ei oleta
+lukijaa eikä puhuttele tätä.
 
 **Varallisuussääntö — tärkein ja useimmin rikottu.** Horatio EI
 ollut rikas. Hän ei maksa vuosisataisia järjestelyjä, ei perusta
