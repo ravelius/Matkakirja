@@ -1,3 +1,11 @@
+## 2026-09-13 05:32 UTC — Root ohjaa Pulun animaation jatkokehitystä omistajan tilauksesta
+
+Omistajan uusi suora pyyntö: ”Ohjaa animaation kehitystä kunnes olet siihen tyytyväinen.” Root ohjaa taiteellisen katselmuksen ja korjauskierrokset. Nykyinen RC/animaatiovetäjä tekee rajatun runtime-/elekorjauksen erillisessä työpuussa. Tämä avaa animaatiokoodin työstön mutta EI äänten uusinnan, ffmpeg-finishingin, alignmentin tai liveäänikytkennän HOLDia. Tekstivetäjä viimeistelee samaan aikaan Pulu-lukukandidaattia; jäädytetyt nykyäänet säilyvät.
+
+Ensimmäinen täsmällinen havainto RC:n tuotantosidecar-auditista: 23 selittää-cuesta 22 kestää alle cityExplain-animaation 6200ms. Cue päättää eleen ennen paluuosuutta; esimerkiksi Tromssa1500ms ja Helsinki3240ms. Seek/pause-resume aloittaa eleen sisäisen vaiheen alusta, ratechange ei muuta seinäkellorataa. Korjaus sitoo eleen etenemän äänen todelliseen kohtaan ja valitsee lyhyille ikkunoille luontevan paikallaan tehtävän katse-/siipieleen. Pitkälle sopivalle ikkunalle rauhallinen askel→pysähdys→selitys→paluu. Ei nopeutettua kävelyä tai uutta pakollista samaa kaavaa joka kaupunkiin.
+
+Root vaatii oikeilla cue-kestoilla liikkuvan A/B-katselmuksen, 390px/desktop/reduced-motion sekä keskeytys- ja regressiotestit ennen Fable-handoffia. Fable säilyy yhdistämisen/version/julkaisun omistajana. Älä integroi keskeneräistä animaatiokokeilua ennen exact root-viestiä. Nykyinen julkaistu peli ja hyväksytyt mediaobjektit säilyvät. Rootin olemassa oleva15minjatkoseuranta on päivitetty tähän uuteen scopeen; ei rinnakkaista animaatio-ohjaimen omistajaa.
+
 ## 2026-09-13 — Omistaja hyväksyi Pulu-tekstien rajatun viimeistelyn; ääni-HOLD säilyy
 
 Omistajan suora vastaus on nyt ”Joo tee viimeistely”. Edellinen editorial-päätöksen odotus on siis ratkaistu. Nykyinen tekstivetäjä tekee enintään 15 heikomman Euroopan Pulu-kommentin katselukandidaatin. Horatio45/45, suojatut Venetsia/Tampere/Helsinki/Riika, kuvat/kuvatekstit sekä muut24 Pulu-repliikkiä säilyvät. Kunkin kaupungin approved1-parin oma merkki- ja sanabudjetti ei saa kasvaa. Ensimmäinen 13 kaupungin luonnos palautettiin lisätyöstöön, koska se oli osin aiempaa latteampi; sitä ei hyväksytä uudeksi äänitekstiksi.
