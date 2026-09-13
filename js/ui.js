@@ -19694,6 +19694,14 @@ export class UI {
      */
     const maitse = game.travelMode === 'land';
     /*
+     * SAMASTA SYYSTÄ KULKUTAPA TALTEEN TÄSSÄ (karttauudistus erä 8):
+     * `after` ajetaan vasta kun actionMove on jo päättänyt vuoron, ja
+     * beginTurn on silloin nollannut travelModen. Ilman tätä riviä
+     * kulkutapakohtainen rajaus ja paluu maan näkymään jäisivät
+     * tekemättä juuri maa- ja merimatkoilla.
+     */
+    const tapa = game.travelMode;
+    /*
      * ASKELTAHTI PORRASTETAAN HEITON PITUUDEN MUKAAN (omistaja
      * 1.9.2026 ilta: *"pelaajan nappulat saisi edetä vähän
      * hitaammin"*). Yhden askeleen matka saa täyden rauhan, kuutonen
@@ -19728,7 +19736,7 @@ export class UI {
         player, from, path,
         maitse ? autokyydinAskel(path.length) : STEP_MS,
         {
-          saatto: true, maitse, musiikki, kyyti: maitse, tapa: game.travelMode,
+          saatto: true, maitse, musiikki, kyyti: maitse, tapa,
         },
         );
       },
