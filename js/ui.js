@@ -410,6 +410,7 @@ import { paivitaElaintakyt, nollaaElaintakyt } from './elaintaky.js';
 // Karttaselitevalikko ja sen aihevalot (js/karttaselite.js,
 // js/karttavalot.js): nappi kartan oikeaan yläkulmaan, valot merkkien alle.
 import { kaynnistaKarttaselite, paivitaKarttaselite } from './karttaselite.js';
+import { kaynnistaYlapalkkiVaaka } from './ylapalkki-vaaka.js';
 /*
  * Fokusnäkymän RUUTUUN ankkuroidut atlas-elementit: mittajana, maan
  * kartuutsi ja sen takaa liukuva maataulu (omistaja 25.8.2026). Ne
@@ -3241,6 +3242,11 @@ export class UI {
      * palavat heti ensimmäisessä piirrossa.
      */
     kaynnistaKarttaselite(this);
+    /*
+     * VAAKAPUHELIMEN YLÄPALKKINAPPI samassa kohdassa ja samasta
+     * syystä: se asuu karttaruudussa karttaselitteen vieressä.
+     */
+    kaynnistaYlapalkkiVaaka(this);
     this.vahdiNakymanKokoa();
     this.render();
     this.esilataaAarrekuvat();
