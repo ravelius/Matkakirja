@@ -60,7 +60,8 @@ import {
   avaaPoiminnatLehti,
   avaaRaamattuLehti,
   avaaSisallysvalikko,
-  avaaTilanneLehti, avaaTilastoLehti, jatkaLehdenLuentaa, kytkeTutkiSelaus, naytaMaaUutiset,
+  avaaTilanneLehti, avaaTilastoLehti, jatkaLehdenLuentaa, kaupunginEsittely,
+  kytkeTutkiSelaus, naytaMaaUutiset, LEHDEN_VAKIOESITTELY,
   naytaTutkiSivu, naytaVuosiSaa, openWiki, rakennaSivut, renderArticle,
   renderMaastoArtikkeli, sijoitaLehtiKaiutin, tutkiEkaSivu, tutkiSivuja,
   vaihdaTutkiSivu, varustaLukija,
@@ -13917,14 +13918,14 @@ export class UI {
     // Maalehti piilottaa esittelyrivin (ks. avaaMaalehti); kaupunkiin
     // palattaessa se on palautettava, tai se jäisi piiloon lopullisesti.
     this.arrivalIntro.hidden = false;
-    this.arrivalIntro.textContent = 'Isoisä on merkinnyt tämän paikan karttaansa.';
+    this.arrivalIntro.textContent = LEHDEN_VAKIOESITTELY;
     this.arrivalWiki.hidden = true;
     // Oma lyhytnosto (pilottikaupungit) näkyy heti ja toimii ilman
     // verkkoa; Lue lisää avaa oman artikkelin, joten nappi voi näkyä heti.
     // Avain on wiki-otsikko, mutta useimmilla kaupungeilla se on sama
     // kuin nimi. Ilman varasuunnitelmaa oma nosto katosi hiljaa
     // kaupungeilta, joilta wiki-kenttä puuttui.
-    const omaIntro = ARTIKKELIT[city.wiki ?? city.name]?.intro;
+    const omaIntro = kaupunginEsittely(city);
     if (omaIntro) {
       piirraLeipateksti(this.arrivalIntro, omaIntro);
       this.arrivalWiki.hidden = false;

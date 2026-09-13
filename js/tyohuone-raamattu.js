@@ -344,6 +344,26 @@ export const RAAMATTU = {
       otsikko: 'Kirjoittajan säännöt (matkakirjatekstit)',
       tila: 'luonnos',
       kohdat: [
+        'AIHEVALINNAN KYNNYS: NIIN KOVA JUTTU, ETTA HALUAA LUKEA '
+          + 'SEURAAVANKIN (omistaja 13.9.2026 tekstisession kautta, '
+          + 'sanatarkasti: "Bergen Amsterdam ja Edinburgh pitaa tehda '
+          + 'kokonaan uudestaan. Ja niissa pitaa pitaa mielessa tuo uusi '
+          + 'periaate, etta pitaa olla niin kova juttu, etta haluaa lukea '
+          + 'seuraavankin tai kertoa siita kaverille. Naissa ei sita '
+          + 'ollut"): jokaisen kaupunkiparin puheessa on oltava niin kova '
+          + 'juttu, etta lukija haluaa lukea seuraavankin tai kertoa siita '
+          + 'kaverille. Tarinan keskeinen tapahtuma, panos tai vahva '
+          + 'yllatys ja merkitys kerrotaan itse puheessa. Pelkka '
+          + 'kuriositeetti tai suloinen lintureaktio ei riita. '
+          + 'Tarvittaessa enemman pituutta, ei sanakiintiolla leikattua '
+          + 'ydinta. Ei kaikkien kaupunkien vakisin synkentamista eika '
+          + 'historian keksimista. Roolirajaus: Bergen, Amsterdam ja '
+          + 'Edinburgh uusitaan MOLEMPIEN kertojien osalta (myos Horatio) '
+          + 'rootin Astra-tehtavassa; root tarkistaa lahteistetyt '
+          + 'aihevalinnat ennen lopullisia puheita; era3-r2:n naita '
+          + 'puheita ei kayteta tuotannon lahteena; Lissabon ja Berliini '
+          + 'ennallaan (hiljaisuus ei ole hyvaksynta); Fable ei kirjoita '
+          + 'rinnakkaista versiota. Aani-HOLD ennallaan.',
         'LAUSEIDEN YMMARRETTAVYYS (omistaja 13.9.2026 tekstisession kautta, '
           + 'sanatarkasti: "en ihan heti ymmartanyt alpeilla etta opas oli ollut '
           + 'vaarassa. tama lause on epamaarainen: Hanen katensa olivat auenneet '
