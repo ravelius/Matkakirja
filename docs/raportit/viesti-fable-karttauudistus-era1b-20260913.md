@@ -41,15 +41,18 @@ kumpikin). Tasokartalla erä 1 mittasi +54 %; pallolla lisäys on 0 %.
    laatikon lyhyemmästä sivusta = Ranskalla 70 yksikköä), koska
    laataston kasvattaminen näkyvään alaan olisi Ranskassa 4,6-kertainen
    laattamäärä. **Tämä on omistajan päätettävä asia**, ks. luku 7.1.
-2. **"Feidaus vaalentaa" ei ole totta kaikkialla, ja se on paletin
-   ominaisuus eikä vika.** Feidaus vetää naapurin sävyä paperia kohti
-   (B = (1−f)·A + f·paperi). Vuoret ja syvä meri vaalenevat selvästi,
-   mutta Belgian alanko on seepiakartalla JO vaaleampi kuin paperi
-   (mitattu rgb(246,243,204) vs. paperi rgb(232,220,188)), joten siinä
-   feidaus tummentaa pikseliä kaksi yksikköä eikä näy silmälle. Jos
-   omistaja haluaa naapurien vaalenevan myös alangoilla, feidausväri on
-   vaihdettava paperia vaaleammaksi — se on yksi rakennusaikainen luku,
-   ks. luku 7.2.
+2. **Feidaus NÄKYY koko näkymässä, mutta yksi pistemittaus ei sitä
+   näytä.** Vertailukuvat (luku 6) ovat yksiselitteiset: värillisessä
+   näkymässä Englanti, Saksa ja Espanja ovat selvästi vaaleampaa
+   seepiaa kuin värittömässä. Feidaus vetää naapurin sävyä paperia
+   kohti (B = (1−f)·A + f·paperi), ja koska valtaosalla naapurien
+   pinnasta on reliefiä — eli se on paperia TUMMEMPI — vaikutus on
+   vaaleneminen. Poikkeus, jonka savuke löysi: Belgian alanko on
+   seepiakartalla JO vaaleampi kuin paperi (mitattu rgb(246,243,204)
+   vs. paperi rgb(232,220,188)), joten siinä feidaus tummentaa pikseliä
+   kaksi yksikköä. Jos omistaja haluaa vaalenemisen myös tasaisilla
+   alangoilla, feidausväri on vaihdettava paperia vaaleammaksi — yksi
+   rakennusaikainen luku, ks. luku 7.2.
 
 ---
 
@@ -251,12 +254,17 @@ valehtelijan ja kolmas kirjasi väitteen väärin päin:
 Mitattu kontissa, Chromium `/opt/pw-browsers/chromium`, iPhone-profiili
 390 × 844 dpr 3, nappula Pariisissa, tuotannon pohjalaatat ämpäristä.
 
-**Laattamäärä ja tekstuurimuisti (kiinteä kamera, Ranska + Belgia z6):**
+**Laattamäärä ja tekstuurimuisti.** Saapumisnäkymä (z5), molemmat
+vaiheet samalla kameralla (lat 46,35 · lng 2,213 · alt 0,4448):
 
-| | nakyvia | laattoja | tavuja/laatta |
-| --- | ---: | ---: | ---: |
-| ilman väriä | 34 | 30 | 1 398 101 |
-| värillä | **34** | 30 | **1 398 101** |
+| | nakyvia | laattoja | scenessä | tavuja | tavuja/laatta |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| ilman väriä | 24 | 30 | 24 | 41 943 030 | 1 398 101 |
+| värillä (varillisia 6) | **24** | **30** | **24** | **41 943 030** | **1 398 101** |
+
+Sama kiinteältä mittauskameralta (Ranska + Belgia, z6): `scenessä` 39
+kumpaisessakin, `varillisia` 0 → 19. V6:n väite on juuri tämä —
+`nakyvia` yhtä suuri ja tavut laattaa kohti samat.
 
 **Lisäys on 0 %, ei +10 %.** Se on suosituksen (A) koko pointti: väri
 piirtyy samaan kankaaseen (`for (const kuva of kuvat) ctx.drawImage`),
@@ -269,13 +277,14 @@ kehyksessä, 12 s, rAF-erot; 15 kehystä per ajo):
 
 | | p50 | p95 | max | fps |
 | --- | ---: | ---: | ---: | ---: |
-| ilman väriä | 833,2 ms | 866,6 ms | 866,6 ms | 1,2 |
-| värillä | **816,6 ms** | 850,0 ms | 850,0 ms | 1,2 |
+| ilman väriä | 833,3 ms | 916,7 ms | 916,7 ms | 1,2 |
+| värillä | **833,3 ms** | 866,6 ms | 866,6 ms | 1,2 |
 
 **Tulkinta rehellisesti:** kontissa ei ole GPU:ta, ja pallon
-uudelleenmaalaus on ohjelmistorenderöinnillä 0,8 sekuntia kehykseltä.
-Ero värin kanssa ja ilman on mittausmelun sisällä (aiemmassa ajossa
-luvut olivat 800 vs. 833 ms toisin päin), ja se on odotettu tulos:
+uudelleenmaalaus on ohjelmistorenderöinnillä 0,83 sekuntia kehykseltä.
+Mediaani on SAMA värillä ja ilman, ja p95 on värillä pienempi kuin
+ilman — ero on siis mittausmelun sisällä (kolmessa ajossa p50-parit
+olivat 833/833, 833/817 ja 800/833 ms), ja se on odotettu tulos:
 kerros ei lisää verkkoja eikä tekstuureja, joten piirtokutsujen määrä
 ei muutu. **Tämä mittaus EI kerro laitteen nopeudesta** — se kertoo,
 ettei värikerros lisää piirtotyötä. Erän 1 varoitus pitää siis yhä:
@@ -285,36 +294,64 @@ liikuta mutta joka on mitattava laitteella.
 
 ## 6. Kuvakaappaukset — mitä NÄIN
 
-Neljä kuvaa repossa (`docs/raportit/kuvat/`), loput scratchpadissa
-(`…/scratchpad/kuvat/`). Kaikki samasta näkymästä (Ranska ja Belgia
-ruudussa, z6, 390 × 844 dpr 3), jotta ne ovat vertailukelpoisia.
+Neljä kuvaa repossa (`docs/raportit/kuvat/`, 304 × 658, kukin alle
+391 kt), loput scratchpadissa (`…/scratchpad/kuvat/`, mm. rannikon
+lähikuvat kaikista kolmesta vaihtoehdosta). Kaikki neljä ovat
+SAAPUMISNÄKYMÄSTÄ (Ranska kokonaan ruudussa, z5, 390 × 844) eli siitä
+näkymästä, johon peli saapuu.
 
-- **`karttauudistus-1b-ilman-varia.png`** — vertailu. Ranska on
-  seepiaa kuten naapurit; punainen kehä puuttuu, koska kehä tulee
-  samasta maanvaihdosta. Tämä on se kartta, joka pelissä on nyt.
-- **`karttauudistus-1b-vesi072-feidaus035.png` (OLETUS, suositus)** —
-  Ranska on yhtenäinen murrettu alue: alangot kellertäviä, Massif
-  Central ja Alpit ruskehtavia, Pyreneet ja Alppien korkeimmat
-  harmaanvihreitä. **Punainen kehä kulkee koko maan ympäri ja lukee
-  selvästi ilman että siitä tulee tolppa** — myös Korsikan ympäri.
-  Rannikolla on ohut savunsininen kaistale, joka seuraa rantaa myös
-  Gironden suistossa ja Bretagnen niemien ympäri. Naapurit ovat
-  vaaleampaa seepiaa Ranskan ympärillä ja häipyvät omaan sävyynsä
-  laataston reunalla — reuna lukee vinjettinä eikä viivana.
-- **`karttauudistus-1b-vesi060-feidaus025.png`** — vesi on selvästi
-  harmaampi ja lähempänä paperia; 12 mpk:n kaistale lukee enemmän
-  "vaaleana merenä" kuin vetenä. Feidaus 0,25 on niin hento, ettei
-  naapurien ero ole silmällä varma.
-- **`karttauudistus-1b-vesi085-feidaus045.png`** — vesi on selvästi
-  sinisin ja lähimpänä "vettä"; samalla se on kaikkein kauimpana
-  seepiapaletista ja alkaa erottua kahtena eri karttana. Feidaus 0,45
-  vaalentaa naapurien vuoristot selvästi, ja Alppien itäpuoli (Sveitsi,
-  Italia) menettää reliefinsä.
+- **`karttauudistus-1b-ilman-varia.png`** — vertailu, sama kamera.
+  Ranska on samaa seepiaa kuin naapurit, ja koko näkymä on selvästi
+  lämpimämpi: Englanti, Saksa ja Espanja ovat oranssinruskeita.
+  **Punainen kehä on tässä kuvassa jo mukana** — se tulee pallon
+  vektorikerroksesta eikä värilaatoista, joten se toimii myös ilman
+  laatastoa. Juuri tästä kuvasta näkee, mitä väritaso muuttaa ja mitä
+  ei.
+- **`karttauudistus-1b-vesi072-feidaus035.png` (OLETUS)** — Ranska on
+  yhtenäinen murrettu alue: alangot kellertäviä, Massif Central,
+  Vogeesit ja Alpit ruskehtavia, Alppien korkeimmat harmaanvihreitä.
+  **Punainen kehä kulkee koko maan ympäri, myös Korsikan, ja lukee
+  selvästi ilman että siitä tulee tolppa.** Rannikolla on ohut
+  savunsininen kaistale, joka seuraa rantaa myös Gironden suistossa ja
+  Bretagnen niemien ympäri. **Naapurit ovat selvästi vaaleampia kuin
+  vertailukuvassa** ja häipyvät omaan sävyynsä laataston reunalla —
+  reuna lukee vinjettinä eikä viivana (häive, luku 7.1). Mitään
+  vaakasuoraa rajaa ei näy.
+- **`karttauudistus-1b-vesi060-feidaus025.png`** ja
+  **`karttauudistus-1b-vesi085-feidaus045.png`** — **SAAPUMISNÄKYMÄSSÄ
+  KOLME VAIHTOEHTOA OVAT SILMÄLLE LÄHES SAMAT.** Sanon sen suoraan,
+  koska se on tämän kuvasarjan tulos: 12 mpk:n kaistale on siinä
+  mittakaavassa 3–4 pikseliä leveä, ja feidauksen ero 0,25 → 0,45 on
+  muutaman yksikön kirkkausero. Valinta näkyy vasta rannikon
+  lähikuvassa, ja siitä on numerot alla.
 
-**Oma suositus: 0,72 / 0,35 (oletus).** 0,60:n vesi ei lue vetenä ja
-0,85 rikkoo yhtenäisen ilmeen; 0,35:n feidaus näkyy siellä missä
-naapurilla on reliefiä, eikä litistä rantaviivaa lukemattomaksi.
-Omistaja valitsee.
+**RANNIKON POIKKILEIKKAUS 4,5 E — TÄSTÄ VALINTA TEHDÄÄN.** Savukkeen
+`profiili`-tuloste, sävy 0,05° välein; aluevesi on 43,10…42,95 ja
+feidattu avomeri 42,90 alkaen. Vertailuluku "ilman väriä" on samasta
+kohdasta mitattu A-vaihe.
+
+| | aluevesi 43,05 | b − r | avomeri 42,80 | ero väritömään |
+| --- | --- | ---: | --- | ---: |
+| ilman väriä | (ei kaistaletta) | — | rgb(210,204,183)\* | — |
+| **vesi 0,60 / feidaus 0,25** | rgb(203,207,196) | **−7** | rgb(218,209,186) | +4 |
+| **vesi 0,72 / feidaus 0,35** | rgb(194,202,196) | **+2** | rgb(220,212,187) | +6 |
+| **vesi 0,85 / feidaus 0,45** | rgb(186,198,196) | **+10** | rgb(223,213,187) | +10 |
+
+\* mitattu 42,6 N:stä, jossa A-vaiheen mittauspiste on.
+
+**Tämä on se yksi luku, joka ratkaisee.** `b − r` kertoo, onko vesi
+kanavajärjestyksessä sinistä vai lämmintä: **0,60:n vesi EI ole sinistä
+(b < r)**, se on vaaleaa paperinharmaata; 0,72 on niukasti sinistä
+(+2); 0,85 on selvästi sinistä (+10). Kuvissa kaikki kolme lukevat
+sinertävinä, koska ympärillä on lämmintä maastoa (silmä tekee eron
+kontrastista) — mutta 0,60 on sen varassa, eikä se kestä lämpimämpää
+näyttöä tai painoa.
+
+**Oma suositus: 0,72 / 0,35 (oletus), ja 0,85 / 0,45 jos omistaja
+haluaa veden lukevan vetenä myös yksin katsottuna.** 0,60:tta en
+suosittele: omistajan ehto oli *"vedetkin nakyvat sinisena syyvyyserot
+huomioiden"*, eikä b < r ole sinistä. Vaihto on yksi valitsin ja uusi
+laattojen ajo (37 s Ranskalle z4–z7, 102 s z4–z8) — ei koodimuutos.
 
 ## 7. Avoimet asiat (Fablelle ja omistajalle)
 
@@ -341,15 +378,27 @@ keskeneräiseltä. Häiveen leveys on yksi valitsin (`--feidausreuna`),
 joten sen kasvattaminen ei vaadi koodimuutosta.
 
 **7.2 FEIDAUSVÄRI ON PAPERI — VAALENTAAKO SE RIITTÄVÄSTI?** Feidaus
-vetää naapurin sävyä paperia `#e8dcbc` (232,220,188) kohti. Mitattuna
-Belgian alanko on seepiakartalla rgb(246,243,204) eli JO vaaleampi kuin
-paperi, joten feidaus tummentaa sitä kaksi yksikköä. Omistajan sana oli
-*"MUUT MAAT FEIDATAAN vaaleammiksi"*. Jos tarkoitus on vaalentaa myös
+vetää naapurin sävyä paperia `#e8dcbc` (232,220,188) kohti, ja
+kokonaisnäkymässä se toimii (luku 6: naapurit ovat selvästi vaaleampia
+kuin vertailukuvassa). Mutta siellä, missä naapurin seepia on JO
+paperia vaaleampi — Belgian alanko rgb(246,243,204) — feidaus
+tummentaa pikseliä kaksi yksikköä. Omistajan sana oli *"MUUT MAAT
+FEIDATAAN vaaleammiksi"*. Jos tarkoitus on vaalentaa myös tasaiset
 alangot, feidausväri pitää vaihtaa paperia vaaleammaksi (esim. arkin
 marginaalin kerma rgb(246,237,198) tai sitä vaaleampi). Se on yksi luku
 `polttaVariLeikkuri`ssa ja yksi uusi valitsin — **en tehnyt sitä, koska
 se on ilmeen päätös eikä tekninen valinta**, ja koska nykyinen
 käyttäytyminen on täsmälleen suunnitelman luvun 2.5 taulukko.
+
+**MITTAUSPISTEEN RAJOITE, JOTTA V3:A EI LUETA ENEMPÄÄ KUIN SE ON.**
+Belgian mittauspiste (4,6 E 50,6 N) on häiveen sisällä: laataston
+pohjoisreuna on 51,8 N ja häive 70 yksikköä eli 2,1°, joten pisteessä
+feidaus on noin 57 % nimellisestä 0,35:stä. V3 vaatii, että pikseli on
+liikkunut paperia kohti ja pysynyt nimellisen feidauksen haarukassa
+(± 8 kanavaa kohti) — se ei siis mittaa feidauksen MÄÄRÄÄ tarkasti,
+vaan sen suunnan ja sen, ettei väri vuoda naapuriin. Vastakoe kaataa
+sen (luku 4.2), joten väite ei ole tyhjä, mutta määrän mittaus vaatisi
+pisteen täyden feidauksen alueelta.
 
 **7.3 Z8 ON AJETTAVA JOKA MAALLE.** Ks. luku 3. Tämä nostaa arvion
 Euroopan laatastosta: suunnitelman luku 2.6 laski z4–z7:n (FRA 128
@@ -427,7 +476,7 @@ aallossa (suunnitelman suositus kysymykseen 4 pätee edelleen).
 | `npm test` | **3308 testiä, 3295 pass, 0 fail** |
 | `node tools/tarkista-kaksoisavaimet.mjs` | ei kaksoisavaimia |
 | `node tools/tarkista-niputus.mjs` | 388 moduulia, 4172 julistusta, ei törmäyksiä |
-| `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node tools/tarkista-savukkeet.mjs` | ks. luku 9.1 |
+| `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node tools/tarkista-savukkeet.mjs` | savukkeet kunnossa: 1510 ui-viittausta, 399 metodia, 532 kenttää |
 | `node tools/build-standalone.mjs` | dist/matkakirja.html 31 764 kt (EI committiin) |
 | `grep -rn '^<<<<<<<' js css tests tools` | tyhjä |
 | `savuke-varilaatat-pallo` | **11/11** |
