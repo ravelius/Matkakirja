@@ -5,7 +5,7 @@ import { luoMerkit, luoMerkkienNakyvyysTahdistus } from '../js/pallolauta/merkit
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 
-function ymparisto(t, siirtyma) {
+function ymparisto(t, siirtyma, { nakyvissa = null, kirjastonNakyvyys = null } = {}) {
   class Luokat {
     constructor() { this.arvot = new Set(); }
     add(...xs) { xs.forEach((x) => this.arvot.add(x)); }
@@ -57,11 +57,13 @@ function ymparisto(t, siirtyma) {
       if (!d.el) {
         d.el = pallo.elementti(d);
         d.__kohdeValmis = true;
-        muunnin?.(d.el, edessa.has(d.avain));
+        muunnin?.(d.el, kirjastonNakyvyys ? kirjastonNakyvyys(d) : edessa.has(d.avain));
       } else if (d.__kohdeValmis) {
         // Retained datum saa saman kohteen tweenin; visibilityModifier
         // ajetaan seuraavalla resumed tweenGroup.update -kierroksella.
-        tweenit.push(() => muunnin?.(d.el, edessa.has(d.avain)));
+        tweenit.push(() => muunnin?.(
+          d.el, kirjastonNakyvyys ? kirjastonNakyvyys(d) : edessa.has(d.avain),
+        ));
       }
     }
   };
@@ -74,12 +76,66 @@ function ymparisto(t, siirtyma) {
     ui: { game: { player: {} }, pawnShape() {} },
     siirtyma,
     asteet: ({ x, y }) => ({ lat: y, lon: x }),
+    nakyvissa,
   });
   return {
     pallo, merkit, data: () => data, kirjoituksia: () => kirjoituksia,
     kameraKutsuja: () => kameraKutsuja, puraPaivitysjono, piirraHeraamisenFrame,
   };
 }
+
+test('ensilataus odottaa oikean renderkameran ja myöhäisen HTML-digestin', async (t) => {
+  /*
+   * Oikea Globe.gl 2.46.2 -järjestys:
+   * 1) pointOfView jonottaa renderObjs-kameran uuden paikan,
+   * 2) setPointOfView laskee HTML-näkyvyyden heti vielä vanhasta kamerasta,
+   * 3) Kapsule luo htmlElementsData-oliot 1 ms digestissä,
+   * 4) seuraava renderframe näkee vasta oikean kameran.
+   *
+   * Tämä on v1851-livevian startup-polku, ei pelkän tahdistuswrapperin
+   * testi: mukana ovat oikeat luoMerkit-datumit, myöhäinen DOM-luonti,
+   * kirjaston vanhaksi jäänyt visibilityModifier ja sovelluksen lopullinen
+   * etu/taka-laskenta.
+   */
+  let renderkameraValmis = false;
+  const edessa = new Set(['nappula', 'kohde:uusi']);
+  const e = ymparisto(t, 250, {
+    // Globe.gl:n välitön laskenta käyttää vielä lähtökameraa: kaikki takana.
+    kirjastonNakyvyys: () => false,
+    // Sovelluksen jälkikehys lukee jo renderöijään valmistuneen kameran.
+    nakyvissa: (d) => renderkameraValmis && edessa.has(d.avain),
+  });
+  e.merkit.paivita({ nappula: { x: 0, y: 0 }, kohteet: [
+    { key: 'uusi', x: 1, y: 1 },
+    { key: 'taka', x: 2, y: 2 },
+  ] });
+  // Ei puraPaivitysjonoa: HTML-elementtejä ei vielä ole, kuten ensilatauksessa.
+
+  const framet = new Map(); let id = 0;
+  const tahdistus = luoMerkkienNakyvyysTahdistus({
+    paivita: e.merkit.tahdistaNakyvyys,
+    requestFrame: (fn) => { framet.set(++id, fn); return id; },
+    cancelFrame: (avain) => framet.delete(avain),
+  });
+  await tahdistus.kameranJalkeen(Promise.resolve(true));
+  renderkameraValmis = true;
+
+  const eka = [...framet.values()][0]; framet.clear(); eka();
+  assert.equal(framet.size, 1,
+    'puuttuva Kapsule-DOM siirtää lopullisen laskennan seuraavalle framelle');
+  e.puraPaivitysjono();
+  assert.ok(e.data().every((d) => d.el.classList.contains('pallolauta-takana')),
+    'kirjaston vanhaan kameraan jäänyt laskenta toistaa v1851-livevian');
+
+  const toka = [...framet.values()][0]; framet.clear(); toka();
+  const merkit = Object.fromEntries(e.data().map((d) => [d.avain, d.el]));
+  assert.equal(merkit.nappula.classList.contains('pallolauta-takana'), false);
+  assert.equal(merkit['kohde:uusi'].classList.contains('pallolauta-takana'), false);
+  assert.equal(merkit['kohde:taka'].classList.contains('pallolauta-takana'), true,
+    'todella takapuolinen merkki pysyy piilossa');
+  assert.equal(e.kameraKutsuja(), 0, 'korjaus ei tee fake-panorointia');
+  tahdistus.pura(); e.merkit.pura();
+});
 
 for (const [nimi, siirtyma] of [['tavallinen', 250], ['reduced motion', 0]]) {
   test(`lehden sulku tahdistaa HTML-merkkien näkyvyyden seuraavalla framella: ${nimi}`, (t) => {
@@ -210,6 +266,8 @@ test('pallolaudan herääminen käyttää näkyvyystahdistusta ja purkaa odottav
   assert.match(lauta, /new MutationObserver\(tahdistaLepo\)/,
     'lehden open-attribuutin observer kulkee heräämisen kautta');
   assert.match(lauta, /luoMerkkienNakyvyysTahdistus\(\{ paivita: merkit\.tahdistaNakyvyys \}\)/);
+  assert.match(lauta, /nakyvissa: \(d\) => pisteEdessa\([\s\S]*?d\.__threeObjHtml\?\.position \?\? pallo\.getCoords/,
+    'lopullinen näkyvyys lasketaan valmiista kamerasta merkin oikealla renderpaikalla');
   assert.match(lauta, /return merkkienNakyvyys\.kameranJalkeen\(kamera\.kotiin\(\{ kesto, bbox \}\)\);/,
     'first-load ja saapuminen tahdistavat merkit kamera-ajon jälkeen');
   assert.match(lauta, /maanLaatikko = bbox;\n\s*tahdistaZoomirajat\(\);\n\s*return merkkienNakyvyys\.kameranJalkeen/,

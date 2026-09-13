@@ -80,10 +80,25 @@ export function luoMerkkienNakyvyysTahdistus({
 }) {
   let frame = 0;
   let elossa = true;
+  let yritys = 0;
+  const aja = () => {
+    frame = 0;
+    const valmis = paivita();
+    /*
+     * Ensilatauksessa Globe.gl:n Kapsule-digest voi luoda HTML-oliot
+     * vasta tämän framen jälkeen. Yksi uusi frame riittää: siinä DOM on
+     * olemassa ja sovellus voi laskea näkyvyyden valmiista kamerasta.
+     */
+    if (valmis === false && elossa && yritys < 1) {
+      yritys += 1;
+      frame = requestFrame(aja);
+    }
+  };
   const ajasta = () => {
     if (!elossa) return;
     if (frame) cancelFrame(frame);
-    frame = requestFrame(() => { frame = 0; paivita(); });
+    yritys = 0;
+    frame = requestFrame(aja);
   };
   return {
     ajasta,
@@ -247,7 +262,7 @@ export function kohdeElementti(kohde) {
  * lista)`, `maara(osa)`, `laatikot(osa)` ja kohteiden luettelon
  * osumatestiä varten.
  */
-export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null }) {
+export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyvissa = null }) {
   const data = new Map(); // avain → pysyvä datum
   const osat = new Map(); // osan nimi → datumit
   const poistuvat = new Map(); // avain → ajastin
@@ -282,6 +297,23 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null }) {
     for (const osa of osat.values()) lista.push(...osa);
     for (const d of data.values()) if (d.poistuu && !lista.includes(d)) lista.push(d);
     pallo.htmlElementsData(lista);
+  };
+
+  /**
+   * Näkyvyys valmiista kamerasta, ei Globe.gl:n pointOfView-kutsun
+   * välittömästä (vielä edellisen renderframen) kamerasta. Palauttaa
+   * false vain, jos Kapsulen digest ei ole vielä luonut kaikkia DOM-
+   * elementtejä; tahdistaja yrittää silloin kerran seuraavalla framella.
+   */
+  const tahdistaNakyvyys = () => {
+    tyonna();
+    if (typeof nakyvissa !== 'function') return true;
+    let valmis = true;
+    for (const d of data.values()) {
+      if (!d.el) { valmis = false; continue; }
+      d.el.classList.toggle('pallolauta-takana', !nakyvissa(d));
+    }
+    return valmis;
   };
 
   const poista = (d) => {
@@ -391,7 +423,7 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null }) {
     paivita,
     aseta,
     /** Pakota Globe.gl laskemaan HTML-merkkien etu/taka-tila uudelleen. */
-    tahdistaNakyvyys: tyonna,
+    tahdistaNakyvyys,
     laatikot,
     maara: (osa) => (osat.get(osa) ?? []).length,
     /** Näkyvät kohteet osumatestiä varten ({ key, lat, lng, city }). */
