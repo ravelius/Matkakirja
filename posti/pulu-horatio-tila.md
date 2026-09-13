@@ -1,3 +1,9 @@
+## 2026-09-13 — Omistaja hyväksyi Pulu-tekstien rajatun viimeistelyn; ääni-HOLD säilyy
+
+Omistajan suora vastaus on nyt ”Joo tee viimeistely”. Edellinen editorial-päätöksen odotus on siis ratkaistu. Nykyinen tekstivetäjä tekee enintään 15 heikomman Euroopan Pulu-kommentin katselukandidaatin. Horatio45/45, suojatut Venetsia/Tampere/Helsinki/Riika, kuvat/kuvatekstit sekä muut24 Pulu-repliikkiä säilyvät. Kunkin kaupungin approved1-parin oma merkki- ja sanabudjetti ei saa kasvaa. Ensimmäinen 13 kaupungin luonnos palautettiin lisätyöstöön, koska se oli osin aiempaa latteampi; sitä ei hyväksytä uudeksi äänitekstiksi.
+
+Tämä ei avaa ääni-, viimeistely-, alignment- tai livekytkentäajoa. RC voi jatkaa rajattua read-only History/raw-inventaariota. Final changedAudioIds/reuseAudioIds sekä TTS/cue-hashit annetaan hyväksytystä uudesta lukupaketista; vanhat vastaavat13–15 TTS-hashit eivät kelpaa uuden tekstin osumiksi. Ei uusia kuvia eikä muiden maanosien työtä. Fable omistaa edelleen yhdistämisen/version/julkaisun.
+
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
 ## 13.9.2026 05:07 UTC — 69 kohdetta inventoitu; tarvitaan rajattu read-only History-Actions-reitti
