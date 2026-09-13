@@ -9,6 +9,16 @@ import { kuunteleLivianKasvopuhetta, kuunteleLivianKasvopuheenElinkaarta, livian
 import { asennaLivianChatTila } from './livia-chat-tila.js';
 import { livianYlinDialogi, livianDialogiSalliiReaktion, seuraaLivianDialogeja } from './livia-dialogitila.js';
 
+/**
+ * Pelkkä diaryVoice-kahva ei todista, että luenta on kesken:
+ * pehmeaLoppu jättää luonnollisesti loppuneen soittimen kahvaan.
+ * Tavallinen pause pysyy silti esteenä, koska vain luonnollinen
+ * loppuhaara asettaa tämän merkin.
+ */
+export function livianLuentaEstaaRauhan(ui) {
+ return Boolean(ui?.diaryVoice&&!ui.diaryVoice.luentaPaattyiLuonnollisesti);
+}
+
 /** Jo näkyvä täytelause määrää liikkeen. Ei uutta repliikkiä tai arvontaa. */
 const LIVIAN_MIETINTAELEET=new Map(Object.entries({
  'Hetki, pululla pulla suussa..':'crumb','Odotas, sulka jäi mustepulloon..':'preen','Kaivan sähkeitä, siellä oli jotain tästä..':'peek','Hetkinen, lento vastatuuleen..':'wind','Annas kun mietin. Tai ei — kysyn joltain viisaammalta..':'flyAway','Odota, järjestän ajatukseni oksalle..':'think','Muistan lukeneeni tästä. Mistäs se nyt olikaan..':'think','Setä tiesi tästä jotain. Mietin hetken..':'think','Pieni hetki, untuvia sähkekoneessa..':'preen','Katsotaas. Nokka kirjaan, siipi kartalle..':'bookStudy','Hetki vain, kynä on väärässä siivessä..':'confused','Odotas, luen omat muistiinpanoni. Käsiala on kanan..':'reading','Hetkinen, kirjastonhoitaja on pöllö ja pöllö nukkuu päivisin..':'listen','Pieni hetki, arkiston ovi on jumissa..':'confused','Hetki, tarkistan asian kahdesta paikasta..':'think','Odotas, pudotin muistiinpanot katolle..':'flyAway','Pieni hetki, tästä on jossain sähke..':'peek','Nokka kiinni, minä ajattelen..':'think','Hetkinen, siivet ovat vielä märät sateesta..':'rain','Odota, tämä vaatii kaksi kierrosta tornin ympäri..':'flyAway','Annas kun kaivan tämän muistista. Siellä on ruuhkaa..':'think','Pieni hetki, pulla ensin ja tieto sitten..':'crumb','Hetki vain, kartta on väärinpäin..':'confused','Odotas, luen sen pienellä painetun kohdan..':'bookStudy','Katsotaas, mistä tämä lankakerä alkaa..':'think','Hetkinen, kysyn asiaa oikealta linnulta..':'flyAway','Pieni hetki, arkiston hyllyt ovat minua korkeammalla..':'peek','Odota, tässä on kaksi vastausta ja minä valitsen paremman..':'think','Hetki, murut pois kirjan päältä..':'crumb','Annas kun istun alas. Tämä on istumakysymys..':'think','Pieni hetki, sähkekone rätisee taas..':'scratch','Odotas, muistin juuri jotain ja unohdin sen..':'confused','Hetkinen, tämä osui johonkin minkä olen itse nähnyt..':'think','Katson tästä ikkunasta, näkyisikö vastaus..':'lookRight','Pieni hetki, järjestän faktat riviin..':'think','Hetki, tuuli vei yhden sivun..':'wind',
@@ -504,7 +514,7 @@ export function asennaLivianKasvot(pollo) {
  }
  function rauhallinen(){
   const ui=pollo.haeUi?.();
-  return nakyy()&&!lehtiPaalla&&!luennat.size&&!odotukset.size&&!nostoTila?.onkoAuki()&&!pollo.auki&&!odotusrivi&&!puhe&&!ui?.liviaAani&&!ui?.diaryVoice
+  return nakyy()&&!lehtiPaalla&&!luennat.size&&!odotukset.size&&!nostoTila?.onkoAuki()&&!pollo.auki&&!odotusrivi&&!puhe&&!ui?.liviaAani&&!livianLuentaEstaaRauhan(ui)
     &&!doc.querySelector('dialog[open], .pollo-kuplapino-kehys:not([hidden])')
     &&!doc.body.classList.contains('aikajana-paalla')&&!doc.body.classList.contains('flight-active')&&!doc.body.classList.contains('kartalento');
  }
