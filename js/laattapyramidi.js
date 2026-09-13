@@ -90,6 +90,7 @@
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
 import { NOSTOLADONTA_SAANTO } from './nostoladonta.js';
+import { lataaMaapolygonit, maanAluevesiPolku } from './maanaariviivat.js';
 
 /*
  * === NOUTAMINEN JA KIINNITTÄMINEN OVAT ERI ASIOITA =================
@@ -543,6 +544,12 @@ const mittarit = {
   nostoja: 0,
   viivoja: 0,
   rantoja: 0,
+  /* Kohdemaan värilaatat (karttauudistus, erä 1). Erän valmis-kriteeri
+   * luetaan tästä: nakymassa + varillisia ei saa olla yli kaksinkertainen
+   * entiseen nakymassa-lukuun nähden. */
+  varillisia: 0,
+  /* Mihin maahan väritaso on juuri nyt rajattu (ISO A3) tai null. */
+  variMaa: null,
   ladattu: 0,
   epaonnistui: 0,
   esiladattu: 0,
@@ -603,6 +610,7 @@ const tasonVersio = (taso) => {
   if (taso.nosto) return luettelo?.nostotaso?.versio ?? '';
   if (taso.viiva) return luettelo?.viivataso?.versio ?? '';
   if (taso.ranta) return luettelo?.rantataso?.versio ?? '';
+  if (taso.vari) return luettelo?.varitaso?.versio ?? '';
   return luettelo?.versio ?? '';
 };
 const avain = (taso, sarake, rivi) => `${tasonVersio(taso)}:${taso.z}:${sarake}:${rivi}`;
@@ -657,6 +665,11 @@ function laattaUrl(taso, sarake, rivi) {
     return pyramidiUrl(`${luettelo.rantataso.versio}/ranta/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
+  // Väritaso samoin: <variversio>/vari/z… (karttauudistus, erä 1).
+  if (taso.vari) {
+    return pyramidiUrl(`${luettelo.varitaso.versio}/vari/z${taso.z}/${sarake}/${rivi}`
+      + `.${luettelo.muoto ?? 'webp'}`);
+  }
   return pyramidiUrl(`${luettelo.versio}/z${taso.z}/${sarake}/${rivi}`
     + `.${luettelo.muoto ?? 'webp'}`);
 }
@@ -671,6 +684,8 @@ const noutoEtuliite = (taso) => {
   if (taso.nosto) return 'n';
   if (taso.viiva) return 'v';
   if (taso.ranta) return 'r';
+  // c = color/väri; v on jo viivatasolla, r rantatasolla.
+  if (taso.vari) return 'c';
   return '';
 };
 const noutoAvain = (taso, sarake, rivi) => `${noutoEtuliite(taso)}${taso.z}:${sarake}:${rivi}`;
@@ -952,6 +967,34 @@ function varmistaKerrokset(ui) {
    * kartalla joka tasolla (z0–z8), joten opacity-haara olisi sääntö,
    * joka ei koskaan laukea.
    */
+  /*
+   * VÄRITASO — KOHDEMAAN VÄRILLINEN TOPOGRAFIA (karttauudistus, erä 1;
+   * omistaja 13.9.2026: *"Onko se mahdollista? Siis etta vain
+   * kohdemaassa on varillinen topografia nakyvissa?"*).
+   *
+   * PAIKKA ON HETI POHJAN PÄÄLLÄ JA RANNAN ALLA. Värilaatta on KARTTA
+   * eikä merkintä: se on sama maasto ja sama meri toisella paletilla,
+   * ja se korvaa alta löytyvän seepiakartan siellä, missä leikkuri sen
+   * päästää läpi. Rantaviiva, reitit ja nostojen symbolit ovat kartan
+   * MERKINTÖJÄ, ja ne kuuluvat sen päälle — muuten kohdemaan rannikko,
+   * reitit ja merkit katoaisivat värin alle.
+   *
+   * LEIKKURI ON RYHMÄSSÄ, EI LAATOISSA. Laatat ovat suorakaiteita maan
+   * laatikon alalla (tools/generoi-laattapyramidi.mjs, VÄRITASO), ja
+   * `clip-path` rajaa ne kohdemaan aluevesirajaan. Näin raja on yksi
+   * luku pelin puolella eikä poltettu tuhanteen tiedostoon — ja juuri
+   * siksi erän savuke voi riisua leikkurin ja nähdä Belgian värittyvän
+   * (vastakoe).
+   *
+   * EI MASKIA EIKÄ SUODATINTA. tests/rules.test.mjs: iOS:n
+   * webapp-tilassa suodattimelliset kartan kerrokset katosivat, kun
+   * sovellus kävi taustalla. `clipPath` on geometriaa eikä
+   * pikselipassia, ja se on tämän erän tietoinen valinta.
+   */
+  ui.pyramidiVariKerros = el('g', { class: 'pyramidi-varitaso' }, ui.pyramidiKerros);
+  ui.pyramidiVariKerros.style.transition = 'opacity 0.35s ease';
+  ui.pyramidiVariRajaus = null;
+  ui.pyramidiVariRajattuIso = null;
   ui.pyramidiRantaKerros = el('g', { class: 'pyramidi-rantataso' }, ui.pyramidiKerros);
   /*
    * VIIVATASO — NELJÄS KERROS, JA SEN PAIKKA ON PERUSTELTU (omistaja
@@ -1503,6 +1546,172 @@ function nostotasonTasot() {
  * tason nostolliset laatat, ja seuraava syvä näkymä siivoaa ne
  * paivitaKerroksen omalla kirjanpidolla.
  */
+/* ------------------------------------------------------------ väritaso */
+
+/*
+ * VÄRITASO — KOHDEMAAN VÄRILLINEN TOPOGRAFIA (karttauudistus, erä 1).
+ *
+ * Omistaja 13.9.2026, sanatarkasti: *"Maan korkeuserot muutetaan
+ * varilliseksi ja vedetkin nakyvat sinisena syyvyyserot huomioiden.
+ * Pohjana pelissa jo oleva korkeuserolinssi, renderoidaan se vain
+ * mahdollisimman tarkaksi uudessa versiossa. … Muiden maiden kartat ja
+ * valtion ulkopuoliset vedet ja meret ennallaan ruskean savyissa."*
+ *
+ * Kerros on rakenteeltaan sama kuin ranta- ja viivataso: pohjan
+ * tasogeometria toisella laatastolla ja toisella juuripolulla. Kaksi
+ * asiaa on eri:
+ *
+ *   1. TASO ON MAAKOHTAINEN. Luettelon `varitaso.maa` kertoo, kenen
+ *      laatat ämpärissä ovat, ja kerros piirretään VAIN kun pelaaja on
+ *      siinä maassa. Muuten Ranskan värit olisivat kartalla myös
+ *      Belgiassa — juuri se, mitä omistajan ehto *"vain kohdemaassa"*
+ *      kieltää.
+ *   2. KERROS ON RAJATTU. `clip-path` on kohdemaan aluevesiraja
+ *      (js/maanaariviivat.js maanAluevesiPolku, 12 mpk = 6,7
+ *      lautayksikköä). Laatat itse ovat suorakaiteita maan laatikon
+ *      alalla, joten leikkuri on se ja ainoa asia, joka pitää värit
+ *      Ranskassa.
+ */
+
+/** Väritason tasot — pohjan tasogeometria väritason laatastolla. */
+function varitasonTasot() {
+  const vt = luettelo?.varitaso;
+  if (!vt?.tasot?.length || !vt.laatastot || !vt.maa) return null;
+  if (!luettelo.__variTasot) {
+    luettelo.__variTasot = luettelo.tasot
+      .filter((t) => vt.tasot.includes(t.z) && vt.laatastot[t.z])
+      .map((t) => ({
+        ...t, laatasto: vt.laatastot[t.z], __bitit: undefined, vari: true,
+      }));
+  }
+  return luettelo.__variTasot.length ? luettelo.__variTasot : null;
+}
+
+/**
+ * Missä maassa pelaaja on.
+ *
+ * SAMA LUKU KUIN PUNAISELLA KEHÄLLÄ, EIKÄ OMAA PÄÄTTELYÄ. Maan
+ * vahvistettu ääriviiva (js/maatummennus.js) ratkaisee kohdemaan
+ * kahdesta lähteestä — maan ikkunataulusta ja laudan kaupunki–maa-
+ * taulusta — ja kirjoittaa tuloksen kenttään `maatummennusAvain`.
+ * Väritaso lukee sen sieltä, jolloin väri ja kehä eivät voi olla eri
+ * mieltä siitä, missä maassa ollaan; oma kopio päättelystä olisi juuri
+ * se paikka, jossa Ranska värittyy mutta kehä on Belgian ympärillä.
+ *
+ * KENTTÄÄ EI IMPORTOIDA FUNKTIONA, koska js/fokuskohteet.js tuo tämän
+ * moduulin (nostoOnPoltettu) — vastakkainen tuonti tekisi noista
+ * kahdesta kehän, ja yhden tiedoston niputus (tools/build-standalone)
+ * järjestää moduulit riippuvuuksien mukaan.
+ *
+ * AVAUSLENTO EI SAA VÄREJÄ, samoin kuin se ei saa kehää: lento on
+ * kartan niukin hetki (js/kartta.js aloituslennonNiukkuus).
+ */
+function varitasonIso(ui) {
+  if (ui.aloituslentoKesken) return null;
+  return ui.fokuskarttaAvain || ui.maatummennusAvain || null;
+}
+
+/** Tyhjentää väritason kerroksen ja mittarit. */
+function tyhjennaVaritaso(ui) {
+  if (ui.pyramidiVariKerros) ui.pyramidiVariKerros.style.opacity = '0';
+  if (ui.pyramidiVari?.laatat.size) {
+    poistaVanhaTaso(ui.pyramidiVari);
+    for (const kuva of ui.pyramidiVari.laatat.values()) peruLaatta(kuva);
+    ui.pyramidiVari.laatat = new Map();
+    ui.pyramidiVari.z = null;
+  }
+  mittarit.varillisia = 0;
+  mittarit.variMaa = null;
+}
+
+/*
+ * LEIKKURIN ID ON VAKIO, KOSKA KERROKSIA ON YKSI. Laudalla on kerrallaan
+ * yksi pyramidikerros (nollaaPyramidi purkaa edellisen), joten yksi
+ * tunnus riittää eikä juokseva numero jätä puuhun kuolleita clipPathejä.
+ */
+const VARI_RAJAUS_ID = 'pyramidi-vari-rajaus';
+
+/**
+ * Rakentaa leikkurin kohdemaan aluevesirajasta — kerran maata kohti.
+ *
+ * AINEISTO ON LAISKA JA JAETTU (lataaMaapolygonit): sama 1,4 megatavua
+ * palvelee maan vahvistettua ääriviivaa, pallon korostusta ja tätä
+ * leikkuria. Ennen kuin se on perillä, kerros on piilossa — EI
+ * rajaamaton, koska rajaamaton kerros olisi juuri se virhe, jonka
+ * omistaja näkisi: Ranskan värit Belgian päällä.
+ *
+ * @returns {boolean} onko leikkuri valmiina tälle maalle
+ */
+function varmistaVariRajaus(ui, iso) {
+  if (ui.pyramidiVariRajattuIso === iso) return true;
+  const kerros = ui.pyramidiVariKerros;
+  if (!kerros) return false;
+  const data = ui.pyramidiVariPolygonit ?? null;
+  if (!data) {
+    /*
+     * Haku käynnistetään kerran; lupaus on jaettu, joten odottaminen ei
+     * tee uutta pyyntöä. Kun aineisto on perillä, seuraava asettunut
+     * näkymä rakentaa leikkurin — ja jotta sellainen varmasti tulee,
+     * pyydetään päivitys heti.
+     */
+    if (!ui.pyramidiVariHaku) {
+      ui.pyramidiVariHaku = true;
+      lataaMaapolygonit().then((d) => {
+        if (ui.dead) return;
+        ui.pyramidiVariPolygonit = d ?? null;
+        paivitaPyramidi(ui);
+      }).catch(() => { /* aineistoa ei saatu: väritaso jää pois */ });
+    }
+    return false;
+  }
+  const map = ui.game?.pack?.map;
+  const leveys = map?.kiertava ? (data.lauta?.leveys ?? map.width) : 0;
+  const d = maanAluevesiPolku(data, iso, leveys);
+  if (!d) return false;
+  if (!ui.pyramidiVariRajaus) {
+    const defs = el('defs', {}, kerros);
+    kerros.prepend(defs);
+    ui.pyramidiVariRajaus = el('clipPath', { id: VARI_RAJAUS_ID }, defs);
+    ui.pyramidiVariPolku = el('path', { d: '' }, ui.pyramidiVariRajaus);
+    kerros.setAttribute('clip-path', `url(#${VARI_RAJAUS_ID})`);
+  }
+  ui.pyramidiVariPolku.setAttribute('d', d);
+  ui.pyramidiVariRajattuIso = iso;
+  return true;
+}
+
+/**
+ * Päivittää väritason kerroksen — tai piilottaa sen, kun pelaaja ei ole
+ * siinä maassa, jonka laatat ämpärissä ovat.
+ *
+ * TYHJÄ KERROS ON KOKO YHTEENSOPIVUUS, kuten ranta- ja viivatasolla:
+ * vanha luettelo ei tunne `varitaso`-kenttää, kerros jää tyhjäksi eikä
+ * yhtäkään pyyntöä lähde — kartta on täsmälleen se seepiakartta, joka
+ * se oli ennen tätä erää.
+ *
+ * VANHA TASO EI JÄÄ UUDEN ALLE (`lapinakyva: true`). Värilaatta on
+ * läpinäkymätön kartta, mutta se ELÄÄ LEIKKURIN SISÄLLÄ: zoomatessa
+ * edellisen tason laatta jäisi uuden alle eikä sitä näkisi — paitsi
+ * siellä, missä uusi taso on vielä vajaa, ja siellä se näkyisi
+ * sumeana haamuna kahdella eri tarkkuudella. Karkea pohja on jo
+ * pohjakerroksessa, joten alla on aina jotain.
+ */
+function paivitaVaritaso(ui, taso, laatta, arkki, alue, nakyva) {
+  const kerros = ui.pyramidiVariKerros;
+  if (!kerros) return;
+  const tasot = varitasonTasot();
+  const oma = tasot?.find((t) => t.z === taso.z) ?? null;
+  const iso = varitasonIso(ui);
+  if (!oma || !iso || iso !== luettelo.varitaso.maa) { tyhjennaVaritaso(ui); return; }
+  if (!varmistaVariRajaus(ui, iso)) { tyhjennaVaritaso(ui); return; }
+  kerros.style.opacity = '1';
+  ui.pyramidiVari ??= tyhjaTila(kerros, false, true);
+  ui.pyramidiVari.kerros = kerros;
+  paivitaKerros(ui.pyramidiVari, oma, laatta, arkki, alue, nakyva, 'high');
+  mittarit.varillisia = ui.pyramidiVari.laatat.size;
+  mittarit.variMaa = iso;
+}
+
 /* ------------------------------------------------------------ rantataso */
 
 /**
@@ -1806,6 +2015,15 @@ export function paivitaPyramidi(ui) {
    * osiossa 4 eli reittien ja rajojen alla, ja sama järjestys pätee
    * omalla tasollaan.
    */
+  /*
+   * VÄRITASO ENSIN, HETI POHJAN PÄÄLLE: se on KARTTA eikä merkintä, ja
+   * rantaviiva, reitit ja nostot kuuluvat sen päälle (ks. väritaso).
+   * Prioriteetti on 'high' kuten pohjalla — kohdemaan kartta on juuri
+   * se, mitä pelaaja katsoo, eikä se saa jäädä merkintöjen jälkeen
+   * jonoon.
+   */
+  paivitaVaritaso(ui, taso, laatta, arkki, kiinnitys, nakyva);
+
   paivitaRantataso(ui, taso, laatta, arkki, kiinnitys, nakyva);
 
   /*
@@ -1839,7 +2057,8 @@ export function paivitaPyramidi(ui) {
    */
   jonotaEsilataus(taso, laatta, arkki, nakyva, suunta);
   jonotaTasovaihto([...tasot, ...(nostotasonTasot() ?? []), ...(viivatasonTasot() ?? []),
-    ...(rantatasonTasot() ?? [])], taso, laatta, arkki, nakyva);
+    ...(rantatasonTasot() ?? []), ...(mittarit.variMaa ? (varitasonTasot() ?? []) : [])],
+  taso, laatta, arkki, nakyva);
 }
 
 /** Tyhjentää laatat (laudan vaihto, pelin loppu). */
@@ -1857,6 +2076,7 @@ export function nollaaPyramidi(ui) {
   if (!ui?.pyramidiKerros) return;
   clearTimeout(ui.pyramidiTarkka?.ajastin);
   clearTimeout(ui.pyramidiKarkea?.ajastin);
+  clearTimeout(ui.pyramidiVari?.ajastin);
   clearTimeout(ui.pyramidiRanta?.ajastin);
   clearTimeout(ui.pyramidiViiva?.ajastin);
   clearTimeout(ui.pyramidiNosto?.ajastin);
@@ -1864,11 +2084,15 @@ export function nollaaPyramidi(ui) {
   // Kerrokset ja niiden tilat rakennetaan seuraavassa päivityksessä.
   ui.pyramidiPohjaKerros = null;
   ui.pyramidiTarkkaKerros = null;
+  ui.pyramidiVariKerros = null;
+  ui.pyramidiVariRajaus = null;
+  ui.pyramidiVariRajattuIso = null;
   ui.pyramidiRantaKerros = null;
   ui.pyramidiViivaKerros = null;
   ui.pyramidiNostoKerros = null;
   ui.pyramidiTarkka = null;
   ui.pyramidiKarkea = null;
+  ui.pyramidiVari = null;
   ui.pyramidiRanta = null;
   ui.pyramidiViiva = null;
   ui.pyramidiNosto = null;
@@ -1877,6 +2101,7 @@ export function nollaaPyramidi(ui) {
   mittarit.nakymassa = 0;
   mittarit.ruudulla = 0;
   mittarit.karkeita = 0;
+  mittarit.varillisia = 0;
   mittarit.rantoja = 0;
   mittarit.viivoja = 0;
   mittarit.nostoja = 0;

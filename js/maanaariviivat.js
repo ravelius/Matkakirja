@@ -381,3 +381,244 @@ export function paivitaPallonMaakorostus({
   });
   return true;
 }
+
+/* ================== ALUEVESIRAJA: KOHDEMAAN LEIKKURI ===============
+ *
+ * KARTTAUUDISTUS, ERÄ 1 (omistaja 13.9.2026: *"Maan korkeuserot
+ * muutetaan varilliseksi ja vedetkin nakyvat sinisena syyvyyserot
+ * huomioiden … Muiden maiden kartat ja valtion ulkopuoliset vedet ja
+ * meret ennallaan ruskean savyissa."*; Fablen päätös samana päivänä:
+ * puskuri on 12 meripeninkulmaa eli aluevesiraja).
+ *
+ * Värilaattojen kerros (js/laattapyramidi.js) rajataan tällä polulla.
+ * Maapolygonit ovat MAA-alueita, joten pelkkä maan rengas jättäisi
+ * rannikkovedet ruskeiksi — ja juuri ne ovat se, mitä omistaja pyytää
+ * sinisenä. Rengas työnnetään siksi ulospäin 12 meripeninkulmaa.
+ *
+ * === MIKSI LUKU ON 6,7 LAUTAYKSIKKÖÄ ===============================
+ *
+ * 12 mpk = 22,224 km. Laudalla yksi leveysaste on 33,33 yksikköä ja
+ * maapallolla 111,32 km, joten 22,224 / 111,32 · 33,33 = 6,654 → 6,7.
+ * Sama luku on generaattorissa (tools/generoi-laattapyramidi.mjs
+ * ALUEVESI_YKSIKKOA): laattojen laatikko lasketaan siitä, ja jos
+ * leikkuri olisi laatikkoa leveämpi, rannikolle jäisi laataton
+ * kaistale juuri siihen mihin puskuri ulottuu.
+ *
+ * PITUUSPIIRIT KAPENEVAT, LEVEYSPIIRIT EIVÄT. Millerin lieriössä
+ * vaakasuunnan mittakaava on vakio ja pystysuunta venyy pohjoista
+ * kohti, joten 6,7 yksikköä on Ranskan leveyksillä vaakasuunnassa
+ * hitusen yli 22 km ja pystysuunnassa hitusen alle. Ero on
+ * suuruusluokkaa kymmenen prosenttia yhdestä kaistaleesta, jonka
+ * tehtävä on kertoa *"tämä vesi on Ranskan"* — ei rajamerkki.
+ *
+ * === MIKSI PUSKURI LASKETAAN AJOSSA EIKÄ TIEDOSTOON ================
+ *
+ * Suunnitelma (docs/raportit/karttauudistus-suunnitelma-20260913.md,
+ * luku 2.6) ehdotti toista aineistotiedostoa
+ * (`maapolygonit-aluevesi.json`), jotta ajossa on *"yhä yksi tavallinen
+ * clipPath yhdellä polulla"*. Ehto täyttyy tälläkin tavalla: kerros saa
+ * yhden polun, ei maskia eikä suodatinta. Ero on siinä, kuka luvun
+ * laskee — ja yhden maan renkaiden työntäminen on muutaman
+ * millisekunnin työ, joka tehdään KERRAN maanvaihtoa kohti (muisti
+ * alla, sama malli kuin `maanPolkuMuistista`). Toinen tiedosto olisi
+ * 1,4 megatavua lisää repoon ja toinen totuus samasta rajasta —
+ * täsmälleen se, minkä omistaja korjautti 1.9.2026 (*"että tummennus ja
+ * maan rajan vahvistus menisi samaa reittiä kuin raja kartassa"*).
+ */
+
+/** Aluevesipuskuri lautayksikköinä (12 mpk; ks. yllä). */
+export const ALUEVESI_YKSIKKOA = 6.7;
+
+/*
+ * HARVENNUS ENNEN TYÖNTÖÄ. Ranskan renkaissa on 4 264 pistettä, ja
+ * työnnetty polku on niitä runsaat kaksi kertaa enemmän — leikkuri
+ * olisi kymmenien tuhansien pisteiden polku, jonka selain arvioi
+ * jokaisella koosteella.
+ *
+ * TARKKUUS EI KÄRSI, KOSKA PUSKURI ON LEVEÄMPI KUIN VIRHE. Peräkkäiset
+ * pisteet, jotka ovat alle 1,2 yksikön (≈ 4 km) päässä toisistaan,
+ * tiivistetään yhdeksi; syntyvä poikkeama on korkeintaan sama 1,2
+ * yksikköä, kun kaistale itse on 6,7 yksikköä leveä. Rantaviivan OMA
+ * muoto piirtyy laatoista, ei tästä: tämä on vain se raja, jonka
+ * sisällä värilaatta näkyy.
+ */
+const HARVENNUS_YKSIKKOA = 1.2;
+
+/** Pisteet harvaksi: peräkkäiset lähipisteet tiivistetään yhdeksi. */
+function harvenna(pisteet, vali) {
+  if (pisteet.length < 4) return pisteet;
+  const ulos = [pisteet[0]];
+  let [vx, vy] = pisteet[0];
+  for (let i = 1; i < pisteet.length - 1; i += 1) {
+    const [x, y] = pisteet[i];
+    if (Math.abs(x - vx) + Math.abs(y - vy) < vali) continue;
+    ulos.push(pisteet[i]);
+    vx = x; vy = y;
+  }
+  ulos.push(pisteet[pisteet.length - 1]);
+  return ulos.length >= 3 ? ulos : pisteet;
+}
+
+/** Renkaan etumerkillinen pinta-ala (kaksinkertaisena riittää). */
+function kaksinkertainenAla(rengas) {
+  let a = 0;
+  for (let i = 0; i < rengas.length; i += 1) {
+    const [x0, y0] = rengas[i];
+    const [x1, y1] = rengas[(i + 1) % rengas.length];
+    a += x0 * y1 - x1 * y0;
+  }
+  return a;
+}
+
+/*
+ * YKSI RENGAS ULOSPÄIN, PYÖREÄ KULMA.
+ *
+ * Jokainen SIVU siirretään ulkonormaalinsa suuntaan etäisyyden `d`
+ * verran, ja KÄRJESSÄ siirretyt sivut yhdistetään: ulkonevassa
+ * kulmassa kaarella (pyöreä kynä, sama muoto jonka 12 mpk:n raja
+ * oikeasti piirtää), sisäänpäin kääntyvässä suoraan.
+ *
+ * SISÄKULMAN SILMUKKA JÄÄ, JA SE ON TARKOITUS. Suoraan yhdistetyt
+ * sivut leikkaavat toisensa kapeassa lahdessa, jolloin polkuun jää
+ * pieni silmukka. Se on kokonaan puskurialueen SISÄLLÄ, ja koska
+ * leikkuri täytetään nonzero-säännöllä (SVG:n oletus), silmukka
+ * täyttyy kuten ympäröivä alakin — lopputulos on oikea ilman yhtään
+ * leikkauslaskentaa. Vasta paljon suuremmalla puskurilla kuin 6,7
+ * yksikköä silmukat alkaisivat ulottua alueen ulkopuolelle.
+ *
+ * ALKUPERÄINEN RENGAS ON MUKANA OMANA OSAPOLKUNAAN samalla
+ * kiertosuunnalla: silloin maa-ala on varmasti täynnä silloinkin, kun
+ * työnnetty rengas on jossain hyvin kapeassa niemessä kääntynyt itsensä
+ * ympäri.
+ */
+function tyonnaUlos(rengas, d) {
+  /*
+   * SULKEVA KAKSOISPISTE POIS ENSIN. Osa aineiston renkaista on
+   * suljettuja (viimeinen piste on ensimmäinen), osa auki. Nollan
+   * mittainen sivu ei anna normaalia, ja sen tilalle syntyisi
+   * mielivaltainen kaari keskelle rannikkoa — tässä silmukassa jokainen
+   * sivu on kierron sulkeuma, joten kaksoispiste on poistettava eikä
+   * ohitettava.
+   */
+  const suljettu = rengas.length > 1
+    && rengas[0][0] === rengas[rengas.length - 1][0]
+    && rengas[0][1] === rengas[rengas.length - 1][1];
+  const avoin = suljettu ? rengas.slice(0, -1) : rengas;
+  const n = avoin.length;
+  if (n < 3) return null;
+  // Sama kiertosuunta joka renkaalle: nonzero-täyttö tekee niistä
+  // silloin yhdisteen eikä leikkaa osaa niistä reiäksi.
+  const kaannetty = kaksinkertainenAla(avoin) < 0 ? [...avoin].reverse() : avoin;
+  const normaalit = [];
+  for (let i = 0; i < n; i += 1) {
+    const [x0, y0] = kaannetty[i];
+    const [x1, y1] = kaannetty[(i + 1) % n];
+    const dx = x1 - x0;
+    const dy = y1 - y0;
+    const pit = Math.hypot(dx, dy) || 1;
+    // Positiivisen alan renkaalla ulkonormaali on (dy, -dx).
+    normaalit.push([(dy / pit) * d, (-dx / pit) * d]);
+  }
+  const ulos = [];
+  const KAARIASKEL = 0.35; // radiaania ≈ 20°
+  for (let i = 0; i < n; i += 1) {
+    const [x0, y0] = kaannetty[i];
+    const [x1, y1] = kaannetty[(i + 1) % n];
+    const [nx, ny] = normaalit[i];
+    ulos.push([x0 + nx, y0 + ny]);
+    ulos.push([x1 + nx, y1 + ny]);
+    // Kärjessä i+1: kaari edellisestä normaalista seuraavaan.
+    const [mx, my] = normaalit[(i + 1) % n];
+    /*
+     * ULKONEVA VAI SISÄÄNPÄIN KÄÄNTYVÄ KULMA? Positiivisen alan
+     * renkaalla ulkonormaali kiertyy kärjessä SAMAAN suuntaan kuin
+     * kulku kääntyy, joten ristitulo n_i × n_i+1 on ulkonevassa
+     * kulmassa positiivinen. Neliö (0,0)-(10,0)-(10,10)-(0,10) on tämän
+     * koe: sen jokainen kärki on ulkoneva ja ristitulo +1.
+     */
+    const risti = nx * my - ny * mx;
+    const pisteTulo = Math.max(-1, Math.min(1, (nx * mx + ny * my) / (d * d)));
+    const kulma = Math.acos(pisteTulo);
+    if (risti <= 0 || kulma < KAARIASKEL) continue;
+    const askelia = Math.ceil(kulma / KAARIASKEL);
+    const alku = Math.atan2(ny, nx);
+    // Normaali kiertyy positiiviseen suuntaan (ks. ristitulo yllä).
+    for (let k = 1; k < askelia; k += 1) {
+      const a = alku + (kulma * k) / askelia;
+      ulos.push([x1 + Math.cos(a) * d, y1 + Math.sin(a) * d]);
+    }
+  }
+  return { alku: kaannetty, puskuri: ulos };
+}
+
+/** Pistelista SVG-polun osaksi (suljettu). */
+function polkuOsa(pisteet) {
+  let d = '';
+  for (let i = 0; i < pisteet.length; i += 1) {
+    d += `${i ? 'L' : 'M'}${pisteet[i][0].toFixed(1)} ${pisteet[i][1].toFixed(1)}`;
+  }
+  return `${d}Z`;
+}
+
+/** Sama polku vaakasuunnassa siirrettynä (vain M/L-komennot). */
+function siirraPolku(d, dx) {
+  return d.replace(/([ML])(-?[\d.]+)/g, (_, kirjain, luku) => `${kirjain}${(Number(luku) + dx).toFixed(1)}`);
+}
+
+/*
+ * Maakohtaiset leikkuripolut kerran istuntoa kohti — sama muistimalli
+ * kuin js/maatummennus.js:n polkumuistilla ja samasta syystä: syöte
+ * (aineisto, laudan leveys, puskurin leveys) on sama koko istunnon, ja
+ * maanvaihto edestakaisin ei saa laskea samaa polkua uudestaan.
+ */
+let aluevesiMuisti = null;
+
+/**
+ * Kohdemaan ALUEVESIRAJA SVG-polkuna laudan yksiköissä.
+ *
+ * @param {object} data   assets/data/maapolygonit.json
+ * @param {string} iso    ISO A3
+ * @param {number} leveys laudan leveys, 0 = ei kiertoa (sauman monistus)
+ * @param {number} [d]    puskuri lautayksikköinä
+ * @returns {string} polun `d`-merkkijono; tyhjä, jos maata ei ole
+ */
+export function maanAluevesiPolku(data, iso, leveys, d = ALUEVESI_YKSIKKOA) {
+  if (aluevesiMuisti?.data !== data || aluevesiMuisti.leveys !== leveys
+    || aluevesiMuisti.d !== d) {
+    aluevesiMuisti = {
+      data, leveys, d, polut: new Map(),
+    };
+  }
+  const muistista = aluevesiMuisti.polut.get(iso);
+  if (muistista !== undefined) return muistista;
+
+  const osat = [];
+  for (const rengas of puraMaanRenkaat(data, iso)) {
+    const tulos = tyonnaUlos(harvenna(rengas, HARVENNUS_YKSIKKOA), d);
+    if (!tulos) continue;
+    for (const pisteet of [tulos.alku, tulos.puskuri]) {
+      const osa = polkuOsa(pisteet);
+      osat.push(osa);
+      /*
+       * SAUMAN YLI ULOTTUVA RENGAS MYÖS LAUDAN TOISELLE LAIDALLE —
+       * sama sääntö ja sama syy kuin js/maatummennus.js:n maanPolussa:
+       * kiertävällä laudalla juuriryhmän <use>-kopio kattaa välin
+       * [leveys, 2 × leveys), ja rengas on aineistossa ehjänä välin
+       * [0, leveys) ulkopuolella.
+       */
+      if (leveys > 0) {
+        let minX = Infinity;
+        let maxX = -Infinity;
+        for (const [x] of pisteet) {
+          if (x < minX) minX = x;
+          if (x > maxX) maxX = x;
+        }
+        if (minX < 0) osat.push(siirraPolku(osa, leveys));
+        else if (maxX > leveys) osat.push(siirraPolku(osa, -leveys));
+      }
+    }
+  }
+  const polku = osat.join('');
+  aluevesiMuisti.polut.set(iso, polku);
+  return polku;
+}

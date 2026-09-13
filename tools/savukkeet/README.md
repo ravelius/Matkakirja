@@ -104,7 +104,12 @@ ei vaihda lautaa, tasokartan moduulia ei haeta, kytkimet piilossa),
 ajavat vain pallolla) sekä
 `--lauta`-vipua käyttävät `savuke-aikajana`, `savuke-kartta-tila` ja
 `savuke-siirtokoreografia`, jotka ohjaavat `kartta`-pyynnön pallolle
-(`vainPallo`).
+(`vainPallo`). Lisäksi `savuke-varilaatat` (karttauudistus,
+erä 1) ajaa tasokartalla, mutta EI ohituksen kautta: se vartioi
+nimenomaan tasokartan väritasoa ja avaa portin (`VANHA_KARTTA_KAYTOSSA`)
+OMASSA PALVELIMESSAAN — repossa vakio pysyy falsena. Vihreä ajo todistaa
+väritason toimivan tasokartalla; se EI todista, että omistaja näkee
+värit pelatessaan, koska peli avautuu pallolle.
 
 | Savuke | Vartioi |
 | --- | --- |
@@ -119,6 +124,7 @@ ajavat vain pallolla) sekä
 | savuke-postikortti | Valokuvasuurennoksen sulkeutumissäännöt |
 | savuke-suurennoksen-pystytila | Kuvasuurennoksen pystytila ja lyhyen kuvatekstin linkki (omistajan vikailmoitus 12.9.2026: *"Näissä kuvissa on turhaan ylhäällä ja alhaalla pieni marginaali. Lisäksi tässä lyhyessä kuvatekstissä ei saa olla tuota havainnekuvalinkkiä."*). Avaa isoisän ja Pulun albumin karusellin Ateenassa ja mittaa kolmella ruudulla (390×844, 834×1194, 1280×800) sekä vaaka- että pystykuvalla, ettei `object-fit: contain` piirrä kirjekuorireunoja kuvaelementin sisään, että kehys on kiinni kuvassa ja kuvatekstissä, että kuvatekstipalkki on yhä luettava ja ettei lyhyeen kuvatekstiin tule Havainnekuva-linkkiä. Koekuvat piirretään ajossa PNG:ksi kahdessa tunnetussa kuvasuhteessa — repoon ei tuoda mediaa. Ämpäri Noden kautta (NODE_USE_ENV_PROXY=1), ajaa pallolaudalla |
 | savuke-vuosisaa | Vuosisääkortti (käyrä, sadepalkit, korostus) |
+| savuke-varilaatat | Kohdemaan värillinen topografia (karttauudistus, erä 1): Ranskan maa on värillistä hypsometriaa, 12 mpk:n aluevedet sinisiä, Belgia ja avomeri seepiaa, väritaso rajattu maahan FRA eikä laattamäärä kaksinkertaistu. Vaatii pilottilaatat (`--laatat <kansio>`; tools/generoi-laattapyramidi.mjs `--vari FRA`). VASTAKOE `--ilman-rajausta` riisuu leikkurin — silloin Belgian ja avomeren väitteiden ON kaaduttava |
 | savuke-lehden-mitta | Arkin leveys (jumiutunut viewportti, resize) |
 | savuke-paivityspopup | Versionumeron päivitysnappi |
 | savuke-kehittajalehti | Kehittäjän liitteet: Raamattu, Tilannelehti ja Tilastot-lehden vetolaatikkotaulu |

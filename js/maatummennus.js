@@ -144,7 +144,29 @@ const TUMMENNUS_NS = 'http://www.w3.org/2000/svg';
  * tehnyt eron näkyvämmäksi. Samalla reunalla se peittää poltetun viivan
  * kuten korostuksen kuuluukin.
  */
-const TUMMENNUS_VIIVA = 2;
+/*
+ * 2 -> 2,5 PIKSELIÄ JA MUSTE -> PUNAINEN (omistajan päätös 13.9.2026,
+ * karttauudistus erä 1; Raamattu, Kaupungit: *"Maan rajat vahvistetaan
+ * punaisella viivalla (pelin varipaletista)."*).
+ *
+ * PUNAINEN OLI KERRAN JO POIS, JA SEN SYY ON POISTUNUT. `.country-
+ * korostus` poistettiin 30.8.2026 perusteella *"punainen maan ääriviiva
+ * on epätarkka"* — mutta epätarkkuus oli AINEISTOSSA eikä värissä:
+ * silloinen viiva tuli laudan karkeasta 50m-rannikosta, kun poltettu
+ * ranta on 10m:ää. Tämä kerros piirtää 1.9.2026 alkaen samasta
+ * 10m-lähteestä kuin poltto (ks. AINEISTO ON POLTON OMA), joten viiva
+ * kulkee kartan oman rajan päällä. Sama korjaus teki mahdolliseksi
+ * paksunnuksen 1 -> 2; nyt sama peruste kantaa 2,5:een.
+ *
+ * MIKSI PUOLIKAS PIKSELI EIKÄ KOKONAINEN. Kohdemaan sisus on tästä
+ * erästä alkaen VÄRILLINEN (js/laattapyramidi.js väritaso), ja kehän
+ * tehtävä on erottaa se naapurin ruskeasta. 2 px hukkui värialueen
+ * reunaan, 3 px oli tolppa, joka peitti Bretagnen pikkusaaret — 2,5 px
+ * on se, mistä omistaja sanoi *"suositus hyväksytty"*. Sävy on paletin
+ * `--mark` (#b03a2b, css/styles.css), ainoa punainen jolla on oma
+ * muuttujanimi ja jo kartan omien merkintäkerrosten väri.
+ */
+const TUMMENNUS_VIIVA = 2.5;
 
 /*
  * AINEISTON HAKU MUUTTI js/maanaariviivat.js:ään 11.9.2026, kun
