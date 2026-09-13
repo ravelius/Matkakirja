@@ -1,6 +1,6 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
-## 13.9.2026 01:35 UTC — v1823 julkaisu varmennettu, live-käyttöliittymän katselmus kesken
+## 13.9.2026 01:21 UTC — v1823 julkaisu varmennettu, live-käyttöliittymän katselmus kesken
 
 **Fable-kuittaus ja [PR #2333](https://github.com/ravelius/Matkakirja/pull/2333) tarkistettu: v1823, release/main `5c39d7f169704afb48b764cdc1cabed3ffb24371`.** Julkaistut 45 pakettia, cue-/SVG-runtime, äänikytkennät ja manifesti ovat täsmälleen yhteisen RC:n `1dd2fc08` sisältöä. Viisi docs-tiedostoa vastaavat korjattua docs-only-toimitusta. Fable lisäsi tuotantomoduulin katalogirivin; vanha 14/15 docs-riippuvuus ei ole enää avoin.
 
