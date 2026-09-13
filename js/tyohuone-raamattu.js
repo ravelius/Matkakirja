@@ -344,6 +344,15 @@ export const RAAMATTU = {
       otsikko: 'Kirjoittajan säännöt (matkakirjatekstit)',
       tila: 'luonnos',
       kohdat: [
+        'LAUSEIDEN YMMARRETTAVYYS (omistaja 13.9.2026 tekstisession kautta, '
+          + 'sanatarkasti: "en ihan heti ymmartanyt alpeilla etta opas oli ollut '
+          + 'vaarassa. tama lause on epamaarainen: Hanen katensa olivat auenneet '
+          + 'koydesta. mutta muuten on hyvaa tekstia. pida vain huoli etta lauseet ovat '
+          + 'helposti ymmarrettavissa. tee vain vaikka kaikki loppuun niin luen ne '
+          + 'sitten lapi"): vaaran tai kaanteen on avauduttava ensilukemalla; '
+          + 'epamaarainen lause korjataan ennen aanitysta. Euroopan 45 kohteen '
+          + 'lukuversio luetaan omistajalla kokonaisena; sina aikana ei rinnakkaista '
+          + 'kirjoitusta eika aanitysta. AANI-HOLD ennallaan.',
         'Isoisä loistaa pysyvissä (joet, tuoksut, satamat), '
           + 'vanhentuu nimissä ja tekniikassa. Nuori Fogg ei ole '
           + 'viisaampi — elää vain 150 vuotta myöhemmin.',
@@ -7082,6 +7091,19 @@ export const RAAMATTU = {
       otsikko: 'Kuvat ja lähteet',
       tila: 'luonnos',
       kohdat: [
+        'SEITSEMAN KUVAVAIHTOEHDON RAJAUS JA EHDOLLINEN KUVALUPA (omistaja 13.9.2026 '
+          + 'tekstisession kautta, sanatarkasti: "poistin nuo 7 kuvaa tarkistussivuilla, '
+          + 'koska samanlaisista kuvista oli kaksi eri vaihtoehtoa ja hyvaksyin kustakin '
+          + 'vain yhden peliin" ja "ja tee sitten uudet kuvat niihin kaupunkeihin joissa '
+          + 'tarina on muuttunut kun ollaan siina vaiheessa etta tekstien aanet '
+          + 'generoidaan"): Mont Blanc, Vignemale, Mont-Saint-Michel, Ales stenar, '
+          + 'Urnes, Visby ja Gamla Uppsala pitavat kukin yhden hyvaksytyn kuvan, hylatty '
+          + 'rinnakkaisvaihtoehto poistuu pelikytkennoista; kohteita ei poisteta. '
+          + 'EHDOLLINEN LUPA: tarinaltaan muuttuneisiin kaupunkeihin (alustava lista '
+          + 'Ateena, Sofia, Istanbul, Rooma, Wien, Lontoo, Amsterdam, Dublin, Edinburgh, '
+          + 'Islanti, Alpit) uudet kokonaiset kuvaversiot VASTA kun hyvaksytyn '
+          + 'tekstiversion aanten generointivaihe alkaa - ei nyt. Ei muita uusia kuvia '
+          + 'talla perusteella.',
         'CHATGPT-IKKUNA ENSISIJAISEKSI KAIKESSA KUVAGENEROINNISSA '
           + '(omistaja 28.8.2026: "Generoidaan kuvat mieluiten minun '
           + 'chatgpt ikkunassa... Tulee paljon edullisemmaksi kuin '
