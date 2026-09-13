@@ -28,15 +28,20 @@
 const LAUSEEN_LOPPU = /[.!?…]["'»”)]*(?:\s|$)/gu;
 
 /**
- * MONTAKO LAUSETTA POISTETAAN MATKAKIRJASTA — TILAPÄINEN (omistaja
- * 11.9.2026): paluu = 0.
+ * MONTAKO LAUSETTA POISTETAAN MATKAKIRJASTA — NYT NOLLA.
  *
- * Yksi kytkin, koska omistaja pyysi tilapäistä kokeilua: pakkien
- * tekstejä ei muokata eikä äänitteitä äänitetä uusiksi, vaan kortin
- * teksti katkaistaan tästä ja luenta pysäytetään samaan lauserajaan.
- * Paluu entiseen on siis tämän luvun vaihto nollaksi.
+ * Omistaja tilasi 11.9.2026 tilapäisen kokeilun ("lyhenna tilapaisesti
+ * matkakirjojen tekstista ja luennasta kaksi viimeista lausetta pois")
+ * ja otti sen pois 13.9.2026 sanatarkasti: *"Ota isoisän tekstin
+ * lyhennys pois päältä."* Kytkin on siksi 0: isoisän merkintä näkyy ja
+ * kuullaan kokonaan, eikä luentaa pysäytetä lauserajaan.
+ *
+ * Kytkin jää paikalleen, koska koneisto sen ympärillä on koeteltu ja
+ * kokeilu voidaan haluta uudestaan. Pakkien tekstejä, luentareaktioiden
+ * ankkureita tai äänitteitä ei ole tässä kosketettu — ne lukevat pakista
+ * suoraan, joten nollaus palauttaa alkuperäisen ilman uutta äänitystä.
  */
-export const MATKAKIRJAN_LYHENNYS_LAUSEITA = 2;
+export const MATKAKIRJAN_LYHENNYS_LAUSEITA = 0;
 
 /**
  * Teksti lauseiksi yllä kuvatulla säännöllä.

@@ -62,8 +62,11 @@ test('yksi lause jää aina: kolmesta lauseesta ei lyhennetä kahta pois', () =>
   assert.equal(lyhennaLauseita('Eka. Toka. Kolmas. Neljäs.', 0), 'Eka. Toka. Kolmas. Neljäs.');
 });
 
-test('kytkin on kaksi ja se on yksi paikka', () => {
-  assert.equal(MATKAKIRJAN_LYHENNYS_LAUSEITA, 2);
+test('kytkin on nolla: isoisan teksti ei lyhene (omistaja 13.9.2026)', () => {
+  assert.equal(MATKAKIRJAN_LYHENNYS_LAUSEITA, 0);
+  // Nollalla koko merkinta sailyy sellaisenaan, myos viimeiset lauseet.
+  const koko = 'Eka. Toka. Kolmas. Neljas.';
+  assert.equal(lyhennaLauseita(koko, MATKAKIRJAN_LYHENNYS_LAUSEITA), koko);
 });
 
 /* ---------------------------------------------------------------- */
