@@ -6986,6 +6986,20 @@ export const RAAMATTU = {
           + '1195 laattaa); omistaja katselmoi pilotin ennen monistusta. '
           + 'Avoimet: panorointia ei ole rajattu maan laatikkoon; '
           + 'Marseillen lehti ohut; tyopoydan latauskaistaleet.',
+        'KARTTAUUDISTUKSEN PAATOKSET 6: PILOTIN PALAUTE (omistaja 13.9.2026 '
+          + 'klo 17.50 UTC, Ranskan pilotti puhelimella, sanatarkasti: "Vaihda '
+          + 'maa juttu samaan kuin mita se on ollut tahan asti. Ainoa ero, etta '
+          + 'se on kiinteasti paikallaan. Pitaa olla paljon pienempi koko. Ja '
+          + 'rajaa liikkuminen pienemmalle alalla. Ota Etsi aarre nappi '
+          + 'pois.jatka muutkin valmiiksi"): 1) maapaneeli palautetaan entiseen '
+          + 'ulkoasuun (v1847:n nurkkataulu), ainoa ero kiintea paikka kartalla '
+          + '(maantieteellinen ankkuri) ja PALJON pienempi koko; 2) panorointi '
+          + 'rajataan pienemmalle alalle kohdemaan ymparille; 3) Etsi aarre '
+          + '-nappi poistetaan, aarre loytyy vihreasta pisteesta; 4) "jatka '
+          + 'muutkin valmiiksi": monistus jatkuu - tasoituslaatat muihin '
+          + 'Euroopan maihin ja Pariisin sivujako muihin kaupunkeihin ilman '
+          + 'erillista lupaa per era. Ranskan tasoitus (kohdemaa alkuperainen, '
+          + 'muut kermaan) ja punainen raja hyvaksytty sellaisenaan.',
         'Saapumiskortti: luettu matkakirjamerkintä + esittely '
           + 'kuvineen.',
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
