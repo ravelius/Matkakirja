@@ -22,15 +22,12 @@ ulkopuolella tarkoituksella (tests/dokumentit.test.mjs:9–12).
 työsessio sen luo), vai muutetaanko roolitus.md osoittamaan
 docs/raportit/-kansioon.
 
-## ESTE: PR:ää ei saatu auki
+## PR
 
-`create_pull_request` vastaa **HTTP 500** joka yrityksellä (viisi
-yritystä, myös minimaalisella otsikolla ja rungolla). Lukevat kutsut
-samaan repoon toimivat (`list_branches`, `list_pull_requests`), joten
-vika on GitHubin PR-päätepisteessä eikä oikeuksissa tai haarassa.
-**Haara on pushattu ja valmis** — PR:n voi avata käsin osoitteesta
-https://github.com/ravelius/Matkakirja/pull/new/claude/karttauudistus-suunnitelma
-otsikolla "Suunnitelma: karttauudistus (13.9.2026)".
+**PR #2354** — https://github.com/ravelius/Matkakirja/pull/2354
+(GitHubin PR-päätepiste vastasi 500:lla viidellä ensimmäisellä
+yrityksellä; kuudes meni läpi. Lukevat kutsut toimivat koko ajan, joten
+vika oli hetkellinen eikä oikeuksissa.)
 
 ## Mitä valmistui
 
