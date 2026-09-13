@@ -1699,7 +1699,16 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
    feidauksen kanssa. */
 .maatummennus-viiva {
   fill: none;
-  stroke: rgba(70, 51, 31, 0.6);
+  /* PALETIN PUNAINEN (omistaja 13.9.2026, karttauudistus erä 1):
+     `--mark` #b03a2b on ainoa punainen, jolla on oma muuttujanimi, ja
+     jo kartan omien merkintäkerrosten väri (maakäyrät, sinettivaha).
+     Peittävyys ei ole enää 0,6 vaan täysi: kehän on erotuttava
+     kohdemaan VÄRILLISESTÄ pinnasta, ei pelkästä seepiasta, ja himmeä
+     punainen luki värikartalla ruskeana. Leveys ja sen perustelu
+     js/maatummennus.js TUMMENNUS_VIIVA. Omaa `stroke-opacity`-arvoa ei
+     tässäkään anneta — perintä ryhmästä on se, mitä portaikkofeidaus
+     animoi. */
+  stroke: var(--mark);
   stroke-linejoin: round;
   stroke-linecap: round;
   vector-effect: non-scaling-stroke;

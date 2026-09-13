@@ -3330,6 +3330,8 @@ if (NOSTOTASO) {
   console.log(`\nVie ämpäriin: pyramidi/<viivaversio>/viivat/z<taso>/<sarake>/<rivi>.${MUOTO}`);
 } else if (RANTATASO) {
   console.log(`\nVie ämpäriin: pyramidi/<rantaversio>/ranta/z<taso>/<sarake>/<rivi>.${MUOTO}`);
+} else if (VARITASO) {
+  console.log(`\nVie ämpäriin: pyramidi/<variversio>/vari/z<taso>/<sarake>/<rivi>.${MUOTO}`);
 } else {
   console.log(`\nVie ämpäriin: pyramidi/<versio>/z<taso>/<sarake>/<rivi>.${MUOTO}`);
 }
