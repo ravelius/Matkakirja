@@ -25752,6 +25752,12 @@ svg.rough-annotation { pointer-events: none; }
   border-radius: 5px;
   pointer-events: auto;
 }
+/* Alle ei mahdu (alanapit, vuorokortti): valikko aukeaa napin
+   YLÄPUOLELLE — ks. js/pallolauta/maapaneeli.js sovitaValikko. */
+.maapaneeli-valikko.ylos {
+  top: auto;
+  bottom: calc(100% - 4px);
+}
 .maapaneeli-aihe {
   display: flex;
   align-items: center;

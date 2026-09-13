@@ -2693,7 +2693,16 @@ export async function avaaPallolauta(ui) {
    */
   const laatikkoNyt = (iso) => {
     if (!iso) return null;
-    if (!maalaatikot.has(iso)) { void maanLaatikko(iso); return null; }
+    if (!maalaatikot.has(iso)) {
+      /*
+       * Lataus käyntiin JA piirto uusiksi sen valmistuttua. Ilman
+       * jälkimmäistä paneeli jäisi pois niin kauan kuin pelitila ei
+       * muutu: `paivita` ajetaan vain piirrosta, eikä aineiston
+       * saapuminen ole pelitapahtuma.
+       */
+      void maanLaatikko(iso).then((laatikko) => { if (laatikko) paivita(); });
+      return null;
+    }
     return maalaatikot.get(iso);
   };
 

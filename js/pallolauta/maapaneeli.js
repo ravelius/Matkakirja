@@ -337,6 +337,53 @@ function asetteleKortti(el, d) {
   if (valikko) valikko.hidden = !d.valikkoAuki;
   if (lisaa) lisaa.setAttribute('aria-expanded', String(Boolean(d.valikkoAuki)));
   kortti.classList.toggle('valikko-auki', Boolean(d.valikkoAuki));
+  if (d.valikkoAuki) sovitaValikko(kortti);
+}
+
+/*
+ * RUUDUN KALUSTEET, JOTKA VALIKKO VÄISTÄÄ.
+ *
+ * Merkkikerros on Globe.gl:n CSS2D-kerros, ja se on TARKOITUKSELLA
+ * kaiken pelin UI:n ALLA (css/styles.css `.pallo-kotelo
+ * .scene-container > div { z-index: 0 }`). Alanappirivin tai
+ * vuorokortin alle jäävä valikkorivi näkyy siis puolittain eikä ota
+ * napautusta vastaan — mitattu 13.9.2026 savukkeessa, jossa Ranskan
+ * valikon viides rivi (Urheilu) jäi `.rail`-kortin alle 390 px:n
+ * ruudulla.
+ *
+ * VALIKKO EI KAVENNA ITSEÄÄN EIKÄ SIIRRÄ KALUSTEITA, vaan aukeaa
+ * YLÖSPÄIN, kun alle ei mahdu. Sama valinta kuin kartan muillakin
+ * lapuilla: pois jää se, mikä osuisi kalusteen kohdalle. Lista on
+ * VALITSIMIA eikä mittoja, koska yksikään kaluste ei ole kiinteässä
+ * kohdassa (sama peruste kuin js/fokusmitat.js KALUSTEET).
+ */
+const VALIKON_KALUSTEET = ['.rail', '.toimintorivi', '.pollo-nappi.pollo-kelluu'];
+
+/**
+ * Aukeaako valikko alas vai ylös? Mitta otetaan vasta kun valikko on
+ * näkyvissä, koska muunnos (scale) on osa sen ruutulaatikkoa.
+ *
+ * VAIN VAAKASUUNNASSA LIMITTYVÄT KALUSTEET LASKETAAN. Työpöydällä
+ * `.rail` on ruudun laidassa eikä alalaidassa; sen yläreuna ei silloin
+ * kerro mitään siitä, mihin valikko mahtuu.
+ */
+function sovitaValikko(kortti) {
+  const valikko = kortti.querySelector('.maapaneeli-valikko');
+  if (!valikko || valikko.hidden) return;
+  valikko.classList.remove('ylos');
+  const r = valikko.getBoundingClientRect();
+  if (!(r.height > 0)) return;
+  const kotelo = kortti.closest('.pallo-kotelo')?.getBoundingClientRect();
+  let raja = kotelo ? kotelo.bottom : (globalThis.innerHeight ?? 0);
+  for (const valitsin of VALIKON_KALUSTEET) {
+    for (const e of document.querySelectorAll(valitsin)) {
+      const k = e.getBoundingClientRect();
+      if (!(k.width > 0) || !(k.height > 0)) continue;
+      if (k.right <= r.left || k.left >= r.right) continue;
+      if (k.top < raja && k.top > r.top) raja = k.top;
+    }
+  }
+  if (r.bottom > raja) valikko.classList.add('ylos');
 }
 
 /**
@@ -382,6 +429,10 @@ export function luoMaapaneeli({ ui, merkit, kamera, asteet }) {
       lat: tila.lat,
       lng: tila.lng,
       iso: tila.iso,
+      // Maan laatikko kulkee datumissa savukkeen mittaa varten:
+      // sijaintiväite verrataan juuri siihen laatikkoon, josta
+      // ankkuri on laskettu (tools/savukkeet/savuke-maapaneeli.mjs).
+      laatikko: tila.laatikko,
       nimi: tila.nimi,
       paikallinen: tila.paikallinen,
       rivit: tila.rivit,
