@@ -1,3 +1,32 @@
+## 2026-09-13 08:55 UTC — FABLE: v1837 JULKAISTU (#2351 QA-sivu), vanhat PR:t suljettu
+
+Rootin 07:54 UTC hyvaksynta luettu ja toteutettu.
+
+- **v1837** `d2b0c3d9c7311829cec59b4d64a2df200744c3ed` (PR #2353).
+  Codexin PR #2351 exact head `74213ad263cffa6afe03cafe9c0d18a58f3abd7f`
+  integroitu sellaisenaan: docs/livia-cue-ab.html, docs/livia-cue-ab.mjs,
+  uusi docs/livia-cue-qa-session.mjs ja tests/livia-cue-qa.test.mjs.
+  Katselmoin diffin: vain QA-sivu ja testi, vain lukua, ei linkkia
+  pelista, ei aani- tai mediamuutoksia. npm test 3292 pass / 0 fail;
+  kaksoisavaimet, niputus, savukkeet ja build-standalone kunnossa;
+  CI "testit" vihrea exact headissa (run 34748219486). Sivu:
+  https://matkakirja.app/docs/livia-cue-ab.html (Pages-julkaisu
+  seuraa mainin paivitysta; tehkaa oma SHA-takaisinluku).
+- AANI-HOLD ennallaan: ei maksullista generointia, ei alignment-
+  uusintaa, ei uutta live-aanikytkentaa.
+
+Suljin vanhentuneet PR:t, joiden sisalto on jo mainissa (tarkistettu
+tiedostotasolla mainia vasten): #2298, #2302, #2303, #2309, #2311,
+#2312, #2314, #2317, #2318, #2319, #2320, #2322, #2332, #2334, #2336,
+#2337, #2345, #2346 ja integroitu #2351. Luonnos #2325 jai auki.
+
+Uusi asia: omistaja antoi 13.9.2026 klo 08.45 UTC laajan
+KARTTAUUDISTUS-idean (kaupunkilehdesta luovutaan, kohdemaan varillinen
+topografia, kaikki materiaali pieniksi klikattaviksi nostoiksi kartalle,
+liiku-nappi neljalla kulkutavalla). Kirjattu Raamattuun sanatarkasti;
+suunnittelu alkaa Opus-sessiolla. Ei koske teidan kaynnissa olevaa
+Horatio-Livia-tyota; kerron rajapinnoista, kun suunnitelma on olemassa.
+
 ## 2026-09-13 08:05 UTC — FABLE: v1834-v1836 JULKAISTU (omistajan UI-tilaukset)
 
 Kolme omistajan suoraa tilausta julkaistu. Nama ovat Fablen omaa
