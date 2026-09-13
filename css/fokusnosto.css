@@ -1042,3 +1042,142 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
   .fokusnosto-looppi .looppi-leipa p { margin: 0 0 0.65em; }
   .fokusnosto-looppi .looppi-leipa p:last-child { margin-bottom: 0; }
 }
+
+/* ===========================================================================
+   12. MINIKYSYMYS KORTIN LOPUSSA (karttauudistuksen erä 6, 13.9.2026)
+   ---------------------------------------------------------------------------
+   Laatikko on LEHDEN minitehtävä (.minitehtava, css/styles.css) — sama
+   kaksoiskehys, sama paperisävy, samat äänestyslipukkeet — koska se on
+   sama asia toisella pinnalla. Kehys, lipukelista ja tulosrivi tulevat
+   siis styles.css:stä sellaisinaan.
+
+   MIKSI TÄSSÄ TIEDOSTOSSA ON SILTI RIVEJÄ. Laatikon SISÄOSIEN säännöt
+   (otsake, kysymysrivi, lipukenapit) on kirjoitettu styles.css:ssä
+   `.dialog`-etuliitteellä, koska lehti on <dialog>. Nostokortti ei ole
+   dialogi vaan kartan päällä kelluva paperi (.fokusnosto-kortti), joten
+   ne säännöt eivät yllä tänne ja kysymys latoutuisi ilman otsakeviivaa
+   ja lipukkeet paljaina pelinappeina. Alla on sama ilme samoilla
+   luvuilla, valitsimena kortti.
+
+   390 PX: laatikko on kortin sisällön levyinen eikä vaadi omaa mittaa;
+   lipukkeet ovat täysleveitä rivejä ja venyvät kapeallakin ruudulla
+   (kokeiltu 390 x 844, tools/savukkeet/savuke-nostovisa.mjs).
+   =========================================================================== */
+
+.fokusnosto-visa {
+  /* Kortissa ei ole lehden palstaa: ylämarginaali on kortin oma väli,
+     ei lehden 1,5 rem. */
+  margin: 0.9rem 0 0.2rem;
+}
+
+.fokusnosto-kortti .fokusnosto-visa .minitehtava-otsikko {
+  display: block;
+  margin: 0 calc(-1 * var(--tehtava-reunus)) 0.55rem;
+  padding: 0 var(--tehtava-reunus) 0.32rem;
+  border-bottom: 1px solid rgba(60, 44, 26, 0.35);
+  font-family: var(--font-type);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  /* Harvennus jättää viimeisen kirjaimen perään ylimääräisen välin,
+     joka työntäisi keskitetyn rivin vasemmalle — sisennys kumoaa sen. */
+  text-indent: 0.3em;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgba(60, 44, 26, 0.78);
+}
+
+/* Vihjerivi kertoo, MITÄ oikeasta vastauksesta seuraa. Sama ääni kuin
+   lehden tehtävän vihjeellä (css/fokusvirta.css .fokus-tehtava-vihje):
+   pientä kursiivia, ei kapiteelia. */
+.fokusnosto-visa-vihje {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-luku);
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.4;
+  color: rgba(60, 44, 26, 0.75);
+}
+
+.fokusnosto-kortti .fokusnosto-visa .minitehtava-kysymys {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-luku);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: #211d18;
+}
+
+/* Vastattu kysymys: fakta jää laatikon viimeiseksi riviksi ilmoituksena. */
+.fokusnosto-kortti .fokusnosto-visa .minitehtava-kysymys:last-child {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-style: italic;
+}
+
+/*
+ * Lipukerivit. Valitsin on yhtä tarkka kuin styles.css:n yleissääntö
+ * `button:hover:not(:disabled)` (sama syy kuin .fokusnosto-kysymys
+ * -osiossa yllä): muuten hover maalaisi rivin tummanruskeaksi ja
+ * jättäisi tumman musteen tummalle pohjalle.
+ */
+.fokusnosto-kortti .fokusnosto-visa .kulttuuri-vaihtoehdot button {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+  /* Kosketuskoko säilyy, vaikka rivi on litteä eikä nappi. */
+  min-height: 44px;
+  margin: 0;
+  padding: 0.5rem var(--tehtava-reunus);
+  border: 0;
+  border-top: 1px solid rgba(60, 44, 26, 0.28);
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  font-family: var(--font-luku);
+  font-weight: 400;
+  font-size: 0.98rem;
+  line-height: 1.35;
+  text-align: left;
+  text-shadow: none;
+  color: #211d18;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Rastiruutu rivin edessä kertoo, että riviltä valitaan yksi. */
+.fokusnosto-kortti .fokusnosto-visa .kulttuuri-vaihtoehdot button::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 0.8em;
+  height: 0.8em;
+  border: 1px solid rgba(60, 44, 26, 0.65);
+  background: none;
+}
+
+.fokusnosto-kortti .fokusnosto-visa .kulttuuri-vaihtoehdot button:hover:not(:disabled),
+.fokusnosto-kortti .fokusnosto-visa .kulttuuri-vaihtoehdot button:focus-visible {
+  background: rgba(255, 253, 245, 0.9);
+  color: #16130f;
+}
+
+/* Osoittimen alla ruutu täyttyy musteella — rivi on juuri rastittumassa. */
+.fokusnosto-kortti .fokusnosto-visa .kulttuuri-vaihtoehdot button:hover:not(:disabled)::before,
+.fokusnosto-kortti .fokusnosto-visa .kulttuuri-vaihtoehdot button:focus-visible::before {
+  border-color: rgba(60, 44, 26, 0.9);
+  background: rgba(60, 44, 26, 0.85);
+  box-shadow: inset 0 0 0 2px rgba(245, 240, 226, 0.95);
+}
+
+.fokusnosto-kortti .fokusnosto-visa .kulttuuri-vaihtoehdot button:active:not(:disabled) {
+  background: rgba(214, 190, 140, 0.35);
+}
+
+.fokusnosto-kortti .fokusnosto-visa .kulttuuri-vaihtoehdot button:focus { outline: none; }
+
+.fokusnosto-kortti .fokusnosto-visa .kulttuuri-vaihtoehdot button:focus-visible {
+  outline: 2px solid #9c6b17;
+  outline-offset: -2px;
+}

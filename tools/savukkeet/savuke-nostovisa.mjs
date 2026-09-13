@@ -1,0 +1,333 @@
+/*
+ * Savuke: KARTTANOSTON MINIKYSYMYS MAKSAA KERRAN JA VAIN OIKEASTA.
+ *
+ * Karttauudistuksen erä 6 (suunnitelma docs/raportit/
+ * karttauudistus-suunnitelma-20260913.md luku 5.1, pallon versio
+ * karttauudistus-suunnitelma-pallo-20260913.md luku 3.5; Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 1: nostokysymyksen palkkio 25 p).
+ *
+ * Nostokortin loppuun tuli valinnainen minikysymys (js/fokusnosto.js
+ * piirraNostonVisa, datamalli `visa` fokusvirtapakan `takynostot`-
+ * rivillä). Oikea vastaus lisää kassaan 25 puntaa JA kasvattaa
+ * tallennuksen laskuria `nostotehtavatRatkaistu`, jota erä 7 lukee
+ * aarrepisteen ehtona. Väärä vastaus ei lisää kumpaakaan, eikä sama
+ * kysymys maksa kahdesti.
+ *
+ * ── VARTIOT ───────────────────────────────────────────────────────
+ *
+ *   1. KYSYMYS ON KORTISSA. Pariisin poolin kolmannen noston
+ *      (`carmenin-ensi-ilta`) kortissa on visalaatikko lipukkeineen.
+ *   2. OIKEA VASTAUS MAKSAA 25 p JA KASVATTAA LASKURIA. `money`
+ *      nousee tasan palkkion verran ja `nostotehtavatRatkaistu`
+ *      nollasta yhteen.
+ *   3. SAMA KYSYMYS EI MAKSA KAHDESTI. Kortti suljetaan ja avataan
+ *      uudelleen: laatikossa ei ole enää lipukkeita, ja kun kaikkia
+ *      laatikon nappeja napautetaan, kassa ja laskuri pysyvät
+ *      paikallaan.
+ *   4. VÄÄRÄ VASTAUS EI LISÄÄ KUMPAAKAAN (VASTAKOE). Oma, tyhjästä
+ *      ladattu peli: väärä lipuke → `money` ja laskuri ennallaan,
+ *      mutta kysymys on silti kulunut (laatikossa lukee vastaus).
+ *   5. VANHA TALLENNUS LATAUTUU ILMAN KENTTÄÄ. Tallennus, josta
+ *      `nostotehtavatRatkaistu` on poistettu, latautuu ja laskuri on
+ *      0 — erä 6 ei nosta skeemaversiota (suunnitelma, luku 4.4).
+ *
+ * MIKSI KORTTI AVATAAN TUNNUKSESTA EIKÄ HIIRELLÄ. PARIISIN NOSTOILLA
+ * EI OLE PÄÄKARTALLA MERKKIÄ: kaikki kolme asuvat kaupunkilehden
+ * kohdekartalla (js/packs/nahtavyysjutut.js `nosto`-linkit), ja
+ * js/fokuskohteet.js karsiKaupunkikartanNostot pudottaa ne pallolta
+ * omistajan säännöllä 2.9.2026. Savuke ajaa siksi saman polun kuin
+ * merkin napautus, mutta tunnuksesta (js/fokusnosto.js
+ * avaaNostonTunnuksella → avaaNosto → avaaNostonKortti); merkin
+ * napautusta mittaa oma vartionsa savuke-pallo-nostolaput.mjs.
+ * Tämä savuke mittaa kortin SISUSTA.
+ *
+ * ÄMPÄRI KULKEE NODEN KAUTTA (CLAUDE.md: NODE_USE_ENV_PROXY=1).
+ *
+ * Aja:  NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-nostovisa.mjs [kuvakansio]
+ */
+import http from 'node:http';
+import { readFileSync, existsSync, mkdirSync } from 'node:fs';
+import { extname, join } from 'node:path';
+
+import { Game } from '../../js/game.js';
+import { packById } from '../../js/pack.js';
+import { FOKUSVIRTA_PARIISI } from '../../js/packs/fokusvirta-pariisi.js';
+
+const paketti = await import('playwright')
+  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+const chromium = paketti.chromium ?? paketti.default?.chromium;
+
+const JUURI = new URL('../..', import.meta.url).pathname;
+const KUVAKANSIO = process.argv[2] ?? null;
+if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
+
+/** Palkkio on koodin vakio (js/fokusnosto.js NOSTON_VISA_PALKKIO). */
+const PALKKIO = 25;
+/** Pariisin nostot; kysymys on kiintiön mukaan joka kolmannessa. */
+const NOSTOT = FOKUSVIRTA_PARIISI.takynostot;
+const VISALLISET = NOSTOT.filter((n) => n.visa);
+const KOE = VISALLISET[0];
+/** Näkymä: Pariisi lähikuvassa, jotta maan nostot ovat kartalla. */
+const PARIISI = { lat: 48.8566, lng: 2.3522, alt: 0.09 };
+
+const TYYPIT = {
+  '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
+  '.svg': 'image/svg+xml', '.png': 'image/png', '.webp': 'image/webp', '.jpg': 'image/jpeg',
+  '.geojson': 'application/json',
+};
+const palvelin = http.createServer((req, res) => {
+  const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
+  if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
+  res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
+  res.end(readFileSync(polku));
+});
+await new Promise((ok) => palvelin.listen(0, ok));
+const osoite = `http://localhost:${palvelin.address().port}/`;
+
+let lapi = 0;
+let kaikki = 0;
+const vaadi = (nimi, ehto, lisa = '') => {
+  kaikki += 1;
+  if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
+};
+const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
+
+const AMPARI = 'https://media.matkakirja.app/';
+const valimuisti = new Map();
+async function ampariHaku(url) {
+  if (valimuisti.has(url)) return valimuisti.get(url);
+  const lupaus = fetch(url).then(async (v) => (v.ok
+    ? { status: 200, body: Buffer.from(await v.arrayBuffer()), tyyppi: v.headers.get('content-type') }
+    : { status: v.status, body: Buffer.alloc(0), tyyppi: 'text/plain' }))
+    .catch(() => null);
+  valimuisti.set(url, lupaus);
+  return lupaus;
+}
+const kirjasto = await ampariHaku(`${AMPARI}vendor/globe.gl-2.46.2.min.js`);
+if (kirjasto?.status !== 200) {
+  console.log('OHITUS  ämpäri ei vastaa — palloa ei voi avata; savuke ohitetaan');
+  palvelin.close();
+  process.exit(0);
+}
+
+/* ---------- Tallenne: Fogg Pariisissa, vuoro toiminnassa ---------- */
+function tallenne({ ilmanLaskuria = false } = {}) {
+  const peli = new Game({
+    players: [{ name: 'Fogg', color: '#c9a227', start: 'pariisi' }],
+    pack: packById('maailmankartta'),
+    seed: 5,
+  });
+  peli.phase = 'action';
+  peli.tokens.delete('pariisi');
+  const data = peli.toJSON();
+  // Vanha tallennus ei tunne kenttää lainkaan (vartio 5).
+  if (ilmanLaskuria) delete data.nostotehtavatRatkaistu;
+  return JSON.stringify(data);
+}
+
+const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+
+/** Yksi selainkonteksti valmiiksi ladattuna Pariisin palloon. */
+async function avaaPeli(data) {
+  const ctx = await selain.newContext({
+    viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, serviceWorkers: 'block',
+  });
+  await ctx.addInitScript((d) => {
+    try {
+      localStorage.setItem('matkakirja-save-v1', d);
+      localStorage.removeItem('matkakirja-lauta');
+      localStorage.setItem('matkakirja-kehittaja', '1');
+    } catch { /* yksityinen tila */ }
+  }, data);
+  const sivu = await ctx.newPage();
+  const virheet = [];
+  sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
+  await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
+  await sivu.route(/wikimedia\.org/, (r) => r.abort());
+  await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
+    const v = await ampariHaku(route.request().url());
+    if (!v || v.status !== 200) { route.abort(); return; }
+    route.fulfill({
+      status: 200,
+      contentType: v.tyyppi ?? 'application/octet-stream',
+      body: v.body,
+      headers: { 'access-control-allow-origin': '*' },
+    });
+  });
+  await sivu.goto(`${osoite}?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: 90000 });
+  const auki = await sivu
+    .waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 60000 })
+    .then(() => true).catch(() => false);
+  if (auki) await sivu.waitForTimeout(3500);
+  return { ctx, sivu, auki, virheet };
+}
+
+/** Kamera Pariisiin ja ladonta heti, jotta nostot ovat osumissa. */
+const asetaNakyma = (sivu) => sivu.evaluate(async (n) => {
+  const l = window.matkakirja.ui.pallolauta;
+  l.pallo.pointOfView({ lat: n.lat, lng: n.lng, altitude: n.alt }, 0);
+  await new Promise((v) => setTimeout(v, 1600));
+  l.ladoHeti();
+  await new Promise((v) => setTimeout(v, 500));
+  return l.nostot.osumat().map((o) => o.id);
+}, PARIISI);
+
+/** Kortti auki noston tunnuksesta; palauttaa laatikon tilan. */
+const avaaKortti = (sivu, id) => sivu.evaluate(async (nostoId) => {
+  for (const el of document.querySelectorAll('.fokusnosto-kerros')) el.remove();
+  const { avaaNostonTunnuksella } = await import('/js/fokusnosto.js');
+  const loytyi = avaaNostonTunnuksella(window.matkakirja.ui, nostoId);
+  await new Promise((v) => setTimeout(v, 400));
+  /*
+   * KUVA EDELLÄ -AVAUS (js/nostokuva.js): kuvallinen nosto avautuu
+   * ensin pelkkänä kuvakehyksenä, ja juttu — kysymys mukaan lukien —
+   * latoutuu vasta "lisää"-napista. Sama napautus, jonka pelaaja
+   * tekee; ilman sitä kortissa ei ole kysymystä eikä tekstiä.
+   */
+  const lisaa = document.querySelector('.fokusnosto-kortti .nostokuva-lisaa');
+  if (lisaa) {
+    lisaa.click();
+    await new Promise((v) => setTimeout(v, 500));
+  }
+  const laatikko = document.querySelector('.fokusnosto-kortti .fokusnosto-visa');
+  const napit = [...(laatikko?.querySelectorAll('.kulttuuri-vaihtoehdot button') ?? [])];
+  return {
+    loytyi,
+    onLaatikko: Boolean(laatikko),
+    otsake: laatikko?.querySelector('.minitehtava-otsikko')?.textContent ?? '',
+    kysymys: laatikko?.querySelector('.minitehtava-kysymys')?.textContent ?? '',
+    vihje: laatikko?.querySelector('.fokusnosto-visa-vihje')?.textContent ?? '',
+    napit: napit.map((n) => n.textContent),
+    // 390 px: laatikko ei saa vuotaa kortin yli.
+    laatikkoLeveys: laatikko ? Math.round(laatikko.getBoundingClientRect().width) : 0,
+    korttiLeveys: Math.round(
+      document.querySelector('.fokusnosto-kortti')?.getBoundingClientRect().width ?? 0,
+    ),
+    vaakavuoto: document.documentElement.scrollWidth > window.innerWidth,
+  };
+}, id);
+
+/** Napauta laatikon n:ttä lipuketta; palauttaa kassan ja laskurin. */
+const vastaa = (sivu, i) => sivu.evaluate(async (indeksi) => {
+  const napit = [...document.querySelectorAll(
+    '.fokusnosto-kortti .fokusnosto-visa .kulttuuri-vaihtoehdot button',
+  )];
+  napit[indeksi]?.click();
+  await new Promise((v) => setTimeout(v, 300));
+  const g = window.matkakirja.game;
+  return {
+    napitOli: napit.length,
+    money: g.player.money,
+    laskuri: g.nostotehtavatRatkaistu,
+    tulos: document.querySelector('.fokusnosto-kortti .fokusnosto-visa .kulttuuri-tulos')
+      ?.textContent ?? '',
+    napitJaljella: document.querySelectorAll(
+      '.fokusnosto-kortti .fokusnosto-visa .kulttuuri-vaihtoehdot button',
+    ).length,
+  };
+}, i);
+
+const luvut = (sivu) => sivu.evaluate(() => ({
+  money: window.matkakirja.game.player.money,
+  laskuri: window.matkakirja.game.nostotehtavatRatkaistu,
+}));
+
+/* ---------- DATAN KIINTIÖ (ei tarvitse selainta) ---------- */
+tieto('Pariisin nostot', NOSTOT.map((n) => `${n.id}${n.visa ? ' *' : ''}`).join(', '));
+vaadi('0. kiintiö: joka kolmannessa nostossa on kysymys',
+  VISALLISET.length === Math.floor(NOSTOT.length / 3)
+    && NOSTOT.indexOf(KOE) === 2,
+  `nostoja ${NOSTOT.length}, kysymyksiä ${VISALLISET.length}, `
+  + `ensimmäinen indeksissä ${NOSTOT.indexOf(KOE)}`);
+
+/* ---------- AJO A: OIKEA VASTAUS ---------- */
+const a = await avaaPeli(tallenne());
+vaadi('pallolauta aukesi (oikea vastaus)', a.auki, a.virheet.join(' | '));
+
+if (a.auki) {
+  const osumat = await asetaNakyma(a.sivu);
+  tieto('osumia Pariisin näkymässä', `${osumat.length} — ${osumat.join(', ')}`);
+  const kortti = await avaaKortti(a.sivu, KOE.id);
+  tieto('kortin otsake', `"${kortti.otsake}"`);
+  tieto('kortin kysymys', `"${kortti.kysymys}"`);
+  tieto('vihjerivi', `"${kortti.vihje}"`);
+  tieto('lipukkeet', kortti.napit?.join(' | ') ?? '—');
+  tieto('laatikon leveys / kortin leveys',
+    `${kortti.laatikkoLeveys} px / ${kortti.korttiLeveys} px (ruutu 390 px)`);
+  vaadi('1. kysymys on kortissa lipukkeineen',
+    kortti.onLaatikko && kortti.napit?.length === KOE.visa.vaihtoehdot.length,
+    `löytyi ${kortti.loytyi}, laatikko ${kortti.onLaatikko}, lipukkeita ${kortti.napit?.length}`);
+  vaadi('1b. 390 px: laatikko mahtuu korttiin eikä sivu vuoda vaakaan',
+    kortti.laatikkoLeveys > 0 && kortti.laatikkoLeveys <= kortti.korttiLeveys
+      && !kortti.vaakavuoto,
+    `laatikko ${kortti.laatikkoLeveys}, kortti ${kortti.korttiLeveys}, vuoto ${kortti.vaakavuoto}`);
+
+  const ennen = await luvut(a.sivu);
+  const jalkeen = await vastaa(a.sivu, KOE.visa.oikea);
+  tieto('oikea vastaus', `money ${ennen.money} → ${jalkeen.money}, `
+    + `laskuri ${ennen.laskuri} → ${jalkeen.laskuri}`);
+  tieto('tulosrivi', `"${jalkeen.tulos}"`);
+  vaadi('2. oikea vastaus lisää palkkion ja kasvattaa laskuria',
+    jalkeen.money === ennen.money + PALKKIO && jalkeen.laskuri === ennen.laskuri + 1,
+    `money ${ennen.money} → ${jalkeen.money} (odotettu +${PALKKIO}), `
+    + `laskuri ${ennen.laskuri} → ${jalkeen.laskuri}`);
+
+  if (KUVAKANSIO) {
+    await a.sivu.screenshot({ path: join(KUVAKANSIO, 'karttauudistus-6-nostovisa.png') });
+  }
+
+  // 3. Kortti uudelleen auki: ei lipukkeita, ei toista palkkiota.
+  const uudelleen = await avaaKortti(a.sivu, KOE.id);
+  const toinen = await vastaa(a.sivu, KOE.visa.oikea);
+  tieto('toinen avaus', `lipukkeita ${uudelleen.napit?.length ?? 0}, `
+    + `money ${toinen.money}, laskuri ${toinen.laskuri}`);
+  vaadi('3. sama kysymys ei maksa kahdesti',
+    (uudelleen.napit?.length ?? 0) === 0
+      && toinen.money === jalkeen.money && toinen.laskuri === jalkeen.laskuri,
+    `lipukkeita ${uudelleen.napit?.length}, money ${jalkeen.money} → ${toinen.money}, `
+    + `laskuri ${jalkeen.laskuri} → ${toinen.laskuri}`);
+  await a.ctx.close();
+} else {
+  await a.ctx.close();
+}
+
+/* ---------- AJO B (VASTAKOE): VÄÄRÄ VASTAUS ---------- */
+const b = await avaaPeli(tallenne());
+vaadi('pallolauta aukesi (väärä vastaus)', b.auki, b.virheet.join(' | '));
+
+if (b.auki) {
+  await asetaNakyma(b.sivu);
+  const kortti = await avaaKortti(b.sivu, KOE.id);
+  const ennen = await luvut(b.sivu);
+  const vaara = (KOE.visa.oikea + 1) % KOE.visa.vaihtoehdot.length;
+  const jalkeen = await vastaa(b.sivu, vaara);
+  tieto('väärä vastaus', `money ${ennen.money} → ${jalkeen.money}, `
+    + `laskuri ${ennen.laskuri} → ${jalkeen.laskuri}`);
+  tieto('tulosrivi (väärä)', `"${jalkeen.tulos}"`);
+  vaadi('4. väärä vastaus ei lisää kassaan eikä laskuriin (VASTAKOE)',
+    kortti.onLaatikko && jalkeen.money === ennen.money && jalkeen.laskuri === ennen.laskuri
+      && jalkeen.napitJaljella === 0,
+    `money ${ennen.money} → ${jalkeen.money}, laskuri ${ennen.laskuri} → ${jalkeen.laskuri}, `
+    + `lipukkeita jäljellä ${jalkeen.napitJaljella}`);
+  await b.ctx.close();
+} else {
+  await b.ctx.close();
+}
+
+/* ---------- AJO C: VANHA TALLENNUS ILMAN KENTTÄÄ ---------- */
+const c = await avaaPeli(tallenne({ ilmanLaskuria: true }));
+vaadi('pallolauta aukesi (vanha tallennus)', c.auki, c.virheet.join(' | '));
+if (c.auki) {
+  const vanha = await luvut(c.sivu);
+  tieto('vanha tallennus', `money ${vanha.money}, laskuri ${vanha.laskuri}`);
+  vaadi('5. vanha tallennus ilman kenttää latautuu, laskuri 0',
+    vanha.laskuri === 0 && Number.isInteger(vanha.laskuri),
+    `laskuri ${vanha.laskuri}`);
+}
+await c.ctx.close();
+
+await selain.close();
+palvelin.close();
+console.log(`\n${lapi}/${kaikki} läpi`);
+process.exit(lapi === kaikki ? 0 : 1);

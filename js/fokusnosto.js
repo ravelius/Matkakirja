@@ -885,6 +885,29 @@ function avaaNosto(ui, nosto) {
   return avaaNostonKortti(ui, nosto);
 }
 
+/**
+ * NOSTON KORTTI AUKI TUNNUKSESTA — sama polku kuin kartan merkistä.
+ *
+ * Kartan merkki, kohteen tietoruudun leikekirjanappi ja tämä päätyvät
+ * kaikki `avaaNosto`on; ero on vain siinä, MISTÄ nosto löydetään.
+ * Tunnus riittää, koska poolissa ne ovat yksikäsitteisiä
+ * (tests/nostot-kartalla.test.mjs).
+ *
+ * MIKSI TÄMÄ ON OLEMASSA (karttauudistuksen erä 6). Nostolla ei aina
+ * OLE kartalla merkkiä: kaupunkilehden kohdekartalla asuvat nostot
+ * karsitaan pääkartalta (js/fokuskohteet.js karsiKaupunkikartanNostot,
+ * omistajan sääntö 2.9.2026), ja Pariisin koko pooli on sellainen.
+ * Kortin sisus on silti sama komponentti, ja erän 6 minikysymyksen
+ * savuke (tools/savukkeet/savuke-nostovisa.mjs) ajaa sen tästä —
+ * merkin napautusta mittaa oma vartionsa (savuke-pallo-nostolaput).
+ *
+ * @returns {boolean} aukesiko kortti
+ */
+export function avaaNostonTunnuksella(ui, nostoId) {
+  const nosto = nostoPooli(ui).find((n) => n.id === nostoId) ?? null;
+  return avaaNosto(ui, nosto);
+}
+
 /* ==================== LUNASTUSKORTTI ==================== */
 
 /**
