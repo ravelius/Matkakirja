@@ -217,9 +217,12 @@ test('poltetut nostot luetaan pallon omasta luettelosta, jonka laattatyökalu ki
   assert.match(nostot, /piirraNostosymKartalle\(g, d\.kategoria, nimio, d\.symLaji, puoli\);/);
   assert.match(nostot, /export function asetteleNosto\(el, d\)/);
   assert.match(nostot, /osumat = \[\.\.\.naytetaan, \.\.\.nakyvat\.filter\(\(r\) => r\.poltettu\)\];/);
-  // Kohtaamispiste samalla tuikkeella (css/fokusvirta.css).
-  assert.match(nostot, /fokuspisteKuvio\(g\);/);
-  assert.match(lue('../js/fokuspiste.js'), /export function fokuspisteKuvio\(g\)/);
+  // Kohtaamispiste samalla tuikkeella (css/fokusvirta.css); lukko on
+  // sama merkki himmennettynä (karttauudistuksen erä 7).
+  assert.match(nostot, /fokuspisteKuvio\(g, \{ lukittu: Boolean\(d\.lukittu\) \}\);/);
+  assert.match(nostot, /export function asetteleFokuspiste\(el, d\)/);
+  assert.match(lue('../js/fokuspiste.js'),
+    /export function fokuspisteKuvio\(g, \{ lukittu = false \} = \{\}\)/);
 });
 
 test('sallitut kerrokset eivät kasvaneet; uudet moduulit ovat SHELLissä; pallolauta ei kutsu ui.js:n koukkuja', () => {

@@ -499,6 +499,23 @@ export class Game {
      */
     this.nostotehtavatRatkaistu = 0;
     /*
+     * PULUN KARTTAOHJE ON NÄYTETTY (karttauudistuksen erä 7,
+     * 13.9.2026).
+     *
+     * Raamattu (KARTTAUUDISTUS, omistaja 13.9.2026 sanatarkasti):
+     * *"Ensimmaisen kaupungin kohdalla pulu voisi kertoa etta
+     * 'loytamalla kartalta kaksi kysymysta ja vastaamalla niihin
+     * oikein saat vihjeen aarteen sijainnista'"*. Ohje kuuluu KERRAN,
+     * ensimmäisessä kaupungissa, jossa lukittu aarrepiste on kartalla.
+     *
+     * TALLENNUKSESSA EIKÄ LAITTEEN MUISTISSA (vrt. js/livia.js
+     * LIVIA_PALJASTUS_TALLE, joka on localStorage-lippu): ohje kertoo
+     * pelin säännön tälle pelille, joten uusi peli samalla selaimella
+     * saa sen uudestaan eikä vanha peli toisella laitteella kuule sitä
+     * kahdesti.
+     */
+    this.aarrepisteOhjeNahty = false;
+    /*
      * LIVIALLE OSTETUT PULLAT (omistajan tilaus 28.8.2026), avaimena
      * 'pakka:kaupunki'. Osto on vaihtoehtoinen tie samaan vinkkiin,
      * jonka lehden AARTEEN AVAUS -tehtävä antaa (js/fokustehtavat.js
@@ -1355,6 +1372,21 @@ export class Game {
   kirjaaNostotehtava() {
     this.nostotehtavatRatkaistu += 1;
     return this.nostotehtavatRatkaistu;
+  }
+
+  /**
+   * PULUN KARTTAOHJE KULUTETAAN (karttauudistuksen erä 7).
+   *
+   * Kertalippu kuluu vasta, kun kupla oikeasti näkyi — kutsuja
+   * (js/fokusvirta.js fokusvirtaAarrepisteOhje) tarkistaa pulun napin
+   * ennen tätä, jottei piilossa jäänyt ohje katoaisi pelaajalta.
+   *
+   * @returns {boolean} kului lippu nyt (false = ohje oli jo nähty)
+   */
+  merkitseAarrepisteOhje() {
+    if (this.aarrepisteOhjeNahty) return false;
+    this.aarrepisteOhjeNahty = true;
+    return true;
   }
 
   /**
@@ -3196,6 +3228,7 @@ export class Game {
       minitehtavatVastatut: [...this.minitehtavatVastatut],
       minitehtavatOikein: [...this.minitehtavatOikein],
       nostotehtavatRatkaistu: this.nostotehtavatRatkaistu,
+      aarrepisteOhjeNahty: this.aarrepisteOhjeNahty,
       pullaVinkit: [...this.pullaVinkit],
       elaintakyLunastetut: [...this.elaintakyLunastetut],
       julisteet: [...this.julisteet],
@@ -3364,6 +3397,12 @@ export class Game {
      */
     game.nostotehtavatRatkaistu = Number.isFinite(Number(data.nostotehtavatRatkaistu))
       ? Math.max(0, Math.trunc(Number(data.nostotehtavatRatkaistu))) : 0;
+    /*
+     * Vanha tallennus ei tunne pulun karttaohjetta: lippu on auki ja
+     * ohje kuuluu seuraavassa kaupungissa, jossa lukittu piste näkyy.
+     * Skeemaversio ei nouse (sama sääntö kuin erällä 6).
+     */
+    game.aarrepisteOhjeNahty = Boolean(data.aarrepisteOhjeNahty);
     /*
      * Vanha tallennus ei tunne pullavinkkiä: joukko alkaa tyhjänä ja
      * tarjous on kesken olevassa pelissä yhä ostamatta. Se on oikea
