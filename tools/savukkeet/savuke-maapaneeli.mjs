@@ -252,16 +252,43 @@ for (const ruutu of RUUDUT) {
     && ulko.kortti.y1 <= ulko.kotelo.y0 + ulko.kotelo.h + 1
     && ulko.kortti.x0 >= ulko.kotelo.x0 - 1
     && ulko.kortti.x1 <= ulko.kotelo.x0 + ulko.kotelo.w + 1);
-  sijaintiOk.push(paikallaan);
+  sijaintiOk.push({
+    ruutu: ruutu.nimi,
+    ok: paikallaan,
+    ulkopuolella: Boolean(ulko.kortti && ulko.kortti.y0 >= ulko.etelaY - 1),
+    ruudulla: Boolean(ulko.kortti && ulko.kortti.y1 <= ulko.kotelo.y0 + ulko.kotelo.h + 1
+      && ulko.kortti.x0 >= ulko.kotelo.x0 - 1
+      && ulko.kortti.x1 <= ulko.kotelo.x0 + ulko.kotelo.w + 1),
+  });
   tieto(`${ruutu.nimi} px · uloin zoomi`,
     `kortti ${ulko.kortti ? `${Math.round(ulko.kortti.w)} x ${Math.round(ulko.kortti.h)} px `
       + `(y ${Math.round(ulko.kortti.y0)}…${Math.round(ulko.kortti.y1)})` : 'EI OLE'}, `
+    + `x ${ulko.kortti ? `${Math.round(ulko.kortti.x0)}…${Math.round(ulko.kortti.x1)}` : '—'}, `
+    + `karttaruutu x ${Math.round(ulko.kotelo.x0)}…${Math.round(ulko.kotelo.x0 + ulko.kotelo.w)} `
+    + `y ${Math.round(ulko.kotelo.y0)}…${Math.round(ulko.kotelo.y0 + ulko.kotelo.h)}, `
     + `maan eteläreuna y ${ulko.etelaY == null ? '—' : Math.round(ulko.etelaY)}, `
     + `skaala ${ulko.skaala?.toFixed(3) ?? '—'}, korkeus ${ulko.korkeus?.toFixed(4) ?? '—'}`);
 
-  if (KUVAKANSIO) {
+  if (KUVAKANSIO && ulko.kortti) {
+    /*
+     * KUVA RAJATAAN MAAHAN JA PANEELIIN. Koko ruudun PNG on 1400 px
+     * leveänä yli puoli megatavua (raportin kuvakatto on 400 kt), ja
+     * suurin osa siitä on tyhjää merta paneelin ympärillä. Rajaus
+     * lasketaan mitatuista laatikoista, joten se osuu samaan kohtaan
+     * kummallakin kuvasuhteella.
+     */
+    const x = Math.max(0, Math.round(ulko.kortti.x0 - 90));
+    const y = Math.max(0, Math.round(Math.min(ulko.etelaY - 330, ulko.kortti.y0 - 360)));
     // eslint-disable-next-line no-await-in-loop
-    await sivu.screenshot({ path: join(KUVAKANSIO, `karttauudistus-3-${ruutu.nimi}.png`) });
+    await sivu.screenshot({
+      path: join(KUVAKANSIO, `karttauudistus-3-${ruutu.nimi}.png`),
+      clip: {
+        x,
+        y,
+        width: Math.min(ruutu.leveys - x, Math.round(ulko.kortti.w + 180)),
+        height: Math.min(ruutu.korkeus - y, Math.round(ulko.kortti.y1 + 30 - y)),
+      },
+    });
   }
 
   /* --- 2. skaalautuminen: sama kortti isompana lähempää ----------- */
@@ -372,7 +399,7 @@ for (const ruutu of RUUDUT) {
 
 vaadi('1. paneeli on kartalla maan laatikon ETELÄREUNAN ULKOPUOLELLA ja kokonaan ruudulla '
   + '(390 px ja 1400 px)',
-sijaintiOk.length === RUUDUT.length && sijaintiOk.every(Boolean),
+sijaintiOk.length === RUUDUT.length && sijaintiOk.every((t) => t.ok),
 `tulokset ${JSON.stringify(sijaintiOk)}`);
 vaadi('2. paneeli skaalautuu kuin painettu kartta (lähempänä leveämpi kuin uloimmalla)',
   skaalausOk.length === RUUDUT.length && skaalausOk.every(Boolean),
