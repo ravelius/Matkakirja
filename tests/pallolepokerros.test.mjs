@@ -81,21 +81,52 @@ test('tason valinta: matalin taso jonka px/aste riittää, syvin kun mikään ei
 test('versiovahti: kerros vain kun pallon sarja on poltettu samasta pyramidista', () => {
   const pyramidi = { versio: 'A', viivataso: { versio: 'V' }, nostotaso: { versio: 'N' } };
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A', viivat: 'V', nostot: 'N' }, pyramidi),
-    { pohja: true, ranta: false, viiva: true, nosto: true });
+    { pohja: true, ranta: false, viiva: true, nosto: true, vari: false });
   // Rantataso (V4): rannan kanssa poltettu sarja vaatii saman rantaversion;
   // rannaton sarja (ranta null, vektorit piirtävät rannan) ohittaa tason.
   const pyramidiRanta = { ...pyramidi, rantataso: { versio: 'R' } };
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A', ranta: 'R', viivat: 'V', nostot: 'N' }, pyramidiRanta),
-    { pohja: true, ranta: true, viiva: true, nosto: true });
+    { pohja: true, ranta: true, viiva: true, nosto: true, vari: false });
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A', ranta: null, viivat: 'V', nostot: 'N' }, pyramidiRanta),
-    { pohja: true, ranta: false, viiva: true, nosto: true });
+    { pohja: true, ranta: false, viiva: true, nosto: true, vari: false });
   assert.equal(lepokerroksenKerrokset({ versio: 'A', ranta: 'R2', viivat: 'V', nostot: 'N' }, pyramidiRanta), null, 'eri ranta');
   // Pohjasarja ilman viivoja ja nostoja: vain pohja (nostot ovat pallolla elävinä).
-  assert.deepEqual(lepokerroksenKerrokset({ versio: 'A' }, pyramidi), { pohja: true, ranta: false, viiva: false, nosto: false });
+  assert.deepEqual(lepokerroksenKerrokset({ versio: 'A' }, pyramidi),
+    { pohja: true, ranta: false, viiva: false, nosto: false, vari: false });
   assert.equal(lepokerroksenKerrokset({ versio: 'B', viivat: 'V', nostot: 'N' }, pyramidi), null, 'eri pohja');
   assert.equal(lepokerroksenKerrokset({ versio: 'A', viivat: 'V', nostot: 'N2' }, pyramidi), null, 'eri nostot');
   assert.equal(lepokerroksenKerrokset({ versio: 'A', viivat: 'V' }, { versio: 'A' }), null, 'pyramidilla ei viivatasoa');
   assert.equal(lepokerroksenKerrokset(null, pyramidi), null);
+});
+
+/*
+ * VÄRITASON PORTTI EI SAA SAMMUTTAA KERROSTA (erä 1b, suunnitelman
+ * riski 4.2). Muut portit palauttavat nullin eli pudottavat KOKO
+ * laattakerroksen; väritaso on yhden maan lisäys, ja sen puuttuminen
+ * saa pudottaa vain värit — muuten yksi ajamaton maa tekisi kartasta
+ * sumean Mercator-sarjan (omistajan havainto v1650).
+ */
+test('väritason portti on maakohtainen eikä sammuta laattakerrosta', () => {
+  const pyramidi = {
+    versio: 'A',
+    viivataso: { versio: 'V' },
+    nostotaso: { versio: 'N' },
+    varitasot: { FRA: { versio: '2026-09-14a', maa: 'FRA', tasot: [4, 5, 6, 7] } },
+  };
+  const sarja = { versio: 'A', viivat: 'V', nostot: 'N' };
+  // Pelaajan maassa on laatasto → väri päällä.
+  assert.equal(lepokerroksenKerrokset(sarja, pyramidi, 'FRA').vari, true);
+  // Naapurissa ei ole → väri pois, mutta kerros pysyy.
+  const belgiassa = lepokerroksenKerrokset(sarja, pyramidi, 'BEL');
+  assert.equal(belgiassa.vari, false);
+  assert.equal(belgiassa.pohja, true, 'ajamaton maa sammutti koko kerroksen');
+  // Ei maata (avauslento, maailmankuva) → väri pois, kerros pysyy.
+  assert.equal(lepokerroksenKerrokset(sarja, pyramidi, null).vari, false);
+  assert.equal(lepokerroksenKerrokset(sarja, pyramidi).pohja, true);
+  // Vanha luettelo ilman taulua: väri pois, kerros pysyy.
+  assert.equal(lepokerroksenKerrokset(sarja, { versio: 'A', viivataso: { versio: 'V' }, nostotaso: { versio: 'N' } }, 'FRA').vari, false);
+  // Vajaa kirjaus (ei versiota tai ei tasoja) ei nosta porttia.
+  assert.equal(lepokerroksenKerrokset(sarja, { ...pyramidi, varitasot: { FRA: { maa: 'FRA', tasot: [] } } }, 'FRA').vari, false);
 });
 
 test('laatat: Kreikan laatikko z7:llä osuu samoihin sarakkeisiin kuin tasokartan ruudukko', () => {

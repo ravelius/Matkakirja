@@ -228,8 +228,53 @@ export const RAJA_PEITTO = 0.34;
  * kertoo silmälle "tämä on yksi maa" — sama ero kuin tasokartalla,
  * jossa vahvistettu ääriviiva on yhtenäinen ja poltettu raja pisteinä.
  */
-export const KOROSTUS_MUSTE = '#4a3320';
-export const KOROSTUS_PEITTO = 0.68;
+/*
+ * ======== PUNAINEN RAJA (KARTTAUUDISTUKSEN PÄÄTÖKSET 1) ============
+ *
+ * Omistaja 13.9.2026: *"Maan rajat vahvistetaan punaisella viivalla
+ * (pelin varipaletista)"*, ja kysymyskortilla: *"Punainen maan
+ * rajaviiva PALAUTETAAN kohdemaalle (paletin --mark #b03a2b, 2,5 px)"*.
+ * Yllä oleva perustelu *"KOROSTUS ON SAMAA MUSTETTA, EI TOISTA VÄRIÄ"*
+ * kirjoitettiin 11.9.2026 seepiakartalle, ja päätös kumoaa sen
+ * kohdemaan osalta: kohdemaan sisus on tästä erästä alkaen VÄRILLINEN,
+ * ja ruskea kehä hukkuisi omaan maastoonsa.
+ *
+ * === ARVO ON YHDESSÄ PAIKASSA, JA SE PAIKKA ON CSS ================
+ *
+ * Kehä piirretään kahdella laudalla: tasokartalla SVG-viivana
+ * (js/maatummennus.js + `.maatummennus-viiva { stroke: var(--mark) }`)
+ * ja pallolla WebGL-viivana (tämä tiedosto). Pelaaja ei näe molempia,
+ * mutta kaksi kovakoodattua heksalukua eriytyisi ensimmäisessä
+ * sävynmuutoksessa — juuri se vika, jonka suunnitelman riski 4.3
+ * nimeää. Pallo lukee siis saman CSS-muuttujan kuin tasokartta;
+ * vakio alla on VARA sille tilanteelle, jossa muuttujaa ei ole
+ * (testit ilman tyylitiedostoa, yhden tiedoston versio ennen CSS:n
+ * latausta), eikä sen arvo saa erota `--mark`ista.
+ */
+export const KOROSTUS_MUSTE = '#b03a2b';
+
+/**
+ * Korostuksen muste juuri nyt: paletin `--mark`, tai KOROSTUS_MUSTE
+ * jos muuttujaa ei saada luettua.
+ */
+export function korostuksenMuste(dokumentti = null) {
+  const doc = dokumentti ?? globalThis.document ?? null;
+  const juuri = doc?.documentElement ?? null;
+  if (!juuri || typeof globalThis.getComputedStyle !== 'function') return KOROSTUS_MUSTE;
+  try {
+    const arvo = globalThis.getComputedStyle(juuri).getPropertyValue('--mark').trim();
+    return arvo || KOROSTUS_MUSTE;
+  } catch {
+    return KOROSTUS_MUSTE;
+  }
+}
+
+/*
+ * PEITTO ON TÄYSI, EI 0,68 (sama perustelu kuin tasokartalla,
+ * css/styles.css .maatummennus-viiva): himmeä punainen luki
+ * värikartalla ruskeana, eli juuri siltä, miltä sen ei pitänyt.
+ */
+export const KOROSTUS_PEITTO = 1;
 /** Korostetun rajan leveys css-pikseleinä [kaukana, lähellä]. */
 export const VEKTORIT_KOROSTUS_LEVEYS_CSS = [1.7, 2.5];
 /**
@@ -733,7 +778,9 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     [raja.dashSize, raja.gapSize] = RAJA_KATKO_YKS;
     raja.dashScale = 1;
     const korostusMateriaali = new luokat.LineMaterial({
-      ...yhteiset, color: KOROSTUS_MUSTE, opacity: KOROSTUS_PEITTO,
+      // Sävy paletista (ks. korostuksenMuste): sama lähde kuin
+      // tasokartan kehällä, eikä toista heksalukua.
+      ...yhteiset, color: korostuksenMuste(), opacity: KOROSTUS_PEITTO,
     });
     /*
      * PEHMEÄ REUNA, EI PÄÄTYPYÖRYLÖITÄ (omistaja 7.9.2026). Paikka

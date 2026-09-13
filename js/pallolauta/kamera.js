@@ -137,6 +137,22 @@ export const SAAPUMISRAJAUKSEN_MARGINAALI = 0.05;
  * ja CHN (mitattu 11.9.2026).
  */
 export const SAAPUMISRAJAUKSEN_MAX = 2000;
+/*
+ * ======== ULOSZOOMAUKSEN ESTO (KARTTAUUDISTUS, ERÄ 2) ==============
+ *
+ * Omistaja 13.9.2026: *"kartta zoomaa automaattisesti maan niin
+ * suureksi kuin mahdollista. Pelaaja ei voi itse zoomata ulospain,
+ * ainoastaan sisaanpain"*; PÄÄTÖKSET 2: *"se etta ulospain ei pysty
+ * zoomaamaan oli muuten siita ideasta, etta kartta saisi nayttaa
+ * staattiselta"*. PÄÄTÖKSET 1 laski kertoimen 3 → 1,15.
+ *
+ * KERROIN ON SAMA LUKU KUIN VÄRILAATASTON LAATIKOLLA
+ * (tools/generoi-laattapyramidi.mjs `--laatikkokerroin`), ja se on
+ * ehto eikä varmuusvara: värilaatasto kattaa maan laatikon × 1,15, ja
+ * jos kamera pääsisi kauemmas, feidattu laatikko näkyisi
+ * suorakaiteena keskellä seepiaa. Siksi erät 1b ja 2 ovat sama PR.
+ */
+export const ULOSZOOMAUKSEN_KERROIN = 1.15;
 /**
  * Siirtonäkymän lähin leveys (siirtoZoomiKerroin): ennakkozoomi vie
  * SIIRTOZOOMIN_LAHENNYS kertaa lähemmäs, mutta ei tämän alle. Puolet
@@ -502,6 +518,52 @@ export function luoPallokamera({
    * Pelaajan paikan ylle saapumisnäkymään (kesto 0 = heti). Paikka on
    * kaupunki tai reitin välipiste — sama pixelOf kuin tasokartalla.
    */
+  /**
+   * Laudan yksiköt, jotka laatikko vaatii ruudun leveydellä kertoimella
+   * `kerroin`. Sama kaava kuin kameranKohde: korkeusehto muutetaan
+   * leveydeksi kuvasuhteella, ja tiukempi voittaa.
+   */
+  const laatikonTarve = (bbox, kerroin) => {
+    if (!(bbox?.w > 0) || !(bbox?.h > 0)) return null;
+    return Math.max(bbox.w * kerroin, (bbox.h * kerroin * ruudunLeveys()) / ruudunKorkeus());
+  };
+
+  /**
+   * Mahtuuko maan laatikko saapumisrajaukseen (katto
+   * SAAPUMISRAJAUKSEN_MAX)? Tämä on se yksi ehto, joka erottaa
+   * *"maa mahdollisimman isona"* -saapumisen entisestä
+   * kaupunkinäkymästä — ja SAMA ehto ratkaisee uloszoomauksen eston
+   * (ks. uloszoomausRaja), jotta kumpikin puhuu samasta katosta.
+   */
+  const laatikkoMahtuu = (bbox) => {
+    const tarve = laatikonTarve(bbox, 1 + 2 * SAAPUMISRAJAUKSEN_MARGINAALI);
+    return Boolean(tarve !== null && tarve <= SAAPUMISRAJAUKSEN_MAX);
+  };
+
+  /**
+   * Uloszoomauksen katto maan laatikosta: `{ max }` korkeutena
+   * pallonsäteinä, tai null jos rajaa EI aseteta.
+   *
+   * NULL ON PÄÄTÖS EIKÄ VIRHE (Fablen vastaus suunnitelman kysymykseen
+   * 1). Maat, joiden laatikko ei mahdu saapumisrajaukseen — mitattuna
+   * puhelimella RUS, USA, CAN, GRL ja CHN, työpöydällä lisäksi CHL,
+   * BRA, ARG ja AUS — saapuvat entiseen kaupunkinäkymään, jolloin
+   * niiden "laatikko × 1,15" olisi koko maailmankuva ja kamera
+   * LUKKIUTUISI siihen: pelaaja ei näkisi kaupunkia. Lista ei ole
+   * koodissa, koska se riippuu kuvasuhteesta — KATTO kertoo sen, ja
+   * katto luetaan tässä samasta funktiosta kuin saapumisessa.
+   */
+  const uloszoomausRaja = (bbox, kerroin = ULOSZOOMAUKSEN_KERROIN) => {
+    if (!laatikkoMahtuu(bbox)) return null;
+    const tarve = laatikonTarve(bbox, kerroin);
+    if (!(tarve > 0)) return null;
+    const max = Math.min(PALLO_KORKEUS_MAX, korkeus(tarve));
+    // Katto ei saa mennä lattian alle: pikkuvaltiossa (Singapore)
+    // laatikon tarve on jo lähempänä kuin lähin sallittu korkeus.
+    if (!(max > korkeusMin())) return null;
+    return { max };
+  };
+
   const kotiin = ({ kesto = 0, bbox = null } = {}) => {
     const { game } = ui ?? {};
     const pos = game?.player?.pos;
@@ -514,13 +576,8 @@ export function luoPallokamera({
      * Ilman laatikkoa — tuntematon maa, aineisto ei latautunut —
      * jäljelle jää entinen kaupunkinäkymä, eli mikään ei mene rikki.
      */
-    if (bbox?.w > 0 && bbox?.h > 0) {
-      // Sama kaava kuin kameranKohde: kumpi suunta on tiukempi.
-      const vara = 1 + 2 * SAAPUMISRAJAUKSEN_MARGINAALI;
-      const tarve = Math.max(bbox.w * vara, (bbox.h * vara * ruudunLeveys()) / ruudunKorkeus());
-      if (tarve <= SAAPUMISRAJAUKSEN_MAX) {
-        return ajaKamera({ bbox, marginaali: SAAPUMISRAJAUKSEN_MARGINAALI }, { kesto });
-      }
+    if (laatikkoMahtuu(bbox)) {
+      return ajaKamera({ bbox, marginaali: SAAPUMISRAJAUKSEN_MARGINAALI }, { kesto });
     }
     const kohta = pixelOf(game.board, pos);
     if (!Number.isFinite(kohta?.x)) return Promise.resolve(false);
@@ -563,6 +620,10 @@ export function luoPallokamera({
     siirtoZoomiKerroin,
     kameranKohde,
     kotiin,
+    /** Mahtuuko maan laatikko saapumisrajaukseen (ks. laatikkoMahtuu)? */
+    laatikkoMahtuu,
+    /** Uloszoomauksen katto maan laatikosta tai null (ks. uloszoomausRaja). */
+    uloszoomausRaja,
     /**
      * Kesken oleva ajo mittausta varten (savuke-siirtokoreografia
      * `--lauta pallo`): sama muoto kuin Kartta.kameraAjo — nykyinen

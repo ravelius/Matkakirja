@@ -2286,7 +2286,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
    * VÄRITASOAJO POLTTAA LEIKKURIN LAATTAAN (erä 1b): kohdemaa ja sen
    * aluevedet täydellä peitolla, muu laatikko feidattuna paperina,
    * laatikon ulkopuoli ilman laattaa. Null = vastakoe
-   * (`--ilman-rajausta`) tai jokin muu ajotila.
+   * (--ilman-rajausta) tai jokin muu ajotila.
    */
   const VARITASO = ${VARITASO};
   const variLeikkuri = VARITASO
@@ -2620,8 +2620,8 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
      * LEIKKURI JA FEIDAUS VIIMEISENÄ PASSINA — PATINAN JÄLKEEN.
      * Patina lukee pikseleitä naapureistaan (rantavyö, reunakertymä,
      * musteen leviäminen) ja kirjoittaisi poltetun alfan päälle, joten
-     * järjestys ei ole makuasia. Vastakoe (`--ilman-rajausta`) jättää
-     * `variLeikkuri`n nulliksi, ja silloin laatta on läpinäkymätön
+     * järjestys ei ole makuasia. Vastakoe (--ilman-rajausta) jättää
+     * variLeikkurin nulliksi, ja silloin laatta on läpinäkymätön
      * suorakaide — juuri se, minkä savukkeen on nähtävä punaisena.
      */
     if (variLeikkuri) polttaVariLeikkuri(kangas, asetukset, variLeikkuri);

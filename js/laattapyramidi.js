@@ -610,7 +610,7 @@ const tasonVersio = (taso) => {
   if (taso.nosto) return luettelo?.nostotaso?.versio ?? '';
   if (taso.viiva) return luettelo?.viivataso?.versio ?? '';
   if (taso.ranta) return luettelo?.rantataso?.versio ?? '';
-  if (taso.vari) return luettelo?.varitaso?.versio ?? '';
+  if (taso.vari) return varitasonKirjaus()?.versio ?? '';
   return luettelo?.versio ?? '';
 };
 const avain = (taso, sarake, rivi) => `${tasonVersio(taso)}:${taso.z}:${sarake}:${rivi}`;
@@ -665,9 +665,11 @@ function laattaUrl(taso, sarake, rivi) {
     return pyramidiUrl(`${luettelo.rantataso.versio}/ranta/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
-  // Väritaso samoin: <variversio>/vari/z… (karttauudistus, erä 1).
+  // Väritaso samoin: <varitasot[ISO].versio>/vari/z… (karttauudistus,
+  // erät 1 ja 1b). Versio tulee KOHDEMAAN kirjauksesta, joten yhden
+  // maan uusintapoltto ei koske toisen maan laattoihin.
   if (taso.vari) {
-    return pyramidiUrl(`${luettelo.varitaso.versio}/vari/z${taso.z}/${sarake}/${rivi}`
+    return pyramidiUrl(`${varitasonKirjaus()?.versio ?? ''}/vari/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
   return pyramidiUrl(`${luettelo.versio}/z${taso.z}/${sarake}/${rivi}`
@@ -1561,7 +1563,7 @@ function nostotasonTasot() {
  * tasogeometria toisella laatastolla ja toisella juuripolulla. Kaksi
  * asiaa on eri:
  *
- *   1. TASO ON MAAKOHTAINEN. Luettelon `varitaso.maa` kertoo, kenen
+ *   1. TASO ON MAAKOHTAINEN. Luettelon `varitasot[ISO]` kertoo, kenen
  *      laatat ämpärissä ovat, ja kerros piirretään VAIN kun pelaaja on
  *      siinä maassa. Muuten Ranskan värit olisivat kartalla myös
  *      Belgiassa — juuri se, mitä omistajan ehto *"vain kohdemaassa"*
@@ -1573,9 +1575,55 @@ function nostotasonTasot() {
  *      Ranskassa.
  */
 
-/** Väritason tasot — pohjan tasogeometria väritason laatastolla. */
+/*
+ * KOHDEMAA ON YKSI MODUULITASON LUKU, EI KAHTA PÄÄTTELYÄ (erä 1b).
+ *
+ * Väritaso on maakohtainen, ja kaksi lautaa kysyy sitä eri suunnista:
+ * tasokartta pelin UI:sta (`varitasonIso`) ja pallo laudan omasta
+ * maanvaihdosta (js/pallolauta/lauta.js, sama hetki kuin punaisen
+ * kehän päivitys). Jos kumpikin päättelisi maan itse, ne ehtisivät
+ * olla eri mieltä — ja pallolla se näkyisi Ranskan vuorina Belgian
+ * kohdalla, koska väri on osa LAATAN KANGASTA eikä kerros, jonka voi
+ * piilottaa. Luku asetetaan siis yhteen paikkaan, ja osoite,
+ * laatasto ja versio luetaan siitä.
+ */
+let variMaaNyt = null;
+
+/**
+ * Väritason kohdemaa (ISO A3) tai null. Palauttaa true, jos maa
+ * vaihtui — kutsuja (pallon laattakerros) mitätöi silloin laattansa,
+ * koska laatan avaimessa on versio mutta ei maata.
+ */
+export function asetaVaritasonMaa(iso) {
+  const uusi = iso || null;
+  if (uusi === variMaaNyt) return false;
+  variMaaNyt = uusi;
+  // Johdettu tasolista on maakohtainen: se on laskettava uudestaan.
+  if (luettelo) luettelo.__variTasot = null;
+  return true;
+}
+
+/** Mille maalle väritaso on juuri nyt asetettu (pallo, savukkeet, testit). */
+export function pyramidinVaritasonMaa() {
+  return variMaaNyt;
+}
+
+/** Luettelon väritaso kohdemaalle, tai null. */
+function varitasonKirjaus() {
+  if (!variMaaNyt) return null;
+  return luettelo?.varitasot?.[variMaaNyt] ?? null;
+}
+
+/**
+ * Väritason tasot — pohjan tasogeometria väritason laatastolla.
+ *
+ * VANHA LUETTELO ILMAN `varitasot`-TAULUA palauttaa nullin, kerros jää
+ * tyhjäksi eikä yksikään pyyntö lähde — kartta on täsmälleen se
+ * seepiakartta, joka se oli ennen tätä erää. Sama koskee maata, jolle
+ * laatastoa ei ole ajettu.
+ */
 function varitasonTasot() {
-  const vt = luettelo?.varitaso;
+  const vt = varitasonKirjaus();
   if (!vt?.tasot?.length || !vt.laatastot || !vt.maa) return null;
   if (!luettelo.__variTasot) {
     luettelo.__variTasot = luettelo.tasot
@@ -1685,7 +1733,7 @@ function varmistaVariRajaus(ui, iso) {
  * siinä maassa, jonka laatat ämpärissä ovat.
  *
  * TYHJÄ KERROS ON KOKO YHTEENSOPIVUUS, kuten ranta- ja viivatasolla:
- * vanha luettelo ei tunne `varitaso`-kenttää, kerros jää tyhjäksi eikä
+ * vanha luettelo ei tunne `varitasot`-taulua, kerros jää tyhjäksi eikä
  * yhtäkään pyyntöä lähde — kartta on täsmälleen se seepiakartta, joka
  * se oli ennen tätä erää.
  *
@@ -1699,10 +1747,13 @@ function varmistaVariRajaus(ui, iso) {
 function paivitaVaritaso(ui, taso, laatta, arkki, alue, nakyva) {
   const kerros = ui.pyramidiVariKerros;
   if (!kerros) return;
+  // Kohdemaa YHTEEN paikkaan ennen tasojen hakua (ks. variMaaNyt):
+  // laatasto, osoite ja versio luetaan siitä eikä ui:sta uudestaan.
+  const iso = varitasonIso(ui);
+  asetaVaritasonMaa(iso);
   const tasot = varitasonTasot();
   const oma = tasot?.find((t) => t.z === taso.z) ?? null;
-  const iso = varitasonIso(ui);
-  if (!oma || !iso || iso !== luettelo.varitaso.maa) { tyhjennaVaritaso(ui); return; }
+  if (!oma || !iso) { tyhjennaVaritaso(ui); return; }
   if (!varmistaVariRajaus(ui, iso)) { tyhjennaVaritaso(ui); return; }
   kerros.style.opacity = '1';
   ui.pyramidiVari ??= tyhjaTila(kerros, false, true);
@@ -2132,7 +2183,7 @@ export function haePyramidinLuettelo() {
 }
 
 /**
- * Tason z kerrokset piirtojärjestyksessä pohja → ranta → viiva → nosto
+ * Tason z kerrokset piirtojärjestyksessä pohja → väri → ranta → viiva → nosto
  * (sama järjestys kuin varmistaKerrokset: rantaviiva kartan päällä,
  * reitti sen päällä, noston symboli ylimpänä). Puuttuva kerros jää
  * listasta pois: ranta-, viiva- ja nostotasoa ei ole joka tasolla eikä
@@ -2147,6 +2198,20 @@ export function pyramidinKerrostasot(z) {
   const pohja = luettelo?.tasot?.find((t) => t.z === z) ?? null;
   if (!pohja) return null;
   const kerrokset = [pohja];
+  /*
+   * VÄRITASO ON MAASTOA, JOTEN SE TULEE POHJAN PÄÄLLE MUTTA RANNAN
+   * ALLE (erä 1b). Rantaviiva, reitti ja noston symboli ovat MERKKEJÄ
+   * kartan päällä; värillinen topografia on se kartta itse. Jos väri
+   * piirtyisi rannan päälle, poltettu rantaviiva katoaisi kohdemaan
+   * alta ja maa näyttäisi leijuvan.
+   *
+   * TASO TUNNISTUU KENTÄSTÄ `vari: true`, jotta pallon lepokerros voi
+   * portittaa sen erikseen (js/pallolaatat.js `kerrokset.vari`) —
+   * ilman omaa porttia se menisi suodattimen `: true`-haaraan ja
+   * piirtyisi myös väärässä maassa.
+   */
+  const vari = varitasonTasot()?.find((t) => t.z === z);
+  if (vari) kerrokset.push(vari);
   const ranta = rantatasonTasot()?.find((t) => t.z === z);
   if (ranta) kerrokset.push(ranta);
   const viiva = viivatasonTasot()?.find((t) => t.z === z);
