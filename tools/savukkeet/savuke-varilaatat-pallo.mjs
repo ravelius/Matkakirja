@@ -4,8 +4,8 @@
  *
  *   PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers \
  *     node tools/savukkeet/savuke-varilaatat-pallo.mjs --laatat <kansio>
- *          [--ilman-rajausta] [--rikki-versio] [--kuvat <kansio>]
- *          [--nimi <tunnus>]
+ *          [--ilman-rajausta] [--rikki-versio] [--vain-kuvat]
+ *          [--kuvat <kansio>] [--nimi <tunnus>]
  *
  * Omistaja 13.9.2026 (karttauudistuksen PÄÄTÖKSET 2 ja 3): kohdemaan
  * korkeuserot *"seepiaan sointuvilla MURRETUILLA savyilla"*, *"MUUT
@@ -99,6 +99,15 @@ const valitsin = (nimi, oletus) => {
 const LAATAT = valitsin('laatat', process.env.PYRAMIDI_VARILAATAT ?? '');
 const ILMAN_RAJAUSTA = argv.includes('--ilman-rajausta');
 const RIKKI_VERSIO = argv.includes('--rikki-versio');
+/*
+ * VAIN KUVAT (`--vain-kuvat`): B-vaihe ja kuvakaappaukset, ei väitteitä
+ * eikä vertailuajoa. Tämä on se ajo, jolla omistajalle tehdään KOLME
+ * VAIHTOEHTOA samasta näkymästä eri parametripareilla (vesi/feidaus
+ * 0,60/0,25 · 0,72/0,35 · 0,85/0,45) — sama sivu, sama kamera ja sama
+ * laattataso kuin vartioajossa, joten kuvat ovat vertailukelpoisia
+ * keskenään ja savukkeen mittauksiin.
+ */
+const VAIN_KUVAT = argv.includes('--vain-kuvat');
 const KUVAT = valitsin('kuvat', '');
 const NIMI = valitsin('nimi', ILMAN_RAJAUSTA ? 'ilman-rajausta' : (RIKKI_VERSIO ? 'rikki-versio' : 'vihrea'));
 
@@ -240,6 +249,17 @@ let variPaalla = false;
 
 /** Pilotin väriversio (polun osa): tästä tunnistetaan paikalliset laatat. */
 const VARIVERSIO = VARITASOT.FRA.versio;
+/*
+ * FEIDAUKSEN MÄÄRÄ LUETAAN LUETTELOSTA eikä kirjoiteta savukkeeseen:
+ * omistaja valitsee luvun kolmesta vaihtoehdosta (0,25 · 0,35 · 0,45),
+ * ja savuke mittaa sitä lukua, jolla laatat on poltettu. Vastakoeajo
+ * (`--ilman-rajausta`) ei kirjaa feidausta lainkaan, ja silloin
+ * odotusarvo on 0,35 eli se, mitä laatoissa PITÄISI olla.
+ */
+const FEIDAUS = Number.isFinite(VARITASOT.FRA.feidaus) ? VARITASOT.FRA.feidaus : 0.35;
+tieto('pilotin parametrit', `paletti ${VARITASOT.FRA.paletti} · vesi ${VARITASOT.FRA.vesi} `
+  + `· feidaus ${VARITASOT.FRA.feidaus} (häive ${VARITASOT.FRA.feidausReuna}) `
+  + `· rajattu ${VARITASOT.FRA.rajattu} · tasot ${VARITASOT.FRA.tasot.join(',')}`);
 
 const selain = await chromium.launch({
   executablePath: '/opt/pw-browsers/chromium',
@@ -374,6 +394,48 @@ tieto('lähtö', JSON.stringify(alku));
 await sivu.waitForTimeout(4000);
 await sivu.evaluate(() => window.matkakirja.ui.pallolauta.saavu({ kesto: 0 }));
 await sivu.waitForTimeout(3000);
+
+/*
+ * KEHYSAJAT JATKUVASTA UUDELLEENMAALAUKSESTA, EI KAMERA-AJOSTA.
+ *
+ * Erän 1 mittaus (luku 5) antoi 59,6 vs. 59,1 fps ja sanoi sen itse
+ * ääneen: tasokartan kamera-ajo on CSS-muunnos, joten kumpikin luku
+ * oli ruudunpäivityksen katossa eikä mittaus voinut erottaa mitään.
+ * Pallolla vastaava ansa on sama: pelkkä `pointOfView`-ajo voi mennä
+ * kompositorilla. Tämä pyörittää palloa pituuspiirin suunnassa joka
+ * kehyksellä, mikä pakottaa WebGL:n piirtämään koko pinnan uudestaan
+ * — ja juuri sen hinnan värilaatat voisivat nostaa.
+ */
+const kehysajat = (kestoMs = 4000) => sivu.evaluate(async (kesto) => {
+  const pallo = window.matkakirja.ui.pallolauta.pallo;
+  const alku = pallo.pointOfView();
+  const erot = [];
+  await new Promise((valmis) => {
+    let edellinen = performance.now();
+    const alkuhetki = edellinen;
+    let i = 0;
+    const askel = (nyt) => {
+      erot.push(nyt - edellinen);
+      edellinen = nyt;
+      i += 1;
+      // 0,4° kehyksessä: pinta liikkuu, mutta kuva pysyy samassa kohdassa maapalloa.
+      pallo.pointOfView({ lat: alku.lat, lng: alku.lng + i * 0.4, altitude: alku.altitude }, 0);
+      if (nyt - alkuhetki < kesto) requestAnimationFrame(askel);
+      else valmis();
+    };
+    requestAnimationFrame(askel);
+  });
+  pallo.pointOfView(alku, 0);
+  const jarj = erot.slice(1).sort((a, b) => a - b);
+  const q = (o) => Math.round(jarj[Math.min(jarj.length - 1, Math.floor(o * jarj.length))] * 10) / 10;
+  return {
+    kehyksia: jarj.length,
+    p50: q(0.5),
+    p95: q(0.95),
+    max: Math.round(jarj[jarj.length - 1] * 10) / 10,
+    fps: Math.round((1000 / q(0.5)) * 10) / 10,
+  };
+}, kestoMs);
 
 /** Laattakerroksen mittarit (js/pallolaatat.js). */
 const mittarit = () => sivu.evaluate(() => {
@@ -557,28 +619,40 @@ async function vaihe(vari, tunnus) {
   });
   tieto(`${tunnus} mittarit (saapumisnäkymä)`, JSON.stringify(mitat));
   tieto(`${tunnus} kamera (saapumisnäkymä)`, JSON.stringify(pov));
+  const kehykset = await kehysajat();
+  tieto(`${tunnus} kehysajat (pallon pyöritys)`, JSON.stringify(kehykset));
   const maa = await mittaaPisteet('maa');
   const meri = await mittaaPisteet('meri');
   return {
     mitat,
     pov,
+    kehykset,
     kuva: maa.kuva,
     merikuva: meri.kuva,
     mittaukset: [...maa.mittaukset, ...meri.mittaukset],
   };
 }
 
-const A = await vaihe(false, 'A (ilman väriä)');
+const A = VAIN_KUVAT ? null : await vaihe(false, 'A (ilman väriä)');
 const B = await vaihe(true, 'B (värillä)');
-const mA = A.mitat;
+const mA = A?.mitat ?? null;
 const mB = B.mitat;
 
 if (KUVAT) {
   mkdirSync(KUVAT, { recursive: true });
-  writeFileSync(join(KUVAT, `varilaatat-pallo-${NIMI}-ilman-varia.png`), A.kuva);
+  if (A) writeFileSync(join(KUVAT, `varilaatat-pallo-${NIMI}-ilman-varia.png`), A.kuva);
   writeFileSync(join(KUVAT, `varilaatat-pallo-${NIMI}.png`), B.kuva);
   writeFileSync(join(KUVAT, `varilaatat-pallo-${NIMI}-meri.png`), B.merikuva);
   tieto('kuvat', join(KUVAT, `varilaatat-pallo-${NIMI}*.png`));
+}
+
+if (VAIN_KUVAT) {
+  console.log(`\nVAIN KUVAT: väitteitä ei ajettu. Parametrit `
+    + `vesi ${VARITASOT.FRA.vesi} · feidaus ${VARITASOT.FRA.feidaus}.`);
+  await ctx.close();
+  await selain.close();
+  palvelin.close();
+  process.exit(0);
 }
 
 /* ---------------- erä 2: uloszoomauksen esto ---------------------- */
@@ -684,13 +758,44 @@ vaadi('V2 Ranskan sisältä pikseli tummui murretuksi maastoksi',
     ? `A ${kirkkaus(ranska.a).toFixed(1)} → B ${kirkkaus(ranska.b).toFixed(1)}`
     : `piste ei kartalla: ${ranska.a?.syy ?? ranska.b?.syy}`);
 
+/*
+ * FEIDAUS ON SIIRTYMÄ PAPERIA KOHTI, EI PELKKÄ VAALENEMINEN.
+ *
+ * MITATTU 13.9.2026, JA SE KORJASI VÄITTEEN. Ensin V3 vaati, että
+ * Belgian pikseli VAALENEE — omistajan sanat ovat *"MUUT MAAT
+ * FEIDATAAN vaaleammiksi"*. Mittaus näytti päinvastaista: Namurin
+ * alanko on seepiakartalla rgb(246,243,204), eli JO VAALEAMPI kuin
+ * paperi rgb(232,220,188), joten paperinsävy sen päällä tummentaa
+ * pikseliä pari yksikköä. Väite oli väärin, ei toteutus: feidaus
+ * vetää naapurin omaa sävyä paperia kohti (B = (1−f)·A + f·paperi),
+ * mikä TUMMAT piirteet — vuoret, syvä meri — vaalentaa ja vaaleimmat
+ * litistää. Juuri se on "feidaus": naapuri menettää reliefinsä ja
+ * lukee tasaisena paperina.
+ *
+ * TÄMÄ EI OLE LÖYSEMPI VÄITE. Ilman leikkuria Belgia saa murretun
+ * paletin täydellä peitolla (~rgb(206,195,146)), joka EI ole A:n ja
+ * paperin välissä yhdelläkään kanavalla — vastakoe kaatuu yhä.
+ */
+const PAPERI = [232, 220, 188];
+const kohtiPaperia = (p, f) => {
+  const kanavat = [p.b.r, p.b.g, p.b.b];
+  const lahto = [p.a.r, p.a.g, p.a.b];
+  let liikkui = 0;
+  for (let i = 0; i < 3; i += 1) {
+    const odotus = (1 - f) * lahto[i] + f * PAPERI[i];
+    if (Math.abs(kanavat[i] - odotus) > 8) return { ok: false, liikkui };
+    if (Math.abs(kanavat[i] - lahto[i]) >= 3) liikkui += 1;
+  }
+  return { ok: liikkui > 0, liikkui };
+};
 const belgia = parit.find((p) => p.avain === 'belgia');
-vaadi('V3 Belgian puoli vaaleni ja pysyi seepiana',
-  molemmat(belgia) && kirkkaus(belgia.b) > kirkkaus(belgia.a) + 2
-    && belgia.b.r > belgia.b.g && belgia.b.g > belgia.b.b,
+const belgiaTulos = molemmat(belgia) ? kohtiPaperia(belgia, FEIDAUS) : { ok: false, liikkui: 0 };
+vaadi('V3 Belgian puoli siirtyi paperia kohti feidauksen verran ja pysyi lämpimänä',
+  belgiaTulos.ok && belgia.b.r > belgia.b.g && belgia.b.g > belgia.b.b,
   molemmat(belgia)
-    ? `A ${kirkkaus(belgia.a).toFixed(1)} → B ${kirkkaus(belgia.b).toFixed(1)}, `
-      + `rgb(${belgia.b.r},${belgia.b.g},${belgia.b.b})`
+    ? `A rgb(${belgia.a.r},${belgia.a.g},${belgia.a.b}) → B rgb(${belgia.b.r},${belgia.b.g},${belgia.b.b}), `
+      + `odotus f=${FEIDAUS}: rgb(${[0, 1, 2].map((i) => Math.round((1 - FEIDAUS) * [belgia.a.r, belgia.a.g, belgia.a.b][i] + FEIDAUS * PAPERI[i])).join(',')}), `
+      + `kanavia liikkui ${belgiaTulos.liikkui}`
     : `piste ei kartalla: ${belgia.a?.syy ?? belgia.b?.syy}`);
 
 const aluevesi = parit.find((p) => p.avain === 'aluevesi');
@@ -700,13 +805,20 @@ vaadi('V4 aluevesi (12 mpk) sinertyi savunsiniseksi',
     ? `A r−b ${lampo(aluevesi.a)} → B r−b ${lampo(aluevesi.b)}`
     : `piste ei kartalla: ${aluevesi.a?.syy ?? aluevesi.b?.syy}`);
 
+/*
+ * AVOMERI ON PAPERIA TUMMEMPI, joten siinä feidaus näkyy nimenomaan
+ * vaalenemisena — ja se on sama kaava kuin Belgiassa. Väite vaatii
+ * molemmat: siirtymän paperia kohti JA ettei piste sinerry (sininen
+ * kuuluu vain 12 mpk:n sisälle).
+ */
 const avomeri = parit.find((p) => p.avain === 'avomeri');
-vaadi('V5 avomeri 40 mpk vaaleni ja pysyi seepiana',
-  molemmat(avomeri) && kirkkaus(avomeri.b) > kirkkaus(avomeri.a) + 2
+const avomeriTulos = molemmat(avomeri) ? kohtiPaperia(avomeri, FEIDAUS) : { ok: false, liikkui: 0 };
+vaadi('V5 avomeri 40 mpk vaaleni paperia kohti eikä sinertynyt',
+  avomeriTulos.ok && kirkkaus(avomeri.b) > kirkkaus(avomeri.a)
     && avomeri.b.r > avomeri.b.b,
   molemmat(avomeri)
-    ? `A ${kirkkaus(avomeri.a).toFixed(1)} → B ${kirkkaus(avomeri.b).toFixed(1)}, `
-      + `rgb(${avomeri.b.r},${avomeri.b.g},${avomeri.b.b})`
+    ? `A rgb(${avomeri.a.r},${avomeri.a.g},${avomeri.a.b}) → B rgb(${avomeri.b.r},${avomeri.b.g},${avomeri.b.b}), `
+      + `kanavia liikkui ${avomeriTulos.liikkui}`
     : `piste ei kartalla: ${avomeri.a?.syy ?? avomeri.b?.syy}`);
 
 vaadi('V6 laattamäärä ei kasva yli +10 %',
@@ -726,6 +838,12 @@ vaadi('V7 uloszoomaus pysähtyy Ranskassa laatikon rajaan',
 vaadi('V8 Venäjässä rajaa ei aseteta (kamera ei lukkiudu)',
   zoomRus.maxKorkeus > 2.4,
   `RUS maxKorkeus ${zoomRus.maxKorkeus?.toFixed(3)}`);
+
+console.log(`\n  kehysajat (pallon pyöritys, 390 × 844 dpr 3):`);
+console.log(`    A ilman väriä  p50 ${A.kehykset?.p50} ms · p95 ${A.kehykset?.p95} ms `
+  + `· max ${A.kehykset?.max} ms · ${A.kehykset?.fps} fps (${A.kehykset?.kehyksia} kehystä)`);
+console.log(`    B värillä      p50 ${B.kehykset?.p50} ms · p95 ${B.kehykset?.p95} ms `
+  + `· max ${B.kehykset?.max} ms · ${B.kehykset?.fps} fps (${B.kehykset?.kehyksia} kehystä)`);
 
 if (virheet.length) console.log(`\nSIVUVIRHEET: ${virheet.slice(0, 4).join(' | ')}`);
 
