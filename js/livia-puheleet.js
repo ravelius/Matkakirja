@@ -66,6 +66,9 @@ export function kytkeLivianPuheEleet(audio, eleet, { voimassa = () => true } = {
       tunnus: rivi.id,
       puheTunnus: audio,
       lahde: 'livia-puhe',
+      alkuMs: rivi.alku,
+      loppuMs: rivi.loppu,
+      cueKestoMs: rivi.loppu - rivi.alku,
     });
     if (tulos) aktiivinen = rivi;
   };

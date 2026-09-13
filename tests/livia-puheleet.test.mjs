@@ -6,6 +6,7 @@ import { kuunteleLivianTilanteita } from '../js/livia-tilanteet.js';
 
 class KoeAudio extends EventTarget {
   currentTime = 0;
+  playbackRate = 1;
   paused = true;
   ended = false;
   muted = false;
@@ -37,6 +38,8 @@ test('soittimen kello ohjaa cueita; tauko, kelaus ja nopeus eivät jätä vanhaa
 
   audio.currentTime = .6; audio.paused = false; audio.laheta('playing');
   assert.deepEqual(tapahtumat.map(([l, d]) => [l, d.tunnus]), [['speechCue', 'marseille.livia.c1']]);
+  assert.deepEqual(Object.fromEntries(['alkuMs','loppuMs','cueKestoMs'].map((k)=>[k,tapahtumat[0][1][k]])),
+    { alkuMs: 500, loppuMs: 2100, cueKestoMs: 1600 });
   audio.currentTime = 1.2; audio.laheta('ratechange');
   assert.equal(tapahtumat.length, 1, 'nopeusmuutos ei käynnistä samaa cuea uudelleen');
   audio.paused = true; audio.laheta('pause');
