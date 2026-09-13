@@ -1,5 +1,24 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 02:56 UTC — #2337 UUSI HEAD HYVÄKSYTTY, valmis v1825:n päälle
+
+**Aiempi dbc66e5:n ajastinrace-HOLD on ratkaistu. Hyväksytty revisio on e6e61f25, ei vanha HEAD.**
+- PR: https://github.com/ravelius/Matkakirja/pull/2337
+- Head: e6e61f25c3edc9906354f6078cddcfbc04040423
+- Tree: 6817d6be5a7f000764d140ab90b038b0b63b1266
+- Base: 6fbdc393d082c335485f04b94855dea6b0c1b9df
+- Full diff SHA256: 484b3d07d938e5f93b8961a49509aeb500e4cb2eb03163445e40671122bf32f7
+
+Root tarkisti identiteetit, alkuperäisen diffin + täydennyksen, diff-checkin ja exact CI1865/run34734024128/job103662038250:3263testiä,3250PASS/13SKIP/0FAIL, kaikkiportit success. Riippumaton Sol138/138PASS uudessa exactheadissa, ei jäljellä olevaa nimettyä runtimevikaa.
+
+puraFokusvirtaPaikanvaihdossa katkaisee/nollaa fokusKuittausAjastin- ja fokusaarreAjastin-kahvat, sitten purkaa noten/listenerit. Vain onnistunut doMove/doFly kaupungista kutsuu tätä. Peruskuplanvaihto/noppa/hylätty tulos/traileri säilyvät. Fake-clockin timeout-purku dynaaminenPASS; success/reject-UIkytkentä rakenteellinen guardtarkistus, ei dynaaminen rejected-flight-UItesti. Pallon välitön refresh ja guardit aiemmasta hyväksytystä haarasta ennallaan.
+
+**Sovita, versioi ja julkaise normaalisti.** Root read-only git merge-tree tuoreen v1825mainin ed3fcc6a53fa5c928bc083cf9d88f6004f2fb8e5 päälle konfliktiton (treec9d4f9d4aeb16bdd080c83811fc403df0f9adfac); root ei yhdistänyt tai julkaissut. Ei uusia ääniä/mediaa/tekstejä/kaanonia/maksuja.
+
+v1825/#2338:n merge02:53:02UTC ja exactCI1866/run34734040925/job103662086993 rootvarmennettu:3248PASS/13SKIP/0FAIL/3261. #2336runtime/testit ovat exact hyväksytyt, keskiosumakorjaus säilyi. Origin02:55 vielä levitysvaiheessa (versiontiedostot ja hovermoduulit vanhoja sekäcanonical/cachebust), joten v1825livehovervastakoetta ei vielä väitetäPASSiksi. Root tekee sen kun uusi lähde saapuu originiin.
+
+Raportti output/horatio-livia-root-qa-20260913/live-v1824-pr2337-review.md päivitetty uudenHEADinPASSiin. Omistajan lupa90luentojen generointiin/tämänpaketin loppuunsaattamiseen on jo saatu; erillinen kuunteluhyväksyntä ja todelliset live-portit merkitään avoimiksi, ei uudeksi generointilupapyynnöksi.
+
 ## 13.9.2026 02:46 UTC — #2337 ensimmäinen QA: ajastinrace täydennettävä ennen hyväksyntää
 
 RC:n kaksi nimettyä korjausta ovat PR:ssä #2337, mutta **dbc66e5-revisiota ei vielä hyväksytä julkaisuun**. Root exacthead/tree/diffSHA PASS (head dbc66e5d957ce9c882b1152c69501d80bffbfffc, tree ba169c0540a60243bc77ae2eb60cdedc874ba6dc, diff1658778e86b3adbb343d8ebdce864b48f0ad3cbc4e72f59f66996a6f69a6b5fd). Root luki exactCI1864/run34733738601/job103661258903:3262testiä,3249PASS/13SKIP/0FAIL, kaikkiportit success. Sol137/137kohdetestiäPASS.
