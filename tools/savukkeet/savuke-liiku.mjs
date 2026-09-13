@@ -27,13 +27,21 @@
  *   4. AUTOKYYTI EI HYPI. Liftauksen nappulan nopeusprofiili kolmesta
  *      kohdasta: alku < keski > loppu (kiihdytys ja jarrutus), ja
  *      nappulan pystykorkeus pysyy nollassa koko matkan.
+ *   5. AUTOMAATTINEN NOPANHEITTO SÄILYY (Raamattu KARTTAUUDISTUKSEN
+ *      PAATOKSET 5, omistaja 13.9.2026). Sisämaan vuoro alkaa
+ *      automaattisella heitolla vaikka rahaa on bussiin, ja bussi on
+ *      yhä valittavissa Liiku-napista ennen heittoa; laivareitillä
+ *      heitto on niin ikään automaattinen.
  *
- * VASTAKOKEET (kumpikin ajetaan ja kirjataan):
+ * VASTAKOKEET (kaikki ajetaan ja kirjataan):
  *   A. ILMAN RAHAA bussi ja laiva eivät ole valittavissa — napit ovat
  *      estettyjä ja kertovat hinnan.
  *   B. VAIHEKÄYRÄ RIISUTTUNA (`kyyti: false` eli entinen hyppyketju)
  *      nopeusprofiiliväite KAATUU: kiihdytystä ja jarrutusta ei ole,
  *      ja nappula hyppii (pystykorkeus > 0).
+ *   C. ERÄN 8 VANHA EHTO (`modes.length === 1` bussi mukaan luettuna)
+ *      antaisi samassa sisämaan kaupungissa EI-automaattisen heiton —
+ *      punainen, eli vartio 5 erottelee vanhan ja uuden säännön.
  *
  * MIKSI VARTIO: jokainen takeista katoaa hiljaa. Vaihekäyrä on yksi
  * valinnainen kenttä (`{ vaihe }`), jonka unohtuminen palauttaa
@@ -336,6 +344,126 @@ vaadi('VASTAKOE A: ilman rahaa laiva ei ole valittavissa',
 vaadi('VASTAKOE A: liftaus on yhä valittavissa (ilmainen)',
   kaytettavissa('Liftaus')?.estetty === false && koyha.tavat.includes('land'),
   JSON.stringify(koyha));
+
+/* ---- 5. automaattinen nopanheitto: bussi ei estä sitä ------------- */
+
+/*
+ * OMISTAJA 13.9.2026 (Raamattu KARTTAUUDISTUKSEN PAATOKSET 5,
+ * sanatarkasti): *"Bussilippu vie aina suoraan seuraavaan kaupunkiin
+ * ilman nopanheittoa, joten automaattinen nopanheitto on edelleen
+ * voimassa, koska se koskee ainoastaan vain liftausta. Kaikissa
+ * tapauksissa paitsi laivareitillä."* ja *"Ja laiva  reitilläkään ei
+ * taas ole muuta vaihtoehtoa kuin laiva, niin siellekin on
+ * automaattinen nopanheitto."*
+ *
+ * Mitattava asia on VUORON ALKU: sisämaan kaupungissa, jossa rahat
+ * riittävät bussilippuun, vuoro alkaa silti suoraan nopanheitosta
+ * (vaihe 'roll', travelMode 'land') — ja bussi on yhä valittavissa
+ * Liiku-napista, koska noppaa ei ole heitetty. Laivareitillä sama.
+ *
+ * VASTAKOE C ajetaan samoista luvuista: erän 8 (v1845) ehto
+ * `modes.length === 1` laskee bussin noppatavaksi ja antaisi
+ * EI-automaattisen heiton — se on punainen tässä tilanteessa.
+ */
+const automaatti = await sivu.evaluate(async () => {
+  const { ui, game: g } = window.matkakirja;
+  clearTimeout(ui.automaattiheittoAjastin);
+  ui.automaattiheittoAjastin = null;
+  const alkuperainen = { ...g.player.pos };
+  g.player.money = 300;
+
+  /*
+   * TUTKITTAVA VAIMENNETAAN mittauksen ajaksi: 'stay' on aito valinta
+   * (liikkua vai jäädä vastaamaan) ja esti automaattisen heiton jo
+   * ennen erää 8. Mitattava asia on BUSSIN vaikutus, joten kaupungin
+   * aarre/tehtävä ei saa sotkea lukemaa. Palautetaan lopuksi.
+   */
+  const tehtavaEnnallaan = g.tehtavaTarjolla.bind(g);
+  g.tehtavaTarjolla = () => false;
+
+  // Sisämaan kaupunki: vain liftaus ja bussi (ei satamaa, ei kenttää) —
+  // juuri se tilanne, jossa erä 8 pysäytti vuoron.
+  let sisamaa = null;
+  let sisamaanTavat = null;
+  for (const id of g.board.cityById.keys()) {
+    g.player.pos = { type: 'city', city: id };
+    g.phase = 'action';
+    const tavat = g.travelModes().slice().sort();
+    if (tavat.join(',') === 'bus,land') { sisamaa = id; sisamaanTavat = tavat; break; }
+  }
+  const mittaa = () => {
+    g.phase = 'action';
+    const tavat = g.travelModes().slice().sort();
+    g.beginTurn();
+    clearTimeout(ui.automaattiheittoAjastin);
+    ui.automaattiheittoAjastin = null;
+    return {
+      tavat,
+      vaihe: g.phase,
+      tapa: g.travelMode,
+      auto: g.autoTravel,
+      muitaTapoja: g.muitaTapojaTarjolla(),
+      peruuOnnistuu: null,
+    };
+  };
+
+  let maalla = null;
+  if (sisamaa) {
+    g.player.pos = { type: 'city', city: sisamaa };
+    maalla = mittaa();
+    maalla.peruuOnnistuu = g.actionCancelTravel().ok;
+    maalla.vaiheParuun = g.phase;
+    maalla.tavatParuun = g.travelModes().slice().sort();
+  }
+
+  // Laivareitti: nappula meren kaaren askelpisteessä.
+  let meri = null;
+  for (const e of g.board.edgeById.values()) {
+    if (e.type !== 'sea' || e.steps < 2) continue;
+    g.player.pos = { type: 'edge', edge: e.id, idx: 1 };
+    meri = mittaa();
+    meri.kaari = e.id;
+    break;
+  }
+
+  g.tehtavaTarjolla = tehtavaEnnallaan;
+  g.jatkaAutomaattisesti = false;
+  g.player.pos = alkuperainen;
+  g.phase = 'action';
+  g.travelMode = null;
+  g.autoTravel = false;
+  ui.render();
+  return { sisamaa, sisamaanTavat, maalla, meri };
+});
+
+vaadi('sisämaan kaupunki (liftaus + bussi) löytyi mittaukseen',
+  Boolean(automaatti.maalla), JSON.stringify(automaatti));
+if (automaatti.maalla) {
+  const m = automaatti.maalla;
+  vaadi(`sisämaan vuoro alkaa automaattisella heitolla vaikka rahaa on bussiin (${automaatti.sisamaa})`,
+    m.auto === true && m.vaihe === 'roll' && m.tapa === 'land' && m.tavat.includes('bus'),
+    JSON.stringify(m));
+  vaadi('bussi on yhä valittavissa Liiku-napista ennen heittoa',
+    m.muitaTapoja === true && m.peruuOnnistuu === true
+      && m.vaiheParuun === 'action' && m.tavatParuun.includes('bus'),
+    JSON.stringify(m));
+  /*
+   * VASTAKOE C: erän 8 ehto samoilla luvuilla. Jos bussi lasketaan
+   * noppatavaksi, `modes.length === 1` on epätosi ja vuoro jäisi
+   * odottamaan napinpainallusta — väite kaatuu, eli vastakoe erottelee.
+   */
+  const vanhaEhto = m.tavat.length === 1 && m.tavat[0] !== 'stay';
+  vaadi('VASTAKOE C: erän 8 ehto (bussi estää automaattisen) EI antaisi heittoa → punainen',
+    vanhaEhto === false,
+    `vanha ehto antoi ${vanhaEhto} tavoilla ${m.tavat.join(',')}`);
+}
+vaadi('laivareitillä vuoro alkaa automaattisella heitolla',
+  Boolean(automaatti.meri) && automaatti.meri.auto === true
+    && automaatti.meri.vaihe === 'roll' && automaatti.meri.tapa === 'sea',
+  JSON.stringify(automaatti.meri));
+vaadi('laivareitillä ei ole muuta valittavaa (bussi ei ulotu merelle)',
+  Boolean(automaatti.meri) && automaatti.meri.muitaTapoja === false,
+  JSON.stringify(automaatti.meri));
 
 /* ---- 2.–3. neljä matkaa: raha, aika ja kameran etäisyys ----------- */
 

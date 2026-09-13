@@ -6946,6 +6946,20 @@ export const RAAMATTU = {
           + 'kayttaa Opus/Sonnet-agenttiparvia. Tila: erat 3, 4, 6 ja 8 '
           + 'kaynnissa rinnakkain 13.9.2026 klo 13.55 UTC alkaen; era 1c '
           + '(tasoituskerros) perustetaan taman julkaisun jalkeen.',
+        'KARTTAUUDISTUKSEN PAATOKSET 5: AUTOMAATTINEN NOPANHEITTO '
+          + 'SAILYY, BUSSI VIE SUORAAN (omistaja 13.9.2026 klo 14.55-15.00 '
+          + 'UTC, sanatarkasti: "Bussilippu vie aina suoraan seuraavaan '
+          + 'kaupunkiin ilman nopanheittoa, joten automaattinen '
+          + 'nopanheitto on edelleen voimassa, koska se koskee ainoastaan '
+          + 'vain liftausta. Kaikissa tapauksissa paitsi laivareitilla." '
+          + 'ja "Ja laiva  reitillakaan ei taas ole muuta vaihtoehtoa kuin '
+          + 'laiva, niin siellekin on automaattinen nopanheitto."): '
+          + 'automaattinen nopanheitto toimii kuten ennen eraa 8 seka '
+          + 'maalla (liftaus) etta laivareitilla; bussin olemassaolo ei '
+          + 'esta sita. Bussi (50 p) vie suoraan seuraavaan kaupunkiin '
+          + 'ilman noppaa ja ilman aikakulua; bussi ja lento valitaan '
+          + 'Liiku-napista ennen heittoa. Kumoaa eran 8 (v1845) muutoksen, '
+          + 'jossa bussilippuun riittava raha esti automaattisen heiton.',
         'Saapumiskortti: luettu matkakirjamerkintä + esittely '
           + 'kuvineen.',
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
