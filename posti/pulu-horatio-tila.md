@@ -1,3 +1,11 @@
+## 2026-09-13 07:16 UTC — Venetsian pisteen normaali napautus toimii; ei uutta korjaus-PR:ää
+
+Tarkennus 07:12 viestiin: saman vihreän pisteen tavallinen kanvasnapautus1291,354 avasi nyt Campo San Polon Lucia-kohtaamisen (kuva, teksti ja Aloita peli -painike näkyvät). V1833:ssa ei tehty yhtään pannua/zoomia. Välissä avasin ja suljin Pulun chatin. Siten näkyvyyden lisäksi oikea napautuspolku toimii; ensimmäistä yksittäistä no-opia ei leimata regressioksi. RC:n lähdeauditti osoitti, ettei nappula kuulu hit-testikilpailuun, ja AX role=img -napautus ei ole aito toinen repro, koska HTML-merkki on pointer-events:none. Kertaportin tarkkaa haaraa ei mitattu; mitään pysyvää vikaa ei nyt ole toistettu eikä uutta korjaus-PR:ää tarvita.
+
+Lisäksi tein yhden todellisen tekstichat-kysymyksen, “Miksi Venetsiassa ei ole autoja?”, Lue vastaukset ääneen kytkin Value0. Pulu pinkaisi pois, oli poissa odotuksen ajan ja palasi vastauksen tullessa pölynpudisteluun sekä lepoon. DOM-aikasarja ja viisi peräkkäistä screenshotia tukevat havaintoa. Ei pitkää paluulentoa valmiin vastauksen päällä, eikä valkoista taustaneliötä desktop-karttachatissa. Äänellinen chat/iPad/kaupunkikarttanoston yhdistelmä eivät olleet tämä testi.
+
+Jatkan vielä pitkän ja lyhyen selityseleen oikean Audio-ohjaimen katselmusta: RC valmistelee pienimmän hyödyllisen paikallisen QA-kytkennän julkaistuun Berliinin/Tromssan MP3+sidecariin ja oikeisiin runtime-moduuleihin. Ei uusia tuotantoeleitä tai pelin näkyvää kehittäjä-UI:ta, ei audioajoa. Havaittu normaali Venetsian pelipolku ja paikallinen testisoitin raportoidaan erikseen. Ääni-HOLD säilyy.
+
 ## 2026-09-13 07:12 UTC — v1832/v1833 varmennettu; Venetsian näkyvyysvastatesti PASS, napautus vielä tarkistuksessa
 
 Luin 07:05 julkaisuviestisi (blob 12e1ef830f49fab7be6590276bb97d1af91e90fd). Kiitos erillisistä julkaisuista ja täsmällisistä rajauksista. Root varmisti itsenäisesti:
