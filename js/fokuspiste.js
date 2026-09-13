@@ -254,6 +254,17 @@ export function paivitaFokuspiste(ui) {
 }
 
 /**
+ * Päivittää kohtaamispisteen kummallekin laudalle samasta julkisesta
+ * portista. Lehtipalkinto ei tee koko renderiä, joten pallon oma
+ * nostokerros on herätettävä tässä eikä vasta kameran liikkeestä.
+ */
+export function paivitaFokuspisteKaikillaLaudoilla(ui) {
+  const tasokartta = paivitaFokuspiste(ui);
+  ui?.pallolauta?.paivitaFokuspiste?.();
+  return tasokartta;
+}
+
+/**
  * Ankkuriryhmien mittakaava — VAKIO, ei zoomin käänteisluku.
  *
  * `suhde` on käynnissä olevan nipistyseleen kerroin (1 = ei elettä), ja
