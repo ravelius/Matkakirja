@@ -954,8 +954,8 @@ export const FOKUSVIRTA_BERLIINI = {
         paikka: {
           nimi: 'Marlene Dietrich',
           laudat: {
-            maailmankartta: { x: 6278.1, y: 1280.5 },
-            europe: { x: 467.4, y: 513.3 },
+            maailmankartta: { x: 6279.1, y: 1279.4 },
+            europe: { x: 468, y: 512.7 },
           },
         },
       },

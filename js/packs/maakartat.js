@@ -4618,7 +4618,7 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-amsterdamin-kissalaiva',
       },
       {
-        nimi: 'Herengracht 537', lat: 52.3652, lon: 4.8942,
+        nimi: 'Herengracht 537', lat: 52.3649, lon: 4.8946,
         nosto: 'nosto-amsterdamin-puupaalut',
       },
       {
@@ -5585,7 +5585,7 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
       {
-        nimi: 'Liukumäkiveistos', lat: 51.505, lon: -0.165,
+        nimi: 'Liukumäkiveistos', lat: 51.504, lon: -0.135,
         nosto: 'nosto-orbitin-liukumaki',
       },
     ],
@@ -5735,7 +5735,7 @@ export const KAUPUNKIKARTAT = {
         nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
       },
       {
-        nimi: 'Marlene Dietrich', lat: 52.4842, lon: 13.3433,
+        nimi: 'Marlene Dietrich', lat: 52.5075, lon: 13.3728,
         nosto: 'nosto-marlene-dietrich',
       },
       {

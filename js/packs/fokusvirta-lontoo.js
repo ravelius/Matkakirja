@@ -1220,8 +1220,8 @@ export const FOKUSVIRTA_LONTOO = {
         paikka: {
           nimi: 'Liukumäkiveistos',
           laudat: {
-            maailmankartta: { x: 5827.8, y: 1324.1 },
-            europe: { x: 208, y: 539 },
+            maailmankartta: { x: 5828.8, y: 1324.1 },
+            europe: { x: 208.6, y: 539 },
           },
         },
       },
