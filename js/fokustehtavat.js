@@ -809,6 +809,74 @@ export function piirraSivunTehtava(ui, kohde, kategoria) {
 }
 
 /**
+ * VISAN VASTAUSLIPUKKEET JA TULOSRIVI — YKSI KONE KAHDELLE PINNALLE.
+ *
+ * Sama kolmen osan kuvio on nyt kahdessa paikassa: lehden nimetty
+ * tehtävä (piirraNimettyTehtava alla) ja karttanoston minikysymys
+ * (js/fokusnosto.js piirraNostonVisa, karttauudistuksen erä 6). Osat
+ * ovat kysymyslipukkeet, tulosrivi ja se, MITEN vastaus luetaan:
+ * oikeasta tulee `Oikein! +N puntaa.` ja väärästä `Oikea vastaus: X.`,
+ * kummankin perään datan `fakta`. Äänet ja natiivin kuittaus kulkevat
+ * samaa reittiä.
+ *
+ * MIKSI JAETTU KOMPONENTTI EIKÄ KOPIO. Palkkiot eroavat (lehti 50 p,
+ * nosto 25 p, Raamattu KARTTAUUDISTUKSEN PAATOKSET 1), mutta
+ * palautteen sanamuoto ja se, että VÄÄRÄKIN vastaus kertoo oikean, on
+ * pelin sääntö eikä pinnan koriste. Kopio ajautuisi erilleen
+ * ensimmäisessä muutoksessa.
+ *
+ * KIRJAUS JÄÄ KUTSUJALLE. Tämä ei tiedä kaupungista, aiheesta eikä
+ * laskureista: `kirjaa(oikein)` tekee kassan ja kirjanpidon ja
+ * palauttaa `actionMinitehtava`n vastauksen. Falsy tai `{ ok: false }`
+ * (esim. jo vastattu) keskeyttää — mitään ei piirretä eikä soiteta,
+ * eikä `ennen`/`jalkeen` aja. Näin sama kysymys ei voi maksaa
+ * kahdesti kummallakaan pinnalla.
+ *
+ * @param {object} ui
+ * @param {Element} laatikko Mihin lipukkeet ja tulosrivi liitetään.
+ * @param {object} asetukset
+ * @param {{ kysymys: string, vaihtoehdot: string[], oikea: number,
+ *   fakta?: string }} asetukset.visa
+ * @param {number} asetukset.palkkio Puntaa oikeasta vastauksesta.
+ * @param {(oikein: boolean) => ({ ok: boolean }|null|undefined)} asetukset.kirjaa
+ * @param {(oikein: boolean) => void} [asetukset.ennen] Heti kirjauksen
+ *   jälkeen, ennen tulosrivin piirtoa.
+ * @param {(oikein: boolean) => void} [asetukset.jalkeen] Tulosrivin
+ *   jälkeen: palkintokuvat, tallennus, kuittaukset.
+ * @returns {{ vaihtoehdot: Element, tulos: Element }}
+ */
+export function piirraVisanVastaukset(ui, laatikko, {
+  visa, palkkio, kirjaa, ennen, jalkeen,
+}) {
+  const vaihtoehdot = html('div', 'kulttuuri-vaihtoehdot');
+  const tulos = html('p', 'kulttuuri-tulos');
+  tulos.hidden = true;
+  visa.vaihtoehdot.forEach((teksti, i) => {
+    const nappi = html('button', '', teksti);
+    nappi.type = 'button';
+    nappi.addEventListener('click', () => {
+      const oikein = i === visa.oikea;
+      const vastaus = kirjaa(oikein);
+      if (!vastaus?.ok) return;
+      ennen?.(oikein);
+      vaihtoehdot.replaceChildren();
+      tulos.hidden = false;
+      tulos.className = oikein ? 'kulttuuri-tulos oikein-tulos' : 'kulttuuri-tulos vaarin-tulos';
+      tulos.textContent = (oikein
+        ? `Oikein! +${palkkio} puntaa. `
+        : `Oikea vastaus: ${visa.vaihtoehdot[visa.oikea]}. `) + (visa.fakta ?? '');
+      sfx.play(oikein ? 'correct' : 'wrong');
+      natiiviVastaus(oikein);
+      jalkeen?.(oikein);
+    });
+    vaihtoehdot.appendChild(nappi);
+  });
+  laatikko.appendChild(vaihtoehdot);
+  laatikko.appendChild(tulos);
+  return { vaihtoehdot, tulos };
+}
+
+/**
  * Nimetty tehtävälaatikko sivun loppuun.
  *
  * Ulkoasu on lehden minitehtävän oma (.minitehtava ja sen luokat,
@@ -899,31 +967,25 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
     ? ui.piirraJulistepalkinto(laatikko, julisteAvain, juliste, ui.game.julisteet?.has(julisteAvain))
     : null;
   laatikko.appendChild(html('p', 'minitehtava-kysymys', visa.kysymys));
-  const vaihtoehdot = html('div', 'kulttuuri-vaihtoehdot');
-  const tulos = html('p', 'kulttuuri-tulos');
-  tulos.hidden = true;
-  visa.vaihtoehdot.forEach((teksti, i) => {
-    const nappi = html('button', '', teksti);
-    nappi.type = 'button';
-    nappi.addEventListener('click', () => {
-      const oikein = i === visa.oikea;
-      // Tilanne ENNEN vastausta: kuittaus ei saa kertoa jäljen
-      // syttyneen, jos se paloi kartalla jo tähän napautettaessa.
-      const oliAuki = aarreAuki(ui, city);
-      const vastaus = ui.game.actionMinitehtava(
+  // Tilanne ENNEN vastausta: kuittaus ei saa kertoa jäljen syttyneen,
+  // jos se paloi kartalla jo tähän napautettaessa. Arvo luetaan
+  // kirjauksen alussa, eli ennen kuin actionMinitehtava on muuttanut
+  // mitään — siksi se on `kirjaa`n sisällä eikä sen ulkopuolella.
+  let oliAuki = false;
+  piirraVisanVastaukset(ui, laatikko, {
+    visa,
+    palkkio: FOKUS_TEHTAVA_PALKKIO,
+    kirjaa: (oikein) => {
+      oliAuki = aarreAuki(ui, city);
+      return ui.game.actionMinitehtava(
         city.id, tehtavanAihe(tehtava), oikein, FOKUS_TEHTAVA_PALKKIO,
       );
-      if (!vastaus.ok) return;
+    },
+    ennen: () => {
       // Vihjerivi oli lupaus vastaamattomalle; nyt tilalle tulee tulos.
       vihjerivi?.remove();
-      vaihtoehdot.replaceChildren();
-      tulos.hidden = false;
-      tulos.className = oikein ? 'kulttuuri-tulos oikein-tulos' : 'kulttuuri-tulos vaarin-tulos';
-      tulos.textContent = (oikein
-        ? `Oikein! +${FOKUS_TEHTAVA_PALKKIO} puntaa. `
-        : `Oikea vastaus: ${visa.vaihtoehdot[visa.oikea]}. `) + (visa.fakta ?? '');
-      sfx.play(oikein ? 'correct' : 'wrong');
-      natiiviVastaus(oikein);
+    },
+    jalkeen: (oikein) => {
       if (oikein) {
         const box = ui.buildToast?.({
           kind: 'stamp',
@@ -963,11 +1025,8 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
        * lukee siitä, kumpi tehtävä on vielä tekemättä.
        */
       if (oikein) kuittausPinta?.(ui, kuittausTeksti(ui, city, tehtava, oliAuki));
-    });
-    vaihtoehdot.appendChild(nappi);
+    },
   });
-  laatikko.appendChild(vaihtoehdot);
-  laatikko.appendChild(tulos);
   /*
    * TARJOUS VASTAUSLIPUKKEIDEN ALLE, EI NIIDEN SEKAAN. Se on eri asia
    * kuin vastaaminen — toinen tie samaan vinkkiin — ja sen on näytettävä

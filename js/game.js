@@ -473,6 +473,23 @@ export class Game {
      */
     this.minitehtavatOikein = new Set();
     /*
+     * KARTTANOSTOJEN RATKAISTUT MINIKYSYMYKSET, PELKKÄNÄ LUKUNA
+     * (karttauudistuksen erä 6, 13.9.2026).
+     *
+     * Nostokortin lopun minikysymys kirjataan kuten lehden minitehtävä
+     * (actionMinitehtava, avain 'pakka:nosto:tunnus'), mutta erä 7
+     * tarvitsee siitä vain yhden asian: MONTAKO on ratkaistu. Aarteen
+     * vihreä piste syttyy, kun tämä on vähintään 2 — ja koska ehto
+     * lukee VAIN nostojen kysymyksiä, lehtitehtävien joukko ei kelpaa
+     * laskuriksi (se täyttyisi vahingossa vanhoista vastauksista).
+     *
+     * KOKONAISLUKU EIKÄ JOUKKO, jotta lukija pysyy yksinkertaisena.
+     * Kaksoiskirjaukselta suojaa actionMinitehtavan oma portti: luku
+     * kasvaa vain, kun kirjaus meni läpi ja vastaus oli oikein
+     * (js/fokusnosto.js piirraNostonVisa).
+     */
+    this.nostotehtavatRatkaistu = 0;
+    /*
      * LIVIALLE OSTETUT PULLAT (omistajan tilaus 28.8.2026), avaimena
      * 'pakka:kaupunki'. Osto on vaihtoehtoinen tie samaan vinkkiin,
      * jonka lehden AARTEEN AVAUS -tehtävä antaa (js/fokustehtavat.js
@@ -1209,6 +1226,22 @@ export class Game {
       this.say(this.player.id, `${this.player.name} ratkaisi lehden minitehtävän (+${palkkio} puntaa).`);
     }
     return { ok: true, palkittu: !!oikein };
+  }
+
+  /**
+   * KARTTANOSTON MINIKYSYMYS RATKESI (karttauudistuksen erä 6).
+   *
+   * Vain laskurin kasvatus: kassa, kirjanpito ja kaksoiskirjauksen
+   * esto ovat `actionMinitehtava`ssa, jonka rajapintaa erä 6 ei muuta.
+   * Kutsuja (js/fokusnosto.js piirraNostonVisa) kutsuu tätä vasta, kun
+   * actionMinitehtava palautti `ok` JA vastaus oli oikein — siksi tässä
+   * ei ole omaa porttia eikä omaa avainta.
+   *
+   * @returns {number} laskurin uusi arvo
+   */
+  kirjaaNostotehtava() {
+    this.nostotehtavatRatkaistu += 1;
+    return this.nostotehtavatRatkaistu;
   }
 
   /**
@@ -2998,6 +3031,7 @@ export class Game {
       kulttuuriVastatut: [...this.kulttuuriVastatut],
       minitehtavatVastatut: [...this.minitehtavatVastatut],
       minitehtavatOikein: [...this.minitehtavatOikein],
+      nostotehtavatRatkaistu: this.nostotehtavatRatkaistu,
       pullaVinkit: [...this.pullaVinkit],
       elaintakyLunastetut: [...this.elaintakyLunastetut],
       julisteet: [...this.julisteet],
@@ -3158,6 +3192,14 @@ export class Game {
      * julistetta, ja mennyttä vastausta ei voi enää tarkistaa.
      */
     game.minitehtavatOikein = new Set(data.minitehtavatOikein ?? data.minitehtavatVastatut ?? []);
+    /*
+     * Vanha tallennus ei tunne nostojen minikysymyksiä: laskuri alkaa
+     * nollasta eikä skeemaversio nouse (erän 6 sääntö). Rikkinäinen tai
+     * puuttuva arvo luetaan nollaksi — laskuri ei saa muuttua
+     * NaN:ksi, koska erän 7 ehto (>= 2) lukee sitä suoraan.
+     */
+    game.nostotehtavatRatkaistu = Number.isFinite(Number(data.nostotehtavatRatkaistu))
+      ? Math.max(0, Math.trunc(Number(data.nostotehtavatRatkaistu))) : 0;
     /*
      * Vanha tallennus ei tunne pullavinkkiä: joukko alkaa tyhjänä ja
      * tarjous on kesken olevassa pelissä yhä ostamatta. Se on oikea
