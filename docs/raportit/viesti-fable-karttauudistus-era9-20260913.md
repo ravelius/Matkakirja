@@ -33,7 +33,7 @@ Omistajan pilottipalautteen kolme kohtaa on tehty.
 3. **"Etsi aarre" -nappi on poistettu** kokonaan (moduuli, CSS, testit,
    savuke). Aarteen ovi kartalla on erän 7 vihreä piste.
 
-Savuke `savuke-era9.mjs` on **TULOS_VIHREA** vastakokeineen. Portit:
+Savuke `savuke-era9.mjs` on **8/8 vihreä** vastakokeineen. Portit:
 `npm test` 3305/0 fail, kaksoisavaimet, niputus, savukevartija,
 build-standalone.
 
@@ -115,11 +115,17 @@ lautayksikköohjeena. Lopputulos asettuu lukujen väliin:
 | Uloin sallittu zoomi | — | **114 × 89 px** (29 % leveydestä) |
 | Työpöytä 1400 × 900, uloin zoomi | — | **223 × 174 px** (16 % leveydestä) |
 
-Mitoitus on lautayksiköissä kuten PÄÄTÖKSET 2 vaatii: paneelin leveys
-on `min(0,35 × laatikon leveys, 0,42 × laatikon korkeus × kuvasuhde)`
-lautayksikköinä, ja ruutukoko seuraa kamerasta. Ranskalla leveysosuus
-on tiukempi raja; korkeusosuus sitoo leveillä ja matalilla mailla
-(Venäjä, Kazakstan).
+Mitoitus on lautayksiköissä kuten PÄÄTÖKSET 2 vaatii. Kortin
+peruskoosta (190 × 148 css-px) lasketaan kerroin
+
+    perusta = min(0,35 × laatikon leveys / 190,
+                  0,42 × laatikon korkeus / 148)
+
+lautayksikköä per css-pikseli, ja ruutukoko seuraa kamerasta
+(`skaala = perusta × px_per_lautayksikkö`). Ranskalla (laatikko
+489,8 × 406,3 yks) leveysosuus on tiukempi raja — perusta 0,902 eli
+paneeli 171 × 133 lautayksikköä; korkeusosuus sitoo leveillä ja
+matalilla mailla (Venäjä, Kazakstan).
 
 **Teksti uloimmalla zoomilla.** Nimi on 13 px × skaala ≈ 0,6 = ~8 px ja
 lukurivit ~6 px 390 px:n ruudulla: **luettavissa vasta lähemmällä
@@ -194,7 +200,21 @@ rajaa vasten.
 
 ### 3.4 Mitattu
 
-MITTA_PANOROINTI
+Ranska, kameran keskipisteen pituusaste. Sallittu ala laatikosta ×
+1,3 on **−7,338°…11,764°**. Veto tehdään ohjelmallisesti hiiren
+oikeista laidasta vasempaan (itään) niin monta kierrosta, että
+yhteispituus ylittää 2000 px; sormi pysähtyy ennen irrotusta, joten
+mitattu siirtymä on VEDON eikä liu'un.
+
+| Ruutu | Veto | Rajattuna | Riisuttuna (vastakoe A) |
+| --- | --- | --- | --- |
+| 390 × 844 | 1956 px | 2,213° → **11,764°** (+9,55°) | 2,213° → **125,690°** (+123,48°) |
+| 1400 × 900 | 2660 px | 2,213° → **11,764°** (+9,55°) | 2,213° → **69,675°** (+67,46°) |
+
+Ilman rajausta yksi vetosarja vie Ranskasta **Kiinan rajalle**
+(125,7° itäistä pituutta) — täsmälleen se, minkä erän 1c luku 9.6
+kirjasi. Rajattuna kamera pysähtyy alan reunaan eikä ylitä sitä
+kummallakaan ruudulla.
 
 ## 4. "Etsi aarre" -nappi pois
 
@@ -224,7 +244,57 @@ kertovat nyt, että ainoa käyttäjä poistui.
 
 ## 5. Savuke ja portit
 
-SAVUKE_TULOS
+`tools/savukkeet/savuke-era9.mjs` (uusi; tarkista-savukkeet löytää
+kansiosta). Peli: Fogg Pariisissa, `?lauta=pallo`, kaksi ruutua
+(390 × 844 ja 1400 × 900). Mitta otetaan ULOIMMALTA SALLITULTA
+ZOOMILTA (ks. luku 2.4), koska saapumiskorkeus ei ole yksikäsitteinen.
+
+```
+PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node tools/savukkeet/savuke-era9.mjs \
+    docs/raportit/kuvat
+```
+
+**VIHREÄ AJO — 8/8 vartiota läpi.**
+
+```
+OK  pallolauta aukesi (390 px)
+OK  pallolauta aukesi (1400 px)
+OK  1. paneeli on pieni ja kokonaan ruudulla (390 px ja 1400 px,
+       uloin sallittu zoomi)
+OK  2. panorointi pysyy maan laatikko × 1,3 -alalla (2000 px:n veto)
+OK  VASTAKOE A: ilman panorointirajausta sama veto vie keskipisteen ULOS
+OK  3. "Etsi aarre" -nappia ei ole DOM:issa Ranskassa
+OK  4. pääajo ei tuottanut sivuvirheitä
+OK  VASTAKOE B: entisillä mitoilla kokoväite kaatuu
+```
+
+**VASTAKOKEET, JOIDEN PITI OLLA PUNAISIA — JA OLIVAT.**
+
+- **A: panoroinnin rajaus riisuttiin** (`ui.pallonPanorajaus = null`,
+  se sama kahva, jonka lauta asentaa). Sama veto vei keskipisteen
+  2,213° → **125,690°** eli reilusti alan ulkopuolelle: *"väite 2
+  PUNAINEN"*. Ilman tätä veto ei mittaisi mitään — 2000 px voisi jäädä
+  alan sisään sattumalta.
+- **B: koon muutos riisuttiin.** Palvelin tarjoili
+  `js/pallolauta/maapaneeli.js`:n erän 3 mitoilla (peruskoko 300 × 96,
+  leveysosuus 1); peli ajoi siis oikeasti vanhoilla luvuilla. Kortti
+  mittasi **187 × 146 px** eli yli 150 px:n katon: *"kokoväite
+  PUNAINEN"*.
+
+**Muut portit** (kaikki vihreitä):
+
+| Portti | Tulos |
+| --- | --- |
+| `npm test` | 3305 testiä, **0 fail** (3292 läpi, 13 ohitettua) |
+| `node tools/tarkista-kaksoisavaimet.mjs` | ei kaksoisavaimia |
+| `node tools/tarkista-niputus.mjs` | 387 moduulia, ei törmäyksiä |
+| `node tools/tarkista-savukkeet.mjs` | 1590 ui-viittausta kunnossa |
+| `node tools/build-standalone.mjs` | dist/matkakirja.html 31 842 kt (EI committoitu) |
+| `grep -rn '^<<<<<<<' js css tests tools` | tyhjä |
+
+Lisäksi ajettiin **erän 3 oma savuke** `savuke-maapaneeli.mjs`
+varmistamaan, ettei Lisää-valikko rikkoutunut uuden asettelun myötä:
+ERA3_SAVUKE
 
 ## 6. Kuvat
 

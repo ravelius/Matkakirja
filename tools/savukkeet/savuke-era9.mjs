@@ -66,14 +66,19 @@ const KUVAKANSIO = process.argv[2] ?? null;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
 /**
- * Kortin sallittu leveys 390 px:n ruudulla. Tehtävänannon tavoite on
- * "paljon pienempi" ja 150–200 css-px saapumisnäkymässä; uloimmalla
- * sallitulla zoomilla mitattu luku on sitä pienempi (114 px), joten
- * katto on väljempi kuin mitattu arvo mutta selvästi erän 3 alapuolella
- * (233 px). Katto on VÄITE, ei mitoitus: se kaatuu heti, jos paneeli
- * palaa entiseen kokoluokkaansa.
+ * Kortin sallittu leveys ULOIMMALLA SALLITULLA ZOOMILLA. Katto on
+ * VÄITE, ei mitoitus, ja se on valittu niin, että se EROTTAA erän 9
+ * mitat erän 3 mitoista samalla mittauspisteellä (mitattu 13.9.2026):
+ *
+ *              390 px      1400 px
+ *   erä 9      114 px      223 px
+ *   erä 3      187 px      (vastakoe ajetaan 390 px:llä)
+ *
+ * Tehtävänannon 150–200 css-px koskee SAAPUMISNÄKYMÄÄ (siinä mitta on
+ * 167 px); uloin sallittu zoomi on sitä ulompana, joten sen katto on
+ * tiukempi. Ks. erän 9 raportin luvut 2.3 ja 2.4.
  */
-const KOKO_KATTO = { 390: 200, 1400: 320 };
+const KOKO_KATTO = { 390: 150, 1400: 280 };
 
 const TYYPIT = {
   '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
@@ -342,8 +347,25 @@ for (const ruutu of RUUDUT) {
     });
     // eslint-disable-next-line no-await-in-loop
     await sivu.waitForTimeout(400);
+    /*
+     * TYÖPÖYDÄN KUVA RAJATAAN. Raportin kuvakatto on 400 kt, ja koko
+     * 1400 × 900 -ruutu on PNG:nä 1,3 Mt — suurin osa siitä on tyhjää
+     * merta ja naapurimaita. Rajaus jättää kuvaan Ranskan eteläosan ja
+     * koko paneelin; puhelinruutu (390 × 844 = 337 kt) mahtuu kattoon
+     * kokonaisena, ja siinä kuvan arvo on juuri se, että paneeli näkyy
+     * koko ruudun mittasuhteissa.
+     */
+    const rajaus = ruutu.leveys > 800 ? {
+      x: Math.max(0, Math.round((m.kortti.x0 + m.kortti.x1) / 2) - 320),
+      y: Math.max(0, Math.round(m.kortti.y1) + 30 - 580),
+      width: 640,
+      height: 580,
+    } : null;
     // eslint-disable-next-line no-await-in-loop
-    await sivu.screenshot({ path: join(KUVAKANSIO, `karttauudistus-9-${ruutu.nimi}.png`) });
+    await sivu.screenshot({
+      path: join(KUVAKANSIO, `karttauudistus-9-${ruutu.nimi}.png`),
+      ...(rajaus ? { clip: rajaus } : {}),
+    });
   }
 
   /* --- 2. panoroinnin rajaus ------------------------------------- */

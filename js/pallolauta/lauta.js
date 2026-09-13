@@ -3180,7 +3180,7 @@ export async function avaaPallolauta(ui) {
       litistaja.pura();
       // Panoroinnin raja on tämän laudan sääntö: se ei saa jäädä
       // voimaan, kun lauta puretaan (ks. PANOROINNIN RAJA yllä).
-      if (ui.pallonPanorajaus) ui.pallonPanorajaus = null;
+      ui.pallonPanorajaus = null;
       maapaneeli.pura();
       merkkienNakyvyys.pura();
       merkit.pura();

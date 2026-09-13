@@ -25729,10 +25729,12 @@ svg.rough-annotation { pointer-events: none; }
   line-height: 0;
   cursor: pointer;
 }
+/* Palkit samaan ruutuun ja keskitettyinä (place-items) — sama tapa
+   kuin nurkkataulun plussalla, ei absoluuttista ankkurointia. */
 .maapaneeli-lisaa::before,
 .maapaneeli-lisaa::after {
   content: '';
-  position: absolute;
+  grid-area: 1 / 1;
   background: currentColor;
   border-radius: 1px;
 }
