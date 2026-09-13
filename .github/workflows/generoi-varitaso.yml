@@ -167,6 +167,10 @@ jobs:
           set -euo pipefail
           npm install --no-fund --no-audit
           npx playwright install --with-deps chromium
+          # Generaattori lukee selaimen polun PW_CHROMIUM-muuttujasta
+          # (oletus /opt/pw-browsers/chromium on kontin polku, ei ajokoneen);
+          # sama kaava kuin generoi-pyramidi.yml:ssä.
+          echo "PW_CHROMIUM=$(find ~/.cache/ms-playwright -name chrome -path '*chrome-linux*' -type f | head -1)" >> "$GITHUB_ENV"
 
       # -------------------------------------------- luettelot ämpäristä
       #
