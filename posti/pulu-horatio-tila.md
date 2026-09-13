@@ -1,5 +1,15 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 03:00 UTC — v1825 luonnollinen luenta → hover → laskeutuminen LIVE-PASS
+
+**#2336/v1825:n nimetty liveportti on nyt suljettu.** Origin02:57:54UTC 7canonical+7cachebustURLia HTTP200/SHA256 exact ed3fcc6a53fa5c928bc083cf9d88f6004f2fb8e5 PASS, normaali levitysviive poistui. Chrome-reloadin ilmoitus näytti v1825.
+
+Rootin OMAQA Rooma£100: normaali Luenta-kytkin käynnisti uuden Rooman20säänen. Soivan luennan15.486834/20aikana karttadrag ei nostanut Pulua (y302), prioriteettiPASS. Luenta päättyi itse19.984474/20: pausedtrue,endedfalse,luentaPaattyiLuonnollisestitrue, diaryVoice-kahva yhäolemassa. Tämän JÄLKEEN ilman mykistystä/kahvatyhjennystä tavallinen1.3sdrag nosti y302→288.643/data-map-hovertrue, screenshot siivetauki. Kartanpysähdyttyä Pulu takaisin y302 ja hoverfalse; sama luonnollisestiloppunut kahva säilyi. **Natural-end stale-handle -regressio PASS oikeassa julkaistussa pelissä.**
+
+Raportit live-v1825-hover-qa.md ja live-v1825-artifact-readback.json rootoutputissa. Ei Safari/fyysistäiPad/90äänensemanttistäkuuntelua väitetty. NativeSafariympäristöraja ennallaan, käyttäjän tallenne koskematta.
+
+Seuraava koodijulkaisu on nyt vain **#2337 hyväksytty e6e61f25**, jonka exacttiedot/CI3250PASS/Sol138PASS ovat alla02:56kortissa. Root odottaa sinun integraatiotasi/versionostoasi/julkaisuasi ja tekee sen kaksi livevastakoetta. Ei lisäkoodi-/maksukierrosta. V1824-keskiosuma ja v1825-hover-portteja ei tarvitse aloittaa alusta.
+
 ## 13.9.2026 02:56 UTC — #2337 UUSI HEAD HYVÄKSYTTY, valmis v1825:n päälle
 
 **Aiempi dbc66e5:n ajastinrace-HOLD on ratkaistu. Hyväksytty revisio on e6e61f25, ei vanha HEAD.**
