@@ -1,0 +1,1815 @@
+{
+  "schemaVersion": 1,
+  "reportId": "pulu-city-cue-duration-audit-20260913",
+  "createdAt": "2026-09-13T05:35:27.516Z",
+  "source": {
+    "repository": "/Users/samireivinen/Matkakirja",
+    "requestedRef": "origin/main",
+    "requestedHead": "460b4533b355265cc3d5fb0532a30db5e14b34c2",
+    "requestedHeadVersion": "v1829",
+    "cueAndMappingContentCommit": "d3bd7060d50fdbee145e9d5659142740baffd567",
+    "contentEquivalence": "git diff --quiet returned 0 between cueAndMappingContentCommit and requestedHead for js/liviapuhe.js, js/livia-pilotti-cuet.js, js/livia-puheleet.js, js/livia-eleet.js, js/livia-svg.js, and js/livia-puheeleet-lataus.js",
+    "mappingSource": "js/liviapuhe.js:122-167",
+    "sidecarDerivationSource": "js/livia-puheeleet-lataus.js:9-12"
+  },
+  "retrieval": {
+    "retrievedAt": "2026-09-13T05:28:56.355Z",
+    "source": "previously captured read-only audit output from the same local Codex run",
+    "networkRefetchPerformed": false,
+    "originalSidecarBytesRetained": false,
+    "sidecarContentSha256": null,
+    "sidecarContentSha256Status": "unknown: parsed JSON rows were retained, original response bytes were not retained or hashed"
+  },
+  "runtimeFinding": {
+    "confirmed": true,
+    "cityExplainDurationMs": 6200,
+    "summary": "cityExplain advances on a fixed wall-clock timeline but speechCueEnd terminates it at the sidecar cue boundary. Pause and seek restart an in-progress cue at phase zero; playbackRate does not scale the animation timeline.",
+    "evidence": [
+      "js/livia-svg.js:13",
+      "js/livia-svg.js:50-57",
+      "js/livia-svg.js:101-111",
+      "js/livia-puheleet.js:39-101",
+      "js/livia-eleet.js:279-306",
+      "js/livia-eleet.js:381-388",
+      "tests/livia-puheleet.test.mjs:31-49"
+    ]
+  },
+  "aggregates": {
+    "sidecarCount": 45,
+    "fetchErrorCount": 0,
+    "allCues": {
+      "cueCount": 160,
+      "below1000Ms": 12,
+      "below2000Ms": 44,
+      "below3000Ms": 79,
+      "below6200Ms": 151,
+      "equal6200Ms": 9,
+      "minMs": 640,
+      "medianMs": 3040,
+      "maxMs": 6200
+    },
+    "cityExplainCues": {
+      "cueCount": 23,
+      "below1000Ms": 0,
+      "below2000Ms": 1,
+      "below3000Ms": 8,
+      "below6200Ms": 22,
+      "equal6200Ms": 1,
+      "minMs": 1500,
+      "medianMs": 3240,
+      "maxMs": 6200
+    },
+    "byMeaning": {
+      "epailee": {
+        "cueCount": 1,
+        "below1000Ms": 0,
+        "below2000Ms": 0,
+        "below3000Ms": 0,
+        "below6200Ms": 1,
+        "equal6200Ms": 0,
+        "minMs": 3740,
+        "medianMs": 3740,
+        "maxMs": 3740
+      },
+      "hammastys": {
+        "cueCount": 1,
+        "below1000Ms": 0,
+        "below2000Ms": 0,
+        "below3000Ms": 0,
+        "below6200Ms": 1,
+        "equal6200Ms": 0,
+        "minMs": 5420,
+        "medianMs": 5420,
+        "maxMs": 5420
+      },
+      "hammastyy": {
+        "cueCount": 12,
+        "below1000Ms": 0,
+        "below2000Ms": 0,
+        "below3000Ms": 7,
+        "below6200Ms": 12,
+        "equal6200Ms": 0,
+        "minMs": 2160,
+        "medianMs": 2860,
+        "maxMs": 4939
+      },
+      "hammentynyt": {
+        "cueCount": 19,
+        "below1000Ms": 1,
+        "below2000Ms": 6,
+        "below3000Ms": 11,
+        "below6200Ms": 19,
+        "equal6200Ms": 0,
+        "minMs": 740,
+        "medianMs": 2740,
+        "maxMs": 5400
+      },
+      "huvittuu": {
+        "cueCount": 20,
+        "below1000Ms": 3,
+        "below2000Ms": 12,
+        "below3000Ms": 15,
+        "below6200Ms": 19,
+        "equal6200Ms": 1,
+        "minMs": 640,
+        "medianMs": 1481,
+        "maxMs": 6200
+      },
+      "ilo": {
+        "cueCount": 31,
+        "below1000Ms": 2,
+        "below2000Ms": 7,
+        "below3000Ms": 16,
+        "below6200Ms": 27,
+        "equal6200Ms": 4,
+        "minMs": 700,
+        "medianMs": 2940,
+        "maxMs": 6200
+      },
+      "lammin": {
+        "cueCount": 8,
+        "below1000Ms": 2,
+        "below2000Ms": 3,
+        "below3000Ms": 5,
+        "below6200Ms": 8,
+        "equal6200Ms": 0,
+        "minMs": 820,
+        "medianMs": 2260,
+        "maxMs": 4640
+      },
+      "miettiva": {
+        "cueCount": 14,
+        "below1000Ms": 2,
+        "below2000Ms": 8,
+        "below3000Ms": 8,
+        "below6200Ms": 13,
+        "equal6200Ms": 1,
+        "minMs": 720,
+        "medianMs": 1679,
+        "maxMs": 6200
+      },
+      "myotailee": {
+        "cueCount": 23,
+        "below1000Ms": 1,
+        "below2000Ms": 5,
+        "below3000Ms": 7,
+        "below6200Ms": 23,
+        "equal6200Ms": 0,
+        "minMs": 861,
+        "medianMs": 4260,
+        "maxMs": 6080
+      },
+      "rakkaus": {
+        "cueCount": 2,
+        "below1000Ms": 0,
+        "below2000Ms": 0,
+        "below3000Ms": 0,
+        "below6200Ms": 2,
+        "equal6200Ms": 0,
+        "minMs": 3520,
+        "medianMs": 3800,
+        "maxMs": 3800
+      },
+      "selittaa": {
+        "cueCount": 23,
+        "below1000Ms": 0,
+        "below2000Ms": 1,
+        "below3000Ms": 8,
+        "below6200Ms": 22,
+        "equal6200Ms": 1,
+        "minMs": 1500,
+        "medianMs": 3240,
+        "maxMs": 6200
+      },
+      "vakavoituu": {
+        "cueCount": 6,
+        "below1000Ms": 1,
+        "below2000Ms": 2,
+        "below3000Ms": 2,
+        "below6200Ms": 4,
+        "equal6200Ms": 2,
+        "minMs": 840,
+        "medianMs": 5241,
+        "maxMs": 6200
+      }
+    }
+  },
+  "examples": [
+    {
+      "category": "short",
+      "key": "tromssa-3",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-tromssa-3.eleet.json",
+      "id": "tromssa.livia.c1",
+      "meaning": "selittaa",
+      "startMs": 1000,
+      "endMs": 2500,
+      "durationMs": 1500,
+      "normalizedCityExplainProgressAtCueEnd": 0.241935
+    },
+    {
+      "category": "medium",
+      "key": "helsinki-3",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-helsinki-3.eleet.json",
+      "id": "helsinki.livia.c1",
+      "meaning": "selittaa",
+      "startMs": 879,
+      "endMs": 4119,
+      "durationMs": 3240,
+      "normalizedCityExplainProgressAtCueEnd": 0.522581
+    },
+    {
+      "category": "nearFull",
+      "key": "granada-3",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-granada-3.eleet.json",
+      "id": "granada.livia.c1",
+      "meaning": "selittaa",
+      "startMs": 1220,
+      "endMs": 7139,
+      "durationMs": 5919,
+      "normalizedCityExplainProgressAtCueEnd": 0.954677
+    },
+    {
+      "category": "full",
+      "key": "berliini-3",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-berliini-3.eleet.json",
+      "id": "berliini.livia.c1",
+      "meaning": "selittaa",
+      "startMs": 1019,
+      "endMs": 7219,
+      "durationMs": 6200,
+      "normalizedCityExplainProgressAtCueEnd": 1
+    }
+  ],
+  "sidecars": [
+    {
+      "key": "ateena-3",
+      "city": "ateena",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-ateena-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 4,
+      "cues": [
+        {
+          "id": "ateena.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 1500,
+          "endMs": 4199,
+          "durationMs": 2699
+        },
+        {
+          "id": "ateena.livia.c3",
+          "meaning": "ilo",
+          "startMs": 4199,
+          "endMs": 6699,
+          "durationMs": 2500
+        },
+        {
+          "id": "ateena.livia.c4",
+          "meaning": "ilo",
+          "startMs": 6699,
+          "endMs": 10439,
+          "durationMs": 3740
+        },
+        {
+          "id": "ateena.livia.c5",
+          "meaning": "ilo",
+          "startMs": 10439,
+          "endMs": 11679,
+          "durationMs": 1240
+        }
+      ]
+    },
+    {
+      "key": "sarajevo-3",
+      "city": "sarajevo",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-sarajevo-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 4,
+      "cues": [
+        {
+          "id": "sarajevo.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 1159,
+          "endMs": 5299,
+          "durationMs": 4140
+        },
+        {
+          "id": "sarajevo.livia.c3",
+          "meaning": "lammin",
+          "startMs": 5299,
+          "endMs": 8399,
+          "durationMs": 3100
+        },
+        {
+          "id": "sarajevo.livia.c4",
+          "meaning": "ilo",
+          "startMs": 8399,
+          "endMs": 10779,
+          "durationMs": 2380
+        },
+        {
+          "id": "sarajevo.livia.c5",
+          "meaning": "ilo",
+          "startMs": 10779,
+          "endMs": 12179,
+          "durationMs": 1400
+        }
+      ]
+    },
+    {
+      "key": "helsinki-3",
+      "city": "helsinki",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-helsinki-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 4,
+      "cues": [
+        {
+          "id": "helsinki.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 879,
+          "endMs": 4119,
+          "durationMs": 3240
+        },
+        {
+          "id": "helsinki.livia.c2",
+          "meaning": "ilo",
+          "startMs": 4119,
+          "endMs": 9420,
+          "durationMs": 5301
+        },
+        {
+          "id": "helsinki.livia.c3",
+          "meaning": "hammentynyt",
+          "startMs": 9420,
+          "endMs": 12420,
+          "durationMs": 3000
+        },
+        {
+          "id": "helsinki.livia.c4",
+          "meaning": "miettiva",
+          "startMs": 12420,
+          "endMs": 14000,
+          "durationMs": 1580
+        }
+      ]
+    },
+    {
+      "key": "tampere-3",
+      "city": "tampere",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-tampere-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 5,
+      "cues": [
+        {
+          "id": "tampere.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 1259,
+          "endMs": 4679,
+          "durationMs": 3420
+        },
+        {
+          "id": "tampere.livia.c2",
+          "meaning": "ilo",
+          "startMs": 4679,
+          "endMs": 7739,
+          "durationMs": 3060
+        },
+        {
+          "id": "tampere.livia.c3",
+          "meaning": "hammentynyt",
+          "startMs": 7739,
+          "endMs": 10479,
+          "durationMs": 2740
+        },
+        {
+          "id": "tampere.livia.c4",
+          "meaning": "ilo",
+          "startMs": 10479,
+          "endMs": 12039,
+          "durationMs": 1560
+        },
+        {
+          "id": "tampere.livia.c5",
+          "meaning": "hammentynyt",
+          "startMs": 12039,
+          "endMs": 12779,
+          "durationMs": 740
+        }
+      ]
+    },
+    {
+      "key": "tallinna-3",
+      "city": "tallinna",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-tallinna-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 4,
+      "cues": [
+        {
+          "id": "tallinna.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 799,
+          "endMs": 4900,
+          "durationMs": 4101
+        },
+        {
+          "id": "tallinna.livia.c2",
+          "meaning": "ilo",
+          "startMs": 4900,
+          "endMs": 8179,
+          "durationMs": 3279
+        },
+        {
+          "id": "tallinna.livia.c3",
+          "meaning": "lammin",
+          "startMs": 8179,
+          "endMs": 12819,
+          "durationMs": 4640
+        },
+        {
+          "id": "tallinna.livia.c4",
+          "meaning": "miettiva",
+          "startMs": 12819,
+          "endMs": 13659,
+          "durationMs": 840
+        }
+      ]
+    },
+    {
+      "key": "riika-3",
+      "city": "riika",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-riika-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 4,
+      "cues": [
+        {
+          "id": "riika.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 359,
+          "endMs": 4659,
+          "durationMs": 4300
+        },
+        {
+          "id": "riika.livia.c2",
+          "meaning": "ilo",
+          "startMs": 4659,
+          "endMs": 7599,
+          "durationMs": 2940
+        },
+        {
+          "id": "riika.livia.c3",
+          "meaning": "miettiva",
+          "startMs": 7599,
+          "endMs": 13799,
+          "durationMs": 6200
+        },
+        {
+          "id": "riika.livia.c4",
+          "meaning": "lammin",
+          "startMs": 14739,
+          "endMs": 15559,
+          "durationMs": 820
+        }
+      ]
+    },
+    {
+      "key": "vilna-3",
+      "city": "vilna",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-vilna-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 5,
+      "cues": [
+        {
+          "id": "vilna.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 1240,
+          "endMs": 4139,
+          "durationMs": 2899
+        },
+        {
+          "id": "vilna.livia.c2",
+          "meaning": "miettiva",
+          "startMs": 4139,
+          "endMs": 9539,
+          "durationMs": 5400
+        },
+        {
+          "id": "vilna.livia.c3",
+          "meaning": "hammentynyt",
+          "startMs": 9539,
+          "endMs": 13559,
+          "durationMs": 4020
+        },
+        {
+          "id": "vilna.livia.c4",
+          "meaning": "selittaa",
+          "startMs": 13559,
+          "endMs": 15659,
+          "durationMs": 2100
+        },
+        {
+          "id": "vilna.livia.c5",
+          "meaning": "ilo",
+          "startMs": 15659,
+          "endMs": 16539,
+          "durationMs": 880
+        }
+      ]
+    },
+    {
+      "key": "marseille-3",
+      "city": "marseille",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-marseille-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 4,
+      "cues": [
+        {
+          "id": "marseille.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 519,
+          "endMs": 3339,
+          "durationMs": 2820
+        },
+        {
+          "id": "marseille.livia.c3",
+          "meaning": "lammin",
+          "startMs": 3339,
+          "endMs": 7319,
+          "durationMs": 3980
+        },
+        {
+          "id": "marseille.livia.c2",
+          "meaning": "ilo",
+          "startMs": 7319,
+          "endMs": 9979,
+          "durationMs": 2660
+        },
+        {
+          "id": "marseille.livia.c4",
+          "meaning": "miettiva",
+          "startMs": 9979,
+          "endMs": 11119,
+          "durationMs": 1140
+        }
+      ]
+    },
+    {
+      "key": "venetsia-3",
+      "city": "venetsia",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-venetsia-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 6,
+      "cues": [
+        {
+          "id": "venetsia.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 819,
+          "endMs": 4519,
+          "durationMs": 3700
+        },
+        {
+          "id": "venetsia.livia.c5",
+          "meaning": "lammin",
+          "startMs": 4519,
+          "endMs": 6719,
+          "durationMs": 2200
+        },
+        {
+          "id": "venetsia.livia.c6",
+          "meaning": "rakkaus",
+          "startMs": 6719,
+          "endMs": 10519,
+          "durationMs": 3800
+        },
+        {
+          "id": "venetsia.livia.c2",
+          "meaning": "hammentynyt",
+          "startMs": 10519,
+          "endMs": 13500,
+          "durationMs": 2981
+        },
+        {
+          "id": "venetsia.livia.c3",
+          "meaning": "rakkaus",
+          "startMs": 13500,
+          "endMs": 17020,
+          "durationMs": 3520
+        },
+        {
+          "id": "venetsia.livia.c7",
+          "meaning": "hammentynyt",
+          "startMs": 17020,
+          "endMs": 18199,
+          "durationMs": 1179
+        }
+      ]
+    },
+    {
+      "key": "tukholma-3",
+      "city": "tukholma",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-tukholma-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "tukholma.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 1279,
+          "endMs": 4519,
+          "durationMs": 3240
+        },
+        {
+          "id": "tukholma.livia.c2",
+          "meaning": "ilo",
+          "startMs": 4519,
+          "endMs": 10719,
+          "durationMs": 6200
+        },
+        {
+          "id": "tukholma.livia.c3",
+          "meaning": "ilo",
+          "startMs": 11819,
+          "endMs": 13519,
+          "durationMs": 1700
+        }
+      ]
+    },
+    {
+      "key": "lappi-3",
+      "city": "lappi",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-lappi-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 5,
+      "cues": [
+        {
+          "id": "lappi.livia.c1",
+          "meaning": "ilo",
+          "startMs": 1220,
+          "endMs": 4039,
+          "durationMs": 2819
+        },
+        {
+          "id": "lappi.livia.c2",
+          "meaning": "ilo",
+          "startMs": 4039,
+          "endMs": 6599,
+          "durationMs": 2560
+        },
+        {
+          "id": "lappi.livia.c3",
+          "meaning": "hammentynyt",
+          "startMs": 6599,
+          "endMs": 9939,
+          "durationMs": 3340
+        },
+        {
+          "id": "lappi.livia.c4",
+          "meaning": "miettiva",
+          "startMs": 9939,
+          "endMs": 13359,
+          "durationMs": 3420
+        },
+        {
+          "id": "lappi.livia.c5",
+          "meaning": "hammentynyt",
+          "startMs": 13359,
+          "endMs": 14639,
+          "durationMs": 1280
+        }
+      ]
+    },
+    {
+      "key": "tromssa-3",
+      "city": "tromssa",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-tromssa-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 5,
+      "cues": [
+        {
+          "id": "tromssa.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 1000,
+          "endMs": 2500,
+          "durationMs": 1500
+        },
+        {
+          "id": "tromssa.livia.c2",
+          "meaning": "selittaa",
+          "startMs": 2500,
+          "endMs": 8359,
+          "durationMs": 5859
+        },
+        {
+          "id": "tromssa.livia.c3",
+          "meaning": "ilo",
+          "startMs": 8359,
+          "endMs": 10840,
+          "durationMs": 2481
+        },
+        {
+          "id": "tromssa.livia.c4",
+          "meaning": "hammentynyt",
+          "startMs": 10840,
+          "endMs": 13880,
+          "durationMs": 3040
+        },
+        {
+          "id": "tromssa.livia.c5",
+          "meaning": "miettiva",
+          "startMs": 13880,
+          "endMs": 15559,
+          "durationMs": 1679
+        }
+      ]
+    },
+    {
+      "key": "sofia-3",
+      "city": "sofia",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-sofia-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "sofia.livia.c1",
+          "meaning": "myotailee",
+          "startMs": 1120,
+          "endMs": 5539,
+          "durationMs": 4419
+        },
+        {
+          "id": "sofia.livia.c2",
+          "meaning": "hammentynyt",
+          "startMs": 5539,
+          "endMs": 8079,
+          "durationMs": 2540
+        },
+        {
+          "id": "sofia.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 8079,
+          "endMs": 10599,
+          "durationMs": 2520
+        }
+      ]
+    },
+    {
+      "key": "istanbul-3",
+      "city": "istanbul",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-istanbul-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "istanbul.livia.c1",
+          "meaning": "myotailee",
+          "startMs": 59,
+          "endMs": 4279,
+          "durationMs": 4220
+        },
+        {
+          "id": "istanbul.livia.c2",
+          "meaning": "huvittuu",
+          "startMs": 4279,
+          "endMs": 9719,
+          "durationMs": 5440
+        },
+        {
+          "id": "istanbul.livia.c3",
+          "meaning": "myotailee",
+          "startMs": 9719,
+          "endMs": 11059,
+          "durationMs": 1340
+        }
+      ]
+    },
+    {
+      "key": "bukarest-3",
+      "city": "bukarest",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-bukarest-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "bukarest.livia.c1",
+          "meaning": "myotailee",
+          "startMs": 959,
+          "endMs": 6539,
+          "durationMs": 5580
+        },
+        {
+          "id": "bukarest.livia.c2",
+          "meaning": "hammastyy",
+          "startMs": 6539,
+          "endMs": 9399,
+          "durationMs": 2860
+        },
+        {
+          "id": "bukarest.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 9399,
+          "endMs": 10759,
+          "durationMs": 1360
+        }
+      ]
+    },
+    {
+      "key": "budapest-3",
+      "city": "budapest",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-budapest-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "budapest.livia.c1",
+          "meaning": "hammastyy",
+          "startMs": 680,
+          "endMs": 3220,
+          "durationMs": 2540
+        },
+        {
+          "id": "budapest.livia.c2",
+          "meaning": "vakavoituu",
+          "startMs": 3220,
+          "endMs": 9420,
+          "durationMs": 6200
+        },
+        {
+          "id": "budapest.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 9719,
+          "endMs": 10659,
+          "durationMs": 940
+        }
+      ]
+    },
+    {
+      "key": "wien-3",
+      "city": "wien",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-wien-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 4,
+      "cues": [
+        {
+          "id": "wien.livia.c1",
+          "meaning": "miettiva",
+          "startMs": 99,
+          "endMs": 5359,
+          "durationMs": 5260
+        },
+        {
+          "id": "wien.livia.c2",
+          "meaning": "ilo",
+          "startMs": 5359,
+          "endMs": 7960,
+          "durationMs": 2601
+        },
+        {
+          "id": "wien.livia.c3",
+          "meaning": "miettiva",
+          "startMs": 7960,
+          "endMs": 11800,
+          "durationMs": 3840
+        },
+        {
+          "id": "wien.livia.c4",
+          "meaning": "lammin",
+          "startMs": 11800,
+          "endMs": 13380,
+          "durationMs": 1580
+        }
+      ]
+    },
+    {
+      "key": "lontoo-3",
+      "city": "lontoo",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-lontoo-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "lontoo.livia.c1",
+          "meaning": "myotailee",
+          "startMs": 99,
+          "endMs": 5079,
+          "durationMs": 4980
+        },
+        {
+          "id": "lontoo.livia.c2",
+          "meaning": "myotailee",
+          "startMs": 5079,
+          "endMs": 10099,
+          "durationMs": 5020
+        },
+        {
+          "id": "lontoo.livia.c3",
+          "meaning": "myotailee",
+          "startMs": 10099,
+          "endMs": 11199,
+          "durationMs": 1100
+        }
+      ]
+    },
+    {
+      "key": "pariisi-3",
+      "city": "pariisi",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-pariisi-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "pariisi.livia.c1",
+          "meaning": "myotailee",
+          "startMs": 1419,
+          "endMs": 5679,
+          "durationMs": 4260
+        },
+        {
+          "id": "pariisi.livia.c2",
+          "meaning": "myotailee",
+          "startMs": 5679,
+          "endMs": 11119,
+          "durationMs": 5440
+        },
+        {
+          "id": "pariisi.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 11119,
+          "endMs": 13239,
+          "durationMs": 2120
+        }
+      ]
+    },
+    {
+      "key": "madrid-3",
+      "city": "madrid",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-madrid-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "madrid.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 1480,
+          "endMs": 7259,
+          "durationMs": 5779
+        },
+        {
+          "id": "madrid.livia.c2",
+          "meaning": "lammin",
+          "startMs": 7259,
+          "endMs": 9519,
+          "durationMs": 2260
+        },
+        {
+          "id": "madrid.livia.c3",
+          "meaning": "ilo",
+          "startMs": 9519,
+          "endMs": 14880,
+          "durationMs": 5361
+        }
+      ]
+    },
+    {
+      "key": "berliini-3",
+      "city": "berliini",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-berliini-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 5,
+      "cues": [
+        {
+          "id": "berliini.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 1019,
+          "endMs": 7219,
+          "durationMs": 6200
+        },
+        {
+          "id": "berliini.livia.c2",
+          "meaning": "ilo",
+          "startMs": 8939,
+          "endMs": 11319,
+          "durationMs": 2380
+        },
+        {
+          "id": "berliini.livia.c3",
+          "meaning": "hammentynyt",
+          "startMs": 11319,
+          "endMs": 15099,
+          "durationMs": 3780
+        },
+        {
+          "id": "berliini.livia.c4",
+          "meaning": "miettiva",
+          "startMs": 15099,
+          "endMs": 16659,
+          "durationMs": 1560
+        },
+        {
+          "id": "berliini.livia.c5",
+          "meaning": "lammin",
+          "startMs": 16659,
+          "endMs": 17619,
+          "durationMs": 960
+        }
+      ]
+    },
+    {
+      "key": "rooma-3",
+      "city": "rooma",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-rooma-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "rooma.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 919,
+          "endMs": 3639,
+          "durationMs": 2720
+        },
+        {
+          "id": "rooma.livia.c2",
+          "meaning": "ilo",
+          "startMs": 3639,
+          "endMs": 9839,
+          "durationMs": 6200
+        },
+        {
+          "id": "rooma.livia.c3",
+          "meaning": "hammentynyt",
+          "startMs": 10039,
+          "endMs": 11879,
+          "durationMs": 1840
+        }
+      ]
+    },
+    {
+      "key": "praha-3",
+      "city": "praha",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-praha-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 5,
+      "cues": [
+        {
+          "id": "praha.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 399,
+          "endMs": 3299,
+          "durationMs": 2900
+        },
+        {
+          "id": "praha.livia.c2",
+          "meaning": "ilo",
+          "startMs": 3299,
+          "endMs": 7659,
+          "durationMs": 4360
+        },
+        {
+          "id": "praha.livia.c3",
+          "meaning": "hammentynyt",
+          "startMs": 7659,
+          "endMs": 10859,
+          "durationMs": 3200
+        },
+        {
+          "id": "praha.livia.c4",
+          "meaning": "hammentynyt",
+          "startMs": 10859,
+          "endMs": 12319,
+          "durationMs": 1460
+        },
+        {
+          "id": "praha.livia.c5",
+          "meaning": "ilo",
+          "startMs": 12319,
+          "endMs": 13019,
+          "durationMs": 700
+        }
+      ]
+    },
+    {
+      "key": "dublin-3",
+      "city": "dublin",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-dublin-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "dublin.livia.c1",
+          "meaning": "hammastyy",
+          "startMs": 3720,
+          "endMs": 6980,
+          "durationMs": 3260
+        },
+        {
+          "id": "dublin.livia.c2",
+          "meaning": "myotailee",
+          "startMs": 6980,
+          "endMs": 9819,
+          "durationMs": 2839
+        },
+        {
+          "id": "dublin.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 9819,
+          "endMs": 12319,
+          "durationMs": 2500
+        }
+      ]
+    },
+    {
+      "key": "edinburgh-3",
+      "city": "edinburgh",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-edinburgh-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "edinburgh.livia.c1",
+          "meaning": "hammastyy",
+          "startMs": 1179,
+          "endMs": 5679,
+          "durationMs": 4500
+        },
+        {
+          "id": "edinburgh.livia.c2",
+          "meaning": "huvittuu",
+          "startMs": 5679,
+          "endMs": 10159,
+          "durationMs": 4480
+        },
+        {
+          "id": "edinburgh.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 10159,
+          "endMs": 11479,
+          "durationMs": 1320
+        }
+      ]
+    },
+    {
+      "key": "lissabon-3",
+      "city": "lissabon",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-lissabon-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "lissabon.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 119,
+          "endMs": 4599,
+          "durationMs": 4480
+        },
+        {
+          "id": "lissabon.livia.c2",
+          "meaning": "ilo",
+          "startMs": 4599,
+          "endMs": 10799,
+          "durationMs": 6200
+        },
+        {
+          "id": "lissabon.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 12259,
+          "endMs": 13479,
+          "durationMs": 1220
+        }
+      ]
+    },
+    {
+      "key": "barcelona-3",
+      "city": "barcelona",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-barcelona-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "barcelona.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 1839,
+          "endMs": 4759,
+          "durationMs": 2920
+        },
+        {
+          "id": "barcelona.livia.c2",
+          "meaning": "ilo",
+          "startMs": 4759,
+          "endMs": 10959,
+          "durationMs": 6200
+        },
+        {
+          "id": "barcelona.livia.c3",
+          "meaning": "ilo",
+          "startMs": 13739,
+          "endMs": 17500,
+          "durationMs": 3761
+        }
+      ]
+    },
+    {
+      "key": "sevilla-3",
+      "city": "sevilla",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-sevilla-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "sevilla.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 1419,
+          "endMs": 4659,
+          "durationMs": 3240
+        },
+        {
+          "id": "sevilla.livia.c2",
+          "meaning": "ilo",
+          "startMs": 4659,
+          "endMs": 8920,
+          "durationMs": 4261
+        },
+        {
+          "id": "sevilla.livia.c3",
+          "meaning": "hammentynyt",
+          "startMs": 8920,
+          "endMs": 11399,
+          "durationMs": 2479
+        }
+      ]
+    },
+    {
+      "key": "amsterdam-3",
+      "city": "amsterdam",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-amsterdam-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "amsterdam.livia.c1",
+          "meaning": "myotailee",
+          "startMs": 239,
+          "endMs": 5659,
+          "durationMs": 5420
+        },
+        {
+          "id": "amsterdam.livia.c2",
+          "meaning": "myotailee",
+          "startMs": 5659,
+          "endMs": 9139,
+          "durationMs": 3480
+        },
+        {
+          "id": "amsterdam.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 9139,
+          "endMs": 10800,
+          "durationMs": 1661
+        }
+      ]
+    },
+    {
+      "key": "dubrovnik-3",
+      "city": "dubrovnik",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-dubrovnik-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "dubrovnik.livia.c1",
+          "meaning": "myotailee",
+          "startMs": 919,
+          "endMs": 6619,
+          "durationMs": 5700
+        },
+        {
+          "id": "dubrovnik.livia.c2",
+          "meaning": "hammastyy",
+          "startMs": 6619,
+          "endMs": 9159,
+          "durationMs": 2540
+        },
+        {
+          "id": "dubrovnik.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 9159,
+          "endMs": 10139,
+          "durationMs": 980
+        }
+      ]
+    },
+    {
+      "key": "bergen-3",
+      "city": "bergen",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-bergen-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "bergen.livia.c1",
+          "meaning": "vakavoituu",
+          "startMs": 759,
+          "endMs": 6000,
+          "durationMs": 5241
+        },
+        {
+          "id": "bergen.livia.c2",
+          "meaning": "hammastyy",
+          "startMs": 6000,
+          "endMs": 10939,
+          "durationMs": 4939
+        },
+        {
+          "id": "bergen.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 10939,
+          "endMs": 12119,
+          "durationMs": 1180
+        }
+      ]
+    },
+    {
+      "key": "kobenhavn-3",
+      "city": "kobenhavn",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-kobenhavn-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "kobenhavn.livia.c1",
+          "meaning": "myotailee",
+          "startMs": 19,
+          "endMs": 4139,
+          "durationMs": 4120
+        },
+        {
+          "id": "kobenhavn.livia.c2",
+          "meaning": "huvittuu",
+          "startMs": 4139,
+          "endMs": 10339,
+          "durationMs": 6200
+        },
+        {
+          "id": "kobenhavn.livia.c3",
+          "meaning": "myotailee",
+          "startMs": 10559,
+          "endMs": 11420,
+          "durationMs": 861
+        }
+      ]
+    },
+    {
+      "key": "krakova-3",
+      "city": "krakova",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-krakova-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "krakova.livia.c1",
+          "meaning": "hammastyy",
+          "startMs": 399,
+          "endMs": 3099,
+          "durationMs": 2700
+        },
+        {
+          "id": "krakova.livia.c2",
+          "meaning": "myotailee",
+          "startMs": 3099,
+          "endMs": 9179,
+          "durationMs": 6080
+        },
+        {
+          "id": "krakova.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 9179,
+          "endMs": 10279,
+          "durationMs": 1100
+        }
+      ]
+    },
+    {
+      "key": "varsova-3",
+      "city": "varsova",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-varsova-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "varsova.livia.c1",
+          "meaning": "hammastyy",
+          "startMs": 99,
+          "endMs": 2259,
+          "durationMs": 2160
+        },
+        {
+          "id": "varsova.livia.c2",
+          "meaning": "vakavoituu",
+          "startMs": 2259,
+          "endMs": 8459,
+          "durationMs": 6200
+        },
+        {
+          "id": "varsova.livia.c3",
+          "meaning": "myotailee",
+          "startMs": 8539,
+          "endMs": 10439,
+          "durationMs": 1900
+        }
+      ]
+    },
+    {
+      "key": "pietari-3",
+      "city": "pietari",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-pietari-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "pietari.livia.c1",
+          "meaning": "hammastyy",
+          "startMs": 1679,
+          "endMs": 4739,
+          "durationMs": 3060
+        },
+        {
+          "id": "pietari.livia.c2",
+          "meaning": "myotailee",
+          "startMs": 4739,
+          "endMs": 8399,
+          "durationMs": 3660
+        },
+        {
+          "id": "pietari.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 8399,
+          "endMs": 9880,
+          "durationMs": 1481
+        }
+      ]
+    },
+    {
+      "key": "moskova-3",
+      "city": "moskova",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-moskova-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "moskova.livia.c1",
+          "meaning": "hammastyy",
+          "startMs": 1139,
+          "endMs": 3879,
+          "durationMs": 2740
+        },
+        {
+          "id": "moskova.livia.c2",
+          "meaning": "huvittuu",
+          "startMs": 3879,
+          "endMs": 8359,
+          "durationMs": 4480
+        },
+        {
+          "id": "moskova.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 8359,
+          "endMs": 9359,
+          "durationMs": 1000
+        }
+      ]
+    },
+    {
+      "key": "kiova-3",
+      "city": "kiova",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-kiova-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "kiova.livia.c1",
+          "meaning": "hammastyy",
+          "startMs": 2980,
+          "endMs": 5460,
+          "durationMs": 2480
+        },
+        {
+          "id": "kiova.livia.c2",
+          "meaning": "myotailee",
+          "startMs": 5460,
+          "endMs": 8439,
+          "durationMs": 2979
+        },
+        {
+          "id": "kiova.livia.c3",
+          "meaning": "vakavoituu",
+          "startMs": 8439,
+          "endMs": 9279,
+          "durationMs": 840
+        }
+      ]
+    },
+    {
+      "key": "odessa-3",
+      "city": "odessa",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-odessa-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "odessa.livia.c1",
+          "meaning": "vakavoituu",
+          "startMs": 1339,
+          "endMs": 4779,
+          "durationMs": 3440
+        },
+        {
+          "id": "odessa.livia.c2",
+          "meaning": "epailee",
+          "startMs": 4779,
+          "endMs": 8519,
+          "durationMs": 3740
+        },
+        {
+          "id": "odessa.livia.c3",
+          "meaning": "vakavoituu",
+          "startMs": 8519,
+          "endMs": 9699,
+          "durationMs": 1180
+        }
+      ]
+    },
+    {
+      "key": "kreeta-3",
+      "city": "kreeta",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-kreeta-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "kreeta.livia.c1",
+          "meaning": "myotailee",
+          "startMs": 599,
+          "endMs": 5599,
+          "durationMs": 5000
+        },
+        {
+          "id": "kreeta.livia.c2",
+          "meaning": "huvittuu",
+          "startMs": 5599,
+          "endMs": 9119,
+          "durationMs": 3520
+        },
+        {
+          "id": "kreeta.livia.c3",
+          "meaning": "myotailee",
+          "startMs": 9119,
+          "endMs": 10639,
+          "durationMs": 1520
+        }
+      ]
+    },
+    {
+      "key": "granada-3",
+      "city": "granada",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-granada-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "granada.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 1220,
+          "endMs": 7139,
+          "durationMs": 5919
+        },
+        {
+          "id": "granada.livia.c2",
+          "meaning": "hammastys",
+          "startMs": 7139,
+          "endMs": 12559,
+          "durationMs": 5420
+        },
+        {
+          "id": "granada.livia.c3",
+          "meaning": "ilo",
+          "startMs": 12559,
+          "endMs": 14239,
+          "durationMs": 1680
+        }
+      ]
+    },
+    {
+      "key": "firenze-3",
+      "city": "firenze",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-firenze-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 4,
+      "cues": [
+        {
+          "id": "firenze.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 479,
+          "endMs": 4039,
+          "durationMs": 3560
+        },
+        {
+          "id": "firenze.livia.c2",
+          "meaning": "ilo",
+          "startMs": 4039,
+          "endMs": 8800,
+          "durationMs": 4761
+        },
+        {
+          "id": "firenze.livia.c3",
+          "meaning": "hammentynyt",
+          "startMs": 8800,
+          "endMs": 11059,
+          "durationMs": 2259
+        },
+        {
+          "id": "firenze.livia.c4",
+          "meaning": "miettiva",
+          "startMs": 11059,
+          "endMs": 11779,
+          "durationMs": 720
+        }
+      ]
+    },
+    {
+      "key": "oslo-3",
+      "city": "oslo",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-oslo-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "oslo.livia.c1",
+          "meaning": "myotailee",
+          "startMs": 79,
+          "endMs": 5139,
+          "durationMs": 5060
+        },
+        {
+          "id": "oslo.livia.c2",
+          "meaning": "hammentynyt",
+          "startMs": 5139,
+          "endMs": 10539,
+          "durationMs": 5400
+        },
+        {
+          "id": "oslo.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 10539,
+          "endMs": 11779,
+          "durationMs": 1240
+        }
+      ]
+    },
+    {
+      "key": "sisilia-3",
+      "city": "sisilia",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-sisilia-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 4,
+      "cues": [
+        {
+          "id": "sisilia.livia.c1",
+          "meaning": "selittaa",
+          "startMs": 2240,
+          "endMs": 5440,
+          "durationMs": 3200
+        },
+        {
+          "id": "sisilia.livia.c2",
+          "meaning": "ilo",
+          "startMs": 5440,
+          "endMs": 9179,
+          "durationMs": 3739
+        },
+        {
+          "id": "sisilia.livia.c3",
+          "meaning": "hammentynyt",
+          "startMs": 9179,
+          "endMs": 10800,
+          "durationMs": 1621
+        },
+        {
+          "id": "sisilia.livia.c4",
+          "meaning": "miettiva",
+          "startMs": 10800,
+          "endMs": 11859,
+          "durationMs": 1059
+        }
+      ]
+    },
+    {
+      "key": "islanti-3",
+      "city": "islanti",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-islanti-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 3,
+      "cues": [
+        {
+          "id": "islanti.livia.c1",
+          "meaning": "hammastyy",
+          "startMs": 1139,
+          "endMs": 5480,
+          "durationMs": 4341
+        },
+        {
+          "id": "islanti.livia.c2",
+          "meaning": "myotailee",
+          "startMs": 5480,
+          "endMs": 11259,
+          "durationMs": 5779
+        },
+        {
+          "id": "islanti.livia.c3",
+          "meaning": "huvittuu",
+          "startMs": 11259,
+          "endMs": 11899,
+          "durationMs": 640
+        }
+      ]
+    },
+    {
+      "key": "alpit-3",
+      "city": "alpit",
+      "url": "https://media.matkakirja.app/aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-alpit-3.eleet.json",
+      "contentSha256": null,
+      "contentSha256Status": "unknown: response bytes not retained",
+      "cueCount": 4,
+      "cues": [
+        {
+          "id": "alpit.livia.c1",
+          "meaning": "miettiva",
+          "startMs": 799,
+          "endMs": 4299,
+          "durationMs": 3500
+        },
+        {
+          "id": "alpit.livia.c2",
+          "meaning": "ilo",
+          "startMs": 4299,
+          "endMs": 7899,
+          "durationMs": 3600
+        },
+        {
+          "id": "alpit.livia.c3",
+          "meaning": "hammentynyt",
+          "startMs": 7899,
+          "endMs": 11880,
+          "durationMs": 3981
+        },
+        {
+          "id": "alpit.livia.c4",
+          "meaning": "miettiva",
+          "startMs": 11880,
+          "endMs": 13460,
+          "durationMs": 1580
+        }
+      ]
+    }
+  ]
+}
