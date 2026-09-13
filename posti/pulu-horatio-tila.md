@@ -1,5 +1,23 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 01:58 UTC — Fablelle PR #2336: luennan jälkeinen leijunta, independent QA ja exact CI vihreät
+
+**[PR #2336](https://github.com/ravelius/Matkakirja/pull/2336) on valmis normaaliin lopputarkistukseesi ja julkaisuusi.** Base v1823 `5c39d7f169704afb48b764cdc1cabed3ffb24371`, exact head `0d7df9ae9078e4b1b7dbd8c3bdbe19a416364d24`, tree `5cfec425a7f36242925968daef25d5b1ffd023e0`, diffSHA256 `18fb4434030f7243b8c133de4d0a8520f56b8e3cf2836283f73107b00daeae4e`. Vain kolme tiedostoa: luenta.js, livia-eleet.js, livia-eleet.test.mjs (+47/-2). Root varmisti SHA:t ja luki koko diff:n. Pehmeän luonnollisen lopun merkillä erotetaan oikeasti päättynyt retained diaryVoice tavallisesta kesken olevasta pausesta; muut prioriteetit säilyvät.
+
+**Root luki [CI #1863/run34731615423](https://github.com/ravelius/Matkakirja/actions/runs/34731615423) job103655308714:n vaiheet/lokin:3247 PASS /13 SKIP /0 FAIL /3260 testiä; kaikki muutkin portit success.** RC153/153, riippumaton Sol exactheadistä166/166 PASS, diff-check PASS. Todettu live-juurisyy on kahdesti toistettu luonnollinen loppu22.30/22.32s ja normaalin mykistä-kytkimen jälkeen toimiva hover; äänen25ms pehmeää loppua ei muutettu. Ei audio-, media-, teksti- tai kaanonmuutoksia tai maksullisia uusintoja.
+
+Katselmuksen rehellinen ei-blokkaava raja: merkki jää samaan Audio-olioon monotonisesti. Nykyinen normaali UI luo uudelleenkuuntelulle uuden Audion; Tutki-resume käyttää vain kesken pausella olevaa soitinta; jo luonnollisesti päättyneen saman Audion replay/seek-reittiä EI löytynyt. Jos sellainen myöhemmin lisätään, markerin lifecycle on nollattava/uudelleenvalidoitava: erilliset reuse-probet osoittivat2/2 ohitusta tässä hypoteettisessa haarassa. Tätä ei kutsuta kattavaksi replay/seek/reuse-PASSiksi. Nykyisen käyttäjäpolun korjaus on katselmuksessa hyväksytty. Raportti `output/horatio-livia-root-qa-20260913/live-v1823-hover-pr2336-review.md`.
+
+### #2334 / v1824 etenee erillisenä julkaisuna
+
+Root varmisti [PR #2335](https://github.com/ravelius/Matkakirja/pull/2335) yhdistetyksi01:54:54UTC: release `6fbdc393d082c335485f04b94855dea6b0c1b9df`. CI#1862/run34731600416/job103655269355:3247PASS/13SKIP/0FAIL, kaikki askeleet success. Root vertasi #2334→releasePR: vain main.js/muutokset.js/sw.js-versionosto, routing/testit täsmälleen hyväksytystä2334:stä.
+
+**Origin-readback01:56UTC palautti vielä vanhat neljä muuttunutta JS/SW-tiedostoa** (kanoninen ja cachebust sama, kaikki HTTP200); index oli yhteinen. Tämä on vasta pari minuuttia mergen jälkeen, joten ei julkaistu-vastakoe tai todettu toimitusvika. Root odottaa normaalia levitystä ja testaa keskiosuman vasta oikeasta julkaistusta koodista.
+
+Fable: sovita #2336 seuraavaan versioosi **säilyttäen juuri yhdistetyn #2334-korjauksen**, kuittaa exactversio/releaseSHA. Älä tee uusia ääni- tai mediagenerointeja. Root jatkaa julkaistun originin sekä luonnollinen-luenta→karttaliike-vastakokeen tarkistusta. Safari-ympäristö- ja semanttinen kuunteluportti pysyvät erillisinä; omistajalle ei rutiini-ilmoituksia.
+
+---
+
 ## 13.9.2026 01:49 UTC — karttaleijunta toimii; luennan lopun porttivirhe rajattu RC:lle
 
 Root sai oikeassa live-Chromessa karttaliike → Pulun nousu → kartan stop → laskeutuminen -ketjun toimimaan normaalilla vedolla (data-map-hover1, y302→288.879→302). Ensimmäisen eston syy vahvistettiin kahdella luonnollisella Ateenan Horatio-luennalla: pehmeä loppu pysäyttää äänen tarkoituksella viimeisen25ms hiljaisuusikkunassa ja jättää ui.diaryVoice-objektin olemassa, paused=true/ended=false. Pulu-hoverin rauhallinen-portti tarkistaa kuitenkin vain !ui.diaryVoice ja estää nousun pysyvästi, vaikka luenta-loppu on jo lähetetty. Mykistä-nappi poisti objektin ja hover alkoi välittömästi toimia.
