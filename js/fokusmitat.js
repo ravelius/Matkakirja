@@ -345,6 +345,44 @@ export function projisoiLaudalle(lauta, lon, lat) {
  * maata, ja aloituslennon aikana kohdemaan nimi paljastaisi määränpään
  * ennen kuin kone on perillä. Katselutila (?lauta=) ei ole peli.
  */
+/*
+ * ===== NURKKA VAI KARTTA (karttauudistus, erä 3) ====================
+ *
+ * Raamattu, KARTTAUUDISTUKSEN PAATOKSET 2 kohta 2 (omistaja 13.9.2026,
+ * sanatarkasti): *"maan tiedot, lisaa-valikko, nostot ja muut elementit
+ * KIINNITETAAN KARTTAAN (karttakoordinaatit, skaalautuvat zoomatessa
+ * kuin painettu kartta), maan reunan ulkopuolelle tai rajalle, ei
+ * ruutuun."*
+ *
+ * Pallolaudalla maan perustiedot asuvat siis pallon merkkikerroksessa
+ * maantieteellisellä ankkurilla (js/pallolauta/maapaneeli.js), eivät
+ * karttaruudun vasemmassa alanurkassa. TASOKARTALLA MIKÄÄN EI MUUTU:
+ * kartuutsi, mittajana ja asteviivaimet ovat sen omia kalusteita, ja
+ * niiden ruutuankkurointi on perusteltu tämän tiedoston alussa.
+ *
+ * NURKKATILA JÄÄ YHDEN VAKION TAAKSE. Kaluste palautettiin nurkkaan
+ * OMISTAJAN OMASTA PYYNNÖSTÄ 11.9.2026 (ks. KARTUUTSI PALLOLLA yllä),
+ * ja PÄÄTÖKSET 2 siirtää sen karttaan vasta kaksi päivää myöhemmin.
+ * Uusi päätös voittaa, mutta paluu ei saa olla remontti: `false`
+ * tähän — tai `?maapaneeli=nurkka` osoitteeseen — ja pallolauta on
+ * takaisin entisellään. Sama vipu on savukkeen vastakoe: nurkkatilassa
+ * paneeli EI ole kartassa kiinni, jolloin sijaintiväitteen on
+ * kaaduttava.
+ */
+export const MAAPANEELI_KARTASSA = true;
+
+/** Onko maan paneeli kartassa kiinni (true) vai ruudun nurkassa (false)? */
+export function maapaneeliKartassa(win = globalThis) {
+  try {
+    const arvo = new URLSearchParams(win.location?.search ?? '').get('maapaneeli');
+    if (arvo === 'nurkka') return false;
+    if (arvo === 'kartta') return true;
+  } catch {
+    /* ei osoitetta */
+  }
+  return MAAPANEELI_KARTASSA;
+}
+
 export function pallolaudanMaa(ui) {
   if (!ui.pallolauta || ui.katselu) return null;
   if (ui.game?.phase === 'pickstart' || ui.aloituslentoKesken) return null;
@@ -354,7 +392,7 @@ export function pallolaudanMaa(ui) {
 }
 
 /** Maan nimi laudan omasta taulusta, versaaleina kartuutsiin. */
-function maanNimi(ui, iso) {
+export function maanNimi(ui, iso) {
   return ui.game?.pack?.map?.countryShapes?.[iso]?.nimi ?? iso;
 }
 
@@ -363,7 +401,7 @@ function maanNimi(ui, iso) {
  * pois — tyhjä rivi näyttäisi rikkinäiseltä, ja kaikilla mailla ei ole
  * kaikkia lukuja.
  */
-function maanRivit(ui, iso) {
+export function maanRivit(ui, iso) {
   const tiedot = (MAATIEDOT[ui.game?.pack?.id] ?? {})[iso] ?? {};
   const rivit = [];
   if (tiedot.vakiluku) rivit.push(['Väkiluku', tiedot.vakiluku, tiedot.vakilukuSija ?? '']);
@@ -2044,7 +2082,15 @@ function ajaFokusmitat(ui) {
   // Näkyvissä vain kun maan ikkuna on tiedossa (js/ui.js
   // paivitaMaanIkkuna lukee sen FOKUS_POHJAT-taulusta); pallolaudalla
   // riittää maa, koska ikkunataulua ei ole (ks. KARTUUTSI PALLOLLA).
-  const nakyy = pallolla ? Boolean(iso) : Boolean(pohja && iso && FOKUS_POHJAT[iso]);
+  /*
+   * PALLOLLA NURKKA ON TYHJÄ, KUN PANEELI ON KARTASSA (erä 3, ks.
+   * NURKKA VAI KARTTA yllä). Ehto on tässä eikä kutsupaikoissa, koska
+   * tämä on se yksi kohta, joka päättää kalusteiden näkyvyyden — ja
+   * `nakyy === false` purkaa myös auki olevan taulun ja sen bodyluokan.
+   */
+  const nakyy = pallolla
+    ? Boolean(iso) && !maapaneeliKartassa()
+    : Boolean(pohja && iso && FOKUS_POHJAT[iso]);
   const sailio = ui.fokusmitatSailio?.isConnected ? ui.fokusmitatSailio : rakenna(ui);
   if (!nakyy) {
     if (!sailio.hidden) {
