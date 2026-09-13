@@ -212,6 +212,49 @@ const pisteenTila = (sivu) => sivu.evaluate(async () => {
   };
 });
 
+/**
+ * KARTTA NÄKYVIIN KAAPPAUSTA VARTEN. Saapumistraileri (`.saapumistraileri`,
+ * z-index 90) peittää koko ruudun kaupunkiin saavuttaessa, joten ilman
+ * sen poistoa kaappaus näyttäisi trailerin eikä pistettä. Poisto on
+ * VAIN savukkeen esitystä varten — vartiot lukevat pisteen tilan
+ * koodista ja merkin luokista, eivät kuvasta.
+ *
+ * @returns {{x:number,y:number,width:number,height:number}|null} rajaus
+ */
+const paljastaKartta = (sivu) => sivu.evaluate(async () => {
+  /*
+   * TYYLI EIKÄ POISTO: saapumisen kerrokset vaihtavat kuvaa omilla
+   * ajastimillaan ja rakentavat poistetun kehyksen uudelleen, joten
+   * pelkkä remove() jätti kaappaukseen seuraavan ruudun.
+   *
+   * KAKSI KERROSTA, molemmat MITATTU (ei arvattu): `.saapumistraileri`
+   * (z 90) ja `.fokusvirta-isokuva` (z 3, `pointer-events: none` —
+   * siksi elementsFromPoint ei löydä sitä, vaikka se peittää kartan).
+   */
+  if (!document.getElementById('savuke-piilota-saapuminen')) {
+    const tyyli = document.createElement('style');
+    tyyli.id = 'savuke-piilota-saapuminen';
+    tyyli.textContent = '.saapumistraileri, .fokusvirta-isokuva '
+      + '{ display: none !important; }';
+    document.head.appendChild(tyyli);
+  }
+  for (const d of document.querySelectorAll('dialog[open]')) d.close?.();
+  await new Promise((v) => setTimeout(v, 800));
+  const merkki = document.querySelector('.pallolauta-piste');
+  if (!merkki) return null;
+  const r = merkki.getBoundingClientRect();
+  const kx = r.x + r.width / 2;
+  const ky = r.y + r.height / 2;
+  const leveys = 300;
+  const korkeus = 220;
+  return {
+    x: Math.max(0, Math.min(window.innerWidth - leveys, kx - leveys / 2)),
+    y: Math.max(0, Math.min(window.innerHeight - korkeus, ky - korkeus / 2)),
+    width: leveys,
+    height: korkeus,
+  };
+});
+
 /** Napauta pistettä samasta portista, jota molemmat laudat käyttävät. */
 const napauta = (sivu) => sivu.evaluate(async () => {
   const { ui } = window.matkakirja;
@@ -276,10 +319,13 @@ if (a.auki) {
     JSON.stringify(tila));
 
   if (KUVAKANSIO) {
-    // scale: 'css' pitää kuvan raportin katossa (≤ 400 kt): 390 × 844
-    // pikseliä eikä deviceScaleFactorin kaksinkertaista ruutua.
+    // Rajattu kaappaus pisteen ympäriltä: 300 × 220 px riittää
+    // näyttämään merkin eikä tule lähellekään raportin 400 kt:n kattoa.
+    const clip = await paljastaKartta(a.sivu);
+    tieto('kaappauksen rajaus (lukossa)', JSON.stringify(clip));
     await a.sivu.screenshot({
-      path: join(KUVAKANSIO, 'karttauudistus-7-piste-lukossa.png'), scale: 'css',
+      path: join(KUVAKANSIO, 'karttauudistus-7-piste-lukossa.png'),
+      ...(clip ? { clip } : {}),
     });
   }
 
@@ -329,8 +375,11 @@ if (c.auki) {
     + `pallolla ${tila.pallolla} (lukko ${tila.palloLukossa})`);
   tieto('auenneen pisteen lappu', `"${tila.palloLappu}"`);
   if (KUVAKANSIO) {
+    const clip = await paljastaKartta(c.sivu);
+    tieto('kaappauksen rajaus (auki)', JSON.stringify(clip));
     await c.sivu.screenshot({
-      path: join(KUVAKANSIO, 'karttauudistus-7-piste-auki.png'), scale: 'css',
+      path: join(KUVAKANSIO, 'karttauudistus-7-piste-auki.png'),
+      ...(clip ? { clip } : {}),
     });
   }
   const napautus = await napauta(c.sivu);
