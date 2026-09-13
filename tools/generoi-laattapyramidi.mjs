@@ -7,7 +7,8 @@
  *        [--alue lon0,lat0,lon1,lat1] [--laatta 512] [--laatu 0.9] \
  *        [--lohko 4] [--kaariminuutit 1|3] [--korkeuspalat <kansio>]
  *        [--vari <ISO A3>] [--variversio <v>] [--aluevesi 6.7]
- *        [--paletti murrettu|taysvari] [--vesi 0.72] [--feidaus 0.35]
+ *        [--paletti murrettu|taysvari|tasoitus] [--vesi 0.72] [--feidaus 0.35]
+ *        [--peitto 0.85] [--kerma '#faf4d6']
  *        [--feidausreuna <yksikköä>]
  *        [--laatikkokerroin 1.15] [--ilman-rajausta]
  *        [--muoto webp]
@@ -301,7 +302,8 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--nostotaso --nostoversio <v>] [--viivataso --viivaversio <v> [--eipiirit]] '
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
     + '[--vari <ISO> --variversio <v> [--aluevesi <yksikköä>] '
-    + '[--paletti murrettu|taysvari] [--vesi <0..1>] [--feidaus <0..1>] '
+    + '[--paletti murrettu|taysvari|tasoitus] [--vesi <0..1>] [--feidaus <0..1>] '
+    + '[--peitto <0..1>] [--kerma <#rrggbb>] '
     + '[--feidausreuna <yksikköä>] '
     + '[--laatikkokerroin <k>] [--ilman-rajausta]] '
     + '[--saumatesti [--saumakohta sarake,rivi]]');
@@ -630,7 +632,54 @@ const ALUEVESI_YKSIKKOA = Number(valitsin('aluevesi', 6.7));
  */
 const VARIPALETTI = valitsin('paletti', 'murrettu');
 const VARI_VESI = valitsin('vesi', null) === null ? null : Number(valitsin('vesi', null));
-const VARI_FEIDAUS = Number(valitsin('feidaus', 0.35));
+/*
+ * ====== TASOITUSAJO (`--paletti tasoitus`, karttauudistus erä 1c) ===
+ *
+ * OMISTAJAN PÄÄTÖS 4 KÄÄNTÄÄ ERÄN 1b YMPÄRI (13.9.2026 klo 14.10 UTC,
+ * sanatarkasti: *"Jätä ranska alkuperäiseen. Kaikki muut ihan kamalia.
+ * Poistetaan muista maista korkeus erot kokonaan tai lähes
+ * kokonaan."*). Erässä 1b värilaatta oli maastorenderöinti, josta
+ * leikkuri jätti näkyviin KOHDEMAAN; nyt laatta on kerma-peite, josta
+ * leikkuri jättää näkyviin KAIKEN MUUN. Putki, poltettu alfa,
+ * `varitasot`-taulu ja versioportti ovat samat — vain laatan sisältö
+ * vaihtuu.
+ *
+ * KOLME SEURAUSTA, JOTKA ON HYVÄ LUKEA YHDESSÄ:
+ *
+ *   (1) KOHDEMAAN ALFA ON 0, eli pohjalaatan alkuperäinen seepia
+ *       näkyy pikselilleen muuttumattomana. Se on päätöksen 4
+ *       kirjaimellinen vaatimus, ja savuke mittaa sen A/B-erona
+ *       (tools/savukkeet/savuke-tasoitus-pallo.mjs V2).
+ *   (2) LEIKKURI ON MAAN POLYGONI ILMAN ALUEVESIPUSKURIA. Puskuri oli
+ *       erässä 1b sitä varten, että 12 mpk:n kaistale saisi SINISEN
+ *       veden; päätös 4 sanoo, ettei sinistä tule ("Aluevesien sininen
+ *       ei kuulu alkuperäiseen"). Aluevesi tasoitetaan siis muun meren
+ *       mukana, ja leikkurin puskuri on 0. Laataston LAATIKKO pitää
+ *       puskurinsa (ks. VÄRITASON ALUE): se on työn rajaus, ei rajan
+ *       muoto.
+ *   (3) MAASTOA EI PIIRRETÄ LAINKAAN. Kohdemaassa alfa on 0 ja muualla
+ *       peiton alla on tasainen kerma, joten renderöinnistä ei jäisi
+ *       jäljelle yhtään pikseliä. Ajo ei siis lataa korkeusaineistoa,
+ *       Natural Earthiä eikä sisältöä — ks. piirraTasoitustaso.
+ */
+const TASOITUSTASO = VARITASO && VARIPALETTI === 'tasoitus';
+/*
+ * PEITTO = tasoituksen alfa laatikon sisällä. 0,85 jättää 15 %
+ * alkuperäistä reliefiä läpi: rantaviivat ja rajat erottuvat hennosti,
+ * korkeuserot eivät. `--peitto 0.95` on omistajan toinen
+ * vertailuvaihtoehto ("lähes kokonaan" → "kokonaan").
+ */
+const { KERMA, VARIPALETIT } = await import(`${JUURI}/tools/fokuskartta/piirto.js`);
+const TASOITUS_PEITTO = Number(valitsin('peitto', VARIPALETIT.tasoitus.peitto));
+/* Kerma on paletin oletus; `--kerma #rrggbb` vaihtaa sen ajossa. */
+const TASOITUS_KERMA = valitsin('kerma', KERMA);
+/*
+ * FEIDAUS on erän 1b luku (naapurin vaaleneminen paperia kohti).
+ * Tasoitusajossa sama kenttä kantaa PEITON ja feidausväri on kerma —
+ * yksi koodipolku, kaksi merkitystä, ja merkitys luetaan paletista.
+ */
+const VARI_FEIDAUS = TASOITUSTASO
+  ? TASOITUS_PEITTO : Number(valitsin('feidaus', 0.35));
 /*
  * FEIDAUKSEN HÄIVE LAATASTON REUNALLA lautayksikköinä (mitattu
  * pilotista 13.9.2026; perustelu tools/fokuskartta/maailmapiirto.js
@@ -687,6 +736,22 @@ if ([NOSTOTASO, VIIVATASO, RANTATASO, VARITASO].filter(Boolean).length > 1) {
  * luetteloa samasta säännöstä olisi kolme liikaa.
  */
 const MERKKITASO = NOSTOTASO || VIIVATASO || RANTATASO || VARITASO;
+/*
+ * ====== AJOT, JOTKA EIVÄT LATAA AINEISTOA ==========================
+ *
+ * Nosto-, viiva- ja rantataso piirtävät pelkkää mustetta, ja erän 1c
+ * TASOITUSTASO piirtää pelkkää kermaa — yksikään niistä ei lue
+ * korkeusruudukkoa, merimaskia eikä rannikoita. Tämä lippu on se yksi
+ * paikka, josta kaikki neljä guardia lukevat saman totuuden; ennen
+ * ehto oli kirjoitettu auki viidessä kohdassa, ja uuden ajotilan
+ * lisääminen tarkoitti viiden kohdan muistamista.
+ *
+ * TASOITUKSELLA TÄMÄ ON MYÖS SUORITUSKYKYPÄÄTÖS: ilman sitä Ranskan
+ * z4–z8-ajo purkaisi 1′-ruudukon (kymmeniä megatavuja), noutaisi
+ * R2:sta 1′-palat ja piirtäisi koko maaston — kaiken sen, mistä ei jää
+ * laattaan yhtään pikseliä.
+ */
+const ILMAN_AINEISTOA = NOSTOTASO || VIIVATASO || RANTATASO || TASOITUSTASO;
 if (RANTATASO && ILMAN_RANTAVIIVAA) {
   console.error('--ilman-rantaviivaa on POHJA-ajon lippu; rantataso on juuri se '
     + 'muste, joka pohjasta jää pois.');
@@ -967,8 +1032,15 @@ if (VARITASO) {
    * reuna ja pelin oma raja ehtisivät eriytyä eikä kukaan huomaisi
    * sitä kuin rannikkoa katsomalla.
    */
+  /*
+   * TASOITUKSESSA PUSKURI ON 0 (erä 1c, ks. TASOITUSAJO): sininen
+   * aluevesi ei kuulu alkuperäiseen, joten 12 mpk:n kaistale
+   * tasoitetaan muun meren mukana ja leikkuri on maan oma polygoni.
+   * Sama funktio, eri puskuri — rajan lähde pysyy yhtenä.
+   */
+  const LEIKKURIN_PUSKURI = TASOITUSTASO ? 0 : ALUEVESI_YKSIKKOA;
   const renkaat = VARI_ILMAN_RAJAUSTA
-    ? [] : maanAluevesiRenkaat(polygonit, VARI_MAA, ALUEVESI_YKSIKKOA);
+    ? [] : maanAluevesiRenkaat(polygonit, VARI_MAA, LEIKKURIN_PUSKURI);
   let pisteita = 0;
   for (const r of renkaat) pisteita += r.length;
   VARI_FEIDAUSREUNA = VARI_FEIDAUSREUNA_ANNETTU === null
@@ -976,6 +1048,8 @@ if (VARITASO) {
     : Number(VARI_FEIDAUSREUNA_ANNETTU);
   VARI_LEIKKURI = VARI_ILMAN_RAJAUSTA ? null : {
     renkaat,
+    tasoitus: TASOITUSTASO,
+    paperi: TASOITUSTASO ? TASOITUS_KERMA : undefined,
     feidaus: VARI_FEIDAUS,
     feidausReuna: VARI_FEIDAUSREUNA,
     laatikko: VARI_LAATIKKO,
@@ -985,8 +1059,10 @@ if (VARITASO) {
     + `x ${x0.toFixed(1)}..${x1.toFixed(1)} y ${y0.toFixed(1)}..${y1.toFixed(1)} `
     + `(kerroin ${VARI_KERROIN}, puskuri ${ALUEVESI_YKSIKKOA} yksikköä = 12 mpk) · `
     + `versio ${VARIVERSIO} · polku vari/z<taso>`);
-  console.log(`  väripaletti     ${VARIPALETTI} · vesi `
-    + `${VARI_VESI === null ? 'paletin oletus' : VARI_VESI} · feidaus ${VARI_FEIDAUS} `
+  console.log(`  väripaletti     ${VARIPALETTI} · `
+    + (TASOITUSTASO
+      ? `peitto ${TASOITUS_PEITTO} · kerma ${TASOITUS_KERMA} · leikkuri maan polygoni (puskuri 0) `
+      : `vesi ${VARI_VESI === null ? 'paletin oletus' : VARI_VESI} · feidaus ${VARI_FEIDAUS} `)
     + `(häive ${VARI_FEIDAUSREUNA} yks) · `
     + (VARI_ILMAN_RAJAUSTA
       ? 'LEIKKURI POIS (--ilman-rajausta, vastakoe)'
@@ -1758,7 +1834,7 @@ if (lippu('vain-lista')) {
  */
 if (lippu('vain-palat')) {
   const kaarim = AJON_KAARIMINUUTIT[0] ?? KARKEA_KAARIMINUUTIT;
-  const nimet = (NOSTOTASO || VIIVATASO || RANTATASO || kaarim !== 1)
+  const nimet = (ILMAN_AINEISTOA || kaarim !== 1)
     ? []
     : ikkunanPalat(ikkunanRajat({ laatikko: korkeudenLaatikko(), ruutu: RUUTU }));
   /*
@@ -1779,7 +1855,7 @@ if (KUIVA) {
    * suurin yksittäinen muistierä ja se, joka päättää mahtuuko shardi
    * ajokoneelle — ja sen näkee nyt ilman että mitään kootaan.
    */
-  if (!NOSTOTASO && !VIIVATASO && !RANTATASO) {
+  if (!ILMAN_AINEISTOA) {
     const kl = korkeudenLaatikko();
     const r = ikkunanRajat({ laatikko: kl, ruutu: RUUTU });
     const kaarim = AJON_KAARIMINUUTIT.join('+');
@@ -1847,7 +1923,7 @@ if (RANTATASO && (HARVA || lippu('harvamittaus'))) {
 }
 let aineisto = null;
 let sisalto = null;
-if (!NOSTOTASO && !VIIVATASO && !RANTATASO) {
+if (!ILMAN_AINEISTOA) {
   /*
    * YKSI AJO, YKSI RUUDUKKO. Ruudukko kootaan kerran ja tarjoillaan
    * selainsivulle yhtenä tiedostona, joten ajo jonka tasot
@@ -2174,7 +2250,7 @@ if (HARVA) {
 
 const tyokansio = join(tmpdir(), `pyramidi-${process.pid}`);
 mkdirSync(tyokansio, { recursive: true });
-if (!NOSTOTASO && !VIIVATASO && !RANTATASO) {
+if (!ILMAN_AINEISTOA) {
   const { grid, ...korkeudenMitat } = aineisto.korkeus;
   writeFileSync(join(tyokansio, 'korkeus.bin'),
     Buffer.from(grid.buffer, grid.byteOffset, grid.byteLength));
@@ -2273,7 +2349,8 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
 <body style="margin:0;background:#333"><canvas id="k"></canvas>
 <script type="module">
   import {
-    piirraMaailma, piirraNostotaso, piirraViivataso, piirraRantataso, polttaVariLeikkuri,
+    piirraMaailma, piirraNostotaso, piirraViivataso, piirraRantataso,
+    piirraTasoitustaso, polttaVariLeikkuri,
   } from './maailmapiirto.js';
   /*
    * PELIN OMA SYMBOLIKIRJASTO. Poltettu merkki piirretään täsmälleen
@@ -2307,6 +2384,11 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
    * (--ilman-rajausta) tai jokin muu ajotila.
    */
   const VARITASO = ${VARITASO};
+  /*
+   * TASOITUSAJO (erä 1c) EI PIIRRÄ MAASTOA: laatta on kerma-peite,
+   * jossa kohdemaan kohdalla on alfa 0. Ks. piirraTasoitustaso.
+   */
+  const TASOITUS = ${TASOITUSTASO};
   const variLeikkuri = VARITASO
     ? await (await fetch('./vari.json')).json().catch(() => null) : null;
   // Erikoispiirien passi (ks. ERIKOISPIIRIT POIS VIIVATASOLTA).
@@ -2321,7 +2403,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
   if (RANTATASO) {
     rannikot = (await (await fetch('./ranta.json')).json())?.rannikot ?? [];
   }
-  if (!NOSTOTASO && !VIIVATASO && !RANTATASO) {
+  if (!TASOITUS && !NOSTOTASO && !VIIVATASO && !RANTATASO) {
     aineisto = await (await fetch('./aineisto.json')).json();
     aineisto.korkeus.grid = new Int16Array(await (await fetch('./korkeus.bin')).arrayBuffer());
     aineisto.meri = aineisto.meri
@@ -2587,7 +2669,16 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
      * kaiken paitsi nostojen musteen läpinäkyväksi; patina saa
      * lapinäkyvän mustereseptin (RESEPTIT.nosto) patina-parametrissa.
      */
-    if (NOSTOTASO) {
+    if (TASOITUS) {
+      /*
+       * TASOITUSTASO: kangas vain mitoitetaan ja jätetään
+       * läpinäkyväksi; polttaVariLeikkuri täyttää sen kermalla ja
+       * puhkaisee reiän kohdemaan kohdalle. Kohdemaan alfa on 0, joten
+       * pohjalaatan alkuperäinen seepia näkyy muuttumattomana
+       * (omistajan PÄÄTÖS 4).
+       */
+      piirraTasoitustaso(kangas, asetukset);
+    } else if (NOSTOTASO) {
       piirraNostotaso(kangas, {
         ...asetukset, nostot, piirraNosto: piirraNostosymPolttoon,
       });
@@ -2938,7 +3029,13 @@ for (const { mitat, bx, by } of lohkot.values()) {
      * muu — geometria, varjostus, rae, kalusteet — on sama koodi, ja
      * juuri siksi värilaatta osuu pohjalaatan päälle pikselilleen.
      */
-    variPaletti: VARITASO ? VARIPALETTI : false,
+    /*
+     * TASOITUSAJOSSA PALETTIA EI ANNETA MOOTTORILLE. Tasoituspaletissa
+     * ei ole asteikkoa (se ei piirrä maastoa), ja maailmapiirto.js
+     * heittää virheen jos se päätyy sinne — kirjaus on luettelossa ja
+     * leikkurissa, ei piirtoasetuksissa.
+     */
+    variPaletti: (VARITASO && !TASOITUSTASO) ? VARIPALETTI : false,
     /*
      * VEDEN PEITTÄVYYS: null = paletin oletus (murrettu 0,72,
      * täysväri 0,9), luku = ajon valinta (`--vesi`).
@@ -3266,7 +3363,22 @@ function teeLuettelo() {
          * omistajan valinta kolmesta vaihtoehdosta katoaisi.
          */
         paletti: VARIPALETTI,
-        vesi: VARI_VESI,
+        vesi: TASOITUSTASO ? null : VARI_VESI,
+        /*
+         * TASOITUKSEN OMAT LUVUT (erä 1c). `peitto` on kerman alfa ja
+         * `kerma` sen sävy; kumpikin on rakennusaikainen valinta, jota
+         * ei voi lukea laatasta takaisin. Savuke lukee `peiton` tästä
+         * eikä omasta vakiostaan — mittarin ja laataston on tultava
+         * samasta luvusta (tools/savukkeet/savuke-tasoitus-pallo.mjs).
+         *
+         * `aluevesi` on yhä kirjattu, mutta tasoituksessa leikkurin
+         * puskuri on 0: kenttä kertoo LAATIKON puskurin, ei rajan
+         * muotoa (ks. TASOITUSAJO kohta 2).
+         */
+        tasoitus: TASOITUSTASO ? true : undefined,
+        peitto: TASOITUSTASO ? TASOITUS_PEITTO : undefined,
+        kerma: TASOITUSTASO ? TASOITUS_KERMA : undefined,
+        leikkurinPuskuri: TASOITUSTASO ? 0 : ALUEVESI_YKSIKKOA,
         feidaus: VARI_ILMAN_RAJAUSTA ? null : VARI_FEIDAUS,
         feidausReuna: VARI_ILMAN_RAJAUSTA ? null : VARI_FEIDAUSREUNA,
         /*
