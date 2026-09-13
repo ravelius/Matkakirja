@@ -1,3 +1,38 @@
+## 2026-09-13 10:05 UTC — FABLE: v1838-v1839 JULKAISTU: karttauudistus ja Horatio-linja Raamatussa
+
+Rootin 09:19:50 ja 09:21:10 UTC viestit luettu ja kasitelty yhtena
+paivityksena, uusin pituusohje voittaa.
+
+- **v1839** `cfecdade20fc98728ce06c52080e2475f4129a83` (PR #2356).
+  Raamattuun osioon "Tarina ja hahmot" uusi ensimmainen kohta
+  HORATION INHIMILLINEN EPATAYDELLISYYS JA VUODEN 1873 TODELLISUUS;
+  KAUPUNKIPARIN PITUUS ELAA — omistajan viisi lausetta sanatarkasti
+  (ASCII), rootin tasmennys tiiviisti. Samassa erassa tarkennettu
+  docs/isoisan-raamattu.md ("kohtelias kaikille, karsimaton
+  itselleen — mutta ei virheeton" + pituuskappale), docs/moduulit/
+  tarinakaari.md (sama lause; "jannite tulee maailmasta ja ihmisista,
+  myos Horatiosta itsestaan") ja docs/moduulit/horatio-livia-
+  tuotanto.md ("KOKONAISPITUUS EI KASVA" -> pituudet saavat elaa, mitat
+  katselmustietoa; Horatio- ja Livia-osioihin epataydellisyys- ja
+  nykyhetkiohje; uusi alakohta Lyhyet saapumisaanet). Grimshaw,
+  revitty sivu ja aarteen henkilollisyys ennallaan. Pyydan rootia
+  tarkistamaan sanamuodot mainista; korjaukset pienina PR:ina.
+  npm test 3292 pass / 0 fail, kaikki portit, CI vihrea.
+- **v1838** `38a6bee27dcb394eb0983e83a69ec2baf1b45f87` (PR #2355).
+  Omistajan karttauudistus-idea Raamattuun sanatarkasti (osio
+  Kaupungit). Suunnitelma mainissa: docs/raportit/karttauudistus-
+  suunnitelma-20260913.md (PR #2354, docs-only).
+- Omistaja paatti 09:55 UTC: punainen rajaviiva palaa kohdemaalle;
+  uloszoomaus 1,15 vasta Liiku-napin kanssa; Pariisin sivujako
+  hyvaksytty pilottiin; liftaus = noppa uudella nimella ja
+  autokyytianimaatiolla. Kirjaus Raamattuun tulossa (v1840).
+  Toteutuksen era 1 (Ranskan varillinen topografia, vain
+  laattapyramidi/aariviivat/CSS) alkoi Opus-sessiolla. Erat 4, 7 ja 8
+  koskevat fokusvirran saapumisketjua ja Pulun kuplia — sovin
+  rajapinnan teidan kanssanne ennen niiden aloittamista; en koske
+  js/pollo.js- tai js/livia-*.js-tiedostoihin.
+- AANI-HOLD ennallaan. Ei uusia teksti- tai aanieria talta puolelta.
+
 ## 2026-09-13 08:55 UTC — FABLE: v1837 JULKAISTU (#2351 QA-sivu), vanhat PR:t suljettu
 
 Rootin 07:54 UTC hyvaksynta luettu ja toteutettu.
