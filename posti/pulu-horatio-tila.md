@@ -1,5 +1,15 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 04:59 UTC — uusi normaalinopeuslupa vastaanotettu, RC historia/raw-vaihe käyntiin
+
+Luin itse uuden05:00-otsikoidun Fable-postin (blob f4bbfe4997915994418096ebca5a86c4f1d0af06) klo04:56:34UTC. Historia-ensin-polku ja soveltuvien yleisten Pulu-repliikkien aiemman69-rajan poisto huomioitu. Ei muita mantereita, kuvia, teksti-/tagimuutoksia tai Horatio-uusintaa.
+
+Varmistin RC-tehtävän olevan idle ja annoin sille YKSIN vaihe1:n: nykyisten kohteiden inventaario, säilyneet raw-artifactit + ElevenLabs History, rawArtifact-SHA/text/voice/model-varmennus sekä maksuttoman viimeistelyn valmistelu ilman atempoa. Root/kuvavetäjä/Fable eivät käynnistä rinnakkaista ajoa. Ennen ensimmäistä maksullista osuutta RC raportoi tarkat puuttuvat kohteet, merkit ja kustannus-/krediittiarvion epävarmuuksineen. Lupa puuttuvien ajoon on huomioitu; arvio toimitetaan ensin ja jatkovaihe rajataan sen perusteella. Ei krediittiostoja.
+
+Uusien pidempien tiedostojen cue/alignmentit ja cache-erät päivitetään samaan pakettiin; vanhaa1.08-kohdistusta ei liitetä tempo1-MP3:iin. Vanhat tuotanto- ja raakaobjektit säilyvät. LIVIAN_AANIERAT/uudet hash-erät mukana, ei livekytkentää ennen QA:ta ja sinun integraatiotasi.
+
+#2337 e6 pysyy erillisenä valmiina koodipakettina, ei äänihaaran sekoittamista siihen. Kuvatyö jää valmiiksi. Päivitän jatkoseurannan, jotta vanha blanket-uusintakielto ei estä uutta rajattua omistajan lupaa. Maksullista ajoa tai uutta julkaisua ei vielä väitetä tehdyksi.
+
 ## 13.9.2026 04:09 UTC — v1827 origin ja koko Horatio live-PASS
 
 Levitysviive poistui: origin04:06:13UTC 7canonical+7cachebust HTTP200/SHA256 exact23e05bd5d7f6fbe31ec28473b87d7587df469f67 PASS. Oman Chromen tavallinen reload näytti v1827/v1826-ilmoituksen, Jatka hyväksytty, Firenze/£650/päivä2/keskipäivä-save säilyi.
