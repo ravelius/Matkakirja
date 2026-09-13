@@ -156,8 +156,17 @@ function asetaKylttiRaja(piste, polku) {
  * ovat pelkkiä merkkejä. Data: js/packs/maakartat.js
  * (KAUPUNKIKARTAT).
  */
-export function piirraKaupunkiKartta(ui, kohde) {
-  const kartta = KAUPUNKIKARTAT[ui.lehtitila.arrivalShownFor];
+/*
+ * KAUPUNKI VOI TULLA MYÖS PARAMETRINA (karttauudistus erä 4,
+ * 13.9.2026): pallon kaupunki-pop-up latoo saman kohdekartan omaan
+ * kehykseensä, eikä sen avautuminen kulje saapumiskortin kautta —
+ * `ui.lehtitila.arrivalShownFor` osoittaa silloin siihen kaupunkiin,
+ * jossa pelaaja on, ei siihen, jonka merkkiä napautettiin. Oletus on
+ * entinen kenttä, joten kaupunkilehti ei muutu miksikään.
+ */
+export function piirraKaupunkiKartta(ui, kohde, { cityId = null } = {}) {
+  const kaupunkiId = cityId ?? ui.lehtitila.arrivalShownFor;
+  const kartta = KAUPUNKIKARTAT[kaupunkiId];
   if (!kartta) return;
   const lohko = html('div', 'kaupunkikartta');
   lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', 'Kaupunki kartalla'));
@@ -337,7 +346,7 @@ export function piirraKaupunkiKartta(ui, kohde) {
    * voittaa kohteen mahdollisen wiki-kentän (undefined ohittaa
    * sen), koska omalla jutulla ei näytetä "Lue lisää" -linkkiä.
    */
-  const kaupunki = ui.lehtitila.arrivalShownFor;
+  const kaupunki = kaupunkiId;
   // Piirrospisteet kerätään hajautusta varten (ks. metodin loppu).
   const piirrosPisteet = [];
   /*
@@ -1429,8 +1438,14 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
  * kohteet — sama kortti, samat eleet, ei uutta ikkunatyyppiä.
  * Kaupunki ilman matkailijalle-kenttää ei näytä osiota.
  */
-export function piirraMatkailijalle(ui, kohde) {
-  const tiedot = ui.lehtitila.tutkiKansi?.matkailijalle;
+/*
+ * KANSI VOI TULLA MYÖS PARAMETRINA (karttauudistus erä 4, 13.9.2026):
+ * turisti-info-merkki pallolla avaa PELKÄN tämän lohkon omaan
+ * pop-upiinsa, eikä sivupinoa (ui.lehtitila.tutkiKansi) ole silloin
+ * rakennettu sille kaupungille. Sisältö on sama sanatarkasti.
+ */
+export function piirraMatkailijalle(ui, kohde, { kansi = null } = {}) {
+  const tiedot = (kansi ?? ui.lehtitila.tutkiKansi)?.matkailijalle;
   if (!tiedot?.kappale) return;
   const lohko = html('div', 'matkailijalle');
   lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', 'Matkailijalle'));

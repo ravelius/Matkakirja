@@ -25616,6 +25616,23 @@ svg.rough-annotation { pointer-events: none; }
  * kuin transform-määreellä (SVG:n oletus 0 0).
  */
 .pallolauta-nosto-siirto { transition: transform 200ms ease-in-out; }
+/*
+ * TURISTI-INFON MERKKI KAUPUNGIN VIERESSÄ (karttauudistus erä 4,
+ * 13.9.2026; js/kaupunkinosto.js). Merkki on samaa sukua kuin elävä
+ * nosto — sama mustepiirros ja nimiö — mutta oma luokkansa, koska sen
+ * mittakaava tulee KAMERASTA eikä kiinteästä NOSTON_MITASTA
+ * (PAATOKSET 2: kartalle kiinnitetty kaluste skaalautuu zoomatessa).
+ *
+ * SÄÄNTÖ ASUU TÄSSÄ EIKÄ css/kaupunkinosto.css:ssä, koska se on merkin
+ * eikä pop-upin tyyli: pop-upin tyyli ladataan vasta ensimmäisellä
+ * avauksella, ja merkin on näyttävä kartalla jo ennen sitä.
+ */
+.pallolauta-turisti-info {
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+.pallolauta-turisti-info svg { display: block; overflow: visible; }
+.pallolauta-turisti-info-siirto { transition: transform 200ms ease-in-out; }
 /* Nimen muste ja kirjasin tulevat .karttanimi-luokasta (tasokartan sama
    sääntö); svg:n sisällä teksti asettuu keskilinjaan kuten kartalla. */
 .pallolauta-nimi text { dominant-baseline: middle; }
@@ -25686,6 +25703,9 @@ body.maatiedot-tila .pallolauta-nappula { display: none; }
   .pallolauta-merkki { transition: none; animation: none; }
   .pallolauta-nimi-siirto,
   .pallolauta-nosto-siirto { transition: none; }
+  /* Turisti-infon merkki on oma luokkansa (ks. sen sääntö ylempänä);
+     pari yllä on tests/pallosovittelu.test.mjs:n vartioima sanatarkasti. */
+  .pallolauta-turisti-info-siirto { transition: none; }
 }
 
 /* ==========================================================================
