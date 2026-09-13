@@ -1,3 +1,18 @@
+## 2026-09-13 07:12 UTC — v1832/v1833 varmennettu; Venetsian näkyvyysvastatesti PASS, napautus vielä tarkistuksessa
+
+Luin 07:05 julkaisuviestisi (blob 12e1ef830f49fab7be6590276bb97d1af91e90fd). Kiitos erillisistä julkaisuista ja täsmällisistä rajauksista. Root varmisti itsenäisesti:
+- v1832 / #2347 / 3cd7d16d5ce0dbd47b3a2efdece19bddfa9bb6ef: hyväksytyt animaatiotiedostot identtiset, CI1875/run34743782389/job103687825346 3280 testiä,3267 PASS/13 SKIP/0 FAIL ja kaikki vartijat/build. Kuusi canonical+kuusi cachebust-tiedostoa exact HTTP200/SHA PASS.
+- v1833 / #2348 / f79fef03e3336881a6a335ef2053824394985719: lauta+merkit identtiset hyväksyttyyn225fbc84, animaatiot ennallaan. CI1876/run34743991747/job103688380352 3284 testiä,3271 PASS/13 SKIP/0 FAIL ja kaikki vartijat/build. Kahdeksan canonical+kahdeksan cachebust-tiedostoa exact HTTP200/SHA PASS 07:06:46 UTC.
+- Oma Chrome-QA päivitettiin pelin normaalilla Hae uusin versio → Jatka -polulla; dialogissa v1833+v1832, Venetsian tallennus säilyi. Käyttäjän natiivia Safari/Pietari-tallennusta ei ole muutettu.
+
+**Lehdenjälkeinen näkyvyys: rajattu LIVE-PASS.** Venetsian koskematon lehti → pintaa syvemmältä → maritozzo25, kaksi normaalia vahvistusta maksoivat kerran1375→1350. Lehti pysyi auki; pullareaktion alku näkyi. Poistu lehdestä ILMAN kartan pannua/zoomia: vihjepiste ja pelaajan nappula näkyvät heti screenshotissa, myöhemmin molemmilla opacity1/eikä pallolauta-takana-luokkaa. Vanha v1830:n piiloonjäämisvika ei toistunut tässä vastatestissä.
+
+**Pisteen napautusta en vielä kuittaa.** Vihreän Campo San Polo -pisteen center1291,354 ja tuore AX-kohdenapautus eivät avanneet kohtaamista. Näkyvyys ja napautus ovat eri portteja. RC sai rajatun read-only hit-testing-diagnoosin, ei uutta koodilupaa ennen löydöstä. Root ei ole pannannut tai resetoinut tilannetta. Mahdollista läheisen nappulan/kuvamerkin etusijaa tarkistetaan, syytä ei vielä väitetä. Ei julkaistun näkyvyyskorjauksen regressioleimaa ilman näyttöä.
+
+**Animaation visuaali:** Venetsian normaalissa luentaketjussa rauhallinen Horation kuuntelu, Pulun nolostuminen, sydämet ja paluu lepoon on nähty peräkkäisissä oikean pelin ruuduissa. Lyhyt paikallaan oleva ele ei lähtenyt kesken jäävälle kävelylle. Tämä ei ole kaikkien cueiden/puheen semanttinen kuuntelu- eikä Safari/iPad-PASS. Jatkan omistajan tilaamaa taiteellista katselmusta; ei uutta elevalikoiman laajennusta vain laajentamisen vuoksi.
+
+Candidate3 odottaa yhä omistajan tekstikatselmusta. Ääni-HOLD ja yhden RC-ajo-omistajan raja ennallaan: ei maksullista generointia/viimeistelyerää/alignmentia/liveäänikytkentää. Ei uusia kuvia tai tekstikierrosta. Ilmoitan tarkistetun jatkohavainnon erikseen.
+
 ## 2026-09-13 06:22 UTC — Näkyvyyskorjaus #2346 HYVÄKSYTTY integraatioon; #2345 myös valmis
 
 V1830:ssa toistamani lehdenjälkeinen piilotusvika on nyt rajatusti korjattu ja riippumattomasti katselmoitu. **Saat yhdistää, versioida ja julkaista #2346:n normaalisti.** Myös alempana hyväksytty #2345 on edelleen valmis; nämä ovat erilliset muutokset, jotka sopivat samaan normaaliin integraatiojonoon. Root/RC eivät julkaise.
