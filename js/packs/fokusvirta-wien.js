@@ -810,184 +810,180 @@ export const FOKUSVIRTA_WIEN = {
      * `praterin-ratas`, `taikahuilu-wiedenissa`.
      * ══════════════════════════════════════════════════════════════
      */
-      {
-        id: 'praterin-ratas',
-        nimio: 'Rattaan kulmat',
-        otsikko: 'Ratas, joka kulkee kävelyä hitaammin',
-        symboli: 'tekniikka',
-        lunastus: [
-          'Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin '
-            + '50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan '
-            + 'kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua '
-            + 'kohti. Vaunuja oli kolmekymmentä, kunnes ratas paloi '
-            + 'huhtikuussa 1945. Kun se avattiin uudelleen 1947, vaunuja '
-            + 'ripustettiin takaisin vain viisitoista — ja niin ne roikkuvat '
-            + 'siitä asti joka toisessa kulmassa. Ratas kulkee 2,7 kilometriä '
-            + 'tunnissa.',
+    {
+      id: 'praterin-ratas',
+      nimio: 'Rattaan kulmat',
+      otsikko: 'Ratas, joka kulkee kävelyä hitaammin',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin '
+          + '50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan '
+          + 'kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. '
+          + 'Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. '
+          + 'Kun se avattiin uudelleen 1947, vaunuja ripustettiin takaisin '
+          + 'vain viisitoista — ja niin ne roikkuvat siitä asti joka toisessa '
+          + 'kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.',
+      ],
+      lahde: 'Wienin kaupunkilehden nosto "Ratas, joka kulkee kävelyä hitaammin" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Riesenrad Wiener Prater 2020-07-12 d.jpg',
+        lyhyt: 'Praterin jättirattaan pienet vaunut kulkevat vain 2,7 kilometriä tunnissa.',
+        selite: 'Praterin jättirattaan vaunut ovat pieniä puutaloja ovineen ja '
+          + 'ikkunoineen, ja ratas kulkee 2,7 kilometriä tunnissa.',
+        lahde: 'Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Miksi rattaan kehästä tehtiin kolmikymmenkulmio eikä pyöreää?',
+        'Miksi vaunuja ripustettiin sodan jälkeen takaisin vain puolet?',
+        'Millaista Praterissa oli silloin, kun ratas nousi?',
+      ],
+      visa: {
+        kysymys: 'Praterin jättiratas ei ole ympyrä. Minkä muotoinen sen kehä on?',
+        vaihtoehdot: [
+          'Soikio',
+          'Kolmikymmenkulmio',
+          'Kuusikulmio',
         ],
-        lahde: 'Wienin kaupunkilehden nosto "Ratas, joka kulkee kävelyä '
-          + 'hitaammin" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
-          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Riesenrad Wiener Prater 2020-07-12 d.jpg',
-          lyhyt: 'Praterin jättirattaan pienet vaunut kulkevat vain 2,7 kilometriä tunnissa.',
-          selite: 'Praterin jättirattaan vaunut ovat pieniä puutaloja ovineen ja '
-            + 'ikkunoineen, ja ratas kulkee 2,7 kilometriä tunnissa.',
-          lahde: 'Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        kysymykset: [
-          'Miksi rattaan kehästä tehtiin kolmikymmenkulmio eikä pyöreää?',
-          'Miksi vaunuja ripustettiin sodan jälkeen takaisin vain puolet?',
-          'Millaista Praterissa oli silloin, kun ratas nousi?',
-        ],
-        visa: {
-          kysymys: 'Praterin jättiratas ei ole ympyrä. Minkä muotoinen sen kehä on?',
-          vaihtoehdot: [
-            'Soikio',
-            'Kolmikymmenkulmio',
-            'Kuusikulmio',
-          ],
-          oikea: 1,
-          fakta: 'Ratas kulkee 2,7 kilometriä tunnissa.',
-        },
-        paikka: {
-          nimi: 'Rattaan kulmat',
-          laudat: {
-            maailmankartta: { x: 6379.9, y: 1467 },
-            europe: { x: 526, y: 625.5 },
-          },
+        oikea: 1,
+        fakta: 'Ratas kulkee 2,7 kilometriä tunnissa.',
+      },
+      paikka: {
+        nimi: 'Rattaan kulmat',
+        laudat: {
+          maailmankartta: { x: 6379.9, y: 1467 },
+          europe: { x: 526, y: 625.5 },
         },
       },
-      {
-        id: 'lipizzanit',
-        nimio: 'Lipizzanit',
-        otsikko: 'Valkoiset hevoset syntyvät tummina',
-        symboli: 'elain',
-        lunastus: [
-          'Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit '
-            + 'tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. '
-            + 'Valkoisia ne eivät silloin vielä ole: varsat syntyvät '
-            + 'ruunikkoina tai mustina ja vaalenevat vuosi vuodelta, kunnes '
-            + 'ovat 6–10 vuoden iässä valkoisia. Perinne vaatii, että tallissa '
-            + 'on aina myös yksi ruunikko. Ratsastajat tervehtivät salin '
-            + 'seinällä olevaa keisari Kaarle VI:n muotokuvaa ennen kuin '
-            + 'ratsastavat.',
-        ],
-        lahde: 'Wienin kaupunkilehden nosto "Valkoiset hevoset syntyvät tummina" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Kawecan.jpg',
-          lyhyt: 'Lipizzanovarsat syntyvät tummina ja vaalenevat vuosittain, kunnes ovat 6–10-vuotiaina valkoisia.',
-          selite: 'Lipizzanovarsat syntyvät ruunikkoina tai mustina ja vaalenevat '
-            + 'vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia.',
-          lahde: 'Eerschay, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        kysymykset: [
-          'Miksi lipizzanit kasvatetaan Steiermarkissa eikä Wienissä?',
-          'Mitä ratsastuskoulussa opetetaan hevosille neljän vuoden iästä '
-            + 'eteenpäin?',
-          'Miksi tallissa pidetään perinteen vuoksi aina yksi ruunikko?',
-        ],
-        paikka: {
-          nimi: 'Lipizzanit',
-          laudat: {
-            maailmankartta: { x: 6378.9, y: 1467.4 },
-            europe: { x: 525.4, y: 625.8 },
-          },
+    },
+    {
+      id: 'lipizzanit',
+      nimio: 'Lipizzanit',
+      otsikko: 'Valkoiset hevoset syntyvät tummina',
+      symboli: 'elain',
+      lunastus: [
+        'Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit '
+          + 'tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. '
+          + 'Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina '
+          + 'tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden '
+          + 'iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi '
+          + 'ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari '
+          + 'Kaarle VI:n muotokuvaa ennen kuin ratsastavat.',
+      ],
+      lahde: 'Wienin kaupunkilehden nosto "Valkoiset hevoset syntyvät tummina" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Kawecan.jpg',
+        lyhyt: 'Lipizzanovarsat syntyvät tummina ja vaalenevat vuosittain, kunnes ovat 6–10-vuotiaina valkoisia.',
+        selite: 'Lipizzanovarsat syntyvät ruunikkoina tai mustina ja vaalenevat '
+          + 'vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia.',
+        lahde: 'Eerschay, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Miksi lipizzanit kasvatetaan Steiermarkissa eikä Wienissä?',
+        'Mitä ratsastuskoulussa opetetaan hevosille neljän vuoden iästä '
+          + 'eteenpäin?',
+        'Miksi tallissa pidetään perinteen vuoksi aina yksi ruunikko?',
+      ],
+      paikka: {
+        nimi: 'Lipizzanit',
+        laudat: {
+          maailmankartta: { x: 6378.9, y: 1467.4 },
+          europe: { x: 525.4, y: 625.8 },
         },
       },
-      {
-        id: 'taikahuilu-wiedenissa',
-        nimio: 'Taikahuilu',
-        otsikko: 'Taikahuilu tehtiin esikaupungin teatteriin',
-        symboli: 'kulttuuri',
-        lunastus: [
-          'Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu '
-            + 'sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin '
-            + 'teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin '
-            + 'saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. '
-            + 'Schikaneder kirjoitti sanat itse ja näytteli linnustaja '
-            + 'Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen '
-            + 'vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja '
-            + 'antoi veistää itsensä Papagenona sen portin päälle.',
+    },
+    {
+      id: 'taikahuilu-wiedenissa',
+      nimio: 'Taikahuilu',
+      otsikko: 'Taikahuilu tehtiin esikaupungin teatteriin',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu '
+          + 'sai ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin '
+          + 'teatterissa Wienin Wiedenin esikaupungissa, ja se laulettiin '
+          + 'saksaksi eikä italiaksi — tavallisen wieniläisen kielellä. '
+          + 'Schikaneder kirjoitti sanat itse ja näytteli linnustaja '
+          + 'Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. Kymmenen '
+          + 'vuoden päästä Schikaneder avasi kaupunkiin uuden teatterin ja '
+          + 'antoi veistää itsensä Papagenona sen portin päälle.',
+      ],
+      lahde: 'Wienin kaupunkilehden nosto "Taikahuilu tehtiin esikaupungin '
+        + 'teatteriin" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Karl Friedrich Schinkel - Die Sternenhalle der Königin der Nacht (ca. 1815).jpg',
+        lyhyt: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön kuningattaren tähtisalin lavastuksen.',
+        selite: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön '
+          + 'kuningattaren tähtisalin lavastuksen tähdillä ladotuksi siniseksi '
+          + 'kupoliksi.',
+        lahde: 'Karl Friedrich Schinkel, Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miksi Mozartin viimeinen ooppera syntyi esikaupungin teatteriin '
+          + 'eikä hoville?',
+        'Mitä merkitsi, että ooppera laulettiin saksaksi eikä italiaksi?',
+        'Miksi Schikaneder halusi itsensä veistettynä Papagenona '
+          + 'teatterinsa portin päälle?',
+      ],
+      visa: {
+        kysymys: 'Millä kielellä Taikahuilu laulettiin ensi-illassaan?',
+        vaihtoehdot: [
+          'Italiaksi',
+          'Latinaksi',
+          'Saksaksi',
         ],
-        lahde: 'Wienin kaupunkilehden nosto "Taikahuilu tehtiin esikaupungin '
-          + 'teatteriin" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
-          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Karl Friedrich Schinkel - Die Sternenhalle der Königin der Nacht (ca. 1815).jpg',
-          lyhyt: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön kuningattaren tähtisalin lavastuksen.',
-          selite: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön '
-            + 'kuningattaren tähtisalin lavastuksen tähdillä ladotuksi '
-            + 'siniseksi kupoliksi.',
-          lahde: 'Karl Friedrich Schinkel, Wikimedia Commons (PD)',
-        },
-        kysymykset: [
-          'Miksi Mozartin viimeinen ooppera syntyi esikaupungin teatteriin '
-            + 'eikä hoville?',
-          'Mitä merkitsi, että ooppera laulettiin saksaksi eikä italiaksi?',
-          'Miksi Schikaneder halusi itsensä veistettynä Papagenona '
-            + 'teatterinsa portin päälle?',
-        ],
-        visa: {
-          kysymys: 'Millä kielellä Taikahuilu laulettiin ensi-illassaan?',
-          vaihtoehdot: [
-            'Italiaksi',
-            'Latinaksi',
-            'Saksaksi',
-          ],
-          oikea: 2,
-          fakta: 'Schikaneder kirjoitti sanat itse ja näytteli linnustaja '
-            + 'Papagenoa.',
-        },
-        paikka: {
-          nimi: 'Taikahuilu',
-          laudat: {
-            maailmankartta: { x: 6378.8, y: 1467.8 },
-            europe: { x: 525.4, y: 626 },
-          },
+        oikea: 2,
+        fakta: 'Schikaneder kirjoitti sanat itse ja näytteli linnustaja Papagenoa.',
+      },
+      paikka: {
+        nimi: 'Taikahuilu',
+        laudat: {
+          maailmankartta: { x: 6378.8, y: 1467.8 },
+          europe: { x: 525.4, y: 626 },
         },
       },
-      {
-        id: 'tonava-kaunoinen',
-        nimio: 'Tonava kaunoinen',
-        otsikko: 'Kaupunki sävelsi oman jokensa',
-        symboli: 'kulttuuri',
-        lunastus: [
-          'Johann Strauss nuoremman valssi Tonava kaunoinen '
-            + 'kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin '
-            + 'mieskuorolle, vasta myöhemmin pelkälle orkesterille. '
-            + 'Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten '
-            + 'se ei mene metronomin kanssa tasan: sitä ei voi laskea, se '
-            + 'pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti '
-            + 'orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.',
-        ],
-        lahde: 'Wienin kaupunkilehden nosto "Kaupunki sävelsi oman jokensa" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Johann Strauss II by Fritz Luckhardt.jpg',
-          lyhyt: 'Johann Strauss nuorempi kuvattiin 1899 johtamassa orkesteriaan viulu kädessä, viimeisenä vuotenaan.',
-          selite: 'Johann Strauss nuorempi sävelsi noin viisisataa teosta ja johti '
-            + 'orkesteriaan viulu kädessä; Fritz Luckhardt valokuvasi hänet '
-            + '1899, hänen viimeisenä elinvuotenaan.',
-          lahde: 'Fritz Luckhardt, Wikimedia Commons (PD)',
-        },
-        kysymykset: [
-          'Miksi valssi tehtiin ensin mieskuorolle eikä orkesterille?',
-          'Miten etuajassa tuleva toinen isku opitaan, jos sitä ei voi '
-            + 'laskea?',
-          'Miten yhdestä valssista tuli kokonaisen kaupungin tunnusmerkki?',
-        ],
-        paikka: {
-          nimi: 'Tonava kaunoinen',
-          laudat: {
-            maailmankartta: { x: 6379.3, y: 1467.5 },
-            europe: { x: 525.7, y: 625.8 },
-          },
+    },
+    {
+      id: 'tonava-kaunoinen',
+      nimio: 'Tonava kaunoinen',
+      otsikko: 'Kaupunki sävelsi oman jokensa',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin '
+          + 'Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta '
+          + 'myöhemmin pelkälle orkesterille. Wieniläisvalssissa toinen isku '
+          + 'tulee hitusen etuajassa, joten se ei mene metronomin kanssa '
+          + 'tasan: sitä ei voi laskea, se pitää tuntea. Strauss sävelsi noin '
+          + 'viisisataa teosta ja johti orkesteriaan viulu kädessä, soittaen '
+          + 'ja tahdittaen yhtä aikaa.',
+      ],
+      lahde: 'Wienin kaupunkilehden nosto "Kaupunki sävelsi oman jokensa" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Johann Strauss II by Fritz Luckhardt.jpg',
+        lyhyt: 'Johann Strauss nuorempi kuvattiin 1899 johtamassa orkesteriaan viulu kädessä, viimeisenä vuotenaan.',
+        selite: 'Johann Strauss nuorempi sävelsi noin viisisataa teosta ja johti '
+          + 'orkesteriaan viulu kädessä; Fritz Luckhardt valokuvasi hänet '
+          + '1899, hänen viimeisenä elinvuotenaan.',
+        lahde: 'Fritz Luckhardt, Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miksi valssi tehtiin ensin mieskuorolle eikä orkesterille?',
+        'Miten etuajassa tuleva toinen isku opitaan, jos sitä ei voi laskea?',
+        'Miten yhdestä valssista tuli kokonaisen kaupungin tunnusmerkki?',
+      ],
+      paikka: {
+        nimi: 'Tonava kaunoinen',
+        laudat: {
+          maailmankartta: { x: 6379.3, y: 1467.5 },
+          europe: { x: 525.7, y: 625.8 },
         },
       },
+    },
   ],
 
   /*

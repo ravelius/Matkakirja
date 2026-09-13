@@ -856,232 +856,230 @@ export const FOKUSVIRTA_ROOMA = {
      * `colosseumin-kellari`, `rooman-nasone`.
      * ══════════════════════════════════════════════════════════════
      */
-      {
-        id: 'rooman-kolikko',
-        nimio: 'Kolikko olan yli',
-        otsikko: 'Kolikko olan yli',
-        symboli: 'kulttuuri',
-        lunastus: [
-          'Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman '
-            + 'olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita '
-            + 'putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja '
-            + 'ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle '
-            + 'hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. '
-            + 'Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja '
-            + 'yrittäjiä jää säännöllisesti kiinni.',
-        ],
-        lahde: 'Rooman kaupunkilehden nosto "Kolikko olan yli" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Trevi Fountain - Roma.jpg',
-          lyhyt: 'Fontana di Trevi on Palazzo Poli -palatsin päätyseinä, jonka kaaren alla seisoo merenjumala Oceanus.',
-          selite: 'Fontana di Trevi ei ole erillinen muistomerkki vaan Palazzo '
-            + 'Poli -palatsin päätyseinä, jonka kaaren alla seisoo meren '
-            + 'jumala Oceanus.',
-          lahde: 'NikonZ7II, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        kysymykset: [
-          'Miksi kolikko heitetään juuri oikealla kädellä vasemman olan yli?',
-          'Miten kolmentuhannen euron päiväsaalis kerätään altaan pohjasta '
-            + 'talteen?',
-          'Mihin Caritaksen ruoka-apu Roomassa menee?',
-        ],
-        paikka: {
-          nimi: 'Kolikko olan yli',
-          laudat: {
-            maailmankartta: { x: 6249.4, y: 1727.5 },
-            europe: { x: 450.9, y: 791.6 },
-          },
+    {
+      id: 'rooman-kolikko',
+      nimio: 'Kolikko olan yli',
+      otsikko: 'Kolikko olan yli',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman '
+          + 'olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita '
+          + 'putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja ne '
+          + 'kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle '
+          + 'hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa '
+          + 'kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä '
+          + 'jää säännöllisesti kiinni.',
+      ],
+      lahde: 'Rooman kaupunkilehden nosto "Kolikko olan yli" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Trevi Fountain - Roma.jpg',
+        lyhyt: 'Fontana di Trevi on Palazzo Poli -palatsin päätyseinä, jonka kaaren alla seisoo merenjumala Oceanus.',
+        selite: 'Fontana di Trevi ei ole erillinen muistomerkki vaan Palazzo Poli '
+          + '-palatsin päätyseinä, jonka kaaren alla seisoo meren jumala '
+          + 'Oceanus.',
+        lahde: 'NikonZ7II, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Miksi kolikko heitetään juuri oikealla kädellä vasemman olan yli?',
+        'Miten kolmentuhannen euron päiväsaalis kerätään altaan pohjasta '
+          + 'talteen?',
+        'Mihin Caritaksen ruoka-apu Roomassa menee?',
+      ],
+      paikka: {
+        nimi: 'Kolikko olan yli',
+        laudat: {
+          maailmankartta: { x: 6249.4, y: 1727.5 },
+          europe: { x: 450.9, y: 791.6 },
         },
       },
-      {
-        id: 'colosseumin-kellari',
-        nimio: 'Areenan kellari',
-        otsikko: 'Leijona nousi lattian alta',
-        symboli: 'tekniikka',
-        lunastus: [
-          'Colosseumin areena oli puulattia, jonka päälle levitettiin '
-            + 'hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee '
-            + 'sana areena. Lattian alla oli kaksikerroksinen kellari: '
-            + 'käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi '
-            + 'nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja '
-            + 'eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä '
-            + 'oli kangaskatto auringolta, ja sitä kelasivat auki '
-            + 'sotalaivaston merimiehet.',
+    },
+    {
+      id: 'colosseumin-kellari',
+      nimio: 'Areenan kellari',
+      otsikko: 'Leijona nousi lattian alta',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Colosseumin areena oli puulattia, jonka päälle levitettiin '
+          + 'hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee '
+          + 'sana areena. Lattian alla oli kaksikerroksinen kellari: käytäviä, '
+          + 'häkkejä ja kahdeksankymmentä pystykuilua. Vinssi nosti häkin '
+          + 'kuilua pitkin lattian tasalle, luukku aukesi, ja eläin ilmestyi '
+          + 'keskelle areenaa kuin tyhjästä. Katsomon yllä oli kangaskatto '
+          + 'auringolta, ja sitä kelasivat auki sotalaivaston merimiehet.',
+      ],
+      lahde: 'Rooman kaupunkilehden nosto "Leijona nousi lattian alta" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Hypogeum 1 (15005526662).jpg',
+        lyhyt: 'Colosseumin puulattian alla oli kaksikerroksinen kellari hypogeum käytävineen.',
+        selite: 'Colosseumin areenan puulattian alla oli kaksikerroksinen kellari '
+          + 'eli hypogeum, jossa oli käytäviä, häkkejä ja kahdeksankymmentä '
+          + 'pystykuilua.',
+        lahde: 'daryl_mitchell from Saskatoon, Saskatchewan, Canada, Wikimedia '
+          + 'Commons (CC BY-SA 2.0)',
+      },
+      kysymykset: [
+        'Miten kaksikerroksinen kellari käytävineen rakennettiin areenan '
+          + 'alle?',
+        'Miksi puulattian päälle levitettiin hiekkaa?',
+        'Miksi juuri sotalaivaston merimiehet kelasivat kangaskaton auki?',
+      ],
+      visa: {
+        kysymys: 'Colosseumin areenalla eläin saattoi ilmestyä keskelle kuin '
+          + 'tyhjästä. Miten se tehtiin?',
+        vaihtoehdot: [
+          'Vinssi nosti häkin pystykuilua pitkin lattian tasalle',
+          'Eläin ajettiin sisään katsomon alta nousevaa ramppia pitkin',
+          'Hiekkaan oli kaivettu kuoppa, jonka päällä oli matto',
         ],
-        lahde: 'Rooman kaupunkilehden nosto "Leijona nousi lattian alta" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Hypogeum 1 (15005526662).jpg',
-          lyhyt: 'Colosseumin puulattian alla oli kaksikerroksinen kellari hypogeum käytävineen.',
-          selite: 'Colosseumin areenan puulattian alla oli kaksikerroksinen '
-            + 'kellari eli hypogeum, jossa oli käytäviä, häkkejä ja '
-            + 'kahdeksankymmentä pystykuilua.',
-          lahde: 'daryl_mitchell from Saskatoon, Saskatchewan, Canada, Wikimedia '
-            + 'Commons (CC BY-SA 2.0)',
-        },
-        kysymykset: [
-          'Miten kaksikerroksinen kellari käytävineen rakennettiin areenan '
-            + 'alle?',
-          'Miksi puulattian päälle levitettiin hiekkaa?',
-          'Miksi juuri sotalaivaston merimiehet kelasivat kangaskaton auki?',
-        ],
-        visa: {
-          kysymys: 'Colosseumin areenalla eläin saattoi ilmestyä keskelle kuin '
-            + 'tyhjästä. Miten se tehtiin?',
-          vaihtoehdot: [
-            'Vinssi nosti häkin pystykuilua pitkin lattian tasalle',
-            'Eläin ajettiin sisään katsomon alta nousevaa ramppia pitkin',
-            'Hiekkaan oli kaivettu kuoppa, jonka päällä oli matto',
-          ],
-          oikea: 0,
-          fakta: 'Colosseumin areena oli puulattia, jonka päälle levitettiin '
-            + 'hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee '
-            + 'sana areena.',
-        },
-        paikka: {
-          nimi: 'Areenan kellari',
-          laudat: {
-            maailmankartta: { x: 6249.7, y: 1728 },
-            europe: { x: 451.1, y: 791.9 },
-          },
+        oikea: 0,
+        fakta: 'Colosseumin areena oli puulattia, jonka päälle levitettiin '
+          + 'hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee '
+          + 'sana areena.',
+      },
+      paikka: {
+        nimi: 'Areenan kellari',
+        laudat: {
+          maailmankartta: { x: 6249.7, y: 1728 },
+          europe: { x: 451.1, y: 791.9 },
         },
       },
-      {
-        id: 'minervan-norsu',
-        nimio: 'Norsu ja obeliski',
-        otsikko: 'Norsu kantaa obeliskia',
-        symboli: 'kulttuuri',
-        lunastus: [
-          'Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka '
-            + 'selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian '
-            + 'Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se '
-            + 'paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista '
-            + 'muinaisobeliskista pienin, viisi ja puoli metriä — ja '
-            + 'muinaisobeliskeja on Roomassa enemmän kuin missään muussa '
-            + 'kaupungissa maailmassa. Roomalaiset antoivat patsaalle '
-            + 'lempinimen pulcino, tipu, vaikka sana tarkoitti tuolloin '
-            + 'possua: norsu oli heidän mielestään pieni ja pyöreä.',
-        ],
-        lahde: 'Rooman kaupunkilehden nosto "Norsu kantaa obeliskia" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Elephant and Obelisk.jpg',
-          lyhyt: 'Norsupatsaan suunnitteli Gian Lorenzo Bernini ja veisti Ercole Ferrata, ja se paljastettiin 1667.',
-          selite: 'Norsupatsaan suunnitteli Gian Lorenzo Bernini ja veisti Ercole '
-            + 'Ferrata, ja se paljastettiin vuonna 1667.',
-          lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        kysymykset: [
-          'Miten viisi ja puoli metriä korkea obeliski nostettiin norsun '
-            + 'selkään?',
-          'Mistä Rooman kolmetoista muinaisobeliskia ovat alun perin '
-            + 'peräisin?',
-          'Miksi roomalaisten mielestä marmorinorsu muistutti enemmän '
-            + 'possua kuin norsua?',
-        ],
-        paikka: {
-          nimi: 'Norsu ja obeliski',
-          laudat: {
-            maailmankartta: { x: 6249.3, y: 1727.7 },
-            europe: { x: 450.8, y: 791.7 },
-          },
+    },
+    {
+      id: 'minervan-norsu',
+      nimio: 'Norsu ja obeliski',
+      otsikko: 'Norsu kantaa obeliskia',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka '
+          + 'selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian '
+          + 'Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se '
+          + 'paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista '
+          + 'muinaisobeliskista pienin, viisi ja puoli metriä — ja '
+          + 'muinaisobeliskeja on Roomassa enemmän kuin missään muussa '
+          + 'kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen '
+          + 'pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli '
+          + 'heidän mielestään pieni ja pyöreä.',
+      ],
+      lahde: 'Rooman kaupunkilehden nosto "Norsu kantaa obeliskia" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Elephant and Obelisk.jpg',
+        lyhyt: 'Norsupatsaan suunnitteli Gian Lorenzo Bernini ja veisti Ercole Ferrata, ja se paljastettiin 1667.',
+        selite: 'Norsupatsaan suunnitteli Gian Lorenzo Bernini ja veisti Ercole '
+          + 'Ferrata, ja se paljastettiin vuonna 1667.',
+        lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Miten viisi ja puoli metriä korkea obeliski nostettiin norsun '
+          + 'selkään?',
+        'Mistä Rooman kolmetoista muinaisobeliskia ovat alun perin peräisin?',
+        'Miksi roomalaisten mielestä marmorinorsu muistutti enemmän possua '
+          + 'kuin norsua?',
+      ],
+      paikka: {
+        nimi: 'Norsu ja obeliski',
+        laudat: {
+          maailmankartta: { x: 6249.3, y: 1727.7 },
+          europe: { x: 450.8, y: 791.7 },
         },
       },
-      {
-        id: 'aqua-virgo',
-        nimio: 'Aqua Virgo',
-        otsikko: 'Vesi kulkee yhä',
-        symboli: 'tekniikka',
-        lunastus: [
-          'Roomaan rakennettiin yksitoista akveduktia, jotka toivat '
-            + 'vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat '
-            + 'pelkällä painovoimalla: kaltevuus oli paikoin vain '
-            + 'kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua '
-            + 'Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko matkansa '
-            + 'maan alla — kahdellakymmenellä kilometrillä vesi laskee vain '
-            + 'neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi tarkoittaa '
-            + 'neitoa: tarun mukaan nuori tyttö näytti janoisille sotilaille '
-            + 'lähteen, josta vesi otettiin.',
-        ],
-        lahde: 'Rooman kaupunkilehden nosto "Vesi kulkee yhä" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Aqueducts in Rome.jpg',
-          lyhyt: 'Roomaan rakennettiin yksitoista akveduktia, joissa vesi virtasi kourua pitkin painovoimalla.',
-          selite: 'Roomaan rakennettiin yksitoista akveduktia, ja vesi virtasi '
-            + 'kaarien päällä kulkevassa kourussa pelkän painovoiman voimalla.',
-          lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        kysymykset: [
-          'Miten kolmenkymmenen sentin kaltevuus kilometrillä mitattiin '
-            + 'ilman nykyvälineitä?',
-          'Mitä Rooman yhdestätoista akveduktista on yhä käytössä?',
-          'Miksi Aqua Virgo vedettiin melkein koko matkaltaan maan alle?',
-        ],
-        paikka: {
-          nimi: 'Aqua Virgo',
-          laudat: {
-            maailmankartta: { x: 6249.4, y: 1727.5 },
-            europe: { x: 450.9, y: 791.6 },
-          },
+    },
+    {
+      id: 'aqua-virgo',
+      nimio: 'Aqua Virgo',
+      otsikko: 'Vesi kulkee yhä',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta '
+          + 'vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä '
+          + 'painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä '
+          + 'kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 '
+          + 'eaa. ja kulkee melkein koko matkansa maan alla — '
+          + 'kahdellakymmenellä kilometrillä vesi laskee vain neljä metriä. Se '
+          + 'syöttää yhä Trevin lähdettä. Nimi tarkoittaa neitoa: tarun mukaan '
+          + 'nuori tyttö näytti janoisille sotilaille lähteen, josta vesi '
+          + 'otettiin.',
+      ],
+      lahde: 'Rooman kaupunkilehden nosto "Vesi kulkee yhä" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Aqueducts in Rome.jpg',
+        lyhyt: 'Roomaan rakennettiin yksitoista akveduktia, joissa vesi virtasi kourua pitkin painovoimalla.',
+        selite: 'Roomaan rakennettiin yksitoista akveduktia, ja vesi virtasi '
+          + 'kaarien päällä kulkevassa kourussa pelkän painovoiman voimalla.',
+        lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Miten kolmenkymmenen sentin kaltevuus kilometrillä mitattiin '
+          + 'ilman nykyvälineitä?',
+        'Mitä Rooman yhdestätoista akveduktista on yhä käytössä?',
+        'Miksi Aqua Virgo vedettiin melkein koko matkaltaan maan alle?',
+      ],
+      paikka: {
+        nimi: 'Aqua Virgo',
+        laudat: {
+          maailmankartta: { x: 6249.4, y: 1727.5 },
+          europe: { x: 450.9, y: 791.6 },
         },
       },
-      {
-        id: 'rooman-nasone',
-        nimio: 'Nasone',
-        otsikko: 'Iso nenä joka kulmassa',
-        symboli: 'kaupunki',
-        lunastus: [
-          'Rooman kaduilla seisoo valurautaisia pylväitä, joiden '
-            + 'koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset '
-            + 'pystytettiin 1870-luvulla, ja roomalaiset ristivät ne '
-            + 'nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 '
-            + '500, ja vesi on samaa kuin kotihanoissa. Putken päällä on pieni '
-            + 'reikä: kun putken suun tukkii sormella, vesi suihkuaa reiästä '
-            + 'ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä toimivia '
-            + 'seisoo Pantheonin vieressä Piazza della Rotondalla.',
+    },
+    {
+      id: 'rooman-nasone',
+      nimio: 'Nasone',
+      otsikko: 'Iso nenä joka kulmassa',
+      symboli: 'kaupunki',
+      lunastus: [
+        'Rooman kaduilla seisoo valurautaisia pylväitä, joiden '
+          + 'koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset '
+          + 'pystytettiin 1870-luvulla, ja roomalaiset ristivät ne nasoneiksi '
+          + 'eli isoiksi neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi '
+          + 'on samaa kuin kotihanoissa. Putken päällä on pieni reikä: kun '
+          + 'putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin ja '
+          + 'janoinen juo kumartumatta. Vanhimpia yhä toimivia seisoo '
+          + 'Pantheonin vieressä Piazza della Rotondalla.',
+      ],
+      lahde: 'Rooman kaupunkilehden nosto "Iso nenä joka kulmassa" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Nasone in Trastevere, Rome.jpg',
+        lyhyt: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi on samaa kuin kotihanoissa.',
+        selite: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi on '
+          + 'samaa kuin roomalaisten kotihanoissa.',
+        lahde: 'Sotamies, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Miksi nasoneiden annetaan juosta yötä päivää?',
+        'Mistä nasoneiden vesi tulee kaupunkiin?',
+        'Miksi ensimmäiset pylväät pystytettiin juuri 1870-luvulla?',
+      ],
+      visa: {
+        kysymys: 'Rooman katupylvään eli nasonen putken päällä on pieni reikä. Mitä '
+          + 'varten se on?',
+        vaihtoehdot: [
+          'Siitä pääsee ilma ulos, kun vesi kytketään päälle',
+          'Kun putken suun tukkii sormella, vesi suihkuaa reiästä ylöspäin '
+            + 'juotavaksi',
+          'Siitä kaupunki mittaa pylvään vedenpaineen',
         ],
-        lahde: 'Rooman kaupunkilehden nosto "Iso nenä joka kulmassa" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Nasone in Trastevere, Rome.jpg',
-          lyhyt: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi on samaa kuin kotihanoissa.',
-          selite: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi '
-            + 'on samaa kuin roomalaisten kotihanoissa.',
-          lahde: 'Sotamies, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        kysymykset: [
-          'Miksi nasoneiden annetaan juosta yötä päivää?',
-          'Mistä nasoneiden vesi tulee kaupunkiin?',
-          'Miksi ensimmäiset pylväät pystytettiin juuri 1870-luvulla?',
-        ],
-        visa: {
-          kysymys: 'Rooman katupylvään eli nasonen putken päällä on pieni reikä. '
-            + 'Mitä varten se on?',
-          vaihtoehdot: [
-            'Siitä pääsee ilma ulos, kun vesi kytketään päälle',
-            'Kun putken suun tukkii sormella, vesi suihkuaa reiästä '
-              + 'ylöspäin juotavaksi',
-            'Siitä kaupunki mittaa pylvään vedenpaineen',
-          ],
-          oikea: 1,
-          fakta: 'Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin '
-            + 'kotihanoissa.',
-        },
-        paikka: {
-          nimi: 'Nasone',
-          laudat: {
-            maailmankartta: { x: 6249.2, y: 1727.6 },
-            europe: { x: 450.8, y: 791.7 },
-          },
+        oikea: 1,
+        fakta: 'Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin '
+          + 'kotihanoissa.',
+      },
+      paikka: {
+        nimi: 'Nasone',
+        laudat: {
+          maailmankartta: { x: 6249.2, y: 1727.6 },
+          europe: { x: 450.8, y: 791.7 },
         },
       },
+    },
   ],
 
   /*

@@ -895,284 +895,281 @@ export const FOKUSVIRTA_MADRID = {
      * `madridin-tapaskierros`, `chotis-laatalla`, `gran-vian-murto`.
      * ══════════════════════════════════════════════════════════════
      */
-      {
-        id: 'madridin-tapaskierros',
-        nimio: 'Tapaskierros',
-        otsikko: 'Kaupunki, jossa syödään seisten',
-        symboli: 'ruoka',
-        lunastus: [
-          'Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, '
-            + 'ja väliin jää tunteja, jotka täytetään tapaksilla. Tapa '
-            + 'tarkoittaa kantta: juomalasin päälle asetettiin viipale kinkkua '
-            + 'tai leipää, jottei kärpäsiä päässyt sisään — kansi muuttui '
-            + 'ruoaksi. Tapaksia syödään seisten baaritiskillä ja siirrytään '
-            + 'sitten seuraavaan paikkaan; kierros on nimeltään tapeo, ja se '
-            + 'on yhtä paljon kävelyä kuin syömistä. Vuoden 1916 valurautainen '
-            + 'San Miguelin halli on kierroksen tunnetuin pysäkki.',
+    {
+      id: 'madridin-tapaskierros',
+      nimio: 'Tapaskierros',
+      otsikko: 'Kaupunki, jossa syödään seisten',
+      symboli: 'ruoka',
+      lunastus: [
+        'Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, ja '
+          + 'väliin jää tunteja, jotka täytetään tapaksilla. Tapa tarkoittaa '
+          + 'kantta: juomalasin päälle asetettiin viipale kinkkua tai leipää, '
+          + 'jottei kärpäsiä päässyt sisään — kansi muuttui ruoaksi. Tapaksia '
+          + 'syödään seisten baaritiskillä ja siirrytään sitten seuraavaan '
+          + 'paikkaan; kierros on nimeltään tapeo, ja se on yhtä paljon '
+          + 'kävelyä kuin syömistä. Vuoden 1916 valurautainen San Miguelin '
+          + 'halli on kierroksen tunnetuin pysäkki.',
+      ],
+      lahde: 'Madridin kaupunkilehden nosto "Kaupunki, jossa syödään seisten" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Mercado de San Miguel, Madrid - 001.jpg',
+        lyhyt: 'Mercado de San Miguelin lasi- ja valurautahalli oli vihannestori ennen muutostaan tapastoriksi 2009.',
+        selite: 'Mercado de San Miguelin lasi- ja valurautahalli Plaza Mayorin '
+          + 'kupeessa, entinen vihannestori, joka muuttui 2009 tapastoriksi.',
+        lahde: 'Nicolas Vigier, Wikimedia Commons (CC0)',
+      },
+      kysymykset: [
+        'Miksi Madridissa syödään illallinen vasta yhdeksän jälkeen?',
+        'Miten tapeo-kierros käytännössä kulkee baarista toiseen?',
+        'Millaisia tapaksia madridilaisessa baarissa tarjotaan?',
+      ],
+      visa: {
+        kysymys: 'Mitä espanjan sana tapa alun perin tarkoittaa?',
+        vaihtoehdot: [
+          'Pientä lautasta',
+          'Kantta',
+          'Välipalaa',
         ],
-        lahde: 'Madridin kaupunkilehden nosto "Kaupunki, jossa syödään seisten" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Mercado de San Miguel, Madrid - 001.jpg',
-          lyhyt: 'Mercado de San Miguelin lasi- ja valurautahalli oli vihannestori ennen muutostaan tapastoriksi 2009.',
-          selite: 'Mercado de San Miguelin lasi- ja valurautahalli Plaza Mayorin '
-            + 'kupeessa, entinen vihannestori, joka muuttui 2009 tapastoriksi.',
-          lahde: 'Nicolas Vigier, Wikimedia Commons (CC0)',
-        },
-        kysymykset: [
-          'Miksi Madridissa syödään illallinen vasta yhdeksän jälkeen?',
-          'Miten tapeo-kierros käytännössä kulkee baarista toiseen?',
-          'Millaisia tapaksia madridilaisessa baarissa tarjotaan?',
-        ],
-        visa: {
-          kysymys: 'Mitä espanjan sana tapa alun perin tarkoittaa?',
-          vaihtoehdot: [
-            'Pientä lautasta',
-            'Kantta',
-            'Välipalaa',
-          ],
-          oikea: 1,
-          fakta: 'Tapaksia syödään seisten baaritiskillä ja siirrytään sitten '
-            + 'seuraavaan paikkaan; kierros on nimeltään tapeo, ja se on yhtä '
-            + 'paljon kävelyä kuin syömistä.',
-        },
-        paikka: {
-          nimi: 'Tapaskierros',
-          laudat: {
-            maailmankartta: { x: 5709.7, y: 1786.5 },
-            europe: { x: 140, y: 830.7 },
-          },
+        oikea: 1,
+        fakta: 'Tapaksia syödään seisten baaritiskillä ja siirrytään sitten '
+          + 'seuraavaan paikkaan; kierros on nimeltään tapeo, ja se on yhtä '
+          + 'paljon kävelyä kuin syömistä.',
+      },
+      paikka: {
+        nimi: 'Tapaskierros',
+        laudat: {
+          maailmankartta: { x: 5709.7, y: 1786.5 },
+          europe: { x: 140, y: 830.7 },
         },
       },
-      {
-        id: 'goyan-kansankuvat',
-        nimio: 'Goyan kansankuvat',
-        otsikko: 'Goya maalasi madridilaisten vapaapäivät',
-        symboli: 'kulttuuri',
-        lunastus: [
-          'Ennen kuin Francisco de Goyasta tuli hovimaalari ja ennen kuin '
-            + 'hän maalasi sotaa ja hulluutta, hän teki kymmenen vuotta töitä '
-            + 'kuninkaallisen kutomon tilauksesta: malleja seinävaatteisiin, '
-            + 'joiden aiheeksi haluttiin iloisia kansankuvia. Goya meni '
-            + 'kaduille ja niityille ja katsoi, mitä madridilaiset oikeasti '
-            + 'tekivät vapaapäivinään — joivat, tanssivat, riitelivät, '
-            + 'leikkivät. Siitä syntyi tarkin muotokuva, joka 1700-luvun '
-            + 'Madridista on: ei kuninkaista vaan kaupungista.',
-        ],
-        lahde: 'Madridin kaupunkilehden nosto "Goya maalasi madridilaisten '
-          + 'vapaapäivät" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
-          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'La pradera de San Isidro, Francisco de Goya.jpg',
-          lyhyt: 'San Isidron niitty (1788) kuvaa kaupungin suojeluspyhimyksen juhlaa Manzanaresin rannalla.',
-          selite: 'San Isidron niitty (1788) syntyi Goyan kymmenvuotisesta työstä '
-            + 'kuninkaallisen kutomon malleja tehden, ja aiheena on kaupungin '
-            + 'suojeluspyhimyksen juhla Manzanaresin rannalla.',
-          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
-        },
-        kysymykset: [
-          'Millaisia seinävaatteita kuninkaallinen kutomo valmisti?',
-          'Mitä madridilaiset tekivät vapaapäivinään 1700-luvulla?',
-          'Miksi Goyan myöhemmät maalaukset ovat niin toisenlaisia?',
-        ],
-        paikka: {
-          nimi: 'Goyan kansankuvat',
-          laudat: {
-            maailmankartta: { x: 5710.3, y: 1786.6 },
-            europe: { x: 140.3, y: 830.7 },
-          },
+    },
+    {
+      id: 'goyan-kansankuvat',
+      nimio: 'Goyan kansankuvat',
+      otsikko: 'Goya maalasi madridilaisten vapaapäivät',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Ennen kuin Francisco de Goyasta tuli hovimaalari ja ennen kuin '
+          + 'hän maalasi sotaa ja hulluutta, hän teki kymmenen vuotta töitä '
+          + 'kuninkaallisen kutomon tilauksesta: malleja seinävaatteisiin, '
+          + 'joiden aiheeksi haluttiin iloisia kansankuvia. Goya meni kaduille '
+          + 'ja niityille ja katsoi, mitä madridilaiset oikeasti tekivät '
+          + 'vapaapäivinään — joivat, tanssivat, riitelivät, leikkivät. Siitä '
+          + 'syntyi tarkin muotokuva, joka 1700-luvun Madridista on: ei '
+          + 'kuninkaista vaan kaupungista.',
+      ],
+      lahde: 'Madridin kaupunkilehden nosto "Goya maalasi madridilaisten '
+        + 'vapaapäivät" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'La pradera de San Isidro, Francisco de Goya.jpg',
+        lyhyt: 'San Isidron niitty (1788) kuvaa kaupungin suojeluspyhimyksen juhlaa Manzanaresin rannalla.',
+        selite: 'San Isidron niitty (1788) syntyi Goyan kymmenvuotisesta työstä '
+          + 'kuninkaallisen kutomon malleja tehden, ja aiheena on kaupungin '
+          + 'suojeluspyhimyksen juhla Manzanaresin rannalla.',
+        lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+      },
+      kysymykset: [
+        'Millaisia seinävaatteita kuninkaallinen kutomo valmisti?',
+        'Mitä madridilaiset tekivät vapaapäivinään 1700-luvulla?',
+        'Miksi Goyan myöhemmät maalaukset ovat niin toisenlaisia?',
+      ],
+      paikka: {
+        nimi: 'Goyan kansankuvat',
+        laudat: {
+          maailmankartta: { x: 5710.3, y: 1786.6 },
+          europe: { x: 140.3, y: 830.7 },
         },
       },
-      {
-        id: 'chotis-laatalla',
-        nimio: 'Chotis',
-        otsikko: 'Chotis tanssitaan yhden laatan päällä',
-        symboli: 'kulttuuri',
-        lunastus: [
-          'Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui '
-            + 'perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, '
-            + 'jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen '
-            + 'ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. '
-            + 'Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. '
-            + 'toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista '
-            + 'syntyi myös zarzuela, laulun ja puheen vuorottelu, jota '
-            + 'esitetään kaupungin omassa Zarzuela-teatterissa yhä.',
+    },
+    {
+      id: 'chotis-laatalla',
+      nimio: 'Chotis',
+      otsikko: 'Chotis tanssitaan yhden laatan päällä',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui '
+          + 'perillä omanlaisekseen. Säännön mukaan mies ei siirry laatalta, '
+          + 'jolla seisoo: hän pyörii paikallaan, ja nainen kiertää hänen '
+          + 'ympärillään. Säestää organillo, kadulla työnnettävä kampiurut. '
+          + 'Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. '
+          + 'toukokuuta — sama juhla, jonka Goya maalasi. Samasta Madridista '
+          + 'syntyi myös zarzuela, laulun ja puheen vuorottelu, jota esitetään '
+          + 'kaupungin omassa Zarzuela-teatterissa yhä.',
+      ],
+      lahde: 'Madridin kaupunkilehden nosto "Chotis tanssitaan yhden laatan '
+        + 'päällä" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Parejas bailando Chotis - Madrid 01.jpg',
+        lyhyt: 'Chotisia tanssitaan Madridin verbena-juhlissa chulapon asussa, naisilla pilkkumekko ja neilikka.',
+        selite: 'Chotisia tanssitaan Madridin verbena-juhlissa chulapon lakissa ja '
+          + 'liivissä, naisilla pitkä pilkullinen mekko ja neilikka hiuksissa.',
+        lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Mistä chotis tuli Madridiin ja miten se muuttui perillä?',
+        'Mitä verbena-juhlissa tapahtuu?',
+        'Mikä erottaa zarzuelan oopperasta?',
+      ],
+      visa: {
+        kysymys: 'Mikä soitin säestää chotista Madridin kaduilla?',
+        vaihtoehdot: [
+          'Haitari',
+          'Kitara ja kastanjetit',
+          'Organillo eli kadulla työnnettävä kampiurut',
         ],
-        lahde: 'Madridin kaupunkilehden nosto "Chotis tanssitaan yhden laatan '
-          + 'päällä" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
-          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Parejas bailando Chotis - Madrid 01.jpg',
-          lyhyt: 'Chotisia tanssitaan Madridin verbena-juhlissa chulapon asussa, naisilla pilkkumekko ja neilikka.',
-          selite: 'Chotisia tanssitaan Madridin verbena-juhlissa chulapon lakissa '
-            + 'ja liivissä, naisilla pitkä pilkullinen mekko ja neilikka '
-            + 'hiuksissa.',
-          lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        kysymykset: [
-          'Mistä chotis tuli Madridiin ja miten se muuttui perillä?',
-          'Mitä verbena-juhlissa tapahtuu?',
-          'Mikä erottaa zarzuelan oopperasta?',
-        ],
-        visa: {
-          kysymys: 'Mikä soitin säestää chotista Madridin kaduilla?',
-          vaihtoehdot: [
-            'Haitari',
-            'Kitara ja kastanjetit',
-            'Organillo eli kadulla työnnettävä kampiurut',
-          ],
-          oikea: 2,
-          fakta: 'Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. '
-            + 'toukokuuta — sama juhla, jonka Goya maalasi.',
-        },
-        paikka: {
-          nimi: 'Chotis',
-          laudat: {
-            maailmankartta: { x: 5710.1, y: 1786.5 },
-            europe: { x: 140.2, y: 830.6 },
-          },
+        oikea: 2,
+        fakta: 'Tanssi kuuluu verbena-juhliin, joista suurin on San Isidro 15. '
+          + 'toukokuuta — sama juhla, jonka Goya maalasi.',
+      },
+      paikka: {
+        nimi: 'Chotis',
+        laudat: {
+          maailmankartta: { x: 5710.1, y: 1786.5 },
+          europe: { x: 140.2, y: 830.6 },
         },
       },
-      {
-        id: 'madridin-kaksi-joukkuetta',
-        nimio: 'Kaksi joukkuetta',
-        otsikko: 'Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka '
-          + 'vaihtoi joukkuetta',
-        symboli: 'urheilu',
-        lunastus: [
-          'Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja '
-            + 'siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen '
-            + 'sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi '
-            + 'yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa '
-            + 'sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin '
-            + 'syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa valoa '
-            + 'ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää noin '
-            + 'kuusi tuntia — sen jälkeen stadionille mahtuu konsertti.',
-          'Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita '
-            + 'vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät '
-            + 'Atlético Madridin kannattajat: seuran toimisto oli '
-            + 'naapurikadulla, ja siellä juhlittiin voittoja jo vuonna 1962. '
-            + 'Real Madridin väki omaksui tavan perässä, ja 1980-luvun lopulla '
-            + 'Cibeles oli jo niin vahvasti valkoisten paikka, että '
-            + 'atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat juhlineet '
-            + 'saman puistokadun toisessa päässä, Neptunuksen suihkulähteellä.',
-        ],
-        lahde: 'Madridin kaupunkilehden nostot "Nurmi lasketaan hissillä maan '
-          + 'alle" ja "Suihkulähde, joka vaihtoi joukkuetta" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Estadio Santiago Bernabeu - Field.jpg',
-          lyhyt: 'Santiago Bernabéu avattiin 1947, ja Real Madridin kotistadionille mahtuu nykyään 83 186 katsojaa.',
-          selite: 'Santiago Bernabéu avattiin 14. joulukuuta 1947, ja Real '
-            + 'Madridin kotistadionille mahtuu nykyään 83 186 katsojaa.',
-          lahde: 'Mervat, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        kysymykset: [
-          'Miten yli sadan metrin nurmikaukalo saadaan liikkumaan?',
-          'Miksi atléticolaiset luopuivat Cibeleen suihkulähteestä?',
-          'Mitä muuta suurilla stadioneilla tehdään kuin pelataan '
-            + 'jalkapalloa?',
-        ],
-        paikka: {
-          nimi: 'Kaksi joukkuetta',
-          laudat: {
-            maailmankartta: { x: 5710.2, y: 1786.4 },
-            europe: { x: 140.3, y: 830.6 },
-          },
+    },
+    {
+      id: 'madridin-kaksi-joukkuetta',
+      nimio: 'Kaksi joukkuetta',
+      otsikko: 'Madridin kaksi joukkuetta — nurmi maan alla ja suihkulähde, joka '
+        + 'vaihtoi joukkuetta',
+      symboli: 'urheilu',
+      lunastus: [
+        'Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen '
+          + 'mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen '
+          + 'erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli '
+          + 'sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja '
+          + 'laskea hydraulisella hissillä kolmenkymmenen metrin syvyyteen. '
+          + 'Siellä alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa '
+          + 'kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia '
+          + '— sen jälkeen stadionille mahtuu konsertti.',
+        'Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita '
+          + 'vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät Atlético '
+          + 'Madridin kannattajat: seuran toimisto oli naapurikadulla, ja '
+          + 'siellä juhlittiin voittoja jo vuonna 1962. Real Madridin väki '
+          + 'omaksui tavan perässä, ja 1980-luvun lopulla Cibeles oli jo niin '
+          + 'vahvasti valkoisten paikka, että atléticolaiset luovuttivat sen. '
+          + 'Vuodesta 1991 he ovat juhlineet saman puistokadun toisessa '
+          + 'päässä, Neptunuksen suihkulähteellä.',
+      ],
+      lahde: 'Madridin kaupunkilehden nostot "Nurmi lasketaan hissillä maan alle" '
+        + 'ja "Suihkulähde, joka vaihtoi joukkuetta" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Estadio Santiago Bernabeu - Field.jpg',
+        lyhyt: 'Santiago Bernabéu avattiin 1947, ja Real Madridin kotistadionille mahtuu nykyään 83 186 katsojaa.',
+        selite: 'Santiago Bernabéu avattiin 14. joulukuuta 1947, ja Real Madridin '
+          + 'kotistadionille mahtuu nykyään 83 186 katsojaa.',
+        lahde: 'Mervat, Wikimedia Commons (CC BY-SA 4.0)',
+      },
+      kysymykset: [
+        'Miten yli sadan metrin nurmikaukalo saadaan liikkumaan?',
+        'Miksi atléticolaiset luopuivat Cibeleen suihkulähteestä?',
+        'Mitä muuta suurilla stadioneilla tehdään kuin pelataan jalkapalloa?',
+      ],
+      paikka: {
+        nimi: 'Kaksi joukkuetta',
+        laudat: {
+          maailmankartta: { x: 5710.2, y: 1786.4 },
+          europe: { x: 140.3, y: 830.6 },
         },
       },
-      {
-        id: 'palamaton-linna',
-        nimio: 'Palamaton linna',
-        otsikko: 'Linna rakennettiin palamattomaksi',
-        symboli: 'tekniikka',
-        lunastus: [
-          'Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona '
-            + '1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa '
-            + 'tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, '
-            + 'katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja '
-            + 'kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti '
-            + 'sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään '
-            + 'Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan '
-            + 'pienemmässä talossa kaupungin laidalla.',
-        ],
-        lahde: 'Madridin kaupunkilehden nosto "Linna rakennettiin palamattomaksi" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Real Alcázar de Madrid, unknown.jpg',
-          lyhyt: 'Kuninkaiden vanha Alcázar paloi jouluaattona 1734, eikä siitä ole enää jäljellä mitään.',
-          selite: 'Kuninkaiden vanha Alcázar paloi jouluaattona 1734 lähes '
-            + 'kokonaan, eikä rakennuksesta ole enää mitään jäljellä.',
-          lahde: 'Wikimedia Commons (PD)',
-        },
-        kysymykset: [
-          'Miten 1700-luvun rakentaja teki talosta palamattoman?',
-          'Mitä vanhan Alcázarin palossa menetettiin?',
-          'Miksi kuningas ei asu Länsi-Euroopan suurimmassa palatsissa?',
-        ],
-        paikka: {
-          nimi: 'Palamaton linna',
-          laudat: {
-            maailmankartta: { x: 5709.5, y: 1786.4 },
-            europe: { x: 139.9, y: 830.6 },
-          },
+    },
+    {
+      id: 'palamaton-linna',
+      nimio: 'Palamaton linna',
+      otsikko: 'Linna rakennettiin palamattomaksi',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona '
+          + '1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa '
+          + 'tilalle linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, '
+          + 'katot holvattuja, puuta vain ovissa, ikkunanpuitteissa ja '
+          + 'kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas muutti '
+          + 'sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään '
+          + 'Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan '
+          + 'pienemmässä talossa kaupungin laidalla.',
+      ],
+      lahde: 'Madridin kaupunkilehden nosto "Linna rakennettiin palamattomaksi" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Real Alcázar de Madrid, unknown.jpg',
+        lyhyt: 'Kuninkaiden vanha Alcázar paloi jouluaattona 1734, eikä siitä ole enää jäljellä mitään.',
+        selite: 'Kuninkaiden vanha Alcázar paloi jouluaattona 1734 lähes kokonaan, '
+          + 'eikä rakennuksesta ole enää mitään jäljellä.',
+        lahde: 'Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miten 1700-luvun rakentaja teki talosta palamattoman?',
+        'Mitä vanhan Alcázarin palossa menetettiin?',
+        'Miksi kuningas ei asu Länsi-Euroopan suurimmassa palatsissa?',
+      ],
+      paikka: {
+        nimi: 'Palamaton linna',
+        laudat: {
+          maailmankartta: { x: 5709.5, y: 1786.4 },
+          europe: { x: 139.9, y: 830.6 },
         },
       },
-      {
-        id: 'gran-vian-murto',
-        nimio: 'Gran Vía',
-        otsikko: 'Katu, joka murrettiin talojen läpi',
-        symboli: 'kaupunki',
-        lunastus: [
-          'Madridin vanhassa keskustassa kadut olivat kapeita ja '
-            + 'mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ '
-            + 'alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi '
-            + 'hopeisella hakulla ensimmäisen reiän papin talon seinään San '
-            + 'Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli '
-            + 'purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. '
-            + 'Sisällissodassa katua sanottiin Kranaattikaduksi: sen '
-            + 'korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja '
-            + 'tykit ampuivat sitä kohti.',
+    },
+    {
+      id: 'gran-vian-murto',
+      nimio: 'Gran Vía',
+      otsikko: 'Katu, joka murrettiin talojen läpi',
+      symboli: 'kaupunki',
+      lunastus: [
+        'Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, '
+          + 'ja niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. '
+          + 'huhtikuuta 1910, kun kuningas Alfonso XIII löi hopeisella hakulla '
+          + 'ensimmäisen reiän papin talon seinään San Josén kirkon vieressä. '
+          + 'Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua '
+          + 'kadonnut tai muuttunut toiseksi. Sisällissodassa katua sanottiin '
+          + 'Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli '
+          + 'tähystyspaikka, ja tykit ampuivat sitä kohti.',
+      ],
+      lahde: 'Madridin kaupunkilehden nosto "Katu, joka murrettiin talojen läpi" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Derribo de casas para la apertura de la Gran Vía - 1912.jpg',
+        lyhyt: 'Gran Vían ensimmäistä osuutta varten 1912 purettiin 312 taloa ja 48 katua katosi tai muuttui.',
+        selite: 'Gran Vían ensimmäistä osuutta rakennettiin vuonna 1912, ja katua '
+          + 'varten purettiin 312 taloa ja 48 katua katosi tai muuttui '
+          + 'toiseksi.',
+        lahde: 'Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miten 312 talon asukkaille kävi, kun katu murrettiin?',
+        'Miksi vanhan keskustan kadut olivat niin kapeita ja mutkaisia?',
+        'Miksi Gran Víaa sanottiin sisällissodassa Kranaattikaduksi?',
+      ],
+      visa: {
+        kysymys: 'Millä työkalulla kuningas Alfonso XIII avasi Gran Vían työmaan '
+          + 'vuonna 1910?',
+        vaihtoehdot: [
+          'Hopeisella hakulla',
+          'Kullatulla lapiolla',
+          'Tavallisella moukarilla',
         ],
-        lahde: 'Madridin kaupunkilehden nosto "Katu, joka murrettiin talojen '
-          + 'läpi" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
-          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Derribo de casas para la apertura de la Gran Vía - 1912.jpg',
-          lyhyt: 'Gran Vían ensimmäistä osuutta varten 1912 purettiin 312 taloa ja 48 katua katosi tai muuttui.',
-          selite: 'Gran Vían ensimmäistä osuutta rakennettiin vuonna 1912, ja '
-            + 'katua varten purettiin 312 taloa ja 48 katua katosi tai muuttui '
-            + 'toiseksi.',
-          lahde: 'Wikimedia Commons (PD)',
-        },
-        kysymykset: [
-          'Miten 312 talon asukkaille kävi, kun katu murrettiin?',
-          'Miksi vanhan keskustan kadut olivat niin kapeita ja mutkaisia?',
-          'Miksi Gran Víaa sanottiin sisällissodassa Kranaattikaduksi?',
-        ],
-        visa: {
-          kysymys: 'Millä työkalulla kuningas Alfonso XIII avasi Gran Vían työmaan '
-            + 'vuonna 1910?',
-          vaihtoehdot: [
-            'Hopeisella hakulla',
-            'Kullatulla lapiolla',
-            'Tavallisella moukarilla',
-          ],
-          oikea: 0,
-          fakta: 'Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 '
-            + 'katua kadonnut tai muuttunut toiseksi.',
-        },
-        paikka: {
-          nimi: 'Gran Vía',
-          laudat: {
-            maailmankartta: { x: 5710.1, y: 1786.4 },
-            europe: { x: 140.2, y: 830.6 },
-          },
+        oikea: 0,
+        fakta: 'Ennen kuin Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua '
+          + 'kadonnut tai muuttunut toiseksi.',
+      },
+      paikka: {
+        nimi: 'Gran Vía',
+        laudat: {
+          maailmankartta: { x: 5710.1, y: 1786.4 },
+          europe: { x: 140.2, y: 830.6 },
         },
       },
+    },
   ],
 
   /*

@@ -827,227 +827,225 @@ export const FOKUSVIRTA_BERLIINI = {
      * `hattupainen-ukkeli`, `paavin-kosto`.
      * ══════════════════════════════════════════════════════════════
      */
-      {
-        id: 'hattupainen-ukkeli',
-        nimio: 'Hattupäinen ukkeli',
-        otsikko: 'Hattupäinen ukkeli sai jäädä',
-        symboli: 'kaupunki',
-        lunastus: [
-          'Liikennepsykologi Karl Peglau piirsi vuonna 1961 Itä-Saksalle '
-            + 'oman jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, '
-            + 'koska valopintaa on paljon. Ensimmäiset syttyivät '
-            + 'Itä-Berliinissä 1969. Kun Saksat yhdistyivät, ukkelia alettiin '
-            + 'vaihtaa lännen tikku-ukkoon — kunnes kansalaiskampanja '
-            + '"Pelastakaa Ampelmännchen" nousi vastaan ja voitti. Nykyään '
-            + 'hattupäinen ukkeli ohjaa kulkijoita myös monessa '
-            + 'Länsi-Berliinin risteyksessä, ja siitä on tullut koko kaupungin '
-            + 'maskotti, jota myydään matkamuistona.',
+    {
+      id: 'hattupainen-ukkeli',
+      nimio: 'Hattupäinen ukkeli',
+      otsikko: 'Hattupäinen ukkeli sai jäädä',
+      symboli: 'kaupunki',
+      lunastus: [
+        'Liikennepsykologi Karl Peglau piirsi vuonna 1961 Itä-Saksalle '
+          + 'oman jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska '
+          + 'valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. '
+          + 'Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen '
+          + 'tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa '
+          + 'Ampelmännchen" nousi vastaan ja voitti. Nykyään hattupäinen '
+          + 'ukkeli ohjaa kulkijoita myös monessa Länsi-Berliinin '
+          + 'risteyksessä, ja siitä on tullut koko kaupungin maskotti, jota '
+          + 'myydään matkamuistona.',
+      ],
+      lahde: 'Berliinin kaupunkilehden nosto "Hattupäinen ukkeli sai jäädä" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Ampelmännchen go.jpg',
+        lyhyt: 'Keisari Vilhelmin muistokirkon pommitettu torso on jätetty muistutukseksi sodasta.',
+        selite: 'Keisari Vilhelmin muistokirkon torso jätettiin pommituksissa '
+          + 'saamaansa asuun muistutukseksi sodasta, ja sen risteyksissä ohjaa '
+          + 'nykyään itäberliiniläinen Ampelmännchen.',
+        lahde: 'Wikimedia Commons (CC0)',
+      },
+      kysymykset: [
+        'Miksi leveä hahmo erottuu risteyksessä kauempaa kuin kapea?',
+        'Miksi berliiniläiset halusivat pitää juuri tämän hahmon?',
+        'Mitä muuta Itä-Saksasta on jäänyt yhdistyneen Berliinin arkeen?',
+      ],
+      visa: {
+        kysymys: 'Saksojen yhdistyttyä hattupäistä ukkelia alettiin vaihtaa pois '
+          + 'risteyksistä. Miksi se sai jäädä?',
+        vaihtoehdot: [
+          'Vaihtotyö kävi liian kalliiksi ja jäi kesken',
+          'Uusia valoja ei saatu tilattua ajoissa',
+          'Kansalaiskampanja nousi vastaan ja voitti',
         ],
-        lahde: 'Berliinin kaupunkilehden nosto "Hattupäinen ukkeli sai jäädä" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Ampelmännchen go.jpg',
-          lyhyt: 'Keisari Vilhelmin muistokirkon pommitettu torso on jätetty muistutukseksi sodasta.',
-          selite: 'Keisari Vilhelmin muistokirkon torso jätettiin pommituksissa '
-            + 'saamaansa asuun muistutukseksi sodasta, ja sen risteyksissä '
-            + 'ohjaa nykyään itäberliiniläinen Ampelmännchen.',
-          lahde: 'Wikimedia Commons (CC0)',
-        },
-        kysymykset: [
-          'Miksi leveä hahmo erottuu risteyksessä kauempaa kuin kapea?',
-          'Miksi berliiniläiset halusivat pitää juuri tämän hahmon?',
-          'Mitä muuta Itä-Saksasta on jäänyt yhdistyneen Berliinin arkeen?',
-        ],
-        visa: {
-          kysymys: 'Saksojen yhdistyttyä hattupäistä ukkelia alettiin vaihtaa pois '
-            + 'risteyksistä. Miksi se sai jäädä?',
-          vaihtoehdot: [
-            'Vaihtotyö kävi liian kalliiksi ja jäi kesken',
-            'Uusia valoja ei saatu tilattua ajoissa',
-            'Kansalaiskampanja nousi vastaan ja voitti',
-          ],
-          oikea: 2,
-          fakta: 'Nykyään hattupäinen ukkeli ohjaa kulkijoita myös monessa '
-            + 'Länsi-Berliinin risteyksessä, ja siitä on tullut koko kaupungin '
-            + 'maskotti, jota myydään matkamuistona.',
-        },
-        paikka: {
-          nimi: 'Hattupäinen ukkeli',
-          laudat: {
-            maailmankartta: { x: 6277.8, y: 1279.5 },
-            europe: { x: 467.2, y: 512.7 },
-          },
+        oikea: 2,
+        fakta: 'Nykyään hattupäinen ukkeli ohjaa kulkijoita myös monessa '
+          + 'Länsi-Berliinin risteyksessä, ja siitä on tullut koko kaupungin '
+          + 'maskotti, jota myydään matkamuistona.',
+      },
+      paikka: {
+        nimi: 'Hattupäinen ukkeli',
+        laudat: {
+          maailmankartta: { x: 6277.8, y: 1279.5 },
+          europe: { x: 467.2, y: 512.7 },
         },
       },
-      {
-        id: 'gaertnerin-berliini',
-        nimio: 'Gaertnerin Berliini',
-        otsikko: 'Gaertner maalasi Berliinin talo talolta',
-        symboli: 'kulttuuri',
-        lunastus: [
-          'Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin '
-            + 'kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne '
-            + 'niin tarkasti, että taloista voi laskea ikkunaruudut ja '
-            + 'kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta '
-            + 'Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan '
-            + 'korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu '
-            + 'ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden '
-            + 'aarre — niistä nähdään, miltä kadonnut Berliini oikeasti näytti.',
-        ],
-        lahde: 'Berliinin kaupunkilehden nosto "Gaertner maalasi Berliinin talo '
-          + 'talolta" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
-          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: '1856 Gaertner Unter den Linden anagoria.JPG',
-          lyhyt: 'Gaertnerin 1856 näkymässä Unter den Lindenin perällä on vielä kuninkaanlinna, joka purettiin 1950.',
-          selite: 'Gaertnerin vuoden 1856 näkymässä Unter den Lindenin perällä on '
-            + 'vielä kuninkaanlinna, joka purettiin 1950.',
-          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
-        },
-        kysymykset: [
-          'Mitä maalaus voi kertoa kaupungista, mitä valokuva ei kerro?',
-          'Miksi Gaertner maalasi myös katutyömaat ja ikkunoissa kuivuvat '
-            + 'pyykit?',
-          'Mikä Gaertnerin maalaamasta Berliinistä on kadonnut kokonaan?',
-        ],
-        paikka: {
-          nimi: 'Gaertnerin Berliini',
-          laudat: {
-            maailmankartta: { x: 6280.1, y: 1279 },
-            europe: { x: 468.5, y: 512.4 },
-          },
+    },
+    {
+      id: 'gaertnerin-berliini',
+      nimio: 'Gaertnerin Berliini',
+      otsikko: 'Gaertner maalasi Berliinin talo talolta',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin '
+          + 'kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne niin '
+          + 'tarkasti, että taloista voi laskea ikkunaruudut ja kylttien '
+          + 'tekstit voi lukea. Kuningas osti hänen töitään, mutta Gaertner ei '
+          + 'maalannut vain paraatinäkymiä: hänen kaduillaan korjataan '
+          + 'kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. '
+          + 'Juuri siksi hänen taulunsa ovat nyt tutkijoiden aarre — niistä '
+          + 'nähdään, miltä kadonnut Berliini oikeasti näytti.',
+      ],
+      lahde: 'Berliinin kaupunkilehden nosto "Gaertner maalasi Berliinin talo '
+        + 'talolta" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: '1856 Gaertner Unter den Linden anagoria.JPG',
+        lyhyt: 'Gaertnerin 1856 näkymässä Unter den Lindenin perällä on vielä kuninkaanlinna, joka purettiin 1950.',
+        selite: 'Gaertnerin vuoden 1856 näkymässä Unter den Lindenin perällä on '
+          + 'vielä kuninkaanlinna, joka purettiin 1950.',
+        lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+      },
+      kysymykset: [
+        'Mitä maalaus voi kertoa kaupungista, mitä valokuva ei kerro?',
+        'Miksi Gaertner maalasi myös katutyömaat ja ikkunoissa kuivuvat '
+          + 'pyykit?',
+        'Mikä Gaertnerin maalaamasta Berliinistä on kadonnut kokonaan?',
+      ],
+      paikka: {
+        nimi: 'Gaertnerin Berliini',
+        laudat: {
+          maailmankartta: { x: 6280.1, y: 1279 },
+          europe: { x: 468.5, y: 512.4 },
         },
       },
-      {
-        id: 'marlene-dietrich',
-        nimio: 'Marlene Dietrich',
-        otsikko: 'Tyttö Schönebergistä lauloi maailman ympäri',
-        symboli: 'kulttuuri',
-        lunastus: [
-          'Marlene Dietrich syntyi 1901 Schönebergin kaupunginosassa ja '
-            + 'nousi maailmantähdeksi berliiniläisen elokuvan Sininen enkeli '
-            + '(1930) myötä — samana vuonna hän muutti Hollywoodiin. Kun '
-            + 'natsihallinto houkutteli häntä takaisin mainoskasvokseen, hän '
-            + 'kieltäytyi, otti Yhdysvaltain kansalaisuuden ja lauloi sen '
-            + 'sijaan rintamalla sotilaille — tunnetuimpana laulun Lili '
-            + 'Marleen, jota kuunneltiin juoksuhaudoissa molemmin puolin. '
-            + 'Berliiniin hän palasi viimeisen kerran arkussa: hauta on '
-            + 'Schönebergissä, äidin haudan vieressä.',
-        ],
-        lahde: 'Berliinin kaupunkilehden nosto "Tyttö Schönebergistä lauloi '
-          + 'maailman ympäri" (js/packs/kulttuuri-kategoriat.js). Teksti '
-          + 'siirretty sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'My Child Speaks Marlene Dietrich 1930, Erich Salomon.jpg',
-          lyhyt: 'Marlene Dietrich soittaa Hollywoodista Berliiniin tyttärelleen 1930 Erich Salomonin kuvassa.',
-          selite: 'Marlene Dietrich soittaa Hollywoodista Berliiniin tyttärelleen '
-            + '1930, yöpöydällä tyttären valokuva; Erich Salomonin kuuluisa '
-            + 'otos.',
-          lahde: 'Erich Salomon, Wikimedia Commons (Public domain)',
-        },
-        kysymykset: [
-          'Miksi natsihallinto halusi juuri hänet mainoskasvokseen?',
-          'Miksi Lili Marleenia kuunneltiin molemmin puolin rintamaa?',
-          'Mitä kansalaisuuden vaihtaminen merkitsi 1930-luvun lopulla?',
-        ],
-        paikka: {
-          nimi: 'Marlene Dietrich',
-          laudat: {
-            maailmankartta: { x: 6279.1, y: 1279.4 },
-            europe: { x: 468, y: 512.7 },
-          },
+    },
+    {
+      id: 'marlene-dietrich',
+      nimio: 'Marlene Dietrich',
+      otsikko: 'Tyttö Schönebergistä lauloi maailman ympäri',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Marlene Dietrich syntyi 1901 Schönebergin kaupunginosassa ja '
+          + 'nousi maailmantähdeksi berliiniläisen elokuvan Sininen enkeli '
+          + '(1930) myötä — samana vuonna hän muutti Hollywoodiin. Kun '
+          + 'natsihallinto houkutteli häntä takaisin mainoskasvokseen, hän '
+          + 'kieltäytyi, otti Yhdysvaltain kansalaisuuden ja lauloi sen sijaan '
+          + 'rintamalla sotilaille — tunnetuimpana laulun Lili Marleen, jota '
+          + 'kuunneltiin juoksuhaudoissa molemmin puolin. Berliiniin hän '
+          + 'palasi viimeisen kerran arkussa: hauta on Schönebergissä, äidin '
+          + 'haudan vieressä.',
+      ],
+      lahde: 'Berliinin kaupunkilehden nosto "Tyttö Schönebergistä lauloi '
+        + 'maailman ympäri" (js/packs/kulttuuri-kategoriat.js). Teksti '
+        + 'siirretty sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'My Child Speaks Marlene Dietrich 1930, Erich Salomon.jpg',
+        lyhyt: 'Marlene Dietrich soittaa Hollywoodista Berliiniin tyttärelleen 1930 Erich Salomonin kuvassa.',
+        selite: 'Marlene Dietrich soittaa Hollywoodista Berliiniin tyttärelleen '
+          + '1930, yöpöydällä tyttären valokuva; Erich Salomonin kuuluisa otos.',
+        lahde: 'Erich Salomon, Wikimedia Commons (Public domain)',
+      },
+      kysymykset: [
+        'Miksi natsihallinto halusi juuri hänet mainoskasvokseen?',
+        'Miksi Lili Marleenia kuunneltiin molemmin puolin rintamaa?',
+        'Mitä kansalaisuuden vaihtaminen merkitsi 1930-luvun lopulla?',
+      ],
+      paikka: {
+        nimi: 'Marlene Dietrich',
+        laudat: {
+          maailmankartta: { x: 6279.1, y: 1279.4 },
+          europe: { x: 468, y: 512.7 },
         },
       },
-      {
-        id: 'paavin-kosto',
-        nimio: 'Paavin kosto',
-        otsikko: 'Aurinko piirsi torniin ristin',
-        symboli: 'tekniikka',
-        lunastus: [
-          'Itä-Saksa rakensi televisiotornin vuosina 1965–1969 ja vihki '
-            + 'sen käyttöön 3. lokakuuta 1969. Tornin pallo koottiin maassa '
-            + '120 teräslohkosta ja nostettiin vasta sitten betonipylvään '
-            + 'päähän. Sen jälkeen tapahtui jotain, mitä kukaan ei ollut '
-            + 'piirtänyt kuviin: kun aurinko osuu kiiltävään palloon, '
-            + 'heijastus muodostaa ristin. Valtio oli virallisesti uskonnoton, '
-            + 'joten muurin länsipuolella keksittiin ilmiölle nimi — paavin '
-            + 'kosto. Nimi jäi.',
+    },
+    {
+      id: 'paavin-kosto',
+      nimio: 'Paavin kosto',
+      otsikko: 'Aurinko piirsi torniin ristin',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Itä-Saksa rakensi televisiotornin vuosina 1965–1969 ja vihki sen '
+          + 'käyttöön 3. lokakuuta 1969. Tornin pallo koottiin maassa 120 '
+          + 'teräslohkosta ja nostettiin vasta sitten betonipylvään päähän. '
+          + 'Sen jälkeen tapahtui jotain, mitä kukaan ei ollut piirtänyt '
+          + 'kuviin: kun aurinko osuu kiiltävään palloon, heijastus muodostaa '
+          + 'ristin. Valtio oli virallisesti uskonnoton, joten muurin '
+          + 'länsipuolella keksittiin ilmiölle nimi — paavin kosto. Nimi jäi.',
+      ],
+      lahde: 'Berliinin kaupunkilehden nosto "Aurinko piirsi torniin ristin" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'The Pope\'s Revenge.jpg',
+        lyhyt: 'Auringon heijastus tv-tornin pallosta muodostaa ristin, jota kutsuttiin paavin kostoksi.',
+        selite: 'Auringon heijastus tornin teräspallosta muodostaa ristin, jolle '
+          + 'keksittiin muurin länsipuolella nimi paavin kosto.',
+        lahde: 'Tobi85, Wikimedia Commons (Public domain)',
+      },
+      kysymykset: [
+        'Miksi Itä-Saksa halusi rakentaa juuri tornin?',
+        'Miksi kukaan ei osannut ennakoida ristin heijastusta?',
+        'Miten pilkkanimi levisi kaupungissa, jonka halki kulki muuri?',
+      ],
+      visa: {
+        kysymys: 'Miten televisiotornin pallo saatiin betonipylvään päähän?',
+        vaihtoehdot: [
+          'Se koottiin maassa 120 teräslohkosta ja nostettiin vasta sitten',
+          'Se muurattiin paikalleen telineiden varassa',
+          'Se hinattiin huipulle valmiina puolikkaina',
         ],
-        lahde: 'Berliinin kaupunkilehden nosto "Aurinko piirsi torniin ristin" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'The Pope\'s Revenge.jpg',
-          lyhyt: 'Auringon heijastus tv-tornin pallosta muodostaa ristin, jota kutsuttiin paavin kostoksi.',
-          selite: 'Auringon heijastus tornin teräspallosta muodostaa ristin, jolle '
-            + 'keksittiin muurin länsipuolella nimi paavin kosto.',
-          lahde: 'Tobi85, Wikimedia Commons (Public domain)',
-        },
-        kysymykset: [
-          'Miksi Itä-Saksa halusi rakentaa juuri tornin?',
-          'Miksi kukaan ei osannut ennakoida ristin heijastusta?',
-          'Miten pilkkanimi levisi kaupungissa, jonka halki kulki muuri?',
-        ],
-        visa: {
-          kysymys: 'Miten televisiotornin pallo saatiin betonipylvään päähän?',
-          vaihtoehdot: [
-            'Se koottiin maassa 120 teräslohkosta ja nostettiin vasta sitten',
-            'Se muurattiin paikalleen telineiden varassa',
-            'Se hinattiin huipulle valmiina puolikkaina',
-          ],
-          oikea: 0,
-          fakta: 'Valtio oli virallisesti uskonnoton, joten muurin länsipuolella '
-            + 'keksittiin ilmiölle nimi — paavin kosto. Nimi jäi.',
-        },
-        paikka: {
-          nimi: 'Paavin kosto',
-          laudat: {
-            maailmankartta: { x: 6280.3, y: 1278.8 },
-            europe: { x: 468.7, y: 512.3 },
-          },
+        oikea: 0,
+        fakta: 'Valtio oli virallisesti uskonnoton, joten muurin länsipuolella '
+          + 'keksittiin ilmiölle nimi — paavin kosto. Nimi jäi.',
+      },
+      paikka: {
+        nimi: 'Paavin kosto',
+        laudat: {
+          maailmankartta: { x: 6280.3, y: 1278.8 },
+          europe: { x: 468.7, y: 512.3 },
         },
       },
-      {
-        id: 'maailmankello',
-        nimio: 'Maailmankello',
-        otsikko: 'Kelloa pyöritti Trabantin vaihteisto',
-        symboli: 'tekniikka',
-        lunastus: [
-          'Muutama päivä ennen tornia, 30. syyskuuta 1969, samalle '
-            + 'aukiolle pystytettiin kymmenmetrinen maailmankello. Erich '
-            + 'Johnin suunnittelemassa alumiinirummussa on 24 sivua, yksi '
-            + 'jokaista aikavyöhykettä kohti, ja niihin on jyrsitty 146 '
-            + 'paikannimeä Reykjavíkista Kinshasaan. Rummun ympäri kiertää '
-            + 'tuntirengas, ja katolla pyörii kerran minuutissa pieni '
-            + 'aurinkokunta. Koneisto on kadun alla kellarissa, ja '
-            + 'tuntirengasta pyöritti Trabantista purettu vaihteisto.',
-        ],
-        lahde: 'Berliinin kaupunkilehden nosto "Kelloa pyöritti Trabantin '
-          + 'vaihteisto" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
-          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Urania-Weltzeituhr auf dem Alexanderplatz in Berlin 2015.jpg',
-          lyhyt: 'Maailmankellon 24-sivuisen rummun katolla pyörii kerran minuutissa pieni aurinkokunta.',
-          selite: 'Maailmankellon alumiinirummussa on 24 sivua, yksi kutakin '
-            + 'aikavyöhykettä kohti, ja sen katolla pyörii kerran minuutissa '
-            + 'pieni aurinkokunta.',
-          lahde: 'Christian Wolf (www.c-w-design.de), Wikimedia Commons (CC BY-SA '
-            + '3.0 DE)',
-        },
-        kysymykset: [
-          'Miksi maailman ajat haluttiin näkyviin juuri torille?',
-          'Miksi kellon koneistoon kelpasi auton vaihteisto?',
-          'Mitä 146 paikannimen valinta kertoo Itä-Saksasta?',
-        ],
-        paikka: {
-          nimi: 'Maailmankello',
-          laudat: {
-            maailmankartta: { x: 6280.4, y: 1278.8 },
-            europe: { x: 468.7, y: 512.3 },
-          },
+    },
+    {
+      id: 'maailmankello',
+      nimio: 'Maailmankello',
+      otsikko: 'Kelloa pyöritti Trabantin vaihteisto',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Muutama päivä ennen tornia, 30. syyskuuta 1969, samalle aukiolle '
+          + 'pystytettiin kymmenmetrinen maailmankello. Erich Johnin '
+          + 'suunnittelemassa alumiinirummussa on 24 sivua, yksi jokaista '
+          + 'aikavyöhykettä kohti, ja niihin on jyrsitty 146 paikannimeä '
+          + 'Reykjavíkista Kinshasaan. Rummun ympäri kiertää tuntirengas, ja '
+          + 'katolla pyörii kerran minuutissa pieni aurinkokunta. Koneisto on '
+          + 'kadun alla kellarissa, ja tuntirengasta pyöritti Trabantista '
+          + 'purettu vaihteisto.',
+      ],
+      lahde: 'Berliinin kaupunkilehden nosto "Kelloa pyöritti Trabantin '
+        + 'vaihteisto" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Urania-Weltzeituhr auf dem Alexanderplatz in Berlin 2015.jpg',
+        lyhyt: 'Maailmankellon 24-sivuisen rummun katolla pyörii kerran minuutissa pieni aurinkokunta.',
+        selite: 'Maailmankellon alumiinirummussa on 24 sivua, yksi kutakin '
+          + 'aikavyöhykettä kohti, ja sen katolla pyörii kerran minuutissa '
+          + 'pieni aurinkokunta.',
+        lahde: 'Christian Wolf (www.c-w-design.de), Wikimedia Commons (CC BY-SA '
+          + '3.0 DE)',
+      },
+      kysymykset: [
+        'Miksi maailman ajat haluttiin näkyviin juuri torille?',
+        'Miksi kellon koneistoon kelpasi auton vaihteisto?',
+        'Mitä 146 paikannimen valinta kertoo Itä-Saksasta?',
+      ],
+      paikka: {
+        nimi: 'Maailmankello',
+        laudat: {
+          maailmankartta: { x: 6280.4, y: 1278.8 },
+          europe: { x: 468.7, y: 512.3 },
         },
       },
+    },
   ],
 
   /*

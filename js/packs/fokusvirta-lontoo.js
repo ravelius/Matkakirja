@@ -841,390 +841,388 @@ export const FOKUSVIRTA_LONTOO = {
      * `tate-modernin-turbiinihalli`.
      * ══════════════════════════════════════════════════════════════
      */
-      {
-        id: 'lontoon-metro-1863',
-        nimio: 'Metron höyryveturi',
-        otsikko: 'Metron tunnelissa savusi höyryveturi',
-        symboli: 'tekniikka',
-        lunastus: [
-          'Lontoon metro avattiin 10. tammikuuta 1863 maailman '
-            + 'ensimmäisenä maanalaisena matkustajaratana. Vaunut olivat puuta '
-            + 'ja niitä valaistiin kaasulyhdyillä, ja maan alla junaa veti '
-            + 'höyryveturi — savu johdettiin ulos tunneliin jätetyistä '
-            + 'aukoista. Ensimmäisenä vuonna radalla tehtiin 9,5 miljoonaa '
-            + 'matkaa. Nykyään asemia on 272 ja rataa 400 kilometriä. Kadun '
-            + 'pinnassa muistuttaa yhä pronssilaatta, jonka London Transport '
-            + 'pystytti sadan vuoden kunniaksi vuonna 1963.',
-        ],
-        lahde: 'Lontoon kaupunkilehden nosto "Metron tunnelissa savusi '
-          + 'höyryveturi" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
-          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'World\'s First Underground (5025945153).jpg',
-          lyhyt: 'Pronssilaatta muistaa vuonna 1963 sadan vuoden takaista maailman ensimmäistä maanalaista rataa.',
-          selite: 'London Transport pystytti pronssilaatan vuonna 1963 sadan '
-            + 'vuoden kunniaksi maailman ensimmäisestä maanalaisesta '
-            + 'matkustajaradasta, jonka Metropolitan Railway Company avasi '
-            + 'yleisölle 10. tammikuuta 1863.',
-          lahde: 'Simon Harriyott from Uckfield, England, Wikimedia Commons (CC '
-            + 'BY 2.0)',
-        },
-        kysymykset: [
-          'Miksi rataa lähdettiin ylipäätään kaivamaan maan alle?',
-          'Millaista matkustaminen oli puuvaunussa kaasulyhtyjen valossa?',
-          'Miten savu saatiin pois tunnelista ennen sähköveturia?',
-        ],
-        paikka: {
-          nimi: 'Metron höyryveturi',
-          laudat: {
-            maailmankartta: { x: 5828.1, y: 1323.3 },
-            europe: { x: 208.2, y: 538.6 },
-          },
+    {
+      id: 'lontoon-metro-1863',
+      nimio: 'Metron höyryveturi',
+      otsikko: 'Metron tunnelissa savusi höyryveturi',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Lontoon metro avattiin 10. tammikuuta 1863 maailman ensimmäisenä '
+          + 'maanalaisena matkustajaratana. Vaunut olivat puuta ja niitä '
+          + 'valaistiin kaasulyhdyillä, ja maan alla junaa veti höyryveturi — '
+          + 'savu johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä '
+          + 'vuonna radalla tehtiin 9,5 miljoonaa matkaa. Nykyään asemia on '
+          + '272 ja rataa 400 kilometriä. Kadun pinnassa muistuttaa yhä '
+          + 'pronssilaatta, jonka London Transport pystytti sadan vuoden '
+          + 'kunniaksi vuonna 1963.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Metron tunnelissa savusi höyryveturi" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'World\'s First Underground (5025945153).jpg',
+        lyhyt: 'Pronssilaatta muistaa vuonna 1963 sadan vuoden takaista maailman ensimmäistä maanalaista rataa.',
+        selite: 'London Transport pystytti pronssilaatan vuonna 1963 sadan vuoden '
+          + 'kunniaksi maailman ensimmäisestä maanalaisesta matkustajaradasta, '
+          + 'jonka Metropolitan Railway Company avasi yleisölle 10. tammikuuta '
+          + '1863.',
+        lahde: 'Simon Harriyott from Uckfield, England, Wikimedia Commons (CC BY '
+          + '2.0)',
+      },
+      kysymykset: [
+        'Miksi rataa lähdettiin ylipäätään kaivamaan maan alle?',
+        'Millaista matkustaminen oli puuvaunussa kaasulyhtyjen valossa?',
+        'Miten savu saatiin pois tunnelista ennen sähköveturia?',
+      ],
+      paikka: {
+        nimi: 'Metron höyryveturi',
+        laudat: {
+          maailmankartta: { x: 5828.1, y: 1323.3 },
+          europe: { x: 208.2, y: 538.6 },
         },
       },
-      {
-        id: 'exchange-alleyn-kupla',
-        nimio: 'Exchange Alley',
-        otsikko: 'Kupla, joka puhkesi Exchange Alleyssä',
-        symboli: 'kauppa',
-        lunastus: [
-          'Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden '
-            + 'kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että '
-            + 'se otti kantaakseen osan valtionvelasta. Kauppaa ei juuri '
-            + 'syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa '
-            + 'lähes koko velan ja vaihtavansa sen omiin osakkeisiinsa. '
-            + 'Osakkeen hinta nousi tammikuun runsaasta sadasta punnasta '
-            + 'kesällä lähes tuhanteen ja romahti syyskuun loppuun mennessä '
-            + 'noin sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana '
-            + 'kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. '
-            + 'Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja '
-            + 'valtiovarainministeri John Aislabie erotettiin alahuoneesta ja '
-            + 'suljettiin Toweriin.',
+    },
+    {
+      id: 'exchange-alleyn-kupla',
+      nimio: 'Exchange Alley',
+      otsikko: 'Kupla, joka puhkesi Exchange Alleyssä',
+      symboli: 'kauppa',
+      lunastus: [
+        'Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden '
+          + 'kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että '
+          + 'se otti kantaakseen osan valtionvelasta. Kauppaa ei juuri '
+          + 'syntynyt, mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes '
+          + 'koko velan ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta '
+          + 'nousi tammikuun runsaasta sadasta punnasta kesällä lähes '
+          + 'tuhanteen ja romahti syyskuun loppuun mennessä noin '
+          + 'sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana '
+          + 'kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. '
+          + 'Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja '
+          + 'valtiovarainministeri John Aislabie erotettiin alahuoneesta ja '
+          + 'suljettiin Toweriin.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Kupla, joka puhkesi Exchange '
+        + 'Alleyssä" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+        + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+      kysymykset: [
+        'Miksi niin moni uskoi yhtiöön, joka ei käynyt kauppaa?',
+        'Miten valtionvelan vaihtaminen osakkeiksi oli tarkoitus toimia?',
+        'Mitä kujan kahviloissa tapahtui, kun kurssi kääntyi laskuun?',
+      ],
+      visa: {
+        kysymys: 'Etelämeren yhtiön osake oli vuoden 1720 puheenaihe. Miten sen '
+          + 'hinta liikkui sinä vuonna?',
+        vaihtoehdot: [
+          'Se nousi sadasta punnasta lähes tuhanteen ja romahti syksyyn '
+            + 'mennessä',
+          'Se pysyi lähes samana koko vuoden',
+          'Sen kauppa keskeytettiin heti keväällä',
         ],
-        lahde: 'Lontoon kaupunkilehden nosto "Kupla, joka puhkesi Exchange '
-          + 'Alleyssä" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
-          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
-        kysymykset: [
-          'Miksi niin moni uskoi yhtiöön, joka ei käynyt kauppaa?',
-          'Miten valtionvelan vaihtaminen osakkeiksi oli tarkoitus toimia?',
-          'Mitä kujan kahviloissa tapahtui, kun kurssi kääntyi laskuun?',
-        ],
-        visa: {
-          kysymys: 'Etelämeren yhtiön osake oli vuoden 1720 puheenaihe. Miten sen '
-            + 'hinta liikkui sinä vuonna?',
-          vaihtoehdot: [
-            'Se nousi sadasta punnasta lähes tuhanteen ja romahti syksyyn '
-              + 'mennessä',
-            'Se pysyi lähes samana koko vuoden',
-            'Sen kauppa keskeytettiin heti keväällä',
-          ],
-          oikea: 0,
-          fakta: 'Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja '
-            + 'valtiovarainministeri John Aislabie erotettiin alahuoneesta ja '
-            + 'suljettiin Toweriin.',
-        },
-        paikka: {
-          nimi: 'Exchange Alley',
-          laudat: {
-            maailmankartta: { x: 5830.4, y: 1323.7 },
-            europe: { x: 209.5, y: 538.8 },
-          },
+        oikea: 0,
+        fakta: 'Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja '
+          + 'valtiovarainministeri John Aislabie erotettiin alahuoneesta ja '
+          + 'suljettiin Toweriin.',
+      },
+      paikka: {
+        nimi: 'Exchange Alley',
+        laudat: {
+          maailmankartta: { x: 5830.4, y: 1323.7 },
+          europe: { x: 209.5, y: 538.8 },
         },
       },
-      {
-        id: 'canaletto-lontoossa',
-        nimio: 'Canaletto Lontoossa',
-        otsikko: 'Canaletto maalasi myös Lontoon',
-        symboli: 'kulttuuri',
-        lunastus: [
-          'Sama venetsialainen Canaletto, jonka vedutoja selailit '
-            + 'Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi '
-            + 'kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan '
-            + 'katseen kuin Canal Grandelle — ja siksi 1700-luvun Lontoo '
-            + 'tunnetaan parhaiten venetsialaisen silmin.',
-        ],
-        lahde: 'Lontoon kaupunkilehden nosto "Canaletto maalasi myös Lontoon" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Canaletto - Westminster Bridge, with the Lord Mayor\'s Procession on the Thames - Google Art Project.jpg',
-          lyhyt: 'Canaletton maalaus 1747 kuvaa lordimayorin kulkuetta vastavalmistuneella Westminster Bridgellä.',
-          selite: 'Canaletton vuoden 1747 maalauksessa lordimayorin juhlakulkue '
-            + 'kulkee Thamesilla vastavalmistuneen Westminster Bridgen editse.',
-          lahde: 'Canaletto, Wikimedia Commons (PD)',
-        },
-        kysymykset: [
-          'Miksi Canaletto muutti Venetsiasta Lontooseen juuri 1746?',
-          'Mitä hänen maalauksensa kertovat 1700-luvun Thamesista?',
-          'Miten venetsialaisen katse erosi lontoolaisten omasta?',
-        ],
-        paikka: {
-          nimi: 'Canaletto Lontoossa',
-          laudat: {
-            maailmankartta: { x: 5829.3, y: 1324.3 },
-            europe: { x: 208.9, y: 539.1 },
-          },
+    },
+    {
+      id: 'canaletto-lontoossa',
+      nimio: 'Canaletto Lontoossa',
+      otsikko: 'Canaletto maalasi myös Lontoon',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian '
+          + 'lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia '
+          + 'yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen '
+          + 'kuin Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan '
+          + 'parhaiten venetsialaisen silmin.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Canaletto maalasi myös Lontoon" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Canaletto - Westminster Bridge, with the Lord Mayor\'s Procession on the Thames - Google Art Project.jpg',
+        lyhyt: 'Canaletton maalaus 1747 kuvaa lordimayorin kulkuetta vastavalmistuneella Westminster Bridgellä.',
+        selite: 'Canaletton vuoden 1747 maalauksessa lordimayorin juhlakulkue '
+          + 'kulkee Thamesilla vastavalmistuneen Westminster Bridgen editse.',
+        lahde: 'Canaletto, Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miksi Canaletto muutti Venetsiasta Lontooseen juuri 1746?',
+        'Mitä hänen maalauksensa kertovat 1700-luvun Thamesista?',
+        'Miten venetsialaisen katse erosi lontoolaisten omasta?',
+      ],
+      paikka: {
+        nimi: 'Canaletto Lontoossa',
+        laudat: {
+          maailmankartta: { x: 5829.3, y: 1324.3 },
+          europe: { x: 208.9, y: 539.1 },
         },
       },
-      {
-        id: 'the-george-pubi',
-        nimio: 'Dickensin pubi',
-        otsikko: 'Pubi, jossa Dickens istui',
-        symboli: 'historia',
-        lunastus: [
-          'The George on Lontoon viimeinen parvekekäytävällinen majatalo: '
-            + 'tällaisten pihojen parvilta katsottiin näytelmiä jo '
-            + 'Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja sen '
-            + 'penkeillä istui aikanaan Charles Dickens, joka mainitsee pubin '
-            + 'romaanissaan Pikku Dorrit. Talo on niin arvokas, että sen '
-            + 'omistaa National Trust — olutta myydään silti joka päivä.',
-        ],
-        lahde: 'Lontoon kaupunkilehden nosto "Pubi, jossa Dickens istui" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'The George at Southwark (8553233399).jpg',
-          lyhyt: 'The George Southwark on Lontoon viimeinen parvekekäytävällinen majatalo, nykyisin vuodelta 1677.',
-          selite: 'The George Southwarkissa on Lontoon viimeinen '
-            + 'parvekekäytävällinen majatalo, ja nykyinen rakennus on vuodelta '
-            + '1677.',
-          lahde: 'It\'s No Game, Wikimedia Commons (CC BY 2.0)',
-        },
-        kysymykset: [
-          'Miltä näytelmän katsominen majatalon parvelta tuntui?',
-          'Miksi juuri The George säilyi, kun muut parvekemajatalot '
-            + 'katosivat?',
-          'Mitä Pikku Dorrit kertoo pubista?',
-        ],
-        paikka: {
-          nimi: 'Dickensin pubi',
-          laudat: {
-            maailmankartta: { x: 5830.3, y: 1324.1 },
-            europe: { x: 209.5, y: 539 },
-          },
+    },
+    {
+      id: 'the-george-pubi',
+      nimio: 'Dickensin pubi',
+      otsikko: 'Pubi, jossa Dickens istui',
+      symboli: 'historia',
+      lunastus: [
+        'The George on Lontoon viimeinen parvekekäytävällinen majatalo: '
+          + 'tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen '
+          + 'aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä '
+          + 'istui aikanaan Charles Dickens, joka mainitsee pubin romaanissaan '
+          + 'Pikku Dorrit. Talo on niin arvokas, että sen omistaa National '
+          + 'Trust — olutta myydään silti joka päivä.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Pubi, jossa Dickens istui" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'The George at Southwark (8553233399).jpg',
+        lyhyt: 'The George Southwark on Lontoon viimeinen parvekekäytävällinen majatalo, nykyisin vuodelta 1677.',
+        selite: 'The George Southwarkissa on Lontoon viimeinen '
+          + 'parvekekäytävällinen majatalo, ja nykyinen rakennus on vuodelta '
+          + '1677.',
+        lahde: 'It\'s No Game, Wikimedia Commons (CC BY 2.0)',
+      },
+      kysymykset: [
+        'Miltä näytelmän katsominen majatalon parvelta tuntui?',
+        'Miksi juuri The George säilyi, kun muut parvekemajatalot katosivat?',
+        'Mitä Pikku Dorrit kertoo pubista?',
+      ],
+      paikka: {
+        nimi: 'Dickensin pubi',
+        laudat: {
+          maailmankartta: { x: 5830.3, y: 1324.1 },
+          europe: { x: 209.5, y: 539 },
         },
       },
-      {
-        id: 'abbey-roadin-suojatie',
-        nimio: 'Abbey Roadin suojatie',
-        otsikko: 'Suojatie, jota jonotetaan',
-        symboli: 'kulttuuri',
-        lunastus: [
-          'Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli '
-            + 'kahdeksan kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli '
-            + 'The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman '
-            + 'kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen '
-            + 'samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. '
-            + 'Ylityksellä on virallinen suojelumerkintä — ja taustan '
-            + 'studiossa äänitetään musiikkia edelleen.',
+    },
+    {
+      id: 'abbey-roadin-suojatie',
+      nimio: 'Abbey Roadin suojatie',
+      otsikko: 'Suojatie, jota jonotetaan',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli '
+          + 'kahdeksan kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli '
+          + 'The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman '
+          + 'kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen '
+          + 'samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. '
+          + 'Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa '
+          + 'äänitetään musiikkia edelleen.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Suojatie, jota jonotetaan" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Abbey Road Zebra.jpg',
+        lyhyt: 'Abbey Roadin suojatiellä on virallinen suojelumerkintä, ja viereisessä studiossa äänitetään yhä.',
+        selite: 'Abbey Roadin suojatiellä on virallinen suojelumerkintä, ja '
+          + 'viereisessä studiossa äänitetään musiikkia edelleen.',
+        lahde: 'Misterweiss, Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miksi juuri tästä suojatiestä tuli maailman kuuluisin?',
+        'Millaista kadulla on, kun turistit jonottavat ylitystä ja autot '
+          + 'odottavat?',
+        'Mitä taustan studiossa äänitetään nykyään?',
+      ],
+      visa: {
+        kysymys: 'Abbey Roadin levynkannen kuva otettiin elokuussa 1969. Miten se '
+          + 'syntyi?',
+        vaihtoehdot: [
+          'Kuva otettiin salaa parvekkeelta yhtyeen tietämättä',
+          'Suojatie ylitettiin kahdeksan kertaa, ennen kuin kuva onnistui',
+          'Suojatie maalattiin kuvausta varten uudelleen',
         ],
-        lahde: 'Lontoon kaupunkilehden nosto "Suojatie, jota jonotetaan" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Abbey Road Zebra.jpg',
-          lyhyt: 'Abbey Roadin suojatiellä on virallinen suojelumerkintä, ja viereisessä studiossa äänitetään yhä.',
-          selite: 'Abbey Roadin suojatiellä on virallinen suojelumerkintä, ja '
-            + 'viereisessä studiossa äänitetään musiikkia edelleen.',
-          lahde: 'Misterweiss, Wikimedia Commons (PD)',
-        },
-        kysymykset: [
-          'Miksi juuri tästä suojatiestä tuli maailman kuuluisin?',
-          'Millaista kadulla on, kun turistit jonottavat ylitystä ja autot '
-            + 'odottavat?',
-          'Mitä taustan studiossa äänitetään nykyään?',
-        ],
-        visa: {
-          kysymys: 'Abbey Roadin levynkannen kuva otettiin elokuussa 1969. Miten se '
-            + 'syntyi?',
-          vaihtoehdot: [
-            'Kuva otettiin salaa parvekkeelta yhtyeen tietämättä',
-            'Suojatie ylitettiin kahdeksan kertaa, ennen kuin kuva onnistui',
-            'Suojatie maalattiin kuvausta varten uudelleen',
-          ],
-          oikea: 1,
-          fakta: 'Ylityksellä on virallinen suojelumerkintä — ja taustan '
-            + 'studiossa äänitetään musiikkia edelleen.',
-        },
-        paikka: {
-          nimi: 'Abbey Roadin suojatie',
-          laudat: {
-            maailmankartta: { x: 5828.7, y: 1323.8 },
-            europe: { x: 208.5, y: 538.8 },
-          },
+        oikea: 1,
+        fakta: 'Ylityksellä on virallinen suojelumerkintä — ja taustan studiossa '
+          + 'äänitetään musiikkia edelleen.',
+      },
+      paikka: {
+        nimi: 'Abbey Roadin suojatie',
+        laudat: {
+          maailmankartta: { x: 5828.7, y: 1323.8 },
+          europe: { x: 208.5, y: 538.8 },
         },
       },
-      {
-        id: 'leake-streetin-tunneli',
-        nimio: 'Leake Streetin tunneli',
-        otsikko: 'Tunneli, jossa saa maalata',
-        symboli: 'kulttuuri',
-        lunastus: [
-          'Waterloon aseman laiturien alla kulkee noin kolmesataa metriä '
-            + 'pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla '
-            + 'Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui '
-            + 'taiteelle toukokuussa 2008, kun Banksy järjesti siellä '
-            + 'kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman '
-            + 'vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. '
-            + 'Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos '
-            + 'voi olla iltaan mennessä kadonnut toisen alle.',
-        ],
-        lahde: 'Lontoon kaupunkilehden nosto "Tunneli, jossa saa maalata" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: '2024-09-26 Leake Street, London graffiti tunnel 01.jpg',
-          lyhyt: 'Leake Streetin tunneli avautui katutaiteelle toukokuussa 2008 Banksyn Cans Festivalissa.',
-          selite: 'Leake Streetin noin kolmesataa metriä pitkässä tunnelissa '
-            + 'seinien maalaaminen on sallittua, ja se avautui taiteelle '
-            + 'toukokuussa 2008 Banksyn Cans Festivalissa.',
-          lahde: 'Ted Potters, Wikimedia Commons (PD)',
-        },
-        kysymykset: [
-          'Miksi juuri tässä tunnelissa maalaaminen sallittiin?',
-          'Miltä tuntuu maalata teos, joka voi kadota samana iltana?',
-          'Mikä Cans Festival oli?',
-        ],
-        paikka: {
-          nimi: 'Leake Streetin tunneli',
-          laudat: {
-            maailmankartta: { x: 5829.5, y: 1324.3 },
-            europe: { x: 209, y: 539.1 },
-          },
+    },
+    {
+      id: 'leake-streetin-tunneli',
+      nimio: 'Leake Streetin tunneli',
+      otsikko: 'Tunneli, jossa saa maalata',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Waterloon aseman laiturien alla kulkee noin kolmesataa metriä '
+          + 'pitkä tunneli, jossa seinien maalaaminen on sallittua — muualla '
+          + 'Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui '
+          + 'taiteelle toukokuussa 2008, kun Banksy järjesti siellä '
+          + 'kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman '
+          + 'vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät '
+          + 'maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla '
+          + 'iltaan mennessä kadonnut toisen alle.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Tunneli, jossa saa maalata" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: '2024-09-26 Leake Street, London graffiti tunnel 01.jpg',
+        lyhyt: 'Leake Streetin tunneli avautui katutaiteelle toukokuussa 2008 Banksyn Cans Festivalissa.',
+        selite: 'Leake Streetin noin kolmesataa metriä pitkässä tunnelissa seinien '
+          + 'maalaaminen on sallittua, ja se avautui taiteelle toukokuussa '
+          + '2008 Banksyn Cans Festivalissa.',
+        lahde: 'Ted Potters, Wikimedia Commons (PD)',
+      },
+      kysymykset: [
+        'Miksi juuri tässä tunnelissa maalaaminen sallittiin?',
+        'Miltä tuntuu maalata teos, joka voi kadota samana iltana?',
+        'Mikä Cans Festival oli?',
+      ],
+      paikka: {
+        nimi: 'Leake Streetin tunneli',
+        laudat: {
+          maailmankartta: { x: 5829.5, y: 1324.3 },
+          europe: { x: 209, y: 539.1 },
         },
       },
-      {
-        id: 'neljas-jalusta',
-        nimio: 'Neljäs jalusta',
-        otsikko: 'Tyhjä jalusta ja 2 400 ihmistä',
-        symboli: 'kulttuuri',
-        lunastus: [
-          'Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, '
-            + 'mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska '
-            + 'rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen '
-            + 'päätettiin, ettei sille tule pysyvää patsasta lainkaan: '
-            + 'jalustalle nostetaan vuorotellen uusia nykytaideteoksia. '
-            + 'Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, '
-            + 'yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin jalustan '
-            + 'päällä ja teki siellä mitä halusi.',
-        ],
-        lahde: 'Lontoon kaupunkilehden nosto "Tyhjä jalusta ja 2 400 ihmistä" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Gormley-OneandOther-4thPlinth-TrafalgarSq-20090706.jpg',
-          lyhyt: 'One & Other -teoksessa 2 400 ihmistä sai vuorollaan tunnin Trafalgar Squaren jalustalla 2009.',
-          selite: 'One & Other -teoksessa 2 400 tavallista ihmistä sai kukin '
-            + 'tunnin Trafalgar Squaren neljännellä jalustalla sadan päivän '
-            + 'ajan kesällä 2009.',
-          lahde: 'Simon Lee, Wikimedia Commons (CC BY 2.0)',
-        },
-        kysymykset: [
-          'Mitä ihmiset tekivät sillä tunnilla, jonka saivat jalustan päällä?',
-          'Miksi neljännelle jalustalle ei koskaan tullut pysyvää patsasta?',
-          'Kuka valitsee jalustan seuraavan teoksen?',
-        ],
-        paikka: {
-          nimi: 'Neljäs jalusta',
-          laudat: {
-            maailmankartta: { x: 5829.1, y: 1324 },
-            europe: { x: 208.7, y: 538.9 },
-          },
+    },
+    {
+      id: 'neljas-jalusta',
+      nimio: 'Neljäs jalusta',
+      otsikko: 'Tyhjä jalusta ja 2 400 ihmistä',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, '
+          + 'mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat '
+          + 'loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, '
+          + 'ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan '
+          + 'vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat '
+          + 'ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista '
+          + 'ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä '
+          + 'halusi.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Tyhjä jalusta ja 2 400 ihmistä" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Gormley-OneandOther-4thPlinth-TrafalgarSq-20090706.jpg',
+        lyhyt: 'One & Other -teoksessa 2 400 ihmistä sai vuorollaan tunnin Trafalgar Squaren jalustalla 2009.',
+        selite: 'One & Other -teoksessa 2 400 tavallista ihmistä sai kukin tunnin '
+          + 'Trafalgar Squaren neljännellä jalustalla sadan päivän ajan '
+          + 'kesällä 2009.',
+        lahde: 'Simon Lee, Wikimedia Commons (CC BY 2.0)',
+      },
+      kysymykset: [
+        'Mitä ihmiset tekivät sillä tunnilla, jonka saivat jalustan päällä?',
+        'Miksi neljännelle jalustalle ei koskaan tullut pysyvää patsasta?',
+        'Kuka valitsee jalustan seuraavan teoksen?',
+      ],
+      paikka: {
+        nimi: 'Neljäs jalusta',
+        laudat: {
+          maailmankartta: { x: 5829.1, y: 1324 },
+          europe: { x: 208.7, y: 538.9 },
         },
       },
-      {
-        id: 'tate-modernin-turbiinihalli',
-        nimio: 'Turbiinihalli',
-        otsikko: 'Voimalasta tuli taidesali',
-        symboli: 'kulttuuri',
-        lunastus: [
-          'Tate Modern on entinen hiilivoimala Thamesin etelärannalla. Sen '
-            + 'turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo '
-            + 'tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 '
-            + 'kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa '
-            + 'auringonkukansiementä. Jokainen siemen oli muotoiltu käsin '
-            + 'posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä '
-            + 'Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon '
-            + 'pääsee sisään ilmaiseksi.',
+    },
+    {
+      id: 'tate-modernin-turbiinihalli',
+      nimio: 'Turbiinihalli',
+      otsikko: 'Voimalasta tuli taidesali',
+      symboli: 'kulttuuri',
+      lunastus: [
+        'Tate Modern on entinen hiilivoimala Thamesin etelärannalla. Sen '
+          + 'turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo '
+          + 'tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 '
+          + 'kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa '
+          + 'auringonkukansiementä. Jokainen siemen oli muotoiltu käsin '
+          + 'posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä '
+          + 'Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon '
+          + 'pääsee sisään ilmaiseksi.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Voimalasta tuli taidesali" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'Turbine Hall - Tate Modern - geograph.org.uk - 7509077.jpg',
+        lyhyt: 'Tate Modernin 155-metrinen turbiinihalli täyttyy kerrallaan yhdellä jättimäisellä teoksella.',
+        selite: 'Tate Modernin turbiinihalli on 155 metriä pitkä ja 35 metriä '
+          + 'korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen '
+          + 'teoksen.',
+        lahde: 'Mr Ignavy, Wikimedia Commons (CC BY-SA 2.0)',
+      },
+      kysymykset: [
+        'Miltä sadan miljoonan siemenen päällä käveleminen tuntui?',
+        'Miksi voimalaa ei purettu vaan siitä tehtiin museo?',
+        'Miten yhtä teosta varten löydetään 1 600 käsityöläistä?',
+      ],
+      visa: {
+        kysymys: 'Ai Weiwei täytti Tate Modernin turbiinihallin lattian vuonna '
+          + '2010. Millä?',
+        vaihtoehdot: [
+          'Mustalla hiekalla, jonka läpi sai kävellä',
+          'Kymmenillätuhansilla lasihelmillä',
+          'Sadalla miljoonalla käsin tehdyllä auringonkukansiemenellä',
         ],
-        lahde: 'Lontoon kaupunkilehden nosto "Voimalasta tuli taidesali" '
-          + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
-          + 'karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'Turbine Hall - Tate Modern - geograph.org.uk - 7509077.jpg',
-          lyhyt: 'Tate Modernin 155-metrinen turbiinihalli täyttyy kerrallaan yhdellä jättimäisellä teoksella.',
-          selite: 'Tate Modernin turbiinihalli on 155 metriä pitkä ja 35 metriä '
-            + 'korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen '
-            + 'teoksen.',
-          lahde: 'Mr Ignavy, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-        kysymykset: [
-          'Miltä sadan miljoonan siemenen päällä käveleminen tuntui?',
-          'Miksi voimalaa ei purettu vaan siitä tehtiin museo?',
-          'Miten yhtä teosta varten löydetään 1 600 käsityöläistä?',
-        ],
-        visa: {
-          kysymys: 'Ai Weiwei täytti Tate Modernin turbiinihallin lattian vuonna '
-            + '2010. Millä?',
-          vaihtoehdot: [
-            'Mustalla hiekalla, jonka läpi sai kävellä',
-            'Kymmenillätuhansilla lasihelmillä',
-            'Sadalla miljoonalla käsin tehdyllä auringonkukansiemenellä',
-          ],
-          oikea: 2,
-          fakta: 'Jokainen siemen oli muotoiltu käsin posliinista ja maalattu '
-            + 'yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa '
-            + 'teki niitä yli kaksi vuotta.',
-        },
-        paikka: {
-          nimi: 'Turbiinihalli',
-          laudat: {
-            maailmankartta: { x: 5830, y: 1324 },
-            europe: { x: 209.3, y: 539 },
-          },
+        oikea: 2,
+        fakta: 'Jokainen siemen oli muotoiltu käsin posliinista ja maalattu '
+          + 'yksitellen: noin 1 600 käsityöläistä Jingdezhenin kaupungissa '
+          + 'teki niitä yli kaksi vuotta.',
+      },
+      paikka: {
+        nimi: 'Turbiinihalli',
+        laudat: {
+          maailmankartta: { x: 5830, y: 1324 },
+          europe: { x: 209.3, y: 539 },
         },
       },
-      {
-        id: 'orbitin-liukumaki',
-        nimio: 'Liukumäkiveistos',
-        otsikko: 'Veistos, jonka sisällä on liukumäki',
-        symboli: 'tekniikka',
-        lunastus: [
-          'Stratfordin olympiapuistossa seisoo 114,5 metriä korkea '
-            + 'punainen teräsvyyhti, Britannian suurin julkinen taideteos. Sen '
-            + 'suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil '
-            + 'Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi '
-            + 'näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna '
-            + '2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin '
-            + '178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. '
-            + 'Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 '
-            + 'sekuntia.',
-        ],
-        lahde: 'Lontoon kaupunkilehden nosto "Veistos, jonka sisällä on '
-          + 'liukumäki" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
-          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
-        kuva: {
-          tiedosto: 'ArcelorMittal Orbit - geograph.org.uk - 6402522.jpg',
-          lyhyt: 'ArcelorMittal Orbit on Britannian suurin taideteos, ja sen ympäri kiertyy pisin tunneliliukumäki.',
-          selite: 'ArcelorMittal Orbit on 114,5 metriä korkea ja Britannian suurin '
-            + 'julkinen taideteos, ja sen ympäri kiertyy maailman pisin '
-            + 'tunneliliukumäki.',
-          lahde: 'Ian S, Wikimedia Commons (CC BY-SA 2.0)',
-        },
-        kysymykset: [
-          'Miksi olympialaisille haluttiin oma maamerkki?',
-          'Millaista alas laskeutuminen kaksitoista kertaa kiertyvässä '
-            + 'putkessa on?',
-          'Mitä teräsvyyhdille tehdään kisojen jälkeen?',
-        ],
-        paikka: {
-          nimi: 'Liukumäkiveistos',
-          laudat: {
-            maailmankartta: { x: 5828.8, y: 1324.1 },
-            europe: { x: 208.6, y: 539 },
-          },
+    },
+    {
+      id: 'orbitin-liukumaki',
+      nimio: 'Liukumäkiveistos',
+      otsikko: 'Veistos, jonka sisällä on liukumäki',
+      symboli: 'tekniikka',
+      lunastus: [
+        'Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen '
+          + 'teräsvyyhti, Britannian suurin julkinen taideteos. Sen '
+          + 'suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil '
+          + 'Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi '
+          + 'näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna '
+          + '2016 veistokseen kiedottiin toinen taideteos: Carsten Höllerin '
+          + '178 metriä pitkä liukumäki, maailman pisin tunneliliukumäki. '
+          + 'Matka alas kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.',
+      ],
+      lahde: 'Lontoon kaupunkilehden nosto "Veistos, jonka sisällä on liukumäki" '
+        + '(js/packs/kulttuuri-kategoriat.js). Teksti siirretty sanatarkasti '
+        + 'karttauudistuksen erässä 10, 13.9.2026.',
+      kuva: {
+        tiedosto: 'ArcelorMittal Orbit - geograph.org.uk - 6402522.jpg',
+        lyhyt: 'ArcelorMittal Orbit on Britannian suurin taideteos, ja sen ympäri kiertyy pisin tunneliliukumäki.',
+        selite: 'ArcelorMittal Orbit on 114,5 metriä korkea ja Britannian suurin '
+          + 'julkinen taideteos, ja sen ympäri kiertyy maailman pisin '
+          + 'tunneliliukumäki.',
+        lahde: 'Ian S, Wikimedia Commons (CC BY-SA 2.0)',
+      },
+      kysymykset: [
+        'Miksi olympialaisille haluttiin oma maamerkki?',
+        'Millaista alas laskeutuminen kaksitoista kertaa kiertyvässä '
+          + 'putkessa on?',
+        'Mitä teräsvyyhdille tehdään kisojen jälkeen?',
+      ],
+      paikka: {
+        nimi: 'Liukumäkiveistos',
+        laudat: {
+          maailmankartta: { x: 5828.8, y: 1324.1 },
+          europe: { x: 208.6, y: 539 },
         },
       },
+    },
   ],
 
   /*
