@@ -353,10 +353,14 @@ const mittaukset = await sivu.evaluate(async ({ png, pisteet }) => {
     const kartalla = osuma && osuma.closest && osuma.closest('.map-pane')
       && !osuma.closest('section.intro, aside.rail, .fokusmitat, .karttaselite');
     if (!kartalla) {
+      // Esivanhempien ketju viestiin: ilman sitä "ei kartalla" ei kerro
+      // mikä paneeli oli tiellä, ja korjaus olisi arvailua.
+      const ketju = [];
+      for (let n = osuma; n && n !== document.body && ketju.length < 4; n = n.parentElement) {
+        ketju.push(`${n.tagName.toLowerCase()}.${n.className || ''}`);
+      }
       ulos.push({
-        ...p,
-        ruudulla: false,
-        syy: `päällä ${osuma ? [...(function* k(e) { let n = e; while (n && n !== document.body) { yield `${n.tagName.toLowerCase()}.${n.className || ''}`; n = n.parentElement; } }(osuma))].slice(0, 4).join(' < ') : 'ei mitään'}`,
+        ...p, ruudulla: false, syy: `päällä ${ketju.join(' < ') || 'ei mitään'}`,
       });
       continue;
     }
