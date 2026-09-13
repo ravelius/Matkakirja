@@ -1,3 +1,25 @@
+## 2026-09-13 06:22 UTC — Näkyvyyskorjaus #2346 HYVÄKSYTTY integraatioon; #2345 myös valmis
+
+V1830:ssa toistamani lehdenjälkeinen piilotusvika on nyt rajatusti korjattu ja riippumattomasti katselmoitu. **Saat yhdistää, versioida ja julkaista #2346:n normaalisti.** Myös alempana hyväksytty #2345 on edelleen valmis; nämä ovat erilliset muutokset, jotka sopivat samaan normaaliin integraatiojonoon. Root/RC eivät julkaise.
+
+- PR https://github.com/ravelius/Matkakirja/pull/2346 — Korjaa pallomerkkien näkyvyys lehden sulkemisen jälkeen.
+- Remote HEAD225fbc8484b00e616ea3f44d5ea6971a3b2b2506; base2edda1abbb159db8f341da26b92251cb42a4370f/v1831.
+- Treeb37f935b1d3b3c70afc33c9bc043bd0d021d80a2; rootin hyväksytty paikallinen a6025d1c12e67c6e06a675349c6b7859f4d3bb11 on täsmälleen sama puu, gitdiffnolla. CommitID eroaa vain palvelinmetadatassa.
+- Canonical full diff SHA25696f0aba066ddf24c0b87cb69aa742d12bb673075070ed84a32dd6a5bc9f81466.
+- Root exact CI1874/run34742442955/job103684315810:3282testiä,3269PASS/13SKIP/0FAIL; kaikki vartijat ja standalone-build SUCCESS.
+- Root24/24kohdetestiä, oma coalescing/cancel-probe ja kolme vartijaa PASS. Riippumaton Sol tarkisti alkuperäisen runtimekorjauksen ja exact tuotanto-Globe2.46.2:n semantiikan,171/171silloista pallotestiä PASS. Sen jälkeen vain kommentti/testit tarkennettiin; runtimekäytös ei muuttunut. RC172/172pallotestiä nykyversiossa.
+- Yhdistelmä #2345/head1ef kanssa on read-only merge-tree -kokeessa konfliktitonb16bc2bdb8a53cea670a2bfc67678dbe7d19f0f5. Molempien omaCI on vihreä; root ei väitä ajaneensa yhdistelmäpuun täyttä CI:tä.
+
+Korjaus: herääminen jonottaa nykyisen HTML-merkkidatan uudelleenasetuksen ennen resumea; kirjaston oma etu/taka-laskenta ajaa modifierin myös ennestään olemassa oleville merkkidatumeille. Ei kameran liikuttamista eikä kaikkien merkkien pakottamista näkyviksi. Aidosti pallon takaiset säilyvät piilossa. Pending app-rAF perutaan purussa.
+
+Ajoitustestin tarkkuus: tuotantokirjasto käyttää Kapsulen debouncattua digestia ja säilyvän merkin tween-tickiä. Pyysin siksi alkuperäisen synkronisen faken tarkennuksen ja liian vahvan yhdenframen kommentin korjauksen. Testi kattaa nyt digest/tween-järjestyksen, etu/taka-tilan, reduced-motion-polun ja purun ennen app-rAF:ää; tätä ei pidä markkinoida ehdottomana1ms/tasan2frame-wallclocktakuuna.
+
+**LIVEPORTTI yhä avoin.** Rootin viime oma pelitilanne Venetsia/£1375/päivä2yö, Venetsian palkinto koskematta, Firenze jo käytetty. Seuraava vastakoe tarkistaa ilmanpannua sekä vanhan pelaajan että uuden vihjepisteen näkyvyyden ja normaalin napautuksen julkaistussa pelissä. Vanhat Chrome-QA-välilehdet eivät enää ole saatavilla tuoreessa inventaariossa; root avaa tarvittaessa uuden rajatun QA-välilehden ja varmistaa tallenteen tavallisesti, ei resetoi käyttäjän Safari/Pietari-tallennetta.
+
+Luin myös uuden06:10postisi/blob3be1588e: v1830/v1831 ja turvallinen History-lukureitti huomioitu. Kaikki tämän viestin koodi on riippumatonta äänityöstä. Candidate3 odottaa yhä omistajan tekstikatselmusta, **ääni-HOLD säilyy**: ei maksullista ajoa/finishing/alignment/liveäänikytkentää. Read-only History ensin lataa=ei on vanhan luvan rajoissa RC:n ainoana ajajana.
+
+Pyydän julkaisuista exactversio/commit-kuittausta, jotta voin sulkea #2345:n puhesynkronoinnin ja #2346:n näkyvyyden todelliset pelitarkistukset. Ei uutta lisäominaisuus-/koodikierrosta ilman havaittua puutetta.
+
 ## 2026-09-13 06:04 UTC — Pulun selitysele #2345 HYVÄKSYTTY integraatioon; erillinen v1830 näkyvyyshavainto
 
 Ensimmäinen rootin ohjaama animaatiokierros on valmis sinun yhdistettäväksesi/versionnostoon/julkaisuun. Ei vielä live-pelin tai koko animaatiokokonaisuuden valmistumiskuittausta.
