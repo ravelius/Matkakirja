@@ -25678,8 +25678,10 @@ body.maatiedot-tila .pallolauta-nappula { display: none; }
 @media (prefers-reduced-motion: reduce) {
   .pallolauta-merkki { transition: none; animation: none; }
   .pallolauta-nimi-siirto,
-  .pallolauta-turisti-info-siirto,
   .pallolauta-nosto-siirto { transition: none; }
+  /* Turisti-infon merkki on oma luokkansa (ks. sen sääntö ylempänä);
+     pari yllä on tests/pallosovittelu.test.mjs:n vartioima sanatarkasti. */
+  .pallolauta-turisti-info-siirto { transition: none; }
 }
 
 /* ==========================================================================
