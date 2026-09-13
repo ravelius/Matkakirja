@@ -1,5 +1,17 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 04:05 UTC — v1826/v1827 huomioitu, #2337 yhteensopivuus uusimpaan mainiin PASS
+
+Luin uudet julkaisut ja niiden omistajan linjaukset. En palauta Horatio-katkaisua tai Pulun atempo-oletusta enkä käynnistä uusia maksullisia ajoja. Maksetut 45+45 aineistot säilyvät. Generaattorin TEMPO=1 muuttaa vain tulevia ajoja, ei jo tuotettuja tiedostoja.
+
+Root exact CI: v1826 PR2339 head b6da82fb23f41f4045c492ededfada2333041a7e / run34736448068 / job103668628698 ja v1827 PR2340 head7441d01da9f117e4a09fa0c27d0d2495b92cbffe / run34736678763 / job103669231412 molemmat SUCCESS, 3251 PASS / 13 SKIP / 0 FAIL, kaikki portit success. Uusin main23e05bd5d7f6fbe31ec28473b87d7587df469f67.
+
+Riippumaton Sol tarkisti exact ed3fcc6a..23e05bd5: kaikki 45+45 media/cue/alignment/manifest/runtime-binding ja 45 fokuspakit ennallaan. Horatio nollakatkaisu palauttaa koko tekstin ja lopetaOsuuteen=null; nykyiset ajoitukset jatkuvat luonnolliseen loppuun. Pulu tempo sisältyy batch-hashiin ja metadataan; vanhat 1.08-erät eivät törmää uusiin.
+
+**#2337:n hyväksytty e6e61f25c3edc9906354f6078cddcfbc04040423 on edelleen valmis sinun integraatioosi.** Aiempi dbc66e5-HOLD on ratkaistu; exact HEAD/tree/diffSHA ja oma CI löytyvät alla 02:56-kortista. Rootin read-only merge-tree nyky-main23e05bd5+e6 on konfliktiton7de7c887ea94d7109723918e011b057abd1f5054. Sol testasi tämän yhdistelmäpuun: **160 PASS / 0 FAIL / 0 SKIP**, sisältäen molemmat elinkaarikorjaukset sekä uudet nopeus-/katkaisurajat. Ei uutta regressiota tässä rajauksessa. Root ei yhdistä tai julkaise.
+
+Origin04:01:38 ja04:02:50 tarjosi vielä vanhat main/sw/lausejako/muutokset sekä canonical että cachebust; en siis vielä väitä v1827:n live-vastakoetta hyväksytyksi. Jatkan readbackia levityksen jälkeen. Oma Chrome QA edennyt normaalisti Firenzeen, £650/päivä2/keskipäivä, lehden Floriini-kysymys ja pulla vielä koskematta: valmis #2337:n välittömän pistepäivityksen vastakokeeseen. Käyttäjän Safari koskematta. Raportti v1826-v1827-compatibility-qa.md rootoutputissa.
+
 ## 13.9.2026 03:00 UTC — v1825 luonnollinen luenta → hover → laskeutuminen LIVE-PASS
 
 **#2336/v1825:n nimetty liveportti on nyt suljettu.** Origin02:57:54UTC 7canonical+7cachebustURLia HTTP200/SHA256 exact ed3fcc6a53fa5c928bc083cf9d88f6004f2fb8e5 PASS, normaali levitysviive poistui. Chrome-reloadin ilmoitus näytti v1825.
