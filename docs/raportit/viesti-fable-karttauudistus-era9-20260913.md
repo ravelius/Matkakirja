@@ -52,6 +52,7 @@ build-standalone.
 | `sw.js`, `tools/build-standalone.mjs` | Poistettu moduuli pois kori- ja niputusluettelosta |
 | `css/aikajana.css`, `css/satelliitti.css`, `tests/aikajana.test.mjs`, `tools/savukkeet/savuke-linssi-teksti-keskella.mjs` | Napin piilotussäännöt ja niiden vartijat pois |
 | `tools/savukkeet/savuke-era9.mjs` | **uusi** savuke, kolme väitettä + kaksi vastakoetta |
+| `tools/savukkeet/savuke-maapaneeli.mjs` | Väite 1 mittaa näkyvyyden RUUDUSTA eikä karttaruudun vaihtelevasta laatikosta (vilkkuva vartija, kaatui myös mainissa — ks. luku 5) |
 
 **Ei koskettu** (tehtävänannon kielto): `js/pollo.js`, `js/livia-*.js`,
 `js/luentareaktiot.js`, `js/media.js`, `js/pallolauta/merkit.js`.
@@ -106,14 +107,24 @@ Tehtävänanto antoi kaksi lukua, jotka eivät osu yhteen: *"korkeintaan
 noin 20 % ruudun leveydestä"* (= 78 px 390 px:n ruudulla) ja
 *"390 px -ruudulla uloimmalla zoomilla paneelin leveys ≈ 150–200
 css-px"* (= 38–51 % ruudusta). Mitoitin **jälkimmäisen mukaan**, koska
-se on se luku, jota savuke mittaa ja jonka tehtävänanto antaa
-lautayksikköohjeena. Lopputulos asettuu lukujen väliin:
+se on se luku, jonka tehtävänanto antaa lautayksikköohjeena ja jota
+savuke voi mitata. Lopputulos asettuu tavoitteiden väliin:
+saapumisnäkymässä **167 px** (150–200 sisällä), uloimmalla sallitulla
+zoomilla **114 px** (lähempänä 20 %:n tavoitetta).
 
-| Näkymä (Ranska, 390 × 844) | Erä 3 | Erä 9 |
+| Näkymä (Ranska, 390 × 844) | Erä 3 (main v1851) | Erä 9 |
 | --- | --- | --- |
-| Saapumisnäkymä | 233 × 164 px | **167 × 118 px** (43 % leveydestä) |
-| Uloin sallittu zoomi | — | **114 × 89 px** (29 % leveydestä) |
-| Työpöytä 1400 × 900, uloin zoomi | — | **223 × 174 px** (16 % leveydestä) |
+| Sama korkeus (altitude 0,6268) | **308 × 99 px** (79 % leveydestä) | **119 × 93 px** (31 %) |
+| Uloin sallittu zoomi | — | **114 × 89 px** (29 %) |
+| Saapumisnäkymä (altitude 0,4465) | 233 × 164 px | **167 × 118 px** (43 %) |
+| Työpöytä 1400 × 900, uloin zoomi | 233 × 182 px (alt 0,338) | **223 × 174 px** (16 %, alt 0,354) |
+
+Rivi 1 on tehtävänannon kannalta se ratkaiseva: **samalla
+kamerakorkeudella** paneeli kapeni 308 pikselistä 119:ään, eli 79 %
+ruudun leveydestä 31 %:iin. (Luvut on mitattu ajamalla erän 3 oma
+savuke `savuke-maapaneeli.mjs` sekä mainissa (v1851) että tällä
+haaralla.) Työpöydällä muutos on pieni, koska siellä kamera on jo
+korkeusrajoitettu ja erän 3 paneeli mahtui ruutuun hyvin.
 
 Mitoitus on lautayksiköissä kuten PÄÄTÖKSET 2 vaatii. Kortin
 peruskoosta (190 × 148 css-px) lasketaan kerroin
@@ -129,9 +140,11 @@ matalilla mailla (Venäjä, Kazakstan).
 
 **Teksti uloimmalla zoomilla.** Nimi on 13 px × skaala ≈ 0,6 = ~8 px ja
 lukurivit ~6 px 390 px:n ruudulla: **luettavissa vasta lähemmällä
-zoomilla**, kuten tehtävänanto sallii. Kaksi zoomiporrasta sisään (ks.
-kuva) ja teksti on täysin luettavaa. Tämä on tietoinen vaihtokauppa
-sille, että paneeli on "paljon pienempi".
+zoomilla**, kuten tehtävänanto sallii (*"teksti pysyy luettavana
+lähemmällä zoomilla"*). Yksi zoomiporras sisään kaksinkertaistaa
+mitan (mitattu: skaala 0,626 → 1,253). Tämä on tietoinen vaihtokauppa
+sille, että paneeli on "paljon pienempi" — jos teksti on omistajan
+mielestä liian pientä, säädin on `MAAPANEELIN_LEVEYS_OSUUS`.
 
 ### 2.4 Avoin löydös: saapumisnäkymän korkeus ei ole yksikäsitteinen
 
@@ -294,7 +307,28 @@ OK  VASTAKOE B: entisillä mitoilla kokoväite kaatuu
 
 Lisäksi ajettiin **erän 3 oma savuke** `savuke-maapaneeli.mjs`
 varmistamaan, ettei Lisää-valikko rikkoutunut uuden asettelun myötä:
-ERA3_SAVUKE
+**9/9 vihreä** — kaikki kahdeksan Lisää-valikon otsikkoa avaavat yhä
+oman maalehtisivunsa (Historia → sivu 2, Ruokaa ja tapoja → 3,
+Keksinnöt → 4, Luonto → 5, Urheilu → 6, Arki ja tavat → 7, Tavat → 8,
+Menovinkit → 9), värit ovat kartan `--sym-`sävyjä ja molemmat
+vastakokeet punaisia.
+
+**Samalla korjattiin erän 3 savukkeen vilkkuva vartija** (kirjattava
+löydös). Sen väite 1 vertasi kortin ruutulaatikkoa KARTTARUUDUN
+(`.pallo-kotelo`) mitattuun laatikkoon. Karttaruutu on flex-lapsi
+(`flex: 1 1 auto; min-height: 0`), ja sen mitattu korkeus vaihtelee
+saapumisen aikana sen mukaan, mitä ruudulla on juuri sillä hetkellä:
+kolmessa peräkkäisessä ajossa **775, 589 ja 0 px** samalla 844 px:n
+ruudulla. Väite kaatui siksi sattumanvaraisesti — **myös mainissa
+(v1851)**, mikä varmistettiin ajamalla sama savuke erillisessä
+main-työpuussa: ensimmäinen ajo 9/9, toinen 8/9 samalla virheellä.
+Kortti oli joka ajossa kokonaan näkyvissä (y 528…621 / 844).
+
+Korjaus: väite mittaa nyt RUUDUSTA (`innerWidth/innerHeight`) —
+"kortti on kokonaan ruudulla" on juuri se väite, jonka savuke haluaa
+tehdä, eikä ruutu elä saapumisanimaation mukana. Karttaruudun mitat
+jäävät INFO-riville. Erän 9 oma savuke ei kärsinyt tästä, koska se
+mittaa vasta kuuden sekunnin lepojakson jälkeen.
 
 ## 6. Kuvat
 

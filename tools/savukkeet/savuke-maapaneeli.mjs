@@ -204,6 +204,19 @@ const mittaaPaneeli = (sivu) => sivu.evaluate(() => {
       x0: r.left, y0: r.top, x1: r.right, y1: r.bottom, w: r.width, h: r.height,
     } : null,
     kotelo: { w: kotelo.width, h: kotelo.height, x0: kotelo.left, y0: kotelo.top },
+    /*
+     * NÄKYVYYS MITATAAN RUUDUSTA, EI KARTTARUUDUN LAATIKOSTA (korjaus
+     * 13.9.2026, erä 9). Karttaruutu on flex-lapsi (`.pallo-kotelo`,
+     * `flex: 1 1 auto; min-height: 0`), ja sen MITATTU korkeus vaihtelee
+     * saapumisen aikana sen mukaan, mitä ruudulla on juuri sillä
+     * hetkellä: kolmessa peräkkäisessä ajossa 775, 589 ja 0 px samalla
+     * 844 px:n ruudulla — ja väite kaatui sattumanvaraisesti sekä
+     * mainissa (v1851) että erän 9 haarassa, vaikka kortti oli joka
+     * kerta kokonaan näkyvissä (y 528…621). Väite on "kortti on
+     * kokonaan RUUDULLA", ja ruutu on `innerWidth/innerHeight` — se ei
+     * elä saapumisanimaation mukana. Karttaruutu jää INFO-riville.
+     */
+    ruutu: { w: globalThis.innerWidth, h: globalThis.innerHeight },
     etelaY,
     perusta: mitat?.perusta ?? null,
     skaala: datum?.skaala ?? null,
@@ -253,18 +266,16 @@ for (const ruutu of RUUDUT) {
   /* --- 1. paikka: maan laatikon eteläreunan ulkopuolella ---------- */
   // eslint-disable-next-line no-await-in-loop
   const ulko = await mittaaPaneeli(sivu);
+  const ruudulla = Boolean(ulko.kortti
+    && ulko.kortti.y0 >= -1 && ulko.kortti.y1 <= ulko.ruutu.h + 1
+    && ulko.kortti.x0 >= -1 && ulko.kortti.x1 <= ulko.ruutu.w + 1);
   const paikallaan = Boolean(ulko.onKortti && ulko.kortti && Number.isFinite(ulko.etelaY)
-    && ulko.kortti.y0 >= ulko.etelaY - 1
-    && ulko.kortti.y1 <= ulko.kotelo.y0 + ulko.kotelo.h + 1
-    && ulko.kortti.x0 >= ulko.kotelo.x0 - 1
-    && ulko.kortti.x1 <= ulko.kotelo.x0 + ulko.kotelo.w + 1);
+    && ulko.kortti.y0 >= ulko.etelaY - 1 && ruudulla);
   sijaintiOk.push({
     ruutu: ruutu.nimi,
     ok: paikallaan,
     ulkopuolella: Boolean(ulko.kortti && ulko.kortti.y0 >= ulko.etelaY - 1),
-    ruudulla: Boolean(ulko.kortti && ulko.kortti.y1 <= ulko.kotelo.y0 + ulko.kotelo.h + 1
-      && ulko.kortti.x0 >= ulko.kotelo.x0 - 1
-      && ulko.kortti.x1 <= ulko.kotelo.x0 + ulko.kotelo.w + 1),
+    ruudulla,
   });
   tieto(`${ruutu.nimi} px · uloin zoomi`,
     `kortti ${ulko.kortti ? `${Math.round(ulko.kortti.w)} x ${Math.round(ulko.kortti.h)} px `
