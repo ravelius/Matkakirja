@@ -672,8 +672,8 @@ export function aaniOsoite(url) {
  * putoaminen olisi toinen 404 — ja kolme sellaista sulkisi äänipeilin
  * myös äänimaisemilta, joilla varareitti oikeasti on.
  */
-export async function haeAani(url) {
-  if (omaAaniPolku(url)) return fetch(aaniUrl(url));
+export async function haeAani(url, asetukset = {}) {
+  if (omaAaniPolku(url)) return fetch(aaniUrl(url), asetukset);
   const peili = aaniOsoite(url);
   if (peili !== url) {
     /*
@@ -683,11 +683,11 @@ export async function haeAani(url) {
      * katkaisijan koko lajilta. Puuttuva tiedosto (404) palautuu yhä
      * heti, joten varareitti ei hidastu (js/media.js haeSitkeasti).
      */
-    const vastaus = await haeSitkeasti(peili, { yrityksia: 2 });
+    const vastaus = await haeSitkeasti(peili, { ...asetukset, yrityksia: 2 });
     if (vastaus?.ok) return vastaus;
     peiliPetti('aanet');
   }
-  return fetch(url);
+  return fetch(url, asetukset);
 }
 
 /**
