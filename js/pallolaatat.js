@@ -28,6 +28,7 @@
  */
 import {
   haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
+  pyramidinVaritasonMaa,
 } from './laattapyramidi.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 
@@ -348,7 +349,7 @@ export function lepokerroksenTaso(tasot, tarvePxAste, teravyys = LEPOKERROS_TERA
  * täsmälleen sama versio (muuten sama merkki olisi levossa laatassa ja
  * liikkeessä elävänä tai poissa). Null = ei kerrosta lainkaan.
  */
-export function lepokerroksenKerrokset(pallonLuettelo, pyramidi) {
+export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null) {
   if (!pallonLuettelo?.versio || !pyramidi?.versio) return null;
   if (pallonLuettelo.versio !== pyramidi.versio) return null;
   const viivat = pallonLuettelo.viivat ?? null;
@@ -368,7 +369,27 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi) {
    */
   const ranta = pallonLuettelo.ranta ?? null;
   if (ranta && ranta !== (pyramidi.rantataso?.versio ?? null)) return null;
-  return { pohja: true, ranta: Boolean(ranta), viiva: Boolean(viivat), nosto: Boolean(nostot) };
+  /*
+   * VÄRITASO EI SAA SAMMUTTAA KERROSTA (erä 1b, suunnitelman riski 4.2).
+   *
+   * Muut portit ovat KOKO KERROKSEN ehtoja: jos pallon sarja ja
+   * pyramidi ovat eri versiota, laattoja ei saa piirtää lainkaan, koska
+   * sama merkki olisi levossa laatassa ja liikkeessä elävänä. Väritaso
+   * on eri laji: se on YHDEN MAAN lisäys pohjan päälle, eikä sen
+   * puuttuminen tee kartasta väärää — se tekee siitä seepiaa, eli
+   * täsmälleen sen kartan, joka peli oli ennen tätä erää. Siksi tämä
+   * on BOOLEAN eikä `return null`: puuttuva tai eri versiossa oleva
+   * värilaatasto pudottaa värit, ei karttaa.
+   *
+   * PORTTI ON MAAKOHTAINEN, koska laatastokin on: taulusta luetaan
+   * pelaajan maan kirjaus, ja ilman sitä (muu maa, vanha luettelo,
+   * ajamaton maa) väri on pois.
+   */
+  const variKirjaus = variMaa ? (pyramidi.varitasot?.[variMaa] ?? null) : null;
+  const vari = Boolean(variKirjaus?.versio && variKirjaus.tasot?.length);
+  return {
+    pohja: true, ranta: Boolean(ranta), viiva: Boolean(viivat), nosto: Boolean(nostot), vari,
+  };
 }
 
 /**
@@ -952,6 +973,14 @@ export function luoLaattakerros({
      * (savuke-pallo-kehystahti lukee nämä).
      */
     valmisteluMs: 0, valmisteluja: 0, valmisteluMax: 0,
+    /*
+     * VÄRITASO (erä 1b): `variMaa` on se maa, jonka värilaatasto on
+     * juuri nyt käytössä (null = ei väriä), ja `varillisia` niiden
+     * laattojen määrä, joihin värikerros haettiin. Nimet ovat erän 1
+     * omat (js/laattapyramidi.js mittarit), jotta savukkeet lukevat
+     * molemmilta laudoilta samaa kenttää.
+     */
+    variMaa: null, varillisia: 0, varimitatointeja: 0,
   };
   const pyydetyt = new Set();
   /** avain 'z/sarake/rivi' → tietue. */
@@ -964,6 +993,14 @@ export function luoLaattakerros({
   let pyramidi;
   let pyramidiHaussa = false;
   let kerrokset = null;
+  /*
+   * VÄRITASON MAA EDELLISELTÄ PÄIVITYKSELTÄ. Laatan avain
+   * (`z/sarake/rivi`) ei sisällä maata eikä laatan osoitteen versiota,
+   * joten maanvaihto EI mitätöi laattoja itsestään: Ranskan värillinen
+   * laatta jäisi kankaalle, kun pelaaja siirtyy Belgiaan. Purku on
+   * olemassa (LRU ja `pura`), sen laukaisu ei — se on tässä.
+   */
+  let variMaaEdellinen = null;
   let sukupolvi = 0;
   let viimePaivitys = -Infinity;
   /**
@@ -1184,13 +1221,28 @@ export function luoLaattakerros({
       laatta: laattaKoko(), arkki: pyramidi.arkki, projektio: pyramidi.projektio, laudanY,
     });
     if (!kartta) { t.tila = 'virhe'; return; }
+    /*
+     * VÄRITASOLLA ON OMA PORTTI (`kerrokset.vari`). Ilman sitä väri
+     * menisi suodattimen `: true`-haaraan — samaan, jossa pohja on —
+     * ja kohdemaan laatat piirtyisivät myös silloin, kun pelaaja on
+     * naapurissa tai kun laatastoa ei ole ajettu tälle maalle.
+     */
     const kerrostasot = (pyramidinKerrostasot(t.z) ?? [])
-      .filter((k) => (k.nosto ? kerrokset.nosto : (k.viiva ? kerrokset.viiva : (k.ranta ? kerrokset.ranta : true))));
+      .filter((k) => {
+        if (k.nosto) return kerrokset.nosto;
+        if (k.viiva) return kerrokset.viiva;
+        if (k.ranta) return kerrokset.ranta;
+        if (k.vari) return kerrokset.vari;
+        return true;
+      });
     if (!kerrostasot.length) { t.tila = 'virhe'; return; }
     const katkaisin = ikkuna.AbortController ? new ikkuna.AbortController() : null;
     t.katkaisin = katkaisin;
     const kuvat = await Promise.all(kerrostasot.map((k) => (pyramidinLaattaOlemassa(k, t.sarake, t.rivi)
       ? haeKuva(pyramidinLaattaUrl(k, t.sarake, t.rivi), katkaisin?.signal ?? null) : null)));
+    // Väritaso mittariin vasta haun jälkeen: harvasta laatastosta
+    // puuttuva laatta ei ole värillinen laatta.
+    t.varillinen = kerrostasot.some((k, i) => k.vari && kuvat[i]);
     t.katkaisin = null;
     if (purettu || !laatat.has(t.avain)) { for (const k of kuvat) k?.close?.(); return; }
     if (!kuvat.some(Boolean)) { t.tila = 'virhe'; return; }
@@ -1424,8 +1476,33 @@ export function luoLaattakerros({
     varmistaPyramidi();
     if (pyramidi === undefined) return luovuta('pyramidin luettelo haussa');
     if (!pyramidi) return luovuta('pyramidin luetteloa ei saatu');
-    kerrokset = lepokerroksenKerrokset(pallonSarja(), pyramidi);
+    /*
+     * KOHDEMAA LUETAAN YHDESTÄ LÄHTEESTÄ (js/laattapyramidi.js
+     * variMaaNyt), jonka lauta asettaa samassa hetkessä kuin punaisen
+     * kehän (js/pallolauta/lauta.js). Kerros ei päättele maata itse:
+     * kaksi päättelyä ehtisi olla eri mieltä, ja väri on osa laatan
+     * kangasta eikä kerros, jonka voisi piilottaa jälkikäteen.
+     */
+    const variMaa = pyramidinVaritasonMaa();
+    kerrokset = lepokerroksenKerrokset(pallonSarja(), pyramidi, variMaa);
     if (!kerrokset) return luovuta('pallon sarja ja pyramidi eri versiota');
+    /*
+     * MAANVAIHTO MITÄTÖI LAATAT. Väri on kankaassa, joten vanhan maan
+     * laatta on väärä kuva eikä vanhentunut kuva — se on purettava ja
+     * haettava uudestaan. Sukupolvi kasvaa, jotta kesken oleva vienti
+     * ei asenna purettua laattaa takaisin.
+     */
+    if (variMaa !== variMaaEdellinen) {
+      variMaaEdellinen = variMaa;
+      mittarit.variMaa = kerrokset.vari ? variMaa : null;
+      mittarit.varimitatointeja += 1;
+      sukupolvi += 1;
+      jono.length = 0;
+      vientijono.length = 0;
+      for (const t of [...laatat.values()]) poista(t);
+      laatat.clear();
+      taso = null;
+    }
     const mitat = kehysmitat(kehys);
     const W = mitat.W;
     const H = mitat.H;
@@ -1498,6 +1575,7 @@ export function luoLaattakerros({
           avain, z: valittu.z, sarake: l.sarake, rivi: l.rivi, alue: null, tila: 'ladataan',
           verkko: null, materiaali: null, tekstuuri: null, kaytetty: nyt, tavut: 0,
           nakyva, scenessa: false, viety: false, aloitettu: false, haipyy: false, jonossa: false,
+          varillinen: false,
           katkaisin: null, etaisyys: 0, sukupolvi, pito: true, ennakko: !nakyva,
         };
         laatat.set(avain, t);
@@ -1665,9 +1743,11 @@ export function luoLaattakerros({
     let nakyviaTaysin = 0;
     let pidettyjaN = 0;
     let tavuja = 0;
+    let varillisiaN = 0;
     for (const t of laatat.values()) {
       laattojaN += 1;
       tavuja += t.tavut ?? 0;
+      if (t.varillinen) varillisiaN += 1;
       if (t.tila === 'valmis') valmiitaN += 1;
       if (t.tila === 'ladataan' && !t.aloitettu && !t.jonossa) jumissa += 1;
       if (t.scenessa) {
@@ -1694,6 +1774,8 @@ export function luoLaattakerros({
     mittarit.hapyvia = hapyviaN;
     mittarit.scenessa = scenessaN;
     mittarit.kaytetytTavut = tavuja;
+    mittarit.varillisia = varillisiaN;
+    mittarit.variMaa = kerrokset.vari ? variMaaEdellinen : null;
     mittarit.pyydettyja = pyydetyt.size;
     mittarit.paivityksia += 1;
     mittarit.syy = '';

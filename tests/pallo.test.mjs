@@ -536,7 +536,15 @@ test('lähin näkyvä leveys on vakio 60 yksikköä, ei laattatarkkuus (v1649)',
    */
   assert.match(lauta, /\? zoomirajaSyrjaytys\.min : kamera\.korkeusMin\(\);/);
   assert.match(lauta, /ohj\.minDistance = pallonSade \* \(1 \+ min\);/);
-  assert.match(lauta, /\? zoomirajaSyrjaytys\.max : PALLO_KORKEUS_MAX;/);
+  /*
+   * ULOSZOOMAUKSEN ESTO (erä 2) LISÄSI KATTOON TOISEN PORTAAN, eikä
+   * oletus muuttunut: ilman linssiä ja ilman maan laatikkoa katto on
+   * yhä PALLO_KORKEUS_MAX. Järjestys on linssi → maa → laudan oma,
+   * ja juuri se on tämän vartion asia.
+   */
+  assert.match(lauta, /let max = PALLO_KORKEUS_MAX;/);
+  assert.match(lauta, /if \(Number\.isFinite\(zoomirajaSyrjaytys\?\.max\)\) max = zoomirajaSyrjaytys\.max;\n\s*else if \(Number\.isFinite\(maa\?\.max\)\) max = maa\.max;/);
+  assert.match(lauta, /ohj\.maxDistance = pallonSade \* \(1 \+ max\);/);
 });
 
 /*

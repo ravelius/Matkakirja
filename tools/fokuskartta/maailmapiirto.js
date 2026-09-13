@@ -84,7 +84,7 @@
 
 import {
   ASTEIKKO, KOHINA, KOHINA2, MUSTE, PAPERI, SYVYYS,
-  VARI_ASTEIKKO, VARI_SYVYYS,
+  VARIPALETIT,
   fbm, laudanProjektio, lerpSyvyysAsteikolla, lerpVari, mulberry32,
 } from './piirto.js';
 import { bilineaarinenKorkeus, varjonVoimakkuus, varjostusPisteessa } from './maastovarjo.js';
@@ -244,11 +244,213 @@ export function piirraRannikkoKankaalle(ctx, viivaPolku, rannikot, P) {
  * tulevat kuvaX/kuvaY:n kautta laatan omasta bboxista ja osuvat siis
  * jo valmiiksi oikeaan kohtaan.
  */
+/*
+ * ====== PALETIN VALINTA YHDESSÄ PAIKASSA (karttauudistus, erä 1b) ===
+ *
+ * `variPaletti` sietää kolme muotoa, ja se on yhteensopivuutta eikä
+ * väljyyttä: `true` on erän 1 kutsutapa (täysväri, sen oma 0,9),
+ * merkkijono on paletin nimi (`'murrettu'`), ja olio on paletti
+ * suoraan. Tuntematon nimi ei ole seepiaa vaan VIRHE — hiljainen
+ * putoaminen seepiaan tarkoittaisi, että kirjoitusvirhe ajossa
+ * tuottaisi tunnin mittaisen laatasarjan väärällä paletilla, eikä
+ * sen huomaisi kuin laattoja katsomalla.
+ */
+function varipaletti(valinta) {
+  if (!valinta) return null;
+  if (valinta === true) return VARIPALETIT.taysvari;
+  if (typeof valinta === 'string') {
+    const p = VARIPALETIT[valinta];
+    if (!p) throw new Error(`Tuntematon väripaletti: ${valinta}`);
+    return p;
+  }
+  return valinta;
+}
+
+/*
+ * ====== VÄRILEIKKURI POLTETAAN LAATTAAN ALFANA (erä 1b, suositus A) =
+ *
+ * PALLO EI VOI LEIKATA KERROSTA. Tasokartalla värikerros oli oma
+ * `<image>`-ryhmänsä, jolle riitti yksi `clipPath`
+ * (js/laattapyramidi.js erä 1). Pallolla laatta on WebGL-tekstuuri
+ * pallon pinnalla: kerroksia ei ole, on vain se yksi kangas, jolle
+ * pohja ja sen päälliset piirretään laatta kerrallaan
+ * (js/pallolaatat.js). Leikkuri on siis poltettava laattaan jo
+ * ajossa — tai tehtävä kankaalla joka laatalle uudestaan, mikä maksaa
+ * toisen kankaan ja 6 000 pisteen polygonitäytön laattaa kohti
+ * 16,7 ms:n kehyksestä.
+ *
+ * KOLME ALUETTA, YKSI PASSI:
+ *
+ *   maa + 12 mpk aluevesi        murrettu paletti, alfa 1
+ *   laatikon sisällä muu         paperinsävy, alfa `feidaus` (0,35)
+ *   laatikon ulkopuolella        ei laattaa lainkaan (laatasto)
+ *
+ * Keskimmäinen on omistajan *"MUUT MAAT FEIDATAAN vaaleammiksi"*:
+ * paperinsävy läpikuultavana pohjalaatan päällä vaalentaa naapurin
+ * seepian jättämättä sen rantaviivaa lukemattomaksi. Se on sama
+ * alfa, joten se ei lisää kerrosta eikä pikselipassia.
+ *
+ * TÄMÄ AJETAAN PATINAN JÄLKEEN. Patina lukee pikselejä naapureistaan
+ * ja kirjoittaisi alfan päälle; leikkuri on siksi viimeinen passi
+ * ennen laattojen leikkaamista (tools/generoi-laattapyramidi.mjs
+ * `__lohko`).
+ *
+ * RENKAAT OVAT LAUDAN YKSIKÖISSÄ ja samasta aineistosta kuin pelin
+ * oma aluevesiraja (js/maanaariviivat.js maanAluevesiRenkaat) — yksi
+ * totuus rajasta, kuten omistaja korjautti 1.9.2026. Muunnos laudalta
+ * kankaalle on sama kuin `lautaKuvaX/Y`:llä: arkin origo, px ja
+ * lohkon siirto.
+ *
+ * @param {object} canvas    lohkon kangas (piirretty ja patinoitu)
+ * @param {object} asetukset sama olio kuin piirraMaailmalla
+ * @param {object} leikkuri  { renkaat, feidaus, paperi, laudanLeveys }
+ */
+export function polttaVariLeikkuri(canvas, asetukset, leikkuri) {
+  const renkaat = leikkuri?.renkaat ?? null;
+  if (!renkaat?.length) return false;
+  const ctx = canvas.getContext('2d');
+  if (!ctx) return false;
+  const { bbox, leveys } = asetukset;
+  // Sama px kuin piirraMaailmalla (leveys pyöristämättä): leikkuri ja
+  // maasto on laskettava samasta luvusta, tai reuna siirtyy pikselin.
+  const px = leveys / bbox.w;
+  const origo = asetukset.arkki ?? { x: bbox.x, y: bbox.y };
+  const GX = asetukset.siirto?.x ?? 0;
+  const GY = asetukset.siirto?.y ?? 0;
+  const W = canvas.width;
+  const H = canvas.height;
+  const kx = (bx) => (bx - origo.x) * px - GX;
+  const ky = (by) => (by - origo.y) * px - GY;
+  /*
+   * SAUMAN YLI ULOTTUVA MAA MYÖS TOISELTA LAIDALTA — sama sääntö ja
+   * sama syy kuin js/maanaariviivat.js maanAluevesiPolussa: kiertävällä
+   * laudalla rengas on aineistossa ehjänä välin [0, leveys)
+   * ulkopuolella, ja ilman siirrettyä kopiota päivämääränrajan takana
+   * oleva maa jäisi leikkurin ulkopuolelle eli kokonaan feidatuksi.
+   */
+  const laudanLeveys = leikkuri.laudanLeveys > 0 ? leikkuri.laudanLeveys : 0;
+  const siirrot = laudanLeveys > 0 ? [0, laudanLeveys, -laudanLeveys] : [0];
+  const polku = (g) => {
+    g.beginPath();
+    for (const rengas of renkaat) {
+      if (rengas.length < 3) continue;
+      for (const dx of siirrot) {
+        // Kokonaan kankaan ulkopuolinen kopio jätetään piirtämättä:
+        // Ranskan renkaissa on 6 323 pistettä, ja niitä on turha
+        // ajaa kolmeen kertaan joka lohkolle.
+        let minX = Infinity;
+        let maxX = -Infinity;
+        for (const piste of rengas) {
+          const x = kx(piste[0] + dx);
+          if (x < minX) minX = x;
+          if (x > maxX) maxX = x;
+        }
+        if (maxX < 0 || minX > W) continue;
+        for (let i = 0; i < rengas.length; i += 1) {
+          const x = kx(rengas[i][0] + dx);
+          const y = ky(rengas[i][1]);
+          if (i === 0) g.moveTo(x, y);
+          else g.lineTo(x, y);
+        }
+        g.closePath();
+      }
+    }
+  };
+  const feidaus = Number.isFinite(leikkuri.feidaus) ? leikkuri.feidaus : 0;
+  const paperi = leikkuri.paperi ?? PAPERI;
+  /*
+   * FEIDAUSKANGAS ENSIN, KOKO ALALLE, JA SITTEN REIKÄ MAAN KOHDALLE
+   * (`destination-out`). Näin maan reuna on pehmennetty molemmilla
+   * kankailla samasta polusta eikä rajalle jää yhden pikselin viivaa.
+   */
+  let feidattu = null;
+  if (feidaus > 0) {
+    feidattu = luoKangasSamasta(canvas, W, H);
+    const fctx = feidattu?.getContext('2d') ?? null;
+    if (fctx) {
+      const [r, g, b] = [1, 3, 5].map((i) => parseInt(paperi.slice(i, i + 2), 16));
+      fctx.fillStyle = `rgba(${r},${g},${b},${feidaus})`;
+      fctx.fillRect(0, 0, W, H);
+      fctx.globalCompositeOperation = 'destination-out';
+      fctx.fillStyle = '#fff';
+      polku(fctx);
+      fctx.fill();
+      /*
+       * FEIDAUS HÄIPYY LAATASTON REUNALLA (mitattu pilotista 13.9.2026).
+       *
+       * SUUNNITELMAN OLETUS EI PIDÄ PYSTYRUUDULLA. Luku 2.5 sanoo, että
+       * feidaus ei näy suorakaiteena, *"koska uloszoomauksen esto tekee
+       * laatikosta koko ruudun"*. Se pitää vain, jos ruudun kuvasuhde on
+       * sama kuin laatikon: puhelimella (390 × 844) Ranskan laatikon
+       * LEVEYS täyttää ruudun, mutta korkeussuunnassa näkyy 1400
+       * lautayksikköä eli kolminkertaisesti laatikon korkeus. Ensimmäinen
+       * pilottikuva näytti juuri sen: vaaleneva laatikko loppui
+       * Välimerellä terävään vaakasuoraan viivaan.
+       *
+       * KORJAUS ON HÄIVE EIKÄ ISOMPI LAATASTO. Laataston kasvattaminen
+       * näkyvään alaan (kuvasuhteiden unioni) olisi Ranskassa 4,6-kertainen
+       * laattamäärä, ja sama kerroin koko Euroopassa. Häive on yksi
+       * rakennusaikainen luku: feidaus laskee nollaan laataston uloimmalla
+       * kaistaleella, jolloin reuna lukee vanhan kartan vinjettinä eikä
+       * suorakaiteena — ja juuri sitä omistaja pyysi (*"vanhan ajan fiilis
+       * etta katsotaan staattista kasinpiirrettya karttaa"*).
+       */
+      const reuna = Number.isFinite(leikkuri.feidausReuna) ? leikkuri.feidausReuna : 0;
+      const laatikko = leikkuri.laatikko ?? null;
+      if (reuna > 0 && laatikko?.w > 0) {
+        const valkoinen = (a2) => `rgba(255,255,255,${a2})`;
+        const kaista = (x0, y0, x1, y1, vaaka) => {
+          const g2 = fctx.createLinearGradient(x0, y0, vaaka ? x1 : x0, vaaka ? y0 : y1);
+          g2.addColorStop(0, valkoinen(1));
+          g2.addColorStop(1, valkoinen(0));
+          fctx.fillStyle = g2;
+          fctx.fillRect(
+            Math.min(x0, x1), Math.min(y0, y1),
+            Math.abs(x1 - x0) || W, Math.abs(y1 - y0) || H,
+          );
+        };
+        const lx0 = kx(laatikko.x);
+        const lx1 = kx(laatikko.x + laatikko.w);
+        const ly0 = ky(laatikko.y);
+        const ly1 = ky(laatikko.y + laatikko.h);
+        const rx = reuna * px;
+        // Vasen ja oikea kaistale (vaakasuora liuku), ylä ja ala (pysty).
+        kaista(lx0, 0, lx0 + rx, H, true);
+        kaista(lx1, 0, lx1 - rx, H, true);
+        kaista(0, ly0, W, ly0 + rx, false);
+        kaista(0, ly1, W, ly1 - rx, false);
+      }
+    } else feidattu = null;
+  }
+  // Värit VAIN maahan ja aluevesiin: kaikki muu pois kankaalta.
+  ctx.save();
+  ctx.globalCompositeOperation = 'destination-in';
+  ctx.fillStyle = '#fff';
+  polku(ctx);
+  ctx.fill();
+  ctx.restore();
+  if (feidattu) ctx.drawImage(feidattu, 0, 0);
+  return true;
+}
+
+/** Uusi kangas samasta dokumentista kuin annettu (selain tai OffscreenCanvas). */
+function luoKangasSamasta(canvas, w, h) {
+  const doc = canvas.ownerDocument ?? globalThis.document ?? null;
+  if (doc?.createElement) {
+    const k = doc.createElement('canvas');
+    k.width = w;
+    k.height = h;
+    return k;
+  }
+  if (typeof OffscreenCanvas === 'function') return new OffscreenCanvas(w, h);
+  return null;
+}
+
 export function piirraMaailma(canvas, aineisto, asetukset) {
   const {
     bbox, projektio, leveys, tyyli = {}, esikatseluTausta,
     koko = null, siirto = null, sisalto = null, nostot = null, piirraNosto = null,
-    paperiS = null, variPaletti = false,
+    paperiS = null, variPaletti = false, variVesi = null,
   } = asetukset;
 
   /*
@@ -269,10 +471,18 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
    * joka on harmaanvihreä eikä sininen. 0,9 jättää paperin raetta
    * kymmenyksen verran läpi — sen verran, että laatta on yhä samaa
    * painettua karttaa kuin naapurinsa — mutta pitää sävyn sinisenä.
+   *
+   * PEITTO ON NYT PALETIN OMINAISUUS JA AJON VALITSIN (erä 1b).
+   * Täysvärin 0,9 litistää murretun savunsinisen, joka on jo vaalea ja
+   * vähän kylläinen; murretun oletus on 0,72, ja `variVesi` ohittaa
+   * sen (tools/generoi-laattapyramidi.mjs `--vesi`), jotta omistaja
+   * voi valita kolmesta pilottikuvasta eikä luvusta paperilla.
    */
-  const maanAsteikko = variPaletti ? VARI_ASTEIKKO : ASTEIKKO;
-  const syvyysAsteikko = variPaletti ? VARI_SYVYYS : SYVYYS;
-  const MEREN_PEITTO = variPaletti ? 0.9 : 0.5;
+  const paletti = varipaletti(variPaletti);
+  const maanAsteikko = paletti ? paletti.asteikko : ASTEIKKO;
+  const syvyysAsteikko = paletti ? paletti.syvyys : SYVYYS;
+  const MEREN_PEITTO = paletti
+    ? (Number.isFinite(variVesi) ? variVesi : paletti.vesi) : 0.5;
 
   const px = leveys / bbox.w;
   const W = Math.round(leveys);

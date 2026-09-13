@@ -70,6 +70,13 @@ import {
   pallonOmatPisteet, pallonPiste, rakennaPallo, webglTuettu,
 } from '../pallo.js';
 import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
+/*
+ * VÄRITASON KOHDEMAA (karttauudistus, erä 1b). Lauta kertoo sen
+ * laattapyramidille SAMASSA HETKESSÄ kuin punaisen kehän — kerros ei
+ * päättele maata itse (js/pallolaatat.js), koska väri on osa laatan
+ * kangasta eikä kerros, jonka voisi jälkikäteen piilottaa.
+ */
+import { asetaVaritasonMaa } from '../laattapyramidi.js';
 import {
   lataaMaapolygonit, maanLautalaatikko, nollaaPallonMaakorostus, paivitaPallonMaakorostus,
 } from '../maanaariviivat.js';
@@ -87,7 +94,7 @@ import { KARTTANIMI_KOOT } from '../karttanimet.js';
 import { NOSTOLADONTA_POLTON_TIHEYS } from '../nostoladonta.js';
 import {
   PALLOKAMERAN_AJO_MS, PALLOLAUDAN_LEVEYS, PALLO_FOV, PALLO_KORKEUS_MAX,
-  PALLON_SALLITTU_VENYTYS, laattojenVenytys, luoPallokamera,
+  PALLON_SALLITTU_VENYTYS, ULOSZOOMAUKSEN_KERROIN, laattojenVenytys, luoPallokamera,
 } from './kamera.js';
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
 import { luoNimet, nimibudjetti } from './nimet.js';
@@ -1301,12 +1308,46 @@ export async function avaaPallolauta(ui) {
    * luku katoaisi seuraavassa mitoita-kutsussa. null = laudan omat rajat.
    */
   let zoomirajaSyrjaytys = null;
+  /*
+   * ======== ULOSZOOMAUKSEN ESTO (KARTTAUUDISTUS, ERÄ 2) =============
+   *
+   * Omistaja 13.9.2026: *"Pelaaja ei voi itse zoomata ulospain,
+   * ainoastaan sisaanpain"* — ja PÄÄTÖKSET 2 kertoo miksi: kartan on
+   * näytettävä STAATTISELTA, kuin painettu käsin piirretty arkki.
+   *
+   * RAJA ON MAAN LAATIKKO × 1,15 EIKÄ KIINTEÄ KORKEUS. Sama laatikko,
+   * jonka saapumisajo sovittaa ruutuun (saapumisrajaus), on myös
+   * uloszoomauksen katto; kerroin on sama kuin värilaataston
+   * laatikolla, koska muuten feidattu laatikko näkyisi suorakaiteena.
+   *
+   * LAATIKKO MUISTETAAN, EI KORKEUS. Korkeus riippuu kotelon
+   * kuvasuhteesta, joka vaihtuu kääntyvällä ruudulla — se on siis
+   * laskettava joka tahdistuksessa uudestaan (ResizeObserver ajaa
+   * mitoita → tahdistaZoomirajat), aivan kuten kamera.korkeusMin().
+   *
+   * KOLME OHITUSTA, JOKAINEN SYYSTÄ:
+   *   1. LINSSI (`zoomirajaSyrjaytys`) voittaa aina — satelliittilinssin
+   *      avaruusnäkymä tarvitsee koko pallon ruudulle.
+   *   2. KEHITTÄJÄN MAAILMANAPPI ohittaa rajauksen (sama ehto kuin
+   *      maailmahypyllä alempana): sillä katsotaan koko maailmaa.
+   *   3. KATTOON OSUVA MAA ei saa rajaa lainkaan — kamera lukkiutuisi
+   *      maailmankuvaan eikä pelaaja näkisi kaupunkia
+   *      (js/pallolauta/kamera.js uloszoomausRaja).
+   */
+  let maanLaatikko = null;
+  const maanZoomiraja = () => {
+    if (!maanLaatikko) return null;
+    if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu) return null;
+    return kamera.uloszoomausRaja(maanLaatikko, ULOSZOOMAUKSEN_KERROIN);
+  };
   const tahdistaZoomirajat = () => {
     const ohj = pallo.controls();
+    const maa = maanZoomiraja();
     const min = Number.isFinite(zoomirajaSyrjaytys?.min)
       ? zoomirajaSyrjaytys.min : kamera.korkeusMin();
-    const max = Number.isFinite(zoomirajaSyrjaytys?.max)
-      ? zoomirajaSyrjaytys.max : PALLO_KORKEUS_MAX;
+    let max = PALLO_KORKEUS_MAX;
+    if (Number.isFinite(zoomirajaSyrjaytys?.max)) max = zoomirajaSyrjaytys.max;
+    else if (Number.isFinite(maa?.max)) max = maa.max;
     ohj.minDistance = pallonSade * (1 + min);
     ohj.maxDistance = pallonSade * (1 + max);
   };
@@ -2581,13 +2622,37 @@ export async function avaaPallolauta(ui) {
      * (js/fokuskohteet.js nykyinenIso). Sama maa palaa ilman työtä
      * (js/maanaariviivat.js).
      */
+    const korostusIso = lento ? null : kohteidenNykyinenIso(ui);
     paivitaPallonMaakorostus({
       vektorit,
       // Avauslento on kartan niukin hetki: ei korostusta lennon ajaksi.
-      iso: lento ? null : kohteidenNykyinenIso(ui),
+      iso: korostusIso,
       asteet: pallonAsteet,
       lataa: lataaMaapolygonit,
     });
+    /*
+     * VÄRITASON MAA JA ULOSZOOMAUKSEN KATTO SAMASTA HETKESTÄ KUIN KEHÄ
+     * (erät 1b ja 2). Kolme asiaa kertoo samaa maata — punainen kehä,
+     * värilaatasto ja uloszoomauksen raja — ja ne on luettava yhdestä
+     * paikasta, tai kartalla on Ranskan vuoret Belgian kehän sisällä.
+     *
+     * LAATIKKO HAETAAN VAIN MAAN VAIHTUESSA: saapumisrajaus muistaa
+     * sen maittain, mutta se on lupaus (aineisto on laiska), joten
+     * tahdistus tehdään vastauksen saavuttua.
+     */
+    if (asetaVaritasonMaa(korostusIso) || (korostusIso && !maanLaatikko)) {
+      if (!korostusIso) {
+        maanLaatikko = null;
+        tahdistaZoomirajat();
+      } else {
+        saapumisrajaus().then((laatikko) => {
+          // Maa on voinut vaihtua haun aikana: vanha vastaus ei saa rajata.
+          if (kohteidenNykyinenIso(ui) !== korostusIso) return;
+          maanLaatikko = laatikko;
+          tahdistaZoomirajat();
+        }).catch(() => { /* aineistoa ei saatu: raja jää ennalleen */ });
+      }
+    }
     /*
      * KAMERA SEURAA TELEPORTTIA. Siirron kuljettaja kirjaa perillä
      * paikkansa (merkitseNappulanPaikka), joten tavallinen siirto ei
@@ -2656,9 +2721,18 @@ export async function avaaPallolauta(ui) {
   };
 
   /** Saapumisajo: maan laatikko ruutuun, tai entinen kaupunkinäkymä. */
-  const saavu = async ({ kesto = 0 } = {}) => kamera.kotiin({
-    kesto, bbox: await saapumisrajaus(),
-  });
+  const saavu = async ({ kesto = 0 } = {}) => {
+    const bbox = await saapumisrajaus();
+    /*
+     * SAAPUMINEN ASETTAA MYÖS ULOSZOOMAUKSEN KATON (erä 2): kamera
+     * päätyy juuri tähän laatikkoon, ja raja on sama laatikko × 1,15.
+     * Järjestys on tämä eikä toisin päin — jos raja asetettaisiin
+     * ajon jälkeen, ajon oma loppukorkeus voisi jo olla sen ulkona.
+     */
+    maanLaatikko = bbox;
+    tahdistaZoomirajat();
+    return kamera.kotiin({ kesto, bbox });
+  };
 
   /** Pelin paikan (pos) piste ruudulla (kotelon px) — nopan lähtö. */
   const ruutupiste = (pos) => {

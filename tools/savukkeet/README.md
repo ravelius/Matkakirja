@@ -109,7 +109,10 @@ erä 1) ajaa tasokartalla, mutta EI ohituksen kautta: se vartioi
 nimenomaan tasokartan väritasoa ja avaa portin (`VANHA_KARTTA_KAYTOSSA`)
 OMASSA PALVELIMESSAAN — repossa vakio pysyy falsena. Vihreä ajo todistaa
 väritason toimivan tasokartalla; se EI todista, että omistaja näkee
-värit pelatessaan, koska peli avautuu pallolle.
+värit pelatessaan, koska peli avautuu pallolle. **Pallon oma vartio on
+`savuke-varilaatat-pallo`** (erät 1b ja 2): se ajaa pallolla eikä avaa
+tasokarttaa lainkaan, mittaa samat neljä pistettä KAHDESTI (ilman
+väritasoa ja sen kanssa) ja lukee lisäksi uloszoomauksen eston.
 
 | Savuke | Vartioi |
 | --- | --- |
@@ -125,6 +128,7 @@ värit pelatessaan, koska peli avautuu pallolle.
 | savuke-suurennoksen-pystytila | Kuvasuurennoksen pystytila ja lyhyen kuvatekstin linkki (omistajan vikailmoitus 12.9.2026: *"Näissä kuvissa on turhaan ylhäällä ja alhaalla pieni marginaali. Lisäksi tässä lyhyessä kuvatekstissä ei saa olla tuota havainnekuvalinkkiä."*). Avaa isoisän ja Pulun albumin karusellin Ateenassa ja mittaa kolmella ruudulla (390×844, 834×1194, 1280×800) sekä vaaka- että pystykuvalla, ettei `object-fit: contain` piirrä kirjekuorireunoja kuvaelementin sisään, että kehys on kiinni kuvassa ja kuvatekstissä, että kuvatekstipalkki on yhä luettava ja ettei lyhyeen kuvatekstiin tule Havainnekuva-linkkiä. Koekuvat piirretään ajossa PNG:ksi kahdessa tunnetussa kuvasuhteessa — repoon ei tuoda mediaa. Ämpäri Noden kautta (NODE_USE_ENV_PROXY=1), ajaa pallolaudalla |
 | savuke-vuosisaa | Vuosisääkortti (käyrä, sadepalkit, korostus) |
 | savuke-varilaatat | Kohdemaan värillinen topografia (karttauudistus, erä 1): Ranskan maa on värillistä hypsometriaa, 12 mpk:n aluevedet sinisiä, Belgia ja avomeri seepiaa, väritaso rajattu maahan FRA eikä laattamäärä kaksinkertaistu. Vaatii pilottilaatat (`--laatat <kansio>`; tools/generoi-laattapyramidi.mjs `--vari FRA`). VASTAKOE `--ilman-rajausta` riisuu leikkurin — silloin Belgian ja avomeren väitteiden ON kaaduttava |
+| savuke-varilaatat-pallo | Kohdemaan värillinen topografia PALLOLLA ja uloszoomauksen esto (karttauudistus, erät 1b ja 2): Ranskan maa murretuissa sävyissä, 12 mpk:n aluevedet savunsinisinä, Belgia ja avomeri feidattua seepiaa, kehä `--mark`-punainen, `mittarit().syy` tyhjä (versioportti ei sammuttanut laattakerrosta), laattamäärä ei kasva yli +10 %, uloszoomaus pysähtyy Ranskassa laatikko × 1,15 -rajaan eikä RUS lukkiudu. Mittaa samat pisteet kahdesti — ilman väritasoa (vertailuajo) ja sen kanssa — ja vaatii EROT, koska murrettu paletti on samassa lämpimässä perheessä kuin seepia. Vaatii pilottilaatat (`--laatat <kansio>`; `--vari FRA --variversio pilotti`); pohja tulee tuotannon ämpäristä, jotta versioportti aukeaa. VASTAKOKEET: `--ilman-rajausta` (laatat ajettu ilman poltettua leikkuria → Belgian ja avomeren väitteiden ON kaaduttava) ja `--rikki-versio` (pyramidin versio ei vastaa pallon sarjaa → `syy`-väitteen ON kaaduttava) |
 | savuke-lehden-mitta | Arkin leveys (jumiutunut viewportti, resize) |
 | savuke-paivityspopup | Versionumeron päivitysnappi |
 | savuke-kehittajalehti | Kehittäjän liitteet: Raamattu, Tilannelehti ja Tilastot-lehden vetolaatikkotaulu |

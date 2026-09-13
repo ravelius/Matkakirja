@@ -228,11 +228,19 @@ test('pallolta näkymätön maa saa entisen kaupunkinäkymän', () => {
    * karkaisi maailmankuvaksi. Katto on kameran raja (kamera.js).
    */
   assert.equal(SAAPUMISRAJAUKSEN_MAX, 2000);
+  /*
+   * KATTO ON YHDESSÄ FUNKTIOSSA (erä 2): sama `laatikkoMahtuu` ratkaisee
+   * sekä saapumisajon (maan laatikko vai kaupunkinäkymä) että
+   * uloszoomauksen eston (saako maa rajan lainkaan). Kaksi kopiota
+   * samasta katosta ehtisi olla eri mieltä, ja silloin Venäjässä kamera
+   * lukkiutuisi maailmankuvaan.
+   */
   assert.match(
     kamera,
-    /if \(tarve <= SAAPUMISRAJAUKSEN_MAX\) \{/,
+    /return Boolean\(tarve !== null && tarve <= SAAPUMISRAJAUKSEN_MAX\);/,
     'kamera ei tunne saapumisrajauksen kattoa',
   );
+  assert.match(kamera, /const laatikkoMahtuu = \(bbox\) => \{/);
   const vara = 1 + 2 * SAAPUMISRAJAUKSEN_MARGINAALI;
   const yli = [];
   for (const iso of Object.keys(data.maat)) {
@@ -253,15 +261,18 @@ test('kamera ottaa saapumisrajauksen laatikkona ja säilyttää varapolun', () =
   );
   assert.match(
     kamera,
-    /if \(bbox\?\.w > 0 && bbox\?\.h > 0\) \{[\s\S]{0,400}?ajaKamera\(\{ bbox, marginaali: SAAPUMISRAJAUKSEN_MARGINAALI \}/,
+    /if \(laatikkoMahtuu\(bbox\)\) \{[\s\S]{0,200}?ajaKamera\(\{ bbox, marginaali: SAAPUMISRAJAUKSEN_MARGINAALI \}/,
   );
+  // Laatikon tarve lasketaan samalla kaavalla kuin kameranKohde.
+  assert.match(kamera, /const laatikonTarve = \(bbox, kerroin\) => \{/);
   // Ilman laatikkoa entinen kaupunkinäkymä pätee yhä.
   assert.match(kamera, /leveys: PALLOLAUDAN_SAAPUMISLEVEYS, saapuminen: true/);
   assert.ok(PALLOLAUDAN_SAAPUMISLEVEYS > 0);
   // Laatikko luetaan maapolygoneista laudalla, ei kamerassa.
   assert.match(lauta, /const saapumisrajaus = async \(\) => \{/);
   assert.match(lauta, /maanLautalaatikko\(data, iso, \{ kohta \}\)/);
-  assert.match(lauta, /kamera\.kotiin\(\{\s*\n?\s*kesto, bbox: await saapumisrajaus\(\),/);
+  assert.match(lauta, /const bbox = await saapumisrajaus\(\);/);
+  assert.match(lauta, /return kamera\.kotiin\(\{ kesto, bbox \}\);/);
 });
 
 /* ================= 6. myös kehittäjän maailmatilassa ================ */
