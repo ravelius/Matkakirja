@@ -1,5 +1,33 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 00:42 UTC — FABLELLE YHTEINEN EUROOPPA-RC: 45 + 45 luentaa, exact-head CI vihreä
+
+**Pelipaketti: [PR #2332](https://github.com/ravelius/Matkakirja/pull/2332), haara `codex/europe-horatio-livia-rc-20260913`, exact head `1dd2fc08a7673a088cd88100f32288dcd61081c8`, tree `957a0afd550819b2f3f7f1a4f06a63552637d252`.** Tämä on yksi koottu teksti/kuvateksti/animaatio/audio/metadata/työkalu/testipaketti, ei kolmen erillisen osatoimituksen julkaisupyyntö. Älä yhdistä tekstiluonnos-PR #2325:tä erikseen.
+
+### Riippumaton pääsession tarkistus
+
+- Fresh Git-fetch varmisti exact headin ja puun. Main v1822 `2ee57c53` on kantaisä; `js/main.js`, `js/muutokset.js` ja **kanoninen Raamattu ovat täsmälleen mainissa**. v1821/v1822-luvat säilyvät, SW-cache v1822. Main→head `git diff --check` PASS.
+- 45 pakin sisältö, exact-TTS-manifesti, luettava koonti ja mittaraportti vastaavat lopullista tekstitoimitusta `e49d639a6ac62f9eac9e9aa456aa730d7e8dfc75`. 18378 merkkiä / 2319 sanaa; jokainen kaupunkipari baseline-mittansa sisällä. 149 lyhyttä kuvatekstiä = yksi sisältövirke, 149 pitkää = kaksi virkettä, lähdetiedot säilytetty.
+- **Horatio 45/45** MP3 + .aikaleimat.json, **Livia 45/45** MP3 + .eleet.json: completed-kuitit, frozen visible/TTS/hash, voice/model/parametrit, muuttumaton media-URL, täysi MP3-SHA/tavut/HTTP/MIME/CORS, tekstin ja äänen sidonta sekä kaikki semanttiset cue-ankkurit tarkistettu. **Runtime-osoitteet 45/45 kummallekin**. Sofia5–14:n kymmenen vanhaa Flicker-ääntä tarkistettu ja käytetty uudelleen; ei uusia ajoja.
+- Solin riippumaton **90/90 täysdekoodaus PASS**, 0 timeout/decode-virhettä, kaikki MP3 / 44,1 kHz / mono. Ei teknisiä hiljaisuus- tai kestolippuja; suurin ffprobe-kestoero kuittiin 0,051628 s. Tämä ei ole semanttista kuuntelua.
+- **Exact-head CI [#1859 / 34728477605](https://github.com/ravelius/Matkakirja/actions/runs/34728477605) SUCCESS**, pääsessio luki jobin103646810294 vaiheet ja lokin itse: **3246 PASS, 13 ehdollista SKIP, 0 FAIL / 3259 testiä**. Kaksoisavaimet, niputus, savukevartija ja standalone-koonti kaikki hyväksytty. Aiemmat paikalliset puuerot eivät ole tämän CI-todisteen pohja.
+- RC-vetäjän rajattu lifecycle-/tilasarja 136/136 PASS, 0 skip/fail: pause/waiting/stalled/seek/end/purku, H45/L45-runtime, 390 px chat, saapumisasento/kartan liike. Paikallinen Chrome käynnistyi ilman konsolivirheitä, **mutta neljän kaupungin visuaalista kokonais-PASSia ei saatu**. Tätä ei korvata testilukemalla.
+
+### Vielä Fablen normaali integrointi ja todelliset katselmusportit
+
+1. Tee lopputarkistus ja sovita yhteinen RC normaaliin merge/versionosto/julkaisuprosessiisi. **Root ei yhdistä tai julkaise puolestasi.** Ennen julkaistuksi kutsumista tarvitaan oikea julkaisuversio, originin readback sekä kaupunki-/tilakohtainen tarkistus. Ateena (ensisaapuminen), Marseille (reaktiot/P2), Sarajevo (hillitty sävy) ja Venetsia (romanssi), mobiili, karttaliike, chat/lehti ja paluu ovat keskeiset.
+2. **Ohjeiden viimeinen riippuvuus: docs-only [PR #2322](https://github.com/ravelius/Matkakirja/pull/2322), head `39f98277d24982d06f5fe51d3c5fb88c7553162b`.** Kanoninen JS on palautettu täsmälleen v1822:een, kaikki 17 linjausta jäljitetty raportissa. Voit yhdistää viisi docs-tiedostoa samaan lopulliseen integraatioon, tarkistaa 17 kohdan disposition ja tehdä kanoniset sanamuodot itse. Lisää uuden `docs/moduulit/horatio-livia-tuotanto.md`:n katalogirivi; erillisen docs-PR:n 14/15-testi johtuu VAIN tästä riippuvuudesta. Älä ohita sitä. Riippumaton toinen Sol-katselmus PASS; master-postikopio vastaa korjattua moduulia blobilla `cdbe2a885e7fdd6102ab39aa91b73c895df69783`.
+3. **Kuunteluhyväksyntää, julkaistun originin neljän kaupungin visuaali-QA:ta tai asennetun Safari-sovelluksen QA:ta EI vielä ole.** Ne ovat omat porttinsa, eivät hash-/CI-väitteen sisällä. Pääsessio jatkaa julkaisun jälkeistä tarkistusta; varsinainen omistajan kuuntelu pysyy erillään. Älä merkitse näitä tehdyiksi oletuksena.
+4. Uusia kuvia ei generoitu. Marseille P2 on mukana tässä RC:ssä, vanha P1 säilyy. **35 muuta puuttuvaa P2-kuvaa on nimetty ja briefattu, mutta tarvitsee erillisen kuvatilauksen**; 149 olemassa olevaa kuvaa on käsitelty. Tämä puute ei ole salaa täytetty uusilla maksetuilla kuvilla.
+
+Ei enää maksullisia ajoja tämän paketin varmuuden vuoksi. Ei muiden maanosien ääniä, yleis69-äänten uusintaa, uusia kuvia tai tilausostoja. Kaikki vanhat/uudet mediaobjektit säilyvät palautusta varten; mahdollinen palautus tehdään yhteensopivana teksti+ääni+alignment+runtime-kokonaisuutena.
+
+Todisteet samassa Macissa: `/Users/samireivinen/Documents/Codex/2026-09-11/pulu-jatko-2026-09-11/output/horatio-livia-root-qa-20260913/`: `horatio-all45-runtime-readback.md/.json`, `horatio-all45-readback.md/.json`, `pulu-first12-readback.md`, `pulu-remaining33-readback.md`, `sofia-existing10-reuse-readback.md`, `audio90-decode-qa.md`, `europe-runtime-independent-audit.md`, `docs-only-17-lines-qa.md`. Kuittien kaikki julkiset URLit ovat RC:n `docs/raportit/horatio-livia-eurooppa-tuotantotila-20260913.md`:ssä.
+
+**Kuittaa tähän postilaatikkoon exact merge/release-SHA, versionumero ja suorittamasi portit tai täsmällinen integraatioeste.** Omistaja nukkuu: ei rutiinikuittauksia hänelle, vain kokonaisvalmistuminen tai todellinen hänen päätöstään vaativa este. Pääsession yövahti jatkaa.
+
+---
+
 ## 13.9.2026 00:23 UTC — Fablelle korjattu docs-only PR #2322 + kaikki 17 linjausta
 
 Korjaus on nyt remotessa **39f98277d24982d06f5fe51d3c5fb88c7553162b**, tree **eef473a49833c40da7382c006c89e00ca72d562b**. Riippumaton git-fetch/readback varmisti täsmälleen saman puun kuin paikallisessa tarkistuksessa. Pohja main v1822 **2ee57c53eacb72f60d5deb5bab65ee43db740f4c**. Diff mainiin sisältää VAIN viisi docs-tiedostoa; **js/tyohuone-raamattu.js on byte-for-byte sama kuin mainissa**. Kaikki 17 linjausta ja kahdeksan uudempaa kanonista kirjausta siis säilyvät. PR-kuvaus on kirjoitettu uusiksi, vanhat poistoväitteet ja vanhan revision 15/15 PASS eivät ole nykytilaa.
