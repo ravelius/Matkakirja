@@ -224,9 +224,12 @@ const KUPLIEN_VALI = 280;
 // 6.9.2026: kupla ei saa sulkeutua ennen kuin pulun puhe on ohi. Puhe
 // kulkee noin 14 merkkiä sekunnissa (tools/generoi-pulu.mjs), joten
 // kuplan aika on 78 ms/merkki (≈ 13 merkkiä/s) + hengähdys; ennen 58.
+// 13.9.2026: hyväksytyn Venetsian pitkän Pulu-kuplan hiljainen varakesto
+// on noin 16,8 s. Kupla vierii tarvittaessa, joten katto suojaa nyt myös
+// pitkän hyväksytyn tekstin silloin, kun uutta äänitettä ei vielä ole.
 const LUKUAIKA_PER_MERKKI = 78;
 const LUKUAIKA_VAHINTAAN = 3200;
-const LUKUAIKA_ENINTAAN = 9500;
+const LUKUAIKA_ENINTAAN = 18000;
 
 /** Sarjan tila: yksi kerrallaan, ja ajastin peruttavissa. */
 let avausKesken = false;

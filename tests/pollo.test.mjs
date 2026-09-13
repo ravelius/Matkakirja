@@ -1638,7 +1638,7 @@ test('puheenvuoro jakautuu osiin sanoja hukkaamatta', () => {
  * 7.9.2026): jokainen alkio on oma kupla ja oma äänitiedosto, joten
  * osien määrä on tasan taulukon pituus.
  */
-test('kupliksi kirjoitettu kommentti on valmiiksi osissa', () => {
+test('pitkäkin yhden osan kommentti säilyy yhtenä ja on mobiilissa vieritettävä', () => {
   const kuplat = FOKUSVIRTA_SOFIA.pollo.kommentti;
   // YKSI KUPLA PER KAUPUNKI (omistaja 8.9.2026 ilta: "olisiko parempi jos
   // pululla olisi vain yksi kupla per kaupunki") — kaksi lyhyttä virkettä.
@@ -1646,10 +1646,18 @@ test('kupliksi kirjoitettu kommentti on valmiiksi osissa', () => {
   // Huudahdus poistettiin 9.9.2026 (omistajan tekstipaketti): kenttää ei ole.
   assert.equal(FOKUSVIRTA_SOFIA.pollo.huudahdus, undefined);
   for (const kupla of kuplat) {
-    // Raja 125 (Raamattu, PULUN KUPLASSA PULUN NAKOKULMA, RAJA 125 —
-    // omistaja 8.9.2026 ilta; ennen 95).
-    assert.ok(kupla.length <= 125, `kupla on liian pitkä ääneen luettavaksi: ${kupla.length}`);
+    assert.ok(kupla.trim().length > 0, 'kirjoittajan kommenttikupla ei saa olla tyhjä');
   }
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  assert.match(css, /\.pollo-kuplapino-kehys \{[\s\S]*?max-width: min\(23rem, calc\(100vw - 1\.6rem\)\);/,
+    'kuplakehys ei väistä puhelimen sivureunoja');
+  assert.match(css, /@media \(max-width: 599px\) \{\s*\.pollo-kuplapino \{ max-height: min\(45vh, 14rem\); \}/,
+    'puhelimen kuplapinon korkeuskatto puuttuu');
+  assert.match(css, /\.pollo-kuplapino \{[\s\S]*?overflow-y: auto;/,
+    'katon ylittävä pitkä kupla ei ole vieritettävä');
+  assert.match(css,
+    /\.pollo-kuplapino\.pollo-kuplapino-yksin,[\s\S]*?--kuplapino-haive: 0px;/,
+    'ainoan pitkän kuplan alun pitää säilyä näkyvänä ilman häivytystä');
   // Alustus on poistettu joka kaupungista (omistaja 8.9.2026).
   assert.equal(FOKUSVIRTA_SOFIA.pollo.alustus, undefined);
 });

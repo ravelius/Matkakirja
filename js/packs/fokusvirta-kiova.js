@@ -186,11 +186,7 @@ export const FOKUSVIRTA_KIOVA = {
     paikkarivi: 'Kiova, toukokuussa 1873. Lämmintä; kastanjat kukkivat; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 326 merkkiä (yläraja 400). */
-    teksti: 'Kiovan luostarin kupolit näkyvät kauas Dneprille, mutta '
-      + 'pyhiinvaeltajat menevät maan alle. Seurasin kynttilöitä luoliin. Kun '
-      + 'oma liekkini sammui, edellä kulkeva nainen sytytti sen omastaan '
-      + 'sanomatta mitään. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. '
-      + 'Olen tutkinut monta tapaa siirtää omaisuutta. Tämän haluan muistaa.',
+    teksti: 'Kiovan luostarin kupolit näkyivät Dneprille, mutta pyhiinvaeltajat menivät maan alle. Luolassa liekkini sammui. Edellä kulkeva nainen sytytti sen omastaan. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. Olen tutkinut monta tapaa siirtää omaisuutta. Tämän haluan muistaa.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
@@ -209,24 +205,19 @@ export const FOKUSVIRTA_KIOVA = {
      * Hiljaiset osuudet: "Seurasin kynttilöitä luoliin" (siirtymä).
      */
     reaktiot: [
-      { id: 'kiova.r1', ankkuri: 'menevät maan alle', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Kupolit ylhäällä, pyhiinvaellus alhaalla.' },
+      { id: 'kiova.r1', ankkuri: 'menivät maan alle', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kiova.r2', ankkuri: 'sytytti sen omastaan', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Vieras jakaa liekkinsä sanattomasti.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kiova.r3', ankkuri: 'Kaksi liekkiä', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Jakaminen ei vähentänyt mitään.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kiova.r4', ankkuri: 'siirtää omaisuutta', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Pankkiiri-isoisä tunnistaa oman alansa.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kiova.r5', ankkuri: 'Tämän haluan muistaa', tarkoitus: 'myotailee', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Hiljainen päätös merkinnän lopuksi.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Kiovan luostarin kupolit näkyvät kauas Dneprille, mutta '
-      + 'pyhiinvaeltajat menevät maan alle. Seurasin kynttilöitä luoliin. Kun '
-      + 'oma liekkini sammui, edellä kulkeva nainen sytytti sen omastaan '
-      + 'sanomatta mitään. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. '
-      + 'Olen tutkinut monta tapaa siirtää omaisuutta. [softly] Tämän haluan '
-      + 'muistaa.',
+    luenta: '[curious] Kiovan luostarin kupolit näkyivät Dneprille, mutta pyhiinvaeltajat menivät maan alle. Luolassa liekkini sammui. [softly] Edellä kulkeva nainen sytytti sen omastaan. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. Olen tutkinut monta tapaa siirtää omaisuutta. Tämän haluan muistaa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kiova.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-kiova-r20260909-story-v1.jpg;
@@ -238,12 +229,7 @@ export const FOKUSVIRTA_KIOVA = {
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kiova-r20260909-story-v1.jpg',
       lyhyt: 'Kiova, 1873. Toinen liekki ei pienentänyt ensimmäistä.',
-      selite: 'Nainen suojasi tulta kädellään, ja toinen sydänlanka alkoi hehkua. '
-        + 'Kapeassa käytävässä ei juuri ollut tilaa väistää, mutta tuolle '
-        + 'eleelle oli. Kiovan luostarin alla kuljetaan pyhiinvaeltajien '
-        + 'jäljissä kynttilä kerrallaan. Asetin saamani valon kivireunalle '
-        + 'kameran viereen. Kuvassa se näyttää pieneltä. Sen turvin löysin '
-        + 'kuitenkin takaisin muiden luo.',
+      selite: 'Nainen sytytti kynttiläni omastaan Kiovan luolaluostarin kapeassa käytävässä, eikä ensimmäinen liekki pienentynyt. Saamani pieni valo riitti johdattamaan minut takaisin muiden luo.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
         'https://guide.kyivcity.gov.ua/lavra-vr/en/',
@@ -253,7 +239,7 @@ export const FOKUSVIRTA_KIOVA = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kiova-r20260911-paper2-v1.jpg",
       lyhyt: "Kiova, 1873. Luolasta tuotu liekki löysi päivänvalon.",
-      selite: "Luolien jälkeen päivänvalo tuntui suuremmalta kuin ennen. Kivireunalla paloi vielä pieni liekki, ja muut pyhiinvaeltajat kulkivat jo portailla. Lavran kupolit nousivat Dneprin ylle, kastanjat kukkivat niiden ympärillä. Tuli ei ollut enää tarpeen, mutta sen valo muistutti luolassa saadusta avusta.",
+      selite: 'Luolien jälkeen suojasin jäljellä olevaa liekkiä kivireunalla, vaikka päivä valaisi jo Lavran kupolit ja kukkivat kastanjat. Tulta ei enää tarvittu, mutta se muistutti maan alla saadusta avusta.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://whc.unesco.org/en/list/527/"],
     },
@@ -272,12 +258,7 @@ export const FOKUSVIRTA_KIOVA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-kiova-01-r20260909-euv2-v1.jpg',
         lyhyt: 'Kiova: tähän kuvaan jätin tilaa hiljaisuudelle.',
-        selite: 'Kiovan luolaluostari kuuluu kaupungin pitkään muistiin, ja sota on '
-          + 'vahingoittanut sitä. Isoisä kirjoitti siellä valosta, jonka '
-          + 'saattoi antaa pois menettämättä omaansa. Minun kuvassani käsi '
-          + 'suojaa yhtä liekkiä tuulelta. En tiedä, mitä ihminen ajattelee. '
-          + 'Kiveys jatkuu kuvan ulkopuolelle, mutta tällä kertaa en lentänyt '
-          + 'katsomaan, mitä seuraavan kulman takana on.',
+        selite: 'Kuvan kädet suojaavat yhtä liekkiä tuulelta, ja minä jätin sen ympärille tilaa hiljaisuudelle. Isoisän saama valo tuli mieleeni: toiselle annettuna se ei vähentynyt.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://whc.unesco.org/en/list/527/',
@@ -328,7 +309,7 @@ export const FOKUSVIRTA_KIOVA = {
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Kiova on nyt Ukrainan pääkaupunki. Luostari on kärsinyt sodassa. Tätä isoisän sivua luen hiljaa.',
+      'Dneprin tuuli nosti minut Lavran muurin ylle, mutta luolasto jäi ihmisille. Reittiinsä luottava kirjekyyhky tietää myös, mihin ei lennä.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'vakava', voimakkuus: 0.6 },

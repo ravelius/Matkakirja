@@ -24,7 +24,8 @@
  *   --kuiva          tulostaa repliikit, tagitetun puhemuodon,
  *                    kohdetiedostot ja arvioidut kestot. Ei APIa,
  *                    ei avainta, ei vientiä.
- *   --aani <id>      käytettävä ääni (tai ympäristö PULU_AANI).
+ *   --aani <id>      käytettävä ääni; ilman lippua käytetään omistajan
+ *                    lukitsemaa Pulun oletusääntä.
  *   --repliikit a,b  vain nämä avaimet (avaus-1, paljastus-2,
  *                    mannerivihje-1, ateena-1, sofia-7). Tyhjä = kaikki.
  *   --pakota         generoi vaikka tiedosto on jo ämpärissä.
@@ -43,7 +44,8 @@
  * NOPEAN puhujan, joten nopeutus tehdään viimeistelyketjussa
  * `atempo`-suodattimella: se on deterministinen, kuuluu samalta
  * jokaisessa ajossa eikä riipu siitä, mitä malli sattuu tekemään.
- * Elävyys tulee TAGEISTA ja stabiilisuuden Creative-asetuksesta.
+ * Elävyys tulee TAGEISTA; pysyvä vakausoletus on Natural 0,5. Muita
+ * parametreja ei päätellä äänen nimestä.
  *
  * ------------------------------------------------------------------
  * TAGIT EIVÄT SAA MUUTTAA KAANONIA
@@ -97,8 +99,9 @@
  */
 
 import { spawnSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import {
-  mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync,
+  mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync,
 } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
@@ -180,33 +183,16 @@ if (process.argv[1] === TAMA && !process.env.NODE_USE_ENV_PROXY
 const API = 'https://api.elevenlabs.io';
 const PUHE_OSOITE = `${API}/v1/text-to-speech`;
 /*
- * MALLI ON V2 JA TAGIT POIS (omistaja 6.9.2026 iltapäivä, ElevenLabsin
- * sivulla kokeiltuaan: *"v2 versio on parempi tälle äänelle, eli ei
- * tule ollenkaan ohjausmerkkejä. käytä muutenkin noita säätöjä jotka
- * näkyvät kuvassa"*). Ääni on "Dr. Von - Quirky, Mad Scientist"
- * (PULU_AANI_OLETUS). eleven_multilingual_v2 ei ymmärrä v3:n
- * hakasulkutageja — ne luettaisiin ääneen — joten repliikki lähtee
- * puhtaana tekstinä. TAGIT-taulu jää talteen v3-kokeilua varten
- * (MALLI takaisin eleven_v3:een palauttaa ne käyttöön).
+ * PYSYVÄ OLETUS (omistajan valinta 12.9.2026): "flicker - cheerful
+ * fairy & sparkly sweetness", voice_id piI8Kku0DcvcL6TTSeQt,
+ * eleven_v3 ja Natural 0,5. V3:n hakasulkutagit ovat käytössä, mutta
+ * ne eivät koskaan kuulu pelaajan näkyvään tekstiin.
  *
- * Säätimet omistajan kuvakaappauksesta: Speed hieman keskeltä oikealle
- * (1,05), Stability keskellä (0,5), Similarity 0,75, Style Exaggeration
- * nolla, Speaker boost päällä. Nopeus tulee nyt mallista, joten
- * ffmpeg-tempo on 1,0 (ks. MIKSI TEMPO TEHDÄÄN FFMPEGILLÄ — pätee vain
- * v3:lle, jolla ei ole speed-säädintä).
- */
-/*
- * MALLI JA VAKAUS OVAT AJOKOHTAISIA (omistaja 12.9.2026: *"kokeillaan
- * toista ääntä pululle … siinä täytyy käyttää v3 moottoria eleven
- * labsissa. silloin siihen voi laittaa ne tunnelma tagit ja niitä
- * samoja tageja voi sitten ohjata myös pulun animaatiolle. stability:
- * natural."*).
- *
- * MIKSI YMPÄRISTÖSTÄ EIKÄ KOODIIN KOVAKOODATTUNA: 6.9.2026 tehty
- * v2-valinta oli omistajan kuuntelupäätös, eikä sitä kumota ennen kuin
- * uusi ääni on kuultu pelissä. Ajo voi siis vaihtaa mallin ja vakauden
- * ilman että kumpikaan linjaus katoaa — oletus on yhä se, mikä pelissä
- * nyt kuuluu. Kun omistaja valitsee, oletukset muutetaan tässä.
+ * Aiempi Dr. Von / eleven_multilingual_v2 säilyy vanhoissa
+ * tuotantometatiedoissa ja jo julkaistuissa äänissä. Se ei enää ole
+ * uuden ajon oletus. Ajokohtainen ympäristömuuttuja voi yhä tehdä
+ * tietoisen koestuksen, mutta workflow asettaa nämä uudet oletukset
+ * eksplisiittisesti eikä peri vanhaa valintaa.
  *
  * VAKAUS ON NIMI EIKÄ LUKU. v3:n käyttöliittymässä säädin on
  * Creative / Natural / Robust, ja rajapinta ottaa luvun — nimet
@@ -214,28 +200,14 @@ const PUHE_OSOITE = `${API}/v1/text-to-speech`;
  * omistaja näkee ElevenLabsin sivulla.
  */
 const VAKAUDET = Object.freeze({ creative: 0, natural: 0.5, robust: 1 });
-/*
- * MALLI ON NYT V3 (omistajan päätös 12.9.2026, sanatarkasti: *"käytetään
- * tätä jatkossa pulun ääneen: piI8Kku0DcvcL6TTSeQt (flicker - cheerful
- * fairy & sparkly sweetness). tallenna raamattuun. V3 moottori"*).
- *
- * V3 ei ole tekninen yksityiskohta vaan osa päätöstä: vain se ymmärtää
- * hakasulkutagit, ja samoilla tageilla on tarkoitus myöhemmin ohjata
- * pulun animaatiota. Ympäristömuuttuja jää, jotta vanhaan malliin voi
- * palata yhdellä ajolla ilman koodimuutosta.
- */
-const MALLI = process.env.PULU_MALLI ?? 'eleven_v3';
-/**
- * "Flicker - cheerful fairy & sparkly sweetness" (omistajan päätös
- * 12.9.2026). Kumoaa 6.9.2026 valitun Dr. Vonin
- * (yjJ45q8TVCrtMhEKurxY) ja kaksi saman päivän koeääntä: Amelia
- * (ZF6FPAbjXT4488VcRRnw) ja Cherry Twinkle (XJ2fW4ybq7HouelYYGcL).
- */
-export const PULU_AANI_OLETUS = process.env.PULU_AANI ?? 'piI8Kku0DcvcL6TTSeQt';
+export const PULU_MALLI_OLETUS = 'eleven_v3';
+export const PULU_VAKAUS_OLETUS = 'natural';
+/** "flicker - cheerful fairy & sparkly sweetness" (omistajan valinta 12.9.2026). */
+export const PULU_AANI_OLETUS = 'piI8Kku0DcvcL6TTSeQt';
+const MALLI = process.env.PULU_MALLI ?? PULU_MALLI_OLETUS;
 const TAGIT_KAYTOSSA = MALLI === 'eleven_v3';
-const STABILITY = process.env.PULU_VAKAUS
-  ? (VAKAUDET[process.env.PULU_VAKAUS] ?? Number(process.env.PULU_VAKAUS))
-  : 0.5;
+const VAKAUS = process.env.PULU_VAKAUS ?? PULU_VAKAUS_OLETUS;
+const STABILITY = VAKAUDET[VAKAUS] ?? Number(VAKAUS);
 const SIMILARITY = 0.75;
 /** Tyylin voimakkuus: v2:lla nolla (omistajan säätö), v3:lla 0,6. */
 const STYLE = TAGIT_KAYTOSSA ? 0.6 : 0;
@@ -251,8 +223,90 @@ const LOPPUTAUKO = ' <break time="1.0s" />';
 const KOHDE_KANSIO = 'media/pulu';
 /** Mallin raaka tuotos talteen: uuden leikkauksen voi tehdä ilmaiseksi. */
 const RAAKA_KANSIO = 'media/pulu-raaka';
+/** Eräkohtaiset kuitit eivät korvaa koko repertuaarin manifestia. */
+const KUITTI_KANSIO = 'media/pulu-kuitit';
 /** Manifestin tiedostonimi ämpärissä. */
 export const MANIFESTI = 'manifesti.json';
+export const TUOTANTOKUITTI_SCHEMA = 1;
+const TUOTANTOERAN_MAX = 10;
+
+const sha256 = (data) => createHash('sha256').update(data).digest('hex');
+
+/** Kaupunkitunnus on kaupunkilähteillä sama kuin repliikkiavaimen alku. */
+function kuitinKaupunkiId(rivi) {
+  return Object.hasOwn(LIVIAN_KAUPUNKILAHTEET, rivi.lahde) ? rivi.lahde : null;
+}
+
+/**
+ * Muuttumaton tuotantokuitti yhdelle eksplisiittisesti valitulle erälle.
+ * `tulokset` jätetään tyhjäksi ennen API-kutsuja ja täytetään valmistuneeseen
+ * kuittiin; salaisuuksia ei oteta argumentiksi eikä siis voida kirjata.
+ */
+export function kokoaTuotantokuitti(rivit, {
+  sourceCommit, voiceId = PULU_AANI_OLETUS, model = MALLI,
+  stability = STABILITY, tempo = TEMPO, pakota = false,
+  retryReason = null, status = 'planned', tulokset = new Map(), staged = false,
+} = {}) {
+  if (!sourceCommit) throw new Error('tuotantokuitti vaatii sourceCommit-tunnuksen');
+  const asetukset = {
+    stability, similarityBoost: SIMILARITY, style: STYLE,
+    useSpeakerBoost: true, speed: TAGIT_KAYTOSSA ? null : SPEED,
+  };
+  const postprocess = {
+    silenceTrim: true, targetLufs: TAVOITE_LUFS, lufsTolerance: LUFS_TOLERANSSI,
+    fadeSeconds: HAIVYTYS_S, tailPaddingSeconds: HANNAN_PADDING_S, tempo,
+    arrivalEchoSeconds: KAIUN_KESTO,
+  };
+  const suunnitelma = rivit.map((rivi) => ({
+    utteranceKey: rivi.avain,
+    visibleTextSha256: sha256(Buffer.from(rivi.teksti, 'utf8')),
+    ttsTextSha256: sha256(Buffer.from(rivi.puhe, 'utf8')),
+  }));
+  const batchId = `pulu-${sha256(JSON.stringify({
+    sourceCommit, voiceId, model, asetukset, postprocess, suunnitelma,
+    forcedRegeneration: pakota, retryReason: retryReason || null, staged,
+  })).slice(0, 20)}`;
+  const batchPrefix = `${ampariKansio()}/erat/${batchId}`;
+  const finalPrefix = `${ampariKansio()}/versiot/${String(sourceCommit).slice(0, 12)}/${batchId}`;
+  return {
+    schemaVersion: TUOTANTOKUITTI_SCHEMA,
+    batchId,
+    sourceCommit,
+    generationStatus: status,
+    retryReason: retryReason || null,
+    utterances: rivit.map((rivi) => {
+      const tulos = tulokset.get(rivi.avain) ?? {};
+      return {
+        cityId: kuitinKaupunkiId(rivi),
+        utteranceKey: rivi.avain,
+        visibleText: rivi.teksti,
+        visibleTextSha256: sha256(Buffer.from(rivi.teksti, 'utf8')),
+        ttsText: rivi.puhe,
+        ttsTextSha256: sha256(Buffer.from(rivi.puhe, 'utf8')),
+        voiceId,
+        model,
+        settings: asetukset,
+        outputFormat: 'mp3_44100_128',
+        stagingObjectKey: staged ? `${batchPrefix}/${rivi.nimi}` : `${ampariKansio()}/${rivi.nimi}`,
+        finalObjectKey: staged ? `${finalPrefix}/${rivi.nimi}` : `${ampariKansio()}/${rivi.nimi}`,
+        promotionStatus: staged ? 'pending-code-deploy' : 'not-required',
+        postprocess,
+        generationStatus: tulos.status ?? status,
+        retryReason: tulos.retryReason ?? retryReason ?? (pakota ? 'forced-regeneration' : null),
+        rawArtifact: tulos.rawArtifact ?? null,
+        finalArtifact: tulos.finalArtifact ?? null,
+      };
+    }),
+  };
+}
+
+/** Kirjoittaa uuden kuitin atomisesti ylikirjoittamatta vanhaa kuittia. */
+export function kirjoitaTuotantokuitti(kansio, vaihe, kuitti) {
+  mkdirSync(kansio, { recursive: true });
+  const polku = join(kansio, `${kuitti.batchId}.${vaihe}.json`);
+  writeFileSync(polku, `${JSON.stringify(kuitti, null, 2)}\n`, { flag: 'wx' });
+  return polku;
+}
 
 /** Puheen taso: sama perhe kuin kertojan luennoilla (−17 LUFS). */
 const TAVOITE_LUFS = -17;
@@ -410,24 +464,80 @@ export const TAGIT = {
    * pois."*). Numero on varattu (js/liviapuhe.js LIVIAN_VARATTU) eikä
    * sillä ole enää tekstiä, joten sillä ei ole tagejakaan.
    */
-  'sofia-3': { alku: '[brightly]' },
-  'istanbul-3': { alku: '[brightly]' },
-  'bukarest-3': { alku: '[brightly]' },
-  'sarajevo-3': { alku: '[brightly]' },
-  'budapest-3': { alku: '[brightly]' },
-  'wien-3': { alku: '[brightly]' },
-  'praha-3': { alku: '[brightly]' },
-  'krakova-3': { alku: '[brightly]' },
-  'varsova-3': { alku: '[brightly]' },
-  'pietari-3': { alku: '[brightly]' },
-  'moskova-3': { alku: '[brightly]' },
-  'kiova-3': { alku: '[brightly]' },
-  'odessa-3': { alku: '[brightly]' },
-  'helsinki-3': { alku: '[brightly]' },
-  'tampere-3': { alku: '[brightly]' },
-  'tallinna-3': { alku: '[brightly]' },
-  'riika-3': { alku: '[brightly]' },
-  'vilna-3': { alku: '[brightly]' },
+  'sofia-3': {
+    alku: '[brightly]',
+    kohdat: [['Kurkistin', '[curious]'], ['Arvokkuus', '[mischievously]']],
+  },
+  'istanbul-3': {
+    alku: '[brightly]',
+    kohdat: [['Minä', '[mischievously]'], ['Kokeneen', '[warmly]']],
+  },
+  'bukarest-3': {
+    alku: '[brightly]',
+    kohdat: [['Etsin', '[curious]'], ['Muruset', '[mischievously]']],
+  },
+  'sarajevo-3': {
+    alku: '[softly]',
+    kohdat: [
+      ['Minun piti vain piipahtaa', '[curious]'],
+      ['Yritin naputtaa nokalla', '[mischievously]'],
+    ],
+  },
+  'budapest-3': {
+    alku: '[brightly]',
+    kohdat: [['Höyry', '[curious]'], ['Odotin', '[mischievously]']],
+  },
+  'wien-3': {
+    alku: '[softly]',
+    kohdat: [['Pujottelin', '[brightly]'], ['Isoisä', '[warmly]']],
+  },
+  'praha-3': {
+    alku: '[curious]',
+    kohdat: [['Minä', '[brightly]'], ['Kun', '[mischievously]']],
+  },
+  'krakova-3': { alku: '[curious]', kohdat: [['Kirjekyyhky', '[brightly]']] },
+  'varsova-3': { alku: '[curious]', kohdat: [['Kaupunki', '[warmly]']] },
+  'pietari-3': { alku: '[curious]', kohdat: [['kirjekyyhky', '[mischievously]']] },
+  'moskova-3': { alku: '[curious]', kohdat: [['kuuluisuus', '[mischievously]']] },
+  'kiova-3': { alku: '[curious]', kohdat: [['Reittiinsä', '[softly]']] },
+  'odessa-3': { alku: '[softly]' },
+  'helsinki-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Minä kokeilin apostolien näköalaa', '[brightly]'],
+      ['Lokki ehti ensin', '[mischievously]'],
+      ['Se katsoi minua', '[softly]'],
+    ],
+  },
+  'tampere-3': {
+    alku: '[brightly]',
+    kohdat: [
+      ['Seurasin leipäkoria', '[curious]'],
+      ['Kori kääntyi', '[mischievously]'],
+    ],
+  },
+  'tallinna-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Minä odotin portaalla', '[mischievously]'],
+      ['Yksi lapsi jakoi', '[warmly]'],
+      ['Ehkä isoisän lääkkeessä', '[softly]'],
+    ],
+  },
+  'riika-3': {
+    alku: '[softly]',
+    kohdat: [
+      ['Laskeuduin hetkeksi', '[curious]'],
+      ['Kun kuoro aloitti', '[softly]'],
+    ],
+  },
+  'vilna-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Nousin ikkunan korkeudelle', '[brightly]'],
+      ['Tähtitieteilijät lähtivät', '[softly]'],
+    ],
+  },
   // Teksti muuttui 8.9.2026: alusta poistui toistuva "Kääk.", joten
   // korostus on nyt lauseen lopussa eikä sen alussa.
   'sofia-5': { alku: '[helpfully]' },
@@ -448,45 +558,185 @@ export const TAGIT = {
    * ensimmäistä paikkaa ovat varattuja), ja se on luennan jälkeinen
    * reipas huomio — sama alkutagi kuin muiden kaupunkien kommenteilla.
    */
-  'ateena-3': { alku: '[brightly]' },
-  'kreeta-3': { alku: '[brightly]' },
-  'sisilia-3': { alku: '[brightly]' },
-  'islanti-3': { alku: '[brightly]' },
-  'alpit-3': { alku: '[brightly]' },
-  'lappi-3': { alku: '[brightly]' },
-  'tromssa-3': { alku: '[brightly]' },
+  'ateena-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Etsin puutarhasta varjoa', '[mischievously]'],
+      ['Siinä unohtui varjo hetkeksi', '[brightly]'],
+    ],
+  },
+  'kreeta-3': {
+    alku: '[brightly]',
+    kohdat: [['Väitin', '[mischievously]'], ['helpotuksesta', '[warmly]']],
+  },
+  'sisilia-3': {
+    alku: '[curious]',
+    kohdat: [['Kiersin', '[brightly]'], ['Katon', '[softly]']],
+  },
+  'islanti-3': {
+    alku: '[brightly]',
+    kohdat: [['Löysin', '[softly]'], ['Hetkeä', '[mischievously]']],
+  },
+  'alpit-3': {
+    alku: '[softly]',
+    kohdat: [['Lensin', '[curious]'], ['En', '[softly]']],
+  },
+  'lappi-3': {
+    alku: '[brightly]',
+    kohdat: [
+      ['Seurasin Ounasjokea', '[curious]'],
+      ['Lähempänä ne olivat heijastuksia', '[mischievously]'],
+      ['Hyvä etten yrittänyt', '[softly]'],
+    ],
+  },
+  'tromssa-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Löysin laiturilta simpukankuoren', '[brightly]'],
+      ['Tyhjä.', '[whispers]'],
+      ['Hetken mietin', '[softly]'],
+    ],
+  },
   /*
-   * LÄNNEN KAKSIKYMMENTÄ KAUPUNKIA (Fablen erä 8.9.2026 ilta). Yksi kupla
-   * kussakin numerolla 3 — paitsi Venetsiassa, jossa kuplia on kuusi
-   * (numerot 3…8, omistajan ehdotus). Sama reipas alkutagi kuin muilla
-   * kommenteilla; kaikutagia ei ole yhdessäkään.
+   * LÄNNEN KAKSIKYMMENTÄ KAUPUNKIA (Fablen erä 8.9.2026 ilta). Yksi
+   * puhekupla kussakin numerolla 3. Venetsian kuvakaruselli ei lisää
+   * puhekuplia. Sama reipas alkutagi kuin muilla kommenteilla;
+   * kaikutagia ei ole yhdessäkään.
    *
    * KUITTAUS ISOISÄLLE ON POISTETTU (Fablen erä v6 8.9.2026 ilta):
    * kymmenellä kaupungilla oli hetken kommentin perässä toinen kupla
    * numerolla 4, ja nyt jokaisella on yksi kupla kuten muillakin. Numero
    * 4 ei siis ole enää yhdelläkään näistä kaupungeista.
    */
-  'lontoo-3': { alku: '[brightly]' },
-  'dublin-3': { alku: '[brightly]' },
-  'edinburgh-3': { alku: '[brightly]' },
-  'pariisi-3': { alku: '[brightly]' },
-  'marseille-3': { alku: '[brightly]' },
-  'lissabon-3': { alku: '[brightly]' },
-  'madrid-3': { alku: '[brightly]' },
-  'barcelona-3': { alku: '[brightly]' },
-  'granada-3': { alku: '[brightly]' },
-  'sevilla-3': { alku: '[brightly]' },
-  'amsterdam-3': { alku: '[brightly]' },
-  'berliini-3': { alku: '[brightly]' },
-  'venetsia-3': { alku: '[brightly]' },
-  'firenze-3': { alku: '[brightly]' },
-  'rooma-3': { alku: '[brightly]' },
-  'dubrovnik-3': { alku: '[brightly]' },
-  'tukholma-3': { alku: '[brightly]' },
-  'oslo-3': { alku: '[brightly]' },
-  'bergen-3': { alku: '[brightly]' },
-  'kobenhavn-3': { alku: '[brightly]' },
+  'lontoo-3': {
+    alku: '[curious]',
+    kohdat: [['Lensin', '[brightly]'], ['Ihmiset', '[softly]']],
+  },
+  'dublin-3': {
+    alku: '[curious]',
+    kohdat: [['Nousin', '[brightly]'], ['Minun', '[mischievously]']],
+  },
+  'edinburgh-3': {
+    alku: '[curious]',
+    kohdat: [['Lensin', '[brightly]'], ['Täällä', '[mischievously]']],
+  },
+  'pariisi-3': {
+    alku: '[curious]',
+    kohdat: [['Minä', '[brightly]'], ['Sisälläkin', '[mischievously]']],
+  },
+  'marseille-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Minä erotan Vieux-Portin', '[warmly]'],
+      ['Lokit tuntevat jokaisen pöydän', '[mischievously]'],
+      ['Minä vasta harjoittelen', '[softly]'],
+    ],
+  },
+  'lissabon-3': {
+    alku: '[brightly]',
+    kohdat: [['Seurasin', '[curious]'], ['Kun', '[mischievously]']],
+  },
+  'madrid-3': {
+    alku: '[curious]',
+    kohdat: [['Minä', '[warmly]'], ['Se', '[mischievously]'], ['Velázquez', '[softly]']],
+  },
+  'barcelona-3': {
+    alku: '[curious]',
+    kohdat: [['Laskeuduin', '[brightly]'], ['Minulle', '[mischievously]'], ['Hyvin', '[softly]']],
+  },
+  'granada-3': {
+    alku: '[curious]',
+    kohdat: [['Laskeuduin', '[softly]'], ['Kerrankin', '[mischievously]']],
+  },
+  'sevilla-3': {
+    alku: '[curious]',
+    kohdat: [['Näin', '[brightly]'], ['Ne', '[softly]']],
+  },
+  'amsterdam-3': {
+    alku: '[curious]',
+    kohdat: [['Saavuin', '[brightly]'], ['En', '[mischievously]']],
+  },
+  'berliini-3': {
+    alku: '[curious]',
+    kohdat: [['Nousin', '[brightly]'], ['Alhaalla', '[softly]']],
+  },
+  'venetsia-3': {
+    alku: '[brightly]',
+    kohdat: [
+      ['Minä lennän nykyään', '[warmly]'],
+      ['Yhden tutun takia', '[whispers]'],
+      ['Hän vain sattui', '[mischievously]'],
+      ['No, ehkä minä vähän odotin', '[softly]'],
+    ],
+  },
+  'firenze-3': {
+    alku: '[curious]',
+    kohdat: [['Kiersin', '[brightly]'], ['Se', '[mischievously]'], ['Minä', '[softly]']],
+  },
+  'rooma-3': {
+    alku: '[curious]',
+    kohdat: [['Minä', '[brightly]'], ['Ihmiset', '[mischievously]']],
+  },
+  'dubrovnik-3': {
+    alku: '[brightly]',
+    kohdat: [['Kun', '[curious]'], ['Sitten', '[mischievously]']],
+  },
+  'tukholma-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Minä nousin Monteliusvägenin', '[brightly]'],
+      ['Neljäntoista laskeminen', '[mischievously]'],
+    ],
+  },
+  'oslo-3': {
+    alku: '[brightly]',
+    kohdat: [['Hämmästyin,', '[surprised]'], ['Kerrankin', '[warmly]']],
+  },
+  'bergen-3': {
+    alku: '[brightly]',
+    kohdat: [['Suojasin', '[curious]'], ['Kirje', '[mischievously]']],
+  },
+  'kobenhavn-3': { alku: '[brightly]', kohdat: [['Orkesterin', '[mischievously]']] },
 };
+
+/**
+ * Muodostaa generaattorin ankkurireseptin hyväksytystä exact-TTS-rivistä.
+ * Näkyvät sanat eivät saa muuttua, ja jokaisen väliankkurin on oltava
+ * yksikäsitteinen. Näin tuotantogeneraattori ja 45 kaupungin hyväksytty
+ * luentamanifesti käyttävät varmasti samaa v3-syötettä.
+ */
+export function tagiresepti(nakyva, tts) {
+  const tagit = [];
+  let plain = '';
+  let cursor = 0;
+  for (const match of tts.matchAll(/\[[^\]]+\]\s*/g)) {
+    plain += tts.slice(cursor, match.index);
+    tagit.push({ tag: match[0].trim(), offset: plain.length });
+    cursor = match.index + match[0].length;
+  }
+  plain += tts.slice(cursor);
+  if (plain !== nakyva) throw new Error('exact-TTS muuttaa näkyviä sanoja');
+  const recipe = {};
+  const internal = tagit.filter(({ offset }) => offset > 0);
+  const first = tagit.find(({ offset }) => offset === 0);
+  if (first) recipe.alku = first.tag;
+  if (internal.length) recipe.kohdat = internal.map((item, index) => {
+    const end = internal[index + 1]?.offset ?? nakyva.length;
+    const anchor = nakyva.slice(item.offset, end).trim();
+    if (!anchor || nakyva.split(anchor).length - 1 !== 1) {
+      throw new Error(`exact-TTS-ankkuri ei ole yksikäsitteinen: ${anchor}`);
+    }
+    return [anchor, item.tag];
+  });
+  return recipe;
+}
+
+const EUROOPPA_TTS_MANIFESTI = JSON.parse(readFileSync(resolve(
+  JUURI, 'docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260913.json',
+), 'utf8'));
+for (const city of EUROOPPA_TTS_MANIFESTI.cities) {
+  TAGIT[`${city.city}-3`] = tagiresepti(city.livia.visibleText, city.livia.ttsText);
+}
 
 /** Tagi pois tekstistä: `[excited] Hei` → `Hei`. */
 export function ilmanTageja(teksti) {
@@ -559,7 +809,7 @@ const KAUPUNKIEN_PAKKAUKSET = {
   lappi: FOKUSVIRTA_LAPPI,
   tromssa: FOKUSVIRTA_TROMSSA,
   // Lännen kaksikymmentä kaupunkia (Fablen erä 8.9.2026 ilta): vanha
-  // maadoitus korvattiin yhdellä kommenttikuplalla, Venetsiassa kuudella.
+  // maadoitus korvattiin yhdellä kommenttikuplalla myös Venetsiassa.
   lontoo: FOKUSVIRTA_LONTOO,
   dublin: FOKUSVIRTA_DUBLIN,
   edinburgh: FOKUSVIRTA_EDINBURGH,
@@ -768,6 +1018,7 @@ export function tulkitseArgumentit(argumentit) {
     pakota: false,
     vienti: true,
     tempo: TEMPO,
+    retryReason: null,
   };
   for (let i = 0; i < argumentit.length; i += 1) {
     const arg = argumentit[i];
@@ -806,6 +1057,11 @@ export function tulkitseArgumentit(argumentit) {
       liput.pakota = true;
     } else if (arg === '--ei-vientia') {
       liput.vienti = false;
+    } else if (arg === '--retry-reason') {
+      const arvo = argumentit[i + 1];
+      if (!arvo || String(arvo).startsWith('--')) return { ...liput, virhe: '--retry-reason ilman perustelua' };
+      liput.retryReason = String(arvo).trim();
+      i += 1;
     } else {
       return { ...liput, virhe: `tuntematon argumentti: ${arg}` };
     }
@@ -1204,7 +1460,7 @@ async function main() {
     console.error(`${liput.virhe}.`);
     console.error('Käyttö: node tools/generoi-pulu.mjs [--aanet] [--kuiva] '
       + '[--aani <voice_id>] [--repliikit avaus-1,paljastus-1] [--pakota] '
-      + '[--ei-vientia] [--tempo 1.08]');
+      + '[--ei-vientia] [--tempo 1.08] [--retry-reason <perustelu>]');
     process.exit(1);
   }
 
@@ -1233,6 +1489,17 @@ async function main() {
     process.exit(1);
   }
   const kansio = ampariKansio();
+  const sourceCommit = aja('git', ['-C', JUURI, 'rev-parse', 'HEAD']).loki.trim();
+  const rajattuEra = liput.valitut.length > 0;
+  if (liput.toiminto !== 'kuiva' && (!rajattuEra || tyot.length > TUOTANTOERAN_MAX)) {
+    console.error(`Maksullinen tuotanto vaatii 1–${TUOTANTOERAN_MAX} eksplisiittistä --repliikit-avainta; `
+      + 'koko repertuaaria ei generoida yhdellä vahinkokomennolla.');
+    process.exit(1);
+  }
+  const suunnitelmakuitti = kokoaTuotantokuitti(tyot, {
+    sourceCommit, voiceId: liput.aani, tempo: liput.tempo,
+    pakota: liput.pakota, retryReason: liput.retryReason, staged: rajattuEra,
+  });
 
   if (liput.toiminto === 'kuiva') {
     console.log('KUIVA AJO (--kuiva) — APIa ei kutsuta, ämpäriin ei viedä. '
@@ -1263,7 +1530,7 @@ async function main() {
         console.log(`  ${tyo.avain.padEnd(16)} ${tyo.tila.toUpperCase().padEnd(10)} `
           + `~${tyo.arvioSekunteina} s  "${tyo.teksti}"`);
       }
-      console.log(`  aja: node tools/generoi-pulu.mjs --aani <voice_id> --pakota `
+      console.log(`  aja: node tools/generoi-pulu.mjs --aani ${liput.aani} --pakota `
         + `--repliikit ${ajettavat.map((tyo) => tyo.avain).join(',')}`);
     } else {
       console.log('\nKaikki vartioidut repliikit ovat ajan tasalla.');
@@ -1284,20 +1551,36 @@ async function main() {
     process.exit(1);
   }
   if (!liput.aani) {
-    console.error('Ääntä ei ole valittu. Aja ensin --aanet, kuuntele esikuuntelut ja '
-      + 'anna valittu tunnus lipulla --aani <voice_id> (tai ympäristössä PULU_AANI).');
+    console.error('Äänitunnus puuttuu. Käytä omistajan lukittua oletusta tai anna '
+      + 'tietoinen koestustunnus lipulla --aani <voice_id>.');
     process.exit(1);
   }
 
   const kohdekansio = resolve(JUURI, KOHDE_KANSIO);
   const raakakansio = resolve(JUURI, RAAKA_KANSIO);
+  const kuittikansio = resolve(JUURI, KUITTI_KANSIO);
   vaadiGitignore(kohdekansio);
   vaadiGitignore(raakakansio);
+  vaadiGitignore(kuittikansio);
   mkdirSync(kohdekansio, { recursive: true });
   mkdirSync(raakakansio, { recursive: true });
+  const suunnitelmaPolku = kirjoitaTuotantokuitti(kuittikansio, 'planned', suunnitelmakuitti);
+  console.log(`Tuotantokuitti ennen API-kutsuja: ${suunnitelmaPolku}`);
+  if (liput.vienti) {
+    const nimi = `${suunnitelmakuitti.batchId}.planned.json`;
+    const kuittienKansio = `${kansio}/kuitit`;
+    const vanha = ampariHead(nimi, kuittienKansio);
+    if (vanha.koodi === '200') {
+      throw new Error(`tuotantoerä ${suunnitelmakuitti.batchId} on jo aloitettu (${vanha.url}); `
+        + 'anna uusinnalle --retry-reason, älä veloita samaa erää vahingossa uudelleen');
+    }
+    vieAmpariin(suunnitelmaPolku, nimi, kuittienKansio, 'application/json');
+    console.log(`Suunnitelmakuitti tallennettu ennen API-kutsuja: ${vanha.url}`);
+  }
 
   const tyokansio = mkdtempSync(join(tmpdir(), 'pulu-'));
   const kestot = new Map();
+  const kuittitulokset = new Map();
   const valmiit = [];
   let ohitettuja = 0;
   let virheita = 0;
@@ -1308,11 +1591,17 @@ async function main() {
       console.log(`   "${tyo.teksti}"`);
       console.log(`   mallille: "${tyo.puhe}"`);
 
-      if (!liput.pakota) {
+      // Rajattu erä ei koskaan päättele nykyisestä live-avaimesta, että
+      // uusi tekstiversio olisi jo generoitu: kandidaatti saa oman
+      // batch-avaimensa eikä liveä ylikirjoiteta ennen koodideployta.
+      if (!liput.pakota && !rajattuEra) {
         const { url, koodi } = ampariHead(soitettava, kansio);
         if (koodi === '200') {
           console.log(`   on jo ämpärissä (${url}) — ohitetaan. --pakota kirjoittaa yli.`);
           ohitettuja += 1;
+          kuittitulokset.set(tyo.avain, {
+            status: 'skipped-existing', retryReason: liput.retryReason ?? 'public-object-exists',
+          });
           continue;
         }
       }
@@ -1321,6 +1610,7 @@ async function main() {
       const lahde = join(raakakansio, `raaka-${tyo.nimi}`);
       // eslint-disable-next-line no-await-in-loop
       const tavut = await haeApista(tyo.puhe, liput.aani, avain, lahde);
+      const raakaKesto = kestoSekunteina(lahde);
       console.log(`   API: ${(tavut / 1024).toFixed(0)} kt → ${lahde}`);
 
       const { leikattu, mitattu, korjaus } = viimeistele(lahde, kohde, tyokansio, liput.tempo);
@@ -1333,6 +1623,19 @@ async function main() {
       if (tulos.virheet.length) {
         for (const virhe of tulos.virheet) console.error(`   VIRHE: ${virhe}`);
         virheita += 1;
+        kuittitulokset.set(tyo.avain, {
+          status: 'validation-failed', retryReason: tulos.virheet.join('; '),
+          rawArtifact: {
+            fileName: `raaka-${tyo.nimi}`,
+            sha256: sha256(readFileSync(lahde)), bytes: statSync(lahde).size,
+            actualDurationSeconds: Number(raakaKesto.toFixed(3)),
+          },
+          finalArtifact: {
+            fileName: tyo.nimi,
+            sha256: sha256(readFileSync(kohde)), bytes: statSync(kohde).size,
+            actualDurationSeconds: Number(tulos.pituus.toFixed(3)),
+          },
+        });
         // Kelvotonta äänitettä ei viedä; tiedosto jää levylle
         // kuunneltavaksi, koska kutsu on jo maksettu.
         continue;
@@ -1360,18 +1663,52 @@ async function main() {
         valmiit.push(tyo.kaikuNimi);
       }
       kestot.set(tyo.avain, rivi);
+      kuittitulokset.set(tyo.avain, {
+        status: 'generated', retryReason: liput.retryReason ?? (liput.pakota ? 'forced-regeneration' : null),
+        rawArtifact: {
+          fileName: `raaka-${tyo.nimi}`,
+          sha256: sha256(readFileSync(lahde)), bytes: statSync(lahde).size,
+          actualDurationSeconds: Number(raakaKesto.toFixed(3)),
+        },
+        finalArtifact: {
+          fileName: tyo.nimi,
+          sha256: sha256(readFileSync(kohde)), bytes: statSync(kohde).size,
+          actualDurationSeconds: Number(tulos.pituus.toFixed(3)),
+        },
+      });
     }
 
     // Manifesti kuvaa AINA koko repliikistön, ei vain tämän ajon osaa:
     // se on ämpärin sisällysluettelo eikä ajon kuitti.
     const manifesti = kokoaManifesti(kaikki, kestot);
     const manifestiPolku = join(kohdekansio, MANIFESTI);
-    writeFileSync(manifestiPolku, `${JSON.stringify(manifesti, null, 2)}\n`);
-    console.log(`\nManifesti: ${manifestiPolku}`);
+    if (!rajattuEra) {
+      writeFileSync(manifestiPolku, `${JSON.stringify(manifesti, null, 2)}\n`);
+      console.log(`\nManifesti: ${manifestiPolku}`);
+    } else {
+      console.log('\nKoko repertuaarin manifestia ei kirjoiteta rajatussa erässä; '
+        + 'muiden äänitteiden kestot eivät saa muuttua null-arvoiksi.');
+    }
+
+    const valmisKuitti = kokoaTuotantokuitti(tyot, {
+      sourceCommit, voiceId: liput.aani, tempo: liput.tempo,
+      pakota: liput.pakota, retryReason: liput.retryReason,
+      status: virheita ? 'completed-with-errors' : 'completed', tulokset: kuittitulokset,
+      staged: rajattuEra,
+    });
+    const valmisKuittiPolku = kirjoitaTuotantokuitti(kuittikansio, 'completed', valmisKuitti);
+    console.log(`Tuotantokuitti tuloksista: ${valmisKuittiPolku}`);
 
     if (liput.vienti) {
-      for (const nimi of valmiit) vieAmpariin(join(kohdekansio, nimi), nimi, kansio);
-      vieAmpariin(manifestiPolku, MANIFESTI, kansio, 'application/json');
+      const stagingKansio = rajattuEra ? `${kansio}/erat/${valmisKuitti.batchId}` : kansio;
+      const finalKansio = rajattuEra
+        ? `${kansio}/versiot/${sourceCommit.slice(0, 12)}/${valmisKuitti.batchId}` : kansio;
+      for (const nimi of valmiit) {
+        vieAmpariin(join(kohdekansio, nimi), nimi, stagingKansio);
+        if (rajattuEra) vieAmpariin(join(kohdekansio, nimi), nimi, finalKansio);
+      }
+      if (!rajattuEra) vieAmpariin(manifestiPolku, MANIFESTI, kansio, 'application/json');
+      vieAmpariin(valmisKuittiPolku, `${valmisKuitti.batchId}.completed.json`, `${kansio}/kuitit`, 'application/json');
     }
   } finally {
     rmSync(tyokansio, { recursive: true, force: true });
@@ -1382,13 +1719,20 @@ async function main() {
     console.log('Vienti ohitettiin (--ei-vientia). Tiedostot:');
     for (const nimi of valmiit) console.log(`  ${join(kohdekansio, nimi)}`);
   } else {
-    console.log(`Viety ämpäriin: ${valmiit.length} tiedostoa + manifesti`
+    console.log(`${liput.valitut.length ? 'Viety versionoituun staging-erään' : 'Viety ämpäriin'}: `
+      + `${valmiit.length} tiedostoa${liput.valitut.length ? ' (live-avaimia ei muutettu)' : ' + manifesti'}`
       + `${ohitettuja ? `, ohitettu jo olemassa olevia: ${ohitettuja}` : ''}.`);
-    for (const nimi of valmiit) {
-      const { url, koodi } = ampariHead(nimi, kansio);
-      const kunnossa = koodi === '200';
-      if (!kunnossa) virheita += 1;
-      console.log(`  ${url} → HTTP ${koodi ?? '?'}${kunnossa ? '' : '  ← EI VASTAA'}`);
+    const readbackKansiot = liput.valitut.length ? [
+      `${kansio}/erat/${suunnitelmakuitti.batchId}`,
+      `${kansio}/versiot/${sourceCommit.slice(0, 12)}/${suunnitelmakuitti.batchId}`,
+    ] : [kansio];
+    for (const readbackKansio of readbackKansiot) {
+      for (const nimi of valmiit) {
+        const { url, koodi } = ampariHead(nimi, readbackKansio);
+        const kunnossa = koodi === '200';
+        if (!kunnossa) virheita += 1;
+        console.log(`  ${url} → HTTP ${koodi ?? '?'}${kunnossa ? '' : '  ← EI VASTAA'}`);
+      }
     }
     console.log('');
     console.log('KUUNTELE äänet ennen kuin ne jäävät peliin: pulun pitää kuulostaa '

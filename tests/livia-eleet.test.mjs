@@ -458,6 +458,40 @@ test('tekstireaktio väistää puhetta, chattia ja korttia ilman paluujonoa; red
  e.doc.hidden=false;e.doc.dispatchEvent(new Event('visibilitychange'));assert.match(canvas.innerHTML,/data-gaze="up-left"/);
  c.tilanne('narrationEnd',{tunnus:a});c.tuhoa();assert.equal(e.timers.size,0);
 });
+test('selittävä sisältöele kuuluu vain aktiiviselle puhetunnukselle ja nokka jatkaa',t=>{
+ let c;const a={},b={};t.after(()=>{ilmoitaLivianKasvopuhe(a,false);ilmoitaLivianKasvopuhe(b,false);c?.tuhoa();});const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const canvas=e.doc.body.children[0].children[0];
+ const cue={tunnus:'marseille.pulu.1',puheTunnus:a,tarkoitus:'selittaa',voimakkuus:.5};
+ assert.equal(c.tilanne('speechCue',cue),false,'cue ei arvaa puheen alkua');
+ ilmoitaLivianKasvopuhe(a,true,'Marseillessa kuljetaan nykyään metrolla.');
+ assert.equal(c.tilanne('speechCue',{...cue,puheTunnus:b}),false,'vanha tai vieras puhetunnus ei kelpaa');
+ assert.equal(c.tilanne('speechCue',cue),true);e.tick(3200);
+ assert.match(canvas.innerHTML,/data-part="near-wing"/,'selityssiipi on näkyvissä');
+ assert.match(canvas.innerHTML,/L55 73L46 64Z/,'puhenokka jatkuu askelten ja siipieleen aikana');
+ assert.equal(c.tilanne('speechCue',cue),false,'sama cue ei käynnisty kahdesti');
+ ilmoitaLivianKasvopuhe(b,true,'Uusi ääni');assert.equal(e.raf.size>0,true,'uusi puhe jatkaa tavallista puhenokkaa');
+ assert.equal(c.tilanne('speechCue',cue),false,'uuden äänen jälkeen vanha cue on stale');
+ ilmoitaLivianKasvopuhe(b,false);assert.equal(c.tilanne('speechCue',cue),true,'alkuperäinen yhä kuuluva puhe palautuu uusimmaksi');
+ ilmoitaLivianKasvopuhe(a,false);e.tick(40);assert.equal(e.raf.size,0,'puheen tauko katkaisee sisältöeleen');
+});
+
+test('selitysele palautuu rauhaan cue-lopussa, luennassa, chatissa ja reduced motionissa',t=>{
+ let c;const speech={};t.after(()=>{ilmoitaLivianKasvopuhe(speech,false);c?.tuhoa();});const e=liviaTestYmparisto(t);e.reduced.matches=true;c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const canvas=e.doc.body.children[0].children[0],cue={tunnus:'marseille.pulu.1',puheTunnus:speech,tarkoitus:'selittaa',voimakkuus:.5};
+ ilmoitaLivianKasvopuhe(speech,true,'Selitän kaupunkia.');assert.equal(c.tilanne('speechCue',cue),true);
+ assert.equal(e.raf.size,0);assert.match(canvas.innerHTML,/data-part="whole-bird" transform="translate\(128 302\)/,'vähennetty liike pitää paikan');
+ const pose=canvas.innerHTML;e.tick(1000);assert.equal(canvas.innerHTML,pose,'reduced motion on staattinen asento');
+ assert.equal(c.tilanne('speechCueEnd',{}),false,'tunnukseton lopetus ei katkaise aktiivista cuea');
+ assert.equal(c.tilanne('speechCueEnd',{tunnus:'marseille.pulu.vanha',puheTunnus:speech}),false,'saman puheen vanhan cuen loppu ei katkaise aktiivista cuea');
+ assert.equal(c.tilanne('speechCueEnd',{tunnus:cue.tunnus,puheTunnus:{}}),false,'oikea cue ei kelpaa vieraan puhetunnuksen lopuksi');
+ assert.equal(c.tilanne('speechCueEnd',{tunnus:cue.tunnus,puheTunnus:speech}),true);assert.notEqual(canvas.innerHTML,pose);
+ const narration={};assert.equal(c.tilanne('speechCue',cue),true);c.tilanne('narration',{tunnus:narration,lahde:'matkakirja'});assert.doesNotMatch(canvas.innerHTML,/data-part="near-wing"/);
+ c.tilanne('narrationEnd',{tunnus:narration});assert.equal(c.tilanne('speechCue',cue),true);e.pollo.auki=true;e.notify(e.button);assert.equal(c.tilanne('speechCue',cue),false);
+ e.pollo.auki=false;e.notify(e.button);assert.equal(c.tilanne('speechCue',cue),true);
+ ilmoitaLivianKasvopuhe(speech,false,'',false);assert.equal(e.raf.size,0,'mykistys palauttaa rauhalliseen asentoon ilman puheen lopputapahtumaa');
+ ilmoitaLivianKasvopuhe(speech,true,'Selitän kaupunkia.',false);assert.equal(c.tilanne('speechCue',cue),true,'sama soitin voi jatkaa mykistyksen jälkeen');
+ c.tuhoa();c=null;assert.equal(e.timers.size,0,'purku siivoaa myös reduced-motion-eleen ajastimen');
+});
 for(const jarjestys of ['luenta ensin','reaktio ensin','tavallinen reaktio ennen loppua'])for(const reduced of [false,true])test(`loppunauru valmistuu: ${jarjestys}, reduced=${reduced}`,t=>{
  let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);e.reduced.matches=reduced;c=asennaLivianKasvot(e.pollo);e.tick(5000);
  const canvas=e.doc.body.children[0].children[0],a={paused:false,ended:false};

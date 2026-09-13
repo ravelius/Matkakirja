@@ -14,7 +14,9 @@
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 
 import {
   LIVIAN_AVAUS, LIVIAN_LEHTIVINKKI, MANNERIVIHJE, livianPaljastus,
@@ -30,7 +32,7 @@ import {
   livianKentanKuplat, livianKenttaPinoutuu, livianKorostetutKaupungit, livianKuplanAika,
   livianKuplanAjastin, livianKuplat, livianSaapumisrepliikki, LIVIAN_VARATTU,
   livianSoitettava, livianTiiviste, LIVIAN_KOROSTUS_KAYTOSSA, LIVIAN_PUHEEN_HANTA_MS,
-  LIVIAN_LINSSILAHTEET,
+  LIVIAN_KESTOT, LIVIAN_LINSSILAHTEET, LIVIAN_VERSIOIDUT_AANET,
 } from '../js/liviapuhe.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
@@ -39,8 +41,10 @@ import { FOKUSVIRTA_PIETARI } from '../js/packs/fokusvirta-pietari.js';
 import { FOKUSVIRTA_VENETSIA } from '../js/packs/fokusvirta-venetsia.js';
 import { FOKUSVIRTA_SOFIA } from '../js/packs/fokusvirta-sofia.js';
 import { FOKUSVIRTA_VILNA } from '../js/packs/fokusvirta-vilna.js';
+import { AANI_JUURI } from '../js/media.js';
 import {
   TAGIT, aanitteenTila, ampariKansio, ilmanTageja, kaupunginRepliikit, kokoaManifesti,
+  kokoaTuotantokuitti, kirjoitaTuotantokuitti,
   pinoutuvatRepliikit, puhemuoto, repliikit, tauluksi, valitseRepliikit,
 } from '../tools/generoi-pulu.mjs';
 
@@ -273,8 +277,8 @@ test('kaupunkirepliikkien tekstit luetaan pakkauksista, ei kopioida', () => {
   // Sofian kommentti tiivistyi yhteen kuplaan).
   assert.deepEqual(avaimet.slice(0, 4), ['ateena-3', 'sofia-3', 'sofia-5', 'sofia-6']);
   // Lännen kaksikymmentä kaupunkia ovat taulun lopussa (Fablen erä
-  // 8.9.2026 ilta), yksi kupla kussakin — Venetsiassa kuusi. Kuittaus
-  // isoisälle (numero 4) poistui v6:ssa: pululla on yksi kupla.
+  // 8.9.2026 ilta), yksi puhekupla kussakin. Venetsian kuvakaruselli ei
+  // lisää puhekuplia. Kuittaus isoisälle (numero 4) poistui v6:ssa.
   assert.deepEqual(avaimet.slice(-4), ['tukholma-3', 'oslo-3', 'bergen-3', 'kobenhavn-3']);
   // Teksti on pakkauksen teksti merkilleen — kaanonia ei muotoilla.
   assert.equal(rivit.find((rivi) => rivi.avain === 'sofia-14').teksti, sofia.paluu[1].trim());
@@ -301,11 +305,10 @@ test('kaupunkirepliikki mahtuu kuplaansa', () => {
     assert.ok(rivi.kuplaSekunteina >= rivi.arvioSekunteina,
       `${rivi.avain}: puhe (${rivi.arvioSekunteina} s) ei mahdu kuplan `
       + `näkyvään aikaan (${rivi.kuplaSekunteina} s)`);
-    // Omistajan raja 8.9.2026 ilta: enintään 125 merkkiä kuplaa kohti
-    // (Raamattu, PULUN KUPLASSA PULUN NAKOKULMA, RAJA 125).
-    if (!rivi.pinoutuu) {
-      assert.ok(rivi.merkit <= 125, `${rivi.avain}: kupla on ${rivi.merkit} merkkiä`);
-    }
+    // Merkkikattoa ei ole: 12.9.2026 alkaen Horatio ja Pulu mitoitetaan
+    // kaupunkiparina (tests/horatio-livia-pilotti.test.mjs). Tässä
+    // vartioidaan todellista teknistä ehtoa, äänen mahtumista kuplan
+    // näkyvään aikaan.
   }
 });
 
@@ -321,6 +324,24 @@ test('äänen osoite osoittaa ämpärin pulukansioon', () => {
     `${LIVIAN_AANIJUURI}livia-mannerivihje-1.mp3?v=${LIVIAN_AANITETYT['mannerivihje-1']}`
     + `-${LIVIAN_AANIERAT['mannerivihje-1']}`);
   assert.equal(livianAaniOsoite('kupla', 0), null);
+});
+
+test('kaikki 45 Euroopan kaupunkirepliikkiä käyttävät muuttumattomia tuotantoavaimia', () => {
+  assert.equal(Object.keys(LIVIAN_VERSIOIDUT_AANET).length, 45);
+  assert.deepEqual(Object.keys(LIVIAN_KESTOT).sort(), Object.keys(LIVIAN_VERSIOIDUT_AANET).sort());
+  for (const [avain, polku] of Object.entries(LIVIAN_VERSIOIDUT_AANET)) {
+    const erotin = avain.lastIndexOf('-');
+    const lahde = avain.slice(0, erotin);
+    const indeksi = Number(avain.slice(erotin + 1)) - 1;
+    assert.equal(livianAaniOsoite(lahde, indeksi), `${AANI_JUURI}${polku}`, avain);
+    assert.match(polku, /^aanet\/pulu\/versiot\/[0-9a-f]{12}\/pulu-[0-9a-f]{20}\/livia-.+\.mp3$/);
+    assert.doesNotMatch(livianAaniOsoite(lahde, indeksi), /\?v=/);
+    assert.equal(LIVIAN_AANITETYT[avain], livianTiiviste(FOKUSVIRRAT[lahde].pollo.kommentti[0]),
+      `${avain}: näkyvän tekstin tiiviste`);
+    assert.ok(Number.isFinite(LIVIAN_KESTOT[avain]) && LIVIAN_KESTOT[avain] > 0,
+      `${avain}: kuitin kesto`);
+  }
+  assert.match(livianAaniOsoite('lontoo', 2), /aanet\/pulu\/versiot\/.+\/livia-lontoo-3\.mp3$/);
 });
 
 /* ---------- kaiku (poistettu pelistä 6.9.2026 ilta) ---------- */
@@ -372,12 +393,9 @@ test('työkalu tuntee saapumisrepliikit, mutta peli soittaa aina kuivan', () => 
   assert.equal(livianAaniOsoite('sofia', 12),
     `${LIVIAN_AANIJUURI}livia-sofia-13.mp3?v=${LIVIAN_AANITETYT['sofia-13']}`
     + `-${LIVIAN_AANIERAT['sofia-13']}`);
-  // VERSIOKYSELY VAIHTUU TEKSTIN MUKANA (9.9.2026): vartioidun repliikin
-  // osoitteessa on taulun tiiviste, jotta välimuisti ei soita vanhaa
-  // äänitettä samannimisen tiedoston alta; vartioimaton on ilman kyselyä.
-  assert.match(livianAaniOsoite('lontoo', 2), /livia-lontoo-3\.mp3\?v=[0-9a-f]{8}-\d+$/);
-  assert.equal(`${LIVIAN_AANITETYT['lontoo-3']}-${LIVIAN_AANIERAT['lontoo-3']}`,
-    livianAaniOsoite('lontoo', 2).split('?v=')[1]);
+  // City-3 käyttää kuitin muuttumatonta avainta eikä vanhaa kyselyversiota.
+  assert.equal(livianAaniOsoite('lontoo', 2),
+    `${AANI_JUURI}${LIVIAN_VERSIOIDUT_AANET['lontoo-3']}`);
 });
 
 /* ---------- vanhentunut äänite on hiljainen ---------- */
@@ -418,18 +436,15 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
   assert.equal(tila('paljastus-1'), 'ajan tasalla');
   assert.equal(tila('paljastus-3'), 'ajan tasalla');
   assert.equal(tila('lehtivinkki-1'), 'ajan tasalla');
-  /*
-   * KAIKKI 45 EUROOPAN KAUPUNKIKUPLAT GENEROITIIN 9.9.2026 omistajan
-   * teksteistä (generoi-pulu.yml ajo 12, pakota), ja LIVIAN_AANITETYT
-   * päivitettiin samasta kuivan ajon taulusta — joten jokainen vartioitu
-   * repliikki on ajan tasalla. Taulun ja pakkien eriytyminen näkyisi
-   * tässä heti muuttuneena tilana.
-   */
-  for (const avain of ['ateena-3', 'kreeta-3', 'sofia-3', 'pietari-3', 'riika-3', 'istanbul-3']) {
+  // Kaikki Euroopan 45 city-3-riviä on nyt sidottu valmistuneisiin kuitteihin.
+  const odotetutMuuttuneet = [];
+  assert.deepEqual(
+    rivit.filter((rivi) => rivi.tila !== 'ajan tasalla').map((rivi) => rivi.avain).sort(),
+    odotetutMuuttuneet,
+  );
+  for (const avain of Object.keys(LIVIAN_VERSIOIDUT_AANET)) {
     assert.equal(tila(avain), 'ajan tasalla', avain);
   }
-  assert.ok(rivit.every((rivi) => rivi.tila === 'ajan tasalla'),
-    `vanhentuneita: ${rivit.filter((r) => r.tila !== 'ajan tasalla').map((r) => r.avain).join(', ')}`);
   for (const rivi of rivit) assert.equal(rivi.tila, aanitteenTila(rivi));
   // Peli vaikenee juuri niissä, jotka odottavat ajoa.
   for (const rivi of rivit) {
@@ -452,33 +467,22 @@ test('kuiva ajo tunnistaa uudet ja muuttuneet repliikit', () => {
 /* ---------- tagit ---------- */
 
 /*
- * V3-MALLILLE LÄHTEE TAGITETTU TEKSTI (omistajan päätös 12.9.2026:
- * *"käytetään tätä jatkossa pulun ääneen: piI8Kku0DcvcL6TTSeQt …
- * V3 moottori"*). Tämä kumoaa 6.9.2026 tehdyn v2-valinnan, jonka aikaan
- * mallille lähti pelkkä kaanoni: silloin hakasulku olisi luettu ääneen,
- * nyt se on ohjausmerkki. Kaanoni itse ei muutu — tagien poiston on yhä
- * palautettava täsmälleen alkuperäinen teksti, ja juuri se vartioidaan
- * alla.
+ * UUSI PYSYVÄ OLETUS ON V3 (omistajan valinta 12.9.2026). Mallille
+ * lähtevässä muodossa ovat vain TAGIT-taulun ohjausmerkit, ja niiden
+ * poiston pitää palauttaa pelaajan näkemä kaanoni merkilleen.
  */
-test('v3-mallille lähtee tagitettu teksti ja tagien poisto palauttaa kaanonin', () => {
+test('v3-oletus käyttää tageja mutta niiden poisto palauttaa kaanonin', () => {
   for (const rivi of repliikit()) {
-    /*
-     * TAGITAULUA VAADITAAN VAIN js/livia.js:n LÄHTEILTÄ. Kaupunkien
-     * repliikit (ateena, sofia) syntyivät v2-mallin aikaan, jolloin
-     * mallille ei lähetetä tageja lainkaan — taulua ei siis ole eikä
-     * sitä tarvita. Kolmelle vanhalle lähteelle tagitus on yhä
-     * kaanonia kunnioittava, jos v3 otetaan takaisin.
-     */
     if (LIVIA_LAHTEET.includes(rivi.lahde)) {
       assert.ok(TAGIT[rivi.avain], `${rivi.avain}: elävöitystagit puuttuvat taulusta`);
     }
-    // Tagitettu muoto on kaanonia + hakasulkuja: poisto palauttaa
-    // alkuperäisen. Ankkurit tarkistetaan myös kaupunkilähteiltä, jotta
-    // v3:een palaaminen ei kaadu vasta maksullisessa ajossa.
-    if (!TAGIT[rivi.avain]) continue;
-    const tagitettu = puhemuoto(rivi.teksti, TAGIT[rivi.avain]);
-    assert.notEqual(tagitettu, rivi.teksti);
-    assert.equal(ilmanTageja(tagitettu), rivi.teksti,
+    if (!TAGIT[rivi.avain]) {
+      assert.equal(rivi.puhe, rivi.teksti);
+      continue;
+    }
+    assert.equal(rivi.puhe, puhemuoto(rivi.teksti, TAGIT[rivi.avain]));
+    assert.match(rivi.puhe, /\[[^\]]+\]/, `${rivi.avain}: v3-tagi puuttuu`);
+    assert.equal(ilmanTageja(rivi.puhe), rivi.teksti,
       `${rivi.avain}: tagien poisto ei palauta kaanonista tekstiä`);
     // Kaiku on pois pulun alusta: alkutagi ei saa olla kaikutagi.
     assert.doesNotMatch(TAGIT[rivi.avain].alku ?? '', /echo|reverb|kaiku/i);
@@ -487,6 +491,9 @@ test('v3-mallille lähtee tagitettu teksti ja tagien poisto palauttaa kaanonin',
   const avaimet = new Set(repliikit().map((rivi) => rivi.avain));
   for (const avain of Object.keys(TAGIT)) {
     assert.ok(avaimet.has(avain), `TAGIT: ${avain} ei ole yhdenkään repliikin avain`);
+  }
+  for (const avain of ['marseille-3', 'ateena-3', 'sarajevo-3', 'venetsia-3']) {
+    assert.ok(TAGIT[avain], `${avain}: pilotin v3-tagit puuttuvat`);
   }
 });
 
@@ -527,6 +534,72 @@ test('manifestin muoto on täysi ja kestot tulevat ajosta', () => {
   // Repliikki, jota tässä ajossa ei generoitu, on manifestissa
   // kestoltaan tyhjä eikä puutu kokonaan.
   assert.equal(manifesti.repliikit.at(-1).kesto, null);
+});
+
+test('rajatun erän tuotantokuitti sitoo tekstin, reseptin ja artefaktit lähdecommittiin', () => {
+  const rivi = repliikit().find((ehdokas) => ehdokas.avain.startsWith('marseille-'));
+  const tulokset = new Map([[rivi.avain, {
+    status: 'generated', retryReason: 'owner-approved-text-change',
+    rawArtifact: { fileName: 'raaka-livia-marseille-3.mp3', sha256: 'a'.repeat(64), bytes: 1234, actualDurationSeconds: 4.8 },
+    finalArtifact: { fileName: 'livia-marseille-3.mp3', sha256: 'b'.repeat(64), bytes: 1000, actualDurationSeconds: 4.321 },
+  }]]);
+  const kuitti = kokoaTuotantokuitti([rivi], {
+    sourceCommit: '1'.repeat(40), voiceId: 'voice-test', model: 'eleven_v3',
+    stability: 0.5, tempo: 1.08, retryReason: 'owner-approved-text-change',
+    status: 'completed', tulokset, staged: true,
+  });
+  assert.equal(kuitti.schemaVersion, 1);
+  assert.match(kuitti.batchId, /^pulu-[0-9a-f]{20}$/);
+  assert.equal(kuitti.sourceCommit, '1'.repeat(40));
+  assert.equal(kuitti.utterances.length, 1);
+  const u = kuitti.utterances[0];
+  assert.equal(u.cityId, 'marseille');
+  assert.equal(u.utteranceKey, rivi.avain);
+  assert.equal(u.visibleText, rivi.teksti);
+  assert.match(u.visibleTextSha256, /^[0-9a-f]{64}$/);
+  assert.equal(u.ttsText, rivi.puhe);
+  assert.match(u.ttsTextSha256, /^[0-9a-f]{64}$/);
+  assert.equal(u.voiceId, 'voice-test');
+  assert.equal(u.model, 'eleven_v3');
+  assert.equal(u.outputFormat, 'mp3_44100_128');
+  assert.equal(u.stagingObjectKey, `aanet/pulu/erat/${kuitti.batchId}/livia-marseille-3.mp3`);
+  assert.equal(u.finalObjectKey,
+    `aanet/pulu/versiot/${'1'.repeat(12)}/${kuitti.batchId}/livia-marseille-3.mp3`);
+  assert.equal(u.promotionStatus, 'pending-code-deploy');
+  assert.equal(u.settings.stability, 0.5);
+  assert.equal(u.postprocess.tempo, 1.08);
+  assert.deepEqual(u.rawArtifact, tulokset.get(rivi.avain).rawArtifact);
+  assert.deepEqual(u.finalArtifact, tulokset.get(rivi.avain).finalArtifact);
+  assert.equal(u.retryReason, 'owner-approved-text-change');
+  assert.doesNotMatch(JSON.stringify(kuitti), /ELEVEN_API_KEY|xi-api-key/);
+});
+
+test('tuotantokuitti on deterministinen ja vanhaa kuittia ei voi ylikirjoittaa', () => {
+  const rivit = repliikit().filter((rivi) => /^marseille-/.test(rivi.avain)).slice(0, 2);
+  const asetukset = { sourceCommit: '2'.repeat(40), voiceId: 'voice-test', model: 'eleven_v3' };
+  const a = kokoaTuotantokuitti(rivit, asetukset);
+  const b = kokoaTuotantokuitti(rivit, asetukset);
+  assert.equal(a.batchId, b.batchId);
+  const kansio = mkdtempSync(join(tmpdir(), 'pulu-kuitti-test-'));
+  const polku = kirjoitaTuotantokuitti(kansio, 'planned', a);
+  assert.equal(JSON.parse(readFileSync(polku, 'utf8')).batchId, a.batchId);
+  assert.throws(() => kirjoitaTuotantokuitti(kansio, 'planned', a), /EEXIST/);
+});
+
+test('rajattu erä menee versionoituun staging-avaimeen eikä korvaa liveä tai koko manifestia', () => {
+  const tyokalu = lue('../tools/generoi-pulu.mjs');
+  assert.match(tyokalu, /rajattuEra \? `\$\{kansio\}\/erat\/\$\{valmisKuitti\.batchId\}` : kansio/);
+  assert.match(tyokalu, /`\$\{kansio\}\/versiot\/\$\{sourceCommit\.slice\(0, 12\)\}\/\$\{valmisKuitti\.batchId\}`/);
+  assert.match(tyokalu, /if \(!rajattuEra\) vieAmpariin\(manifestiPolku, MANIFESTI/);
+  assert.match(tyokalu, /live-avaimia ei muutettu/);
+  assert.ok(tyokalu.indexOf("'planned', suunnitelmakuitti") < tyokalu.indexOf('await haeApista('),
+    'suunnitelmakuitti pitää kirjoittaa ennen ensimmäistä maksullista kutsua');
+});
+
+test('maksullinen Pulu-ajo vaatii eksplisiittisen enintään kymmenen repliikin erän', () => {
+  const tyokalu = lue('../tools/generoi-pulu.mjs');
+  assert.match(tyokalu, /const TUOTANTOERAN_MAX = 10/);
+  assert.match(tyokalu, /!rajattuEra \|\| tyot\.length > TUOTANTOERAN_MAX/);
 });
 
 test('repliikkivalinta tunnistaa tuntemattoman avaimen', () => {
@@ -756,7 +829,10 @@ test('uusi moduuli on niputus- ja esilatauslistoilla', () => {
   const build = lue('../tools/build-standalone.mjs');
   const sw = lue('../sw.js');
   assert.ok(build.includes("'js/liviapuhe.js'"), 'js/liviapuhe.js puuttuu MODULES-listalta');
+  assert.ok(build.includes("'js/livia-puheleet.js'"), 'js/livia-puheleet.js puuttuu MODULES-listalta');
   assert.ok(sw.includes("'./js/liviapuhe.js'"), 'js/liviapuhe.js puuttuu sw.js:n SHELL-listalta');
+  assert.ok(sw.includes("'./js/livia-puheleet.js'"), 'js/livia-puheleet.js puuttuu sw.js:n SHELL-listalta');
+  assert.ok(build.indexOf("'js/livia-puheleet.js'") < build.indexOf("'js/liviapuhe.js'"));
   // Riippuvuus ennen tuojaansa: liviapuhe ennen liviaa.
   assert.ok(build.indexOf("'js/liviapuhe.js'") < build.indexOf("'js/livia.js'"));
 });

@@ -181,13 +181,14 @@ export const FOKUSVIRTA_MARSEILLE = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Marseille, syyskuussa 1873. Mistral puhaltaa; puntari '
       + 'putoaa.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 341 merkkiä (yläraja 400). */
-    teksti: 'Marseillen satamassa myytiin saippuaa tiiliskivinä. Kauppias '
-      + 'vakuutti, että niillä pesisi vaikka koko maailman. Hänen kyntensä '
-      + 'olivat mustat, sillä hän oli juuri auttanut laivan köysissä. Ostin '
-      + 'palan. Terva, kala ja suolavesi seurasivat minua majataloon. Maailma '
-      + 'ei suostunut pesuun yhdellä yrittämällä, mutta käteni olivat jo '
-      + 'toista mieltä.',
+    /* HYVÄKSYTTY TEKSTIPILOTTI r2 13.9.2026: yhteinen Horatio–Livia-
+     * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
+     * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
+     * julkaisua. */
+    teksti: 'Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko '
+      + 'maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. '
+      + 'Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. '
+      + 'Maailma jäi likaiseksi; käteni olivat jo toista mieltä.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -200,36 +201,32 @@ export const FOKUSVIRTA_MARSEILLE = {
      * äänitteen sanakohtaisista aikaleimoista (forced alignment), ei
      * merkkimäärästä. Tarkoitus: myotailee | epailee | torjuu | huvittuu |
      * hammastyy | vakavoituu. siirtyma = ms ankkurin viimeisen sanan
-     * lopusta. Hiljaiset osuudet: "sillä hän oli juuri auttanut laivan
-     * köysissä" (selitys, pulu kuuntelee).
+     * lopusta. Hiljainen osuus: köysityön syy kuunnellaan ilman omaa
+     * lisäreaktiota.
      */
     reaktiot: [
-      { id: 'marseille.r1', ankkuri: 'saippuaa tiiliskivinä', tarkoitus: 'huvittuu', voimakkuus: 0.35, siirtyma: 0,
+      { id: 'marseille.r1', ankkuri: 'saippuaa myytiin tiiliskivinä', tarkoitus: 'huvittuu', voimakkuus: 0.35, siirtyma: 0,
         perustelu: 'Saippua tiilinä on ensimmäinen pieni hymy, ei vielä nauru.' },
-      { id: 'marseille.r2', ankkuri: 'pesisi vaikka koko maailman', tarkoitus: 'epailee', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Kauppiaan ylisana: pulu pudistaa päätään.' },
-      { id: 'marseille.r3', ankkuri: 'kyntensä olivat mustat', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+      { id: 'marseille.r2', ankkuri: 'koko maailman pesuun', tarkoitus: 'epailee', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Kauppiaan ylisana: pulu epäilee lempeästi.' },
+      { id: 'marseille.r3', ankkuri: 'mustat kynnet', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
         perustelu: 'Ristiriita: saippuakauppiaan mustat kynnet.' },
-      { id: 'marseille.r4', ankkuri: 'Ostin palan.', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
-        perustelu: 'Lyhyt päätös, pieni nyökkäys.' },
-      { id: 'marseille.r5', ankkuri: 'Terva, kala ja suolavesi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'marseille.r5', ankkuri: 'terva, kala ja suolavesi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Hajuluettelo seuraa majataloon: pulu huvittuu.' },
       { id: 'marseille.r6', ankkuri: 'käteni olivat jo toista mieltä', tarkoitus: 'huvittuu', voimakkuus: 0.6, siirtyma: 0,
         /*
-         * Siirtymä 0, ei 120: viimeinen sana loppuu 29 239 ms ja äänite
-         * 29 280 ms, joten +120 ms olisi tiedoston lopun jälkeen
-         * (tekstisession mittaus 11.9.2026). Nauru saa silti valmistua
-         * äänitteen loputtua: luonnollisen lopun sääntö, docs/pulu-reaktiot.md.
+         * Siirtymä pysyy sisällössä nollana. Lopullinen hetki ja mahdollinen
+         * jälkireaktio ratkaistaan vasta uuden äänitteen kohdistuksesta.
          */
         perustelu: 'Loppuvitsi: nauru merkinnän päätteeksi.' },
     ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Marseillen satamassa myytiin saippuaa tiiliskivinä. '
-      + 'Kauppias vakuutti, että niillä pesisi vaikka koko maailman. Hänen '
-      + 'kyntensä olivat mustat, sillä hän oli juuri auttanut laivan köysissä. '
-      + 'Ostin palan. Terva, kala ja suolavesi seurasivat minua majataloon. '
-      + '[softly] Maailma ei suostunut pesuun yhdellä yrittämällä, mutta '
-      + 'käteni olivat jo toista mieltä.',
+    /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
+     * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
+    luenta: '[curious] Marseillen satamassa saippuaa myytiin tiiliskivinä, '
+      + 'kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat '
+      + 'köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat '
+      + 'majataloon. [softly] Maailma jäi likaiseksi; käteni olivat jo toista '
+      + 'mieltä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-marseille.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-marseille-r20260909-paper-v4;
@@ -244,13 +241,7 @@ export const FOKUSVIRTA_MARSEILLE = {
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Marseille, 1873. Saippuaa merelle lähtevän kaupungin tarpeisiin.',
-      selite: 'Saippuaharkot oli ladottu pöydälle kuin pienet rakennuskivet. '
-        + 'Niiden lähellä odottivat köydet ja kala, joita vastaan palat oli '
-        + 'tarkoitettu, ainakin hajusta päätellen. Marseillen satamassa '
-        + 'tavara koskee tavaraan ennen kuin ehtii matkustajan laukkuun. '
-        + 'Kauppias jäi kuvan ajaksi paikoilleen ja laski kätensä pöydälle. '
-        + 'Mustat kynnet eivät heikentäneet myyntipuhetta: hän tunsi työn, '
-        + 'josta lika syntyy.',
+      selite: 'Saippuaharkot oli ladottu pöydälle köysien ja kalan viereen kuin pienet rakennuskivet. Kauppiaan tummat kynnet kertoivat sataman työstä paremmin kuin myyntipuhe.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://collections.musees.marseille.fr/',
@@ -260,7 +251,7 @@ export const FOKUSVIRTA_MARSEILLE = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-marseille-r20260911-paper2-v1.jpg",
       lyhyt: "Marseille, 1873. Sataman jäljet irtosivat käsistä vasta majatalossa.",
-      selite: "Majatalon pieni pesuvati sai vastustajikseen tervan, kalan ja suolaveden. Laskin uuden saippuapalan sen reunalle ja käärin hihat. Satamasta tuotu laukku ja köysi jäivät odottamaan tuolille, vaikka niiden haju ei näyttänyt aikovan odottaa. Maailma jäi pesemättä, mutta käsissä muutos näkyi jo.",
+      selite: 'Laskin uuden saippuapalan majatalon pesuvadin reunalle ja käärin hihat. Terva, kala ja suolavesi jäivät köyteen ja laukkuun, mutta käsissä muutos näkyi.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://collections.musees.marseille.fr/","https://www.musee-orsay.fr/sites/default/files/2021-10/feuilletage_cinema_2.pdf"],
     },
@@ -279,13 +270,7 @@ export const FOKUSVIRTA_MARSEILLE = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-marseille-01-r20260909-euv1-v2.jpg',
         lyhyt: 'Marseille: sataman lokki tarkasti myös pöydän alapuolen.',
-        selite: 'Vanhassa satamassa veneet ovat vaihtuneet moneen kertaan, mutta '
-          + 'niiden ympärillä tehdään yhä kauppaa ja syödään. Lokki on '
-          + 'järjestänyt itselleen oman tarkastuskierroksen. Katson sen kengän '
-          + 'ja tuolin väliin mahtuvaa reittiä ammatillisella kiinnostuksella. '
-          + 'Isoisä osti täällä saippuaa. Tälle pöydälle pitäisi ehkä hankkia '
-          + 'myös vartija. Olen käytettävissä, kunhan tehtävän tarjoilu '
-          + 'sovitaan ensin.',
+        selite: 'Vanhassa satamassa syödään ja käydään yhä kauppaa veneiden ympärillä. Lokki tarkasti pöydän alustan, kun seurasin sen reittiä kengän ja tuolin välistä.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.marseille-tourisme.com/en/discover-marseille/culture-heritage/discover-the-sites-and-monuments-in-marseille/the-old-port/',
@@ -293,11 +278,30 @@ export const FOKUSVIRTA_MARSEILLE = {
           'https://woody.cloudly.space/app/uploads/crt-paca/2021/06/thumbs/esplanade-vieux-port-marseille-exclu-mm-otcm-1920x960.jpg',
         ],
       },
+      {
+        /*
+         * PULUCAM P2 (eu-hl-pilot-20260912-r1, toimitus 12.9.2026).
+         * Mediareadback: 200, image/jpeg, 1536x1024, sRGB, full decode,
+         * CORS https://matkakirja.app. SHA-256:
+         * 5218c67d5b3868d83854107900a88da7acd1597efc8d035a52401255daf52464.
+         */
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/20260912/pulu-cam-marseille-02-v2-5218c67d5b38.jpg',
+        lyhyt: 'Marseille: veneiden vaaleat vanat halkovat Vieux-Portin sinistä väylää.',
+        selite: 'Veneiden perään jää vaaleita vanoja Vieux-Portin tummalle vedelle. '
+          + 'Ilmasta näkyy, kuinka pitkä satama-allas ulottuu keskelle Marseillea.',
+        lahde: 'Matkakirjan havainnekuva; OpenAI. Maantieteellinen lähdevalokuva: '
+          + 'Olivier Cleynen / Wikimedia Commons, CC BY-SA 4.0. Uusi generoitu '
+          + 'näkymä ja kuvitteellinen veneiden kulkuhetki.',
+        lahteet: [
+          'https://commons.wikimedia.org/wiki/File:Aerial_view_of_Marseille_04.jpg',
+          'https://www.marseille-tourisme.com/decouvrez-marseille/culture-et-patrimoine/sites-et-monuments/le-vieux-port/',
+        ],
+      },
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    /* TEKSTIPILOTTI 12.9.2026: yksi sisältöön sidottu virke lisää. */
     kommentti: [
-      'Marseillen saippuaa tehdään yhä. Sataman lokit eivät ole kuulleetkaan puhtaasta pöydästä.',
+      'Marseillen saippuaa tehdään yhä. Minä erotan Vieux-Portin jo äänestä ja suolasta höyhenissä. Lokit tuntevat jokaisen pöydän. Minä vasta harjoittelen.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

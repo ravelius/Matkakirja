@@ -37,6 +37,34 @@ export function ilmoitaLivianTunne(tagi,tiedot={}){
  const tunne=livianTunnetaginTiedot(tagi);if(!tunne)return null;
  ilmoitaLivianTilanne('emotion',{...tiedot,...tunne});return tunne;
 }
+/**
+ * Oman puhevuoron sisältömerkitys. Tämä ei ole ElevenLabs-tagi:
+ * tuottaja kohdistaa pysyvän cue-id:n oikeaan, parhaillaan kuuluvaan
+ * puhetunnukseen. Tekninen SVG-ele valitaan vasta tässä rajapinnassa.
+ */
+export const LIVIAN_PUHEMERKITYKSET=Object.freeze({
+ selittaa:'cityExplain',utelias:'lookUp',lammin:'smile',ilo:'grin',
+ miettiva:'think',rakkaus:'love',hammentynyt:'confused',
+});
+export function livianPuheeleenTiedot({tarkoitus,voimakkuus}={}){
+ const merkitys=String(tarkoitus??'').trim().toLocaleLowerCase('fi-FI');
+ const luku=voimakkuus===undefined?.5:Number(voimakkuus),voima=Math.max(0,Math.min(1,luku));
+ // Euroopan koontimanifesti käyttää city-3-cueissa myös samaa semanttista
+ // sanastoa kuin luentareaktiot. Muunna se tässä tekniseksi eleeksi; cueen
+ // pysyvä tarkoitus säilyy edelleen manifestin mukaisena.
+ const reaktioeleet={myotailee:'nod',epailee:'shake',torjuu:'shake',
+  huvittuu:voima<.4?'smile':voima<.55?'grin':'chuckle',
+  hammastyy:voima<.65?'doubleTake':'disbelief',
+  hammastys:voima<.65?'doubleTake':'disbelief',vakavoituu:'listen'};
+ const ele=Object.hasOwn(LIVIAN_PUHEMERKITYKSET,merkitys)?LIVIAN_PUHEMERKITYKSET[merkitys]:
+  Object.hasOwn(reaktioeleet,merkitys)?reaktioeleet[merkitys]:null;
+ if(!ele||!Number.isFinite(luku))return null;
+ return Object.freeze({tarkoitus:merkitys,voimakkuus:voima,ele});
+}
+export function ilmoitaLivianPuheEle(cue,tiedot={}){
+ const ele=livianPuheeleenTiedot(cue);if(!ele)return null;
+ ilmoitaLivianTilanne('speechCue',{...tiedot,...ele});return ele;
+}
 /** Fablen tekstikohtainen tarkoitus; ei avainsana-arvontaa tai ääntä. */
 export function livianLuentareaktionTiedot({tarkoitus,voimakkuus}={}){
  if(typeof voimakkuus!=='number'||!Number.isFinite(voimakkuus)||voimakkuus<=0)return null;

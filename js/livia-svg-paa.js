@@ -3,10 +3,11 @@ export function livianSvgPaa(s,{prefix='livia',lean=0,strength=.5}={}) {
  const f=s.frame||'rest',n=s.phase||0;
  const shock=['shock','eyes','fluster'].includes(f),shy=['embarrassed','fluster'].includes(f);
  const sleepy=['sleep','blink'].includes(f),manic=['manic','chewManic'].includes(f);
- const yaw=f==='right'?1:f==='left'?-1:f==='front'?0:-.4*(1-lean);
+ const gentle=['rest','front','talk','talkSmall','glance','up','down'].includes(f);
+ const yaw=f==='right'?1:f==='left'?-1:f==='front'?0:-.25*(1-lean);
  const front=Math.max(0,1-Math.abs(yaw)*2.5),mirror=yaw>.5;
  const nearX=61,farX=34+front*8,nearY=42+front*2,farY=46-front*2;
- let lid=f==='smug'?1.06:f==='bored'?1.45:f==='angry'?.5:shock?.05:manic?.02:shy?.45:.66;
+ let lid=f==='smug'?1.06:f==='bored'?1.45:f==='angry'?.5:shock?.05:manic?.02:shy?.45:gentle?.52:.66;
  if(f==='yawn')lid=1.35;
  if(['smile','wink'].includes(f))lid=.35;
  const ylakatselu=s.gazeUp||f==='up';
@@ -15,7 +16,7 @@ export function livianSvgPaa(s,{prefix='livia',lean=0,strength=.5}={}) {
  const lookY=ylakatselu?-4:f==='down'?3:f==='preen'?4:shy?2:0;
  const eyes=(x,y,rx,ry,far)=>{
   const key=prefix+(far?'far':'near'),joy=['smile','grin','wink'].includes(f),closed=sleepy||f==='grin'||['happy','wink'].includes(f)&&far;
-  const brow=joy?0:f==='angry'?(far?.5:-.5):shy?(far?-.3:.48):f==='disbelief'?(far?.1:-.5):far?.24:-.28;
+  const brow=joy?0:f==='angry'?(far?.5:-.5):shy?(far?-.3:.48):f==='disbelief'?(far?.1:-.5):gentle||ylakatselu?(far?.07:-.07):far?.24:-.28;
   const l=closed?2.2:lid+(f==='disbelief'?(far?-.55:.55):0),edge=y-ry+ry*l;
   const px=x+lookX,py=y+lookY,pr=manic?1.6:shock?2:far?2.1:2.9;
   const heart=`M${px} ${py+4}C${px-9} ${py-1} ${px-5} ${py-8} ${px} ${py-4}C${px+5} ${py-8} ${px+9} ${py-1} ${px} ${py+4}Z`;
@@ -25,10 +26,10 @@ export function livianSvgPaa(s,{prefix='livia',lean=0,strength=.5}={}) {
  const gape=mouth==='yawn'?1:mouth==='shock'?.9:mouth==='talk'?.7:mouth==='talkSmall'?.3:['chew','chewManic'].includes(mouth)?.2+(n%2)*.2:0;
  const puff=f==='puff',chew=['chew','chewManic','crumb'].includes(f);
  // Nokka osoittaa vasemmalle: POSITIIVINEN kierto nostaa sitä ylös.
- const twist=ylakatselu?18:f==='preen'?28:f==='down'?8:shy?5:0;
+ const twist=ylakatselu?18:f==='preen'?28:f==='down'?8:shy?5:gentle?1.2:0;
  const beak=f==='front'?`<path d="M48 58Q53 55 59 59L55 ${66+gape*10}L46 64Z" fill="#334d5b"/><path d="M48 58Q53 55 59 59L53 65L46 63Z" fill="#82979f"/><path d="M49 58Q49 54 54 55Q58 54 59 59L54 61Z" fill="#e3e2d6"/>`:
  `<path d="M30 60L44 61L40 ${65+gape*10}L21 ${68+gape*4}Z" fill="#2e4756"/><path d="M21 ${68+gape*4}Q32 ${70+gape*7} 41 ${65+gape*10}L43 64Z" fill="#6c8490"/><path d="M32 57Q37 55 42 59L46 63Q38 66 19 68Q22 64 26 61Z" fill="#526b79"/><path d="M31 59Q35 57 40 60Q30 65 21 67L27 63Z" fill="#9baaae"/><path d="M27 59Q28 54 33 55Q36 51 39 55Q42 56 41 60Q35 59 32 62Z" fill="#e3e2d6"/>`;
- return `<g data-part="head" data-gaze="${ylakatselu?'up-left':'neutral'}" transform="${mirror?'translate(112 0) scale(-1 1) ':''}rotate(${twist} 57 74)">
+ return `<g data-part="head" data-gaze="${ylakatselu?'up-left':'neutral'}" data-expression="${gentle||ylakatselu?'gentle':'active'}" transform="${mirror?'translate(112 0) scale(-1 1) ':''}rotate(${twist} 57 74)">
  <path d="M29 36Q33 27 44 26Q57 22 70 26Q83 28 86 40Q90 52 82 65Q79 70 81 73L85 74L79 78Q79 91 71 98L68 95L65 100Q53 104 42 95Q37 90 38 80Q34 73 31 65Q24 60 24 51Q24 42 29 36Z" fill="#8d9da5"/>
  <path d="M62 26Q80 27 84 43Q87 53 79 72L82 75L77 78Q79 90 71 98L68 95L65 100Q56 104 47 98Q61 84 59 73Q70 61 70 47Q70 34 62 26Z" fill="${mirror?'#a4b2b8':'#657c89'}"/>
  <path d="M29 40Q34 29 45 29Q59 25 71 30Q61 28 53 34Q44 39 40 45Q31 50 27 55Q24 48 29 40Z" fill="${mirror?'#748b97':'#acb7bb'}"/>

@@ -130,12 +130,7 @@ export const FOKUSVIRTA_LONTOO = {
     paikkarivi: 'Lontoo, joulukuussa 1873. Sumu niin sakea, ettei kadun '
       + 'toista puolta erota; puntari matalalla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 328 merkkiä (yläraja 400). */
-    teksti: 'Lontoossa on pantu höyryveturi maan alle ja matkustajat sen '
-      + 'savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä '
-      + 'näkyvistä. Merkillinen kansa, me englantilaiset: jos helvettiin '
-      + 'vedettäisiin kiskot, kysyisimme ensimmäiseksi, onko ensimmäisessä '
-      + 'luokassa pehmustetut penkit. Perille päästiin nopeasti. Yskä saapui '
-      + 'mukana.',
+    teksti: 'Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Herra vastapäätä luki lehteään, vaikka katosi välillä näkyvistä. Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. Perille päästiin nopeasti; yskä tuli mukana.',
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -151,23 +146,18 @@ export const FOKUSVIRTA_LONTOO = {
      */
     reaktiot: [
       { id: 'lontoo.r1', ankkuri: 'matkustajat sen savuun', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Veturi maan alle on hurja ajatus.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'lontoo.r2', ankkuri: 'katosi välillä näkyvistä', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Savuun katoava lukija naurattaa.' },
-      { id: 'lontoo.r3', ankkuri: 'pehmustetut penkit', tarkoitus: 'huvittuu', voimakkuus: 0.6, siirtyma: 0,
-        perustelu: 'Merkinnän iso vitsi omasta kansasta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'lontoo.r3', ankkuri: 'pehmustettuja penkkejä', tarkoitus: 'huvittuu', voimakkuus: 0.6, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'lontoo.r4', ankkuri: 'Perille päästiin nopeasti', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
-        perustelu: 'Asiallinen kuittaus.' },
-      { id: 'lontoo.r5', ankkuri: 'Yskä saapui mukana', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Kuiva loppukäänne: nopeus maksoi keuhkoissa.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'lontoo.r5', ankkuri: 'yskä tuli mukana', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Lontoossa on pantu höyryveturi maan alle ja matkustajat '
-      + 'sen savuun. Vastapäinen herra luki lehteään, vaikka katosi välillä '
-      + 'näkyvistä. Merkillinen kansa, me englantilaiset: jos helvettiin '
-      + 'vedettäisiin kiskot, kysyisimme ensimmäiseksi, onko ensimmäisessä '
-      + 'luokassa pehmustetut penkit. Perille päästiin nopeasti. [softly] Yskä '
-      + 'saapui mukana.',
+    luenta: '[curious] Lontoossa höyryveturi pantiin maan alle ja matkustajat sen savuun. Herra vastapäätä luki lehteään, vaikka katosi välillä näkyvistä. [mischievously] Jos helvettiin vedettäisiin kiskot, me englantilaiset kysyisimme ensin pehmustettuja penkkejä. [softly] Perille päästiin nopeasti; yskä tuli mukana.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lontoo.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-lontoo-story-v2.jpg;
@@ -179,13 +169,7 @@ export const FOKUSVIRTA_LONTOO = {
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-story-v2.jpg',
       lyhyt: 'Lontoo, 1873. Vastapäinen herra pysyi lehden puolella savustakin.',
-      selite: 'Vaunun ikkuna antoi valoa sen verran, että näin lehden '
-        + 'liikahtavan. Lukija itse oli savussa epävarmempi tapaus. '
-        + 'Metropolitanin junaa veti höyryveturi, vaikka rata kulki maan '
-        + 'alla; uutuuden mukana matkusti siis vanha tuttu hiilensavu. Odotin '
-        + 'pysähdyksen ajan kameran takana. Herra odotti uutisten loppumista. '
-        + 'Kumpikaan meistä ei näyttänyt pitävän yskimistä syynä keskeyttää '
-        + 'työtään.',
+      selite: 'Metropolitanin maanalaista junaa veti höyryveturi, ja vastapäinen herra jatkoi lehtensä lukemista hiilensavussa. Kumpikaan meistä ei näyttänyt pitävän yskää syynä keskeyttää työtään.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
         'https://www.ltmuseum.co.uk/collections/stories/transport/metropolitan-line',
@@ -196,7 +180,7 @@ export const FOKUSVIRTA_LONTOO = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-lontoo-r20260911-paper2-v1.jpg",
       lyhyt: "Lontoo, 1873. Perille päästiin nopeasti; yskä astui laiturille mukana.",
-      selite: "Metropolitanin juna jäi puhkumaan laiturin reunaan, vaikka matkustajat olivat jo nousseet pois. Savu seurasi meitä vaunusta ja teki kaasulampuista epävarmoja. Nostin nenäliinan suulle ennen kuin ehdin laskea laukkua kunnolla maahan. Matka oli nopea, mutta keuhkot näyttivät haluavan antaa oman lausuntonsa.",
+      selite: 'Metropolitanin höyryjuna jäi puhkumaan laiturille, ja savu seurasi matkustajia kaasulamppujen alle. Matka oli nopea, mutta keuhkot tahtoivat antaa oman lausuntonsa.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.ltmuseum.co.uk/collections/stories/transport/metropolitan-line","https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/97","https://library.ltmuseum.co.uk/portal/Default/en-GB/RecordView/Index/33362"],
     },
@@ -246,13 +230,8 @@ export const FOKUSVIRTA_LONTOO = {
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-lontoo-01-r20260909-paikka-v2.jpg',
-        lyhyt: 'Lontoo: parlamentti jäi taustalle. Penkillä oli tärkeämpää.',
-        selite: 'Istuin Thamesin rantapenkin reunalle. Elizabeth Tower näkyy joen '
-          + 'toisella puolella parlamentin pohjoispäässä, mutta aivan nokan '
-          + 'edessä on muru. Sitä ei ole merkitty yhteenkään karttaan. '
-          + 'Westminsterin sillalla punainen bussi vie ihmisiä eteenpäin; minun '
-          + 'ei tarvitse lähteä vielä mihinkään. Isoisä valitsi maanalaisen '
-          + 'vaunun. Tällä penkillä on parempi ilmanvaihto ja oma tarjoilu.',
+        lyhyt: 'Lontoo: parlamentti jäi taustalle, sillä penkillä oli tärkeämpää.',
+        selite: 'Thamesin rantapenkiltä näkyvät parlamentti ja Elizabeth Tower, mutta nokkani edessä oleva muru ei löydy yhdeltäkään kartalta. Isoisä valitsi maanalaisen vaunun; tässä on parempi ilmanvaihto ja oma tarjoilu.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://southbank.london/see-and-do/queens-walk',
@@ -266,7 +245,7 @@ export const FOKUSVIRTA_LONTOO = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Metro kulkee nyt sähköllä. Minä en vaihtaisi taivasta pehmustettuun penkkiin, Fogg.',
+      'Matkustajahöyryjunat katosivat metrosta kauan sitten. Lensin uloskäynniltä toiselle. Ihmiset ehtivät perille; minä ehdin nähdä kaupungin.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ylpea', voimakkuus: 0.5 },

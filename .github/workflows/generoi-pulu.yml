@@ -23,7 +23,10 @@
 #   generoi  Generoi repliikit valitulla äänellä (syöte `aani`) ja vie
 #            ne ämpärin kansioon aanet/pulu/ manifesteineen.
 #
-# JÄRJESTYS: aanet → (kuuntele, valitse ääni) → kuiva → generoi.
+# PYSYVÄ OLETUS 12.9.2026: flicker / piI8Kku0DcvcL6TTSeQt,
+# eleven_v3, Natural 0,5. `aanet` säilyy tietoista myöhempää koestusta
+# varten; tavallinen järjestys on kuiva → erillinen maksullisen ajon lupa
+# → generoi.
 #
 # JO OLEMASSA OLEVAA EI GENEROIDA UUDELLEEN: ennen kutsua tehdään HEAD
 # julkiseen osoitteeseen, ja 200 ohittaa repliikin. `pakota` kirjoittaa
@@ -63,17 +66,17 @@ on:
         description: >-
           aanet = hae ääniehdokkaat (aja ensin), kuiva = tulosta
           repliikit ja kestot ilman APIa, generoi = generoi ja vie
-          ämpäriin.
+          ämpäriin, kohdista = tee valmiin versionoidun erän cue-data.
         required: true
         type: choice
         default: 'aanet'
-        options: ['aanet', 'kuiva', 'generoi']
+        options: ['aanet', 'kuiva', 'generoi', 'kohdista']
       aani:
         description: >-
-          Valitun äänen voice_id (ElevenLabs). Pakollinen toiminnolle
-          "generoi"; muissa jätetään tyhjäksi.
+          Pulun voice_id (ElevenLabs). Oletus on omistajan 12.9.2026
+          lukitsema flicker; muuta vain uudella nimenomaisella päätöksellä.
         required: false
-        default: ''
+        default: 'piI8Kku0DcvcL6TTSeQt'
       haku:
         description: >-
           aanet: listaa vain äänet, joiden nimessä tämä sana on
@@ -84,25 +87,37 @@ on:
       repliikit:
         description: >-
           Vain nämä repliikit pilkuin TAI välilyönnein (avaus-1,
-          paljastus-1, mannerivihje-1). Tyhjä = kaikki kahdeksan.
+          paljastus-1, mannerivihje-1). Maksullinen generointi vaatii
+          eksplisiittisen 1–10 repliikin erän; tyhjä sallitaan vain kuivassa ajossa.
+        required: false
+        default: ''
+      retry_reason:
+        description: >-
+          Täytä vain hyväksytyssä uusinnassa. Perustelu muuttaa erätunnuksen,
+          jotta aiemmin aloitettua maksullista erää ei veloiteta vahingossa uudelleen.
+        required: false
+        default: ''
+      kuitti:
+        description: >-
+          Vain kohdista-toiminnolle: versionoidun valmiin tuotantokuitin
+          julkinen HTTPS-osoite. Kuitti määrää kaupungit ja MP3-avaimet.
         required: false
         default: ''
       malli:
         description: >-
-          ElevenLabsin malli. v2 on nykyinen pelissä kuuluva ääni ilman
-          tageja; v3 ymmärtää hakasulkutagit ([excited], [breathless])
-          ja on omistajan 12.9.2026 kokeilu.
+          ElevenLabsin malli. Omistajan 12.9.2026 lukitsema oletus on v3,
+          joka ymmärtää hakasulkutagit ([excited], [breathless]).
         required: true
         type: choice
-        default: 'eleven_multilingual_v2'
+        default: 'eleven_v3'
         options: ['eleven_multilingual_v2', 'eleven_v3']
       vakaus:
         description: >-
-          Vakaus samalla sanalla kuin ElevenLabsin sivulla. Tyhjä =
-          mallin oletus (0,5).
+          Vakaus samalla sanalla kuin ElevenLabsin sivulla. Omistajan
+          lukitsema oletus on Natural (0,5).
         required: false
         type: choice
-        default: ''
+        default: 'natural'
         options: ['', 'creative', 'natural', 'robust']
       pakota:
         description: >-
@@ -152,12 +167,24 @@ jobs:
           echo "Aja ensin toiminto 'aanet', kuuntele esikuuntelut ja valitse ääni."
           exit 1
 
+      - name: Tarkista maksullisen erän rajaus
+        if: ${{ inputs.toiminto == 'generoi' && inputs.repliikit == '' }}
+        run: |
+          echo "::error::Generointi vaatii eksplisiittisen 1–10 repliikin listan."
+          exit 1
+
+      - name: Tarkista kohdistuksen kuitti
+        if: ${{ inputs.toiminto == 'kohdista' && inputs.kuitti == '' }}
+        run: |
+          echo "::error::Kohdistus vaatii valmiin tuotantokuitin HTTPS-osoitteen."
+          exit 1
+
       # Puuttuva salaisuus tulisi muuten vastaan vasta ElevenLabsin
       # 401:nä tai aws-clin virheenä — pahimmassa järjestyksessä vasta
       # sen jälkeen, kun kutsut on jo maksettu. Arvoja ei tulosteta,
       # vain onko ne asetettu.
       - name: Tarkista että salaisuudet ovat tallessa
-        if: ${{ inputs.toiminto == 'generoi' }}
+        if: ${{ inputs.toiminto == 'generoi' || inputs.toiminto == 'kohdista' }}
         env:
           AVAIN: ${{ secrets.ELEVEN_API_KEY }}
         run: |
@@ -214,7 +241,7 @@ jobs:
       # ympäristömuuttujan kautta, ei ${{ }}-sijoituksena komentoriville
       # — käsin kirjoitettu kenttä ei saa päätyä shellin tulkittavaksi.
       - name: Kuiva ajo (repliikit ja kestot)
-        if: ${{ inputs.toiminto != 'aanet' }}
+        if: ${{ inputs.toiminto == 'kuiva' || inputs.toiminto == 'generoi' }}
         env:
           REPLIIKIT: ${{ inputs.repliikit }}
           PULU_MALLI: ${{ inputs.malli }}
@@ -222,10 +249,50 @@ jobs:
         run: |
           set -euo pipefail
           if [ -n "$REPLIIKIT" ]; then
-            node tools/generoi-pulu.mjs --kuiva --repliikit $REPLIIKIT
+            node tools/generoi-pulu.mjs --kuiva --repliikit "$REPLIIKIT"
           else
             node tools/generoi-pulu.mjs --kuiva
           fi
+
+      - name: Kohdista valmiin erän puhe-eleet versionoitujen MP3-tiedostojen viereen
+        if: ${{ inputs.toiminto == 'kohdista' }}
+        env:
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          KUITTI: ${{ inputs.kuitti }}
+          REPLIIKIT: ${{ inputs.repliikit }}
+        run: |
+          set -euo pipefail
+          case "$KUITTI" in https://media.matkakirja.app/aanet/pulu/kuitit/*.completed.json) ;; *)
+            echo "::error::Kuitti ei ole Matkakirjan valmistunut Pulu-tuotantokuitti."
+            exit 1
+          esac
+          liput=(--kuitti "$KUITTI" --vie)
+          if [ -n "$REPLIIKIT" ]; then
+            kaupungit=()
+            while IFS= read -r avain; do
+              [ -z "$avain" ] && continue
+              if [[ ! "$avain" =~ ^[a-z0-9]+-3$ ]]; then
+                echo "::error::Kohdistuksen repliikin pitää olla exact city-3-avain: $avain"
+                exit 1
+              fi
+              kaupungit+=("${avain%-3}")
+            done < <(printf '%s\n' "$REPLIIKIT" | tr ',[:space:]' '\n')
+            if [ "${#kaupungit[@]}" -eq 0 ]; then
+              echo "::error::Kohdistuksen repliikkirajaus on tyhjä."
+              exit 1
+            fi
+            valitut=$(IFS=,; printf '%s' "${kaupungit[*]}")
+            liput+=(--kaupungit "$valitut")
+          fi
+          node tools/kohdista-pulu-eleet.mjs "${liput[@]}"
+
+      - name: Tallenna kohdistukset tarkastettavaksi
+        if: ${{ inputs.toiminto == 'kohdista' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: pulu-eleet-${{ github.run_id }}
+          path: assets/aikaleimat/livia-*.eleet.json
+          if-no-files-found: error
 
       - name: Generoi ja vie ämpäriin
         if: ${{ inputs.toiminto == 'generoi' }}
@@ -236,18 +303,22 @@ jobs:
           PAKOTA: ${{ inputs.pakota }}
           PULU_MALLI: ${{ inputs.malli }}
           PULU_VAKAUS: ${{ inputs.vakaus }}
+          RETRY_REASON: ${{ inputs.retry_reason }}
         run: |
           set -euo pipefail
           liput=""
           if [ "$PAKOTA" = "kyllä" ]; then liput="--pakota"; fi
+          retry_liput=()
+          if [ -n "$RETRY_REASON" ]; then retry_liput=(--retry-reason "$RETRY_REASON"); fi
           if [ -n "$REPLIIKIT" ]; then
-            node tools/generoi-pulu.mjs --aani "$AANI" $liput --repliikit $REPLIIKIT
+            node tools/generoi-pulu.mjs --aani "$AANI" $liput --repliikit "$REPLIIKIT" "${retry_liput[@]}"
           else
             node tools/generoi-pulu.mjs --aani "$AANI" $liput
           fi
 
       # Vartija sille, mitä tämä ajo lupaa: repoon ei jää mitään.
       - name: Varmista ettei repoon jäänyt mitään
+        if: ${{ inputs.toiminto != 'kohdista' }}
         run: |
           set -euo pipefail
           if [ -n "$(git status --porcelain)" ]; then

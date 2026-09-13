@@ -111,14 +111,14 @@ export const FOKUSVIRTA_BUDAPEST = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-budapest-r20260909-paper-v4.jpg",
       lyhyt: "Budapest, 1873. Kupolin alla kartta sai odottaa.",
-      selite: "Rudasin kylpylän kupoli päästää päivänvalon pieninä kohtina sisään. Niiden alla vesi liikahtaa hitaasti, eikä kukaan näytä tarvitsevan siltä kiireisempää vastausta. Turkkilaisen kylpylän seinät ovat nähneet kaupunkien nimiä ennen tätä marraskuista yhdistämistäkin. Asetin kameran altaan ulkopuolelle. Höyry teki ääriviivoille saman kuin lämmin vesi ajatuksilleni: kumpikaan ei pysynyt aivan yhtä terävänä.",
+      selite: 'Rudasin kupolin pienet aukot sirottivat valoa altaaseen, jossa vesi liikkui hitaasti. Asetin kameran altaan ulkopuolelle ja annoin höyryn pehmentää ääriviivoja.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.rudasfurdo.hu/en/past-and-present","https://fortepan.hu/en/photos/?id=252393","https://fortepan.hu/en/photos/?id=82594"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-budapest-r20260911-paper2-v1.jpg",
       lyhyt: "Budapest, 1873. Kartan kolme nimeä joutuivat saman ympyrän sisään.",
-      selite: "Aamiaispöydässä vanha kartta jakoi kaupungin vielä kolmeen osaan. Ikkunan takana Tonava piti oman suuntansa ja Ketjusilta yhdisti rannat. Piirsin rajojen ympärille uutta järjestystä ilman sanoja. Marraskuu oli ehtinyt yhdistää kaupungin nopeammin kuin kartantekijä.",
+      selite: 'Vanha kartta jakoi kaupungin vielä kolmeen osaan, vaikka Tonava ja Ketjusilta näkyivät ikkunasta ennallaan. Piirsin rajojen ympärille uuden järjestyksen, jonka marraskuu oli ehtinyt tehdä kartantekijää nopeammin.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.rudasfurdo.hu/en/past-and-present","https://fortepan.hu/en/photos/?id=252393"],
     },
@@ -132,12 +132,7 @@ export const FOKUSVIRTA_BUDAPEST = {
       + 'tuuli; puntari putoaa.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 367 merkkiä (yläraja 400). */
-    teksti: 'Buda, Pest ja Óbuda on tänä marraskuuna liitetty yhteen. Karttani '
-      + 'vanheni kesken aamiaisen. Toisella rannalla kohoaa linna, toisella '
-      + 'talot levittäytyvät tasamaalle; välissä Tonava pitää oman suuntansa. '
-      + 'Menin Rudasin turkkilaiseen kylpylään miettimään uuden nimen '
-      + 'sijoittelua. Kupolin alla oli niin lämmintä, että päätin antaa '
-      + 'kaupunkien olla hetken ilman järjestystä.',
+    teksti: 'Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. Lämmössä kaupungit saivat odottaa järjestystä.',
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -153,21 +148,16 @@ export const FOKUSVIRTA_BUDAPEST = {
      */
     reaktiot: [
       { id: 'budapest.r1', ankkuri: 'vanheni kesken aamiaisen', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Kartan vanheneminen aamiaispöydässä on vitsi.' },
-      { id: 'budapest.r2', ankkuri: 'pitää oman suuntansa', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Tonava ei välitä hallinnosta: nyökkäys.' },
-      { id: 'budapest.r3', ankkuri: 'uuden nimen sijoittelua', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kylpylässä pohdittu karttatyö huvittaa.' },
-      { id: 'budapest.r4', ankkuri: 'ilman järjestystä', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Hiljainen päätös antaa asian olla.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'budapest.r2', ankkuri: 'Tonava piti suuntansa', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'budapest.r3', ankkuri: 'uutta nimeä', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'budapest.r4', ankkuri: 'odottaa järjestystä', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Buda, Pest ja Óbuda on tänä marraskuuna liitetty '
-      + 'yhteen. Karttani vanheni kesken aamiaisen. Toisella rannalla kohoaa '
-      + 'linna, toisella talot levittäytyvät tasamaalle; välissä Tonava pitää '
-      + 'oman suuntansa. Menin Rudasin turkkilaiseen kylpylään miettimään '
-      + 'uuden nimen sijoittelua. [softly] Kupolin alla oli niin lämmintä, '
-      + 'että päätin antaa kaupunkien olla hetken ilman järjestystä.',
+    luenta: '[curious] Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. [mischievously] Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. [softly] Lämmössä kaupungit saivat odottaa järjestystä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-budapest.mp3',
   },
 
@@ -184,12 +174,7 @@ export const FOKUSVIRTA_BUDAPEST = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-budapest-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Budapest: kylpylällä on vihdoin lintujen kerros.',
-        selite: 'Rudasin kattokylpylässä lämmin vesi ja Tonava mahtuvat samaan '
-          + 'näkymään. Istuin altaan ulkopuolisella reunalla ja tarkistin, '
-          + 'oliko ylin kerros yhtä hyvä kuin olin kuullut. Oli. Isoisä pohti '
-          + 'kupolin alla kaupungin nimeä; nämä kylpijät pohtivat lähinnä, '
-          + 'tarvitseeko nousta vielä pois. Ihmiset ovat löytäneet kelvollisen '
-          + 'yhdistelmän: näköalapaikan, jossa saa samalla istua.',
+        selite: 'Rudasin katolla lämmin vesi ja Pestin näkymä mahtuvat samaan kuvaan. Tarkistin altaan reunan ja totesin, että ihmiset ovat löytäneet näköalapaikan, jossa saa samalla istua.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.rudasfurdo.hu/',
@@ -198,13 +183,8 @@ export const FOKUSVIRTA_BUDAPEST = {
       },
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-budapest-02-r20260909-euv1-v1.jpg',
-        lyhyt: 'Budapest: nimi yhdisti kaupungit. Joki jäi väliin.',
-        selite: 'Nousin altaan reunalta ja katsoin Tonavaa leveämmältä. Buda kohoaa '
-          + 'mäkeen, Pest levittäytyy vastarannalle, ja sillat pitävät '
-          + 'yhteyttä. Kartassa nimi peittää tämän kaiken yhdellä sanalla. '
-          + 'Lennossa erotan rannat, liikenteen ja joen oman reitin. Isoisän '
-          + 'kartta vanheni aamiaisen aikana. Minun kuvani kestää ainakin '
-          + 'siihen saakka, kunnes seuraava laiva ehtii sillan alta.',
+        lyhyt: 'Budapest: nimi yhdisti kaupungin, joki jäi näkyvästi väliin.',
+        selite: 'Katolta Tonava, Pestin ranta, sillat ja laivat erottuvat omina reitteinään. Yksi nimi yhdistää kaupungin kartassa, mutta joki jää kuvassa näkyvästi väliin.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.rudasfurdo.hu/',
@@ -254,7 +234,7 @@ export const FOKUSVIRTA_BUDAPEST = {
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Nimi mahtui karttaan. Nykyään Rudasissa kylvetään katollakin. Kerrankin ihmisillä on oikea kerros.',
+      'Rudasissa kylvetään nyt katollakin. Höyry peitti vastarannan juuri, kun olin valmis lähtöön. Odotin aivan rauhallisesti — ainakin melkein.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

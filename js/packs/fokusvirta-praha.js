@@ -122,14 +122,14 @@ export const FOKUSVIRTA_PRAHA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-praha-r20260909-paper-v4.jpg",
       lyhyt: "Praha, 1873. Kiire jäi kellon eteen odottamaan.",
-      selite: "Torin kello ei tyydy numeroihin. Sen kehissä kulkevat taivaankappaleet, ja pienten hahmojen liike saa kokonaisen ihmisjoukon nostamaan päätään yhtä aikaa. Ajurin vaunut odottivat vähän syrjemmässä. Kuvani pysäyttää kellon, mutta ei kerro, kuinka pitkäksi hänen odotuksensa venyi. Minulla oli taskussa tarkempi ajanmittari. Se jäi sillä hetkellä paljon huonommaksi seuralaiseksi.",
+      selite: 'Astronominen kello sai torilla kokonaisen joukon katsomaan ylöspäin, kun ajuri odotti vaunuineen syrjemmällä. Taskukelloni oli tarkempi mutta sillä hetkellä paljon huonompi seuralainen.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://prague.eu/en/about-the-old-town-astronomical-clock/","https://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-praha-r20260911-paper2-v1.jpg",
       lyhyt: "Praha, 1873. Ajurin kellossa puoli tuntia oli aivan tavallinen määrä.",
-      selite: "Torin koneisto oli vienyt huomioni ja taskukello unohtui. Ajuri odotti vaunujensa vieressä ja tarkisti omaansa. Hänen hevosensa suhtautui aikaan rauhallisemmin kuin hän. Palasin paikalle puoli tuntia eri käsitystä myöhemmin.",
+      selite: 'Ajuri tarkisti kelloaan vaunujen vieressä, kun torin koneisto piti muun yleisön vallassaan. Hänen hevosensa suhtautui puoleen tuntiin rauhallisemmin kuin hän.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://prague.eu/en/about-the-old-town-astronomical-clock/"],
     },
@@ -143,12 +143,7 @@ export const FOKUSVIRTA_PRAHA = {
       + 'halla; puntari korkealla.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 358 merkkiä (yläraja 400). */
-    teksti: 'Prahan torin kellossa luuranko soittaa kelloa ja apostolit '
-      + 'kulkevat ikkunan ohi. Aioin verrata sitä taskukellooni ja unohdin '
-      + 'koko asian. Tässä koneessa oli tilaa auringolle, kuulle ja '
-      + 'kuolemalle, mutta minun kellossani vain kiireelle. Ajuri löysi minut '
-      + 'samasta paikasta puoli tuntia myöhemmin. Hänellä oli aivan '
-      + 'toisenlainen käsitys hukkaan menneestä ajasta.',
+    teksti: 'Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. Hän piti aikaa hukattuna.',
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -163,24 +158,19 @@ export const FOKUSVIRTA_PRAHA = {
      * saa reaktion).
      */
     reaktiot: [
-      { id: 'praha.r1', ankkuri: 'luuranko soittaa kelloa', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kellon kuolemankuva hätkähdyttää.' },
-      { id: 'praha.r2', ankkuri: 'unohdin koko asian', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Taskukellon vertailu jää kesken.' },
-      { id: 'praha.r3', ankkuri: 'minun kellossani vain kiireelle', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Merkinnän vakava huomio ajasta.' },
+      { id: 'praha.r1', ankkuri: 'luuranko soitti', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'praha.r2', ankkuri: 'unohdin verrata', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'praha.r3', ankkuri: 'omassani vain kiireelle', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'praha.r4', ankkuri: 'puoli tuntia myöhemmin', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Isoisä oli seissyt paikallaan puoli tuntia.' },
-      { id: 'praha.r5', ankkuri: 'hukkaan menneestä ajasta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Ajurin eriävä mielipide päättää merkinnän.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'praha.r5', ankkuri: 'piti aikaa hukattuna', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Prahan torin kellossa luuranko soittaa kelloa ja '
-      + 'apostolit kulkevat ikkunan ohi. Aioin verrata sitä taskukellooni ja '
-      + 'unohdin koko asian. Tässä koneessa oli tilaa auringolle, kuulle ja '
-      + 'kuolemalle, mutta minun kellossani vain kiireelle. Ajuri löysi minut '
-      + 'samasta paikasta puoli tuntia myöhemmin. [softly] Hänellä oli aivan '
-      + 'toisenlainen käsitys hukkaan menneestä ajasta.',
+    luenta: '[curious] Prahan torin kellossa luuranko soitti, apostolit kulkivat ja minä unohdin verrata sitä taskukellooni. Koneessa oli tilaa auringolle, kuulle ja kuolemalle; omassani vain kiireelle. Ajuri löysi minut samasta paikasta puoli tuntia myöhemmin. [softly] Hän piti aikaa hukattuna.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-praha.mp3',
   },
 
@@ -197,13 +187,7 @@ export const FOKUSVIRTA_PRAHA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-praha-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Praha: minua katsotaan harvoin näin yksimielisesti ylöspäin.',
-        selite: 'Prahan astronomisen kellon edessä ihmiset nostavat kasvonsa ja '
-          + 'puhelimensa samaan suuntaan. Minä istuin hetkeksi kellon '
-          + 'alapuoliselle kivireunalle. Oli miellyttävää saada näin suuri '
-          + 'yleisö, kunnes tajusin, ettei kukaan odottanut minun '
-          + 'esiintymistäni. Kellossa näkyvät taivaan kierrot ja pienet hahmot; '
-          + 'torilla näkyy, kuinka monta eri tapaa on yrittää kuvata sama '
-          + 'hetki.',
+        selite: 'Astronomisen kellon alla kokonainen yleisö nostaa kasvonsa ja puhelimensa samaan suuntaan. Hetken luulin heidän odottavan minua, mutta kellolla oli jälleen parempi ohjelmanumero.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://prague.eu/en/objevujte/old-town-hall-with-astronomical-clock-staromestska-radnice-s-orlojem/',
@@ -258,7 +242,7 @@ export const FOKUSVIRTA_PRAHA = {
     // Huudahdus poistettu 8.9.2026 (omistaja: ei tuo lisähyötyä).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Kello kokoaa torille väkeä yhä. Nyt kaikilla on kello puhelimessa, ja silti he katsovat tuota. Ymmärrän.',
+      'Kello kokoaa torille väkeä yhä. Minä istuin katon reunalla ja ihmettelin, miksi puhelintaan katsovat ihmiset nostivat yhtä aikaa päänsä. Kun luuranko liikahti, nostin minäkin.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'miettiva', voimakkuus: 0.5 },
