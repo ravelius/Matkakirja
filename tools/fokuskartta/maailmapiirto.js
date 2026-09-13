@@ -375,6 +375,51 @@ export function polttaVariLeikkuri(canvas, asetukset, leikkuri) {
       fctx.fillStyle = '#fff';
       polku(fctx);
       fctx.fill();
+      /*
+       * FEIDAUS HÄIPYY LAATASTON REUNALLA (mitattu pilotista 13.9.2026).
+       *
+       * SUUNNITELMAN OLETUS EI PIDÄ PYSTYRUUDULLA. Luku 2.5 sanoo, että
+       * feidaus ei näy suorakaiteena, *"koska uloszoomauksen esto tekee
+       * laatikosta koko ruudun"*. Se pitää vain, jos ruudun kuvasuhde on
+       * sama kuin laatikon: puhelimella (390 × 844) Ranskan laatikon
+       * LEVEYS täyttää ruudun, mutta korkeussuunnassa näkyy 1400
+       * lautayksikköä eli kolminkertaisesti laatikon korkeus. Ensimmäinen
+       * pilottikuva näytti juuri sen: vaaleneva laatikko loppui
+       * Välimerellä terävään vaakasuoraan viivaan.
+       *
+       * KORJAUS ON HÄIVE EIKÄ ISOMPI LAATASTO. Laataston kasvattaminen
+       * näkyvään alaan (kuvasuhteiden unioni) olisi Ranskassa 4,6-kertainen
+       * laattamäärä, ja sama kerroin koko Euroopassa. Häive on yksi
+       * rakennusaikainen luku: feidaus laskee nollaan laataston uloimmalla
+       * kaistaleella, jolloin reuna lukee vanhan kartan vinjettinä eikä
+       * suorakaiteena — ja juuri sitä omistaja pyysi (*"vanhan ajan fiilis
+       * etta katsotaan staattista kasinpiirrettya karttaa"*).
+       */
+      const reuna = Number.isFinite(leikkuri.feidausReuna) ? leikkuri.feidausReuna : 0;
+      const laatikko = leikkuri.laatikko ?? null;
+      if (reuna > 0 && laatikko?.w > 0) {
+        const valkoinen = (a2) => `rgba(255,255,255,${a2})`;
+        const kaista = (x0, y0, x1, y1, vaaka) => {
+          const g2 = fctx.createLinearGradient(x0, y0, vaaka ? x1 : x0, vaaka ? y0 : y1);
+          g2.addColorStop(0, valkoinen(1));
+          g2.addColorStop(1, valkoinen(0));
+          fctx.fillStyle = g2;
+          fctx.fillRect(
+            Math.min(x0, x1), Math.min(y0, y1),
+            Math.abs(x1 - x0) || W, Math.abs(y1 - y0) || H,
+          );
+        };
+        const lx0 = kx(laatikko.x);
+        const lx1 = kx(laatikko.x + laatikko.w);
+        const ly0 = ky(laatikko.y);
+        const ly1 = ky(laatikko.y + laatikko.h);
+        const rx = reuna * px;
+        // Vasen ja oikea kaistale (vaakasuora liuku), ylä ja ala (pysty).
+        kaista(lx0, 0, lx0 + rx, H, true);
+        kaista(lx1, 0, lx1 - rx, H, true);
+        kaista(0, ly0, W, ly0 + rx, false);
+        kaista(0, ly1, W, ly1 - rx, false);
+      }
     } else feidattu = null;
   }
   // Värit VAIN maahan ja aluevesiin: kaikki muu pois kankaalta.

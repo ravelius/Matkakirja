@@ -129,22 +129,65 @@ if (!VARITASOT?.FRA?.tasot?.length) {
  */
 const PISTEET = [
   {
-    avain: 'ranska', lon: 2.0, lat: 47.3, odotus: 'tummui',
+    avain: 'ranska', lon: 2.0, lat: 47.3, ryhma: 'maa', odotus: 'tummui',
     seloste: 'Keski-Ranska (Sologne, ~120 m)',
   },
   {
-    avain: 'belgia', lon: 4.6, lat: 50.6, odotus: 'vaaleni-seepia',
+    avain: 'belgia', lon: 4.6, lat: 50.6, ryhma: 'maa', odotus: 'vaaleni-seepia',
     seloste: 'Belgia (Namurin seutu, ~50 km rajasta)',
   },
   {
-    avain: 'aluevesi', lon: 5.3, lat: 43.15, odotus: 'sinertyi',
+    avain: 'aluevesi', lon: 5.3, lat: 43.15, ryhma: 'meri', odotus: 'sinertyi',
     seloste: 'Välimeri Marseillen edustalla, ~8 mpk rannasta',
   },
   {
-    avain: 'avomeri', lon: 5.3, lat: 42.5, odotus: 'vaaleni-seepia',
+    avain: 'avomeri', lon: 5.3, lat: 42.5, ryhma: 'meri', odotus: 'vaaleni-seepia',
     seloste: 'Välimeri ~40 mpk rannasta',
   },
 ];
+
+/*
+ * KAKSI MITTAUSKAMERAA, EIKÄ YKSI. Ensimmäisessä ajossa kaikki neljä
+ * pistettä mitattiin saapumisnäkymästä, ja aluevesi luki lämpimäksi:
+ * 12 mpk:n kaistale on 6,7 lautayksikköä eli siinä näkymässä 4 css-
+ * pikseliä, ja mediaani 9 × 9 laitepikselin ruudusta sekoitti siihen
+ * rantaviivan ja maan. Kaistaleen mittaaminen vaatii näkymän, jossa se
+ * on kymmeniä pikseleitä leveä — ja zoomaaminen SISÄÄN on juuri se,
+ * mitä erän 2 esto sallii.
+ *
+ * Laatikot ovat laudan yksiköissä (LAUTA-projektio alla).
+ */
+const KAMERAT = {
+  maa: {
+    seloste: 'Ranska ja Belgia (saapumisnäkymää lähempänä)',
+    lon0: 0.5, lat0: 46.2, lon1: 6.2, lat1: 51.6,
+  },
+  meri: {
+    seloste: 'Marseillen edusta: 12 mpk:n kaistale ja avomeri',
+    lon0: 4.6, lat0: 42.1, lon1: 6.0, lat1: 43.5,
+  },
+};
+
+/*
+ * LAUDAN PROJEKTIO ON LUKITTU (leveys 12000, lon0 −175, pohjoinen 76;
+ * tools/generoi-laattapyramidi.mjs LAUTA). Kaava on tässä auki eikä
+ * tuotuna, koska savuke ei saa tuoda pelin karttamoduuleja Node-
+ * puolelle — sivu tuo ne itse. Sama ratkaisu kuin erän 1 savukkeessa.
+ */
+const RAD = Math.PI / 180;
+const SKAALA = 12000 / (2 * Math.PI);
+const millerY = (lat) => -1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * lat * RAD));
+const Y0 = millerY(76);
+const lautaX = (lon) => ((((lon + 175) * RAD) % (2 * Math.PI)) + 2 * Math.PI)
+  % (2 * Math.PI) * SKAALA;
+const lautaY = (lat) => (millerY(lat) - Y0) * SKAALA;
+const laatikkoAsteista = (k) => {
+  const x0 = lautaX(k.lon0);
+  const x1 = lautaX(k.lon1);
+  const y0 = lautaY(k.lat1);
+  const y1 = lautaY(k.lat0);
+  return { x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
+};
 
 const TYYPIT = {
   '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css',
@@ -338,7 +381,9 @@ const mittarit = () => sivu.evaluate(() => {
   if (!m) return null;
   return {
     tila: m.tila, taso: m.taso, syy: m.syy, laattoja: m.laattoja, scenessa: m.scenessa,
-    valmiita: m.valmiita, jumissa: m.jumissa, varillisia: m.varillisia, variMaa: m.variMaa,
+    valmiita: m.valmiita, jumissa: m.jumissa, hapyvia: m.hapyvia,
+    nakyvia: m.nakyvia, nakyviaScenessa: m.nakyviaScenessa,
+    varillisia: m.varillisia, variMaa: m.variMaa,
     kaytetytTavut: m.kaytetytTavut,
   };
 });
@@ -349,7 +394,15 @@ async function odotaLepo(kierroksia = 14) {
     await sivu.evaluate(() => window.matkakirja.ui.pallolauta.lepokerros()?.kokoa?.()); // eslint-disable-line no-await-in-loop
     await sivu.waitForTimeout(1500); // eslint-disable-line no-await-in-loop
     const m = await mittarit(); // eslint-disable-line no-await-in-loop
-    if (m && m.jumissa === 0 && m.valmiita > 0 && m.valmiita >= m.laattoja) return m;
+    /*
+     * LEPO ON KOLME EHTOA: ei jumissa olevia, kaikki valmiita JA
+     * häive perillä. Kesken häivytyksen mitattu pikseli on kahden
+     * kartan sekoitus — ja juuri se teki ensimmäisessä ajossa
+     * avomeren pisteestä eri värin A:ssa ja B:ssä, vaikka piste on
+     * laataston ulkopuolella eikä voi muuttua.
+     */
+    if (m && m.jumissa === 0 && m.valmiita > 0 && m.valmiita >= m.laattoja
+      && m.hapyvia === 0) return m;
   }
   return mittarit();
 }
@@ -366,7 +419,15 @@ async function odotaLepo(kierroksia = 14) {
  * mittauspiste osui saapumiskorttiin ja väite meni läpi myös silloin,
  * kun leikkuri oli rikki). Pallon kangas on karttaruudun lapsi.
  */
-async function mittaaPisteet() {
+async function mittaaPisteet(ryhma) {
+  const kohde = KAMERAT[ryhma];
+  await sivu.evaluate(async (b2) => {
+    await window.matkakirja.ui.pallolauta.kamera.ajaKamera({ bbox: b2 }, { kesto: 0, pakota: true });
+  }, laatikkoAsteista(kohde));
+  await sivu.waitForTimeout(2000);
+  const m = await odotaLepo();
+  tieto(`kamera ${ryhma}`, `${kohde.seloste} · taso z${m?.taso} · scenessä ${m?.scenessa}`
+    + ` · värillisiä ${m?.varillisia} · jumissa ${m?.jumissa}`);
   /*
    * KAIKKI PALLON KANKAAN ULKOPUOLINEN PIILOON MITTAUKSEN AJAKSI.
    *
@@ -438,9 +499,16 @@ async function mittaaPisteet() {
         ulos.push({ ...p, ruudulla: false, syy: `päällä ${ketju.join(' < ') || 'ei mitään'}` });
         continue;
       }
+      /*
+       * MEDIAANI 5 × 5 EIKÄ 9 × 9. Rae ja pigmentti heittelevät
+       * yksittäistä pikseliä kymmenen sävyä, joten mediaani on pakko —
+       * mutta 9 × 9 laitepikseliä on dpr 3:lla kolme css-pikseliä
+       * kumpaankin suuntaan, ja 12 mpk:n kaistaleen mittauksessa se
+       * ulottui rantaviivan yli. 5 × 5 riittää raetta vastaan.
+       */
       const kanavat = [[], [], []];
-      for (let dy = -4; dy <= 4; dy += 1) {
-        for (let dx = -4; dx <= 4; dx += 1) {
+      for (let dy = -2; dy <= 2; dy += 1) {
+        for (let dx = -2; dx <= 2; dx += 1) {
           const d = g.getImageData(x + dx, y + dy, 1, 1).data;
           kanavat[0].push(d[0]); kanavat[1].push(d[1]); kanavat[2].push(d[2]);
         }
@@ -451,8 +519,8 @@ async function mittaaPisteet() {
       });
     }
     return ulos;
-  }, { png: kuva.toString('base64'), pisteet: PISTEET });
-  return { kuva, mittaukset: tulos };
+  }, { png: kuva.toString('base64'), pisteet: PISTEET.filter((p) => p.ryhma === ryhma) });
+  return { kuva, mittaukset: tulos, mitat: m };
 }
 
 /* ---------------- kaksi vaihetta samalla koodipolulla ------------- */
@@ -487,10 +555,17 @@ async function vaihe(vari, tunnus) {
     const p = window.matkakirja.ui.pallolauta.pallo.pointOfView();
     return { lat: Number(p.lat.toFixed(3)), lng: Number(p.lng.toFixed(3)), alt: Number(p.altitude.toFixed(4)) };
   });
-  tieto(`${tunnus} mittarit`, JSON.stringify(mitat));
-  tieto(`${tunnus} kamera`, JSON.stringify(pov));
-  const { kuva, mittaukset } = await mittaaPisteet();
-  return { mitat, pov, kuva, mittaukset };
+  tieto(`${tunnus} mittarit (saapumisnäkymä)`, JSON.stringify(mitat));
+  tieto(`${tunnus} kamera (saapumisnäkymä)`, JSON.stringify(pov));
+  const maa = await mittaaPisteet('maa');
+  const meri = await mittaaPisteet('meri');
+  return {
+    mitat,
+    pov,
+    kuva: maa.kuva,
+    merikuva: meri.kuva,
+    mittaukset: [...maa.mittaukset, ...meri.mittaukset],
+  };
 }
 
 const A = await vaihe(false, 'A (ilman väriä)');
@@ -502,6 +577,7 @@ if (KUVAT) {
   mkdirSync(KUVAT, { recursive: true });
   writeFileSync(join(KUVAT, `varilaatat-pallo-${NIMI}-ilman-varia.png`), A.kuva);
   writeFileSync(join(KUVAT, `varilaatat-pallo-${NIMI}.png`), B.kuva);
+  writeFileSync(join(KUVAT, `varilaatat-pallo-${NIMI}-meri.png`), B.merikuva);
   tieto('kuvat', join(KUVAT, `varilaatat-pallo-${NIMI}*.png`));
 }
 

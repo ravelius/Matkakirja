@@ -8,6 +8,7 @@
  *        [--lohko 4] [--kaariminuutit 1|3] [--korkeuspalat <kansio>]
  *        [--vari <ISO A3>] [--variversio <v>] [--aluevesi 6.7]
  *        [--paletti murrettu|taysvari] [--vesi 0.72] [--feidaus 0.35]
+ *        [--feidausreuna <yksikköä>]
  *        [--laatikkokerroin 1.15] [--ilman-rajausta]
  *        [--muoto webp]
  *        [--harva] [--harvamittaus] [--saumatesti] [--kuiva]
@@ -301,6 +302,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
     + '[--vari <ISO> --variversio <v> [--aluevesi <yksikköä>] '
     + '[--paletti murrettu|taysvari] [--vesi <0..1>] [--feidaus <0..1>] '
+    + '[--feidausreuna <yksikköä>] '
     + '[--laatikkokerroin <k>] [--ilman-rajausta]] '
     + '[--saumatesti [--saumakohta sarake,rivi]]');
   process.exit(1);
@@ -630,6 +632,15 @@ const VARIPALETTI = valitsin('paletti', 'murrettu');
 const VARI_VESI = valitsin('vesi', null) === null ? null : Number(valitsin('vesi', null));
 const VARI_FEIDAUS = Number(valitsin('feidaus', 0.35));
 /*
+ * FEIDAUKSEN HÄIVE LAATASTON REUNALLA lautayksikköinä (mitattu
+ * pilotista 13.9.2026; perustelu tools/fokuskartta/maailmapiirto.js
+ * polttaVariLeikkuri). Oletus on 15 % laatikon lyhyemmästä sivusta:
+ * Ranskalla 70 yksikköä eli runsas 2°, jolloin vaaleneva ala loppuu
+ * vinjettinä eikä vaakasuorana viivana. `--feidausreuna 0` palauttaa
+ * terävän reunan vertailukuvia varten.
+ */
+const VARI_FEIDAUSREUNA_ANNETTU = valitsin('feidausreuna', null);
+/*
  * LAATIKON KERROIN 1,15 ON SAMA LUKU KUIN ULOSZOOMAUKSEN ESTOSSA
  * (js/pallolauta/lauta.js ULOSZOOMAUKSEN_KERROIN), ja se on ehto eikä
  * varmuusvara: feidaus näkyisi suorakaiteena, jos kamera pääsisi
@@ -908,6 +919,7 @@ const kaava = laudanProjektio(projektio);
  */
 let VARI_LEIKKURI = null;
 let VARI_LAATIKKO = null;
+let VARI_FEIDAUSREUNA = 0;
 if (VARITASO) {
   const { maanAluevesiRenkaat, maanLautalaatikko } = await import(`${JUURI}/js/maanaariviivat.js`);
   const polygonit = JSON.parse(
@@ -959,9 +971,14 @@ if (VARITASO) {
     ? [] : maanAluevesiRenkaat(polygonit, VARI_MAA, ALUEVESI_YKSIKKOA);
   let pisteita = 0;
   for (const r of renkaat) pisteita += r.length;
+  VARI_FEIDAUSREUNA = VARI_FEIDAUSREUNA_ANNETTU === null
+    ? Math.round(0.15 * Math.min(VARI_LAATIKKO.w, VARI_LAATIKKO.h))
+    : Number(VARI_FEIDAUSREUNA_ANNETTU);
   VARI_LEIKKURI = VARI_ILMAN_RAJAUSTA ? null : {
     renkaat,
     feidaus: VARI_FEIDAUS,
+    feidausReuna: VARI_FEIDAUSREUNA,
+    laatikko: VARI_LAATIKKO,
     laudanLeveys: polygonit?.lauta?.leveys > 0 ? polygonit.lauta.leveys : 12000,
   };
   console.log(`  väritaso        ${VARI_MAA} · laatikko laudalla `
@@ -969,7 +986,8 @@ if (VARITASO) {
     + `(kerroin ${VARI_KERROIN}, puskuri ${ALUEVESI_YKSIKKOA} yksikköä = 12 mpk) · `
     + `versio ${VARIVERSIO} · polku vari/z<taso>`);
   console.log(`  väripaletti     ${VARIPALETTI} · vesi `
-    + `${VARI_VESI === null ? 'paletin oletus' : VARI_VESI} · feidaus ${VARI_FEIDAUS} · `
+    + `${VARI_VESI === null ? 'paletin oletus' : VARI_VESI} · feidaus ${VARI_FEIDAUS} `
+    + `(häive ${VARI_FEIDAUSREUNA} yks) · `
     + (VARI_ILMAN_RAJAUSTA
       ? 'LEIKKURI POIS (--ilman-rajausta, vastakoe)'
       : `leikkuri ${renkaat.length} rengasta / ${pisteita} pistettä`));
@@ -3250,6 +3268,7 @@ function teeLuettelo() {
         paletti: VARIPALETTI,
         vesi: VARI_VESI,
         feidaus: VARI_ILMAN_RAJAUSTA ? null : VARI_FEIDAUS,
+        feidausReuna: VARI_ILMAN_RAJAUSTA ? null : VARI_FEIDAUSREUNA,
         /*
          * LAATIKON KERROIN ON PELIN JA LAATASTON YHTEINEN EHTO: peli
          * pysäyttää uloszoomauksen samaan kertoimeen
