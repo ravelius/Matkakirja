@@ -185,7 +185,7 @@ import {
   fokusvirtaOhittaaLehden, fokusvirtaSaapuminen, fokusvirtaLukitseeLehden,
   fokusvirtaMatkakirja, fokusvirtaMerkintaLuettu, fokusvirtaLaattaNakyy,
   fokusvirtaLehtivinkki, fokusvirtaSisalto,
-  fokusvirtaHuudahdus, fokusvirtaUusiKulku,
+  fokusvirtaHuudahdus, fokusvirtaUusiKulku, liikuNappiNakyvissa,
   fokusvirtaSaapumiskupla, nollaaFokuskuvat, vaiennaLivianKaupunkipuhe,
   naytaLuentakuvasarja, puraFokusvirtaPaikanvaihdossa,
 } from './fokusvirta.js';
@@ -11236,54 +11236,23 @@ export class UI {
   }
 
   /**
-   * SAAKO LIIKU-NAPPI NÄKYÄ JUURI NYT?
+   * SAAKO LIIKU-NAPPI NÄKYÄ JUURI NYT? — KYLLÄ, AINA.
    *
-   * Omistajan tarkennus 25.8.2026: *"Liiku-nappi EI näy pelin alussa
-   * lainkaan. Se ilmestyy vasta kun maan aarre on löydetty."*
+   * Sääntö itse on js/fokusvirta.js:n `liikuNappiNakyvissa`, jossa myös
+   * sen perustelu ja historia (omistajan linjaus 13.9.2026 kumosi
+   * 25.8.2026 laattaportin: nappi on pysyvä, ei aarteen palkinto).
+   * Tämä metodi jää kytkentäkohdaksi, koska piirraToimintorivi kysyy
+   * sitä nimellä — ja jos linjaus joskus saa ehtoja takaisin, ne
+   * kirjoitetaan yhteen paikkaan eikä kahteen.
    *
-   * MIKSI. Fokusmoodissa kaupunki on tehtävä eikä pysäkki: matkakirja,
-   * pöllön huomio, täky, tietovisa ja lopulta paikallisen esittämä
-   * aarrekysymys (Raamattu, ANNOSTELU ja ETENEMINEN). Liiku-nappi
-   * alarivissä on koko sen ajan ovi ulos, ja aloittava pelaaja lukee
-   * ainoan näkyvän napin ohjeeksi. Kun nappi ilmestyy vasta aarteen
-   * ratkettua, se on palkinto ja lupa jatkaa — juuri se, mitä
-   * ETENEMINEN kuvaa: *"Aarteen jälkeen vapaa tutkinta … tai pelaaja
-   * jatkaa matkaa."*
-   *
-   * MITTA ON LAATTA, SAMA KUIN LEHTILUKOLLA (js/fokusvirta.js
-   * fokusvirtaLukitseeLehden): niin kauan kuin kaupungin laatta on
-   * kääntämättä (game.tokens sisältää sen), aarretta ei ole löydetty.
-   * Kääntyneen laatan alta löytyi mitä tahansa — myös väärä vastaus
-   * päättää vaiheen aikanaan — ja lukko aukeaa lopullisesti.
-   *
-   * UMPIKUJAA EI SYNNY. Nappi on aina näkyvissä silloin kun laattaa ei
-   * ole (kaupunki ilman laattaa, reitin varsi ilman kaupunkia,
-   * fokusmoodi pois, katselutila).
-   *
-   * KEHITTÄJÄTILA EI OLE ENÄÄ POIKKEUS (omistajan pelitesti 25.8.2026:
-   * *"Liiku teksti ei pitäisi vielä näkyä"*). Poikkeus oli tarkoitettu
-   * kaupungista toiseen hyppimiseen, mutta omistaja pelaa
-   * kehittäjätilassa päällä — fokus- ja sumennuskytkimet ovat siinä —
-   * ja poikkeus näytti napin heti pelin alusta juuri sille, jonka
-   * pelikokemusta sääntö suojelee. Sääntö on nyt sama kaikissa
-   * tiloissa: nappi ilmestyy, kun laatta on käännetty. Katselutila
-   * (yllä) riittää yhä kartan vapaaseen tarkasteluun.
-   *
-   * VÄÄRÄ VASTAUS EI LUKITSE KAUPUNKIIN. Laatta jää silloin paikalleen
-   * ja kysymyksen voi yrittää uudelleen (sama sääntö kuin lehtilukolla,
-   * js/fokusvirta.js): laatan napautus avaa tehtävän niin monta kertaa
-   * kuin tarvitaan. Nappi palaa heti kun laatta kääntyy — löytyi sen
-   * alta mitä tahansa.
-   *
-   * ILMESTYMINEN ILMAN SIVUN PÄIVITYSTÄ hoituu itsestään: laatan
-   * kääntävä vastaus kulkee doActionin kautta, ja se piirtää rivin
-   * uudelleen (renderActions) samassa kehyksessä.
+   * TURVARAJAT OVAT MUUALLA EIVÄTKÄ MUUTU: renderActions ei piirrä
+   * riviä lainkaan botin vuorolla eikä vaiheissa 'pickstart', 'move',
+   * 'event', 'quiz' ja 'offer' (saapumiskortti), ja piirraToimintorivi
+   * harmaannuttaa napin, kun matkustustapoja ei ole tai linssikartan
+   * kuori estää (linssikarttaEstaa).
    */
   liikuNappiNakyy() {
-    if (!this.fokusmoodi || this.katselu) return true;
-    const city = this.game.cityOf?.();
-    if (!city) return true;
-    return !this.game.tokens?.has(city.id);
+    return liikuNappiNakyvissa(this);
   }
 
   /**
@@ -11292,10 +11261,11 @@ export class UI {
    *   vasen   Liiku  — monitoiminappi, avaa matkustusnapit
    *   oikea   Tutki  — suurennuslasi, ennallaan
    *
-   * LIIKU ODOTTAA AARRETTA (omistajan tarkennus 25.8.2026): fokusmoodissa
-   * nappia ei ole olemassa ennen kuin kaupungin laatta on käännetty
-   * (ks. liikuNappiNakyy). Rivi voi siis olla hetken tyhjä — se on
-   * tarkoitus, ei virhe: silloin ainoa tarjolla oleva teko on kartalla.
+   * LIIKU EI ODOTA AARRETTA (omistajan linjaus 13.9.2026, kumoaa
+   * 25.8.2026 laattaportin): nappi on pysyvästi paikallaan myös
+   * fokusmoodissa, jotta kevyessä kohteessa — jossa laattaa kääntävää
+   * ketjua ei ole lainkaan — ei synny umpikujaa. Ks. liikuNappiNakyy
+   * ja js/fokusvirta.js liikuNappiNakyvissa.
    *
    * FOKUSNÄKYMÄSSÄ VAIN LIIKU (omistajan pelitestitilaus 24.8.2026
    * illalla). Tutki-napin toiminto siirtyi kaupungin laatan
