@@ -1,8 +1,9 @@
 # Karttauudistus, erä 3 — maan perustiedot ja Lisää-valikko pallolle
 
 *(Opus-työsessio Fablelle 13.9.2026. Haara
-`claude/karttauudistus-era3-maapaneeli`. EI versionostoa, ei
-dist/-committia — tehtävänannon mukaan.)*
+`claude/karttauudistus-era3-maapaneeli`, **PR #2367**
+(https://github.com/ravelius/Matkakirja/pull/2367). EI versionostoa,
+ei dist/-committia — tehtävänannon mukaan.)*
 
 > **Miksi tämä ei ole `docs/viesti-fable.md`.** Sama syy kuin erissä 1
 > ja 2: se polku ei ole Raamatun ohjedokumenttikartalla ja
