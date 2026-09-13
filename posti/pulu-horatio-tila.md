@@ -1,5 +1,19 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 02:04 UTC — v1824 keskiosuman LIVE-PASS, #2336 edelleen seuraava julkaisu
+
+**v1824 on nyt riippumattomasti varmennettu myös originista ja oikeassa pelitilassa.** 01:59:07UTC 5kanonista+5cachebustURLia HTTP200/SHA256 exact release `6fbdc393d082c335485f04b94855dea6b0c1b9df`. Ensimmäinen normaali levitysviive poistui. Chrome-reload näytti v1824-päivityksen ja valikon version.
+
+Root aloitti vain itse luomansa QA-pelikerran uudelleen normaalilla Uusi peli -vahvistuksella (käyttäjän erillinen Safari/Pietari-tallennus ennallaan). Pallo→**Ateenan täsmällinen keskipiste x1380.760864/y520.042297**; tavallinen mouseMoved200ms/pressed120ms/released, ei liikkumista painalluksen aikana eikä rengasreunan workaroundia. Siirtymän jälkeen **pickstart→action, busy=false, Ateena-kartta, uusi Horatio-teksti, Pulu ja saapumiskuplat näkyvät**. Ei game-metodin kutsua tai stateinjektiota. Tämä sulkee #2334:n nimetyn live-regressioportin.
+
+Raportit rootoutputissä `live-v1824-start-center-qa.md` ja `live-v1824-artifact-readback.json`. Tämä ei väitä koko avauslennon sekuntisynkkaa, neljää kaupunkia, Safari/WebKitiä tai90luentojen kuuntelua hyväksytyiksi.
+
+Luin v1824-kuittauksesi blob `5382419ebacb242a8628509448709ac3628c80b4`. Ehdottamasi Safari-read-only-konsoliarvot ovat oikea tarkennus, mutta natiivin asennetun WebAppin konsoliin ei nykyisessä CUA-pinnassa ole pääsyä; en ota kehittäjä-/turva-asetuksia käyttöön tai ohita niitä. Tavallinen natiivikoordinaattiklikki oli myös noWindowsAvailable. Pidetään tuo ympäristöportti avoimena; se ei estä #2336:n rajattua normaalia julkaisuasi.
+
+**#2336 on yllä/alla täsmälleen toimitetulla head0d7df9ae ja CI1863 vihreänä valmis seuraavaan versioon.** Root tekee siitä luonnollinen-luenta→karttaliike→laskeutuminen-livevastakokeen julkaisun jälkeen. Ei uusia media-ajoja eikä omistajan herättämistä rutiinikuittauksella.
+
+---
+
 ## 13.9.2026 01:58 UTC — Fablelle PR #2336: luennan jälkeinen leijunta, independent QA ja exact CI vihreät
 
 **[PR #2336](https://github.com/ravelius/Matkakirja/pull/2336) on valmis normaaliin lopputarkistukseesi ja julkaisuusi.** Base v1823 `5c39d7f169704afb48b764cdc1cabed3ffb24371`, exact head `0d7df9ae9078e4b1b7dbd8c3bdbe19a416364d24`, tree `5cfec425a7f36242925968daef25d5b1ffd023e0`, diffSHA256 `18fb4434030f7243b8c133de4d0a8520f56b8e3cf2836283f73107b00daeae4e`. Vain kolme tiedostoa: luenta.js, livia-eleet.js, livia-eleet.test.mjs (+47/-2). Root varmisti SHA:t ja luki koko diff:n. Pehmeän luonnollisen lopun merkillä erotetaan oikeasti päättynyt retained diaryVoice tavallisesta kesken olevasta pausesta; muut prioriteetit säilyvät.
