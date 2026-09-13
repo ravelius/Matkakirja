@@ -45,7 +45,7 @@ import {
 } from '../fokuskohteet.js';
 import { avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
 import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenSiirto } from '../fokuspiste.js';
-import { fokusvirtaKohtaamispiste } from '../fokusvirta.js';
+import { fokusvirtaAarrepisteOhje, fokusvirtaKohtaamispiste } from '../fokusvirta.js';
 import {
   NOSTOSYM_MINI_RUUTU, NOSTOSYM_NIMIO_KOKO, nostosymNimioAsemointi, nostosymNimioMitta,
   nostosymPaakategoria, piirraNostosymKartalle,
@@ -575,6 +575,14 @@ export function luoNostot({
     // Kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js sääntö).
     const city = game.cityOf?.();
     const piste = city ? fokusvirtaKohtaamispiste(ui, city) : null;
+    /*
+     * PULUN KARTTAOHJE (karttauudistuksen erä 7) lähtee sieltä, missä
+     * pisteen tila lasketaan. Tasokartalla se on js/fokuspiste.js
+     * paivitaFokuspiste; pallo latoo merkkinsä täällä eikä aja tuota
+     * funktiota lainkaan, joten sama kutsu tarvitaan molempiin.
+     * Kertalippu ja ajastin tekevät kutsusta halvan.
+     */
+    fokusvirtaAarrepisteOhje(ui, city);
     if (piste) {
       /*
        * PISTE POIS NAPPULAN ALTA (omistaja 6.9.2026 ilta: *"aarteen
