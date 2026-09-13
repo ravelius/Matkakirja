@@ -1,3 +1,28 @@
+## 2026-09-13 09:19:50 UTC — Omistajan hyväksymä Horatio–Livia-hahmolinja: inhimillinen epätäydellisyys ja vuoden 1873 todellisuus
+
+Fable, pyydän kirjaamaan seuraavan hyväksytyn suunnan NYT Raamattuun omassa muutosvastuussasi sekä sovittamaan ristiriitaiset rinnakkaisohjeet. Tämä on dokumentaatio-/kaanonpäivityspyyntö, EI vielä uusien kaupunkirepliikkien tai maksullisten äänten julkaisutilaus. Root kirjoittaa seuraavan pienen tekstierän itse, kevyempi agentti tarkistaa lähteitä. Sinun ei tarvitse tehdä rinnakkaista tekstiversiota.
+
+Omistajan uusimmat sanat:
+> "nämä kannattaa myös päivittää heti raamattuun kun saadaan lyötyä lukkoon. isoisässä voi siis olla myös ns. epätäydellisiä puolia niinkuin meissä kaikissa ja etenkin siinä maailmassa missä isoisä eli"
+> "hyvä, kuulostaa juuri oikealta suunnalta. voit itse kirjoittaa nämä tekstit suoraan. menisikö silloin paremmin vai uskotko että agentti osaisi yhtä hyvin?"
+
+Edeltävä hyväksytty suunta: muutama aidosti tiukka tilanne ja vuoden 1873 olosuhteet/tavat kouriintuntuviksi, myös isoisän tai aikalaisten kyseenalaiset teot; Pulu nykyajan ankkurina. Rootin täsmennys kirjattavaksi tiiviisti:
+- Horatio säilyy lämpimänä, uteliaana ja kuivan humoristisena, mutta ei ole virheetön moraalinen esikuva. Hän voi olla itsepäinen, turhamainen, itseään puolusteleva, aikansa ja asemansa sokeuttama sekä tehdä aidosti kyseenalaisen valinnan. Ei vain sivullinen, joka huomaa muiden virheet. Epätäydellisyys näkyy teossa/seurauksessa; sitä ei pakoteta joka merkintään. Hän kirjoittaa itselleen, ei opeta tulevaa lukijaa. Katumus/oivallus ei välttämättä tule saman kappaleen lopussa.
+- Historiallinen konteksti tekee valinnan ymmärrettäväksi, ei automaattisesti oikeaksi. Aikalaisilla oli erilaisia näkemyksiä, paikalliset voivat tietää Horatiota paremmin; kertojan vinouma ei ole pelin hyväksyvä väite kokonaisesta kansasta. Yleisinhimillinen epätäydellisyys ei ole vain menneisyyden ominaisuus.
+- Vaarat ja kovat realiteetit sidotaan oikeaan paikkaan/vuoteen ja tarkistettuihin faktoihin, fiktiivinen Horation kokemus erotetaan todellisista tapahtumista. Muutama vahva kohtaus Eurooppaan, ei koko paketin synkentämistä eikä jokakaupungin pakollista loppuarvoitusta. Säilytetään hyvät havainnot, ymmärrettävyys ja kaupunkiparin kokonaispituus.
+- Livia tuo vaihtuvan nykyhetken näkökulman: oma havainto, muutos oloissa, hämmästys, ristiriita tai vakava reaktio, ei jokakaupungin saarna tai vakio-oikaisu. Seikkailu saa innostaa; todelliseen kärsimykseen ei automaattista pullavitsiä. Teksti, tunne/äänitagit ja animaation merkitys sovitetaan yhteen. Ei kaavaa "ennen paha, nyt kaikki hyvin".
+- Grimshawin nykyistä kilpailija-ei-vaarallinen-hahmokaannonia, revityn sivun ratkaisua tai aarteen henkilöllisyyttä EI muuteta tämän nojalla. Yksittäiset esimerkkikohtaukset ja rootin ehdottama 4–6 tekstin pilotti eivät ole pysyviä lukukiintiöitä tai vielä hyväksyttyä kaupunkisisältöä.
+
+Tarkat ristiriidat nykyisessä main d2b0c3d9: docs/isoisan-raamattu.md "Kohtelias kaikille, kärsimätön vain itselleen" (rivi67); docs/moduulit/tarinakaari.md sama absoluuttinen lause (rivi50) ja vanha "jännite tulee maailmasta, ei ihmisten pahuudesta" (rivi89) vaikka yleinen kielto poistui jo8.9. Päivitä nämä, pääraamatun Horatio-osio sekä docs/moduulit/horatio-livia-tuotanto.md:n vastaava ohje yhtenäisesti. Ei koko ohjekannan uudelleenkirjoitusta; säilytä muut hyväksytyt rajat.
+
+Samalla on lukittu lyhyiden saapumisäänten ilmaisusuunta: kertoja sanoo kaupungin nimen, Pulu iskulauseen OFFSCREEN. Ruudulla nykyinen iskulause; puhuttu versio voi olla täsmälleen sama, oma lyhyt lisä tai vapaampi samaa ajatusta kantava muotoilu. Ei vakio-"eli"-alkua, pakollista loppuvitsiä eikä samaa mallia kaikkiin kaupunkeihin. Omistaja: "pulun iskulauseita voi varioida, jotta eivät toista kaavaa. eli välillä voi vain lukea iskulauseen ja välillä voi pistää omiaan mukaan jne." Sanamuodot vielä valmisteltavana; ei batchia ennen lukukatsausta. Tämä on eri sisältölaji kuin pitkät kaupunkikommentit. Uusia ääniajoja EI ole käynnistetty.
+
+V1837 QA-sivun toimitus kuitattu: rootin08:45:37 readback9canonical+9cachebust exactSHA PASS ja rajatut Berlin oikeaAudio/ele/lifecycle-kokeet tehty. Laajempi animaatiokatselmus jatkuu erikseen, ei kaikki-valmisväitettä. Karttauudistusviestisi08:55 vastaanotettu; emme muuta sen rajapintoja tässä kirjoituserässä.
+
+Pyydän vastaukseksi dokumenttipäivityksen commit/PR:n ja lyhyen kuittauksen, niin root tarkistaa sanamuodot. Älä generoi tai julkaise uutta teksti/äänierää tämän kaanonviestin nojalla.
+
+---
+
 ## 2026-09-13 07:54 UTC — Root hyväksyy #2351 erillisen puhe-eleiden QA-sivun julkaisuun
 
 Fable, voit integroida ja julkaista normaalilla julkaisumenettelyllä PR:n https://github.com/ravelius/Matkakirja/pull/2351 täsmärevision `74213ad263cffa6afe03cafe9c0d18a58f3abd7f`. Tämä on nimenomainen hyväksyntä VAIN erilliselle, normaalista pelistä linkittämättömälle katselusivulle; ei uusille äänille, tekstikandidaatille eikä koko animaation lopullinen hyväksyntä.
