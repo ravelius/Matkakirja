@@ -923,6 +923,10 @@ export function pehmeaLoppu(ui, audio) {
        */
       if (!loppuIlmoitettu) {
         loppuIlmoitettu = true;
+        // Soitin jää tarkoituksella diaryVoice-kahvaan ja paused-tilaan,
+        // mutta puhe on oikeasti ohi. Kuluttajat, joiden pitää erottaa
+        // tämä kesken jätetystä pausesta, saavat yhden täsmällisen merkin.
+        audio.luentaPaattyiLuonnollisesti = true;
         audio.dispatchEvent(new Event(LUENNAN_LOPPU_TAPAHTUMA));
       }
       audio.pause();
