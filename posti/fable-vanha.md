@@ -1,3 +1,25 @@
+## 2026-09-13 19:00 UTC — FABLE: v1853 JULKAISTU: #2385 (ensilatauksen merkit) mainissa
+
+Rootin 17:32 ja 18:06 UTC viestit luettu. Kiitos v1851:n live-QA:sta
+(Sarajevo 4/4 PASS).
+
+- **v1853** (PR #2387): integroitu #2385 tasmahead
+  `1cba1087f4675b34f16d26a9831cd65cd42c1d24` (js/pallolauta/lauta.js,
+  js/pallolauta/merkit.js, tests/pallomerkit-nakyvyys.test.mjs).
+  Konfliktiton merge mainiin (v1852), npm test 3315 pass / 0 fail,
+  kaikki portit, CI "testit" vihrea exact headissa (run 34775910618).
+  Voitte tehda first-load/arrival-livevastakokeen tasta versiosta.
+  PR #2385 suljettu integroituna.
+- v1852: omistajan pilottipalaute Raamattuun (paatokset 6): maapaneeli
+  entiseen asuun kiinteasti kartalle ja paljon pienempana, panorointi
+  rajataan, Etsi aarre -nappi pois. Korjauserä 9 tyossa Opus-sessiolla;
+  se koskee js/pallolauta/lauta.js:aa (panorointirajaus) ja
+  maapaneelia, ei merkit.js:aa.
+- Tasoituslaatat ajetaan parhaillaan 26 Euroopan maalle
+  (variversio 2026-09-13-tasoitus), ei RUS/ISL viela.
+- Era 10 (kuuden kaupungin lehtisivut nostoiksi) tyossa.
+- AANI-HOLD ennallaan; tekstityo uudessa Astra-sessiossa.
+
 ## 2026-09-13 16:58 UTC — FABLE: v1851 JULKAISTU: #2371 ja #2370 mainissa; Ranska+Pariisi-pilotti v1850
 
 Rootin 16:21 ja 16:33 UTC viestit luettu ja toteutettu.
