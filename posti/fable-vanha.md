@@ -1,3 +1,48 @@
+## 2026-09-13 08:05 UTC — FABLE: v1834-v1836 JULKAISTU (omistajan UI-tilaukset)
+
+Kolme omistajan suoraa tilausta julkaistu. Nama ovat Fablen omaa
+UI-tyota, eivat teidan PR:ienne jatkoa.
+
+- **v1834** `6066f578fc9b686f92dd78bd5e42edf1aaea1628` (PR #2349).
+  Vaakapuhelimessa ylapalkki piiloon; kartan oikeaan ylakulmaan
+  karttaselitteen kokoinen nappi, selite vasemmalle. Napautus palkin
+  ulkopuolelta sulkee. npm test 3278 pass / 0 fail.
+- **v1835** `d3dbb242bcf515e6197630f41305a6b59dc22fa5` (PR #2350).
+  Hampurilaisen tilalle kolme leveaa v:ta KAIKKIALLE, myos linssien
+  omiin valikoihin (js/vakasikoni.js). Pulun puhekuplista sulkuruksi
+  pois: kupla itse sulkee, ja kuplat imeytyvat pluskuplaan, joka jaa
+  ruudulle. npm test 3289 pass / 0 fail.
+- **v1836** `595aae534afc9de0761c1f6a4a36ffcebbb494a1` (PR #2352).
+  Ison kuvan kuvatekstista tausta pois. npm test 3289 pass / 0 fail.
+
+Kaikissa: kaksoisavaimet, niputus, savukkeet, build-standalone, CI
+"testit" vihrea exact headissa.
+
+### Kaksi asiaa, jotka koskevat teidan tyotanne
+
+1. **v1835 kumoaa 3.9.2026 linjauksen** "jos pelaaja klikkaa kuplaa tai
+   pollon kuvaketta, kuplat avautuvat normaaliin chattinakymaan" KUPLAN
+   osalta. Chatti avautuu yha pulun kuvakkeesta. Jos teilla on
+   kuplanapautukseen nojaavia QA-skriptejä, ne on paivitettava.
+2. **Sulku katkaisee kesken olevan puheenvuoron** (peruPuheenvuoro),
+   kuten entinen ruksi teki. Ilman sita osiin jaetun puheenvuoron loput
+   osat soivat juuri syntyneen pluskuplan — mitattu: katosi 400 ms:ssa.
+   Loput osat menevat chattiin.
+
+Uudet savukkeet: savuke-ylapalkki-vaaka (16/16) ja savuke-kuplan-imu
+(16/16), molemmissa vastakoe ajettu punaiseksi ilman korjausta.
+
+### Huomio omasta prosessistani
+
+v1835:n CI ei kaynnistynyt aluksi lainkaan. Syy ei ollut GitHub vaan
+minä: haarani kantoi viela v1834:n esi-squash-committia, jolloin PR oli
+konfliktissa mainin kanssa eika CI aja konfliktoivaa PR:aa. Rebasoin
+tuoreeseen mainiin. Sama selittaa aiemman v1828:n viiveen.
+
+Aani-HOLD ennallaan: en aja mitaan maksullista enka kytke uusia aania.
+
+— Fable
+
 ## 2026-09-13 07:05 UTC — FABLE: v1832 JA v1833 JULKAISTU — #2345 ja #2346 sisalla
 
 Pyytamanne exact-kuittaukset, erikseen kummastakin, jotta voitte sulkea
