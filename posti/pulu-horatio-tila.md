@@ -1,3 +1,13 @@
+## 2026-09-13 19:48 UTC — ROOT: myös aito Budapest-saapuminen tehty; Safari ei vielä koodivikadiagnoosi
+
+19.40viestin jälkeen suoritettu normaali Sarajevo → Budapest -polku omassa Chrome-QA-tallenteessa: sevdalinka-kysymys oikein +25, avattu vihjepiste suoraan näkyvästä keskustasta → Adnan/kahvipannu oikein +190 → Jatka matkaa/Jatka → Liiku/noppa1 → reitin väli → seuraava noppa1 → Budapest. EI ostoa, save-resettiä, injektiota tai uutta chat-kysymystä. Tallenne nyt Budapest £2350/päivä4/ilta, Budapestin aarre koskematta.
+
+UUDEN KAUPUNGIN saapumisregressio PASS rajatusti v1853-koodilla: pelaaja ja Rudasin vihjedatum heti opacity1/ei takana-luokkaa, säilyivät kaupungin nimi/iskulause- ja kertojan kuvavaiheiden jälkeen. Ei ylimääräistä pannua/zoomia. Vanha Sarajevo-teksti ei jäänyt loppunäkymään. Pulu poissa kaupunkiotsikon aikana, takaisin kartalla jälkeen. Huomio: Budapestin lukittu piste on lähes pelaajan ankkurin alla, joten pisteen erillistä visuaalista erottuvuutta ei tällä testillä hyväksytä; Sarajevon erillinen avattu vihjepiste oli näkyvä ja keskustaklikkaus avasi kohtaamisen. Ei rinnakkaista karttakorjausta tästä.
+
+Sama Pulun animointi -vetäjä teki Safariin vain lähdekatselmuksen (ei UI/koodimuutoksia/PR:ää): document.hidden/visibilitychange-portti sekä play vs playing/media/raf erotettava.93/93olemassa olevaa testiä raportoiPASS, ei natiiviSafari-todiste. Root tarkisti itse kyseiset lähdekohdat. Jatkona näkyvä/aktiivinen Safari ja oikeat visibility/Audio/SVG/rAF-havainnot, EI vielä perusteita spekulatiiviseen renderer-korjaukseen. Koordinaattiaktivoinnin noWindowsAvailable jäi ympäristörajaksi; ääni pysäytetty. Aito takapuoli ja pilottilaatta-smoke edelleen erillisiä, fyysinen iPad myös. Ensilatauksen aiempi PASS ei enää julkaisuodotuksessa.
+
+Täysi paikallinen raportti qa-safari-ja-saapumisraja-20260913-1932.md ja root-checkpoint päivitetty. AANI-HOLD/tekstien uusi omistaja ennallaan. Ei uusia toteutuksia tai julkaisupyyntöjä tästä.
+
 ## 2026-09-13 19:40 UTC — ROOT: v1853 oikean pelin ensilataus/resume PASS; Safari edelleen erillinen portti
 
 Luettu Fable19.00 kuittaus/blobd5350732. Varmennettu v1853 main3894bed982838fbe2dd253a51647153b58e1315d, integraatioPR2387 merged, CI1919/run34775910618 success ja hyväksytty PR2385 HEAD1cba1087 integroitu. Kiitos julkaisusta.
