@@ -46,7 +46,10 @@
  * aina samaa mieltä siitä, onko kohtaaminen auki.
  */
 import { el, maare } from './mapart.js';
-import { avaaFokusKohtaaminen, fokusvirtaKohtaamispiste } from './fokusvirta.js';
+import {
+  avaaFokusKohtaaminen, fokusvirtaAarrepisteLukko, fokusvirtaAarrepisteOhje,
+  fokusvirtaKohtaamispiste,
+} from './fokusvirta.js';
 import { sfx } from './sound.js';
 
 /** Osuma-alueen säde ruudun pikseleinä (44 px läpimitta). */
@@ -148,6 +151,20 @@ function lataaPisteTyyli() {
  */
 export function avaaFokuspiste(ui, city) {
   if (ui.busy) return false;
+  /*
+   * LUKKO VASTAA, EI KOHTAAMINEN (karttauudistuksen erä 7, 13.9.2026).
+   * Piste on kartalla myös ennen kuin sen saa yrittää
+   * (js/fokusvirta.js fokusvirtaKohtaamispiste `lukittu`), ja silloin
+   * napautus kertoo lyhyesti, mitä puuttuu. Ehto luetaan samasta
+   * paikasta kuin piirto, joten himmeä piste ja vastaus eivät voi olla
+   * eri mieltä. Ääni on sama napautusääni molemmissa: pelaaja sai
+   * kosketuksestaan kuittauksen, vaikka ovi ei auennut.
+   */
+  if (fokusvirtaKohtaamispiste(ui, city)?.lukittu) {
+    sfx.play('popup');
+    fokusvirtaAarrepisteLukko(ui);
+    return false;
+  }
   sfx.play('popup');
   return avaaFokusKohtaaminen(ui, city);
 }
@@ -159,8 +176,12 @@ export function avaaFokuspiste(ui, city) {
  * svg:hen; osuma on siellä pallon oma (R-malli). Tyyli ladataan
  * samalla, jotta merkki ei jää ilman tuikettaan.
  */
-export function fokuspisteKuvio(g) {
+export function fokuspisteKuvio(g, { lukittu = false } = {}) {
   lataaPisteTyyli();
+  // Lukko on yksi luokka samaan merkkiin (css/fokusvirta.css
+  // .fokuspiste-lukittu): himmennys ja tuikkeen sammutus, ei toista
+  // kuviota — pelaajan on tunnistettava sama piste ennen ja jälkeen.
+  if (lukittu) g.classList.add('fokuspiste-lukittu');
   el('circle', { class: 'fokuspiste-hehku', r: PISTE_HEHKU_R }, g);
   el('circle', { class: 'fokuspiste-keha', r: PISTE_KEHA_R }, g);
   el('circle', { class: 'fokuspiste-ydin', r: PISTE_YDIN_R }, g);
@@ -181,8 +202,8 @@ function varmistaPistekerros(ui) {
 }
 
 /** Yksi merkki: näkymätön osuma-alue, kaksi hehkukehää ja ydin. */
-function piirraPiste(ui, ryhma, city, nimi, teko = 'tapaa paikallinen') {
-  const g = el('g', { class: 'fokuspiste' }, ryhma);
+function piirraPiste(ui, ryhma, city, nimi, teko = 'tapaa paikallinen', lukittu = false) {
+  const g = el('g', { class: `fokuspiste${lukittu ? ' fokuspiste-lukittu' : ''}` }, ryhma);
   g.setAttribute('role', 'button');
   g.setAttribute('tabindex', '0');
   // Teko tulee datasta: sähkekaupungissa pisteen takana ei ole ketään
@@ -218,12 +239,24 @@ function piirraPiste(ui, ryhma, city, nimi, teko = 'tapaa paikallinen') {
  */
 export function paivitaFokuspiste(ui) {
   if (typeof document === 'undefined') return;
+  const nykyinen = ui.katselu ? null : ui.game?.cityOf?.();
+  /*
+   * PULUN KARTTAOHJE (erä 7) LÄHTEE TÄSTÄ, EI SAAPUMISKETJUSTA.
+   * Ohje puhuu lukitusta pisteestä, joten se kuuluu sinne, missä
+   * pisteen tila lasketaan — ja tulee silloin annetuksi juuri siinä
+   * ensimmäisessä kaupungissa, jossa lukittu piste on kartalla.
+   * Kutsu on halpa: kertalippu ja ajastin sulkevat sen heti
+   * (js/fokusvirta.js fokusvirtaAarrepisteOhje).
+   */
+  fokusvirtaAarrepisteOhje(ui, nykyinen);
   const kerros = varmistaPistekerros(ui);
   if (!kerros) return;
-  const city = ui.katselu ? null : ui.game?.cityOf?.();
+  const city = nykyinen;
   const piste = city ? fokusvirtaKohtaamispiste(ui, city) : null;
+  // Lukko kuuluu avaimeen: sen avautuminen on ainoa muutos, joka ei
+  // siirrä pistettä eikä vaihda kaupunkia (erä 7).
   const avain = piste
-    ? `${ui.game.pack.id}:${city.id}:${piste.x}:${piste.y}`
+    ? `${ui.game.pack.id}:${city.id}:${piste.x}:${piste.y}:${piste.lukittu ? 'lukko' : 'auki'}`
     : 'tyhja';
   if (ui.fokuspisteAvain !== avain) {
     ui.fokuspisteAvain = avain;
@@ -241,7 +274,7 @@ export function paivitaFokuspiste(ui) {
       for (const x of ui.kiertoKohdat?.(piste.x) ?? [piste.x]) {
         const ryhma = el('g', { class: 'fokuspiste-ryhma' }, kerros);
         ui.fokuspisteRyhmat.push({ g: ryhma, x: x + sx, y: piste.y + sy });
-        piirraPiste(ui, ryhma, city, piste.nimi, piste.teko);
+        piirraPiste(ui, ryhma, city, piste.nimi, piste.teko, piste.lukittu);
       }
     }
   }
