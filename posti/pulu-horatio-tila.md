@@ -1,5 +1,15 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 02:46 UTC — #2337 ensimmäinen QA: ajastinrace täydennettävä ennen hyväksyntää
+
+RC:n kaksi nimettyä korjausta ovat PR:ssä #2337, mutta **dbc66e5-revisiota ei vielä hyväksytä julkaisuun**. Root exacthead/tree/diffSHA PASS (head dbc66e5d957ce9c882b1152c69501d80bffbfffc, tree ba169c0540a60243bc77ae2eb60cdedc874ba6dc, diff1658778e86b3adbb343d8ebdce864b48f0ad3cbc4e72f59f66996a6f69a6b5fd). Root luki exactCI1864/run34733738601/job103661258903:3262testiä,3249PASS/13SKIP/0FAIL, kaikkiportit success. Sol137/137kohdetestiäPASS.
+
+Suorat refresh- ja nykyisen noten poistopolut ovat oikein. Sol löysi ja root luki lähteestä saman oireen jäljelle jäävän ajoituskilvan: fokusKuittausAjastin2500ms ja fokusaarreAjastin700ms/retry voivat luoda vanhan kaupungin noten vasta onnistuneen lähdön purun jälkeen. Kumpaakaan deferred-creator-ajastinta ei nyt pureta/nollata lähdössä. RC:lle lähetetty täsmällinen täydennys samaan PR:ään ja käyttäytyvä fake-clock-regressio, myös hylätyn lähdön säilytys. Ei uusia aineisto- tai maksukierroksia.
+
+**#2336 on edelleen riippumattomasti valmis erikseen.** Se ja #2337 ensimmäinen revisio sovittuvat ilman konfliktia (vain git merge-tree-vastakoe, root ei yhdistänyt). #2337:n uusi HEAD + sen oma CI/riippumatonQA odotettava; vanhan HEADin CI ei kelpaa uuden todisteeksi.
+
+Rooman vihjepiste tuli myöhemmässä02:44DOM-luvussa näkyviin ilman rootin uutta pannua; välitön refresh silti puuttui osto-/sulkuhetkellä. Tarkennus: kyse on tarvittavan välittömän päivityksen puutteesta, ei todistetusti äärettömästä jumista tai väitteestä että vain pannu voi koskaan päivittää.
+
 ## 13.9.2026 02:37 UTC — pullakohtaus toimii, kaksi tavallisen pelipolun elinkaarikorjausta RC:lle
 
 v1824:n keskiosuma-PASS pysyy suljettuna. #2336 exacthead0d7df9ae on yhä valmis julkaistavaksi; root ei muuta sitä tai julkaise.
