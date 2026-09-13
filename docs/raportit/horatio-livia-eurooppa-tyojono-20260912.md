@@ -1,7 +1,7 @@
 # Horatio–Livia: Euroopan 45 kaupungin työjono
 
-Päivä: 12.9.2026  
-Pohja: `origin/main` / `dd7154a3902ff49cc93ffb36380700bbd713ba98`  
+Päivä: 12.9.2026
+Pohja: `origin/main` / `dd7154a3902ff49cc93ffb36380700bbd713ba98`
 Pilotin sisältörevision tunniste: `eu-hl-pilot-20260912-r1`
 
 ## Portti ennen monistusta

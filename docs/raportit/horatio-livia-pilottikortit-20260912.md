@@ -1,11 +1,11 @@
 # Horatio–Livia: Euroopan yhteiset pilottikortit
 
-Päivä: 12.9.2026  
-Sisältörevision tunniste: `eu-hl-pilot-20260912-r1`  
-Pohja: `origin/main` / `dd7154a3902ff49cc93ffb36380700bbd713ba98`  
-Teksti- ja korttiomistaja: Codex-tekstivetäjä  
-Animaatiototeutus: Codex-animaatiovetäjä  
-Kuvat, manifestit ja visuaalinen QA: Codex-kuvavetäjä  
+Päivä: 12.9.2026
+Sisältörevision tunniste: `eu-hl-pilot-20260912-r1`
+Pohja: `origin/main` / `dd7154a3902ff49cc93ffb36380700bbd713ba98`
+Teksti- ja korttiomistaja: Codex-tekstivetäjä
+Animaatiototeutus: Codex-animaatiovetäjä
+Kuvat, manifestit ja visuaalinen QA: Codex-kuvavetäjä
 Kaanon, ääniajot, integraatio ja julkaisu: Fable
 
 Tämä on yksi yhteinen pilotti, ei neljä irrallista sisältösarjaa. Marseille

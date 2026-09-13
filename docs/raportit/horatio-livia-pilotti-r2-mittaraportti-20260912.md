@@ -3,7 +3,7 @@
 Sisältörevisio: `eu-hl-pilot-20260913-r2-approved1`
 Vertailurevisio: julkaistu nykykaanon, `origin/main`
 `079284e1cf09f650ed7e5f3d54f54c4e3da933b1` (v1819); neljän kaupungin
-tekstipakit ovat muuttumattomat aiemmasta `dd7154a`-vertailusta  
+tekstipakit ovat muuttumattomat aiemmasta `dd7154a`-vertailusta
 Tila: sanat hyväksytty tekniseen RC-jatkotyöhön; ei audio-, kuva- tai julkaisuvaltuutta
 
 R1 säilyy muuttamattomana rinnakkaisena luonnoksena tiedostossa
