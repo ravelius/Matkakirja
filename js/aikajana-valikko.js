@@ -46,6 +46,7 @@
  */
 
 import { el } from './mapart.js';
+import { VAKASIKONIN_POLUT } from './vakasikoni.js';
 import { asetaLuentaKytkin, luentaKytkinPaalla } from './luenta.js';
 import { asetaMusiikkiPaalla, musiikkiPaalla } from './musiikkivalitsin.js';
 import { pysaytaLinssiluenta } from './linssipuhe.js';
@@ -65,14 +66,18 @@ function solmu(tag, luokka, teksti) {
 }
 
 /**
- * Kolme viivaa samalla kynällä kuin Matkakirjan päävalikossa
- * (index.html #menu-btn). Rakennetaan solmuina eikä innerHTML:llä,
- * jotta sama koodi kelpaa myös tynkäselaimen testeissä.
+ * Kolme leveää v:tä samalla kynällä kuin Matkakirjan päävalikossa
+ * (index.html #menu-btn) ja vaakapuhelimen yläpalkkinapissa — polut
+ * tulevat yhteisestä js/vakasikoni.js:stä. Rakennetaan solmuina eikä
+ * innerHTML:llä, jotta sama koodi kelpaa myös tynkäselaimen
+ * testeissä.
  */
 function viivaIkoni() {
   const kuori = solmu('span', 'viiva-ikoni');
   const svg = el('svg', { viewBox: '0 0 24 24' });
-  el('path', { d: 'M4.5 7h15M4.5 12h15M4.5 17h15' }, svg);
+  for (const d of VAKASIKONIN_POLUT) el('path', { d }, svg);
+  // Terävä kärki näyttäisi eri paksuiselta kuin viivan muu osa.
+  svg.setAttribute('stroke-linejoin', 'round');
   svg.setAttribute('aria-hidden', 'true');
   kuori.appendChild(svg);
   return kuori;
