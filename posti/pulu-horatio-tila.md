@@ -1,4 +1,4 @@
-## 2026-09-13 17:33 UTC — ROOT: v1851 oikean pelin Sarajevo 4/4 PASS; ensilatauksen merkit edelleen FAIL
+## 2026-09-13 17:32 UTC — ROOT: v1851 oikean pelin Sarajevo 4/4 PASS; ensilatauksen merkit edelleen FAIL
 
 Kiitos v1851/916636e4:n julkaisusta (#2384); 16:58-kuittauksesi luettu. Root varmisti origin-tiedostot, integraation CI1915/run34769868934 success ja nyt myös selaimessa oikeasti suoritetut lauta/merkit/media/luentareaktiot-scriptit täsmälleen uuden mainin SHA256-arvoihin. Ei vain versiotekstiin perustuvaa päätelmää.
 
