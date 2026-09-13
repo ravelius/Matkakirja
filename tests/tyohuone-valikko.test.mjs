@@ -18,8 +18,7 @@
  *      #raamattu-lehti-btn ja #kehittajalehti-btn, ja js/main.js
  *      kytkee molemmat omaan avaukseensa.
  *   3. SEITSEMÄN RIVIÄ AVAA OIKEAN LEHDEN. Kehittäjälehden rivit
- *      piirretään pienellä DOM-mallilla (sama tapa kuin
- *      tests/etsi-aarre-nappi.test.mjs) ja jokaista napautetaan:
+ *      piirretään pienellä DOM-mallilla ja jokaista napautetaan:
  *      rivin on kutsuttava täsmälleen omaa avaustaan.
  */
 import test from 'node:test';

@@ -214,8 +214,7 @@ body.aikajana-paalla .pallolauta-nappula { display: none; }
  */
 body.aikajana-paalla .fokusvirta-luentakuva,
 body.aikajana-paalla .fokusvirta-luentakuva-ankkuri,
-body.aikajana-paalla .fokuszoom,
-body.aikajana-paalla .etsi-aarre-ankkuri { display: none; }
+body.aikajana-paalla .fokuszoom { display: none; }
 
 /* ───────────────────────────────── yläpalkki ─────────────────────── */
 

@@ -418,9 +418,9 @@ export function luentakuvanSijainti({
  *
  * Kuvan paikka EI ole ruutupiste vaan LAUDAN piste: kartan panorointi
  * ja zoomi siirtävät kuvaa kartan mukana, ja raahaus vaihtaa ankkurin
- * uuteen kartan kohtaan. Muunnos on sama kaava kuin Etsi aarre
- * -napilla ja pulun paikkamerkillä (js/etsi-aarre-nappi.js
- * ruutupaikka), tässä molempiin suuntiin ja ilman DOMia.
+ * uuteen kartan kohtaan. Muunnos on sama kaava kuin pulun
+ * paikkamerkillä (js/pulu-paikka.js), tässä molempiin suuntiin ja
+ * ilman DOMia.
  *
  *     ruutuX = paneW/2 + (lautaX − keskus.x) · skaala
  *

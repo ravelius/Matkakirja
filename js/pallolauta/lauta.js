@@ -1875,8 +1875,8 @@ export async function avaaPallolauta(ui) {
        * seuraa pistettään, kun pallo pysähtyy (ladoLevossa).
        *
        * VANHA OVI JÄÄ RINNALLE (tehtävänanto): kaupunkilehti avataan yhä
-       * `ui.avaaTutkinta`lla — kartan "Etsi aarre" -napista, fokusvirrasta
-       * ja pop-upin omasta alarivistä. Tätä haaraa ei siis pureta vielä.
+       * `ui.avaaTutkinta`lla — fokusvirrasta ja pop-upin omasta
+       * alarivistä. Tätä haaraa ei siis pureta vielä.
        */
       if (Number.isFinite(k.lat) && Number.isFinite(k.lon)) {
         avaaKaupunkipopup(ui, city, { ankkuri: ankkuri(k.lat, k.lon) });

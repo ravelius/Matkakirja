@@ -11210,17 +11210,19 @@ export class UI {
   /**
    * TUTKI-TOIMINTO YHTENÄ KAPPALEENA.
    *
-   * Sama teko kolmesta paikasta: alarivin Tutki-nappi (fokusmoodin
-   * ollessa pois), fokusnäkymän kaupunkilaatan napautus ja kartan
-   * "Etsi aarre" -nappi (js/etsi-aarre-nappi.js). openArrival
+   * Sama teko kahdesta paikasta: alarivin Tutki-nappi (fokusmoodin
+   * ollessa pois) ja fokusnäkymän kaupunkilaatan napautus. openArrival
    * ratkaisee lopun — fokusvirran avaus tai paluu nykyvaiheeseen, ja
    * virran ohitettua saapumiskortti, josta laatan kääntö alkaa
    * (fokusvirtaOhittaaLehden).
    *
-   * `ohitaLehtilukko` on kartan napin oma reitti: se on aarteen
-   * etsinnän ENSIMMÄINEN askel (omistaja 9.9.2026), joten lehti on
-   * sille auettava vaikka fokusvirta pitäisi lehtilukkoa kiinni.
-   * Lukko itse jää paikalleen kaikkiin muihin avauskohtiin.
+   * `ohitaLehtilukko` JÄÄ KYTKENTÄKOHDAKSI, vaikka sen ainoa käyttäjä
+   * — kartan "Etsi aarre" -nappi — poistettiin karttauudistuksen
+   * erässä 9 (omistaja 13.9.2026: *"Ota Etsi aarre nappi pois."*).
+   * Lukko itse on purettu (fokusvirtaOhittaaLehden palauttaa aina
+   * false), joten lippu on varalla siltä varalta, että lukko kytketään
+   * takaisin päälle — ei kuollutta polkua vaan sama kytkin kuin
+   * openArrivalissa.
    */
   avaaTutkinta(city = this.game.cityOf(), { ohitaLehtilukko = false } = {}) {
     if (!city) return;
@@ -13852,12 +13854,12 @@ export class UI {
    *
    * TÄMÄ ON AARREKYSYMYS, EI LEHTI. Kutsu sulkee lehden ja menee
    * suoraan tietovisaan/kohtaamiseen (doAction → game.actionQuiz).
-   * Siksi KARTAN "Etsi aarre" -nappi EI kutsu tätä (omistaja 9.9.2026,
-   * Raamattu ETSI AARRE -NAPPI AVAA KAUPUNKILEHDEN, EI AARRETTA
-   * SUORAAN: *"sen pitäisi avata siis kaupunkilehti, eikä mennä
-   * suoraan aarteeseen"*) vaan avaa kaupunkilehden etusivun
-   * (avaaTutkinta). Aarteen etsinnän kulku on siis: kartan nappi →
-   * kaupunkilehti → lehdestä löytyvä aarrekysymys → tämä metodi.
+   * Kartalla aarteen ovi on VIHREÄ PISTE (erä 7, js/fokuspiste.js), ei
+   * tämä metodi: piste vie laattakysymykseen ja kaupunkilehti avataan
+   * laatan napautuksesta (avaaTutkinta). Aarteen etsinnän kulku on
+   * siis: vihreä piste (tai kaupunkilehdestä löytyvä aarrekysymys) →
+   * tämä metodi. Erään 9 asti tässä oli kartan "Etsi aarre" -nappi,
+   * joka avasi kaupunkilehden; omistaja poisti sen 13.9.2026.
    */
   etsiKatko() {
     // Tutki paikka vie tietovisaan: tauolle jäänyt luenta ei saa
