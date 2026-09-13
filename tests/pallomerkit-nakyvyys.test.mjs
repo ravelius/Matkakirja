@@ -131,6 +131,41 @@ for (const [nimi, siirtyma] of [['tavallinen', 250], ['reduced motion', 0]]) {
     assert.equal(e.kameraKutsuja(), 0, 'korjaus ei lue eikä muuta kameraa');
     tahdistus.pura(); e.merkit.pura();
   });
+
+  test(`first-load/arrival tahdistaa etu/taka-tilan vasta kamera-ajon jälkeen: ${nimi}`, async (t) => {
+    const e = ymparisto(t, siirtyma);
+    e.merkit.paivita({ nappula: { x: 0, y: 0 }, kohteet: [
+      { key: 'uusi', x: 1, y: 1 },
+      { key: 'taka', x: 2, y: 2 },
+    ] });
+    e.puraPaivitysjono();
+    for (const d of e.data()) d.el.classList.add('pallolauta-takana');
+
+    const framet = new Map(); let id = 0;
+    const tahdistus = luoMerkkienNakyvyysTahdistus({
+      paivita: e.merkit.tahdistaNakyvyys,
+      requestFrame: (fn) => { framet.set(++id, fn); return id; },
+      cancelFrame: (avain) => framet.delete(avain),
+    });
+    let kameraValmis;
+    const kameraAjo = new Promise((valmis) => { kameraValmis = valmis; });
+    const saapuminen = tahdistus.kameranJalkeen(kameraAjo);
+    assert.equal(framet.size, 0, 'näkyvyyttä ei lasketa kesken kamera-ajon');
+    kameraValmis('perillä');
+    assert.equal(await saapuminen, 'perillä');
+    assert.equal(framet.size, 1, 'kameran maali ajoittaa yhden invalidoinnin');
+
+    [...framet.values()][0](); framet.clear();
+    e.puraPaivitysjono();
+    e.piirraHeraamisenFrame();
+    const merkit = Object.fromEntries(e.data().map((d) => [d.avain, d.el]));
+    assert.equal(merkit.nappula.classList.contains('pallolauta-takana'), false);
+    assert.equal(merkit['kohde:uusi'].classList.contains('pallolauta-takana'), false);
+    assert.equal(merkit['kohde:taka'].classList.contains('pallolauta-takana'), true,
+      'aidosti takapuolinen merkki säilyy piilossa myös saapumisessa');
+    assert.equal(e.kameraKutsuja(), 0, 'invalidointi ei tee fake-kameranliikettä');
+    tahdistus.pura(); e.merkit.pura();
+  });
 }
 
 test('purku ennen sovelluksen näkyvyysframea peruu invalidoinnin', (t) => {
@@ -151,6 +186,22 @@ test('purku ennen sovelluksen näkyvyysframea peruu invalidoinnin', (t) => {
   e.merkit.pura();
 });
 
+test('purku kesken kamera-ajon estää myöhäisen first-load-invalidoinnin', async (t) => {
+  const e = ymparisto(t, 250);
+  const framet = new Map(); let id = 0; let kameraValmis;
+  const tahdistus = luoMerkkienNakyvyysTahdistus({
+    paivita: e.merkit.tahdistaNakyvyys,
+    requestFrame: (fn) => { framet.set(++id, fn); return id; },
+    cancelFrame: (avain) => framet.delete(avain),
+  });
+  const saapuminen = tahdistus.kameranJalkeen(new Promise((valmis) => { kameraValmis = valmis; }));
+  tahdistus.pura();
+  kameraValmis();
+  await saapuminen;
+  assert.equal(framet.size, 0, 'purettu lauta ei herää myöhäisestä kameran maalista');
+  e.merkit.pura();
+});
+
 test('pallolaudan herääminen käyttää näkyvyystahdistusta ja purkaa odottavan framen', () => {
   const lauta = lue('../js/pallolauta/lauta.js');
   assert.match(lauta, /merkkienNakyvyys\.ajasta\(\);\n\s*pallo\.resumeAnimation\?\.\(\);\n\s*tahdistaSiirtymanJalkeen\(\);/,
@@ -159,5 +210,9 @@ test('pallolaudan herääminen käyttää näkyvyystahdistusta ja purkaa odottav
   assert.match(lauta, /new MutationObserver\(tahdistaLepo\)/,
     'lehden open-attribuutin observer kulkee heräämisen kautta');
   assert.match(lauta, /luoMerkkienNakyvyysTahdistus\(\{ paivita: merkit\.tahdistaNakyvyys \}\)/);
+  assert.match(lauta, /return merkkienNakyvyys\.kameranJalkeen\(kamera\.kotiin\(\{ kesto, bbox \}\)\);/,
+    'first-load ja saapuminen tahdistavat merkit kamera-ajon jälkeen');
+  assert.match(lauta, /maanLaatikko = bbox;\n\s*tahdistaZoomirajat\(\);\n\s*return merkkienNakyvyys\.kameranJalkeen/,
+    'karttauudistuksen maan laatikko ja zoomirajat säilyvät ennen kamera-ajoa');
   assert.match(lauta, /merkkienNakyvyys\.pura\(\);\n\s*merkit\.pura\(\);/);
 });

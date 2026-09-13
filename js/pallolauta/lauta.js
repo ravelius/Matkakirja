@@ -1235,7 +1235,7 @@ export async function avaaPallolauta(ui) {
    */
   let siirtymaAjastin = 0;
   let tahdistaSiirtymanJalkeen = () => {};
-  let merkkienNakyvyys = { ajasta() {}, pura() {} };
+  let merkkienNakyvyys = { ajasta() {}, kameranJalkeen: async (ajo) => ajo, pura() {} };
   const heraa = () => {
     if (!tauolla) return;
     tauolla = false;
@@ -2925,7 +2925,7 @@ export async function avaaPallolauta(ui) {
     const bbox = await saapumislaatikko();
     maanLaatikko = bbox;
     tahdistaZoomirajat();
-    return kamera.kotiin({ kesto, bbox });
+    return merkkienNakyvyys.kameranJalkeen(kamera.kotiin({ kesto, bbox }));
   };
 
   /*

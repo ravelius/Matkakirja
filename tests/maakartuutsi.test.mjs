@@ -296,9 +296,11 @@ test('kamera ottaa saapumisrajauksen laatikkona ja säilyttää varapolun', () =
    * laatikon (`saapumislaatikko`) ja asettaa sen myös uloszoomauksen
    * katoksi (`maanLaatikko` → `tahdistaZoomirajat`) ENNEN kamera-ajoa.
    * Näin saapumisnäkymä ja uloin sallittu näkymä ovat sama laatikko.
+   * Kamera-ajon valmistuminen invalidioi lisäksi merkkien etu/taka-
+   * näkyvyyden ilman tekaistua kameranliikettä.
    */
   assert.match(lauta, /const bbox = await saapumislaatikko\(\);/);
-  assert.match(lauta, /const bbox = await saapumislaatikko\(\);\s*\n\s*maanLaatikko = bbox;\s*\n\s*tahdistaZoomirajat\(\);\s*\n\s*return kamera\.kotiin\(\{ kesto, bbox \}\);/);
+  assert.match(lauta, /const bbox = await saapumislaatikko\(\);\s*\n\s*maanLaatikko = bbox;\s*\n\s*tahdistaZoomirajat\(\);\s*\n\s*return merkkienNakyvyys\.kameranJalkeen\(kamera\.kotiin\(\{ kesto, bbox \}\)\);/);
 });
 
 /* ================= 6. myös kehittäjän maailmatilassa ================ */
