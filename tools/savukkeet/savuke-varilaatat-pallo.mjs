@@ -145,13 +145,37 @@ const PISTEET = [
     avain: 'belgia', lon: 4.6, lat: 50.6, ryhma: 'maa', odotus: 'vaaleni-seepia',
     seloste: 'Belgia (Namurin seutu, ~50 km rajasta)',
   },
+  /*
+   * MERIPISTEET OVAT LIONINLAHDELLA EIKÄ MARSEILLEN EDUSTALLA, ja se on
+   * MITTAUKSEN KORJAUS eikä siirto helpompaan paikkaan. Erän 1 piste
+   * 5,3 E 43,15 N on Natural Earthin merialuetta, mutta se osuu
+   * Marseillen rannikon rikkonaiseen kohtaan: pisteen ympärillä on
+   * kaupunkimerkki, punainen kehä ja rantaviiva, ja z8-näkymässä
+   * mittaus luki niiden sävyä (murrettu maa 226,217,167) eikä vettä.
+   * Camarguen edustalla rantaviiva on suora ja tyhjä, joten 12 mpk:n
+   * kaistale on siellä mitattavissa puhtaana.
+   *
+   * LATITUDIT TULEVAT PROFIILIMITTAUKSESTA, EI AINEISTOHAUSTA. Ensin
+   * ne laskettiin Natural Earthin merirenkaista pistetestillä, ja
+   * tulos oli väärä: testi väitti rannan olevan 43,46 N:ssä, joten
+   * aluevesipiste osui maalle (murrettu maa 230,219,172). Kartalta
+   * mitattu profiili (4,5 E, alla `profiili`-tuloste) näyttää rannan
+   * olevan 43,12 N:ssä: 43,10…42,95 on savunsinistä (191…195,
+   * 198…203, 192…196) ja 42,90 alkaen feidattua seepiaa (222,214,188).
+   * Piirtomoottorin oma maa/meri-päätös on se, mitä laatassa on —
+   * pistetesti oli neljäs totuus samasta rannasta.
+   *
+   * Aluevesipiste on siis 0,10° = 11 km = 6 mpk rannasta ja
+   * avomeripiste 0,52° = 58 km = 31 mpk; leikkuri ulottuu 6,7
+   * lautayksikköä = 0,20° eli 42,92 N:ään.
+   */
   {
-    avain: 'aluevesi', lon: 5.3, lat: 43.15, ryhma: 'meri', odotus: 'sinertyi',
-    seloste: 'Välimeri Marseillen edustalla, ~8 mpk rannasta',
+    avain: 'aluevesi', lon: 4.5, lat: 43.02, ryhma: 'meri', odotus: 'sinertyi',
+    seloste: 'Lioninlahti Camarguen edustalla, ~6 mpk rannasta',
   },
   {
-    avain: 'avomeri', lon: 5.3, lat: 42.5, ryhma: 'meri', odotus: 'vaaleni-seepia',
-    seloste: 'Välimeri ~40 mpk rannasta',
+    avain: 'avomeri', lon: 4.5, lat: 42.6, ryhma: 'meri', odotus: 'vaaleni-seepia',
+    seloste: 'Lioninlahti ~31 mpk rannasta',
   },
 ];
 
@@ -172,8 +196,8 @@ const KAMERAT = {
     lon0: 0.5, lat0: 46.2, lon1: 6.2, lat1: 51.6,
   },
   meri: {
-    seloste: 'Marseillen edusta: 12 mpk:n kaistale ja avomeri',
-    lon0: 4.6, lat0: 42.1, lon1: 6.0, lat1: 43.5,
+    seloste: 'Lioninlahti: 12 mpk:n kaistale ja avomeri',
+    lon0: 4.0, lat0: 42.45, lon1: 5.0, lat1: 43.35,
   },
 };
 
@@ -406,7 +430,7 @@ await sivu.waitForTimeout(3000);
  * kehyksellä, mikä pakottaa WebGL:n piirtämään koko pinnan uudestaan
  * — ja juuri sen hinnan värilaatat voisivat nostaa.
  */
-const kehysajat = (kestoMs = 4000) => sivu.evaluate(async (kesto) => {
+const kehysajat = (kestoMs = 12000) => sivu.evaluate(async (kesto) => {
   const pallo = window.matkakirja.ui.pallolauta.pallo;
   const alku = pallo.pointOfView();
   const erot = [];
@@ -582,6 +606,44 @@ async function mittaaPisteet(ryhma) {
     }
     return ulos;
   }, { png: kuva.toString('base64'), pisteet: PISTEET.filter((p) => p.ryhma === ryhma) });
+  /*
+   * LEIKKAUSPROFIILI RANNIKON POIKKI (vain tuloste, ei väite).
+   *
+   * Yksi pikseli ei kerro, MISSÄ 12 mpk:n kaistale on — ja juuri sen
+   * tietämättä mittauspiste osui ensimmäisessä ajossa rantaviivaan ja
+   * luki murrettua maata siniseksi luullun veden sijaan. Profiili
+   * tulostaa sävyn asteen kahdeskymmenesosan välein rannikon poikki,
+   * jolloin kaistaleen reunat NÄKYVÄT luvuissa eikä niitä tarvitse
+   * arvata.
+   */
+  if (ryhma === 'meri') {
+    const profiili = await sivu.evaluate(async ({ png, lon, lat0, lat1, n }) => {
+      const img = new Image();
+      img.src = `data:image/png;base64,${png}`;
+      await img.decode();
+      const c = document.createElement('canvas');
+      c.width = img.width;
+      c.height = img.height;
+      const g = c.getContext('2d', { willReadFrequently: true });
+      g.drawImage(img, 0, 0);
+      const pallo = window.matkakirja.ui.pallolauta.pallo;
+      const dpr = img.width / window.innerWidth;
+      const ulos = [];
+      for (let i = 0; i < n; i += 1) {
+        const lat = lat1 + ((lat0 - lat1) * i) / (n - 1);
+        const sp = pallo.getScreenCoords(lat, lon, 0);
+        const x = Math.round(sp.x * dpr);
+        const y = Math.round(sp.y * dpr);
+        if (x < 1 || y < 1 || x >= img.width - 1 || y >= img.height - 1) { ulos.push(`${lat.toFixed(2)}:—`); continue; }
+        const d = g.getImageData(x, y, 1, 1).data;
+        ulos.push(`${lat.toFixed(2)}:${d[0]},${d[1]},${d[2]}`);
+      }
+      return ulos;
+    }, {
+      png: kuva.toString('base64'), lon: 4.5, lat0: 42.4, lat1: 43.4, n: 21,
+    });
+    tieto('profiili 4,5 E (lat:rgb)', profiili.join('  '));
+  }
   return { kuva, mittaukset: tulos, mitat: m };
 }
 
@@ -627,6 +689,8 @@ async function vaihe(vari, tunnus) {
     mitat,
     pov,
     kehykset,
+    maamitat: maa.mitat,
+    merimitat: meri.mitat,
     kuva: maa.kuva,
     merikuva: meri.kuva,
     mittaukset: [...maa.mittaukset, ...meri.mittaukset],
@@ -729,7 +793,7 @@ const parit = PISTEET.map((p) => ({
 
 console.log('\n--- MITATUT PIKSELIT (A = ilman väriä, B = värillä) ---');
 for (const p of parit) {
-  const kuvaa = (m) => (m?.ruudulla ? `rgb(${m.r},${m.g},${m.b})` : `EI KARTALLA (${m?.syy})`);
+  const kuvaa = (m) => (m?.ruudulla ? `rgb(${m.r},${m.g},${m.b})@${m.x},${m.y}` : `EI KARTALLA (${m?.syy})`);
   console.log(`  ${p.avain.padEnd(9)} A ${kuvaa(p.a).padEnd(20)} B ${kuvaa(p.b).padEnd(20)} `
     + `${p.a?.ruudulla && p.b?.ruudulla
       ? `ΔL ${(kirkkaus(p.b) - kirkkaus(p.a)).toFixed(1)} Δ(r−b) ${(lampo(p.b) - lampo(p.a)).toFixed(1)}`
@@ -821,9 +885,30 @@ vaadi('V5 avomeri 40 mpk vaaleni paperia kohti eikä sinertynyt',
       + `kanavia liikkui ${avomeriTulos.liikkui}`
     : `piste ei kartalla: ${avomeri.a?.syy ?? avomeri.b?.syy}`);
 
-vaadi('V6 laattamäärä ei kasva yli +10 %',
-  mA?.scenessa > 0 && mB?.scenessa <= Math.ceil(mA.scenessa * 1.1),
-  `A ${mA?.scenessa} → B ${mB?.scenessa}`);
+/*
+ * V6 MITATAAN KIINTEÄLTÄ KAMERALTA, EI SAAPUMISNÄKYMÄSTÄ.
+ *
+ * MITATTU 13.9.2026, JA SE KORJASI MITTAUKSEN. Ensin V6 vertasi
+ * `scenessa`-lukuja saapumisnäkymästä, ja ne erosivat 24 vs. 34 —
+ * mutta EI värin takia: saapumisajon loppukorkeus oli A:ssa 0,445 ja
+ * B:ssä 0,624, eli kamerat olivat eri paikoissa, ja `scenessa` laskee
+ * mukaan myös muistiin pidetyt edellisen näkymän laatat (LRU). Kahden
+ * eri kameran laattamäärien vertailu ei kerro värikerroksesta mitään.
+ *
+ * OIKEA VÄITE ON GEOMETRINEN: `nakyvia` on näkyvän alueen laattojen
+ * määrä samalta kameralta, ja koska värikerros piirtyy SAMAAN
+ * kankaaseen (js/pallolaatat.js `for (const kuva of kuvat)`), sen on
+ * oltava TÄSMÄLLEEN sama. Tekstuurimuisti laattaa kohti on toinen
+ * puoli samasta väitteestä: yksi kangas, yksi tekstuuri, samat tavut.
+ */
+const mMaaA = A.maamitat;
+const mMaaB = B.maamitat;
+const tavutPerLaatta = (m) => (m?.laattoja > 0 ? m.kaytetytTavut / m.laattoja : 0);
+vaadi('V6 väri ei lisää laattoja eikä tekstuurimuistia (sama kamera)',
+  mMaaA?.nakyvia > 0 && mMaaB?.nakyvia === mMaaA.nakyvia
+    && Math.abs(tavutPerLaatta(mMaaB) - tavutPerLaatta(mMaaA)) < 1,
+  `nakyvia A ${mMaaA?.nakyvia} → B ${mMaaB?.nakyvia}; `
+  + `tavuja/laatta A ${Math.round(tavutPerLaatta(mMaaA))} → B ${Math.round(tavutPerLaatta(mMaaB))}`);
 
 /*
  * V7: raja on laatikko × 1,15, ja se on selvästi laudan oman katon
