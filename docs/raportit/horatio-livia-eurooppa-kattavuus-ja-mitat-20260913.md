@@ -4,8 +4,12 @@
 - Julkaistu vertailu: `079284e1cf09f650ed7e5f3d54f54c4e3da933b1`
 - Kaupungit: 45/45, ei aukkoja eikä duplikaatteja
 - Livian kaupunkiutteranssit: 55/55 (45 city-pair-kuplaa + Sofian 10 muuta kontekstipuhetta)
-- Tila: teksti, TTS-syöte, SHA:t ja cue-ankkurit jäädytetty; lopullinen audio ja forced alignment odottavat RC-ajoa
-- Kuvat: olemassa olevat kuvat säilytetty; tässä revisiossa ei generoitu kuvia
+- Tekstihaaran etätila: PR #2325, commit `3d1a143492c6ba520eab75976ced7a5da7aad1f1`
+- Tila 13.9. klo 03.25 EEST: teksti, TTS-syöte, SHA:t ja cue-ankkurit jäädytetty; 45/45 Horatio- ja 45/45 Livia city-3 -ääntä sekä niiden kohdistukset tuotettu. Sofian 10 muuta Livia-ääntä säilyvät ennallaan.
+- RC-portti: 45/45 Horatio-readback PASS; 33 uuden Horatio-äänen runtime- ja tuotantokuittikytkentä sekä lopullinen yhteis-CI vielä RC:n vastuulla.
+- Kuvatekstit: 149/149 pitkää selitettä on kaksi virkettä ja 149/149 lyhyttä yksi sisältövirke. Historiallisten lyhyiden paikka–vuosi-otsaketta ei lasketa sisältövirkkeeksi.
+- Pulu-P2: 35 nimettyä briefiä odottaa erillistä kuvatilausta; Marseillen P2 on toimitettu ja odottaa pelikytkentää. Tässä revisiossa ei generoitu kuvia. Katso [P2-briefit](eurooppa-puuttuvat-pulu-p2-kuvat-20260913.md).
+- CI-erottelu: tekstilähteen PR-ajo #1854 jäi viiteen audio/runtime-porttiin; sisältö- ja kuvatekstivartiot ovat vihreät. Lopullinen yhteispaketti ei saa jäädä tähän poikkeustilaan.
 
 | Erä | Kaupunki | Baseline pari | Uusi H | Uusi L | Uusi pari | Pulu-kuvia | H I1/I2 | Tulos |
 |---|---|---:|---:|---:|---:|---:|---:|---|
@@ -62,3 +66,4 @@
 - Muutos: -1477 merkkiä / -220 sanaa.
 - Pulu-cam-kuvien määrä ja Horation I1/I2-sarakkeet ovat nykyisen pack-datan readback; puuttuva toinen Pulu-kuva ei ole puuttuva Horation I2-kuva.
 - Kuvien tekijä- tai lisenssitietoja ei päätellä tutkimuslähteistä.
+- Pilotin aiemmissa raporteissa näkyvät HOLD-merkinnät ovat historiallisia eivätkä kuvaa tämän koonnin teksti- tai kuvatekstitilaa.

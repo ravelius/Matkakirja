@@ -2,7 +2,7 @@
 
 Sisältörevisio: `eu-hl-europe-20260913-r2-approved1`
 Julkaistu lähtörevisio: `079284e1cf09f650ed7e5f3d54f54c4e3da933b1`
-Tila: 45 kaupunkiparia sisältöjäädytetty; audioajo vain RC/animaatiovetäjälle.
+Tila: 45 kaupunkiparia sisältöjäädytetty ja toimituksellisesti hyväksytty. 45/45 Horatio- ja 45/45 Livia city-3 -ääntä sekä kohdistukset on tuotettu; Sofian 10 muuta Livia-ääntä säilyvät ennallaan. Runtime- ja lopullinen yhteis-CI ovat RC/animaatiovetäjän erillinen portti.
 
 ## Ateena
 
