@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1824, teksti: 'Aloituskaupungin pisteosuma pallolla korjattu' },
   { v: 1823, teksti: 'Horatio ja Livia: Euroopan luennat ja tuotantoketju' },
   { v: 1822, teksti: 'Euroopan luentojen ajolupa Raamattuun' },
   { v: 1821, teksti: 'Codexin pilottilupa Raamattuun' },

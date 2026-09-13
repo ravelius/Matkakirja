@@ -592,6 +592,21 @@ export const MERKKIEN_SIIRTYMA_MS = 250;
 export const PISTEIDEN_SIIRTYMA_MS = 0;
 /** Napautuksen osuma ruudulla: lähin kaupunki tai kohde tämän säteen sisällä (px). */
 export const NAPAUTUKSEN_SADE_PX = 44;
+
+/**
+ * Kaupunkipisteen viimeinen reititys callbackin yhteisten vartijoiden
+ * jälkeen. Lähtövalinnassa myös kaupunkipiste kuuluu pinnan R-osumaan:
+ * sen alla voi olla valittava kohde, kun taas Lontoo jää kohteettomana
+ * saman pintaportin kautta vaiti.
+ */
+export function reititaPallopisteenNapautus({
+  piste, vaihe, napautaPintaan, napautaKaupunki,
+}) {
+  if (vaihe === 'pickstart') {
+    return napautaPintaan(piste?.lat, piste?.lon);
+  }
+  return napautaKaupunki(piste);
+}
 /*
  * ══════════════════════════════════════════════════════════════════
  * NIMILAPUN KOSKETUSVARA (vika v1680; omistaja 7.9.2026 ilta, iPad:
@@ -2304,7 +2319,12 @@ export async function avaaPallolauta(ui) {
       // Linssin merkki kaupungin päällä (aikajanan lamppu) saa napautuksen
       // sen sijaan: sama sääntö kuin pinnan napautuksessa.
       else if (lahinLinssimerkki(d.lat, d.lon)) napautaPintaan(d.lat, d.lon);
-      else napautaKaupunki(d);
+      else reititaPallopisteenNapautus({
+        piste: d,
+        vaihe: ui.game.phase,
+        napautaPintaan,
+        napautaKaupunki,
+      });
     })
     .onGlobeClick(({ lat, lng }) => {
       // Nipistys ei ole napautus (js/pallo.js asennaPallonEleet); muuten

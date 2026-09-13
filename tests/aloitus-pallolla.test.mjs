@@ -22,7 +22,8 @@ import { readFileSync } from 'node:fs';
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 const {
   ALOITUSVALINNAN_ANKKURIT, ALOITUSVALINNAN_ANKKURIVARA, ALOITUSVALINNAN_LAT,
-  ALOITUSVALINNAN_LON, ALOITUSVALINNAN_PALLON_OSUUS, aloitusvalinnanKorkeus,
+  ALOITUSVALINNAN_LON, ALOITUSVALINNAN_PALLON_OSUUS, NAPAUTUKSEN_SADE_PX,
+  aloitusvalinnanKorkeus, reititaPallopisteenNapautus,
 } = await import('../js/pallolauta/lauta.js');
 const { PALLO_FOV } = await import('../js/pallolauta/kamera.js');
 const {
@@ -428,6 +429,54 @@ test('kohteen napautus vie doPickStartiin, muu kaupunki on vaiti', () => {
   const kaupunki = lauta.match(/ {2}const napautaKaupunki = \(k\) => \{[\s\S]*?\n {2}\};/)[0];
   assert.match(kaupunki, /if \(ui\.game\.phase === 'pickstart'\n\s*&& !\(kehittajaTilaPaalla\(\) && kehittajaMaailmaPaalla\(\) && !ui\.katselu\)\) return false;/,
     'Lontoo on lähtöpiste eikä valinta — sen napautus ei sukella kameralla');
+});
+
+test('kaupunkipisteen callback käyttää pickstartissa samaa R-kohdeporttia kuin pallon pinta', () => {
+  const ateena = { key: 'aloitus:ateena', lat: 0, lng: 0, city: { id: 'ateena' } };
+  const kohteet = [ateena];
+  const valitut = [];
+  const kaupungit = [];
+  const napautaPintaan = (lat, lng) => {
+    const kohde = kohteet.find((k) => Math.hypot(k.lat - lat, k.lng - lng) < NAPAUTUKSEN_SADE_PX);
+    if (!kohde?.city) return false;
+    valitut.push(kohde.city.id);
+    return true;
+  };
+  const napautaKaupunki = (piste) => { kaupungit.push(piste.id); return true; };
+  const callback = (piste, vaihe = 'pickstart') => reititaPallopisteenNapautus({
+    piste, vaihe, napautaPintaan, napautaKaupunki,
+  });
+
+  // Raycastin kaupungin point-mesh palauttaa datumin koordinaatit:
+  // keskiosuma ei saa enää päätyä tavallisen kaupungin pickstart-estoon.
+  assert.equal(callback({ id: 'ateena', laji: 'kaupunki', lat: 0, lon: 0 }), true);
+  assert.deepEqual(valitut, ['ateena']);
+  assert.deepEqual(kaupungit, []);
+
+  // Huomiorenkaan ulkoreuna (54 px halkaisija) käyttää samaa pintaosumaa.
+  valitut.length = 0;
+  assert.equal(napautaPintaan(0, KOHDEMERKIN_HUOMIO_PX / 2), true);
+  assert.deepEqual(valitut, ['ateena']);
+
+  // Lontoon piste ja kohteeton pinta jäävät valintavaiheessa vaiti.
+  valitut.length = 0;
+  assert.equal(callback({ id: 'lontoo', laji: 'kaupunki', lat: 0, lon: 100 }), false);
+  assert.equal(napautaPintaan(0, 45), false);
+  assert.deepEqual(valitut, []);
+  assert.deepEqual(kaupungit, []);
+
+  // Muissa vaiheissa varsinainen kaupunkipiste säilyttää vanhan reittinsä.
+  assert.equal(callback({ id: 'ateena', laji: 'kaupunki', lat: 0, lon: 0 }, 'action'), true);
+  assert.deepEqual(kaupungit, ['ateena']);
+
+  // Callbackin ympärillä olevat yhteiset vartijat säilyvät ennen reititystä;
+  // apuri ei saa kutsua doPickStartia suoraan niiden ohi.
+  const callbackLohko = lauta.match(/\.onPointClick\(\(d\) => \{[\s\S]*?\n    \}\)\n    \.onGlobeClick/)[0];
+  assert.ok(callbackLohko.indexOf('valikkoSulkeutuiNapautuksesta()')
+    < callbackLohko.indexOf('reititaPallopisteenNapautus({'));
+  assert.ok(callbackLohko.indexOf('linssiPaalla()')
+    < callbackLohko.indexOf('reititaPallopisteenNapautus({'));
+  assert.doesNotMatch(reititaPallopisteenNapautus.toString(), /doPickStart/);
 });
 
 test('doPickStart on yhä yksi polku molemmille laudoille', () => {
