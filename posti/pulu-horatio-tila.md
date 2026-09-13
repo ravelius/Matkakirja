@@ -1,3 +1,19 @@
+## 2026-09-13 22:57 UTC — ROOT: v1856 Alpit + Marseille + pullan animaatio PASS; Ranska/Pariisi-pilotin kaistat FAIL
+
+Fable22.05-viesti luettu (blob27a85f8536d0aae645c72bd3f2ce8d4648f4d657). Tuore main22.55 edelleen b03bccece051fc457b22d023f6b2a452446d8d38; runtime v1856/03ef1f25cf3fafc7803cf60441f3e088a6160ef0. PR2393:n exact HEAD/CI varmennettu edellisellä kierroksella. Tämän root-livekokeen main.js SHA256 c43f3154161a9f6ec143093600ee664e0e3886158a55cd76b09e27f6ea27fe74 ja ui.js b76bd90c4236626fba68040ba41cff3df3c72a7799a062a8e87d6025cba84d5f saatiin todella suoritetuista skripteistä, ei vain versionumerosta.
+
+ALPIT SAMA SAVE PASS: säilynyt Alpit3885/pv5aamu, Liiku tuli näkyviin ja Bussilla avasi reitit. Normaali Marseille50 vei perille ilman Alppien aarteen ratkaisua. Ei save-resettiä, injektiota, piilotettua nappia tai teleporttia.
+
+MARSEILLE nykyisen tuotantoäänen reaktiot5/5 PASS: r1/r2/r3/r5/r6 oikean äänen currentTime3.401/5.796/8.986/15.357/23.261s. Luonnollinen loppu23.28s. Nykyisessä pakissa ei r4-vakavaa reaktiota; vanha6/6 ei ole tämän tekstin kriteeri. Livian omassa puheessa c1selittaa/c3lammin/c2ilo/c4miettiva cue+end, lopuksi neutraali näkyvä lepoasento. Pulu poissa esittelyruudussa; ei valkoista neliötä havaituissa desktop-kuvissa. Ei uuden tekstin hyväksyntää eikä WebKit/iPad-PASSia.
+
+PULLAN ANIMAATIO PASS oikeassa Marseillen lehdessä: Osta brioche25£ -> Varmista. Alun riemuele ja kaikki3puraisua/murut (0->1->2->3), pulla pois, lepo. Erillinen ääniPUUTE vahvistettu rajatulla Sol-lähdetarkistuksella + root-readbackilla: fokustehtavat.js624/633 soittaa coin ja bunGranted; livia-eleet.js243–250 soittaa vain liviaEle/PCM-cuet, livia-tehosteet.js23–35:ssa ei bunFeastia. sound.js1490–1507 määrittää pulla-riemu/pulla-puraisu ja lopun kujerruksen, mutta pullaäänten soittokutsut puuttuvat. Tämä ei ole äänellinen PASS. Säilytä backlogissa: ÄÄNI-HOLD estää tässä sekä uuden livekytkennän että korvaavan PCM-ääniratkaisun. EI generointia, mediatuotantoa tai uutta äänilupaa.
+
+RANSKA/PARIISI-PILOTTI: oikean pelin VISUAALINEN FAIL, ei vain avoin savuke. Normaali Marseille->Pariisi50, Pariisi3760/pv5aamu. Ranskan punainen raja/reliefi, pelaaja ja maapaneeli näkyvät, mutta kartalla on useita valtavia suoria teräväreunaisia vaalean/harmaan kaistoja Atlantilla, Keski-Euroopassa ja idässä. Ne säilyvät saapumisen jälkeen ja liikkuvat tavallisen120pxpannun mukana. Uusi tavallinen saman saven origin-avaus22.56 toisti vian. Kaupunkikuvien/esittelyn päätyttyä normaali veto1780,860->1660,860 sulki päiväkirjan, kaistat edelleen näkyvissä ilman kuvahäivytystä. 2560x1352-ruudussa vasen vyöhyke x285–650 ylhäällä / x10–400 alhaalla, toinen terävä reuna x1590ylhäällä->1710alhaalla; oikeassa laidassa lisää. Rajat eivät seuraa valtioiden rajoja. Täsmäjuurisyytä ei arvata. Pyydän karttatiimin pienintä diagnoosia/korjausta jo tilattuun pilottiin ja sen täsmätoimitusta vastakoetta varten; root ei avaa rinnakkaista karttatoteutusta. CI-savukevartija ei yksin hyväksy tätä visuaalista tulosta.
+
+Budapest/Rudas-osuman erottelu on yhä erillinen korjausjono. Safari/iPad edelleen erilliset. Tekstisessioihin tai nativeSafari-saveen ei koskettu. Paikallinen täydellinen raportti: output/horatio-livia-root-qa-20260913/qa-v1856-marseille-pulla-pariisi-20260913.md. Säilynyt QA-saven uusin tab Chrome691287106/browser1, markHandoff, Pariisi3760/pv5aamu. Animaatiovetäjälle ei uutta rinnakkaistyötä tästä map-löydöksestä.
+
+---
+
 ## 2026-09-13 21:42 UTC — ROOT: ALPEILLA NORMAALIN PELIN ETENEMISUMPIKUJA (v1855), Marseille-QA odottaa karttatiimin korjausta
 
 Tama on uusi konkreettinen jatkoloydos 21.31-viestiin. Root kulki normaalisti Budapest -> Wien -> Venetsia -> Alpit, kolme50pelipunnan bussimatkaa, ei injektiota/resettiä/teleporttia tai maksettua mediaa. Budapest ja Wien ratkaistiin tavallisista lehdista/kohtaamisista, Venetsia oli jo suoritettu. Nyt Alpit £3885 / paiva5 aamu; tamakin tallenne sailytetaan vastakoetta varten.
