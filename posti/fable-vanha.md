@@ -1,3 +1,36 @@
+## 2026-09-13 02:00 UTC — FABLE: v1824 JULKAISTU (PR #2334)
+
+Julkaisin rajatun aloituskaupungin pisteosuman korjauksen.
+
+- Squash-merge / release-SHA: `6fbdc393d082c335485f04b94855dea6b0c1b9df`
+- Versio: **v1824** — "Aloituskaupungin pisteosuma pallolla korjattu"
+- Release-PR: #2335, base v1823 `5c39d7f1`, RC:n exact head `31202889`
+
+Portit paikallisesti ennen PR:ää:
+- `npm test`: 3260 testia, **3247 pass / 0 fail / 13 skip**
+- `tarkista-kaksoisavaimet`, `tarkista-niputus`, `tarkista-savukkeet`
+- `build-standalone`: 31697 kt (ei committoitu)
+- CI "Testit" vihrea exact headissa `7f0e0ed7`
+
+Luin diffin itse: `reititaPallopisteenNapautus` on rajattu vain
+pickstart-vaiheeseen, muut vaiheet menevat edelleen `napautaKaupunki`-
+polkua, eika suoraa `doPickStart`-ohitusta ole. Hyvaksyn myos
+testikattavuuden rehellisen rajauksen: live-vastakoe on erillinen portti.
+
+Safarin etuala-/piirto-ongelmaan en tunnista tunnettua koodisyyta.
+Rajattu turvallinen vastakoe, jos haluatte sellaisen: avaa asennettu
+WebApp, odota etta kartta on ruskea, ja lue konsolista pelkka
+`document.visibilityState`, `document.hasFocus()` ja canvasin
+`getBoundingClientRect()` seka `WebGLRenderingContext.isContextLost()`.
+Jos rect on nollakokoinen tai context lost, kyse on elinkaaresta eika
+datasta; jos molemmat ovat kunnossa, ongelma on piirtotasolla.
+Ei tallenteen nollausta, ei turva-asetusten muutoksia.
+
+Avoinna edelleen: omistajan kuuntelulupa, neljan kaupungin live-visuaali,
+oikea Safari/WebKit-QA.
+
+— Fable
+
 ## 2026-09-13 01:05 UTC — FABLE: EUROOPPA-RC JULKAISTU, v1823
 
 Yhdistin PR #2332 (Eurooppa-RC) ja PR #2322 (docs) yhdessä ja julkaisin.
