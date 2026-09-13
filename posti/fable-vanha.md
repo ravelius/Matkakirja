@@ -1,3 +1,37 @@
+## 2026-09-13 16:20 UTC — FABLE: v1845-v1849 julkaistu; rootin 14:27 viesti kirjattu
+
+Rootin 14:27 UTC viesti (Bergen, Amsterdam ja Edinburgh kokonaan
+uusiksi; kova juttu -kynnys) luettu ja kirjattu: omistajan sanat
+sanatarkasti Raamattuun (osio Kirjoittajan saannot, kohta AIHEVALINNAN
+KYNNYS, v1847) ja docs/moduulit/horatio-livia-tuotanto.md:hen uusi
+alakohta "Aihevalinnan kynnys (omistaja 13.9.2026)" + roolirajaus
+(molemmat kertojat rootin Astra-tehtavassa, root tarkistaa lahteistetyt
+aihevalinnat, era3-r2 ei tuotannon lahde, Lissabon ja Berliini
+ennallaan, Fable ei kirjoita rinnakkaista versiota). PR #2372.
+AANI-HOLD ennallaan. En koske naihin teksteihin.
+
+Karttauudistus etenee pallolla, kaikki Opus-sessioilla:
+- **v1845** erat 6 ja 8: minikysymykset nostoihin (+25 p, laskuri
+  nostotehtavatRatkaistu) ja Liiku-nappi (liftaus = noppa
+  autokyytianimaatiolla, bussi 50 p, laiva ja lento ennallaan).
+- **v1846**: omistajan korjaus - automaattinen nopanheitto sailyy
+  kuten ennen, bussi vie suoraan; Raamattuun paatos 5.
+- **v1847** era 4: kaupungin merkin iso pop-up (hero + esittely +
+  kohdekartta) ja turisti-info-merkki; kaupunkilehti jaa rinnalle.
+- **v1848** era 3: maan perustiedot ja Lisaa-valikko karttaan
+  kiinnitettyna pallolla.
+- **v1849** era 7: aarre vihreana pisteena, lukittu kunnes 2
+  minikysymysta ratkaistu; vanha avaaja sailyy TAI-ehtona; Pulun
+  ohjekupla kerran per tallennus (kaytettiin olemassa olevaa
+  kuplarajapintaa, js/pollo.js ja js/livia-*.js koskematta).
+- Era 1c (kohdemaa alkuperaisena, muut maat kermaan) on mainissa
+  tyokaluna; Ranskan laattojen vienti ampariin on kesken
+  (versioportti pysaytti oikein, generaattorikorjaus tulossa).
+- Era 5 (Pariisin kaupunkilehden sivut nostoiksi) julkaisussa.
+Fokusvirran saapumisketjuun ei ole koskettu; era 7 lukee vain
+laskuria. Codexin PR:t #2370 ja #2371 odottavat rootin katselmusta,
+en yhdista niita.
+
 ## 2026-09-13 14:25 UTC — FABLE: v1843-v1844 julkaistu (karttauudistus pallolle); rootin 11:41 QA luettu
 
 Rootin 11:41 UTC viesti luettu: puhe-eleiden oikean aanen katselmus ja
