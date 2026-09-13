@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {LIVIA_SVG_ELEET,livianSvgAsento,livianSvgKuva,livianSvgMalli,livianEleenVoima} from '../js/livia-svg.js';
+import {LIVIA_SVG_ELEET,LIVIAN_PITKAN_SELITYKSEN_MIN_MS,livianSvgAsento,livianSvgKuva,livianSvgMalli,livianEleenVoima,livianSelityseleenVariantti} from '../js/livia-svg.js';
 
 test('kaikki nykyiset eleet piirtyvät kokonaisella SVG-pululla ilman virheellisiä koordinaatteja',()=>{
  assert.equal(LIVIA_SVG_ELEET.length,70);
@@ -26,22 +26,37 @@ test('rauhallinen räpäytys sulkee silmät kahdesti ja palautuu välissä',()=>
  assert.equal(livianSvgAsento('blink',.70).frame,'rest');
 });
 test('nykykaupungin selitys ottaa rajatun tilan vasemmalta ja palaa lepoankkuriin',()=>{
- const start=livianSvgMalli(livianSvgAsento('cityExplain',0));
- const desktop=livianSvgMalli(livianSvgAsento('cityExplain',.45));
- const mobile=livianSvgMalli({...livianSvgAsento('cityExplain',.45),compactExplain:true});
- const end=livianSvgMalli(livianSvgAsento('cityExplain',1));
+ const pitka={cueKestoMs:6200};
+ const start=livianSvgMalli(livianSvgAsento('cityExplain',0,pitka));
+ const desktop=livianSvgMalli(livianSvgAsento('cityExplain',.45,pitka));
+ const mobile=livianSvgMalli({...livianSvgAsento('cityExplain',.45,pitka),compactExplain:true});
+ const end=livianSvgMalli(livianSvgAsento('cityExplain',1,pitka));
  assert.equal(LIVIA_SVG_ELEET.find(e=>e.id==='cityExplain')?.duration,6200);
+ assert.equal(LIVIAN_PITKAN_SELITYKSEN_MIN_MS,5600);
  assert.ok(desktop.x<start.x&&desktop.x>=76,'työpöytä käyttää nykyisen näyttämön vasenta puolta');
  assert.ok(mobile.x<start.x&&mobile.x>desktop.x,'mobiilin kävelyalue on pienempi');
- assert.equal(desktop.wing,'point');assert.equal(livianSvgMalli(livianSvgAsento('cityExplain',.65)).wing,'shrug');
- assert.equal(livianSvgMalli(livianSvgAsento('cityExplain',.50)).wing,'fold','siipieleiden välissä on rauhallinen hengähdys');
- assert.equal(livianSvgMalli(livianSvgAsento('cityExplain',.10)).walking,true,'vasemmalle otetaan pienet askeleet');
+ assert.equal(desktop.wing,'point');assert.equal(livianSvgMalli(livianSvgAsento('cityExplain',.65,pitka)).wing,'shrug');
+ assert.equal(livianSvgMalli(livianSvgAsento('cityExplain',.50,pitka)).wing,'fold','siipieleiden välissä on rauhallinen hengähdys');
+ assert.equal(livianSvgMalli(livianSvgAsento('cityExplain',.10,pitka)).walking,true,'vasemmalle otetaan pienet askeleet');
  assert.equal(desktop.walking,false,'selitys tapahtuu tukevasti paikallaan');
- assert.equal(livianSvgMalli(livianSvgAsento('cityExplain',.90)).walking,true,'lepoon palataan pienin askelin');
+ assert.equal(livianSvgMalli(livianSvgAsento('cityExplain',.90,pitka)).walking,true,'lepoon palataan pienin askelin');
  const visual=m=>({x:m.x,y:m.y,angle:m.angle,headY:m.headY,headAngle:m.headAngle,bodyLean:m.bodyLean,walking:m.walking,step:m.step,wing:m.wing,wingAmount:m.wingAmount,face:m.face});
  assert.deepEqual(visual(end),visual(start));
- assert.equal(livianSvgKuva(livianSvgAsento('cityExplain',1),{prefix:'restqa'}),
-  livianSvgKuva(livianSvgAsento('cityExplain',0),{prefix:'restqa'}),'loppukuvan jokainen näkyvä osa on lepoasennossa');
+ assert.equal(livianSvgKuva(livianSvgAsento('cityExplain',1,pitka),{prefix:'restqa'}),
+  livianSvgKuva(livianSvgAsento('cityExplain',0,pitka),{prefix:'restqa'}),'loppukuvan jokainen näkyvä osa on lepoasennossa');
+});
+test('lyhyt tai 2x-kuunneltu selityscue käyttää omaa paikallista koreografiaa',()=>{
+ assert.equal(livianSelityseleenVariantti(1500,1),'lyhyt');
+ assert.equal(livianSelityseleenVariantti(5599,1),'lyhyt');
+ assert.equal(livianSelityseleenVariantti(6200,1),'pitka');
+ assert.equal(livianSelityseleenVariantti(6200,2),'lyhyt','2x ei kiirehdi kävelyä');
+ for(const asetukset of [{cueKestoMs:1500},{cueKestoMs:6200,playbackRate:2}]){
+  const alku=livianSvgMalli(livianSvgAsento('cityExplain',0,asetukset));
+  const keski=livianSvgMalli(livianSvgAsento('cityExplain',.5,asetukset));
+  const loppu=livianSvgMalli(livianSvgAsento('cityExplain',1,asetukset));
+  assert.equal(keski.x,alku.x);assert.equal(keski.walking,false);assert.equal(keski.wing,'point');
+  assert.equal(loppu.x,alku.x);assert.equal(loppu.face,alku.face);
+ }
 });
 test('kartan pinnan nokkiminen tekee kaksi erillistä lempeää nokkaisua jalat paikallaan',()=>{
  const ele=LIVIA_SVG_ELEET.find(e=>e.id==='mapPeck');

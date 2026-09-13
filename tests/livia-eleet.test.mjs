@@ -490,20 +490,36 @@ test('tekstireaktio väistää puhetta, chattia ja korttia ilman paluujonoa; red
  c.tilanne('narrationEnd',{tunnus:a});c.tuhoa();assert.equal(e.timers.size,0);
 });
 test('selittävä sisältöele kuuluu vain aktiiviselle puhetunnukselle ja nokka jatkaa',t=>{
- let c;const a={},b={};t.after(()=>{ilmoitaLivianKasvopuhe(a,false);ilmoitaLivianKasvopuhe(b,false);c?.tuhoa();});const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ let c;const a={currentTime:2.7,playbackRate:1},b={};t.after(()=>{ilmoitaLivianKasvopuhe(a,false);ilmoitaLivianKasvopuhe(b,false);c?.tuhoa();});const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
  const canvas=e.doc.body.children[0].children[0];
- const cue={tunnus:'marseille.pulu.1',puheTunnus:a,tarkoitus:'selittaa',voimakkuus:.5};
+ const cue={tunnus:'marseille.pulu.1',puheTunnus:a,tarkoitus:'selittaa',voimakkuus:.5,alkuMs:100,loppuMs:6300,cueKestoMs:6200};
  assert.equal(c.tilanne('speechCue',cue),false,'cue ei arvaa puheen alkua');
  ilmoitaLivianKasvopuhe(a,true,'Marseillessa kuljetaan nykyään metrolla.');
  assert.equal(c.tilanne('speechCue',{...cue,puheTunnus:b}),false,'vanha tai vieras puhetunnus ei kelpaa');
- assert.equal(c.tilanne('speechCue',cue),true);e.tick(3200);
+ assert.equal(c.tilanne('speechCue',cue),true);e.tick(40);
  assert.match(canvas.innerHTML,/data-part="near-wing"/,'selityssiipi on näkyvissä');
- assert.match(canvas.innerHTML,/L55 73L46 64Z/,'puhenokka jatkuu askelten ja siipieleen aikana');
+ assert.match(canvas.innerHTML,/data-expression="gentle"/,'selitys ei pakota virnettä');
  assert.equal(c.tilanne('speechCue',cue),false,'sama cue ei käynnisty kahdesti');
  ilmoitaLivianKasvopuhe(b,true,'Uusi ääni');assert.equal(e.raf.size>0,true,'uusi puhe jatkaa tavallista puhenokkaa');
  assert.equal(c.tilanne('speechCue',cue),false,'uuden äänen jälkeen vanha cue on stale');
  ilmoitaLivianKasvopuhe(b,false);assert.equal(c.tilanne('speechCue',cue),true,'alkuperäinen yhä kuuluva puhe palautuu uusimmaksi');
  ilmoitaLivianKasvopuhe(a,false);e.tick(40);assert.equal(e.raf.size,0,'puheen tauko katkaisee sisältöeleen');
+});
+
+test('selitysele seuraa audioa: lyhyt pysyy paikallaan, pitkä jatkuu seek-kohdasta ja 2x ei kiirehdi kävelyä',t=>{
+ let c;const speech={currentTime:1.75,playbackRate:1};t.after(()=>{ilmoitaLivianKasvopuhe(speech,false);c?.tuhoa();});
+ const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);const canvas=e.doc.body.children[0].children[0];
+ const x=()=>Number(canvas.innerHTML.match(/data-part="whole-bird" transform="translate\(([-.\d]+)/)?.[1]);
+ ilmoitaLivianKasvopuhe(speech,true,'Selitän.');
+ const lyhyt={tunnus:'tromssa.livia.c1',puheTunnus:speech,tarkoitus:'selittaa',voimakkuus:.4,alkuMs:1000,loppuMs:2500,cueKestoMs:1500};
+ assert.equal(c.tilanne('speechCue',lyhyt),true);e.tick(40);assert.equal(x(),128,'1,5 s ele ei kävele');
+ assert.match(canvas.innerHTML,/data-part="near-wing"/);
+ c.tilanne('speechCueEnd',lyhyt);
+ const pitka={tunnus:'berliini.livia.c1',puheTunnus:speech,tarkoitus:'selittaa',voimakkuus:.4,alkuMs:1000,loppuMs:7200,cueKestoMs:6200};
+ speech.currentTime=4.1;assert.equal(c.tilanne('speechCue',pitka),true);e.tick(40);assert.ok(x()<128,'puolivälistä jatkettu pitkä cue on jo selityspaikassa');
+ speech.playbackRate=2;e.tick(40);assert.ok(x()<128,'1x→2x kesken seisontavaiheen ei napsauta paikalleen');speech.playbackRate=1;
+ c.tilanne('speechCueEnd',pitka);speech.currentTime=5.34;assert.equal(c.tilanne('speechCue',pitka),true);e.tick(40);assert.ok(x()<128,'seek 70 prosenttiin ei aloita askelta alusta');
+ c.tilanne('speechCueEnd',pitka);speech.playbackRate=2;speech.currentTime=4.1;assert.equal(c.tilanne('speechCue',pitka),true);e.tick(40);assert.equal(x(),128,'2x käyttää paikallista elettä eikä kiirehdi kävelyä');
 });
 
 test('selitysele palautuu rauhaan cue-lopussa, luennassa, chatissa ja reduced motionissa',t=>{

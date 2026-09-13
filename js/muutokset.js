@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1832, teksti: 'Pulun selitysele seuraa puhecuen kestoa' },
   { v: 1831, teksti: 'Rajattu lukureitti Pulun aanihistoriaan' },
   { v: 1830, teksti: 'Vihjepiste paivittyy heti ja Livian note siivotaan lahdossa' },
   { v: 1829, teksti: 'Pulun aanihistorian luku ElevenLabsista' },

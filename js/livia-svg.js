@@ -12,6 +12,16 @@ export const LIVIA_SVG_ELEET=Object.freeze([...LIVIA_PIX_ELEET,
  Object.freeze({id:'bunFeast',label:'Riemukas pullapalkinto',duration:4600,group:'Pelitilanne'}),
  Object.freeze({id:'cityExplain',label:'Nykykaupungin selitys',duration:6200,group:'Puhe'}),
  ...[['smile','Lämmin hymy',2700],['grin','Leveä virne',2900],['wink','Yhteisymmärrys',2300],['welcome','Hauska nähdä',3000],['present','Minun ottamani!',3400],['glasses','Silmälasit esiin',4800],['bookStudy','Tietäväinen kirjan selaus',4200],['scratch','Pään raapaisu',2600],['eyeRub','Lasit ylös ja silmien hieraisu',5200],['chuckle','Hiljainen naurunpyrskähdys',2500]].map(([id,label,duration])=>Object.freeze({id,label,duration,group:'Pelitilanne'}))]);
+/** Pitkä askel–selitys tarvitsee oikeasta äänestä vähintään tämän ikkunan. */
+export const LIVIAN_PITKAN_SELITYKSEN_MIN_MS=5600;
+/**
+ * Vain semanttinen cityExplain saa kävelyn. Nopeutettu kuuntelu vaihtaa
+ * paikalliseen eleeseen, jotta äänikello ei tee askelluksesta hätäistä.
+ */
+export function livianSelityseleenVariantti(cueKestoMs,playbackRate=1){
+ const kesto=Number(cueKestoMs),nopeus=Math.max(.25,Number(playbackRate)||1);
+ return kesto>=LIVIAN_PITKAN_SELITYKSEN_MIN_MS&&kesto/nopeus>=5000?'pitka':'lyhyt';
+}
 const lvClamp=n=>Math.max(0,Math.min(1,Number.isFinite(n)?n:0));
 const lvEase=n=>{n=lvClamp(n);return n*n*(3-2*n);};
 const lvGate=p=>lvEase((p-.06)/.18)*(1-lvEase((p-.79)/.18));
@@ -22,7 +32,7 @@ export function livianEleenVoima(id,text='') {
  if(/!{2,}|aivan mahdoton|todellakaan|kääk!/iu.test(text))strength+=.15;
  return lvClamp(strength);
 }
-export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id)}={}) {
+export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id),cueKestoMs=0,playbackRate=1}={}) {
  const s={...livianPikseliAsento(id,p),ele:id,p:lvClamp(p),voimakkuus:lvClamp(voimakkuus)};
  if(id==='bunFeast'){
   const t=s.p;
@@ -48,13 +58,21 @@ export function livianSvgAsento(id,p=0,{voimakkuus=livianEleenVoima(id)}={}) {
   s.mapPeck={amount,peck:first>second?1:second>0?2:0};
  }
  if(id==='cityExplain'){
-  // Sisältöneutraali puhe-ele: pieni askellus vasemmalle, katse kaupungin
-  // suuntaan ja vasta paikallaan siipiselitys. Ilo kuuluu erilliseen cueen.
-  const out=lvEase(s.p/.20),back=1-lvEase((s.p-.80)/.18),amount=out*back;
-  const point=lvEase((s.p-.18)/.10)*(1-lvEase((s.p-.40)/.10));
-  const open=lvEase((s.p-.50)/.10)*(1-lvEase((s.p-.72)/.12));
-  s.frame=s.p<=0||s.p>=1?'rest':s.p<.42?'glance':s.p<.72?'front':'rest';
-  s.cityExplain={amount,point,open,gesture:Math.max(point,open),phase:s.p};
+  const variant=livianSelityseleenVariantti(cueKestoMs,playbackRate);
+  if(variant==='pitka'){
+   // Rauhallinen askel sivuun, pysähdys, kaksi selityseletta ja paluu.
+   const out=lvEase(s.p/.20),back=1-lvEase((s.p-.80)/.18),amount=out*back;
+   const point=lvEase((s.p-.18)/.10)*(1-lvEase((s.p-.40)/.10));
+   const open=lvEase((s.p-.50)/.10)*(1-lvEase((s.p-.72)/.12));
+   s.frame=s.p<=0||s.p>=1?'rest':s.p<.42?'glance':s.p<.72?'front':'rest';
+   s.cityExplain={variant,amount,point,open,gesture:Math.max(point,open),phase:s.p};
+  }else{
+   // Oma lyhyt koreografia, ei 6,2 sekunnin kävelyn nopeutettu pienennös:
+   // katse sivuun, yksi hillitty siipiele ja pehmeä paluu paikallaan.
+   const point=lvEase((s.p-.12)/.18)*(1-lvEase((s.p-.68)/.22));
+   s.frame=s.p<=0||s.p>=1?'rest':s.p<.78?'glance':'rest';
+   s.cityExplain={variant,amount:0,point,open:0,gesture:point*.65,phase:s.p};
+  }
  }
  if(id==='glideIn')s.flight={kind:'opening',t:lvEase(p)};
  if(id==='trailerFlee')s.flight={kind:'trailerAway',t:lvEase(p)};
