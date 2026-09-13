@@ -150,3 +150,56 @@ test('murrettu paletti pitää aluevesipuskurinsa eikä saa tasoituskenttiä', (
     `murretun paletin leikkuri tarvitsee aluevesipuskurin (12 mpk = 6,7 yksikköä), `
     + `sai ${kirjaus.leikkurinPuskuri}`);
 });
+
+/* ------------------------------- 5. laatikko koko näkyvään alaan (luku 9) */
+
+/*
+ * MIKSI TÄMÄ VARTIO ON: omistaja näki kuvasta karttauudistus-1c-peitto085,
+ * että puhelimen pystyruudulla Britannia ja Espanja jäivät tasoittamatta ja
+ * keskelle jäi vaalea vyö. Syy oli laatikko: kerroin 1,15 kattaa laataston
+ * laatikon, ei ruutua. `--laatikko-nakyma` kasvattaa laatikon kuvasuhteiden
+ * unioniin, ja UNIONIN ON OLTAVA VÄHINTÄÄN se, minkä pelin oma kamera
+ * näyttää uloimmalla sallitulla zoomilla — muuten vyö palaa. Testi laskee
+ * vaatimuksen kameran omalla kaavalla (laatikonTarve), ei generaattorin
+ * kopiolla siitä.
+ */
+test('--laatikko-nakyma kattaa kameran näkymän puhelimella ja työpöydällä', async () => {
+  const { maanLautalaatikko } = await import('../js/maanaariviivat.js');
+  const { ULOSZOOMAUKSEN_KERROIN } = await import('../js/pallolauta/kamera.js');
+  const polygonit = JSON.parse(
+    readFileSync(new URL('../assets/data/maapolygonit.json', import.meta.url), 'utf8'),
+  );
+  const maa = maanLautalaatikko(polygonit, 'FRA');
+  assert.ok(maa?.w > 0 && maa?.h > 0, 'FRA:n laatikkoa ei saatu aineistosta');
+
+  const laaja = ajaLuettelo(['--laatikko-nakyma']).varitasot.FRA;
+  const suppea = ajaLuettelo([]).varitasot.FRA;
+  assert.equal(laaja.laatikkoNakyma, true, 'luettelon on kerrottava, että laatikko on unioni');
+  assert.equal(suppea.laatikkoNakyma, undefined, 'oletusajo ei saa väittää unionia');
+
+  /* Laatikko luettelossa on lon/lat; lautayksiköt saa leveydestä. */
+  const laudanLeveys = polygonit?.lauta?.leveys > 0 ? polygonit.lauta.leveys : 12000;
+  const leveysYks = ((laaja.alue.lon1 - laaja.alue.lon0) / 360) * laudanLeveys;
+  const suppeaYks = ((suppea.alue.lon1 - suppea.alue.lon0) / 360) * laudanLeveys;
+  assert.ok(leveysYks > suppeaYks, 'unionin on oltava kerroinlaatikkoa leveämpi');
+
+  /* Kameran kaava: näkyvä leveys = max(w·k, h·k·W/H) (kamera.js laatikonTarve). */
+  const tarve = (rw, rh) => Math.max(maa.w * ULOSZOOMAUKSEN_KERROIN,
+    (maa.h * ULOSZOOMAUKSEN_KERROIN * rw) / rh);
+  for (const [rw, rh] of [[390, 844], [768, 1024], [1440, 900], [1920, 1080]]) {
+    const nakyvaLeveys = tarve(rw, rh);
+    assert.ok(leveysYks >= nakyvaLeveys - 0.5,
+      `laatikko ${leveysYks.toFixed(1)} yks on kapeampi kuin ruudun ${rw}x${rh} näkymä `
+      + `${nakyvaLeveys.toFixed(1)} yks — tasoittamaton kaistale jäisi ruudulle`);
+  }
+  /* Kapein ruutu määrää korkeuden; lat-suunta mitataan laudan y:stä. */
+  const { laudanProjektio } = await import('../tools/fokuskartta/piirto.js');
+  const kaava = laudanProjektio({
+    tyyppi: 'miller', leveys: laudanLeveys, lon0: -175, pohjoinen: 76,
+  });
+  const korkeusYks = Math.abs(kaava.lautaY(laaja.alue.lat0) - kaava.lautaY(laaja.alue.lat1));
+  const kapein = tarve(390, 844) * (844 / 390);
+  assert.ok(korkeusYks >= kapein - 0.5,
+    `laatikko ${korkeusYks.toFixed(1)} yks on matalampi kuin puhelimen näkymä `
+    + `${kapein.toFixed(1)} yks — juuri tästä syntyi omistajan näkemä vaalea vyö`);
+});

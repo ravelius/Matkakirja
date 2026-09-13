@@ -108,6 +108,15 @@ on:
         type: string
         required: false
         default: ''
+      laatikko_nakyma:
+        description: 'Laatasto KOKO NÄKYVÄÄN ALAAN: laatikko kasvatetaan kuvasuhteiden unioniin (390x844 … 1920x1080) uloimmalla zoomilla, ei pelkkään kertoimeen. Pois = entinen laatikko × kerroin.'
+        type: boolean
+        default: true
+      laatikkokerroin:
+        description: 'Laataston laatikon kerroin (tyhjä = 1,15 = sama luku kuin uloszoomauksen esto; muuta VAIN yhdessä js/pallolauta/kamera.js ULOSZOOMAUKSEN_KERROIN kanssa)'
+        type: string
+        required: false
+        default: ''
       korkeus:
         description: 'Vain murrettu/taysvari: korkeusdatan tarkkuus kaariminuutteina (tasoitus ei lue korkeusdataa lainkaan)'
         type: choice
@@ -239,6 +248,8 @@ jobs:
           SYOTE_VESI: ${{ inputs.vesi }}
           SYOTE_FEIDAUS: ${{ inputs.feidaus }}
           SYOTE_FEIDAUSREUNA: ${{ inputs.feidausreuna }}
+          SYOTE_LAATIKKOKERROIN: ${{ inputs.laatikkokerroin }}
+          LAATIKKO_NAKYMA: ${{ inputs.laatikko_nakyma && 'true' || '' }}
           KORKEUS: ${{ inputs.korkeus }}
           KUIVA: ${{ inputs.kuiva && 'true' || '' }}
         run: |
@@ -257,6 +268,14 @@ jobs:
             if [ -n "$SYOTE_FEIDAUS" ]; then LISA="$LISA --feidaus $SYOTE_FEIDAUS"; fi
           fi
           if [ -n "$SYOTE_FEIDAUSREUNA" ]; then LISA="$LISA --feidausreuna $SYOTE_FEIDAUSREUNA"; fi
+          if [ -n "$SYOTE_LAATIKKOKERROIN" ]; then LISA="$LISA --laatikkokerroin $SYOTE_LAATIKKOKERROIN"; fi
+          # LAATIKKO KOKO NÄKYVÄÄN ALAAN (erä 1c luku 9): pelkkä kerroin
+          # 1,15 kattaa vain laataston laatikon, ei ruutua — pystyruudulla
+          # näkyvä ala on kolme kertaa laatikon korkuinen, ja laatikon
+          # ulkopuolelle jäävät naapurit näkyvät alkuperäisinä. Unioni
+          # nostaa laattamäärän noin nelinkertaiseksi, mutta tasoituslaatta
+          # on halpa (ei korkeusaineistoa).
+          if [ -n "$LAATIKKO_NAKYMA" ]; then LISA="$LISA --laatikko-nakyma"; fi
           if [ -n "$KUIVA" ]; then LISA="$LISA --kuiva"; fi
           node tools/generoi-laattapyramidi.mjs ulos \
             --tasot "$TASOT" --vari "$MAA" --variversio "$VARIVERSIO" \

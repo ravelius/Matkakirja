@@ -485,3 +485,289 @@ aallossa (erän 1b suositus pätee edelleen).
 3. **Ajetaanko Ranska ämpäriin nyt?** Työnkulun syötteet ovat luvussa 5.
    Suositus: ensin `kuiva: true` (sekunteja, kertoo mitä veisi), sitten
    oikea ajo.
+
+---
+
+## 9. Koko näkymän tasoitus (Fablen tilaus)
+
+*(Jatkotyö samassa haarassa 13.9.2026 illalla. Omistajan havainto
+kuvasta `karttauudistus-1c-peitto085.png`: puhelimen pystyruudulla
+Britannia yläreunassa ja Espanja alareunassa jäivät alkuperäisiksi ja
+keskelle jäi vaakasuora vaalea vyö. Tilaus: MUUT MAAT tasoitettuina
+koko näkyvällä alalla, kaikilla kuvasuhteilla.)*
+
+### 9.1 Miksi vyö syntyi — yksi lause ja yksi luku
+
+**Uloszoomauksen esto rajaa vain sen, kuinka kauas kamera pääsee. Se ei
+tee laataston laatikosta ruutua.** Kamera sovittaa laatikon ruutuun
+*tiukemman ehdon mukaan* (`js/pallolauta/kamera.js laatikonTarve`:
+`max(w · k, h · k · W/H)`), joten toiseen suuntaan jää AINA ylimääräistä
+alaa. Pystyruudulla ylimääräinen ala on pystysuunnassa ja
+työpöydällä leveyssuunnassa — ja juuri siellä laatastoa ei ollut.
+
+Erän 1b luku 7.1 nimesi tämän oikein, mutta sen luvut olivat väärät:
+se sanoi puhelimen näkymäksi 859 × 1 403 yksikköä. **Mitattuna pelin
+omasta kamerasta se on 563 × 1 219.** Ero (× 1,149 leveyssuunnassa)
+tulee siitä, että erän 1b lasku kertoi kertoimella 1,15 kahdesti.
+Alla olevat luvut on laskettu kameran omalla funktiolla FRA:n
+laatikosta (`maanLautalaatikko` FRA = **489,8 × 406,3 yksikköä**),
+kerroin `ULOSZOOMAUKSEN_KERROIN` = 1,15:
+
+| ruutu | näkyvä ala uloimmalla zoomilla | leveyskerroin | korkeuskerroin |
+| --- | --- | ---: | ---: |
+| puhelin 390 × 844 | **563,3 × 1 219,0** | 1,150 | **3,000** |
+| tabletti 768 × 1024 | 563,3 × 751,0 | 1,150 | 1,848 |
+| työpöytä 1440 × 900 | 747,6 × 467,2 | 1,526 | 1,150 |
+| leveä 1920 × 1080 | **830,7 × 467,2** | **1,696** | 1,150 |
+| **UNIONI** | **830,7 × 1 219,0** | 1,696 | 3,000 |
+
+Puhelin määrää korkeuden, leveä työpöytä leveyden. **Unionin pinta-ala
+on tasan 3,85 × laatikko × 1,15**, ja se luku on sama joka maalle:
+se on kuvasuhteiden ääripäiden suhde ((844/390) / (1080/1920) = 3,848)
+eikä riipu maan muodosta. Tarkistin sen GRC:llä, ESP:llä, ITA:lla ja
+DEU:lla — 3,85 kaikilla.
+
+### 9.2 Mitä koodiin tuli
+
+Toteutus generaattoriin oli **26 riviä koodia** (perusteluineen 71
+riviä diffiä) eli selvästi alle tehtävänannon ~60 rivin rajan, joten
+kerrointa ei tarvinnut arvata:
+
+| tiedosto | muutos |
+| --- | --- |
+| `tools/generoi-laattapyramidi.mjs` | Uusi lippu **`--laatikko-nakyma`** ja vakio `NAKYMAN_KUVASUHTEET` (neljä ruutua, kapein ja levein määräävät). Laatikon kasvatus on UNIONI entisen kanssa, joten aluevesipuskuri ja kerroin pysyvät alarajana eikä pikkuvaltio kutistu. Luetteloon uusi kenttä `laatikkoNakyma`. |
+| `.github/workflows/generoi-varitaso.yml` | Uudet syötteet **`laatikko_nakyma`** (boolean, oletus **true** → `--laatikko-nakyma`) ja **`laatikkokerroin`** (tyhjä = 1,15 → `--laatikkokerroin`). |
+| `tests/tasoitustaso.test.mjs` | Seitsemäs vartio: unionin on katettava pelin oman kameran näkymä kaikilla neljällä kuvasuhteella. Vaatimus lasketaan `kamera.js`:n kaavalla ja `ULOSZOOMAUKSEN_KERROIN`-vakiosta, ei generaattorin kopiolla siitä. |
+
+`--laatikkokerroin` oli generaattorissa jo erästä 1b; **uutta on se, että
+työnkulku pääsee siihen käsiksi.**
+
+### 9.3 Hinta: mitattu ennen ja jälkeen
+
+Sama komento, sama kone, sama scratchpad-kansio, ainoa ero `--laatikko-nakyma`:
+
+| | laatikko (lautayks.) | häive | laattoja | tavuja | aika |
+| --- | --- | ---: | ---: | ---: | ---: |
+| **ennen** (kerroin 1,15) | 563,2 × 467,3 | 70 yks | **329** | **1,61 Mt** | **17,9 s** |
+| **jälkeen** (näkymäunioni) | **830,6 × 1 218,9** | **125 yks** | **1 195** | **3,91 Mt** | **43,2 s** |
+| kerroin | 3,85 × pinta-ala | 1,79 × | **3,63 ×** | **2,43 ×** | 2,41 × |
+
+Tasoittain (jälkeen): z4 9 laattaa 0,04 Mt · z5 24 laattaa 0,11 Mt ·
+z6 70 laattaa 0,31 Mt · z7 228 laattaa 0,85 Mt · **z8 864 laattaa
+2,60 Mt**. Pienin laatta 1,0 kt, suurin 48,6 kt.
+
+**TAVUT KASVOIVAT VÄHEMMÄN KUIN LAATTAMÄÄRÄ (2,4 × vs. 3,6 ×),** koska
+uusi ala on lähes pelkkää tasaista kermaa: keskimääräinen laatta kutistui
+4,9 kt → 3,3 kt. Tehtävänannon arvio kasvusta oli × 5–8; **mitattu on
+× 2,4 tavuissa ja × 3,6 laatoissa**, eli halvempi kuin arvioitiin.
+
+Uusi arvio koko Euroopalle: luvun 7.1 arvio 30–55 Mt kertautuu 2,4:llä
+eli **arvio 70–130 Mt** — sama suuruusluokka kuin erän 1b murrettu
+paletti PELKÄLLÄ laatikolla × 1,15, ja alle laattakaton (96 Mt on
+selaimen välimuistikatto per istunto, ei ämpärin koko).
+
+### 9.4 Häive jätettiin — ja se on nyt ruudun sisällä
+
+`--feidausreuna` on ennallaan (oletus 15 % laatikon lyhyemmästä
+sivusta), joten laajennetulla laatikolla häive kasvoi itsestään
+**70 → 125 yksikköön** (3,75° pituuspiiriä). Häive on edelleen pakko:
+panorointi ei ole rajattu (luku 9.6), joten terävä reuna näkyisi heti
+kun karttaa vetää sivuun.
+
+**MUTTA: HÄIVE EI OLE RUUDUN ULKOPUOLELLA, KUTEN TEHTÄVÄNANTO OLETTI.**
+Unioni on määritelmän mukaan *täsmälleen* näkyvä ala kapeimmalla
+ruudulla, joten puhelimen ylä- ja alareuna osuvat laatikon reunaan.
+Saapumisajo käyttää marginaalia 1,10 (`SAAPUMISRAJAUKSEN_MARGINAALI`
+0,05) eikä 1,15, joten saapumisnäkymä on 1 165,8 yksikköä korkea eli
+26,6 yksikköä laatikon reunan sisäpuolella — vähemmän kuin häiveen 125.
+
+Mitattuna (puhelinkuva, x = 250, kangas alkaa y ≈ 64):
+
+| y | L | σ (reliefikontrasti) |
+| ---: | ---: | ---: |
+| 72 | 223,8 | 39,7 *(rantaviiva mittausruudussa)* |
+| 84 | 235,7 | **1,3** |
+| 100 | 243,5 | 1,2 |
+| 110 | 247,1 | 0,5 |
+| 120–350 | **247,x** | **0,3** |
+| 700–790 *(Välimeri)* | 232,x | 0,4 |
+
+**Korkeuserot ovat poissa jo 20 pikselin päässä ruudun reunasta**
+(σ 1,3), ja pelkkä kirkkaus nousee täyteen kermaan 50 pikselin
+matkalla. (Alareunan 232 ei ole häivettä vaan Välimeren tumma pohja
+kerman alla — σ 0,4 kertoo, että reliefi on siellä täysin poissa.) Se on pehmeä vinjetti eikä vyö, ja minusta se on oikea ilme
+vanhalle arkille — mutta jos omistaja haluaa häiveen KOKONAAN ruudun
+ulkopuolelle, hinta on laskettu: laatikko pitäisi kasvattaa
+`union + 2 × häive` -mittaan, jolloin FRA:n laatikko olisi
+1 187 × 1 575 yksikköä ja laattoja **arvio ~2 900** (2,4 × nykyisestä).
+Vaihtoehtoisesti `feidausreuna: 40` kutistaa vinjetin ~28 pikseliin
+ilman yhtään lisälaattaa — **se on yksi työnkulun syöte.**
+
+### 9.5 Kuvat — mitä NÄIN
+
+Kaksi uutta kuvaa, kumpikin saapumisnäkymästä laajennetuilla laatoilla
+(peitto 0,85, kerma oletus):
+
+- **`karttauudistus-1c-nakyma-390.png`** (puhelin 390 × 844).
+  **VYÖ ON POISSA.** Ruudun jokainen rivi on tasoitettu: Britannia
+  ylhäällä on tasaista kermaa rantaviivoineen, Espanja alhaalla samoin,
+  ja Ranska on keskellä ainoa, jossa on reliefiä. Vertaa
+  `karttauudistus-1c-peitto085.png`:iin, jossa tasoitettu kaistale
+  alkaa y ≈ 225 ja loppuu y ≈ 640 (noin puolet ruudun korkeudesta) ja
+  sen ulkopuolella kartta on alkuperäinen.
+  **Terävää reunaa ei näy missään** — en nähnyt yhtään suoraa viivaa
+  laataston rajalla, vain ylä- ja alareunan pehmeän vinjetin (luku 9.4).
+- **`karttauudistus-1c-nakyma-1440.png`** (työpöytä 1440 × 900).
+  Espanja, Portugali, Britannia, Saksa ja Italia ovat tasoitettuja
+  lähes koko ruudun leveydeltä. **Kuvassa on yhä vinoja kaistaleita,
+  joissa kartta on karkeaa tai alkuperäistä** — ne ovat luvun 7.7
+  vanha havainto (pallon laattakerros ei ole ehtinyt ladata laattoja,
+  `LAATTAKATTO_NAKYVA` 48) eivätkä laataston reuna: sama kaistale on
+  erän aiemmassa työpöytäkuvassa `karttauudistus-1c-tyopoyta-peitto085.png`,
+  jossa laatasto oli kolmasosan kokoinen. Kaistale on nyt NÄKYVÄMPI,
+  koska sen ympärillä kaikki muu on kermaa. **Tämä on tämän erän
+  tärkein avoin asia työpöydällä** (luku 9.7).
+
+**MITATUT PIKSELIT.** Neljä pistettä, jotka olivat VANHASSA ajossa
+täsmälleen samat kuin ilman kerrosta (eli laatikon ulkopuolella,
+tasoittamatta) — puhelinkuvasta, 9 × 9 ruudun keskiarvo ja keskihajonta:
+
+| piste | vanha = ilman kerrosta | uusi (näkymäunioni) | ΔL | Δσ |
+| --- | --- | --- | ---: | ---: |
+| Britannia (154 · 186) | rgb(225,216,195) L 216,5 σ 1,07 | **rgb(254,248,219) L 246,5 σ 0,33** | **+30,0** | −0,74 |
+| Britannia (82 · 192) | rgb(226,218,194) L 217,3 σ 1,28 | rgb(254,248,218) L 246,2 σ 0,39 | +28,9 | −0,89 |
+| Espanja, Kastilia (55 · 675) | rgb(238,204,136) L 206,0 σ 2,16 | **rgb(246,236,201) L 235,0 σ 0,67** | **+29,0** | −1,49 |
+| Espanja (182 · 656) | rgb(207,201,181) L 200,3 σ 1,09 | rgb(242,236,208) L 234,7 σ 0,23 | +34,4 | −0,86 |
+
+Nämä neljä ovat pisteitä, joissa vanha ajo antoi **tavu tavulta saman**
+arvon kuin ajo ilman kerrosta — eli ne olivat laatikon ulkopuolella.
+Viides piste kertoo reliefistä enemmän, mutta se oli vanhassa ajossa
+häiveen reunalla eikä siis täysin tasoittamaton: **Espanja, Aragonia**
+ilman kerrosta rgb(220,179,122) L 185,0 **σ 6,22**, vanhassa ajossa
+L 192,0 σ 17,3 *(rantaviiva ruudussa)*, uudessa **rgb(244,233,199)
+L 232,0 σ 1,04** — eli **σ putosi 6,2 → 1,0 eli 17 %:iin**, mikä on
+(1 − peitto) = 0,15 mittaustarkkuuden rajoissa.
+
+Ja kontrolli, joka EI saa muuttua:
+
+| piste | vanha | uusi | ΔL |
+| --- | --- | --- | ---: |
+| **Keski-Ranska, Berry** | rgb(242,233,187) L 231 | **rgb(243,233,188) L 231** | **+0,4** *(pakkaus)* |
+
+Britannia ja Espanja ovat siis **kermaa, eivät alkuperäistä**, ja niiden
+reliefikontrasti on pudonnut samalle tasolle kuin naapureilla jo
+erässä 1c (σ ≈ 0,3–1,0). Ranska on ennallaan.
+
+### 9.6 PANOROINTIA EI OLE RAJATTU — LÖYDÖS, JOTA EN KORJANNUT
+
+Tehtävänanto pyysi kirjaamaan, kuinka pitkälle pallolla voi panoroida
+uloimmalla zoomilla. **Vastaus: mihin tahansa.**
+
+Uloszoomauksen esto on `OrbitControls.maxDistance`
+(`js/pallolauta/lauta.js tahdistaZoomirajat`) eli **pelkkä korkeusraja**.
+Kartan vetäminen ei kulje OrbitControlsin läpi lainkaan
+(`ohjaimet.enableRotate = false`, `js/pallo.js` rivi 2503): yhden sormen
+veto kääntää palloa suoraan `pointOfView`-kutsulla, ja siinä on
+rajattuna **vain leveysaste** (± 89,5° vedossa ja liu'ussa, ± 85°
+`PANOROINNIN_LEVEYSRAJA` rullapanoroinnissa). **Pituusasteella ei ole
+mitään rajaa** — pelaaja voi vetää Ranskasta Japaniin uloimmalla
+sallitulla zoomilla, ja siellä kartta on tavallista seepiaa.
+
+Laataston reunaan on saapumisnäkymästä **noin 146 yksikköä (4,4°)
+sivuille ja 27 yksikköä (0,8°) ylös/alas**, ja häive syö reunimmaiset
+125 yksikköä, joten terävää reunaa ei tule näkyviin missään vaiheessa —
+mutta tasoitus loppuu, ja pelaaja näkee sen jos vetää karttaa.
+
+**EHDOTUS (EN TOTEUTTANUT, Kustannuskuri 1): panorointi rajataan samaan
+laatikkoon kuin uloszoomaus.** Sama `maanLaatikko`, joka jo elää
+`lauta.js`:ssä, riittäisi: `pointOfView`-kutsun lat/lng puristettaisiin
+laatikon sisään samalla tavalla kuin altitude puristetaan nyt. Se on
+yksi funktio ja kaksi kutsupaikkaa (veto ja liuku), ja se sulkisi
+samalla erän 2 avoimen kysymyksen siitä, voiko pelaaja "eksyä"
+kohdemaasta. **Tämä on ilmeen ja pelattavuuden päätös eikä tekninen
+valinta, joten se on omistajan.**
+
+### 9.7 Kolme avointa asiaa
+
+**9.7.1 TYÖPÖYDÄN LATAAMATTOMAT KAISTALEET OVAT NYT NÄKYVIÄ** (luvun 7.7
+jatko). Työpöytäkuvassa osa Alpeista, Pohjois-Italiasta ja
+Luoteis-Espanjasta piirtyi kaappaushetkellä alkuperäisenä, koska niiden
+pohjalaattojen värilaattaa ei ollut vielä ladattu. Aiemmin nuo alat
+olivat laataston ULKOPUOLELLA, joten ne olivat pysyvästi seepiaa eikä
+kukaan odottanut muuta; nyt ne ovat laataston sisällä ja siksi
+*väliaikaisesti* väärin. Puhelimella ilmiötä ei ole (24 näkyvää laattaa,
+24 värillistä). **Tämä on latausjärjestyksen asia eikä laatikon**, ja se
+kannattaa mitata uudestaan pidemmällä odotuksella ennen kuin siihen
+koskee.
+
+**9.7.2 UNIONI OLETTAA NELJÄ KUVASUHDETTA.** `NAKYMAN_KUVASUHTEET` on
+lista koodissa. Kapeampi ruutu kuin 390 × 844 (esim. taitettava puhelin
+auki-asennossa pystyssä) jäisi listan ulkopuolelle, ja vyö palaisi
+siihen. Lista on yhdessä paikassa ja testi lukee sen samasta paikasta.
+
+**9.7.3 LAATIKKO EI OLE PALLON NÄKYMÄ VAAN LAUDAN SUORAKAIDE.** Kameran
+kaava laskee näkyvän alan lautayksiköissä (Mercator-suorakaide); pallolla
+sama ala kaareutuu, joten ruudun kulmissa näkyy hitusen enemmän
+pituusastetta kuin suorakaide lupaa. Puhelinkuvassa se ei näy (unioni on
+siellä kolminkertainen laatikkoon nähden), mutta työpöydällä se on osa
+9.7.1:n kaistaleiden selitystä. Varmuusvara olisi `--laatikkokerroin 1.3`
+yhdessä `--laatikko-nakyma`:n kanssa: se kasvattaisi unionin samassa
+suhteessa (arvio ~1 530 laattaa, ~5,0 Mt).
+
+### 9.8 Portit tässä jatkotyössä
+
+| portti | tulos |
+| --- | --- |
+| `npm test` | **3315 testiä, 3302 pass, 0 fail** (13 skipped; +1 uusi vartio) |
+| `node --test tests/tasoitustaso.test.mjs` | **7/7** |
+| `savuke-tasoitus-pallo` laajennetuilla laatoilla | **11/11 vihreä** |
+| `savuke-tasoitus-pallo --ilman-rajausta` laajennetuilla | **10/11 (vastakoe punainen, V2 kaatuu: 74,9 % Ranskan vertailualan tavuista eroaa, pahin ero 69)** |
+| `node tools/tarkista-savukkeet.mjs` | savukkeet kunnossa |
+| laattoja repossa | **0** (ajot scratchpadissa) |
+| versionumero | **ei nostettu** |
+| Actions-työnkulut | **ei ajettu**, ämpäriin **ei viety mitään** |
+
+### 9.9 PÄIVITETYT TYÖNKULUN SYÖTTEET RANSKAN AJOON
+
+Tämä korvaa luvun 5 taulukon. Muuttuneet rivit on **lihavoitu**.
+
+| syöte | arvo Ranskan ajossa | mitä se tekee |
+| --- | --- | --- |
+| `maa` | `FRA` | kohdemaa ISO A3 -koodina |
+| `paletti` | `tasoitus` | omistajan PÄÄTÖS 4 (kohdemaa alkuperäisenä) |
+| `peitto` | `0.85` | kerman peittävyys; `0.95` on toinen vaihtoehtokuva |
+| `kerma` | *(tyhjä)* | paletin oletus `#faf4d6` |
+| **`laatikko_nakyma`** | **`true` (oletus)** | **laatikko kuvasuhteiden unioniin (830,7 × 1 219,0 yks) eikä pelkkään kertoimeen — TÄMÄ poistaa vaalean vyön** |
+| **`laatikkokerroin`** | *(tyhjä = 1,15)* | **vain jos `js/pallolauta/kamera.js ULOSZOOMAUKSEN_KERROIN` muuttuu; 1,3 olisi varmuusvara pallon kaarevuudelle (luku 9.7.3)** |
+| **`feidausreuna`** | *(tyhjä = 125 yks)* | **15 % laatikon lyhyemmästä sivusta; `40` kutistaa ylä-/alareunan vinjetin ~28 pikseliin (luku 9.4)** |
+| `variversio` | `2026-09-13-tasoitus` *(tai muu uusi)* | polku `julisteet/pyramidi/<variversio>/vari/z…`; SAMA versio kaikille maille |
+| `tasot` | `4-8` | z8 on pakko: uloszoomauksen esto rajaa vain ULOS |
+| `vesi` · `feidaus` · `korkeus` | *(tyhjiä / oletus)* | vain murretulle ja täysvärille |
+| `kuiva` | `false` | `true` tulostaa vain laattamäärät ja polut |
+| `vie` | `true` | `false` = harjoitus, laatat jäävät ajokoneelle |
+
+**AJA ENSIN KUIVANA.** `kuiva: true` kertoo sekunneissa, että ajo on
+1 195 laattaa (ennen 329). Oikea ajo on **43 s ja 3,9 Mt**.
+
+Arvio muille maille (FRA:n mitatusta tiheydestä 0,00118 laattaa /
+lautayksikkö²; unionin pinta-ala on joka maalla 3,85 × laatikko × 1,15):
+
+| maa | unioni (lautayks.) | laattoja z4–z8 (arvio) | tavuja (arvio) |
+| --- | --- | ---: | ---: |
+| **FRA** | **830,7 × 1 219,0** | **1 195 (mitattu)** | **3,91 Mt (mitattu)** |
+| GRC | 540,6 × 714,8 | ~460 | ~1,5 Mt |
+| ESP | 638,1 × 1 130,6 | ~850 | ~2,8 Mt |
+| ITA | 944,5 × 988,3 | ~1 100 | ~3,6 Mt |
+| DEU | 703,9 × 760,8 | ~630 | ~2,1 Mt |
+
+![Näkymäunioni, puhelin 390 × 844](kuvat/karttauudistus-1c-nakyma-390.png)
+![Näkymäunioni, työpöytä 1440 × 900](kuvat/karttauudistus-1c-nakyma-1440.png)
+
+### 9.10 Kysymykset omistajalle (luvun 10 lisäksi)
+
+4. **Riittääkö pehmeä vinjetti ruudun ylä- ja alareunassa** (luku 9.4),
+   vai kutistetaanko se `feidausreuna: 40`:llä? Jälkimmäinen ei maksa
+   yhtään laattaa.
+5. **Rajataanko panorointi samaan laatikkoon** (luku 9.6)? Nyt kartan
+   voi vetää mihin tahansa maailmassa uloimmalla zoomilla, ja siellä
+   tasoitusta ei ole.

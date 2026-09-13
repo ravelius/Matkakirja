@@ -10,7 +10,7 @@
  *        [--paletti murrettu|taysvari|tasoitus] [--vesi 0.72] [--feidaus 0.35]
  *        [--peitto 0.85] [--kerma '#faf4d6']
  *        [--feidausreuna <yksikköä>]
- *        [--laatikkokerroin 1.15] [--ilman-rajausta]
+ *        [--laatikkokerroin 1.15] [--laatikko-nakyma] [--ilman-rajausta]
  *        [--muoto webp]
  *        [--harva] [--harvamittaus] [--saumatesti] [--kuiva]
  *        [--vain-lista] [--vain-palat [tiedosto]] [--paikkaus <lähdeversio>]
@@ -305,7 +305,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--paletti murrettu|taysvari|tasoitus] [--vesi <0..1>] [--feidaus <0..1>] '
     + '[--peitto <0..1>] [--kerma <#rrggbb>] '
     + '[--feidausreuna <yksikköä>] '
-    + '[--laatikkokerroin <k>] [--ilman-rajausta]] '
+    + '[--laatikkokerroin <k>] [--laatikko-nakyma] [--ilman-rajausta]] '
     + '[--saumatesti [--saumakohta sarake,rivi]]');
   process.exit(1);
 }
@@ -698,6 +698,40 @@ const VARI_FEIDAUSREUNA_ANNETTU = valitsin('feidausreuna', null);
  */
 const VARI_KERROIN = Number(valitsin('laatikkokerroin', 1.15));
 /*
+ * ======== LAATIKKO KOKO NÄKYVÄÄN ALAAN (`--laatikko-nakyma`) ========
+ *
+ * KERROIN 1,15 EI RIITÄ TASOITUKSELLE, JA SE ON MITATTU. Uloszoomauksen
+ * esto rajaa vain sen, kuinka kauas kamera pääsee — se EI tee
+ * laatikosta ruutua. Ruudun kuvasuhde ratkaisee: pystyruudulla
+ * (390 × 844) kamera sovittaa laatikon LEVEYDEN, jolloin näkyvä ala on
+ * kolme kertaa laatikon korkuinen, ja leveällä työpöydällä
+ * (1920 × 1080) sovitetaan KORKEUS ja ylimääräinen ala on sivuilla.
+ * Laataston laatikon ulkopuolella kartta jää alkuperäiseksi, eli
+ * puhelimella Britannia ja Espanja jäivät tasoittamatta ja keskelle jäi
+ * vaalea vyö (omistajan havainto kuvasta karttauudistus-1c-peitto085).
+ *
+ * LAATIKKO ON SIIS KUVASUHTEIDEN UNIONI. Sama kaava kuin kamerassa
+ * (js/pallolauta/kamera.js laatikonTarve): näkyvä leveys on
+ * `max(w · k, h · k · W/H)` ja näkyvä korkeus se jaettuna ruudun
+ * kuvasuhteella. Unioni yli kuvasuhteiden supistuu kahteen ääripäähän:
+ *
+ *   leveys  = max(w · k, h · k · (W/H)max)     (levein ruutu)
+ *   korkeus = max(h · k, w · k · (H/W)max)     (kapein ruutu)
+ *
+ * Laatikko keskitetään maan laatikon keskipisteeseen, koska kamera
+ * keskittää sen (kameranKohde). Pinta-ala kasvaa TASAN kuvasuhteiden
+ * suhteella ((H/W)max / (H/W)min = 3,85 tällä listalla) maasta
+ * riippumatta — ja se on tasoitukselle halpaa, koska laatassa ei ole
+ * maastoa (ks. TASOITUSAJO).
+ */
+const NAKYMAN_KUVASUHTEET = [
+  [390, 844],   // puhelin pystyssä (kapein — määrää KORKEUDEN)
+  [768, 1024],  // tabletti pystyssä
+  [1440, 900],  // työpöytä
+  [1920, 1080], // leveä työpöytä (levein — määrää LEVEYDEN)
+];
+const VARI_LAATIKKO_NAKYMA = lippu('laatikko-nakyma');
+/*
  * VASTAKOE (`--ilman-rajausta`): laatat ajetaan ILMAN poltettua
  * leikkuria ja feidausta. Silloin naapurimaa ja avomeri saavat
  * murretun paletin täydellä peitolla, ja savukkeen on kaaduttava
@@ -1010,14 +1044,34 @@ if (VARITASO) {
    * on 12 × 6 yksikköä, jonka 15 % on 0,9 — vähemmän kuin puskurin
    * 6,7. Kumpikin ehto on pakko, joten laatikko on niiden UNIONI.
    */
-  const kx = Math.max((VARI_KERROIN - 1) / 2 * laatikkoLaudalla.w, ALUEVESI_YKSIKKOA);
-  const ky = Math.max((VARI_KERROIN - 1) / 2 * laatikkoLaudalla.h, ALUEVESI_YKSIKKOA);
+  let kx = Math.max((VARI_KERROIN - 1) / 2 * laatikkoLaudalla.w, ALUEVESI_YKSIKKOA);
+  let ky = Math.max((VARI_KERROIN - 1) / 2 * laatikkoLaudalla.h, ALUEVESI_YKSIKKOA);
+  /*
+   * `--laatikko-nakyma`: laatikko kasvaa koko näkyvään alaan
+   * uloimmalla sallitulla zoomilla, kaikilla kuvasuhteilla (ks.
+   * NAKYMAN_KUVASUHTEET). Kasvatus on UNIONI entisen kanssa, joten
+   * aluevesipuskuri ja kerroin pysyvät alarajana eikä pikkuvaltio
+   * kutistu.
+   */
+  if (VARI_LAATIKKO_NAKYMA) {
+    let nakymaW = laatikkoLaudalla.w * VARI_KERROIN;
+    let nakymaH = laatikkoLaudalla.h * VARI_KERROIN;
+    for (const [rw, rh] of NAKYMAN_KUVASUHTEET) {
+      const tarve = Math.max(laatikkoLaudalla.w * VARI_KERROIN,
+        (laatikkoLaudalla.h * VARI_KERROIN * rw) / rh);
+      nakymaW = Math.max(nakymaW, tarve);
+      nakymaH = Math.max(nakymaH, (tarve * rh) / rw);
+    }
+    kx = Math.max(kx, (nakymaW - laatikkoLaudalla.w) / 2);
+    ky = Math.max(ky, (nakymaH - laatikkoLaudalla.h) / 2);
+  }
   const x0 = laatikkoLaudalla.x - kx;
   const x1 = laatikkoLaudalla.x + laatikkoLaudalla.w + kx;
   const y0 = laatikkoLaudalla.y - ky;
   const y1 = laatikkoLaudalla.y + laatikkoLaudalla.h + ky;
   VARI_LAATIKKO = {
     x: x0, y: y0, w: x1 - x0, h: y1 - y0, kerroin: VARI_KERROIN,
+    nakyma: VARI_LAATIKKO_NAKYMA,
   };
   ALUE = {
     lon0: kaava.lautaLon(x0),
@@ -1064,7 +1118,8 @@ if (VARITASO) {
   };
   console.log(`  väritaso        ${VARI_MAA} · laatikko laudalla `
     + `x ${x0.toFixed(1)}..${x1.toFixed(1)} y ${y0.toFixed(1)}..${y1.toFixed(1)} `
-    + `(kerroin ${VARI_KERROIN}, puskuri ${ALUEVESI_YKSIKKOA} yksikköä = 12 mpk) · `
+    + `(kerroin ${VARI_KERROIN}, puskuri ${ALUEVESI_YKSIKKOA} yksikköä = 12 mpk`
+    + `${VARI_LAATIKKO_NAKYMA ? ', NÄKYMÄUNIONI' : ''}) · `
     + `versio ${VARIVERSIO} · polku vari/z<taso>`);
   console.log(`  väripaletti     ${VARIPALETTI} · `
     + (TASOITUSTASO
@@ -3395,6 +3450,12 @@ function teeLuettelo() {
          * eroavat, feidaus näkyy suorakaiteena.
          */
         kerroin: VARI_KERROIN,
+        /**
+         * Laatikko kasvatettiin kuvasuhteiden unioniin
+         * (`--laatikko-nakyma`): kerroin yksin ei siis kerro laatikon
+         * kokoa, ja `alue` on ainoa tarkka lähde.
+         */
+        laatikkoNakyma: VARI_LAATIKKO_NAKYMA ? true : undefined,
         /** Vastakoeajo (`--ilman-rajausta`): leikkuria EI ole poltettu. */
         rajattu: !VARI_ILMAN_RAJAUSTA,
         alue: ALUE,
