@@ -184,7 +184,7 @@ import {
   fokusvirtaLehtivinkki, fokusvirtaSisalto,
   fokusvirtaHuudahdus, fokusvirtaUusiKulku,
   fokusvirtaSaapumiskupla, nollaaFokuskuvat, vaiennaLivianKaupunkipuhe,
-  naytaLuentakuvasarja,
+  naytaLuentakuvasarja, puraFokusvirtaPaikanvaihdossa,
 } from './fokusvirta.js';
 /*
  * KAUPUNGIN MINITRAILERI (omistaja 11.9.2026): kolme herokuvaa ja nimi
@@ -367,7 +367,7 @@ import {
  * kuin kohdemerkeillä: päivitys aina kun näkymä on asettunut, nollaus
  * laudan vaihdossa.
  */
-import { paivitaFokuspiste, nollaaFokuspiste } from './fokuspiste.js';
+import { paivitaFokuspiste, paivitaFokuspisteKaikillaLaudoilla, nollaaFokuspiste } from './fokuspiste.js';
 /*
  * Nykyisen maan vahvistettu ääriviiva (js/maatummennus.js; naapurien
  * tummennus poistui 2.9.2026). Sama elinkaari kuin
@@ -14969,7 +14969,7 @@ export class UI {
    * tuontisyklin (fokuspiste tuo fokusvirran, fokusvirta fokustehtävät),
    * joten kutsu kulkee ui-olion kautta kuten lehden muutkin.
    */
-  paivitaFokuspiste() { return paivitaFokuspiste(this); }
+  paivitaFokuspiste() { return paivitaFokuspisteKaikillaLaudoilla(this); }
 
   /*
    * Sama ohut delegaattori eläintäyille (js/elaintaky.js): kortti
@@ -19593,6 +19593,7 @@ export class UI {
         // Lähtö kuuluu vain kaupungista alkavaan valittuun matkaan.
         // Reitin varren automaattijatko ei saa uutta tunnetta joka heitolla.
         if (result?.ok && from.type === 'city') {
+          puraFokusvirtaPaikanvaihdossa(this);
           ilmoitaLivianTunne(
             { tunne: 'ilo', voimakkuus: maitse ? 0.4 : 0.45 },
             { lahde: 'matka', tunnus: maitse ? 'matka.kavely.lahto' : 'matka.laiva.lahto' },
@@ -19650,7 +19651,8 @@ export class UI {
     if (lahto && kohde) this.lentoKaari = { a: lahto.id, b: kohde.id };
     this.paivitaMatkareitit();
     this.run(() => game.actionFly(destination), {
-      after: async () => {
+      after: async (result) => {
+        if (result?.ok && from.type === 'city') puraFokusvirtaPaikanvaihdossa(this);
         /*
          * LENNON OMA SIIRTYMÄRAITA (omistaja 2.9.2026). Musiikki
          * kytketään tässä eikä animatePawnin kautta, koska lento on

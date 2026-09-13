@@ -1348,10 +1348,7 @@ function lataaTyyli() {
  * Kuplan asemointi kuuntelee ikkunan kokoa; kuuntelija purkautuu tässä,
  * jottei suljettu kupla jää mittaamaan itseään jokaisesta kierrosta.
  */
-export function suljeFokusvirta(ui) {
-  // Minitraileri on kartan päällys eikä kortti, mutta sama sulku vie
-  // senkin: fokusvirran sulkeminen on aina paluu karttaan.
-  piilotaSaapumistraileri(ui, { peru: true });
+export function puraFokusvirtaKortti(ui) {
   ui.fokusvirtaKortti?.remove();
   ui.fokusvirtaKortti = null;
   if (ui.fokusvirtaAsemointi) {
@@ -1359,6 +1356,26 @@ export function suljeFokusvirta(ui) {
     globalThis.removeEventListener?.('orientationchange', ui.fokusvirtaAsemointi);
     ui.fokusvirtaAsemointi = null;
   }
+}
+
+/**
+ * Purkaa lähtökaupungin kuplan ja sen vielä odottavat viivekuplat vasta,
+ * kun paikanvaihto on varmasti onnistunut. Yleinen suljeFokusvirta ei saa
+ * tehdä tätä: sitä käytetään myös saman kaupungin kuplien vaihtamiseen.
+ */
+export function puraFokusvirtaPaikanvaihdossa(ui) {
+  for (const avain of ['fokusKuittausAjastin', 'fokusaarreAjastin']) {
+    clearTimeout(ui[avain]);
+    ui[avain] = null;
+  }
+  puraFokusvirtaKortti(ui);
+}
+
+export function suljeFokusvirta(ui) {
+  // Minitraileri on kartan päällys eikä kortti, mutta sama sulku vie
+  // senkin: fokusvirran sulkeminen on aina paluu karttaan.
+  piilotaSaapumistraileri(ui, { peru: true });
+  puraFokusvirtaKortti(ui);
   /*
    * Täkynoston alalaidan liuska väisti ennen kuplaa tässä kohdassa
    * (nostoPinta). Yhtenäinen kohdemalli (Raamattu 29.8.2026) purki

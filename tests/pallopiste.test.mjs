@@ -26,7 +26,7 @@ import {
   kaupunkipisteenHalkaisijaPx, kaupunkipisteenSade,
   ladonnanAjoitus, luoPisteidenLitistaja, pistelevyGeometria, pistelevynPuskurit,
 } from '../js/pallolauta/lauta.js';
-import { fokuspisteenSiirto } from '../js/fokuspiste.js';
+import { fokuspisteenSiirto, paivitaFokuspisteKaikillaLaudoilla } from '../js/fokuspiste.js';
 
 const lue = (polku) => readFileSync(new URL(polku, import.meta.url), 'utf8');
 
@@ -139,6 +139,28 @@ test('tasokartta ja pallo lukevat saman siirron: merkki ja osuma siirtyvät, dat
   assert.match(nostot, /lat: a\.lat,\n\s*lng: a\.lon,/);
   const lauta = lue('../js/pallolauta/lauta.js');
   assert.match(lauta, /for \(const o of nostot\.osumat\(\)\) ehdokkaat\.push\(\{ laji: 'nosto', lat: o\.lat, lng: o\.lng, o \}\);/);
+});
+
+test('lehtipalkinto päivittää kohtaamispisteen heti myös pallolle', () => {
+  let pallopaivitykset = 0;
+  paivitaFokuspisteKaikillaLaudoilla({
+    pallolauta: { paivitaFokuspiste: () => { pallopaivitykset += 1; } },
+  });
+  assert.equal(pallopaivitykset, 1, 'yhteinen portti jätti pallon odottamaan kameran liikettä');
+
+  const ui = lue('../js/ui.js');
+  assert.match(ui, /paivitaFokuspiste\(\) \{ return paivitaFokuspisteKaikillaLaudoilla\(this\); \}/);
+  const tehtavat = lue('../js/fokustehtavat.js');
+  assert.ok((tehtavat.match(/ui\.paivitaFokuspiste\?\.\(\)/g) ?? []).length >= 3,
+    'pulla, oikea lehtivastaus ja visavastaus eivät käytä yhteistä porttia');
+
+  const lauta = lue('../js/pallolauta/lauta.js');
+  const pallopaivitys = lauta.match(/const paivitaFokuspistePallolla = \(\) => \{[\s\S]*?\n {2}\};/);
+  assert.ok(pallopaivitys, 'pallon julkinen fokuspistepäivitys puuttuu');
+  assert.match(pallopaivitys[0], /ui\.dead \|\| kuori\.hidden \|\| linssiPaalla\(\)/,
+    'palkintopäivitys ohittaa pallon dead-, piilotus- tai linssiportin');
+  assert.match(pallopaivitys[0], /return ladoLevossa\(\);/);
+  assert.match(lauta, /paivitaFokuspiste: paivitaFokuspistePallolla,/);
 });
 
 /* ---- pisteen paikka tulee piirrosta, ei tapahtumasta ---- */
