@@ -25933,3 +25933,120 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px;
 /* Kokonainen vektoripulu: lepotila 40 × 61, ele varaa tilaa ylöspäin. */
 .livia-kasvot-pinta.livia-svg-pulu { image-rendering: auto; }
 .livia-svg-pulu > span, .livia-svg-pulu svg { display: block; overflow: hidden; }
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * YLÄPALKKI PIILOON VAAKAPUHELIMELLA (omistaja 13.9.2026)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Sanatarkasti: *"Kännykän vaakanäkymässä yläpalkin voisi piilottaa
+ * niin että vain kolme päällekköistä väkästä näkyy kartalla oik.
+ * yläreunassa ja sitä painamalla Yläpalkki tulee näkyviin
+ * väliaikaisesti muun sisällön päälle mutta katoaa heti kun pelaaja
+ * klikkaa jotain kohtaa palkin ulkopuolelta. Jotta väkäset mahtuvat
+ * ruudulle, pitää kartta selite nappia siirtää hieman vasemmalle.
+ * Uusi nappi saisi olla saman korkuinen kuin kartta selite."*
+ *
+ * RAJA ON KORKEUS EIKÄ ORIENTAATIO. `orientation: landscape` on tosi
+ * myös leveällä työpöydällä, jossa palkille on tilaa yllin kyllin —
+ * ongelma on matala ruutu. 520 px on pelin oma vaakapuhelinraja
+ * (sama kuin .intro-tyopoyta yllä), joten uusi sääntö ei tuo peliin
+ * uutta taitekohtaa.
+ *
+ * Nappi on olemassa DOM:ssa aina (js/ylapalkki-vaaka.js), mutta
+ * näkyy vain tässä. Niin moduulin ei tarvitse mitata ruutua eikä
+ * kuunnella koon muutoksia: sama raja on yhdessä paikassa.
+ */
+.ylapalkki-nappi { display: none; }
+
+@media (max-height: 520px) {
+  /*
+   * Palkki pois asettelusta, ei vain näkyvistä: `.app` on grid, jonka
+   * ensimmäinen rivi on palkki. Pelkkä visibility jättäisi rivin
+   * paikalleen ja kartta jäisi yhtä ahtaaksi kuin ennenkin.
+   */
+  .app { grid-template-rows: minmax(0, 1fr); }
+
+  .topbar {
+    position: absolute;
+    top: env(safe-area-inset-top);
+    left: env(safe-area-inset-left);
+    right: env(safe-area-inset-right);
+    /*
+     * Suljettuna palkki liukuu ylös oman korkeutensa verran ja on
+     * poissa myös näppäimistöltä ja ruudunlukijalta. Näkyvyyden
+     * siirtymä viivästetään liu'un loppuun, jotta liuku ehtii näkyä
+     * ennen katoamista — sama tapa kuin karttaselitteen levyllä.
+     */
+    transform: translateY(-100%);
+    visibility: hidden;
+    /* Kartan omien nappien (z-index 6) ja kuplien yläpuolelle. */
+    z-index: 30;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    transition: transform 0.18s ease, visibility 0s linear 0.18s;
+  }
+
+  body.ylapalkki-auki .topbar {
+    transform: translateY(0);
+    visibility: visible;
+    transition: transform 0.18s ease, visibility 0s;
+  }
+
+  /*
+   * Nappi on karttaselitteen kokoinen ja sen vieressä oikeassa
+   * reunassa. Selite väistyy vasemmalle täsmälleen napin leveyden ja
+   * saman 0,4rem välin verran, jotta kumpikin istuu nurkassa
+   * symmetrisesti eikä kelluu.
+   */
+  .ylapalkki-nappi {
+    display: grid;
+    position: absolute;
+    top: 0.4rem;
+    right: 0.4rem;
+    width: 2.15rem;
+    height: 2.15rem;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: rgba(239, 220, 180, 0.9);
+    color: var(--map-ink);
+    cursor: pointer;
+    z-index: 6;
+  }
+
+  .ylapalkki-nappi svg { display: block; }
+
+  /*
+   * `:not(:disabled)` ei ole koriste vaan paino: pelin yleissääntö
+   * `button:hover:not(:disabled)` maalaisi napin tummaksi ja sen oma
+   * tumma kuvake katoaisi. Sama lisä kuin karttaselitteen napissa.
+   */
+  .ylapalkki-nappi:hover:not(:disabled) { background: rgba(245, 231, 200, 0.95); }
+
+  .ylapalkki-nappi[aria-expanded='true'] {
+    background: var(--map-ink);
+    color: rgba(245, 231, 200, 0.95);
+  }
+
+  .karttaselite { right: 2.95rem; }
+
+  /*
+   * AUKI OLEVA PALKKI KORVAA KARTAN NURKAN. Napit istuvat täsmälleen
+   * palkin alla, ja mitattuna niiden alareuna pilkotti palkin alta
+   * muutaman pikselin verran — huolimattoman näköinen sauma. Ne
+   * väistyvät auki-tilassa kokonaan: palkki suljetaan omistajan
+   * säännön mukaan napauttamalla sen ulkopuolelta, joten kummankaan
+   * napin ei tarvitse olla tavoitettavissa sillä välin.
+   */
+  body.ylapalkki-auki .ylapalkki-nappi,
+  body.ylapalkki-auki .karttaselite {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .ylapalkki-nappi,
+  .karttaselite { transition: opacity 0.18s ease; }
+}
