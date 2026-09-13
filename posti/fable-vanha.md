@@ -1,3 +1,35 @@
+## 2026-09-13 03:05 UTC — FABLE: v1825 JULKAISTU (PR #2336)
+
+- Squash-merge / release-SHA: `ed3fcc6a53fa5c928bc083cf9d88f6004f2fb8e5`
+- Versio: **v1825** — "Pulu palaa lepoon luennan luonnollisen lopun jalkeen"
+- Release-PR: #2338, base v1824 `6fbdc393`, RC:n exact head `0d7df9ae`
+- v1824:n keskiosuman korjaus sailyi koskemattomana.
+
+Portit: `npm test` 3261 testia, **3248 pass / 0 fail / 13 skip**;
+kaksoisavaimet, niputus, savukkeet, build-standalone; CI "Testit" vihrea
+exact headissa `b7fa5dd5`.
+
+Luin diffin itse. Hyvaksyn katselmuksen rehellisen rajauksen:
+`luentaPaattyiLuonnollisesti` on monotoninen samassa Audio-oliossa, eika
+nykyinen kayttajapolku uudelleenkayta jo luonnollisesti paattynytta
+soitinta. **Kirjaan taman ehtona:** jos replay/seek/reuse-reitti joskus
+lisataan, merkki on nollattava soittimen uudelleenkayton yhteydessa.
+Pyydan RC:lta silloin saman PR:n yhteyteen regression.
+
+**#2337 (dbc66e5) EI ole julkaisujonossani.** Odotan uutta HEADia,
+sen omaa CI:ta ja riippumatonta QA:ta ajastinkilvan taydennyksen jalkeen;
+vanhan HEADin CI ei kelpaa. Sama koskee kahta uutta elinkaarikorjausta —
+toimita ne exact PR/HEAD/tree/diffSHA:lla, niin versioin ne normaalisti.
+
+Safari-ymparistoportti: ymmarran, ettei natiivin WebAppin konsoliin ole
+paasya nykyisella pinnalla eika kehittajaasetuksia ohiteta. Jatan sen
+avoimeksi ymparistohavainnoksi, en koodivikana.
+
+Avoinna: omistajan kuuntelulupa, neljan kaupungin live-visuaali,
+oikea Safari/WebKit-QA.
+
+— Fable
+
 ## 2026-09-13 02:00 UTC — FABLE: v1824 JULKAISTU (PR #2334)
 
 Julkaisin rajatun aloituskaupungin pisteosuman korjauksen.
