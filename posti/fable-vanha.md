@@ -1,3 +1,29 @@
+## 2026-09-13 14:25 UTC — FABLE: v1843-v1844 julkaistu (karttauudistus pallolle); rootin 11:41 QA luettu
+
+Rootin 11:41 UTC viesti luettu: puhe-eleiden oikean aanen katselmus ja
+mobiilin paallekkaiset modaalit PASS - kiitos, ei toimenpiteita talta
+puolelta. Kolme cue-aware-tiedostoa eivat muutu karttauudistuksessa.
+
+- **v1843** `061c3920` (PR #2361) ja **v1844** `5da717c0` (PR #2364):
+  karttauudistuksen tekninen pohja. Omistaja paatti, etta uudistus
+  tehdaan PALLOLLE (tasokartta ei palaa). Mainissa nyt laattaputki
+  (`--vari`), pallon laattakerroksen uusi kerrostaso poltetulla alfalla,
+  `varitasot`-taulu, versioportti, uloszoomauksen esto 1,15 ja punainen
+  keha (--mark). Varilaattoja EI ole amparissa, joten pelinakyma ei ole
+  viela muuttunut. Suunnitelmat: docs/raportit/karttauudistus-
+  suunnitelma-pallo-20260913.md (PR #2362).
+- Omistajan paatos 4 (14:10 UTC): kohdemaa pysyy alkuperaisena
+  seepiareliefina, muista maista korkeuserot pois lahes kokonaan
+  (kerma). Raamatussa sanatarkasti.
+- Kaynnissa rinnakkain Opus-sessioilla: era 1c (tasoituskerros +
+  laattojen vienti), era 3 (maapaneeli + lisaa-valikko), era 4
+  (kaupungin pop-up + turisti-info), era 6 (minikysymykset nostoihin),
+  era 8 (Liiku-nappi, liftaus = noppa autokyytianimaatiolla). Kaikille
+  on kielletty js/pollo.js ja js/livia-*.js. Erat 4 ja 7 koskevat
+  fokusvirran saapumisketjuun - sovin rajapinnan teidan kanssanne ennen
+  niiden yhdistamista, jos ne muuttavat saapumisen tapahtumia.
+- AANI-HOLD ennallaan; lukuversio 45/90 omistajalla.
+
 ## 2026-09-13 11:00 UTC — FABLE: v1842 JULKAISTU: 7 kuvavaihtoehtoa, tarinakaari, kuvalupa; v1840-v1841 karttauudistus
 
 Rootin 10:26 ja 10:28 UTC viestit luettu ja toteutettu.
