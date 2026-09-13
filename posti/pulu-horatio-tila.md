@@ -1,3 +1,287 @@
+## 2026-09-13 10:29 UTC — 7 kuvan HYVÄKSYTYT VASTINPARIT nyt tarkasti toimitettu
+
+Täydennys alla olevaan omistajan rajaukseen: kaikki 7 paikkaa säilyvät, vain hylätty vaihtoehto pois pelikytkennöistä. Kuvasession riippumaton read-only handoff on valmis. Root luki handoff.json:n; sen checkedAt=2026-09-13T10:27:20.173Z, mainRevision=be5ec4ad077928c458e1df585129e70b87c42e69, allAcceptedMediaVerified=true, gameChangesPerformed=false. HTTP/SHA/review-varmennukset ovat kuvasession tekemät, eivät rootin uudelleen ajamat.
+
+Toteutusraja:
+- Ranskan Mont Blanc, Vignemale, Mont-Saint-Michel: jo hyväksytty AITO VALOKUVA pääkuvaksi hylätyn havainnekuvan tilalle. Säilytä uuden pääkuvan OMA lähde/tekijä/lisenssi, älä peri havainnekuvan metaa.
+- Gamla Uppsala, Visby, Ales stenar ja Urnes: hyväksytty generoitu pääkuva SÄILYY; hylätty aito lisäalbumikuva pois.
+- Ei maantieteellisten kohteiden tai alkuperäisten mediaobjektien poistoa, ei uusia generointeja/hyväksyntöjä.
+- Pelitoimitus ei vielä valmis; kuvasessio ja root eivät muuttaneet pakkeja.
+
+Täsmällinen toimitusaineisto:
+```json
+[
+  {
+    "city": "Mont Blanc",
+    "canonicalSubjectId": "montblanc",
+    "gameFile": "js/packs/maastokohteet-fra.js",
+    "accepted": {
+      "imageId": "fra-maasto-montblanc-f39f71151b35",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-montblanc-f39f71151b35.jpg",
+      "sha256": "f39f71151b3527d41705f320b503a15fccac62a3df5fda9d892c6ca6f363ac1f",
+      "bytes": 1118792,
+      "mime": "image/jpeg",
+      "review": {
+        "imageId": "fra-maasto-montblanc-f39f71151b35",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-12T20:34:25.609Z"
+      },
+      "caption": "Mont Blancin jäätiköitynyt länsiseinä ja Dôme du Goûter näkyvät Aiguille Nord de Tré la Têteltä.",
+      "attribution": "Aito valokuva. Denoel CC BY-SA 2.0 France",
+      "sources": [
+        {
+          "label": "Lähde",
+          "url": "https://commons.wikimedia.org/wiki/File:Mont_Blanc_-_West_Face.jpg"
+        },
+        {
+          "label": "Lähde",
+          "url": "https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en"
+        }
+      ]
+    },
+    "rejected": {
+      "imageId": "fra-maasto-montblanc-69d1dc31dec3",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-montblanc-69d1dc31dec3.jpg"
+    }
+  },
+  {
+    "city": "Vignemale",
+    "canonicalSubjectId": "vignemale",
+    "gameFile": "js/packs/maastokohteet-fra.js",
+    "accepted": {
+      "imageId": "fra-maasto-vignemale-8bcfbcf0ef86",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-vignemale-8bcfbcf0ef86.jpg",
+      "sha256": "8bcfbcf0ef8607c2ca32a63372aa631cb02bb200bd763331d1d94755165c6a91",
+      "bytes": 1807417,
+      "mime": "image/jpeg",
+      "review": {
+        "imageId": "fra-maasto-vignemale-8bcfbcf0ef86",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-12T20:34:27.799Z"
+      },
+      "caption": "Vignemalen massiivi ja sen jäätikkö näkyvät Ossouen laakson vihreiden rinteiden takana.",
+      "attribution": "Aito valokuva. Tripallokavipasek CC BY-SA 3.0",
+      "sources": [
+        {
+          "label": "Lähde",
+          "url": "https://commons.wikimedia.org/wiki/File:Vignemale_Massif_view_from_Barrage_d'Ossoue.jpg"
+        },
+        {
+          "label": "Lähde",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        }
+      ]
+    },
+    "rejected": {
+      "imageId": "fra-maasto-vignemale-18e16a3e8da6",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fra-maasto-vignemale-18e16a3e8da6.jpg"
+    }
+  },
+  {
+    "city": "Mont-Saint-Michel",
+    "canonicalSubjectId": "mont-saint-michel",
+    "gameFile": "js/packs/maastokohteet-fra.js",
+    "accepted": {
+      "imageId": "fra-kohde-mont-saint-michel-66406eae047e",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fra-kohde-mont-saint-michel-66406eae047e.jpg",
+      "sha256": "66406eae047e31a9baf0fa47c17989179c514e0ee2cbdd5a6f298a77022bc61d",
+      "bytes": 1100227,
+      "mime": "image/jpeg",
+      "review": {
+        "imageId": "fra-kohde-mont-saint-michel-66406eae047e",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-12T20:34:30.426Z"
+      },
+      "caption": "Mont-Saint-Michel kohoaa laskuveden paljastaman vuorovesitasangon keskellä.",
+      "attribution": "Aito valokuva. Lynx1211 CC BY-SA 4.0",
+      "sources": [
+        {
+          "label": "Lähde",
+          "url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        {
+          "label": "Lähde",
+          "url": "https://commons.wikimedia.org/wiki/File:Mont_St_Michel_during_low_tide.jpg"
+        }
+      ]
+    },
+    "rejected": {
+      "imageId": "fra-kohde-mont-saint-michel-a312017d024b",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/fra-kohde-mont-saint-michel-a312017d024b.jpg"
+    }
+  },
+  {
+    "city": "Ales stenar",
+    "canonicalSubjectId": "ales-stenar",
+    "gameFile": "js/packs/maastokohteet-swe.js",
+    "accepted": {
+      "imageId": "swe-kohde-ales-stenar-a5345172fddc",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-ales-stenar-a5345172fddc.jpg",
+      "sha256": "a5345172fddc09762504fe42a415971be3b534faf044f780a2782191bb5bb193",
+      "bytes": 812850,
+      "mime": "image/jpeg",
+      "review": {
+        "imageId": "swe-kohde-ales-stenar-a5345172fddc",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-12T20:34:53.123Z"
+      },
+      "caption": "Ales stenarin kivilaiva kaartuu Kåsebergan nurmiharjanteella Itämeren äärellä.",
+      "attribution": "Matkakirjan havainnekuva. OpenAI; referenssikuva Anders Lagerås CC BY-SA 3.0",
+      "sources": [
+        {
+          "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+          "url": "https://commons.wikimedia.org/wiki/File:Ales_stenar1_kaseberga.jpg"
+        },
+        {
+          "label": "Matkakirjan havainnekuva — lähdeperusteinen johdannainen",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/"
+        }
+      ]
+    },
+    "rejected": {
+      "imageId": "swe-kohde-ales-stenar-52b283639af9",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-ales-stenar-52b283639af9.jpg"
+    }
+  },
+  {
+    "city": "Urnesin sauvakirkko",
+    "canonicalSubjectId": "urnes",
+    "gameFile": "js/packs/maastokohteet-nor.js",
+    "accepted": {
+      "imageId": "nor-kohde-urnes-13afbfbbe1bf",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/nor-kohde-urnes-13afbfbbe1bf.jpg",
+      "sha256": "13afbfbbe1bfdad5e0b505fccd5c5e8c80594f217ba8c169f91320554f2fe59c",
+      "bytes": 694788,
+      "mime": "image/jpeg",
+      "review": {
+        "imageId": "nor-kohde-urnes-13afbfbbe1bf",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-12T20:34:55.032Z"
+      },
+      "caption": "Tummaksi patinoitunut Urnesin sauvakirkko kohoaa hautausmaan ja Lustrafjordin välisellä rinteellä.",
+      "attribution": "Matkakirjan havainnekuva. OpenAI; referenssikuva Concierge.2C CC BY-SA 3.0 NO",
+      "sources": [
+        {
+          "label": "Matkakirjan havainnekuva — OpenAI; paikkareferenssi Concierge.2C / Wikimedia Commons, CC BY-SA 3.0 NO",
+          "url": "https://commons.wikimedia.org/wiki/File:Urnes_-_Stavkirke_-_Ext%C3%A9rieur_01.JPG"
+        },
+        {
+          "label": "Matkakirjan havainnekuva — OpenAI; paikkareferenssi Concierge.2C / Wikimedia Commons, CC BY-SA 3.0 NO",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/no/deed.en"
+        }
+      ]
+    },
+    "rejected": {
+      "imageId": "nor-kohde-urnes-ef7aa0a1467d",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/nor-kohde-urnes-ef7aa0a1467d.jpg"
+    }
+  },
+  {
+    "city": "Visby",
+    "canonicalSubjectId": "visby",
+    "gameFile": "js/packs/maastokohteet-swe.js",
+    "accepted": {
+      "imageId": "swe-kohde-visby-727d4c9ed518",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-visby-727d4c9ed518.jpg",
+      "sha256": "727d4c9ed5181261077f77e5e5ed0b3537d2393f97e8d2d1a6e09ac9a9aee8e1",
+      "bytes": 835182,
+      "mime": "image/jpeg",
+      "review": {
+        "imageId": "swe-kohde-visby-727d4c9ed518",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-12T20:35:02.056Z"
+      },
+      "caption": "Visbyn lähes ehjä keskiaikainen muuri jatkuu suorakulmaisten tornien rytmittämänä vanhan kaupungin laidalla.",
+      "attribution": "Matkakirjan havainnekuva. OpenAI; referenssikuva VisbyStar CC0 1.0",
+      "sources": [
+        {
+          "label": "Matkakirjan havainnekuva — OpenAI; paikkareferenssi VisbyStar / Wikimedia Commons, CC0 1.0",
+          "url": "https://commons.wikimedia.org/wiki/File:Visby_city_wall.jpg"
+        },
+        {
+          "label": "Matkakirjan havainnekuva — OpenAI; paikkareferenssi VisbyStar / Wikimedia Commons, CC0 1.0",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+        }
+      ]
+    },
+    "rejected": {
+      "imageId": "swe-kohde-visby-05552be7d145",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-visby-05552be7d145.jpg"
+    }
+  },
+  {
+    "city": "Gamla Uppsala",
+    "canonicalSubjectId": "gamla-uppsala",
+    "gameFile": "js/packs/maastokohteet-swe.js",
+    "accepted": {
+      "imageId": "swe-kohde-gamla-uppsala-d025b78f39b0",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-gamla-uppsala-d025b78f39b0.jpg",
+      "sha256": "d025b78f39b09e55284994d7f5b91f422afb6aaa5bcbf768fe5101d4424ac01b",
+      "bytes": 738809,
+      "mime": "image/jpeg",
+      "review": {
+        "imageId": "swe-kohde-gamla-uppsala-d025b78f39b0",
+        "status": "jatkoon_v2",
+        "workflowStatus": "accepted",
+        "suggestion": "",
+        "regenerationPrompt": "",
+        "rewriteText": false,
+        "archived": false,
+        "updatedAt": "2026-09-12T20:35:04.732Z"
+      },
+      "caption": "Gamla Uppsalan kuningaskummut muodostavat loivan ruohottuneen ketjun Uppsalan avoimella tasangolla.",
+      "attribution": "Matkakirjan havainnekuva. OpenAI; referenssikuva Carl L. Thunberg for Föreningen Kulturarvsbilder CC BY 4.0",
+      "sources": [
+        {
+          "label": "Matkakirjan havainnekuva — OpenAI; paikkareferenssi Carl L. Thunberg / Föreningen Kulturarvsbilder / Wikimedia Commons, CC BY 4.0",
+          "url": "https://commons.wikimedia.org/wiki/File:The_Royal_Mounds_of_Gamla_Uppsala_in_Sweden_(2024-07-21).jpg"
+        },
+        {
+          "label": "Matkakirjan havainnekuva — OpenAI; paikkareferenssi Carl L. Thunberg / Föreningen Kulturarvsbilder / Wikimedia Commons, CC BY 4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/"
+        }
+      ]
+    },
+    "rejected": {
+      "imageId": "swe-kohde-gamla-uppsala-c2efa57c7bb1",
+      "url": "https://media.matkakirja.app/karttanostot/20260912/swe-kohde-gamla-uppsala-c2efa57c7bb1.jpg"
+    }
+  }
+]
+```
+
+---
+
 ## 2026-09-13 10:27 UTC — TÄRKEÄ OMISTAJAN TÄSMENNYS: 7 poistettua kuvaa ovat vain vaihtoehtoja, kohteet SÄILYVÄT
 
 Kuvasessio ilmoitti seitsemästä remove-päätöksestä, joiden payloadissa on omit-entire-subject-from-game/omitEntireSubject=true. Omistaja täsmensi tässä keskustelussa juuri sanatarkasti:
