@@ -1,3 +1,23 @@
+## 2026-09-13 21:42 UTC — ROOT: ALPEILLA NORMAALIN PELIN ETENEMISUMPIKUJA (v1855), Marseille-QA odottaa karttatiimin korjausta
+
+Tama on uusi konkreettinen jatkoloydos 21.31-viestiin. Root kulki normaalisti Budapest -> Wien -> Venetsia -> Alpit, kolme50pelipunnan bussimatkaa, ei injektiota/resettiä/teleporttia tai maksettua mediaa. Budapest ja Wien ratkaistiin tavallisista lehdista/kohtaamisista, Venetsia oli jo suoritettu. Nyt Alpit £3885 / paiva5 aamu; tamakin tallenne sailytetaan vastakoetta varten.
+
+Alpeilla EI NÄY Liiku-nappia eikä aarteen vihjepistettä. Oma kaupunkinimiteksti avaa tietoruudun ja lehden, mutta niiden normaaleissa vaihtoehdoissa ei ole aarteen avaajaa. Alppitorven lehtikysymys ratkaistiin oikein (+25), mutta se ei tuonut matkustusta tai vihjetta. Read-only todellinen runtime: city=alpit, phase=action, tokens.has('alpit')=true, busy=false, dead=false, body=pallolauta-paalla, .pallolauta-piste-lista tyhja. Toimintorivin suljetun liu'un Liftaus/Bussilla ovat DOMissa, mutta normaalia Liiku-avaajaa ei luoda: en klikkaa piilotettua toimintoa tai kutsu game.actionBusia.
+
+Lahteesta loytyy suora ristiriita:
+- js/ui.js:11282 liikuNappiNakyy() palauttaa fokusmoodissa !tokens.has(city.id).
+- js/ui.js:11376 jattaa Liiku-napin kokonaan pois ja sulkee liu'un.
+- js/packs/fokusvirrat.js:84 Alpit on nimetty kevyt pakki (ei kohtaamispistetta/taytta aarrekulkua).
+- js/fokusvirta.js:5407 alkaen uusi omistajan 13.9 linjaus sanoo nimenomaan, etta pelaaja saa jatkaa matkaa ilman aarteen loytamista; ui.js:11342 siteeraa jatkuvasti nakyvää pienta Liiku-nappia. Vanha25.8token-portti ja uusi13.9liikkumislinjaus ovat ristiriidassa.
+
+Pyydan Fable/karttatiimia korjaamaan pienimmän varsinaisen pelikulun ristiriidan nykyisen omistajalinjauksen mukaan ja testaamaan nimeämällä kaikki kuusi kevyttä kohdetta sekä täyden pakin lukitun/avatun aarteen. Säilyttäkää busy/saapuminen/intro/linssien olemassa olevat turvarajat. Tämä ei vaadi uusia tekstejä, kuvia, ääniä eikä Pulun ohjaimen muuttamista. Root ei käynnistä rinnakkaista toteutusta; toimittakaa täsmä-PR/HEAD/CI ja julkaisu, sitten teen saman savekohdan normaalin vastakokeen ja jatkan Marseillen.
+
+Lisähavainto erikseen, EI varma juurisyy: Alppien näkyvän karttapisteen keskustan1091,291 napautus avasi Gotthardin tunneli -noston. Sama paikallaan pysyvä Alpit-ankkuri1090.707,290.508 varmistettu DOMista. NIMITEKSTIN1090,313 napautus avasi Alppien oikean tietoruudun. Budapestin piste/nappula-päällekkäisyys on jo21.31-viestissä. Arvioikaa osumareititys samassa karttatiimissä, ei toista Pulu-korjaajaa.
+
+Runtime tunnistettu oikeasti suoritetuista Debugger.getScriptSource-SHA256:sta: main7e62475898a4110d9e01c65a198857eb8f57fd6e931327763de58d140e48501d, lauta5a47361878e70d0915853865181e85d7c4b011fb89c90436fcba7335c1ab3e47, merkit87050740d1621c6b9e90f50dd14b1b07f272f636bfa17de236c336819223a16f. Myos livia-eleetc7712f88/media2525a9d3/luentareaktiot0d2a61ea varmennettu. Debugger pois, ei pysyvia havaintokoukkuja.
+
+Aloituslennon PASS sailyy. Marseille ei saavutettu, Safari/iPad edelleen oma käyttäjäportti, Ranska/Pariisi-smoke edelleen karttatiimin kuittausta vailla. Tekstisessiota ei herätetä, ääni-HOLD ennallaan.
+
 ## 2026-09-13 21:31 UTC — ROOT: aloituslennon Pulu-poissaolo PASS; Budapestin vihjeen keskiosuma aukeaa kaupunkina
 
 Fable20.47-kuittaus luettu (blob dc18df0cee1bd35d726642c66cdaf7ffad6ae831). Tuore main21.25 yhä24542607/v1855. Ei uutta Pulu-ominaisuuskierrosta, teksteihin tai ääni-HOLDiin ei kosketa.
