@@ -4,7 +4,9 @@ import { pixelOf, pointAlong, posKey } from './rules.js';
 import {
   ENNAKKOZOOMIN_MS, ENNAKON_ASKELIA, ENNAKON_HENGAHDYS_MS, HYPYN_TAUKO_MS,
   NAPPULAN_LAHDON_VIIVE_MS, SAATON_PEHMENNYS, SAATON_VAHIN_OSUUS, SAATON_VAHIN_PX,
-  SIIRTOZOOMIN_LAHENNYS, STEP_MS, hypynHuippu, hypynVaihe, jalkamatkanAskel, siirtoajonKesto,
+  MATKARAJAUKSEN_MARGINAALI, MATKARAJAUKSEN_PALUU_MS, MATKARAJAUKSEN_VAHIN_YKS,
+  SIIRTOZOOMIN_LAHENNYS, STEP_MS, autokyydinAskel, autokyydinVaihe, hypynHuippu, hypynVaihe,
+  siirtoajonKesto,
 } from './siirtokoreografia.js';
 import {
   chooseDuelAnswer,
@@ -16,7 +18,7 @@ import {
   wantsHint,
 } from './ai.js';
 import {
-  DUEL_PRIZE, FLIGHT_PRICE,
+  BUS_FARE, DUEL_PRIZE, FLIGHT_PRICE,
   HINT_PRICE, MANNERLENTO_NAPPI, MANNER_NIMET, RECORD_DAYS, SEA_FARE, STAR_PRIZE,
 } from './game.js';
 import {
@@ -10887,15 +10889,18 @@ export class UI {
     // Mannerlento aukeaa, kun tämän mantereen unohdettu aarre on
     // löytynyt — se ei vaadi lentokenttää, joten se on oma listansa.
     const mannerLennot = game.mannerLennot();
+    const bussikohteet = game.busDestinations();
+    const bussia = modes.includes('bus');
     const laivaa = modes.includes('sea');
     const lentoa = flights.length > 0 || mannerLennot.length > 0;
-    const hasSlow = laivaa || lentoa;
+    const hasSlow = bussia || laivaa || lentoa;
 
     // Jos välivaiheeseen ei jää yhtään valintaa (esim. rahat eivät riitä
     // lentoon eikä satamaa ole), palataan suoraan perusvalintoihin —
     // pelkkä Takaisin-nappi ei ole näkymä. Sama koskee tyhjäksi jäävää
     // suodatinta: laivalistaa ei avata, jos laivoja ei ole.
     const suodatinTyhja = (this.travelSuodatin === 'sea' && !laivaa)
+      || (this.travelSuodatin === 'bus' && !bussia)
       || (this.travelSuodatin === 'air' && !lentoa);
     if (this.travelExpanded && (!hasSlow || suodatinTyhja)) this.suljeMatkavalikko();
 
@@ -10906,12 +10911,29 @@ export class UI {
        * matkustustapa." lisää siihen mitään. Koko tilarivi poistui
        * 13.8.2026 — kartan päälle ei kirjoiteta mitään.
        */
-      // Jalan. Estettynä kerrotaan syy napin vihjetekstissä, kuten muissakin
-      // pelin estetyissä napeissa (vrt. vertailunappi).
-      const landBtn = this.iconButton('saapas', 'Jalan',
+      /*
+       * NELJÄ KULKUTAPAA (omistaja 13.9.2026, Raamattu KARTTAUUDISTUS:
+       * *"Liikkumiseen tulee nelja vaihtoehtoa: liftaus (ilmainen),
+       * bussi kahden vierekkaisen kaupungin valilla (50p), laiva ja
+       * lento entisellaan."*).
+       *
+       * LIFTAUS ON ENTINEN "JALAN": sama `land`-tunnus, sama noppa,
+       * sama aikakulu — vain nimi, kuvake ja animaatio vaihtuivat
+       * (PAATOKSET 1 kohta 4; js/pallolauta/siirto.js autokyyti).
+       * Estettynä kerrotaan syy napin vihjetekstissä, kuten muissakin
+       * pelin estetyissä napeissa (vrt. vertailunappi).
+       */
+      const landBtn = this.iconButton('peukalo', 'Liftaus',
         modes.includes('land') && !modes.includes('stay') ? 'primary' : '');
       if (modes.includes('land')) landBtn.addEventListener('click', () => this.doWalk());
       else this.estaNappi(landBtn, this.maaEste());
+
+      const bussiBtn = this.iconButton('bussi', 'Bussilla');
+      if (bussia) {
+        bussiBtn.addEventListener('click', () => this.avaaMatkavalikko('bus'));
+      } else {
+        this.estaNappi(bussiBtn, this.bussiEste());
+      }
 
       const laivaBtn = this.iconButton('purje', 'Laivalla');
       if (laivaa) {
@@ -10927,18 +10949,31 @@ export class UI {
         this.estaNappi(lentoBtn, this.lentoEste());
       }
 
-      this.piirraToimintorivi([landBtn, laivaBtn, lentoBtn], this.tutkiNappi());
+      this.piirraToimintorivi([landBtn, bussiBtn, laivaBtn, lentoBtn], this.tutkiNappi());
       return;
     }
 
     // Vaihe B.
-    const meri = this.travelSuodatin !== 'air';
-    const ilma = this.travelSuodatin !== 'sea';
+    const meri = this.travelSuodatin !== 'air' && this.travelSuodatin !== 'bus';
+    const ilma = this.travelSuodatin !== 'sea' && this.travelSuodatin !== 'bus';
+    const maitse = this.travelSuodatin === 'bus';
     /*
      * Listan yläpuolella oli ennen kysymysrivi ("Minne lennetään?").
      * Se on poistettu muun kartanpäällisen tekstin mukana: napit
      * kertovat itse, mihin ne vievät.
      */
+
+    /*
+     * BUSSIN KOHTEET OVAT NAAPURIKAUPUNKEJA, EIVÄT NOPAN TULOKSIA:
+     * lista on siksi sama kuin lennoilla — kaupungin nimi ja hinta.
+     * Bussi ei heitä noppaa eikä kuluta päivää (game.actionBus).
+     */
+    for (const dest of maitse ? bussikohteet : []) {
+      const city = game.board.cityById.get(dest);
+      const busBtn = this.ikoniTekstiNappi('bussi', `${city.name} (${BUS_FARE} p)`, 'wide');
+      busBtn.addEventListener('click', () => this.doBus(dest));
+      this.actionsEl.appendChild(busBtn);
+    }
 
     if (meri && modes.includes('sea')) {
       const seaBtn = this.ikoniTekstiNappi('purje', `Laivalla (${SEA_FARE} p)`, 'wide');
@@ -11027,14 +11062,30 @@ export class UI {
   avaaMatkavalikko(suodatin = null) {
     this.travelExpanded = true;
     this.travelSuodatin = suodatin;
+    /*
+     * MATKAVALINTA ON SE HETKI, JOLLOIN KAMERAN ON PÄÄSTÄVÄ MAAN
+     * IKKUNAN ULKOPUOLELLE (karttauudistus erä 8, suunnitelman 3.7):
+     * lentolista sovittaa kaikki kohteet ruutuun heti valinnasta, ja
+     * sekin on uloszoomausta. Esto palaa, kun valikko suljetaan tai
+     * matka päättyy (palaaMaanRajaukseen).
+     */
+    this.matkaZoomivapaus(true);
     this.render();
-    if (this.travelExpanded && this.travelSuodatin !== 'sea') this.sovitaLentokohteet();
+    // Bussi ja laiva eivät sovita lentokohteita: sovitus on lentolistan
+    // oma ele (ks. yllä), ja bussin kohteet ovat naapurikaupunkeja.
+    if (this.travelExpanded && suodatin !== 'sea' && suodatin !== 'bus') this.sovitaLentokohteet();
   }
 
   /** Sulkee vaiheen B ja unohtaa suodattimen. */
   suljeMatkavalikko() {
     this.travelExpanded = false;
     this.travelSuodatin = null;
+    /*
+     * Esto takaisin heti: jos valikosta valittiin matka, siirto
+     * kumoaa sen uudelleen omalla rajauksellaan (ennakoiSiirtoZoomi),
+     * ja jos pelaaja perui, kartta on taas maan ikkunassa.
+     */
+    this.matkaZoomivapaus(false);
   }
 
   /**
@@ -11070,6 +11121,25 @@ export class UI {
   maaEste() {
     if (this.keskenReittia()) return 'matka jatkuu samaa reittiä';
     return 'täältä ei lähde maareittiä';
+  }
+
+  /**
+   * Miksi bussi ei nyt kulje? Sama ehtojärjestys kuin laivalla, ja
+   * viimeisenä RAHA — juuri se on omistajan tarkoittama valinta
+   * (Raamattu, PAATOKSET 1 kohta 4: *"pelaaja voi valita rahan
+   * puutteessa hitaamman tavan edeta"*). Ilman 50 puntaa nappi on
+   * harmaa ja kertoo hinnan, ei katoa.
+   */
+  bussiEste() {
+    const { game } = this;
+    if (this.keskenReittia()) return 'matka jatkuu samaa reittiä';
+    const city = game.cityOf();
+    if (!city) return 'bussi lähtee vain kaupungista';
+    const maata = game.board.adj.get(city.id)
+      ?.some((id) => game.board.edgeById.get(id)?.type === 'land');
+    if (!maata) return 'täältä ei lähde maareittiä';
+    if (game.player.money < BUS_FARE) return `bussilippu maksaa ${BUS_FARE} puntaa`;
+    return 'täältä ei lähde bussia';
   }
 
   laivaEste() {
@@ -11261,16 +11331,19 @@ export class UI {
     const perus = html('div', 'toimintorivi-perus');
 
     /*
-     * "MATKUSTA" (omistajan pelitestipalaute v1119; ennen "Liiku",
-     * ja sitä ennen "Matkustustavat"). Kompassikuvake säilyy, mutta
-     * nimi kertoo teon täsmällisemmin: napin takaa avautuvat jalan,
-     * laivalla ja lentäen -valinnat, eikä "Liiku" kertonut niistä.
-     * iconButton asettaa saman tekstin näkyväksi nimeksi, titleksi ja
-     * aria-labeliksi, joten ruudunlukija ja hiiren kärki saavat sen
-     * yhtä aikaa. Matkustustapojen valinta on liu'un omien nappien
-     * aria-label-teksteissä (jalan, laiva, lento).
+     * "LIIKU" (omistaja 13.9.2026, Raamattu KARTTAUUDISTUS sanatarkasti:
+     * *"Alareunassa onkin kokojan nakyvilla pieni 'liiku' nappi."*).
+     *
+     * Nimi kävi välissä "Matkusta"na (pelitestipalaute v1119), koska
+     * "Liiku" ei kertonut mitä napin takana on. Omistajan uusi linjaus
+     * kumoaa sen nimeltä mutta ei perustelultaan: liu'un takana on nyt
+     * NELJÄ nimettyä kulkutapaa (liftaus, bussi, laiva, lento), joten
+     * teko on napissa ja tavat niiden omissa nimissä. Kompassikuvake
+     * säilyy. iconButton asettaa saman tekstin näkyväksi nimeksi,
+     * titleksi ja aria-labeliksi, joten ruudunlukija ja hiiren kärki
+     * saavat sen yhtä aikaa.
      */
-    const monitoimi = this.iconButton('kompassi', 'Matkusta');
+    const monitoimi = this.iconButton('kompassi', 'Liiku');
     monitoimi.classList.add('monitoimi-nappi');
     /*
      * Ilman matkustusvaihtoehtoja nappi on estetty — sama harmaus kuin
@@ -12128,7 +12201,7 @@ export class UI {
     polloKuplatPois();
   }
 
-  /** Jalan: matkustustapa ja nopanheitto samalla painalluksella. */
+  /** Liftaus (entinen jalan): matkustustapa ja nopanheitto samalla painalluksella. */
   doWalk() {
     // Radiotilassa kartalla ei liikuta.
     if (this.radioPaalla()) return;
@@ -12139,6 +12212,46 @@ export class UI {
     this.heitaJaSovita(() => {
       const chosen = game.actionTravel('land');
       return chosen.ok ? game.actionRoll() : chosen;
+    });
+  }
+
+  /**
+   * BUSSI: 50 puntaa, yksi kaari, ei noppaa eikä päivää (omistaja
+   * 13.9.2026). Vastaa doWalkia ja doFlytä — teko pelissä, animaatio
+   * perässä — mutta kulkee actionBusin kautta, koska kohde on valittu
+   * eikä heitetty.
+   *
+   * ANIMAATIO ON SAMA AUTOKYYTI KUIN LIFTAUKSESSA, vain nopeampi
+   * (autokyydinAskel `bussi`): bussi ja liftaus ajavat saman kaaren,
+   * ja ero on hinnassa, ajassa ja vauhdissa.
+   */
+  doBus(destination) {
+    // Radiotilassa kartalla ei liikuta.
+    if (this.radioPaalla()) return;
+    if (this.linssikarttaEstaa()) return;
+    const { game } = this;
+    // Bussi vie pois paikasta: edellisen kaupungin puhe päättyy tähän.
+    this.vaiennaPaikanPuhe();
+    this.suljeMatkavalikko();
+    const player = game.player;
+    const from = player.pos;
+    this.run(() => game.actionBus(destination), {
+      after: (result) => {
+        if (!result?.ok) return undefined;
+        if (from.type === 'city') {
+          puraFokusvirtaPaikanvaihdossa(this);
+          ilmoitaLivianTunne(
+            { tunne: 'ilo', voimakkuus: 0.4 },
+            { lahde: 'matka', tunnus: 'matka.kavely.lahto' },
+          );
+        }
+        const path = game.lastPath ?? [player.pos];
+        return this.animatePawn(player, from, path,
+          autokyydinAskel(path.length, { bussi: true }),
+          {
+            saatto: true, maitse: true, musiikki: 'jalan', kyyti: true, tapa: 'bus',
+          });
+      },
     });
   }
 
@@ -19605,10 +19718,18 @@ export class UI {
             { lahde: 'matka', tunnus: maitse ? 'matka.kavely.lahto' : 'matka.laiva.lahto' },
           );
         }
+        /*
+         * LIFTAUS AJAA, LAIVA HYPPII. `kyyti` kytkee autokyydin
+         * (karttauudistus erä 8): maareitillä nappula liikkuu yhtenä
+         * kiihtyvänä ja jarruttavana ajona, merellä kaikki on
+         * ennallaan (*"laiva ja lento entisellaan"*).
+         */
         return this.animatePawn(
         player, from, path,
-        maitse ? jalkamatkanAskel(path.length) : STEP_MS,
-        { saatto: true, maitse, musiikki },
+        maitse ? autokyydinAskel(path.length) : STEP_MS,
+        {
+          saatto: true, maitse, musiikki, kyyti: maitse, tapa: game.travelMode,
+        },
         );
       },
     });
@@ -19655,6 +19776,14 @@ export class UI {
      * jätetä roikkumaan, vaikka animaatio keskeytyisi.
      */
     if (lahto && kohde) this.lentoKaari = { a: lahto.id, b: kohde.id };
+    /*
+     * LENTO VIE AINA MAAN IKKUNAN ULKOPUOLELLE (karttauudistus erä 8):
+     * kuljettaja rajaa kameran lähtö- ja kohdekaupungin laatikkoon
+     * (js/pallolauta/siirto.js lennonRajaus), joten uloszoomauksen
+     * esto on kumottava jo ennen ajoa. Perillä kuljettaja ajaa
+     * saapumisrajauksen itse, ja tässä palautetaan pelkät rajat.
+     */
+    this.matkaZoomivapaus(true);
     this.paivitaMatkareitit();
     this.run(() => game.actionFly(destination), {
       after: async (result) => {
@@ -19690,6 +19819,7 @@ export class UI {
           this.lopetaSiirronMusiikki();
           this.lentoKaari = null;
           this.paivitaMatkareitit();
+          void this.palaaMaanRajaukseen({ aja: false });
         }
       },
     });
@@ -21504,7 +21634,7 @@ export class UI {
    * osuisivat samaan kehykseen ja lukisivat yhtenä liikkeenä; tilaus
    * on nimenomaan kaksi peräkkäistä tapahtumaa.
    */
-  async ennakoiSiirtoZoomi(from, path) {
+  async ennakoiSiirtoZoomi(from, path, tapa = null) {
     if (this.reducedMotion || this.dead) return;
     const kartta = this.kamera();
     // Pallolla ei ole yleiskuvan porrasta: se on aina "lähikuvassa"
@@ -21517,14 +21647,96 @@ export class UI {
     // matkalla viimeinen. Yhden askeleen matkalla tämä on määränpää.
     const suunta = path[Math.min(ENNAKON_ASKELIA, path.length) - 1];
     if (!lahto || !suunta) return;
-    const kohti = pixelOf(board, suunta);
-    const kohta = { x: (lahto.x + kohti.x) / 2, y: (lahto.y + kohti.y) / 2 };
-    const kerroin = kartta.siirtoZoomiKerroin(SIIRTOZOOMIN_LAHENNYS);
-    // Kesto liikkeen mukaan (kartta.js sovitaAjonKesto): iso zoomi
-    // yleiskuvasta saa aikaa, pieni ele pysyy 760 ms:ssa.
-    await kartta.ajaKamera({ x: kohta.x, y: kohta.y, kerroin }, { kesto: ENNAKKOZOOMIN_MS, sovita: true });
+    /*
+     * KULKUTAPA RAJAA NÄKYMÄN (karttauudistus erä 8, omistaja
+     * 13.9.2026: *"kartta zoomautuu automaattisesti vanhaan tapaan
+     * kauemmas riippuen siita mika liikkumisvaihtoehto on
+     * valittuna."*).
+     *
+     * Kun kulkutapa tunnetaan, rajaus on KOKO MATKA marginaaleineen
+     * (matkarajaus) eikä enää nappulan ympäristö kiinteällä
+     * lähennyskertoimella. Tämä on se hetki, jossa kameran on myös
+     * päästävä maan ikkunan ulkopuolelle — uloszoomauksen esto on
+     * kumottu matkan ajaksi (matkaZoomivapaus).
+     *
+     * ILMAN KULKUTAPAA KAIKKI ON ENNALLAAN: avauslento, mannerlento ja
+     * muut kutsujat saavat entisen lähennyksen (SIIRTOZOOMIN_LAHENNYS).
+     */
+    const rajaus = this.matkarajaus(tapa, from, path);
+    if (rajaus) {
+      this.matkaZoomivapaus(true);
+      await kartta.ajaKamera(rajaus, { kesto: ENNAKKOZOOMIN_MS, sovita: true });
+    } else {
+      const kohti = pixelOf(board, suunta);
+      const kohta = { x: (lahto.x + kohti.x) / 2, y: (lahto.y + kohti.y) / 2 };
+      const kerroin = kartta.siirtoZoomiKerroin(SIIRTOZOOMIN_LAHENNYS);
+      // Kesto liikkeen mukaan (kartta.js sovitaAjonKesto): iso zoomi
+      // yleiskuvasta saa aikaa, pieni ele pysyy 760 ms:ssa.
+      await kartta.ajaKamera({ x: kohta.x, y: kohta.y, kerroin }, { kesto: ENNAKKOZOOMIN_MS, sovita: true });
+    }
     if (this.dead) return;
     await this.wait(ENNAKON_HENGAHDYS_MS);
+  }
+
+  /**
+   * Matkan rajaus kulkutavan mukaan: lähdön ja määränpään laatikko
+   * marginaalilla (MATKARAJAUKSEN_MARGINAALI). Null tarkoittaa "ei
+   * kulkutapakohtaista rajausta" — lento rajaa itse
+   * (js/pallolauta/siirto.js lennonRajaus), ja tuntemattomalla tavalla
+   * ennakkozoomi pysyy entisenä.
+   *
+   * LAATIKKO EI KUTISTU SIIRTONÄKYMÄN KATON ALLE
+   * (MATKARAJAUKSEN_VAHIN_YKS): yhden askeleen liftaus veisi muuten
+   * kameran lähemmäs kuin pelin oma siirtonäkymä koskaan, eli
+   * päinvastaiseen suuntaan kuin tilaus.
+   */
+  matkarajaus(tapa, from, path) {
+    const marginaali = MATKARAJAUKSEN_MARGINAALI[tapa];
+    if (!(marginaali > 0)) return null;
+    const maali = path?.[path.length - 1];
+    if (!maali) return null;
+    const a = pixelOf(this.game.board, from);
+    const b = pixelOf(this.game.board, maali);
+    if (!Number.isFinite(a?.x) || !Number.isFinite(b?.x)) return null;
+    const w = Math.abs(b.x - a.x);
+    const h = Math.abs(b.y - a.y);
+    const kasvuX = Math.max(0, MATKARAJAUKSEN_VAHIN_YKS - w) / 2;
+    const kasvuY = Math.max(0, MATKARAJAUKSEN_VAHIN_YKS - h) / 2;
+    return {
+      bbox: {
+        x: Math.min(a.x, b.x) - kasvuX,
+        y: Math.min(a.y, b.y) - kasvuY,
+        w: w + 2 * kasvuX,
+        h: h + 2 * kasvuY,
+      },
+      marginaali,
+    };
+  }
+
+  /**
+   * Uloszoomauksen esto pois matkan ajaksi ja takaisin perillä
+   * (js/pallolauta/lauta.js matkaZoomirajat; suunnitelman luku 3.7).
+   * Tasokartalla ei ole estoa, joten kutsu on siellä tyhjä sana.
+   */
+  matkaZoomivapaus(vapaa) {
+    if (this.pallolautaPaalla()) this.pallolauta?.matkaZoomirajat?.(Boolean(vapaa));
+  }
+
+  /**
+   * KARTTA PALAA MAAN RAJAUKSEEN SAAPUMISEN JÄLKEEN (omistaja
+   * 13.9.2026): matkan ajan näkymä on koko matkan mittainen, ja
+   * perillä kamera asettuu takaisin maan ikkunaan — samaan, johon
+   * saapumisajo vie (js/pallolauta/lauta.js saavu).
+   *
+   * `aja: false` vain palauttaa zoomirajat: lennolla kuljettaja on jo
+   * ajanut saapumisrajauksen (js/pallolauta/siirto.js laske), eikä
+   * toinen ajo saa nykäistä kuvaa sen päälle.
+   */
+  async palaaMaanRajaukseen({ aja = true } = {}) {
+    if (!this.pallolautaPaalla()) return;
+    const lauta = this.pallolauta;
+    if (aja && !this.dead) await lauta.saavu({ kesto: MATKARAJAUKSEN_PALUU_MS });
+    this.matkaZoomivapaus(false);
   }
 
   /**
@@ -21783,6 +21995,7 @@ export class UI {
     player, from, path, stepMs = STEP_MS,
     {
       saatto = false, maitse = false, musiikki = null, lento = false,
+      kyyti = false, tapa = null,
     } = {},
   ) {
     if (!path || path.length === 0) return;
@@ -21811,7 +22024,7 @@ export class UI {
      * zoomauksen ajaksi. Nyt zoomin ajan ruudulla on tavallinen
      * nappula, joka skaalautuu kartan mukana kuten aina.
      */
-    if (saatto) await this.ennakoiSiirtoZoomi(from, path);
+    if (saatto) await this.ennakoiSiirtoZoomi(from, path, tapa);
     // Peli kuoli kesken ennakkozoomin: musiikki ei saa jäädä soimaan
     // (loppusammutus alempana jää tekemättä, koska tästä poistutaan).
     if (this.dead) { if (musiikki) this.lopetaSiirronMusiikki(); return; }
@@ -21850,8 +22063,15 @@ export class UI {
        * kartan panorointiliike loppuu"*. Luvut ja perustelu ovat
        * osiossa SIIRRON KOREOGRAFIA (siirtoajonKesto).
        */
+      /*
+       * AUTOKYYDISSÄ EI OLE TAUKOJA (karttauudistus erä 8): matka on
+       * yksi yhtäjaksoinen ajo, joten kameran mitoitus lasketaan ilman
+       * hyppyjen välistä hengähdystä — muuten saatto jäisi roikkumaan
+       * sekunnin verran nappulan jälkeen.
+       */
+      const kyydissa = kyyti && !this.reducedMotion && typeof kuljettaja.aja === 'function';
       const nappulanKesto = path.length * stepMs
-        + Math.max(0, path.length - 1) * HYPYN_TAUKO_MS;
+        + (kyydissa ? 0 : Math.max(0, path.length - 1) * HYPYN_TAUKO_MS);
       this.aloitaSaattavaKamera(path, siirtoajonKesto(nappulanKesto));
       /*
        * YHDEN ASKELEEN MATKA JÄÄ ILMAN OMAA ÄÄNTÄ. Maisema nousee
@@ -21887,7 +22107,44 @@ export class UI {
      */
     if (saatto && !this.reducedMotion) await this.wait(NAPPULAN_LAHDON_VIIVE_MS);
 
-    for (const [i, pos] of path.entries()) {
+    /*
+     * ═══ AUTOKYYTI: KOKO MATKA YHDELLÄ AJOLLA ══════════════════════
+     *
+     * Omistaja 13.9.2026 (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 1
+     * kohta 4): *"siirtyminen tosin muutetaan animaatiossa ei
+     * hyppivaksi pelinapiksi, vaan kuin autokyydiksi joka kiihdyttaa
+     * alussa ja jarruttaa lopussa ja liikutaan nopan antaman matkan
+     * verran."*
+     *
+     * Hyppyketju jää tähän vaihtoehdoksi ja on yhä ainoa polku
+     * merellä, lennolla, liikeherkkyydessä ja tasokartalla (jonka
+     * kuljettaja ei tunne `aja`a). Ero on vain nappulan liikkeessä:
+     * musiikki, saatto, äänimaisema ja saapuminen ovat samat.
+     *
+     * MÄÄRÄNPÄÄN MAISEMA nousee viimeisen askeleen mitalta kuten
+     * hyppyketjussakin — ajossa se on osuus kestosta, koska
+     * askelrajoja ei ole.
+     */
+    const ajettiin = kyyti && !this.reducedMotion && typeof kuljettaja.aja === 'function';
+    if (ajettiin) {
+      const maali = path[path.length - 1];
+      const kesto = path.length * stepMs;
+      const ajo = kuljettaja.aja(from, path, kesto, { vaihe: autokyydinVaihe });
+      const viimeisenAlku = Math.max(0, (kesto * (path.length - 1)) / path.length);
+      await this.wait(viimeisenAlku);
+      if (!this.dead) {
+        const kaupunkiin = maali.type === 'city';
+        this.lopetaJalkamatkanAani({ vaihtui: kaupunkiin });
+        this.ennakoiAmbienssi(maali);
+      }
+      await ajo;
+      // Naksahdus kuuluu perilletuloon kuten hypyn laskeutumisessa.
+      sfx.play('arrive');
+      paikka = path[path.length - 1];
+    }
+
+    // Hyppyketju: ajossa tämä silmukka on tyhjä (ks. AUTOKYYTI yllä).
+    for (const [i, pos] of (ajettiin ? [] : path).entries()) {
       const viimeinen = i === path.length - 1;
       // Määränpään äänimaisema lähtee nousemaan jo viimeisellä
       // askeleella, jotta ristihäivytys on käynnissä saapumishetkellä
@@ -21976,6 +22233,18 @@ export class UI {
      * MAAHAN saavuttaessa fokuskartan oma ajo rajaa näkymän kuten
      * ennenkin, joten maanvaihdos ei jää siirtozoomin varaan.
      */
+    /*
+     * …PAITSI KULKUTAPAKOHTAISEN RAJAUKSEN JÄLKEEN (karttauudistus erä
+     * 8). Kun matka rajattiin kulkutavan mukaan (matkarajaus), kamera
+     * on koko matkan mittaisessa näkymässä — ja omistajan tilaus on,
+     * että kartta PALAA maan rajaukseen perillä. Sama ajo palauttaa
+     * uloszoomauksen eston. Kaupunkiin päättyvä matka vain: reitin
+     * varteen pysähtyvä matka jatkuu seuraavalla heitolla.
+     */
+    if (saatto && MATKARAJAUKSEN_MARGINAALI[tapa] > 0
+      && path[path.length - 1]?.type === 'city') {
+      void this.palaaMaanRajaukseen();
+    }
   }
 
   /** Nopanheitto: noppa lentää nappulan vierestä laudalle ja jää siihen. */

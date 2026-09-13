@@ -81,7 +81,10 @@ test('tahti ei koskaan kiihdy heiton pidetessä', () => {
 
 test('lento ei hidastunut: tilaus koski maareittejä', () => {
   assert.equal(luku(KOREO, 'STEP_MS'), 190, 'lennon askeltahti muuttui');
-  assert.match(UI, /maitse \? jalkamatkanAskel\(path\.length\) : STEP_MS/,
+  // autokyydinAskel on jalkamatkanAskel uudella nimellä (karttauudistus
+  // erä 8): liftaus perii jalkamatkan tahdin sellaisenaan, bussi ajaa
+  // saman matkan BUSSIN_VAUHTIKERROIN-osuudessa siitä.
+  assert.match(UI, /maitse \? autokyydinAskel\(path\.length\) : STEP_MS/,
     'siirto ei enää erottele jalkamatkaa ja lentoa');
 });
 
@@ -178,7 +181,9 @@ test('kamera lähtee ensin ja nappula viiveellä', () => {
   const siirto = UI.match(/async animatePawnSisalla\([\s\S]*?\n  \}\n/)[0];
   const kamera = siirto.indexOf('this.aloitaSaattavaKamera(');
   const odotus = siirto.indexOf('await this.wait(NAPPULAN_LAHDON_VIIVE_MS)');
-  const silmukka = siirto.indexOf('for (const [i, pos] of path.entries())');
+  // Askelsilmukka ohitetaan autokyydissä (karttauudistus erä 8), joten
+  // sen luettelo on `(ajettiin ? [] : path)` — paikka koodissa on sama.
+  const silmukka = siirto.indexOf('for (const [i, pos] of (ajettiin ? [] : path).entries())');
   assert.ok(kamera > 0 && odotus > kamera,
     'nappulan viive ei ole kameran käynnistyksen jälkeen');
   assert.ok(silmukka > odotus, 'askelsilmukka alkaa ennen viivettä');

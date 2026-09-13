@@ -27,7 +27,7 @@ function checkSources(source, where) {
   }
   return list.length;
 }
-import { buildBoard, findMoves, posKey, cityDistances, pointAlong } from '../js/rules.js';
+import { BUS_FARE, buildBoard, findMoves, posKey, cityDistances, pointAlong } from '../js/rules.js';
 import { isOnLand } from '../js/mapart.js';
 import {
   ISO_AARRE_ARVO, MANNER_AARRE_ARVO, PIENI_AARRE_ARVO, onAarre, tokenPileTemplate,
@@ -2105,17 +2105,32 @@ test('matkustustavan valinnan voi perua ennen heittoa', () => {
 test('matkustustapa valitaan automaattisesti kun vaihtoehtoja ei ole', () => {
   const game = newGame(51);
 
-  // Sisämaan kaupungissa ilman aarretta ja tutkittavaa maitse on ainoa
-  // tapa: vuoro alkaa heitosta.
+  /*
+   * Sisämaan kaupungissa ilman aarretta ja tutkittavaa maitse on ainoa
+   * tapa: vuoro alkaa heitosta.
+   *
+   * BUSSI ON AITO VAIHTOEHTO (karttauudistus erä 8, omistaja
+   * 13.9.2026): kun rahat riittävät bussilippuun, samasta kaupungista
+   * pääsee sekä liftaten että bussilla, ja silloin valinta KYSYTÄÄN —
+   * automaattivalinta on tarkoitettu tilanteeseen, jossa valittavaa ei
+   * ole. Ilman bussilipun hintaa tapoja on taas yksi.
+   */
   game.player.pos = { type: 'city', city: 'murzuk' };
   game.tokens.delete('murzuk');
   game.explored.add('africa:murzuk');
+  game.phase = 'action';
+  game.beginTurn();
+  assert.deepEqual(game.travelModes().sort(), ['bus', 'land'], 'bussi puuttuu vaihtoehdoista');
+  assert.equal(game.autoTravel, false, 'bussin ja liftauksen välillä on valinta');
+
+  game.player.money = BUS_FARE - 1;
   game.phase = 'action';
   game.beginTurn();
   assert.equal(game.phase, 'roll');
   assert.equal(game.travelMode, 'land');
   assert.ok(game.autoTravel);
   assert.equal(game.actionCancelTravel().ok, false, 'peruutettavaa ei ole');
+  game.player.money = 300;
 
   // Kesken reittiä matka jatkuu samalla tavalla ilman kysymistä.
   game.player.pos = { type: 'edge', edge: 'tanger|karthago', idx: 1 };
@@ -2131,7 +2146,7 @@ test('matkustustapa valitaan automaattisesti kun vaihtoehtoja ei ole', () => {
   game.beginTurn();
   assert.equal(game.phase, 'action');
   assert.equal(game.autoTravel, false);
-  assert.deepEqual(game.travelModes().sort(), ['land', 'stay']);
+  assert.deepEqual(game.travelModes().sort(), ['bus', 'land', 'stay']);
 
   // Aloituskaupungissa on satama ja lentokenttä, joten valinta kysytään.
   const alku = newGame(52);

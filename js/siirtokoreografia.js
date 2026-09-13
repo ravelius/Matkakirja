@@ -388,6 +388,95 @@ export function hypynHuippu(matka) {
 }
 
 /*
+ * ══════════════════════════════════════════════════════════════════
+ * AUTOKYYTI — LIFTAUKSEN JA BUSSIN KÄYRÄ (karttauudistus, erä 8)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistaja 13.9.2026 (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 1 kohta 4,
+ * sanatarkasti): *"siirtyminen tosin muutetaan animaatiossa ei
+ * hyppivaksi pelinapiksi, vaan kuin autokyydiksi joka kiihdyttaa
+ * alussa ja jarruttaa lopussa ja liikutaan nopan antaman matkan
+ * verran."*
+ *
+ * KÄYRÄ ON SAMA EASE-IN-OUT KUIN HYPYSSÄ, MUTTA KOKO MATKALLE. Hyppy
+ * kiihdyttää ja jarruttaa JOKA ASKELEELLA (hypynVaihe), joten kuuden
+ * askeleen matkassa on kuusi kiihdytystä ja kuusi jarrutusta — juuri
+ * se lukee silmälle hyppimisenä. Auto kiihdyttää kerran lähtiessään ja
+ * jarruttaa kerran perillä, ja väli ajetaan vauhdissa. Kaava on siksi
+ * sama funktio, mutta sen aikamuuttuja on KOKO MATKAN osuus eikä
+ * yhden askeleen.
+ *
+ * PYSTYKAARTA EI OLE: `nousu` puuttuu tarkoituksella. Kuljettaja
+ * (js/pallolauta/siirto.js) jättää kaaren, varjon kutistuksen ja
+ * haalennuksen pois aina kun sille annetaan oma vaihekäyrä.
+ */
+export function autokyydinVaihe(t) {
+  const x = Math.min(1, Math.max(0, t));
+  return x < 0.5 ? 2 * x * x : 1 - ((-2 * x + 2) ** 2) / 2;
+}
+
+/*
+ * BUSSI ON NOPEAMPI KUIN LIFTAUS (omistaja 13.9.2026: bussi maksaa 50
+ * puntaa eikä kuluta päiviä). Ero näkyy myös ruudulla: sama kaari
+ * ajetaan tässä osuudessa liftauksen ajasta. 0,6 on se, millä bussi
+ * lukee ripeäksi mutta ei nykäisyksi — alaraja on yhä sama
+ * JALKAMATKAN_STEP_LYHIN_MS-tason askel, koska kerroin osuu kestoon
+ * eikä käyrään.
+ */
+export const BUSSIN_VAUHTIKERROIN = 0.6;
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KARTTA RAJAUTUU KULKUTAVAN MUKAAN (karttauudistus erä 8)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistaja 13.9.2026 (Raamattu, KARTTAUUDISTUS): *"kartta zoomautuu
+ * automaattisesti vanhaan tapaan kauemmas riippuen siita mika
+ * liikkumisvaihtoehto on valittuna."*
+ *
+ * Marginaali on osuus matkan laatikon sivusta joka reunalla, eli
+ * sama sopimus kuin kameran muilla rajauksilla (kamera.kameranKohde,
+ * lennonRajaus). Liftaus ja bussi ajavat yhden kaaren, joten niille
+ * riittää neljännes; laiva kaartaa pitkän matkan pallolla ja tarvitsee
+ * puolikkaan, jotta koko kaari pysyy ruudussa. LENTO EI OLE TÄSSÄ:
+ * sillä on oma rajauksensa (js/pallolauta/siirto.js lennonRajaus,
+ * LENNON_RAJAUKSEN_MARGINAALI), joka ottaa molemmat päät jo nyt.
+ */
+export const MATKARAJAUKSEN_MARGINAALI = Object.freeze({
+  land: 0.25,
+  bus: 0.25,
+  sea: 0.5,
+});
+/*
+ * MATKARAJAUS EI VIE LÄHEMMÄS KUIN SIIRTONÄKYMÄN VANHA KATTO. Yhden
+ * askeleen liftaus on laudalla muutaman kymmenen yksikön mittainen, ja
+ * pelkkä laatikko veisi kameran laattojen tarkkuusrajaan asti — siitä
+ * tulisi zoomaus SISÄÄN, vaikka tilaus on päinvastainen. Sama luku
+ * kuin pallon siirtonäkymän katolla (js/pallolauta/kamera.js
+ * PALLOLAUDAN_SIIRTOLEVEYS 120): laatikkoa kasvatetaan keskeltä, kunnes
+ * se on vähintään tämän levyinen ja korkuinen.
+ */
+export const MATKARAJAUKSEN_VAHIN_YKS = 120;
+/**
+ * Paluuajo maan rajaukseen saapumisen jälkeen (omistaja 13.9.2026:
+ * kartta *"palaa"* maan näkymään). Sama kesto kuin pallon
+ * saapumissukelluksella (PALLOKAMERAN_AJO_MS) — luku on tässä, jottei
+ * js/ui.js joudu tuomaan pallon kameramoduulia laiskoituksen ohi.
+ */
+export const MATKARAJAUKSEN_PALUU_MS = 1400;
+
+/**
+ * Autokyydin askeltahti: se `stepMs`, jolla js/ui.js mitoittaa koko
+ * matkan (kesto = stepMs × askelia). Liftaus perii jalkamatkan tahdin
+ * sellaisenaan — omistajan sanoin *"siina kuluu saman verran aikaa"* —
+ * ja bussi ajaa saman matkan BUSSIN_VAUHTIKERROIN-osuudessa siitä.
+ */
+export function autokyydinAskel(askelia, { bussi = false } = {}) {
+  const perus = jalkamatkanAskel(askelia);
+  return bussi ? Math.round(perus * BUSSIN_VAUHTIKERROIN) : perus;
+}
+
+/*
  * AJON KESTO LIIKKEEN MUKAAN (omistaja 3.9.2026: *"tarkista kaikki
  * vaiheet jotta menisi pehmeästi ja sulavasti kaikki automaattiset
  * karttaliikkeet ennen kuin pelaajan nappula lähtee liikkeelle
