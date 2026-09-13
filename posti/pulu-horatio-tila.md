@@ -1,3 +1,25 @@
+## 2026-09-13 13:50 UTC — Root: kaupunkitarina matkan palkintona; Astran lukuerät ja hyväksynnät
+
+Omistajan uusi nimenomainen kirjoitusperiaate, vietävä heti Raamattuun ja tarvittaessa Horatio–Livia-tuotantomoduulin kirjoittajan sääntöihin:
+> jutut pitää olla sen verran hurjia tai mielenkiintoisia että pelaaja haluaa päästä seuraavaan kaupunkiin kuulemaan uusia juttuja!
+
+Rootin toimituksellinen täsmennys: kaupunkipari on itsessään matkan palkinto. Pelkkä sujuva teksti, faktanimi ja pieni loppuvitsi eivät riitä; jokaisessa parissa pitää olla vahva, selkeästi ymmärrettävä ja kaupungille ominainen kokemus, löytö tai oivallus. Testi: mitä tästä pelaaja haluaisi kertoa toisellekin? Hurjuus voi syntyä vuoden1873 konkreettisista olosuhteista/vaarasta, mutta myös aidosti kiinnostava, hauska, lämmin tai yllättävä aihe käy. Ei joka kaupunkia samalla tavalla synkäksi, hämärää uhkaa tai pakollista cliffhangeria. Tämän kaupungin kiinnostava asia avataan riittävän palkitsevasti; seuraavaa halutaan tämän tarinan laadun vuoksi. Livia on oma kiinnostava nykyajan näkökulma, ei laimea kevennys tai Horation automaattinen peili. Selkeä kieli, faktantarkistus, joustavat pituudet ja suojatut hahmo-/juonisäännöt pysyvät.
+
+Paikallinen täysi ohje: /Users/samireivinen/Documents/Codex/2026-09-11/pulu-jatko-2026-09-11/output/horatio-livia-root-qa-20260913/kirjoituslinja-kaupunki-on-palkinto-20260913.md. Tämä kaanonperiaate ei avaa jo hyväksyttyjen tekstien uudelleenkirjoitusta tai muuta ääni-HOLDia.
+
+Kirjallisen työn tilannepäivitys (EI vielä peliin siirtopyyntö):
+- Olemassa oleva kirjoitustehtävä on omistajan pyynnöstä vaihdettu Astraan; aktiivisen erä3:n todellinen turn_context13.44.42 vahvistettu gpt-6-astra/medium. Root tekee vielä oman toimitus- ja lähdekatselmuksen.
+- Erä1 Kööpenhamina/Bukarest/Madrid/Pariisi: omistaja hyväksyi molemmat puheet. Lukukopio eurooppa-uusinnat-era1-astra-20260913.md, SHA c9d6c22bffc710c4b4be5d7c249b6d77df234b209d7d5dcaea65b7bf2f1e027a.
+- Erä2 Budapest/Dubrovnik/Tukholma: omistaja hyväksyi molemmat puheet. Berliiniin hän toivoo lisää sisältöä; rajattu Horation täydennys työn alla, Livia säilyy. Erä2:n muuttumaton vertailu-SHA d1ecefd1a276908d5090ae580b208fc97ebed6f77b8380f52d6aa97306e97b1a.
+- NYT erä3: Bergen/Livia, Amsterdam/Livia, Edinburgh/Livia, Lissabon/molemmat + erillinen Berliinin tarkennus.
+- Jatkojono15: Riika/Livia, Barcelona/molemmat, Firenze/Livia, Venetsia/Horatio; Oslo/molemmat, Tampere/Livia, Vilna/molemmat, Kiova/molemmat; Krakova/molemmat, Moskova/Livia, Odessa/molemmat, Pietari/molemmat; Sisilia/molemmat, Islanti/molemmat, Alpit/Livia. Oslo/Barcelona/Islanti erityisesti jännittävämmiksi; Vilna jännittävämpi TAI muu vahva aihe. Alppien nykyinen root-r1 Horatio säilyy kokonaan.
+- TÄRKEÄ vanhojen suojausten täsmennys omistajan suorista korjauspyynnöistä: Riika avattu vain LIVIALTA, Venetsia vain HORATIOLTA, Tampere vain LIVIALTA. Riian/Tampereen Horatiot, Venetsian Livian romanssi ja albumi säilyvät. Älä anna vanhan koko kaupungin suojauksen estää tätä tarkkarajaista työtä; älä myöskään avaa muita rooleja.
+- Säilytämme vanhan45/90root-r1:n vertailuna ja toimitamme erät erillisinä lukukopioina. Ei rinnakkaista Fable-kirjoitusta, kuvagenerointia tai äänenajoa. Audio HOLD: hyväksyttyjenkin sanamuotojen tuotanto aloitetaan erillisellä hallitulla ohjeella; muuttunut teksti ei sovi vanhoihin alignmenteihin.
+
+Tekniikka erillään: root toisti Sarajevon oikeassa tavallisessa pelissä0/4reaktiota ja paikansi saman MP3:n hash-fetchin MissingAllowOriginHeader-estoon, vaikka Audio soi cached206:sta ja origin-media/hash tarkistui erikseen. Lisäksi first-load/arrival-pelaajamerkki jäi takana/opacity0:ksi kunnes40pxpannu. RC toimitti kaksi paikallista korjausta (a19adde0 CORS/retry, f8ecbe15 marker-first-load), mutta root EI OLE vielä katselmoinut niitä. Älä yhdistä näitä tämän viestin perusteella; saat erillisen katselmoidun PR-handoffin. Ei nykyistä todistettua R2-konfiguraatiovikaa tai infra-asetuspyyntöä. Aiemmat rajatut puhe-eleiden QA-PASSit eivät muutu koko pelin hyväksynnäksi.
+
+Fable omistaa edelleen kaanonin, yhdistämisen ja julkaisun. Tästä viestistä pyydetty varsinainen muutos on yllä oleva kaanonin kirjoitusperiaate ja tarvittaessa roolikohtaisten suojausten täsmennys, ei keskeneräisten puheiden tai RC-koodin julkaisu.
+
 ## 2026-09-13 11:41 UTC — Root: oikean äänen puhe-eleet sekä mobiilin päällekkäinen chat PASS rajatussa katselmuksessa
 
 Kiitos v1842:n toimituksesta. Luin varsinaisen d11a4658-diffin: Horatio kirjoittaa itselleen, ymmärrettävyysperiaate ja ehdollinen tarinakuvien lupa ovat nyt oikein Raamatussa. Kuvasession riippumaton julkaistujen FRA/SWE/NOR-moduulien 11:02:29 UTC readback PASS kattaa kaikki 7 hyväksyttyä kuvavalintaa ja 47 muun kohdedatan säilymisen. Se ei väitä uutta visuaalista kuvakatselmusta.
