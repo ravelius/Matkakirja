@@ -6,6 +6,7 @@
  *        [--data <raaka-aineiston kansio>] [--tasot 0-7] \
  *        [--alue lon0,lat0,lon1,lat1] [--laatta 512] [--laatu 0.9] \
  *        [--lohko 4] [--kaariminuutit 1|3] [--korkeuspalat <kansio>]
+ *        [--vari <ISO A3>] [--variversio <v>] [--aluevesi 6.7]
  *        [--muoto webp]
  *        [--harva] [--harvamittaus] [--saumatesti] [--kuiva]
  *        [--vain-lista] [--vain-palat [tiedosto]] [--paikkaus <lähdeversio>]
@@ -296,6 +297,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
     + '[--nostotaso --nostoversio <v>] [--viivataso --viivaversio <v> [--eipiirit]] '
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
+    + '[--vari <ISO> --variversio <v> [--aluevesi <yksikköä>]] '
     + '[--saumatesti [--saumakohta sarake,rivi]]');
   process.exit(1);
 }
@@ -544,6 +546,70 @@ if (!RAJASETIT[RAJASETTI]) {
 const RANTATASO = lippu('rantataso');
 const RANTAVERSIO_ANNETTU = valitsin('rantaversio', null);
 const RANTAVERSIO = RANTAVERSIO_ANNETTU ?? VERSIO;
+
+/* --------------------------------------------------------- väritaso */
+
+/*
+ * VÄRITASO — KOHDEMAAN VÄRILLINEN TOPOGRAFIA (karttauudistus, erä 1).
+ *
+ * `--vari FRA` ajaa VIIDENNEN laattajoukon samalle laattaruudukolle:
+ * sama arkki, sama projektio, samat tasot, sama laattakoko — vain
+ * toinen väriasteikkopari (tools/fokuskartta/piirto.js VARI_ASTEIKKO ja
+ * VARI_SYVYYS). Peli piirtää sen omana kerroksenaan pohjan päälle ja
+ * rajaa sen kohdemaan muotoon (js/laattapyramidi.js varitasonTasot,
+ * clipPath js/maanaariviivat.js aluevesipolusta).
+ *
+ * Omistaja 13.9.2026: *"Maan korkeuserot muutetaan varilliseksi ja
+ * vedetkin nakyvat sinisena syyvyyserot huomioiden. … Muiden maiden
+ * kartat ja valtion ulkopuoliset vedet ja meret ennallaan ruskean
+ * savyissa. … Siis etta vain kohdemaassa on varillinen topografia
+ * nakyvissa?"*
+ *
+ * === MIKSI LAATAT EIVÄT OLE MAAN MUOTOISIA ==========================
+ *
+ * Laatat piirretään maan LAATIKON alalle suorakaiteena, ei maan
+ * muotoon leikattuna, ja leikkaus tehdään vasta pelissä. Kaksi syytä,
+ * ja kumpikin on ehto:
+ *
+ *   1. LEIKKAUSTA EI VOI POLTTAA, JOS SE HALUTAAN TARKISTAA. Erän
+ *      savuke (tools/savukkeet/savuke-varilaatat.mjs) mittaa pikselin
+ *      Belgian puolelta ja vaatii sen ruskeaksi. Jos laatta olisi
+ *      valmiiksi leikattu, väite menisi läpi myös silloin kun pelin
+ *      leikkuri on rikki — eli testi ei mittaisi mitään. Rajaus on
+ *      pelissä, ja siksi savuke voi riisua sen ja nähdä testin
+ *      muuttuvan punaiseksi (vastakoe).
+ *   2. RAJA VOI VIELÄ MUUTTUA. Aluevesipuskurin leveys on päätös
+ *      (12 mpk), ja jos se muuttuu, laatat olisi poltettava uudestaan.
+ *      Nyt muuttuu yksi luku pelin puolella.
+ *
+ * Hinta on ne laatat, jotka jäävät leikkurin ulkopuolelle: Ranskan
+ * laatikosta niitä on runsas kolmannes. Ne EIVÄT lataudu pelissä —
+ * peli hakee vain leikkurin laatikon sisältä (js/laattapyramidi.js) —
+ * mutta ne ovat ämpärissä. Se on halvin mahdollinen vakuutus siitä,
+ * että rajan muutos on yhden luvun muutos.
+ *
+ * PATINA ON OLETUKSENA POIS (`--patina ei`). Värilaatta piirtyy
+ * patinoidun pohjalaatan PÄÄLLE, ja patinan passit — sävykäyrä,
+ * pastellihaalennus, meren litistys globaaliin seepiasävyyn — ovat
+ * juuri ne, jotka vetäisivät sinisen ja vihreän takaisin ruskeaan.
+ * Paperin rae, kuitu ja pigmentti tulevat moottorin omasta
+ * pikselisilmukasta, joten laatta on yhä samaa painettua karttaa kuin
+ * naapurinsa. `--patina taysi` pakottaa passin takaisin vertailukuvia
+ * varten.
+ */
+const VARI_MAA = (valitsin('vari', null) ?? '').toUpperCase() || null;
+const VARITASO = Boolean(VARI_MAA);
+const VARIVERSIO = valitsin('variversio', null) ?? VERSIO;
+/*
+ * ALUEVESIPUSKURI LAUTAYKSIKKÖINÄ (Fablen päätös 13.9.2026: 12
+ * meripeninkulmaa eli aluevesiraja). 12 mpk = 22,224 km; laudalla yksi
+ * leveysaste on 33,33 yksikköä ja yksi aste 111,32 km, joten
+ * 22,224 / 111,32 · 33,33 = 6,654 → 6,7 yksikköä. Sama luku on pelin
+ * puolella (js/maanaariviivat.js ALUEVESI_YKSIKKOA), ja kumpikin
+ * viittaa tähän perusteluun — laatikko ja leikkuri EIVÄT saa olla eri
+ * mieltä, tai leikkuri leikkaisi laatatonta alaa.
+ */
+const ALUEVESI_YKSIKKOA = Number(valitsin('aluevesi', 6.7));
 /*
  * POHJA ILMAN RANTAVIIVAA (`--ilman-rantaviivaa`). Piirtomoottorin
  * osio 4 ohitetaan tyyliparametrilla (`tyyli.rantaviiva: false`,
@@ -557,10 +623,23 @@ const RANTAVERSIO = RANTAVERSIO_ANNETTU ?? VERSIO;
  * rantataso on olemassa.
  */
 const ILMAN_RANTAVIIVAA = lippu('ilman-rantaviivaa');
-if ([NOSTOTASO, VIIVATASO, RANTATASO].filter(Boolean).length > 1) {
-  console.error('--nostotaso, --viivataso ja --rantataso ovat eri ajoja; anna vain yksi.');
+if ([NOSTOTASO, VIIVATASO, RANTATASO, VARITASO].filter(Boolean).length > 1) {
+  console.error('--nostotaso, --viivataso, --rantataso ja --vari ovat eri ajoja; '
+    + 'anna vain yksi.');
   process.exit(1);
 }
+/*
+ * MERKKITASO = MIKÄ TAHANSA POHJAN RINNALLE AJETTAVA LAATTAJOUKKO.
+ *
+ * Neljä ajotilaa jakavat yhden säännön: ne EIVÄT piirrä pohjalaattoja,
+ * joten ne eivät myöskään saa kirjoittaa luetteloon pohjan tietoja —
+ * tasoluetteloa, laatastoja, korkeustarkkuutta, merisävyä eivätkä
+ * pyramidin alaa. Jos ne kirjoittaisivat, yksi väritasoajo väittäisi
+ * koko pyramidin olevan Ranskan kokoinen. Ehto oli tähän asti
+ * kirjoitettu auki joka kohdassa; väritaso on neljäs, ja neljä
+ * luetteloa samasta säännöstä olisi kolme liikaa.
+ */
+const MERKKITASO = NOSTOTASO || VIIVATASO || RANTATASO || VARITASO;
 if (RANTATASO && ILMAN_RANTAVIIVAA) {
   console.error('--ilman-rantaviivaa on POHJA-ajon lippu; rantataso on juuri se '
     + 'muste, joka pohjasta jää pois.');
@@ -589,7 +668,7 @@ if (RANTATASO && ILMAN_RANTAVIIVAA) {
  * 64 pikseliä on moninkertaisesti suurin operaattorin ulottuvuus
  * (rantavyö 7 px, leviäminen 3 px, kahdeksasosakenttä 8 px).
  */
-const PATINA_TASO = valitsin('patina', 'taysi');
+const PATINA_TASO = valitsin('patina', VARITASO ? 'ei' : 'taysi');
 /*
  * NOSTOTASO SAA AINA OMAN RESEPTINSÄ (RESEPTIT.nosto): läpinäkyvän
  * mustekerroksen paperivakiopassit — sävytys, rosoisuus, leviäminen,
@@ -716,9 +795,16 @@ const SARAKKEET = sarakeTeksti
   })()
   : null;
 
-/** "lon0,lat0,lon1,lat1" -> rajaus asteina, tai null = koko maailma. */
+/**
+ * "lon0,lat0,lon1,lat1" -> rajaus asteina, tai null = koko maailma.
+ *
+ * `let`, koska VÄRITASOAJO laskee alueensa itse kohdemaan polygonista
+ * (ks. VÄRITASON ALUE alempana) eikä komentoriviltä: maan laatikko on
+ * aineistossa, ja käsin annettu laatikko olisi neljäs paikka, jossa
+ * saman maan rajat elävät.
+ */
 const alueTeksti = valitsin('alue', null);
-const ALUE = alueTeksti
+let ALUE = alueTeksti
   ? (() => {
     const [a, b, c, d] = alueTeksti.split(',').map(Number);
     return {
@@ -760,6 +846,56 @@ for (const rivi of nostot.tilasto.estot) console.log(`    esto ${rivi}`);
 
 const { projektio } = LAUTA;
 const kaava = laudanProjektio(projektio);
+
+/* ------------------------------------------------- väritason alue */
+
+/*
+ * VÄRITASON ALUE = KOHDEMAAN LAATIKKO + ALUEVESIPUSKURI.
+ *
+ * Laatikko luetaan SAMASTA aineistosta, jota peli käyttää leikkuriin
+ * (assets/data/maapolygonit.json, ne_10m_admin_0_countries, ISO A3) ja
+ * SAMALLA funktiolla (js/maanaariviivat.js maanLautalaatikko), jotta
+ * laatat kattavat täsmälleen sen alan, jonka leikkuri voi paljastaa.
+ * Toinen laskenta ehtisi ajautua muutaman yksikön sivuun, ja silloin
+ * rannikolle jäisi laataton kaistale juuri siihen, mihin puskuri
+ * ulottuu.
+ *
+ * MERENTAKAISET OSAT EIVÄT OLE MUKANA, koska maanLautalaatikko jättää
+ * ne pois (SAARIVARA): Ranskan Guayana ja Réunion tekisivät laatikosta
+ * puolen maailman levyisen ja ajosta tuntien mittaisen. Ne ovat oma
+ * eränsä, jos niihin joskus matkustetaan.
+ *
+ * PUSKURI LISÄTÄÄN LAATIKKOON EIKÄ RENKAISIIN: laatikko on karkea
+ * rajaus työlle, ja tarkka aluevesiraja on pelin leikkurissa. Laatikon
+ * on oltava vähintään yhtä suuri kuin leikkuri, ei tarkalleen sen
+ * muotoinen.
+ */
+if (VARITASO) {
+  const { maanLautalaatikko } = await import(`${JUURI}/js/maanaariviivat.js`);
+  const polygonit = JSON.parse(
+    readFileSync(join(JUURI, 'assets/data/maapolygonit.json'), 'utf8'),
+  );
+  const laatikkoLaudalla = maanLautalaatikko(polygonit, VARI_MAA);
+  if (!laatikkoLaudalla) {
+    console.error(`--vari ${VARI_MAA}: maata ei ole aineistossa `
+      + 'assets/data/maapolygonit.json (avaimena ISO A3).');
+    process.exit(1);
+  }
+  const p2 = ALUEVESI_YKSIKKOA;
+  const x0 = laatikkoLaudalla.x - p2;
+  const x1 = laatikkoLaudalla.x + laatikkoLaudalla.w + p2;
+  const y0 = laatikkoLaudalla.y - p2;
+  const y1 = laatikkoLaudalla.y + laatikkoLaudalla.h + p2;
+  ALUE = {
+    lon0: kaava.lautaLon(x0),
+    lon1: kaava.lautaLon(x1),
+    lat0: kaava.lautaLat(y1),
+    lat1: kaava.lautaLat(y0),
+  };
+  console.log(`  väritaso        ${VARI_MAA} · laatikko laudalla `
+    + `x ${x0.toFixed(1)}..${x1.toFixed(1)} y ${y0.toFixed(1)}..${y1.toFixed(1)} `
+    + `(puskuri ${p2} yksikköä = 12 mpk) · versio ${VARIVERSIO} · polku vari/z<taso>`);
+}
 
 /*
  * ARKKI = KARTTA-ALA, EI ENEMPÄÄ. Lukitut mitat mittaavat tasan tämän
@@ -2670,6 +2806,13 @@ for (const { mitat, bx, by } of lohkot.values()) {
     arkki: { x: arkinBbox.x, y: arkinBbox.y },
     // Painojälki paperivakioina (ks. PAINOJÄLKI ON PAPERIVAKIO).
     paperiS: PAPERI_S,
+    /*
+     * VÄRIPALETTI ON ASETUS EIKÄ TOINEN PIIRTOPOLKU (ks. VÄRITASO).
+     * Moottori vaihtaa kaksi asteikkoa ja meren peittävyyden; kaikki
+     * muu — geometria, varjostus, rae, kalusteet — on sama koodi, ja
+     * juuri siksi värilaatta osuu pohjalaatan päälle pikselilleen.
+     */
+    variPaletti: VARITASO,
   };
   /*
    * Patinan `maailma` on kankaan bbox LAUDAN koordinaateissa: siitä
@@ -2705,6 +2848,7 @@ for (const { mitat, bx, by } of lohkot.values()) {
     if (NOSTOTASO) kansio = join(kohdekansio, 'nostot', `z${mitat.z}`, String(sarake));
     if (VIIVATASO) kansio = join(kohdekansio, 'viivat', `z${mitat.z}`, String(sarake));
     if (RANTATASO) kansio = join(kohdekansio, 'ranta', `z${mitat.z}`, String(sarake));
+    if (VARITASO) kansio = join(kohdekansio, 'vari', `z${mitat.z}`, String(sarake));
     mkdirSync(kansio, { recursive: true });
     writeFileSync(join(kansio, `${rivi}.${MUOTO}`), puskuri);
 
@@ -2745,12 +2889,13 @@ const pikseleita = [...tilasto.values()].reduce((s, t) => s + t.pikseleita, 0);
  * yhdistelmä on aina totta: jokainen erä näkee edellisten kirjoittamat
  * tiedostot samasta kansiosta.
  */
-function laatastoBase64(mitat) {
+function laatastoBase64(mitat, alipolku = '') {
   const bitteja = mitat.sarakkeita * mitat.riveja;
   const tavut = Buffer.alloc(Math.ceil(bitteja / 8));
+  const juuri = alipolku ? join(kohdekansio, alipolku) : kohdekansio;
   for (let rivi = 0; rivi < mitat.riveja; rivi += 1) {
     for (let sarake = 0; sarake < mitat.sarakkeita; sarake += 1) {
-      const polku = join(kohdekansio, `z${mitat.z}`, String(sarake), `${rivi}.${MUOTO}`);
+      const polku = join(juuri, `z${mitat.z}`, String(sarake), `${rivi}.${MUOTO}`);
       if (!existsSync(polku)) continue;
       const i = rivi * mitat.sarakkeita + sarake;
       tavut[i >> 3] |= 1 << (i & 7);
@@ -2937,6 +3082,43 @@ function teeLuettelo() {
     };
   })(),
   /*
+   * VÄRITASO — VIIDES laattapyramidi (karttauudistus, erä 1;
+   * omistaja 13.9.2026). Kohdemaan värillinen topografia samalla
+   * laattaruudukolla polussa <varitaso.versio>/vari/z….
+   *
+   * KENTÄT OVAT PELIN AINOA TIETO SIITÄ, KENELLE VÄRIT KUULUVAT.
+   * `maa` on ISO A3, ja peli piirtää kerroksen VAIN kun pelaaja on
+   * siinä maassa (js/laattapyramidi.js varitasonTasot) — muuten
+   * Ranskan värilaatat maalaisivat Ranskan värilliseksi silloinkin,
+   * kun pelaaja on Belgiassa, ja omistajan ehto *"vain kohdemaassa"*
+   * rikkoutuisi. `aluevesi` on puskurin leveys lautayksikköinä, ja
+   * peli rakentaa leikkurin siitä: laatikko ja leikkuri tulevat
+   * samasta luvusta eivätkä voi olla eri mieltä.
+   *
+   * YHTEENSOPIVUUS ON SAMA KUIN RANTA- JA VIIVATASOLLA: vanha peli ei
+   * tunne `varitaso`-kenttää eikä rakenna kerrosta, ja uusi peli
+   * vanhan luettelon kanssa ei pyydä yhtään värilaattaa. Kummassakin
+   * suunnassa kartta on täsmälleen se seepiakartta, joka se oli ennen
+   * tätä erää — värit ovat puhdas lisäys.
+   *
+   * KENTTÄ SYNTYY VAIN VÄRITASOAJOSSA. Muuten pohja-ajon luettelo
+   * pyyhkisi värit ämpäristä joka kerta kun pohja poltetaan uudestaan
+   * (luettelo täydentyy erissä, ks. LUETTELO TÄYDENTYY).
+   */
+  varitaso: (() => {
+    if (!VARITASO || !tasot.length) return null;
+    const laatastot = {};
+    for (const m of tasot) laatastot[m.z] = laatastoBase64(m, 'vari');
+    return {
+      versio: VARIVERSIO,
+      maa: VARI_MAA,
+      aluevesi: ALUEVESI_YKSIKKOA,
+      alue: ALUE,
+      tasot: tasot.map((m) => m.z),
+      laatastot,
+    };
+  })(),
+  /*
    * POHJAN OMINAISUUDET: onko rantaviiva poltettu pohjalaattoihin.
    *
    * Peli ei lue tätä — sille riittää rantatason olemassaolo — mutta
@@ -2946,7 +3128,7 @@ function teeLuettelo() {
    * `--ilman-rantaviivaa`-ajossa; vanhoissa luetteloissa sitä ei ole,
    * ja sen puuttuminen tarkoittaa "rantaviiva on pohjassa".
    */
-  pohja: (NOSTOTASO || VIIVATASO || RANTATASO || !ILMAN_RANTAVIIVAA)
+  pohja: (MERKKITASO || !ILMAN_RANTAVIIVAA)
     ? undefined : { rantaviiva: false },
   /*
    * MERISÄVY: se yksi väri, jolla peli maalaa karsittujen umpimeren
@@ -2967,7 +3149,7 @@ function teeLuettelo() {
    * on saatava kirjattua oma tarkkuutensa ilman että toinen pyyhkii
    * sen (ks. LUETTELO TÄYDENTYY).
    */
-  korkeus: (NOSTOTASO || VIIVATASO || RANTATASO) ? undefined : {
+  korkeus: MERKKITASO ? undefined : {
     kaariminuutit: Object.fromEntries(tasot.map((m) => [m.z, kaariminuutitTasolle(m.z)])),
     aineisto: [...new Set(tasot.map((m) => kaariminuutitTasolle(m.z)))]
       .sort((a, b) => a - b)
@@ -2984,7 +3166,7 @@ function teeLuettelo() {
      * Tason oma tarkkuus myös tässä, jotta se kulkee `tasot`-taulukon
      * mukana erien yli samalla koodilla kuin laatasto.
      */
-    kaariminuutit: (NOSTOTASO || VIIVATASO || RANTATASO) ? undefined : kaariminuutitTasolle(m.z),
+    kaariminuutit: MERKKITASO ? undefined : kaariminuutitTasolle(m.z),
     pikseliaPerYksikko: Math.round(m.px * 1e6) / 1e6,
     sarakkeita: m.sarakkeita,
     riveja: m.riveja,
@@ -3016,7 +3198,12 @@ function teeLuettelo() {
    * vain se laatikko, ja jokainen tarkistus joka lukee `alue`-kenttää
    * valehtelisi.
    */
-  alue: PAIKKAUS_LAHDE ? null : ALUE,
+  /*
+   * VÄRITASOAJON ALUE ON KOHDEMAAN LAATIKKO EIKÄ PYRAMIDIN ALA: se
+   * kuuluu `varitaso.alue`-kenttään, ei tähän. Tänne kirjoitettuna se
+   * väittäisi, ettei pyramidissa ole muuta kuin Ranska.
+   */
+  alue: MERKKITASO ? undefined : (PAIKKAUS_LAHDE ? null : ALUE),
   /*
    * PAIKKAUKSEN KIRJANPITO: mistä versiosta muuttumattomat laatat
    * kopioitiin ja mikä laatikko piirrettiin uudelleen. Kenttä on
@@ -3055,7 +3242,7 @@ if (existsSync(luetteloPolku)) {
        * laatastoineen) jäävät sellaisinaan. Vain nostotaso-olio ja
        * eräkirjanpito päivittyvät.
        */
-      if ((NOSTOTASO || VIIVATASO || RANTATASO) && vanha.tasot?.length) {
+      if (MERKKITASO && vanha.tasot?.length) {
         luettelo.tasot = vanha.tasot;
       } else {
         const omat = new Set(luettelo.tasot.map((t) => t.z));
@@ -3068,6 +3255,7 @@ if (existsSync(luetteloPolku)) {
         nostotaso: NOSTOTASO || undefined,
         viivataso: VIIVATASO || undefined,
         rantataso: RANTATASO || undefined,
+        varitaso: VARI_MAA || undefined,
         paikkaus: PAIKKAUS_LAHDE || undefined,
       }];
       // Osa-ajo matalilla tasoilla (koeajo z0–z3) ei saa pyyhkiä
@@ -3075,13 +3263,25 @@ if (existsSync(luetteloPolku)) {
       luettelo.nostotaso = luettelo.nostotaso ?? vanha.nostotaso ?? null;
       luettelo.viivataso = luettelo.viivataso ?? vanha.viivataso ?? null;
       luettelo.rantataso = luettelo.rantataso ?? vanha.rantataso ?? null;
+      luettelo.varitaso = luettelo.varitaso ?? vanha.varitaso ?? null;
+      /*
+       * MERISÄVY JA PYRAMIDIN ALA OVAT POHJA-AJON TIETOJA. Merkkitaso
+       * ei karsi umpimerta eikä piirrä pohjaa, joten sen oma arvo on
+       * aina null — ja null tarkoittaisi pelille, ettei puuttuvan
+       * pohjalaatan tilalle maalata mitään (js/laattapyramidi.js
+       * pyramidiPohja). Vanha arvo kannetaan siis eteenpäin.
+       */
+      if (MERKKITASO) {
+        luettelo.meriSavy = vanha.meriSavy ?? null;
+        luettelo.alue = vanha.alue ?? null;
+      }
       /*
        * POHJAN RANTAVIIVA on POHJA-AJON tieto: vain se tietää, millä
        * lipulla laatat piirrettiin. Merkkitasojen ajot kantavat vanhan
        * kentän eteenpäin muuttumatta; pohja-ajo kirjoittaa sen aina
        * itse (myös pois, jos rantaviiva on taas mukana).
        */
-      if (NOSTOTASO || VIIVATASO || RANTATASO) luettelo.pohja = vanha.pohja ?? luettelo.pohja;
+      if (MERKKITASO) luettelo.pohja = vanha.pohja ?? luettelo.pohja;
       /*
        * KORKEUSTARKKUUS TÄYDENTYY TASOITTAIN, kuten `tasot`. z7-shardi
        * ei tunne z0–z6:n tarkkuutta eikä päinvastoin, ja nostotaso- tai
