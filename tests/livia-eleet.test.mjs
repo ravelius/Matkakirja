@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { asennaLivianKasvot, livianMietintaEle, onkoLivianTarkkaMietinta, valitseLivianTaustaEle } from '../js/livia-eleet.js';
+import { asennaLivianKasvot, livianLuentaEstaaRauhan, livianMietintaEle, onkoLivianTarkkaMietinta, valitseLivianTaustaEle } from '../js/livia-eleet.js';
+import { pehmeaLoppu } from '../js/luenta.js';
 import { LIVIAN_MIETINNAT } from '../js/pollo.js';
 import { LIVIA_SVG_ELEET } from '../js/livia-svg.js';
 import { ilmoitaLivianKasvopuhe } from '../js/livia-puhetila.js';
@@ -326,6 +327,36 @@ test('karttakameran liike nostaa, jatkuu inertian ajan ja laskeutuu vasta pysäh
  e.tick(220);tila.skaala=1.1;e.tick(100);assert.match(canvas.innerHTML,/data-map-hover/);
  e.tick(900);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);assert.equal(e.raf.size,0,'lepotila ei pyöritä rAF:ia');
  c.tuhoa();assert.equal(e.timers.size,0);assert.equal(e.raf.size,0);
+});
+
+test('luonnollisen pehmeän lopun stale diaryVoice ei estä karttaleijuntaa',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t),tila={x:0,y:0,skaala:1},kamera={kameranTila:()=>tila};
+ const ui={kamera:()=>kamera};e.pollo.haeUi=()=>ui;
+ class Luenta extends EventTarget{
+  volume=.8;duration=22.32;currentTime=22.303666;paused=false;ended=false;
+  pause(){this.paused=true;}
+ }
+ const luonnollinen=new Luenta();ui.diaryVoice=luonnollinen;
+ pehmeaLoppu(ui,luonnollinen);luonnollinen.dispatchEvent(new Event('timeupdate'));e.tick(20);
+ assert.equal(luonnollinen.paused,true);
+ assert.equal(luonnollinen.ended,false,'pehmeä loppu ei käytä selaimen ended-tilaa');
+ assert.equal(luonnollinen.luentaPaattyiLuonnollisesti,true);
+ assert.equal(livianLuentaEstaaRauhan(ui),false);
+
+ c=asennaLivianKasvot(e.pollo);e.tick(5000);const canvas=e.doc.body.children[0].children[0];
+ tila.x+=10;e.tick(200);assert.match(canvas.innerHTML,/data-map-hover/,'luonnollisen lopun kahva esti hoverin');
+ e.tick(1400);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
+
+ // Soiva ja tavallisesti kesken pauselle jätetty luenta pysyvät esteinä.
+ ui.diaryVoice={paused:false,ended:false,currentTime:5,duration:22.32};
+ assert.equal(livianLuentaEstaaRauhan(ui),true);tila.x+=10;e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
+ ui.diaryVoice={paused:true,ended:false,currentTime:5,duration:22.32};
+ assert.equal(livianLuentaEstaaRauhan(ui),true);tila.x+=10;e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
+
+ // Luonnollinen loppumerkki ei ohita chatin tai lehden prioriteettia.
+ ui.diaryVoice=luonnollinen;e.pollo.auki=true;e.notify(e.button);tila.x+=10;e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
+ e.pollo.auki=false;e.notify(e.button);e.lehti.open=true;e.lehti.classList.add('lehti');e.notify(e.lehti);
+ tila.x+=10;e.tick(200);assert.doesNotMatch(canvas.innerHTML,/data-map-hover/);
 });
 
 for(const este of ['chat','speech','narration','bun','dialog','hidden','reduced','flight'])test(`karttaleijunta väistää eikä jonotu: ${este}`,t=>{
