@@ -74,7 +74,7 @@ import { merkitseLivianNosto } from './livia-tilanteet.js';
  */
 import {
   fokusmoodiPaalla, html, jaaKappaleiksi, kuunteleSulkevaNapautus, linssiEstaa,
-  nielaiseSulkevaNapautus, polloNimilappu,
+  nielaiseSulkevaNapautus, polloNimilappu, TOAST_MS,
 } from './ui-apurit.js';
 import { asetaKuva, assetOsoite } from './media.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
@@ -84,6 +84,7 @@ import {
   rekisteroiMaanKohteet, suljeFokuskohde, suljeKohdeSuurennos,
 } from './fokuskohteet.js';
 import { NOSTOSYM_TYYPIT, nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
+import { piirraVisanVastaukset } from './fokustehtavat.js';
 import { nostokuvaAloita } from './nostokuva.js';
 import { fokuskohteet } from './packs/fokuskohteet-grc.js';
 /*
@@ -884,6 +885,29 @@ function avaaNosto(ui, nosto) {
   return avaaNostonKortti(ui, nosto);
 }
 
+/**
+ * NOSTON KORTTI AUKI TUNNUKSESTA — sama polku kuin kartan merkistä.
+ *
+ * Kartan merkki, kohteen tietoruudun leikekirjanappi ja tämä päätyvät
+ * kaikki `avaaNosto`on; ero on vain siinä, MISTÄ nosto löydetään.
+ * Tunnus riittää, koska poolissa ne ovat yksikäsitteisiä
+ * (tests/nostot-kartalla.test.mjs).
+ *
+ * MIKSI TÄMÄ ON OLEMASSA (karttauudistuksen erä 6). Nostolla ei aina
+ * OLE kartalla merkkiä: kaupunkilehden kohdekartalla asuvat nostot
+ * karsitaan pääkartalta (js/fokuskohteet.js karsiKaupunkikartanNostot,
+ * omistajan sääntö 2.9.2026), ja Pariisin koko pooli on sellainen.
+ * Kortin sisus on silti sama komponentti, ja erän 6 minikysymyksen
+ * savuke (tools/savukkeet/savuke-nostovisa.mjs) ajaa sen tästä —
+ * merkin napautusta mittaa oma vartionsa (savuke-pallo-nostolaput).
+ *
+ * @returns {boolean} aukesiko kortti
+ */
+export function avaaNostonTunnuksella(ui, nostoId) {
+  const nosto = nostoPooli(ui).find((n) => n.id === nostoId) ?? null;
+  return avaaNosto(ui, nosto);
+}
+
 /* ==================== LUNASTUSKORTTI ==================== */
 
 /**
@@ -965,6 +989,16 @@ function piirraNostonSisus(ui, sisalto, nosto, valmisKuva) {
    * pinnalla. Kortti sulkeutuu samalla: kaksi korttia päällekkäin olisi
    * juuri sitä raskautta, jota kevyt kulku purkaa.
    */
+  /*
+   * MINIKYSYMYS ON JUTUN VIIMEINEN OSA, MUTTA EI KORTIN VIIMEINEN RIVI
+   * (karttauudistuksen erä 6). Sen jälkeen tulevat vain kohdenappi ja
+   * pulun valmiit kysymykset, ja NE MOLEMMAT SULKEVAT KORTIN — kysymys
+   * niiden alapuolella jäisi puolelta pelaajalta vastaamatta, koska
+   * kortti ehtisi kadota. Järjestys on siis: juttu, lähde, karttaliite,
+   * kysymys, ja vasta sitten ne napit, joista lähdetään pois.
+   */
+  piirraNostonVisa(ui, sisalto, nosto);
+
   const kohde = nostonKarttakohde(ui, nosto);
   if (kohde) {
     const nappi = html('button', 'fokusnosto-kohdenappi', `Katso ${kohde.nimi} kartalla`);
@@ -1281,6 +1315,135 @@ function piirraNostonKarttaliite(ui, kohde, kartta) {
   kehys.appendChild(teksti);
   liite.appendChild(kehys);
   kohde.appendChild(liite);
+}
+
+/* ==================== MINIKYSYMYS NOSTON LOPUSSA ==================== */
+
+/**
+ * Palkkio oikeasta vastauksesta.
+ *
+ * 25 puntaa, Raamattu KARTTAUUDISTUKSEN PAATOKSET 1 (Fablen päätös
+ * 13.9.2026): PUOLET lehtitehtävän 50:stä, koska nostojen kysymyksiä
+ * tulee vastaan moninkertaisesti — jokainen kartan nosto voi kantaa
+ * yhden, kun lehdessä niitä on kaksi kaupunkia kohti.
+ */
+const NOSTON_VISA_PALKKIO = 25;
+
+/**
+ * KIRJANPIDON PSEUDOKAUPUNKI: avain on 'pakka:nosto:tunnus'.
+ *
+ * `actionMinitehtava` (js/game.js) muodostaa avaimen kolmesta osasta
+ * `pakka:kaupunki:aihe`, ja erä 6 ei saa muuttaa sen rajapintaa. Nosto
+ * EI OLE KAUPUNGIN OMAISUUTTA: sama täky näkyy maan jokaisessa
+ * kaupungissa (NOSTO_MAAT, nostoMaanPooli), joten kaupunkikohtainen
+ * avain maksaisi saman kysymyksen uudelleen Marseillessa. Kiinteä
+ * 'nosto' tekee avaimesta maailmanlaajuisesti yhden — ja koska
+ * maailmankartalla ei ole kaupunkia tällä tunnuksella, se ei voi
+ * törmätä lehtitehtävän avaimeen.
+ */
+const NOSTON_VISA_KAUPUNKI = 'nosto';
+
+/** Laatikon otsake ja vihjerivi, kun data ei anna omaansa. */
+const NOSTON_VISA_OTSAKE = 'LUKIJAN KYSYMYS';
+const NOSTON_VISA_VIHJE = `vastaus löytyy tästä jutusta · +${NOSTON_VISA_PALKKIO} puntaa`;
+
+/**
+ * Onko tässä nostossa kelvollinen minikysymys?
+ *
+ * DATAMALLI (erä 6): valinnainen kenttä `visa` fokusvirtapakan
+ * `takynostot`-rivillä, TÄSMÄLLEEN samassa muodossa kuin lehden
+ * tehtävällä (`lehtitehtavat[].visa`, js/packs/fokusvirta-*.js):
+ *
+ *     visa: { kysymys, vaihtoehdot: [...], oikea, fakta?, otsake?, vihje? }
+ *
+ * Yksi muoto kahteen paikkaan on tarkoituksellinen: tekstivetäjä
+ * kirjoittaa kysymyksen samalla kaavalla kummalle pinnalle tahansa
+ * eikä koodia tarvitse koskea. Puuttuva tai vajaa `visa` jättää
+ * kysymyksen pois hiljaa — vanha nosto on yhä kelvollinen nosto.
+ */
+function nostonVisa(nosto) {
+  const visa = nosto?.visa;
+  if (!visa || typeof visa.kysymys !== 'string' || !visa.kysymys.trim()) return null;
+  if (!Array.isArray(visa.vaihtoehdot) || visa.vaihtoehdot.length < 2) return null;
+  if (!Number.isInteger(visa.oikea) || visa.oikea < 0 || visa.oikea >= visa.vaihtoehdot.length) {
+    return null;
+  }
+  return visa;
+}
+
+/**
+ * MINIKYSYMYS KORTIN LOPPUUN (karttauudistuksen erä 6, suunnitelman
+ * luku 5.1; omistajan tilaus: *"keskimäärin joka kolmanteen nostoon
+ * pieni kysymys"*).
+ *
+ * Laatikko on lehden minitehtävän oma (.minitehtava-luokat), koska se
+ * ON sama asia toisella pinnalla — vain palkkio on pienempi. Lipukkeet
+ * ja tulosrivi tulevat jaetusta komponentista
+ * (js/fokustehtavat.js piirraVisanVastaukset), joten palautteen
+ * sanamuoto ei voi ajautua erilleen lehden kysymyksestä.
+ *
+ * SAMA KYSYMYS EI MAKSA KAHDESTI. Portti on `actionMinitehtava`n oma
+ * kirjanpito: ensimmäinen vastaus — oikea tai väärä — kuluttaa avaimen,
+ * ja toinen yritys palaa `{ ok: false }`:llä eikä komponentti piirrä
+ * mitään. Kortti voidaan avata uudelleen kuinka monta kertaa tahansa,
+ * mutta silloin laatikossa on vastaus eikä lipukkeita.
+ *
+ * LASKURI KASVAA VAIN OIKEASTA. Väärä vastaus ei lisää kassaan eikä
+ * laskuriin (game.kirjaaNostotehtava) — se vain sulkee kysymyksen.
+ */
+function piirraNostonVisa(ui, sisalto, nosto) {
+  const visa = nostonVisa(nosto);
+  if (!visa || !ui?.game?.actionMinitehtava) return;
+  const avain = `${ui.game.pack?.id}:${NOSTON_VISA_KAUPUNKI}:${nosto.id}`;
+  const laatikko = html('div', 'minitehtava fokusnosto-visa');
+  laatikko.appendChild(html('p', 'minitehtava-otsikko', visa.otsake ?? NOSTON_VISA_OTSAKE));
+
+  if (ui.game.minitehtavatVastatut?.has(avain)) {
+    // Jo vastattu: laatikko kertoo faktan eikä tarjoa lipukkeita.
+    // Palkkio on tässä vaiheessa joko maksettu tai menetetty, ja
+    // kumpaakaan ei voi enää muuttaa avaamalla kortti uudelleen.
+    laatikko.appendChild(html('p', 'minitehtava-kysymys',
+      visa.fakta ?? 'Tähän kysymykseen on jo vastattu.'));
+    sisalto.appendChild(laatikko);
+    return;
+  }
+
+  const vihjeteksti = visa.vihje ?? NOSTON_VISA_VIHJE;
+  const vihjerivi = vihjeteksti ? html('p', 'fokusnosto-visa-vihje', vihjeteksti) : null;
+  if (vihjerivi) laatikko.appendChild(vihjerivi);
+  laatikko.appendChild(html('p', 'minitehtava-kysymys', visa.kysymys));
+  piirraVisanVastaukset(laatikko, {
+    visa,
+    palkkio: NOSTON_VISA_PALKKIO,
+    kirjaa: (oikein) => ui.game.actionMinitehtava(
+      NOSTON_VISA_KAUPUNKI, nosto.id, oikein, NOSTON_VISA_PALKKIO,
+    ),
+    // Vihjerivi oli lupaus vastaamattomalle; tulos korvaa sen.
+    ennen: () => vihjerivi?.remove(),
+    jalkeen: (oikein) => {
+      if (oikein) {
+        /*
+         * LASKURI VASTA KIRJAUKSEN JÄLKEEN. Jaettu komponentti ajaa
+         * `jalkeen`in vain, kun `kirjaa` palautti `ok` — eli tänne ei
+         * tulla toisella yrityksellä, eikä laskuri voi kasvaa kahdesti
+         * samasta kysymyksestä.
+         */
+        ui.game.kirjaaNostotehtava();
+        const box = ui.buildToast?.({
+          kind: 'stamp',
+          icon: 'kukkaro',
+          text: `+${NOSTON_VISA_PALKKIO} puntaa`,
+          sub: 'Lukijan kysymys ratkesi',
+        });
+        if (box) setTimeout(() => ui.removeToast(box), TOAST_MS.default);
+      }
+      // Kortti on kartan päällä: koko render() sulkisi sen. Riittää
+      // tallentaa ja päivittää rahapilleri (sama syy kuin lehdessä).
+      ui.onChange?.(ui.game);
+      ui.renderTurnPill?.();
+    },
+  });
+  sisalto.appendChild(laatikko);
 }
 
 /**
