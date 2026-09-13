@@ -57,6 +57,7 @@ vastakokeet ovat punaisia oikeista väitteistä (luku 4).
 | `tools/tarkista-varitason-portti.mjs` | **UUSI.** Lukee pelin oman `lepokerroksenKerrokset`-funktion ja kertoo, näkyisikö kerros näillä kahdella luettelolla. Poistumiskoodi kertoo sen työnkululle. |
 | `.github/workflows/generoi-varitaso.yml` | **UUSI.** Yhden maan väri-/tasoituskerroksen ajo ja vienti ämpäriin (luku 5). |
 | `tools/savukkeet/savuke-tasoitus-pallo.mjs` | **UUSI.** Erän 1b savukkeen käänteiskuva (luku 4). Uudet mittarit: kokonaisen alan tavuvertailu, 9 × 9 keskihajonta, erokartta, `--ruutu`, `--ilman-kerrosta`. Kankaan siirtymä korjattu (luku 7.3). |
+| `tests/tasoitustaso.test.mjs` | **UUSI.** Kuusi vartiota: kerma on paperia vaaleampi joka kanavalla, tasoituspaletissa ei ole asteikkoa, paletti maastomoottorille on äänekäs virhe, `piirraTasoitustaso` mitoittaa ja tyhjentää kankaan, luettelo kirjaa peiton/kerman/nollapuskurin, ja murrettu paletti pitää yhä aluevesipuskurinsa. |
 | `tools/savukkeet/README.md` | Uusi savuke luetteloon ja taulukkoon. |
 
 **EI koskettu** (rinnakkaiset erät 3, 4, 6, 8): `js/pollo.js`,
@@ -304,12 +305,12 @@ saapuu.
   yksityiskohta. Laataston reuna häipyy vinjettinä (häive 70 yks), eikä
   vaakasuoraa rajaa näy.
 - **`karttauudistus-1c-peitto095.png`** — sama näkymä peitolla 0,95.
-  Ero 0,85:een on pieni mutta nähtävissä: naapureista katoavat myös ne
-  hennot rantaviivat ja rajat, jotka 0,85 jättää. Kartta on
-  rauhallisempi ja samalla tyhjempi. **Suositukseni on 0,85**, koska
-  rantaviiva on maantiedettä eikä koristetta ja pelaajan on nähtävä,
-  missä Ranskan naapurit ovat; mutta valinta on omistajan ja se on yksi
-  ajon valitsin.
+  Ero 0,85:een on pieni mutta nähtävissä: naapureiden rantaviivat ja
+  rajat ohenevat entisestään ja Espanjan sekä Saksan viimeisetkin
+  sävyerot litistyvät. Kartta on rauhallisempi ja samalla tyhjempi.
+  **Suositukseni on 0,85**, koska rantaviiva on maantiedettä eikä
+  koristetta ja pelaajan on nähtävä, missä Ranskan naapurit ovat; mutta
+  valinta on omistajan ja se on yksi ajon syöte.
 - **`karttauudistus-1c-tyopoyta-peitto085.png`** (työpöytä 1440 × 900) —
   sama peitto leveällä ruudulla. Erän 1b löydös 7.1 näkyy tässä toisin
   päin: puhelimella ylimääräinen ala on PYSTYsuunnassa, työpöydällä
@@ -321,6 +322,12 @@ saapuu.
   päätöksen 4 todiste kuvana: ei yhtään muuttunutta pikseliä kohdemaan
   sisällä, ei yhtään muuttumatonta laataston sisällä sen ulkopuolella.
   Kuvasta näkee myös laataston laatikon ja sen häipyvän reunan.
+
+![Ilman kerrosta](kuvat/karttauudistus-1c-ilman-kerrosta.png)
+![Peitto 0,85](kuvat/karttauudistus-1c-peitto085.png)
+![Peitto 0,95](kuvat/karttauudistus-1c-peitto095.png)
+![Erokartta](kuvat/karttauudistus-1c-erokartta.png)
+![Työpöytä 1440 × 900, peitto 0,85](kuvat/karttauudistus-1c-tyopoyta-peitto085.png)
 
 **MITÄ EN NÄHNYT:** en nähnyt sinistä (sitä ei tule), en vaakasuoraa
 rajaa Välimerellä (häive hoitaa sen) enkä eroa Ranskan sisällä (sitä ei
@@ -457,7 +464,7 @@ aallossa (erän 1b suositus pätee edelleen).
 
 | portti | tulos |
 | --- | --- |
-| `npm test` | **3308 testiä, 3295 pass, 0 fail** (13 skipped) |
+| `npm test` | **3314 testiä, 3301 pass, 0 fail** (13 skipped; +6 uutta `tests/tasoitustaso.test.mjs`:stä) |
 | `node tools/tarkista-kaksoisavaimet.mjs` | ei kaksoisavaimia |
 | `node tools/tarkista-niputus.mjs` | 388 moduulia, 4172 julistusta, ei törmäyksiä |
 | `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node tools/tarkista-savukkeet.mjs` | savukkeet kunnossa: 1526 ui-viittausta, 399 metodia, 532 kenttää |
@@ -466,3 +473,15 @@ aallossa (erän 1b suositus pätee edelleen).
 | `savuke-tasoitus-pallo` | **11/11** |
 | `savuke-tasoitus-pallo --ilman-rajausta` | **10/11 (vastakoe punainen, V2 kaatuu)** |
 | `savuke-tasoitus-pallo --rikki-versio` | **5/11 (vastakoe punainen, V1 kaatuu)** |
+
+## 10. Kolme kysymystä omistajalle
+
+1. **Peitto 0,85 vai 0,95?** Kuvat luvussa 6, suositus 0,85 (luku 7.5).
+   Vaihto on yksi työnkulun syöte ja 17 sekunnin ajo.
+2. **Kerma 250,244,214 — sopivan vaalea?** Luku 2.3 kertoo, miksi se on
+   juuri tämä eikä erän 1b ehdottama 246,237,198 (joka olisi tehnyt
+   naapureista Ranskan kanssa samankirkkaisia). Sävy on yksi valitsin
+   (`--kerma`).
+3. **Ajetaanko Ranska ämpäriin nyt?** Työnkulun syötteet ovat luvussa 5.
+   Suositus: ensin `kuiva: true` (sekunteja, kertoo mitä veisi), sitten
+   oikea ajo.
