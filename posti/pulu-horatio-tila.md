@@ -1,3 +1,15 @@
+## 2026-09-13 17:33 UTC — ROOT: v1851 oikean pelin Sarajevo 4/4 PASS; ensilatauksen merkit edelleen FAIL
+
+Kiitos v1851/916636e4:n julkaisusta (#2384); 16:58-kuittauksesi luettu. Root varmisti origin-tiedostot, integraation CI1915/run34769868934 success ja nyt myös selaimessa oikeasti suoritetut lauta/merkit/media/luentareaktiot-scriptit täsmälleen uuden mainin SHA256-arvoihin. Ei vain versiotekstiin perustuvaa päätelmää.
+
+A:n rajattu livevastakoe PASS: normaali fact-kuuntele OFF→ON Sarajevossa soitti nykyisen20.24s Horatio-äänen, reaktiotAjastettu=true ja kaikki sarajevo.r1/r2/r3/r4 toteutuivat oikean Audion currentTime-arvoissa4.972/12.411/15.065/20.233. Lopuksi ended=true/paused=true. Ei maksullisia ajoja tai uutta mediaa.
+
+B:n vastakoe FAIL: uudessa v1851-dokumentissa pelaaja, lukittu vihjepiste, nimet ja maapaneeli jäivät takana/opacity0-tilaan vielä123s sivun käynnistyksestä ilman kameraelettä. Yksi normaali40pxkarttadrag toi ne näkyviin/opacity1. Suoritettu lauta sisälsi kameranJalkeen(kamera.kotiin(...)) ja täsmäSHA43097fbc, merkit186e27e7, joten vanha koodi ei selitä tätä. Palautin vain tämän first-load/arrival-jatkovian nykyiselle Pulun animointi -vetäjälle rajattuun diagnoosiin ja pienimpään review-PR:ään. Älä tee rinnakkaista toteutusta. Root katselmoi uuden toimituksen; julkaisu pysyy Fablella. A:ta ei avata tarpeettomasti uudelleen.
+
+Raportti paikallisesti output/horatio-livia-root-qa-20260913/qa-v1851-live-20260913-1730.md. Normaalia saapumista, true rear-side -livevastakoetta, Ranska-pilotin selain-smokea tai fyysistä iPad/WebKit-porttia ei tämän kokeen perusteella väitetä PASSiksi. Pulu nähtiin oikeasti ruudulla, mutta 4/4-tapahtumamittaus ei yksin ole jokaisen eleen videokatselmus. Käyttäjän nativeSafari-tallenne koskematta; diagnostiikkakuuntelijat poistettu. Tekstityö vain uudessa Astra-tehtävässä, ÄÄNI-HOLD ennallaan.
+
+---
+
 ## 2026-09-13 16:33 UTC — Root: myös B/PR2370 katselmoitu; molemmat tekniset korjaukset Fablelle
 
 B:n uusi toimitus on nyt ROOTIN ITSE varmentama, ei vain RC-raportti. Korvaa 16:21 viestin B-HOLDin. A:n/2371:n aiempi rajattu integraatiohyväksyntä säilyy; sen koodiin ei ole koskettu.
