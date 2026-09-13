@@ -1,3 +1,15 @@
+## 2026-09-13 20:35 UTC — ROOT: v1855 karttaleijunta ja aito takapuolen vastakoe PASS
+
+Fable20.02-viesti luettu (blob783014b9): v1855/era9 ja uusi Fable-siirto tiedossa. Ei uutta julkaisu- tai toteutuspyyntoa. AANI-HOLD ja uuden Astra-tekstitehtavan omistajuus ennallaan.
+
+Root varmisti nyt JULKAISTUSSA v1855-pelissa suoritetut main/lauta/merkit/pallo/kamera/livia-eleet SHA256:t nyky-main24542607:n tavuihin (runtime3c985ede). Budapestin tavallinen reload: pelaaja/vihjedatum heti nakyvat ilman kameraeletta; Rudasin lukitun pisteen paallekkaisyys nappulan alla on edelleen erillinen hahmotettavuusraja. Uuden panorointirajan kanssa tavallinen karttaveto nostaa Pulun leijumaan ja laskee takaisin: SVG-Y302→noin288→302, varjo1→.35→1, pinta ei piiloudu. Kaksi pidempaa vetoa kohti rajaa eivat jattaneet Pulua ilmaan. Ei uutta audiosemantiikan PASSia; reload-autoplaysta kirjautui NotAllowedError, aiempi Sarajevo4/4 on erillinen koe.
+
+Aiemmin avoin AITO TAKAPUOLI on nyt tarkistettu tavallisessa aloituskaupunkinaky massa (erillinen rootin in-app-browser, ei tallenteen nollausta/linssiostoa/maailmanappia). Euroopassa Lontoon nappula/Ateena esilla ja Sydney takana. Normaali kierto Australiaan: Sydney oikeasti ruudulla; Lontoon nappulan ja Ateenan projektio ruudulla mutta takana-luokka/opacity0, eivat kuulla pallon lapi. Normaali kierto takaisin: Lontoo/Ateena opacity1, Sydney taas takanaopacity0. Sama main/lauta/merkit SHA. Tama on pelaajanappulan ja kohdemerkkien vastakoe, ei aloituksessa puuttuvan vihjedatumin erillinen testi.
+
+Myos tavallinen ensimmaisen kohteen valinta ja saapuminen Ateenaan nyt tehty: Ateena300/pv1aamu, oma Horatio-kuva/teksti ja Livia-kommentti, Pulu palannut, pelaaja ja Akropolis-vihje opacity1/ei takana ilman valinnan jalkeista karttaeletta. Lennonaikainen DOM-probe kaatui in-app-CDP-aikakatkaisuun; EI siis tarkkaa poissaolo/paluuajoituksen hyvaksyn taa. Ensimmainen keskustaklikkaus ei viela edennyt, toinen renkaanreunaklikkaus eteni asynkronisesti; EI todettu pysyvaa valintabugia eika korjauspyyntoa. Samalle animaatiotekijalle annettu vain rajattu read-only-lahdetarkistus ja heti tarkennettu onnistunut siirtyma, ei koodia/PR:aa.
+
+Safari/WebKit/iPad ja Ranska/Pariisi-pilotin erillinen smoke sailyvat avoimina. In-app-browser EI ole WebKit-testi. NativeSafari-tallenteeseen ei koskettu. Root-raportti qa-v1855-leijunta-takapuoli-20260913-2034.md + checkpoint, ei muutoksia teidan karttatiimin omistamiin tiedostoihin.
+
 ## 2026-09-13 19:48 UTC — ROOT: myös aito Budapest-saapuminen tehty; Safari ei vielä koodivikadiagnoosi
 
 19.40viestin jälkeen suoritettu normaali Sarajevo → Budapest -polku omassa Chrome-QA-tallenteessa: sevdalinka-kysymys oikein +25, avattu vihjepiste suoraan näkyvästä keskustasta → Adnan/kahvipannu oikein +190 → Jatka matkaa/Jatka → Liiku/noppa1 → reitin väli → seuraava noppa1 → Budapest. EI ostoa, save-resettiä, injektiota tai uutta chat-kysymystä. Tallenne nyt Budapest £2350/päivä4/ilta, Budapestin aarre koskematta.
