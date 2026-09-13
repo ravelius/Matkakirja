@@ -20103,6 +20103,30 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
 .toimintorivi-liuku .icon-label { display: none; }
 .toimintorivi-liuku > button { padding-left: 0.35rem; padding-right: 0.35rem; }
 
+/*
+ * NELJÄ KULKUTAPAA MAHTUU 390 PIKSELIIN (karttauudistus erä 8, omistaja
+ * 13.9.2026: *"Liikkumiseen tulee nelja vaihtoehtoa: liftaus
+ * (ilmainen), bussi kahden vierekkaisen kaupungin valilla (50p), laiva
+ * ja lento entisellaan."*).
+ *
+ * Liuku on flex ja napit `flex: 1 1 0`, joten neljäs nappi mahtuu
+ * riviin itsestään — MUTTA väli ja pehmuste on mitoitettu kolmelle.
+ * iPhonen 390 px:llä fokusrivi on 20rem eli 320 px: kolmella napilla
+ * yhden leveys on 96 px, neljällä 70 px, ja vanhoilla luvuilla ikoni
+ * jäisi 0,7 rem:n pehmusteiden väliin puristuksiin. Väli ja pehmuste
+ * kutistuvat siksi juuri sen verran, että 24 px:n kuvake ja 44 px:n
+ * kosketusala säilyvät.
+ *
+ * SÄÄNTÖ ON EHDOLLINEN (:has), joten kolmen napin liuku — nopanheitto,
+ * kaksi nappia; aiempien lautojen kolme tapaa — on täsmälleen entinen.
+ */
+.toimintorivi-liuku:has(> button:nth-child(4)) { gap: 0.3rem; }
+
+.toimintorivi-liuku:has(> button:nth-child(4)) > button {
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+}
+
 .toimintorivi.liuku-auki .toimintorivi-liuku {
   opacity: 1;
   pointer-events: auto;

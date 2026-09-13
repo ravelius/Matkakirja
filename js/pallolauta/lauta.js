@@ -2734,6 +2734,44 @@ export async function avaaPallolauta(ui) {
     return kamera.kotiin({ kesto, bbox });
   };
 
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * MATKA KUMOAA ULOSZOOMAUKSEN ESTON (karttauudistus erä 8)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * Karttauudistuksen erä 2 lukitsee uloszoomauksen maan laatikkoon
+   * (`zoomirajaSyrjaytys = { max }`, omistaja 13.9.2026: *"Pelaaja ei
+   * voi itse zoomata ulospain"*). MATKAVALINTA ON SE HETKI, JOLLOIN
+   * KAMERAN ON PÄÄSTÄVÄ LAATIKON ULKOPUOLELLE: kulkutapa rajaa
+   * näkymän koko matkan mitalle (js/ui.js matkarajaus), ja laiva tai
+   * lento vie useimmiten kahden maan yli.
+   *
+   * OMANA FUNKTIONAAN JA YHDESSÄ PAIKASSA. Syrjäytys itse asuu
+   * `zoomirajaSyrjaytys`issa (ks. LINSSI SAA SYRJÄYTTÄÄ ZOOMIRAJAT
+   * ylempänä); tämä vain nostaa sen talteen matkan ajaksi ja panee
+   * takaisin saapumisen jälkeen. Näin erä 2:n oma laskenta ja tämä
+   * erä eivät kirjoita samaan kohtaan, ja `matkallaVapaana` estää
+   * kahden peräkkäisen kutsun tallentamasta nullia talteen.
+   *
+   * Linssi voittaa silti: jos syrjäytys asetetaan matkan aikana
+   * (satelliittilinssi), `zoomirajat()` kirjoittaa sen suoraan ja
+   * matkan päätös palauttaa vain sen, mikä oli tallessa.
+   */
+  let matkasyrjaytysTalteen = null;
+  let matkallaVapaana = false;
+  const matkaZoomirajat = (vapaa) => {
+    if (Boolean(vapaa) === matkallaVapaana) return;
+    matkallaVapaana = Boolean(vapaa);
+    if (matkallaVapaana) {
+      matkasyrjaytysTalteen = zoomirajaSyrjaytys;
+      zoomirajaSyrjaytys = null;
+    } else {
+      zoomirajaSyrjaytys = matkasyrjaytysTalteen;
+      matkasyrjaytysTalteen = null;
+    }
+    tahdistaZoomirajat();
+  };
+
   /** Pelin paikan (pos) piste ruudulla (kotelon px) — nopan lähtö. */
   const ruutupiste = (pos) => {
     const a = pallonAsteet(pallonKohta(pos));
@@ -2794,6 +2832,12 @@ export async function avaaPallolauta(ui) {
     ruutupiste,
     ruudulla,
     merkitseNappulanPaikka,
+    /**
+     * Uloszoomauksen esto pois matkan ajaksi ja takaisin saapumisessa
+     * (ks. MATKA KUMOAA ULOSZOOMAUKSEN ESTON). `true` vapauttaa,
+     * `false` palauttaa laudan omat rajat.
+     */
+    matkaZoomirajat,
     /**
      * Zoomirajojen syrjäytys linssin ajaksi: `{ min, max }` korkeuksina
      * pallonsäteinä, `null` palauttaa laudan omat rajat. Ainoa käyttäjä

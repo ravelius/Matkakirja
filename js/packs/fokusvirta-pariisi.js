@@ -874,6 +874,37 @@ export const FOKUSVIRTA_PARIISI = {
         'Millainen oopperatalo Opéra-Comique oli 1870-luvulla?',
       ],
       /*
+       * ── MINIKYSYMYS (karttauudistuksen erä 6, 13.9.2026) ──────────
+       *
+       * PARIISIN POOLIN KOLMAS JA TOISTAISEKSI AINOA: kiintiö on "joka
+       * kolmanteen nostoon" (suunnitelma, luku 5.1), ja tässä poolissa
+       * on kolme nostoa — lustig-eiffel, kirahvin-kavelymatka ja tämä.
+       *
+       * VASTAUS ON YLLÄ OLEVASSA TEKSTISSÄ, ei lähteessä eikä
+       * kommentissa: *"Marie Roze kieltäytyi kuultuaan, että hänen
+       * olisi kuoltava lavalla."* Myös `fakta` pysyy saman kortin
+       * sisällä (roolin sai toinen laulajatar; kriitikon sanat ovat
+       * toisen kappaleen lopussa) — kysymys ei saa opettaa mitään,
+       * mitä pelaaja ei ole juuri lukenut.
+       *
+       * VÄÄRÄT VAIHTOEHDOT EIVÄT OLE FAKTAVÄITTEITÄ vaan uskottavia
+       * arvauksia, samoin kuin lehden visoissa (PIAF_VISA,
+       * GUIMARD_VISA tiedoston alussa).
+       */
+      visa: {
+        kysymys: 'Nimiroolia oli vaikea täyttää: laulajatar Marie Roze '
+          + 'kieltäytyi siitä heti. Miksi?',
+        vaihtoehdot: [
+          'Hänen olisi pitänyt kuolla lavalla',
+          'Ensi-ilta oli sovittu liian pian',
+          'Ooppera sijoittui Espanjaan',
+        ],
+        oikea: 0,
+        fakta: 'Rooli meni toiselle laulajattarelle, ja ensi-illan '
+          + 'jälkeen yksi kriitikko kutsui pääosan tulkintaa paheen '
+          + 'ruumiillistumaksi.',
+      },
+      /*
        * OMAT KOORDINAATIT, JOTTA MERKKI ON OIKEASSA MAASSA JA MAAN VOI
        * YHÄ POLTTAA. Espanjassa nostolla ei ollut `paikka`-kenttää
        * lainkaan, joten merkki seurasi pelaajaa kaupungista toiseen

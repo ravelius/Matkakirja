@@ -4,6 +4,22 @@
 // Matkustamisen hinnat ovat samat kaikilla laudoilla.
 export const SEA_FEE = 100;
 export const FLIGHT_PRICE = 300;
+/*
+ * BUSSILIPPU (omistaja 13.9.2026, karttauudistuksen Liiku-nappi,
+ * sanatarkasti: *"bussi kahden vierekkaisen kaupungin valilla (50p)"*).
+ *
+ * MIKSI TÄÄLLÄ EIKÄ js/game.js:SSÄ. Laivan ja lennon hinnat asuvat jo
+ * tässä moduulissa, koska ne ovat laudan sääntöjä eivätkä yhden pelin
+ * tilaa (js/game.js:n SEA_FARE on saman luvun vanha kaksoiskappale).
+ * Bussille ei tehdä uutta kaksoiskappaletta: game.js tuo tämän.
+ *
+ * MITTAKAAVA. Halvin matkalippu tähän asti oli laiva 100 ja lento 300;
+ * bussi on niistä halvin, koska se ostaa VAIN AIKAA — matkan pituus on
+ * yksi kaari, jonka liftaus taittaa ilmaiseksi mutta päivien hinnalla
+ * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 1 kohta 4: *"pelaaja voi
+ * valita rahan puutteessa hitaamman tavan edeta"*).
+ */
+export const BUS_FARE = 50;
 
 /**
  * Sijainti on joko kaupungissa tai reitin varrella:
