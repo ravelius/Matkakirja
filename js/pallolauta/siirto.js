@@ -8,7 +8,7 @@
  * viive, äänet, siirtymämusiikki ja tauot ovat js/ui.js
  * animatePawnSisalla — yhdessä paikassa kummallekin laudalle — ja tämä
  * moduuli toteuttaa vain kuljettajan sopimuksen (ui.nappulanKuljettaja):
- * nosta / aseta / hyppaa / laske. Luvut ja käyrät tulevat
+ * nosta / aseta / hyppaa / aja / laske. Luvut ja käyrät tulevat
  * js/siirtokoreografia.js:stä (hypynVaihe, hypynHuippu), joten hyppy on
  * täsmälleen sama kaari kuin tasokartan hyppaaAskel — vaaka ease-in-out,
  * pysty paraabeli, varjo kutistuu ja haalenee laella (#100).
@@ -30,6 +30,13 @@
  * marginaalilla — pallolla ei ole maiden monikulmioita, ja Kartta-olion
  * sisäisiä metodeja ei kutsuta ristiin). Perillä kamera sukeltaa
  * kohteeseen (kotiin) ja nappula ilmestyy H-merkkinä (lauta.paivita).
+ *
+ * AUTOKYYTI (`aja`, karttauudistus erä 8): LIFTAUS ja BUSSI eivät hypi
+ * askel kerrallaan vaan ajavat koko nopan matkan yhdellä käyrällä —
+ * kiihdytys alussa, jarrutus lopussa, ei pystykaarta (Raamattu,
+ * KARTTAUUDISTUKSEN PAATOKSET 1 kohta 4). Sama silmukka ja sama reitin
+ * poly kuin hypyllä; ero on siinä, että osuus jaetaan koko polulle eikä
+ * yhdelle askelvälille, ja että oma vaihekäyrä sammuttaa kaaren.
  *
  * Reduced motion: aseta hyppää perille, kamera-ajot ovat hyppyjä
  * (kamera.js), kone ei lennä vaan ilmestyy perille.
@@ -211,6 +218,37 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false, omaKam
     return { x: a.x + (b.x - a.x) * e, y: a.y + (b.y - a.y) * e };
   };
 
+  /**
+   * Yhden askelvälin palat (a, b ja reitin osuudet). Omana funktionaan,
+   * koska AUTOKYYTI (`aja` alla) tarvitsee ne KOKO polulle kerralla:
+   * yksi käyrä ajaa monen askeleen yli, ja jokaisen välin on silti
+   * kuljettava reitin omaa viivaa pitkin.
+   */
+  const hypynPalat = (a, b) => {
+    const reitti = yhteinenReitti(board, a, b);
+    return {
+      a,
+      b,
+      reitti,
+      ta: reitti ? reitinOsuus(reitti, a) : 0,
+      tb: reitti ? reitinOsuus(reitti, b) : 1,
+    };
+  };
+
+  /**
+   * Autokyydin kohta koko matkan osuudella e (0 = lähtö, 1 = perillä):
+   * osuus jaetaan askelvälien kesken ja loppu lasketaan välin omalla
+   * viivalla. Askelvälit ovat reitillä yhtä pitkiä (pointAlong jakaa
+   * polyn `steps`-osaan), joten tasainen jako tarkoittaa tasaista
+   * vauhtia — ja käyrän kiihdytys ja jarrutus näkyvät sellaisinaan.
+   */
+  const kyydinKohta = (h, e) => {
+    const n = h.palat.length;
+    const raaka = Math.min(n - 1e-9, Math.max(0, e * n));
+    const i = Math.min(n - 1, Math.floor(raaka));
+    return hypynKohta(h.palat[i], raaka - i);
+  };
+
   /* ---- nappula ------------------------------------------------------ */
 
   const piirraNappula = (hetki) => {
@@ -219,9 +257,24 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false, omaKam
     let osuus = 0;
     if (hyppy) {
       const t = Math.min(1, (hetki - hyppy.alku) / hyppy.kesto);
-      const { e, nousu } = hypynVaihe(t);
-      p = ruutu(hypynKohta(hyppy, e));
-      korkeus = hyppy.huippu * nousu;
+      /*
+       * OMA VAIHEKÄYRÄ = AUTOKYYTI, EI HYPPY (karttauudistus erä 8;
+       * Raamattu, KARTTAUUDISTUKSEN PAATOKSET 1 kohta 4: *"ei hyppivaksi
+       * pelinapiksi, vaan kuin autokyydiksi joka kiihdyttaa alussa ja
+       * jarruttaa lopussa"*).
+       *
+       * `vaihe` oli tähän asti VAIN koneen lisä (piirraKone: avauslennon
+       * kohtaus antaa kameralleen täsmälleen saman käyrän); nappula luki
+       * aina hypynVaiheen. Nyt sama sopimus koskee nappulaa — ja koska
+       * auto ei hyppää, oman käyrän mukana jää pois myös pystykaari:
+       * `nousu` on nolla, joten huippu, varjon kutistus ja haalennus
+       * eivät tee mitään. Ilman omaa käyrää kaikki on ennallaan.
+       */
+      const omaKayra = typeof hyppy.vaihe === 'function';
+      const e = omaKayra ? hyppy.vaihe(t) : hypynVaihe(t).e;
+      const nousu = omaKayra ? 0 : hypynVaihe(t).nousu;
+      p = ruutu(hyppy.palat ? kyydinKohta(hyppy, e) : hypynKohta(hyppy, e));
+      korkeus = (hyppy.huippu ?? 0) * nousu;
       osuus = nousu;
       if (t >= 1) {
         ankkuri = hyppy.b;
@@ -412,20 +465,48 @@ export function luoNappulanKuljettaja({ ui, lauta, player, lento = false, omaKam
         hyppy = { a, b, kaari, vaihe, alku: performance.now(), kesto, valmis };
         return;
       }
-      const reitti = yhteinenReitti(board, a, b);
       const pa = ruutu(laudanKohta(a));
       const pb = ruutu(laudanKohta(b));
       const matka = pa && pb ? Math.hypot(pb.x - pa.x, pb.y - pa.y) : 0;
       hyppy = {
-        a,
-        b,
-        reitti,
-        ta: reitti ? reitinOsuus(reitti, a) : 0,
-        tb: reitti ? reitinOsuus(reitti, b) : 1,
+        ...hypynPalat(a, b),
+        vaihe,
         alku: performance.now(),
         kesto,
         huippu: hypynHuippu(matka),
         valmis,
+      };
+    }),
+    /**
+     * AUTOKYYTI: koko nopan matka YHDELLÄ ajolla ja yhdellä käyrällä
+     * (karttauudistus erä 8, omistaja 13.9.2026: *"liikutaan nopan
+     * antaman matkan verran"*, kiihdytys alussa ja jarrutus lopussa).
+     *
+     * `polku` on sama askelluettelo, jonka js/rules.js findMoves antaa
+     * (tai bussin oma busPath): jokainen alkio on pelin `pos`. Ajo ei
+     * pysähdy välipisteisiin eikä tauota niissä — juuri se erottaa
+     * kyydin hyppyketjusta.
+     *
+     * Sopimus on muuten hypyn: lupaus ratkeaa perillä, `paata()` vie
+     * sen loppuun heti ja liikeherkkyys hyppää suoraan maaliin.
+     */
+    aja: (lahto, polku, kesto, { vaihe = null } = {}) => new Promise((valmis) => {
+      const maali = polku[polku.length - 1];
+      if (!el || ui.reducedMotion || lento || !maali) {
+        ankkuri = maali ?? lahto;
+        valmis();
+        return;
+      }
+      lauta.heraa();
+      el.dataset.vaihe = 'kyyti';
+      const palat = [];
+      let edellinen = lahto;
+      for (const pos of polku) {
+        palat.push(hypynPalat(edellinen, pos));
+        edellinen = pos;
+      }
+      hyppy = {
+        a: lahto, b: maali, palat, vaihe, alku: performance.now(), kesto, huippu: 0, valmis,
       };
     }),
     /**

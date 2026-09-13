@@ -77,7 +77,9 @@ test('onnistunut kaupunkilähtö purkaa vanhan fokuskuplan ja kuuntelijat', t =>
   const doFly = UI.slice(UI.indexOf('doFly(destination)'), UI.indexOf('\n  async animateFlight'));
   assert.match(doFly, /after: async \(result\) => \{\s*if \(result\?\.ok && from\.type === 'city'\) puraFokusvirtaPaikanvaihdossa\(this\);/,
     'lento ei pura lähtökaupungin kuplaa onnistumisen jälkeen');
-  const vaienna = UI.slice(UI.indexOf('\n  vaiennaPaikanPuhe() {'), UI.indexOf('\n  /** Jalan:'));
+  // Pääte: doWalkin ohjekommentti (entinen "Jalan", karttauudistuksen
+  // erässä 8 "Liftaus" — omistajan uusi nimi samalle teolle).
+  const vaienna = UI.slice(UI.indexOf('\n  vaiennaPaikanPuhe() {'), UI.indexOf('\n  /** Liftaus'));
   assert.doesNotMatch(vaienna, /puraFokusvirta(?:Kortti|Paikanvaihdossa)/,
     'pelkkä nopanheitto tai hylätty lähtö ei saa sulkea fokuskuplaa');
 
