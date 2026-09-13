@@ -226,9 +226,15 @@ const zoomaaSisaan = (sivu, kerroin) => sivu.evaluate(async (k) => {
 
 /* ==================== PÄÄAJO: 390 px ja 1400 px ==================== */
 
+/*
+ * `sivuvara` ja `ylavara` ovat KUVAN rajaus, eivät mittaus: raportin
+ * kuvakatto on 400 kt, ja koko 1400 px:n ruutu on PNG:nä 780 kt —
+ * lähes kaikki siitä on laattapinnan rakeista pergamenttia paneelin
+ * ympärillä. Rajaus jättää kuvaan maan eteläreunan ja koko paneelin.
+ */
 const RUUDUT = [
-  { nimi: '390', leveys: 390, korkeus: 844 },
-  { nimi: '1400', leveys: 1400, korkeus: 900 },
+  { nimi: '390', leveys: 390, korkeus: 844, sivuvara: 90, ylavara: 360 },
+  { nimi: '1400', leveys: 1400, korkeus: 900, sivuvara: 40, ylavara: 100 },
 ];
 
 const sijaintiOk = [];
@@ -271,22 +277,37 @@ for (const ruutu of RUUDUT) {
 
   if (KUVAKANSIO && ulko.kortti) {
     /*
+     * MATKAPÄIVÄKIRJA KUTISTETAAN KUVAA VARTEN. Päiväkirjalappu
+     * (.fact-card) asettuu sille kartan nurkalle, jossa on eniten
+     * merta (js/kartta.js placeFactCard), ja pallolaudalla se osuu
+     * Pariisissa keskelle ruutua — valokuva peittää koko Ranskan ja
+     * paneelin yläreunan. Kutistus on PELIN OMA TILA (ui.
+     * asetaPaivakirjanKoko, sama minkä kartan veto tekee), ei kuvan
+     * väärentämistä: näin kuva näyttää sen, mitä pelaaja näkee
+     * heti ensimmäisen panoroinnin jälkeen. Päällekkäisyys itsessään
+     * on kirjattu raporttiin avoimena asiana.
+     */
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.evaluate(() => window.matkakirja.ui.asetaPaivakirjanKoko(true));
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.waitForTimeout(500);
+    /*
      * KUVA RAJATAAN MAAHAN JA PANEELIIN. Koko ruudun PNG on 1400 px
      * leveänä yli puoli megatavua (raportin kuvakatto on 400 kt), ja
      * suurin osa siitä on tyhjää merta paneelin ympärillä. Rajaus
      * lasketaan mitatuista laatikoista, joten se osuu samaan kohtaan
      * kummallakin kuvasuhteella.
      */
-    const x = Math.max(0, Math.round(ulko.kortti.x0 - 90));
-    const y = Math.max(0, Math.round(Math.min(ulko.etelaY - 330, ulko.kortti.y0 - 360)));
+    const x = Math.max(0, Math.round(ulko.kortti.x0 - ruutu.sivuvara));
+    const y = Math.max(0, Math.round(ulko.kortti.y0 - ruutu.ylavara));
     // eslint-disable-next-line no-await-in-loop
     await sivu.screenshot({
       path: join(KUVAKANSIO, `karttauudistus-3-${ruutu.nimi}.png`),
       clip: {
         x,
         y,
-        width: Math.min(ruutu.leveys - x, Math.round(ulko.kortti.w + 180)),
-        height: Math.min(ruutu.korkeus - y, Math.round(ulko.kortti.y1 + 30 - y)),
+        width: Math.min(ruutu.leveys - x, Math.round(ulko.kortti.w + 2 * ruutu.sivuvara)),
+        height: Math.min(ruutu.korkeus - y, Math.round(ulko.kortti.y1 + 25 - y)),
       },
     });
   }
