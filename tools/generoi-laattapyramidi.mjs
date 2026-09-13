@@ -1046,7 +1046,14 @@ if (VARITASO) {
   VARI_FEIDAUSREUNA = VARI_FEIDAUSREUNA_ANNETTU === null
     ? Math.round(0.15 * Math.min(VARI_LAATIKKO.w, VARI_LAATIKKO.h))
     : Number(VARI_FEIDAUSREUNA_ANNETTU);
-  VARI_LEIKKURI = VARI_ILMAN_RAJAUSTA ? null : {
+  /*
+   * TASOITUKSEN VASTAKOE SÄILYTTÄÄ LEIKKURIN MUTTA RIISUU RENKAAT
+   * (ks. polttaVariLeikkuri): kerma valuu silloin myös kohdemaan
+   * päälle, ja savukkeen V2:n ON kaaduttava. Erän 1b paleteilla
+   * `--ilman-rajausta` jättää leikkurin yhä nulliksi, jolloin laatta on
+   * läpinäkymätön värillinen suorakaide.
+   */
+  VARI_LEIKKURI = (VARI_ILMAN_RAJAUSTA && !TASOITUSTASO) ? null : {
     renkaat,
     tasoitus: TASOITUSTASO,
     paperi: TASOITUSTASO ? TASOITUS_KERMA : undefined,

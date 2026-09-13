@@ -317,7 +317,20 @@ function varipaletti(valinta) {
  */
 export function polttaVariLeikkuri(canvas, asetukset, leikkuri) {
   const renkaat = leikkuri?.renkaat ?? null;
-  if (!renkaat?.length) return false;
+  /*
+   * TYHJÄ RENGASLISTA ON TASOITUKSESSA VASTAKOE, EI VIRHE (erä 1c).
+   *
+   * Erässä 1b `--ilman-rajausta` jätti leikkurin nulliksi, ja laatta
+   * oli läpinäkymätön värillinen suorakaide — juuri se, mitä savukkeen
+   * piti nähdä punaisena. Tasoituksessa sama temppu tuottaisi TYHJÄN
+   * laatan (maastoa ei piirretä), jolloin kohdemaa olisi yhä
+   * alkuperäinen ja V2 menisi vihreänä läpi. Vastakoe, joka ei voi
+   * kaataa väitettä, ei ole vastakoe.
+   *
+   * Tasoituksen vastakoe on siksi KERMA ILMAN REIKÄÄ: renkaita ei ole,
+   * joten peite valuu myös kohdemaan päälle ja V2:n ON kaaduttava.
+   */
+  if (!renkaat?.length && !leikkuri?.tasoitus) return false;
   const ctx = canvas.getContext('2d');
   if (!ctx) return false;
   const { bbox, leveys } = asetukset;
