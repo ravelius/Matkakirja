@@ -6335,96 +6335,26 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Wikipedia',
         },
       },
-      nostot: [
-        {
-          otsikko: 'Tornissa on 72 nimeä kullalla',
-          tiedosto: 'Chevreul, Flachat, Navier.001 - Torre Eiffel.jpg',
-          teksti: 'Gustave Eiffel halusi, että hänen torninsa on tieteen '
-            + 'muistomerkki. Ensimmäisen kerroksen ympäri kiertää 65 metrin '
-            + 'korkeudella nimilista: 18 nimeä tornin jokaisella sivulla, '
-            + 'yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet '
-            + 'ovat kullattuja ja 60 senttiä korkeita. Nimet peitettiin '
-            + 'maalilla 1900-luvun alussa ja paljastettiin vasta 1986–1987. '
-            + 'Yhtään naista listalla ei ole. Siksi tammikuussa 2026 '
-            + 'julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, '
-            + 'jotka on tarkoitus kaivertaa miesten nimien yläpuolelle vuonna '
-            + '2027.',
-          lyhyt: 'Eiffel-tornin ensimmäistä kerrosta kiertää 72 ranskalaisen tiedemiehen nimi kullatuin kirjaimin.',
-          selite: 'Eiffel-tornin ensimmäisen kerroksen ympäri kiertää 65 '
-            + 'metrin korkeudella 72 ranskalaisen tiedemiehen ja insinöörin '
-            + 'nimeä kullatuin, 60 senttiä korkein kirjaimin.',
-          lahde: 'Fernando Losada Rodríguez, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Eiffel-torni',
-        },
-        {
-          otsikko: 'Metron sisäänkäynti koottiin palasista',
-          tiedosto: '01 Guimard\'s Métropolitain.jpg',
-          teksti: 'Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä '
-            + 'oli järjestetty arkkitehtikilpailu, mutta yksikään 21 '
-            + 'ehdotuksesta ei kelvannut, ja työ annettiin Hector '
-            + 'Guimardille, joka ei ollut edes osallistunut kilpailuun. Hän '
-            + 'piirsi valurautaisia vakio-osia, jotka sopivat yhteen kuin '
-            + 'rakennussarja: samoista paloista sai kasattua sopivan '
-            + 'sisäänkäynnin mihin tahansa kadunkulmaan. Niitä tehtiin 167. '
-            + 'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä '
-            + 'olevat 86 rauhoitettiin vuonna 1978.',
-          selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä '
-            + 'olevat 86 rauhoitettiin vuonna 1978.',
-          lahde: 'Terrazzo (Flickr), Wikimedia Commons (CC BY 2.0)',
-          wiki: 'Pariisin metro',
-        },
-        {
-          otsikko: 'Kukko putosi ja löytyi seuraavana päivänä',
-          tiedosto: 'Coq de Notre-Dame de Paris 2020.jpg',
-          teksti: 'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni '
-            + 'romahti kello 19.45. Katon alla paloi 1 300 tammirungosta '
-            + 'tehty kattotuolisto, joka oli 1200-luvulta. Tornin huipulla '
-            + 'seisoi kuparinen kukko, jonka sisään oli suljettu '
-            + 'pyhäinjäännöksiä. Ensin sitä luultiin tuhoutuneeksi, mutta se '
-            + 'löytyi seuraavana päivänä maasta lommoilla. Onnea oli '
-            + 'muutenkin: kuusitoista kuparipatsasta oli nostettu katolta '
-            + 'korjattavaksi neljä päivää ennen paloa. Uuden kullatun kukon '
-            + 'sisään pantiin samat pyhäinjäännökset ja 2 000 '
-            + 'jälleenrakentajan nimet.',
-          lyhyt: 'Notre-Damen kuparinen kukko putosi tornin huipulta 2019 palossa ja löytyi lommoilla.',
-          selite: 'Notre-Damen tornin huipulla seisonut kuparinen kukko '
-            + 'putosi vuoden 2019 palossa ja löytyi seuraavana päivänä '
-            + 'maasta lommoilla.',
-          lahde: 'Siren-Com, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Notre-Damen katedraali',
-        },
-        {
-          /*
-           * VISAN OPETTAVA NOSTO (19.8.2026). Pariisin kulttuurivisa
-           * kysyy patonkikilpailun palkintoa, mutta aihetta ei ollut
-           * lehden sivuilla lainkaan — vain Matkaoppaan popupissa, jota
-           * lehteä selaava ei avaa. docs/moduulit/kaupunkilehti.md
-           * vaatii, että visan opettava nosto on kategorioissa
-           * näkyvillä ja että visan aihe löytyy aiheista
-           * (tarkistuslista kohta 4). Faktat samat kuin Ranskan
-           * maalehdessä (maa-kategoriat.js FRA/tavat), mutta
-           * kirjoitettuna kilpailun näkökulmasta.
-           */
-          otsikko: 'Paras patonki valitaan sokkona',
-          tiedosto: '84 Boulevard de Port-Royal Bakery.jpg',
-          teksti: 'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta '
-            + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää '
-            + 'olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä '
-            + 'patongissa saa olla, on määrätty laissa — käytännössä vain '
-            + 'vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa '
-            + 'missään vaiheessa pakastaa. Leivät numeroidaan ennen '
-            + 'maistamista, jottei raati tiedä kenen leipää se arvostelee, ja '
-            + 'raadissa istuu kuusi arvottua tavallista pariisilaista. '
-            + 'Voittaja saa rahapalkinnon ja yhden velvollisuuden: hän '
-            + 'toimittaa presidentinpalatsin leivät seuraavan vuoden ajan.',
-          lyhyt: 'Pariisi on järjestänyt vuodesta 1994 kilpailun parhaasta patongista presidentin leipojaksi.',
-          selite: 'Pariisi on järjestänyt vuodesta 1994 kilpailun parhaasta '
-            + 'perinteisestä patongista, ja voittaja toimittaa '
-            + 'presidentinpalatsin leivät seuraavan vuoden ajan.',
-          lahde: 'Lionel Allorge, Wikimedia Commons (CC BY-SA 3.0)',
-          wiki: 'Patonki',
-        },
-      ],
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 5, 13.9.2026;
+       * suunnitelman luku 4.7, omistajan hyväksymä jakotaulukko).
+       *
+       * Tämän sivun neljä nostoa ovat nyt neljä erillistä klikattavaa
+       * karttapalaa: "Tornissa on 72 nimeä kullalla", "Metron
+       * sisäänkäynti koottiin palasista" ja "Kukko putosi ja löytyi
+       * seuraavana päivänä" kaupunkilehden kohdekartalla, "Paras
+       * patonki valitaan sokkona" pääkartalla kaupungin vieressä
+       * (js/packs/fokusvirta-pariisi.js takynostot; pisteet
+       * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
+       * Teksti siirtyi SANATARKASTI — kappaletta ei kirjoitettu
+       * uudestaan eikä yhtään faktaa jäänyt pois.
+       *
+       * OSASTO ITSE JÄÄ: kansi on lehden rakenne (js/lehti.js
+       * rakennaSivut lukee `id: 'kaupunki'`) ja sen kansikuvat,
+       * avauskuvat, ennenNyt ja matkailijalle ovat erän 4 ison
+       * pop-upin sisältö.
+       */
+      nostot: [],
     },
     {
       id: 'musiikki',
@@ -6432,76 +6362,17 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Kaksi muusikkoa aloitti Pariisin kaduilta ja kaupungin laidan '
         + 'asuntovaunuleiriltä — ja yksi ooppera kaatui täällä ensi-illassaan '
         + 'ennen kuin se nousi maineeseen muualla.',
-      nostot: [
-        {
-          otsikko: 'Édith Piaf lauloi ensin kadulla',
-          tiedosto: 'Édith Piaf 914-6440.jpg',
-          teksti: 'Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan '
-            + 'mukaan hän syntyi kadulla talon portaille, vaikka '
-            + 'syntymätodistuksessa lukee sairaala. Teininä hän lauloi '
-            + 'kolikoista Pigallen kaduilla ja pihoissa sisarpuolensa kanssa. '
-            + 'Yökerhon omistaja Louis Leplée kuuli hänet kadulta vuonna 1935 '
-            + 'ja antoi lempinimen la Môme Piaf — piaf on pariisilaista '
-            + 'puhekieltä ja tarkoittaa varpusta. Laulaja oli 142 senttiä '
-            + 'pitkä. Tunnetuin laulu La Vie en rose ilmestyi 1946, ja sen '
-            + 'sanat hän kirjoitti itse.',
-          lyhyt: 'Édith Piaf esiintyi Rotterdamissa 1962, alle vuosi ennen kuolemaansa; lempinimi tarkoittaa varpusta.',
-          selite: 'Édith Piaf esiintyi Rotterdamissa 13. joulukuuta 1962, '
-            + 'alle vuosi ennen kuolemaansa; hänen lempinimensä la Môme Piaf '
-            + 'tarkoittaa pariisilaisessa puhekielessä varpusta.',
-          lahde: 'Eric Koch / Anefo, Wikimedia Commons (CC0)',
-          wiki: 'Édith Piaf',
-          musiikki: 'https://music.apple.com/fi/search?term=edith%20piaf%20la%20vie%20en%20rose',
-          musiikkiNimi: 'Édith Piaf Apple Musicissa',
-        },
-        {
-          otsikko: 'Kaksi sormea riitti',
-          tiedosto: 'Reinhardt Harcourt 1944.jpg',
-          teksti: 'Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin '
-            + 'porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo '
-            + 'lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä '
-            + 'kaatui selluloidikukkien päälle. Vasemman käden nimetön ja '
-            + 'pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, '
-            + 'ettei hän soita enää. Veli toi sairaalaan kitaran, ja Django '
-            + 'opetteli soittamaan soolot kahdella sormella. Vuonna 1934 hän '
-            + 'perusti Pariisissa yhtyeen Quintette du Hot Club de France.',
-          lyhyt: 'Django Reinhardt perusti 1934 Hot Club de Francen ja soitti kahdella sormella palovamman jälkeen.',
-          selite: 'Django Reinhardt perusti Pariisissa vuonna 1934 yhtyeen '
-            + 'Quintette du Hot Club de France ja soitti soolonsa kahdella '
-            + 'sormella tulipalossa vahingoittuneen vasemman kätensä takia.',
-          lahde: 'Studio Harcourt, Wikimedia Commons (PD)',
-          wiki: 'Django Reinhardt',
-          musiikki: 'https://music.apple.com/fi/search?term=django%20reinhardt%20minor%20swing',
-          musiikkiNimi: 'Django Reinhardt Apple Musicissa',
-        },
-        /*
-         * Siirretty kartalta lehteen (v1419 jälkityö, kaupunkinostojen
-         * katto): Pariisin kohdalle kertyi enemmän nostomerkkejä kuin
-         * kolme, ja karsinta pudotti tämän. Sisältö on täkynoston oma
-         * (`nosto-carmenin-ensi-ilta`) tiivistettynä lehtimittaan.
-         */
-        {
-          otsikko: 'Carmen kaatui ensi-illassaan',
-          tiedosto: 'Prudent-Louis Leray - Poster for the première of Georges Bizet\'s Carmen.jpg',
-          teksti: 'Georges Bizet aloitti Carmenin säveltämisen alkuvuodesta '
-            + '1873. Opéra-Comique oli valtion rahoittama perheteatteri, ja '
-            + 'sen kahdesta johtajasta Adolphe de Leuven vastusti koko '
-            + 'ajatusta: näin uskaliasta tarinaa ei esitetä täällä. Hänelle '
-            + 'luvattiin pehmennyksiä, mutta lupaukset eivät riittäneet, ja '
-            + 'hän erosi alkuvuodesta 1874. Ensi-ilta oli 3. maaliskuuta '
-            + '1875, ja viimeinen näytös oli libretisti Halévyn sanoin jäinen '
-            + 'ensimmäisestä viimeiseen. Bizet kuoli kolme kuukautta '
-            + 'myöhemmin 36-vuotiaana. Maine tuli muualta: Wien 1875, '
-            + 'Bryssel 1876, Lontoo ja New York 1878 — Pariisiin ooppera '
-            + 'palasi vasta 1883.',
-          lyhyt: 'Carmenin ensi-ilta pidettiin 1875, ja säveltäjä ehti pitää sitä epäonnistumisena.',
-          selite: 'Carmenin ensi-ilta pidettiin Opéra-Comiquessa 3. '
-            + 'maaliskuuta 1875, ja säveltäjä ehti pitää sitä epäonnistumisena.',
-          lahde: 'Prudent-Louis Leray 1875, Wikimedia Commons (public domain)',
-          musiikki: 'https://music.apple.com/fi/search?term=bizet%20carmen',
-          musiikkiNimi: 'Bizet’n Carmen Apple Musicissa',
-        },
-      ],
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 5, 13.9.2026).
+       * Sivun kolme nostoa ovat nyt yksi karttapala "Pariisi soi"
+       * kohdekartalla Palais Garnier'n kohdalla (suunnitelman luku 4.7:
+       * *"Musiikin 3 nostoa yhdeksi"*). Kortissa on Piafin ja Djangon
+       * kappaleet sanatarkasti; kolmas ("Carmen kaatui
+       * ensi-illassaan") on jo oma karttapalansa `carmenin-ensi-ilta`,
+       * jonka kortissa on sivuversion jokainen faktaväite ja enemmän,
+       * joten sivuversio jäi pois kaksoiskappaleena.
+       */
+      nostot: [],
       tehtava: {
         kysymys: 'Mikä sytytti tulipalon Djangon perheen asuntovaunussa?',
         vaihtoehdot: [
@@ -6532,159 +6403,24 @@ export const KULTTUURI_KATEGORIAT = {
         + 'jäljiltä auki. Samat vuodet jättivät kaupunkiin kyyhkypostin, '
         + 'palatsin rauniot ja maalaussuunnan, jonka nimi oli alun perin '
         + 'pilkkaa.',
-      nostot: [
-        {
-          otsikko: 'Tuileriain rauniot seisoivat yksitoista vuotta',
-          tiedosto: 'Vue des Tuileries après l\'incendie de 1871, PH83415.jpg',
-          teksti: 'Palatsin runko jäi Louvren länsipäähän seisomaan vuoden '
-            + '1871 palon jälkeen: katto ja sisustus olivat poissa, mutta '
-            + 'kivimuurit seisoivat ehjinä. Kaupungintalo, jonka kommunardit '
-            + 'polttivat niin ikään, rakennettiin uudelleen jo 1870-luvulla. '
-            + 'Tuileriat sen sijaan jäivät paikoilleen, ja purkupäätöksen '
-            + 'teki kolmas tasavalta vasta 1882; vastaan olivat muun muassa '
-            + 'Georges-Eugène Haussmann ja joukko historioitsijoita. Purku '
-            + 'alkoi helmikuussa 1883 ja päättyi saman vuoden syyskuun 30. '
-            + 'päivänä. Kivet ja marmorit myytiin matkamuistoiksi, ja osista '
-            + 'rakennettiin Korsikalle kokonainen palatsi.',
-          lyhyt: 'Tuileriain palatsin runko seisoi Louvren länsipäässä yksitoista vuotta 1871 palon jälkeen.',
-          selite: 'Tuileriain palatsi paloi vuonna 1871, ja sen runko seisoi '
-            + 'Louvren länsipäässä yksitoista vuotta ennen purkamista.',
-          lahde: 'Godefroy, Henri Emile Cimarosa, Wikimedia Commons (CC0)',
-        },
-        {
-          otsikko: 'Piiritetyn kaupungin posti kulki kyyhkyillä',
-          tiedosto: 'Pellicule du Journal Pigeons Voyageurs, Souvenir du Siège de Paris, 1870-1871. PH20110 (15 of 20).jpg',
-          teksti: 'Kun preussilaiset sulkivat Pariisin syyskuussa 1870, '
-            + 'viimeiset lennätinlangat katkaistiin kuukauden 19. päivänä ja '
-            + 'Seinen pohjassa kulkenut salakaapeli löydettiin ja katkaistiin '
-            + '27. päivänä. Kaupunkiin päin ainoa toimiva reitti oli '
-            + 'kirjekyyhky. Kyyhkyt vietiin ulos kuumailmapalloilla, ja '
-            + 'valokuvaaja René Dagron, mikrofilmin patentin haltija vuodesta '
-            + '1859, tarjoutui pienentämään viestit: sopimus allekirjoitettiin '
-            + '11. marraskuuta 1870. Yksi filmi painoi noin viisi '
-            + 'sadasosagrammaa, ja yksi kyyhky kantoi niitä jopa '
-            + 'kaksikymmentä pyrstösulkiin sidotussa putkessa. Perillä filmi '
-            + 'heijastettiin taikalyhdyllä seinälle ja viestit kirjoitettiin '
-            + 'puhtaaksi.',
-          selite: 'Piiritetystä Pariisista lähetetty mikrofilmi on noin viisi '
-            + 'senttiä kolme senttiä.',
-          lahde: 'Dagron, Prudent René-Patrice, Wikimedia Commons (CC0)',
-        },
-        {
-          otsikko: 'Nimi, joka oli alun perin pilkkaa',
-          tiedosto: 'Monet - Impression, Sunrise.jpg',
-          teksti: 'Ranskalaista taide-elämää hallitsi Salon: valitsematta '
-            + 'jäänyt maalari jäi näkymättömäksi. Omaa näyttelyä hylätyille '
-            + 'oli anottu turhaan 1867 ja uudelleen 1872. Joulukuussa 1873 '
-            + 'Monet, Renoir, Pissarro, Sisley, Cézanne, Berthe Morisot ja '
-            + 'Degas perustivat oman yhdistyksen esittääkseen työnsä itse, ja '
-            + 'jäseneksi liittyvän oli luovuttava Salonista kokonaan. '
-            + 'Ensimmäinen näyttely pidettiin huhtikuussa 1874 valokuvaaja '
-            + 'Nadarin ateljeessa, ja mukana oli kolmekymmentä taiteilijaa. '
-            + 'Kriitikko Louis Leroy ivasi Monet’n maalausta Impression, '
-            + 'soleil levant ja otsikoi juttunsa impressionistien näyttelyksi. '
-            + 'Pilkkanimi jäi — ja taiteilijat ottivat sen itse käyttöön.',
-          selite: 'Claude Monet’n Impression, soleil levant vuodelta 1872 '
-            + 'antoi nimen koko suunnalle.',
-          lahde: 'Claude Monet 1872, Wikimedia Commons (public domain)',
-        },
-        {
-          otsikko: 'Kirahvi käveli Marseillesta Pariisiin',
-          tiedosto: 'Nicolas Hüet, the Younger - Study of the Giraffe Given to Charles X by the Viceroy of Egypt - Google Art Project.jpg',
-          teksti: 'Egyptin varakuningas lähetti kirahvin Ranskan kuninkaalle '
-            + 'Kaarle X:lle. Eläin saapui laivalla Marseilleen 31. lokakuuta '
-            + '1826 — kannessa oli sahattu reikä, josta kaula mahtui ulos. '
-            + 'Merimatkaa Atlantin ympäri pidettiin liian vaarallisena, joten '
-            + 'päätettiin, että kirahvi kävelee Pariisiin. Luonnontieteilijä '
-            + 'Étienne Geoffroy Saint-Hilaire käveli mukana ja teetti '
-            + 'eläimelle kaksiosaisen keltaisen takin ja kengät. Matka kesti '
-            + '41 päivää. Lyonissa vastassa oli 30 000 ihmistä, ja Pariisissa '
-            + 'kirahvia kävi katsomassa yli 100 000 — joka kahdeksas '
-            + 'kaupunkilainen. Hiukset kammattiin torneiksi, kankaisiin '
-            + 'ilmestyi täpliä, ja eläin eli Jardin des Plantes’ssa 18 vuotta.',
-          selite: 'Kaarle X:lle lähetetty kirahvi Nicolas Hüet nuoremman '
-            + 'tutkielmassa vuodelta 1827.',
-          lahde: 'Nicolas Hüet nuorempi 1827, Wikimedia Commons (public domain)',
-        },
-        /*
-         * KARTALTA LEHTEEN, TOINEN ERÄ (2.9.2026). Pariisin ruuhkasta
-         * putosi kahdeksan merkkiä, ja v1421 siirsi lehteen niistä
-         * neljä; loput jäivät odottamaan kuvaa, koska lehtimalli
-         * vaatii kuvan eikä skandaalidatassa ollut sellaista. Nämä
-         * kolme ovat skandaalit `skandaali-kaulanauhajuttu-1785` ja
-         * `skandaali-vrain-lucas-kirjevaarennokset` sekä täkynosto
-         * `nosto-lustig-eiffel` — sisältö on niiden omaa, lehtimittaan
-         * kirjoitettuna. Kuvat ovat Matkakirjan omia havainnekuvia
-         * (ks. KULTTUURI_HAVAINNEKUVAJUURI). Kartan merkit jäävät
-         * ennalleen: kortti kartalla, juttu lehdessä.
-         */
-        {
-          otsikko: 'Kaulanauha, joka ei koskaan päätynyt kuningattarelle',
-          osoite: `${KULTTUURI_HAVAINNEKUVAJUURI}skandaali-kaulanauhajuttu-1785.jpg`,
-          teksti: 'Hovin jalokivikauppiaat Boehmer ja Bassenge olivat '
-            + 'koonneet 647 timantin kaulanauhan Ludvig XV:lle, mutta '
-            + 'kuningas kuoli ennen kauppaa eikä Marie Antoinette huolinut '
-            + 'sitä. Jeanne de la Motte -niminen huijari sai kardinaali de '
-            + 'Rohanin uskomaan, että kuningatar haluaa nauhan salaa ja '
-            + 'tarvitsee välikäden. Todisteina olivat väärennetyt kirjeet ja '
-            + 'yöllinen tapaaminen Versailles\'n puistossa, jossa '
-            + 'kuningatarta esitti palkattu nuori nainen. Rohan osti nauhan '
-            + 'tammikuussa 1785 kahdella miljoonalla livrellä ja luovutti '
-            + 'sen huijarin lähetille; kivet pilkottiin ja myytiin '
-            + 'Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä erääntyi '
-            + 'elokuussa, kauppiaat kääntyivät kuningattaren puoleen ja '
-            + 'kardinaali pidätettiin Versailles\'ssa. Oikeus vapautti '
-            + 'Rohanin 1786, mutta kuningattaren maine ei toipunut.',
-          lyhyt: 'Jalokivikauppiaat esittelevät kaulanauhaa kardinaalille, joka uskoo ostavansa kuningattarelle.',
-          selite: 'Jalokivikauppiaat esittelevät 647 timantin kaulanauhaa '
-            + 'kardinaali de Rohanille, joka uskoi ostavansa sen '
-            + 'kuningattaren puolesta.',
-          lahde: 'Matkakirjan havainnekuva: kaulanauha luovutetaan '
-            + 'kardinaalille',
-        },
-        {
-          otsikko: 'Kleopatra kirjoitti ranskaksi — ja akateemikko uskoi',
-          osoite: `${KULTTUURI_HAVAINNEKUVAJUURI}skandaali-vrain-lucas-kirjevaarennokset.jpg`,
-          teksti: 'Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel '
-            + 'Chasles\'lle noin 27 000 käsin kirjoitettua kirjettä, joiden '
-            + 'lähettäjiksi oli merkitty muun muassa Julius Caesar, '
-            + 'Kleopatra, Aristoteles ja Kaarle Suuri. Kaikki oli '
-            + 'kirjoitettu 1800-luvun ranskaksi. Chasles maksoi kokoelmasta '
-            + 'noin 140 000 frangia ja esitteli 1867 tiedeakatemialle '
-            + 'kirjeitä, joiden mukaan Blaise Pascal olisi keksinyt '
-            + 'painovoimalain ennen Isaac Newtonia. Englantilaiset tutkijat '
-            + 'huomauttivat, että Newton oli kirjeiden päiväyksen aikaan '
-            + 'lapsi. Chasles piti kokoelmastaan kiinni vuosia, mutta '
-            + 'väärentäjä tuomittiin helmikuussa 1870 kahdeksi vuodeksi '
-            + 'vankeuteen.',
-          lyhyt: 'Michel Chasles tutkii suurennuslasilla Vrain-Lucasin toimittamia väärennettyjä kirjeitä.',
-          selite: 'Michel Chasles tutkii suurennuslasilla yhtä niistä '
-            + 'kirjeistä, joita Vrain-Lucas toimitti hänelle tuhansittain.',
-          lahde: 'Matkakirjan havainnekuva: väärennöskokoelma tutkittavana',
-        },
-        {
-          otsikko: 'Mies myi Eiffel-tornin romuraudaksi',
-          osoite: `${KULTTUURI_HAVAINNEKUVAJUURI}nosto-lustig-eiffel.jpg`,
-          teksti: 'Huijari Victor Lustig luki Pariisissa vuonna 1925 '
-            + 'lehtijutun siitä, kuinka kallista Eiffel-tornin kunnossapito '
-            + 'on. Hän palkkasi väärentäjän tekemään valtion '
-            + 'kirjelomakkeita, kutsui joukon romukauppiaita '
-            + 'luottamukselliseen kokoukseen kalliiseen hotelliin ja '
-            + 'esittäytyi posti- ja lennätinministeriön varapääjohtajana: '
-            + 'valtio aikoo myydä tornin romuksi, mutta asia on '
-            + 'arkaluontoinen eikä siitä saa puhua. Uhrikseen hän valitsi '
-            + 'André Poissonin, joka halusi nousta liike-elämän '
-            + 'sisäpiiriin, ja sai tältä sekä lahjuksen että kauppasumman. '
-            + 'Sitten hän pakeni Itävaltaan ja luki lehtiä: Poisson ei ollut '
-            + 'ilmoittanut poliisille, koska häpesi. Niinpä Lustig palasi '
-            + 'saman vuoden puolella tekemään saman tempun uudestaan — ja '
-            + 'tällä kertaa joku ilmoitti.',
-          lyhyt: 'Lustig esittelee romukauppiaille tornin pienoismallia hotellin salongissa, kohde ikkunan takana.',
-          selite: 'Lustig esittelee romukauppiaille tornin pienoismallia '
-            + 'hotellin salongissa, ikkunan takana kohde itse.',
-          lahde: 'Matkakirjan havainnekuva: kokous, jossa torni myytiin',
-        },
-      ],
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 5, 13.9.2026).
+       * Sivun seitsemällä nostolla oli jo karttapaikka — kuudella
+       * kohdekartalla ja yhdellä pääkartalla — joten suunnitelman luvun
+       * 4.7 "kolme parasta kohdekartan pisteiksi" oli jo tehty. Kolme
+       * ovat ne, jotka yllä oleva johdanto nimeää (kyyhkyposti,
+       * Tuileriain rauniot, impressionistit). Jäljelle jääneistä
+       * neljästä kaksi ("Kaulanauha, joka ei koskaan päätynyt
+       * kuningattarelle" ja "Kleopatra kirjoitti ranskaksi") siirtyivät
+       * sanatarkasti uuteen karttapalaan "Pariisin vuosisadat", koska
+       * niiden sivuversioissa oli faktoja, joita omassa karttakortissa
+       * ei ollut; kaksi muuta ("Kirahvi käveli Marseillesta Pariisiin",
+       * "Mies myi Eiffel-tornin romuraudaksi") ovat kaksoiskappaleita
+       * poolin omista nostoista `kirahvin-kavelymatka` ja
+       * `lustig-eiffel`. Rivikohtainen vertailu:
+       * docs/raportit/viesti-fable-karttauudistus-era5-20260913.md.
+       */
+      nostot: [],
       tehtava: {
         kysymys: 'Miten kokonaisten sanomalehtien verran viestejä saatiin '
           + 'yhden kyyhkyn kannettavaksi?',
