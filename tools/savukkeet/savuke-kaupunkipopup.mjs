@@ -193,30 +193,31 @@ for (const ruutu of RUUDUT) {
     if (!auki) { await ctx.close(); continue; }
     await sivu.waitForTimeout(3500);
 
-    /** Kamera kaupungin ylle ja ladonta heti (sama apu kuin muissa savukkeissa). */
-    const asetu = (alt) => sivu.evaluate(async ({ lat, lng, korkeus }) => {
-      const l = window.matkakirja.ui.pallolauta;
-      l.pallo.pointOfView({ lat, lng, altitude: korkeus }, 0);
-      await new Promise((v) => setTimeout(v, 1400));
-      l.ladoHeti();
-      await new Promise((v) => setTimeout(v, 350));
-    }, { lat: kaupunki.lat, lng: kaupunki.lng, korkeus: alt });
-
-    await asetu(0.08);
-
-    /* --- vartio 6: merkin mittakaava kasvaa lähikuvassa --------------- */
+    /* --- vartio 6: merkin mittakaava kasvaa lähikuvassa ---------------
+     *
+     * VERTAILU TEHDÄÄN OIKEASTA SAAPUMISNÄKYMÄSTÄ (l.saavu), ei arvatusta
+     * korkeudesta: juuri siitä näkymästä mittakaava on laskettu (maan
+     * laatikko × 1,15), ja saapumisajo on myös se, joka lämmittää
+     * laatikkomuistin. Lähikuva on kymmenesosa siitä.
+     */
     const mitat = await sivu.evaluate(async () => {
       const l = window.matkakirja.ui.pallolauta;
       const lue = () => l.pallo.htmlElementsData()
         .find((d) => d.laji === 'turistiinfo')?.mitta ?? null;
+      await l.saavu({ kesto: 0 });
+      await new Promise((v) => setTimeout(v, 1200));
+      l.ladoHeti();
+      await new Promise((v) => setTimeout(v, 300));
       const maanNakyma = lue();
-      l.pallo.pointOfView({ altitude: 0.02 }, 0);
+      const korkeus = l.pallo.pointOfView().altitude;
+      l.pallo.pointOfView({ altitude: korkeus / 8 }, 0);
       await new Promise((v) => setTimeout(v, 1200));
       l.ladoHeti();
       await new Promise((v) => setTimeout(v, 300));
       const lahikuva = lue();
-      return { maanNakyma, lahikuva };
+      return { maanNakyma, lahikuva, korkeus };
     });
+    tieto(`${tunnus}: saapumiskorkeus`, mitat.korkeus?.toFixed?.(3) ?? mitat.korkeus);
     tieto(`${tunnus}: merkin mitta (maa / lähi)`,
       `${mitat.maanNakyma} / ${mitat.lahikuva}`);
     vaadi(`${tunnus}: merkki skaalautuu zoomatessa`,
@@ -224,7 +225,16 @@ for (const ruutu of RUUDUT) {
       && mitat.lahikuva > mitat.maanNakyma,
       `mitat ${JSON.stringify(mitat)}`);
 
-    await asetu(0.08);
+    // Napautukset tehdään SAAPUMISNÄKYMÄSTÄ: se on se näkymä, jossa
+    // pelaaja kaupunkiin saapuu, ja siinä merkki on suunnitellun
+    // etäisyyden päässä kaupunkipisteestä.
+    await sivu.evaluate(async () => {
+      const l = window.matkakirja.ui.pallolauta;
+      await l.saavu({ kesto: 0 });
+      await new Promise((v) => setTimeout(v, 1400));
+      l.ladoHeti();
+      await new Promise((v) => setTimeout(v, 350));
+    });
 
     /** Merkin ruutupiste sivun koordinaateiksi. */
     const piste = (lat, lng) => sivu.evaluate(({ la, ln }) => {
@@ -304,20 +314,45 @@ for (const ruutu of RUUDUT) {
       vaadi(`${tunnus}: nolla palauttaa kartan`, zoom.palasi);
     }
 
-    /* --- vartio 8: Pulu jää kortin päälle ----------------------------- */
+    /* --- vartio 8: Pulu jää kortin päälle -----------------------------
+     *
+     * PULUN PANEELI AVATAAN OIKEASTI (valmis-kriteeri: *"Pulun chat ja
+     * kuplat eivät jää pop-upin alle"*). Kaksi mittaa: paneelin kerros on
+     * kortin kerrosta korkeampi, JA kortti on väistänyt paneelia
+     * asettelussa (js/kaupunkinosto.js asemoiKaupunkipopup) eli laatikot
+     * eivät leikkaa. Kuplapinon sääntö on samassa kerroksessa 40
+     * (css/styles.css .pollo-kuplapino-kehys), joten sama mitta kattaa
+     * kuplat — pinoa ei voi pakottaa esiin ilman pulun omaa viestiä.
+     */
+    await sivu.click('.pollo-nappi').catch(() => {});
+    await sivu.waitForTimeout(900);
     const kerrokset = await sivu.evaluate(() => {
       const kortti = document.querySelector('.kaupunkipopup');
-      const pino = document.querySelector('.pollo-kuplapino-kehys');
+      const paneeli = document.querySelector('.pollo-paneeli');
+      const limittyy = (a, b) => a.left < b.right && b.left < a.right
+        && a.top < b.bottom && b.top < a.bottom;
+      const kr = kortti?.getBoundingClientRect();
+      const pr = paneeli && !paneeli.hidden ? paneeli.getBoundingClientRect() : null;
       return {
         kortti: kortti ? Number(getComputedStyle(kortti).zIndex) : null,
-        pino: pino ? Number(getComputedStyle(pino).zIndex) : null,
+        paneeli: paneeli && !paneeli.hidden ? Number(getComputedStyle(paneeli).zIndex) : null,
+        paneeliAuki: Boolean(pr && pr.width > 0),
+        limittyy: Boolean(kr && pr && limittyy(kr, pr)),
       };
     });
-    tieto(`${tunnus}: kerrokset (kortti / Pulun pino)`,
-      `${kerrokset.kortti} / ${kerrokset.pino}`);
-    vaadi(`${tunnus}: Pulun kuplapino on kortin päällä`,
-      kerrokset.kortti !== null && kerrokset.pino !== null && kerrokset.pino > kerrokset.kortti,
+    tieto(`${tunnus}: kerrokset (kortti / Pulun paneeli)`,
+      `${kerrokset.kortti} / ${kerrokset.paneeli} (auki=${kerrokset.paneeliAuki})`);
+    vaadi(`${tunnus}: Pulun paneeli on kortin päällä`,
+      kerrokset.kortti !== null && kerrokset.paneeli !== null
+      && kerrokset.paneeli > kerrokset.kortti,
       JSON.stringify(kerrokset));
+    vaadi(`${tunnus}: kortti väistää Pulun paneelia`, !kerrokset.limittyy,
+      JSON.stringify(kerrokset));
+    // Paneeli kiinni, jotta seuraavat vartiot mittaavat puhtaan kartan.
+    await sivu.click('.pollo-nappi').catch(() => {});
+    await sivu.waitForTimeout(500);
+    vaadi(`${tunnus}: kortti jäi auki Pulun napista`,
+      await sivu.evaluate(() => Boolean(document.querySelector('.kaupunkipopup-kaupunki'))));
 
     if (KUVAKANSIO && ruutu.width === 390) {
       await sivu.screenshot({
@@ -396,10 +431,28 @@ for (const ruutu of RUUDUT) {
         kansi.avauskuvat = [];
         kansi.ennenNyt = null;
       });
+      const poisto = await sivu.evaluate(async () => {
+        const m = await import('/js/packs/kulttuuri-kategoriat.js');
+        const kansi = m.KULTTUURI_KATEGORIAT.marseille.find((k) => k.id === 'kaupunki');
+        return { kansikuvat: kansi.kansikuvat.length, avauskuvat: kansi.avauskuvat?.length ?? 0 };
+      });
+      tieto('vastakoe 1: datassa poiston jälkeen',
+        `${poisto.kansikuvat} kansikuvaa, ${poisto.avauskuvat} avauskuvaa`);
       if (kaupunkiPiste) {
         await sivu.mouse.click(kaupunkiPiste.x, kaupunkiPiste.y);
-        await sivu.waitForTimeout(700);
+        await sivu.waitForTimeout(900);
       }
+      const tila = await sivu.evaluate(() => {
+        const ui = window.matkakirja.ui;
+        return {
+          kortteja: document.querySelectorAll('.kaupunkipopup').length,
+          busy: Boolean(ui.busy),
+          dead: Boolean(ui.dead),
+          vaihe: ui.game?.phase ?? '',
+          arkki: Boolean(document.querySelector('#arrival-dialog[open]')),
+        };
+      });
+      tieto('vastakoe 1: tila napautuksen jälkeen', JSON.stringify(tila));
       const kuvaton = await sivu.evaluate(() => {
         const p = document.querySelector('.kaupunkipopup-kaupunki');
         if (!p) return null;
