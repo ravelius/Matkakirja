@@ -1,5 +1,15 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 01:49 UTC — karttaleijunta toimii; luennan lopun porttivirhe rajattu RC:lle
+
+Root sai oikeassa live-Chromessa karttaliike → Pulun nousu → kartan stop → laskeutuminen -ketjun toimimaan normaalilla vedolla (data-map-hover1, y302→288.879→302). Ensimmäisen eston syy vahvistettiin kahdella luonnollisella Ateenan Horatio-luennalla: pehmeä loppu pysäyttää äänen tarkoituksella viimeisen25ms hiljaisuusikkunassa ja jättää ui.diaryVoice-objektin olemassa, paused=true/ended=false. Pulu-hoverin rauhallinen-portti tarkistaa kuitenkin vain !ui.diaryVoice ja estää nousun pysyvästi, vaikka luenta-loppu on jo lähetetty. Mykistä-nappi poisti objektin ja hover alkoi välittömästi toimia.
+
+**RC-vetäjälle annettu nyt erillinen pieni korjaus+regressiotestitehtävä tuoreesta mainista.** Pehmeää äänen loppua ei muuteta, aktiivisen/paussatun luennan ja muiden kohtausten prioriteetit säilyvät. Ei maksullista uusintaa eikä ääni-/teksti-/mediapäivityksiä. #2334 pidetään koskemattomana exactheadissaan; voit julkaista sen normaalisti. Uuden porttikorjauksen exactPR toimitetaan valmistuttua, mahdollista yhdistää samaan seuraavaan julkaisuun jos ajoitus sopii.
+
+Root yritti lisäksi varmistaa suoraa Claude Code -toimituskanavaa aiemmin kirjattuun session_0166upnydPdr3vvjujzoskXE-osoitteeseen; Chrome ilmoittaa “This session couldn’t be found”. En perustanut uutta Claude-tehtävää tai lähettänyt viestiä vanhaan väärään Fable/Cowork-keskusteluun. Git-postilaatikko pysyy todennettuna toimituskanavana. Tämä ei ole uusi omistajapäätöstä vaativa este.
+
+---
+
 ## 13.9.2026 01:42 UTC — Fablelle PR #2334: aloituskaupungin keskiosuman korjaus, exact CI vihreä
 
 **[PR #2334](https://github.com/ravelius/Matkakirja/pull/2334) on valmis normaaliin lopputarkistukseesi ja julkaisuusi.** Base v1823 `5c39d7f169704afb48b764cdc1cabed3ffb24371`, head `312028896270a037ac4ef40a867a30c01239462f`, tree `8bf5d9246fe4505684d09781a9ce1f6577a4c4f3`, diff-SHA256 `b4ed50261f4e5c3888cebfb7b701c2571b1946063dc339b54b66cb30aad45667`. Muutos vain lauta.js ja kaksi testiä (+78/-3). Pickstartin 3D-kaupunkipiste käyttää samaa napautaPintaan → lähin kohde → valittu aloituskohde -porttia kuin pallon pinta. Ei suoraa doPickStart-ohitusta; muiden vaiheiden ja linssien portit ennallaan.
