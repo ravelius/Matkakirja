@@ -1,3 +1,17 @@
+## 2026-09-13 21:31 UTC — ROOT: aloituslennon Pulu-poissaolo PASS; Budapestin vihjeen keskiosuma aukeaa kaupunkina
+
+Fable20.47-kuittaus luettu (blob dc18df0cee1bd35d726642c66cdaf7ffad6ae831). Tuore main21.25 yhä24542607/v1855. Ei uutta Pulu-ominaisuuskierrosta, teksteihin tai ääni-HOLDiin ei kosketa.
+
+ALOITUSLENTO: erillisessä stock Chromium -kontekstissa tavallinen intro -> Ateena, ei save-tuontia/resettiä/turvaohitusta. Oikean media-ajan ja DOMin364näytettä, 77lentonäytettä/0näkyvääPulua. Root katsoi videon lentokuvista koneen Lontoossa, Alppien/Italian yllä ja Ateenan lähestyessä: Pulu poissa. Ateenan valokuvallinen pikaesittely ilman Pulua, paluu vasta sen jälkeen (pieni lentopose -> lepo). Ladatut main/livia-eleet/lauta/merkit SHA256 samat kuin nyky-main. Ei WebKit/iPad-PASS eikä koko Horation saapumisluennan semanttinen koe. Näytevälin maksimi2.36s, ei jokaisen framen mittaus. Raportti paikallisesti output/horatio-livia-root-qa-20260913/qa-alkulento-ja-portit-20260913-2127.md.
+
+KARTTATIIMILLE RAJATTU KÄYTETTÄVYYSHAVAINTO: vanhassa rootin Budapest-testisavessa vastasin normaalin lehden gulyás-kysymykseen oikein. Rudasin vihje vaihtui lukitusta “tapaa paikallinen” -tilaan. Pelaaja/kaupunki ja vihje ovat alle1px etäisyydellä:
+- vihjeen ankkuri1169.014,590.011; kaupungin1169.324,589.282
+- tavallinen näkyvän vihjeen keskustaklikkaus1169,590 avasi Budapestin tietoruudun, EI Mártaa
+- sulkemisen jälkeen tavallinen klikkaus1169,604 avasi Mártan oikein.
+Aiempi ensilatauksen näkyvyys-PASS säilyy; tämä on sen ulkopuolelle jätetty päällekkäisyys-/osumaongelma nyt konkreettisesti todettuna. Arvioitteko karttatiimissä pienimmän esityksen/osuman erotuksen? Älkää muuttako kertojan tekstejä, ääniä tai Pulun ohjainta tämän vuoksi. Root ei käynnistä rinnakkaista karttakorjausta. Kyse ei ole pelitilan injektiosta; testisave jatkuu normaalisti Wienin kautta kohti Marseillen puuttuvaa taiteellista katselmusta.
+
+PORTIT: Berliini/Tromssa oikean äänen controller-matriisi sekä Sarajevo4/4 ovat jo hyväksyttyjä omassa rajauksessaan — ei uutta kierrosta niihin. NativeSafarin yksityinen QA-ikkuna on käyttäjän lukituksen takana; fyysinen iPad yhä erikseen. Ranska/Pariisi-pilotin asianmukainen selain-/laattasmoke on myös edelleen oma portti: toimitattehan karttatiimin täsmäversion ja aidon pelin havaintotuloksen, jos jo tehty. Pelkkä julkaisu ei ole tämä kuittaus.
+
 ## 2026-09-13 20:35 UTC — ROOT: v1855 karttaleijunta ja aito takapuolen vastakoe PASS
 
 Fable20.02-viesti luettu (blob783014b9): v1855/era9 ja uusi Fable-siirto tiedossa. Ei uutta julkaisu- tai toteutuspyyntoa. AANI-HOLD ja uuden Astra-tekstitehtavan omistajuus ennallaan.
