@@ -1,0 +1,341 @@
+# Generoi kohdemaan VÄRI- TAI TASOITUSKERROS ja vie se R2-ämpäriin.
+#
+# Karttauudistus, erä 1c. Omistajan PÄÄTÖS 4 (13.9.2026 klo 14.10 UTC,
+# Raamattu "Kaupungit"): *"Jätä ranska alkuperäiseen. Kaikki muut ihan
+# kamalia. Poistetaan muista maista korkeus erot kokonaan tai lähes
+# kokonaan."* Tämä työnkulku on se nappi, jolla kerros ajetaan ja
+# viedään — yhdelle maalle kerrallaan.
+#
+# === MIKSI OMA TYÖNKULKU EIKÄ AJOTILA generoi-pyramidi.yml:ÄÄN ======
+#
+# Pohjapyramidi ja väritaso eivät jaa juuri mitään:
+#
+#   * Pohja on 23 340 laattaa ja tunteja; Ranskan tasoituskerros on 329
+#     laattaa ja 17 sekuntia (mitattu 13.9.2026). Matriisi, shardit,
+#     lohkokaistat ja 330 minuutin timeout ovat pohjan koneistoa, ja
+#     yhden maan ajossa ne olisivat pelkkää painolastia.
+#   * Pohja-ajo VAIHTAA pyramidin version; väriajo EI SAA vaihtaa sitä.
+#     Ne ovat vastakkaiset vaatimukset samasta kentästä, ja niiden
+#     sotkeminen samaan työnkulkuun on juuri se virhe, joka sammuttaisi
+#     koko laattakerroksen (ks. VERSIOPORTTI alla).
+#   * Tasoitusajo ei tarvitse korkeusaineistoa eikä Natural Earthiä
+#     lainkaan (ks. AINEISTO), eli pohjan koko valmistelujobi jää pois.
+#
+# === VERSIOPORTTI: TÄSSÄ KARTTA VOI SAMMUA KOKONAAN =================
+#
+# js/pallolaatat.js `lepokerroksenKerrokset`: jos pallon sarja
+# (laatat.json) ja pyramidi (pyramidi.json) ovat ERI versiota, koko
+# laattakerros sammuu — ei vain väri. Erän 1b vastakoe mittasi sen
+# (raportin luku 4.3: 4/11 väitettä läpi, kartta pelkkää sumeaa
+# Mercator-sarjaa), ja omistaja näki saman v1650:ssa.
+#
+# SIKSI TÄMÄ TYÖNKULKU EI KIRJOITA UUTTA LUETTELOA VAAN TÄYDENTÄÄ
+# VANHAN. Ämpärin `pyramidi.json` ladataan ajokansioon ENNEN
+# generointia, jolloin generaattorin oma "LUETTELO TÄYDENTYY" -polku
+# säilyttää pohjan version, tasot sekä nosto-, viiva- ja rantatason
+# versiot ja vain yhdistää `varitasot`-tauluun tämän maan kirjauksen.
+#
+# MOLEMMAT LUETTELOT TARKISTETAAN, MUTTA VAIN TOINEN KIRJOITETAAN.
+# Pallon sarjan luettelo kertoo neljä asiaa — `versio`, `viivat`,
+# `nostot`, `ranta` (tools/tee-pallolaatat.mjs) — eikä siinä ole
+# väritasokenttää eikä tarvitse olla: väri ei ole poltettu Mercator-
+# sarjaan vaan piirretään elävänä pallon laattakerrokseen, ja portti
+# lukee sen `pyramidi.varitasot[ISO]`-taulusta. Pallon sarjan
+# uudelleenpoltto olisi tunteja työtä, joka ei muuttaisi yhtään tavua.
+# `laatat.json` siis LADATAAN ja PORTTI AJETAAN SILLÄ kahdesti (ennen
+# ja jälkeen), ja ajo pysähtyy ennen ensimmäistäkin vietyä tavua, jos
+# portti ei aukea. Tarkistus lukee PELIN OMAN funktion
+# (tools/tarkista-varitason-portti.mjs), ei YAML:iin kirjoitettua
+# kopiota ehdosta.
+#
+# === AINEISTO: TASOITUS EI TARVITSE SITÄ ============================
+#
+# Tasoituslaatta on kerma-peite, jonka alfa on kohdemaan sisällä 0 —
+# maastoa ei piirretä lainkaan (tools/fokuskartta/maailmapiirto.js
+# piirraTasoitustaso). Ajo ei siis lue ETOPOa, ei nouda 1′-paloja
+# R2:sta eikä tarvitse Natural Earthiä. Murrettu ja täysväri (erän 1b
+# paletit) tarvitsevat kaiken sen, ja siksi aineistoaskeleet ovat
+# ehdollisia eivätkä poistettuja.
+#
+# === KUIVA-AJO =====================================================
+#
+# `kuiva: true` ajaa generaattorin `--kuiva`-tilassa: pelkkä geometria,
+# ei selainta, ei piirtoa, ei vientiä. Se tulostaa laattamäärät
+# tasoittain ja ne ämpärin polut, joihin ajo kirjoittaisi. Tällä
+# katsotaan ennen oikeaa ajoa, mitä uusi maa maksaa.
+on:
+  workflow_dispatch:
+    inputs:
+      maa:
+        description: 'Kohdemaa ISO A3 -koodina (esim. FRA, GRC, ESP)'
+        type: string
+        required: true
+        default: FRA
+      paletti:
+        description: 'tasoitus = omistajan PÄÄTÖS 4 (kohdemaa alkuperäisenä, muut kermalla); murrettu/taysvari = erän 1b paletit'
+        type: choice
+        options: [tasoitus, murrettu, taysvari]
+        default: tasoitus
+      peitto:
+        description: 'Tasoitus: kerman peittävyys laatikon sisällä (0,85 = 15 % alkuperäistä reliefiä läpi; 0,95 = lähes umpeen)'
+        type: string
+        default: '0.85'
+      kerma:
+        description: 'Tasoitus: kerman sävy (tyhjä = paletin oletus #faf4d6)'
+        type: string
+        required: false
+        default: ''
+      variversio:
+        description: 'Värikerroksen versio ämpärin polussa: julisteet/pyramidi/<variversio>/vari/z… (esim. 2026-09-13-tasoitus)'
+        type: string
+        required: true
+      tasot:
+        description: 'Ajettavat tasot (z8 on PAKKO: uloszoomauksen esto rajaa vain ulos, sisään pääsee pyramidin syvimmälle tasolle)'
+        type: string
+        default: '4-8'
+      vesi:
+        description: 'Vain murrettu/taysvari: meren peittävyys (tyhjä = paletin oletus)'
+        type: string
+        required: false
+        default: ''
+      feidaus:
+        description: 'Vain murrettu/taysvari: naapurien feidaus (tyhjä = 0,35)'
+        type: string
+        required: false
+        default: ''
+      feidausreuna:
+        description: 'Feidauksen häive laataston reunalla lautayksikköinä (tyhjä = 15 % laatikon lyhyemmästä sivusta)'
+        type: string
+        required: false
+        default: ''
+      laatikko_nakyma:
+        description: 'Laatasto KOKO NÄKYVÄÄN ALAAN: laatikko kasvatetaan kuvasuhteiden unioniin (390x844 … 1920x1080) uloimmalla zoomilla, ei pelkkään kertoimeen. Pois = entinen laatikko × kerroin.'
+        type: boolean
+        default: true
+      laatikkokerroin:
+        description: 'Laataston laatikon kerroin (tyhjä = 1,15 = sama luku kuin uloszoomauksen esto; muuta VAIN yhdessä js/pallolauta/kamera.js ULOSZOOMAUKSEN_KERROIN kanssa)'
+        type: string
+        required: false
+        default: ''
+      korkeus:
+        description: 'Vain murrettu/taysvari: korkeusdatan tarkkuus kaariminuutteina (tasoitus ei lue korkeusdataa lainkaan)'
+        type: choice
+        options: ['1', '3']
+        default: '1'
+      kuiva:
+        description: 'Kuiva-ajo: tulosta vain laattamäärät ja ämpärin polut, älä piirrä äläkä vie'
+        type: boolean
+        default: false
+      vie:
+        description: 'Vie ämpäriin (pois = pelkkä harjoitus, laatat jäävät ajokoneelle)'
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  varitaso:
+    runs-on: ubuntu-latest
+    # Mitattu FRA z4–z8 tasoituksella: 17 s piirtoa, 329 laattaa,
+    # 1,61 Mt. Murrettu paletti samalla alalla on 102 s. Vara on
+    # suurille maille ja hitaammalle ajokoneelle.
+    timeout-minutes: 90
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      AMPARI: ${{ secrets.R2_BUCKET }}
+      PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+      MAA: ${{ inputs.maa }}
+      PALETTI: ${{ inputs.paletti }}
+      VARIVERSIO: ${{ inputs.variversio }}
+      TASOT: ${{ inputs.tasot }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # Chromium on piirtomoottorin kanvaasi. Kuiva-ajo ei piirrä, joten
+      # se ei tarvitse selainta eikä minuutin asennusta.
+      - name: Asenna riippuvuudet ja Chromium
+        if: ${{ !inputs.kuiva }}
+        run: |
+          set -euo pipefail
+          npm install --no-fund --no-audit
+          npx playwright install --with-deps chromium
+
+      # -------------------------------------------- luettelot ämpäristä
+      #
+      # PALLON SARJAN OSOITE TULEE REPOSTA, EI SYÖTTEESTÄ. js/pallo.js
+      # on se tiedosto, jonka mukaan peli hakee luettelonsa
+      # (PALLO_LAATAT = julisteet/pallo/laatat/<kansio>/), joten
+      # työnkulku lukee saman vakion eikä arvaa polkua uudestaan.
+      - name: Lataa molemmat luettelot ja tarkista versioportti
+        run: |
+          set -euo pipefail
+          KANSIO=$(node -e "import('./js/pallo.js').then((m) => console.log(m.PALLO_LAATTAKANSIO))")
+          echo "pallon sarjan kansio: $KANSIO"
+          aws s3 cp "s3://$AMPARI/julisteet/pyramidi/pyramidi.json" pyramidi-ampari.json \
+            --endpoint-url "$PAATE" --no-progress
+          aws s3 cp "s3://$AMPARI/julisteet/pallo/laatat/$KANSIO/laatat.json" laatat-ampari.json \
+            --endpoint-url "$PAATE" --no-progress
+          echo "PALLOKANSIO=$KANSIO" >> "$GITHUB_ENV"
+          # PORTTI ENNEN AJOA: jos kerros on jo sammuksissa, vika ei ole
+          # tässä ajossa eikä sitä saa peittää uudella luettelolla.
+          node tools/tarkista-varitason-portti.mjs \
+            --pallo laatat-ampari.json --pyramidi pyramidi-ampari.json --vain-pohja
+
+      # LUETTELO TÄYDENTYY: ämpärin luettelo ajokansioon POHJAKSI, jotta
+      # generaattori säilyttää pohjan version ja muiden maiden
+      # väritasot. Ilman tätä askelta uusi luettelo tuntisi vain tämän
+      # maan ja sammuttaisi koko kerroksen.
+      - name: Pohjusta ajokansio ämpärin luettelolla
+        run: |
+          set -euo pipefail
+          mkdir -p ulos
+          cp pyramidi-ampari.json ulos/pyramidi.json
+          node -e "
+            const l = require('./ulos/pyramidi.json');
+            console.log('pohjan versio', l.versio, '· tasoja', l.tasot?.length,
+              '· varitasot', Object.keys(l.varitasot ?? {}).join(',') || '–');
+          "
+
+      # ------------------------------------------------------ aineisto
+      #
+      # VAIN MURRETTU JA TÄYSVÄRI TARVITSEVAT SEN (ks. AINEISTO).
+      - name: Hae Natural Earth (ei tasoitukselle)
+        if: ${{ inputs.paletti != 'tasoitus' }}
+        run: |
+          set -euo pipefail
+          mkdir -p ne-data
+          for f in ne_10m_ocean ne_10m_lakes; do
+            curl -sSL --retry 3 --max-time 300 -o "ne-data/$f.geojson" \
+              "https://raw.githubusercontent.com/nvkelso/natural-earth-vector/master/geojson/$f.geojson"
+          done
+          ls -la ne-data
+
+      # 1′-korkeuspalat omasta ämpäristä, sama sääntö kuin
+      # generoi-pyramidi.yml:ssä: poltto ei tee yhtään verkkopyyntöä.
+      - name: Kopioi 1′-korkeuspalat ämpäristä (ei tasoitukselle)
+        if: ${{ inputs.paletti != 'tasoitus' && inputs.korkeus != '3' }}
+        run: |
+          set -euo pipefail
+          mkdir -p korkeuspalat
+          node tools/generoi-laattapyramidi.mjs korkeuspalat \
+            --tasot "$TASOT" --kaariminuutit 1 --vari "$MAA" --variversio "$VARIVERSIO" \
+            --paletti "$PALETTI" --vain-palat korkeuspalat/palat.txt
+          N=$(wc -l < korkeuspalat/palat.txt)
+          echo "Palat: $N"
+          if [ "$N" -gt 0 ]; then
+            xargs -a korkeuspalat/palat.txt -P 8 -I {} \
+              aws s3 cp "s3://$AMPARI/julisteet/korkeus/1min/{}.bin.gz" \
+              "korkeuspalat/{}.bin.gz" --endpoint-url "$PAATE" --no-progress --quiet
+            while read -r nimi; do
+              [ -s "korkeuspalat/$nimi.bin.gz" ] || { echo "::error::pala $nimi puuttuu"; exit 1; }
+            done < korkeuspalat/palat.txt
+            echo "Kopioitu $N palaa, $(du -sh korkeuspalat | cut -f1)."
+          fi
+
+      # -------------------------------------------------------- ajo
+      - name: Generoi kerros
+        env:
+          SYOTE_PEITTO: ${{ inputs.peitto }}
+          SYOTE_KERMA: ${{ inputs.kerma }}
+          SYOTE_VESI: ${{ inputs.vesi }}
+          SYOTE_FEIDAUS: ${{ inputs.feidaus }}
+          SYOTE_FEIDAUSREUNA: ${{ inputs.feidausreuna }}
+          SYOTE_LAATIKKOKERROIN: ${{ inputs.laatikkokerroin }}
+          LAATIKKO_NAKYMA: ${{ inputs.laatikko_nakyma && 'true' || '' }}
+          KORKEUS: ${{ inputs.korkeus }}
+          KUIVA: ${{ inputs.kuiva && 'true' || '' }}
+        run: |
+          set -euo pipefail
+          df -h / | tail -1
+          LISA=""
+          if [ "$PALETTI" = "tasoitus" ]; then
+            LISA="--peitto $SYOTE_PEITTO"
+            if [ -n "$SYOTE_KERMA" ]; then LISA="$LISA --kerma $SYOTE_KERMA"; fi
+          else
+            LISA="--data ne-data --kaariminuutit $KORKEUS"
+            if [ "$KORKEUS" = "1" ] && [ -d korkeuspalat ]; then
+              LISA="$LISA --korkeuspalat korkeuspalat"
+            fi
+            if [ -n "$SYOTE_VESI" ]; then LISA="$LISA --vesi $SYOTE_VESI"; fi
+            if [ -n "$SYOTE_FEIDAUS" ]; then LISA="$LISA --feidaus $SYOTE_FEIDAUS"; fi
+          fi
+          if [ -n "$SYOTE_FEIDAUSREUNA" ]; then LISA="$LISA --feidausreuna $SYOTE_FEIDAUSREUNA"; fi
+          if [ -n "$SYOTE_LAATIKKOKERROIN" ]; then LISA="$LISA --laatikkokerroin $SYOTE_LAATIKKOKERROIN"; fi
+          # LAATIKKO KOKO NÄKYVÄÄN ALAAN (erä 1c luku 9): pelkkä kerroin
+          # 1,15 kattaa vain laataston laatikon, ei ruutua — pystyruudulla
+          # näkyvä ala on kolme kertaa laatikon korkuinen, ja laatikon
+          # ulkopuolelle jäävät naapurit näkyvät alkuperäisinä. Unioni
+          # nostaa laattamäärän noin nelinkertaiseksi, mutta tasoituslaatta
+          # on halpa (ei korkeusaineistoa).
+          if [ -n "$LAATIKKO_NAKYMA" ]; then LISA="$LISA --laatikko-nakyma"; fi
+          if [ -n "$KUIVA" ]; then LISA="$LISA --kuiva"; fi
+          node tools/generoi-laattapyramidi.mjs ulos \
+            --tasot "$TASOT" --vari "$MAA" --variversio "$VARIVERSIO" \
+            --paletti "$PALETTI" $LISA
+          if [ -n "$KUIVA" ]; then
+            echo "--- KUIVA-AJO: nämä polut kirjoitettaisiin ---"
+            echo "  s3://$AMPARI/julisteet/pyramidi/$VARIVERSIO/vari/z<taso>/<sarake>/<rivi>.webp"
+            echo "  s3://$AMPARI/julisteet/pyramidi/pyramidi.json  (varitasot.$MAA täydennettynä)"
+            echo "  laatat.json EI muutu (ks. VERSIOPORTTI)."
+            exit 0
+          fi
+          echo "--- tuotos ---"
+          find ulos/vari -name '*.webp' | wc -l
+          du -sh ulos/vari
+
+      # PORTTI UUDELLA LUETTELOLLA, ENNEN KUIN MITÄÄN ON ÄMPÄRISSÄ.
+      # Ämpärin oma laatat.json ja juuri koottu pyramidi.json: jos
+      # kerros sammuisi tai maan väritaso puuttuisi, ajo pysähtyy tähän.
+      - name: Tarkista versioportti uudella luettelolla
+        if: ${{ !inputs.kuiva }}
+        run: |
+          set -euo pipefail
+          node tools/tarkista-varitason-portti.mjs \
+            --pallo laatat-ampari.json --pyramidi ulos/pyramidi.json --maa "$MAA"
+
+      # Laatat ovat muuttumattomia: versio on polussa, joten sama osoite
+      # ei koskaan saa uutta sisältöä. Sama immutable-välimuisti kuin
+      # pohjalla, nosto- ja viivatasolla.
+      - name: Vie laatat ämpäriin
+        if: ${{ inputs.vie && !inputs.kuiva }}
+        run: |
+          set -euo pipefail
+          n=0
+          for taso in ulos/vari/z*; do
+            [ -d "$taso" ] || continue
+            z=$(basename "$taso")
+            aws s3 sync "$taso" \
+              "s3://$AMPARI/julisteet/pyramidi/$VARIVERSIO/vari/$z" \
+              --endpoint-url "$PAATE" \
+              --exclude '*' --include '*.webp' \
+              --content-type image/webp \
+              --cache-control 'public, max-age=31536000, immutable' \
+              --no-progress
+            n=$((n + 1))
+          done
+          echo "Viety $n tasoa versioon $VARIVERSIO/vari."
+
+      # LUETTELO VIIMEISENÄ, JA VAIN JOS LAATAT OVAT PERILLÄ. Luettelo
+      # on se, joka tekee kerroksesta julkisen: jos se vietäisiin ensin
+      # ja laattojen vienti kaatuisi, peli pyytäisi laattoja joita ei
+      # ole. Lyhyt välimuisti, koska luettelo muuttuu joka ajossa.
+      - name: Vie luettelo ämpäriin
+        if: ${{ inputs.vie && !inputs.kuiva }}
+        run: |
+          set -euo pipefail
+          aws s3 cp ulos/pyramidi.json \
+            "s3://$AMPARI/julisteet/pyramidi/pyramidi.json" \
+            --endpoint-url "$PAATE" \
+            --content-type application/json \
+            --cache-control 'public, max-age=300' \
+            --no-progress
+          echo "Luettelo viety: $MAA · $PALETTI · $VARIVERSIO."
+          echo "laatat.json jätettiin koskematta — siinä ei ole väritasokenttää (ks. VERSIOPORTTI)."

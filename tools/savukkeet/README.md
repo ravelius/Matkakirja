@@ -114,6 +114,12 @@ värit pelatessaan, koska peli avautuu pallolle. **Pallon oma vartio on
 `savuke-varilaatat-pallo`** (erät 1b ja 2): se ajaa pallolla eikä avaa
 tasokarttaa lainkaan, mittaa samat neljä pistettä KAHDESTI (ilman
 väritasoa ja sen kanssa) ja lukee lisäksi uloszoomauksen eston.
+Omistajan PÄÄTÖS 4 (13.9.2026 klo 14.10 UTC) kumosi murretun paletin
+kohdemaalta, ja siitä eteenpäin pelinäkymän vartio on
+**`savuke-tasoitus-pallo`** (erä 1c): sama kaksivaiheinen mittaus, mutta
+käänteiset väitteet — kohdemaan sisältä A ja B ovat PIKSELILLEEN
+IDENTTISET, ja naapurien reliefikontrasti kutistuu. `savuke-varilaatat-pallo`
+jää vartioimaan murrettua palettia, jos siihen joskus palataan.
 
 | Savuke | Vartioi |
 | --- | --- |
@@ -130,6 +136,7 @@ väritasoa ja sen kanssa) ja lukee lisäksi uloszoomauksen eston.
 | savuke-vuosisaa | Vuosisääkortti (käyrä, sadepalkit, korostus) |
 | savuke-varilaatat | Kohdemaan värillinen topografia (karttauudistus, erä 1): Ranskan maa on värillistä hypsometriaa, 12 mpk:n aluevedet sinisiä, Belgia ja avomeri seepiaa, väritaso rajattu maahan FRA eikä laattamäärä kaksinkertaistu. Vaatii pilottilaatat (`--laatat <kansio>`; tools/generoi-laattapyramidi.mjs `--vari FRA`). VASTAKOE `--ilman-rajausta` riisuu leikkurin — silloin Belgian ja avomeren väitteiden ON kaaduttava |
 | savuke-varilaatat-pallo | Kohdemaan värillinen topografia PALLOLLA ja uloszoomauksen esto (karttauudistus, erät 1b ja 2): Ranskan maa murretuissa sävyissä, 12 mpk:n aluevedet savunsinisinä, Belgia ja avomeri feidattua seepiaa, kehä `--mark`-punainen, `mittarit().syy` tyhjä (versioportti ei sammuttanut laattakerrosta), laattamäärä ei kasva yli +10 %, uloszoomaus pysähtyy Ranskassa laatikko × 1,15 -rajaan eikä RUS lukkiudu. Mittaa samat pisteet kahdesti — ilman väritasoa (vertailuajo) ja sen kanssa — ja vaatii EROT, koska murrettu paletti on samassa lämpimässä perheessä kuin seepia. Vaatii pilottilaatat (`--laatat <kansio>`; `--vari FRA --variversio pilotti`); pohja tulee tuotannon ämpäristä, jotta versioportti aukeaa. VASTAKOKEET: `--ilman-rajausta` (laatat ajettu ilman poltettua leikkuria → Belgian ja avomeren väitteiden ON kaaduttava) ja `--rikki-versio` (pyramidin versio ei vastaa pallon sarjaa → `syy`-väitteen ON kaaduttava) |
+| savuke-tasoitus-pallo | Tasoituskerros PALLOLLA (karttauudistus, erä 1c; omistajan PÄÄTÖS 4): KOHDEMAA ALKUPERÄISENÄ — Ranskan sisältä A ja B ovat pikselilleen identtiset kokonaisella alalla (Berry–Sologne, ei toleranssia), koska laatan alfa on maan sisällä 0 — ja MUUT MAAT TASOITETTUINA: Belgian Ardenneilta pikseli vaalenee kermaan päin JA sen 9 × 9 reliefikontrasti (keskihajonta) pienenee, avomeri vaalenee, eikä 12 mpk:n aluevesi sinerry (leikkurin puskuri on tasoituksessa 0). Lisäksi `mittarit().syy` tyhjä, laattamäärä ja tekstuurimuisti ennallaan, uloszoomauksen esto ja RUS-poikkeus ennallaan. Vaatii pilottilaatat (`--laatat <kansio>`; `--vari FRA --paletti tasoitus --peitto 0.85 --variversio pilotti`, EI `--data`-kansiota); pohja tulee tuotannon ämpäristä, jotta versioportti aukeaa. VASTAKOKEET: `--ilman-rajausta` (leikkuri pois → kerma peittää myös Ranskan → V2:n ON kaaduttava) ja `--rikki-versio` (→ V1:n ON kaaduttava) |
 | savuke-lehden-mitta | Arkin leveys (jumiutunut viewportti, resize) |
 | savuke-paivityspopup | Versionumeron päivitysnappi |
 | savuke-kehittajalehti | Kehittäjän liitteet: Raamattu, Tilannelehti ja Tilastot-lehden vetolaatikkotaulu |
