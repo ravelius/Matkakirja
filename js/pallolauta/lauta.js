@@ -76,7 +76,9 @@ import {
 // Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
 import { livianKorostetutKaupungit } from '../liviapuhe.js';
 import { asemoiFokuskohde, kohteidenNykyinenIso } from '../fokuskohteet.js';
-import { laudaltaAsteiksi, nollaaFokusmitat, paivitaFokusmitat } from '../fokusmitat.js';
+import {
+  laudaltaAsteiksi, maapaneeliKartassa, nollaaFokusmitat, paivitaFokusmitat, pallolaudanMaa,
+} from '../fokusmitat.js';
 import { packById } from '../pack.js';
 import { pixelOf, pointAlong, posKey } from '../rules.js';
 import {
@@ -98,6 +100,7 @@ import {
   HELMEN_VARI, REITIN_VARIT, REITTIHELMEN_KORKEUS, REITTIHELMEN_SADE, luoReitit,
 } from './reitit.js';
 import { luoLinssikartta } from './linssikartta.js';
+import { luoMaapaneeli, paneelinLaatikko } from './maapaneeli.js';
 import { luoLinssit } from './linssit.js';
 import { luoNappulanKuljettaja } from './siirto.js';
 import { luoAloituslennonKohtaus } from './avaus.js';
@@ -1463,6 +1466,16 @@ export async function avaaPallolauta(ui) {
   const nostot = luoNostot({
     ui, merkit, asteet: pallonAsteet, ruudulla, onPoltettu: pallonNostoOnPoltettu,
   });
+  /*
+   * MAAN PERUSTIEDOT JA LISÄÄ-VALIKKO KARTTAAN KIINNITETTYNÄ
+   * (karttauudistus erä 3, Raamattu KARTTAUUDISTUKSEN PAATOKSET 2
+   * kohta 2). Kerros on merkkikerroksen osa `maapaneeli`, joten se
+   * elää samaa elämää kuin nimet ja nostot — perustelut ja mitat ovat
+   * js/pallolauta/maapaneeli.js:ssä.
+   */
+  const maapaneeli = luoMaapaneeli({
+    ui, merkit, kamera, asteet: pallonAsteet,
+  });
 
   /* ---- avauslennon tila (vaihe 5b) --------------------------------- */
   /*
@@ -2470,6 +2483,13 @@ export async function avaaPallolauta(ui) {
   ohjaimet.addEventListener('change', pyydaLadonta);
   // Zoomi muuttaa kaupunkipisteen säteen heti, ei vasta levossa.
   ohjaimet.addEventListener('change', tahdistaPisteidenKoko);
+  /*
+   * Maapaneeli skaalautuu kuin painettu kartta, joten sen mittakaava
+   * on zoomin asia eikä ladonnan: se kirjoitetaan samalla
+   * kamera-tapahtumalla kuin kaupunkipisteen säde, ei vasta levossa
+   * (muuten paneeli hyppäisi kokoonsa vasta eleen päätyttyä).
+   */
+  ohjaimet.addEventListener('change', () => maapaneeli.tahdistaKoko());
   // Aihevalot: selitteen väripallo vaihtaa bodyn luokan.
   let valoAvain = '';
   const valovahti = new MutationObserver(() => {
@@ -2548,6 +2568,16 @@ export async function avaaPallolauta(ui) {
      * jos maa ei vaihtunut (paivitaFokusmitat).
      */
     paivitaFokusmitat(ui);
+    /*
+     * MAAPANEELI KARTALLE (erä 3). Sama kutsu ja sama paikka kuin
+     * kartuutsilla yllä, ja samasta syystä: kaluste voidaan nollata
+     * laudan alta ilman että pelin tila muuttuu, joten avaintarkistus
+     * ei saa ohittaa sitä. Linssin ajaksi paneeli katoaa kuten muutkin
+     * pelin lappuset (js/pallolauta/lauta.js napautaPintaan, LINSSIN
+     * AIKANA VAIN LINSSIN OMA MERKKI).
+     */
+    const paneelinIso = linssiPaalla() ? null : pallolaudanMaa(ui);
+    maapaneeli.paivita({ iso: paneelinIso, laatikko: laatikkoNyt(paneelinIso) });
     const avain = [
       [...kaydyt].sort().join(','), posAvain, liikkuu ? 'liikkuu' : '',
       kohteet.map((k) => k.key).join(','), valinta.avain, ui.lentoKaari?.b ?? '',
@@ -2643,8 +2673,7 @@ export async function avaaPallolauta(ui) {
    * entisen kaupunkinäkymän (kamera.js).
    */
   const maalaatikot = new Map();
-  const saapumisrajaus = async () => {
-    const iso = kohteidenNykyinenIso(ui);
+  const maanLaatikko = async (iso) => {
     if (!iso) return null;
     if (maalaatikot.has(iso)) return maalaatikot.get(iso);
     const data = await lataaMaapolygonit();
@@ -2654,10 +2683,37 @@ export async function avaaPallolauta(ui) {
     maalaatikot.set(iso, laatikko);
     return laatikko;
   };
+  const saapumisrajaus = async () => maanLaatikko(kohteidenNykyinenIso(ui));
+  /**
+   * Maan laatikko HETI, jos se on jo luettu; muuten null ja lataus
+   * käyntiin. Maapaneeli piirtyy joka piirrossa eikä voi odottaa
+   * lupausta — ensimmäisellä kerralla se jää siis yhden piirron pois ja
+   * ilmestyy, kun aineisto on purettu (1,4 MB on jo haettu korostusta
+   * varten, joten odotus on käytännössä sama kuin korostuksella).
+   */
+  const laatikkoNyt = (iso) => {
+    if (!iso) return null;
+    if (!maalaatikot.has(iso)) { void maanLaatikko(iso); return null; }
+    return maalaatikot.get(iso);
+  };
+
+  /*
+   * SAAPUMISAJOSSA PANEELI ON OSA LAATIKKOA (erä 3, suunnitelman luku
+   * 3.0: *"pannauksen rajaan on laskettava paneeli mukaan laatikkoon"*).
+   * Ilman tätä paneeli jäisi saapumisnäkymässä ruudun alalaidan alle,
+   * koska se riippuu maan eteläreunan ULKOPUOLELLA. Nurkkatilassa
+   * (js/fokusmitat.js maapaneeliKartassa) laajennusta ei tehdä —
+   * silloin paneelia ei ole kartalla.
+   */
+  const saapumislaatikko = async () => {
+    const laatikko = await saapumisrajaus();
+    if (!laatikko || !maapaneeliKartassa()) return laatikko;
+    return paneelinLaatikko(laatikko);
+  };
 
   /** Saapumisajo: maan laatikko ruutuun, tai entinen kaupunkinäkymä. */
   const saavu = async ({ kesto = 0 } = {}) => kamera.kotiin({
-    kesto, bbox: await saapumisrajaus(),
+    kesto, bbox: await saapumislaatikko(),
   });
 
   /** Pelin paikan (pos) piste ruudulla (kotelon px) — nopan lähtö. */
@@ -2705,6 +2761,8 @@ export async function avaaPallolauta(ui) {
     reitit,
     nimet,
     nostot,
+    /** Maan perustiedot ja Lisää-valikko kartalla (erä 3). */
+    maapaneeli,
     paivitaFokuspiste: paivitaFokuspistePallolla,
     heraa,
     asteet: pallonAsteet,
@@ -2813,6 +2871,7 @@ export async function avaaPallolauta(ui) {
       kamera.pysaytaKameraAjo();
       eleet.pura();
       litistaja.pura();
+      maapaneeli.pura();
       merkkienNakyvyys.pura();
       merkit.pura();
       noppaTakaisin();
