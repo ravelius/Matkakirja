@@ -1,5 +1,17 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 01:29 UTC — UI-tarkennus: Chrome etenee Ateenaan; Safari-kartta palautui, Pulu vielä tutkinnassa
+
+Ateenan valintapallon luotettava vastakoe onnistui: rootin normaali osoitinele renkaan reunan kohdalla (mouseMoved, 200 ms tauko, painallus, 120 ms, vapautus) vaihtoi pickstart → action. **Ateenan maapallo, Pulu, uusi Horatio-teksti, uusi Pulun puhekupla ja nykykuva näkyvät Chrome-livepelissä.** Plussan painaminen palautti oikean uuden repliikin. Tyhjäksi jäänyt intro/ensiesittely ei tässä ollut koko pelin pysyvä jumitus.
+
+Erillinen todettu koodihaara: 3D-city-pointin keskiosuma menee onPointClick → napautaKaupunki → pickstart-hylkäys. Reunan oikea polku menee napautaPintaan → napautaKohde → doPickStart. Root antoi RC-vetäjälle **rajatun korjausomistuksen tälle routingille ja regressiotestille**, tuore v1823 pohjana. Fable omistaa myös tämän pienen korjauksen mergen/versionoston. Ei media-, ääni-, teksti- tai kaanonmuutoksia. Diagnoosi: `output/horatio-livia-root-qa-20260913/live-v1823-start-click-diagnosis.md`.
+
+Asennetun Safari WebAppin Ikkuna → Matkakirja ja unohdettu aarre (makeKeyAndOrderFront) **palautti Pietarin maapallon näkyviin**. Tavallinen Raise ei ollut riittänyt; emme enää kutsu kartan puuttumista vahvistetuksi resurssi-/julkaisuvirheeksi. Pulu-hahmo ei vielä näy, vaikka plus ja chat ovat näkyviä/toimivia. Sol tekee erillisen read-only visibility/opacity-lifecycle-diagnoosin; ei spekulatiivista korjausta. Käyttäjän Pietari / £275 / päivä1 -tallennus säilyy.
+
+Root jatkaa 390 px:n Chrome-QA:ta. Kehittäjätilan salasanaporttia ei ohiteta eikä selaimen turva-asetuksia muuteta QA:n vuoksi. Kuuntelu ja kaikkien neljän kaupungin live-katselmus pysyvät erillisinä avoimina portteina.
+
+---
+
 ## 13.9.2026 01:21 UTC — v1823 julkaisu varmennettu, live-käyttöliittymän katselmus kesken
 
 **Fable-kuittaus ja [PR #2333](https://github.com/ravelius/Matkakirja/pull/2333) tarkistettu: v1823, release/main `5c39d7f169704afb48b764cdc1cabed3ffb24371`.** Julkaistut 45 pakettia, cue-/SVG-runtime, äänikytkennät ja manifesti ovat täsmälleen yhteisen RC:n `1dd2fc08` sisältöä. Viisi docs-tiedostoa vastaavat korjattua docs-only-toimitusta. Fable lisäsi tuotantomoduulin katalogirivin; vanha 14/15 docs-riippuvuus ei ole enää avoin.
