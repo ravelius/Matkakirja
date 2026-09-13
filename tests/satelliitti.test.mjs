@@ -552,8 +552,14 @@ test('LINSSIN AIKANA VAIN HAVAINTOPISTE ON NAPAUTETTAVA — yksi portti laudassa
   //    sen kamerasukellus) kulkee saman portin läpi.
   assert.match(lauta, /if \(linssiPaalla\(\)\) \{ napautaPintaan\(d\.lat, d\.lon\); return; \}/);
   const piste = lauta.slice(lauta.indexOf('.onPointClick('));
-  assert.ok(piste.indexOf('if (linssiPaalla())') < piste.indexOf('napautaKaupunki(d)'),
+  assert.ok(piste.indexOf('if (linssiPaalla())') < piste.indexOf('reititaPallopisteenNapautus({'),
     'kaupunkipisteen napautus ohittaa linssiportin');
+  const reititys = lauta.slice(
+    lauta.indexOf('export function reititaPallopisteenNapautus('),
+    lauta.indexOf('/*', lauta.indexOf('export function reititaPallopisteenNapautus(')),
+  );
+  assert.match(reititys, /if \(vaihe === 'pickstart'\) \{[\s\S]*napautaPintaan/);
+  assert.match(reititys, /return napautaKaupunki\(piste\);/);
 });
 
 test('linssi ei koske pelitilaan eikä tallennukseen', () => {
