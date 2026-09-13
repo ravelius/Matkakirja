@@ -153,6 +153,32 @@ export const SAAPUMISRAJAUKSEN_MAX = 2000;
  * suorakaiteena keskellä seepiaa. Siksi erät 1b ja 2 ovat sama PR.
  */
 export const ULOSZOOMAUKSEN_KERROIN = 1.15;
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * PANOROINNIN RAJA (KARTTAUUDISTUS, ERÄ 9)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistaja 13.9.2026 klo 17.50 UTC (kuvakaappaus Ranskasta):
+ * *"Ja rajaa liikkuminen pienemmälle alalla."* Löydös oli kirjattu jo
+ * erässä 1c (docs/raportit/viesti-fable-karttauudistus-era1c-*.md luku
+ * 9.6): uloszoomauksen esto on pelkkä KORKEUSRAJA, ja pituusasteella
+ * ei ollut mitään rajaa — pelaaja saattoi vetää Ranskasta Japaniin
+ * uloimmalla sallitulla zoomilla.
+ *
+ * KERROIN ON 1,3 JA SE KOSKEE KAMERAN KESKIPISTETTÄ. Sallittu ala on
+ * saapumislaatikko (maa + maapaneeli) × 1,3 laatikon keskipisteen
+ * ympäri, ja siihen puristetaan kameran KESKIPISTE — ei näkyvää
+ * aluetta. Näkyvä ala saa siis ulottua laatikon ulkopuolelle (muuten
+ * uloin zoomi ei mahtuisi liikkumaan lainkaan), mutta kohdemaa ei voi
+ * kadota ruudulta.
+ *
+ * MIKSI ISOMPI KUIN ULOSZOOMAUKSEN 1,15. Uloszoomauksen kerroin rajaa
+ * KORKEUTTA (koko laatikko ruudulla); tämä rajaa keskipisteen
+ * liikettä. Sama luku tekisi liikkumavarasta niin kapean, ettei maan
+ * reunaa voisi tuoda ruudun keskelle lähemmällä zoomilla.
+ */
+export const PANOROINNIN_KERROIN = 1.3;
 /**
  * Siirtonäkymän lähin leveys (siirtoZoomiKerroin): ennakkozoomi vie
  * SIIRTOZOOMIN_LAHENNYS kertaa lähemmäs, mutta ei tämän alle. Puolet
@@ -564,6 +590,71 @@ export function luoPallokamera({
     return { max };
   };
 
+  /**
+   * PANOROINNIN SALLITTU ALA ASTEINA maan laatikosta (erä 9).
+   *
+   * Laatikko on LAUDAN yksiköissä, ja raja on asteissa, koska
+   * panorointi kirjoittaa `pointOfView`in lat/lng-kentät
+   * (js/pallo.js). Muunnos tehdään laatikon KAHDESTA NURKASTA samalla
+   * `laudaltaAsteiksi`-kaavalla, jota koko lauta käyttää — ei omaa
+   * projektiota.
+   *
+   * PITUUSASTEEN RAJA JÄTETÄÄN POIS, jos laatikko kiertää pallon
+   * (span ≥ 180°) tai nurkat kääntyvät päivämäärärajan yli. Silloin
+   * "min ja max" eivät ole yksikäsitteisiä, ja väärin päin oleva raja
+   * nykäisisi kameran maailman toiselle puolelle — TURVALLINEN TILA on
+   * jättää se suunta vapaaksi (leveysaste rajaa silti).
+   */
+  const panoraja = (bbox, kerroin = PANOROINNIN_KERROIN) => {
+    if (!(bbox?.w > 0) || !(bbox?.h > 0)) return null;
+    const kx = bbox.x + bbox.w / 2;
+    const ky = bbox.y + bbox.h / 2;
+    const w = (bbox.w * kerroin) / 2;
+    const h = (bbox.h * kerroin) / 2;
+    const a = laudaltaAsteiksi(lauta, kx - w, ky - h);
+    const b = laudaltaAsteiksi(lauta, kx + w, ky + h);
+    if (!a || !b) return null;
+    const latMin = Math.min(a.lat, b.lat);
+    const latMax = Math.max(a.lat, b.lat);
+    if (!Number.isFinite(latMin) || !Number.isFinite(latMax)) return null;
+    const lngMin = Math.min(a.lon, b.lon);
+    const lngMax = Math.max(a.lon, b.lon);
+    const lngOk = Number.isFinite(lngMin) && Number.isFinite(lngMax)
+      && lngMax - lngMin < 180;
+    return {
+      latMin,
+      latMax,
+      lngMin: lngOk ? lngMin : null,
+      lngMax: lngOk ? lngMax : null,
+    };
+  };
+
+  /**
+   * Kameran keskipiste sallittuun alaan. Palauttaa aina `{ lat, lng,
+   * latRajattu, lngRajattu }`; rajattu-liput kertovat kutsujalle, että
+   * liuku on pysäytettävä siinä suunnassa (js/pallo.js).
+   *
+   * PITUUSASTE TUODAAN ENSIN LÄHIMPÄÄN KIERROKSEEN. Veto ei normalisoi
+   * lng:tä, joten se voi olla 362° tai −358°; ilman tätä raja
+   * nykäisisi kameran täyden kierroksen väärään suuntaan.
+   */
+  const rajaaPanorointi = (raja, lat, lng) => {
+    if (!raja) return { lat, lng, latRajattu: false, lngRajattu: false };
+    const uusiLat = Math.min(raja.latMax, Math.max(raja.latMin, lat));
+    let uusiLng = lng;
+    if (Number.isFinite(raja.lngMin) && Number.isFinite(raja.lngMax)) {
+      const keski = (raja.lngMin + raja.lngMax) / 2;
+      uusiLng = lng - Math.round((lng - keski) / 360) * 360;
+      uusiLng = Math.min(raja.lngMax, Math.max(raja.lngMin, uusiLng));
+    }
+    return {
+      lat: uusiLat,
+      lng: uusiLng,
+      latRajattu: Math.abs(uusiLat - lat) > 1e-9,
+      lngRajattu: Math.abs(uusiLng - lng) > 1e-9,
+    };
+  };
+
   const kotiin = ({ kesto = 0, bbox = null } = {}) => {
     const { game } = ui ?? {};
     const pos = game?.player?.pos;
@@ -592,6 +683,10 @@ export function luoPallokamera({
     ajaKamera,
     kameranTila,
     nakyvaAlue,
+    /** Panoroinnin sallittu ala asteina (erä 9; null = ei rajaa). */
+    panoraja,
+    /** Keskipiste sallittuun alaan (erä 9). */
+    rajaaPanorointi,
     /** Lähin sallittu korkeus juuri nyt (OrbitControlsin minDistance). */
     korkeusMin,
     /** Lähin sallittu näkyvä leveys lautayksikköinä (savukkeet, vartijat). */
