@@ -80,7 +80,7 @@ muut dokumentit. Vain Fable kirjoittaa Raamattuun.
 
 ## Tilanne 13.9.2026 klo 20:00 UTC
 
-Main: **v1855** (erä 9). Tämän päivän julkaisut v1837–v1855.
+Main: **v1856** (Alppien Liiku-umpikuja korjattu, v1856). Tämän päivän julkaisut v1837–v1856.
 
 ### Karttauudistus (omistajan 13.9. idea, Raamattu PAATOKSET 1–6)
 
@@ -120,6 +120,15 @@ Suunnitelmat: docs/raportit/karttauudistus-suunnitelma-20260913.md ja
    (sisältöerä), pääkartan 21 merkin raja rikki ITA/ESP/DEU/GRC/TUR/RUS/HRV,
    ITA kohdekartta 17/17 täynnä.
 4. Saapumiskorkeuden kilpajuoksu (erä 9 raportti, löydös 1).
+4b. **Osumareititys** (root 21:31/21:42): vihjepiste jää kaupungin
+   merkin alle (Budapest/Rudas 32 lautayksikköä, Alpit), keskustaklikkaus
+   avaa kaupungin tietoruudun vihjeen sijaan. Suositus raportissa
+   docs/raportit/viesti-fable-liiku-alpit-20260913.md: erotus
+   ruutuavaruuteen turisti-infon tapaan + pisteen etuoikeus kaupungin
+   musteen kilpailussa. Oma erä, oma savuke, omistajan silmäys.
+4c. v1856 korjasi Alppien etenemisumpikujan (Liiku-nappi aina olemassa,
+   js/fokusvirta.js liikuNappiNakyvissa). Root tekee vastakokeen samasta
+   savesta ja jatkaa Marseilleen; odota tulos postilaatikosta.
 5. Lähizoomiportti nostoille (nosto.lahi) puuttuu.
 6. Piirroskuvitukset maiden erikoiskohteista (omistajan idea; oma erä,
    kuvatuotanto + lisenssit) — ei aloitettu.
@@ -139,8 +148,8 @@ Suunnitelmat: docs/raportit/karttauudistus-suunnitelma-20260913.md ja
 
 ### Postilaatikko
 
-Haara `claude/postilaatikko`. Viimeisin kuittaukseni: "v1853" (421c64d7)
-+ tämän session loppukuittaus (ks. alla). Kuittaa kärkeen
+Haara `claude/postilaatikko`. Viimeisin kuittaukseni: "v1856 Alppien umpikuja korjattu"
+(13.9. n. 22:30 UTC). Kuittaa kärkeen
 `## <pvm klo UTC> — FABLE: <aihe>` worktreen kautta (/home/user/pl).
 Worktreet **/home/user**-polkuun, ei /tmp.
 
