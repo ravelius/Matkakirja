@@ -4121,6 +4121,176 @@ export const NAHTAVYYSJUTUT = {
       lahde: 'Wikipedia',
     },
     /*
+     * KARTTAUUDISTUS, ERÄ 5 (13.9.2026): KAUPUNKILEHDEN SIVUT
+     * NOSTOIKSI (suunnitelman luku 4.7). Viisi uutta karttapistettä ja
+     * niiden jutut. Teksti on noston OMA `lunastus` kappaleittain
+     * '\n\n'-liitoksena, kuten muissakin karsittujen nostojen jutuissa
+     * — tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten
+     * juttu ei voi eriytyä siitä kortista, jonka pelaaja näkee.
+     */
+    '72 nimeä': {
+      nosto: 'nosto-pariisin-72-nimea',
+      teksti: 'Gustave Eiffel halusi, että hänen torninsa on tieteen '
+        + 'muistomerkki. Ensimmäisen kerroksen ympäri kiertää 65 metrin '
+        + 'korkeudella nimilista: 18 nimeä tornin jokaisella sivulla, '
+        + 'yhteensä 72 ranskalaista tiedemiestä ja insinööriä. Kirjaimet '
+        + 'ovat kullattuja ja 60 senttiä korkeita. Nimet peitettiin '
+        + 'maalilla 1900-luvun alussa ja paljastettiin vasta 1986–1987. '
+        + 'Yhtään naista listalla ei ole. Siksi tammikuussa 2026 '
+        + 'julkistettiin toinen 72 nimen lista, pelkkiä naistutkijoita, '
+        + 'jotka on tarkoitus kaivertaa miesten nimien yläpuolelle vuonna '
+        + '2027.',
+      kuvat: [
+        {
+          tiedosto: 'Chevreul, Flachat, Navier.001 - Torre Eiffel.jpg',
+          lyhyt: 'Eiffel-tornin ensimmäistä kerrosta kiertää 72 ranskalaisen tiedemiehen nimi kullatuin kirjaimin.',
+          selite: 'Eiffel-tornin ensimmäisen kerroksen ympäri kiertää 65 metrin '
+            + 'korkeudella 72 ranskalaisen tiedemiehen ja insinöörin nimeä '
+            + 'kullatuin, 60 senttiä korkein kirjaimin.',
+          lahde: 'Fernando Losada Rodríguez, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Metron sisäänkäynti': {
+      nosto: 'nosto-guimardin-metro',
+      teksti: 'Pariisin metro avattiin 19. heinäkuuta 1900. Sisäänkäynneistä '
+        + 'oli järjestetty arkkitehtikilpailu, mutta yksikään 21 '
+        + 'ehdotuksesta ei kelvannut, ja työ annettiin Hector Guimardille, '
+        + 'joka ei ollut edes osallistunut kilpailuun. Hän piirsi '
+        + 'valurautaisia vakio-osia, jotka sopivat yhteen kuin '
+        + 'rakennussarja: samoista paloista sai kasattua sopivan '
+        + 'sisäänkäynnin mihin tahansa kadunkulmaan. Niitä tehtiin 167. '
+        + 'Sitten tyyli meni pois muodista ja puolet purettiin. Jäljellä '
+        + 'olevat 86 rauhoitettiin vuonna 1978.',
+      kuvat: [
+        {
+          tiedosto: "01 Guimard's Métropolitain.jpg",
+          selite: 'Guimardin metrosisäänkäyntejä tehtiin 167, ja jäljellä olevat '
+            + '86 rauhoitettiin vuonna 1978.',
+          lahde: 'Terrazzo (Flickr), Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Notre-Damen kukko': {
+      nosto: 'nosto-notre-damen-kukko',
+      teksti: 'Notre-Damen ullakko syttyi 15. huhtikuuta 2019, ja keskitorni '
+        + 'romahti kello 19.45. Katon alla paloi 1 300 tammirungosta tehty '
+        + 'kattotuolisto, joka oli 1200-luvulta. Tornin huipulla seisoi '
+        + 'kuparinen kukko, jonka sisään oli suljettu pyhäinjäännöksiä. '
+        + 'Ensin sitä luultiin tuhoutuneeksi, mutta se löytyi seuraavana '
+        + 'päivänä maasta lommoilla. Onnea oli muutenkin: kuusitoista '
+        + 'kuparipatsasta oli nostettu katolta korjattavaksi neljä päivää '
+        + 'ennen paloa. Uuden kullatun kukon sisään pantiin samat '
+        + 'pyhäinjäännökset ja 2 000 jälleenrakentajan nimet.',
+      kuvat: [
+        {
+          tiedosto: 'Coq de Notre-Dame de Paris 2020.jpg',
+          lyhyt: 'Notre-Damen kuparinen kukko putosi tornin huipulta 2019 palossa ja löytyi lommoilla.',
+          selite: 'Notre-Damen tornin huipulla seisonut kuparinen kukko putosi '
+            + 'vuoden 2019 palossa ja löytyi seuraavana päivänä maasta '
+            + 'lommoilla.',
+          lahde: 'Siren-Com, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pariisi soi': {
+      nosto: 'nosto-pariisi-soi',
+      teksti: 'Édith Piaf syntyi Bellevillessä joulukuussa 1915. Tarinan mukaan '
+        + 'hän syntyi kadulla talon portaille, vaikka syntymätodistuksessa '
+        + 'lukee sairaala. Teininä hän lauloi kolikoista Pigallen kaduilla '
+        + 'ja pihoissa sisarpuolensa kanssa. Yökerhon omistaja Louis Leplée '
+        + 'kuuli hänet kadulta vuonna 1935 ja antoi lempinimen la Môme Piaf '
+        + '— piaf on pariisilaista puhekieltä ja tarkoittaa varpusta. '
+        + 'Laulaja oli 142 senttiä pitkä. Tunnetuin laulu La Vie en rose '
+        + 'ilmestyi 1946, ja sen sanat hän kirjoitti itse.'
+        + '\n\n'
+        + 'Django Reinhardt kasvoi romaniperheen asuntovaunussa Pariisin '
+          + 'porttien luona ja soitti banjoa pihoissa ja tanssipaikoissa jo '
+          + 'lapsena. Lokakuussa 1928 vaunussa syttyi tulipalo: kynttilä '
+          + 'kaatui selluloidikukkien päälle. Vasemman käden nimetön ja '
+          + 'pikkurilli jäivät liikkumattomiksi, ja lääkärit sanoivat, ettei '
+          + 'hän soita enää. Veli toi sairaalaan kitaran, ja Django opetteli '
+          + 'soittamaan soolot kahdella sormella. Vuonna 1934 hän perusti '
+          + 'Pariisissa yhtyeen Quintette du Hot Club de France.',
+      kuvat: [
+        {
+          tiedosto: 'Édith Piaf 914-6440.jpg',
+          lyhyt: 'Édith Piaf esiintyi Rotterdamissa 1962, alle vuosi ennen kuolemaansa; lempinimi tarkoittaa varpusta.',
+          selite: 'Édith Piaf esiintyi Rotterdamissa 13. joulukuuta 1962, alle '
+            + 'vuosi ennen kuolemaansa; hänen lempinimensä la Môme Piaf '
+            + 'tarkoittaa pariisilaisessa puhekielessä varpusta.',
+          lahde: 'Eric Koch / Anefo, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Paras patonki': {
+      nosto: 'nosto-pariisin-patonki',
+      teksti: 'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta '
+        + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää '
+        + 'olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä '
+        + 'patongissa saa olla, on määrätty laissa — käytännössä vain '
+        + 'vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään '
+        + 'vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei '
+        + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu kuusi '
+        + 'arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja '
+        + 'yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät '
+        + 'seuraavan vuoden ajan.',
+      kuvat: [
+        {
+          tiedosto: '84 Boulevard de Port-Royal Bakery.jpg',
+          lyhyt: 'Pariisi on järjestänyt vuodesta 1994 kilpailun parhaasta patongista presidentin leipojaksi.',
+          selite: 'Pariisi on järjestänyt vuodesta 1994 kilpailun parhaasta '
+            + 'perinteisestä patongista, ja voittaja toimittaa '
+            + 'presidentinpalatsin leivät seuraavan vuoden ajan.',
+          lahde: 'Lionel Allorge, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Pariisin vuosisadat': {
+      nosto: 'nosto-pariisin-vuosisadat',
+      teksti: 'Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 '
+        + 'timantin kaulanauhan Ludvig XV:lle, mutta kuningas kuoli ennen '
+        + 'kauppaa eikä Marie Antoinette huolinut sitä. Jeanne de la Motte '
+        + '-niminen huijari sai kardinaali de Rohanin uskomaan, että '
+        + 'kuningatar haluaa nauhan salaa ja tarvitsee välikäden. '
+        + 'Todisteina olivat väärennetyt kirjeet ja yöllinen tapaaminen '
+        + 'Versailles\'n puistossa, jossa kuningatarta esitti palkattu nuori '
+        + 'nainen. Rohan osti nauhan tammikuussa 1785 kahdella miljoonalla '
+        + 'livrellä ja luovutti sen huijarin lähetille; kivet pilkottiin ja '
+        + 'myytiin Lontoossa ja Pariisissa. Kun ensimmäinen maksuerä '
+        + 'erääntyi elokuussa, kauppiaat kääntyivät kuningattaren puoleen '
+        + 'ja kardinaali pidätettiin Versailles\'ssa. Oikeus vapautti '
+        + 'Rohanin 1786, mutta kuningattaren maine ei toipunut.'
+        + '\n\n'
+        + 'Denis Vrain-Lucas myi 1860-luvulla matemaatikko Michel '
+          + 'Chasles\'lle noin 27 000 käsin kirjoitettua kirjettä, joiden '
+          + 'lähettäjiksi oli merkitty muun muassa Julius Caesar, Kleopatra, '
+          + 'Aristoteles ja Kaarle Suuri. Kaikki oli kirjoitettu 1800-luvun '
+          + 'ranskaksi. Chasles maksoi kokoelmasta noin 140 000 frangia ja '
+          + 'esitteli 1867 tiedeakatemialle kirjeitä, joiden mukaan Blaise '
+          + 'Pascal olisi keksinyt painovoimalain ennen Isaac Newtonia. '
+          + 'Englantilaiset tutkijat huomauttivat, että Newton oli kirjeiden '
+          + 'päiväyksen aikaan lapsi. Chasles piti kokoelmastaan kiinni '
+          + 'vuosia, mutta väärentäjä tuomittiin helmikuussa 1870 kahdeksi '
+          + 'vuodeksi vankeuteen.',
+      kuvat: [
+        {
+          osoite: 'https://media.matkakirja.app/kohtaamiset/kuvajono/skandaali-kaulanauhajuttu-1785.jpg',
+          lyhyt: 'Jalokivikauppiaat esittelevät kaulanauhaa kardinaalille, joka uskoo ostavansa kuningattarelle.',
+          selite: 'Jalokivikauppiaat esittelevät 647 timantin kaulanauhaa '
+            + 'kardinaali de Rohanille, joka uskoi ostavansa sen '
+            + 'kuningattaren puolesta.',
+          lahde: 'Matkakirjan havainnekuva: kaulanauha luovutetaan kardinaalille',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
      * KARTAN OMAN KOHTEEN JUTTU (omistajan päätös 2.9.2026 illalla:
      * *"Otetaan pois pääkartalta ja varmista, että ne näkyvät kunkin
      * kaupunkilehden omalla kartalla."*). Pisteellä ei ollut ennestään

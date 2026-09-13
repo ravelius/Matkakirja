@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1850, teksti: 'Karttauudistus era 5: Pariisin sivut nostoiksi' },
   { v: 1849, teksti: 'Karttauudistus era 7: aarre vihreana pisteena' },
   { v: 1848, teksti: 'Karttauudistus era 3: maapaneeli ja lisaa-valikko pallolle' },
   { v: 1847, teksti: 'Karttauudistus era 4: kaupungin pop-up ja turisti-info' },

@@ -4874,6 +4874,58 @@ export const KAUPUNKIKARTAT = {
         nosto: 'hetki-lumiere-elokuva-1895',
         nimiPuoli: 'oikea', siirto: { x: 24, y: 10 },
       },
+      /*
+       * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 5, 13.9.2026;
+       * suunnitelman luku 4.7, omistajan hyväksymä jakotaulukko). Lehden
+       * sivut "Pariisi", "Musiikki" ja "Historia" purettiin klikattaviksi
+       * karttapaloiksi: viisi niistä on tällä kartalla, ja kuudes
+       * ("Paras patonki") jäi pääkartalle kaupungin viereen.
+       *
+       * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on
+       * siellä, missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
+       * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js, kaupunki pariisi).
+       */
+      // Eiffel-tornin neljäs merkki: torni, Torni romuraudaksi ja
+      // Torni 1888 ovat samassa pisteessä, joten nimiö suoraan vasemmalle.
+      {
+        nimi: '72 nimeä', lat: 48.85822, lon: 2.2945,
+        nosto: 'nosto-pariisin-72-nimea',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      // Abbesses'n asema, yksi jäljellä olevista Guimardin
+      // sisäänkäynneistä (48,8844 N / 2,3382 E). Oma piste, ei naapureita.
+      {
+        nimi: 'Metron sisäänkäynti', lat: 48.8844, lon: 2.3382,
+        nosto: 'nosto-guimardin-metro',
+      },
+      // Sama piste kuin kartan oma Notre-Dame: nimiö oikealle.
+      {
+        nimi: 'Notre-Damen kukko', lat: 48.853, lon: 2.3499,
+        nosto: 'nosto-notre-damen-kukko',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      // Palais Garnier (suunnitelman luku 4.7: "kohdekartta (Opéra)");
+      // sama piste kuin kartan oma Palais Garnier, nimiö vasemmalle.
+      {
+        nimi: 'Pariisi soi', lat: 48.8719, lon: 2.3317,
+        nosto: 'nosto-pariisi-soi',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 12 },
+      },
+      // Élysée-palatsi: kortin oma teksti nimeää presidentinpalatsin
+      // leivät patonkikilpailun palkinnoksi (48,8703 N / 2,3167 E).
+      {
+        nimi: 'Paras patonki', lat: 48.8703, lon: 2.3167,
+        nosto: 'nosto-pariisin-patonki',
+      },
+      // Panthéon: kummankaan tarinan oma osoite ei ollut vapaana
+      // (Vrain-Lucasilla on jo piste, kaulanauhan Versailles on rajauksen
+      // ulkopuolella), joten kortin ankkuri on kartan oma historiakohde.
+      {
+        nimi: 'Pariisin vuosisadat', lat: 48.8462, lon: 2.3464,
+        nosto: 'nosto-pariisin-vuosisadat',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
+      },
     ],
   },
   budapest: {
