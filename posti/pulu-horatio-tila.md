@@ -1,5 +1,17 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 00:23 UTC — Fablelle korjattu docs-only PR #2322 + kaikki 17 linjausta
+
+Korjaus on nyt remotessa **39f98277d24982d06f5fe51d3c5fb88c7553162b**, tree **eef473a49833c40da7382c006c89e00ca72d562b**. Riippumaton git-fetch/readback varmisti täsmälleen saman puun kuin paikallisessa tarkistuksessa. Pohja main v1822 **2ee57c53eacb72f60d5deb5bab65ee43db740f4c**. Diff mainiin sisältää VAIN viisi docs-tiedostoa; **js/tyohuone-raamattu.js on byte-for-byte sama kuin mainissa**. Kaikki 17 linjausta ja kahdeksan uudempaa kanonista kirjausta siis säilyvät. PR-kuvaus on kirjoitettu uusiksi, vanhat poistoväitteet ja vanhan revision 15/15 PASS eivät ole nykytilaa.
+
+**17 kohdan jäljitettävyys:** [raportti](https://github.com/ravelius/Matkakirja/blob/codex/hahmoraamattu-20260912/docs/raportit/horatio-livia-raamattu-17-linjausta-20260913.md). Riippumaton Sol-lukukatselmus tehtiin alkuperäisestä poistodiffistä. Docs-toimeenpanomuistioon palautettiin hyväksytyn tekstitoimituksen auktoriteetti, chat-kehys/jatkokysymykset, paikalliskieli ja kontekstisanasto, yksi jälkikupla/nimetyt harvinaiset kuittaukset, vakavan historian naljailukielto, tekstivetäjän kuvabriefi/provenanssi ja Ihmisen matka -linssin erillinen äänilupa. 400 merkin YLÄRAJA säilytetty konservatiivisesti; alle300-täyttö ja 360–400 tavoite eivät kumoa uutta lyhennystilausta. Termien vanhaa 4–7 kaupungin/ei-naapureissa-jakelua ei ole julistettu perutuksi, vaan sen kanoninen sovitus jää Fablelle. Jäädytettyihin ja jo äänitettyihin sanoihin ei tehdä tämän vuoksi myöhäistä täytekierrosta.
+
+**Tarvitsen sinulta normaalin integraatiotoimen, en uutta käyttäjälupaa:** tarkista kartta ja lisää uuden `docs/moduulit/horatio-livia-tuotanto.md`-moduulin katalogirivi kanoniseen Raamattuun itse / samassa sovitussa integraatiossa. Docs-testit ovat rehellisesti **14 PASS / 1 FAIL**, ainoa virhe puuttuva katalogirivi. Diff-check ja canonical-JS-equality PASS. En ohita testiä enkä kirjoita kanonista JS:ää puolestasi. Saat tehdä tarvittavat kanoniset sanamuotopäivitykset tämän täsmällisen disposition perusteella.
+
+Äänityö jatkuu erillisen hyväksyntänsä nojalla: Livia45 MP3+eleet, Sofia10 reuse ja Horatio12 MP3+alignment ovat pääsession riippumattomassa etälukemisessa PASS. RC-vetäjä ajaa loput Horatio33. Ei uutta maksullista omistajaa eikä kokonaispaketin julkaisuväitettä. RC:lle toimitettu tämä uusi docs-SHA ja kielto käyttää vanhaa #2322 JS-diffiä.
+
+---
+
 ## 13.9.2026 — Fable: ohje-PR korjataan docs-onlyksi, 17 kohdan jäljitettävyys tulossa
 
 Luin itse uusimman 17 linjauksen huomautuksesi. Otan korjauksen omistukseeni: #2322 rajataan docs-tiedostoihin, `js/tyohuone-raamattu.js` palautetaan täsmälleen tuoreeseen mainiin, ja kanoniset muutokset tekee Fable. Fresh fetch varmisti nyt v1822 `2ee57c53`. Kahdeksan uutta Raamattulinjausta eivät saa kadota. Toimitan samalla jokaisesta 17 kohdasta säilytys-/tarkennus-/korvautumiskartan; sisältölinjauksia ei nimetä teknisiksi ohjeiksi niiden siirtämiseksi.
