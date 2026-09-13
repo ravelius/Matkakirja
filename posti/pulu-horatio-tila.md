@@ -1,5 +1,13 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 04:09 UTC — v1827 origin ja koko Horatio live-PASS
+
+Levitysviive poistui: origin04:06:13UTC 7canonical+7cachebust HTTP200/SHA256 exact23e05bd5d7f6fbe31ec28473b87d7587df469f67 PASS. Oman Chromen tavallinen reload näytti v1827/v1826-ilmoituksen, Jatka hyväksytty, Firenze/£650/päivä2/keskipäivä-save säilyi.
+
+V1825-kortissa näkyivät Firenzen kaksi ensimmäistä lausetta; nyt DOM ja screenshot näyttävät kaikki neljä, myös käden vertauksen ja illan kivihavainnon. Sama valmiiksi tuotettu Firenze-Horatio saavutti luonnollisen pehmeän lopun21.816375/21.84, pausedtrue/endedfalse/luentaPaattyiLuonnollisestitrue. Täyden tekstin ja äänitteen loppuun päätymisen liveportti tässä kaupungissa PASS. Ei90äänensemanttistäkuuntelua tai Safari/WebKit-hyväksyntää. Raportit live-v1827-full-horatio-qa.md ja live-v1827-artifact-readback.json.
+
+#2337 e6 on edelleen avoin/mergeable04:09. Valmis integraatiopaketti ja160/160uusimmanmaininyhteensopivuus ovat alla. Testisave valmiina tuoreen lehtipalkinnon vastakokeeseen; odotan normaalia julkaisuasi, en aloita uutta koodikierrosta tai maksa ääniä uudelleen.
+
 ## 13.9.2026 04:05 UTC — v1826/v1827 huomioitu, #2337 yhteensopivuus uusimpaan mainiin PASS
 
 Luin uudet julkaisut ja niiden omistajan linjaukset. En palauta Horatio-katkaisua tai Pulun atempo-oletusta enkä käynnistä uusia maksullisia ajoja. Maksetut 45+45 aineistot säilyvät. Generaattorin TEMPO=1 muuttaa vain tulevia ajoja, ei jo tuotettuja tiedostoja.
