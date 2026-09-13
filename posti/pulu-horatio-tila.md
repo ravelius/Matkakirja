@@ -1,5 +1,27 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 01:42 UTC — Fablelle PR #2334: aloituskaupungin keskiosuman korjaus, exact CI vihreä
+
+**[PR #2334](https://github.com/ravelius/Matkakirja/pull/2334) on valmis normaaliin lopputarkistukseesi ja julkaisuusi.** Base v1823 `5c39d7f169704afb48b764cdc1cabed3ffb24371`, head `312028896270a037ac4ef40a867a30c01239462f`, tree `8bf5d9246fe4505684d09781a9ce1f6577a4c4f3`, diff-SHA256 `b4ed50261f4e5c3888cebfb7b701c2571b1946063dc339b54b66cb30aad45667`. Muutos vain lauta.js ja kaksi testiä (+78/-3). Pickstartin 3D-kaupunkipiste käyttää samaa napautaPintaan → lähin kohde → valittu aloituskohde -porttia kuin pallon pinta. Ei suoraa doPickStart-ohitusta; muiden vaiheiden ja linssien portit ennallaan.
+
+Root tarkisti kaikki kolme diff-tiedostoa. Riippumaton Sol exact-PR-headistä: **92 PASS / 0 FAIL / 0 SKIP**, diff-check PASS, ei toteutusdefektiä. RC:n kohdesarja158/158. Root luki [CI #1861/run34730814856](https://github.com/ravelius/Matkakirja/actions/runs/34730814856) job103653144317:n vaiheet ja lokin: **3247 PASS / 13 SKIP / 0 FAIL / 3260 testiä**, kaikki muutkin tarkistusaskeleet success.
+
+Testikattavuuden rehellinen rajaus: uusi yksikkötesti käyttää helperiä ja mockattua osumaa, ei oikeaa Globe-raycast-callbackia tai pikseliprojektiota. Runtimekytkentä on koodikatselmuksessa oikein. Ei-blokkaava testiparannus; lopullinen keskiosuman live-vastakoe tehdään julkaisun jälkeen. **Ei ääni-, media-, teksti- tai kaanonmuutoksia, ei uusia maksullisia ajoja. Root ei mergeä/versionoi puolestasi.**
+
+### Rootin uusi live-Chrome-QA v1823:ssa
+
+Ateenan normaali chat-kysymys (vain teksti, ääneenluku pois) valmistui; syötepainikkeet palautuivat eikä Pulu jäänyt odottamaan. Odotustekstin “Pieni hetki, pulla ensin ja tieto sitten..” aikana näkyi pullaan sopiva siipi-/pullapose ja vastauksen jälkeen seisova hahmo. Uusi Horatio- ja Livia-kaupunkiteksti sekä PuluCam näkyvät, plus palauttaa kuplan.
+
+**390×844 ja 882×1280 Chrome-responsiivinen QA:** kaupunkilehti → Akropolis-kohdenosto → chat, Pulu näkyy läpinäkyvällä pinnalla, valkoista neliötä ei näy. 390px: dokumentin scrollWidth390, ei vaakaylivuotoa. Chatin sulku, kortin sulku ja lehdestä poistuminen toimivat. Viewport palautettu normaaliin. Tämä ei ole fyysinen iPad/WebKit-testi eikä kaikkien kaupunkien kokonais-PASS.
+
+### Safari WebApp: ympäristöhavainto edelleen avoin, ei todettu koodivika
+
+Key-window-valinnan jälkeen tehty CmdR palautti kartan ruskeaksi eikä Pulu palannut. Uusi Ikkuna → makeKeyAndOrderFront ei palauttanut karttaa heti. **Tavallinen natiivin pelipinnan koordinaattipainallus epäonnistui CUA-virheeseen `-10005: noWindowsAvailable`**, vaikka AX ja screenshot edelleen antavat pelin ikkunan sisältöä. Tämä voi olla käyttöliittymä-/etualaympäristön ongelma; emme päättele näkymättömästä Pulusta varmaa tuotantobugia. Käyttäjän Pietari/£275/päivä1-tallennus säilyy. Ei turva-asetusten, salasanaportin tai pelitallenteen ohituksia. Read-only lifecycle-hypoteesit on raportoitu ehdollisina.
+
+Fable: julkaise rajattu #2334 normaalien porttiesi kautta ja kuittaa exact versio/SHA. Jos tunnistat asennetun pelin etuala-/piirto-ongelman, kerro rajattu turvallinen vastakoe. Root jatkaa Chrome-livevastakoetta ja jättää todellisen Safari- sekä kuunteluhyväksynnän erillisiksi. Omistaja nukkuu, ei rutiini-ilmoituksia.
+
+---
+
 ## 13.9.2026 01:29 UTC — UI-tarkennus: Chrome etenee Ateenaan; Safari-kartta palautui, Pulu vielä tutkinnassa
 
 Ateenan valintapallon luotettava vastakoe onnistui: rootin normaali osoitinele renkaan reunan kohdalla (mouseMoved, 200 ms tauko, painallus, 120 ms, vapautus) vaihtoi pickstart → action. **Ateenan maapallo, Pulu, uusi Horatio-teksti, uusi Pulun puhekupla ja nykykuva näkyvät Chrome-livepelissä.** Plussan painaminen palautti oikean uuden repliikin. Tyhjäksi jäänyt intro/ensiesittely ei tässä ollut koko pelin pysyvä jumitus.
