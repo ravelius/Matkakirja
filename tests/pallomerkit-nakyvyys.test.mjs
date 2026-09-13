@@ -5,7 +5,7 @@ import { luoMerkit, luoMerkkienNakyvyysTahdistus } from '../js/pallolauta/merkit
 
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 
-function ymparisto(t, siirtyma) {
+function ymparisto(t, siirtyma, { nakyvissa = null, kirjastonNakyvyys = null } = {}) {
   class Luokat {
     constructor() { this.arvot = new Set(); }
     add(...xs) { xs.forEach((x) => this.arvot.add(x)); }
@@ -35,6 +35,7 @@ function ymparisto(t, siirtyma) {
   let paivitysJonossa = false;
   let tweenit = [];
   const edessa = new Set(['nappula', 'kohde:uusi']);
+  const sovelluksenNakyvyys = nakyvissa ?? ((d) => edessa.has(d.avain));
   const pallo = {
     paused: false,
     htmlElementsData(uusi) {
@@ -57,11 +58,15 @@ function ymparisto(t, siirtyma) {
       if (!d.el) {
         d.el = pallo.elementti(d);
         d.__kohdeValmis = true;
-        muunnin?.(d.el, edessa.has(d.avain));
+        muunnin?.(d.el, kirjastonNakyvyys ? kirjastonNakyvyys(d) : edessa.has(d.avain));
       } else if (d.__kohdeValmis) {
         // Retained datum saa saman kohteen tweenin; visibilityModifier
         // ajetaan seuraavalla resumed tweenGroup.update -kierroksella.
-        tweenit.push(() => muunnin?.(d.el, edessa.has(d.avain)));
+        const paivitaNakyvyys = () => muunnin?.(
+          d.el, kirjastonNakyvyys ? kirjastonNakyvyys(d) : edessa.has(d.avain),
+        );
+        if (siirtyma > 0) tweenit.push(paivitaNakyvyys);
+        else paivitaNakyvyys();
       }
     }
   };
@@ -74,11 +79,94 @@ function ymparisto(t, siirtyma) {
     ui: { game: { player: {} }, pawnShape() {} },
     siirtyma,
     asteet: ({ x, y }) => ({ lat: y, lon: x }),
+    nakyvissa: sovelluksenNakyvyys,
   });
   return {
     pallo, merkit, data: () => data, kirjoituksia: () => kirjoituksia,
     kameraKutsuja: () => kameraKutsuja, puraPaivitysjono, piirraHeraamisenFrame,
   };
+}
+
+for (const [nimi, siirtyma] of [['tavallinen', 250], ['reduced motion', 0]]) {
+  test(`ensilataus kestää myöhäisen HTML-digestin ja sen jälkeisen tweenin: ${nimi}`, async (t) => {
+  /*
+   * Oikea Globe.gl 2.46.2 -järjestys:
+   * 1) pointOfView jonottaa renderObjs-kameran uuden paikan,
+   * 2) setPointOfView laskee HTML-näkyvyyden heti vielä vanhasta kamerasta,
+   * 3) Kapsule luo htmlElementsData-oliot 1 ms digestissä,
+   * 4) seuraava renderframe näkee vasta oikean kameran.
+   *
+   * Tämä on v1851-livevian startup-polku, ei pelkän tahdistuswrapperin
+   * testi: mukana ovat oikeat luoMerkit-datumit, myöhäinen DOM-luonti,
+   * kirjaston vanhaksi jäänyt visibilityModifier ja sovelluksen lopullinen
+   * etu/taka-laskenta.
+   */
+  let renderkameraValmis = false;
+  const edessa = new Set(['nappula', 'kohde:uusi']);
+  const e = ymparisto(t, siirtyma, {
+    // Globe.gl:n välitön laskenta käyttää vielä lähtökameraa: kaikki takana.
+    kirjastonNakyvyys: () => false,
+    // Sovelluksen jälkikehys lukee jo renderöijään valmistuneen kameran.
+    nakyvissa: (d) => renderkameraValmis && edessa.has(d.avain),
+  });
+  const alku = { nappula: { x: 0, y: 0 }, kohteet: [
+    { key: 'uusi', x: 1, y: 1 },
+    { key: 'taka', x: 2, y: 2 },
+  ] };
+  e.merkit.paivita(alku);
+  // Ei puraPaivitysjonoa: HTML-elementtejä ei vielä ole, kuten ensilatauksessa.
+
+  const framet = new Map(); let id = 0;
+  const tahdistus = luoMerkkienNakyvyysTahdistus({
+    paivita: e.merkit.tahdistaNakyvyys,
+    requestFrame: (fn) => { framet.set(++id, fn); return id; },
+    cancelFrame: (avain) => framet.delete(avain),
+  });
+  await tahdistus.kameranJalkeen(Promise.resolve(true));
+
+  const eka = [...framet.values()][0]; framet.clear(); eka();
+  assert.equal(framet.size, 1,
+    'puuttuva Kapsule-DOM siirtää lopullisen laskennan seuraavalle framelle');
+  e.puraPaivitysjono();
+  assert.ok(e.data().every((d) => d.el.classList.contains('pallolauta-takana')),
+    'kirjaston vanhaan kameraan jäänyt laskenta toistaa v1851-livevian');
+  renderkameraValmis = true;
+  // Myöhempi tavallinen piirto säilyttää datumit ja jonottaa 250 ms
+  // siirtymässä visibilityModifier-tweenin; reduced motion ajaa heti.
+  e.merkit.paivita(alku);
+
+  const toka = [...framet.values()][0]; framet.clear(); toka();
+  const merkit = Object.fromEntries(e.data().map((d) => [d.avain, d.el]));
+  // Tavallisen päivityksen Kapsule-digest ja tween eivät saa palauttaa
+  // vanhan kameran luokkia tahdistuksen jälkeen.
+  e.puraPaivitysjono();
+  e.piirraHeraamisenFrame();
+  assert.equal(merkit.nappula.classList.contains('pallolauta-takana'), false);
+  assert.equal(merkit['kohde:uusi'].classList.contains('pallolauta-takana'), false);
+  assert.equal(merkit['kohde:taka'].classList.contains('pallolauta-takana'), true,
+    'todella takapuolinen merkki pysyy piilossa');
+  // Rootin vastakoe: tahdistuksen jälkeen valmistuva digest/tween ei saa
+  // enää palauttaa vanhan kameran takana-luokkia.
+  e.puraPaivitysjono();
+  e.piirraHeraamisenFrame();
+  assert.equal(merkit.nappula.classList.contains('pallolauta-takana'), false,
+    'jälkimmäinen digest/tween ei peitä pelaajaa uudelleen');
+  assert.equal(merkit['kohde:uusi'].classList.contains('pallolauta-takana'), false,
+    'jälkimmäinen digest/tween ei peitä vihjettä uudelleen');
+  assert.equal(merkit['kohde:taka'].classList.contains('pallolauta-takana'), true);
+
+  // Myöhemmin ilmestyvä uusi datum kulkee saman visibilityModifierin läpi.
+  e.merkit.paivita({ ...alku, kohteet: [
+    ...alku.kohteet, { key: 'myoha', x: 3, y: 3 },
+  ] });
+  edessa.add('kohde:myoha');
+  e.puraPaivitysjono();
+  const myoha = e.data().find((d) => d.avain === 'kohde:myoha').el;
+  assert.equal(myoha.classList.contains('pallolauta-takana'), false,
+    'myöhemmin syntyvä etupuolen datum näkyy ilman uutta kameraelettä');
+  assert.equal(e.kameraKutsuja(), 0, 'korjaus ei tee fake-panorointia');
+  tahdistus.pura(); e.merkit.pura();
+  });
 }
 
 for (const [nimi, siirtyma] of [['tavallinen', 250], ['reduced motion', 0]]) {
@@ -114,11 +202,11 @@ for (const [nimi, siirtyma] of [['tavallinen', 250], ['reduced motion', 0]]) {
       'tila on vielä jäätynyt ennen seuraavaa framea');
     const ennen = e.kirjoituksia();
     [...framet.values()][0](); framet.clear();
-    // Ensimmäinen resumed frame voi osua ennen Kapsulen 1 ms digestia.
+    // Sovellus korjaa jo olemassa olevat elementit suoraan, eikä
+    // jonota uutta Kapsule-data-ajoa tai visibility-tweeniä.
     e.piirraHeraamisenFrame();
     assert.equal(e.data().find((d) => d.avain === 'kohde:uusi')
-      .el.classList.contains('pallolauta-takana'), true,
-    'ensimmäinen resumed frame saa vielä edeltää kirjaston digestia');
+      .el.classList.contains('pallolauta-takana'), false);
     e.puraPaivitysjono();
     e.piirraHeraamisenFrame();
 
@@ -127,7 +215,8 @@ for (const [nimi, siirtyma] of [['tavallinen', 250], ['reduced motion', 0]]) {
     assert.equal(merkit['kohde:uusi'].classList.contains('pallolauta-takana'), false);
     assert.equal(merkit['kohde:taka'].classList.contains('pallolauta-takana'), true,
       'aidosti takapuolinen merkki säilyy piilossa');
-    assert.equal(e.kirjoituksia(), ennen + 1, 'sama HTML-data invalidioidaan kerran');
+    assert.equal(e.kirjoituksia(), ennen,
+      'näkyvyyskorjaus ei jonota uutta data-digestiä tai tweeniä');
     assert.equal(e.kameraKutsuja(), 0, 'korjaus ei lue eikä muuta kameraa');
     tahdistus.pura(); e.merkit.pura();
   });
@@ -210,6 +299,8 @@ test('pallolaudan herääminen käyttää näkyvyystahdistusta ja purkaa odottav
   assert.match(lauta, /new MutationObserver\(tahdistaLepo\)/,
     'lehden open-attribuutin observer kulkee heräämisen kautta');
   assert.match(lauta, /luoMerkkienNakyvyysTahdistus\(\{ paivita: merkit\.tahdistaNakyvyys \}\)/);
+  assert.match(lauta, /nakyvissa: \(d\) => pisteEdessa\([\s\S]*?d\.__threeObjHtml\?\.position \?\? pallo\.getCoords/,
+    'lopullinen näkyvyys lasketaan valmiista kamerasta merkin oikealla renderpaikalla');
   assert.match(lauta, /return merkkienNakyvyys\.kameranJalkeen\(kamera\.kotiin\(\{ kesto, bbox \}\)\);/,
     'first-load ja saapuminen tahdistavat merkit kamera-ajon jälkeen');
   assert.match(lauta, /maanLaatikko = bbox;\n\s*tahdistaZoomirajat\(\);\n\s*return merkkienNakyvyys\.kameranJalkeen/,
