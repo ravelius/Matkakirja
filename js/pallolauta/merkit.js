@@ -79,12 +79,19 @@ export function luoMerkkienNakyvyysTahdistus({
   cancelFrame = (id) => cancelAnimationFrame(id),
 }) {
   let frame = 0;
+  let elossa = true;
+  const ajasta = () => {
+    if (!elossa) return;
+    if (frame) cancelFrame(frame);
+    frame = requestFrame(() => { frame = 0; paivita(); });
+  };
   return {
-    ajasta() {
-      if (frame) cancelFrame(frame);
-      frame = requestFrame(() => { frame = 0; paivita(); });
+    ajasta,
+    /** Kamera voi vaihtaa etu/taka-geometrian ilman controls changea. */
+    async kameranJalkeen(ajo) {
+      try { return await ajo; } finally { ajasta(); }
     },
-    pura() { if (frame) cancelFrame(frame); frame = 0; },
+    pura() { elossa = false; if (frame) cancelFrame(frame); frame = 0; },
   };
 }
 /*

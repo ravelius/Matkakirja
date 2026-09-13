@@ -36,6 +36,7 @@ import { fileURLToPath } from 'node:url';
 import { kuunteleLivianTilanteita } from '../js/livia-tilanteet.js';
 import {
   AIKALEIMOJEN_VERSIO, LOPPUVARA_MS, LUENNAN_LOPPU_TAPAHTUMA, REAKTION_TARKOITUKSET,
+  LUENTAREAKTIO_UUSINTA_VIIVE_MS, LUENTAREAKTIO_UUSINTOJA,
   aikaleimojenOsoite, kaupunkiOsoitteesta, kytkeLuentareaktiot, kytkeMatkakirjanReaktiot,
   lataaLuentareaktiot, ratkaiseAnkkurit, tarkistaAikaleimat,
 } from '../js/luentareaktiot.js';
@@ -659,6 +660,117 @@ test('äänisidonta: aikaleimat kelpaavat vain sille äänitteelle, joka soi', a
   );
 });
 
+test('valmiiksi soitettu osittainen audiovälimuisti ohitetaan hash-fetchissä ilman cachebusteria', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  t.after(() => { globalThis.fetch = vanhaFetch; });
+  const teksti = 'Sarajevon katot olivat illalla hiljaiset.';
+  const data = aikaleimat(teksti);
+  let mp3Hakuja = 0;
+  globalThis.fetch = async (osoite, asetukset = {}) => {
+    if (String(osoite).includes('.aikaleimat.json')) {
+      return { ok: true, status: 200, json: async () => data };
+    }
+    mp3Hakuja += 1;
+    // Mallintaa Chrome-havainnon: oletushaku osuisi audioelementin
+    // primed 206/Range -vastaukseen ilman ACAO:ta ja kaatuisi CORSissa.
+    if (asetukset.cache !== 'reload') throw new TypeError('MissingAllowOriginHeader');
+    return { ok: true, status: 200, arrayBuffer: async () => new Uint8Array(AANI).buffer };
+  };
+  const url = 'assets/audio/puhe-fokus-matkakirja-sarajevo-cachekoe.mp3';
+  assert.deepEqual(await lataaLuentareaktiot('sarajevo-cachekoe', url, { teksti }), data);
+  assert.equal(mp3Hakuja, 1);
+});
+
+test('ohimenevä CORS-verkkovirhe saa jäähdytetyn uusinnan mutta ei retry-myrskyä', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  const vanhaNyt = Date.now;
+  let nyt = 10_000;
+  Date.now = () => nyt;
+  t.after(() => { globalThis.fetch = vanhaFetch; Date.now = vanhaNyt; });
+  const teksti = 'Miljacka virtasi kaupungin halki.';
+  const data = aikaleimat(teksti);
+  let mp3Hakuja = 0;
+  let aikaleimahakuja = 0;
+  globalThis.fetch = async (osoite, asetukset = {}) => {
+    if (String(osoite).includes('.aikaleimat.json')) {
+      aikaleimahakuja += 1;
+      return { ok: true, status: 200, json: async () => data };
+    }
+    mp3Hakuja += 1;
+    assert.equal(asetukset.cache, 'reload');
+    if (mp3Hakuja === 1) throw new TypeError('tilapäinen CORS-esto');
+    return { ok: true, status: 200, arrayBuffer: async () => new Uint8Array(AANI).buffer };
+  };
+  const url = 'assets/audio/puhe-fokus-matkakirja-sarajevo-retrykoe.mp3';
+  assert.equal(await lataaLuentareaktiot('sarajevo-retrykoe', url, { teksti }), null);
+  // OFF→ON heti perään käyttää jäähyä eikä aloita rinnakkaista myrskyä.
+  assert.equal(await lataaLuentareaktiot('sarajevo-retrykoe', url, { teksti }), null);
+  assert.deepEqual([aikaleimahakuja, mp3Hakuja], [1, 1]);
+  nyt += LUENTAREAKTIO_UUSINTA_VIIVE_MS;
+  assert.deepEqual(await lataaLuentareaktiot('sarajevo-retrykoe', url, { teksti }), data);
+  assert.deepEqual([aikaleimahakuja, mp3Hakuja], [2, 2]);
+  // Onnistunut pari jää tavalliseen muistivälimuistiin.
+  nyt += 60_000;
+  assert.deepEqual(await lataaLuentareaktiot('sarajevo-retrykoe', url, { teksti }), data);
+  assert.deepEqual([aikaleimahakuja, mp3Hakuja], [2, 2]);
+});
+
+test('perushaku ja jäähyltä vapautuva uusinta ovat kumpikin single-flight', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  const vanhaNyt = Date.now;
+  let nyt = 15_000;
+  Date.now = () => nyt;
+  t.after(() => { globalThis.fetch = vanhaFetch; Date.now = vanhaNyt; });
+  let vapauta;
+  let hakuja = 0;
+  globalThis.fetch = () => {
+    hakuja += 1;
+    return new Promise((valmis) => { vapauta = valmis; });
+  };
+  const url = 'assets/audio/puhe-fokus-matkakirja-sarajevo-singleflight.mp3';
+  const lataa = () => lataaLuentareaktiot('sarajevo-singleflight', url, { teksti: 'x' });
+
+  const ensimmaiset = Array.from({ length: 8 }, lataa);
+  assert.equal(hakuja, 1, 'peruskutsut jakavat yhden keskeneräisen haun');
+  vapauta({ ok: false, status: 503 });
+  assert.deepEqual(await Promise.all(ensimmaiset), Array(8).fill(null));
+
+  nyt += LUENTAREAKTIO_UUSINTA_VIIVE_MS;
+  const uusinnat = Array.from({ length: 8 }, lataa);
+  assert.equal(hakuja, 2, 'jäähyltä vapautuvat kutsut varaavat yhden yhteisen uusinnan');
+  vapauta({ ok: false, status: 503 });
+  assert.deepEqual(await Promise.all(uusinnat), Array(8).fill(null));
+  assert.equal(hakuja, 2);
+});
+
+test('ohimenevän sidontavirheen uusinnat päättyvät dokumentissa määrättyyn kattoon', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  const vanhaNyt = Date.now;
+  let nyt = 20_000;
+  Date.now = () => nyt;
+  t.after(() => { globalThis.fetch = vanhaFetch; Date.now = vanhaNyt; });
+  const teksti = 'Sarajevon ilta jäi verkon taakse.';
+  const data = aikaleimat(teksti);
+  let mp3Hakuja = 0;
+  globalThis.fetch = async (osoite) => {
+    if (String(osoite).includes('.aikaleimat.json')) {
+      return { ok: true, status: 200, json: async () => data };
+    }
+    mp3Hakuja += 1;
+    throw new TypeError('tilapäinen verkkovirhe');
+  };
+  const url = 'assets/audio/puhe-fokus-matkakirja-sarajevo-retrykatto.mp3';
+  for (let yritys = 0; yritys <= LUENTAREAKTIO_UUSINTOJA; yritys += 1) {
+    assert.equal(await lataaLuentareaktiot('sarajevo-retrykatto', url, { teksti }), null);
+    nyt += LUENTAREAKTIO_UUSINTA_VIIVE_MS * (2 ** yritys);
+  }
+  assert.equal(mp3Hakuja, 1 + LUENTAREAKTIO_UUSINTOJA);
+  nyt += 60_000;
+  assert.equal(await lataaLuentareaktiot('sarajevo-retrykatto', url, { teksti }), null);
+  assert.equal(mp3Hakuja, 1 + LUENTAREAKTIO_UUSINTOJA,
+    'katon jälkeen uusi OFF→ON ei aloita loputonta hakuketjua');
+});
+
 test('puuttuva aikaleimatiedosto (404) on hiljainen null eikä virhe', async (t) => {
   const vanha = globalThis.fetch;
   let pyyntoja = 0;
@@ -681,6 +793,38 @@ test('rikkinäinen tai tyhjä aikaleimatiedosto ei kaada luentaa', async (t) => 
   assert.equal(await lataaLuentareaktiot('tyhja', 'assets/audio/puhe-fokus-matkakirja-tyhja.mp3', { teksti: 'x' }), null);
   globalThis.fetch = async () => { throw new Error('verkko poikki'); };
   assert.equal(await lataaLuentareaktiot('rikki', 'assets/audio/puhe-fokus-matkakirja-rikki.mp3', { teksti: 'x' }), null);
+});
+
+test('virheellinen JSON on pysyvä hylkäys, mutta rungon verkkokatkos uusitaan rajatusti', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  const vanhaNyt = Date.now;
+  let nyt = 30_000;
+  Date.now = () => nyt;
+  t.after(() => { globalThis.fetch = vanhaFetch; Date.now = vanhaNyt; });
+
+  let syntaksihakuja = 0;
+  globalThis.fetch = async () => {
+    syntaksihakuja += 1;
+    return { ok: true, status: 200, json: async () => { throw new SyntaxError('Unexpected token'); } };
+  };
+  const syntaksiUrl = 'assets/audio/puhe-fokus-matkakirja-json-syntax.mp3';
+  assert.equal(await lataaLuentareaktiot('json-syntax', syntaksiUrl, { teksti: 'x' }), null);
+  nyt += 60_000;
+  assert.equal(await lataaLuentareaktiot('json-syntax', syntaksiUrl, { teksti: 'x' }), null);
+  assert.equal(syntaksihakuja, 1, 'virheellistä JSONia ei haeta uudelleen');
+
+  let runkohakuja = 0;
+  globalThis.fetch = async () => {
+    runkohakuja += 1;
+    return { ok: true, status: 200, json: async () => { throw new TypeError('body stream interrupted'); } };
+  };
+  const runkoUrl = 'assets/audio/puhe-fokus-matkakirja-json-body.mp3';
+  assert.equal(await lataaLuentareaktiot('json-body', runkoUrl, { teksti: 'x' }), null);
+  assert.equal(await lataaLuentareaktiot('json-body', runkoUrl, { teksti: 'x' }), null);
+  assert.equal(runkohakuja, 1, 'runkovirhe kunnioittaa jäähyä');
+  nyt += LUENTAREAKTIO_UUSINTA_VIIVE_MS;
+  assert.equal(await lataaLuentareaktiot('json-body', runkoUrl, { teksti: 'x' }), null);
+  assert.equal(runkohakuja, 2, 'rungon kuljetusvirhe saa uuden yrityksen jäähyn jälkeen');
 });
 
 test('VARTIO: jokaisen pakin reaktioankkurit löytyvät sen omasta luentatekstistä', () => {

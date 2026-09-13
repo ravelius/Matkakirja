@@ -95,8 +95,19 @@ export const LUENNAN_LOPPU_TAPAHTUMA = 'matkakirja:luenta-loppu';
  */
 const HYPPY_MS = 2000;
 
-/** Aikaleimatiedostot osoitteen mukaan; null = tiedostoa ei ole. */
+/** Aikaleimatiedostot osoitteen mukaan; null = pysyvä tai jäähyllä oleva hylkäys. */
 const aikaleimaVarasto = new Map();
+
+/*
+ * OHIMENEVÄ HAKUVIRHE EI SAA JÄÄDÄ DOKUMENTIN LOPPUAJAKSI NULLIKSI.
+ * Esimerkiksi valmiiksi soitettu <audio> voi jättää levylle 206/Range-
+ * vastauksen, jota saman URL:n tavallinen CORS-fetch yrittää käyttää.
+ * Uusi yritys sallitaan jäähyn jälkeen, mutta vain kahdesti: näin
+ * OFF→ON voi toipua ilman sivun latausta eikä katkos synnytä pyyntömyrskyä.
+ */
+export const LUENTAREAKTIO_UUSINTA_VIIVE_MS = 1000;
+export const LUENTAREAKTIO_UUSINTOJA = 2;
+const aikaleimaUusinnat = new Map(); // osoite → { maara, aikaisin }
 
 /**
  * Äänitteen aikaleimatiedoston osoite: sama tiedosto, eri pääte.
@@ -257,14 +268,53 @@ export async function tarkistaAikaleimat(data, { teksti, aani = null } = {}) {
 export async function lataaLuentareaktiot(kaupunkiId, url, { teksti = null } = {}) {
   const osoite = aikaleimojenOsoite(url);
   if (!osoite) return null;
-  if (aikaleimaVarasto.has(osoite)) return aikaleimaVarasto.get(osoite);
+  if (aikaleimaVarasto.has(osoite)) {
+    /*
+     * ÄLÄ awaittaa tässä: keskeneräinen lupaus palautetaan sellaisenaan,
+     * ja ratkennut null tarkistetaan synkronisesti. Muuten kaikki samalla
+     * mikrotehtäväkierroksella jäähyltä vapautuvat kutsut ehtivät poistaa
+     * saman nullin ja käynnistää oman verkkopyyntönsä.
+     */
+    const tallessa = aikaleimaVarasto.get(osoite);
+    if (tallessa !== null) return tallessa;
+    const uusinta = aikaleimaUusinnat.get(osoite);
+    if (!uusinta || uusinta.maara > LUENTAREAKTIO_UUSINTOJA || Date.now() < uusinta.aikaisin) {
+      return null;
+    }
+    aikaleimaVarasto.delete(osoite);
+  }
+  let ohimeneva = false;
   const lupaus = (async () => {
     try {
       const vastaus = await fetch(osoite);
-      if (!vastaus.ok) return null;
-      const data = await vastaus.json();
-      const aaniVastaus = await haeAani(url);
-      if (!aaniVastaus?.ok) return { syy: 'äänitettä ei saatu sidontaa varten' };
+      if (!vastaus.ok) {
+        const tilapainen = vastaus.status === 429 || vastaus.status >= 500;
+        return tilapainen ? { syy: `aikaleimahaku vastasi ${vastaus.status}`, ohimeneva: true } : null;
+      }
+      let data;
+      try {
+        data = await vastaus.json();
+      } catch (virhe) {
+        /*
+         * Kelvoton JSON ei parane uudella haulla. Sen sijaan vastauksen
+         * rungon lukemisen verkkokatkos (esim. TypeError) voi parantua.
+         */
+        const syntaksivirhe = virhe instanceof SyntaxError || virhe?.name === 'SyntaxError';
+        return {
+          syy: `aikaleimatiedoston luku ei onnistunut (${virhe?.message ?? virhe})`,
+          ohimeneva: !syntaksivirhe,
+        };
+      }
+      /*
+       * HASH-HAKU OHITTAA AUDIOELEMENTIN OSITTAISEN LEVYVÄLIMUISTIN.
+       * Ei cachebusteria eikä turvaportin ohitusta: URL pysyy samana,
+       * mutta selain hakee kokonaisen CORS-vastauksen palvelimelta.
+       */
+      const aaniVastaus = await haeAani(url, { cache: 'reload' });
+      if (!aaniVastaus?.ok) {
+        const tilapainen = !aaniVastaus || aaniVastaus.status === 429 || aaniVastaus.status >= 500;
+        return { syy: 'äänitettä ei saatu sidontaa varten', ohimeneva: tilapainen };
+      }
       const tavut = new Uint8Array(await aaniVastaus.arrayBuffer());
       const sha256 = await laskeSha256(tavut);
       if (!sha256) return { syy: 'SHA-256 ei ole käytettävissä' };
@@ -273,12 +323,13 @@ export async function lataaLuentareaktiot(kaupunkiId, url, { teksti = null } = {
       });
       return tulos.ok ? data : { syy: tulos.syy };
     } catch (virhe) {
-      // Verkko poikki tai virheellinen JSON: luenta soi ilman reaktioita.
-      return { syy: `lataus ei onnistunut (${virhe?.message ?? virhe})` };
+      // Kuljetus tai äänivastauksen rungon luku katkesi: rajattu uusinta.
+      return { syy: `lataus ei onnistunut (${virhe?.message ?? virhe})`, ohimeneva: true };
     }
   })().then((tulos) => {
     // Hylkäyksen syy kerrotaan kerran, kehittäjän koneella.
     if (tulos && tulos.syy) {
+      ohimeneva = Boolean(tulos.ohimeneva);
       if (kehitystila()) console.warn(`luentareaktiot: aikaleimat hylätty (${kaupunkiId}): ${tulos.syy}`);
       return null;
     }
@@ -292,6 +343,18 @@ export async function lataaLuentareaktiot(kaupunkiId, url, { teksti = null } = {
   aikaleimaVarasto.set(osoite, lupaus);
   const data = await lupaus;
   aikaleimaVarasto.set(osoite, data);
+  if (data) {
+    aikaleimaUusinnat.delete(osoite);
+  } else if (ohimeneva) {
+    const edellinen = aikaleimaUusinnat.get(osoite)?.maara ?? 0;
+    const maara = edellinen + 1;
+    aikaleimaUusinnat.set(osoite, {
+      maara,
+      aikaisin: Date.now() + LUENTAREAKTIO_UUSINTA_VIIVE_MS * (2 ** (maara - 1)),
+    });
+  } else {
+    aikaleimaUusinnat.delete(osoite);
+  }
   if (!data && kehitystila()) {
     console.warn(`luentareaktiot: aikaleimoja ei löydy (${kaupunkiId}) — reaktioita ei ammuta.`);
   }

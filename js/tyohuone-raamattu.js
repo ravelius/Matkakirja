@@ -6979,7 +6979,13 @@ export const RAAMATTU = {
           + 'esta sita. Bussi (50 p) vie suoraan seuraavaan kaupunkiin '
           + 'ilman noppaa ja ilman aikakulua; bussi ja lento valitaan '
           + 'Liiku-napista ennen heittoa. Kumoaa eran 8 (v1845) muutoksen, '
-          + 'jossa bussilippuun riittava raha esti automaattisen heiton.',
+          + 'jossa bussilippuun riittava raha esti automaattisen heiton.'
+          + ' TILA 13.9.2026 klo 16.30 UTC: Ranska + Pariisi -pilotti '
+          + 'mainissa v1850 (erat 1c, 3, 4, 5, 6, 7, 8) ja Ranskan '
+          + 'tasoituslaatat amparissa (variversio 2026-09-13-tasoitus, '
+          + '1195 laattaa); omistaja katselmoi pilotin ennen monistusta. '
+          + 'Avoimet: panorointia ei ole rajattu maan laatikkoon; '
+          + 'Marseillen lehti ohut; tyopoydan latauskaistaleet.',
         'Saapumiskortti: luettu matkakirjamerkintä + esittely '
           + 'kuvineen.',
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
