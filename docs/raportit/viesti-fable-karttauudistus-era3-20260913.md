@@ -197,32 +197,41 @@ kakkosesta — juuri niin kuin `avaaMaalehti` latoo pinonsa.
 
 ## 4. Mitä kuvissa NÄIN
 
-`docs/raportit/kuvat/karttauudistus-3-390.png` ja
-`…-1400.png` (rajattu maan eteläreunaan ja paneeliin; koko ruutu olisi
-PNG:nä yli kuvakaton).
+`docs/raportit/kuvat/karttauudistus-3-390.png` ja `…-1400.png`
+(kaksi kuvaa). Kuvat on RAJATTU maan eteläreunaan ja paneeliin: koko
+ruutu on PNG:nä 390 px:llä 416 kt ja 1400 px:llä 782 kt, ja raportin
+kuvakatto on 400 kt. Rajaus lasketaan mitatuista laatikoista.
 
-**390 px.** Paneeli on kartan päällä Ranskan eteläpuolella, Pyreneiden
-ja Baleaarien korkeudella, ja se on selvästi pelin muuta pergamenttia
-tummempi läpikuultava laatta. Vasemmassa reunassa lukee **RANSKA**
-kullanvärisenä; sen alla neljä lukua kahdessa sarakkeessa (VÄKILUKU
-69 milj. · 23./195, PINTA-ALA 610 000 km² · 45./1…, DEMOKRATIA 0,80 ·
-V-Dem 9./…, KESKITULO 45 000 $/v 23./189) ja oikeassa alanurkassa
-**Lisää**-nappi. Teksti on luettavaa ilman zoomausta. Kartalla näkyvät
-samaan aikaan Lontoo, Dublin, Madrid, Barcelona ja Tanger omine
-niminaan, eli paneeli ei ole vienyt tilaa kaupunkinimiltä.
+**390 px.** Paneeli on kartan päällä Ranskan eteläpuolella, Madridin ja
+Barcelonan korkeudella, tummana läpikuultavana laattana. Vasemmassa
+laidassa lukee **RANSKA** kullanvärisenä, sen alla neljä lukua kahdessa
+sarakkeessa — VÄKILUKU 69 milj. (23./195), PINTA-ALA 610 000 km²
+(45./1…), DEMOKRATIA 0,80 · V-Dem (9./…), KESKITULO 45 000 $/v
+(23./189) — ja oikeassa laidassa **Lisää**-nappi omassa kehyksessään.
+Teksti on luettavaa ilman zoomausta, ja pienempi sija-luku on
+haaleampi kuten maataulussakin. Kartalla näkyvät samaan aikaan
+Edinburgh, Dublin, Lontoo, Madrid, Barcelona ja Tanger omine
+niminään, eli paneeli ei ole vienyt tilaa kaupunkinimiltä. Oikeassa
+alanurkassa on pöllö entisellä paikallaan.
 
-**Se mitä NÄIN ja mikä on ongelma:** samassa kuvassa on pelin oma
-saapumiskortti — iso seepiavalokuva Pariisin Oopperasta ja kuvateksti
-*"Pariisi 1873: Ooppera harjoitteli juhlapukuaan."* — ja se peittää
-Ranskan kokonaan sekä osuu paneelin yläreunan päälle. Kortti on pelin
-UI:ta (`.rail`), joka on merkkikerroksen PÄÄLLÄ. Paneeli itse on
-näkyvissä ja luettavissa, mutta kapealla ruudulla nämä kaksi ovat
-päällekkäin. Ks. luku 6, avoin asia 1.
+**Se mitä NÄIN ja mikä on ongelma:** samassa kuvassa on
+matkapäiväkirjan lappu (`.fact-card`) — iso seepiavalokuva Pariisin
+Oopperasta ja kuvateksti *"Pariisi 1873: Ooppera harjoitteli
+juhlapukuaan."* Se peittää Ranskan lähes kokonaan ja sen kuvateksti
+menee paneelin RANSKA-otsikon päälle. Lappu on pelin omaa UI:ta, joka
+asettuu sille kartan nurkalle, jossa on eniten merta (js/kartta.js
+`placeFactCard`) — pallolaudalla Pariisissa se osuu keskelle ruutua.
+Paneeli itse on kokonaan näkyvissä ja luettavissa, mutta kapealla
+ruudulla nämä kaksi ovat päällekkäin. Ks. luku 6, avoin asia 1.
 
-**1400 px.** Sama kaluste kaksinkertaisena (596 px), maan eteläreunan
-alla, ja työpöytäruudulla saapumiskortti on sivussa eikä osu paneeliin.
-Kortin typografia kestää skaalauksen: teksti on 2× isompaa eikä sumene,
-koska kyseessä on CSS-muunnos oikealle tekstille eikä bittikartta.
+**1400 px.** Sama kaluste kaksinkertaisena (596 px) maan eteläreunan
+alla. Kortin typografia kestää skaalauksen: teksti on kaksi kertaa
+isompaa eikä sumene, koska kyseessä on CSS-muunnos oikealle tekstille
+eikä bittikartta. **Myös työpöytäruudulla päiväkirjan valokuva on
+paneelin päällä** — se on siis leveän ruudunkin ongelma, ei vain
+puhelimen; tässä kuvassa siitä näkyy paneelin ylin kolmannes valokuvan
+alta ja alempi kaksi kolmannesta puhtaana. Kuvan alalaidassa on pelin
+MATKUSTA-nappi.
 
 ## 5. Portit
 
