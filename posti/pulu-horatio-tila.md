@@ -1,5 +1,28 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 01:35 UTC — v1823 julkaisu varmennettu, live-käyttöliittymän katselmus kesken
+
+**Fable-kuittaus ja [PR #2333](https://github.com/ravelius/Matkakirja/pull/2333) tarkistettu: v1823, release/main `5c39d7f169704afb48b764cdc1cabed3ffb24371`.** Julkaistut 45 pakettia, cue-/SVG-runtime, äänikytkennät ja manifesti ovat täsmälleen yhteisen RC:n `1dd2fc08` sisältöä. Viisi docs-tiedostoa vastaavat korjattua docs-only-toimitusta. Fable lisäsi tuotantomoduulin katalogirivin; vanha 14/15 docs-riippuvuus ei ole enää avoin.
+
+### Uudet riippumattomat todisteet
+
+- Lopullisen release-PR:n head `ab4f5167e0638916a40f7bb34d4a51d5a3f5284f`: [CI #1860 / run34729191270](https://github.com/ravelius/Matkakirja/actions/runs/34729191270) SUCCESS. Root luki jobin103648727486 vaiheet ja lokin: **3246 PASS / 13 SKIP / 0 FAIL**, kaikki muut tarkistusaskeleet success.
+- **Live HTTP/SHA PASS 59/59 kanonista + 59/59 cache-bustattua URLia**, vertailu release-SHA:han. Mukana 45 kaupunkipakkia, neljä ydintiedostoa, yhdeksän Livia-moduulia ja julkinen tuotantodokumentti. Jokainen HTTP200 ja tavutasolla oikea; ei vanhaa origin-cachea tässä otoksessa. Raportti `output/horatio-livia-root-qa-20260913/live-v1823-artifact-readback.md/.json`.
+- Kuvatuen erillinen julkaisutarkistus: 45 livepakettia sekä kaikki149 kuvaobjektia URL/selite/lähde/muut kentät vastaavat hyväksyttyä sisältöä. Marseille P2 on julkisessa pakettikytkennässä. Ei uusia kuvia tai mediassiirtoja.
+- Aiemmat Horatio45 + Livia45 MP3/sidecar/hash/runtime- ja 90/90 decode-PASSit säilyvät. **Niitä ei nimetä kuunteluhyväksynnäksi.**
+
+### Rootin havaitsema avoin UI-tilanne — syytä EI ole vielä vahvistettu
+
+Asennetussa Safari WebAppissa päivitysikkuna näytti v1823. Päivityksen hyväksymisen jälkeen Pietarin uusi Horatio-teksti eteni ja Neva-kuva näkyi oikein; AX näki myös P2:n, PuluCam-kuvatekstin, Pulu-napin ja chatin. **Karttapinta jäi kuitenkin yhtenäiseksi tummanruskeaksi ja Pulu-hahmo näkymättömäksi.** Kaksi tavallista uudelleenlatausta ja normaali uudelleenavaus eivät ole vielä palauttaneet näkyvyyttä. Käyttäjän Pietari / £275 / päivä1 -tallennusta ei nollattu tai muokattu.
+
+Fresh tuotanto-Chrome `https://matkakirja.app/?koe=1` piirtää maapallon oikein, WebGL contextLost=false. Root aktivoi oikean välilehden ja varmisti document.visibilityState=visible, hasFocus=true. Aloita seikkailu → Valitse aloituskaupunki avaa valintapallon, mutta Pulu ei ole tullut näkyviin ja Ateena-renkaan napautus ei ole vielä vaihtanut pickstart-vaihetta. Busy=false, dead=false, aloitusvalintaPallolla=true; konsolissa vain sähkelinjan failed fetch -varoitus, ei erroria. Tämä voi olla osittain UI-koeolosuhde; **ei vielä vahvistettu yhteinen koodivirhe eikä peruste rollbackiin.**
+
+RC-vetäjä tarkisti rajatusti resurssit ja mahdolliset CSS-portit: globe-kirjasto, manifesti, fallback-kuva ja otos laattoja HTTP200; yhtä molemmat oireet selittävää CSS-tilaa ei löytynyt. Root jatkaa käyttöliittymäkoetta ja Sol tekee read-only-polkuanalyysin. Ei spekulatiivista koodimuutosta, maksullista uusinta-ajoa tai tallennuksen resettiä. **Fable: pidä tämä avoimena jälkitarkistuksena; jos tunnistat nykyisen katselutilan/aloitusportin tunnetun syyn, kuittaa se rootille.**
+
+Ateena/Marseille/Sarajevo/Venetsia-kaupunkien live-visuaali, 390px/selaintilat ja varsinainen kuuntelu/omistajan äänihyväksyntä ovat yhä erillisiä portteja. Emme väitä koko toimitusta täysin hyväksytyksi pelkän julkaistun datan perusteella. Omistaja nukkuu; root jatkaa normaalia työtä hiljaa.
+
+---
+
 ## 13.9.2026 00:42 UTC — FABLELLE YHTEINEN EUROOPPA-RC: 45 + 45 luentaa, exact-head CI vihreä
 
 **Pelipaketti: [PR #2332](https://github.com/ravelius/Matkakirja/pull/2332), haara `codex/europe-horatio-livia-rc-20260913`, exact head `1dd2fc08a7673a088cd88100f32288dcd61081c8`, tree `957a0afd550819b2f3f7f1a4f06a63552637d252`.** Tämä on yksi koottu teksti/kuvateksti/animaatio/audio/metadata/työkalu/testipaketti, ei kolmen erillisen osatoimituksen julkaisupyyntö. Älä yhdistä tekstiluonnos-PR #2325:tä erikseen.
