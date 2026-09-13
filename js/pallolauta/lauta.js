@@ -89,7 +89,7 @@ import {
   PALLOKAMERAN_AJO_MS, PALLOLAUDAN_LEVEYS, PALLO_FOV, PALLO_KORKEUS_MAX,
   PALLON_SALLITTU_VENYTYS, laattojenVenytys, luoPallokamera,
 } from './kamera.js';
-import { MERKIN_KORKEUS, luoMerkit } from './merkit.js';
+import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
 import { luoNimet, nimibudjetti } from './nimet.js';
 import {
   KOHDEMERKIN_RUUTU_PX, NOSTOJEN_KATTO, VALON_KORKEUS, VALON_SADE, luoNostot,
@@ -1215,9 +1215,13 @@ export async function avaaPallolauta(ui) {
    */
   let siirtymaAjastin = 0;
   let tahdistaSiirtymanJalkeen = () => {};
+  let merkkienNakyvyys = { ajasta() {}, pura() {} };
   const heraa = () => {
     if (!tauolla) return;
     tauolla = false;
+    // Jono ennen Globe.gl:n omaa ensimmäistä herätysframea: datan
+    // invalidointi ehtii sen päivitysjonoon heti heräämisen alussa.
+    merkkienNakyvyys.ajasta();
     pallo.resumeAnimation?.();
     tahdistaSiirtymanJalkeen();
   };
@@ -1440,6 +1444,7 @@ export async function avaaPallolauta(ui) {
   const merkit = luoMerkit({
     pallo, ui, siirtyma, asteet: pallonAsteet, kotelo,
   });
+  merkkienNakyvyys = luoMerkkienNakyvyysTahdistus({ paivita: merkit.tahdistaNakyvyys });
   const reitit = luoReitit({
     pallo, ui, siirtyma, asteet: pallonAsteet, siirtymat,
   });
@@ -2808,6 +2813,7 @@ export async function avaaPallolauta(ui) {
       kamera.pysaytaKameraAjo();
       eleet.pura();
       litistaja.pura();
+      merkkienNakyvyys.pura();
       merkit.pura();
       noppaTakaisin();
       lauta.linssit?.pura();

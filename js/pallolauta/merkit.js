@@ -66,6 +66,27 @@ export const KOHDEMERKIN_NIMI_RAKO_PX = 8;
  * (.pallolauta-huomio, --kulta) — täällä on vain mitta.
  */
 export const KOHDEMERKIN_HUOMIO_PX = 54;
+
+/**
+ * Nukkuvan Globe.gl-silmukan HTML-merkit tarvitsevat yhden uuden
+ * datalukeman heräämisen jälkeen, jotta kirjasto ajaa etu/taka-
+ * näkyvyysmuuntimen myös ilman OrbitControlsin change-tapahtumaa.
+ * Ajoitetaan kirjoitus seuraavan piirtoframen alkuun; kameraan ei kosketa.
+ */
+export function luoMerkkienNakyvyysTahdistus({
+  paivita,
+  requestFrame = (fn) => requestAnimationFrame(fn),
+  cancelFrame = (id) => cancelAnimationFrame(id),
+}) {
+  let frame = 0;
+  return {
+    ajasta() {
+      if (frame) cancelFrame(frame);
+      frame = requestFrame(() => { frame = 0; paivita(); });
+    },
+    pura() { if (frame) cancelFrame(frame); frame = 0; },
+  };
+}
 /*
  * MERKKI ON PINNALLA, EI PINNAN YLLÄ (omistajan vikailmoitus 7.9.2026,
  * iPad, sanatarkasti: *"nyt kun kartta on pallona, niin kohdepisteet ja
@@ -362,6 +383,8 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null }) {
   return {
     paivita,
     aseta,
+    /** Pakota Globe.gl laskemaan HTML-merkkien etu/taka-tila uudelleen. */
+    tahdistaNakyvyys: tyonna,
     laatikot,
     maara: (osa) => (osat.get(osa) ?? []).length,
     /** Näkyvät kohteet osumatestiä varten ({ key, lat, lng, city }). */
