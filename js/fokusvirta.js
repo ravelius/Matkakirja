@@ -88,7 +88,7 @@ import {
   linssiEstaa, nielaiseSulkevaNapautus, polloNimilappu, suurennoksenMitat,
 } from './ui-apurit.js';
 import {
-  asetaTehtavakuittaus, fokusAarreAvattu, fokusAarreVastattu,
+  asetaTehtavakuittaus, fokusAarreAvattu,
   // Sähketehtävän oma pullakauppa käyttää samaa nimitaulua ja samaa
   // kaksoisnapautuskaavaa kuin aarteen pullavinkki (ks. PULLA SÄHKEESSÄ).
   pullaOstosnappi, pullanNimi,
@@ -165,6 +165,7 @@ import {
   POLLO_KEHITTAJA_OTSAKE,
   arvoMietinta,
   polloPuheenvuoro,
+  polloVihje,
 } from './pollo.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 /*
@@ -5414,6 +5415,118 @@ function paljastaSahkeAarre(ui, city, data) {
  * Lisäksi lehden avautuessa näytettävä pöllön vinkki (alempana).
  */
 
+/* ============ AARREPISTE: LUKKO JA SEN AVAIN (erä 7) ==============
+ *
+ * Raamattu (KARTTAUUDISTUS, omistaja 13.9.2026 sanatarkasti):
+ * *"Aarretehtava voi olla jatkossa suoraan kartalla nakyvissa
+ * vihreana pisteena ja sita voi heti yrittaa, kunhan on ratkaissut
+ * vahintaan kaksi mita tahansa mini tehtavaa nostoissa. Ensimmaisen
+ * kaupungin kohdalla pulu voisi kertoa etta 'loytamalla kartalta
+ * kaksi kysymysta ja vastaamalla niihin oikein saat vihjeen aarteen
+ * sijainnista' tms. Pelaaja voi myos halutessaan jatkaa matkaa ilman
+ * loytamatta aarretta."*
+ *
+ * KAKSI AVAINTA SAMAAN LUKKOON (TAI-ehto), ei yhtä:
+ *
+ *   1. UUSI — kaksi ratkaistua NOSTON minikysymystä koko matkalla
+ *      (game.nostotehtavatRatkaistu, erä 6). Laskuri on GLOBAALI eikä
+ *      kaupunkikohtainen: omistajan sana on *"kaksi mita tahansa mini
+ *      tehtavaa"*, ja kaupunkikohtainen laskuri lukitsisi pelaajan
+ *      kaupunkiin, jossa nostoja ei satu olemaan kahta.
+ *   2. VANHA — lehden aarteen avaava kysymys tai Livialle ostettu
+ *      pulla (fokusAarreAvattu). Tämä EI poistu: vanha tallennus, jossa
+ *      aarre on jo avattu lehden kautta mutta laskuri on 0, pysyy
+ *      auki — muuten kesken oleva peli jumittuisi taaksepäin.
+ *
+ * Kumpi tahansa riittää, eikä kumpikaan sammuta toista. Aarteen oma
+ * kysymys, laatan palkkio ja lehtipalkintoketju ovat ennallaan; erä 7
+ * koskee VAIN sitä, milloin vihreä piste on napautettavissa.
+ */
+
+/** Montako noston minikysymystä avaa aarrepisteen (Raamattu: kaksi). */
+export const NOSTOTEHTAVIA_AARREPISTEESEEN = 2;
+
+/**
+ * Lukitun pisteen ruudunlukijalappu ja napautuksen vastaus.
+ * Sama lause molemmissa, jotta kuultu ja luettu peli kertovat saman.
+ */
+export const AARREPISTEEN_LUKKOLAPPU = 'ratkaise kaksi kysymystä kartalta';
+
+/** Lukitun pisteen napautuksen vastaus pulun kuplassa. */
+export const AARREPISTEEN_LUKKOVIESTI = 'Ratkaise kaksi kysymystä kartalta.';
+
+/** Pulun ohje ensimmäisessä kaupungissa (omistajan sanamuoto, ks. yllä). */
+export const AARREPISTEEN_OHJE = 'Löytämällä kartalta kaksi kysymystä ja '
+  + 'vastaamalla niihin oikein saat vihjeen aarteen sijainnista.';
+
+/** Kuinka kauan ohje odottaa saapumisen rauhoittumista. */
+const AARREPISTEEN_OHJE_VIIVE_MS = 2500;
+
+/**
+ * LUKITUN PISTEEN NAPAUTUS SANOO, MIKSI SE ON LUKOSSA.
+ *
+ * Napautus ei saa olla mykkä: himmeä piste ilman vastausta näyttäisi
+ * rikkinäiseltä. Kupla on sama pulun ohjekupla kuin karttaohjeella
+ * (polloVihje) — ei kertalippua, koska tämän pyytää pelaaja itse.
+ *
+ * @returns {boolean} näkyikö kupla
+ */
+export function fokusvirtaAarrepisteLukko(ui) {
+  if (typeof document === 'undefined' || !polloNappi()) return false;
+  polloVihje(AARREPISTEEN_LUKKOVIESTI);
+  return true;
+}
+
+/**
+ * SAAKO AARREPISTEEN NAPAUTTAA JUURI NYT (ks. lohko yllä).
+ *
+ * Luetaan yhdestä paikasta, jotta piirto (js/fokuspiste.js,
+ * js/pallolauta/nostot.js) ja napautus ovat aina samaa mieltä.
+ */
+export function fokusAarrepisteAuki(ui, city) {
+  if (fokusAarreAvattu(ui, city)) return true;
+  const ratkaistu = Number(ui?.game?.nostotehtavatRatkaistu);
+  return Number.isFinite(ratkaistu) && ratkaistu >= NOSTOTEHTAVIA_AARREPISTEESEEN;
+}
+
+/**
+ * PULUN KARTTAOHJE KERRAN PER TALLENNUS.
+ *
+ * Portit järjestyksessä — kertalippu VIIMEISENÄ, kuten lehtivinkillä
+ * (fokusvirtaLehtivinkki): ohje, joka ei koskaan näkynyt, kuuluu yhä
+ * ensi kerralle.
+ *
+ *   1. selain on olemassa ja kertalippu on käyttämättä,
+ *   2. kaupungissa on lukittu aarrepiste juuri nyt (eli ohjeella on
+ *      kohde, jota osoittaa) — tämä tekee "ensimmäisestä kaupungista"
+ *      itsestään sen ensimmäisen kaupungin, jossa asia on ajankohtainen,
+ *   3. pulun nappi on ruudulla (polloVihje piirtää kuplan sen viereen).
+ *
+ * Ohje ei ole portti mihinkään: se ei estä napautusta, matkaa eikä
+ * mitään muutakaan. Siksi se saa myös jäädä väliin ilman seurauksia.
+ *
+ * @returns {boolean} näytettiinkö ohje nyt
+ */
+export function fokusvirtaAarrepisteOhje(ui, city) {
+  if (FOKUSVIRTA_KORTIT || typeof document === 'undefined') return false;
+  if (!ui?.game || ui.game.aarrepisteOhjeNahty) return false;
+  const piste = city ? fokusvirtaKohtaamispiste(ui, city) : null;
+  if (!piste?.lukittu) return false;
+  if (ui.aarrepisteOhjeAjastin) return false;
+  ui.aarrepisteOhjeAjastin = setTimeout(() => {
+    ui.aarrepisteOhjeAjastin = null;
+    // Tilanne on voinut vaihtua viiveen aikana: toinen kaupunki, avattu
+    // piste tai kadonnut pulu — silloin lippu ei kulu.
+    if (ui.dead || ui.game?.aarrepisteOhjeNahty) return;
+    if (ui.game?.cityOf?.()?.id !== city.id) return;
+    if (!fokusvirtaKohtaamispiste(ui, city)?.lukittu) return;
+    if (!polloNappi()) return;
+    polloVihje(AARREPISTEEN_OHJE);
+    ui.game.merkitseAarrepisteOhje();
+  }, AARREPISTEEN_OHJE_VIIVE_MS);
+  return true;
+}
+
 /**
  * KOHTAAMISPAIKKA KARTALLA — ja saako piste palaa juuri nyt.
  *
@@ -5428,30 +5541,50 @@ function paljastaSahkeAarre(ui, city, data) {
  * kuin kohdenostoilla — lauta, jolta koordinaatteja ei ole, ei saa
  * pistettä (mieluummin piirtämättä kuin väärään paikkaan).
  *
- * NELJÄ EHTOA, KAIKKI PAKOLLISET:
+ * KOLME EHTOA NÄKYMISELLE, KAIKKI PAKOLLISET:
  *   1. kevyt kulku päällä (raskaassa virrassa kohtaaminen on kortissa),
  *   2. kaupungilla on virtasisältö ja kohtaamispiste tälle laudalle,
- *   3. laatta on yhä kääntämättä (piste sammuu kun aarre on avattu),
- *   4. jokin lehden aarteen avaavista kysymyksistä on ratkaistu oikein
- *      (nimetty tehtävä TAI kulttuurivisa — omistaja 25.8.2026).
+ *   3. laatta on yhä kääntämättä (piste sammuu kun aarre on löydetty).
  *
- * @returns {{x:number,y:number,nimi:string}|null}
+ * ── NELJÄS EHTO EI ENÄÄ PIILOTA, VAAN LUKITSEE (erä 7, 13.9.2026) ──
+ *
+ * Raamattu (KARTTAUUDISTUS, omistaja 13.9.2026 sanatarkasti):
+ * *"Aarretehtava voi olla jatkossa suoraan kartalla nakyvissa
+ * vihreana pisteena ja sita voi heti yrittaa, kunhan on ratkaissut
+ * vahintaan kaksi mita tahansa mini tehtavaa nostoissa."*
+ *
+ * Piste oli ennen NÄKYMÄTÖN, kunnes lehden aarteen avaava kysymys
+ * ratkesi. Nyt se on kartalla alusta asti ja kertoo itse, mitä siltä
+ * puuttuu: lukittuna se on himmeä eikä tuiki, ja napautus sanoo, mitä
+ * pelaajan pitää tehdä (js/fokuspiste.js avaaFokuspiste). Näin
+ * aarretehtävä on osa karttaa eikä lehden takana oleva yllätys — ja
+ * pelaaja saa jatkaa matkaa ilman sitä, koska Liiku-nappi ei kysy
+ * pisteeltä mitään.
+ *
+ * `lukittu` on siis PINNAN tieto: piirto ja napautus lukevat sen, eikä
+ * kukaan muu joudu laskemaan ehtoa uudestaan (fokusAarrepisteAuki).
+ *
+ * @returns {{x:number,y:number,nimi:string,teko:string,lukittu:boolean}|null}
  */
 export function fokusvirtaKohtaamispiste(ui, city) {
   if (!fokusvirtaKohtaaminenPisteessa(ui, city)) return null;
-  if (!fokusAarreAvattu(ui, city)) return null;
   const data = fokusvirtaSisalto(ui, city);
   const paikka = data.kohtaamispiste?.laudat?.[ui.game?.pack?.id];
+  const lukittu = !fokusAarrepisteAuki(ui, city);
   /*
    * TEKO KERTOO, MITÄ PISTEEN TAKANA ON. Ruudunlukija sanoo pisteestä
    * "tapaa paikallinen" — sähkekaupungissa (Tukholma) sen takana ei
    * ole ketään tavattavaa vaan pöllön sähke, ja lappu kertoo sen.
+   * Lukittuna lappu kertoo lukon eikä lupaa kohtaamista, jota napautus
+   * ei vielä avaa.
    */
+  const teko = data.sahketehtava ? 'lue pöllön sähke' : 'tapaa paikallinen';
   return {
     x: paikka.x,
     y: paikka.y,
     nimi: data.kohtaamispiste?.nimi ?? city.name,
-    teko: data.sahketehtava ? 'lue pöllön sähke' : 'tapaa paikallinen',
+    teko: lukittu ? AARREPISTEEN_LUKKOLAPPU : teko,
+    lukittu,
   };
 }
 
@@ -5467,14 +5600,14 @@ export function fokusvirtaKohtaamispiste(ui, city) {
  * laattakysymykseen pääsee lehden tehtävänapista ja laatasta — piste on
  * nyt kolmas ovi samaan huoneeseen, ei ainoa.
  *
- * UMPIKUJAN ESTO. Lehden kysymykseen vastataan kerran, joten VÄÄRIN
- * vastannut ei voi enää sytyttää pistettä siitä kysymyksestä. Vasta kun
- * KAIKKI kaupungin aarteen avaavat kysymykset on käytetty eikä yksikään
- * osunut (js/fokustehtavat.js fokusAarreVastattu), lehden alanappi
- * palaa — jottei yksi väärä vastaus jättäisi aarretta ikuisesti
- * tavoittamattomiin. Mitta on "kuunneltu", ei "osattu" — sama oppi
- * kuin minitehtävillä (js/game.js actionMinitehtava: vastataan kerran,
- * raha vain oikeasta).
+ * UMPIKUJAN ESTO — ERÄ 7 PURKI SEN JUURESTA (13.9.2026). Lehden
+ * kysymykseen vastataan kerran, joten VÄÄRIN vastannut ei voinut enää
+ * sytyttää pistettä siitä kysymyksestä, ja kun kaikki kaupungin
+ * avaajat oli käytetty (js/fokustehtavat.js fokusAarreVastattu), piste
+ * katosi kokonaan. Nyt aarteen avaa myös kaksi NOSTON minitehtävää
+ * (fokusAarrepisteAuki), joten umpikujaa ei ole: piste jää kartalle
+ * lukittuna ja aukeaa kartalta, ei lehdestä. Lehden oma alanappi on
+ * ennallaan (js/ui.js tehtavaNapinTila) eikä lue tätä.
  */
 export function fokusvirtaKohtaaminenPisteessa(ui, city) {
   if (FOKUSVIRTA_KORTIT) return false;
@@ -5485,7 +5618,16 @@ export function fokusvirtaKohtaaminenPisteessa(ui, city) {
   if (!fokusvirtaLukitseeLehden(ui, city)) return false;
   const paikka = data.kohtaamispiste?.laudat?.[ui.game?.pack?.id];
   if (!Number.isFinite(paikka?.x) || !Number.isFinite(paikka?.y)) return false;
-  return fokusAarreAvattu(ui, city) || !fokusAarreVastattu(ui, city);
+  /*
+   * ERÄ 7 (13.9.2026): AVAUSEHTO EI ENÄÄ PÄÄTÄ NÄKYMISESTÄ. Tässä luki
+   * `fokusAarreAvattu(ui, city) || !fokusAarreVastattu(ui, city)` —
+   * piste oli poissa, kunnes lehden kysymys ratkesi, ja katosi
+   * lopullisesti, jos kaikkiin avaajiin oli vastattu väärin. Nyt piste
+   * on kartalla myös lukittuna, ja umpikuja on siksi purettu ihan
+   * itsestään: kaksi nostotehtävää avaa aarteen silloinkin, kun lehden
+   * kysymykset on jo käytetty (fokusAarrepisteAuki).
+   */
+  return true;
 }
 
 /**

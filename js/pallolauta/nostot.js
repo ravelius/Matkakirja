@@ -331,10 +331,26 @@ export function pisteElementti(d) {
   g.setAttribute('class', 'fokuspiste');
   svg.appendChild(g);
   el.appendChild(svg);
-  fokuspisteKuvio(g);
+  fokuspisteKuvio(g, { lukittu: Boolean(d.lukittu) });
   el.setAttribute('role', 'img');
-  el.setAttribute('aria-label', `${d.nimi}: ${d.teko}`);
+  asetteleFokuspiste(el, d);
   return el;
+}
+
+/**
+ * PISTEEN TILA ILMAN UUTTA ELEMENTTIÄ (karttauudistuksen erä 7).
+ *
+ * Merkkien avain säilyy kaupungin yli (js/pallolauta/merkit.js aseta:
+ * sama avain → sama elementti), joten lukon aukeaminen ei saa jäädä
+ * kiinni siihen, että elementti rakennetaan vain kerran. Luokka ja
+ * lappu päivitetään siksi tässä, ja merkkikone kutsuu tätä joka
+ * ladonnassa — sama kaava kuin nostoilla (asetteleNosto).
+ */
+export function asetteleFokuspiste(el, d) {
+  const g = el.querySelector('.fokuspiste');
+  el.classList.toggle('lukittu', Boolean(d.lukittu));
+  g?.classList.toggle('fokuspiste-lukittu', Boolean(d.lukittu));
+  el.setAttribute('aria-label', `${d.nimi}: ${d.teko}`);
 }
 
 /**
@@ -580,6 +596,7 @@ export function luoNostot({
           lng: a.lon,
           nimi: piste.nimi,
           teko: piste.teko,
+          lukittu: Boolean(piste.lukittu),
           nimioNakyy: true,
           aihe: null,
           poltettu: false,
@@ -615,6 +632,7 @@ export function luoNostot({
       lng: r.lng,
       nimi: r.nimi,
       teko: r.teko ?? null,
+      lukittu: Boolean(r.lukittu),
       nimioNakyy: r.nimioNakyy,
       kategoria: r.kategoria ?? null,
       symLaji: r.symLaji ?? null,
@@ -624,7 +642,7 @@ export function luoNostot({
       aihe: r.aihe ?? null,
       lunastettu: Boolean(r.lunastettu),
       elementti: r.perhe === 'piste' ? pisteElementti : nostoElementti,
-      asettele: r.perhe === 'piste' ? undefined : asetteleNosto,
+      asettele: r.perhe === 'piste' ? asetteleFokuspiste : asetteleNosto,
     }));
     merkit.aseta('nostot', datumit);
     /*
