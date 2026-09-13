@@ -22148,7 +22148,6 @@ export class UI {
       await ajo;
       // Naksahdus kuuluu perilletuloon kuten hypyn laskeutumisessa.
       sfx.play('arrive');
-      paikka = path[path.length - 1];
     }
 
     // Hyppyketju: ajossa tämä silmukka on tyhjä (ks. AUTOKYYTI yllä).
