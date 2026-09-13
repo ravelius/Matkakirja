@@ -43,6 +43,31 @@ Toimituskysymykset jokaiselle kaupunkiparille:
 2. Mitä uutta Pulu tuo isoisän jälkeen?
 3. Miksi juuri tämä yksityiskohta tai kuva on mukana?
 
+### Aihevalinnan kynnys (omistaja 13.9.2026)
+
+Jokaisen kaupunkiparin puheessa on oltava niin kova juttu, että lukija
+haluaa lukea seuraavankin tai kertoa siitä kaverille. Omistajan sanat
+sanatarkasti:
+
+> Bergen Amsterdam ja Edinburgh pitää tehdä kokonaan uudestaan. Ja
+> niissä pitää pitää mielessä tuo uusi periaate, että pitää olla niin
+> kova juttu, että haluaa lukea seuraavankin tai kertoa siitä kaverille.
+> Näissä ei sitä ollut
+
+- Tarinan keskeinen tapahtuma, panos tai vahva yllätys ja merkitys
+  kerrotaan itse puheessa, ei vain viitata siihen.
+- Pelkkä kuriositeetti tai suloinen lintureaktio ei riitä.
+- Tarvittaessa enemmän pituutta, ei sanakiintiöllä leikattua ydintä.
+- Ei kaikkien kaupunkien väkisin synkentämistä eikä historian
+  keksimistä.
+
+**Roolirajaus.** Bergen, Amsterdam ja Edinburgh uusitaan MOLEMPIEN
+kertojien osalta (myös Horatio) rootin Astra-tehtävässä. Root tarkistaa
+lähteistetyt aihevalinnat ennen lopullisia puheita. Erä3-r2:n näitä
+puheita ei käytetä tuotannon lähteenä. Lissabon ja Berliini pysyvät
+ennallaan tässä toimeksiannossa — hiljaisuus ei ole hyväksyntä. Fable ei
+kirjoita rinnakkaista versiota. Ääni-HOLD on ennallaan.
+
 ## Horatio Fogg
 
 Horatio on tarkka, utelias, kohtelias, lämmin ja kuivan humoristinen
