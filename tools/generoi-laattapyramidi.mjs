@@ -89,6 +89,7 @@ import { fileURLToPath } from 'node:url';
 
 import { ikkunanRajat, keraaMaailma, rannikot } from './fokuskartta/maailma.mjs';
 import { ikkunanPalat } from './korkeuspalat-lukija.mjs';
+import { yhdistaLuettelo } from './pyramidiluettelo.mjs';
 import { keraaSisalto, sisallonYhteenveto } from './fokuskartta/sisalto.mjs';
 import { keraaNostot, nostojenYhteenveto } from './fokuskartta/nostot.mjs';
 import { lueRajaviivasto, rajatLaudalle, RAJASETIT } from './fokuskartta/rajat.mjs';
@@ -3576,88 +3577,39 @@ const luetteloPolku = join(kohdekansio, 'pyramidi.json');
  * tasot koko maailmasta, sisimmät alueittain parven kesken — ja
  * jokainen erä tuntee vain omat tasonsa. Jos ajo kirjoittaisi luettelon
  * yli, viimeinen erä pyyhkisi kaikkien muiden tasot pois ja peli näkisi
- * pyramidista murusen. Vanhat tasot luetaan siis pohjaksi ja tämän ajon
- * tasot korvaavat samat z-numerot.
+ * pyramidista murusen.
+ *
+ * SÄÄNTÖ ASUU OMASSA MODUULISSAAN (tools/pyramidiluettelo.mjs), koska
+ * juuri se päättää, sammuuko koko laattakerros: väriajo ei saa vaihtaa
+ * pohjan, nosto-, viiva- eikä rantatason versiota. Moduulina se on
+ * yksikkötestattavissa ilman selainta ja tuntien polttoa.
  */
+let vanhaLuettelo = null;
 if (existsSync(luetteloPolku)) {
   try {
-    const vanha = JSON.parse(readFileSync(luetteloPolku, 'utf8'));
-    if (vanha.laatta === LAATTA && vanha.muoto === MUOTO) {
-      /*
-       * NOSTOTASOAJO EI KOSKE POHJAN TASOIHIN: se ei piirtänyt yhtään
-       * pohjalaattaa, joten vanhan luettelon tasot (mahdollisine
-       * laatastoineen) jäävät sellaisinaan. Vain nostotaso-olio ja
-       * eräkirjanpito päivittyvät.
-       */
-      if (MERKKITASO && vanha.tasot?.length) {
-        luettelo.tasot = vanha.tasot;
-      } else {
-        const omat = new Set(luettelo.tasot.map((t) => t.z));
-        luettelo.tasot = [...(vanha.tasot ?? []).filter((t) => !omat.has(t.z)), ...luettelo.tasot]
-          .sort((a, b) => a.z - b.z);
-      }
-      luettelo.erat = [...(vanha.erat ?? []), {
-        tasot: TASOT,
-        alue: ALUE,
-        nostotaso: NOSTOTASO || undefined,
-        viivataso: VIIVATASO || undefined,
-        rantataso: RANTATASO || undefined,
-        varitaso: VARI_MAA || undefined,
-        varipaletti: VARITASO ? VARIPALETTI : undefined,
-        varirajattu: VARITASO ? !VARI_ILMAN_RAJAUSTA : undefined,
-        paikkaus: PAIKKAUS_LAHDE || undefined,
-      }];
-      // Osa-ajo matalilla tasoilla (koeajo z0–z3) ei saa pyyhkiä
-      // olemassa olevaa nostotasoa pois luettelosta.
-      luettelo.nostotaso = luettelo.nostotaso ?? vanha.nostotaso ?? null;
-      luettelo.viivataso = luettelo.viivataso ?? vanha.viivataso ?? null;
-      luettelo.rantataso = luettelo.rantataso ?? vanha.rantataso ?? null;
-      /*
-       * VÄRITASOT YHDISTETÄÄN MAITTAIN eikä korvata: yhden maan ajo
-       * tuntee vain oman avaimensa, ja ilman yhdistämistä Kreikan ajo
-       * pyyhkisi Ranskan laatastot luettelosta (ne jäisivät ämpäriin
-       * mutta peli ei löytäisi niitä).
-       */
-      luettelo.varitasot = (luettelo.varitasot || vanha.varitasot)
-        ? { ...(vanha.varitasot ?? {}), ...(luettelo.varitasot ?? {}) } : null;
-      /*
-       * MERISÄVY JA PYRAMIDIN ALA OVAT POHJA-AJON TIETOJA. Merkkitaso
-       * ei karsi umpimerta eikä piirrä pohjaa, joten sen oma arvo on
-       * aina null — ja null tarkoittaisi pelille, ettei puuttuvan
-       * pohjalaatan tilalle maalata mitään (js/laattapyramidi.js
-       * pyramidiPohja). Vanha arvo kannetaan siis eteenpäin.
-       */
-      if (MERKKITASO) {
-        luettelo.meriSavy = vanha.meriSavy ?? null;
-        luettelo.alue = vanha.alue ?? null;
-      }
-      /*
-       * POHJAN RANTAVIIVA on POHJA-AJON tieto: vain se tietää, millä
-       * lipulla laatat piirrettiin. Merkkitasojen ajot kantavat vanhan
-       * kentän eteenpäin muuttumatta; pohja-ajo kirjoittaa sen aina
-       * itse (myös pois, jos rantaviiva on taas mukana).
-       */
-      if (MERKKITASO) luettelo.pohja = vanha.pohja ?? luettelo.pohja;
-      /*
-       * KORKEUSTARKKUUS TÄYDENTYY TASOITTAIN, kuten `tasot`. z7-shardi
-       * ei tunne z0–z6:n tarkkuutta eikä päinvastoin, ja nostotaso- tai
-       * viivatasoajo ei tunne kummankaan — se ei lue ruudukkoa
-       * lainkaan, joten se kantaa vanhan kentän eteenpäin muuttumatta.
-       */
-      if (luettelo.korkeus && vanha.korkeus) {
-        luettelo.korkeus.kaariminuutit = {
-          ...vanha.korkeus.kaariminuutit, ...luettelo.korkeus.kaariminuutit,
-        };
-      } else if (!luettelo.korkeus) {
-        luettelo.korkeus = vanha.korkeus;
-      }
-    }
+    vanhaLuettelo = JSON.parse(readFileSync(luetteloPolku, 'utf8'));
   } catch {
     /* rikkinäinen vanha luettelo: kirjoitetaan tuore päälle */
+    vanhaLuettelo = null;
   }
 }
-luettelo.erat = luettelo.erat ?? [{ tasot: TASOT, alue: ALUE }];
-writeFileSync(luetteloPolku, `${JSON.stringify(luettelo, null, 2)}\n`);
+const kirjoitettava = yhdistaLuettelo(luettelo, vanhaLuettelo, {
+  merkkitaso: MERKKITASO,
+  varitaso: VARITASO,
+  era: {
+    tasot: TASOT,
+    alue: ALUE,
+    nostotaso: NOSTOTASO || undefined,
+    viivataso: VIIVATASO || undefined,
+    rantataso: RANTATASO || undefined,
+    varitaso: VARI_MAA || undefined,
+    varipaletti: VARITASO ? VARIPALETTI : undefined,
+    varirajattu: VARITASO ? !VARI_ILMAN_RAJAUSTA : undefined,
+    paikkaus: PAIKKAUS_LAHDE || undefined,
+  },
+});
+kirjoitettava.erat = kirjoitettava.erat ?? [{ tasot: TASOT, alue: ALUE }];
+writeFileSync(luetteloPolku, `${JSON.stringify(kirjoitettava, null, 2)}\n`);
 
 console.log('\nMITAT');
 for (const m of tasot) {
