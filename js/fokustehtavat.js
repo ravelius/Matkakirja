@@ -832,7 +832,6 @@ export function piirraSivunTehtava(ui, kohde, kategoria) {
  * eikä `ennen`/`jalkeen` aja. Näin sama kysymys ei voi maksaa
  * kahdesti kummallakaan pinnalla.
  *
- * @param {object} ui
  * @param {Element} laatikko Mihin lipukkeet ja tulosrivi liitetään.
  * @param {object} asetukset
  * @param {{ kysymys: string, vaihtoehdot: string[], oikea: number,
@@ -845,7 +844,7 @@ export function piirraSivunTehtava(ui, kohde, kategoria) {
  *   jälkeen: palkintokuvat, tallennus, kuittaukset.
  * @returns {{ vaihtoehdot: Element, tulos: Element }}
  */
-export function piirraVisanVastaukset(ui, laatikko, {
+export function piirraVisanVastaukset(laatikko, {
   visa, palkkio, kirjaa, ennen, jalkeen,
 }) {
   const vaihtoehdot = html('div', 'kulttuuri-vaihtoehdot');
@@ -972,7 +971,7 @@ function piirraNimettyTehtava(ui, kohde, city, tehtava) {
   // kirjauksen alussa, eli ennen kuin actionMinitehtava on muuttanut
   // mitään — siksi se on `kirjaa`n sisällä eikä sen ulkopuolella.
   let oliAuki = false;
-  piirraVisanVastaukset(ui, laatikko, {
+  piirraVisanVastaukset(laatikko, {
     visa,
     palkkio: FOKUS_TEHTAVA_PALKKIO,
     kirjaa: (oikein) => {

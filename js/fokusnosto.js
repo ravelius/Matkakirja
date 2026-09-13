@@ -1412,7 +1412,7 @@ function piirraNostonVisa(ui, sisalto, nosto) {
   const vihjerivi = vihjeteksti ? html('p', 'fokusnosto-visa-vihje', vihjeteksti) : null;
   if (vihjerivi) laatikko.appendChild(vihjerivi);
   laatikko.appendChild(html('p', 'minitehtava-kysymys', visa.kysymys));
-  piirraVisanVastaukset(ui, laatikko, {
+  piirraVisanVastaukset(laatikko, {
     visa,
     palkkio: NOSTON_VISA_PALKKIO,
     kirjaa: (oikein) => ui.game.actionMinitehtava(

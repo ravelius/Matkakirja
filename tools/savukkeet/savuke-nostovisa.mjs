@@ -263,6 +263,21 @@ if (a.auki) {
       && !kortti.vaakavuoto,
     `laatikko ${kortti.laatikkoLeveys}, kortti ${kortti.korttiLeveys}, vuoto ${kortti.vaakavuoto}`);
 
+  /*
+   * KYSYMYS NÄKYVIIN ENNEN KAAPPAUSTA. Kortti avautuu jutun alkuun ja
+   * laatikko on sen lopussa (sisältö vierii .fokusnosto-sisallossa),
+   * joten ilman vieritystä kaappaus näyttäisi vain lööpin.
+   */
+  const vierita = () => a.sivu.evaluate(async () => {
+    document.querySelector('.fokusnosto-kortti .fokusnosto-visa')
+      ?.scrollIntoView({ block: 'end' });
+    await new Promise((v) => setTimeout(v, 250));
+  });
+  if (KUVAKANSIO) {
+    await vierita();
+    await a.sivu.locator('.fokusnosto-kortti')
+      .screenshot({ path: join(KUVAKANSIO, 'karttauudistus-6-nostovisa-kysymys.png'), scale: 'css' });
+  }
   const ennen = await luvut(a.sivu);
   const jalkeen = await vastaa(a.sivu, KOE.visa.oikea);
   tieto('oikea vastaus', `money ${ennen.money} → ${jalkeen.money}, `
@@ -273,8 +288,16 @@ if (a.auki) {
     `money ${ennen.money} → ${jalkeen.money} (odotettu +${PALKKIO}), `
     + `laskuri ${ennen.laskuri} → ${jalkeen.laskuri}`);
 
+  /*
+   * KAKSI KAAPPAUSTA KORTISTA, EI KOKO RUUDUSTA: kysymys ennen
+   * vastausta ja tulos sen jälkeen. Kortti on 342 px 390 px:n
+   * ruudulla, joten rajattu kaappaus näyttää saman asian murto-osalla
+   * tiedostokoosta (docs/raportit/kuvat, katto 400 kt).
+   */
   if (KUVAKANSIO) {
-    await a.sivu.screenshot({ path: join(KUVAKANSIO, 'karttauudistus-6-nostovisa.png') });
+    await vierita();
+    await a.sivu.locator('.fokusnosto-kortti')
+      .screenshot({ path: join(KUVAKANSIO, 'karttauudistus-6-nostovisa-tulos.png'), scale: 'css' });
   }
 
   // 3. Kortti uudelleen auki: ei lipukkeita, ei toista palkkiota.
