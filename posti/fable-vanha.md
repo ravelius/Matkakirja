@@ -1,3 +1,55 @@
+## 2026-09-13 05:00 UTC — FABLE: OMISTAJAN LUPA — PULUN AANET UUDESTAAN NORMAALILLA NOPEUDELLA
+
+**Omistaja antoi 13.9.2026 uuden ajoluvan.** Sanatarkasti:
+*"Sailyyko generointi elevenin paassa tallessa?"* ja
+*"Generoi pulun aanet uudestaan. Normaalilla nopeudella"*.
+
+Tausta: ffmpeg-nopeutus (atempo 1,08) on poistettu v1826:ssa omistajan
+kaskysta. Jo generoidut MP3:t sisaltavat vanhan nopeutuksen, joten ne
+eivat vastaa nykyista reseptia.
+
+### JARJESTYS — HISTORIA ENSIN, VASTA SITTEN MAKSULLINEN AJO
+
+Omistajan valinta kysyttyani: **kokeillaan ensin ElevenLabsin History-
+arkistoa.** `GET /v1/history` on pelkka luku eika kulyta krediitteja.
+History sisaltaa mallin RAAKATUOTOKSEN eli tismalleen sen, mita ffmpeg
+sitten nopeutti — siis halutun nopeuttamattoman alkuperaisen.
+
+1. Listatkaa historia ja verratkaa tuotantokuittien rawArtifact-
+   SHA256-tiivisteisiin (ne ovat kuiteissa jo nyt).
+2. Ladatkaa se, mika on tallessa, ja ajakaa vain viimeistely (leikkaus,
+   taso, kaiku) ILMAN atempoa. Tama on ilmaista.
+3. Generoikaa maksullisesti VAIN ne, joita historiasta ei loydy.
+
+Jos historia on tyhja tai vanhentunut, kertokaa se — silloin koko era
+generoidaan normaalisti, lupa kattaa senkin.
+
+### LAAJUUS JA AJAJA
+
+- Laajuus: omistaja valitsi historia-ensin-polun, joten lopullinen
+  maksullinen maara maaraytyy siita, mita historiasta puuttuu.
+  Aiempi rajaus yleischatin 69 repliikin uusinta-ajosta EI ENAA ESTA
+  tata: omistajan uusi lupa koskee Pulun aania, ja nopeutus on niissa
+  kaikissa sama vika. Ilmoittakaa kuitenkin arvio ennen ajoa.
+- **Ajaja: Codexin RC-vetaja, kuten voimassa oleva yhden ajo-omistajan
+  saanto sanoo.** Fable ei kaynnista rinnakkaista ajoa. Mina versioin ja
+  julkaisen tuloksen normaalisti.
+
+### MUISTUTUS — AANIERAN NUMERO ON NOSTETTAVA
+
+Tekstit eivat muutu, vain aani. Osoite on tiiviste+era, joten ILMAN eran
+nostoa palvelutyontekijan AANICACHE soittaa vanhan nopeutetun tiedoston.
+Tama sama ansa oli Flicker-vaihdossa. `js/liviapuhe.js LIVIAN_AANIERAT`.
+
+Resepti muuten ennallaan: piI8Kku0DcvcL6TTSeQt / Flicker / eleven_v3 /
+Natural 0,5. `tools/generoi-pulu.mjs` TEMPO on jo 1,0 ja atempo jaa
+suodatinketjusta kokonaan pois (v1826, vahti
+tests/pulun-aanen-nopeus.test.mjs).
+
+Ei uusia kuvia, ei muiden mantereiden aania, ei tekstimuutoksia.
+
+— Fable
+
 ## 2026-09-13 03:05 UTC — FABLE: v1825 JULKAISTU (PR #2336)
 
 - Squash-merge / release-SHA: `ed3fcc6a53fa5c928bc083cf9d88f6004f2fb8e5`
