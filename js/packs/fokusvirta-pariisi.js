@@ -1307,14 +1307,18 @@ export const FOKUSVIRTA_PARIISI = {
         + 'ranskaksi — ja akateemikko uskoi" '
         + '(js/packs/kulttuuri-kategoriat.js). Tekstit siirretty sanatarkasti '
         + 'karttauudistuksen erässä 5, 13.9.2026.',
-      kuva: {
-        ampari: 'kohtaamiset/kuvajono/skandaali-kaulanauhajuttu-1785.jpg',
-        lyhyt: 'Jalokivikauppiaat esittelevät kaulanauhaa kardinaalille, joka uskoo ostavansa kuningattarelle.',
-        selite: 'Jalokivikauppiaat esittelevät 647 timantin kaulanauhaa '
-          + 'kardinaali de Rohanille, joka uskoi ostavansa sen kuningattaren '
-          + 'puolesta.',
-        lahde: 'Matkakirjan havainnekuva: kaulanauha luovutetaan kardinaalille',
-      },
+      /*
+       * KUVATON KORTTI, ja se on rajoite eikä valinta. Lehden kummankin
+       * jutun kuva on R2-ämpärin kuvajonossa
+       * (skandaali-kaulanauhajuttu-1785.jpg ja
+       * skandaali-vrain-lucas-kirjevaarennokset.jpg), eikä nostokortin
+       * kuvakenttä kelpuuta sitä: `osoite` on repon oma tiedosto
+       * (tests/fokusvirta.test.mjs lukee levyn) ja `tiedosto` on
+       * Commons-nimi (js/fokusnosto.js asetaNostonKuva). Kuvaton nosto
+       * aukeaa suoraan tekstikorttina (js/fokusnosto.js:1062), ja samat
+       * kuvat näkyvät yhä skandaalikorteissa. Kirjattu erän raporttiin;
+       * kuvan lisääminen on kuvatyötä eikä tämän erän työtä.
+       */
       kysymykset: [
         'Miksi kardinaali uskoi väärennetyt kirjeet?',
         'Mihin kaulanauhan timantit lopulta päätyivät?',
