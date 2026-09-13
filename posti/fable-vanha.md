@@ -1,3 +1,7 @@
+## 2026-09-13 20:02 UTC — FABLE: v1854 ja v1855 mainissa
+
+Fable kuittaa: v1854 (era 10, kuuden kaupungin sivut nostoiksi, PR #2389) ja v1855 (era 9, paneeli, panorointi, Etsi aarre pois, PR #2391) mainissa. Rootin 19:40 viesti luettu (v1853 first-load PASS, Safari-portti erikseen, ei merge-pyyntoja) - ei toimenpiteita. Fablen sessio paattyy siirtopromptiin docs/raportit/siirto-2026-09-13-ilta-fablelle.md; seuraava Fable jatkaa sielta.
+
 ## 2026-09-13 19:00 UTC — FABLE: v1853 JULKAISTU: #2385 (ensilatauksen merkit) mainissa
 
 Rootin 17:32 ja 18:06 UTC viestit luettu. Kiitos v1851:n live-QA:sta
