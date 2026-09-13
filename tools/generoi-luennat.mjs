@@ -152,6 +152,7 @@ export function tuotantoEraId(tyot, sourceCommit) {
 }
 
 export function parseArgumentit(argv = []) {
+  const pilkoKaupungit = (arvo) => String(arvo ?? '').split(/[\s,]+/);
   const asetukset = {
     kaupungit: [], kuiva: false, planOnly: false, retryKuitti: null, kuitti: null,
   };
@@ -159,11 +160,11 @@ export function parseArgumentit(argv = []) {
     const arvo = argv[i];
     if (arvo === '--dry-run' || arvo === '--kuiva') asetukset.kuiva = true;
     else if (arvo === '--plan-only') asetukset.planOnly = true;
-    else if (arvo === '--kaupungit') asetukset.kaupungit.push(...String(argv[++i] ?? '').split(','));
+    else if (arvo === '--kaupungit') asetukset.kaupungit.push(...pilkoKaupungit(argv[++i]));
     else if (arvo === '--retry-kuitti') asetukset.retryKuitti = argv[++i] ?? null;
     else if (arvo === '--kuitti') asetukset.kuitti = argv[++i] ?? null;
     else if (arvo.startsWith('--')) throw new Error(`Tuntematon valitsin: ${arvo}`);
-    else asetukset.kaupungit.push(...arvo.split(','));
+    else asetukset.kaupungit.push(...pilkoKaupungit(arvo));
   }
   asetukset.kaupungit = [...new Set(asetukset.kaupungit.map((x) => x.trim()).filter(Boolean))];
   return asetukset;

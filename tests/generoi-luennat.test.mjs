@@ -23,6 +23,13 @@ test('kaupunkilista on eksplisiittinen, pilkut sallitaan ja dry-run ei tarvitse 
   assert.throws(() => parseArgumentit(['--kaikki']), /Tuntematon valitsin/);
 });
 
+test('kaupunkilista sietää pilkut ja välilyönnit samassa argumentissa', () => {
+  assert.deepEqual(
+    parseArgumentit(['--kaupungit', 'firenze oslo,granada\nkiova']).kaupungit,
+    ['firenze', 'oslo', 'granada', 'kiova'],
+  );
+});
+
 test('erätunnus on deterministinen ja plan-only kirjoittaa kuitin ennen APIa', async () => {
   const tyot = ['ateena', 'marseille'].map((id) => ({ id, ...kohdeTiedosto(id) }));
   const commit = 'a'.repeat(40);
