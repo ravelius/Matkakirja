@@ -13,6 +13,11 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1849, teksti: 'Karttauudistus era 7: aarre vihreana pisteena' },
+  { v: 1848, teksti: 'Karttauudistus era 3: maapaneeli ja lisaa-valikko pallolle' },
+  { v: 1847, teksti: 'Karttauudistus era 4: kaupungin pop-up ja turisti-info' },
+  { v: 1846, teksti: 'Automaattinen nopanheitto sailyy, bussi vie suoraan' },
+  { v: 1845, teksti: 'Karttauudistus erat 6 ja 8: minikysymykset, Liiku-nappi' },
   { v: 1844, teksti: 'Karttauudistus era 1b: pallon varikerros ja zoomiraja' },
   { v: 1843, teksti: 'Karttauudistus era 1: laattaputki ja paatos pallosta' },
   { v: 1842, teksti: 'Seitseman kuvavaihtoehdon rajaus, tarinakaari, Raamattu' },

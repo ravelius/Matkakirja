@@ -258,6 +258,16 @@ export function piirraRannikkoKankaalle(ctx, viivaPolku, rannikot, P) {
 function varipaletti(valinta) {
   if (!valinta) return null;
   if (valinta === true) return VARIPALETIT.taysvari;
+  /*
+   * TASOITUS EI OLE PIIRTOPALETTI (erä 1c). Sillä ei ole asteikkoa
+   * eikä syvyyttä, koska tasoitusajo ei piirrä maastoa lainkaan
+   * (piirraTasoitustaso). Jos se päätyisi tänne, moottori lukisi
+   * `paletti.asteikko`ksi undefinedin ja piirtäisi mustaa — siksi
+   * tämä on äänekäs virhe eikä hiljainen putoaminen.
+   */
+  if (valinta === 'tasoitus' || valinta?.tasoitus) {
+    throw new Error('Tasoituspaletti ei piirrä maastoa: aja piirraTasoitustaso, ei piirraMaailma.');
+  }
   if (typeof valinta === 'string') {
     const p = VARIPALETIT[valinta];
     if (!p) throw new Error(`Tuntematon väripaletti: ${valinta}`);
@@ -307,7 +317,20 @@ function varipaletti(valinta) {
  */
 export function polttaVariLeikkuri(canvas, asetukset, leikkuri) {
   const renkaat = leikkuri?.renkaat ?? null;
-  if (!renkaat?.length) return false;
+  /*
+   * TYHJÄ RENGASLISTA ON TASOITUKSESSA VASTAKOE, EI VIRHE (erä 1c).
+   *
+   * Erässä 1b `--ilman-rajausta` jätti leikkurin nulliksi, ja laatta
+   * oli läpinäkymätön värillinen suorakaide — juuri se, mitä savukkeen
+   * piti nähdä punaisena. Tasoituksessa sama temppu tuottaisi TYHJÄN
+   * laatan (maastoa ei piirretä), jolloin kohdemaa olisi yhä
+   * alkuperäinen ja V2 menisi vihreänä läpi. Vastakoe, joka ei voi
+   * kaataa väitettä, ei ole vastakoe.
+   *
+   * Tasoituksen vastakoe on siksi KERMA ILMAN REIKÄÄ: renkaita ei ole,
+   * joten peite valuu myös kohdemaan päälle ja V2:n ON kaaduttava.
+   */
+  if (!renkaat?.length && !leikkuri?.tasoitus) return false;
   const ctx = canvas.getContext('2d');
   if (!ctx) return false;
   const { bbox, leveys } = asetukset;
@@ -422,6 +445,28 @@ export function polttaVariLeikkuri(canvas, asetukset, leikkuri) {
       }
     } else feidattu = null;
   }
+  /*
+   * ====== TASOITUS: KOHDEMAAHAN EI JÄÄ MITÄÄN (erä 1c) =============
+   *
+   * Tasoitusajossa kangas on TYHJÄ — maastoa ei piirretty lainkaan
+   * (ks. piirraTasoitustaso) — joten `destination-in` leikkaisi tyhjää
+   * ja kerma jäisi ainoaksi sisällöksi. Se on juuri se, mitä halutaan,
+   * mutta se on sanottava suoraan eikä kierrettävä tyhjän leikkauksen
+   * kautta: kohdemaan kohdalla laatan alfa on 0, ja alfa 0 tarkoittaa
+   * pelissä, että pohjalaatan alkuperäinen seepiareliefi näkyy
+   * pikselilleen muuttumattomana.
+   *
+   * TÄMÄ ON OMISTAJAN PÄÄTÖS 4 KOODINA: *"Jätä ranska alkuperäiseen."*
+   * Mikään tässä funktiossa ei saa kirjoittaa yhtään pikseliä
+   * kohdemaan renkaiden sisälle — ja koska reikä tehdään samalla
+   * `destination-out`-polulla kuin erän 1b feidaus, reuna on
+   * pehmennetty samasta polusta eikä rajalle jää viivaa.
+   */
+  if (leikkuri.tasoitus) {
+    ctx.clearRect(0, 0, W, H);
+    if (feidattu) ctx.drawImage(feidattu, 0, 0);
+    return true;
+  }
   // Värit VAIN maahan ja aluevesiin: kaikki muu pois kankaalta.
   ctx.save();
   ctx.globalCompositeOperation = 'destination-in';
@@ -430,6 +475,40 @@ export function polttaVariLeikkuri(canvas, asetukset, leikkuri) {
   ctx.fill();
   ctx.restore();
   if (feidattu) ctx.drawImage(feidattu, 0, 0);
+  return true;
+}
+
+/*
+ * ====== TASOITUSTASO EI PIIRRÄ MAASTOA (karttauudistus, erä 1c) =====
+ *
+ * Erän 1b värilaatta oli kokonainen maastorenderöinti, josta leikkuri
+ * jätti näkyviin kohdemaan. Päätös 4 kääntää sen ympäri: kohdemaa jää
+ * ALKUPERÄISEKSI ja kaikki muu peitetään kermalla. Silloin
+ * maastorenderöinnistä ei jää jäljelle yhtään pikseliä — kohdemaan
+ * kohdalla alfa on 0 ja muualla peiton alla on tasainen kerma — joten
+ * sen ajaminen olisi puhdasta hukkatyötä.
+ *
+ * SEURAUS, JOKA KANNATTAA LUKEA KAHDESTI: tasoitusajo ei tarvitse
+ * korkeusaineistoa, Natural Earthiä eikä sisältöä lainkaan. Se ei
+ * lataa ETOPOa (52 Mt purettuna), ei nouda 1′-paloja R2:sta eikä
+ * lue merimaskia — ajo on pelkkää geometriaa ja yhtä canvas-täyttöä
+ * laattaa kohti.
+ *
+ * Tämä funktio tekee siis vain sen, minkä piirraMaailma tekisi ensin:
+ * asettaa kankaan koon lohkon mitoista ja jättää sen läpinäkyväksi.
+ * Koko lasketaan TÄSMÄLLEEN samalla kaavalla kuin piirraMaailmassa
+ * (leveys pyöristämättä px:ään), tai leikkuri osuisi pikselin väärään
+ * kohtaan verrattuna pohjalaattaan.
+ */
+export function piirraTasoitustaso(canvas, asetukset) {
+  const { bbox, leveys } = asetukset;
+  const px = leveys / bbox.w;
+  const W = Math.round(leveys);
+  const H = Math.round(bbox.h * px);
+  canvas.width = W;
+  canvas.height = H;
+  const ctx = canvas.getContext('2d');
+  if (ctx) ctx.clearRect(0, 0, W, H);
   return true;
 }
 

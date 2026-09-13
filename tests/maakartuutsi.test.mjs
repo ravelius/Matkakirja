@@ -75,10 +75,22 @@ test('kartuutsin ehto pallolaudalla on maa, ei maan ikkuna', () => {
     /const pallolla = Boolean\(ui\.pallolauta\);/,
     'ajaFokusmitat ei tunne pallolautaa — kartuutsi jää tasokartan ehtojen taakse',
   );
+  /*
+   * KARTTAUUDISTUS ERÄ 3: pallolaudan ehto on yhä PELKKÄ MAA (ei maan
+   * ikkunaa), mutta sen rinnalla on nurkkatilan vipu — kalusteet ovat
+   * nurkassa vain kun maapaneeli EI ole kartassa (Raamattu,
+   * KARTTAUUDISTUKSEN PAATOKSET 2 kohta 2). Molemmat osat vartioidaan,
+   * jottei kumpikaan katoa vahingossa.
+   */
   assert.match(
     fokusmitat,
-    /const nakyy = pallolla \? Boolean\(iso\) : Boolean\(pohja && iso && FOKUS_POHJAT\[iso\]\);/,
-    'pallolaudalla näkyvyysehdon pitää olla pelkkä maa',
+    /const nakyy = pallolla\s*\n?\s*\? Boolean\(iso\) && !maapaneeliKartassa\(\)/,
+    'pallolaudalla näkyvyysehdon pitää olla pelkkä maa (ja nurkkatilan vipu)',
+  );
+  assert.match(
+    fokusmitat,
+    /: Boolean\(pohja && iso && FOKUS_POHJAT\[iso\]\);/,
+    'tasokartan ehto muuttui — kartuutsi ei saa irrota maan ikkunasta',
   );
   // Kalusteet päivitetään pallolaudan omasta ohjauksesta, ennen
   // avaintarkistusta (puraLauta voi nollata ne ilman pelitilan muutosta).
@@ -269,14 +281,26 @@ test('kamera ottaa saapumisrajauksen laatikkona ja säilyttää varapolun', () =
   assert.match(kamera, /leveys: PALLOLAUDAN_SAAPUMISLEVEYS, saapuminen: true/);
   assert.ok(PALLOLAUDAN_SAAPUMISLEVEYS > 0);
   // Laatikko luetaan maapolygoneista laudalla, ei kamerassa.
-  assert.match(lauta, /const saapumisrajaus = async \(\) => \{/);
+  assert.match(lauta, /const haeMaanLaatikko = async \(iso\) => \{/);
+  assert.match(lauta, /const saapumisrajaus = async \(\) => haeMaanLaatikko\(kohteidenNykyinenIso\(ui\)\);/);
   assert.match(lauta, /maanLautalaatikko\(data, iso, \{ kohta \}\)/);
-  assert.match(lauta, /const bbox = await saapumisrajaus\(\);/);
-  assert.match(
-    lauta,
-    /return merkkienNakyvyys\.kameranJalkeen\(kamera\.kotiin\(\{ kesto, bbox \}\)\);/,
-    'kameran laatikkoajo säilyy ja sen valmistuminen invalidioi merkkien näkyvyyden',
-  );
+  /*
+   * KARTTAUUDISTUS ERÄ 3: saapumisajo sovittaa maan JA sen alapuolella
+   * riippuvan maapaneelin (js/pallolauta/maapaneeli.js paneelinLaatikko),
+   * jotta paneeli on saapuessa kokonaan näkyvissä. Ilman laajennusta se
+   * jäisi ruudun alalaidan alle.
+   */
+  assert.match(lauta, /return paneelinLaatikko\(laatikko\);/);
+  /*
+   * ERÄ 2 + ERÄ 3 YHDESSÄ: saapumisajo lukee PANEELILLA LAAJENNETUN
+   * laatikon (`saapumislaatikko`) ja asettaa sen myös uloszoomauksen
+   * katoksi (`maanLaatikko` → `tahdistaZoomirajat`) ENNEN kamera-ajoa.
+   * Näin saapumisnäkymä ja uloin sallittu näkymä ovat sama laatikko.
+   * Kamera-ajon valmistuminen invalidioi lisäksi merkkien etu/taka-
+   * näkyvyyden ilman tekaistua kameranliikettä.
+   */
+  assert.match(lauta, /const bbox = await saapumislaatikko\(\);/);
+  assert.match(lauta, /const bbox = await saapumislaatikko\(\);\s*\n\s*maanLaatikko = bbox;\s*\n\s*tahdistaZoomirajat\(\);\s*\n\s*return merkkienNakyvyys\.kameranJalkeen\(kamera\.kotiin\(\{ kesto, bbox \}\)\);/);
 });
 
 /* ================= 6. myös kehittäjän maailmatilassa ================ */

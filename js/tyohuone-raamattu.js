@@ -344,6 +344,26 @@ export const RAAMATTU = {
       otsikko: 'Kirjoittajan säännöt (matkakirjatekstit)',
       tila: 'luonnos',
       kohdat: [
+        'AIHEVALINNAN KYNNYS: NIIN KOVA JUTTU, ETTA HALUAA LUKEA '
+          + 'SEURAAVANKIN (omistaja 13.9.2026 tekstisession kautta, '
+          + 'sanatarkasti: "Bergen Amsterdam ja Edinburgh pitaa tehda '
+          + 'kokonaan uudestaan. Ja niissa pitaa pitaa mielessa tuo uusi '
+          + 'periaate, etta pitaa olla niin kova juttu, etta haluaa lukea '
+          + 'seuraavankin tai kertoa siita kaverille. Naissa ei sita '
+          + 'ollut"): jokaisen kaupunkiparin puheessa on oltava niin kova '
+          + 'juttu, etta lukija haluaa lukea seuraavankin tai kertoa siita '
+          + 'kaverille. Tarinan keskeinen tapahtuma, panos tai vahva '
+          + 'yllatys ja merkitys kerrotaan itse puheessa. Pelkka '
+          + 'kuriositeetti tai suloinen lintureaktio ei riita. '
+          + 'Tarvittaessa enemman pituutta, ei sanakiintiolla leikattua '
+          + 'ydinta. Ei kaikkien kaupunkien vakisin synkentamista eika '
+          + 'historian keksimista. Roolirajaus: Bergen, Amsterdam ja '
+          + 'Edinburgh uusitaan MOLEMPIEN kertojien osalta (myos Horatio) '
+          + 'rootin Astra-tehtavassa; root tarkistaa lahteistetyt '
+          + 'aihevalinnat ennen lopullisia puheita; era3-r2:n naita '
+          + 'puheita ei kayteta tuotannon lahteena; Lissabon ja Berliini '
+          + 'ennallaan (hiljaisuus ei ole hyvaksynta); Fable ei kirjoita '
+          + 'rinnakkaista versiota. Aani-HOLD ennallaan.',
         'LAUSEIDEN YMMARRETTAVYYS (omistaja 13.9.2026 tekstisession kautta, '
           + 'sanatarkasti: "en ihan heti ymmartanyt alpeilla etta opas oli ollut '
           + 'vaarassa. tama lause on epamaarainen: Hanen katensa olivat auenneet '
@@ -6946,6 +6966,20 @@ export const RAAMATTU = {
           + 'kayttaa Opus/Sonnet-agenttiparvia. Tila: erat 3, 4, 6 ja 8 '
           + 'kaynnissa rinnakkain 13.9.2026 klo 13.55 UTC alkaen; era 1c '
           + '(tasoituskerros) perustetaan taman julkaisun jalkeen.',
+        'KARTTAUUDISTUKSEN PAATOKSET 5: AUTOMAATTINEN NOPANHEITTO '
+          + 'SAILYY, BUSSI VIE SUORAAN (omistaja 13.9.2026 klo 14.55-15.00 '
+          + 'UTC, sanatarkasti: "Bussilippu vie aina suoraan seuraavaan '
+          + 'kaupunkiin ilman nopanheittoa, joten automaattinen '
+          + 'nopanheitto on edelleen voimassa, koska se koskee ainoastaan '
+          + 'vain liftausta. Kaikissa tapauksissa paitsi laivareitilla." '
+          + 'ja "Ja laiva  reitillakaan ei taas ole muuta vaihtoehtoa kuin '
+          + 'laiva, niin siellekin on automaattinen nopanheitto."): '
+          + 'automaattinen nopanheitto toimii kuten ennen eraa 8 seka '
+          + 'maalla (liftaus) etta laivareitilla; bussin olemassaolo ei '
+          + 'esta sita. Bussi (50 p) vie suoraan seuraavaan kaupunkiin '
+          + 'ilman noppaa ja ilman aikakulua; bussi ja lento valitaan '
+          + 'Liiku-napista ennen heittoa. Kumoaa eran 8 (v1845) muutoksen, '
+          + 'jossa bussilippuun riittava raha esti automaattisen heiton.',
         'Saapumiskortti: luettu matkakirjamerkintä + esittely '
           + 'kuvineen.',
         'Lehtikaupungissa kortti on paikallislehti: sivut, '

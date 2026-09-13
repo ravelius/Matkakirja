@@ -83,7 +83,9 @@ import {
 // Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
 import { livianKorostetutKaupungit } from '../liviapuhe.js';
 import { asemoiFokuskohde, kohteidenNykyinenIso } from '../fokuskohteet.js';
-import { laudaltaAsteiksi, nollaaFokusmitat, paivitaFokusmitat } from '../fokusmitat.js';
+import {
+  laudaltaAsteiksi, maapaneeliKartassa, nollaaFokusmitat, paivitaFokusmitat, pallolaudanMaa,
+} from '../fokusmitat.js';
 import { packById } from '../pack.js';
 import { pixelOf, pointAlong, posKey } from '../rules.js';
 import {
@@ -91,6 +93,16 @@ import {
   nollaaPallonKaatumiset, palloKaatui, valikkoSulkeutuiNapautuksesta,
 } from '../ui-apurit.js';
 import { KARTTANIMI_KOOT } from '../karttanimet.js';
+/*
+ * KAUPUNGIN ISO POP-UP JA TURISTI-INFO (karttauudistus erä 4, 13.9.2026):
+ * kortit ja merkin piirtäjä asuvat js/kaupunkinosto.js:ssä, tämä tiedosto
+ * hoitaa vain napautuksen, ankkurin ja merkin paikan pallolla.
+ */
+import {
+  asemoiKaupunkipopup, asetteleTuristiInfo, avaaKaupunkipopup, avaaTuristiInfo,
+  kaupunginMatkailijalle, kaupunkimerkinMitta, suljeKaupunkipopup,
+  turistiInfoElementti, turistiInfonAsteet,
+} from '../kaupunkinosto.js';
 import { NOSTOLADONTA_POLTON_TIHEYS } from '../nostoladonta.js';
 import {
   PALLOKAMERAN_AJO_MS, PALLOLAUDAN_LEVEYS, PALLO_FOV, PALLO_KORKEUS_MAX,
@@ -105,6 +117,7 @@ import {
   HELMEN_VARI, REITIN_VARIT, REITTIHELMEN_KORKEUS, REITTIHELMEN_SADE, luoReitit,
 } from './reitit.js';
 import { luoLinssikartta } from './linssikartta.js';
+import { luoMaapaneeli, paneelinLaatikko } from './maapaneeli.js';
 import { luoLinssit } from './linssit.js';
 import { luoNappulanKuljettaja } from './siirto.js';
 import { luoAloituslennonKohtaus } from './avaus.js';
@@ -1149,7 +1162,7 @@ let uudelleenrakennuksia = 0;
 
 /** Avoinna oleva kelluva kortti (nielu: sulkeva napautus ei avaa uutta). */
 const KORTTIVALITSIN = '.fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros,'
-  + ' .fokusnosto-kerros, .syvennys-kerros, .minipopup';
+  + ' .fokusnosto-kerros, .syvennys-kerros, .minipopup, .kaupunkipopup';
 
 /**
  * Avaa pallolaudan karttaruutuun. Palauttaa lauta-olion, tai null jos
@@ -1315,10 +1328,16 @@ export async function avaaPallolauta(ui) {
    * ainoastaan sisaanpain"* — ja PÄÄTÖKSET 2 kertoo miksi: kartan on
    * näytettävä STAATTISELTA, kuin painettu käsin piirretty arkki.
    *
-   * RAJA ON MAAN LAATIKKO × 1,15 EIKÄ KIINTEÄ KORKEUS. Sama laatikko,
-   * jonka saapumisajo sovittaa ruutuun (saapumisrajaus), on myös
-   * uloszoomauksen katto; kerroin on sama kuin värilaataston
-   * laatikolla, koska muuten feidattu laatikko näkyisi suorakaiteena.
+   * RAJA ON SAAPUMISLAATIKKO × 1,15 EIKÄ KIINTEÄ KORKEUS. Sama
+   * laatikko, jonka saapumisajo sovittaa ruutuun (`saapumislaatikko`:
+   * maan laatikko, maapaneelilla laajennettuna kun paneeli on
+   * kartalla, erä 3), on myös uloszoomauksen katto — saapumisnäkymä ja
+   * uloin sallittu näkymä ovat sama asia, jotta paneeli on aina
+   * näkyvissä. Kerroin on sama kuin värilaataston laatikolla, koska
+   * muuten feidattu laatikko näkyisi suorakaiteena. (Värilaataston oma
+   * rajaus lasketaan maan omasta laatikosta generaattorissa ISO-koodin
+   * mukaan, js/laattapyramidi.js asetaVaritasonMaa — se ei lue tätä
+   * muuttujaa, joten paneelilaajennus ei siirrä laatastoa.)
    *
    * LAATIKKO MUISTETAAN, EI KORKEUS. Korkeus riippuu kotelon
    * kuvasuhteesta, joka vaihtuu kääntyvällä ruudulla — se on siis
@@ -1503,6 +1522,16 @@ export async function avaaPallolauta(ui) {
   });
   const nostot = luoNostot({
     ui, merkit, asteet: pallonAsteet, ruudulla, onPoltettu: pallonNostoOnPoltettu,
+  });
+  /*
+   * MAAN PERUSTIEDOT JA LISÄÄ-VALIKKO KARTTAAN KIINNITETTYNÄ
+   * (karttauudistus erä 3, Raamattu KARTTAUUDISTUKSEN PAATOKSET 2
+   * kohta 2). Kerros on merkkikerroksen osa `maapaneeli`, joten se
+   * elää samaa elämää kuin nimet ja nostot — perustelut ja mitat ovat
+   * js/pallolauta/maapaneeli.js:ssä.
+   */
+  const maapaneeli = luoMaapaneeli({
+    ui, merkit, kamera, asteet: pallonAsteet,
   });
 
   /* ---- avauslennon tila (vaihe 5b) --------------------------------- */
@@ -1835,7 +1864,25 @@ export async function avaaPallolauta(ui) {
     }
     void kamera.ajaKamera({ x: city.x, y: city.y, leveys: kamera.kameranTila()?.leveys }, {});
     if (oma && oma.id === city.id) {
-      ui.avaaTutkinta(city);
+      /*
+       * KAUPUNGIN NAPAUTUS AVAA ISON POP-UPIN (karttauudistus erä 4;
+       * omistaja 13.9.2026: *"Kaupunkia klikkaamalla pelaajalle avautuu
+       * isossa pop up ikkunassa Kaupunkilehden herokuvat ja
+       * esittelyteksti sekä nähtävyyskartta"*).
+       *
+       * ANKKURI ON MERKIN RUUTUPISTE, ei ruudun keskus (suunnitelman luku
+       * 3.3): kortti aukeaa sen kaupungin viereen, jota napautettiin, ja
+       * seuraa pistettään, kun pallo pysähtyy (ladoLevossa).
+       *
+       * VANHA OVI JÄÄ RINNALLE (tehtävänanto): kaupunkilehti avataan yhä
+       * `ui.avaaTutkinta`lla — kartan "Etsi aarre" -napista, fokusvirrasta
+       * ja pop-upin omasta alarivistä. Tätä haaraa ei siis pureta vielä.
+       */
+      if (Number.isFinite(k.lat) && Number.isFinite(k.lon)) {
+        avaaKaupunkipopup(ui, city, { ankkuri: ankkuri(k.lat, k.lon) });
+      } else {
+        avaaKaupunkipopup(ui, city);
+      }
       return true;
     }
     if (game.phase === 'move' && !game.player?.isBot) {
@@ -2001,6 +2048,11 @@ export async function avaaPallolauta(ui) {
       if (pisteNakyy(k)) ehdokkaat.push({ laji: 'kaupunki', lat: k.lat, lng: k.lon, k });
     }
     for (const o of nostot.osumat()) ehdokkaat.push({ laji: 'nosto', lat: o.lat, lng: o.lng, o });
+    // Turisti-info kaupungin vieressä (erä 4): samassa sarjassa kuin
+    // kaupungit ja nostot, ks. datumin `avaa`-kentän perustelu.
+    for (const d of merkit.avattavat()) {
+      ehdokkaat.push({ laji: 'turistiinfo', lat: d.lat, lng: d.lng, d });
+    }
     const voittaja = lahin(lat, lng, ehdokkaat, (e) => e.lat, (e) => e.lng);
     /*
      * KAUPUNKIPISTEEN OMA MUSTE VOITTAA LAPUN. Jos sormi on pisteen
@@ -2023,6 +2075,16 @@ export async function avaaPallolauta(ui) {
      * alta. Lappu voittaa siis vain toisen noston tai tyhjän.
      */
     if (voittaja?.o?.perhe === 'piste') return voittaja;
+    /*
+     * TURISTI-INFO PITÄÄ PAIKKANSA, SAMASTA SYYSTÄ KUIN KOHTAAMISPISTE.
+     * Merkki on jo kerran siirretty sivuun kaupungin päältä (39 px
+     * saapumisnäkymässä), ja sen laatikko on nimiladonnan varaus — elävä
+     * kaupunginnimi siis väistää sitä. POLTETTU muste ei voi väistää, ja
+     * mitattuna 13.9.2026 juuri se voitti: napautus merkin päälle avasi
+     * kaupungin pop-upin, koska Pariisin poltettu nimimuste ulottui
+     * merkin alle. Sormi merkin päällä tarkoittaa merkkiä.
+     */
+    if (voittaja?.laji === 'turistiinfo') return voittaja;
     return musteeseenOsunut(lat, lng) ?? voittaja;
   };
 
@@ -2091,6 +2153,7 @@ export async function avaaPallolauta(ui) {
     const voittaja = lahinMerkki(lat, lng);
     if (!voittaja) return;
     if (voittaja.laji === 'kaupunki') napautaKaupunki(voittaja.k);
+    else if (voittaja.laji === 'turistiinfo') { heraa(); voittaja.d.avaa(voittaja.d); }
     else napautaNosto(voittaja.o);
   };
 
@@ -2412,6 +2475,76 @@ export async function avaaPallolauta(ui) {
     tahdistaSiirtymanJalkeen();
   };
 
+  /* ---- turisti-info kaupungin vieressä (erä 4) ---------------------- */
+  /**
+   * TURISTI-INFON MERKKI (omistaja 13.9.2026: *"Kaupungin viereen
+   * kartalle tulee oma 'turisti info' merkki ja teksti ja sitä
+   * klikkaamalla avautuu pelkkä nykyisen lehden tursti ja matkustusopas
+   * omassa pop upissa."*).
+   *
+   * MERKKI ON KARTTAAN KIINNITETTY (PAATOKSET 2): se on merkkikerroksen
+   * datum omissa asteissaan (turistiInfonAsteet) eikä karttaruudun lapsi,
+   * ja sen mittakaava luetaan kameran näkyvästä leveydestä — merkki siis
+   * kasvaa zoomatessa kuin painettu kartta, rajojen sisällä
+   * (js/kaupunkinosto.js kaupunkimerkinMitta).
+   *
+   * VERTAILULEVEYS ON MAAN LAATIKKO × 1,15 — sama luku, jolla erä 2
+   * rajaa uloszoomauksen (PAATOKSET 1, kohta 2). Laatikko luetaan
+   * saapumisrajauksen omasta muistista (`maalaatikot`), joka on jo
+   * lämmin, koska saapumisajo laski sen. Ilman laatikkoa merkki saa
+   * perusmittansa eikä katoa mihinkään.
+   *
+   * NAPAUTUS KULKEE `napautettavat()`-POLUSTA (merkit.js): datumilla on
+   * `napautus(d)`, ja osuma lasketaan pallon omasta napautuksesta kuten
+   * linssimerkeillä — elementti itse ei ota osumia.
+   *
+   * MERKKIÄ EI OLE, JOS: linssi on päällä (linssin aikana vain linssin
+   * oma merkki avaa mitään), avauslento tai lähtövalinta on kesken
+   * (kartan niukimmat hetket), tai kaupungilla ei ole matkustusopasta —
+   * tyhjää korttia ei avata.
+   *
+   * @returns {object[]} merkin ruutulaatikot nimiladonnan varauksiksi
+   */
+  const TURISTI_INFON_VERTAILUKERROIN = 1.15;
+  const paivitaTuristiInfo = (nakyva) => {
+    const tyhjaa = () => { merkit.aseta('turistiinfo', []); return []; };
+    if (linssiPaalla() || lento || aloitusNakyvat()) return tyhjaa();
+    const city = ui.game.cityOf?.();
+    if (!city || !kaupunginMatkailijalle(city.id)) return tyhjaa();
+    const oma = pallonAsteet({ x: city.x, y: city.y });
+    const paikka = oma ? turistiInfonAsteet(oma.lat, oma.lon) : null;
+    if (!paikka) return tyhjaa();
+    const iso = kohteidenNykyinenIso(ui);
+    const laatikko = iso ? maalaatikot.get(iso) : null;
+    const uloin = laatikko?.w > 0 ? laatikko.w * TURISTI_INFON_VERTAILUKERROIN : 0;
+    merkit.aseta('turistiinfo', [{
+      avain: `turistiinfo:${city.id}`,
+      laji: 'turistiinfo',
+      cityId: city.id,
+      nimi: city.name,
+      lat: paikka.lat,
+      lng: paikka.lon,
+      mitta: kaupunkimerkinMitta(nakyva?.w, uloin),
+      elementti: turistiInfoElementti,
+      asettele: asetteleTuristiInfo,
+      /*
+       * AVAAJA ON `avaa`, EI `napautus` — JA SE ON TARKOITUS.
+       * `merkit.napautettavat()` kokoaa datumit, joilla on `napautus`, ja
+       * pinnan osumatesti ratkaisee ne ENNEN kaupunkeja (linssin merkki
+       * voittaa aina). Tämä merkki ei ole linssin merkki vaan kartan
+       * kaluste kaupungin vieressä: se kilpailee samassa sarjassa
+       * kaupunkien ja nostojen kanssa (lahinMerkki), jolloin lähin
+       * voittaa. MITATTU 13.9.2026: kun kenttä oli `napautus`, kaupungin
+       * napautus avasi 39 px:n päässä olevan turisti-infon eikä koskaan
+       * kaupungin omaa pop-upia.
+       */
+      avaa: () => {
+        avaaTuristiInfo(ui, city, { ankkuri: ankkuri(paikka.lat, paikka.lon) });
+      },
+    }]);
+    return merkit.laatikot('turistiinfo');
+  };
+
   /* ---- ladonta levossa ---------------------------------------------- */
   let lepoAjastin = 0;
   /** Milloin ladonta viimeksi ajettiin (kuritus, ks. LADONTA KULKEE MUKANA). */
@@ -2469,8 +2602,9 @@ export async function avaaPallolauta(ui) {
      * jäisi oman nimensä alle.
      */
     const kaupunginMitat = kohdekaupunki();
+    const infoTulos = paivitaTuristiInfo(nakyva);
     const nimiTulos = nimet.lado({
-      varaukset: nostoTulos.laatikot,
+      varaukset: [...nostoTulos.laatikot, ...infoTulos],
       pinot: merkit.laatikot('peli'),
       katto,
       vain,
@@ -2485,6 +2619,8 @@ export async function avaaPallolauta(ui) {
     // kaupunkipisteen koosta on tässä (ks. tahdistaPisteidenKoko).
     tahdistaPisteidenKoko();
     if (ui.fokuskohdeAuki?.ankkuri) asemoiFokuskohde(ui);
+    // Kaupungin pop-up seuraa merkkiään samalla säännöllä kuin kohdekortti.
+    if (ui.kaupunkipopupAuki?.ankkuri) asemoiKaupunkipopup(ui);
     return { nostot: nostoTulos, nimet: nimiTulos, sovittelu };
   };
   /**
@@ -2511,6 +2647,13 @@ export async function avaaPallolauta(ui) {
   ohjaimet.addEventListener('change', pyydaLadonta);
   // Zoomi muuttaa kaupunkipisteen säteen heti, ei vasta levossa.
   ohjaimet.addEventListener('change', tahdistaPisteidenKoko);
+  /*
+   * Maapaneeli skaalautuu kuin painettu kartta, joten sen mittakaava
+   * on zoomin asia eikä ladonnan: se kirjoitetaan samalla
+   * kamera-tapahtumalla kuin kaupunkipisteen säde, ei vasta levossa
+   * (muuten paneeli hyppäisi kokoonsa vasta eleen päätyttyä).
+   */
+  ohjaimet.addEventListener('change', () => maapaneeli.tahdistaKoko());
   // Aihevalot: selitteen väripallo vaihtaa bodyn luokan.
   let valoAvain = '';
   const valovahti = new MutationObserver(() => {
@@ -2589,6 +2732,16 @@ export async function avaaPallolauta(ui) {
      * jos maa ei vaihtunut (paivitaFokusmitat).
      */
     paivitaFokusmitat(ui);
+    /*
+     * MAAPANEELI KARTALLE (erä 3). Sama kutsu ja sama paikka kuin
+     * kartuutsilla yllä, ja samasta syystä: kaluste voidaan nollata
+     * laudan alta ilman että pelin tila muuttuu, joten avaintarkistus
+     * ei saa ohittaa sitä. Linssin ajaksi paneeli katoaa kuten muutkin
+     * pelin lappuset (js/pallolauta/lauta.js napautaPintaan, LINSSIN
+     * AIKANA VAIN LINSSIN OMA MERKKI).
+     */
+    const paneelinIso = linssiPaalla() ? null : pallolaudanMaa(ui);
+    maapaneeli.paivita({ iso: paneelinIso, laatikko: laatikkoNyt(paneelinIso) });
     const avain = [
       [...kaydyt].sort().join(','), posAvain, liikkuu ? 'liikkuu' : '',
       kohteet.map((k) => k.key).join(','), valinta.avain, ui.lentoKaari?.b ?? '',
@@ -2645,7 +2798,8 @@ export async function avaaPallolauta(ui) {
         maanLaatikko = null;
         tahdistaZoomirajat();
       } else {
-        saapumisrajaus().then((laatikko) => {
+        // Sama laatikko kuin `saavu`lla: paneelilla laajennettu.
+        saapumislaatikko().then((laatikko) => {
           // Maa on voinut vaihtua haun aikana: vanha vastaus ei saa rajata.
           if (kohteidenNykyinenIso(ui) !== korostusIso) return;
           maanLaatikko = laatikko;
@@ -2708,8 +2862,7 @@ export async function avaaPallolauta(ui) {
    * entisen kaupunkinäkymän (kamera.js).
    */
   const maalaatikot = new Map();
-  const saapumisrajaus = async () => {
-    const iso = kohteidenNykyinenIso(ui);
+  const haeMaanLaatikko = async (iso) => {
     if (!iso) return null;
     if (maalaatikot.has(iso)) return maalaatikot.get(iso);
     const data = await lataaMaapolygonit();
@@ -2719,19 +2872,98 @@ export async function avaaPallolauta(ui) {
     maalaatikot.set(iso, laatikko);
     return laatikko;
   };
+  const saapumisrajaus = async () => haeMaanLaatikko(kohteidenNykyinenIso(ui));
+  /**
+   * Maan laatikko HETI, jos se on jo luettu; muuten null ja lataus
+   * käyntiin. Maapaneeli piirtyy joka piirrossa eikä voi odottaa
+   * lupausta — ensimmäisellä kerralla se jää siis yhden piirron pois ja
+   * ilmestyy, kun aineisto on purettu (1,4 MB on jo haettu korostusta
+   * varten, joten odotus on käytännössä sama kuin korostuksella).
+   */
+  const laatikkoNyt = (iso) => {
+    if (!iso) return null;
+    if (!maalaatikot.has(iso)) {
+      /*
+       * Lataus käyntiin JA piirto uusiksi sen valmistuttua. Ilman
+       * jälkimmäistä paneeli jäisi pois niin kauan kuin pelitila ei
+       * muutu: `paivita` ajetaan vain piirrosta, eikä aineiston
+       * saapuminen ole pelitapahtuma.
+       */
+      void haeMaanLaatikko(iso).then((laatikko) => { if (laatikko) paivita(); });
+      return null;
+    }
+    return maalaatikot.get(iso);
+  };
+
+  /*
+   * SAAPUMISAJOSSA PANEELI ON OSA LAATIKKOA (erä 3, suunnitelman luku
+   * 3.0: *"pannauksen rajaan on laskettava paneeli mukaan laatikkoon"*).
+   * Ilman tätä paneeli jäisi saapumisnäkymässä ruudun alalaidan alle,
+   * koska se riippuu maan eteläreunan ULKOPUOLELLA. Nurkkatilassa
+   * (js/fokusmitat.js maapaneeliKartassa) laajennusta ei tehdä —
+   * silloin paneelia ei ole kartalla.
+   */
+  const saapumislaatikko = async () => {
+    const laatikko = await saapumisrajaus();
+    if (!laatikko || !maapaneeliKartassa()) return laatikko;
+    return paneelinLaatikko(laatikko);
+  };
 
   /** Saapumisajo: maan laatikko ruutuun, tai entinen kaupunkinäkymä. */
   const saavu = async ({ kesto = 0 } = {}) => {
-    const bbox = await saapumisrajaus();
     /*
-     * SAAPUMINEN ASETTAA MYÖS ULOSZOOMAUKSEN KATON (erä 2): kamera
-     * päätyy juuri tähän laatikkoon, ja raja on sama laatikko × 1,15.
-     * Järjestys on tämä eikä toisin päin — jos raja asetettaisiin
-     * ajon jälkeen, ajon oma loppukorkeus voisi jo olla sen ulkona.
+     * SAAPUMISLAATIKKO = MAA + MAAPANEELI (erä 3) JA SE ON MYÖS
+     * ULOSZOOMAUKSEN KATTO (erä 2). Kamera päätyy juuri tähän
+     * laatikkoon, ja raja on sama laatikko × ULOSZOOMAUKSEN_KERROIN.
+     * Laajennettu laatikko EIKÄ maan oma: saapumisnäkymän on oltava
+     * sama kuin uloin sallittu näkymä, tai paneeli jäisi uloimmalla
+     * zoomilla ruudun alalaidan alle heti ensimmäisen sormenliikkeen
+     * jälkeen. Järjestys on tämä eikä toisin päin — jos raja
+     * asetettaisiin ajon jälkeen, ajon oma loppukorkeus voisi jo olla
+     * sen ulkona.
      */
+    const bbox = await saapumislaatikko();
     maanLaatikko = bbox;
     tahdistaZoomirajat();
     return merkkienNakyvyys.kameranJalkeen(kamera.kotiin({ kesto, bbox }));
+  };
+
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * MATKA KUMOAA ULOSZOOMAUKSEN ESTON (karttauudistus erä 8)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * Karttauudistuksen erä 2 lukitsee uloszoomauksen maan laatikkoon
+   * (`zoomirajaSyrjaytys = { max }`, omistaja 13.9.2026: *"Pelaaja ei
+   * voi itse zoomata ulospain"*). MATKAVALINTA ON SE HETKI, JOLLOIN
+   * KAMERAN ON PÄÄSTÄVÄ LAATIKON ULKOPUOLELLE: kulkutapa rajaa
+   * näkymän koko matkan mitalle (js/ui.js matkarajaus), ja laiva tai
+   * lento vie useimmiten kahden maan yli.
+   *
+   * OMANA FUNKTIONAAN JA YHDESSÄ PAIKASSA. Syrjäytys itse asuu
+   * `zoomirajaSyrjaytys`issa (ks. LINSSI SAA SYRJÄYTTÄÄ ZOOMIRAJAT
+   * ylempänä); tämä vain nostaa sen talteen matkan ajaksi ja panee
+   * takaisin saapumisen jälkeen. Näin erä 2:n oma laskenta ja tämä
+   * erä eivät kirjoita samaan kohtaan, ja `matkallaVapaana` estää
+   * kahden peräkkäisen kutsun tallentamasta nullia talteen.
+   *
+   * Linssi voittaa silti: jos syrjäytys asetetaan matkan aikana
+   * (satelliittilinssi), `zoomirajat()` kirjoittaa sen suoraan ja
+   * matkan päätös palauttaa vain sen, mikä oli tallessa.
+   */
+  let matkasyrjaytysTalteen = null;
+  let matkallaVapaana = false;
+  const matkaZoomirajat = (vapaa) => {
+    if (Boolean(vapaa) === matkallaVapaana) return;
+    matkallaVapaana = Boolean(vapaa);
+    if (matkallaVapaana) {
+      matkasyrjaytysTalteen = zoomirajaSyrjaytys;
+      zoomirajaSyrjaytys = null;
+    } else {
+      zoomirajaSyrjaytys = matkasyrjaytysTalteen;
+      matkasyrjaytysTalteen = null;
+    }
+    tahdistaZoomirajat();
   };
 
   /** Pelin paikan (pos) piste ruudulla (kotelon px) — nopan lähtö. */
@@ -2779,6 +3011,8 @@ export async function avaaPallolauta(ui) {
     reitit,
     nimet,
     nostot,
+    /** Maan perustiedot ja Lisää-valikko kartalla (erä 3). */
+    maapaneeli,
     paivitaFokuspiste: paivitaFokuspistePallolla,
     heraa,
     asteet: pallonAsteet,
@@ -2794,6 +3028,12 @@ export async function avaaPallolauta(ui) {
     ruutupiste,
     ruudulla,
     merkitseNappulanPaikka,
+    /**
+     * Uloszoomauksen esto pois matkan ajaksi ja takaisin saapumisessa
+     * (ks. MATKA KUMOAA ULOSZOOMAUKSEN ESTON). `true` vapauttaa,
+     * `false` palauttaa laudan omat rajat.
+     */
+    matkaZoomirajat,
     /**
      * Zoomirajojen syrjäytys linssin ajaksi: `{ min, max }` korkeuksina
      * pallonsäteinä, `null` palauttaa laudan omat rajat. Ainoa käyttäjä
@@ -2857,6 +3097,9 @@ export async function avaaPallolauta(ui) {
     piilota: () => { kuori.hidden = true; noppaTakaisin(); tahdistaLepo(); },
     pura: () => {
       doc.body.classList.remove('pallolauta-paalla');
+      // Kaupungin pop-up on tämän laudan kortti (ankkuri on pallon
+      // ruutupiste): purettu lauta ei jätä sitä leijumaan karttaruutuun.
+      suljeKaupunkipopup(ui);
       // Valintanäkymän terävän tilan pakotus pois ENSIN: pakotus on
       // istunnon laskuri (js/pallo.js), eikä se saa jäädä päälle
       // puretun laudan jälkeen.
@@ -2887,6 +3130,7 @@ export async function avaaPallolauta(ui) {
       kamera.pysaytaKameraAjo();
       eleet.pura();
       litistaja.pura();
+      maapaneeli.pura();
       merkkienNakyvyys.pura();
       merkit.pura();
       noppaTakaisin();

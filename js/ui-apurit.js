@@ -1434,6 +1434,24 @@ export const VIIVA_IKONIT = {
     + '<path d="M4.4 20.2h15.2"/>',
   noppa: '<rect x="3.6" y="3.6" width="16.8" height="16.8" rx="3.2"/><g class="taytto"><circle cx="8.2" cy="8.2" r="1.25"/><circle cx="15.8" cy="8.2" r="1.25"/><circle cx="12" cy="12" r="1.25"/><circle cx="8.2" cy="15.8" r="1.25"/><circle cx="15.8" cy="15.8" r="1.25"/></g>',
   kompassi: '<circle cx="12" cy="12" r="8.4"/><path d="M12 5.8 14.3 12 12 18.2 9.7 12z"/><circle class="taytto" cx="12" cy="12" r="1"/>',
+  /*
+   * LIIKU-NAPIN KAKSI UUTTA KULKUTAPAA (karttauudistus erä 8, omistaja
+   * 13.9.2026: *"liftaus (ilmainen), bussi kahden vierekkaisen
+   * kaupungin valilla (50p), laiva ja lento entisellaan"*).
+   *
+   * PEUKALO on liftauksen merkki kaikkialla maailmassa, ja se erottuu
+   * saappaasta yhdellä silmäyksellä — vanha `saapas` jää kartan omiin
+   * merkkeihin. BUSSI on kori, ikkunarivi ja kaksi pyörää: sama
+   * viivapaksuus ja sama 24-ruudukko kuin muilla, täytöt (.taytto)
+   * vain pyörissä kuten nopan silmissä.
+   */
+  peukalo: '<path d="M8.4 20.4V11.2l3.4-3.6V4.9a1.5 1.5 0 0 1 3 0v4.4h3.1'
+    + 'a1.9 1.9 0 0 1 1.9 2.2l-.9 6.1a2.4 2.4 0 0 1-2.4 2z"/>'
+    + '<rect x="3.6" y="11.2" width="4.8" height="9.2" rx="1.2"/>',
+  bussi: '<rect x="3.4" y="4.6" width="17.2" height="11.6" rx="2.4"/>'
+    + '<path d="M3.6 12.2h16.8"/><path d="M9.2 7.2v5M14.8 7.2v5"/>'
+    + '<g class="taytto"><circle cx="7.6" cy="18.6" r="1.7"/>'
+    + '<circle cx="16.4" cy="18.6" r="1.7"/></g>',
   nuoli: '<path d="M9.5 6.2 5 10.6l4.5 4.4"/><path d="M5 10.6h9.2a4.6 4.6 0 1 1 0 9.2H9.5"/>',
   kone: '<path d="M12 3.6v5.9l7.6 4.6v2.1L12 13.7v4.4l2.4 1.9v1.6L12 20.5l-2.4 1.1V20l2.4-1.9v-4.4L4.4 16.2v-2.1L12 9.5z"/>',
   tahti: '<path d="m12 3.8 2.5 5.2 5.5.7-4 3.9 1 5.6-5-2.7-5 2.7 1-5.6-4-3.9 5.5-.7z"/>',

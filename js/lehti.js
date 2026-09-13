@@ -66,7 +66,8 @@ import {
 import { TESTATTAVAA, TILANNE, TUOREET } from './tyohuone-tilanne.js';
 import { raamatunTaulusivu, tilastoSivut } from './tyohuone-tilastot.js';
 import {
-  cachedSummary, html, jaaKappaleiksi, kehittajaTilaPaalla, onVanhaKuva, shortIntro,
+  cachedSummary, html, jaaKappaleiksi, kehittajaTilaPaalla, onVanhaKuva,
+  piirraLeipateksti, shortIntro,
 } from './ui-apurit.js';
 import {
   haeArtikkeli, haeUutiset, kaannaSuomeksi, uutislahde,
@@ -716,7 +717,35 @@ export function jatkaLehdenLuentaa(ui) {
  * Kaupunkilehteen palataan sulkemalla; maalehti ei ole kaupungin
  * sivujen jatke vaan rinnakkainen lehti.
  */
-export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
+/**
+ * SIVUNUMERO SIVUTUNNUKSESTA — maalehden avaus suoraan aihesivulle.
+ *
+ * Karttauudistuksen erä 3 (pallon maapaneelin Lisää-valikko,
+ * js/pallolauta/maapaneeli.js): otsikon napautus avaa MAALEHDEN
+ * KYSEISEN SIVUN, ei etusivua. Valikko lukee otsikot samasta
+ * `MAA_KATEGORIAT`-taulusta, josta tämä lehti latoo sivunsa, joten
+ * VALIKKO ANTAA SIVUTUNNUKSEN (`historia`, `menovinkit`, …) EIKÄ
+ * NUMEROA: numero riippuu siitä, onko maalla karttasivu, ja sen
+ * arvaaminen kutsupuolella tuottaisi kahden taulun rinnakkaisen
+ * järjestyksen — juuri sen, mitä tässä tiedostossa on vältetty
+ * kaikkialla muuallakin.
+ *
+ * Numero saa silti kelvata: kehittäjän savuke ja mahdolliset muut
+ * kutsujat voivat antaa suoran sivunumeron. Tuntematon tunnus palaa
+ * lehden ensimmäiselle sivulle — se on TURVALLINEN TILA, ei virhe:
+ * maalta on voitu poistaa aihe, jonka linkki jäi jonnekin elämään.
+ *
+ * Sivupinon indeksointi on lehden oma (ks. piirraTutkiSivu): sivu n
+ * näyttää `tutkiSivut[n - 1]`, ja maalehden ensimmäinen selattava on 1.
+ */
+function maalehdenSivunumero(sivut, sivu) {
+  if (Number.isFinite(sivu)) return Math.max(1, Math.round(sivu));
+  if (typeof sivu !== 'string' || !sivu) return 1;
+  const i = sivut.findIndex((s) => s.id === sivu);
+  return i < 0 ? 1 : i + 1;
+}
+
+export function avaaMaalehti(ui, iso, { nimi = null, sivu = null } = {}) {
   const maa = ui.game?.pack?.map?.countryShapes?.[iso];
   if (!maa) return;
   aloitaLivianLehtikierros(ui);
@@ -836,8 +865,9 @@ export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
   // ei sen, jossa pelaaja sattuu seisomaan (ks. paivitaMediarivit).
   paivitaMediarivit(ui);
   // Maalehti alkaa maan etusivulta (indeksi 0 on kaupunkilehden
-  // kansi, jota maalehdellä ei ole — siksi sivu 1).
-  naytaTutkiSivu(ui, 1, { heti: true });
+  // kansi, jota maalehdellä ei ole — siksi sivu 1) tai siltä
+  // sivulta, jonka kutsuja pyysi (ks. maalehdenSivunumero).
+  naytaTutkiSivu(ui, maalehdenSivunumero(sivut, sivu), { heti: true });
 }
 
 /**
@@ -2105,6 +2135,62 @@ export function kytkeTutkiSelaus(ui, kortti) {
  * näppäimet, sulku) asuu yhä ui.js:ssä ja kutsutaan ui-olion kautta.
  */
 
+/* ======== KAUPUNKILEHDEN ETUSIVUN OSAT UUDELLEENKÄYTETTÄVIKSI ======
+ *
+ * KARTTAUUDISTUS, ERÄ 4 (13.9.2026; suunnitelma
+ * docs/raportit/karttauudistus-suunnitelma-pallo-20260913.md luku 3.3,
+ * Raamattu "KARTTAUUDISTUS"): kaupungin merkin napautus pallolla avaa
+ * ison pop-upin, jossa on kaupunkilehden HEROKUVAT, ESITTELYTEKSTI ja
+ * NÄHTÄVYYSKARTTA — ja turisti-info-merkki avaa pelkän matkustusoppaan.
+ *
+ * SISÄLTÖÄ EI KIRJOITETA UUDESTAAN EIKÄ MUUTETA. Nämä kolme apuria
+ * kertovat vain, MISTÄ etusivun ainekset luetaan ja miten ne ladotaan
+ * annettuun säiliöön; jokainen teksti ja kuva tulee samasta
+ * lehtidatasta sanatarkasti kuin etusivulla. Kaupunkilehden oma kulku
+ * (rakennaSivut → piirraTutkiSivu) ei muutu.
+ */
+
+/**
+ * Kaupungin kansiosasto (aihe `kaupunki`) — herokuvien, esittelyn
+ * kuvarivin ja matkailijalle-lohkon yksi lähde. Sama haku kuin
+ * rakennaSivut tekee kansilleen, omana kutsuttavanaan, jotta pallon
+ * pop-up ei tarvitse koko sivupinoa nähdäkseen kaupungin kannen.
+ */
+export function kaupunginKansi(cityId) {
+  if (!cityId) return null;
+  return (KULTTUURI_KATEGORIAT[cityId] ?? []).find((k) => k.id === 'kaupunki') ?? null;
+}
+
+/**
+ * Saapumiskortin vakiorivi, kun kaupungilla ei ole omaa esittelyä.
+ * Sama merkkijono kuin js/ui.js openArrival kirjoittaa elementtiin —
+ * yksi totuus kahdelle kutsujalle, ei kopiota.
+ */
+export const LEHDEN_VAKIOESITTELY = 'Isoisä on merkinnyt tämän paikan karttaansa.';
+
+/**
+ * Kaupungin oma esittelyteksti (etusivun leipäteksti) tai null.
+ * Avain on wiki-otsikko, mutta useimmilla kaupungeilla se on sama kuin
+ * nimi (ks. js/ui.js openArrival: sama varasuunnitelma).
+ */
+export function kaupunginEsittely(city) {
+  if (!city) return null;
+  return ARTIKKELIT[city.wiki ?? city.name]?.intro ?? null;
+}
+
+/**
+ * Esittely annettuun säiliöön etusivun asussa (.arrival-intro):
+ * oma leipäteksti korostuksineen, tai vakiorivi jos omaa ei ole.
+ */
+export function latoKaupunginEsittely(kohde, city) {
+  const lohko = html('div', 'arrival-intro');
+  const teksti = kaupunginEsittely(city);
+  if (teksti) piirraLeipateksti(lohko, teksti);
+  else lohko.textContent = LEHDEN_VAKIOESITTELY;
+  kohde.appendChild(lohko);
+  return lohko;
+}
+
 /**
  * Lehden etusivun kuvataitto (omistajan toive 5.8.2026): iso
  * pääkuva maston alla ja pienempien kuvien rivi esittelytekstin
@@ -2133,13 +2219,34 @@ export function kytkeTutkiSelaus(ui, kortti) {
  * täsmälleen ennallaan.
  */
 export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) {
+  latoLehtiKuvat(ui, {
+    paakuva: ui.arrivalLehtiPaakuva,
+    kuvarivi: ui.arrivalLehtiKuvat,
+    kuvat,
+    avauskuvat,
+    ennenNyt,
+  });
+}
+
+/**
+ * ETUSIVUN HEROKUVAT MIHIN TAHANSA KAHTEEN SÄILIÖÖN (karttauudistus
+ * erä 4, 13.9.2026). Rivit ovat täsmälleen entiset ja entisessä
+ * järjestyksessä — vain kaksi kiinteää lehtielementtiä
+ * (ui.arrivalLehtiPaakuva, ui.arrivalLehtiKuvat) on vaihtunut
+ * parametreiksi, jotta kaupungin pallo-pop-up voi latoa samat kuvat
+ * omaan kehykseensä ilman toista piirtäjää. Kaupunkilehti kutsuu tätä
+ * kääreen (piirraLehtiKuvat) kautta eikä muutu miksikään.
+ */
+export function latoLehtiKuvat(ui, {
+  paakuva: paakuvaEl, kuvarivi, kuvat, avauskuvat = null, ennenNyt = null,
+} = {}) {
   const lista = kuvat ?? [];
   const panoraamat = avauskuvat ?? [];
   const pari = (ennenNyt?.length ?? 0) >= 2 ? ennenNyt.slice(0, 2) : null;
-  ui.arrivalLehtiPaakuva.replaceChildren();
-  ui.arrivalLehtiKuvat.replaceChildren();
-  ui.arrivalLehtiPaakuva.hidden = !lista.length && !panoraamat.length;
-  ui.arrivalLehtiKuvat.hidden = pari
+  paakuvaEl.replaceChildren();
+  kuvarivi.replaceChildren();
+  paakuvaEl.hidden = !lista.length && !panoraamat.length;
+  kuvarivi.hidden = pari
     ? false
     : (panoraamat.length ? !lista.length : lista.length < 2);
   if (!lista.length && !panoraamat.length && !pari) return;
@@ -2179,8 +2286,8 @@ export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) 
     return kotelo;
   };
   const piirraPari = () => {
-    ui.arrivalLehtiKuvat.appendChild(teeKuva(pari[0], 0, 640, { sarja: pari, rooli: 'ennen' }));
-    ui.arrivalLehtiKuvat.appendChild(teeKuva(pari[1], 1, 640, { sarja: pari, rooli: 'nyt' }));
+    kuvarivi.appendChild(teeKuva(pari[0], 0, 640, { sarja: pari, rooli: 'ennen' }));
+    kuvarivi.appendChild(teeKuva(pari[1], 1, 640, { sarja: pari, rooli: 'nyt' }));
   };
   /*
    * AVAUSKUVAT (omistajan tilaus 15.8.2026: "saisi olla laadukas
@@ -2193,19 +2300,19 @@ export function piirraLehtiKuvat(ui, kuvat, avauskuvat = null, ennenNyt = null) 
    * niistä ensimmäistä. Kaupunki ilman avauskuvia taittuu ennalleen.
    */
   if (panoraamat.length) {
-    ui.arrivalLehtiPaakuva.appendChild(panoraamat.length > 1
+    paakuvaEl.appendChild(panoraamat.length > 1
       ? nahtavyydenKaruselli(ui, panoraamat)
       : nahtavyydenKuva(ui, panoraamat[0]));
     if (pari) { piirraPari(); return; }
     for (let i = 0; i < Math.min(lista.length, 2); i += 1) {
-      ui.arrivalLehtiKuvat.appendChild(teeKuva(lista[i], i, 640));
+      kuvarivi.appendChild(teeKuva(lista[i], i, 640));
     }
     return;
   }
-  if (lista.length) ui.arrivalLehtiPaakuva.appendChild(teeKuva(lista[0], 0, 1200));
+  if (lista.length) paakuvaEl.appendChild(teeKuva(lista[0], 0, 1200));
   if (pari) { piirraPari(); return; }
   for (let i = 1; i < Math.min(lista.length, 3); i += 1) {
-    ui.arrivalLehtiKuvat.appendChild(teeKuva(lista[i], i, 640));
+    kuvarivi.appendChild(teeKuva(lista[i], i, 640));
   }
 }
 

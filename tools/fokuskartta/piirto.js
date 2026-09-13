@@ -518,9 +518,50 @@ export const VARI_SYVYYS_MURRETTU = monotoninenRamppi(VARI_SYVYYS_MURRETTU_ANKKU
  * päätetty paperilla (kolme vaihtoehtoa omistajalle: 0,60 · 0,72 ·
  * 0,85).
  */
+/*
+ * === KERMA: TASOITUSKERROKSEN VÄRI (karttauudistus, erä 1c) =========
+ *
+ * Omistaja 13.9.2026 klo 14.10 UTC, nähtyään erän 1b kolme
+ * vaihtoehtokuvaa, sanatarkasti: *"Jätä ranska alkuperäiseen. Kaikki
+ * muut ihan kamalia. Poistetaan muista maista korkeus erot kokonaan
+ * tai lähes kokonaan."* Feidausväriksi omistaja valitsi kysymyskortilla
+ * *"Kerma, paperia vaaleampi"* (Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 4).
+ *
+ * MIKSI PAPERI EI KELPAA FEIDAUSVÄRIKSI. Erän 1b raportti (luku 7.2)
+ * mittasi sen: feidaus vetää naapurin sävyä kohti feidausväriä, ja
+ * missä naapurin seepia on JO paperia vaaleampi — Belgian alanko
+ * rgb(246,243,204) vs. paperi rgb(232,220,188) — paperinsävy
+ * TUMMENTAA pikseliä. Tasoituskerroksen on vaalennettava joka kohdassa,
+ * myös tasaisilla alangoilla, tai kohdemaa ei eroa naapuristaan.
+ *
+ * MIKSI JUURI (250,244,214) EIKÄ ERÄN 1b EHDOTTAMA (246,237,198).
+ * Laskettu ehdosta "naapurit selvästi vaaleampia kuin Ranska":
+ * peitolla 0,85 naapurin seepiasta jää läpi 15 %, joten tulos on
+ * 0,15·A + 0,85·kerma. Ranskan alanko on mitattu rgb(241,232,184)
+ * (erän 1b luku 4.1, vaihe A). Kermalla (246,237,198) tyypillinen
+ * naapuripikseli (220,205,165) päätyy arvoon (242,232,193) — samaan
+ * kirkkauteen kuin Ranska, eli ero katoaa. Kermalla (250,244,214) sama
+ * pikseli on (246,238,207), joka on Ranskan alangosta selvästi
+ * vaaleampi (ΔL noin +11) mutta jättää rantaviivan musteesta yhä
+ * 15 % kontrastia eli hennon mutta luettavan viivan.
+ *
+ * Tämä on RAKENNUSAIKAINEN LUKU: vaihto on yksi ajon valitsin
+ * (`--kerma`) ja laattojen uusi ajo, ei koodimuutos.
+ */
+export const KERMA = '#faf4d6';
+
 export const VARIPALETIT = {
   taysvari: { asteikko: VARI_ASTEIKKO, syvyys: VARI_SYVYYS, vesi: 0.9 },
   murrettu: { asteikko: VARI_ASTEIKKO_MURRETTU, syvyys: VARI_SYVYYS_MURRETTU, vesi: 0.72 },
+  /*
+   * TASOITUS EI OLE ASTEIKKO VAAN SEN PUUTTUMINEN. Kohdemaa jää
+   * alkuperäiseksi seepiareliefiksi (laatan alfa 0), ja kaikki muu saa
+   * kerma-peiton, joka häivyttää reliefin lähes kokonaan. Siksi tässä
+   * paletissa ei ole `asteikko`- eikä `syvyys`-kenttää: sillä ei ole
+   * maastoa piirrettävänä. `peitto` on feidauksen alfa laatikon
+   * sisällä (oletus 0,85 = 85 % kermaa, 15 % alkuperäistä reliefiä).
+   */
+  tasoitus: { tasoitus: true, peitto: 0.85, vari: KERMA },
 };
 
 /** Paletin nimi → asteikkopari ja veden peittävyys; tuntematon → null. */

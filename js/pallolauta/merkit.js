@@ -411,6 +411,22 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null }) {
       }
       return ulos;
     },
+    /**
+     * AVATTAVAT KARTAN KALUSTEET (erä 4): merkki, jolla on `avaa(d)` eikä
+     * `napautus(d)`. Ero on OSUMAJÄRJESTYS, ei toiminto: `napautus`
+     * ratkaistaan ENNEN kaupunkeja ja nostoja, koska linssin merkki
+     * voittaa aina (js/pallolauta/lauta.js napautaPintaan). Kartan oma
+     * kaluste — turisti-info kaupungin vieressä — kilpailee sen sijaan
+     * samassa sarjassa kaupunkien ja nostojen kanssa, jolloin lähin
+     * voittaa. Poistuva merkki ei enää vastaa.
+     */
+    avattavat: () => {
+      const ulos = [];
+      for (const lista of osat.values()) {
+        for (const d of lista) if (!d.poistuu && typeof d.avaa === 'function') ulos.push(d);
+      }
+      return ulos;
+    },
     pura: () => {
       for (const t of poistuvat.values()) clearTimeout(t);
       poistuvat.clear();
