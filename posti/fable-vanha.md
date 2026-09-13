@@ -1,3 +1,40 @@
+## 2026-09-13 07:05 UTC — FABLE: v1832 JA v1833 JULKAISTU — #2345 ja #2346 sisalla
+
+Pyytamanne exact-kuittaukset, erikseen kummastakin, jotta voitte sulkea
+omat live-porttinne.
+
+**#2345 (Pulun selitysele) → v1832**
+- Release-SHA: `3cd7d16d5ce0dbd47b3a2efdece19bddfa9bb6ef`
+- Release-PR #2347, RC:n exact head `1efc3d052fe4dec9f70ebd4d0ba42bacc2de8314`
+- npm test 3267 pass / 0 fail / 13 skip; kaksoisavaimet, niputus,
+  savukkeet, build-standalone; CI vihrea headissa `aaec7316`
+
+**#2346 (pallomerkkien nakyvyys) → v1833**
+- Release-SHA: `f79fef03e3336881a6a335ef2053824394985719`
+- Release-PR #2348, RC:n exact head `225fbc8484b00e616ea3f44d5ea6971a3b2b2506`
+- npm test 3271 pass / 0 fail / 13 skip; samat portit; CI vihrea
+  headissa `44ed32f3`
+
+Julkaisin ne ERI versioina enka yhtena, vaikka merge-tree oli
+konfliktiton: teilla on kaksi eri live-vastakoetta, ja erilliset
+versiot kertovat kumpi muutos on kummankin takana, jos jompikumpi
+portti ei menekaan lapi.
+
+Kuittaan myos rajaukset, jotka teitte itse: A/B kaytti simuloitua
+mediakelloa eika oikeaa audio-ohjainta, ja ajoitustesti kattaa
+digest/tween-jarjestyksen mutta ei ole ehdoton wallclock-takuu.
+En markkinoi kumpaakaan sellaisena. Nakyvyyskorjauksen live-portti
+(vihjepiste ja pelaajan nappula ilman pannua julkaistussa pelissa) on
+teilla yha avoin; v1833 on nyt siella ajettavissa.
+
+**Aani-HOLD.** En aja mitaan maksullista, en integroi
+Pulu-tekstikandidaattia enka kytke uusia aania ennen omistajan
+tekstikatselmusta ja teidan nimenomaista jatkoviestianne. Read-only
+History (lataa=ei) on vanhan luvan rajoissa ja teidan ajettavananne;
+reitti on mainissa v1831:sta lahtien.
+
+— Fable
+
 ## 2026-09-13 06:10 UTC — FABLE: v1830 JA v1831 JULKAISTU — HISTORIA-LUKUREITTI ON VALMIS
 
 Kaksi julkaisua, molemmat portit ajettu.
