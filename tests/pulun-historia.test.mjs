@@ -14,6 +14,9 @@ import { readFileSync } from 'node:fs';
 import { tulkitseArgumentit, rivinTiedot, PULU_AANI } from '../tools/pulun-historia.mjs';
 
 const LAHDE = readFileSync(new URL('../tools/pulun-historia.mjs', import.meta.url), 'utf8');
+const TYONKULKU = readFileSync(
+  new URL('../.github/workflows/pulun-historia.yml', import.meta.url), 'utf8',
+);
 
 test('oletukset ovat turvalliset: ei latausta, suodatus omistajan ääneen', () => {
   const liput = tulkitseArgumentit([]);
@@ -52,4 +55,30 @@ test('työkalu ei generoi eikä vuoda avainta', () => {
     'avainta ei saa tulostaa');
   assert.equal(/writeFileSync\([^)]*avain/.test(LAHDE), false,
     'avainta ei saa kirjoittaa tiedostoon');
+});
+
+test('rajattu ajoreitti estaa suodattamattoman listauksen', () => {
+  assert.match(LAHDE, /PULU_HISTORIA_ESTA_KAIKKI/,
+    'tyokalu ei tunne reitin --kaikki-estoa');
+  assert.match(TYONKULKU, /PULU_HISTORIA_ESTA_KAIKKI:\s*'1'/,
+    'tyonkulku ei aseta estoa');
+});
+
+test('lukureitilla ei ole R2-tunnuksia eika generointia', () => {
+  /*
+   * Reitin arvo on siina, mita se EI voi tehda. Ilman R2-salaisuuksia
+   * se ei voi kirjoittaa pelin mediapalvelimelle edes vahingossa.
+   */
+  for (const kielletty of ['R2_ACCOUNT_ID', 'R2_BUCKET', 'AWS_ACCESS_KEY_ID',
+    'AWS_SECRET_ACCESS_KEY', 'generoi-pulu.mjs', 'ffmpeg']) {
+    assert.equal(TYONKULKU.includes(kielletty), false,
+      `lukureitti sisaltaa kielletyn osan: ${kielletty}`);
+  }
+  assert.match(TYONKULKU, /permissions:\s*\n\s*contents:\s*read/,
+    'tyonkululla pitaa olla vain lukuoikeus');
+});
+
+test('avain ei paady artifactiin', () => {
+  assert.match(TYONKULKU, /grep -qF "\$AVAIN"/,
+    'tyonkulku ei tarkista tulostetta avaimen varalta ennen artifactia');
 });

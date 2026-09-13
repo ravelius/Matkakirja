@@ -131,6 +131,18 @@ export async function lataaAani(avain, id, kohde) {
 
 if (process.argv[1] === TAMA) {
   const liput = tulkitseArgumentit(process.argv.slice(2));
+  /*
+   * RAJATTU AJOREITTI (root 13.9.2026): Actions-työnkulku ajaa tämän
+   * omistajan avaimella, ja siellä --kaikki on kielletty. Suodattamaton
+   * listaus näyttäisi myös muiden projektien historian saman tilin
+   * alta, eikä se kuulu tähän tehtävään. Käsin ajettaessa lippu toimii
+   * yhä; vain ympäristömuuttuja sulkee sen.
+   */
+  if (liput.kaikki && process.env.PULU_HISTORIA_ESTA_KAIKKI === '1') {
+    console.error('--kaikki on estetty tässä ympäristössä: reitti lukee vain '
+      + 'Pulun oman äänen historian.');
+    process.exit(1);
+  }
   const avain = process.env.ELEVEN_API_KEY ?? process.env.ELEVENLABS_API_KEY;
   if (!avain) {
     console.error('ELEVEN_API_KEY puuttuu ympäristöstä — historiaa ei voi lukea.');
