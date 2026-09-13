@@ -715,6 +715,34 @@ test('ohimenevä CORS-verkkovirhe saa jäähdytetyn uusinnan mutta ei retry-myrs
   assert.deepEqual([aikaleimahakuja, mp3Hakuja], [2, 2]);
 });
 
+test('perushaku ja jäähyltä vapautuva uusinta ovat kumpikin single-flight', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  const vanhaNyt = Date.now;
+  let nyt = 15_000;
+  Date.now = () => nyt;
+  t.after(() => { globalThis.fetch = vanhaFetch; Date.now = vanhaNyt; });
+  let vapauta;
+  let hakuja = 0;
+  globalThis.fetch = () => {
+    hakuja += 1;
+    return new Promise((valmis) => { vapauta = valmis; });
+  };
+  const url = 'assets/audio/puhe-fokus-matkakirja-sarajevo-singleflight.mp3';
+  const lataa = () => lataaLuentareaktiot('sarajevo-singleflight', url, { teksti: 'x' });
+
+  const ensimmaiset = Array.from({ length: 8 }, lataa);
+  assert.equal(hakuja, 1, 'peruskutsut jakavat yhden keskeneräisen haun');
+  vapauta({ ok: false, status: 503 });
+  assert.deepEqual(await Promise.all(ensimmaiset), Array(8).fill(null));
+
+  nyt += LUENTAREAKTIO_UUSINTA_VIIVE_MS;
+  const uusinnat = Array.from({ length: 8 }, lataa);
+  assert.equal(hakuja, 2, 'jäähyltä vapautuvat kutsut varaavat yhden yhteisen uusinnan');
+  vapauta({ ok: false, status: 503 });
+  assert.deepEqual(await Promise.all(uusinnat), Array(8).fill(null));
+  assert.equal(hakuja, 2);
+});
+
 test('ohimenevän sidontavirheen uusinnat päättyvät dokumentissa määrättyyn kattoon', async (t) => {
   const vanhaFetch = globalThis.fetch;
   const vanhaNyt = Date.now;
@@ -765,6 +793,38 @@ test('rikkinäinen tai tyhjä aikaleimatiedosto ei kaada luentaa', async (t) => 
   assert.equal(await lataaLuentareaktiot('tyhja', 'assets/audio/puhe-fokus-matkakirja-tyhja.mp3', { teksti: 'x' }), null);
   globalThis.fetch = async () => { throw new Error('verkko poikki'); };
   assert.equal(await lataaLuentareaktiot('rikki', 'assets/audio/puhe-fokus-matkakirja-rikki.mp3', { teksti: 'x' }), null);
+});
+
+test('virheellinen JSON on pysyvä hylkäys, mutta rungon verkkokatkos uusitaan rajatusti', async (t) => {
+  const vanhaFetch = globalThis.fetch;
+  const vanhaNyt = Date.now;
+  let nyt = 30_000;
+  Date.now = () => nyt;
+  t.after(() => { globalThis.fetch = vanhaFetch; Date.now = vanhaNyt; });
+
+  let syntaksihakuja = 0;
+  globalThis.fetch = async () => {
+    syntaksihakuja += 1;
+    return { ok: true, status: 200, json: async () => { throw new SyntaxError('Unexpected token'); } };
+  };
+  const syntaksiUrl = 'assets/audio/puhe-fokus-matkakirja-json-syntax.mp3';
+  assert.equal(await lataaLuentareaktiot('json-syntax', syntaksiUrl, { teksti: 'x' }), null);
+  nyt += 60_000;
+  assert.equal(await lataaLuentareaktiot('json-syntax', syntaksiUrl, { teksti: 'x' }), null);
+  assert.equal(syntaksihakuja, 1, 'virheellistä JSONia ei haeta uudelleen');
+
+  let runkohakuja = 0;
+  globalThis.fetch = async () => {
+    runkohakuja += 1;
+    return { ok: true, status: 200, json: async () => { throw new TypeError('body stream interrupted'); } };
+  };
+  const runkoUrl = 'assets/audio/puhe-fokus-matkakirja-json-body.mp3';
+  assert.equal(await lataaLuentareaktiot('json-body', runkoUrl, { teksti: 'x' }), null);
+  assert.equal(await lataaLuentareaktiot('json-body', runkoUrl, { teksti: 'x' }), null);
+  assert.equal(runkohakuja, 1, 'runkovirhe kunnioittaa jäähyä');
+  nyt += LUENTAREAKTIO_UUSINTA_VIIVE_MS;
+  assert.equal(await lataaLuentareaktiot('json-body', runkoUrl, { teksti: 'x' }), null);
+  assert.equal(runkohakuja, 2, 'rungon kuljetusvirhe saa uuden yrityksen jäähyn jälkeen');
 });
 
 test('VARTIO: jokaisen pakin reaktioankkurit löytyvät sen omasta luentatekstistä', () => {

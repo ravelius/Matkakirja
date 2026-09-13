@@ -269,8 +269,14 @@ export async function lataaLuentareaktiot(kaupunkiId, url, { teksti = null } = {
   const osoite = aikaleimojenOsoite(url);
   if (!osoite) return null;
   if (aikaleimaVarasto.has(osoite)) {
-    const tallessa = await aikaleimaVarasto.get(osoite);
-    if (tallessa) return tallessa;
+    /*
+     * ÄLÄ awaittaa tässä: keskeneräinen lupaus palautetaan sellaisenaan,
+     * ja ratkennut null tarkistetaan synkronisesti. Muuten kaikki samalla
+     * mikrotehtäväkierroksella jäähyltä vapautuvat kutsut ehtivät poistaa
+     * saman nullin ja käynnistää oman verkkopyyntönsä.
+     */
+    const tallessa = aikaleimaVarasto.get(osoite);
+    if (tallessa !== null) return tallessa;
     const uusinta = aikaleimaUusinnat.get(osoite);
     if (!uusinta || uusinta.maara > LUENTAREAKTIO_UUSINTOJA || Date.now() < uusinta.aikaisin) {
       return null;
@@ -285,7 +291,20 @@ export async function lataaLuentareaktiot(kaupunkiId, url, { teksti = null } = {
         const tilapainen = vastaus.status === 429 || vastaus.status >= 500;
         return tilapainen ? { syy: `aikaleimahaku vastasi ${vastaus.status}`, ohimeneva: true } : null;
       }
-      const data = await vastaus.json();
+      let data;
+      try {
+        data = await vastaus.json();
+      } catch (virhe) {
+        /*
+         * Kelvoton JSON ei parane uudella haulla. Sen sijaan vastauksen
+         * rungon lukemisen verkkokatkos (esim. TypeError) voi parantua.
+         */
+        const syntaksivirhe = virhe instanceof SyntaxError || virhe?.name === 'SyntaxError';
+        return {
+          syy: `aikaleimatiedoston luku ei onnistunut (${virhe?.message ?? virhe})`,
+          ohimeneva: !syntaksivirhe,
+        };
+      }
       /*
        * HASH-HAKU OHITTAA AUDIOELEMENTIN OSITTAISEN LEVYVÄLIMUISTIN.
        * Ei cachebusteria eikä turvaportin ohitusta: URL pysyy samana,
@@ -304,7 +323,7 @@ export async function lataaLuentareaktiot(kaupunkiId, url, { teksti = null } = {
       });
       return tulos.ok ? data : { syy: tulos.syy };
     } catch (virhe) {
-      // Verkko poikki tai virheellinen JSON: luenta soi ilman reaktioita.
+      // Kuljetus tai äänivastauksen rungon luku katkesi: rajattu uusinta.
       return { syy: `lataus ei onnistunut (${virhe?.message ?? virhe})`, ohimeneva: true };
     }
   })().then((tulos) => {
