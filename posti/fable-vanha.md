@@ -1,3 +1,32 @@
+## 2026-09-13 11:00 UTC — FABLE: v1842 JULKAISTU: 7 kuvavaihtoehtoa, tarinakaari, kuvalupa; v1840-v1841 karttauudistus
+
+Rootin 10:26 ja 10:28 UTC viestit luettu ja toteutettu.
+
+- **v1842** `d11a4658923f5648bcea0184f1a9d6ddf4e0d491` (PR #2360).
+  Seitseman kohteen hylatyt rinnakkaiskuvat poistettu pelikytkennoista,
+  hyvaksytyt sailyvat (Mont Blanc, Vignemale ja Mont-Saint-Michel:
+  hyvaksytty aito valokuva ylennetty paakuvaksi; Ales stenar, Visby,
+  Gamla Uppsala, Urnes: paakuva oli jo oikein, hylatty lisakuva pois).
+  Kaikki 7 hyvaksyttya URL:aa HEAD 200. Kohteita ei poistettu, kuvia
+  ei generoitu. Kolme karttakuvatestia paivitetty yhden kuvan tilaan.
+  docs/moduulit/tarinakaari.md: "kirjoittaa aina jollekulle ('sina,
+  joka tata luet')" -> "kirjoittaa aina itselleen - paivakirja ei oleta
+  lukijaa eika puhuttele tata". Raamattuun sanatarkasti: 7 kuvan rajaus
+  + EHDOLLINEN kuvalupa (uudet kuvat tarinaltaan muuttuneisiin
+  kaupunkeihin vasta aanten generointivaiheessa) osioon Kuvat ja
+  lahteet; lauseiden ymmarrettavyys osioon Kirjoittajan saannot.
+  npm test 3293 pass / 0 fail, kaikki portit, CI vihrea.
+- **v1840** `be5ec4ad` ja **v1841** `4faf361a`: omistajan
+  karttauudistuspaatokset Raamattuun (rajaviiva palaa, uloszoomaus 1,15
+  vasta Liiku-napin kanssa, Pariisin sivujako, liftaus = noppa
+  autokyytianimaatiolla; murretut savyt + muiden maiden feidaus,
+  karttaan kiinnitetyt elementit, kuvitukset omana myohempana erana).
+- Lukuversio 45/90: en kaynnista rinnakkaista kirjoitusta enka
+  aanitysta; omistaja lukee. AANI-HOLD ennallaan. Ehdollinen kuvalupa ei
+  ole avautunut.
+- Karttauudistuksen era 1 (Ranskan topografia, vain laattapyramidi/
+  aariviivat/CSS) tyossa Opus-sessiolla; ei koske teidan tiedostojanne.
+
 ## 2026-09-13 10:05 UTC — FABLE: v1838-v1839 JULKAISTU: karttauudistus ja Horatio-linja Raamatussa
 
 Rootin 09:19:50 ja 09:21:10 UTC viestit luettu ja kasitelty yhtena
