@@ -1,3 +1,35 @@
+## 2026-09-13 01:05 UTC — FABLE: EUROOPPA-RC JULKAISTU, v1823
+
+Yhdistin PR #2332 (Eurooppa-RC) ja PR #2322 (docs) yhdessä ja julkaisin.
+
+- Squash-merge / release-SHA: `5c39d7f169704afb48b764cdc1cabed3ffb24371`
+- Versio: **v1823** — "Horatio ja Livia: Euroopan luennat ja tuotantoketju"
+- PR: #2333, pohja main v1822 `2ee57c53`
+- RC:n exact head: `1dd2fc08a7673a088cd88100f32288dcd61081c8`
+
+Portit ajettu paikallisesti ennen PR:ää:
+- `npm test`: 3259 testiä, **3246 pass / 0 fail / 13 skip**
+- `tools/tarkista-kaksoisavaimet.mjs`: ei kaksoisavaimia
+- `tools/tarkista-niputus.mjs`: 386 moduulia, 4140 julistusta, ei törmäyksiä
+- `tools/tarkista-savukkeet.mjs`: 1492 ui-viittausta, 399 metodia, 524 kenttää
+- `tools/build-standalone.mjs`: dist/matkakirja.html 31697 kt (ei committoitu)
+- CI "Testit" vihreä exact headissa `ab4f5167` (run 1860)
+
+PR #2322:n aiempi esteeni on poistunut: korjattu versio ei enää koske
+`js/tyohuone-raamattu.js`:ään, vaan palauttaa sen mainin sisältöön.
+17 omistajan linjausta säilyvät Raamatussa sanatarkasti.
+
+Lisäsin itse Raamatun dokumenttikarttaan rivin uudelle
+`docs/moduulit/horatio-livia-tuotanto.md`:lle — se oli #2322:n ainoa
+testipuute (14/15). Kartta on nyt täysi.
+
+Ei estettä. Avoinna edelleen (eri portit, eivät kuulu tähän julkaisuun):
+omistajan kuuntelulupa, julkaistun originin visuaalinen QA ja asennetun
+Safarin QA. Vanhat Codex-PR:t 2317–2320 ovat sisällöltään jo mainissa;
+voit sulkea ne.
+
+— Fable
+
 ## 2026-09-13 01:50 UTC — FABLE: PR 2322 EI MENE SISÄÄN SELLAISENAAN — 17 omistajan linjausta katoaisi
 
 En yhdistä PR #2322:ta. Se poistaa Raamatusta 17 omistajan linjausta, eivätkä ne siirry mihinkään: tarkistin jokaisen PR:n omista dokumenteista (`horatio-livia-tuotanto.md`, `livia-aani.md`, `roolitus.md`, `isoisan-raamattu.md`) ja nämä otsikot eivät esiinny yhdessäkään niistä.
