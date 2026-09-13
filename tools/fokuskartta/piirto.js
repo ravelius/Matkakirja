@@ -363,6 +363,82 @@ function monotoninenRamppi(ankkurit, askel) {
  */
 export const SYVYYS = monotoninenRamppi(SYVYYS_ANKKURIT, 25);
 
+/* ------------------------------------------- värillinen topografia */
+
+/*
+ * KOHDEMAAN VÄRIPALETTI — toinen väriasteikkopari samalle moottorille
+ * (karttauudistus, erä 1; omistaja 13.9.2026: *"Maan korkeuserot
+ * muutetaan varilliseksi ja vedetkin nakyvat sinisena syyvyyserot
+ * huomioiden. … Muiden maiden kartat ja valtion ulkopuoliset vedet ja
+ * meret ennallaan ruskean savyissa."*).
+ *
+ * KAKSI ASTEIKKOA, YKSI MOOTTORI. Yllä olevat ASTEIKKO ja SYVYYS ovat
+ * pelin seepiakartta, ja ne EIVÄT MUUTU tästä erästä pikseliäkään:
+ * jokainen maa maailmassa piirtyy niillä kuten ennenkin. Nämä kaksi
+ * ovat sama asia toisella paletilla, ja moottori valitsee parin
+ * asetuksesta `variPaletti` (tools/fokuskartta/maailmapiirto.js).
+ * Toinen moottori tai toinen piirtopolku olisi juuri se tapa, jolla
+ * seepiakartta ja värikartta ehtivät ajautua eri geometriaan — sama
+ * perustelu kuin sillä, miksi asteikot asuvat ylipäätään tässä
+ * tiedostossa yhtenä kappaleena.
+ *
+ * LUVUT EIVÄT OLE UUSIA. Ne on otettu SANASTA SANAAN pelin omasta
+ * topografialinssistä (tools/tee-reliefikartta.mjs, MAA ja MERI), jotta
+ * kohdemaan värit ovat täsmälleen ne, jotka omistaja on jo nähnyt ja
+ * hyväksynyt linssissä — *"Pohjana pelissa jo oleva korkeuserolinssi"*.
+ * Uutta on vain tarkkuus: linssi on 0,30 px/lautayksikkö, nämä laatat
+ * 7,2 px/lautayksikkö syvimmällä tasolla eli 24-kertaisia.
+ *
+ * MAA: fyysisen kartan perinteinen hypsometria — matala vihreä, korkea
+ * ruskea, korkein valkoinen. Väri EI kerro kasvillisuudesta (Sahara on
+ * vihertävän keltainen, koska se on 300 metrissä).
+ */
+export const VARI_ASTEIKKO = [
+  { m: 0, v: [62, 110, 66] },
+  { m: 150, v: [104, 145, 72] },
+  { m: 400, v: [152, 174, 84] },
+  { m: 800, v: [205, 196, 112] },
+  { m: 1400, v: [208, 170, 100] },
+  { m: 2200, v: [182, 132, 82] },
+  { m: 3200, v: [148, 98, 62] },
+  { m: 4200, v: [152, 112, 84] },
+  { m: 5200, v: [186, 164, 152] },
+  { m: 6000, v: [232, 232, 235] },
+  { m: 7000, v: [255, 255, 255] },
+];
+
+/*
+ * MERI: sama logiikka toisin päin — matala vaalea, syvä tumma. Portaat
+ * ovat merenpohjan omia muotoja eivätkä tasavälein: −200 m on
+ * mannerjalustan reuna, −4000 m valtamerten pohjan yleiskorkeus ja
+ * −6000 m syvänteiden alku.
+ *
+ * RAMPPI SILOTETAAN SAMALLA KUUTIOLLA KUIN SEEPIAN SYVYYS. Ankkurit
+ * ovat linssin omat, mutta linssi näyttää ne 0,30 px/yksikkö
+ * -tarkkuudella, jossa vyöhykeraja on alle pikselin levyinen. Näissä
+ * laatoissa sama raja on 24 kertaa leveämpi, ja lineaaristen jaksojen
+ * liitoskohdat lukisivat juuri sinä renkaana, jonka omistaja tunnisti
+ * bandingiksi 29.8.2026. Fritsch–Carlson kulkee samojen ankkurien
+ * kautta eikä ylitä niitä, joten yksikään väri ei muutu — vain
+ * jaksojen väliset taitteet katoavat.
+ *
+ * ANKKURIT OVAT MONOTONISET kaikilla kolmella kanavalla (176→10,
+ * 214→28, 240→78), joten rannan ulkopuolelle ei synny vaaleaa
+ * rengasta.
+ */
+const VARI_SYVYYS_ANKKURIT = [
+  { m: 0, v: [176, 214, 240] },
+  { m: -200, v: [140, 190, 228] },
+  { m: -1000, v: [100, 155, 208] },
+  { m: -2500, v: [62, 112, 176] },
+  { m: -4000, v: [38, 78, 145] },
+  { m: -6000, v: [22, 50, 112] },
+  { m: -11000, v: [10, 28, 78] },
+];
+
+/** Näyteväli 25 m kuten seepian syvyydellä; 0…−11 000 m = 441 pistettä. */
+export const VARI_SYVYYS = monotoninenRamppi(VARI_SYVYYS_ANKKURIT, 25);
+
 export const PAPERI = '#e8dcbc';
 export const MUSTE = '#4a3421';
 
@@ -441,12 +517,20 @@ export function lerpVari(asteikko, m) {
   return asteikko[asteikko.length - 1].v;
 }
 
-/** Sama LASKEVALLE asteikolle: syvyys menee nollasta alaspäin. */
-export function lerpSyvyys(m) {
-  if (m >= 0) return SYVYYS[0].v;
-  for (let i = 1; i < SYVYYS.length; i++) {
-    if (m >= SYVYYS[i].m) {
-      const a = SYVYYS[i - 1]; const b = SYVYYS[i];
+/**
+ * Sama LASKEVALLE asteikolle: syvyys menee nollasta alaspäin.
+ *
+ * ASTEIKKO ON PARAMETRI, KOSKA NIITÄ ON KAKSI (karttauudistus, erä 1).
+ * Seepiakartan SYVYYS ja kohdemaan VARI_SYVYYS ovat sama taulukkomuoto
+ * ja sama haku; kopioitu silmukka olisi juuri se paikka, jossa toinen
+ * paletti ehtisi saada oman pyöristyksensä. `lerpSyvyys` säilyy
+ * entisellään, jotta yksikään vanha kutsuja ei muutu.
+ */
+export function lerpSyvyysAsteikolla(asteikko, m) {
+  if (m >= 0) return asteikko[0].v;
+  for (let i = 1; i < asteikko.length; i++) {
+    if (m >= asteikko[i].m) {
+      const a = asteikko[i - 1]; const b = asteikko[i];
       const t = (m - a.m) / (b.m - a.m);
       return [
         a.v[0] + (b.v[0] - a.v[0]) * t,
@@ -455,7 +539,12 @@ export function lerpSyvyys(m) {
       ];
     }
   }
-  return SYVYYS[SYVYYS.length - 1].v;
+  return asteikko[asteikko.length - 1].v;
+}
+
+/** Seepiakartan syvyyssävy — entinen rajapinta, entinen tulos. */
+export function lerpSyvyys(m) {
+  return lerpSyvyysAsteikolla(SYVYYS, m);
 }
 
 /* -------------------------------------------------------- projektiot */

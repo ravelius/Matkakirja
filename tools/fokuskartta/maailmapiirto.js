@@ -83,8 +83,9 @@
  */
 
 import {
-  ASTEIKKO, KOHINA, KOHINA2, MUSTE, PAPERI,
-  fbm, laudanProjektio, lerpSyvyys, lerpVari, mulberry32,
+  ASTEIKKO, KOHINA, KOHINA2, MUSTE, PAPERI, SYVYYS,
+  VARI_ASTEIKKO, VARI_SYVYYS,
+  fbm, laudanProjektio, lerpSyvyysAsteikolla, lerpVari, mulberry32,
 } from './piirto.js';
 import { bilineaarinenKorkeus, varjonVoimakkuus, varjostusPisteessa } from './maastovarjo.js';
 import {
@@ -247,8 +248,31 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
   const {
     bbox, projektio, leveys, tyyli = {}, esikatseluTausta,
     koko = null, siirto = null, sisalto = null, nostot = null, piirraNosto = null,
-    paperiS = null,
+    paperiS = null, variPaletti = false,
   } = asetukset;
+
+  /*
+   * === PALETTI ON ASETUS, EI TOINEN MOOTTORI (karttauudistus, erä 1)
+   *
+   * `variPaletti: true` vaihtaa KAKSI TAULUKKOA ja YHDEN PEITTÄVYYDEN.
+   * Kaikki muu — projektio, korkeusruudukko, varjostus, rae, rannikon
+   * geometria, arkin kalusteet — on bitilleen sama koodi kuin
+   * seepiakartalla, koska värilaatat ovat samalla laattaruudukolla ja
+   * niiden on osuttava pohjalaatan päälle pikselilleen.
+   *
+   * MEREN PEITTÄVYYS ON ERI, JA SE ON MITTA EIKÄ MAKUASIA. Seepian
+   * meri maalataan paperin päälle puolella peitolla (a = 0,5), koska
+   * se ON viileää paperia eikä vettä — kohinainen paperipohja saa
+   * näkyä läpi. Sininen vesi sen sijaan lakkaa lukemasta vetenä, jos
+   * puolet siitä on lämmintä pergamenttia: asteikon matalin sävy
+   * 176,214,240 sekoittuu paperiin 232,220,188 sävyksi 204,217,214,
+   * joka on harmaanvihreä eikä sininen. 0,9 jättää paperin raetta
+   * kymmenyksen verran läpi — sen verran, että laatta on yhä samaa
+   * painettua karttaa kuin naapurinsa — mutta pitää sävyn sinisenä.
+   */
+  const maanAsteikko = variPaletti ? VARI_ASTEIKKO : ASTEIKKO;
+  const syvyysAsteikko = variPaletti ? VARI_SYVYYS : SYVYYS;
+  const MEREN_PEITTO = variPaletti ? 0.9 : 0.5;
 
   const px = leveys / bbox.w;
   const W = Math.round(leveys);
@@ -698,8 +722,9 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
           // --- meri: syvyysvyöhykkeet, raja aaltoilee kohinasta ---
           if (!Number.isFinite(m)) m = -900;
           const n = fbm(KOHINA, gx / (30 * P), gy / (30 * P), 4) - 0.5;
-          const s = lerpSyvyys(m + n * Math.min(150, Math.max(12, -m * 1.25)));
-          const a = 0.5;
+          const s = lerpSyvyysAsteikolla(syvyysAsteikko,
+            m + n * Math.min(150, Math.max(12, -m * 1.25)));
+          const a = MEREN_PEITTO;
           r = r * (1 - a) + s[0] * a;
           g = g * (1 - a) + s[1] * a;
           b = b * (1 - a) + s[2] * a;
@@ -708,7 +733,7 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
           if (!Number.isFinite(m)) m = 60;
           const n1 = fbm(KOHINA, gx / (26 * P), gy / (26 * P), 4) - 0.5;
           const n2 = fbm(KOHINA2, gx / (7 * P), gy / (7 * P), 3) - 0.5;
-          const c = lerpVari(ASTEIKKO, Math.max(0, m + n1 * 190 + n2 * 60));
+          const c = lerpVari(maanAsteikko, Math.max(0, m + n1 * 190 + n2 * 60));
           const varjo = varjonVoimakkuus(varjostus(lon, lat));
           const pigmentti = (KOHINA2(gx / (2.1 * P), gy / (2.1 * P)) - 0.5) * 13;
           const lai = (fbm(KOHINA, gx / (95 * P), gy / (95 * P), 3) - 0.5) * 12;

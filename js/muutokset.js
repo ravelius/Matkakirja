@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1843, teksti: 'Karttauudistus era 1: laattaputki ja paatos pallosta' },
   { v: 1842, teksti: 'Seitseman kuvavaihtoehdon rajaus, tarinakaari, Raamattu' },
   { v: 1841, teksti: 'Karttauudistuksen paatokset 2 Raamattuun' },
   { v: 1840, teksti: 'Karttauudistuksen paatokset 1 Raamattuun' },
