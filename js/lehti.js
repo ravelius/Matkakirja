@@ -717,7 +717,35 @@ export function jatkaLehdenLuentaa(ui) {
  * Kaupunkilehteen palataan sulkemalla; maalehti ei ole kaupungin
  * sivujen jatke vaan rinnakkainen lehti.
  */
-export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
+/**
+ * SIVUNUMERO SIVUTUNNUKSESTA — maalehden avaus suoraan aihesivulle.
+ *
+ * Karttauudistuksen erä 3 (pallon maapaneelin Lisää-valikko,
+ * js/pallolauta/maapaneeli.js): otsikon napautus avaa MAALEHDEN
+ * KYSEISEN SIVUN, ei etusivua. Valikko lukee otsikot samasta
+ * `MAA_KATEGORIAT`-taulusta, josta tämä lehti latoo sivunsa, joten
+ * VALIKKO ANTAA SIVUTUNNUKSEN (`historia`, `menovinkit`, …) EIKÄ
+ * NUMEROA: numero riippuu siitä, onko maalla karttasivu, ja sen
+ * arvaaminen kutsupuolella tuottaisi kahden taulun rinnakkaisen
+ * järjestyksen — juuri sen, mitä tässä tiedostossa on vältetty
+ * kaikkialla muuallakin.
+ *
+ * Numero saa silti kelvata: kehittäjän savuke ja mahdolliset muut
+ * kutsujat voivat antaa suoran sivunumeron. Tuntematon tunnus palaa
+ * lehden ensimmäiselle sivulle — se on TURVALLINEN TILA, ei virhe:
+ * maalta on voitu poistaa aihe, jonka linkki jäi jonnekin elämään.
+ *
+ * Sivupinon indeksointi on lehden oma (ks. piirraTutkiSivu): sivu n
+ * näyttää `tutkiSivut[n - 1]`, ja maalehden ensimmäinen selattava on 1.
+ */
+function maalehdenSivunumero(sivut, sivu) {
+  if (Number.isFinite(sivu)) return Math.max(1, Math.round(sivu));
+  if (typeof sivu !== 'string' || !sivu) return 1;
+  const i = sivut.findIndex((s) => s.id === sivu);
+  return i < 0 ? 1 : i + 1;
+}
+
+export function avaaMaalehti(ui, iso, { nimi = null, sivu = null } = {}) {
   const maa = ui.game?.pack?.map?.countryShapes?.[iso];
   if (!maa) return;
   aloitaLivianLehtikierros(ui);
@@ -837,8 +865,9 @@ export function avaaMaalehti(ui, iso, { nimi = null } = {}) {
   // ei sen, jossa pelaaja sattuu seisomaan (ks. paivitaMediarivit).
   paivitaMediarivit(ui);
   // Maalehti alkaa maan etusivulta (indeksi 0 on kaupunkilehden
-  // kansi, jota maalehdellä ei ole — siksi sivu 1).
-  naytaTutkiSivu(ui, 1, { heti: true });
+  // kansi, jota maalehdellä ei ole — siksi sivu 1) tai siltä
+  // sivulta, jonka kutsuja pyysi (ks. maalehdenSivunumero).
+  naytaTutkiSivu(ui, maalehdenSivunumero(sivut, sivu), { heti: true });
 }
 
 /**
