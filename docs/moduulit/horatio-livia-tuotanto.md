@@ -61,12 +61,17 @@ sanatarkasti:
 - Ei kaikkien kaupunkien väkisin synkentämistä eikä historian
   keksimistä.
 
-**Roolirajaus.** Bergen, Amsterdam ja Edinburgh uusitaan MOLEMPIEN
-kertojien osalta (myös Horatio) rootin Astra-tehtävässä. Root tarkistaa
-lähteistetyt aihevalinnat ennen lopullisia puheita. Erä3-r2:n näitä
-puheita ei käytetä tuotannon lähteenä. Lissabon ja Berliini pysyvät
-ennallaan tässä toimeksiannossa — hiljaisuus ei ole hyväksyntä. Fable ei
-kirjoita rinnakkaista versiota. Ääni-HOLD on ennallaan.
+**Roolirajaus (päivitetty 13.9.2026 klo 16.21 UTC).** Bergen–Amsterdam–
+Edinburgh-kolmikon uusinta ja aiempi automaattinen kirjoitusketju EIVÄT ole
+enää nykyinen työnkulku: omistaja hylkäsi viimeisetkin lyhennetyt ehdotukset.
+Tekstityö aloitetaan alusta uudessa yhteisessä Astra-sessiossa
+"Matkakirjan tekstit - uusi alku", joka aloitetaan omistajan kanssa
+pienestä osasta kerrallaan. Mallit ovat Wien ja Lontoo sanasta sanaan.
+Lähtötilanteena on 45 kaupungin tilarekisteri: 18 korjattavaa, 2 arviota
+odottavaa, 20 hyväksyttyä paria ja 5 ilman palautetta. Hyväksyttyjä
+puheita ei avata automaattisesti. Fable ei kirjoita rinnakkaista versiota.
+Ääni-HOLD on ennallaan. Aihevalinnan kynnys (kova juttu) säilyy voimassa
+sellaisenaan.
 
 ## Horatio Fogg
 
