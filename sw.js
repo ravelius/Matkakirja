@@ -15,6 +15,9 @@ const SHELL = [
   './css/fokusnosto.css',
   // Nosto aukeaa kuva edellä (js/nostokuva.js lataa tyylinsä itse).
   './css/nostokuva.css',
+  // Kaupungin iso pop-up ja turisti-info (js/kaupunkinosto.js lataa
+  // tyylinsä itse; merkin oma tyyli on css/styles.css:ssä).
+  './css/kaupunkinosto.css',
   // Sähkepinta lataa oman tyylinsä itse (js/sahke.js).
   './css/sahke.css',
   './js/muutokset.js',
@@ -218,6 +221,10 @@ const SHELL = [
   // Pallolauta (karttapallo pelin lautana, 5.9.2026): tuodaan
   // dynaamisesti kuten pallo.js, mutta kuuluu SHELLiin offline-käyttöä
   // varten. Ei niputeta yhden tiedoston versioon (tests/sw.test.mjs).
+  // Kaupungin iso pop-up ja turisti-info (karttauudistus erä 4,
+  // 13.9.2026): vain pallolauta tuo tämän, joten se kulkee samaa polkua
+  // eikä ole yhden tiedoston niputuksessa.
+  './js/kaupunkinosto.js',
   './js/pallolauta/lauta.js',
   './js/pallolauta/avaus.js',
   './js/pallolauta/kamera.js',

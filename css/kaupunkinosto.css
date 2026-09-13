@@ -1,0 +1,131 @@
+/*
+ * KAUPUNGIN ISO POP-UP JA TURISTI-INFO — karttauudistuksen erä 4
+ * (13.9.2026; js/kaupunkinosto.js).
+ *
+ * SAMA PERGAMENTTI KUIN KOHDEKORTILLA (css/fokuskohteet.css
+ * .fokuskohde-popup): väri, reunus, varjo ja kirjasin ovat samat, jotta
+ * kartan kelluvat kortit ovat yhtä sukua. Erot ovat kaksi ja
+ * tarkoituksellisia:
+ *
+ *   1. KORTTI ON ISO. Omistajan sana on *"iso pop up ikkuna"*, ja sen
+ *      sisällä on herokuvien karuselli ja zoomattava kohdekartta —
+ *      24 rem:n kohdekortti kuristaisi molemmat.
+ *   2. LEVEYS ON RUUDUN OSUUS. Puhelimella kortti täyttää ruudun lähes
+ *      laidasta laitaan, työpöydällä se pysyy luettavan levyisenä.
+ *
+ * KERROS ON 6, SAMA KUIN KOHDEKORTILLA. Pulun paneeli ja kuplapino ovat
+ * kiinteitä ja kerroksessa 40 (css/styles.css .pollo-kuplapino-kehys),
+ * joten chat ja kuplat pysyvät kortin PÄÄLLÄ — ja kortti väistää
+ * paneelia myös asettelussa (js/kaupunkinosto.js asemoiKaupunkipopup).
+ */
+
+.kaupunkipopup {
+  position: absolute;
+  /* Paikan laskee js/kaupunkinosto.js merkin ruutupaikasta. */
+  z-index: 6;
+  width: min(34rem, 92vw);
+  max-height: 74%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.85rem 0.95rem 0.95rem;
+  border-radius: 12px;
+  border: 1px solid rgba(122, 85, 20, 0.32);
+  background: #f5f0e2;
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.3);
+  color: #211d18;
+  /* Pergamentin oma pinta; kartan vaalea hehkuvarjo ei periydy tänne. */
+  text-shadow: none;
+  font-family: var(--font-luku);
+  /* Kartta ottaa eleet itselleen (.map-pane touch-action: none); kortin
+     sisällä pystyvieritys on saatava takaisin. */
+  touch-action: pan-y;
+  overflow: hidden;
+  animation: kaupunkipopup-esiin 0.2s ease-out;
+}
+
+/* Turisti-info on pelkkä opas: kapeampi kortti riittää. */
+.kaupunkipopup-info { width: min(27rem, 90vw); }
+
+@keyframes kaupunkipopup-esiin {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kaupunkipopup { animation: none; }
+}
+
+.kaupunkipopup-otsikko {
+  margin: 0 1.6rem 0.5rem 0;
+  font-family: var(--font-otsikko, var(--font-luku));
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.kaupunkipopup-sisalto {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  /* Vieritys sormella kortin sisällä, ei kartan panorointina. */
+  touch-action: pan-y;
+}
+
+.kaupunkipopup-sulje {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.4rem;
+  width: 1.9rem;
+  height: 1.9rem;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #6b5636;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.kaupunkipopup-sulje:hover,
+.kaupunkipopup-sulje:focus-visible { background: rgba(122, 85, 20, 0.14); }
+
+/*
+ * HEROKUVAT. Lohko on piilossa kokonaan, jos kaupungilla ei ole
+ * kansikuvia eikä avauskuvia (js/kaupunkinosto.js: `hero.hidden`) —
+ * ohut lehti ei saa jättää korttiin tyhjää kehystä (vastakoe:
+ * Marseille ilman herokuvia).
+ */
+.kaupunkipopup-hero { margin-bottom: 0.6rem; }
+.kaupunkipopup-hero[hidden] { display: none; }
+
+/* Etusivun kuvapaikat ovat lehden omia (.lehti-paakuva, .lehti-kuvarivi,
+   css/styles.css) — kortissa ne tarvitsevat vain oman marginaalinsa. */
+.kaupunkipopup .lehti-paakuva { margin: 0 0 0.5rem; }
+.kaupunkipopup .lehti-kuvarivi { margin: 0; }
+
+.kaupunkipopup .arrival-intro { margin: 0 0 0.7rem; }
+
+.kaupunkipopup-kartta[hidden] { display: none; }
+
+/* Kohdekartan otsikko on lehdessä sivun otsikko; kortissa se on
+   väliotsikko, joten koko pienenee mutta muoto pysyy. */
+.kaupunkipopup .kaupunkikartta-otsikko { font-size: 1rem; }
+
+.kaupunkipopup-alarivi {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.kaupunkipopup-lehti {
+  padding: 0.35rem 0.8rem;
+  border: 1px solid rgba(122, 85, 20, 0.45);
+  border-radius: 999px;
+  background: rgba(122, 85, 20, 0.08);
+  color: #4a3320;
+  font-family: var(--font-luku);
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.kaupunkipopup-lehti:hover,
+.kaupunkipopup-lehti:focus-visible { background: rgba(122, 85, 20, 0.18); }

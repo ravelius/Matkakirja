@@ -84,6 +84,16 @@ import {
   nollaaPallonKaatumiset, palloKaatui, valikkoSulkeutuiNapautuksesta,
 } from '../ui-apurit.js';
 import { KARTTANIMI_KOOT } from '../karttanimet.js';
+/*
+ * KAUPUNGIN ISO POP-UP JA TURISTI-INFO (karttauudistus erä 4, 13.9.2026):
+ * kortit ja merkin piirtäjä asuvat js/kaupunkinosto.js:ssä, tämä tiedosto
+ * hoitaa vain napautuksen, ankkurin ja merkin paikan pallolla.
+ */
+import {
+  asemoiKaupunkipopup, asetteleTuristiInfo, avaaKaupunkipopup, avaaTuristiInfo,
+  kaupunginMatkailijalle, kaupunkimerkinMitta, suljeKaupunkipopup,
+  turistiInfoElementti, turistiInfonAsteet,
+} from '../kaupunkinosto.js';
 import { NOSTOLADONTA_POLTON_TIHEYS } from '../nostoladonta.js';
 import {
   PALLOKAMERAN_AJO_MS, PALLOLAUDAN_LEVEYS, PALLO_FOV, PALLO_KORKEUS_MAX,
@@ -1142,7 +1152,7 @@ let uudelleenrakennuksia = 0;
 
 /** Avoinna oleva kelluva kortti (nielu: sulkeva napautus ei avaa uutta). */
 const KORTTIVALITSIN = '.fokuskohde-popup, .elaintaky-kerros, .skandaali-kerros, .hetki-kerros,'
-  + ' .fokusnosto-kerros, .syvennys-kerros, .minipopup';
+  + ' .fokusnosto-kerros, .syvennys-kerros, .minipopup, .kaupunkipopup';
 
 /**
  * Avaa pallolaudan karttaruutuun. Palauttaa lauta-olion, tai null jos
@@ -1794,7 +1804,25 @@ export async function avaaPallolauta(ui) {
     }
     void kamera.ajaKamera({ x: city.x, y: city.y, leveys: kamera.kameranTila()?.leveys }, {});
     if (oma && oma.id === city.id) {
-      ui.avaaTutkinta(city);
+      /*
+       * KAUPUNGIN NAPAUTUS AVAA ISON POP-UPIN (karttauudistus erä 4;
+       * omistaja 13.9.2026: *"Kaupunkia klikkaamalla pelaajalle avautuu
+       * isossa pop up ikkunassa Kaupunkilehden herokuvat ja
+       * esittelyteksti sekä nähtävyyskartta"*).
+       *
+       * ANKKURI ON MERKIN RUUTUPISTE, ei ruudun keskus (suunnitelman luku
+       * 3.3): kortti aukeaa sen kaupungin viereen, jota napautettiin, ja
+       * seuraa pistettään, kun pallo pysähtyy (ladoLevossa).
+       *
+       * VANHA OVI JÄÄ RINNALLE (tehtävänanto): kaupunkilehti avataan yhä
+       * `ui.avaaTutkinta`lla — kartan "Etsi aarre" -napista, fokusvirrasta
+       * ja pop-upin omasta alarivistä. Tätä haaraa ei siis pureta vielä.
+       */
+      if (Number.isFinite(k.lat) && Number.isFinite(k.lon)) {
+        avaaKaupunkipopup(ui, city, { ankkuri: ankkuri(k.lat, k.lon) });
+      } else {
+        avaaKaupunkipopup(ui, city);
+      }
       return true;
     }
     if (game.phase === 'move' && !game.player?.isBot) {
@@ -2371,6 +2399,65 @@ export async function avaaPallolauta(ui) {
     tahdistaSiirtymanJalkeen();
   };
 
+  /* ---- turisti-info kaupungin vieressä (erä 4) ---------------------- */
+  /**
+   * TURISTI-INFON MERKKI (omistaja 13.9.2026: *"Kaupungin viereen
+   * kartalle tulee oma 'turisti info' merkki ja teksti ja sitä
+   * klikkaamalla avautuu pelkkä nykyisen lehden tursti ja matkustusopas
+   * omassa pop upissa."*).
+   *
+   * MERKKI ON KARTTAAN KIINNITETTY (PAATOKSET 2): se on merkkikerroksen
+   * datum omissa asteissaan (turistiInfonAsteet) eikä karttaruudun lapsi,
+   * ja sen mittakaava luetaan kameran näkyvästä leveydestä — merkki siis
+   * kasvaa zoomatessa kuin painettu kartta, rajojen sisällä
+   * (js/kaupunkinosto.js kaupunkimerkinMitta).
+   *
+   * VERTAILULEVEYS ON MAAN LAATIKKO × 1,15 — sama luku, jolla erä 2
+   * rajaa uloszoomauksen (PAATOKSET 1, kohta 2). Laatikko luetaan
+   * saapumisrajauksen omasta muistista (`maalaatikot`), joka on jo
+   * lämmin, koska saapumisajo laski sen. Ilman laatikkoa merkki saa
+   * perusmittansa eikä katoa mihinkään.
+   *
+   * NAPAUTUS KULKEE `napautettavat()`-POLUSTA (merkit.js): datumilla on
+   * `napautus(d)`, ja osuma lasketaan pallon omasta napautuksesta kuten
+   * linssimerkeillä — elementti itse ei ota osumia.
+   *
+   * MERKKIÄ EI OLE, JOS: linssi on päällä (linssin aikana vain linssin
+   * oma merkki avaa mitään), avauslento tai lähtövalinta on kesken
+   * (kartan niukimmat hetket), tai kaupungilla ei ole matkustusopasta —
+   * tyhjää korttia ei avata.
+   *
+   * @returns {object[]} merkin ruutulaatikot nimiladonnan varauksiksi
+   */
+  const TURISTI_INFON_VERTAILUKERROIN = 1.15;
+  const paivitaTuristiInfo = (nakyva) => {
+    const tyhjaa = () => { merkit.aseta('turistiinfo', []); return []; };
+    if (linssiPaalla() || lento || aloitusNakyvat()) return tyhjaa();
+    const city = ui.game.cityOf?.();
+    if (!city || !kaupunginMatkailijalle(city.id)) return tyhjaa();
+    const oma = pallonAsteet({ x: city.x, y: city.y });
+    const paikka = oma ? turistiInfonAsteet(oma.lat, oma.lon) : null;
+    if (!paikka) return tyhjaa();
+    const iso = kohteidenNykyinenIso(ui);
+    const laatikko = iso ? maalaatikot.get(iso) : null;
+    const uloin = laatikko?.w > 0 ? laatikko.w * TURISTI_INFON_VERTAILUKERROIN : 0;
+    merkit.aseta('turistiinfo', [{
+      avain: `turistiinfo:${city.id}`,
+      laji: 'turistiinfo',
+      cityId: city.id,
+      nimi: city.name,
+      lat: paikka.lat,
+      lng: paikka.lon,
+      mitta: kaupunkimerkinMitta(nakyva?.w, uloin),
+      elementti: turistiInfoElementti,
+      asettele: asetteleTuristiInfo,
+      napautus: () => {
+        avaaTuristiInfo(ui, city, { ankkuri: ankkuri(paikka.lat, paikka.lon) });
+      },
+    }]);
+    return merkit.laatikot('turistiinfo');
+  };
+
   /* ---- ladonta levossa ---------------------------------------------- */
   let lepoAjastin = 0;
   /** Milloin ladonta viimeksi ajettiin (kuritus, ks. LADONTA KULKEE MUKANA). */
@@ -2428,8 +2515,9 @@ export async function avaaPallolauta(ui) {
      * jäisi oman nimensä alle.
      */
     const kaupunginMitat = kohdekaupunki();
+    const infoTulos = paivitaTuristiInfo(nakyva);
     const nimiTulos = nimet.lado({
-      varaukset: nostoTulos.laatikot,
+      varaukset: [...nostoTulos.laatikot, ...infoTulos],
       pinot: merkit.laatikot('peli'),
       katto,
       vain,
@@ -2444,6 +2532,8 @@ export async function avaaPallolauta(ui) {
     // kaupunkipisteen koosta on tässä (ks. tahdistaPisteidenKoko).
     tahdistaPisteidenKoko();
     if (ui.fokuskohdeAuki?.ankkuri) asemoiFokuskohde(ui);
+    // Kaupungin pop-up seuraa merkkiään samalla säännöllä kuin kohdekortti.
+    if (ui.kaupunkipopupAuki?.ankkuri) asemoiKaupunkipopup(ui);
     return { nostot: nostoTulos, nimet: nimiTulos, sovittelu };
   };
   /**
@@ -2783,6 +2873,9 @@ export async function avaaPallolauta(ui) {
     piilota: () => { kuori.hidden = true; noppaTakaisin(); tahdistaLepo(); },
     pura: () => {
       doc.body.classList.remove('pallolauta-paalla');
+      // Kaupungin pop-up on tämän laudan kortti (ankkuri on pallon
+      // ruutupiste): purettu lauta ei jätä sitä leijumaan karttaruutuun.
+      suljeKaupunkipopup(ui);
       // Valintanäkymän terävän tilan pakotus pois ENSIN: pakotus on
       // istunnon laskuri (js/pallo.js), eikä se saa jäädä päälle
       // puretun laudan jälkeen.
