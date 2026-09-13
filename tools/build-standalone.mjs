@@ -464,6 +464,15 @@ const MODULES = [
    * mitään — se on riippuvuuspuun pohjalla.
    */
   'js/aani-tausta.js',
+  /*
+   * Kehittajan voimakertoimet (Taustaaanet-liuku) SIIRTYIVAT TAHAN
+   * 13.9.2026, kun js/sound.js alkoi lukea 'tausta'-kerrointa myos
+   * syntetisoituun maisemaan. Moduuli ei tuo mitaan — se on vahdin
+   * tavoin riippuvuuspuun pohjalla — joten se kelpaa yhta aikaisin
+   * kuin mika tahansa lehti, ja nyt se on ennen molempia lukijoitaan
+   * (js/sound.js ja js/ambience-stream.js).
+   */
+  'js/kehittajan-voimat.js',
   'js/livia-tehosteet.js',
   'js/sound.js',
   /*
@@ -486,7 +495,6 @@ const MODULES = [
   'js/livia-puheleet.js',
   'js/livia-lehtireaktiot.js',
   'js/puhe.js',
-  'js/kehittajan-voimat.js',
   /*
    * js/isoisan-valokuvat.js OLI TÄSSÄ. Ainoa niputettu tuoja oli
    * js/ui.js, joka näytti taulun `lento`-kuvan avauslennolla; omistaja

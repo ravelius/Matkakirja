@@ -205,6 +205,11 @@ const MITTARIT = `async () => {
     lukijastriimi: lukijapiiri ? lukijapiiri.__ekaVahvistin.gain.value : null,
     musiikki: luku('musa-'),
     tausta: luku('freesound|aporee'),
+    // SYNTETISOITU maisema: sama liuku, eri polku. Nailla kaupungeilla
+    // ei ole nauhoitettua raitaa, ja juuri tama polku ei totellut
+    // liukua (omistaja 13.9.2026: "Tausta aanen voimakkuus nappi ei
+    // vielakaan toimi").
+    taustasynteesi: sfx.ambience?.out ? sfx.ambience.out.gain.value : null,
   };
 }`;
 const mittaa = () => sivu.evaluate(`(${MITTARIT})()`);
@@ -246,6 +251,16 @@ async function varmistaAani(id) {
     });
     await sivu.waitForTimeout(2200);
   }
+  if (id === 'voima-tausta') {
+    // Nauhoitettu raita soi jo; nostetaan RINNALLE syntetisoitu
+    // maisema, jollainen soi niissa kaupungeissa, joilta nauhoitus
+    // puuttuu. Molempien pitaa totella samaa liukua.
+    await sivu.evaluate(async () => {
+      const { sfx } = await import('/js/sound.js');
+      sfx.setAmbience('meri');
+    });
+    await sivu.waitForTimeout(1200);
+  }
 }
 
 const mitat = [];
@@ -275,14 +290,25 @@ for (const m of mitat) {
     + ` ${luku(m.ennen[avain]).padStart(9)} ${luku(m.heti[avain]).padStart(9)}`
     + ` ${luku(m.kolme[avain]).padStart(9)}`);
 }
+const synt = mitat.find((m) => m.id === 'voima-tausta');
+if (synt) {
+  console.log(`${'  \u2514 synteesi'.padEnd(15)} ${String(synt.alku).padStart(3)}\u2192${String(synt.loppu).padEnd(4)}`
+    + ` ${luku(synt.ennen.taustasynteesi).padStart(9)} ${luku(synt.heti.taustasynteesi).padStart(9)}`
+    + ` ${luku(synt.kolme.taustasynteesi).padStart(9)}`);
+}
 console.log('');
 
 for (const m of mitat) {
   const avain = m.id === 'kehittaja-musiikki-liuku' ? 'musiikki' : m.id.replace('voima-', '');
-  const nimet = avain === 'lukija' ? ['lukija', 'lukijastriimi'] : [avain];
+  let nimet = [avain];
+  if (avain === 'lukija') nimet = ['lukija', 'lukijastriimi'];
+  // Taustaliuku mitataan MOLEMMISTA poluista: nauhoitetusta ja
+  // syntetisoidusta. Vain edellinen oli ennen mittauksessa.
+  if (avain === 'tausta') nimet = ['tausta', 'taustasynteesi'];
   for (const kentta of nimet) {
     const a = m.ennen[kentta]; const b = m.heti[kentta]; const c = m.kolme[kentta];
-    const otsikko = `${m.nimi}${kentta === 'lukijastriimi' ? ' (striimattu lukija)' : ''}`;
+    const LISANIMI = { lukijastriimi: ' (striimattu lukija)', taustasynteesi: ' (syntetisoitu maisema)' };
+    const otsikko = `${m.nimi}${LISANIMI[kentta] ?? ''}`;
     const tiedot = JSON.stringify({ alku: m.alku, loppu: m.loppu, a, b, c });
     vaadi(`${otsikko}: ääni soi mittaushetkellä`, a !== null && a > 0, tiedot);
     vaadi(`${otsikko}: veto muuttaa kuuluvaa tasoa heti`,

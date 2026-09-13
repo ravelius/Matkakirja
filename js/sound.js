@@ -15,6 +15,7 @@ import { livianEleaaniNaytteet } from './livia-tehosteet.js';
 import { valittuAani, jaaAlku, tehosteVoima } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import { AANI_JUURI, haeAani } from './media.js';
+import { kehittajanKerroin, kuunteleKehittajanKerrointa } from './kehittajan-voimat.js';
 
 // Ambienssin ristihäivytys ja tapahtumien väli. Väli on tarkoituksella pitkä
 // ja epäsäännöllinen: säännöllinen ääni alkaa kuulua kellona.
@@ -916,6 +917,24 @@ class Sound {
    * Sama tyyppi uudelleen ei tee mitään, jotta maisema ei nykäise
    * jokaisella renderöinnillä.
    */
+  /*
+   * SYNTETISOITU MAISEMA ON MYOS "TAUSTAAANI" (omistajan vikailmoitus
+   * 13.9.2026: *"Tausta äänen voimakkuus nappi ei vieläkään toimi"*).
+   *
+   * MITATTU JUURISYY: kaupungeissa, joilla ei ole nauhoitettua raitaa,
+   * taustan soittaa TAMA syntetisoitu maisema (ambience-stream kutsuu
+   * sfx.setAmbience(fallbackType)). Sen taso oli pelkkä vaistokerroin,
+   * eika Taustaaanet-liuku (js/kehittajan-voimat.js laji 'tausta')
+   * yltanyt siihen lainkaan — liuku nollaan jatti maiseman soimaan.
+   * Nauhoitettu raita seurasi liukua, joten vika nakyi vain osassa
+   * kaupunkeja ja savuke mittasi juuri sen toimivan polun.
+   *
+   * Taso on nyt sama tulo kuin nauhoitetulla: vaisto x liuku.
+   */
+  ambienssinTaso() {
+    return Math.max(0, Math.min(1, this.ambienssiVaisto)) * kehittajanKerroin('tausta');
+  }
+
   setAmbience(type) {
     if (type === this.ambienceType) return;
     this.ambienceType = type ?? null;
@@ -933,7 +952,7 @@ class Sound {
     // Väistö on voimassa myös uudelle maisemalle: ilman tätä kesken
     // näytteen vaihtuva maisema nousisi täyteen voimaan puheen päälle.
     out.gain.exponentialRampToValueAtTime(
-      Math.max(0.0001, this.ambienssiVaisto), ctx.currentTime + AMBIENCE_FADE,
+      Math.max(0.0001, this.ambienssinTaso()), ctx.currentTime + AMBIENCE_FADE,
     );
     out.connect(this.bus);
 
@@ -963,7 +982,28 @@ class Sound {
       // Liuku tulee kutsujalta (ambience-stream ajaVaisto), jotta
       // nauhoitettu ja syntetisoitu tausta feidaavat samaa tahtia.
       maisema.out.gain.exponentialRampToValueAtTime(
-        Math.max(0.0001, this.ambienssiVaisto), t + Math.max(0.05, liukuS),
+        Math.max(0.0001, this.ambienssinTaso()), t + Math.max(0.05, liukuS),
+      );
+    } catch {
+      /* solmu oli jo purettu */
+    }
+  }
+
+  /**
+   * Liu'un veto kuuluu HETI soivassa maisemassa. Vaisto pysyy
+   * ennallaan: tama paivittaa vain tulon toisen puoliskon, samalla
+   * 200 ms liu'ulla kuin nauhoitetun taustan puolella
+   * (js/ambience-stream.js kuunteleKehittajanKerrointa).
+   */
+  paivitaAmbienssinVoima(liukuS = 0.2) {
+    const maisema = this.ambience;
+    if (!this.ctx || !maisema || maisema.loppuu) return;
+    const t = this.ctx.currentTime;
+    try {
+      maisema.out.gain.cancelScheduledValues(t);
+      maisema.out.gain.setValueAtTime(Math.max(maisema.out.gain.value, 0.0001), t);
+      maisema.out.gain.exponentialRampToValueAtTime(
+        Math.max(0.0001, this.ambienssinTaso()), t + Math.max(0.05, liukuS),
       );
     } catch {
       /* solmu oli jo purettu */
@@ -1998,6 +2038,13 @@ lisaaTaustaVaimennus({
   hiljenna: () => sfx.taukoaTaustalle(),
   palauta: () => sfx.jatkaEtualalle(),
 });
+
+/*
+ * Taustaaanet-liuku (index.html #voima-tausta) yltaa myos
+ * syntetisoituun maisemaan. Rekisterointi on tassa samasta syysta kuin
+ * taustavahti yllä: luokan voi yha luoda testissa ilman kuuntelijaa.
+ */
+kuunteleKehittajanKerrointa('tausta', () => sfx.paivitaAmbienssinVoima());
 
 /**
  * Aarteen paljastuksen ääni laattatyypin mukaan.
