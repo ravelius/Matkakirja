@@ -48,7 +48,21 @@ Toimituskysymykset jokaiselle kaupunkiparille:
 Horatio on tarkka, utelias, kohtelias, lämmin ja kuivan humoristinen
 entinen laivaston kartanpiirtäjä. Hän kirjoittaa vuonna 1873 päiväkirjaa
 itselleen, ei lapsenlapselle tai oletetulle lukijalle. Hän voi erehtyä,
-mutta ei ole narri. Rauhallinen luenta ei tarkoita tunteetonta persoonaa.
+mutta ei ole narri. Omistaja 13.9.2026: hän ei myöskään ole virheetön
+moraalinen esikuva. Hän voi olla itsepäinen, turhamainen, itseään
+puolusteleva, aikansa ja asemansa sokeuttama ja tehdä aidosti
+kyseenalaisen valinnan — ei vain sivullinen, joka huomaa muiden virheet.
+Epätäydellisyys näkyy teossa tai seurauksessa, ei joka merkinnässä, eikä
+katumus tai oivallus tule välttämättä saman kappaleen lopussa.
+Historiallinen konteksti tekee valinnan ymmärrettäväksi, ei
+automaattisesti oikeaksi: aikalaisilla oli eri näkemyksiä, paikalliset
+voivat tietää Horatiota paremmin, eikä kertojan vinouma ole pelin väite
+kokonaisesta kansasta. Yleisinhimillinen epätäydellisyys ei ole vain
+menneisyyden ominaisuus. Vaarat ja kovat realiteetit sidotaan oikeaan
+paikkaan ja vuoteen ja tarkistettuihin faktoihin, ja fiktiivinen kokemus
+erotetaan todellisista tapahtumista: muutama vahva kohtaus Eurooppaan,
+ei koko paketin synkentämistä eikä pakollista loppuarvoitusta joka
+kaupunkiin. Rauhallinen luenta ei tarkoita tunteetonta persoonaa.
 Hänen nykyisten merkintöjensä hyvät pohdinnat ja oivallukset SÄILYVÄT.
 Tunne voi näkyä pienessä teossa tai havainnossa; kaikkea ei selitetä
 tunteeksi, eikä joka merkintään pakoteta aforismia tai loppuarvoitusta.
@@ -99,6 +113,21 @@ ja löydöistä. Tämä ei ole yleinen kahviloiden kielto eikä kehotus tehdä
 joka kaupungista muruvitsiä. Ateenan ja Sarajevon pilotin nämä kohdat
 korjattiin; muut omistajan hyväksymät repliikit säilytettiin.
 
+Omistajan 13.9.2026 täsmennys nykyhetken näkökulmasta: Livia tuo
+VAIHTUVAN nykyhetken näkökulman — oma havainto, muutos oloissa,
+hämmästys, ristiriita tai vakava reaktio — ei joka kaupungin saarnaa
+eikä vakio-oikaisua isoisälle. Todelliseen kärsimykseen ei kirjoiteta
+automaattista pullavitsiä, eikä kaavaa "ennen paha, nyt kaikki hyvin".
+Pulun iskulauseita saa varioida, jotta ne eivät toista kaavaa: välillä
+hän vain lukee iskulauseen, välillä pistää omiaan mukaan.
+
+**Lyhyet saapumisäänet (ilmaisusuunta, 13.9.2026).** Kertoja sanoo
+kaupungin nimen ja Pulu iskulauseen offscreen. Ruudulla näkyy nykyinen
+iskulause; puhuttu versio voi olla sama, lyhyt lisä tai vapaampi
+muotoilu. Ei vakio-"eli"-alkua, ei pakollista loppuvitsiä eikä samaa
+mallia kaikkiin. Sanamuodot ovat valmisteltavana: ei batchia ennen
+lukukatsausta eikä uusia ääniajoja — ääni-HOLD on ennallaan.
+
 ## Säilyvät sisältölinjaukset ja tämän työn rajat
 
 Alla on Raamatun säilyvien linjausten toimeenpanomuistio, ei niiden
@@ -148,8 +177,15 @@ siirto pois Raamatusta tai uusi itsenäinen hyväksyntävaltuus:
 
 ## Kuuntelun ja kuvatekstien pituus
 
-Omistajan täsmennys 12.9.2026: isoisän ja Pulun osuuksien pituus saa
-vaihdella, mutta niiden KAUPUNKIKOHTAINEN KOKONAISPITUUS EI KASVA.
+Omistajan täsmennys 13.9.2026 (UUSIN VOITTAA, kumoaa 12.9. säännön
+"kaupunkikohtainen kokonaispituus ei kasva"): KAUPUNKIPARIN PITUUDET
+SAAVAT ELÄÄ. Jos tarina vaatii, yhteispituus voi joissakin kaupungeissa
+olla pidempi, eivätkä kaikki kaupungit saa samaa sana-, virke- tai
+merkkimittaa — omistajan sanoin "se on jopa parempi että myös pituudet
+elävät hieman, niin ei tunnu niin laskelmoidulta". Luontevasti lyhyt
+pysyy lyhyenä; kuunneltavuus, merkitys ja rytmi ratkaisevat. Sana- ja
+merkkimäärät ovat katselmuksen tietoa, eivät ehdottomia rajoja.
+Isoisän ja Pulun osuuksien pituus saa vaihdella myös keskenään.
 Yhteinen mitta jaetaan sisällön mukaan: toisessa kaupungissa Horatio saa
 enemmän tilaa, toisessa Livia. Jos Pulu tarvitsee lisää tilaa, isoisän
 osuudesta tiivistetään toistoa ja oivalluksen ympäriltä. Hyvä oivallus
@@ -163,7 +199,8 @@ lyhennys- ja yhteismittatilaukseen. Yläraja ei ole täytettävä kiintiö.
 Kaupunkikorttiin kirjataan vertailun lähtöversio sekä molempien tekstien
 ja summan ennen/jälkeen-sana- ja merkkimäärät. Vertailussa ovat saman
 kaupungin samat puheenvuorot, eivät eri kaupungit tai koko maanosan
-keskiarvot. Lukukatselmuksessa arvioidaan todellinen yhteinen tekstimitta;
+keskiarvot. Luvut ovat katselmuksen tietoa eivätkä portti:
+pidempi kaupunkipari ei ole virhe, jos teksti kantaa. Lukukatselmuksessa arvioidaan todellinen yhteinen tekstimitta;
 lopullinen kuuntelukesto varmennetaan vasta valmiista äänistä taukoineen
 ja puhujanvaihtoineen. Arvioita ei väitetä mitatuiksi sekunneiksi.
 Pelkkä välimerkkien yhdistäminen ei lyhennä puhetta, eikä puhenopeuden

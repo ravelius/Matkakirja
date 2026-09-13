@@ -64,9 +64,14 @@ tunnistetaan:
 - **Pelkää hevosia, ei myrskyjä.** Nousee mihin tahansa laivaan missä
   tahansa kelissä, mutta kiertää hevosrattaat kadun toista laitaa.
   Tästä ei tehdä numeroa joka kaupungissa; se välähtää harvakseltaan.
-- **Kohtelias kaikille, kärsimätön vain itselleen.** Ei koskaan
-  ivaa paikallisia (tarina.md:n pääsääntö) — ironia osuu häneen
-  itseensä ja hänen pelkoihinsa.
+- **Kohtelias kaikille, kärsimätön itselleen — mutta ei virheetön.**
+  Ei koskaan ivaa paikallisia (tarina.md:n pääsääntö) — ironia osuu
+  häneen itseensä ja hänen pelkoihinsa. Hän voi silti olla itsepäinen,
+  turhamainen, itseään puolusteleva ja aikansa sokeuttama, ja tehdä
+  aidosti kyseenalaisen valinnan (omistaja 13.9.2026; ks. Raamatun
+  kohta HORATION INHIMILLINEN EPATAYDELLISYYS). Epätäydellisyys näkyy
+  teossa tai seurauksessa, ei joka merkinnässä, eikä katumus tule
+  välttämättä saman kappaleen lopussa.
 - **Rakastaa arvoituksia, ei ratkaisuja.** "Hyvä kysymys on parempi
   matkatoveri kuin vastaus." Hän jättää kirjaansa langanpäitä, ei
   selityksiä.
@@ -149,7 +154,13 @@ saa olla ketju. Säännöt:
 
 Horatio–Livia-kaupunkiparin mitta ratkaistaan toimituksellisesti ja
 kuuntelemalla `docs/moduulit/horatio-livia-tuotanto.md`:n mukaan, ei
-vanhoilla merkki- tai virkekiintiöillä. `docs/tarina.md`:n vaihtelu- ja
+vanhoilla merkki- tai virkekiintiöillä. Omistaja 13.9.2026: kaupunkiparin
+pituudet saavat elää — jos tarina vaatii, yhteispituus voi joissakin
+kaupungeissa olla pidempi, eivätkä kaikki kaupungit saa samaa sana-,
+virke- tai merkkimittaa. Luontevasti lyhyt pysyy lyhyenä; kuunneltavuus,
+merkitys ja rytmi ratkaisevat, ja sana- ja merkkimäärät ovat katselmuksen
+tietoa, eivät ehdottomia rajoja. Tämä kumoaa aiemman säännön
+"kaupunkikohtainen kokonaispituus ei kasva". `docs/tarina.md`:n vaihtelu- ja
 motiivisäännöt säilyvät: aloitustapoja kierrätetään, eikä sama tehokeino
 toistu vierekkäisissä kaupungeissa. Sateenvarjon, sähkeen ja liituristin
 harvuus tekee niistä vaikuttavia.

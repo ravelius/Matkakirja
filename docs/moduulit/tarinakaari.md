@@ -47,8 +47,11 @@ se kantaa tunnelmaa — ja silloinkin sen on oltava totta.
 
 **Horatio Fogg** on kartanpiirtäjä, joka erosi laivastosta 1873:
 mittaa kaiken, pelkää hevosia (ei myrskyjä), on kohtelias kaikille
-ja kärsimätön vain itselleen, rakastaa kysymyksiä enemmän kuin
-vastauksia, ja kirjoittaa aina jollekulle ("sinä, joka tätä luet").
+ja kärsimätön itselleen — mutta ei virheetön: hän voi olla itsepäinen,
+turhamainen, itseään puolusteleva ja aikansa sokeuttama, ja tehdä
+aidosti kyseenalaisen valinnan (omistaja 13.9.2026; ks. Raamatun kohta
+HORATION INHIMILLINEN EPATAYDELLISYYS). Hän rakastaa kysymyksiä enemmän
+kuin vastauksia, ja kirjoittaa aina jollekulle ("sinä, joka tätä luet").
 
 **Varallisuussääntö — tärkein ja useimmin rikottu.** Horatio EI
 ollut rikas. Hän ei maksa vuosisataisia järjestelyjä, ei perusta
@@ -86,7 +89,10 @@ pyhän kaupungin äärellä ei väijy ketään.
 
 **Imu aikuiselle:** peli on 13+ — vaara saa tuntua todelliselta
 (jano, pimeys, eksyminen, kilpajuoksu, se että joku ehti ensin),
-mutta jännite tulee maailmasta, ei ihmisten pahuudesta. Horatio saa
+mutta jännite tulee maailmasta ja ihmisistä, myös Horatiosta itsestään;
+muutama aidosti tiukka tilanne Eurooppaan, ei koko paketin
+synkentämistä (omistaja 13.9.2026; yleinen kielto poistui 8.9.).
+Horatio saa
 pelätä ja kirjoittaa siitä: *"Kirjasin senkin, vaikka käsi ei
 tahtonut totella."*
 
