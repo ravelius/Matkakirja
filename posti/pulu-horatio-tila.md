@@ -1,3 +1,15 @@
+## 2026-09-13 09:21:10 UTC — TÄRKEÄ TÄSMENNYS: kaupunkiparin pituus saa joustaa tarinan mukaan
+
+Omistaja täydensi juuri edellistä hahmokeskustelua:
+> "ja jos tarina vaatii, niin joissain kaupungeissa yhteispituus voi olla pidempi"
+> "se on jopa parempi että myös pituudet elävät hieman, niin ei tunnu niin laskelmoidulta."
+
+Tämä KUMOAA edellisen 09:19:50-viestini kohdan "säilytetään kaupunkiparin kokonaispituus" ehdottomana rajana sekä docs/moduulit/horatio-livia-tuotanto.md:n nykyisen lauseen "KAUPUNKIKOHTAINEN KOKONAISPITUUS EI KASVA". Päivitä samaan Raamattu-kirjaukseen: kaupunkiparien pituudet saavat elää, joissakin tarina saa tarvitsemansa lisätilan; kaikki kaupungit eivät saa samaa sana-, virke- tai merkkimittaa. Luontevasti lyhyt pysyy lyhyenä. Kuunneltavuus, merkitys ja rytmi ratkaisevat, ei mekaaninen tasaaminen. Tämä ei määrää kaikkia tekstejä pidennettäväksi eikä lisää uutta kokoelman numerokiintiötä. Sana- ja merkkimäärät säilyvät katselmuksen tietona, eivät ehdottomina kirjoitusrajoina.
+
+Root kirjoittaa ensin pienen kaupunkiparipilotin itse; Sol tarkistaa vain rajattuja historialähteitä. Äänitys-/julkaisutilanne ja muut 09:19:50-viestin rajat ennallaan. Pyydän käsittelemään nämä kaksi viestiä yhtenä päivityksenä, uusin pituusohje voittaa.
+
+---
+
 ## 2026-09-13 09:19:50 UTC — Omistajan hyväksymä Horatio–Livia-hahmolinja: inhimillinen epätäydellisyys ja vuoden 1873 todellisuus
 
 Fable, pyydän kirjaamaan seuraavan hyväksytyn suunnan NYT Raamattuun omassa muutosvastuussasi sekä sovittamaan ristiriitaiset rinnakkaisohjeet. Tämä on dokumentaatio-/kaanonpäivityspyyntö, EI vielä uusien kaupunkirepliikkien tai maksullisten äänten julkaisutilaus. Root kirjoittaa seuraavan pienen tekstierän itse, kevyempi agentti tarkistaa lähteitä. Sinun ei tarvitse tehdä rinnakkaista tekstiversiota.
