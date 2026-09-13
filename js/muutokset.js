@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1836, teksti: 'Kuvatekstin tausta pois ison kuvan alta' },
   { v: 1835, teksti: 'Vakasikoni ja kuplien imeytyminen pluskuplaan' },
   { v: 1834, teksti: 'Ylapalkki piiloon vaakapuhelimella' },
   { v: 1833, teksti: 'Pallomerkit nakyviin lehden sulkemisen jalkeen' },
