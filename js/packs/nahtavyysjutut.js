@@ -837,6 +837,170 @@ export const NAHTAVYYSJUTUT = {
         + 'muurin ensimmäinen uhri. Betonimuuri seuraa piikkilankaa, ja se seisoo '
         + '28 vuotta.',
     },
+    /*
+     * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): KAUPUNKILEHDEN SIVUT NOSTOIKSI.
+     *
+     * Teksti on noston OMA `lunastus` kappaleittain '\n\n'-liitoksena,
+     * kuten muissakin karsittujen nostojen jutuissa —
+     * tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten juttu ei
+     * voi eriytyä siitä kortista, jonka pelaaja näkee.
+     */
+    'Hattupäinen ukkeli': {
+      nosto: 'nosto-hattupainen-ukkeli',
+      teksti: 'Liikennepsykologi Karl Peglau piirsi vuonna 1961 Itä-Saksalle oman '
+        + 'jalankulkuvalon: leveä hahmo hattuineen erottuu kauas, koska '
+        + 'valopintaa on paljon. Ensimmäiset syttyivät Itä-Berliinissä 1969. '
+        + 'Kun Saksat yhdistyivät, ukkelia alettiin vaihtaa lännen '
+        + 'tikku-ukkoon — kunnes kansalaiskampanja "Pelastakaa Ampelmännchen" '
+        + 'nousi vastaan ja voitti. Nykyään hattupäinen ukkeli ohjaa '
+        + 'kulkijoita myös monessa Länsi-Berliinin risteyksessä, ja siitä on '
+        + 'tullut koko kaupungin maskotti, jota myydään matkamuistona.',
+      kuvat: [
+        {
+          tiedosto: 'Ampelmännchen go.jpg',
+          lyhyt: 'Keisari Vilhelmin muistokirkon pommitettu torso on jätetty muistutukseksi sodasta.',
+          selite: 'Keisari Vilhelmin muistokirkon torso jätettiin pommituksissa '
+            + 'saamaansa asuun muistutukseksi sodasta, ja sen risteyksissä '
+            + 'ohjaa nykyään itäberliiniläinen Ampelmännchen.',
+          lahde: 'Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gaertnerin Berliini': {
+      nosto: 'nosto-gaertnerin-berliini',
+      teksti: 'Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin kamera. '
+        + 'Entinen posliininmaalari kiersi katuja ja maalasi ne niin tarkasti, '
+        + 'että taloista voi laskea ikkunaruudut ja kylttien tekstit voi '
+        + 'lukea. Kuningas osti hänen töitään, mutta Gaertner ei maalannut '
+        + 'vain paraatinäkymiä: hänen kaduillaan korjataan kiveystä, koirat '
+        + 'nuuskivat toisiaan ja pyykki kuivuu ikkunoissa. Juuri siksi hänen '
+        + 'taulunsa ovat nyt tutkijoiden aarre — niistä nähdään, miltä '
+        + 'kadonnut Berliini oikeasti näytti.',
+      kuvat: [
+        {
+          tiedosto: '1856 Gaertner Unter den Linden anagoria.JPG',
+          lyhyt: 'Gaertnerin 1856 näkymässä Unter den Lindenin perällä on vielä kuninkaanlinna, joka purettiin 1950.',
+          selite: 'Gaertnerin vuoden 1856 näkymässä Unter den Lindenin perällä on '
+            + 'vielä kuninkaanlinna, joka purettiin 1950.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Eduard Gaertner Berlin Klosterstrasse 1830.jpg',
+          selite: 'Gaertner maalasi Klosterstraßen vuonna 1830 niin tarkasti, että '
+            + 'talojen kylttien tekstit voi lukea.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Eduard Gaertner - Die Parochialstraße - Google Art Project.jpg',
+          lyhyt: 'Vuonna 1831 Gaertner maalasi Parochialstraßen katutyömaan ja kupariastiat arkea, ei paraatia.',
+          selite: 'Vuoden 1831 Parochialstraßeen Gaertner maalasi myös katutyömaan '
+            + 'ja kauppiaan kylttinä roikkuvat kupariastiat — arkea, jota '
+            + 'paraatikuvista ei löydy.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Eduard Gaertner - Rear view of the Houses at Schloßfreiheit - Google Art Project.jpg',
+          lyhyt: 'Gaertner maalasi 1855 myös kuninkaanlinnan naapuritalojen takapihat, ei vain juhlajulkisivuja.',
+          selite: 'Gaertner maalasi vuonna 1855 myös kuninkaanlinnan '
+            + 'naapuritalojen takapihat, ei vain juhlajulkisivuja.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Eduard Gaertner (1801-1877) - The Friedrichsgracht, Berlin - NG6524 - National Gallery.jpg',
+          lyhyt: 'Friedrichsgrachtin lastaavat proomut muistuttavat, että Berliini oli 1800-luvulla satamakaupunki.',
+          selite: 'Friedrichsgracht kattojen yli nähtynä, ja kanavassa lastaavat '
+            + 'proomut muistuttavat, että Berliini oli 1800-luvulla '
+            + 'satamakaupunki.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Eduard Gaertner - Ansicht der Königlichen Oper und Unter den Linden, Berlin (1845).jpg',
+          selite: 'Vuonna 1845 maalattu kuninkaallinen ooppera seisoo Unter den '
+            + 'Lindenillä yhä.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Marlene Dietrich': {
+      nosto: 'nosto-marlene-dietrich',
+      teksti: 'Marlene Dietrich syntyi 1901 Schönebergin kaupunginosassa ja nousi '
+        + 'maailmantähdeksi berliiniläisen elokuvan Sininen enkeli (1930) '
+        + 'myötä — samana vuonna hän muutti Hollywoodiin. Kun natsihallinto '
+        + 'houkutteli häntä takaisin mainoskasvokseen, hän kieltäytyi, otti '
+        + 'Yhdysvaltain kansalaisuuden ja lauloi sen sijaan rintamalla '
+        + 'sotilaille — tunnetuimpana laulun Lili Marleen, jota kuunneltiin '
+        + 'juoksuhaudoissa molemmin puolin. Berliiniin hän palasi viimeisen '
+        + 'kerran arkussa: hauta on Schönebergissä, äidin haudan vieressä.',
+      kuvat: [
+        {
+          tiedosto: 'My Child Speaks Marlene Dietrich 1930, Erich Salomon.jpg',
+          lyhyt: 'Marlene Dietrich soittaa Hollywoodista Berliiniin tyttärelleen 1930 Erich Salomonin kuvassa.',
+          selite: 'Marlene Dietrich soittaa Hollywoodista Berliiniin tyttärelleen '
+            + '1930, yöpöydällä tyttären valokuva; Erich Salomonin kuuluisa '
+            + 'otos.',
+          lahde: 'Erich Salomon, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Paavin kosto': {
+      nosto: 'nosto-paavin-kosto',
+      teksti: 'Itä-Saksa rakensi televisiotornin vuosina 1965–1969 ja vihki sen '
+        + 'käyttöön 3. lokakuuta 1969. Tornin pallo koottiin maassa 120 '
+        + 'teräslohkosta ja nostettiin vasta sitten betonipylvään päähän. Sen '
+        + 'jälkeen tapahtui jotain, mitä kukaan ei ollut piirtänyt kuviin: kun '
+        + 'aurinko osuu kiiltävään palloon, heijastus muodostaa ristin. Valtio '
+        + 'oli virallisesti uskonnoton, joten muurin länsipuolella keksittiin '
+        + 'ilmiölle nimi — paavin kosto. Nimi jäi.',
+      kuvat: [
+        {
+          tiedosto: 'The Pope\'s Revenge.jpg',
+          lyhyt: 'Auringon heijastus tv-tornin pallosta muodostaa ristin, jota kutsuttiin paavin kostoksi.',
+          selite: 'Auringon heijastus tornin teräspallosta muodostaa ristin, jolle '
+            + 'keksittiin muurin länsipuolella nimi paavin kosto.',
+          lahde: 'Tobi85, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Bundesarchiv Bild 183-G0521-0005-001, Berlin, Fernsehturm, Bau.jpg',
+          lyhyt: 'Televisiotornia rakennettiin 1965–1969, ja pallo koottiin maassa 120 teräslohkosta ennen nostoa.',
+          selite: 'Televisiotornia rakennettiin vuosina 1965–1969, ja pallo '
+            + 'koottiin maassa 120 teräslohkosta ennen nostoa.',
+          lahde: 'Hans-Joachim Spremberg, Bundesarchiv / Wikimedia Commons (CC '
+            + 'BY-SA 3.0 DE)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Maailmankello': {
+      nosto: 'nosto-maailmankello',
+      teksti: 'Muutama päivä ennen tornia, 30. syyskuuta 1969, samalle aukiolle '
+        + 'pystytettiin kymmenmetrinen maailmankello. Erich Johnin '
+        + 'suunnittelemassa alumiinirummussa on 24 sivua, yksi jokaista '
+        + 'aikavyöhykettä kohti, ja niihin on jyrsitty 146 paikannimeä '
+        + 'Reykjavíkista Kinshasaan. Rummun ympäri kiertää tuntirengas, ja '
+        + 'katolla pyörii kerran minuutissa pieni aurinkokunta. Koneisto on '
+        + 'kadun alla kellarissa, ja tuntirengasta pyöritti Trabantista '
+        + 'purettu vaihteisto.',
+      kuvat: [
+        {
+          tiedosto: 'Urania-Weltzeituhr auf dem Alexanderplatz in Berlin 2015.jpg',
+          lyhyt: 'Maailmankellon 24-sivuisen rummun katolla pyörii kerran minuutissa pieni aurinkokunta.',
+          selite: 'Maailmankellon alumiinirummussa on 24 sivua, yksi kutakin '
+            + 'aikavyöhykettä kohti, ja sen katolla pyörii kerran minuutissa '
+            + 'pieni aurinkokunta.',
+          lahde: 'Christian Wolf (www.c-w-design.de), Wikimedia Commons (CC BY-SA '
+            + '3.0 DE)',
+        },
+        {
+          tiedosto: 'Weltzeituhr Detail Alexanderplatz.jpg',
+          selite: 'Rumpuun on jyrsitty 146 paikannimeä Reykjavíkista Kinshasaan.',
+          lahde: 'Gryffindor, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ R6 (Raamattu, "TEKSTIEN PAINOPISTE":
@@ -1796,6 +1960,197 @@ export const NAHTAVYYSJUTUT = {
         + 'keksi saman pyörän uudestaan.',
       lahde: 'Wikipedia',
     },
+    /*
+     * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): KAUPUNKILEHDEN SIVUT NOSTOIKSI.
+     *
+     * Teksti on noston OMA `lunastus` kappaleittain '\n\n'-liitoksena,
+     * kuten muissakin karsittujen nostojen jutuissa —
+     * tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten juttu ei
+     * voi eriytyä siitä kortista, jonka pelaaja näkee.
+     */
+    'Tapaskierros': {
+      nosto: 'nosto-madridin-tapaskierros',
+      teksti: 'Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, ja '
+        + 'väliin jää tunteja, jotka täytetään tapaksilla. Tapa tarkoittaa '
+        + 'kantta: juomalasin päälle asetettiin viipale kinkkua tai leipää, '
+        + 'jottei kärpäsiä päässyt sisään — kansi muuttui ruoaksi. Tapaksia '
+        + 'syödään seisten baaritiskillä ja siirrytään sitten seuraavaan '
+        + 'paikkaan; kierros on nimeltään tapeo, ja se on yhtä paljon kävelyä '
+        + 'kuin syömistä. Vuoden 1916 valurautainen San Miguelin halli on '
+        + 'kierroksen tunnetuin pysäkki.',
+      kuvat: [
+        {
+          tiedosto: 'Mercado de San Miguel, Madrid - 001.jpg',
+          lyhyt: 'Mercado de San Miguelin lasi- ja valurautahalli oli vihannestori ennen muutostaan tapastoriksi 2009.',
+          selite: 'Mercado de San Miguelin lasi- ja valurautahalli Plaza Mayorin '
+            + 'kupeessa, entinen vihannestori, joka muuttui 2009 tapastoriksi.',
+          lahde: 'Nicolas Vigier, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Goyan kansankuvat': {
+      nosto: 'nosto-goyan-kansankuvat',
+      teksti: 'Ennen kuin Francisco de Goyasta tuli hovimaalari ja ennen kuin hän '
+        + 'maalasi sotaa ja hulluutta, hän teki kymmenen vuotta töitä '
+        + 'kuninkaallisen kutomon tilauksesta: malleja seinävaatteisiin, '
+        + 'joiden aiheeksi haluttiin iloisia kansankuvia. Goya meni kaduille '
+        + 'ja niityille ja katsoi, mitä madridilaiset oikeasti tekivät '
+        + 'vapaapäivinään — joivat, tanssivat, riitelivät, leikkivät. Siitä '
+        + 'syntyi tarkin muotokuva, joka 1700-luvun Madridista on: ei '
+        + 'kuninkaista vaan kaupungista.',
+      kuvat: [
+        {
+          tiedosto: 'La pradera de San Isidro, Francisco de Goya.jpg',
+          lyhyt: 'San Isidron niitty (1788) kuvaa kaupungin suojeluspyhimyksen juhlaa Manzanaresin rannalla.',
+          selite: 'San Isidron niitty (1788) syntyi Goyan kymmenvuotisesta työstä '
+            + 'kuninkaallisen kutomon malleja tehden, ja aiheena on kaupungin '
+            + 'suojeluspyhimyksen juhla Manzanaresin rannalla.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'El Quitasol (Goya).jpg',
+          lyhyt: 'Päivänvarjo (1777) on Goyan kutomomalli El Pardon palatsiin ja yksi Pradon suosituimpia tauluja.',
+          selite: 'Päivänvarjo (1777) kuuluu Goyan kutomomalleihin, jotka tehtiin '
+            + 'El Pardon palatsin seinävaatteita varten, ja se on yhä Pradon '
+            + 'suosituimpia tauluja.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'La gallina ciega (Goya).jpg',
+          lyhyt: 'Sokkoleikki (1789), espanjaksi la gallina ciega eli sokea kana, on Goyan kutomomalli Pradossa.',
+          selite: 'Sokkoleikin (1789) espanjankielinen nimi la gallina ciega '
+            + 'tarkoittaa sokeaa kanaa, ja Goyan kutomomalli kuuluu Pradon '
+            + 'kokoelmaan.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'La nevada, Francisco de Goya.jpg',
+          lyhyt: 'Lumisade eli Talvi (1786) kuvaa Goyan kutomomallissa kolme miestä ja aasin lumituiskussa.',
+          selite: 'Lumisade eli Talvi (1786) on Goyan kutomomalli, jossa kolme '
+            + 'miestä ja aasi kahlaavat lumituiskussa — 650 metrin korkeudessa '
+            + 'talvi puree.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'El baile a orillas del Manzanares.jpg',
+          lyhyt: 'Tanssi Manzanaresin rannalla (1777) esittää madridilaisia keikareita seguidillaa tanssimassa.',
+          selite: 'Tanssi Manzanaresin rannalla (1777) esittää majoja ja majia, '
+            + 'kaupungin omia keikareita, seguidillaa tanssimassa joen '
+            + 'törmällä.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'El cacharrero, Francisco de Goya.jpg',
+          lyhyt: 'Saviastioiden kauppias (1779) asettaa vastakkain katukauppiaan ja ohi vierivät herrasvaunut.',
+          selite: 'Saviastioiden kauppias (1779) asettaa vastakkain maahan '
+            + 'ruukkunsa levittävän kauppiaan ja ohi vierivät herrasvaunut — '
+            + 'kaksi Madridia samassa taulussa.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Chotis': {
+      nosto: 'nosto-chotis-laatalla',
+      teksti: 'Chotis tuli Madridiin 1850 Keski-Euroopasta, mutta muuttui perillä '
+        + 'omanlaisekseen. Säännön mukaan mies ei siirry laatalta, jolla '
+        + 'seisoo: hän pyörii paikallaan, ja nainen kiertää hänen ympärillään. '
+        + 'Säestää organillo, kadulla työnnettävä kampiurut. Tanssi kuuluu '
+        + 'verbena-juhliin, joista suurin on San Isidro 15. toukokuuta — sama '
+        + 'juhla, jonka Goya maalasi. Samasta Madridista syntyi myös zarzuela, '
+        + 'laulun ja puheen vuorottelu, jota esitetään kaupungin omassa '
+        + 'Zarzuela-teatterissa yhä.',
+      kuvat: [
+        {
+          tiedosto: 'Parejas bailando Chotis - Madrid 01.jpg',
+          lyhyt: 'Chotisia tanssitaan Madridin verbena-juhlissa chulapon asussa, naisilla pilkkumekko ja neilikka.',
+          selite: 'Chotisia tanssitaan Madridin verbena-juhlissa chulapon lakissa '
+            + 'ja liivissä, naisilla pitkä pilkullinen mekko ja neilikka '
+            + 'hiuksissa.',
+          lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kaksi joukkuetta': {
+      nosto: 'nosto-madridin-kaksi-joukkuetta',
+      teksti: 'Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja siihen '
+        + 'mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen sen '
+        + 'erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi yli sadan '
+        + 'metrin pituiseksi kaukaloksi, jotka voidaan ajaa sivuun ja laskea '
+        + 'hydraulisella hissillä kolmenkymmenen metrin syvyyteen. Siellä '
+        + 'alhaalla on kasvihuone, jossa ruoho saa valoa ja jatkaa '
+        + 'kasvamistaan. Koko kentän piilottaminen kestää noin kuusi tuntia — '
+        + 'sen jälkeen stadionille mahtuu konsertti.\n\nCibeleen aukion '
+        + 'suihkulähteessä jumalatar ajaa vaunuja, joita vetää kaksi leijonaa. '
+        + 'Ensimmäisinä sen päälle kiipesivät Atlético Madridin kannattajat: '
+        + 'seuran toimisto oli naapurikadulla, ja siellä juhlittiin voittoja '
+        + 'jo vuonna 1962. Real Madridin väki omaksui tavan perässä, ja '
+        + '1980-luvun lopulla Cibeles oli jo niin vahvasti valkoisten paikka, '
+        + 'että atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat '
+        + 'juhlineet saman puistokadun toisessa päässä, Neptunuksen '
+        + 'suihkulähteellä.',
+      kuvat: [
+        {
+          tiedosto: 'Estadio Santiago Bernabeu - Field.jpg',
+          lyhyt: 'Santiago Bernabéu avattiin 1947, ja Real Madridin kotistadionille mahtuu nykyään 83 186 katsojaa.',
+          selite: 'Santiago Bernabéu avattiin 14. joulukuuta 1947, ja Real '
+            + 'Madridin kotistadionille mahtuu nykyään 83 186 katsojaa.',
+          lahde: 'Mervat, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Fuente de Cibeles - 03.jpg',
+          selite: 'Cibeleen suihkulähteen vaunuja vetävät kivileijonat veisti '
+            + 'ranskalainen Roberto Michel 1780-luvulla.',
+          lahde: 'Carlos Delgado, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Palamaton linna': {
+      nosto: 'nosto-palamaton-linna',
+      teksti: 'Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona 1734, '
+        + 'ja tuli tuhosi sen lähes kokonaan. Filip V käski rakentaa tilalle '
+        + 'linnan, joka ei voisi palaa: seinät kiveä ja tiiltä, katot '
+        + 'holvattuja, puuta vain ovissa, ikkunanpuitteissa ja kattotuoleissa. '
+        + 'Työ alkoi 1738, ja ensimmäinen kuningas muutti sisään 1764. '
+        + 'Kuninkaanlinna on 135 000 neliömetrillään Länsi-Euroopan suurin — '
+        + 'silti kuningas ei asu siellä vaan pienemmässä talossa kaupungin '
+        + 'laidalla.',
+      kuvat: [
+        {
+          tiedosto: 'Real Alcázar de Madrid, unknown.jpg',
+          lyhyt: 'Kuninkaiden vanha Alcázar paloi jouluaattona 1734, eikä siitä ole enää jäljellä mitään.',
+          selite: 'Kuninkaiden vanha Alcázar paloi jouluaattona 1734 lähes '
+            + 'kokonaan, eikä rakennuksesta ole enää mitään jäljellä.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Gran Vía': {
+      nosto: 'nosto-gran-vian-murto',
+      teksti: 'Madridin vanhassa keskustassa kadut olivat kapeita ja mutkaisia, ja '
+        + 'niiden läpi päätettiin murtaa yksi leveä. Työ alkoi 4. huhtikuuta '
+        + '1910, kun kuningas Alfonso XIII löi hopeisella hakulla ensimmäisen '
+        + 'reiän papin talon seinään San Josén kirkon vieressä. Ennen kuin '
+        + 'Gran Vía oli valmis, oli purettu 312 taloa ja 48 katua kadonnut tai '
+        + 'muuttunut toiseksi. Sisällissodassa katua sanottiin '
+        + 'Kranaattikaduksi: sen korkeimman talon ylimmissä kerroksissa oli '
+        + 'tähystyspaikka, ja tykit ampuivat sitä kohti.',
+      kuvat: [
+        {
+          tiedosto: 'Derribo de casas para la apertura de la Gran Vía - 1912.jpg',
+          lyhyt: 'Gran Vían ensimmäistä osuutta varten 1912 purettiin 312 taloa ja 48 katua katosi tai muuttui.',
+          selite: 'Gran Vían ensimmäistä osuutta rakennettiin vuonna 1912, ja '
+            + 'katua varten purettiin 312 taloa ja 48 katua katosi tai muuttui '
+            + 'toiseksi.',
+          lahde: 'Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   tukholma: {
     Kaupungintalo: {
@@ -2548,6 +2903,225 @@ export const NAHTAVYYSJUTUT = {
         + 'Henrik VIII:n; ainoa vahinko on mies, jonka palavat housut sammutetaan '
         + 'oluella.',
     },
+    /*
+     * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): KAUPUNKILEHDEN SIVUT NOSTOIKSI.
+     *
+     * Teksti on noston OMA `lunastus` kappaleittain '\n\n'-liitoksena,
+     * kuten muissakin karsittujen nostojen jutuissa —
+     * tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten juttu ei
+     * voi eriytyä siitä kortista, jonka pelaaja näkee.
+     */
+    'Metron höyryveturi': {
+      nosto: 'nosto-lontoon-metro-1863',
+      teksti: 'Lontoon metro avattiin 10. tammikuuta 1863 maailman ensimmäisenä '
+        + 'maanalaisena matkustajaratana. Vaunut olivat puuta ja niitä '
+        + 'valaistiin kaasulyhdyillä, ja maan alla junaa veti höyryveturi — '
+        + 'savu johdettiin ulos tunneliin jätetyistä aukoista. Ensimmäisenä '
+        + 'vuonna radalla tehtiin 9,5 miljoonaa matkaa. Nykyään asemia on 272 '
+        + 'ja rataa 400 kilometriä. Kadun pinnassa muistuttaa yhä '
+        + 'pronssilaatta, jonka London Transport pystytti sadan vuoden '
+        + 'kunniaksi vuonna 1963.',
+      kuvat: [
+        {
+          tiedosto: 'World\'s First Underground (5025945153).jpg',
+          lyhyt: 'Pronssilaatta muistaa vuonna 1963 sadan vuoden takaista maailman ensimmäistä maanalaista rataa.',
+          selite: 'London Transport pystytti pronssilaatan vuonna 1963 sadan '
+            + 'vuoden kunniaksi maailman ensimmäisestä maanalaisesta '
+            + 'matkustajaradasta, jonka Metropolitan Railway Company avasi '
+            + 'yleisölle 10. tammikuuta 1863.',
+          lahde: 'Simon Harriyott from Uckfield, England, Wikimedia Commons (CC '
+            + 'BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Exchange Alley': {
+      nosto: 'nosto-exchange-alleyn-kupla',
+      teksti: 'Etelämeren yhtiö perustettiin 1711, ja se sai yksinoikeuden '
+        + 'kauppaan Espanjan Etelä-Amerikan kanssa vastineeksi siitä, että se '
+        + 'otti kantaakseen osan valtionvelasta. Kauppaa ei juuri syntynyt, '
+        + 'mutta vuonna 1720 yhtiö sopi ottavansa haltuunsa lähes koko velan '
+        + 'ja vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi '
+        + 'tammikuun runsaasta sadasta punnasta kesällä lähes tuhanteen ja '
+        + 'romahti syyskuun loppuun mennessä noin sataanviiteenkymmeneen. '
+        + 'Kauppa käytiin Cornhillin takana kulkevalla Exchange Alleyn kujalla '
+        + 'ja sen kahviloissa. Parlamentin tutkinta paljasti 1721 ministerien '
+        + 'lahjonnan, ja valtiovarainministeri John Aislabie erotettiin '
+        + 'alahuoneesta ja suljettiin Toweriin.',
+      lahde: 'Wikipedia',
+    },
+    'Canaletto Lontoossa': {
+      nosto: 'nosto-canaletto-lontoossa',
+      teksti: 'Sama venetsialainen Canaletto, jonka vedutoja selailit Venetsian '
+        + 'lehdessä, muutti Lontooseen vuonna 1746 ja maalasi kaupunkia '
+        + 'yhdeksän vuoden ajan. Hän toi Thamesille saman tarkan katseen kuin '
+        + 'Canal Grandelle — ja siksi 1700-luvun Lontoo tunnetaan parhaiten '
+        + 'venetsialaisen silmin.',
+      kuvat: [
+        {
+          tiedosto: 'Canaletto - Westminster Bridge, with the Lord Mayor\'s Procession on the Thames - Google Art Project.jpg',
+          lyhyt: 'Canaletton maalaus 1747 kuvaa lordimayorin kulkuetta vastavalmistuneella Westminster Bridgellä.',
+          selite: 'Canaletton vuoden 1747 maalauksessa lordimayorin juhlakulkue '
+            + 'kulkee Thamesilla vastavalmistuneen Westminster Bridgen editse.',
+          lahde: 'Canaletto, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'The Thames and the City Canaletto 46-47 National Gallery Prague.jpg',
+          selite: 'Canaletto muutti Lontooseen vuonna 1746 ja maalasi kaupunkia '
+            + 'yhdeksän vuoden ajan.',
+          lahde: 'Canaletto, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Canaletto - The City Seen Through an Arch of Westminster Bridge.JPG',
+          selite: 'Vuoden 1747 maalaus on tehty rakenteilla olleen Westminster '
+            + 'Bridgen puutelineiltä.',
+          lahde: 'Canaletto, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Northumberland House by Canaletto (1752).JPG',
+          lyhyt: 'Canaletton vuoden 1752 maalaus on tarkin muistikuva 1874 puretusta Northumberland Housesta.',
+          selite: 'Charing Crossin Northumberland House purettiin 1874, ja '
+            + 'Canaletton vuoden 1752 maalaus on sen tarkin muistikuva.',
+          lahde: 'Canaletto, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Canaletto Ranelegh 1754.jpg',
+          lyhyt: 'Ranelagh Gardensin pyörösalissa kahdeksanvuotias Mozart esiintyi musiikin soidessa hienostolle.',
+          selite: 'Ranelagh Gardensin rotundassa hienosto kierteli pyörösalin '
+            + 'lattialla musiikin soidessa, ja Mozart esiintyi siellä '
+            + 'kahdeksanvuotiaana.',
+          lahde: 'Canaletto, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Dickensin pubi': {
+      nosto: 'nosto-the-george-pubi',
+      teksti: 'The George on Lontoon viimeinen parvekekäytävällinen majatalo: '
+        + 'tällaisten pihojen parvilta katsottiin näytelmiä jo Shakespearen '
+        + 'aikaan. Nykyinen rakennus on vuodelta 1677, ja sen penkeillä istui '
+        + 'aikanaan Charles Dickens, joka mainitsee pubin romaanissaan Pikku '
+        + 'Dorrit. Talo on niin arvokas, että sen omistaa National Trust — '
+        + 'olutta myydään silti joka päivä.',
+      kuvat: [
+        {
+          tiedosto: 'The George at Southwark (8553233399).jpg',
+          lyhyt: 'The George Southwark on Lontoon viimeinen parvekekäytävällinen majatalo, nykyisin vuodelta 1677.',
+          selite: 'The George Southwarkissa on Lontoon viimeinen '
+            + 'parvekekäytävällinen majatalo, ja nykyinen rakennus on vuodelta '
+            + '1677.',
+          lahde: 'It\'s No Game, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Abbey Roadin suojatie': {
+      nosto: 'nosto-abbey-roadin-suojatie',
+      teksti: 'Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli kahdeksan '
+        + 'kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli The Beatlesin '
+        + 'Abbey Road -levyn kansi ja suojatiestä maailman kuuluisin: turistit '
+        + 'jonottavat yhä joka päivä ylittämään sen samassa rivissä, '
+        + 'autoilijoiden kärsivällisyyttä koetellen. Ylityksellä on virallinen '
+        + 'suojelumerkintä — ja taustan studiossa äänitetään musiikkia '
+        + 'edelleen.',
+      kuvat: [
+        {
+          tiedosto: 'Abbey Road Zebra.jpg',
+          lyhyt: 'Abbey Roadin suojatiellä on virallinen suojelumerkintä, ja viereisessä studiossa äänitetään yhä.',
+          selite: 'Abbey Roadin suojatiellä on virallinen suojelumerkintä, ja '
+            + 'viereisessä studiossa äänitetään musiikkia edelleen.',
+          lahde: 'Misterweiss, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Leake Streetin tunneli': {
+      nosto: 'nosto-leake-streetin-tunneli',
+      teksti: 'Waterloon aseman laiturien alla kulkee noin kolmesataa metriä pitkä '
+        + 'tunneli, jossa seinien maalaaminen on sallittua — muualla '
+        + 'Britanniassa luvaton graffiti on rangaistavaa. Tunneli avautui '
+        + 'taiteelle toukokuussa 2008, kun Banksy järjesti siellä '
+        + 'kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman vuoden '
+        + 'marraskuuhun asti, mutta nyt siellä vain kävellään. Seinät '
+        + 'maalataan jatkuvasti uusiksi, joten aamulla ihailtu teos voi olla '
+        + 'iltaan mennessä kadonnut toisen alle.',
+      kuvat: [
+        {
+          tiedosto: '2024-09-26 Leake Street, London graffiti tunnel 01.jpg',
+          lyhyt: 'Leake Streetin tunneli avautui katutaiteelle toukokuussa 2008 Banksyn Cans Festivalissa.',
+          selite: 'Leake Streetin noin kolmesataa metriä pitkässä tunnelissa '
+            + 'seinien maalaaminen on sallittua, ja se avautui taiteelle '
+            + 'toukokuussa 2008 Banksyn Cans Festivalissa.',
+          lahde: 'Ted Potters, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Neljäs jalusta': {
+      nosto: 'nosto-neljas-jalusta',
+      teksti: 'Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, mutta '
+        + 'luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska rahat '
+        + 'loppuivat kesken. Yli 150 vuoden väittelyn jälkeen päätettiin, '
+        + 'ettei sille tule pysyvää patsasta lainkaan: jalustalle nostetaan '
+        + 'vuorotellen uusia nykytaideteoksia. Kesällä 2009 teoksena olivat '
+        + 'ihmiset itse. Sadan päivän ajan, yötä päivää, 2 400 tavallista '
+        + 'ihmistä sai kukin tunnin jalustan päällä ja teki siellä mitä halusi.',
+      kuvat: [
+        {
+          tiedosto: 'Gormley-OneandOther-4thPlinth-TrafalgarSq-20090706.jpg',
+          lyhyt: 'One & Other -teoksessa 2 400 ihmistä sai vuorollaan tunnin Trafalgar Squaren jalustalla 2009.',
+          selite: 'One & Other -teoksessa 2 400 tavallista ihmistä sai kukin '
+            + 'tunnin Trafalgar Squaren neljännellä jalustalla sadan päivän '
+            + 'ajan kesällä 2009.',
+          lahde: 'Simon Lee, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Turbiinihalli': {
+      nosto: 'nosto-tate-modernin-turbiinihalli',
+      teksti: 'Tate Modern on entinen hiilivoimala Thamesin etelärannalla. Sen '
+        + 'turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja museo '
+        + 'tilaa siihen kerrallaan yhden jättimäisen teoksen. Vuonna 2010 '
+        + 'kiinalainen Ai Weiwei levitti hallin lattialle sata miljoonaa '
+        + 'auringonkukansiementä. Jokainen siemen oli muotoiltu käsin '
+        + 'posliinista ja maalattu yksitellen: noin 1 600 käsityöläistä '
+        + 'Jingdezhenin kaupungissa teki niitä yli kaksi vuotta. Museoon '
+        + 'pääsee sisään ilmaiseksi.',
+      kuvat: [
+        {
+          tiedosto: 'Turbine Hall - Tate Modern - geograph.org.uk - 7509077.jpg',
+          lyhyt: 'Tate Modernin 155-metrinen turbiinihalli täyttyy kerrallaan yhdellä jättimäisellä teoksella.',
+          selite: 'Tate Modernin turbiinihalli on 155 metriä pitkä ja 35 metriä '
+            + 'korkea, ja museo tilaa siihen kerrallaan yhden jättimäisen '
+            + 'teoksen.',
+          lahde: 'Mr Ignavy, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Liukumäkiveistos': {
+      nosto: 'nosto-orbitin-liukumaki',
+      teksti: 'Stratfordin olympiapuistossa seisoo 114,5 metriä korkea punainen '
+        + 'teräsvyyhti, Britannian suurin julkinen taideteos. Sen '
+        + 'suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri Cecil '
+        + 'Balmond vuoden 2012 olympialaisia varten. Ylhäällä on kaksi '
+        + 'näköalatasannetta, ja alas pääsee 455 porrasta pitkin. Vuonna 2016 '
+        + 'veistokseen kiedottiin toinen taideteos: Carsten Höllerin 178 '
+        + 'metriä pitkä liukumäki, maailman pisin tunneliliukumäki. Matka alas '
+        + 'kiertyy kaksitoista kertaa ja kestää noin 40 sekuntia.',
+      kuvat: [
+        {
+          tiedosto: 'ArcelorMittal Orbit - geograph.org.uk - 6402522.jpg',
+          lyhyt: 'ArcelorMittal Orbit on Britannian suurin taideteos, ja sen ympäri kiertyy pisin tunneliliukumäki.',
+          selite: 'ArcelorMittal Orbit on 114,5 metriä korkea ja Britannian suurin '
+            + 'julkinen taideteos, ja sen ympäri kiertyy maailman pisin '
+            + 'tunneliliukumäki.',
+          lahde: 'Ian S, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
   },
   /*
    * TEKSTIREMONTTI 20.8.2026, ERÄ E3 (Raamattu, "TEKSTIEN PAINOPISTE"):
@@ -3188,6 +3762,96 @@ export const NAHTAVYYSJUTUT = {
         + 'Wienissä yhdeksän, eikä menestys ole valtava. Prahassa ooppera '
         + 'villitsee talvella koko kaupungin, ja sen ihailijat maksavat Mozartin '
         + 'matkan sinne tammikuussa 1787. Siitä syntyy tilaus Don Giovannille.',
+    },
+    /*
+     * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): KAUPUNKILEHDEN SIVUT NOSTOIKSI.
+     *
+     * Teksti on noston OMA `lunastus` kappaleittain '\n\n'-liitoksena,
+     * kuten muissakin karsittujen nostojen jutuissa —
+     * tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten juttu ei
+     * voi eriytyä siitä kortista, jonka pelaaja näkee.
+     */
+    'Rattaan kulmat': {
+      nosto: 'nosto-praterin-ratas',
+      teksti: 'Praterin jättiratas nousi vuonna 1897 keisari Frans Joosefin '
+        + '50-vuotisen hallitsijajuhlan kunniaksi. Se ei ole ympyrä vaan '
+        + 'kolmikymmenkulmio: yksi kulma jokaista alkuperäistä vaunua kohti. '
+        + 'Vaunuja oli kolmekymmentä, kunnes ratas paloi huhtikuussa 1945. Kun '
+        + 'se avattiin uudelleen 1947, vaunuja ripustettiin takaisin vain '
+        + 'viisitoista — ja niin ne roikkuvat siitä asti joka toisessa '
+        + 'kulmassa. Ratas kulkee 2,7 kilometriä tunnissa.',
+      kuvat: [
+        {
+          tiedosto: 'Riesenrad Wiener Prater 2020-07-12 d.jpg',
+          lyhyt: 'Praterin jättirattaan pienet vaunut kulkevat vain 2,7 kilometriä tunnissa.',
+          selite: 'Praterin jättirattaan vaunut ovat pieniä puutaloja ovineen ja '
+            + 'ikkunoineen, ja ratas kulkee 2,7 kilometriä tunnissa.',
+          lahde: 'Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Lipizzanit': {
+      nosto: 'nosto-lipizzanit',
+      teksti: 'Hofburgin palatsissa toimii ratsastuskoulu, jonne lipizzanoriit '
+        + 'tuodaan nelivuotiaina Piberin siitostallilta Steiermarkista. '
+        + 'Valkoisia ne eivät silloin vielä ole: varsat syntyvät ruunikkoina '
+        + 'tai mustina ja vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden '
+        + 'iässä valkoisia. Perinne vaatii, että tallissa on aina myös yksi '
+        + 'ruunikko. Ratsastajat tervehtivät salin seinällä olevaa keisari '
+        + 'Kaarle VI:n muotokuvaa ennen kuin ratsastavat.',
+      kuvat: [
+        {
+          tiedosto: 'Kawecan.jpg',
+          lyhyt: 'Lipizzanovarsat syntyvät tummina ja vaalenevat vuosittain, kunnes ovat 6–10-vuotiaina valkoisia.',
+          selite: 'Lipizzanovarsat syntyvät ruunikkoina tai mustina ja vaalenevat '
+            + 'vuosi vuodelta, kunnes ovat 6–10 vuoden iässä valkoisia.',
+          lahde: 'Eerschay, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Taikahuilu': {
+      nosto: 'nosto-taikahuilu-wiedenissa',
+      teksti: 'Mozartin viimeinen ooppera ei syntynyt hovia varten. Taikahuilu sai '
+        + 'ensi-iltansa 30. syyskuuta 1791 Emanuel Schikanederin teatterissa '
+        + 'Wienin Wiedenin esikaupungissa, ja se laulettiin saksaksi eikä '
+        + 'italiaksi — tavallisen wieniläisen kielellä. Schikaneder kirjoitti '
+        + 'sanat itse ja näytteli linnustaja Papagenoa. Mozart kuoli kaksi '
+        + 'kuukautta myöhemmin. Kymmenen vuoden päästä Schikaneder avasi '
+        + 'kaupunkiin uuden teatterin ja antoi veistää itsensä Papagenona sen '
+        + 'portin päälle.',
+      kuvat: [
+        {
+          tiedosto: 'Karl Friedrich Schinkel - Die Sternenhalle der Königin der Nacht (ca. 1815).jpg',
+          lyhyt: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön kuningattaren tähtisalin lavastuksen.',
+          selite: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön '
+            + 'kuningattaren tähtisalin lavastuksen tähdillä ladotuksi '
+            + 'siniseksi kupoliksi.',
+          lahde: 'Karl Friedrich Schinkel, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Tonava kaunoinen': {
+      nosto: 'nosto-tonava-kaunoinen',
+      teksti: 'Johann Strauss nuoremman valssi Tonava kaunoinen kantaesitettiin '
+        + 'Wienissä 15. helmikuuta 1867 — ensin mieskuorolle, vasta myöhemmin '
+        + 'pelkälle orkesterille. Wieniläisvalssissa toinen isku tulee hitusen '
+        + 'etuajassa, joten se ei mene metronomin kanssa tasan: sitä ei voi '
+        + 'laskea, se pitää tuntea. Strauss sävelsi noin viisisataa teosta ja '
+        + 'johti orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.',
+      kuvat: [
+        {
+          tiedosto: 'Johann Strauss II by Fritz Luckhardt.jpg',
+          lyhyt: 'Johann Strauss nuorempi kuvattiin 1899 johtamassa orkesteriaan viulu kädessä, viimeisenä vuotenaan.',
+          selite: 'Johann Strauss nuorempi sävelsi noin viisisataa teosta ja johti '
+            + 'orkesteriaan viulu kädessä; Fritz Luckhardt valokuvasi hänet '
+            + '1899, hänen viimeisenä elinvuotenaan.',
+          lahde: 'Fritz Luckhardt, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
     },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.
@@ -5513,6 +6177,141 @@ export const NAHTAVYYSJUTUT = {
             + 'poikkeuksellisen matalan veden aikaan; etualalla näkyy '
             + 'muinaismetsän kantoja.',
           lahde: 'Adrian Diack, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    /*
+     * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): KAUPUNKILEHDEN SIVUT NOSTOIKSI.
+     *
+     * Teksti on noston OMA `lunastus` kappaleittain '\n\n'-liitoksena,
+     * kuten muissakin karsittujen nostojen jutuissa —
+     * tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten juttu ei
+     * voi eriytyä siitä kortista, jonka pelaaja näkee.
+     */
+    'Kapein talo': {
+      nosto: 'nosto-amsterdamin-kapein-talo',
+      teksti: '1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun '
+        + 'leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein niistä, '
+        + 'Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi metriä syvä. '
+        + 'Portaat ovat siksi jyrkät kuin tikkaat, eikä sohvaa saa niitä '
+        + 'pitkin ylös. Sen sijaan päätykolmion alta työntyy ulos nostopuu, '
+        + 'hijsbalk, jonka koukusta huonekalut vedetään köydellä ikkunasta '
+        + 'sisään.',
+      kuvat: [
+        {
+          tiedosto: 'Detail van de top van de voorgevel, een klokgevel, met hijsbalk - Amsterdam - 20528909 - RCE.jpg',
+          lyhyt: 'Kellopäätyjen hijsbalk-nostopuut ovat käytössä, ja talot kallistuvat, ettei tavara kolhi julkisivua.',
+          selite: 'Kellopäädyn alta työntyvä hijsbalk-nostopuu on yhä käytössä, ja '
+            + 'talot rakennettiin hieman eteenpäin kallelleen, jottei '
+            + 'nostettava tavara kolhisi julkisivua.',
+          lahde: 'René Gerritsen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Maitotyttö': {
+      nosto: 'nosto-amsterdamin-maitotytto',
+      teksti: 'Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä '
+        + 'korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna 1660, '
+        + 'ja koko hänen tuotannostaan tunnetaan vain runsaat kolmekymmentä '
+        + 'työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja infrapunavalossa. '
+        + 'Maalikerroksen alta paljastui, että Vermeer oli aloittanut seinälle '
+        + 'kannuhyllyn ja lattialle tulikorin — ja maalannut molemmat itse '
+        + 'umpeen, niin että katse jää maitoon ja käsiin.',
+      kuvat: [
+        {
+          tiedosto: 'Johannes Vermeer - Het melkmeisje - Google Art Project.jpg',
+          lyhyt: 'Maitotyttö esittää nimestään huolimatta keittiöapulaista, Rijksmuseumin keskeisimpiä teoksia.',
+          selite: 'Maitotyttö esittää nimestään huolimatta keittiöapulaista, ja '
+            + 'Rijksmuseum pitää sitä yhtenä kokoelmansa keskeisimmistä '
+            + 'teoksista.',
+          lahde: 'Johannes Vermeer, Wikimedia Commons (PD)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Kissalaiva': {
+      nosto: 'nosto-amsterdamin-kissalaiva',
+      teksti: 'Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu '
+        + 'satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. '
+        + 'Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja '
+        + 'kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna 1968 '
+        + 'oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on yhä '
+        + 'siinä: kissoja on kiireisimpinä aikoina noin 60, ne kulkevat '
+        + 'vapaana kannella, ja vieraat saavat tulla katsomaan.',
+      kuvat: [
+        {
+          tiedosto: 'De Poezenboot (Exterior), Amsterdam (2168146135).jpg',
+          lyhyt: 'Poezenboot avattiin Singel-kanavaan 1968, kun kerätyt kulkukissat eivät enää mahtuneet kotiin.',
+          selite: 'Poezenboot avattiin Singel-kanavaan vuonna 1968, kun Henriëtte '
+            + 'van Weelde ei enää saanut keräämiään kulkukissoja mahtumaan '
+            + 'kotiinsa.',
+          lahde: 'Antony Stanley, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Mevrouw H. van Weelde en enkele medewerksters openen kooien op Poezenboot op S, Bestanddeelnr 933-5755.jpg',
+          lyhyt: 'Henriëtte van Weelde hoiti Kissalaivaa yhä 1986, kahdeksantoista vuotta sen avaamisesta.',
+          selite: 'Henriëtte van Weelde hoiti Kissalaivaa avustajineen yhä '
+            + 'helmikuussa 1986, kahdeksantoista vuotta laivan avaamisen '
+            + 'jälkeen.',
+          lahde: 'Roland Gerrits / Anefo, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Three bikes on the canal bridge in Amsterdam (3798069610).jpg',
+          selite: 'Amsterdamin kanavista nostetaan joka vuosi 12 000–15 000 '
+            + 'polkupyörää.',
+          lahde: 'joiseyshowaa, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Herengracht 537': {
+      nosto: 'nosto-amsterdamin-puupaalut',
+      teksti: 'Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. '
+        + 'Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, '
+        + 'jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. '
+        + 'Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, '
+        + 'lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se pysyy '
+        + 'veden alla: jos pohjavesi laskee, puu alkaa lahota ja talo nojaa '
+        + 'naapuriinsa.',
+      kuvat: [
+        {
+          tiedosto: 'Amsterdam stut zijn huizen met palen Perceel Herengracht 537 achter palenbos, Bestanddeelnr 912-2174.jpg',
+          lyhyt: 'Herengracht 537 tuettiin puupaaluin 1961, kun pohjaveden lasku lahottaa talojen paalutuksia.',
+          selite: 'Herengracht 537 jouduttiin tukemaan väliaikaisilla puupaaluilla '
+            + 'maaliskuussa 1961, sillä Amsterdamin talot lepäävät paalutuksen '
+            + 'varassa, joka lahoaa pohjaveden laskiessa.',
+          lahde: 'Harry Pot / Anefo, Wikimedia Commons (CC0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Yövartio': {
+      nosto: 'nosto-amsterdamin-yovartio',
+      teksti: 'Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on nykyään '
+        + '363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu siirrettiin '
+        + 'kaupungintaloon, eikä se mahtunut sille varatulle seinälle — joten '
+        + 'sitä leikattiin joka reunalta. Vasemmalta katosi kaksi miestä ja '
+        + 'alta askelman reuna, ylhäältä holvikaaren huippu. Palasia ei ole '
+        + 'löydetty. Nimikin on väärä: teos ei esitä yötä, vaan pinta oli '
+        + 'tummunut lakasta, joka poistettiin vasta 1940-luvulla.',
+      kuvat: [
+        {
+          tiedosto: 'The Night Watch - cropped.jpg',
+          lyhyt: 'Yövartioksi kutsuttiin taulua vasta, kun sen oikea nimi unohtui lakan tummuttua mustaksi.',
+          selite: 'Teoksen oikea nimi on kaartinkapteeni Frans Banning Cocqin '
+            + 'komppania, ja Yövartioksi sitä alettiin kutsua vasta kun lakka '
+            + 'oli tummunut lähes mustaksi.',
+          lahde: 'Rembrandt, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Lundens - Nachtwache-Kopie.jpg',
+          lyhyt: 'Gerrit Lundensin pienoiskopio on ainoa todiste siitä, mitä Yövartiosta leikattiin pois 1715.',
+          selite: 'Gerrit Lundensin 1600-luvulla maalaama pienoiskopio on ainoa '
+            + 'säilynyt todiste siitä, mitä Yövartiosta leikattiin pois vuonna '
+            + '1715.',
+          lahde: 'Gerrit Lundens, Wikimedia Commons (PD)',
         },
       ],
       lahde: 'Wikipedia',
@@ -8261,6 +9060,135 @@ export const NAHTAVYYSJUTUT = {
         + 'yleisölle 15. elokuuta 1511. Toinen puoli, Aadamin luominen mukaan '
         + 'lukien, syntyy nopeammin ja suuremmin hahmoin, ja koko katto — yli 300 '
         + 'hahmoa — avataan pyhäinpäiväksi 1512. Michelangelo on 37.',
+    },
+    /*
+     * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): KAUPUNKILEHDEN SIVUT NOSTOIKSI.
+     *
+     * Teksti on noston OMA `lunastus` kappaleittain '\n\n'-liitoksena,
+     * kuten muissakin karsittujen nostojen jutuissa —
+     * tests/nostot-kartalla.test.mjs vertaa merkki merkiltä, joten juttu ei
+     * voi eriytyä siitä kortista, jonka pelaaja näkee.
+     */
+    'Kolikko olan yli': {
+      nosto: 'nosto-rooman-kolikko',
+      teksti: 'Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman olan '
+        + 'yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita putoaa '
+        + 'veteen noin kolmentuhannen euron edestä joka päivä, ja ne kerätään '
+        + 'pohjasta talteen. Rahat lahjoitetaan Caritakselle '
+        + 'hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. Omaa '
+        + 'kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja yrittäjiä '
+        + 'jää säännöllisesti kiinni.',
+      kuvat: [
+        {
+          tiedosto: 'Trevi Fountain - Roma.jpg',
+          lyhyt: 'Fontana di Trevi on Palazzo Poli -palatsin päätyseinä, jonka kaaren alla seisoo merenjumala Oceanus.',
+          selite: 'Fontana di Trevi ei ole erillinen muistomerkki vaan Palazzo '
+            + 'Poli -palatsin päätyseinä, jonka kaaren alla seisoo meren '
+            + 'jumala Oceanus.',
+          lahde: 'NikonZ7II, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Areenan kellari': {
+      nosto: 'nosto-colosseumin-kellari',
+      teksti: 'Colosseumin areena oli puulattia, jonka päälle levitettiin hiekkaa '
+        + '— latinan hiekkaa tarkoittavasta sanasta harena tulee sana areena. '
+        + 'Lattian alla oli kaksikerroksinen kellari: käytäviä, häkkejä ja '
+        + 'kahdeksankymmentä pystykuilua. Vinssi nosti häkin kuilua pitkin '
+        + 'lattian tasalle, luukku aukesi, ja eläin ilmestyi keskelle areenaa '
+        + 'kuin tyhjästä. Katsomon yllä oli kangaskatto auringolta, ja sitä '
+        + 'kelasivat auki sotalaivaston merimiehet.',
+      kuvat: [
+        {
+          tiedosto: 'Hypogeum 1 (15005526662).jpg',
+          lyhyt: 'Colosseumin puulattian alla oli kaksikerroksinen kellari hypogeum käytävineen.',
+          selite: 'Colosseumin areenan puulattian alla oli kaksikerroksinen '
+            + 'kellari eli hypogeum, jossa oli käytäviä, häkkejä ja '
+            + 'kahdeksankymmentä pystykuilua.',
+          lahde: 'daryl_mitchell from Saskatoon, Saskatchewan, Canada, Wikimedia '
+            + 'Commons (CC BY-SA 2.0)',
+        },
+        {
+          tiedosto: 'Colosseum (8473462785).jpg',
+          lyhyt: 'Osa areenan lattiaa on rakennettu takaisin; alkuperäinen puulattia peitti koko hypogeumin.',
+          selite: 'Osa areenan lattiaa on rakennettu takaisin paikalleen; '
+            + 'alkuperäinen puulattia peitti koko hypogeumin.',
+          lahde: 'Edgar Jiménez from Porto, Portugal, Wikimedia Commons (CC BY-SA '
+            + '2.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Norsu ja obeliski': {
+      nosto: 'nosto-minervan-norsu',
+      teksti: 'Piazza della Minervan aukiolla seisoo marmorinen norsu, jonka '
+        + 'selässä nousee punagraniittinen obeliski. Sen suunnitteli Gian '
+        + 'Lorenzo Bernini, veisti hänen apulaisensa Ercole Ferrata, ja se '
+        + 'paljastettiin vuonna 1667. Obeliski on Rooman kolmestatoista '
+        + 'muinaisobeliskista pienin, viisi ja puoli metriä — ja '
+        + 'muinaisobeliskeja on Roomassa enemmän kuin missään muussa '
+        + 'kaupungissa maailmassa. Roomalaiset antoivat patsaalle lempinimen '
+        + 'pulcino, tipu, vaikka sana tarkoitti tuolloin possua: norsu oli '
+        + 'heidän mielestään pieni ja pyöreä.',
+      kuvat: [
+        {
+          tiedosto: 'Elephant and Obelisk.jpg',
+          lyhyt: 'Norsupatsaan suunnitteli Gian Lorenzo Bernini ja veisti Ercole Ferrata, ja se paljastettiin 1667.',
+          selite: 'Norsupatsaan suunnitteli Gian Lorenzo Bernini ja veisti Ercole '
+            + 'Ferrata, ja se paljastettiin vuonna 1667.',
+          lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Aqua Virgo': {
+      nosto: 'nosto-aqua-virgo',
+      teksti: 'Roomaan rakennettiin yksitoista akveduktia, jotka toivat vuorilta '
+        + 'vettä lähes sadan kilometrin päästä. Ne toimivat pelkällä '
+        + 'painovoimalla: kaltevuus oli paikoin vain kolmekymmentä senttiä '
+        + 'kilometriä kohti. Yksi niistä, Aqua Virgo, valmistui vuonna 19 eaa. '
+        + 'ja kulkee melkein koko matkansa maan alla — kahdellakymmenellä '
+        + 'kilometrillä vesi laskee vain neljä metriä. Se syöttää yhä Trevin '
+        + 'lähdettä. Nimi tarkoittaa neitoa: tarun mukaan nuori tyttö näytti '
+        + 'janoisille sotilaille lähteen, josta vesi otettiin.',
+      kuvat: [
+        {
+          tiedosto: 'Aqueducts in Rome.jpg',
+          lyhyt: 'Roomaan rakennettiin yksitoista akveduktia, joissa vesi virtasi kourua pitkin painovoimalla.',
+          selite: 'Roomaan rakennettiin yksitoista akveduktia, ja vesi virtasi '
+            + 'kaarien päällä kulkevassa kourussa pelkän painovoiman voimalla.',
+          lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
+    'Nasone': {
+      nosto: 'nosto-rooman-nasone',
+      teksti: 'Rooman kaduilla seisoo valurautaisia pylväitä, joiden '
+        + 'koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset pystytettiin '
+        + '1870-luvulla, ja roomalaiset ristivät ne nasoneiksi eli isoiksi '
+        + 'neniksi. Niitä on kaupungissa yhä noin 2 500, ja vesi on samaa kuin '
+        + 'kotihanoissa. Putken päällä on pieni reikä: kun putken suun tukkii '
+        + 'sormella, vesi suihkuaa reiästä ylöspäin ja janoinen juo '
+        + 'kumartumatta. Vanhimpia yhä toimivia seisoo Pantheonin vieressä '
+        + 'Piazza della Rotondalla.',
+      kuvat: [
+        {
+          tiedosto: 'Nasone in Trastevere, Rome.jpg',
+          lyhyt: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi on samaa kuin kotihanoissa.',
+          selite: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi '
+            + 'on samaa kuin roomalaisten kotihanoissa.',
+          lahde: 'Sotamies, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Pigna-S Eustachio-Colonna - Nasone alla Rotonda.JPG',
+          selite: 'Vanhimpia yhä toimivia nasoneja seisoo Pantheonin vieressä '
+            + 'Piazza della Rotondalla.',
+          lahde: 'Lalupa, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
     },
   },
   // TEKSTIREMONTTI 20.8.2026, ERÄ E3, sama linja kuin Prahassa.

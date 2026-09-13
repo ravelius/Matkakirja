@@ -1201,6 +1201,262 @@ export const FOKUSVIRTA_AMSTERDAM = {
         },
       },
     },
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * KARTTAUUDISTUS, ERÄ 10 (13.9.2026): AMSTERDAMIN KAUPUNKILEHDEN SIVUT
+     * NOSTOIKSI.
+     *
+     * Sama jako kuin Pariisissa erässä 5
+     * (docs/raportit/viesti-fable-karttauudistus-era5-20260913.md,
+     * suunnitelman luku 4.7): lehden aihesivujen nostot ovat nyt
+     * klikattavia karttapaloja kaupungin kohdekartalla. Kaikki tämän erän
+     * nostot ovat KOHDEKARTALLA, eivät pääkartalla — omistajan sääntö
+     * 2.9.2026 (tests/nostot-kartalla.test.mjs).
+     *
+     * TEKSTIÄ EI OLE KIRJOITETTU UUDESTAAN. Jokainen `lunastus`-kappale on
+     * lehden oman noston `teksti` SANATARKASTI
+     * (js/packs/kulttuuri-kategoriat.js, kaupunki `amsterdam`), ja `kuva`
+     * on lehden oma kuvarivi kenttineen. Siirto on tehty ohjelmallisesti ja
+     * todennettu ===-vertailulla
+     * (tools/savukkeet/savuke-kaupunkien-nostot.mjs vartio 4b avaa jokaisen
+     * kortin selaimessa ja vertaa merkki merkiltä).
+     *
+     * MINIKYSYMYKSET (erän 6 datamalli, kiintiö joka kolmas nosto):
+     * `amsterdamin-kapein-talo`, `amsterdamin-kissalaiva`,
+     * `amsterdamin-yovartio`.
+     * ══════════════════════════════════════════════════════════════
+     */
+      {
+        id: 'amsterdamin-kapein-talo',
+        nimio: 'Kapein talo',
+        otsikko: 'Verotettiin julkisivun leveydestä',
+        symboli: 'kaupunki',
+        lunastus: [
+          '1600-luvulla Amsterdamin kiinteistövero laskettiin julkisivun '
+            + 'leveydestä, joten taloista tehtiin kapeita ja syviä. Kapein '
+            + 'niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja kuusi '
+            + 'metriä syvä. Portaat ovat siksi jyrkät kuin tikkaat, eikä '
+            + 'sohvaa saa niitä pitkin ylös. Sen sijaan päätykolmion alta '
+            + 'työntyy ulos nostopuu, hijsbalk, jonka koukusta huonekalut '
+            + 'vedetään köydellä ikkunasta sisään.',
+        ],
+        lahde: 'Amsterdamin kaupunkilehden nosto "Verotettiin julkisivun '
+          + 'leveydestä" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+        kuva: {
+          tiedosto: 'Detail van de top van de voorgevel, een klokgevel, met hijsbalk - Amsterdam - 20528909 - RCE.jpg',
+          lyhyt: 'Kellopäätyjen hijsbalk-nostopuut ovat käytössä, ja talot kallistuvat, ettei tavara kolhi julkisivua.',
+          selite: 'Kellopäädyn alta työntyvä hijsbalk-nostopuu on yhä käytössä, ja '
+            + 'talot rakennettiin hieman eteenpäin kallelleen, jottei '
+            + 'nostettava tavara kolhisi julkisivua.',
+          lahde: 'René Gerritsen, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kysymykset: [
+          'Miksi vero laskettiin juuri julkisivun leveydestä eikä '
+            + 'pinta-alasta?',
+          'Millaista on asua kahden metrin levyisessä talossa?',
+          'Käytetäänkö nostopuita yhä, vai ovatko ne pelkkää koristetta?',
+        ],
+        visa: {
+          kysymys: 'Amsterdamin kapeissa kanavataloissa portaat ovat jyrkät kuin '
+            + 'tikkaat. Miten huonekalut saadaan yläkertaan?',
+          vaihtoehdot: [
+            'Päätykolmion nostopuusta köydellä ikkunasta sisään',
+            'Ne kootaan vasta paikan päällä osista',
+            'Ne nostetaan kanavasta veneellä takapihan kautta',
+          ],
+          oikea: 0,
+          fakta: 'Kapein niistä, Oude Hoogstraat 22, on 2,02 metriä leveä ja '
+            + 'kuusi metriä syvä.',
+        },
+        paikka: {
+          nimi: 'Kapein talo',
+          laudat: {
+            maailmankartta: { x: 5996.6, y: 1285.5 },
+            europe: { x: 305.2, y: 516.2 },
+          },
+        },
+      },
+      {
+        id: 'amsterdamin-maitotytto',
+        nimio: 'Maitotyttö',
+        otsikko: 'Vermeer peitti omat esineensä maalilla',
+        symboli: 'silma',
+        lunastus: [
+          'Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 senttiä '
+            + 'korkea ja 41 leveä. Johannes Vermeer maalasi sen noin vuonna '
+            + '1660, ja koko hänen tuotannostaan tunnetaan vain runsaat '
+            + 'kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin röntgenillä ja '
+            + 'infrapunavalossa. Maalikerroksen alta paljastui, että Vermeer '
+            + 'oli aloittanut seinälle kannuhyllyn ja lattialle tulikorin — ja '
+            + 'maalannut molemmat itse umpeen, niin että katse jää maitoon ja '
+            + 'käsiin.',
+        ],
+        lahde: 'Amsterdamin kaupunkilehden nosto "Vermeer peitti omat esineensä '
+          + 'maalilla" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+        kuva: {
+          tiedosto: 'Johannes Vermeer - Het melkmeisje - Google Art Project.jpg',
+          lyhyt: 'Maitotyttö esittää nimestään huolimatta keittiöapulaista, Rijksmuseumin keskeisimpiä teoksia.',
+          selite: 'Maitotyttö esittää nimestään huolimatta keittiöapulaista, ja '
+            + 'Rijksmuseum pitää sitä yhtenä kokoelmansa keskeisimmistä '
+            + 'teoksista.',
+          lahde: 'Johannes Vermeer, Wikimedia Commons (PD)',
+        },
+        kysymykset: [
+          'Miksi Vermeer peitti jo maalaamansa kannuhyllyn ja tulikorin?',
+          'Mitä muuta röntgen- ja infrapunakuvaus on paljastanut vanhoista '
+            + 'maalauksista?',
+          'Miksi Vermeerin tuotannosta tunnetaan vain runsaat '
+            + 'kolmekymmentä työtä?',
+        ],
+        paikka: {
+          nimi: 'Maitotyttö',
+          laudat: {
+            maailmankartta: { x: 5996.2, y: 1286 },
+            europe: { x: 305, y: 516.5 },
+          },
+        },
+      },
+      {
+        id: 'amsterdamin-kissalaiva',
+        nimio: 'Kissalaiva',
+        otsikko: 'Kanavalla asuu laivallinen kissoja',
+        symboli: 'elain',
+        lunastus: [
+          'Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu '
+            + 'satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. '
+            + 'Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja '
+            + 'kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna '
+            + '1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on '
+            + 'yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne '
+            + 'kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.',
+        ],
+        lahde: 'Amsterdamin kaupunkilehden nosto "Kanavalla asuu laivallinen '
+          + 'kissoja" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+        kuva: {
+          tiedosto: 'De Poezenboot (Exterior), Amsterdam (2168146135).jpg',
+          lyhyt: 'Poezenboot avattiin Singel-kanavaan 1968, kun kerätyt kulkukissat eivät enää mahtuneet kotiin.',
+          selite: 'Poezenboot avattiin Singel-kanavaan vuonna 1968, kun Henriëtte '
+            + 'van Weelde ei enää saanut keräämiään kulkukissoja mahtumaan '
+            + 'kotiinsa.',
+          lahde: 'Antony Stanley, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        kysymykset: [
+          'Miksi Amsterdamin kanavissa on satoja asuntolaivoja?',
+          'Kuka hoitaa Kissalaivan kissat nykyään?',
+          'Mitä kulkukissoille tehtiin ennen vuotta 1966?',
+        ],
+        visa: {
+          kysymys: 'Henriëtte van Weelden asunto kävi ahtaaksi kerätyistä '
+            + 'kulkukissoista. Mitä hän teki?',
+          vaihtoehdot: [
+            'Muutti itse pienempään asuntoon naapurikadulle',
+            'Avasi kissoille oman laivan Singel-kanavaan',
+            'Jakoi kissat ystävien koteihin ympäri kaupunkia',
+          ],
+          oikea: 1,
+          fakta: 'Poezenboot eli Kissalaiva on yhä siinä: kissoja on '
+            + 'kiireisimpinä aikoina noin 60, ne kulkevat vapaana kannella, ja '
+            + 'vieraat saavat tulla katsomaan.',
+        },
+        paikka: {
+          nimi: 'Kissalaiva',
+          laudat: {
+            maailmankartta: { x: 5996.4, y: 1285.2 },
+            europe: { x: 305.1, y: 516.1 },
+          },
+        },
+      },
+      {
+        id: 'amsterdamin-puupaalut',
+        nimio: 'Puupaalut',
+        otsikko: 'Koko kaupunki seisoo puutukkien päällä',
+        symboli: 'tekniikka',
+        lunastus: [
+          'Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. '
+            + 'Siksi jokainen talo seisoo maahan lyötyjen puupaalujen varassa, '
+            + 'jotka ulottuvat pehmeän kerroksen läpi kovaan pohjahiekkaan. '
+            + 'Dam-aukion palatsi, joka avattiin kaupungintaloksi vuonna 1655, '
+            + 'lepää 13 659 paalun päällä. Paalu kestää niin kauan kuin se '
+            + 'pysyy veden alla: jos pohjavesi laskee, puu alkaa lahota ja '
+            + 'talo nojaa naapuriinsa.',
+        ],
+        lahde: 'Amsterdamin kaupunkilehden nosto "Koko kaupunki seisoo puutukkien '
+          + 'päällä" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+        kuva: {
+          tiedosto: 'Amsterdam stut zijn huizen met palen Perceel Herengracht 537 achter palenbos, Bestanddeelnr 912-2174.jpg',
+          lyhyt: 'Herengracht 537 tuettiin puupaaluin 1961, kun pohjaveden lasku lahottaa talojen paalutuksia.',
+          selite: 'Herengracht 537 jouduttiin tukemaan väliaikaisilla puupaaluilla '
+            + 'maaliskuussa 1961, sillä Amsterdamin talot lepäävät paalutuksen '
+            + 'varassa, joka lahoaa pohjaveden laskiessa.',
+          lahde: 'Harry Pot / Anefo, Wikimedia Commons (CC0)',
+        },
+        kysymykset: [
+          'Miten puupaalu lyödään pehmeän suon läpi kovaan pohjahiekkaan?',
+          'Mitä tehdään talolle, jonka paalut ovat päässeet lahoamaan?',
+          'Miksi kaupungin pohjavesi pääsee laskemaan?',
+        ],
+        paikka: {
+          nimi: 'Herengracht 537',
+          laudat: {
+            maailmankartta: { x: 5996.5, y: 1285.8 },
+            europe: { x: 305.2, y: 516.4 },
+          },
+        },
+      },
+      {
+        id: 'amsterdamin-yovartio',
+        nimio: 'Yövartio',
+        otsikko: 'Yövartiosta sahattiin palat pois',
+        symboli: 'historia',
+        lunastus: [
+          'Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on '
+            + 'nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu '
+            + 'siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle '
+            + 'seinälle — joten sitä leikattiin joka reunalta. Vasemmalta '
+            + 'katosi kaksi miestä ja alta askelman reuna, ylhäältä '
+            + 'holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: '
+            + 'teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka '
+            + 'poistettiin vasta 1940-luvulla.',
+        ],
+        lahde: 'Amsterdamin kaupunkilehden nosto "Yövartiosta sahattiin palat '
+          + 'pois" (js/packs/kulttuuri-kategoriat.js). Teksti siirretty '
+          + 'sanatarkasti karttauudistuksen erässä 10, 13.9.2026.',
+        kuva: {
+          tiedosto: 'The Night Watch - cropped.jpg',
+          lyhyt: 'Yövartioksi kutsuttiin taulua vasta, kun sen oikea nimi unohtui lakan tummuttua mustaksi.',
+          selite: 'Teoksen oikea nimi on kaartinkapteeni Frans Banning Cocqin '
+            + 'komppania, ja Yövartioksi sitä alettiin kutsua vasta kun lakka '
+            + 'oli tummunut lähes mustaksi.',
+          lahde: 'Rembrandt, Wikimedia Commons (PD)',
+        },
+        kysymykset: [
+          'Mihin taulusta leikatut palaset joutuivat?',
+          'Miksi taulu ylipäätään siirrettiin kaupungintaloon vuonna 1715?',
+          'Mistä tiedetään, mitä taulusta puuttuu?',
+        ],
+        visa: {
+          kysymys: 'Yövartio ei esitä yötä lainkaan. Mistä väärä nimi silloin tuli?',
+          vaihtoehdot: [
+            'Kuvan tumma tausta tulkittiin yötaivaaksi',
+            'Nimi kääntyi väärin toisesta kielestä',
+            'Taulun pinta oli tummunut lakasta',
+          ],
+          oikea: 2,
+          fakta: 'Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on '
+            + 'nykyään 363 senttiä korkea ja 437 leveä.',
+        },
+        paikka: {
+          nimi: 'Yövartio',
+          laudat: {
+            maailmankartta: { x: 5996.4, y: 1285.4 },
+            europe: { x: 305.1, y: 516.2 },
+          },
+        },
+      },
   ],
 
   /*

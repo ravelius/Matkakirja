@@ -4595,6 +4595,37 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Amsterdam-laiva', lat: 52.3714, lon: 4.9147,
         nosto: 'syvennys-amsterdam-voc-hylky',
       },
+      /*
+       * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
+       * 5 uutta pistettä.
+       *
+       * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on siellä,
+       * missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
+       * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js).
+       */
+      {
+        nimi: 'Kapein talo', lat: 52.3712, lon: 4.8977,
+        nosto: 'nosto-amsterdamin-kapein-talo',
+      },
+      {
+        nimi: 'Maitotyttö', lat: 52.3599, lon: 4.885,
+        nosto: 'nosto-amsterdamin-maitotytto',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Kissalaiva', lat: 52.3781, lon: 4.8931,
+        nosto: 'nosto-amsterdamin-kissalaiva',
+      },
+      {
+        nimi: 'Herengracht 537', lat: 52.3652, lon: 4.8942,
+        nosto: 'nosto-amsterdamin-puupaalut',
+      },
+      {
+        nimi: 'Yövartio', lat: 52.3731, lon: 4.8913,
+        nosto: 'nosto-amsterdamin-yovartio',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
     ],
   },
   dublin: {
@@ -5198,6 +5229,33 @@ export const KAUPUNKIKARTAT = {
         nosto: 'hetki-mozart-wien-1786',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
+      /*
+       * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
+       * 4 uutta pistettä.
+       *
+       * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on siellä,
+       * missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
+       * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js).
+       */
+      {
+        nimi: 'Rattaan kulmat', lat: 48.2167, lon: 16.3959,
+        nosto: 'nosto-praterin-ratas',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Lipizzanit', lat: 48.2064, lon: 16.3657,
+        nosto: 'nosto-lipizzanit',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Taikahuilu', lat: 48.1981, lon: 16.3653,
+        nosto: 'nosto-taikahuilu-wiedenissa',
+      },
+      {
+        nimi: 'Tonava kaunoinen', lat: 48.2046, lon: 16.3793,
+        nosto: 'nosto-tonava-kaunoinen',
+      },
     ],
   },
   kairo: {
@@ -5480,6 +5538,56 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Globe 1599', lat: 51.5067, lon: -0.0947,
         nosto: 'hetki-shakespeare-globe-1599',
       },
+      /*
+       * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
+       * 9 uutta pistettä.
+       *
+       * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on siellä,
+       * missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
+       * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js).
+       */
+      {
+        nimi: 'Metron höyryveturi', lat: 51.5226, lon: -0.1571,
+        nosto: 'nosto-lontoon-metro-1863',
+      },
+      {
+        nimi: 'Exchange Alley', lat: 51.5131, lon: -0.0871,
+        nosto: 'nosto-exchange-alleyn-kupla',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Canaletto Lontoossa', lat: 51.501, lon: -0.1219,
+        nosto: 'nosto-canaletto-lontoossa',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Dickensin pubi', lat: 51.5042, lon: -0.09,
+        nosto: 'nosto-the-george-pubi',
+      },
+      {
+        nimi: 'Abbey Roadin suojatie', lat: 51.5117, lon: -0.1403,
+        nosto: 'nosto-abbey-roadin-suojatie',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Leake Streetin tunneli', lat: 51.501, lon: -0.1145,
+        nosto: 'nosto-leake-streetin-tunneli',
+      },
+      {
+        nimi: 'Neljäs jalusta', lat: 51.508, lon: -0.1281,
+        nosto: 'nosto-neljas-jalusta',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Turbiinihalli', lat: 51.5076, lon: -0.0994,
+        nosto: 'nosto-tate-modernin-turbiinihalli',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Liukumäkiveistos', lat: 51.505, lon: -0.165,
+        nosto: 'nosto-orbitin-liukumaki',
+      },
     ],
   },
   berliini: {
@@ -5608,6 +5716,38 @@ export const KAUPUNKIKARTAT = {
         nimi: 'Muuri 1961', lat: 52.5375, lon: 13.3933,
         nosto: 'hetki-berliinin-muuri-1961',
       },
+      /*
+       * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
+       * 5 uutta pistettä.
+       *
+       * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on siellä,
+       * missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
+       * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js).
+       */
+      {
+        nimi: 'Hattupäinen ukkeli', lat: 52.505, lon: 13.335,
+        nosto: 'nosto-hattupainen-ukkeli',
+      },
+      {
+        nimi: 'Gaertnerin Berliini', lat: 52.5175, lon: 13.4022,
+        nosto: 'nosto-gaertnerin-berliini',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Marlene Dietrich', lat: 52.4842, lon: 13.3433,
+        nosto: 'nosto-marlene-dietrich',
+      },
+      {
+        nimi: 'Paavin kosto', lat: 52.5208, lon: 13.4094,
+        nosto: 'nosto-paavin-kosto',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Maailmankello', lat: 52.5219, lon: 13.4132,
+        nosto: 'nosto-maailmankello',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
     ],
   },
   madrid: {
@@ -5690,6 +5830,45 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Baldomera', lat: 40.4089, lon: -3.7009,
         nosto: 'skandaali-baldomera-larra-pyramidi',
+      },
+      /*
+       * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
+       * 6 uutta pistettä.
+       *
+       * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on siellä,
+       * missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
+       * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js).
+       */
+      {
+        nimi: 'Tapaskierros', lat: 40.4154, lon: -3.7089,
+        nosto: 'nosto-madridin-tapaskierros',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Goyan kansankuvat', lat: 40.4138, lon: -3.6921,
+        nosto: 'nosto-goyan-kansankuvat',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Chotis', lat: 40.4172, lon: -3.6968,
+        nosto: 'nosto-chotis-laatalla',
+        nimiPuoli: 'oikea',
+      },
+      {
+        nimi: 'Kaksi joukkuetta', lat: 40.4192, lon: -3.6931,
+        nosto: 'nosto-madridin-kaksi-joukkuetta',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Palamaton linna', lat: 40.418, lon: -3.7143,
+        nosto: 'nosto-palamaton-linna',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Gran Vía', lat: 40.4191, lon: -3.6967,
+        nosto: 'nosto-gran-vian-murto',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
     ],
   },
@@ -5976,6 +6155,40 @@ export const KAUPUNKIKARTAT = {
       {
         nimi: 'Sikstus 1510', lat: 41.9029, lon: 12.4545,
         nosto: 'hetki-michelangelo-sikstus-1510',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      /*
+       * KAUPUNKILEHDEN SIVUT NOSTOIKSI (karttauudistus, erä 10, 13.9.2026).
+       * 5 uutta pistettä.
+       *
+       * KOORDINAATTIA EI SIIRRETÄ (js/nahtavyydet.js:456): kohde on siellä,
+       * missä se on, ja päällekkäisyys hoidetaan `nimiPuoli`- ja
+       * `siirto`-kentillä. Juttu on noston OMA teksti sanatarkasti
+       * (js/packs/nahtavyysjutut.js).
+       */
+      {
+        nimi: 'Kolikko olan yli', lat: 41.9008, lon: 12.4831,
+        nosto: 'nosto-rooman-kolikko',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 0 },
+      },
+      {
+        nimi: 'Areenan kellari', lat: 41.8902, lon: 12.4922,
+        nosto: 'nosto-colosseumin-kellari',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Norsu ja obeliski', lat: 41.898, lon: 12.4776,
+        nosto: 'nosto-minervan-norsu',
+        nimiPuoli: 'oikea', siirto: { x: 26, y: 12 },
+      },
+      {
+        nimi: 'Aqua Virgo', lat: 41.9008, lon: 12.4831,
+        nosto: 'nosto-aqua-virgo',
+        nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
+      },
+      {
+        nimi: 'Nasone', lat: 41.8986, lon: 12.4769,
+        nosto: 'nosto-rooman-nasone',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 0 },
       },
     ],
