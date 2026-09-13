@@ -1222,7 +1222,7 @@ export async function avaaPallolauta(ui) {
    */
   let siirtymaAjastin = 0;
   let tahdistaSiirtymanJalkeen = () => {};
-  let merkkienNakyvyys = { ajasta() {}, pura() {} };
+  let merkkienNakyvyys = { ajasta() {}, kameranJalkeen: async (ajo) => ajo, pura() {} };
   const heraa = () => {
     if (!tauolla) return;
     tauolla = false;
@@ -2731,7 +2731,7 @@ export async function avaaPallolauta(ui) {
      */
     maanLaatikko = bbox;
     tahdistaZoomirajat();
-    return kamera.kotiin({ kesto, bbox });
+    return merkkienNakyvyys.kameranJalkeen(kamera.kotiin({ kesto, bbox }));
   };
 
   /** Pelin paikan (pos) piste ruudulla (kotelon px) — nopan lähtö. */

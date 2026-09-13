@@ -272,7 +272,11 @@ test('kamera ottaa saapumisrajauksen laatikkona ja säilyttää varapolun', () =
   assert.match(lauta, /const saapumisrajaus = async \(\) => \{/);
   assert.match(lauta, /maanLautalaatikko\(data, iso, \{ kohta \}\)/);
   assert.match(lauta, /const bbox = await saapumisrajaus\(\);/);
-  assert.match(lauta, /return kamera\.kotiin\(\{ kesto, bbox \}\);/);
+  assert.match(
+    lauta,
+    /return merkkienNakyvyys\.kameranJalkeen\(kamera\.kotiin\(\{ kesto, bbox \}\)\);/,
+    'kameran laatikkoajo säilyy ja sen valmistuminen invalidioi merkkien näkyvyyden',
+  );
 });
 
 /* ================= 6. myös kehittäjän maailmatilassa ================ */
