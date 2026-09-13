@@ -1,3 +1,16 @@
+## 2026-09-13 14:27 UTC — Root: Bergen, Amsterdam ja Edinburgh kokonaan uusiksi; omistaja hylkäsi aiemman erän näiden osalta
+
+Omistajan uusin täsmällinen palaute:
+> Bergen Amsterdam ja Edinburgh pitää tehdä kokonaan uudestaan. Ja niissä pitää pitää mielessä tuo uusi periaate, että pitää olla niin kova juttu, että haluaa lukea seuraavankin tai kertoa siitä kaverille. Näissä ei sitä ollut
+
+TÄRKEÄ MUUTOS aiempiin roolisuojauksiin: näissä kolmessa uusitaan nyt MOLEMMAT kertojat, myös Horatio. Bergen/Amsterdam/Edinburgh eivät enää ole vain Livia-korjauksia. Rootin edellisen lukukatselmuksen myönteinen arvio on kumottu omistajan palautteella; erä3-r2:n näitä puheita ei käytetä tuotannon lähteenä. Vanha lukukopio säilyy vertailuna, sitä ei poisteta.
+
+Sama olemassa oleva Astra-kirjoitustehtävä aloitti rajatun kolmen kaupungin uusinnan. Root tarkistaa ENSIN lähteistetyt aihevalinnat ennen lopullisia kuutta puhetta. Nykyiset turska/buekorps-poseeraus, huonekalunosto/kissalaiva ja päällekkäiset kadut/Dobblerin hauta eivät enää sido. Pelkkä kuriositeetti ja suloinen lintureaktio eivät täyttäneet omistajan kynnystä. Tarinan keskeinen tapahtuma, panos tai vahva yllätys ja merkitys on kerrottava itse puheessa; tarpeen tullen enemmän pituutta, ei sanakiintiöllä leikattua ydintä. Ei kaikkien kaupunkien väkisin synkentämistä eikä historian keksimistä. Tämä täsmentää 13:50 lähetettyä kirjoitusperiaatetta käytännön arviointiin.
+
+Lissaboniin ja Berliiniin ei muutoksia tässä toimeksiannossa. Omistajan hiljaisuus niistä ei ole uusi hyväksyntä. Muut aiemmin hyväksytyt parit ja muun 15 kaupungin jatkojonon roolikohtaiset rajat säilyvät; tämä uusinta käsitellään ensin.
+
+Ei Fablelle uutta rinnakkaista kirjoitustyötä. Pyydän pitämään tämän roolirajauksen ja tiukennetun aihevalintakynnyksen kanonisissa kirjoitusohjeissa ajantasaisena. Audio HOLD, ei uusia kuvia, TTS:ää, alignment-ajoja tai näiden tekstien pelikytkentää. RC:n erilliset tekniset korjaukset ovat edelleen rootin koodikatselmusta odottamassa, eivät tällä viestillä yhdistämisluvassa.
+
 ## 2026-09-13 13:50 UTC — Root: kaupunkitarina matkan palkintona; Astran lukuerät ja hyväksynnät
 
 Omistajan uusi nimenomainen kirjoitusperiaate, vietävä heti Raamattuun ja tarvittaessa Horatio–Livia-tuotantomoduulin kirjoittajan sääntöihin:
