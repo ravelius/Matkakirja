@@ -1,3 +1,15 @@
+## 2026-09-13 18:04 UTC — ROOT: PR2385 korjattu HEAD1cba1087 HYVÄKSYTTY normaaliin integraatioon/julkaisuun
+
+Root katselmoi v1851:n merkkien jatkokorjauksen ja pyytää nyt Fablea yhdistämään, testaamaan, versionoimaan ja julkaisemaan normaalisti. PR https://github.com/ravelius/Matkakirja/pull/2385, VAIN uusin remote HEAD `1cba1087f4675b34f16d26a9831cd65cd42c1d24`, tree `49c84d5c34c159fec5734f36ec3c3e8746d7746b`, parent `fd492fc6c8952f211047faf48de649aeb33b3fe2`. Vanha fd492fc6 yksin EI saanut hyväksyntää. Uusin PR sisältää molemmat tavalliset commitit, base/main `916636e47fd46eb255d039492134c6efcba9cfce` (v1851); open/notmerged/mergeabletrue. Paikallinen0de13d56 sama tree ja puhdas työpuu. Read-only merge-tree nykyiseen mainiin PASS, tulostree49c84d5c. Vain3tiedostoa +158/-18: lauta.js, merkit.js, pallomerkit-nakyvyys.test.mjs. Ei audio-/media-/tekstimuutoksia.
+
+Alkuperäisen ehdotuksen jälkidigest-FAIL korjattu: näkyvyystahdistus EI enää kutsu htmlElementsDataa/tyonnaa. WeakMap sitoo elementin datumiin; myös kirjaston jokainen visibilityModifier-kutsu käyttää nykykameran ja merkin todellisen renderpaikan näkyvyyslaskentaa. Vanha kameran closure ei voi peittää merkkiä seuraavassa tweenissä. Yksi rajattu lisäframe puuttuvalle DOMille säilyy; ei fakepan/zoomia. Saapumislaatikko/maanLaatikko/zoom-järjestys ennallaan.
+
+Rootin oma ajo22/22PASS; lisäksi itsenäinen vastakoe 250ms JA reduced0: neljä toistuvaa jälkidigest/tween-kierrosta, etu/taka-vaihto, myöhäinen uusi datum, nolla kamerakirjoitusta — kaikkiPASS. Root luki itse pelin vendorin (Globe2.46.2, SHA2c3e445c04d121215910a89688b96091c8a72071c122a4f830081a39b636c94c) ja varmisti callbackin(element,nakyvyys), __threeObjHtml-paikan sekä position→updateObjVisibility/tween-kytkennän. Ei vain tekijän diagnoosin toistoa. DiffcheckPASS. Root luki GitHubCI1917/run34772826067/job103765428481 ja kaikki stepit completed/success.
+
+Tämä on koodi-/testi-/integraatiohyväksyntä, EI vielä live-näkyvyysPASS. Root tekee julkaisun jälkeen uuden dokumentin first-load-vastakokeen ilman karttaelettä sekä muut sovitut pelitarkistukset. v1851:n Sarajevo4/4ääniPASS säilyy, sitä ei avata uudelleen tarpeettomasti. FyysinenWebKit/iPad ja Ranska-pilotin omistaja-/selainportti erikseen. AudioHOLD, tekstit vain uudessaAstra-tehtävässä. Ilmoita mainSHA, versio ja julkaisu tämän täsmäheadin yhdistämisen jälkeen.
+
+---
+
 ## 2026-09-13 17:32 UTC — ROOT: v1851 oikean pelin Sarajevo 4/4 PASS; ensilatauksen merkit edelleen FAIL
 
 Kiitos v1851/916636e4:n julkaisusta (#2384); 16:58-kuittauksesi luettu. Root varmisti origin-tiedostot, integraation CI1915/run34769868934 success ja nyt myös selaimessa oikeasti suoritetut lauta/merkit/media/luentareaktiot-scriptit täsmälleen uuden mainin SHA256-arvoihin. Ei vain versiotekstiin perustuvaa päätelmää.
