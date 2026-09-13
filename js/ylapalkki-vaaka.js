@@ -30,6 +30,7 @@
  * Kuuntelija on kaappausvaiheessa samasta syystä.
  */
 import { html } from './ui-apurit.js';
+import { vakasikoninSvg } from './vakasikoni.js';
 
 /** Bodyn luokka, jolla CSS tietää palkin olevan auki. */
 export const YLAPALKKI_AUKI = 'ylapalkki-auki';
@@ -69,14 +70,11 @@ export function kaynnistaYlapalkkiVaaka(ui) {
   nappi.setAttribute('aria-label', 'Näytä yläpalkki: rahat, päivä ja valikko');
   nappi.setAttribute('aria-expanded', 'false');
   /*
-   * KOLME VÄKÄSTÄ eli sama hampurilainen kuin yläpalkin omassa
-   * valikkonapissa (index.html #menu-btn): pelaaja tunnistaa merkin,
-   * ja se kertoo mitä napin takaa löytyy. Sama piirtotapa kuin
-   * karttaselitteen napissa — kartan napit ovat yhtä perhettä.
+   * KOLME LEVEÄÄ V:TÄ eli sama väkäsikoni kuin päävalikossa ja
+   * linssien valikossa (js/vakasikoni.js): pelaaja tunnistaa merkin,
+   * ja se kertoo mitä napin takaa löytyy.
    */
-  nappi.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" '
-    + 'fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">'
-    + '<path d="M4.5 7h15"/><path d="M4.5 12h15"/><path d="M4.5 17h15"/></svg>';
+  nappi.innerHTML = vakasikoninSvg();
 
   const auki = () => document.body.classList.contains(YLAPALKKI_AUKI);
 

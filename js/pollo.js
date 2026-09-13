@@ -2640,24 +2640,13 @@ export class Pollo {
     const kehys = polloElementti('div', 'pollo-kuplapino-kehys');
     kehys.hidden = true;
     const pino = polloElementti('div', 'pollo-kuplapino');
-    const sulje = polloElementti('button', 'pollo-kuplapino-sulje', '✕');
-    sulje.type = 'button';
-    sulje.setAttribute('aria-label', 'Sulje kuplat');
     /*
-     * Sulkunapin napautus nielaistaan samalla sopimuksella kuin kuplan
-     * oma (ks. sidoKuplanNapautus): kuplat katoavat jo pointerdownissa,
-     * ja ilman nielua sama napautus valitsisi kartalta kohteen.
+     * SULKURUKSIA EI ENÄÄ OLE (omistaja 13.9.2026, sanatarkasti: *"Ota
+     * pulun puhekuplista sulkemis ruksi pois. Ja muuta toiminto niin
+     * että Puhekuplat voi sulkea napauttamalla niitä."*). Kupla itse on
+     * sulkunappi, ja pieni pluskupla jää jäljelle avaamista varten —
+     * ks. sidoKuplanNapautus ja imeKuplatPalautukseen.
      */
-    sulje.addEventListener('pointerdown', (tapahtuma) => {
-      tapahtuma.stopPropagation();
-      tapahtuma.preventDefault();
-      nielaiseSulkevaNapautus(tapahtuma, { doc: this.doc });
-      this.tyhjennaPino();
-    });
-    sulje.addEventListener('click', (tapahtuma) => {
-      tapahtuma.stopPropagation();
-      tapahtuma.preventDefault();
-    });
     /*
      * KELAUS LAAJENTAA (omistaja 7.9.2026: *"jos käyttäjä menee
      * scrollaamaan viestejä niin näkymä laajenee ylöspäin"*). Ele
@@ -2703,7 +2692,6 @@ export class Pollo {
         this.supistaPino();
       }
     });
-    kehys.appendChild(sulje);
     kehys.appendChild(pino);
     this.doc.body.appendChild(kehys);
     this.pinoKehys = kehys;
@@ -2766,6 +2754,114 @@ export class Pollo {
     });
   }
 
+  /**
+   * KUPLAT IMEYTYVÄT PLUSKUPLAAN (omistajan tilaus 13.9.2026,
+   * sanatarkasti: *"Saisiko sulkemisen animoitua niin että kuplat ihan
+   * kuin imeytyisivät pienen puhekuplan sisälle joka jää jäljelle
+   * sulkeutumisen jälkeen ja jossa on se pieni + symboli uudelleen
+   * avausta varten."*).
+   *
+   * MIKSI KOHDE MITATAAN EIKÄ LASKETA. Pluskupla asemoidaan pöllönapin
+   * viereen (asetaPinonPaikka), ja sen paikka riippuu napin koosta,
+   * turvarajoista ja ruudun leveydestä. Käsin laskettu kohde eriytyisi
+   * ensimmäisessä asettelumuutoksessa ja kuplat lentäisivät väärään
+   * kohtaan. Siksi nappi paljastetaan ensin ja sen todellinen kehys
+   * luetaan DOM:sta.
+   *
+   * VÄHÄN LIIKETTÄ -ASETUS ohittaa koko lennon: silloin kuplat vain
+   * häipyvät, kuten muuallakin pelissä.
+   *
+   * @param {Element[]} kuplat imeytyvät kuplat
+   * @param {Element} kohde pluskupla, johon ne menevät
+   */
+  imeKuplatPalautukseen(kuplat, kohde) {
+    const vaha = this.vahaLiiketta();
+    const maali = !vaha && kohde?.getBoundingClientRect
+      ? kohde.getBoundingClientRect() : null;
+    // Nollakokoinen kehys tarkoittaa, ettei nappi ole vielä ladottu:
+    // silloin lennolle ei ole kohdetta eikä sitä yritetä.
+    const osuu = maali && maali.width > 0 && maali.height > 0;
+    for (const kupla of kuplat) {
+      if (!kupla || kupla.polloPoistuu) continue;
+      kupla.polloPoistuu = true;
+      kupla.polloKuittaus = null;
+      kupla.style.pointerEvents = 'none';
+      const poista = () => {
+        if (!kupla.isConnected) return;
+        kupla.remove();
+        this.paivitaPinonNakyvyys();
+      };
+      if (!osuu) {
+        kupla.style.transition = 'opacity 120ms linear';
+        kupla.style.opacity = '0';
+        kupla.addEventListener('transitionend', poista, { once: true });
+        setTimeout(poista, 140);
+        continue;
+      }
+      const oma = kupla.getBoundingClientRect();
+      const dx = (maali.left + maali.width / 2) - (oma.left + oma.width / 2);
+      const dy = (maali.top + maali.height / 2) - (oma.top + oma.height / 2);
+      /*
+       * Origo kuplan omaan keskipisteeseen, jotta kutistus tapahtuu
+       * sisäänpäin eikä vasemmasta yläkulmasta — muuten kupla näyttäisi
+       * luisuvan pois ennen kuin se kutistuu.
+       */
+      kupla.style.transformOrigin = 'center center';
+      kupla.style.transition = 'transform 320ms var(--liike-ulos), '
+        + 'opacity 320ms var(--liike-ulos)';
+      // Kaksi kehystä: ilman pakotettua taittoa selain yhdistäisi
+      // alkuarvon ja loppuarvon samaan tyylipäivitykseen eikä liikettä
+      // syntyisi lainkaan.
+      void kupla.offsetWidth;
+      kupla.style.transform = `translate(${dx.toFixed(1)}px, ${dy.toFixed(1)}px) scale(0.08)`;
+      kupla.style.opacity = '0';
+      kupla.addEventListener('transitionend', poista, { once: true });
+      setTimeout(poista, 380);
+    }
+    return osuu;
+  }
+
+  /**
+   * Kuplat kiinni napautuksesta: ne imeytyvät pluskuplaan, joka jää
+   * ruudulle. Sama loppu kuin ajastimen piilotuksella
+   * (piilotaPuhekuplat) — vain liike on eri.
+   */
+  supistaKuplatPalautukseen() {
+    this.peruKuplanPiilotus();
+    /*
+     * KESKEN OLEVA PUHEENVUORO KATKAISTAAN, kuten entinen sulkuruksi
+     * teki (tyhjennaPino). Ilman tätä osiin jaetun puheenvuoron loput
+     * osat saapuisivat sekunnin päästä omina kuplinaan, avaisivat
+     * pinon uudelleen (lisaaPinoon unohtaa muistetun kuplan) ja
+     * söisivät juuri syntyneen pluskuplan — mitattu: pluskupla katosi
+     * 400 ms:n jälkeen itsestään. Loput osat menevät chattiin
+     * (peruPuheenvuoro), joten historia pysyy täytenä.
+     */
+    this.peruPuheenvuoro();
+    const puheet = this.pinonKuplat().filter((k) => k.dataset?.laji === 'puhe');
+    const viimeinen = puheet.at(-1);
+    if (!viimeinen) return false;
+    /*
+     * Pluskupla esiin ENNEN lentoa, jotta sen paikka voidaan mitata ja
+     * jotta pelaaja näkee minne kuplat menevät. Muistiin jää viimeisin
+     * kupla, aivan kuten ajastimen piilotuksessa.
+     */
+    this.viimeisinPiilotettuKupla = { kupla: viimeinen, konteksti: this.kuplaKonteksti() };
+    const palautus = this.varmistaKuplanPalautus();
+    palautus.hidden = false;
+    this.asetaPinonPaikka();
+    this.imeKuplatPalautukseen(puheet, palautus);
+    /*
+     * Viimeisin kupla säilyy muistissa palautusta varten, mutta sen
+     * DOM-solmu lentää muiden mukana. Irrotetaan se pinosta heti,
+     * jottei se jää vieritettävän alueen mitoihin — kopio on jo
+     * talletettu yllä ja palautus liittää sen takaisin.
+     */
+    this.paivitaPinonNakyvyys();
+    this.paivitaKuplanPalautus();
+    return true;
+  }
+
   piilotaPuhekuplat() {
     this.peruKuplanPiilotus();
     const puheet = this.pinonKuplat().filter((k) => k.dataset?.laji === 'puhe');
@@ -2782,6 +2878,24 @@ export class Pollo {
     return true;
   }
 
+  /**
+   * Imeytymisen jäljet pois palautettavasta kuplasta.
+   *
+   * Imeytyminen (imeKuplatPalautukseen) jättää kuplaan inline-tyylit ja
+   * poistumislipun. Ilman nollausta palautettu kupla olisi läpinäkyvä,
+   * pluskuplan kokoinen ja klikkaamaton — eli näkymätön — ja seuraava
+   * poisto ohittaisi sen kokonaan lipun vuoksi.
+   */
+  nollaaKuplanImu(kupla) {
+    if (!kupla) return;
+    kupla.polloPoistuu = false;
+    kupla.style.transition = '';
+    kupla.style.transform = '';
+    kupla.style.transformOrigin = '';
+    kupla.style.opacity = '';
+    kupla.style.pointerEvents = '';
+  }
+
   palautaViimeisinKupla() {
     const muistettu = this.viimeisinPiilotettuKupla;
     if (!muistettu || muistettu.konteksti !== this.kuplaKonteksti() || this.auki) {
@@ -2790,6 +2904,7 @@ export class Pollo {
     }
     this.viimeisinPiilotettuKupla = null;
     this.kuplaPalautus.hidden = true;
+    this.nollaaKuplanImu(muistettu.kupla);
     this.lisaaPinoon(muistettu.kupla);
     this.ajastaKuplanPiilotus(pulunKuplanPiilotusviive(muistettu.kupla.textContent));
     return true;
@@ -3478,7 +3593,17 @@ export class Pollo {
         this.poistaKuplat([kupla]);
         return;
       }
-      this.avaa();
+      /*
+       * NAPAUTUS SULKEE, EI AVAA CHATTIA (omistaja 13.9.2026,
+       * sanatarkasti: *"muuta toiminto niin että Puhekuplat voi sulkea
+       * napauttamalla niitä"*). TÄMÄ KUMOAA 3.9.2026 linjauksen
+       * *"jos pelaaja klikkaa kuplaa tai pöllön kuvaketta, kuplat
+       * avautuvat normaaliin chattinäkymään"* KUPLAN OSALTA. Chatti
+       * avautuu yhä pulun kuvakkeesta, joten mitään ei menetetä: se
+       * tie on tallella ja kuplien tekstit ovat chatin virrassa
+       * (kirjaaKuplaViestiin).
+       */
+      if (!this.supistaKuplatPalautukseen()) this.avaa();
     });
     /*
      * Toinen vartio samalle napautukselle: jos kupla on clickin

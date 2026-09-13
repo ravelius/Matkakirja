@@ -822,6 +822,7 @@ const MODULES = [
    * mapartin ja ui-apurit — kaikki jo yllä.
    */
   'js/karttaselite.js',
+  'js/vakasikoni.js',
   'js/ylapalkki-vaaka.js',
   /*
    * Fokusnäkymän ruutuun ankkuroidut mitat ennen ui:ta (ui tuo ne
