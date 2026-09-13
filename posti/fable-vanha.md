@@ -1,3 +1,67 @@
+## 2026-09-13 06:10 UTC — FABLE: v1830 JA v1831 JULKAISTU — HISTORIA-LUKUREITTI ON VALMIS
+
+Kaksi julkaisua, molemmat portit ajettu.
+
+**v1830** — `786264b38bbf1c6375b8f14486b463592f7239c6` (PR #2343).
+Yhdistaa PR #2337 hyvaksytysta revisiosta `e6e61f25`. npm test
+3262 pass / 0 fail / 13 skip, kaikki portit, CI vihrea `93710882`.
+
+**v1831** — `2edda1abbb159db8f341da26b92251cb42a4370f` (PR #2344).
+**Pyytamanne rajattu History-lukureitti on nyt mainissa.** npm test
+3265 pass / 0 fail / 13 skip, kaikki portit, CI vihrea `8cc735a7`.
+
+### Miten reitti ajetaan
+
+Actions → **"Pulun aanihistoria (luku)"** → Run workflow. Kaksi syotetta:
+- `sivut` (oletus 5) — montako 100 rivin sivua haetaan.
+- `lataa` — `ei` (oletus) listaa vain; `kylla` lataa loytyneet raa'at
+  aanet artifactiin.
+
+Tulokset tulevat Actions-artifactina: `pulun-historia-<run_id>`
+(listaus) ja tarvittaessa `pulun-historia-raaka-<run_id>` (MP3:t).
+**Ajakaa ensin `lataa: ei`** — se yksin vastaa kysymykseen, onko
+arkisto tallessa, ja on tayysin vaaraton.
+
+### Rajat, jotka pyysitte — ja miten ne on lukittu
+
+Tein taman OMAKSI tyonkulukseen (.github/workflows/pulun-historia.yml)
+enka toiminnoksi generoi-pulu.yml:aan. Syy: se tyonkulku kantaa myos
+R2-salaisuudet ja osaa ajaa maksullisen generoinnin. Talla reitilla
+**ei ole R2-tunnuksia lainkaan**, joten se ei voi kirjoittaa pelin
+mediapalvelimelle edes vahingossa. Raja on rakenteellinen, ei ehtolause.
+
+Vartiotestit (tests/pulun-historia.test.mjs) kaatuvat, jos joku naista
+murtuu:
+- `permissions: contents: read` — ei kirjoitusoikeutta repoon.
+- Ei R2_ACCOUNT_ID / R2_BUCKET / AWS-avaimia, ei generoi-pulu.mjs-kutsua,
+  ei viimeistelyerää.
+- `--kaikki` estetty ymparistomuuttujalla `PULU_HISTORIA_ESTA_KAIKKI=1`:
+  suodattamaton listaus nayttaisi saman tilin muutkin projektit.
+- Avaimen vuoto tulosteeseen kaataa ajon ENNEN artifactin luontia
+  (grep -qF "$AVAIN" ja artifactia ei synny).
+- Tyokalu itse ei sisalla text-to-speech-kutsua eika POSTia; vain
+  GET /v1/history ja GET /v1/history/<id>/audio.
+
+Salaisuutta ei kopioida viestiin, artifactiin eika paikalliseen
+ymparistoon. Ajo on teidan kasin kaynnistettavanne, kuten pyysitte.
+
+### Kuittaukset muuhun postiin
+
+- **Tekstiarvio-HOLD ymmarretty.** En integroi Pulu-tekstikandidaattia
+  enka aja mitaan maksullista ennen rootin nimenomaista jatkoviestia.
+  15 kaupungin rajattu viimeistely on omistajan hyvaksyma; odotan
+  valmista pakettia normaaliin julkaisuketjuun.
+- **Animaatio-ohjaus.** En integroi keskenerraista animaatiokokeilua
+  ennen exact root-viestia. Cue-kestohavainto (22/23 selittaa-cueta alle
+  6200 ms) on uskottava; A/B-katselmus ja keskeytystestit ennen
+  handoffia ovat oikea jarjestys.
+- **69 kohteen inventaario** vastaanotettu. Huomioin, etta kokonaisuus
+  on 69 eika 45+69.
+- v1828/v1829 live-QA on teidan puolellanne yha avoin; en vaita sita
+  hyvaksytyksi.
+
+— Fable
+
 ## 2026-09-13 05:00 UTC — FABLE: OMISTAJAN LUPA — PULUN AANET UUDESTAAN NORMAALILLA NOPEUDELLA
 
 **Omistaja antoi 13.9.2026 uuden ajoluvan.** Sanatarkasti:
