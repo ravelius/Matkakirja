@@ -153,4 +153,3 @@ faktalähteet, kuvien tunnisteet ja visuaalinen hyväksyntä, TTS-tagien
 kuuntelutulos, ääni- ja tekstihashit, forced-alignmentin tulos, cue-QA,
 testien pass/fail-rivit, Fable-kuittaus, CI, julkaisuversio ja oikean pelin
 kaupunki-/tilakohtainen tarkistus. Vaiheita ei niputeta sanaksi "valmis".
-
