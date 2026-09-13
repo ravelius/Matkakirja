@@ -103,6 +103,13 @@ const RIKKI_VERSIO = argv.includes('--rikki-versio');
  * keskenään ja savukkeen mittauksiin.
  */
 const VAIN_KUVAT = argv.includes('--vain-kuvat');
+/*
+ * `--ilman-kerrosta` kääntää `--vain-kuvat`-ajon VERTAILUKUVAKSI: se
+ * ajaa vaiheen A (luettelo ilman `varitasot`-taulua) eikä B:tä.
+ * Vertailukuva on nähtävä samasta ruudusta ja samasta kamerasta kuin
+ * varsinainen — muuten omistaja vertaa kahta eri näkymää.
+ */
+const KUVA_ILMAN_KERROSTA = argv.includes('--ilman-kerrosta');
 const KUVAT = valitsin('kuvat', '');
 const NIMI = valitsin('nimi', ILMAN_RAJAUSTA ? 'ilman-rajausta' : (RIKKI_VERSIO ? 'rikki-versio' : 'vihrea'));
 
@@ -653,12 +660,38 @@ async function mittaaPisteet(ryhma) {
     g.drawImage(img, 0, 0);
     const pallo = window.matkakirja.ui.pallolauta.pallo;
     const dpr = img.width / window.innerWidth;
+    /*
+     * ====== KANKAAN SIJAINTI ON OTETTAVA MUKAAN (erä 1c) ============
+     *
+     * MITATTU 13.9.2026, JA SE KORJASI MITTAUKSEN. Globe.gl:n
+     * `getScreenCoords` palauttaa pisteen KANKAAN koordinaatistossa,
+     * mutta `Page.captureScreenshot` antaa kuvan RUUDUN
+     * koordinaatistossa. Jos kangas ei ala ruudun vasemmasta
+     * yläkulmasta, jokainen mittaus lukee pikseliä, joka on kankaan
+     * siirtymän verran väärässä kohdassa.
+     *
+     * Erän 1b savuke luki nämä samana, ja se meni läpi, koska
+     * mittauspisteet ovat kaukana rajoista: siirtymä ei vie
+     * Keski-Ranskan pistettä ulos Ranskasta. Erän 1c leikkausprofiili
+     * paljasti sen — profiili väitti kerman alkavan Ranskan sisältä
+     * 49,4 N:stä, vaikka raja on 49,95 N ja laatan alfa on sen
+     * eteläpuolella mitattuna 0 (ja A/B-erokartta näyttää Ranskan
+     * täsmälleen mustana). Siirtymä oli koko ero.
+     *
+     * `elementFromPoint` ottaa RUUTUkoordinaatit, joten sekin
+     * korjataan — muuten osumatarkistus tarkistaisi eri pisteen kuin
+     * se, josta pikseli luetaan.
+     */
+    const kangas = document.querySelector('.pallolauta canvas') ?? document.querySelector('canvas');
+    const kehys = kangas?.getBoundingClientRect() ?? { left: 0, top: 0 };
+    const rx = (sp) => sp.x + kehys.left;
+    const ry = (sp) => sp.y + kehys.top;
     const ulos = [];
     for (const p of pisteet) {
       const s = pallo.getScreenCoords(p.lat, p.lon, 0);
       if (!s || !Number.isFinite(s.x)) { ulos.push({ ...p, ruudulla: false, syy: 'ei ruutupaikkaa' }); continue; }
-      const x = Math.round(s.x * dpr);
-      const y = Math.round(s.y * dpr);
+      const x = Math.round(rx(s) * dpr);
+      const y = Math.round(ry(s) * dpr);
       if (x < 6 || y < 6 || x >= img.width - 6 || y >= img.height - 6) {
         ulos.push({ ...p, ruudulla: false, syy: 'ruudun ulkopuolella' });
         continue;
@@ -669,7 +702,7 @@ async function mittaaPisteet(ryhma) {
        * koska se on kuoren lapsi. Kangas on ainoa elementti, jossa
        * pallon pikselit ovat.
        */
-      const osuma = document.elementFromPoint(s.x, s.y);
+      const osuma = document.elementFromPoint(rx(s), ry(s));
       const kartalla = osuma && osuma.tagName === 'CANVAS';
       if (!kartalla) {
         const ketju = [];
@@ -721,8 +754,9 @@ async function mittaaPisteet(ryhma) {
         ...p, ruudulla: true, x, y, r: med[0], g: med[1], b: med[2], hajonta,
       });
     }
-    return ulos;
+    return { pisteet: ulos, kehys: { left: kehys.left, top: kehys.top }, dpr };
   }, { png: kuva.toString('base64'), pisteet: PISTEET.filter((p) => p.ryhma === ryhma) });
+  tieto('kankaan siirtymä ruudussa', `left ${tulos.kehys.left} · top ${tulos.kehys.top} · dpr ${tulos.dpr}`);
   /*
    * LEIKKAUSPROFIILI RANNIKON POIKKI (vain tuloste, ei väite).
    *
@@ -751,15 +785,19 @@ async function mittaaPisteet(ryhma) {
       g.drawImage(img, 0, 0);
       const pallo = window.matkakirja.ui.pallolauta.pallo;
       const dpr = img.width / window.innerWidth;
+      const kangas = document.querySelector('.pallolauta canvas') ?? document.querySelector('canvas');
+      const kehys = kangas?.getBoundingClientRect() ?? { left: 0, top: 0 };
       const nurkat = [
         pallo.getScreenCoords(ala.lat1, ala.lon0, 0),
         pallo.getScreenCoords(ala.lat0, ala.lon1, 0),
       ];
       if (nurkat.some((n2) => !n2 || !Number.isFinite(n2.x))) return { ok: false, syy: 'ei ruutupaikkaa' };
-      const x0 = Math.round(Math.min(nurkat[0].x, nurkat[1].x) * dpr);
-      const x1 = Math.round(Math.max(nurkat[0].x, nurkat[1].x) * dpr);
-      const y0 = Math.round(Math.min(nurkat[0].y, nurkat[1].y) * dpr);
-      const y1 = Math.round(Math.max(nurkat[0].y, nurkat[1].y) * dpr);
+      const xs = nurkat.map((n2) => (n2.x + kehys.left) * dpr);
+      const ys = nurkat.map((n2) => (n2.y + kehys.top) * dpr);
+      const x0 = Math.round(Math.min(...xs));
+      const x1 = Math.round(Math.max(...xs));
+      const y0 = Math.round(Math.min(...ys));
+      const y1 = Math.round(Math.max(...ys));
       if (x0 < 0 || y0 < 0 || x1 > img.width || y1 > img.height || x1 - x0 < 20 || y1 - y0 < 20) {
         return { ok: false, syy: `ala ruudun ulkopuolella (${x0},${y0})..(${x1},${y1})` };
       }
@@ -786,12 +824,14 @@ async function mittaaPisteet(ryhma) {
       g.drawImage(img, 0, 0);
       const pallo = window.matkakirja.ui.pallolauta.pallo;
       const dpr = img.width / window.innerWidth;
+      const kangas = document.querySelector('.pallolauta canvas') ?? document.querySelector('canvas');
+      const kehys = kangas?.getBoundingClientRect() ?? { left: 0, top: 0 };
       const ulos = [];
       for (let i = 0; i < n; i += 1) {
         const lat = lat1 + ((lat0 - lat1) * i) / (n - 1);
         const sp = pallo.getScreenCoords(lat, lon, 0);
-        const x = Math.round(sp.x * dpr);
-        const y = Math.round(sp.y * dpr);
+        const x = Math.round((sp.x + kehys.left) * dpr);
+        const y = Math.round((sp.y + kehys.top) * dpr);
         if (x < 1 || y < 1 || x >= img.width - 1 || y >= img.height - 1) { ulos.push(`${lat.toFixed(2)}:—`); continue; }
         const d = g.getImageData(x, y, 1, 1).data;
         ulos.push(`${lat.toFixed(2)}:${d[0]},${d[1]},${d[2]}`);
@@ -800,7 +840,7 @@ async function mittaaPisteet(ryhma) {
     }, { png: kuva.toString('base64'), ...kohde.profiili });
     tieto(`profiili ${String(kohde.profiili.lon).replace('.', ',')} E (lat:rgb)`, profiili.join('  '));
   }
-  return { kuva, mittaukset: tulos, mitat: m, ranskanAla };
+  return { kuva, mittaukset: tulos.pisteet, mitat: m, ranskanAla };
 }
 
 /* ---------------- kaksi vaihetta samalla koodipolulla ------------- */
@@ -866,12 +906,77 @@ async function vaihe(vari, tunnus) {
 }
 
 const A = VAIN_KUVAT ? null : await vaihe(false, 'A (ilman tasoitusta)');
-const B = await vaihe(true, 'B (tasoitettuna)');
+const B = await vaihe(!(VAIN_KUVAT && KUVA_ILMAN_KERROSTA), VAIN_KUVAT && KUVA_ILMAN_KERROSTA
+  ? 'A (ilman tasoitusta, vain kuvat)' : 'B (tasoitettuna)');
 const mA = A?.mitat ?? null;
 const mB = B.mitat;
 
+/*
+ * ====== EROKARTTA: KOKO RUUDUN A/B-VERTAILU (erä 1c) ===============
+ *
+ * V2 mittaa yhden alan Ranskan sisältä. Erokartta mittaa KOKO
+ * SAAPUMISNÄKYMÄN ja piirtää tuloksen kuvaksi: musta = pikseli ei
+ * muuttunut, punainen = muuttui (kirkkaus kertoo eron suuruuden).
+ * Vihreässä ajossa kuvasta on luettavissa Ranskan muoto mustana
+ * aukkona punaisella pohjalla — eli päätös 4 kokonaisena kuvana eikä
+ * yhtenä suorakaiteena.
+ *
+ * TÄMÄ EI KORVAA V2:TA VAAN TÄYDENTÄÄ SEN. Erokartta on kuva ja
+ * prosenttiluku; V2 on väite, joka kaatuu vastakokeessa. Molempia
+ * tarvitaan: kuva kertoo MISSÄ ja väite kertoo ONKO.
+ */
+let erokartta = null;
+if (A?.saapumiskuva && B?.saapumiskuva) {
+  erokartta = await sivu.evaluate(async ({ a, b }) => {
+    const lue = async (png) => {
+      const img = new Image();
+      img.src = `data:image/png;base64,${png}`;
+      await img.decode();
+      const c = document.createElement('canvas');
+      c.width = img.width;
+      c.height = img.height;
+      const g = c.getContext('2d', { willReadFrequently: true });
+      g.drawImage(img, 0, 0);
+      return { d: g.getImageData(0, 0, img.width, img.height), w: img.width, h: img.height };
+    };
+    const kA = await lue(a);
+    const kB = await lue(b);
+    if (kA.w !== kB.w || kA.h !== kB.h) return { ok: false, syy: 'eri kokoiset kaappaukset' };
+    const c = document.createElement('canvas');
+    c.width = kA.w;
+    c.height = kA.h;
+    const g = c.getContext('2d');
+    const ulos = g.createImageData(kA.w, kA.h);
+    let eroja = 0;
+    let pahin = 0;
+    for (let i = 0; i < kA.d.data.length; i += 4) {
+      let m = 0;
+      for (let k = 0; k < 3; k += 1) {
+        const e = Math.abs(kA.d.data[i + k] - kB.d.data[i + k]);
+        if (e > m) m = e;
+      }
+      if (m) { eroja += 1; if (m > pahin) pahin = m; }
+      ulos.data[i] = Math.min(255, m * 6);
+      ulos.data[i + 1] = 0;
+      ulos.data[i + 2] = 0;
+      ulos.data[i + 3] = 255;
+    }
+    g.putImageData(ulos, 0, 0);
+    return {
+      ok: true, data: c.toDataURL('image/png').split(',')[1], eroja, pahin, pikseleita: kA.w * kA.h,
+    };
+  }, { a: A.saapumiskuva.toString('base64'), b: B.saapumiskuva.toString('base64') });
+  tieto('erokartta (saapumisnäkymä)', erokartta.ok
+    ? `eroavia pikseleitä ${erokartta.eroja} / ${erokartta.pikseleita} `
+      + `(${((100 * erokartta.eroja) / erokartta.pikseleita).toFixed(1)} %) · pahin kanavaero ${erokartta.pahin}`
+    : erokartta.syy);
+}
+
 if (KUVAT) {
   mkdirSync(KUVAT, { recursive: true });
+  if (erokartta?.ok) {
+    writeFileSync(join(KUVAT, `tasoitus-pallo-${NIMI}-erokartta.png`), Buffer.from(erokartta.data, 'base64'));
+  }
   if (A) {
     writeFileSync(join(KUVAT, `tasoitus-pallo-${NIMI}-ilman-tasoitusta.png`), A.kuva);
     writeFileSync(join(KUVAT, `tasoitus-pallo-${NIMI}-saapuminen-ilman-tasoitusta.png`), A.saapumiskuva);
