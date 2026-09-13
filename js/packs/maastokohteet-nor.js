@@ -209,6 +209,26 @@ export const MAASTOKOHTEET_NOR = [
    * ============================================================== */
   {
     id: 'urnes',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nor-kohde-urnes-13afbfbbe1bf.jpg',
+      lyhyt: 'Tummaksi patinoitunut Urnesin sauvakirkko kohoaa hautausmaan ja Lustrafjordin välisellä rinteellä.',
+      selite: 'Tummaksi patinoitunut Urnesin sauvakirkko kohoaa hautausmaan ja Lustrafjordin välisellä rinteellä.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Concierge.2C',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Urnes_-_Stavkirke_-_Ext%C3%A9rieur_01.JPG',
+      lisenssi: 'CC BY-SA 3.0 NO',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/no/deed.en',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/nor-kohde-urnes-ef7aa0a1467d.jpg',
+      lyhyt: 'Urnesin 1100-luvun sauvakirkko seisoo hautausmaallaan Lustrafjordin jyrkän rantarinteen yllä.',
+      selite: 'Urnesin 1100-luvun sauvakirkko seisoo hautausmaallaan Lustrafjordin jyrkän rantarinteen yllä.',
+      lahde: 'Valokuva: Concierge.2C, Wikimedia Commons (CC BY-SA 3.0 NO).',
+      tekija: 'Concierge.2C',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Urnes_-_Stavkirke_-_Ext%C3%A9rieur_01.JPG',
+      lisenssi: 'CC BY-SA 3.0 NO',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/no/deed.en',
+    }],
     nimi: 'Urnesin sauvakirkko',
     tyyppi: 'kulttuuri',
     kysymykset: [

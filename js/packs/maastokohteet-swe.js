@@ -210,6 +210,26 @@ export const MAASTOKOHTEET_SWE = [
    * ============================================================== */
   {
     id: 'visby',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-kohde-visby-727d4c9ed518.jpg',
+      lyhyt: 'Visbyn keskiaikainen muuri ja suorakulmaiset tornit kiertävät vanhaa kaupunkia.',
+      selite: 'Visbyn lähes ehjä keskiaikainen muuri jatkuu suorakulmaisten tornien rytmittämänä vanhan kaupungin laidalla.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva VisbyStar',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Visby_city_wall.jpg',
+      lisenssi: 'CC0 1.0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-kohde-visby-05552be7d145.jpg',
+      lyhyt: 'Visbyn keskiaikainen kalkkikivimuuri torneineen kiertää yhä lähes koko vanhaa kaupunkia.',
+      selite: 'Visbyn keskiaikainen kalkkikivimuuri torneineen kiertää yhä lähes koko vanhaa kaupunkia.',
+      lahde: 'Valokuva: VisbyStar, Wikimedia Commons (CC0 1.0).',
+      tekija: 'VisbyStar',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Visby_city_wall.jpg',
+      lisenssi: 'CC0 1.0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    }],
     nimi: 'Visby',
     tyyppi: 'kaupunki',
     kysymykset: [
@@ -243,6 +263,26 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'gamla-uppsala',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-kohde-gamla-uppsala-d025b78f39b0.jpg',
+      lyhyt: 'Gamla Uppsalan kuningaskummut muodostavat loivan ruohottuneen ketjun Uppsalan avoimella tasangolla.',
+      selite: 'Gamla Uppsalan kuningaskummut muodostavat loivan ruohottuneen ketjun Uppsalan avoimella tasangolla.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Carl L. Thunberg for Föreningen Kulturarvsbilder',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Royal_Mounds_of_Gamla_Uppsala_in_Sweden_(2024-07-21).jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-kohde-gamla-uppsala-c2efa57c7bb1.jpg',
+      lyhyt: 'Gamla Uppsalan kolme ruohottunutta kuningaskumpua kohoavat avoimella tasangolla.',
+      selite: 'Gamla Uppsalan kolme suurta kuningaskumpua kohoavat matalina, ruohottuneina hautakumpuina avoimella tasangolla.',
+      lahde: 'Valokuva: Carl L. Thunberg for Föreningen Kulturarvsbilder, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Carl L. Thunberg for Föreningen Kulturarvsbilder',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Royal_Mounds_of_Gamla_Uppsala_in_Sweden_(2024-07-21).jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    }],
     nimi: 'Gamla Uppsala',
     tyyppi: 'historia',
     kysymykset: [
@@ -442,6 +482,26 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'ales-stenar',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-kohde-ales-stenar-a5345172fddc.jpg',
+      lyhyt: 'Ales stenarin kivilaiva kaartuu Kåsebergan nurmiharjanteella Itämeren äärellä.',
+      selite: 'Ales stenarin kivilaiva kaartuu Kåsebergan nurmiharjanteella Itämeren äärellä.',
+      lahde: 'Matkakirjan havainnekuva — lähdeperusteinen johdannainen',
+      tekija: 'OpenAI; referenssikuva Anders Lagerås',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ales_stenar1_kaseberga.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260912/swe-kohde-ales-stenar-52b283639af9.jpg',
+      lyhyt: 'Ales stenarin 59 lohkaretta muodostavat 67-metrisen kivilaivan Skoonen rannikkoharjanteella.',
+      selite: 'Ales stenarin 59 lohkaretta muodostavat 67 metriä pitkän kivilaivan Skoonen avoimella rannikkoharjanteella.',
+      lahde: 'Valokuva: Anders Lagerås, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Anders Lagerås',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ales_stenar1_kaseberga.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    }],
     nimi: 'Ales stenar',
     tyyppi: 'historia',
     kysymykset: [

@@ -35,6 +35,7 @@ import { luoLivianKuunteluvuoro } from './livia-tilanteet.js';
  * lähtien laitteen oman äänen. Verkoton laite ei edes yritä.
  */
 
+import { PUHEVOIMA_OLETUS, puheVoima } from './aani-ehdokkaat.js';
 import { lisaaTaustaVaimennus } from './aani-tausta.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 import { akustiikka, tehosteketju } from './tehosteketju.js';
@@ -386,8 +387,52 @@ export function asetaPuheenVoima(arvo) {
   try {
     window.localStorage?.setItem(VOIMA_AVAIN, String(voima));
   } catch { /* ei tallennu — istunnon ajan silti voimassa gainissa */ }
-  if (vahvistin) vahvistin.gain.value = voima;
+  paivitaLukijanVoima();
   return voima;
+}
+
+/*
+ * ── LUKIJA-LIUKU OHJAA MYÖS STRIIMATTUA LUKIJAA ─────────────────────
+ *
+ * OMISTAJAN VIKAILMOITUS 12.9.2026: *"äänien voimakkuussäädin ei muuten
+ * toimi."*
+ *
+ * MITATTU JUURISYY: asetusvalikon Lukija-liuku (index.html
+ * #voima-lukija) kirjoitti vain avaimeen `matkakirja-puhevoima`, jota
+ * lukevat pelkät ÄÄNITTEET (js/luenta.js, js/linssipuhe.js, js/ui.js).
+ * Tämän moduulin striimattu lukija — pelin ENSISIJAINEN lukija, se joka
+ * lukee lehdet ja artikkelit — sai tasonsa yksinomaan työhuoneen omasta
+ * kertoimesta (`matkakirja-puhe-voima`, oletus 2,0), eikä liuku koskenut
+ * siihen millään asennolla. Pelaajan näkökulmasta "Lukija"-niminen
+ * säädin ei siis tehnyt lukijalle mitään.
+ *
+ * LIUKU ON SUHDE, EI KORVAAJA. Työhuoneen kerroin on kalibrointi
+ * (omistajan puhelimellaan hakema 2,0) ja liuku on pelaajan säädin.
+ * Kertomalla suhteella (liuku / liu'un oletusasento) OLETUSTASO SÄILYY
+ * TÄSMÄLLEEN ENNALLAAN: 90 % antaa kertoimen 1,0, 0 % hiljaisuuden ja
+ * 100 % hitusen oletusta enemmän. Suora korvaaminen olisi pudottanut
+ * lukijan tason 2,0:sta 0,9:ään eli hiljentänyt pelin lukijan yli
+ * puolella — korjaus ei saa kuulua siltä, että jokin muu meni rikki.
+ *
+ * KATTO ON VAHVISTIMESSA, EI TÄSSÄ: ketjussa on kompressori juuri siksi,
+ * että yli yhden nouseva vahvistus ei leikkaisi säröksi.
+ */
+/** Lukija-liu'un osuus: 1,0 liu'un oletusasennossa. */
+const liuunOsuus = () => (PUHEVOIMA_OLETUS > 0 ? puheVoima() / PUHEVOIMA_OLETUS : 1);
+
+/** Vahvistimeen menevä taso: työhuoneen kerroin × Lukija-liuku. */
+export function lukijanTaso() {
+  return puheenVoima() * liuunOsuus();
+}
+
+/**
+ * Lukija-liuku liikkui: soiva luenta saa uuden tason heti eikä vasta
+ * seuraavasta luennasta (js/main.js AANIVOIMAT). Ilman vahvistinta
+ * (äänipiiri ei ole käynnissä) ei ole mitään säädettävää — seuraava
+ * viritys lukee arvon itse.
+ */
+export function paivitaLukijanVoima() {
+  if (vahvistin) vahvistin.gain.value = lukijanTaso();
 }
 
 /*
@@ -466,7 +511,7 @@ function kytkeVahvistin() {
       // pidetään ketjussa varmuuden vuoksi.
       const lahteet = elementit.map((a) => piiri.createMediaElementSource(a));
       vahvistin = piiri.createGain();
-      vahvistin.gain.value = puheenVoima();
+      vahvistin.gain.value = lukijanTaso();
       /*
        * Kompressori vahvistimen perään: yli yhden nouseva vahvistus voi
        * leikata äänekkäimmät kohdat säröksi, ja kompressori pyöristää

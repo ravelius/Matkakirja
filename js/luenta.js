@@ -217,6 +217,8 @@ export function stopIntroVoice(ui) {
 export function haivytaJaSiivoa(ui, audio, kesto = 600) {
   // Häivytys on hyvästely: vuoro on vapaa jo nyt (ks. luovutaPuhevuoro).
   luovutaPuhevuoro(audio);
+  // Lukija-liuku ei enää kirjoita tason päälle (paivitaLuentojenVoima).
+  audio.luennanHaivytys = true;
   const alkuVoima = audio.volume;
   const t0 = performance.now();
   const askel = () => {
@@ -344,6 +346,59 @@ export function puhujaAanessa(paitsi = null) {
  */
 export function luovutaPuhevuoro(audio) {
   if (audio) audio.puhevuoroPaattyi = true;
+}
+
+/*
+ * ── LUKIJA-LIUKU YLTÄÄ JOKAISEEN SOIVAAN LUENTAAN ───────────────────
+ *
+ * OMISTAJAN VIKAILMOITUS 12.9.2026, sanatarkasti: *"äänien
+ * voimakkuussäädin ei muuten toimi."*
+ *
+ * MITATTU JUURISYY (selainmittaus tools/savukkeet/savuke-aanivoimat.mjs):
+ * Lukija-liuku (index.html #voima-lukija) muutti tallennetun arvon ja
+ * seuraavat luennat lähtivät oikealla tasolla, mutta SOIVA luenta ei
+ * liikahtanut. js/main.js kävi läpi vain `ui.luennat` -joukon, ja siitä
+ * puuttuivat kaikki luennat, joita kukaan ei ollut sinne kirjannut —
+ * mitattuna mm. avaustekstin luenta (playIntroVoice), joka on ensimmäinen
+ * ääni, jonka pelaaja ylipäätään kuulee. Mittaus etusivulla: liuku
+ * 90 % → 0 %, soiva intro-puhe.mp3 pysyi tasolla 0,9 sekä heti että
+ * kolmen sekunnin kuluttua.
+ *
+ * KORJAUS ON KIRJANPIDON YHDISTÄMINEN, EI UUSI SILMUKKA. `soivatLuennat`
+ * on jo koko pelin ainoa täydellinen luettelo soivista luennoista —
+ * jokainen kertojan äänite kulkee `merkitsePuhujan` kautta (avaus,
+ * matkakirja, linssiluenta, hihkaisu), koska ilman sitä taustan väistö
+ * ei toimisi. Sama taulu kelpaa siis myös liu'ulle, ja silloin uusi
+ * luentapaikka ei voi jäädä liu'un ulottumattomiin huomaamatta: se
+ * kaatuisi ensin väistöstä.
+ *
+ * PULU EI OLE LUKIJA. Rooli (PUHUJA_PULU) rajaa pulun repliikit ulos;
+ * niillä on oma liukunsa (index.html #voima-pulu). Vanha rajaus vertasi
+ * soitinta `ui.liviaAani`-kenttään, ja se piti vain niin kauan kuin pulu
+ * oli aloittanut viimeisimmän repliikin — kaksi peräkkäistä repliikkiä
+ * jätti edellisen Lukija-liu'un armoille.
+ *
+ * HÄIVYTYSTÄ EI KESKEYTETÄ. Poistuva luenta (`luennanHaivytys`) on
+ * matkalla nollaan, ja tason kirjoittaminen sen päälle palauttaisi äänen
+ * hetkeksi kuuluviin. Sama koskee vuoronsa luovuttanutta
+ * (`puhevuoroPaattyi`) ja jo vaiennutta soitinta.
+ *
+ * PERUSTASO TALLETETAAN SOITTIMEEN (`luennanPerustaso`), koska
+ * `pehmeaLoppu` häivyttää loppuhetken suhteessa siihen: ilman tätä lopun
+ * ramppi nostaisi äänen takaisin liu'un edeltäneeseen tasoon.
+ */
+export function paivitaLuentojenVoima() {
+  const arvo = puheVoima();
+  for (const [audio, tieto] of soivatLuennat) {
+    if (tieto.rooli === PUHUJA_PULU) continue;
+    audio.luennanPerustaso = arvo;
+    if (audio.luennanHaivytys || audio.puhevuoroPaattyi || audio.ended || audio.paused) continue;
+    try {
+      audio.volume = arvo;
+    } catch {
+      /* selain ei kelpuuta arvoa — seuraava luenta lukee sen itse */
+    }
+  }
 }
 
 /** Vapauttaa äänen puhujan roolista; turvallista kutsua monta kertaa. */
@@ -820,9 +875,18 @@ export function lopetuksenLauseraja(rajat, osuus) {
  * tiedosto päättyy keskeltä signaalia, ja kova reuna kuului pienenä
  * töksähdyksenä (omistajan havainto etusivulla) — pehmennys tehdään
  * toistossa, joten tiedostoja ei tarvinnut generoida uusiksi.
+ *
+ * PERUSTASO LUETAAN JOKA KERRALLA (`perus()`), EI KERRAN KIINNITYKSESSÄ.
+ * Lukija-liuku muuttaa soivan luennan tasoa kesken nauhan
+ * (paivitaLuentojenVoima kirjoittaa soittimeen `luennanPerustason`), ja
+ * kerran talteen otettu lähtötaso olisi loppuhetkellä vanhentunut:
+ * viimeinen puoli sekuntia häipyisi siitä tasosta, jolla luenta ALKOI —
+ * eli kesken kaiken hiljennetty luenta kiljahtaisi lopussa takaisin
+ * kuuluviin.
  */
 export function pehmeaLoppu(ui, audio) {
-  const perus = audio.volume;
+  const lahtotaso = audio.volume;
+  const perus = () => audio.luennanPerustaso ?? lahtotaso;
   let rampissa = false;
   /*
    * LOPPU ILMOITETAAN KERRAN. Tämä on luennan ainoa luonnollinen loppu:
@@ -833,7 +897,7 @@ export function pehmeaLoppu(ui, audio) {
   const rullaa = () => {
     if (audio.paused || !audio.duration) {
       rampissa = false;
-      audio.volume = perus;
+      audio.volume = perus();
       return;
     }
     const jaljella = audio.duration - audio.currentTime;
@@ -867,7 +931,7 @@ export function pehmeaLoppu(ui, audio) {
     }
     if (jaljella < LOPUN_HAIPYMA_S) {
       const matka = (jaljella - LOPUN_HILJAISUUS_S) / (LOPUN_HAIPYMA_S - LOPUN_HILJAISUUS_S);
-      audio.volume = perus * Math.max(0, Math.min(1, matka));
+      audio.volume = perus() * Math.max(0, Math.min(1, matka));
     }
     requestAnimationFrame(rullaa);
   };
@@ -889,6 +953,8 @@ export function pehmeaLoppu(ui, audio) {
  * sanaa, koska pause() tuli ilman häivytystä.
  */
 export function haivytaAani(ui, audio, kesto = LUENNAN_HAIPYMA_S * 1000) {
+  // Lukija-liuku ei enää kirjoita tason päälle (paivitaLuentojenVoima).
+  audio.luennanHaivytys = true;
   const perus = audio.volume;
   const t0 = performance.now();
   const askel = (nyt) => {
@@ -999,6 +1065,8 @@ export function haivytaLuenta(ui, kestoMs = 700) {
   // Puhevuoro samassa hetkessä: häivytys on hyvästely eikä saa estää
   // seuraavan paikan ensimmäistä repliikkiä (ks. luovutaPuhevuoro).
   luovutaPuhevuoro(audio);
+  // Lukija-liuku ei enää kirjoita tason päälle (paivitaLuentojenVoima).
+  audio.luennanHaivytys = true;
   const alku = audio.volume;
   const t0 = performance.now();
   const askel = (nyt) => {

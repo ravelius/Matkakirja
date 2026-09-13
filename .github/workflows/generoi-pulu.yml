@@ -77,7 +77,8 @@ on:
       haku:
         description: >-
           aanet: listaa vain äänet, joiden nimessä tämä sana on
-          (esim. "Dr. Von"). Tyhjä = piirrehaku (käheä, nopea).
+          (esim. "Dr. Von"). Voi olla myös voice_id, jolloin haetaan
+          sen nimi suoraan. Tyhjä = piirrehaku (käheä, nopea).
         required: false
         default: ''
       repliikit:

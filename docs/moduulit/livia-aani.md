@@ -686,12 +686,20 @@ toimii ilman ääntä kuten ennenkin.
 ## Ajojärjestys
 
 1. Käytä valittua ääntä `piI8Kku0DcvcL6TTSeQt` ja mallia `eleven_v3`;
-   varmista tarvittava ajolupa sekä rajattu pilottiaineisto.
-2. `toiminto: kuiva` → tarkista tekstit, tagit ja kestot.
-3. `toiminto: generoi`, `aani: piI8Kku0DcvcL6TTSeQt`, `malli: eleven_v3`
-   → luvallinen rajattu ajo ja vienti ämpäriin.
-4. Kuuntele. Tekstin tai äänen muuttuessa: `pakota: kyllä` (tarvittaessa
-   `repliikit: avaus-2,paljastus-1`).
+   varmista ajolupa, jäädytetty aineisto ja yksi nimetty maksullisen ajon omistaja.
+2. Tee kuiva esikatselu. Tarkista näkyvä teksti, täsmällinen TTS-versio
+   tageineen, voice/model/parametrit, sisältötiivisteet ja rajatut repliikkiavaimet.
+   Esikatselun kestoarvio ei vielä ole mitattu äänitteen kesto.
+3. Käytä jo kelvollinen saman sisällön ja asetusten äänite uudelleen.
+   Generoi vain puuttuvat tai perustellusti virheelliset repliikit luvan
+   mukaisena eränä. Epäselvän yrityksen jälkeen tarkista ensin kuitti ja
+   syntynyt objekti; `pakota` ei ole normaali koko aineiston uusintaresepti.
+4. Kuuntele, mittaa ja tarkista versionoidun tuotoksen tiiviste, tavumäärä,
+   kesto, MIME ja CORS etälukuna. Kohdista lopullinen ääni ja tarkista
+   cue-ankkurit. Kirjaa yritys- ja uudelleenkäyttöperusteet ajomanifestiin.
+5. Kytke tarkistettu muuttumaton mediaversio yhteiseen julkaisuehdokkaaseen.
+   Testit, CI, Fablen yhdistäminen/julkaisu ja oikean sovellustilan QA
+   ovat erillisiä portteja. Ämpäriin viety ääni ei yksin ole pelissä.
 
 ## Repliikkien pituus ja ajoitus
 
@@ -703,7 +711,10 @@ repliikki saa puhua loppuun (6.9.2026 muutos). Arvio ei aina osu, ja
 (ks. *Kupla odottaa puheen loppuun*) — lyhyys on silti tavoite, koska
 pitkä kupla seisoo ruudulla pitkään.
 
-Nykytila ja ehdotukset (päätoimittaja päättää; kaanonia ei muuteta täällä):
+Seuraava taulukko on 6.–7.9.2026 mittaus- ja ehdotushistoriaa, ei nykyisen
+Eurooppa-aineiston toimituskiintiö tai käsky muuttaa jo hyväksyttyjä sanoja.
+Ajantasainen kaupunkiparin pituussääntö on Horatio–Livia-tuotantomoduulissa;
+runtime käyttää tarkistetun ääniversion todellista kestoa.
 
 | Avain | Merkkejä | Puhe ~s | Kupla s | Ehdotus (merkkejä) |
 | --- | --- | --- | --- | --- |

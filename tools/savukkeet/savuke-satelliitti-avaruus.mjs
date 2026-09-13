@@ -33,11 +33,47 @@
  *      avausnäkymässä yksikään nimikyltti ei ole näkyvissä, vihreät
  *      pisteet ovat; lähimmässä sallitussa zoomissa nimet näkyvät.
  *   6. PULU PIILOSSA (omistaja 12.9.2026: *"Pulun voisi piilottaa"*):
- *      pöllön nappi, paneeli ja kasvokangas ovat piilossa linssin ajan
- *      ja takaisin näkyvissä sen jälkeen.
+ *      pöllön nappi, paneeli, kuplapino ja kasvokangas ovat piilossa
+ *      linssin ajan ja takaisin näkyvissä sen jälkeen.
  *   7. SULKEMINEN PALAUTTAA PALLON TÄSMÄLLEEN: kamera, pinta,
  *      laattamoottori, ilmakehä, tausta, zoomirajat, karttapinnat,
  *      nimet, pulu ja tähtien poistuminen — eikä pelitila muutu.
+ *   8. MUUT ÄÄNET VAIKENEVAT (omistaja 12.9.2026: *"Kun linssi lähtee
+ *      käyntiin, niin se ei osaa vielä sammuttaa muita ääniä"*).
+ *   9. PELIN OMA RELIEFI on pallon pinnalla (omistaja 12.9.2026:
+ *      *"Katsoitko topografia linssistä… se varmaan sopisi"*).
+ *
+ * ═══════════════ MIKSI TÄMÄ SAVUKE NÄYTTI VIHREÄÄ, KUN PELI OLI
+ *                 RIKKI (12.9.2026) ═══════════════════════════════
+ *
+ * Omistaja: *"Julkaistussa pelissä nimet näkyvät silti avausnäkymässä
+ * päällekkäin"* ja *"Pulun voisi piilottaa"* — ja tämä savuke raportoi
+ * 99/99 läpi. NELJÄ ASIAA MITTASI VÄÄRÄÄ:
+ *
+ *  A. SAVUKE AVASI LINSSIN ERI REITTIÄ KUIN PELAAJA. Se kutsui
+ *     `ui.valitseLinssi('satelliitti')` suoraan. Pelaaja avaa laukun
+ *     (#turn-pill), napauttaa linssiruutua (button[data-linssi]) ja
+ *     painaa Aktivoi (.linssi-aktivoi) — kolme elettä, joista viimeinen
+ *     myös sulkee laukun. Mikään savukkeen väitteistä ei koskenut sitä
+ *     reittiä. NYT LINSSI AVATAAN NAPAUTTAMALLA, ja jos jokin noista
+ *     kolmesta ei löydy, savuke kaatuu.
+ *  B. SAVUKE EI MITANNUT, ETTÄ TYYLI OIKEASTI SAAPUI. Se luki nimien
+ *     `opacity`-arvoa — mutta jos css/satelliitti.css ei ollut
+ *     ladattu lainkaan, opacity olisi 1 ja väite olisi kaatunut…
+ *     paitsi että väite oli "nimiä näkyvissä === 0", ja SE OLISI YHÄ
+ *     LÄPÄISTY, jos nimilaput olisivat jääneet kokonaan syntymättä.
+ *     Nyt mitataan erikseen: tyylitiedosto on ladattu (sheet.cssRules),
+ *     kriittinen inline-tyyli on sivulla, JA nimilappuja on olemassa.
+ *  C. PULUN VÄITE HYVÄKSYI PUUTTUVAN ELEMENTIN. `kasvot === null`
+ *     kelpasi "piilossa"-todisteeksi, joten luokan nimen vaihtuminen
+ *     olisi mennyt läpi hiljaa. Nyt jokainen pinta, joka OLI olemassa
+ *     ennen linssiä, on oltava olemassa ja piilossa linssin aikana.
+ *  D. EI OLLUT VASTAKOETTA. Savuke ei koskaan todistanut, että mittari
+ *     osaa mennä punaiseksi. Nyt jokainen ajo tekee VASTAKOKEEN: se
+ *     riisuu piilotusluokat hetkeksi ja vaatii, että nimet ja pulu
+ *     TULEVAT näkyviin — jos eivät tule, mittari ei mittaa mitään ja
+ *     savuke kaatuu siihen. Vasta sen jälkeen luokat palautetaan ja
+ *     varsinainen väite luetaan.
  *
  * VERKKO: ämpäri (laatat, Globe.gl) Noden fetchin kautta, muu katki.
  */
@@ -137,30 +173,61 @@ const MITAT = () => {
   });
   const ohj = pallo.controls();
   /*
-   * NIMI ON NÄKYVISSÄ, JOS SEN PEITTÄVYYS ON YLI NOLLAN. Nimet
-   * häivytetään opacityllä eikä displaylla (css/satelliitti.css), joten
-   * laatikko on olemassa myös piilossa — pelkkä rect ei siis kelpaa.
+   * NÄKYVYYS LUETAAN MAALATUSTA TULOKSESTA, EI YHDESTÄ OMINAISUUDESTA
+   * (ks. tiedoston alku, kohta B). Nimi on näkyvissä vain jos KAIKKI
+   * pitää paikkansa: peittävyys yli nollan koko esivanhempien ketjussa,
+   * visibility ja display sallivat, laatikolla on kokoa JA se on
+   * ruudulla. Yksi näistä yksin ei kerro, näkeekö pelaaja lapun.
    */
+  const maalattu = (el) => {
+    let p = el;
+    while (p && p.nodeType === 1) {
+      const t = getComputedStyle(p);
+      if (t.display === 'none' || t.visibility === 'hidden' || Number(t.opacity) <= 0.05) return false;
+      p = p.parentElement;
+    }
+    const r = el.getBoundingClientRect();
+    return r.width > 0 && r.height > 0
+      && r.bottom > 0 && r.top < innerHeight && r.right > 0 && r.left < innerWidth;
+  };
   let nimiaNakyvissa = 0;
   let nimiaYhteensa = 0;
   for (const el of document.querySelectorAll('.satelliitti-nimi')) {
-    const merkki = el.closest('.pallolauta-merkki');
+    const merkki = el.closest('.pallolauta-merkki') ?? el.closest('.satelliitti-piste');
     if (merkki?.classList?.contains('pallolauta-takana')) continue;
     nimiaYhteensa += 1;
-    if (Number(getComputedStyle(el).opacity) > 0.05) nimiaNakyvissa += 1;
+    if (maalattu(el)) nimiaNakyvissa += 1;
+  }
+  /*
+   * TYYLIN SAAPUMINEN ON OMA MITTARINSA. Pelkkä body-luokka ei piilota
+   * mitään, jos sääntöä ei ole sivulla — ja juuri se oli epäilty vika.
+   * Kriittiset piilotukset ovat inline-tyylissä (satelliitti-kriittinen)
+   * ja koko ulkoasu linkissä (satelliitti-tyyli): molemmat mitataan.
+   */
+  const kriittinen = document.getElementById('satelliitti-kriittinen');
+  const linkki = document.getElementById('satelliitti-tyyli');
+  let tyylisaantoja = 0;
+  for (const arkki of document.styleSheets) {
+    if (!/satelliitti\.css/.test(arkki.href ?? '')) continue;
+    try { tyylisaantoja = arkki.cssRules?.length ?? 0; } catch { tyylisaantoja = -1; }
   }
   const puluNakyy = (valitsin) => {
     const el = document.querySelector(valitsin);
     if (!el) return null;
-    const t = getComputedStyle(el);
-    return t.visibility !== 'hidden' && t.display !== 'none';
+    return maalattu(el);
   };
   return {
     nimiaNakyvissa,
     nimiaYhteensa,
+    kriittinenTyyli: Boolean(kriittinen?.textContent?.includes('satelliitti-nimet')),
+    tyylilinkki: Boolean(linkki),
+    tyylisaantoja,
     puluNappi: puluNakyy('.pollo-nappi'),
+    puluPaneeli: puluNakyy('.pollo-paneeli'),
+    puluKuplapino: puluNakyy('.pollo-kuplapino'),
     puluKasvot: puluNakyy('.livia-kasvot-pinta'),
     puluPiilossa: document.body.classList.contains('aikajana-pulu-piilossa'),
+    aanetHiljaa: Boolean(ui.pallolinssi?.kahva?.aanet?.hiljaa?.()),
     korkeus: +pov.altitude.toFixed(3), lat: +pov.lat.toFixed(3), lng: +pov.lng.toFixed(3),
     leveys: Math.round(kotelo.width), rkorkeus: Math.round(kotelo.height),
     halkaisija: Math.round(halkaisija),
@@ -217,6 +284,13 @@ async function avaaPeli(s) {
     game.player.pos = { type: 'city', city: 'ateena' };
     game.world.visited.add('ateena');
     game.phase = 'action';
+    /*
+     * LINSSI LAUKKUUN. Pelaaja löytää sen pelistä (js/linssit/omistus.js);
+     * savuke ei pelaa sitä läpi vaan antaa linssin samalla kentällä,
+     * johon myonna() sen kirjoittaa. AVAAMINEN tehdään sen jälkeen
+     * pelaajan omilla eleillä (avaaLinssiEleella).
+     */
+    game.player.linssit = [...(game.player.linssit ?? []), 'satelliitti'];
     ui.render();
   });
   const ok = await s.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 60000 })
@@ -235,6 +309,63 @@ async function avaaPeli(s) {
   });
   await s.waitForTimeout(1200);
   return ok;
+}
+
+/*
+ * LINSSI AUKI PELAAJAN OMILLA ELEILLÄ (ks. tiedoston alku, kohta A).
+ *
+ * Kolme napautusta, samat kuin pelaajalla:
+ *   1. #turn-pill avaa matkalaukun (js/ui.js, index.html),
+ *   2. button[data-linssi="satelliitti"] valitsee ruudun laukussa
+ *      (js/ui.js linssiLiuska) — tämä EI vielä sytytä linssiä,
+ *   3. .linssi-aktivoi sytyttää sen ja sulkee laukun (aktivoiLinssi).
+ *
+ * Jos jokin näistä puuttuu, savuke kaatuu tähän — ja juuri se on
+ * tarkoitus: silloin pelaaja ei pääse linssiin lainkaan, eikä muilla
+ * väitteillä ole väliä.
+ */
+async function avaaLinssiEleella(s) {
+  await s.click('#turn-pill');
+  await s.waitForTimeout(1200);
+  const ruutu = s.locator('button[data-linssi="satelliitti"]');
+  await ruutu.waitFor({ timeout: 15000 });
+  await ruutu.scrollIntoViewIfNeeded();
+  await ruutu.click();
+  await s.waitForTimeout(700);
+  const aktivoi = s.locator('.linssi-aktivoi');
+  await aktivoi.waitFor({ timeout: 15000 });
+  await aktivoi.scrollIntoViewIfNeeded();
+  await aktivoi.click();
+  await s.waitForTimeout(4500);
+  return s.evaluate(() => ({
+    linssi: window.matkakirja.ui.linssiValittu,
+    laukku: Boolean(document.getElementById('passport-dialog')?.open),
+  }));
+}
+
+/*
+ * VASTAKOE (ks. tiedoston alku, kohta D): riisu piilotusluokat ja
+ * todista, että nimet ja pulu TULEVAT näkyviin. Jos eivät tule,
+ * mittari ei mittaa näkyvyyttä lainkaan ja kaikki vihreä on valhetta.
+ * Luokat palautetaan täsmälleen ennalleen.
+ */
+async function vastakoe(s) {
+  const ennen = await s.evaluate(() => {
+    const b = document.body.classList;
+    const oli = { pulu: b.contains('aikajana-pulu-piilossa') };
+    b.remove('aikajana-pulu-piilossa');
+    b.add('satelliitti-nimet');
+    return oli;
+  });
+  await s.waitForTimeout(700);
+  const nakyi = await s.evaluate(MITAT);
+  await s.evaluate((oli) => {
+    const b = document.body.classList;
+    if (oli.pulu) b.add('aikajana-pulu-piilossa');
+    b.remove('satelliitti-nimet');
+  }, ennen);
+  await s.waitForTimeout(700);
+  return nakyi;
 }
 
 async function ajaNakyma(nimi) {
@@ -264,11 +395,26 @@ async function ajaNakyma(nimi) {
   const ennen = await s.evaluate(MITAT);
   await kaappaa('0-peli');
 
-  await s.evaluate(() => window.matkakirja.ui.valitseLinssi('satelliitti'));
-  await s.waitForTimeout(4500);
+  const ele = await avaaLinssiEleella(s);
+  vaadi(t('linssi aukeaa pelaajan omalla eleellä (laukku → ruutu → Aktivoi)'),
+    ele.linssi === 'satelliitti' && ele.laukku === false,
+    `linssi ${ele.linssi}, laukku auki ${ele.laukku}`);
   await rauhoitu(s);
   const linssi = await s.evaluate(MITAT);
   await kaappaa('1-linssi');
+
+  /* 0. mittari itse: tyyli on sivulla ja vastakoe menee punaiseksi */
+  vaadi(t('kriittinen piilotustyyli on sivulla ilman verkkoa'),
+    linssi.kriittinenTyyli, `inline-tyyli ${linssi.kriittinenTyyli}`);
+  vaadi(t('css/satelliitti.css on oikeasti ladattu'),
+    linssi.tyylilinkki && linssi.tyylisaantoja !== 0,
+    `linkki ${linssi.tyylilinkki}, sääntöjä ${linssi.tyylisaantoja}`);
+  const vastassa = await vastakoe(s);
+  vaadi(t('VASTAKOE: mittari näkee nimet, kun piilotus riisutaan'),
+    vastassa.nimiaNakyvissa > 0,
+    `${vastassa.nimiaNakyvissa}/${vastassa.nimiaYhteensa} — nolla tarkoittaisi, ettei mittari mittaa mitään`);
+  vaadi(t('VASTAKOE: mittari näkee pulun, kun piilotus riisutaan'),
+    vastassa.puluNappi === true, `nappi ${vastassa.puluNappi}`);
 
   /* 1. avausnäkymä */
   vaadi(t('koko pallo mahtuu ruutuun'),
@@ -320,8 +466,15 @@ async function ajaNakyma(nimi) {
   vaadi(t('nimet syttyvät lähizoomissa'),
     lahella.nimiaNakyvissa > 0,
     `${lahella.nimiaNakyvissa}/${lahella.nimiaYhteensa} nimeä näkyvissä korkeudella ${lahella.korkeus}`);
-  vaadi(t('lähizoomissa kaikki kameran puolen nimet ovat esillä'),
-    lahella.nimiaNakyvissa === lahella.nimiaYhteensa,
+  /*
+   * "KAIKKI KAMERAN PUOLEN NIMET" EI OLE ENÄÄ OIKEA VÄITE: lähimmässä
+   * zoomissa pallo on 1 500–2 500 px leveä, joten suuri osa kameran
+   * puolen kohteista on ruudun ULKOPUOLELLA — ja mittari lukee nyt
+   * myös ruutupaikan (ks. maalattu). Väite on siksi se, mikä
+   * pelaajalle merkitsee: ruudulla olevat nimet näkyvät.
+   */
+  vaadi(t('lähizoomissa nimiä on esillä useampi kuin yksi'),
+    lahella.nimiaNakyvissa >= 2,
     `${lahella.nimiaNakyvissa}/${lahella.nimiaYhteensa}`);
 
   // Takaisin avausnäkymään: nimet sammuvat uudestaan (hystereesi ei jumita).
@@ -339,19 +492,43 @@ async function ajaNakyma(nimi) {
     `${takaisin.nimiaNakyvissa}/${takaisin.nimiaYhteensa}`);
 
   /* 6. pulu piilossa */
-  vaadi(t('pulu on piilossa linssin ajan'),
-    linssi.puluPiilossa && linssi.puluNappi === false
-      && (linssi.puluKasvot === false || linssi.puluKasvot === null),
-    `luokka ${linssi.puluPiilossa}, nappi ${linssi.puluNappi}, kasvot ${linssi.puluKasvot}`);
+  /*
+   * PUUTTUVA ELEMENTTI EI OLE TODISTE (ks. tiedoston alku, kohta C):
+   * jokainen pinta, joka OLI olemassa ennen linssiä, on oltava olemassa
+   * ja piilossa linssin aikana. Aiempi väite hyväksyi nullin.
+   */
+  const puluPinnat = ['puluNappi', 'puluPaneeli', 'puluKuplapino', 'puluKasvot'];
+  const puluJaiNakyviin = puluPinnat.filter((k) => ennen[k] !== null && linssi[k] !== false);
+  vaadi(t('pulu on piilossa linssin ajan — jokainen pinta erikseen'),
+    linssi.puluPiilossa && puluJaiNakyviin.length === 0,
+    `luokka ${linssi.puluPiilossa}, jäi näkyviin: ${puluJaiNakyviin.join(', ') || 'ei mitään'}`
+    + ` (${puluPinnat.map((k) => `${k} ${ennen[k]}→${linssi[k]}`).join(', ')})`);
   vaadi(t('pulu näkyi ennen linssiä'), ennen.puluNappi === true,
     `nappi ${ennen.puluNappi}`);
 
+  /* 8. muut äänet vaikenevat */
+  vaadi(t('linssi vaiensi muut äänet'), linssi.aanetHiljaa === true,
+    `hiljennys ${linssi.aanetHiljaa}`);
+
+  /* 9. pelin oma reliefi pallon pinnalla */
+  vaadi(t('pallon pinta on pelin oma reliefi eikä pelkkä vyöhykeväri'),
+    linssi.avaruus?.reliefi === true,
+    `reliefi ${linssi.avaruus?.reliefi}, generoitu ${linssi.avaruus?.tekstuuri}`);
+
   /* 4. kapea zoom ja pyöritys */
-  vaadi(t('zoom ei päästä pintaan'), linssi.minKorkeus > 0.5,
+  /*
+   * YKSI TASO LISÄÄ (omistaja 12.9.2026). Lähin raja laski 0,55 ×
+   * avauksesta 0,12 × avaukseen, pohjana absoluuttinen 0,1 (noin
+   * 640 km). Pintaan ei silti sukelleta.
+   */
+  vaadi(t('zoom ei päästä pintaan'), linssi.minKorkeus >= 0.099,
     `lähin korkeus ${linssi.minKorkeus}`);
+  vaadi(t('zoomissa on yksi taso lisää'), linssi.minKorkeus < linssi.korkeus * 0.5,
+    `lähin ${linssi.minKorkeus}, avaus ${linssi.korkeus}`);
   vaadi(t('zoom ei kadota palloa'), linssi.maxKorkeus < linssi.korkeus * 1.4,
     `kauin korkeus ${linssi.maxKorkeus}, avaus ${linssi.korkeus}`);
-  vaadi(t('zoomikaista on kapea'), linssi.maxKorkeus / linssi.minKorkeus < 3,
+  vaadi(t('zoomikaista on yhä pelin omaa kapeampi'),
+    linssi.maxKorkeus / linssi.minKorkeus < 15,
     `${linssi.minKorkeus}…${linssi.maxKorkeus}`);
 
   // Pyöritys: vaakaveto pallon yli muuttaa pituuspiiriä mutta ei korkeutta.
@@ -399,6 +576,8 @@ async function ajaNakyma(nimi) {
   vaadi(t('pulu palasi ruudulle'),
     jalkeen.puluNappi === ennen.puluNappi && !jalkeen.puluPiilossa,
     `nappi ${jalkeen.puluNappi}, luokka ${jalkeen.puluPiilossa}`);
+  vaadi(t('äänet palasivat sulkemisen jälkeen'), jalkeen.aanetHiljaa === false,
+    `hiljennys ${jalkeen.aanetHiljaa}`);
   vaadi(t('nimiluokka ei jäänyt bodyyn'),
     !(await s.evaluate(() => document.body.classList.contains('satelliitti-nimet'))));
   vaadi(t('pelitila ei muuttunut'), peliEnnen === peliJalkeen);

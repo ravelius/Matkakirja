@@ -178,6 +178,23 @@ const KUVAT = [
    * Toiminta kerrotaan aalloilla, jotka tulevat kartan kaupungeista
    * laitteeseen.
    */
+  /*
+   * Astronautin kamera (entinen satelliittilinssi, nimi vaihtui
+   * 12.9.2026). Linssi näyttää ihmisen avaruudesta ottamia VALOKUVIA
+   * Maasta, joten kuvakkeen on kerrottava kaksi asiaa: kamera ja se,
+   * että katse tulee ylhäältä. Lasia ei käytetä — muut linssit ovat
+   * suurennuslaseja, ja tämä erottuu sarjasta juuri siksi, ettei se
+   * ole lasi vaan kamera. Sama ratkaisu kuin radiolla.
+   */
+  ['satelliitti', 'a sturdy vintage film camera with a large round '
+    + `lens seen from directly above, resting on ${KARTTA}; inside the `
+    + 'round camera lens the parchment map gives way to a small vivid '
+    + 'full-color photograph of the curved blue Earth seen from space, '
+    + 'with white clouds, a brown desert coastline and a thin bright '
+    + 'blue rim of atmosphere along the curve; that photograph is the '
+    + 'one strong accent color in an otherwise brown and cream '
+    + 'picture; no stars, no astronaut, no spacecraft, no satellite, '
+    + 'nothing written on the camera'],
   ['radio', 'a small antique wooden valve radio set with a brass '
     + `tuning dial and a warmly glowing amber tuning scale, standing on ${KARTTA} `
     + 'whose sepia coastlines stay clearly visible around it; three '

@@ -88,11 +88,24 @@ const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
 
+/*
+ * KOLME PYSTYÄ JA KOLME VAAKAA (omistaja 12.9.2026: *"Korjaa vaaka
+ * näkymä"*). Vaakanäkymä oli rikki juuri siksi, ettei sitä mitattu:
+ * kortti oli rakennettu pystyruudulle, ja matalassa ruudussa yläpalkki
+ * ja kuva menivät päällekkäin, kaksirivinen alapalkki söi kuvan
+ * alakolmanneksen ja napit hajosivat neljään nurkkaan.
+ */
 const NAKYMAT = {
   tyopoyta: { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 },
   ipad: { viewport: { width: 834, height: 1194 }, deviceScaleFactor: 2, hasTouch: true },
   puhelin: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, hasTouch: true },
+  puhelinvaaka: { viewport: { width: 844, height: 390 }, deviceScaleFactor: 2, hasTouch: true },
+  ipadvaaka: { viewport: { width: 1194, height: 834 }, deviceScaleFactor: 2, hasTouch: true },
+  pienivaaka: { viewport: { width: 740, height: 360 }, deviceScaleFactor: 2, hasTouch: true },
 };
+
+/** Onko ruutu vaakatasossa (leveämpi kuin korkeampi)? */
+const vaaka = (nimi) => NAKYMAT[nimi].viewport.width > NAKYMAT[nimi].viewport.height;
 
 const tulokset = [];
 const vaadi = (nimi, ok, lisa = '') => {
@@ -545,30 +558,91 @@ async function ajaNakyma(nakymanNimi) {
       kuvaKorkeus: r ? Math.round(r.height) : null,
       ruutu: [Math.round(kr?.width ?? 0), Math.round(kr?.height ?? 0)],
       ikkuna: [window.innerWidth, window.innerHeight],
-      leima: katselu?.querySelector('.satelliitti-leima')?.textContent ?? null,
+      otsake: katselu?.querySelector('.satelliitti-otsake-nimi')?.textContent ?? null,
+      otsakeAika: katselu?.querySelector('.satelliitti-otsake-aika')?.textContent ?? null,
+      /*
+       * VAAKANÄKYMÄN KOLME MITTAA (12.9.2026). Kaikki kolme olivat
+       * rikki 844 × 390:llä ennen korjausta, ks. NAKYMAT.
+       */
+      kuvaPalkinAlla: (() => {
+        const pr = document.querySelector('.satelliittipalkki')?.getBoundingClientRect();
+        return Boolean(r && pr && r.top < pr.bottom - 0.5 && r.bottom > pr.top);
+      })(),
+      kuvaAlapalkinAlla: (() => {
+        const ar = document.querySelector('.satelliitti-ala')?.getBoundingClientRect();
+        return Boolean(r && ar && r.left < ar.right && ar.left < r.right
+          && r.top < ar.bottom && ar.top < r.bottom);
+      })(),
+      kuvaKokonaan: Boolean(r && r.top >= -0.5 && r.bottom <= window.innerHeight + 0.5
+        && r.left >= -0.5 && r.right <= window.innerWidth + 0.5),
       tekstit,
       popupeja: document.querySelectorAll('.satelliitti-popup').length,
       palkinKohde: document.querySelector('.satelliittipalkki-kohde')?.textContent ?? null,
       palkinKorkeus: document.querySelector('.satelliittipalkki')?.getBoundingClientRect().height ?? null,
+      /*
+       * PALKIN ALAREUNA, EI PELKKÄ KORKEUS (12.9.2026). Palkki on
+       * KARTTARUUDUN sisällä ja alkaa pelin kehyksen verran alempaa
+       * kuin ikkuna, joten korkeus yksin ei kerro, mistä kortin pitää
+       * alkaa — juuri siitä syntyi vaakanäkymän 11 px:n limitys.
+       */
+      palkinAla: document.querySelector('.satelliittipalkki')?.getBoundingClientRect().bottom ?? 0,
+      // Kuvan oma alue (lava). Vaakanäkymässä se on kapeampi kuin
+      // kortti, koska hallintasarake vie oikean laidan.
+      lava: (() => {
+        const b = katselu?.querySelector('.satelliitti-lava')?.getBoundingClientRect();
+        return b ? [Math.round(b.width), Math.round(b.height)] : null;
+      })(),
     };
   });
   const lyhyempi = Math.min(kokoruutu.ikkuna[0], kokoruutu.ikkuna[1]);
   // Ikkuna alkaa linssin yläpalkin alta (kohteen nimi on palkissa), ja
   // kuva täyttää kaiken sen alapuolelta.
-  const tayttoaste = Math.max(kokoruutu.kuvaLeveys / kokoruutu.ruutu[0],
-    kokoruutu.kuvaKorkeus / kokoruutu.ruutu[1]);
+  /*
+   * TÄYTTÖASTE MITATAAN KUVAN OMASTA ALUEESTA (lava), ei koko kortista.
+   * Vaakanäkymässä hallintasarake vie oikean laidan (ks. NAKYMAT), eikä
+   * kuva voi silloin täyttää koko ikkunan leveyttä — se täyttää sen,
+   * mikä sille kuuluu, ja mahtuu kokonaan.
+   */
+  const alue = kokoruutu.lava ?? kokoruutu.ruutu;
+  const tayttoaste = Math.max(kokoruutu.kuvaLeveys / alue[0], kokoruutu.kuvaKorkeus / alue[1]);
   vaadi(nimessa('kuva avautuu heti koko ruudun peittäväksi, oma kuvasuhde säilyy'),
     kokoruutu.auki && kokoruutu.ladattu > 0 && tayttoaste > 0.98
       && kokoruutu.kuvaKorkeus <= kokoruutu.ruutu[1] + 1
       && kokoruutu.ruutu[0] === kokoruutu.ikkuna[0]
-      && kokoruutu.ruutu[1] >= kokoruutu.ikkuna[1] - (kokoruutu.palkinKorkeus ?? 0) - 1
+      && kokoruutu.ruutu[1] >= kokoruutu.ikkuna[1] - (kokoruutu.palkinAla ?? 0) - 1
       && /images-assets\.nasa\.gov/.test(kokoruutu.osoite ?? ''),
     JSON.stringify({ ...kokoruutu, tekstit: kokoruutu.tekstit.slice(0, 6), tayttoaste: Number(tayttoaste.toFixed(2)), lyhyempi }));
-  vaadi(nimessa('kuvan päällä ei ole tekstiä ennen info-nappia — vain lähdeleima'),
-    kokoruutu.leima === 'Valokuva avaruudesta · NASA'
+  /*
+   * KUVAN OTSIKKO JA KUVAUSPÄIVÄ (omistaja 12.9.2026: *"Tuossa
+   * ylälaidassa oleva teksti pitää korvata kuvan otsikolla, eli mitä
+   * kuvassa on. Ja sen alle voisi lisätä kuvauspäivämäärän"*).
+   * NASA-leima on poissa kuvan päältä ja tiedot ovat info-napin takana.
+   */
+  vaadi(nimessa('kuvan päällä on kohteen nimi ja kuvauspäivä, ei arkistoleimaa'),
+    kokoruutu.otsake === 'Saharan silmä'
+      && /^\d{1,2}\.\d{1,2}\.\d{4}/.test(kokoruutu.otsakeAika ?? '')
       && kokoruutu.popupeja === 0
-      && kokoruutu.tekstit.every((t) => t === 'Valokuva avaruudesta · NASA'),
-    JSON.stringify(kokoruutu.tekstit));
+      && kokoruutu.tekstit.every((t) => t === kokoruutu.otsake || t === kokoruutu.otsakeAika),
+    JSON.stringify({ otsake: kokoruutu.otsake, aika: kokoruutu.otsakeAika, tekstit: kokoruutu.tekstit }));
+  /*
+   * KELLONAIKAA EI KEKSITÄ: NASA merkitsee useimmiten vain päivän, ja
+   * silloin ruudulla on vain päivä. Kello näkyy vain, jos aineistossa
+   * on T-osa — ja silloin aikavyöhyke sanotaan ääneen.
+   */
+  vaadi(nimessa('kuvauspäivässä ei ole keksittyä kellonaikaa'),
+    !/klo/.test(kokoruutu.otsakeAika ?? '') || /UTC/.test(kokoruutu.otsakeAika ?? ''),
+    String(kokoruutu.otsakeAika));
+
+  /* --- 5b. VAAKANÄKYMÄ: kuva mahtuu, palkit eivät peitä ------------- */
+  vaadi(nimessa('yläpalkki ja kuva eivät mene päällekkäin'),
+    kokoruutu.kuvaPalkinAlla === false,
+    JSON.stringify({ palkinAlla: kokoruutu.kuvaPalkinAlla }));
+  if (vaaka(nakymanNimi)) {
+    vaadi(nimessa('vaakanäkymässä kuva mahtuu kokonaan eikä jää alapalkin alle'),
+      kokoruutu.kuvaKokonaan === true && kokoruutu.kuvaAlapalkinAlla === false,
+      JSON.stringify({ kokonaan: kokoruutu.kuvaKokonaan, alapalkinAlla: kokoruutu.kuvaAlapalkinAlla,
+        kuva: [kokoruutu.kuvaLeveys, kokoruutu.kuvaKorkeus], ikkuna: kokoruutu.ikkuna }));
+  }
   vaadi(nimessa('kohteen nimi on VAIN yläpalkissa eikä palkin korkeus muutu'),
     kokoruutu.palkinKohde === 'Saharan silmä'
       && Math.abs((kokoruutu.palkinKorkeus ?? 0) - (palkki.omaKorkeus ?? 0)) < 0.5,
@@ -608,18 +682,41 @@ async function ajaNakyma(nakymanNimi) {
       valiNuoleen: sulku && r('.satelliitti-seuraava') ? sulku.x - r('.satelliitti-seuraava').oikea : null,
     };
   });
-  vaadi(nimessa('sulkuristi on alaoikealla, ≥ 44 px, irti reunasta eikä minkään alla'),
-    napit.sulku && napit.sulku.w >= 44 && napit.sulku.h >= 44
+  /*
+   * SULKURISTI EI SAA JÄÄDÄ PIKKUKUVIEN ALLE EIKÄ TULLA PAINETUKSI
+   * VAHINGOSSA OTOKSIA SELATESSA (omistajan vaatimus 12.9.2026) —
+   * molemmissa suunnissa. Pystyssä se on omalla rivillään alaoikealla;
+   * vaakassa hallintasarakkeen ALIMPANA, selvästi pikkukuvien alapuolella.
+   */
+  const sulkuVali = vaaka(nakymanNimi)
+    ? (napit.sulku && napit.nauha ? napit.sulku.y - napit.nauha.ala : null)
+    : (napit.valiNuoleen ?? napit.valiInfoon);
+  vaadi(nimessa('sulkuristi on peukalon kulmassa, ≥ 38 px, eikä minkään alla'),
+    napit.sulku && napit.sulku.w >= 38 && napit.sulku.h >= 38
       && napit.ikkuna[0] - napit.sulku.oikea >= 6 && napit.ikkuna[0] - napit.sulku.oikea <= 30
       && napit.ikkuna[1] - napit.sulku.ala <= 30
       && napit.sulku.x > napit.ikkuna[0] / 2
       && !napit.sulkuNauhanAlla && !napit.sulkuPikkujenAlla && !napit.sulkuInfonAlla
-      && (napit.valiNuoleen ?? napit.valiInfoon) >= 8,
-    JSON.stringify(napit));
-  vaadi(nimessa('pikkukuvat ovat kuvan päällä alareunassa'),
-    napit.nauha && napit.nauha.ala <= napit.ikkuna[1]
-      && napit.nauha.y > napit.ikkuna[1] * 0.6,
-    JSON.stringify(napit.nauha));
+      && (sulkuVali ?? 0) >= 8,
+    JSON.stringify({ ...napit, sulkuVali }));
+  /*
+   * PIKKUKUVIEN PAIKKA RIIPPUU RUUDUN SUUNNASTA (12.9.2026).
+   * Pystyruudussa ne ovat kuvan päällä alareunassa, kuten omistaja
+   * tilasi. Vaakaruudussa kuva täyttää koko korkeuden, joten mikään ei
+   * mahdu sen päälle mitään peittämättä: nauha on silloin oikeassa
+   * laidassa omassa hallintasarakkeessaan (css/satelliitti.css).
+   */
+  if (vaaka(nakymanNimi)) {
+    vaadi(nimessa('vaakanäkymässä pikkukuvat ovat oikeassa hallintasarakkeessa'),
+      napit.nauha && napit.nauha.x > napit.ikkuna[0] * 0.7
+        && napit.nauha.oikea <= napit.ikkuna[0],
+      JSON.stringify(napit.nauha));
+  } else {
+    vaadi(nimessa('pikkukuvat ovat kuvan päällä alareunassa'),
+      napit.nauha && napit.nauha.ala <= napit.ikkuna[1]
+        && napit.nauha.y > napit.ikkuna[1] * 0.6,
+      JSON.stringify(napit.nauha));
+  }
 
   /* --- 7. Sormizoom: ele ei vuoda pallolle, katto pitää, nollautuu -- */
   const kameraEnnen = await s.evaluate(KAMERA);
@@ -886,7 +983,7 @@ async function ajaNakyma(nakymanNimi) {
   await konteksti.close();
 }
 
-for (const nakyma of (process.env.NAKYMAT ? process.env.NAKYMAT.split(',') : ['tyopoyta', 'ipad', 'puhelin'])) {
+for (const nakyma of (process.env.NAKYMAT ? process.env.NAKYMAT.split(',') : ['tyopoyta', 'ipad', 'puhelin', 'puhelinvaaka', 'ipadvaaka', 'pienivaaka'])) {
   // eslint-disable-next-line no-await-in-loop
   await ajaNakyma(nakyma);
 }

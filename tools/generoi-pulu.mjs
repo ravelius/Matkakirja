@@ -31,6 +31,8 @@
  *   --ei-vientia     generoi ja viimeistele, mutta jätä levylle.
  *   --tempo <luku>   puheen nopeutus ffmpegillä (oletus TEMPO).
  *   --haku <nimi>    --aanet: listaa vain äänet, joiden nimessä on <nimi>.
+ *                    Jos arvo on voice_id (20 merkkiä), haetaan nimi
+ *                    suoraan tunnuksella.
  *
  * ------------------------------------------------------------------
  * MIKSI TEMPO TEHDÄÄN FFMPEGILLÄ
@@ -212,9 +214,24 @@ const PUHE_OSOITE = `${API}/v1/text-to-speech`;
  * omistaja näkee ElevenLabsin sivulla.
  */
 const VAKAUDET = Object.freeze({ creative: 0, natural: 0.5, robust: 1 });
-const MALLI = process.env.PULU_MALLI ?? 'eleven_multilingual_v2';
-/** "Dr. Von - Quirky, Mad Scientist" (omistajan valinta 6.9.2026, haettu --haku "Dr. Von"). */
-export const PULU_AANI_OLETUS = process.env.PULU_AANI ?? 'yjJ45q8TVCrtMhEKurxY';
+/*
+ * MALLI ON NYT V3 (omistajan päätös 12.9.2026, sanatarkasti: *"käytetään
+ * tätä jatkossa pulun ääneen: piI8Kku0DcvcL6TTSeQt (flicker - cheerful
+ * fairy & sparkly sweetness). tallenna raamattuun. V3 moottori"*).
+ *
+ * V3 ei ole tekninen yksityiskohta vaan osa päätöstä: vain se ymmärtää
+ * hakasulkutagit, ja samoilla tageilla on tarkoitus myöhemmin ohjata
+ * pulun animaatiota. Ympäristömuuttuja jää, jotta vanhaan malliin voi
+ * palata yhdellä ajolla ilman koodimuutosta.
+ */
+const MALLI = process.env.PULU_MALLI ?? 'eleven_v3';
+/**
+ * "Flicker - cheerful fairy & sparkly sweetness" (omistajan päätös
+ * 12.9.2026). Kumoaa 6.9.2026 valitun Dr. Vonin
+ * (yjJ45q8TVCrtMhEKurxY) ja kaksi saman päivän koeääntä: Amelia
+ * (ZF6FPAbjXT4488VcRRnw) ja Cherry Twinkle (XJ2fW4ybq7HouelYYGcL).
+ */
+export const PULU_AANI_OLETUS = process.env.PULU_AANI ?? 'piI8Kku0DcvcL6TTSeQt';
 const TAGIT_KAYTOSSA = MALLI === 'eleven_v3';
 const STABILITY = process.env.PULU_VAKAUS
   ? (VAKAUDET[process.env.PULU_VAKAUS] ?? Number(process.env.PULU_VAKAUS))
@@ -929,6 +946,24 @@ async function haeAanet(avain, haku = '') {
    */
   const nimiOsuu = (aani) => !haku
     || String(aani?.name ?? '').toLowerCase().includes(haku.toLowerCase());
+  /*
+   * HAKU TUNNUKSELLA (12.9.2026). Omistaja kysyi: *"minkä niminen uusin
+   * pulun ääni on?"* — hän oli antanut ajolle voice_id:n eikä nimeä, ja
+   * nimi jää silloin kirjaamatta mihinkään. Nimihaku ei auta, koska se
+   * etsii nimestä; tunnuksesta nimeen pääsee vain rajapinnan omalla
+   * osoitteella /v1/voices/<id>. Tunnus tunnistetaan muodosta: 20
+   * merkkiä kirjaimia ja numeroita ilman välilyöntejä.
+   */
+  if (/^[A-Za-z0-9]{20}$/.test(haku)) {
+    try {
+      const aani = await haeJson(`${API}/v1/voices/${haku}`, avain);
+      console.log(`TUNNUS ${haku}\n`);
+      tulostaAani(aani, osuvatPiirteet(aani));
+      return;
+    } catch (virhe) {
+      console.log(`Tunnuksella ${haku} ei löytynyt ääntä (${virhe.message}); haetaan nimellä.\n`);
+    }
+  }
   console.log(haku ? `HAKU NIMELLÄ "${haku}"\n` : 'OMAT ÄÄNET (/v1/voices)\n');
   const omat = await haeJson(`${API}/v1/voices`, avain);
   let omia = 0;
