@@ -134,16 +134,14 @@ test('YDINSETILLÄ EI OLE POIKKEUSTA: tehoste ja huudahdus tulevat ämpäristä'
   nollaaPeili();
 });
 
-test('hyväksytyt 12 Horatio-luentaa käyttävät muuttumattomia tuotantoavaimia', () => {
-  assert.equal(Object.keys(VERSIOIDUT_HORATIO_AANET).length, 12);
+test('hyväksytyt 45 Horatio-luentaa käyttävät muuttumattomia tuotantoavaimia', () => {
+  assert.equal(Object.keys(VERSIOIDUT_HORATIO_AANET).length, 45);
   for (const [nimi, polku] of Object.entries(VERSIOIDUT_HORATIO_AANET)) {
     assert.equal(aaniUrl(`assets/audio/${nimi}`), `${AANI_JUURI}${polku}`, nimi);
     assert.match(polku,
       /^audio\/versions\/horatio\/[0-9a-f]{12}\/horatio-[0-9a-f]{20}\/puhe-fokus-matkakirja-.+\.mp3$/);
     assert.doesNotMatch(aaniUrl(`assets/audio/${nimi}`), /\?v=/);
   }
-  assert.match(aaniUrl('assets/audio/puhe-fokus-matkakirja-lontoo.mp3'),
-    /audio\/puhe-fokus-matkakirja-lontoo\.mp3\?v=2$/);
 });
 
 test('VARTIO: repossa ei ole yhtään äänitiedostoa', () => {
