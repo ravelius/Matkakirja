@@ -18,6 +18,34 @@ tehtäväalueisiin — ei sessio-id:ihin eikä tiliin. Omistaja kehittää
 peliä kahdella tilillä; uusi sessio kummalla tahansa tilillä lukee
 tämän ja ottaa roolinsa tästä. Omistaja ohjaa kaikkea Fablen kautta.)*
 
+## Horatio–Livia-hankkeen työnjako (12.9.2026)
+
+Tämän rajatun hankkeen yhteinen lähde on
+`docs/moduulit/horatio-livia-tuotanto.md`. Hankekohtainen työnjako
+täydentää alla olevia yleisrooleja muuttamatta muiden ominaisuuksien tai
+projektien omistajuutta:
+
+- **Tekstivetäjä:** omistaa kaupunkiparin toimituksellisen suunnitelman,
+  molempien hahmojen tekstit, puheen tunnetagit, kuva-aiheiden merkityksen,
+  lyhyet ja pitkät kuvatekstit sekä animaation semanttiset cue-ohjeet.
+- **Kuvavetäjä:** omistaa referenssit, kuvageneroinnin, visuaalisen
+  tarkistuksen, oikeudet ja versioidut kuvat. Lopulliset kuvatekstit
+  tarkistetaan valmistuneista kuvista yhdessä tekstivetäjän kanssa.
+- **Animaatiovetäjä:** omistaa Pulun perusilmeen, eleet, teknisen ohjaimen,
+  synkronoinnin, keskeytykset ja animaation regressio-QA:n. Hän toteuttaa
+  tekstivetäjän merkitysohjeet eikä kirjoita tarinaa tai tuota kuvia.
+  Hän on myös tekninen paketointivastaava: kokoaa hyväksytyt osatoimitukset
+  erilliseen julkaisuehdokashaaraan ja yhteiseen QA:han.
+- **Fable:** lopullinen kaanonin ja julkaisuehdokkaan tarkistus,
+  äänituotantolupien varmistaminen, integraatio, versio, CI ja julkaisu.
+  Tuotantovetäjät valmistelevat ja voimassa olevien lupien sekä työkalujen
+  puitteissa suorittavat ääniajot. Tavoite on yksi valmis yhteispaketti,
+  ei keskeneräisten osatoimitusten kokoaminen Fablen työksi.
+
+Claude-agenttien Opus/Sonnet-raja ja ChatGPT/Codex-sessioiden
+Sol/Terra/Luna-raja pidetään erillään tämän työn rooleista; kumpikaan
+mallisääntö ei muuta tiedosto- tai julkaisuvastuuta.
+
 ## Fable — päätoimittaja: tarina ja koordinaatio
 
 - **Kaanon:** docs/tarina.md ja docs/isoisan-raamattu.md

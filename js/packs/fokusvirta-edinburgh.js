@@ -160,12 +160,7 @@ export const FOKUSVIRTA_EDINBURGH = {
     paikkarivi: 'Edinburgh, elokuussa 1873. Viileää; linna sumun yllä; '
       + 'puntari putoaa.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 348 merkkiä (yläraja 400). */
-    teksti: 'Edinburghissa katu saattaa olla toisen kadun katto. Menin '
-      + 'portaita alas ja tulin ulos korkealla jonkun ikkunan yläpuolella. '
-      + 'Pyykkinaru kulki kujan yli, ja sukat riippuivat kuilun päällä vailla '
-      + 'vähäisintäkään huimausta. Linnan musta kallio kohosi kaiken takana. '
-      + 'Kaupungin kartoittamiseen tarvittaisiin tavallisen paperin lisäksi '
-      + 'toinen arkki päälle.',
+    teksti: 'Edinburghissa katu saattoi olla toisen kadun katto. Menin portaita alas ja tulin ulos jonkun ikkunan yläpuolella. Sukat riippuivat kuilun yllä vailla huimausta. Linnan musta kallio kohosi kaiken takana. Kaupungin karttaan tarvittaisiin toinen arkki päälle.',
     /*
      * LUENTA: sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi: ruututeksti = luentateksti sanasta sanaan).
@@ -186,21 +181,16 @@ export const FOKUSVIRTA_EDINBURGH = {
      */
     reaktiot: [
       { id: 'edinburgh.r1', ankkuri: 'toisen kadun katto', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kaupunki on kerroksissa: hämmästys.' },
-      { id: 'edinburgh.r2', ankkuri: 'vähäisintäkään huimausta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Sukat kuilun yllä eivät pelkää.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'edinburgh.r2', ankkuri: 'vailla huimausta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'edinburgh.r3', ankkuri: 'musta kallio', tarkoitus: 'vakavoituu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Linnan kallio vakavoittaa kuvan.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'edinburgh.r4', ankkuri: 'toinen arkki päälle', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Loppuvitsi kartanpiirtäjän ongelmasta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Edinburghissa katu saattaa olla toisen kadun katto. '
-      + 'Menin portaita alas ja tulin ulos korkealla jonkun ikkunan '
-      + 'yläpuolella. Pyykkinaru kulki kujan yli, ja sukat riippuivat kuilun '
-      + 'päällä vailla vähäisintäkään huimausta. Linnan musta kallio kohosi '
-      + 'kaiken takana. [softly] Kaupungin kartoittamiseen tarvittaisiin '
-      + 'tavallisen paperin lisäksi toinen arkki päälle.',
+    luenta: '[curious] Edinburghissa katu saattoi olla toisen kadun katto. Menin portaita alas ja tulin ulos jonkun ikkunan yläpuolella. [mischievously] Sukat riippuivat kuilun yllä vailla huimausta. Linnan musta kallio kohosi kaiken takana. [softly] Kaupungin karttaan tarvittaisiin toinen arkki päälle.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-edinburgh.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-edinburgh-r20260909-paper-v4;
@@ -215,13 +205,7 @@ export const FOKUSVIRTA_EDINBURGH = {
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Edinburgh, 1873. Sukat olivat oppineet asumaan korkealla.',
-      selite: 'Asetin kameran kujan portaalle ja huomasin vasta sitten, että '
-        + 'ylempänä kulki vielä toinenkin reitti. Pyykit yhdistivät '
-        + 'vastakkaisia taloja, vaikka niiden asukkaat joutuivat käyttämään '
-        + 'portaita. Linnan kallio näkyi rakennusten lomasta kuin peruste, '
-        + 'jonka päälle kaikki nämä mutkat oli kirjoitettu. Kuvaan mahtui '
-        + 'enemmän korkeutta kuin olin saanut karttaan. Sukat osasivat asian '
-        + 'ilman mittaamista.',
+      selite: 'Porraskuja, sen yli kulkeva reitti ja korkealla riippuvat pyykit mahtuivat samaan kuvaan. Linnan kallio nousi mutkien taakse kuin perusteluksi sille, miksi kartta olisi tarvinnut toisen arkin.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://canmore.org.uk/site/52499/edinburgh-old-town',
@@ -231,7 +215,7 @@ export const FOKUSVIRTA_EDINBURGH = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-edinburgh-r20260911-paper2-v1.jpg",
       lyhyt: "Edinburgh, 1873. Sukat riippuivat kuilun yllä ilman huimausta.",
-      selite: "Pyykkinaru kulki kapean kujan yli. Sukat riippuivat korkealla, ja ikkunoita jatkui niiden alapuolella. Seisoin ylemmällä askelmalla ja katsoin alas. Kaupungin korkeudet eivät mahtuneet yhdelle kartta-arkille.",
+      selite: 'Sukat riippuivat korkealla kapean porraskujan yllä, kun ikkunat ja askelmat jatkuivat niiden alapuolelle. Seisoin ylempänä ja ymmärsin, etteivät kaupungin korkeudet mahdu yhdelle kartta-arkille.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://canmore.org.uk/site/52499/edinburgh-old-town"],
     },
@@ -250,12 +234,7 @@ export const FOKUSVIRTA_EDINBURGH = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-edinburgh-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Edinburgh: löysin kerroksen, jossa ei tarvitse kysyä tietä.',
-        selite: 'Edinburghin vanhakaupunki kasvaa sekä pitkin katua että sen '
-          + 'päälle. Elokuun festivaaleilla kellaritkin muuttuvat '
-          + 'esityspaikoiksi, ja ihmiset etsivät oikeaa ovea ohjelma kädessään. '
-          + 'Katolla ovia on vähemmän. Tästä erotan reitit, savupiiput ja sen, '
-          + 'kuka pysähtyy väärän talon kohdalle. Isoisän toinen kartta-arkki '
-          + 'oli hyvä ajatus. Minun versioni ei tarvitse paperia.',
+        selite: 'Kattojen, savupiippujen ja jyrkän linnakallion välistä erottui monta päällekkäistä reittiä. Laskeuduin väärälle katolle, mutta näköala vahvisti isoisän ajatuksen toisesta kartta-arkista.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.edinburgh.gov.uk/downloads/file/23848/c2a-camera-obscura-calton-hill',
@@ -267,7 +246,7 @@ export const FOKUSVIRTA_EDINBURGH = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Elokuussa täällä on nyt festivaaleja kellareita myöten. Isoisä eksyi kerroksiin; minä valitsen katon.',
+      'Elokuussa Edinburghin kadutkin muuttuvat näyttämöiksi. Lensin esiintyjän yli ja laskeuduin väärälle katolle. Täällä hyvä aitiopaikka ei vielä kerro, missä kerroksessa esitys on.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ylpea', voimakkuus: 0.5 },

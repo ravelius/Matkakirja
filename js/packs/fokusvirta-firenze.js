@@ -178,12 +178,7 @@ export const FOKUSVIRTA_FIRENZE = {
     paikkarivi: 'Firenze, toukokuussa 1873. Lämmintä; joki matalalla; puntari '
       + 'korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 358 merkkiä (yläraja 400). */
-    teksti: 'Firenzen David seisoo aukiolla ilman rihman kiertämää, ja minä '
-      + 'hikoilen liivissä. Patsas aiotaan siirtää sisälle sateelta suojaan. '
-      + 'Kolmensadan vuoden jälkeen tämä lienee kohtuullista. Katselin sen '
-      + 'suurta kättä ja omaani. Minun käteni osaa lähinnä piirtää käden. '
-      + 'Palasin illalla, kun aukiolla oli vähemmän väkeä. Kivi vaikutti '
-      + 'silloin vielä enemmän ihmiseltä.',
+    teksti: 'Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -203,24 +198,19 @@ export const FOKUSVIRTA_FIRENZE = {
      * illalla" (selitys ja siirtymä).
      */
     reaktiot: [
-      { id: 'firenze.r1', ankkuri: 'minä hikoilen liivissä', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Alaston patsas ja pukuun puettu matkustaja.' },
-      { id: 'firenze.r2', ankkuri: 'lienee kohtuullista', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Kolmensadan vuoden odotus kuitataan kuivasti.' },
+      { id: 'firenze.r1', ankkuri: 'minä hikoilin liivissä', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'firenze.r2', ankkuri: 'siirtää sateelta suojaan', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'firenze.r3', ankkuri: 'suurta kättä ja omaani', tarkoitus: 'vakavoituu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Vertailu hiljentää.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'firenze.r4', ankkuri: 'piirtää käden', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Isoisä vähättelee omaa taitoaan.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'firenze.r5', ankkuri: 'enemmän ihmiseltä', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Merkinnän hiljainen päätös.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Firenzen David seisoo aukiolla ilman rihman kiertämää, '
-      + 'ja minä hikoilen liivissä. Patsas aiotaan siirtää sisälle sateelta '
-      + 'suojaan. Kolmensadan vuoden jälkeen tämä lienee kohtuullista. '
-      + 'Katselin sen suurta kättä ja omaani. Minun käteni osaa lähinnä '
-      + 'piirtää käden. Palasin illalla, kun aukiolla oli vähemmän väkeä. '
-      + '[softly] Kivi vaikutti silloin vielä enemmän ihmiseltä.',
+    luenta: '[curious] Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. [softly] Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-firenze.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-firenze-kasi-v6.jpg;
@@ -232,12 +222,7 @@ export const FOKUSVIRTA_FIRENZE = {
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-firenze-kasi-v6.jpg',
       lyhyt: 'Firenze, 1873. Kivinen käsi näytti osaavan jotakin, mitä omani ei.',
-      selite: 'Rajasin kuvaan Davidin suuren käden ja osan käsivarresta. Marmorin '
-        + 'rystysissä on niin tarkkaa lepoa, että odotin melkein sormien '
-        + 'liikkuvan. Michelangelon patsas seisoo vielä ulkona Palazzo '
-        + 'Vecchion edessä. Sen takana palatsin kivi näyttää kiveltä, mutta '
-        + 'tämän käden kohdalla asia ei ole yhtä yksinkertainen. Kamerani '
-        + 'pystyy ottamaan siitä kuvan. Veistäjän oli ensin saatava se esiin.',
+      selite: 'Rajasin kuvaan Davidin suuren käden, jonka rystyset näyttivät levossakin melkein liikkuvilta. Palatsin kivi pysyi selvästi kivenä, mutta marmorisessa kädessä asia ei tuntunut yhtä yksinkertaiselta.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
         'https://catalogo.beniculturali.it/detail/PhotographicHeritage/0800635892',
@@ -250,7 +235,7 @@ export const FOKUSVIRTA_FIRENZE = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-firenze-r20260911-paper2-v1.jpg",
       lyhyt: "Firenze, 1873. Illan hiljaisuudessa katsoin Davidin suuntaan.",
-      selite: "Palasin aukiolle illalla, kun väkeä oli vähemmän. Muutama ihminen kulki jo pois pitkien varjojen yli. Jäin katsomaan Davidin suuntaan kuvan ulkopuolelle. Hiljaisuudessa kivi vaikutti entistä enemmän ihmiseltä.",
+      selite: 'Palasin aukiolle illalla ja jäin katsomaan Davidin suuntaan kuvan ulkopuolelle. Vähäinen väki ja pitkät varjot tekivät kivestä mielessäni entistä enemmän ihmisen.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.galleriaaccademiafirenze.it/opere/david-michelangelo/","https://www.galleriaaccademiafirenze.it/la-galleria/"],
     },
@@ -269,13 +254,7 @@ export const FOKUSVIRTA_FIRENZE = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-firenze-01-r20260909-14mm-v4.jpg',
         lyhyt: 'Firenze: Davidin kopio osaa pitää ilmeensä myös lähikuvassa.',
-        selite: 'Piazza della Signorian David on kopio. Michelangelon alkuperäinen '
-          + 'veistos vietiin vuonna 1873 suojaan Galleria dell’Accademiaan. '
-          + 'Aukiolla patsas kuuluu yhä Palazzo Vecchion ympärille '
-          + 'levittäytyvään kivisten kertomusten joukkoon. Isoisä vertasi '
-          + 'Davidin kättä omaansa. Minä tutkin ilmettä: sama keskittynyt katse '
-          + 'joka suunnasta. Malli ei pyytänyt nähdä kuvaa eikä ehdottanut '
-          + 'uutta otosta. Arvostan sellaista ammattitaitoa.',
+        selite: 'Piazza della Signorian David on kopio, mutta lähikuvassa sen keskittynyt ilme pitää joka suunnasta. Malli ei räpäyttänyt eikä ehdottanut uutta otosta; arvostan sellaista ammattitaitoa.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.galleriaaccademiafirenze.it/opere/david-michelangelo/',
@@ -289,7 +268,7 @@ export const FOKUSVIRTA_FIRENZE = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'David pääsi sisälle, aukiolle tuli kopio. Fogg, isoisälläsi oli sentään taskut. Patsaan on pärjättävä ilmeellä.',
+      'David on nyt sisällä ja aukiolla kopio. Kiersin museon katon kautta aukiolle ja tarkistin kopion ilmeen. Se ei räpäyttänyt. Minä taisin hävitä.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

@@ -94,12 +94,7 @@ export const FOKUSVIRTA_PARIISI = {
     paikkarivi: 'Pariisi, lokakuussa 1873. Sateen jälkeen kirkasta; puntari '
       + 'nousee.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 352 merkkiä (yläraja 400). */
-    teksti: 'Pariisin uusi oopperatalo on yhä kesken, mutta mahtaako sisällä '
-      + 'enää tapahtua mitään seinien veroista? Kultaa, pylväitä, marmoria. '
-      + 'Kokonainen rakennus parhaissa juhlatamineissaan. Paluumatkalla '
-      + 'seurasin kaksi korttelia miestä, joka vihelsi leipä kainalossa. Jos '
-      + 'hänelle annettaisiin tuo talo, menisin kuuntelemaan. Toistaiseksi hän '
-      + 'esiintyy ilmaiseksi.',
+    teksti: 'Pariisin uusi oopperatalo oli yhä kesken. Kultaa, pylväitä, marmoria: kokonainen rakennus juhlatamineissaan. Paluumatkalla seurasin miestä, joka vihelsi leipä kainalossa. Jos hänelle annettaisiin tuo talo, menisin kuuntelemaan. Toistaiseksi hän esiintyi ilmaiseksi.',
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -122,24 +117,19 @@ export const FOKUSVIRTA_PARIISI = {
      * (kuljetus kohtaukseen).
      */
     reaktiot: [
-      { id: 'pariisi.r1', ankkuri: 'seinien veroista', tarkoitus: 'epailee', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Isoisä epäilee, riittääkö sisältö kuorelle.' },
+      { id: 'pariisi.r1', ankkuri: 'yhä kesken', tarkoitus: 'epailee', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'pariisi.r2', ankkuri: 'Kultaa, pylväitä, marmoria', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Luettelo ylellisyyttä tyrmistyttää.' },
-      { id: 'pariisi.r3', ankkuri: 'parhaissa juhlatamineissaan', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Talo puettuna juhlavaatteisiin naurattaa.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'pariisi.r3', ankkuri: 'rakennus juhlatamineissaan', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'pariisi.r4', ankkuri: 'menisin kuuntelemaan', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Isoisän puoltava arvio vihellyksestä.' },
-      { id: 'pariisi.r5', ankkuri: 'esiintyy ilmaiseksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Loppuvitsi oopperatalon kustannuksella.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'pariisi.r5', ankkuri: 'esiintyi ilmaiseksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Pariisin uusi oopperatalo on yhä kesken, mutta mahtaako '
-      + 'sisällä enää tapahtua mitään seinien veroista? Kultaa, pylväitä, '
-      + 'marmoria. Kokonainen rakennus parhaissa juhlatamineissaan. '
-      + 'Paluumatkalla seurasin kaksi korttelia miestä, joka vihelsi leipä '
-      + 'kainalossa. Jos hänelle annettaisiin tuo talo, menisin kuuntelemaan. '
-      + '[softly] Toistaiseksi hän esiintyy ilmaiseksi.',
+    luenta: '[curious] Pariisin uusi oopperatalo oli yhä kesken. Kultaa, pylväitä, marmoria: kokonainen rakennus juhlatamineissaan. Paluumatkalla seurasin miestä, joka vihelsi leipä kainalossa. [warmly] Jos hänelle annettaisiin tuo talo, menisin kuuntelemaan. [softly] Toistaiseksi hän esiintyi ilmaiseksi.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-pariisi.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-pariisi-r20260909-paper-v4;
@@ -154,13 +144,7 @@ export const FOKUSVIRTA_PARIISI = {
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
       lyhyt: 'Pariisi, 1873. Ooppera harjoitteli juhlapukuaan.',
-      selite: 'Telineet pitivät vielä kiinni uudesta oopperasta, mutta koristeet '
-        + 'näyttivät jo odottavan yleisöä. Garnier\'n talossa arki '
-        + 'työskentelee parhaillaan juhlan hyväksi: kivipölyä, lautoja ja '
-        + 'paljon käsipareja, jotta joku myöhemmin voisi vain astua sisään '
-        + 'parhaassa takissaan. Odotin valon siirtymistä pylväälle. Se osasi '
-        + 'tehdä rakennukselle enemmän kuin lyhyt vierailuni '
-        + 'rakennusmestarina olisi saanut aikaan.',
+      selite: 'Uusi oopperatalo seisoo jo juhlapuvussaan, vaikka telineet, kivilohkot ja mutainen työmaa paljastavat harjoitusten jatkuvan. Arki tekee vielä töitä, jotta yleisö voisi myöhemmin vain astua sisään.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
       'https://www.parismuseescollections.paris.fr/en/node/490866',
@@ -170,7 +154,7 @@ export const FOKUSVIRTA_PARIISI = {
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pariisi-r20260911-paper2-v1.jpg",
       lyhyt: "Pariisi, 1873. Leipä kainalossa kulki kadun paras esiintyjä.",
-      selite: "Oopperan rakennustyö jäi taakse ja sade kirkasti kadun. Mies kulki edellä leipä kainalossa ja vihellys huulillaan. Seurasin kaksi korttelia kuulematta pääsymaksusta sanaakaan. Hänelle olisi voinut antaa suuremmankin näyttämön.",
+      selite: 'Sade kiillotti kadun, ja mies kulki edellä leipä kainalossa. Seurasin häntä kaksi korttelia kuulematta pääsymaksusta sanaakaan.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/construction-du-palais-garnier-actuel-opera-national-de-paris-9eme"],
     },
@@ -189,13 +173,7 @@ export const FOKUSVIRTA_PARIISI = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-pariisi-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Pariisi: oopperan paras aitiopaikka jäi ilman samettia.',
-        selite: 'Palais Garnier\'n yleisö katsoo tavallisesti lavalle tai ylöspäin '
-          + 'kohti koristeita. Minä aloitin koristeen vierestä. Katon reunalla '
-          + 'kullan rinnalla näkyvät saumat, sadejäljet ja tavallinen kivi: '
-          + 'juhla-asu tarvitsee huoltoa siinä missä sulatkin. Isoisä epäili, '
-          + 'riittäisikö talon sisään yhtä paljon katsottavaa. Näytän ensin '
-          + 'tämän puolen. Aitiopaikastani puuttuu tuoli, mutta siihen olen jo '
-          + 'tottunut.',
+        selite: 'Palais Garnierin katon reunalla kulta, saumat ja sadejäljet näkyvät samassa lähikuvassa. Juhla-asukin tarvitsee huoltoa, ja minun aitiopaikastani puuttui vain tuoli.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.operadeparis.fr/actualites/restauration-de-la-facade-principale-du-palais-garnier',
@@ -207,7 +185,7 @@ export const FOKUSVIRTA_PARIISI = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Leipä kainalossa? Olisin seurannut minäkin. Ooppera valmistui, ja nyt pelkästä talon katsomisestakin maksetaan.',
+      'Palais Garnier avattiin kaksi vuotta isoisän käynnin jälkeen. Minä tarkistin katon kultaukset ennen lippujonoa. Sisälläkin esiinnytään yhä, mutta räystäällä ei pyydetty pääsymaksua.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.55 },

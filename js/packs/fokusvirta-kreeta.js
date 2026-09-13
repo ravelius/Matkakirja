@@ -45,14 +45,14 @@ export const FOKUSVIRTA_KREETA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kreeta-r20260909-paper-v4.jpg",
       lyhyt: "Hania, 1873. Verkko vaati korjausta valtakunnasta riippumatta.",
-      selite: "Kalastajan sormet löysivät verkosta rikkinäisen kohdan nopeammin kuin silmäni. Sataman toisella puolella majakka seisoi venetsialaisten aloittamassa ja egyptiläisten muuttamassa hahmossaan. Kreeta on nyt sulttaanin aluetta, mutta veneen paluu riippuu valosta ja verkon kunto sen korjaajasta. Kuvasin nämä kaksi työtä samaan näkymään. Mies ei pitänyt kumpaakaan arvoituksena.",
+      selite: 'Kalastaja korjasi verkkoa Hanian satamassa, kun venetsialaisten aloittama ja egyptiläisten uudistama majakka seisoi veden takana. Hallitsijat vaihtuivat, mutta veneen paluu riippui valosta ja verkon kunto korjaajasta.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.chaniatourism.gr/monument/the-egyptian-lighthouse/","https://chaniahistory.gr/en/lighthouse/","https://www.chaniatourism.gr/neighborhood/venetian-harbor/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kreeta-r20260911-paper2-v1.jpg",
       lyhyt: "Hania, 1873. Karttaan piirtyi valo ilman valtakunnan väriä.",
-      selite: "Istuin satamakivelle ja avasin kartan polvelleni. Majakan pieni valo kuului merellä niille, jotka tarvitsivat sitä, vaikka torni oli vaihtanut hallitsijaa useammin kuin käyttötarkoitusta. Piirsin valon paikalleen ilman valtakunnan väriä. Veneet lepäsivät sen edessä hiljaisina.",
+      selite: 'Piirsin Hanian majakan kartalle ilman valtakunnan väriä, sillä sen valo kuului merellä kaikille sitä tarvitseville. Veneet lepäsivät hiljaa sen edessä.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://chaniahistory.gr/en/lighthouse/"],
     },
@@ -61,11 +61,7 @@ export const FOKUSVIRTA_KREETA = {
     paikkarivi: 'Kreeta, huhtikuussa 1873. Lämmintä; vuorilla vielä lunta; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 318 merkkiä (yläraja 400). */
-    teksti: 'Hanian sataman majakan aloittivat venetsialaiset ja korjasivat '
-      + 'egyptiläiset. Nyt kaupunki kuuluu sulttaanille. Kalastaja selvitti '
-      + 'minulle kaikki kolme ja paikkasi samalla verkkoaan. Kun kysyin, kenen '
-      + 'majakka siis on, hän osoitti merelle. Niiden, jotka tarvitsevat sitä. '
-      + 'Piirsin karttaani valon ilman valtakunnan väriä.',
+    teksti: 'Hanian majakan aloittivat venetsialaiset ja rakensivat uudelleen egyptiläiset. Vuonna 1873 Kreeta kuului sulttaanille. Kun kysyin kalastajalta, kenen majakka on, hän osoitti merelle: niiden, jotka tarvitsevat sitä. Piirsin valon ilman valtakunnan väriä.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, sama maltillinen
@@ -86,24 +82,17 @@ export const FOKUSVIRTA_KREETA = {
      * tausta).
      */
     reaktiot: [
-      { id: 'kreeta.r1', ankkuri: 'kuuluu sulttaanille', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Kolmas valtakunta samalle majakalle.' },
-      { id: 'kreeta.r2', ankkuri: 'paikkasi samalla verkkoaan', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Historia kerrotaan työn ohessa.' },
+      { id: 'kreeta.r1', ankkuri: 'kuului sulttaanille', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kreeta.r3', ankkuri: 'hän osoitti merelle', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Vastaus ei ollut kartalla.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kreeta.r4', ankkuri: 'jotka tarvitsevat sitä', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Kalastajan vastaus on merkinnän ydin.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kreeta.r5', ankkuri: 'ilman valtakunnan väriä', tarkoitus: 'myotailee', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Isoisä merkitsee valon ilman lippua.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Hanian sataman majakan aloittivat venetsialaiset ja '
-      + 'korjasivat egyptiläiset. Nyt kaupunki kuuluu sulttaanille. Kalastaja '
-      + 'selvitti minulle kaikki kolme ja paikkasi samalla verkkoaan. Kun '
-      + 'kysyin, kenen majakka siis on, hän osoitti merelle. Niiden, jotka '
-      + 'tarvitsevat sitä. [softly] Piirsin karttaani valon ilman valtakunnan '
-      + 'väriä.',
+    luenta: '[curious] Hanian majakan aloittivat venetsialaiset ja rakensivat uudelleen egyptiläiset. Vuonna 1873 Kreeta kuului sulttaanille. Kun kysyin kalastajalta, kenen majakka on, hän osoitti merelle: [softly] niiden, jotka tarvitsevat sitä. Piirsin valon ilman valtakunnan väriä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kreeta.mp3',
   },
 
@@ -120,12 +109,7 @@ export const FOKUSVIRTA_KREETA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-kreeta-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Hania: majakkaa tarvitaan siltäkin puolelta, josta sitä ei kuvata.',
-        selite: 'Hanian majakka seisoo pitkän aallonmurtajan päässä. Sataman suulta '
-          + 'sen tehtävä on helppo ymmärtää: valon paikka kertoo, missä kova '
-          + 'reuna alkaa ja avoin vesi jatkuu. Lensin matalalta ohi juuri kun '
-          + 'pieni vene palasi suojaan. Isoisän kalastaja sanoi majakan '
-          + 'kuuluvan sitä tarvitseville. Kuvan alakulmaan jäi vene. Pidin sen '
-          + 'mukana, sillä siinä oli koko vastauksen syy.',
+        selite: 'Hanian majakka osoittaa pitkän aallonmurtajan päässä, missä kova reuna loppuu ja avoin vesi alkaa. Jätin satamaan palaavan veneen kuvaan, sillä siinä oli koko valon tarkoitus.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.chaniatourism.gr/monument/the-egyptian-lighthouse/',
@@ -144,7 +128,7 @@ export const FOKUSVIRTA_KREETA = {
      */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Kreeta kuuluu nyt Kreikkaan, majakka seisoo yhä. Kalastaja vastasi paremmin kuin isoisän kartta.',
+      'Kreeta on nyt Kreikkaa. Hanian tuttu majakka näyttää paluureitin. Väitin tienneeni suunnan koko ajan, mutta helpotuksesta siipeni löivät vähän nopeammin.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },

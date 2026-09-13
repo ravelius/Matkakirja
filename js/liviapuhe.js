@@ -1,4 +1,6 @@
 import { seuraaLivianKasvoAanitetta, lopetaLivianKasvoAanite } from './livia-puhetila.js';
+import { kytkeLivianPuheEleet } from './livia-puheleet.js';
+import { kytkeLivianPilottiEleet } from './livia-puheeleet-lataus.js';
 /*
  * LIVIAN ÄÄNI — pulu puhuu kuplansa ääneen.
  *
@@ -108,6 +110,81 @@ import { AANI_JUURI } from './media.js';
  * julkaisua (kuten linssiluennat).
  */
 export const LIVIAN_AANIJUURI = `${AANI_JUURI}aanet/pulu/`;
+
+/*
+ * HYVÄKSYTYT VERSIONOIDUT KAUPUNKIÄÄNET (13.9.2026).
+ *
+ * Nämä avaimet tulevat suoraan kuudesta valmistuneesta tuotantokuitista:
+ * pilotti/E4 sekä Euroopan neljä loppuerää. Äänitteet
+ * ovat muuttumattomissa R2-avaimissa, joten peli ei enää riipu näiden
+ * repliikkien vanhasta ylikirjoitettavasta aanet/pulu/-avaimesta.
+ */
+export const LIVIAN_VERSIOIDUT_AANET = Object.freeze({
+  'ateena-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-ateena-3.mp3',
+  'sarajevo-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-sarajevo-3.mp3',
+  'helsinki-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-helsinki-3.mp3',
+  'tampere-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-tampere-3.mp3',
+  'tallinna-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-tallinna-3.mp3',
+  'riika-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-riika-3.mp3',
+  'vilna-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-vilna-3.mp3',
+  'marseille-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-marseille-3.mp3',
+  'venetsia-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-venetsia-3.mp3',
+  'tukholma-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-tukholma-3.mp3',
+  'lappi-3': 'aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-lappi-3.mp3',
+  'tromssa-3': 'aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-tromssa-3.mp3',
+  'sofia-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-sofia-3.mp3',
+  'istanbul-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-istanbul-3.mp3',
+  'bukarest-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-bukarest-3.mp3',
+  'budapest-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-budapest-3.mp3',
+  'wien-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-wien-3.mp3',
+  'lontoo-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-lontoo-3.mp3',
+  'pariisi-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-pariisi-3.mp3',
+  'madrid-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-madrid-3.mp3',
+  'berliini-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-berliini-3.mp3',
+  'rooma-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-rooma-3.mp3',
+  'praha-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-praha-3.mp3',
+  'dublin-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-dublin-3.mp3',
+  'edinburgh-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-edinburgh-3.mp3',
+  'lissabon-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-lissabon-3.mp3',
+  'barcelona-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-barcelona-3.mp3',
+  'sevilla-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-sevilla-3.mp3',
+  'amsterdam-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-amsterdam-3.mp3',
+  'dubrovnik-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-dubrovnik-3.mp3',
+  'bergen-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-bergen-3.mp3',
+  'kobenhavn-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-kobenhavn-3.mp3',
+  'krakova-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-krakova-3.mp3',
+  'varsova-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-varsova-3.mp3',
+  'pietari-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-pietari-3.mp3',
+  'moskova-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-moskova-3.mp3',
+  'kiova-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-kiova-3.mp3',
+  'odessa-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-odessa-3.mp3',
+  'kreeta-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-kreeta-3.mp3',
+  'granada-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-granada-3.mp3',
+  'firenze-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-firenze-3.mp3',
+  'oslo-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-oslo-3.mp3',
+  'sisilia-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-sisilia-3.mp3',
+  'islanti-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-islanti-3.mp3',
+  'alpit-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-alpit-3.mp3',
+});
+
+/** Valmiiden city-3-tuotantokuitujen todelliset MP3-kestot sekunteina. */
+export const LIVIAN_KESTOT = Object.freeze({
+  'ateena-3': 11.938, 'sarajevo-3': 12.33, 'helsinki-3': 14.211,
+  'tampere-3': 12.931, 'tallinna-3': 13.976, 'riika-3': 15.778,
+  'vilna-3': 16.797, 'marseille-3': 11.337, 'venetsia-3': 18.416,
+  'tukholma-3': 13.74, 'lappi-3': 14.864, 'tromssa-3': 15.752,
+  'sofia-3': 10.789, 'istanbul-3': 11.285, 'bukarest-3': 10.998,
+  'budapest-3': 10.893, 'wien-3': 13.636, 'lontoo-3': 11.442,
+  'pariisi-3': 13.479, 'madrid-3': 15.02, 'berliini-3': 17.816,
+  'rooma-3': 12.121, 'praha-3': 13.218, 'dublin-3': 12.539,
+  'edinburgh-3': 11.677, 'lissabon-3': 13.688, 'barcelona-3': 17.711,
+  'sevilla-3': 11.598, 'amsterdam-3': 10.998, 'dubrovnik-3': 10.344,
+  'bergen-3': 12.251, 'kobenhavn-3': 11.624, 'krakova-3': 10.423,
+  'varsova-3': 10.658, 'pietari-3': 10.083, 'moskova-3': 9.587,
+  'kiova-3': 9.482, 'odessa-3': 9.927, 'kreeta-3': 10.841,
+  'granada-3': 14.498, 'firenze-3': 12.016, 'oslo-3': 11.99,
+  'sisilia-3': 12.121, 'islanti-3': 12.121, 'alpit-3': 13.662,
+});
 
 /**
  * VARATTU NUMERO — POISTETUN REPLIIKIN PAIKKA (omistaja 8.9.2026,
@@ -563,8 +640,8 @@ export const LIVIAN_AANITETYT = {
   'paljastus-3': '531008d4',
   'mannerivihje-1': '9b1a96f3',
   'lehtivinkki-1': '676644e9',
-  'ateena-3': '418f4055',
-  'sofia-3': 'da74f265',
+  'ateena-3': '74451e14',
+  'sofia-3': '83dd2f15',
   'sofia-5': '1e64f9d0',
   'sofia-6': '2618c9dd',
   'sofia-7': '9118b3f7',
@@ -575,49 +652,49 @@ export const LIVIAN_AANITETYT = {
   'sofia-12': '75c13aff',
   'sofia-13': 'bc7f04ef',
   'sofia-14': 'ced3fd34',
-  'istanbul-3': '756164a4',
-  'bukarest-3': '597547ac',
-  'sarajevo-3': '006c3c2a',
-  'budapest-3': 'bc5ea301',
-  'wien-3': '00047f56',
-  'praha-3': 'b77679bd',
-  'krakova-3': '8bdba29d',
-  'varsova-3': 'eb8985f6',
-  'pietari-3': 'a6e8cbd3',
-  'moskova-3': 'e0081a97',
-  'kiova-3': '424e9548',
-  'odessa-3': '26f74238',
-  'helsinki-3': '2ecdf730',
-  'tampere-3': 'fe83653c',
-  'tallinna-3': '67d40dc7',
-  'riika-3': '914988b0',
-  'vilna-3': '9a1a39a3',
-  'kreeta-3': 'b743530e',
-  'sisilia-3': '08c3c066',
-  'islanti-3': 'da30eaee',
-  'alpit-3': '6e181c84',
-  'lappi-3': '8d9f73fb',
-  'tromssa-3': '76110386',
-  'lontoo-3': '72a05ee9',
-  'dublin-3': '0badc854',
-  'edinburgh-3': 'ddaabb36',
-  'pariisi-3': '8c2abb8d',
-  'marseille-3': 'bc17db80',
-  'lissabon-3': '0bcde086',
-  'madrid-3': '8d2192d8',
-  'barcelona-3': '53e543a2',
-  'granada-3': '986bf065',
-  'sevilla-3': '694115b4',
-  'amsterdam-3': 'a46657ee',
-  'berliini-3': 'f028954d',
-  'venetsia-3': '0aeef60b',
-  'firenze-3': 'c0826d4c',
-  'rooma-3': '6e805810',
-  'dubrovnik-3': '9392e7f8',
-  'tukholma-3': '0dc306e4',
-  'oslo-3': 'fb2b20a7',
-  'bergen-3': 'c030ad82',
-  'kobenhavn-3': '49453206',
+  'istanbul-3': 'e9e5d501',
+  'bukarest-3': '2ae36933',
+  'sarajevo-3': '92b480b3',
+  'budapest-3': '301ddddb',
+  'wien-3': '1e7f57e6',
+  'praha-3': '08430cab',
+  'krakova-3': 'c6d5b3e2',
+  'varsova-3': 'e32cf43b',
+  'pietari-3': '3c4d6b72',
+  'moskova-3': '5574eeb7',
+  'kiova-3': '993219bf',
+  'odessa-3': '6a0e89bb',
+  'helsinki-3': '4341d0bf',
+  'tampere-3': '73690977',
+  'tallinna-3': '801b5b9b',
+  'riika-3': '39e6aa76',
+  'vilna-3': 'c399c5a5',
+  'kreeta-3': 'a47a1104',
+  'sisilia-3': 'a37e58c6',
+  'islanti-3': '31082cf9',
+  'alpit-3': '1101111e',
+  'lappi-3': '0ece225d',
+  'tromssa-3': 'd2fb66d9',
+  'lontoo-3': 'b81a0329',
+  'dublin-3': '97f62999',
+  'edinburgh-3': '6e2e9c75',
+  'pariisi-3': '3459ebe0',
+  'marseille-3': '80abf18a',
+  'lissabon-3': '30b5b8e3',
+  'madrid-3': '5d179e4e',
+  'barcelona-3': '360b8b4b',
+  'granada-3': '4d5ca192',
+  'sevilla-3': 'be8d8750',
+  'amsterdam-3': 'e97a06e9',
+  'berliini-3': '4fa224dd',
+  'venetsia-3': 'eb6f4836',
+  'firenze-3': '02603941',
+  'rooma-3': '9fab5acf',
+  'dubrovnik-3': 'be5712a6',
+  'tukholma-3': 'd4674ec7',
+  'oslo-3': '85a34d89',
+  'bergen-3': 'cba6af1f',
+  'kobenhavn-3': '3ebbff3e',
   'ihmisen-matka-1': '019b7159',
   'ihmisen-matka-2': '45dafd6e',
   'ihmisen-matka-3': '77366164',
@@ -874,6 +951,8 @@ export function livianAaniOsoite(lahde, indeksi, juuri = LIVIAN_AANIJUURI) {
   const nimi = livianSoitettava(lahde, indeksi);
   if (!nimi) return null;
   const avain = `${lahde}-${indeksi + 1}`;
+  const versioituPolku = LIVIAN_VERSIOIDUT_AANET[avain];
+  if (versioituPolku) return `${AANI_JUURI}${versioituPolku}`;
   const versio = LIVIAN_AANITETYT[avain];
   const era = LIVIAN_AANIERAT[avain];
   if (!versio) return `${juuri}${nimi}`;
@@ -1104,10 +1183,12 @@ export function pysaytaLivianAani(ui, { haivyta = true } = {}) {
  * @param {boolean} [asetukset.vaista] väistääkö tausta puheen ajaksi.
  *   VÄLIHUUTO EI VÄISTÄ (omistaja 7.9.2026): se soi kertojan PÄÄLLE,
  *   eikä kertoja saa hiljetä sen tieltä.
+ * @param {Array<object>} [asetukset.eleet] lopulliseen äänitteeseen
+ *   kohdistetut puhe-eleet millisekunteina; tyhjä lista ei animoi.
  * @returns {HTMLAudioElement|null} soittimen kahva tai null
  */
 export function soitaLivianAani(ui, lahde, indeksi,
-  { paikkaan = '', paikkaa = '', teksti = null, vaimennus = 1, vaista = true } = {}) {
+  { paikkaan = '', paikkaa = '', teksti = null, vaimennus = 1, vaista = true, eleet = [] } = {}) {
   pysaytaLivianAani(ui);
   if (!ui || ui.dead || typeof Audio === 'undefined') return null;
   // Sama kytkin kuin kertojalla: mykistetty peli on mykistetty myös
@@ -1160,6 +1241,7 @@ export function soitaLivianAani(ui, lahde, indeksi,
   soivaPulu = { audio, vaimennus };
   ui.liviaAani = audio;
   seuraaLivianKasvoAanitetta(audio, teksti);
+  kytkeLivianPuheEleet(audio, eleet, { voimassa: () => ui.liviaAani === audio });
   // Kirjanpito kaikkiin luentoihin: taustalle menevä peli hiljentää
   // myös tämän (js/luenta.js taustaHiljennaLuennat).
   (ui.luennat ??= new Set()).add(audio);
@@ -1209,13 +1291,22 @@ export function soitaLivianAani(ui, lahde, indeksi,
  * @param {string|null} [asetukset.teksti] kuplan teksti tiivisteportille
  * @param {number} [asetukset.vaimennus] voimakkuuden kerroin
  * @param {boolean} [asetukset.vaista] väistääkö tausta (välihuuto ei)
+ * @param {Array<object>} [asetukset.eleet] hash-varmistetun kohdistuksen
+ *   jo ratkaistut puhe-eleet; ilman niitä repliikki toimii kuten ennen.
  * @returns {HTMLAudioElement|null} soittimen kahva tai null
  */
 export function soitaLivianKaupunkiAani(ui, kaupunkiId, kentta,
-  { kupla = 0, teksti = null, vaimennus = 1, vaista = true } = {}) {
+  { kupla = 0, teksti = null, vaimennus = 1, vaista = true, eleet = [] } = {}) {
   const indeksi = livianKaupunkiIndeksi(kaupunkiId, kentta, kupla);
   if (indeksi === null) return null;
-  return soitaLivianAani(ui, kaupunkiId, indeksi, { teksti, vaimennus, vaista });
+  const audio = soitaLivianAani(ui, kaupunkiId, indeksi, { teksti, vaimennus, vaista, eleet });
+  if (audio && !eleet.length) {
+    const aaniOsoite = livianAaniOsoite(kaupunkiId, indeksi);
+    void kytkeLivianPilottiEleet(audio, {
+      kaupunki: kaupunkiId, kentta, kupla, teksti, aaniOsoite,
+    }, { voimassa: () => ui.liviaAani === audio });
+  }
+  return audio;
 }
 
 /**

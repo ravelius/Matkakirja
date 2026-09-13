@@ -286,14 +286,14 @@ export const FOKUSVIRTA_SOFIA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sofia-r20260909-paper-v4.jpg",
       lyhyt: "Sofia, 1873. Maa oli ehtinyt lämmittää veden.",
-      selite: "Nainen piti kannua varovasti, sillä lähteen tarjoilussa ei ollut kylmää vaihtoehtoa. Minareetti ja Vitošan rinne asettuivat kuvan taakse, mutta arjen tärkein rakennelma oli veden ottopaikka. Majataloni pesuvesi oli ollut viileää. Täällä lämpö nousi maasta ilman, että kukaan kantoi paikalle halkoa. Pyysin naista jäämään kuvaan odottamaan kannunsa jäähtymistä. Siitä oli meille molemmille hyötyä.",
+      selite: 'Nainen täyttää kannua lämpimästä lähteestä, kun minareetti ja Vitošan rinne jäävät taakse. Majataloni kylmä pesuvesi oli maksanut enemmän, joten matkailun epäjohdonmukaisuus oli valmis.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://visitsofia.bg/catalog/en/discover_sofiaEN/Discover_SofiaEN.pdf"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sofia-r20260911-paper2-v1.jpg",
       lyhyt: "Sofia, 1873. Majatalon kylmä vesi sai vuoren näyttämään viisaammalta.",
-      selite: "Majatalossa maksettu pesuvesi ei ollut ehtinyt ottaa oppia kaupungin lähteestä. Kokeilin sitä kädellä ja katsoin ikkunasta Vitošan suuntaan. Kattojen takana lämmin höyry nousi ilman halkoja. Matkailu oli taas järjestänyt mukavuudet väärään osoitteeseen.",
+      selite: 'Kokeilin majatalon pesuvettä kädellä ja katsoin avoimesta ikkunasta Vitošan suuntaan. Kaupungin lämmin lähde oli jälleen järjestänyt mukavuudet väärään osoitteeseen.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://visitsofia.bg/catalog/en/discover_sofiaEN/Discover_SofiaEN.pdf"],
     },
@@ -301,11 +301,7 @@ export const FOKUSVIRTA_SOFIA = {
     paikkarivi: 'Sofia, elokuussa 1873. Helteistä; tomu ei laskeudu; puntari '
       + 'korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 336 merkkiä (yläraja 400). */
-    teksti: 'Sofiassa maa tarjoaa kuumaa vettä pyytämättä halkoja. Lähteellä '
-      + 'nainen täytti kannua ja odotti sen jäähtymistä. Minä olin maksanut '
-      + 'majatalossa kylmästä pesuvedestä. Tällaisista epäjohdonmukaisuuksista '
-      + 'matkailu muodostuu. Minareetin takana kohosi Vitoša. Vuori näytti '
-      + 'nukkuvan, mutta sen kaupungin alla oli selvästi jo noustu keittämään.',
+    teksti: 'Sofiassa maa tarjosi kuumaa vettä pyytämättä halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. Matkailun epäjohdonmukaisuus oli valmis. Vitoša näytti nukkuvan, mutta kaupungin alla oli jo noustu keittämään.',
     /*
      * Luenta generoitu 25.8.2026 samalla reseptillä kuin muut
      * matkakirjaluennat (Viisas Kertoja, eleven_v3, stability 0.5).
@@ -338,21 +334,16 @@ export const FOKUSVIRTA_SOFIA = {
      */
     reaktiot: [
       { id: 'sofia.r1', ankkuri: 'pyytämättä halkoja', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Maasta nouseva kuuma vesi on ensimmäinen ihmettely.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'sofia.r2', ankkuri: 'kylmästä pesuvedestä', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Ilmaisen kuuman vieressä maksettu kylmä vesi naurattaa.' },
-      { id: 'sofia.r3', ankkuri: 'matkailu muodostuu', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Isoisän kuiva johtopäätös saa nyökkäyksen.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'sofia.r3', ankkuri: 'epäjohdonmukaisuus oli valmis', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'sofia.r4', ankkuri: 'jo noustu keittämään', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Loppuvitsi: nukkuva vuori ja hereillä oleva kaupunki.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Sofiassa maa tarjoaa kuumaa vettä pyytämättä halkoja. '
-      + 'Lähteellä nainen täytti kannua ja odotti sen jäähtymistä. Minä olin '
-      + 'maksanut majatalossa kylmästä pesuvedestä. Tällaisista '
-      + 'epäjohdonmukaisuuksista matkailu muodostuu. Minareetin takana kohosi '
-      + 'Vitoša. [softly] Vuori näytti nukkuvan, mutta sen kaupungin alla oli '
-      + 'selvästi jo noustu keittämään.',
+    luenta: '[curious] Sofiassa maa tarjosi kuumaa vettä pyytämättä halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. [mischievously] Matkailun epäjohdonmukaisuus oli valmis. [softly] Vitoša näytti nukkuvan, mutta kaupungin alla oli jo noustu keittämään.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sofia.mp3',
     kuva: {
       tiedosto: 'BASA-713K-1-52-4-Vasil Levski.JPG',
@@ -390,13 +381,7 @@ export const FOKUSVIRTA_SOFIA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-sofia-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Sofia: kuuma vesi, viileä harkinta.',
-        selite: 'Sofian lähteillä vesi lasketaan nykyäänkin mukana tuotuihin '
-          + 'astioihin. Muovipulloja on enemmän kuin isoisän kannuja, mutta '
-          + 'odottamisen asento näyttää tutulta. Seisoin viileällä kivellä '
-          + 'veden sivussa. En aikonut kokeilla lämpötilaa varpaalla, vaikka '
-          + 'eräs ihminen teki juuri niin sormellaan. Vitosan kaupungissa on '
-          + 'paljon nähtävää. Tällä kertaa katsoin, kuinka tavallinen päivä '
-          + 'alkaa maan antamasta vedestä.',
+        selite: 'Sofian lähteillä vettä lasketaan yhä mukana tuotuihin astioihin, vaikka muovipulloja on enemmän kuin isoisän kannuja. Minä pysyin viileällä kivellä ja jätin lämpötilan kokeilemisen ihmisille.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.sofiacityguide.com/visit-the-sofia-mineral-springs/',
@@ -488,7 +473,7 @@ export const FOKUSVIRTA_SOFIA = {
      */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Sofia on nyt Bulgarian pääkaupunki. Lähdevettä haetaan yhä. Maa ei ole korottanut hintaa arvonimen takia.',
+      'Sofian lähteeltä haetaan yhä kuumaa vettä. Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. Arvokkuus palasi vasta seuraavalla räystäällä.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.45 },

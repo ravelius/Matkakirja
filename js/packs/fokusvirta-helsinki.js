@@ -105,14 +105,14 @@ export const FOKUSVIRTA_HELSINKI = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-helsinki-r20260909-paper-v4.jpg",
       lyhyt: "Helsinki, 1873. Kartta sai rannikon päälle vielä kalan.",
-      selite: "Torikauppias painoi paperini alas ennen kuin tuuli ehti viedä mittaustyötä merelle. Valkoinen kirkko kohosi myyntipaikkojen takana, ja kala jäi kartan päälle aivan toisenlaiseksi paikannimeksi. Pyysin pitämään asetelman hetken ennallaan. Kalan tehtävä oli yksinkertainen ja onnistui täydellisesti. Kamerakin sai näin oman todistuksensa siitä, että maantiede voi hyötyä kalakaupan välineistä.",
+      selite: "Torikauppias painoi karttani silakalla alas ennen kuin tuuli ehti viedä paperin merelle. Valkoinen kirkko kohosi myyntipaikkojen takana, kun kuvasin kalan uuden tehtävän.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.finna.fi/Record/hkm.CCD1A6CE-FD67-4BDD-9E29-D3C71E41D098","https://www.finna.fi/Record/hkm.F2DD5045-4DE1-49AF-8418-01F6629EEBB6","https://helsingintuomiokirkko.fi/index/kirkontarina.html","https://www.hamhelsinki.fi/en/sculptures/havis-amanda-2/","https://www.hamhelsinki.fi/en/sculptures/alexander-ii/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-helsinki-r20260911-paper2-v1.jpg",
       lyhyt: "Helsinki, 1873. Suomenlahti löytyi kartasta myös rasvajälkenä.",
-      selite: "Torilta lähdettyäni avasin kartan ja tutkin silakan jättämää jälkeä. Tuuli oli taittanut paperia, mutta rasvainen kohta pysyi Suomenlahden päällä. Pidin kartasta kiinni molemmin käsin sataman näkyessä taustalla. Paikallistieto oli tahraista mutta täsmällistä.",
+      selite: "Torilta lähdettyäni tutkin silakan kartalle jättämää rasvajälkeä Suomenlahden kohdalla. Pidin tuulen taittamasta paperista kiinni sataman näkyessä taustalla.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.finna.fi/Record/hkm.CCD1A6CE-FD67-4BDD-9E29-D3C71E41D098","https://helsingintuomiokirkko.fi/index/kirkontarina.html"],
     },
@@ -123,13 +123,11 @@ export const FOKUSVIRTA_HELSINKI = {
      */
     paikkarivi: 'Helsingfors, heinäkuussa 1873. Kirkasta; mereltä käy viileä '
       + 'tuuli; puntari korkealla.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 350 merkkiä (yläraja 400). */
-    teksti: 'Helsingin valkoisen kirkon katolla apostolit katsovat merelle. '
-      + 'Alhaalla torilla kalakauppias katseli vaakaa. Kummankin työ vaikutti '
-      + 'vakavalta. Tuuli nosti paperini, ja nainen painoi sen paikoilleen '
-      + 'silakalla ennen kuin ehdin auttaa. Nyt kartassani on Suomenlahden '
-      + 'kohdalla täsmällinen rasvajälki. Harvoin olen saanut yhtä luotettavaa '
-      + 'paikallistietoa.',
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1; audio/alignment tarvitaan. */
+    teksti: 'Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi '
+      + 'silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; '
+      + 'nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi '
+      + 'rasvajälki. Harvoin olen saanut yhtä täsmällistä paikallistietoa.',
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -146,20 +144,18 @@ export const FOKUSVIRTA_HELSINKI = {
     reaktiot: [
       { id: 'helsinki.r1', ankkuri: 'vaikutti vakavalta', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
         perustelu: 'Apostolit ja kalavaaka samassa vakavuudessa.' },
-      { id: 'helsinki.r2', ankkuri: 'paikoilleen silakalla', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'helsinki.r2', ankkuri: 'silakalla paikoilleen', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Silakka paperipainona yllättää.' },
-      { id: 'helsinki.r3', ankkuri: 'täsmällinen rasvajälki', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+      { id: 'helsinki.r3', ankkuri: 'Suomenlahdelle jäi rasvajälki', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
         perustelu: 'Kartta sai oman merkkinsä: hiljainen hyväksyntä.' },
-      { id: 'helsinki.r4', ankkuri: 'luotettavaa paikallistietoa', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+      { id: 'helsinki.r4', ankkuri: 'täsmällistä paikallistietoa', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
         perustelu: 'Loppuvitsi rasvatahrasta paikallistietona.' },
     ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Helsingin valkoisen kirkon katolla apostolit katsovat '
-      + 'merelle. Alhaalla torilla kalakauppias katseli vaakaa. Kummankin työ '
-      + 'vaikutti vakavalta. Tuuli nosti paperini, ja nainen painoi sen '
-      + 'paikoilleen silakalla ennen kuin ehdin auttaa. Nyt kartassani on '
-      + 'Suomenlahden kohdalla täsmällinen rasvajälki. [softly] Harvoin olen '
-      + 'saanut yhtä luotettavaa paikallistietoa.',
+    luenta: '[curious] Kirkon apostolit katsoivat merelle. Torilla '
+      + 'kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. '
+      + 'Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. '
+      + 'Suomenlahdelle jäi rasvajälki. [softly] Harvoin olen saanut yhtä '
+      + 'täsmällistä paikallistietoa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-helsinki.mp3',
   },
 
@@ -176,13 +172,9 @@ export const FOKUSVIRTA_HELSINKI = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-helsinki-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Helsinki: paperipaino on siirtynyt lokkien kiinnostuksen piiriin.',
-        selite: 'Kauppatorilla tuuli tarttuu paperiin yhtä luontevasti kuin '
-          + 'ennenkin. Tällä kertaa sen lähellä seisova lokki huomasi '
-          + 'kalatiskin ennen minua, mutta minä ehdin huomata lokin. Isoisä sai '
-          + 'kartalleen silakan rasvajäljen. Nykyisen kauppiaan käärepaperi '
-          + 'odottaa huomattavasti lyhyempää matkaa. Kuvasin tilanteen ennen '
-          + 'kuin kumpikaan meistä ehti sekaantua kaupankäyntiin. Se vaati '
-          + 'pientä itsehillintää.',
+        selite: 'Kauppatorilla tuuli tarttuu paperiin, ja kalatiskin vierellä '
+          + 'lokki seuraa käärepaperia. Kuvasin tilanteen ennen kuin kumpikaan '
+          + 'meistä ehti sekaantua kaupankäyntiin.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.myhelsinki.fi/places/helsinki-cathedral/',
@@ -192,13 +184,9 @@ export const FOKUSVIRTA_HELSINKI = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-helsinki-02-r20260909-euv1-v2.jpg',
         lyhyt: 'Helsinki: katolla seurataan toisenlaista toria.',
-        selite: 'Tuomiokirkon katon apostolipatsailla on hyvä paikka katsella '
-          + 'Helsinkiä. Minä kävin tarkistamassa näkymän yhden kiviseltä '
-          + 'näyttävän vaipan vierestä; patsaat ovatkin sinkkiä. Alempana '
-          + 'Senaatintori asettuu rakennusten väliin, ja merikaupunki jatkuu '
-          + 'sen takana. Isoisä vertasi apostolien ja kalakauppiaan vakavuutta. '
-          + 'Tästä kuvasta puuttuu vaaka, mutta tarkkaavaisuudessa on samaa '
-          + 'sukua.',
+        selite: 'Tuomiokirkon sinkkiset apostolipatsaat katsovat katolta '
+          + 'Helsinkiä. Niiden alapuolella Senaatintori asettuu rakennusten '
+          + 'väliin ja merikaupunki jatkuu taustalle.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.myhelsinki.fi/places/helsinki-cathedral/',
@@ -257,7 +245,7 @@ export const FOKUSVIRTA_HELSINKI = {
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Kirkko on nyt tuomiokirkko. Kauppatorin lokit käyttäisivät isoisän paperipainoa mielellään.',
+      'Kirkko on tuomiokirkko. Minä kokeilin apostolien näköalaa, mutta torin kalat näkyivät paremmin alempaa. Lokki ehti ensin. Se katsoi minua kuin olisin ollut harjoittelija.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

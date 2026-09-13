@@ -7443,6 +7443,10 @@ export const RAAMATTU = {
           + 'ja tavoite per maa; täytetään koneellisesti erissä.',
         'docs/moduulit/livia-aani.md — pulun ääni: ElevenLabs-resepti, tagit, '
           + 'kaiku, manifesti ja repliikkien pituusraja.',
+        'docs/moduulit/horatio-livia-tuotanto.md — Horatio ja Livia: '
+          + 'hahmojen tuotantoketju, kaupunkiparin työnjako, pituus- ja '
+          + 'kuvapäätökset sekä erien tarkistuslistat (toteutusohje; '
+          + 'kanoniset linjaukset pysyvät Raamatussa).',
         'docs/moduulit/aanet.md — siirtymämusiikki ja äänet: raitojen '
           + 'tuotanto-ohje (kesto, looppisauma, -33 LUFS, vienti).',
         'docs/moduulit/viitekuvat.md — viitekuvallinen herogenerointi: '

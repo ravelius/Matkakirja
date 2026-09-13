@@ -196,14 +196,14 @@ export const FOKUSVIRTA_PIETARI = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pietari-r20260909-paper-v4.jpg",
       lyhyt: "Pietari, 1873. Neva ei näyttänyt kellonaikaa.",
-      selite: "Rantakadun penkillä olisi ollut tilaa istua loppuun koko ilta, jos illalla olisi ollut selvempi loppu. Vaalea taivas jäi palatsien ikkunoihin ja joen pintaan. Päivänvarjo näytti tässä valossa tarpeelliselta vielä silloinkin, kun kello neuvoi aivan muuta. Kuvasin kaupungin ilman varsinaista yötä. Kameralle sellainen järjestely sopii hyvin; minun seuraavan aamuni voinnista en ollut yhtä varma.",
+      selite: 'Vaalea taivas jäi Nevan pintaan ja palatsien ikkunoihin, vaikka penkki odotti jo illan istujaa. Kuvasin kaupungin ilman varsinaista yötä; kameralle järjestely sopi minua paremmin.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.loc.gov/pictures/resource/ppmsc.03878","https://hermitagemuseum.org/panorama/pano_37/?floorNum=1&lng=en"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pietari-r20260911-paper2-v1.jpg",
       lyhyt: "Pietari, 1873. Kello päätti päivän, valo ei.",
-      selite: "Kirjoitin päivän tapahtumat loppuun avoimen ikkunan ääressä. Kello oli jo pitkällä, mutta Neva ja vastarannan julkisivut säilyivät vaaleina. Kynttilälle ei ollut vielä työtä. Lisäsin muistikirjaan yhden rivin siitä, ettei päivä itse suostunut lopettamaan.",
+      selite: 'Kirjoitin päivän tapahtumat loppuun avoimen ikkunan ääressä, vaikka Neva ja palatsit pysyivät vaaleina. Kello oli jo pitkällä; päivä itse ei suostunut lopettamaan.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.loc.gov/pictures/resource/ppmsc.03878","https://hermitagemuseum.org/panorama/pano_37/?floorNum=1&lng=en"],
     },
@@ -212,12 +212,7 @@ export const FOKUSVIRTA_PIETARI = {
     paikkarivi: 'Pietari, kesäkuussa 1873. Valkeat yöt; ei tule pimeää; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 333 merkkiä (yläraja 400). */
-    teksti: 'Pietarissa kesäyö on vaalea kuin loppuun pesty lakana. Kello '
-      + 'käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. '
-      + 'Rantakadulla nainen sulki päivänvarjonsa ja jäi silti kävelemään. '
-      + 'Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän '
-      + 'tapahtumat loppuun. Päivä itse ei suostunut lopettamaan, joten '
-      + 'lisäsin vielä tämän.',
+    teksti: 'Pietarin kesäyö oli vaalea kuin loppuun pesty lakana. Kello käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän tapahtumat loppuun. Päivä itse ei suostunut lopettamaan, joten lisäsin vielä tämän.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -238,21 +233,16 @@ export const FOKUSVIRTA_PIETARI = {
      */
     reaktiot: [
       { id: 'pietari.r1', ankkuri: 'loppuun pesty lakana', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Valoisa yö saa outo vertauksen.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'pietari.r2', ankkuri: 'iltaa vanhemmalta', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kello ja joki ovat eri mieltä ajasta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'pietari.r3', ankkuri: 'ilman kynttilöitä', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Hiljainen havainto valosta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'pietari.r4', ankkuri: 'lisäsin vielä tämän', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Loppuvitsi: päiväkirja jatkuu päivän mukana.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Pietarissa kesäyö on vaalea kuin loppuun pesty lakana. '
-      + 'Kello käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. '
-      + 'Rantakadulla nainen sulki päivänvarjonsa ja jäi silti kävelemään. '
-      + 'Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän '
-      + 'tapahtumat loppuun. [softly] Päivä itse ei suostunut lopettamaan, '
-      + 'joten lisäsin vielä tämän.',
+    luenta: '[curious] Pietarin kesäyö oli vaalea kuin loppuun pesty lakana. Kello käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän tapahtumat loppuun. [mischievously] Päivä itse ei suostunut lopettamaan, joten lisäsin vielä tämän.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-pietari.mp3',
   },
 
@@ -268,14 +258,8 @@ export const FOKUSVIRTA_PIETARI = {
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-pietari-01-r20260909-euv1-v1.jpg',
-        lyhyt: 'Pietari: kello näyttää yötä, kaupunki esittää vastalauseen.',
-        selite: 'Nevan rannassa vaalea kesäyö tekee kellonajasta huonon '
-          + 'maisemaoppaan. Ihmiset pysähtyvät kaiteelle, vaikka päivän pitäisi '
-          + 'jo olla valmis. Istuin kivireunalla ja kuvasin tyhjän penkin, '
-          + 'jolle joku oli jättänyt tilaa toisellekin. Isoisä jatkoi '
-          + 'kirjoittamista. Minä otin vielä yhden ruudun. Tämän valon kanssa '
-          + 'ongelmana ei ole, ettei näkisi, vaan ettei tahdo lopettaa '
-          + 'katsomista.',
+        lyhyt: 'Pietari: vaalea kesäyö jätti Nevan rantaan tilaa vielä yhdelle kierrokselle.',
+        selite: 'Nevan rannassa kesäyö on niin vaalea, että tyhjä penkki näyttää odottavan seuraavaa katselijaa. Isoisä jatkoi kirjoittamista; minä otin vielä yhden ruudun.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.awaywithmaja.com/guide-st-petersburgs-white-nights/',
@@ -338,7 +322,7 @@ export const FOKUSVIRTA_PIETARI = {
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Pietari ehti olla Leningradkin. Kesäyö on yhä valoisa. Isoisän kellosta taisi loppua valta.',
+      'Valkoisena yönä Nevan sillat nousivat yksi toisensa jälkeen. Vaihdoin reittiä ennen laivojen tuloa — kirjekyyhky ei luota pelkkään kelloon.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'miettiva', voimakkuus: 0.5 },

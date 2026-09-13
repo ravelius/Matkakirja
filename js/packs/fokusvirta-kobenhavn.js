@@ -106,14 +106,14 @@ export const FOKUSVIRTA_KOBENHAVN = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kobenhavn-r20260909-paper-v4.jpg",
       lyhyt: "Kööpenhamina, 1873. Orkesteri sai odottaa omassa tahdissaan.",
-      selite: "Tivolin vanha pari liikkui vähän kerrallaan, niin että katsomiseen jäi aikaa. Puutarhan lamput syttyivät, ja niiden valo löysi lammesta toisen rivin. Pyysin heitä pysähtymään hetkeksi vedosta varten. Se ei näyttänyt muuttavan tanssia kovin paljon. Kaupungissa on paljon rakennettua huvitusta, mutta tähän riittivät kaksi kättä, tuttu askel ja haluttomuus kiirehtiä.",
+      selite: 'Tivolin vanha pari tanssi niin hitaasti, että puutarhan lamput ehtivät syttyä ja löytää vedestä toisen rivin. Rakennettujen huvitusten keskellä riittivät kaksi kättä, tuttu askel ja haluttomuus kiirehtiä.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-kobenhavn-r20260911-paper2-v1.jpg",
       lyhyt: "Kööpenhamina, 1873. Lamput ehtivät veteen ennen tähtiä.",
-      selite: "Tivolin pienet öljylamput sytytettiin yksi kerrallaan, eikä ilta kiirehtinyt niiden edelle. Vallihaudan vesi kokosi liekeistä oman, katkonaisen tähtitaivaansa. Vanha pari jäi puiden alle niin pieneksi, että heidän askeleensa saattoi viimein unohtaa. Huvitusten joukossa katsoin pisimpään vettä, joka ei ollut maksanut pääsymaksua.",
+      selite: 'Tivolin öljylamput syttyivät yksi kerrallaan ja kokosivat vallihaudan veteen katkonaisen tähtitaivaan. Vanha pari jäi puiden alle pieneksi, mutta juuri heidät muistin.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.tivoli.dk/en/about-tivoli/the-history-of-tivoli-gardens","https://www.tivoli.dk/haven/fyrvaerkeri"],
     },
@@ -126,12 +126,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
     paikkarivi: 'Kööpenhamina, kesäkuussa 1873. Valoisaa iltamyöhään; koko '
       + 'kaupunki ulkona; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
-    teksti: 'Kööpenhaminan Tivolissa näin vanhan pariskunnan tanssivan niin '
-      + 'hitaasti, että orkesteri ehti edelle. He eivät lähteneet sen perään. '
-      + 'Puistossa sytytettiin lamppuja, ja lampi sai oman tähtitaivaansa '
-      + 'ennen oikeaa. Olin tullut katsomaan huvituksia. En arvannut, että '
-      + 'paras niistä olisi kaksi ihmistä, joilla ei ollut enää tarvetta pysyä '
-      + 'tahdissa.',
+    teksti: 'Tivolissa vanha pari tanssi niin hitaasti, että orkesteri ehti edelle. He eivät lähteneet sen perään. Puiston lamput syttyivät ennen tähtiä. Olin tullut katsomaan huvituksia; muistin heidät.',
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -146,21 +141,14 @@ export const FOKUSVIRTA_KOBENHAVN = {
      */
     reaktiot: [
       { id: 'kobenhavn.r1', ankkuri: 'orkesteri ehti edelle', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Hidas tanssi jää orkesterista jälkeen.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'kobenhavn.r2', ankkuri: 'lähteneet sen perään', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Pariskunta pitää oman tahtinsa.' },
-      { id: 'kobenhavn.r3', ankkuri: 'oman tähtitaivaansa', tarkoitus: 'hammastyy', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Lampi saa tähdet ennen taivasta.' },
-      { id: 'kobenhavn.r4', ankkuri: 'pysyä tahdissa', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Merkinnän hiljainen, lämmin päätös.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'kobenhavn.r4', ankkuri: 'muistin heidät', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Kööpenhaminan Tivolissa näin vanhan pariskunnan '
-      + 'tanssivan niin hitaasti, että orkesteri ehti edelle. He eivät '
-      + 'lähteneet sen perään. Puistossa sytytettiin lamppuja, ja lampi sai '
-      + 'oman tähtitaivaansa ennen oikeaa. Olin tullut katsomaan huvituksia. '
-      + '[softly] En arvannut, että paras niistä olisi kaksi ihmistä, joilla '
-      + 'ei ollut enää tarvetta pysyä tahdissa.',
+    luenta: '[curious] Tivolissa vanha pari tanssi niin hitaasti, että orkesteri ehti edelle. [mischievously] He eivät lähteneet sen perään. Puiston lamput syttyivät ennen tähtiä. [softly] Olin tullut katsomaan huvituksia; muistin heidät.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-kobenhavn.mp3',
   },
 
@@ -177,12 +165,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-kobenhavn-01-r20260909-euv1-v2.jpg',
         lyhyt: 'Kööpenhamina: tanssin ajaksi vapautui hyvä tarkkailupaikka.',
-        selite: 'Tivolin puutarhassa musiikki saa osan ihmisistä nousemaan pöydästä '
-          + 'ja osan jäämään kuuntelemaan. Minä valitsin jälkimmäisen tavan. '
-          + 'Hitaasti liikkuva pari mahtui kuvaan pöydänjalkojen välistä, ja '
-          + 'veden pinnassa syttyivät iltavalot. Isoisä piti kiireettömästä '
-          + 'tanssista. Täytyy myöntää, että katsoin tällä kertaa itsekin '
-          + 'hetken muualle kuin tyhjälle lautaselle.',
+        selite: 'Tivolin iltavaloissa hitaasti tanssiva pari mahtui kuvaan kahvilapöytien välistä. Isoisä piti kiireettömästä tanssista, ja minäkin katsoin hetken muualle kuin tyhjälle lautaselle.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.tivoli.dk/en/',
@@ -192,7 +175,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Tivoli huvittaa Kööpenhaminaa yhä. Minäkin pidän hitaista tanssijoista. Heidän pöytänsä ovat pitkään vapaina.',
+      'Tivoli huvittaa yhä. Orkesterin sävel sai minut laskeutumaan tanssilattian reunalle. Otin kaksi pientä askelta ja poistuin ennen kuin kukaan ehti pyytää kolmatta.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },

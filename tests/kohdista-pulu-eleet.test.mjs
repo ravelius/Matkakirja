@@ -1,0 +1,99 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+
+import { LIVIAN_LUENTAKAUPUNGIT, LIVIAN_PILOTTI_CUET } from '../js/livia-pilotti-cuet.js';
+import {
+  kokoaEledata, kuittirivit, livianKohdistustyo, lueLiput, ratkaiseCueAjat,
+} from '../tools/kohdista-pulu-eleet.mjs';
+import { TAGIT, kokoaTuotantokuitti, puhemuoto } from '../tools/generoi-pulu.mjs';
+
+function alignment(teksti) {
+  const characters = [...teksti];
+  return {
+    characters,
+    character_start_times_seconds: characters.map((_, i) => i * .02),
+    character_end_times_seconds: characters.map((_, i) => (i + 1) * .02),
+  };
+}
+
+test('liput eivät vie ilman eksplisiittistä --vie-valintaa', () => {
+  assert.deepEqual(lueLiput(['--kuiva']), { kuiva: true, vie: false, kaupungit: [], kuitti: null });
+  assert.deepEqual(lueLiput(['--kaupungit', 'marseille,ateena', '--vie']),
+    { kuiva: false, vie: true, kaupungit: ['marseille', 'ateena'], kuitti: null });
+  assert.deepEqual(lueLiput(['--kuitti', 'valmis.json']),
+    { kuiva: false, vie: false, kaupungit: [], kuitti: 'valmis.json' });
+  assert.deepEqual(lueLiput(['--kuitti', 'valmis.json', '--kaupungit', 'granada']),
+    { kuiva: false, vie: false, kaupungit: ['granada'], kuitti: 'valmis.json' });
+  assert.throws(() => lueLiput(['--generoi']), /tuntematon lippu/);
+});
+
+test('workflow rajaa Granada-uusinnan exact granada-3-avaimesta ja vartioi kuittiosuman', () => {
+  const workflow = readFileSync(new URL('../.github/workflows/generoi-pulu.yml', import.meta.url), 'utf8');
+  const tyokalu = readFileSync(new URL('../tools/kohdista-pulu-eleet.mjs', import.meta.url), 'utf8');
+  const retryAvain = 'granada-3';
+  assert.match(retryAvain, /^[a-z0-9]+-3$/);
+  assert.equal(retryAvain.slice(0, -2), 'granada');
+  assert.match(workflow, /REPLIIKIT: \$\{\{ inputs\.repliikit \}\}/);
+  assert.match(workflow, /\^\[a-z0-9\]\+-3\$/);
+  assert.match(workflow, /kaupungit\+\=\("\$\{avain%-3\}"\)/);
+  assert.match(workflow, /liput\+\=\(--kaupungit "\$valitut"\)/);
+  assert.match(tyokalu, /liput\.kuitti && !kuitit\.has\(kaupunki\)/);
+  assert.match(tyokalu, /ei ole annetussa tuotantokuitissa/);
+});
+
+test('kohdistus hyväksyy vain valmiin versionoidun tuotantokuitin ja sen lukitun TTS-reseptin', async () => {
+  const tyo = livianKohdistustyo('ateena');
+  const rivi = {
+    avain: tyo.avain, lahde: 'ateena', nimi: tyo.aaniNimi, teksti: tyo.teksti,
+    puhe: puhemuoto(tyo.teksti, TAGIT[tyo.avain]),
+  };
+  const tulokset = new Map([[tyo.avain, {
+    status: 'generated',
+    finalArtifact: { fileName: tyo.aaniNimi, sha256: 'a'.repeat(64), bytes: 1234, actualDurationSeconds: 8.5 },
+  }]]);
+  const kuitti = kokoaTuotantokuitti([rivi], {
+    sourceCommit: '0'.repeat(40), status: 'completed', tulokset, staged: true,
+  });
+  const valitut = await kuittirivit(kuitti);
+  assert.equal(valitut.get('ateena').finalObjectKey,
+    `aanet/pulu/versiot/${'0'.repeat(12)}/${kuitti.batchId}/livia-ateena-3.mp3`);
+  const muutettu = structuredClone(kuitti);
+  muutettu.utterances[0].ttsText = '[brightly] väärä';
+  await assert.rejects(() => kuittirivit(muutettu), /ei kelpaa kohdistukseen/);
+});
+
+test('forced alignment ratkaisee cue-alkujen sanapaikat eikä päästä cueita päällekkäin', () => {
+  const tyo = livianKohdistustyo('marseille');
+  const eleet = ratkaiseCueAjat(tyo, alignment(tyo.teksti));
+  assert.deepEqual(eleet.map((e) => e.id), LIVIAN_PILOTTI_CUET.marseille.cuet.map((e) => e.id));
+  assert.ok(eleet.every((e) => Number.isInteger(e.alku) && Number.isInteger(e.loppu) && e.loppu > e.alku));
+  for (let i = 1; i < eleet.length; i += 1) assert.ok(eleet[i - 1].loppu <= eleet[i].alku);
+});
+
+test('forced alignment käyttää ankkurissa ja aikaleimoissa samaa sanarajaa', () => {
+  const tyo = livianKohdistustyo('berliini');
+  const eleet = ratkaiseCueAjat(tyo, alignment(tyo.teksti));
+  assert.equal(eleet[0].id, 'berliini.livia.c1');
+  assert.ok(eleet.every((e) => e.loppu > e.alku));
+});
+
+test('kirjoitettava data kantaa teksti- ja mp3-sidonnan ja kelpaa samalle runtimeportille', async () => {
+  const tyo = livianKohdistustyo('ateena');
+  const aanitavut = new TextEncoder().encode('lopullinen-mp3');
+  const data = await kokoaEledata(tyo, aanitavut, alignment(tyo.teksti));
+  assert.equal(data.tekstiSha256, tyo.tekstiSha256);
+  assert.equal(data.aani.tavut, aanitavut.byteLength);
+  assert.match(data.aani.sha256, /^[0-9a-f]{64}$/);
+  assert.equal(data.eleet.length, tyo.cuet.length);
+});
+
+test('kaikkien 45 city-3-rivin alignment kelpaa exact runtimeportille', async () => {
+  assert.equal(LIVIAN_LUENTAKAUPUNGIT.length, 45);
+  for (const kaupunki of LIVIAN_LUENTAKAUPUNGIT) {
+    const tyo = livianKohdistustyo(kaupunki);
+    const aanitavut = new TextEncoder().encode(`lopullinen-${kaupunki}-mp3`);
+    const data = await kokoaEledata(tyo, aanitavut, alignment(tyo.teksti));
+    assert.equal(data.eleet.length, tyo.cuet.length, kaupunki);
+  }
+});

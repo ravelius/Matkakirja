@@ -146,14 +146,14 @@ export const FOKUSVIRTA_BERGEN = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bergen-r20260909-paper-v4.jpg",
       lyhyt: "Bergen, 1873. Kuiva kala, märkä vierailija.",
-      selite: "Kauppias piti kapakalaa kädessään sellaisella varmuudella, jota näkee tavallisesti arvopaperien omistajilla. Bryggenin puuvarastot ovat kasvaneet tämän kaupan ympärille. Katon reuna suojasi kalaa ja myyjää, mutta kamerani jalat joutuivat sadeveden puolelle. Odotin hetken, että mies sai tavaransa hyvään asentoon. Kalalla ei näyttänyt olevan enää kiirettä mihinkään.",
+      selite: 'Kauppias nosti kapakalan esiin Bryggenin katoksen alla kuin arvotavaran. Kala ja myyjä pysyivät suojassa, kun sade kasteli laiturin ja kamerani jalat.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://hanseatiskemuseum.museumvest.no/kongetorsk-engelsk"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bergen-r20260911-paper2-v1.jpg",
       lyhyt: "Bergen, 1873. Katon alla kala pysyi kuivempana kuin vieras.",
-      selite: "Sade valui Bryggenin katoksen reunalta. Kapakalalla oli kuiva paikka puuseinän vieressä, mutta takkini kiilsi vedestä. Seisoin hetken kalan rinnalla ja ymmärsin kaupungin arvojärjestyksen. Kauppatavara oli suojassa.",
+      selite: 'Sade valui katoksen reunalta, mutta kapakalat pysyivät kuivina puuseinän vieressä. Takkini kiilsi vedestä, ja kaupungin arvojärjestys tuli selväksi.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://hanseatiskemuseum.museumvest.no/kongetorsk-engelsk"],
     },
@@ -162,11 +162,7 @@ export const FOKUSVIRTA_BERGEN = {
     paikkarivi: 'Bergen, kesäkuussa 1873. Sadetta aamusta iltaan; puntari '
       + 'matalalla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 310 merkkiä (yläraja 400). */
-    teksti: 'Bergenin Bryggenissä puutalot seisovat kylki kyljessä, ja niiden '
-      + 'välissä tuoksuu kapakala. Kauppias näytti kuivattua turskaa kuin '
-      + 'hopeaharkkoa. Sillä on täällä maksettu paljon muutakin kuin '
-      + 'päivällinen. Sade rummutti kattoa, kala pysyi kuivana ja minä en. '
-      + 'Kaupungin arvojärjestys selvisi minulle ilman tulkkia.',
+    teksti: 'Bergenin Bryggenissä kauppias nosti kuivatun turskan kuin hopeaharkon. Sade rummutti kattoa; kala pysyi kuivana, minä en. Kaupungin arvojärjestys selvisi ilman tulkkia.',
     /*
      * LUENTA = sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi): kolme tagia, alku ja loppu eri sävyssä.
@@ -184,21 +180,15 @@ export const FOKUSVIRTA_BERGEN = {
      * Hiljaiset osuudet: Bryggenin puutalojen kuvaus (asetelma).
      */
     reaktiot: [
-      { id: 'bergen.r1', ankkuri: 'kuin hopeaharkkoa', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kuivattu kala esitellään jalometallina.' },
-      { id: 'bergen.r2', ankkuri: 'muutakin kuin päivällinen', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Kala on ollut maksuväline.' },
+      { id: 'bergen.r1', ankkuri: 'kuin hopeaharkon', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'bergen.r3', ankkuri: 'kala pysyi kuivana', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Sateessa kala pärjää matkustajaa paremmin.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'bergen.r4', ankkuri: 'ilman tulkkia', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Arvojärjestys selviää ilman sanoja.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Bergenin Bryggenissä puutalot seisovat kylki kyljessä, '
-      + 'ja niiden välissä tuoksuu kapakala. Kauppias näytti kuivattua turskaa '
-      + 'kuin hopeaharkkoa. Sillä on täällä maksettu paljon muutakin kuin '
-      + 'päivällinen. Sade rummutti kattoa, kala pysyi kuivana ja minä en. '
-      + '[softly] Kaupungin arvojärjestys selvisi minulle ilman tulkkia.',
+    luenta: '[curious] Bergenin Bryggenissä kauppias nosti kuivatun turskan kuin hopeaharkon. [mischievously] Sade rummutti kattoa; kala pysyi kuivana, minä en. [softly] Kaupungin arvojärjestys selvisi ilman tulkkia.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-bergen.mp3',
   },
 
@@ -215,13 +205,7 @@ export const FOKUSVIRTA_BERGEN = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bergen-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Bergen: varastotalot saivat suojan, minä etsin oman.',
-        selite: 'Bryggenin vanhojen puutalojen väliset käytävät ovat kapeita, ja '
-          + 'sade tekee niiden pinnoista oman karttansa. Kauppiaiden '
-          + 'varastoissa toimii nyt myös pieniä liikkeitä ja työtiloja. Minä '
-          + 'pysähdyin ulkoneman alle. Isoisä huomasi, että kala pidettiin '
-          + 'kuivana ennen matkustajaa. Tämän kuvan perusteella kuiva paikka on '
-          + 'edelleen arvokas löytö, vaikka siitä ei tarvitsisi tehdä '
-          + 'maailmankauppaa.',
+        selite: 'Bryggenin kapean puukäytävän sade piirtää lautoihin oman karttansa. Pysähdyin kynnyksen suojaan ja totesin, että kuiva paikka on yhä arvokas löytö.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://en.visitbergen.com/things-to-do/bryggen-in-bergen-p878553',
@@ -230,13 +214,7 @@ export const FOKUSVIRTA_BERGEN = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bergen-02-r20260909-euv1-v4.jpg',
         lyhyt: 'Bergen: ulkona satoi aivan samaa sadetta.',
-        selite: 'Käytävän suulta näkyy, kuinka Bryggenin talot seisovat sataman '
-          + 'reunassa rinnakkain. Sisäpuolella löysin puun hajun ja suojan, '
-          + 'ulkopuolella veden ja julkisivujen tutun rivin. Otin tämän toisen '
-          + 'kuvan nopeasti. Se todistaa, että kävin myös ulkona, mikä on '
-          + 'sateisena päivänä huomattavasti suurempi ansio kuin valmiista '
-          + 'kuvasta voisi päätellä. Palasin saman tien puolen siivenmitan '
-          + 'verran kuivemmalle.',
+        selite: 'Käytävän suulta näkyvät Bryggenin talorivi, märkä katu ja satama. Otin kuvan nopeasti ulkona ja palasin puolen siivenmitan kuivemmalle.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://en.visitbergen.com/things-to-do/bryggen-in-bergen-p878553',
@@ -246,7 +224,7 @@ export const FOKUSVIRTA_BERGEN = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Bryggenin varastotalot ovat nyt maailmanperintöä. Kala päätyy yhä lautaselle. Kumman suojelu onnistui paremmin?',
+      'Bryggen on nyt maailmanperintöä. Suojasin kirjeen räystään alla sateelta, kun viereinen lokki ravisteli vedet päälleni. Kirje säilyi kuivana. Minä vaihdoin räystästä.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'miettiva', voimakkuus: 0.45 },

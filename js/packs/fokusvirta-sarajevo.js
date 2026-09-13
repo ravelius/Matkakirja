@@ -188,26 +188,28 @@ export const FOKUSVIRTA_SARAJEVO = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sarajevo-r20260909-paper-v4.jpg",
       lyhyt: "Sarajevo, 1873. Vasara sai levätä kuvan ajan.",
-      selite: "Pyysin kupariseppää odottamaan hetken. Hänen vasaransa jäi käteen, ja puoliksi valmistuneessa astiassa näkyi, kuinka sileästä pinnasta tulee kuvioitua yksi lyönti kerrallaan. Basaarin muiden puotien kilkutus jatkui sillä välin. Olin aamulla juonut samanlaisen pannun kahvia katsomatta pannua lainkaan. Tähän kuvaan annoin astioille niin paljon tilaa kuin pöytä ja kamerani sallivat.",
+      selite: 'Kupariseppä pysäytti vasaransa puoliksi kuvioidun astian yllä. Basaarin kilkutus jatkui ympärillä, kun annoin astioille kamerassani koko pöydän verran tilaa.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://arhiva.visitsarajevo.ba/2018/04/sarajevo-coppersmiths-masters-of-an-old-craft/?lang=en"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-sarajevo-r20260911-paper2-v1.jpg",
       lyhyt: "Sarajevo, 1873. Aamukahvin pannussa näkyi nyt jokainen vasaranjälki.",
-      selite: "Viereisessä puodissa kahvi kaadettiin pannusta, jonka pinta oli täynnä pieniä iskuja. Aamulla olin huomannut vain juoman. Nyt näin, kuinka sepän vasara oli jäänyt astiaan kuviona. Basaarin kilkutus jatkui kupin takana.",
+      selite: 'Kahvipannun pinta oli täynnä sepän pieniä vasaranjälkiä. Aamulla olin huomannut vain juoman, mutta nyt työ näkyi jokaisessa kuviossa.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://arhiva.visitsarajevo.ba/2018/04/sarajevo-coppersmiths-masters-of-an-old-craft/?lang=en"],
     },
     /* Kaanon, kohta 1 — paikkarivi ja teksti sellaisinaan. */
     paikkarivi: 'Sarajevo, syyskuussa 1873. Kirkas ilta; vuoret lähellä; '
       + 'puntari korkealla.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 328 merkkiä (yläraja 400). */
-    teksti: 'Sarajevon kupariseppä naputti pannuun kuvioita niin pienellä '
-      + 'vasaralla, että olisin hukannut sen liivintaskuun. Viereisessä '
-      + 'puodissa kaadettiin kahvia samanlaiseen pannuun. Olin juonut siitä '
-      + 'aamulla katsomatta. Nyt näin jokaisen jäljen. Basaarin kujilla kuului '
-      + 'kilkutusta kaikkialta. Kaupunki oli tehnyt aamiaiseni astian käsin.',
+    /* HYVÄKSYTTY TEKSTIPILOTTI r2 13.9.2026: yhteinen Horatio–Livia-
+     * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
+     * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
+     * julkaisua. */
+    teksti: 'Sarajevon kupariseppä naputti pannua vasaralla, jonka olisin '
+      + 'hukannut taskuun. Viereisessä puodissa oli samanlainen kahvipannu. '
+      + 'Olin juonut aamulla katsomatta; nyt näin jokaisen jäljen. Basaarin '
+      + 'kilkutuksessa aamiainen muuttui käsityöksi.',
     /* Kaanon, kohta 1 — luenta ja äänitteen polku sellaisinaan. */
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -219,26 +221,25 @@ export const FOKUSVIRTA_SARAJEVO = {
      * vakavoituu. siirtyma = ms ankkurin viimeisen sanan lopusta; 0, koska
      * reaktio kuuluu juuri ankkurinsa kohtaan eikä viimeiselle sanalle saa
      * antaa positiivista siirtymää (luonnollinen loppu hoitaa sen).
-     * Hiljaiset osuudet: "Viereisessä puodissa kaadettiin kahvia" ja
-     * "Basaarin kujilla kuului kilkutusta" (taustahavainnot).
+     * Hiljainen osuus: basaarin kilkutus jää taustahavainnoksi ilman
+     * omaa lisäreaktiota.
      */
     reaktiot: [
-      { id: 'sarajevo.r1', ankkuri: 'hukannut sen liivintaskuun', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'sarajevo.r1', ankkuri: 'hukannut taskuun', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Naurettavan pieni vasara on merkinnän vitsi.' },
       { id: 'sarajevo.r2', ankkuri: 'aamulla katsomatta', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
         perustelu: 'Isoisä huomaa ohittaneensa työn.' },
       { id: 'sarajevo.r3', ankkuri: 'jokaisen jäljen', tarkoitus: 'vakavoituu', voimakkuus: 0.4, siirtyma: 0,
         perustelu: 'Katse tarkentuu: hetki vakavoituu.' },
-      { id: 'sarajevo.r4', ankkuri: 'aamiaiseni astian käsin', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'sarajevo.r4', ankkuri: 'aamiainen muuttui käsityöksi', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Hiljainen kunnianosoitus käsityölle.' },
     ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Sarajevon kupariseppä naputti pannuun kuvioita niin '
-      + 'pienellä vasaralla, että olisin hukannut sen liivintaskuun. '
-      + 'Viereisessä puodissa kaadettiin kahvia samanlaiseen pannuun. Olin '
-      + 'juonut siitä aamulla katsomatta. Nyt näin jokaisen jäljen. Basaarin '
-      + 'kujilla kuului kilkutusta kaikkialta. [softly] Kaupunki oli tehnyt '
-      + 'aamiaiseni astian käsin.',
+    /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
+     * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
+    luenta: '[curious] Sarajevon kupariseppä naputti pannua vasaralla, jonka '
+      + 'olisin hukannut taskuun. Viereisessä puodissa oli samanlainen '
+      + 'kahvipannu. Olin juonut aamulla katsomatta; nyt näin jokaisen '
+      + 'jäljen. [softly] Basaarin kilkutuksessa aamiainen muuttui käsityöksi.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sarajevo.mp3',
     /*
      * KUVA: Alois Schönnin maalaus Latinalaissillalta, Österreichische
@@ -291,12 +292,7 @@ export const FOKUSVIRTA_SARAJEVO = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-sarajevo-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Sarajevo: pannun kylki kertoo, kuka teki aamukahvin mahdolliseksi.',
-        selite: 'Kazandžilukin kujalla kupariastiat heijastavat kapean kadun valoa. '
-          + 'Yhden pannun pinta on sileä, toiseen kasvaa tekijän naputtama '
-          + 'kuvio. Näin läheltä ero näyttää kokonaiselta maisemalta. Isoisä '
-          + 'huomasi käsityön vasta juotuaan kahvinsa. Minä tulin katsomaan '
-          + 'ensin. Seppä laski vasaran hetkeksi alas, ja työpöytä hiljeni. '
-          + 'Siinä oli hyvä hetki ottaa kuva ja pitää oma nokka kiinni.',
+        selite: 'Kazandžilukin kupariastiat heijastavat kapean kujan valoa, ja tekijän naputus erottaa kuvioidun pinnan sileästä. Odotin vasaran hiljenemistä ja kuvasin pannun ennen kuin oma nokkani ehti mukaan työhön.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://visitbih.ba/en/one-of-the-oldest-streets-of-sarajevo-kazandziluk-500-years-long-tradition/',
@@ -343,9 +339,9 @@ export const FOKUSVIRTA_SARAJEVO = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    /* TEKSTIPILOTTI 12.9.2026: yksi sisältöön sidottu virke lisää. */
     kommentti: [
-      'Kupariseppiä on basaarissa yhä, ja kahvi tulee pienessä pannussa. Isoisä oppi katsomaan kuppiaan. Hyvä alku.',
+      'Kuparisepät naputtavat basaarissa yhä. Minun piti vain piipahtaa, mutta jäin kuuntelemaan yhtä vasaraa. Yritin naputtaa nokalla samaa tahtia — seppä oli kyllä nopeampi!',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },

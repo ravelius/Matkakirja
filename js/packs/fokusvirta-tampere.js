@@ -218,14 +218,14 @@ export const FOKUSVIRTA_TAMPERE = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tampere-r20260909-paper-v4.jpg",
       lyhyt: "Tampere, 1873. Katkennut lanka ja kädet, jotka osaavat jatkaa.",
-      selite: "Tehtaan koneiden vierellä ihminen näyttää ensin pieneltä. Sitten lanka katkeaa, ja koneen koko ei auta sitä millään tavoin takaisin yhteen. Työntekijän sormet tekivät solmun ennen kuin olin kunnolla ymmärtänyt, mistä piti ottaa kiinni. Kuvasin hänet lankansa kanssa. Koskesta saa käyttövoimaa ja raudasta koneita; tämän taidon hankkimiseen täytyy ilmeisesti käyttää kokonainen ihminen.",
+      selite: "Pitkien tehdaskoneiden vierellä työntekijä solmi katkenneen langan taitavin sormin. Kuvasin hänet työssään, sillä koneiden voima tarvitsi rinnalleen ihmisen osaamista.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.finna.fi/Search/Results?lookfor=Finlayson+tehdas+kehruusali&type=AllFields"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tampere-r20260911-paper2-v1.jpg",
       lyhyt: "Tampere, 1873. Koneiden voima kulki työntekijöiden sormien kautta.",
-      selite: "Nainen oli palannut kehruukoneensa ääreen. Pitkät konerivit täyttivät salin, mutta jokainen lanka tarvitsi silti käsiä. Kirjoitin muistikirjaan, mitä olin nähnyt. Tehtaan voimaa ei voinut laskea ilman työntekijöitä.",
+      selite: "Nainen seisoi jälleen kehruukoneensa äärellä pitkien konerivien täyttämässä salissa. Jokainen lanka tarvitsi silti työntekijän käsiä.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.finna.fi/Search/Results?lookfor=Finlayson+tehdas+kehruusali&type=AllFields"],
     },
@@ -233,13 +233,12 @@ export const FOKUSVIRTA_TAMPERE = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Tampere, elokuussa 1873. Viileä aamu; koski kohisee yöllä; '
       + 'puntari korkealla.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 341 merkkiä (yläraja 400). */
-    teksti: 'Tammerkoski tekee töitä kahden järven välissä. Sen partaalla '
-      + 'puuvilla muuttuu langaksi ja miehet rahakkaiksi. Finlaysonin '
-      + 'tehtaassa nainen näytti, kuinka katkennut lanka yhdistetään. Minun '
-      + 'sormissani se katkesi uudestaan. Hän sitoi sen katsomatta ja palasi '
-      + 'koneelleen. Merkitsen muistiin: tehtaan voimaa mitatessa pitäisi '
-      + 'laskea myös sormet.',
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1; audio/alignment tarvitaan. */
+    teksti: 'Tammerkoski teki töitä kahden järven välissä: puuvilla muuttui '
+      + 'langaksi ja miehet rahakkaiksi. Finlaysonilla nainen näytti '
+      + 'katkenneen langan solmun. Minun sormissani se katkesi heti; hän '
+      + 'sitoi sen katsomatta. Tehtaan voimaa mitatessa pitäisi laskea myös '
+      + 'sormet.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -260,24 +259,22 @@ export const FOKUSVIRTA_TAMPERE = {
      * katkennut lanka yhdistetään" (opastus).
      */
     reaktiot: [
-      { id: 'tampere.r1', ankkuri: 'tekee töitä kahden järven', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+      { id: 'tampere.r1', ankkuri: 'teki töitä kahden järven', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
         perustelu: 'Koski esitellään työntekijänä.' },
       { id: 'tampere.r2', ankkuri: 'miehet rahakkaiksi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Kuiva huomio siitä, kuka rikastuu.' },
-      { id: 'tampere.r3', ankkuri: 'se katkesi uudestaan', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'tampere.r3', ankkuri: 'se katkesi heti', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Isoisä epäonnistuu omissa sormissaan.' },
       { id: 'tampere.r4', ankkuri: 'sitoi sen katsomatta', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
         perustelu: 'Työntekijän taito hämmästyttää.' },
       { id: 'tampere.r5', ankkuri: 'laskea myös sormet', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
         perustelu: 'Merkinnän vakava johtopäätös.' },
     ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Tammerkoski tekee töitä kahden järven välissä. Sen '
-      + 'partaalla puuvilla muuttuu langaksi ja miehet rahakkaiksi. '
-      + 'Finlaysonin tehtaassa nainen näytti, kuinka katkennut lanka '
-      + 'yhdistetään. Minun sormissani se katkesi uudestaan. Hän sitoi sen '
-      + 'katsomatta ja palasi koneelleen. [softly] Merkitsen muistiin: tehtaan '
-      + 'voimaa mitatessa pitäisi laskea myös sormet.',
+    luenta: '[curious] Tammerkoski teki töitä kahden järven välissä: puuvilla '
+      + 'muuttui langaksi ja miehet rahakkaiksi. Finlaysonilla nainen näytti '
+      + 'katkenneen langan solmun. Minun sormissani se katkesi heti; hän '
+      + 'sitoi sen katsomatta. [softly] Tehtaan voimaa mitatessa pitäisi '
+      + 'laskea myös sormet.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-tampere.mp3',
   },
 
@@ -294,13 +291,9 @@ export const FOKUSVIRTA_TAMPERE = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tampere-01-r20260909-14mm-v2.jpg',
         lyhyt: 'Tampere: seurasin tarjoilijaa ja päädyin tehtaan katolle.',
-        selite: 'Finlaysonin alueen Kattopuutarhassa kahvilan vieressä kasvaa '
-          + 'kokonainen puutarha katon korkeudella. Ihmiset katselevat '
-          + 'kaupunkia, minä tarkistan pöytien välisen liikenteen. '
-          + 'Sinipaitaisella tarjoilijalla on leipäkori, joten hänen reittinsä '
-          + 'on juuri nyt näkymistä kiinnostavin. Isoisä seurasi tehtaan '
-          + 'lankaa. Minun tutkimukseni etenee tuolinjalalta toiselle ja vaatii '
-          + 'yhtä tarkkaa silmää.',
+        selite: 'Finlaysonin Kattopuutarhassa istutukset ja kahvilapöydät '
+          + 'levittäytyvät kaupungin kattojen tasolle. Sinipaitainen tarjoilija '
+          + 'kulkee niiden välissä leipäkori kädessään.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.kattopuutarha.fi/',
@@ -310,15 +303,11 @@ export const FOKUSVIRTA_TAMPERE = {
       },
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tampere-02-r20260909-14mm-v3.jpg',
-        lyhyt: 'Tampere: puutarha katolla, leipäkori reitillä. Hyvä '
+        lyhyt: 'Tampere: puutarha katolla ja leipäkori reitillä on hyvä '
           + 'kaupunkisuunnitelma.',
-        selite: 'Nousin vähän ylemmäs. Kattopuutarhan pöydät ja istutukset '
-          + 'asettuivat kartaksi, ja sama tarjoilija jatkoi korinsa kanssa '
-          + 'kohti asiakasta. Tehdasalueelle on tullut kasveja, kahvia ja '
-          + 'kokonaan uusia kulkureittejä. Minulle kahden tuolin väliin jää '
-          + 'käytävä; ihmiselle siihen mahtuu korkeintaan anteeksipyyntö. '
-          + 'Kuvassa on myös Tamperetta, jos maltat katsoa leipäkorin ohi. Minä '
-          + 'maltoin juuri valotuksen verran.',
+        selite: 'Ylhäältä Kattopuutarhan pöydät ja istutukset muodostavat '
+          + 'kartan, jolla tarjoilija jatkaa leipäkorin kanssa kohti asiakasta. '
+          + 'Tehdasalueen katolle on syntynyt uusia vihreitä kulkureittejä.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.kattopuutarha.fi/',
@@ -389,7 +378,7 @@ export const FOKUSVIRTA_TAMPERE = {
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Nyt Finlaysonilla on ravintoloita. Isoisä seurasi lankaa, minä tarjoilijaa. Molemmilla oli hyvä syy.',
+      'Finlaysonilla on nyt ravintoloita ja puutarha katolla. Seurasin leipäkoria pöytien välissä niin tarkasti, että melkein törmäsin tuoliin. Kori kääntyi. Minä en aivan.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },
