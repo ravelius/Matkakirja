@@ -1,3 +1,26 @@
+## 2026-09-13 06:04 UTC — Pulun selitysele #2345 HYVÄKSYTTY integraatioon; erillinen v1830 näkyvyyshavainto
+
+Ensimmäinen rootin ohjaama animaatiokierros on valmis sinun yhdistettäväksesi/versionnostoon/julkaisuun. Ei vielä live-pelin tai koko animaatiokokonaisuuden valmistumiskuittausta.
+
+- PR https://github.com/ravelius/Matkakirja/pull/2345 — Synkronoi Livian selitysele puhecuen kestoon.
+- Remote HEAD 1efc3d052fe4dec9f70ebd4d0ba42bacc2de8314, runtime cf27bc090f22346b003f53c81f6393b953b7b801.
+- Tree 6d015b9767bb226c97f220ffd72966e169a219a8. Rootin katselmoitu paikallinen bdb242bf9e3130993c63af7e37ebc3812efcc684 on täsmälleen SAMA PUU, git diff nolla; commit-identiteetit muuttuneet mutta sisältö ei.
+- Historiallinen base460b4533b355265cc3d5fb0532a30db5e14b34c2. Full diff SHA2560d1c5a2baff29d1c441ad037182e41e355a2c2bb61ca2b7f36b8d1e17e39b8db.
+- Root varmisti exact CI1873/run34741519299/job103681899809:3277testiä,3264PASS/13SKIP/0FAIL, kaikki vartijat ja standalone-build success. Root147/147kuuden kohdetestin valikoima, riippumaton Sol118/118 ohjain+lataus, ei blokkavaa löydöstä.
+- Read-only merge-tree nyky-main2edda1abbb159db8f341da26b92251cb42a4370f/v1831:n päälle konfliktiton5cfec28875f31a0641b763264ef92fa1cceec3c4. Root ei yhdistänyt/publishannut.
+
+cityExplain etenee nyt audio.currentTime-ajan mukaan. Lyhyessä cuessa oma paikallaan tehty katse/siipiele; pitkään sopivassa cuessa askel→vakaa selitys→paluu. Variantti valitaan cuen aloitusnopeudella, joten kesken1→2x ei vaihda sivusijaintia. Root katsoi liikkuvat1500ms/6200ms A/B:t,2xaloituksen,1→2xjatkuvuuden sekä390px/reduced-motion: liikesuuntaPASS. A/B käyttää oikeaa SVG:tä mutta simuloitua mediakelloa, EI oikeaa audio-ohjainta tai livepeliä. Yksikkötestit tarkistavat ohjaimen erikseen. Vain cityExplain sovitetaan koko cue-ikkunaan; muilla eleillä oma nimelliskesto säilyy mediakelloa seuraten.
+
+Ei teksti-, media-, sidecar-, TTS-, binding- tai kaanonmuutosta. ÄÄNI-HOLD säilyy. Toimita exactjulkaisukuittaus, niin root tekee oikean puhepolun julkaistun-origin-vastakokeen.
+
+**V1830 #2343 on origin- ja CI-varmennettu, mutta vihjepisteen VISUAALINEN portti ei vielä PASS.** Root7canonical+7cachebustSHA exact786264b3 PASS05:56:57UTC. CI1871/run34741299897/job1036813347743262PASS/13SKIP/0FAIL. Runtime/testidiff e6hyväksyttyyn on nolla. Chrome tavallinenreload näytti1830/Firenze-save säilyi. Normaali maritozzo25osto veloitti kerran650→625, lehti säilyi. Nyt vihjepiste syntyy DOMiin ilmanpannua, mutta se JA pelaajan nappula jäävät pallolauta-takana-luokkaan/opacity0 myös lehtisulun jälkeen yli minuutiksi. Yksi tavallinen40pxpannu poisti luokat ja molemmat tulivat näkyviin. Vihreän pisteen normaali keskinapautus avasi kohtaamisen.
+
+Riippumaton Sol paikansi yhteisen visibility-invalidointirajan: lehti pysäyttää pallon; uusi piste lisätään htmlElementsDataan vielä tauolla; sulun resumeAnimation+tahdistaSiirtymanJalkeen ei herätä htmlElementVisibilityModifierin etu/taka-luokitusta. Controlschange tekee sen. Tämä oli vanha yhteinen mekanismi, jonka uusi refresh paljasti. RC sai rajatun ERILLISEN korjaustehtävän + fakeGlobe open/close/rAF-regression, ei kameran siirtämistä tai kaikkien takapuolen merkkien pakottamista näkyviksi. Älä sekoita tätä hyväksytyn #2345:n diffiin. Lähdön note-vastakoe erikseen vielä työn alla.
+
+**Tekstit:** finalcandidate3 on rootin kirjallisesti hyväksymä ja45kaupungin lukukopio toimitettu omistajalle. Muuttuu11Pulu, Horatio45/suojatut kaupungit/kuvat/kuvatekstit ennallaan, kaupunkikohtainen sana+merkkikattoPASS. Manifesti903195fe7e665af91da30b460e87b0c10fe7d9de3fc905bef8add2b308804f5a; tiedosto docs/raportit/horatio-livia-eurooppa-pulu-candidate3-20260913-manifesti.json tekstivetäjän työpuussa. Omistajan lukuhyväksyntä ja audiojatkopäätös puuttuvat: EI maksullista ajoa/finishing/alignment/livebindingiä. Candidate1/2 eivät ole ajolähteitä.
+
+Näin myös History-lukureitin #2344/v1831 oikean mergen2edda1abbb159db8f341da26b92251cb42a4370f. RC informoitu; read-only ajo vasta sen turvarajojen omasta QA:sta, ei ääniHOLDin avausta. Kiitos erillisestä turvallisesta reitistä. Rootin ACTIVE15minjatko ja checkpoint säilyttävät nämä erilliset portit.
+
 ## 2026-09-13 05:32 UTC — Root ohjaa Pulun animaation jatkokehitystä omistajan tilauksesta
 
 Omistajan uusi suora pyyntö: ”Ohjaa animaation kehitystä kunnes olet siihen tyytyväinen.” Root ohjaa taiteellisen katselmuksen ja korjauskierrokset. Nykyinen RC/animaatiovetäjä tekee rajatun runtime-/elekorjauksen erillisessä työpuussa. Tämä avaa animaatiokoodin työstön mutta EI äänten uusinnan, ffmpeg-finishingin, alignmentin tai liveäänikytkennän HOLDia. Tekstivetäjä viimeistelee samaan aikaan Pulu-lukukandidaattia; jäädytetyt nykyäänet säilyvät.
