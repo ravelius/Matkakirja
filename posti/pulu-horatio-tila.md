@@ -1,3 +1,21 @@
+## 2026-09-13 11:41 UTC — Root: oikean äänen puhe-eleet sekä mobiilin päällekkäinen chat PASS rajatussa katselmuksessa
+
+Kiitos v1842:n toimituksesta. Luin varsinaisen d11a4658-diffin: Horatio kirjoittaa itselleen, ymmärrettävyysperiaate ja ehdollinen tarinakuvien lupa ovat nyt oikein Raamatussa. Kuvasession riippumaton julkaistujen FRA/SWE/NOR-moduulien 11:02:29 UTC readback PASS kattaa kaikki 7 hyväksyttyä kuvavalintaa ja 47 muun kohdedatan säilymisen. Se ei väitä uutta visuaalista kuvakatselmusta.
+
+**Puhe-eleiden toteutus hyväksytty rootin oikean äänen katselmuksessa.** Julkaistulla /docs/livia-cue-ab.html-sivulla oikea HTMLAudioElement, tuotannon cue-validaattori/ohjain/kasvosovitin/SVG, MP3 ja sidecar PASS:
+- Tromssan 1500 ms:n lyhyt cue: paikallinen katse/siipiele, sujuva siirtymä seuraavaan pitkään cueen.
+- Berliini 2× ALUSTA: lyhyt paikallinen variantti, ei tarpeetonta kävelyä; palautuu ajallaan.
+- Berliini 0.5× ALUSTA: täysi kävely–vakaa selitys–paluu, jalat maassa.
+- Soivan äänen eteenpäinkelaus vaihtaa eleen; loppuun kelaus purkaa; ended→Toista sitoo uudelleen; Tauko palauttaa lepoon ja pysäyttää ajan.
+- 390 px: liikerata lyhenee 52→28 px ja hahmo/siivet mahtuvat; vähennetty liike pitää hahmon paikallaan, rauhallinen ele ja palautuminen.
+Root katsoi aidot liikkuvat SVG:t ja useat todelliset selaimen kuvat itse. Aiempien Berlin1×/pause/resume/backseek/1→2×-tulosten kanssa tämä sulkee rajatun cue-aware-ohjaimen teknis-visuaalisen katselmuksen. Tuore main061c3920/v1843 ei muuta testattuja QA-/Livia-/Pollo-tiedostoja suhteessa hyväksyttyyn v1837:ään. Ei uutta runtimevirhettä eikä uutta koodikierrosta tilata.
+
+**Tavallinen peli / Chrome / 390 px / päällekkäiset modaalit:** Dubrovnikin lehti → Minčetan torni → Pulu-chat. Valkoista neliötä EI näkynyt. Yksi tekstikysymys ("Miksi Minčetan torni on pyöreä?"), Lue vastaukset ääneen=0: nopea oikean reunan lähtö → poissa odotus → paluu vastauksen alkaessa → paikallaan näkyvä pulu ja valmis vastaus. Ei juuttunutta vastausodotusta. Paluun koko pölynpuistelu ei sattunut kapean näytteen kuvasarjaan; aiempi desktop-tulos on erillinen, älä venytä tätä väitettä. Selainkoon tilapäinen 390×844-override palautettu pois.
+
+**Rajaukset edelleen:** tämä ei hyväksy koko45/90 uutta tekstipakettia tai kaikkien kohtausten tunneohjausta. Sarajevo/Marseille/avaus ja fyysinen iPad/WebKit erillisiä portteja. NativeSafari/Pietari£275 luettiin muuttamatta tallennetta; kuva näyttää edelleen ruskean kartta-alueen eikä pulua, joten sen avulla ei nyt voi tehdä visuaalista WebKit-hyväksyntää. Ei uutta syydiagnoosia tästä vanhasta ympäristörajasta. Oma Chrome-tallenne edennyt normaalisti Venetsian Lucia oikein → Dubrovnik; Sol valmistelee tästä tavallisen reitin Sarajevoon rootin katselua varten, ei tilainjektiota tai kehittäjäsalasanan ohitusta.
+
+Todisteet rootin output/horatio-livia-root-qa-20260913/qa-oikea-audio-20260913-1127.md ja uusin checkpoint. Uusi45/90-lukuversio pysyy jäädytettynä omistajan lukemista varten, AANI-HOLD ennallaan. Ei uusia ääni-/alignment-/finishing-/livekytkentäajoja; ehdollinen uusien tarinakuvien vaihe ei ole alkanut. Saapumisiskulauseiden erilliset puhuttavat versiot ovat edelleen tekemättä.
+
 ## 2026-09-13 10:29 UTC — 7 kuvan HYVÄKSYTYT VASTINPARIT nyt tarkasti toimitettu
 
 Täydennys alla olevaan omistajan rajaukseen: kaikki 7 paikkaa säilyvät, vain hylätty vaihtoehto pois pelikytkennöistä. Kuvasession riippumaton read-only handoff on valmis. Root luki handoff.json:n; sen checkedAt=2026-09-13T10:27:20.173Z, mainRevision=be5ec4ad077928c458e1df585129e70b87c42e69, allAcceptedMediaVerified=true, gameChangesPerformed=false. HTTP/SHA/review-varmennukset ovat kuvasession tekemät, eivät rootin uudelleen ajamat.
