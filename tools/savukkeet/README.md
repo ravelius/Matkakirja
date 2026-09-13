@@ -66,6 +66,7 @@ ohitettu vartio.
 - `savuke-lehden-mitta`
 - `savuke-lehtiasettelu`
 - `savuke-lehtiotsikko`
+- `savuke-liiku`
 - `savuke-lippuikkuna`
 - `savuke-lukijan-seuranta`
 - `savuke-maailmanakyma`
@@ -133,6 +134,7 @@ väritasoa ja sen kanssa) ja lukee lisäksi uloszoomauksen eston.
 | savuke-paivityspopup | Versionumeron päivitysnappi |
 | savuke-kehittajalehti | Kehittäjän liitteet: Raamattu, Tilannelehti ja Tilastot-lehden vetolaatikkotaulu |
 | savuke-kohtaamistesti | Kehittäjän kohtaamislista (ratasvalikon Kohtaamiset): mannerryhmät MANNER_NIMET-järjestyksessä, ryhmä auki/kiinni, rivi avaa kohtaamisen pelin omalla kortilla kuvineen, tehtäväpeli aarteeseen asti — ja HIEKKALAATIKKO: tallenne, raha, päivät, löydöt ja tietäjäpisteet eivät muutu. Oletuslauta ja `?lauta=kartta`. Vaatii ämpärin (`NODE_USE_ENV_PROXY=1`) kohtaamiskuvaa varten |
+| savuke-liiku | Liiku-napin neljä kulkutapaa pallolla: liftaus (0 p / 6 h), bussi (50 p / 0 h), laiva (100 p / 6 h) ja lento (300 p / 6 h); kartan kulkutapakohtainen rajaus ja paluu maan rajaukseen; autokyydin nopeusprofiili (kiihtyy, jarruttaa, ei hyppyä); automaattinen nopanheitto säilyy sisämaassa ja laivareitillä vaikka bussi on tarjolla. Vastakokeet: ilman rahaa bussi ja laiva harmaina, vaihekäyrä riisuttuna profiiliväite kaatuu, erän 8 vanha autoTravel-ehto punaisena |
 | savuke-lippuikkuna | Lippuikkunan pikselit (ison lipun terävyys, tarkennettu vaakuna kortin sisällä) |
 | savuke-fokusvirta | Fokusmoodin annosteluvirta Ateenassa: lehtilukko, kortti kartan päällä, vaiheet matkakirja → kupla → oppitunti → kohtaaminen ja luovutus laattamekaniikalle. Valintakupla vaiheineen on PURETTU (Raamattu, SYVENNYSTARINAT KARTALLE): savuke vaatii, että kuplan Jatka vie suoraan oppituntiin eikä Pulu kysy täkyjä. Syvennystarinoiden merkkireitin kattaa savuke-selitevalikko |
 | savuke-dist | Yhden tiedoston versio käynnistyy (aja build ensin) |

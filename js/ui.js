@@ -10852,8 +10852,13 @@ export class UI {
        * Paluunappi vain kun on mihin palata. Esivalitulla tavalla
        * game.actionCancelTravel torjuu paluun ("Muita matkustustapoja ei
        * ole"), joten nappi näyttäisi vain virheilmoituksen.
+       *
+       * BUSSI EI ESTÄ AUTOMAATTISTA HEITTOA mutta on yhä valittavissa
+       * ennen sitä (Raamattu KARTTAUUDISTUKSEN PAATOKSET 5): kun
+       * noppatapa on esivalittu ja bussikohteita on, paluunappi vie
+       * takaisin Liiku-napin valintaan.
        */
-      if (!game.autoTravel) {
+      if (!game.autoTravel || game.muitaTapojaTarjolla()) {
         const backBtn = this.iconButton('nuoli', 'Vaihda matkustustapa');
         backBtn.addEventListener('click', () => this.doAction(() => game.actionCancelTravel()));
         napit.push(backBtn);

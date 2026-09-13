@@ -1021,7 +1021,10 @@ export class Game {
    * (käyttöliittymä näyttää napin harmaana ja kertoo syyn).
    */
   busDestinations(player = this.player) {
-    if (this.phase !== 'action') return [];
+    // Vaihe 'roll' on mukana, koska bussi on valittavissa myös silloin,
+    // kun noppatapa on esivalittu mutta noppaa ei ole vielä heitetty
+    // (muitaTapojaTarjolla, Raamattu KARTTAUUDISTUKSEN PAATOKSET 5).
+    if (this.phase !== 'action' && this.phase !== 'roll') return [];
     if (player.pos.type !== 'city') return [];
     if (player.money < BUS_FARE) return [];
     const city = this.cityOf(player);
@@ -1571,9 +1574,26 @@ export class Game {
     // Kun vaihtoehtoja ei ole — esimerkiksi sisämaan kaupungissa tai kesken
     // reittiä — matkustustapa valitaan valmiiksi ja vuoro alkaa suoraan
     // nopanheitosta. Turhaa napinpainallusta ei tarvita.
+    /*
+     * BUSSI EI ESTÄ AUTOMAATTISTA HEITTOA (omistaja 13.9.2026, Raamattu
+     * KARTTAUUDISTUKSEN PAATOKSET 5, sanatarkasti: *"Bussilippu vie aina
+     * suoraan seuraavaan kaupunkiin ilman nopanheittoa, joten
+     * automaattinen nopanheitto on edelleen voimassa, koska se koskee
+     * ainoastaan vain liftausta. Kaikissa tapauksissa paitsi
+     * laivareitillä."* ja *"Ja laiva  reitilläkään ei taas ole muuta
+     * vaihtoehtoa kuin laiva, niin siellekin on automaattinen
+     * nopanheitto."*).
+     *
+     * Automaattivalinta lasketaan siksi NOPPATAVOISTA (land, sea, fly):
+     * bussilla ei heitetä, joten sen olemassaolo ei tee heitosta
+     * valintaa. Ehto on täsmälleen sama kuin ennen erää 8 (v1844).
+     * Bussi jää silti valittavaksi Liiku-napista ennen heittoa
+     * (muitaTapojaTarjolla → js/ui.js paluunappi).
+     */
     const modes = this.travelModes(p);
-    this.autoTravel = modes.length === 1 && modes[0] !== 'stay';
-    if (this.autoTravel) this.actionTravel(modes[0]);
+    const noppaTavat = modes.filter((m) => m !== 'bus');
+    this.autoTravel = noppaTavat.length === 1 && noppaTavat[0] !== 'stay';
+    if (this.autoTravel) this.actionTravel(noppaTavat[0]);
 
     /*
      * MATKA KESKEN = HEITTO ILMAN NAPPIA (omistaja 2.9.2026:
@@ -1710,10 +1730,27 @@ export class Game {
     return { ok: true, mode };
   }
 
+  /**
+   * Onko esivalitun nopanheiton rinnalla vielä jotain valittavaa?
+   *
+   * Bussi ei ole noppatapa eikä siksi estä automaattista heittoa
+   * (Raamattu KARTTAUUDISTUKSEN PAATOKSET 5), mutta se on yhä tarjolla
+   * Liiku-napista niin kauan kuin noppaa ei ole heitetty. Kesken
+   * reittiä (nappula kaaren askelpisteessä) bussia ei ole, joten
+   * paluuta ei tarjota.
+   */
+  muitaTapojaTarjolla(player = this.player) {
+    if (this.phase !== 'roll') return false;
+    if (this.travelMode === 'bus') return false;
+    return this.busDestinations(player).length > 0;
+  }
+
   /** Palaa matkustustavan valintaan ennen nopanheittoa. */
   actionCancelTravel() {
     if (this.phase !== 'roll') return { ok: false, error: 'Väärä vaihe' };
-    if (this.autoTravel) return { ok: false, error: 'Muita matkustustapoja ei ole' };
+    if (this.autoTravel && !this.muitaTapojaTarjolla()) {
+      return { ok: false, error: 'Muita matkustustapoja ei ole' };
+    }
     this.travelMode = null;
     this.pendingFare = 0;
     this.phase = 'action';
