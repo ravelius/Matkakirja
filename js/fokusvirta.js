@@ -403,6 +403,43 @@ export function fokusvirtaLukitseeLehden(ui, city) {
 }
 
 /**
+ * SAAKO LIIKU-NAPPI NÄKYÄ JUURI NYT? — VASTAUS ON AINA KYLLÄ.
+ *
+ * Omistajan linjaus 13.9.2026 (Raamattu, KARTTAUUDISTUS, sanatarkasti:
+ * *"Alareunassa onkin kokojan nakyvilla pieni 'liiku' nappi."* ja
+ * *"Pelaaja voi myos halutessaan jatkaa matkaa ilman loytamatta
+ * aarretta."*). Nappi on siis PYSYVÄ eikä palkinto.
+ *
+ * KUMOAA 25.8.2026 LAATTAPORTIN. Silloin nappi ilmestyi vasta kun
+ * kaupungin laatta oli käännetty (`game.tokens.has(city.id)` pois).
+ * Portti oli tehty TÄYDELLE fokusvirtapakille, jossa laatan kääntävä
+ * ketju on aina olemassa: matkakirja → täky → kohtaaminen →
+ * aarrekysymys. KEVYELLÄ PAKILLA (js/packs/fokusvirrat.js
+ * KEVYET_FOKUSVIRRAT: alpit, islanti, kreeta, lappi, sisilia, tromssa)
+ * sitä ketjua ei ole — ei kohtaamispistettä, ei lehtitehtävää, ei
+ * aarteen avaavaa kysymystä — mutta laatta on. Portti jäi siis
+ * ikuisesti kiinni ja pelaaja jäi kohteeseen ilman ainuttakaan tapaa
+ * jatkaa matkaa (Codexin pelitesti v1855, Alpit).
+ *
+ * TURVARAJAT EIVÄT OLE TÄSSÄ. Vuoron vaihe (botti, 'move', 'event',
+ * 'quiz', 'offer', 'pickstart'), saapumistraileri ja intro ratkaistaan
+ * js/ui.js:n renderActionsissa, joka ei piirrä riviä lainkaan; liu'un
+ * estot (ei matkustustapoja, linssikartan kuori) asettavat napin
+ * `disabled`-tilan piirraToimintorivissä. Tämä sääntö vastaa vain
+ * siihen, onko nappi OLEMASSA — ja se on.
+ *
+ * Funktio ottaa `ui`:n vastaan, jotta kytkentä js/ui.js:ssä pysyy
+ * yhtenä kutsuna, jos linjaus joskus saa ehtoja takaisin.
+ *
+ * @param {object} _ui Pelin käyttöliittymä (ei luettavia ehtoja nyt).
+ * @returns {boolean} aina true
+ */
+// eslint-disable-next-line no-unused-vars
+export function liikuNappiNakyvissa(_ui) {
+  return true;
+}
+
+/**
  * ONKO KAUPUNGIN LAATTA JO ANSAINNUT PAIKKANSA LEHDEN PÄÄLLÄ?
  *
  * Omistajan pelitestipalaute v1097 (iPad): *"Ota pallot pois"* —
