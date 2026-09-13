@@ -413,7 +413,13 @@ export const TAGIT = {
   'sofia-3': { alku: '[brightly]' },
   'istanbul-3': { alku: '[brightly]' },
   'bukarest-3': { alku: '[brightly]' },
-  'sarajevo-3': { alku: '[brightly]' },
+  'sarajevo-3': {
+    alku: '[warmly]',
+    kohdat: [
+      ['Isoisä oppi', '[curious]'],
+      ['Minä kuuntelisin', '[softly]'],
+    ],
+  },
   'budapest-3': { alku: '[brightly]' },
   'wien-3': { alku: '[brightly]' },
   'praha-3': { alku: '[brightly]' },
@@ -448,7 +454,13 @@ export const TAGIT = {
    * ensimmäistä paikkaa ovat varattuja), ja se on luennan jälkeinen
    * reipas huomio — sama alkutagi kuin muiden kaupunkien kommenteilla.
    */
-  'ateena-3': { alku: '[brightly]' },
+  'ateena-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Puutarhakahvilassa', '[warmly]'],
+      ['Minä tarkistan', '[mischievously]'],
+    ],
+  },
   'kreeta-3': { alku: '[brightly]' },
   'sisilia-3': { alku: '[brightly]' },
   'islanti-3': { alku: '[brightly]' },
@@ -470,7 +482,13 @@ export const TAGIT = {
   'dublin-3': { alku: '[brightly]' },
   'edinburgh-3': { alku: '[brightly]' },
   'pariisi-3': { alku: '[brightly]' },
-  'marseille-3': { alku: '[brightly]' },
+  'marseille-3': {
+    alku: '[curious]',
+    kohdat: [
+      ['Lokit eivät tunne', '[mischievously]'],
+      ['Minä erotan', '[warmly]'],
+    ],
+  },
   'lissabon-3': { alku: '[brightly]' },
   'madrid-3': { alku: '[brightly]' },
   'barcelona-3': { alku: '[brightly]' },
@@ -478,7 +496,13 @@ export const TAGIT = {
   'sevilla-3': { alku: '[brightly]' },
   'amsterdam-3': { alku: '[brightly]' },
   'berliini-3': { alku: '[brightly]' },
-  'venetsia-3': { alku: '[brightly]' },
+  'venetsia-3': {
+    alku: '[excited]',
+    kohdat: [
+      ['Hetkinen', '[whispers]'],
+      ['Hän osui', '[mischievously]'],
+    ],
+  },
   'firenze-3': { alku: '[brightly]' },
   'rooma-3': { alku: '[brightly]' },
   'dubrovnik-3': { alku: '[brightly]' },
@@ -487,6 +511,45 @@ export const TAGIT = {
   'bergen-3': { alku: '[brightly]' },
   'kobenhavn-3': { alku: '[brightly]' },
 };
+
+/**
+ * Muodostaa generaattorin ankkurireseptin hyväksytystä exact-TTS-rivistä.
+ * Näkyvät sanat eivät saa muuttua, ja jokaisen väliankkurin on oltava
+ * yksikäsitteinen. Näin tuotantogeneraattori ja 45 kaupungin hyväksytty
+ * luentamanifesti käyttävät varmasti samaa v3-syötettä.
+ */
+export function tagiresepti(nakyva, tts) {
+  const tagit = [];
+  let plain = '';
+  let cursor = 0;
+  for (const match of tts.matchAll(/\[[^\]]+\]\s*/g)) {
+    plain += tts.slice(cursor, match.index);
+    tagit.push({ tag: match[0].trim(), offset: plain.length });
+    cursor = match.index + match[0].length;
+  }
+  plain += tts.slice(cursor);
+  if (plain !== nakyva) throw new Error('exact-TTS muuttaa näkyviä sanoja');
+  const recipe = {};
+  const internal = tagit.filter(({ offset }) => offset > 0);
+  const first = tagit.find(({ offset }) => offset === 0);
+  if (first) recipe.alku = first.tag;
+  if (internal.length) recipe.kohdat = internal.map((item, index) => {
+    const end = internal[index + 1]?.offset ?? nakyva.length;
+    const anchor = nakyva.slice(item.offset, end).trim();
+    if (!anchor || nakyva.split(anchor).length - 1 !== 1) {
+      throw new Error(`exact-TTS-ankkuri ei ole yksikäsitteinen: ${anchor}`);
+    }
+    return [anchor, item.tag];
+  });
+  return recipe;
+}
+
+const EUROOPPA_TTS_MANIFESTI = JSON.parse(readFileSync(resolve(
+  JUURI, 'docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260913.json',
+), 'utf8'));
+for (const city of EUROOPPA_TTS_MANIFESTI.cities) {
+  TAGIT[`${city.city}-3`] = tagiresepti(city.livia.visibleText, city.livia.ttsText);
+}
 
 /** Tagi pois tekstistä: `[excited] Hei` → `Hei`. */
 export function ilmanTageja(teksti) {

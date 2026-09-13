@@ -198,14 +198,14 @@ export const FOKUSVIRTA_MOSKOVA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-moskova-r20260909-paper-v4.jpg",
       lyhyt: "Moskova, 1873. Suuri kello ja sen irti päässyt pala.",
-      selite: "Kellon kyljestä puuttuva kohta on niin suuri, että sitä voisi luulla tarkoitukselliseksi oveksi. Irronnut pala seisoo vieressä todistamassa toista. Vartija kertoi painosta ja antoi minun kuvata rauhassa. Tsaarinkello on ehtinyt saada maineensa käyttämättä ääntään kertaakaan. Tämän vedoksen tekeminen sujui siksi mainiosti: kohde ei liikkunut, eikä se vaatinut ketään hiljenemään.",
+      selite: 'Tsaarinkellon kyljen valtava repeämä ja vieressä seisova pronssinpala kertovat kellosta, joka sai maineensa soimatta kertaakaan. Kohde ei liikkunut eikä vaatinut ketään hiljenemään, joten vedos valmistui mainiosti.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.kreml.ru/en-Us/visit-to-kremlin/what-to-see/tsar-kolokol/","https://kremlin-architectural-ensemble.kreml.ru/the-tsar-bell/view/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-moskova-r20260911-paper2-v1.jpg",
       lyhyt: "Moskova, 1873. Pieni kello sai aikaan sen, mihin suuri ei pystynyt.",
-      selite: "Majatalon pieni käsikello helähti pöydän ääressä. Sen ääni toi minut käytävältä suoraan lämpimän ruoan luo. Kremlissä näkemäni jättiläinen oli kuuluisampi ja monin verroin raskaampi. Illalla vaikutusvalta mitattiin kuitenkin sillä, kuka sai vieraan istumaan.",
+      selite: 'Majatalon pieni käsikello kutsui minut lämpimän ruoan ääreen, mihin Kremlin kuuluisa jättiläinen ei ollut koskaan pystynyt. Illalla vaikutusvalta mitattiin sillä, kuka sai vieraan istumaan.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.kreml.ru/en-Us/visit-to-kremlin/what-to-see/tsar-kolokol/"],
     },
@@ -214,12 +214,7 @@ export const FOKUSVIRTA_MOSKOVA = {
     paikkarivi: 'Moskova, heinäkuussa 1873. Helteistä; kupolit häikäisevät; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
-    teksti: 'Kremlissä seisoo valtava kello, joka ei ole soinut kertaakaan. Se '
-      + 'halkesi ennen ensimmäistä lyöntiä. Irronnut pala on minun huonettani '
-      + 'suuremman oloinen. Vartija kertoi painon ylpeästi, aivan kuin '
-      + 'hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut '
-      + 'syömään. Sillä oli vähemmän mainetta mutta selvästi enemmän '
-      + 'vaikutusvaltaa.',
+    teksti: 'Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -239,24 +234,19 @@ export const FOKUSVIRTA_MOSKOVA = {
      * (siirtymä).
      */
     reaktiot: [
-      { id: 'moskova.r1', ankkuri: 'ei ole soinut kertaakaan', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Kello, joka ei ole koskaan soinut.' },
+      { id: 'moskova.r1', ankkuri: 'ei ollut soinut kertaakaan', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'moskova.r2', ankkuri: 'ennen ensimmäistä lyöntiä', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Halkeama ennen ensimmäistä ääntä.' },
-      { id: 'moskova.r3', ankkuri: 'huonettani suuremman oloinen', tarkoitus: 'hammastyy', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Pelkkä sirpale on huonetta suurempi.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'moskova.r3', ankkuri: 'huonettani suuremmalta', tarkoitus: 'hammastyy', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'moskova.r4', ankkuri: 'hiljaisuus olisi sillä voitettu', tarkoitus: 'epailee', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Vartijan ylpeys ei vakuuta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'moskova.r5', ankkuri: 'enemmän vaikutusvaltaa', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Loppuvitsi: pieni kello voittaa suuren.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Kremlissä seisoo valtava kello, joka ei ole soinut '
-      + 'kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala on '
-      + 'minun huonettani suuremman oloinen. Vartija kertoi painon ylpeästi, '
-      + 'aivan kuin hiljaisuus olisi sillä voitettu. Illalla pieni käsikello '
-      + 'kutsui minut syömään. [softly] Sillä oli vähemmän mainetta mutta '
-      + 'selvästi enemmän vaikutusvaltaa.',
+    luenta: '[curious] Kremlissä seisoi valtava kello, joka ei ollut soinut kertaakaan. Se halkesi ennen ensimmäistä lyöntiä. Irronnut pala näytti huonettani suuremmalta. Vartija kertoi painon kuin hiljaisuus olisi sillä voitettu. [mischievously] Illalla pieni käsikello kutsui minut syömään: vähemmän mainetta, enemmän vaikutusvaltaa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-moskova.mp3',
   },
 
@@ -273,13 +263,7 @@ export const FOKUSVIRTA_MOSKOVA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-moskova-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Moskova: hiljaisuuden kyljessä on lintua suurempi aukko.',
-        selite: 'Tsaarinkellosta irronnut pala seisoo edelleen suuren kellon '
-          + 'vieressä. Ihmiset kuvaavat kokonaisuutta muutaman askeleen päästä; '
-          + 'minä tarkistin tyhjän kohdan läheltä. Pronssin reuna näyttää tästä '
-          + 'korkeudesta kallionseinältä. Kello ei ole koskaan soinut. Se ei '
-          + 'estä sitä keräämästä yleisöä, mutta myönnän arvostavani myös '
-          + 'pienempiä esineitä, jotka tekevät sen, mitä varten ne on '
-          + 'rakennettu.',
+        selite: 'Tsaarinkellon irrallinen pala seisoo yhä suuren aukon edessä, ja läheltä pronssin reuna näyttää kallionseinältä. Kello ei ole koskaan soinut, mutta yleisöä se kerää enemmän kuin moni toimiva esine.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://en.wikipedia.org/wiki/Tsar_Bell',
@@ -343,7 +327,7 @@ export const FOKUSVIRTA_MOSKOVA = {
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Tsaarinkello vaikenee edelleen. Moskova on nyt pääkaupunki. Minäkin tulen syömään pienemmästä kutsusta.',
+      'Tsaarinkellon ympärillä puhelimet nousivat yhtä aikaa. Väistin kamerat ja laskeuduin muurin varjoon — kuuluisuus vie paljon ilmatilaa.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

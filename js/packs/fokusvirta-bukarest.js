@@ -181,14 +181,14 @@ export const FOKUSVIRTA_BUKAREST = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bukarest-r20260909-paper-v4.jpg",
       lyhyt: "Bukarest, 1873. Majatalon pihassa tavara ja matkustaja lepäsivät yhdessä.",
-      selite: "Manucin majatalon parvilta näki pihalle ja toisille parville, joten yksinäisyyttä oli tarjolla lähinnä oven sulkemisen hinnalla. Alhaalla mies oli tehnyt säkeistään vuoteen ja vartioi niitä samalla nukkumalla. Keittiön suunnasta liikkui ruokaa ja tuoksua. Kuvasin ennen alas menemistä. Pylväiden laskeminen olisi voinut odottaa iltaan, mutta en luottanut siihen, että päivällinen tekisi samoin.",
+      selite: 'Manucin majatalon puuparvet kiersivät pihaa, jossa mies nukkui säkkinsä päällä. Kuvasin tavaran ja vartijan yhteisen levon ennen kuin keittiön tuoksu vei huomioni.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://muzeulbucurestiului.ro/expozitia-tematica-hanurile-uitate-ale-bucurestilor/","https://www.hanulluimanuc.ro/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bukarest-r20260911-paper2-v1.jpg",
       lyhyt: "Bukarest, 1873. Keittiön tuoksu voitti pylväiden laskemisen.",
-      selite: "Parven kaide johti katseen alas keittiön avoimelle ovelle. Kun padan kansi nousi, höyry ehti luokseni ennen ruokalajia. Jätin pylväät kesken ja lähdin portaita alas. Majatalossa oikea suunta löytyi tällä kertaa nenällä.",
+      selite: 'Parven kaide johti katseen avoimeen keittiöön, jossa padan kansi nousi ja höyry karkasi. Jätin pylväät laskematta ja lähdin portaita alas.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://muzeulbucurestiului.ro/expozitia-tematica-hanurile-uitate-ale-bucurestilor/","https://www.hanulluimanuc.ro/"],
     },
@@ -196,12 +196,7 @@ export const FOKUSVIRTA_BUKAREST = {
     paikkarivi: 'Bukarest, lokakuussa 1873. Ensimmäinen halla; savu nousee '
       + 'suoraan; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 350 merkkiä (yläraja 400). */
-    teksti: 'Bukarestin Manucin majatalossa huoneet kiertävät pihaa puuparvien '
-      + 'takana. Avasin oven ja kuulin yhtä aikaa kolmet eri kaupat. Alhaalla '
-      + 'mies nukkui säkkinsä päällä kuin pankki omaisuutensa vartijana. '
-      + 'Keittiöstä nousi tuoksu, jolle ei tarvittu tulkkia. Menin alas ennen '
-      + 'kuin ehdin laskea parven pylväät. Huoneeni löysin illalla naapurini '
-      + 'kuorsauksesta.',
+    teksti: 'Manucin majatalossa huoneet kiersivät pihaa puuparvien takana. Alhaalla mies nukkui säkkinsä päällä kuin pankki omaisuutensa vartijana. Keittiön tuoksulle ei tarvittu tulkkia. Huoneeni löysin illalla naapurini kuorsauksesta.',
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -216,22 +211,15 @@ export const FOKUSVIRTA_BUKAREST = {
      * kuin ehdin laskea parven pylväät" (havainnot).
      */
     reaktiot: [
-      { id: 'bukarest.r1', ankkuri: 'kolmet eri kaupat', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Oven takaa kuuluu kolme kauppaa yhtä aikaa.' },
       { id: 'bukarest.r2', ankkuri: 'kuin pankki omaisuutensa vartijana', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Säkkinsä päällä nukkuva mies on isoisän vertaus.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'bukarest.r3', ankkuri: 'ei tarvittu tulkkia', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Keittiön tuoksu ymmärretään ilman kieltä.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'bukarest.r4', ankkuri: 'naapurini kuorsauksesta', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Loppuvitsi: huone löytyy korvalla.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Bukarestin Manucin majatalossa huoneet kiertävät pihaa '
-      + 'puuparvien takana. Avasin oven ja kuulin yhtä aikaa kolmet eri '
-      + 'kaupat. Alhaalla mies nukkui säkkinsä päällä kuin pankki omaisuutensa '
-      + 'vartijana. Keittiöstä nousi tuoksu, jolle ei tarvittu tulkkia. Menin '
-      + 'alas ennen kuin ehdin laskea parven pylväät. [softly] Huoneeni löysin '
-      + 'illalla naapurini kuorsauksesta.',
+    luenta: '[curious] Manucin majatalossa huoneet kiersivät pihaa puuparvien takana. [mischievously] Alhaalla mies nukkui säkkinsä päällä kuin pankki omaisuutensa vartijana. Keittiön tuoksulle ei tarvittu tulkkia. [softly] Huoneeni löysin illalla naapurini kuorsauksesta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-bukarest.mp3',
     /*
      * KUVA: Carol Szathmarin valokuva Colțean tornista (kaanon, kohta 1).
@@ -292,13 +280,7 @@ export const FOKUSVIRTA_BUKAREST = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bukarest-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Bukarest: parvelta löytyi suora yhteys lounaaseen.',
-        selite: 'Manucin majatalon pihalla pöydät ovat nykyään ravintolan käytössä. '
-          + 'Puiset parvet kehystävät aterioita kuten ennen matkustajien '
-          + 'kohtaamisia. Minä laskeuduin kaiteelle ja löysin tarjoilijan '
-          + 'reitin yhdellä silmäyksellä. Isoisä tunnisti huoneensa '
-          + 'kuorsauksesta. Täällä on edelleen monta ääntä päällekkäin, mutta '
-          + 'lautasen kevyt kilahdus erottuu yllättävän hyvin. Ammattitaito '
-          + 'auttaa myös ravintolassa.',
+        selite: 'Manucin majatalon puuparvet kehystävät nykyään ravintolan täyttä sisäpihaa. Etsin pöytien alta murusia, kun viereisestä pöydästä kuultu salaisuus vei huomioni.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://hanumanucrestaurant.ro/en/',
@@ -350,7 +332,7 @@ export const FOKUSVIRTA_BUKAREST = {
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Manucin majatalon pihalla syödään edelleen. Isoisä löysi huoneensa korvalla. Minä löydän keittiön samoin.',
+      'Manucin majatalon sisäpihalla syödään yhä. Etsin pöytien alta murusia, kun viereisestä pöydästä kuului sana ”salaisuus”. Muruset unohtuivat siihen.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.55 },

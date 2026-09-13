@@ -186,27 +186,28 @@ export const FOKUSVIRTA_VENETSIA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-venetsia-r20260909-paper-v5.jpg",
       lyhyt: "Venetsia, 1873. Oven kynnys jatkui veteen.",
-      selite: "Portaiden alin askel katosi kanavaan, ja gondolieri odotti sen edessä niin kuin ajuri odottaisi kuivalla kadulla. Yläkerran ikkuna oli auki. Kuului astian kilahdus, sitten vettä vasten osuvan melan ääni. Kuvasin näkymän ovelta ennen veneeseen nousua. Kaupungin palatsit näyttävät mahtavilta, mutta niiden arkeen pääsee kurkistamaan aivan tavallisen kynnyksen yli.",
+      selite: 'Kanava nieli portaiden alimman askelman, ja gondolieri odotti kynnyksen edessä kuin ajuri kuivalla kadulla. Kuvasin avoimen ikkunan ja veteen jatkuvan sisäänkäynnin ennen veneeseen nousua.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.veneziaunica.it/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-venetsia-r20260911-paper2-v1.jpg",
       lyhyt: "Venetsia, 1873. Aamiaiskuppi kuului kanavalle asti.",
-      selite: "Gondoli kulki hiljaa kapeaa kanavaa. Gondolieri työnsi melaa, ja talojen seinät nousivat veden reunasta. Avoimella ikkunalla näkyi pieni kuppi. Lusikan kilahdus tuntui kuuluvan veneeseen saakka.",
+      selite: 'Gondoli kulki kapeaa kanavaa talojen seinien noustessa suoraan vedestä. Avoimen ikkunan pieni aamiaiskuppi jäi kuvaan melan liikkeen yläpuolelle.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.veneziaunica.it/"],
     },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Venetsia, kesäkuussa 1873. Kosteaa; laguuni haisee laskuveden aikaan.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 348 merkkiä (yläraja 400). */
-    teksti: 'Venetsiassa oven takana saattaa olla meri. Astuin aamulla '
-      + 'majatalon portaille ja olin mennä kaupunkiin uimaan. Gondolieri tuli '
-      + 'hakemaan ja piti ilmeensä ihailtavan suorana. Kuljimme palatsien ohi '
-      + 'niin hiljaa, että kuulin lusikan osuvan kahvikuppiin yläkerrassa. '
-      + 'Täällä taloilla on hienot julkisivut, mutta vesi pääsee kuuntelemaan '
-      + 'niiden aamiaista.',
+    /* HYVÄKSYTTY TEKSTIPILOTTI r2 13.9.2026: yhteinen Horatio–Livia-
+     * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
+     * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
+     * julkaisua. */
+    teksti: 'Venetsiassa majatalon ovi avautui veteen, ja olin astua uimaan. '
+      + 'Gondolieri piti ilmeensä suorana. Palatsien välissä kuulin lusikan '
+      + 'osuvan kahvikuppiin yläkerrassa. Taloilla oli hienot julkisivut; '
+      + 'vesi kuunteli niiden aamiaista.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
@@ -226,24 +227,23 @@ export const FOKUSVIRTA_VENETSIA = {
      * saa reaktion).
      */
     reaktiot: [
-      { id: 'venetsia.r1', ankkuri: 'saattaa olla meri', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+      { id: 'venetsia.r1', ankkuri: 'ovi avautui veteen', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
         perustelu: 'Oven takana oleva meri on outo ajatus.' },
-      { id: 'venetsia.r2', ankkuri: 'mennä kaupunkiin uimaan', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+      { id: 'venetsia.r2', ankkuri: 'olin astua uimaan', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
         perustelu: 'Merkinnän paras vitsi.' },
-      { id: 'venetsia.r3', ankkuri: 'ihailtavan suorana', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'venetsia.r3', ankkuri: 'piti ilmeensä suorana', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Gondolieri ei naura ääneen, isoisä huomaa sen.' },
       { id: 'venetsia.r4', ankkuri: 'lusikan osuvan kahvikuppiin', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Hiljaisuus kantaa yläkerran aamiaisen.' },
-      { id: 'venetsia.r5', ankkuri: 'kuuntelemaan niiden aamiaista', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'venetsia.r5', ankkuri: 'vesi kuunteli niiden aamiaista', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Päätöslause saa hiljaisen nyökkäyksen.' },
     ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Venetsiassa oven takana saattaa olla meri. Astuin '
-      + 'aamulla majatalon portaille ja olin mennä kaupunkiin uimaan. '
-      + 'Gondolieri tuli hakemaan ja piti ilmeensä ihailtavan suorana. '
-      + 'Kuljimme palatsien ohi niin hiljaa, että kuulin lusikan osuvan '
-      + 'kahvikuppiin yläkerrassa. [softly] Täällä taloilla on hienot '
-      + 'julkisivut, mutta vesi pääsee kuuntelemaan niiden aamiaista.',
+    /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
+     * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
+    luenta: '[curious] Venetsiassa majatalon ovi avautui veteen, ja olin '
+      + 'astua uimaan. Gondolieri piti ilmeensä suorana. Palatsien välissä '
+      + 'kuulin lusikan osuvan kahvikuppiin yläkerrassa. [softly] Taloilla '
+      + 'oli hienot julkisivut; vesi kuunteli niiden aamiaista.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-venetsia.mp3',
   },
 
@@ -260,12 +260,7 @@ export const FOKUSVIRTA_VENETSIA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-01-r20260909-paikka-v2.jpg',
         lyhyt: 'Venetsia: vesibussi ja aivan sattumalta yksi paikallinen.',
-        selite: 'Punta della Doganan kärjestä näkyy San Giorgio Maggioren saari ja '
-          + 'sen edessä kulkevia vesibusseja. Tarkoitukseni oli näyttää '
-          + 'liikennettä. Rannan reunalle sattui paikallinen, joka katsoi juuri '
-          + 'oikeaan suuntaan ja osasi olla peittämättä koko näkymää. Se on '
-          + 'harvinainen taito. Kuvasin maiseman tietenkin sen vuoksi. Kuvan '
-          + 'reunassa oleva sydän on luultavasti jokin kameran asetus.',
+        selite: 'Punta della Doganan kärjestä näkyvät San Giorgio Maggioren saari ja sen edessä kulkeva vesibussi. Paikallinen sattui etualalle niin sopivasti, että kuvan reunaan ilmestyi sydän — ehkä kameran asetus.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.pinaultcollection.com/palazzograssi/en/punta-della-dogana',
@@ -275,14 +270,8 @@ export const FOKUSVIRTA_VENETSIA = {
       },
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-02-r20260909-paikka-v2-v3.jpg',
-        lyhyt: 'Venetsia: sama paikallinen. Kaupunki on yllättävän pieni.',
-        selite: 'Ponte dei Pugnin alta kulkee Rio San Barnaba. Ihmiset ylittävät '
-          + 'kanavan siltaa pitkin, tavara pääsee veneellä. Tästä piti tulla '
-          + 'kuva liikenteestä. Paikallinen ehti taas etualalle, tällä kertaa '
-          + 'metallikaiteelle. Hän katsoi ensin vettä ja sitten minua. Vaihdoin '
-          + 'hieman kuvakulmaa saadakseni kanavan paremmin näkyviin. Jos lintu '
-          + 'näyttää edellistä suuremmalta, se johtuu vaativasta '
-          + 'paikkatutkimuksesta.',
+        lyhyt: 'Venetsia: sama paikallinen, kaupunki on yllättävän pieni.',
+        selite: 'Rio San Barnaban yli kuljetaan Ponte dei Pugnin siltaa pitkin ja tavara liikkuu veneellä sen alta. Paikallinen asettui taas etualalle, kun vaihdoin kuvakulmaa kanavan avaamiseksi.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.veneziaunica.it/en/content/dorsoduro-art-district-venetian-origins-international-contemporary-art',
@@ -293,13 +282,8 @@ export const FOKUSVIRTA_VENETSIA = {
       },
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-03-r20260909-euv2-v1.jpg',
-        lyhyt: 'Venetsia: aukion nimi on… tiedän kyllä. Aivan varmasti.',
-        selite: 'Campo Santa Margheritan kahvilapöydistä voi seurata aukion elämää '
-          + 'nousematta tuolilta. Se oli suunnitelmani. Paikallinen laskeutui '
-          + 'viereisen tuolin selkänojalle ja kallisti päätään. Aukion toisessa '
-          + 'päässä joku käveli, varmaankin. En tarkistanut. Pöydän reunalle '
-          + 'jäi yksi muru, mutta se ei selitä, miksi kamera osoittaa aivan '
-          + 'toiseen suuntaan. Kuvassa on kaupungin elämää. Hän asuu täällä.',
+        lyhyt: 'Venetsia: aukion nimi on… tiedän kyllä aivan varmasti.',
+        selite: 'Campo Santa Margheritan kahvilapöydistä voi seurata aukion elämää nousematta tuolilta. Paikallinen laskeutui viereen, ja kamera unohti aukion — vaikka väitin tähtääväni yhteen muruun.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.cityscrolls.com/venice/campo-santa-margherita/',
@@ -310,12 +294,7 @@ export const FOKUSVIRTA_VENETSIA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-04-r20260909-euv1-v2.jpg',
         lyhyt: 'Venetsia: tämä kuva käsittelee kuulemma lentoreittejä.',
-        selite: 'Kanavan yllä reitti on hetken suoraviivainen: vettä alhaalla ja '
-          + 'sillan kaari edessä. Hän nousi tuolilta ja lensi ensin. Minä '
-          + 'seurasin, koska paikallinen tuntee ilmavirtaukset. Se on järkevä '
-          + 'syy, Fogg. Kuvasta jäi pois osa sillasta, mutta siipien liike '
-          + 'onnistui hyvin. Niin hyvin, että säästin ruudun. Sydämiä on '
-          + 'reunoilla nyt useampia. Tutkin asetuksia myöhemmin.',
+        selite: 'Kanavan yllä vesi jäi alle ja sillan kaari odotti edessä suoralla lentoreitillä. Seurasin häntä tietenkin vain lentoreitin vuoksi; kuvan sydänasetukset tutkin myöhemmin.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://live.comune.venezia.it/index.php/it/2025/04/una-calle-una-storia-ponte-dei-pugni',
@@ -325,12 +304,7 @@ export const FOKUSVIRTA_VENETSIA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-venetsia-05-r20260909-euv1-v1.jpg',
         lyhyt: 'Venetsia: nämä eivät kaikki kuuluneet esitykseen.',
-        selite: 'Aukion laidalla oli kaksi vierekkäistä kuivaa kohtaa samalla '
-          + 'ikkunalaudalla. Hän valitsi toisen ja jätti toisen vapaaksi. '
-          + 'Venetsiassa tila on arvokasta; siitä isoisä olisi osannut '
-          + 'kirjoittaa pitkän huomion. Minä istuin siihen. Tässä viimeisessä '
-          + 'kuvassa kaupunkia näkyy vähän, mutta muistan paikan aivan '
-          + 'tarkasti. Hetkinen. Fogg. Kuinka monta näistä sinä jo näit?',
+        selite: 'Aukion laidalla oli kaksi kuivaa paikkaa samalla ikkunalaudalla, ja paikallinen jätti toisen vapaaksi. Istuin siihen — hetkinen, näitkö sinä jo tämänkin kuvan?',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.veneziaunica.it/sites/default/files/redazione-turismo/itinerari/documenti/Classic_Dorsoduro_EN.pdf',
@@ -340,14 +314,16 @@ export const FOKUSVIRTA_VENETSIA = {
       },
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    /* TEKSTIPILOTTI 12.9.2026: nykyliikenteen yksi lause lisätty
+     * rikkomatta viiden kuvan romanssipoikkeusta. */
     kommentti: [
       // Tekstisession albumirepliikki (12:20; omistaja 9.9.: "hyväksyn kaiken
       // mitä se ehdottaa sinulle"). 106 merkkiä. Edellinen: 'Kanavilla kulkee
       // nyt vesibussejakin. Isoisä kuunteli aamiaista; minä olisin selvittänyt
       // sen ikkunan.'
-      'Tässä Venetsia. Hetkinen. Nuo ovat yksityisiä. Hän vain sattui '
-      + 'jokaiseen hyvään kuvakulmaan. Sulje albumi.',
+      'Venetsiassa kuljetaan yhä vesibusseilla. Minä lennän nykyään vähän pidempää reittiä. '
+      + 'Yhden tutun takia. Hetkinen — nuo kuvat ovat yksityisiä! Hän vain sattui jokaiseen '
+      + 'hyvään kuvakulmaan. No, ehkä minä vähän odotin.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'rakkaus', voimakkuus: 0.8 },

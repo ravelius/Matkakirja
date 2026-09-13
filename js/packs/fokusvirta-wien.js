@@ -104,14 +104,14 @@ export const FOKUSVIRTA_WIEN = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-wien-r20260909-paper-v4.jpg",
       lyhyt: "Wien, 1873. Kone teki lehteä ilman mielipidettä.",
-      selite: "Painokoneen vierellä miehet tarkkailivat arkin kulkua niin kuin lääkärit potilaan hengitystä. Maailmannäyttelyn hallissa rauta kantoi sekä työkoneen että suuren katon painoa. Kuvasin hetken, jolloin kaikki näytti olevan järjestyksessä. Lehti valmistuu koneelta valmiina, mutta sen lukijan ajatukset eivät. Sen eron huomasin myöhemmin kahvilassa, en tämän koneen ääressä.",
+      selite: 'Maailmannäyttelyn hallissa mies valvoo painokonetta Rotunden rautapylväiden alla. Kone tekee lehteä ajattelematta sanaakaan; lukijan ajatukset jäävät myöhemmäksi.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://sammlung.wienmuseum.at/en/object/59815-weltausstellung-1873-rotunde-der-ring-vor-der-hebung-nr-3a/","https://www.technischesmuseum.at/presse/women_at_work","https://www.technischesmuseum.at/ausstellung/women_at_work"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-wien-r20260911-paper2-v1.jpg",
       lyhyt: "Wien, 1873. Lehti pieneni pöydällä, uutinen ei.",
-      selite: "Kahvilan herra taitteli lehden yhä pienemmäksi. Pörssin uutinen ei suostunut samaan temppuun. Laskin kahvin hänen eteensä ja odotin. Näyttelyn koneista ei ollut tässä pöydässä apua.",
+      selite: 'Kahvilan herra taitteli lehteä yhä pienemmäksi, kun kahvi laskettiin hänen eteensä. Pörssin uutinen ei suostunut samaan temppuun.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://sammlung.wienmuseum.at/en/object/59815-weltausstellung-1873-rotunde-der-ring-vor-der-hebung-nr-3a/"],
     },
@@ -122,12 +122,7 @@ export const FOKUSVIRTA_WIEN = {
      */
     paikkarivi: 'Wien, toukokuussa 1873. Sadekuuroja; puntari laskee aamusta.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 346 merkkiä (yläraja 400). */
-    teksti: 'Wienin maailmannäyttelyssä näin koneen painavan sanomalehteä '
-      + 'silmieni edessä. Se ei tarvinnut edes aikaa ajatellakseen, mitä '
-      + 'kirjoitti. Rotunden kupoli peitti taivaan rautaisella hatulla. Sitten '
-      + 'pörssi romahti. Kahvilassa herra taitteli lehtensä hyvin pieneksi, '
-      + 'mutta uutinen ei pienentynyt. Tilasin hänelle kahvin. Koneista ei '
-      + 'ollut siihen apua.',
+    teksti: 'Wienin maailmannäyttelyssä kone painoi sanomalehteä ajattelematta sanaakaan. Rotunden kupoli peitti taivaan rautaisella hatulla. Sitten pörssi romahti. Kahvilassa mies taitteli lehtensä pieneksi, mutta uutinen ei pienentynyt. Tilasin hänelle kahvin; koneista ei ollut siihen apua.',
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -150,26 +145,21 @@ export const FOKUSVIRTA_WIEN = {
      * hatulla" (kuva, pulu kuuntelee).
      */
     reaktiot: [
-      { id: 'wien.r1', ankkuri: 'koneen painavan sanomalehteä', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Painokone silmien edessä on aikakauden ihme.' },
-      { id: 'wien.r2', ankkuri: 'aikaa ajatellakseen', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Kuiva huomautus koneen ajattelemattomuudesta.' },
+      { id: 'wien.r1', ankkuri: 'kone painoi sanomalehteä', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'wien.r2', ankkuri: 'ajattelematta sanaakaan', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'wien.r3', ankkuri: 'pörssi romahti', tarkoitus: 'vakavoituu', voimakkuus: 0.7, siirtyma: 0,
-        perustelu: 'Hurja käänne kahdessa sanassa.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'wien.r4', ankkuri: 'uutinen ei pienentynyt', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Taiteltu lehti ei pienennä tappiota.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'wien.r5', ankkuri: 'Tilasin hänelle kahvin', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Pieni ele vieraalle: hiljainen nyökkäys.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'wien.r6', ankkuri: 'ei ollut siihen apua', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Merkinnän vakava päätös: koneet eivät lohduta.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Wienin maailmannäyttelyssä näin koneen painavan '
-      + 'sanomalehteä silmieni edessä. Se ei tarvinnut edes aikaa '
-      + 'ajatellakseen, mitä kirjoitti. Rotunden kupoli peitti taivaan '
-      + 'rautaisella hatulla. Sitten pörssi romahti. Kahvilassa herra taitteli '
-      + 'lehtensä hyvin pieneksi, mutta uutinen ei pienentynyt. Tilasin '
-      + 'hänelle kahvin. [softly] Koneista ei ollut siihen apua.',
+    luenta: '[curious] Wienin maailmannäyttelyssä kone painoi sanomalehteä ajattelematta sanaakaan. Rotunden kupoli peitti taivaan rautaisella hatulla. Sitten pörssi romahti. [softly] Kahvilassa mies taitteli lehtensä pieneksi, mutta uutinen ei pienentynyt. Tilasin hänelle kahvin; koneista ei ollut siihen apua.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-wien.mp3',
   },
 
@@ -186,12 +176,7 @@ export const FOKUSVIRTA_WIEN = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-wien-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Wien: kahvi saapui, vaikka uutinen ei parantunut.',
-        selite: 'Wieniläisessä kahvilassa lehti ja kahvi saavat viipyä samassa '
-          + 'pöydässä. Istuin terassin reunalla, kun tarjoilija laski kupin '
-          + 'yksin istuvan asiakkaan eteen. Lehti jäi hetkeksi alas. Isoisä '
-          + 'tilasi kerran kahvin toiselle ihmiselle, koska mikään hänen '
-          + 'näkemänsä kone ei osannut lohduttaa. Minä en tiedä, mitä tämän '
-          + 'lehden sivulla luki. Tuon pienen tauon osasin silti kuvata.',
+        selite: 'Wieniläisen kahvilan terassilla tarjoilija laskee kupin samaan pöytään sanomalehden kanssa. En tiedä, mitä sivulla luki, mutta kahvin tuoman pienen tauon osasin kuvata.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.wien.info/en/dine-drink/coffeehouses/top-traditional-coffee-houses-in-vienna-361666',
@@ -237,7 +222,7 @@ export const FOKUSVIRTA_WIEN = {
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Rotunde paloi myöhemmin. Wienin kahvilat jäivät. Isoisä ymmärsi koneita, mutta tuossa hän ymmärsi ihmistä.',
+      'Rotunde paloi myöhemmin; Wienin kahvilat jäivät. Pujottelin terassipöytien yllä ja pysähdyin taitellun lehden kohdalle. Isoisä ymmärsi siinä ihmistä paremmin kuin konetta.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.55 },

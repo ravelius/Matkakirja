@@ -28,28 +28,25 @@ export const FOKUSVIRTA_TROMSSA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tromssa-r20260909-paper-v4.jpg",
       lyhyt: "Tromssa, 1873. Pieni simpukka ja suuri kysymys samassa huoneessa.",
-      selite: "Museon pöydällä simpukka ja luu saivat paikan vierekkäin ilman, että suurempi olisi vienyt pienemmältä arvoa. Tromssan satamasta tuodaan näytteitä pohjoisen meriltä; osa tavarasta alkaa tuottaa kysymyksiä siinä missä muu lasti rahaa. Ikkunan mastot muistuttivat, ettei keräämiseen tarvita pelkkää kaappia vaan myös matka. Kuvasin pöydän sellaisenaan. Sen järjestys oli minusta hyvä alku museolle.",
+      selite: "Museon pöydällä simpukka ja suuri luu lepäsivät vierekkäin pohjoisen meriltä tuotuina näytteinä. Ikkunasta näkyvät sataman mastot yhdistivät kokoelman sen matkaan.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://en.uit.no/om/historie","https://uit.no/ressurs/uit/mediebok/Labyrint0412/Labyrint_2012-04_web.pdf","https://uit.no/tmu/samlinger/samling?p_document_id=667875"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-tromssa-r20260911-paper2-v1.jpg",
       lyhyt: "Tromssa, 1873. Sama meri toi satamaan saaliin ja museoon kysymykset.",
-      selite: "Museon ullakko oli vaatimaton, mutta ikkunasta näkyvä satama suuri. Pyyntilaivojen mastot nousivat vaaleaan kesäyöhön. Hyllyjen luut ja kivet olivat tulleet samalta mereltä, joka ruokki kaupunkia. Katsoin ulos ja ymmärsin, miksi uteliaisuudelle tarvitaan täällä kokonainen museo.",
+      selite: "Museon vaatimattoman ullakon ikkunasta näkyivät satama ja vaaleaan kesäyöhön nousevat mastot. Hyllyjen luut ja kivet olivat tulleet samalta mereltä kuin laivojen saalis.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://en.uit.no/om/historie","https://uit.no/ressurs/uit/mediebok/Labyrint0412/Labyrint_2012-04_web.pdf"],
     },
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
     paikkarivi: 'Tromssa, heinäkuussa 1873. Aurinko ei laske; satamassa '
       + 'hylkeenpyytäjiä; puntari korkealla.',
-    /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 364 merkkiä (yläraja 400). */
-    teksti: 'Tromssaan on perustettu museo. Satamasta tuodaan sinne pohjoisen '
-      + 'luita ja kiviä, asioita joista laivanvarustaja ei tavallisesti maksa. '
-      + 'Pöydällä makasi pieni simpukka ja sen vieressä luu, jonka eläimeen en '
-      + 'toivo törmääväni uimassa. Ikkunasta näkyi pyyntilaivojen mastoja. '
-      + 'Sama meri ruokkii täällä sekä vatsan että uteliaisuuden. Jälkimmäinen '
-      + 'vaikutti pohjattomalta.',
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
+    teksti: 'Tromssan uuteen museoon tuotiin pohjoisen luita ja kiviä, joista '
+      + 'laivanvarustaja ei tavallisesti maksa. Pienen simpukan vieressä oli '
+      + 'luu, jonka eläimeen en tahtonut törmätä uimassa. Sama meri ruokki '
+      + 'vatsan ja uteliaisuuden. Jälkimmäinen vaikutti pohjattomalta.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -67,20 +64,19 @@ export const FOKUSVIRTA_TROMSSA = {
     reaktiot: [
       { id: 'tromssa.r1', ankkuri: 'ei tavallisesti maksa', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Luut ja kivet eivät kuulu rahtiin.' },
-      { id: 'tromssa.r2', ankkuri: 'törmääväni uimassa', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+      { id: 'tromssa.r2', ankkuri: 'törmätä uimassa', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
         perustelu: 'Merkinnän vitsi tuntemattomasta eläimestä.' },
-      { id: 'tromssa.r3', ankkuri: 'vatsan että uteliaisuuden', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'tromssa.r3', ankkuri: 'vatsan ja uteliaisuuden', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Meren kaksi antia todetaan tyytyväisenä.' },
       { id: 'tromssa.r4', ankkuri: 'vaikutti pohjattomalta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
         perustelu: 'Loppuvitsi uteliaisuuden määrästä.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Tromssaan on perustettu museo. Satamasta tuodaan sinne '
-      + 'pohjoisen luita ja kiviä, asioita joista laivanvarustaja ei '
-      + 'tavallisesti maksa. Pöydällä makasi pieni simpukka ja sen vieressä '
-      + 'luu, jonka eläimeen en toivo törmääväni uimassa. Ikkunasta näkyi '
-      + 'pyyntilaivojen mastoja. Sama meri ruokkii täällä sekä vatsan että '
-      + 'uteliaisuuden. [softly] Jälkimmäinen vaikutti pohjattomalta.',
+    luenta: '[curious] Tromssan uuteen museoon tuotiin pohjoisen luita ja '
+      + 'kiviä, joista laivanvarustaja ei tavallisesti maksa. Pienen simpukan '
+      + 'vieressä oli luu, jonka eläimeen en tahtonut törmätä uimassa. Sama '
+      + 'meri ruokki vatsan ja uteliaisuuden. [softly] Jälkimmäinen vaikutti '
+      + 'pohjattomalta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-tromssa.mp3',
   },
 
@@ -97,13 +93,9 @@ export const FOKUSVIRTA_TROMSSA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tromssa-01-r20260909-14mm-v3.jpg',
         lyhyt: 'Tromssa: yksi simpukankuori ja koko meri täynnä kysymyksiä.',
-        selite: 'Tromssan Polaarimuseo toimii vanhoissa tullirakennuksissa meren '
-          + 'äärellä. Se kertoo pyynnistä, retkikunnista ja arjesta '
-          + 'pohjoisessa. Museon laituri on rakennettu uudelleen vanhojen '
-          + 'valokuvien avulla. Laudalle jäänyt simpukankuori ei kuulu '
-          + 'näyttelyyn, mutta pysäytti minut silti. Isoisäkin huomasi, että '
-          + 'pienestä esineestä voi alkaa suuri uteliaisuus. Minä aloitin '
-          + 'tarkistamalla, oliko asunto jo vapaa.',
+        selite: 'Tromssan Polaarimuseon vanhat tullirakennukset seisovat meren '
+          + 'äärellä uudelleen rakennetun laiturin vieressä. Laiturin laudalle '
+          + 'jäänyt simpukankuori pysäytti minut tarkistamaan asuntoa.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://en.uit.no/tavla/artikkel?p_document_id=804921',
@@ -115,9 +107,9 @@ export const FOKUSVIRTA_TROMSSA = {
       },
     ],
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
     kommentti: [
-      'Tromssassa on nyt yliopistokin. Isoisä osui oikeaan: pienestä simpukasta voi alkaa pitkä matka.',
+      'Tromssassa on nyt yliopisto ja Polaarimuseo vanhoissa tullirakennuksissa. Löysin laiturilta simpukankuoren ja kurkistin sisään. Tyhjä. Hetken mietin, kuka oli lähtenyt ja minne.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'utelias', voimakkuus: 0.5 },

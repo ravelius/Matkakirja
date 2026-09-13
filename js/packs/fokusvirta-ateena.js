@@ -97,14 +97,14 @@ export const FOKUSVIRTA_ATEENA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-ateena-r20260909-paper-v4.jpg",
       lyhyt: "Ateena, 1873. Kultakeskustelu jatkui ilman kultaa.",
-      selite: "Kahvilan pöydän ääressä kädet tekivät suurempia liikkeitä kuin kupit. Schliemannin Troijan löydöt olivat antaneet kaupunkiin uuden puheenaiheen, ja kumpikin keskustelija vaikutti tuntevan asian päästä päähän. Pyysin heitä pysähtymään hetkeksi kuvaan. Akropolis ei tarvinnut pyyntöä. Otin mukaan myös sen, jotta näkyisi, kuinka lähellä kahvipöytää täällä on jo valmiiksi vanhaa maailmaa.",
+      selite: 'Kahvilapöydän kaksi keskustelijaa elehti Troijan löydöistä, kun kupit pysyivät pieninä heidän välissään. Pölyn takana kohoava Akropolis muistutti, kuinka lähellä kahvipöytää vanha maailma täällä on.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.theacropolismuseum.gr/en"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-ateena-r20260911-paper2-v1.jpg",
       lyhyt: "Ateena, 1873. Kahviraha kelpasi ilman kertomusta alkuperästään.",
-      selite: "Keskustelu Troijan kullasta jatkui pöydän toisessa päässä, mutta oma osuuteni supistui yhteen kolikkoon. Laskin sen kupin viereen, ja isäntä ojensi kätensä kysymättä löydön historiaa. Pölyn takana Akropolis piti arvonsa ilman selitystä. Kahvi osoittautui helpommaksi kaupaksi kuin muinaisuus.",
+      selite: 'Laskin kolikon kupin viereen, ja isäntä ojensi kätensä kysymättä sen historiaa. Pölyn takana Akropolis piti arvonsa ilman selitystä.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.theacropolismuseum.gr/en"],
     },
@@ -118,13 +118,15 @@ export const FOKUSVIRTA_ATEENA = {
      * kullan") on kokonaan korvattu, ei muokattu.
      */
     paikkarivi: 'Ateena, heinäkuussa 1873. Seesteistä; ilmanpuntari korkealla.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 346 merkkiä (yläraja 400). */
-    teksti: 'Ateenassa puhuttiin Troijasta löydetystä kullasta kuin jokainen '
-      + 'olisi ollut kaivamassa. Kahvilan isäntä piti Schliemannia nerona, '
-      + 'asiakas varkaana. Kummallakaan ei ollut kultaa näyttää. Akropoliin '
-      + 'pylväät kohosivat pölyn takaa; ne eivät tarvinneet enää mainosta. '
-      + 'Kaivoin taskustani kolikon kahvia varten. Sen alkuperästä isäntä ei '
-      + 'kysynyt mitään.',
+    /* HYVÄKSYTTY TEKSTIPILOTTI r2 13.9.2026: yhteinen Horatio–Livia-
+     * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
+     * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
+     * julkaisua. */
+    teksti: 'Ateenassa Troijan kullasta puhuttiin kuin kaikki olisivat olleet '
+      + 'kaivamassa. Kahvilan isäntä piti Schliemannia nerona, asiakas '
+      + 'varkaana; kultaa ei ollut kummallakaan näyttää. Akropolis ei '
+      + 'tarvinnut mainosta. Maksoin kahvin kolikolla, jonka alkuperää ei '
+      + 'kysytty.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia.
      *
@@ -152,24 +154,22 @@ export const FOKUSVIRTA_ATEENA = {
      * (arkinen liike, pulu kuuntelee).
      */
     reaktiot: [
-      { id: 'ateena.r1', ankkuri: 'kuin jokainen olisi ollut kaivamassa', tarkoitus: 'epailee', voimakkuus: 0.4, siirtyma: 0,
+      { id: 'ateena.r1', ankkuri: 'kuin kaikki olisivat olleet kaivamassa', tarkoitus: 'epailee', voimakkuus: 0.4, siirtyma: 0,
         perustelu: 'Kaupunkilaiset puhuvat kuin omasta työstään: pulu epäilee.' },
-      { id: 'ateena.r2', ankkuri: 'nerona, asiakas varkaana', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Sama mies on kahdelle kuulijalle kaksi eri ihmistä.' },
-      { id: 'ateena.r3', ankkuri: 'Kummallakaan ei ollut kultaa', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+      { id: 'ateena.r3', ankkuri: 'kultaa ei ollut kummallakaan näyttää', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
         perustelu: 'Kiistan molemmat osapuolet ovat yhtä tyhjän päällä.' },
-      { id: 'ateena.r4', ankkuri: 'eivät tarvinneet enää mainosta', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
+      { id: 'ateena.r4', ankkuri: 'Akropolis ei tarvinnut mainosta', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
         perustelu: 'Akropolis vaikenee puheen yllä: hetki hiljenee.' },
-      { id: 'ateena.r5', ankkuri: 'isäntä ei kysynyt mitään', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+      { id: 'ateena.r5', ankkuri: 'jonka alkuperää ei kysytty', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
         perustelu: 'Loppuvitsi: isoisän oman kolikon alkuperä jää kysymättä.' },
     ],
-    /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Ateenassa puhuttiin Troijasta löydetystä kullasta kuin '
-      + 'jokainen olisi ollut kaivamassa. Kahvilan isäntä piti Schliemannia '
-      + 'nerona, asiakas varkaana. Kummallakaan ei ollut kultaa näyttää. '
-      + 'Akropoliin pylväät kohosivat pölyn takaa; ne eivät tarvinneet enää '
-      + 'mainosta. Kaivoin taskustani kolikon kahvia varten. [softly] Sen '
-      + 'alkuperästä isäntä ei kysynyt mitään.',
+    /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
+     * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
+    luenta: '[curious] Ateenassa Troijan kullasta puhuttiin kuin kaikki '
+      + 'olisivat olleet kaivamassa. Kahvilan isäntä piti Schliemannia '
+      + 'nerona, asiakas varkaana; kultaa ei ollut kummallakaan näyttää. '
+      + 'Akropolis ei tarvinnut mainosta. [softly] Maksoin kahvin kolikolla, '
+      + 'jonka alkuperää ei kysytty.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-ateena.mp3',
     /*
      * Fablen päätös 4: Sophia Schliemann koruineen. Commonsin
@@ -210,12 +210,7 @@ export const FOKUSVIRTA_ATEENA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-ateena-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Ateena: kultaa sisällä, hyvä varjo puutarhassa.',
-        selite: 'Schliemannin myöhempi kotitalo Ateenassa toimii rahamuseona. '
-          + 'Puutarhakahvilassa kolikot ovat saaneet tavallisen tehtävänsä '
-          + 'takaisin: niillä maksetaan kahvi. Istuin tuolin alla, kun pöydällä '
-          + 'vaihdettiin kuppi ja pieni lautanen eri kohtiin. Isoisä kuuli '
-          + 'täällä väittelyä aarteesta. Minä löysin paikan, jossa kukaan ei '
-          + 'väitellyt varjon arvosta. Se kelpasi kaikille.',
+        selite: 'Schliemannin myöhempi kotitalo toimii nyt rahamuseona, jonka puutarhakahvilassa kolikoilla maksetaan taas kahvia. Löysin tuolin alta varjon, jonka arvosta kukaan ei väitellyt.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.nummus.gr/en/refreshment-room-cafe/',
@@ -246,9 +241,9 @@ export const FOKUSVIRTA_ATEENA = {
      * js/fokusvirta.js SAAPUMISKUPLA_VAITI on tyhjä joukko, joten tämä
      * kupla näkyy samalla tavalla kuin muissa kaupungeissa.
      */
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    /* TEKSTIPILOTTI 12.9.2026: nykyhavainto ja Pulun oma valinta. */
     kommentti: [
-      'Schliemannin myöhempi talo on nyt rahamuseo. Isoisä etsi aarretta; minä tarkistan ensin kahvilan pihan.',
+      'Schliemannin talo on nyt rahamuseo. Etsin puutarhasta varjoa, mutta kahvilan pöytien alta löytyi pullanmuruja. Siinä unohtui varjo hetkeksi!',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },

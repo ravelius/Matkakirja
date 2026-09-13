@@ -206,14 +206,14 @@ export const FOKUSVIRTA_KRAKOVA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-krakova-r20260909-paper-v4.jpg",
       lyhyt: "Krakova, 1873. Tuoli odotti, jos sävelmä ei loppuisi.",
-      selite: "Kangashallin luona kauppa jatkuu, vaikka kirkontornin torvi on jo vaiennut. Torikauppias tiesi, ettei minun kannata seisoa odottamassa puuttuvia säveliä, ja tarjosi istuinta. Marian kirkon epätasaiset tornit auttoivat silmää löytämään äänen paikan. Kamerani tallentaa niistä molemmat, mutta antaa saman vastauksen kuin torvensoittaja: jotakin jää kuvan ulkopuolelle.",
+      selite: 'Torikauppias tarjosi minulle tuolia, kun jäin odottamaan Marian kirkon katkenneen torvisävelmän loppua. Kirkon erikorkuiset tornit näyttivät äänen paikan, mutta kuvakin jätti jotakin ulkopuolelle.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://ct.mhk.pl/wps/portal/mhmk/main/strona-artefaktu/?artefactId=%7B61040CE7-72DA-4281-A0A3-14D3C075B00B%7D","https://mnk.pl/en/wystawy/the-sukiennice/","https://convention.krakow.pl/english/ccb_en/7973%2Cartykul%2Cthe_cloth_hall.html"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-krakova-r20260911-paper2-v1.jpg",
       lyhyt: "Krakova, 1873. Leipä oli sylissä, puuttuva sävel yhä ilmassa.",
-      selite: "Istuin kauppiaan tarjoamalla tuolilla leipä sylissäni ja katsoin Marian kirkon torneihin. Sävelmä oli jo katkennut, mutta korva odotti yhä jatkoa. Torin työ jatkui ympärilläni tavalliseen tapaan. Minä jäin vielä hetkeksi kuuntelemaan sitä, mitä kaupunki ei sanonut.",
+      selite: 'Istuin torilla leipä sylissäni ja katsoin Marian kirkon torneihin, vaikka sävelmä oli jo katkennut. Kauppa jatkui ympärillä, mutta korva odotti yhä sitä, mitä kaupunki ei sanonut.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://muzeumkrakowa.pl/en/exhibitions/krakow-sounds-melodies-words","https://mnk.pl/en/wystawy/the-sukiennice/"],
     },
@@ -222,11 +222,7 @@ export const FOKUSVIRTA_KRAKOVA = {
     paikkarivi: 'Krakova, kesäkuussa 1873. Poutaa; torilla pölyää; puntari '
       + 'korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 298 merkkiä (yläraja 400). */
-    teksti: 'Krakovan Marian kirkon tornista soi torvi ja vaikeni kesken '
-      + 'sävelmän. Odotin loppua niin kauan, että torikauppias tarjosi tuolia. '
-      + 'Hän oli kuullut saman katkoksen koko ikänsä eikä aikonut odottaa '
-      + 'enää. Ostin leivän ja jäin silti. Kun kaupunki jättää jotakin '
-      + 'sanomatta, korva ei tahdo lähteä muualle.',
+    teksti: 'Krakovan Marian kirkon torvi vaikeni kesken sävelmän. Odotin loppua niin kauan, että torikauppias tarjosi tuolia. Hän oli kuullut saman katkoksen koko ikänsä eikä odottanut enää. Ostin leivän ja jäin silti. Kun kaupunki jättää jotakin sanomatta, korva ei tahdo lähteä.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
@@ -247,20 +243,16 @@ export const FOKUSVIRTA_KRAKOVA = {
      */
     reaktiot: [
       { id: 'krakova.r1', ankkuri: 'vaikeni kesken sävelmän', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Katkeava torvi hätkähdyttää.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'krakova.r2', ankkuri: 'torikauppias tarjosi tuolia', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Odotus kesti niin kauan, että se huomattiin.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'krakova.r3', ankkuri: 'jäin silti', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Isoisä ei suostu lähtemään.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'krakova.r4', ankkuri: 'korva ei tahdo lähteä', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Merkinnän vakava päätös kesken jääneestä.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Krakovan Marian kirkon tornista soi torvi ja vaikeni '
-      + 'kesken sävelmän. Odotin loppua niin kauan, että torikauppias tarjosi '
-      + 'tuolia. Hän oli kuullut saman katkoksen koko ikänsä eikä aikonut '
-      + 'odottaa enää. Ostin leivän ja jäin silti. [softly] Kun kaupunki '
-      + 'jättää jotakin sanomatta, korva ei tahdo lähteä muualle.',
+    luenta: '[curious] Krakovan Marian kirkon torvi vaikeni kesken sävelmän. Odotin loppua niin kauan, että torikauppias tarjosi tuolia. Hän oli kuullut saman katkoksen koko ikänsä eikä odottanut enää. [mischievously] Ostin leivän ja jäin silti. [softly] Kun kaupunki jättää jotakin sanomatta, korva ei tahdo lähteä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-krakova.mp3',
   },
 
@@ -277,13 +269,7 @@ export const FOKUSVIRTA_KRAKOVA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-krakova-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Krakova: soittajalla on neljä yleisöä ja yksi hengitys kerrallaan.',
-        selite: 'Marian kirkon tornista soitettava sävelmä lähetetään neljään '
-          + 'suuntaan. Minä odotin ikkunan ulkopuolella ja sain '
-          + 'poikkeuksellisen läheisen paikan. Vasken pinnassa näkyi valoa, '
-          + 'kaupungin katoilla iltapäivä. Isoisä odotti melodian loppua '
-          + 'torilla. Tästä huomasi, että soittajalla oli jo seuraava suunta '
-          + 'mielessä. Kuuntelin loppuun asti, niin pitkälle kuin loppua '
-          + 'annettiin.',
+        selite: 'Marian kirkon tornista sävelmä soitetaan neljään suuntaan, ja ikkunan ulkopuolelta näin soittajan seuraavan suunnan jo odottavan. Kuuntelin loppuun asti, niin pitkälle kuin loppua annettiin.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://culture.pl/en/article/the-hejnal-trumpet-call-of-krakow-fact-vs-fiction',
@@ -334,7 +320,7 @@ export const FOKUSVIRTA_KRAKOVA = {
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Torvi soi yhä joka tunti neljään suuntaan. Isoisä odotti loppua; minä arvostan soittajaa, joka osaa lopettaa.',
+      'Odotin räystäällä ikkunan alla. Torvi soi neljään suuntaan, jokainen puhallus eri yleisölle. Kirjekyyhky arvostaa täsmällistä jakelua.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'miettiva', voimakkuus: 0.45 },

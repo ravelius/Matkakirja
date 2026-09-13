@@ -139,14 +139,14 @@ export const FOKUSVIRTA_RIIKA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-riika-r20260909-paper-v4.jpg",
       lyhyt: "Riika, 1873. Kuoro hengitti kaupungin kokoiseksi.",
-      selite: "Laulajien kasvot olivat erilaisia, mutta heidän seuraava hengenvetonsa kuului yhteen. Riian laulujuhlat ovat tuoneet paikalle väkeä, joka ei olisi muuten ehkä seissyt saman äänen sisällä. Pyysin pientä joukkoa pysähtymään kuvaan. Vieressäni laulanut mies ei pyyhkinyt poskeaan, enkä pyytänyt häntä tekemään sitä. Kameralla saa talteen ilmeen; siitä lähtenyt ääni täytyy muistaa itse.",
+      selite: "Laulajien kasvot olivat erilaisia, mutta heidän seuraava hengenvetonsa kuului yhteen. Kuvasin pienen joukon ja miehen, joka jätti kyyneleen poskelleen.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.dziesmusvetki.lv/lv/zinas/pirmajiem-dziesmu-svetkiem-veltita-izstade-rlb/","https://www.dziesmusvetki.lv/en/about-the-celebration/the-song-and-dance-celebration/"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-riika-r20260911-paper2-v1.jpg",
       lyhyt: "Riika, 1873. Yleisö kuuli kuoron yhteisen hengityksen.",
-      selite: "Seisoin yleisön keskellä, kun laulajat vetivät henkeä yhtä aikaa. Lava täyttyi ihmisistä ja seuraava ääni tuntui kaupungin kokoiselta. Vieressä mies kuunteli kyynel poskellaan. Hän ei pyyhkinyt sitä pois.",
+      selite: "Lava täyttyi laulajista, jotka vetivät henkeä yhtä aikaa ennen kaupungin kokoista ääntä. Yleisössä mies kuunteli kyynel poskellaan pyyhkimättä sitä pois.",
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://www.dziesmusvetki.lv/lv/zinas/pirmajiem-dziesmu-svetkiem-veltita-izstade-rlb/","https://www.dziesmusvetki.lv/en/about-the-celebration/the-song-and-dance-celebration/"],
     },
@@ -154,13 +154,12 @@ export const FOKUSVIRTA_RIIKA = {
        tunnelmarivi (Fablen kaanon 8.9.2026). */
     paikkarivi: 'Riika, heinäkuussa 1873. Lämmintä; joella pellavan haju; '
       + 'puntari korkealla.',
-    /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 346 merkkiä (yläraja 400). */
-    teksti: 'Riikaan on tullut laulajia Latvian ensimmäisille suurille '
-      + 'laulujuhlille. Luulin ensin kuulevani monta kuoroa, kunnes äänet '
-      + 'ottivat saman hengenvedon. En ymmärtänyt sanoja. Viereinen mies '
-      + 'lauloi kyynel poskellaan eikä pyyhkinyt sitä pois. Olin merkinnyt '
-      + 'karttaan sataman ja kirkot. Kaupungin tärkein rakennus olikin hetken '
-      + 'ajan tehty ihmisäänistä.',
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
+    teksti: 'Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. '
+      + 'Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. '
+      + 'Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan '
+      + 'sataman ja kirkot; kaupungin tärkein rakennus olikin hetken '
+      + 'ihmisäänistä.',
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
@@ -180,22 +179,21 @@ export const FOKUSVIRTA_RIIKA = {
      * karttaan sataman ja kirkot" (selitys).
      */
     reaktiot: [
-      { id: 'riika.r1', ankkuri: 'saman hengenvedon', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+      { id: 'riika.r1', ankkuri: 'kuoro veti henkeä kuin yksi', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
         perustelu: 'Monesta kuorosta tulee yksi ääni.' },
       { id: 'riika.r2', ankkuri: 'En ymmärtänyt sanoja', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
         perustelu: 'Kielimuuri todetaan rauhallisesti.' },
       { id: 'riika.r3', ankkuri: 'kyynel poskellaan', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
         perustelu: 'Vieraan miehen kyynel on merkinnän vakavin hetki.' },
-      { id: 'riika.r4', ankkuri: 'tehty ihmisäänistä', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
+      { id: 'riika.r4', ankkuri: 'hetken ihmisäänistä', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
         perustelu: 'Päätöslause kantaa koko merkinnän.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Riikaan on tullut laulajia Latvian ensimmäisille '
-      + 'suurille laulujuhlille. Luulin ensin kuulevani monta kuoroa, kunnes '
-      + 'äänet ottivat saman hengenvedon. En ymmärtänyt sanoja. Viereinen mies '
-      + 'lauloi kyynel poskellaan eikä pyyhkinyt sitä pois. Olin merkinnyt '
-      + 'karttaan sataman ja kirkot. [softly] Kaupungin tärkein rakennus '
-      + 'olikin hetken ajan tehty ihmisäänistä.',
+    luenta: '[curious] Riian ensimmäiset suuret laulujuhlat olivat juuri '
+      + 'päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt '
+      + 'sanoja. [softly] Vieressä mies lauloi kyynel poskellaan. Olin '
+      + 'merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus '
+      + 'olikin hetken ihmisäänistä.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-riika.mp3',
   },
 
@@ -212,12 +210,9 @@ export const FOKUSVIRTA_RIIKA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-riika-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Riika: tämä pesä on rakennettu ihmisäänille.',
-        selite: 'Mežaparksin suuri laululava on tehty kuoroja varten, ja sen '
-          + 'rakenteet avautuvat ilmaan kuin oksisto. Isoisä kuuli Riian '
-          + 'laulujuhlilla suuren joukon hengittävän yhdessä. Minä katsoin '
-          + 'harjoitukseen asettuvia laulajia ja tyhjiä rivejä heidän edessään. '
-          + 'Vielä oli tilaa hiljaisuudelle. Kuvasin tämän hetken ennen '
-          + 'aloitusta, sillä laulun ajaksi sopi laskea kamera ja kuunnella.',
+        selite: 'Mežaparksin suuren laululavan rakenteet avautuvat ilmaan kuin '
+          + 'oksisto. Harjoitusryhmä asettuu lavalle tyhjien katsomorivien '
+          + 'eteen juuri ennen laulun alkua.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.liveriga.com/en/1168-grand-stage-at-mezaparks',
@@ -262,9 +257,9 @@ export const FOKUSVIRTA_RIIKA = {
      * (7.9.2026), eikä niitä muotoilla uusiksi.
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
-    /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
+    /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
     kommentti: [
-      'Laulujuhlat jatkuvat yhä. Isoisä ei ymmärtänyt sanoja, mutta ymmärsi sentään olla puhumatta päälle.',
+      'Laulujuhlat jatkuvat yhä, ja Mežaparksin lava näyttää ilmasta suurelta pesältä. Laskeuduin hetkeksi sen reunalle. Kun kuoro aloitti, en yrittänyt laskea laulajia. Kuuntelin vain.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },

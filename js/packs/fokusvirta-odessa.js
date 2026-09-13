@@ -234,14 +234,14 @@ export const FOKUSVIRTA_ODESSA = {
     luentakuva: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-odessa-r20260909-paper-v4.jpg",
       lyhyt: "Odessa, 1873. Portailla kuorma näytti todellisen painonsa.",
-      selite: "Alhaalta katsottuna portaat levittävät kaupunkia sataman ylle kuin näyttämöä. Vehnäsäkkien kantajat tekevät siinä työtä, jonka ylhäällä kävelevä herra voi sivuuttaa yhdellä katseella. Minä tarvitsin pysähdyksen puolivälissä, vaikka kannoin vain omia tavaroitani. Asetin kameran niin, että kuvaan jäivät sekä leveät askelmat että kuormat niiden lähellä. Pelkkä komeus olisi kertonut tästä paikasta liian vähän.",
+      selite: 'Leveät portaat nostivat kaupungin sataman ylle, mutta säkkien vieressä istuva mies näytti työn tauon. Jätin kuormat kuvaan, sillä pelkkä komeus olisi kertonut paikasta liian vähän.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://whc.unesco.org/document/196047","https://whc.unesco.org/en/list/1703"],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-odessa-r20260911-paper2-v1.jpg",
       lyhyt: "Odessa, 1873. Merituuli nousi portaat ilman lepoa tai tullia.",
-      selite: "Ylhäällä puistokäytävällä herrat liikuttivat lähinnä kävelykeppejään. Portaat laskivat satamaan, jossa laivojen ja kuormien työ jatkui. Illan merituuli tarttui takinhelmoihin ja kulki koko matkan yhdellä hengenvedolla. Siltä ei kysytty papereita eikä lastin arvoa.",
+      selite: 'Kaksi herrasmiestä katsoo portaiden yläpäästä alas satamaan, jossa mastot ja laiturit täyttävät rannan. Merituuli saa kulkea tämän matkan ilman lepoa tai tullia.',
       lahde: "Matkakirjan havainnekuva",
       lahteet: ["https://whc.unesco.org/en/list/1703","https://whc.unesco.org/document/196047"],
     },
@@ -250,12 +250,7 @@ export const FOKUSVIRTA_ODESSA = {
     paikkarivi: 'Odessa, elokuussa 1873. Kuumaa; merituuli vasta illalla; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 353 merkkiä (yläraja 400). */
-    teksti: 'Odessan portaat on tehty niin leveiksi, että niitä pitkin voisi '
-      + 'saapua kokonainen valtakunta. Minä saavuin yksin ja jouduin silti '
-      + 'lepäämään puolivälissä. Satamassa vehnäsäkit siirtyivät selästä '
-      + 'laivaan, ja ylhäällä puistokäytävällä herrat siirsivät vain '
-      + 'kävelykeppiään. Merituuli kulki portaat yhdellä hengenvedolla. Sitä '
-      + 'ei kukaan pysäyttänyt tullissa.',
+    teksti: 'Odessan portaat olivat niin leveät, että niitä pitkin olisi voinut saapua valtakunta. Minä saavuin yksin ja lepäsin silti puolivälissä. Satamassa vehnäsäkit siirtyivät laivaan; ylhäällä herrat siirtelivät keppejään. Merituuli kulki portaat yhdellä hengenvedolla; sitä ei pysäytetty tullissa.',
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
@@ -275,24 +270,19 @@ export const FOKUSVIRTA_ODESSA = {
      * saa reaktion).
      */
     reaktiot: [
-      { id: 'odessa.r1', ankkuri: 'kokonainen valtakunta', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Portaiden mittakaava on liioitteleva.' },
-      { id: 'odessa.r2', ankkuri: 'lepäämään puolivälissä', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Yksi matkustaja ei jaksa valtakunnan portaita.' },
-      { id: 'odessa.r3', ankkuri: 'vain kävelykeppiään', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Työn ja joutilaisuuden ero samassa kuvassa.' },
+      { id: 'odessa.r1', ankkuri: 'saapua valtakunta', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'odessa.r2', ankkuri: 'lepäsin silti puolivälissä', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'odessa.r3', ankkuri: 'herrat siirtelivät keppejään', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
       { id: 'odessa.r4', ankkuri: 'yhdellä hengenvedolla', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Tuuli tekee sen, mikä ihmiseltä ei onnistu.' },
-      { id: 'odessa.r5', ankkuri: 'pysäyttänyt tullissa', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Loppuvitsi tullin rajoista.' },
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'odessa.r5', ankkuri: 'ei pysäytetty tullissa', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
     ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Odessan portaat on tehty niin leveiksi, että niitä '
-      + 'pitkin voisi saapua kokonainen valtakunta. Minä saavuin yksin ja '
-      + 'jouduin silti lepäämään puolivälissä. Satamassa vehnäsäkit siirtyivät '
-      + 'selästä laivaan, ja ylhäällä puistokäytävällä herrat siirsivät vain '
-      + 'kävelykeppiään. Merituuli kulki portaat yhdellä hengenvedolla. '
-      + '[softly] Sitä ei kukaan pysäyttänyt tullissa.',
+    luenta: '[curious] Odessan portaat olivat niin leveät, että niitä pitkin olisi voinut saapua valtakunta. [mischievously] Minä saavuin yksin ja lepäsin silti puolivälissä. Satamassa vehnäsäkit siirtyivät laivaan; ylhäällä herrat siirtelivät keppejään. Merituuli kulki portaat yhdellä hengenvedolla; sitä ei pysäytetty tullissa.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-odessa.mp3',
   },
 
@@ -309,12 +299,7 @@ export const FOKUSVIRTA_ODESSA = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-odessa-01-r20260909-euv1-v1.jpg',
         lyhyt: 'Odessa: portaat jatkuvat kuvan ulkopuolelle.',
-        selite: 'Odessan leveät portaat yhdistävät kaupungin ylätason sataman '
-          + 'suuntaan. Isoisä vertasi siellä tavaran kantajien työtä herrasväen '
-          + 'kevyempiin liikkeisiin. Minä katson nyt samoja kiviä kaupungissa, '
-          + 'jonka maailmanperintöä sota uhkaa. Tähän kuvaan ei tarvittu mitään '
-          + 'suurta tapahtumaa. Valo kulki askelman yli, eikä sen perässä '
-          + 'kuulunut kiirettä. Toivon, että tuollaisia hetkiä riittää.',
+        selite: 'Odessan leveät portaat nousevat niin pitkälle, että alimmalta askelmalta yläpää näyttää jo omalta kaupunginosaltaan. Kivipinta on kulunut, mutta valo kiipeää sen yli edelleen vaivatta.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://whc.unesco.org/en/list/1703/',
@@ -381,7 +366,7 @@ export const FOKUSVIRTA_ODESSA = {
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
     kommentti: [
-      'Odessan vanha keskusta on nyt sodan uhkaamaa maailmanperintöä. Näitä portaita katson tänään toisin.',
+      'Vanhakaupunki on yhä vaarantuneen maailmanperinnön luettelossa. Lensin portaiden yllä ja pidin vaurioituneisiin kattoihin tavallista enemmän väliä.',
     ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'vakava', voimakkuus: 0.6 },
