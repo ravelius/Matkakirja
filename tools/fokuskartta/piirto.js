@@ -439,6 +439,95 @@ const VARI_SYVYYS_ANKKURIT = [
 /** Näyteväli 25 m kuten seepian syvyydellä; 0…−11 000 m = 441 pistettä. */
 export const VARI_SYVYYS = monotoninenRamppi(VARI_SYVYYS_ANKKURIT, 25);
 
+/*
+ * ======== MURRETTU PALETTI (KARTTAUUDISTUKSEN PÄÄTÖKSET 2) =========
+ *
+ * Omistaja 13.9.2026 klo 10.25 UTC: *"kohdemaan korkeuserot seepiaan
+ * sointuvilla MURRETUILLA savyilla (kellertava alanko, ruskehtava
+ * ylanko, harmaanvihrea vuoristo, savunsininen vesi), MUUT MAAT
+ * FEIDATAAN vaaleammiksi; ei taysvaria pelinakymassa"*. Yllä oleva
+ * täysväriasteikko on erän 1 putken oletus, ja se JÄÄ TÄHÄN — mutta
+ * vain vertailukuvia ja topografialinssiä varten (`--paletti
+ * taysvari`). Pelinäkymän laatat ajetaan murretulla.
+ *
+ * MITATTU PERUSTELU (kroma = suurimman ja pienimmän kanavan ero,
+ * L = BT.709-luminanssi; suunnitelman luku 2.3):
+ *
+ *   seepia (peli nyt)   kroma ka. 68,4   H 54° → 12°   L 214 → 80
+ *   täysväri (erä 1)    kroma ka. 77,8   H 125° → 21°  L 97 → 168
+ *   MURRETTU (tämä)     kroma ka. 39,1   H 48° → 83°   L 202 → 116
+ *
+ * Murrettu paletti on siis VÄHEMMÄN KYLLÄINEN KUIN PELIN NYKYINEN
+ * SEEPIAKARTTA (39 vs. 68): se ei voi rikkoa ilmettä värikkyydellä,
+ * vain sävyllä. Uutta on sävykulmien vaihtelu (48° → 83°) eikä
+ * kirkkaus, ja luminanssi laskee monotonisesti lumirajaan asti, joten
+ * korkeuslukema säilyy myös mustavalkona.
+ *
+ * SÄVYKULMAN HYPPY 3200 → 4200 m (33° → 75°) ON TARKOITUKSELLINEN JA
+ * SILMÄLLE HARMAANTUMINEN: kroma putoaa samassa kohdassa 36:sta
+ * 16:een, joten porras lukee värittömyytenä eikä värinvaihtona. Juuri
+ * siinä kohdassa vuoristo alkaa, ja harmaanvihreä on sen sävy.
+ */
+export const VARI_ASTEIKKO_MURRETTU = [
+  { m: 0, v: [214, 203, 158] },      // kellertävä alanko
+  { m: 150, v: [206, 195, 146] },
+  { m: 400, v: [196, 183, 134] },
+  { m: 800, v: [183, 166, 122] },
+  { m: 1400, v: [168, 148, 110] },   // ruskehtava ylänkö
+  { m: 2200, v: [151, 130, 100] },
+  { m: 3200, v: [134, 118, 98] },
+  { m: 4200, v: [114, 118, 102] },   // harmaanvihreä vuoristo
+  { m: 5200, v: [134, 140, 124] },
+  { m: 6000, v: [186, 188, 180] },   // lumi harmaan kautta
+  { m: 7000, v: [214, 214, 208] },
+];
+
+/*
+ * SAVUNSININEN VESI. Ankkurit ovat samat merenpohjan muodot kuin
+ * täysvärillä (−200 m mannerjalustan reuna, −4000 m valtamerten
+ * pohja, −6000 m syvänteiden alku), mutta kroma on 91 → 32: vesi on
+ * savun läpi nähtyä eikä atlaksen sinistä. Kanavat ovat monotonisia
+ * (178→70, 192→84, 196→104), joten rannan ulkopuolelle ei synny
+ * vaaleaa rengasta — sama ehto kuin täysvärillä.
+ */
+const VARI_SYVYYS_MURRETTU_ANKKURIT = [
+  { m: 0, v: [178, 192, 196] },
+  { m: -200, v: [160, 177, 185] },
+  { m: -1000, v: [138, 157, 171] },
+  { m: -2500, v: [116, 136, 154] },
+  { m: -4000, v: [98, 117, 138] },
+  { m: -6000, v: [84, 100, 122] },
+  { m: -11000, v: [70, 84, 104] },
+];
+
+/** Murrettu syvyysramppi samalla 25 m:n näytevälillä. */
+export const VARI_SYVYYS_MURRETTU = monotoninenRamppi(VARI_SYVYYS_MURRETTU_ANKKURIT, 25);
+
+/*
+ * PALETTI ON NIMI, EI KYTKIN (karttauudistus, erä 1b). Asteikkopari ja
+ * veden peittävyys asuvat yhdessä taulussa, jonka sekä generaattori
+ * (`--paletti`, `--vesi`) että moottori lukevat: sävyjen vaihto on
+ * silloin yksi ajon valitsin eikä koodimuutos — täsmälleen se, mitä
+ * omistaja tilasi (*"vaihto = asteikon muutos + laattojen uusi ajo,
+ * ei koodimuutos"*).
+ *
+ * VEDEN PEITTÄVYYS ON PALETIN OMINAISUUS. Täysvärin 0,9 litistää
+ * murretun syvyyden, koska murrettu sininen on jo vaalea ja vähän
+ * kylläinen: paperin rae ei enää näy läpi eikä laatta lue painetuksi.
+ * 0,72 on murretun oletus, ja se on MITATTU pilottikuvasta eikä
+ * päätetty paperilla (kolme vaihtoehtoa omistajalle: 0,60 · 0,72 ·
+ * 0,85).
+ */
+export const VARIPALETIT = {
+  taysvari: { asteikko: VARI_ASTEIKKO, syvyys: VARI_SYVYYS, vesi: 0.9 },
+  murrettu: { asteikko: VARI_ASTEIKKO_MURRETTU, syvyys: VARI_SYVYYS_MURRETTU, vesi: 0.72 },
+};
+
+/** Paletin nimi → asteikkopari ja veden peittävyys; tuntematon → null. */
+export function variPaletista(nimi) {
+  return VARIPALETIT[nimi] ?? null;
+}
+
 export const PAPERI = '#e8dcbc';
 export const MUSTE = '#4a3421';
 

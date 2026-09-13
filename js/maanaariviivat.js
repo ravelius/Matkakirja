@@ -572,6 +572,45 @@ function siirraPolku(d, dx) {
  * maanvaihto edestakaisin ei saa laskea samaa polkua uudestaan.
  */
 let aluevesiMuisti = null;
+let aluevesiRengasMuisti = null;
+
+/**
+ * Kohdemaan ALUEVESIRAJA RENKAINA laudan yksiköissä.
+ *
+ * SAMA LASKENTA KUIN LEIKKURIPOLULLA, ERI MUOTO. Polku (`maanAluevesiPolku`)
+ * kelpaa SVG:lle; laattojen poltto (tools/fokuskartta/maailmapiirto.js
+ * polttaVariLeikkuri) ja canvasin `Path2D` tarvitsevat pistelistat.
+ * Kaksi laskentaa samasta rajasta olisi täsmälleen se kahden totuuden
+ * paikka, jonka omistaja korjautti 1.9.2026, joten polku rakennetaan
+ * NÄISTÄ renkaista eikä rinnalla.
+ *
+ * SAUMAN MONISTUSTA EI TEHDÄ TÄSSÄ: se on piirtokohtainen (SVG:n
+ * `<use>`-kopio kattaa eri välin kuin laatan kangas), ja kutsuja tietää
+ * oman avaruutensa.
+ *
+ * @param {object} data assets/data/maapolygonit.json
+ * @param {string} iso  ISO A3
+ * @param {number} [d]  puskuri lautayksikköinä
+ * @returns {Array<Array<[number, number]>>} renkaat; tyhjä, jos maata ei ole
+ */
+export function maanAluevesiRenkaat(data, iso, d = ALUEVESI_YKSIKKOA) {
+  if (aluevesiRengasMuisti?.data !== data || aluevesiRengasMuisti.d !== d) {
+    aluevesiRengasMuisti = { data, d, renkaat: new Map() };
+  }
+  const muistista = aluevesiRengasMuisti.renkaat.get(iso);
+  if (muistista !== undefined) return muistista;
+  const ulos = [];
+  for (const rengas of puraMaanRenkaat(data, iso)) {
+    const tulos = tyonnaUlos(harvenna(rengas, HARVENNUS_YKSIKKOA), d);
+    if (!tulos) continue;
+    // `alku` on maan oma rengas (samaan kiertosuuntaan käännettynä) ja
+    // `puskuri` sen ulospäin työnnetty vastine: nonzero-täyttö tekee
+    // niistä yhdisteen, eli maa JA sen aluevedet.
+    ulos.push(tulos.alku, tulos.puskuri);
+  }
+  aluevesiRengasMuisti.renkaat.set(iso, ulos);
+  return ulos;
+}
 
 /**
  * Kohdemaan ALUEVESIRAJA SVG-polkuna laudan yksiköissä.
@@ -593,29 +632,25 @@ export function maanAluevesiPolku(data, iso, leveys, d = ALUEVESI_YKSIKKOA) {
   if (muistista !== undefined) return muistista;
 
   const osat = [];
-  for (const rengas of puraMaanRenkaat(data, iso)) {
-    const tulos = tyonnaUlos(harvenna(rengas, HARVENNUS_YKSIKKOA), d);
-    if (!tulos) continue;
-    for (const pisteet of [tulos.alku, tulos.puskuri]) {
-      const osa = polkuOsa(pisteet);
-      osat.push(osa);
-      /*
-       * SAUMAN YLI ULOTTUVA RENGAS MYÖS LAUDAN TOISELLE LAIDALLE —
-       * sama sääntö ja sama syy kuin js/maatummennus.js:n maanPolussa:
-       * kiertävällä laudalla juuriryhmän <use>-kopio kattaa välin
-       * [leveys, 2 × leveys), ja rengas on aineistossa ehjänä välin
-       * [0, leveys) ulkopuolella.
-       */
-      if (leveys > 0) {
-        let minX = Infinity;
-        let maxX = -Infinity;
-        for (const [x] of pisteet) {
-          if (x < minX) minX = x;
-          if (x > maxX) maxX = x;
-        }
-        if (minX < 0) osat.push(siirraPolku(osa, leveys));
-        else if (maxX > leveys) osat.push(siirraPolku(osa, -leveys));
+  for (const pisteet of maanAluevesiRenkaat(data, iso, d)) {
+    const osa = polkuOsa(pisteet);
+    osat.push(osa);
+    /*
+     * SAUMAN YLI ULOTTUVA RENGAS MYÖS LAUDAN TOISELLE LAIDALLE —
+     * sama sääntö ja sama syy kuin js/maatummennus.js:n maanPolussa:
+     * kiertävällä laudalla juuriryhmän <use>-kopio kattaa välin
+     * [leveys, 2 × leveys), ja rengas on aineistossa ehjänä välin
+     * [0, leveys) ulkopuolella.
+     */
+    if (leveys > 0) {
+      let minX = Infinity;
+      let maxX = -Infinity;
+      for (const [x] of pisteet) {
+        if (x < minX) minX = x;
+        if (x > maxX) maxX = x;
       }
+      if (minX < 0) osat.push(siirraPolku(osa, leveys));
+      else if (maxX > leveys) osat.push(siirraPolku(osa, -leveys));
     }
   }
   const polku = osat.join('');
