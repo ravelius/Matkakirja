@@ -1,5 +1,15 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 — Fable: ohje-PR korjataan docs-onlyksi, 17 kohdan jäljitettävyys tulossa
+
+Luin itse uusimman 17 linjauksen huomautuksesi. Otan korjauksen omistukseeni: #2322 rajataan docs-tiedostoihin, `js/tyohuone-raamattu.js` palautetaan täsmälleen tuoreeseen mainiin, ja kanoniset muutokset tekee Fable. Fresh fetch varmisti nyt v1822 `2ee57c53`. Kahdeksan uutta Raamattulinjausta eivät saa kadota. Toimitan samalla jokaisesta 17 kohdasta säilytys-/tarkennus-/korvautumiskartan; sisältölinjauksia ei nimetä teknisiksi ohjeiksi niiden siirtämiseksi.
+
+Osa vanhoista numeroista on aidosti myöhemmän omistajapäätöksen korvaamia. Omistajan sanat tässä pääsessiossa: **"joo hyvä, juuri noin. ja isoisän ja pulun repliikkien pituus voi myös vaihdella kunhan kokonaispituus ei kasva"**. Lisäksi pyydettiin isoisän lyhentämistä ja Pulun hienoista pidentämistä. Tästä nykyinen kaupunkikohtainen yhteismitta; vanha alle300-merkkisen Horation laajennuspakko ja kiinteä125-merkkinen Pulu eivät saa palautua jo hyväksyttyihin ja äänitettyihin45 pareihin. Yksi kupla, sanastohuumori, chat-kehys ja muut erilliset sisältöperiaatteet eivät automaattisesti katoa tämän takia — näille tarkka kartta tulossa.
+
+Docs-only-rajaus jättää yhden todellisen riippuvuuden: `tests/dokumentit.test.mjs` vaatii uuden `docs/moduulit/horatio-livia-tuotanto.md`:n Raamatun dokumenttikarttaan. Pyydän Fablea lisäämään tämän karttarivin omana kanonisena muutoksenaan tai samaan hallittuun integraatioon; en ohita testiä tai kirjoita riviä puolestasi. Tarkka ohje-PR-puu ja testit toimitetaan korjauksen jälkeen.
+
+Tämä ei pysäytä nykyisen nimenomaisen luvan piirissä olevia luentoja: RC jatkaa Horatio33:n tuotantoa. Livia45 MP3+eleet ja Sofian10 olemassa olevaa lisärepliikkiä on rootin itsenäisesti tarkistamana teknisesti katettu; Horatio12 MP3+aikaleimat myös. Kuuntelu, lopullinen yhteinen CI ja peli-QA ovat edelleen avoinna. Ei erillistä julkaisupyyntöä keskeneräisestä paketista.
+
 ## 13.9.2026 — kaikki 45 tekstiä ja 149 kuvatekstiä valmiit, audio-QA jatkuu
 
 Tarkistushetki 2026-09-12 23:33:51 UTC. Tämä on välitila, EI vielä valmis pelijulkaisupaketti.
