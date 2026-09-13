@@ -505,6 +505,41 @@ async function odotaLepo(kierroksia = 14) {
  * mittauspiste osui saapumiskorttiin ja väite meni läpi myös silloin,
  * kun leikkuri oli rikki). Pallon kangas on karttaruudun lapsi.
  */
+/*
+ * KAIKKI PALLON KANKAAN ULKOPUOLINEN PIILOON. Sääntö on käänteinen
+ * nimettyyn selektorilistaan: näkyviin jää VAIN pallon kangas ja sen
+ * esivanhemmat. Nimetty lista ei riitä, koska kortteja on monta lajia
+ * ja uusia tulee — ja juuri niin kävi (luku 4.4 ansa 1).
+ */
+const piilotaPaallikset = () => sivu.evaluate(() => {
+  const kangas = document.querySelector('.pallolauta canvas')
+    ?? document.querySelector('canvas');
+  if (!kangas) return -1;
+  const ketju = new Set();
+  for (let n = kangas; n; n = n.parentElement) ketju.add(n);
+  let n = 0;
+  for (const e of document.querySelectorAll('body *')) {
+    if (ketju.has(e) || e.contains(kangas)) continue;
+    if (e.style.visibility === 'hidden') continue;
+    e.style.visibility = 'hidden';
+    n += 1;
+  }
+  return n;
+});
+
+/*
+ * KUVAKAAPPAUS CDP:LLÄ EIKÄ `page.screenshot`illa. Playwrightin oma
+ * kaappaus odottaa `document.fonts.ready`n, ja kartalla se jää
+ * odottamaan aikakatkaisuun asti. `Page.captureScreenshot` ottaa kuvan
+ * siitä, mitä ruudulla juuri nyt on — ja juuri se on mitattava asia.
+ */
+async function kaappaa() {
+  const cdp = await ctx.newCDPSession(sivu);
+  return Buffer.from(
+    (await cdp.send('Page.captureScreenshot', { format: 'png' })).data, 'base64',
+  );
+}
+
 async function mittaaPisteet(ryhma) {
   const kohde = KAMERAT[ryhma];
   await sivu.evaluate(async (b2) => {
@@ -527,27 +562,10 @@ async function mittaaPisteet(ryhma) {
    * `visibility` EIKÄ `display`: asettelu ei muutu, joten kotelo
    * pysyy samankokoisena eikä kamera siirry kesken mittauksen.
    */
-  const piilotettuja = await sivu.evaluate(() => {
-    const kangas = document.querySelector('.pallolauta canvas')
-      ?? document.querySelector('canvas');
-    if (!kangas) return -1;
-    const ketju = new Set();
-    for (let n = kangas; n; n = n.parentElement) ketju.add(n);
-    let n = 0;
-    for (const e of document.querySelectorAll('body *')) {
-      if (ketju.has(e) || e.contains(kangas)) continue;
-      if (e.style.visibility === 'hidden') continue;
-      e.style.visibility = 'hidden';
-      n += 1;
-    }
-    return n;
-  });
+  const piilotettuja = await piilotaPaallikset();
   tieto('mittauksen ajaksi piiloon', `${piilotettuja} elementtiä`);
   await sivu.waitForTimeout(600);
-  const cdp = await ctx.newCDPSession(sivu);
-  const kuva = Buffer.from(
-    (await cdp.send('Page.captureScreenshot', { format: 'png' })).data, 'base64',
-  );
+  const kuva = await kaappaa();
   const tulos = await sivu.evaluate(async ({ png, pisteet }) => {
     const img = new Image();
     img.src = `data:image/png;base64,${png}`;
@@ -683,6 +701,16 @@ async function vaihe(vari, tunnus) {
   tieto(`${tunnus} kamera (saapumisnäkymä)`, JSON.stringify(pov));
   const kehykset = await kehysajat();
   tieto(`${tunnus} kehysajat (pallon pyöritys)`, JSON.stringify(kehykset));
+  /*
+   * SAAPUMISNÄKYMÄN KUVA ON SE, JOTA OMISTAJA KATSOO. Mittauskamerat
+   * ovat lähempänä (ohut aluevesikaistale on saatava mitattavaksi),
+   * mutta valinta paletin voimakkuudesta tehdään siitä näkymästä,
+   * johon peli saapuu — koko maa ruudussa kehä ja kaistale mukaan
+   * lukien.
+   */
+  await piilotaPaallikset();
+  await sivu.waitForTimeout(600);
+  const saapumiskuva = await kaappaa();
   const maa = await mittaaPisteet('maa');
   const meri = await mittaaPisteet('meri');
   return {
@@ -691,6 +719,7 @@ async function vaihe(vari, tunnus) {
     kehykset,
     maamitat: maa.mitat,
     merimitat: meri.mitat,
+    saapumiskuva,
     kuva: maa.kuva,
     merikuva: meri.kuva,
     mittaukset: [...maa.mittaukset, ...meri.mittaukset],
@@ -704,8 +733,12 @@ const mB = B.mitat;
 
 if (KUVAT) {
   mkdirSync(KUVAT, { recursive: true });
-  if (A) writeFileSync(join(KUVAT, `varilaatat-pallo-${NIMI}-ilman-varia.png`), A.kuva);
+  if (A) {
+    writeFileSync(join(KUVAT, `varilaatat-pallo-${NIMI}-ilman-varia.png`), A.kuva);
+    writeFileSync(join(KUVAT, `varilaatat-pallo-${NIMI}-saapuminen-ilman-varia.png`), A.saapumiskuva);
+  }
   writeFileSync(join(KUVAT, `varilaatat-pallo-${NIMI}.png`), B.kuva);
+  writeFileSync(join(KUVAT, `varilaatat-pallo-${NIMI}-saapuminen.png`), B.saapumiskuva);
   writeFileSync(join(KUVAT, `varilaatat-pallo-${NIMI}-meri.png`), B.merikuva);
   tieto('kuvat', join(KUVAT, `varilaatat-pallo-${NIMI}*.png`));
 }
