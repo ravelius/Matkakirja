@@ -1,5 +1,6 @@
 import { FOKUSVIRTA_PARIISI } from '/home/user/Matkakirja/js/packs/fokusvirta-pariisi.js';
 const UUDET = {
+  'pariisin-patonki': 'Paras patonki',
   'pariisin-72-nimea': '72 nimeä',
   'guimardin-metro': 'Metron sisäänkäynti',
   'notre-damen-kukko': 'Notre-Damen kukko',

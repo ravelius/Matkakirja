@@ -4912,6 +4912,12 @@ export const KAUPUNKIKARTAT = {
         nosto: 'nosto-pariisi-soi',
         nimiPuoli: 'vasen', siirto: { x: -26, y: 12 },
       },
+      // Élysée-palatsi: kortin oma teksti nimeää presidentinpalatsin
+      // leivät patonkikilpailun palkinnoksi (48,8703 N / 2,3167 E).
+      {
+        nimi: 'Paras patonki', lat: 48.8703, lon: 2.3167,
+        nosto: 'nosto-pariisin-patonki',
+      },
       // Panthéon: kummankaan tarinan oma osoite ei ollut vapaana
       // (Vrain-Lucasilla on jo piste, kaulanauhan Versailles on rajauksen
       // ulkopuolella), joten kortin ankkuri on kartan oma historiakohde.

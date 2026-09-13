@@ -1119,18 +1119,23 @@ export const FOKUSVIRTA_PARIISI = {
     },
     {
       /*
-       * LEHDEN SIVU 1 ("Pariisi"), nosto 4 — AINOA, JOKA JÄÄ
-       * PÄÄKARTALLE (suunnitelman luku 4.7: *"Patonki → pääkartta
-       * kaupungin viereen (ruoka-symboli)"*). Nostolla ei ole
-       * kohdekarttapistettä, joten `karsiKaupunkikartanNostot` ei
-       * pudota sitä, ja kaupunkiruuhkan katto (3 merkkiä säteellä 8)
-       * kestää yhden.
+       * LEHDEN SIVU 1 ("Pariisi"), nosto 4.
        *
-       * PAIKKA ON KAUPUNKI ITSE: kilpailu on koko kaupungin eikä
-       * yhden leipomon, joten osoitetta ei keksitä. Kaupungin laatan
-       * päälle osuvan merkin siirtää katkoviivan päähän sama kasauspassi
-       * kuin muillakin merkeillä (js/fokusniput.js) — juuri se
-       * "vähän kaupungin viereen", jota omistaja pyysi.
+       * SUUNNITELMA SANOI PÄÄKARTTAA, KONE SANOI EI — ja kone on
+       * omistajan oman säännön puolella. Luku 4.7 ehdotti tätä
+       * pääkartalle kaupungin viereen, mutta omistajan sääntö
+       * 2.9.2026 (*"nuo karttanostot jotka ovat kohdekaupunkien
+       * kohdalla piti viedä pois pääkartalta"*) on koneellistettu
+       * tests/nostot-kartalla.test.mjs:ään: kaupungin kohdalla
+       * pääkartalle jäävien luku saa laskea muttei kasvaa. Nosto on
+       * siksi kohdekartalla kuten viisi muutakin tämän erän nostoa.
+       * Erän raportissa on täsmällinen yhden rivin muutos siltä
+       * varalta, että omistaja haluaa sen sittenkin pääkartalle.
+       *
+       * PAIKKA ON ÉLYSÉE-PALATSI (48,8703 N / 2,3167 E), ei keksitty
+       * leipomo: kortin oma teksti nimeää presidentinpalatsin leivät
+       * kilpailun palkinnoksi, ja kilpailu on koko kaupungin eikä
+       * yhden liikkeen. Piste on kohdekartan rajauksen sisällä.
        */
       id: 'pariisin-patonki',
       nimio: 'Paras patonki',
@@ -1164,12 +1169,11 @@ export const FOKUSVIRTA_PARIISI = {
         'Mitä patongissa saa lain mukaan olla?',
         'Mikä velvollisuus voittajalle tulee?',
       ],
-      // Pariisi 48,8566 N / 2,3522 E — kaupungin oma osoite.
       paikka: {
-        nimi: 'Pariisi',
+        nimi: 'Paras patonki',
         laudat: {
-          maailmankartta: { x: 5911.7, y: 1439.6 },
-          europe: { x: 256.4, y: 608.7 },
+          maailmankartta: { x: 5910.6, y: 1439.0 },
+          europe: { x: 255.7, y: 608.3 },
         },
       },
     },

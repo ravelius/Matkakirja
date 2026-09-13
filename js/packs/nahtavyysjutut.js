@@ -4227,6 +4227,30 @@ export const NAHTAVYYSJUTUT = {
       ],
       lahde: 'Wikipedia',
     },
+    'Paras patonki': {
+      nosto: 'nosto-pariisin-patonki',
+      teksti: 'Kaupunki on järjestänyt vuodesta 1994 kilpailun parhaasta '
+        + 'perinteisestä patongista, ja säännöt ovat tarkat: leivän pitää '
+        + 'olla 55–65 senttiä pitkä ja painaa 250–300 grammaa. Mitä '
+        + 'patongissa saa olla, on määrätty laissa — käytännössä vain '
+        + 'vehnäjauhoa, vettä, suolaa ja hiivaa, eikä taikinaa saa missään '
+        + 'vaiheessa pakastaa. Leivät numeroidaan ennen maistamista, jottei '
+        + 'raati tiedä kenen leipää se arvostelee, ja raadissa istuu kuusi '
+        + 'arvottua tavallista pariisilaista. Voittaja saa rahapalkinnon ja '
+        + 'yhden velvollisuuden: hän toimittaa presidentinpalatsin leivät '
+        + 'seuraavan vuoden ajan.',
+      kuvat: [
+        {
+          tiedosto: '84 Boulevard de Port-Royal Bakery.jpg',
+          lyhyt: 'Pariisi on järjestänyt vuodesta 1994 kilpailun parhaasta patongista presidentin leipojaksi.',
+          selite: 'Pariisi on järjestänyt vuodesta 1994 kilpailun parhaasta '
+            + 'perinteisestä patongista, ja voittaja toimittaa '
+            + 'presidentinpalatsin leivät seuraavan vuoden ajan.',
+          lahde: 'Lionel Allorge, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      lahde: 'Wikipedia',
+    },
     'Pariisin vuosisadat': {
       nosto: 'nosto-pariisin-vuosisadat',
       teksti: 'Hovin jalokivikauppiaat Boehmer ja Bassenge olivat koonneet 647 '
