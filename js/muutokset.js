@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1827, teksti: 'Isoisan tekstin lyhennys pois paalta' },
   { v: 1826, teksti: 'Pulun aanesta ffmpeg-nopeutus pois' },
   { v: 1825, teksti: 'Pulu palaa lepoon luennan luonnollisen lopun jalkeen' },
   { v: 1824, teksti: 'Aloituskaupungin pisteosuma pallolla korjattu' },

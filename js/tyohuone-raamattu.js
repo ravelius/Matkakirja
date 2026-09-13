@@ -4604,6 +4604,7 @@ export const RAAMATTU = {
           + 'kaanonin mukainen, 3-7 sanaa, ei faktavirheita), harvennettuna '
           + 'pienemmalla kirjasimella. Tarkentaa linjausta SAAPUMISEN UUSI '
           + 'JARJESTYS.',
+        'ISOISAN TEKSTIN LYHENNYS ON POIS PAALTA (omistaja 13.9.2026, sanatarkasti: "Ota isoisan tekstin lyhennys pois paalta."): 11.9.2026 tilattu TILAPAINEN kokeilu, jossa matkakirjan merkinnasta ja luennasta jatettiin kaksi viimeista lausetta pois, on nyt paattynyt. js/lausejako.js MATKAKIRJAN_LYHENNYS_LAUSEITA on 0, joten isoisan merkinta nakyy kortilla kokonaan ja luenta soi loppuun asti ilman lauserajapysaytysta. Kytkin jaa koodiin, koska koneisto on koeteltu ja kokeilu voidaan haluta uudestaan. Pakkien tekstit, luentareaktioiden ankkurit ja aanitteet olivat kokeilun ajan koskemattomat, joten paluu ei vaadi uutta aanitysta. Tama kumoaa linjauksen SAAPUMISEN UUSI JARJESTYS siltä osin kuin se maarasi merkinnan lyhennettavaksi; sen muut osat (minitraileri, isot kuvat keskella, PuluCam-sarja) jaavat voimaan.',
         'SAAPUMISEN UUSI JARJESTYS: KAUPUNGIN MINITRAILERI, ISOT KUVAT KESKELLA, '
           + 'LYHENNETTY MERKINTA (omistaja 11.9.2026 klo 12.40, sanatarkasti: '
           + '"Tee vaiaikainen muutos ja lyhenna tilapaisesti matkakirjojen '
