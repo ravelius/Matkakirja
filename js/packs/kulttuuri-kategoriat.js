@@ -470,71 +470,69 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Wikipedia',
         },
       },
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * Tämän sivun 3 nostoa ovat nyt kaupunkilehden kohdekartalla
+       * klikattavina karttapaloina: "Kupla, joka puhkesi Exchange Alleyssä"
+       * → `exchange-alleyn-kupla`, "Canaletto maalasi myös Lontoon" →
+       * `canaletto-lontoossa`, "Pubi, jossa Dickens istui" →
+       * `the-george-pubi`. Teksti siirtyi SANATARKASTI — kappaletta ei
+       * kirjoitettu uudestaan eikä yhtään faktaa jäänyt pois
+       * (js/packs/fokusvirta-lontoo.js takynostot; pisteet
+       * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
+       *
+       * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
+       * ovat nyt kohdekartan jutun `kuvat`-listassa
+       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
+       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
+       * yhtään kuvaa ei pudonnut pelistä.
+       *
+       * PUDOTETTU SIVUVERSIONA: "Kellarin lattian alta tuli neljäsataa
+       * korua" — kohdekartan piste "Cheapsiden kätkö"
+       * (syvennys-lontoo-cheapside, 1012 mrk) kertoo saman laajempana.
+       * sivuversion väitteet väite väitteeltä: 1) vuonna 1912 työmiehet
+       * hakkasivat hakulla kellarin lattiaa osoitteessa 30–32 Cheapside —
+       * vastineessa sanasta sanaan (lisäksi "Friday Streetin kulmassa"); 2)
+       * lattian alta tuli puinen laatikko — sanasta sanaan; 3) sisällä yli
+       * neljäsataa korukappaletta: sormuksia, rintaneuloja, ketjuja,
+       * hajuvesipulloja ja kameoita — sanasta sanaan; 4) kivet ympäri
+       * maailmaa, smaragdi Kolumbiasta, topaasi Brasiliasta, timantti
+       * Intiasta, rubiini Burmasta, turkoosi Persiasta — kaikki
+       * vastineessa, joka luettelee lisäksi lapislatsulin Afganistanista ja
+       * helmet Bahrainista; 5) oudoin esine on omenan kokoinen ontoksi
+       * koverrettu smaragdi, jonka sisällä on noin vuoden 1600
+       * sveitsiläinen kellokoneisto — vastineessa sanasta sanaan (lisäksi
+       * "kolumbialainen"); 6) yksi sinettikivi ajoittaa kätkennän
+       * marraskuun 1640 ja syyskuun 1666 suurpalon väliin — vastineessa
+       * laajemmin (Staffordin viscountin vaakuna, talo paloi suurpalossa).
+       * Jokainen kuudesta väitteestä löytyy vastineesta, joten pudotus on
+       * kaksoiskappaleen poisto, ei asiatiedon menetys.
+       *
+       * YKSI NOSTO JÄI: "Metron tunnelissa savusi höyryveturi" pysyy
+       * sivulla, koska se on kaupungin KULTTUURIVISAN lähdejuttu
+       * (js/packs/europe-kulttuuri.js), ja tests/lehdet.test.mjs vaatii
+       * vastauksen kansisivulta. Sama teksti on nyt myös kartalla nostona
+       * `lontoon-metro-1863`; kaksoiskappale purkautuu sinä päivänä, kun
+       * kansisivu jää pois ja visa siirtyy ison pop-upin loppuun
+       * (suunnitelman luku 4.7, js/lehti.js — ei tämän erän tiedosto).
+       *
+       * YKSI NOSTO JÄI: "Suojatie, jota jonotetaan" pysyy sivulla, koska
+       * sillä on musiikki- tai äänikenttä, jolle ei ole paikkaa
+       * nostokortilla eikä kohdekartan jutussa — siirto pudottaisi linkin
+       * tai näytteen pelistä kokonaan. Sama teksti on nyt myös kartalla
+       * nostona `abbey-roadin-suojatie`; kaksoiskappale purkautuu sinä
+       * päivänä, kun kansisivu jää pois ja visa siirtyy ison pop-upin
+       * loppuun (suunnitelman luku 4.7, js/lehti.js — ei tämän erän
+       * tiedosto).
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-lontoo.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
-        {
-          otsikko: 'Canaletto maalasi myös Lontoon',
-          tiedosto: 'Canaletto - Westminster Bridge, with the Lord Mayor\'s Procession on the Thames - Google Art Project.jpg',
-          teksti: 'Sama venetsialainen Canaletto, jonka vedutoja selailit '
-            + 'Venetsian lehdessä, muutti Lontooseen vuonna 1746 ja maalasi '
-            + 'kaupunkia yhdeksän vuoden ajan. Hän toi Thamesille saman '
-            + 'tarkan katseen kuin Canal Grandelle — ja siksi 1700-luvun '
-            + 'Lontoo tunnetaan parhaiten venetsialaisen silmin.',
-          lyhyt: 'Canaletton maalaus 1747 kuvaa lordimayorin kulkuetta vastavalmistuneella Westminster Bridgellä.',
-          selite: 'Canaletton vuoden 1747 maalauksessa lordimayorin juhlakulkue '
-            + 'kulkee Thamesilla vastavalmistuneen Westminster Bridgen editse.',
-          lahde: 'Canaletto, Wikimedia Commons (PD)',
-          wiki: 'Canaletto',
-          galleria: [
-            {
-              otsikko: 'Thames ja Pyhän Paavalin katedraali',
-              tiedosto: 'The Thames and the City Canaletto 46-47 National Gallery Prague.jpg',
-              selite: 'Canaletto muutti Lontooseen vuonna 1746 ja maalasi '
-                + 'kaupunkia yhdeksän vuoden ajan.',
-              lahde: 'Canaletto, Wikimedia Commons (PD)',
-            },
-            {
-              otsikko: 'City sillan kaaren läpi',
-              tiedosto: 'Canaletto - The City Seen Through an Arch of Westminster Bridge.JPG',
-              selite: 'Vuoden 1747 maalaus on tehty rakenteilla olleen '
-                + 'Westminster Bridgen puutelineiltä.',
-              lahde: 'Canaletto, Wikimedia Commons (PD)',
-            },
-            {
-              otsikko: 'Northumberland House',
-              tiedosto: 'Northumberland House by Canaletto (1752).JPG',
-              lyhyt: 'Canaletton vuoden 1752 maalaus on tarkin muistikuva 1874 puretusta Northumberland Housesta.',
-              selite: 'Charing Crossin Northumberland House purettiin 1874, '
-                + 'ja Canaletton vuoden 1752 maalaus on sen tarkin '
-                + 'muistikuva.',
-              lahde: 'Canaletto, Wikimedia Commons (PD)',
-            },
-            {
-              otsikko: 'Ranelaghin rotunda',
-              tiedosto: 'Canaletto Ranelegh 1754.jpg',
-              lyhyt: 'Ranelagh Gardensin pyörösalissa kahdeksanvuotias Mozart esiintyi musiikin soidessa hienostolle.',
-              selite: 'Ranelagh Gardensin rotundassa hienosto kierteli '
-                + 'pyörösalin lattialla musiikin soidessa, ja Mozart '
-                + 'esiintyi siellä kahdeksanvuotiaana.',
-              lahde: 'Canaletto, Wikimedia Commons (PD)',
-            },
-          ],
-        },
-        {
-          otsikko: 'Pubi, jossa Dickens istui',
-          tiedosto: 'The George at Southwark (8553233399).jpg',
-          teksti: 'The George on Lontoon viimeinen parvekekäytävällinen majatalo: '
-            + 'tällaisten pihojen parvilta katsottiin näytelmiä jo '
-            + 'Shakespearen aikaan. Nykyinen rakennus on vuodelta 1677, ja '
-            + 'sen penkeillä istui aikanaan Charles Dickens, joka mainitsee '
-            + 'pubin romaanissaan Pikku Dorrit. Talo on niin arvokas, että '
-            + 'sen omistaa National Trust — olutta myydään silti joka päivä.',
-          lyhyt: 'The George Southwark on Lontoon viimeinen parvekekäytävällinen majatalo, nykyisin vuodelta 1677.',
-          selite: 'The George Southwarkissa on Lontoon viimeinen '
-            + 'parvekekäytävällinen majatalo, ja nykyinen rakennus on '
-            + 'vuodelta 1677.',
-          lahde: 'It\'s No Game, Wikimedia Commons (CC BY 2.0)',
-          wiki: 'Charles Dickens',
-        },
         {
           otsikko: 'Suojatie, jota jonotetaan',
           tiedosto: 'Abbey Road Zebra.jpg',
@@ -588,24 +586,6 @@ export const KULTTUURI_KATEGORIAT = {
          * syvennystarina `syvennys-lontoo-cheapside` putosi Lontoon
          * ruuhkasta, ja sen sisältö on tässä lehtimittaan kirjoitettuna.
          */
-        {
-          otsikko: 'Kellarin lattian alta tuli neljäsataa korua',
-          tiedosto: 'Victoria and Albert Museum Jewellery 11042019 Necklace Enamelled gold Lovers knots Cheapside Hoard 3037.jpg',
-          teksti: 'Vuonna 1912 työmiehet hakkasivat hakulla kellarin lattiaa '
-            + 'osoitteessa 30–32 Cheapside, ja lattian alta tuli puinen '
-            + 'laatikko. Sen sisällä oli yli neljäsataa korukappaletta: '
-            + 'sormuksia, rintaneuloja, ketjuja, hajuvesipulloja ja '
-            + 'kameoita. Kivet olivat ympäri maailmaa — smaragdi '
-            + 'Kolumbiasta, topaasi Brasiliasta, timantti Intiasta, rubiini '
-            + 'Burmasta, turkoosi Persiasta. Oudoin esine on omenan kokoinen '
-            + 'smaragdi, joka oli koverrettu ontoksi ja jonka sisään oli '
-            + 'sovitettu noin vuoden 1600 sveitsiläinen kellokoneisto. Yksi '
-            + 'sinettikivi ajoittaa kätkennän marraskuun 1640 ja Lontoon '
-            + 'suurpalon syyskuun 1666 väliin.',
-          selite: 'Cheapsiden kätköstä löytynyt kaulaketju on kultaa ja '
-            + 'valkoista emalia, tehty Englannissa 1590–1620.',
-          lahde: 'Vassil, Wikimedia Commons (CC0)',
-        },
         /*
          * KARTALTA LEHTEEN, TOINEN ERÄ (2.9.2026): skandaali
          * `skandaali-etelameren-kupla` jäi v1421:ssä siirtämättä,
@@ -614,27 +594,6 @@ export const KULTTUURI_KATEGORIAT = {
          * KULTTUURI_HAVAINNEKUVAJUURI), ja kartan skandaalimerkki
          * visoineen jää ennalleen.
          */
-        {
-          otsikko: 'Kupla, joka puhkesi Exchange Alleyssä',
-          osoite: `${KULTTUURI_HAVAINNEKUVAJUURI}skandaali-etelameren-kupla.jpg`,
-          teksti: 'Etelämeren yhtiö perustettiin 1711, ja se sai '
-            + 'yksinoikeuden kauppaan Espanjan Etelä-Amerikan kanssa '
-            + 'vastineeksi siitä, että se otti kantaakseen osan '
-            + 'valtionvelasta. Kauppaa ei juuri syntynyt, mutta vuonna 1720 '
-            + 'yhtiö sopi ottavansa haltuunsa lähes koko velan ja '
-            + 'vaihtavansa sen omiin osakkeisiinsa. Osakkeen hinta nousi '
-            + 'tammikuun runsaasta sadasta punnasta kesällä lähes '
-            + 'tuhanteen ja romahti syyskuun loppuun mennessä noin '
-            + 'sataanviiteenkymmeneen. Kauppa käytiin Cornhillin takana '
-            + 'kulkevalla Exchange Alleyn kujalla ja sen kahviloissa. '
-            + 'Parlamentin tutkinta paljasti 1721 ministerien lahjonnan, ja '
-            + 'valtiovarainministeri John Aislabie erotettiin '
-            + 'alahuoneesta ja suljettiin Toweriin.',
-          lyhyt: 'Kujalle kokoontunut väki lukee osakepapereitaan Etelämeren yhtiön kurssin romahdettua 1720.',
-          selite: 'Kujalle kokoontunut väki lukee osakepapereitaan sen '
-            + 'jälkeen, kun Etelämeren yhtiön kurssi romahti syksyllä 1720.',
-          lahde: 'Matkakirjan havainnekuva: kurssiromahdus Exchange Alleyssä',
-        },
       ],
     },
     {
@@ -647,80 +606,26 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Lontoossa nykytaide ei pysy museon seinällä: sitä maalataan '
         + 'junatunnelin kattoon, nostetaan tyhjälle patsasjalustalle ja '
         + 'kiedotaan liukumäeksi olympiapuiston veistoksen ympärille.',
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * Tämän sivun 4 nostoa ovat nyt kaupunkilehden kohdekartalla
+       * klikattavina karttapaloina: "Tunneli, jossa saa maalata" →
+       * `leake-streetin-tunneli`, "Tyhjä jalusta ja 2 400 ihmistä" →
+       * `neljas-jalusta`, "Voimalasta tuli taidesali" →
+       * `tate-modernin-turbiinihalli`, "Veistos, jonka sisällä on
+       * liukumäki" → `orbitin-liukumaki`. Teksti siirtyi SANATARKASTI —
+       * kappaletta ei kirjoitettu uudestaan eikä yhtään faktaa jäänyt pois
+       * (js/packs/fokusvirta-lontoo.js takynostot; pisteet
+       * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-lontoo.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
-        {
-          otsikko: 'Tunneli, jossa saa maalata',
-          tiedosto: '2024-09-26 Leake Street, London graffiti tunnel 01.jpg',
-          teksti: 'Waterloon aseman laiturien alla kulkee noin kolmesataa metriä '
-            + 'pitkä tunneli, jossa seinien maalaaminen on sallittua — '
-            + 'muualla Britanniassa luvaton graffiti on rangaistavaa. Tunneli '
-            + 'avautui taiteelle toukokuussa 2008, kun Banksy järjesti siellä '
-            + 'kolmipäiväisen Cans Festivalin. Autoja ajoi läpi vielä saman '
-            + 'vuoden marraskuuhun asti, mutta nyt siellä vain kävellään. '
-            + 'Seinät maalataan jatkuvasti uusiksi, joten aamulla ihailtu '
-            + 'teos voi olla iltaan mennessä kadonnut toisen alle.',
-          lyhyt: 'Leake Streetin tunneli avautui katutaiteelle toukokuussa 2008 Banksyn Cans Festivalissa.',
-          selite: 'Leake Streetin noin kolmesataa metriä pitkässä tunnelissa '
-            + 'seinien maalaaminen on sallittua, ja se avautui taiteelle '
-            + 'toukokuussa 2008 Banksyn Cans Festivalissa.',
-          lahde: 'Ted Potters, Wikimedia Commons (PD)',
-          wiki: 'Banksy',
-        },
-        {
-          otsikko: 'Tyhjä jalusta ja 2 400 ihmistä',
-          tiedosto: 'Gormley-OneandOther-4thPlinth-TrafalgarSq-20090706.jpg',
-          teksti: 'Trafalgar Squarella on neljä jalustaa. Kolmelle nousi patsas, '
-            + 'mutta luoteiskulman jalusta jäi vuonna 1841 tyhjäksi, koska '
-            + 'rahat loppuivat kesken. Yli 150 vuoden väittelyn jälkeen '
-            + 'päätettiin, ettei sille tule pysyvää patsasta lainkaan: '
-            + 'jalustalle nostetaan vuorotellen uusia nykytaideteoksia. '
-            + 'Kesällä 2009 teoksena olivat ihmiset itse. Sadan päivän ajan, '
-            + 'yötä päivää, 2 400 tavallista ihmistä sai kukin tunnin '
-            + 'jalustan päällä ja teki siellä mitä halusi.',
-          lyhyt: 'One & Other -teoksessa 2 400 ihmistä sai vuorollaan tunnin Trafalgar Squaren jalustalla 2009.',
-          selite: 'One & Other -teoksessa 2 400 tavallista ihmistä sai kukin '
-            + 'tunnin Trafalgar Squaren neljännellä jalustalla sadan päivän '
-            + 'ajan kesällä 2009.',
-          lahde: 'Simon Lee, Wikimedia Commons (CC BY 2.0)',
-          wiki: 'Antony Gormley',
-        },
-        {
-          otsikko: 'Voimalasta tuli taidesali',
-          tiedosto: 'Turbine Hall - Tate Modern - geograph.org.uk - 7509077.jpg',
-          teksti: 'Tate Modern on entinen hiilivoimala Thamesin etelärannalla. '
-            + 'Sen turbiinihalli on 155 metriä pitkä ja 35 metriä korkea, ja '
-            + 'museo tilaa siihen kerrallaan yhden jättimäisen teoksen. '
-            + 'Vuonna 2010 kiinalainen Ai Weiwei levitti hallin lattialle '
-            + 'sata miljoonaa auringonkukansiementä. Jokainen siemen oli '
-            + 'muotoiltu käsin posliinista ja maalattu yksitellen: noin 1 600 '
-            + 'käsityöläistä Jingdezhenin kaupungissa teki niitä yli kaksi '
-            + 'vuotta. Museoon pääsee sisään ilmaiseksi.',
-          lyhyt: 'Tate Modernin 155-metrinen turbiinihalli täyttyy kerrallaan yhdellä jättimäisellä teoksella.',
-          selite: 'Tate Modernin turbiinihalli on 155 metriä pitkä ja 35 '
-            + 'metriä korkea, ja museo tilaa siihen kerrallaan yhden '
-            + 'jättimäisen teoksen.',
-          lahde: 'Mr Ignavy, Wikimedia Commons (CC BY-SA 2.0)',
-          wiki: 'Tate Modern',
-        },
-        {
-          otsikko: 'Veistos, jonka sisällä on liukumäki',
-          tiedosto: 'ArcelorMittal Orbit - geograph.org.uk - 6402522.jpg',
-          teksti: 'Stratfordin olympiapuistossa seisoo 114,5 metriä korkea '
-            + 'punainen teräsvyyhti, Britannian suurin julkinen taideteos. '
-            + 'Sen suunnittelivat kuvanveistäjä Anish Kapoor ja insinööri '
-            + 'Cecil Balmond vuoden 2012 olympialaisia varten. Ylhäällä on '
-            + 'kaksi näköalatasannetta, ja alas pääsee 455 porrasta pitkin. '
-            + 'Vuonna 2016 veistokseen kiedottiin toinen taideteos: Carsten '
-            + 'Höllerin 178 metriä pitkä liukumäki, maailman pisin '
-            + 'tunneliliukumäki. Matka alas kiertyy kaksitoista kertaa ja '
-            + 'kestää noin 40 sekuntia.',
-          lyhyt: 'ArcelorMittal Orbit on Britannian suurin taideteos, ja sen ympäri kiertyy pisin tunneliliukumäki.',
-          selite: 'ArcelorMittal Orbit on 114,5 metriä korkea ja Britannian '
-            + 'suurin julkinen taideteos, ja sen ympäri kiertyy maailman '
-            + 'pisin tunneliliukumäki.',
-          lahde: 'Ian S, Wikimedia Commons (CC BY-SA 2.0)',
-          wiki: 'Anish Kapoor',
-        },
       ],
       tehtava: {
         kysymys: 'Mitä Ai Weiwei levitti Tate Modernin turbiinihallin lattialle '
@@ -749,43 +654,50 @@ export const KULTTUURI_KATEGORIAT = {
         + 'ranta paljastuu keskellä miljoonakaupunkia. Kulman takana on '
         + 'toinen maailma: aidattu puisto, jossa kulkee vapaana lauma '
         + 'hirviä.',
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * PUDOTETTU SIVUVERSIONA: "Laskuvesi paljastaa rannan keskellä
+       * kaupunkia" — kohdekartan piste "Thamesin vuorovesi"
+       * (syvennys-lontoo-vuorovesi, 788 mrk) kertoo saman laajempana.
+       * sivuversion väitteet: 1) Thames on vuorovesijoki Teddingtonin
+       * sulkuun asti, vesi nousee ja laskee kahdesti vuorokaudessa,
+       * keskustassa noin seitsemän metriä — vastineessa SAMA VIRKE
+       * sanatarkasti; 2) laskuvedellä kivinen ranta paljastuu keskellä
+       * miljoonakaupunkia ja sinne lasketaan portaita pitkin etsimään
+       * savipiippuja ja astiansirpaleita — sama virke sanatarkasti; 3)
+       * etsijöitä sanotaan mudlarkeiksi — sama (vastineessa jatko "ja
+       * ammatti on isoisääsi vanhempi"); 4) lupa on ostettava
+       * satamaviranomaiselta ja myynti keskeytettiin 2022, kun lupia oli
+       * yli 5 000 — sama virke sanatarkasti; 5) yli kolmesataa vuotta
+       * vanhat löydöt on ilmoitettava Lontoon museolle — sama. Vastineessa
+       * on lisäksi 2024 uudelleen avattu lupamyynti ja 4 000 luvan katto.
+       * Sivuversio on vastineen lyhennelmä virke virkkeeltä, ei yhtään omaa
+       * faktaa.
+       *
+       * PUDOTETTU SIVUVERSIONA: "Richmond Parkin lauma" — syvennys
+       * "Richmond Parkin lauma" (FOKUSVIRRAT.lontoo.takyt, id hirvet, 701
+       * mrk) kertoo saman laajempana. sivuversion väitteet: 1) Richmond
+       * Park on kuninkaallisista puistoista suurin ja kolmentoista
+       * kilometrin tiiliaidan sisällä kulkee vapaana noin 630 saksanhirveä
+       * ja kuusipeuraa — syvennyksessä SAMA VIRKE sanatarkasti; 2) Kaarle I
+       * aitasi alueen hirvenmetsästystä varten 1637 ja aita seisoo yhä —
+       * sama virke; 3) syys-lokakuussa urokset karjuvat kiima-aikaan niin
+       * että ääni kuuluu puiston laidalle — sama virke; 4) marras- ja
+       * helmikuussa kaadetaan noin kaksisataa eläintä, jotta laidun riittää
+       * — sama virke; 5) vuosina 1867 ja 1876 puistosta lähetettiin
+       * kuusipeuroja Uuteen-Seelantiin, maan ensimmäiset — sama tieto
+       * (syvennyksessä lisäksi kytkös isoisän matkaan). Sivuversio on
+       * syvennyksen lyhennelmä ilman omaa faktaa. HUOM: syvennyksellä ei
+       * ole karttapistettä, ks. huomiot.
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-lontoo.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
-        {
-          otsikko: 'Laskuvesi paljastaa rannan keskellä kaupunkia',
-          tiedosto: 'Mudlarks by Millennium Bridge.jpg',
-          teksti: 'Thames on vuorovesijoki Teddingtonin sulkuun asti: vesi '
-            + 'nousee ja laskee kahdesti vuorokaudessa, keskustassa '
-            + 'parhaimmillaan noin seitsemän metriä. Laskuveden aikaan '
-            + 'kivinen ranta paljastuu keskellä miljoonakaupunkia, ja sinne '
-            + 'lasketaan portaita pitkin etsimään savipiippuja ja '
-            + 'astiansirpaleita. Etsijöitä sanotaan mudlarkeiksi. Ranta ei '
-            + 'silti ole vapaata riistaa: lupa on ostettava '
-            + 'satamaviranomaiselta, ja kun lupia oli kertynyt yli 5 000, '
-            + 'myynti keskeytettiin vuonna 2022. Yli kolmesataa vuotta '
-            + 'vanhat löydöt on ilmoitettava Lontoon museolle.',
-          lyhyt: 'Thamesin kivinen ranta paljastuu laskuveden aikaan Millennium Bridgen kohdalla.',
-          selite: 'Thamesin kivinen ranta paljastuu laskuveden aikaan '
-            + 'kahdesti vuorokaudessa aivan Millennium Bridgen kohdalla.',
-          lahde: 'Tim Sheerman-Chase, Wikimedia Commons (CC BY 2.0)',
-        },
-        {
-          otsikko: 'Richmond Parkin lauma',
-          tiedosto: 'Red deer stag roaring in Richmond Park - geograph.org.uk - 3711560.jpg',
-          teksti: 'Richmond Park on Lontoon kuninkaallisista puistoista '
-            + 'suurin, ja sen kolmentoista kilometrin tiiliaidan sisällä '
-            + 'kulkee vapaana noin 630 saksanhirveä ja kuusipeuraa. Kuningas '
-            + 'Kaarle I aitasi alueen hirvenmetsästystä varten vuonna 1637, '
-            + 'ja aita seisoo yhä. Syys-lokakuussa urokset karjuvat '
-            + 'kiima-aikaan niin, että ääni kuuluu puiston laidalle asti. '
-            + 'Marraskuussa ja helmikuussa laumasta kaadetaan noin '
-            + 'kaksisataa eläintä, jotta laidun riittää lopuille. Vuosina '
-            + '1867 ja 1876 puistosta lähetettiin kuusipeuroja laivalla '
-            + 'Uuteen-Seelantiin, ja ne olivat koko maan ensimmäiset '
-            + 'kuusipeurat.',
-          selite: 'Richmond Parkin aidatussa laumassa on noin 630 '
-            + 'saksanhirveä ja kuusipeuraa.',
-          lahde: 'Russel Wills, Wikimedia Commons (CC BY-SA 2.0)',
-        },
       ],
       tehtava: {
         kysymys: 'Kuinka paljon veden pinta vaihtelee Thamesissa Lontoon '
@@ -2637,6 +2549,44 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Wikipedia',
         },
       },
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * Tämän sivun 1 nostoa ovat nyt kaupunkilehden kohdekartalla
+       * klikattavina karttapaloina: "Valkoiset hevoset syntyvät tummina" →
+       * `lipizzanit`. Teksti siirtyi SANATARKASTI — kappaletta ei
+       * kirjoitettu uudestaan eikä yhtään faktaa jäänyt pois
+       * (js/packs/fokusvirta-wien.js takynostot; pisteet
+       * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
+       *
+       * YKSI NOSTO JÄI: "Ratas, joka kulkee kävelyä hitaammin" pysyy
+       * sivulla, koska se on kaupungin KULTTUURIVISAN lähdejuttu
+       * (js/packs/europe-kulttuuri.js), ja tests/lehdet.test.mjs vaatii
+       * vastauksen kansisivulta. Sama teksti on nyt myös kartalla nostona
+       * `praterin-ratas`; kaksoiskappale purkautuu sinä päivänä, kun
+       * kansisivu jää pois ja visa siirtyy ison pop-upin loppuun
+       * (suunnitelman luku 4.7, js/lehti.js — ei tämän erän tiedosto).
+       *
+       * EI SIIRRETTY: "Keisarin aamiaishuone eläintarhan keskellä" — Aiheen
+       * ainoa oikea osoite on Schönbrunn (48,1845 N / 16,3119 E), joka on
+       * Wienin kohdekartan KAINALOSSA (rajat 48,178–48,191 N /
+       * 16,303–16,325 E) eikä päärajauksessa (48,188–48,22 N / 16,34–16,404
+       * E). Kainalo piirtyy pelissä osana samaa kohdekarttaa ja Schönbrunn
+       * on siellä jo napautettavana pisteenä, mutta
+       * tools/tarkista-nostopaikat.mjs:n kohdekartallaSisalla tuntee vain
+       * päärajauksen — tests/nostot-kartalla.test.mjs kaatuu
+       * ("wien/Aamiaishuone on kartan rajauksen ulkopuolella"). Guardin
+       * täydentäminen on työkalumuutos eikä tämän erän dataa
+       * (Kustannuskuri, sääntö 1), joten nosto jää lehden sivulle ja asia
+       * on erän raportin avoimissa. Korjattuna kortti syntyisi
+       * sellaisenaan: piste Schönbrunn 48,1845 / 16,3119, nimiö oikealle.
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-wien.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
         {
           otsikko: 'Ratas, joka kulkee kävelyä hitaammin',
@@ -2695,24 +2645,6 @@ export const KULTTUURI_KATEGORIAT = {
               lahde: 'Ludwig Hans Fischer, Wikimedia Commons (PD)',
             },
           ],
-        },
-        {
-          otsikko: 'Valkoiset hevoset syntyvät tummina',
-          tiedosto: 'Kawecan.jpg',
-          teksti: 'Hofburgin palatsissa toimii ratsastuskoulu, jonne '
-            + 'lipizzanoriit tuodaan nelivuotiaina Piberin siitostallilta '
-            + 'Steiermarkista. Valkoisia ne eivät silloin vielä ole: varsat '
-            + 'syntyvät ruunikkoina tai mustina ja vaalenevat vuosi vuodelta, '
-            + 'kunnes ovat 6–10 vuoden iässä valkoisia. Perinne vaatii, että '
-            + 'tallissa on aina myös yksi ruunikko. Ratsastajat tervehtivät '
-            + 'salin seinällä olevaa keisari Kaarle VI:n muotokuvaa ennen '
-            + 'kuin ratsastavat.',
-          lyhyt: 'Lipizzanovarsat syntyvät tummina ja vaalenevat vuosittain, kunnes ovat 6–10-vuotiaina valkoisia.',
-          selite: 'Lipizzanovarsat syntyvät ruunikkoina tai mustina ja '
-            + 'vaalenevat vuosi vuodelta, kunnes ovat 6–10 vuoden iässä '
-            + 'valkoisia.',
-          lahde: 'Eerschay, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Espanjalainen ratsastuskoulu',
         },
       ],
       /*
@@ -2782,6 +2714,32 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Musiikki',
       johdanto: 'Valssi, jonka toinen isku tulee etuajassa, ja satuooppera, joka '
         + 'kirjoitettiin esikaupungin puiselle näyttämölle.',
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * YKSI NOSTO JÄI: "Taikahuilu tehtiin esikaupungin teatteriin" pysyy
+       * sivulla, koska sillä on musiikki- tai äänikenttä, jolle ei ole
+       * paikkaa nostokortilla eikä kohdekartan jutussa — siirto pudottaisi
+       * linkin tai näytteen pelistä kokonaan. Sama teksti on nyt myös
+       * kartalla nostona `taikahuilu-wiedenissa`; kaksoiskappale purkautuu
+       * sinä päivänä, kun kansisivu jää pois ja visa siirtyy ison pop-upin
+       * loppuun (suunnitelman luku 4.7, js/lehti.js — ei tämän erän
+       * tiedosto).
+       *
+       * YKSI NOSTO JÄI: "Kaupunki sävelsi oman jokensa" pysyy sivulla,
+       * koska sillä on musiikki- tai äänikenttä, jolle ei ole paikkaa
+       * nostokortilla eikä kohdekartan jutussa — siirto pudottaisi linkin
+       * tai näytteen pelistä kokonaan. Sama teksti on nyt myös kartalla
+       * nostona `tonava-kaunoinen`; kaksoiskappale purkautuu sinä päivänä,
+       * kun kansisivu jää pois ja visa siirtyy ison pop-upin loppuun
+       * (suunnitelman luku 4.7, js/lehti.js — ei tämän erän tiedosto).
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-wien.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
         {
           otsikko: 'Kaupunki sävelsi oman jokensa',
@@ -2866,65 +2824,80 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Isoisän matkavuonna Wien avasi maailmannäyttelyn ja '
         + 'vuoristovesijohdon. Näyttelyhallissa sattui myös vahinko, joka '
         + 'muutti tehtaat: kone pyörähti väärään suuntaan.',
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * PUDOTETTU SIVUVERSIONA: "Kone, joka pyörähti väärään suuntaan" —
+       * syvennys `sahko` ("Näyttelyn konehalli", FOKUSVIRRAT.wien.takyt,
+       * 747 mrk) kertoo saman laajempana. Sivuversion väitteet väite
+       * väitteeltä: 1) kupolin alla oli 800 metriä pitkä konehalli —
+       * syvennyksessä ("Sen kupolin alla, jonka alla sinä seisoit hattu
+       * kädessä, oli 800 metriä pitkä konehalli"); 2) belgialainen Zénobe
+       * Gramme oli rakentanut parannellun tasavirtageneraattorin —
+       * syvennyksessä sanatarkasti; 3) yhtiökumppani, ranskalainen
+       * insinööri Hippolyte Fontaine, toi koneen Wieniin — sanatarkasti; 4)
+       * he huomasivat vahingossa, että laite toimii toisin päin —
+       * sanatarkasti; 5) tasavirtaa johdettaessa se ei tuottanut sähköä
+       * vaan alkoi pyöriä — sanatarkasti; 6) niin syntyi ensimmäinen
+       * teollisesti käyttökelpoinen sähkömoottori — sanatarkasti; 7) sitä
+       * ennen sähkömoottorit olivat leluja ja laboratorion kuriositeetteja
+       * — sanatarkasti; 8) Fontaine osoitti sähkön siirtyvän kahden
+       * kilometrin päähän kuparijohtoa pitkin — sanatarkasti. KAIKKI
+       * kahdeksan löytyvät, ja syvennyksessä on lisäksi fakta, jota
+       * sivuversiossa ei ole (Nikola Tesla näki saman koneen Grazin
+       * teknillisessä korkeakoulussa kaksi vuotta myöhemmin). Sivuversio on
+       * siis tarkka osajoukko.
+       *
+       * PUDOTETTU SIVUVERSIONA: "Vuoristovesi ratkaisi talojen korkeuden" —
+       * kohdekartan piste "Vuoristovesijohto" (nosto
+       * `syvennys-wien-vesijohto`, 898 mrk) kertoo saman laajempana.
+       * Sivuversion väitteet: 1) ensimmäinen vuoristovesijohto avattiin 24.
+       * lokakuuta 1873 — syvennyksessä sanatarkasti; 2) 95 kilometriä pitkä
+       * — sanatarkasti; 3) kulkee kokonaan painovoiman varassa Rax- ja
+       * Schneeberg-vuorten lähteiltä — sanatarkasti; 4) siksi
+       * rakennusjärjestykset rajoittivat talojen korkeuden noin 25 metriin,
+       * koska vesi ei olisi noussut korkeammalle itsestään — sanatarkasti;
+       * 5) matkalla on 30 akveduktia ja muuta laaksonylitystä, kaikki
+       * nykyään suojeltuja — sanatarkasti; 6) urakoitsija Antonio Gabrielli
+       * tarjoutui, että palkkiosta vähennetään yksi prosentti, kunnes
+       * kasassa on 100 000 guldenia — sanatarkasti; 7) niillä rahoilla
+       * rakennettiin Hochstrahlbrunnen, joka avattiin samana päivänä —
+       * syvennyksessä sama asia ("suihkulähde, joka avattaisiin samana
+       * päivänä kuin vesijohto. Niin syntyi Hochstrahlbrunnen"). Kaikki
+       * seitsemän löytyvät; syvennyksessä on lisäksi "Vesijohto tuottaa yhä
+       * yli puolet kaupungin juomavedestä", jota sivuversiossa ei ole.
+       *
+       * PUDOTETTU SIVUVERSIONA: "Kahdeksan päivää avajaisista pörssi
+       * suljettiin" — takynosto `maailmannayttely-1873` ("Keisari avasi
+       * maailmannäyttelyn — kahdeksan päivää myöhemmin poliisi sulki
+       * pörssin", FOKUSVIRRAT.wien.takynostot, kaksi kappaletta) kertoo
+       * saman laajempana. Sivuversion väitteet: 1) keisari Franz Joseph
+       * avasi maailmannäyttelyn 1. toukokuuta 1873 sanoen, että
+       * Itävalta-Unkari on kaikin puolin ilahduttavassa nousussa —
+       * takynostossa sanatarkasti; 2) kupla oli jo puhkeamassa, maan suurin
+       * pankki oli juuri irtisanonut pörssitalletukset — takynostossa, ja
+       * laajempana ("ja myynyt 20 miljoonan guldenin arvosta
+       * arvopapereita"); 3) yhdeksäntenä toukokuuta ilmoitti
+       * maksukyvyttömyydestään meklari Adolf Petschek — takynostossa,
+       * laajempana ("jota kutsuttiin meklarikaupan kuninkaaksi"); 4) samana
+       * aamupäivänä kaatui 120 muuta pankkia — sanatarkasti; 5) kello 13
+       * poliisi sulki pörssin — sanatarkasti; 6) romahdus levisi Berliiniin
+       * ja syyskuussa New Yorkiin — takynostossa, laajempana (New Yorkin
+       * pörssi suljettiin ensimmäistä kertaa historiassaan kymmeneksi
+       * päiväksi); 7) odotettiin 20 miljoonaa kävijää, tuli 7,25 miljoonaa,
+       * tappiota noin 15 miljoonaa guldenia — sanatarkasti. KAIKKI
+       * seitsemän löytyvät takynostosta, ja takynosto on joka kohdassa yhtä
+       * laaja tai laajempi. Huom. vastine on pääkartalla (kattoVapaa: true,
+       * paikka Prater/Rotunde 48,2122 / 16,4094, joka jää päärajauksen
+       * itäpuolelle) — tämä erä ei muuta sitä eikä ehdota pääkarttaa.
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-wien.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
-        {
-          otsikko: 'Kone, joka pyörähti väärään suuntaan',
-          tiedosto: 'Machine Gramme.jpg',
-          teksti: 'Maailmannäyttelyn kupolin alla oli 800 metriä pitkä '
-            + 'konehalli. Belgialainen Zénobe Gramme oli rakentanut '
-            + 'parannellun tasavirtageneraattorin, ja hänen '
-            + 'yhtiökumppaninsa, ranskalainen insinööri Hippolyte Fontaine, '
-            + 'toi koneen Wieniin. Siellä he huomasivat vahingossa, että '
-            + 'laite toimii myös toisin päin: kun siihen johdettiin '
-            + 'tasavirtaa, se ei tuottanut sähköä vaan alkoi pyöriä. Niin '
-            + 'syntyi ensimmäinen teollisesti käyttökelpoinen sähkömoottori '
-            + '— sitä ennen sähkömoottorit olivat leluja ja laboratorion '
-            + 'kuriositeetteja. Samalla näyttelyllä Fontaine osoitti, että '
-            + 'sähkön voi siirtää kahden kilometrin päähän kuparijohtoa '
-            + 'pitkin.',
-          lyhyt: 'Vuoden 1873 Gramme-kone oli Wienin näyttelyssä ensimmäinen kunnollinen sähkömoottori.',
-          selite: 'Gramme-kone vuodelta 1873; samanlainen laite pyörähti '
-            + 'Wienin näyttelyssä ensimmäiseksi kunnolliseksi '
-            + 'sähkömoottoriksi.',
-          lahde: 'Icone5, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          otsikko: 'Vuoristovesi ratkaisi talojen korkeuden',
-          tiedosto: 'Aquädukt Liesing- Teil der 1. Wiener Hochquellenleitung 1.jpg',
-          teksti: 'Wienin ensimmäinen vuoristovesijohto avattiin 24. '
-            + 'lokakuuta 1873. Se on 95 kilometriä pitkä ja kulkee '
-            + 'kokonaan painovoiman varassa Rax- ja Schneeberg-vuorten '
-            + 'lähteiltä kaupunkiin — juuri siksi Wienin rakennusjärjestykset '
-            + 'rajoittivat talojen korkeuden noin kahteenkymmeneenviiteen '
-            + 'metriin: sitä korkeammalle vesi ei olisi noussut itsestään. '
-            + 'Matkalla on 30 akveduktia ja muuta laaksonylitystä, ja ne '
-            + 'kaikki ovat nykyään suojeltuja. Urakoitsija Antonio '
-            + 'Gabrielli tarjoutui itse, että hänen palkkiostaan '
-            + 'vähennettäisiin yksi prosentti, kunnes kasaan tulisi 100 000 '
-            + 'guldenia — ja niillä rahoilla rakennettiin suihkulähde, '
-            + 'Hochstrahlbrunnen, joka avattiin samana päivänä.',
-          lyhyt: 'Ensimmäinen vuoristovesijohto tuo yhä yli puolet Wienin vedestä 95 kilometrin matkan painovoimalla.',
-          selite: 'Ensimmäinen vuoristovesijohto tuo yhä yli puolet Wienin '
-            + 'juomavedestä, ja vesi kulkee koko 95 kilometrin matkan '
-            + 'painovoiman varassa.',
-          lahde: 'Anna Saini, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          otsikko: 'Kahdeksan päivää avajaisista pörssi suljettiin',
-          tiedosto: 'Weltausstellungsgelände-Wien-1873.jpg',
-          teksti: 'Keisari Franz Joseph avasi maailmannäyttelyn 1. '
-            + 'toukokuuta 1873 sanoen, että Itävalta-Unkari on kaikin puolin '
-            + 'ilahduttavassa nousussa. Kupla oli jo puhkeamassa: maan '
-            + 'suurin pankki oli juuri irtisanonut pörssitalletukset. '
-            + 'Yhdeksäntenä toukokuuta ilmoitti maksukyvyttömyydestään '
-            + 'meklari Adolf Petschek, samana aamupäivänä kaatui 120 muuta '
-            + 'pankkia, ja kello 13 poliisi sulki pörssin. Romahdus levisi '
-            + 'Berliiniin ja syyskuussa New Yorkiin. Näyttelylle odotettiin '
-            + '20 miljoonaa kävijää; tuli 7,25 miljoonaa, ja tappiota '
-            + 'kertyi noin 15 miljoonaa guldenia.',
-          selite: 'Maailmannäyttelyn alue Praterissa vuonna 1873.',
-          lahde: 'Historisches Museum der Stadt Wien 1873, Wikimedia Commons (public domain)',
-        },
       ],
       tehtava: {
         kysymys: 'Miksi Wienissä ei saanut 1800-luvulla rakentaa noin '
@@ -2950,41 +2923,56 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Wienin keskushautausmaalla laiduntaa parikymmentä kaurista '
         + 'vanhojen hautakivien lomassa, ja Schönbrunniin tuotu kirahvi '
         + 'muutti aikoinaan kaupungin kampaukset, kankaat ja seuraelämän.',
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * PUDOTETTU SIVUVERSIONA: "Kauriit vanhalla hautausmaalla" — syvennys
+       * `kauriit` ("Keskushautausmaan asukkaat", FOKUSVIRRAT.wien.takyt,
+       * 849 mrk) kertoo saman laajempana. Sivuversion väitteet: 1)
+       * keskushautausmaa on kaksi ja puoli neliökilometriä — syvennyksessä
+       * sanatarkasti; 2) haudattu noin kolme miljoonaa ihmistä, enemmän
+       * kuin kaupungissa nykyään asuu — sanatarkasti; 3) koon ja tiheän
+       * puuston takia se on myös luontoalue — sanatarkasti; 4) näkyvimpiä
+       * asukkaita ovat oravat, joita kutsutaan nimellä Hansi —
+       * syvennyksessä, laajempana ("ja jotka ovat tottuneet vierailijoiden
+       * pähkinöihin"); 5) suurimpia ovat noin kaksikymmentä kaurista —
+       * sanatarkasti; 6) ne viihtyvät vanhan juutalaisen hautausmaan
+       * alueella, koska hautakivien ympärillä kasvaa ikivihreitä kasveja —
+       * syvennyksessä, laajempana ("luotettava ravinnonlähde kylmään
+       * aikaan"); 7) 1980-luvun puoliväliin asti alue oli virallinen
+       * metsästysalue — syvennyksessä, laajempana ("ja riistakantaa hoiti
+       * palkattu metsästäjä"); 8) nykyään osa jätetään tarkoituksella
+       * villiintymään — sanatarkasti. Kaikki kahdeksan löytyvät;
+       * syvennyksessä on lisäksi tuulihaukat, peltohamsterit, mäyrät,
+       * näädät ja sammakot sekä "tasapainoa pidetään ilman aseita". Huom.
+       * Zentralfriedhof (noin 48,15 N / 16,44 E) on joka tapauksessa
+       * kohdekartan rajauksen ulkopuolella.
+       *
+       * PUDOTETTU SIVUVERSIONA: "Yksi kirahvi muutti koko kaupungin muodin"
+       * — takynosto `kirahvimuoti` ("Yksi kirahvi muutti koko kaupungin
+       * muodin — kampaukset, hajuveden ja näytelmän",
+       * FOKUSVIRRAT.wien.takynostot, kaksi kappaletta) kertoo saman
+       * laajempana. Tekstit ovat KIRJAIMELLISESTI SAMAT, takynostossa vain
+       * kahteen kappaleeseen jaettuna. Sivuversion väitteet: 1)
+       * Schönbrunnin eläintarha sai ensimmäisen kirahvinsa vuonna 1828
+       * lahjaksi Egyptin varakuninkaalta — takynostossa sanatarkasti; 2)
+       * eläin herätti sellaisen innostuksen, että se levisi muotiin,
+       * käsitöihin ja seuraelämään — sanatarkasti; 3) kirahvikuvioita
+       * ilmestyi vaatteisiin, kenkiin ja käyttöesineisiin — sanatarkasti;
+       * 4) kirahvin innoittamina keksittiin uusia kampauksia, hajuvesi,
+       * näytelmä ja kaksi sävellystä — sanatarkasti; 5) tarha oli tuolloin
+       * yhä keisariperheen yksityisomaisuutta — sanatarkasti; 6) ja pysyi
+       * sellaisena Itävalta-Unkarin hajoamiseen 1918 asti — sanatarkasti.
+       * Ei yhtään faktaa, jota takynostossa ei olisi. Sivuversio on puhdas
+       * kaksoiskappale.
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-wien.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
-        {
-          otsikko: 'Kauriit vanhalla hautausmaalla',
-          tiedosto: 'Capreolus capreolus Wien Zentralfriedhof 20221021 01.jpg',
-          teksti: 'Wienin keskushautausmaa on kaksi ja puoli neliökilometriä '
-            + 'ja siihen on haudattu noin kolme miljoonaa ihmistä — enemmän '
-            + 'kuin kaupungissa nykyään asuu. Koon ja tiheän puuston takia '
-            + 'se on myös luontoalue. Näkyvimpiä asukkaita ovat oravat, '
-            + 'joita wieniläiset kutsuvat nimellä Hansi. Suurimpia ovat '
-            + 'kuitenkin noin kaksikymmentä kaurista, jotka viihtyvät '
-            + 'mieluiten vanhan juutalaisen hautausmaan alueella, koska '
-            + 'vanhojen hautakivien ympärillä kasvaa ikivihreitä kasveja. '
-            + '1980-luvun puoliväliin asti alue oli virallinen '
-            + 'metsästysalue; nykyään osa siitä jätetään tarkoituksella '
-            + 'villiintymään.',
-          selite: 'Kauriit viihtyvät parhaiten keskushautausmaan vanhalla '
-            + 'juutalaisella osalla.',
-          lahde: 'Uoaei1, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          otsikko: 'Yksi kirahvi muutti koko kaupungin muodin',
-          tiedosto: 'Eduard Gurk - Die erste Giraffe im Schönbrunner Tiergarten - 1828.jpeg',
-          teksti: 'Schönbrunnin eläintarha sai ensimmäisen kirahvinsa vuonna '
-            + '1828 lahjaksi Egyptin varakuninkaalta. Eläin herätti '
-            + 'sellaisen innostuksen, että se levisi muotiin, käsitöihin ja '
-            + 'seuraelämään: kirahvikuvioita ilmestyi vaatteisiin, kenkiin '
-            + 'ja käyttöesineisiin, ja kirahvin innoittamina keksittiin '
-            + 'uusia kampauksia, hajuvesi, näytelmä ja kaksi sävellystä. '
-            + 'Tarha itse oli tuolloin yhä keisariperheen yksityisomaisuutta, '
-            + 'ja se pysyi sellaisena aina Itävalta-Unkarin hajoamiseen 1918 '
-            + 'asti.',
-          selite: 'Schönbrunnin ensimmäinen kirahvi Eduard Gurkin '
-            + 'maalauksessa samalta vuodelta, jona se saapui.',
-          lahde: 'Eduard Gurk 1828, Wikimedia Commons (public domain)',
-        },
       ],
       tehtava: {
         kysymys: 'Miksi kauriit pysyttelevät mieluiten keskushautausmaan '
@@ -3407,91 +3395,82 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Wikipedia',
         },
       },
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * Tämän sivun 2 nostoa ovat nyt kaupunkilehden kohdekartalla
+       * klikattavina karttapaloina: "Kaupunki, jossa syödään seisten" →
+       * `madridin-tapaskierros`, "Goya maalasi madridilaisten vapaapäivät"
+       * → `goyan-kansankuvat`. Teksti siirtyi SANATARKASTI — kappaletta ei
+       * kirjoitettu uudestaan eikä yhtään faktaa jäänyt pois
+       * (js/packs/fokusvirta-madrid.js takynostot; pisteet
+       * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
+       *
+       * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
+       * ovat nyt kohdekartan jutun `kuvat`-listassa
+       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
+       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
+       * yhtään kuvaa ei pudonnut pelistä.
+       *
+       * PUDOTETTU SIVUVERSIONA: "Puistoissa asuu tuhansia villejä
+       * papukaijoja" — ESP-poolin oma takynosto "munkkiaratit"
+       * (FOKUSVIRTA_MADRID.takynostot, piste Parque del Oeste, kattoVapaa)
+       * — kaksi kappaletta, 1 080 mrk kertoo saman laajempana. Sivuversion
+       * jokainen virke on takynostossa MERKKI MERKILTÄ sama (koneellinen
+       * tarkistus: kaikki 6 virkettä sisältyvät kortin tekstiin): 1) "Laji
+       * on munkkiaratti, kotoisin Etelä-Amerikasta." = kortin kappale 1; 2)
+       * Espanjan yli 80 % Euroopan kannasta ja Madridin 10 800 kesäkuussa
+       * 2015 = kappale 1; 3) ainoa papukaija, joka rakentaa oksista pesän =
+       * kappale 2; 4) jättipesä, jossa jokaisella parilla oma sisäänkäynti
+       * ja huoneisto = kappale 2; 5) pesä pikkuauton kokoiseksi,
+       * alivuokralaisina kyyhkyjä, varpusia, oravia = kappale 2; 6) Espanja
+       * kielsi lajin pidon ja kaupan 2013 = kappale 2. Takynostossa on
+       * LISÄKSI Barcelonan noin 5 000 ja Sevillan 6 300 vuonna 2021, joita
+       * sivuversiossa ei ole. Sivuversio on siis aito lyhennelmä: yhtään
+       * faktaa ei menetetä.
+       *
+       * PUDOTETTU SIVUVERSIONA: "Tasavallan vuosi: neljä johtajaa yhdessä
+       * vuodessa" — kohdekartan piste "Tasavallan vuosi"
+       * (syvennys-madrid-tasavalta, 967 mrk), joka on kartalla jo nyt
+       * kertoo saman laajempana. Väite väitteeltä: 1) johdossa vaihtui
+       * isoisän matkavuonna neljä miestä — syvennyksessä ("Tasavallan
+       * johdossa vaihtui isoisäsi matkavuonna neljä miestä"); 2) Figueras
+       * helmikuusta kesäkuuhun — syvennyksessä sanatarkasti; 3) Pi y
+       * Margall aloitti 11. kesäkuuta, kesti 37 päivää, kieltäytyi
+       * tukahduttamasta etelän kapinoita aseilla, koska kapinalliset
+       * noudattivat hänen omaa oppiaan — syvennyksessä sanatarkasti; 4)
+       * Salmerón aloitti 18. heinäkuuta, erosi 6. syyskuuta, kenraalit
+       * vaativat vahvistamaan karkureiden kuolemantuomiot, hän oli
+       * oikeusministerinä poistanut kuolemanrangaistuksen — syvennyksessä
+       * sama sisältö toisessa sanajärjestyksessä; 5) Castelar aloitti 7.
+       * syyskuuta ja vahvisti ne samat tuomiot — syvennyksessä
+       * sanatarkasti. AINOA ERO on sivuversion määre "Espanjan ensimmäisen"
+       * tasavallan: syvennys sanoo pelkkä "Tasavallan". Se ei ole oma
+       * faktaväite vaan saman tasavallan nimitys, ja se on jo kartan muussa
+       * Espanja-aineistossa (takynosto cartagenan-kantoni ja sen lähde
+       * "First Spanish Republic"). Syvennyksessä on LISÄKSI Salmerónin
+       * mausoleumin kirjoitus, tasavallan loppu 3. tammikuuta 1874,
+       * kenraali Manuel Pavían viiden minuutin vaatimus ja ikkunoista
+       * hyppääminen. Osittaissiirtoa ei voi tehdä, koska teksti siirtyy
+       * vain sanatarkasti kokonaisina kappaleina: uusi kortti olisi
+       * käytännössä kaksoiskappale samaan kohtaan karttaa (syvennys on jo
+       * pisteenä 40,4153 / −3,6971). Pudotettu.
+       *
+       * YKSI NOSTO JÄI: "Chotis tanssitaan yhden laatan päällä" pysyy
+       * sivulla, koska se on kaupungin KULTTUURIVISAN lähdejuttu
+       * (js/packs/europe-kulttuuri.js), ja tests/lehdet.test.mjs vaatii
+       * vastauksen kansisivulta. Sama teksti on nyt myös kartalla nostona
+       * `chotis-laatalla`; kaksoiskappale purkautuu sinä päivänä, kun
+       * kansisivu jää pois ja visa siirtyy ison pop-upin loppuun
+       * (suunnitelman luku 4.7, js/lehti.js — ei tämän erän tiedosto).
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-madrid.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
-        {
-          otsikko: 'Goya maalasi madridilaisten vapaapäivät',
-          tiedosto: 'La pradera de San Isidro, Francisco de Goya.jpg',
-          teksti: 'Ennen kuin Francisco de Goyasta tuli hovimaalari ja ennen kuin '
-            + 'hän maalasi sotaa ja hulluutta, hän teki kymmenen vuotta töitä '
-            + 'kuninkaallisen kutomon tilauksesta: malleja seinävaatteisiin, '
-            + 'joiden aiheeksi haluttiin iloisia kansankuvia. Goya meni '
-            + 'kaduille ja niityille ja katsoi, mitä madridilaiset oikeasti '
-            + 'tekivät vapaapäivinään — joivat, tanssivat, riitelivät, '
-            + 'leikkivät. Siitä syntyi tarkin muotokuva, joka 1700-luvun '
-            + 'Madridista on: ei kuninkaista vaan kaupungista.',
-          lyhyt: 'San Isidron niitty (1788) kuvaa kaupungin suojeluspyhimyksen juhlaa Manzanaresin rannalla.',
-          selite: 'San Isidron niitty (1788) syntyi Goyan kymmenvuotisesta '
-            + 'työstä kuninkaallisen kutomon malleja tehden, ja aiheena on '
-            + 'kaupungin suojeluspyhimyksen juhla Manzanaresin rannalla.',
-          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
-          wiki: 'Francisco de Goya',
-          galleria: [
-            {
-              otsikko: 'Päivänvarjo',
-              tiedosto: 'El Quitasol (Goya).jpg',
-              lyhyt: 'Päivänvarjo (1777) on Goyan kutomomalli El Pardon palatsiin ja yksi Pradon suosituimpia tauluja.',
-              selite: 'Päivänvarjo (1777) kuuluu Goyan kutomomalleihin, '
-                + 'jotka tehtiin El Pardon palatsin seinävaatteita varten, '
-                + 'ja se on yhä Pradon suosituimpia tauluja.',
-              lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
-            },
-            {
-              otsikko: 'Sokkoleikki',
-              tiedosto: 'La gallina ciega (Goya).jpg',
-              lyhyt: 'Sokkoleikki (1789), espanjaksi la gallina ciega eli sokea kana, on Goyan kutomomalli Pradossa.',
-              selite: 'Sokkoleikin (1789) espanjankielinen nimi la gallina '
-                + 'ciega tarkoittaa sokeaa kanaa, ja Goyan kutomomalli '
-                + 'kuuluu Pradon kokoelmaan.',
-              lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
-            },
-            {
-              otsikko: 'Lumisade',
-              tiedosto: 'La nevada, Francisco de Goya.jpg',
-              lyhyt: 'Lumisade eli Talvi (1786) kuvaa Goyan kutomomallissa kolme miestä ja aasin lumituiskussa.',
-              selite: 'Lumisade eli Talvi (1786) on Goyan kutomomalli, jossa '
-                + 'kolme miestä ja aasi kahlaavat lumituiskussa — 650 metrin '
-                + 'korkeudessa talvi puree.',
-              lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
-            },
-            {
-              otsikko: 'Tanssi Manzanaresin rannalla',
-              tiedosto: 'El baile a orillas del Manzanares.jpg',
-              lyhyt: 'Tanssi Manzanaresin rannalla (1777) esittää madridilaisia keikareita seguidillaa tanssimassa.',
-              selite: 'Tanssi Manzanaresin rannalla (1777) esittää majoja ja '
-                + 'majia, kaupungin omia keikareita, seguidillaa tanssimassa '
-                + 'joen törmällä.',
-              lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
-            },
-            {
-              otsikko: 'Saviastioiden kauppias',
-              tiedosto: 'El cacharrero, Francisco de Goya.jpg',
-              lyhyt: 'Saviastioiden kauppias (1779) asettaa vastakkain katukauppiaan ja ohi vierivät herrasvaunut.',
-              selite: 'Saviastioiden kauppias (1779) asettaa vastakkain '
-                + 'maahan ruukkunsa levittävän kauppiaan ja ohi vierivät '
-                + 'herrasvaunut — kaksi Madridia samassa taulussa.',
-              lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
-            },
-          ],
-        },
-        {
-          otsikko: 'Kaupunki, jossa syödään seisten',
-          tiedosto: 'Mercado de San Miguel, Madrid - 001.jpg',
-          teksti: 'Madridissa lounas on kahdelta ja illallinen yhdeksän jälkeen, '
-            + 'ja väliin jää tunteja, jotka täytetään tapaksilla. Tapa '
-            + 'tarkoittaa kantta: juomalasin päälle asetettiin viipale '
-            + 'kinkkua tai leipää, jottei kärpäsiä päässyt sisään — kansi '
-            + 'muuttui ruoaksi. Tapaksia syödään seisten baaritiskillä ja '
-            + 'siirrytään sitten seuraavaan paikkaan; kierros on nimeltään '
-            + 'tapeo, ja se on yhtä paljon kävelyä kuin syömistä. Vuoden 1916 '
-            + 'valurautainen San Miguelin halli on kierroksen tunnetuin '
-            + 'pysäkki.',
-          lyhyt: 'Mercado de San Miguelin lasi- ja valurautahalli oli vihannestori ennen muutostaan tapastoriksi 2009.',
-          selite: 'Mercado de San Miguelin lasi- ja valurautahalli Plaza '
-            + 'Mayorin kupeessa, entinen vihannestori, joka muuttui 2009 '
-            + 'tapastoriksi.',
-          lahde: 'Nicolas Vigier, Wikimedia Commons (CC0)',
-          wiki: 'Tapas',
-        },
         {
           otsikko: 'Chotis tanssitaan yhden laatan päällä',
           tiedosto: 'Parejas bailando Chotis - Madrid 01.jpg',
@@ -3520,44 +3499,6 @@ export const KULTTUURI_KATEGORIAT = {
          * syvennystarina `syvennys-madrid-tasavalta` ja täkynosto
          * `nosto-munkkiaratit` putosivat Madridin nostoruuhkasta.
          */
-        {
-          otsikko: 'Tasavallan vuosi: neljä johtajaa yhdessä vuodessa',
-          tiedosto: 'Alegoría de la Primera República Española, por Tomás Padró.jpg',
-          teksti: 'Espanjan ensimmäisen tasavallan johdossa vaihtui isoisän '
-            + 'matkavuonna neljä miestä. Estanislao Figueras kesti '
-            + 'helmikuusta kesäkuuhun. Francisco Pi y Margall aloitti 11. '
-            + 'kesäkuuta ja kesti 37 päivää: hän kieltäytyi tukahduttamasta '
-            + 'etelän kapinoita aseilla, koska kapinalliset noudattivat '
-            + 'hänen omaa oppiaan. Nicolás Salmerón aloitti 18. heinäkuuta '
-            + 'ja erosi 6. syyskuuta, kun kenraalit vaativat häntä '
-            + 'vahvistamaan karkureiden kuolemantuomiot — hän oli '
-            + 'oikeusministerinä itse poistanut kuolemanrangaistuksen. '
-            + 'Emilio Castelar aloitti 7. syyskuuta ja vahvisti ne samat '
-            + 'tuomiot.',
-          lyhyt: 'Allegoria Espanjan ensimmäisen tasavallan julistamisesta painettiin La Flaca -lehdessä 1873.',
-          selite: 'Aikalaisallegoria Espanjan ensimmäisen tasavallan '
-            + 'julistamisesta painettiin La Flaca -lehdessä maaliskuussa '
-            + '1873.',
-          lahde: 'Tomás Padró ja litografi Juan Vazquez 1873, Wikimedia '
-            + 'Commons (public domain)',
-        },
-        {
-          otsikko: 'Puistoissa asuu tuhansia villejä papukaijoja',
-          tiedosto: 'Cotorra Argentina - Parque del Oeste - Madrid 03.jpg',
-          teksti: 'Laji on munkkiaratti, kotoisin Etelä-Amerikasta. '
-            + 'Espanjassa elää yli 80 prosenttia koko Euroopan villistä '
-            + 'kannasta, ja Madridissa niitä laskettiin kesäkuussa 2015 '
-            + 'kymmenentuhatta kahdeksansataa — enemmän kuin missään muualla '
-            + 'Euroopassa. Munkkiaratti on ainoa papukaija, joka rakentaa '
-            + 'oksista oikean pesän eikä tyydy puunkoloon. Yhdyskunta kutoo '
-            + 'yhteen jättipesän, jossa jokaisella parilla on oma '
-            + 'sisäänkäynti ja oma huoneisto. Pesä voi kasvaa pienen auton '
-            + 'kokoiseksi, ja siihen muuttaa alivuokralaisia: kyyhkyjä, '
-            + 'varpusia, jopa oravia. Espanja kielsi lajin pidon ja kaupan '
-            + 'vuonna 2013.',
-          selite: 'Munkkiaratti Madridin Parque del Oestessa.',
-          lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
           /*
        * AVAUSKUVAT (18.8.2026): kolme ilmansuuntaa ja kolme valoa.
@@ -3661,41 +3602,30 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Urheilu',
       johdanto: 'Kaupungissa on kaksi suurta jalkapalloseuraa, ja kummallakin on '
         + 'oma suihkulähde, jonka päälle mestaruus kiivetään juhlimaan.',
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * Tämän sivun 2 nostoa ovat nyt kaupunkilehden kohdekartalla
+       * klikattavina karttapaloina: "Nurmi lasketaan hissillä maan alle" →
+       * `madridin-kaksi-joukkuetta`, "Suihkulähde, joka vaihtoi joukkuetta"
+       * → `madridin-kaksi-joukkuetta`. Teksti siirtyi SANATARKASTI —
+       * kappaletta ei kirjoitettu uudestaan eikä yhtään faktaa jäänyt pois
+       * (js/packs/fokusvirta-madrid.js takynostot; pisteet
+       * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
+       *
+       * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
+       * ovat nyt kohdekartan jutun `kuvat`-listassa
+       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
+       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
+       * yhtään kuvaa ei pudonnut pelistä.
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-madrid.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
-        {
-          otsikko: 'Nurmi lasketaan hissillä maan alle',
-          tiedosto: 'Estadio Santiago Bernabeu - Field.jpg',
-          teksti: 'Real Madridin kotistadion avattiin 14. joulukuuta 1947, ja '
-            + 'siihen mahtuu nykyään 83 186 katsojaa. Suuren remontin jälkeen '
-            + 'sen erikoisin osa on nurmikenttä. Kenttä on leikattu kuudeksi '
-            + 'yli sadan metrin pituiseksi kaukaloksi, jotka voidaan ajaa '
-            + 'sivuun ja laskea hydraulisella hissillä kolmenkymmenen metrin '
-            + 'syvyyteen. Siellä alhaalla on kasvihuone, jossa ruoho saa '
-            + 'valoa ja jatkaa kasvamistaan. Koko kentän piilottaminen kestää '
-            + 'noin kuusi tuntia — sen jälkeen stadionille mahtuu konsertti.',
-          lyhyt: 'Santiago Bernabéu avattiin 1947, ja Real Madridin kotistadionille mahtuu nykyään 83 186 katsojaa.',
-          selite: 'Santiago Bernabéu avattiin 14. joulukuuta 1947, ja Real '
-            + 'Madridin kotistadionille mahtuu nykyään 83 186 katsojaa.',
-          lahde: 'Mervat, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Estadio Santiago Bernabéu',
-        },
-        {
-          otsikko: 'Suihkulähde, joka vaihtoi joukkuetta',
-          tiedosto: 'Fuente de Cibeles - 03.jpg',
-          teksti: 'Cibeleen aukion suihkulähteessä jumalatar ajaa vaunuja, joita '
-            + 'vetää kaksi leijonaa. Ensimmäisinä sen päälle kiipesivät '
-            + 'Atlético Madridin kannattajat: seuran toimisto oli '
-            + 'naapurikadulla, ja siellä juhlittiin voittoja jo vuonna 1962. '
-            + 'Real Madridin väki omaksui tavan perässä, ja 1980-luvun '
-            + 'lopulla Cibeles oli jo niin vahvasti valkoisten paikka, että '
-            + 'atléticolaiset luovuttivat sen. Vuodesta 1991 he ovat '
-            + 'juhlineet saman puistokadun toisessa päässä, Neptunuksen '
-            + 'suihkulähteellä.',
-          selite: 'Cibeleen suihkulähteen vaunuja vetävät kivileijonat '
-            + 'veisti ranskalainen Roberto Michel 1780-luvulla.',
-          lahde: 'Carlos Delgado, Wikimedia Commons (CC BY-SA 3.0)',
-          wiki: 'Plaza de Cibeles',
-        },
       ],
       tehtava: {
         kysymys: 'Kuinka syvälle Bernabéun nurmikenttä lasketaan hissillä?',
@@ -3715,43 +3645,24 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Kadut ja talot',
       johdanto: 'Kaupungin läpi murrettiin katu hopeisella hakulla, ja palaneen '
         + 'linnan tilalle rakennettiin sellainen, joka ei voisi palaa.',
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * Tämän sivun 2 nostoa ovat nyt kaupunkilehden kohdekartalla
+       * klikattavina karttapaloina: "Linna rakennettiin palamattomaksi" →
+       * `palamaton-linna`, "Katu, joka murrettiin talojen läpi" →
+       * `gran-vian-murto`. Teksti siirtyi SANATARKASTI — kappaletta ei
+       * kirjoitettu uudestaan eikä yhtään faktaa jäänyt pois
+       * (js/packs/fokusvirta-madrid.js takynostot; pisteet
+       * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-madrid.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
-        {
-          otsikko: 'Katu, joka murrettiin talojen läpi',
-          tiedosto: 'Derribo de casas para la apertura de la Gran Vía - 1912.jpg',
-          teksti: 'Madridin vanhassa keskustassa kadut olivat kapeita ja '
-            + 'mutkaisia, ja niiden läpi päätettiin murtaa yksi leveä. Työ '
-            + 'alkoi 4. huhtikuuta 1910, kun kuningas Alfonso XIII löi '
-            + 'hopeisella hakulla ensimmäisen reiän papin talon seinään San '
-            + 'Josén kirkon vieressä. Ennen kuin Gran Vía oli valmis, oli '
-            + 'purettu 312 taloa ja 48 katua kadonnut tai muuttunut toiseksi. '
-            + 'Sisällissodassa katua sanottiin Kranaattikaduksi: sen '
-            + 'korkeimman talon ylimmissä kerroksissa oli tähystyspaikka, ja '
-            + 'tykit ampuivat sitä kohti.',
-          lyhyt: 'Gran Vían ensimmäistä osuutta varten 1912 purettiin 312 taloa ja 48 katua katosi tai muuttui.',
-          selite: 'Gran Vían ensimmäistä osuutta rakennettiin vuonna 1912, '
-            + 'ja katua varten purettiin 312 taloa ja 48 katua katosi tai '
-            + 'muuttui toiseksi.',
-          lahde: 'Wikimedia Commons (PD)',
-          wiki: 'Alfonso XIII',
-        },
-        {
-          otsikko: 'Linna rakennettiin palamattomaksi',
-          tiedosto: 'Real Alcázar de Madrid, unknown.jpg',
-          teksti: 'Kuninkaiden vanha Alcázar-linna syttyi palamaan jouluaattona '
-            + '1734, ja tuli tuhosi sen lähes kokonaan. Filip V käski '
-            + 'rakentaa tilalle linnan, joka ei voisi palaa: seinät kiveä ja '
-            + 'tiiltä, katot holvattuja, puuta vain ovissa, ikkunanpuitteissa '
-            + 'ja kattotuoleissa. Työ alkoi 1738, ja ensimmäinen kuningas '
-            + 'muutti sisään 1764. Kuninkaanlinna on 135 000 neliömetrillään '
-            + 'Länsi-Euroopan suurin — silti kuningas ei asu siellä vaan '
-            + 'pienemmässä talossa kaupungin laidalla.',
-          lyhyt: 'Kuninkaiden vanha Alcázar paloi jouluaattona 1734, eikä siitä ole enää jäljellä mitään.',
-          selite: 'Kuninkaiden vanha Alcázar paloi jouluaattona 1734 lähes '
-            + 'kokonaan, eikä rakennuksesta ole enää mitään jäljellä.',
-          lahde: 'Wikimedia Commons (PD)',
-          wiki: 'Palacio Real de Madrid',
-        },
       ],
       tehtava: {
         kysymys: 'Milloin kuninkaiden vanha Alcázar-linna syttyi palamaan?',
@@ -4203,67 +4114,46 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Wikipedia',
         },
       },
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * Tämän sivun 1 nostoa ovat nyt kaupunkilehden kohdekartalla
+       * klikattavina karttapaloina: "Gaertner maalasi Berliinin talo
+       * talolta" → `gaertnerin-berliini`. Teksti siirtyi SANATARKASTI —
+       * kappaletta ei kirjoitettu uudestaan eikä yhtään faktaa jäänyt pois
+       * (js/packs/fokusvirta-berliini.js takynostot; pisteet
+       * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
+       *
+       * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
+       * ovat nyt kohdekartan jutun `kuvat`-listassa
+       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
+       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
+       * yhtään kuvaa ei pudonnut pelistä.
+       *
+       * YKSI NOSTO JÄI: "Hattupäinen ukkeli sai jäädä" pysyy sivulla, koska
+       * se on kaupungin KULTTUURIVISAN lähdejuttu
+       * (js/packs/europe-kulttuuri.js), ja tests/lehdet.test.mjs vaatii
+       * vastauksen kansisivulta. Sama teksti on nyt myös kartalla nostona
+       * `hattupainen-ukkeli`; kaksoiskappale purkautuu sinä päivänä, kun
+       * kansisivu jää pois ja visa siirtyy ison pop-upin loppuun
+       * (suunnitelman luku 4.7, js/lehti.js — ei tämän erän tiedosto).
+       *
+       * YKSI NOSTO JÄI: "Tyttö Schönebergistä lauloi maailman ympäri" pysyy
+       * sivulla, koska sillä on musiikki- tai äänikenttä, jolle ei ole
+       * paikkaa nostokortilla eikä kohdekartan jutussa — siirto pudottaisi
+       * linkin tai näytteen pelistä kokonaan. Sama teksti on nyt myös
+       * kartalla nostona `marlene-dietrich`; kaksoiskappale purkautuu sinä
+       * päivänä, kun kansisivu jää pois ja visa siirtyy ison pop-upin
+       * loppuun (suunnitelman luku 4.7, js/lehti.js — ei tämän erän
+       * tiedosto).
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-berliini.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
-        {
-          otsikko: 'Gaertner maalasi Berliinin talo talolta',
-          tiedosto: '1856 Gaertner Unter den Linden anagoria.JPG',
-          teksti: 'Kun valokuvaa ei vielä ollut, Eduard Gaertner oli Berliinin '
-            + 'kamera. Entinen posliininmaalari kiersi katuja ja maalasi ne '
-            + 'niin tarkasti, että taloista voi laskea ikkunaruudut ja '
-            + 'kylttien tekstit voi lukea. Kuningas osti hänen töitään, mutta '
-            + 'Gaertner ei maalannut vain paraatinäkymiä: hänen kaduillaan '
-            + 'korjataan kiveystä, koirat nuuskivat toisiaan ja pyykki kuivuu '
-            + 'ikkunoissa. Juuri siksi hänen taulunsa ovat nyt tutkijoiden '
-            + 'aarre — niistä nähdään, miltä kadonnut Berliini oikeasti '
-            + 'näytti.',
-          lyhyt: 'Gaertnerin 1856 näkymässä Unter den Lindenin perällä on vielä kuninkaanlinna, joka purettiin 1950.',
-          selite: 'Gaertnerin vuoden 1856 näkymässä Unter den Lindenin perällä '
-            + 'on vielä kuninkaanlinna, joka purettiin 1950.',
-          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
-          wiki: 'Unter den Linden',
-          galleria: [
-            {
-              otsikko: 'Klosterstraße',
-              tiedosto: 'Eduard Gaertner Berlin Klosterstrasse 1830.jpg',
-              selite: 'Gaertner maalasi Klosterstraßen vuonna 1830 niin '
-                + 'tarkasti, että talojen kylttien tekstit voi lukea.',
-              lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
-            },
-            {
-              otsikko: 'Parochialstraße',
-              tiedosto: 'Eduard Gaertner - Die Parochialstraße - Google Art Project.jpg',
-              lyhyt: 'Vuonna 1831 Gaertner maalasi Parochialstraßen katutyömaan ja kupariastiat arkea, ei paraatia.',
-              selite: 'Vuoden 1831 Parochialstraßeen Gaertner maalasi myös '
-                + 'katutyömaan ja kauppiaan kylttinä roikkuvat kupariastiat — '
-                + 'arkea, jota paraatikuvista ei löydy.',
-              lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
-            },
-            {
-              otsikko: 'Schloßfreiheit',
-              tiedosto: 'Eduard Gaertner - Rear view of the Houses at Schloßfreiheit - Google Art Project.jpg',
-              lyhyt: 'Gaertner maalasi 1855 myös kuninkaanlinnan naapuritalojen takapihat, ei vain juhlajulkisivuja.',
-              selite: 'Gaertner maalasi vuonna 1855 myös kuninkaanlinnan '
-                + 'naapuritalojen takapihat, ei vain juhlajulkisivuja.',
-              lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
-            },
-            {
-              otsikko: 'Friedrichsgracht',
-              tiedosto: 'Eduard Gaertner (1801-1877) - The Friedrichsgracht, Berlin - NG6524 - National Gallery.jpg',
-              lyhyt: 'Friedrichsgrachtin lastaavat proomut muistuttavat, että Berliini oli 1800-luvulla satamakaupunki.',
-              selite: 'Friedrichsgracht kattojen yli nähtynä, ja kanavassa '
-                + 'lastaavat proomut muistuttavat, että Berliini oli '
-                + '1800-luvulla satamakaupunki.',
-              lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
-            },
-            {
-              otsikko: 'Kuninkaallinen ooppera',
-              tiedosto: 'Eduard Gaertner - Ansicht der Königlichen Oper und Unter den Linden, Berlin (1845).jpg',
-              selite: 'Vuonna 1845 maalattu kuninkaallinen ooppera seisoo Unter '
-                + 'den Lindenillä yhä.',
-              lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
-            },
-          ],
-        },
         {
           otsikko: 'Hattupäinen ukkeli sai jäädä',
           tiedosto: 'Ampelmännchen go.jpg',
@@ -4313,61 +4203,30 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Syksyllä 1969 Alexanderplatzille valmistui neljän päivän välein '
         + 'kaksi asiaa: kello, joka näyttää maailman ajat, ja torni, joka '
         + 'näkyy kaikkialle kaupunkiin.',
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * Tämän sivun 2 nostoa ovat nyt kaupunkilehden kohdekartalla
+       * klikattavina karttapaloina: "Aurinko piirsi torniin ristin" →
+       * `paavin-kosto`, "Kelloa pyöritti Trabantin vaihteisto" →
+       * `maailmankello`. Teksti siirtyi SANATARKASTI — kappaletta ei
+       * kirjoitettu uudestaan eikä yhtään faktaa jäänyt pois
+       * (js/packs/fokusvirta-berliini.js takynostot; pisteet
+       * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
+       *
+       * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
+       * ovat nyt kohdekartan jutun `kuvat`-listassa
+       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
+       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
+       * yhtään kuvaa ei pudonnut pelistä.
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-berliini.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
-        {
-          otsikko: 'Aurinko piirsi torniin ristin',
-          tiedosto: 'The Pope\'s Revenge.jpg',
-          teksti: 'Itä-Saksa rakensi televisiotornin vuosina 1965–1969 ja vihki '
-            + 'sen käyttöön 3. lokakuuta 1969. Tornin pallo koottiin maassa '
-            + '120 teräslohkosta ja nostettiin vasta sitten betonipylvään '
-            + 'päähän. Sen jälkeen tapahtui jotain, mitä kukaan ei ollut '
-            + 'piirtänyt kuviin: kun aurinko osuu kiiltävään palloon, '
-            + 'heijastus muodostaa ristin. Valtio oli virallisesti '
-            + 'uskonnoton, joten muurin länsipuolella keksittiin ilmiölle '
-            + 'nimi — paavin kosto. Nimi jäi.',
-          lyhyt: 'Auringon heijastus tv-tornin pallosta muodostaa ristin, jota kutsuttiin paavin kostoksi.',
-          selite: 'Auringon heijastus tornin teräspallosta muodostaa ristin, '
-            + 'jolle keksittiin muurin länsipuolella nimi paavin kosto.',
-          lahde: 'Tobi85, Wikimedia Commons (Public domain)',
-          wiki: 'Berliinin televisiotorni',
-          galleria: [
-            {
-              otsikko: 'Työmaa toukokuussa 1968',
-              tiedosto: 'Bundesarchiv Bild 183-G0521-0005-001, Berlin, Fernsehturm, Bau.jpg',
-              lyhyt: 'Televisiotornia rakennettiin 1965–1969, ja pallo koottiin maassa 120 teräslohkosta ennen nostoa.',
-              selite: 'Televisiotornia rakennettiin vuosina 1965–1969, ja pallo '
-                + 'koottiin maassa 120 teräslohkosta ennen nostoa.',
-              lahde: 'Hans-Joachim Spremberg, Bundesarchiv / Wikimedia Commons (CC BY-SA 3.0 DE)',
-            },
-          ],
-        },
-        {
-          otsikko: 'Kelloa pyöritti Trabantin vaihteisto',
-          tiedosto: 'Urania-Weltzeituhr auf dem Alexanderplatz in Berlin 2015.jpg',
-          teksti: 'Muutama päivä ennen tornia, 30. syyskuuta 1969, samalle '
-            + 'aukiolle pystytettiin kymmenmetrinen maailmankello. Erich '
-            + 'Johnin suunnittelemassa alumiinirummussa on 24 sivua, yksi '
-            + 'jokaista aikavyöhykettä kohti, ja niihin on jyrsitty 146 '
-            + 'paikannimeä Reykjavíkista Kinshasaan. Rummun ympäri kiertää '
-            + 'tuntirengas, ja katolla pyörii kerran minuutissa pieni '
-            + 'aurinkokunta. Koneisto on kadun alla kellarissa, ja '
-            + 'tuntirengasta pyöritti Trabantista purettu vaihteisto.',
-          lyhyt: 'Maailmankellon 24-sivuisen rummun katolla pyörii kerran minuutissa pieni aurinkokunta.',
-          selite: 'Maailmankellon alumiinirummussa on 24 sivua, yksi kutakin '
-            + 'aikavyöhykettä kohti, ja sen katolla pyörii kerran minuutissa '
-            + 'pieni aurinkokunta.',
-          lahde: 'Christian Wolf (www.c-w-design.de), Wikimedia Commons (CC BY-SA 3.0 DE)',
-          wiki: 'Alexanderplatz',
-          galleria: [
-            {
-              otsikko: 'Nimet lähietäisyydeltä',
-              tiedosto: 'Weltzeituhr Detail Alexanderplatz.jpg',
-              selite: 'Rumpuun on jyrsitty 146 paikannimeä Reykjavíkista '
-                + 'Kinshasaan.',
-              lahde: 'Gryffindor, Wikimedia Commons (Public domain)',
-            },
-          ],
-        },
       ],
       tehtava: {
         kysymys: 'Kuinka monta paikannimeä Alexanderplatzin maailmankelloon on '
@@ -4398,78 +4257,88 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Portti, josta alkaa Unter den Linden, sinetin karhu vuodelta '
         + '1280, univormu joka valtasi kaupungintalon — ja kivilaatta, josta '
         + 'museo maksoi 20 000 kultamarkkaa.',
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * PUDOTETTU SIVUVERSIONA: "Portista alkaa Unter den Linden" —
+       * kohdekartan piste "Brandenburgin portti" (nosto
+       * brandenburgin-portti, js/packs/fokuskohteet-deu.js, 560 mrk) kertoo
+       * saman laajempana. Ei sivuversio vaan TÄYSI KAKSOISKAPPALE: lehden
+       * noston teksti on merkki merkiltä sama kuin fokuskohteen
+       * `brandenburgin-portti` teksti (koneellinen vertailu node
+       * --input-type=module, teksti === teksti → true, 560 === 560
+       * merkkiä). Kyseinen kohde on jo Berliinin kohdekartalla omana
+       * pisteenään ja sillä on oma nähtävyysjuttu
+       * (NAHTAVYYSJUTUT.berliini['Brandenburgin portti']). Jokainen väite —
+       * 1700-luvun klassistinen monumentti; vanhan kaupunginportin paikka
+       * ja tie Brandenburg an der Haveliin; 1788–1791 Fredrik Vilhelm II:n
+       * käskystä; Carl Gotthard Langhans; Schadowin kvadriga; Unter den
+       * Linden vie kaupunginlinnalle — on siis jo kartalla sanatarkasti.
+       * Uutta korttia ei tehdä; mikään ei katoa.
+       *
+       * PUDOTETTU SIVUVERSIONA: "Karhu on ollut sinetissä vuodesta 1280" —
+       * kohdekartan piste "Berliinin karhu" (syvennys-berliini-karhu, 917
+       * mrk) kertoo saman laajempana. Sivuversion väitteet väite
+       * väitteeltä: 1) karhu sinetissä yhtäjaksoisesti 22. maaliskuuta 1280
+       * lähtien, ensimmäinen todistettu sinetti turkkurien kiltakirjeessä —
+       * on syvennyksessä (lisäksi sinetin teksti "olen Berliinin porvarien
+       * sinetti"); 2) karhulla ei todennäköisesti ole tekemistä kaupungin
+       * nimen kanssa — on; 3) paikannimi slaavilaista perua sanasta berl,
+       * suo — on; 4) karhu on kansanetymologiaa eli puhuva vaakuna — on; 5)
+       * 17. elokuuta 1939 neljä elävää karhua Köllnischer Parkiin
+       * lämmitettävään tarhaan — on (syvennyksessä lisäksi "tiiliseen" ja
+       * "vallihautoineen"); 6) viimeinen kaupunginkarhu Schnute lopetettiin
+       * lokakuussa 2015 — on (lisäksi syy: vaikea nivelrikko); 7) tarhasta
+       * tehtiin 2017 taidetila — on. Kaikki seitsemän löytyvät vastineesta,
+       * joten sivuversio pudotetaan lyhennelmänä eikä asiatietona.
+       *
+       * PUDOTETTU SIVUVERSIONA: "Univormu, joka valtasi kaupungintalon" —
+       * täkynosto `kopenickin-kapteeni` (FOKUSVIRTA_BERLIINI.takynostot,
+       * kaksi kappaletta, pääkartan piste Köpenick, kattoVapaa) kertoo
+       * saman laajempana. Sivuversion väitteet väite väitteeltä: 1) Voigt
+       * istunut yhteensä 25 vuoden edestä tuomioita ja päässyt vapaaksi
+       * helmikuussa 1906 — on täkynostossa; 2) elokuussa Berliinin poliisi
+       * karkotti hänet kaupungista pelkästään siksi, että hän oli entinen
+       * vanki — on; 3) lokakuun 16. päivänä hän puki preussilaisen
+       * kaartinkapteenin univormun, jonka oli ostanut palasina eri
+       * kaupoista — on; 4) pysäytti kadulla joukon sotilaita — on
+       * (täkynostossa tarkemmin: neljä krenatööriä ja kersantti, kuusi
+       * lisää ampumaradalta); 5) vei heidät junalla Köpenickiin — on; 6)
+       * miehitti kaupungintalon — on; 7) pidätytti pormestarin — on
+       * (lisäksi rahastonhoitajan); 8) takavarikoi kassasta 4 002 markkaa
+       * ja 37 penniä — on; 9) antoi kuitin, jonka allekirjoitti entisen
+       * vanginvartijansa nimellä — on; 10) keisari Wilhelm II armahti hänet
+       * 1908 — on. Kaikki kymmenen löytyvät vastineesta. HUOM: vastine on
+       * PÄÄKARTALLA (kattoVapaa: Köpenick ei osu kohdekartan rajaukseen),
+       * ei kohdekartalla — tämä on silti pudotus eikä uusi nosto, koska
+       * sisältö on jo pelissä laajempana eikä tämä erä lisää pääkartalle
+       * mitään.
+       *
+       * PUDOTETTU SIVUVERSIONA: "Fossiilin hinta oli yksi lehmä" —
+       * kohdekartan piste "Lehmän hinnalla" (nosto-archaeopteryx, 763 mrk)
+       * kertoo saman laajempana. Sivuversion väitteet väite väitteeltä: 1)
+       * Berliinin luonnontieteellisessä museossa on lasin alla kivilaatta,
+       * jossa näkyy pieni hampaallinen olento siipineen, kynsineen ja
+       * pitkine liskomaisine häntineen — ja höyhenten painaumat kivessä —
+       * on vastineessa sanatarkasti; 2) Archaeopteryxin Berliinin yksilö,
+       * lajin löydetyistä yksilöistä täydellisin ja ensimmäinen, jolla on
+       * kokonainen pää — on (vastineessa tarkemmin: "kahdestatoista
+       * löydetystä yksilöstä"); 3) löytäjä maanviljelijä Jakob Niemeyer
+       * Eichstättin lähellä — on; 4) vuonna 1876 hän myi fossiilin
+       * majatalonpitäjä Johann Dörrille saadakseen rahat lehmän ostoon —
+       * on; 5) Berliinin museo osti sen 20 000 kultamarkalla — on; 6)
+       * kaupan rahoitti Ernst Werner von Siemens — on. Kaikki kuusi
+       * löytyvät vastineesta, joka sisältää lisäksi Dörrin jälleenmyynnin,
+       * vuodet 1877–1881 ja O. C. Marshin. Sivuversio on lyhennelmä, joten
+       * se pudotetaan.
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-berliini.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
-        {
-          otsikko: 'Portista alkaa Unter den Linden',
-          tiedosto: 'Berlin, Brandenburger Tor -- 2013 -- 4589.jpg',
-          teksti: 'Brandenburgin portti on 1700-luvun klassistinen monumentti '
-            + 'Berliinin keskustassa. Se pystytettiin vanhan kaupunginportin '
-            + 'paikalle — siitä alkoi tie Brandenburg an der Haveliin, '
-            + 'Brandenburgin markkreivikunnan entiseen pääkaupunkiin. '
-            + 'Nykyinen rakennus valmistui 1788–1791 Preussin kuninkaan '
-            + 'Fredrik Vilhelm II:n käskystä, ja sen piirsi hovin arkkitehti '
-            + 'Carl Gotthard Langhans. Katolla ajaa pronssinen kvadriga eli '
-            + 'nelivaljakko, kuvanveistäjä Johann Gottfried Schadowin työ. '
-            + 'Portista alkaa Unter den Linden, bulevardi, joka vie suoraan '
-            + 'vanhalle kaupunginlinnalle.',
-          lyhyt: 'Brandenburgin portin (1788–1791) katolla ajaa Schadowin veistämä nelivaljakko.',
-          selite: 'Brandenburgin portti valmistui 1788–1791, ja sen katolla '
-            + 'ajaa Johann Gottfried Schadowin veistämä nelivaljakko.',
-          lahde: 'Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0)',
-        },
-        {
-          otsikko: 'Karhu on ollut sinetissä vuodesta 1280',
-          tiedosto: 'Sculpture bear Köllnischer Park Berlin-Mitte.jpg',
-          teksti: 'Berliinin sinetissä on ollut karhu yhtäjaksoisesti 22. '
-            + 'maaliskuuta 1280 lähtien: ensimmäinen todistettu sinetti on '
-            + 'turkkurien kiltakirjeessä. Vitsi on siinä, ettei karhulla '
-            + 'todennäköisesti ole kaupungin nimen kanssa mitään tekemistä — '
-            + 'tutkijoiden pääsääntöisen käsityksen mukaan paikannimi on '
-            + 'slaavilaista perua sanasta berl, suo, ja karhu on '
-            + 'kansanetymologiaa eli puhuva vaakuna. Kaupunki otti asian '
-            + 'silti kirjaimellisesti: 17. elokuuta 1939 se sai neljä elävää '
-            + 'karhua, jotka asetettiin Köllnischer Parkiin lämmitettävään '
-            + 'tarhaan. Viimeinen kaupunginkarhu Schnute lopetettiin '
-            + 'lokakuussa 2015, ja tarhasta tehtiin 2017 taidetila.',
-          selite: 'Köllnischer Park on sama puisto, jossa kaupungin elävät '
-            + 'karhut asuivat vuodesta 1939 vuoteen 2015.',
-          lahde: 'Singlespeedfahrer, Wikimedia Commons (CC0)',
-        },
-        {
-          otsikko: 'Univormu, joka valtasi kaupungintalon',
-          tiedosto: 'Wilhelm Voigt 1906 10 26.jpg',
-          teksti: 'Wilhelm Voigt oli istunut elämänsä aikana yhteensä 25 '
-            + 'vuoden edestä tuomioita ja päässyt vapaaksi helmikuussa 1906. '
-            + 'Elokuussa Berliinin poliisi karkotti hänet kaupungista '
-            + 'pelkästään siksi, että hän oli entinen vanki. Lokakuun 16. '
-            + 'päivänä hän puki ylleen preussilaisen kaartinkapteenin '
-            + 'univormun, jonka oli ostanut palasina eri kaupoista. Hän '
-            + 'pysäytti kadulla joukon sotilaita, vei heidät junalla '
-            + 'Köpenickiin, miehitti kaupungintalon, pidätytti pormestarin '
-            + 'ja takavarikoi kassasta 4 002 markkaa ja 37 penniä — antaen '
-            + 'kuitin, jonka allekirjoitti entisen vanginvartijansa nimellä. '
-            + 'Keisari Wilhelm II armahti hänet 1908.',
-          selite: 'Wilhelm Voigt poliisin kuvassa kymmenen päivää tempun '
-            + 'jälkeen.',
-          lahde: 'Preussin poliisi 1906, Wikimedia Commons (public domain)',
-        },
-        {
-          otsikko: 'Fossiilin hinta oli yksi lehmä',
-          tiedosto: 'Berlin Archaeopteryx.jpg',
-          teksti: 'Berliinin luonnontieteellisessä museossa on lasin alla '
-            + 'kivilaatta, jossa näkyy pieni hampaallinen olento siipineen, '
-            + 'kynsineen ja pitkine liskomaisine häntineen — ja höyhenten '
-            + 'painaumat kivessä. Se on Archaeopteryxin Berliinin yksilö, '
-            + 'lajin löydetyistä yksilöistä täydellisin ja ensimmäinen, '
-            + 'jolla on kokonainen pää. Löytäjä oli maanviljelijä Jakob '
-            + 'Niemeyer Eichstättin lähellä. Vuonna 1876 hän myi fossiilin '
-            + 'majatalonpitäjä Johann Dörrille saadakseen rahat lehmän '
-            + 'ostoon. Lopulta Berliinin museo osti sen 20 000 '
-            + 'kultamarkalla, ja kaupan rahoitti Ernst Werner von Siemens.',
-          selite: 'Archaeopteryxin Berliinin yksilössä näkyvät höyhenten '
-            + 'painaumat kivessä.',
-          lahde: 'Emily Willoughby, Wikimedia Commons (CC BY-SA 4.0)',
-        },
       ],
       tehtava: {
         kysymys: 'Mitä kaupungin nimi tarkoittaa tutkijoiden pääsääntöisen '
@@ -7929,6 +7798,37 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Wikipedia',
         },
       },
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * Tämän sivun 2 nostoa ovat nyt kaupunkilehden kohdekartalla
+       * klikattavina karttapaloina: "Kanavalla asuu laivallinen kissoja" →
+       * `amsterdamin-kissalaiva`, "Koko kaupunki seisoo puutukkien päällä"
+       * → `amsterdamin-puupaalut`. Teksti siirtyi SANATARKASTI — kappaletta
+       * ei kirjoitettu uudestaan eikä yhtään faktaa jäänyt pois
+       * (js/packs/fokusvirta-amsterdam.js takynostot; pisteet
+       * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
+       *
+       * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
+       * ovat nyt kohdekartan jutun `kuvat`-listassa
+       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
+       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
+       * yhtään kuvaa ei pudonnut pelistä.
+       *
+       * YKSI NOSTO JÄI: "Verotettiin julkisivun leveydestä" pysyy sivulla,
+       * koska se on kaupungin KULTTUURIVISAN lähdejuttu
+       * (js/packs/europe-kulttuuri.js), ja tests/lehdet.test.mjs vaatii
+       * vastauksen kansisivulta. Sama teksti on nyt myös kartalla nostona
+       * `amsterdamin-kapein-talo`; kaksoiskappale purkautuu sinä päivänä,
+       * kun kansisivu jää pois ja visa siirtyy ison pop-upin loppuun
+       * (suunnitelman luku 4.7, js/lehti.js — ei tämän erän tiedosto).
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-amsterdam.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
         {
           otsikko: 'Verotettiin julkisivun leveydestä',
@@ -7946,58 +7846,6 @@ export const KULTTUURI_KATEGORIAT = {
             + 'jottei nostettava tavara kolhisi julkisivua.',
           lahde: 'René Gerritsen, Wikimedia Commons (CC BY-SA 4.0)',
           wiki: 'Amsterdam',
-        },
-        {
-          otsikko: 'Koko kaupunki seisoo puutukkien päällä',
-          tiedosto: 'Amsterdam stut zijn huizen met palen Perceel Herengracht 537 achter palenbos, Bestanddeelnr 912-2174.jpg',
-          teksti: 'Amsterdamin alla ei ole kalliota vaan suota ja löysää hiekkaa. '
-            + 'Siksi jokainen talo seisoo maahan lyötyjen puupaalujen '
-            + 'varassa, jotka ulottuvat pehmeän kerroksen läpi kovaan '
-            + 'pohjahiekkaan. Dam-aukion palatsi, joka avattiin '
-            + 'kaupungintaloksi vuonna 1655, lepää 13 659 paalun päällä. '
-            + 'Paalu kestää niin kauan kuin se pysyy veden alla: jos '
-            + 'pohjavesi laskee, puu alkaa lahota ja talo nojaa naapuriinsa.',
-          lyhyt: 'Herengracht 537 tuettiin puupaaluin 1961, kun pohjaveden lasku lahottaa talojen paalutuksia.',
-          selite: 'Herengracht 537 jouduttiin tukemaan väliaikaisilla '
-            + 'puupaaluilla maaliskuussa 1961, sillä Amsterdamin talot lepäävät '
-            + 'paalutuksen varassa, joka lahoaa pohjaveden laskiessa.',
-          lahde: 'Harry Pot / Anefo, Wikimedia Commons (CC0)',
-          wiki: 'Paalutus',
-        },
-        {
-          otsikko: 'Kanavalla asuu laivallinen kissoja',
-          tiedosto: 'De Poezenboot (Exterior), Amsterdam (2168146135).jpg',
-          teksti: 'Amsterdamissa on yli sata kilometriä kanavia, ja niissä kelluu '
-            + 'satoja asuntolaivoja. Yhdellä niistä asuu pelkkiä kissoja. '
-            + 'Henriëtte van Weelde alkoi vuonna 1966 kerätä kulkukissoja '
-            + 'kotiinsa, ja kun asunto kävi ahtaaksi, hän avasi niille vuonna '
-            + '1968 oman laivan Singel-kanavaan. Poezenboot eli Kissalaiva on '
-            + 'yhä siinä: kissoja on kiireisimpinä aikoina noin 60, ne '
-            + 'kulkevat vapaana kannella, ja vieraat saavat tulla katsomaan.',
-          lyhyt: 'Poezenboot avattiin Singel-kanavaan 1968, kun kerätyt kulkukissat eivät enää mahtuneet kotiin.',
-          selite: 'Poezenboot avattiin Singel-kanavaan vuonna 1968, kun '
-            + 'Henriëtte van Weelde ei enää saanut keräämiään kulkukissoja '
-            + 'mahtumaan kotiinsa.',
-          lahde: 'Antony Stanley, Wikimedia Commons (CC BY-SA 2.0)',
-          wiki: 'Asuntolaiva',
-          galleria: [
-            {
-              otsikko: 'Kissat vuonna 1986',
-              tiedosto: 'Mevrouw H. van Weelde en enkele medewerksters openen kooien op Poezenboot op S, Bestanddeelnr 933-5755.jpg',
-              lyhyt: 'Henriëtte van Weelde hoiti Kissalaivaa yhä 1986, kahdeksantoista vuotta sen avaamisesta.',
-              selite: 'Henriëtte van Weelde hoiti Kissalaivaa avustajineen '
-                + 'yhä helmikuussa 1986, kahdeksantoista vuotta laivan '
-                + 'avaamisen jälkeen.',
-              lahde: 'Roland Gerrits / Anefo, Wikimedia Commons (CC0)',
-            },
-            {
-              otsikko: 'Kanavan pohjassa on pyöriä',
-              tiedosto: 'Three bikes on the canal bridge in Amsterdam (3798069610).jpg',
-              selite: 'Amsterdamin kanavista nostetaan joka vuosi 12 000–15 '
-                + '000 polkupyörää.',
-              lahde: 'joiseyshowaa, Wikimedia Commons (CC BY-SA 2.0)',
-            },
-          ],
         },
       ],
           /*
@@ -8100,54 +7948,30 @@ export const KULTTUURI_KATEGORIAT = {
       nimi: 'Taide',
       johdanto: 'Kaksi maalausta samassa museossa: toisesta sahattiin palat pois, '
         + 'toisen alta löytyi tavaroita, jotka maalari itse peitti.',
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * Tämän sivun 2 nostoa ovat nyt kaupunkilehden kohdekartalla
+       * klikattavina karttapaloina: "Vermeer peitti omat esineensä
+       * maalilla" → `amsterdamin-maitotytto`, "Yövartiosta sahattiin palat
+       * pois" → `amsterdamin-yovartio`. Teksti siirtyi SANATARKASTI —
+       * kappaletta ei kirjoitettu uudestaan eikä yhtään faktaa jäänyt pois
+       * (js/packs/fokusvirta-amsterdam.js takynostot; pisteet
+       * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
+       *
+       * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
+       * ovat nyt kohdekartan jutun `kuvat`-listassa
+       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
+       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
+       * yhtään kuvaa ei pudonnut pelistä.
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-amsterdam.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
-        {
-          otsikko: 'Yövartiosta sahattiin palat pois',
-          tiedosto: 'The Night Watch - cropped.jpg',
-          teksti: 'Rembrandt maalasi vuonna 1642 kaartin ryhmäkuvan, joka on '
-            + 'nykyään 363 senttiä korkea ja 437 leveä. Vuonna 1715 taulu '
-            + 'siirrettiin kaupungintaloon, eikä se mahtunut sille varatulle '
-            + 'seinälle — joten sitä leikattiin joka reunalta. Vasemmalta '
-            + 'katosi kaksi miestä ja alta askelman reuna, ylhäältä '
-            + 'holvikaaren huippu. Palasia ei ole löydetty. Nimikin on väärä: '
-            + 'teos ei esitä yötä, vaan pinta oli tummunut lakasta, joka '
-            + 'poistettiin vasta 1940-luvulla.',
-          lyhyt: 'Yövartioksi kutsuttiin taulua vasta, kun sen oikea nimi unohtui lakan tummuttua mustaksi.',
-          selite: 'Teoksen oikea nimi on kaartinkapteeni Frans Banning Cocqin '
-            + 'komppania, ja Yövartioksi sitä alettiin kutsua vasta kun lakka '
-            + 'oli tummunut lähes mustaksi.',
-          lahde: 'Rembrandt, Wikimedia Commons (PD)',
-          wiki: 'Yövartio',
-          galleria: [
-            {
-              otsikko: 'Näin taulu näytti ennen leikkausta',
-              tiedosto: 'Lundens - Nachtwache-Kopie.jpg',
-              lyhyt: 'Gerrit Lundensin pienoiskopio on ainoa todiste siitä, mitä Yövartiosta leikattiin pois 1715.',
-              selite: 'Gerrit Lundensin 1600-luvulla maalaama pienoiskopio on '
-                + 'ainoa säilynyt todiste siitä, mitä Yövartiosta leikattiin '
-                + 'pois vuonna 1715.',
-              lahde: 'Gerrit Lundens, Wikimedia Commons (PD)',
-            },
-          ],
-        },
-        {
-          otsikko: 'Vermeer peitti omat esineensä maalilla',
-          tiedosto: 'Johannes Vermeer - Het melkmeisje - Google Art Project.jpg',
-          teksti: 'Maitotyttö on pienempi kuin useimmat kuvittelevat: 45,5 '
-            + 'senttiä korkea ja 41 leveä. Johannes Vermeer maalasi sen noin '
-            + 'vuonna 1660, ja koko hänen tuotannostaan tunnetaan vain '
-            + 'runsaat kolmekymmentä työtä. Vuonna 2022 taulu kuvattiin '
-            + 'röntgenillä ja infrapunavalossa. Maalikerroksen alta '
-            + 'paljastui, että Vermeer oli aloittanut seinälle kannuhyllyn ja '
-            + 'lattialle tulikorin — ja maalannut molemmat itse umpeen, niin '
-            + 'että katse jää maitoon ja käsiin.',
-          lyhyt: 'Maitotyttö esittää nimestään huolimatta keittiöapulaista, Rijksmuseumin keskeisimpiä teoksia.',
-          selite: 'Maitotyttö esittää nimestään huolimatta keittiöapulaista, '
-            + 'ja Rijksmuseum pitää sitä yhtenä kokoelmansa keskeisimmistä '
-            + 'teoksista.',
-          lahde: 'Johannes Vermeer, Wikimedia Commons (PD)',
-          wiki: 'Maitotyttö',
-        },
       ],
       tehtava: {
         kysymys: 'Mitkä kaksi esinettä Vermeer maalasi Maitotyttöön ensin ja '
@@ -12635,6 +12459,44 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Wikipedia',
         },
       },
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * Tämän sivun 1 nostoa ovat nyt kaupunkilehden kohdekartalla
+       * klikattavina karttapaloina: "Leijona nousi lattian alta" →
+       * `colosseumin-kellari`. Teksti siirtyi SANATARKASTI — kappaletta ei
+       * kirjoitettu uudestaan eikä yhtään faktaa jäänyt pois
+       * (js/packs/fokusvirta-rooma.js takynostot; pisteet
+       * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
+       *
+       * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
+       * ovat nyt kohdekartan jutun `kuvat`-listassa
+       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
+       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
+       * yhtään kuvaa ei pudonnut pelistä.
+       *
+       * YKSI NOSTO JÄI: "Kolikko olan yli" pysyy sivulla, koska sillä on
+       * musiikki- tai äänikenttä, jolle ei ole paikkaa nostokortilla eikä
+       * kohdekartan jutussa — siirto pudottaisi linkin tai näytteen pelistä
+       * kokonaan. Sama teksti on nyt myös kartalla nostona
+       * `rooman-kolikko`; kaksoiskappale purkautuu sinä päivänä, kun
+       * kansisivu jää pois ja visa siirtyy ison pop-upin loppuun
+       * (suunnitelman luku 4.7, js/lehti.js — ei tämän erän tiedosto).
+       *
+       * YKSI NOSTO JÄI: "Norsu kantaa obeliskia" pysyy sivulla, koska se on
+       * kaupungin KULTTUURIVISAN lähdejuttu (js/packs/europe-kulttuuri.js),
+       * ja tests/lehdet.test.mjs vaatii vastauksen kansisivulta. Sama
+       * teksti on nyt myös kartalla nostona `minervan-norsu`;
+       * kaksoiskappale purkautuu sinä päivänä, kun kansisivu jää pois ja
+       * visa siirtyy ison pop-upin loppuun (suunnitelman luku 4.7,
+       * js/lehti.js — ei tämän erän tiedosto).
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-rooma.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
         {
           otsikko: 'Kolikko olan yli',
@@ -12654,35 +12516,6 @@ export const KULTTUURI_KATEGORIAT = {
           wiki: 'Trevin suihkulähde',
           aani: 'https://archive.org/download/aporee_15080_17587/WalkingtoPantheonFountainRome.mp3',
           aaniLahde: '"Walking to Pantheon Fountain, Rome" — Rolf Yngve, radio aporee (public domain)',
-        },
-        {
-          otsikko: 'Leijona nousi lattian alta',
-          tiedosto: 'Hypogeum 1 (15005526662).jpg',
-          teksti: 'Colosseumin areena oli puulattia, jonka päälle levitettiin '
-            + 'hiekkaa — latinan hiekkaa tarkoittavasta sanasta harena tulee '
-            + 'sana areena. Lattian alla oli kaksikerroksinen kellari: '
-            + 'käytäviä, häkkejä ja kahdeksankymmentä pystykuilua. Vinssi '
-            + 'nosti häkin kuilua pitkin lattian tasalle, luukku aukesi, ja '
-            + 'eläin ilmestyi keskelle areenaa kuin tyhjästä. Katsomon yllä '
-            + 'oli kangaskatto auringolta, ja sitä kelasivat auki '
-            + 'sotalaivaston merimiehet.',
-          lyhyt: 'Colosseumin puulattian alla oli kaksikerroksinen kellari hypogeum käytävineen.',
-          selite: 'Colosseumin areenan puulattian alla oli kaksikerroksinen '
-            + 'kellari eli hypogeum, jossa oli käytäviä, häkkejä ja '
-            + 'kahdeksankymmentä pystykuilua.',
-          lahde: 'daryl_mitchell from Saskatoon, Saskatchewan, Canada, Wikimedia Commons (CC BY-SA 2.0)',
-          wiki: 'Colosseum',
-          galleria: [
-            {
-              otsikko: 'Areena kauempaa',
-              tiedosto: 'Colosseum (8473462785).jpg',
-              lyhyt: 'Osa areenan lattiaa on rakennettu takaisin; alkuperäinen puulattia peitti koko hypogeumin.',
-              selite: 'Osa areenan lattiaa on rakennettu takaisin '
-                + 'paikalleen; alkuperäinen puulattia peitti koko '
-                + 'hypogeumin.',
-              lahde: 'Edgar Jiménez from Porto, Portugal, Wikimedia Commons (CC BY-SA 2.0)',
-            },
-          ],
         },
         {
           otsikko: 'Norsu kantaa obeliskia',
@@ -12824,51 +12657,29 @@ export const KULTTUURI_KATEGORIAT = {
         fakta: 'Putken päällä on pieni reikä, ja kun suun tukkii sormella, vesi '
           + 'kaartaa siitä ylöspäin janoisen suuhun.',
       },
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * Tämän sivun 2 nostoa ovat nyt kaupunkilehden kohdekartalla
+       * klikattavina karttapaloina: "Vesi kulkee yhä" → `aqua-virgo`, "Iso
+       * nenä joka kulmassa" → `rooman-nasone`. Teksti siirtyi SANATARKASTI
+       * — kappaletta ei kirjoitettu uudestaan eikä yhtään faktaa jäänyt
+       * pois (js/packs/fokusvirta-rooma.js takynostot; pisteet
+       * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
+       *
+       * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
+       * ovat nyt kohdekartan jutun `kuvat`-listassa
+       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
+       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
+       * yhtään kuvaa ei pudonnut pelistä.
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-rooma.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
-        {
-          otsikko: 'Vesi kulkee yhä',
-          tiedosto: 'Aqueducts in Rome.jpg',
-          teksti: 'Roomaan rakennettiin yksitoista akveduktia, jotka toivat '
-            + 'vuorilta vettä lähes sadan kilometrin päästä. Ne toimivat '
-            + 'pelkällä painovoimalla: kaltevuus oli paikoin vain '
-            + 'kolmekymmentä senttiä kilometriä kohti. Yksi niistä, Aqua '
-            + 'Virgo, valmistui vuonna 19 eaa. ja kulkee melkein koko '
-            + 'matkansa maan alla — kahdellakymmenellä kilometrillä vesi '
-            + 'laskee vain neljä metriä. Se syöttää yhä Trevin lähdettä. Nimi '
-            + 'tarkoittaa neitoa: tarun mukaan nuori tyttö näytti janoisille '
-            + 'sotilaille lähteen, josta vesi otettiin.',
-          lyhyt: 'Roomaan rakennettiin yksitoista akveduktia, joissa vesi virtasi kourua pitkin painovoimalla.',
-          selite: 'Roomaan rakennettiin yksitoista akveduktia, ja vesi '
-            + 'virtasi kaarien päällä kulkevassa kourussa pelkän painovoiman '
-            + 'voimalla.',
-          lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Rooman akveduktit',
-        },
-        {
-          otsikko: 'Iso nenä joka kulmassa',
-          tiedosto: 'Nasone in Trastevere, Rome.jpg',
-          teksti: 'Rooman kaduilla seisoo valurautaisia pylväitä, joiden '
-            + 'koukkuputkesta juoksee vettä yötä päivää. Ensimmäiset '
-            + 'pystytettiin 1870-luvulla, ja roomalaiset ristivät ne '
-            + 'nasoneiksi eli isoiksi neniksi. Niitä on kaupungissa yhä noin '
-            + '2 500, ja vesi on samaa kuin kotihanoissa. Putken päällä on '
-            + 'pieni reikä: kun putken suun tukkii sormella, vesi suihkuaa '
-            + 'reiästä ylöspäin ja janoinen juo kumartumatta. Vanhimpia yhä '
-            + 'toimivia seisoo Pantheonin vieressä Piazza della Rotondalla.',
-          lyhyt: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden vesi on samaa kuin kotihanoissa.',
-          selite: 'Ensimmäiset nasonet pystytettiin 1870-luvulla, ja niiden '
-            + 'vesi on samaa kuin roomalaisten kotihanoissa.',
-          lahde: 'Sotamies, Wikimedia Commons (CC BY-SA 4.0)',
-          galleria: [
-            {
-              otsikko: 'Vanha nasone Pantheonin vieressä',
-              tiedosto: 'Pigna-S Eustachio-Colonna - Nasone alla Rotonda.JPG',
-              selite: 'Vanhimpia yhä toimivia nasoneja seisoo Pantheonin '
-                + 'vieressä Piazza della Rotondalla.',
-              lahde: 'Lalupa, Wikimedia Commons (CC BY-SA 3.0)',
-            },
-          ],
-        },
       ],
     },
     /*
@@ -12885,64 +12696,79 @@ export const KULTTUURI_KATEGORIAT = {
       johdanto: 'Paavi jäi Vatikaaniin vangiksi kolme vuotta ennen isoisän '
         + 'käyntiä, Aventinuksella katsotaan avaimenreiästä kolmen valtion '
         + 'läpi, ja Caesarin murhapaikalla asuu kissalauma.',
+      /*
+       * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
+       * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
+       *
+       * PUDOTETTU SIVUVERSIONA: "Vatikaanin vanki" — kohdekartan piste
+       * "Vatikaanin palatsi" (syvennys-rooma-vatikaani, 929 mrk) kertoo
+       * saman laajempana. Sivuversion väitteet väite väitteeltä: 1) "Rooman
+       * valtaus kesti yhden aamupäivän." — syvennyksessä sanatarkasti; 2)
+       * "Italian tykistö aloitti tulen kello viideltä 20. syyskuuta 1870,
+       * ja muutaman tunnin päästä Aurelianuksen muuriin oli ammuttu aukko
+       * Porta Pian viereen." — syvennyksessä sanatarkasti, ja syvennys
+       * jatkaa vielä joukkojen virtaamisella kaupunkiin ja valkoisella
+       * lipulla; 3) "Paaville tarjottiin omaa pikkuvaltiota Vatikaanin
+       * kukkulalla, ja Pius IX kieltäytyi." — sanatarkasti; 4) vuoden 1871
+       * takuulaki, kuninkaan arvoiset kunnianosoitukset, oikeus
+       * lähettiläisiin ja perustelu "lain voisi kumota sama valta, joka sen
+       * antoi" — sanatarkasti; 5) "Niinpä hän jäi Vatikaanin palatsiin eikä
+       * poistunut sieltä — ei hän eikä yksikään hänen seuraajistaan ennen
+       * vuotta 1929." — sanatarkasti. Koneellinen tarkistus 13.9.2026:
+       * sivuversion yli 3 merkin sisältösanoista NOLLA puuttuu
+       * syvennyksestä. Syvennyksessä on lisäksi kaksi asiaa, joita
+       * sivuversiossa ei ole (parvekkeelta kieltäytyminen ja isoisän
+       * matkavuoden ajoitus). Pudotus on siis lyhennelmän pudotus, ei
+       * asiatiedon.
+       *
+       * PUDOTETTU SIVUVERSIONA: "Avaimenreikä, josta näkee kolmen valtion
+       * läpi" — syvennys "Aventinuksen avaimenreikä"
+       * (syvennys-rooma-avaimenreika, 643 mrk) — HUOM: se on PÄÄKARTALLA
+       * eikä Rooman kohdekartalla, koska Aventinus (41,8836) jää
+       * kohdekartan eteläreunan (41,8845) alapuolelle; syvennyspaikassa on
+       * kattoVapaa: true kertoo saman laajempana. Sivuversion väitteet
+       * väite väitteeltä: 1) "Aventinuksen kukkulalla on pieni aukio, jonka
+       * toisella laidalla on Maltan ritarikunnan villa." — syvennyksessä
+       * sanatarkasti; 2) portin keskellä on avaimenreikä ja siitä näkee
+       * kolmen valtion läpi kerralla — syvennyksessä (vain sanajärjestys
+       * eroaa: "ja kun siitä katsoo, näkee"); 3) reiän takana ritarikunnan
+       * puutarha, jolla on Italiassa eksterritoriaalinen asema —
+       * sanatarkasti; 4) sypressien rajaama käytävä — sanatarkasti; 5)
+       * käytävän päässä täydellisesti rajautuneena Pietarinkirkon kupoli
+       * Vatikaanissa — sanatarkasti; 6) portin suunnitteli vuonna 1765
+       * Giovanni Battista Piranesi, kuparipiirrostaiteilija, joka piti
+       * itseään ennen kaikkea arkkitehtina — sanatarkasti; 7) puutarha sai
+       * eksterritoriaalisen asemansa 1869 — sanatarkasti, ja syvennys
+       * jatkaa "— neljä vuotta ennen kuin isoisäsi seisoi portin edessä".
+       * Koneellinen tarkistus 13.9.2026: NOLLA sisältösanaa puuttuu
+       * syvennyksestä.
+       *
+       * PUDOTETTU SIVUVERSIONA: "Kissalauma asuu temppelissä" — kohdekartan
+       * piste "Torre Argentina" (syvennys-rooma-kissat, 733 mrk; samalla
+       * pisteellä on myös takynosto "kissat") kertoo saman laajempana.
+       * Sivuversion väitteet väite väitteeltä: 1) korttelia purettiin
+       * vuonna 1927 ja maasta tuli esiin jättiläispatsaan pää ja käsivarret
+       * — syvennyksessä, joka kertoo lisäksi purkamisen syyn (Italian
+       * yhdistyminen); 2) alta löytyi neljä tasavallan ajan temppeliä ja
+       * pala Pompeiuksen teatteria — sanatarkasti; 3) paikka, jossa Julius
+       * Caesarin uskotaan tulleen murhatuksi — sanatarkasti; 4)
+       * kaivauskuoppaan kerääntyi kulkukissoja, jotka asuvat siellä yhä —
+       * sanatarkasti; 5) temppeli D:n kohdalla toimii kissasuoja, jota on
+       * 1950-luvulta pidetty yllä näyttelijältä toiselle kulkeneella
+       * avaimella — syvennyksessä, joka nimeää lisäksi Anna Magnanin; 6)
+       * vuonna 2012 arkeologiviranomaiset vaativat häätöä, vetoomukseen
+       * kerättiin yli 30 000 nimeä ja kissat jäivät — sanatarkasti, ja
+       * syvennys kertoo lisäksi häädön perustelun. Koneellinen tarkistus
+       * 13.9.2026: NOLLA sisältösanaa puuttuu syvennyksestä. Lisäksi poolin
+       * oma takynosto "kissat" kertoo saman aiheen vielä laajemmin
+       * (temppeli D:n vihkiminen 179 eaa., laki 281/1991).
+       *
+       * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
+       * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
+       * js/packs/fokusvirta-rooma.js), joten osaston poisto siirtäisi
+       * tehtävät hiljaa väärille sivuille.
+       */
       nostot: [
-        {
-          otsikko: 'Vatikaanin vanki',
-          tiedosto: 'Pius IX, by Adolphe Braun, 1875.jpg',
-          teksti: 'Rooman valtaus kesti yhden aamupäivän. Italian tykistö '
-            + 'aloitti tulen kello viideltä 20. syyskuuta 1870, ja '
-            + 'muutaman tunnin päästä Aurelianuksen muuriin oli ammuttu '
-            + 'aukko Porta Pian viereen. Paaville tarjottiin omaa '
-            + 'pikkuvaltiota Vatikaanin kukkulalla, ja Pius IX kieltäytyi. '
-            + 'Vuoden 1871 takuulaki olisi antanut hänelle kuninkaan '
-            + 'arvoiset kunnianosoitukset ja oikeuden lähettää lähettiläitä, '
-            + 'mutta hän ei hyväksynyt sitäkään: lain voisi kumota sama '
-            + 'valta, joka sen antoi. Niinpä hän jäi Vatikaanin palatsiin '
-            + 'eikä poistunut sieltä — ei hän eikä yksikään hänen '
-            + 'seuraajistaan ennen vuotta 1929.',
-          selite: 'Pius IX vuonna 1875; hän oli tuolloin ollut viisi vuotta '
-            + 'poistumatta Vatikaanista.',
-          lahde: 'Adolphe Braun 1875, Wikimedia Commons (public domain)',
-        },
-        {
-          otsikko: 'Avaimenreikä, josta näkee kolmen valtion läpi',
-          tiedosto: 'Knights of Malta Keyhole, Aventine Hill, Rome (cropped).jpg',
-          teksti: 'Aventinuksen kukkulalla on pieni aukio, jonka toisella '
-            + 'laidalla on Maltan ritarikunnan villa. Sen portin keskellä on '
-            + 'avaimenreikä, ja siitä katsoo kolmen valtion läpi kerralla: '
-            + 'heti reiän takana on ritarikunnan puutarha, jolla on '
-            + 'Italiassa eksterritoriaalinen asema, puutarhan läpi kulkee '
-            + 'sypressien rajaama käytävä, ja käytävän päässä on '
-            + 'täydellisesti rajautuneena Pietarinkirkon kupoli '
-            + 'Vatikaanissa. Portin suunnitteli vuonna 1765 Giovanni '
-            + 'Battista Piranesi, kuparipiirrostaiteilija, joka piti itseään '
-            + 'ennen kaikkea arkkitehtina. Puutarha sai '
-            + 'eksterritoriaalisen asemansa 1869.',
-          lyhyt: 'Maltan ritarikunnan portin avaimenreiästä avautuu näkymä sypressikäytävään ja kupoliin.',
-          selite: 'Maltan ritarikunnan portin avaimenreiästä avautuu '
-            + 'sypressikäytävä ja sen päässä Pietarinkirkon kupoli.',
-          lahde: 'Galen Crout, Wikimedia Commons (CC0)',
-        },
-        {
-          otsikko: 'Kissalauma asuu temppelissä',
-          tiedosto: 'Cat Sanctuary, Cats, Largo di Torre Argentina, Rome - 398 (19257774921).jpg',
-          teksti: 'Kun Roomaa rakennettiin uusiksi ja korttelia purettiin '
-            + 'vuonna 1927, maasta tuli esiin jättiläispatsaan pää ja '
-            + 'käsivarret. Alta löytyi neljä tasavallan ajan temppeliä ja '
-            + 'pala Pompeiuksen teatteria — ja se paikka, jossa Julius '
-            + 'Caesarin uskotaan tulleen murhatuksi. Kaivauskuoppaan alkoi '
-            + 'kerääntyä kulkukissoja, ja ne asuvat siellä yhä: temppeli '
-            + 'D:n kohdalla toimii kissasuoja, jota on 1950-luvulta lähtien '
-            + 'pidetty yllä avaimella, joka on kulkenut näyttelijältä '
-            + 'toiselle. Vuonna 2012 arkeologiviranomaiset vaativat suojan '
-            + 'häätöä; vetoomukseen kerättiin yli 30 000 nimeä, ja kissat '
-            + 'jäivät.',
-          lyhyt: 'Largo di Torre Argentinan kuopassa on neljä tasavallan ajan temppeliä ja kissasuoja.',
-          selite: 'Largo di Torre Argentinan kuopan pohjalla on neljä '
-            + 'tasavallan ajan temppeliä, ja niiden raunioissa asuu '
-            + 'kissasuoja.',
-          lahde: 'Andy Rusch, Wikimedia Commons (CC BY 2.0)',
-        },
       ],
       tehtava: {
         kysymys: 'Miten Largo di Torre Argentinan kissasuojan hoito siirtyi '
