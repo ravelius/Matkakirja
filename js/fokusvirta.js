@@ -112,9 +112,6 @@ import { MATKAKIRJAN_LYHENNYS_LAUSEITA, lyhennaLauseita } from './lausejako.js';
  * täällä, ja ruudulle jäänyt traileri peittäisi uuden kaupungin.
  */
 import { piilotaSaapumistraileri, soitaKameranKlik } from './saapumistraileri.js';
-// Kartan oma "Etsi aarre" -nappi: nousee kommentin jälkeen, lähtee
-// kaupungista lähdettäessä (js/etsi-aarre-nappi.js).
-import { naytaEtsiAarreNappi, piilotaEtsiAarreNappi } from './etsi-aarre-nappi.js';
 /*
  * Luentakuvan paikka ja ankkuri ovat puhtaita funktioita omassa
  * moduulissaan (js/saapumisasento.js): sama kaava palvelee kameran
@@ -911,12 +908,6 @@ export function vaiennaLivianKaupunkipuhe(ui) {
   piilotaLuentakuva(ui);
   // Kesken jäänyt minitraileri ei saa jäädä uuden kaupungin päälle.
   piilotaSaapumistraileri(ui, { peru: true });
-  /*
-   * ETSI AARRE -NAPPI LÄHTEE SAMASSA (omistaja 9.9.2026): nappi kuuluu
-   * sen kaupungin kommenttiin, jonka jälkeen se nousi, eikä se saa jäädä
-   * kartalle osoittamaan kaupunkia, josta on jo lähdetty.
-   */
-  piilotaEtsiAarreNappi(ui);
 }
 
 /** Kaupungin uuden kulun kentät yhtenä oliona (tyhjät listat, jos ei ole). */
@@ -1216,15 +1207,12 @@ export function fokusvirtaSaapumiskupla(ui, city) {
         ...livianPuherytmi(city.id, kentta),
       });
       /*
-       * ETSI AARRE -NAPPI KARTALLE (omistaja 9.9.2026, sanatarkasti:
-       * *"kun pulun kommentti on tullut, kartalle saisi tulla kaupungin
-       * laatan viereen nappi: Etsi aarre, mikä avaisi kaupunkilehden."*).
-       * Tämä on se yksi kohta, jossa kommentti oikeasti nousee ruudulle
-       * — kutsuhetki ei kelpaa, koska ketju odottaa luentaa ja
-       * paljastussarjaa. Nappi tekee saman kuin kortin "Etsi kätkö"
-       * (js/etsi-aarre-nappi.js), ja kaupunki ilman kätköä ei saa sitä.
+       * ETSI AARRE -NAPPI ON POISTETTU (karttauudistus erä 9, omistaja
+       * 13.9.2026: *"Ota Etsi aarre nappi pois."*). Aarteeseen mennään
+       * nyt kartan VIHREÄSTÄ PISTEESTÄ (erä 7, js/fokuspiste.js), joka
+       * on kartalla alusta asti — tähän kohtaan ei siis tule napin
+       * tilalle mitään.
        */
-      naytaEtsiAarreNappi(ui, city);
       /*
        * PULU-CAM-PAKKA ISOISÄN KUVAN PÄÄLLE (omistaja 9.9.2026,
        * Raamattu PULU-CAM: PULUN NYKYAJAN KUVAT PAKKANA ISOISAN KUVAN

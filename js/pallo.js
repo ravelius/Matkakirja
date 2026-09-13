@@ -2537,6 +2537,39 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
    * kynnyksen. Uusi kosketus pysäyttää liu'un heti. Reduced motion:
    * ei liukua.
    */
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * PANOROINNIN RAJA (KARTTAUUDISTUS, ERÄ 9)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * Omistaja 13.9.2026: *"Ja rajaa liikkuminen pienemmälle alalla."*
+   * Sääntö itse asuu laudalla (js/pallolauta/lauta.js PANOROINNIN RAJA
+   * ja js/pallolauta/kamera.js panoraja): se tuntee maan laatikon,
+   * linssin, matkan ja kehittäjän maailmanapin. TÄMÄ TIEDOSTO VAIN
+   * NOUDATTAA sitä — sama työnjako kuin `ui.pallonVauhti`lla.
+   *
+   * KOLME KIRJOITUSKOHTAA, YKSI SUODATIN. Kamera saa uuden lat/lng:n
+   * vedosta (pointermove), irrotuksen jälkeisestä liu'usta (`liu`) ja
+   * rullapanoroinnista (`siirraPalloa`). Kaikki kolme kulkevat tämän
+   * läpi; ilman yhtäkin niistä raja vuotaisi juuri siinä eleessä.
+   *
+   * PEHMEÄ PYSÄYTYS, EI TÄRÄHDYSTÄ. Raja ei kimmota kameraa takaisin
+   * eikä nykäise: se pysäyttää liikkeen seinään. Kun raja puree,
+   * SEN SUUNNAN vauhti nollataan — muuten liuku jatkaisi seinää vasten
+   * painamista sekunnin ajan ja sormen irrotus tuntuisi jumilta.
+   * Toinen suunta jää vapaaksi, joten reunaa pitkin voi liukua.
+   *
+   * ILMAN KAHVAA EI RAJAA (etusivun pallo, katselutila, purettu lauta):
+   * turvallinen tila on entinen vapaa panorointi.
+   */
+  const rajaaKohta = (lat, lng) => {
+    const raja = ui.pallonPanorajaus;
+    if (typeof raja !== 'function') return { lat, lng, latRajattu: false, lngRajattu: false };
+    const r = raja(lat, lng);
+    return Number.isFinite(r?.lat) && Number.isFinite(r?.lng)
+      ? r : { lat, lng, latRajattu: false, lngRajattu: false };
+  };
+
   const VAUHTI_KITKA = 0.0028; // 1/ms: nopeus puolittuu n. 250 ms:ssa
   const VAUHTI_KYNNYS = 0.0006; // astetta/ms
   const vauhti = { lat: 0, lng: 0, aika: 0, raf: 0 };
@@ -2546,11 +2579,14 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     const nyt = performance.now();
     const dt = Math.min(50, nyt - edellinen);
     const pov = pallo.pointOfView();
-    pallo.pointOfView({
-      lat: Math.max(-89.5, Math.min(89.5, pov.lat + vauhti.lat * dt)),
-      lng: pov.lng + vauhti.lng * dt,
-      altitude: pov.altitude,
-    }, 0);
+    const kohta = rajaaKohta(
+      Math.max(-89.5, Math.min(89.5, pov.lat + vauhti.lat * dt)),
+      pov.lng + vauhti.lng * dt,
+    );
+    pallo.pointOfView({ lat: kohta.lat, lng: kohta.lng, altitude: pov.altitude }, 0);
+    // Seinään osunut suunta pysähtyy tähän (ks. PEHMEÄ PYSÄYTYS).
+    if (kohta.latRajattu) vauhti.lat = 0;
+    if (kohta.lngRajattu) vauhti.lng = 0;
     const vaimennus = Math.exp(-VAUHTI_KITKA * dt);
     vauhti.lat *= vaimennus; vauhti.lng *= vaimennus;
     if (Math.hypot(vauhti.lat, vauhti.lng) > VAUHTI_KYNNYS) vauhti.raf = requestAnimationFrame(() => liu(nyt));
@@ -2567,11 +2603,11 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     const siirto = vedonSiirto(pov, tartunta, nyt, { fov: kamera.fov });
     if (!siirto) return;
     const { dLat, dLng } = siirto;
-    pallo.pointOfView({
-      lat: Math.max(-89.5, Math.min(89.5, pov.lat - dLat)),
-      lng: pov.lng - dLng,
-      altitude: pov.altitude,
-    }, 0);
+    const kohta = rajaaKohta(
+      Math.max(-89.5, Math.min(89.5, pov.lat - dLat)),
+      pov.lng - dLng,
+    );
+    pallo.pointOfView({ lat: kohta.lat, lng: kohta.lng, altitude: pov.altitude }, 0);
     // Nopeus: liukuva keskiarvo, jotta yksittäinen nykäys ei määrää liukua.
     const aika = performance.now();
     const dt = Math.max(1, aika - (vauhti.aika || aika));
@@ -2584,6 +2620,13 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
       vauhti.lat = rajattu.lat;
       vauhti.lng = rajattu.lng;
     }
+    /*
+     * SEINÄÄ VASTEN VEDETTY SORMI EI HEITÄ. Vauhti mitataan sormen
+     * liikkeestä, ei kameran; ilman tätä irrotus lähettäisi liu'un
+     * suoraan rajaa vasten, ja se näyttäisi nykäykseltä.
+     */
+    if (kohta.latRajattu) vauhti.lat = 0;
+    if (kohta.lngRajattu) vauhti.lng = 0;
     vauhti.aika = aika;
   });
   /*
@@ -2620,11 +2663,12 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
   const pysaytaRulla = () => { if (rulla.raf) cancelAnimationFrame(rulla.raf); rulla.raf = 0; };
   const siirraPalloa = (dLat, dLng) => {
     const pov = pallo.pointOfView();
-    pallo.pointOfView({
-      lat: Math.max(-PANOROINNIN_LEVEYSRAJA, Math.min(PANOROINNIN_LEVEYSRAJA, pov.lat + dLat)),
-      lng: pov.lng + dLng,
-      altitude: pov.altitude,
-    }, 0);
+    const kohta = rajaaKohta(
+      Math.max(-PANOROINNIN_LEVEYSRAJA, Math.min(PANOROINNIN_LEVEYSRAJA, pov.lat + dLat)),
+      pov.lng + dLng,
+    );
+    pallo.pointOfView({ lat: kohta.lat, lng: kohta.lng, altitude: pov.altitude }, 0);
+    return kohta;
   };
   const rullanLiuku = (nyt) => {
     const dt = Math.max(1, Math.min(50, nyt - rulla.edellinen));
@@ -2633,7 +2677,11 @@ export function asennaPallonEleet(pallo, kotelo, ui) {
     const dLat = rulla.lat * osa;
     const dLng = rulla.lng * osa;
     rulla.lat -= dLat; rulla.lng -= dLng; rulla.aikaa -= dt;
-    siirraPalloa(dLat, dLng);
+    const kohta = siirraPalloa(dLat, dLng);
+    // Sama pehmeä pysäytys kuin sormen liu'ulla: seinään osunut suunta
+    // ei jää painamaan rajaa vasten loppuliu'un ajaksi.
+    if (kohta.latRajattu) rulla.lat = 0;
+    if (kohta.lngRajattu) rulla.lng = 0;
     rulla.raf = rulla.aikaa > 0 && (rulla.lat || rulla.lng) ? requestAnimationFrame(rullanLiuku) : 0;
   };
   kotelo.addEventListener('wheel', (e) => {

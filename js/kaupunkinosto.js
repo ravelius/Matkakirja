@@ -25,10 +25,10 @@
  * lue, se on vika tässä tiedostossa.
  *
  * VANHA OVI JÄÄ RINNALLE (tehtävänanto: *"ei poisteta kaupunkilehteä"*).
- * Kaupunkilehti avataan yhä `ui.avaaTutkinta`lla — kartan "Etsi aarre"
- * -napista (js/etsi-aarre-nappi.js), fokusvirrasta (js/fokusvirta.js) ja
- * nipun kuoresta (js/fokusniput.js) — ja pop-upin alarivissä on sen oma
- * ovi. Vasta omistajan nähtyä uuden kulun päätetään, kumpi jää.
+ * Kaupunkilehti avataan yhä `ui.avaaTutkinta`lla — fokusvirrasta
+ * (js/fokusvirta.js) ja nipun kuoresta (js/fokusniput.js) — ja pop-upin
+ * alarivissä on sen oma ovi. (Kartan "Etsi aarre" -nappi oli kolmas ovi
+ * erään 9 asti; omistaja poisti sen 13.9.2026.) Vasta omistajan nähtyä uuden kulun päätetään, kumpi jää.
  *
  * MERKIT OVAT KARTTAAN KIINNITETTYJÄ (PAATOKSET 2, kohta 2: *"maan
  * tiedot, lisää-valikko, nostot ja muut elementit KIINNITETÄÄN KARTTAAN

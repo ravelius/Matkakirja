@@ -3194,15 +3194,10 @@ body.aikajana-paalla .pallolauta-nappula { display: none; }
  * ankkuria (.fokusvirta-luentakuva-ankkuri), joten se piiloutuu tästä
  * samalla säännöllä.
  *
- * ETSI AARRE -NAPPI SAMALLA: se on kartan laatan vieressä oma ankkurinsa
- * (js/etsi-aarre-nappi.js) eikä kuulu tummennetulle linssiruudulle sen
- * paremmin kuin kohdemerkit (css/styles.css "KARTTA ON LINSSIN AJAN
- * TYHJÄ TAULU").
  */
 body.aikajana-paalla .fokusvirta-luentakuva,
 body.aikajana-paalla .fokusvirta-luentakuva-ankkuri,
-body.aikajana-paalla .fokuszoom,
-body.aikajana-paalla .etsi-aarre-ankkuri { display: none; }
+body.aikajana-paalla .fokuszoom { display: none; }
 
 /* ===========================================================================
    YKSI PALKKI LINSSIN AJAKSI — molemmat kaaret
