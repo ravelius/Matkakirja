@@ -1,5 +1,19 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 02:37 UTC — pullakohtaus toimii, kaksi tavallisen pelipolun elinkaarikorjausta RC:lle
+
+v1824:n keskiosuma-PASS pysyy suljettuna. #2336 exacthead0d7df9ae on yhä valmis julkaistavaksi; root ei muuta sitä tai julkaise.
+
+Root eteni vain omassa Chrome QA -pelissä tavallisesti: Ateena-lehti → tsoureki25 → vihjepiste → Dafni oikein → Jatka → Matkusta/Lentäen/Rooma300. Matkusta ilmestyi aarteen avaamisen jälkeen oikein, joten aiempi piilotus ei ollut bugi. Rooma nyt £100, päivä1/ilta; käyttäjän Safari/Pietari koskematta.
+
+Rooman pullan normaali maksu ja erityinen animaatio nähtiin: ilohypähdys, siipien eleet, erillinen bun-feast-syöntiasento ja paluu seisomaan. Ei tuplaveloitusta. Äänien hihkaisujen kuunteluhyväksyntää ei väitetä.
+
+**Kaksi konkreettista vikaa annettu Pulun animointi -RC:lle yhteen ERILLISEEN rajattuun PR:ään, ei #2336:n muutoksia:**
+1. Pullaoston jälkeen vihjepiste ei ilmesty pallolle ennen pannua. Toistui Ateenassa ja Roomassa. Piilotettu taso-SVG päivittyy heti; Ateenassa normaali pannu toi pallomerkin ja sen napautus avasi Dafnin. Sol exact6fbd-diagnoosi + rootlähdetarkistus: fokustehtavat.js oston jalkeen → ui.paivitaFokuspiste wrapper päivittää vain taso-SVG:n; pallon nostokerroksen lepoladonta puuttuu. Korjaus yhteiseen refresh-rajapintaan myös oikean lehtivastauksen polulle, lehti säilyttäen ja guardit pitäen.
+2. Ateenan lopun erillinen Livia vinkkaa -note (Tiesin paikan koko ajan...) jäi Rooman Horation kuvan päälle ja uuden Rooma-kuplapinon rinnalle. Normaali lentolähtö vaiennaPaikanPuhe siivoaa äänen ja pollo-kuplapinon, mutta ei ui.fokusvirtaKortti-notea/kuuntelijoita; suljeFokusvirta puuttuu lähtösiivouksesta. Ei tarkoitettu chat-historia.
+
+Nykyiset84kohdetestiä PASS, mutta rajatestit puuttuvat. RC tekee vain nämä nimetyt korjaukset/regressiot ja toimittaa exactPR/HEAD/tree/diffSHA:n rootQA:han. Ei uusia ääniä, kuvia, tekstejä, kaanonia, maksullisia ajoja tai muuta tyylikierrosta. Fable omistaa integraation, version ja julkaisun kuten ennenkin. Rootin tarkka raportti output/horatio-livia-root-qa-20260913/live-v1824-bun-normal-route-qa.md.
+
 ## 13.9.2026 02:04 UTC — v1824 keskiosuman LIVE-PASS, #2336 edelleen seuraava julkaisu
 
 **v1824 on nyt riippumattomasti varmennettu myös originista ja oikeassa pelitilassa.** 01:59:07UTC 5kanonista+5cachebustURLia HTTP200/SHA256 exact release `6fbdc393d082c335485f04b94855dea6b0c1b9df`. Ensimmäinen normaali levitysviive poistui. Chrome-reload näytti v1824-päivityksen ja valikon version.
