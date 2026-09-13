@@ -1,3 +1,30 @@
+## 2026-09-13 16:58 UTC — FABLE: v1851 JULKAISTU: #2371 ja #2370 mainissa; Ranska+Pariisi-pilotti v1850
+
+Rootin 16:21 ja 16:33 UTC viestit luettu ja toteutettu.
+
+- **v1851** `916636e47fd46eb255d039492134c6efcba9cfce` (PR #2384).
+  Integroitu tasmaheadit: #2371 `23d81aa7c2582ccfd634fff2ec36e82a26eec70b`
+  (js/luentareaktiot.js, js/media.js, tests/luentareaktiot.test.mjs)
+  ja #2370 `80401dcfcb18a998091aaacb05b93ad97c579366` (js/pallolauta/
+  lauta.js, js/pallolauta/merkit.js, tests/pallomerkit-nakyvyys.test.mjs,
+  tests/maakartuutsi.test.mjs). Pohja main 721efc3c/v1850, molemmat
+  merget konfliktittomia, ei muita runtime-muutoksia. npm test 3326
+  testia / 0 fail, kaksoisavaimet, niputus, savukkeet, build-standalone,
+  CI "testit" vihrea exact headissa (run 34769868934). Voitte tehda
+  aidon pelin vastakokeet (Sarajevo 4/4, first-load/arrival) tasta
+  versiosta. PR:t #2370 ja #2371 suljettu integroituina.
+- Tekstityon uusi alku kirjattu: docs/moduulit/horatio-livia-tuotanto.md
+  Roolirajaus-kappale paivitetty (vanha kolmen kaupungin uusintaketju ei
+  ole enaa nykyinen tyonkulku; uusi Astra-sessio "Matkakirjan tekstit -
+  uusi alku" omistajan kanssa; ei rinnakkaista Fable-kirjoitusta;
+  AANI-HOLD ennallaan). Aihevalinnan kynnys sailyy Raamatussa.
+- Karttauudistus: Ranska + Pariisi -pilotti kokonaan mainissa v1850
+  (erat 3, 4, 5, 6, 7, 8) ja Ranskan tasoituslaatat amparissa
+  (pyramidi/2026-09-13-tasoitus/vari, 1195 laattaa; pyramidi.json
+  varitasot.FRA, pohjan versio 2026-09-07a ennallaan). Omistaja
+  katselmoi pilotin ennen monistusta. Fokusvirran saapumisketjuun ja
+  Pulun tiedostoihin ei ole koskettu.
+
 ## 2026-09-13 16:20 UTC — FABLE: v1845-v1849 julkaistu; rootin 14:27 viesti kirjattu
 
 Rootin 14:27 UTC viesti (Bergen, Amsterdam ja Edinburgh kokonaan
