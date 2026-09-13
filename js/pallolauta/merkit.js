@@ -68,10 +68,10 @@ export const KOHDEMERKIN_NIMI_RAKO_PX = 8;
 export const KOHDEMERKIN_HUOMIO_PX = 54;
 
 /**
- * Nukkuvan Globe.gl-silmukan HTML-merkit tarvitsevat yhden uuden
- * datalukeman heräämisen jälkeen, jotta kirjasto ajaa etu/taka-
- * näkyvyysmuuntimen myös ilman OrbitControlsin change-tapahtumaa.
- * Ajoitetaan kirjoitus seuraavan piirtoframen alkuun; kameraan ei kosketa.
+ * Nukkuvan Globe.gl-silmukan HTML-merkkien etu/taka-tila tahdistetaan
+ * heräämisen jälkeen suoraan valmiista renderkamerasta. Ajoitetaan laskenta
+ * seuraavan piirtoframen alkuun; kameraan tai htmlElementsDataan ei kosketa,
+ * jotta emme jonota uutta, myöhemmin valmistuvaa visibility-tweeniä.
  */
 export function luoMerkkienNakyvyysTahdistus({
   paivita,
@@ -266,7 +266,18 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
   const data = new Map(); // avain → pysyvä datum
   const osat = new Map(); // osan nimi → datumit
   const poistuvat = new Map(); // avain → ajastin
+  const elementinDatum = new WeakMap();
   let kohteet = [];
+
+  /**
+   * Globe.gl:n `nakyy` voi perustua pointOfView-kutsua edeltäneeseen
+   * renderkameraan. Kun datum tunnetaan, sovelluksen laskenta voittaa
+   * sekä ensi-digestissä että myöhemmissä siirtymätweenien päivityksissä.
+   */
+  const asetaNakyvyys = (el, kirjastonNakyy, d = elementinDatum.get(el)) => {
+    const nakyy = d && typeof nakyvissa === 'function' ? nakyvissa(d) : kirjastonNakyy;
+    el.classList.toggle('pallolauta-takana', !nakyy);
+  };
 
   /** Elementti datumin lajin mukaan; osat antavat oman tehtaansa. */
   const elementti = (d) => {
@@ -276,6 +287,7 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
     else el = d.elementti(d);
     el.classList.add('pallolauta-merkki');
     d.el = el;
+    elementinDatum.set(el, d);
     d.asettele?.(el, d);
     return el;
   };
@@ -287,9 +299,7 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
     .htmlElement(elementti)
     .htmlTransitionDuration(siirtyma);
   // Merkit pallon takana piiloon (CSS2D ei itse leikkaa horisonttiin).
-  pallo.htmlElementVisibilityModifier?.((el, nakyy) => {
-    el.classList.toggle('pallolauta-takana', !nakyy);
-  });
+  pallo.htmlElementVisibilityModifier?.(asetaNakyvyys);
 
   /** Koko lista kirjastolle: osat järjestyksessä + poistuvat. */
   const tyonna = () => {
@@ -306,12 +316,11 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
    * elementtejä; tahdistaja yrittää silloin kerran seuraavalla framella.
    */
   const tahdistaNakyvyys = () => {
-    tyonna();
     if (typeof nakyvissa !== 'function') return true;
     let valmis = true;
     for (const d of data.values()) {
       if (!d.el) { valmis = false; continue; }
-      d.el.classList.toggle('pallolauta-takana', !nakyvissa(d));
+      asetaNakyvyys(d.el, false, d);
     }
     return valmis;
   };
@@ -422,7 +431,7 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
   return {
     paivita,
     aseta,
-    /** Pakota Globe.gl laskemaan HTML-merkkien etu/taka-tila uudelleen. */
+    /** Tahdista HTML-merkkien etu/taka-tila nykyisestä renderkamerasta. */
     tahdistaNakyvyys,
     laatikot,
     maara: (osa) => (osat.get(osa) ?? []).length,

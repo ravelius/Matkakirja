@@ -35,6 +35,7 @@ function ymparisto(t, siirtyma, { nakyvissa = null, kirjastonNakyvyys = null } =
   let paivitysJonossa = false;
   let tweenit = [];
   const edessa = new Set(['nappula', 'kohde:uusi']);
+  const sovelluksenNakyvyys = nakyvissa ?? ((d) => edessa.has(d.avain));
   const pallo = {
     paused: false,
     htmlElementsData(uusi) {
@@ -61,9 +62,11 @@ function ymparisto(t, siirtyma, { nakyvissa = null, kirjastonNakyvyys = null } =
       } else if (d.__kohdeValmis) {
         // Retained datum saa saman kohteen tweenin; visibilityModifier
         // ajetaan seuraavalla resumed tweenGroup.update -kierroksella.
-        tweenit.push(() => muunnin?.(
+        const paivitaNakyvyys = () => muunnin?.(
           d.el, kirjastonNakyvyys ? kirjastonNakyvyys(d) : edessa.has(d.avain),
-        ));
+        );
+        if (siirtyma > 0) tweenit.push(paivitaNakyvyys);
+        else paivitaNakyvyys();
       }
     }
   };
@@ -76,7 +79,7 @@ function ymparisto(t, siirtyma, { nakyvissa = null, kirjastonNakyvyys = null } =
     ui: { game: { player: {} }, pawnShape() {} },
     siirtyma,
     asteet: ({ x, y }) => ({ lat: y, lon: x }),
-    nakyvissa,
+    nakyvissa: sovelluksenNakyvyys,
   });
   return {
     pallo, merkit, data: () => data, kirjoituksia: () => kirjoituksia,
@@ -84,7 +87,8 @@ function ymparisto(t, siirtyma, { nakyvissa = null, kirjastonNakyvyys = null } =
   };
 }
 
-test('ensilataus odottaa oikean renderkameran ja myöhäisen HTML-digestin', async (t) => {
+for (const [nimi, siirtyma] of [['tavallinen', 250], ['reduced motion', 0]]) {
+  test(`ensilataus kestää myöhäisen HTML-digestin ja sen jälkeisen tweenin: ${nimi}`, async (t) => {
   /*
    * Oikea Globe.gl 2.46.2 -järjestys:
    * 1) pointOfView jonottaa renderObjs-kameran uuden paikan,
@@ -99,16 +103,17 @@ test('ensilataus odottaa oikean renderkameran ja myöhäisen HTML-digestin', asy
    */
   let renderkameraValmis = false;
   const edessa = new Set(['nappula', 'kohde:uusi']);
-  const e = ymparisto(t, 250, {
+  const e = ymparisto(t, siirtyma, {
     // Globe.gl:n välitön laskenta käyttää vielä lähtökameraa: kaikki takana.
     kirjastonNakyvyys: () => false,
     // Sovelluksen jälkikehys lukee jo renderöijään valmistuneen kameran.
     nakyvissa: (d) => renderkameraValmis && edessa.has(d.avain),
   });
-  e.merkit.paivita({ nappula: { x: 0, y: 0 }, kohteet: [
+  const alku = { nappula: { x: 0, y: 0 }, kohteet: [
     { key: 'uusi', x: 1, y: 1 },
     { key: 'taka', x: 2, y: 2 },
-  ] });
+  ] };
+  e.merkit.paivita(alku);
   // Ei puraPaivitysjonoa: HTML-elementtejä ei vielä ole, kuten ensilatauksessa.
 
   const framet = new Map(); let id = 0;
@@ -118,7 +123,6 @@ test('ensilataus odottaa oikean renderkameran ja myöhäisen HTML-digestin', asy
     cancelFrame: (avain) => framet.delete(avain),
   });
   await tahdistus.kameranJalkeen(Promise.resolve(true));
-  renderkameraValmis = true;
 
   const eka = [...framet.values()][0]; framet.clear(); eka();
   assert.equal(framet.size, 1,
@@ -126,16 +130,44 @@ test('ensilataus odottaa oikean renderkameran ja myöhäisen HTML-digestin', asy
   e.puraPaivitysjono();
   assert.ok(e.data().every((d) => d.el.classList.contains('pallolauta-takana')),
     'kirjaston vanhaan kameraan jäänyt laskenta toistaa v1851-livevian');
+  renderkameraValmis = true;
+  // Myöhempi tavallinen piirto säilyttää datumit ja jonottaa 250 ms
+  // siirtymässä visibilityModifier-tweenin; reduced motion ajaa heti.
+  e.merkit.paivita(alku);
 
   const toka = [...framet.values()][0]; framet.clear(); toka();
   const merkit = Object.fromEntries(e.data().map((d) => [d.avain, d.el]));
+  // Tavallisen päivityksen Kapsule-digest ja tween eivät saa palauttaa
+  // vanhan kameran luokkia tahdistuksen jälkeen.
+  e.puraPaivitysjono();
+  e.piirraHeraamisenFrame();
   assert.equal(merkit.nappula.classList.contains('pallolauta-takana'), false);
   assert.equal(merkit['kohde:uusi'].classList.contains('pallolauta-takana'), false);
   assert.equal(merkit['kohde:taka'].classList.contains('pallolauta-takana'), true,
     'todella takapuolinen merkki pysyy piilossa');
+  // Rootin vastakoe: tahdistuksen jälkeen valmistuva digest/tween ei saa
+  // enää palauttaa vanhan kameran takana-luokkia.
+  e.puraPaivitysjono();
+  e.piirraHeraamisenFrame();
+  assert.equal(merkit.nappula.classList.contains('pallolauta-takana'), false,
+    'jälkimmäinen digest/tween ei peitä pelaajaa uudelleen');
+  assert.equal(merkit['kohde:uusi'].classList.contains('pallolauta-takana'), false,
+    'jälkimmäinen digest/tween ei peitä vihjettä uudelleen');
+  assert.equal(merkit['kohde:taka'].classList.contains('pallolauta-takana'), true);
+
+  // Myöhemmin ilmestyvä uusi datum kulkee saman visibilityModifierin läpi.
+  e.merkit.paivita({ ...alku, kohteet: [
+    ...alku.kohteet, { key: 'myoha', x: 3, y: 3 },
+  ] });
+  edessa.add('kohde:myoha');
+  e.puraPaivitysjono();
+  const myoha = e.data().find((d) => d.avain === 'kohde:myoha').el;
+  assert.equal(myoha.classList.contains('pallolauta-takana'), false,
+    'myöhemmin syntyvä etupuolen datum näkyy ilman uutta kameraelettä');
   assert.equal(e.kameraKutsuja(), 0, 'korjaus ei tee fake-panorointia');
   tahdistus.pura(); e.merkit.pura();
-});
+  });
+}
 
 for (const [nimi, siirtyma] of [['tavallinen', 250], ['reduced motion', 0]]) {
   test(`lehden sulku tahdistaa HTML-merkkien näkyvyyden seuraavalla framella: ${nimi}`, (t) => {
@@ -170,11 +202,11 @@ for (const [nimi, siirtyma] of [['tavallinen', 250], ['reduced motion', 0]]) {
       'tila on vielä jäätynyt ennen seuraavaa framea');
     const ennen = e.kirjoituksia();
     [...framet.values()][0](); framet.clear();
-    // Ensimmäinen resumed frame voi osua ennen Kapsulen 1 ms digestia.
+    // Sovellus korjaa jo olemassa olevat elementit suoraan, eikä
+    // jonota uutta Kapsule-data-ajoa tai visibility-tweeniä.
     e.piirraHeraamisenFrame();
     assert.equal(e.data().find((d) => d.avain === 'kohde:uusi')
-      .el.classList.contains('pallolauta-takana'), true,
-    'ensimmäinen resumed frame saa vielä edeltää kirjaston digestia');
+      .el.classList.contains('pallolauta-takana'), false);
     e.puraPaivitysjono();
     e.piirraHeraamisenFrame();
 
@@ -183,7 +215,8 @@ for (const [nimi, siirtyma] of [['tavallinen', 250], ['reduced motion', 0]]) {
     assert.equal(merkit['kohde:uusi'].classList.contains('pallolauta-takana'), false);
     assert.equal(merkit['kohde:taka'].classList.contains('pallolauta-takana'), true,
       'aidosti takapuolinen merkki säilyy piilossa');
-    assert.equal(e.kirjoituksia(), ennen + 1, 'sama HTML-data invalidioidaan kerran');
+    assert.equal(e.kirjoituksia(), ennen,
+      'näkyvyyskorjaus ei jonota uutta data-digestiä tai tweeniä');
     assert.equal(e.kameraKutsuja(), 0, 'korjaus ei lue eikä muuta kameraa');
     tahdistus.pura(); e.merkit.pura();
   });
