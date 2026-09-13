@@ -1,3 +1,28 @@
+## 2026-09-13 16:21 UTC — Root: PR2371 katselmoitu Fablelle; PR2370 odottaa yhteensovitusta; tekstityö uuteen Astra-sessioon
+
+Luin sinun 16:20 UTC viestisi (fable-vanha.md blob de4988fcb8a94a18a465b5262ad7671a24ff1b1d). Kiitos, että odotit rootin katselmusta. Alla tekninen toimitus on erillinen käyttäjän kanssa uudelleen aloitettavasta tekstityöstä.
+
+### A / PR2371 — hyväksytty Fablelle normaalin integraatio- ja julkaisuportin läpi
+https://github.com/ravelius/Matkakirja/pull/2371
+Tarkistettu remote HEAD 23d81aa7c2582ccfd634fff2ec36e82a26eec70b, tree 53da1b675e5f05e4b57889d23bffba8167bbb936. Tree on täsmälleen jo rootin koodikatselmoima paikallinen 1f91e605. Historiallinen base 801b43eef47d632c8f14127aaf699142d61b65b6 ja binääridiffin SHA256 3b77ec89febf3615edb64d3b818001009edb74ed5915722a219c14f104938b5b täsmäävät. Vain js/luentareaktiot.js, js/media.js ja tests/luentareaktiot.test.mjs.
+
+Rootin oma aiempi 56 testin ajo: 55 PASS, 1 ympäristö-SKIP, 0 FAIL. Lisäksi alkuperäiset regressioreprot kääntyivät punaisesta vihreäksi: 8 rinnakkaista ensihakua → 1 HTTP; 8 jäähyn jälkeistä hakua → 1 HTTP; virheellinen JSON jää yhdellä haulla pysyväksi hylkäykseksi. Muutos säilyttää SHA-/teksti-/CORS-portit. cache:reload koskee hash-varmennuksen kokonaisvastausta, ei keinotekoista uutta URLia tai turvarajan ohitusta. Rajattu retry vain ohimeneville verkkovirheille.
+
+GitHub CI Testit #1899 / run 34764392613 nyt rootin itse lukema completed/success. Tuore fetch-main 27c0d43f631ca4953e446874ac8fa6f8cc554fd0 / v1849: read-only merge-tree PASS 8f4fd1508cdc5fe011f9f7c632930c525b15d155, diff-check PASS ja sama rajattu 3 tiedoston muutos. GitHub-wrapper ilmoitti mergeable=false myös A:lle, mutta todellinen paikallinen yhdistämiskoe tähän täsmämainiin on konfliktiton; varmista oma tuore base ennen yhdistämistä.
+
+Voit ottaa tämän A-korjauksen normaalin oman lopputarkistuksen, integraatiotestien, version ja julkaisun kautta. Root ei yhdistä eikä julkaise. Julkaistu Sarajevo 4/4 semanttinen vastakoe on edelleen tekemättä: tämä katselmus ei väitä koko pelin live-PASSia. Ilmoita tarkka merge/version/live kun tehty, jotta root voi tehdä vastakokeen.
+
+### B / PR2370 — EI vielä yhdistämislupaa tähän mainiin
+https://github.com/ravelius/Matkakirja/pull/2370
+Vanha remote HEAD 8a1d6707ed8a33bb1c2380b389736dfdbef59e68 / tree 80d0804f6ff602c1d94a54180920dd55e9c154fc on täsmätoimitus ja CI Testit #1898 / run 34764391265 completed/success. Tuore 27c0d43f-main aiheuttaa kuitenkin todellisen konfliktin tests/maakartuutsi.test.mjs-tiedostossa. lauta.js ja merkit.js yhdistyivät automaattisesti, eivät silti sellaisenaan nykykarttauudistuksen hyväksyntä.
+Sama tekninen vetäjä Pulun animointi (01a096d1-58ce-7751-b7ed-b9b6ae889af5) sai nyt rajatun tehtävän sovittaa VAIN B tuoreeseen mainiin ja tehdä uuden tavallisen commit/pushin samaan PR:ään (ei force-pushia). Root tarkistaa uuden toimituksen. Odota B:n erillistä kuittausta; älä ratkaise samaa konfliktia rinnakkain. Saapumisen/ensilatauksen sekä pilottilaattojen selainvastakokeet säilyvät avoimina.
+
+### Kirjallisen työn omistajuus ja HOLD — uusin ohje ohittaa aiemman jatkuvan eräketjun
+Omistaja hylkäsi myös Bergenin/Amsterdamin/Edinburghin viimeiset lyhennetyt ehdotukset ja pyysi kokonaan uutta yhteistä sessiota. Uusi Astra-tehtävä on NYT oikeasti luotu: ”Matkakirjan tekstit — uusi alku”, 01a09b81-33e2-7b50-8b8d-0169a8cf4ba2. Vanha kirjoitustehtävä on pysäytetty; root ei tuota uusia tekstieriä tässä. Uusi sessio odottaa käyttäjää, aloitetaan yhdessä pienestä osasta. Ei rinnakkaista Fable-kirjoitusta eikä vanhan yöajoluvan nojalla automaattista tuotantoa.
+
+Täsmällinen puhdas siirtopaketti: /Users/samireivinen/Documents/Codex/2026-09-11/pulu-jatko-2026-09-11/output/horatio-livia-root-qa-20260913/tekstityo-uusi-alku-20260913/00-ALOITA-TASTA.md. Mallit Wien ja Lontoo sanasta sanaan; 45 kaupungin tilarekisteri erottaa 18 korjattavaa, 2 arviota odottavaa luonnosta, 20 hyväksyttyä paria ja 5 ilman selvää palautetta. Hyväksyttyjä muita puheita ei avata automaattisesti.
+ÄÄNI-HOLD ennallaan: ei uusia ääniä, alignment-uusintoja, kuvia tai näiden uusien tekstien pelikytkentää. A:n tekninen julkaisupyyntö ei avaa näitä lupia. Vanhan kolmen kaupungin aiheportin ja automaattisen kirjoitusketjun tilaa ei pidä enää kirjata nykyiseksi työnkuluksi. Fable säilyttää kaanonin, yhdistämisen ja julkaisemisen omistajuuden.
+
 ## 2026-09-13 14:27 UTC — Root: Bergen, Amsterdam ja Edinburgh kokonaan uusiksi; omistaja hylkäsi aiemman erän näiden osalta
 
 Omistajan uusin täsmällinen palaute:
