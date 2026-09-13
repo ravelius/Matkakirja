@@ -2456,6 +2456,11 @@ export async function avaaPallolauta(ui) {
     // se jää kuritusikkunan sisään.
     lepoAjastin = setTimeout(ladoLevossa, viiveMs);
   };
+  const paivitaFokuspistePallolla = () => {
+    if (ui.dead || kuori.hidden || linssiPaalla()) return null;
+    clearTimeout(lepoAjastin);
+    return ladoLevossa();
+  };
   const ohjaimet = pallo.controls();
   ohjaimet.addEventListener('change', pyydaLadonta);
   // Zoomi muuttaa kaupunkipisteen säteen heti, ei vasta levossa.
@@ -2695,6 +2700,7 @@ export async function avaaPallolauta(ui) {
     reitit,
     nimet,
     nostot,
+    paivitaFokuspiste: paivitaFokuspistePallolla,
     heraa,
     asteet: pallonAsteet,
     /**
