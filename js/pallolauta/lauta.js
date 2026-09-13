@@ -1503,6 +1503,14 @@ export async function avaaPallolauta(ui) {
   omatPisteet = laudanOmatPisteet;
   const merkit = luoMerkit({
     pallo, ui, siirtyma, asteet: pallonAsteet, kotelo,
+    // Globe.gl:n nollakestoisen pointOfView-kutsun renderöijäpäivitys
+    // valmistuu vasta seuraavalla framella. Merkit tarkistavat silloin
+    // etu/taka-puolen tästä samasta geometriasta kuin osumatesti.
+    nakyvissa: (d) => pisteEdessa(
+      pallo.camera().position,
+      // Siirtyvän merkin oikea renderpaikka voittaa tavoitekoordinaatin.
+      d.__threeObjHtml?.position ?? pallo.getCoords(d.lat, d.lng, MERKIN_KORKEUS),
+    ),
   });
   merkkienNakyvyys = luoMerkkienNakyvyysTahdistus({ paivita: merkit.tahdistaNakyvyys });
   const reitit = luoReitit({
