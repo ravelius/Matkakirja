@@ -1359,6 +1359,54 @@ export async function avaaPallolauta(ui) {
     if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu) return null;
     return kamera.uloszoomausRaja(maanLaatikko, ULOSZOOMAUKSEN_KERROIN);
   };
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * PANOROINNIN RAJA (KARTTAUUDISTUS, ERÄ 9)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * Omistaja 13.9.2026 klo 17.50 UTC: *"Ja rajaa liikkuminen
+   * pienemmälle alalla."* Erän 1c luku 9.6 oli kirjannut löydöksen:
+   * uloszoomauksen esto on pelkkä korkeusraja, eikä pituusasteella
+   * ollut mitään rajaa — Ranskasta pääsi vetämällä Japaniin.
+   *
+   * RAJA ON SAMA LAATIKKO KUIN ULOSZOOMAUKSELLA, kertoimella
+   * PANOROINNIN_KERROIN (1,3), ja se koskee KAMERAN KESKIPISTETTÄ
+   * (kamera.js panoraja + rajaaPanorointi). Kohdemaa ei siis voi
+   * kadota ruudulta.
+   *
+   * OHITUKSET OVAT SAMAT KUIN ULOSZOOMAUKSEN ESTOLLA, ja yksi lisää:
+   *   1. LINSSI (`zoomirajaSyrjaytys`) — satelliittilinssin
+   *      avaruusnäkymä katsoo koko palloa, eikä sitä saa lukita maahan.
+   *   2. KEHITTÄJÄN MAAILMANAPPI — sillä katsotaan koko maailmaa.
+   *   3. MATKA (`matkallaVapaana`, erä 8) — kulkutapa vie kahden maan
+   *      yli, joten rajaus vapautuu matkan ajaksi ja palaa perillä
+   *      samassa kutsussa kuin uloszoomauksen esto.
+   *   4. TUNTEMATON LAATIKKO — ilman laatikkoa ei ole rajaa (sama
+   *      turvallinen tila kuin uloszoomauksella).
+   *
+   * RAJA MUISTETAAN LAATIKON MUKANA. Muunnos asteiksi ei riipu ruudun
+   * kuvasuhteesta (toisin kuin korkeusraja), joten se lasketaan vain
+   * maan vaihtuessa eikä joka sormenliikkeessä.
+   */
+  let panorajaMuisti = { laatikko: null, raja: null };
+  const maanPanoraja = () => {
+    if (!maanLaatikko) return null;
+    if (zoomirajaSyrjaytys) return null;
+    if (matkallaVapaana) return null;
+    if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu) return null;
+    if (panorajaMuisti.laatikko !== maanLaatikko) {
+      panorajaMuisti = { laatikko: maanLaatikko, raja: kamera.panoraja(maanLaatikko) };
+    }
+    return panorajaMuisti.raja;
+  };
+  /*
+   * KAHVA ON ui-OLIOSSA, koska panorointi itse asuu js/pallo.js:ssä
+   * (asennaPallonEleet: veto, liuku ja rullapanorointi). Se on sama
+   * työnjako kuin `ui.pallonVauhti`lla ja `ui.pallonRulla`lla: lauta
+   * antaa säännön, eleet noudattavat sitä. `null` = ei rajaa.
+   */
+  ui.pallonPanorajaus = (lat, lng) => kamera.rajaaPanorointi(maanPanoraja(), lat, lng);
+
   const tahdistaZoomirajat = () => {
     const ohj = pallo.controls();
     const maa = maanZoomiraja();
@@ -1883,8 +1931,8 @@ export async function avaaPallolauta(ui) {
        * seuraa pistettään, kun pallo pysähtyy (ladoLevossa).
        *
        * VANHA OVI JÄÄ RINNALLE (tehtävänanto): kaupunkilehti avataan yhä
-       * `ui.avaaTutkinta`lla — kartan "Etsi aarre" -napista, fokusvirrasta
-       * ja pop-upin omasta alarivistä. Tätä haaraa ei siis pureta vielä.
+       * `ui.avaaTutkinta`lla — fokusvirrasta ja pop-upin omasta
+       * alarivistä. Tätä haaraa ei siis pureta vielä.
        */
       if (Number.isFinite(k.lat) && Number.isFinite(k.lon)) {
         avaaKaupunkipopup(ui, city, { ankkuri: ankkuri(k.lat, k.lon) });
@@ -3138,6 +3186,9 @@ export async function avaaPallolauta(ui) {
       kamera.pysaytaKameraAjo();
       eleet.pura();
       litistaja.pura();
+      // Panoroinnin raja on tämän laudan sääntö: se ei saa jäädä
+      // voimaan, kun lauta puretaan (ks. PANOROINNIN RAJA yllä).
+      ui.pallonPanorajaus = null;
       maapaneeli.pura();
       merkkienNakyvyys.pura();
       merkit.pura();

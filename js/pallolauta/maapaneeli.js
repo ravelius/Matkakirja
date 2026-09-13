@@ -41,15 +41,47 @@
  *    liukuisi kartan päällä zoomatessa — se on täsmälleen se ruutuun
  *    ankkurointi, josta päätös luopui.
  *
- * 3. LUETTAVUUS MITOITETAAN ULOIMMALLE ZOOMILLE. Paneelin lautamitta
- *    johdetaan MAAN LAATIKOSTA (`maanLautalaatikko`), joka on myös
- *    saapumisrajauksen laatikko: paneeli on korkeintaan maan
- *    laatikon levyinen ja korkeintaan `KORKEUS_OSUUS` sen korkeudesta.
- *    Kun kamera sovittaa laatikon (paneeli mukaan luettuna) ruutuun,
- *    paneeli saa aina saman osuuden ruudusta riippumatta siitä, onko
- *    maa Ranska vai Chile — ja mitattuna se on 390 px:n ruudulla
- *    reilusti yli suunnitelman 240 css-pikselin rajan (luvut
- *    raportissa docs/raportit/viesti-fable-karttauudistus-era3-*.md).
+ * 3. KOKO JOHDETAAN MAAN LAATIKOSTA. Paneelin lautamitta tulee MAAN
+ *    LAATIKOSTA (`maanLautalaatikko`), joka on myös saapumisrajauksen
+ *    laatikko: paneeli on korkeintaan `LEVEYS_OSUUS` sen leveydestä ja
+ *    korkeintaan `KORKEUS_OSUUS` sen korkeudesta. Kun kamera sovittaa
+ *    laatikon (paneeli mukaan luettuna) ruutuun, paneeli saa aina
+ *    saman osuuden ruudusta riippumatta siitä, onko maa Ranska vai
+ *    Chile.
+ *
+ * === ERÄ 9: ENTINEN ASU, PALJON PIENEMPÄNÄ ==========================
+ *
+ * Omistajan pilottipalaute (13.9.2026 klo 17.50 UTC, kuvakaappaus
+ * Ranskasta puhelimella, sanatarkasti): *"Vaihda maa juttu samaan kuin
+ * mitä se on ollut tähän asti. Ainoa ero, että se on kiinteästi
+ * paikallaan. Pitää olla paljon pienempi koko."*
+ *
+ * Erä 3 oli tehnyt paneelista oman kalusteensa: tiivis kaksipalstainen
+ * lukuruudukko ja tekstinappi "Lisää". Omistaja ei pyytänyt uutta
+ * kalustetta vaan VANHAN kalusteen kartalle. Kortin asu on siksi nyt
+ * sama kuin nurkkataulussa ennen erää 3 (v1847, js/fokusmitat.js
+ * `rakennaMaataulu` ja `.fokus-kartuutsi`):
+ *
+ *   - maan nimi versaalina ja harvennettuna, alleviivaus, ja sen alla
+ *     maan oma nimi 1873-atlaksen asussa + aikakauden valtiomuoto
+ *     (kartuutsin alarivi);
+ *   - lukurivit YHTENÄ palstaparina (otsikko vasemmalla, arvo ja
+ *     sijaluku oikealla) — ei erän 3 kaksipalstaista ruudukkoa;
+ *   - kielirivi tervehdyksineen ja lippuineen viimeisenä, samalla
+ *     datalla ja samoilla `.tervehdys`-tyyleillä kuin maalehdessä;
+ *   - PALJAS PLUS (ei sanaa "Lisää") lukurivien vieressä, kuten
+ *     nurkkataulun ainoa nappi.
+ *
+ * Valikko plussan takana on erän 3 oma, ja se jää sellaisenaan —
+ * omistaja pyysi vain paneelin asun takaisin.
+ *
+ * MIKÄ EI PALANNUT, JA MIKSI. Nurkkataulu oli POHJATON (musteen
+ * luettavuus tuli halosta ja erillisestä `backdrop-filter`-hunnusta).
+ * Huntu on karttaruudun oma lapsi ruutukoordinaateissa, eikä se voi
+ * seurata karttaan kiinnitettyä korttia; suodattimia ei myöskään saa
+ * animoida (tests/rules.test.mjs, iOS-sääntö). Kortti pitää siis erän
+ * 3 tumman pergamenttipohjan (`--overlay-card`) ja vaalean musteen,
+ * ja typografia on nurkkataulun. Kirjattu raporttiin.
  *
  * === PAIKKA: MAAN ALAPUOLELLA, RAJAN ULKOPUOLELLA ===================
  *
@@ -77,20 +109,38 @@
  * eleen itseensä, jottei kartta ala panoroida napin alta.
  */
 import { MAA_KATEGORIAT } from '../packs/maa-kategoriat.js';
-import { maanNimi, maanRivit, maapaneeliKartassa } from '../fokusmitat.js';
+import {
+  kieliOsat, maanNimi, maanRivit, maapaneeliKartassa,
+} from '../fokusmitat.js';
 import { FOKUS_MAANIMET } from '../packs/fokus-grc.js';
 
 /** Kortin peruskoko tyylitiedostossa (css .maapaneeli-kortti). */
-export const MAAPANEELIN_LEVEYS_PX = 300;
-export const MAAPANEELIN_KORKEUS_PX = 96;
+export const MAAPANEELIN_LEVEYS_PX = 190;
+export const MAAPANEELIN_KORKEUS_PX = 148;
 /**
- * Kuinka suuren osuuden maan laatikon KORKEUDESTA paneeli saa viedä.
- * Ranskalla (laatikko 490 × 406 yks) tämä rajaa paneelin 443 yksikön
- * levyiseksi eli hieman maata kapeammaksi; leveillä mailla (Venäjä)
- * se on ainoa raja, joka pitää paneelin maan mittaisena eikä sen
- * kokoisena.
+ * KAKSI OSUUTTA MAAN LAATIKOSTA, JA TIUKEMPI VOITTAA (erä 9).
+ *
+ * Erässä 3 rajoja oli vain yksi ja puolikas: paneeli sai olla maan
+ * laatikon LEVYINEN, ja korkeusosuus 0,35 leikkasi siitä Ranskalla
+ * 443 lautayksikköä. Puhelimen ruudulla se oli mitattuna yli 300
+ * css-pikseliä — omistajan kaappauksessa (13.9.2026 klo 17.50,
+ * Ranska) paneeli vei ruudusta noin neljänneksen ja leikkautui
+ * reunoista: *"Pitää olla paljon pienempi koko."*
+ *
+ * Nyt LEVEYSOSUUS on oma rajansa: paneeli on korkeintaan tämän verran
+ * maan laatikon leveydestä. Koska kamera sovittaa juuri sen laatikon
+ * ruutuun, osuus on samalla paneelin osuus RUUDUN leveydestä
+ * pystyruudulla — Ranskalla 390 px:n ruudulla MITATTUNA 167 css-px
+ * (tehtävänannon tavoite 150–200; erässä 3 sama mitta oli 233 px).
+ * Työpöydällä 1400 px:n ruudulla 239 px eli 17 % leveydestä; mittaukset
+ * raportissa docs/raportit/viesti-fable-karttauudistus-era9-*.md.
+ *
+ * KORKEUSOSUUS jää toiseksi rajaksi leveille ja matalille maille
+ * (Venäjä, Kazakstan): ilman sitä paneeli olisi niillä maan laatikon
+ * korkuinen. Ranskalla se ei sido — leveysosuus on tiukempi.
  */
-export const MAAPANEELIN_KORKEUS_OSUUS = 0.35;
+export const MAAPANEELIN_LEVEYS_OSUUS = 0.35;
+export const MAAPANEELIN_KORKEUS_OSUUS = 0.42;
 /** Rako maan laatikon reunan ja paneelin väliin, osuus laatikon korkeudesta. */
 export const MAAPANEELIN_RAKO_OSUUS = 0.02;
 /**
@@ -167,13 +217,14 @@ export function maanAiheet(iso) {
  * Paneelin mitat LAUDAN YKSIKÖISSÄ maan laatikosta.
  *
  * Kaava on yksi rivi: montako lautayksikköä yksi css-pikseli on.
- * Se otetaan siitä kahdesta rajasta, kumpi on tiukempi — paneeli ei saa
- * olla maan laatikkoa leveämpi eikä `KORKEUS_OSUUS`ia korkeampi.
+ * Se otetaan siitä kahdesta rajasta, kumpi on tiukempi —
+ * `LEVEYS_OSUUS` maan laatikon leveydestä tai `KORKEUS_OSUUS` sen
+ * korkeudesta (ks. KAKSI OSUUTTA yllä).
  */
 export function paneelinMitat(laatikko) {
   if (!(laatikko?.w > 0) || !(laatikko?.h > 0)) return null;
   const perusta = Math.min(
-    laatikko.w / MAAPANEELIN_LEVEYS_PX,
+    (MAAPANEELIN_LEVEYS_OSUUS * laatikko.w) / MAAPANEELIN_LEVEYS_PX,
     (MAAPANEELIN_KORKEUS_OSUUS * laatikko.h) / MAAPANEELIN_KORKEUS_PX,
   );
   if (!(perusta > 0)) return null;
@@ -236,10 +287,42 @@ function paneeliElementti(d) {
   const el = luo('div', 'pallolauta-maapaneeli');
   const kortti = luo('div', 'maapaneeli-kortti');
   kortti.setAttribute('role', 'group');
-  kortti.appendChild(luo('div', 'maapaneeli-nimi'));
-  kortti.appendChild(luo('dl', 'maapaneeli-rivit'));
+  /*
+   * OTSAKE ON KARTUUTSI (erä 9): versaali nimi, ohut alleviivaus ja
+   * alarivi, jolla on maan oma nimi ja aikakauden valtiomuoto. Samat
+   * kolme solmua ja sama järjestys kuin nurkkataulun kartuutsissa
+   * (js/fokusmitat.js rakenna → .fokus-kartuutsi-nimi / -viiva /
+   * -alarivi), jotta asu on se, jonka pelaaja tunnistaa.
+   */
+  /*
+   * SISUS ON OMA SOLMUNSA, JOTTA VALIKKO EI LEIKKAUDU. Kortin korkeus
+   * on kiinteä (se on myös LAUDAN mitta, ks. tyylitiedosto), joten
+   * sisältö on leikattava — mutta `overflow: hidden` kortissa
+   * leikkaisi myös kortin ulkopuolelle aukeavan valikon, eikä
+   * napautus osuisi siihen enää lainkaan (mitattu savukkeessa
+   * 13.9.2026: kangas sieppasi napautuksen). Leikkaus on siis tässä
+   * sisemmässä solmussa; valikko ja plus ovat kortin omia lapsia.
+   */
+  const sisus = luo('div', 'maapaneeli-sisus');
+  const nimi = luo('div', 'maapaneeli-nimi');
+  nimi.appendChild(luo('span', 'maapaneeli-nimi-suomi'));
+  sisus.appendChild(nimi);
+  sisus.appendChild(luo('div', 'maapaneeli-viiva'));
+  const alarivi = luo('div', 'maapaneeli-alarivi');
+  alarivi.appendChild(luo('span', 'maapaneeli-nimi-oma'));
+  alarivi.appendChild(luo('span', 'maapaneeli-aika'));
+  sisus.appendChild(alarivi);
+  sisus.appendChild(luo('dl', 'maapaneeli-rivit'));
+  kortti.appendChild(sisus);
 
-  const lisaa = luo('button', 'maapaneeli-lisaa', 'Lisää');
+  /*
+   * PALJAS PLUS, EI SANAA (erä 9; nurkkataulun `.fokus-maataulu-lehti`,
+   * omistaja 25.8.2026: *"pelkästään paksummaksi plus merkiksi ilman
+   * pyöreää ympyrää"*). Merkin piirtävät CSS:n kaksi palkkia, ja
+   * tekstisolmu on ruudunlukijaa varten — se piilotetaan `font-size:
+   * 0`:lla kuten nurkkataulussakin.
+   */
+  const lisaa = luo('button', 'maapaneeli-lisaa', '+');
   lisaa.type = 'button';
   lisaa.setAttribute('aria-expanded', 'false');
   kortti.appendChild(lisaa);
@@ -272,12 +355,17 @@ function taytaKortti(el, d) {
   if (!kortti) return;
   if (kortti.dataset.iso !== d.iso) {
     kortti.dataset.iso = d.iso;
-    const nimi = kortti.querySelector('.maapaneeli-nimi');
-    nimi.textContent = '';
-    nimi.appendChild(luo('span', 'maapaneeli-nimi-suomi', d.nimi.toUpperCase()));
-    // Maan oma nimi 1873-atlaksen asussa, jos taulu sen tuntee — sama
-    // lähde ja sama sääntö kuin kartuutsilla (js/fokusmitat.js).
-    if (d.paikallinen) nimi.appendChild(luo('span', 'maapaneeli-nimi-oma', d.paikallinen));
+    kortti.querySelector('.maapaneeli-nimi-suomi').textContent = d.nimi.toUpperCase();
+    /*
+     * ALARIVI ON KARTUUTSIN ALARIVI (erä 9). Maan oma nimi
+     * 1873-atlaksen asussa ja sen perässä aikakauden valtiomuoto —
+     * SAMA SÄÄNTÖ kuin kartuutsilla (js/fokusmitat.js): valtiomuoto
+     * näkyy vain, jos maan oma nimikin tunnetaan, jottei rivi jää
+     * puolikkaaksi lauseeksi. Tyhjä alarivi kutistuu itsestään pois.
+     */
+    kortti.querySelector('.maapaneeli-nimi-oma').textContent = d.paikallinen ?? '';
+    kortti.querySelector('.maapaneeli-aika').textContent = d.paikallinen && d.valtiomuoto
+      ? ` · ${d.valtiomuoto}` : '';
     kortti.setAttribute('aria-label', `${d.nimi}: maan perustiedot`);
 
     const rivit = kortti.querySelector('.maapaneeli-rivit');
@@ -286,6 +374,19 @@ function taytaKortti(el, d) {
       rivit.appendChild(luo('dt', 'maapaneeli-otsikko', otsikko));
       const dd = luo('dd', 'maapaneeli-arvo', arvo);
       if (lisa) dd.appendChild(luo('span', 'maapaneeli-sija', lisa));
+      rivit.appendChild(dd);
+    }
+    /*
+     * KIELET LIPPUINEEN VIIMEISENÄ RIVINÄ (omistaja 25.8.2026;
+     * nurkkataulun taytaMaataulu). Osat tulevat js/fokusmitat.js:n
+     * `kieliOsat`ista, eli samasta datasta ja samoilla
+     * `.tervehdys`-tyyleillä kuin maalehdessä — tässä ei ole omaa
+     * lippulähdettä eikä omaa ladontaa.
+     */
+    if (d.kielet?.length) {
+      rivit.appendChild(luo('dt', 'maapaneeli-otsikko', 'Kielet'));
+      const dd = luo('dd', 'maapaneeli-arvo maapaneeli-kielet');
+      for (const osa of d.kielet) dd.appendChild(osa);
       rivit.appendChild(dd);
     }
 
@@ -435,7 +536,9 @@ export function luoMaapaneeli({ ui, merkit, kamera, asteet }) {
       laatikko: tila.laatikko,
       nimi: tila.nimi,
       paikallinen: tila.paikallinen,
+      valtiomuoto: tila.valtiomuoto,
       rivit: tila.rivit,
+      kielet: tila.kielet,
       aiheet: tila.aiheet,
       skaala: skaala(),
       valikkoAuki,
@@ -469,7 +572,11 @@ export function luoMaapaneeli({ ui, merkit, kamera, asteet }) {
         lng: a.lon ?? a.lng,
         nimi: maanNimi(ui, iso),
         paikallinen: omat.paikallinen ?? '',
+        valtiomuoto: omat.valtiomuoto ?? '',
         rivit: maanRivit(ui, iso),
+        // Kielirivin osat ovat VALMIITA ELEMENTTEJÄ (kieliOsat luo ne),
+        // joten ne tehdään kerran maan vaihtuessa eikä joka piirrossa.
+        kielet: kieliOsat(ui, iso),
         aiheet: maanAiheet(iso),
       };
       // Maan vaihtuessa valikko sulkeutuu: sen rivit ovat toisen maan.

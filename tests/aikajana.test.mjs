@@ -1771,7 +1771,6 @@ test('linssin ajaksi luentakuva piiloon kartalta ja takaisin sulkiessa', () => {
     '.fokusvirta-luentakuva',        // paneeli (myös pienennetty .pieni)
     '.fokusvirta-luentakuva-ankkuri', // ankkurisolmu (myös PULU-CAM-pakka)
     '.fokuszoom',                     // auki jäänyt suurennos kartan päällä
-    '.etsi-aarre-ankkuri',            // Etsi aarre -nappi laatan vieressä
   ]) {
     assert.ok(lohko[0].includes(`body.aikajana-paalla ${valitsin}`),
       `${valitsin} jää linssin päälle`);

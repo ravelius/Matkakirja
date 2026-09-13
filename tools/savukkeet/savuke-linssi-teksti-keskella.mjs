@@ -177,10 +177,6 @@ const luentakuvanTila = (sivu) => sivu.evaluate(() => {
     nakyy: nakyy(paneeli),
     ankkuriNakyy: nakyy(ankkuri),
     laatikko: paneeli ? paneeli.getBoundingClientRect().toJSON() : null,
-    aarrenappi: (() => {
-      const n = document.querySelector('.etsi-aarre-ankkuri');
-      return n ? { on: true, nakyy: nakyy(n) } : { on: false, nakyy: false };
-    })(),
   };
 });
 
@@ -271,9 +267,6 @@ for (const nimi of Object.keys(NAKYMAT)) {
     JSON.stringify(linssissa));
   vaadi(n('piilotus ei ole purku: paneeli ja ui.luentakuva ovat tallessa'),
     linssissa.dom && linssissa.viite, JSON.stringify(linssissa));
-  vaadi(n('Etsi aarre -nappi ei jää linssin päälle'),
-    !linssissa.aarrenappi.nakyy, JSON.stringify(linssissa.aarrenappi));
-
   /* --------------------------------------- 3.–4. teksti keskellä ruutua */
 
   await sivu.evaluate(() => {

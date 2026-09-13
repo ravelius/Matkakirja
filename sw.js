@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1854';
+const CACHE = 'matkakirja-2026-08-09.1855';
 const SHELL = [
   './',
   './index.html',
@@ -85,8 +85,6 @@ const SHELL = [
   './js/fokusvirta.js',
   // Kaupungin minitraileri (11.9.2026): ui.js ja fokusvirta tuovat sen.
   './js/saapumistraileri.js',
-  // Kartan "Etsi aarre" -nappi (9.9.2026): fokusvirta tuo sen staattisesti.
-  './js/etsi-aarre-nappi.js',
   // PULU-CAM-pakka isoisän luentakuvan päälle (9.9.2026): fokusvirta tuo
   // sen staattisesti, ja se itse tuo pöllön kuvakkeen ja median.
   './js/pulucam.js',

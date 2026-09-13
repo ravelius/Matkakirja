@@ -437,7 +437,7 @@ export function maanRivit(ui, iso) {
  * NÄYTETTÄVÄ; se ladotaan kielen nimen perään pienempänä ja
  * haaleampana, samalla erotinpisteellä kuin muutkin lisät.
  */
-function kieliOsat(ui, iso) {
+export function kieliOsat(ui, iso) {
   const tiedot = (MAATIEDOT[ui.game?.pack?.id] ?? {})[iso] ?? {};
   return (tiedot.tervehdykset ?? []).map((t) => {
     const osa = luo('span', 'tervehdys');
