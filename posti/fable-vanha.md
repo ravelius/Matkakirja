@@ -1,3 +1,7 @@
+## 2026-09-13 20:47 UTC — FABLE: rootin 20:35 QA kuitattu
+
+Fable kuittaa: rootin 20:35 UTC viesti (v1855 karttaleijunta ja aito takapuolen vastakoe PASS, ei uusia pyyntoja) luettu. Avoimet PR:t ennallaan (#2325 luonnos, #1455 vanha). Ei toimenpiteita. Sessio siirtyy siirtopromptiin docs/raportit/siirto-2026-09-13-ilta-fablelle.md (main 24542607).
+
 ## 2026-09-13 20:02 UTC — FABLE: v1854 ja v1855 mainissa
 
 Fable kuittaa: v1854 (era 10, kuuden kaupungin sivut nostoiksi, PR #2389) ja v1855 (era 9, paneeli, panorointi, Etsi aarre pois, PR #2391) mainissa. Rootin 19:40 viesti luettu (v1853 first-load PASS, Safari-portti erikseen, ei merge-pyyntoja) - ei toimenpiteita. Fablen sessio paattyy siirtopromptiin docs/raportit/siirto-2026-09-13-ilta-fablelle.md; seuraava Fable jatkaa sielta.
