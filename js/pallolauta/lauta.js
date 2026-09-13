@@ -1988,6 +1988,11 @@ export async function avaaPallolauta(ui) {
       if (pisteNakyy(k)) ehdokkaat.push({ laji: 'kaupunki', lat: k.lat, lng: k.lon, k });
     }
     for (const o of nostot.osumat()) ehdokkaat.push({ laji: 'nosto', lat: o.lat, lng: o.lng, o });
+    // Turisti-info kaupungin vieressä (erä 4): samassa sarjassa kuin
+    // kaupungit ja nostot, ks. datumin `avaa`-kentän perustelu.
+    for (const d of merkit.avattavat()) {
+      ehdokkaat.push({ laji: 'turistiinfo', lat: d.lat, lng: d.lng, d });
+    }
     const voittaja = lahin(lat, lng, ehdokkaat, (e) => e.lat, (e) => e.lng);
     /*
      * KAUPUNKIPISTEEN OMA MUSTE VOITTAA LAPUN. Jos sormi on pisteen
@@ -2010,6 +2015,16 @@ export async function avaaPallolauta(ui) {
      * alta. Lappu voittaa siis vain toisen noston tai tyhjän.
      */
     if (voittaja?.o?.perhe === 'piste') return voittaja;
+    /*
+     * TURISTI-INFO PITÄÄ PAIKKANSA, SAMASTA SYYSTÄ KUIN KOHTAAMISPISTE.
+     * Merkki on jo kerran siirretty sivuun kaupungin päältä (39 px
+     * saapumisnäkymässä), ja sen laatikko on nimiladonnan varaus — elävä
+     * kaupunginnimi siis väistää sitä. POLTETTU muste ei voi väistää, ja
+     * mitattuna 13.9.2026 juuri se voitti: napautus merkin päälle avasi
+     * kaupungin pop-upin, koska Pariisin poltettu nimimuste ulottui
+     * merkin alle. Sormi merkin päällä tarkoittaa merkkiä.
+     */
+    if (voittaja?.laji === 'turistiinfo') return voittaja;
     return musteeseenOsunut(lat, lng) ?? voittaja;
   };
 
@@ -2078,6 +2093,7 @@ export async function avaaPallolauta(ui) {
     const voittaja = lahinMerkki(lat, lng);
     if (!voittaja) return;
     if (voittaja.laji === 'kaupunki') napautaKaupunki(voittaja.k);
+    else if (voittaja.laji === 'turistiinfo') { heraa(); voittaja.d.avaa(voittaja.d); }
     else napautaNosto(voittaja.o);
   };
 
@@ -2451,7 +2467,18 @@ export async function avaaPallolauta(ui) {
       mitta: kaupunkimerkinMitta(nakyva?.w, uloin),
       elementti: turistiInfoElementti,
       asettele: asetteleTuristiInfo,
-      napautus: () => {
+      /*
+       * AVAAJA ON `avaa`, EI `napautus` — JA SE ON TARKOITUS.
+       * `merkit.napautettavat()` kokoaa datumit, joilla on `napautus`, ja
+       * pinnan osumatesti ratkaisee ne ENNEN kaupunkeja (linssin merkki
+       * voittaa aina). Tämä merkki ei ole linssin merkki vaan kartan
+       * kaluste kaupungin vieressä: se kilpailee samassa sarjassa
+       * kaupunkien ja nostojen kanssa (lahinMerkki), jolloin lähin
+       * voittaa. MITATTU 13.9.2026: kun kenttä oli `napautus`, kaupungin
+       * napautus avasi 39 px:n päässä olevan turisti-infon eikä koskaan
+       * kaupungin omaa pop-upia.
+       */
+      avaa: () => {
         avaaTuristiInfo(ui, city, { ankkuri: ankkuri(paikka.lat, paikka.lon) });
       },
     }]);

@@ -236,16 +236,14 @@ for (const ruutu of RUUDUT) {
       await new Promise((v) => setTimeout(v, 350));
     });
 
-    /** Merkin ruutupiste sivun koordinaateiksi. */
-    const piste = (lat, lng) => sivu.evaluate(({ la, ln }) => {
-      const l = window.matkakirja.ui.pallolauta;
-      const p = l.pallo.getScreenCoords(la, ln, 0);
-      const r = l.kotelo.getBoundingClientRect();
-      return p ? { x: r.left + p.x, y: r.top + p.y } : null;
-    }, { la: lat, ln: lng });
-
-    /* --- vartio 1, 2, 3, 4: ISO POP-UP -------------------------------- */
-    const kaupunkiPiste = await sivu.evaluate((id) => {
+    /*
+     * RUUTUPISTEET LUETAAN AINA TUOREENA. Kaupungin napautus ajaa kameran
+     * kaupungin ylle (js/pallolauta/lauta.js napautaKaupunki), joten
+     * ensimmäisen napautuksen jälkeen vanha ruutupiste osoittaa väärään
+     * paikkaan — mitattu 13.9.2026: toinen napautus samaan pisteeseen ei
+     * osunut enää mihinkään.
+     */
+    const kaupunkiPiste = () => sivu.evaluate((id) => {
       const l = window.matkakirja.ui.pallolauta;
       const k = l.kaupunki(id);
       if (!k) return null;
@@ -253,10 +251,39 @@ for (const ruutu of RUUDUT) {
       const r = l.kotelo.getBoundingClientRect();
       return p ? { x: r.left + p.x, y: r.top + p.y } : null;
     }, kaupunki.id);
-    vaadi(`${tunnus}: kaupunkipiste on ruudulla`, Boolean(kaupunkiPiste));
-    if (kaupunkiPiste) {
-      await sivu.mouse.click(kaupunkiPiste.x, kaupunkiPiste.y);
-      await sivu.waitForTimeout(700);
+    /** Turisti-infon merkin ruutupiste (datum `avattavat`-luettelosta). */
+    const infoPiste = () => sivu.evaluate(() => {
+      const l = window.matkakirja.ui.pallolauta;
+      const d = l.merkit.avattavat().find((x) => x.laji === 'turistiinfo');
+      if (!d) return null;
+      const p = l.pallo.getScreenCoords(d.lat, d.lng, 0);
+      const r = l.kotelo.getBoundingClientRect();
+      return p ? { x: r.left + p.x, y: r.top + p.y, lat: d.lat, lng: d.lng } : null;
+    });
+
+    /* --- vartio 5a: merkki on kaupungin VIERESSÄ (sama hetki) --------- */
+    const kaupunkiAlussa = await kaupunkiPiste();
+    const merkkiAlussa = await infoPiste();
+    vaadi(`${tunnus}: kaupunkipiste on ruudulla`, Boolean(kaupunkiAlussa));
+    vaadi(`${tunnus}: turisti-info-merkki on kartalla`, Boolean(merkkiAlussa),
+      'merkkiä ei löytynyt avattavista');
+    if (kaupunkiAlussa && merkkiAlussa) {
+      const etaisyys = Math.hypot(merkkiAlussa.x - kaupunkiAlussa.x,
+        merkkiAlussa.y - kaupunkiAlussa.y);
+      tieto(`${tunnus}: merkin etäisyys kaupunkipisteestä`, `${etaisyys.toFixed(1)} px`);
+      vaadi(`${tunnus}: merkki on kaupungin VIERESSÄ, ei päällä`, etaisyys > 24,
+        `${etaisyys.toFixed(1)} px`);
+      const teksti = await sivu.evaluate(() => document
+        .querySelector('.pallolauta-turisti-info .nostosym-rasteri')?.dataset?.nimio
+        ?? document.querySelector('.pallolauta-turisti-info')?.getAttribute('aria-label') ?? '');
+      tieto(`${tunnus}: merkin teksti`, teksti);
+      vaadi(`${tunnus}: merkissä on teksti`, /Turisti-info/i.test(teksti), teksti);
+    }
+
+    /* --- vartio 1, 2, 3, 4: ISO POP-UP -------------------------------- */
+    if (kaupunkiAlussa) {
+      await sivu.mouse.click(kaupunkiAlussa.x, kaupunkiAlussa.y);
+      await sivu.waitForTimeout(900);
     }
     const iso = await sivu.evaluate(() => {
       const p = document.querySelector('.kaupunkipopup-kaupunki');
@@ -366,28 +393,9 @@ for (const ruutu of RUUDUT) {
     vaadi(`${tunnus}: rasti sulkee ison pop-upin`,
       await sivu.evaluate(() => !document.querySelector('.kaupunkipopup')));
 
-    /* --- vartio 5: TURISTI-INFO --------------------------------------- */
-    const merkki = await sivu.evaluate(() => {
-      const l = window.matkakirja.ui.pallolauta;
-      const d = l.merkit.napautettavat().find((x) => x.laji === 'turistiinfo');
-      if (!d) return null;
-      const p = l.pallo.getScreenCoords(d.lat, d.lng, 0);
-      const r = l.kotelo.getBoundingClientRect();
-      return p ? { x: r.left + p.x, y: r.top + p.y, lat: d.lat, lng: d.lng } : null;
-    });
-    vaadi(`${tunnus}: turisti-info-merkki on kartalla`, Boolean(merkki),
-      'merkkiä ei löytynyt napautettavista');
-    if (merkki && kaupunkiPiste) {
-      const etaisyys = Math.hypot(merkki.x - kaupunkiPiste.x, merkki.y - kaupunkiPiste.y);
-      tieto(`${tunnus}: merkin etäisyys kaupunkipisteestä`, `${etaisyys.toFixed(1)} px`);
-      vaadi(`${tunnus}: merkki on kaupungin VIERESSÄ, ei päällä`, etaisyys > 12,
-        `${etaisyys.toFixed(1)} px`);
-      const teksti = await sivu.evaluate(() => document
-        .querySelector('.pallolauta-turisti-info .nostosym-rasteri')?.dataset?.nimio
-        ?? document.querySelector('.pallolauta-turisti-info')?.getAttribute('aria-label') ?? '');
-      tieto(`${tunnus}: merkin teksti`, teksti);
-      vaadi(`${tunnus}: merkissä on teksti`, /Turisti-info/i.test(teksti), teksti);
-
+    /* --- vartio 5b: TURISTI-INFON NAPAUTUS ---------------------------- */
+    const merkki = await infoPiste();
+    if (merkki) {
       await sivu.mouse.click(merkki.x, merkki.y);
       await sivu.waitForTimeout(600);
       const info = await sivu.evaluate(() => {
@@ -438,8 +446,9 @@ for (const ruutu of RUUDUT) {
       });
       tieto('vastakoe 1: datassa poiston jälkeen',
         `${poisto.kansikuvat} kansikuvaa, ${poisto.avauskuvat} avauskuvaa`);
-      if (kaupunkiPiste) {
-        await sivu.mouse.click(kaupunkiPiste.x, kaupunkiPiste.y);
+      const uusi = await kaupunkiPiste();
+      if (uusi) {
+        await sivu.mouse.click(uusi.x, uusi.y);
         await sivu.waitForTimeout(900);
       }
       const tila = await sivu.evaluate(() => {

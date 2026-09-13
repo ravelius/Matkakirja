@@ -75,13 +75,17 @@ import { html, kuunteleSulkevaNapautus } from './ui-apurit.js';
  * päälle ja levähtäisi päiväntasaajalla kaukaisuuteen. Kosinille on
  * lattia, jottei napa-alueen merkki karkaa maapallon toiselle puolelle.
  *
- * MITAT (mitattu saapumisnäkymästä). Ranska on noin 13° leveä, ja
- * saapumisajo sovittaa sen ruutuun: 390 px:n ruudulla yksi aste on noin
- * 30 px. Pariisin leveydellä (48,9°) siirto on siis 1,10° itään eli noin
- * 33 px ja 0,36° etelään eli noin 11 px — merkki irtoaa kaupunkipisteestä
- * JA sen nimestä, mutta pysyy samassa silmäyksessä.
+ * MITTA ON MITATTU JA SITTEN KASVATETTU (savuke-kaupunkipopup, 13.9.2026).
+ * Ensimmäinen arvio (0,72° / 0,36°) antoi Ranskan saapumisnäkymässä
+ * 390 px:n ruudulla vain **18,6 px** eroa kaupunkipisteeseen — ja koska
+ * osumatesti on lähin merkki 44 px:n sisällä (js/pallolauta/lauta.js
+ * R-malli), kaupungin ja turisti-infon napautukset kilpailivat samasta
+ * sormesta. Nyt siirto on 1,5° / 0,75°, mitattuna **39 px** samassa
+ * näkymässä: kaksi erillistä kohdetta, jotka ovat silti yhdessä
+ * silmäyksessä. Mittayksikkö ruudulla oli 23 px yhtä kaaren astetta
+ * kohti (Ranska ~13° leveä, saapumiskorkeus 0,627).
  */
-export const TURISTI_INFO_SIIRTO = Object.freeze({ lon: 0.72, lat: -0.36 });
+export const TURISTI_INFO_SIIRTO = Object.freeze({ lon: 1.5, lat: -0.75 });
 /** Kosinin lattia (ks. yllä): napa-alueella siirto ei kasva rajatta. */
 export const TURISTI_INFO_KOSINIRAJA = 0.25;
 
