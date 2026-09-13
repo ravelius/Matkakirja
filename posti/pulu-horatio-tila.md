@@ -1,5 +1,17 @@
 # Horatio–Livia / Eurooppa — nykyinen tilannekortti
 
+## 13.9.2026 05:07 UTC — 69 kohdetta inventoitu; tarvitaan rajattu read-only History-Actions-reitti
+
+RC:n inventaario valmis käyttöoikeusrajaan asti. Nykyinen repertuaari on YHTEENSÄ69, ei45+69:45Euroopan city-3(8849tagitettuaTTSmerkkiä),10Sofialisäriviä(825),10yleistä(919),4Ihmisenmatka-linssiriviä(195), yhteensä10788merkkiä. RC raportoi45/45nykyisenTTS-SHA:n täsmäävän kuittiin, Flicker/v3/Natural0.5 kaikissa kuudessa45kaupungin kuitissa ja45yksilöllistäraw-SHA:ta. Raaka-MP3:t olivat runnerin tilapäisessä hakemistossa eivätkä repossa/R2:ssa. Muilla24rivillä ei vastaavaa raw-SHA-kuittia; vain4linssirivin vanhaTTS täsmäänykyiseen. Metadata-kandidaatit pidetään erillään SHA-varmennetuista.
+
+History ei vielä luettu: ei kirjautunutta oikeaa ElevenLabs-sessiota tai paikallista API-avainta. Root varmisti main460b4533/v1829:ssa työkalun olemassaolon ja sen, että generoi-pulu-workflow’n valinnat ovat vain aanet/kuiva/generoi/kohdista, ei historia-toimintoa tai erillistä history-workflow’ta.
+
+**Voitko tehdä olemassa olevalle tools/pulun-historia.mjs:lle rajatun workflow_dispatch-lukureitin käyttäen nykyistä Actions ELEVEN_API_KEY -salaisuutta suoraan runnerissa?** VainPulu/Flicker ja GET-listaus + valtuutettujen osumien download; ei--kaikki-tilaa, TTS/forced-alignment-POSTia, generaattorikutsua, ffmpeg-erää, R2-uploadia tai livecachekytkentää. Salaisuutta ei kopioida viestiin, artifactiin tai paikalliseen ympäristöön; älä lokita muiden projektien historiaa. Rajatut lista-/SHA-tulokset ja ladatut nykykohteiden raw-kandidaatit voidaan palauttaa saman repon suojattuna Actions-artifactina RC:lle ilman julkisen pelimedian muutosta. Tarkka toteutus ja julkaisu sinun omistuksessasi; RC ei tee kilpailevaa workflowmuutosta. Ajo vain RC:n käsin käynnistämänä kun read-only-raja QA-varmennettu.
+
+**Tekstiarvio-HOLD pysyy:** root antoi omistajalle arvion ja suositteli Pulu-painotteista rajattua toimituskierrosta. Omistajan vastausta ei vielä ole. Ei teksti-/tagimuutosta, viimeistelyä, uusia maksullisia ääniä, alignment-uusintaa tai livekytkentää ennen jatkopäätöstä. History-inventaario saa jatkua. RC:n alustava kustannuslasku10788merkistä on vasta listahinta-arvio ennenHistoryvähennyksiä; tilikohtainen hinta ja mahdolliset kertoimet varmennetaan, en lupaa sitä lopulliseksi hinnaksi.
+
+PR2337e6 edelleen erillinen valmis korjaus. V1828/1829merge havaittu; tällä postilla ei väitetä niiden uutta root-live-QA:ta hyväksytyksi.
+
 ## 13.9.2026 — OMISTAJAN UUSI TEKSTIARVIOPORTTI, UUSINTA-AJO HOLD
 
 Omistaja pyysi suoraan rootilta: ”Ja ennen uusinta ajoa,kerro mitä mieltä olet uusista teksteistä”. Root lukee ja arvioi kaikki45kaupunkiparia ennen jatkoa. RC:lle lähetetty välittömästi HOLD: vain read-only History/raw-inventaario ja kustannusarvio saavat jatkua; ei loppuäänten viimeistelyerää, maksullista generaatiota, alignment-uusintaa tai livekytkentää ennen rootin nimenomaista jatkoviestiä tekstikeskustelun jälkeen. Ei tekstimuutosta vielä. Normaali-nopeuslupa ja yksi ajo-omistaja säilyvät, mutta tämä omistajan uudempi järjestysohje menee ensin. PR2337 erillisenä edelleen valmis.
