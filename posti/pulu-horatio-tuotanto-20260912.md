@@ -1,9 +1,12 @@
 # Horatio ja Livia — hahmot ja kaupunkiparin tuotantoketju
 
-Ajantasainen yhteinen työohje: omistajan päätökset 12.9.2026.
-Tämä kokoaa saman päivän hahmo-, pituus-, kuva- ja yhteistyöpäätökset.
-Tämän aihepiirin vanhat ristiriitaiset ohjeet poistetaan aktiiviohjeista;
-muutoshistoria säilyy Gitissä. Muu tarinakaanon ja julkaisuportit säilyvät.
+Omistajan 12.–13.9.2026 päätösten toimeenpano ja yhteinen tuotantoketju.
+Tämä dokumentoi hahmo-, pituus-, kuva- ja yhteistyöpäätösten toteutuksen;
+se ei siirrä sisältölinjausten hyväksymisvaltaa pois Raamatusta. Fable
+kirjoittaa kanoniset päivitykset `js/tyohuone-raamattu.js`:ään ja ylläpitää
+sen dokumenttikarttaa. Docs-konsolidointi ei yksin kumoa mitään vanhaa
+omistajalinjausta: korvaava nimenomainen päätös ja sen rajaus kirjataan
+erikseen. Muu tarinakaanon ja julkaisuportit säilyvät.
 
 ## Tila ja tavoite
 
@@ -96,6 +99,53 @@ ja löydöistä. Tämä ei ole yleinen kahviloiden kielto eikä kehotus tehdä
 joka kaupungista muruvitsiä. Ateenan ja Sarajevon pilotin nämä kohdat
 korjattiin; muut omistajan hyväksymät repliikit säilytettiin.
 
+## Säilyvät sisältölinjaukset ja tämän työn rajat
+
+Alla on Raamatun säilyvien linjausten toimeenpanomuistio, ei niiden
+siirto pois Raamatusta tai uusi itsenäinen hyväksyntävaltuus:
+
+- **Omistajan hyväksymä tekstitoimitus:** nimetyn tekstisession omistajan
+  kanssa läpikäyty aineisto toimitetaan sanasta sanaan. Todellinen virhe
+  tai ristiriita palautetaan samalle toimitukselliselle omistajalle;
+  integraattori ei kirjoita sitä hiljaa uudelleen. Tämä ei tarkoita,
+  että minkä tahansa aliagentin ensimmäinen luonnos olisi hyväksytty.
+- **Kaupungin kommentti:** yksi Pulun jälkikommenttikupla on lähtökohta.
+  Aiemmin nimetyt erikoistapaukset, välihuudot ja harvinainen isoisän
+  merkinnästä perusteltu kuittaus eivät katoa; uusia lisäkuplia ei
+  lisätä kiertämään kaupunkiparin yhteismittaa. Erillistä lehtivihjekuplaa
+  ei palauteta. Vakavaa historiaa
+  välitetään nykyhetkeen ymmärrettävästi, ei kuitata naljailulla.
+- **Chat-kehys:** tämä kaupunkiparityö ei poista Raamatun chat-sääntöä.
+  Ensimmäinen aihetta koskeva kysymys tai suora puhuttelu saa Livian
+  oman lyhyen kehyksen, selkeän kirjakielisen tietovastauksen ja oman
+  loppukommentin. Saman aiheen automaattinen jatkokysymys vastataan
+  ilman uutta kehystä; uuden aiheen kohdalla kehys palaa. Historiallinen
+  ilmaus "pöllön äänellä" tarkoittaa tässä tietovastauksen tyyliä,
+  ei lupaa vaihtaa lukittua Flicker-äänitunnusta tai generoida chatia.
+- **Kieli ja konteksti:** Horatio voi ymmärtää paikallisen sanan väärin,
+  Livia osaa kielet. Rajattu oma sanasto opitaan yhteydestä ja toistosta;
+  Pulu ei kuluta jokaista kommenttia sanakirjaselitykseen. Vanhan
+  kahdeksan sanan listan korvaa Raamatussa jo 9.9. hyväksytty viiden
+  merellisen termin lista, ei tämän moduulin keksimä uusi sanasto.
+  Vanhaa harvaa, ei peräkkäisiin naapurikaupunkeihin keskittyvää käyttöä
+  ei ole peruttu. Termikohtainen 4–7 kaupungin jakelusääntö ja aiemman
+  paikalliskielitoimituksen kaupunkijako tarkistetaan Fablen kanssa
+  kaanonin yhdistämisessä; tästä docs-korjauksesta ei seuraa jo
+  hyväksytyn ja äänitetyn Euroopan sanamuotojen uusinta-ajoa.
+- **Kuvien alkuperä ja säilytys:** tekstisessio suunnittelee kuvakohtaisen
+  aiheen/promptin ja sen merkityksen. Kuvatoimitus ei liitä itsenäisesti
+  keksimiään aiheita tämän hyväksynnän nojalla peliin; promptin alkuperä
+  kirjataan toimitukseen. Hyväksyttyjä kuvia ei uusita vain uuden
+  tekstiedition vuoksi. Todellinen kuva–teksti-ristiriita ratkaistaan
+  tarkistamalla kuva ja luvallinen korjaustapa; uusi generointi tarvitsee
+  voimassa olevan erillisen luvan. PuluCam-sinetti, yksi RGBA-PNG ja
+  pitkän kuvatekstin Havainnekuva-linkki säilyvät teknisen ääni-/kuvaohjeen
+  mukaisina. Lyhyeen ei lisätä lähdemerkintää tai Havainnekuva-linkkiä.
+- **Luettava toimitus:** Euroopan 45 kaupungista toimitetaan yksi
+  Markdown-lukukopio ja kaupunkikohtaiset ennen/jälkeen-mitat. Puheteksti,
+  lyhyet/pitkät kuvatekstit, TTS-versio ja cue-ohje ovat eri kenttiä;
+  pelkkä ääni- tai testimanifesti ei korvaa luettavaa koontia.
+
 ## Kuuntelun ja kuvatekstien pituus
 
 Omistajan täsmennys 12.9.2026: isoisän ja Pulun osuuksien pituus saa
@@ -104,6 +154,11 @@ Yhteinen mitta jaetaan sisällön mukaan: toisessa kaupungissa Horatio saa
 enemmän tilaa, toisessa Livia. Jos Pulu tarvitsee lisää tilaa, isoisän
 osuudesta tiivistetään toistoa ja oivalluksen ympäriltä. Hyvä oivallus
 säilyy. Erillisiä lausekiintiöitä tai kaikille samaa jakosuhdetta ei ole.
+Horation aiempi 400 merkin yläraja säilytetään varovaisuusperiaatteella:
+sitä ei ole erikseen peruttu, eikä nykyinen tiivistetty aineisto tarvitse
+sen ylitystä. Vanha 360–400 merkin tavoite ja alle 300 merkin tekstin
+automaattinen pidentäminen eivät sen sijaan sovi tähän nimenomaiseen
+lyhennys- ja yhteismittatilaukseen. Yläraja ei ole täytettävä kiintiö.
 
 Kaupunkikorttiin kirjataan vertailun lähtöversio sekä molempien tekstien
 ja summan ennen/jälkeen-sana- ja merkkimäärät. Vertailussa ovat saman
@@ -242,6 +297,8 @@ kohdistus ja tarvittava median vienti ovat luentojen normaalia viimeistelyä.
 Lupa ei kata uusien kuvien generointia, muiden maanosien ääniä,
 yleischatin repliikkien erillistä uusinta-ajoa tai palvelutilauksen/
 krediittipaketin ostamista. Puuttuvat kuvat kirjataan erikseen.
+Myös Ihmisen matka -linssin omat luennat tarvitsevat edelleen erillisen
+ajoluvan; Euroopan kaupunkiparien lupa ei ulotu niihin.
 
 Yksi yhteistestattu valmis paketti toimitetaan Fablelle normaalien
 lopputarkistus-, yhdistämis- ja julkaisuporttien kautta. Paikalliset
