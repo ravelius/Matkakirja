@@ -6906,6 +6906,23 @@ export const RAAMATTU = {
           + 'pannataan paneelin luo; tekstin luettavuus mitoitetaan '
           + 'uloimmalle zoomille. Tila: era 1 ohjattu murrettuun palettiin '
           + 'ja feidaukseen 13.9.2026.',
+        'KARTTAUUDISTUKSEN PAATOKSET 3: UUDISTUS TEHDAAN PALLOLLE (omistaja '
+          + '13.9.2026 klo 11.05 UTC kysymyskortilla): peli avautuu pallolle '
+          + '(tasokartta pois kaytosta 7.9.2026, js/ui-apurit.js '
+          + 'VANHA_KARTTA_KAYTOSSA=false), joten koko karttauudistus - kohdemaan '
+          + 'varillinen topografia, punainen raja, aluevedet, maapaneeli, nostot, '
+          + 'Liiku-nappi - toteutetaan pallon laattakerrokseen '
+          + '(js/pallolaatat.js), ei tasokartalle. Tasokartta ei palaa. Era 1 (PR '
+          + '#2359, v-numero tama) toi laattaputken '
+          + '(tools/generoi-laattapyramidi.mjs --vari <ISO>, '
+          + 'tools/fokuskartta/piirto.js VARI_ASTEIKKO/VARI_SYVYYS), '
+          + 'aluevesipolun (js/maanaariviivat.js, 12 mpk) ja savukkeen '
+          + 'vastakokeineen; sen tasokarttakerros (js/laattapyramidi.js varitaso) '
+          + 'jaa pois kaytosta kunnes pallo kayttaa samaa laatastoa. Suunnitelman '
+          + 'erat 2-8 kirjoitetaan uudelleen pallolle. Paletti: murretut savyt + '
+          + 'muiden maiden feidaus (PAATOKSET 2), ei taysvaria; era 1:n '
+          + 'taysvariasteikko on vain putken oletus ja korvataan ennen julkaisua '
+          + 'pelinakymaan.',
         'Saapumiskortti: luettu matkakirjamerkintä + esittely '
           + 'kuvineen.',
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
