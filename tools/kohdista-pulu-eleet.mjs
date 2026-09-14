@@ -104,6 +104,18 @@ export function kelpaaSointiresepti(asetukset) {
   return vanha || uusi;
 }
 
+/**
+ * KAKSI LUKITTUA ULOSTULOMUOTOA. 14.9.2026 asti `mp3_44100_128`
+ * (ElevenLabsin Pro-tasoa edeltävä raja), siitä eteenpäin
+ * `mp3_44100_192` (omistaja päivitti tilauksen). Vanha on pidettävä
+ * kelvollisena, koska niiden 40 jo generoidun äänen kohdistus on yhä
+ * ajamatta. Mikä tahansa muu muoto hylätään: kohdistus luottaa siihen,
+ * että näytetaajuus on 44 100 Hz.
+ */
+export function kelpaaUlostulomuoto(muoto) {
+  return muoto === 'mp3_44100_192' || muoto === 'mp3_44100_128';
+}
+
 /** Hyväksy vain valmistuneen tuotantokuitin muuttumaton, SHA-sidottu city-3-tulos. */
 export async function kuittirivit(data) {
   if (!data || data.schemaVersion !== 1 || data.generationStatus !== 'completed'
@@ -122,7 +134,7 @@ export async function kuittirivit(data) {
       || await tekstinSha256(rivi.visibleText) !== sopimus.tekstiSha256
       || rivi.ttsText !== odotettuPuhe || await tekstinSha256(rivi.ttsText) !== rivi.ttsTextSha256
       || rivi.voiceId !== PULU_AANI_OLETUS || rivi.model !== PULU_MALLI_OLETUS
-      || !kelpaaSointiresepti(rivi.settings) || rivi.outputFormat !== 'mp3_44100_128'
+      || !kelpaaSointiresepti(rivi.settings) || !kelpaaUlostulomuoto(rivi.outputFormat)
       || rivi.generationStatus !== 'generated' || !/^[0-9a-f]{64}$/.test(artefakti?.sha256 ?? '')
       || !Number.isInteger(artefakti?.bytes) || artefakti.bytes <= 0
       || !(Number(artefakti?.actualDurationSeconds) > 0) || artefakti.fileName !== sopimus.aaniNimi

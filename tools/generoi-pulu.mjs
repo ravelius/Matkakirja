@@ -207,6 +207,18 @@ export const PULU_MALLI_OLETUS = 'eleven_v3';
 export const PULU_VAKAUS_OLETUS = 'natural';
 /** "flicker - cheerful fairy & sparkly sweetness" (omistajan valinta 12.9.2026). */
 export const PULU_AANI_OLETUS = 'piI8Kku0DcvcL6TTSeQt';
+/*
+ * ULOSTULOMUOTO 192 kbps (omistaja 14.9.2026, ElevenLabs Pro).
+ *
+ * Aiempi mp3_44100_128 vaati Pro-tason ohittamisen; nyt tilaus sallii
+ * 192 kbps:n. Kun putki ei enää koodaa uudelleen (LIVIA_KASITTELY),
+ * tämä on se AINOA koodaus, jonka ääni käy läpi — siksi sen laadulla
+ * on suora vaikutus lopputulokseen, toisin kuin ennen, jolloin
+ * korkeampi lähtölaatu olisi hukkunut toiseen 128 kbps sukupolveen.
+ * Vanhat, 128 kbps:llä generoidut kuitit pysyvät kelvollisina
+ * (ks. kohdista-pulu-eleet.mjs kelpaaUlostulomuoto).
+ */
+export const PULU_ULOSTULOMUOTO = 'mp3_44100_192';
 const MALLI = process.env.PULU_MALLI ?? PULU_MALLI_OLETUS;
 const TAGIT_KAYTOSSA = MALLI === 'eleven_v3';
 const VAKAUS = process.env.PULU_VAKAUS ?? PULU_VAKAUS_OLETUS;
@@ -333,7 +345,7 @@ export function kokoaTuotantokuitti(rivit, {
         voiceId,
         model,
         settings: asetukset,
-        outputFormat: 'mp3_44100_128',
+        outputFormat: PULU_ULOSTULOMUOTO,
         stagingObjectKey: staged ? `${batchPrefix}/${rivi.nimi}` : `${ampariKansio()}/${rivi.nimi}`,
         finalObjectKey: staged ? `${finalPrefix}/${rivi.nimi}` : `${ampariKansio()}/${rivi.nimi}`,
         promotionStatus: staged ? 'pending-code-deploy' : 'not-required',
@@ -1376,7 +1388,7 @@ async function haeAanet(avain, haku = '') {
 
 /** Yksi maksullinen kutsu: yksi repliikki levylle. */
 async function haeApista(puhe, aani, avain, kohde) {
-  const osoite = `${PUHE_OSOITE}/${aani}?output_format=mp3_44100_128`;
+  const osoite = `${PUHE_OSOITE}/${aani}?output_format=${PULU_ULOSTULOMUOTO}`;
   const vastaus = await fetch(osoite, {
     method: 'POST',
     headers: { 'xi-api-key': avain, 'Content-Type': 'application/json' },
@@ -1635,6 +1647,7 @@ async function main() {
       + `${tyot.length} repliikkiä, malli ${MALLI}, tempo ${liput.tempo}.`);
     console.log(`  voice_settings: stability ${STABILITY} — similarity_boost, style ja `
       + 'use_speaker_boost jätetään pois (ElevenLabsin omat oletukset, omistaja 14.9.2026).');
+    console.log(`  ulostulomuoto: ${PULU_ULOSTULOMUOTO} (ElevenLabs Pro, omistaja 14.9.2026).`);
     console.log(`  jälkikäsittely: ${LIVIA_KASITTELY ? 'ffmpeg-ketju' : 'EI MITÄÄN — mallin mp3 '
       + 'sellaisenaan, sama sha256 raaka- ja final-avaimessa'}.`);
     console.log(`  raakatuotokset menisivät avaimeen ${

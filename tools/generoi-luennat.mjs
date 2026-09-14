@@ -26,7 +26,7 @@
  *
  * Resepti on sama kuin aiemmissa luennoissa (docs/muistiinpanot-fablelle.md):
  * ääni "Viisas Kertoja", malli eleven_v3, /v1/text-to-dialogue,
- * mp3_44100_128. Stability kävi arvossa 0.4, mutta palautettiin
+ * mp3_44100_192 (14.9.2026 asti mp3_44100_128). Stability kävi arvossa 0.4, mutta palautettiin
  * 0.5:een omistajan palautteesta 7.8.2026: "äänen vaihteluarvoa
  * kannattaa ottaa takaisinpäin, hyppii vähän liikaa".
  *
@@ -75,7 +75,14 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const AANI = 'Sz0tRTEpybtDJ9ru2kgD'; // Viisas Kertoja
 export const MALLI = 'eleven_v3';
 export const STABILITY = 0.5;
-export const OUTPUT_FORMAT = 'mp3_44100_128';
+/*
+ * ULOSTULOMUOTO 192 kbps (omistaja 14.9.2026, ElevenLabs Pro).
+ * Horation putki ei käsittele ääntä lainkaan, joten tämä on ainoa
+ * koodaus, jonka luenta käy läpi — aiempi mp3_44100_128 oli Pro-tasoa
+ * edeltävä raja. Muoto on osa erätunnusta (tuotantoEraId), joten uudet
+ * ajot saavat oman erätunnuksensa eivätkä sekoitu vanhoihin.
+ */
+export const OUTPUT_FORMAT = 'mp3_44100_192';
 export const KUITIN_VERSIO = 1;
 const ERAN_TURVARAJA = 10;
 /*

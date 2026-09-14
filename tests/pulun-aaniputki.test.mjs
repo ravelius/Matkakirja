@@ -22,8 +22,10 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import {
-  LIVIA_KASITTELY, raakaAmpariKansio, raakavientiEste, tulkitseArgumentit,
+  LIVIA_KASITTELY, PULU_ULOSTULOMUOTO, raakaAmpariKansio, raakavientiEste, tulkitseArgumentit,
 } from '../tools/generoi-pulu.mjs';
+import { OUTPUT_FORMAT as HORATIO_ULOSTULOMUOTO } from '../tools/generoi-luennat.mjs';
+import { kelpaaUlostulomuoto } from '../tools/kohdista-pulu-eleet.mjs';
 
 const LAHDE = readFileSync(new URL('../tools/generoi-pulu.mjs', import.meta.url), 'utf8');
 
@@ -92,6 +94,27 @@ test('voice_settings antaa vain stabilityn', () => {
   for (const kentta of ['similarity_boost', 'style', 'use_speaker_boost']) {
     assert.equal(runko.includes(kentta), false,
       `${kentta} lähetetään yhä — omistaja tilasi rajapinnan omat oletukset`);
+  }
+});
+
+// ── 4. ulostulomuoto 192 kbps ──────────────────────────────────────
+
+test('molemmat äänet pyytävät 192 kbps (ElevenLabs Pro, omistaja 14.9.2026)', () => {
+  assert.equal(PULU_ULOSTULOMUOTO, 'mp3_44100_192');
+  assert.equal(HORATIO_ULOSTULOMUOTO, 'mp3_44100_192');
+  // Muoto on luettava vakiosta, ei kirjoitettuna kahteen paikkaan:
+  // pyyntö ja kuitti eivät saa päästä eri muotoihin.
+  assert.match(LAHDE, /output_format=\$\{PULU_ULOSTULOMUOTO\}/);
+  assert.match(LAHDE, /outputFormat: PULU_ULOSTULOMUOTO,/);
+  assert.equal(LAHDE.includes("outputFormat: 'mp3_44100_128'"), false);
+});
+
+test('kohdistus hyväksyy uuden ja vanhan muodon, ei muuta', () => {
+  // Vanha on pidettävä kelvollisena: 40 äänen kohdistus on yhä ajamatta.
+  assert.equal(kelpaaUlostulomuoto('mp3_44100_192'), true);
+  assert.equal(kelpaaUlostulomuoto('mp3_44100_128'), true);
+  for (const vaara of ['mp3_22050_32', 'mp3_44100_64', 'pcm_44100', '', null, undefined]) {
+    assert.equal(kelpaaUlostulomuoto(vaara), false, `hyväksyi väärän muodon: ${vaara}`);
   }
 });
 

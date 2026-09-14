@@ -86,7 +86,7 @@ test('tuotantokuitti sitoo näkyvän ja TTS-tekstin sekä koko reseptin', () => 
   assert.equal(rivi.ttsText.sha256, sha(rivi.ttsText.text));
   assert.deepEqual(rivi.synthesis, {
     voiceId: 'Sz0tRTEpybtDJ9ru2kgD', model: 'eleven_v3', settings: { stability: 0.5 },
-    outputFormat: 'mp3_44100_128', postprocess: { kind: 'none' },
+    outputFormat: 'mp3_44100_192', postprocess: { kind: 'none' },
   });
   assert.deepEqual(rivi.generation, { status: 'success', retryReason: 'HTTP 503 edellisessä erässä' });
   // Kuitti kirjaa raa'alle sekä sha256:n ETTÄ avaimen — pelkkä tiiviste

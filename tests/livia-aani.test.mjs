@@ -592,7 +592,9 @@ test('rajatun erän tuotantokuitti sitoo tekstin, reseptin ja artefaktit lähdec
   assert.match(u.ttsTextSha256, /^[0-9a-f]{64}$/);
   assert.equal(u.voiceId, 'voice-test');
   assert.equal(u.model, 'eleven_v3');
-  assert.equal(u.outputFormat, 'mp3_44100_128');
+  // 14.9.2026: ElevenLabs Pro, 128 → 192 kbps. Kun putki ei enää koodaa
+  // uudelleen, tämä on ainoa koodaus, jonka ääni käy läpi.
+  assert.equal(u.outputFormat, 'mp3_44100_192');
   assert.equal(u.stagingObjectKey, `aanet/pulu/erat/${kuitti.batchId}/livia-marseille-3.mp3`);
   assert.equal(u.finalObjectKey,
     `aanet/pulu/versiot/${'1'.repeat(12)}/${kuitti.batchId}/livia-marseille-3.mp3`);

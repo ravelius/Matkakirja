@@ -916,7 +916,8 @@ tiedosto (404) on hiljainen, ei virhe.
 
 **Generointi.** `tools/generoi-linssiluennat.mjs`, sama resepti kuin
 matkakirjaluennoilla (Viisas Kertoja, `eleven_v3`,
-`/v1/text-to-dialogue`, mp3_44100_128, stability 0,5). Viimeistely
+`/v1/text-to-dialogue`, mp3_44100_192 — 14.9.2026 asti mp3_44100_128,
+omistaja päivitti Pro-tasoon — stability 0,5). Viimeistely
 ffmpegillä: hiljaisuus pois molemmista päistä, 30 ms häivytykset,
 taso **−17 LUFS** (mitattu 4.9.2026 ämpärin muista kertojaluennoista:
 intro-puhe −17,1 · puhe-lento-alku −17,4 · puhe-fokus-matkakirja-lontoo
