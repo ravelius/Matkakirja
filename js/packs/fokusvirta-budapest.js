@@ -132,7 +132,7 @@ export const FOKUSVIRTA_BUDAPEST = {
       + 'tuuli; puntari putoaa.',
     /* KAANON (Fable) — teksti sellaisenaan, sanaakaan muuttamatta. */
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 367 merkkiä (yläraja 400). */
-    teksti: 'Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. Lämmössä kaupungit saivat odottaa järjestystä.',
+    teksti: "Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. Maksunkerääjä nyökkäsi ja piti kätensä ojossa.",
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -147,17 +147,49 @@ export const FOKUSVIRTA_BUDAPEST = {
      * liitetty yhteen" (taustatieto).
      */
     reaktiot: [
-      { id: 'budapest.r1', ankkuri: 'vanheni kesken aamiaisen', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'budapest.r2', ankkuri: 'Tonava piti suuntansa', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'budapest.r3', ankkuri: 'uutta nimeä', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'budapest.r4', ankkuri: 'odottaa järjestystä', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "budapest.r1",
+    "ankkuri": "liitettiin marraskuussa yhteen",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "budapest.r2",
+    "ankkuri": "Karttani vanheni kesken aamiaisen",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "budapest.r3",
+    "ankkuri": "Tonava piti suuntansa",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "budapest.r4",
+    "ankkuri": "pysyin nyt samassa kaupungissa",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "budapest.r5",
+    "ankkuri": "piti kätensä ojossa",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. [mischievously] Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Menin Rudasin kupolin alle miettimään uutta nimeä. [softly] Lämmössä kaupungit saivat odottaa järjestystä.',
+    luenta: "[curious] Buda, Pest ja Óbuda liitettiin marraskuussa yhteen. Karttani vanheni kesken aamiaisen, mutta Tonava piti suuntansa. Ketjusillalla minulta perittiin yhä ylitysmaksu. Huomautin, että pysyin nyt samassa kaupungissa. [warmly] Maksunkerääjä nyökkäsi ja piti kätensä ojossa.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-budapest.mp3',
   },
 
@@ -233,9 +265,7 @@ export const FOKUSVIRTA_BUDAPEST = {
      */
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Rudasissa kylvetään nyt katollakin. Höyry peitti vastarannan juuri, kun olin valmis lähtöön. Odotin aivan rauhallisesti — ainakin melkein.',
-    ],
+    kommentti: ["Ketjusillan leijonilla ei kuulemma ole kieliä. Lensin katsomaan suuhun: onhan siellä! Alhaalta niitä ei vain näe. Olin juuri lähdössä levittämään tietoa, kun opas kertoi uuden ryhmänsä edessä saman vanhan jutun. Hei! Minulla olisi tästä aivan tuore havainto!"],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
