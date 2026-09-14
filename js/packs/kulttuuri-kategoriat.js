@@ -586,9 +586,18 @@ export const KULTTUURI_KATEGORIAT = {
       // 21.8.2026, vaihtoehto A). Kenttä on valinnainen: aiheenOtsikko
       // näyttää otsikon, jos se on, muuten kategorian nimen. Jokaisen
       // otsikon viittaus löytyy sivun omasta johdannosta tai nostoista.
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026, Wienin Musiikki-
+       * sivun malli v1861). Sivun neljä juttua ovat kohdekartan pisteitä
+       * (Leake Streetin tunneli, Neljäs jalusta, Turbiinihalli,
+       * Liukumäkiveistos), joten vanha virke lupasi sivulle sisältöä, jota
+       * siellä ei enää ole. Vanha virke on tallella SANATARKASTI — perään
+       * on lisätty vain reitti kartalle. Uutta faktaa ei kirjoitettu.
+       */
       johdanto: 'Lontoossa nykytaide ei pysy museon seinällä: sitä maalataan '
         + 'junatunnelin kattoon, nostetaan tyhjälle patsasjalustalle ja '
-        + 'kiedotaan liukumäeksi olympiapuiston veistoksen ympärille.',
+        + 'kiedotaan liukumäeksi olympiapuiston veistoksen ympärille. Kaikki '
+        + 'neljä ovat nyt omina pisteinään kaupungin kartalla.',
       /*
        * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
        * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
@@ -633,10 +642,18 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'luonto',
       nimi: 'Joki ja puisto',
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026, Wienin malli).
+       * Kumpikin juttu on kartalla: "Thamesin vuorovesi"
+       * (syvennys-lontoo-vuorovesi) kohdekartan pisteenä ja Richmond Park
+       * (syvennys `hirvet`, kattoVapaa) pääkartan merkkinä — siksi jatke
+       * sanoo "kartalle" eikä "kaupungin kartalle". Vanha virke on tallella
+       * SANATARKASTI; uutta faktaa ei kirjoitettu.
+       */
       johdanto: 'Thames on vuorovesijoki, ja laskuveden aikaan sen kivinen '
         + 'ranta paljastuu keskellä miljoonakaupunkia. Kulman takana on '
         + 'toinen maailma: aidattu puisto, jossa kulkee vapaana lauma '
-        + 'hirviä.',
+        + 'hirviä. Molemmat on merkitty kartalle omina pisteinään.',
       /*
        * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
        * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
@@ -2757,9 +2774,18 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'tiede',
       nimi: 'Tiede ja tekniikka',
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026, Wienin Musiikki-
+       * sivun malli v1861). Kaikki kolme ovat kartalla omilla nimiöillään:
+       * "Vuoristovesijohto" kohdekartan pisteenä, "Konehalli" (syvennys
+       * `sahko`) ja "Näyttely ja pörssi" (täkynosto `maailmannayttely-1873`)
+       * pääkartan merkkeinä — jatke sanoo siksi "kartalta". Vanha virke on
+       * tallella SANATARKASTI; uutta faktaa ei kirjoitettu.
+       */
       johdanto: 'Isoisän matkavuonna Wien avasi maailmannäyttelyn ja '
         + 'vuoristovesijohdon. Näyttelyhallissa sattui myös vahinko, joka '
-        + 'muutti tehtaat: kone pyörähti väärään suuntaan.',
+        + 'muutti tehtaat: kone pyörähti väärään suuntaan. Näyttely, '
+        + 'vesijohto ja konehalli löytyvät nyt kartalta omina merkkeinään.',
       /*
        * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
        * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
@@ -2856,9 +2882,18 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'luonto',
       nimi: 'Eläimet kaupungissa',
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026, Wienin Musiikki-
+       * sivun malli v1861). Kumpikin juttu on pääkartan merkkinä
+       * ("Keskushautausmaa", syvennys `kauriit`, ja "Kirahvi ja muoti",
+       * täkynosto `kirahvimuoti`; molemmat kattoVapaa, koska paikat jäävät
+       * kohdekartan rajauksen ulkopuolelle) — siksi jatke sanoo "kartalla"
+       * eikä "kaupungin kartalla". Vanha virke on tallella SANATARKASTI.
+       */
       johdanto: 'Wienin keskushautausmaalla laiduntaa parikymmentä kaurista '
         + 'vanhojen hautakivien lomassa, ja Schönbrunniin tuotu kirahvi '
-        + 'muutti aikoinaan kaupungin kampaukset, kankaat ja seuraelämän.',
+        + 'muutti aikoinaan kaupungin kampaukset, kankaat ja seuraelämän — '
+        + 'kumpikin tarina odottaa kartalla omalla merkillään.',
       /*
        * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
        * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
@@ -3539,8 +3574,16 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'urheilu',
       nimi: 'Urheilu',
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026, Wienin malli).
+       * Sivun molemmat jutut yhdistettiin erässä 10 YHDEKSI kortiksi
+       * ("Kaksi joukkuetta", nosto-madridin-kaksi-joukkuetta), joten jatke
+       * puhuu yhdestä pisteestä eikä kahdesta. Vanha virke on tallella
+       * SANATARKASTI; uutta faktaa ei kirjoitettu.
+       */
       johdanto: 'Kaupungissa on kaksi suurta jalkapalloseuraa, ja kummallakin on '
-        + 'oma suihkulähde, jonka päälle mestaruus kiivetään juhlimaan.',
+        + 'oma suihkulähde, jonka päälle mestaruus kiivetään juhlimaan — '
+        + 'molemmat seurat jakavat nyt yhden pisteen kaupungin kartalla.',
       /*
        * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
        * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
@@ -3585,8 +3628,15 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'rakennukset',
       nimi: 'Kadut ja talot',
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026, Wienin malli).
+       * Kumpikin juttu on kohdekartan piste ("Gran Vía" ja "Palamaton
+       * linna"). Vanha virke on tallella SANATARKASTI; uutta faktaa ei
+       * kirjoitettu.
+       */
       johdanto: 'Kaupungin läpi murrettiin katu hopeisella hakulla, ja palaneen '
-        + 'linnan tilalle rakennettiin sellainen, joka ei voisi palaa.',
+        + 'linnan tilalle rakennettiin sellainen, joka ei voisi palaa. Katu '
+        + 'ja linna ovat nyt kaupungin kartalla, kumpikin omalla paikallaan.',
       /*
        * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
        * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
@@ -4122,9 +4172,16 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'rakennukset',
       nimi: 'Tornit ja torit',
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026, Wienin malli).
+       * Kumpikin juttu on kohdekartan piste ("Maailmankello" ja "Paavin
+       * kosto"). Vanha virke on tallella SANATARKASTI; uutta faktaa ei
+       * kirjoitettu.
+       */
       johdanto: 'Syksyllä 1969 Alexanderplatzille valmistui neljän päivän välein '
         + 'kaksi asiaa: kello, joka näyttää maailman ajat, ja torni, joka '
-        + 'näkyy kaikkialle kaupunkiin.',
+        + 'näkyy kaikkialle kaupunkiin — ja kumpikin seisoo nyt omana '
+        + 'pisteenään kaupungin kartalla.',
       /*
        * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
        * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
@@ -4179,9 +4236,18 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'historia',
       nimi: 'Historia',
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026, Wienin malli).
+       * Kolme neljästä on kohdekartan pisteitä ("Brandenburgin portti",
+       * "Berliinin karhu", "Lehmän hinnalla") ja neljäs, Köpenickin
+       * kapteeni, on pääkartan merkkinä (täkynosto `kopenickin-kapteeni`,
+       * kattoVapaa) — siksi jatke sanoo "kartalla" eikä "kaupungin
+       * kartalla". Vanha virke on tallella SANATARKASTI.
+       */
       johdanto: 'Portti, josta alkaa Unter den Linden, sinetin karhu vuodelta '
         + '1280, univormu joka valtasi kaupungintalon — ja kivilaatta, josta '
-        + 'museo maksoi 20 000 kultamarkkaa.',
+        + 'museo maksoi 20 000 kultamarkkaa. Jokainen neljästä on nyt oma '
+        + 'merkkinsä kartalla.',
       /*
        * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
        * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
@@ -6194,9 +6260,16 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'musiikki',
       nimi: 'Musiikki',
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026, Wienin malli).
+       * Muusikot ovat yhtenä kohdekartan pisteenä ("Pariisi soi", Palais
+       * Garnier) ja ooppera omanaan ("Carmenin ensi-ilta"). Vanha virke on
+       * tallella SANATARKASTI; uutta faktaa ei kirjoitettu.
+       */
       johdanto: 'Kaksi muusikkoa aloitti Pariisin kaduilta ja kaupungin laidan '
         + 'asuntovaunuleiriltä — ja yksi ooppera kaatui täällä ensi-illassaan '
-        + 'ennen kuin se nousi maineeseen muualla.',
+        + 'ennen kuin se nousi maineeseen muualla. Muusikot ja ooppera ovat '
+        + 'nyt omilla pisteillään kaupungin kartalla.',
       /*
        * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 5, 13.9.2026).
        * Sivun kolme nostoa ovat nyt yksi karttapala "Pariisi soi"
@@ -6234,10 +6307,16 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'historia',
       nimi: 'Historia',
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026, Wienin malli).
+       * Johdannon nimeämät kolme ovat kaikki kohdekartan pisteitä
+       * ("Kyyhkyposti", "Tuileriain rauniot", "Impressionistit"). Vanha
+       * virke on tallella SANATARKASTI; uutta faktaa ei kirjoitettu.
+       */
       johdanto: 'Isoisän matkavuoden Pariisi oli yhä piirityksen ja palon '
         + 'jäljiltä auki. Samat vuodet jättivät kaupunkiin kyyhkypostin, '
         + 'palatsin rauniot ja maalaussuunnan, jonka nimi oli alun perin '
-        + 'pilkkaa.',
+        + 'pilkkaa. Kaikki kolme on nyt merkitty kaupungin kartalle.',
       /*
        * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 5, 13.9.2026).
        * Sivun seitsemällä nostolla oli jo karttapaikka — kuudella
@@ -7874,8 +7953,14 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'taide',
       nimi: 'Taide',
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026, Wienin malli).
+       * Kumpikin maalaus on kohdekartan piste ("Yövartio" ja "Maitotyttö").
+       * Vanha virke on tallella SANATARKASTI; uutta faktaa ei kirjoitettu.
+       */
       johdanto: 'Kaksi maalausta samassa museossa: toisesta sahattiin palat pois, '
-        + 'toisen alta löytyi tavaroita, jotka maalari itse peitti.',
+        + 'toisen alta löytyi tavaroita, jotka maalari itse peitti. Kumpikin '
+        + 'maalaus on nyt oma pisteensä kaupungin kartalla.',
       /*
        * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
        * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
@@ -12561,9 +12646,15 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'arki',
       nimi: 'Arki ja vesi',
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026, Wienin malli).
+       * Kumpikin juttu on kohdekartan piste ("Aqua Virgo" ja "Nasone").
+       * Vanha virke on tallella SANATARKASTI; uutta faktaa ei kirjoitettu.
+       */
       johdanto: 'Roomassa vesi ei ole koskaan loppunut kesken: sama vuorilta tuleva '
         + 'virta, joka täytti keisarien kylpylät, tulee yhä ilmaiseksi '
-        + 'kadunkulman rautapylväästä.',
+        + 'kadunkulman rautapylväästä — vesijohto ja pylväs ovat molemmat '
+        + 'kaupungin kartalla.',
       tehtava: {
         kysymys: 'Mikä saa nasone-pylvään veden suihkuamaan ylöspäin?',
         vaihtoehdot: ['Pylvään kyljessä oleva nappi', 'Koukkuputken nostaminen ylös', 'Sormi putken suun päällä', 'Poljin pylvään juuressa'],
@@ -12610,9 +12701,18 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'historia',
       nimi: 'Historia',
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026, Wienin malli).
+       * Kaksi kolmesta on kohdekartan pisteitä ("Vatikaanin palatsi" ja
+       * "Torre Argentina"); Aventinuksen avaimenreikä jää kohdekartan
+       * eteläreunan alapuolelle ja on pääkartan merkkinä (syvennys
+       * `avaimenreika`, kattoVapaa) — siksi jatke sanoo "kartalle" eikä
+       * "kaupungin kartalle". Vanha virke on tallella SANATARKASTI.
+       */
       johdanto: 'Paavi jäi Vatikaaniin vangiksi kolme vuotta ennen isoisän '
         + 'käyntiä, Aventinuksella katsotaan avaimenreiästä kolmen valtion '
-        + 'läpi, ja Caesarin murhapaikalla asuu kissalauma.',
+        + 'läpi, ja Caesarin murhapaikalla asuu kissalauma. Kaikki kolme '
+        + 'paikkaa on merkitty kartalle.',
       /*
        * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
        * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
