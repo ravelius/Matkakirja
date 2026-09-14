@@ -599,9 +599,41 @@ export function maanAluevesiRenkaat(data, iso, d = ALUEVESI_YKSIKKOA) {
   }
   const muistista = aluevesiRengasMuisti.renkaat.get(iso);
   if (muistista !== undefined) return muistista;
+  /*
+   * ====== HARVENNUS VAIN PUSKURIN KANSSA (mitattu 14.9.2026) =======
+   *
+   * Yllä oleva perustelu on *"puskuri on leveämpi kuin virhe"*: 1,2
+   * yksikön poikkeama katoaa 6,7 yksikön aluevesikaistaleen sisään,
+   * eikä kukaan näe sitä. TASOITUSAJOSSA PUSKURIA EI OLE (omistaja
+   * 13.9.2026: *"Aluevesien sininen ei kuulu alkuperäiseen"* →
+   * tools/generoi-laattapyramidi.mjs LEIKKURIN_PUSKURI = 0), ja
+   * silloin harvennettu rengas ON se reuna, jonka pelaaja näkee:
+   * kerma leikataan siitä, mutta elävä ääriviiva
+   * (paivitaPallonMaakorostus → maanRenkaatAsteina) piirretään
+   * HARVENTAMATTOMISTA renkaista. Kaksi eri geometriaa samasta
+   * aineistosta — juuri se kahden totuuden paikka, jonka Raamattu
+   * kieltää.
+   *
+   * MITATTU (Kreikka, assets/data/maapolygonit.json; raportti
+   * docs/raportit/viesti-fable-siirtyma-20260914.md): kärkipisteen
+   * poikkeama harvennettuun reunaan mediaani 0, p95 0,57 ja max 1,005
+   * lautayksikköä (3,4 km) = saapumisnäkymässä 2,7…4,7 css-pikseliä.
+   * Pikkusaarilla, joiden koko rengas on 3…6 yksikköä, kerma peittää
+   * 12…32 % saaren maasta ja reikä ulottuu 4…16 % merelle —
+   * omistajan *"poikkeavat jopa puoli saarta"*.
+   *
+   * KORJAUS ON YKSI EHTO EIKÄ UUSI LÄHDE: kun puskuria ei ole,
+   * harvennusta ei ole, ja leikkuri on sama rengas kuin ääriviiva.
+   * Renkaat ovat silloin tiheämpiä (Kreikka 1 758 → 2 625 pistettä),
+   * mikä on polttoajon kertaluonteista työtä eikä kehyskustannus.
+   * VAIKUTUS NÄKYY VASTA, KUN TASOITUSLAATAT ON POLTETTU UUDESTAAN:
+   * leikkuri on poltettu laattaan (tools/fokuskartta/maailmapiirto.js
+   * polttaVariLeikkuri), ei ajettu elävänä.
+   */
+  const harvennus = d > 0 ? HARVENNUS_YKSIKKOA : 0;
   const ulos = [];
   for (const rengas of puraMaanRenkaat(data, iso)) {
-    const tulos = tyonnaUlos(harvenna(rengas, HARVENNUS_YKSIKKOA), d);
+    const tulos = tyonnaUlos(harvenna(rengas, harvennus), d);
     if (!tulos) continue;
     // `alku` on maan oma rengas (samaan kiertosuuntaan käännettynä) ja
     // `puskuri` sen ulospäin työnnetty vastine: nonzero-täyttö tekee
