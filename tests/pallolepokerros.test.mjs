@@ -80,15 +80,22 @@ test('tason valinta: matalin taso jonka px/aste riittää, syvin kun mikään ei
 
 test('versiovahti: kerros vain kun pallon sarja on poltettu samasta pyramidista', () => {
   const pyramidi = { versio: 'A', viivataso: { versio: 'V' }, nostotaso: { versio: 'N' } };
+  /*
+   * VIIVATASO ON AINA EPÄTOSI PALLOLLA (Raamattu KARTTAUUDISTUKSEN
+   * PAATOKSET 9 kohta 6): poltettu reittiverkko oli se viuhka, joka
+   * näkyi kaupungissa seistessä, ja rajat pallo piirtää vektorina.
+   * Versiovahti pysyy ennallaan — se vahtii, että sarja ja pyramidi
+   * ovat samaa ajoa.
+   */
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A', viivat: 'V', nostot: 'N' }, pyramidi),
-    { pohja: true, ranta: false, viiva: true, nosto: true, vari: false });
+    { pohja: true, ranta: false, viiva: false, nosto: true, vari: false });
   // Rantataso (V4): rannan kanssa poltettu sarja vaatii saman rantaversion;
   // rannaton sarja (ranta null, vektorit piirtävät rannan) ohittaa tason.
   const pyramidiRanta = { ...pyramidi, rantataso: { versio: 'R' } };
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A', ranta: 'R', viivat: 'V', nostot: 'N' }, pyramidiRanta),
-    { pohja: true, ranta: true, viiva: true, nosto: true, vari: false });
+    { pohja: true, ranta: true, viiva: false, nosto: true, vari: false });
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A', ranta: null, viivat: 'V', nostot: 'N' }, pyramidiRanta),
-    { pohja: true, ranta: false, viiva: true, nosto: true, vari: false });
+    { pohja: true, ranta: false, viiva: false, nosto: true, vari: false });
   assert.equal(lepokerroksenKerrokset({ versio: 'A', ranta: 'R2', viivat: 'V', nostot: 'N' }, pyramidiRanta), null, 'eri ranta');
   // Pohjasarja ilman viivoja ja nostoja: vain pohja (nostot ovat pallolla elävinä).
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A' }, pyramidi),

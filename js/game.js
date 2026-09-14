@@ -1786,6 +1786,22 @@ export class Game {
     this.travelMode = null;
     this.pendingFare = 0;
     this.phase = 'action';
+    /*
+     * ESIVALINTA PURKAUTUU TÄSSÄ (mitattu 14.9.2026, reittiviuhkan erä).
+     *
+     * `autoTravel` tarkoittaa *"peli valitsi tavan pelaajan puolesta"*
+     * (beginTurn), ja juuri sitä lukee js/ui.js matkaSessioKesken
+     * erottaakseen vuoron lepotilan aidosta matkan vaiheesta. Kun
+     * pelaaja painaa "Vaihda matkustustapa", esivalinta on purettu — ja
+     * jos lippu jäi päälle, pelaajan ITSE seuraavaksi valitsema tapa
+     * luettiin yhä koneen esivalinnaksi ja matkasessio katkesi kesken
+     * matkan liu'un sulkeutuessa (viuhka katosi nopanheiton alta).
+     * `jatkaAutomaattisesti` on saman esivalinnan jatke (matka kesken
+     * reittiä), eikä sitäkään saa jäädä kaupunkiin palanneeseen
+     * vuoroon.
+     */
+    this.autoTravel = false;
+    this.jatkaAutomaattisesti = false;
     return { ok: true };
   }
 
