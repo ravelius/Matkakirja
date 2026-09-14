@@ -38,3 +38,5 @@ kirjauksessa.
 | 18 | NLD | 34804015482 | success | 2026-09-14-tasoitus | true |
 | 19 | NOR | 34804120620 | success | 2026-09-14-tasoitus | true |
 | 20 | POL | 34804502359 | success | 2026-09-14-tasoitus | true |
+| 21 | PRT | 34804671924 | success | 2026-09-14-tasoitus | true |
+| 22 | ROU | 34804799425 | success | 2026-09-14-tasoitus | true |
