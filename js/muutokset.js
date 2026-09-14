@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1901, teksti: 'Tasoituslaatat 27 maalle korjatulla leikkurilla (raportti)' },
   { v: 1900, teksti: 'Linssi: laattalukko ja kermalaattojen ohitus lennon ajaksi' },
   { v: 1899, teksti: 'Puhelimella pulun plus-kupla avaa repliikin tekstin' },
   { v: 1898, teksti: 'Puhelimen saapumisnäkymä sovitetaan korkeuteen' },
