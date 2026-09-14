@@ -269,7 +269,14 @@
      --luentakuva-korkeus    kuvan korkeuskatto (pystykuva ei karkaa)
      --luentakuva-kallistus  kierto asteina; js kirjoittaa kaupungin oman
                              kulman tähän (luentakuvanKallistus)
-     --luentakuva-pienennys  pienen kuvan mittakaava kartan liikkeen jälkeen
+     --luentakuva-pienennys  pienen kuvan mittakaava kartan liikkeen jälkeen;
+                             JS KIRJOITTAA TÄMÄN (js/fokusvirta.js
+                             kirjoitaPienennys) niin, että valokuvan
+                             korkeus on aina PIENEN_KUVAN_KORKEUS_PX —
+                             tässä oleva luku on vara-arvo ennen
+                             mitoitusta (omistaja 14.9.2026: koko ei saa
+                             riippua siitä, paljonko ISOLLE kuvalle
+                             sattui jäämään tilaa)
      --luentakuva-tablettikerroin  tabletin puolitoistakertaistus (ks. alla)
 
    TYÖPÖYTÄ: leveys 38 % näkymästä, katto 640 px (omistaja: kuva oli
