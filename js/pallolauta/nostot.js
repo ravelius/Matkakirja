@@ -257,6 +257,172 @@ export function lehdenOsuus(pohja, nakyva, packId = null) {
   if (packId && pohja.lauta && pohja.lauta !== packId) return 0;
   return pohja.bbox.w / nakyva.w;
 }
+/*
+ * ══ PÄÄKARTAN MERKKIRAJA JA LÄHIZOOMIPORTTI (`nosto.lahi`) ════════
+ *
+ * KAKSI AVOINTA ASIAA SAMASTA JUURESTA. Karttauudistuksen erä 10
+ * jätti Fablelle kaksi kohtaa (docs/raportit/viesti-fable-
+ * karttauudistus-era10-20260913.md 11.5 ja 11.7.5): pääkartan 21
+ * merkin raja on rikki seitsemässä maassa, ja suunnitelman luvun 4.5
+ * lupaama per-nosto-portti `nosto.lahi` puuttuu yhä. Ne ovat sama
+ * asia: raja pitää, kun ylimääräiset merkit siirtyvät lähizoomiin.
+ *
+ * MITATTU LÄHTÖTILA (node tools/laske-karttanostot.mjs, origin/main
+ * 14.9.2026): GRC 33, TUR 29, DEU 28, ESP 25, HRV 23, ITA 22, RUS 22 —
+ * seitsemän maata yli 21:n, muut 112:sta rajan sisällä.
+ *
+ * MITÄ RAJA TEKI TÄHÄN ASTI: EI MITÄÄN. Luku 21 ei ollut koodissa
+ * missään, vaan pelkkänä vakiona savukkeessa
+ * (tools/savukkeet/savuke-kaupunkien-nostot.mjs PAAKARTAN_KATTO).
+ * Peli piirsi kaikki merkit — ei hiljaista pudotusta, ei virhettä
+ * pelaajalle. Ainoat oikeasti pudottavat katot ovat muualla ja eri
+ * asiaa varten: kaupunkiruuhkan katto 3 merkkiä 8 yksikön säteellä
+ * (js/fokuskohteet.js karsiKaupunkiruuhka) ja CSS2D-elementtien katto
+ * NOSTOJEN_KATTO 40 kappaletta (yllä). Tämä portti on siis ensimmäinen
+ * kerta, kun 21 on sääntö eikä toive.
+ *
+ * SÄÄNTÖ (Fable 14.9.2026): RAJA EI NOUSE HILJAA. Uloimmalla zoomilla
+ * piirtyy enintään PAAKARTAN_MERKKIKATTO tärkeintä merkkiä; loput
+ * tulevat näkyviin zoomatessa. Mitään ei poisteta.
+ *
+ * TÄRKEYSJÄRJESTYS. Datassa ei ole yleistä tärkeyskenttää — ainoa
+ * olemassa oleva järjestys (js/fokuskohteet.js nostonPrioriteetti) on
+ * kaupunkiruuhkan oma eikä sovi tähän, koska se pudottaisi kaupungit
+ * ja maastokohteet ENNEN nostokortteja. Fablen antama järjestys on
+ * siksi: kaupunkimerkit ensin, sitten aarteet (Matkakirjan ihmeet),
+ * sitten kaikki muu DATAN OMASSA JÄRJESTYKSESSÄ. Järjestys on vakaa
+ * (tasapelin ratkaisee alkuperäinen rivinumero), joten sama data antaa
+ * saman kartan joka ajolla.
+ *
+ * PER-NOSTO-PORTTI: `lahi: true`. Kohde, jonka datassa on `lahi: true`,
+ * EI piirry uloimmalla zoomilla lainkaan — ei silloinkaan, kun maassa
+ * on tilaa katon alla. Se on suunnitelman luvun 4.5 kenttä: sisältö,
+ * joka kuuluu lähikuvaan eikä maan yleiskuvaan.
+ *
+ * MITTA ON OSUUS ULOIMMASTA ZOOMISTA — JA SE ON MITATTU VALINTA.
+ * Ensimmäinen yritys käytti samaa lukua kuin koko kerroksen portti
+ * (lehdenOsuus = maan lehden bbox / näkymän leveys). MITTAUS KAATOI
+ * SEN: saapumisnäkymä ei ole sama osuus joka maassa, koska
+ * saapumislaatikko on maan ÄÄRIVIIVOJEN laatikko (+ maapaneeli) ja
+ * lehden bbox on fokuspohjan ikkuna. Chromium 390 × 844, `saavu()`
+ * ajettuna, osuus saapumisnäkymässä ja yksi porras sisäänpäin:
+ *
+ *     TUR  1,31 → 2,62      ESP  1,91 → 3,83      DEU  1,94 → 3,89
+ *     GRC  1,93 → 3,85      FRA  2,14 → 4,27      ITA  3,00 → 5,99
+ *     RUS  31,27 → 62,53   (Venäjän saapumislaatikko on yksi rengas)
+ *
+ * Turkin PORRAS SISÄÄNPÄIN (2,62) on pienempi kuin Italian
+ * SAAPUMISNÄKYMÄ (3,00), joten yksikään kiinteä osuusluku ei voi olla
+ * yhtä aikaa kiinni saavuttaessa ja auki portaan päässä. Mitta on siksi
+ * se, mikä portti oikeasti tarkoittaa: PALJONKO NÄKYMÄ ON ULOIMMASTA
+ * SALLITUSTA. Uloszoomaus on lukittu maan laatikkoon
+ * (js/pallolauta/kamera.js ULOSZOOMAUKSEN_KERROIN, js/pallolauta/lauta.js
+ * maanZoomiraja), ja lauta antaa tälle kerrokselle valmiiksi lasketun
+ * osuuden `uloinOsuus` = kameran korkeus / uloin sallittu korkeus.
+ * Kerros ei siis arvaa rajaa eikä pidä siitä omaa muistia — ensimmäinen
+ * yritys teki niin ("levein tällä maalla nähty näkymä") ja MITTAUS
+ * KAATOI SENKIN: sivun latauksessa kamera ehtii olla laatikkoa
+ * leveämmällä ennen kuin raja on asetettu, jolloin muisti venyi
+ * (Espanja: uloin muistiin 746,2 kun saapumisnäkymä on 499,7) ja portti
+ * oli auki jo saavuttaessa.
+ *
+ * Korkeuden osuus on sama luku kuin leveyden osuus: näkyvä leveys on
+ * tällä korkeusvälillä suoraan verrannollinen korkeuteen (mitattu
+ * Ranskassa: korkeus 0,6268 → leveys 538,8 ja korkeus 0,3134 → 269,4).
+ *
+ * ILMAN RAJAA PORTTI ON KIINNI. Jos maan laatikkoa ei ole (aineisto ei
+ * vielä ladattu, tai kehittäjätilan maailmanappi vapauttaa zoomin),
+ * `uloinOsuus` on 0 ja katto on voimassa — mieluummin katto turhaan
+ * kuin ohi vahingossa.
+ *
+ * Yksi zoomiporras puolittaa näkyvän leveyden (js/pallolauta/kamera.js
+ * PALLOLAUDAN_SIIRTOLEVEYS: *"puolet saapumisleveydestä eli yksi
+ * lähennys saapumisnäkymästä"*), joten kynnys 0,7 on saapumisnäkymän
+ * (1,0) ja yhden portaan (0,5) geometrisessa keskivälissä: kumpikaan
+ * pää ei ole rajatapaus, eikä luku riipu maasta.
+ *
+ * POLTETTUA MUSTETTA EI VOI PIILOTTAA. Pallon merkeistä valtaosa on
+ * poltettu laattoihin (mitattu 14.9.2026 nostotasosta
+ * 2026-09-07a-nostot-f: GRC 32/33, TUR 27/29, DEU 24/28, HRV 21/23,
+ * ITA 21/22, RUS 21/22 — ESP 0/25). Poltettu merkki piirtyy laatasta
+ * riippumatta tästä kerroksesta, joten portti ei voi ottaa sitä pois
+ * ruudulta. Se jätetään siksi NAPAUTETTAVAKSI — muuten kartalla olisi
+ * mustetta ilman korttia — ja kirjataan POLTTOVELAKSI (`polttovelka`),
+ * samalla tavalla kuin tingitty nimiö (js/fokuskohteet.js "TINKIMINEN
+ * MUKAAN"). Velka nollautuu, kun nostotaso poltetaan uudelleen
+ * (tools/tee-pallolaatat.mjs --nostot) tämän portin päätöksillä; se on
+ * R2-ajo eikä kuulu tähän erään.
+ */
+/** Pääkartan merkkikatto maata kohti uloimmalla zoomilla. */
+export const PAAKARTAN_MERKKIKATTO = 21;
+/**
+ * LÄHIZOOMIPORTIN KYNNYS — näkymän osuus uloimmasta sallitusta.
+ *
+ * Mitoitettu Ranskan saapumisnäkymästä (Chromium 390 × 844,
+ * tools/savukkeet/savuke-merkkirajat.mjs): saapumisnäkymässä osuus on
+ * 1,0 (näkyvä leveys 538,8 lautayksikköä) ja yksi zoomiporras
+ * sisäänpäin 0,5 (269,4). Kynnys 0,7 on näiden geometrisessa
+ * keskivälissä, joten kumpikaan pää ei ole rajatapaus eikä luku riipu
+ * maasta. Ks. MITTA ON OSUUS ULOIMMASTA ZOOMISTA yllä.
+ */
+export const LAHIZOOMIN_OSUUS_ULOIMMASTA = 0.7;
+
+/**
+ * Merkin tärkeysluokka (pienin ensin) — ks. TÄRKEYSJÄRJESTYS yllä.
+ *
+ * @param {?object} kohde  merkin oma kohdeolio (KOHDE_MAAT-rivi tai nosto)
+ * @returns {number} 0 kaupunki, 1 aarre (Matkakirjan ihme), 2 muut
+ */
+export function merkinTarkeys(kohde) {
+  if (kohde?.tyyppi === 'kaupunki') return 0;
+  if (kohde?.ihme) return 1;
+  return 2;
+}
+
+/**
+ * Onko lähizoomi auki (ks. MITTA ON OSUUS ULOIMMASTA ZOOMISTA).
+ *
+ * @param {number} uloinOsuus  kameran korkeus / uloin sallittu korkeus;
+ *   0 tai tuntematon = portti kiinni ja katto voimassa.
+ */
+export function lahizoomiAuki(uloinOsuus) {
+  return uloinOsuus > 0 && uloinOsuus <= LAHIZOOMIN_OSUUS_ULOIMMASTA;
+}
+
+/**
+ * PÄÄKARTAN MERKKIPORTTI. Lähizoomilla kaikki; uloimmalla enintään
+ * PAAKARTAN_MERKKIKATTO tärkeintä, ja `lahi`-merkit eivät lainkaan.
+ *
+ * @param {Array} merkit   maanKohdemerkit-rivit datan järjestyksessä
+ * @param {boolean} lahella  onko lähizoomi auki (lahizoomiAuki)
+ * @param {function} kohdeHaku  rivi → kohdeolio (oletuksena rivin oma)
+ * @returns {{merkit: Array, piiloon: Array<string>, polttovelka: Array<string>}}
+ *   `merkit` piirretään, `piiloon` jäi lähizoomia odottamaan,
+ *   `polttovelka` on portin hylkäämä mutta laatoissa yhä oleva muste.
+ */
+export function merkkiPortti(merkit, lahella, kohdeHaku = (m) => m.kohde ?? null) {
+  if (lahella) return { merkit, piiloon: [], polttovelka: [] };
+  const kuuluu = new Set();
+  const jarjestys = merkit.map((m, i) => ({ m, i }))
+    .sort((a, b) => (merkinTarkeys(kohdeHaku(a.m)) - merkinTarkeys(kohdeHaku(b.m)))
+      || (a.i - b.i));
+  for (const { m, i } of jarjestys) {
+    if (kohdeHaku(m)?.lahi) continue;
+    if (kuuluu.size >= PAAKARTAN_MERKKIKATTO) continue;
+    kuuluu.add(i);
+  }
+  const ulos = [];
+  const piiloon = [];
+  const polttovelka = [];
+  merkit.forEach((m, i) => {
+    if (kuuluu.has(i)) { ulos.push(m); return; }
+    // Poltettua mustetta ei voi piilottaa (ks. POLTETTUA MUSTETTA…).
+    if (m.poltettu) { polttovelka.push(m.id); ulos.push(m); return; }
+    piiloon.push(m.id);
+  });
+  return { merkit: ulos, piiloon, polttovelka };
+}
+
 /** Aihevalon säde (Globe.gl pointRadius-yksikköä) ja korkeus kaupunkipisteen alla. */
 export const VALON_SADE = 0.06;
 export const VALON_KORKEUS = 0.0015;
@@ -428,6 +594,9 @@ export function luoNostot({
   let valot = [];
   let lappuja = []; // elävät nimiölaput sovittelua varten ({ r, datum })
   let datumit = []; // viimeksi asetetut nostodatumit (sovittelu päivittää)
+  // Viimeisin merkkiportin päätös (savukkeet ja vartijat lukevat sen).
+  let portti = null;
+  let viimeisinUloinOsuus = 0;
   let sovittelu = {
     siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0, lappuja: 0,
   };
@@ -466,7 +635,7 @@ export function luoNostot({
    * naapurimaiden poltetut, eläintäyt ja kohtaamispiste. `nakyva` on
    * kameran näkyvä alue laudan yksiköissä (ui.nakyvaAlue-muoto).
    */
-  const keraa = (nakyva) => {
+  const keraa = (nakyva, uloinOsuus = 0) => {
     const { game } = ui;
     const pack = game?.pack;
     const rivit = [];
@@ -475,9 +644,21 @@ export function luoNostot({
     const iso = kohteidenNykyinenIso(ui);
     const pohja = iso ? FOKUS_POHJAT[iso] : null;
     const lehtiNakyy = lehdenOsuus(pohja, nakyva, pack.id) >= LEHDEN_VAHIN_OSUUS;
+    portti = null;
     if (lehtiNakyy && !liikkuu) {
       const tiedot = maanKohdetiedot(ui, iso);
-      for (const m of maanKohdemerkit(pack, iso, pohja, onPoltettu)) {
+      /*
+       * MERKKIRAJA JA LÄHIZOOMIPORTTI (ks. PÄÄKARTAN MERKKIRAJA yllä).
+       * Portti saa merkit DATAN järjestyksessä ja päättää, mitkä
+       * kuuluvat tälle zoomille; `tiedot` kantaa kohdeolion, jolta
+       * `lahi`-lippu ja tyyppi luetaan.
+       */
+      portti = merkkiPortti(
+        maanKohdemerkit(pack, iso, pohja, onPoltettu),
+        lahizoomiAuki(uloinOsuus),
+        (m) => tiedot.get(m.id) ?? m.kohde ?? null,
+      );
+      for (const m of portti.merkit) {
         const a = asteet(m);
         if (!a) continue;
         const kohde = tiedot.get(m.id) ?? m.kohde;
@@ -627,8 +808,11 @@ export function luoNostot({
    * Päivittää kerroksen: kutsutaan levossa (js/pallolauta/lauta.js).
    * Palauttaa elävien laatikot nimiladonnan varauksiksi ja määrän.
    */
-  const paivita = ({ nakyva, katto = NOSTOJEN_KATTO, keskipiste = null } = {}) => {
-    const rivit = keraa(nakyva);
+  const paivita = ({
+    nakyva, katto = NOSTOJEN_KATTO, keskipiste = null, uloinOsuus = 0,
+  } = {}) => {
+    viimeisinUloinOsuus = uloinOsuus;
+    const rivit = keraa(nakyva, uloinOsuus);
     const nakyvat = [];
     for (const r of rivit) {
       const p = ruudulla(r.lat, r.lng);
@@ -807,6 +991,12 @@ export function luoNostot({
      * lappua ei juuri nyt ole (ks. NIMILAPPU ON OSA OSUMAPINTAA).
      */
     osumat: () => osumat,
+    /**
+     * Merkkiportin viimeisin päätös (ks. PÄÄKARTAN MERKKIRAJA):
+     * `{ merkit, piiloon, polttovelka }` tai null, jos maan lehti ei
+     * ole näkyvissä. Savukkeiden ja vartijoiden mittari.
+     */
+    portti: () => (portti ? { ...portti, uloinOsuus: viimeisinUloinOsuus } : null),
     /** Kiinteän musteen laatikot nimiladonnan varauksiksi (ks. paivita). */
     laatikot: () => laatikot,
     /**

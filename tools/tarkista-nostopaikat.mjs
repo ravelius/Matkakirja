@@ -216,6 +216,15 @@ export function paakartanNostot(pack = MAAILMANKARTTA) {
         kaupunki: lahin?.kaupunki ?? null,
         etaisyys: lahin?.etaisyys ?? null,
         kattoVapaa: Boolean(rivi.kohde.kattoVapaa),
+        /*
+         * MERKKIPORTIN KAKSI KENTTÄÄ (js/pallolauta/nostot.js
+         * merkkiPortti, 14.9.2026): `ihme` on tärkeysjärjestyksen toinen
+         * luokka, `lahi` per-nosto-portti. Ne kulkevat rivillä, jotta
+         * portin päätös voidaan mitata Nodessa samalla funktiolla kuin
+         * peli sen tekee — ei kahta tulkintaa samasta datasta.
+         */
+        ihme: Boolean(rivi.kohde.ihme),
+        lahi: Boolean(rivi.kohde.lahi),
         ...(laudaltaAsteiksi(pack.id, rivi.paikka.x, rivi.paikka.y) ?? {}),
       });
     }

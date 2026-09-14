@@ -9,7 +9,7 @@
  * ── VARTIOT ───────────────────────────────────────────────────────
  *
  *   0. MERKKIMÄÄRÄT PYSYVÄT RAJOISSA. Pääkartalla maata kohti ≤ 21 ja
- *      kohdekartalla ≤ 17 (tehtävänannon rajat). Maat, jotka olivat
+ *      kohdekartalla ≤ 24 (ks. TEHTÄVÄNANNON RAJAT alla). Maat, jotka olivat
  *      pääkartan rajan yli JO ENNEN tätä erää (Saksa, Espanja, Italia),
  *      mitataan sillä, ettei luku kasva — erä ei vie yhtään merkkiä
  *      pääkartalle, ja vanha ylitys on oma, tätä erää edeltävä asiansa.
@@ -57,9 +57,18 @@ const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] && process.argv[2] !== '-' ? process.argv[2] : null;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
-/** Tehtävänannon rajat. */
+/*
+ * TEHTÄVÄNANNON RAJAT. Kohdekartan katto nousi 17 → 24 14.9.2026: luku
+ * 17 oli tämän savukkeen oma vakio (erän 5 suunnitelman valmiusehto),
+ * ei asettelun mitta, eikä se edes koske yhtä karttaa vaan MAAN
+ * nostojen summaa kaikilta sen kohdekaupungeilta (Italian 17 = Rooma
+ * 11 + Firenze 3 + Venetsia 3). Asettelun mitta on kartan pistemäärä,
+ * ja sen mitattu yläraja on Pariisin 31 pistettä. Perustelu ja
+ * puhelinkuvat: tools/savukkeet/savuke-merkkirajat.mjs ja
+ * docs/raportit/viesti-fable-merkkirajat-20260914.md.
+ */
 const PAAKARTAN_KATTO = 21;
-const KOHDEKARTAN_KATTO = 17;
+const KOHDEKARTAN_KATTO = 24;
 /** Erän 10 kaupungit, maa ja pallon katselupiste. */
 const KAIKKI_KAUPUNGIT = [
   { id: 'lontoo', iso: 'GBR', nakyma: { lat: 51.5074, lng: -0.1278, alt: 0.09 } },
