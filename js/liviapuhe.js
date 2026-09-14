@@ -101,6 +101,9 @@ import {
   vapautaPuhuja,
 } from './luenta.js';
 import { AANI_JUURI } from './media.js';
+import {
+  irrotaMusiikinVahvistin, liitaMusiikkiin, volumeToimii,
+} from './musiikkivahvistin.js';
 
 /**
  * Livian äänitteiden kansio ämpärissä.
@@ -480,7 +483,11 @@ let soivaPulu = null;
 export function paivitaPulunVoima() {
   const audio = soivaPulu?.audio;
   if (!audio || audio.ended || audio.paused) return;
-  audio.volume = Math.max(0, Math.min(1, pulunVoima() * LIVIAN_PERUSTASO * soivaPulu.vaimennus));
+  // LOPPUHÄIVYTYS VOITTAA LIU'UN: viimeisten millisekuntien ramppi on
+  // jo matkalla nollaan, eikä säätimen liikahdus saa nostaa ääntä
+  // takaisin sen alta. Seuraava repliikki lähtee uudella tasolla.
+  if (audio.livianLoppuhaivytys) return;
+  asetaLivianTaso(audio, pulunVoima() * LIVIAN_PERUSTASO * soivaPulu.vaimennus);
 }
 
 /**
@@ -910,6 +917,297 @@ export function livianAaniAjanTasalla(lahde, indeksi, teksti = null) {
 /** Häivytys, kun seuraava kupla katkaisee edellisen repliikin. */
 export const LIVIAN_HAIVYTYS_MS = 160;
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LOPPUHÄIVYTYS — TOISTOSSA, EI TIEDOSTOON
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistaja 14.9.2026 (Raamattu, "PULUN ÄÄNI … LOPPUHÄIVYTYS"),
+ * sanatarkasti: *"Pululle voi tehdä ne loppu feidit, ne ei varmaan
+ * edellytä uudelleen pakkausta"*. Livian mp3:t menevät peliin
+ * sellaisinaan (ei ffmpeg-vaihetta), joten häivytys tehdään täällä.
+ *
+ * ------------------------------------------------------------------
+ * MITATTU 14.9.2026: TIEDOSTOJEN PÄISSÄ EI OLE NAKSAHDUSTA
+ * ------------------------------------------------------------------
+ *
+ * Neljä tuotantoäänitettä (pariisi-3, rooma-3, ateena-3, sofia-3)
+ * ladattiin ämpäristä ja dekoodattiin (mpg123-decoder):
+ *
+ *   loppu 50 ms   RMS ja huippu = digitaalinen nolla (−∞ dBFS)
+ *   viimeinen näyte = 0.000000 kaikissa neljässä
+ *   loppuhiljaisuus 0,150–0,160 s (kynnys −60 dBFS)
+ *   puheen oma vaimeneminen −20 → −99 dBFS noin 40 ms:ssä
+ *   alku 20 ms   huippu −31…−77 dBFS, ensimmäinen näyte ≈ 1e−4
+ *
+ * Eli äänite päättyy jo hiljaisuuteen eikä katkea keskeltä aaltoa:
+ * DC-hyppyä nollaan ei ole kummassakaan päässä. ALKUNOUSUA EI SIKSI
+ * TEHDÄ LAINKAAN, ja loppuhäivytys on varmistus — se ei korjaa
+ * mitattua vikaa vaan estää sellaisen, jos jokin tuleva äänite
+ * päättyy kesken äänen.
+ *
+ * ------------------------------------------------------------------
+ * SE HÄIVYTYS, JOKA OIKEASTI PUUTTUI: KATKAISU iOS:SSÄ
+ * ------------------------------------------------------------------
+ *
+ * Kun seuraava kupla katkaisee edellisen repliikin, häivytys on ollut
+ * olemassa (LIVIAN_HAIVYTYS_MS) — mutta se kirjoittaa
+ * `audio.volumeen`, jota iOS:n WebKit ei tottele (perustelu ja mittaus:
+ * js/musiikkivahvistin.js). Puhelimessa katkaisu on siis ollut kova
+ * leikkaus keskellä sanaa. Sama koodi hoitaa nyt molemmat häivytykset,
+ * ja PUHELIMESSA taso menee vahvistinsolmun läpi.
+ *
+ * ------------------------------------------------------------------
+ * KAKSI REITTIÄ, VALINTA MITTAAMALLA
+ * ------------------------------------------------------------------
+ *
+ * `volumeToimii()` kysyy selaimelta kokeella (ei user-agentista),
+ * meneekö `volume`-kirjoitus perille.
+ *
+ *   TOTTELEE (työpöytä, Android)  → taso `audio.volumeen`, häivytys
+ *     ajastimella. Ei uusia solmuja, ei CORS-riippuvuutta — käytös on
+ *     täsmälleen entinen yhtä loppuramppia lukuun ottamatta.
+ *   EI TOTTELE (iOS)              → elementti reititetään pelin OMAN
+ *     äänikontekstin (js/sound.js sfx.ensureContext) vahvistimen läpi
+ *     ja häivytys ajastetaan äänisäikeelle gain-ramppina, joka on
+ *     näytetarkka eikä katkeile ajastinkuristuksessa.
+ *
+ * Reititys vaatii CORS-luvan. Mitattu 14.9.2026: ämpäri
+ * media.matkakirja.app palauttaa `access-control-allow-origin`
+ * pyynnön Originin mukaisena (GET 206 + `vary: Origin`), joten
+ * `crossOrigin = 'anonymous'` toimii. Lupa pyydetään VAIN reitittävällä
+ * polulla: turha crossOrigin muuttaisi työpöydän pyyntöä ilman hyötyä.
+ *
+ * Jos reititys ei onnistu (konteksti nukkuu, ei elettä vielä), taso
+ * jää elementin volumeen kuten ennenkin — hiljaisuutta ei koskaan
+ * valita häivytyksen takia: repliikki on tärkeämpi kuin sen viimeiset
+ * 40 ms.
+ */
+
+/** Loppuhäivytyksen pituus: viimeiset millisekunnit nollaan. */
+export const LIVIAN_LOPPUHAIVYTYS_MS = 40;
+
+/**
+ * Häivytyskäyrä: kerroin perustasolle toiston kohdassa `hetki`.
+ *
+ * Lineaarinen ja yksiselitteinen: 1 aina siihen asti, kun jäljellä on
+ * enemmän kuin häivytyksen verran, sitten suoraan nollaan äänitteen
+ * lopussa. Tuntematon tai järjetön kesto (NaN, Infinity, 0) ei häivytä
+ * mitään — silloin kerroin on 1 koko ajan.
+ *
+ * @param {number} hetki toiston kohta sekunteina (audio.currentTime)
+ * @param {number} kesto äänitteen kesto sekunteina (audio.duration)
+ * @param {number} [haivytysMs] häivytyksen pituus millisekunteina
+ * @returns {number} kerroin välillä 0…1
+ */
+export function livianLoppuKerroin(hetki, kesto, haivytysMs = LIVIAN_LOPPUHAIVYTYS_MS) {
+  const h = Number(haivytysMs) / 1000;
+  const k = Number(kesto);
+  const t = Number(hetki);
+  if (!Number.isFinite(k) || k <= 0 || !(h > 0) || !Number.isFinite(t)) return 1;
+  const jaljella = k - t;
+  if (jaljella >= h) return 1;
+  if (jaljella <= 0) return 0;
+  return jaljella / h;
+}
+
+/** Tottelisiko tämä selain elementin omaa volumea? (iOS: ei) */
+function livianVolumeToimii() {
+  try {
+    return volumeToimii();
+  } catch {
+    return true;
+  }
+}
+
+/**
+ * Livian soittimen nykyinen taso siltä polulta, jota se käyttää.
+ * @param {HTMLAudioElement} audio
+ * @returns {number}
+ */
+export function livianTaso(audio) {
+  if (!audio) return 0;
+  const vahvistin = audio.livianVahvistin;
+  if (vahvistin) return Number(vahvistin.gain.value) || 0;
+  return Number(audio.volume) || 0;
+}
+
+/**
+ * Asettaa Livian soittimen tason oikeaan paikkaan: vahvistimeen jos
+ * elementti on reititetty, muuten elementin volumeen.
+ * @param {HTMLAudioElement} audio
+ * @param {number} arvo
+ */
+export function asetaLivianTaso(audio, arvo) {
+  if (!audio) return;
+  const taso = Math.max(0, Math.min(1, Number(arvo) || 0));
+  const vahvistin = audio.livianVahvistin;
+  if (vahvistin) {
+    try {
+      vahvistin.gain.cancelScheduledValues?.(0);
+      vahvistin.gain.value = taso;
+      return;
+    } catch {
+      /* konteksti kiinni — kirjoitetaan volumeen */
+    }
+  }
+  audio.volume = taso;
+}
+
+/**
+ * Reitittää repliikin vahvistimen läpi, JOS tämä selain ei tottele
+ * elementin omaa volumea. Palauttaa true, kun reititys onnistui.
+ *
+ * Reititys on yksisuuntainen (createMediaElementSource), joten se
+ * puretaan aina soittimen kuollessa (irrotaLivianVahvistin).
+ */
+function liitaLivianVahvistin(audio) {
+  if (!audio || livianVolumeToimii()) return false;
+  const vahvistin = liitaMusiikkiin(audio);
+  if (!vahvistin) return false;
+  audio.livianVahvistin = vahvistin;
+  return true;
+}
+
+/** Purkaa reitityksen. Turvallista kutsua monta kertaa. */
+function irrotaLivianVahvistin(audio) {
+  if (!audio?.livianVahvistin) return;
+  audio.livianVahvistin = null;
+  irrotaMusiikinVahvistin(audio);
+}
+
+/**
+ * Laskee tason nollaan `kesto` millisekunnissa ja kutsuu `valmis`.
+ *
+ * Reititetyllä polulla ramppi ajastetaan ÄÄNISÄIKEELLE: se on
+ * näytetarkka eikä jäädy, vaikka pääsäie olisi varattu. Muuten
+ * askelletaan kellosta (ei askelmäärästä, ks. LIVIAN_HAIVYTYS_MS:n
+ * perustelu) — venynyt askel lyhentää häivytystä, ei pidennä sitä.
+ *
+ * @returns {Function} peruutus, joka pysäyttää häivytyksen
+ */
+function haivytaLivianTaso(audio, kestoMs, valmis) {
+  const aika = Math.max(1, Number(kestoMs) || 1);
+  const perus = livianTaso(audio);
+  const vahvistin = audio?.livianVahvistin;
+  const ctx = vahvistin?.context;
+  if (vahvistin && ctx && typeof ctx.currentTime === 'number') {
+    try {
+      const nyt = ctx.currentTime;
+      vahvistin.gain.cancelScheduledValues(nyt);
+      vahvistin.gain.setValueAtTime(perus, nyt);
+      vahvistin.gain.linearRampToValueAtTime(0, nyt + aika / 1000);
+      const id = setTimeout(valmis, aika + 20);
+      return () => clearTimeout(id);
+    } catch {
+      /* konteksti kiinni — askelletaan kellosta */
+    }
+  }
+  const t0 = (typeof performance !== 'undefined' && performance.now)
+    ? performance.now() : Date.now();
+  const kello = setInterval(() => {
+    const nyt = (typeof performance !== 'undefined' && performance.now)
+      ? performance.now() : Date.now();
+    const kulunut = nyt - t0;
+    if (kulunut < aika) {
+      // Käyrä tulee livianLoppuKertoimesta, jotta yksikkötestattu muoto
+      // on se, joka oikeasti soi: kulunut aika rampin sisällä.
+      asetaLivianTaso(audio, perus * livianLoppuKerroin(kulunut, aika, aika));
+      return;
+    }
+    clearInterval(kello);
+    /*
+     * NOLLA KIRJOITETAAN, EI JÄTETÄ VIIMEISEN ASKELEEN VARAAN. Askelväli
+     * on karkea (ajastin ei tikitä millisekunnilleen), joten viimeinen
+     * tikki ennen määräaikaa jättäisi tason johonkin kymmenesosaan —
+     * MITATTU selaimessa 0,096, kun perustaso oli 0,8. Katkaisussa se ei
+     * kuulunut, koska ääni pysäytetään heti perään; loppuhäivytyksessä
+     * se olisi juuri se naksahdus, jota tässä vältetään.
+     */
+    asetaLivianTaso(audio, 0);
+    valmis();
+  }, Math.max(4, aika / 10));
+  return () => clearInterval(kello);
+}
+
+/**
+ * Kytkee loppuhäivytyksen soivaan repliikkiin.
+ *
+ * VAHTI ON `timeupdate`, MUTTA RAMPPI AJASTETAAN ERIKSEEN. Selain
+ * lähettää timeupdaten vain noin neljä kertaa sekunnissa, eli sen
+ * tarkkuus (~250 ms) on kuusinkertainen häivytyksen pituuteen (40 ms)
+ * nähden: pelkän tapahtuman varassa ramppi viritettäisiin joko liian
+ * aikaisin tai vasta äänitteen loputtua. MITATTU selaimessa 14.9.2026:
+ * suoraan timeupdatesta viritetty häivytys ei ehtinyt laskea tasoa
+ * lainkaan ennen `ended`-tapahtumaa.
+ *
+ * Siksi vahti tekee vain sen, mitä se osaa: kun loppuun on enintään
+ * ENNAKKO_MS, se laskee ajastimen tasan kohtaan duration − 40 ms ja
+ * jättäytyy pois. Ramppi itse ajetaan haivytaLivianTasossa.
+ *
+ * `ended` säilyy koskemattomana: tasoa lasketaan, toistoa ei katkaista.
+ * Kuplan ajastin (livianKuplanAjastin) ei näe tästä mitään — se lukee
+ * kestoa, ei tasoa.
+ */
+function kytkeLivianLoppuhaivytys(audio, { voimassa }) {
+  if (!audio || typeof audio.addEventListener !== 'function') return;
+  /** Kuinka paljon ennen loppua ramppi viritetään ajastimelle. */
+  const ENNAKKO_MS = 1000;
+  /*
+   * JITTERIVARA. Ajastin herää muutaman millisekunnin myöhässä, ja
+   * myöhästyminen söisi häivytyksen hännän: MITATTU 14.9.2026 ilman
+   * varaa taso oli vielä 0,18 kun `ended` tuli. Varalla ramppi
+   * käynnistyy 20 ms aiemmin ja ehtii nollaan ennen loppua; jos ajastin
+   * on myöhässä, kaynnista lyhentää rampin jäljellä olevaan aikaan.
+   * Äänite on noissa viimeisissä millisekunneissa joka tapauksessa jo
+   * hiljaa (mitattu loppuhiljaisuus 0,15 s), joten vara ei syö puhetta.
+   */
+  const VARMUUS_MS = 20;
+  let ajastin = null;
+  let peruuta = null;
+  const nopeus = () => (Number(audio.playbackRate) > 0 ? Number(audio.playbackRate) : 1);
+  const kaynnista = () => {
+    ajastin = null;
+    if (!voimassa()) return;
+    /*
+     * TAUOLLA EI HÄIVYTETÄ. Taustalle mennyt peli pysäyttää luennat
+     * (js/luenta.js taustaHiljennaLuennat); tauon aikana kello juoksisi
+     * mutta ääni ei, ja taso valuisi nollaan kesken lauseen. Vahti
+     * virittää rampin uudestaan, kun toisto jatkuu.
+     */
+    if (audio.paused || audio.ended) return;
+    const kesto = Number(audio.duration);
+    const jaljellaMs = ((kesto - Number(audio.currentTime || 0)) * 1000) / nopeus();
+    audio.livianLoppuhaivytys = true;
+    peruuta = haivytaLivianTaso(
+      audio,
+      Math.max(1, Math.min(LIVIAN_LOPPUHAIVYTYS_MS, jaljellaMs)),
+      () => {},
+    );
+  };
+  const vahti = () => {
+    if (ajastin !== null || audio.livianLoppuhaivytys) return;
+    if (!voimassa()) return;
+    const kesto = Number(audio.duration);
+    if (!Number.isFinite(kesto) || kesto <= 0) return;
+    // Nopeutettu toisto lyhentää jäljellä olevan ajan samassa suhteessa.
+    const jaljellaMs = ((kesto - Number(audio.currentTime || 0)) * 1000) / nopeus();
+    if (jaljellaMs > ENNAKKO_MS) return;
+    ajastin = setTimeout(kaynnista,
+      Math.max(0, jaljellaMs - LIVIAN_LOPPUHAIVYTYS_MS - VARMUUS_MS));
+  };
+  audio.addEventListener('timeupdate', vahti);
+  const lopu = () => {
+    audio.removeEventListener('timeupdate', vahti);
+    if (ajastin !== null) clearTimeout(ajastin);
+    ajastin = null;
+    peruuta?.();
+    peruuta = null;
+  };
+  audio.addEventListener('ended', lopu);
+  audio.addEventListener('error', lopu);
+}
+
 /** Onko tämä repliikki se, jossa Livia saapuu (kaikuversio on olemassa)? */
 export function livianSaapumisrepliikki(lahde, indeksi) {
   return (LIVIAN_SAAPUMISREPLIIKIT[lahde] ?? []).includes(indeksi);
@@ -1139,8 +1437,9 @@ export function pysaytaLivianAani(ui, { haivyta = true } = {}) {
     // js/linssipuhe.js pysaytaLinssiluenta).
     ui.luennat?.delete(audio);
     vapautaPuhuja(ui, audio);
+    irrotaLivianVahvistin(audio);
   };
-  if (!haivyta || !(audio.volume > 0)) {
+  if (!haivyta || !(livianTaso(audio) > 0)) {
     lopeta();
     return true;
   }
@@ -1155,19 +1454,16 @@ export function pysaytaLivianAani(ui, { haivyta = true } = {}) {
    * seuraavassa kaupungissa. Nyt voimakkuus lasketaan KULUNEESTA
    * AJASTA, joten venynyt askel ei pidennä häivytystä vaan lyhentää
    * sen: ensimmäinen myöhässä herännyt tikki toteaa ajan täyteen ja
-   * pysäyttää äänen.
+   * pysäyttää äänen. Askellus asuu nyt haivytaLivianTasossa, jota myös
+   * loppuhäivytys käyttää.
+   *
+   * TASO MENEE SITÄ POLKUA, JOTA TÄMÄ SELAIN TOTTELEE. Ennen tämä
+   * kirjoitti suoraan `audio.volumeen`, jota iOS ei tottele — silloin
+   * katkaisu oli puhelimessa kova leikkaus keskellä sanaa, vaikka
+   * koodissa luki häivytys. Reititetyllä polulla ramppi ajastetaan
+   * äänisäikeelle (haivytaLivianTaso).
    */
-  const perus = audio.volume;
-  const t0 = performance.now();
-  const kello = setInterval(() => {
-    const osuus = (performance.now() - t0) / LIVIAN_HAIVYTYS_MS;
-    if (osuus < 1) {
-      audio.volume = Math.max(0, perus * (1 - osuus));
-      return;
-    }
-    clearInterval(kello);
-    lopeta();
-  }, LIVIAN_HAIVYTYS_MS / 4);
+  haivytaLivianTaso(audio, LIVIAN_HAIVYTYS_MS, lopeta);
   return true;
 }
 
@@ -1242,13 +1538,22 @@ export function soitaLivianAani(ui, lahde, indeksi,
   const url = livianAaniOsoite(lahde, indeksi);
   if (!url) return null;
 
-  const audio = new Audio(url);
+  /*
+   * ELEMENTTI ILMAN SRCIÄ ENSIN. `crossOrigin` on asetettava ENNEN
+   * srciä, ja se asetetaan VAIN silloin kun repliikki aiotaan reitittää
+   * vahvistimen läpi (selain ei tottele volumea, ks. LOPPUHÄIVYTYS).
+   * Työpöydällä pyyntö pysyy täsmälleen entisenä.
+   */
+  const audio = new Audio();
+  if (!livianVolumeToimii()) audio.crossOrigin = 'anonymous';
   audio.preload = 'auto';
+  audio.src = url;
+  liitaLivianVahvistin(audio);
   // Perustaso on kertojan alapuolella (LIVIAN_PERUSTASO); kutsupaikan
   // vaimennus kertoo siihen eikä korvaa sitä. PULULLA ON OMA LIUKU
   // (omistaja 11.9.2026: *"pulun ja lukijan omat äänen voimakkuus
   // säätimet"*), joten kertojan puhevoima ei enää säädä pulua.
-  audio.volume = Math.max(0, Math.min(1, pulunVoima() * LIVIAN_PERUSTASO * vaimennus));
+  asetaLivianTaso(audio, pulunVoima() * LIVIAN_PERUSTASO * vaimennus);
   // Soiva repliikki seuraa liukua heti: vaimennus talteen, jotta taso
   // voidaan laskea uudestaan kesken äänitteen (paivitaPulunVoima).
   soivaPulu = { audio, vaimennus };
@@ -1263,9 +1568,15 @@ export function soitaLivianAani(ui, lahde, indeksi,
   // Välihuuto (vaista: false) ei merkitse puhujaa, joten kertoja jatkaa
   // entisellä voimallaan sen alla — eikä se myöskään varaa puhevuoroa.
   if (vaista) merkitsePuhuja(ui, audio, PUHUJA_PULU);
+  // Loppuhäivytys: viimeiset LIVIAN_LOPPUHAIVYTYS_MS lasketaan nollaan.
+  // 'ended' tulee normaalisti — tasoa lasketaan, toistoa ei katkaista.
+  kytkeLivianLoppuhaivytys(audio, { voimassa: () => ui.liviaAani === audio });
   const vapaaksi = () => {
     ui.luennat?.delete(audio);
     if (ui.liviaAani === audio) ui.liviaAani = null;
+    // Reititys on yksisuuntainen: purkamatta jäänyt ketju pitäisi
+    // kuolleen elementin muistissa.
+    irrotaLivianVahvistin(audio);
   };
   audio.addEventListener('ended', vapaaksi);
   audio.addEventListener('error', vapaaksi);
