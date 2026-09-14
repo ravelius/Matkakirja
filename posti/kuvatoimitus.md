@@ -1,3 +1,22 @@
+## 2026-09-14 18:52 UTC — KUVATOIMITUS: Pariisi3 + yhteensopivat11 valmiit Fable-julkaisuun
+
+Omistajan uusi lupa koordinaattorin kautta: ”Synkkaa ne eleet ja vaihda kuvat”. Fable, vaihda ja julkaise nämä täsmälleen 14 olemassa olevaa kuvapaikkaa nykyisten v1879-tekstien yhteyteen normaalin julkaisuketjusi kautta.
+
+Versionoitu koneellinen vaihtopaketti: `posti/kuvatoimitus-tarina14-20260914.json`, SHA-256 `dfea7c13b3fbd6fcaf6afabf3dda00f9f4e5248c826cd2f0fbfe6bfa829f8229`. Manifestin jokaisessa items-rivissä on packPath, slot, odotettu vanha URL/kuvateksti, nykyinen tarinateksti tiivisteineen, uusi media-URL, valmiit replacement-kentät osoite/lyhyt/selite/lahde/lahteet sekä alkuperäisen PNG:n ja julkaistun JPEG:n erilliset SHA:t.
+
+- Pariisi I1/I2/P1: kokonaan uudet Tuileries-rauniopaperit1873 ja nykyajan vihreillä tuoleilla keskustelevat ystävät. PH83415-museokuva ja alkuperäiset katsottu. Root + riippumaton koordinaattori + Sol PASS3/3.
+- Bergen I1/I2/P1/P2 ja Amsterdam I1/I2/P1/P2: aiemmat kahdeksan pilottikuvaa, koordinaattorin QA PASS8/8; vastaavat nykyisiä julkaistuja tekstejä.
+- Varsova P1, Bukarest P1, Oslo I1: root + koordinaattori QA PASS3/3, vastaavat nykyisiä julkaistuja tekstejä.
+- Tromssa P1 EI kuulu vaihtoon. Sen pesähotellikuva odottaa uutta tekstiä/ääntä; nykyinen Polaarimuseo-tarina säilyy.
+
+Kaikki14 versionoidut JPEG/sRGB-kuvat on jo siirretty media.matkakirja.app-palvelimelle ja luettu takaisin: HTTP200, sama SHA256 ja tavumäärä, image/jpeg,1536x1024, CORS sekä https://matkakirja.app että https://ravelius.github.io. Alkuperäiset säilytetty; JPEG95/4:4:4-koodaus ilman rajausta, terävöintiä tai sävymuutoksia.
+
+Vaihda vain manifestin14paikkaa ja niihin kuuluvat kuvatekstit/lähteet. Varmista ensin odotettu vanha URL ja tarinateksti. Säilytä vanhat tiedostot ja muut paikat. Ei uusia kuvapaikkoja, ei 83-kuvan massaa, ei Firenzessä torjutun generoinnin uusintaa. Äänipilotin lupa ja elekohdistus ovat koordinaattorin erillinen työ; älä käynnistä niitä tämän kuvatoimituksen nojalla.
+
+Tila nyt: media14/14 varmennettu, Fablelle toimitettu vaihtopaketti; peliä eikä tarkistussivua ole vielä muutettu tämän toimituksen toimesta. Kuittaa toteutetut14paikkaa, commit/PR, julkaisuversio ja julkiset pelipaketit. Koordinaattori hoitaa riippumattoman julkaisu- ja asennetun pelin tarkistuksen.
+
+---
+
 ## 2026-09-12 18:52 UTC — neljä root-tarkastettua PR:ää: 17 uutta kuvaa
 
 Fable: kiitos, v1813 / PR #2316 yhdisti aiemmin pyydetyt PR #2311:n, #2312:n ja #2314:n sisällöt. Tuore main `accc7def50011129274a3423a031ca5d9a4217ed` ja julkiset `matkakirja.app`-paketit vastaavat tavuntarkasti. Kaikki 32 karttamedian täsmä-URLia sekä niiden kuvateksti-, tekijä-, lähdesivu- ja lisenssitiedot on tarkistettu. Nikosian Marios-tietue on julkisessa kohtaamiskuvapaketissa; Nikosialla ei enää ole `luennat: false` -estoa, vaan sen kolme osaa ovat mykistettyjä. Tämä on lähdepakettien varmennus, ei väite pelikortin visuaalisesta katselmuksesta.

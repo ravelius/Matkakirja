@@ -1,0 +1,949 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-09-14T18:48:46.959857+00:00",
+  "sourceMain": {
+    "repository": "https://github.com/ravelius/Matkakirja.git",
+    "ref": "origin/main",
+    "commit": "e344d5e7d8e9025718afd585439ac76031855ac7",
+    "version": "v1879",
+    "commitTitle": "v1879: Horatio–Livia Eurooppa: 80 luentaa, 5 kaupunkia odottaa (#2443)",
+    "fetchedDuringAudit": true
+  },
+  "authorization": "Owner via coordinator: Synkkaa ne eleet ja vaihda kuvat. Exact Paris3 plus compatible prior11 only.",
+  "scopeCount": 14,
+  "items": [
+    {
+      "id": "bergen:I1",
+      "status": "ready",
+      "city": "bergen",
+      "slot": "matkakirja.luentakuva",
+      "speaker": "horatio",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bergen-r20260909-paper-v4.jpg",
+        "shortCaption": "Bergen, 1873. Kuiva kala, märkä vierailija.",
+        "longCaption": "Kauppias nosti kapakalan esiin Bryggenin katoksen alla kuin arvotavaran. Kala ja myyjä pysyivät suojassa, kun sade kasteli laiturin ja kamerani jalat."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-kuvauusinta-12-20260914/cities/bergen/I1/v002/original.png",
+        "sha256": "391849674031977831b5354c494b90c1a1a1f7dc0e5b07ef71491b725afff994",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Bergen, 1873. Opas ja kuula tuomiokirkolla.",
+        "longCaption": "Opas odottaa Bergenin tuomiokirkon seinään kiinnitetyn kuulan alapuolella. Kuulan kiinnityksen ajankohtaa ei tunneta.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://tohundrefortellinger.w.uib.no/1966/06/20/2017-kanonkule/"
+        ]
+      },
+      "compatibility": "Direct match: cathedral cannonball, guide and dry exchange in current Horatio text.",
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-bergen-i1-r20260914-tarina-v1.jpg",
+      "targetUrl": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-bergen-i1-r20260914-tarina-v1.jpg",
+      "deliveryFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-bergen-i1-r20260914-tarina-v1.jpg",
+      "packPath": "js/packs/fokusvirta-bergen.js",
+      "expectedCurrentNarrative": "Bergenin tuomiokirkon seinässä törrötti tykinkuula. Englannin laivasto oli yrittänyt ryöstää sataman hollantilaislaivat parisataa vuotta sitten. Mainitsin oppaalle palvelleeni laivastossa. Hän katsoi minua, sitten kuulaa. Vakuutin, että minulla oli mukana vain lyijykynä.",
+      "expectedNarrativeSha256": "5540447ea82fb1beca5cacfe9737e931b29bc084005696a9defd68ace2a3f90a",
+      "replacement": {
+        "osoite": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-bergen-i1-r20260914-tarina-v1.jpg",
+        "lyhyt": "Bergen, 1873. Opas ja kuula tuomiokirkolla.",
+        "selite": "Opas odottaa Bergenin tuomiokirkon seinään kiinnitetyn kuulan alapuolella. Kuulan kiinnityksen ajankohtaa ei tunneta.",
+        "lahde": "Matkakirjan havainnekuva",
+        "lahteet": [
+          "https://tohundrefortellinger.w.uib.no/1966/06/20/2017-kanonkule/"
+        ]
+      },
+      "delivery": {
+        "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-bergen-i1-r20260914-tarina-v1.jpg",
+        "sha256": "b5a39e626ba1c0af6b55c19ad626cdda5fda42bf30cd65168a92e989888f48cd",
+        "bytes": 698445,
+        "mime": "image/jpeg",
+        "width": 1536,
+        "height": 1024,
+        "iccEmbedded": true,
+        "conversion": "JPEG95 4:4:4 sRGB; no crop resize sharpness tone or visual edits; original PNG preserved"
+      }
+    },
+    {
+      "id": "bergen:I2",
+      "status": "ready",
+      "city": "bergen",
+      "slot": "matkakirja.luentakuva2",
+      "speaker": "horatio",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bergen-r20260911-paper2-v1.jpg",
+        "shortCaption": "Bergen, 1873. Katon alla kala pysyi kuivempana kuin vieras.",
+        "longCaption": "Sade valui katoksen reunalta, mutta kapakalat pysyivät kuivina puuseinän vieressä. Takkini kiilsi vedestä, ja kaupungin arvojärjestys tuli selväksi."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-kuvauusinta-12-20260914/cities/bergen/I2/v001/original.png",
+        "sha256": "be5d9924b1578ef6dfbbc2180e7d98011bc3b6df3a9c595ded6707984b8be4f3",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Bergen, 1873. Pieni kuula korkealla kiviseinässä.",
+        "longCaption": "Rautakuula on kiinnitetty tuomiokirkon kiviseinän syvennykseen, mutta kiinnityksen ajankohtaa ei tunneta.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://tohundrefortellinger.w.uib.no/1966/06/20/2017-kanonkule/"
+        ]
+      },
+      "compatibility": "Direct detail view of the object named in current Horatio text.",
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-bergen-i2-r20260914-tarina-v1.jpg",
+      "targetUrl": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-bergen-i2-r20260914-tarina-v1.jpg",
+      "deliveryFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-bergen-i2-r20260914-tarina-v1.jpg",
+      "packPath": "js/packs/fokusvirta-bergen.js",
+      "expectedCurrentNarrative": "Bergenin tuomiokirkon seinässä törrötti tykinkuula. Englannin laivasto oli yrittänyt ryöstää sataman hollantilaislaivat parisataa vuotta sitten. Mainitsin oppaalle palvelleeni laivastossa. Hän katsoi minua, sitten kuulaa. Vakuutin, että minulla oli mukana vain lyijykynä.",
+      "expectedNarrativeSha256": "5540447ea82fb1beca5cacfe9737e931b29bc084005696a9defd68ace2a3f90a",
+      "replacement": {
+        "osoite": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-bergen-i2-r20260914-tarina-v1.jpg",
+        "lyhyt": "Bergen, 1873. Pieni kuula korkealla kiviseinässä.",
+        "selite": "Rautakuula on kiinnitetty tuomiokirkon kiviseinän syvennykseen, mutta kiinnityksen ajankohtaa ei tunneta.",
+        "lahde": "Matkakirjan havainnekuva",
+        "lahteet": [
+          "https://tohundrefortellinger.w.uib.no/1966/06/20/2017-kanonkule/"
+        ]
+      },
+      "delivery": {
+        "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-bergen-i2-r20260914-tarina-v1.jpg",
+        "sha256": "bf0f89b505db218cde5d0f94aee95136a81c0d1585e331e57319d45538f6f8bf",
+        "bytes": 723088,
+        "mime": "image/jpeg",
+        "width": 1536,
+        "height": 1024,
+        "iccEmbedded": true,
+        "conversion": "JPEG95 4:4:4 sRGB; no crop resize sharpness tone or visual edits; original PNG preserved"
+      }
+    },
+    {
+      "id": "bergen:P1",
+      "status": "ready",
+      "city": "bergen",
+      "slot": "pollo.kuvat[0]",
+      "speaker": "livia",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bergen-01-r20260909-euv1-v1.jpg",
+        "shortCaption": "Bergen: varastotalot saivat suojan, minä etsin oman.",
+        "longCaption": "Bryggenin kapean puukäytävän sade piirtää lautoihin oman karttansa. Pysähdyin kynnyksen suojaan ja totesin, että kuiva paikka on yhä arvokas löytö."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-kuvauusinta-12-20260914/cities/bergen/P1/v001/original.png",
+        "sha256": "7da7674353aadaac9fc32b6688df41bf88d2537d04b9b7469e2aad2ddb9bbac3",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Bergen: rumpujoukon tahdissa kadunrajasta.",
+        "longCaption": "Lasten ja nuorten rumpujoukko marssii kuvaavien katsojien ohi.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/the-living-tradition-of-buekorps-bergen"
+        ]
+      },
+      "compatibility": "Direct match: youth drum corps, marching behind it and photographing spectators.",
+      "targetKey": "matkakirja/pulu-cam/matkakirja-bergen-p1-r20260914-tarina-v1.jpg",
+      "targetUrl": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bergen-p1-r20260914-tarina-v1.jpg",
+      "deliveryFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-bergen-p1-r20260914-tarina-v1.jpg",
+      "packPath": "js/packs/fokusvirta-bergen.js",
+      "expectedCurrentNarrative": "Bergenissä lapsilla ja nuorilla on omat rumpujoukot. Johtajansakin he valitsevat itse! Liityin marssimaan perään rinta pystyssä. Kadunvarren ihmiset kuvasivat meitä. Meitä! Pidin siivet visusti kyljissä. En aikonut pilata muodostelmaa.",
+      "expectedNarrativeSha256": "7201aaa2bd48165faf357260db7ed3902e9f6385ca7535b8d70b4083856c43f1",
+      "replacement": {
+        "osoite": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bergen-p1-r20260914-tarina-v1.jpg",
+        "lyhyt": "Bergen: rumpujoukon tahdissa kadunrajasta.",
+        "selite": "Lasten ja nuorten rumpujoukko marssii kuvaavien katsojien ohi.",
+        "lahde": "Matkakirjan havainnekuva",
+        "lahteet": [
+          "https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/the-living-tradition-of-buekorps-bergen"
+        ]
+      },
+      "delivery": {
+        "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-bergen-p1-r20260914-tarina-v1.jpg",
+        "sha256": "a6fe3110b2743519e77a71cc42d05f0da9e0664c26b0baab08f41b4fdcaa987a",
+        "bytes": 689936,
+        "mime": "image/jpeg",
+        "width": 1536,
+        "height": 1024,
+        "iccEmbedded": true,
+        "conversion": "JPEG95 4:4:4 sRGB; no crop resize sharpness tone or visual edits; original PNG preserved"
+      }
+    },
+    {
+      "id": "bergen:P2",
+      "status": "ready",
+      "city": "bergen",
+      "slot": "pollo.kuvat[1]",
+      "speaker": "livia",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bergen-02-r20260909-euv1-v4.jpg",
+        "shortCaption": "Bergen: ulkona satoi aivan samaa sadetta.",
+        "longCaption": "Käytävän suulta näkyvät Bryggenin talorivi, märkä katu ja satama. Otin kuvan nopeasti ulkona ja palasin puolen siivenmitan kuivemmalle."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-kuvauusinta-12-20260914/cities/bergen/P2/v002/original.png",
+        "sha256": "029a92d4aad95122111fd4408586c3c43f85a06171f08c52d0acaa66196b98ae",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Bergen: nuori johtaja tarkistaa rumpujoukon järjestystä.",
+        "longCaption": "Nuorempien soittajien muodostelma näkyy matalalta ikkunalaudalta.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/the-living-tradition-of-buekorps-bergen"
+        ]
+      },
+      "compatibility": "Second compatible angle on the self-led youth formation in current Livia text.",
+      "targetKey": "matkakirja/pulu-cam/matkakirja-bergen-p2-r20260914-tarina-v1.jpg",
+      "targetUrl": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bergen-p2-r20260914-tarina-v1.jpg",
+      "deliveryFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-bergen-p2-r20260914-tarina-v1.jpg",
+      "packPath": "js/packs/fokusvirta-bergen.js",
+      "expectedCurrentNarrative": "Bergenissä lapsilla ja nuorilla on omat rumpujoukot. Johtajansakin he valitsevat itse! Liityin marssimaan perään rinta pystyssä. Kadunvarren ihmiset kuvasivat meitä. Meitä! Pidin siivet visusti kyljissä. En aikonut pilata muodostelmaa.",
+      "expectedNarrativeSha256": "7201aaa2bd48165faf357260db7ed3902e9f6385ca7535b8d70b4083856c43f1",
+      "replacement": {
+        "osoite": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bergen-p2-r20260914-tarina-v1.jpg",
+        "lyhyt": "Bergen: nuori johtaja tarkistaa rumpujoukon järjestystä.",
+        "selite": "Nuorempien soittajien muodostelma näkyy matalalta ikkunalaudalta.",
+        "lahde": "Matkakirjan havainnekuva",
+        "lahteet": [
+          "https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/the-living-tradition-of-buekorps-bergen"
+        ]
+      },
+      "delivery": {
+        "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-bergen-p2-r20260914-tarina-v1.jpg",
+        "sha256": "e85b6d1e44cb071c25b8445c2a4b53369fa64ea14de43616f1aa96bf3599df4e",
+        "bytes": 824105,
+        "mime": "image/jpeg",
+        "width": 1536,
+        "height": 1024,
+        "iccEmbedded": true,
+        "conversion": "JPEG95 4:4:4 sRGB; no crop resize sharpness tone or visual edits; original PNG preserved"
+      }
+    },
+    {
+      "id": "amsterdam:I1",
+      "status": "ready",
+      "city": "amsterdam",
+      "slot": "matkakirja.luentakuva",
+      "speaker": "horatio",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-amsterdam-r20260909-paper-v5.jpg",
+        "shortCaption": "Amsterdam, 1873. Tuoli saapui omasta ikkunastaan.",
+        "longCaption": "Kattokoukku ja kaksi miestä pitivät tuolin matkalla kohti yläikkunaa. Kaluste pysähtyi kuvaani arvokkaasti kesken nousun."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-kuvauusinta-12-20260914/cities/amsterdam/I1/v001/original.png",
+        "sha256": "8b80c4c56ddc3951c769c245a387ed625319dc4e8ed29362143c599cc8f3ecef",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Amsterdam, 1873. Kanavatalon ullakolle mahtui kokonainen kirkko.",
+        "longCaption": "Pappi seisoo kapean ullakkokirkon alttarin vierellä puuparvien alla.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://opsolder.nl/en/the-monument/"
+        ]
+      },
+      "compatibility": "Direct match: hidden attic church and priest in current Horatio text.",
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-amsterdam-i1-r20260914-tarina-v1.jpg",
+      "targetUrl": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-amsterdam-i1-r20260914-tarina-v1.jpg",
+      "deliveryFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-amsterdam-i1-r20260914-tarina-v1.jpg",
+      "packPath": "js/packs/fokusvirta-amsterdam.js",
+      "expectedCurrentNarrative": "Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.",
+      "expectedNarrativeSha256": "1413b21f7c0fa9a45f29e0e60cd691e4e5ec666ef3c35b688d7e720138c7db31",
+      "replacement": {
+        "osoite": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-amsterdam-i1-r20260914-tarina-v1.jpg",
+        "lyhyt": "Amsterdam, 1873. Kanavatalon ullakolle mahtui kokonainen kirkko.",
+        "selite": "Pappi seisoo kapean ullakkokirkon alttarin vierellä puuparvien alla.",
+        "lahde": "Matkakirjan havainnekuva",
+        "lahteet": [
+          "https://opsolder.nl/en/the-monument/"
+        ]
+      },
+      "delivery": {
+        "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-amsterdam-i1-r20260914-tarina-v1.jpg",
+        "sha256": "a0cbd13757b77584679bbe4fa0b20abaf24de58823d08415f255118beaa745f3",
+        "bytes": 732386,
+        "mime": "image/jpeg",
+        "width": 1536,
+        "height": 1024,
+        "iccEmbedded": true,
+        "conversion": "JPEG95 4:4:4 sRGB; no crop resize sharpness tone or visual edits; original PNG preserved"
+      }
+    },
+    {
+      "id": "amsterdam:I2",
+      "status": "ready",
+      "city": "amsterdam",
+      "slot": "matkakirja.luentakuva2",
+      "speaker": "horatio",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-amsterdam-r20260911-paper2-v1.jpg",
+        "shortCaption": "Amsterdam, 1873. Tuoli pääsi sisään, portaat jäivät sivuun.",
+        "longCaption": "Kaksi miestä ohjasi tuolin ikkunasta sisään ja jaloilleen. Köysi lepäsi lattialla, kun kapea porras jäi aivan vieressä käyttämättä."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-kuvauusinta-12-20260914/cities/amsterdam/I2/v002/original.png",
+        "sha256": "6e65a15f28786125c64b921ee1d994d616f51553ecc839ada26fdad3ec7cc892",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Amsterdam, 1873. Ullakkokirkon urut salin toisessa päädyssä.",
+        "longCaption": "Vuonna 1794 rakennetut urut ovat parven päädyssä penkkien yläpuolella.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://opsolder.nl/wp-content/uploads/2024/04/haantje36.pdf"
+        ]
+      },
+      "compatibility": "Direct match: the organ named and heard in current Horatio text.",
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-amsterdam-i2-r20260914-tarina-v1.jpg",
+      "targetUrl": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-amsterdam-i2-r20260914-tarina-v1.jpg",
+      "deliveryFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-amsterdam-i2-r20260914-tarina-v1.jpg",
+      "packPath": "js/packs/fokusvirta-amsterdam.js",
+      "expectedCurrentNarrative": "Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.",
+      "expectedNarrativeSha256": "1413b21f7c0fa9a45f29e0e60cd691e4e5ec666ef3c35b688d7e720138c7db31",
+      "replacement": {
+        "osoite": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-amsterdam-i2-r20260914-tarina-v1.jpg",
+        "lyhyt": "Amsterdam, 1873. Ullakkokirkon urut salin toisessa päädyssä.",
+        "selite": "Vuonna 1794 rakennetut urut ovat parven päädyssä penkkien yläpuolella.",
+        "lahde": "Matkakirjan havainnekuva",
+        "lahteet": [
+          "https://opsolder.nl/wp-content/uploads/2024/04/haantje36.pdf"
+        ]
+      },
+      "delivery": {
+        "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-amsterdam-i2-r20260914-tarina-v1.jpg",
+        "sha256": "f015bed264e0c59bb90a173c4afaf5f2581856eaf40edc030755f7a3ab345f16",
+        "bytes": 682768,
+        "mime": "image/jpeg",
+        "width": 1536,
+        "height": 1024,
+        "iccEmbedded": true,
+        "conversion": "JPEG95 4:4:4 sRGB; no crop resize sharpness tone or visual edits; original PNG preserved"
+      }
+    },
+    {
+      "id": "amsterdam:P1",
+      "status": "ready",
+      "city": "amsterdam",
+      "slot": "pollo.kuvat[0]",
+      "speaker": "livia",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-amsterdam-01-r20260909-euv1-v1.jpg",
+        "shortCaption": "Amsterdam: lentokoulun oppilas on tällä kertaa nojatuoli.",
+        "longCaption": "Nostolava kuljettaa nojatuolia Amsterdamin kapean talon ikkunaan, kun portaat eivät taivu tehtävään. Seurasin oppilaan nousua: lentoasento kunnossa, suuntavaisto täysin nostimen varassa."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-kuvauusinta-12-20260914/cities/amsterdam/P1/v001/original.png",
+        "sha256": "957a9b57e3d2dcd8f6f24eaf0ce11461c9d5f4ef94ee6ced2ad73e81246de5e2",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Amsterdam: pyörät parkissa veden alla, kuivin renkain.",
+        "longCaption": "Stationsplein-hallin pyörätelineet ja valkoiset pylväät kohoavat matalan kameran yllä.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://www.prorail.nl/nieuws/twee-grote-fietsenstallingen-bij-station-amsterdam-centraal-geopend"
+        ]
+      },
+      "compatibility": "Direct match: dry bicycle hall below Open Havenfront in current Livia text.",
+      "targetKey": "matkakirja/pulu-cam/matkakirja-amsterdam-p1-r20260914-tarina-v1.jpg",
+      "targetUrl": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-amsterdam-p1-r20260914-tarina-v1.jpg",
+      "deliveryFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-amsterdam-p1-r20260914-tarina-v1.jpg",
+      "packPath": "js/packs/fokusvirta-amsterdam.js",
+      "expectedCurrentNarrative": "Amsterdamin aseman edessä on pyörähalli veden alla. Seitsemälletuhannelle pyörälle! Kävin kurkistamassa sisään ja palasin rantaan. Vieressä ui ankka. Sen alla minä olin juuri kävellyt, kuivin jaloin. Olisin halunnut nähdä sen ilmeen, jos se olisi tiennyt.",
+      "expectedNarrativeSha256": "a22b040783d01e72dc7e15b6827bcd4d099cda9389c72108cd3377c8ed8e0378",
+      "replacement": {
+        "osoite": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-amsterdam-p1-r20260914-tarina-v1.jpg",
+        "lyhyt": "Amsterdam: pyörät parkissa veden alla, kuivin renkain.",
+        "selite": "Stationsplein-hallin pyörätelineet ja valkoiset pylväät kohoavat matalan kameran yllä.",
+        "lahde": "Matkakirjan havainnekuva",
+        "lahteet": [
+          "https://www.prorail.nl/nieuws/twee-grote-fietsenstallingen-bij-station-amsterdam-centraal-geopend"
+        ]
+      },
+      "delivery": {
+        "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-amsterdam-p1-r20260914-tarina-v1.jpg",
+        "sha256": "23f819989fa86a90d8e6f999a3033d613a99ac0152bcead9cb83a55a19ab2660",
+        "bytes": 510100,
+        "mime": "image/jpeg",
+        "width": 1536,
+        "height": 1024,
+        "iccEmbedded": true,
+        "conversion": "JPEG95 4:4:4 sRGB; no crop resize sharpness tone or visual edits; original PNG preserved"
+      }
+    },
+    {
+      "id": "amsterdam:P2",
+      "status": "ready",
+      "city": "amsterdam",
+      "slot": "pollo.kuvat[1]",
+      "speaker": "livia",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-amsterdam-02-r20260909-euv1-v1.jpg",
+        "shortCaption": "Amsterdam: saavuin ikkunalle ennen huonekaluja.",
+        "longCaption": "Saavuin ikkunalle ennen nojatuolia, joka lähestyi muuttajaa omalla pienellä lavallaan. En huomauttanut lentoreitistäni, sillä vaivalla tehty suoritus ansaitsee hienotunteisen asiantuntijan."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-kuvauusinta-12-20260914/cities/amsterdam/P2/v001/original.png",
+        "sha256": "7fccb71a2bd14668f6ba8c36e19962a4ea378bfefd55a73782f43a06d854c2ef",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Amsterdam: ankka ui pyörähallin katon yllä.",
+        "longCaption": "Ankka kelluu Open Havenfrontilla, jonka alla sijaitsee aseman edustan pyörähalli.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://www.prorail.nl/nieuws/twee-grote-fietsenstallingen-bij-station-amsterdam-centraal-geopend"
+        ]
+      },
+      "compatibility": "Direct match: nearby duck above the hall in current Livia text.",
+      "targetKey": "matkakirja/pulu-cam/matkakirja-amsterdam-p2-r20260914-tarina-v1.jpg",
+      "targetUrl": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-amsterdam-p2-r20260914-tarina-v1.jpg",
+      "deliveryFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-amsterdam-p2-r20260914-tarina-v1.jpg",
+      "packPath": "js/packs/fokusvirta-amsterdam.js",
+      "expectedCurrentNarrative": "Amsterdamin aseman edessä on pyörähalli veden alla. Seitsemälletuhannelle pyörälle! Kävin kurkistamassa sisään ja palasin rantaan. Vieressä ui ankka. Sen alla minä olin juuri kävellyt, kuivin jaloin. Olisin halunnut nähdä sen ilmeen, jos se olisi tiennyt.",
+      "expectedNarrativeSha256": "a22b040783d01e72dc7e15b6827bcd4d099cda9389c72108cd3377c8ed8e0378",
+      "replacement": {
+        "osoite": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-amsterdam-p2-r20260914-tarina-v1.jpg",
+        "lyhyt": "Amsterdam: ankka ui pyörähallin katon yllä.",
+        "selite": "Ankka kelluu Open Havenfrontilla, jonka alla sijaitsee aseman edustan pyörähalli.",
+        "lahde": "Matkakirjan havainnekuva",
+        "lahteet": [
+          "https://www.prorail.nl/nieuws/twee-grote-fietsenstallingen-bij-station-amsterdam-centraal-geopend"
+        ]
+      },
+      "delivery": {
+        "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-amsterdam-p2-r20260914-tarina-v1.jpg",
+        "sha256": "a7144ee16f81507393e43d5686327592073e772be44018ffb157fb0c137d5cba",
+        "bytes": 708468,
+        "mime": "image/jpeg",
+        "width": 1536,
+        "height": 1024,
+        "iccEmbedded": true,
+        "conversion": "JPEG95 4:4:4 sRGB; no crop resize sharpness tone or visual edits; original PNG preserved"
+      }
+    },
+    {
+      "id": "varsova:P1",
+      "status": "ready",
+      "city": "varsova",
+      "slot": "pollo.kuvat[0]",
+      "speaker": "livia",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-varsova-01-r20260909-euv1-v1.jpg",
+        "shortCaption": "Varsova: tämän torin tunnistaminen on jonkun tekemää työtä.",
+        "longCaption": "Varsovan vanhankaupungin värikkäät julkisivut rakennettiin sodan jälkeen uudelleen, jotta torille voitiin palata asumaan ja kulkemaan. Matalalta kuvattuna pieni oviaukko muistuttaa, että suuren jälleenrakennuksen päämäärä oli tavallinen elämä."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/four-image-batch/varsova/P1/v001/original.png",
+        "sha256": "cc05380e4ca5cc767958f24d0c1649a9a48e9c35b8b035ecdb9a0781f8a1628a",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Varsova: metsäpolku kulkee raunioista rakennetun kukkulan halki.",
+        "longCaption": "Kukkula koottiin sodassa tuhoutuneen Varsovan raunioista, ja nykyisen puiston reiteillä historia kohtaa kasvavan metsän.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://zzw.waw.pl/nasze-tereny/parki/park-akcji-burza/"
+        ]
+      },
+      "compatibility": "Direct match: rubble mound, present forest paths and walkers in current Livia text. Sepelkyyhky is auditory and need not appear.",
+      "targetKey": "matkakirja/pulu-cam/matkakirja-varsova-p1-r20260914-tarina-v1.jpg",
+      "targetUrl": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-varsova-p1-r20260914-tarina-v1.jpg",
+      "deliveryFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-varsova-p1-r20260914-tarina-v1.jpg",
+      "packPath": "js/packs/fokusvirta-varsova.js",
+      "expectedCurrentNarrative": "Toisessa maailmansodassa saksalaiset hävittivät Varsovaa talo talolta. Raunioista koottiin tämä kukkula. Nyt täällä kävellään metsäpoluilla, ja puissa pesii lintuja. Kuuntele — tuolla huhuilee sepelkyyhky.",
+      "expectedNarrativeSha256": "6107f701ffea15bd593cd6f1ad33568d5e68e7e6da274c85edde186191484de5",
+      "replacement": {
+        "osoite": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-varsova-p1-r20260914-tarina-v1.jpg",
+        "lyhyt": "Varsova: metsäpolku kulkee raunioista rakennetun kukkulan halki.",
+        "selite": "Kukkula koottiin sodassa tuhoutuneen Varsovan raunioista, ja nykyisen puiston reiteillä historia kohtaa kasvavan metsän.",
+        "lahde": "Matkakirjan havainnekuva",
+        "lahteet": [
+          "https://zzw.waw.pl/nasze-tereny/parki/park-akcji-burza/"
+        ]
+      },
+      "delivery": {
+        "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-varsova-p1-r20260914-tarina-v1.jpg",
+        "sha256": "7d7f702120ff364b49d0bb36f674c6438a1be8787fff54d0bf87b7cdc210ea1f",
+        "bytes": 1126122,
+        "mime": "image/jpeg",
+        "width": 1536,
+        "height": 1024,
+        "iccEmbedded": true,
+        "conversion": "JPEG95 4:4:4 sRGB; no crop resize sharpness tone or visual edits; original PNG preserved"
+      }
+    },
+    {
+      "id": "bukarest:P1",
+      "status": "ready",
+      "city": "bukarest",
+      "slot": "pollo.kuvat[0]",
+      "speaker": "livia",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bukarest-01-r20260909-euv1-v1.jpg",
+        "shortCaption": "Bukarest: parvelta löytyi suora yhteys lounaaseen.",
+        "longCaption": "Manucin majatalon puuparvet kehystävät nykyään ravintolan täyttä sisäpihaa. Etsin pöytien alta murusia, kun viereisestä pöydästä kuultu salaisuus vei huomioni."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/four-image-batch/bukarest/P1/v001/original.png",
+        "sha256": "6e13c784b5d2af5cef07d9f7f7dd6bdf37c6232e2756d3b7c89cee6d377e3eae",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Bukarest: lintuharrastajat kiikaroivat Văcăreștin ruovikossa.",
+        "longCaption": "Hylätyn tekojärvihankkeen betonivallien sisään on kehittynyt Bukarestin kaupunkiluonnonpuisto.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://parculnaturalbucuresti.ro/en/the-park/"
+        ]
+      },
+      "compatibility": "Direct match: wetland inside concrete basin, apartment blocks and binocular users in current Livia text.",
+      "targetKey": "matkakirja/pulu-cam/matkakirja-bukarest-p1-r20260914-tarina-v1.jpg",
+      "targetUrl": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bukarest-p1-r20260914-tarina-v1.jpg",
+      "deliveryFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-bukarest-p1-r20260914-tarina-v1.jpg",
+      "packPath": "js/packs/fokusvirta-bukarest.js",
+      "expectedCurrentNarrative": "Bukarestin kerrostalojen välissä on Văcăreștin luonnonpuisto, hylätyn tekojärvihankkeen paikalla. Lensin betonivallin yli ruovikon ylle. Täällä ihmiset kantavat kiikareita nähdäkseen meidät paremmin! Valitsin näkyvän oksan ja käänsin paremman kylkeni. Kiikaroikaa rauhassa.",
+      "expectedNarrativeSha256": "130666b9dd63aeb3413a7e1c190dbb14840b57a14d91c992e9ff1a3ade979d53",
+      "replacement": {
+        "osoite": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bukarest-p1-r20260914-tarina-v1.jpg",
+        "lyhyt": "Bukarest: lintuharrastajat kiikaroivat Văcăreștin ruovikossa.",
+        "selite": "Hylätyn tekojärvihankkeen betonivallien sisään on kehittynyt Bukarestin kaupunkiluonnonpuisto.",
+        "lahde": "Matkakirjan havainnekuva",
+        "lahteet": [
+          "https://parculnaturalbucuresti.ro/en/the-park/"
+        ]
+      },
+      "delivery": {
+        "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-bukarest-p1-r20260914-tarina-v1.jpg",
+        "sha256": "e8014318dc71755d2b2087732c9beb5d40874feb6da689d04e4f79ecf5ed2015",
+        "bytes": 845396,
+        "mime": "image/jpeg",
+        "width": 1536,
+        "height": 1024,
+        "iccEmbedded": true,
+        "conversion": "JPEG95 4:4:4 sRGB; no crop resize sharpness tone or visual edits; original PNG preserved"
+      }
+    },
+    {
+      "id": "oslo:I1",
+      "status": "ready",
+      "city": "oslo",
+      "slot": "matkakirja.luentakuva",
+      "speaker": "horatio",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-oslo-r20260909-paper-v4.jpg",
+        "shortCaption": "Christiania, 1873. Metsä valmistautui lähtemään laivalla.",
+        "longCaption": "Christianian rannassa lankut odottavat suorina pinoina purjelaivan vieressä. Metsä on saanut merimatkaa varten siistimmän järjestyksen kuin moni matkustaja."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/four-image-batch/oslo/I1/v001/original.png",
+        "sha256": "0ae1137e591223f684bc274337fa0dd492a8334a3e83eff96d09e4975ab1af19",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Christiania, 1873. Työmies kantoi astiaa Lysakerin tehtaan luona.",
+        "longCaption": "Vuoteen 1873 sijoittuva kuviteltu kohtaaminen pohjautuu Lysakerin nitroglyseriinitehtaan noin vuonna 1870 kuvattuun ympäristöön.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://snl.no/nitroglyserin",
+          "https://media.snl.no/media/263334/standard_compressed_Nitroglyserinfabrikken_Lysaker_Justert.jpg"
+        ]
+      },
+      "compatibility": "Direct match: Lysaker nitroglycerin factory context and worker holding an unspecified closed vessel with both hands.",
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-oslo-i1-r20260914-tarina-v1.jpg",
+      "targetUrl": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-oslo-i1-r20260914-tarina-v1.jpg",
+      "deliveryFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-oslo-i1-r20260914-tarina-v1.jpg",
+      "packPath": "js/packs/fokusvirta-oslo.js",
+      "expectedCurrentNarrative": "Christianian laidalla valmistettiin nitroglyseriiniä. Työmies kantoi astiaa molemmin käsin. Yksi kolaus saattoi räjäyttää sen. Nostin hattua, ja hän vastasi pelkällä nyökkäyksellä. Minä en ole koskaan ollut niin kiitollinen huonosta käytöksestä.",
+      "expectedNarrativeSha256": "049aacd3f63354eed994764dac549e49507f960db662c3995d378dd7a04488f4",
+      "replacement": {
+        "osoite": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-oslo-i1-r20260914-tarina-v1.jpg",
+        "lyhyt": "Christiania, 1873. Työmies kantoi astiaa Lysakerin tehtaan luona.",
+        "selite": "Vuoteen 1873 sijoittuva kuviteltu kohtaaminen pohjautuu Lysakerin nitroglyseriinitehtaan noin vuonna 1870 kuvattuun ympäristöön.",
+        "lahde": "Matkakirjan havainnekuva",
+        "lahteet": [
+          "https://snl.no/nitroglyserin",
+          "https://media.snl.no/media/263334/standard_compressed_Nitroglyserinfabrikken_Lysaker_Justert.jpg"
+        ]
+      },
+      "delivery": {
+        "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-oslo-i1-r20260914-tarina-v1.jpg",
+        "sha256": "6643295f8e2445ec302acfbb8f63a1e4ff8e1212c38ee11a9b40d94dff8aa238",
+        "bytes": 800545,
+        "mime": "image/jpeg",
+        "width": 1536,
+        "height": 1024,
+        "iccEmbedded": true,
+        "conversion": "JPEG95 4:4:4 sRGB; no crop resize sharpness tone or visual edits; original PNG preserved"
+      }
+    },
+    {
+      "id": "pariisi:I1",
+      "status": "ready",
+      "city": "pariisi",
+      "slot": "matkakirja.luentakuva",
+      "speaker": "horatio",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pariisi-r20260909-paper-v4.jpg",
+        "shortCaption": "Pariisi, 1873. Ooppera harjoitteli juhlapukuaan.",
+        "longCaption": "Uusi oopperatalo seisoo jo juhlapuvussaan, vaikka telineet, kivilohkot ja mutainen työmaa paljastavat harjoitusten jatkuvan. Arki tekee vielä töitä, jotta yleisö voisi myöhemmin vain astua sisään."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/paris-release/I1/v001/original.png",
+        "sha256": "47eace3d737a70832e36d91a42968bf488ac6312e39d5e47b5e3a60bef6dacac",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Pariisi, 1873. Tuileries’n tyhjät ikkunat puutarhan laidalla.",
+        "longCaption": "Vuoden 1871 palon jäljiltä palatsin runko seisoo yhä puutarhan edessä. Näkymä pohjautuu Henri Emile Godefroyn historialliseen valokuvaan.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/vue-des-tuileries-apres-l-incendie-de-1871-5"
+        ]
+      },
+      "compatibility": "Matches exact published Tuileries text; narrator remains unseen.",
+      "rootQa": {
+        "status": "pass",
+        "personallyViewed": true,
+        "architecture": "Garden facade follows PH83415 surviving roofless central pavilion; garden/tree arrangement interpretive.",
+        "rendering": "Pale cool worn continuous paper and softly rendered photograph"
+      },
+      "generation": {
+        "tool": "built-in image_gen",
+        "fullNewImage": true,
+        "modelVersionExposed": false,
+        "promptFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/paris-release/I1/v001/prompt.txt",
+        "originalUnchanged": true
+      },
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-pariisi-i1-r20260914-tarina-v1.jpg",
+      "targetUrl": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i1-r20260914-tarina-v1.jpg",
+      "deliveryFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-pariisi-i1-r20260914-tarina-v1.jpg",
+      "packPath": "js/packs/fokusvirta-pariisi.js",
+      "expectedCurrentNarrative": "Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.",
+      "expectedNarrativeSha256": "a1e38ff0f7dd9a5da7842a59622f01ec167ee50c412153381ad96be5bd88a5c5",
+      "replacement": {
+        "osoite": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i1-r20260914-tarina-v1.jpg",
+        "lyhyt": "Pariisi, 1873. Tuileries’n tyhjät ikkunat puutarhan laidalla.",
+        "selite": "Vuoden 1871 palon jäljiltä palatsin runko seisoo yhä puutarhan edessä. Näkymä pohjautuu Henri Emile Godefroyn historialliseen valokuvaan.",
+        "lahde": "Matkakirjan havainnekuva",
+        "lahteet": [
+          "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/vue-des-tuileries-apres-l-incendie-de-1871-5"
+        ]
+      },
+      "delivery": {
+        "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-pariisi-i1-r20260914-tarina-v1.jpg",
+        "sha256": "c4f1d7d194d369c538d03201b2de034adfa11e0248718d4f057aa807bbc8cc46",
+        "bytes": 790594,
+        "mime": "image/jpeg",
+        "width": 1536,
+        "height": 1024,
+        "iccEmbedded": true,
+        "conversion": "JPEG95 4:4:4 sRGB; no crop resize sharpness tone or visual edits; original PNG preserved"
+      }
+    },
+    {
+      "id": "pariisi:I2",
+      "status": "ready",
+      "city": "pariisi",
+      "slot": "matkakirja.luentakuva2",
+      "speaker": "horatio",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pariisi-r20260911-paper2-v1.jpg",
+        "shortCaption": "Pariisi, 1873. Leipä kainalossa kulki kadun paras esiintyjä.",
+        "longCaption": "Sade kiillotti kadun, ja mies kulki edellä leipä kainalossa. Seurasin häntä kaksi korttelia kuulematta pääsymaksusta sanaakaan."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/paris-release/I2/v001/original.png",
+        "sha256": "b843f9f8f9ae858cc29ee7488621a8c95b5431ac133fea5fd62aee14cec21ddd",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Pariisi, 1873. Rauniot näkyivät myös puiden alta.",
+        "longCaption": "Puiden varjosta avautuu toinen näkymä palaneen Tuileries’n julkisivuun. Puutarhan rajaus on kuviteltu saman historiallisen valokuvalähteen pohjalta.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/vue-des-tuileries-apres-l-incendie-de-1871-5"
+        ]
+      },
+      "compatibility": "Matches exact published Tuileries text; narrator remains unseen.",
+      "rootQa": {
+        "status": "pass",
+        "personallyViewed": true,
+        "architecture": "Garden facade follows PH83415 surviving roofless central pavilion; garden/tree arrangement interpretive.",
+        "rendering": "Pale cool worn continuous paper and softly rendered photograph"
+      },
+      "generation": {
+        "tool": "built-in image_gen",
+        "fullNewImage": true,
+        "modelVersionExposed": false,
+        "promptFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/paris-release/I2/v001/prompt.txt",
+        "originalUnchanged": true
+      },
+      "targetKey": "matkakirja/eurooppa-1873/matkakirja-pariisi-i2-r20260914-tarina-v1.jpg",
+      "targetUrl": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i2-r20260914-tarina-v1.jpg",
+      "deliveryFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-pariisi-i2-r20260914-tarina-v1.jpg",
+      "packPath": "js/packs/fokusvirta-pariisi.js",
+      "expectedCurrentNarrative": "Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.",
+      "expectedNarrativeSha256": "a1e38ff0f7dd9a5da7842a59622f01ec167ee50c412153381ad96be5bd88a5c5",
+      "replacement": {
+        "osoite": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i2-r20260914-tarina-v1.jpg",
+        "lyhyt": "Pariisi, 1873. Rauniot näkyivät myös puiden alta.",
+        "selite": "Puiden varjosta avautuu toinen näkymä palaneen Tuileries’n julkisivuun. Puutarhan rajaus on kuviteltu saman historiallisen valokuvalähteen pohjalta.",
+        "lahde": "Matkakirjan havainnekuva",
+        "lahteet": [
+          "https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/vue-des-tuileries-apres-l-incendie-de-1871-5"
+        ]
+      },
+      "delivery": {
+        "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-pariisi-i2-r20260914-tarina-v1.jpg",
+        "sha256": "3455bbf148efea528e00a82d71d08147724fe1b24d435edd50c1d55e6d262c38",
+        "bytes": 780358,
+        "mime": "image/jpeg",
+        "width": 1536,
+        "height": 1024,
+        "iccEmbedded": true,
+        "conversion": "JPEG95 4:4:4 sRGB; no crop resize sharpness tone or visual edits; original PNG preserved"
+      }
+    },
+    {
+      "id": "pariisi:P1",
+      "status": "ready",
+      "city": "pariisi",
+      "slot": "pollo.kuvat[0]",
+      "speaker": "livia",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-pariisi-01-r20260909-euv1-v1.jpg",
+        "shortCaption": "Pariisi: oopperan paras aitiopaikka jäi ilman samettia.",
+        "longCaption": "Palais Garnierin katon reunalla kulta, saumat ja sadejäljet näkyvät samassa lähikuvassa. Juhla-asukin tarvitsee huoltoa, ja minun aitiopaikastani puuttui vain tuoli."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/paris-release/P1/v001/original.png",
+        "sha256": "c3c3b90d4add2af5b9a5450b379d3c7134d5bc6197a89fcd677d124b7c5268d1",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Pariisi: tuoli kääntyi ystävää kohti.",
+        "longCaption": "Tuileries’n vihreillä tuoleilla kaksi ystävää jatkaa keskusteluaan puiden varjossa. Näkymä avautuu tuolin selkänojan korkeudelta.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://votrebanc.louvre.fr/en/the-project/",
+          "https://www.edmond-fils.com/les-collections/tuileries-mobilier-en-acier/"
+        ]
+      },
+      "compatibility": "Matches exact published Tuileries text; narrator remains unseen.",
+      "rootQa": {
+        "status": "pass",
+        "personallyViewed": true,
+        "architecture": "Tuileries trees gravel green steel chairs; friends are fictional, no intact palace.",
+        "rendering": "Candid natural photograph, chair-back viewpoint, coherent hands and light"
+      },
+      "generation": {
+        "tool": "built-in image_gen",
+        "fullNewImage": true,
+        "modelVersionExposed": false,
+        "promptFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/paris-release/P1/v001/prompt.txt",
+        "originalUnchanged": true
+      },
+      "targetKey": "matkakirja/pulu-cam/matkakirja-pariisi-p1-r20260914-tarina-v1.jpg",
+      "targetUrl": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-pariisi-p1-r20260914-tarina-v1.jpg",
+      "deliveryFile": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-pariisi-p1-r20260914-tarina-v1.jpg",
+      "packPath": "js/packs/fokusvirta-pariisi.js",
+      "expectedCurrentNarrative": "Palatsia ei enää ole, mutta Tuileries’n puutarhassa voi siirtää vihreän tuolin juuri siihen, missä haluaa istua. Valitsin selkänojan auringosta. Tuolilla istuva nainen käänsi sen ystäväänsä kohti, ja minä sain uuden näkymän liikahtamatta. Jäin kuuntelemaan. He olivat tavanneet täällä jo koululaisina.",
+      "expectedNarrativeSha256": "3b524abb834d06e629bef36e5d672a0c118e71cbee05b7ae24099d0df7171230",
+      "replacement": {
+        "osoite": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-pariisi-p1-r20260914-tarina-v1.jpg",
+        "lyhyt": "Pariisi: tuoli kääntyi ystävää kohti.",
+        "selite": "Tuileries’n vihreillä tuoleilla kaksi ystävää jatkaa keskusteluaan puiden varjossa. Näkymä avautuu tuolin selkänojan korkeudelta.",
+        "lahde": "Matkakirjan havainnekuva",
+        "lahteet": [
+          "https://votrebanc.louvre.fr/en/the-project/",
+          "https://www.edmond-fils.com/les-collections/tuileries-mobilier-en-acier/"
+        ]
+      },
+      "delivery": {
+        "file": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/jpeg/matkakirja-pariisi-p1-r20260914-tarina-v1.jpg",
+        "sha256": "bbcfa1f47b7f1c0d24b9931f105d871a7fc10731d74a9c565d941663aad01f9a",
+        "bytes": 671909,
+        "mime": "image/jpeg",
+        "width": 1536,
+        "height": 1024,
+        "iccEmbedded": true,
+        "conversion": "JPEG95 4:4:4 sRGB; no crop resize sharpness tone or visual edits; original PNG preserved"
+      }
+    }
+  ],
+  "held": [
+    {
+      "id": "tromssa:P1",
+      "status": "held",
+      "holdReason": "await-pending-batch-5-text",
+      "city": "tromssa",
+      "slot": "pollo.kuvat[0]",
+      "speaker": "livia",
+      "old": {
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-tromssa-01-r20260909-14mm-v3.jpg",
+        "shortCaption": "Tromssa: yksi simpukankuori ja koko meri täynnä kysymyksiä.",
+        "longCaption": "Tromssan Polaarimuseon vanhat tullirakennukset seisovat meren äärellä uudelleen rakennetun laiturin vieressä. Laiturin laudalle jäänyt simpukankuori pysäytti minut tarkistamaan asuntoa."
+      },
+      "new": {
+        "localOriginal": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/four-image-batch/tromssa/P1/v001/original.png",
+        "sha256": "9426f96ef8628b18131a8beb2f69e0f36a14cf13953d2741063cb6e32156f88b",
+        "width": 1536,
+        "height": 1024,
+        "shortCaption": "Tromssa: pikkukajavat asettuvat pesähyllyille.",
+        "longCaption": "Muséparkenin siirrettävillä pesähotelleilla ohjataan pikkukajavia pois rakennusten julkisivuilta.",
+        "sourceLabel": "Matkakirjan havainnekuva",
+        "sources": [
+          "https://www.tromso.kommune.no/krykkje"
+        ]
+      },
+      "compatibility": "Does not match current main's Polaarimuseo and shell text. It directly matches approved pending batch-5 text about the kittiwake hotel; release together with that text."
+    }
+  ],
+  "guards": [
+    "Replace only the 14 existing slots listed; verify expected old URL and current narrative before patching.",
+    "Preserve all old assets and unrelated image slots, captions, stories, audio and alignment.",
+    "Tromssa P1 must wait for its pending text/audio.",
+    "No new slots, no Firenze retry, no mass image run."
+  ],
+  "mediaPublished": true,
+  "gamePublished": false,
+  "sitePublished": false,
+  "mediaReceipt": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/release-20260914/media-readback.json",
+  "mediaVerifiedAt": "2026-09-14T18:51:44.557Z",
+  "independentQa": {
+    "pilot8": "Coordinator passed all8 in pilot-eight-coordinator.json",
+    "prior3": "Coordinator personally viewed Varsova/Bukarest/Oslo originals and compared current v1879 texts; PASS3/3",
+    "paris3": "Coordinator viewed originals and PH83415 reference; PASS3/3; independent Sol QA also PASS3/3",
+    "parisReport": "/Users/samireivinen/Documents/ChatGPT/Matkakirja 2/output/horatio-livia-text-image-audit-20260914/paris-release/independent-qa.json"
+  },
+  "mediaReadback": {
+    "verifiedCount": 14,
+    "receipts": [
+      {
+        "id": "bergen:I1",
+        "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-bergen-i1-r20260914-tarina-v1.jpg",
+        "sha256": "b5a39e626ba1c0af6b55c19ad626cdda5fda42bf30cd65168a92e989888f48cd",
+        "bytes": 698445,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "http": 200,
+        "checkedAt": "2026-09-14T18:51:41.868Z"
+      },
+      {
+        "id": "bergen:I2",
+        "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-bergen-i2-r20260914-tarina-v1.jpg",
+        "sha256": "bf0f89b505db218cde5d0f94aee95136a81c0d1585e331e57319d45538f6f8bf",
+        "bytes": 723088,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "http": 200,
+        "checkedAt": "2026-09-14T18:51:42.030Z"
+      },
+      {
+        "id": "bergen:P1",
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bergen-p1-r20260914-tarina-v1.jpg",
+        "sha256": "a6fe3110b2743519e77a71cc42d05f0da9e0664c26b0baab08f41b4fdcaa987a",
+        "bytes": 689936,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "http": 200,
+        "checkedAt": "2026-09-14T18:51:42.184Z"
+      },
+      {
+        "id": "bergen:P2",
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bergen-p2-r20260914-tarina-v1.jpg",
+        "sha256": "e85b6d1e44cb071c25b8445c2a4b53369fa64ea14de43616f1aa96bf3599df4e",
+        "bytes": 824105,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "http": 200,
+        "checkedAt": "2026-09-14T18:51:42.420Z"
+      },
+      {
+        "id": "amsterdam:I1",
+        "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-amsterdam-i1-r20260914-tarina-v1.jpg",
+        "sha256": "a0cbd13757b77584679bbe4fa0b20abaf24de58823d08415f255118beaa745f3",
+        "bytes": 732386,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "http": 200,
+        "checkedAt": "2026-09-14T18:51:42.610Z"
+      },
+      {
+        "id": "amsterdam:I2",
+        "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-amsterdam-i2-r20260914-tarina-v1.jpg",
+        "sha256": "f015bed264e0c59bb90a173c4afaf5f2581856eaf40edc030755f7a3ab345f16",
+        "bytes": 682768,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "http": 200,
+        "checkedAt": "2026-09-14T18:51:42.858Z"
+      },
+      {
+        "id": "amsterdam:P1",
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-amsterdam-p1-r20260914-tarina-v1.jpg",
+        "sha256": "23f819989fa86a90d8e6f999a3033d613a99ac0152bcead9cb83a55a19ab2660",
+        "bytes": 510100,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "http": 200,
+        "checkedAt": "2026-09-14T18:51:43.205Z"
+      },
+      {
+        "id": "amsterdam:P2",
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-amsterdam-p2-r20260914-tarina-v1.jpg",
+        "sha256": "a7144ee16f81507393e43d5686327592073e772be44018ffb157fb0c137d5cba",
+        "bytes": 708468,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "http": 200,
+        "checkedAt": "2026-09-14T18:51:43.351Z"
+      },
+      {
+        "id": "varsova:P1",
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-varsova-p1-r20260914-tarina-v1.jpg",
+        "sha256": "7d7f702120ff364b49d0bb36f674c6438a1be8787fff54d0bf87b7cdc210ea1f",
+        "bytes": 1126122,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "http": 200,
+        "checkedAt": "2026-09-14T18:51:43.580Z"
+      },
+      {
+        "id": "bukarest:P1",
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bukarest-p1-r20260914-tarina-v1.jpg",
+        "sha256": "e8014318dc71755d2b2087732c9beb5d40874feb6da689d04e4f79ecf5ed2015",
+        "bytes": 845396,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "http": 200,
+        "checkedAt": "2026-09-14T18:51:43.751Z"
+      },
+      {
+        "id": "oslo:I1",
+        "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-oslo-i1-r20260914-tarina-v1.jpg",
+        "sha256": "6643295f8e2445ec302acfbb8f63a1e4ff8e1212c38ee11a9b40d94dff8aa238",
+        "bytes": 800545,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "http": 200,
+        "checkedAt": "2026-09-14T18:51:43.937Z"
+      },
+      {
+        "id": "pariisi:I1",
+        "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i1-r20260914-tarina-v1.jpg",
+        "sha256": "c4f1d7d194d369c538d03201b2de034adfa11e0248718d4f057aa807bbc8cc46",
+        "bytes": 790594,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "http": 200,
+        "checkedAt": "2026-09-14T18:51:44.115Z"
+      },
+      {
+        "id": "pariisi:I2",
+        "url": "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i2-r20260914-tarina-v1.jpg",
+        "sha256": "3455bbf148efea528e00a82d71d08147724fe1b24d435edd50c1d55e6d262c38",
+        "bytes": 780358,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "http": 200,
+        "checkedAt": "2026-09-14T18:51:44.381Z"
+      },
+      {
+        "id": "pariisi:P1",
+        "url": "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-pariisi-p1-r20260914-tarina-v1.jpg",
+        "sha256": "bbcfa1f47b7f1c0d24b9931f105d871a7fc10731d74a9c565d941663aad01f9a",
+        "bytes": 671909,
+        "mime": "image/jpeg",
+        "cors": "https://matkakirja.app",
+        "http": 200,
+        "checkedAt": "2026-09-14T18:51:44.556Z"
+      }
+    ]
+  }
+}
