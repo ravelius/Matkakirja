@@ -124,10 +124,7 @@ export const FOKUSVIRTA_HELSINKI = {
     paikkarivi: 'Helsingfors, heinäkuussa 1873. Kirkasta; mereltä käy viileä '
       + 'tuuli; puntari korkealla.',
     /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1; audio/alignment tarvitaan. */
-    teksti: 'Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi '
-      + 'silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; '
-      + 'nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi '
-      + 'rasvajälki. Harvoin olen saanut yhtä täsmällistä paikallistietoa.',
+    teksti: "Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi rasvajälki. Harvoin olen saanut yhtä täsmällistä paikallistietoa.",
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -142,20 +139,48 @@ export const FOKUSVIRTA_HELSINKI = {
      * (rinnakkaiskuva, pulu kuuntelee).
      */
     reaktiot: [
-      { id: 'helsinki.r1', ankkuri: 'vaikutti vakavalta', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Apostolit ja kalavaaka samassa vakavuudessa.' },
-      { id: 'helsinki.r2', ankkuri: 'silakalla paikoilleen', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Silakka paperipainona yllättää.' },
-      { id: 'helsinki.r3', ankkuri: 'Suomenlahdelle jäi rasvajälki', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Kartta sai oman merkkinsä: hiljainen hyväksyntä.' },
-      { id: 'helsinki.r4', ankkuri: 'täsmällistä paikallistietoa', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Loppuvitsi rasvatahrasta paikallistietona.' },
-    ],
-    luenta: '[curious] Kirkon apostolit katsoivat merelle. Torilla '
-      + 'kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. '
-      + 'Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. '
-      + 'Suomenlahdelle jäi rasvajälki. [softly] Harvoin olen saanut yhtä '
-      + 'täsmällistä paikallistietoa.',
+  {
+    "id": "helsinki.r1",
+    "ankkuri": "apostolit katsoivat merelle",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "helsinki.r2",
+    "ankkuri": "kalakauppias punnitsi silakoita",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "helsinki.r3",
+    "ankkuri": "Kummankin työ vaikutti vakavalta",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "helsinki.r4",
+    "ankkuri": "nainen painoi sen silakalla paikoilleen",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "helsinki.r5",
+    "ankkuri": "yhtä täsmällistä paikallistietoa",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    luenta: "[softly] Kirkon apostolit katsoivat merelle. Torilla kalakauppias punnitsi silakoita. Kummankin työ vaikutti vakavalta. Tuuli nosti karttani; nainen painoi sen silakalla paikoilleen. Suomenlahdelle jäi rasvajälki. [warmly] Harvoin olen saanut yhtä täsmällistä paikallistietoa.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-helsinki.mp3',
   },
 
@@ -244,9 +269,7 @@ export const FOKUSVIRTA_HELSINKI = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Kirkko on tuomiokirkko. Minä kokeilin apostolien näköalaa, mutta torin kalat näkyivät paremmin alempaa. Lokki ehti ensin. Se katsoi minua kuin olisin ollut harjoittelija.',
-    ],
+    kommentti: ["Minä kokeilin tuomiokirkon apostolien näköalaa, mutta torin kalat näkyivät paremmin alempaa. Lokki ehti ensin. Se katsoi minua kuin olisin ollut harjoittelija."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*

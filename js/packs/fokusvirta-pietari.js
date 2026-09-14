@@ -212,7 +212,7 @@ export const FOKUSVIRTA_PIETARI = {
     paikkarivi: 'Pietari, kesäkuussa 1873. Valkeat yöt; ei tule pimeää; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 333 merkkiä (yläraja 400). */
-    teksti: 'Pietarin kesäyö oli vaalea kuin loppuun pesty lakana. Kello käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän tapahtumat loppuun. Päivä itse ei suostunut lopettamaan, joten lisäsin vielä tämän.',
+    teksti: "Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. Minä riisuin takkini ja menin perässä.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -232,17 +232,49 @@ export const FOKUSVIRTA_PIETARI = {
      * "Kirjoitin päivän tapahtumat loppuun" (havainnot).
      */
     reaktiot: [
-      { id: 'pietari.r1', ankkuri: 'loppuun pesty lakana', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'pietari.r2', ankkuri: 'iltaa vanhemmalta', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'pietari.r3', ankkuri: 'ilman kynttilöitä', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'pietari.r4', ankkuri: 'lisäsin vielä tämän', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "pietari.r1",
+    "ankkuri": "penkkien eteen oli piilotettu vesisuihkuja",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "pietari.r2",
+    "ankkuri": "tarkoitus oli kastella vieraat",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "pietari.r3",
+    "ankkuri": "kiljaisi kuin poika",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "pietari.r4",
+    "ankkuri": "palasi pian nauraen uudestaan",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "pietari.r5",
+    "ankkuri": "riisuin takkini ja menin perässä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Pietarin kesäyö oli vaalea kuin loppuun pesty lakana. Kello käski nukkumaan, mutta Neva ei näyttänyt iltaa vanhemmalta. Palatsien ikkunat hohtivat ilman kynttilöitä. Kirjoitin päivän tapahtumat loppuun. [mischievously] Päivä itse ei suostunut lopettamaan, joten lisäsin vielä tämän.',
+    luenta: "[curious] Pietarhovin palatsipuistossa penkkien eteen oli piilotettu vesisuihkuja. Niiden tarkoitus oli kastella vieraat. Hieno herra kiljaisi kuin poika, mutta palasi pian nauraen uudestaan. [warmly] Minä riisuin takkini ja menin perässä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-pietari.mp3',
   },
 
@@ -321,9 +353,7 @@ export const FOKUSVIRTA_PIETARI = {
      */
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Valkoisena yönä Nevan sillat nousivat yksi toisensa jälkeen. Vaihdoin reittiä ennen laivojen tuloa — kirjekyyhky ei luota pelkkään kelloon.',
-    ],
+    kommentti: ["Pietarin Eremitaasin taidemuseossa kissojen tehtävä on pitää hiiret loitolla taideaarteista. Minä tervehdin yhtä pihalla. Katolta, tietenkin."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'miettiva', voimakkuus: 0.5 },
     /*

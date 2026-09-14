@@ -109,10 +109,7 @@ export const FOKUSVIRTA_TALLINNA = {
     paikkarivi: 'Reval, syyskuussa 1873. Tuulista; satamassa lokit huutavat; '
       + 'puntari putoaa.',
     /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1; audio/alignment tarvitaan. */
-    teksti: 'Revalin torin apteekissa kysyin, auttaisiko marsipaani '
-      + 'sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi '
-      + 'suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; '
-      + 'hoitoon olin poikkeuksellisen tyytyväinen.',
+    teksti: "Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.",
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -127,21 +124,48 @@ export const FOKUSVIRTA_TALLINNA = {
      * torni" (havainto).
      */
     reaktiot: [
-      { id: 'tallinna.r1', ankkuri: 'marsipaani sydänsuruihin', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Makeinen lääkkeenä on outo ajatus.' },
-      { id: 'tallinna.r2', ankkuri: 'ketä kaipaa', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kysymys osuu isoisän omaan yksinäisyyteen.' },
-      { id: 'tallinna.r3', ankkuri: 'suuremman palan', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Apteekkarin vastaus ilman sanoja.' },
-      { id: 'tallinna.r4', ankkuri: 'Söin lääkkeeni', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Ohje noudatetaan tunnollisesti.' },
-      { id: 'tallinna.r5', ankkuri: 'poikkeuksellisen tyytyväinen', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Loppuvitsi hoidon ja vaivan erosta.' },
-    ],
-    luenta: '[curious] Revalin torin apteekissa kysyin, auttaisiko marsipaani '
-      + 'sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi '
-      + 'suuremman palan. Söin lääkkeeni satamaan mennessä. [softly] Vaiva '
-      + 'jäi; hoitoon olin poikkeuksellisen tyytyväinen.',
+  {
+    "id": "tallinna.r1",
+    "ankkuri": "auttaisiko marsipaani sydänsuruihin",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tallinna.r2",
+    "ankkuri": "jos ei vielä tiedä ketä kaipaa",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tallinna.r3",
+    "ankkuri": "Apteekkari leikkasi suuremman palan",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tallinna.r4",
+    "ankkuri": "Söin lääkkeeni satamaan mennessä",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tallinna.r5",
+    "ankkuri": "hoitoon olin poikkeuksellisen tyytyväinen",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    luenta: "[curious] Revalin torin apteekissa kysyin, auttaisiko marsipaani sydänsuruihin, jos ei vielä tiedä ketä kaipaa. Apteekkari leikkasi suuremman palan. [warmly] Söin lääkkeeni satamaan mennessä. Vaiva jäi; hoitoon olin poikkeuksellisen tyytyväinen.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-tallinna.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-tallinna-r20260909-story-v2.jpg;
@@ -236,9 +260,7 @@ export const FOKUSVIRTA_TALLINNA = {
      */
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Raeapteekki myy marsipaania yhä. Minä odotin portaalla, että joku murentaisi annoksensa. Yksi lapsi jakoi palan ystävälleen. Ehkä isoisän lääkkeessä oli oikea ajatus.',
-    ],
+    kommentti: ["Raeapteekki myy marsipaania yhä. Minä odotin portaalla, että joku murentaisi annoksensa. Yksi lapsi jakoi palan ystävälleen. Ehkä isoisän lääkkeessä oli oikea ajatus."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.55 },
     /*

@@ -61,7 +61,7 @@ export const FOKUSVIRTA_KREETA = {
     paikkarivi: 'Kreeta, huhtikuussa 1873. Lämmintä; vuorilla vielä lunta; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 318 merkkiä (yläraja 400). */
-    teksti: 'Hanian majakan aloittivat venetsialaiset ja rakensivat uudelleen egyptiläiset. Vuonna 1873 Kreeta kuului sulttaanille. Kun kysyin kalastajalta, kenen majakka on, hän osoitti merelle: niiden, jotka tarvitsevat sitä. Piirsin valon ilman valtakunnan väriä.',
+    teksti: "Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, sama maltillinen
@@ -82,17 +82,41 @@ export const FOKUSVIRTA_KREETA = {
      * tausta).
      */
     reaktiot: [
-      { id: 'kreeta.r1', ankkuri: 'kuului sulttaanille', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'kreeta.r3', ankkuri: 'hän osoitti merelle', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'kreeta.r4', ankkuri: 'jotka tarvitsevat sitä', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'kreeta.r5', ankkuri: 'ilman valtakunnan väriä', tarkoitus: 'myotailee', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "kreeta.r1",
+    "ankkuri": "muinaisen sataman poikki, mutta saappaani eivät kastuneet",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kreeta.r2",
+    "ankkuri": "Meri oli kaukana",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kreeta.r3",
+    "ankkuri": "Rannikko oli kohonnut ja nostanut koko sataman kuiville",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kreeta.r4",
+    "ankkuri": "piirsin laivan siihen, missä vuohi söi ruohoa",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Hanian majakan aloittivat venetsialaiset ja rakensivat uudelleen egyptiläiset. Vuonna 1873 Kreeta kuului sulttaanille. Kun kysyin kalastajalta, kenen majakka on, hän osoitti merelle: [softly] niiden, jotka tarvitsevat sitä. Piirsin valon ilman valtakunnan väriä.',
+    luenta: "[curious] Falassarnassa kävelin muinaisen sataman poikki, mutta saappaani eivät kastuneet. Meri oli kaukana. Rannikko oli kohonnut ja nostanut koko sataman kuiville. [warmly] Istuin kivelle ja piirsin laivan siihen, missä vuohi söi ruohoa.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-kreeta.mp3',
   },
 
@@ -127,9 +151,7 @@ export const FOKUSVIRTA_KREETA = {
      * 95 merkkiä), joten sitä ei jaeta kahdeksi.
      */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Kreeta on nyt Kreikkaa. Hanian tuttu majakka näyttää paluureitin. Väitin tienneeni suunnan koko ajan, mutta helpotuksesta siipeni löivät vähän nopeammin.',
-    ],
+    kommentti: ["Hanian Nikolauksen kirkolla on sekä kellotorni että minareetti, sillä rakennus on ollut välillä moskeija. Aukion kahviloista kantautuu puheensorinaa. Tuon plataanin varjossa voisi viipyä pitkään."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*

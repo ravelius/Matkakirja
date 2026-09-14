@@ -303,10 +303,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
     paikkarivi: 'Tukholma, toukokuussa 1873. Liputus joka ikkunassa; kaduilla '
       + 'tungos; puntari korkealla.',
     /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1; audio/alignment tarvitaan. */
-    teksti: 'Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. '
-      + 'Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja '
-      + 'yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin '
-      + 'samaa selostajaa valtakunnan asioihin.',
+    teksti: "Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.",
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -321,19 +318,48 @@ export const FOKUSVIRTA_TUKHOLMA = {
      * välissä välkkyi vesi" (havainnot).
      */
     reaktiot: [
-      { id: 'tukholma.r1', ankkuri: 'lähinnä hattuja', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Kruunajaisista näkyi vain hattuja.' },
-      { id: 'tukholma.r2', ankkuri: 'selosti hevoset', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Tyttö ottaa selostajan tehtävän: nyökkäys.' },
-      { id: 'tukholma.r3', ankkuri: 'Kuningas jäi sivulauseeseen', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kuningas jää tytön kertomuksessa sivuosaan.' },
-      { id: 'tukholma.r4', ankkuri: 'valtakunnan asioihin', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Loppuvitsi: selostaja suositellaan valtiollisiin tehtäviin.' },
-    ],
-    luenta: '[curious] Tukholmassa kruunattiin Oskar, mutta näin lähinnä '
-      + 'hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, '
-      + 'kukat ja yhden kadonneen kengän. Kuningas jäi sivulauseeseen. '
-      + '[softly] Suosittelisin samaa selostajaa valtakunnan asioihin.',
+  {
+    "id": "tukholma.r1",
+    "ankkuri": "kruunattiin Oskar, mutta näin lähinnä hattuja",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tukholma.r2",
+    "ankkuri": "Pieni tyttö nousi isänsä hartioille",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tukholma.r3",
+    "ankkuri": "yhden kadonneen kengän",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tukholma.r4",
+    "ankkuri": "Kuningas jäi sivulauseeseen",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tukholma.r5",
+    "ankkuri": "Suosittelisin samaa selostajaa",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    luenta: "[curious] Tukholmassa kruunattiin Oskar, mutta näin lähinnä hattuja. Pieni tyttö nousi isänsä hartioille ja selosti hevoset, kukat ja yhden kadonneen kengän. [warmly] Kuningas jäi sivulauseeseen. Suosittelisin samaa selostajaa valtakunnan asioihin.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-tukholma.mp3',
   },
 
@@ -361,9 +387,7 @@ export const FOKUSVIRTA_TUKHOLMA = {
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Ruotsissa kuninkaita ei enää kruunata. Minä nousin Monteliusvägenin kaiteelle nähdäkseni saaret paremmin. Neljäntoista laskeminen meni sekaisin, kun veneet alkoivat näyttää muruilta.',
-    ],
+    kommentti: ["Kuninkaanlinnan vieressä kalastajan vapa taipui niin, että unohdin koko linnan. Kävelin pitkin kaidetta kalan mukana. Se välähti pinnassa, roiskautti vettä rinnuksilleni ja katosi. Kalastaja jäi tuijottamaan tyhjää siimaa. Minä pörhistin märät sulkani. Meillä oli nyt yhteinen puheenaihe."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ylpea', voimakkuus: 0.5 },
     /*

@@ -178,7 +178,7 @@ export const FOKUSVIRTA_FIRENZE = {
     paikkarivi: 'Firenze, toukokuussa 1873. Lämmintä; joki matalalla; puntari '
       + 'korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 358 merkkiä (yläraja 400). */
-    teksti: 'Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.',
+    teksti: "Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -198,19 +198,41 @@ export const FOKUSVIRTA_FIRENZE = {
      * illalla" (selitys ja siirtymä).
      */
     reaktiot: [
-      { id: 'firenze.r1', ankkuri: 'minä hikoilin liivissä', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'firenze.r2', ankkuri: 'siirtää sateelta suojaan', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'firenze.r3', ankkuri: 'suurta kättä ja omaani', tarkoitus: 'vakavoituu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'firenze.r4', ankkuri: 'piirtää käden', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'firenze.r5', ankkuri: 'enemmän ihmiseltä', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "firenze.r1",
+    "ankkuri": "David seisoi aukiolla ilman rihman kiertämää",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "firenze.r2",
+    "ankkuri": "Patsas aiottiin siirtää sateelta suojaan",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "firenze.r3",
+    "ankkuri": "minun käteni osasi lähinnä piirtää käden",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "firenze.r4",
+    "ankkuri": "kivi vaikutti vielä enemmän ihmiseltä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. [softly] Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.',
+    luenta: "[curious] Firenzen David seisoi aukiolla ilman rihman kiertämää, kun minä hikoilin liivissä. Patsas aiottiin siirtää sateelta suojaan. Katselin sen suurta kättä ja omaani; minun käteni osasi lähinnä piirtää käden. [thoughtfully] Illan hiljaisuudessa kivi vaikutti vielä enemmän ihmiseltä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-firenze.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-firenze-kasi-v6.jpg;
@@ -267,9 +289,7 @@ export const FOKUSVIRTA_FIRENZE = {
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'David on nyt sisällä ja aukiolla kopio. Kiersin museon katon kautta aukiolle ja tarkistin kopion ilmeen. Se ei räpäyttänyt. Minä taisin hävitä.',
-    ],
+    kommentti: ["Firenzessä pääsiäisen ilotulituksen sytyttää kyyhkynmuotoinen raketti. Se kiitää kirkosta vaijeria pitkin! Minä jännitin paluuta. Oli kone tai ei, omia kannustetaan."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*
