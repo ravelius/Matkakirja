@@ -610,7 +610,15 @@ const tasonVersio = (taso) => {
   if (taso.nosto) return luettelo?.nostotaso?.versio ?? '';
   if (taso.viiva) return luettelo?.viivataso?.versio ?? '';
   if (taso.ranta) return luettelo?.rantataso?.versio ?? '';
-  if (taso.vari) return varitasonKirjaus()?.versio ?? '';
+  /*
+   * VÄRITASOLLA AVAIN ON KOKO POLKU EIKÄ PELKKÄ VERSIO. Maa on
+   * 14.9.2026 alkaen osoitteessa (ks. varitasonKansio), ja kahdella
+   * maalla voi olla sama `versio`-merkkijono — silloin pelkkä versio
+   * antaisi Ranskan ja Espanjan laatalle SAMAN avaimen samassa
+   * ruudussa, ja maata vaihdettaessa kerros pitäisi naapurin kuvaa
+   * omanaan. Polku eroaa aina, koska ISO-koodi on siinä.
+   */
+  if (taso.vari) return varitasonKansio(varitasonKirjaus());
   return luettelo?.versio ?? '';
 };
 const avain = (taso, sarake, rivi) => `${tasonVersio(taso)}:${taso.z}:${sarake}:${rivi}`;
@@ -646,6 +654,63 @@ function laattaOlemassa(taso, sarake, rivi) {
   return t === undefined ? false : ((t >> (i & 7)) & 1) === 1;
 }
 
+/*
+ * ===== VÄRITASON LAATTAPOLKU — MAA ON OSOITTEESSA (14.9.2026) =======
+ *
+ * MITATTU VIKA (kaistat-raportti 13.9.2026, luku 5). Ennen tätä laatan
+ * osoite oli `<versio>/vari/z<taso>/<sarake>/<rivi>.webp`, eikä siinä
+ * ollut maata. Kaikkien 27 maan tasoitusajot kirjoittivat samaan
+ * ämpärin avaimeen samalla `versio`-merkkijonolla
+ * (`2026-09-13-tasoitus`), ja koska maiden laatikot menevät
+ * päällekkäin, peräkkäiset ajot YLIKIRJOITTIVAT toisensa: Ranskan
+ * laatastossa oli Espanjan ajon jättämä reikä Pohjois-Espanjassa
+ * (todiste: kolme eri Last-Modified-aikaa saman laataston laatoissa ja
+ * kuva docs/raportit/kuvat/kaistat-laatan-alfa.png).
+ *
+ * KORJAUS ON ISO-KOODI POLUSSA: `<versio>/vari/<ISO>/z…`. Kaksi maata
+ * ei voi enää kirjoittaa samaan avaimeen, oli versio sama tai ei.
+ *
+ * SIIRTYMÄ EI RIKO JULKAISTUA PELIÄ MISSÄÄN VÄLIVAIHEESSA. Kenttä
+ * `maaPolussa` on kirjauksessa se yksi tieto, joka kertoo kummasta
+ * laatastosta on kyse: ämpärissä nyt olevissa kirjauksissa sitä ei ole,
+ * ja niille tämä funktio palauttaa TÄSMÄLLEEN vanhan polun. Kirjaus saa
+ * kentän vasta kun maa on ajettu uudestaan, eli laatat ovat ämpärissä
+ * ENNEN kuin yksikään peli pyytää uutta polkua — luettelo viedään
+ * työnkulussa vasta laattojen jälkeen.
+ */
+
+/**
+ * Väritason laattojen kansio (ilman `z/sarake/rivi`-osaa).
+ *
+ * @param {object|null} kirjaus `pyramidi.varitasot[ISO]` tai null.
+ * @param {{versio?: boolean}} [asetukset] `versio: false` jättää
+ *   version pois — generaattori kirjoittaa laatat ajokansioon, jonka
+ *   alle versio tulee vasta ämpärissä.
+ * @returns {string} esim. `2026-09-14-tasoitus/vari/FRA` tai vanhalla
+ *   kirjauksella `2026-09-13-tasoitus/vari`.
+ */
+export function varitasonKansio(kirjaus, asetukset = {}) {
+  if (!kirjaus) return '';
+  const osat = [];
+  if (asetukset.versio !== false) osat.push(kirjaus.versio ?? '');
+  osat.push('vari');
+  if (kirjaus.maaPolussa && kirjaus.maa) osat.push(kirjaus.maa);
+  return osat.join('/');
+}
+
+/**
+ * Yhden väritason laatan polku ämpärissä (ilman ämpärin etuliitettä).
+ *
+ * TÄMÄ ON POLUN AINOA KAAVA. Sekä peli (laattaUrl alla) että
+ * generaattori (tools/generoi-laattapyramidi.mjs) ja työnkulun
+ * vientiaskel lukevat sen tästä — kaksi kopiota samasta kaavasta
+ * ehtisi eriytyä, ja lopputulos olisi 404 tai pahempi: oikean
+ * näköinen mutta väärän maan laatta.
+ */
+export function varitasonLaattapolku(kirjaus, z, sarake, rivi, muoto = 'webp', asetukset = {}) {
+  return `${varitasonKansio(kirjaus, asetukset)}/z${z}/${sarake}/${rivi}.${muoto}`;
+}
+
 /** Laatan osoite ämpärissä. Sama merkkijono sekä kuvalle että noudolle. */
 function laattaUrl(taso, sarake, rivi) {
   // Nostotason laatta asuu oman versionsa alla pohjan rinnalla:
@@ -665,12 +730,13 @@ function laattaUrl(taso, sarake, rivi) {
     return pyramidiUrl(`${luettelo.rantataso.versio}/ranta/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
-  // Väritaso samoin: <varitasot[ISO].versio>/vari/z… (karttauudistus,
-  // erät 1 ja 1b). Versio tulee KOHDEMAAN kirjauksesta, joten yhden
+  // Väritaso samoin omassa polussaan, ja MAA ON POLUSSA: ks.
+  // varitasonKansio. Polku tulee KOHDEMAAN kirjauksesta, joten yhden
   // maan uusintapoltto ei koske toisen maan laattoihin.
   if (taso.vari) {
-    return pyramidiUrl(`${varitasonKirjaus()?.versio ?? ''}/vari/z${taso.z}/${sarake}/${rivi}`
-      + `.${luettelo.muoto ?? 'webp'}`);
+    return pyramidiUrl(varitasonLaattapolku(
+      varitasonKirjaus(), taso.z, sarake, rivi, luettelo.muoto ?? 'webp',
+    ));
   }
   return pyramidiUrl(`${luettelo.versio}/z${taso.z}/${sarake}/${rivi}`
     + `.${luettelo.muoto ?? 'webp'}`);

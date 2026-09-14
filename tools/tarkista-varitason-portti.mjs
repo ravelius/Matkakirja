@@ -38,6 +38,7 @@
  */
 import { readFileSync } from 'node:fs';
 import { lepokerroksenKerrokset } from '../js/pallolaatat.js';
+import { varitasonKansio } from '../js/laattapyramidi.js';
 
 const argv = process.argv.slice(2);
 const valitsin = (nimi, oletus = null) => {
@@ -68,6 +69,19 @@ const kirjaus = MAA ? (pyramidi.varitasot?.[MAA] ?? null) : null;
 console.log(`  varitasot[${MAA ?? '–'}]  ${kirjaus
   ? `versio ${kirjaus.versio} · paletti ${kirjaus.paletti} · tasot ${kirjaus.tasot?.join(',')}`
   : 'EI KIRJAUSTA'}`);
+/*
+ * POLKU NÄKYVIIN (14.9.2026). Kaistat-raportin luku 5: 27 maan laatat
+ * kirjoitettiin samaan avaimeen, eikä luettelosta voinut nähdä sitä —
+ * kirjaukset olivat kumpikin kelvollisia. Nyt portti tulostaa sen
+ * osoitteen, jota peli TODELLA pyytää, samasta funktiosta jota peli
+ * käyttää. Vanha kirjaus (ei `maaPolussa`) näkyy maattomana polkuna,
+ * uusi maakohtaisena — ja ero on silmällä nähtävissä ajon lokissa.
+ */
+if (kirjaus) {
+  console.log(`  laattapolku     julisteet/pyramidi/${varitasonKansio(kirjaus)}`
+    + '/z<taso>/<sarake>/<rivi>.webp'
+    + (kirjaus.maaPolussa ? '' : '   (VANHA MAATON POLKU)'));
+}
 console.log(`  kerrokset       ${JSON.stringify(kerrokset)}`);
 
 if (!kerrokset) {

@@ -98,6 +98,7 @@ import { laudanProjektio, SYVYYS } from './fokuskartta/piirto.js';
 import { RANTATYYLI } from './fokuskartta/maailmapiirto.js';
 import { nostosymPolttoLaatikko } from '../js/fokusnosto-symbolit.js';
 import { NOSTOLADONTA_SAANTO } from '../js/nostoladonta.js';
+import { varitasonKansio } from '../js/laattapyramidi.js';
 
 const TAALLA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TAALLA, '..');
@@ -610,6 +611,34 @@ const VARI_MAA = (valitsin('vari', null) ?? '').toUpperCase() || null;
 const VARITASO = Boolean(VARI_MAA);
 const VARIVERSIO = valitsin('variversio', null) ?? VERSIO;
 /*
+ * ===== MAA ON LAATAN POLUSSA (14.9.2026) ===========================
+ *
+ * Kaistat-raportin luku 5: ennen tätä kaikkien 27 maan tasoituslaatat
+ * kirjoitettiin samaan avaimeen `<versio>/vari/z<taso>/<sarake>/<rivi>`
+ * samalla versiomerkkijonolla, ja koska maiden laatikot menevät
+ * päällekkäin, peräkkäiset ajot ylikirjoittivat toisensa. Kaava on nyt
+ * `<versio>/vari/<ISO>/z…`, eikä kahdella maalla voi olla samaa
+ * avainta versiosta riippumatta.
+ *
+ * KAAVA LUETAAN PELIN OMASTA FUNKTIOSTA (js/laattapyramidi.js
+ * varitasonKansio) — sama syy kuin leikkurin renkailla: generaattorin
+ * oma kopio kaavasta ehtisi eriytyä pelin kaavasta, ja lopputulos
+ * olisi 404 tai oikean näköinen mutta väärän maan laatta.
+ *
+ * `--vanha-varipolku` ajaa entiseen, maattomaan polkuun. Se on
+ * vastakoe ja hätävara, ei ajotila: sillä ajetut laatat törmäävät
+ * edelleen toisiinsa.
+ */
+const VARI_MAA_POLUSSA = VARITASO && !lippu('vanha-varipolku');
+/** Kirjauksen polkukentät; sama olio, jonka `varitasot[ISO]` saa alle. */
+const VARI_POLKUKIRJAUS = {
+  versio: VARIVERSIO, maa: VARI_MAA, maaPolussa: VARI_MAA_POLUSSA || undefined,
+};
+/** Laattojen kansio AJOKANSIOSSA, esim. `vari/FRA` (ilman versiota). */
+const VARI_KANSIO = varitasonKansio(VARI_POLKUKIRJAUS, { versio: false }) || 'vari';
+/** Laattojen kansio ÄMPÄRISSÄ, esim. `2026-09-14-tasoitus/vari/FRA`. */
+const VARI_AMPARIKANSIO = varitasonKansio(VARI_POLKUKIRJAUS);
+/*
  * ALUEVESIPUSKURI LAUTAYKSIKKÖINÄ (Fablen päätös 13.9.2026: 12
  * meripeninkulmaa eli aluevesiraja). 12 mpk = 22,224 km; laudalla yksi
  * leveysaste on 33,33 yksikköä ja yksi aste 111,32 km, joten
@@ -725,11 +754,26 @@ const VARI_KERROIN = Number(valitsin('laatikkokerroin', 1.15));
  * riippumatta — ja se on tasoitukselle halpaa, koska laatassa ei ole
  * maastoa (ks. TASOITUSAJO).
  */
+/*
+ * KUVASUHDE 2,0 ON MUKANA 14.9.2026 ALKAEN (kaistat-raportti, luku 6,
+ * suositus 1). Lista päättyi ennen kuvasuhteeseen 1,778 (1920 × 1080),
+ * mutta rootin ruutu on 2560 × 1352 = 1,893 ja sillä laataston laatikko
+ * jäi ruutua kapeammaksi — ruudun laidoille jäi ala, jolla laattoja ei
+ * ole lainkaan, ja se oli mitattuna 45 luminanssiyksikön suora kaista.
+ * Kuvasuhde 2,0 kattaa 1,893:n ja jättää varaa vielä leveämmälle.
+ *
+ * PUHELIMEN PYSTYRUUTU ON YHÄ OSAJOUKKO, koska unioni ottaa LEVEYDEN
+ * levimmältä ja KORKEUDEN kapeimmalta kuvasuhteelta. Lista on siis
+ * järjestämätön joukko, jonka molemmat ääripäät ovat mukana; 2,0:n
+ * lisäys kasvattaa vain leveyttä (1,778 → 2,0 eli 12,5 %) eikä voi
+ * pienentää korkeutta.
+ */
 const NAKYMAN_KUVASUHTEET = [
   [390, 844],   // puhelin pystyssä (kapein — määrää KORKEUDEN)
   [768, 1024],  // tabletti pystyssä
   [1440, 900],  // työpöytä
-  [1920, 1080], // leveä työpöytä (levein — määrää LEVEYDEN)
+  [1920, 1080], // leveä työpöytä (1,778)
+  [2000, 1000], // LEVEIN: kuvasuhde 2,0 — määrää LEVEYDEN (rootin 2560 × 1352 = 1,89 mahtuu)
 ];
 const VARI_LAATIKKO_NAKYMA = lippu('laatikko-nakyma');
 /*
@@ -1121,7 +1165,7 @@ if (VARITASO) {
     + `x ${x0.toFixed(1)}..${x1.toFixed(1)} y ${y0.toFixed(1)}..${y1.toFixed(1)} `
     + `(kerroin ${VARI_KERROIN}, puskuri ${ALUEVESI_YKSIKKOA} yksikköä = 12 mpk`
     + `${VARI_LAATIKKO_NAKYMA ? ', NÄKYMÄUNIONI' : ''}) · `
-    + `versio ${VARIVERSIO} · polku vari/z<taso>`);
+    + `versio ${VARIVERSIO} · polku ${VARI_AMPARIKANSIO}/z<taso>/<sarake>/<rivi>.${MUOTO}`);
   console.log(`  väripaletti     ${VARIPALETTI} · `
     + (TASOITUSTASO
       ? `peitto ${TASOITUS_PEITTO} · kerma ${TASOITUS_KERMA} · leikkuri maan polygoni (puskuri 0) `
@@ -3139,7 +3183,8 @@ for (const { mitat, bx, by } of lohkot.values()) {
     if (NOSTOTASO) kansio = join(kohdekansio, 'nostot', `z${mitat.z}`, String(sarake));
     if (VIIVATASO) kansio = join(kohdekansio, 'viivat', `z${mitat.z}`, String(sarake));
     if (RANTATASO) kansio = join(kohdekansio, 'ranta', `z${mitat.z}`, String(sarake));
-    if (VARITASO) kansio = join(kohdekansio, 'vari', `z${mitat.z}`, String(sarake));
+    // Väritaso: `vari/<ISO>/z…` (ks. MAA ON LAATAN POLUSSA).
+    if (VARITASO) kansio = join(kohdekansio, ...VARI_KANSIO.split('/'), `z${mitat.z}`, String(sarake));
     mkdirSync(kansio, { recursive: true });
     writeFileSync(join(kansio, `${rivi}.${MUOTO}`), puskuri);
 
@@ -3413,11 +3458,28 @@ function teeLuettelo() {
   varitasot: (() => {
     if (!VARITASO || !tasot.length) return null;
     const laatastot = {};
-    for (const m of tasot) laatastot[m.z] = laatastoBase64(m, 'vari');
+    /*
+     * ALIPOLKU ON SAMA KUIN LAATTOJEN (14.9.2026: `vari/<ISO>`).
+     * Bittikartta luetaan LEVYLTÄ, joten jos se etsisi laattoja
+     * vanhasta `vari/z…`-polusta, se olisi pelkkiä nollia — peli ei
+     * pyytäisi yhtään laattaa eikä mikään kertoisi miksi. Juuri sen
+     * savuke-tasoitus-pallo näki 14.9.2026 (tasoitettuja 0).
+     */
+    for (const m of tasot) laatastot[m.z] = laatastoBase64(m, VARI_KANSIO);
     return {
       [VARI_MAA]: {
         versio: VARIVERSIO,
         maa: VARI_MAA,
+        /*
+         * MAA POLUSSA — TÄMÄ KENTTÄ ON SIIRTYMÄN AINOA KYTKIN.
+         * Ämpärissä jo olevissa kirjauksissa sitä ei ole, ja peli lukee
+         * niille vanhan maattoman polun täsmälleen ennallaan
+         * (js/laattapyramidi.js varitasonKansio). Kirjaus saa kentän
+         * vasta kun maa on ajettu uudestaan — ja työnkulku vie
+         * luettelon vasta laattojen jälkeen, joten uutta polkua ei
+         * luvata ennen kuin laatat ovat perillä.
+         */
+        maaPolussa: VARI_MAA_POLUSSA || undefined,
         aluevesi: ALUEVESI_YKSIKKOA,
         /*
          * PALETTI, VESI JA FEIDAUS OVAT AJON KIRJANPITOA. Peli ei lue
@@ -3639,7 +3701,7 @@ if (NOSTOTASO) {
 } else if (RANTATASO) {
   console.log(`\nVie ämpäriin: pyramidi/<rantaversio>/ranta/z<taso>/<sarake>/<rivi>.${MUOTO}`);
 } else if (VARITASO) {
-  console.log(`\nVie ämpäriin: pyramidi/<variversio>/vari/z<taso>/<sarake>/<rivi>.${MUOTO}`);
+  console.log(`\nVie ämpäriin: pyramidi/${VARI_AMPARIKANSIO}/z<taso>/<sarake>/<rivi>.${MUOTO}`);
 } else {
   console.log(`\nVie ämpäriin: pyramidi/<versio>/z<taso>/<sarake>/<rivi>.${MUOTO}`);
 }

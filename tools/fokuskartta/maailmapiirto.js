@@ -421,16 +421,54 @@ export function polttaVariLeikkuri(canvas, asetukset, leikkuri) {
       const reuna = Number.isFinite(leikkuri.feidausReuna) ? leikkuri.feidausReuna : 0;
       const laatikko = leikkuri.laatikko ?? null;
       if (reuna > 0 && laatikko?.w > 0) {
+        /*
+         * ===== HÄIVE PIIRRETÄÄN LAATIKON REUNASTA ULOSPÄIN ==========
+         *
+         * NÄIN PÄIN VASTA 14.9.2026. Ennen tätä liuku meni reunasta
+         * SISÄÄNPÄIN: `destination-out` pyyhki kerman TÄYTEEN laatikon
+         * reunalla ja nollaan `reuna` yksikköä sisempänä, kun taas
+         * laatikon ULKOPUOLELLA — samassa laatassa, laataston
+         * marginaalissa — ei pyyhitty mitään ja kerma oli taas täysi.
+         * Se teki reunan sen sijaan että olisi häivyttänyt sen, ja se
+         * on mitattu: 37,3 ja 10,2 luminanssiyksikön suora viiva
+         * (kaistat-raportti 13.9.2026, luku 2.2 ja suositus 1).
+         *
+         * OIKEA MUOTO ON KOLME VYÖHYKETTÄ:
+         *   1. laatikon SISÄLLÄ kerma on täysi — mitään ei pyyhitä,
+         *      joten kohdemaan ympäristö tasoittuu kokonaan;
+         *   2. reunasta `reuna` yksikköä ULOSPÄIN kerma häipyy
+         *      täydestä nollaan — reunalla ei ole porrasta, koska
+         *      liuku ALKAA arvosta 0 juuri reunalla;
+         *   3. sen ulkopuolella kerma on pyyhitty kokonaan, joten
+         *      laataston ULOIN reuna (jossa laattoja ei enää ole)
+         *      rajautuu nollaan kermaan eikä täyteen — se oli toinen
+         *      mitattu kaista (45,3 ja 41,6 yksikköä, luku 2.1).
+         *
+         * Kohdemaahan tämä ei voi koskea: häive on laatikon reunalla ja
+         * laatikko on maan laatikko × kerroin (vähintään 1,15), joten
+         * vyöhykkeet 2 ja 3 ovat aina maan ulkopuolella.
+         */
         const valkoinen = (a2) => `rgba(255,255,255,${a2})`;
+        /**
+         * Liukukaistale reunalta ulospäin: alfa 0 kohdassa (x0,y0)
+         * eli laatikon reunalla, alfa 1 kohdassa (x1,y1) eli `reuna`
+         * yksikköä ulkona.
+         */
         const kaista = (x0, y0, x1, y1, vaaka) => {
           const g2 = fctx.createLinearGradient(x0, y0, vaaka ? x1 : x0, vaaka ? y0 : y1);
-          g2.addColorStop(0, valkoinen(1));
-          g2.addColorStop(1, valkoinen(0));
+          g2.addColorStop(0, valkoinen(0));
+          g2.addColorStop(1, valkoinen(1));
           fctx.fillStyle = g2;
           fctx.fillRect(
             Math.min(x0, x1), Math.min(y0, y1),
             Math.abs(x1 - x0) || W, Math.abs(y1 - y0) || H,
           );
+        };
+        /** Umpipyyhkäisy: häiveen takana kermaa ei ole lainkaan. */
+        const umpi = (x, y, w, h) => {
+          if (w <= 0 || h <= 0) return;
+          fctx.fillStyle = valkoinen(1);
+          fctx.fillRect(x, y, w, h);
         };
         const lx0 = kx(laatikko.x);
         const lx1 = kx(laatikko.x + laatikko.w);
@@ -438,10 +476,16 @@ export function polttaVariLeikkuri(canvas, asetukset, leikkuri) {
         const ly1 = ky(laatikko.y + laatikko.h);
         const rx = reuna * px;
         // Vasen ja oikea kaistale (vaakasuora liuku), ylä ja ala (pysty).
-        kaista(lx0, 0, lx0 + rx, H, true);
-        kaista(lx1, 0, lx1 - rx, H, true);
-        kaista(0, ly0, W, ly0 + rx, false);
-        kaista(0, ly1, W, ly1 - rx, false);
+        kaista(lx0, 0, lx0 - rx, H, true);
+        kaista(lx1, 0, lx1 + rx, H, true);
+        kaista(0, ly0, W, ly0 - rx, false);
+        kaista(0, ly1, W, ly1 + rx, false);
+        // Häiveen takana: kerma kokonaan pois, jotta laataston uloin
+        // reuna rajautuu nollaan eikä täyteen kermaan.
+        umpi(0, 0, lx0 - rx, H);
+        umpi(lx1 + rx, 0, W - (lx1 + rx), H);
+        umpi(0, 0, W, ly0 - rx);
+        umpi(0, ly1 + rx, W, H - (ly1 + rx));
       }
     } else feidattu = null;
   }

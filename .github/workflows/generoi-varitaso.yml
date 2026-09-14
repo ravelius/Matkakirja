@@ -188,6 +188,17 @@ jobs:
           aws s3 cp "s3://$AMPARI/julisteet/pallo/laatat/$KANSIO/laatat.json" laatat-ampari.json \
             --endpoint-url "$PAATE" --no-progress
           echo "PALLOKANSIO=$KANSIO" >> "$GITHUB_ENV"
+          # LAATTAPOLKU PELIN OMASTA FUNKTIOSTA (ks. Vie laatat ämpäriin).
+          # VARIKANSIO = ajokoneen kansio (`vari/FRA`), VARIPOLKU = ämpärin
+          # polku (`<variversio>/vari/FRA`).
+          VARIKANSIO=$(node -e "import('./js/laattapyramidi.js').then((m) => console.log(
+            m.varitasonKansio({ versio: process.env.VARIVERSIO, maa: process.env.MAA, maaPolussa: true },
+              { versio: false })))")
+          VARIPOLKU=$(node -e "import('./js/laattapyramidi.js').then((m) => console.log(
+            m.varitasonKansio({ versio: process.env.VARIVERSIO, maa: process.env.MAA, maaPolussa: true })))")
+          echo "laattojen kansio ajossa: $VARIKANSIO · ämpärissä: $VARIPOLKU"
+          echo "VARIKANSIO=$VARIKANSIO" >> "$GITHUB_ENV"
+          echo "VARIPOLKU=$VARIPOLKU" >> "$GITHUB_ENV"
           # PORTTI ENNEN AJOA: jos kerros on jo sammuksissa, vika ei ole
           # tässä ajossa eikä sitä saa peittää uudella luettelolla.
           node tools/tarkista-varitason-portti.mjs \
@@ -286,14 +297,14 @@ jobs:
             --paletti "$PALETTI" $LISA
           if [ -n "$KUIVA" ]; then
             echo "--- KUIVA-AJO: nämä polut kirjoitettaisiin ---"
-            echo "  s3://$AMPARI/julisteet/pyramidi/$VARIVERSIO/vari/z<taso>/<sarake>/<rivi>.webp"
+            echo "  s3://$AMPARI/julisteet/pyramidi/$VARIPOLKU/z<taso>/<sarake>/<rivi>.webp"
             echo "  s3://$AMPARI/julisteet/pyramidi/pyramidi.json  (varitasot.$MAA täydennettynä)"
             echo "  laatat.json EI muutu (ks. VERSIOPORTTI)."
             exit 0
           fi
           echo "--- tuotos ---"
-          find ulos/vari -name '*.webp' | wc -l
-          du -sh ulos/vari
+          find "ulos/$VARIKANSIO" -name '*.webp' | wc -l
+          du -sh "ulos/$VARIKANSIO"
 
       # PORTTI UUDELLA LUETTELOLLA, ENNEN KUIN MITÄÄN ON ÄMPÄRISSÄ.
       # Ämpärin oma laatat.json ja juuri koottu pyramidi.json: jos
@@ -308,16 +319,23 @@ jobs:
       # Laatat ovat muuttumattomia: versio on polussa, joten sama osoite
       # ei koskaan saa uutta sisältöä. Sama immutable-välimuisti kuin
       # pohjalla, nosto- ja viivatasolla.
+      # MAA ON POLUSSA (14.9.2026, kaistat-raportin luku 5): laatat
+      # menevät osoitteeseen `<variversio>/vari/<ISO>/z…`. Ennen tätä
+      # kaikkien 27 maan ajot kirjoittivat samaan avaimeen ja
+      # ylikirjoittivat toisensa. POLKU LUETAAN PELIN OMASTA
+      # FUNKTIOSTA (js/laattapyramidi.js varitasonKansio) eikä
+      # kirjoiteta uudestaan tähän: kaksi kopiota samasta kaavasta
+      # ehtisi eriytyä, ja lopputulos olisi 404 tai väärän maan laatta.
       - name: Vie laatat ämpäriin
         if: ${{ inputs.vie && !inputs.kuiva }}
         run: |
           set -euo pipefail
           n=0
-          for taso in ulos/vari/z*; do
+          for taso in "ulos/$VARIKANSIO"/z*; do
             [ -d "$taso" ] || continue
             z=$(basename "$taso")
             aws s3 sync "$taso" \
-              "s3://$AMPARI/julisteet/pyramidi/$VARIVERSIO/vari/$z" \
+              "s3://$AMPARI/julisteet/pyramidi/$VARIPOLKU/$z" \
               --endpoint-url "$PAATE" \
               --exclude '*' --include '*.webp' \
               --content-type image/webp \
@@ -325,7 +343,7 @@ jobs:
               --no-progress
             n=$((n + 1))
           done
-          echo "Viety $n tasoa versioon $VARIVERSIO/vari."
+          echo "Viety $n tasoa polkuun $VARIPOLKU."
 
       # LUETTELO VIIMEISENÄ, JA VAIN JOS LAATAT OVAT PERILLÄ. Luettelo
       # on se, joka tekee kerroksesta julkisen: jos se vietäisiin ensin
