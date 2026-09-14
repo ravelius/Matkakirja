@@ -355,7 +355,7 @@ Mittauksiin se ei vaikuta.
 
 | Portti | Tulos |
 |---|---|
-| `npm test` | **# pass 3348, # fail 0** |
+| `npm test` | **# pass 3354, # fail 0** (main mergettyna) |
 | `node tools/tarkista-kaksoisavaimet.mjs` | ei kaksoisavaimia |
 | `node tools/tarkista-niputus.mjs` | niputus kunnossa, ei törmäyksiä |
 | `node tools/tarkista-savukkeet.mjs` | savukkeet kunnossa |
