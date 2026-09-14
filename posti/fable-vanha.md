@@ -25,7 +25,7 @@ Horatio run 34867464698 (failure): sisilia, islanti ja alpit generoitiin, lappi 
 Livia run 34867475717 (failure): sisilia-3 ja islanti-3 generoitiin, alpit-3 kaatui quota_exceededina. Ei vientiä, ei completed-kuittia. Suunnitelmakuitti pulu-8f90c2455f063569f989.planned.json on olemassa.
 Veloitettu mutta ilman käyttökelpoista tulosta: 3 Horatio- ja 2 Livia-luentaa. Puuttuu edelleen 10 luentaa (Horatio ja Livia: sisilia, islanti, alpit, lappi, tromssa).
 
-MITEN ERÄ 5 JATKETAAN, KUN KRediittejä ON. Suunnitelmakuitit estävät saman erän uusimisen ("Erä X on jo aloitettu"). Koska erätunnus lasketaan kohdelistasta, erä 5 kannattaa ajaa kahtena eri eränä, esim. Horatio "sisilia,islanti,alpit" ja "lappi,tromssa" (sama Livialle) — eri tunnus, ei sokkoa uusintaa, ei keksittyä retry_reasonia. Mitään ei tarvitse kirjoittaa yli, koska erän 5 tiedostoja ei viety.
+MITEN ERÄ 5 JATKETAAN, KUN krediittejä ON. Suunnitelmakuitit estävät saman erän uusimisen ("Erä X on jo aloitettu"). Koska erätunnus lasketaan kohdelistasta, erä 5 kannattaa ajaa kahtena eri eränä, esim. Horatio "sisilia,islanti,alpit" ja "lappi,tromssa" (sama Livialle) — eri tunnus, ei sokkoa uusintaa, ei keksittyä retry_reasonia. Mitään ei tarvitse kirjoittaa yli, koska erän 5 tiedostoja ei viety.
 
 KOHDISTUKSET EIVÄT ALKANEET. Pakotettu kohdistus (toiminto kohdista) kutsuu ElevenLabsia, joten se odottaa kiintiötä. Ajetaan erä kerrallaan kunkin erän completed-kuitin URLilla, kuten ajopaketti ohjeistaa.
 
