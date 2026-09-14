@@ -784,6 +784,14 @@ function nostoMerkinKentat(nosto, paikka) {
     // Kaupunkinostojen katto ei koske kaupungin ulkopuolista täkyä
     // (js/fokuskohteet.js, osio KATTOVAPAA).
     ...(nosto.kattoVapaa ? { kattoVapaa: true } : {}),
+    /*
+     * LÄHIZOOMIPORTTI (js/pallolauta/nostot.js merkkiPortti, v1867).
+     * Kenttä luetaan merkkiriviltä eikä nostosta, joten se on
+     * vietävä läpi tässä — muuten `lahi: true` jäisi datan omaksi
+     * tiedoksi eikä portti näkisi sitä lainkaan. Sama kenttä kulkee
+     * KOHDE_MAAT-riveillä suoraan, koska ne OVAT kohdeolioita.
+     */
+    ...(nosto.lahi ? { lahi: true } : {}),
   };
 }
 

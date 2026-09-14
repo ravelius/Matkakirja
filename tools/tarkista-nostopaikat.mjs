@@ -201,7 +201,19 @@ export function paakartanNostot(pack = MAAILMANKARTTA) {
     const katonJalkeen = kohdeKarttarivit({
       iso, lauta: pack.id, kaupungit, pohjanAlla, lisat,
     });
-    for (const rivi of katonJalkeen) kartalla.add(rivi.kohde.id);
+    /*
+     * LÄHIZOOMILIPPU LUETAAN KATON JÄLKEISESTÄ RIVISTÄ. Portin päätös
+     * (js/fokuskohteet.js KOHDEKARTAN_NOSTOT_LAHIZOOMIIN) syntyy vasta
+     * kun passille annetaan laudan kaupungit, ja `ilmanKattoa` ajetaan
+     * tyhjällä listalla saadakseen KAIKKI nostot — siinä lippua ei
+     * ole. Ilman tätä taulua mittaus näyttäisi lähizoomin merkit
+     * tavallisina pääkartan merkkeinä.
+     */
+    const lahizoomissa = new Set();
+    for (const rivi of katonJalkeen) {
+      kartalla.add(rivi.kohde.id);
+      if (rivi.kohde.lahi) lahizoomissa.add(rivi.kohde.id);
+    }
     for (const rivi of ilmanKattoa) {
       let lahin = null;
       for (const c of kaupungit) {
@@ -224,7 +236,7 @@ export function paakartanNostot(pack = MAAILMANKARTTA) {
          * peli sen tekee — ei kahta tulkintaa samasta datasta.
          */
         ihme: Boolean(rivi.kohde.ihme),
-        lahi: Boolean(rivi.kohde.lahi),
+        lahi: Boolean(rivi.kohde.lahi) || lahizoomissa.has(rivi.kohde.id),
         ...(laudaltaAsteiksi(pack.id, rivi.paikka.x, rivi.paikka.y) ?? {}),
       });
     }
@@ -343,6 +355,15 @@ export function kaupunginKohdallaSyy(r) {
   const sateella = Number.isFinite(r.etaisyys) && r.etaisyys < KAUPUNGIN_KOHDALLA_SADE;
   if (!rajauksessa && !sateella) return null;
   if (!kartta) return 'kohdekarttaa ei ole';
+  /*
+   * LÄHIZOOMI (14.9.2026, Ranskan pilotti): nosto on pääkartalla vain
+   * `lahi: true` -portin takana eli se EI piirry saapumisnäkymässä
+   * (js/pallolauta/nostot.js merkkiPortti). Omistajan sääntö 2.9.2026
+   * koski juuri sitä näkymää — *"viedä pois pääkartalta"* — eikä
+   * lähizoomin merkki ole siellä. Syy on siksi oma luokkansa eikä
+   * työlistaa: kohdekartta on tallella ja se on yhä noston koti.
+   */
+  if (r.lahi) return 'lähizoomi';
   if (r.tyyppi === 'hetki') return 'hetki';
   if (!rajauksessa) return 'rajauksen ulkopuolella';
   if (Number.isFinite(r.etaisyys) && r.etaisyys < 0.05) return 'ankkuri on kaupungin laatta';
