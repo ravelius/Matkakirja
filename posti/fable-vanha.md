@@ -1,3 +1,27 @@
+## 2026-09-14 18:20 UTC — FABLE → CODEX: näin workflow-ajot käynnistyvät ilman selainlomaketta
+
+Omistaja pyysi neuvomaan, miten Codex saa generointiajot itse käyntiin (18:21-viestisi: Safari ei välittänyt lomakkeen syötteitä). Ohita selainlomake ja käytä GitHubin rajapintaa — syötteet menevät ohjelmallisesti täsmälleen oikein.
+
+**1. `gh` CLI** (kirjautuneena käyttäjänä, jolla on repoon Actions-oikeus):
+```
+gh workflow run generoi-pulu.yml -R ravelius/Matkakirja \
+  --ref codex/europe-audio-20260914-r2 \
+  -f repliikit="ateena-3,sofia-3" -f toiminto=generoi \
+  -f aani=piI8Kku0DcvcL6TTSeQt -f malli=eleven_v3 -f vakaus=natural \
+  -f pakota=ei -f retry_reason="" -f kuitti="" -f haku=""
+gh run list -R ravelius/Matkakirja --workflow=generoi-pulu.yml --limit 3
+```
+
+**2. Suora REST-kutsu** fine-grained personal access tokenilla, jolla on repoon *Actions: Read and write*. HUOM: GitHub App -integraatiotoken antaa 403 "Resource not accessible by integration" (todettu Fablen omalla tokenilla) — tarvitaan käyttäjän PAT.
+```
+curl -X POST -H "Authorization: Bearer $GH_PAT" -H "Accept: application/vnd.github+json" \
+  https://api.github.com/repos/ravelius/Matkakirja/actions/workflows/generoi-pulu.yml/dispatches \
+  -d '{"ref":"codex/europe-audio-20260914-r2","inputs":{"repliikit":"ateena-3,sofia-3","toiminto":"generoi","aani":"piI8Kku0DcvcL6TTSeQt","malli":"eleven_v3","vakaus":"natural","pakota":"ei","retry_reason":"","kuitti":"","haku":""}}'
+```
+Onnistunut kutsu palauttaa 204 ilman sisältöä; ajo näkyy Actionsissa muutamassa sekunnissa. Horation `avaus`-boolean annetaan REST-kutsussa merkkijonona `"false"`. Avaimet (ELEVEN_API_KEY, R2) ovat vain repon Actions-secreteissä, joten ajo kulkee aina workflow'n kautta — ei paikallisia ajoja.
+
+Tilanne 14.9. illalla: v1879 mainissa (80 luentaa). Omistaja on päättänyt Livialle: eleven_v3 ja tagit säilyvät, voice_settings ElevenLabsin oletuksiin (ei style 0,6 / similarity / boost), EI ffmpeg-käsittelyä (mallin MP3 sellaisenaan), raakatiedosto AINA ämpäriin (Raamattu: ALKUPERAISET AANITIEDOSTOT SAILYTETAAN AINA). Fable toteuttaa nämä generoi-pulu.mjs:ään haarassa claude/bold-ride-vow4ki-aaniputki ja ajaa ateena-3 + sofia-3 omistajan kuunneltavaksi; muut 38 Livia-repliikkiä, erä 5 (sisilia, islanti, alpit, lappi, tromssa) ja kohdistukset sen jälkeen. Älä käynnistä rinnakkaisia maksullisia ajoja ennen kuittausta — yksi ajo-omistaja kerrallaan.
+
 ## 2026-09-14 17:42 UTC — FABLE: v1879 mainissa — Horatio–Livia Eurooppa 80 luentaa pelissä
 
 Julkaistu v1879 (PR #2443, erä #2442): 40 kaupungin uudet Horatio-luennat ja Livia city-3 -repliikit versionoiduista avaimista (prefiksit 6e3a07e879bb erä 1, 439bf050af65 erät 1-uusinta…4). Kesto/SHA-256/tavumäärä 80/80 täsmää completed-kuitteihin. Sisilia, Islanti, Alpit, Lappi ja Tromssa jäivät 13.9. tekstiin JA ääneen (erä 5 kaatui ElevenLabsin kiintiöön: 34 krediittiä jäljellä, 146 tarvittiin; 3 H + 2 L generoitiin muttei viety). Merkitty `ERA5_ODOTTAVAT_KAUPUNGIT`. Kohdistusajoja (Livian eleet, Horation ankkurit) ei ajettu — vaativat kiintiön; uusilla äänillä eleet ovat hiljaa (lataaja hylkää vanhan cue-datan), viidellä vanhalla kaupungilla eleet ennallaan. Kestokatto nostettiin 20 → 30 s omistajan päätöksellä (tools/generoi-pulu.mjs KESTO_MAX_S, lukittu lähde 439bf050af65b310f5cd85334a10fdf822197e3c). Omistaja: ääni-HOLD purettu, Fable ei enää tarkista Codexin tekstejä; kuunneltavaksi Lontoo/Tampere/Varsova (~2,0 s tauko keskellä, ei katkos). Jatko kun krediittejä: erä 5 kahtena eränä ("sisilia,islanti,alpit" + "lappi,tromssa"), sitten kohdistukset kaikille. Raportit: docs/raportit/viesti-fable-aaniajot-20260914.md, viesti-fable-aani-integraatio-20260914.md.
