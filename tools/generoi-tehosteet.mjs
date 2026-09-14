@@ -19,7 +19,10 @@
  *                       JOKAINEN VARIANTTI ON OMA MAKSULLINEN KUTSUNSA.
  *   --kuiva             ei APIa eikä vientiä: tulostaa suunnitelman ja
  *                       ajaa koko ffmpeg-ketjun syntetisoidulla äänellä
- *   --ei-vientia        generoi ja leikkaa, mutta jätä tiedostot levylle
+ *   --ei-vientia        VAIN kuivaan ajoon. Maksullinen generointi
+ *                       kieltäytyy tästä lipusta: raakatuotos on aina
+ *                       vietävä ämpäriin (Raamattu: ALKUPERÄISET
+ *                       ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA).
  *
  * ------------------------------------------------------------------
  * MIKSI OMA TYÖKALU EIKÄ LAJI generoi-siirtymamusiikki.mjs:ÄÄN
@@ -74,8 +77,9 @@
  */
 
 import { spawnSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import {
-  mkdirSync, mkdtempSync, rmSync, writeFileSync,
+  mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync,
 } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
@@ -122,6 +126,47 @@ const AMPARIN_KANSIO = 'aanet/tehosteet';
 const KOHDE_KANSIO = 'media/tehosteet';
 /** Mallin raaka tuotos talteen: uuden leikkauksen voi tehdä ilmaiseksi. */
 const RAAKA_KANSIO = 'media/tehosteet-raaka';
+/** Eräkohtaiset kuitit: mikä raaka vastaa mitäkin valmista tehostetta. */
+const KUITTI_KANSIO = 'media/tehosteet-kuitit';
+export const KUITIN_VERSIO = 1;
+
+/*
+ * ------------------------------------------------------------------
+ * RAAKATUOTOS ÄMPÄRIIN AINA (omistajan sitova sääntö 14.9.2026)
+ * ------------------------------------------------------------------
+ * Raamattu: "ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA". Mallin oma
+ * tuotos on ainoa asia, josta on maksettu; leikkaus, häivytys ja
+ * normalisointi ovat ilmaisia ja toistettavia. Ennen tätä sääntöä
+ * raaka jäi vain ajajan levylle (media/tehosteet-raaka on
+ * .gitignoressa) ja katosi Actions-ajon mukana, joten uusi leikkaus
+ * vaati uuden maksullisen kutsun. Nyt raaka menee ämpäriin
+ * erätunnuksella versionoituun avaimeen ENNEN viimeistelyä, ja jos
+ * vienti ei ole käytössä tai se epäonnistuu, ajo kaatuu.
+ */
+const RAAKA_ALIKANSIO = 'raaka';
+const KUITTI_ALIKANSIO = 'kuitit';
+
+/*
+ * ------------------------------------------------------------------
+ * KOODAUS 320 kbps (omistaja 14.9.2026)
+ * ------------------------------------------------------------------
+ * Tehoste käy läpi KAKSI mp3-sukupolvea: ElevenLabs antaa 128 kbps:n
+ * tiedoston, ja viimeistely koodaa sen uudelleen. Livian putkessa
+ * jälkimmäinen sukupolvi oli myös 128 kbps, ja mitattuna se lisäsi
+ * signaaliin −25 dB virhettä — omistajan kuulema "pieni digitaalinen
+ * häiriö" (docs/raportit/viesti-fable-aaniputki-20260914.md).
+ *
+ * Tehosteilla uudelleenkoodausta EI voi poistaa, koska normalisointi
+ * on tarpeen: lyhyet tehosteet tulevat mallilta eri tasoissa ja niiden
+ * on asetuttava 3 dB musiikin yläpuolelle. Ratkaisu on siksi tehdä se
+ * yksi sukupolvi LÄPINÄKYVÄSTI: samassa mittauksessa 320 kbps jätti
+ * virheen −59 dB:hen eli 34 dB vaimeammaksi kuin 128 kbps.
+ *
+ * Tiedostot ovat 1,5 sekunnin mittaisia, joten koko kasvaa noin
+ * 24 kt:sta 60 kt:iin variantilta — neljä varianttia yhteensä alle
+ * 0,25 Mt.
+ */
+const KOODAUS_KBPS = 320;
 
 // ── vaatimukset ────────────────────────────────────────────────────
 
@@ -291,6 +336,8 @@ function syntetisoiLahde(kohde, sekunnit) {
       + `afade=t=out:st=${nousu}:d=${lasku}:curve=qsin`,
     // Hiljaisuutta molempiin päihin, jotta leikkausvaihe saa työtä.
     '-af', 'adelay=250|250,apad=pad_dur=0.25',
+    // 128 kbps TAHALLAAN: tämä jäljittelee ElevenLabsin omaa tuotosta
+    // (MUOTO), josta ketju lähtee. Viimeistelyn koodaus on 320 kbps.
     '-c:a', 'libmp3lame', '-b:a', '128k', kohde,
   ]);
 }
@@ -343,7 +390,7 @@ function viimeistele(lahde, kohde, tyokansio) {
   aja('ffmpeg', [
     '-y', '-v', 'error', '-i', wav,
     '-af', viimeistelySuodatin({ kesto: leikattu, korjausDb: korjaus }),
-    '-ac', '1', '-ar', '44100', '-c:a', 'libmp3lame', '-b:a', '128k', kohde,
+    '-ac', '1', '-ar', '44100', '-c:a', 'libmp3lame', '-b:a', `${KOODAUS_KBPS}k`, kohde,
   ]);
   return { leikattu, mitattu, korjaus };
 }
@@ -384,8 +431,12 @@ function tarkista(kohde, tehoste) {
   };
 }
 
-/** Vie valmis tehoste ämpäriin (sama komento kuin muissakin ääniajoissa). */
-function vieAmpariin(kohde, nimi) {
+/**
+ * Vie tiedosto ämpäriin (sama komento kuin muissakin ääniajoissa).
+ * `kansio` on oletuksena tehosteiden live-kansio; raakatuotokset ja
+ * kuitit menevät omiin eräkohtaisiin alikansioihinsa.
+ */
+function vieAmpariin(kohde, nimi, kansio = AMPARIN_KANSIO, tyyppi = 'audio/mpeg') {
   const tili = process.env.R2_ACCOUNT_ID;
   const ampari = process.env.R2_BUCKET;
   const avain = process.env.AWS_ACCESS_KEY_ID ?? process.env.R2_ACCESS_KEY_ID;
@@ -398,22 +449,121 @@ function vieAmpariin(kohde, nimi) {
   if (!onOlemassa('aws')) throw new Error('aws-cli puuttuu — vienti tarvitsee sen.');
 
   aja('aws', [
-    's3', 'cp', kohde, `s3://${ampari}/${AMPARIN_KANSIO}/${nimi}`,
+    's3', 'cp', kohde, `s3://${ampari}/${kansio}/${nimi}`,
     '--endpoint-url', `https://${tili}.r2.cloudflarestorage.com`,
     '--no-progress',
-    '--content-type', 'audio/mpeg',
+    '--content-type', tyyppi,
     '--cache-control', 'public, max-age=2592000',
   ]);
 }
 
 /** HEAD julkiseen osoitteeseen: näkyykö tehoste oikeasti ämpäristä. */
-function tarkistaJulkinen(nimi) {
-  const url = `${julkinenJuuri()}${AMPARIN_KANSIO}/${nimi}`;
+function tarkistaJulkinen(nimi, kansio = AMPARIN_KANSIO) {
+  const url = `${julkinenJuuri()}${kansio}/${nimi}`;
   if (!onOlemassa('curl')) return { url, koodi: null, pituus: null };
   const { loki } = aja('curl', ['-sS', '-I', '--max-time', '30', url], { salliVirhe: true });
   const koodi = loki.match(/HTTP\/[\d.]+ (\d{3})/)?.[1] ?? null;
   const pituus = loki.match(/content-length:\s*(\d+)/i)?.[1] ?? null;
   return { url, koodi, pituus };
+}
+
+// ── raakavienti, erätunnus ja kuitti ───────────────────────────────
+
+const sha256 = (data) => createHash('sha256').update(data).digest('hex');
+
+/**
+ * Erätunnus: sama resepti antaa saman tunnuksen, eri resepti eri.
+ * Tunnus on raaka-avaimen ja kuitin nimi, joten se on myös se asia,
+ * joka estää kahta ajoa kirjoittamasta toistensa alkuperäisten päälle.
+ *
+ * @param {string} laji TEHOSTEET-avain
+ * @param {number} maara varianttien määrä
+ * @param {string} sourceCommit repon HEAD ajohetkellä
+ */
+export function tuotantoEraId(laji, maara, sourceCommit) {
+  const tehoste = TEHOSTEET[laji];
+  if (!tehoste) throw new Error(`tuntematon laji: ${laji}`);
+  if (!sourceCommit) throw new Error('erätunnus vaatii sourceCommit-tunnuksen');
+  return `tehoste-${sha256(JSON.stringify({
+    sourceCommit, laji, maara, prompt: tehoste.prompt,
+    outputFormat: MUOTO, promptInfluence: PROMPTIN_PAINO,
+    postprocess: { targetLufs: TAVOITE_LUFS, fadeSeconds: HAIVYTYS_S, bitrateKbps: KOODAUS_KBPS },
+  })).slice(0, 20)}`;
+}
+
+/**
+ * Raakatuotosten ämpärikansio: eräkohtainen, jotta kaksi ajoa ei voi
+ * kirjoittaa toistensa alkuperäisiä yli. Raakaa ei koskaan poisteta
+ * eikä ylikirjoiteta (Raamattu 14.9.2026).
+ */
+export function raakaAmpariKansio(batchId) {
+  // Kelvoton tunnus hylätään, ei siivota: siivottu tunnus voisi
+  // törmätä toisen erän kanssa ja tuhota sen alkuperäisen.
+  if (!/^[a-zA-Z0-9_-]+$/.test(String(batchId ?? ''))) {
+    throw new Error(`raakavienti vaatii kelvollisen erätunnuksen, sai: ${batchId}`);
+  }
+  return `${AMPARIN_KANSIO}/${RAAKA_ALIKANSIO}/${batchId}`;
+}
+
+/**
+ * Saako maksullinen generointi alkaa? Palauttaa syyn merkkijonona, jos
+ * ei saa, muuten null. Erotettu funktioksi, jotta testi voi kaataa
+ * itsensä ilman API-avainta, ilman ffmpegiä ja ilman ämpäriä.
+ */
+export function raakavientiEste(liput) {
+  if (liput?.kuiva) return null;
+  if (!liput?.vienti) {
+    return 'maksullinen generointi ei ole sallittu ilman raakavientiä: '
+      + '--ei-vientia jättäisi mallin alkuperäisen tuotoksen vain ajajan levylle. '
+      + 'Omistajan sääntö 14.9.2026 (Raamattu: ALKUPERÄISET ÄÄNITIEDOSTOT '
+      + 'SÄILYTETÄÄN AINA) vaatii raakatiedoston ämpäriin ennen käsittelyä. '
+      + 'Käytä --kuiva, jos haluat vain katsoa mitä ajettaisiin.';
+  }
+  return null;
+}
+
+/**
+ * Tuotantokuitti: mikä raaka vastaa mitäkin valmista tehostetta.
+ * Salaisuuksia ei oteta argumentiksi eikä siis voida kirjata.
+ */
+export function kokoaKuitti(laji, maara, {
+  sourceCommit, batchId, tulokset = new Map(), status = 'planned',
+}) {
+  const tehoste = TEHOSTEET[laji];
+  return {
+    schemaVersion: KUITIN_VERSIO,
+    batchId,
+    sourceCommit,
+    generationStatus: status,
+    kind: laji,
+    prompt: tehoste.prompt,
+    promptSha256: sha256(tehoste.prompt),
+    synthesis: { outputFormat: MUOTO, promptInfluence: PROMPTIN_PAINO },
+    postprocess: {
+      silenceTrim: true, targetLufs: TAVOITE_LUFS, lufsTolerance: LUFS_TOLERANSSI,
+      fadeSeconds: HAIVYTYS_S, bitrateKbps: KOODAUS_KBPS,
+    },
+    variants: Array.from({ length: maara }, (_, i) => {
+      const nimi = tehoste.tiedosto(i);
+      const tulos = tulokset.get(nimi) ?? {};
+      return {
+        fileName: nimi,
+        rawObjectKey: `${raakaAmpariKansio(batchId)}/raaka-${nimi}`,
+        finalObjectKey: `${AMPARIN_KANSIO}/${nimi}`,
+        status: tulos.status ?? 'planned',
+        reason: tulos.reason ?? null,
+        rawArtifact: tulos.rawArtifact ?? null,
+        finalArtifact: tulos.finalArtifact ?? null,
+      };
+    }),
+  };
+}
+
+/** Tiedoston tunnistetiedot kuittiin. */
+function artefakti(polku, extra = {}) {
+  return {
+    sha256: sha256(readFileSync(polku)), bytes: statSync(polku).size, ...extra,
+  };
 }
 
 // ── pääohjelma ─────────────────────────────────────────────────────
@@ -428,6 +578,36 @@ async function main() {
   }
   const tehoste = TEHOSTEET[liput.laji];
   const maara = varianttiMaara(liput.laji, liput.maara);
+
+  /*
+   * RAAKAVIENTI ON PAKOLLINEN. Tarkistus ennen kaikkea muuta — ennen
+   * ffmpegin etsintää ja ennen yhtäkään maksullista kutsua.
+   */
+  const este = raakavientiEste(liput);
+  if (este) {
+    console.error(este);
+    process.exit(1);
+  }
+
+  const sourceCommit = aja('git', ['-C', JUURI, 'rev-parse', 'HEAD'], { salliVirhe: true })
+    .loki.trim() || '0'.repeat(40);
+  const batchId = tuotantoEraId(liput.laji, maara, sourceCommit);
+  const raakaKansioAmpari = raakaAmpariKansio(batchId);
+
+  // Suunnitelma tulostetaan ENNEN ffmpeg-tarkistusta, jotta kuivan ajon
+  // voi lukea myös ympäristössä, jossa ffmpegiä ei ole.
+  console.log(`\nERÄ ${batchId} (commit ${sourceCommit.slice(0, 12)})`);
+  console.log(`  ulostulomuoto mallilta: ${MUOTO}`);
+  console.log(`  viimeistelyn koodaus: ${KOODAUS_KBPS} kbps `
+    + '(320 kbps omistajan päätös 14.9.2026: uudelleenkoodaus on tehosteilla '
+    + 'pakko tehdä normalisoinnin takia, joten se tehdään läpinäkyvästi).');
+  console.log(`  taso ${TAVOITE_LUFS} LUFS (±${LUFS_TOLERANSSI}) — normalisointi säilyy.`);
+  console.log(`  raakatuotokset menevät avaimeen ${raakaKansioAmpari}/ :`);
+  for (let i = 0; i < maara; i += 1) {
+    console.log(`    ${raakaKansioAmpari}/raaka-${tehoste.tiedosto(i)}`);
+  }
+  console.log(`  kuitti: ${AMPARIN_KANSIO}/${KUITTI_ALIKANSIO}/${batchId}.completed.json`);
+  console.log('  raakavienti on pakollinen: --ei-vientia kaataa maksullisen ajon.');
 
   for (const komento of ['ffmpeg', 'ffprobe']) {
     if (!onOlemassa(komento)) {
@@ -447,6 +627,7 @@ async function main() {
   const tyokansio = mkdtempSync(join(tmpdir(), 'tehosteet-'));
   let kohdekansio = tyokansio;
   let raakakansio = tyokansio;
+  let kuittikansio = tyokansio;
   if (liput.kuiva) {
     console.log('KUIVA AJO (--kuiva) — APIa ei kutsuta, ämpäriin ei viedä.');
     console.log('ffmpeg-ketju ajetaan syntetisoidulla äänellä.');
@@ -454,10 +635,13 @@ async function main() {
     // Ennen ensimmäistäkään maksullista kutsua: kohde ei saa olla repossa.
     kohdekansio = resolve(JUURI, KOHDE_KANSIO);
     raakakansio = resolve(JUURI, RAAKA_KANSIO);
+    kuittikansio = resolve(JUURI, KUITTI_KANSIO);
     vaadiGitignore(kohdekansio);
     vaadiGitignore(raakakansio);
+    vaadiGitignore(kuittikansio);
     mkdirSync(kohdekansio, { recursive: true });
     mkdirSync(raakakansio, { recursive: true });
+    mkdirSync(kuittikansio, { recursive: true });
   }
 
   console.log(`\n── ${liput.laji}: ${maara} varianttia (${tehoste.kuvaus})`);
@@ -467,6 +651,8 @@ async function main() {
   console.log(`   prompti: ${tehoste.prompt}`);
 
   const valmiit = [];
+  const raakatiedot = new Map();
+  const tulokset = new Map();
   let virheita = 0;
   try {
     for (let i = 0; i < maara; i += 1) {
@@ -481,6 +667,28 @@ async function main() {
         // eslint-disable-next-line no-await-in-loop
         const tavut = await haeApista(tehoste, avain, lahde);
         console.log(`   API: ${(tavut / 1024).toFixed(0)} kt → ${lahde}`);
+
+        /*
+         * RAAKA ÄMPÄRIIN ENNEN VIIMEISTELYÄ. Tämä on ainoa hetki, jolloin
+         * mallin alkuperäinen tuotos on olemassa: viimeistely kirjoittaa
+         * eri tiedostoon, ja ajon kansiot katoavat Actions-ajon mukana.
+         * Vienti ennen viimeistelyä tarkoittaa myös, että HYLÄTYNKIN
+         * variantin raaka säilyy — juuri siitä uusi leikkaus tehdään
+         * ilmaiseksi ilman uutta maksullista kutsua.
+         */
+        vieAmpariin(lahde, `raaka-${nimi}`, raakaKansioAmpari);
+        const luku = tarkistaJulkinen(`raaka-${nimi}`, raakaKansioAmpari);
+        if (luku.koodi !== null && luku.koodi !== '200') {
+          throw new Error(`raakatiedoston vienti epäonnistui (${luku.url} → HTTP `
+            + `${luku.koodi}); ajoa ei jatketa, koska alkuperäinen katoaisi`);
+        }
+        raakatiedot.set(nimi, artefakti(lahde, {
+          fileName: `raaka-${nimi}`,
+          objectKey: `${raakaKansioAmpari}/raaka-${nimi}`,
+          url: luku.url,
+          actualDurationSeconds: Number(kestoSekunteina(lahde).toFixed(3)),
+        }));
+        console.log(`   raaka talteen: ${luku.url}`);
       }
 
       const { leikattu, mitattu, korjaus } = viimeistele(lahde, kohde, tyokansio);
@@ -496,14 +704,42 @@ async function main() {
         for (const virhe of tulos.virheet) console.error(`   VIRHE: ${virhe}`);
         virheita += 1;
         // Kelvotonta varianttia ei viedä, mutta tiedosto jää levylle
-        // kuunneltavaksi — kutsu on jo maksettu.
+        // kuunneltavaksi — kutsu on jo maksettu. Raaka on jo ämpärissä.
+        tulokset.set(nimi, {
+          status: 'validation-failed', reason: tulos.virheet.join('; '),
+          rawArtifact: raakatiedot.get(nimi) ?? null,
+          finalArtifact: artefakti(kohde, {
+            fileName: nimi, actualDurationSeconds: Number(tulos.pituus.toFixed(3)),
+          }),
+        });
         continue;
       }
+      tulokset.set(nimi, {
+        status: 'generated', reason: null,
+        rawArtifact: raakatiedot.get(nimi) ?? null,
+        finalArtifact: artefakti(kohde, {
+          fileName: nimi, actualDurationSeconds: Number(tulos.pituus.toFixed(3)),
+        }),
+      });
       valmiit.push(nimi);
     }
 
     if (!liput.kuiva && liput.vienti) {
       for (const nimi of valmiit) vieAmpariin(join(kohdekansio, nimi), nimi);
+      /*
+       * Kuitti VIIMEISENÄ ja aina: se on ainoa paikka, josta selviää,
+       * mikä raaka vastaa mitäkin valmista tehostetta. Myös hylätyt
+       * variantit ovat kuitissa, koska niiden raaka on ämpärissä.
+       */
+      const kuitti = kokoaKuitti(liput.laji, maara, {
+        sourceCommit, batchId, tulokset,
+        status: virheita ? 'completed-with-errors' : 'completed',
+      });
+      const kuittiPolku = join(kuittikansio, `${batchId}.completed.json`);
+      writeFileSync(kuittiPolku, `${JSON.stringify(kuitti, null, 2)}\n`);
+      vieAmpariin(kuittiPolku, `${batchId}.completed.json`,
+        `${AMPARIN_KANSIO}/${KUITTI_ALIKANSIO}`, 'application/json');
+      console.log(`\nKuitti: ${AMPARIN_KANSIO}/${KUITTI_ALIKANSIO}/${batchId}.completed.json`);
     }
   } finally {
     rmSync(tyokansio, { recursive: true, force: true });
