@@ -4540,6 +4540,24 @@ export const RAAMATTU = {
           + 'odottavat sen mergea ja pohjautuvat sen jalkeen uuteen '
           + 'mainiin. Aiempien osioiden "AANI-HOLD ennallaan" -maininnat '
           + 'ovat historiaa taman kirjauksen jalkeen.',
+        'PULUN UUSISSA AANISSA DIGITAALINEN HAIRIO - PUTKI KORJATAAN, '
+          + 'RAAKATIEDOSTOT TALTEEN, UUSINTAGENEROINTI MYOHEMMIN (omistaja '
+          + '14.9.2026 klo 18.10 UTC, sanatarkasti: "Onko pulupuheesta viela '
+          + 'alkuperaiset MP3-tiedostot jaljella? Nykyinen luenta kuulostaa '
+          + 'jotenkin oudolta, ihan kun siina olisi joku pieni digitaalinen '
+          + 'hairio. Palautan ne alkuperaiset peliin." -> kysymyskortilla: '
+          + '"Pida uudet, korjaa putki ja generoi uudelleen myohemmin"): 1) '
+          + 'Fablen selvitys: ElevenLabsin raakatuotos (media/pulu-raaka/) '
+          + 'jaa vain GitHub-ajurin levylle eika sita vieda ampariin - '
+          + 'alkuperaisia ei ole tallessa v1879:n 40 Livia-repliikista. 2) '
+          + 'Uudet aanet pysyvat pelissa toistaiseksi. 3) Viimeistelyputki '
+          + '(ffmpeg: hiljaisuuden leikkaus, haivytykset, loudnorm -17 LUFS; '
+          + 'mahdollinen MP3-uudelleenkoodaus) tutkitaan mittaamalla hairion '
+          + 'lahde ja korjataan; putki alkaa tallentaa myos raakatiedoston '
+          + 'ampariin versionoituun avaimeen. 4) Livian 40 repliikkia '
+          + 'generoidaan uudelleen korjatulla putkella, kun ElevenLabs-'
+          + 'kiintiota on (samassa yhteydessa era 5 ja kohdistukset). '
+          + 'Horation luentoihin ei ole tullut valitusta.',
         'CODEX SAA TEHDA PILOTIN LOPPUUN JA AANITTAA SEN VALMIINA (omistaja 12.9.2026 yolla, sanatarkasti: "sanoin codexille etta saavat tehda homman loppuun ja saivat myos luvan generoida tekstit kun kaikki valmista"): neljan kaupungin Horatio-Livia-pilotti viedaan loppuun Codexin johdolla, ja heilla on omistajan lupa ajaa sen aanitys - MUTTA VASTA KUN KAIKKI ON VALMISTA. Tama on rajattu poikkeus edelliseen linjaukseen eika kumoa sita: lupa koskee tata pilottia, ei kaikkea tulevaa generointia, ja Fable kysyy omat ajonsa yha erikseen. Fablen tyo pilotissa on lopputarkistus, yhdistaminen ja julkaisu - Codex toimittaa yhden yhteistestatun paketin, ei kolmea osatoimitusta.',
         'AANIA EI GENEROIDA ILMAN LUPAA, EIKA ENNEN KUIN TEKSTIT OVAT VALMIIT (omistaja 12.9.2026 ilta, sanatarkasti: "ala generoi mitaan aania ennen lupaani" ja "jos ne ovat jo generoitu niin laita ne peliin mutta se oli turhaa tyota koska teksteja ollaan vasta hiomassa"): jokainen maksullinen aanigenerointi kysytaan erikseen. AANEN VALINTA EI OLE LUPA AJAA: kun omistaja paattaa aanen, se kirjataan - ajo odottaa erillista lupaa. SYY ON MYOS TEKNINEN: osoite syntyy tekstin tiivisteesta, joten jokainen tekstin hionta mitatoi aanitteen ja pakottaa saman ajon uudelleen. Aanitys tehdaan siis vasta kun tekstit ovat valmiit, ei kun aani on valittu. Sama koskee kuvagenerointia ja muita maksullisia ajoja.',
         'PULUN AANET AJETAAN UUDESTAAN NORMAALILLA NOPEUDELLA, HISTORIA ENSIN (omistaja 13.9.2026, sanatarkasti: "Sailyyko generointi elevenin paassa tallessa?" ja "Generoi pulun aanet uudestaan. Normaalilla nopeudella"): tama on nimenomainen lupa maksulliseen uusinta-ajoon, ja se kumoaa aiemman rajauksen siita, ettei yleischatin repliikkeja ajeta uudestaan — nopeutus on niissa kaikissa sama vika. JARJESTYS ON OMISTAJAN VALINTA: ensin luetaan ElevenLabsin History-arkisto (GET /v1/history on pelkka luku eika kuluta krediitteja), koska se sisaltaa mallin RAAKATUOTOKSEN eli juuri sen nopeuttamattoman alkuperaisen, jonka ffmpeg sitten nopeutti; historiasta loytyvat ladataan ja viimeistellaan ilmaiseksi ilman atempoa, ja maksullisesti generoidaan vain puuttuvat. Pelin oma raakakansio media/pulu-raaka ei auta: se elaa vain ajon ajan runnerin levylla eika sita viedä ampariin. AJAJA ON CODEXIN RC-VETAJA yhden ajo-omistajan saannon mukaisesti; Fable ei kaynnista rinnakkaista ajoa vaan versioi ja julkaisee tuloksen. AANIERAN NUMERO ON NOSTETTAVA, koska tekstit eivat muutu ja osoite on tiiviste+era — ilman nostoa palvelutyontekijan aanikori soittaa vanhan nopeutetun tiedoston.',
