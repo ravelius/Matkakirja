@@ -38,10 +38,19 @@
  *      SITOVALLA akselilla tyhjää tilaa on enintään TYHJAN_KATTO
  *      (3,5 %, ks. vakion perustelu);
  *      lisäksi laatikko on kokonaan ruudussa (mikään ei leikkaudu).
+ *   6. PUHELIN PYSTYSSÄ SOVITETAAN KORKEUTEEN (erä 14, Raamattu
+ *      KARTTAUUDISTUKSEN PÄÄTÖKSET 17): 390 × 844 -ruudulla sitova
+ *      akseli on Y, sen tyhjä on enintään TYHJAN_KATTO, ja pelaajan
+ *      kaupunki on ruudun keskellä vaakasuunnassa enintään
+ *      KAUPUNGIN_POIKKEAMA verran sivussa. X-ylivuoto on PÄÄTÖS.
+ *   7. PANOROINTI TUO MAAN REUNAN RUUDULLE eikä laatikon reuna tule
+ *      ruudun sisään: kummassakin ääripäässä (länsi = Bretagne, itä =
+ *      Elsass) maan kärki on ruudulla ja laatikon reuna ruudun
+ *      ulkopuolella.
  *
  * === VASTAKOKEET (pakolliset) ======================================
  *
- * Kaikki kolme tehdään TARJOILTAVAAN LÄHDETEKSTIIN, joten peli ajaa
+ * Kaikki tehdään TARJOILTAVAAN LÄHDETEKSTIIN, joten peli ajaa
  * oikeasti vanhalla arvolla — ei piilotettua koetta.
  *
  *   A. ULOSZOOMAUKSEN_KERROIN 1,15 → 3 (erää 2 edeltänyt arvo).
@@ -56,6 +65,10 @@
  *      VAIN MITTA, ei varaa, joten tulos ei ole vanha näkymä vaan
  *      vastaus kysymykseen *"tekeekö mitta eron"*. VÄITTEEN 5 ON
  *      KAADUTTAVA.
+ *   E. `korkeuteenSovitus` palauttamaan null → rajaus tehdään taas
+ *      MOLEMPIIN suuntiin, kuten ennen erää 14. VÄITTEEN 6 ON
+ *      KAADUTTAVA (sitova akseli vaihtuu X:ksi ja pystyyn jää
+ *      mitattu 59 % tyhjää).
  *
  * === MIKSI 9 SEKUNNIN LEPO ON OSA KOETTA ============================
  *
@@ -138,6 +151,16 @@ const SUHTEEN_VARA = 0.02;
  * korjaamattomasta kymmenkertaisella marginaalilla (vastakoe D).
  */
 const TYHJAN_KATTO = 0.035;
+/*
+ * VÄITE 6: PYSTYRUUDULLA SITOVA AKSELI ON Y (erä 14, Raamattu
+ * KARTTAUUDISTUKSEN PÄÄTÖKSET 17). Puhelimen kotelo on 0,46-suhteinen
+ * ja Ranskan laatikko pallolla noin 1,05 — ruutu on siis laatikkoa
+ * KAPEAMPI, ja saapumisnäkymä sovitetaan korkeuteen. Väite mittaa
+ * kolme asiaa yhdestä hetkestä: sitova akseli on Y, sen tyhjä on
+ * enintään TYHJAN_KATTO, ja pelaajan kaupunki on ruudun keskellä
+ * vaakasuunnassa enintään KAUPUNGIN_POIKKEAMA verran sivussa.
+ */
+const KAUPUNGIN_POIKKEAMA = 0.10;
 /**
  * Kolme zoomitasoa osuuksina uloimmasta sallitusta korkeudesta.
  * Sisin on valittu niin, että se YLITTÄÄ erän 11 katon (SKAALA_MAX 3)
@@ -151,7 +174,7 @@ const TYYPIT = {
   '.geojson': 'application/json', '.woff2': 'font/woff2',
 };
 
-/** Vastakokeen kytkin: 'A' | 'B' | 'C' | null. Muutos tarjoiltuun tekstiin. */
+/** Vastakokeen kytkin: 'A'…'E' tai null. Muutos tarjoiltuun lähdetekstiin. */
 let vastakoe = null;
 const palvelin = http.createServer((req, res) => {
   const polkuOsa = req.url.split('?')[0];
@@ -177,6 +200,16 @@ const palvelin = http.createServer((req, res) => {
     runko = Buffer.from(runko.toString('utf8')
       .replace('const pallonKorkeus = (bbox, vara = 1) => {',
         'const pallonKorkeus = (bbox, vara = 1) => { if (bbox || vara) return null;'));
+  }
+  if (vastakoe === 'E' && polkuOsa.endsWith('/js/pallolauta/kamera.js')) {
+    /*
+     * Erää 14 edeltänyt sovitus: `korkeuteenSovitus` palauttaa null,
+     * jolloin rajaus tehdään taas MOLEMPIIN suuntiin (PÄÄTÖKSET 12) ja
+     * puhelimen pystyruudulle jää mitattu 59 % tyhjää pystysuunnassa.
+     */
+    runko = Buffer.from(runko.toString('utf8')
+      .replace('const korkeuteenSovitus = (bbox, vara = 1) => {',
+        'const korkeuteenSovitus = (bbox, vara = 1) => { if (bbox || vara) return null;'));
   }
   if (vastakoe === 'C' && polkuOsa.endsWith('/js/pallolauta/maapaneeli.js')) {
     runko = Buffer.from(runko.toString('utf8')
@@ -259,9 +292,9 @@ const tallenne = JSON.stringify(peli.toJSON());
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 
 /** Yksi ajo: konteksti, peli Pariisissa, 9 s lepoa (ks. tiedoston alku). */
-async function avaaPeli({ leveys, korkeus }) {
+async function avaaPeli({ leveys, korkeus, dpr = 1, lepo = true }) {
   const ctx = await selain.newContext({
-    viewport: { width: leveys, height: korkeus }, deviceScaleFactor: 1, serviceWorkers: 'block',
+    viewport: { width: leveys, height: korkeus }, deviceScaleFactor: dpr, serviceWorkers: 'block',
   });
   await ctx.addInitScript((data) => {
     try {
@@ -290,7 +323,7 @@ async function avaaPeli({ leveys, korkeus }) {
     .waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 60000 })
     .then(() => true).catch(() => false);
   // 9 s: saapumisketju ja mittauspiikki ehtivät molemmat tapahtua.
-  if (auki) {
+  if (auki && lepo) {
     await sivu.waitForTimeout(9000);
     /*
      * VAKIINTUMINEN ON OSA MITTAUSTA. `pointOfView()` voi palauttaa
@@ -385,18 +418,52 @@ const rajausNyt = (sivu) => sivu.evaluate(() => {
     : maa;
   const tyhjaX = (kotelo.width - (yhd.x1 - yhd.x0)) / kotelo.width;
   const tyhjaY = (kotelo.height - (yhd.y1 - yhd.y0)) / kotelo.height;
+  /*
+   * SITOVA AKSELI ON SE, JOLLA LAATIKKO MAHTUU (erä 14). Kun ruutu on
+   * laatikkoa kapeampi (puhelin pystyssä), rajaus sovitetaan
+   * KORKEUTEEN ja laatikko ylivuotaa X:ssä TARKOITUKSELLA
+   * (Raamattu KARTTAUUDISTUKSEN PÄÄTÖKSET 17) — negatiivinen tyhjä X
+   * ei silloin ole vika vaan päätös. Sitova on siis pienin
+   * EI-NEGATIIVINEN tyhjä; jos molemmat ovat negatiivisia, laatikko ei
+   * mahdu kummallakaan akselilla ja mitta on null (väite kaatuu).
+   */
+  const ehdokkaat = [];
+  if (tyhjaX >= 0) ehdokkaat.push(['X', tyhjaX]);
+  if (tyhjaY >= 0) ehdokkaat.push(['Y', tyhjaY]);
+  ehdokkaat.sort((a2, b2) => a2[1] - b2[1]);
+  const valittu = ehdokkaat[0] ?? null;
+  const akseli = valittu ? valittu[0] : (tyhjaX >= tyhjaY ? 'X' : 'Y');
+  const kaupunki = (() => {
+    const pos = window.matkakirja.ui.game?.player?.pos;
+    const id = pos?.city ?? pos;
+    const c = (window.matkakirja.ui.game?.board?.cities ?? []).find((x) => x.id === id);
+    if (!c || !l.asteet) return null;
+    const a2 = l.asteet({ x: c.x, y: c.y });
+    if (!a2) return null;
+    const s2 = l.pallo.getScreenCoords(a2.lat, a2.lon ?? a2.lng, 0);
+    return s2 ? { x: s2.x, y: s2.y } : null;
+  })();
+  const paikka = (lat, lng) => {
+    const s2 = l.pallo.getScreenCoords(lat, lng, 0);
+    return s2 ? { x: s2.x, y: s2.y } : null;
+  };
   return {
     maa,
     kortti,
     yhd,
+    kaupunki,
+    // Bretagnen kärki (Pointe du Raz) ja Elsass (Strasbourg) — panoroinnin ääripäät.
+    bretagne: paikka(48.36, -4.77),
+    elsass: paikka(48.58, 7.75),
     kotelo: { w: kotelo.width, h: kotelo.height },
     tyhjaX,
     tyhjaY,
-    sitova: Math.min(tyhjaX, tyhjaY),
-    akseli: tyhjaX <= tyhjaY ? 'X' : 'Y',
-    // Leikkautuuko rajaus ruudun ulkopuolelle?
-    ruudussa: yhd.x0 >= -1 && yhd.y0 >= -1
-      && yhd.x1 <= kotelo.width + 1 && yhd.y1 <= kotelo.height + 1,
+    sitova: valittu ? valittu[1] : -1,
+    akseli,
+    // Leikkautuuko rajaus ruudun ulkopuolelle SITOVALLA akselilla?
+    ruudussa: akseli === 'X'
+      ? yhd.x0 >= -1 && yhd.x1 <= kotelo.width + 1
+      : yhd.y0 >= -1 && yhd.y1 <= kotelo.height + 1,
   };
 });
 
@@ -433,6 +500,64 @@ const suhdeNyt = (sivu) => sivu.evaluate(() => {
   return { kortti: r.width, lauta: Math.abs(b.x - a.x), laatikko,
     alt: l.pallo.pointOfView().altitude, skaala: datum?.skaala ?? null };
 });
+
+/**
+ * Panorointi maan laatikon X-rajalle (erä 14, väite 7). Raja luetaan
+ * kameran omasta `panoraja`sta samalla laatikolla, jota lauta käyttää.
+ */
+const panoroiRajalle = (sivu, suunta) => sivu.evaluate((s) => {
+  const l = window.matkakirja.ui.pallolauta;
+  const datum = l.pallo.htmlElementsData().find((d) => d.laji === 'maapaneeli') ?? null;
+  const bb = datum?.laatikko;
+  if (!bb) return null;
+  const raja = l.kamera.panoraja(bb);
+  const kohde = s < 0 ? raja?.lngMin : raja?.lngMax;
+  if (!Number.isFinite(kohde)) return { raja, kohde: null };
+  const pov = l.pallo.pointOfView();
+  l.pallo.pointOfView({ lat: pov.lat, lng: kohde, altitude: pov.altitude }, 0);
+  return { raja, kohde };
+}, suunta);
+
+/** Laattakerroksen mittarit (js/pallolaatat.js). */
+const laattamittarit = (sivu) => sivu.evaluate(() => {
+  const m = window.matkakirja.ui.pallolauta.lepokerros()?.mittarit?.() ?? null;
+  if (!m) return null;
+  return { taso: m.taso, laattoja: m.laattoja, valmiita: m.valmiita, scenessa: m.scenessa,
+    nakyvia: m.nakyvia, nakyviaScenessa: m.nakyviaScenessa, jonossa: m.jonossa,
+    varillisia: m.varillisia, variMaa: m.variMaa, kaytetytTavut: m.kaytetytTavut };
+});
+
+/**
+ * Laattakerroksen valitsema taso, kun saapumisnäkymä on kohdallaan.
+ * Odottaa, että kerros on tunnistanut väritason maan ja valinnut
+ * tason; palauttaa mittarit tai null.
+ */
+const SAAPUMISEN_KORKEUSKATTO = 1;
+async function valittuTaso(sivu, kierroksia = 20) {
+  /*
+   * TASO LUETAAN VASTA SAAPUMISNÄKYMÄSTÄ. `variMaa` asettuu jo ennen
+   * kuin kamera on perillä, ja silloin kerros on yhä maailmankuvan
+   * tasolla — ensimmäinen mittaukseni luki siitä syystä z3 (koko
+   * pallo, korkeus 2,5) sekä dpr 2:lla että dpr 3:lla, ja väite ei
+   * mitannut mitään. Odotetaan siis, että KORKEUS on saapumisluokkaa
+   * (alle SAAPUMISEN_KORKEUSKATTO; saapumisnäkymä on 0,15…0,26) ja
+   * ettei se enää liiku, ja vasta sitten luetaan taso.
+   */
+  let edellinen = null;
+  let viimeinen = null;
+  for (let i = 0; i < kierroksia; i += 1) {
+    const alt = await sivu // eslint-disable-line no-await-in-loop
+      .evaluate(() => window.matkakirja.ui.pallolauta.pallo.pointOfView()?.altitude)
+      .catch(() => null);
+    const m = await laattamittarit(sivu).catch(() => null); // eslint-disable-line no-await-in-loop
+    viimeinen = m ?? viimeinen;
+    if (alt !== null && alt < SAAPUMISEN_KORKEUSKATTO && edellinen !== null
+      && Math.abs(alt - edellinen) < 1e-4 && m?.variMaa && Number.isFinite(m.taso)) return m;
+    edellinen = alt;
+    await sivu.waitForTimeout(1000); // eslint-disable-line no-await-in-loop
+  }
+  return viimeinen;
+}
 
 /** Kamera annetulle osuudelle uloimmasta sallitusta korkeudesta. */
 const zoomaa = async (sivu, osuus) => {
@@ -567,6 +692,82 @@ vaadi('5. saapumisnäkymä rajautuu aivan maan rajojen ulkopuolelle (tyhjä ≤ 
 tieto('sivun virheet (pääajo)', paaVirheet.length ? paaVirheet.join(' | ') : 'ei yhtään');
 vaadi('4. pääajo ei tuottanut sivuvirheitä', paaVirheet.length === 0, paaVirheet.join(' | '));
 
+/* ===== 6 JA 7: PUHELIN PYSTYSSÄ SOVITETAAN KORKEUTEEN (erä 14) ===== */
+let kuusi = null;
+let seitseman = null;
+{
+  const { ctx, sivu, auki } = await avaaPeli({ leveys: 390, korkeus: 844 });
+  vaadi('pallolauta aukesi (390 px, korkeussovitus)', auki, '');
+  if (auki) {
+    const r = await rajausNyt(sivu);
+    const poikkeama = r?.kaupunki ? (r.kaupunki.x - r.kotelo.w / 2) / r.kotelo.w : null;
+    kuusi = {
+      akseli: r?.akseli, sitova: p(r?.sitova, 4), tyhjaX: p(r?.tyhjaX, 4),
+      poikkeama: p(poikkeama, 4), ruudussa: r?.ruudussa ?? false,
+      ok: Boolean(r && r.akseli === 'Y' && r.sitova >= 0 && r.sitova <= TYHJAN_KATTO
+        && r.ruudussa && poikkeama !== null && Math.abs(poikkeama) <= KAUPUNGIN_POIKKEAMA),
+    };
+    tieto('390 px · korkeussovitus',
+      `sitova akseli ${r?.akseli} ${p(100 * (r?.sitova ?? 0), 2)} % (katto ${100 * TYHJAN_KATTO} %), `
+      + `tyhjä X ${p(100 * (r?.tyhjaX ?? 0), 1)} % (ylivuoto on päätös), `
+      + `Pariisi ruudun keskeltä ${p(100 * (poikkeama ?? 0), 2)} % `
+      + `(katto ±${100 * KAUPUNGIN_POIKKEAMA} %)`);
+
+    /* 7. panorointi ääripäihin: maan reuna ruudulle, laatikko ei sisään. */
+    const osat = [];
+    for (const suunta of [-1, 1]) {
+      const pt = await panoroiRajalle(sivu, suunta); // eslint-disable-line no-await-in-loop
+      await sivu.waitForTimeout(700); // eslint-disable-line no-await-in-loop
+      const r2 = await rajausNyt(sivu); // eslint-disable-line no-await-in-loop
+      const kohta = suunta < 0 ? r2?.bretagne : r2?.elsass;
+      const ruudulla = Boolean(kohta && kohta.x >= 0 && kohta.x <= r2.kotelo.w
+        && kohta.y >= 0 && kohta.y <= r2.kotelo.h);
+      // Laatikon reuna EI saa tulla ruudun sisään sillä laidalla, jota kohti panoroitiin.
+      const reunaUlkona = suunta < 0 ? (r2?.maa.x0 ?? 1) <= 1 : (r2?.maa.x1 ?? -1) >= r2.kotelo.w - 1;
+      osat.push({ suunta: suunta < 0 ? 'länsi' : 'itä', kohde: p(pt?.kohde, 4),
+        elava: pt?.raja?.elava ?? false, ruudulla, reunaUlkona,
+        reunaX: p(suunta < 0 ? r2?.maa.x0 : r2?.maa.x1 - r2.kotelo.w, 1),
+        kohtaX: p(kohta?.x, 1) });
+      tieto(`390 px · panorointi ${suunta < 0 ? 'länteen' : 'itään'}`,
+        `keskipiste ${p(pt?.kohde, 3)}°, ${suunta < 0 ? 'Bretagne' : 'Elsass'} ruudulla `
+        + `${ruudulla} (x ${p(kohta?.x, 1)}), laatikon reuna ruudun ulkopuolella ${reunaUlkona}`);
+    }
+    seitseman = { osat, ok: osat.length === 2 && osat.every((o) => o.ruudulla && o.reunaUlkona) };
+  }
+  await ctx.close();
+}
+vaadi('6. puhelin pystyssä: sitova akseli Y, tyhjä ≤ 3,5 %, kaupunki keskellä',
+  Boolean(kuusi?.ok), JSON.stringify(kuusi));
+vaadi('7. panorointi tuo maan reunan ruudulle, laatikon reuna ei tule ruudun sisään',
+  Boolean(seitseman?.ok), JSON.stringify(seitseman));
+
+/*
+ * ===== INFO: DPR 3:N LAATTATASO (erä 14, MITATTU JA KIRJATTU) ======
+ *
+ * Tämä EI ole väite vaan mittaus. Erän 14 hypoteesi oli, että
+ * laattatason valinta kertoo ruudun tarpeen koko laitepikseli-
+ * kertoimella ja että dpr 3 nostaa tason kaksi porrasta (z6 → z8).
+ * VASTAKOE KAATOI HYPOTEESIN: dpr-katolla ja ilman sitä valittu taso
+ * on sama z7, koska tason valinta ei koskaan pääse z8:aan —
+ * näkyvien laattojen katto (LAATTAKERROS_LAATTAKATTO_NAKYVA 48) ja
+ * hystereesi pudottavat sen z7:ään jo ilman kattoa. Ero dpr 1:een
+ * (z6, 12 laattaa) on siis YKSI porras eikä kaksi, ja se on
+ * tarkkuusvaatimus eikä vika. Luku jää INFOksi, jotta muutos näkyisi
+ * heti, jos tason valinta joskus muuttuu.
+ */
+for (const dpr of [1, 3]) {
+  /* eslint-disable no-await-in-loop */
+  const { ctx, sivu, auki } = await avaaPeli({ leveys: 390, korkeus: 844, dpr });
+  if (auki) {
+    const m = await valittuTaso(sivu);
+    tieto(`390 px dpr ${dpr} · laattataso (INFO)`,
+      `z${m?.taso}, laattoja ${m?.laattoja} (näkyviä ${m?.nakyvia}), `
+      + `valmiita ${m?.valmiita}, scenessä ${m?.scenessa}, maa ${m?.variMaa}`);
+  }
+  await ctx.close();
+  /* eslint-enable no-await-in-loop */
+}
+
 /* ==================== VASTAKOKEET ================================= */
 
 /* A: ULOSZOOMAUKSEN_KERROIN 3 → väitteen 1 on kaaduttava. */
@@ -640,6 +841,22 @@ vastakoe = 'D';
   tieto('vastakoe D', `→ väite 5 ${kaatui ? 'PUNAINEN' : 'LÄPI (paha)'}`);
   vaadi('VASTAKOE D: laudan yksiköillä rajausväite kaatuu', kaatui, JSON.stringify(tulokset));
 }
+/* E: korkeussovitus pois → väitteiden 6 ja 7 on kaaduttava. */
+vastakoe = 'E';
+{
+  const { ctx, sivu, auki } = await avaaPeli({ leveys: 390, korkeus: 844 });
+  const r = auki ? await rajausNyt(sivu) : null;
+  const poikkeama = r?.kaupunki ? (r.kaupunki.x - r.kotelo.w / 2) / r.kotelo.w : null;
+  const kaatui = !(r && r.akseli === 'Y' && r.sitova >= 0 && r.sitova <= TYHJAN_KATTO
+    && poikkeama !== null && Math.abs(poikkeama) <= KAUPUNGIN_POIKKEAMA);
+  tieto('vastakoe E (korkeussovitus pois)',
+    `sitova ${r?.akseli} ${p(100 * (r?.sitova ?? 0), 2)} %, tyhjä Y ${p(100 * (r?.tyhjaY ?? 0), 2)} % `
+    + `→ väite 6 ${kaatui ? 'PUNAINEN' : 'LÄPI (paha)'}`);
+  vaadi('VASTAKOE E: ilman korkeussovitusta pystyruudun väite kaatuu',
+    Boolean(auki) && kaatui, JSON.stringify({ auki, akseli: r?.akseli, sitova: p(r?.sitova, 4) }));
+  await ctx.close();
+}
+
 vastakoe = null;
 
 await selain.close();

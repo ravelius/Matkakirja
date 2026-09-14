@@ -1439,7 +1439,12 @@ export async function avaaPallolauta(ui) {
     if (zoomirajaSyrjaytys) return null;
     if (matkallaVapaana) return null;
     if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu) return null;
-    if (panorajaMuisti.laatikko !== maanLaatikko) {
+    /*
+     * ELÄVÄ RAJA EI MAHDU MUISTIIN (erä 14). Korkeuteen sovitetulla
+     * ruudulla X-raja riippuu zoomista (kamera.js panoraja), joten se
+     * lasketaan joka kysymyksellä; muut rajat ovat yhä laatikon omia.
+     */
+    if (panorajaMuisti.laatikko !== maanLaatikko || panorajaMuisti.raja?.elava) {
       panorajaMuisti = { laatikko: maanLaatikko, raja: kamera.panoraja(maanLaatikko) };
     }
     return panorajaMuisti.raja;
