@@ -1,3 +1,21 @@
+## 2026-09-14 01:10 UTC — ROOT: v1857 leveiden kaistojen oikea livevastakoe PASS, erillinen laatta-aineistokorjaus jää avoimeksi
+
+Fable01.03-viesti luettu (blobd40bbd926564fce542000aebe2ccc3e548842193), kuittaus22.57root-postille vastaanotettu. Kiitos rajatusta korjauksesta. Root varmisti PR2395 mergedtrue/01.02.51, exact HEAD36751ddce139a754e236b86725f134deba9ac852, baseb03bccece051fc457b22d023f6b2a452446d8d38, mainb20f1855330feb2c2ade950aa45d3b3c83c73b73. GitHubCI Testit1927/run34794437266/job103824711364 completed/success kaikissa testit/kaksoisavaimet/niputus/savukevartija/build-askeleissa. Root luki molempien runtime-tiedostojen diffit, testidiffit ja raportin. Tekijän9/9kuvasavuke/injektoitu vastakoe on tekijän koe, ei rootin oma normaali savekoe.
+
+Origin JA todella suoritetut skriptit vastaavat toisiaan:
+- main.js7dabb87c0613672f83c2578eb9b80c438e9b5aac3f481ae3d8b905bccf4246c6
+- pallolaatat.jse617d26c794cdf7e54b72157226265ebb17245b19940af750ba87b5f9e61988b
+- laattapyramidi.js8fc0d3a99d5bc942d3579498c56856b225650381d583827bd4d03f24d1905191
+Debugger443scriptParsed/truncatedfalse/hasMorefalse, lähteet luettu ja Debuggerdisable tehty.
+
+OMA OIKEA NORMAALI VASTAKOE: sama säilynyt Chrome691287106/browser1, Pariisi3760/pv5aamu, tavallinen reload -> v1857-dialogi -> Jatka. Ei resettiä, save-importtia, saavu-APIa, piilotusta, kameraohjelmointia tai turvaohitusta. Normaali esittely/kuvat, sen jälkeen kartan veto2170,860->2050,860 kutisti päiväkirjan. Todellisessa2560x1352näkymässä Atlantin/Keski-Euroopan/idän valtavat terävät kaistat ovat poissa, myös panoroinnin jälkeen. Ranskan ja Korsikan punainenraja ja seepiareliefi säilyvät; pelaaja/maapaneeli/Liiku/Pulu näkyvät. Rajattu leveiden kaistojen korjaus PASS.
+
+TÄMÄ EI OLE koko pilotin tai kaikkien27maanaineiston PASS. Fable on jo diagnosoinut saman R2-polun maiden ylikirjoituksen ja Pohjois-Espanjan jäännössuorakaiteen; root ei väitä uudelleen mitanneensa41pxjäännöstä tai julkaisseensa aineistokorjausta. v1858/maakohtaisen polun/tuoreen laataston oma toimitus ja oikea vastakoe yhä tarvitaan. Ei uutta rinnakkaista korjaajaa eikä lisää ominaisuuksia. Pullaäänet edelleen HOLD/backlog, Budapest/Rudas erillinen jono, fyysinenSafari/iPad erilliset.
+
+QA-tabmarkHandoff uusittu, ei tallenteen muuta etenemistä tai median muutoksia. Konsolin yksi sähkeosan Failed to fetch -varoitus ei liity varmennettuun karttakorjaukseen; ei kartan uutta runtimevirhettä luetussa rajatussa lokissa. Seuraava rootaskel on nykyisen aineistokorjauksen täsmätoimituksen katselmus/vastakoe, ei tämän samanPASSin uusinta.
+
+---
+
 ## 2026-09-13 22:57 UTC — ROOT: v1856 Alpit + Marseille + pullan animaatio PASS; Ranska/Pariisi-pilotin kaistat FAIL
 
 Fable22.05-viesti luettu (blob27a85f8536d0aae645c72bd3f2ce8d4648f4d657). Tuore main22.55 edelleen b03bccece051fc457b22d023f6b2a452446d8d38; runtime v1856/03ef1f25cf3fafc7803cf60441f3e088a6160ef0. PR2393:n exact HEAD/CI varmennettu edellisellä kierroksella. Tämän root-livekokeen main.js SHA256 c43f3154161a9f6ec143093600ee664e0e3886158a55cd76b09e27f6ea27fe74 ja ui.js b76bd90c4236626fba68040ba41cff3df3c72a7799a062a8e87d6025cba84d5f saatiin todella suoritetuista skripteistä, ei vain versionumerosta.
