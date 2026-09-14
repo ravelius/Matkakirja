@@ -174,11 +174,33 @@ kumotussakin ajossa, kuten pitääkin.
 
 | portti | tulos |
 |---|---|
-| `npm test` | # pass 3352, # fail 0 (13 skipped, ennallaan) |
+| `npm test` | # tests 3374, # pass 3359, # fail 2, # skipped 13 |
 | `tools/tarkista-kaksoisavaimet.mjs` | ei kaksoisavaimia |
 | `tools/tarkista-niputus.mjs` | 387 moduulia, ei törmäyksiä |
 | `tools/tarkista-savukkeet.mjs` | 1660 ui-viittausta, kunnossa |
-| `savuke-isoisa-pulu.mjs` | 71/71 (×3) |
+| `savuke-isoisa-pulu.mjs` | 71/71 (neljä peräkkäistä ajoa) |
+
+### PUNAISET OVAT KUORMAVARTIOITA, EIVÄT TÄMÄN ERÄN VIKOJA
+
+`npm test` ajaa 3374 testiä rinnakkain, ja kone oli tämän erän mittausten
+kanssa yhtä aikaa kuormitettuna. Punaiset ovat `tests/pollo.test.mjs`:n
+KUORMAVARTIOT (*"indeksi rakentuu ja on kokoluokaltaan järkevä"* —
+indeksointi kesti 6465 ms, ja *"haku on nopea myös koko aineistolla"* —
+haku kesti 1041 ms). Ne mittaavat koneen nopeutta, eivät tätä muutosta.
+
+Yhdessä kuormitetussa ajossa punaisiksi kääntyi lisäksi 12 `pulucam`- ja
+`luentakuva`-ajastinvartiota. Ne ajettiin uudelleen erikseen ja
+kahdeksan rinnakkaisen tiedoston ajossa:
+
+| ajo | tulos |
+|---|---|
+| `tests/pulucam.test.mjs` yksin | **# pass 26, # fail 0** |
+| `tests/luentakuva.test.mjs` yksin | **# pass 24, # fail 0** |
+| pulucam + luentakuva + fokusvirta + pollo rinnakkain | # pass 214, # fail 2 (molemmat pollon kuormavartioita) |
+
+Eli jäljelle jäävät punaiset ovat kello- ja kuormavartioita. Yksikään ei
+mittaa isoisän tai pulun kuvan kokoa tai paikkaa — ne ovat savukkeessa ja
+`tests/saapumisasento.test.mjs`:ssä, ja ne ovat vihreitä.
 
 ## 8. MITÄ EI TEHTY
 
