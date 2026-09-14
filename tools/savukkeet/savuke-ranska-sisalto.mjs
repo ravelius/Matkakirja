@@ -286,12 +286,30 @@ const mittaa = (sivu, porras, paljasta = null) => sivu.evaluate(async ([n, tunnu
   const iso = kohteidenNykyinenIso(window.matkakirja.ui);
   const kohde = tunnus ? (KOHDE_MAAT[iso] ?? []).find((k) => k.id === tunnus) : null;
   if (kohde) delete kohde.vainNimi;
+  /*
+   * ODOTA KAMERAN PYSÄHTYMISTÄ, ÄLÄ KELLOA. `saavu({ kesto: 0 })`
+   * palaa ennen kuin kamera on paikallaan, ja kiinteä uni luki
+   * satunnaisesti LENNOSSA olevan näkymän: mitattu 14.9.2026 samassa
+   * ikkunassa peräkkäin 388,6 (oikea) ja 60,0 (kesken lennon)
+   * lautayksikköä, ja jälkimmäisellä lähizoomiportti on auki jo
+   * "saapumisessa". Näkymä luetaan siksi kunnes kaksi peräkkäistä
+   * lukemaa ovat samat.
+   */
+  const rauhoitu = async () => {
+    let edellinen = null;
+    for (let i = 0; i < 25; i += 1) {
+      await new Promise((v) => setTimeout(v, 200));
+      const w = l.kamera.nakyvaAlue().w;
+      if (edellinen !== null && Math.abs(w - edellinen) < 0.5) return;
+      edellinen = w;
+    }
+  };
   await l.saavu({ kesto: 0 });
-  await new Promise((v) => setTimeout(v, 1100));
+  await rauhoitu();
   for (let i = 0; i < n; i += 1) {
     const pov = l.pallo.pointOfView();
     l.pallo.pointOfView({ ...pov, altitude: pov.altitude / 2 }, 0);
-    await new Promise((v) => setTimeout(v, 850));
+    await rauhoitu();
   }
   l.ladoHeti();
   await new Promise((v) => setTimeout(v, 300));
@@ -324,7 +342,15 @@ const otaNakyma = (sivu) => sivu.evaluate(
 const palautaNakyma = (sivu, pov) => sivu.evaluate(async (p) => {
   const l = window.matkakirja.ui.pallolauta;
   l.pallo.pointOfView(p, 0);
-  await new Promise((v) => setTimeout(v, 180));
+  // Sama rauhoittuminen kuin `mittaa`ssa, lyhyempänä: asento on jo
+  // valmis luku eikä kehystystä, joten kamera pysähtyy nopeasti.
+  let edellinen = null;
+  for (let i = 0; i < 12; i += 1) {
+    await new Promise((v) => setTimeout(v, 150));
+    const w = l.kamera.nakyvaAlue().w;
+    if (edellinen !== null && Math.abs(w - edellinen) < 0.5) break;
+    edellinen = w;
+  }
   l.ladoHeti();
   await new Promise((v) => setTimeout(v, 180));
 }, pov);

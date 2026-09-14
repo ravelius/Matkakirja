@@ -394,6 +394,90 @@ agenttien tiedostoihin (`js/pallolauta/nimet.js`, `merkit.js`,
 `js/pallolauta/nostot.js`:ään tehtiin kaksi pientä lisäystä, jotka data
 vaati.
 
+## 9b. Regressio ja korjaus (mainin merge, v1882)
+
+Haara pohjautui nosto-erään **ennen v1878:aa**, joka toi merkkiportin myös
+POLTTOKETJUUN (`tools/fokuskartta/nostot.mjs` +
+`tests/nostopoltto-merkkiportti.test.mjs`). Kun haara mergettiin mainiin,
+testi *"poltettavat ovat täsmälleen ne, jotka elävä portti päästäisi"*
+kaatui: **73 !== 32**.
+
+### Mitattu: kumpi puoli oli väärässä
+
+**Kumpikaan.** Molemmat päät ajavat SAMAA funktiota (`merkkiPortti`,
+`lahella = false`), ja ne antavat saman vastauksen:
+
+| mittaus | lähde | tulos |
+| --- | --- | ---: |
+| `tilasto.porttiPiiloon` | polttoketjun oma kirjanpito (tools/fokuskartta/nostot.mjs) | **73** |
+| testin oma `karsittuja` | elävä pää: `maanKohdemerkit` + `merkkiPortti` | **73** |
+
+Maittain: GRC 12, TUR 8, DEU 7, **FRA 41**, HRV 2, ITA 1, RUS 1, ESP 1.
+Ilman tätä erää luvut ovat GRC 12, TUR 8, DEU 7, HRV 2, ITA 1, RUS 1,
+ESP 1 = **32**; ero on täsmälleen **FRA 41**, eli 62 − 21 — tämän erän oma
+sisältö lähizoomiportin takana. **Luku 32 ei siis ollut väite vaan
+päivämäärä.**
+
+Kolme epäilyä tarkistettiin erikseen, ja kaikki kolme ovat kunnossa:
+
+| epäily | mitattu |
+| --- | --- |
+| tunteeko polton portti `lahi: true`? | kyllä: FRA:n 62 merkistä poltettavia on **19**, eikä yksikään 35 `lahi`-merkistä ole niiden joukossa |
+| poltetaanko `vainNimi`-kaupungit? | kyllä, ja se on oikein: ne ovat pysyvää karttamustetta. Napautettavuus ei silti palaa — `js/pallolauta/nostot.js` jättää `vainNimi`-rivit osumalistalta pois myös poltettuna |
+| syntyykö viittausnostoista kaksoiskappaleita? | ei: maan sisäisiä kaksoistunnuksia **0** |
+
+### Mitä korjattiin
+
+1. **Kiinteä 32 → kahden riippumattoman mittauksen yhtäpitävyys.**
+   `assert.equal(tilasto.porttiPiiloon, karsittuja)` on se invariantti,
+   jota testi oikeasti tarkoitti: jos polttoketju ja elävä kerros
+   ajautuvat eri sääntöön, luvut eroavat. Se ei vanhene sisällön
+   kasvaessa. Maakohtainen jakauma kulkee virheviestissä, jotta luvun
+   muutos kertoo heti mistä se tuli. (Sama ratkaisu kuin
+   kaupunkikortit-haarassa; alaraja ≥ 30 säilyi.)
+2. **Vartion 3 datasilmukka oli tyhjä väite, ja se korjattiin.** Se luki
+   lippua polttoketjun merkiltä (`m.kohde?.lahi`), mutta sen
+   merkkioliossa EI OLE `kohde`-kenttää lainkaan (kentät: tunnus, x, y,
+   ankkuriX, ankkuriY, symboli, laji, nimio, …, poltettava, tiiviste,
+   perhe, iso, s). Ehto oli aina epätosi. Lippu luetaan nyt elävältä
+   puolelta, ja aineistossa on **35** `lahi`-merkkiä, joten väite mittaa
+   oikeasti; alaraja ≥ 35 estää silmukan palaamisen tyhjäksi.
+3. **Savukkeen mittaus rauhoitettiin.** `saavu({ kesto: 0 })` palaa ennen
+   kuin kamera on paikallaan, ja kiinteä uni luki satunnaisesti LENNOSSA
+   olevan näkymän: mitattu samassa ikkunassa peräkkäin **388,6** (oikea)
+   ja **60,0** (kesken lennon) lautayksikköä — jälkimmäisellä
+   lähizoomiportti on auki jo "saapumisessa", ja vartiot 4 ja 6 kaatuivat
+   väärästä syystä. Näkymä luetaan nyt kunnes kaksi peräkkäistä lukemaa
+   ovat samat. **Tuotekoodia ei muutettu.**
+
+### Vastakoe (pakollinen)
+
+Polttoketjun portti avattiin ajon ajaksi (`lahella = true`):
+
+```
+not ok 1 - yksikään maa ei polta yli pääkartan merkkikaton
+not ok 2 - poltettavat ovat täsmälleen ne, jotka elävä portti päästäisi
+not ok 3 - lähizoomin kohde (lahi: true) ei pala koskaan
+          error: 'FRA/tuileries on lahi-kohde mutta palaa'
+ok 4 - portti ei siirrä ladontaa
+```
+
+Kolme neljästä vartiosta kaatuu, ja vartio 3 osoittaa nimeltä yhden
+`lahi`-kohteen — eli korjattu silmukka mittaa juuri sitä, mitä pitääkin.
+Tilastotiedostoa ei tarvinnut generoida uudelleen: `tilasto` lasketaan
+ajossa eikä ole tiedosto.
+
+### Portit mergen jälkeen
+
+| portti | tulos |
+| --- | --- |
+| `node --test` (235 tiedostoa kahdessa erässä, koska koko sarja ei enää mahdu 600 s:iin) | **# pass 1467 + 1886 = 3353, # fail 0** |
+| — kuormavartio | `tests/pollo.test.mjs` *"indeksi rakentuu"* punastui yhdellä välikierroksella (3 754 ms rajan 3 000 yli) ja on vihreä sekä yksin ajettuna (124/0) että lopullisessa ajossa. Sama aikamittari on kirjattu nosto-erässä #2437 |
+| `tarkista-kaksoisavaimet`, `tarkista-niputus`, `tarkista-savukkeet` | kunnossa |
+| `savuke-merkkirajat` | **28/28** |
+| `savuke-ranska-sisalto` | **28/28** |
+| `tests/nostopoltto-merkkiportti.test.mjs` | **4/4** |
+
 ## 10. Avoimet — sinun päätettäväksesi
 
 1. **Lisäkaupungeilla ei ole korttia.** Ne ovat kartalla nimenä ja
