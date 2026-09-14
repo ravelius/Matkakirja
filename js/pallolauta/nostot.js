@@ -355,6 +355,44 @@ export function lehdenOsuus(pohja, nakyva, packId = null) {
  */
 /** Pääkartan merkkikatto maata kohti uloimmalla zoomilla. */
 export const PAAKARTAN_MERKKIKATTO = 21;
+/*
+ * ══ VAIN KOHDEMAAN NOSTOT ═════════════════════════════════════════
+ *
+ * OMISTAJA 14.9.2026, sanatarkasti (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 12): *"pystyyko muiden maiden karttanostoja piilottamaan
+ * helposti?"* — Fablen päätös: kyllä, ja oletuksena piilossa; fokus
+ * pysyy kohdemaassa. Lippu on yksi vakio, jonka voi kääntää takaisin.
+ *
+ * MITÄ LIPPU KOSKEE. Vain NAAPURIMAIDEN nostomerkkejä
+ * (js/fokuskohteet.js naapurienPoltetutMerkit), jotka tämä kerros
+ * lisää osumalistaan oman maan merkkien rinnalle. Kaupunkimerkit,
+ * aarre, reitit, kohtaamispiste ja eläintäyt ovat omia kerroksiaan
+ * eivätkä kuulu tähän.
+ *
+ * MITÄ LIPPU EI VOI TEHDÄ — MITATTU, EI ARVATTU. Naapurin nostomerkki
+ * on POLTETTU laattaan (Raamattu, KARTTANOSTOT POLTETAAN LAATTOIHIN):
+ * muste piirtyy laatasta eikä tästä kerroksesta, joten lippu ei ota
+ * sitä ruudulta pois — se ottaa pois vain SEN NAPAUTETTAVUUDEN.
+ * Mitattu Chromiumilla 14.9.2026 (Ranskan saapumisnäkymä, 390 × 844):
+ * ruudulla oli 114 napautettavaa merkkiä, joista Ranskan omia 20,
+ * naapurimaiden poltettuja 78 ja eläintäkyjä 16 — ja ELÄVIÄ
+ * H-merkkejä koko ruudulla vain 7 (Ranskan omat polttamattomat).
+ * Naapurien 78 merkistä yksikään ei siis ollut elävä: lipun jälkeen
+ * ruudun MUSTE on sama, mutta napautus ei enää avaa naapurin korttia.
+ *
+ * TÄMÄ ON TIETOINEN MYÖNNYTYS JA SE MAKSAA. Naapurin poltettu muste
+ * sai napautuksensa takaisin 2.9.2026 (omistaja, Bosnia: *"Dinara ja
+ * Sveti Jure eivät ole klikattavissa"*); lippu ottaa sen uudestaan
+ * pois, eli kartalle jää mustetta ilman korttia, kunnes naapurimaiden
+ * nostotaso poltetaan kohdemaakohtaisesti uudelleen. Se on R2-ajo
+ * (tools/tee-pallolaatat.mjs --nostot) eikä kuulu tähän erään.
+ */
+/**
+ * Piirretäänkö pääkartan karttanostot vain kohdemaasta (omistajan
+ * kysymys 14.9.2026, ks. VAIN KOHDEMAAN NOSTOT). `false` palauttaa
+ * naapurimaiden poltetun musteen napautettavaksi kuten ennen.
+ */
+export const NAYTA_VAIN_KOHDEMAAN_NOSTOT = true;
 /**
  * LÄHIZOOMIPORTIN KYNNYS — näkymän osuus uloimmasta sallitusta.
  *
@@ -679,8 +717,12 @@ export function luoNostot({
           avaa: (ankkuri) => avaaFokuskohde(ui, kohde, { ankkuri }),
         });
       }
-      // Naapurimaan poltettu muste on myös napautettava (2.9.2026, Bosnia).
-      for (const m of naapurienPoltetutMerkit(ui, nakyva, onPoltettu)) {
+      // Naapurimaan poltettu muste on myös napautettava (2.9.2026,
+      // Bosnia) — ellei lippu pidä fokusta kohdemaassa (ks. VAIN
+      // KOHDEMAAN NOSTOT).
+      const naapurit = NAYTA_VAIN_KOHDEMAAN_NOSTOT
+        ? [] : naapurienPoltetutMerkit(ui, nakyva, onPoltettu);
+      for (const m of naapurit) {
         const a = asteet(m);
         if (!a || !m.kohde) continue;
         rivit.push({
