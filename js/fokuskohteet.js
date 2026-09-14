@@ -125,6 +125,7 @@ import { FOKUSKOHTEET_CHN } from './packs/fokuskohteet-chn.js';
 import { FOKUSKOHTEET_DEU } from './packs/fokuskohteet-deu.js';
 import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
 import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
+import { NAKYVAT_KAUPUNGIT_FRA } from './packs/nakyvat-kaupungit-fra.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
 import { FOKUSKOHTEET_HRV } from './packs/fokuskohteet-hrv.js';
@@ -296,6 +297,17 @@ export const KOHDE_MAAT = {
 for (const [iso, kohteet] of Object.entries(MAASTOKOHTEET)) {
   KOHDE_MAAT[iso] = [...(KOHDE_MAAT[iso] ?? []), ...kohteet];
 }
+
+/*
+ * NÄKYVÄT KAUPUNGIT — RANSKA (omistaja, KARTTAUUDISTUKSEN PAATOKSET 13:
+ * *"kartalle olisi lisaksi hyva tuoda lisaa kaupunkeja nakyviin"*).
+ * Rivit ovat tavallisia kaupunkikohteita yhtä kenttää lukuun ottamatta:
+ * `vainNimi: true` sanoo, ettei niillä ole korttia eivätkä ne siksi ota
+ * napautusta (js/packs/nakyvat-kaupungit-fra.js perustelee miksi).
+ * Liitos on tässä samasta syystä kuin maastokohteilla yllä: KOHDE_MAAT
+ * on tämän tiedoston oma taulu.
+ */
+KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...NAKYVAT_KAUPUNGIT_FRA];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
@@ -1578,6 +1590,14 @@ function lahinKohde(ui, tapahtuma) {
   for (const g of ui.fokuskohdeKerros?.querySelectorAll('.fokuskohde') ?? []) {
     const kohde = ui.fokuskohdeTiedot?.get(g.dataset.kohde);
     if (!kohde) continue;
+    /*
+     * NIMIKYLTTI EI OTA NAPAUTUSTA. `vainNimi`-kohde on kartan
+     * typografiaa (näkyvä kaupunki ilman korttia,
+     * js/packs/nakyvat-kaupungit-fra.js): jos se osallistuisi
+     * etäisyyskilpailuun, se veisi napautuksen naapurinostolta ja
+     * avaisi tyhjän kortin.
+     */
+    if (kohde.vainNimi) continue;
     for (const muoto of g.querySelectorAll('.fokuskohde-osuma')) {
       const r = muoto.getBoundingClientRect();
       if (!(r.width > 0) || !(r.height > 0)) continue;

@@ -61,6 +61,7 @@ const MODULES = [
   // Lukee maa-kategoriat.js:ää, joten se on tämän jälkeen ja ennen
   // fokusvirta-pariisi.js:ää, joka lukee tätä.
   'js/packs/maalehtinostot-fra.js',
+  'js/packs/nakyvat-kaupungit-fra.js',
   'js/packs/maakartat.js',
   'js/packs/nahtavyysjutut.js',
   'js/packs/miniatyyrit.js',
