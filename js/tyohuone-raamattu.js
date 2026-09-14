@@ -7431,6 +7431,20 @@ export const RAAMATTU = {
           + 'tulee oikealle; jonkin ajan kuluttua (Fablen linjaus n. 6 s) '
           + 'se kutistuu takaisin pelkaksi symboliksi. Kohta 2 (piilossa '
           + 'luennan ajan) pysyy. Tila: tyo Opus-agentilla.',
+        'KARTTATAUSTA LUENNAN JA KAUPUNKIESITTELYN AIKANA: TUMMEMPI JA '
+          + 'PEHMEA (omistaja 14.9.2026 klo 20.55 UTC, sanatarkasti: '
+          + '"Luennan aikana kun kuvat nakyvat, kartta tausta voisi olla '
+          + 'tummempi ja vahan blurri. Myos kaupunki esittelyssa taustaa '
+          + 'voisi pehmentaa mutta vaalentaa hieman samaan savyyn kuin nyt '
+          + 'tulevassa Luennan taustassa"): 1) saapumisluennan aikana '
+          + '(kun saapumiskortin kuvat nakyvat) kartta kortin takana on '
+          + 'TUMMEMPI ja hieman SUMEA (staattinen backdrop-sumennus, ei '
+          + 'animoitua suodatinta - iOS-saanto tests/rules.test.mjs '
+          + 'pysyy); 2) tiivistetyn kaupunkiesittelyn (kaupunkietusivun) '
+          + 'takana kartta PEHMENNETAAN samoin, mutta VAALENNETAAN hieman, '
+          + 'samaan savyyn kuin luennan taustassa - siis sama sumennus, '
+          + 'eri tummuus. Savyt ja sumennuksen maara mitataan ja naytetaan '
+          + 'omistajalle kuvina. Tila: tyo Opus-agentilla.',
         'Saapumiskortti: luettu matkakirjamerkintä + esittely '
           + 'kuvineen.',
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
