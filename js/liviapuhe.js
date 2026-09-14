@@ -112,56 +112,69 @@ import { AANI_JUURI } from './media.js';
 export const LIVIAN_AANIJUURI = `${AANI_JUURI}aanet/pulu/`;
 
 /*
- * HYVÄKSYTYT VERSIONOIDUT KAUPUNKIÄÄNET (13.9.2026).
+ * HYVÄKSYTYT VERSIONOIDUT KAUPUNKIÄÄNET (päivitetty 14.9.2026).
  *
- * Nämä avaimet tulevat suoraan kuudesta valmistuneesta tuotantokuitista:
- * pilotti/E4 sekä Euroopan neljä loppuerää. Äänitteet
+ * Nämä avaimet tulevat suoraan valmistuneista tuotantokuiteista. Äänitteet
  * ovat muuttumattomissa R2-avaimissa, joten peli ei enää riipu näiden
  * repliikkien vanhasta ylikirjoitettavasta aanet/pulu/-avaimesta.
+ *
+ * 14.9.2026: 40 repliikkiä osoittaa Horatio–Livia-Eurooppa-paketin uusiin
+ * luentoihin. Kuitteja on VIISI, koska erän 1 kolme repliikkiä (bukarest-3,
+ * pariisi-3, berliini-3) hylkäytyi 20 s kestokatossa ja ajettiin uusiksi:
+ * pulu-b3a8d61baa0c4dd24123 (7 kpl), pulu-3388cdde59d36a971f1a (3 kpl),
+ * pulu-415d0075be837be8c5bd, pulu-85a34cad2355457c7e9b ja
+ * pulu-0090303ae274b1313286. Kuitin `promotionStatus` on
+ * "pending-code-deploy" — julkaisu live-avaimeen ei ole erillinen vaihe,
+ * vaan tämä taulukko on julkaisu.
+ *
+ * VIISI KAUPUNKIA ODOTTAA ERÄN 5 AJOA: sisilia-3, islanti-3, alpit-3,
+ * lappi-3 ja tromssa-3 jäivät äänittämättä kiintiön loputtua, joten niiden
+ * rivit ja niiden teksti pysyvät 13.9.2026 asussa (js/livia-pilotti-cuet.js
+ * ERA5_ODOTTAVAT_KAUPUNGIT).
  */
 export const LIVIAN_VERSIOIDUT_AANET = Object.freeze({
-  'ateena-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-ateena-3.mp3',
-  'sarajevo-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-sarajevo-3.mp3',
-  'helsinki-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-helsinki-3.mp3',
-  'tampere-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-tampere-3.mp3',
-  'tallinna-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-tallinna-3.mp3',
-  'riika-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-riika-3.mp3',
-  'vilna-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-vilna-3.mp3',
-  'marseille-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-marseille-3.mp3',
-  'venetsia-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-venetsia-3.mp3',
-  'tukholma-3': 'aanet/pulu/versiot/0c684249bcbf/pulu-68f01fabb4a9d7ce6c2b/livia-tukholma-3.mp3',
+  'ateena-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-ateena-3.mp3',
+  'sarajevo-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-sarajevo-3.mp3',
+  'helsinki-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-helsinki-3.mp3',
+  'tampere-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-tampere-3.mp3',
+  'tallinna-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-tallinna-3.mp3',
+  'riika-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-riika-3.mp3',
+  'vilna-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-vilna-3.mp3',
+  'marseille-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-marseille-3.mp3',
+  'venetsia-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-venetsia-3.mp3',
+  'tukholma-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-tukholma-3.mp3',
   'lappi-3': 'aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-lappi-3.mp3',
   'tromssa-3': 'aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-tromssa-3.mp3',
-  'sofia-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-sofia-3.mp3',
-  'istanbul-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-istanbul-3.mp3',
-  'bukarest-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-bukarest-3.mp3',
-  'budapest-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-budapest-3.mp3',
-  'wien-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-wien-3.mp3',
-  'lontoo-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-lontoo-3.mp3',
-  'pariisi-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-pariisi-3.mp3',
-  'madrid-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-madrid-3.mp3',
-  'berliini-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-berliini-3.mp3',
-  'rooma-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-4c9887599f47a6c6f89f/livia-rooma-3.mp3',
-  'praha-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-praha-3.mp3',
-  'dublin-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-dublin-3.mp3',
-  'edinburgh-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-edinburgh-3.mp3',
-  'lissabon-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-lissabon-3.mp3',
-  'barcelona-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-barcelona-3.mp3',
-  'sevilla-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-sevilla-3.mp3',
-  'amsterdam-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-amsterdam-3.mp3',
-  'dubrovnik-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-dubrovnik-3.mp3',
-  'bergen-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-bergen-3.mp3',
-  'kobenhavn-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-59c0127dcbec81ed4566/livia-kobenhavn-3.mp3',
-  'krakova-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-krakova-3.mp3',
-  'varsova-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-varsova-3.mp3',
-  'pietari-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-pietari-3.mp3',
-  'moskova-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-moskova-3.mp3',
-  'kiova-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-kiova-3.mp3',
-  'odessa-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-odessa-3.mp3',
-  'kreeta-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-kreeta-3.mp3',
-  'granada-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-granada-3.mp3',
-  'firenze-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-firenze-3.mp3',
-  'oslo-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d3df5cd49362e0f6a952/livia-oslo-3.mp3',
+  'sofia-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-sofia-3.mp3',
+  'istanbul-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-istanbul-3.mp3',
+  'bukarest-3': 'aanet/pulu/versiot/439bf050af65/pulu-3388cdde59d36a971f1a/livia-bukarest-3.mp3',
+  'budapest-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-budapest-3.mp3',
+  'wien-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-wien-3.mp3',
+  'lontoo-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-lontoo-3.mp3',
+  'pariisi-3': 'aanet/pulu/versiot/439bf050af65/pulu-3388cdde59d36a971f1a/livia-pariisi-3.mp3',
+  'madrid-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-madrid-3.mp3',
+  'berliini-3': 'aanet/pulu/versiot/439bf050af65/pulu-3388cdde59d36a971f1a/livia-berliini-3.mp3',
+  'rooma-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-rooma-3.mp3',
+  'praha-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-praha-3.mp3',
+  'dublin-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-dublin-3.mp3',
+  'edinburgh-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-edinburgh-3.mp3',
+  'lissabon-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-lissabon-3.mp3',
+  'barcelona-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-barcelona-3.mp3',
+  'sevilla-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-sevilla-3.mp3',
+  'amsterdam-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-amsterdam-3.mp3',
+  'dubrovnik-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-dubrovnik-3.mp3',
+  'bergen-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-bergen-3.mp3',
+  'kobenhavn-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-kobenhavn-3.mp3',
+  'krakova-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-krakova-3.mp3',
+  'varsova-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-varsova-3.mp3',
+  'pietari-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-pietari-3.mp3',
+  'moskova-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-moskova-3.mp3',
+  'kiova-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-kiova-3.mp3',
+  'odessa-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-odessa-3.mp3',
+  'kreeta-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-kreeta-3.mp3',
+  'granada-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-granada-3.mp3',
+  'firenze-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-firenze-3.mp3',
+  'oslo-3': 'aanet/pulu/versiot/439bf050af65/pulu-85a34cad2355457c7e9b/livia-oslo-3.mp3',
   'sisilia-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-sisilia-3.mp3',
   'islanti-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-islanti-3.mp3',
   'alpit-3': 'aanet/pulu/versiot/31ae6dfacd1d/pulu-d93f186a007678c0aa11/livia-alpit-3.mp3',

@@ -42,7 +42,7 @@ export const FOKUSVIRTA_ISLANTI = {
     paikkarivi: 'Reykjavik, elokuussa 1873. Tuulista; ei yhtään puuta; '
       + 'puntari matalalla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 357 merkkiä (yläraja 400). */
-    teksti: "Lähdin Islannissa hainpyyntiin soutuveneellä. Hain maksasta saatiin öljyä Euroopan katulamppuihin. Kun saalis vedettiin laidan viereen, vene tuntui äkkiä kovin pieneltä. Kalastaja kohotti harppuunan. Minä painoin airot veteen ja pidin keulan aaltoja vasten.",
+    teksti: 'Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. Maa teki ensi kerran palveluksen vaatimatta lapioimista. Kaulus puhdistui; käsitykseni saaresta ei.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -58,49 +58,17 @@ export const FOKUSVIRTA_ISLANTI = {
      * merelle" (maisemahavainto).
      */
     reaktiot: [
-  {
-    "id": "islanti.r1",
-    "ankkuri": "hainpyyntiin soutuveneellä",
-    "tarkoitus": "epailee",
-    "voimakkuus": 0.35,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "islanti.r2",
-    "ankkuri": "öljyä Euroopan katulamppuihin",
-    "tarkoitus": "hammastyy",
-    "voimakkuus": 0.35,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "islanti.r3",
-    "ankkuri": "vene tuntui äkkiä kovin pieneltä",
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.5,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "islanti.r4",
-    "ankkuri": "Kalastaja kohotti harppuunan",
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.55,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "islanti.r5",
-    "ankkuri": "pidin keulan aaltoja vasten",
-    "tarkoitus": "myotailee",
-    "voimakkuus": 0.45,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  }
-],
+      { id: 'islanti.r1', ankkuri: 'kuumassa lähteessä', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'islanti.r2', ankkuri: 'Annoin paitani pestäväksi', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'islanti.r3', ankkuri: 'vaatimatta lapioimista', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'islanti.r5', ankkuri: 'käsitykseni saaresta ei', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: "[curious] Lähdin Islannissa hainpyyntiin soutuveneellä. Hain maksasta saatiin öljyä Euroopan katulamppuihin. Kun saalis vedettiin laidan viereen, vene tuntui äkkiä kovin pieneltä. Kalastaja kohotti harppuunan. [softly] Minä painoin airot veteen ja pidin keulan aaltoja vasten.",
+    luenta: '[curious] Reykjavikin ulkopuolella naiset pesivät pyykkiä kuumassa lähteessä. Annoin paitani pestäväksi. [mischievously] Maa teki ensi kerran palveluksen vaatimatta lapioimista. [softly] Kaulus puhdistui; käsitykseni saaresta ei.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-islanti.mp3',
   },
 
@@ -127,7 +95,9 @@ export const FOKUSVIRTA_ISLANTI = {
     ],
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: ["Reykjavíkin vanhassa keskustassa pienet puutalot on verhottu värikkäällä pellillä. Vanhan sataman varastoissa on nyt kahviloita. Minä löysin suojaisan terassin. Tuuli löysi minut."],
+    kommentti: [
+      'Reykjavíkin talot lämpenevät yhä maan voimalla. Löysin lämpimän räystään, lämmittelin varpaitani ja päätin levätä pitkään. Hetkeä myöhemmin olin jo ilmassa.',
+    ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*

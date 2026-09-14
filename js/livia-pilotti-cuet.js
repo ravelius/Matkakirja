@@ -16,7 +16,7 @@ const pilotti = (kaupunki, revision, tekstiSha256, cuet) => Object.freeze({
   cuet: Object.freeze(cuet.map((cue) => Object.freeze({ esiintyma: 1, ...cue }))),
 });
 
-export const LIVIAN_LUENTA_CUET = Object.freeze({
+const LUENTA_CUET_20260914 = Object.freeze({
   ateena: pilotti("ateena", LIVIAN_EUROOPAN_REVISION, "c33e5126d8a0723dc73c4b431302409973fb982d8cabd4a0f6afdcc2c791a566", [
   {
     "id": "ateena.livia.c1",
@@ -1480,6 +1480,70 @@ export const LIVIAN_LUENTA_CUET = Object.freeze({
   }
 ]),
 });
+
+/*
+ * ERÄ 5 ODOTTAA AJOA (14.9.2026): sisilia, islanti, alpit, lappi ja tromssa.
+ *
+ * ElevenLabsin kiintiö loppui kesken 90 luennan ajon, joten näiden viiden
+ * kaupungin Horatio-luentaa eikä Livian city-3-repliikkiä EI äänitetty
+ * uudesta tekstistä (docs/raportit/viesti-fable-aaniajot-20260914.md, erä 5).
+ * Omistajan päätös 14.9.2026: 80 valmista integroidaan nyt, loput myöhemmin.
+ *
+ * Siksi näiden viiden kaupungin TEKSTI on palautettu 13.9.2026 hyväksyttyyn
+ * asuun (js/packs/fokusvirta-{sisilia,islanti,alpit,lappi,tromssa}.js) ja
+ * niiden cue-sopimus pidetään vanhassa revisiossaan tässä. Näin vanha soiva
+ * mp3, vanha teksti, vanha tekstiSha256 ja vanha kohdistustiedosto ovat yhä
+ * sama nelikko — eleet soivat entiseen tapaan eivätkä laukea väärässä kohdassa.
+ *
+ * KUN ERÄ 5 ON AJETTU: poista tämä lohko, jolloin LUENTA_CUET_20260914:n
+ * 14.9. hyväksytyt rivit astuvat voimaan, palauta näiden viiden kaupungin
+ * 14.9. tekstit codex/europe-audio-20260914-r2 -haarasta ja päivitä
+ * HORATIO_TUOTANTO (js/media.js) ja LIVIAN_VERSIOIDUT_AANET (js/liviapuhe.js).
+ */
+const ERA5_VANHA_PILOTIN_REVISION = 'eu-hl-pilot-20260913-r2-approved1';
+const ERA5_VANHA_E4_REVISION = 'eu-hl-e4-20260913-r1-approved1';
+const ERA5_VANHA_EUROOPAN_REVISION = 'eu-hl-europe-20260913-r2-approved1';
+void ERA5_VANHA_PILOTIN_REVISION;
+
+/** Erän 5 viisi kaupunkia täsmälleen sellaisina kuin ne ovat mainissa. */
+const ERA5_ODOTTAA = Object.freeze({
+  tromssa: pilotti('tromssa', ERA5_VANHA_E4_REVISION, 'c17f172e0270f1272e2fc001bf0742fef5ee88b1c104b03a4d03a78e59e08b22', [
+    { id: 'tromssa.livia.c1', ankkuri: 'nyt yliopisto', tarkoitus: 'selittaa', voimakkuus: 0.40 },
+    { id: 'tromssa.livia.c2', ankkuri: 'Polaarimuseo vanhoissa tullirakennuksissa', tarkoitus: 'selittaa', voimakkuus: 0.40 },
+    { id: 'tromssa.livia.c3', ankkuri: 'kurkistin sisään', tarkoitus: 'ilo', voimakkuus: 0.45 },
+    { id: 'tromssa.livia.c4', ankkuri: 'Tyhjä', tarkoitus: 'hammentynyt', voimakkuus: 0.45 },
+    { id: 'tromssa.livia.c5', ankkuri: 'kuka oli lähtenyt ja minne', tarkoitus: 'miettiva', voimakkuus: 0.50 },
+  ]),
+  lappi: pilotti('lappi', ERA5_VANHA_E4_REVISION, 'd4169d3f922d8e34e53b0e95ace9c87ee09b6b5b2327d3ecfb9a26079bde770b', [
+    { id: 'lappi.livia.c1', ankkuri: 'joulupukkiakin katsomaan', tarkoitus: 'ilo', voimakkuus: 0.40 },
+    { id: 'lappi.livia.c2', ankkuri: 'Seurasin Ounasjokea ilmasta', tarkoitus: 'ilo', voimakkuus: 0.45 },
+    { id: 'lappi.livia.c3', ankkuri: 'valojen jatkuvan veteen', tarkoitus: 'hammentynyt', voimakkuus: 0.45 },
+    { id: 'lappi.livia.c4', ankkuri: 'ne olivat heijastuksia', tarkoitus: 'miettiva', voimakkuus: 0.40 },
+    { id: 'lappi.livia.c5', ankkuri: 'laskeutua niiden väliin', tarkoitus: 'hammentynyt', voimakkuus: 0.50 },
+  ]),
+  sisilia: pilotti('sisilia', ERA5_VANHA_EUROOPAN_REVISION, 'ac331a83b4fcc669811a2f1c0ef75edbb32769cf76081771e675eb968783cd52', [
+    { id: 'sisilia.livia.c1', ankkuri: 'kokoontuu Sisilian parlamentti', esiintyma: 1, tarkoitus: 'selittaa', voimakkuus: 0.40 },
+    { id: 'sisilia.livia.c2', ankkuri: 'Kiersin pihan yllä', esiintyma: 1, tarkoitus: 'ilo', voimakkuus: 0.45 },
+    { id: 'sisilia.livia.c3', ankkuri: 'Katon näin kuvassa', esiintyma: 1, tarkoitus: 'hammentynyt', voimakkuus: 0.50 },
+    { id: 'sisilia.livia.c4', ankkuri: 'sisälle en lentänyt', esiintyma: 1, tarkoitus: 'miettiva', voimakkuus: 0.50 },
+  ]),
+  islanti: pilotti('islanti', ERA5_VANHA_EUROOPAN_REVISION, 'edd43d46ddaa90ae568f83eb023e0e33679a03ee709c09de8fd6b146610ce336', [
+    { id: 'islanti.livia.c1', ankkuri: 'lämpenevät yhä maan voimalla', esiintyma: 1, tarkoitus: 'hammastyy', voimakkuus: 0.35 },
+    { id: 'islanti.livia.c2', ankkuri: 'lämmittelin varpaitani', esiintyma: 1, tarkoitus: 'myotailee', voimakkuus: 0.35 },
+    { id: 'islanti.livia.c3', ankkuri: 'jo ilmassa', esiintyma: 1, tarkoitus: 'huvittuu', voimakkuus: 0.40 },
+  ]),
+  alpit: pilotti('alpit', ERA5_VANHA_EUROOPAN_REVISION, '5c15ee5104983529668e0cc23184ee38474e767e21e2bc61726f3acbf102b513', [
+    { id: 'alpit.livia.c1', ankkuri: 'vetäytynyt kauas', esiintyma: 1, tarkoitus: 'miettiva', voimakkuus: 0.55 },
+    { id: 'alpit.livia.c2', ankkuri: 'Lensin rotkon yllä', esiintyma: 1, tarkoitus: 'ilo', voimakkuus: 0.40 },
+    { id: 'alpit.livia.c3', ankkuri: 'Kiviä oli liikaa', esiintyma: 1, tarkoitus: 'hammentynyt', voimakkuus: 0.45 },
+    { id: 'alpit.livia.c4', ankkuri: 'En väitä löytäneeni oikeaa', esiintyma: 1, tarkoitus: 'miettiva', voimakkuus: 0.50 },
+  ]),
+});
+
+/** Kaupungit, joiden teksti ja ääni odottavat erän 5 ajoa. */
+export const ERA5_ODOTTAVAT_KAUPUNGIT = Object.freeze(Object.keys(ERA5_ODOTTAA));
+
+export const LIVIAN_LUENTA_CUET = Object.freeze({ ...LUENTA_CUET_20260914, ...ERA5_ODOTTAA });
 
 export const LIVIAN_LUENTAKAUPUNGIT = Object.freeze(Object.keys(LIVIAN_LUENTA_CUET));
 export const LIVIAN_PILOTTIKAUPUNGIT = Object.freeze(['marseille', 'ateena', 'sarajevo', 'venetsia']);

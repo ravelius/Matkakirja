@@ -42,7 +42,7 @@ export const FOKUSVIRTA_SISILIA = {
     paikkarivi: 'Palermo, toukokuussa 1873. Kuumaa; Etna savuaa horisontissa; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 346 merkkiä (yläraja 400). */
-    teksti: "Palermon nukketeatterissa puiset ritarit taistelivat ja yleisö huusi niille neuvoja. Sankari jäi vangiksi, ja tarina jatkuisi vasta seuraavana iltana. Ostin uuden lipun. Ei miestä voinut sinne jättää.",
+    teksti: 'Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. Tekijöiden nimiä olisin kuunnellut kauemmin.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -58,49 +58,17 @@ export const FOKUSVIRTA_SISILIA = {
      * tulivat monesta maailmasta..." (selittävä luettelo).
      */
     reaktiot: [
-  {
-    "id": "sisilia.r1",
-    "ankkuri": "puiset ritarit taistelivat ja yleisö huusi niille neuvoja",
-    "tarkoitus": "hammastyy",
-    "voimakkuus": 0.4,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "sisilia.r2",
-    "ankkuri": "Sankari jäi vangiksi",
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.35,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "sisilia.r3",
-    "ankkuri": "tarina jatkuisi vasta seuraavana iltana",
-    "tarkoitus": "epailee",
-    "voimakkuus": 0.35,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "sisilia.r4",
-    "ankkuri": "Ostin uuden lipun",
-    "tarkoitus": "myotailee",
-    "voimakkuus": 0.4,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "sisilia.r5",
-    "ankkuri": "Ei miestä voinut sinne jättää",
-    "tarkoitus": "huvittuu",
-    "voimakkuus": 0.4,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  }
-],
+      { id: 'sisilia.r1', ankkuri: 'veistetyksi luolastoksi', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'sisilia.r2', ankkuri: 'kunnes niska väsyi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'sisilia.r3', ankkuri: 'Kuninkaan nimi tunnettiin', tarkoitus: 'epailee', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+      { id: 'sisilia.r4', ankkuri: 'olisin kuunnellut kauemmin', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
+        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: "[curious] Palermon nukketeatterissa puiset ritarit taistelivat ja yleisö huusi niille neuvoja. Sankari jäi vangiksi, ja tarina jatkuisi vasta seuraavana iltana. [warmly] Ostin uuden lipun. Ei miestä voinut sinne jättää.",
+    luenta: '[curious] Palermon palatsikappeli hohti kultaa, ja puukatto kaartui veistetyksi luolastoksi. Normannikuningas teetti sen; mosaiikit ja puuveistokset syntyivät monen maailman käsissä. Katselin ylös, kunnes niska väsyi. Kuninkaan nimi tunnettiin. [softly] Tekijöiden nimiä olisin kuunnellut kauemmin.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-sisilia.mp3',
   },
 
@@ -127,7 +95,9 @@ export const FOKUSVIRTA_SISILIA = {
     ],
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: ["Catanian kahvilassa aamiaiseksi tuotiin granitaa, makeaa jäähileherkkua, ja lämmin pulla, jonka päällä oli pienempi pulla. Minä nyökkäilin ikkunalaudalla. Pullallakin oli oma pulla."],
+    kommentti: [
+      'Kappeli hohtaa palatsissa, jossa kokoontuu Sisilian parlamentti. Kiersin pihan yllä, nokka kohti ikkunoita. Katon näin kuvassa, sillä sisälle en lentänyt.',
+    ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ylpea', voimakkuus: 0.45 },
     /*

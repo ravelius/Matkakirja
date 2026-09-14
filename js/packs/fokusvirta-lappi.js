@@ -49,7 +49,10 @@ export const FOKUSVIRTA_LAPPI = {
     paikkarivi: 'Rovaniemi, syyskuussa 1873. Ensimmäinen ruska; yöllä '
       + 'revontulet; puntari korkealla.',
     /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
-    teksti: "Rovaniemellä Kemijoki kuljetti tukkeja jokisuun sahoille. Rantaan pakkautuneen suman päälle kiipesi mies. Hän väänsi yhden rungon irti ja loikkasi maihin. Koko kasa rysähti liikkeelle. Omat käteni tärisivät vielä, kun hän jo jatkoi töitään.",
+    teksti: 'Rovaniemellä Ounasjoki liittyi Kemijokeen kuin matkustaja '
+      + 'suurempaan veneeseen. Olin piirtänyt joet rajoiksi; täällä ne olivat '
+      + 'teitä. Veneeseen astuva nainen löysi seuraavan talon savusta, ei '
+      + 'kartasta. Lisäsin talon ja jätin savulle tilaa nousta.',
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain neljä tunnetagia. */
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -65,57 +68,21 @@ export const FOKUSVIRTA_LAPPI = {
      * joet rajoiksi" (havainto ja asetelma).
      */
     reaktiot: [
-  {
-    "id": "lappi.r1",
-    "ankkuri": "Kemijoki kuljetti tukkeja jokisuun sahoille",
-    "tarkoitus": "myotailee",
-    "voimakkuus": 0.3,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "lappi.r2",
-    "ankkuri": "suman päälle kiipesi mies",
-    "tarkoitus": "hammastyy",
-    "voimakkuus": 0.4,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "lappi.r3",
-    "ankkuri": "väänsi yhden rungon irti ja loikkasi maihin",
-    "tarkoitus": "hammastyy",
-    "voimakkuus": 0.45,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "lappi.r4",
-    "ankkuri": "Koko kasa rysähti liikkeelle",
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.5,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "lappi.r5",
-    "ankkuri": "Omat käteni tärisivät vielä",
-    "tarkoitus": "vakavoituu",
-    "voimakkuus": 0.45,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  },
-  {
-    "id": "lappi.r6",
-    "ankkuri": "hän jo jatkoi töitään",
-    "tarkoitus": "myotailee",
-    "voimakkuus": 0.4,
-    "siirtyma": 0,
-    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
-  }
-],
+      { id: 'lappi.r1', ankkuri: 'kuin matkustaja suurempaan veneeseen', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
+        perustelu: 'Joki esitellään matkustajana.' },
+      { id: 'lappi.r2', ankkuri: 'ne olivat teitä', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Rajat osoittautuivat teiksi.' },
+      { id: 'lappi.r3', ankkuri: 'savusta, ei kartasta', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
+        perustelu: 'Paikallinen tieto voittaa kartan.' },
+      { id: 'lappi.r4', ankkuri: 'tilaa nousta', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
+        perustelu: 'Isoisä korjaa karttaansa: hiljainen päätös.' },
+    ],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: "[curious] Rovaniemellä Kemijoki kuljetti tukkeja jokisuun sahoille. Rantaan pakkautuneen suman päälle kiipesi mies. Hän väänsi yhden rungon irti ja loikkasi maihin. Koko kasa rysähti liikkeelle. [thoughtfully] Omat käteni tärisivät vielä, kun hän jo jatkoi töitään.",
+    luenta: '[curious] Rovaniemellä Ounasjoki liittyi Kemijokeen kuin '
+      + 'matkustaja suurempaan veneeseen. Olin piirtänyt joet rajoiksi; täällä '
+      + 'ne olivat teitä. Veneeseen astuva nainen löysi seuraavan talon '
+      + 'savusta, ei kartasta. [softly] Lisäsin talon ja jätin savulle tilaa '
+      + 'nousta.',
     aanite: 'assets/audio/puhe-fokus-matkakirja-lappi.mp3',
   },
 
@@ -144,7 +111,9 @@ export const FOKUSVIRTA_LAPPI = {
     ],
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
     /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
-    kommentti: ["Rovaniemen keskustaan on piilotettu poron pää! Alvar Aalto hahmotteli sen kaupungin asemakaavaan: tiet haarautuvat sarviksi ja urheilukenttä on silmä. Maasta sitä on vaikea huomata. Kerrankin kannattaa olla lintu."],
+    kommentti: [
+      'Rovaniemelle lennetään joulupukkiakin katsomaan. Seurasin Ounasjokea ilmasta ja luulin valojen jatkuvan veteen. Lähempänä ne olivat heijastuksia. Hyvä etten yrittänyt laskeutua niiden väliin.',
+    ],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'utelias', voimakkuus: 0.5 },
     /*
