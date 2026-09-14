@@ -252,6 +252,51 @@ export const MAAPANEELIN_KORKEUS_PX = 82;
  */
 /** Paneelin kokokerroin: leveys ≤ 10 % ruudusta saapumisnäkymässä. */
 export const MAAPANEELIN_TEKSTIKERROIN = 0.37;
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * ERÄ 15: KATTO ON RUUDUN OSUUS SAAPUMISNÄKYMÄSSÄ, EI MAAN LAATIKON
+ * OSUUS (PÄÄTÖKSET 17:n seuraus, mitattu 14.9.2026)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Erä 13 mitoitti paneelin MAAN LAATIKOSTA (`LEVEYS_OSUUS × laatikko.w`)
+ * ja kalibroi kertoimen 0,37 niin, että Ranskassa saapumisnäkymän
+ * leveys oli 390 px:n ruudulla 35,4 px (9,5 %) ja 1400 px:n ruudulla
+ * 86 px (6,2 %). Kerroin oli siis sidottu SIIHEN saapumisrajaukseen,
+ * joka silloin oli voimassa.
+ *
+ * PÄÄTÖKSET 17 (v1898) sovitti puhelimen pystyruudun saapumisnäkymän
+ * KORKEUTEEN, jolloin kartta on puhelimella noin kaksi kertaa lähempänä
+ * kuin ennen. Paneeli on kartan mitta (PÄÄTÖKSET 9), joten se kasvoi
+ * samassa suhteessa: MITATTU 14.9.2026 Chromiumilla, Ranska, Pariisi:
+ *
+ *   ruutu          kortti saapumisessa      osuus kotelon leveydestä
+ *   390 × 844       81,1 px                  21,7 %   ← katto 10 % rikki
+ *   393 × 852       81,9 px                  21,8 %   ← katto 10 % rikki
+ *   844 × 390       38,6 px                   4,7 %
+ *   1400 × 900      85,9 px                   6,2 %
+ *   2560 × 1352    133,2 px                   5,3 %
+ *
+ * KORJAUS ON SAMA MEKANISMI KUIN NIMIKYLTEILLÄ (v1885,
+ * js/pallolauta/nimet.js NIMIKYLTIT KARTTAAN): vertailu on KUNKIN
+ * LAITTEEN OMA SAAPUMISNÄKYMÄ (`lauta.saapumisenSkaala`, css-px per
+ * lautayksikkö uloimmalla sallitulla zoomilla). Kortin ruutuleveys
+ * saapumisessa on tasan `LEVEYS_PX × perusta × vertailuskaala`, joten
+ * yksi jako antaa suurimman sallitun `perusta`n:
+ *
+ *   perusta ≤ KATTO_RUUDUSTA × kotelon leveys / (LEVEYS_PX × vertailu)
+ *
+ * EI LAITETUNNISTUSTA eikä ruutuun ankkurointia: raja lasketaan
+ * kerran saapumisnäkymän mittakaavasta, ja siitä eteenpäin paneeli
+ * skaalautuu kartan mukana kuten ennen (PÄÄTÖKSET 9 kohta 4). Katto
+ * sitoo vain siellä, missä kartta on ruutuun nähden lähellä — mitatusti
+ * pystypuhelimella; työpöydällä ja vaakapuhelimella laatikko-osuus on
+ * yhä tiukempi, eikä mikään muutu.
+ *
+ * KATTO ON 9,5 % EIKÄ 10 %. Sama vara kuin kertoimella 0,37 erässä 13:
+ * saapumiskorkeus heilahtaa ajosta toiseen muutaman prosentin, ja
+ * savukkeen väite mittaa tasan 10 %:n kattoa.
+ */
+export const MAAPANEELIN_KATTO_RUUDUSTA = 0.095;
 export const MAAPANEELIN_LEVEYS_OSUUS = 0.1916 * MAAPANEELIN_TEKSTIKERROIN;
 export const MAAPANEELIN_KORKEUS_OSUUS = 0.2327 * MAAPANEELIN_TEKSTIKERROIN;
 /** Rako maan laatikon reunan ja paneelin väliin, osuus laatikon korkeudesta. */
@@ -355,11 +400,20 @@ export function maanAiheet(iso) {
  * `LEVEYS_OSUUS` maan laatikon leveydestä tai `KORKEUS_OSUUS` sen
  * korkeudesta (ks. KAKSI OSUUTTA yllä).
  */
-export function paneelinMitat(laatikko) {
+export function paneelinMitat(laatikko, { vertailuskaala = 0, ruutuLeveys = 0 } = {}) {
   if (!(laatikko?.w > 0) || !(laatikko?.h > 0)) return null;
+  /*
+   * KOLMAS RAJA: RUUDUN OSUUS SAAPUMISNÄKYMÄSSÄ (erä 15, ks. yllä).
+   * Tuntematon vertailu (kehittäjän maailmanäkymä, laatikkoa ei ole
+   * vielä luettu) jättää rajan pois — käytös on silloin entinen.
+   */
+  const kattoPerusta = vertailuskaala > 0 && ruutuLeveys > 0
+    ? (MAAPANEELIN_KATTO_RUUDUSTA * ruutuLeveys) / (MAAPANEELIN_LEVEYS_PX * vertailuskaala)
+    : Infinity;
   const perusta = Math.min(
     (MAAPANEELIN_LEVEYS_OSUUS * laatikko.w) / MAAPANEELIN_LEVEYS_PX,
     (MAAPANEELIN_KORKEUS_OSUUS * laatikko.h) / MAAPANEELIN_KORKEUS_PX,
+    kattoPerusta,
   );
   if (!(perusta > 0)) return null;
   return {
@@ -731,7 +785,7 @@ function sovitaValikko(kortti) {
  *   valikkoAuki()               savukkeille ja vartijoille
  *   pura()
  */
-export function luoMaapaneeli({ ui, merkit, kamera, asteet }) {
+export function luoMaapaneeli({ ui, merkit, kamera, asteet, saapumisnakyma = null }) {
   let tila = null; // { iso, laatikko, mitat, ankkuri }
   let valikkoAuki = false;
 
@@ -746,6 +800,13 @@ export function luoMaapaneeli({ ui, merkit, kamera, asteet }) {
     if (!tila?.iso) return;
     ui.avaaMaalehti?.(tila.iso, { sivu: sivuId });
   };
+
+  /**
+   * Saapumisnäkymän vertailu tältä laitteelta (erä 15): mittakaava
+   * uloimmalla sallitulla zoomilla ja kotelon leveys. Ilman kutsujan
+   * antamaa lähdettä tyhjä olio eli ei kattoa.
+   */
+  const nakyma = () => saapumisnakyma?.() ?? {};
 
   /** Mittakaava kameran tilasta: lautayksikkö → css-pikseli. */
   const skaala = () => {
@@ -790,7 +851,7 @@ export function luoMaapaneeli({ ui, merkit, kamera, asteet }) {
      * paneelin — TURVALLINEN TILA, ei virhe.
      */
     paivita({ iso = null, laatikko = null } = {}) {
-      const mitat = maapaneeliKartassa() ? paneelinMitat(laatikko) : null;
+      const mitat = maapaneeliKartassa() ? paneelinMitat(laatikko, nakyma()) : null;
       const ankkuri = mitat ? paneelinAnkkuri(laatikko, iso) : null;
       const a = iso && ankkuri ? asteet(ankkuri) : null;
       if (!a) {
@@ -818,9 +879,20 @@ export function luoMaapaneeli({ ui, merkit, kamera, asteet }) {
       tila = uusi;
       kirjoita();
     },
-    /** Kamera liikkui: pelkkä mittakaava, ei uutta sisältöä. */
+    /**
+     * Kamera liikkui tai ruutu vaihtoi kokoa: uusi mittakaava.
+     *
+     * LAUTAMITTA LASKETAAN UUDESTAAN (erä 15). Saapumisnäkymän
+     * vertailuskaala on tiedossa vasta, kun maan laatikko on luettu ja
+     * zoomirajat tahdistettu — ensimmäinen `paivita` ehtii ennen sitä,
+     * ja ilman tätä paneeli jäisi kattamattomaan kokoon siihen asti,
+     * kun maa vaihtuu. Vertailu ei riipu zoomista (vain laatikosta ja
+     * kotelon koosta), joten mitta ei heilu kameran mukana.
+     */
     tahdistaKoko() {
       if (!tila) return;
+      const mitat = paneelinMitat(tila.laatikko, nakyma());
+      if (mitat) tila.mitat = mitat;
       kirjoita();
     },
     /** Savukkeen ja vartijan mittarit. */
