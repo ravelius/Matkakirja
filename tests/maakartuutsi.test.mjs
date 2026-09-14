@@ -288,9 +288,10 @@ test('kamera ottaa saapumisrajauksen laatikkona ja säilyttää varapolun', () =
    * KARTTAUUDISTUS ERÄ 3: saapumisajo sovittaa maan JA sen alapuolella
    * riippuvan maapaneelin (js/pallolauta/maapaneeli.js paneelinLaatikko),
    * jotta paneeli on saapuessa kokonaan näkyvissä. Ilman laajennusta se
-   * jäisi ruudun alalaidan alle.
+   * jäisi ruudun alalaidan alle. ERÄ 12: ankkuri on maakohtainen
+   * (Ranskalla Biskajanlahti), joten ISO kulkee laajennukselle mukana.
    */
-  assert.match(lauta, /return paneelinLaatikko\(laatikko\);/);
+  assert.match(lauta, /return paneelinLaatikko\(laatikko, iso\);/);
   /*
    * ERÄ 2 + ERÄ 3 YHDESSÄ: saapumisajo lukee PANEELILLA LAAJENNETUN
    * laatikon (`saapumislaatikko`) ja asettaa sen myös uloszoomauksen
