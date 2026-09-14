@@ -102,7 +102,7 @@ lukuaika):
 
 | portti | tulos |
 | --- | --- |
-| `npm test` | ks. alla |
+| `npm test` | **3428 testiä, 3415 läpi, 0 kaatunutta**, 13 ohitettua |
 | `tests/rules.test.mjs` | 334/334 |
 | `tests/pollo.test.mjs` | 124/124 |
 | `tarkista-kaksoisavaimet` | ei kaksoisavaimia |
