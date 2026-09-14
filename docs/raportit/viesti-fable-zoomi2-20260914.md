@@ -203,11 +203,36 @@ sidottu rajauksen varaan.
 
 ```
 npm test                                # pass 3353, fail 2 (ks. alla)
+node --test <15 kameraa lukevaa testitiedostoa>
+                                        # pass 347, fail 0 (LOPULLINEN koodi)
 node tools/tarkista-kaksoisavaimet.mjs  # ei kaksoisavaimia
 node tools/tarkista-niputus.mjs         # 387 moduulia, ei törmäyksiä
 node tools/tarkista-savukkeet.mjs       # 1637 ui-viittausta, kunnossa
 node tools/savukkeet/savuke-era12.mjs   # 11/11 vartiota läpi
 ```
+
+**Koneen kuormasta.** Tämä kontti ajoi koko työn ajan kymmenkunnan
+rinnakkaisen agentin kuormaa (load average 35–49, 26 rinnakkaista
+`node --test` -ajoa). Täysi `npm test` meni läpi kokonaisuudessaan
+välivaiheen koodilla (pass 3353, fail 2); lopullisella koodilla kaksi
+uusintayritystä **jumiutui kuormaan kesken ajon** (26 rinnakkaista
+`node --test` -prosessia; omat ajoni seisoivat kymmeniä minuutteja
+samassa kohdassa ilman yhtäkään punaista). Lopullista koodia vasten
+ajoin siksi erikseen:
+
+* **kaikki 15 testitiedostoa, jotka lukevat
+  `js/pallolauta/kamera.js`:ää** (aikajana, aloitus-pallolla, arktis,
+  ihmisen-matka-esitys, kohdekaupunki, linssikartta, maakartuutsi,
+  osumareititys, pallo, pallolauta, pallolepokerros,
+  satelliitti-avaruus, siirtokoreografia, tahdet, tasoitustaso) —
+  **pass 347, fail 0**;
+* staattiset portit ja koko savukkeen vastakokeineen — **11/11**.
+
+**Kirjaan tämän rehellisesti: koko `npm test` on ajettu läpi
+välivaiheen koodilla, ei lopullisella.** Lopullista koodia vasten on
+ajettu kaikki se testipinta, joka ylipäätään koskettaa muutettua
+tiedostoa. Jos Fable haluaa vihreän kokonaisajon ennen mergeä, se
+kannattaa ajaa kuormattomassa kontissa.
 
 **Kaksi punaista ei liity tähän erään.** `tests/pollo.test.mjs`
 väitteet *"indeksi rakentuu ja on kokoluokaltaan järkevä"* ja *"haku on
