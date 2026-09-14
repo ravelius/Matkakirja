@@ -11,15 +11,9 @@ import {
 } from '../js/livia-pilotti-cuet.js';
 
 const manifesti = JSON.parse(readFileSync(new URL(
-  '../docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260913.json',
+  '../docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260914-r2.json',
   import.meta.url,
 ), 'utf8'));
-
-const aiemmat12 = new Set([
-  'marseille', 'ateena', 'sarajevo', 'venetsia',
-  'tukholma', 'helsinki', 'tampere', 'tallinna',
-  'riika', 'vilna', 'tromssa', 'lappi',
-]);
 
 function runtimeCuet(cuet) {
   return cuet.map(({ id: cueId, ankkuri: anchor, esiintyma: occurrence,
@@ -54,8 +48,6 @@ test('Euroopan kaikki 45 city-3-riviä vastaavat exact r2-manifestin SHA:ta ja c
     assert.equal(nakyvaSha256, item.livia.visibleTextSha256, `${item.city}: pakin tekstin SHA`);
     assert.equal(runtime.tekstiSha256, item.livia.visibleTextSha256, `${item.city}: näkyvän tekstin SHA`);
     assert.deepEqual(runtimeCuet(runtime.cuet), manifestiCuet(item.livia.cues), `${item.city}: cuet`);
-    if (!aiemmat12.has(item.city)) {
-      assert.equal(runtime.revision, LIVIAN_EUROOPAN_REVISION, `${item.city}: koontirevisio`);
-    }
+    assert.equal(runtime.revision, LIVIAN_EUROOPAN_REVISION, `${item.city}: koontirevisio`);
   }
 });

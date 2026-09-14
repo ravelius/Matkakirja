@@ -737,7 +737,7 @@ export function tagiresepti(nakyva, tts) {
 }
 
 const EUROOPPA_TTS_MANIFESTI = JSON.parse(readFileSync(resolve(
-  JUURI, 'docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260913.json',
+  JUURI, 'docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260914-r2.json',
 ), 'utf8'));
 for (const city of EUROOPPA_TTS_MANIFESTI.cities) {
   TAGIT[`${city.city}-3`] = tagiresepti(city.livia.visibleText, city.livia.ttsText);

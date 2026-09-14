@@ -186,7 +186,7 @@ export const FOKUSVIRTA_KIOVA = {
     paikkarivi: 'Kiova, toukokuussa 1873. Lämmintä; kastanjat kukkivat; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 326 merkkiä (yläraja 400). */
-    teksti: 'Kiovan luostarin kupolit näkyivät Dneprille, mutta pyhiinvaeltajat menivät maan alle. Luolassa liekkini sammui. Edellä kulkeva nainen sytytti sen omastaan. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. Olen tutkinut monta tapaa siirtää omaisuutta. Tämän haluan muistaa.',
+    teksti: "Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
@@ -205,19 +205,49 @@ export const FOKUSVIRTA_KIOVA = {
      * Hiljaiset osuudet: "Seurasin kynttilöitä luoliin" (siirtymä).
      */
     reaktiot: [
-      { id: 'kiova.r1', ankkuri: 'menivät maan alle', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'kiova.r2', ankkuri: 'sytytti sen omastaan', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'kiova.r3', ankkuri: 'Kaksi liekkiä', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'kiova.r4', ankkuri: 'siirtää omaisuutta', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'kiova.r5', ankkuri: 'Tämän haluan muistaa', tarkoitus: 'myotailee', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "kiova.r1",
+    "ankkuri": "kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kiova.r2",
+    "ankkuri": "pakkasi rasian tuliaisiksi",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kiova.r3",
+    "ankkuri": "Palasin puotiin ennen kuin pääsin majatalolle",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kiova.r4",
+    "ankkuri": "katsoi tyhjää rasiaani",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kiova.r5",
+    "ankkuri": "sitoi uuden kannen tavallista tiukemmin",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Kiovan luostarin kupolit näkyivät Dneprille, mutta pyhiinvaeltajat menivät maan alle. Luolassa liekkini sammui. [softly] Edellä kulkeva nainen sytytti sen omastaan. Kaksi liekkiä, eikä ensimmäiseltä puuttunut mitään. Olen tutkinut monta tapaa siirtää omaisuutta. Tämän haluan muistaa.',
+    luenta: "[curious] Kiovassa ostin kuivaa hilloa: sokerissa keitettyjä ja kuivattuja hedelmiä. Myyjä pakkasi rasian tuliaisiksi. Palasin puotiin ennen kuin pääsin majatalolle. [softly] Hän katsoi tyhjää rasiaani ja sitoi uuden kannen tavallista tiukemmin.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-kiova.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 9.9.2026, matkakirja-eurooppa-1873-kiova-r20260909-story-v1.jpg;
@@ -308,9 +338,7 @@ export const FOKUSVIRTA_KIOVA = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Dneprin tuuli nosti minut Lavran muurin ylle, mutta luolasto jäi ihmisille. Reittiinsä luottava kirjekyyhky tietää myös, mihin ei lennä.',
-    ],
+    kommentti: ["Kiovan tunnuspuu on hevoskastanja. Puistossa näin uusia puita raketti-iskun tuhoamien tilalla. Minä vein yhden oksanhaaraan risun. Siihen saisi vielä pesän."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'vakava', voimakkuus: 0.6 },
     /*

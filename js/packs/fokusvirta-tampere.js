@@ -234,11 +234,7 @@ export const FOKUSVIRTA_TAMPERE = {
     paikkarivi: 'Tampere, elokuussa 1873. Viileä aamu; koski kohisee yöllä; '
       + 'puntari korkealla.',
     /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1; audio/alignment tarvitaan. */
-    teksti: 'Tammerkoski teki töitä kahden järven välissä: puuvilla muuttui '
-      + 'langaksi ja miehet rahakkaiksi. Finlaysonilla nainen näytti '
-      + 'katkenneen langan solmun. Minun sormissani se katkesi heti; hän '
-      + 'sitoi sen katsomatta. Tehtaan voimaa mitatessa pitäisi laskea myös '
-      + 'sormet.',
+    teksti: "Tammerkoski teki töitä kahden järven välissä: puuvilla muuttui langaksi ja miehet rahakkaiksi. Finlaysonilla nainen näytti katkenneen langan solmun. Minun sormissani lanka katkesi heti; hän sitoi sen katsomatta. Tehtaan voimaa mitatessa pitäisi laskea myös sormet.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -259,22 +255,48 @@ export const FOKUSVIRTA_TAMPERE = {
      * katkennut lanka yhdistetään" (opastus).
      */
     reaktiot: [
-      { id: 'tampere.r1', ankkuri: 'teki töitä kahden järven', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Koski esitellään työntekijänä.' },
-      { id: 'tampere.r2', ankkuri: 'miehet rahakkaiksi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kuiva huomio siitä, kuka rikastuu.' },
-      { id: 'tampere.r3', ankkuri: 'se katkesi heti', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Isoisä epäonnistuu omissa sormissaan.' },
-      { id: 'tampere.r4', ankkuri: 'sitoi sen katsomatta', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Työntekijän taito hämmästyttää.' },
-      { id: 'tampere.r5', ankkuri: 'laskea myös sormet', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Merkinnän vakava johtopäätös.' },
-    ],
-    luenta: '[curious] Tammerkoski teki töitä kahden järven välissä: puuvilla '
-      + 'muuttui langaksi ja miehet rahakkaiksi. Finlaysonilla nainen näytti '
-      + 'katkenneen langan solmun. Minun sormissani se katkesi heti; hän '
-      + 'sitoi sen katsomatta. [softly] Tehtaan voimaa mitatessa pitäisi '
-      + 'laskea myös sormet.',
+  {
+    "id": "tampere.r1",
+    "ankkuri": "puuvilla muuttui langaksi ja miehet rahakkaiksi",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tampere.r2",
+    "ankkuri": "nainen näytti katkenneen langan solmun",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tampere.r3",
+    "ankkuri": "lanka katkesi heti",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tampere.r4",
+    "ankkuri": "hän sitoi sen katsomatta",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tampere.r5",
+    "ankkuri": "pitäisi laskea myös sormet",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
+    luenta: "[curious] Tammerkoski teki töitä kahden järven välissä: puuvilla muuttui langaksi ja miehet rahakkaiksi. Finlaysonilla nainen näytti katkenneen langan solmun. Minun sormissani lanka katkesi heti; hän sitoi sen katsomatta. [thoughtfully] Tehtaan voimaa mitatessa pitäisi laskea myös sormet.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-tampere.mp3',
   },
 
@@ -377,9 +399,7 @@ export const FOKUSVIRTA_TAMPERE = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Finlaysonilla on nyt ravintoloita ja puutarha katolla. Seurasin leipäkoria pöytien välissä niin tarkasti, että melkein törmäsin tuoliin. Kori kääntyi. Minä en aivan.',
-    ],
+    kommentti: ["Tampereen Rajaportin saunalla ihmiset jäähdyttelevät pihalla ja juttelevat ventovieraille. Minä jäin aidalle kuuntelemaan. Yksi teki lähtöä kolmesti. Minäkin tiesin lopulta hänen putkiremonttinsa hinnan."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*

@@ -39,10 +39,9 @@ export const FOKUSVIRTA_ALPIT = {
       lahteet: ["https://www.swissinfo.ch/eng/archive-science/scientists-paint-a-glacial-picture/33663410","https://www.swissinfo.ch/eng/archive-science/marking-glacial-change-on-grindelwald-s-trail/2185012"],
     },
     /* KAANON (Fable) — toinen virke on kortin tunnelmarivi. */
-    paikkarivi: 'Grindelwald, heinäkuussa 1873. Kylmää keskellä kesää; '
-      + 'puntari korkealla.',
+    paikkarivi: "Grindelwald, heinäkuussa 1873. Kylmää keskellä kesää; puntari korkealla.",
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 336 merkkiä (yläraja 400). */
-    teksti: 'Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.',
+    teksti: "Grindelwaldin jäätiköltä halusin kiven aivan railon reunasta. Opas kielsi oikaisemasta, mutta minulla oli tarkka kartta. Lumi petti saappaan alta. Köysi löi ilmat keuhkoistani, ja jäin riippumaan sinisen jään väliin. Opas veti minut ylös, ja köysi viilsi hänen kämmenensä rikki. Minä pitelin yhä kiveä.",
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -58,21 +57,57 @@ export const FOKUSVIRTA_ALPIT = {
      * saa reaktion).
      */
     reaktiot: [
-      { id: 'alpit.r1', ankkuri: 'ettei taivas ylettynyt', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'alpit.r2', ankkuri: 'jään liikkuvan', tarkoitus: 'epailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'alpit.r3', ankkuri: 'Kivi ei suostunut todistajaksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'alpit.r4', ankkuri: 'pitkä rasahdus', tarkoitus: 'vakavoituu', voimakkuus: 0.7, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'alpit.r5', ankkuri: 'itseni kauemmas', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'alpit.r6', ankkuri: 'vuori olisi vaiti', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "alpit.r1",
+    "ankkuri": "halusin kiven aivan railon reunasta",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "alpit.r2",
+    "ankkuri": "minulla oli tarkka kartta",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "alpit.r3",
+    "ankkuri": "Lumi petti saappaan alta",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.55,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "alpit.r4",
+    "ankkuri": "jäin riippumaan sinisen jään väliin",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.6,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "alpit.r5",
+    "ankkuri": "köysi viilsi hänen kämmenensä rikki",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.55,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "alpit.r6",
+    "ankkuri": "Minä pitelin yhä kiveä",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Grindelwaldin jäätikössä oli sinistä niin syvällä, ettei taivas ylettynyt siihen. Opas sanoi jään liikkuvan. Kivi ei suostunut todistajaksi, mutta jäätiköstä kuului pitkä rasahdus. Siirsin kiven ja itseni kauemmas. [softly] Hiljaisuus ei tarkoittanut, että vuori olisi vaiti.',
+    luenta: "[curious] Grindelwaldin jäätiköltä halusin kiven aivan railon reunasta. Opas kielsi oikaisemasta, mutta minulla oli tarkka kartta. Lumi petti saappaan alta. Köysi löi ilmat keuhkoistani, ja jäin riippumaan sinisen jään väliin. Opas veti minut ylös, ja köysi viilsi hänen kämmenensä rikki. [thoughtfully] Minä pitelin yhä kiveä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-alpit.mp3',
   },
 
@@ -99,9 +134,7 @@ export const FOKUSVIRTA_ALPIT = {
     ],
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Jäätikkö on vetäytynyt kauas isoisän päivistä. Lensin rotkon yllä ja etsin hänen kiveään. Kiviä oli liikaa, jäätä liian vähän. En väitä löytäneeni oikeaa.',
-    ],
+    kommentti: ["Sveitsin Alpeilla lehmät palaavat syksyllä vuoristolaitumilta kukkaseppeleissä ja kellot kaulassa. Minä lensin juhlakulkueen mukana. Yksi lehmä söi edellä kulkevan seppelettä."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'vakava', voimakkuus: 0.55 },
     /*

@@ -250,7 +250,7 @@ export const FOKUSVIRTA_ODESSA = {
     paikkarivi: 'Odessa, elokuussa 1873. Kuumaa; merituuli vasta illalla; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 353 merkkiä (yläraja 400). */
-    teksti: 'Odessan portaat olivat niin leveät, että niitä pitkin olisi voinut saapua valtakunta. Minä saavuin yksin ja lepäsin silti puolivälissä. Satamassa vehnäsäkit siirtyivät laivaan; ylhäällä herrat siirtelivät keppejään. Merituuli kulki portaat yhdellä hengenvedolla; sitä ei pysäytetty tullissa.',
+    teksti: "Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. Minä en ollut pyytänyt todistetta.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
@@ -270,19 +270,41 @@ export const FOKUSVIRTA_ODESSA = {
      * saa reaktion).
      */
     reaktiot: [
-      { id: 'odessa.r1', ankkuri: 'saapua valtakunta', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'odessa.r2', ankkuri: 'lepäsin silti puolivälissä', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'odessa.r3', ankkuri: 'herrat siirtelivät keppejään', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'odessa.r4', ankkuri: 'yhdellä hengenvedolla', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'odessa.r5', ankkuri: 'ei pysäytetty tullissa', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "odessa.r1",
+    "ankkuri": "sahattiin kiveä kaupungin alta",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "odessa.r2",
+    "ankkuri": "alhaalle jäi käytävien verkosto",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "odessa.r3",
+    "ankkuri": "sammutti lampun näyttääkseen täydellisen pimeyden",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "odessa.r4",
+    "ankkuri": "en ollut pyytänyt todistetta",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Odessan portaat olivat niin leveät, että niitä pitkin olisi voinut saapua valtakunta. [mischievously] Minä saavuin yksin ja lepäsin silti puolivälissä. Satamassa vehnäsäkit siirtyivät laivaan; ylhäällä herrat siirtelivät keppejään. Merituuli kulki portaat yhdellä hengenvedolla; sitä ei pysäytetty tullissa.',
+    luenta: "[curious] Odessan taloihin sahattiin kiveä kaupungin alta. Ylhäällä nousivat seinät, alhaalle jäi käytävien verkosto. Louhoksessa oppaani sammutti lampun näyttääkseen täydellisen pimeyden. [warmly] Minä en ollut pyytänyt todistetta.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-odessa.mp3',
   },
 
@@ -365,9 +387,7 @@ export const FOKUSVIRTA_ODESSA = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Vanhakaupunki on yhä vaarantuneen maailmanperinnön luettelossa. Lensin portaiden yllä ja pidin vaurioituneisiin kattoihin tavallista enemmän väliä.',
-    ],
+    kommentti: ["Odessan Privozin torilla kaupankäyntiin kuuluu sanailu. Minä tuijotin kirsikoita. Myyjä kysyi, ostanko vai vartioinko. Pörhistin höyheniäni. Vartioin, tietenkin."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'vakava', voimakkuus: 0.6 },
     /*

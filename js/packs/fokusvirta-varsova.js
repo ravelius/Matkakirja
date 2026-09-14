@@ -213,7 +213,7 @@ export const FOKUSVIRTA_VARSOVA = {
     paikkarivi: 'Varsova, syyskuussa 1873. Kirkasta; Veikselillä usvaa '
       + 'aamulla; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 340 merkkiä (yläraja 400). */
-    teksti: 'Kartassani Varsova kuului Venäjälle. Torin leipuri sanoi olevansa puolalainen ja kopautti leipää: tuoretta. Viraston kyltissä kirjaimet olivat venäläisiä, mutta aamiaiseni sain puolaksi. Karttaan voi vetää rajan yhdellä liikkeellä. Ihmiset eivät siirry kynän mukana.',
+    teksti: "Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. Illalla sain passini takaisin. Piirros jäi heille.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
@@ -233,17 +233,57 @@ export const FOKUSVIRTA_VARSOVA = {
      * (johdatus päätökseen).
      */
     reaktiot: [
-      { id: 'varsova.r1', ankkuri: 'kuului Venäjälle', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'varsova.r2', ankkuri: 'olevansa puolalainen', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'varsova.r4', ankkuri: 'aamiaiseni sain puolaksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'varsova.r5', ankkuri: 'eivät siirry kynän mukana', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "varsova.r1",
+    "ankkuri": "painettu Venäjän santarmien kirjapainossa",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "varsova.r2",
+    "ankkuri": "sotilas tuli katsomaan olkani yli",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "varsova.r3",
+    "ankkuri": "brittiläinen laivaston kartanpiirtäjä",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "varsova.r4",
+    "ankkuri": "Hän haki toisen sotilaan",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "varsova.r5",
+    "ankkuri": "Sana entinen muistui mieleeni vasta vartiotuvassa",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "varsova.r6",
+    "ankkuri": "Piirros jäi heille",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Kartassani Varsova kuului Venäjälle. Torin leipuri sanoi olevansa puolalainen ja kopautti leipää: tuoretta. Viraston kyltissä kirjaimet olivat venäläisiä, mutta aamiaiseni sain puolaksi. [softly] Karttaan voi vetää rajan yhdellä liikkeellä. Ihmiset eivät siirry kynän mukana.',
+    luenta: "[curious] Varsovan matkaoppaani oli painettu Venäjän santarmien kirjapainossa. Siinä oli nähtävyyksiä ja passisääntöjä. Tsaarin linnoitusta piirtäessäni sotilas tuli katsomaan olkani yli. Selitin olevani brittiläinen laivaston kartanpiirtäjä. Hän haki toisen sotilaan. Sana entinen muistui mieleeni vasta vartiotuvassa. [softly] Illalla sain passini takaisin. Piirros jäi heille.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-varsova.mp3',
   },
 
@@ -333,9 +373,7 @@ export const FOKUSVIRTA_VARSOVA = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Torin räystäältä huomaa, etteivät jälleenrakennetut talot ole lavasteita: ikkunoissa kuivuu pyykkiä. Kaupunki jatkaa elämäänsä julkisivujen takana.',
-    ],
+    kommentti: ["Toisessa maailmansodassa saksalaiset hävittivät Varsovaa talo talolta. Raunioista koottiin tämä kukkula. Nyt täällä kävellään metsäpoluilla, ja puissa pesii lintuja. Kuuntele — tuolla huhuilee sepelkyyhky."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'vakava', voimakkuus: 0.55 },
     /* KAANON (Fable) — Livian nykypäivän huomio sellaisenaan. */

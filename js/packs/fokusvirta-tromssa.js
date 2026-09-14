@@ -43,10 +43,7 @@ export const FOKUSVIRTA_TROMSSA = {
     paikkarivi: 'Tromssa, heinäkuussa 1873. Aurinko ei laske; satamassa '
       + 'hylkeenpyytäjiä; puntari korkealla.',
     /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
-    teksti: 'Tromssan uuteen museoon tuotiin pohjoisen luita ja kiviä, joista '
-      + 'laivanvarustaja ei tavallisesti maksa. Pienen simpukan vieressä oli '
-      + 'luu, jonka eläimeen en tahtonut törmätä uimassa. Sama meri ruokki '
-      + 'vatsan ja uteliaisuuden. Jälkimmäinen vaikutti pohjattomalta.',
+    teksti: "Tromssan majatalossa kerrottiin kapteeni Carlsenin löytämästä majasta. Barentsin retkikunnan tavarat olivat säilyneet jäässä lähes kolmesataa vuotta. Joukossa olivat laivapojan pienet kengät. Kysyin pojan nimeä. Kukaan pöydässä ei tiennyt sitä.",
     /* LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia. */
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -62,21 +59,49 @@ export const FOKUSVIRTA_TROMSSA = {
      * näkyi pyyntilaivojen mastoja" (tausta ja havainto).
      */
     reaktiot: [
-      { id: 'tromssa.r1', ankkuri: 'ei tavallisesti maksa', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Luut ja kivet eivät kuulu rahtiin.' },
-      { id: 'tromssa.r2', ankkuri: 'törmätä uimassa', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Merkinnän vitsi tuntemattomasta eläimestä.' },
-      { id: 'tromssa.r3', ankkuri: 'vatsan ja uteliaisuuden', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Meren kaksi antia todetaan tyytyväisenä.' },
-      { id: 'tromssa.r4', ankkuri: 'vaikutti pohjattomalta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Loppuvitsi uteliaisuuden määrästä.' },
-    ],
+  {
+    "id": "tromssa.r1",
+    "ankkuri": "kapteeni Carlsenin löytämästä majasta",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tromssa.r2",
+    "ankkuri": "säilyneet jäässä lähes kolmesataa vuotta",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tromssa.r3",
+    "ankkuri": "laivapojan pienet kengät",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.55,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tromssa.r4",
+    "ankkuri": "Kysyin pojan nimeä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "tromssa.r5",
+    "ankkuri": "Kukaan pöydässä ei tiennyt sitä",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.5,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Tromssan uuteen museoon tuotiin pohjoisen luita ja '
-      + 'kiviä, joista laivanvarustaja ei tavallisesti maksa. Pienen simpukan '
-      + 'vieressä oli luu, jonka eläimeen en tahtonut törmätä uimassa. Sama '
-      + 'meri ruokki vatsan ja uteliaisuuden. [softly] Jälkimmäinen vaikutti '
-      + 'pohjattomalta.',
+    luenta: "[curious] Tromssan majatalossa kerrottiin kapteeni Carlsenin löytämästä majasta. Barentsin retkikunnan tavarat olivat säilyneet jäässä lähes kolmesataa vuotta. Joukossa olivat laivapojan pienet kengät. [softly] Kysyin pojan nimeä. Kukaan pöydässä ei tiennyt sitä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-tromssa.mp3',
   },
 
@@ -108,9 +133,7 @@ export const FOKUSVIRTA_TROMSSA = {
     ],
     /* Yksi kupla luennan jälkeen, ei alustusta eikä välihuutoa. */
     /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
-    kommentti: [
-      'Tromssassa on nyt yliopisto ja Polaarimuseo vanhoissa tullirakennuksissa. Löysin laiturilta simpukankuoren ja kurkistin sisään. Tyhjä. Hetken mietin, kuka oli lähtenyt ja minne.',
-    ],
+    kommentti: ["Tuohon hotelliin lennetään suoraan huoneeseen. Tromssassa pikkukajaville on rakennettu pesähyllyjä, jotta lokit löytäisivät paikan muualla kuin talojen ikkunalaudoilla. Kirjekyyhkyllekin kelpaisi merinäköala."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'utelias', voimakkuus: 0.5 },
     /*

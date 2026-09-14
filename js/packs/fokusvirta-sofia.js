@@ -301,7 +301,7 @@ export const FOKUSVIRTA_SOFIA = {
     paikkarivi: 'Sofia, elokuussa 1873. Helteistä; tomu ei laskeudu; puntari '
       + 'korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 336 merkkiä (yläraja 400). */
-    teksti: 'Sofiassa maa tarjosi kuumaa vettä pyytämättä halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. Matkailun epäjohdonmukaisuus oli valmis. Vitoša näytti nukkuvan, mutta kaupungin alla oli jo noustu keittämään.',
+    teksti: "Sofiassa maa lämmitti veden ilman halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. Palasin hakemaan oman astian. Majatalon isäntä ei ilahtunut, kun neuvoin muitakin lähtemään lähteelle.",
     /*
      * Luenta generoitu 25.8.2026 samalla reseptillä kuin muut
      * matkakirjaluennat (Viisas Kertoja, eleven_v3, stability 0.5).
@@ -333,17 +333,41 @@ export const FOKUSVIRTA_SOFIA = {
      * takana kohosi Vitoša" (havainnot, pulu kuuntelee).
      */
     reaktiot: [
-      { id: 'sofia.r1', ankkuri: 'pyytämättä halkoja', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'sofia.r2', ankkuri: 'kylmästä pesuvedestä', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'sofia.r3', ankkuri: 'epäjohdonmukaisuus oli valmis', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'sofia.r4', ankkuri: 'jo noustu keittämään', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "sofia.r1",
+    "ankkuri": "maa lämmitti veden ilman halkoja",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sofia.r2",
+    "ankkuri": "olin maksanut majatalossa kylmästä pesuvedestä",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sofia.r3",
+    "ankkuri": "Palasin hakemaan oman astian",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sofia.r4",
+    "ankkuri": "Majatalon isäntä ei ilahtunut",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Sofiassa maa tarjosi kuumaa vettä pyytämättä halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. [mischievously] Matkailun epäjohdonmukaisuus oli valmis. [softly] Vitoša näytti nukkuvan, mutta kaupungin alla oli jo noustu keittämään.',
+    luenta: "[curious] Sofiassa maa lämmitti veden ilman halkoja. Lähteellä nainen täytti kannun; minä olin maksanut majatalossa kylmästä pesuvedestä. Palasin hakemaan oman astian. [softly] Majatalon isäntä ei ilahtunut, kun neuvoin muitakin lähtemään lähteelle.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-sofia.mp3',
     kuva: {
       tiedosto: 'BASA-713K-1-52-4-Vasil Levski.JPG',
@@ -472,9 +496,7 @@ export const FOKUSVIRTA_SOFIA = {
      * uudestaan. Kupla näkyy ja etenee kuten ennen.
      */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Sofian lähteeltä haetaan yhä kuumaa vettä. Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. Arvokkuus palasi vasta seuraavalla räystäällä.',
-    ],
+    kommentti: ["Sofian lähteeltä haetaan yhä kuumaa vettä. Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. Arvokkuus palasi vasta seuraavalla räystäällä."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.45 },
     /*
