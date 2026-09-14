@@ -971,6 +971,57 @@ export const FOKUSVIRTA_MADRID = {
           + 'suojeluspyhimyksen juhla Manzanaresin rannalla.',
         lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
       },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'El Quitasol (Goya).jpg',
+          lyhyt: 'Päivänvarjo (1777) on Goyan kutomomalli El Pardon palatsiin ja yksi Pradon suosituimpia tauluja.',
+          selite: 'Päivänvarjo (1777) kuuluu Goyan kutomomalleihin, jotka tehtiin '
+            + 'El Pardon palatsin seinävaatteita varten, ja se on yhä Pradon '
+            + 'suosituimpia tauluja.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'La gallina ciega (Goya).jpg',
+          lyhyt: 'Sokkoleikki (1789), espanjaksi la gallina ciega eli sokea kana, on Goyan kutomomalli Pradossa.',
+          selite: 'Sokkoleikin (1789) espanjankielinen nimi la gallina ciega '
+            + 'tarkoittaa sokeaa kanaa, ja Goyan kutomomalli kuuluu Pradon '
+            + 'kokoelmaan.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'La nevada, Francisco de Goya.jpg',
+          lyhyt: 'Lumisade eli Talvi (1786) kuvaa Goyan kutomomallissa kolme miestä ja aasin lumituiskussa.',
+          selite: 'Lumisade eli Talvi (1786) on Goyan kutomomalli, jossa kolme '
+            + 'miestä ja aasi kahlaavat lumituiskussa — 650 metrin korkeudessa '
+            + 'talvi puree.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'El baile a orillas del Manzanares.jpg',
+          lyhyt: 'Tanssi Manzanaresin rannalla (1777) esittää madridilaisia keikareita seguidillaa tanssimassa.',
+          selite: 'Tanssi Manzanaresin rannalla (1777) esittää majoja ja majia, '
+            + 'kaupungin omia keikareita, seguidillaa tanssimassa joen '
+            + 'törmällä.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'El cacharrero, Francisco de Goya.jpg',
+          lyhyt: 'Saviastioiden kauppias (1779) asettaa vastakkain katukauppiaan ja ohi vierivät herrasvaunut.',
+          selite: 'Saviastioiden kauppias (1779) asettaa vastakkain maahan '
+            + 'ruukkunsa levittävän kauppiaan ja ohi vierivät herrasvaunut — '
+            + 'kaksi Madridia samassa taulussa.',
+          lahde: 'Francisco Goya, Wikimedia Commons (Public domain)',
+        },
+      ],
       kysymykset: [
         'Millaisia seinävaatteita kuninkaallinen kutomo valmisti?',
         'Mitä madridilaiset tekivät vapaapäivinään 1700-luvulla?',
@@ -1009,6 +1060,17 @@ export const FOKUSVIRTA_MADRID = {
           + 'liivissä, naisilla pitkä pilkullinen mekko ja neilikka hiuksissa.',
         lahde: 'Javier Perez Montes, Wikimedia Commons (CC BY-SA 4.0)',
       },
+      /*
+       * MUSIIKKI JA ÄÄNI KORTILLE (avoin kohta 11.1, 14.9.2026). Erässä 10
+       * tämä nosto jäi lehden sivulle kaksoiskappaleeksi vain siksi, että
+       * musiikkilinkille ja ääninäytteelle ei ollut paikkaa kortilla.
+       * Kortti piirtää ne nyt SAMOILLA napeilla kuin lehti (js/ui.js
+       * lisaaNostonNapit), joten sivulta jäänyt kaksoiskappale purkautui.
+       */
+      musiikki: 'https://music.apple.com/fi/search?term=zarzuela',
+      musiikkiNimi: 'Zarzuela-musiikkia Apple Musicissa',
+      musiikkiNayte: 'https://archive.org/download/granvi30g/AE2784.mp3',
+      musiikkiNayteNimi: 'La Gran Vía -zarzuela — Emilio Sagi-Barba, PD',
       kysymykset: [
         'Mistä chotis tuli Madridiin ja miten se muuttui perillä?',
         'Mitä verbena-juhlissa tapahtuu?',
@@ -1068,6 +1130,23 @@ export const FOKUSVIRTA_MADRID = {
           + 'kotistadionille mahtuu nykyään 83 186 katsojaa.',
         lahde: 'Mervat, Wikimedia Commons (CC BY-SA 4.0)',
       },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Fuente de Cibeles - 03.jpg',
+          selite: 'Cibeleen suihkulähteen vaunuja vetävät kivileijonat veisti '
+            + 'ranskalainen Roberto Michel 1780-luvulla.',
+          lahde: 'Carlos Delgado, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       kysymykset: [
         'Miten yli sadan metrin nurmikaukalo saadaan liikkumaan?',
         'Miksi atléticolaiset luopuivat Cibeleen suihkulähteestä?',

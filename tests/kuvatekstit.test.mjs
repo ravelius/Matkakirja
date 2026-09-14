@@ -68,7 +68,12 @@ const PIIRTOPAIKAT = [
   'js/fokusnosto.js',
   'js/elaintaky.js',
   'js/historian-hetket.js',
-  'js/skandaalit.js',
+  /*
+   * js/skandaalit.js EI OLE LISTALLA (14.9.2026): skandaalikortin kuvat
+   * piirtää nyt täkynoston yhteinen kuvasarja (js/fokusnosto.js
+   * piirraNostonKuvasarja), joka on tällä listalla. Skandaalimoduulissa
+   * ei ole enää yhtään kuvatekstiriviä omanaan.
+   */
   'js/kohtaamiskuvat.js',
   'js/aikajana.js',
   'js/pollo.js',

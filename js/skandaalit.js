@@ -59,10 +59,8 @@ import {
   suljeKohdeSuurennos,
 } from './fokuskohteet.js';
 import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
-import { asetaNostonKuva, piirraNostonKuva } from './fokusnosto.js';
+import { asetaNostonKuva, piirraNostonKuva, piirraNostonKuvasarja } from './fokusnosto.js';
 import { nostokuvaAloita } from './nostokuva.js';
-import { taytaLahderivi } from './tekijakortti.js';
-import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
 import { sfx } from './sound.js';
@@ -383,129 +381,24 @@ function piirraSkandaalinKuvat(ui, sailio, skandaali, valmisKuva) {
 }
 
 /**
- * SELATTAVA KUVASARJA.
+ * SELATTAVA KUVASARJA — kortin yhteinen toteutus omilla luokilla.
  *
- * PUUTTUVA KUVA POISTUU SARJASTA. Havainnekuva syntyy kuvajonossa
- * skandaali kerrallaan, joten sarjassa voi olla osoite, jota ämpärissä
- * ei vielä ole. Virheen sattuessa kuva pudotetaan listalta ja
- * seuraava näytetään; jos yksikään ei lataudu, koko kehys piiloutuu
- * eikä kortille jää tyhjää laatikkoa lupaamaan kuvaa, jota ei ole.
+ * Runko muutti js/fokusnosto.js:ään (piirraNostonKuvasarja), kun
+ * `galleria`-kenttä sai ensiluokkaisen tuen myös täkynostolla
+ * (karttauudistuksen erä 10, avoin kohta 11.1). Skandaalin ulkoasu,
+ * luokat, kuvaleveys ja zoomiavain ovat entiset — vain kaksi kopiota
+ * samasta selailusta jäi pois.
  */
 function piirraSkandaalinGalleria(ui, sailio, skandaali, kuvat, valmisKehys) {
-  const jaljella = [...kuvat];
-  /*
-   * VALMIS KUVAKEHYS ON GALLERIAN PÄÄKUVA (js/nostokuva.js).
-   *
-   * Vaiheessa 1 kortissa on pelkkä sarjan ENSIMMÄINEN kuva isona,
-   * lyhyt kuvateksti ja "Lisää" — ei nuolia. Vaiheessa 2 galleria
-   * rakennetaan SAMAN kehyksen ympärille: sama figure, sama nappi,
-   * sama img ja sama src, joten kuva ei liiku eikä lataudu uudestaan.
-   * Nuolet ja laskuri ilmaantuvat kuvan päälle, ja kuvatekstin sekä
-   * lähderivin paikan ottavat kehyksen omat rivit (.nostokuva-teksti,
-   * .nostokuva-lahde), joita selaus päivittää kuvan mukana.
-   */
-  const kehys = valmisKehys
-    ?? html('figure', 'fokusnosto-kuva skandaali-kuva');
-  const nappi = valmisKehys
-    ? valmisKehys.querySelector('.nostokuva-nappi')
-    : html('button', 'fokusnosto-kuvanappi');
-  const img = valmisKehys
-    ? valmisKehys.querySelector('.nostokuva-img')
-    : document.createElement('img');
-  if (valmisKehys) kehys.classList.add('skandaali-kuva');
-  else {
-    nappi.type = 'button';
-    nappi.title = 'Katso kuva suurempana';
-    img.decoding = 'async';
-    img.draggable = false;
-    nappi.appendChild(img);
-    kehys.appendChild(nappi);
-  }
-
-  const selite = valmisKehys
-    ? valmisKehys.querySelector('.nostokuva-teksti')
-    : html('span', 'fokusnosto-kuvaselite');
-  const lahderivi = valmisKehys
-    ? valmisKehys.querySelector('.nostokuva-lahde')
-    : html('span', 'fokusnosto-kuvalahde');
-  if (!valmisKehys) {
-    const kuvateksti = html('figcaption', 'fokusnosto-kuvateksti');
-    kuvateksti.append(selite, lahderivi);
-    kehys.appendChild(kuvateksti);
-  }
-
-  const laskuri = html('span', 'skandaali-kuvalaskuri');
-  let kohdalla = 0;
-
-  /**
-   * @param {boolean} [lataa] `false` jättää kuvan koskematta: valmis
-   *   kehys näyttää jo oikeaa kuvaa, eikä src:ää saa kirjoittaa
-   *   uudestaan (selain lataisi kuvan ja se välähtäisi).
-   */
-  const nayta = (lataa = true) => {
-    if (!jaljella.length) {
-      kehys.hidden = true;
-      return;
-    }
-    kohdalla = ((kohdalla % jaljella.length) + jaljella.length) % jaljella.length;
-    const kuva = jaljella[kohdalla];
-    // Kortilla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js;
-    // avaaKohdeSuurennos saa kuvatiedon sellaisenaan).
-    img.alt = kuvatekstiLyhyt(kuva) || skandaali.otsikko || '';
-    nappi.setAttribute('aria-label', `${kuvatekstiLyhyt(kuva) || 'Kuva'} — avaa suurena`);
-    selite.textContent = kuvatekstiLyhyt(kuva);
-    /*
-     * LÄHDERIVI ON KUVAN OMA, ja se kulkee taytaLahderivin läpi, joten
-     * "Matkakirjan havainnekuva" saa painettavan selitteen joka kerta
-     * (js/havainnekuva.js) ja Commons-kuvan tekijä näkyy niin kuin
-     * lisenssi vaatii.
-     */
-    taytaLahderivi(lahderivi, kuva.lahde ?? '', kuva);
-    laskuri.textContent = jaljella.length > 1 ? `${kohdalla + 1} / ${jaljella.length}` : '';
-    laskuri.hidden = jaljella.length < 2;
-    // Suurennos näyttää sen kuvan, joka on kohdalla — myös silloin kun
-    // napin avaa js/nostokuva.js (ks. avaaSkandaali avaaSuurennos).
-    kehys.nostokuvaKuva = kuva;
-    if (!lataa) return;
-    asetaNostonKuva(img, kuva, SKANDAALI_KUVA_PX, () => {
-      const paikka = jaljella.indexOf(kuva);
-      if (paikka < 0) return;
-      jaljella.splice(paikka, 1);
-      if (kohdalla > paikka) kohdalla -= 1;
-      nayta();
-    });
-  };
-  nayta(!valmisKehys);
-
-  // Napautus suurentaa, kuten kortin muillakin kuvilla; suurennos saa
-  // sen kuvan, joka on kohdalla. Valmiilla kehyksellä kuuntelija on jo
-  // paikallaan (js/nostokuva.js) eikä sitä saa lisätä toista kertaa.
-  if (!valmisKehys) {
-    nappi.addEventListener('click', (tapahtuma) => {
-      tapahtuma.stopPropagation();
-      if (!jaljella.length) return;
-      avaaKohdeSuurennos(ui, jaljella[kohdalla], () => nappi, 'skandaaliZoom');
-    });
-  }
-
-  const nuoli = (luokka, merkki, nimi, suunta) => {
-    const nap = html('button', `skandaali-kuvanuoli ${luokka}`, merkki);
-    nap.type = 'button';
-    nap.setAttribute('aria-label', nimi);
-    nap.addEventListener('click', (tapahtuma) => {
-      tapahtuma.stopPropagation();
-      if (jaljella.length < 2) return;
-      kohdalla += suunta;
-      sfx.play('paper');
-      nayta();
-    });
-    nappi.appendChild(nap);
-  };
-  nuoli('edellinen', '‹', 'Edellinen kuva', -1);
-  nuoli('seuraava', '›', 'Seuraava kuva', 1);
-  nappi.appendChild(laskuri);
-
-  sailio.appendChild(kehys);
+  piirraNostonKuvasarja(ui, sailio, kuvat, {
+    otsikko: skandaali.otsikko,
+    valmisKehys,
+    kehysLuokka: 'fokusnosto-kuva skandaali-kuva',
+    nuoliLuokka: 'skandaali-kuvanuoli',
+    laskuriLuokka: 'skandaali-kuvalaskuri',
+    leveys: SKANDAALI_KUVA_PX,
+    zoomAvain: 'skandaaliZoom',
+  });
 }
 
 /**

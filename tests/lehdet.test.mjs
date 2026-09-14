@@ -104,33 +104,147 @@ test('maalehden aihesivuilla on minitehtävä ja menovinkit on viimeisenä', () 
   }
 });
 
-test('kulttuurivisan vastaus löytyy kaupunkilehden kansisivulta', async () => {
-  /*
-   * Visa näkyy lehden kansisivulla (2/4). Vaihe B siirsi juttuja
-   * kannelta aihesivuille ja maalehtiin, ja viisi visaa jäi kannelle
-   * ilman lähdejuttuaan — omistaja löysi ensimmäisen testipelissä
-   * ("Mitä evzonin puvun 400 laskosta esittävät?" sivulla, jolla ei
-   * puhuttu evzoneista). Siirto tehtiin, mutta riippuvuutta ei
-   * tarkistettu siirron jälkeen; tämä testi tarkistaa sen koneellisesti.
-   */
+/*
+ * VISAN LÄHDEJUTTU — YKSI JUTTU, EIKÄ KAUPUNGIN NIMI KELPAA.
+ *
+ * Vanha muoto tästä testistä luki vain KANSISIVUN jutut ja hyväksyi
+ * osumaksi minkä tahansa visan sanan — myös kaupungin nimen vartalon.
+ * Karttauudistuksen erän 10 raportti (avoin kohta 11.2) löysi, mitä se
+ * tarkoitti: Rooman visa kysyy akvedukteista, ja testi läpäisi sanalla
+ * `rooman` nostossa "Norsu kantaa obeliskia" — norsupatsas ei kerro
+ * akvedukteista mitään. Testi oli vihreä väärästä syystä.
+ *
+ * TIUKENNUS 14.9.2026 (Fablen päätös). Kaksi muutosta:
+ *
+ *   1. KAUPUNGIN NIMEN VARTALO EI KELPAA OSUMAKSI. Sekä laudan
+ *      kaupunki-id:n että kaupungin näkyvän nimen alku pudotetaan
+ *      avainsanoista (Kööpenhamina/kobenhavn, Rovaniemi/lappi).
+ *   2. KYTKÖS ON YHDESSÄ JUTUSSA, EI SIVUN SUMMASSA. Jonkin YKSITTÄISEN
+ *      noston on kannettava kytkös — juuri sen jutun, jota pelaaja
+ *      lukee. Sivun kaikkien juttujen unioni ei kelpaa.
+ *
+ * JUTTU SAA OLLA KOHDEKARTALLA. Erät 5 ja 10 siirsivät lehtien sivuja
+ * kohdekartan nostoiksi, ja Fablen päätös 14.9.2026 on, että Rooman
+ * "Vesi kulkee yhä" KUULUU kartalle: jutun siirto takaisin kannelle
+ * purkaisi uudistusta. Lähdejuttu haetaan siksi sekä lehden sivuilta
+ * että kaupungin täkynostoista (js/packs/fokusvirrat.js takynostot).
+ *
+ * MITATTU tiukennuksen hetkellä: 43 visasta **yksi** (Rooma) läpäisi
+ * vanhan testin pelkällä kaupungin nimen vartalolla. Tiukennettuna
+ * kaikki 43 läpäisevät oikeasta syystä; viisi (kreeta, sisilia,
+ * dubrovnik, vilna, tukholma) läpäisee yhdellä avainsanalla, ja
+ * jokaisessa se sana on juuri se erisnimi tai erikoissana, jota visa
+ * kysyy (Knossos, abbanniata, tasavalta, perustuslaki, taidetta).
+ * Yhtään ohitusta ei tarvittu.
+ */
+test('kulttuurivisan vastaus löytyy kaupungin omasta lähdejutusta', async () => {
   const { EUROPE_KULTTUURI } = await import('../js/packs/europe-kulttuuri.js');
+  const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
+  const { MAAILMANKARTTA } = await import('../js/packs/maailmankartta.js');
+  const NIMET = new Map(MAAILMANKARTTA.cities.map((c) => [c.id, c.name]));
+
   const ytimet = (s) => s.toLowerCase()
     .split(/[^a-zåäöáéíóúüñ0-9]+/)
     .filter((w) => w.length >= 6)
     .map((w) => w.slice(0, 7));
+  // Vertailu tehdään aksentittomasta alusta, jotta Kööpenhamina ja
+  // kobenhavn tunnistetaan samaksi nimeksi.
+  const alku = (s) => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').slice(0, 4);
+  const juttuTeksti = (n) => [
+    n.otsikko ?? '', n.teksti ?? '',
+    Array.isArray(n.lunastus) ? n.lunastus.join(' ') : (n.lunastus ?? ''),
+  ].join(' ').toLowerCase();
 
   for (const [kaupunki, tiedot] of Object.entries(EUROPE_KULTTUURI)) {
     const visa = tiedot.kysymys;
     if (!visa) continue;
     const sivut = KULTTUURI_KATEGORIAT[kaupunki];
-    const nostot = sivut
-      ? (sivut.find((s) => s.id === 'kaupunki') ?? sivut[0]).nostot ?? []
-      : tiedot.nostot ?? [];
-    const kansi = nostot.map((n) => `${n.otsikko ?? ''} ${n.teksti ?? ''}`).join(' ').toLowerCase();
+    const lehdenJutut = sivut
+      ? sivut.flatMap((s) => (s.nostot ?? []).map((n) => [s.id, n]))
+      : (tiedot.nostot ?? []).map((n) => ['(litteä)', n]);
+    const kartanJutut = (FOKUSVIRRAT[kaupunki]?.takynostot ?? [])
+      .map((n) => ['kohdekartta', n]);
+
     const avain = [...new Set([...ytimet(visa.q), ...ytimet(visa.options[visa.correct])])];
-    assert.ok(avain.some((w) => kansi.includes(w)),
-      `${kaupunki}: kulttuurivisan aihetta ei käsitellä kansisivun jutuissa `
-      + `— "${visa.q}"`);
+    const nimet = [alku(kaupunki), alku(NIMET.get(kaupunki) ?? kaupunki)];
+    const ilmanNimea = avain
+      .filter((w) => !nimet.some((p) => alku(w).startsWith(p) || p.startsWith(alku(w))));
+    assert.ok(ilmanNimea.length > 0,
+      `${kaupunki}: visasta ei jää yhtään avainsanaa, kun kaupungin nimi `
+      + `pudotetaan — "${visa.q}"`);
+
+    let paras = { osumat: 0, mista: null, otsikko: null };
+    for (const [mista, nosto] of [...lehdenJutut, ...kartanJutut]) {
+      const teksti = juttuTeksti(nosto);
+      const osumat = ilmanNimea.filter((w) => teksti.includes(w)).length;
+      if (osumat > paras.osumat) {
+        paras = { osumat, mista, otsikko: nosto.otsikko ?? nosto.id ?? '' };
+      }
+    }
+    assert.ok(paras.osumat > 0,
+      `${kaupunki}: kulttuurivisalla ei ole lähdejuttua — yksikään lehden `
+      + `tai kohdekartan nosto ei käsittele aihetta ilman kaupungin nimeä. `
+      + `Visa: "${visa.q}" · avainsanat: ${ilmanNimea.join(', ')}`);
+  }
+});
+
+/*
+ * TYHJENTYNEEN SIVUN JOHDANTO — LUPAUS ON PIDETTÄVÄ.
+ *
+ * Erät 5 ja 10 tyhjensivät 14 aihesivua nostoista siirtämällä ne
+ * kohdekartalle, EIKÄ YHDENKÄÄN sivun johdantoa muutettu (mitattu
+ * 14.9.2026: 14 tyhjentynyttä osastoa, 0 muutettua johdantoa; erän 10
+ * raportin avoin kohta 11.7.2 jätti asian Fablen kaanonityöksi).
+ * Wienin Musiikki-sivu oli ensimmäinen, jossa MOLEMMAT jutut lähtivät
+ * ja johdanto jäi lupaamaan valssia ja satuoopperaa, joita sivulla ei
+ * enää ole.
+ *
+ * Fablen päätös 14.9.2026: johdanto ohjaa lukijan kartalle — se on
+ * uudistuksen koko idea. Tämä vartio pitää lupauksen voimassa: jos
+ * johdanto sanoo "kartalla", jutut on oikeasti löydyttävä sieltä.
+ *
+ * Loput 13 tyhjentynyttä sivua ovat yhä Fablen jonossa, eikä tämä
+ * vartio koske niihin: se on nimetty lista, joka kasvaa sitä mukaa kun
+ * johdanto kirjoitetaan.
+ */
+test('kartalle ohjaava johdanto pitää lupauksensa', async () => {
+  const { KAUPUNKIKARTAT } = await import('../js/packs/maakartat.js');
+  const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
+
+  /** Sivut, joiden johdanto on päivitetty kartalle ohjaavaksi. */
+  const OHJAAVAT = [
+    {
+      kaupunki: 'wien',
+      sivu: 'musiikki',
+      // Vanha virke on tallella sanatarkasti: kaanonia ei kirjoitettu
+      // uusiksi, perään lisättiin vain reitti kartalle.
+      vanhaVirke: 'Valssi, jonka toinen isku tulee etuajassa, ja satuooppera, '
+        + 'joka kirjoitettiin esikaupungin puiselle näyttämölle',
+      nostot: ['nosto-tonava-kaunoinen', 'nosto-taikahuilu-wiedenissa'],
+    },
+  ];
+
+  for (const { kaupunki, sivu, vanhaVirke, nostot } of OHJAAVAT) {
+    const osasto = (KULTTUURI_KATEGORIAT[kaupunki] ?? []).find((s) => s.id === sivu);
+    assert.ok(osasto, `${kaupunki}/${sivu}: osastoa ei löydy`);
+    assert.equal((osasto.nostot ?? []).length, 0,
+      `${kaupunki}/${sivu}: sivulla on taas omia juttuja — johdanto kannattaa tarkistaa`);
+    assert.ok(osasto.johdanto?.includes(vanhaVirke),
+      `${kaupunki}/${sivu}: johdannon vanha virke ei ole enää sanatarkasti tallella`);
+    assert.match(osasto.johdanto, /kartal/i,
+      `${kaupunki}/${sivu}: tyhjentynyt sivu ei ohjaa lukijaa kartalle`);
+
+    // Lupaus on pidettävä: jutut ovat kohdekartalla ja kaupungin poolissa.
+    const pisteet = new Set((KAUPUNKIKARTAT[kaupunki]?.kohteet ?? [])
+      .flatMap((k) => (Array.isArray(k.nosto) ? k.nosto : [k.nosto]))
+      .filter(Boolean));
+    const pooli = new Set((FOKUSVIRRAT[kaupunki]?.takynostot ?? []).map((n) => `nosto-${n.id}`));
+    for (const tunnus of nostot) {
+      assert.ok(pisteet.has(tunnus),
+        `${kaupunki}/${sivu}: johdanto lupaa kartan, mutta ${tunnus} ei ole kohdekartalla`);
+      assert.ok(pooli.has(tunnus),
+        `${kaupunki}/${sivu}: ${tunnus} ei ole kaupungin täkynostoissa`);
+    }
   }
 });
 

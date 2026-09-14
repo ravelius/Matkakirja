@@ -484,10 +484,13 @@ export const KULTTUURI_KATEGORIAT = {
        * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
        *
        * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
-       * ovat nyt kohdekartan jutun `kuvat`-listassa
-       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
-       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
-       * yhtään kuvaa ei pudonnut pelistä.
+       * ovat kohdekartan jutun `kuvat`-listassa (js/packs/nahtavyysjutut.js)
+       * selitteineen ja lähteineen. Erässä 10 tämä oli kiertotie, koska
+       * nostokortti ei tuntenut `galleria`-kenttää; 14.9.2026 kortti sai
+       * sille ensiluokkaisen tuen (js/fokusnosto.js piirraNostonKuvasarja),
+       * ja samat kuvat ovat nyt myös noston omassa `galleria`-kentässä
+       * (js/packs/fokusvirta-*.js). Yhtään kuvaa ei pudonnut pelistä
+       * kummassakaan vaiheessa.
        *
        * PUDOTETTU SIVUVERSIONA: "Kellarin lattian alta tuli neljäsataa
        * korua" — kohdekartan piste "Cheapsiden kätkö"
@@ -518,14 +521,13 @@ export const KULTTUURI_KATEGORIAT = {
        * kansisivu jää pois ja visa siirtyy ison pop-upin loppuun
        * (suunnitelman luku 4.7, js/lehti.js — ei tämän erän tiedosto).
        *
-       * YKSI NOSTO JÄI: "Suojatie, jota jonotetaan" pysyy sivulla, koska
-       * sillä on musiikki- tai äänikenttä, jolle ei ole paikkaa
-       * nostokortilla eikä kohdekartan jutussa — siirto pudottaisi linkin
-       * tai näytteen pelistä kokonaan. Sama teksti on nyt myös kartalla
-       * nostona `abbey-roadin-suojatie`; kaksoiskappale purkautuu sinä
-       * päivänä, kun kansisivu jää pois ja visa siirtyy ison pop-upin
-       * loppuun (suunnitelman luku 4.7, js/lehti.js — ei tämän erän
-       * tiedosto).
+       * MUSIIKKINOSTO SIIRTYI KOKONAAN (14.9.2026). "Suojatie, jota
+       * jonotetaan" oli erässä 10 jäänyt tälle sivulle kaksoiskappaleeksi, koska sen
+       * musiikki- ja äänikentille ei ollut paikkaa nostokortilla. Kortti
+       * piirtää ne nyt samoilla napeilla kuin lehti (js/fokusnosto.js
+       * piirraNostonMedia → js/ui.js lisaaNostonNapit), joten nosto asuu
+       * enää kartalla tunnuksella `abbey-roadin-suojatie` — sivun
+       * kaksoiskappale purettiin.
        *
        * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
        * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
@@ -533,25 +535,6 @@ export const KULTTUURI_KATEGORIAT = {
        * tehtävät hiljaa väärille sivuille.
        */
       nostot: [
-        {
-          otsikko: 'Suojatie, jota jonotetaan',
-          tiedosto: 'Abbey Road Zebra.jpg',
-          teksti: 'Elokuun 8. päivänä 1969 neljä miestä käveli suojatien yli '
-            + 'kahdeksan kertaa, kunnes valokuvaaja sai kuvansa. Kuvasta tuli '
-            + 'The Beatlesin Abbey Road -levyn kansi ja suojatiestä maailman '
-            + 'kuuluisin: turistit jonottavat yhä joka päivä ylittämään sen '
-            + 'samassa rivissä, autoilijoiden kärsivällisyyttä koetellen. '
-            + 'Ylityksellä on virallinen suojelumerkintä — ja taustan '
-            + 'studiossa äänitetään musiikkia edelleen.',
-          lyhyt: 'Abbey Roadin suojatiellä on virallinen suojelumerkintä, ja viereisessä studiossa äänitetään yhä.',
-          selite: 'Abbey Roadin suojatiellä on virallinen suojelumerkintä, ja '
-            + 'viereisessä studiossa äänitetään musiikkia edelleen.',
-          lahde: 'Misterweiss, Wikimedia Commons (PD)',
-          wiki: 'The Beatles',
-          musiikki: 'https://music.apple.com/fi/album/come-together-2019-mix/1474815798?i=1474815799',
-          musiikkiNimi: 'The Beatles Apple Musicissa',
-          esikuuntelu: 'The Beatles Come Together',
-        },
         {
           /*
            * VISAN OPETTAVA NOSTO (19.8.2026). Lontoon kulttuurivisa
@@ -2712,28 +2695,37 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'musiikki',
       nimi: 'Musiikki',
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026). Sivun
+       * molemmat jutut ovat nyt kohdekartan nostoja ("Tonava kaunoinen"
+       * ja "Taikahuilu", js/packs/maakartat.js), joten vanha johdanto
+       * lupasi valssia ja satuoopperaa, joita samalla sivulla ei enää
+       * ole. Vanha virke on tallella SANATARKASTI — perään on lisätty
+       * vain se, mistä molemmat löytyvät. Uutta faktaa ei kirjoitettu:
+       * kumpikin nimiö on kartalla juuri noilla sanoilla.
+       */
       johdanto: 'Valssi, jonka toinen isku tulee etuajassa, ja satuooppera, joka '
-        + 'kirjoitettiin esikaupungin puiselle näyttämölle.',
+        + 'kirjoitettiin esikaupungin puiselle näyttämölle — molemmat odottavat '
+        + 'nyt omilla paikoillaan kaupungin kartalla.',
       /*
        * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
        * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).
        *
-       * YKSI NOSTO JÄI: "Taikahuilu tehtiin esikaupungin teatteriin" pysyy
-       * sivulla, koska sillä on musiikki- tai äänikenttä, jolle ei ole
-       * paikkaa nostokortilla eikä kohdekartan jutussa — siirto pudottaisi
-       * linkin tai näytteen pelistä kokonaan. Sama teksti on nyt myös
-       * kartalla nostona `taikahuilu-wiedenissa`; kaksoiskappale purkautuu
-       * sinä päivänä, kun kansisivu jää pois ja visa siirtyy ison pop-upin
-       * loppuun (suunnitelman luku 4.7, js/lehti.js — ei tämän erän
-       * tiedosto).
+       * MUSIIKKINOSTO SIIRTYI KOKONAAN (14.9.2026). "Taikahuilu tehtiin
+       * esikaupungin teatteriin" oli erässä 10 jäänyt tälle sivulle kaksoiskappaleeksi, koska sen
+       * musiikki- ja äänikentille ei ollut paikkaa nostokortilla. Kortti
+       * piirtää ne nyt samoilla napeilla kuin lehti (js/fokusnosto.js
+       * piirraNostonMedia → js/ui.js lisaaNostonNapit), joten nosto asuu
+       * enää kartalla tunnuksella `taikahuilu-wiedenissa` — sivun
+       * kaksoiskappale purettiin.
        *
-       * YKSI NOSTO JÄI: "Kaupunki sävelsi oman jokensa" pysyy sivulla,
-       * koska sillä on musiikki- tai äänikenttä, jolle ei ole paikkaa
-       * nostokortilla eikä kohdekartan jutussa — siirto pudottaisi linkin
-       * tai näytteen pelistä kokonaan. Sama teksti on nyt myös kartalla
-       * nostona `tonava-kaunoinen`; kaksoiskappale purkautuu sinä päivänä,
-       * kun kansisivu jää pois ja visa siirtyy ison pop-upin loppuun
-       * (suunnitelman luku 4.7, js/lehti.js — ei tämän erän tiedosto).
+       * MUSIIKKINOSTO SIIRTYI KOKONAAN (14.9.2026). "Kaupunki sävelsi oman
+       * jokensa" oli erässä 10 jäänyt tälle sivulle kaksoiskappaleeksi, koska sen
+       * musiikki- ja äänikentille ei ollut paikkaa nostokortilla. Kortti
+       * piirtää ne nyt samoilla napeilla kuin lehti (js/fokusnosto.js
+       * piirraNostonMedia → js/ui.js lisaaNostonNapit), joten nosto asuu
+       * enää kartalla tunnuksella `tonava-kaunoinen` — sivun
+       * kaksoiskappale purettiin.
        *
        * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
        * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
@@ -2741,62 +2733,6 @@ export const KULTTUURI_KATEGORIAT = {
        * tehtävät hiljaa väärille sivuille.
        */
       nostot: [
-        {
-          otsikko: 'Kaupunki sävelsi oman jokensa',
-          tiedosto: 'Johann Strauss II by Fritz Luckhardt.jpg',
-          teksti: 'Johann Strauss nuoremman valssi Tonava kaunoinen '
-            + 'kantaesitettiin Wienissä 15. helmikuuta 1867 — ensin '
-            + 'mieskuorolle, vasta myöhemmin pelkälle orkesterille. '
-            + 'Wieniläisvalssissa toinen isku tulee hitusen etuajassa, joten '
-            + 'se ei mene metronomin kanssa tasan: sitä ei voi laskea, se '
-            + 'pitää tuntea. Strauss sävelsi noin viisisataa teosta ja johti '
-            + 'orkesteriaan viulu kädessä, soittaen ja tahdittaen yhtä aikaa.',
-          lyhyt: 'Johann Strauss nuorempi kuvattiin 1899 johtamassa orkesteriaan viulu kädessä, viimeisenä vuotenaan.',
-          selite: 'Johann Strauss nuorempi sävelsi noin viisisataa teosta ja '
-            + 'johti orkesteriaan viulu kädessä; Fritz Luckhardt valokuvasi '
-            + 'hänet 1899, hänen viimeisenä elinvuotenaan.',
-          lahde: 'Fritz Luckhardt, Wikimedia Commons (PD)',
-          wiki: 'Johann Strauss nuorempi',
-          musiikki: 'https://music.apple.com/fi/search?term=Johann%20Strauss%20Donauwalzer',
-          musiikkiNimi: 'Tonava kaunoinen Apple Musicissa',
-          musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/d/de/%22An_der_sch%C3%B6nen%2C_blauen_Donau%22%2C_performed_by_the_US_Marine_Band.mp3',
-          musiikkiNayteNimi: 'Strauss: Tonava kaunoinen — United States Marine Band (PD)',
-        },
-        {
-          otsikko: 'Taikahuilu tehtiin esikaupungin teatteriin',
-          tiedosto: 'Karl Friedrich Schinkel - Die Sternenhalle der Königin der Nacht (ca. 1815).jpg',
-          teksti: 'Mozartin viimeinen ooppera ei syntynyt hovia varten. '
-            + 'Taikahuilu sai ensi-iltansa 30. syyskuuta 1791 Emanuel '
-            + 'Schikanederin teatterissa Wienin Wiedenin esikaupungissa, ja '
-            + 'se laulettiin saksaksi eikä italiaksi — tavallisen wieniläisen '
-            + 'kielellä. Schikaneder kirjoitti sanat itse ja näytteli '
-            + 'linnustaja Papagenoa. Mozart kuoli kaksi kuukautta myöhemmin. '
-            + 'Kymmenen vuoden päästä Schikaneder avasi kaupunkiin uuden '
-            + 'teatterin ja antoi veistää itsensä Papagenona sen portin '
-            + 'päälle.',
-          lyhyt: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön kuningattaren tähtisalin lavastuksen.',
-          selite: 'Karl Friedrich Schinkel maalasi noin 1815 Taikahuilun Yön '
-            + 'kuningattaren tähtisalin lavastuksen tähdillä ladotuksi '
-            + 'siniseksi kupoliksi.',
-          lahde: 'Karl Friedrich Schinkel, Wikimedia Commons (PD)',
-          wiki: 'Taikahuilu',
-          musiikki: 'https://music.apple.com/fi/search?term=Mozart%20Zauberfl%C3%B6te%20K%C3%B6nigin%20der%20Nacht',
-          musiikkiNimi: 'Taikahuilu Apple Musicissa',
-          musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/d/de/W._A._Mozart_-_Die_Zauberfl%C3%B6te_-_18._Der_H%C3%B6lle_Rache_kocht_in_meinem_Herzen_%28Ferenc_Fricsay%2C_1953%29.ogg/W._A._Mozart_-_Die_Zauberfl%C3%B6te_-_18._Der_H%C3%B6lle_Rache_kocht_in_meinem_Herzen_%28Ferenc_Fricsay%2C_1953%29.ogg.mp3',
-          musiikkiNayteNimi: 'Mozart: Yön kuningattaren aaria — johtaa Ferenc Fricsay, äänitetty 1953 (PD)',
-          galleria: [
-            {
-              otsikko: 'Papagenon portti',
-              tiedosto: 'Theater an der Wien.jpg',
-              lyhyt: 'Theater an der Wienin portilla Schikaneder on kuvattu höyhenpukuisena Taikahuilun jatko-osasta.',
-              selite: 'Theater an der Wienin sivuportin päällä Emanuel '
-                + 'Schikaneder on veistetty höyhenpukuisena soittamassa '
-                + 'pillejään Taikahuilun jatko-osan Das Labyrinth '
-                + 'kohtauksessa.',
-              lahde: 'Yair Haklai, Wikimedia Commons (CC BY-SA 3.0)',
-            },
-          ],
-        },
       ],
       tehtava: {
         kysymys: 'Kenelle Tonava kaunoinen oli alun perin tehty?',
@@ -3408,10 +3344,13 @@ export const KULTTUURI_KATEGORIAT = {
        * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
        *
        * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
-       * ovat nyt kohdekartan jutun `kuvat`-listassa
-       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
-       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
-       * yhtään kuvaa ei pudonnut pelistä.
+       * ovat kohdekartan jutun `kuvat`-listassa (js/packs/nahtavyysjutut.js)
+       * selitteineen ja lähteineen. Erässä 10 tämä oli kiertotie, koska
+       * nostokortti ei tuntenut `galleria`-kenttää; 14.9.2026 kortti sai
+       * sille ensiluokkaisen tuen (js/fokusnosto.js piirraNostonKuvasarja),
+       * ja samat kuvat ovat nyt myös noston omassa `galleria`-kentässä
+       * (js/packs/fokusvirta-*.js). Yhtään kuvaa ei pudonnut pelistä
+       * kummassakaan vaiheessa.
        *
        * PUDOTETTU SIVUVERSIONA: "Puistoissa asuu tuhansia villejä
        * papukaijoja" — ESP-poolin oma takynosto "munkkiaratit"
@@ -3615,10 +3554,13 @@ export const KULTTUURI_KATEGORIAT = {
        * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
        *
        * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
-       * ovat nyt kohdekartan jutun `kuvat`-listassa
-       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
-       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
-       * yhtään kuvaa ei pudonnut pelistä.
+       * ovat kohdekartan jutun `kuvat`-listassa (js/packs/nahtavyysjutut.js)
+       * selitteineen ja lähteineen. Erässä 10 tämä oli kiertotie, koska
+       * nostokortti ei tuntenut `galleria`-kenttää; 14.9.2026 kortti sai
+       * sille ensiluokkaisen tuen (js/fokusnosto.js piirraNostonKuvasarja),
+       * ja samat kuvat ovat nyt myös noston omassa `galleria`-kentässä
+       * (js/packs/fokusvirta-*.js). Yhtään kuvaa ei pudonnut pelistä
+       * kummassakaan vaiheessa.
        *
        * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
        * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
@@ -4126,10 +4068,13 @@ export const KULTTUURI_KATEGORIAT = {
        * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
        *
        * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
-       * ovat nyt kohdekartan jutun `kuvat`-listassa
-       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
-       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
-       * yhtään kuvaa ei pudonnut pelistä.
+       * ovat kohdekartan jutun `kuvat`-listassa (js/packs/nahtavyysjutut.js)
+       * selitteineen ja lähteineen. Erässä 10 tämä oli kiertotie, koska
+       * nostokortti ei tuntenut `galleria`-kenttää; 14.9.2026 kortti sai
+       * sille ensiluokkaisen tuen (js/fokusnosto.js piirraNostonKuvasarja),
+       * ja samat kuvat ovat nyt myös noston omassa `galleria`-kentässä
+       * (js/packs/fokusvirta-*.js). Yhtään kuvaa ei pudonnut pelistä
+       * kummassakaan vaiheessa.
        *
        * YKSI NOSTO JÄI: "Hattupäinen ukkeli sai jäädä" pysyy sivulla, koska
        * se on kaupungin KULTTUURIVISAN lähdejuttu
@@ -4139,14 +4084,13 @@ export const KULTTUURI_KATEGORIAT = {
        * kansisivu jää pois ja visa siirtyy ison pop-upin loppuun
        * (suunnitelman luku 4.7, js/lehti.js — ei tämän erän tiedosto).
        *
-       * YKSI NOSTO JÄI: "Tyttö Schönebergistä lauloi maailman ympäri" pysyy
-       * sivulla, koska sillä on musiikki- tai äänikenttä, jolle ei ole
-       * paikkaa nostokortilla eikä kohdekartan jutussa — siirto pudottaisi
-       * linkin tai näytteen pelistä kokonaan. Sama teksti on nyt myös
-       * kartalla nostona `marlene-dietrich`; kaksoiskappale purkautuu sinä
-       * päivänä, kun kansisivu jää pois ja visa siirtyy ison pop-upin
-       * loppuun (suunnitelman luku 4.7, js/lehti.js — ei tämän erän
-       * tiedosto).
+       * MUSIIKKINOSTO SIIRTYI KOKONAAN (14.9.2026). "Tyttö Schönebergistä
+       * lauloi maailman ympäri" oli erässä 10 jäänyt tälle sivulle kaksoiskappaleeksi, koska sen
+       * musiikki- ja äänikentille ei ollut paikkaa nostokortilla. Kortti
+       * piirtää ne nyt samoilla napeilla kuin lehti (js/fokusnosto.js
+       * piirraNostonMedia → js/ui.js lisaaNostonNapit), joten nosto asuu
+       * enää kartalla tunnuksella `marlene-dietrich` — sivun
+       * kaksoiskappale purettiin.
        *
        * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
        * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
@@ -4173,28 +4117,6 @@ export const KULTTUURI_KATEGORIAT = {
           lahde: 'Wikimedia Commons (CC0)',
           wiki: 'Ampelmännchen',
         },
-        {
-          otsikko: 'Tyttö Schönebergistä lauloi maailman ympäri',
-          tiedosto: 'My Child Speaks Marlene Dietrich 1930, Erich Salomon.jpg',
-          teksti: 'Marlene Dietrich syntyi 1901 Schönebergin kaupunginosassa ja '
-            + 'nousi maailmantähdeksi berliiniläisen elokuvan Sininen enkeli '
-            + '(1930) myötä — samana vuonna hän muutti Hollywoodiin. Kun '
-            + 'natsihallinto houkutteli häntä takaisin mainoskasvokseen, hän '
-            + 'kieltäytyi, otti Yhdysvaltain kansalaisuuden ja lauloi sen '
-            + 'sijaan rintamalla sotilaille — tunnetuimpana laulun Lili '
-            + 'Marleen, jota kuunneltiin juoksuhaudoissa molemmin puolin. '
-            + 'Berliiniin hän palasi viimeisen kerran arkussa: hauta on '
-            + 'Schönebergissä, äidin haudan vieressä.',
-          lyhyt: 'Marlene Dietrich soittaa Hollywoodista Berliiniin tyttärelleen 1930 Erich Salomonin kuvassa.',
-          selite: 'Marlene Dietrich soittaa Hollywoodista Berliiniin '
-            + 'tyttärelleen 1930, yöpöydällä tyttären valokuva; Erich '
-            + 'Salomonin kuuluisa otos.',
-          lahde: 'Erich Salomon, Wikimedia Commons (Public domain)',
-          wiki: 'Marlene Dietrich',
-          musiikki: 'https://music.apple.com/fi/album/lili-marleen/724182416?i=724182571',
-          musiikkiNimi: 'Marlene Dietrichin lauluja Apple Musicissa',
-          esikuuntelu: 'Marlene Dietrich Lili Marleen',
-        },
       ],
     },
     {
@@ -4216,10 +4138,13 @@ export const KULTTUURI_KATEGORIAT = {
        * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
        *
        * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
-       * ovat nyt kohdekartan jutun `kuvat`-listassa
-       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
-       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
-       * yhtään kuvaa ei pudonnut pelistä.
+       * ovat kohdekartan jutun `kuvat`-listassa (js/packs/nahtavyysjutut.js)
+       * selitteineen ja lähteineen. Erässä 10 tämä oli kiertotie, koska
+       * nostokortti ei tuntenut `galleria`-kenttää; 14.9.2026 kortti sai
+       * sille ensiluokkaisen tuen (js/fokusnosto.js piirraNostonKuvasarja),
+       * ja samat kuvat ovat nyt myös noston omassa `galleria`-kentässä
+       * (js/packs/fokusvirta-*.js). Yhtään kuvaa ei pudonnut pelistä
+       * kummassakaan vaiheessa.
        *
        * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
        * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
@@ -7811,10 +7736,13 @@ export const KULTTUURI_KATEGORIAT = {
        * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
        *
        * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
-       * ovat nyt kohdekartan jutun `kuvat`-listassa
-       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
-       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
-       * yhtään kuvaa ei pudonnut pelistä.
+       * ovat kohdekartan jutun `kuvat`-listassa (js/packs/nahtavyysjutut.js)
+       * selitteineen ja lähteineen. Erässä 10 tämä oli kiertotie, koska
+       * nostokortti ei tuntenut `galleria`-kenttää; 14.9.2026 kortti sai
+       * sille ensiluokkaisen tuen (js/fokusnosto.js piirraNostonKuvasarja),
+       * ja samat kuvat ovat nyt myös noston omassa `galleria`-kentässä
+       * (js/packs/fokusvirta-*.js). Yhtään kuvaa ei pudonnut pelistä
+       * kummassakaan vaiheessa.
        *
        * YKSI NOSTO JÄI: "Verotettiin julkisivun leveydestä" pysyy sivulla,
        * koska se on kaupungin KULTTUURIVISAN lähdejuttu
@@ -7961,10 +7889,13 @@ export const KULTTUURI_KATEGORIAT = {
        * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
        *
        * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
-       * ovat nyt kohdekartan jutun `kuvat`-listassa
-       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
-       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
-       * yhtään kuvaa ei pudonnut pelistä.
+       * ovat kohdekartan jutun `kuvat`-listassa (js/packs/nahtavyysjutut.js)
+       * selitteineen ja lähteineen. Erässä 10 tämä oli kiertotie, koska
+       * nostokortti ei tuntenut `galleria`-kenttää; 14.9.2026 kortti sai
+       * sille ensiluokkaisen tuen (js/fokusnosto.js piirraNostonKuvasarja),
+       * ja samat kuvat ovat nyt myös noston omassa `galleria`-kentässä
+       * (js/packs/fokusvirta-*.js). Yhtään kuvaa ei pudonnut pelistä
+       * kummassakaan vaiheessa.
        *
        * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
        * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,
@@ -12471,18 +12402,20 @@ export const KULTTUURI_KATEGORIAT = {
        * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
        *
        * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
-       * ovat nyt kohdekartan jutun `kuvat`-listassa
-       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
-       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
-       * yhtään kuvaa ei pudonnut pelistä.
+       * ovat kohdekartan jutun `kuvat`-listassa (js/packs/nahtavyysjutut.js)
+       * selitteineen ja lähteineen. Erässä 10 tämä oli kiertotie, koska
+       * nostokortti ei tuntenut `galleria`-kenttää; 14.9.2026 kortti sai
+       * sille ensiluokkaisen tuen (js/fokusnosto.js piirraNostonKuvasarja),
+       * ja samat kuvat ovat nyt myös noston omassa `galleria`-kentässä
+       * (js/packs/fokusvirta-*.js). Yhtään kuvaa ei pudonnut pelistä
+       * kummassakaan vaiheessa.
        *
-       * YKSI NOSTO JÄI: "Kolikko olan yli" pysyy sivulla, koska sillä on
-       * musiikki- tai äänikenttä, jolle ei ole paikkaa nostokortilla eikä
-       * kohdekartan jutussa — siirto pudottaisi linkin tai näytteen pelistä
-       * kokonaan. Sama teksti on nyt myös kartalla nostona
-       * `rooman-kolikko`; kaksoiskappale purkautuu sinä päivänä, kun
-       * kansisivu jää pois ja visa siirtyy ison pop-upin loppuun
-       * (suunnitelman luku 4.7, js/lehti.js — ei tämän erän tiedosto).
+       * MUSIIKKINOSTO SIIRTYI KOKONAAN (14.9.2026). "Kolikko olan yli" oli erässä 10 jäänyt tälle sivulle kaksoiskappaleeksi, koska sen
+       * musiikki- ja äänikentille ei ollut paikkaa nostokortilla. Kortti
+       * piirtää ne nyt samoilla napeilla kuin lehti (js/fokusnosto.js
+       * piirraNostonMedia → js/ui.js lisaaNostonNapit), joten nosto asuu
+       * enää kartalla tunnuksella `rooman-kolikko` — sivun
+       * kaksoiskappale purettiin.
        *
        * YKSI NOSTO JÄI: "Norsu kantaa obeliskia" pysyy sivulla, koska se on
        * kaupungin KULTTUURIVISAN lähdejuttu (js/packs/europe-kulttuuri.js),
@@ -12498,25 +12431,6 @@ export const KULTTUURI_KATEGORIAT = {
        * tehtävät hiljaa väärille sivuille.
        */
       nostot: [
-        {
-          otsikko: 'Kolikko olan yli',
-          tiedosto: 'Trevi Fountain - Roma.jpg',
-          teksti: 'Trevin lähteeseen heitetään kolikko oikealla kädellä vasemman '
-            + 'olan yli: tarinan mukaan se takaa paluun Roomaan. Kolikoita '
-            + 'putoaa veteen noin kolmentuhannen euron edestä joka päivä, ja '
-            + 'ne kerätään pohjasta talteen. Rahat lahjoitetaan Caritakselle '
-            + 'hyväntekeväisyyteen — ruoka-apuun kaupungin vähävaraisille. '
-            + 'Omaa kolikkoa ei saa noukkia takaisin: se on kiellettyä, ja '
-            + 'yrittäjiä jää säännöllisesti kiinni.',
-          lyhyt: 'Fontana di Trevi on Palazzo Poli -palatsin päätyseinä, jonka kaaren alla seisoo merenjumala Oceanus.',
-          selite: 'Fontana di Trevi ei ole erillinen muistomerkki vaan '
-            + 'Palazzo Poli -palatsin päätyseinä, jonka kaaren alla seisoo '
-            + 'meren jumala Oceanus.',
-          lahde: 'NikonZ7II, Wikimedia Commons (CC BY-SA 4.0)',
-          wiki: 'Trevin suihkulähde',
-          aani: 'https://archive.org/download/aporee_15080_17587/WalkingtoPantheonFountainRome.mp3',
-          aaniLahde: '"Walking to Pantheon Fountain, Rome" — Rolf Yngve, radio aporee (public domain)',
-        },
         {
           otsikko: 'Norsu kantaa obeliskia',
           tiedosto: 'Elephant and Obelisk.jpg',
@@ -12669,10 +12583,13 @@ export const KULTTUURI_KATEGORIAT = {
        * js/packs/maakartat.js, jutut js/packs/nahtavyysjutut.js).
        *
        * GALLERIAT SEURASIVAT MUKANA: siirtyneiden nostojen `galleria`-kuvat
-       * ovat nyt kohdekartan jutun `kuvat`-listassa
-       * (js/packs/nahtavyysjutut.js) selitteineen ja lähteineen —
-       * nostokortti ei tunne galleriaa, mutta jutun kuvalista tuntee, joten
-       * yhtään kuvaa ei pudonnut pelistä.
+       * ovat kohdekartan jutun `kuvat`-listassa (js/packs/nahtavyysjutut.js)
+       * selitteineen ja lähteineen. Erässä 10 tämä oli kiertotie, koska
+       * nostokortti ei tuntenut `galleria`-kenttää; 14.9.2026 kortti sai
+       * sille ensiluokkaisen tuen (js/fokusnosto.js piirraNostonKuvasarja),
+       * ja samat kuvat ovat nyt myös noston omassa `galleria`-kentässä
+       * (js/packs/fokusvirta-*.js). Yhtään kuvaa ei pudonnut pelistä
+       * kummassakaan vaiheessa.
        *
        * OSASTO ITSE JÄÄ: sivu, sen johdanto ja lehtitehtävät ovat lehden
        * rakennetta (lehtitehtävät on ankkuroitu SIVUNUMEROON,

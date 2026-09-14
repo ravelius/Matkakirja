@@ -542,7 +542,11 @@ test('kortin sulku purkaa kuvaesittelyn ikkunakuuntelijat', () => {
 test('galleriat eivät rakenna kuvaa uudelleen vaiheenvaihdossa', () => {
   // Valmis kehys tulee sellaisenaan: gallerian oma `nayta` ei saa
   // kirjoittaa src:ää ensimmäisellä piirrolla (nayta(false)).
-  for (const polku of ['js/skandaalit.js', 'js/historian-hetket.js']) {
+  //
+  // js/skandaalit.js EI ole listalla 14.9.2026 jälkeen: sen kuvasarja on
+  // nyt kortin yhteinen toteutus (js/fokusnosto.js piirraNostonKuvasarja),
+  // ja sääntöä vahditaan siellä — skandaalikortti käyttää samaa koodia.
+  for (const polku of ['js/fokusnosto.js', 'js/historian-hetket.js']) {
     const src = lue(polku);
     assert.ok(/nayta\(!valmis(Kehys|Kuva)\)/.test(src),
       `${polku}: valmiin kehyksen src:ää ei saa kirjoittaa uudestaan`);

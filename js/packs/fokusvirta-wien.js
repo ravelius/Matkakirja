@@ -834,6 +834,23 @@ export const FOKUSVIRTA_WIEN = {
           + 'ikkunoineen, ja ratas kulkee 2,7 kilometriä tunnissa.',
         lahde: 'Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 4.0)',
       },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Sama kuvasarja
+       * kuin lehden nostolla, josta tämä kortti kirjoitettiin: erässä 10
+       * se jäi siirtämättä, koska nostokortti ei tuntenut `galleria`-
+       * kenttää. Nyt tuntee (js/fokusnosto.js piirraNostonKuvasarja).
+       */
+      galleria: [
+        {
+          otsikko: 'Koko ratas kerralla',
+          tiedosto: 'Wiener Riesenrad DSC02378.JPG',
+          lyhyt: 'Jättiratas on kolmikymmenkulmio; 1945 palon jälkeen vaunuja ripustettiin takaisin vain viisitoista.',
+          selite: 'Jättiratas ei ole ympyrä vaan kolmikymmenkulmio, ja '
+            + 'vuoden 1945 palon jälkeen vaunuja ripustettiin takaisin '
+            + 'vain viisitoista, joka toiseen kulmaan.',
+          lahde: 'David Monniaux, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       kysymykset: [
         'Miksi rattaan kehästä tehtiin kolmikymmenkulmio eikä pyöreää?',
         'Miksi vaunuja ripustettiin sodan jälkeen takaisin vain puolet?',
@@ -921,6 +938,35 @@ export const FOKUSVIRTA_WIEN = {
           + 'kupoliksi.',
         lahde: 'Karl Friedrich Schinkel, Wikimedia Commons (PD)',
       },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Sama kuvasarja
+       * kuin lehden nostolla, josta tämä kortti kirjoitettiin: erässä 10
+       * se jäi siirtämättä, koska nostokortti ei tuntenut `galleria`-
+       * kenttää. Nyt tuntee (js/fokusnosto.js piirraNostonKuvasarja).
+       */
+      galleria: [
+        {
+          otsikko: 'Papagenon portti',
+          tiedosto: 'Theater an der Wien.jpg',
+          lyhyt: 'Theater an der Wienin portilla Schikaneder on kuvattu höyhenpukuisena Taikahuilun jatko-osasta.',
+          selite: 'Theater an der Wienin sivuportin päällä Emanuel '
+            + 'Schikaneder on veistetty höyhenpukuisena soittamassa '
+            + 'pillejään Taikahuilun jatko-osan Das Labyrinth '
+            + 'kohtauksessa.',
+          lahde: 'Yair Haklai, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      /*
+       * MUSIIKKI JA ÄÄNI KORTILLE (avoin kohta 11.1, 14.9.2026). Erässä 10
+       * tämä nosto jäi lehden sivulle kaksoiskappaleeksi vain siksi, että
+       * musiikkilinkille ja ääninäytteelle ei ollut paikkaa kortilla.
+       * Kortti piirtää ne nyt SAMOILLA napeilla kuin lehti (js/ui.js
+       * lisaaNostonNapit), joten sivulta jäänyt kaksoiskappale purkautui.
+       */
+      musiikki: 'https://music.apple.com/fi/search?term=Mozart%20Zauberfl%C3%B6te%20K%C3%B6nigin%20der%20Nacht',
+      musiikkiNimi: 'Taikahuilu Apple Musicissa',
+      musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/transcoded/d/de/W._A._Mozart_-_Die_Zauberfl%C3%B6te_-_18._Der_H%C3%B6lle_Rache_kocht_in_meinem_Herzen_%28Ferenc_Fricsay%2C_1953%29.ogg/W._A._Mozart_-_Die_Zauberfl%C3%B6te_-_18._Der_H%C3%B6lle_Rache_kocht_in_meinem_Herzen_%28Ferenc_Fricsay%2C_1953%29.ogg.mp3',
+      musiikkiNayteNimi: 'Mozart: Yön kuningattaren aaria — johtaa Ferenc Fricsay, äänitetty 1953 (PD)',
       kysymykset: [
         'Miksi Mozartin viimeinen ooppera syntyi esikaupungin teatteriin '
           + 'eikä hoville?',
@@ -971,6 +1017,17 @@ export const FOKUSVIRTA_WIEN = {
           + '1899, hänen viimeisenä elinvuotenaan.',
         lahde: 'Fritz Luckhardt, Wikimedia Commons (PD)',
       },
+      /*
+       * MUSIIKKI JA ÄÄNI KORTILLE (avoin kohta 11.1, 14.9.2026). Erässä 10
+       * tämä nosto jäi lehden sivulle kaksoiskappaleeksi vain siksi, että
+       * musiikkilinkille ja ääninäytteelle ei ollut paikkaa kortilla.
+       * Kortti piirtää ne nyt SAMOILLA napeilla kuin lehti (js/ui.js
+       * lisaaNostonNapit), joten sivulta jäänyt kaksoiskappale purkautui.
+       */
+      musiikki: 'https://music.apple.com/fi/search?term=Johann%20Strauss%20Donauwalzer',
+      musiikkiNimi: 'Tonava kaunoinen Apple Musicissa',
+      musiikkiNayte: 'https://upload.wikimedia.org/wikipedia/commons/d/de/%22An_der_sch%C3%B6nen%2C_blauen_Donau%22%2C_performed_by_the_US_Marine_Band.mp3',
+      musiikkiNayteNimi: 'Strauss: Tonava kaunoinen — United States Marine Band (PD)',
       kysymykset: [
         'Miksi valssi tehtiin ensin mieskuorolle eikä orkesterille?',
         'Miten etuajassa tuleva toinen isku opitaan, jos sitä ei voi laskea?',

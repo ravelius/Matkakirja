@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1861, teksti: 'Nostokortti: galleria ja musiikki, Wienin johdanto' },
   { v: 1860, teksti: 'Tyohuoneen tilannekortti ajan tasalle' },
   { v: 1859, teksti: 'Osumareititys: vihjepiste ei jaa kaupungin alle' },
   { v: 1858, teksti: 'Tasoituslaatat maakohtaiseen polkuun, haive ulospain' },

@@ -23,6 +23,13 @@
  *      leipäteksti on SANATARKASTI noston oma `lunastus`.
  *   5. KAUPUNKILEHTI AVAUTUU YHÄ ja sen kohdekartta piirtää pisteensä.
  *   6. MINIKYSYMYKSEN VASTAUS ON SAMAN KORTIN TEKSTISSÄ sanatarkasti.
+ *   7. GALLERIA ON KORTIN OMA: `galleria`-kenttäinen nosto saa
+ *      selailunuolet ja laskurin, ja nuoli vaihtaa kuvan selitteineen.
+ *   8. MUSIIKKI JA ÄÄNI OVAT KORTIN OMIA: mediakenttäinen nosto saa
+ *      mediarivin samoilla napeilla kuin lehden sivu.
+ *   9. VASTAKOE (väite): kun `galleria`- ja mediakentät poistetaan
+ *      ajossa, nuolet, laskuri ja mediarivi katoavat kortilta —
+ *      vartiot 7–8 mittaavat siis juuri niitä kenttiä.
  *
  * Vartiot 0–3 ja 6 ajetaan Nodessa pelin omilla funktioilla
  * (tools/tarkista-nostopaikat.mjs), vartiot 4–5 selaimessa pallolaudalla.
@@ -74,6 +81,18 @@ const KAUPUNGIT = valinta ? KAIKKI_KAUPUNGIT.filter((k) => valinta.has(k.id)) : 
 const PAAKARTAN_LAHTOTASO = {
   GBR: 20, ITA: 22, DEU: 28, ESP: 25, AUT: 20, NLD: 20,
 };
+
+/**
+ * Kortin mediakentät (js/ui.js lisaaNostonNapit). `musiikkiNimi` ja
+ * `musiikkiNayteNimi` ovat selitteitä eivätkä yksin tuota nappia.
+ */
+const MEDIAKENTAT = ['aani', 'musiikki', 'musiikkiNayte', 'esikuuntelu'];
+/**
+ * Nostot, joista otetaan kuvakaappaus docs/raportit/kuvat/nostot-*.png:
+ * kuusikuvainen galleria ja kortti, jolla on sekä galleria että musiikki.
+ */
+const KUVANOSTOT = new Set(['gaertnerin-berliini', 'goyan-kansankuvat',
+  'taikahuilu-wiedenissa', 'marlene-dietrich']);
 
 /** Erässä 10 siirretyt nostot: tunnus luetaan lähderiviltä. */
 const ERAN_MERKKI = 'karttauudistuksen erässä 10';
@@ -266,9 +285,35 @@ for (const { id, nakyma } of KAUPUNGIT) {
   vaadi(`1c. ${id}: yksikään uusi nosto ei ole pallon osumissa`,
     uudet.every((n) => !osumat.includes(`nosto-${n.id}`)), osumat.join(', '));
 
-  const avaaKortti = (nostoId) => sivu.evaluate(async (tunnus) => {
+  /**
+   * Kortti auki tunnuksesta.
+   *
+   * `riisu: true` poistaa nostolta `galleria`- ja mediakentät VAIN
+   * tämän avauksen ajaksi ja palauttaa ne heti perään — se on vartioiden
+   * 7–8 vastakoe (ks. vartio 9).
+   */
+  const avaaKortti = (nostoId, riisu = false) => sivu.evaluate(async ([tunnus, riisuKentat]) => {
+    const MEDIA = ['aani', 'musiikki', 'musiikkiNimi', 'musiikkiNayte',
+      'musiikkiNayteNimi', 'esikuuntelu'];
     for (const el of document.querySelectorAll('.fokusnosto-kerros')) el.remove();
     const { avaaNostonTunnuksella } = await import('/js/fokusnosto.js');
+    const { FOKUSVIRRAT } = await import('/js/packs/fokusvirrat.js');
+    let talteen = null;
+    let kohde = null;
+    if (riisuKentat) {
+      for (const virta of Object.values(FOKUSVIRRAT)) {
+        kohde = (virta?.takynostot ?? []).find((n) => n.id === tunnus) ?? kohde;
+        if (kohde) break;
+      }
+      if (kohde) {
+        talteen = {};
+        for (const kentta of ['galleria', ...MEDIA]) {
+          if (kohde[kentta] === undefined) continue;
+          talteen[kentta] = kohde[kentta];
+          delete kohde[kentta];
+        }
+      }
+    }
     const loytyi = avaaNostonTunnuksella(window.matkakirja.ui, tunnus);
     await new Promise((v) => setTimeout(v, 400));
     const lisaa = document.querySelector('.fokusnosto-kortti .nostokuva-lisaa');
@@ -276,13 +321,30 @@ for (const { id, nakyma } of KAUPUNGIT) {
     const kortti = document.querySelector('.fokusnosto-kortti');
     const kappaleet = [...(kortti?.querySelectorAll('.fokusnosto-teksti p') ?? [])]
       .map((p) => p.textContent.trim());
-    return {
+    const laskuri = kortti?.querySelector('.nostosarja-kuvalaskuri');
+    const selite = () => (kortti?.querySelector('.nostokuva-teksti')
+      ?? kortti?.querySelector('.fokusnosto-kuvaselite'))?.textContent?.trim() ?? '';
+    const ennen = { laskuri: laskuri?.textContent?.trim() ?? '', selite: selite() };
+    // Selailu: seuraava-nuoli vaihtaa kuvan, laskurin ja selitteen.
+    const seuraava = kortti?.querySelector('.nostosarja-kuvanuoli.seuraava');
+    if (seuraava) { seuraava.click(); await new Promise((v) => setTimeout(v, 300)); }
+    const jalkeen = { laskuri: laskuri?.textContent?.trim() ?? '', selite: selite() };
+    const media = kortti?.querySelector('.fokusnosto-media');
+    const tulos = {
       loytyi,
       otsikko: kortti?.querySelector('.fokusnosto-kortti-otsikko')?.textContent?.trim() ?? '',
       kappaleet,
       visa: Boolean(kortti?.querySelector('.fokusnosto-visa')),
+      nuolia: kortti?.querySelectorAll('.nostosarja-kuvanuoli').length ?? 0,
+      ennen,
+      jalkeen,
+      media: Boolean(media),
+      mediaNappeja: media?.querySelectorAll('.kulttuuri-kuuntele').length ?? 0,
+      mediaLinkkeja: media?.querySelectorAll('.kulttuuri-musiikkilinkki').length ?? 0,
     };
-  }, nostoId);
+    if (talteen && kohde) Object.assign(kohde, talteen);
+    return tulos;
+  }, [nostoId, riisu]);
 
   for (const nosto of uudet) {
     const kortti = await avaaKortti(nosto.id);
@@ -301,6 +363,81 @@ for (const { id, nakyma } of KAUPUNGIT) {
       JSON.stringify({ loytyi: kortti.loytyi, kappaleita: kortti.kappaleet.length }));
     vaadi(`4b. ${nosto.id}: kortin teksti täsmää lähteeseen sanatarkasti`, tasmaa,
       tasmaa ? '' : `ero kohdassa ${[...saatu].findIndex((c, i) => c !== odotettu[i])}`);
+  }
+
+  /* ========== VARTIOT 7–9: GALLERIA JA MUSIIKKI KORTILLA ========== */
+
+  const kaupunginNostot = FOKUSVIRRAT[id]?.takynostot ?? [];
+  const galleriset = kaupunginNostot.filter((n) => n.galleria?.length);
+  const mediaiset = kaupunginNostot.filter((n) => MEDIAKENTAT.some((k) => n[k]));
+  tieto(`${id}: gallerianostoja / mediaanostoja`,
+    `${galleriset.length} / ${mediaiset.length}`);
+  /*
+   * KENTTIEN ON OLTAVA DATASSA. Ilman tätä vartiot 7–9 katoaisivat
+   * hiljaa, jos `galleria`- ja mediakentät poistuisivat paketeista:
+   * tyhjä silmukka ei väitä mitään.
+   */
+  vaadi(`7c. ${id}: kaupungissa on galleria- tai mediakenttäisiä nostoja`,
+    galleriset.length + mediaiset.length > 0,
+    `galleriset ${galleriset.length}, mediaiset ${mediaiset.length}`);
+
+  for (const nosto of galleriset) {
+    const kortti = await avaaKortti(nosto.id);
+    const odotettuKuvia = 1 + nosto.galleria.length;
+    tieto(`${nosto.id}: galleria`,
+      `nuolia ${kortti.nuolia}, laskuri ${kortti.ennen.laskuri} → ${kortti.jalkeen.laskuri}`);
+    vaadi(`7. ${nosto.id}: gallerian selailunuolet ja laskuri ovat kortilla`,
+      kortti.nuolia === 2 && kortti.ennen.laskuri === `1 / ${odotettuKuvia}`,
+      `nuolia ${kortti.nuolia}, laskuri "${kortti.ennen.laskuri}"`);
+    vaadi(`7b. ${nosto.id}: nuoli vaihtaa kuvaa ja selitettä`,
+      kortti.jalkeen.laskuri === `2 / ${odotettuKuvia}`
+        && kortti.jalkeen.selite !== kortti.ennen.selite,
+      JSON.stringify({ ennen: kortti.ennen, jalkeen: kortti.jalkeen }));
+    if (KUVAKANSIO && KUVANOSTOT.has(nosto.id)) {
+      await sivu.locator('.fokusnosto-kortti').screenshot({
+        path: join(KUVAKANSIO, `nostot-galleria-${nosto.id}.png`), scale: 'css',
+      });
+    }
+  }
+
+  for (const nosto of mediaiset) {
+    const kortti = await avaaKortti(nosto.id);
+    const linkkeja = nosto.musiikki ? 1 : 0;
+    tieto(`${nosto.id}: mediarivi`,
+      `nappeja ${kortti.mediaNappeja}, linkkejä ${kortti.mediaLinkkeja}`);
+    vaadi(`8. ${nosto.id}: musiikki- ja äänikentät ovat kortin mediarivillä`,
+      kortti.media && kortti.mediaNappeja + kortti.mediaLinkkeja > 0
+        && kortti.mediaLinkkeja === linkkeja,
+      JSON.stringify({
+        rivi: kortti.media, nappeja: kortti.mediaNappeja, linkkeja: kortti.mediaLinkkeja,
+      }));
+    if (KUVAKANSIO && KUVANOSTOT.has(nosto.id)) {
+      await sivu.locator('.fokusnosto-kortti').screenshot({
+        path: join(KUVAKANSIO, `nostot-media-${nosto.id}.png`), scale: 'css',
+      });
+    }
+  }
+
+  /*
+   * VASTAKOE. Sama kortti ilman `galleria`- ja mediakenttiä: nuolten,
+   * laskurin ja mediarivin on KADOTTAVA. Jos ne jäisivät, vartiot 7–8
+   * eivät mittaisi kenttiä vaan jotain muuta.
+   */
+  const koekohde = galleriset.find((n) => MEDIAKENTAT.some((k) => n[k]))
+    ?? galleriset[0] ?? mediaiset[0];
+  if (koekohde) {
+    const riisuttu = await avaaKortti(koekohde.id, true);
+    const takaisin = await avaaKortti(koekohde.id);
+    tieto(`${id}: vastakoe ${koekohde.id}`,
+      `riisuttuna nuolia ${riisuttu.nuolia}, mediarivi ${riisuttu.media}`);
+    vaadi(`9. ${id}: VASTAKOE — kenttien poisto vie nuolet ja mediarivin`,
+      riisuttu.loytyi && riisuttu.nuolia === 0 && riisuttu.media === false
+        && riisuttu.kappaleet.length > 0,
+      JSON.stringify({ nuolia: riisuttu.nuolia, media: riisuttu.media }));
+    vaadi(`9b. ${id}: kentät palautuivat vastakokeen jälkeen`,
+      takaisin.nuolia === (koekohde.galleria?.length ? 2 : 0)
+        && takaisin.media === MEDIAKENTAT.some((k) => koekohde[k]),
+      JSON.stringify({ nuolia: takaisin.nuolia, media: takaisin.media }));
   }
 
   const lehti = await sivu.evaluate(async () => {

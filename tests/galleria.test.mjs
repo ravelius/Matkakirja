@@ -113,7 +113,10 @@ test('CSS-muuttuja ja JS-vakio kertovat saman luvun', () => {
 test('nuolialueet lukevat muuttujaa eivätkä omaa prosenttilukuaan', () => {
   const kohteet = [
     ['css/styles.css', '.dialog button.arrival-kuva-nuoli'],
-    ['css/fokusnosto.css', '.hetki-kuvanuoli,\n.skandaali-kuvanuoli'],
+    // Kortin kolmas selailunuoli on täkynoston oma kuvasarja
+    // (js/fokusnosto.js piirraNostonKuvasarja, 14.9.2026): sama sääntö,
+    // sama muuttuja, joten se kuuluu samaan valitsinryhmään.
+    ['css/fokusnosto.css', '.hetki-kuvanuoli,\n.skandaali-kuvanuoli,\n.nostosarja-kuvanuoli'],
   ];
   for (const [tiedosto, valitsin] of kohteet) {
     const css = lue(tiedosto);
