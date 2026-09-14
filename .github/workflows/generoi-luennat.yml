@@ -197,6 +197,17 @@ jobs:
         if: ${{ inputs.avaus == true }}
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          # RAAKAVIENTI tarvitsee R2:n jo generointivaiheessa (omistajan
+          # sääntö 14.9.2026): mallin tuotos menee ämpäriin ennen mitään
+          # käsittelyä, joten salaisuudet eivät voi enää olla vain
+          # myöhemmän vientiaskeleen ympäristössä.
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
         run: node tools/generoi-avaus.mjs
 
       - name: Varaa muuttumaton Horatio-erä ennen maksullista ajoa
@@ -284,6 +295,17 @@ jobs:
         if: ${{ inputs.kaaret != '' }}
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          # RAAKAVIENTI tarvitsee R2:n jo generointivaiheessa (omistajan
+          # sääntö 14.9.2026): mallin tuotos menee ämpäriin ennen mitään
+          # käsittelyä, joten salaisuudet eivät voi enää olla vain
+          # myöhemmän vientiaskeleen ympäristössä.
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
         run: node tools/generoi-kaari.mjs --mykistetyt ${{ inputs.kaaret }}
 
       # Kuuntelukopio ajon liitteenä. Tämä on ENNEN vientiä: jos vienti

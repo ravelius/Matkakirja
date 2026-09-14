@@ -31,6 +31,11 @@ import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
 import { MPEGDecoder } from 'mpg123-decoder';
 
+import {
+  eratunnus, kokoaRaakakuitti, lahdeCommit, raakaAmpariKansio, sha256,
+  vaadiRaakavienti, vieKuitti, vieRaaka,
+} from './raakavienti.mjs';
+
 // lamejs-paketissa on tunnettu "MPEGMode is not defined" -bugi
 // Node-käytössä: sisäiset moduulit viittaavat paljaisiin globaaleihin.
 // Kierto: määritellään globaalit ennen päämoduulin latausta.
@@ -146,10 +151,33 @@ function hiljaisuus(sr) {
   return Buffer.concat(osat);
 }
 
+/*
+ * RAAKAVIENTI ON PAKOLLINEN (omistajan sääntö 14.9.2026, Raamattu:
+ * ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA).
+ *
+ * Tässä putkessa hännän hiljaisuustarkistus voi KAATAA ajon eikä
+ * tiedostoa kirjoiteta lainkaan — vaikka kutsu on jo maksettu. Raaka
+ * viedään siksi ennen tarkistusta: hylätynkin oton voi kuunnella ja
+ * hiljaisuusrajan säätää ilmaiseksi.
+ */
+export const AMPARIN_JUURI = 'audio/avaus';
+vaadiRaakavienti({
+  kuiva: process.argv.includes('--kuiva') || process.env.ELEVEN_KUIVA === '1',
+  vienti: !process.argv.includes('--ei-vientia'),
+});
+
 // Valinnainen suodatin: node tools/generoi-avaus.mjs intro — generoi
 // vain tiedostot, joiden polku sisältää annetun sanan.
-const vain = process.argv.slice(2);
+const vain = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const tyot = TYOT.filter((t) => !vain.length || vain.some((v) => t.tiedosto.includes(v)));
+
+const SOURCE_COMMIT = lahdeCommit();
+const ERA = eratunnus('avaus', {
+  sourceCommit: SOURCE_COMMIT, voiceId: AANI, model: 'eleven_v3', stability: STABILITY,
+  outputFormat: 'mp3_44100_128', lopputauko: LOPPUTAUKO,
+});
+const RAAKA_KANSIO = raakaAmpariKansio(AMPARIN_JUURI, ERA);
+const kuittirivit = [];
 
 for (const tyo of tyot) {
   console.log(`${tyo.tiedosto}: generoidaan (${tyo.luenta.length} merkkiä)…`);
@@ -170,6 +198,15 @@ for (const tyo of tyot) {
     process.exit(1);
   }
   const tavut = Buffer.from(await vastaus.arrayBuffer());
+
+  /*
+   * RAAKA ÄMPÄRIIN ENNEN HÄNTÄTARKISTUSTA: juuri se tarkistus voi
+   * kaataa ajon, ja ilman tätä maksettu otos katoaisi kokonaan.
+   */
+  const perusnimi = tyo.tiedosto.split('/').at(-1);
+  const raaka = vieRaaka(tavut, { nimi: `raaka-${perusnimi}`, kansio: RAAKA_KANSIO });
+  console.log(`  raaka talteen → ${raaka.url}`);
+
   const { kesto, sr, rms, kokoRms } = await tarkistaHanta(tavut);
   console.log(`  kesto ${kesto.toFixed(1)} s, hännän RMS ${rms.toFixed(5)} (koko ${kokoRms.toFixed(5)})`);
   /*
@@ -182,6 +219,7 @@ for (const tyo of tyot) {
   if (rms > Math.max(0.02, kokoRms * 0.2)) {
     console.error(`  HÄNTÄ EI OLE HILJAINEN (RMS ${rms.toFixed(4)}) — `
       + 'kasvata taukoa tai generoi uudelleen. Tiedostoa EI kirjoitettu.');
+    console.error(`  Maksettu otos on silti tallessa: ${raaka.objectKey}`);
     process.exit(1);
   }
   let valmis = tavut;
@@ -197,6 +235,22 @@ for (const tyo of tyot) {
   // checkoutista — luodaan se ennen kirjoitusta.
   mkdirSync(dirname(kohde), { recursive: true });
   writeFileSync(kohde, valmis);
+  kuittirivit.push({
+    fileName: perusnimi,
+    outputPath: tyo.tiedosto,
+    rawArtifact: raaka,
+    finalArtifact: { fileName: perusnimi, sha256: sha256(valmis), bytes: valmis.length },
+  });
   console.log(`  kirjoitettu (${(valmis.length / 1024).toFixed(0)} kt${valmis !== tavut ? ', häntään lisätty ~0,7 s hiljaisuutta' : ''})`);
+}
+if (kuittirivit.length) {
+  const kuitti = vieKuitti(kokoaRaakakuitti({
+    putki: 'avaus',
+    batchId: ERA,
+    sourceCommit: SOURCE_COMMIT,
+    resepti: { voiceId: AANI, model: 'eleven_v3', stability: STABILITY, outputFormat: 'mp3_44100_128' },
+    rivit: kuittirivit,
+  }), AMPARIN_JUURI);
+  console.log(`Kuitti: ${kuitti.objectKey}`);
 }
 console.log('Valmis. Kuuntele molemmat ennen julkaisua.');
