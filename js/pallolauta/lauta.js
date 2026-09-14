@@ -100,9 +100,9 @@ import { KARTTANIMI_KOOT } from '../karttanimet.js';
  * hoitaa vain napautuksen, ankkurin ja merkin paikan pallolla.
  */
 import {
-  asemoiKaupunkipopup, asetteleTuristiInfo, avaaTiivisKaupunkietusivu, avaaTuristiInfo,
+  asemoiKaupunkipopup, asetteleTuristiInfo, avaaTiivisKaupunkietusivu, avaaTuristiOpas,
   kaupunginMatkailijalle, kaupunkimerkinMitta, suljeKaupunkipopup,
-  turistiInfoElementti, turistiInfonAsteet,
+  turistiInfoElementti, turistiInfonAsteet, turistiInfonAsteetRuudulta,
 } from '../kaupunkinosto.js';
 import { NOSTOLADONTA_POLTON_TIHEYS } from '../nostoladonta.js';
 import {
@@ -2659,7 +2659,26 @@ export async function avaaPallolauta(ui) {
     const city = ui.game.cityOf?.();
     if (!city || !kaupunginMatkailijalle(city.id)) return tyhjaa();
     const oma = pallonAsteet({ x: city.x, y: city.y });
-    const paikka = oma ? turistiInfonAsteet(oma.lat, oma.lon) : null;
+    /*
+     * PAIKKA MITATAAN KAMERASTA, EI ARVATA ASTEISTA (erä 11, omistaja
+     * 14.9.2026: *"turisti info nappi pitaisi olla pariisin vieressa"*).
+     * Kolme ruutupistettä kertovat, montako pikseliä yksi aste on juuri
+     * nyt, ja js/kaupunkinosto.js kääntää halutun ruutusiirron asteiksi
+     * (turistiInfonAsteetRuudulta). Ilman näytteitä — kaupunki pallon
+     * takapuolella tai reunalla — palataan asteisiin, jotta merkki on
+     * varmasti jossain eikä katoa.
+     */
+    const naytteet = oma ? {
+      p0: pallo.getScreenCoords(oma.lat, oma.lon, 0),
+      pLat: pallo.getScreenCoords(oma.lat + 1, oma.lon, 0),
+      pLon: pallo.getScreenCoords(oma.lat, oma.lon + 1, 0),
+      dLat: 1,
+      dLon: 1,
+    } : null;
+    const paikka = oma
+      ? (turistiInfonAsteetRuudulta(oma.lat, oma.lon, naytteet)
+        ?? turistiInfonAsteet(oma.lat, oma.lon))
+      : null;
     if (!paikka) return tyhjaa();
     const iso = kohteidenNykyinenIso(ui);
     const laatikko = iso ? maalaatikot.get(iso) : null;
@@ -2685,8 +2704,15 @@ export async function avaaPallolauta(ui) {
        * napautus avasi 39 px:n päässä olevan turisti-infon eikä koskaan
        * kaupungin omaa pop-upia.
        */
+      /*
+       * NAPAUTUS AVAA SUORAAN ISON OPPAAN (omistaja 14.9.2026: *"se
+       * saisi suoraan aueta isoon muotoon (jata pienempi vali popup
+       * pois kokonaan)"*). Välipop-up (avaaTuristiInfo) on poissa tästä
+       * polusta kokonaan, joten ankkuriakaan ei enää tarvita: opas on
+       * modaali arkki eikä merkin viereen asemoitu kortti.
+       */
       avaa: () => {
-        avaaTuristiInfo(ui, city, { ankkuri: ankkuri(paikka.lat, paikka.lon) });
+        avaaTuristiOpas(ui, city);
       },
     }]);
     return merkit.laatikot('turistiinfo');

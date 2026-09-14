@@ -3923,8 +3923,15 @@ export class UI {
    * viewportin yksiköistä. Ei mitään, jos mitta ei eroa CSS:n omasta
    * tuloksesta — inline-arvo vain vahvistaa saman luvun.
    */
-  mitoitaArkki() {
-    const dialog = this.arrivalDialog;
+  mitoitaArkki(arkki = null) {
+    /*
+     * PARAMETRI ON LISÄYS, EI MUUTOS (karttauudistus erä 11): ilman
+     * argumenttia tämä on rivilleen entinen kaupunkilehden mitoittaja.
+     * Argumentilla sama mitta annetaan toiselle lehtiarkille
+     * (js/lehti.js avaaTiivisLehtiarkki), jotta tiivistetyn etusivun
+     * leveys EI ole kopio vaan sama laskutoimitus.
+     */
+    const dialog = arkki ?? this.arrivalDialog;
     if (!dialog?.classList.contains('arkki')) return;
     // Korkeus samalla kertaa: sivunvaihto on juuri se hetki, jolloin
     // kortin mitat kirjoitetaan pikseleinä.

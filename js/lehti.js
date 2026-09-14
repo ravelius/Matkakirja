@@ -2616,3 +2616,164 @@ export function avaaUutinen(ui, uutinen, lahde) {
   ui.lehtitila.kulttuuriKuvaEl = kortti;
   ui.rekisteroiSuurennosNappaimet();
 }
+
+/* ========== LEHDEN KEHYS ILMAN SIVUNAVIGOINTIA (PAATOKSET 11) ========== */
+
+/*
+ * OMISTAJA 14.9.2026 sanatarkasti (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 11 kohta 3): *"kaupunkia klikkaamalla piti avautua
+ * muutettu kaupunkilehti. sisalto on oikea, mutta sen ulkoasu saisi
+ * olla tasmalleen sama kuin kaupunkilehdessa kaikilta osin (myos pop
+ * upin leveys)"*.
+ *
+ * TÄMÄ EI OLE UUSI ULKOASU VAAN SAMA KEHYS. Tiivistetty etusivu
+ * (js/kaupunkinosto.js latoTiivisEtusivu) aukesi PAATOKSET 10:ssä
+ * karttanoston omaan korttiin (`.kaupunkipopup`), jonka leveys, paperi,
+ * kehys ja kirjasimet ovat kartan kalusteen eivätkä lehden. Mitattuna
+ * (Pariisi 390×844): kortti 358,8 px leveä, reunus 12 px pyöristetty,
+ * kirjasin Iowan Old Style, otsikko 18,4 px — kun kaupunkilehti samalla
+ * ruudulla on 390 px leveä, suora leikattu paperi, American Typewriter
+ * ja otsikko 30,4 px.
+ *
+ * KORJAUS EI KOPIOI YHTÄÄN TYYLIÄ. Tämä funktio avaa SAMAN
+ * `<dialog class="dialog lehti arkki">` -kehyksen samoine
+ * `.dialog-card.arrival-card` -luokkineen ja samoine
+ * `.arrival-palstat > .arrival-palsta` -palstoineen kuin kaupunkilehti
+ * (index.html #arrival-dialog), ja leveys kirjoitetaan samalla
+ * `ui.mitoitaArkki`lla. Jokainen mitta tulee siis css/styles.css:n
+ * omista `.dialog.arkki`- ja `.dialog.lehti`-säännöistä — jos lehden
+ * ulkoasu joskus muuttuu, tämä muuttuu mukana ilman toista muokkausta.
+ *
+ * VANHA LEHTI EI TIEDÄ TÄSTÄ MITÄÄN. Kehys on OMA elementtinsä eikä
+ * #arrival-dialog: kaupunkilehden sivupino, `ui.lehtitila` ja sen
+ * kymmenet kiinteät id-elementit jäävät koskematta, eikä tämän kortin
+ * avaaminen tai sulkeminen voi jättää niihin tilaa. Kaksi sääntöä
+ * css/styles.css:ssä oli kirjoitettu vain id:lle (#arrival-city,
+ * #arrival-intro); niiden valitsinlistaan on lisätty saman lehden
+ * luokkanimi (.lehti-nimio, .lehti-leipa), joka on nyt myös
+ * index.html:n omissa elementeissä — vanhan elementin id-sääntö on
+ * rivilleen ennallaan, eikä yhtään arvoa ole kopioitu.
+ */
+
+/**
+ * Lehden nimi mastossa. Sama merkkijono kuin index.html:n
+ * #arrival-lehti-ylarivissa (omistajan päätös 8.8.2026); nimi on pelin
+ * oma eikä kaupungin, joten sama masto on kaupunki- ja maalehden yllä.
+ */
+export const LEHDEN_NIMIO = 'Unohdettu aarre';
+
+/**
+ * Maan nimi päiväysriville. Sama haku kuin js/ui.js openArrival tekee
+ * omaan lehtitilaansa (cityCountry → countryShapes), mutta LUKEE vain:
+ * tiivis arkki ei kirjoita riviäkään kaupunkilehden tilaan.
+ */
+export function lehdenMaanNimi(ui, city) {
+  const iso = city?.id ? ui?.game?.pack?.map?.cityCountry?.[city.id] : null;
+  return (iso ? ui.game.pack.map?.countryShapes?.[iso]?.nimi : null) ?? null;
+}
+
+/** Kehyksen tunnus DOMissa (yksi elementti koko pelin ajaksi). */
+export const LEHTIARKIN_TUNNUS = 'tiivis-lehtiarkki';
+/** Kehyksen oma luokka savukkeille ja tyyleille. */
+export const LEHTIARKIN_LUOKKA = 'tiivis-lehtiarkki';
+
+/** Onko tiivis lehtiarkki auki? */
+export function tiivisLehtiarkkiAuki() {
+  const d = typeof document === 'undefined' ? null : document.getElementById(LEHTIARKIN_TUNNUS);
+  return d?.open ? d : null;
+}
+
+/** Sulkee tiiviin lehtiarkin, jos se on auki. */
+export function suljeTiivisLehtiarkki() {
+  tiivisLehtiarkkiAuki()?.close();
+}
+
+/**
+ * Kaupunkilehden kehys ILMAN sivunavigointia: sama arkki, sama leveys,
+ * sama paperi ja typografia, mutta yksi sivu eikä pinoa.
+ *
+ * `lato(ui, palsta, city)` täyttää lehden palstan — kaikki sisältö
+ * tulee kutsujalta, joten tämä funktio ei tiedä eikä päätä mitään
+ * sisällöstä. Palauttaa dialogin.
+ */
+export function avaaTiivisLehtiarkki(ui, city, lato) {
+  if (typeof document === 'undefined' || !city) return null;
+  sfx.play('paper');
+  let dialogi = document.getElementById(LEHTIARKIN_TUNNUS);
+  if (!dialogi) {
+    dialogi = document.createElement('dialog');
+    dialogi.id = LEHTIARKIN_TUNNUS;
+    // Samat kolme luokkaa kuin kaupunkilehdellä sen ollessa auki
+    // (js/ui.js openArrival: 'arkki', rakennaSivut: 'lehti').
+    dialogi.className = `dialog lehti arkki ${LEHTIARKIN_LUOKKA}`;
+    const kortti = html('div', 'dialog-card arrival-card');
+    kortti.tabIndex = -1;
+    const palstat = html('div', 'arrival-palstat');
+    palstat.appendChild(html('div', 'arrival-palsta'));
+    kortti.appendChild(palstat);
+    dialogi.appendChild(kortti);
+    document.body.appendChild(dialogi);
+    /*
+     * Sulku taustaa napauttamalla — sama sopimus kuin nähtävyysarkilla
+     * (js/nahtavyydet.js avaaNahtavyys): kortti täyttää dialogin, joten
+     * dialogiin itseensä osuva napautus tulee vain reunan ulkopuolelta.
+     */
+    dialogi.addEventListener('click', (tapahtuma) => {
+      if (tapahtuma.target !== dialogi) return;
+      sfx.play('paper');
+      dialogi.close();
+    });
+  }
+  const palsta = dialogi.querySelector('.arrival-palsta');
+  palsta.replaceChildren();
+  /*
+   * Sulkunappi on kartan kortin oma ✕ eikä lehden alanappirivi: lehden
+   * uloskäynti on sivunavigointi, joka on juuri se, mitä tästä
+   * kortista puuttuu. Nappi on absoluuttinen eikä osa palstan virtaa,
+   * joten se ei muuta yhtään mittaa.
+   */
+  const sulje = html('button', 'lehti-arkkinappi tiivis-lehtiarkki-sulje', '✕');
+  sulje.type = 'button';
+  sulje.title = 'Sulje';
+  sulje.setAttribute('aria-label', `Sulje ${city.name ?? ''}`.trim());
+  sulje.addEventListener('click', () => {
+    sfx.play('paper');
+    dialogi.close();
+  });
+  /*
+   * LEHDEN MASTO (Fablen päätös 14.9.2026: *"'Täsmälleen sama ulkoasu
+   * kaikilta osin' kattaa lehden maston (kicker + päiväysrivi) samoilla
+   * piirtäjillä kuin vanhassa lehdessä, herokuvien yläpuolelle kuten
+   * vanhassa."*).
+   *
+   * KOLME RIVIÄ SAMASSA JÄRJESTYKSESSÄ KUIN index.html:ssä: kicker
+   * (.lehti-ylarivi), nimiö (h2) ja päiväysrivi (.lehti-alarivi).
+   * Luokat ovat lehden omat ja niiden säännöt ovat jo css/styles.css:ssä
+   * PELKKINÄ LUOKKINA (.lehti-ylarivi, .lehti-alarivi, .pvm-maa) — tähän
+   * ei siis tarvittu yhtään uutta valitsinta eikä yhtään tyyliarvoa.
+   *
+   * TEKSTIT OVAT SAMAT KUIN VANHASSA LEHDESSÄ, EI UUTTA SISÄLTÖÄ:
+   * kicker on lehden nimi (LEHDEN_NIMIO) ja päiväysrivi sama kahden
+   * osan rivi kuin `rakennaSivut` latoo — maan nimi omassa spanissaan ja
+   * matkapäivän numero pelistä. Liitelinkkiä (.maa-linkki) EI ole: se on
+   * alaosan navigointia, jonka omistaja rajasi pois erässä 10.
+   */
+  palsta.appendChild(html('p', 'lehti-ylarivi', LEHDEN_NIMIO));
+  const nimio = html('h2', 'lehti-nimio', city.name ?? '');
+  nimio.appendChild(sulje);
+  palsta.appendChild(nimio);
+  const pvm = html('p', 'lehti-alarivi');
+  const maanNimi = lehdenMaanNimi(ui, city);
+  if (maanNimi) pvm.appendChild(html('span', 'pvm-maa', `${maanNimi} · `));
+  pvm.appendChild(document.createTextNode(`${ui.game?.dayCount?.() ?? 1}. matkapäivä`));
+  palsta.appendChild(pvm);
+  lato(ui, palsta, city);
+  if (!dialogi.open) dialogi.showModal();
+  /*
+   * AVAUSANIMAATIOSTA ks. css/styles.css `.tiivis-lehtiarkki >
+   * .dialog-card { animation: none }` — mitattu vika, ei makuasia.
+   */
+  // Leveys ja korkeus samasta mitoittajasta kuin kaupunkilehdellä.
+  ui?.mitoitaArkki?.(dialogi);
+  return dialogi;
+}
