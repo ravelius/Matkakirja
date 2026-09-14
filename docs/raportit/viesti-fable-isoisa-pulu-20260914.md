@@ -182,8 +182,11 @@ kumotussakin ajossa, kuten pitääkin.
 
 ### PUNAISET OVAT KUORMAVARTIOITA, EIVÄT TÄMÄN ERÄN VIKOJA
 
-`npm test` ajaa 3374 testiä rinnakkain, ja kone oli tämän erän mittausten
-kanssa yhtä aikaa kuormitettuna. Punaiset ovat `tests/pollo.test.mjs`:n
+`npm test` ajaa 3374 testiä rinnakkain, ja kone oli ajon aikana
+kuormitettuna: samassa kontissa oli mitattuna käynnissä KUUDEN muun
+työpuun oma `npm test` (`wt-julkaisu-aaniputki`, `wt-iphone-tekstit`,
+`wt-ranska-korjaus`, `wt-haivytys`, `wt-raakavienti` ja pääpuu).
+Kellovartiot mittaavat silloin konetta eivätkä koodia. Punaiset ovat `tests/pollo.test.mjs`:n
 KUORMAVARTIOT (*"indeksi rakentuu ja on kokoluokaltaan järkevä"* —
 indeksointi kesti 6465 ms, ja *"haku on nopea myös koko aineistolla"* —
 haku kesti 1041 ms). Ne mittaavat koneen nopeutta, eivät tätä muutosta.
