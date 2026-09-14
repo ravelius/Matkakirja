@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1884, teksti: 'Kerma-naamio odottaa maapolygonit ennen piirtoa' },
   { v: 1883, teksti: 'Ääniputki: raakatiedostot ämpäriin, 192 kbps' },
   { v: 1882, teksti: 'Kohdemaan raja muiden rajojen väriseksi, paksumpi' },
   { v: 1881, teksti: 'Livia: Ateena ja Sofia uudella putkella' },
