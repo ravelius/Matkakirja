@@ -913,6 +913,41 @@ export function laatanKartta(taso, sarake, rivi, {
  * @param {object} p.kuva      laataston kuva tai null (laattaa ei ole)
  * @returns {boolean} maalattiinko kermaa
  */
+/**
+ * Onko laatta KOKONAAN tasoituksen suojatun suorakaiteen ulkopuolella?
+ *
+ * VÄREILYN JUURISYY (mitattu 14.9.2026, iPad 1180 × 820 dpr 2, Ihmisen
+ * matka Etiopiassa, kuvapari docs/raportit/kuvat/linssilaatat-*.jpg).
+ * Tällaisessa laatassa EI OLE YHTÄÄN karttatietoa: `maalaaTasoitus`
+ * maalaa sen kokonaan kermaan (`fillRect(0, 0, W, H)`), koska laataston
+ * oma kuva piirretään vain suojan sisään. Kohdemaan laatasto kattaa
+ * silti koko tason, joten linssin kertomuskamera lensi Afrikassa
+ * seudulle, jossa jokainen värilaatta on TYHJÄ VAALEA ARKKI — ne
+ * haettiin, häivytettiin seepiapohjan päälle ja purettiin taas.
+ * Ruudulla se on juuri se, minkä omistaja näki: *"valilla kartan
+ * pienta vareilee meinaten pudottaa topografian"*.
+ *
+ * Luvut ovat samat kuin `maalaaTasoitus`:ssa, samalla pyöristyksellä,
+ * jottei kaksi laskentaa voi olla eri mieltä laatan reunalla.
+ *
+ * @returns {boolean} true, jos suojasta ei leikkaudu laatalle mitään
+ */
+export function tasoituksenUlkopuolella({
+  tasoitus, kartta, ppu, arkki,
+}) {
+  if (!tasoitus?.suoja || !arkki || !(ppu > 0)) return false;
+  if (!(kartta?.leveys > 0) || !(kartta.korkeus > 0)) return false;
+  const W = kartta.leveys;
+  const H = kartta.korkeus;
+  const s = tasoitus.suoja;
+  const raja = (a, b, c) => Math.max(a, Math.min(b, c));
+  const x0 = raja(0, W, Math.round((s.x - arkki.x) * ppu - kartta.kansX0));
+  const y0 = raja(0, H, Math.round((s.y - arkki.y) * ppu - kartta.kansY0));
+  const x1 = raja(x0, W, Math.round((s.x + s.w - arkki.x) * ppu - kartta.kansX0));
+  const y1 = raja(y0, H, Math.round((s.y + s.h - arkki.y) * ppu - kartta.kansY0));
+  return !(x1 > x0) || !(y1 > y0);
+}
+
 export function maalaaTasoitus(ctx, {
   tasoitus, kartta, ppu, arkki, kuva = null,
 }) {
@@ -1075,6 +1110,18 @@ export function luoLaattakerros({
      * molemmilta laudoilta samaa kenttää.
      */
     variMaa: null, varillisia: 0, varimitatointeja: 0,
+    /*
+     * KERTOMUSLUKKO (ks. KERTOMUSLUKKO alla): naulattu taso (z) tai
+     * null. Savukkeen ainoa tapa nähdä, onko lukko päällä ja mihin
+     * tasoon se osui.
+     */
+    kertomustaso: null,
+    /*
+     * Laattoja, jotka koottiin ILMAN kerman maalausta, koska suojasta ei
+     * leikkaudu niille mitään (ks. tasoituksenUlkopuolella). Savukkeen
+     * mitta siitä, että lukko todella jättää tyhjät arkit pois.
+     */
+    kermattomia: 0,
   };
   const pyydetyt = new Set();
   /** avain 'z/sarake/rivi' → tietue. */
@@ -1410,7 +1457,28 @@ export function luoLaattakerros({
          * tarkentuessa `tasoitus.avain` vaihtuu (L → T) ja kerros
          * mitätöi laattansa itse (ks. MAANVAIHTO MITÄTÖI LAATAT).
          */
-        if (tasoitus.suoja?.tarkka) {
+        /*
+         * TYHJÄ KERMALAATTA JÄTETÄÄN LINSSIN AJAKSI PIIRTÄMÄTTÄ
+         * (ks. tasoituksenUlkopuolella). Laatta, josta suojaa ei
+         * leikkaudu lainkaan, on pelkkä vaalea arkki — linssin
+         * kertomuskamera lentää kohdemaan ulkopuolelle, ja juuri ne
+         * arkit välkkyivät seepiakartan päällä. Ilman maalausta laatta
+         * on se seepiakartta, joka se muutenkin on, eikä kerros hae
+         * niille mitään.
+         *
+         * VAIN LINSSIN AJAKSI: pelin omalla kartalla kerman marginaali
+         * on tarkoituksellinen (js/laattapyramidi.js), eikä sitä muuteta
+         * täältä. Lipulla merkitty laatta puretaan lukon auetessa, jotta
+         * kerma palaa entiselleen (lukitseKertomus).
+         */
+        const tyhjaKerma = kertomuslukko && tasoituksenUlkopuolella({
+          tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki,
+        });
+        if (tyhjaKerma) {
+          if (!t.kermatta) mittarit.kermattomia += 1;
+          t.kermatta = true;
+        }
+        else if (tasoitus.suoja?.tarkka) {
           maalaaTasoitus(ctx, {
             tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki, kuva,
           });
@@ -1511,6 +1579,46 @@ export function luoLaattakerros({
    * takaisin sellaisinaan, kun lukko avataan. Vain päivitys pysähtyy.
    */
   let lukittu = false;
+
+  /*
+   * ── KERTOMUSLUKKO: TASO JA LAATTAJOUKKO PAIKALLEEN LINSSIN AJAKSI ──
+   *
+   * OMISTAJA 14.9.2026 (iPad, Ihmisen matka, sanatarkasti): *"valilla
+   * kartan pienta vareilee meinaten pudottaa topografian"*. Syy on
+   * MITATTU (docs/raportit/viesti-fable-linssivika-20260914.md luku 3,
+   * 30 s näyte iPad 1180 × 820 dpr 2): linssin kertomuskamera lentää
+   * yhtäjaksoisesti (korkeus 0,19 → 2,5 → 0,19), ja kerros laskee
+   * näkyvän joukon uudelleen joka liikkeellä. Laattoja purettiin
+   * **368 kpl / 30 s**, pyyntöjä ehdittiin lähettää **66**, ja
+   * näyttämölle jäi 0–15 laattaa tarvitusta 15–40:stä. Reliefi putosi
+   * siis toistuvasti takaisin sumeaan pohjaan. Taso ehti lisäksi
+   * vaihtua kesken ajon (z6 → z4 → z6 → z5), mikä vaihtaa koko
+   * tekstuuriston kerralla.
+   *
+   * LUKKO EI OLE SAMA KUIN `lukitse` YLLÄ. Satelliittilinssin lukko
+   * pysäyttää koko päivityksen, koska sen näkymässä karttapintaa ei
+   * saa näkyä lainkaan. Kertomuslinssissä kartta on se, mitä
+   * katsotaan: päivitys jatkuu, mutta
+   *
+   *   1. TASO PYSYY. Valinta ei seuraa tarvetta vaan lukittua z:aa.
+   *      Laattakatto (LAATTAKERROS_LAATTAKATTO_NAKYVA) saa yhä laskea
+   *      tasoa yleiskuvassa — se on muistin kova raja — mutta kun
+   *      kamera palaa alas, valinta alkaa taas lukitusta tasosta eikä
+   *      jää karkeaan.
+   *   2. LAATTAJOUKKO PYSYY. `pito` ei vanhene ajassa, joten kerran
+   *      ladattu laatta on yhä muistissa, kun kamera palaa samalle
+   *      seudulle. Määräkatto ei pura pidettyjä (laattakerroksenLRU),
+   *      mutta TAVUKATTO purkaa yhä — muisti on kova raja myös
+   *      linssissä, eikä lukko saa kasvattaa sitä rajattomasti.
+   *
+   * PYYNTÖJÄ EI SULJETA. Kertomuskamera lentää uusille seuduille,
+   * joilla kerroksella ei ole yhtään laattaa; pyyntöjen sulkeminen
+   * jättäisi ne seudut kokonaan sumeaksi pohjaksi, eli tekisi juuri
+   * sen, mitä lukko korjaa (mitattu, raportin luku 4).
+   */
+  let kertomuslukko = false;
+  /** Taso, johon kertomuslukko naulasi valinnan (z), tai null. */
+  let kertomustaso = null;
 
   /* ---------------- tekstuurien vienti (≤ 2 / kehys) ---------------- */
 
@@ -1682,7 +1790,14 @@ export function luoLaattakerros({
     // Ruudun tarve: laitepikseleitä astetta kohti keskellä (fov on pystykulma).
     const suhde = mitat.suhde;
     const tarvePxAste = (LEPOKERROS_MITTAMATKA_PX * suhde) / Math.abs(keski.lat - alas.lat);
-    let valittu = laattakerroksenTaso(pyramidi.tasot, tarvePxAste, taso);
+    /*
+     * TASO KERTOMUSLUKOSTA, JOS SE ON PÄÄLLÄ (ks. KERTOMUSLUKKO yllä).
+     * Lukittu taso otetaan LÄHTÖKOHDAKSI, ei lopputulokseksi: alla oleva
+     * silmukka laskee sitä yhä, jos alue ei mahdu laattakattoon.
+     */
+    let valittu = kertomuslukko && Number.isFinite(kertomustaso)
+      ? (tasoZ(kertomustaso) ?? laattakerroksenTaso(pyramidi.tasot, tarvePxAste, taso))
+      : laattakerroksenTaso(pyramidi.tasot, tarvePxAste, taso);
     let kartta = null;
     let nakyvatLaatat = null;
     while (valittu) {
@@ -1720,7 +1835,7 @@ export function luoLaattakerros({
           avain, z: valittu.z, sarake: l.sarake, rivi: l.rivi, alue: null, tila: 'ladataan',
           verkko: null, materiaali: null, tekstuuri: null, kaytetty: nyt, tavut: 0,
           nakyva, scenessa: false, viety: false, aloitettu: false, haipyy: false, jonossa: false,
-          varillinen: false,
+          varillinen: false, kermatta: false,
           katkaisin: null, etaisyys: 0, sukupolvi, pito: true, ennakko: !nakyva,
         };
         laatat.set(avain, t);
@@ -1816,7 +1931,20 @@ export function luoLaattakerros({
      * LAATTAKERROS_PITO_MS:n aikana, ei putoa jonosta eikä LRU:n
      * määräkatosta. Tavukatto purkaa yhä (ks. laattakerroksenLRU).
      */
-    for (const t of laatat.values()) t.pito = nyt - (t.kaytetty ?? 0) <= LAATTAKERROS_PITO_MS;
+    for (const t of laatat.values()) {
+      const tuore = nyt - (t.kaytetty ?? 0) <= LAATTAKERROS_PITO_MS;
+      /*
+       * KERTOMUSLUKOSSA PITO EI VANHENE — MUTTA VAIN VALMIILLA
+       * LAATALLA (ks. KERTOMUSLUKKO yllä). Pito on kaksikäyttöinen: se
+       * suojaa LRU:lta JA pitää tietueen latausjonossa (`t.jonossa`
+       * alla). Jos lukko pitäisi myös aloittamattomat tietueet, jokainen
+       * laatta, jonka kamera on lennollaan ohittanut, jäisi jonoon
+       * ikuisesti — lukko lisäisi pyyntöjä sen sijaan että vähentäisi
+       * niitä. Valmis laatta ei ole jonossa, joten sen pito on pelkkää
+       * muistisuojaa: juuri se, mitä tässä haetaan.
+       */
+      t.pito = tuore || (kertomuslukko && t.tila === 'valmis');
+    }
 
     /* 2. ylimääräiset: poista peiton alta, häivytä karkeamman päältä, muuten pidä. */
     const valmiit = new Set();
@@ -1959,6 +2087,30 @@ export function luoLaattakerros({
     },
     /** Onko kerros lukossa (savukkeet ja vartijat). */
     lukossa: () => lukittu,
+    /**
+     * KERTOMUSLUKKO päälle (true) tai pois (false). Ks. KERTOMUSLUKKO
+     * yllä. Päälle mennessä naulataan se taso, joka on juuri nyt
+     * valittuna — siis se, jonka laatat ovat jo ladattuina; pois
+     * mennessä lukko ja naula katoavat, ja seuraava päivitys valitsee
+     * tason taas tarpeesta. Palauttaa naulatun tason (z) tai null.
+     */
+    lukitseKertomus: (paalla) => {
+      kertomuslukko = Boolean(paalla);
+      kertomustaso = kertomuslukko ? (taso?.z ?? null) : null;
+      mittarit.kertomustaso = kertomustaso;
+      /*
+       * Lukon auetessa puretaan ne laatat, jotka koottiin ILMAN kerman
+       * maalausta (ks. TYHJÄ KERMALAATTA). Pelin omalla kartalla kerman
+       * marginaali kuuluu kuvaan, joten ne on koottava uudelleen; muita
+       * laattoja ei pureta, eikä kartta siis välähdä sulkiessa.
+       */
+      if (!kertomuslukko) {
+        for (const t of [...laatat.values()]) if (t.kermatta) poista(t);
+      }
+      return kertomustaso;
+    },
+    /** Kertomuslukon tila savukkeille: naulattu z tai null. */
+    kertomuslukossa: () => (kertomuslukko ? kertomustaso : null),
     /*
      * TILA JA SYY ILMAN VARAUSTA (7.9.2026). `mittarit()` kopioi koko
      * mittaritaulun JA pyydettyjen osoitteiden joukon taulukoksi —
