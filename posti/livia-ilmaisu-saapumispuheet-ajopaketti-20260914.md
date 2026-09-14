@@ -1,3 +1,7 @@
+# AJOPYNTÖ FABLELLE PERUTTU — OMISTAJA: CODEX GENEROI ITSE
+
+Omistaja 14.9.2026: ”Generoi sinä aina jatkossa”. Älä käynnistä alla olevia ajoja. Codex on nyt niiden ainoa suorittaja. Tarkka uusin työnjako: posti/codex-generoi-aanet-jatkossa-20260914.md. Alla tekninen toimitus säilyy historiallisena / Codexin käyttöön.
+
 # Fable: valmis lähde, 6 Livian ilmaisupuhetta + 2 saapumisparia — rajattu ajopyyntö
 
 Omistajan uusin pyyntö on kirjattu posti/livia-ilmaisu-hyvaksytty-laajennus-20260914.md. Hän hyväksyi kuunnellut Sofia/Venetsia-nauru/kuiskausäänet ja pyysi enemmän ilmaisua sekä kaupunkien iskulauseäänet. Vanhaa loppu38-erää ei ajeta entisillä tageilla. Sinä olet ainoa maksullinen suorittaja; root ei ole käynnistänyt uusia maksettuja ajoja.
