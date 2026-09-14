@@ -1509,6 +1509,13 @@ export async function avaaPallolauta(ui) {
    * mutta hetkellinen mittauspiikki ei jätä jälkeään.
    */
   let kattoPuristus = null;
+  /*
+   * Maapaneelin kerros syntyy vasta alempana, mutta zoomirajat
+   * tahdistetaan jo ennen sitä (rivi `tahdistaZoomirajat()` heti
+   * määrittelyn jälkeen). Viite otetaan siksi muuttujan kautta:
+   * ennen luontia kutsu on tyhjä, sen jälkeen se on kerroksen oma.
+   */
+  let maapaneeliKerros = null;
   const tahdistaZoomirajat = () => {
     const ohj = pallo.controls();
     const maa = maanZoomiraja();
@@ -1536,6 +1543,13 @@ export async function avaaPallolauta(ui) {
     }
     ohj.minDistance = pallonSade * (1 + min);
     ohj.maxDistance = pallonSade * (1 + max);
+    /*
+     * MAAPANEELIN KATTO LUKEE JUURI NÄITÄ RAJOJA (erä 15): sen
+     * vertailu on saapumisnäkymän mittakaava, joka syntyy tässä.
+     * Ilman kutsua paneeli jäisi kattamattomaan kokoon siihen asti,
+     * kunnes kamera seuraavan kerran liikkuu.
+     */
+    maapaneeliKerros?.tahdistaKoko?.();
   };
   tahdistaZoomirajat();
 
@@ -1706,8 +1720,22 @@ export async function avaaPallolauta(ui) {
    * js/pallolauta/maapaneeli.js:ssä.
    */
   const maapaneeli = luoMaapaneeli({
-    ui, merkit, kamera, asteet: pallonAsteet,
+    ui,
+    merkit,
+    kamera,
+    asteet: pallonAsteet,
+    /*
+     * SAAPUMISNÄKYMÄ ON PANEELIN KATON VERTAILU (erä 15, sama
+     * mekanismi kuin nimikylteillä v1885: js/pallolauta/maapaneeli.js
+     * MAAPANEELIN_KATTO_RUUDUSTA). Lauta antaa mittakaavan ja kotelon
+     * leveyden; paneeli päättää, sitooko katto.
+     */
+    saapumisnakyma: () => ({
+      vertailuskaala: saapumisenSkaala(),
+      ruutuLeveys: kotelo.clientWidth,
+    }),
   });
+  maapaneeliKerros = maapaneeli;
 
   /* ---- avauslennon tila (vaihe 5b) --------------------------------- */
   /*
