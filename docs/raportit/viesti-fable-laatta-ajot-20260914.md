@@ -27,3 +27,7 @@ kirjauksessa.
 | 7 | ESP | 34802536771 | success | 2026-09-14-tasoitus | true |
 | 8 | EST | 34802677063 | success | 2026-09-14-tasoitus | true |
 | 9 | FIN | 34802773668 | success | 2026-09-14-tasoitus | true |
+| 10 | GBR | 34802981342 | success | 2026-09-14-tasoitus | true |
+| 11 | GRC | 34803149164 | success | 2026-09-14-tasoitus | true |
+| 12 | HRV | 34803273145 | success | 2026-09-14-tasoitus | true |
+| 13 | HUN | 34803390056 | success | 2026-09-14-tasoitus | true |
