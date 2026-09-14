@@ -166,19 +166,34 @@ const OMAN_KAUPUNGIN_TARKEYS = 1000;
  * ruutukoko = peruskoko × (px lautayksikköä kohden nyt) / (px
  * lautayksikköä kohden vertailunäkymässä).
  *
- * VERTAILUNÄKYMÄ ON TYÖPÖYDÄN SAAPUMINEN (1400 × 900, Ranska), jotta
- * työpöydän saapumisnäkymä ei muutu lainkaan. MITATTU Chromiumilla
- * 14.9.2026 (dpr 2, tallenne Pariisissa, `kamera.nakyvaAlue().skaala`):
+ * VERTAILUNÄKYMÄ ON KUNKIN LAITTEEN OMA SAAPUMINEN (Fablen päätös
+ * 14.9.2026 illalla). Ensimmäinen toteutus käytti YHTÄ vertailua
+ * (työpöydän 1400 × 900), ja mittaus näytti heti, miksi se ei käy:
+ * sama maa sovitetaan 373 px:n ja 1400 px:n ruutuun, joten puhelimella
+ * yksi lautayksikkö on 0,655 px ja työpöydällä 1,837 px. Yhteinen
+ * vertailu olisi kutistanut puhelimen saapumiskyltin 15 pikselistä
+ * 5,4 pikseliin — lukukelvottomaksi, ja vastoin Raamatun PAATOKSET
+ * 2:n lausetta *"tekstin luettavuus mitoitetaan uloimmalle zoomille"*.
+ *
+ * MITATTU Chromiumilla 14.9.2026 (dpr 2, tallenne Pariisissa,
+ * `kamera.nakyvaAlue().skaala`), saapumisnäkymä:
  *
  *   ruutu        korkeus   skaala (px / lautayksikkö)   kerroin
- *   390 × 844    0,6641    0,6552                       0,357
+ *   390 × 844    0,6641    0,6552                       1,000
  *   1400 × 900   0,2509    1,8370                       1,000
- *   2560 × 1352  0,2509    2,8483                       1,551
+ *   2560 × 1352  0,2509    2,8483                       1,000
+ *
+ * Saapuminen on samalla ULOIN SALLITTU näkymä (uloszoomauksen esto,
+ * js/pallolauta/lauta.js `maanZoomiraja`), joten vertailu on juuri se
+ * zoomi, jolle luettavuus mitoitetaan — ja sisäänpäin kyltti kasvaa
+ * kartan mukana. Lauta laskee vertailun sieltä ja antaa sen ladonnalle;
+ * ilman sitä (kehittäjän maailmanäkymä, laatikko lataamatta) käytetään
+ * mitattua työpöytävakiota, jolloin käytös on entinen.
  *
  * Rajat ovat samat kuin maapaneelilla eivätkä sido pelialueella: ne
  * ovat kehittäjän rajattoman maailmanäkymän varalla.
  */
-/** Näkymän mittakaava, jossa nimikyltti on peruskokoinen (mitattu). */
+/** Vertailuskaalan varamitta, kun laudan omaa ei ole (mitattu 1400 × 900). */
 export const NIMEN_VERTAILUSKAALA = 1.837;
 /*
  * Rajat eivät saa sitoa pelialueella (Fablen ohje 14.9.2026: *"ei
@@ -195,11 +210,13 @@ export const NIMEN_KERTOIMEN_PORRAS = 1.005;
  * Tuntematon mittakaava palauttaa 1 eli entisen ruutuvakion.
  *
  * @param {number} skaala `kamera.nakyvaAlue().skaala`
+ * @param {number} [vertailu] saapumisnäkymän skaala tällä laitteella
  */
-export function nimenKarttakerroin(skaala) {
+export function nimenKarttakerroin(skaala, vertailu = NIMEN_VERTAILUSKAALA) {
   if (!(skaala > 0)) return 1;
+  const perus = vertailu > 0 ? vertailu : NIMEN_VERTAILUSKAALA;
   const raaka = Math.min(NIMEN_KARTTAKERROIN_MAX,
-    Math.max(NIMEN_KARTTAKERROIN_MIN, skaala / NIMEN_VERTAILUSKAALA));
+    Math.max(NIMEN_KARTTAKERROIN_MIN, skaala / perus));
   /*
    * KERROIN PORRASTETAAN, KOSKA LUKKO VERTAA SITÄ TÄSMÄLLEEN.
    * Kirjaston kamera kirjoittaa korkeuden liukulukuna, ja panoroinnin
@@ -321,10 +338,12 @@ export function luoNimet({
    */
   const lado = ({
     varaukset = [], pinot = [], katto = NIMIEN_KATTO, vain = null,
-    kokoKerroin: kaupunginKerroin = 1, pisteSade = 0, karttaskaala = 0,
+    kokoKerroin: kaupunginKerroin = 1, pisteSade = 0,
+    karttaskaala = 0, vertailuskaala = 0,
   } = {}) => {
     // Kyltti on kartan mitta, ei ruudun (ks. NIMIKYLTIT KARTTAAN).
-    const kokoKerroin = kaupunginKerroin * nimenKarttakerroin(karttaskaala);
+    const kokoKerroin = kaupunginKerroin
+      * nimenKarttakerroin(karttaskaala, vertailuskaala || NIMEN_VERTAILUSKAALA);
     const w = kotelo.clientWidth;
     const h = kotelo.clientHeight;
     if (!(w > 0) || !(h > 0) || ui.dead) return tulos;

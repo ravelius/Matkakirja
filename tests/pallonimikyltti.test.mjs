@@ -161,9 +161,22 @@ const {
 
 test('5. karttakerroin: työpöydän saapuminen on tasan 1, ja kerroin seuraa mittakaavaa', () => {
   assert.equal(nimenKarttakerroin(NIMEN_VERTAILUSKAALA), 1);
-  // Mitatut näkymät (ks. nimet.js NIMIKYLTIT KARTTAAN).
+  // Mitatut näkymät (ks. nimet.js NIMIKYLTIT KARTTAAN). Ilman laudan
+  // omaa vertailua käytössä on työpöytävakio, ja silloin puhelin jäisi
+  // 0,36-kertaiseksi — juuri se, minkä laitekohtainen vertailu korjaa.
   assert.ok(Math.abs(nimenKarttakerroin(0.6552) - 0.356) < 0.003);
   assert.ok(Math.abs(nimenKarttakerroin(2.8483) - 1.551) < 0.003);
+  /*
+   * LAITEKOHTAINEN VERTAILU (Fablen päätös 14.9.2026): kun vertailu on
+   * laitteen OMA saapumisnäkymä, kerroin on saapumisessa tasan 1
+   * jokaisella ruudulla — kyltti ei muutu siellä, missä luettavuus
+   * mitoitetaan (Raamattu PAATOKSET 2).
+   */
+  for (const saapuminen of [0.6552, 1.837, 2.8483]) {
+    assert.equal(nimenKarttakerroin(saapuminen, saapuminen), 1);
+    // ...ja kasvaa siitä sisäänpäin kartan mukana.
+    assert.ok(Math.abs(nimenKarttakerroin(2 * saapuminen, saapuminen) - 2) < 0.01);
+  }
   /*
    * PORRAS SYÖ KAMERAN HEILAHDUKSEN: kirjaston korkeus heiluu
    * viimeisissä biteissään panoroitaessa, ja kerroin on silti sama
@@ -194,4 +207,15 @@ test('6. karttakerroin kertautuu ladonnan kirjasinkokoon', () => {
   const iso = y.koot().get('pariisi');
   assert.ok(perus > 0 && iso > 0);
   assert.ok(Math.abs(iso / perus - 2) < 0.02, `${perus} → ${iso}`);
+});
+
+test('7. laitekohtainen vertailu: saapumisnäkymä antaa saman koon joka ruudulla', () => {
+  const koot = [0.6552, 1.837, 2.8483].map((saapuminen) => {
+    const y = ymparisto();
+    y.nimet.lado({ katto: 40, karttaskaala: saapuminen, vertailuskaala: saapuminen });
+    return y.koot().get('pariisi');
+  });
+  assert.ok(koot.every((k) => k > 0));
+  assert.ok(Math.max(...koot) - Math.min(...koot) < 1e-9,
+    `saapumisnäkymän kyltti ei saa riippua ruudusta: ${koot.join(', ')}`);
 });

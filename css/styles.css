@@ -25913,9 +25913,21 @@ svg.rough-annotation { pointer-events: none; }
  * pannataan ja zoomataan (PÄÄTÖKSET 2: *"puhelimella pannataan
  * paneelin luo"*).
  */
+/* ERÄ 13: PLUSSA 2 px YLEMMÄS (omistaja 14.9.2026 klo 13.50 UTC:
+   *"plus merkkia pitaa nostaa hieman"*). Laatikon yläreuna oli 1 px
+   kortin yläreunasta, nyt −1 px, ja palkit liikkuvat saman 2 px:n
+   mukana: MITATTUNA palkkien keskilinja 22,0 → 20,0 px kortin
+   peruskoossa (ruudulla skaalan verran).
+
+   MIKSI KESKILINJA ON 22 EIKÄ 8. Laatikko ei ole 14 × 14 px vaan
+   14 × 42: yleinen `button { min-height: 42px }` (ks. sen oma lohko)
+   voittaa tämän `height`in, ja koska palkit ovat `place-items:
+   center`illä laatikon keskellä, ne piirtyvät 21 px laatikon
+   yläreunasta. Osuma-ala on siis tarkoitustaankin isompi. En muuta
+   sitä tässä erässä — nosto tehdään laatikon paikkaa siirtämällä. */
 .maapaneeli-lisaa {
   position: absolute;
-  top: 1px;
+  top: -1px;
   right: 1px;
   display: grid;
   place-items: center;
@@ -25970,19 +25982,41 @@ button.maapaneeli-lisaa:active:not(:disabled) {
  * rajaus koski kolmea asiaa, eikä valikko ole niistä yksikään: se
  * pitää tumman pergamenttipohjansa, reunuksensa ja värinsä.
  */
+/*
+ * ERÄ 13: YKSI RIVI, EI TYHJÄÄ TILAA, HIEMAN IRTI PANEELISTA
+ * (omistaja 14.9.2026 klo 13.50 UTC: *"maainfon plus merkista aukeava
+ * valikko pitaa olla paljon tiiviimpi, ilman tyhjaa tilaa ja se pitaa
+ * olla yhdessa rivissa ja hieman irto maainfosta."*).
+ *
+ * ENNEN: kahden palstan ruudukko kiinteällä 105 px:n leveydellä, jossa
+ * lyhyen nimen perään jäi tyhjää ruutua ja pitkä nimi katkesi
+ * kolmipisteeseen; rivien väli 1 px ja neljä riviä allekkain.
+ * NYT: yksi rivi, jossa jokainen nappi on tasan nimensä levyinen
+ * (`width: max-content`, `gap: 0`) — tyhjää tilaa ei jää nappien
+ * väliin eikä niiden sisään.
+ *
+ * VAAKA-ANKKURI VAIHTUU KESKELLE. Oikea reuna oli oikea ankkuri
+ * kahdelle palstalle, joka mahtui kortin leveyteen; yksi rivi on
+ * kortin levyinen moninkerroin, ja oikeaan reunaan ankkuroituna se
+ * karkaisi kokonaan vasemmalle (puhelimella ruudun ulkopuolelle,
+ * mitattu). Keskitettynä se levittäytyy tasan kortin molemmin puolin.
+ *
+ * RAKO ON KEHYKSEN OMA MITTA. Kaksoisviivan viivaväli on 1,349 px
+ * (js/kasinpiirto.js), ja rako on kaksi sitä eli 2,7 px — ennen
+ * valikko meni 2 px kortin päälle. Luku ei ole uusi tyyliarvo vaan
+ * kehyksen mitta kerrottuna kahdella.
+ */
 .maapaneeli-valikko {
   position: absolute;
-  top: calc(100% - 2px);
-  right: -3px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  /* Kortin kavettua (erä 9) valikko kapenee sen mukana: 250 px oli
-     erän 3 300 px:n kortin mitta, ja se törröttäisi nyt molemmin
-     puolin. 210 px oli kortti + sen verran, että kaksi palstaa
-     mahtuu ilman rivin katkeamista; erä 11 puolitti sen kortin mukana. */
-  width: 105px;
-  padding: 2.5px;
+  top: calc(100% + 2.7px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  width: max-content;
+  max-width: none;
+  padding: 1px;
   background: var(--overlay-card);
   border: 0.5px solid var(--overlay-line);
   border-radius: 2.5px;
@@ -25992,12 +26026,13 @@ button.maapaneeli-lisaa:active:not(:disabled) {
    YLÄPUOLELLE — ks. js/pallolauta/maapaneeli.js sovitaValikko. */
 .maapaneeli-valikko.ylos {
   top: auto;
-  bottom: calc(100% - 2px);
+  bottom: calc(100% + 2.7px);
 }
 .maapaneeli-aihe {
   display: flex;
   align-items: center;
   gap: 2.5px;
+  flex: 0 0 auto;
   min-width: 0;
   font: inherit;
   font-size: 5px;
@@ -26010,9 +26045,8 @@ button.maapaneeli-lisaa:active:not(:disabled) {
   cursor: pointer;
 }
 .maapaneeli-aihe:hover { border-color: var(--overlay-line); }
+/* Yhdellä rivillä nimi ei katkea: nappi on nimensä levyinen (erä 13). */
 .maapaneeli-aihe-nimi {
-  overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
 }
 .maapaneeli-aihe-merkki {

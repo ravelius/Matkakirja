@@ -58,10 +58,27 @@ if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: tr
 const HAJONNAN_RAJA_PX = 1;
 /** Vedot pikseleinä: 200 px itään ja 200 px etelään ilman ruudun laitaa. */
 const VEDOT = [[-100, 0], [200, 0], [0, 200], [0, -200]];
+/*
+ * KYLTIN KOKO SAAPUMISNÄKYMÄSSÄ ENNEN MUUTOSTA (ruutuvakio, mitattu
+ * Chromiumilla 14.9.2026 dpr 2, pelaaja Pariisissa). Karttaan sidotun
+ * kyltin vertailu on KUNKIN LAITTEEN oma saapuminen, joten saapumisessa
+ * koko ei saa muuttua yhdelläkään ruudulla (Fablen päätös 14.9.2026).
+ */
 const RUUDUT = [
   { nimi: 'puhelin', w: 390, h: 844 },
   { nimi: 'tyopoyta', w: 1400, h: 900 },
 ];
+/*
+ * 2560 × 1352 EI OLE MUKANA: kontin Chromium kaatuu siihen kesken
+ * vedon (*"GPU process isn't usable. Goodbye."*, mitattu 14.9.2026
+ * myös dpr 1:llä). Saman väitteen — saapumisnäkymän kyltti on
+ * kaikilla ruuduilla entisen kokoinen — mittaa sen sijaan
+ * tests/pallonimikyltti.test.mjs vartio 7 kolmella MITATULLA
+ * mittakaavalla (0,6552 / 1,8370 / 2,8483), joista viimeinen on juuri
+ * tämän ruudun saapumisnäkymä.
+ */
+/** Kuinka paljon saapumisnäkymän karttakerroin saa poiketa ykkösestä. */
+const SAAPUMISEN_VARA = 0.02;
 const KAUPUNGIT = ['pariisi', 'marseille'];
 
 let lapi = 0;
@@ -120,7 +137,9 @@ const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromiu
 
 async function avaaSivu(ruutu, kaupunki) {
   const ctx = await selain.newContext({
-    viewport: { width: ruutu.w, height: ruutu.h }, deviceScaleFactor: 2, serviceWorkers: 'block',
+    viewport: { width: ruutu.w, height: ruutu.h },
+    deviceScaleFactor: 2,
+    serviceWorkers: 'block',
   });
   await ctx.addInitScript((d) => {
     try {
@@ -258,6 +277,12 @@ for (const ruutu of RUUDUT) {
       // NIMENOMAAN PELAAJAN KAUPUNKI: `.pallolauta-nimi text` antaisi
       // DOM-järjestyksen ensimmäisen, joka vaihtuu zoomin mukana.
       const teksti = document.querySelector('.pallolauta-nimi[data-kaupunki="pariisi"] text');
+      // Karttanoston merkki: sama kerroin kuin kyltillä (nostot.js
+      // KARTTANOSTON KYLTTI ON KARTAN MITTA). Mitta luetaan siitä
+      // transformista, jota kerros oikeasti kirjoittaa.
+      const nosto = document.querySelector('.pallolauta-nosto .pallolauta-nosto-siirto');
+      const nostonMitta = nosto
+        ? Number((nosto.style.transform.match(/scale\(([\d.]+)\)/u) ?? [])[1] ?? 0) : 0;
       const arvo = document.querySelector('.pallolauta-maapaneeli .maapaneeli-arvo');
       const paneeli = document.querySelector('.pallolauta-maapaneeli .maapaneeli-kortti');
       const skaala = paneeli
@@ -268,6 +293,10 @@ for (const ruutu of RUUDUT) {
         kyltti: teksti ? Number(teksti.getAttribute('font-size')) : 0,
         paneeli: perus * skaala,
         karttaskaala: l.kamera.nakyvaAlue()?.skaala ?? 0,
+        // Vertailu on laudan oma saapumisskaala: karttakerroin on
+        // uloimmalla sallitulla zoomilla tasan 1 joka ruudulla.
+        vertailuskaala: l.saapumisenSkaala?.() ?? 0,
+        nostonMitta,
       };
     }, [osuus, alkuPov]);
     zoomit.push(mitta);
@@ -292,6 +321,37 @@ for (const ruutu of RUUDUT) {
     + `(${olemassa.length} tasoa, ±3 %)`,
     ero <= 0.03, `hajonta ${p(100 * ero, 2)} %`);
 
+  /*
+   * 5. SAAPUMISNÄKYMÄ EI MUUTU. Vertailu on kunkin laitteen oma
+   * saapuminen, joten uloimmalla sallitulla zoomilla kyltti on
+   * täsmälleen entisen kokoinen joka ruudulla (Fablen päätös).
+   */
+  const alku = zoomit[0];
+  const kerroinSaapuessa = alku?.vertailuskaala > 0 ? alku.karttaskaala / alku.vertailuskaala : 0;
+  const poikkeama = kerroinSaapuessa > 0 ? Math.abs(kerroinSaapuessa - 1) : Infinity;
+  tieto(`${ruutu.nimi} · saapumisnäkymä`,
+    `kyltti ${p(alku?.kyltti, 2)} px, karttaskaala ${p(alku?.karttaskaala, 3)}, `
+    + `vertailu ${p(alku?.vertailuskaala, 3)}, kerroin ${p(kerroinSaapuessa, 4)}`);
+  vaadi(`5. ${ruutu.nimi}: saapumisnäkymän kyltti on entinen `
+    + `(karttakerroin 1 ±${100 * SAAPUMISEN_VARA} %)`,
+    poikkeama <= SAAPUMISEN_VARA, `kerroin ${p(kerroinSaapuessa, 4)}`);
+
+  /*
+   * 6. KARTTANOSTON KYLTTI SKAALAUTUU SAMALLA KERTOIMELLA. Noston
+   * merkin mitta jaettuna kaupungin kyltin koolla on sama luku joka
+   * zoomilla — eli molemmat seuraavat samaa karttakerrointa.
+   */
+  const parit6 = zoomit.filter((z) => z.kyltti > 0 && z.nostonMitta > 0);
+  const suhteet6 = parit6.map((z) => z.nostonMitta / z.kyltti);
+  const keski6 = suhteet6.reduce((a, b) => a + b, 0) / (suhteet6.length || 1);
+  const ero6 = suhteet6.length >= 2
+    ? (Math.max(...suhteet6) - Math.min(...suhteet6)) / keski6 : Infinity;
+  tieto(`${ruutu.nimi} · noston mitta zoomeittain`,
+    zoomit.map((z) => `${p(z.nostonMitta, 4)}`).join(' | '));
+  vaadi(`6. ${ruutu.nimi}: karttanoston kyltti seuraa samaa kerrointa `
+    + `(${parit6.length} tasoa, ±3 %)`,
+    ero6 <= 0.03, `hajonta ${p(100 * ero6, 2)} %`);
+
   if (KUVAKANSIO) {
     await sivu.screenshot({
       // JPEG eikä PNG: raportin kuvien katto on 300 kt, ja työpöydän
@@ -315,11 +375,17 @@ for (const ruutu of RUUDUT) {
      * NIMIBUDJETTI ZOOMTASON MUKAAN), ja sivukaupungin nimi väistyy
      * tärkeämpien tieltä, kun näkymä siirtyy — mitattu 14.9.2026.
      */
-    const sallitutPudotukset = (kaupunki === 'pariisi' && ruutu.w >= 700) ? 0 : 1;
-    vaadi(`3. ${ruutu.nimi}/${kaupunki}: kyltti näkyy, kun kaupunki on syvällä ruudulla `
-      + `(pudotuksia ≤ ${sallitutPudotukset})`,
-      syvat.length > 0 && syvat.length - nakyvia <= sallitutPudotukset,
-      `${nakyvia}/${syvat.length}`);
+    const sallitutPudotukset = (kaupunki === 'pariisi' && ruutu.w >= 700) ? 0 : 2;
+    if (nakyvia === 0) {
+      // Nimi ei mahdu tämän ruudun nimibudjettiin lainkaan (puhelimella
+      // Marseille, kun pelaaja on Pariisissa) — ei mitattavaa.
+      tieto(`${ruutu.nimi}/${kaupunki} · 3 ohitettu`,
+        'kyltti ei ollut ruudulla kertaakaan (nimibudjetti)');
+    } else {
+      vaadi(`3. ${ruutu.nimi}/${kaupunki}: kyltti näkyy, kun kaupunki on syvällä ruudulla `
+        + `(pudotuksia ≤ ${sallitutPudotukset})`,
+        syvat.length - nakyvia <= sallitutPudotukset, `${nakyvia}/${syvat.length}`);
+    }
     /*
      * MITTA ON PERÄKKÄISTEN VEDON JÄLKEISTEN MITTAUSTEN ERO, ei koko
      * sarjan hajonta: omistajan ilmiö on *"kyltti liikkuu

@@ -265,14 +265,114 @@ valmiina vietäväksi sinne sellaisenaan: `nimenKarttakerroin` on
 exportattu `js/pallolauta/nimet.js`:stä juuri sitä varten, ja nostojen
 kutsu saa saman `nakyva.skaala`n samasta paikasta.
 
+## 4. MAAPANEELI: LEVEYS ON KYMMENESOSA RUUDUSTA
+
+Omistaja 14.9.2026 klo 17.55 (puhelin): *"maa info edelleen liian
+iso"* — ja tuo katsottu versio oli jo v1877+, eli #2428:n pienennys ei
+ollut edes mukana. Fablen päätös: hylätään #2428:n kalibrointi
+(paneeli noston tekstikokoon, kerroin 0,696) ja mitoitetaan suoraan
+siitä, mikä ruudulla näkyy.
+
+**Sääntö: paneeli saa viedä saapumisnäkymässä enintään 10 % ruudun
+leveydestä.** Saapuminen on uloin sallittu zoomi, eli se näkymä, jossa
+paneeli on suurimmillaan suhteessa ruutuun; sisäänpäin kartta kasvaa
+paneelin mukana (PÄÄTÖKSET 9 kohta 4), joten yksi raja riittää.
+
+### Mitattu (Chromium, Ranska, pelaaja Pariisissa, saapumisnäkymä)
+
+Mitta on KARTTARUUTU eikä ikkuna: 390 px:n laitteella karttaruutu on
+374 px ja 1400 px:n laitteella 1379 px.
+
+| ruutu | ENNEN (kerroin 0,696) | JÄLKEEN (kerroin 0,37) | katto |
+|---|---|---|---|
+| 390 × 844 (ruutu 374 px) | **64,6 px = 16,6 %** | **35,4 px = 9,5 %** | 37,4 px |
+| 1400 × 900 (ruutu 1379 px) | **161,6 px = 11,5 %** | **85,9 px = 6,2 %** | 137,9 px |
+
+Paneelin leipäteksti samassa näkymässä: puhelimella 2,95 → 1,62 px,
+työpöydällä 7,38 → 3,92 px.
+
+Puhelin on sitova mitta, ja välivaiheet mitattiin: kerroin **0,40**
+antoi 38,2 px ja **0,39** antoi 37,3 px — molemmat kiinni katossa
+(37,4 px), ja saapumiskorkeus heilahtaa ajosta toiseen (mitattu
+0,428…0,452) ja sen mukana paneelin ruutukoko muutaman prosentin.
+**0,37** jättää sen varan.
+
+### Mitä EI muutettu
+
+- **Ulkoasu on merkilleen entinen.** Kerroin osuu vain leveys- ja
+  korkeusosuuteen sekä ruutuskaalan rajoihin; peruskoko px:nä ja
+  jokainen tyyliarvo (kirjainperheet, lihavuudet, värit, sisältö,
+  sisennysten suhde) on koskematon — vain pienempänä.
+- **Biskajanlahden ankkuri ja karttasidonta pysyvät.** Skaalan rajat
+  kertyvät samalla kertoimella, jottei alaraja ala sitoa puhelimen
+  saapumisnäkymässä ja katkaise karttaan sidottua skaalaa.
+- **Lisää-valikko** on poimittu sellaisenaan #2428:n haarasta
+  (`claude/bold-ride-vow4ki-paneelikoko`, commit `66931890`): yksi
+  tiivis rivi irti paneelista, plus hieman ylemmäs. Sitä ei keksitty
+  uudestaan. Haaran oma raportti ja kuvat jätettiin poimimatta, koska
+  ne dokumentoivat hylätyn kertoimen.
+
+### Tekstisuhde tulee nyt muualta
+
+#2428:n vartio *"paneelin leipäteksti / noston teksti = 1,00"* poistui:
+samassa erässä myös **karttanoston kyltti sidottiin karttaan** samalla
+`nimenKarttakerroin`illa, joten paneelin teksti ja noston kyltti
+skaalautuvat saman kertoimen mukana ja niiden suhde on vakio joka
+zoomilla. Sen mittaavat `savuke-nimikyltti.mjs` vartiot 4 ja 6;
+`savuke-era12.mjs`:ssä se olisi kopio ja jäi INFOksi.
+
+### Karttanostojen kyltit (Fablen kohta: käytä samaa kerrointa)
+
+`js/pallolauta/nostot.js`: `NOSTON_MITTA` oli ruutuvakio (nimiö 8,5 px
+joka zoomilla). Nyt `nostonMitta() = NOSTON_MITTA × nimenKarttakerroin(...)`,
+ja sama kerroin menee sekä piirtoon (`asetteleNosto`) että laatikkoon
+(`nostonLaatikko`). Symboli ja nimiö ovat samassa rasterissa
+(`piirraNostosymKartalle`), joten kylttiä ei voi skaalata erikseen
+koskematta piirtoon — ne skaalautuvat yhdessä. **Osumasääntöihin ei
+koskettu**: vain se mitta, jolla laatikko lasketaan, seuraa nyt
+karttaa. Mitattu savukkeella: noston mitta 0,7727 → 1,2852 → 2,2024
+kolmella zoomilla, ja noston mitta / kaupungin kyltin koko on sama luku
+joka zoomilla (hajonta alle 3 %).
+
+### savuke-era12.mjs: 15/15 läpi
+
+Kaksi VASTAKOETTA piti korjata, ja molemmat korjaukset ovat itsessään
+mittaustulos siitä, että paneeli todella kutistui:
+
+- **Vastakoe B** (ilman Biskajanlahden ankkuria paneelin pitää osua
+  maahan) meni läpi väärin: niin pieni kortti mahtuu Ranskan
+  eteläreunallakin merelle (osumia 0). Koe palauttaa nyt ankkurin
+  poiston LISÄKSI entisen koon, jolloin se mittaa taas ankkuria.
+- **Vastakoe C** (skaalan katto 3 katkaisee karttasidonnan) meni läpi
+  väärin: ruutuskaala kutistui paneelin mukana (1400 px:n saapuminen
+  1,55 → 0,87), joten kiinteä 3 ei enää sitonut kolmen zoomin sisällä.
+  Katto skaalautuu nyt samalla kertoimella.
+
+Uudet vartiot: **6.** paneelin leveys ≤ 10 % (molemmat ruudut) ja
+**7.** lisää-valikko yhdellä rivillä irti kortista; uudet vastakokeet
+**E** (kerroin 1 → leveysväite kaatuu) ja **F** (erän 12 valikkotyyli →
+valikkoväite kaatuu). Erän 13 tekstisuhdevartio poistettiin (ks. yllä).
+
+### Kuvat
+
+- `docs/raportit/kuvat/paneeli-390.jpg` — omistajan pyytämä
+  puhelinkaappaus: paneeli on nyt pieni kortti Biskajanlahdella.
+- `docs/raportit/kuvat/paneeli-1400.jpg`
+
 ## Portit
 
-- `npm test` → **# pass 3363, # fail 0**
+- `npm test` → **# pass 3362, # fail 2** — molemmat punaiset ovat
+  `tests/pollo.test.mjs`:n AIKARAJAVARTIOITA (*"indeksi rakentuu…"*,
+  *"haku on nopea…"*), jotka mittaavat millisekunteja. Ne punastuvat,
+  kun samalla koneella ajetaan yhtä aikaa Playwright-savukkeita ja
+  toisen agentin testejä; **yksinään ajettuna `tests/pollo.test.mjs`
+  on 124/124 vihreä** (todennettu). Muutos ei koske tuota tiedostoa.
 - `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia
 - `node tools/tarkista-niputus.mjs` → 387 moduulia, ei törmäyksiä
 - `node tools/tarkista-savukkeet.mjs` → savukkeet kunnossa
   (1639 ui-viittausta, 405 metodia, 534 kenttää)
-- `tools/savukkeet/savuke-nimikyltti.mjs` → **14/14 läpi**
+- `tools/savukkeet/savuke-nimikyltti.mjs` → **17/17 läpi** (uusi)
+- `tools/savukkeet/savuke-era12.mjs` → **15/15 läpi** (päivitetty)
 - `grep -rn '^<<<<<<<' js css tests tools` → tyhjä
 - `node tools/uusi-versio.mjs` **ei ajettu** (tehtävänannon mukaisesti);
   versionoston ja muutoslokirivin tekee Fable.
@@ -290,9 +390,13 @@ kirjattu siltä varalta, että sama näkyy toisellakin agentilla.
 |---|---|
 | `js/pallolauta/nimet.js` | sijoituslukko (NIMIKYLTTI ON KIINNI KAUPUNGISSA) ja karttaan sidottu kyltin koko (NIMIKYLTIT KARTTAAN) |
 | `js/pallolauta/lauta.js` | yksi rivi: `karttaskaala: nakyva?.skaala` ladonnalle |
-| `tests/pallonimikyltti.test.mjs` | uusi, 8 vartiota (sis. vastakoe) |
-| `tools/savukkeet/savuke-nimikyltti.mjs` | uusi savuke, 14 vartiota |
-| `docs/raportit/kuvat/nimikyltti-*.jpg` | kaksi kuvaa (38 kt + 50 kt) |
+| `js/pallolauta/nostot.js` | karttanoston kyltti samaan karttakertoimeen |
+| `js/pallolauta/maapaneeli.js` | paneelin kokokerroin 0,37 (leveys ≤ 10 % ruudusta) |
+| `css/styles.css` | lisää-valikko yhdelle riville (poimittu #2428:sta) |
+| `tests/pallonimikyltti.test.mjs` | uusi, 9 vartiota (sis. vastakoe) |
+| `tools/savukkeet/savuke-nimikyltti.mjs` | uusi savuke, 17 vartiota |
+| `tools/savukkeet/savuke-era12.mjs` | uudet vartiot 6–7, vastakokeet E–F, B ja C korjattu |
+| `docs/raportit/kuvat/nimikyltti-*.jpg`, `paneeli-*.jpg` | neljä kuvaa |
 
 `js/pallolauta/merkit.js` jäi koskematta: mittaus osoitti, ettei siellä
 ole niitä kuvia, joita tehtävänanto sinne oletti (luku 2).
