@@ -4573,6 +4573,19 @@ export const RAAMATTU = {
           + 'kaikkia tulevia aanirooleja. Tausta: v1879:n 40 '
           + 'Livia-repliikin raakatuotokset katosivat GitHub-ajurin mukana, '
           + 'eika hairiota voi nyt korjata ilman uutta veloitusta.',
+        'PULUN AANI: ELEVENLABSIN OLETUSASETUKSET, EI FFMPEG-KASITTELYA '
+          + '(omistaja 14.9.2026 klo 18.35 UTC, sanatarkasti: "Laita pululle '
+          + 'kaikki ns-oletusasetukset paalle ja ala tee sita uudelleen '
+          + 'koodausta ffmpegilla. Generoi nyt ne kaksi."): 1) Livian '
+          + 'voice_settings = ElevenLabsin oletukset (ei omaa style 0,6:ta, '
+          + 'ei omaa speaker boost- tai similarity-saatoa; malli eleven_v3, '
+          + 'aani Flicker ja vakaus natural sailyvat omistajan aiempina '
+          + 'valintoina). 2) Viimeistelyketju (ffmpeg: leikkaus, haivytys, '
+          + 'loudnorm, uudelleenkoodaus) EI ENAA KOSKE Livian tiedostoon: '
+          + 'ampariin ja peliin menee mallin tuottama MP3 sellaisenaan '
+          + '(= raakatiedosto). Kesto mitataan vain validointiin. 3) '
+          + 'Ensimmainen ajo: ateena-3 ja sofia-3 uusintana, omistaja '
+          + 'kuuntelee pelissa ja paattaa sitten muista 38:sta.',
         'CODEX SAA TEHDA PILOTIN LOPPUUN JA AANITTAA SEN VALMIINA (omistaja 12.9.2026 yolla, sanatarkasti: "sanoin codexille etta saavat tehda homman loppuun ja saivat myos luvan generoida tekstit kun kaikki valmista"): neljan kaupungin Horatio-Livia-pilotti viedaan loppuun Codexin johdolla, ja heilla on omistajan lupa ajaa sen aanitys - MUTTA VASTA KUN KAIKKI ON VALMISTA. Tama on rajattu poikkeus edelliseen linjaukseen eika kumoa sita: lupa koskee tata pilottia, ei kaikkea tulevaa generointia, ja Fable kysyy omat ajonsa yha erikseen. Fablen tyo pilotissa on lopputarkistus, yhdistaminen ja julkaisu - Codex toimittaa yhden yhteistestatun paketin, ei kolmea osatoimitusta.',
         'AANIA EI GENEROIDA ILMAN LUPAA, EIKA ENNEN KUIN TEKSTIT OVAT VALMIIT (omistaja 12.9.2026 ilta, sanatarkasti: "ala generoi mitaan aania ennen lupaani" ja "jos ne ovat jo generoitu niin laita ne peliin mutta se oli turhaa tyota koska teksteja ollaan vasta hiomassa"): jokainen maksullinen aanigenerointi kysytaan erikseen. AANEN VALINTA EI OLE LUPA AJAA: kun omistaja paattaa aanen, se kirjataan - ajo odottaa erillista lupaa. SYY ON MYOS TEKNINEN: osoite syntyy tekstin tiivisteesta, joten jokainen tekstin hionta mitatoi aanitteen ja pakottaa saman ajon uudelleen. Aanitys tehdaan siis vasta kun tekstit ovat valmiit, ei kun aani on valittu. Sama koskee kuvagenerointia ja muita maksullisia ajoja.',
         'PULUN AANET AJETAAN UUDESTAAN NORMAALILLA NOPEUDELLA, HISTORIA ENSIN (omistaja 13.9.2026, sanatarkasti: "Sailyyko generointi elevenin paassa tallessa?" ja "Generoi pulun aanet uudestaan. Normaalilla nopeudella"): tama on nimenomainen lupa maksulliseen uusinta-ajoon, ja se kumoaa aiemman rajauksen siita, ettei yleischatin repliikkeja ajeta uudestaan — nopeutus on niissa kaikissa sama vika. JARJESTYS ON OMISTAJAN VALINTA: ensin luetaan ElevenLabsin History-arkisto (GET /v1/history on pelkka luku eika kuluta krediitteja), koska se sisaltaa mallin RAAKATUOTOKSEN eli juuri sen nopeuttamattoman alkuperaisen, jonka ffmpeg sitten nopeutti; historiasta loytyvat ladataan ja viimeistellaan ilmaiseksi ilman atempoa, ja maksullisesti generoidaan vain puuttuvat. Pelin oma raakakansio media/pulu-raaka ei auta: se elaa vain ajon ajan runnerin levylla eika sita viedä ampariin. AJAJA ON CODEXIN RC-VETAJA yhden ajo-omistajan saannon mukaisesti; Fable ei kaynnista rinnakkaista ajoa vaan versioi ja julkaisee tuloksen. AANIERAN NUMERO ON NOSTETTAVA, koska tekstit eivat muutu ja osoite on tiiviste+era — ilman nostoa palvelutyontekijan aanikori soittaa vanhan nopeutetun tiedoston.',
