@@ -14,6 +14,32 @@ import { AARRETYYPIT } from './tokens.js';
 import { fetchImage, fetchSummary } from './wiki.js';
 import { OMAT_TIIVISTELMAT } from './packs/omat-tiivistelmat.js';
 
+/*
+ * ── PUHELINTUNNISTUS YHDESSÄ PAIKASSA ───────────────────────────────
+ *
+ * Raja on ruudun mitta, EI käyttäjäagentti: `max-width: 699px` on
+ * kartan oma puhelinraja ja `max-height: 520px` sama raja
+ * vaakasuunnassa, jossa iPhone on 844 × 390 eikä leveysraja osuisi.
+ * Mitattu 14.9.2026: 390 × 844 → leveysraja osuu, 844 × 390 →
+ * korkeusraja osuu, 1400 × 900 → kumpikaan ei osu.
+ *
+ * MIKSI TÄÄLLÄ EIKÄ ui.js:SSÄ. Raja syntyi v1891:ssä ui.js:ään, mutta
+ * myös js/pollo.js tarvitsee sen (puhelimella puhekuplat imeytyvät heti
+ * pluskuplaan). pollo.js ei tuo ui.js:ää — eikä saa tuoda, koska ui.js
+ * tuo pollon. ui-apurit on juuri tätä varten: puhtaita apureita ilman
+ * pelitilariippuvuuksia. ui.js vie nimen yhä eteenpäin, joten sen
+ * käyttäjien ei tarvinnut muuttua.
+ *
+ * SAMA MERKKIJONO ON CSS:SSÄ (css/styles.css "PUHELIN: ISOISÄN JA
+ * PULUN TEKSTIT PIILOON"). Jos rajaa muutetaan, molemmat muuttuvat.
+ */
+export const PUHELIN_KYSELY = '(max-width: 699px), (max-height: 520px)';
+
+/** Onko peli puhelimen kokoisella ruudulla (ks. PUHELIN_KYSELY)? */
+export function puhelinTila() {
+  return Boolean(globalThis.matchMedia?.(PUHELIN_KYSELY)?.matches);
+}
+
 // Tapahtumakuplien kestot (siirretty ui.js:stä M3:ssa: myös
 // vertailutila tarvitsee oletuskeston ilman kiertotuontia).
 export const TOAST_MS = { die: 950, default: 1200 };

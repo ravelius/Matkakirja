@@ -26601,17 +26601,29 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px;
  */
 
 /*
- * PULUN PUHEKUPLAT PIILOSSA PUHELIMELLA. Kuplat ovat pulun repliikin
- * tekstitys; repliikki soi äänenä eikä kupla peitä enää karttaa ja
- * isoisän kuvaa. Pulu itse (nappi ja hahmo) jää paikalleen.
+ * PULUN PUHEKUPLAT PUHELIMELLA: PLUSKUPLA AVAA TEKSTIN.
  *
- * AVOIN KYSYMYS OMISTAJALLE (kirjattu raporttiin): äänettömällä
- * puhelimella pulun repliikki jää kokonaan saamatta. Isoisän merkinnän
- * saa esiin lappua napauttamalla; pulun kuplilla ei ole vastaavaa
- * omaa avaajaa.
+ * v1891 piilotti koko kuplapinon täältä css:llä, ja se jätti
+ * äänettömälle puhelimelle avoimen kysymyksen: repliikki jäi kokonaan
+ * saamatta. Omistajan vastaus 14.9.2026, sanatarkasti: *"Pululla on se
+ * pieni puhekupla jossa plus merkki. Siitä tulee teksti näkyviin."*
+ *
+ * PIILOTUS SIIRTYI CSS:STÄ PELIN OMAAN MEKANISMIIN (js/pollo.js
+ * lisaaPinoon): puhelimella uusi puhekupla imeytyy heti pluskuplaan
+ * (.pollo-kuplapalautus), jonka napautus palauttaa sen tekstinä ja
+ * josta se sulkeutuu takaisin kuten ennenkin. Kartta ja isoisän kuva
+ * jäävät siis yhtä vapaiksi kuin v1891:ssä, mutta teksti on yhden
+ * napautuksen päässä.
+ *
+ * TÄNNE EI SAA PALAUTTAA `.pollo-kuplapino-kehys { display: none }`:
+ * se piilottaisi myös pelaajan itse avaaman kuplan, ja pluskuplan
+ * napautuksesta ei seuraisi mitään näkyvää.
+ *
+ * .pollo-vihje-yksin on eri asia: se on pinon ULKOPUOLINEN yksittäinen
+ * kupla, jota pluskuplan muisti ei hallitse, joten se on puhelimella
+ * yhä piilossa kuten v1891:ssä.
  */
 @media (max-width: 699px), (max-height: 520px) {
-  .pollo-kuplapino-kehys,
   .pollo-vihje-yksin {
     display: none !important;
   }
