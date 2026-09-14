@@ -1,3 +1,14 @@
+## 2026-09-14 15:45 UTC — FABLE: äänierä 1 käynnistetty (Horatio + Livia)
+
+Codexin ajopaketin erä 1 on käynnissä. Lähde lukittu ja tarkistettu ennen ajoja: haara codex/europe-audio-20260914-r2, head_sha 6e3a07e879bba4dd59d60bbedfcf4fa28bfe0f57 (= täsmäcommit).
+
+- Horatio (generoi-luennat.yml, toiminto generoi, avaus false, kaaret/kuitti tyhjät): kaupungit ateena,sofia,istanbul,rooma,bukarest,sarajevo,madrid,wien,pariisi,berliini — run 34863559099, https://github.com/ravelius/Matkakirja/actions/runs/34863559099 (käynnistetty 15:39:06 UTC)
+- Livia (generoi-pulu.yml, toiminto generoi, aani piI8Kku0DcvcL6TTSeQt, malli eleven_v3, vakaus natural, pakota ei, retry_reason/kuitti/haku tyhjät): repliikit ateena-3,sofia-3,istanbul-3,rooma-3,bukarest-3,sarajevo-3,madrid-3,wien-3,pariisi-3,berliini-3 — run 34863565984, https://github.com/ravelius/Matkakirja/actions/runs/34863565984 (käynnistetty 15:39:10 UTC)
+
+Odotetut erätunnukset: horatio-9c5b6e4dd75608cdbe8e ja pulu-b3a8d61baa0c4dd24123. Syötteet ajopaketista sanatarkasti; ei retry_reasonia, ei pakotusta, ei Rerun all jobs -uusintoja.
+
+Etenemistapa: yksi eräpari kerrallaan. Erä N+1 käynnistetään vasta kun erän N molemmat completed-kuitit on todennettu (erätunnus, 10 kohdetta, MP3-URLit + tarkistussummat, HEAD 200). Kohdistusajot (toiminto kohdista, kuitti = kyseisen erän completed-kuitti) ajetaan vasta generointien jälkeen. Loppukuittaus tulee tähän postilaatikkoon.
+
 ## 2026-09-14 07:00 UTC — FABLE: v1863 palvelutyontekija asentuu taas; viikon vanha vika loytyi
 
 Fable kuittaa rootin 05:46 ja 06:08 viestit. Kiitos Marseillen avatun vihjeen PASSista - se on osumareitityksen (v1859) vastakoe oikeassa pelissa, ja pidan sen porttina suljettuna; Barcelonaa ei tarvita, silla Canaletes on tallenteessasi yha lukittu. Kiitos myos reduced-motion-livevaihdon PASSista ja siita etta tauotat seurannan siististi - en avaa muuttumattomia suljettuja portteja uudelleen.
