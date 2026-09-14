@@ -23,6 +23,10 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { KAARI_PAKETIT } from '../js/tyohuone-kehitys-data.js';
+import {
+  eratunnus, kokoaRaakakuitti, lahdeCommit, raakaAmpariKansio, sha256,
+  vaadiRaakavienti, vieKuitti, vieRaaka,
+} from './raakavienti.mjs';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const AANI = 'Sz0tRTEpybtDJ9ru2kgD'; // Viisas Kertoja
@@ -35,6 +39,18 @@ if (!avain) {
   console.error('ELEVEN_API_KEY puuttuu ympäristöstä — luentoja ei voi generoida.');
   process.exit(1);
 }
+
+/*
+ * RAAKAVIENTI ON PAKOLLINEN (omistajan sääntö 14.9.2026, Raamattu:
+ * ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA). Tarkistus ENNEN
+ * ensimmäistäkään maksullista kutsua; --ei-vientia kaataa ajon.
+ */
+export const AMPARIN_JUURI = 'audio/kaari';
+const liput = {
+  kuiva: process.argv.includes('--kuiva') || process.env.ELEVEN_KUIVA === '1',
+  vienti: !process.argv.includes('--ei-vientia'),
+};
+vaadiRaakavienti(liput);
 
 /* Paketin v2 osat: saapuminen (isoisä), kohtaaminen (henkilö) ja
  * aarre (henkilö + nuoren Foggin mietintö). Kysymystä ei lueta —
@@ -54,6 +70,14 @@ if (!kohteet.length) {
   console.error('Ei kohteita. Tunnetut:', KAARI_PAKETIT.kohteet.map((k) => k.id).join(', '));
   process.exit(1);
 }
+
+const SOURCE_COMMIT = lahdeCommit();
+const ERA = eratunnus('kaari', {
+  sourceCommit: SOURCE_COMMIT, voiceId: AANI, model: MALLI, stability: STABILITY,
+  outputFormat: 'mp3_44100_128', lopputauko: LOPPUTAUKO,
+});
+const RAAKA_KANSIO = raakaAmpariKansio(AMPARIN_JUURI, ERA);
+const kuittirivit = [];
 
 async function generoi(teksti, polku, nimi) {
   console.log(`${nimi}: generoidaan (${teksti.length} merkkiä)…`);
@@ -75,11 +99,28 @@ async function generoi(teksti, polku, nimi) {
     process.exit(1);
   }
   const data = Buffer.from(await vastaus.arrayBuffer());
+
+  /*
+   * RAAKA ÄMPÄRIIN HETI, ennen levylle kirjoitusta. Tässä putkessa
+   * raaka ja valmis ovat sama tavujono (ei käsittelyä), mutta raaka
+   * saa silti oman eräkohtaisen avaimensa: jos käsittely joskus
+   * lisätään, alkuperäinen ei lakkaa olemasta tallessa huomaamatta.
+   */
+  const tiedostonimi = polku.split('/').at(-1);
+  const raaka = vieRaaka(data, { nimi: `raaka-${tiedostonimi}`, kansio: RAAKA_KANSIO });
+  console.log(`${nimi}: raaka talteen → ${raaka.url}`);
+
   // assets/audio ei ole enää repossa (omistajan linjaus 11.9.2026:
   // äänet vain ämpärissä), joten kansio voi puuttua tyhjästä
   // checkoutista — luodaan se ennen kirjoitusta.
   mkdirSync(dirname(polku), { recursive: true });
   writeFileSync(polku, data);
+  kuittirivit.push({
+    fileName: tiedostonimi,
+    outputPath: `assets/audio/${tiedostonimi}`,
+    rawArtifact: raaka,
+    finalArtifact: { fileName: tiedostonimi, sha256: sha256(data), bytes: data.length },
+  });
   console.log(`${nimi}: ${(data.length / 1024).toFixed(0)} kt → ${polku}`);
 }
 
@@ -93,5 +134,15 @@ for (const k of kohteet) {
     await generoi(teksti, polku, `${k.id}/${osa}`);
     generoitu += 1;
   }
+}
+if (kuittirivit.length) {
+  const kuitti = vieKuitti(kokoaRaakakuitti({
+    putki: 'kaari',
+    batchId: ERA,
+    sourceCommit: SOURCE_COMMIT,
+    resepti: { voiceId: AANI, model: MALLI, stability: STABILITY, outputFormat: 'mp3_44100_128' },
+    rivit: kuittirivit,
+  }), AMPARIN_JUURI);
+  console.log(`Kuitti: ${kuitti.objectKey}`);
 }
 console.log(`Valmis — ${generoitu} luentaa.`);

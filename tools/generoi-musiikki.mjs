@@ -134,9 +134,14 @@
  */
 
 import { spawnSync } from 'node:child_process';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+import {
+  eratunnus, kokoaRaakakuitti, lahdeCommit, raakaAmpariKansio, sha256 as raakaSha256,
+  vaadiRaakavienti, vieKuitti, vieRaaka,
+} from './raakavienti.mjs';
 
 import {
   LYRIA_MALLI, MOOTTORIT, avaimenNimi, haeLyriasta, moottorinAvain, raidanTiedosto,
@@ -545,7 +550,7 @@ export function valitseRaidat(argumentit) {
  * jotta tämä funktio pysyy puhtaana ja testattavana.
  */
 export function tulkitseArgumentit(argumentit) {
-  const liput = { raidat: [], moottori: 'lyria', kuiva: false };
+  const liput = { raidat: [], moottori: 'lyria', kuiva: false, vienti: true };
   for (let i = 0; i < argumentit.length; i += 1) {
     const arg = argumentit[i];
     if (arg === '--moottori') {
@@ -556,6 +561,10 @@ export function tulkitseArgumentit(argumentit) {
       }
     } else if (arg === '--kuiva') {
       liput.kuiva = true;
+    } else if (arg === '--ei-vientia') {
+      // VAIN kuivaan ajoon: maksullinen generointi kieltäytyy tästä
+      // (raakavientiEste), koska alkuperäinen katoaisi ajon mukana.
+      liput.vienti = false;
     } else if (arg.startsWith('--')) {
       return { ...liput, virhe: `tuntematon argumentti: ${arg}` };
     } else {
@@ -630,6 +639,19 @@ async function main() {
    */
   const kuiva = liput.kuiva || process.env.ELEVEN_KUIVA === '1';
 
+  /*
+   * RAAKAVIENTI ON PAKOLLINEN (omistajan sääntö 14.9.2026, Raamattu:
+   * ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA). Tarkistus ennen
+   * ensimmäistäkään maksullista kutsua.
+   *
+   * Tässä putkessa looppi pyydetään mallilta eikä ommella jälkikäteen,
+   * joten raaka ja valmis ovat sama tavujono. Raaka saa silti oman
+   * eräkohtaisen avaimensa: se on se, mistä on maksettu, ja tiedostot
+   * kirjoitetaan assets/audio-kansioon, joka katoaa Actions-ajon
+   * mukana heti kun työnkulku on vienyt ne.
+   */
+  vaadiRaakavienti({ kuiva, vienti: liput.vienti });
+
   const avain = moottorinAvain(liput.moottori);
   if (!avain && !kuiva) {
     console.error(`${avaimenNimi(liput.moottori)} puuttuu ympäristöstä — musiikkia ei voi generoida.`);
@@ -641,6 +663,19 @@ async function main() {
   console.log(liput.moottori === 'lyria'
     ? `Moottori: Lyria 3.5 (${LYRIA_MALLI}), raidat päätteellä -lyria — pelin moottori.`
     : `Moottori: ElevenLabs Music (${MALLI}, ${MUOTO}), paljaat nimet — vertailu, ei soi pelissä.`);
+
+  const AMPARIN_JUURI = 'audio';
+  const sourceCommit = lahdeCommit();
+  const era = eratunnus('musiikki', {
+    sourceCommit, raidat: pyydetyt, moottori: liput.moottori,
+    malli: liput.moottori === 'lyria' ? LYRIA_MALLI : MALLI,
+    muoto: liput.moottori === 'lyria' ? 'lyria' : MUOTO,
+  });
+  const raakaKansioAmpari = raakaAmpariKansio(AMPARIN_JUURI, era);
+  const kuittirivit = [];
+  if (!kuiva) {
+    console.log(`Erä ${era}; raakatuotokset avaimeen ${raakaKansioAmpari}/`);
+  }
 
   let virheita = 0;
   for (const nimi of pyydetyt) {
@@ -666,6 +701,35 @@ async function main() {
       )
       : await haeElevenLabsista(raita, avain, kohde);
     console.log(`${nimi}: ${(tavut / 1024).toFixed(0)} kt → ${kohde}`);
+
+    // RAAKA ÄMPÄRIIN heti generoinnin jälkeen, ennen mitään muuta.
+    const tiedostonimi = polku.split('/').at(-1);
+    const data = readFileSync(kohde);
+    const raaka = vieRaaka(data, {
+      nimi: `raaka-${tiedostonimi}`, kansio: raakaKansioAmpari,
+    });
+    console.log(`${nimi}: raaka talteen → ${raaka.url}`);
+    kuittirivit.push({
+      fileName: tiedostonimi,
+      outputPath: polku,
+      rawArtifact: raaka,
+      finalArtifact: { fileName: tiedostonimi, sha256: raakaSha256(data), bytes: data.length },
+    });
+  }
+
+  if (!kuiva && kuittirivit.length) {
+    const kuitti = vieKuitti(kokoaRaakakuitti({
+      putki: 'musiikki',
+      batchId: era,
+      sourceCommit,
+      resepti: {
+        raidat: pyydetyt, moottori: liput.moottori,
+        malli: liput.moottori === 'lyria' ? LYRIA_MALLI : MALLI,
+      },
+      rivit: kuittirivit,
+      status: virheita ? 'completed-with-errors' : 'completed',
+    }), AMPARIN_JUURI);
+    console.log(`Kuitti: ${kuitti.objectKey}`);
   }
 
   if (kuiva) {
