@@ -7418,8 +7418,19 @@ export const RAAMATTU = {
           + 'nakyviin vasta niiden jalkeen. 3) Nakyessaan Liiku on '
           + 'huomaamattomampi: pienempi, hillitympi vari/kontrasti, '
           + 'kartan sävyyn - ei kirkas keltainen laatta; tarkka mitoitus '
-          + 'mittaamalla, kaksi vaihtoehtoa omistajalle kuvina. Tila: tyo '
-          + 'Opus-agentilla.',
+          + 'mittaamalla. TARKENNUS (omistaja klo 20.50 UTC, sanatarkasti: '
+          + '"Liiku nappi voisi siirtya vas. alareunaan nelion muotoiseksi '
+          + 'symboliksi ilman varikorostusta. Kun aarre on loytynyt nappi '
+          + 'voisin laajentua liiku napiksi niin etta symboli jaisi '
+          + 'vasempaan reunaan ja teksti tulisi oikealle puolelle. Nappi '
+          + 'voisi kutistua jonkin ajan kuluttua sitten takaisin pelkaksi '
+          + 'nelio symbooli napiksi"): Liiku on VASEMMASSA ALAREUNASSA '
+          + 'NELION MUOTOINEN SYMBOLINAPPI ilman varikorostusta (kartan '
+          + 'muste/pergamentti). Kun aarre on loytynyt, nappi LAAJENEE '
+          + 'oikealle: symboli jaa vasempaan reunaan, teksti "Liiku" '
+          + 'tulee oikealle; jonkin ajan kuluttua (Fablen linjaus n. 6 s) '
+          + 'se kutistuu takaisin pelkaksi symboliksi. Kohta 2 (piilossa '
+          + 'luennan ajan) pysyy. Tila: tyo Opus-agentilla.',
         'Saapumiskortti: luettu matkakirjamerkintä + esittely '
           + 'kuvineen.',
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
