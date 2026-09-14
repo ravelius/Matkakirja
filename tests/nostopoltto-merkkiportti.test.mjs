@@ -81,9 +81,28 @@ test('poltettavat ovat täsmälleen ne, jotka elävä portti päästäisi', () =
       } else if (!paastetyt.has(m.tunnus)) karsittuja += 1;
     }
   }
-  // Mitattu 14.9.2026: GRC 12, TUR 8, DEU 7, HRV 2, ITA 1, RUS 1, ESP 1.
+  /*
+   * MITATTU 14.9.2026, kaksi lukemaa:
+   *   ilman Ranskan sisältöpilottia  32 (GRC 12, TUR 8, DEU 7, HRV 2,
+   *                                     ITA 1, RUS 1, ESP 1)
+   *   pilotin kanssa                 73 (edelliset + FRA 41)
+   *
+   * KIINTEÄ LUKU EI OLLUT VÄITE VAAN PÄIVÄMÄÄRÄ. Luku 32 oli mitattu
+   * silloisesta aineistosta, ja kun Ranskan pilotti (18 maalehtinostoa
+   * `lahi`-portin takana ja seitsemän lisäkaupunkia) tuli mukaan, se
+   * kaatui — vaikka mikään ei ollut vialla. Mitattu vastakokeella: luku
+   * on 73 riippumatta siitä, ovatko lisäkaupungit kaupunkikortteja vai
+   * vanhoja `vainNimi`-nimikylttejä, joten kyse on sisällön määrästä
+   * eikä tämän erän muutoksesta.
+   *
+   * VÄITE ON NYT SE, JONKA VIESTI JO SANOI: polttoketjun oma tilasto ja
+   * tässä testissä tehty riippumaton mittaus kertovat SAMAN luvun. Se
+   * on aineistosta riippumaton invariantti ja kaatuu heti, jos ketjut
+   * ajautuvat erilleen. Alaraja pitää väitteen mittaamassa jotain.
+   */
   assert.ok(karsittuja >= 30, `portti karsii ${karsittuja} merkkiä (odotettu ≥ 30)`);
-  assert.equal(tilasto.porttiPiiloon, 32, 'tilasto kertoo saman luvun kuin mittaus');
+  assert.equal(tilasto.porttiPiiloon, karsittuja,
+    'tilasto kertoo saman luvun kuin mittaus');
 });
 
 test('lähizoomin kohde (lahi: true) ei pala koskaan', () => {

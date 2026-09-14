@@ -25,8 +25,10 @@
  *   3. NOSTOLOHKO ON DATAN OMA TEKSTI MERKILLEEN: otsikko ja leipä
  *      ovat js/packs/maalehtinostot-fra.js:n `maalehti-cinematographe`
  *      sanasta sanaan, nostokortin omilla luokilla.
- *   4. ESITTELYLOHKO PUUTTUU, koska `esittely` on vielä `null`
- *      (luonnokset ovat Fablen hyväksyttävänä).
+ *   4. ESITTELY ON KORTISSA SANASTA SANAAN DATAN OMA (Fable hyväksyi
+ *      seitsemän esittelyä 14.9.2026 klo 21.25 UTC).
+ *   4b. VASTAKOE: kun `esittely` tyhjennetään ajon ajaksi, koko
+ *      esittelylohko katoaa kortista — tyhjää kehystä ei jätetä.
  *   5. LILLE — KAUPUNKI ILMAN ANKKUROITUA NOSTOA — avaa saman kortin
  *      ILMAN nostolohkoa. Tämä on vartion 3 luonnollinen vastapari.
  *   6. VASTAKOE: kun Lyonin `korttiNosto` nollataan ajon ajaksi,
@@ -141,6 +143,7 @@ const lueKortti = (sivu) => sivu.evaluate(() => {
     paikkamerkinTeksti: paikka?.textContent ?? '',
     kuvia: p.querySelectorAll('img').length,
     esittelyja: p.querySelectorAll('.arrival-intro').length,
+    esittelyTeksti: p.querySelector('.arrival-intro')?.textContent ?? null,
     nostoOtsikko: p.querySelector('.fokusnosto-kortti-otsikko')?.textContent ?? null,
     nostoTeksti: p.querySelector('.fokusnosto-teksti')?.textContent ?? null,
     nostolohkoja: p.querySelectorAll('.fokusnosto-teksti').length,
@@ -149,15 +152,38 @@ const lueKortti = (sivu) => sivu.evaluate(() => {
   };
 });
 
-/** Merkin ruutupiste pallon osumalistalta (sama kaava kuin nostoilla). */
-const piste = (sivu, id) => sivu.evaluate((tunnus) => {
-  const l = window.matkakirja.ui.pallolauta;
-  const o = l.nostot.osumat().find((x) => x.id === tunnus);
-  if (!o) return null;
-  const p = l.pallo.getScreenCoords(o.lat, o.lng, 0);
-  const kr = l.pallo.renderer().domElement.getBoundingClientRect();
-  return { px: Math.round(p.x + kr.x), py: Math.round(p.y + kr.y) };
-}, id);
+/**
+ * Merkin ruutupiste pallon osumalistalta (sama kaava kuin nostoilla).
+ *
+ * MITTA UUSITAAN, KUNNES LADONTA ON ASETTUNUT. Osumalista syntyy vasta
+ * kun pallo on pysähtynyt ja `ladoHeti` on ajanut; isolla ruudulla ja
+ * kuormitetulla koneella ensimmäinen luku osui mitatusti tyhjään
+ * listaan (savukeajo 14.9.2026, 1400 × 900: molemmat kaupungit `null`,
+ * vaikka erillinen mittaus näytti ne listalla ruutupisteessä 871, 521).
+ * Silmukka ajaa ladonnan uudestaan ja lukee saman listan viisi kertaa —
+ * se ei piilota vikaa, koska tyhjä lista viiden kierroksen jälkeen jää
+ * yhä `null`iksi ja kaataa vartion.
+ */
+const piste = async (sivu, id) => {
+  for (let i = 0; i < 5; i += 1) {
+    /* eslint-disable no-await-in-loop */
+    const p = await sivu.evaluate(async (tunnus) => {
+      const l = window.matkakirja.ui.pallolauta;
+      l.ladoHeti();
+      await new Promise((v) => setTimeout(v, 250));
+      const o = l.nostot.osumat().find((x) => x.id === tunnus);
+      if (!o) return null;
+      const s = l.pallo.getScreenCoords(o.lat, o.lng, 0);
+      if (!s) return null;
+      const kr = l.pallo.renderer().domElement.getBoundingClientRect();
+      return { px: Math.round(s.x + kr.x), py: Math.round(s.y + kr.y) };
+    }, id);
+    if (p) return p;
+    await sivu.waitForTimeout(400);
+    /* eslint-enable no-await-in-loop */
+  }
+  return null;
+};
 
 const sulje = async (sivu) => {
   for (let i = 0; i < 4; i += 1) {
@@ -256,8 +282,13 @@ for (const ruutu of RUUDUT) {
     vaadi(`${ruutu.nimi} ${kohde.nimi}: 2. kuvan paikkamerkki näkyy, ulkoisia kuvia 0`,
       kortti.paikkamerkki && kortti.paikkamerkinTeksti === kohde.nimi && kortti.kuvia === 0,
       `merkki ${kortti.paikkamerkki}, teksti "${kortti.paikkamerkinTeksti}", kuvia ${kortti.kuvia}`);
-    vaadi(`${ruutu.nimi} ${kohde.nimi}: 4. esittelylohko puuttuu (esittely on vielä null)`,
-      kohde.esittely === null && kortti.esittelyja === 0, `${kortti.esittelyja} lohkoa`);
+    const esittelyOdote = jaaKappaleiksi(kohde.esittely ?? '').join('');
+    tieto(`${ruutu.nimi} ${kohde.nimi} esittelyn pituus`, `${(kohde.esittely ?? '').length} merkkiä`);
+    vaadi(`${ruutu.nimi} ${kohde.nimi}: 4. esittely on kortissa datan oma merkilleen`,
+      kortti.esittelyja === 1 && kortti.esittelyTeksti === esittelyOdote
+      && esittelyOdote.length >= 180 && esittelyOdote.length <= 260,
+      `lohkoja ${kortti.esittelyja}, kortissa ${kortti.esittelyTeksti?.length ?? 0},`
+      + ` datassa ${esittelyOdote.length} merkkiä`);
     if (onNosto) {
       const odote = nostonTeksti(kohde.korttiNosto);
       tieto(`${ruutu.nimi} ${kohde.nimi} noston tunnus`, kohde.korttiNosto?.id ?? '-');
@@ -291,26 +322,39 @@ for (const ruutu of RUUDUT) {
     }
   }
 
-  /* --- 6. VASTAKOE: Lyonin korttiNosto pois ajon ajaksi --- */
+  /* --- 4b ja 6. VASTAKOKEET: datakenttä pois ajon ajaksi --- */
   await sulje(sivu);
-  const koe = await sivu.evaluate(async (id) => {
+  /*
+   * Avaa Lyonin kortin niin, että annettu datakenttä on mittauksen
+   * ajaksi tyhjä, ja palauttaa kentän heti perään. Vartiot 3, 3b ja 4
+   * mittaavat siis DATAA eivätkä kortin rakennetta: jos kortti piirtäisi
+   * lohkon datasta riippumatta, tämä koe olisi punainen.
+   */
+  const ilmanKenttaa = (kentta) => sivu.evaluate(async ([id, nimi]) => {
     const { KOHDE_MAAT, kohteidenNykyinenIso, avaaFokuskohde } = await import('/js/fokuskohteet.js');
     const ui = window.matkakirja.ui;
     const iso = kohteidenNykyinenIso(ui);
     const kohde = (KOHDE_MAAT[iso] ?? []).find((k) => k.id === id);
     if (!kohde) return null;
-    const talteen = kohde.korttiNosto;
-    kohde.korttiNosto = null;
+    const talteen = kohde[nimi];
+    kohde[nimi] = null;
     avaaFokuskohde(ui, kohde, {});
     await new Promise((v) => setTimeout(v, 500));
     const p = document.querySelector('.kaupunkipopup-lisakaupunki');
     const tulos = {
       kortti: Boolean(p),
       nostolohkoja: p ? p.querySelectorAll('.fokusnosto-teksti').length : -1,
+      esittelyja: p ? p.querySelectorAll('.arrival-intro').length : -1,
     };
-    kohde.korttiNosto = talteen;
+    kohde[nimi] = talteen;
     return tulos;
-  }, LYON.id);
+  }, [LYON.id, kentta]);
+
+  const koeEsittely = await ilmanKenttaa('esittely');
+  vaadi(`${ruutu.nimi}: 4b. VASTAKOE — ilman \`esittely\`ä kortissa ei ole esittelylohkoa`,
+    Boolean(koeEsittely?.kortti) && koeEsittely.esittelyja === 0, JSON.stringify(koeEsittely));
+  await sulje(sivu);
+  const koe = await ilmanKenttaa('korttiNosto');
   vaadi(`${ruutu.nimi}: 6. VASTAKOE — ilman \`korttiNosto\`a Lyonin kortissa ei ole nostolohkoa`,
     Boolean(koe?.kortti) && koe.nostolohkoja === 0, JSON.stringify(koe));
 

@@ -4,13 +4,19 @@
 `claude/bold-ride-vow4ki-kaupunkikortit`, pohja
 `claude/bold-ride-vow4ki-ranska-sisalto` (Ranskan sisältöerä #2447).
 
+> **ESITTELYT HYVÄKSYTTY (Fable 14.9.2026 klo 21.25 UTC) JA VIETY
+> DATAAN.** Kaikki seitsemän luonnosta hyväksyttiin sellaisinaan, ja ne
+> ovat nyt `js/packs/nakyvat-kaupungit-fra.js`:n `esittely`-kentissä
+> sanasta sanaan siinä muodossa, jossa ne olivat hyväksyttävänä (luku
+> 3). Jokaisen väitteen lähde on rivin vieressä uudessa kentässä
+> `esittelynLahteet`. Savukkeen vartio 4 vertaa kortin tekstiä datan
+> tekstiin `===`-vertailuna, ja uusi vastakoe 4b mittaa, että lohko
+> katoaa jos kenttä tyhjenee.
+
 **Yhdellä rivillä:** Ranskan seitsemän lisäkaupunkia eivät ole enää
 pelkkiä nimikylttejä — merkin napautus avaa kaupunkikortin lehden
-kehyksessä, ja kortissa on kuvan paikkamerkki, paikka esittelylle ja
-yksi kaupunkiin ankkuroitu maalehden nosto. **Esittelytekstejä EI ole
-viety dataan**: seitsemän luonnosta ovat luvussa 3 sinun
-hyväksyttävänäsi, ja datassa on `esittely: null`, jolloin kortti
-jättää lohkon pois.
+kehyksessä, ja kortissa on kuvan paikkamerkki, hyväksytty esittely ja
+Lyonilla lisäksi yksi kaupunkiin ankkuroitu maalehden nosto.
 
 ---
 
@@ -32,7 +38,7 @@ nostoikseen"* tarkoittaa, ettei yhtään nostoa siirretty pois kartalta
 
 | tiedosto | muutos |
 | --- | --- |
-| `js/packs/nakyvat-kaupungit-fra.js` | `vainNimi: true` poistui joka riviltä. Tilalle neljä kenttää: `kaupunkikortti: true`, `herokuva: null`, `esittely: null`, `korttiNosto` (viite maalehtinoston omaan olioon tai `null`). Tiedoston alkuun mittaustaulukko siitä, mille kaupungille nosto löytyi |
+| `js/packs/nakyvat-kaupungit-fra.js` | `vainNimi: true` poistui joka riviltä. Tilalle viisi kenttää: `kaupunkikortti: true`, `herokuva: null`, **`esittely` (hyväksytty teksti)**, **`esittelynLahteet` (lähde per väite)**, `korttiNosto` (viite maalehtinoston omaan olioon tai `null`). Tiedoston alkuun mittaustaulukko siitä, mille kaupungille nosto löytyi |
 | `js/kaupunkinosto.js` | **uusi** `latoLisakaupunginKortti` + `avaaLisakaupunginKortti` (n. 150 riviä kommentteineen). Käyttää samaa `avaaKortti`-kehystä kuin tiivis kaupunkietusivu (PAATOKSET 10) |
 | `js/fokuskohteet.js` | `avaaFokuskohde`: yksi haara `kohde.kaupunkikortti` → kaupunkikortti. Haara on tässä eikä merkkirivillä, jotta se pätee sekä pallon osumalistaan että tasokartan `lahinKohde`-polkuun |
 | `css/kaupunkinosto.css` | **yksi uusi sääntö**: `.kaupunkipopup-heropaikka` (kuvan paikkamerkki) + noston otsikon kutistus kortissa. Perustelu luvussa 4 |
@@ -69,7 +75,8 @@ kehys eikä sama kehys.
   tyyppi: 'kaupunki',
   kaupunkikortti: true,                      // napautus avaa kaupunkikortin
   herokuva: null,                            // ← kuvaputken URL tähän
-  esittely: null,                            // ← hyväksytty esittely tähän
+  esittely: 'Vuonna 1873 Fourvièren kukkulalla …',  // hyväksytty 14.9.
+  esittelynLahteet: ['Basilikan muuraus 1872-1884: …', …],
   korttiNosto: nosto('maalehti-cinematographe'),
   laudat: { maailmankartta: { x: 5994.3, y: 1569.8 } },
   lahde: '…',
@@ -114,10 +121,12 @@ tai olemassa olevan ankkurin siirto, ja kumpikin on sinun päätöksesi.
 
 ## 3. SEITSEMÄN ESITTELYLUONNOSTA — SINUN HYVÄKSYTTÄVÄKSESI
 
-**Nämä eivät ole pelissä.** Datassa on `esittely: null`, ja kortti
-jättää esittelylohkon pois kokonaan (savukkeen vartio 4 mittaa sen).
-Kun hyväksyt tai muokkaat tekstin, se menee yhteen datariviin per
-kaupunki.
+**HYVÄKSYTTY JA PELISSÄ.** Fable hyväksyi kaikki seitsemän
+sellaisinaan 14.9.2026 klo 21.25 UTC, ja ne on viety `esittely`-kenttiin
+merkki merkiltä alla olevassa muodossa. Lähteet (luku 3.2) ovat samaan
+riviin kentässä `esittelynLahteet`. Savukkeen vartio 4 vertaa kortin
+tekstiä datan tekstiin, joten taulukko ja peli eivät voi ajautua
+erilleen huomaamatta.
 
 Säännöt, joita vasten nämä on kirjoitettu: jokainen fakta lähteellä,
 1873/nyt-kontrasti, lyhyt ja konkreettinen, ei kryptisyyttä, ei
@@ -249,12 +258,22 @@ pienennyksen kuin kohdekartan otsikko jo saa.
 | 2 | paikkamerkki näkyy, kortissa **0 kuvaelementtiä** (ei ulkoista hakua) | OK ×4 |
 | 3 | nostolohkon otsikko = datan otsikko | OK ×2 |
 | 3b | nostolohkon teksti = datan teksti `===`-vertailussa | OK ×2 |
-| 4 | esittelylohko puuttuu, koska `esittely` on `null` | OK ×4 |
+| 4 | esittelyn teksti kortissa = datan teksti `===`, 180–260 merkkiä | OK ×4 |
+| 4b | **vastakoe**: `esittely` tyhjennettynä esittelylohko katoaa | OK ×2 |
 | 5 | **vastapari**: Lille (ei ankkuroitua nostoa) saa kortin ilman nostolohkoa | OK ×2 |
 | 6 | **vastakoe**: `korttiNosto` nollattuna Lyoninkin nostolohko katoaa | OK ×2 |
 | 7 | yksikään lisäkaupunki ei ole laudan CITIES-matkakohde | OK (Node) |
 | 7b | yksikään ei ole nopanheiton siirtovaihtoehto | OK ×2 |
 | 8 | ei sivuvirheitä | OK ×2 |
+
+**Savukkeen mittaus uusitaan, kunnes ladonta on asettunut.** Ensimmäinen
+ajo yhdistämisen jälkeen antoi 1400 × 900:lla kahdesti `null`in merkin
+ruutupisteelle. Mittasin erillisellä koeajolla, että merkit OVAT
+osumalistalla ja Lyon ruutupisteessä (871, 521) — kyse oli siitä, että
+osumalista syntyy vasta kun pallo on pysähtynyt ja ladonta ajettu, ja
+kuormitetulla koneella ensimmäinen luku ehti ennen sitä. `piste()` ajaa
+nyt ladonnan ja lukee listan enintään viisi kertaa. Se ei piilota
+vikaa: tyhjä lista viiden kierroksen jälkeen kaataa vartion yhä.
 
 **Vastakoe on pakollinen, ja se on tässä kahtena.** Vartio 5 on
 luonnollinen vastapari (toinen kaupunki, eri data, eri tulos) ja
@@ -264,19 +283,29 @@ vartio 3 olisi voinut mitata kortin rakennetta eikä dataa.
 
 ### 5.2 Portit
 
+Luvut ovat hyväksyntäkierroksen jälkeen, `git merge origin/main`
+mukana.
+
 | portti | tulos |
 | --- | --- |
-| `npm test` | **3353 pass / 2 fail** (lähtötaso samalla haaralla: 3354 / 1) |
+| `npm test` | **3340 pass / 13 fail** |
 | `node tools/tarkista-kaksoisavaimet.mjs` | ei kaksoisavaimia |
-| `node tools/tarkista-niputus.mjs` | 389 moduulia, 4219 julistusta, ei törmäyksiä |
-| `node tools/tarkista-savukkeet.mjs` | 1656 ui-viittausta, ei katkenneita |
+| `node tools/tarkista-niputus.mjs` | 389 moduulia, 4229 julistusta, ei törmäyksiä |
+| `node tools/tarkista-savukkeet.mjs` | 1666 ui-viittausta, ei katkenneita |
+| `savuke-kaupunkikortit` | **37/37** |
 
-**Kaksi punaista ovat `tests/pollo.test.mjs`:n kuormavartiot** —
-`indeksi rakentuu ja on kokoluokaltaan järkevä` ja `haku on nopea myös
-koko aineistolla`. Kumpikaan ei koske tätä erää: **ajettuna yksin
-`tests/pollo.test.mjs` on 124/124 vihreä**, ja lähtötasolla samalla
-haaralla toinen niistä oli jo punainen. Ne mittaavat kelloa
-rinnakkaisajon kuormassa.
+**Kaikki 13 punaista ovat `tests/pulucam.test.mjs`:stä**, ja ne ovat
+rinnakkaisajon kuormavartioita (pulpahdusajastimet, kellon mittaus):
+**ajettuna yksin `tests/pulucam.test.mjs` on 26/26 vihreä**. Tiedostoon
+ei ole koskettu tällä haaralla — sen viimeisin muutos on mainin oma
+`v1827` (#2340). Aiemmalla kierroksella samalla tavalla punaisina olivat
+`tests/pollo.test.mjs`:n kaksi kuormavartiota, jotka olivat sekin yksin
+ajettuna 124/124 vihreitä; tässä ajossa ne menivät läpi. Kone ajaa
+useaa agenttia rinnakkain, ja punaisten joukko vaihtuu ajosta toiseen —
+mikään niistä ei ole tämän erän tekemä.
+
+Kaksi vartiota, jotka **olivat** oikeasti rikki yhdistämisen jälkeen,
+on korjattu; ks. luku 5.4b.
 
 ### 5.3 Päivitetty savuke
 
@@ -293,30 +322,59 @@ ajolla.
 — Lyonin kortti nostolohkoineen ja Lillen kortti ilman, molemmilta
 ruuduilta.
 
-### 5.5 HUOMIO KUVISTA — kortti on nyt ohut
+### 5.4b Kaksi porttia kaatui `git merge origin/main`issa — molemmat korjattu
 
-Katso `kaupunkikortti-nakyva-kaupunki-lille-390.jpg`: **Lillen kortissa
-ei ole tällä hetkellä muuta kuin kuvan paikkamerkki.** Se on tämän erän
-rehellinen lopputulos — herokuvaa ei ole vielä toimitettu ja esittely
-odottaa hyväksyntääsi — mutta se ei ole julkaisukelpoinen näkymä.
+Hyväksyntäkierroksella haara yhdistettiin mainiin, ja kaksi mainin
+uutta vartiota meni punaiseksi. **Kumpikaan ei ollut tämän erän vika,
+mutta kumpikin on nyt korjattu, koska merge on minun.**
 
-**Suositukseni: älä julkaise tätä pelaajille ennen kuin joko esittelyt
-tai herokuvat ovat paikallaan.** Kuudella seitsemästä kaupungista kortti
-on siihen asti tyhjä kehys. Lyonin kortti (sama kuva 390 px:llä) on jo
-nyt kokonainen, koska sillä on nosto.
+**1. `tests/nostopoltto-merkkiportti.test.mjs` — kiinteä luku 32.**
+Vartio vaati `tilasto.porttiPiiloon === 32`, luku mitattuna mainin
+aineistosta. Ranskan sisältöpilotti (#2447: 18 maalehtinostoa
+`lahi`-portin takana ja seitsemän lisäkaupunkia) nostaa sen 73:een.
+Mittasin maittain: GRC 12, TUR 8, DEU 7, HRV 2, ITA 1, RUS 1, ESP 1 =
+mainin 32, ja FRA 41 on pilotti. **VASTAKOE: luku on 73 myös silloin,
+kun lisäkaupungit merkitään ajon ajaksi takaisin `vainNimi`-kylteiksi**
+— kyse on siis sisällön määrästä eikä tämän erän muutoksesta. Sama
+törmäys olisi tullut kun #2447 yhdistetään mainiin, tästä erästä
+riippumatta.
 
-Vaihtoehto, jos julkaisu on kiire: rajaa `kaupunkikortti: true` niihin
-kaupunkeihin, joilla on jotain näytettävää (nyt vain Lyon), ja palauta
-muille `vainNimi: true` siksi aikaa. Se on seitsemän datariviä eikä
-koodimuutos. En tehnyt sitä oma-aloitteisesti, koska omistaja tilasi
-kortin jokaiseen kaupunkiin.
+Korjasin luvun pois: vartio vertaa nyt polttoketjun omaa tilastoa
+tässä testissä tehtyyn riippumattomaan mittaukseen — juuri se, mitä sen
+oma virheviesti jo lupasi (*"tilasto kertoo saman luvun kuin
+mittaus"*). Väite on aineistosta riippumaton ja kaatuu yhä, jos ketjut
+ajautuvat erilleen; alaraja (≥ 30) pitää sen mittaamassa jotain.
+
+**2. `tests/vanha-maailma.test.mjs` — umlautivartio.** Vartio etsii
+`js/packs/`in tiedostoista suomen sanoja, jotka on kirjoitettu ilman
+ä:tä ja ö:tä. Omistajan sitaatti PAATOKSET 16:sta sisältää sanan
+*"jalkeen"*, ja koska omistaja kirjoittaa ilman umlautteja, sitaatti ja
+kirjoitusvirhe näyttävät vartiolle samalta. **Vartio on oikeassa**, ja
+sitaattia ei saa muuttaa — joten siirsin sanatarkan sitaatin pois
+`js/packs/`ista: se asuu nyt `js/kaupunkinosto.js`:n kommentissa ja
+tämän raportin luvussa 1, ja datatiedostossa päätös on suomeksi
+selostettuna. Poikkeuslistaa en koskenut: se on jaettu muiden
+agenttien kanssa.
+
+### 5.5 Kortti ei ole enää tyhjä
+
+Ensimmäisessä ajossa Lillen kortissa ei ollut muuta kuin kuvan
+paikkamerkki, ja kirjasin tähän, ettei sitä saa julkaista sellaisena.
+**Esittelyjen hyväksynnän jälkeen huomio on ohi:** jokaisessa
+seitsemässä kortissa on nyt paikkamerkki ja 198–252 merkin esittely, ja
+Lyonissa lisäksi nosto. Uudet kuvakaappaukset ovat samassa kansiossa.
+
+Jäljellä on vain herokuva. Kun kuvaputki toimittaa sen, paikkamerkki
+vaihtuu kuvaan yhdellä datarivillä per kaupunki, eikä kortin korkeus
+muutu (paikkamerkki on herokuvien 3 : 2 -suhteessa).
 
 ---
 
 ## 6. Mitä sinulta tarvitaan
 
-1. **Hyväksy tai muokkaa seitsemän esittelyä** (luku 3). Kun teksti on
-   hyväksytty, se menee yhteen `esittely`-riviin per kaupunki.
+1. ~~Hyväksy tai muokkaa seitsemän esittelyä.~~ **TEHTY 14.9.2026 klo
+   21.25 UTC** — hyväksyit kaikki seitsemän sellaisinaan, ja ne ovat
+   datassa.
 2. **Päätä Lyonin ulkopuolisista nostoista.** Kuusi kaupunkia jää
    nostolohkotta, koska niihin ei ole ankkuroitua nostoa. Vaihtoehdot:
    (a) näin jää, kortti on kuva + esittely; (b) kirjoitetaan kaupunkiin
@@ -324,3 +382,8 @@ kortin jokaiseen kaupunkiin.
    mutta se veisi noston kartalta väärään paikkaan, joten en suosittele.
 3. **Tilaa herokuvat kuvaputkelta** seitsemälle kaupungille. Vaihto on
    datassa yksi rivi per kaupunki.
+4. **Raamattuun puuttuu PAATOKSET 16.** `js/tyohuone-raamattu.js`
+   sisältää tällä hetkellä päätökset 13 ja 14, muttei 15:tä eikä 16:ta —
+   siis juuri sitä päätöstä, josta tämä erä on tehty. En kirjoittanut
+   sitä itse, koska Raamattuun kirjoittaa vain sinä. Päätöksen sanamuoto
+   on tämän raportin luvussa 1 sanatarkasti.

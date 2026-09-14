@@ -789,9 +789,10 @@ export function suljeTiivisKaupunkietusivu() {
  *      (nyt), kortti piirtää PAIKKAMERKIN eikä hae mitään ulkoa:
  *      seepiaruutu ja kaupungin nimi. Kun putki toimittaa kuvan, vaihto
  *      on yksi datarivi.
- *   2. ESITTELY. `kohde.esittely` on 2–3 lauseen teksti. Kun se on
- *      `null` (nyt), lohko jää pois: luonnokset ovat Fablen
- *      hyväksyttävänä, eikä hyväksymätöntä tekstiä panna peliin.
+ *   2. ESITTELY. `kohde.esittely` on 2–3 lauseen teksti (Fable
+ *      hyväksyi Ranskan seitsemän 14.9.2026 klo 21.25 UTC). Kun kenttä
+ *      on tyhjä, lohko jää pois kokonaan — hyväksymätöntä tekstiä ei
+ *      panna peliin, eikä tyhjää kehystä jätetä korttiin.
  *   3. NOSTO. `kohde.korttiNosto` on viite maalehtinoston omaan olioon
  *      (js/packs/maalehtinostot-fra.js) — EI KOPIO. Otsikko ja teksti
  *      piirretään samoilla luokilla kuin nostokortissa
