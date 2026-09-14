@@ -131,9 +131,26 @@ export const LIVIAN_AANIJUURI = `${AANI_JUURI}aanet/pulu/`;
  * lappi-3 ja tromssa-3 jäivät äänittämättä kiintiön loputtua, joten niiden
  * rivit ja niiden teksti pysyvät 13.9.2026 asussa (js/livia-pilotti-cuet.js
  * ERA5_ODOTTAVAT_KAUPUNGIT).
+ *
+ * ATEENA-3 JA SOFIA-3 UUDELLA PUTKELLA (14.9.2026 ilta, omistajan
+ * kuunneltavaksi). Omistaja kuuli vanhoissa Livia-äänissä pienen
+ * digitaalisen häiriön; mitattu syy oli ylimääräinen 128 kbps
+ * koodaussukupolvi, kun putki purki ElevenLabsin valmiin mp3:n ja koodasi
+ * sen uudelleen libmp3lamella. Uusi putki (erä pulu-c4a91d1229f96eaac265,
+ * lähde-SHA fd6db48f) lähettää voice_settingsissä vain stabilityn ja
+ * tallentaa mallin mp3:n SELLAISENAAN sekä raaka- että final-avaimeen.
+ * Mitattu: raaka- ja final-tiedoston sha256 on sama
+ * (ateena fde8500a…cc89, sofia c6d42162…b190) ja tiedostoissa on vain
+ * ElevenLabsin Lavf-tunniste, ei omaa Lavc-kooderitunnistetta — eli yksi
+ * koodaussukupolvi. Teksti ei muuttunut (tiivisteet 572e0e85 ja 83dd2f15
+ * ennallaan), joten kupla ja kuitti puhuvat yhä samaa tekstiä. Kohdistusta
+ * näille ei ole: .eleet.json puuttuu uuden avaimen vierestä, joten eleet
+ * jäävät nulliksi kuten muissakin 14.9. äänissä.
+ *
+ * MUUT 38 KAUPUNKIA OVAT ENNALLAAN — vain nämä kaksi ajettiin uusiksi.
  */
 export const LIVIAN_VERSIOIDUT_AANET = Object.freeze({
-  'ateena-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-ateena-3.mp3',
+  'ateena-3': 'aanet/pulu/versiot/fd6db48feef7/pulu-c4a91d1229f96eaac265/livia-ateena-3.mp3',
   'sarajevo-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-sarajevo-3.mp3',
   'helsinki-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-helsinki-3.mp3',
   'tampere-3': 'aanet/pulu/versiot/439bf050af65/pulu-0090303ae274b1313286/livia-tampere-3.mp3',
@@ -145,7 +162,7 @@ export const LIVIAN_VERSIOIDUT_AANET = Object.freeze({
   'tukholma-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-tukholma-3.mp3',
   'lappi-3': 'aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-lappi-3.mp3',
   'tromssa-3': 'aanet/pulu/versiot/4ac41585d691/pulu-c8223a43f6c9ab4c7102/livia-tromssa-3.mp3',
-  'sofia-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-sofia-3.mp3',
+  'sofia-3': 'aanet/pulu/versiot/fd6db48feef7/pulu-c4a91d1229f96eaac265/livia-sofia-3.mp3',
   'istanbul-3': 'aanet/pulu/versiot/6e3a07e879bb/pulu-b3a8d61baa0c4dd24123/livia-istanbul-3.mp3',
   'bukarest-3': 'aanet/pulu/versiot/439bf050af65/pulu-3388cdde59d36a971f1a/livia-bukarest-3.mp3',
   'budapest-3': 'aanet/pulu/versiot/439bf050af65/pulu-415d0075be837be8c5bd/livia-budapest-3.mp3',
@@ -182,11 +199,11 @@ export const LIVIAN_VERSIOIDUT_AANET = Object.freeze({
 
 /** Valmiiden city-3-tuotantokuitujen todelliset MP3-kestot sekunteina. */
 export const LIVIAN_KESTOT = Object.freeze({
-  'ateena-3': 18.416, 'sarajevo-3': 13.296, 'helsinki-3': 12.669,
+  'ateena-3': 17.868, 'sarajevo-3': 13.296, 'helsinki-3': 12.669,
   'tampere-3': 16.588, 'tallinna-3': 15.517, 'riika-3': 11.912,
   'vilna-3': 17.554, 'marseille-3': 17.789, 'venetsia-3': 19.043,
   'tukholma-3': 23.144, 'lappi-3': 14.864, 'tromssa-3': 15.752,
-  'sofia-3': 12.016, 'istanbul-3': 13.793, 'bukarest-3': 24.503,
+  'sofia-3': 12.356, 'istanbul-3': 13.793, 'bukarest-3': 24.503,
   'budapest-3': 21.394, 'wien-3': 13.035, 'lontoo-3': 13.375,
   'pariisi-3': 25.731, 'madrid-3': 18.469, 'berliini-3': 20.428,
   'rooma-3': 17.659, 'praha-3': 14.498, 'dublin-3': 16.588,
