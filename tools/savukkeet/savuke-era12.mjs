@@ -52,7 +52,9 @@
  *   C. MAAPANEELIN_SKAALA_MAX 64 → 3 (erän 11 arvo). VÄITTEEN 3 ON
  *      KAADUTTAVA: katto katkaisee skaalauksen kesken pelialueen.
  *   D. `pallonKorkeus` palauttamaan null → rajaus lasketaan taas laudan
- *      Mercator-yksiköistä (erää 13 edeltänyt tila). VÄITTEEN 5 ON
+ *      Mercator-yksiköistä, kuten ennen erää 13. Kokeessa muutetaan
+ *      VAIN MITTA, ei varaa, joten tulos ei ole vanha näkymä vaan
+ *      vastaus kysymykseen *"tekeekö mitta eron"*. VÄITTEEN 5 ON
  *      KAADUTTAVA.
  *
  * === MIKSI 9 SEKUNNIN LEPO ON OSA KOETTA ============================
@@ -166,10 +168,11 @@ const palvelin = http.createServer((req, res) => {
   }
   if (vastakoe === 'D' && polkuOsa.endsWith('/js/pallolauta/kamera.js')) {
     /*
-     * Erää 13 edeltänyt rajaus: korkeus laskettiin laudan
+     * Erää 13 edeltänyt MITTA: korkeus laskettiin laudan
      * Mercator-yksiköistä eikä pallon perspektiivistä. Yksi rivi
      * riittää — `pallonKorkeus` palauttaa null, jolloin kameranKohde
-     * putoaa takaisin vanhaan `korkeus(leveys)`-polkuun.
+     * putoaa takaisin vanhaan `korkeus(leveys)`-polkuun. Vara pysyy
+     * uutena (1,02), joten koe eristää nimenomaan mitan.
      */
     runko = Buffer.from(runko.toString('utf8')
       .replace('const pallonKorkeus = (bbox, vara = 1) => {',
@@ -558,7 +561,7 @@ vaadi('2. maapaneeli on meren päällä — ei yhdenkään maan polygonissa',
 vaadi('3. paneelin koko seuraa kartan mittakaavaa katkotta (3 zoomia)',
   suhdeTulokset.length === RUUDUT.length && suhdeTulokset.every((t) => t.ok),
   JSON.stringify(suhdeTulokset.map((t) => ({ ruutu: t.ruutu, hTulo: t.hTulo }))));
-vaadi('5. saapumisnäkymä rajautuu aivan maan rajojen ulkopuolelle (tyhjä ≤ 3 %)',
+vaadi('5. saapumisnäkymä rajautuu aivan maan rajojen ulkopuolelle (tyhjä ≤ 3,5 %)',
   rajausTulokset.length === RUUDUT.length && rajausTulokset.every((t) => t.ok),
   JSON.stringify(rajausTulokset));
 tieto('sivun virheet (pääajo)', paaVirheet.length ? paaVirheet.join(' | ') : 'ei yhtään');

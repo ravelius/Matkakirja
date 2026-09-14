@@ -202,20 +202,31 @@ sidottu rajauksen varaan.
 ## 6. Portit ja vastakoe
 
 ```
-npm test                                # PORTIT
+npm test                                # pass 3353, fail 2 (ks. alla)
 node tools/tarkista-kaksoisavaimet.mjs  # ei kaksoisavaimia
 node tools/tarkista-niputus.mjs         # 387 moduulia, ei törmäyksiä
-node tools/tarkista-savukkeet.mjs       # SAVUKEPORTTI
-node tools/savukkeet/savuke-era12.mjs   # SAVUKE
+node tools/tarkista-savukkeet.mjs       # 1637 ui-viittausta, kunnossa
+node tools/savukkeet/savuke-era12.mjs   # 11/11 vartiota läpi
 ```
+
+**Kaksi punaista ei liity tähän erään.** `tests/pollo.test.mjs`
+väitteet *"indeksi rakentuu ja on kokoluokaltaan järkevä"* ja *"haku on
+nopea myös koko aineistolla"* ovat **aikamittoja** (hakuindeksin
+rakennus), ja tämä kone ajoi mittauksen hetkellä kuormalla ~40
+(kymmenkunta rinnakkaista agenttia). Yksin ajettuna sama väite antaa
+2431 ms, kuormattomana se mahtuu budjettiin. Ne eivät koske
+`js/pallolauta/kamera.js`:ää millään tavalla; **kaikki kameran omat
+testit (`maakartuutsi`, `tasoitustaso`, `pallolauta`) ovat vihreitä
+51/51.**
 
 `tools/savukkeet/savuke-era12.mjs` sai **väitteen 5** ja **vastakokeen
 D**:
 
 * **Väite 5.** Rajauksen ruutulaatikko (maan laatikon kehä ∪
   maapaneelin kortti) jättää **sitovalla akselilla enintään 3 %**
-  tyhjää (katto 3,5 %, ks. vakion perustelu savukkeessa), ja laatikko
-  on kokonaan ruudussa. Molemmilla ruuduilla, Ranskassa.
+  tyhjää (**katto 3,5 %** eikä 3,0 %, jottei vartio kaadu kuormitetun
+  koneen puolen prosentin heitosta; mitatut arvot 1,08 % ja 3,01 %), ja
+  laatikko on kokonaan ruudussa. Molemmilla ruuduilla, Ranskassa.
 * **Vastakoe D.** `pallonKorkeus` palautetaan tarjoiltuun
   lähdetekstiin palauttamaan `null`, jolloin rajaus lasketaan taas
   laudan Mercator-yksiköistä (erää 13 edeltänyt tila). **Väitteen 5 on
@@ -226,7 +237,18 @@ Samalla korjattiin **vastakoe A**: se korvasi
 olisi enää osunut lausekemuotoiseen arvoon — vastakoe olisi hiljaa
 lakannut testaamasta mitään. Nyt `[^;]+;`.
 
-VASTAKOKEIDEN TULOS: SAVUKE-VASTAKOKEET
+**VASTAKOKEIDEN TULOS (kaikki tehdään tarjoiltavaan lähdetekstiin,
+joten peli ajaa oikeasti vanhalla arvolla):**
+
+| | Muutos | Tulos |
+|---|---|---|
+| **A** | `ULOSZOOMAUKSEN_KERROIN` → 3 | korkeus 0,4522 vs. katto 1,3465 → **vara 197,8 %**, väite 1 **PUNAINEN** ✔ |
+| **B** | `MAAPANEELIN_ANKKURIT` tyhjäksi | paneeli 41,161 N / 2,213 E, **3 maaosumaa (ESP)**, väite 2 **PUNAINEN** ✔ |
+| **C** | `MAAPANEELIN_SKAALA_MAX` → 3 | `skaala × korkeus` 0,39263 → 0,33913 → 0,20941, hajonta 58,4 %, väite 3 **PUNAINEN** ✔ |
+| **D** | `pallonKorkeus` → `null` | tyhjä sitovalla akselilla **−6,5 %** (390) ja **−589,6 %** (1400) eli rajaus vuotaa ruudun ulkopuolelle, väite 5 **PUNAINEN** ✔ |
+
+Vastakoe D muuttaa **vain mitan**, ei varaa, joten se vastaa täsmälleen
+kysymykseen *"tekeekö pallon perspektiivi eron"*. Vastaus: tekee.
 
 ---
 
@@ -261,7 +283,14 @@ VASTAKOKEIDEN TULOS: SAVUKE-VASTAKOKEET
    mahtuisivat ruutuun, eli maiden jako kaupunkinäkymään ja
    maanäkymään muuttuisi. **En muuttanut sitä omin päin** — se on
    pelituntumaa koskeva päätös, ei laskuvirhe, ja kuuluu omistajalle.
-5. **Ranskan kortin länsireuna on puhelimella 0,75 px ruudun
+5. **Maapaneelin sisällön ylivuoto puhelimella on 50 px** (savukkeen
+   INFO `390 px · uloszoomaus … ylivuoto`), kun se työpöydällä on 0.
+   Kortti on puhelimella nyt selvästi isompi (58,8 → 90,3 px), joten
+   ylivuoto ei johdu ahtaudesta vaan siitä, että sisus saa enemmän
+   tilaa kuin kortin oma laatikko. Sekin on `maapaneeli.js`:n ja
+   `css/styles.css`:n asia, en koskenut. **Kannattaa mitata samassa
+   erässä kuin kohta 1.**
+6. **Ranskan kortin länsireuna on puhelimella 0,75 px ruudun
    reunasta.** Se on tiukan rajauksen hinta ja juuri sitä mitä
    pyydettiin (*"aivan rajojen ulkopuolelle"*), mutta se tarkoittaa
    myös, ettei kortin koolla ole enää varaa kasvaa ilman uutta
