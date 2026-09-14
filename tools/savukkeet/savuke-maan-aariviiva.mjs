@@ -1,9 +1,13 @@
 /*
- * Savuke: KOHDEMAAN PUNAINEN ÄÄRIVIIVA PALLOLLA — EHJÄ, MURRETTU,
- * LEVEÄMPI (karttauudistuksen PÄÄTÖKSET 11 kohta 2, omistaja
- * 14.9.2026 klo 13.20 UTC, sanatarkasti: *"jostain syysta kartan
+ * Savuke: KOHDEMAAN ÄÄRIVIIVA PALLOLLA — EHJÄ, MUSTEEN SININEN,
+ * LEVEÄMPI (karttauudistuksen PÄÄTÖKSET 11 kohta 2 ja 14 kohta 2;
+ * ensin omistaja 14.9.2026 klo 13.20 UTC: *"jostain syysta kartan
  * punainen aariviiva ei piirry koko matkalta. aariviiva saisi olla
- * murretumpi ja tummempi punainen ja aariviiva hieman leveampi."*).
+ * murretumpi ja tummempi punainen ja aariviiva hieman leveampi."*,
+ * sitten samana päivänä: *"vaihda samalla kartan reuna musteen
+ * siniseksi"*. Leveys ja katkokorjaus pysyvät; vain sävy vaihtui,
+ * ja sen mukana tämän savukkeen VÄRIMITTA: kehä ei enää erotu
+ * punakanavan vaan SINIKANAVAN ylivoimalla.)
  *
  * ── MITÄ TÄMÄ MITTAA ───────────────────────────────────────────────
  *
@@ -20,7 +24,7 @@
  *
  * Savuke mittaa PEITTOA renkaan omilta pisteiltä: jokainen näkyvä
  * rengaspiste projisoidaan ruudulle (pallon oma getScreenCoords) ja
- * kuvasta katsotaan, onko sen kohdalla rajan punaista. Kahdeksan
+ * kuvasta katsotaan, onko sen kohdalla rajan mustetta. Kahdeksan
  * NIMETTYÄ kohtaa rajaa (Pyreneet, Atlantti, Bretagne, Kanaali,
  * Belgia, Rein, Alpit, Välimeri) mitataan erikseen, jotta katko ei voi
  * piiloutua keskiarvoon.
@@ -33,14 +37,17 @@
  *  2. PEITTO: vähintään PEITTO_RAJA osuus näkyvistä rengaspisteistä on
  *     rajan väriä. Ennen korjausta 60 % (puhelin, saapumisnäkymä).
  *  3. KAHDEKSAN KOHTAA: jokaisessa nimetyssä kohdassa on rajan väriä.
- *  4. VÄRI on paletin `--raja-punainen` eikä oma heksaluku, ja se on
- *     murretumpi ja tummempi kuin `--mark`.
+ *  4. VÄRI on paletin `--raja-muste` eikä oma heksaluku, eikä se ole
+ *     `--mark` (kartan merkinnät pysyvät punaisina).
  *  5. LEVEYS on yli entisen 2,5 css-pikselin lähipäässä.
  *
  * VASTAKOE: `SAVUKE_VASTAKOE=1` palauttaa ajossa ENTISEN kehän —
- * paletin `--mark` ja 2,5 css-pikseliä, ja päätypyörylät pois — eli
- * täsmälleen sen, mistä omistaja huomautti. Vartiot 4 ja 5 putoavat
- * punaisiksi.
+ * paletin `--mark`-PUNAISEN ja 2,5 css-pikseliä, ja päätypyörylät
+ * pois — eli täsmälleen sen, mistä omistaja huomautti. Silloin sekä
+ * VÄRIVARTIOT (4) että PEITTO putoavat punaisiksi: sininen mitta ei
+ * löydä punaisesta viivasta mitään, joten peitto romahtaa nollaan.
+ * Juuri se osoittaa, että mitta mittaa uutta väriä eikä mitä tahansa
+ * viivaa.
  *
  * ÄMPÄRI KULKEE NODEN KAUTTA (CLAUDE.md: NODE_USE_ENV_PROXY=1).
  *
@@ -71,12 +78,20 @@ mkdirSync(ULOS, { recursive: true });
 
 /* ── rajat (perustelut yllä) ──────────────────────────────────────── */
 /**
- * Rajan väri erottuu seepiasta punakanavan ylivoimalla: paperi
- * (#efdcb4) antaa R − (G+B)/2 ≈ 39 ja kehä (#853124) ≈ 106. Kynnys on
- * niiden puolivälistä ylöspäin, jotta feidattu laatta tai kaupungin
- * merkki ei kelpaa viivaksi.
+ * Rajan väri erottuu SINIKANAVAN ylivoimalla B − (R+G)/2. Mitatut
+ * arvot: kehä (#1f3a5f) +50,5, seepiapaperi (#efdcb4) −49,5,
+ * värillinen maa (230,219,172) −52,5 ja pelin meri — joka EI ole
+ * sininen vaan viileää paperia (tools/fokuskartta/piirto.js: syvinkin
+ * meri 134,132,124) — −9,0. Kynnys on kehän ja nollan puolivälissä:
+ * se kestää reunanpehmennyksen (noin 70 %:n peitolla sekoittunut
+ * pikseli yltää yhä yli) mutta ei kelpuuta yhtään taustaa, sillä
+ * kaikki taustat ovat pakkasen puolella.
+ *
+ * MIKSI EI ENÄÄ PUNAKANAVA: sama mitta toisin päin oli oikea niin
+ * kauan kuin kehä oli punainen. Sinisellä kehällä punamitta antaisi
+ * peitoksi 0 % — eli savuke mittaisi väärää asiaa.
  */
-const PUNAKYNNYS = 70;
+const SINIKYNNYS = 25;
 /** Kuinka läheltä rengaspistettä väri kelpaa (css-pikseliä). */
 const HAKUSADE_CSS = 3;
 /** Peiton alaraja: osuus näkyvistä rengaspisteistä, joilla on väri. */
@@ -315,25 +330,25 @@ async function ajo(nimi, viewport, dpr, mobiili) {
           linewidth: olio.material.linewidth,
           paatyt: olio.material.uniforms?.paatyt?.value ?? null,
         } : null,
-        paletti: getComputedStyle(document.documentElement).getPropertyValue('--raja-punainen').trim(),
+        paletti: getComputedStyle(document.documentElement).getPropertyValue('--raja-muste').trim(),
         mark: getComputedStyle(document.documentElement).getPropertyValue('--mark').trim(),
       };
     });
     const dprK = kuva.width / rajaus.width;
     const sade = Math.max(2, Math.round(HAKUSADE_CSS * dprK));
-    const punainen = (sx, sy) => {
+    const musteinen = (sx, sy) => {
       const px = Math.round((sx - rajaus.x) * dprK); const py = Math.round((sy - rajaus.y) * dprK);
       for (let dy = -sade; dy <= sade; dy += 1) {
         for (let dx = -sade; dx <= sade; dx += 1) {
           const x = px + dx; const y = py + dy;
           if (x < 0 || y < 0 || x >= kuva.width || y >= kuva.height) continue;
           const i = (y * kuva.width + x) * 4;
-          if (kuva.data[i] - (kuva.data[i + 1] + kuva.data[i + 2]) / 2 >= PUNAKYNNYS) return true;
+          if (kuva.data[i + 2] - (kuva.data[i] + kuva.data[i + 1]) / 2 >= SINIKYNNYS) return true;
         }
       }
       return false;
     };
-    const osumat = mitta.pisteet.map((p) => (punainen(p[0], p[1]) ? 1 : 0));
+    const osumat = mitta.pisteet.map((p) => (musteinen(p[0], p[1]) ? 1 : 0));
     const peitto = osumat.length ? osumat.reduce((a, b) => a + b, 0) / osumat.length : 0;
     // Kahdeksan nimettyä kohtaa: lähin rengaspiste ja sen osuma.
     const kohdat = KOHDAT.map((k) => {
@@ -379,7 +394,7 @@ for (const t of tulokset) {
   for (const k of t.kohdat) {
     vaadi(`${t.avain}: ${k.nimi}`, k.osuma, `ei rajan väriä (lähin rengaspiste ${k.etaisyysAst}°)`);
   }
-  vaadi(`${t.avain}: väri on paletin --raja-punainen`,
+  vaadi(`${t.avain}: väri on paletin --raja-muste`,
     t.materiaali?.vari?.toLowerCase() === t.paletti?.toLowerCase(),
     `${t.materiaali?.vari} ≠ ${t.paletti}`);
   vaadi(`${t.avain}: väri ei ole --mark`, t.materiaali?.vari?.toLowerCase() !== t.mark?.toLowerCase(),
