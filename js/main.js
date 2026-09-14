@@ -138,7 +138,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1870';
+const APP_VERSION = '2026-08-09.1871';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1221,11 +1221,45 @@ document.getElementById('winner-close').addEventListener('click', startGame);
 // tehdään vain kun sivulla on manifest-linkki.
 const hasManifest = !!document.querySelector('link[rel="manifest"]');
 if (hasManifest && 'serviceWorker' in navigator && location.protocol.startsWith('http')) {
-  window.addEventListener('load', () => {
+  /*
+   * REKISTERÖINTI EI SAA JÄÄDÄ `load`IN VARAAN (mitattu 14.9.2026).
+   *
+   * `load` odottaa sivun JOKAISTA alipyyntöä, myös kuvia. Kun ämpäri
+   * (media.matkakirja.app) ottaa yhteyden vastaan muttei vastaa, pelin
+   * omat kuvapyynnöt jäävät roikkumaan ja `load` viivästyy — mitattu
+   * neljä ajoa Chromiumilla, ämpäri jumissa:
+   *
+   *   peli näkyvissä   0,95–1,55 s   (pelaaja ei näe mitään vikaa)
+   *   load             45,98–46,59 s
+   *   rekisteröinti    45,98–46,59 s  ← koko offline-tuki odotti tätä
+   *
+   * Terveellä ämpärillä samat luvut ovat load 1,31–1,51 s. Katto on
+   * siis noin kolminkertainen mitattuun normaaliaikaan: terveessä
+   * tilanteessa `load` ehtii aina ensin eikä mikään muutu, ja
+   * jumittuneessa rekisteröinti lähtee silti neljässä sekunnissa.
+   *
+   * MIKSI TÄMÄ EIKÄ KUVIEN AIKAKATKAISU: kuvapyyntöjä on kymmeniä eri
+   * kohdissa (js/media.js, galleriat, liput, laatat), ja jokaiseen
+   * lisätty katko olisi iso ja riskialtis muutos. Tässä muuttuu yksi
+   * ehto yhdessä paikassa, eikä pelaajan näkymä muutu lainkaan — peli
+   * on näkyvissä 1–2 s kummassakin tapauksessa.
+   *
+   * `load`-kuuntelija jää ennalleen, jotta normaalitilanteessa
+   * rekisteröinti tapahtuu yhä vasta sivun valmistuttua eikä kilpaile
+   * käynnistyksen kaistasta.
+   */
+  const REKISTEROINNIN_KATTO_MS = 4000;
+  let rekisteroity = false;
+  const rekisteroiTyontekija = () => {
+    if (rekisteroity) return;
+    rekisteroity = true;
     navigator.serviceWorker.register('sw.js').catch(() => {
       /* offline-tuki ei ole käytettävissä — peli toimii silti */
     });
-  });
+  };
+  if (document.readyState === 'complete') rekisteroiTyontekija();
+  else window.addEventListener('load', rekisteroiTyontekija, { once: true });
+  setTimeout(rekisteroiTyontekija, REKISTEROINNIN_KATTO_MS);
 
   // Kotivalikkoon asennettu sovellus voi herätä viikkojen takaa samaan
   // sivuun, jolloin uusi versio ei koskaan pääse käyttöön itsestään.
@@ -1381,6 +1415,33 @@ if (katseluPack) {
 
 // Peli on rakennettu: päivitysruutu väistyy.
 paataPaivitysruutu();
+
+/*
+ * ENSIKEHYSDIAGNOSTIIKKA (Fable 14.9.2026). Rootin oire — ensimmäinen
+ * lataus jää tyhjään kehykseen, toinen aukeaa — ei ole toistunut
+ * mittauksissa (docs/raportit/viesti-fable-ensikehys-20260914.md), eikä
+ * sitä siksi korjata arvaamalla. Tämä jättää sen sijaan jäljen, joka
+ * kertoo oireen toistuessa mikä käynnistyksessä oli kesken: pelkkä
+ * console.info, ei UI:ta, ei verkkoa, ei tallennusta. Virhe niellään,
+ * koska diagnostiikka ei saa koskaan kaataa käynnistystä.
+ */
+(async () => {
+  try {
+    const maalaus = performance.getEntriesByType('paint')
+      .find((e) => e.name === 'first-contentful-paint')?.startTime ?? null;
+    const reg = await navigator.serviceWorker?.getRegistration?.().catch(() => null);
+    console.info('[matkakirja] käynnistys', {
+      versio: APP_VERSION,
+      ensimaalausMs: maalaus === null ? null : Math.round(maalaus),
+      moduulitValmiitMs: Math.round(performance.now()),
+      ohjain: !!navigator.serviceWorker?.controller,
+      sw: reg
+        ? (reg.installing && 'installing') || (reg.waiting && 'waiting') || reg.active?.state || '-'
+        : 'ei rekisteröintiä',
+      korit: await caches?.keys?.().catch(() => []) ?? [],
+    });
+  } catch { /* diagnostiikka ei saa kaataa käynnistystä */ }
+})();
 
 /*
  * iOS-KUOREN KYTKENNÄT. Selaimessa jokainen näistä palaa heti takaisin
