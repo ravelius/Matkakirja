@@ -2027,6 +2027,41 @@ const KARJET = [
   { luokka: 'alkureitti-karki', sade: [4.2, 9.2], kirkkaus: [0.5, 1] },
 ];
 /** Kärjen arvo sykkeen muodon kohdassa `osuus` (0 = lepo, 1 = huippu). */
+/**
+ * NOSTON MUSIIKKILINKIT — YKSI LINKKI TAI LISTA.
+ *
+ * `musiikki` on alun perin yksi Apple Music -osoite merkkijonona, ja se
+ * muoto pysyy voimassa sellaisenaan. Kun nostossa on kaksi eri
+ * muusikkoa tai teosta, kenttä saa olla myös LISTA muotoa
+ * `[{ nimi, url }]` — silloin jokainen linkki näyttää oman nimensä,
+ * jotta listasta erottaa kumpi on kumpi (Fablen päätös 14.9.2026:
+ * Pariisin `pariisi-soi` kantaa sekä Piafin että Django Reinhardtin
+ * linkin, jotka erän 5 jako yhdisti yhdeksi nostoksi).
+ *
+ * Yhden linkin muoto pitää entisen nimiönsä "Apple Music": ulkoasu ei
+ * muutu niillä sadoilla nostoilla, joilla kenttä on merkkijono.
+ *
+ * @param {object} nosto noston tietue
+ * @returns {{url: string, nakyva: string, otsake: string|undefined}[]}
+ */
+export function nostonMusiikkilinkit(nosto) {
+  const kentta = nosto?.musiikki;
+  if (!kentta) return [];
+  if (typeof kentta === 'string') {
+    return [{ url: kentta, nakyva: 'Apple Music', otsake: nosto.musiikkiNimi }];
+  }
+  if (!Array.isArray(kentta)) return [];
+  return kentta
+    .filter((linkki) => typeof linkki?.url === 'string' && linkki.url)
+    .map((linkki) => ({
+      url: linkki.url,
+      // Nimi on listan koko pointti: ilman sitä kaksi linkkiä näyttäisi
+      // samalta napilta kahdesti.
+      nakyva: linkki.nimi ?? 'Apple Music',
+      otsake: linkki.otsake ?? `${linkki.nimi ?? ''} Apple Musicissa`.trim(),
+    }));
+}
+
 function sykkeenArvo(arvot, osuus) {
   return arvot[0] + (arvot[1] - arvot[0]) * osuus;
 }
@@ -15485,16 +15520,18 @@ export class UI {
       nappi.addEventListener('click', () => this.kulttuuriAaniNapista(nosto, nappi));
       otsikkoRivi.appendChild(nappi);
     }
-    if (nosto.musiikki) {
+    for (const musiikki of nostonMusiikkilinkit(nosto)) {
       const linkki = html('a', 'kulttuuri-musiikkilinkki');
-      linkki.href = nosto.musiikki;
+      linkki.href = musiikki.url;
       linkki.target = '_blank';
       linkki.rel = 'noopener';
-      if (nosto.musiikkiNimi) linkki.title = nosto.musiikkiNimi;
+      if (musiikki.otsake) linkki.title = musiikki.otsake;
       linkki.innerHTML = '<svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">'
         + '<path d="M9 18.5V6.2l9-1.7v11.3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>'
         + '<circle cx="6.8" cy="18.6" r="2.2" fill="currentColor"/>'
-        + '<circle cx="15.8" cy="15.9" r="2.2" fill="currentColor"/></svg> Apple Music';
+        + '<circle cx="15.8" cy="15.9" r="2.2" fill="currentColor"/></svg> ';
+      // Nimi tekstisolmuna: se tulee datasta, eikä sitä ladota HTML:nä.
+      linkki.appendChild(document.createTextNode(musiikki.nakyva));
       otsikkoRivi.appendChild(linkki);
     }
     if (nosto.musiikkiNayte) {
@@ -15527,7 +15564,14 @@ export class UI {
      * Linkki itse vie edelleen Apple Musiciin, jossa tilaaja saa
      * koko kappaleen.
      */
-    if ((nosto.esikuuntelu || nosto.musiikki) && !nosto.musiikkiNayte) {
+    /*
+     * ESIKUUNTELU VAIN YHDEN LINKIN NOSTOLLE. Automaattinen esikatselu
+     * johdetaan Apple Music -linkistä (esikuunteluNapista), ja
+     * linkkilistalla ei ole yhtä "sitä kappaletta" — kaksi samannimistä
+     * "Kuuntele näyte" -nappia vierekkäin ei kertoisi kumpi soi.
+     * Nimenomainen `esikuuntelu`-termi toimii silloinkin.
+     */
+    if ((nosto.esikuuntelu || typeof nosto.musiikki === 'string') && !nosto.musiikkiNayte) {
       const nappi = html('button', 'kulttuuri-kuuntele kulttuuri-musiikkinayte');
       nappi.type = 'button';
       nappi.title = 'Esikuuntelu Apple Musicista (30 s)';

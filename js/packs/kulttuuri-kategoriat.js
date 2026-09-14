@@ -2695,8 +2695,18 @@ export const KULTTUURI_KATEGORIAT = {
     {
       id: 'musiikki',
       nimi: 'Musiikki',
+      /*
+       * JOHDANTO OHJAA KARTALLE (Fablen päätös 14.9.2026). Sivun
+       * molemmat jutut ovat nyt kohdekartan nostoja ("Tonava kaunoinen"
+       * ja "Taikahuilu", js/packs/maakartat.js), joten vanha johdanto
+       * lupasi valssia ja satuoopperaa, joita samalla sivulla ei enää
+       * ole. Vanha virke on tallella SANATARKASTI — perään on lisätty
+       * vain se, mistä molemmat löytyvät. Uutta faktaa ei kirjoitettu:
+       * kumpikin nimiö on kartalla juuri noilla sanoilla.
+       */
       johdanto: 'Valssi, jonka toinen isku tulee etuajassa, ja satuooppera, joka '
-        + 'kirjoitettiin esikaupungin puiselle näyttämölle.',
+        + 'kirjoitettiin esikaupungin puiselle näyttämölle — molemmat odottavat '
+        + 'nyt omilla paikoillaan kaupungin kartalla.',
       /*
        * NOSTOT SIIRTYIVÄT KARTALLE (karttauudistus, erä 10, 13.9.2026; sama
        * jako kuin Pariisissa erässä 5, suunnitelman luku 4.7).

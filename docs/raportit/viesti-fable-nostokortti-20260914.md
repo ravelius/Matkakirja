@@ -26,6 +26,12 @@ pisteytys ja lähdekytkös **ilman kaupungin nimen vartaloa**.
 nosto piirtyy merkilleen kuten ennen; uudet rivit syntyvät vain, kun
 kenttä on olemassa.
 
+**LISÄYS 14.9.2026 ILTA:** Fable ratkaisi luvun 7 kolme avointa kohtaa
+(Wienin johdanto, lehdet-testin tiukennus, Pariisin musiikkilinkit) —
+ne on tehty tällä samalla haaralla, ja **luku 8** kertoo mitä
+päätettiin, mitä tehtiin ja millä numeroilla. Luvut 0–7 kuvaavat erän
+ensimmäistä vaihetta; lopulliset ajoluvut ovat luvussa 8.
+
 ---
 
 ## 1. Mikä kiertotie oli ja miksi se poistui
@@ -416,14 +422,14 @@ kaanonityötä, joka kuuluu Fablelle:
 3. **Pääkartan 21 merkin raja (11.5)** ja **ITA-kohdekartan täyttyminen
    (11.6)** — ei koskettu; savuke mittaa yhä samat lähtötasot.
 4. **Lähizoomiportti `nosto.lahi` (11.7.5)** — ei rakennettu.
-5. **Rooman kulttuurivisan sisältöratkaisu.** Testi on kirjoitettu ja
+5. **Rooman kulttuurivisan sisältöratkaisu.** → **RATKAISTU, ks. 8.2.** Testi on kirjoitettu ja
    se mittaa kytköksen oikein, mutta **"Vesi kulkee yhä" on yhä
    kohdekartan nostona eikä kansisivulla**, ja tests/lehdet.test.mjs
    läpäisee Rooman edelleen sanavartalolla. Kumpikin raportin
    ehdottamista korjauksista (juttu kannelle / lehdet-testin
    tiukennus kaikille kaupungeille) on sisältö- tai kaanonipäätös.
 6. **Pariisin kolme Apple Music -linkkiä (erä 5: Piaf, Django,
-   Carmen).** Mekanismi on nyt olemassa, mutta linkkien palautus vaatii
+   Carmen).** → **RATKAISTU, ks. 8.3.** Mekanismi on nyt olemassa, mutta linkkien palautus vaatii
    Fablen ratkaisun: erä 5 yhdisti Piafin ja Djangon **yhdeksi**
    nostoksi (`pariisi-soi`), ja nostolla on vain yksi `musiikki`-kenttä
    — kumpi linkki sinne tulee, tai tarvitaanko linkkilista, on
@@ -440,13 +446,178 @@ kaanonityötä, joka kuuluu Fablelle:
 
 ---
 
-## 8. Fablen päätettäväksi
+## 8. Fablen päätökset ja mitä niistä seurasi (14.9.2026)
 
-1. **Wienin Musiikki-sivu on nyt tyhjä nostoista.** Se on uudistuksen
-   looginen seuraus (molemmat sen jutut ovat kartalla), mutta sivu
-   lupaa johdannossaan valssia ja satuoopperaa. Jätetäänkö näin,
-   kirjoitetaanko johdanto uusiksi, vai saako sivu uutta sisältöä?
-2. **Rooman kulttuurivisan lähdejuttu** (kohta 7.5): kannelle vai
-   lehdet-testin tiukennus?
-3. **Pariisin musiikkilinkit** (kohta 7.6): mikä linkki mihinkin
-   nostoon, vai tarvitaanko nostolle linkkilista?
+Fable ratkaisi luvun 7 kolme avointa kohtaa. Kaikki kolme on tehty
+samalla haaralla; alla mitä päätettiin, mitä tehtiin ja millä mitalla.
+
+Tämän luvun ajot: `npm test` **# tests 3352, # pass 3339, # fail 0**
+(skipped 13), savuke `savuke-kaupunkien-nostot.mjs` **209/209** ja
+savuke `savuke-pariisin-nostot.mjs` **31/31** (ennen laajennusta 25/25).
+
+### 8.1 Wienin Musiikki-sivun johdanto
+
+**Päätös:** sivu ei saa luvata johdannossaan valssia ja satuoopperaa,
+joita se ei enää tarjoa — mutta täytesisältöä ei kirjoiteta.
+
+**Ennakkotapaus mitattiin ensin, ja se on kiusallinen.** Erät 5 ja 10
+tyhjensivät **14 aihesivua** nostoista (Pariisi 2, Lontoo 2, Rooma 2,
+Berliini 2, Madrid 2, Wien 3, Amsterdam 1), ja **yhdenkään johdantoa ei
+muutettu** — luku on 14/0, mitattu vertaamalla erän 5 edeltävää
+`js/packs/kulttuuri-kategoriat.js`-versiota nykyiseen. Erän 10 raportti
+kirjasi saman havaintona (11.7.2) ja jätti sen Fablen kaanonityöksi.
+Ennakkotapaus "näin johdanto käsitellään" ei siis ole olemassa: on vain
+ennakkotapaus "sitä ei käsitelty". Siksi tein toisen haaran, eli
+kirjoitin johdannon uusiksi.
+
+**Vanha virke säilyi sanatarkasti.** Uutta faktaa ei kirjoitettu: kaksi
+jutun nimiötä ovat kartalla juuri niillä sanoilla, joilla johdanto
+niihin viittaa ("Tonava kaunoinen", "Taikahuilu" —
+js/packs/maakartat.js).
+
+```
+VANHA (js/packs/kulttuuri-kategoriat.js, wien/musiikki):
+  Valssi, jonka toinen isku tulee etuajassa, ja satuooppera, joka
+  kirjoitettiin esikaupungin puiselle näyttämölle.
+
+UUSI:
+  Valssi, jonka toinen isku tulee etuajassa, ja satuooppera, joka
+  kirjoitettiin esikaupungin puiselle näyttämölle — molemmat odottavat
+  nyt omilla paikoillaan kaupungin kartalla.
+```
+
+**Testi:** `tests/lehdet.test.mjs`, "kartalle ohjaava johdanto pitää
+lupauksensa". Se vaatii, että sivu on tyhjä nostoista, että vanha virke
+on yhä sanatarkasti tallella, että johdanto ohjaa kartalle ja että
+molemmat luvatut nostot **oikeasti ovat** Wienin kohdekartan pisteinä ja
+kaupungin täkynostopoolissa. Vartio on nimetty lista, joka kasvaa sitä
+mukaa kun Fable kirjoittaa muiden sivujen johdannot.
+
+**Vastakoe:** vanha johdanto takaisin → `tests/lehdet.test.mjs` **9 läpi
+/ 1 kaatui** (`wien/musiikki: tyhjentynyt sivu ei ohjaa lukijaa
+kartalle`); korjattuna 10 läpi / 0 kaatui.
+
+**Jää auki:** loput **13** tyhjentynyttä sivua lupaavat yhä juttuja,
+joita niillä ei ole (lontoo/nykytaide, lontoo/luonto, wien/tiede,
+wien/luonto, madrid/urheilu, madrid/rakennukset, berliini/rakennukset,
+berliini/historia, pariisi/musiikki, pariisi/historia, amsterdam/taide,
+rooma/arki, rooma/historia). Ne ovat kaanonityötä eivätkä tämän erän
+tilausta.
+
+### 8.2 Rooman kulttuurivisan lähdejuttu → lehdet-testin tiukennus
+
+**Päätös:** "Vesi kulkee yhä" kuuluu kohdekartan nostoksi; juttua ei
+siirretä kannelle, vaan `tests/lehdet.test.mjs` tiukennetaan kaikille
+kaupungeille.
+
+**Mitä tehtiin.** Vanha testi ("kulttuurivisan vastaus löytyy
+kaupunkilehden kansisivulta") korvattiin testillä **"kulttuurivisan
+vastaus löytyy kaupungin omasta lähdejutusta"**, jossa on kaksi
+tiukennusta ja yksi tarkennus:
+
+1. **Kaupungin nimen vartalo ei kelpaa osumaksi.** Pudotetaan sekä
+   laudan kaupunki-id:n että kaupungin näkyvän nimen alku, aksentit
+   normalisoituna — niin että Kööpenhamina/kobenhavn ja
+   Rovaniemi/lappi tunnistetaan samaksi nimeksi.
+2. **Kytkös on YHDESSÄ jutussa.** Jonkin yksittäisen noston on
+   kannettava se; sivun kaikkien juttujen unioni ei enää kelpaa.
+   Tämä on sama mittaustapa kuin tests/rooman-kulttuurivisa.test.mjs:ssä.
+3. **Lähdejuttu saa olla kohdekartalla** (Fablen päätös): haku kattaa
+   sekä lehden sivut että kaupungin täkynostot.
+
+**Löydös numeroina.** Visoja on **43**. Vanhan testin läpäisi **pelkällä
+kaupungin nimen vartalolla yksi (1)**: Rooma, sanalla `rooman` nostossa
+"Norsu kantaa obeliskia". Muita valheellisia kytköksiä ei ollut —
+mittasin kaikki 43 ennen tiukennusta. Tiukennettuna **43/43 läpäisee
+oikeasta syystä**, eikä yhtään ohitusta tarvittu.
+
+Viisi kaupunkia läpäisee yhdellä avainsanalla (kreeta, sisilia,
+dubrovnik, vilna, tukholma). Tarkistin ne yksitellen: jokaisessa se yksi
+sana on juuri se erisnimi tai erikoissana, jota visa kysyy — Knossos,
+abbanniata, tasavalta, perustuslaki, taidetta. Ne ovat siis oikeita
+kytköksiä, eivät sanavartaloita, joten kynnys on yksi osuma eikä kaksi.
+
+**Vastakoe:** poistin ajossa Rooman oikean lähdejutun `aqua-virgo` ja
+ajoin molemmat säännöt samalla datalla:
+
+```
+== NYKYTILA ==
+vanha sääntö kaataa: 0
+uusi  sääntö kaataa: 0
+
+== ILMAN ROOMAN LÄHDEJUTTUA (aqua-virgo poistettu ajossa) ==
+vanha sääntö kaataa: 0   <-- sokea
+uusi  sääntö kaataa: 1   rooma
+```
+
+Vanha testi ei siis huomannut lähdejutun katoamista lainkaan; uusi
+huomaa sen ja nimeää kaupungin.
+
+### 8.3 Pariisin kolme Apple Music -linkkiä
+
+**Päätös:** kaikki kolme palautetaan, sisältöä ei hävitä; `musiikki` saa
+ottaa vastaan joko yhden linkin tai listan.
+
+**Mitä tehtiin.** `js/ui.js` sai apurin `nostonMusiikkilinkit(nosto)`,
+joka normalisoi kentän:
+
+- **merkkijono** (nykyinen muoto) → yksi linkki, näkyvä teksti entinen
+  `Apple Music`, `musiikkiNimi` selitteenä. Sadat nostot eivät muutu.
+- **lista** `[{ nimi, url, otsake }]` → linkki per alkio, ja **jokainen
+  näyttää oman nimensä**. Osoitteeton alkio karsitaan.
+
+`lisaaNostonNapit` kulkee nyt apurin läpi, joten sama muoto toimii sekä
+lehden sivulla että nostokortilla. Automaattinen esikuuntelunappi
+piirtyy vain yhden linkin muodolle tai nimenomaiselle
+`esikuuntelu`-termille: kaksi samannimistä "Kuuntele näyte" -nappia
+vierekkäin ei kertoisi kumpi soi.
+
+Linkit otettiin `git show 721efc3 -- js/packs/kulttuuri-kategoriat.js`
+-diffistä **sellaisenaan**, merkki merkiltä:
+
+```
+VANHA (kortilla ei yhtään linkkiä — erä 5 pudotti kaikki kolme)
+
+UUSI, js/packs/fokusvirta-pariisi.js `pariisi-soi`:
+  musiikki: [
+    { nimi: 'Édith Piaf',
+      url: 'https://music.apple.com/fi/search?term=edith%20piaf%20la%20vie%20en%20rose',
+      otsake: 'Édith Piaf Apple Musicissa' },
+    { nimi: 'Django Reinhardt',
+      url: 'https://music.apple.com/fi/search?term=django%20reinhardt%20minor%20swing',
+      otsake: 'Django Reinhardt Apple Musicissa' },
+  ],
+
+UUSI, `carmenin-ensi-ilta` (yksi linkki, entinen merkkijonomuoto):
+  musiikki: 'https://music.apple.com/fi/search?term=bizet%20carmen',
+  musiikkiNimi: 'Bizet’n Carmen Apple Musicissa',
+```
+
+Kortilla piirtyvä rivi (savukkeen lukema selaimesta):
+
+```
+pariisi-soi        Édith Piaf | Django Reinhardt   (rivin korkeus 21 px, ei ylivuotoa)
+carmenin-ensi-ilta Apple Music
+```
+
+**Ulkoasu:** `docs/raportit/kuvat/nostot-musiikkilista-pariisi-soi.png`
+ja `nostot-musiikkilista-carmen.png`. Kaksi linkkiä istuu otsikon alle
+yhdelle riville kuvan päälle, samannäköisinä kuin yksittäinen Apple
+Music -linkki — ei rikkinäistä taittoa.
+
+**Testit:** `tests/nostokortti-media.test.mjs` sai neljä uutta (yhden
+linkin muoto säilyy, listan nimet erottuvat ja osoitteeton alkio
+karsiutuu, Pariisin kolme linkkiä ovat pelissä osoitteineen, ja kortille
+piirtyy kaksi eri nimistä linkkiä ilman esikuuntelunappia).
+
+**Savuke:** `savuke-pariisin-nostot.mjs` sai vartion 7 (7, 7b, 7d, 7e)
+ja vastakokeen 7c/7f — yhteensä 6 uutta väitettä, ajo **31/31**.
+
+**Vastakokeet:**
+
+| mitä palautettiin | tulos |
+| --- | --- |
+| `js/packs/fokusvirta-pariisi.js` (linkit pois, koodi jäi) | `tests/nostokortti-media.test.mjs` **9 läpi / 2 kaatui** |
+| `js/ui.js` (listatuki pois) | testitiedosto ei käynnisty: `does not provide an export named 'nostonMusiikkilinkit'` — **0 läpi / 1 kaatui** |
+| linkkilista poistettu ajossa selaimessa | savuke 7c: `riisuttuna linkkejä 0, mediarivi false` |
+| korjattuna | **11 läpi / 0 kaatui**, savuke 31/31 |

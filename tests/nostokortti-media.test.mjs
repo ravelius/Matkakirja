@@ -33,6 +33,7 @@ import { KULTTUURI_KATEGORIAT } from '../js/packs/kulttuuri-kategoriat.js';
 import { NAHTAVYYSJUTUT } from '../js/packs/nahtavyysjutut.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { nostonKuvat } from '../js/fokusnosto.js';
+import { nostonMusiikkilinkit } from '../js/ui.js';
 
 /** Kaupungit, joiden lehtien sivut on siirretty kohdekartan nostoiksi. */
 const KARTTAKAUPUNGIT = ['pariisi', 'lontoo', 'rooma', 'berliini', 'madrid', 'wien', 'amsterdam'];
@@ -327,11 +328,22 @@ function tynkaUi(cityId) {
     },
     lisaaNostonNapit(rivi, nosto) {
       saadut.push(nosto);
+      /*
+       * Musiikkilinkit tulevat OIKEASTA apurista (js/ui.js
+       * nostonMusiikkilinkit), jotta linkkilista mitataan samalla
+       * säännöllä kuin pelissä. Loput kentät ovat yksi nappi kukin.
+       */
+      for (const musiikki of nostonMusiikkilinkit(nosto)) {
+        const linkki = new Elementti('a');
+        linkki.className = 'kulttuuri-musiikkilinkki';
+        linkki.setAttribute('href', musiikki.url);
+        linkki.textContent = musiikki.nakyva;
+        rivi.appendChild(linkki);
+      }
       for (const kentta of MEDIAKENTAT) {
-        if (!nosto[kentta]) continue;
-        const nappi = new Elementti(kentta === 'musiikki' ? 'a' : 'button');
-        nappi.className = kentta === 'musiikki'
-          ? 'kulttuuri-musiikkilinkki' : 'kulttuuri-kuuntele';
+        if (kentta === 'musiikki' || !nosto[kentta]) continue;
+        const nappi = new Elementti('button');
+        nappi.className = 'kulttuuri-kuuntele';
         rivi.appendChild(nappi);
       }
     },
@@ -405,4 +417,79 @@ test('ääninosto saa mediarivin myös ilman musiikkilinkkiä', async () => {
   assert.ok(rivi.querySelector('.kulttuuri-kuuntele'), 'ääninäytteen nappi puuttuu');
   assert.equal(rivi.querySelector('.kulttuuri-musiikkilinkki'), null,
     'ilman musiikkikenttää ei tule Apple Music -linkkiä');
+});
+
+/* ================================================================= */
+/* C. MUSIIKKILINKKIEN LISTA (Fablen päätös 14.9.2026)               */
+/* ================================================================= */
+
+test('yhden linkin muoto säilyy ennallaan', () => {
+  const yksi = nostonMusiikkilinkit({
+    musiikki: 'https://music.apple.com/fi/search?term=bizet%20carmen',
+    musiikkiNimi: 'Bizet’n Carmen Apple Musicissa',
+  });
+  assert.equal(yksi.length, 1);
+  assert.equal(yksi[0].url, 'https://music.apple.com/fi/search?term=bizet%20carmen');
+  // Näkyvä teksti on entinen "Apple Music": sadat nostot eivät saa
+  // muuttua siitä, että lista tuli mahdolliseksi.
+  assert.equal(yksi[0].nakyva, 'Apple Music');
+  assert.equal(yksi[0].otsake, 'Bizet’n Carmen Apple Musicissa');
+  assert.deepEqual(nostonMusiikkilinkit({}), []);
+  assert.deepEqual(nostonMusiikkilinkit({ musiikki: '' }), []);
+});
+
+test('linkkilista antaa jokaiselle linkille oman näkyvän nimen', () => {
+  const lista = nostonMusiikkilinkit({
+    musiikki: [
+      { nimi: 'Édith Piaf', url: 'https://music.apple.com/a' },
+      { nimi: 'Django Reinhardt', url: 'https://music.apple.com/b' },
+      { nimi: 'Rikkinäinen', url: '' },
+      null,
+    ],
+  });
+  assert.equal(lista.length, 2, 'osoitteeton alkio ei saa päätyä kortille');
+  assert.deepEqual(lista.map((l) => l.nakyva), ['Édith Piaf', 'Django Reinhardt']);
+  assert.equal(new Set(lista.map((l) => l.nakyva)).size, 2,
+    'kahta samannimistä linkkiä ei erottaisi toisistaan');
+  assert.deepEqual(lista.map((l) => l.url),
+    ['https://music.apple.com/a', 'https://music.apple.com/b']);
+});
+
+test('Pariisin kolme Apple Music -linkkiä ovat pelissä', () => {
+  /*
+   * Erä 5 pudotti nämä kolme linkkiä hiljaa, kun lehden nostot
+   * siirtyivät kartalle (erän 10 raportti, avoin kohta 11.1).
+   * Osoitteet ovat merkki merkiltä samat kuin ennen erää 5
+   * (git show 721efc3 -- js/packs/kulttuuri-kategoriat.js).
+   */
+  const nostot = FOKUSVIRRAT.pariisi?.takynostot ?? [];
+  const soi = nostot.find((n) => n.id === 'pariisi-soi');
+  const carmen = nostot.find((n) => n.id === 'carmenin-ensi-ilta');
+  assert.ok(soi && carmen, 'Pariisin nostot puuttuvat');
+
+  const soiLinkit = nostonMusiikkilinkit(soi);
+  assert.equal(soiLinkit.length, 2, 'pariisi-soi kantaa kaksi linkkiä');
+  assert.deepEqual(soiLinkit.map((l) => l.url), [
+    'https://music.apple.com/fi/search?term=edith%20piaf%20la%20vie%20en%20rose',
+    'https://music.apple.com/fi/search?term=django%20reinhardt%20minor%20swing',
+  ]);
+  assert.deepEqual(soiLinkit.map((l) => l.nakyva), ['Édith Piaf', 'Django Reinhardt']);
+
+  const carmenLinkit = nostonMusiikkilinkit(carmen);
+  assert.equal(carmenLinkit.length, 1);
+  assert.equal(carmenLinkit[0].url, 'https://music.apple.com/fi/search?term=bizet%20carmen');
+});
+
+test('kahden linkin nosto saa kortille kaksi eri nimistä linkkiä', async () => {
+  const { aukesi, kortti } = await avaaKortti('pariisi', 'pariisi-soi');
+  assert.equal(aukesi, true, 'kortti ei auennut');
+  const rivi = kortti.querySelector('.fokusnosto-media');
+  assert.ok(rivi, 'kortilta puuttuu mediarivi');
+  const linkit = rivi.querySelectorAll('.kulttuuri-musiikkilinkki');
+  assert.equal(linkit.length, 2, 'kortilla pitää olla kaksi musiikkilinkkiä');
+  assert.deepEqual(linkit.map((l) => l.textContent), ['Édith Piaf', 'Django Reinhardt']);
+  // Automaattista esikuuntelunappia ei tule listalle: kaksi
+  // samannimistä "Kuuntele näyte" ei kertoisi kumpi soi.
+  assert.equal(rivi.querySelector('.kulttuuri-kuuntele'), null,
+    'linkkilistalle ei piirretä automaattista esikuuntelunappia');
 });

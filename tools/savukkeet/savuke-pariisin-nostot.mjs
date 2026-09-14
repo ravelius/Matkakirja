@@ -25,6 +25,9 @@
  *      leipäteksti on SANATARKASTI noston oma `lunastus`.
  *   5. KAUPUNKILEHTI AVAUTUU YHÄ (`ui.avaaTutkinta`) ja sen kohdekartta
  *      piirtää pisteensä.
+ *   7. MUSIIKKILINKKIEN LISTA: `pariisi-soi` piirtää kaksi eri nimistä
+ *      Apple Music -linkkiä samalle kortille ja `carmenin-ensi-ilta`
+ *      yhden entiseen tapaan; vastakoe 7c poistaa listan ajossa.
  *
  * Vartiot 0–3 ajetaan Nodessa pelin omilla funktioilla (tools/
  * tarkista-nostopaikat.mjs), vartiot 4–5 selaimessa pallolaudalla.
@@ -268,6 +271,83 @@ for (const id of UUDET) {
     });
   }
 }
+
+/*
+ * VARTIO 7. KAKSI APPLE MUSIC -LINKKIÄ SAMALLA KORTILLA (Fablen päätös
+ * 14.9.2026). Erä 5 yhdisti Piafin ja Django Reinhardtin yhdeksi
+ * nostoksi, ja molemmat linkit putosivat pelistä, koska nostolla oli
+ * vain yksi `musiikki`-kenttä. Kenttä ottaa nyt vastaan listan
+ * (js/ui.js nostonMusiikkilinkit), ja tämä vartio mittaa mitä kortille
+ * oikeasti piirtyy: kaksi linkkiä, kaksi eri nimeä, eikä
+ * automaattista esikuuntelunappia (kaksi samannimistä "Kuuntele
+ * näyte" ei kertoisi kumpi soi).
+ *
+ * VASTAKOE on 7c: kun linkkilista poistetaan ajossa, linkit katoavat.
+ */
+const avaaMedia = (nostoId, riisu = false) => sivu.evaluate(async ([tunnus, riisuLista]) => {
+  for (const el of document.querySelectorAll('.fokusnosto-kerros')) el.remove();
+  const { avaaNostonTunnuksella } = await import('/js/fokusnosto.js');
+  const { FOKUSVIRTA_PARIISI } = await import('/js/packs/fokusvirta-pariisi.js');
+  const kohde = FOKUSVIRTA_PARIISI.takynostot.find((n) => n.id === tunnus);
+  const talteen = kohde?.musiikki;
+  if (riisuLista && kohde) delete kohde.musiikki;
+  avaaNostonTunnuksella(window.matkakirja.ui, tunnus);
+  await new Promise((v) => setTimeout(v, 400));
+  const lisaaNappi = document.querySelector('.fokusnosto-kortti .nostokuva-lisaa');
+  if (lisaaNappi) { lisaaNappi.click(); await new Promise((v) => setTimeout(v, 500)); }
+  const kortti = document.querySelector('.fokusnosto-kortti');
+  const rivi = kortti?.querySelector('.fokusnosto-media');
+  const linkit = [...(rivi?.querySelectorAll('.kulttuuri-musiikkilinkki') ?? [])];
+  const tulos = {
+    rivi: Boolean(rivi),
+    nimet: linkit.map((a) => a.textContent.trim()),
+    osoitteet: linkit.map((a) => a.getAttribute('href')),
+    // Rivi ei saa vuotaa palstan yli: linkit mahtuvat kortin sisään.
+    ylivuoto: rivi ? rivi.scrollWidth > rivi.clientWidth + 1 : false,
+    rivinKorkeus: rivi ? Math.round(rivi.getBoundingClientRect().height) : 0,
+    kuuntele: rivi?.querySelectorAll('.kulttuuri-kuuntele').length ?? 0,
+  };
+  if (riisuLista && kohde && talteen !== undefined) kohde.musiikki = talteen;
+  return tulos;
+}, [nostoId, riisu]);
+
+const soi = await avaaMedia('pariisi-soi');
+tieto('pariisi-soi: musiikkilinkit', `${soi.nimet.join(' | ') || '(ei yhtään)'} · rivin korkeus ${soi.rivinKorkeus} px`);
+vaadi('7. pariisi-soi: kortilla on kaksi eri nimistä musiikkilinkkiä',
+  soi.rivi && soi.nimet.length === 2 && new Set(soi.nimet).size === 2,
+  JSON.stringify(soi.nimet));
+vaadi('7b. pariisi-soi: osoitteet ovat erän 5 omat linkit',
+  soi.osoitteet[0]?.includes('edith%20piaf') && soi.osoitteet[1]?.includes('django%20reinhardt'),
+  soi.osoitteet.join(' | '));
+vaadi('7d. pariisi-soi: mediarivi ei vuoda palstan yli eikä saa esikuuntelunappia',
+  !soi.ylivuoto && soi.kuuntele === 0 && soi.rivinKorkeus > 0,
+  JSON.stringify({ ylivuoto: soi.ylivuoto, kuuntele: soi.kuuntele }));
+if (KUVAKANSIO) {
+  await sivu.locator('.fokusnosto-kortti').screenshot({
+    path: join(KUVAKANSIO, 'nostot-musiikkilista-pariisi-soi.png'), scale: 'css',
+  });
+}
+
+const carmen = await avaaMedia('carmenin-ensi-ilta');
+tieto('carmenin-ensi-ilta: musiikkilinkit', carmen.nimet.join(' | ') || '(ei yhtään)');
+vaadi('7e. carmenin-ensi-ilta: yhden linkin muoto piirtyy entiseen tapaan',
+  carmen.rivi && carmen.nimet.length === 1 && carmen.nimet[0] === 'Apple Music'
+    && carmen.osoitteet[0]?.includes('bizet%20carmen'),
+  JSON.stringify(carmen.nimet));
+if (KUVAKANSIO) {
+  await sivu.locator('.fokusnosto-kortti').screenshot({
+    path: join(KUVAKANSIO, 'nostot-musiikkilista-carmen.png'), scale: 'css',
+  });
+}
+
+const riisuttu = await avaaMedia('pariisi-soi', true);
+const takaisin = await avaaMedia('pariisi-soi');
+tieto('pariisi-soi: vastakoe', `riisuttuna linkkejä ${riisuttu.nimet.length}, mediarivi ${riisuttu.rivi}`);
+vaadi('7c. VASTAKOE: linkkilistan poisto vie linkit kortilta',
+  riisuttu.nimet.length === 0 && riisuttu.rivi === false,
+  JSON.stringify(riisuttu));
+vaadi('7f. linkit palautuivat vastakokeen jälkeen', takaisin.nimet.length === 2,
+  JSON.stringify(takaisin.nimet));
 
 const lehti = await sivu.evaluate(async () => {
   for (const el of document.querySelectorAll('.fokusnosto-kerros')) el.remove();
