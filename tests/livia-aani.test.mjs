@@ -950,7 +950,10 @@ test('pulun perustaso on kertojan alapuolella ja yhdessä paikassa', () => {
     'perustason kaava on sama soitossa ja liu\'un päivityksessä');
   // Kertoja asettaa oman tasonsa ilman kerrointa: vertailukohta on se.
   const luenta = lue('../js/luenta.js');
-  assert.match(luenta, /audio\.volume = puheVoima\(\);/);
+  // Kertoja kirjoittaa tasonsa 14.9.2026 alkaen luentaSoittimen kautta
+  // (iOS ei tottele elementin volumea), mutta yhä ILMAN kerrointa:
+  // vertailukohta pulun perustasolle on juuri se.
+  assert.match(luenta, /luentaSoitin\(aaniUrl\(url\), puheVoima\(\)\);/);
   assert.doesNotMatch(luenta, /puheVoima\(\) \*/);
   // Vaimennukset kertovat perustasoon eivätkä korvaa sitä.
   assert.ok(LIVIAN_VALIHUOMION_VAIMENNUS < 1);
