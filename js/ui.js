@@ -46,6 +46,7 @@ import {
   VANHA_KARTTA_KAYTOSSA,
   laukunTilastotAuki, tallennaLaukunTilastot,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
+  puhelinTila,
 } from './ui-apurit.js';
 import { onAarre } from './tokens.js';
 import { ilmoitaLivianTilanne, ilmoitaLivianTunne } from './livia-tilanteet.js';
@@ -803,13 +804,12 @@ const SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS = 900;
  *
  * SAMA MERKKIJONO ON CSS:SSÄ (css/styles.css "PUHELIN: ISOISÄN JA
  * PULUN TEKSTIT PIILOON"). Jos rajaa muutetaan, molemmat muuttuvat.
+ *
+ * RAJA ASUU NYT js/ui-apurit.js:SSÄ (v1892): myös js/pollo.js tarvitsee
+ * sen, eikä pollo saa tuoda ui.js:ää (ui tuo pollon). Nimi viedään yhä
+ * täältä eteenpäin, joten ui.js:n käyttäjien ei tarvinnut muuttua.
  */
-const PUHELIN_KYSELY = '(max-width: 699px), (max-height: 520px)';
-
-/** Onko peli puhelimen kokoisella ruudulla (ks. PUHELIN_KYSELY)? */
-export function puhelinTila() {
-  return Boolean(globalThis.matchMedia?.(PUHELIN_KYSELY)?.matches);
-}
+export { puhelinTila };
 
 /*
  * ── LIIKU-NAPIN NÄKYVYYS JA LAAJENNUS ───────────────────────────────

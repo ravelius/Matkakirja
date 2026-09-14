@@ -4022,8 +4022,17 @@ test('päiväkirjalla on kaksi kokoa: koko merkintä ja yhden rivin lappu', () =
   const uusi = ui.match(/uusiFactKey\(key\) \{[\s\S]*?\n  \}/)?.[0] ?? '';
   assert.match(uusi, /asetaPaivakirjanKoko\(puhelinTila\(\)\)/,
     `uusi merkintä ei aseta kortin kokoa puhelintunnistuksesta: ${uusi}`);
-  assert.match(ui, /const PUHELIN_KYSELY = '\(max-width: 699px\), \(max-height: 520px\)';/,
-    'puhelintunnistus ei ole yhdessä nimetyssä paikassa (PUHELIN_KYSELY)');
+  /*
+   * RAJA SIIRTYI ui-apureihin (v1892). Myös js/pollo.js tarvitsee sen
+   * (puhelimella puhekuplat imeytyvät heti pluskuplaan), eikä pollo saa
+   * tuoda ui.js:ää — ui tuo pollon. Vartio seuraa nimeä sinne, missä se
+   * asuu, ja vaatii yhä että määritys on VAIN yhdessä paikassa.
+   */
+  const apurit = readFileSync(new URL('../js/ui-apurit.js', import.meta.url), 'utf8');
+  assert.match(apurit, /export const PUHELIN_KYSELY = '\(max-width: 699px\), \(max-height: 520px\)';/,
+    'puhelintunnistus ei ole yhdessä nimetyssä paikassa (js/ui-apurit.js PUHELIN_KYSELY)');
+  assert.doesNotMatch(ui, /const PUHELIN_KYSELY =/,
+    'puhelinraja on kirjoitettu toiseen kertaan js/ui.js:ään');
 
   // Katto on oltava: ilman sitä pitkä merkintä peittäisi koko kartan,
   // eikä pelaaja näkisi mihin napauttaa kutistaakseen sen.
