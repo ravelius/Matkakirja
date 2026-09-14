@@ -100,9 +100,9 @@ import { KARTTANIMI_KOOT } from '../karttanimet.js';
  * hoitaa vain napautuksen, ankkurin ja merkin paikan pallolla.
  */
 import {
-  asemoiKaupunkipopup, asetteleTuristiInfo, avaaTiivisKaupunkietusivu, avaaTuristiInfo,
+  asemoiKaupunkipopup, asetteleTuristiInfo, avaaTiivisKaupunkietusivu, avaaTuristiOpas,
   kaupunginMatkailijalle, kaupunkimerkinMitta, suljeKaupunkipopup,
-  turistiInfoElementti, turistiInfonAsteet,
+  turistiInfoElementti, turistiInfonAsteet, turistiInfonAsteetRuudulta,
 } from '../kaupunkinosto.js';
 import { NOSTOLADONTA_POLTON_TIHEYS } from '../nostoladonta.js';
 import {
@@ -674,11 +674,35 @@ export function laatikonEtaisyys(kohta, r) {
  *
  * Osuma mitataan ETÄISYYTENÄ LAATIKKOON (musteen päällä 0) ja kelpaa
  * kosketusvaran sisällä; pienin etäisyys voittaa, ja tasapelissä se,
- * jonka laatikon keskipiste on lähinnä (js/fokusniput.js sääntö 9).
- * Musteen päällä oleva sormi voittaa siis aina naapurin pelkän varan.
+ * jonka muste on lähinnä (js/fokusniput.js sääntö 9). Musteen päällä
+ * oleva sormi voittaa siis aina naapurin pelkän varan.
+ *
+ * ── TASAPELIN MITTA ON MERKIN OMA PISTE TAI SEN MUSTEEN KESKI ─────
+ *
+ * VIKA, MITATTU 14.9.2026 (Ranska, Chromium 390 × 844, saapumisnäkymä,
+ * napautus merkin OMAAN ruutupisteeseen): 8 Ranskan 20 merkistä avasi
+ * VÄÄRÄN kortin. Chartresin katedraalin kuvaketta napauttamalla aukesi
+ * Mont-Saint-Michel (43 px sivussa), Millaun sillasta Pont du Gard ja
+ * Marseillen syvennyksistä naapurin nosto.
+ *
+ * JUURISYY: tasapelin ratkaisi LAATIKON KESKIPISTE, ja laatikko on
+ * kuvake + nimiö. Pitkänimisen merkin laatikko venyy nimiön puolelle,
+ * joten sen keskipiste karkaa omasta kuvakkeestaan: kun kaksi
+ * laatikkoa peittää sormen (kumpikin etäisyys 0), voitti se, jonka
+ * NIMIÖ sattui olemaan kohdalla — ei se, jonka KUVAKKEEN päällä sormi
+ * oli. Mitattu Chartres: sormi Chartresin kuvakkeella, Chartresin
+ * laatikon keski 20 px, Mont-Saint-Michelin nimiölaatikon keski 11 px.
+ *
+ * SÄÄNTÖ NYT: tasapelin mitta on PIENEMPI kahdesta — etäisyys merkin
+ * omaan ruutupisteeseen (`keski`, sama piste jonka ympärille muste
+ * ladotaan) ja etäisyys laatikon keskipisteeseen. Sormi merkin päällä
+ * voittaa siis aina, ja pitkän nimiön ULKOPÄÄ on yhä osumaa
+ * (laatikkomitta jää voimaan, Raamattu VIAT v1672). Ilman `keski`ä
+ * sääntö on entinen, joten kutsuja voi jättää sen antamatta.
  *
  * @param {{x: number, y: number}} kohta napautuksen ruutupiste
- * @param {Array<{r: object, voittaja: object}>} ehdokkaat laatikot nyt
+ * @param {Array<{r: object, voittaja: object, keski?: object}>} ehdokkaat
+ *   laatikot nyt; `keski` on merkin oma ruutupiste, jos se tiedetään
  * @param {number} vara kosketusvara pikseleinä
  * @returns {object|null} voittajan tietue tai null
  */
@@ -691,7 +715,10 @@ export function musteenVoittaja(kohta, ehdokkaat, vara = LAPUN_KOSKETUSVARA_PX) 
     if (!r) continue;
     const matka = laatikonEtaisyys(kohta, r);
     if (matka > vara) continue;
-    const keski = Math.hypot((r.x0 + r.x1) / 2 - kohta.x, (r.y0 + r.y1) / 2 - kohta.y);
+    const laatikonKeski = Math.hypot((r.x0 + r.x1) / 2 - kohta.x, (r.y0 + r.y1) / 2 - kohta.y);
+    const omaPiste = e.keski
+      ? Math.hypot(e.keski.x - kohta.x, e.keski.y - kohta.y) : Infinity;
+    const keski = Math.min(laatikonKeski, omaPiste);
     if (matka > parasMatka + 1e-6) continue;
     if (Math.abs(matka - parasMatka) <= 1e-6 && keski >= parasKeski) continue;
     parasMatka = matka;
@@ -2136,7 +2163,9 @@ export async function avaaPallolauta(ui) {
       if (typeof laatikko !== 'function' || !edessa(osuma.lat, osuma.lng)) return;
       const p = pallo.getScreenCoords(osuma.lat, osuma.lng, 0);
       const r = p ? laatikko(p) : null;
-      if (r) ehdokkaat.push({ r, voittaja });
+      // `p` on merkin oma ruutupiste: tasapelin mitta (ks. TASAPELIN
+      // MITTA ON MERKIN OMA PISTE TAI SEN MUSTEEN KESKI).
+      if (r) ehdokkaat.push({ r, voittaja, keski: p });
     };
     for (const o of nostot.osumat()) {
       lisaa(o, o.lappu, { laji: 'nosto', lat: o.lat, lng: o.lng, o });
@@ -2230,9 +2259,20 @@ export async function avaaPallolauta(ui) {
      * mitattuna 13.9.2026 juuri se voitti: napautus merkin päälle avasi
      * kaupungin pop-upin, koska Pariisin poltettu nimimuste ulottui
      * merkin alle. Sormi merkin päällä tarkoittaa merkkiä.
+     *
+     * MUTTA VAIN KAUPUNGIN NIMIMUSTEEN YLI, EI NOSTON YLI (mitattu
+     * 14.9.2026, Ranska, Chromium 390 × 844): sääntö palautti
+     * turisti-infon aina, kun se sattui olemaan lähin merkki 44 px:n
+     * sisällä — myös silloin, kun sormi oli KOKONAAN toisen noston
+     * nimiön päällä. Saapumisnäkymässä Pariisin seutu on yhden sormen
+     * kokoinen (mitattu 6,7 km/px), joten Chambordin nimiön napautus
+     * avasi turisti-infon eikä Chambordia. Kilpailun järjestys on nyt
+     * sama myönnytys kuin ennenkin, mutta noston OMA muste menee sen
+     * edelle: kaupungin nimimuste (laji `kaupunki`) ei.
      */
-    if (voittaja?.laji === 'turistiinfo') return voittaja;
-    return musteeseenOsunut(lat, lng) ?? voittaja;
+    const muste = musteeseenOsunut(lat, lng);
+    if (voittaja?.laji === 'turistiinfo' && muste?.laji !== 'nosto') return voittaja;
+    return muste ?? voittaja;
   };
 
   /**
@@ -2659,7 +2699,26 @@ export async function avaaPallolauta(ui) {
     const city = ui.game.cityOf?.();
     if (!city || !kaupunginMatkailijalle(city.id)) return tyhjaa();
     const oma = pallonAsteet({ x: city.x, y: city.y });
-    const paikka = oma ? turistiInfonAsteet(oma.lat, oma.lon) : null;
+    /*
+     * PAIKKA MITATAAN KAMERASTA, EI ARVATA ASTEISTA (erä 11, omistaja
+     * 14.9.2026: *"turisti info nappi pitaisi olla pariisin vieressa"*).
+     * Kolme ruutupistettä kertovat, montako pikseliä yksi aste on juuri
+     * nyt, ja js/kaupunkinosto.js kääntää halutun ruutusiirron asteiksi
+     * (turistiInfonAsteetRuudulta). Ilman näytteitä — kaupunki pallon
+     * takapuolella tai reunalla — palataan asteisiin, jotta merkki on
+     * varmasti jossain eikä katoa.
+     */
+    const naytteet = oma ? {
+      p0: pallo.getScreenCoords(oma.lat, oma.lon, 0),
+      pLat: pallo.getScreenCoords(oma.lat + 1, oma.lon, 0),
+      pLon: pallo.getScreenCoords(oma.lat, oma.lon + 1, 0),
+      dLat: 1,
+      dLon: 1,
+    } : null;
+    const paikka = oma
+      ? (turistiInfonAsteetRuudulta(oma.lat, oma.lon, naytteet)
+        ?? turistiInfonAsteet(oma.lat, oma.lon))
+      : null;
     if (!paikka) return tyhjaa();
     const iso = kohteidenNykyinenIso(ui);
     const laatikko = iso ? maalaatikot.get(iso) : null;
@@ -2685,8 +2744,15 @@ export async function avaaPallolauta(ui) {
        * napautus avasi 39 px:n päässä olevan turisti-infon eikä koskaan
        * kaupungin omaa pop-upia.
        */
+      /*
+       * NAPAUTUS AVAA SUORAAN ISON OPPAAN (omistaja 14.9.2026: *"se
+       * saisi suoraan aueta isoon muotoon (jata pienempi vali popup
+       * pois kokonaan)"*). Välipop-up (avaaTuristiInfo) on poissa tästä
+       * polusta kokonaan, joten ankkuriakaan ei enää tarvita: opas on
+       * modaali arkki eikä merkin viereen asemoitu kortti.
+       */
       avaa: () => {
-        avaaTuristiInfo(ui, city, { ankkuri: ankkuri(paikka.lat, paikka.lon) });
+        avaaTuristiOpas(ui, city);
       },
     }]);
     return merkit.laatikot('turistiinfo');

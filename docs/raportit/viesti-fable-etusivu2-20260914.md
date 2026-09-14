@@ -1,0 +1,253 @@
+# Tiivistetty kaupunkietusivu lehden kehykseen; turisti-info suoraan isoon muotoon
+
+Opus-työagentti Fablelle 14.9.2026. Haara
+`claude/bold-ride-vow4ki-etusivu2` (pohja `claude/bold-ride-vow4ki`).
+Omistajan päätös: Raamattu, osio "Kaupungit", **KARTTAUUDISTUKSEN
+PAATOKSET 11**, kohdat 3–4.
+
+> *"kaupunkia klikkaamalla piti avautua muutettu kaupunkilehti. sisalto
+> on oikea, mutta sen ulkoasu saisi olla tasmalleen sama kuin
+> kaupunkilehdessa kaikilta osin (myos pop upin leveys)"*
+>
+> *"turisti info nappi pitaisi olla pariisin vieressa ja se saisi
+> suoraan aueta isoon muotoon (jata pienempi vali popup pois
+> kokonaan)"*
+
+Ei versionostoa, ei muutoslokiriviä, ei tekstimuutoksia, ei Raamattua.
+Vanha kaupunkilehti on rivilleen koskematon.
+
+## 1. Mitattu juurisyy (A): kortti ei ollut lehti vaan kartan kaluste
+
+Erä 10 latoi tiivistetyn etusivun **karttanoston omaan korttiin**
+(`.kaupunkipopup`, `js/kaupunkinosto.js` `avaaKortti`). Sisältö oli
+oikea, mutta kortin leveys, paperi, kehys ja kirjasimet ovat kartan
+kalusteen — eivät lehden. Mitattuna Playwright/Chromiumilla (Pariisi,
+`?lauta=pallo`):
+
+| Mitta | KAUPUNKILEHTI 390 px | vanha kortti 390 px | KAUPUNKILEHTI 1400 px | vanha kortti 1400 px |
+| --- | --- | --- | --- | --- |
+| leveys | 390 px | **358,8 px** | 960 px | **1154 px** |
+| pehmuste | 0 / 15,2 / 41,6 px | **13,6 / 15,2 / 15,2 px** | 0 / 35,2 / 35,2 | **13,6 / 15,2 / 15,2** |
+| tausta | #f5f0e2 + paperirakeisuus | #f5f0e2, **ei rakeisuutta** | sama | sama |
+| kehys | leikattu reuna, 0 px pyöristys | **1 px ruskea, 12 px pyöristys** | sama | sama |
+| pyöristys | 0 px | **12 px** | 0 px | **12 px** |
+| otsikon kirjasin | American Typewriter 30,4 px / 700 | **Iowan Old Style 18,4 px** | 44,8 px | **18,7 px** |
+| leipätekstin kirjasin | American Typewriter 16 px | **Iowan Old Style 14,7 px** | 16 px | **14,7 px** |
+
+## 2. Korjaus (A): SAMA kehys, ei kopioitua tyyliä
+
+`js/lehti.js` sai yhden uuden exportin **`avaaTiivisLehtiarkki`**
+(tiedoston loppuun; vanhat funktiot rivi riviltä koskemattomina). Se
+avaa `<dialog class="dialog lehti arkki">` -kehyksen, jonka sisällä on
+`<div class="dialog-card arrival-card">` ja
+`.arrival-palstat > .arrival-palsta` — **täsmälleen ne luokat, joilla
+kaupunkilehti aukeaa** (index.html `#arrival-dialog`, js/ui.js
+`openArrival` lisää `arkki`, `rakennaSivut` lisää `lehti`). Leveys
+kirjoitetaan samalla `ui.mitoitaArkki`lla, joka sai valinnaisen
+arkki-parametrin (ilman argumenttia funktio on rivilleen entinen).
+
+Yhtään tyyliarvoa ei kopioitu. Kaksi css-sääntöä oli kirjoitettu vain
+id:lle; niiden **valitsinlistaan lisättiin** sama lehden luokka, joka on
+nyt myös index.html:n omassa elementissä:
+
+- `#arrival-city` → `.lehti-nimio` (nimiön typografia, tarttuvuus, väri)
+- `#arrival-intro` → `.lehti-leipa` (koko, kaksipalstaisuus, anfangi)
+
+Vanhan elementin id-sääntö on ennallaan, joten kaupunkilehden kaskadi ei
+muutu. Samoin sulkunappi (`.lehti-arkkinappi`) lisättiin lehden
+hampurilaisen olemassa olevaan sääntöön ja vain peilattiin oikeaan
+reunaan — mittoja ja värejä ei toisteta.
+
+`js/kaupunkinosto.js` `latoTiivisEtusivu` latoo nyt lehden omiin
+paikkoihin (`.lehti-paakuva`, `.lehti-kuvarivi`, `.lehti-leipa`, nappi
+`.wiki-btn`) eikä kortin omiin kääreisiin. Sisältö on sama kuin erässä
+10: herokuvat → kohdekartta → leipätekstin 1. kappale → **Lue loppuun**.
+
+### VANHA / UUSI, erotus 0 (savukkeen mittaamat, Pariisi ja Marseille)
+
+| Mitta | 390 px VANHA / UUSI | 1400 px VANHA / UUSI | erotus |
+| --- | --- | --- | --- |
+| leveys | 390 / 390 | 960 / 960 | **0** |
+| pehmuste | 0px 15.2px 41.6px / sama | 0px 35.2px 35.2px / sama | **0** |
+| taustaväri | rgb(245,240,226) / sama | sama | **0** |
+| taustakuvio | paperirakeisuus / sama | sama | **0** |
+| kehys | 0px none / sama | 1px solid rgba(0,0,0,0) / sama | **0** |
+| pyöristys | 0px / 0px | 0px / 0px | **0** |
+| otsikkofontti | American Typewriter 30,4 px 700 / sama | 44,8 px 700 / sama | **0** |
+| leipäfontti | American Typewriter 16 px 400 / sama | 16 px 400 / sama | **0** |
+| dialogin luokat | dialog·lehti·arkki / sama | sama | **0** |
+| kortin luokat | dialog-card·arrival-card / sama | sama | **0** |
+
+Vain sisällön korkeus eroaa — se on tiivistyksen tarkoitus.
+
+### Sivulöydös: kortti oli näkymätön 1,7 sekuntia
+
+Ensimmäisellä mittauskierroksella leveys oli 1400 px:n ruudulla 948,8
+eikä 960. Syy ei ollut ladonnassa vaan avausanimaatiossa: kortti syntyy
+SULJETUN dialogin sisällä, ja Chromium jätti `.dialog-card`in
+`card-in`-animaation odottamaan (mitattu: tila "running", currentTime 0,
+**opacity 0** vielä 1,2 s avaamisen jälkeen; se purkautui vasta ~1,7
+sekunnissa). Kortti oli siis oikeasti näkymätön ja 97-prosenttinen.
+Korjattu nollaamalla animaatio joka avauksella — samalla kortti liukuu
+esiin joka kerta eikä vain ensimmäisellä.
+
+## 3. Mitattu juurisyy (B): turisti-info ei pysynyt vieressä
+
+Merkin siirto oli ASTEITA (`TURISTI_INFO_SIIRTO` 1,5° / −0,75°). Aste on
+maantieteellisesti kiinteä, mutta ruudulla se on sitä useampi pikseli
+mitä lähempänä kamera on. Mitattu Pariisissa saapumisnäkymässä:
+
+| Ruutu | kaupunkipiste | turisti-info | etäisyys |
+| --- | --- | --- | --- |
+| 390 × 844 | (203, 394) | (236, 409) | **36 px** |
+| 1400 × 900 | (722, 326) | (815, 370) | **103 px** |
+
+Sama siirto siis kolminkertaistui työpöydällä: merkki ei ollut enää
+Pariisin vieressä vaan sen naapurissa.
+
+## 4. Korjaus (B): ruutusiirto, joka mitataan kamerasta
+
+Uusi `TURISTI_INFO_RUUTUSIIRTO = { dx: 36, dy: 16 }` on **ruutupikseleitä**
+(≈ 39 px, sama luku, joka erässä 4 mitattiin hyväksi). Asteet lasketaan
+siitä käänteisellä Jacobin matriisilla, jonka alkiot mitataan kamerasta
+joka ladonnassa: kolme `getScreenCoords`-näytettä (kaupunki, +1° lev,
++1° pit) kertovat, montako pikseliä yksi aste juuri nyt on. Kaava ei siis
+oleta projektiosta mitään. Merkki on yhä karttaan kiinnitetty datum
+(PAATOKSET 2) — asteet lasketaan uudestaan joka levossa. Jos näytteet
+eivät kelpaa (kaupunki pallon reunalla), palataan vanhaan astesiirtoon.
+
+**Turisti-infon uusi paikka lukuina** (savukkeen mittaama, kaupungin
+merkistä):
+
+| Ruutu | Pariisi | Marseille |
+| --- | --- | --- |
+| 390 × 844 | **40 px** | **40 px** |
+| 1400 × 900 | **40 px** | **40 px** |
+
+Kaupungin nimen päälle merkki ei mene: merkin ruutulaatikko on jo
+nimiladonnan varaus (`js/pallolauta/lauta.js`: `varaukset: [...nostoTulos
+.laatikot, ...infoTulos]`), ja savuke mittaa erikseen, ettei yksikään
+ladottu nimilaatikko limity sen kanssa (0/N molemmilla ruuduilla).
+
+**Napautus avaa suoraan ison muodon.** Merkin `avaa` kutsuu nyt
+`avaaTuristiOpas`ia, joka avaa saman `avaaNahtavyys`-arkin
+(`#nahtavyys-dialog`, `opas-arkki`) kuin matkailuliitteen kolme
+sisäänkäyntiä. Välipop-up `avaaTuristiInfo` jää moduuliin tyyleineen ja
+testeineen, mutta **poistuu tästä polusta kokonaan** — savuke vaatii,
+ettei `.kaupunkipopup-info` ole DOMissa napautuksen jälkeen. Kaikilla
+190 kaupungilla, joilla on `matkailijalle`, on myös `artikkeli.teksti`
+(tarkistettu datasta), joten merkin ehto riittää oppaan ehdoksi.
+
+## 5. Savuke ja vastakokeet
+
+`tools/savukkeet/savuke-kaupunkietusivu.mjs` laajennettiin: se avaa nyt
+myös VANHAN kaupunkilehden samassa selaimessa ja vertaa kymmentä mittaa,
+sekä mittaa turisti-infon etäisyyden, limityksen nimien kanssa ja
+oppaan avautumisen.
+
+```
+NODE_USE_ENV_PROXY=1 PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers \
+  node tools/savukkeet/savuke-kaupunkietusivu.mjs
+→ 178/178 vartiota läpi
+```
+
+**VASTAKOE A** (`avaaTiivisKaupunkietusivu` takaisin `avaaKortti`-kehykseen):
+`FAIL tiivis etusivu on kaupunkilehden kehyksessä — uusi null vanha
+["arkki dialog lehti","arrival-card dialog-card"]`. Vartio punainen. ✅
+
+**VASTAKOE B** (merkin `avaa` takaisin `avaaTuristiInfo`iin): 8 vartiota
+punaiseksi, mm. `FAIL merkin napautus avaa SUORAAN ison oppaan —
+{"auki":false,...,"valipopup":1}` ja `FAIL välipop-upia ei ole DOMissa —
+1 kpl`; 136/144. ✅
+
+Molemmat vastakokeet purettiin ja lopullinen ajo on 144/144.
+
+## 6. Portit
+
+| Portti | Tulos |
+| --- | --- |
+| `npm test` | **pass 3354, fail 0** |
+| `node tools/tarkista-kaksoisavaimet.mjs` | ei kaksoisavaimia |
+| `node tools/tarkista-niputus.mjs` | 387 moduulia, ei törmäyksiä |
+| `tools/tarkista-savukkeet.mjs` | läpi |
+
+Sivuhavainto: `tests/pollo.test.mjs`:n kaksi SUORITUSKYKYvartiota
+("indeksi rakentuu…", "haku on nopea…") ovat seinäkelloon sidottuja
+(`kesto < 250 ms`, `indeksointi < 3000 ms`) ja kaatuvat, jos koneella
+ajetaan yhtä aikaa Playwright-savuketta. Rauhassa ajettuna koko sarja on
+pass 3354, fail 0.
+
+## 7. Mitä EI tehty
+
+- Ei tekstimuutoksia, ei uutta sisältöä.
+- Ei muutoksia vanhaan kaupunkilehteen (`rakennaSivut`,
+  `naytaTutkiSivu`, sivupino, `ui.lehtitila`) eikä sen dataan.
+- Ei versionostoa, ei muutoslokiriviä, ei Raamattua, ei mergeä, ei dist/.
+- Ei koskettu `js/pallolauta/maapaneeli.js`:ään eikä maan rajaviivan
+  piirtoon (toisen agentin työ).
+
+## 8. Lisäys: LEHDEN MASTO (Fablen päätös 14.9.2026)
+
+> *"'Täsmälleen sama ulkoasu kaikilta osin' kattaa lehden maston (kicker
+> 'Unohdettu aarre' + päiväysrivi) samoilla piirtäjillä kuin vanhassa
+> lehdessä, herokuvien yläpuolelle kuten vanhassa."*
+
+Masto on nyt kortissa: `.lehti-ylarivi` (kicker) → `h2.lehti-nimio` →
+`.lehti-alarivi` (päiväys) → herokuvat, samassa järjestyksessä kuin
+index.html:ssä. Luokat ovat lehden omat ja niiden säännöt ovat jo
+css/styles.css:ssä PELKKINÄ LUOKKINA, joten **yhtään uutta valitsinta
+eikä yhtään tyyliarvoa ei tarvittu**. Tekstit tulevat samoista lähteistä
+kuin `rakennaSivut`in masto: lehden nimi ja maan nimi + matkapäivän
+numero pelistä (`lehdenMaanNimi` LUKEE `pack.map.cityCountry` →
+`countryShapes`, ei kirjoita `ui.lehtitila`an mitään). Liitelinkkiä
+(`.maa-linkki`) ei ole — se on alaosan navigointia, jonka omistaja rajasi
+pois erässä 10.
+
+### Masto VANHA / UUSI — erotus 0
+
+| Mitta | 390 px VANHA / UUSI | 1400 px VANHA / UUSI |
+| --- | --- | --- |
+| kickerin teksti | Unohdettu aarre / sama | sama |
+| kickerin ladottu laatikko | 345 × 11 / **345 × 11** | 873 × 11 / **873 × 11** |
+| kickerin tyyli¹ | Am. Typewriter 9,6 px 400, kirjainväli 3,264 px, uppercase, center, rgb(90,67,38), marginit 13,6/0/1,6 / sama | marginit 32/0/1,6 / sama |
+| päiväysrivin maa | "Ranska · " / sama | sama |
+| päiväysrivin päivä | "1. matkapäivä" / sama | sama |
+| päiväysrivin leveys | 345 / **345** | 873 / **873** |
+| päiväysrivin tyyli¹ | (ohitettu, ks. alla) | 11,2 px 400, 1,792 px, uppercase, center, 3px double + 1px solid / sama |
+| maston järjestys | ylarivi,nimio,alarivi,paakuva / sama | sama |
+
+¹ mitattu kenttinä: kirjasinperhe, koko, paino, kirjainväli,
+suuraakkostus, tasaus, väri, marginaali, pehmuste, ylä- ja alaviiva.
+390 px:n ruudulla VANHAN päiväysrivin tyyli ohitetaan nimeltä: sääntö
+`.lehti-alarivi:has(button.maa-linkki:not([hidden]))` vaihtaa rivin
+flexiksi ja vasemmalle tasatuksi vain silloin, kun liitelinkki on
+näkyvissä. Tiivis kortti noudattaa saman säännön PERUSMUOTOA
+(keskitetty), eli ero on linkin, ei ulkoasun.
+
+### Kaksi mitattua korjausta, jotka masto paljasti
+
+1. **Vierityspalkin kaista.** Ilman `scrollbar-gutter: stable` tiiviin
+   arkin palsta oli **888 px** (1400×900) ja **360 px** (390×844), kun
+   kaupunkilehden palsta samalla ruudulla on 873 ja 345 — sama teksti
+   olisi taittunut 15 px leveämmälle. Kaista lisättiin omana sääntönään
+   (`tests/sivunkaanto.test.mjs` vartioi vanhaa valitsinlistaa
+   merkilleen, joten sitä ei muokattu). Nyt 873 / 345, erotus 0.
+2. **`card-in`-animaatio pois tiiviiltä arkilta.** Luvun 2 sivulöydös ei
+   parantunut JS-nollauksella: mitattuna vielä **1,5 sekuntia**
+   avaamisen jälkeen kortin opacity oli 0 ja kickerin ruutulaatikko
+   846 × 28 (= 873 × 11 skaalattuna 0,97:llä ja kierrettynä −1,2°).
+   Kortti oli siis näkymätön ja väärän kokoinen koko sen ajan.
+   Animaatio on nyt pois tältä yhdeltä kortilta (oma valitsimensa;
+   kaupunkilehden oma animaatio ei muutu), ja kortti on paikallaan heti
+   ensimmäisestä kehyksestä.
+
+Savukkeessa on maston oma vartio ("lehden masto on kortissa") ja lisäksi
+kahdeksan uutta VANHA/UUSI-mittaa; **178/178 vartiota läpi**.
+
+## 9. Kuvat
+
+| Kuva | Mitä |
+| --- | --- |
+| `kuvat/era11-kartta-390.jpg`, `kuvat/era11-kartta-1400.jpg` | turisti-infon merkki Pariisin vieressä (40 px molemmilla) |
+| `kuvat/era11-etusivu-390.jpg`, `kuvat/era11-etusivu-1400.jpg` | tiivistetty etusivu kaupunkilehden kehyksessä, masto mukaan lukien |
+| `kuvat/era11-opas-390.jpg`, `kuvat/era11-opas-1400.jpg` | merkin napautus → iso matkailijan opas, ei välipop-upia |

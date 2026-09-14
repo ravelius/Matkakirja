@@ -204,10 +204,7 @@ export const FOKUSVIRTA_VENETSIA = {
      * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
      * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
      * julkaisua. */
-    teksti: 'Venetsiassa majatalon ovi avautui veteen, ja olin astua uimaan. '
-      + 'Gondolieri piti ilmeensä suorana. Palatsien välissä kuulin lusikan '
-      + 'osuvan kahvikuppiin yläkerrassa. Taloilla oli hienot julkisivut; '
-      + 'vesi kuunteli niiden aamiaista.',
+    teksti: "San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Kolme tagia, alku ja
@@ -227,23 +224,50 @@ export const FOKUSVIRTA_VENETSIA = {
      * saa reaktion).
      */
     reaktiot: [
-      { id: 'venetsia.r1', ankkuri: 'ovi avautui veteen', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Oven takana oleva meri on outo ajatus.' },
-      { id: 'venetsia.r2', ankkuri: 'olin astua uimaan', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Merkinnän paras vitsi.' },
-      { id: 'venetsia.r3', ankkuri: 'piti ilmeensä suorana', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Gondolieri ei naura ääneen, isoisä huomaa sen.' },
-      { id: 'venetsia.r4', ankkuri: 'lusikan osuvan kahvikuppiin', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Hiljaisuus kantaa yläkerran aamiaisen.' },
-      { id: 'venetsia.r5', ankkuri: 'vesi kuunteli niiden aamiaista', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Päätöslause saa hiljaisen nyökkäyksen.' },
-    ],
+  {
+    "id": "venetsia.r1",
+    "ankkuri": "Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "venetsia.r2",
+    "ankkuri": "Muslimivartijat olivat jättäneet korin tutkimatta",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "venetsia.r3",
+    "ankkuri": "Katselin kultaisia mosaiikkeja",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "venetsia.r4",
+    "ankkuri": "olisi seurannut kuulustelu",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "venetsia.r5",
+    "ankkuri": "Venetsiassa oli rakennettu kirkko",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
      * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
-    luenta: '[curious] Venetsiassa majatalon ovi avautui veteen, ja olin '
-      + 'astua uimaan. Gondolieri piti ilmeensä suorana. Palatsien välissä '
-      + 'kuulin lusikan osuvan kahvikuppiin yläkerrassa. [softly] Taloilla '
-      + 'oli hienot julkisivut; vesi kuunteli niiden aamiaista.',
+    luenta: "[curious] San Marcon kirkossa opas kertoi, kuinka Pyhän Markuksen ruumis oli tuotu Egyptistä sianlihan alla. Muslimivartijat olivat jättäneet korin tutkimatta. Katselin kultaisia mosaiikkeja. [warmly] Minun laivastossani tällaisesta olisi seurannut kuulustelu. Venetsiassa oli rakennettu kirkko.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-venetsia.mp3',
   },
 
@@ -316,15 +340,7 @@ export const FOKUSVIRTA_VENETSIA = {
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* TEKSTIPILOTTI 12.9.2026: nykyliikenteen yksi lause lisätty
      * rikkomatta viiden kuvan romanssipoikkeusta. */
-    kommentti: [
-      // Tekstisession albumirepliikki (12:20; omistaja 9.9.: "hyväksyn kaiken
-      // mitä se ehdottaa sinulle"). 106 merkkiä. Edellinen: 'Kanavilla kulkee
-      // nyt vesibussejakin. Isoisä kuunteli aamiaista; minä olisin selvittänyt
-      // sen ikkunan.'
-      'Venetsiassa kuljetaan yhä vesibusseilla. Minä lennän nykyään vähän pidempää reittiä. '
-      + 'Yhden tutun takia. Hetkinen — nuo kuvat ovat yksityisiä! Hän vain sattui jokaiseen '
-      + 'hyvään kuvakulmaan. No, ehkä minä vähän odotin.',
-    ],
+    kommentti: ["Venetsiassa kuljetaan yhä vesibusseilla. Minä lennän nykyään vähän pidempää reittiä. Yhden tutun takia. Hetkinen — nuo kuvat ovat yksityisiä! Hän vain sattui jokaiseen hyvään kuvakulmaan. No, ehkä minä vähän odotin."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'rakkaus', voimakkuus: 0.8 },
     /*

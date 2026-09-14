@@ -186,7 +186,7 @@ export const FOKUSVIRTA_ISTANBUL = {
     paikkarivi: 'Konstantinopoli, syyskuussa 1873. Sumua salmella; puntari '
       + 'korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 341 merkkiä (yläraja 400). */
-    teksti: 'Galatan mäessä kantaja laski arkkunsa kivelle ja antoi mäen odottaa. Mäkeen kaivettiin tunnelia, jotta ihmiset pääsisivät ylös istualtaan. Paljon työtä työn välttämiseksi. Kantajalla oli parempaa tekemistä.',
+    teksti: "Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. Sitten yritin nostaa arkkuni. Annoin hänen levätä.",
     /*
      * Luenta on kaanonin oma (kohta 1), tunnetageineen. Äänite on
      * generoitu samalla reseptillä kuin Ateenalle
@@ -206,17 +206,49 @@ export const FOKUSVIRTA_ISTANBUL = {
      * paluu arkun ääreen (havainto ja selitys).
      */
     reaktiot: [
-      { id: 'istanbul.r1', ankkuri: 'antoi mäen odottaa', tarkoitus: 'huvittuu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'istanbul.r2', ankkuri: 'ylös istualtaan', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'istanbul.r3', ankkuri: 'työtä työn välttämiseksi', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'istanbul.r4', ankkuri: 'parempaa tekemistä', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "istanbul.r1",
+    "ankkuri": "kantaja laski arkkuni kivelle",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "istanbul.r2",
+    "ankkuri": "pian mäen voisi nousta istualtaan",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "istanbul.r3",
+    "ankkuri": "paljon työtä työn välttämiseksi",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "istanbul.r4",
+    "ankkuri": "Sitten yritin nostaa arkkuni",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "istanbul.r5",
+    "ankkuri": "Annoin hänen levätä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Galatan mäessä kantaja laski arkkunsa kivelle ja antoi mäen odottaa. Mäkeen kaivettiin tunnelia, jotta ihmiset pääsisivät ylös istualtaan. [mischievously] Paljon työtä työn välttämiseksi. [softly] Kantajalla oli parempaa tekemistä.',
+    luenta: "[curious] Galatan mäessä kantaja laski arkkuni kivelle. Pyysin kiirehtimään. Hän osoitti tunnelityömaata: pian mäen voisi nousta istualtaan. Minusta se oli paljon työtä työn välttämiseksi. [softly] Sitten yritin nostaa arkkuni. Annoin hänen levätä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-istanbul.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-istanbul-r20260909-paper-v4;
@@ -380,9 +412,7 @@ export const FOKUSVIRTA_ISTANBUL = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Tünel kulkee yhä mäen alla. Minä nousin mäen siivillä ja ehdin perille ennen vaunua. Kokeneen lentäjänkin on ilo, kun katu ja tunneli päätyvät samaan paikkaan.',
-    ],
+    kommentti: ["Tünel kulkee yhä mäen alla. Minä kuljen yllä! Kisasin vaunun kanssa. Voitin, mutta matkustajat eivät hengästyneet. Myönnetään: kätevä laite."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*

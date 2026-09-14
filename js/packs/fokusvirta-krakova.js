@@ -222,7 +222,7 @@ export const FOKUSVIRTA_KRAKOVA = {
     paikkarivi: 'Krakova, kesäkuussa 1873. Poutaa; torilla pölyää; puntari '
       + 'korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 298 merkkiä (yläraja 400). */
-    teksti: 'Krakovan Marian kirkon torvi vaikeni kesken sävelmän. Odotin loppua niin kauan, että torikauppias tarjosi tuolia. Hän oli kuullut saman katkoksen koko ikänsä eikä odottanut enää. Ostin leivän ja jäin silti. Kun kaupunki jättää jotakin sanomatta, korva ei tahdo lähteä.',
+    teksti: "Krakovan yliopistossa näin vanhan maapallon. Intian eteläpuolelle oli merkitty maa nimeltä Amerikka. Vieressä luki: vastikään löydetty. Minä luin sen kahdesti. Omista kartoistani on puuttunut saaria, mutta kokonaista mannerta en sentään ole hukannut.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
@@ -242,17 +242,49 @@ export const FOKUSVIRTA_KRAKOVA = {
      * (selittävä sivulause).
      */
     reaktiot: [
-      { id: 'krakova.r1', ankkuri: 'vaikeni kesken sävelmän', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'krakova.r2', ankkuri: 'torikauppias tarjosi tuolia', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'krakova.r3', ankkuri: 'jäin silti', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'krakova.r4', ankkuri: 'korva ei tahdo lähteä', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "krakova.r1",
+    "ankkuri": "näin vanhan maapallon",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "krakova.r2",
+    "ankkuri": "maa nimeltä Amerikka",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "krakova.r3",
+    "ankkuri": "vastikään löydetty",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "krakova.r4",
+    "ankkuri": "Minä luin sen kahdesti",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "krakova.r5",
+    "ankkuri": "kokonaista mannerta en sentään ole hukannut",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Krakovan Marian kirkon torvi vaikeni kesken sävelmän. Odotin loppua niin kauan, että torikauppias tarjosi tuolia. Hän oli kuullut saman katkoksen koko ikänsä eikä odottanut enää. [mischievously] Ostin leivän ja jäin silti. [softly] Kun kaupunki jättää jotakin sanomatta, korva ei tahdo lähteä.',
+    luenta: "[curious] Krakovan yliopistossa näin vanhan maapallon. Intian eteläpuolelle oli merkitty maa nimeltä Amerikka. Vieressä luki: vastikään löydetty. [warmly] Minä luin sen kahdesti. Omista kartoistani on puuttunut saaria, mutta kokonaista mannerta en sentään ole hukannut.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-krakova.mp3',
   },
 
@@ -319,9 +351,7 @@ export const FOKUSVIRTA_KRAKOVA = {
      */
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Odotin räystäällä ikkunan alla. Torvi soi neljään suuntaan, jokainen puhallus eri yleisölle. Kirjekyyhky arvostaa täsmällistä jakelua.',
-    ],
+    kommentti: ["Tuo maapallo on 1500-luvun alusta, jolloin eurooppalaisten tiedot Amerikasta olivat vielä hataria. Krakova on vanha yliopistokaupunki. Minä kuuntelin kahvilan ikkunalla opiskelijoiden väittelyä. Kolme ihmistä, neljä mielipidettä."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'miettiva', voimakkuus: 0.45 },
     /*

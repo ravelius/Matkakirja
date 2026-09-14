@@ -89,27 +89,36 @@ body.paivittyy .app { visibility: hidden; }
   --sea-ink: #6e6350;
   --mark: #b03a2b;
   /*
-   * KOHDEMAAN PUNAINEN AARIVIIVA — OMA MUUTTUJA (karttauudistuksen
-   * PAATOKSET 11 kohta 2, omistaja 14.9.2026: *"aariviiva saisi olla
-   * murretumpi ja tummempi punainen"*).
+   * KOHDEMAAN AARIVIIVA — OMA MUUTTUJA, JA 14.9.2026 ALKAEN MUSTEEN
+   * SININEN (karttauudistuksen PAATOKSET 14 kohta 2, omistaja:
+   * *"vaihda samalla kartan reuna musteen siniseksi"*, kortilla
+   * tarkennettuna maan punaiseksi rajaviivaksi). Nimi oli
+   * `--raja-punainen`; kun savy ei enaa ole punainen, nimikin
+   * vaihtui — `--raja-muste`.
    *
-   * MIKSI OMA NIMI EIKA `--mark`. `--mark` on kartan merkintojen
-   * punainen (lentoreitti, sinettivaha, maakayrat, vertailuvalinta) ja
-   * se pysyy ennallaan; kohdemaan kehalle pyydettiin murretumpi ja
-   * tummempi savy, eika sita saa vaihtaa muiden merkintojen alta.
+   * MIKSI OMA NIMI EIKA `--mark`. `--mark` #b03a2b on kartan
+   * merkintojen punainen (lentoreitti, sinettivaha, maakayrat,
+   * vertailuvalinta) ja se pysyy ennallaan; vain kohdemaan keha
+   * vaihtuu siniseksi, eika sita saa vaihtaa muiden merkintojen alta.
    * Yksi nimi on silti YKSI TOTUUS: taso- ja pallokartta lukevat
    * molemmat taman (css .maatummennus-viiva ja js/pallovektorit.js
    * korostuksenMuste).
    *
-   * MITATTU VALINTA (docs/raportit/viesti-fable-aariviiva-20260914.md):
-   * kolmesta vaihtoehdosta #8f3326 / #853124 / #7a2e22 keskimmainen.
-   * Kontrasti seepiapaperia (#efdcb4) vasten 6,32 (ennen 4,47),
-   * varillista maata (230,219,172) vasten 6,13 (ennen 4,33);
-   * kylläisyys 57 % (ennen 61 %) ja vaaleus 33 % (ennen 43 %) — eli
-   * murretumpi ja tummempi, ja yha seepiapaletin lampiman punaisen
-   * asteikolla.
+   * MITATTU VALINTA (docs/raportit/viesti-fable-sininen-aariviiva-20260914.md):
+   * kolmesta vaihtoehdosta #2b4a6f / #1f3a5f / #1a2f4a keskimmainen.
+   * Kontrasti seepiapaperia (#efdcb4) vasten 8,51 ja varillista maata
+   * (230,219,172) vasten 8,25 — molemmat reilusti yli vaaditun 4,5 ja
+   * paremmat kuin entinen punainen (6,32 / 6,13). Savy on tumma,
+   * murrettu preussinsininen (H215 S51 % L25 %), ei kirkas: vanhan
+   * kartan musteen suuntaan.
+   *
+   * MERI EI OLE TASSA PELISSA SININEN (tools/fokuskartta/piirto.js:
+   * *"meri on tassa kartassa viileaa paperia"*, syvinkin meri
+   * 134,132,124), joten sininen muste ei sekoitu aluevesiin:
+   * sinikanavan ylivoima B − (R+G)/2 on kehalla +50,5 ja merella
+   * −9,0. Sama mitta on savukkeen vartio.
    */
-  --raja-punainen: #853124;
+  --raja-muste: #1f3a5f;
   /*
    * KERMA — kartan oma vaalein paperisävy. Sama luku on jo pelissä
    * kahdessa paikassa (tools/fokuskartta/piirto.js KERMA ja
@@ -1732,9 +1741,10 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
    feidauksen kanssa. */
 .maatummennus-viiva {
   fill: none;
-  /* PALETIN PUNAINEN (omistaja 13.9.2026, karttauudistus erä 1):
-     `--mark` #b03a2b on ainoa punainen, jolla on oma muuttujanimi, ja
-     jo kartan omien merkintäkerrosten väri (maakäyrät, sinettivaha).
+  /* KEHÄN MUSTE (omistaja 13.9.2026, karttauudistus erä 1; sävy
+     vaihtui siniseksi 14.9.2026, ks. alla): kehällä on paletissa oma
+     muuttujansa, koska `--mark` #b03a2b jää kartan omien
+     merkintäkerrosten väriksi (maakäyrät, sinettivaha).
      Peittävyys ei ole enää 0,6 vaan täysi: kehän on erotuttava
      kohdemaan VÄRILLISESTÄ pinnasta, ei pelkästä seepiasta, ja himmeä
      punainen luki värikartalla ruskeana. Leveys ja sen perustelu
@@ -1742,13 +1752,13 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
      tässäkään anneta — perintä ryhmästä on se, mitä portaikkofeidaus
      animoi.
 
-     SÄVY ON 14.9.2026 ALKAEN `--raja-punainen` EIKÄ `--mark`
-     (karttauudistuksen PÄÄTÖKSET 11 kohta 2 b): omistaja pyysi
-     kohdemaan kehälle murretumman ja tummemman punaisen, ja kartan
-     muut merkinnät (lentoreitti, sinettivaha) jäävät `--mark`iin.
+     SÄVY ON 14.9.2026 ALKAEN `--raja-muste` EIKÄ `--mark`
+     (karttauudistuksen PÄÄTÖKSET 14 kohta 2): omistaja pyysi kehän
+     musteen siniseksi, ja kartan muut merkinnät (lentoreitti,
+     sinettivaha) jäävät `--mark`in punaiseen.
      Muuttuja on yhä YKSI: pallon kehä lukee saman
      (js/pallovektorit.js korostuksenMuste). */
-  stroke: var(--raja-punainen);
+  stroke: var(--raja-muste);
   stroke-linejoin: round;
   stroke-linecap: round;
   vector-effect: non-scaling-stroke;
@@ -8387,6 +8397,19 @@ body.flight-active .fact-card {
   scrollbar-gutter: stable;
 }
 
+/*
+ * SAMA KAISTA TIIVIILLE LEHTIARKILLE (karttauudistus erä 11, js/lehti.js
+ * avaaTiivisLehtiarkki). OMANA SÄÄNTÖNÄÄN eikä yllä olevan valitsinlistan
+ * jatkona, koska tests/sivunkaanto.test.mjs vartioi tuota listaa
+ * merkilleen (omistajan 9.9.2026 päätös vierityspalkin kaistasta).
+ *
+ * MITATTU: ilman kaistaa tiiviin arkin palsta oli 888 px (1400×900) ja
+ * 360 px (390×844), kun kaupunkilehden palsta samalla ruudulla on 873 ja
+ * 345 — sama teksti olisi siis taittunut 15 px leveämmälle. Kaistan
+ * kanssa luvut ovat 873 ja 345, erotus 0.
+ */
+.tiivis-lehtiarkki > .dialog-card { scrollbar-gutter: stable; }
+
 /* Toinen, hieman kiertynyt reunaviiva vahvistaa käsin piirretyn vaikutelman. */
 .dialog-card::before {
   content: "";
@@ -10982,15 +11005,18 @@ body.katselu #newgame-btn { display: none; }
    * johdatus latoutuu lehtimäisesti kuten kaupunkisivun nostot.
    * Kapealla näytöllä pysytään yhdessä palstassa (media queryn raja).
    */
-  .dialog.lehti #arrival-intro {
+  .dialog.lehti #arrival-intro,
+  .dialog.lehti .lehti-leipa {
     column-count: 2;
     column-gap: 2rem;
     max-width: none;
     text-align: justify;
     hyphens: auto;
   }
-  .dialog.lehti #arrival-intro p { margin: 0 0 0.7em; }
-  .dialog.lehti #arrival-intro p:last-child { margin-bottom: 0; }
+  .dialog.lehti #arrival-intro p,
+  .dialog.lehti .lehti-leipa p { margin: 0 0 0.7em; }
+  .dialog.lehti #arrival-intro p:last-child,
+  .dialog.lehti .lehti-leipa p:last-child { margin-bottom: 0; }
 }
 
 /* Kuvan napautus avaa katselimen — kursori kertoo sen hiirikäyttäjälle. */
@@ -12121,7 +12147,8 @@ body.kartalento #board { animation: kartalento-sisaan 0.55s ease; }
 .dialog.arkki .wiki-nosto .teksti { color: #211d18; }
 
 .dialog.arkki .wiki-kategoria .aihe-nimi,
-.dialog.arkki #arrival-city { color: #16130f; }
+.dialog.arkki #arrival-city,
+.dialog.arkki .lehti-nimio { color: #16130f; }
 
 /* Piirretyn aaltoreunan SVG-kerrokset (.arkin-varjo, .arkin-reuna)
  * poistuivat v299:ssä sanomalehtipohjan myötä — varjo on nyt kortin
@@ -13008,8 +13035,16 @@ button.lukija-nappi.lukee,
  * kumpikaan ei väisty eikä mikään mene päällekkäin.
  */
 
-/* Lehden nimiö: kaupungin nimi isolla antiikvalla keskitettynä. */
-.dialog.lehti #arrival-city {
+/* Lehden nimiö: kaupungin nimi isolla antiikvalla keskitettynä.
+ *
+ * LUOKKA ID:N RINNALLE (karttauudistus erä 11): sama nimiö on myös
+ * tiiviissä lehtiarkissa (js/lehti.js avaaTiivisLehtiarkki), jolla ei
+ * ole eikä saa olla #arrival-cityn id:tä. Valitsinlista on lisäys —
+ * vanhan elementin id-sääntö on ennallaan, eikä yhtään arvoa ole
+ * kopioitu toiseen paikkaan. index.html:n <h2 id="arrival-city">
+ * kantaa saman luokan, joten sääntö osuu molempiin. */
+.dialog.lehti #arrival-city,
+.dialog.lehti .lehti-nimio {
   margin: 0;
   text-align: center;
   font-size: clamp(1.9rem, 7.5vw, 2.8rem);
@@ -13032,7 +13067,8 @@ button.lukija-nappi.lukee,
  * ja paperitausta, jottei alta vierivä teksti kuulla läpi. Sivuun
  * levitys negatiivisella marginaalilla peittää palstan reunat.
  */
-.dialog.arkki #arrival-city {
+.dialog.arkki #arrival-city,
+.dialog.arkki .lehti-nimio {
   position: sticky;
   top: var(--arkki-tarttuma, 0px);
   z-index: 3;
@@ -13101,7 +13137,8 @@ button.lukija-nappi.lukee,
    nappisääntö (piirretty kehys ja vaalea pohja) voittaisi muuten
    pelkän luokan — kuvakkeen ympärille piirtyi laatikko (omistajan
    kaappaus 14.8.2026). */
-.dialog button.lehti-hampurilainen {
+.dialog button.lehti-hampurilainen,
+.dialog button.lehti-arkkinappi {
   position: absolute;
   top: 50%;
   left: 0;
@@ -13137,6 +13174,50 @@ button.lukija-nappi.lukee,
 /* Nimiö ulottuu negatiivisilla marginaaleilla paperin reunaan asti —
    sisällön vasen reuna on sen laatikossa --arkki-reunuksen kohdalla. */
 #arrival-city > .lehti-hampurilainen { left: var(--arkki-reunus, 0.95rem); }
+
+/*
+ * TIIVIS LEHTIARKKI EI LIU'U ESIIN — MITATTU VIKA, EI MAKUASIA.
+ *
+ * `.dialog-card`in `card-in` (0,32 s: opacity 0 → 1, scale 0,97 → 1,
+ * rotate −1,2°) on kirjoitettu kortille, joka on DOMissa jo sivun
+ * latautuessa. Tiiviin arkin kortti sen sijaan SYNTYY SULJETUN dialogin
+ * sisällä, ja Chromium jättää silloin animaation odottamaan: mitattu
+ * 14.9.2026 (Pariisi 1400×900) kortin opacity oli 0 ja sen ruutulaatikko
+ * 846×28 (= 873×11 kerrottuna alkuruudun 0,97:llä ja kierrettynä) vielä
+ * 1,5 sekuntia avaamisen jälkeen — kortti oli siis NÄKYMÄTÖN ja väärän
+ * kokoinen koko sen ajan. JS-nollaus (animation: none → '') ei purkanut
+ * sitä. Animaatio on siksi pois: kortti on paikallaan heti ensimmäisestä
+ * kehyksestä, eikä ladottu leveys voi mitata kiertynyttä laatikkoa.
+ * Kaupunkilehden oma animaatio ei muutu (tämä on oma valitsimensa).
+ */
+.tiivis-lehtiarkki > .dialog-card { animation: none; }
+
+/*
+ * TIIVIIN LEHTIARKIN SULKUNAPPI (karttauudistus erä 11, js/lehti.js
+ * avaaTiivisLehtiarkki). Nappi on lehden nimiön sisällä samoin kuin
+ * hampurilainen — vain peilikuvana oikeaan reunaan, koska vasen reuna
+ * on lehdessä varattu. Mitat, värit ja osuma-alue tulevat yllä olevasta
+ * hampurilaisen säännöstä (valitsinlistaan lisätty .lehti-arkkinappi);
+ * tässä ei toisteta yhtään arvoa, vain puoli vaihtuu.
+ */
+.dialog .lehti-nimio > button.lehti-arkkinappi {
+  left: auto;
+  right: var(--arkki-reunus, 0.95rem);
+  place-items: center end;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/*
+ * Tiiviin arkin omat kaksi sääntöä. Ensimmäinen: leipätekstin loput
+ * kappaleet ovat DOMissa piilotettuina, kunnes "Lue loppuun" painetaan
+ * (js/kaupunkinosto.js latoTiivisEtusivu) — sääntö kirjoitetaan tähän
+ * eikä jätetä selaimen oletukseen, koska lehden omat kappalesäännöt
+ * voisivat voittaa [hidden]-oletuksen. Toinen: kohdekartta on omistajan
+ * järjestyksessä ennen leipätekstiä ja tarvitsee saman raon kuin teksti.
+ */
+.tiivis-lehtiarkki .lehti-leipa > p[hidden] { display: none; }
+.tiivis-lehtiarkki .tiivis-kartta { margin-bottom: 0.7rem; }
 
 .lehti-hampurilainen[hidden] { display: none; }
 
@@ -13321,8 +13402,10 @@ button.lukija-nappi.lukee,
   color: rgba(70, 51, 31, 0.95);
 }
 
-/* Esittely on lehden pääjuttu: hieman leipätekstiä isompi. */
-.dialog.lehti #arrival-intro {
+/* Esittely on lehden pääjuttu: hieman leipätekstiä isompi.
+ * Luokka id:n rinnalle, ks. .lehti-nimio yllä. */
+.dialog.lehti #arrival-intro,
+.dialog.lehti .lehti-leipa {
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -14821,7 +14904,8 @@ button.lukija-nappi.lukee,
  * rivin lause jää siis tarkoituksella ilman anfangia.
  */
 .dialog.lehti #arrival-maa-intro::first-letter,
-.dialog.lehti #arrival-intro > p:first-of-type::first-letter {
+.dialog.lehti #arrival-intro > p:first-of-type::first-letter,
+.dialog.lehti .lehti-leipa > p:first-of-type::first-letter {
   float: left;
   font-family: var(--font-type);
   font-size: 3.1em;

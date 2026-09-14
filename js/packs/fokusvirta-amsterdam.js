@@ -155,7 +155,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
     paikkarivi: 'Amsterdam, toukokuussa 1873. Tuulista; kanavat väreilevät; '
       + 'puntari putoaa.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
-    teksti: 'Amsterdamin kanavalla tuoli nousi kolmanteen kerrokseen talon ulkopuolella. Portaat olivat liian kapeat. Kaksi miestä ohjasi köysiä, ja tuoli meni ikkunasta sisään selkä edellä, arvokkaasti kuin piispa vaunuihin. Täällä täytyy harkita tarkkaan sekä kalustonsa että riitansa.',
+    teksti: "Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. Sitten urut alkoivat soida niin, että penkki värisi.",
     /*
      * LUENTA = sama teksti tunnetagein (Raamattu, luentaprosessi):
      * neljä tagia, alku ja loppu eri sävyssä, yksikään sana ei vaihdu.
@@ -173,17 +173,49 @@ export const FOKUSVIRTA_AMSTERDAM = {
      * Hiljaiset osuudet: "Se riippui katon koukusta" (tekninen selitys).
      */
     reaktiot: [
-      { id: 'amsterdam.r1', ankkuri: 'talon ulkopuolella', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'amsterdam.r2', ankkuri: 'Portaat olivat liian kapeat', tarkoitus: 'epailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'amsterdam.r3', ankkuri: 'kuin piispa vaunuihin', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'amsterdam.r4', ankkuri: 'kalustonsa että riitansa', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "amsterdam.r1",
+    "ankkuri": "ullakolta löysin kokonaisen kirkon urkuineen",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "amsterdam.r2",
+    "ankkuri": "katoliset eivät saaneet pitää messua julkisesti",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "amsterdam.r3",
+    "ankkuri": "Kysyin papilta kuiskaten",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "amsterdam.r4",
+    "ankkuri": "Olivat tienneet jo kauan",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "amsterdam.r5",
+    "ankkuri": "urut alkoivat soida niin, että penkki värisi",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Amsterdamin kanavalla tuoli nousi kolmanteen kerrokseen talon ulkopuolella. Portaat olivat liian kapeat. Kaksi miestä ohjasi köysiä, ja tuoli meni ikkunasta sisään selkä edellä, arvokkaasti kuin piispa vaunuihin. [softly] Täällä täytyy harkita tarkkaan sekä kalustonsa että riitansa.',
+    luenta: "[curious] Amsterdamin kanavatalon ullakolta löysin kokonaisen kirkon urkuineen. Se oli rakennettu aikana, jolloin katoliset eivät saaneet pitää messua julkisesti. Kysyin papilta kuiskaten, tiesivätkö viranomaiset. Olivat tienneet jo kauan. [warmly] Sitten urut alkoivat soida niin, että penkki värisi.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-amsterdam.mp3',
   },
 
@@ -224,9 +256,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Nostoparruja on yhä julkisivuissa. Saavuin kolmannen kerroksen ikkunalle yhdellä kaarroksella. En huomauttanut siitä: lentotaito ei ole muuttajan vika.',
-    ],
+    kommentti: ["Amsterdamin aseman edessä on pyörähalli veden alla. Seitsemälletuhannelle pyörälle! Kävin kurkistamassa sisään ja palasin rantaan. Vieressä ui ankka. Sen alla minä olin juuri kävellyt, kuivin jaloin. Olisin halunnut nähdä sen ilmeen, jos se olisi tiennyt."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ylpea', voimakkuus: 0.5 },
     /* KAANON (Fable) — Livian huomio sellaisenaan, sanaakaan muuttamatta. */

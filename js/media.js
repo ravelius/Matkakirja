@@ -76,56 +76,70 @@ const AANI_ALIPOLKU = 'audio/';
 /*
  * HYVÄKSYTYT VERSIONOIDUT HORATIO-LUENNAT (13.9.2026).
  *
- * Polku ja todellinen kesto ovat kuudesta valmistuneesta tuotantokuitista.
+ * Polku ja todellinen kesto ovat valmistuneista tuotantokuiteista.
  * Kesto pidetään samassa lukitussa rivissä URL:n kanssa, jotta QA ja
  * ajoitus eivät voi vahingossa viitata eri tuotantoversioihin.
+ *
+ * 14.9.2026: 40 kaupunkia osoittaa Horatio–Livia-Eurooppa-paketin uusiin
+ * luentoihin (lähde codex/europe-audio-20260914-r2, neljä erää; kuitit
+ * horatio-9c5b6e4dd75608cdbe8e, -91c7e2c997078439dee1, -623e51c1cd57ec159a43
+ * ja -1c804d7ab293dc259dae). Kuitin `objectKeys.live` on null ja
+ * `promotionStatus` on "pending-code-deploy": työnkulussa ei ole erillistä
+ * julkaisutoimintoa, vaan JULKAISU ON TÄMÄ TAULUKKO. Versionoitu polku on
+ * itsessään välimuistimurtaja, joten UUSITUT_AANET-kyselyversiota ei nosteta.
+ *
+ * VIISI KAUPUNKIA ODOTTAA ERÄN 5 AJOA: sisilia, islanti, alpit, lappi ja
+ * tromssa jäivät äänittämättä ElevenLabsin kiintiön loputtua, joten niiden
+ * rivit — ja js/packs/fokusvirta-*.js:ssä niiden teksti — pysyvät 13.9.2026
+ * asussa. Teksti ja ääni on pidettävä samassa polvessa, tai ankkurit osuisivat
+ * eri lauseeseen. Ks. js/livia-pilotti-cuet.js ERA5_ODOTTAVAT_KAUPUNGIT.
  */
 export const HORATIO_TUOTANTO = Object.freeze({
   'puhe-fokus-matkakirja-alpit.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-1d5aa6a08222250d94c8/puhe-fokus-matkakirja-alpit.mp3', kesto: 24.346 }),
-  'puhe-fokus-matkakirja-amsterdam.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-45f5631bb111d44e3965/puhe-fokus-matkakirja-amsterdam.mp3', kesto: 22.204 }),
-  'puhe-fokus-matkakirja-ateena.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-ateena.mp3', kesto: 22.361 }),
-  'puhe-fokus-matkakirja-barcelona.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-45f5631bb111d44e3965/puhe-fokus-matkakirja-barcelona.mp3', kesto: 20.036 }),
-  'puhe-fokus-matkakirja-bergen.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-45f5631bb111d44e3965/puhe-fokus-matkakirja-bergen.mp3', kesto: 16.039 }),
-  'puhe-fokus-matkakirja-berliini.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-76d54c364286603fc619/puhe-fokus-matkakirja-berliini.mp3', kesto: 22.753 }),
-  'puhe-fokus-matkakirja-budapest.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-76d54c364286603fc619/puhe-fokus-matkakirja-budapest.mp3', kesto: 19.879 }),
-  'puhe-fokus-matkakirja-bukarest.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-76d54c364286603fc619/puhe-fokus-matkakirja-bukarest.mp3', kesto: 18.834 }),
-  'puhe-fokus-matkakirja-dublin.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-45f5631bb111d44e3965/puhe-fokus-matkakirja-dublin.mp3', kesto: 24.686 }),
-  'puhe-fokus-matkakirja-dubrovnik.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-45f5631bb111d44e3965/puhe-fokus-matkakirja-dubrovnik.mp3', kesto: 22.439 }),
-  'puhe-fokus-matkakirja-edinburgh.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-45f5631bb111d44e3965/puhe-fokus-matkakirja-edinburgh.mp3', kesto: 22.204 }),
-  'puhe-fokus-matkakirja-firenze.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-060d6943e71f7efb9820/puhe-fokus-matkakirja-firenze.mp3', kesto: 21.891 }),
-  'puhe-fokus-matkakirja-granada.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-060d6943e71f7efb9820/puhe-fokus-matkakirja-granada.mp3', kesto: 17.633 }),
-  'puhe-fokus-matkakirja-helsinki.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-helsinki.mp3', kesto: 24.529 }),
+  'puhe-fokus-matkakirja-amsterdam.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-amsterdam.mp3', kesto: 23.876 }),
+  'puhe-fokus-matkakirja-ateena.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-ateena.mp3', kesto: 30.929 }),
+  'puhe-fokus-matkakirja-barcelona.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-barcelona.mp3', kesto: 22.047 }),
+  'puhe-fokus-matkakirja-bergen.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-bergen.mp3', kesto: 23.406 }),
+  'puhe-fokus-matkakirja-berliini.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-berliini.mp3', kesto: 19.958 }),
+  'puhe-fokus-matkakirja-budapest.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-budapest.mp3', kesto: 22.674 }),
+  'puhe-fokus-matkakirja-bukarest.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-bukarest.mp3', kesto: 23.719 }),
+  'puhe-fokus-matkakirja-dublin.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-dublin.mp3', kesto: 22.753 }),
+  'puhe-fokus-matkakirja-dubrovnik.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-dubrovnik.mp3', kesto: 25.078 }),
+  'puhe-fokus-matkakirja-edinburgh.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-edinburgh.mp3', kesto: 22.361 }),
+  'puhe-fokus-matkakirja-firenze.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-firenze.mp3', kesto: 23.327 }),
+  'puhe-fokus-matkakirja-granada.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-granada.mp3', kesto: 22.282 }),
+  'puhe-fokus-matkakirja-helsinki.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-helsinki.mp3', kesto: 23.876 }),
   'puhe-fokus-matkakirja-islanti.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-1d5aa6a08222250d94c8/puhe-fokus-matkakirja-islanti.mp3', kesto: 18.051 }),
-  'puhe-fokus-matkakirja-istanbul.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-76d54c364286603fc619/puhe-fokus-matkakirja-istanbul.mp3', kesto: 17.476 }),
-  'puhe-fokus-matkakirja-kiova.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-060d6943e71f7efb9820/puhe-fokus-matkakirja-kiova.mp3', kesto: 25.548 }),
-  'puhe-fokus-matkakirja-kobenhavn.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-45f5631bb111d44e3965/puhe-fokus-matkakirja-kobenhavn.mp3', kesto: 17.084 }),
-  'puhe-fokus-matkakirja-krakova.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-060d6943e71f7efb9820/puhe-fokus-matkakirja-krakova.mp3', kesto: 23.249 }),
-  'puhe-fokus-matkakirja-kreeta.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-060d6943e71f7efb9820/puhe-fokus-matkakirja-kreeta.mp3', kesto: 23.719 }),
+  'puhe-fokus-matkakirja-istanbul.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-istanbul.mp3', kesto: 21.081 }),
+  'puhe-fokus-matkakirja-kiova.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-kiova.mp3', kesto: 19.226 }),
+  'puhe-fokus-matkakirja-kobenhavn.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-kobenhavn.mp3', kesto: 24.921 }),
+  'puhe-fokus-matkakirja-krakova.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-krakova.mp3', kesto: 21.002 }),
+  'puhe-fokus-matkakirja-kreeta.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-kreeta.mp3', kesto: 17.868 }),
   'puhe-fokus-matkakirja-lappi.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-8270eb898650a10b5b52/puhe-fokus-matkakirja-lappi.mp3', kesto: 22.753 }),
-  'puhe-fokus-matkakirja-lissabon.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-45f5631bb111d44e3965/puhe-fokus-matkakirja-lissabon.mp3', kesto: 23.066 }),
-  'puhe-fokus-matkakirja-lontoo.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-76d54c364286603fc619/puhe-fokus-matkakirja-lontoo.mp3', kesto: 23.641 }),
-  'puhe-fokus-matkakirja-madrid.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-76d54c364286603fc619/puhe-fokus-matkakirja-madrid.mp3', kesto: 24.268 }),
-  'puhe-fokus-matkakirja-marseille.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-marseille.mp3', kesto: 23.327 }),
-  'puhe-fokus-matkakirja-moskova.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-060d6943e71f7efb9820/puhe-fokus-matkakirja-moskova.mp3', kesto: 26.044 }),
-  'puhe-fokus-matkakirja-odessa.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-060d6943e71f7efb9820/puhe-fokus-matkakirja-odessa.mp3', kesto: 24.268 }),
-  'puhe-fokus-matkakirja-oslo.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-060d6943e71f7efb9820/puhe-fokus-matkakirja-oslo.mp3', kesto: 15.882 }),
-  'puhe-fokus-matkakirja-pariisi.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-76d54c364286603fc619/puhe-fokus-matkakirja-pariisi.mp3', kesto: 23.406 }),
-  'puhe-fokus-matkakirja-pietari.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-060d6943e71f7efb9820/puhe-fokus-matkakirja-pietari.mp3', kesto: 22.439 }),
-  'puhe-fokus-matkakirja-praha.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-45f5631bb111d44e3965/puhe-fokus-matkakirja-praha.mp3', kesto: 23.954 }),
-  'puhe-fokus-matkakirja-riika.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-riika.mp3', kesto: 23.171 }),
-  'puhe-fokus-matkakirja-rooma.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-76d54c364286603fc619/puhe-fokus-matkakirja-rooma.mp3', kesto: 20.036 }),
-  'puhe-fokus-matkakirja-sarajevo.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-sarajevo.mp3', kesto: 20.271 }),
-  'puhe-fokus-matkakirja-sevilla.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-45f5631bb111d44e3965/puhe-fokus-matkakirja-sevilla.mp3', kesto: 22.988 }),
+  'puhe-fokus-matkakirja-lissabon.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-lissabon.mp3', kesto: 22.282 }),
+  'puhe-fokus-matkakirja-lontoo.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-lontoo.mp3', kesto: 31.948 }),
+  'puhe-fokus-matkakirja-madrid.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-madrid.mp3', kesto: 24.921 }),
+  'puhe-fokus-matkakirja-marseille.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-marseille.mp3', kesto: 22.518 }),
+  'puhe-fokus-matkakirja-moskova.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-moskova.mp3', kesto: 25.469 }),
+  'puhe-fokus-matkakirja-odessa.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-odessa.mp3', kesto: 17.868 }),
+  'puhe-fokus-matkakirja-oslo.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-oslo.mp3', kesto: 20.036 }),
+  'puhe-fokus-matkakirja-pariisi.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-pariisi.mp3', kesto: 30.354 }),
+  'puhe-fokus-matkakirja-pietari.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-pietari.mp3', kesto: 18.129 }),
+  'puhe-fokus-matkakirja-praha.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-praha.mp3', kesto: 22.988 }),
+  'puhe-fokus-matkakirja-riika.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-riika.mp3', kesto: 23.719 }),
+  'puhe-fokus-matkakirja-rooma.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-rooma.mp3', kesto: 20.846 }),
+  'puhe-fokus-matkakirja-sarajevo.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-sarajevo.mp3', kesto: 20.036 }),
+  'puhe-fokus-matkakirja-sevilla.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-sevilla.mp3', kesto: 24.529 }),
   'puhe-fokus-matkakirja-sisilia.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-1d5aa6a08222250d94c8/puhe-fokus-matkakirja-sisilia.mp3', kesto: 25.234 }),
-  'puhe-fokus-matkakirja-sofia.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-76d54c364286603fc619/puhe-fokus-matkakirja-sofia.mp3', kesto: 21.394 }),
-  'puhe-fokus-matkakirja-tallinna.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-tallinna.mp3', kesto: 19.958 }),
-  'puhe-fokus-matkakirja-tampere.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-tampere.mp3', kesto: 23.484 }),
+  'puhe-fokus-matkakirja-sofia.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-sofia.mp3', kesto: 18.599 }),
+  'puhe-fokus-matkakirja-tallinna.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-tallinna.mp3', kesto: 20.036 }),
+  'puhe-fokus-matkakirja-tampere.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-tampere.mp3', kesto: 24.451 }),
   'puhe-fokus-matkakirja-tromssa.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-8270eb898650a10b5b52/puhe-fokus-matkakirja-tromssa.mp3', kesto: 22.439 }),
-  'puhe-fokus-matkakirja-tukholma.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-tukholma.mp3', kesto: 19.566 }),
-  'puhe-fokus-matkakirja-varsova.mp3': Object.freeze({ polku: 'audio/versions/horatio/787070b96f4c/horatio-060d6943e71f7efb9820/puhe-fokus-matkakirja-varsova.mp3', kesto: 22.753 }),
-  'puhe-fokus-matkakirja-venetsia.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-venetsia.mp3', kesto: 19.331 }),
-  'puhe-fokus-matkakirja-vilna.mp3': Object.freeze({ polku: 'audio/versions/horatio/4ac41585d691/horatio-3aaeabde9b4f5c76a85d/puhe-fokus-matkakirja-vilna.mp3', kesto: 20.428 }),
-  'puhe-fokus-matkakirja-wien.mp3': Object.freeze({ polku: 'audio/versions/horatio/ddd87d1bc43a/horatio-76d54c364286603fc619/puhe-fokus-matkakirja-wien.mp3', kesto: 24.346 }),
+  'puhe-fokus-matkakirja-tukholma.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-91c7e2c997078439dee1/puhe-fokus-matkakirja-tukholma.mp3', kesto: 19.487 }),
+  'puhe-fokus-matkakirja-varsova.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-varsova.mp3', kesto: 31.556 }),
+  'puhe-fokus-matkakirja-venetsia.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-623e51c1cd57ec159a43/puhe-fokus-matkakirja-venetsia.mp3', kesto: 23.327 }),
+  'puhe-fokus-matkakirja-vilna.mp3': Object.freeze({ polku: 'audio/versions/horatio/439bf050af65/horatio-1c804d7ab293dc259dae/puhe-fokus-matkakirja-vilna.mp3', kesto: 22.282 }),
+  'puhe-fokus-matkakirja-wien.mp3': Object.freeze({ polku: 'audio/versions/horatio/6e3a07e879bb/horatio-9c5b6e4dd75608cdbe8e/puhe-fokus-matkakirja-wien.mp3', kesto: 24.529 }),
 });
 
 export const VERSIOIDUT_HORATIO_AANET = Object.freeze(Object.fromEntries(

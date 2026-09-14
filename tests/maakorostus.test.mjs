@@ -183,47 +183,67 @@ test('korostus on selvästi tavallista rajaa vahvempi', () => {
 });
 
 /*
- * KOHDEMAAN KEHÄ ON PALETIN PUNAINEN, EI RUSKEA MUSTE (omistaja
- * 13.9.2026, karttauudistuksen PÄÄTÖKSET 1: *"Punainen maan rajaviiva
- * PALAUTETAAN kohdemaalle (paletin --mark #b03a2b, 2,5 px)"*).
+ * KOHDEMAAN KEHÄ ON MUSTEEN SININEN, EI PUNAINEN EIKÄ RUSKEA
+ * (omistaja 14.9.2026, karttauudistuksen PÄÄTÖKSET 14 kohta 2:
+ * *"vaihda samalla kartan reuna musteen siniseksi"*).
  *
- * Tämä testi vaati ennen ruskeaa ja kroman alle 90:n. Ehto ei ole
- * lieventynyt vaan VAIHTUNUT: sävy on nyt sidottu yhteen arvoon, joka
- * on paletin `--mark` — eikä mihin tahansa punaiseen.
+ * Ehto ei ole lieventynyt vaan VAIHTUNUT kolmannen kerran: ruskea →
+ * paletin punainen (13.9.) → murrettu punainen (14.9. aamu) →
+ * musteen sininen. Joka kerta sävy on sidottu YHTEEN paletin arvoon,
+ * ei mihin tahansa sen sukuiseen väriin.
  */
-test('kohdemaan kehä on paletin --raja-punainen eikä oma heksaluku', () => {
+test('kohdemaan kehä on paletin --raja-muste eikä oma heksaluku', () => {
   const osat = (v) => [1, 3, 5].map((i) => parseInt(v.slice(i, i + 2), 16));
   const [r, g, b] = osat(KOROSTUS_MUSTE);
   const [rr, rg, rb] = osat(RAJA_MUSTE);
   // Tavallinen raja on yhä ruskeaa mustetta: korostus on poikkeus.
   assert.ok(rr > rg && rg > rb, 'maiden raja ei ole ruskea');
-  // Punainen: punakanava selvästi suurin, eikä sävy ole ruskean asteikolla.
-  assert.ok(r > g * 2 && r > b * 2, `${KOROSTUS_MUSTE} ei ole punainen`);
+  // Sininen: sinikanava selvästi suurin eikä sävy ole lämpimällä puolella.
+  assert.ok(b > r * 2 && b > g, `${KOROSTUS_MUSTE} ei ole sininen`);
   // ARVO ON SAMA KUIN PALETISSA. Kaksi heksalukua eriytyisi
   // ensimmäisessä sävynmuutoksessa (suunnitelman riski 4.3).
   const css = lue('../css/styles.css');
-  const kehanVari = css.match(/--raja-punainen:\s*(#[0-9a-fA-F]{6})/)?.[1] ?? null;
+  const kehanVari = css.match(/--raja-muste:\s*(#[0-9a-fA-F]{6})/)?.[1] ?? null;
   assert.equal(KOROSTUS_MUSTE.toLowerCase(), kehanVari?.toLowerCase(),
-    'pallon korostus ja paletin --raja-punainen ovat eri väri');
+    'pallon korostus ja paletin --raja-muste ovat eri väri');
   /*
-   * MURRETUMPI JA TUMMEMPI KUIN `--mark` (PÄÄTÖKSET 11 kohta 2 b,
-   * omistaja 14.9.2026). Kehällä on oma muuttujansa juuri siksi, että
-   * kartan muut merkinnät (lentoreitti, sinettivaha) jäävät --markiin.
+   * TUMMA JA MURRETTU, EI KIRKAS (omistajan sanat: *"vanhan kartan
+   * musteen suuntaan"*). Kirkas taivaansini olisi sama muoto mutta
+   * väärä kartta, joten kylläisyydelle ja vaaleudelle on katto.
    */
-  const mark = css.match(/--mark:\s*(#[0-9a-fA-F]{6})/)?.[1] ?? null;
   const hsl = (v) => {
-    const [r, g, b] = osat(v).map((x) => x / 255);
-    const mx = Math.max(r, g, b); const mn = Math.min(r, g, b);
+    const [r2, g2, b2] = osat(v).map((x) => x / 255);
+    const mx = Math.max(r2, g2, b2); const mn = Math.min(r2, g2, b2);
     const l = (mx + mn) / 2;
     return { s: mx === mn ? 0 : (mx - mn) / (1 - Math.abs(2 * l - 1)), l };
   };
-  assert.ok(hsl(KOROSTUS_MUSTE).l < hsl(mark).l, 'kehä ei ole --markia tummempi');
-  assert.ok(hsl(KOROSTUS_MUSTE).s < hsl(mark).s, 'kehä ei ole --markia murretumpi');
+  assert.ok(hsl(KOROSTUS_MUSTE).l < 0.35, 'kehä ei ole tumma');
+  assert.ok(hsl(KOROSTUS_MUSTE).s < 0.7, 'kehä on kirkas, ei murrettu muste');
+  /*
+   * KONTRASTI ON MITATTU, EI ARVATTU (omistaja: *"kontrasti
+   * seepiapaperiin ja värilliseen maahan ≥ 4,5 mitattuna"*).
+   */
+  const lin = (c) => (c / 255 <= 0.03928 ? c / 255 / 12.92 : (((c / 255) + 0.055) / 1.055) ** 2.4);
+  const lum = ([r2, g2, b2]) => 0.2126 * lin(r2) + 0.7152 * lin(g2) + 0.0722 * lin(b2);
+  const kontrasti = (a, bb) => {
+    const l1 = lum(a); const l2 = lum(bb);
+    return (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+  };
+  const paperi = css.match(/--paper:\s*(#[0-9a-fA-F]{6})/)?.[1] ?? null;
+  assert.ok(kontrasti(osat(KOROSTUS_MUSTE), osat(paperi)) >= 4.5,
+    'kontrasti seepiapaperiin alle 4,5');
+  // Värillinen maa: kohdemaan vaalein maastosävy (fokuskartan kerma).
+  assert.ok(kontrasti(osat(KOROSTUS_MUSTE), [230, 219, 172]) >= 4.5,
+    'kontrasti värilliseen maahan alle 4,5');
+  // `--mark` jää kartan muille merkinnöille eikä ole sama väri.
+  const mark = css.match(/--mark:\s*(#[0-9a-fA-F]{6})/)?.[1] ?? null;
+  assert.notEqual(KOROSTUS_MUSTE.toLowerCase(), mark?.toLowerCase(),
+    'kehä ja kartan merkinnät ovat sama väri');
   // Tasokartan kehä lukee saman muuttujan eikä kovakoodattua arvoa.
-  assert.match(css, /\.maatummennus-viiva \{[^}]*stroke: var\(--raja-punainen\)/);
+  assert.match(css, /\.maatummennus-viiva \{[^}]*stroke: var\(--raja-muste\)/);
 });
 
-test('pallon korostus lukee sävyn --raja-punainen-muuttujasta ajossa', () => {
+test('pallon korostus lukee sävyn --raja-muste-muuttujasta ajossa', () => {
   // Ilman dokumenttia (testit, niputus ennen CSS:ää) vara on vakio.
   assert.equal(korostuksenMuste(null), KOROSTUS_MUSTE);
   // Dokumentin kanssa arvo tulee muuttujasta: tässä tynkä, joka
