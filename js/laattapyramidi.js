@@ -90,7 +90,7 @@
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
 import { NOSTOLADONTA_SAANTO } from './nostoladonta.js';
-import { lataaMaapolygonit, maanAluevesiPolku } from './maanaariviivat.js';
+import { lataaMaapolygonit, maanAluevesiPolku, puraMaanRenkaat } from './maanaariviivat.js';
 
 /*
  * === NOUTAMINEN JA KIINNITTÄMINEN OVAT ERI ASIOITA =================
@@ -1612,6 +1612,140 @@ export function pyramidinVaritasonMaa() {
 function varitasonKirjaus() {
   if (!variMaaNyt) return null;
   return luettelo?.varitasot?.[variMaaNyt] ?? null;
+}
+
+/*
+ * ====== TASOITUS LAATASTON ULKOPUOLELLA (kaistat, 13.9.2026) ========
+ *
+ * VIKA, JONKA TÄMÄ POISTAA (mitattu 2560 × 1352, Pariisi, v1856).
+ * Tasoituslaatasto ajetaan vain kohdemaan LAATIKON alalle
+ * (`--laatikko-nakyma`), ja laatikko on mitoitettu kuvasuhteille
+ * 390 × 844 … 1920 × 1080. Leveämmällä ruudulla kamera näkee laatikon
+ * ohi, ja kartalla on kaksi lajia TERÄVIÄ SUORIA REUNOJA:
+ *
+ *   1. LAATTARUUDUKON REUNA. Laatasto kattaa kokonaisia laattoja, ja
+ *      z4:llä laatta on 569 lautayksikköä eli 17° pituuspiiriä. Ranskan
+ *      laatikon (lon −10,25…14,67) ympärille jää siis TÄYDEN kerman
+ *      marginaali lon −21,40…29,80 asti, ja siitä ulos kerma loppuu
+ *      kesken: mitattu porras 41 luminanssiyksikköä.
+ *   2. FEIDAUKSEN HÄIVE. Häive (tools/fokuskartta/maailmapiirto.js
+ *      polttaVariLeikkuri) pyyhkii kerman NOLLAAN laatikon reunalla ja
+ *      nostaa sen täyteen vasta sisempänä — mutta laatikon
+ *      ULKOPUOLELLA, samassa laatassa, kerma on taas täysi. Mitattu
+ *      laatasta z4/9/4: alfa 217 (board 5422) → 20 (5440) → 217 (5529).
+ *      Toinen porras, 36–45 yksikköä, ja sekin suora viiva.
+ *
+ * KORJAUS ON ASIAKKAASSA EIKÄ UUDESSA LAATTA-AJOSSA: peli maalaa saman
+ * kerman samalla peitolla kaikkialle SUOJATUN SUORAKAITEEN ulkopuolelle
+ * — myös laatoille, joita ei ole olemassa — ja piirtää laataston kuvan
+ * vain suorakaiteen sisään. Silloin jokainen pikseli saa peiton
+ * täsmälleen kerran ja sauma on kahden saman värin välissä.
+ *
+ * SUOJATTU SUORAKAIDE ON KOHDEMAAN OMIEN RENKAIDEN LAATIKKO, ei
+ * laataston laatikko. Se on pienin suorakaide, joka varmasti sisältää
+ * kaiken sen, mitä laatan leikkuri jätti alkuperäiseksi — ja koska
+ * häive on maan ULKOPUOLELLA, se jää maalauksen alle ja katoaa.
+ *
+ * RENKAAT, EI `maanLautalaatikko`. Se palauttaa yhden renkaan (pelaajan
+ * tai pistein suurimman), eli Ranskalla mantereen ILMAN KORSIKAA —
+ * ja Korsika on erän 1c erokartassa nimenomaan säilynyt alkuperäisenä.
+ * Suoja kootaan siis kaikista renkaista, joiden laatikko osuu
+ * laatastoon: merentakaiset osat (Guyana, Réunion) jäävät pois, koska
+ * niille ei ole laattoja eikä niiden takia saa venyttää suojaa.
+ *
+ * ILMAN POLYGONEJA SUOJA ON KOKO LAATASTON LAATIKKO. Aineisto (1,4 Mt)
+ * on laiska ja jaettu punaisen kehän kanssa; ennen sen saapumista
+ * maalaus poistaa laattaruudukon reunan mutta jättää häiveen. Se ei voi
+ * koskaan osua kohdemaahan, ja pallo mitätöi laattansa kun suoja
+ * tarkentuu (js/pallolaatat.js `tasoitusAvain`).
+ */
+let variSuojaIso = null;
+let variSuoja = null;
+let variSuojaHaku = false;
+let variSuojaPolygonit = null;
+
+/**
+ * Kohdemaan renkaiden yhteinen laatikko laudan yksiköissä, rajattuna
+ * laataston laatikkoon — tai null, jos aineisto on vielä haussa.
+ */
+function variMaanSuoja(iso, L) {
+  if (!variSuojaPolygonit) {
+    if (!variSuojaHaku) {
+      variSuojaHaku = true;
+      lataaMaapolygonit().then((d) => {
+        variSuojaPolygonit = d ?? null;
+        // Suoja on laskettu ilman renkaita: se on laskettava uudestaan.
+        variSuojaIso = null;
+      }).catch(() => { /* aineistoa ei saatu: suoja jää laatikoksi */ });
+    }
+    return null;
+  }
+  const renkaat = puraMaanRenkaat(variSuojaPolygonit, iso);
+  if (!renkaat?.length) return null;
+  let x0 = Infinity;
+  let y0 = Infinity;
+  let x1 = -Infinity;
+  let y1 = -Infinity;
+  for (const rengas of renkaat) {
+    let rx0 = Infinity;
+    let ry0 = Infinity;
+    let rx1 = -Infinity;
+    let ry1 = -Infinity;
+    for (const [x, y] of rengas) {
+      if (x < rx0) rx0 = x;
+      if (x > rx1) rx1 = x;
+      if (y < ry0) ry0 = y;
+      if (y > ry1) ry1 = y;
+    }
+    // Laataston ulkopuolinen rengas ei voi olla laatassa alkuperäisenä.
+    if (rx1 < L.x || rx0 > L.x + L.w || ry1 < L.y || ry0 > L.y + L.h) continue;
+    if (rx0 < x0) x0 = rx0;
+    if (ry0 < y0) y0 = ry0;
+    if (rx1 > x1) x1 = rx1;
+    if (ry1 > y1) y1 = ry1;
+  }
+  if (!(x1 > x0) || !(y1 > y0)) return null;
+  const k0x = Math.max(x0, L.x);
+  const k0y = Math.max(y0, L.y);
+  const k1x = Math.min(x1, L.x + L.w);
+  const k1y = Math.min(y1, L.y + L.h);
+  if (!(k1x > k0x) || !(k1y > k0y)) return null;
+  return {
+    x: k0x, y: k0y, w: k1x - k0x, h: k1y - k0y, tarkka: true,
+  };
+}
+
+/**
+ * Tasoituksen asiakasmaalauksen parametrit, tai null jos väritaso ei ole
+ * tasoitusta (vanha luettelo, murrettu paletti) tai laatikko puuttuu.
+ *
+ * `avain` muuttuu, kun suoja tarkentuu renkaiden saavuttua — pallon
+ * lepokerros mitätöi laattansa siitä (js/pallolaatat.js).
+ *
+ * @returns {{kerma: string, peitto: number, suoja: object, avain: string}|null}
+ */
+export function pyramidinTasoitus() {
+  const vt = varitasonKirjaus();
+  if (!vt?.tasoitus || !(vt.laatikko?.w > 0) || !(vt.laatikko?.h > 0)) return null;
+  const peitto = Number.isFinite(vt.peitto) ? vt.peitto : 0;
+  if (!(peitto > 0)) return null;
+  if (variSuojaIso !== variMaaNyt) {
+    const L = vt.laatikko;
+    const tarkka = variMaanSuoja(variMaaNyt, L);
+    variSuoja = tarkka ?? {
+      x: L.x, y: L.y, w: L.w, h: L.h, tarkka: false,
+    };
+    if (tarkka) variSuojaIso = variMaaNyt;
+  }
+  if (!variSuoja) return null;
+  const s = variSuoja;
+  return {
+    kerma: vt.kerma || '#faf4d6',
+    peitto,
+    suoja: s,
+    avain: `${variMaaNyt}|${s.tarkka ? 'T' : 'L'}|${Math.round(s.x)}|${Math.round(s.y)}`
+      + `|${Math.round(s.w)}|${Math.round(s.h)}`,
+  };
 }
 
 /**

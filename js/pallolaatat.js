@@ -28,7 +28,7 @@
  */
 import {
   haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
-  pyramidinVaritasonMaa,
+  pyramidinTasoitus, pyramidinVaritasonMaa,
 } from './laattapyramidi.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 
@@ -852,6 +852,59 @@ export function laatanKartta(taso, sarake, rivi, {
 }
 
 /**
+ * Tasoituksen kerma-peite laatan kankaalle: suojatun suorakaiteen
+ * ULKOPUOLI maalataan käsin, sisäpuoli jätetään laatalle.
+ *
+ * MIKSI MAALAUS ON LAATAN ALLA EIKÄ PÄÄLLÄ. Kerma on peite, ei väri:
+ * tulos on `0,15 · pohja + 0,85 · kerma`. Jos maalaus tulisi laatan
+ * PÄÄLLE, laataston oma kerma jäisi alle ja peitto kertautuisi
+ * (1 − 0,15² = 0,977) juuri siinä marginaalissa, jossa laatassa on jo
+ * täysi kerma — eli uusi porras samaan paikkaan, josta vanha
+ * poistettiin. Siksi laatta piirretään VAIN suojan sisään ja maalaus
+ * vain sen ulkopuolelle: jokainen pikseli saa peiton täsmälleen kerran.
+ *
+ * REUNAT PYÖRISTETÄÄN KOKONAISIIN PIKSELEIHIN ja samat luvut annetaan
+ * sekä maalaukselle että laatan leikkaukselle. Murto-osapikseli jättäisi
+ * väliin raon, jossa pohjan seepia näkyisi peittämättä — yhden pikselin
+ * terävä viiva on sekin terävä viiva.
+ *
+ * @param {object} p.tasoitus  pyramidinTasoitus(): { kerma, peitto, suoja }
+ * @param {object} p.kuva      laataston kuva tai null (laattaa ei ole)
+ * @returns {boolean} maalattiinko kermaa
+ */
+export function maalaaTasoitus(ctx, {
+  tasoitus, kartta, ppu, arkki, kuva = null,
+}) {
+  if (!ctx || !tasoitus?.suoja || !arkki || !(ppu > 0)) return false;
+  if (!(kartta?.leveys > 0) || !(kartta.korkeus > 0)) return false;
+  const W = kartta.leveys;
+  const H = kartta.korkeus;
+  const s = tasoitus.suoja;
+  const raja = (a, b, c) => Math.max(a, Math.min(b, c));
+  const x0 = raja(0, W, Math.round((s.x - arkki.x) * ppu - kartta.kansX0));
+  const y0 = raja(0, H, Math.round((s.y - arkki.y) * ppu - kartta.kansY0));
+  const x1 = raja(x0, W, Math.round((s.x + s.w - arkki.x) * ppu - kartta.kansX0));
+  const y1 = raja(y0, H, Math.round((s.y + s.h - arkki.y) * ppu - kartta.kansY0));
+  const [r, g, b] = [1, 3, 5].map((i) => parseInt(tasoitus.kerma.slice(i, i + 2), 16));
+  ctx.fillStyle = `rgba(${r},${g},${b},${tasoitus.peitto})`;
+  if (!(x1 > x0) || !(y1 > y0)) { ctx.fillRect(0, 0, W, H); return true; }
+  if (y0 > 0) ctx.fillRect(0, 0, W, y0);
+  if (y1 < H) ctx.fillRect(0, y1, W, H - y1);
+  if (x0 > 0) ctx.fillRect(0, y0, x0, y1 - y0);
+  if (x1 < W) ctx.fillRect(x1, y0, W - x1, y1 - y0);
+  if (kuva) {
+    // Laatan kuva venytetään kankaalle (reunalaatta on vajaa), joten
+    // lähdesuorakaide on sama osuus kuvasta kuin kohde kankaasta.
+    const sx = (x0 / W) * kuva.width;
+    const sy = (y0 / H) * kuva.height;
+    const sw = ((x1 - x0) / W) * kuva.width;
+    const sh = ((y1 - y0) / H) * kuva.height;
+    if (sw > 0 && sh > 0) ctx.drawImage(kuva, sx, sy, sw, sh, x0, y0, x1 - x0, y1 - y0);
+  }
+  return true;
+}
+
+/**
  * Peittotesti: peittävätkö tason z + 1 (tai `kohdeZ`) valmiit laatat
  * laatan `{ z, sarake, rivi }` alueen kokonaan? Millerin pyramidissa
  * tasot eivät sisäkkäisty siististi 2 × 2:na (sarakkeita on
@@ -1001,6 +1054,14 @@ export function luoLaattakerros({
    * olemassa (LRU ja `pura`), sen laukaisu ei — se on tässä.
    */
   let variMaaEdellinen = null;
+  /*
+   * TASOITUKSEN SUOJA TARKENTUU KESKEN AJON. Maapolygonit ovat laiskat,
+   * ja ennen niitä suoja on koko laatikko (js/laattapyramidi.js
+   * pyramidinTasoitus). Kun tarkka suoja saapuu, jo kootut kankaat on
+   * maalattu väärällä rajalla — sama laji kuin maanvaihto, joten sama
+   * mitätöinti.
+   */
+  let tasoitusAvainEdellinen = '';
   let sukupolvi = 0;
   let viimePaivitys = -Infinity;
   /**
@@ -1274,7 +1335,25 @@ export function luoLaattakerros({
     const kangas = luoKangas(kartta.leveys, kartta.korkeus);
     const ctx = kangas?.getContext?.('2d');
     if (!ctx) { for (const k of kuvat) k?.close?.(); t.tila = 'virhe'; return; }
-    for (const kuva of kuvat) {
+    /*
+     * TASOITUS ULOTTUU LAATASTON ULKOPUOLELLE (kaistat, 13.9.2026).
+     * Laatasto on vain kohdemaan laatikon alalla; laajalla ruudulla
+     * kamera näkee sen ohi. Peli maalaa saman kerman samalla peitolla
+     * suojatun suorakaiteen ulkopuolelle — myös laatoille, joita ei ole
+     * olemassa — jolloin laatikon ja laattaruudukon reunat eivät ole
+     * kartalla nähtävissä. Perustelu: js/laattapyramidi.js
+     * pyramidinTasoitus.
+     */
+    const tasoitus = kerrokset.vari ? pyramidinTasoitus() : null;
+    for (let i = 0; i < kuvat.length; i += 1) {
+      const kuva = kuvat[i];
+      if (tasoitus && kerrostasot[i]?.vari) {
+        maalaaTasoitus(ctx, {
+          tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki, kuva,
+        });
+        kuva?.close?.();
+        continue;
+      }
       if (!kuva) continue;
       ctx.drawImage(kuva, 0, 0, kartta.leveys, kartta.korkeus);
       kuva.close?.();
@@ -1492,8 +1571,10 @@ export function luoLaattakerros({
      * haettava uudestaan. Sukupolvi kasvaa, jotta kesken oleva vienti
      * ei asenna purettua laattaa takaisin.
      */
-    if (variMaa !== variMaaEdellinen) {
+    const tasoitusAvain = kerrokset.vari ? (pyramidinTasoitus()?.avain ?? '') : '';
+    if (variMaa !== variMaaEdellinen || tasoitusAvain !== tasoitusAvainEdellinen) {
       variMaaEdellinen = variMaa;
+      tasoitusAvainEdellinen = tasoitusAvain;
       mittarit.variMaa = kerrokset.vari ? variMaa : null;
       mittarit.varimitatointeja += 1;
       sukupolvi += 1;

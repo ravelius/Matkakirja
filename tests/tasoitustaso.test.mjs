@@ -203,3 +203,95 @@ test('--laatikko-nakyma kattaa kameran näkymän puhelimella ja työpöydällä'
     `laatikko ${korkeusYks.toFixed(1)} yks on matalampi kuin puhelimen näkymä `
     + `${kapein.toFixed(1)} yks — juuri tästä syntyi omistajan näkemä vaalea vyö`);
 });
+
+/*
+ * ====== ASIAKKAAN KERMA-MAALAUS (kaistat, 13.9.2026) ================
+ *
+ * Rootin live-QA näki v1856:ssa laajalla ruudulla suoria teräviä
+ * kaistoja: laatasto loppuu laatikkoon (ja laattaruudukon reunaan), ja
+ * sen ulkopuolella kartta on tasoittamaton. `maalaaTasoitus` maalaa sen
+ * alan samalla kermalla ja peitolla ja piirtää laatan VAIN suojatun
+ * suorakaiteen sisään.
+ *
+ * KAKSI ASIAA VOI RIKKOUTUA HILJAA, JA MOLEMMAT NÄKYVÄT VAIN LAAJALLA
+ * RUUDULLA — eli ei yhdelläkään muulla vartijalla:
+ *
+ *   1. MAALAUS LAATAN PÄÄLLE. Jos maalaus tulisi laatan päälle eikä
+ *      sen sijaan, peitto kertautuisi (1 − 0,15² = 0,977) siinä
+ *      marginaalissa, jossa laatassa on jo täysi kerma: uusi porras
+ *      vanhan tilalle. Siksi laatta piirretään leikattuna.
+ *   2. MURTO-OSAPIKSELIN RAKO. Jos maalauksen ja laatan reunat
+ *      laskettaisiin eri luvuista, väliin jäisi pikselin rako, jossa
+ *      pohjan seepia näkyisi peittämättä — yhden pikselin terävä viiva
+ *      on sekin terävä viiva.
+ */
+test('maalaaTasoitus: puuttuva laatta saa täyden kerman koko alalleen', async () => {
+  const { maalaaTasoitus } = await import('../js/pallolaatat.js');
+  const teot = [];
+  const ctx = {
+    set fillStyle(v) { teot.push(['fillStyle', v]); },
+    fillRect: (...a) => teot.push(['fillRect', ...a]),
+    drawImage: (...a) => teot.push(['drawImage', ...a]),
+  };
+  const tasoitus = {
+    kerma: '#faf4d6', peitto: 0.85, suoja: { x: 9000, y: 9000, w: 10, h: 10 },
+  };
+  const maalattu = maalaaTasoitus(ctx, {
+    tasoitus,
+    kartta: { leveys: 512, korkeus: 512, kansX0: 0, kansY0: 0 },
+    ppu: 0.9,
+    arkki: { x: 0, y: 0 },
+    kuva: null,
+  });
+  assert.equal(maalattu, true);
+  assert.deepEqual(teot[0], ['fillStyle', 'rgba(250,244,214,0.85)'],
+    'kerma ja peitto luetaan luettelosta eivätkä ole vakioita maalauksessa');
+  assert.deepEqual(teot[1], ['fillRect', 0, 0, 512, 512],
+    'suojan ulkopuolinen laatta maalataan kokonaan');
+  assert.ok(!teot.some((t) => t[0] === 'drawImage'), 'ilman kuvaa ei piirretä mitään');
+});
+
+test('maalaaTasoitus: suojan sisus jää laatalle, eikä väliin jää rakoa', async () => {
+  const { maalaaTasoitus } = await import('../js/pallolaatat.js');
+  const teot = [];
+  const ctx = {
+    set fillStyle(v) { teot.push(['fillStyle', v]); },
+    fillRect: (...a) => teot.push(['fillRect', ...a]),
+    drawImage: (...a) => teot.push(['drawImage', ...a]),
+  };
+  /* Suoja 100…300 laudan yksikköinä, ppu 1 ja arkin origo 0 → 100…300 px. */
+  const tasoitus = {
+    kerma: '#faf4d6', peitto: 0.85, suoja: { x: 100, y: 100, w: 200, h: 200 },
+  };
+  maalaaTasoitus(ctx, {
+    tasoitus,
+    kartta: { leveys: 512, korkeus: 512, kansX0: 0, kansY0: 0 },
+    ppu: 1,
+    arkki: { x: 0, y: 0 },
+    kuva: { width: 512, height: 512 },
+  });
+  const taytot = teot.filter((t) => t[0] === 'fillRect').map((t) => t.slice(1));
+  assert.deepEqual(taytot, [
+    [0, 0, 512, 100],     // ylä
+    [0, 300, 512, 212],   // ala
+    [0, 100, 100, 200],   // vasen
+    [300, 100, 212, 200], // oikea
+  ], 'suojan ulkopuoli maalataan neljänä kaistaleena eikä suojan päälle');
+  const kuva = teot.find((t) => t[0] === 'drawImage');
+  assert.deepEqual(kuva.slice(1), [{ width: 512, height: 512 }, 100, 100, 200, 200, 100, 100, 200, 200],
+    'laatta piirretään VAIN suojan sisään, samoista kokonaisista pikseleistä kuin maalaus');
+});
+
+test('maalaaTasoitus: ilman tasoitusta tai kangasta ei maalata mitään', async () => {
+  const { maalaaTasoitus } = await import('../js/pallolaatat.js');
+  const ctx = { fillRect: () => assert.fail('ei saa maalata'), drawImage: () => assert.fail('ei saa piirtää') };
+  const kartta = { leveys: 512, korkeus: 512, kansX0: 0, kansY0: 0 };
+  assert.equal(maalaaTasoitus(null, { tasoitus: { suoja: {} }, kartta, ppu: 1, arkki: { x: 0, y: 0 } }), false);
+  assert.equal(maalaaTasoitus(ctx, { tasoitus: null, kartta, ppu: 1, arkki: { x: 0, y: 0 } }), false);
+  assert.equal(maalaaTasoitus(ctx, {
+    tasoitus: { kerma: '#faf4d6', peitto: 0.85, suoja: { x: 0, y: 0, w: 1, h: 1 } },
+    kartta: { leveys: 0, korkeus: 0, kansX0: 0, kansY0: 0 },
+    ppu: 1,
+    arkki: { x: 0, y: 0 },
+  }), false);
+});
