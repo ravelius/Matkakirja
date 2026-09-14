@@ -2879,9 +2879,26 @@ export async function avaaPallolauta(ui) {
     paivitaPisteet();
   });
   valovahti.observe(document.body, { attributes: true, attributeFilter: ['class'] });
-  // Linssin avaus/sulku (body.aikajana-paalla) piilottaa ja palauttaa kaupunkipisteet.
+  /*
+   * Linssin avaus/sulku (body.aikajana-paalla) piilottaa ja palauttaa
+   * kaupunkipisteet — JA KAIKEN MUUN, MIHIN CSS EI YLLÄ. Maapaneeli ja
+   * kohdemaan korostuskehä luetaan `paivita`-ohjauksesta, joka ajetaan
+   * vain pelin tilan muuttuessa; linssin kytkin ei muuta pelin tilaa,
+   * joten ilman tätä kutsua infolaatikko ja kehä jäivät linssin päälle
+   * siihen asti, kunnes joku muu syy ajoi ladonnan (omistaja 14.9.2026).
+   */
   const linssivahti = new MutationObserver(() => {
-    if (linssiPaalla() !== asetettuLinssi) tahdistaPisteidenKoko();
+    if (linssiPaalla() === asetettuLinssi) return;
+    tahdistaPisteidenKoko();
+    /*
+     * AVAIN NOLLATAAN ENSIN. `paivita` ohittaa korostuskehän ja muun
+     * merkkityön, jos pelin tila-avain on entinen (merkkiAvain) — ja
+     * linssin kytkin ei muuta yhtään avaimen osaa. Ilman nollausta
+     * kutsu palaisi heti eikä kehä sammuisi (mitattu savukkeella
+     * tools/savukkeet/savuke-linssivika.mjs: korostus jäi FRA:ksi).
+     */
+    merkkiAvain = null;
+    paivita();
   });
   linssivahti.observe(document.body, { attributes: true, attributeFilter: ['class'] });
   // Selitevalikon kappalemäärät pallolta (js/karttavalot.js karttavalotLaskurit).
@@ -2991,10 +3008,26 @@ export async function avaaPallolauta(ui) {
      * (js/maanaariviivat.js).
      */
     const korostusIso = lento ? null : kohteidenNykyinenIso(ui);
+    /*
+     * KEHÄ POIS LINSSIN AJAKSI, VÄRILAATASTO EI (omistaja 14.9.2026,
+     * iPad, Ihmisen matka, sanatarkasti: *"Linssissa nakyy kartan
+     * korostus seka infolaatikko"*). Kohdemaan korostuskehä on
+     * kolmiulotteinen viiva (js/pallovektorit.js), eikä css yllä
+     * siihen — se on siis sammutettava tästä, samalla portilla kuin
+     * kaupunkipisteet (tahdistaPisteidenKoko).
+     *
+     * `korostusIso` ITSESSÄÄN EI SAA NOLLAUTUA: sama luku ohjaa
+     * väritason maata (asetaVaritasonMaa alla) ja uloszoomauksen
+     * rajaa, ja maan vaihtuminen nulliksi MITÄTÖISI KAIKKI
+     * värilaatat (js/pallolaatat.js: variMaa !== variMaaEdellinen →
+     * jono tyhjäksi, laatat puretaan) — eli juuri sen topografian
+     * putoamisen, jonka omistaja näki. Nollaus koskee siksi vain
+     * kehää.
+     */
     paivitaPallonMaakorostus({
       vektorit,
       // Avauslento on kartan niukin hetki: ei korostusta lennon ajaksi.
-      iso: korostusIso,
+      iso: linssiPaalla() ? null : korostusIso,
       asteet: pallonAsteet,
       lataa: lataaMaapolygonit,
     });
