@@ -1360,6 +1360,23 @@ export async function avaaPallolauta(ui) {
     if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu) return null;
     return kamera.uloszoomausRaja(maanLaatikko, ULOSZOOMAUKSEN_KERROIN);
   };
+  /**
+   * NÄKYMÄN OSUUS ULOIMMASTA SALLITUSTA — merkkiportin mitta
+   * (js/pallolauta/nostot.js merkkiPortti, LAHIZOOMIN_OSUUS_ULOIMMASTA).
+   *
+   * Uloszoomaus on lukittu maan laatikkoon, ja portti kysyy täsmälleen
+   * sitä: paljonko nykyinen näkymä on siitä uloimmasta. Luku lasketaan
+   * TÄSSÄ eikä nostokerroksessa, koska raja on laudan oma (maanZoomiraja)
+   * — kerroksella ei ole eikä pidä olla omaa kopiota kameran rajoista.
+   * Ilman rajaa (aineisto lataamatta tai kehittäjätilan maailmanappi)
+   * luku on 0, jolloin portti pitää katon voimassa.
+   */
+  const uloimmanOsuus = () => {
+    const raja = maanZoomiraja();
+    const korkeus = pallo.pointOfView()?.altitude;
+    if (!(raja?.max > 0) || !(korkeus > 0)) return 0;
+    return korkeus / raja.max;
+  };
   /*
    * ══════════════════════════════════════════════════════════════════
    * PANOROINNIN RAJA (KARTTAUUDISTUS, ERÄ 9)
@@ -2661,6 +2678,8 @@ export async function avaaPallolauta(ui) {
     const nostoTulos = nostot.paivita({
       nakyva,
       keskipiste,
+      // Merkkiportin mitta (ks. uloimmanOsuus).
+      uloinOsuus: uloimmanOsuus(),
       // Avauslennolla ei yhtään nostoa: lento on kartan niukin hetki.
       katto: lento ? 0 : Math.min(NOSTOJEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia)),
     });
