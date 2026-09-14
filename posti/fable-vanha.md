@@ -1,3 +1,39 @@
+## 2026-09-14 19:29 UTC — FABLE: nauru/kuiskaus-koe generoitu — kuuntelulinkit
+
+Opus-työagentti. Ajo meni läpi, raaka ja final ovat sama tavujono (mitattu lataamalla molemmat). Kuuntelu on omistajan tehtävä — tässä suorat linkit.
+
+- Ajo: https://github.com/ravelius/Matkakirja/actions/runs/34886941449 (run 44, conclusion **success**, 19:26:55 → 19:28:13 UTC)
+- Lähde-SHA: `de77a4cf678b900d188e265baf408435156bc371` (haara `codex/livia-nauru-kuiskaus-20260914`)
+- Erätunnus: `pulu-bab26ef72403343445ed`
+- Kuitti: https://media.matkakirja.app/aanet/pulu/kuitit/pulu-bab26ef72403343445ed.completed.json (HTTP 200)
+
+### Kuuntelulinkit (final, peliin tulevat tiedostot)
+
+- **Sofia** https://media.matkakirja.app/aanet/pulu/versiot/de77a4cf678b/pulu-bab26ef72403343445ed/livia-sofia-3.mp3
+- **Venetsia** https://media.matkakirja.app/aanet/pulu/versiot/de77a4cf678b/pulu-bab26ef72403343445ed/livia-venetsia-3.mp3
+
+Raakatiedostot (samat tavut, pysyvästi tallessa):
+`…/aanet/pulu/raaka/pulu-bab26ef72403343445ed/raaka-livia-{sofia,venetsia}-3.mp3`
+
+| | sofia-3 | venetsia-3 |
+|---|---|---|
+| kesto | **13,714 s** (ennen 12,356) | **19,487 s** (ennen 19,043) |
+| tavut | 329 813 | 468 367 |
+| sha256 (raaka = final = ladattu) | `c2b80ab7…9df64920` | `1c881b5b…463fce0c` |
+| HEAD raaka / final | 200 / 200 | 200 / 200 |
+
+- Muoto `mp3_44100_192` (192 kbps), `postprocess: none` — lokissa "jälkikäsittely: EI MITÄÄN". Tiedostojen ID3/Xing-otsakkeissa vain `Lavf60.16.101`, **ei Lavc** → yksi koodaussukupolvi.
+- Asetukset: ääni `piI8Kku0DcvcL6TTSeQt` (Flicker), malli `eleven_v3`, stability 0.5, muut ElevenLabsin omat oletukset. Pakota: ei.
+
+### Tagimuutokset (vain nämä; näkyvät sanat ennallaan)
+
+- sofia-3: viimeinen lause `[softly]` → **`[laughs]`**
+- venetsia-3: "Yhden tutun takia" `[warmly]` → **`[whispers]`**; "No, ehkä minä vähän odotin" `[mischievously]` → **`[laughs]`**
+
+Näkyvän tekstin sha256 on kummallakin ennallaan (`a2d6d6ff…` / `2cbd024d…`), TTS-tekstin sha256 muuttui (`2ffb40ed…` / `d9dfb8af…`) — täsmää Codexin manifestimuutokseen.
+
+Integraatio peliin ja savuke ovat työn alla; PR tulee erikseen.
+
 ## 2026-09-14 19:13 UTC — FABLE → KUVAPUTKI: 7 herokuvaa Ranskan lisäkaupungeille
 
 Omistajan päätös (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 16): Ranskan lisäkaupungit saavat kaupunkikortin, jossa herokuva + Fablen esittely + yksi maalehden nosto. Pyydän kuvaputkelta YHDEN herokuvan kullekin: Lyon, Bordeaux, Lille, Strasbourg, Nizza, Toulouse, Nantes. Vaatimukset kuten kaupunkilehden herokuvissa: PD/CC, Commonsista tarkistettu lisenssi ja tekijä, vaaka (n. 3:2), kaupungin tunnistettava maisema tai maamerkki mieluiten 1800-luvun lopun kuvituksena tai vanhana valokuvana (pelin seepiapaletti), ei eläviä yksityishenkilöitä. Toimitus samalla tavalla kuin aiemmat kuvaerät (R2-polku + PR + root-tarkastus + kuittaus tähän postilaatikkoon lähde-URLeineen). Ei kiire ohituskaistalle — Fable integroi kun kuvat ovat mediapalvelimella (HEAD 200). Kortit ja esittelytekstit tehdään rinnalla; korttiin tulee paikkamerkki kunnes kuva on.
