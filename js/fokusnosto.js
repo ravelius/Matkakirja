@@ -966,8 +966,13 @@ function piirraNostonSisus(ui, sisalto, nosto, valmisKuva) {
   } else {
     sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko', nosto.otsikko));
   }
-  if (valmisKuva) sisalto.appendChild(valmisKuva);
-  else if (nosto.kuva && valmisKuva === undefined) piirraNostonKuva(ui, sisalto, nosto.kuva);
+  /*
+   * MEDIANAPIT OTSIKON ALLE, ENNEN KUVAA — sama paikka kuin lehden
+   * nostossa, jossa ne ovat otsikkorivillä (js/maalehti.js). Kortilla
+   * otsikko on oma rivinsä, joten napit saavat rivin heti sen alle.
+   */
+  piirraNostonMedia(ui, sisalto, nosto);
+  piirraNostonKuvat(ui, sisalto, nosto, valmisKuva);
   const teksti = html('div', looppi ? 'fokusnosto-teksti looppi-leipa' : 'fokusnosto-teksti');
   for (const kappale of jaaKappaleiksi(nosto.teksti)) {
     teksti.appendChild(html('p', '', kappale));
@@ -1254,6 +1259,240 @@ export function piirraNostonKuva(
  */
 function piirraNostonValokuva(ui, kohde, kuva) {
   piirraNostonKuva(ui, kohde, kuva, 'fokusnosto-kuva fokusnosto-valokuva', NOSTO_MINI_PX * 3);
+}
+
+/* ==================== KUVASARJA: NOSTON GALLERIA ==================== */
+
+/**
+ * KORTIN KUVAT YHTENÄ LISTANA — `kuva` ensin, `galleria` perään.
+ *
+ * `galleria` on sama kenttä ja sama muoto kuin lehden nostolla
+ * (js/ui.js kaariNostoGalleria): lista kuvatietueita
+ * `{ tiedosto | osoite, lyhyt, selite, lahde }`. Kortti lukee sen nyt
+ * suoraan, joten lehden nostosta kartalle siirtyvä galleria ei enää
+ * tarvitse kiertotietä kohdekartan jutun `kuvat`-listaan
+ * (karttauudistuksen erä 10, avoin kohta 11.1).
+ *
+ * Kuvaton alkio karsitaan tässä, jottei laskuri lupaa kuvaa, jota ei
+ * ole — sama sääntö kuin skandaalikortilla (js/skandaalit.js
+ * skandaalinKuvat).
+ *
+ * @param {object} nosto noston tietue
+ * @returns {object[]} kuvat piirtojärjestyksessä
+ */
+export function nostonKuvat(nosto) {
+  const galleria = Array.isArray(nosto?.galleria) ? nosto.galleria : [];
+  return [nosto?.kuva, ...galleria].filter((kuva) => kuva?.osoite || kuva?.tiedosto);
+}
+
+/**
+ * SELATTAVA KUVASARJA KORTILLE — YKSI TOTEUTUS, KAKSI KÄYTTÄJÄÄ.
+ *
+ * Tämä on skandaalikortin galleria (js/skandaalit.js, 2.9.2026)
+ * nostettuna kortin omaan tiedostoon ja parametroituna, kun
+ * `galleria`-kenttä sai ensiluokkaisen tuen myös täkynostolla
+ * (karttauudistuksen erä 10, avoin kohta 11.1). Kopiota ei tehty:
+ * skandaali kutsuu samaa funktiota omilla luokillaan ja omalla
+ * zoomiavaimellaan, joten sen ulkoasu ja käytös ovat entiset merkilleen.
+ *
+ * PUUTTUVA KUVA POISTUU SARJASTA. Havainnekuva syntyy kuvajonossa
+ * kohde kerrallaan, joten sarjassa voi olla osoite, jota ämpärissä ei
+ * vielä ole. Virheen sattuessa kuva pudotetaan listalta ja seuraava
+ * näytetään; jos yksikään ei lataudu, koko kehys piiloutuu eikä
+ * kortille jää tyhjää laatikkoa lupaamaan kuvaa, jota ei ole.
+ *
+ * @param {object} ui pelin ui
+ * @param {Element} sailio kortin sisus
+ * @param {object[]} kuvat sarjan kuvat (vähintään kaksi)
+ * @param {object} asetukset
+ * @param {string} asetukset.otsikko varateksti alt-riville
+ * @param {Element} [asetukset.valmisKehys] KUVA EDELLÄ -avauksen kehys
+ * @param {string} asetukset.kehysLuokka figuren luokat
+ * @param {string} asetukset.nuoliLuokka selailunuolen luokka
+ * @param {string} asetukset.laskuriLuokka laskurin luokka
+ * @param {number} asetukset.leveys kuvan pyydetty leveys pikseleinä
+ * @param {string} asetukset.zoomAvain suurennoksen ui-kenttä
+ */
+export function piirraNostonKuvasarja(ui, sailio, kuvat, {
+  otsikko = '', valmisKehys = undefined, kehysLuokka, nuoliLuokka,
+  laskuriLuokka, leveys, zoomAvain,
+}) {
+  const jaljella = [...kuvat];
+  /*
+   * VALMIS KUVAKEHYS ON SARJAN PÄÄKUVA (js/nostokuva.js).
+   *
+   * Vaiheessa 1 kortissa on pelkkä sarjan ENSIMMÄINEN kuva isona,
+   * lyhyt kuvateksti ja "Lisää" — ei nuolia. Vaiheessa 2 sarja
+   * rakennetaan SAMAN kehyksen ympärille: sama figure, sama nappi,
+   * sama img ja sama src, joten kuva ei liiku eikä lataudu uudestaan.
+   * Nuolet ja laskuri ilmaantuvat kuvan päälle, ja kuvatekstin sekä
+   * lähderivin paikan ottavat kehyksen omat rivit (.nostokuva-teksti,
+   * .nostokuva-lahde), joita selaus päivittää kuvan mukana.
+   */
+  const kehys = valmisKehys ?? html('figure', kehysLuokka);
+  const nappi = valmisKehys
+    ? valmisKehys.querySelector('.nostokuva-nappi')
+    : html('button', 'fokusnosto-kuvanappi');
+  const img = valmisKehys
+    ? valmisKehys.querySelector('.nostokuva-img')
+    : document.createElement('img');
+  if (valmisKehys) {
+    for (const luokka of kehysLuokka.split(' ')) {
+      if (luokka) kehys.classList.add(luokka);
+    }
+  } else {
+    nappi.type = 'button';
+    nappi.title = 'Katso kuva suurempana';
+    img.decoding = 'async';
+    img.draggable = false;
+    nappi.appendChild(img);
+    kehys.appendChild(nappi);
+  }
+
+  const selite = valmisKehys
+    ? valmisKehys.querySelector('.nostokuva-teksti')
+    : html('span', 'fokusnosto-kuvaselite');
+  const lahderivi = valmisKehys
+    ? valmisKehys.querySelector('.nostokuva-lahde')
+    : html('span', 'fokusnosto-kuvalahde');
+  if (!valmisKehys) {
+    const kuvateksti = html('figcaption', 'fokusnosto-kuvateksti');
+    kuvateksti.append(selite, lahderivi);
+    kehys.appendChild(kuvateksti);
+  }
+
+  const laskuri = html('span', laskuriLuokka);
+  let kohdalla = 0;
+
+  /**
+   * @param {boolean} [lataa] `false` jättää kuvan koskematta: valmis
+   *   kehys näyttää jo oikeaa kuvaa, eikä src:ää saa kirjoittaa
+   *   uudestaan (selain lataisi kuvan ja se välähtäisi).
+   */
+  const nayta = (lataa = true) => {
+    if (!jaljella.length) {
+      kehys.hidden = true;
+      return;
+    }
+    kohdalla = ((kohdalla % jaljella.length) + jaljella.length) % jaljella.length;
+    const kuva = jaljella[kohdalla];
+    // Kortilla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js;
+    // avaaKohdeSuurennos saa kuvatiedon sellaisenaan).
+    img.alt = kuvatekstiLyhyt(kuva) || otsikko || '';
+    nappi.setAttribute('aria-label', `${kuvatekstiLyhyt(kuva) || 'Kuva'} — avaa suurena`);
+    selite.textContent = kuvatekstiLyhyt(kuva);
+    /*
+     * LÄHDERIVI ON KUVAN OMA, ja se kulkee taytaLahderivin läpi, joten
+     * "Matkakirjan havainnekuva" saa painettavan selitteen joka kerta
+     * (js/havainnekuva.js) ja Commons-kuvan tekijä näkyy niin kuin
+     * lisenssi vaatii.
+     */
+    taytaLahderivi(lahderivi, kuva.lahde ?? '', kuva);
+    laskuri.textContent = jaljella.length > 1 ? `${kohdalla + 1} / ${jaljella.length}` : '';
+    laskuri.hidden = jaljella.length < 2;
+    // Suurennos näyttää sen kuvan, joka on kohdalla — myös silloin kun
+    // napin avaa js/nostokuva.js.
+    kehys.nostokuvaKuva = kuva;
+    if (!lataa) return;
+    asetaNostonKuva(img, kuva, leveys, () => {
+      const paikka = jaljella.indexOf(kuva);
+      if (paikka < 0) return;
+      jaljella.splice(paikka, 1);
+      if (kohdalla > paikka) kohdalla -= 1;
+      nayta();
+    });
+  };
+  nayta(!valmisKehys);
+
+  // Napautus suurentaa, kuten kortin muillakin kuvilla; suurennos saa
+  // sen kuvan, joka on kohdalla. Valmiilla kehyksellä kuuntelija on jo
+  // paikallaan (js/nostokuva.js) eikä sitä saa lisätä toista kertaa.
+  if (!valmisKehys) {
+    nappi.addEventListener('click', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      if (!jaljella.length) return;
+      avaaKohdeSuurennos(ui, jaljella[kohdalla], () => nappi, zoomAvain);
+    });
+  }
+
+  const nuoli = (luokka, merkki, nimi, suunta) => {
+    const nap = html('button', `${nuoliLuokka} ${luokka}`, merkki);
+    nap.type = 'button';
+    nap.setAttribute('aria-label', nimi);
+    nap.addEventListener('click', (tapahtuma) => {
+      tapahtuma.stopPropagation();
+      if (jaljella.length < 2) return;
+      kohdalla += suunta;
+      sfx.play('paper');
+      nayta();
+    });
+    nappi.appendChild(nap);
+  };
+  nuoli('edellinen', '‹', 'Edellinen kuva', -1);
+  nuoli('seuraava', '›', 'Seuraava kuva', 1);
+  nappi.appendChild(laskuri);
+
+  sailio.appendChild(kehys);
+}
+
+/**
+ * NOSTON KUVAT KORTILLE: yksi kuva entiseen tapaan, useampi selailunuolin.
+ *
+ * Yhden kuvan reitti on tarkoituksella muuttumaton — sama kutsu, sama
+ * leveys ja sama zoomiavain kuin ennen `galleria`-tukea, joten kuvaton
+ * ja yhden kuvan nosto piirtyvät merkilleen kuten aiemmin.
+ */
+function piirraNostonKuvat(ui, sisalto, nosto, valmisKuva) {
+  const kaikki = nostonKuvat(nosto);
+  /*
+   * PERUTTU KUVAESITTELY VIE VAIN PÄÄKUVAN (js/nostokuva.js peru):
+   * sarjan loput kuvat ovat silti olemassa, joten ne ladotaan
+   * tavalliseen tapaan eikä koko sarja katoa yhden puuttuvan tiedoston
+   * takia.
+   */
+  const kuvat = valmisKuva === null ? kaikki.slice(1) : kaikki;
+  if (!kuvat.length) return;
+  if (kuvat.length === 1) {
+    if (valmisKuva) sisalto.appendChild(valmisKuva);
+    else piirraNostonKuva(ui, sisalto, kuvat[0]);
+    return;
+  }
+  piirraNostonKuvasarja(ui, sisalto, kuvat, {
+    otsikko: nosto.otsikko,
+    valmisKehys: valmisKuva ?? undefined,
+    kehysLuokka: 'fokusnosto-kuva nostosarja-kuva',
+    nuoliLuokka: 'nostosarja-kuvanuoli',
+    laskuriLuokka: 'nostosarja-kuvalaskuri',
+    leveys: NOSTO_KUVA_PX,
+    zoomAvain: 'fokusnostoZoom',
+  });
+}
+
+/**
+ * MUSIIKKI JA ÄÄNINÄYTE KORTILLE — SAMA TOTEUTUS KUIN LEHDESSÄ.
+ *
+ * Lehden nostolla on neljä mediakenttää: `aani` (vapaa ääninäyte),
+ * `musiikki` (Apple Music -linkki), `musiikkiNayte` (vapaasti
+ * lisensoitu musiikkinäyte) ja `esikuuntelu` (Applen 30 sekunnin
+ * esikatselu). Kortti kutsuu niille SAMAA apuria kuin lehden sivu
+ * (js/ui.js lisaaNostonNapit) — kopio ajautuisi erilleen
+ * ensimmäisellä muutoksella, ja juuri siitä syntyi erän 10 kiertotie
+ * (musiikkikenttäinen nosto jäi lehteen kaksoiskappaleeksi, koska
+ * kortilla ei ollut sille paikkaa; avoin kohta 11.1).
+ *
+ * RIVI SYNTYY VAIN JOS JOKIN KENTISTÄ ON. Kuvaton, musiikiton nosto
+ * on entisellään merkilleen: tyhjää riviä ei lisätä.
+ *
+ * APURI VOI PUUTTUA. Kortin voi avata myös ilman koko pelin ui:ta
+ * (laattageneraattori, testit), ja silloin mediakentät jäävät pois
+ * kuten kaikki muukin ui:n varassa oleva.
+ */
+function piirraNostonMedia(ui, sisalto, nosto) {
+  if (!nosto.aani && !nosto.musiikki && !nosto.musiikkiNayte && !nosto.esikuuntelu) return;
+  if (typeof ui?.lisaaNostonNapit !== 'function') return;
+  const rivi = html('div', 'fokusnosto-media');
+  ui.lisaaNostonNapit(rivi, nosto);
+  if (rivi.childElementCount) sisalto.appendChild(rivi);
 }
 
 /**

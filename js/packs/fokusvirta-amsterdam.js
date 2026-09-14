@@ -1342,6 +1342,31 @@ export const FOKUSVIRTA_AMSTERDAM = {
           + 'kotiinsa.',
         lahde: 'Antony Stanley, Wikimedia Commons (CC BY-SA 2.0)',
       },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Mevrouw H. van Weelde en enkele medewerksters openen kooien op Poezenboot op S, Bestanddeelnr 933-5755.jpg',
+          lyhyt: 'Henriëtte van Weelde hoiti Kissalaivaa yhä 1986, kahdeksantoista vuotta sen avaamisesta.',
+          selite: 'Henriëtte van Weelde hoiti Kissalaivaa avustajineen yhä '
+            + 'helmikuussa 1986, kahdeksantoista vuotta laivan avaamisen '
+            + 'jälkeen.',
+          lahde: 'Roland Gerrits / Anefo, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Three bikes on the canal bridge in Amsterdam (3798069610).jpg',
+          selite: 'Amsterdamin kanavista nostetaan joka vuosi 12 000–15 000 '
+            + 'polkupyörää.',
+          lahde: 'joiseyshowaa, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+      ],
       kysymykset: [
         'Miksi Amsterdamin kanavissa on satoja asuntolaivoja?',
         'Kuka hoitaa Kissalaivan kissat nykyään?',
@@ -1432,6 +1457,25 @@ export const FOKUSVIRTA_AMSTERDAM = {
           + 'oli tummunut lähes mustaksi.',
         lahde: 'Rembrandt, Wikimedia Commons (PD)',
       },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Lundens - Nachtwache-Kopie.jpg',
+          lyhyt: 'Gerrit Lundensin pienoiskopio on ainoa todiste siitä, mitä Yövartiosta leikattiin pois 1715.',
+          selite: 'Gerrit Lundensin 1600-luvulla maalaama pienoiskopio on ainoa '
+            + 'säilynyt todiste siitä, mitä Yövartiosta leikattiin pois vuonna '
+            + '1715.',
+          lahde: 'Gerrit Lundens, Wikimedia Commons (PD)',
+        },
+      ],
       kysymykset: [
         'Mihin taulusta leikatut palaset joutuivat?',
         'Miksi taulu ylipäätään siirrettiin kaupungintaloon vuonna 1715?',

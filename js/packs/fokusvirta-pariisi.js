@@ -868,6 +868,16 @@ export const FOKUSVIRTA_PARIISI = {
           + 'säveltäjä uskoi epäonnistuneen.',
         lahde: 'Prudent-Louis Leray 1875, Wikimedia Commons (public domain)',
       },
+      /*
+       * CARMENIN LINKKI TAKAISIN (Fablen päätös 14.9.2026). Erän 5 jako
+       * pudotti tämänkin linkin pelistä, koska nostokortti ei tuntenut
+       * mediakenttiä. Osoite on merkki merkiltä sama kuin lehden
+       * nostossa "Carmen kaatui ensi-illassaan" ennen erää 5
+       * (git show 721efc3 -- js/packs/kulttuuri-kategoriat.js). Yksi
+       * linkki riittää, joten kenttä on entisessä merkkijonomuodossaan.
+       */
+      musiikki: 'https://music.apple.com/fi/search?term=bizet%20carmen',
+      musiikkiNimi: 'Bizet\u2019n Carmen Apple Musicissa',
       kysymykset: [
         'Miksi Opéra-Comiquen johto piti Carmenia sopimattomana?',
         'Miten ooppera nousi epäonnistumisesta maailmanmaineeseen?',
@@ -1227,6 +1237,32 @@ export const FOKUSVIRTA_PARIISI = {
           + 'tarkoittaa pariisilaisessa puhekielessä varpusta.',
         lahde: 'Eric Koch / Anefo, Wikimedia Commons (CC0)',
       },
+      /*
+       * KAKSI APPLE MUSIC -LINKKIÄ, YKSI NOSTO (Fablen päätös 14.9.2026).
+       *
+       * Erä 5 yhdisti Pariisin Musiikki-sivun kaksi nostoa tähän yhteen
+       * korttiin, ja koska nostolla oli vain yksi `musiikki`-kenttä,
+       * kumpikin linkki putosi pelistä hiljaa. Kenttä ottaa nyt vastaan
+       * myös listan (js/ui.js nostonMusiikkilinkit), joten molemmat
+       * palaavat SELLAISENAAN — osoitteet ovat merkki merkiltä samat
+       * kuin ennen erää 5 (git show 721efc3 --
+       * js/packs/kulttuuri-kategoriat.js).
+       *
+       * Nimi on jokaisella linkillä näkyvissä: kortilla on kaksi eri
+       * muusikkoa, ja ilman nimeä listasta ei erottaisi kumpi on kumpi.
+       */
+      musiikki: [
+        {
+          nimi: 'Édith Piaf',
+          url: 'https://music.apple.com/fi/search?term=edith%20piaf%20la%20vie%20en%20rose',
+          otsake: 'Édith Piaf Apple Musicissa',
+        },
+        {
+          nimi: 'Django Reinhardt',
+          url: 'https://music.apple.com/fi/search?term=django%20reinhardt%20minor%20swing',
+          otsake: 'Django Reinhardt Apple Musicissa',
+        },
+      ],
       kysymykset: [
         'Mistä lempinimi la Môme Piaf tuli?',
         'Miten Django Reinhardt opetteli soittamaan uudelleen?',

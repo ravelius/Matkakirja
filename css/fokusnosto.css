@@ -849,8 +849,28 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
    vaakakuvia, eikä sen asemointiin ole syytä koskea.
    =========================================================================== */
 
+/* ===========================================================================
+   MEDIARIVI KORTILLA (karttauudistuksen erä 10, avoin kohta 11.1)
+
+   Noston `aani`-, `musiikki`-, `musiikkiNayte`- ja `esikuuntelu`-kentät
+   piirtyvät kortille SAMOILLA napeilla kuin lehden sivulla
+   (js/ui.js lisaaNostonNapit), joten niiden oma ulkoasu tulee
+   css/styles.css:n .kulttuuri-kuuntele- ja .kulttuuri-musiikkilinkki-
+   säännöistä. Tässä määritellään vain rivi, jolla ne istuvat: kortin
+   palsta on kapea, joten napit saavat kiertyä uudelle riville.
+   =========================================================================== */
+
+.fokusnosto-media {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  margin: 0 0 0.5rem;
+}
+
 .hetki-kuva .fokusnosto-kuvanappi,
-.skandaali-kuva .fokusnosto-kuvanappi { position: relative; }
+.skandaali-kuva .fokusnosto-kuvanappi,
+.nostosarja-kuva .fokusnosto-kuvanappi { position: relative; }
 
 .hetki-kuva .fokusnosto-kuvanappi {
   width: fit-content;
@@ -859,7 +879,8 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
 }
 
 .hetki-kuvanuoli,
-.skandaali-kuvanuoli {
+.skandaali-kuvanuoli,
+.nostosarja-kuvanuoli {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -883,16 +904,21 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
 }
 
 .hetki-kuvanuoli.edellinen,
-.skandaali-kuvanuoli.edellinen { left: 0; text-align: left; padding-left: 0.4rem; }
+.skandaali-kuvanuoli.edellinen,
+.nostosarja-kuvanuoli.edellinen { left: 0; text-align: left; padding-left: 0.4rem; }
 .hetki-kuvanuoli.seuraava,
-.skandaali-kuvanuoli.seuraava { right: 0; text-align: right; padding-right: 0.4rem; }
+.skandaali-kuvanuoli.seuraava,
+.nostosarja-kuvanuoli.seuraava { right: 0; text-align: right; padding-right: 0.4rem; }
 .hetki-kuvanuoli:hover,
 .hetki-kuvanuoli:focus-visible,
 .skandaali-kuvanuoli:hover,
-.skandaali-kuvanuoli:focus-visible { opacity: 1; }
+.skandaali-kuvanuoli:focus-visible,
+.nostosarja-kuvanuoli:hover,
+.nostosarja-kuvanuoli:focus-visible { opacity: 1; }
 
 .hetki-kuvalaskuri,
-.skandaali-kuvalaskuri {
+.skandaali-kuvalaskuri,
+.nostosarja-kuvalaskuri {
   position: absolute;
   right: 0.45rem;
   bottom: 0.4rem;

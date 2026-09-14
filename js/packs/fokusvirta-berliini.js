@@ -905,6 +905,52 @@ export const FOKUSVIRTA_BERLIINI = {
           + 'vielä kuninkaanlinna, joka purettiin 1950.',
         lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
       },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Eduard Gaertner Berlin Klosterstrasse 1830.jpg',
+          selite: 'Gaertner maalasi Klosterstraßen vuonna 1830 niin tarkasti, että '
+            + 'talojen kylttien tekstit voi lukea.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Eduard Gaertner - Die Parochialstraße - Google Art Project.jpg',
+          lyhyt: 'Vuonna 1831 Gaertner maalasi Parochialstraßen katutyömaan ja kupariastiat arkea, ei paraatia.',
+          selite: 'Vuoden 1831 Parochialstraßeen Gaertner maalasi myös katutyömaan '
+            + 'ja kauppiaan kylttinä roikkuvat kupariastiat — arkea, jota '
+            + 'paraatikuvista ei löydy.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Eduard Gaertner - Rear view of the Houses at Schloßfreiheit - Google Art Project.jpg',
+          lyhyt: 'Gaertner maalasi 1855 myös kuninkaanlinnan naapuritalojen takapihat, ei vain juhlajulkisivuja.',
+          selite: 'Gaertner maalasi vuonna 1855 myös kuninkaanlinnan '
+            + 'naapuritalojen takapihat, ei vain juhlajulkisivuja.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Eduard Gaertner (1801-1877) - The Friedrichsgracht, Berlin - NG6524 - National Gallery.jpg',
+          lyhyt: 'Friedrichsgrachtin lastaavat proomut muistuttavat, että Berliini oli 1800-luvulla satamakaupunki.',
+          selite: 'Friedrichsgracht kattojen yli nähtynä, ja kanavassa lastaavat '
+            + 'proomut muistuttavat, että Berliini oli 1800-luvulla '
+            + 'satamakaupunki.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+        {
+          tiedosto: 'Eduard Gaertner - Ansicht der Königlichen Oper und Unter den Linden, Berlin (1845).jpg',
+          selite: 'Vuonna 1845 maalattu kuninkaallinen ooppera seisoo Unter den '
+            + 'Lindenillä yhä.',
+          lahde: 'Eduard Gaertner, Wikimedia Commons (Public domain)',
+        },
+      ],
       kysymykset: [
         'Mitä maalaus voi kertoa kaupungista, mitä valokuva ei kerro?',
         'Miksi Gaertner maalasi myös katutyömaat ja ikkunoissa kuivuvat '
@@ -945,6 +991,16 @@ export const FOKUSVIRTA_BERLIINI = {
           + '1930, yöpöydällä tyttären valokuva; Erich Salomonin kuuluisa otos.',
         lahde: 'Erich Salomon, Wikimedia Commons (Public domain)',
       },
+      /*
+       * MUSIIKKI JA ÄÄNI KORTILLE (avoin kohta 11.1, 14.9.2026). Erässä 10
+       * tämä nosto jäi lehden sivulle kaksoiskappaleeksi vain siksi, että
+       * musiikkilinkille ja ääninäytteelle ei ollut paikkaa kortilla.
+       * Kortti piirtää ne nyt SAMOILLA napeilla kuin lehti (js/ui.js
+       * lisaaNostonNapit), joten sivulta jäänyt kaksoiskappale purkautui.
+       */
+      musiikki: 'https://music.apple.com/fi/album/lili-marleen/724182416?i=724182571',
+      musiikkiNimi: 'Marlene Dietrichin lauluja Apple Musicissa',
+      esikuuntelu: 'Marlene Dietrich Lili Marleen',
       kysymykset: [
         'Miksi natsihallinto halusi juuri hänet mainoskasvokseen?',
         'Miksi Lili Marleenia kuunneltiin molemmin puolin rintamaa?',
@@ -982,6 +1038,25 @@ export const FOKUSVIRTA_BERLIINI = {
           + 'keksittiin muurin länsipuolella nimi paavin kosto.',
         lahde: 'Tobi85, Wikimedia Commons (Public domain)',
       },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Bundesarchiv Bild 183-G0521-0005-001, Berlin, Fernsehturm, Bau.jpg',
+          lyhyt: 'Televisiotornia rakennettiin 1965–1969, ja pallo koottiin maassa 120 teräslohkosta ennen nostoa.',
+          selite: 'Televisiotornia rakennettiin vuosina 1965–1969, ja pallo '
+            + 'koottiin maassa 120 teräslohkosta ennen nostoa.',
+          lahde: 'Hans-Joachim Spremberg, Bundesarchiv / Wikimedia Commons (CC '
+            + 'BY-SA 3.0 DE)',
+        },
+      ],
       kysymykset: [
         'Miksi Itä-Saksa halusi rakentaa juuri tornin?',
         'Miksi kukaan ei osannut ennakoida ristin heijastusta?',
@@ -1033,6 +1108,22 @@ export const FOKUSVIRTA_BERLIINI = {
         lahde: 'Christian Wolf (www.c-w-design.de), Wikimedia Commons (CC BY-SA '
           + '3.0 DE)',
       },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Weltzeituhr Detail Alexanderplatz.jpg',
+          selite: 'Rumpuun on jyrsitty 146 paikannimeä Reykjavíkista Kinshasaan.',
+          lahde: 'Gryffindor, Wikimedia Commons (Public domain)',
+        },
+      ],
       kysymykset: [
         'Miksi maailman ajat haluttiin näkyviin juuri torille?',
         'Miksi kellon koneistoon kelpasi auton vaihteisto?',

@@ -856,16 +856,22 @@ test('kielinäytteet ovat oikeista kaupungeista ja muodoltaan kelvollisia', asyn
 test('musiikkinäytteet ovat suoria mp3-osoitteita ja kertovat lisenssin', async () => {
   const { EUROPE_KULTTUURI } = await import('../js/packs/europe-kulttuuri.js');
   const { KULTTUURI_KATEGORIAT } = await import('../js/packs/kulttuuri-kategoriat.js');
-  // Näyte voi olla kahdessa paikassa. Kun kaupunki saa oman lehden, sen
+  const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
+  // Näyte voi olla KOLMESSA paikassa. Kun kaupunki saa oman lehden, sen
   // litteät nostot siirtyvät europe-kulttuuri.js:stä kategorioihin ja
-  // näyte siirtyy mukana. Pelaajalle se on sama nappi samassa jutussa,
-  // joten testin on laskettava molemmat — muuten lukumäärän vahti
-  // laukeaa siirrosta eikä siitä, että näytteitä oikeasti katosi.
+  // näyte siirtyy mukana; karttauudistus siirsi lehden sivuja edelleen
+  // kohdekartan nostoiksi, ja 14.9.2026 myös mediakentät seurasivat
+  // nostokortille (js/fokusnosto.js piirraNostonMedia). Pelaajalle se on
+  // koko ajan sama nappi samassa jutussa, joten testin on laskettava
+  // kaikki kolme — muuten lukumäärän vahti laukeaa siirrosta eikä siitä,
+  // että näytteitä oikeasti katosi.
   const kaikki = [
     ...Object.entries(EUROPE_KULTTUURI)
       .flatMap(([city, tiedot]) => (tiedot.nostot ?? []).map((n) => [city, n])),
     ...Object.entries(KULTTUURI_KATEGORIAT)
       .flatMap(([city, sivut]) => sivut.flatMap((s) => (s.nostot ?? []).map((n) => [city, n]))),
+    ...Object.entries(FOKUSVIRRAT)
+      .flatMap(([city, virta]) => (virta?.takynostot ?? []).map((n) => [city, n])),
   ];
   let maara = 0;
   {
