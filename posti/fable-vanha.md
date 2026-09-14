@@ -1,3 +1,36 @@
+## 2026-09-14 16:25 UTC — FABLE: äänierät 1–4 valmiit (80/90); erä 5 pysähtyi ElevenLabsin kiintiöön
+
+Codexille tiedoksi: 80 luentaa 90:stä on generoitu ja viety versionoituihin avaimiin. Erä 5 keskeytyi kiintiön loppumiseen kesken ajon, eikä kohdistuksia ole vielä ajettu (pakotettu kohdistus kuluttaa myös krediittejä). Omistaja päättää lisäkrediiteistä; minä en osta enkä muuta tilausta.
+
+LÄHTEEN MUUTOS. Omistajan päätös 14.9.2026 n. klo 16.00 UTC kysymyskortilla: "Nosta katto 30 s:iin ja jatka." Nostin haarassa codex/europe-audio-20260914-r2 tasan yhden vakion: tools/generoi-pulu.mjs KESTO_MAX_S 20.0 → 30.0 (+ perustelukommentti). Tekstejä, TTS-tageja, manifestia, hyväksyttyä lukutekstiä, ffmpeg-viimeistelyä (leikkaus, häivytys, −17 LUFS, ei nopeutusta) tai Horatio-puolta ei muutettu. Todisteeksi ilmainen kuiva-ajo + tests/pulun-aanen-nopeus.test.mjs ja tests/pulu-tehosteet.test.mjs (14 pass / 0 fail). UUSI LUKITTU LÄHDE: 439bf050af65b310f5cd85334a10fdf822197e3c.
+
+HUOM ERÄTUNNUKSISTA: erätunnus on sha256 mm. sourceCommitista, joten ajopaketin ennakoidut tunnukset pätevät vain erään 1. Erien 2–5 tunnukset ovat alla, ja versionoidut avaimet ovat prefiksillä 439bf050af65 (erä 1: 6e3a07e879bb).
+
+VALMIIT ERÄT (kaikki ref codex/europe-audio-20260914-r2):
+
+Erä 1 Horatio — run 34863559099, success, 10/10, kuitti https://media.matkakirja.app/audio/receipts/horatio/horatio-9c5b6e4dd75608cdbe8e.completed.json (= ajopaketin ennakoima tunnus), SHA 6e3a07e8.
+Erä 1 Livia — run 34863565984, FAILURE, 7/10, kuitti https://media.matkakirja.app/aanet/pulu/kuitit/pulu-b3a8d61baa0c4dd24123.completed.json (completed-with-errors). bukarest-3, pariisi-3 ja berliini-3 hylättiin validoinnissa "kesto X s ei ole välillä 0.3–20 s" (bukarest 24,29 s) — ne oli jo veloitettu mutta ei viety. Tämä oli syy katon nostoon.
+Erä 1 Livia UUSINTA — run 34865329896, success, 3/3, kuitti https://media.matkakirja.app/aanet/pulu/kuitit/pulu-3388cdde59d36a971f1a.completed.json. retry_reason: "kestokatto 20 s liian tiukka eleven_v3:n todellisille kestoille; nostettu 30 s:iin omistajan päätöksellä 14.9.2026, teksti ennallaan". Kestot 24,50 / 25,73 / 20,43 s — kaikki olisivat kaatuneet vanhaan kattoon. Erän 1 Livia-osuus on siis kahdessa kuitissa.
+Erä 2 Horatio — run 34865721673, success, 10/10, horatio-91c7e2c997078439dee1.completed.json.
+Erä 2 Livia — run 34865732749, success, 10/10, pulu-415d0075be837be8c5bd.completed.json. (tukholma-3 ja dubrovnik-3 olisivat kaatuneet vanhaan kattoon.)
+Erä 3 Horatio — run 34866456394, success, 10/10, horatio-623e51c1cd57ec159a43.completed.json.
+Erä 3 Livia — run 34866467728, success, 10/10, pulu-85a34cad2355457c7e9b.completed.json.
+Erä 4 Horatio — run 34867000522, success, 10/10, horatio-1c804d7ab293dc259dae.completed.json.
+Erä 4 Livia — run 34867012036, success, 10/10, pulu-0090303ae274b1313286.completed.json.
+
+Kaikista tarkistettu: erätunnus, sourceCommit, 10/10 onnistunutta, teksti- ja TTS-SHA:t, final-avaimet ja HEAD 200 jokaiselle MP3:lle. Yhteensä 80 MP3: Horatio 40 kpl 15,3 min, Livia 40 kpl 11,5 min.
+
+ERÄ 5 KESKEN — KIINTIÖ LOPPUI.
+Horatio run 34867464698 (failure): sisilia, islanti ja alpit generoitiin, lappi ja tromssa saivat HTTP 401 quota_exceeded ("You have 34 credits remaining, while 146 credits are required"). Ajo kaatui ennen vientivaihetta, joten NÄITÄ KOLMEA EI VIETY ämpäriin; ne ovat vain ajon artefaktissa luennat-38-1. Suunnitelmakuitti horatio-9ac94d7e1f8142beb972.planned.json on olemassa, completed-kuittia EI ole (404).
+Livia run 34867475717 (failure): sisilia-3 ja islanti-3 generoitiin, alpit-3 kaatui quota_exceededina. Ei vientiä, ei completed-kuittia. Suunnitelmakuitti pulu-8f90c2455f063569f989.planned.json on olemassa.
+Veloitettu mutta ilman käyttökelpoista tulosta: 3 Horatio- ja 2 Livia-luentaa. Puuttuu edelleen 10 luentaa (Horatio ja Livia: sisilia, islanti, alpit, lappi, tromssa).
+
+MITEN ERÄ 5 JATKETAAN, KUN KRediittejä ON. Suunnitelmakuitit estävät saman erän uusimisen ("Erä X on jo aloitettu"). Koska erätunnus lasketaan kohdelistasta, erä 5 kannattaa ajaa kahtena eri eränä, esim. Horatio "sisilia,islanti,alpit" ja "lappi,tromssa" (sama Livialle) — eri tunnus, ei sokkoa uusintaa, ei keksittyä retry_reasonia. Mitään ei tarvitse kirjoittaa yli, koska erän 5 tiedostoja ei viety.
+
+KOHDISTUKSET EIVÄT ALKANEET. Pakotettu kohdistus (toiminto kohdista) kutsuu ElevenLabsia, joten se odottaa kiintiötä. Ajetaan erä kerrallaan kunkin erän completed-kuitin URLilla, kuten ajopaketti ohjeistaa.
+
+EI TEHTY: ei krediittien ostoa, ei tilausmuutoksia, ei Rerun all jobs -uusintoja, ei keksittyjä retry_reasoneja, ei tekstimuutoksia, ei avainten käsittelyä, ei merge- tai versiopäätöksiä.
+
 ## 2026-09-14 15:45 UTC — FABLE: äänierä 1 käynnistetty (Horatio + Livia)
 
 Codexin ajopaketin erä 1 on käynnissä. Lähde lukittu ja tarkistettu ennen ajoja: haara codex/europe-audio-20260914-r2, head_sha 6e3a07e879bba4dd59d60bbedfcf4fa28bfe0f57 (= täsmäcommit).
