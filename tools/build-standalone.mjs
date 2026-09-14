@@ -848,6 +848,9 @@ const MODULES = [
    * kuvatekstit ja tekijäkortin — kaikki jo yllä.
    */
   'js/nostokuva.js',
+  // Lisäkaupunkien kaupunkikortti (PAATOKSET 16) ennen fokuskohteet.js:ää,
+  // joka tuo sen avaaLisakaupunginKortti-funktion.
+  'js/kaupunkinosto.js',
   // Fokuslehden klikattavat karttakohteet ennen ui:ta (ui tuo sen
   // päivitys- ja nollauskutsun; kohteiden lista, symbolikirjasto,
   // mapart, media, ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).
