@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1896, teksti: 'Linssi: korostuskehä ja paneeli piiloon, jono pysähtyy' },
   { v: 1895, teksti: 'Ranskan lisäkaupungeille kaupunkikortti ja esittelyt' },
   { v: 1894, teksti: 'Ranska: maalehden nostot kartalle, 7 lisäkaupunkia' },
   { v: 1893, teksti: 'Ranskan tasoituslaatat korjatulla leikkurilla (raportti)' },
