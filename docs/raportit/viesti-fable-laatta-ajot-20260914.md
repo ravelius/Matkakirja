@@ -31,3 +31,6 @@ kirjauksessa.
 | 11 | GRC | 34803149164 | success | 2026-09-14-tasoitus | true |
 | 12 | HRV | 34803273145 | success | 2026-09-14-tasoitus | true |
 | 13 | HUN | 34803390056 | success | 2026-09-14-tasoitus | true |
+| 14 | IRL | 34803511901 | success | 2026-09-14-tasoitus | true |
+| 15 | ITA | 34803610669 | success | 2026-09-14-tasoitus | true |
+| 16 | LTU | 34803776066 | success | 2026-09-14-tasoitus | true |
