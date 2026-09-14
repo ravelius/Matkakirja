@@ -7621,10 +7621,31 @@ export class UI {
    * piirrossa).
    *
    * Reitit näkyvät siirtovaiheessa (heitto tai siirto) ja liu'un
-   * ollessa auki; ei katselutilassa eikä botin vuorolla. Kaupungissa
-   * naapurireitit, kesken reittiä pelkkä se reitti, jolla nappula on —
-   * silloin muut reitit eivät ole valittavissa eikä niitä siis kuulu
-   * näkyä.
+   * ollessa auki; ei katselutilassa eikä botin vuorolla. Kesken reittiä
+   * näkyy pelkkä se reitti, jolla nappula on — silloin muut reitit eivät
+   * ole valittavissa eikä niitä siis kuulu näkyä. Kaupungissa viuhka
+   * näkyy vain liu'un ollessa auki (seuraava osio).
+   *
+   * === NAAPURIVIUHKA VAIN LIU'UN OLLESSA AUKI (omistaja 14.9.2026)
+   *
+   * Sanatarkasti: *"onko kaupunkien valiset siirtymalinjat ja
+   * merireitit omalla tasollaan? jos on niin ne voi ottaa pois
+   * nakyvista ja palauttaa vasta kun pelaaja painaa liiku nappia"*.
+   *
+   * Kaupungissa seisova pelaaja EI valitse reittiä — hän lukee karttaa.
+   * Viuhka kuului siihen asti myös siirtovaiheeseen (`vaiheessa`), ja
+   * koska vuoro alkaa kaupungissa vaiheesta 'roll', neljä katkoviivaa
+   * makasi maan päällä koko sen ajan, jonka pelaaja katseli kaupunkia.
+   * Reitit ovat valinnan kieltä, joten ne kuuluvat siihen hetkeen,
+   * jolloin valinta on auki: Liiku-nappi ja sen liuku.
+   *
+   * PIILOTUS KOSKEE VAIN VIUHKAA, EI KESKEN OLEVAA MATKAA. Nappulan
+   * ollessa reitin päällä (`kesken`) se yksi reitti jää näkyviin
+   * riippumatta liu'usta — muuten nappula kulkisi tyhjän päällä.
+   * Siksi ehto on tässä `reittiTunnukset`-haarassa eikä
+   * `naytetaan`-lauseessa: `naytetaan` ohjaa myös lentokaaria, joilla
+   * on oma, omistajan 1.9.2026 päättämä elinikänsä (ks. alla), eikä
+   * sitä saa sotkea tähän.
    *
    * === LENTOKAARET OVAT ELÄVIÄ, EIVÄT LAATOISSA (omistaja 1.9.2026)
    *
@@ -7661,7 +7682,7 @@ export class UI {
     const kesken = !kaupunki && game.player?.pos?.type === 'edge'
       ? game.player.pos.edge : null;
     const reittiTunnukset = kaupunki
-      ? [...(game.board.adj.get(kaupunki.id) ?? [])]
+      ? (this.liukuAuki ? [...(game.board.adj.get(kaupunki.id) ?? [])] : [])
       : (kesken ? [kesken] : []);
     const lennotElavana = pyramidiKattaa(game.pack.id);
     const lentoKohteet = [];

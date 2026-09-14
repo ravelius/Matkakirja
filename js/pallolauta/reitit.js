@@ -7,9 +7,11 @@
  * KARTTA LAATOISSA, PELI PÄÄLLÄ (Raamattu 5.9.2026): reittiVERKKO on
  * laatoissa tekstuurina eikä sitä piirretä pallolle. Pallolle piirretään
  * vain se, mikä tasokartan elävässä matkareittikerroksessa on
- * (js/ui.js paivitaMatkareitit): siirtovaiheessa ja liu'un ollessa auki
- * nykyisen kaupungin naapurireitit askelhelmineen, kesken reittiä se
- * reitti jolla nappula on, ja lentokaaret vain lentolistan ollessa auki
+ * (js/ui.js paivitaMatkareitit): nykyisen kaupungin naapurireitit
+ * askelhelmineen VAIN liu'un ollessa auki (omistaja 14.9.2026: *"ne voi
+ * ottaa pois nakyvista ja palauttaa vasta kun pelaaja painaa liiku
+ * nappia"*), kesken reittiä se reitti jolla nappula on riippumatta
+ * liu'usta, ja lentokaaret vain lentolistan ollessa auki
  * tai valitun lennon ajan (omistaja 1.9.2026: *"Piirretään ne näkyviin
  * reaaliajassa vasta sitten jos pelaaja päättää mennä lentokoneella."*).
  * SÄÄNTÖ ON YKSI: ui.matkareittienValinta() päättää, tämä vain piirtää.

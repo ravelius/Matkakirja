@@ -1055,3 +1055,100 @@ test('kaupungin oma pallopiste kulkee kaikkiin merkkeihin yhdestä paikasta', ()
   const sisalto = lue('../tools/fokuskartta/sisalto.mjs');
   assert.match(sisalto, /const polyPallolle = \(e\) => pallonReitinPoly\(e, siirtymat\);/);
 });
+
+/*
+ * NAAPURIVIUHKA VAIN LIU'UN OLLESSA AUKI (omistaja 14.9.2026,
+ * sanatarkasti: *"onko kaupunkien valiset siirtymalinjat ja merireitit
+ * omalla tasollaan? jos on niin ne voi ottaa pois nakyvista ja
+ * palauttaa vasta kun pelaaja painaa liiku nappia"*).
+ *
+ * MIKSI SÄÄNTÖ MITATAAN AJAMALLA EIKÄ LUKEMALLA. Näkyvyys on yksi
+ * funktio kahdelle laudalle (js/ui.js matkareittienValinta), ja sen
+ * ehdot ovat sanoja, jotka on helppo kirjoittaa uusiksi ilman että
+ * mikään kaatuu. Siksi tässä kutsutaan itse funktiota oikealla pelillä
+ * ja luetaan sen päätös, ei etsitä lähteestä lauseita.
+ *
+ * VIISI ASIAA, JOTKA TÄMÄ PITÄÄ ERILLÄÄN:
+ *   1. kaupungissa liuku kiinni → ei yhtään reittiä (myös 'roll' ja
+ *      'move', jotka aiemmin yksinään riittivät);
+ *   2. liuku auki → koko naapuriviuhka;
+ *   3. kesken reittiä → tasan se yksi reitti, liu'usta riippumatta —
+ *      muuten nappula kulkisi tyhjän päällä;
+ *   4. katselutila ja botin vuoro ennallaan tyhjiä;
+ *   5. lentokaarten oma sääntö (omistaja 1.9.2026) ei muutu: piilotus
+ *      koskee reittitunnuksia, ei `lennot`-listaa.
+ */
+test('reittien näkyvyys: naapuriviuhka vain liu\'un ollessa auki, kesken matkaa se yksi reitti', async () => {
+  const { UI } = await import('../js/ui.js');
+  const peli = new Game({
+    players: [{ name: 'Fogg', color: '#c9a227', start: 'varsova' }],
+    pack: packById('maailmankartta'),
+    seed: 5,
+  });
+  const naapurit = [...(peli.board.adj.get('varsova') ?? [])];
+  assert.ok(naapurit.length >= 3, 'Varsovalla pitää olla viuhka mitattavaksi');
+
+  /** Sääntö oikealla pelillä; `tila` on se, mitä UI:sta tarvitaan. */
+  const valinta = (tila = {}) => UI.prototype.matkareittienValinta.call({
+    katselu: false,
+    liukuAuki: false,
+    travelExpanded: false,
+    travelSuodatin: null,
+    lentoKaari: null,
+    game: peli,
+    ...tila,
+  });
+  const kaupunkiin = (id) => { peli.player.pos = { type: 'city', city: id }; };
+
+  // 1. kaupungissa liuku kiinni — yksikään vaihe ei enää riitä.
+  kaupunkiin('varsova');
+  for (const phase of ['action', 'roll', 'move']) {
+    peli.phase = phase;
+    const v = valinta();
+    assert.deepEqual(v.reittiTunnukset, [], `vaihe ${phase}: viuhka ei saa näkyä liu'un ollessa kiinni`);
+    assert.equal(v.avain, '', `vaihe ${phase}: tyhjä valinta tyhjentää kerroksen`);
+  }
+
+  // 2. liuku auki palauttaa viuhkan.
+  peli.phase = 'action';
+  const auki = valinta({ liukuAuki: true });
+  assert.deepEqual(auki.reittiTunnukset, naapurit);
+  assert.notEqual(auki.avain, '', 'liu\'un ollessa auki kerros piirtyy');
+
+  // 3. kesken reittiä se yksi reitti näkyy ilman liukuakin.
+  peli.phase = 'move';
+  peli.player.pos = { type: 'edge', edge: naapurit[0], idx: 1 };
+  const kesken = valinta();
+  assert.deepEqual(kesken.reittiTunnukset, [naapurit[0]],
+    'kesken matkaa nappula kulkisi tyhjän päällä ilman omaa reittiään');
+  assert.notEqual(kesken.avain, '');
+
+  // 4. katselutila ja botin vuoro ennallaan.
+  kaupunkiin('varsova');
+  peli.phase = 'roll';
+  assert.equal(valinta({ liukuAuki: true, katselu: true }).avain, '', 'katselutilassa ei reittejä');
+  peli.player.isBot = true;
+  assert.equal(valinta({ liukuAuki: true }).avain, '', 'botin vuorolla ei reittejä');
+  peli.player.isBot = false;
+
+  // 5. lentokaaret: oma sääntö, omat kohteet (omistaja 1.9.2026).
+  kaupunkiin('ateena');
+  peli.phase = 'action';
+  const lennot = peli.airportDestinations();
+  assert.ok(lennot.length > 0, 'Ateenassa pitää olla lentokohde mitattavaksi');
+  const lista = valinta({ liukuAuki: true, travelExpanded: true, travelSuodatin: 'air' });
+  assert.deepEqual(lista.lennot, lennot, 'lentolista piirtää kaikki kohteensa');
+  const ilmanListaa = valinta({ liukuAuki: true });
+  assert.deepEqual(ilmanListaa.lennot, [], 'ilman lentolistaa ei kaaria');
+
+  /*
+   * SÄÄNTÖ ON YHDESSÄ PAIKASSA. Piilotus on `reittiTunnukset`-haarassa
+   * eikä `naytetaan`-lauseessa: `naytetaan` ohjaa myös lentokaaria,
+   * joilla on oma elinikänsä, eikä piirtäjä (paivitaMatkareitit,
+   * js/pallolauta/reitit.js) saa toistaa ehtoa.
+   */
+  const ui = lue('../js/ui.js');
+  assert.match(ui, /\? \(this\.liukuAuki \? \[\.\.\.\(game\.board\.adj\.get\(kaupunki\.id\) \?\? \[\]\)\] : \[\]\)/);
+  const piirtajat = lue('../js/pallolauta/reitit.js');
+  assert.ok(!piirtajat.includes('liukuAuki'), 'pallon piirtäjä ei saa tuntea liukua — sääntö on ui.js:ssä');
+});
