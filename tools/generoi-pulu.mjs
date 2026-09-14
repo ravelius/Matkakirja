@@ -743,7 +743,24 @@ export function tagiresepti(nakyva, tts) {
 const EUROOPPA_TTS_MANIFESTI = JSON.parse(readFileSync(resolve(
   JUURI, 'docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260914-r2.json',
 ), 'utf8'));
+/*
+ * ERÄ 5 ODOTTAA AJOA (14.9.2026). ElevenLabsin kiintiö loppui kesken, joten
+ * sisilia, islanti, alpit, lappi ja tromssa EIVÄT saaneet 14.9. tekstistä
+ * äänitettä. Niiden repliikkiteksti on palautettu 13.9. asuun, ja siksi myös
+ * niiden tagiresepti luetaan 13.9. manifestista: tagiankkurin on esiinnyttävä
+ * repliikissä täsmälleen kerran, eikä 14.9. ankkuri löydy 13.9. tekstistä.
+ * Kun erä 5 on ajettu, poista tämä lohko ja se palaa yhteen manifestiin.
+ */
+const ERA5_TTS_MANIFESTI = JSON.parse(readFileSync(resolve(
+  JUURI, 'docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260913.json',
+), 'utf8'));
+const ERA5_ODOTTAA = new Set(['sisilia', 'islanti', 'alpit', 'lappi', 'tromssa']);
 for (const city of EUROOPPA_TTS_MANIFESTI.cities) {
+  if (ERA5_ODOTTAA.has(city.city)) continue;
+  TAGIT[`${city.city}-3`] = tagiresepti(city.livia.visibleText, city.livia.ttsText);
+}
+for (const city of ERA5_TTS_MANIFESTI.cities) {
+  if (!ERA5_ODOTTAA.has(city.city)) continue;
   TAGIT[`${city.city}-3`] = tagiresepti(city.livia.visibleText, city.livia.ttsText);
 }
 

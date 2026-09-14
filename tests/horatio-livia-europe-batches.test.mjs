@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 
+import { ERA5_ODOTTAVAT_KAUPUNGIT } from '../js/livia-pilotti-cuet.js';
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { AANI as HORATIO_AANI, MALLI as HORATIO_MALLI, STABILITY as HORATIO_VAKAUS } from '../tools/generoi-luennat.mjs';
 import {
@@ -24,6 +25,9 @@ test('R2-hyväksyntälähde on tarkalleen käyttäjän hyväksymä 45 kaupungin 
   assert.equal(new Set(approved.cities.map(({ id }) => id)).size, 45);
 });
 
+/** Kaupungit, joiden teksti ja ääni odottavat erän 5 ajoa (14.9.2026). */
+const ODOTTAA = new Set(ERA5_ODOTTAVAT_KAUPUNGIT);
+
 test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia', () => {
   assert.equal(combined.cityCount, 45);
   assert.equal(combined.contentRevision, 'eu-hl-europe-20260914-r2-approved');
@@ -43,12 +47,32 @@ test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia'
     assert.equal(city.livia.audioId, `${city.city}-3`, `${city.city}: audio-ID`);
     assert.equal(city.horatio.visibleText, source.text.horatio, `${city.city}: hyväksytty H`);
     assert.equal(city.livia.visibleText, source.text.livia, `${city.city}: hyväksytty L`);
-    assert.equal(city.horatio.visibleText, FOKUSVIRRAT[city.city].matkakirja.teksti,
-      `${city.city}: koonti-H`);
-    assert.equal(city.livia.visibleText, FOKUSVIRRAT[city.city].pollo.kommentti[0],
-      `${city.city}: koonti-L`);
-    assert.equal(puhemuoto(city.livia.visibleText, TAGIT[city.livia.audioId]), city.livia.ttsText,
-      `${city.city}: tuotantogeneraattorin Livia TTS`);
+    /*
+     * ERÄ 5 ODOTTAA AJOA (14.9.2026): viiden kaupungin luentaa ei äänitetty
+     * ElevenLabsin kiintiön loputtua, joten niiden pakkiteksti ja
+     * tagiresepti ovat yhä 13.9. asussa — teksti ja ääni kulkevat parina.
+     * Koonnin oma eheys (sanat, SHA:t, tagit, ankkurit) tarkistetaan yhä
+     * kaikille 45:lle alla; vain pakkisidonta odottaa erää 5.
+     */
+    if (!ODOTTAA.has(city.city)) {
+      assert.equal(city.horatio.visibleText, FOKUSVIRRAT[city.city].matkakirja.teksti,
+        `${city.city}: koonti-H`);
+      assert.equal(city.livia.visibleText, FOKUSVIRRAT[city.city].pollo.kommentti[0],
+        `${city.city}: koonti-L`);
+      assert.equal(puhemuoto(city.livia.visibleText, TAGIT[city.livia.audioId]), city.livia.ttsText,
+        `${city.city}: tuotantogeneraattorin Livia TTS`);
+    } else {
+      assert.notEqual(city.horatio.visibleText, FOKUSVIRRAT[city.city].matkakirja.teksti,
+        `${city.city}: odottaa erää 5, mutta pakissa on jo 14.9. teksti`);
+      assert.notEqual(city.livia.visibleText, FOKUSVIRRAT[city.city].pollo.kommentti[0],
+        `${city.city}: odottaa erää 5, mutta pakissa on jo 14.9. teksti`);
+      // Generaattorin tagiresepti on sidottu siihen tekstiin, joka soi.
+      assert.equal(
+        stripTags(puhemuoto(FOKUSVIRRAT[city.city].pollo.kommentti[0], TAGIT[city.livia.audioId])),
+        FOKUSVIRRAT[city.city].pollo.kommentti[0],
+        `${city.city}: 13.9. tagiresepti ei vastaa pakin tekstiä`,
+      );
+    }
     for (const speaker of ['horatio', 'livia']) {
       const item = city[speaker];
       assert.equal(stripTags(item.ttsText), item.visibleText, `${city.city}: koonti-${speaker}-TTS`);
