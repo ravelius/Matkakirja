@@ -126,6 +126,7 @@ import { FOKUSKOHTEET_DEU } from './packs/fokuskohteet-deu.js';
 import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
 import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
 import { NAKYVAT_KAUPUNGIT_FRA } from './packs/nakyvat-kaupungit-fra.js';
+import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
 import { FOKUSKOHTEET_HRV } from './packs/fokuskohteet-hrv.js';
@@ -301,9 +302,12 @@ for (const [iso, kohteet] of Object.entries(MAASTOKOHTEET)) {
 /*
  * NÄKYVÄT KAUPUNGIT — RANSKA (omistaja, KARTTAUUDISTUKSEN PAATOKSET 13:
  * *"kartalle olisi lisaksi hyva tuoda lisaa kaupunkeja nakyviin"*).
- * Rivit ovat tavallisia kaupunkikohteita yhtä kenttää lukuun ottamatta:
- * `vainNimi: true` sanoo, ettei niillä ole korttia eivätkä ne siksi ota
- * napautusta (js/packs/nakyvat-kaupungit-fra.js perustelee miksi).
+ * Rivit ovat tavallisia kaupunkikohteita, mutta niiden kortti on oma
+ * lajinsa: `kaupunkikortti: true` vie napautuksen kaupunkikorttiin
+ * (kuva, esittely ja yksi kaupunkiin ankkuroitu nosto; PAATOKSET 16,
+ * ks. avaaFokuskohde ja js/kaupunkinosto.js latoLisakaupunginKortti).
+ * Erässä 13 sama rivi oli `vainNimi: true` eli pelkkä nimikyltti ilman
+ * korttia; lippu poistui, kun omistaja tilasi kortit.
  * Liitos on tässä samasta syystä kuin maastokohteilla yllä: KOHDE_MAAT
  * on tämän tiedoston oma taulu.
  */
@@ -5716,6 +5720,23 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
    * kaikille kelluvien korttien avaajille (js/ui-apurit.js linssiEstaa).
    */
   if (linssiEstaa()) return false;
+  /*
+   * LISÄKAUPUNKI AVAA KAUPUNKIKORTIN (Raamattu, KARTTAUUDISTUKSEN
+   * PAATOKSET 16, omistaja 14.9.2026). Kartan lisäkaupungit
+   * (js/packs/nakyvat-kaupungit-fra.js) eivät ole laudan matkakohteita
+   * eikä niillä ole kohteiden tietoruudun kenttiä; napautus avaa
+   * lehden kehyksessä kuvan, esittelyn ja yhden kaupunkiin ankkuroidun
+   * noston (js/kaupunkinosto.js latoLisakaupunginKortti).
+   *
+   * HAARA ON TÄSSÄ EIKÄ MERKKIRIVILLÄ, jotta se pätee molempiin
+   * napautuspolkuihin kerralla: pallon osumalista
+   * (js/pallolauta/nostot.js) ja tasokartan `lahinKohde` päätyvät
+   * kumpikin tähän samaan avaajaan.
+   */
+  if (kohde.kaupunkikortti) {
+    avaaLisakaupunginKortti(ui, kohde, { ankkuri });
+    return null;
+  }
   /*
    * LISÄKOHDE AVAA OMAN KORTTINSA (YHTENÄINEN KOHDEMALLI): täkynoston
    * ja syvennystarinan merkki on kartalla tavallinen kohdemerkki, mutta

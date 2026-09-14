@@ -57,7 +57,7 @@ import {
 import { avaaNahtavyys, piirraKaupunkiKartta, piirraMatkailijalle } from './nahtavyydet.js';
 import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { sfx } from './sound.js';
-import { html, kuunteleSulkevaNapautus } from './ui-apurit.js';
+import { html, jaaKappaleiksi, kuunteleSulkevaNapautus } from './ui-apurit.js';
 
 /* ===================== MERKIN MITAT KARTALLA ===================== */
 
@@ -284,7 +284,7 @@ export function asetteleTuristiInfo(el, d) {
 
 /* ===================== POP-UPIN TYYLI ===================== */
 
-const TYYLIN_TUNNUS = 'kaupunkinosto-tyyli';
+const KAUPUNKINOSTON_TYYLIN_TUNNUS = 'kaupunkinosto-tyyli';
 
 /**
  * Tyyli ladataan vasta ensimmäisellä avauksella (sama kuvio kuin
@@ -293,11 +293,11 @@ const TYYLIN_TUNNUS = 'kaupunkinosto-tyyli';
  */
 function lataaKaupunkiTyyli() {
   if (typeof document === 'undefined') return;
-  if (document.getElementById(TYYLIN_TUNNUS)) return;
+  if (document.getElementById(KAUPUNKINOSTON_TYYLIN_TUNNUS)) return;
   const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
   if (!peruslinkki) return;
   const linkki = document.createElement('link');
-  linkki.id = TYYLIN_TUNNUS;
+  linkki.id = KAUPUNKINOSTON_TYYLIN_TUNNUS;
   linkki.rel = 'stylesheet';
   linkki.href = new URL('kaupunkinosto.css', peruslinkki.href).href;
   document.head.appendChild(linkki);
@@ -319,7 +319,7 @@ function polloPaneeli() {
 }
 
 /** Ankkurin ruutupiste laatikoksi (piste, ei ala). */
-function ankkurinLaatikko(auki, pane) {
+function kaupunkinostonAnkkurinLaatikko(auki, pane) {
   const ankkuri = typeof auki.ankkuri === 'function' ? auki.ankkuri() : auki.ankkuri;
   if (Number.isFinite(ankkuri?.x) && Number.isFinite(ankkuri?.y)) {
     return {
@@ -350,7 +350,7 @@ export function asemoiKaupunkipopup(ui) {
   const koti = auki.popup.offsetParent ?? auki.popup.parentNode;
   const pane = koti?.getBoundingClientRect?.();
   if (!pane || !(pane.width > 0)) return;
-  const m = ankkurinLaatikko(auki, pane);
+  const m = kaupunkinostonAnkkurinLaatikko(auki, pane);
   let alaraja = pane.bottom - MARGINAALI;
   const ylaraja = pane.top + MARGINAALI;
   let oikeaRaja = pane.right - MARGINAALI;
@@ -756,4 +756,154 @@ export function avaaTiivisKaupunkietusivu(ui, city, { ankkuri = null } = {}) {
 /** Sulkee tiivistetyn etusivun (savukkeet ja kutsujat). */
 export function suljeTiivisKaupunkietusivu() {
   suljeTiivisLehtiarkki();
+}
+
+/* ========== LISÄKAUPUNGIN KAUPUNKIKORTTI (PAATOKSET 16) ========== */
+
+/**
+ * LISÄKAUPUNGIN KORTTI — kuva, esittely ja YKSI nosto.
+ *
+ * OMISTAJAN PÄÄTÖS (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 16,
+ * 14.9.2026) sanatarkasti: *"Yhdista nuo kaksi ens. Vaihtoehtoa ja
+ * pyyda putkelta kuhunkin kaupunkiin hero kuva. Esittelyn jalkeen voi
+ * siis tulla yksi nosto teksti. Jos useampi olisi tarjolla niin
+ * jatetaan seuraavat kartalle omiksi nostoikseen."*
+ *
+ * Kortti koskee kartan lisäkaupunkeja (js/packs/nakyvat-kaupungit-
+ * fra.js), jotka eivät ole laudan matkakohteita. Edellinen erä merkitsi
+ * ne `vainNimi`-lipulla, koska korttiin ei ollut tekstiä; lippu on nyt
+ * poissa ja merkki ottaa napautuksen.
+ *
+ * SAMA KEHYS KUIN TIIVIILLÄ KAUPUNKIETUSIVULLA (PAATOKSET 10). Kortti
+ * avataan samalla `avaaKortti`lla: sama pergamentti, sama sulkunappi,
+ * sama Esc- ja ulkonapautussopimus, sama ankkurointi merkin
+ * ruutupisteeseen. Uusia tyylejä on yksi ja vain yksi — kuvan
+ * paikkamerkki (.kaupunkipopup-heropaikka), jota ei ollut olemassa,
+ * koska tähän asti kortissa ei ole ollut kuvatonta kuvapaikkaa.
+ *
+ * KOLME LOHKOA, JA JOKAINEN PUUTTUU KOKONAAN JOS SEN DATAA EI OLE —
+ * tyhjää kehystä ei jätetä (sama sääntö kuin `latoTiivisEtusivu`n
+ * hero-lohkolla):
+ *
+ *   1. KUVA. `kohde.herokuva` on kuvaputken URL. Kun se on `null`
+ *      (nyt), kortti piirtää PAIKKAMERKIN eikä hae mitään ulkoa:
+ *      seepiaruutu ja kaupungin nimi. Kun putki toimittaa kuvan, vaihto
+ *      on yksi datarivi.
+ *   2. ESITTELY. `kohde.esittely` on 2–3 lauseen teksti (Fable
+ *      hyväksyi Ranskan seitsemän 14.9.2026 klo 21.25 UTC). Kun kenttä
+ *      on tyhjä, lohko jää pois kokonaan — hyväksymätöntä tekstiä ei
+ *      panna peliin, eikä tyhjää kehystä jätetä korttiin.
+ *   3. NOSTO. `kohde.korttiNosto` on viite maalehtinoston omaan olioon
+ *      (js/packs/maalehtinostot-fra.js) — EI KOPIO. Otsikko ja teksti
+ *      piirretään samoilla luokilla kuin nostokortissa
+ *      (js/fokusnosto.js piirraNostonSisus: h3
+ *      .fokusnosto-kortti-otsikko ja div.fokusnosto-teksti), joten
+ *      kortilla lukee sanasta sanaan sama kuin noston omalla kortilla.
+ *      Ranskan seitsemästä lisäkaupungista vain Lyonilla on kaupunkiin
+ *      ankkuroitu nosto (mitattu, ks. datatiedoston taulukko); muilla
+ *      lohko puuttuu.
+ *
+ * MIKSI TÄSSÄ EI TUODA js/fokusnosto.js:ää. Se toisi tuontikehän
+ * (fokuskohteet → kaupunkinosto → fokusnosto → fokuskohteet). Kortti
+ * tarvitsee siitä vain kaksi luokkanimeä ja tyylitiedoston, ja
+ * tyylilataaja on talon oma kahdeksan rivin kuvio (lataaKaupunkiTyyli
+ * yllä, js/fokusnosto.js nostoLataaTyyli, js/fokuskohteet.js
+ * lataaKohdeTyyli). Kolmas kopio on halvempi kuin kehä.
+ */
+
+/** Nostokortin tyylitiedosto; sama kuvio kuin `lataaKaupunkiTyyli`. */
+const KAUPUNKINOSTON_NOSTO_TYYLIN_TUNNUS = 'fokusnosto-tyyli';
+
+function lataaNostotyyliKortille() {
+  if (typeof document === 'undefined') return;
+  if (document.getElementById(KAUPUNKINOSTON_NOSTO_TYYLIN_TUNNUS)) return;
+  const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
+  if (!peruslinkki) return;
+  const linkki = document.createElement('link');
+  linkki.id = KAUPUNKINOSTON_NOSTO_TYYLIN_TUNNUS;
+  linkki.rel = 'stylesheet';
+  linkki.href = new URL('fokusnosto.css', peruslinkki.href).href;
+  document.head.appendChild(linkki);
+}
+
+/** Kortin tunnusluokka savukkeelle ja tyyleille. */
+export const LISAKAUPUNKI_LUOKKA = 'kaupunkipopup-lisakaupunki';
+/** Kuvan paikkamerkin luokka (seepiaruutu, kun herokuvaa ei vielä ole). */
+export const HEROPAIKAN_LUOKKA = 'kaupunkipopup-heropaikka';
+
+/**
+ * Noston teksti yhtenä merkkijonona. Maalehtinostoilla se on
+ * `lunastus`-taulukko (js/packs/maalehtinostot-fra.js korttiLehdesta),
+ * muualla valmis `teksti`. Sama levitys kuin js/fokusnosto.js
+ * nostonLunastusteksti tekee poolille — kappaleraja on tyhjä rivi,
+ * jonka `jaaKappaleiksi` tunnistaa.
+ */
+function kortinNostonTeksti(nosto) {
+  if (nosto?.teksti) return nosto.teksti;
+  const lunastus = nosto?.lunastus;
+  if (Array.isArray(lunastus)) {
+    return lunastus.map((k) => String(k ?? '').trim()).filter(Boolean).join('\n\n');
+  }
+  return typeof lunastus === 'string' ? lunastus : '';
+}
+
+export function latoLisakaupunginKortti(ui, sisalto, kohde) {
+  sisalto.closest('.kaupunkipopup')?.classList.add(LISAKAUPUNKI_LUOKKA);
+  const nimi = kohde?.nimi ?? '';
+  /* 1. Kuva tai sen paikkamerkki. */
+  const hero = html('div', 'kaupunkipopup-hero');
+  const paakuva = html('div', 'lehti-paakuva');
+  hero.appendChild(paakuva);
+  if (kohde?.herokuva) {
+    const kehys = html('figure', 'lehti-kuva');
+    const kuva = document.createElement('img');
+    kuva.src = kohde.herokuva;
+    kuva.alt = nimi;
+    kuva.loading = 'lazy';
+    kehys.appendChild(kuva);
+    paakuva.appendChild(kehys);
+  } else {
+    // PAIKKAMERKKI EI HAE MITÄÄN ULKOA: pelkkä ruutu ja nimi, jotta
+    // kortin mitta on jo nyt sama kuin kuvan kanssa.
+    const paikka = html('div', HEROPAIKAN_LUOKKA, nimi);
+    paikka.setAttribute('role', 'img');
+    paikka.setAttribute('aria-label', `${nimi}: kuva tulossa`);
+    paakuva.appendChild(paikka);
+  }
+  sisalto.appendChild(hero);
+  /* 2. Esittely — vain jos se on kirjoitettu ja hyväksytty. */
+  const esittely = String(kohde?.esittely ?? '').trim();
+  if (esittely) {
+    const lohko = html('div', 'arrival-intro');
+    for (const kappale of jaaKappaleiksi(esittely)) {
+      lohko.appendChild(html('p', '', kappale));
+    }
+    sisalto.appendChild(lohko);
+  }
+  /* 3. Yksi kaupunkiin ankkuroitu nosto, nostokortin omilla luokilla. */
+  const nosto = kohde?.korttiNosto ?? null;
+  const nostonTeksti = kortinNostonTeksti(nosto);
+  if (!nosto?.otsikko || !nostonTeksti) return;
+  lataaNostotyyliKortille();
+  sisalto.appendChild(html('h3', 'fokusnosto-kortti-otsikko', nosto.otsikko));
+  const teksti = html('div', 'fokusnosto-teksti');
+  for (const kappale of jaaKappaleiksi(nostonTeksti)) {
+    teksti.appendChild(html('p', '', kappale));
+  }
+  sisalto.appendChild(teksti);
+}
+
+/**
+ * Lisäkaupungin napautuksen kortti. `kohde` on kartan kohdeolio
+ * (js/packs/nakyvat-kaupungit-fra.js), ei laudan kaupunki — siksi
+ * kehykselle annetaan vain nimi ja tunnus.
+ */
+export function avaaLisakaupunginKortti(ui, kohde, { ankkuri = null } = {}) {
+  if (!kohde) return null;
+  return avaaKortti(ui, { id: kohde.id, name: kohde.nimi ?? '' }, {
+    laji: 'kaupunki',
+    otsikko: kohde.nimi ?? '',
+    ankkuri,
+    lato: (u, sisalto) => latoLisakaupunginKortti(u, sisalto, kohde),
+  });
 }
