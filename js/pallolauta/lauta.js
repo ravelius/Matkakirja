@@ -100,7 +100,7 @@ import { KARTTANIMI_KOOT } from '../karttanimet.js';
  * hoitaa vain napautuksen, ankkurin ja merkin paikan pallolla.
  */
 import {
-  asemoiKaupunkipopup, asetteleTuristiInfo, avaaKaupunkipopup, avaaTuristiInfo,
+  asemoiKaupunkipopup, asetteleTuristiInfo, avaaTiivisKaupunkietusivu, avaaTuristiInfo,
   kaupunginMatkailijalle, kaupunkimerkinMitta, suljeKaupunkipopup,
   turistiInfoElementti, turistiInfonAsteet,
 } from '../kaupunkinosto.js';
@@ -1948,14 +1948,16 @@ export async function avaaPallolauta(ui) {
        * 3.3): kortti aukeaa sen kaupungin viereen, jota napautettiin, ja
        * seuraa pistettään, kun pallo pysähtyy (ladoLevossa).
        *
-       * VANHA OVI JÄÄ RINNALLE (tehtävänanto): kaupunkilehti avataan yhä
-       * `ui.avaaTutkinta`lla — fokusvirrasta ja pop-upin omasta
-       * alarivistä. Tätä haaraa ei siis pureta vielä.
+       * KORTTI ON TIIVISTETTY ETUSIVU (PAATOKSET 10, omistaja 14.9.2026):
+       * herokuvat → kohdekartta → leipätekstin ensimmäinen kappale →
+       * "Lue loppuun". Ei matkailuliitettä, ei alaosan navigointia, ei
+       * ennen/nyt-paria. Vanha `avaaKaupunkipopup` ja koko kaupunkilehti
+       * jäävät koskemattomina koodiin; lehti avataan fokusvirrasta.
        */
       if (Number.isFinite(k.lat) && Number.isFinite(k.lon)) {
-        avaaKaupunkipopup(ui, city, { ankkuri: ankkuri(k.lat, k.lon) });
+        avaaTiivisKaupunkietusivu(ui, city, { ankkuri: ankkuri(k.lat, k.lon) });
       } else {
-        avaaKaupunkipopup(ui, city);
+        avaaTiivisKaupunkietusivu(ui, city);
       }
       return true;
     }
