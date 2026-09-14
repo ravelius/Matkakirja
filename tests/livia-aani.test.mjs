@@ -386,20 +386,48 @@ test('kaikki 45 Euroopan kaupunkirepliikkiä käyttävät muuttumattomia tuotant
  * jos kuitin kesto vaihtuu — silloin peli soittaisi taas sitä äänitettä,
  * josta omistaja valitti.
  */
-test('ateena-3 ja sofia-3 osoittavat uuden putken erään (ei uudelleenkoodausta)', () => {
+test('ateena-3 osoittaa uuden putken erään (ei uudelleenkoodausta)', () => {
   const ERA = 'aanet/pulu/versiot/fd6db48feef7/pulu-c4a91d1229f96eaac265';
   assert.equal(LIVIAN_VERSIOIDUT_AANET['ateena-3'], `${ERA}/livia-ateena-3.mp3`);
-  assert.equal(LIVIAN_VERSIOIDUT_AANET['sofia-3'], `${ERA}/livia-sofia-3.mp3`);
-  // Kuitin mitatut kestot (kuitti pulu-c4a91d1229f96eaac265.completed.json).
+  // Kuitin mitattu kesto (kuitti pulu-c4a91d1229f96eaac265.completed.json).
   assert.equal(LIVIAN_KESTOT['ateena-3'], 17.868);
-  assert.equal(LIVIAN_KESTOT['sofia-3'], 12.356);
-  // Teksti ei muuttunut: tiivisteet ovat samat kuin ennen uusintaa.
+  // Teksti ei muuttunut: tiiviste on sama kuin ennen uusintaa.
   assert.equal(LIVIAN_AANITETYT['ateena-3'], '572e0e85');
-  assert.equal(LIVIAN_AANITETYT['sofia-3'], '83dd2f15');
-  // Muut kaupungit eivät saa vahingossa siirtyä tähän erään.
+  // Muut kaupungit eivät saa vahingossa siirtyä tähän erään. sofia-3 siirtyi
+  // eteenpäin nauru/kuiskaus-erään (ks. seuraava testi), joten tässä on enää
+  // Ateena.
   const uudessa = Object.entries(LIVIAN_VERSIOIDUT_AANET)
     .filter(([, polku]) => polku.startsWith(ERA)).map(([avain]) => avain).sort();
-  assert.deepEqual(uudessa, ['ateena-3', 'sofia-3']);
+  assert.deepEqual(uudessa, ['ateena-3']);
+});
+
+/*
+ * SOFIA JA VENETSIA SOIVAT NAURU/KUISKAUS-ERÄSTÄ (omistaja 14.9.2026:
+ * "Saa korvata nykyiset").
+ *
+ * Codexin ilmaisukoe muutti VAIN kahden repliikin TTS-tagit: Sofian
+ * viimeinen lause [softly] → [laughs], Venetsian "Yhden tutun takia"
+ * [warmly] → [whispers] ja viimeinen lause [mischievously] → [laughs].
+ * Näkyvät sanat eivät muuttuneet, joten LIVIAN_AANITETYT-tiivisteet ovat
+ * ennallaan — mutta äänite on toinen, ja tämä portti pitää huolen siitä,
+ * että peli osoittaa uuteen erään eikä putoa takaisin vanhaan.
+ * Erä pulu-bab26ef72403343445ed, lähde-SHA de77a4cf, 192 kbps,
+ * jälkikäsittely none (raaka- ja final-avaimen sha256 sama).
+ */
+test('sofia-3 ja venetsia-3 osoittavat nauru/kuiskaus-erään', () => {
+  const ERA = 'aanet/pulu/versiot/de77a4cf678b/pulu-bab26ef72403343445ed';
+  assert.equal(LIVIAN_VERSIOIDUT_AANET['sofia-3'], `${ERA}/livia-sofia-3.mp3`);
+  assert.equal(LIVIAN_VERSIOIDUT_AANET['venetsia-3'], `${ERA}/livia-venetsia-3.mp3`);
+  // Kuitin mitatut kestot (kuitti pulu-bab26ef72403343445ed.completed.json).
+  assert.equal(LIVIAN_KESTOT['sofia-3'], 13.714);
+  assert.equal(LIVIAN_KESTOT['venetsia-3'], 19.487);
+  // Näkyvä teksti ennallaan: tiivisteet eivät muutu tagimuutoksesta.
+  assert.equal(LIVIAN_AANITETYT['sofia-3'], '83dd2f15');
+  assert.equal(LIVIAN_AANITETYT['venetsia-3'], 'eb6f4836');
+  // Uuteen erään saa osoittaa tasan nämä kaksi avainta.
+  const uudessa = Object.entries(LIVIAN_VERSIOIDUT_AANET)
+    .filter(([, polku]) => polku.startsWith(ERA)).map(([avain]) => avain).sort();
+  assert.deepEqual(uudessa, ['sofia-3', 'venetsia-3']);
 });
 
 /* ---------- kaiku (poistettu pelistä 6.9.2026 ilta) ---------- */
