@@ -5,6 +5,7 @@
 
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import vm from 'node:vm';
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
@@ -578,9 +579,9 @@ test('ydinsetti esiladataan ämpäristä eikä repon polusta', () => {
     'ydinsetissä on muuta kuin tehosteita ja huudahduksia');
   // Nouto on cors-fetch omaan koriin: cache.addAll kaatuisi koko erään
   // yhdestä virheestä, eikä opaakki vastaus kelpaisi koriin lainkaan.
-  assert.match(sw, /async function esilataaYdinaanet\(\)/);
+  assert.match(sw, /async function esilataaYdinaanet\(katkoMs = AANI_ESILATAUS_KATKO_MS\)/);
   assert.match(sw, /caches\.open\(AANICACHE\)/);
-  assert.match(sw, /fetch\(osoite, \{ mode: 'cors' \}\)/);
+  assert.match(sw, /fetch\(osoite, \{ mode: 'cors', signal: vahti\.signal \}\)/);
   // Asennus ei saa kaatua ydinsettiin: se on nopeutta varten.
   assert.match(sw, /await esilataaYdinaanet\(\)\.catch\(\(\) => \{\}\);/);
   // Eikä yksikään äänitiedosto saa palata SHELL-listalle.
@@ -593,4 +594,134 @@ test('ämpärin audio/-pyynnöt palvellaan äänikorista ensin', () => {
   // audio/ (pelin oma) että aanet/ (peilattu maisema) äänikoriin.
   assert.match(sw, /medianIsanta\(osoite\.hostname\) && \/\^\\\/\(\?:audio\|aanet\)\\\/\/\.test\(osoite\.pathname\)/);
   assert.match(sw, /event\.respondWith\(aaniPeilista\(event\.request\)\)/);
+});
+
+/*
+ * SÄÄNTÖ: ESTETTY TAI HIDAS ÄÄNIHAKU EI SAA ESTÄÄ KÄYNNISTYSTÄ.
+ *
+ * Ääni on koriste, peli on pääasia. `esilataaYdinaanet()` ajetaan
+ * asennuksen sisällä (`install` → `waitUntil`), joten jos se ei palaa,
+ * `self.skipWaiting()` jää ajamatta eikä palvelutyöntekijä koskaan
+ * aktivoidu. Mitattu 14.9.2026 selaimessa ennen korjausta: kun
+ * media.matkakirja.app otti TCP-yhteyden vastaan muttei vastannut,
+ * työntekijä oli tilassa `installing` vielä 89,7 s kohdalla (versiokori
+ * oli ollut täysi jo 51,8 s kohdalla), ja verkon katkaisun jälkeen
+ * sivu ei auennut lainkaan (net::ERR_INTERNET_DISCONNECTED) — peli ei
+ * siis käynnistynyt offline ollenkaan.
+ *
+ * Nämä testit ajavat sw.js:n oikean install-käsittelijän hiekkalaatikossa
+ * (node:vm) niin, että jokainen äänihaku jää roikkumaan ikuisesti.
+ * Vakio korvataan lähteestä lyhyeksi, jotta testi ei odota kuutta
+ * sekuntia — mitattava sääntö on "palaa katkon kuluessa", ei
+ * "palaa tasan kuudessa sekunnissa".
+ */
+
+/** Rakentaa sw.js:lle hiekkalaatikon, jossa äänihaku käyttäytyy halutusti. */
+function lataaSw({ katkoMs = 200, aani = 'jumi' } = {}) {
+  const lahde = sw.replace(
+    /const AANI_ESILATAUS_KATKO_MS = \d+;/,
+    `const AANI_ESILATAUS_KATKO_MS = ${katkoMs};`,
+  );
+  const korit = new Map();
+  const haut = [];
+  const teeKori = (nimi) => {
+    if (!korit.has(nimi)) korit.set(nimi, new Map());
+    const varasto = korit.get(nimi);
+    return {
+      match: async (avain) => varasto.get(String(avain)),
+      put: async (avain, arvo) => { varasto.set(String(avain), arvo); },
+      keys: async () => [...varasto.keys()],
+      addAll: async () => {},
+      add: async () => {},
+      delete: async () => true,
+    };
+  };
+  let skipWaitingAjettu = false;
+  const ctx = {
+    console, setTimeout, clearTimeout, AbortController, URL,
+    // Request-tynkä: sw.js rakentaa suhteellisia osoitteita, joita
+    // Noden oikea Request ei suostu jäsentämään.
+    Request: class { constructor(osoite) { this.url = String(osoite); } },
+    caches: {
+      open: async (nimi) => teeKori(nimi),
+      keys: async () => [...korit.keys()],
+      match: async () => undefined,
+      delete: async () => true,
+    },
+    fetch: (osoite, asetukset = {}) => {
+      haut.push({ osoite: String(osoite), signal: asetukset.signal });
+      if (aani === 'nopea') return Promise.resolve({ ok: true, status: 200, runko: String(osoite) });
+      // jumi: ei vastausta koskaan — paitsi jos nouto keskeytetään.
+      return new Promise((_, hylkaa) => {
+        asetukset.signal?.addEventListener('abort', () => hylkaa(new Error('AbortError')));
+      });
+    },
+    clients: { claim: async () => {}, matchAll: async () => [] },
+    skipWaiting: () => { skipWaitingAjettu = true; return Promise.resolve(); },
+    registration: {},
+    location: new URL('https://ravelius.github.io/Matkakirja/sw.js'),
+  };
+  ctx.self = ctx;
+  ctx.globalThis = ctx;
+  const kuuntelijat = new Map();
+  ctx.addEventListener = (nimi, fn) => { kuuntelijat.set(nimi, fn); };
+  vm.createContext(ctx);
+  vm.runInContext(lahde, ctx, { filename: 'sw.js' });
+  return {
+    ctx, korit, haut, kuuntelijat,
+    onSkipWaiting: () => skipWaitingAjettu,
+    aja: (nimi) => {
+      let lupaus = Promise.resolve();
+      kuuntelijat.get(nimi)({ waitUntil: (p) => { lupaus = p; } });
+      return lupaus;
+    },
+  };
+}
+
+test('äänten esilatauksen aikakatkaisu on kirjattu ja järkevä', () => {
+  const osuma = /^const AANI_ESILATAUS_KATKO_MS = (\d+);$/m.exec(sw);
+  assert.ok(osuma, 'sw.js:stä ei löydy AANI_ESILATAUS_KATKO_MS-vakiota');
+  const ms = Number(osuma[1]);
+  // Mitattu normaaliaika 0,43 s (26/26 ääntä): katko ei saa alittaa
+  // hitaan mutta toimivan ämpärin tarvetta eikä venyä niin pitkäksi,
+  // ettei asennus enää valmistuisi järkevässä ajassa.
+  assert.ok(ms >= 3000 && ms <= 12000, `aikakatkaisu ${ms} ms on mitatun alueen ulkopuolella`);
+});
+
+test('esilataus palaa vaikka yksikään äänihaku ei koskaan vastaisi', async () => {
+  const pesa = lataaSw({ katkoMs: 200, aani: 'jumi' });
+  const alku = Date.now();
+  await pesa.ctx.esilataaYdinaanet();
+  const kesto = Date.now() - alku;
+  assert.ok(kesto < 3000, `esilataus kesti ${kesto} ms — aikakatkaisu ei laukennut`);
+  assert.ok(pesa.haut.length >= 20, `hakuja lähti vain ${pesa.haut.length}`);
+  // Jokainen nouto sai keskeytyssignaalin, ja se todella laukesi:
+  // jumittunut soketti vapautuu eikä jää roikkumaan.
+  assert.ok(pesa.haut.every((h) => h.signal), 'osa hauista lähti ilman keskeytyssignaalia');
+  assert.ok(pesa.haut.every((h) => h.signal.aborted), 'keskeytyssignaali ei laukennut');
+});
+
+test('asennus valmistuu ja skipWaiting ajetaan, vaikka äänihaut jumittaisivat', async () => {
+  const pesa = lataaSw({ katkoMs: 200, aani: 'jumi' });
+  const alku = Date.now();
+  await pesa.aja('install');
+  const kesto = Date.now() - alku;
+  assert.ok(kesto < 3000, `asennus kesti ${kesto} ms — ääni esti asennuksen valmistumisen`);
+  assert.ok(pesa.onSkipWaiting(),
+    'skipWaiting jäi ajamatta — palvelutyöntekijä ei aktivoituisi eikä peli käynnistyisi offline');
+  // Äänikoriin ei jäänyt mitään: ääni haetaan ensimmäisellä soitolla.
+  assert.equal(pesa.korit.get('matkakirja-aanet-v1')?.size ?? 0, 0);
+});
+
+test('kun ämpäri vastaa, koko ydinsetti päätyy äänikoriin kuten ennenkin', async () => {
+  const pesa = lataaSw({ katkoMs: 5000, aani: 'nopea' });
+  await pesa.aja('install');
+  assert.ok(pesa.onSkipWaiting(), 'skipWaiting jäi ajamatta');
+  const kori = pesa.korit.get('matkakirja-aanet-v1');
+  const lista = /const YDINAANET = \[([^\]]+)\]/.exec(sw);
+  const maara = [...lista[1].matchAll(/'([^']+)'/g)].length;
+  assert.equal(kori?.size ?? 0, maara,
+    `äänikoriin päätyi ${kori?.size ?? 0}/${maara} ääntä — esilataus ei enää toimi`);
+  // Ja osoitteet ovat ämpärin audio/-polusta, eivät repon poluista.
+  assert.ok([...kori.keys()].every((o) => o.startsWith('https://media.matkakirja.app/audio/')));
 });
