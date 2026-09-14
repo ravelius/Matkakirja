@@ -57,7 +57,11 @@ test('kohdistusliput kantavat kuitin eivatka oleta vientia', () => {
 test('workflow vartioi julkisen completed-kuitin ja julkaisee vain tarkastusartefaktin', () => {
   const workflow = readFileSync(new URL('../.github/workflows/generoi-luennat.yml', import.meta.url), 'utf8');
   assert.match(workflow, /https:\/\/media\.matkakirja\.app\/audio\/receipts\/horatio\/\*\.completed\.json/);
-  assert.match(workflow, /node tools\/kohdista-luennat\.mjs --vie --kuitti "\$KUITTI"/);
+  assert.match(workflow, /liput=\(--kuiva --kuitti "\$KUITTI"\)/);
+  assert.match(workflow, /liput=\(--vie --kuitti "\$KUITTI"\)/);
+  assert.equal((workflow.match(/liput\+=\(--kaupungit "\$KAUPUNGIT"\)/g) ?? []).length, 2,
+    'kaupunkirajaus pitää välittää sekä kuivaan että oikeaan kohdistusajoon');
+  assert.equal((workflow.match(/node tools\/kohdista-luennat\.mjs "\$\{liput\[@\]\}"/g) ?? []).length, 2);
   assert.match(workflow, /name: horatio-aikaleimat-/);
   assert.doesNotMatch(workflow, /git push|Committoi aikaleimat/);
   assert.match(workflow, /permissions:\s+contents: read/);

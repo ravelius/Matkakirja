@@ -9,6 +9,7 @@
  */
 
 import { spawnSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -77,34 +78,174 @@ export function livianKohdistustyo(kaupunki, kuittirivi = null) {
   return { ...sopimus, teksti, aaniOsoite, r2Kohde, kuittiAani: kuittirivi?.finalArtifact ?? null };
 }
 
-/** Hyväksy vain valmistuneen tuotantokuitin muuttumaton, SHA-sidottu city-3-tulos. */
+/**
+ * Todista kuitin erätunnus koko alkuperäisestä rivijärjestyksestä.
+ *
+ * Osittain onnistuneesta erästä ei saa rakentaa uutta seitsemän rivin
+ * "kuittia": batchId syntyi kaikista kymmenestä tilatusta repliikistä,
+ * sourceCommitista ja reseptistä ennen ensimmäistä API-kutsua. Siksi
+ * laskemme tunnuksen uudelleen KOKO kuitista, vaikka kohdistukseen kelpaavat
+ * lopulta vain generated-rivit.
+ */
+export function kuitinEraTasmaa(data) {
+  const eka = data?.utterances?.[0];
+  if (!eka) return false;
+  const asetukset = kanoninenSointiresepti(eka.settings);
+  const postprocess = kanoninenJalkikasittely(eka.postprocess);
+  if (!kelpaaKuittiresepti(eka.settings, eka.postprocess) || data.utterances.some((rivi) => {
+    const rivinAsetukset = kanoninenSointiresepti(rivi?.settings);
+    const rivinPostprocess = kanoninenJalkikasittely(rivi?.postprocess);
+    return !kelpaaKuittiresepti(rivi?.settings, rivi?.postprocess)
+      || JSON.stringify(rivinAsetukset) !== JSON.stringify(asetukset)
+      || JSON.stringify(rivinPostprocess) !== JSON.stringify(postprocess)
+      || rivi?.voiceId !== eka.voiceId || rivi?.model !== eka.model;
+  })) return false;
+  const suunnitelma = data.utterances.map((rivi) => ({
+    utteranceKey: rivi?.utteranceKey,
+    visibleTextSha256: rivi?.visibleTextSha256,
+    ttsTextSha256: rivi?.ttsTextSha256,
+  }));
+  /*
+   * Vanhoissa kuiteissa pakota ei ollut oma kenttänsä. Hyväksymme
+   * tunnuksen vain jos jompikumpi generaattorin kahdesta eksplisiittisestä
+   * arvosta tuottaa kuitin exact batchId:n. Versionoitu final-polku vaatii
+   * aina staged=true; live-avainta ei tässä kohdisteta.
+   */
+  return [false, true].some((forcedRegeneration) => {
+    const tunniste = createHash('sha256').update(JSON.stringify({
+      sourceCommit: data.sourceCommit,
+      voiceId: eka.voiceId,
+      model: eka.model,
+      asetukset,
+      postprocess,
+      suunnitelma,
+      forcedRegeneration,
+      retryReason: data.retryReason || null,
+      staged: true,
+    })).digest('hex').slice(0, 20);
+    return data.batchId === `pulu-${tunniste}`;
+  });
+}
+
+/** Vain kaksi omistajan lukitsemaa sointipolvea: vanha R2 ja uusi oletusasetuskokeilu. */
+function tasmaaOlio(arvo, odotettu) {
+  if (!arvo || typeof arvo !== 'object' || Array.isArray(arvo)) return false;
+  const avaimet = Object.keys(arvo);
+  return avaimet.length === Object.keys(odotettu).length
+    && avaimet.every((avain) => Object.hasOwn(odotettu, avain) && Object.is(arvo[avain], odotettu[avain]));
+}
+
+function kanoninenSointiresepti(asetukset) {
+  const vanha = {
+    stability: 0.5, similarityBoost: 0.75, style: 0.6, useSpeakerBoost: true, speed: null,
+  };
+  const uusi = {
+    stability: 0.5, similarityBoost: null, style: null, useSpeakerBoost: null, speed: null,
+  };
+  if (tasmaaOlio(asetukset, vanha)) return vanha;
+  if (tasmaaOlio(asetukset, uusi)) return uusi;
+  return null;
+}
+
+export function kelpaaSointiresepti(asetukset) {
+  return Boolean(kanoninenSointiresepti(asetukset));
+}
+
+/** Vanhan 40-sarjan ffmpeg-resepti tai uuden pilotin täsmällinen ei-käsittelyä-merkintä. */
+function kanoninenJalkikasittely(postprocess) {
+  const vanha = {
+    silenceTrim: true,
+    targetLufs: -17,
+    lufsTolerance: 1.5,
+    fadeSeconds: 0.03,
+    tailPaddingSeconds: 0.15,
+    tempo: 1,
+    arrivalEchoSeconds: 1.5,
+  };
+  const uusi = { kind: 'none' };
+  if (tasmaaOlio(postprocess, vanha)) return vanha;
+  if (tasmaaOlio(postprocess, uusi)) return uusi;
+  return null;
+}
+
+export function kelpaaJalkikasittely(postprocess) {
+  return Boolean(kanoninenJalkikasittely(postprocess));
+}
+
+/** Reseptin puolikkaita ei saa ristiinyhdistää sukupolvien välillä. */
+export function kelpaaKuittiresepti(asetukset, postprocess) {
+  const sointi = kanoninenSointiresepti(asetukset);
+  const kasittely = kanoninenJalkikasittely(postprocess);
+  if (!sointi || !kasittely) return false;
+  const vanha = sointi.similarityBoost === 0.75 && kasittely.silenceTrim === true;
+  const uusi = sointi.similarityBoost === null && kasittely.kind === 'none';
+  return vanha || uusi;
+}
+
+function kelpaaArtefakti(artefakti, nimi) {
+  return artefakti?.fileName === nimi && /^[0-9a-f]{64}$/.test(artefakti.sha256 ?? '')
+    && Number.isInteger(artefakti.bytes) && artefakti.bytes > 0
+    && Number(artefakti.actualDurationSeconds) > 0;
+}
+
+/**
+ * Hyväksy valmistuneesta kuitista vain muuttumattomat, SHA-sidotut
+ * generated-rivit. `completed-with-errors` kelpaa kuljetuskuoreksi, mutta
+ * sen validation-failed-rivejä ei koskaan palauteta kohdistettaviksi.
+ */
 export async function kuittirivit(data) {
-  if (!data || data.schemaVersion !== 1 || data.generationStatus !== 'completed'
+  if (!data || data.schemaVersion !== 1
+    || !['completed', 'completed-with-errors'].includes(data.generationStatus)
     || !Array.isArray(data.utterances)) throw new Error('tuotantokuitti ei ole valmis schemaVersion 1 -kuitti');
   if (!/^pulu-[0-9a-f]{20}$/.test(data.batchId ?? '') || !/^[0-9a-f]{40}$/.test(data.sourceCommit ?? '')) {
     throw new Error('tuotantokuitin erä- tai commit-tunnus ei kelpaa');
   }
+  const kaupungit = new Set();
+  const avaimet = new Set();
+  for (const rivi of data.utterances) {
+    if (kaupungit.has(rivi?.cityId) || avaimet.has(rivi?.utteranceKey)) {
+      throw new Error(`tuotantokuitissa on duplikaattirivi: ${rivi?.utteranceKey ?? '?'}`);
+    }
+    kaupungit.add(rivi?.cityId);
+    avaimet.add(rivi?.utteranceKey);
+  }
+  if (!kuitinEraTasmaa(data)) throw new Error('tuotantokuitin erätunnus ei vastaa alkuperäistä tilausta');
   const tulos = new Map();
   for (const rivi of data.utterances) {
     const kaupunki = String(rivi?.cityId ?? '');
     const sopimus = livianLuentatyo(kaupunki);
+    const raaka = rivi?.rawArtifact;
     const artefakti = rivi?.finalArtifact;
+    const odotettuStaging = `aanet/pulu/erat/${data.batchId}/${sopimus?.aaniNimi ?? ''}`;
     const odotettuAvain = `aanet/pulu/versiot/${data.sourceCommit.slice(0, 12)}/${data.batchId}/${sopimus?.aaniNimi ?? ''}`;
     const odotettuPuhe = sopimus ? puhemuoto(rivi.visibleText, TAGIT[sopimus.avain]) : '';
     if (!sopimus || rivi.utteranceKey !== sopimus.avain || rivi.visibleTextSha256 !== sopimus.tekstiSha256
       || await tekstinSha256(rivi.visibleText) !== sopimus.tekstiSha256
       || rivi.ttsText !== odotettuPuhe || await tekstinSha256(rivi.ttsText) !== rivi.ttsTextSha256
       || rivi.voiceId !== PULU_AANI_OLETUS || rivi.model !== PULU_MALLI_OLETUS
-      || rivi.settings?.stability !== 0.5 || rivi.settings?.similarityBoost !== 0.75
-      || rivi.settings?.style !== 0.6 || rivi.outputFormat !== 'mp3_44100_128'
-      || rivi.generationStatus !== 'generated' || !/^[0-9a-f]{64}$/.test(artefakti?.sha256 ?? '')
-      || !Number.isInteger(artefakti?.bytes) || artefakti.bytes <= 0
-      || !(Number(artefakti?.actualDurationSeconds) > 0) || artefakti.fileName !== sopimus.aaniNimi
-      || rivi.finalObjectKey !== odotettuAvain || tulos.has(kaupunki)) {
+      || !kelpaaSointiresepti(rivi.settings) || !kelpaaJalkikasittely(rivi.postprocess)
+      || rivi.outputFormat !== 'mp3_44100_128'
+      || rivi.stagingObjectKey !== odotettuStaging || rivi.finalObjectKey !== odotettuAvain
+      || rivi.promotionStatus !== 'pending-code-deploy') {
+      throw new Error(`tuotantokuitin rivi ei kelpaa kohdistukseen: ${rivi?.utteranceKey ?? '?'}`);
+    }
+    if (rivi.generationStatus === 'validation-failed') {
+      if (data.generationStatus !== 'completed-with-errors') {
+        throw new Error(`completed-kuitti sisältää epäonnistuneen rivin: ${rivi?.utteranceKey ?? '?'}`);
+      }
+      continue;
+    }
+    if (rivi.generationStatus !== 'generated'
+      || !kelpaaArtefakti(raaka, `raaka-${sopimus.aaniNimi}`)
+      || !kelpaaArtefakti(artefakti, sopimus.aaniNimi)
+      || (rivi.postprocess?.kind === 'none'
+        && (raaka.sha256 !== artefakti.sha256 || raaka.bytes !== artefakti.bytes))
+      || tulos.has(kaupunki)) {
       throw new Error(`tuotantokuitin rivi ei kelpaa kohdistukseen: ${rivi?.utteranceKey ?? '?'}`);
     }
     tulos.set(kaupunki, rivi);
   }
+  if (!tulos.size) throw new Error('tuotantokuitissa ei ole yhtään onnistunutta kohdistettavaa riviä');
   return tulos;
 }
 

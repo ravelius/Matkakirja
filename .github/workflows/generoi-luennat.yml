@@ -243,7 +243,9 @@ jobs:
               echo "::error::Kuitti ei ole Matkakirjan valmistunut Horatio-tuotantokuitti."
               exit 1
             esac
-            node tools/kohdista-luennat.mjs --kuiva --kuitti "$KUITTI"
+            liput=(--kuiva --kuitti "$KUITTI")
+            if [ -n "$KAUPUNGIT" ]; then liput+=(--kaupungit "$KAUPUNGIT"); fi
+            node tools/kohdista-luennat.mjs "${liput[@]}"
           else
             node tools/kohdista-luennat.mjs --kuiva --kaupungit "$KAUPUNGIT"
           fi
@@ -253,6 +255,7 @@ jobs:
         env:
           ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
           KUITTI: ${{ inputs.kuitti }}
+          KAUPUNGIT: ${{ inputs.kaupungit }}
           # Samat nimet ja sama endpoint-tyyli kuin muissakin
           # ääniajoissa (generoi-tehosteet.yml, generoi-pulu.yml).
           AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
@@ -262,7 +265,11 @@ jobs:
           AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
           R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
           R2_BUCKET: ${{ secrets.R2_BUCKET }}
-        run: node tools/kohdista-luennat.mjs --vie --kuitti "$KUITTI"
+        run: |
+          set -euo pipefail
+          liput=(--vie --kuitti "$KUITTI")
+          if [ -n "$KAUPUNGIT" ]; then liput+=(--kaupungit "$KAUPUNGIT"); fi
+          node tools/kohdista-luennat.mjs "${liput[@]}"
 
       # Sidonta ei kutsu ElevenLabsia, joten avainta ei anneta — mutta
       # R2-tunnukset ovat samat kuin kohdistuksella: tiedosto viedään
