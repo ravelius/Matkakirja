@@ -36,3 +36,5 @@ kirjauksessa.
 | 16 | LTU | 34803776066 | success | 2026-09-14-tasoitus | true |
 | 17 | LVA | 34803897447 | success | 2026-09-14-tasoitus | true |
 | 18 | NLD | 34804015482 | success | 2026-09-14-tasoitus | true |
+| 19 | NOR | 34804120620 | success | 2026-09-14-tasoitus | true |
+| 20 | POL | 34804502359 | success | 2026-09-14-tasoitus | true |
