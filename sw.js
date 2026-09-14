@@ -1622,6 +1622,37 @@ const YDINAANET = [
 ].map((nimi) => `${AANI_JUURI}${nimi}`);
 
 /*
+ * ÄÄNTEN ESILATAUKSEN AIKAKATKAISU (mitattu 14.9.2026).
+ *
+ * Ilman katkoa asennus jäi roikkumaan ämpärin varaan: mitattu koe,
+ * jossa media.matkakirja.app otti TCP-yhteyden vastaan muttei koskaan
+ * vastannut, jätti palvelutyöntekijän tilaan `installing` vielä 90
+ * sekunnin kuluttua, vaikka versiokori oli ollut täysi (1252/1252) jo
+ * 50 sekunnin kohdalla. `skipWaiting()` ei silloin ehdi ajoon, joten
+ * offline-tuki ja koko päivitysketju jäävät syntymättä — sama
+ * lopputulos kuin SHELLin kaksoiskappaleessa (tests/sw.test.mjs).
+ *
+ * Katkon pituus perustuu mittaukseen, ei arvaukseen (Chromium,
+ * 26 ääntä, sama paikallinen palvelin, vastausviive muuttujana):
+ *
+ *   viive 0 ms     → 26/26 ääntä korissa, esilataus 0,43 s
+ *   viive 800 ms   → 21/26 ääntä korissa, esilataus 5,96 s (katko)
+ *   viive 1500 ms  →  9/26 ääntä korissa, esilataus 6,41 s (katko)
+ *   viive 4000 ms  →  3/26 ääntä korissa, esilataus 6,05 s (katko)
+ *   ei vastausta   →  0/26 ääntä korissa, esilataus 6,12–6,29 s (katko)
+ *
+ * Kuusi sekuntia on siis noin 14-kertainen mitattuun normaaliaikaan
+ * (0,43 s), joten toimiva ämpäri ehtii aina; hitaalla yhteydellä osa
+ * setistä jää hakematta nyt ja haetaan ensimmäisellä soitolla. Tärkein
+ * mitattu lukema on viimeinen sarake: asennus valmistuu joka tilanteessa
+ * noin kuudessa sekunnissa sen sijaan, että se jäisi roikkumaan.
+ *
+ * ÄÄNI ON KORISTE, PELI ON PÄÄASIA: jos katko osuu, ääntä ei haeta nyt
+ * vaan ensimmäisellä soitolla — pelin toiminta ei muutu.
+ */
+const AANI_ESILATAUS_KATKO_MS = 6000;
+
+/*
  * Ydinsetin esilataus äänikoriin (AANICACHE, sama kori josta
  * fetch-käsittelijä palvelee ämpärin audio/-pyynnöt).
  *
@@ -1630,16 +1661,36 @@ const YDINAANET = [
  * olisi opaakki eikä kelpaisi koriin. Asennus EI saa kaatua, jos ääni
  * jää saamatta — ydinsetti on nopeutta varten, ei asennuksen ehto,
  * joten jokainen virhe niellään erikseen.
+ *
+ * Katko on kaksinkertainen tarkoituksella:
+ *  1. Yhteinen AbortController katkaisee kaikki kesken olevat noudot,
+ *     jolloin jumittunut soketti todella vapautuu eikä jää roikkumaan.
+ *  2. Uloin Promise.race varmistaa paluun silloinkin, kun jumi ei ole
+ *     fetchissä vaan koriin pääsyssä (caches.open, kiintiöpaine) —
+ *     AbortController ei yllä sinne asti.
+ * Funktio palaa siis AINA viimeistään katkon kuluttua.
  */
-async function esilataaYdinaanet() {
-  const kori = await caches.open(AANICACHE);
-  await Promise.all(YDINAANET.map(async (osoite) => {
-    try {
-      if (await kori.match(osoite)) return;
-      const vastaus = await fetch(osoite, { mode: 'cors' });
-      if (vastaus.ok && vastaus.status === 200) await kori.put(osoite, vastaus);
-    } catch { /* ääni jää hakematta nyt, haetaan ensimmäisellä soitolla */ }
-  }));
+async function esilataaYdinaanet(katkoMs = AANI_ESILATAUS_KATKO_MS) {
+  const vahti = new AbortController();
+  const kello = setTimeout(() => vahti.abort(), katkoMs);
+  const tyo = (async () => {
+    const kori = await caches.open(AANICACHE);
+    await Promise.all(YDINAANET.map(async (osoite) => {
+      try {
+        if (await kori.match(osoite)) return;
+        const vastaus = await fetch(osoite, { mode: 'cors', signal: vahti.signal });
+        if (vastaus.ok && vastaus.status === 200) await kori.put(osoite, vastaus);
+      } catch { /* ääni jää hakematta nyt, haetaan ensimmäisellä soitolla */ }
+    }));
+  })();
+  try {
+    await Promise.race([
+      tyo,
+      new Promise((valmis) => { setTimeout(valmis, katkoMs + 250); }),
+    ]);
+  } finally {
+    clearTimeout(kello);
+  }
 }
 
 self.addEventListener('install', (event) => {
@@ -1656,6 +1707,9 @@ self.addEventListener('install', (event) => {
           .catch(() => {})));
         // Äänten ydinsetti ämpäristä omaan koriinsa — ei tähän
         // versiokoriin, koska äänet eivät vanhene version mukana.
+        // Aikakatkaistu (AANI_ESILATAUS_KATKO_MS): estetty tai hyvin
+        // hidas ämpäri ei saa jättää asennusta roikkumaan, koska
+        // silloin skipWaiting jää ajamatta eikä peli käynnisty offline.
         await esilataaYdinaanet().catch(() => {});
       })
       .then(() => self.skipWaiting()),
