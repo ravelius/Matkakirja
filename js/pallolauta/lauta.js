@@ -2758,6 +2758,13 @@ export async function avaaPallolauta(ui) {
       katto,
       vain,
       kokoKerroin: kaupunginMitat.nimiKerroin,
+      /*
+       * NIMIKYLTIT KARTTAAN (omistaja 14.9.2026; sääntö ja mitatut
+       * luvut js/pallolauta/nimet.js NIMIKYLTIT KARTTAAN). Kameran
+       * mittakaava on jo laskettu tässä (`nakyva.skaala`), ja se on
+       * sama luku, jolla maapaneeli skaalautuu.
+       */
+      karttaskaala: nakyva?.skaala ?? 0,
       // Ladonta varaa pelaajan pisteelle sen tilan, joka sillä ruudulla
       // OIKEASTI on — sama yksi sääntö kuin piirrolla.
       pisteSade: piirrettyHalkaisijaPx(pelaajanKaupunki() ? { id: pelaajanKaupunki() } : null) / 2,
