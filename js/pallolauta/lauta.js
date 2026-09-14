@@ -1408,6 +1408,33 @@ export async function avaaPallolauta(ui) {
    */
   ui.pallonPanorajaus = (lat, lng) => kamera.rajaaPanorointi(maanPanoraja(), lat, lng);
 
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * KATTO EI SAA VIEDÄ KAMERAA MUKANAAN (erä 12, PÄÄTÖKSET 9 kohta 2)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * MITATTU VIKA (Ranska, 390 × 844, 14.9.2026). Saapumisajo vie
+   * kameran korkeuteen 0,6268 ja katto asettuu 0,6553:een. Noin
+   * seitsemän sekuntia myöhemmin ResizeObserver ajaa `mitoita`n
+   * kotelon HETKELLISELLÄ mitalla (kuvasuhde 0,48 → 0,72 yhden
+   * kehyksen ajan), jolloin tämä funktio laskee katoksi 0,4388.
+   * OrbitControls puristaa kameran siihen SAMAN TIEN. Kun oikea mitta
+   * palaa 0,6 s myöhemmin, KATTO palaa 0,6553:een mutta KAMERA JÄÄ
+   * 0,4388:aan — ja pelaajalle jää 49 % uloszoomausvaraa siihen
+   * näkymään, jonka piti olla uloin mahdollinen. Tämä on sama juurisyy
+   * kuin erän 9 raportin avoin löydös *"saapumiskorkeus ei ole
+   * yksikäsitteinen"* (0,4465 tai 0,6268 samalla koodilla): se, kumpi
+   * korkeus jää voimaan, ratkeaa siitä, ehtiikö mittauspiikki ennen
+   * saapumisajoa vai sen jälkeen.
+   *
+   * KORJAUS: katon LASKU muistetaan, ja kun katto nousee takaisin,
+   * kamera palautetaan sinne, mistä puristus sen vei. Palautus tehdään
+   * VAIN jos kamera on yhä kiinni siinä alemmassa katossa — jos pelaaja
+   * on sillä välin zoomannut itse, hänen zoominsa voittaa. Näin
+   * kuvasuhteen AITO muutos (ruudun kääntö) rajaa kameran kuten ennen,
+   * mutta hetkellinen mittauspiikki ei jätä jälkeään.
+   */
+  let kattoPuristus = null;
   const tahdistaZoomirajat = () => {
     const ohj = pallo.controls();
     const maa = maanZoomiraja();
@@ -1416,6 +1443,23 @@ export async function avaaPallolauta(ui) {
     let max = PALLO_KORKEUS_MAX;
     if (Number.isFinite(zoomirajaSyrjaytys?.max)) max = zoomirajaSyrjaytys.max;
     else if (Number.isFinite(maa?.max)) max = maa.max;
+    const pov = pallo.pointOfView();
+    const nyt = pov?.altitude;
+    if (Number.isFinite(nyt) && Number.isFinite(max)) {
+      if (max < nyt - 1e-6) {
+        // Katto laskee nykyisen korkeuden alle: kirjaa mistä lähdettiin.
+        if (!kattoPuristus) kattoPuristus = { korkeus: nyt };
+        kattoPuristus.katto = max;
+      } else if (kattoPuristus) {
+        const talteen = kattoPuristus;
+        kattoPuristus = null;
+        const pinnissa = Math.abs(nyt - talteen.katto) < 1e-3;
+        const palaa = Math.min(talteen.korkeus, max);
+        if (pinnissa && palaa > nyt + 1e-6) {
+          pallo.pointOfView({ lat: pov.lat, lng: pov.lng, altitude: palaa }, 0);
+        }
+      }
+    }
     ohj.minDistance = pallonSade * (1 + min);
     ohj.maxDistance = pallonSade * (1 + max);
   };
@@ -2988,9 +3032,13 @@ export async function avaaPallolauta(ui) {
    * silloin paneelia ei ole kartalla.
    */
   const saapumislaatikko = async () => {
+    const iso = kohteidenNykyinenIso(ui);
     const laatikko = await saapumisrajaus();
     if (!laatikko || !maapaneeliKartassa()) return laatikko;
-    return paneelinLaatikko(laatikko);
+    // ISO kulkee mukana, koska ankkuri on erästä 12 alkaen maakohtainen
+    // (Ranskalla Biskajanlahti) — laajennus tehdään siihen suuntaan,
+    // jossa paneeli oikeasti on.
+    return paneelinLaatikko(laatikko, iso);
   };
 
   /** Saapumisajo: maan laatikko ruutuun, tai entinen kaupunkinäkymä. */

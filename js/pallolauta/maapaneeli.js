@@ -83,10 +83,23 @@
  * 3 tumman pergamenttipohjan (`--overlay-card`) ja vaalean musteen,
  * ja typografia on nurkkataulun. Kirjattu raporttiin.
  *
- * === PAIKKA: MAAN ALAPUOLELLA, RAJAN ULKOPUOLELLA ===================
+ * === ERÄ 12: MAAKOHTAINEN ANKKURI, KATKEAMATON SKAALA, ISOMMAT
+ * === SISENNYKSET ====================================================
  *
- * Ankkuri on maan laatikon ETELÄREUNAN KESKELLÄ, pienen raon verran
- * sen ulkopuolella, ja paneeli riippuu siitä alaspäin. Kolme syytä:
+ * PÄÄTÖKSET 9 (omistaja 14.9.2026): *"siirra maainfo laatikko
+ * biskajanlahden paalle. silla pitaa olla kiintea paikka ja koko. eli
+ * koko pysyy karttaan verrattuna samana, suurenee zoomatessa ja
+ * toisinpain. laatikolla saisi olla isommat sisennykset tekstille
+ * (kehys liian lahella)."* Kolme muutosta, kukin omassa lohkossaan
+ * alempana: `MAAPANEELIN_ANKKURIT` (Ranskalle Biskajanlahti),
+ * `MAAPANEELIN_SKAALA_MAX` (katto ei enää katkaise pelialueella) ja
+ * peruskoon kasvu tasan pehmusteen verran.
+ *
+ * === OLETUSPAIKKA: MAAN ALAPUOLELLA, RAJAN ULKOPUOLELLA ==============
+ *
+ * Ilman maakohtaista ankkuria paneeli on maan laatikon ETELÄREUNAN
+ * KESKELLÄ, pienen raon verran sen ulkopuolella, ja riippuu siitä
+ * alaspäin. Kolme syytä:
  *
  *   - Se on maan RAJAN ULKOPUOLELLA joka maalla, myös silloin kun maa
  *     ei ole suorakaide (laatikko on maan uloin mitta).
@@ -111,8 +124,9 @@
 import { MAA_KATEGORIAT } from '../packs/maa-kategoriat.js';
 import { kasikehys } from '../kasinpiirto.js';
 import {
-  kieliOsat, maanNimi, maanRivit, maapaneeliKartassa,
+  kieliOsat, maanNimi, maanRivit, maapaneeliKartassa, projisoiLaudalle,
 } from '../fokusmitat.js';
+import { PALLO_LAUTA } from '../pallo.js';
 import { FOKUS_MAANIMET } from '../packs/fokus-grc.js';
 
 /**
@@ -133,8 +147,30 @@ import { FOKUS_MAANIMET } from '../packs/fokus-grc.js';
  * täsmälleen ennallaan — ruutuskaala on sama kuin ennen erää, ja
  * kortti on ruudulla tasan puolet leveä ja puolet korkea.
  */
-export const MAAPANEELIN_LEVEYS_PX = 95;
-export const MAAPANEELIN_KORKEUS_PX = 74;
+/*
+ * ERÄ 12: SISENNYS KASVAA, TEKSTI EI KUTISTU (PÄÄTÖKSET 9 kohta 5,
+ * omistaja 14.9.2026: *"laatikolla saisi olla isommat sisennykset
+ * tekstille (kehys liian lahella)"*).
+ *
+ * Kaksoisviivakehyksen SISÄREUNA on 3,74 px kortin reunasta (ohut
+ * 0,494 + väli 1,349 + paksu 1,9, js/kasinpiirto.js), ja sisuksen
+ * pehmuste oli 4 / 4,5 px — tekstin ja sisemmän viivan väliin jäi
+ * 0,26 px pystyssä ja 0,76 px vaakassa. Pehmuste KAKSINKERTAISTUU
+ * (8 / 9 px), jolloin väli on 4,26 / 5,26 px.
+ *
+ * KORTTI KASVAA TASAN PEHMUSTEEN VERRAN, EIKÄ TEKSTIÄ TIIVISTETÄ.
+ * Sisällön ala pysyy täsmälleen entisenä (86 × 66 px), joten kortti on
+ * 95 + 9 = 104 ja 74 + 8 = 82 px. PÄÄTÖKSET 7 kieltää fonttien,
+ * värien, sisällön ja viivamittojen muuttamisen — mikään niistä ei
+ * muutu.
+ *
+ * OSUUDET KASVAVAT SAMASSA SUHTEESSA, jotta `perusta` (lautayksikköä
+ * per css-px) pysyy ennallaan: 0,175 × 104/95 ja 0,21 × 82/74. Näin
+ * TEKSTI ON RUUDULLA TÄSMÄLLEEN ENTISEN KOKOINEN joka zoomilla ja vain
+ * kortin oma reunus levenee — juuri se, mitä omistaja pyysi.
+ */
+export const MAAPANEELIN_LEVEYS_PX = 104;
+export const MAAPANEELIN_KORKEUS_PX = 82;
 /**
  * KAKSI OSUUTTA MAAN LAATIKOSTA, JA TIUKEMPI VOITTAA (erä 9).
  *
@@ -161,20 +197,34 @@ export const MAAPANEELIN_KORKEUS_PX = 74;
  * (Venäjä, Kazakstan): ilman sitä paneeli olisi niillä maan laatikon
  * korkuinen. Ranskalla se ei sido — leveysosuus on tiukempi.
  */
-export const MAAPANEELIN_LEVEYS_OSUUS = 0.175;
-export const MAAPANEELIN_KORKEUS_OSUUS = 0.21;
+export const MAAPANEELIN_LEVEYS_OSUUS = 0.1916;
+export const MAAPANEELIN_KORKEUS_OSUUS = 0.2327;
 /** Rako maan laatikon reunan ja paneelin väliin, osuus laatikon korkeudesta. */
 export const MAAPANEELIN_RAKO_OSUUS = 0.02;
-/**
- * Ruutuskaalan rajat. Alaraja pitää tekstin luettavana silloinkin, kun
- * pelaaja zoomaa maailmankuvaan (kehittäjän maailmanäkymä); yläraja
- * estää sen, että lähikuvassa paneeli kasvaisi ruudun kokoiseksi ja
- * peittäisi kartan. Molemmat ovat rajoja eivätkä mitoituksia: normaali
- * pelialue (saapumisnäkymästä muutama zoomiporras sisään) on niiden
- * välissä, joten paneeli skaalautuu siellä vapaasti.
+/*
+ * RUUTUSKAALAN RAJAT OVAT VAIN KEHITTÄJÄN MAAILMANÄKYMÄN VARALLA
+ * (erä 12, PÄÄTÖKSET 9 kohta 4, omistaja 14.9.2026: *"silla pitaa olla
+ * kiintea paikka ja koko. eli koko pysyy karttaan verrattuna samana,
+ * suurenee zoomatessa ja toisinpain"*).
+ *
+ * ENNEN: yläraja 3 KATKAISI skaalautumisen kesken pelialueen. Mitattu
+ * Ranskassa 14.9.2026: saapumisnäkymän skaala on työpöydällä 1,40 ja
+ * puhelimella 0,63, ja lähin sallittu zoomi (kamera.korkeusMin) on
+ * työpöydällä 14,8× ja puhelimella 9,0× sisempänä — skaala olisi siis
+ * 20,7 ja 5,6. Katto 3 tuli vastaan jo parin zoomiportaan jälkeen,
+ * ja siitä eteenpäin paneeli LIUKUI kartan päällä sen sijaan että
+ * olisi pysynyt kartassa kiinni. Juuri sen omistaja näki.
+ *
+ * NYT: yläraja on 64 eli yli kolminkertainen pelialueen suurimpaan
+ * tarpeeseen (20,7) — se ei voi enää sitoa pelissä, mutta pitää
+ * kiinni siitä, ettei jokin rajaton tila (linssi, joka syrjäyttää
+ * zoomirajat) kasvata korttia mielivaltaisesti. Alaraja 0,45 ei sido
+ * pelialueella myöskään: uloin sallittu zoomi antaa puhelimella 0,60.
+ * Se on kehittäjän maailmanäkymän varaus, jossa maakohtaista
+ * zoomikattoa ei ole lainkaan.
  */
 export const MAAPANEELIN_SKAALA_MIN = 0.45;
-export const MAAPANEELIN_SKAALA_MAX = 3;
+export const MAAPANEELIN_SKAALA_MAX = 64;
 
 /**
  * MAALEHDEN AIHETUNNUS → KARTAN SYMBOLIPERHE.
@@ -258,14 +308,55 @@ export function paneelinMitat(laatikko) {
   };
 }
 
-/**
- * Paneelin ankkuri laudan koordinaateissa: laatikon eteläreunan keskellä,
- * raon verran sen ULKOPUOLELLA. Laudan y kasvaa etelään
- * (js/fokusmitat.js laudaltaAsteiksi), joten "ulkopuolella" on `+`.
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * MAAKOHTAINEN ANKKURI (erä 12; PÄÄTÖKSET 9 kohta 3)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistaja 14.9.2026, sanatarkasti: *"siirra maainfo laatikko
+ * biskajanlahden paalle"*. Ankkuri ei siis ole enää pelkkä laatikon
+ * eteläreunan keskikohta, vaan maa saa halutessaan OMAN
+ * KARTTAPISTEENSÄ — kuten vanhassa atlaksessa, jossa kartussi
+ * ladottiin sille merenselälle, joka sattui olemaan tyhjä.
+ *
+ * PISTE ON LAT/LNG EIKÄ LAUTAYKSIKKÖ, koska se valitaan kartalta
+ * (Biskajanlahti) eikä laatikosta. Muunnos tehdään samalla
+ * `projisoiLaudalle`-kaavalla, jota koko lauta käyttää.
+ *
+ * ANKKURI ON PANEELIN YLÄREUNAN KESKIKOHTA (kortin `transform-origin`
+ * on 50 % 0, ks. css .maapaneeli-kortti), joten kortti riippuu
+ * pisteestä alaspäin ja levittyy siitä tasan sivuille.
+ *
+ * RANSKA ON PILOTTI (PÄÄTÖKSET 9 kohta 1): vain sillä on oma piste,
+ * muut maat pitävät eteläreunan oletuksen, kunnes omistaja on
+ * hyväksynyt Ranskan.
+ *
+ * PISTE 45,9 N / 4,6 W on Biskajanlahden avovettä. Paneeli (Ranskalla
+ * 94 × 74 lautayksikköä eli 2,8° × 1,6°) peittää siitä alaspäin
+ * lat 44,3…45,9 N ja lng 6,0…3,2 W: Ranskan Atlantin rannikko on tällä
+ * leveydellä noin 1,2 W ja Espanjan pohjoisrannikko 43,4 N, joten
+ * kortti on kokonaan merellä kummankin maan ulkopuolella.
  */
-export function paneelinAnkkuri(laatikko) {
+export const MAAPANEELIN_ANKKURIT = {
+  FRA: { lat: 45.9, lng: -4.6 },
+};
+
+/**
+ * Paneelin ankkuri laudan koordinaateissa.
+ *
+ * Maalla voi olla oma karttapiste (`MAAPANEELIN_ANKKURIT`); muuten
+ * ankkuri on laatikon eteläreunan keskellä, raon verran sen
+ * ULKOPUOLELLA. Laudan y kasvaa etelään (js/fokusmitat.js
+ * laudaltaAsteiksi), joten "ulkopuolella" on `+`.
+ */
+export function paneelinAnkkuri(laatikko, iso = null, lauta = PALLO_LAUTA) {
   const mitat = paneelinMitat(laatikko);
   if (!mitat) return null;
+  const oma = iso ? MAAPANEELIN_ANKKURIT[iso] : null;
+  if (oma) {
+    const kohta = projisoiLaudalle(lauta, oma.lng, oma.lat);
+    if (kohta) return { x: kohta.x, y: kohta.y };
+  }
   return { x: laatikko.x + laatikko.w / 2, y: laatikko.y + laatikko.h + mitat.rako };
 }
 
@@ -280,17 +371,22 @@ export function paneelinAnkkuri(laatikko) {
  * Tuntematon laatikko palautuu sellaisenaan: kamera saa silloin saman
  * laatikon kuin ennen tätä erää.
  */
-export function paneelinLaatikko(laatikko) {
+export function paneelinLaatikko(laatikko, iso = null) {
   const mitat = paneelinMitat(laatikko);
-  if (!mitat) return laatikko ?? null;
-  const x0 = Math.min(laatikko.x, laatikko.x + laatikko.w / 2 - mitat.w / 2);
-  const x1 = Math.max(laatikko.x + laatikko.w, laatikko.x + laatikko.w / 2 + mitat.w / 2);
-  return {
-    x: x0,
-    y: laatikko.y,
-    w: x1 - x0,
-    h: laatikko.h + mitat.rako + mitat.h,
-  };
+  const ankkuri = paneelinAnkkuri(laatikko, iso);
+  if (!mitat || !ankkuri) return laatikko ?? null;
+  /*
+   * YHDISTE, EI ENÄÄ PELKKÄ ALASPÄIN VENYTYS (erä 12). Ankkuri voi
+   * olla maan laatikon LÄNSIPUOLELLA (Ranskan Biskajanlahti), joten
+   * laajennus lasketaan paneelin nelikulmion ja maan laatikon
+   * yhdisteenä kaikkiin neljään suuntaan. Eteläreunan oletuksella
+   * tulos on täsmälleen entinen.
+   */
+  const x0 = Math.min(laatikko.x, ankkuri.x - mitat.w / 2);
+  const x1 = Math.max(laatikko.x + laatikko.w, ankkuri.x + mitat.w / 2);
+  const y0 = Math.min(laatikko.y, ankkuri.y);
+  const y1 = Math.max(laatikko.y + laatikko.h, ankkuri.y + mitat.h);
+  return { x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
 }
 
 const luo = (tagi, luokka, teksti) => {
@@ -633,7 +729,7 @@ export function luoMaapaneeli({ ui, merkit, kamera, asteet }) {
      */
     paivita({ iso = null, laatikko = null } = {}) {
       const mitat = maapaneeliKartassa() ? paneelinMitat(laatikko) : null;
-      const ankkuri = mitat ? paneelinAnkkuri(laatikko) : null;
+      const ankkuri = mitat ? paneelinAnkkuri(laatikko, iso) : null;
       const a = iso && ankkuri ? asteet(ankkuri) : null;
       if (!a) {
         if (tila) { tila = null; valikkoAuki = false; kirjoita(); }

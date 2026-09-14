@@ -25579,7 +25579,9 @@ svg.rough-annotation { pointer-events: none; }
    tyylit ja kaikki muut takaisin siihen mita ne oli alunperin. sinun
    piti vain lisata kehys"*).
 
-   1. KOKO PUOLEEN. 190×148 → 95×74. Luvut ovat myös
+   1. KOKO PUOLEEN. 190×148 → 95×74 (erä 12: 104×82, ks.
+      .maapaneeli-sisus — kasvu on tasan pehmusteen lisäys eikä muuta
+      minkään muun kokoa). Luvut ovat myös
       js/pallolauta/maapaneeli.js:ssä (MAAPANEELIN_*_PX), ja ne on
       puolitettava yhdessä osuuksien kanssa — perustelu on siellä.
       KAIKKI muut pituudet tässä lohkossa on kerrottu SAMALLA 0,5:llä,
@@ -25599,10 +25601,10 @@ svg.rough-annotation { pointer-events: none; }
    =========================================================================== */
 .maapaneeli-kortti {
   position: absolute;
-  left: -47.5px;
+  left: -52px;
   top: 0;
-  width: 95px;
-  height: 74px;
+  width: 104px;
+  height: 82px;
   box-sizing: border-box;
   transform-origin: 50% 0;
   /* Napautukset kortille (js/pallolauta/maapaneeli.js: NAPAUTUS KULKEE
@@ -25659,11 +25661,20 @@ svg.rough-annotation { pointer-events: none; }
  * antaa 3,5/4,5 px. Kehyksen syvyys on ohut + väli + paksu = 0,49 +
  * 1,35 + 1,9 = 3,74 px, joten PYSTYSUUNNASSA pehmuste on 4 px eikä 3,5:
  * 0,26 px:n lisäys on kehyksen vaatima, ei tyylivalinta.
+ *
+ * ERÄ 12 KAKSINKERTAISTAA PEHMUSTEEN (4/4,5 → 8/9 px). Omistaja
+ * 14.9.2026 (PÄÄTÖKSET 9 kohta 5): *"laatikolla saisi olla isommat
+ * sisennykset tekstille (kehys liian lahella)"*. Tekstin ja kehyksen
+ * SISEMMÄN viivan väli kasvaa 0,26 → 4,26 px pystyssä ja 0,76 →
+ * 5,26 px vaakassa. Kortti kasvaa tasan lisäyksen verran (95 × 74 →
+ * 104 × 82), joten SISÄLLÖN ALA ON TÄSMÄLLEEN ENTINEN 86 × 66 px eikä
+ * tekstiä tiivistetä; js/pallolauta/maapaneeli.js kasvattaa osuudet
+ * samassa suhteessa, jolloin teksti on ruudulla entisen kokoista.
  */
 .maapaneeli-sisus {
   position: absolute;
   inset: 0;
-  padding: 4px 4.5px;
+  padding: 8px 9px;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -25671,9 +25682,14 @@ svg.rough-annotation { pointer-events: none; }
 /* --- otsake: kartuutsi pienoiskoossa (erä 9) ------------------------- */
 
 /* Oikea pehmuste jättää tilaa paljaalle plussalle, joka on kortin
-   oikeassa ylänurkassa (ks. .maapaneeli-lisaa). */
+   oikeassa ylänurkassa (ks. .maapaneeli-lisaa). Luku on SAMA SÄÄNTÖ
+   kuin ennen erää 12 — nimi loppuu täsmälleen siihen, mistä plussa
+   alkaa — vain uudelle pehmusteelle laskettuna: kortin leveys 104 −
+   pehmuste 9 = 95 on sisällön oikea reuna, ja plussa alkaa kohdasta
+   104 − 1 − 14 = 89, joten varaus on 6 px (ennen 95 − 4,5 = 90,5 ja
+   95 − 1 − 14 = 80 eli 11 px). */
 .maapaneeli-nimi {
-  padding-right: 11px;
+  padding-right: 6px;
   min-width: 0;
 }
 .maapaneeli-nimi-suomi {
