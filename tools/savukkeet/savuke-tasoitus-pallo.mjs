@@ -80,6 +80,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { varitasonKansio } from '../../js/laattapyramidi.js';
 
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -128,6 +129,14 @@ if (!LAATAT || !existsSync(join(LAATAT, 'pyramidi.json'))) {
   process.exit(0);
 }
 const PILOTTI = JSON.parse(readFileSync(join(LAATAT, 'pyramidi.json'), 'utf8'));
+/*
+ * PILOTIN LAATTAPOLKU PELIN OMASTA FUNKTIOSTA (14.9.2026). Maa on
+ * polussa, eikä savuke saa kirjoittaa kaavaa uudestaan: silloin
+ * pilottikansio ja peli ehtisivät eriytyä, ja savuke mittaisi 404:ää.
+ */
+const PILOTIN_KIRJAUS = (PILOTTI.varitasot ?? {})[Object.keys(PILOTTI.varitasot ?? {})[0]] ?? null;
+const PILOTIN_POLKU = varitasonKansio(PILOTIN_KIRJAUS);
+const PILOTIN_KANSIO = varitasonKansio(PILOTIN_KIRJAUS, { versio: false });
 const VARITASOT = PILOTTI.varitasot ?? null;
 if (!VARITASOT?.FRA?.tasot?.length) {
   console.error('Pilottiluettelossa ei ole varitasot.FRA-kirjausta — onko ajo tehty --vari FRA:lla?');
@@ -403,12 +412,21 @@ await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
   const url = route.request().url();
   const osa = url.split('/julisteet/pyramidi/')[1] ?? null;
   /*
-   * VÄRILAATTA PAIKALLISESTA KANSIOSTA. Osoite on
-   * `<variversio>/vari/z<taso>/<sarake>/<rivi>.webp`, ja kansiossa
-   * laatat ovat suoraan `vari/z…`-polussa ilman versio-osaa.
+   * VÄRILAATTA PAIKALLISESTA KANSIOSTA — PILOTIN OMASTA POLUSTA.
+   *
+   * Osoite on `<variversio>/vari/<ISO>/z<taso>/<sarake>/<rivi>.webp`
+   * (14.9.2026: maa on polussa), ja polku luetaan pilotin omasta
+   * kirjauksesta pelin omalla funktiolla — sama kaava kuin pelissä.
+   *
+   * VAIN PILOTIN POLKU TARJOILLAAN. Ennen tätä ehtona oli pelkkä
+   * `/vari/`, jolloin myös TUOTANNON värilaatan osoite osui
+   * pilottikansioon — ja se on nyt olemassa: ämpärissä on 27 maan
+   * tasoituslaatasto. Vaiheessa A, jonka pitäisi olla ILMAN
+   * tasoituskerrosta, peli sai siis pilottilaatat, ja A ja B olivat
+   * sama kuva. Muu `/vari/`-osoite saa 404:n.
    */
-  if (osa && osa.includes('/vari/')) {
-    const tiedosto = join(LAATAT, osa.slice(osa.indexOf('/vari/') + 1));
+  if (osa && osa.startsWith(`${PILOTIN_POLKU}/`)) {
+    const tiedosto = join(LAATAT, PILOTIN_KANSIO, osa.slice(PILOTIN_POLKU.length + 1));
     if (!existsSync(tiedosto)) { route.fulfill({ status: 404, body: 'ei' }); return; }
     route.fulfill({
       status: 200,
@@ -418,6 +436,7 @@ await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
     });
     return;
   }
+  if (osa && osa.includes('/vari/')) { route.fulfill({ status: 404, body: 'ei pilotin laatta' }); return; }
   const vastaus = await ampariHaku(url);
   if (!vastaus || vastaus.status !== 200) { route.abort(); return; }
   /*
@@ -428,7 +447,14 @@ await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
    */
   if (osa === 'pyramidi.json') {
     const luettelo = JSON.parse(vastaus.body.toString('utf8'));
-    if (variPaalla) luettelo.varitasot = VARITASOT;
+    /*
+     * VAIHE A ON ILMAN KOKO TAULUA (14.9.2026). Ennen tätä vaihe A
+     * jätti TUOTANNON `varitasot`-taulun paikalleen — ja siellä on nyt
+     * 27 maan tasoituslaatasto, joten "ilman tasoituskerrosta" ei ollut
+     * ilman mitään: se oli tuotannon kerros. Silloin A ja B mittasivat
+     * samaa kuvaa ja väitteet V3–V5 näkivät nollan eron.
+     */
+    luettelo.varitasot = variPaalla ? VARITASOT : null;
     /*
      * VASTAKOE 2: pyramidin versio muutetaan, pallon sarjaa ei.
      * Silloin lepokerroksenKerrokset palauttaa nullin ja koko

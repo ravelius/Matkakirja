@@ -43,7 +43,7 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { KERMA, PAPERI, VARIPALETIT } from '../tools/fokuskartta/piirto.js';
-import { piirraTasoitustaso } from '../tools/fokuskartta/maailmapiirto.js';
+import { piirraTasoitustaso, polttaVariLeikkuri } from '../tools/fokuskartta/maailmapiirto.js';
 
 const JUURI = fileURLToPath(new URL('..', import.meta.url));
 const GENERAATTORI = join(JUURI, 'tools/generoi-laattapyramidi.mjs');
@@ -186,7 +186,9 @@ test('--laatikko-nakyma kattaa kameran näkymän puhelimella ja työpöydällä'
   /* Kameran kaava: näkyvä leveys = max(w·k, h·k·W/H) (kamera.js laatikonTarve). */
   const tarve = (rw, rh) => Math.max(maa.w * ULOSZOOMAUKSEN_KERROIN,
     (maa.h * ULOSZOOMAUKSEN_KERROIN * rw) / rh);
-  for (const [rw, rh] of [[390, 844], [768, 1024], [1440, 900], [1920, 1080]]) {
+  /* 2000 × 1000 = kuvasuhde 2,0 (kaistat-raportin suositus 1, 14.9.2026):
+     rootin 2560 × 1352 on 1,89 eikä mahtunut 1,778:n laatikkoon. */
+  for (const [rw, rh] of [[390, 844], [768, 1024], [1440, 900], [1920, 1080], [2000, 1000]]) {
     const nakyvaLeveys = tarve(rw, rh);
     assert.ok(leveysYks >= nakyvaLeveys - 0.5,
       `laatikko ${leveysYks.toFixed(1)} yks on kapeampi kuin ruudun ${rw}x${rh} näkymä `
@@ -294,4 +296,157 @@ test('maalaaTasoitus: ilman tasoitusta tai kangasta ei maalata mitään', async 
     ppu: 1,
     arkki: { x: 0, y: 0 },
   }), false);
+});
+
+/* ------------------- 6. häive piirretään laatikon reunasta ULOSPÄIN */
+
+/*
+ * MITATTU VIKA (kaistat-raportti 13.9.2026, luvut 2.1–2.2 ja
+ * suositus 1). Häive piirrettiin laatikon reunasta SISÄÄNPÄIN:
+ * `destination-out` pyyhki kerman TÄYTEEN juuri laatikon reunalla ja
+ * nollaan `feidausReuna` yksikköä sisempänä. Laatikon ULKOPUOLELLA
+ * — samassa laatassa — ei pyyhitty mitään, joten kerma oli siellä taas
+ * täysi. Lopputulos oli kaksi suoraa viivaa: laatikon reunalla 37,3 ja
+ * 10,2 luminanssiyksikön porras, ja laataston uloimmalla reunalla 45,3
+ * ja 41,6 (siellä kerma vain loppui kesken laattojen mukana).
+ *
+ * OIKEA MUOTO ON KOLME VYÖHYKETTÄ, ja juuri ne tämä vartio mittaa
+ * piirtokutsuista (ei pikseleistä — kangas on stubi, joka kirjaa
+ * jokaisen `destination-out`-vedon):
+ *
+ *   1. LAATIKON SISÄLLE EI KOSKETA. Yksikään pyyhkäisy ei saa osua
+ *      laatikon sisäpuolelle: siellä kerman on oltava täysi, ja
+ *      kohdemaan reikä tehdään renkailla eikä suorakaiteilla.
+ *   2. LIUKU MENEE ULOSPÄIN: alfa 0 laatikon reunalla, alfa 1
+ *      `feidausReuna` yksikköä ULKONA. Näin reunalla ei ole porrasta.
+ *   3. HÄIVEEN TAKANA KERMA ON POIS kokonaan, jolloin laataston uloin
+ *      reuna rajautuu nollaan kermaan eikä täyteen.
+ *
+ * Vartio ei lue lukuja koodista vaan laskee ne samoista syötteistä
+ * (laatikko, feidausReuna, px) — jos kaava kääntyisi takaisin
+ * sisäänpäin, väite 2 kaatuu eikä kukaan tarvitse selainta nähdäkseen sen.
+ */
+
+/** Kangasstubi, joka kirjaa jokaisen vedon. Ei selainta, ei pikseleitä. */
+function stubiKangas(W, H) {
+  const vedot = [];
+  const teeCtx = (nimi) => {
+    const ctx = {
+      nimi,
+      fillStyle: null,
+      globalCompositeOperation: 'source-over',
+      clearRect: () => {},
+      drawImage: () => {},
+      beginPath: () => {},
+      moveTo: () => {},
+      lineTo: () => {},
+      closePath: () => {},
+      fill: () => { vedot.push({ kangas: nimi, muoto: 'polku', tyyli: ctx.fillStyle }); },
+      createLinearGradient: (x0, y0, x1, y1) => {
+        const g = { x0, y0, x1, y1, stopit: [], addColorStop: (k, v) => g.stopit.push([k, v]) };
+        return g;
+      },
+      fillRect: (x, y, w, h) => {
+        vedot.push({
+          kangas: nimi,
+          muoto: 'suorakaide',
+          tyyli: ctx.fillStyle,
+          op: ctx.globalCompositeOperation,
+          x, y, w, h,
+        });
+      },
+    };
+    return ctx;
+  };
+  const teeKangas = (nimi) => {
+    const k = { width: W, height: H, __ctx: teeCtx(nimi) };
+    k.getContext = () => k.__ctx;
+    k.ownerDocument = { createElement: () => teeKangas('haive') };
+    return k;
+  };
+  const kangas = teeKangas('laatta');
+  return { kangas, vedot };
+}
+
+/** Alfa rgba-merkkijonosta tai liukuoliosta (viimeinen stoppi). */
+const alfa = (tyyli) => (typeof tyyli === 'string'
+  ? Number(tyyli.match(/rgba\([^)]*,\s*([\d.]+)\)/)?.[1] ?? 1)
+  : null);
+
+test('häive piirretään laatikon reunasta ULOSPÄIN eikä sisäänpäin', () => {
+  /* px = leveys / bbox.w = 1000 / 1000 = 1, eli lautayksikkö = pikseli. */
+  const W = 1000;
+  const H = 500;
+  const { kangas, vedot } = stubiKangas(W, H);
+  const laatikko = { x: 300, y: 150, w: 400, h: 200 };
+  const REUNA = 50;
+  const ok = polttaVariLeikkuri(
+    kangas,
+    { bbox: { x: 0, y: 0, w: W, h: H }, leveys: W },
+    {
+      tasoitus: true,
+      paperi: KERMA,
+      feidaus: 0.85,
+      feidausReuna: REUNA,
+      laatikko,
+      laudanLeveys: 0,
+      renkaat: [[[450, 200], [550, 200], [550, 300], [450, 300]]],
+    },
+  );
+  assert.equal(ok, true, 'leikkuria ei poltettu lainkaan');
+
+  const lx0 = laatikko.x;
+  const lx1 = laatikko.x + laatikko.w;
+  const ly0 = laatikko.y;
+  const ly1 = laatikko.y + laatikko.h;
+
+  /* Häivekankaan vedot: ensimmäinen on kerman täyttö koko alalle. */
+  const haive = vedot.filter((v) => v.kangas === 'haive' && v.muoto === 'suorakaide');
+  assert.ok(haive.length >= 2, 'häivekangasta ei piirretty');
+  const pohja = haive[0];
+  assert.deepEqual([pohja.x, pohja.y, pohja.w, pohja.h], [0, 0, W, H],
+    'kerma on maalattava koko kankaalle ennen reikää');
+  const pyyhkaisyt = haive.slice(1);
+  assert.ok(pyyhkaisyt.length >= 8,
+    `pyyhkäisyjä ${pyyhkaisyt.length}: neljä liukua ja neljä umpea odotettiin`);
+
+  /* 1. LAATIKON SISÄLLE EI KOSKETA. */
+  for (const v of pyyhkaisyt) {
+    const osuu = v.x < lx1 && v.x + v.w > lx0 && v.y < ly1 && v.y + v.h > ly0;
+    assert.ok(!osuu,
+      `pyyhkäisy ${JSON.stringify(v)} ulottuu laatikon sisälle — `
+      + 'siellä kerman on oltava täysi (tämä oli 13.9. mitattu porras)');
+  }
+
+  /* 2. LIUKU MENEE ULOSPÄIN: alfa 0 reunalla, alfa 1 ulkona. */
+  const liuut = pyyhkaisyt.filter((v) => typeof v.tyyli === 'object' && v.tyyli?.stopit);
+  assert.equal(liuut.length, 4, 'neljä liukukaistaletta odotettiin');
+  for (const v of liuut) {
+    const { x0, y0, x1, y1, stopit } = v.tyyli;
+    assert.deepEqual(stopit.map((s) => s[0]), [0, 1]);
+    assert.equal(alfa(stopit[0][1]), 0,
+      `liuku alkaa alfalla ${alfa(stopit[0][1])} eikä nollasta — reunalle jää porras`);
+    assert.equal(alfa(stopit[1][1]), 1, 'liuku ei päädy täyteen pyyhkäisyyn');
+    /* Alkupiste on laatikon reunalla, loppupiste `REUNA` yksikköä ULKONA. */
+    const vaaka = x0 !== x1;
+    const [alku, loppu] = vaaka ? [x0, x1] : [y0, y1];
+    const [r0, r1] = vaaka ? [lx0, lx1] : [ly0, ly1];
+    assert.ok(alku === r0 || alku === r1,
+      `liuku ei ala laatikon reunalta (${alku}, reunat ${r0}/${r1})`);
+    const ulos = alku === r0 ? alku - REUNA : alku + REUNA;
+    assert.equal(loppu, ulos,
+      `liuku menee sisäänpäin (${alku} → ${loppu}); ulospäin olisi ${ulos}`);
+  }
+
+  /* 3. HÄIVEEN TAKANA KERMA ON POIS: uloin kaistale saa täyden pyyhkäisyn. */
+  const umpi = pyyhkaisyt.filter((v) => alfa(v.tyyli) === 1);
+  assert.ok(umpi.length >= 4, 'häiveen takaista umpipyyhkäisyä ei ole');
+  const peittaa = (x, y) => umpi.some((v) => x >= v.x && x <= v.x + v.w
+    && y >= v.y && y <= v.y + v.h);
+  assert.ok(peittaa(lx0 - REUNA - 1, (ly0 + ly1) / 2),
+    'laataston läntinen laita jäi kermalle — se oli mitattuna 45,3 yksikön kaista');
+  assert.ok(peittaa(lx1 + REUNA + 1, (ly0 + ly1) / 2),
+    'laataston itäinen laita jäi kermalle');
+  assert.ok(peittaa((lx0 + lx1) / 2, ly0 - REUNA - 1), 'laataston pohjoislaita jäi kermalle');
+  assert.ok(peittaa((lx0 + lx1) / 2, ly1 + REUNA + 1), 'laataston eteläinen laita jäi kermalle');
 });
