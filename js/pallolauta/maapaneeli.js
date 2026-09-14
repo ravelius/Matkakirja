@@ -109,14 +109,32 @@
  * eleen itseensä, jottei kartta ala panoroida napin alta.
  */
 import { MAA_KATEGORIAT } from '../packs/maa-kategoriat.js';
+import { kasikehys } from '../kasinpiirto.js';
 import {
   kieliOsat, maanNimi, maanRivit, maapaneeliKartassa,
 } from '../fokusmitat.js';
 import { FOKUS_MAANIMET } from '../packs/fokus-grc.js';
 
-/** Kortin peruskoko tyylitiedostossa (css .maapaneeli-kortti). */
-export const MAAPANEELIN_LEVEYS_PX = 190;
-export const MAAPANEELIN_KORKEUS_PX = 148;
+/**
+ * Kortin peruskoko tyylitiedostossa (css .maapaneeli-kortti).
+ *
+ * ERÄ 11: PUOLET LEVEYDESTÄ JA PUOLET KORKEUDESTA (190×148 → 95×74),
+ * eli PINTA-ALA NELJÄSOSA. Raamattu, PÄÄTÖKSET 7 (omistaja 14.9.2026):
+ * *"maainfossa pitaa olla nelja kertaa pienempi"*, tarkennettuna
+ * kysymyskortilla *"Koko paneeli neljasosaan"*.
+ *
+ * MOLEMMAT LUVUT ON PUOLITETTAVA YHDESSÄ OSUUKSIEN KANSSA. Paneelin
+ * LAUTAMITTA on `LEVEYS_OSUUS × laatikko.w` — peruskoko px:nä ei
+ * esiinny siinä kaavassa lainkaan, vaan se määrää vain `perusta`n eli
+ * ruutuskaalan. Jos pelkkä px-koko puolitettaisiin, kortti kutistuisi
+ * ruudulla mutta kasvaisi kartalla (skaala kaksinkertaistuisi), ja
+ * jos pelkkä osuus puolitettaisiin, kortti pysyisi ruudulla samana.
+ * Kun MOLEMMAT puolitetaan, `perusta` (0,175/95 = 0,35/190) pysyy
+ * täsmälleen ennallaan — ruutuskaala on sama kuin ennen erää, ja
+ * kortti on ruudulla tasan puolet leveä ja puolet korkea.
+ */
+export const MAAPANEELIN_LEVEYS_PX = 95;
+export const MAAPANEELIN_KORKEUS_PX = 74;
 /**
  * KAKSI OSUUTTA MAAN LAATIKOSTA, JA TIUKEMPI VOITTAA (erä 9).
  *
@@ -130,17 +148,21 @@ export const MAAPANEELIN_KORKEUS_PX = 148;
  * Nyt LEVEYSOSUUS on oma rajansa: paneeli on korkeintaan tämän verran
  * maan laatikon leveydestä. Koska kamera sovittaa juuri sen laatikon
  * ruutuun, osuus on samalla paneelin osuus RUUDUN leveydestä
- * pystyruudulla — Ranskalla 390 px:n ruudulla MITATTUNA 167 css-px
- * (tehtävänannon tavoite 150–200; erässä 3 sama mitta oli 233 px).
- * Työpöydällä 1400 px:n ruudulla 239 px eli 17 % leveydestä; mittaukset
- * raportissa docs/raportit/viesti-fable-karttauudistus-era9-*.md.
+ * pystyruudulla — erässä 9 Ranskalla 390 px:n ruudulla MITATTUNA 167
+ * css-px ja työpöydällä 1400 px:n ruudulla 239 px.
+ *
+ * ERÄ 11 PUOLITTI MOLEMMAT OSUUDET (0,35 → 0,175 ja 0,42 → 0,21):
+ * PÄÄTÖKSET 7 *"Koko paneeli neljasosaan"*. Osuus on se luku, joka
+ * oikeasti määrää paneelin koon ruudulla (ks. peruskoon selitys yllä),
+ * joten neljäsosa pinta-alasta syntyy juuri tästä. Mittaukset erän 11
+ * raportissa docs/raportit/viesti-fable-kasinpiirto-20260914.md.
  *
  * KORKEUSOSUUS jää toiseksi rajaksi leveille ja matalille maille
  * (Venäjä, Kazakstan): ilman sitä paneeli olisi niillä maan laatikon
  * korkuinen. Ranskalla se ei sido — leveysosuus on tiukempi.
  */
-export const MAAPANEELIN_LEVEYS_OSUUS = 0.35;
-export const MAAPANEELIN_KORKEUS_OSUUS = 0.42;
+export const MAAPANEELIN_LEVEYS_OSUUS = 0.175;
+export const MAAPANEELIN_KORKEUS_OSUUS = 0.21;
 /** Rako maan laatikon reunan ja paneelin väliin, osuus laatikon korkeudesta. */
 export const MAAPANEELIN_RAKO_OSUUS = 0.02;
 /**
@@ -278,6 +300,50 @@ const luo = (tagi, luokka, teksti) => {
   return e;
 };
 
+/** SVG-solmu oikeassa nimiavaruudessa (createElement tekisi HTML-solmun). */
+const luoSvg = (tagi) => document.createElementNS('http://www.w3.org/2000/svg', tagi);
+
+/**
+ * PAKSU SISÄLLÄ, OHUT ULKONA — kartussin kehys käsinpiirrettynä.
+ *
+ * Mitat ja niiden lähteet ovat js/kasinpiirto.js:ssä (Stieler 1874 ja
+ * Johnston 1879, pikselimittaukset); täällä on vain ladonta. Kehys on
+ * SVG eikä CSS-reunus kahdesta syystä:
+ *
+ *   1. CSS:n `border` on täsmälleen suora — juuri se "vektorimainen"
+ *      jälki, jonka omistaja halusi pois. SVG-polku saa mitatun
+ *      horjunnan (0,32 × viivan leveys, aallonpituus 30 × leveys).
+ *   2. Kortti skaalautuu `transform: scale()`illa, ja SVG skaalautuu
+ *      mukana tarkkana — reunuksen leveys pyöristyisi laitepikseliin.
+ *
+ * KEHYS EI KOSKAAN OTA NAPAUTUSTA (`pointer-events: none`
+ * tyylitiedostossa): sen alla on kortin oma napautuslogiikka.
+ */
+const KEHYKSEN_PAKSU_PX = 1.9;
+
+function piirraKehys(kortti, iso) {
+  const svg = kortti.querySelector('.maapaneeli-kehys');
+  if (!svg || svg.dataset.iso === iso) return;
+  svg.dataset.iso = iso ?? '';
+  while (svg.firstChild) svg.removeChild(svg.firstChild);
+  const { ohut, paksu } = kasikehys({
+    leveys: MAAPANEELIN_LEVEYS_PX,
+    korkeus: MAAPANEELIN_KORKEUS_PX,
+    paksu: KEHYKSEN_PAKSU_PX,
+    siemen: iso || 'kehys',
+  });
+  // Ohut ensin, paksu päälle: päällekkäisyys nurkassa jää paksun alle.
+  for (const [luokka, sivut] of [['ohut', ohut], ['paksu', paksu]]) {
+    for (const sivu of sivut) {
+      const polku = luoSvg('path');
+      polku.setAttribute('d', sivu.d);
+      polku.setAttribute('class', `maapaneeli-kehys-${luokka}`);
+      polku.setAttribute('stroke-width', String(sivu.leveys));
+      svg.appendChild(polku);
+    }
+  }
+}
+
 /**
  * Kortin runko. Sisältö täytetään erikseen (`taytaKortti`), koska sama
  * elementti jää eloon maan vaihtuessa — datum on pysyvä avaimeltaan ja
@@ -287,6 +353,15 @@ function paneeliElementti(d) {
   const el = luo('div', 'pallolauta-maapaneeli');
   const kortti = luo('div', 'maapaneeli-kortti');
   kortti.setAttribute('role', 'group');
+  /*
+   * KEHYS ON ENSIMMÄINEN LAPSI eli kaiken alla: se on paperin painatus,
+   * ei kortin reunus. Sisältö saa oman pehmusteensa kehyksen sisään.
+   */
+  const kehys = luoSvg('svg');
+  kehys.setAttribute('class', 'maapaneeli-kehys');
+  kehys.setAttribute('viewBox', `0 0 ${MAAPANEELIN_LEVEYS_PX} ${MAAPANEELIN_KORKEUS_PX}`);
+  kehys.setAttribute('aria-hidden', 'true');
+  kortti.appendChild(kehys);
   /*
    * OTSAKE ON KARTUUTSI (erä 9): versaali nimi, ohut alleviivaus ja
    * alarivi, jolla on maan oma nimi ja aikakauden valtiomuoto. Samat
@@ -353,6 +428,7 @@ function paneeliElementti(d) {
 function taytaKortti(el, d) {
   const kortti = el.querySelector('.maapaneeli-kortti');
   if (!kortti) return;
+  piirraKehys(kortti, d.iso);
   if (kortti.dataset.iso !== d.iso) {
     kortti.dataset.iso = d.iso;
     kortti.querySelector('.maapaneeli-nimi-suomi').textContent = d.nimi.toUpperCase();

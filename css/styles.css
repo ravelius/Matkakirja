@@ -88,6 +88,17 @@ body.paivittyy .app { visibility: hidden; }
   --map-ink-soft: #8a6c46;
   --sea-ink: #6e6350;
   --mark: #b03a2b;
+  /*
+   * KERMA — kartan oma vaalein paperisävy. Sama luku on jo pelissä
+   * kahdessa paikassa (tools/fokuskartta/piirto.js KERMA ja
+   * js/laattapyramidi.js tasoituskerroksen oletus): se on se sävy,
+   * jolla muut maat tasoitetaan kohdemaan ympäriltä (Raamattu,
+   * KARTTAUUDISTUKSEN PÄÄTÖKSET 4, omistaja valitsi *"Kerma, paperia
+   * vaaleampi"*). Maapaneelin kartussi käyttää TÄTÄ eikä uutta väriä
+   * (PÄÄTÖKSET 7: *"saisi olla vaalealla pohjalla kuten
+   * kasinpiirretyissa kartoissa"*).
+   */
+  --kerma: #faf4d6;
 
   --radius: 12px;
   --gap: 0.6rem;
@@ -25533,10 +25544,11 @@ svg.rough-annotation { pointer-events: none; }
    alleviivaus, alarivi, yksi palstapari lukuja, kielirivi ja paljas
    plus — mutta mitat ovat kolmannes entisestä.
 
-   MITAT OVAT PERUSKOKOJA, EIVÄT LOPULLISIA. Kortti on 190 x 148 css-px,
-   ja js kirjoittaa sille mittakaavan kameran korkeudesta (scale) —
-   samat kaksi lukua kuin moduulin MAAPANEELIN_LEVEYS_PX ja
-   MAAPANEELIN_KORKEUS_PX. Jos näitä muuttaa, muuta molemmat.
+   MITAT OVAT PERUSKOKOJA, EIVÄT LOPULLISIA. Kortti on 95 x 74 css-px
+   (erä 11 puolitti; ennen 190 x 148), ja js kirjoittaa sille
+   mittakaavan kameran korkeudesta (scale) — samat kaksi lukua kuin
+   moduulin MAAPANEELIN_LEVEYS_PX ja MAAPANEELIN_KORKEUS_PX. Jos näitä
+   muuttaa, muuta molemmat.
 
    KORKEUS ON KIINTEÄ, KOSKA SE ON MYÖS LAUDAN MITTA. Paneelin laatikko
    lasketaan näistä kahdesta luvusta (paneelinLaatikko), ja se on osa
@@ -25549,7 +25561,7 @@ svg.rough-annotation { pointer-events: none; }
    mittakaavalla (.pallolauta-nosto-siirto).
 
    EI SUODATTIMIA (tests/rules.test.mjs iOS-sääntö): tausta on
-   läpikuultava pergamentti kuten kartan muillakin lapuilla. Nurkkataulun
+   paperia kuten kartan muillakin lapuilla. Nurkkataulun
    backdrop-filter-huntu EI palaa — se on karttaruudun ruutuankkuroitu
    lapsi eikä voi seurata karttaan kiinnitettyä korttia.
    =========================================================================== */
@@ -25561,22 +25573,46 @@ svg.rough-annotation { pointer-events: none; }
   height: 0;
   pointer-events: none;
 }
+/*
+   ERÄ 11 — KOLME MUUTOSTA, EI YHTÄÄN MUUTA (Raamattu, PÄÄTÖKSET 7;
+   omistajan rajaus 14.9.2026: *"julkaise noin, mutta muuta teksti
+   tyylit ja kaikki muut takaisin siihen mita ne oli alunperin. sinun
+   piti vain lisata kehys"*).
+
+   1. KOKO PUOLEEN. 190×148 → 95×74. Luvut ovat myös
+      js/pallolauta/maapaneeli.js:ssä (MAAPANEELIN_*_PX), ja ne on
+      puolitettava yhdessä osuuksien kanssa — perustelu on siellä.
+      KAIKKI muut pituudet tässä lohkossa on kerrottu SAMALLA 0,5:llä,
+      myös fonttikoot: ulkoasu on merkilleen entinen, vain puolet
+      pienempänä. Yhtään uutta tyyliarvoa ei ole keksitty.
+   2. POHJA. Tumma pergamentti → kartan oma kerma (--kerma), niin kuin
+      vanhan kartan kartussi. Tästä seuraa AINOA pakollinen värinvaihto:
+      tummalle pohjalle tehdyt musteet eivät näy vaalealla, joten ne
+      vaihtuvat SAMAN paletin vaalean pohjan vastineisiin roolista
+      tinkimättä (--accent → --accent-dark, --ink-light → --map-ink,
+      --muted → --map-ink-soft). Alleviivaus jää --overlay-lineksi, se
+      näkyy kermalla sellaisenaan.
+   3. KEHYS. `border` → SVG (.maapaneeli-kehys): CSS-reunus on
+      täsmälleen suora, ja omistaja pyysi käsinpiirretyn jäljen.
+      Pyöristys jää (puolitettuna 2,5 px), koska se on taustan muoto
+      eikä kehyksen.
+   =========================================================================== */
 .maapaneeli-kortti {
   position: absolute;
-  left: -95px;
+  left: -47.5px;
   top: 0;
-  width: 190px;
-  height: 148px;
+  width: 95px;
+  height: 74px;
   box-sizing: border-box;
   transform-origin: 50% 0;
   /* Napautukset kortille (js/pallolauta/maapaneeli.js: NAPAUTUS KULKEE
      ELEMENTIN KAUTTA) — ele pysäytetään js:ssä, jottei kartta panoroi. */
   pointer-events: auto;
   touch-action: manipulation;
-  background: var(--overlay-card);
-  border: 1px solid var(--overlay-line);
-  border-radius: 5px;
-  color: var(--ink-light);
+  background: var(--kerma);
+  border: 0;
+  border-radius: 2.5px;
+  color: var(--map-ink);
   font-family: var(--font-type);
   line-height: 1.15;
 }
@@ -25586,17 +25622,48 @@ svg.rough-annotation { pointer-events: none; }
 .pallolauta-merkki.pallolauta-poistuu .maapaneeli-kortti { pointer-events: none; }
 
 /*
+ * KÄSINPIIRRETTY KAKSOISVIIVAKEHYS (js/pallolauta/maapaneeli.js
+ * piirraKehys → js/kasinpiirto.js kasikehys). Polut tulevat js:stä,
+ * koska horjunta kylvetään maan ISO-koodista; täällä on vain muste.
+ *
+ * OHUT ON ULKONA JA PAKSU SISÄLLÄ — mitattu Stielerin (1874) ja
+ * Johnstonin (1879) arkkikehyksistä. Ohut on kaiverrettu hiusviiva ja
+ * painuu paperiin vaaleampana, siksi pienempi peitto.
+ */
+.maapaneeli-kehys {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+.maapaneeli-kehys path {
+  fill: none;
+  stroke: var(--map-ink);
+  stroke-linecap: square;
+}
+.maapaneeli-kehys-ohut { opacity: 0.72; }
+.maapaneeli-kehys-paksu { opacity: 0.95; }
+
+/*
  * SISUS LEIKKAA, KORTTI EI. Kortin korkeus on kiinteä (se on myös
  * laudan mitta), joten liian pitkä sisältö on leikattava — mutta jos
  * leikkaus olisi kortissa, se leikkaisi myös kortin ULKOPUOLELLE
  * aukeavan valikon, eikä napautus osuisi siihen (mitattu savukkeessa
  * 13.9.2026: pallon kangas sieppasi napautuksen). Siksi leikkaus on
  * tässä sisemmässä solmussa ja valikko on kortin oma lapsi.
+ *
+ * PEHMUSTE ON PUOLITETTU JA PYÖRISTETTY YLÖSPÄIN (erä 11). Alkuperäinen
+ * 6px/8px reunuksen (1 px) päällä eli 7/9 px kortin reunasta; puolitus
+ * antaa 3,5/4,5 px. Kehyksen syvyys on ohut + väli + paksu = 0,49 +
+ * 1,35 + 1,9 = 3,74 px, joten PYSTYSUUNNASSA pehmuste on 4 px eikä 3,5:
+ * 0,26 px:n lisäys on kehyksen vaatima, ei tyylivalinta.
  */
 .maapaneeli-sisus {
   position: absolute;
   inset: 0;
-  padding: 6px 8px;
+  padding: 4px 4.5px;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -25606,42 +25673,48 @@ svg.rough-annotation { pointer-events: none; }
 /* Oikea pehmuste jättää tilaa paljaalle plussalle, joka on kortin
    oikeassa ylänurkassa (ks. .maapaneeli-lisaa). */
 .maapaneeli-nimi {
-  padding-right: 22px;
+  padding-right: 11px;
   min-width: 0;
 }
 .maapaneeli-nimi-suomi {
   display: block;
-  font-size: 13px;
+  font-size: 6.5px;
   line-height: 1.1;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-dark);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 /* Alleviivaus kuten kartuutsissa: ohut muste, ei kehys. */
 .maapaneeli-viiva {
-  height: 1px;
-  margin: 3px 0 3px;
+  height: 0.5px;
+  margin: 1.5px 0 1.5px;
   background: var(--overlay-line);
 }
 /* Maan oma nimi ja aikakauden valtiomuoto yhtenä ajatuksena; tyhjä
-   rivi kutistuu itsestään pois, koska molemmat palat ovat tyhjiä. */
+   rivi kutistuu itsestään pois, koska molemmat palat ovat tyhjiä.
+
+   OMA FONTTIKOKO ON PUOLITUKSEN VAATIMA. Rivi peri kortin 16 px:n koon,
+   ja sen rivilaatikko oli MITATTUNA 18,4 px — se ei olisi puolittunut
+   muiden mukana, koska peritty koko ei ole paneelin oma luku. 8 px ×
+   1,15 = 9,2 px on täsmälleen puolet alkuperäisestä rivilaatikosta. */
 .maapaneeli-alarivi {
   display: block;
-  margin-bottom: 4px;
+  font-size: 8px;
+  margin-bottom: 2px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: var(--muted);
+  color: var(--map-ink-soft);
 }
 .maapaneeli-nimi-oma {
-  font-size: 8.5px;
+  font-size: 4.25px;
   letter-spacing: 0.08em;
 }
 .maapaneeli-aika {
-  font-size: 7.5px;
+  font-size: 3.75px;
   font-style: italic;
 }
 
@@ -25651,33 +25724,33 @@ svg.rough-annotation { pointer-events: none; }
   margin: 0;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr);
-  gap: 2px 6px;
+  gap: 1px 3px;
   align-content: start;
   min-width: 0;
 }
 .maapaneeli-otsikko {
   margin: 0;
   align-self: baseline;
-  font-size: 7px;
+  font-size: 3.5px;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--map-ink-soft);
   white-space: nowrap;
 }
 .maapaneeli-arvo {
   margin: 0;
   display: flex;
   align-items: baseline;
-  gap: 4px;
+  gap: 2px;
   min-width: 0;
-  font-size: 9.5px;
-  color: var(--ink-light);
+  font-size: 4.75px;
+  color: var(--map-ink);
   overflow: hidden;
   white-space: nowrap;
 }
 .maapaneeli-sija {
-  font-size: 7px;
-  color: var(--muted);
+  font-size: 3.5px;
+  color: var(--map-ink-soft);
 }
 /*
  * KIELIRIVI: maalehden omat .tervehdys-tyylit hoitavat tervehdyksen,
@@ -25688,11 +25761,11 @@ svg.rough-annotation { pointer-events: none; }
 .maapaneeli-kielet {
   flex-wrap: wrap;
   white-space: normal;
-  gap: 1px 5px;
-  font-size: 7.5px;
+  gap: 0.5px 2.5px;
+  font-size: 3.75px;
 }
 .maapaneeli-kielet .tervehdys-lippu {
-  width: 9px;
+  width: 4.5px;
   height: auto;
 }
 
@@ -25705,25 +25778,26 @@ svg.rough-annotation { pointer-events: none; }
  * OSUMA-ALA ON ISOMPI KUIN MERKKI. 44 px:n kosketusala ei ole tässä
  * ruudun mitta vaan KARTAN mitta: kortti skaalautuu zoomin mukana,
  * joten mikään yksittäinen luku ei ole 44 css-px joka zoomilla.
- * Merkki on 11 px ja osumapinta 28 px kortin peruskoossa, mikä on
- * uloimmalla zoomilla (skaala ~0,9) noin 25 css-px — pienempi kuin
- * ruutukalusteilla, mutta paneelin luo pannataan ja zoomataan
- * (PÄÄTÖKSET 2: *"puhelimella pannataan paneelin luo"*).
+ * Merkki ja osumapinta ovat erän 11 puolituksen jälkeen 5,5 px ja
+ * 14 px kortin peruskoossa, mikä on uloimmalla zoomilla (skaala ~0,9)
+ * noin 13 css-px — pienempi kuin ruutukalusteilla, mutta paneelin luo
+ * pannataan ja zoomataan (PÄÄTÖKSET 2: *"puhelimella pannataan
+ * paneelin luo"*).
  */
 .maapaneeli-lisaa {
   position: absolute;
-  top: 2px;
-  right: 2px;
+  top: 1px;
+  right: 1px;
   display: grid;
   place-items: center;
-  width: 28px;
-  height: 28px;
+  width: 14px;
+  height: 14px;
   padding: 0;
   border: 0;
   border-radius: 0;
   background: none;
   box-shadow: none;
-  color: var(--accent);
+  color: var(--accent-dark);
   /* Merkin piirtävät palkit; tekstisolmun '+' ei saa näkyä alla. */
   font-size: 0;
   line-height: 0;
@@ -25736,12 +25810,12 @@ svg.rough-annotation { pointer-events: none; }
   content: '';
   grid-area: 1 / 1;
   background: currentColor;
-  border-radius: 1px;
+  border-radius: 0.5px;
 }
-.maapaneeli-lisaa::before { width: 11px; height: 2px; }
-.maapaneeli-lisaa::after { width: 2px; height: 11px; }
+.maapaneeli-lisaa::before { width: 5.5px; height: 1px; }
+.maapaneeli-lisaa::after { width: 1px; height: 5.5px; }
 .maapaneeli-lisaa:hover,
-.maapaneeli-kortti.valikko-auki .maapaneeli-lisaa { color: var(--ink-light); }
+.maapaneeli-kortti.valikko-auki .maapaneeli-lisaa { color: var(--map-ink); }
 /* Yleinen nappitausta ei saa palata kosketusnäytön jäävään :hoveriin —
    sama laskettu tarkkuus kuin kartuutsilla (ks. sen oma lohko). */
 .maapaneeli-lisaa,
@@ -25762,44 +25836,48 @@ button.maapaneeli-lisaa:active:not(:disabled) {
  * Kaksi saraketta = "sivuille ja alas": valikko levittäytyy napin
  * kohdalta oikealle ja jatkuu alaspäin. Ankkuri on napin oikea reuna,
  * jotta valikko ei karkaa kortin ulkopuolelle vasemmalle.
+ *
+ * VALIKKO ON ENNALLAAN, VAIN PUOLET PIENEMPI (erä 11). Omistajan
+ * rajaus koski kolmea asiaa, eikä valikko ole niistä yksikään: se
+ * pitää tumman pergamenttipohjansa, reunuksensa ja värinsä.
  */
 .maapaneeli-valikko {
   position: absolute;
-  top: calc(100% - 4px);
-  right: -6px;
+  top: calc(100% - 2px);
+  right: -3px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2px;
+  gap: 1px;
   /* Kortin kavettua (erä 9) valikko kapenee sen mukana: 250 px oli
      erän 3 300 px:n kortin mitta, ja se törröttäisi nyt molemmin
-     puolin. 210 px on kortti + sen verran, että kaksi palstaa
-     mahtuu ilman rivin katkeamista. */
-  width: 210px;
-  padding: 5px;
+     puolin. 210 px oli kortti + sen verran, että kaksi palstaa
+     mahtuu ilman rivin katkeamista; erä 11 puolitti sen kortin mukana. */
+  width: 105px;
+  padding: 2.5px;
   background: var(--overlay-card);
-  border: 1px solid var(--overlay-line);
-  border-radius: 5px;
+  border: 0.5px solid var(--overlay-line);
+  border-radius: 2.5px;
   pointer-events: auto;
 }
 /* Alle ei mahdu (alanapit, vuorokortti): valikko aukeaa napin
    YLÄPUOLELLE — ks. js/pallolauta/maapaneeli.js sovitaValikko. */
 .maapaneeli-valikko.ylos {
   top: auto;
-  bottom: calc(100% - 4px);
+  bottom: calc(100% - 2px);
 }
 .maapaneeli-aihe {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 2.5px;
   min-width: 0;
   font: inherit;
-  font-size: 10px;
+  font-size: 5px;
   text-align: left;
-  padding: 4px 5px;
+  padding: 2px 2.5px;
   color: var(--ink-light);
   background: rgba(46, 33, 20, 0.5);
-  border: 1px solid transparent;
-  border-radius: 3px;
+  border: 0.5px solid transparent;
+  border-radius: 1.5px;
   cursor: pointer;
 }
 .maapaneeli-aihe:hover { border-color: var(--overlay-line); }
@@ -25810,8 +25888,8 @@ button.maapaneeli-lisaa:active:not(:disabled) {
 }
 .maapaneeli-aihe-merkki {
   flex: 0 0 auto;
-  width: 9px;
-  height: 9px;
+  width: 4.5px;
+  height: 4.5px;
   border-radius: 50%;
   background: var(--sym-silma);
 }
