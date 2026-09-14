@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1889, teksti: 'Isoisän ja pulun kuvat kaupungin yläpuolelle, isommiksi' },
   { v: 1888, teksti: 'Livian loppuhäivytys toistossa (Web Audio)' },
   { v: 1887, teksti: 'Hampurilaisen ikoni alkuperäiseksi; väkänen vaakatilassa' },
   { v: 1886, teksti: 'Tehosteputki: raakatiedostot ämpäriin, 320 kbps' },

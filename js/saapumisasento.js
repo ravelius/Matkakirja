@@ -470,3 +470,109 @@ export const RAAHAUKSEN_KYNNYS_PX = 6;
 export function onRaahaus(dx, dy, kynnys = RAAHAUKSEN_KYNNYS_PX) {
   return Math.hypot(dx || 0, dy || 0) > kynnys;
 }
+
+/* ============ PIENI KUVA JA PULU KAUPUNGIN YLÄPUOLELLE ============
+ *
+ * OMISTAJA 14.9.2026 (Raamattu PAATOKSET 12, kohta 2, sanatarkasti):
+ * *"isoisan ja pulun kuvat ovat liian pienella ja vaarassa paikassa
+ * (pitaisi olla hieman pariisin ylapuolella)."*
+ *
+ * KAKSI ERI VIKAA, YKSI PAIKKA:
+ *
+ *  1. KOKO OLI SATTUMAN VARASSA. Pieni kuva oli ISON kuvan leveys
+ *     kerrottuna kiinteällä `--luentakuva-pienennys`-luvulla (0,16), ja
+ *     ison kuvan leveys on se, mikä sattuu mahtumaan matkakirjakortin ja
+ *     kaupungin laatan väliin. Mitattu Chromiumilla 14.9.2026: sama
+ *     pieni kuva oli Pariisissa 25 px ja Marseillessa 86 px korkea —
+ *     kolminkertainen ero, jota kukaan ei ollut valinnut. Nyt pienen
+ *     kuvan KORKEUS on mitta ja pienennys lasketaan siitä, joten kuva on
+ *     yhtä suuri kaikissa kaupungeissa ja kaikilla ruuduilla.
+ *
+ *  2. PAIKKA OLI ISON KUVAN PAIKKA. Ankkuri jäi siihen, mihin ISO kuva
+ *     mahtui — saapumisnäkymän ollessa tiukka (v1872) se oli kaupungin
+ *     ALAPUOLELLA ja sivussa (Pariisi, puhelin: +48 px oikealle,
+ *     +28 px alas). Pieni kuva saa nyt oman paikkansa: pari (isoisän
+ *     kuva ja pulu vierekkäin) keskitetään kaupungin pisteen päälle.
+ *
+ * MITTA ON KARTAN MITTA. Luvut ovat karttapinnan pikseleitä siinä
+ * hetkessä, jolloin kuva pienenee; `--luentakuva-karttaskaala` kertautuu
+ * niihin kuten ennenkin (omistaja 11.9.2026: *"pienenevät jos zoomataan
+ * ulos kartalla"*).
+ */
+
+/**
+ * Pienen kuvan KORKEUS karttapinnan pikseleinä (ennen karttaskaalaa).
+ *
+ * MITATTU VALINTA (Chromium 14.9.2026, Pariisi, saapumisnäkymä).
+ * Vanha kuva oli puhelimella 25,2 px korkea. Kaksi ehdokasta mitattiin:
+ *   1,6 × → 40 px   (valittu)
+ *   2,0 × → 50 px
+ * Tehtävän sääntö on valita pienempi, ellei se jää puhelimella alle
+ * 24 css-pikselin — 40 px ei jää. 40 px on myös omistajan aiemman
+ * linjauksen mukainen (11.9.2026: pieni pino on *"vain vähän
+ * pelinappulaa korkeampi"*; pelinappula on 36 px).
+ */
+export const PIENEN_KUVAN_KORKEUS_PX = 40;
+
+/**
+ * Parin alareunan ilmarako kaupungin pisteen yläpuolelle.
+ *
+ * Kaupungin piste on LAATAN KESKIPISTE (ks. KAUPUNGIN_LAATTA_PX), joten
+ * laatan yläreuna on puolet laatasta pisteen yläpuolella; sen päälle
+ * jää sama ilmarako kuin isolla kuvalla. Yhteensä 29 px eli *"hieman
+ * yläpuolella"* — ei kiinni laatassa eikä irti siitä.
+ */
+export const PIENEN_KUVAN_NOSTO_PX = KAUPUNGIN_LAATTA_PX / 2 + LUENTAKUVAN_VALI_PX;
+
+/**
+ * Pulun kelluvan napin halkaisija pikseleinä (css/styles.css
+ * `.pollo-nappi.pollo-kelluu`: 2,9rem 16 px:n juurikoolla = 46 px).
+ *
+ * Luku on VAIN parin leveysbudjetissa: napin oma koko tulee yhä
+ * css:stä, ja se keskitetään laskettuun pisteeseen (translate −50 %),
+ * joten puolen pikselin ero ei siirrä mitään.
+ */
+export const PULUN_NAPIN_KOKO_PX = 46;
+
+/** Isoisän kuvan ja pulun väliin jäävä rako pikseleinä. */
+export const PARIN_RAKO_PX = 10;
+
+/**
+ * ISOISÄ JA PULU VIERETYSTEN KAUPUNGIN YLÄPUOLELLE.
+ *
+ * Pari (kuva + rako + pulu) keskitetään kaupungin pystylinjalle, ja
+ * sen alareuna jää `nosto` verran kaupungin pisteen yläpuolelle.
+ * Isoisän kuva on vasemmalla, pulu oikealla (omistajan sana: pulu
+ * isoisän viereen), ja molemmat ovat samalla korkeudella.
+ *
+ * PALAUTUSARVOT OVAT ERI PISTEITÄ, koska kiinnitystavat ovat eri:
+ * luentakuvan ankkuri on paneelin ALAREUNAN KESKIPISTE (css
+ * transform-origin: bottom center), pulun nappi keskitetään
+ * KESKIPISTEESEENSÄ (css translate −50 % −50 %).
+ *
+ * @param {object} p
+ * @param {{x: number, y: number}} p.kaupunki kaupungin piste pinnalla
+ * @param {number} p.leveys pienen kuvan näkyvä leveys
+ * @param {number} p.korkeus pienen kuvan näkyvä korkeus
+ * @param {number} [p.pulunKoko] pulun napin halkaisija
+ * @param {number} [p.rako] kuvan ja pulun väli
+ * @param {number} [p.nosto] parin alareunan nosto kaupungin pisteestä
+ * @returns {{isoisa: {x, y}, pulu: {x, y}}|null}
+ */
+export function pienenKuvanParinPaikat({
+  kaupunki, leveys, korkeus,
+  pulunKoko = PULUN_NAPIN_KOKO_PX,
+  rako = PARIN_RAKO_PX,
+  nosto = PIENEN_KUVAN_NOSTO_PX,
+} = {}) {
+  const ylos = Number.isFinite(nosto) ? nosto : PIENEN_KUVAN_NOSTO_PX;
+  if (!Number.isFinite(kaupunki?.x) || !Number.isFinite(kaupunki?.y)) return null;
+  const w = Math.max(0, leveys || 0);
+  const h = Math.max(0, korkeus || 0);
+  const yhteensa = w + rako + pulunKoko;
+  const pohja = kaupunki.y - ylos;
+  return {
+    isoisa: { x: kaupunki.x - yhteensa / 2 + w / 2, y: pohja },
+    pulu: { x: kaupunki.x + yhteensa / 2 - pulunKoko / 2, y: pohja - h / 2 },
+  };
+}
