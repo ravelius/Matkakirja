@@ -229,11 +229,15 @@ export const RAJA_PEITTO = 0.34;
  * jossa vahvistettu ääriviiva on yhtenäinen ja poltettu raja pisteinä.
  */
 /*
- * ======== PUNAINEN RAJA (KARTTAUUDISTUKSEN PÄÄTÖKSET 1) ============
+ * ======== KEHÄN OMA MUSTE (KARTTAUUDISTUKSEN PÄÄTÖKSET 1 JA 14) ====
  *
  * Omistaja 13.9.2026: *"Maan rajat vahvistetaan punaisella viivalla
  * (pelin varipaletista)"*, ja kysymyskortilla: *"Punainen maan
  * rajaviiva PALAUTETAAN kohdemaalle (paletin --mark #b03a2b, 2,5 px)"*.
+ * PÄÄTÖKSET 14 kohta 2 (omistaja 14.9.2026) vaihtoi sävyn: *"vaihda
+ * samalla kartan reuna musteen siniseksi"* — kehä on nyt tummaa,
+ * murrettua musteensinistä (`--raja-muste` #1f3a5f), ja `--mark`
+ * jää kartan muille merkinnöille. Leveys ja katkokorjaus pysyvät.
  * Yllä oleva perustelu *"KOROSTUS ON SAMAA MUSTETTA, EI TOISTA VÄRIÄ"*
  * kirjoitettiin 11.9.2026 seepiakartalle, ja päätös kumoaa sen
  * kohdemaan osalta: kohdemaan sisus on tästä erästä alkaen VÄRILLINEN,
@@ -242,27 +246,27 @@ export const RAJA_PEITTO = 0.34;
  * === ARVO ON YHDESSÄ PAIKASSA, JA SE PAIKKA ON CSS ================
  *
  * Kehä piirretään kahdella laudalla: tasokartalla SVG-viivana
- * (js/maatummennus.js + `.maatummennus-viiva { stroke: var(--mark) }`)
+ * (js/maatummennus.js + `.maatummennus-viiva { stroke: var(--raja-muste) }`)
  * ja pallolla WebGL-viivana (tämä tiedosto). Pelaaja ei näe molempia,
  * mutta kaksi kovakoodattua heksalukua eriytyisi ensimmäisessä
  * sävynmuutoksessa — juuri se vika, jonka suunnitelman riski 4.3
  * nimeää. Pallo lukee siis saman CSS-muuttujan kuin tasokartta;
  * vakio alla on VARA sille tilanteelle, jossa muuttujaa ei ole
  * (testit ilman tyylitiedostoa, yhden tiedoston versio ennen CSS:n
- * latausta), eikä sen arvo saa erota `--mark`ista.
+ * latausta), eikä sen arvo saa erota `--raja-muste`esta.
  */
-export const KOROSTUS_MUSTE = '#853124';
+export const KOROSTUS_MUSTE = '#1f3a5f';
 
 /**
- * Korostuksen muste juuri nyt: paletin `--mark`, tai KOROSTUS_MUSTE
- * jos muuttujaa ei saada luettua.
+ * Korostuksen muste juuri nyt: paletin `--raja-muste`, tai
+ * KOROSTUS_MUSTE jos muuttujaa ei saada luettua.
  */
 export function korostuksenMuste(dokumentti = null) {
   const doc = dokumentti ?? globalThis.document ?? null;
   const juuri = doc?.documentElement ?? null;
   if (!juuri || typeof globalThis.getComputedStyle !== 'function') return KOROSTUS_MUSTE;
   try {
-    const arvo = globalThis.getComputedStyle(juuri).getPropertyValue('--raja-punainen').trim();
+    const arvo = globalThis.getComputedStyle(juuri).getPropertyValue('--raja-muste').trim();
     return arvo || KOROSTUS_MUSTE;
   } catch {
     return KOROSTUS_MUSTE;
