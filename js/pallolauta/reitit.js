@@ -8,12 +8,15 @@
  * laatoissa tekstuurina eikä sitä piirretä pallolle. Pallolle piirretään
  * vain se, mikä tasokartan elävässä matkareittikerroksessa on
  * (js/ui.js paivitaMatkareitit): nykyisen kaupungin naapurireitit
- * askelhelmineen VAIN liu'un ollessa auki (omistaja 14.9.2026: *"ne voi
- * ottaa pois nakyvista ja palauttaa vasta kun pelaaja painaa liiku
- * nappia"*), kesken reittiä se reitti jolla nappula on riippumatta
- * liu'usta, ja lentokaaret vain lentolistan ollessa auki
- * tai valitun lennon ajan (omistaja 1.9.2026: *"Piirretään ne näkyviin
- * reaaliajassa vasta sitten jos pelaaja päättää mennä lentokoneella."*).
+ * askelhelmineen VAIN MATKAN AJAN (Raamattu KARTTAUUDISTUKSEN PAATOKSET
+ * 8, omistaja 14.9.2026: *"reittiviuhka tulee nakyviin heti kun pelaaja
+ * painaa 'liiku' nappia ja on kokoajan nakyvissa kunnes pelaaja saapuu
+ * uuteen kaupunkiin tai peruuttaa liikkumisen eli jaakin nykyiseen
+ * kaupunkiin"*; ui.matkaSessioKesken), kesken reittiä se reitti jolla
+ * nappula on sessiosta riippumatta, ja lentokaaret vain lentolistan
+ * ollessa auki tai valitun lennon ajan (omistaja 1.9.2026: *"Piirretään
+ * ne näkyviin reaaliajassa vasta sitten jos pelaaja päättää mennä
+ * lentokoneella."*).
  * SÄÄNTÖ ON YKSI: ui.matkareittienValinta() päättää, tämä vain piirtää.
  *
  * SAMA KIELI KUIN KARTALLA: maareitti hento musteviiva, merireitti

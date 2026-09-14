@@ -1,7 +1,11 @@
 /*
- * Savuke: NAAPURIREITIT PIILOON KUNNES PELAAJA PAINAA LIIKU.
+ * Savuke: NAAPURIREITTIEN VIUHKA ON MATKASESSIO.
  *
- * Omistajan pyyntö 14.9.2026 (sanatarkasti): *"onko kaupunkien valiset
+ * Raamattu KARTTAUUDISTUKSEN PAATOKSET 8 (omistaja 14.9.2026,
+ * sanatarkasti): *"reittiviuhka tulee nakyviin heti kun pelaaja painaa
+ * 'liiku' nappia ja on kokoajan nakyvissa kunnes pelaaja saapuu uuteen
+ * kaupunkiin tai peruuttaa liikkumisen eli jaakin nykyiseen
+ * kaupunkiin"*. Lähtötilaus samana päivänä: *"onko kaupunkien valiset
  * siirtymalinjat ja merireitit omalla tasollaan? jos on niin ne voi
  * ottaa pois nakyvista ja palauttaa vasta kun pelaaja painaa liiku
  * nappia"*.
@@ -15,43 +19,50 @@
  * `pointsData` askelhelmet, `arcsData` lentokaaret). Jos sääntö ja
  * piirto erkanevat, luvut eivät täsmää eikä kumpikaan kaadu itsestään.
  *
- * ── VARTIOT ───────────────────────────────────────────────────────
+ * MATKA AJETAAN OIKEILLA NAPEILLA. Sessio alkaa Liiku-napin
+ * painalluksesta ja jatkuu nopanheiton yli, ja juuri se ketju on tämän
+ * erän uusi asia — sitä ei siksi jäljitellä kenttiä kirjoittamalla vaan
+ * napautetaan alanappiriviltä. Nappulan siirtäminen kesken matkaa ja
+ * perille kirjoittaa `pos`-kentän: se on asema eikä ele, ja pelin oma
+ * kohteenvalinta pallon pinnalta olisi tässä vain kohinaa.
  *
- *   1. KAUPUNGISSA LIUKU KIINNI EI OLE VIUHKAA. Varsovassa (4
- *      maareittiä) reittiviivoja 0 ja helmiä 0 sekä vaiheessa 'action'
- *      että vaiheessa 'roll'. Vaihe 'roll' on tässä se tärkeä: erän
- *      koko ero vanhaan on juuri se, ettei siirtovaihe enää yksin riitä
- *      näyttämään viuhkaa (KARTTAUUDISTUKSEN PAATOKSET 5:n
- *      automaattinen nopanheitto osuu tähän hetkeen).
- *   2. LIUKU AUKI PALAUTTAA VIUHKAN. Sama kaupunki, `liukuAuki`
- *      tosi → tasan naapurien verran reittiviivoja ja helmiä yli nollan.
- *   3. KESKEN MATKAA SE YKSI REITTI JÄÄ. Nappula reitin päällä
- *      (`pos.type === 'edge'`), liuku kiinni → tasan 1 reittiviiva.
- *      Ilman tätä poikkeusta nappula kulkisi tyhjän päällä.
- *   4. KATSELUTILA JA BOTIN VUORO OVAT ENNALLAAN tyhjiä.
- *   5. LENTOKAARTEN SÄÄNTÖ EI MUUTU (omistaja 1.9.2026): Ateenassa
- *      lentolista auki (`travelExpanded`, suodatin 'air') → kaaria yli
- *      nollan; ilman listaa nolla. Tämä on erän tärkein vastavartio:
- *      viuhkan piilotus ei saa viedä kaaria mukanaan.
+ * ── VARTIOT (Varsova, 4 maareittiä) ───────────────────────────────
  *
- *      MIKSI LIUKU ON TÄSSÄ AUKI: lentolista aukeaa liu'un napista, ja
- *      juuri sillä piirtokierroksella `liukuAuki` on vielä tosi — liu'un
- *      oma sulkija ehtii vasta kuplinnassa perässä (js/ui.js
- *      piirraToimintorivi). Kaari siis syntyy sillä hetkellä. Mitattu
- *      oikeasta napautusketjusta 14.9.2026.
+ *   1. ENNEN LIIKUA EI OLE VIUHKAA. Vuoro alkaa kaupungissa vaiheesta
+ *      'roll', koska liftaus on ainoa noppatapa ja game.beginTurn
+ *      esivalitsee sen (`autoTravel`, PAATOKSET 5). Silti 0 viivaa ja
+ *      0 helmeä: siirtovaihe ei enää yksin riitä.
+ *   2. LIIKU-NAPIN PAINALLUS TUO VIUHKAN: 4 viivaa, helmiä yli nollan,
+ *      ja `ui.matkaSessio` on lähtökaupunki.
+ *   3. VIUHKA PYSYY NOPANHEITON YLI. "Heitä noppa" sulkee liu'un
+ *      (js/ui.js piirraToimintorivi), mutta viuhka on yhä 4 ja sessio
+ *      yhä auki — tämä on se hetki, jonka omistaja päätti 14.9.2026.
+ *   4. KESKEN REITTIÄ TASAN SE YKSI REITTI, myös ilman sessiota:
+ *      sivunlataus kesken matkaa ei säilytä sessiota, ja poikkeus
+ *      (`pos.type === 'edge'`) kantaa senkin.
+ *   5. PERILLÄ UUDESSA KAUPUNGISSA TYHJÄ ja sessio päättynyt.
+ *   6. PERUUTUS TYHJÄ kummallakin tavalla: Liiku-napin toinen
+ *      painallus ja liu'un sulku kartalta (ui.suljeLiuku, sama metodi
+ *      jonka kytkeLiukuSulku kutsuu).
+ *   7. KATSELUTILA JA BOTIN VUORO OVAT ENNALLAAN tyhjiä.
+ *   8. LENTOKAARTEN SÄÄNTÖ EI MUUTU (omistaja 1.9.2026): Ateenassa
+ *      lentolista auki → kaaria yli nollan, ilman listaa nolla. Tämä on
+ *      erän tärkein vastavartio: viuhkan piilotus ei saa viedä kaaria.
  *
  * ── VASTAKOE ──────────────────────────────────────────────────────
  *
- * Vartiot 1 ja 5 erottavat vanhan ja uuden säännön: vanhalla ehdolla
- * (`this.liukuAuki || vaiheessa`) vartio 1 on punainen vaiheessa 'roll'
- * ja vartio 5 yhtä vihreä kuin nyt. Aja savuke muutos palautettuna,
- * niin ero näkyy numeroina.
+ * Vartiot 1 ja 6 erottavat vanhan ja uuden säännön. Vanha ehto
+ * (`liukuAuki || vaiheessa`) näyttäisi viuhkan jo lepotilassa ja jättäisi
+ * sen päälle peruutuksen jälkeen; ensimmäisen kierroksen liukuehto
+ * (`this.liukuAuki`) puolestaan veisi viuhkan pois heti nopanheiton
+ * jälkeen eli kaataisi vartion 3. Aja savuke muutos palautettuna, niin
+ * ero näkyy numeroina.
  *
  * ── KUVAT ─────────────────────────────────────────────────────────
  *
- * Laaja ruutu 2560 × 1352 (omistajan työpöytä): Varsova liuku kiinni,
- * Varsova liuku auki ja yksi kesken matkaa. Nimiö erottaa ENNEN- ja
- * JÄLKEEN-ajon toisistaan.
+ * Laaja ruutu 2560 × 1352 (omistajan työpöytä): ennen Liikua, Liiku
+ * painettuna, nopanheiton jälkeen, kesken matkaa, perillä ja peruutus.
+ * Nimiö erottaa ENNEN- ja JÄLKEEN-ajon toisistaan.
  *
  * ÄMPÄRI KULKEE NODEN KAUTTA (CLAUDE.md: NODE_USE_ENV_PROXY=1): kontin
  * selain ei osaa välityspalvelinta, Noden fetch osaa. Ilman ämpäriä
@@ -134,6 +145,9 @@ const tallenne = JSON.stringify(peli.toJSON());
 const NAAPURIT = [...(peli.board.adj.get(KAUPUNKI) ?? [])];
 const NAAPUREITA = NAAPURIT.length;
 const REITTI = NAAPURIT[0];
+/** Reitin toinen pää: se kaupunki, johon matka päättyy vartiossa 5. */
+const PERILLA = peli.board.edgeById.get(REITTI).a === KAUPUNKI
+  ? peli.board.edgeById.get(REITTI).b : peli.board.edgeById.get(REITTI).a;
 
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 const ctx = await selain.newContext({
@@ -168,37 +182,14 @@ const auki = await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pal
 vaadi('pallolauta aukesi', auki, virheet.join(' | '));
 
 /**
- * Asettaa pelitilan ja palauttaa sen, mitä pallo NÄYTTÄÄ: reittiviivat
- * (varjot pois laskuista), askelhelmet ja lentokaaret. Sääntö luetaan
- * samalla rinnalle, jotta raportista näkyy, ovatko sääntö ja piirto
- * samaa mieltä.
+ * LUKEE SEN, MINKÄ PELAAJA NÄKEE: pallon reittiviivat (varjot pois
+ * laskuista), askelhelmet ja lentokaaret — sekä rinnalle pelin tilan,
+ * jotta raportista näkyy, ovatko sääntö ja piirto samaa mieltä. Ei
+ * kirjoita mitään.
  */
-const mittaa = (tila) => sivu.evaluate(async (t) => {
+const lue = () => sivu.evaluate(() => {
   const { ui } = window.matkakirja;
   const l = ui.pallolauta;
-  const { game } = ui;
-  game.phase = t.phase;
-  game.player.pos = t.pos;
-  game.player.isBot = Boolean(t.botti);
-  ui.katselu = Boolean(t.katselu);
-  ui.liukuAuki = Boolean(t.liuku);
-  ui.travelExpanded = Boolean(t.matkavalikko);
-  ui.travelSuodatin = t.suodatin ?? null;
-  if (t.keskita) {
-    /*
-     * VAIN KESKITYS, EI ZOOMIA: korkeus otetaan siitä, mihin peli itse
-     * asettui saapumisessa (maan rajaus, karttauudistus). Oma luku
-     * antaisi kuvan, jota pelissä ei ole.
-     */
-    const c = game.board.cityById.get(t.keskita);
-    const p = l.asteet({ x: c.x, y: c.y });
-    const nyt = l.pallo.pointOfView();
-    l.pallo.pointOfView({ lat: p.lat, lng: p.lon, altitude: nyt.altitude }, 0);
-    await new Promise((v) => setTimeout(v, 700));
-  }
-  ui.paivitaMatkareitit();
-  await new Promise((v) => setTimeout(v, 500));
-
   /*
    * VARJO EI OLE OMA REITTI: jokainen reittiviiva työnnetään kahdesti
    * (js/pallolauta/reitit.js — vaalea uoma ensin, musteviiva päälle),
@@ -211,19 +202,75 @@ const mittaa = (tila) => sivu.evaluate(async (t) => {
     if (!avain || avain.endsWith('#varjo')) continue;
     viivat.add(avain);
   }
-  const helmia = l.pallo.pointsData().filter((p) => p.laji === 'helmi').length;
-  const kaaria = l.pallo.arcsData().length;
   const valinta = ui.matkareittienValinta();
   return {
     viivoja: viivat.size,
     viivat: [...viivat],
-    helmia,
-    kaaria,
+    helmia: l.pallo.pointsData().filter((x) => x.laji === 'helmi').length,
+    kaaria: l.pallo.arcsData().length,
+    vaihe: ui.game.phase,
+    autoTravel: ui.game.autoTravel,
+    liukuAuki: ui.liukuAuki,
+    matkaSessio: ui.matkaSessio ?? null,
     saanto: valinta.reittiTunnukset.length,
     lennot: valinta.lennot.length,
     avain: valinta.avain,
   };
-}, tila);
+});
+
+/**
+ * Asettaa aseman ja vaiheen ja piirtää uudestaan. Nappulan siirto on
+ * pelin sisäinen asema (js/rules.js pos), ei ele — kohteen napauttaminen
+ * pallon pinnalta olisi tässä vain kohinaa.
+ */
+const aseta = (t) => sivu.evaluate(async (x) => {
+  const { ui } = window.matkakirja;
+  const l = ui.pallolauta;
+  const { game } = ui;
+  if (x.pos) game.player.pos = x.pos;
+  if (x.phase) game.phase = x.phase;
+  if (x.autoTravel !== undefined) game.autoTravel = x.autoTravel;
+  if (x.uusiVuoro) {
+    /*
+     * VAIHE 'action' ENSIN: game.travelModes palauttaa tyhjän listan
+     * muussa vaiheessa, jolloin beginTurn jättäisi matkustustavan
+     * esivalitsematta ja mittaisi tilaa, jota pelissä ei ole.
+     */
+    game.phase = 'action';
+    game.player.money = Math.max(game.player.money, 300);
+    game.tehtavaTarjolla = () => false;
+    game.beginTurn();
+  }
+  if (x.botti !== undefined) game.player.isBot = x.botti;
+  if (x.katselu !== undefined) ui.katselu = x.katselu;
+  if (x.liuku !== undefined) ui.liukuAuki = x.liuku;
+  if (x.sessio !== undefined) ui.matkaSessio = x.sessio;
+  if (x.suljeLiuku) ui.suljeLiuku();
+  if (x.keskita) {
+    /*
+     * VAIN KESKITYS, EI ZOOMIA: korkeus otetaan siitä, mihin peli itse
+     * asettui saapumisessa (maan rajaus, karttauudistus). Oma luku
+     * antaisi kuvan, jota pelissä ei ole.
+     */
+    const c = game.board.cityById.get(x.keskita);
+    const p = l.asteet({ x: c.x, y: c.y });
+    const nyt = l.pallo.pointOfView();
+    l.pallo.pointOfView({ lat: p.lat, lng: p.lon, altitude: nyt.altitude }, 0);
+    await new Promise((v) => setTimeout(v, 700));
+  }
+  if (x.piirra !== false) ui.render();
+  ui.paivitaMatkareitit();
+  await new Promise((v) => setTimeout(v, 500));
+}, t);
+
+/** Napauttaa alanappirivin nappia sen nimellä; palauttaa löytyikö se. */
+const paina = (teksti) => sivu.evaluate((t) => {
+  const nappi = [...document.querySelectorAll('.actions button')].find((b) => (
+    `${b.textContent} ${b.getAttribute('aria-label') ?? ''}`.includes(t)));
+  if (!nappi) return false;
+  nappi.click();
+  return true;
+}, teksti);
 
 const kuva = async (nimi) => {
   /*
@@ -278,16 +325,15 @@ if (auki) {
   /*
    * SAAPUMISTRAILERI SAA PÄÄTTYÄ ITSE. Peli avaa kaupunkiin
    * saavuttaessa kolmen kuvan trailerin (js/saapumistraileri.js), joka
-   * peittää kartan noin kymmeneksi sekunniksi. Kuva otetaan vasta sen
+   * peittää kartan noin kymmeneksi sekunniksi. Mittaus alkaa vasta sen
    * jälkeen — muuten kaappauksessa olisi trailerin kuva eikä karttaa.
    */
   await sivu.waitForTimeout(14000);
   /*
-   * SAAPUMISKORTTI POIS KUVASTA: peli avaa kaupunkiin saavuttaessa
-   * kortin, joka peittää kartan kokonaan. Mitattava asia on kartta sen
-   * alla, joten kortti suljetaan samalla eleellä kuin pelaaja sulkee
-   * sen. Tehtävä vaimennetaan ('stay' on aito valinta, joka estäisi
-   * automaattivalinnan) ja vuoro aloitetaan puhtaalta pöydältä.
+   * PUHDAS LÄHTÖTILANNE. Saapumiskortti suljetaan pelin omalla
+   * kutsulla, kaupungin tehtävä vaimennetaan ('stay' on aito valinta,
+   * joka estäisi matkustustavan esivalinnan) ja vuoro aloitetaan
+   * alusta. Rahaa 300 p, jotta bussi ja laiva ovat tarjolla.
    */
   await sivu.evaluate(async () => {
     const { ui } = window.matkakirja;
@@ -298,94 +344,139 @@ if (auki) {
     ui.game.beginTurn();
     ui.render();
   });
-  /*
-   * SAAPUMISTRAILERI SAA PÄÄTTYÄ ITSE. Kuvasarja on peliä eikä roskaa:
-   * se peittää kartan saapumisen ajan ja poistuu omalla ajallaan. Kuva
-   * otetaan vasta sen jälkeen, muuten mitattaisiin trailerin kuvaa eikä
-   * karttaa.
-   */
   await sivu.waitForTimeout(1200);
-  const paalla = await sivu.evaluate(() => Boolean(
-    document.querySelector('.saapumistraileri, dialog[open]'),
-  ));
-  tieto('kartan päällä vielä traileri tai modaali', String(paalla));
 
   const kaupungissa = { type: 'city', city: KAUPUNKI };
   const keskella = { type: 'edge', edge: REITTI, idx: 1 };
 
-  /* 1–2. kaupungissa: liuku kiinni vs. auki, molemmissa vaiheissa. */
-  const aKiinniAction = await mittaa({
-    phase: 'action', pos: kaupungissa, liuku: false, keskita: KAUPUNKI,
-  });
-  tieto('kaupunki/liuku kiinni/vaihe action', JSON.stringify(aKiinniAction));
-  await kuva('kaupunki-kiinni');
+  /* ---- 1. lepotila: ennen Liikua ei viuhkaa ---------------------- */
+  await aseta({ pos: kaupungissa, uusiVuoro: true, keskita: KAUPUNKI });
+  const lepo = await lue();
+  tieto('1 lepo (ennen Liikua)', JSON.stringify(lepo));
+  await kuva('ennen-liikua');
 
-  const aAuki = await mittaa({ phase: 'action', pos: kaupungissa, liuku: true });
-  tieto('kaupunki/liuku auki/vaihe action', JSON.stringify(aAuki));
-  await kuva('kaupunki-auki');
+  /* ---- 2. Liiku painetaan: matka alkaa --------------------------- */
+  const liikuLoytyi = await paina('Liiku');
+  await sivu.waitForTimeout(900);
+  const liikuPainettu = await lue();
+  tieto('2 Liiku painettu', JSON.stringify(liikuPainettu));
+  await kuva('liiku-painettu');
 
-  const aKiinniRoll = await mittaa({ phase: 'roll', pos: kaupungissa, liuku: false });
-  tieto('kaupunki/liuku kiinni/vaihe roll (automaattiheitto)', JSON.stringify(aKiinniRoll));
-  await kuva('kaupunki-automaattiheitto');
+  /* ---- 3. noppa heitetään: liuku sulkeutuu, viuhka jää ----------- */
+  const noppaLoytyi = await paina('Heitä noppa');
+  await sivu.waitForTimeout(2500);
+  const heiton = await lue();
+  tieto('3 nopanheiton jälkeen', JSON.stringify(heiton));
+  await kuva('heiton-jalkeen');
 
-  const aMoveKaupungissa = await mittaa({ phase: 'move', pos: kaupungissa, liuku: false });
-  tieto('kaupunki/liuku kiinni/vaihe move', JSON.stringify(aMoveKaupungissa));
-
-  /* 3. kesken matkaa. */
-  const kesken = await mittaa({
-    phase: 'move', pos: keskella, liuku: false, keskita: KAUPUNKI,
-  });
-  tieto('kesken reittiä/liuku kiinni/vaihe move', JSON.stringify(kesken));
+  /* ---- 4. kesken reittiä, sessiolla ja ilman (sivunlataus) ------- */
+  await aseta({ pos: keskella, phase: 'move', keskita: KAUPUNKI });
+  const kesken = await lue();
+  tieto('4a kesken reittiä (sessio tallessa)', JSON.stringify(kesken));
+  await aseta({ pos: keskella, phase: 'move', sessio: null });
+  const keskenIlman = await lue();
+  tieto('4b kesken reittiä (sivunlataus: ei sessiota)', JSON.stringify(keskenIlman));
   await kuva('kesken-matkaa');
 
-  /* 4. katselu ja botti. */
-  const katselu = await mittaa({
-    phase: 'roll', pos: kaupungissa, liuku: true, katselu: true,
+  /* ---- 5. perillä uudessa kaupungissa ---------------------------- */
+  await aseta({ pos: keskella, phase: 'move', sessio: KAUPUNKI });
+  await aseta({
+    pos: { type: 'city', city: PERILLA }, phase: 'action', keskita: PERILLA,
   });
-  tieto('katselutila', JSON.stringify(katselu));
-  const botti = await mittaa({
-    phase: 'roll', pos: kaupungissa, liuku: true, botti: true,
-  });
-  tieto('botin vuoro', JSON.stringify(botti));
+  const perilla = await lue();
+  tieto('5 perillä uudessa kaupungissa', JSON.stringify(perilla));
+  await kuva('perilla');
 
-  /* 5. lentokaaret: sääntö ei muutu. */
-  const lentoPos = { type: 'city', city: LENTOKAUPUNKI };
-  const lentoLista = await mittaa({
-    phase: 'action',
-    pos: lentoPos,
-    liuku: true,
-    matkavalikko: true,
-    suodatin: 'air',
-    keskita: LENTOKAUPUNKI,
-  });
-  tieto('lentolista auki (liuku vielä auki)', JSON.stringify(lentoLista));
-  const lentoDilla = await mittaa({
-    phase: 'action', pos: lentoPos, liuku: false, keskita: LENTOKAUPUNKI,
-  });
-  tieto('lentokaupunki, ei listaa, liuku kiinni', JSON.stringify(lentoDilla));
+  /* ---- 6. peruutus kahdella tavalla ------------------------------ */
+  await aseta({ pos: kaupungissa, uusiVuoro: true, keskita: KAUPUNKI });
+  await paina('Liiku');
+  await sivu.waitForTimeout(700);
+  const ennenPeruutusta = await lue();
+  await paina('Liiku');
+  await sivu.waitForTimeout(700);
+  await aseta({ piirra: false });
+  const peruutusNapista = await lue();
+  tieto('6a peruutus Liiku-napista', JSON.stringify(peruutusNapista));
+  await kuva('peruutus');
 
-  await mittaa({ phase: 'action', pos: kaupungissa, liuku: false, keskita: KAUPUNKI });
+  await paina('Liiku');
+  await sivu.waitForTimeout(700);
+  const ennenKarttaa = await lue();
+  await aseta({ suljeLiuku: true });
+  const peruutusKartalta = await lue();
+  tieto('6b peruutus kartalta (suljeLiuku)', JSON.stringify(peruutusKartalta));
 
-  vaadi('1a. kaupungissa liuku kiinni (vaihe action): ei reittiviivoja eikä helmiä',
-    aKiinniAction.viivoja === 0 && aKiinniAction.helmia === 0,
-    JSON.stringify(aKiinniAction));
-  vaadi('1b. kaupungissa liuku kiinni (vaihe roll, automaattiheitto): ei viuhkaa',
-    aKiinniRoll.viivoja === 0 && aKiinniRoll.helmia === 0,
-    JSON.stringify(aKiinniRoll));
-  vaadi('1c. kaupungissa liuku kiinni (vaihe move): ei viuhkaa',
-    aMoveKaupungissa.viivoja === 0 && aMoveKaupungissa.helmia === 0,
-    JSON.stringify(aMoveKaupungissa));
-  vaadi(`2. liuku auki palauttaa viuhkan (${NAAPUREITA} naapuria)`,
-    aAuki.viivoja === NAAPUREITA && aAuki.helmia > 0,
-    JSON.stringify(aAuki));
-  vaadi('3. kesken matkaa näkyy tasan se yksi reitti',
-    kesken.viivoja === 1 && kesken.viivat[0] === REITTI,
-    JSON.stringify(kesken));
-  vaadi('4a. katselutilassa ei reittejä', katselu.viivoja === 0, JSON.stringify(katselu));
-  vaadi('4b. botin vuorolla ei reittejä', botti.viivoja === 0, JSON.stringify(botti));
-  vaadi('5a. lentolista auki piirtää kaaret (omistajan 1.9.2026 sääntö ennallaan)',
-    lentoLista.kaaria > 0, JSON.stringify(lentoLista));
-  vaadi('5b. ilman lentolistaa ei kaaria', lentoDilla.kaaria === 0, JSON.stringify(lentoDilla));
+  /* ---- 7. katselu ja botti --------------------------------------- */
+  /*
+   * Sessio JA liuku auki: ilman kumpaakin vartio menisi läpi tyhjänä
+   * eikä mittaisi katselutilaa lainkaan.
+   */
+  await aseta({
+    pos: kaupungissa, uusiVuoro: true, sessio: KAUPUNKI, liuku: true, katselu: true,
+  });
+  const katselu = await lue();
+  tieto('7a katselutila (sessio ja liuku auki)', JSON.stringify(katselu));
+  await aseta({ katselu: false, botti: true, sessio: KAUPUNKI, liuku: true });
+  const botti = await lue();
+  tieto('7b botin vuoro (sessio ja liuku auki)', JSON.stringify(botti));
+  await aseta({ botti: false, sessio: null, liuku: false });
+
+  /* ---- 8. lentokaaret: sääntö ei muutu --------------------------- */
+  await aseta({
+    pos: { type: 'city', city: LENTOKAUPUNKI }, uusiVuoro: true, keskita: LENTOKAUPUNKI,
+  });
+  await sivu.evaluate(() => { window.matkakirja.ui.game.player.money = 3000; });
+  await paina('Liiku');
+  await sivu.waitForTimeout(700);
+  const lentoEnnen = await lue();
+  const lentoLoytyi = await paina('Lentäen');
+  await sivu.waitForTimeout(2500);
+  const lentoLista = await lue();
+  tieto('8a lentolista auki', JSON.stringify(lentoLista));
+  await aseta({ pos: { type: 'city', city: LENTOKAUPUNKI }, uusiVuoro: true, sessio: null });
+  const lentoIlman = await lue();
+  tieto('8b lentokaupunki ilman listaa', JSON.stringify(lentoIlman));
+
+  /* ---- vartiot --------------------------------------------------- */
+  vaadi('napit löytyivät (Liiku, Heitä noppa, Lentäen)',
+    liikuLoytyi && noppaLoytyi && lentoLoytyi,
+    JSON.stringify({ liikuLoytyi, noppaLoytyi, lentoLoytyi }));
+  vaadi('1. ennen Liikua ei viuhkaa (vaihe roll, matkustustapa esivalittu)',
+    lepo.viivoja === 0 && lepo.helmia === 0 && lepo.matkaSessio === null,
+    JSON.stringify(lepo));
+  vaadi(`2. Liiku-napin painallus tuo viuhkan (${NAAPUREITA} naapuria)`,
+    liikuPainettu.viivoja === NAAPUREITA && liikuPainettu.helmia > 0
+      && liikuPainettu.matkaSessio === KAUPUNKI,
+    JSON.stringify(liikuPainettu));
+  vaadi('3. viuhka pysyy nopanheiton yli vaikka liuku sulkeutuu',
+    heiton.viivoja === NAAPUREITA && heiton.liukuAuki === false
+      && heiton.vaihe === 'move' && heiton.matkaSessio === KAUPUNKI,
+    JSON.stringify(heiton));
+  vaadi('4a. kesken reittiä tasan se yksi reitti',
+    kesken.viivoja === 1 && kesken.viivat[0] === REITTI, JSON.stringify(kesken));
+  vaadi('4b. sivunlataus kesken matkaa näyttää yhä sen yhden reitin',
+    keskenIlman.viivoja === 1 && keskenIlman.viivat[0] === REITTI,
+    JSON.stringify(keskenIlman));
+  vaadi('5. perillä uudessa kaupungissa tyhjä ja sessio päättynyt',
+    perilla.viivoja === 0 && perilla.helmia === 0 && perilla.matkaSessio === null,
+    JSON.stringify(perilla));
+  vaadi('6a. peruutus Liiku-napista tyhjentää viuhkan',
+    ennenPeruutusta.viivoja === NAAPUREITA && peruutusNapista.viivoja === 0
+      && peruutusNapista.matkaSessio === null,
+    JSON.stringify({ ennenPeruutusta, peruutusNapista }));
+  vaadi('6b. peruutus kartalta (suljeLiuku) tyhjentää viuhkan',
+    ennenKarttaa.viivoja === NAAPUREITA && peruutusKartalta.viivoja === 0
+      && peruutusKartalta.matkaSessio === null,
+    JSON.stringify({ ennenKarttaa, peruutusKartalta }));
+  vaadi('7a. katselutilassa ei reittejä vaikka matka olisi kesken',
+    katselu.viivoja === 0 && katselu.matkaSessio === KAUPUNKI, JSON.stringify(katselu));
+  vaadi('7b. botin vuorolla ei reittejä vaikka matka olisi kesken',
+    botti.viivoja === 0 && botti.matkaSessio === KAUPUNKI, JSON.stringify(botti));
+  vaadi('8a. lentolista auki piirtää kaaret (omistajan 1.9.2026 sääntö ennallaan)',
+    lentoLista.kaaria > 0 && lentoEnnen.kaaria === 0,
+    JSON.stringify({ lentoEnnen, lentoLista }));
+  vaadi('8b. ilman lentolistaa ei kaaria',
+    lentoIlman.kaaria === 0, JSON.stringify(lentoIlman));
 }
 
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));

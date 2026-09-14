@@ -1057,10 +1057,11 @@ test('kaupungin oma pallopiste kulkee kaikkiin merkkeihin yhdestä paikasta', ()
 });
 
 /*
- * NAAPURIVIUHKA VAIN LIU'UN OLLESSA AUKI (omistaja 14.9.2026,
- * sanatarkasti: *"onko kaupunkien valiset siirtymalinjat ja merireitit
- * omalla tasollaan? jos on niin ne voi ottaa pois nakyvista ja
- * palauttaa vasta kun pelaaja painaa liiku nappia"*).
+ * NAAPURIVIUHKA ON MATKASESSIO (Raamattu KARTTAUUDISTUKSEN PAATOKSET 8,
+ * omistaja 14.9.2026, sanatarkasti: *"reittiviuhka tulee nakyviin heti
+ * kun pelaaja painaa 'liiku' nappia ja on kokoajan nakyvissa kunnes
+ * pelaaja saapuu uuteen kaupunkiin tai peruuttaa liikkumisen eli jaakin
+ * nykyiseen kaupunkiin"*).
  *
  * MIKSI SÄÄNTÖ MITATAAN AJAMALLA EIKÄ LUKEMALLA. Näkyvyys on yksi
  * funktio kahdelle laudalle (js/ui.js matkareittienValinta), ja sen
@@ -1068,17 +1069,21 @@ test('kaupungin oma pallopiste kulkee kaikkiin merkkeihin yhdestä paikasta', ()
  * mikään kaatuu. Siksi tässä kutsutaan itse funktiota oikealla pelillä
  * ja luetaan sen päätös, ei etsitä lähteestä lauseita.
  *
- * VIISI ASIAA, JOTKA TÄMÄ PITÄÄ ERILLÄÄN:
- *   1. kaupungissa liuku kiinni → ei yhtään reittiä (myös 'roll' ja
- *      'move', jotka aiemmin yksinään riittivät);
- *   2. liuku auki → koko naapuriviuhka;
- *   3. kesken reittiä → tasan se yksi reitti, liu'usta riippumatta —
- *      muuten nappula kulkisi tyhjän päällä;
- *   4. katselutila ja botin vuoro ennallaan tyhjiä;
- *   5. lentokaarten oma sääntö (omistaja 1.9.2026) ei muutu: piilotus
- *      koskee reittitunnuksia, ei `lennot`-listaa.
+ * MITÄ TÄMÄ PITÄÄ ERILLÄÄN:
+ *   1. kaupungissa ennen Liikua ei viuhkaa — myöskään vaiheessa 'roll',
+ *      johon vuoro alkaa kun matkustustapa on esivalittu (autoTravel);
+ *   2. Liiku-napin painallus aloittaa matkan → viuhka;
+ *   3. viuhka pysyy heiton yli, vaikka liuku sulkeutuu (vaihe 'move');
+ *   4. viuhka pysyy kohdelistan yli (bussi, laiva, lento);
+ *   5. kesken reittiä tasan se yksi reitti, myös sivunlatauksen jälkeen
+ *      kun sessiota ei ole tallessa;
+ *   6. perillä uudessa kaupungissa tyhjä;
+ *   7. peruutus (jäädään lähtökaupunkiin) tyhjä — kaikki peruutustavat
+ *      päätyvät samaan tilaan, ja ehto tunnistaa tilan eikä nappeja;
+ *   8. katselutila ja botin vuoro ennallaan tyhjiä;
+ *   9. lentokaarten oma sääntö (omistaja 1.9.2026) ei muutu.
  */
-test('reittien näkyvyys: naapuriviuhka vain liu\'un ollessa auki, kesken matkaa se yksi reitti', async () => {
+test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peruutukseen', async () => {
   const { UI } = await import('../js/ui.js');
   const peli = new Game({
     players: [{ name: 'Fogg', color: '#c9a227', start: 'varsova' }],
@@ -1088,67 +1093,140 @@ test('reittien näkyvyys: naapuriviuhka vain liu\'un ollessa auki, kesken matkaa
   const naapurit = [...(peli.board.adj.get('varsova') ?? [])];
   assert.ok(naapurit.length >= 3, 'Varsovalla pitää olla viuhka mitattavaksi');
 
-  /** Sääntö oikealla pelillä; `tila` on se, mitä UI:sta tarvitaan. */
-  const valinta = (tila = {}) => UI.prototype.matkareittienValinta.call({
+  /** UI:n jäljitelmä, jossa vain näkyvyyssäännön tuntemat kentät. */
+  const luoUi = (tila = {}) => ({
     katselu: false,
     liukuAuki: false,
     travelExpanded: false,
     travelSuodatin: null,
     lentoKaari: null,
+    matkaSessio: null,
     game: peli,
+    matkaSessioKesken: UI.prototype.matkaSessioKesken,
+    matkareittienValinta: UI.prototype.matkareittienValinta,
     ...tila,
   });
+  const valinta = (tila) => luoUi(tila).matkareittienValinta();
   const kaupunkiin = (id) => { peli.player.pos = { type: 'city', city: id }; };
 
-  // 1. kaupungissa liuku kiinni — yksikään vaihe ei enää riitä.
+  // 1. kaupungissa ennen Liikua: yksikään vaihe ei riitä.
   kaupunkiin('varsova');
+  peli.autoTravel = true;
   for (const phase of ['action', 'roll', 'move']) {
     peli.phase = phase;
     const v = valinta();
-    assert.deepEqual(v.reittiTunnukset, [], `vaihe ${phase}: viuhka ei saa näkyä liu'un ollessa kiinni`);
+    assert.deepEqual(v.reittiTunnukset, [], `vaihe ${phase}: viuhka ei saa näkyä ennen Liikua`);
     assert.equal(v.avain, '', `vaihe ${phase}: tyhjä valinta tyhjentää kerroksen`);
   }
 
-  // 2. liuku auki palauttaa viuhkan.
-  peli.phase = 'action';
-  const auki = valinta({ liukuAuki: true });
-  assert.deepEqual(auki.reittiTunnukset, naapurit);
-  assert.notEqual(auki.avain, '', 'liu\'un ollessa auki kerros piirtyy');
+  // 2. Liiku painettu: matkasessio alkaa lähtökaupungista.
+  peli.phase = 'roll';
+  const liikuPainettu = luoUi({ liukuAuki: true, matkaSessio: 'varsova' });
+  const auki = liikuPainettu.matkareittienValinta();
+  assert.deepEqual(auki.reittiTunnukset, naapurit, 'Liiku-napin painallus tuo viuhkan');
+  assert.notEqual(auki.avain, '');
 
-  // 3. kesken reittiä se yksi reitti näkyy ilman liukuakin.
+  /*
+   * 3. HEITON JÄLKEEN VIUHKA PYSYY, vaikka liuku sulkeutuu: liu'un oma
+   * sulkija ajetaan jokaisesta matkanapista (js/ui.js piirraToimintorivi),
+   * joten `liukuAuki` on epätosi heti heiton jälkeen. Juuri tämä hetki on
+   * se, jonka omistaja päätti 14.9.2026.
+   */
+  peli.phase = 'move';
+  peli.die = 6;
+  const heiton = luoUi({ liukuAuki: false, matkaSessio: 'varsova' });
+  assert.deepEqual(heiton.matkareittienValinta().reittiTunnukset, naapurit,
+    'viuhka katosi nopanheiton jälkeen');
+  assert.equal(heiton.matkaSessio, 'varsova', 'sessio ei saa päättyä heittoon');
+
+  // 4. kohdelista (bussi, laiva, lento) pitää viuhkan vaikka liuku sulkeutui.
+  peli.phase = 'action';
+  const lista = luoUi({ liukuAuki: false, travelExpanded: true, travelSuodatin: 'sea', matkaSessio: 'varsova' });
+  assert.deepEqual(lista.matkareittienValinta().reittiTunnukset, naapurit,
+    'viuhka katosi kohdelistan ajaksi');
+
+  // 5. kesken reittiä: se yksi reitti — sessiolla ja ilman (sivunlataus).
   peli.phase = 'move';
   peli.player.pos = { type: 'edge', edge: naapurit[0], idx: 1 };
-  const kesken = valinta();
-  assert.deepEqual(kesken.reittiTunnukset, [naapurit[0]],
-    'kesken matkaa nappula kulkisi tyhjän päällä ilman omaa reittiään');
-  assert.notEqual(kesken.avain, '');
+  for (const sessio of ['varsova', null]) {
+    const v = valinta({ matkaSessio: sessio });
+    assert.deepEqual(v.reittiTunnukset, [naapurit[0]],
+      `kesken matkaa (matkaSessio ${sessio}) nappula kulkisi tyhjän päällä`);
+    assert.notEqual(v.avain, '');
+  }
+  // Sessio ei nollaudu kesken reittiä — matka voi kulkea monta vuoroa.
+  const matkalla = luoUi({ matkaSessio: 'varsova' });
+  matkalla.matkareittienValinta();
+  assert.equal(matkalla.matkaSessio, 'varsova', 'sessio nollautui kesken matkaa');
 
-  // 4. katselutila ja botin vuoro ennallaan.
+  // 6. perillä uudessa kaupungissa: sessio päättyy ja viuhka katoaa.
+  kaupunkiin('krakova');
+  peli.phase = 'move';
+  const perilla = luoUi({ matkaSessio: 'varsova' });
+  assert.deepEqual(perilla.matkareittienValinta().reittiTunnukset, [],
+    'viuhka jäi päälle uuteen kaupunkiin saavuttaessa');
+  assert.equal(perilla.matkaSessio, null, 'sessio ei päättynyt perillä');
+
+  /*
+   * 7. PERUUTUS. Kaikki tavat jäädä lähtökaupunkiin (liu'un sulku
+   * napista tai kartalta, kohdelistan "Takaisin", "Vaihda
+   * matkustustapa", linssikartan avaus, pöllö) päätyvät samaan tilaan:
+   * lähtökaupunki, ei liukua, ei listaa, ei aitoa heittovaihetta.
+   */
   kaupunkiin('varsova');
+  for (const [phase, autoTravel] of [['action', false], ['roll', true]]) {
+    peli.phase = phase;
+    peli.autoTravel = autoTravel;
+    const peruttu = luoUi({ matkaSessio: 'varsova' });
+    assert.deepEqual(peruttu.matkareittienValinta().reittiTunnukset, [],
+      `peruutus (vaihe ${phase}, autoTravel ${autoTravel}) jätti viuhkan päälle`);
+    assert.equal(peruttu.matkaSessio, null, 'peruutus ei päättänyt sessiota');
+  }
+  /*
+   * Pelaajan ITSE valitsema matkustustapa ei ole peruutus: `autoTravel`
+   * on silloin epätosi, ja heittovaihe jatkuu vaikka liuku sulkeutui.
+   */
   peli.phase = 'roll';
-  assert.equal(valinta({ liukuAuki: true, katselu: true }).avain, '', 'katselutilassa ei reittejä');
+  peli.autoTravel = false;
+  const tapaValittu = luoUi({ matkaSessio: 'varsova' });
+  assert.deepEqual(tapaValittu.matkareittienValinta().reittiTunnukset, naapurit,
+    'itse valittu matkustustapa tulkittiin peruutukseksi');
+
+  // 8. katselutila ja botin vuoro ennallaan.
+  peli.phase = 'roll';
+  peli.autoTravel = true;
+  assert.equal(valinta({ liukuAuki: true, matkaSessio: 'varsova', katselu: true }).avain, '',
+    'katselutilassa ei reittejä');
   peli.player.isBot = true;
-  assert.equal(valinta({ liukuAuki: true }).avain, '', 'botin vuorolla ei reittejä');
+  assert.equal(valinta({ liukuAuki: true, matkaSessio: 'varsova' }).avain, '',
+    'botin vuorolla ei reittejä');
   peli.player.isBot = false;
 
-  // 5. lentokaaret: oma sääntö, omat kohteet (omistaja 1.9.2026).
+  // 9. lentokaaret: oma sääntö, omat kohteet (omistaja 1.9.2026).
   kaupunkiin('ateena');
   peli.phase = 'action';
   const lennot = peli.airportDestinations();
   assert.ok(lennot.length > 0, 'Ateenassa pitää olla lentokohde mitattavaksi');
-  const lista = valinta({ liukuAuki: true, travelExpanded: true, travelSuodatin: 'air' });
-  assert.deepEqual(lista.lennot, lennot, 'lentolista piirtää kaikki kohteensa');
-  const ilmanListaa = valinta({ liukuAuki: true });
-  assert.deepEqual(ilmanListaa.lennot, [], 'ilman lentolistaa ei kaaria');
+  const lentolista = valinta({
+    liukuAuki: true, travelExpanded: true, travelSuodatin: 'air', matkaSessio: 'ateena',
+  });
+  assert.deepEqual(lentolista.lennot, lennot, 'lentolista piirtää kaikki kohteensa');
+  assert.deepEqual(valinta({ liukuAuki: true, matkaSessio: 'ateena' }).lennot, [],
+    'ilman lentolistaa ei kaaria');
 
   /*
-   * SÄÄNTÖ ON YHDESSÄ PAIKASSA. Piilotus on `reittiTunnukset`-haarassa
-   * eikä `naytetaan`-lauseessa: `naytetaan` ohjaa myös lentokaaria,
-   * joilla on oma elinikänsä, eikä piirtäjä (paivitaMatkareitit,
-   * js/pallolauta/reitit.js) saa toistaa ehtoa.
+   * SÄÄNTÖ ON YHDESSÄ PAIKASSA. Sessio alkaa Liiku-napin painalluksesta
+   * (vaihdaLiuku) ja päättyy yhdessä ehdossa (matkaSessioKesken); piirtäjä
+   * ei saa toistaa kumpaakaan.
    */
   const ui = lue('../js/ui.js');
-  assert.match(ui, /\? \(this\.liukuAuki \? \[\.\.\.\(game\.board\.adj\.get\(kaupunki\.id\) \?\? \[\]\)\] : \[\]\)/);
-  const piirtajat = lue('../js/pallolauta/reitit.js');
-  assert.ok(!piirtajat.includes('liukuAuki'), 'pallon piirtäjä ei saa tuntea liukua — sääntö on ui.js:ssä');
+  const liikuNappi = ui.match(/ {2}vaihdaLiuku\(\) \{[\s\S]*?\n {2}\}\n/)[0];
+  assert.match(liikuNappi, /if \(this\.liukuAuki\) this\.matkaSessio = this\.game\.cityOf\?\.\(\)\?\.id \?\? 'kesken';/,
+    'matkasessio ei ala Liiku-napin painalluksesta');
+  assert.match(ui, /\? \(matkalla \? \[\.\.\.\(game\.board\.adj\.get\(kaupunki\.id\) \?\? \[\]\)\] : \[\]\)/);
+  // Kommentit pois: piirtäjän tiedostokommentti SAA kertoa säännön, koodi ei toteuttaa sitä.
+  const piirtajat = lue('../js/pallolauta/reitit.js').replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, '');
+  for (const kentta of ['liukuAuki', 'matkaSessio']) {
+    assert.ok(!piirtajat.includes(kentta), `pallon piirtäjä ei saa tuntea ${kentta}:a — sääntö on ui.js:ssä`);
+  }
 });

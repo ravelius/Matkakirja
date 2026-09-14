@@ -3137,6 +3137,13 @@ export class UI {
     this.pallonTurvatilaIlmoitettu = false;
     this.linssikartta = null;
     this.travelExpanded = false; // matkavalinnan toinen vaihe auki
+    /*
+     * MATKASESSIO: se kaupunki, josta pelaaja lähti liikkeelle, tai null
+     * kun matkaa ei ole aloitettu. Reittiviuhkan näkyvyys lukee tätä eikä
+     * liu'un auki-oloa (Raamattu KARTTAUUDISTUKSEN PAATOKSET 8,
+     * js/ui.js matkaSessioKesken).
+     */
+    this.matkaSessio = null;
     this.travelSuodatin = null; // 'sea' | 'air' | null — kumpi lista näytetään
     this.kehittajaTila = kehittajaTilaPaalla();
     /*
@@ -7626,26 +7633,38 @@ export class UI {
    * ole valittavissa eikä niitä siis kuulu näkyä. Kaupungissa viuhka
    * näkyy vain liu'un ollessa auki (seuraava osio).
    *
-   * === NAAPURIVIUHKA VAIN LIU'UN OLLESSA AUKI (omistaja 14.9.2026)
+   * === NAAPURIVIUHKA ON MATKASESSIO (omistaja 14.9.2026, Raamattu
+   * KARTTAUUDISTUKSEN PAATOKSET 8)
    *
-   * Sanatarkasti: *"onko kaupunkien valiset siirtymalinjat ja
-   * merireitit omalla tasollaan? jos on niin ne voi ottaa pois
-   * nakyvista ja palauttaa vasta kun pelaaja painaa liiku nappia"*.
+   * Sanatarkasti: *"reittiviuhka tulee nakyviin heti kun pelaaja painaa
+   * 'liiku' nappia ja on kokoajan nakyvissa kunnes pelaaja saapuu uuteen
+   * kaupunkiin tai peruuttaa liikkumisen eli jaakin nykyiseen
+   * kaupunkiin"*. Lähtötilaus samana päivänä: *"onko kaupunkien valiset
+   * siirtymalinjat ja merireitit omalla tasollaan? jos on niin ne voi
+   * ottaa pois nakyvista ja palauttaa vasta kun pelaaja painaa liiku
+   * nappia"*.
    *
    * Kaupungissa seisova pelaaja EI valitse reittiä — hän lukee karttaa.
-   * Viuhka kuului siihen asti myös siirtovaiheeseen (`vaiheessa`), ja
-   * koska vuoro alkaa kaupungissa vaiheesta 'roll', neljä katkoviivaa
-   * makasi maan päällä koko sen ajan, jonka pelaaja katseli kaupunkia.
-   * Reitit ovat valinnan kieltä, joten ne kuuluvat siihen hetkeen,
-   * jolloin valinta on auki: Liiku-nappi ja sen liuku.
+   * Viuhka kuului siihen asti siirtovaiheeseen (`vaiheessa`), ja koska
+   * vuoro alkaa kaupungissa vaiheesta 'roll' aina kun matkustustapa on
+   * esivalittu (game.beginTurn autoTravel), neljä katkoviivaa makasi
+   * maan päällä koko sen ajan, jonka pelaaja katseli kaupunkia.
+   *
+   * MIKSI LIPPU EIKÄ PÄÄTELTY TILA. Ensimmäinen toteutus sitoi viuhkan
+   * `liukuAuki`-lippuun, ja se on väärä mitta kahdesta suunnasta: liuku
+   * sulkeutuu heti kun matkanappia painetaan (piirraToimintorivi), eli
+   * kesken matkan, ja toisaalta vaihe 'roll' voi alkaa kaupungissa ilman
+   * että pelaaja on painanut mitään. Ruudun tilasta ei siis voi päätellä,
+   * ONKO matka aloitettu — se on muistettava. `matkaSessio` on se muisti:
+   * lähtökaupungin tunnus, jonka `vaihdaLiuku` kirjoittaa.
    *
    * PIILOTUS KOSKEE VAIN VIUHKAA, EI KESKEN OLEVAA MATKAA. Nappulan
    * ollessa reitin päällä (`kesken`) se yksi reitti jää näkyviin
-   * riippumatta liu'usta — muuten nappula kulkisi tyhjän päällä.
-   * Siksi ehto on tässä `reittiTunnukset`-haarassa eikä
-   * `naytetaan`-lauseessa: `naytetaan` ohjaa myös lentokaaria, joilla
-   * on oma, omistajan 1.9.2026 päättämä elinikänsä (ks. alla), eikä
-   * sitä saa sotkea tähän.
+   * sessiosta riippumatta — muuten nappula kulkisi tyhjän päällä, ja
+   * juuri tämä poikkeus kantaa myös sivunlatauksen kesken matkaa, jolloin
+   * sessiota ei ole tallessa. Siksi ehto on `reittiTunnukset`-haarassa
+   * eikä lentojen ehdossa: lentokaarilla on oma, omistajan 1.9.2026
+   * päättämä elinikänsä (ks. alla), eikä sitä saa sotkea tähän.
    *
    * === LENTOKAARET OVAT ELÄVIÄ, EIVÄT LAATOISSA (omistaja 1.9.2026)
    *
@@ -7673,16 +7692,70 @@ export class UI {
    * @returns {{ reittiTunnukset: string[], lennot: string[],
    *   lentoLahto: string|null, avain: string }} tyhjä avain = ei mitään
    */
+  /**
+   * ONKO MATKA KESKEN JUURI NYT — ja jos ei enää ole, sessio päättyy
+   * tässä (Raamattu KARTTAUUDISTUKSEN PAATOKSET 8).
+   *
+   * Omistajan sanat antavat sessiolle yhden alun ja kaksi loppua:
+   * *"tulee nakyviin heti kun pelaaja painaa 'liiku' nappia ja on
+   * kokoajan nakyvissa kunnes pelaaja saapuu uuteen kaupunkiin tai
+   * peruuttaa liikkumisen eli jaakin nykyiseen kaupunkiin"*.
+   *
+   *   PERILLÄ on se, että nappula on KAUPUNGISSA, joka ei ole se, josta
+   *   matka alkoi. Tämä on asema eikä tapahtuma, ja siksi se kestää
+   *   kaikki reitit: bussi ja lento siirtävät kaupungista toiseen
+   *   yhdessä toiminnossa, liftaus ja laiva monta askelta ja tarvittaessa
+   *   MONTA VUOROA (game.jatkaMatkaaItsestaan jatkaa samaa matkaa reitin
+   *   varrella). Sessio ei siis saa nollautua vuoron vaihtuessa — eikä
+   *   nollaudu, koska kesken reittiä ei olla missään kaupungissa.
+   *
+   *   PERUUTUS on se, että pelaaja on yhä lähtökaupungissaan eikä
+   *   yksikään matkan vaihe ole auki: ei liukua, ei kohdelistaa, ei
+   *   valittua matkustustapaa (vaihe 'roll') eikä heitettyä noppaa
+   *   (vaihe 'move'). Peruutus tunnistetaan TÄSTÄ TILASTA eikä
+   *   napeista, koska tapoja jäädä kaupunkiin on monta ja lisää voi
+   *   tulla: liu'un sulkeminen napista, napautus kartalle
+   *   (kytkeLiukuSulku), kohdelistan "Takaisin" (suljeMatkavalikko),
+   *   "Vaihda matkustustapa" (game.actionCancelTravel), linssikartan
+   *   avaus (js/pallolauta/linssikartta.js ui.suljeLiuku) ja pöllön
+   *   avaaminen (js/pollo.js). Jokainen niistä päätyy samaan tilaan, ja
+   *   yksi ehto kattaa ne kaikki.
+   *
+   * @param {object} [kaupunki] pelaajan kaupunki, jos se on jo haettu
+   * @returns {boolean} onko matka kesken
+   */
+  matkaSessioKesken(kaupunki = this.game.cityOf?.()) {
+    if (!this.matkaSessio) return false;
+    // Kesken reittiä ei olla missään kaupungissa: matka jatkuu.
+    if (!kaupunki) return true;
+    if (kaupunki.id !== this.matkaSessio) { this.matkaSessio = null; return false; }
+    const { game } = this;
+    /*
+     * VAIHE 'roll' EI YKSIN RIITÄ. Kaupungissa se voi olla myös LEPOTILA:
+     * kun noppatapoja on vain yksi, game.beginTurn valitsee sen valmiiksi
+     * (`autoTravel`) ja vuoro alkaa heti heittovaiheesta, vaikka pelaaja
+     * ei ole painanut mitään — juuri sitä tilaa omistaja katsoi, kun
+     * pyysi viuhkan pois. Pelaajan ITSE valitsema tapa jättää
+     * `autoTravel` epätodeksi, ja silloin heittovaihe on aito matkan
+     * vaihe, joka jatkuu vaikka liuku sulkeutuisi napin painalluksessa.
+     */
+    const auki = this.liukuAuki || this.travelExpanded
+      || game.phase === 'move' || (game.phase === 'roll' && !game.autoTravel);
+    if (!auki) this.matkaSessio = null;
+    return auki;
+  }
+
   matkareittienValinta() {
     const { game } = this;
     const vaiheessa = game.phase === 'roll' || game.phase === 'move';
-    const naytetaan = !this.katselu && !game.player?.isBot
-      && (this.liukuAuki || vaiheessa);
     const kaupunki = game.cityOf?.();
+    const matkalla = this.matkaSessioKesken(kaupunki);
+    const naytetaan = !this.katselu && !game.player?.isBot
+      && (matkalla || this.liukuAuki || vaiheessa);
     const kesken = !kaupunki && game.player?.pos?.type === 'edge'
       ? game.player.pos.edge : null;
     const reittiTunnukset = kaupunki
-      ? (this.liukuAuki ? [...(game.board.adj.get(kaupunki.id) ?? [])] : [])
+      ? (matkalla ? [...(game.board.adj.get(kaupunki.id) ?? [])] : [])
       : (kesken ? [kesken] : []);
     const lennotElavana = pyramidiKattaa(game.pack.id);
     const lentoKohteet = [];
@@ -11521,6 +11594,24 @@ export class UI {
     this.liukuAuki = !this.liukuAuki;
     // Liuku peittää pöllön napin, joten avautuessaan se sulkee chatin.
     if (this.liukuAuki) polloSulje();
+    /*
+     * MATKA ALKAA TÄSTÄ NAPISTA (omistaja 14.9.2026, Raamattu
+     * KARTTAUUDISTUKSEN PAATOKSET 8, sanatarkasti: *"reittiviuhka tulee
+     * nakyviin heti kun pelaaja painaa 'liiku' nappia ja on kokoajan
+     * nakyvissa kunnes pelaaja saapuu uuteen kaupunkiin tai peruuttaa
+     * liikkumisen eli jaakin nykyiseen kaupunkiin"*).
+     *
+     * Tässä on se painallus ja vain tässä: monitoiminappi on ainoa tie
+     * liukuun (piirraToimintorivi), ja liuku on ainoa tie matkanappeihin.
+     * Sessio muistaa LÄHTÖKAUPUNGIN, koska juuri sen vaihtuminen on
+     * "saapuu uuteen kaupunkiin"; kesken reittiä avattu liuku merkitään
+     * omalla arvollaan, jottei kenttä jää epätodeksi.
+     *
+     * Sessio EI pääty tästä: sulkeutuva liuku on vasta yksi peruutuksen
+     * muoto muiden joukossa, ja ne kaikki tunnistetaan yhdestä paikasta
+     * (matkaSessioKesken).
+     */
+    if (this.liukuAuki) this.matkaSessio = this.game.cityOf?.()?.id ?? 'kesken';
     /*
      * PALLOLAUDALLA SIIRROT TEHDÄÄN PALLOLLA (vaihe 2, karttapallo.md
      * luku 7): Liiku ei enää herätä tasokarttaa — kohteet, reitit,
