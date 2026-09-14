@@ -33,9 +33,13 @@
  *   1. NAPAUTUS AVAA TIIVISTETYN ETUSIVUN, ja se on KAUPUNKILEHDEN
  *      KEHYS: dialogilla samat luokat (dialog · lehti · arkki) ja
  *      kortilla sama .dialog-card.arrival-card kuin kaupunkilehdellä.
- *   2. KEHYS ON MITALLEEN SAMA: leveys, pehmuste, taustaväri,
- *      taustakuvio, kehysviiva, pyöristys, otsikon ja leipätekstin
- *      kirjasin (perhe, koko, paino) — erotus 0 kaikissa.
+ *      Masto on paikallaan: kicker "Unohdettu aarre", nimiö ja
+ *      päiväysrivi — tässä järjestyksessä ja herokuvien YLÄPUOLELLA.
+ *   2. KEHYS JA MASTO OVAT MITALLEEN SAMAT: leveys, pehmuste,
+ *      taustaväri, taustakuvio, kehysviiva, pyöristys, otsikon ja
+ *      leipätekstin kirjasin (perhe, koko, paino) sekä maston kummankin
+ *      rivin teksti, kirjasin, kirjainväli, suuraakkostus, väri,
+ *      marginaalit, viivat ja korkeus — erotus 0 kaikissa.
  *      → TÄMÄ ON PAATOKSET 11 kohdan 3 vartio.
  *   3. HEROKUVAT ovat kortissa kuten vanhassa etusivussa.
  *   4. KOHDEKARTTA on kortissa numeropisteineen JA ENNEN leipätekstiä.
@@ -107,6 +111,12 @@ const TURISTI_INFO_ETAISYYS_MIN = 20;
 const KEHYKSEN_MITAT = [
   'leveys', 'padding', 'taustavari', 'taustakuvio', 'kehys', 'pyoristys',
   'otsikkoFontti', 'leipaFontti',
+  // LEHDEN MASTO (Fablen päätös 14.9.2026): kicker ja päiväysrivi ovat
+  // osa "täsmälleen samaa ulkoasua", joten ne mitataan samalla
+  // erotus-0-vaatimuksella kuin kehys.
+  'kickerTeksti', 'kickerTyyli', 'kickerLaatikko',
+  'pvmMaa', 'pvmPaiva', 'pvmLeveys',
+  'mastoJarjestys',
 ];
 
 const TYYPIT = {
@@ -230,8 +240,16 @@ for (const ruutu of RUUDUT) {
       const k = getComputedStyle(kortti);
       const otsikko = dialogi.querySelector('.lehti-nimio');
       const leipa = dialogi.querySelector('.lehti-leipa');
+      const kicker = dialogi.querySelector('.lehti-ylarivi');
+      const pvmrivi = dialogi.querySelector('.lehti-alarivi');
       const f = (el) => { const c = el ? getComputedStyle(el) : null;
         return c ? c.fontFamily + ' | ' + c.fontSize + ' | ' + c.fontWeight : ''; };
+      // Masto mitataan tekstiä myöten: kirjasin, koko, kirjainväli,
+      // suuraakkostus, väri JA rivin omat marginaalit/viivat — juuri ne,
+      // joista "pikselintarkasti sama" koostuu.
+      const m = (el) => { const c = el ? getComputedStyle(el) : null;
+        return c ? [f(el), c.letterSpacing, c.textTransform, c.textAlign, c.color,
+          c.margin, c.padding, c.borderTop, c.borderBottom].join(' | ') : ''; };
       return {
         luokat: [...dialogi.classList].filter((x) => x === 'dialog' || x === 'lehti' || x === 'arkki').sort().join(' '),
         kortinLuokat: [...kortti.classList].sort().join(' '),
@@ -246,6 +264,28 @@ for (const ruutu of RUUDUT) {
         pyoristys: k.borderRadius,
         otsikkoFontti: f(otsikko),
         leipaFontti: f(leipa),
+        kickerTeksti: kicker && kicker.getClientRects().length ? kicker.textContent : '',
+        kickerTyyli: m(kicker),
+        // offsetWidth/Height eikä getBoundingClientRect: ladottu laatikko,
+        // ei avausanimaation kiertämä ja skaalattu ruutulaatikko.
+        kickerLaatikko: kicker ? kicker.offsetWidth + ' x ' + kicker.offsetHeight : '',
+        pvmMaa: pvmrivi?.querySelector('.pvm-maa')?.textContent ?? '',
+        // Päiväysrivistä verrataan matkapäivän osuutta: VANHASSA rivissä
+        // on lisäksi liitelinkki (.maa-linkki), joka on alaosan
+        // navigointia ja jonka omistaja rajasi erässä 10 pois. Se on
+        // rivin ainoa ero, ja siksi se rajataan tässä ulos nimeltä.
+        pvmPaiva: pvmrivi && pvmrivi.getClientRects().length
+          ? pvmrivi.textContent
+            .replace(pvmrivi.querySelector('.pvm-maa')?.textContent ?? '~', '')
+            .replace(pvmrivi.querySelector('.maa-linkki')?.textContent ?? '~', '')
+          : '',
+        pvmTyyli: m(pvmrivi),
+        pvmLeveys: pvmrivi ? pvmrivi.offsetWidth : -1,
+        // Maston ja ensimmäisen herokuvan väli: "herokuvien yläpuolelle
+        // kuten vanhassa" on juuri tämä rako.
+        mastoJarjestys: [...dialogi.querySelectorAll(
+          '.lehti-ylarivi, .lehti-nimio, .lehti-alarivi, .lehti-paakuva',
+        )].map((el) => el.className.split(' ')[0]).join(','),
       };
     }`;
     await sivu.evaluate(() => {
@@ -275,13 +315,30 @@ for (const ruutu of RUUDUT) {
       const d = document.querySelector('.kaupunkipopup-tiivis');
       return d?.open ? mitta(d) : null;
     }, KEHYSMITTA);
+    vaadi(`${tunnus}: lehden masto on kortissa (kicker + päiväysrivi)`,
+      Boolean(uusi) && uusi.kickerTeksti === 'Unohdettu aarre'
+      && uusi.pvmPaiva.includes('matkapäivä')
+      && uusi.mastoJarjestys === 'lehti-ylarivi,lehti-nimio,lehti-alarivi,lehti-paakuva',
+      JSON.stringify(uusi && [uusi.kickerTeksti, uusi.pvmMaa, uusi.pvmPaiva,
+        uusi.mastoJarjestys]));
     vaadi(`${tunnus}: tiivis etusivu on kaupunkilehden kehyksessä`,
       Boolean(uusi) && uusi.luokat === vanha?.luokat
       && uusi.kortinLuokat === vanha?.kortinLuokat,
       `uusi ${JSON.stringify(uusi && [uusi.luokat, uusi.kortinLuokat])}`
       + ` vanha ${JSON.stringify(vanha && [vanha.luokat, vanha.kortinLuokat])}`);
     if (vanha && uusi) {
-      for (const mitta of KEHYKSEN_MITAT) {
+      /*
+       * Päiväysrivin TYYLI verrataan vain silloin, kun vanhassa rivissä
+       * ei ole liitelinkkiä näkyvissä: `.lehti-alarivi:has(button
+       * .maa-linkki:not([hidden]))` vaihtaa kapealla ruudulla rivin
+       * flexiksi ja tasaa vasemmalle. Tiivis kortti noudattaa saman
+       * säännön PERUSMUOTOA (keskitetty), koska sillä ei ole linkkiä —
+       * ero on siis linkin, ei ulkoasun.
+       */
+      const liite = vanha.pvmTyyli.includes('| left |');
+      const mitat = liite ? KEHYKSEN_MITAT : [...KEHYKSEN_MITAT, 'pvmTyyli'];
+      if (liite) tieto(`${tunnus}: pvmTyyli`, 'VANHASSA liitelinkki vaihtaa rivin taiton — ohitettu');
+      for (const mitta of mitat) {
         tieto(`${tunnus}: ${mitta}`, `VANHA ${vanha[mitta]} / UUSI ${uusi[mitta]}`);
         vaadi(`${tunnus}: ${mitta} sama kuin kaupunkilehdellä`,
           String(vanha[mitta]) === String(uusi[mitta]),
@@ -401,10 +458,13 @@ for (const ruutu of RUUDUT) {
       const el = document.querySelector('.kaupunkipopup-tiivis');
       if (typeof el?.close === 'function') el.close(); else el?.remove();
     });
-    await sivu.waitForTimeout(500);
+    // Kartalle pääsee vasta kun modaali on oikeasti kiinni — muuten
+    // sormi osuu sulkeutuvaan arkkiin eikä merkkiin.
+    await sivu.waitForFunction(() => !document.querySelector('dialog[open]'),
+      null, { timeout: 5000 }).catch(() => {});
     await sivu.evaluate(async () => {
       window.matkakirja.ui.pallolauta.ladoHeti();
-      await new Promise((v) => setTimeout(v, 300));
+      await new Promise((v) => setTimeout(v, 400));
     });
     const merkki = await sivu.evaluate((id) => {
       const l = window.matkakirja.ui.pallolauta;
@@ -441,7 +501,11 @@ for (const ruutu of RUUDUT) {
       vaadi(`${tunnus}: turisti-info ei mene kaupungin nimen päälle`,
         merkki.nimiaOsuu === 0, `${merkki.nimiaOsuu}/${merkki.nimia} nimeä limittyy`);
       await sivu.mouse.click(merkki.merkki.x, merkki.merkki.y);
-      await sivu.waitForTimeout(1200);
+      // Opas on modaali arkki: odotetaan sen avautumista eikä kelloa.
+      await sivu.waitForFunction(
+        () => document.getElementById('nahtavyys-dialog')?.open === true,
+        null, { timeout: 6000 },
+      ).catch(() => {});
       const opas = await sivu.evaluate(() => {
         const d = document.getElementById('nahtavyys-dialog');
         return {

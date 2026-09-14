@@ -148,7 +148,7 @@ oppaan avautumisen.
 ```
 NODE_USE_ENV_PROXY=1 PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers \
   node tools/savukkeet/savuke-kaupunkietusivu.mjs
-→ 144/144 vartiota läpi
+→ 178/178 vartiota läpi
 ```
 
 **VASTAKOE A** (`avaaTiivisKaupunkietusivu` takaisin `avaaKortti`-kehykseen):
@@ -166,20 +166,16 @@ Molemmat vastakokeet purettiin ja lopullinen ajo on 144/144.
 
 | Portti | Tulos |
 | --- | --- |
-| `npm test` | pass 3353, fail 1 (`haku on nopea myös koko aineistolla`, ks. alla) |
+| `npm test` | **pass 3354, fail 0** |
 | `node tools/tarkista-kaksoisavaimet.mjs` | ei kaksoisavaimia |
 | `node tools/tarkista-niputus.mjs` | 387 moduulia, ei törmäyksiä |
 | `tools/tarkista-savukkeet.mjs` | läpi |
 
-**Ainoa punainen on kuormavartio, ei koodi.** `tests/pollo.test.mjs`:n
-kaksi SUORITUSKYKYvartiota ("indeksi rakentuu ja on kokoluokaltaan
-järkevä", "haku on nopea myös koko aineistolla") ovat seinäkelloon
-sidottuja (`kesto < 250 ms`, `indeksointi < 3000 ms`). Kolmella
-peräkkäisellä koko sarjan ajolla punaiseksi meni joka kerta ERI vartio
-näistä kahdesta (3329 ms / 4240 ms / 376 ms) — tyypillinen kuormaheitto
-konttiympäristössä. **Yksinään ajettuna sama tiedosto on 124/124, fail
-0** (varmistettu kahdesti). Muutokset eivät koske Pulun indeksiä,
-hakua eivätkä mitään niiden lähdettä.
+Sivuhavainto: `tests/pollo.test.mjs`:n kaksi SUORITUSKYKYvartiota
+("indeksi rakentuu…", "haku on nopea…") ovat seinäkelloon sidottuja
+(`kesto < 250 ms`, `indeksointi < 3000 ms`) ja kaatuvat, jos koneella
+ajetaan yhtä aikaa Playwright-savuketta. Rauhassa ajettuna koko sarja on
+pass 3354, fail 0.
 
 ## 7. Mitä EI tehty
 
@@ -190,18 +186,68 @@ hakua eivätkä mitään niiden lähdettä.
 - Ei koskettu `js/pallolauta/maapaneeli.js`:ään eikä maan rajaviivan
   piirtoon (toisen agentin työ).
 
-## 8. Kysymys Fablelle
+## 8. Lisäys: LEHDEN MASTO (Fablen päätös 14.9.2026)
 
-Tiiviissä etusivussa EI ole lehden mastoa ("Unohdettu aarre" -kicker
-eikä päiväysriviä), koska toimeksianto rajasi sisällön neljään lohkoon.
-Jos omistajan *"täsmälleen sama ulkoasu kaikilta osin"* tarkoittaa myös
-mastoa, se on yhden rivin lisäys samoilla piirtäjillä — sano, niin
-lisätään.
+> *"'Täsmälleen sama ulkoasu kaikilta osin' kattaa lehden maston (kicker
+> 'Unohdettu aarre' + päiväysrivi) samoilla piirtäjillä kuin vanhassa
+> lehdessä, herokuvien yläpuolelle kuten vanhassa."*
+
+Masto on nyt kortissa: `.lehti-ylarivi` (kicker) → `h2.lehti-nimio` →
+`.lehti-alarivi` (päiväys) → herokuvat, samassa järjestyksessä kuin
+index.html:ssä. Luokat ovat lehden omat ja niiden säännöt ovat jo
+css/styles.css:ssä PELKKINÄ LUOKKINA, joten **yhtään uutta valitsinta
+eikä yhtään tyyliarvoa ei tarvittu**. Tekstit tulevat samoista lähteistä
+kuin `rakennaSivut`in masto: lehden nimi ja maan nimi + matkapäivän
+numero pelistä (`lehdenMaanNimi` LUKEE `pack.map.cityCountry` →
+`countryShapes`, ei kirjoita `ui.lehtitila`an mitään). Liitelinkkiä
+(`.maa-linkki`) ei ole — se on alaosan navigointia, jonka omistaja rajasi
+pois erässä 10.
+
+### Masto VANHA / UUSI — erotus 0
+
+| Mitta | 390 px VANHA / UUSI | 1400 px VANHA / UUSI |
+| --- | --- | --- |
+| kickerin teksti | Unohdettu aarre / sama | sama |
+| kickerin ladottu laatikko | 345 × 11 / **345 × 11** | 873 × 11 / **873 × 11** |
+| kickerin tyyli¹ | Am. Typewriter 9,6 px 400, kirjainväli 3,264 px, uppercase, center, rgb(90,67,38), marginit 13,6/0/1,6 / sama | marginit 32/0/1,6 / sama |
+| päiväysrivin maa | "Ranska · " / sama | sama |
+| päiväysrivin päivä | "1. matkapäivä" / sama | sama |
+| päiväysrivin leveys | 345 / **345** | 873 / **873** |
+| päiväysrivin tyyli¹ | (ohitettu, ks. alla) | 11,2 px 400, 1,792 px, uppercase, center, 3px double + 1px solid / sama |
+| maston järjestys | ylarivi,nimio,alarivi,paakuva / sama | sama |
+
+¹ mitattu kenttinä: kirjasinperhe, koko, paino, kirjainväli,
+suuraakkostus, tasaus, väri, marginaali, pehmuste, ylä- ja alaviiva.
+390 px:n ruudulla VANHAN päiväysrivin tyyli ohitetaan nimeltä: sääntö
+`.lehti-alarivi:has(button.maa-linkki:not([hidden]))` vaihtaa rivin
+flexiksi ja vasemmalle tasatuksi vain silloin, kun liitelinkki on
+näkyvissä. Tiivis kortti noudattaa saman säännön PERUSMUOTOA
+(keskitetty), eli ero on linkin, ei ulkoasun.
+
+### Kaksi mitattua korjausta, jotka masto paljasti
+
+1. **Vierityspalkin kaista.** Ilman `scrollbar-gutter: stable` tiiviin
+   arkin palsta oli **888 px** (1400×900) ja **360 px** (390×844), kun
+   kaupunkilehden palsta samalla ruudulla on 873 ja 345 — sama teksti
+   olisi taittunut 15 px leveämmälle. Kaista lisättiin omana sääntönään
+   (`tests/sivunkaanto.test.mjs` vartioi vanhaa valitsinlistaa
+   merkilleen, joten sitä ei muokattu). Nyt 873 / 345, erotus 0.
+2. **`card-in`-animaatio pois tiiviiltä arkilta.** Luvun 2 sivulöydös ei
+   parantunut JS-nollauksella: mitattuna vielä **1,5 sekuntia**
+   avaamisen jälkeen kortin opacity oli 0 ja kickerin ruutulaatikko
+   846 × 28 (= 873 × 11 skaalattuna 0,97:llä ja kierrettynä −1,2°).
+   Kortti oli siis näkymätön ja väärän kokoinen koko sen ajan.
+   Animaatio on nyt pois tältä yhdeltä kortilta (oma valitsimensa;
+   kaupunkilehden oma animaatio ei muutu), ja kortti on paikallaan heti
+   ensimmäisestä kehyksestä.
+
+Savukkeessa on maston oma vartio ("lehden masto on kortissa") ja lisäksi
+kahdeksan uutta VANHA/UUSI-mittaa; **178/178 vartiota läpi**.
 
 ## 9. Kuvat
 
 | Kuva | Mitä |
 | --- | --- |
 | `kuvat/era11-kartta-390.jpg`, `kuvat/era11-kartta-1400.jpg` | turisti-infon merkki Pariisin vieressä (40 px molemmilla) |
-| `kuvat/era11-etusivu-390.jpg`, `kuvat/era11-etusivu-1400.jpg` | tiivistetty etusivu kaupunkilehden kehyksessä |
+| `kuvat/era11-etusivu-390.jpg`, `kuvat/era11-etusivu-1400.jpg` | tiivistetty etusivu kaupunkilehden kehyksessä, masto mukaan lukien |
 | `kuvat/era11-opas-390.jpg`, `kuvat/era11-opas-1400.jpg` | merkin napautus → iso matkailijan opas, ei välipop-upia |

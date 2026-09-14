@@ -8358,6 +8358,19 @@ body.flight-active .fact-card {
   scrollbar-gutter: stable;
 }
 
+/*
+ * SAMA KAISTA TIIVIILLE LEHTIARKILLE (karttauudistus erä 11, js/lehti.js
+ * avaaTiivisLehtiarkki). OMANA SÄÄNTÖNÄÄN eikä yllä olevan valitsinlistan
+ * jatkona, koska tests/sivunkaanto.test.mjs vartioi tuota listaa
+ * merkilleen (omistajan 9.9.2026 päätös vierityspalkin kaistasta).
+ *
+ * MITATTU: ilman kaistaa tiiviin arkin palsta oli 888 px (1400×900) ja
+ * 360 px (390×844), kun kaupunkilehden palsta samalla ruudulla on 873 ja
+ * 345 — sama teksti olisi siis taittunut 15 px leveämmälle. Kaistan
+ * kanssa luvut ovat 873 ja 345, erotus 0.
+ */
+.tiivis-lehtiarkki > .dialog-card { scrollbar-gutter: stable; }
+
 /* Toinen, hieman kiertynyt reunaviiva vahvistaa käsin piirretyn vaikutelman. */
 .dialog-card::before {
   content: "";
@@ -13122,6 +13135,23 @@ button.lukija-nappi.lukee,
 /* Nimiö ulottuu negatiivisilla marginaaleilla paperin reunaan asti —
    sisällön vasen reuna on sen laatikossa --arkki-reunuksen kohdalla. */
 #arrival-city > .lehti-hampurilainen { left: var(--arkki-reunus, 0.95rem); }
+
+/*
+ * TIIVIS LEHTIARKKI EI LIU'U ESIIN — MITATTU VIKA, EI MAKUASIA.
+ *
+ * `.dialog-card`in `card-in` (0,32 s: opacity 0 → 1, scale 0,97 → 1,
+ * rotate −1,2°) on kirjoitettu kortille, joka on DOMissa jo sivun
+ * latautuessa. Tiiviin arkin kortti sen sijaan SYNTYY SULJETUN dialogin
+ * sisällä, ja Chromium jättää silloin animaation odottamaan: mitattu
+ * 14.9.2026 (Pariisi 1400×900) kortin opacity oli 0 ja sen ruutulaatikko
+ * 846×28 (= 873×11 kerrottuna alkuruudun 0,97:llä ja kierrettynä) vielä
+ * 1,5 sekuntia avaamisen jälkeen — kortti oli siis NÄKYMÄTÖN ja väärän
+ * kokoinen koko sen ajan. JS-nollaus (animation: none → '') ei purkanut
+ * sitä. Animaatio on siksi pois: kortti on paikallaan heti ensimmäisestä
+ * kehyksestä, eikä ladottu leveys voi mitata kiertynyttä laatikkoa.
+ * Kaupunkilehden oma animaatio ei muutu (tämä on oma valitsimensa).
+ */
+.tiivis-lehtiarkki > .dialog-card { animation: none; }
 
 /*
  * TIIVIIN LEHTIARKIN SULKUNAPPI (karttauudistus erä 11, js/lehti.js
