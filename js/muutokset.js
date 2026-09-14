@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1899, teksti: 'Puhelimella pulun plus-kupla avaa repliikin tekstin' },
   { v: 1898, teksti: 'Puhelimen saapumisnäkymä sovitetaan korkeuteen' },
   { v: 1897, teksti: 'Linssiluennan ja ui:n luentataso Web Audiolla iOS:lla' },
   { v: 1896, teksti: 'Linssi: korostuskehä ja paneeli piiloon, jono pysähtyy' },
