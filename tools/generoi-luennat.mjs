@@ -26,7 +26,7 @@
  *
  * Resepti on sama kuin aiemmissa luennoissa (docs/muistiinpanot-fablelle.md):
  * ääni "Viisas Kertoja", malli eleven_v3, /v1/text-to-dialogue,
- * mp3_44100_128. Stability kävi arvossa 0.4, mutta palautettiin
+ * mp3_44100_192 (14.9.2026 asti mp3_44100_128). Stability kävi arvossa 0.4, mutta palautettiin
  * 0.5:een omistajan palautteesta 7.8.2026: "äänen vaihteluarvoa
  * kannattaa ottaa takaisinpäin, hyppii vähän liikaa".
  *
@@ -75,7 +75,14 @@ const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 export const AANI = 'Sz0tRTEpybtDJ9ru2kgD'; // Viisas Kertoja
 export const MALLI = 'eleven_v3';
 export const STABILITY = 0.5;
-export const OUTPUT_FORMAT = 'mp3_44100_128';
+/*
+ * ULOSTULOMUOTO 192 kbps (omistaja 14.9.2026, ElevenLabs Pro).
+ * Horation putki ei käsittele ääntä lainkaan, joten tämä on ainoa
+ * koodaus, jonka luenta käy läpi — aiempi mp3_44100_128 oli Pro-tasoa
+ * edeltävä raja. Muoto on osa erätunnusta (tuotantoEraId), joten uudet
+ * ajot saavat oman erätunnuksensa eivätkä sekoitu vanhoihin.
+ */
+export const OUTPUT_FORMAT = 'mp3_44100_192';
 export const KUITIN_VERSIO = 1;
 const ERAN_TURVARAJA = 10;
 /*
@@ -133,6 +140,15 @@ export function tuotantoAvaimet(tyo, { batchId, sourceCommit }) {
   const turvallinenEra = String(batchId).replace(/[^a-zA-Z0-9._-]/g, '-');
   const revisio = String(sourceCommit).slice(0, 12);
   return {
+    /*
+     * RAAKA ENSIN (omistajan sitova sääntö 14.9.2026, Raamattu:
+     * "ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA"). Horation putki ei
+     * käsittele ääntä lainkaan (postprocess.kind === 'none'), joten
+     * raaka ja final ovat sama tavujono ja sama sha256 — mutta raaka saa
+     * silti oman, eräkohtaisen avaimensa, jota mikään myöhempi uusinta
+     * tai käsittelypäätös ei voi ylikirjoittaa.
+     */
+    raw: `audio/raw/horatio/${turvallinenEra}/${nimi}`,
     staging: `audio/staging/horatio/${turvallinenEra}/${nimi}`,
     final: `audio/versions/horatio/${revisio}/${turvallinenEra}/${nimi}`,
     live: null,
@@ -204,8 +220,8 @@ export function kuittirivi(tyo, {
   status = 'planned', reason = null, raw = null, final = null, objectKeys = null,
 } = {}) {
   const ttsTeksti = tyo.luenta + LOPPUTAUKO;
-  const audio = (data, duration = null) => data ? {
-    sha256: sha256(data), bytes: data.byteLength, actualDurationSeconds: duration,
+  const audio = (data, duration = null, objectKey = null) => data ? {
+    sha256: sha256(data), bytes: data.byteLength, actualDurationSeconds: duration, objectKey,
   } : null;
   return {
     cityId: tyo.id,
@@ -219,8 +235,8 @@ export function kuittirivi(tyo, {
       outputFormat: OUTPUT_FORMAT, postprocess: { kind: 'none' },
     },
     generation: { status, retryReason: reason },
-    rawAudio: audio(raw, final?.duration ?? null),
-    finalAudio: audio(final?.data, final?.duration),
+    rawAudio: audio(raw, final?.duration ?? null, objectKeys?.raw ?? null),
+    finalAudio: audio(final?.data, final?.duration, objectKeys?.final ?? null),
   };
 }
 

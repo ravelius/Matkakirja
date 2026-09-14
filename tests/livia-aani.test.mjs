@@ -619,13 +619,21 @@ test('rajatun erän tuotantokuitti sitoo tekstin, reseptin ja artefaktit lähdec
   assert.match(u.ttsTextSha256, /^[0-9a-f]{64}$/);
   assert.equal(u.voiceId, 'voice-test');
   assert.equal(u.model, 'eleven_v3');
-  assert.equal(u.outputFormat, 'mp3_44100_128');
+  // 14.9.2026: ElevenLabs Pro, 128 → 192 kbps. Kun putki ei enää koodaa
+  // uudelleen, tämä on ainoa koodaus, jonka ääni käy läpi.
+  assert.equal(u.outputFormat, 'mp3_44100_192');
   assert.equal(u.stagingObjectKey, `aanet/pulu/erat/${kuitti.batchId}/livia-marseille-3.mp3`);
   assert.equal(u.finalObjectKey,
     `aanet/pulu/versiot/${'1'.repeat(12)}/${kuitti.batchId}/livia-marseille-3.mp3`);
   assert.equal(u.promotionStatus, 'pending-code-deploy');
   assert.equal(u.settings.stability, 0.5);
-  assert.equal(u.postprocess.tempo, 1.08);
+  // 14.9.2026: rajapinnalle lähetetään vain stability, ja Livian
+  // jälkikäsittely on pois (mallin mp3 sellaisenaan). Kuitin pitää
+  // kertoa juuri se — vanha tempo-rivi olisi nyt valhe.
+  assert.equal(u.settings.similarityBoost, null);
+  assert.equal(u.settings.style, null);
+  assert.equal(u.settings.useSpeakerBoost, null);
+  assert.deepEqual(u.postprocess, { kind: 'none' });
   assert.deepEqual(u.rawArtifact, tulokset.get(rivi.avain).rawArtifact);
   assert.deepEqual(u.finalArtifact, tulokset.get(rivi.avain).finalArtifact);
   assert.equal(u.retryReason, 'owner-approved-text-change');
