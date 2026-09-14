@@ -44,7 +44,7 @@ import {
   maanKohdetiedot, naapurienPoltetutMerkit, suljeFokuskohde,
 } from '../fokuskohteet.js';
 import { avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
-import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenSiirto } from '../fokuspiste.js';
+import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenAsteet } from '../fokuspiste.js';
 import { fokusvirtaAarrepisteOhje, fokusvirtaKohtaamispiste } from '../fokusvirta.js';
 import {
   NOSTOSYM_MINI_RUUTU, NOSTOSYM_NIMIO_KOKO, nostosymNimioAsemointi, nostosymNimioMitta,
@@ -586,15 +586,23 @@ export function luoNostot({
     if (piste) {
       /*
        * PISTE POIS NAPPULAN ALTA (omistaja 6.9.2026 ilta: *"aarteen
-       * piste syttyy liian lähelle ateenaa, ei pysty painamaan"*): sama
-       * sivusiirto kuin tasokartalla (js/fokuspiste.js
-       * fokuspisteenSiirto) — merkki JA osuma siirtyvät, data ei.
-       * Nappula ei ota napautuksia (css pointer-events), mutta ilman
-       * siirtoa piste ja kaupunki olivat samassa ruutupisteessä ja
-       * lähin merkki -sääntö antoi tasapelin kaupungille.
+       * piste syttyy liian lähelle ateenaa, ei pysty painamaan"*):
+       * merkki JA osuma siirtyvät, data ei. Nappula ei ota napautuksia
+       * (css pointer-events), mutta ilman siirtoa piste ja kaupunki
+       * ovat samassa ruutupisteessä ja lähin merkki -sääntö antaa
+       * tasapelin kaupungille.
+       *
+       * SIIRTO LASKETAAN ASTEISSA, EI LAUDAN YKSIKÖISSÄ (mitattu
+       * 14.9.2026, js/fokuspiste.js fokuspisteenAsteet). Kaupungin
+       * merkki EI ole pallolla laudan kohdassaan vaan omassa
+       * pallopisteessään, ja `asteet()` antaa juuri sen — joten sekä
+       * kynnys että siirto mitataan siitä pisteestä, jonka pelaaja
+       * näkee. Laudan yksiköissä mitattu kynnys jätti Budapestin,
+       * Barcelonan, Marseillen ja Helsingin pisteen kaupungin merkin
+       * alle (0,1–1,9 px). Tasokartta pitää oman sääntönsä
+       * (fokuspisteenSiirto): siellä laudan yksikkö ON merkin mitta.
        */
-      const siirto = fokuspisteenSiirto(city, piste);
-      const a = asteet({ x: piste.x + siirto.x, y: piste.y + siirto.y });
+      const a = fokuspisteenAsteet(asteet({ x: city.x, y: city.y }), asteet(piste));
       if (a) {
         rivit.push({
           avain: `piste:${city.id}`,
