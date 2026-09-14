@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1866, teksti: 'Maapaneeli neljasosaan, kermapohja ja kasinpiirretty kehys' },
   { v: 1865, teksti: 'Reittiviuhka nakyy vain matkan ajan' },
   { v: 1864, teksti: 'Aanien esilataus ei enaa jumita asennusta' },
   { v: 1863, teksti: 'Palvelutyontekija asentuu taas (sw.js kaksoiskappale pois)' },
