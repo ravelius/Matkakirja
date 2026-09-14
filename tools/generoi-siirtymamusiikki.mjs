@@ -128,11 +128,16 @@
 
 import { spawnSync } from 'node:child_process';
 import {
-  mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync,
+  mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync,
 } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+
+import {
+  eratunnus, kokoaRaakakuitti, lahdeCommit, raakaAmpariKansio, sha256 as raakaSha256,
+  vaadiRaakavienti, vieKuitti, vieRaaka,
+} from './raakavienti.mjs';
 
 import {
   LYRIA_MALLI, MOOTTORIT, avaimenNimi, haeLyriasta, moottorinAvain, raidanTiedosto,
@@ -747,6 +752,18 @@ async function main() {
     process.exit(1);
   }
 
+  /*
+   * RAAKAVIENTI ON PAKOLLINEN (omistajan sääntö 14.9.2026, Raamattu:
+   * ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA).
+   *
+   * MUSIIKKIPUTKESSA RAAKA ON SE, JOKA MERKITSEE. Valmis raita on
+   * OMMELTU: siitä leikataan looppi ja sauma ristihäivytetään, eli se
+   * on johdettu teos. Mallin tuotos ennen ompelua on se, mitä ei saa
+   * hukata — uuden sauman, uuden alkukohdan ja uuden loopin pituuden
+   * voi etsiä siitä ilmaiseksi niin monta kertaa kuin haluaa.
+   */
+  vaadiRaakavienti(liput);
+
   for (const komento of ['ffmpeg', 'ffprobe']) {
     if (!onOlemassa(komento)) {
       console.error(`${komento} puuttuu polusta — loopin leikkaus tarvitsee sen.`);
@@ -761,6 +778,14 @@ async function main() {
     console.error('Kuivan ajon saa ilman avainta: --laji kaikki --kuiva');
     process.exit(1);
   }
+
+  const sourceCommit = lahdeCommit();
+  const era = eratunnus('siirtymamusiikki', {
+    sourceCommit, lajit, moottori: liput.moottori, malli: MALLI, muoto: MUOTO,
+  });
+  const raakaKansioAmpari = raakaAmpariKansio(AMPARIN_KANSIO, era);
+  const raakatiedot = new Map();
+  console.log(`\nErä ${era}; raakatuotokset (ennen ompelua) avaimeen ${raakaKansioAmpari}/`);
 
   const tyokansio = mkdtempSync(join(tmpdir(), 'siirtymamusiikki-'));
   let kohdekansio = tyokansio;
@@ -802,6 +827,16 @@ async function main() {
           ? await haeLyriasta({ prompt: raita.prompt, kestoMs: lahdeMs(raita) }, avain, lahde)
           : await haeApista(raita, avain, lahde);
         console.log(`   API: ${(tavut / 1024).toFixed(0)} kt → ${lahde}`);
+
+        /*
+         * RAAKA ÄMPÄRIIN ENNEN OMPELUA. Tämä on mallin oma tuotos
+         * kokonaisena; valmis tiedosto on siitä leikattu looppi.
+         */
+        const raaka = vieRaaka(readFileSync(lahde), {
+          nimi: `raaka-${raita.tiedosto}`, kansio: raakaKansioAmpari,
+        });
+        console.log(`   raaka talteen: ${raaka.url}`);
+        raakatiedot.set(raita.tiedosto, raaka);
       }
 
       const {
@@ -830,6 +865,30 @@ async function main() {
     if (!liput.kuiva && liput.vienti) {
       for (const { raita } of valmiit) {
         vieAmpariin(join(kohdekansio, raita.tiedosto), raita.tiedosto);
+      }
+      if (raakatiedot.size) {
+        const kelvanneet = new Set(valmiit.map(({ raita }) => raita.tiedosto));
+        const kuitti = vieKuitti(kokoaRaakakuitti({
+          putki: 'siirtymamusiikki',
+          batchId: era,
+          sourceCommit,
+          resepti: { lajit, moottori: liput.moottori, malli: MALLI, muoto: MUOTO },
+          rivit: [...raakatiedot.entries()].map(([tiedosto, raaka]) => {
+            const kelpasi = kelvanneet.has(tiedosto);
+            const polku = join(kohdekansio, tiedosto);
+            return {
+              fileName: tiedosto,
+              outputPath: `${AMPARIN_KANSIO}/${tiedosto}`,
+              status: kelpasi ? 'generated' : 'validation-failed',
+              rawArtifact: raaka,
+              finalArtifact: kelpasi
+                ? { fileName: tiedosto, sha256: raakaSha256(readFileSync(polku)), bytes: statSync(polku).size }
+                : null,
+            };
+          }),
+          status: virheita ? 'completed-with-errors' : 'completed',
+        }), AMPARIN_KANSIO);
+        console.log(`\nKuitti: ${kuitti.objectKey}`);
       }
     }
   } finally {

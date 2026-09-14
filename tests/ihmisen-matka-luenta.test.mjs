@@ -635,8 +635,19 @@ test('ajo tarjoaa yhtenäisen luennan omana syötteenään', () => {
 
 test('ääni on v3 tageineen, aikaleimat pakotetusta kohdistuksesta', () => {
   const TYOKALU = readFileSync(new URL('../tools/generoi-linssiluennat.mjs', import.meta.url), 'utf8');
-  // 1) Ääni: sama pääte, malli ja asetukset kuin jakso kerrallaan.
-  assert.match(TYOKALU, /const tavut = await haeApista\(lahetetty\.teksti, avain, lahde, \{ malli \}\);/);
+  /*
+   * 1) Ääni: sama pääte, malli ja asetukset kuin jakso kerrallaan.
+   *
+   * Kutsu tarkistetaan osina eikä yhtenä rivinä: 14.9.2026 kutsulle
+   * tuli mukaan raakavientikansio (omistajan sääntö ALKUPERÄISET
+   * ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA) ja se katkaisi rivin kahtia.
+   * Vaatimus on sama kuin ennen — samat argumentit, sama `malli` —
+   * mutta ei enää sidottu rivinvaihtoihin.
+   */
+  assert.match(TYOKALU, /await haeApista\(\s*lahetetty\.teksti,\s*avain,\s*lahde,/);
+  assert.match(TYOKALU, /await haeApista\([^)]*\{[^}]*\bmalli\b[^}]*\}\)/s);
+  // Ja raaka viedään ämpäriin samalla kutsulla (ei erillistä reittiä).
+  assert.match(TYOKALU, /raakaKansio: liput\.raakaKansio/);
   // 2) Aikaleimat: valmis mp3 + tagiton teksti kohdistuspäätteeseen.
   assert.match(TYOKALU, /kohdistus = await haeKohdistus\(kohde, puhuttu\.teksti, avain\);/);
   assert.match(TYOKALU, /lomake\.append\('file'/);

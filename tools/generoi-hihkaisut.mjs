@@ -25,6 +25,11 @@ import { fileURLToPath } from 'node:url';
 import { createRequire } from 'node:module';
 import { MPEGDecoder } from 'mpg123-decoder';
 
+import {
+  eratunnus, kokoaRaakakuitti, lahdeCommit, raakaAmpariKansio, sha256,
+  vaadiRaakavienti, vieKuitti, vieRaaka,
+} from './raakavienti.mjs';
+
 const require = createRequire(import.meta.url);
 globalThis.MPEGMode = require('lamejs/src/js/MPEGMode.js');
 globalThis.Lame = require('lamejs/src/js/Lame.js');
@@ -147,12 +152,37 @@ async function leikkaaPuhe(tavut) {
   };
 }
 
+/*
+ * RAAKAVIENTI ON PAKOLLINEN (omistajan sääntö 14.9.2026, Raamattu:
+ * ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA).
+ *
+ * Tässä putkessa sääntö purree kovimmin: jokaisesta tiedostosta
+ * yritetään KOLME otosta, ja hylätyt katosivat ennen kokonaan — vaikka
+ * jokainen niistä on maksettu. Nyt JOKAISEN yrityksen raaka menee
+ * ämpäriin omalla juoksevalla nimellään, myös hylättyjen. Hylätyn oton
+ * voi kuunnella jälkikäteen ja leikkausrajat säätää ilmaiseksi.
+ */
+export const AMPARIN_JUURI = 'audio/hihkaisut';
+vaadiRaakavienti({
+  kuiva: process.argv.includes('--kuiva') || process.env.ELEVEN_KUIVA === '1',
+  vienti: !process.argv.includes('--ei-vientia'),
+});
+
 // Valinnainen suodatin: node tools/generoi-hihkaisut.mjs hammastys
-const vain = process.argv.slice(2);
+const vain = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const tyot = TYOT.filter((t) => !vain.length || vain.some((v) => t.tiedosto.includes(v)));
+
+const SOURCE_COMMIT = lahdeCommit();
+const ERA = eratunnus('hihkaisu', {
+  sourceCommit: SOURCE_COMMIT, voiceId: AANI, model: 'eleven_v3', stability: 0.5,
+  outputFormat: 'mp3_44100_128', lopputauko: LOPPUTAUKO,
+});
+const RAAKA_KANSIO = raakaAmpariKansio(AMPARIN_JUURI, ERA);
+const kuittirivit = [];
 
 for (const tyo of tyot) {
   let valmis = null;
+  const otokset = [];
   for (let yritys = 1; yritys <= 3 && !valmis; yritys++) {
     console.log(`${tyo.tiedosto}: yritys ${yritys} ("${tyo.luenta}")`);
     const vastaus = await fetch(
@@ -172,6 +202,19 @@ for (const tyo of tyot) {
       continue;
     }
     const tavut = Buffer.from(await vastaus.arrayBuffer());
+
+    /*
+     * RAAKA ÄMPÄRIIN ENNEN LEIKKAUSTA JA ENNEN HYLKÄYSPÄÄTÖSTÄ.
+     * Yritysnumero on nimessä, joten kolme otosta eivät kirjoita
+     * toistensa päälle eikä hylätty otos katoa.
+     */
+    const perus = tyo.tiedosto.split('/').at(-1);
+    const raaka = vieRaaka(tavut, {
+      nimi: `raaka-${perus.replace(/\.mp3$/, '')}-otos${yritys}.mp3`, kansio: RAAKA_KANSIO,
+    });
+    console.log(`  raaka talteen → ${raaka.url}`);
+    otokset.push(raaka);
+
     /*
      * Otos LEIKATAAN puheen rajoille: [long pause] venyttää otoksia
      * arvaamattomasti (mitattu 6–10 s), mutta puhe itse on lyhyt.
@@ -187,6 +230,8 @@ for (const tyo of tyot) {
   }
   if (!valmis) {
     console.error(`${tyo.tiedosto}: EI KELVOLLISTA OTOSTA kolmella yrityksellä.`);
+    console.error(`  Kaikki ${otokset.length} otosta ovat silti tallessa ämpärissä:`);
+    for (const otos of otokset) console.error(`    ${otos.objectKey}`);
     process.exit(1);
   }
   const kohde = resolve(JUURI, tyo.tiedosto);
@@ -195,6 +240,32 @@ for (const tyo of tyot) {
   // checkoutista — luodaan se ennen kirjoitusta.
   mkdirSync(dirname(kohde), { recursive: true });
   writeFileSync(kohde, valmis);
+  const perusnimi = tyo.tiedosto.split('/').at(-1);
+  kuittirivit.push({
+    fileName: perusnimi,
+    outputPath: tyo.tiedosto,
+    // Kelvannut otos on viimeinen; hylätyt ovat mukana omina riveinään.
+    rawArtifact: otokset.at(-1) ?? null,
+    finalArtifact: { fileName: perusnimi, sha256: sha256(valmis), bytes: valmis.length },
+  });
+  for (const hylatty of otokset.slice(0, -1)) {
+    kuittirivit.push({
+      fileName: hylatty.fileName,
+      status: 'rejected-take',
+      reason: 'leikkaus tai kesto/taso hylkäsi otoksen',
+      rawArtifact: hylatty,
+    });
+  }
   console.log(`  kirjoitettu (${(valmis.length / 1024).toFixed(0)} kt)`);
+}
+if (kuittirivit.length) {
+  const kuitti = vieKuitti(kokoaRaakakuitti({
+    putki: 'hihkaisut',
+    batchId: ERA,
+    sourceCommit: SOURCE_COMMIT,
+    resepti: { voiceId: AANI, model: 'eleven_v3', stability: 0.5, outputFormat: 'mp3_44100_128' },
+    rivit: kuittirivit,
+  }), AMPARIN_JUURI);
+  console.log(`Kuitti: ${kuitti.objectKey}`);
 }
 console.log('Valmis. Kuuntele kolmikko ennen julkaisua (tai pyydä omistajaa).');
