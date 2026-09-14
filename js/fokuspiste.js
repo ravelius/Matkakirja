@@ -104,6 +104,12 @@ const PISTE_SIIRTO_Y = -10;
  * etäisyys mitataan kaupungin keskipisteestä, siirto on vakio, eikä
  * datan koordinaatteihin kosketa kummallakaan laudalla.
  *
+ * TASOKARTAN OMA MITTA (14.9.2026). Tämä funktio jäi TASOKARTAN
+ * säännöksi: siellä laudan yksikkö on se sama yksikkö, jossa merkit
+ * piirretään, ja zoomi kertoo koko näkymän samalla kertoimella.
+ * Pallolla laudan yksikkö ei ole enää merkin mitta (ks.
+ * fokuspisteenAsteet alla), joten pallo kysyy nyt sisarfunktiota.
+ *
  * @returns {{ x: number, y: number }} lisättävä siirto (0, 0 kaukana)
  */
 export function fokuspisteenSiirto(city, piste) {
@@ -111,6 +117,86 @@ export function fokuspisteenSiirto(city, piste) {
     && Number.isFinite(piste?.x) && Number.isFinite(piste?.y)
     && Math.hypot(piste.x - city.x, piste.y - city.y) < PISTE_ERO_MIN;
   return lahella ? { x: PISTE_SIIRTO_X, y: PISTE_SIIRTO_Y } : { x: 0, y: 0 };
+}
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * SAMA SÄÄNTÖ PALLOLLA — MUTTA PALLON OMASSA MITASSA (ASTEITA)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MITATTU 14.9.2026 (maailmankartta, 390 × 844 -profiili, ruutuero
+ * kaupungin PIIRRETYSTÄ pallopisteestä):
+ *
+ *   Barcelona 0,1 px · Budapest 0,2 px · Marseille 0,5 px ·
+ *   Helsinki 1,9 px  — vihreä piste on kaupungin merkin ALLA.
+ *
+ * KAKSI ERI SYYTÄ, YKSI JUURI: laudan yksikkö ei ole pallon mitta.
+ *
+ * 1. KYNNYS MITATTIIN VÄÄRÄSTÄ PISTEESTÄ. Kaupunki EI ole pallolla
+ *    laudan kohdassaan: sillä on oma pallopiste (js/pallo.js
+ *    pallonOmatPisteet, `c.pallo`), joka siirtää merkin jopa 236 km
+ *    laudan pisteestä. `fokuspisteenSiirto` vertaa kohtaamispistettä
+ *    laudan pisteeseen, joten Budapestin 32,45 laudan yksikköä
+ *    putosivat kynnyksen (14) yli — vaikka pallolla piste ja kaupunki
+ *    ovat samassa pikselissä.
+ * 2. SIIRTO OLI VAKIO LAUDAN YKSIKÖISSÄ. Pituusaste kutistuu ruudulla
+ *    kertoimella cos(lat): sama 14 yksikön siirto oli Ateenassa
+ *    22,4 px ja Helsingissä 15,3 px eli sama sääntö antoi eri
+ *    sormenvaran eri leveysasteilla.
+ *
+ * TÄMÄ ON TÄSMÄLLEEN SAMA KAAVA KUIN TURISTI-INFOLLA — EI UUTTA
+ * KEKSINTÖÄ (js/kaupunkinosto.js turistiInfonAsteet, TURISTI_INFO_*):
+ * siirto on ASTEITA, pituusaste jaetaan kosinilla (lattia napa-alueelle)
+ * ja mitta on valittu MITTAAMALLA ruudulta. Turisti-info menee
+ * kaakkoon (lon +1,5 / lat −0,75 ≈ 39 px saapumisnäkymässä),
+ * kohtaamispiste koilliseen — eri suunta, sama kaava, ei päällekkäin.
+ *
+ * MITTA ON OMISTAJAN JO HYVÄKSYMÄ ERO, EI UUSI (ks. raportti):
+ * hypot(0,26; 0,33) = 0,42° on täsmälleen se ruutuero, jonka Ateena
+ * sai vanhalla säännöllä (0,4125° = 22,4 px) ja jonka omistaja
+ * hyväksyi 6.9.2026. Nyt jokainen kaupunki saa sen — ei enemmän eikä
+ * vähemmän.
+ *
+ * KYNNYS 0,35° on sama ruutuero laudan vanhana kynnyksenä: 14 laudan
+ * yksikköä oli Ateenan leveydellä 0,33–0,36° ruutumitassa. Yli sen
+ * olevaa pistettä EI siirretä: silloin kohtaamispaikka on oikeasti
+ * muualla (Oslo 43 px, Riika 97 px) ja datan suunta on sen oma tieto.
+ */
+/** Sivusiirto pallolla asteina: koilliseen (itään ja pohjoiseen). */
+export const FOKUSPISTE_SIIRTO_AST = Object.freeze({ lon: 0.33, lat: 0.26 });
+/** Alle tämän ruutueron (astetta) piste siirretään; yli sen ei. */
+export const FOKUSPISTE_ERO_MIN_AST = 0.35;
+/** Kosinin lattia — sama kuin turisti-infolla (napa ei karkaa). */
+export const FOKUSPISTE_KOSINIRAJA = 0.25;
+/**
+ * Pisteen OMAN MUSTEEN säde ruudun pikseleinä (hehkukehä). Pallon
+ * osumatesti (js/pallolauta/lauta.js lahinMerkki) lukee tämän: sormi
+ * merkin musteen päällä tarkoittaa merkkiä, sama myönnytys kuin
+ * kaupunkipisteellä on omasta halkaisijastaan.
+ */
+export const FOKUSPISTE_MUSTE_R_PX = PISTE_HEHKU_R;
+
+/**
+ * PIIRRETYN PISTEEN PAIKKA PALLOLLA asteina. Kaupungin PIIRRETTY
+ * pallopiste sisään (sama, jonka merkki saa), kohtaamispisteen omat
+ * asteet sisään — ulos se kohta, johon merkki ja sen osuma piirretään.
+ * Datan koordinaatteihin ei kosketa täälläkään.
+ *
+ * @param {{lat:number, lon:number}|null} kaupunki kaupungin pallopiste
+ * @param {{lat:number, lon:number}|null} piste kohtaamispisteen asteet
+ * @returns {{lat:number, lon:number}|null}
+ */
+export function fokuspisteenAsteet(kaupunki, piste) {
+  if (!Number.isFinite(piste?.lat) || !Number.isFinite(piste?.lon)) return null;
+  if (!Number.isFinite(kaupunki?.lat) || !Number.isFinite(kaupunki?.lon)) return piste;
+  const kosini = Math.max(FOKUSPISTE_KOSINIRAJA, Math.cos((kaupunki.lat * Math.PI) / 180));
+  // Ruutuero: pituusasteen osuus kutistuu kosinilla, aivan kuten ruudulla.
+  const ero = Math.hypot(piste.lat - kaupunki.lat, (piste.lon - kaupunki.lon) * kosini);
+  if (ero >= FOKUSPISTE_ERO_MIN_AST) return piste;
+  return {
+    lat: kaupunki.lat + FOKUSPISTE_SIIRTO_AST.lat,
+    lon: kaupunki.lon + FOKUSPISTE_SIIRTO_AST.lon / kosini,
+  };
 }
 
 /** Tyylitiedoston tunnus — sama tiedosto kuin fokusvirran korteilla. */

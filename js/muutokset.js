@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1859, teksti: 'Osumareititys: vihjepiste ei jaa kaupungin alle' },
   { v: 1858, teksti: 'Tasoituslaatat maakohtaiseen polkuun, haive ulospain' },
   { v: 1857, teksti: 'Pariisin pilotti: kaistat pois laajalla ruudulla' },
   { v: 1856, teksti: 'Liiku-nappi kevyissa kohteissa: Alppien umpikuja korjattu' },
