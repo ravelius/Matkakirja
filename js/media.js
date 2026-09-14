@@ -329,6 +329,39 @@ export function pyramidiUrl(polku) {
 }
 
 /*
+ * ====== TASOITUS-/VÄRILAATAN POLKU ON YKSI FUNKTIO ================
+ *
+ * VIKA, JOKA TÄMÄN SYNNYTTI (mitattu 13.9.2026, raportti
+ * docs/raportit/viesti-fable-kaistat-20260913.md luku 5): väritason
+ * laatan osoitteessa EI OLLUT MAATA — `<variversio>/vari/z4/9/4.webp` —
+ * ja kaikilla 27 maalla on sama `variversio`. Maiden laatikot menevät
+ * päällekkäin, joten jokainen maa-ajo kirjoitti samojen avainten
+ * päälle ja voimaan jäi viimeinen: Ranskan laatastoon jäi muiden
+ * maiden jäänteitä (mitattuna 41 ruutupikselin vaalea suorakaide
+ * Pohjois-Espanjassa, ja laatan z4/9/4 alfassa musta ala, jota Ranskan
+ * ajo ei ole voinut piirtää).
+ *
+ * KORJAUS ON MAA POLUSSA, JA POLKU ON YHDESSÄ PAIKASSA. Generaattori
+ * (tools/generoi-laattapyramidi.mjs) kirjoittaa laatat ja peli lukee
+ * ne; jos kumpikin rakentaisi polun omalla mallineellaan, ne ehtisivät
+ * eriytyä eikä sitä huomaisi kuin tyhjänä karttana. Siksi tämä on
+ * pelin ja työkalun YHTEINEN funktio, ja tests/varitasopolku.test.mjs
+ * mittaa että molemmat päät tuottavat saman merkkijonon samalla
+ * syötteellä — ja eri maat eri merkkijonon.
+ *
+ * MAA TULEE `vari/`:N JÄLKEEN eikä version eteen, koska ämpärin
+ * vientisilmukka ja savukkeiden paikallinen tarjoilu leikkaavat polun
+ * juuri `/vari/`-kohdasta (tools/savukkeet/savuke-tasoitus-pallo.mjs).
+ *
+ * @param {string} versio  variversio, esim. '2026-09-13-tasoitus'
+ * @param {string} iso     kohdemaa ISO A3, esim. 'FRA'
+ * @returns {string} esim. '2026-09-13-tasoitus/vari/FRA/z4/9/4.webp'
+ */
+export function varitasonPolku(versio, iso, z, sarake, rivi, muoto = 'webp') {
+  return `${versio}/vari/${iso}/z${z}/${sarake}/${rivi}.${muoto}`;
+}
+
+/*
  * REPON ASSET-KUVAT ÄMPÄRIIN (omistajan päätös 2.9.2026: "R2-ämpäriin,
  * JPG-muodossa").
  *

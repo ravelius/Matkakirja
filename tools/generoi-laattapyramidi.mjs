@@ -98,6 +98,13 @@ import { laudanProjektio, SYVYYS } from './fokuskartta/piirto.js';
 import { RANTATYYLI } from './fokuskartta/maailmapiirto.js';
 import { nostosymPolttoLaatikko } from '../js/fokusnosto-symbolit.js';
 import { NOSTOLADONTA_SAANTO } from '../js/nostoladonta.js';
+/*
+ * LAATAN POLKU TULEE PELIN OMASTA FUNKTIOSTA. Sama merkkijono
+ * rakennetaan molemmissa päissä — generaattori kirjoittaa laatan,
+ * peli lukee sen — ja kaksi mallinetta ehtisi eriytyä (js/media.js
+ * varitasonPolku; tests/varitasopolku.test.mjs mittaa yhtäsuuruuden).
+ */
+import { varitasonPolku } from '../js/media.js';
 
 const TAALLA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TAALLA, '..');
@@ -304,6 +311,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
     + '[--vari <ISO> --variversio <v> [--aluevesi <yksikköä>] '
     + '[--paletti murrettu|taysvari|tasoitus] [--vesi <0..1>] [--feidaus <0..1>] '
+    + '[--haive-sisaan (vastakoe)] '
     + '[--peitto <0..1>] [--kerma <#rrggbb>] '
     + '[--feidausreuna <yksikköä>] '
     + '[--laatikkokerroin <k>] [--laatikko-nakyma] [--ilman-rajausta]] '
@@ -729,7 +737,20 @@ const NAKYMAN_KUVASUHTEET = [
   [390, 844],   // puhelin pystyssä (kapein — määrää KORKEUDEN)
   [768, 1024],  // tabletti pystyssä
   [1440, 900],  // työpöytä
-  [1920, 1080], // leveä työpöytä (levein — määrää LEVEYDEN)
+  [1920, 1080], // leveä työpöytä
+  /*
+   * KUVASUHDE 2,0 ON LAAJIN TUETTU RUUTU (mitattu 13.9.2026).
+   *
+   * 1920 × 1080 on 1,778, ja rootin oma ruutu on 2560 × 1352 = 1,893 —
+   * eli leveämpi kuin laatikko, jolloin laatasto loppuu kesken ja
+   * kartalla näkyy laattaruudukon reuna (raportti
+   * docs/raportit/viesti-fable-kaistat-20260913.md luku 2.3: ruudun
+   * näkyvä leveys 884 yksikköä, laatikon leveys 831). Tasan 2,0 on
+   * pyöreä yläraja, joka kattaa myös 2560 × 1352:n ja 21:9-näytön
+   * ikkunoituna (2,33 ei mahdu, mutta silloin kamera sovittaa
+   * korkeuden ja ylimääräinen ala on ruudun laidassa).
+   */
+  [2560, 1280], // laajin tuettu: kuvasuhde 2,0 (levein — määrää LEVEYDEN)
 ];
 const VARI_LAATIKKO_NAKYMA = lippu('laatikko-nakyma');
 /*
@@ -741,6 +762,15 @@ const VARI_LAATIKKO_NAKYMA = lippu('laatikko-nakyma');
  * tarkoittaisi, ettei mittari mittaa leikkuria vaan jotain muuta.
  */
 const VARI_ILMAN_RAJAUSTA = lippu('ilman-rajausta');
+/*
+ * VASTAKOE (`--haive-sisaan`): häive piirretään laatikon reunasta
+ * SISÄÄNPÄIN niin kuin 13.9.2026 — kerma nollaan juuri reunalla ja
+ * täyteen sekä sisempänä että laatikon ulkopuolella. Se on se vika,
+ * jonka tämä erä korjasi (mitattu laatasta z4/9/4: alfa 217 → 20 →
+ * 217), ja savukkeen ON KAADUTTAVA tällä laatastolla. Lippu on
+ * vastakoetta varten eikä tuotantoon; ilman sitä häive on ulospäin.
+ */
+const VARI_HAIVE_SISAAN = lippu('haive-sisaan');
 /*
  * POHJA ILMAN RANTAVIIVAA (`--ilman-rantaviivaa`). Piirtomoottorin
  * osio 4 ohitetaan tyyliparametrilla (`tyyli.rantaviiva: false`,
@@ -1114,6 +1144,7 @@ if (VARITASO) {
     paperi: TASOITUSTASO ? TASOITUS_KERMA : undefined,
     feidaus: VARI_FEIDAUS,
     feidausReuna: VARI_FEIDAUSREUNA,
+    haiveSisaan: VARI_HAIVE_SISAAN,
     laatikko: VARI_LAATIKKO,
     laudanLeveys: polygonit?.lauta?.leveys > 0 ? polygonit.lauta.leveys : 12000,
   };
@@ -1121,12 +1152,12 @@ if (VARITASO) {
     + `x ${x0.toFixed(1)}..${x1.toFixed(1)} y ${y0.toFixed(1)}..${y1.toFixed(1)} `
     + `(kerroin ${VARI_KERROIN}, puskuri ${ALUEVESI_YKSIKKOA} yksikköä = 12 mpk`
     + `${VARI_LAATIKKO_NAKYMA ? ', NÄKYMÄUNIONI' : ''}) · `
-    + `versio ${VARIVERSIO} · polku vari/z<taso>`);
+    + `versio ${VARIVERSIO} · polku vari/${VARI_MAA}/z<taso>`);
   console.log(`  väripaletti     ${VARIPALETTI} · `
     + (TASOITUSTASO
       ? `peitto ${TASOITUS_PEITTO} · kerma ${TASOITUS_KERMA} · leikkuri maan polygoni (puskuri 0) `
       : `vesi ${VARI_VESI === null ? 'paletin oletus' : VARI_VESI} · feidaus ${VARI_FEIDAUS} `)
-    + `(häive ${VARI_FEIDAUSREUNA} yks) · `
+    + `(häive ${VARI_FEIDAUSREUNA} yks ${VARI_HAIVE_SISAAN ? 'SISÄÄN (vastakoe)' : 'ulospäin'}) · `
     + (VARI_ILMAN_RAJAUSTA
       ? 'LEIKKURI POIS (--ilman-rajausta, vastakoe)'
       : `leikkuri ${renkaat.length} rengasta / ${pisteita} pistettä`));
@@ -1926,6 +1957,17 @@ if (KUIVA) {
       + `${(r.leveys * r.korkeus * 2 / 1e6).toFixed(0)} Mt Int16) `
       + `lon ${kl.lon0.toFixed(2)}..${kl.lon1.toFixed(2)} `
       + `lat ${kl.lat0.toFixed(2)}..${kl.lat1.toFixed(2)}`);
+  }
+  /*
+   * POLKUOTOS: TODELLINEN MERKKIJONO, EI MALLINE. Kuiva-ajo on se
+   * paikka, jossa ihminen ja testi näkevät ennen oikeaa ajoa, mihin
+   * laatat menevät — ja tests/varitasopolku.test.mjs vertaa tämän
+   * rivin pelin omaan osoitteeseen samalla syötteellä.
+   */
+  if (VARITASO && tyot.length) {
+    const eka = tyot[0];
+    console.log(`  polkuotos       ${varitasonPolku(VARIVERSIO, VARI_MAA,
+      eka.mitat.z, eka.sarake, eka.rivi, MUOTO)}`);
   }
   console.log('\n--kuiva: vain luettelo, ei piirtoa.');
   process.exit(0);
@@ -3139,7 +3181,11 @@ for (const { mitat, bx, by } of lohkot.values()) {
     if (NOSTOTASO) kansio = join(kohdekansio, 'nostot', `z${mitat.z}`, String(sarake));
     if (VIIVATASO) kansio = join(kohdekansio, 'viivat', `z${mitat.z}`, String(sarake));
     if (RANTATASO) kansio = join(kohdekansio, 'ranta', `z${mitat.z}`, String(sarake));
-    if (VARITASO) kansio = join(kohdekansio, 'vari', `z${mitat.z}`, String(sarake));
+    // Väritaso: MAA on polussa (ks. js/media.js varitasonPolku) —
+    // ilman sitä 27 maan ajot kirjoittivat toistensa päälle.
+    if (VARITASO) {
+      kansio = join(kohdekansio, 'vari', VARI_MAA, `z${mitat.z}`, String(sarake));
+    }
     mkdirSync(kansio, { recursive: true });
     writeFileSync(join(kansio, `${rivi}.${MUOTO}`), puskuri);
 
@@ -3375,7 +3421,7 @@ function teeLuettelo() {
   /*
    * VÄRITASO — VIIDES laattapyramidi (karttauudistus, erä 1;
    * omistaja 13.9.2026). Kohdemaan värillinen topografia samalla
-   * laattaruudukolla polussa <varitasot[ISO].versio>/vari/z….
+   * laattaruudukolla polussa <varitasot[ISO].versio>/vari/<ISO>/z….
    *
    * KENTÄT OVAT PELIN AINOA TIETO SIITÄ, KENELLE VÄRIT KUULUVAT.
    * `maa` on ISO A3, ja peli piirtää kerroksen VAIN kun pelaaja on
@@ -3413,7 +3459,11 @@ function teeLuettelo() {
   varitasot: (() => {
     if (!VARITASO || !tasot.length) return null;
     const laatastot = {};
-    for (const m of tasot) laatastot[m.z] = laatastoBase64(m, 'vari');
+    // Bittikartta luetaan SAMASTA kansiosta, johon laatat kirjoitettiin:
+    // `vari/<ISO>/z…` (ks. js/media.js varitasonPolku). Maaton polku
+    // antaisi tyhjän bittikartan, ja peli päättelisi siitä, ettei
+    // yhtään laattaa ole olemassa — kerros jäisi kokonaan pimeäksi.
+    for (const m of tasot) laatastot[m.z] = laatastoBase64(m, join('vari', VARI_MAA));
     return {
       [VARI_MAA]: {
         versio: VARIVERSIO,
@@ -3639,7 +3689,7 @@ if (NOSTOTASO) {
 } else if (RANTATASO) {
   console.log(`\nVie ämpäriin: pyramidi/<rantaversio>/ranta/z<taso>/<sarake>/<rivi>.${MUOTO}`);
 } else if (VARITASO) {
-  console.log(`\nVie ämpäriin: pyramidi/<variversio>/vari/z<taso>/<sarake>/<rivi>.${MUOTO}`);
+  console.log(`\nVie ämpäriin: pyramidi/<variversio>/vari/<ISO>/z<taso>/<sarake>/<rivi>.${MUOTO}`);
 } else {
   console.log(`\nVie ämpäriin: pyramidi/<versio>/z<taso>/<sarake>/<rivi>.${MUOTO}`);
 }

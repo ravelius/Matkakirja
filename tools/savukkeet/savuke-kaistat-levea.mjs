@@ -58,6 +58,8 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+/* Laatan polku pelin omasta funktiosta — ei savukkeen mallineesta. */
+import { varitasonPolku } from '../../js/media.js';
 
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -182,6 +184,48 @@ function ruudukonReunat(z) {
 const RUUDUKKO = ruudukonReunat(4);
 if (!RUUDUKKO) {
   console.log('OHITUS: laataston bittikarttaa ei voitu lukea.');
+  palvelin.close();
+  process.exit(0);
+}
+
+/*
+ * ONKO ÄMPÄRISSÄ LAATASTO SIINÄ POLUSSA, JOTA PELI LUKEE? (14.9.2026)
+ *
+ * Laatan osoitteeseen lisättiin KOHDEMAA
+ * (`<variversio>/vari/FRA/z…`, js/media.js varitasonPolku), koska
+ * kaikilla 27 maalla on sama `variversio` ja maaton osoite tarkoitti,
+ * että maiden ajot kirjoittivat toistensa päälle. Vanhassa polussa
+ * olevaa laatastoa ei siis lueta enää, eikä tämä savuke voi mitata
+ * mitään ennen kuin laatat on ajettu uuteen polkuun
+ * (.github/workflows/generoi-varitaso.yml, yksi maa kerrallaan).
+ *
+ * OHITUS EIKÄ PUNAINEN: puuttuva laatasto on ämpärin tila, ei tämän
+ * haaran vika — ja peli on silloin ehjä (puuttuvan laatan tilalle
+ * maalataan kerma, js/pallolaatat.js maalaaTasoitus). Otoslaatta
+ * luetaan laataston omasta bittikartasta eikä kirjoiteta savukkeeseen.
+ */
+function ekaLaatta(z) {
+  const taso = PYRAMIDI.tasot.find((t) => t.z === z);
+  const b64 = VT.laatastot?.[z];
+  if (!taso || !b64) return null;
+  const bitit = Buffer.from(b64, 'base64');
+  for (let r = 0; r < taso.riveja; r += 1) {
+    for (let sar = 0; sar < taso.sarakkeita; sar += 1) {
+      const i = r * taso.sarakkeita + sar;
+      const t = bitit[i >> 3];
+      if (t !== undefined && ((t >> (i & 7)) & 1)) return { sarake: sar, rivi: r };
+    }
+  }
+  return null;
+}
+const OTOS = ekaLaatta(4);
+const OTOS_POLKU = OTOS
+  ? varitasonPolku(VT.versio, 'FRA', 4, OTOS.sarake, OTOS.rivi, PYRAMIDI.muoto ?? 'webp')
+  : null;
+const otos = OTOS_POLKU ? await ampariHaku(`${AMPARI}julisteet/pyramidi/${OTOS_POLKU}`) : null;
+if (otos?.status !== 200) {
+  console.log(`OHITUS: ämpärissä ei ole laatastoa maakohtaisessa polussa (${OTOS_POLKU}). `
+    + 'Aja .github/workflows/generoi-varitaso.yml kullekin maalle, sitten tämä savuke.');
   palvelin.close();
   process.exit(0);
 }

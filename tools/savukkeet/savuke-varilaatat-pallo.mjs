@@ -70,7 +70,7 @@
  *
  * === POHJA TULEE OIKEASTA ÄMPÄRISTÄ ================================
  *
- * Vain `vari/z…` tarjoillaan paikallisesta pilottikansiosta; pohja,
+ * Vain `vari/<ISO>/z…` tarjoillaan paikallisesta pilottikansiosta; pohja,
  * ranta-, viiva- ja nostotaso tulevat tuotannon pyramidista. Syy on
  * versioportti: pallon sarja (laatat.json) ja pyramidi (pyramidi.json)
  * on oltava samaa versiota, tai kerros sammuu kokonaan. Pilottipohjalla
@@ -321,8 +321,9 @@ await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
   const osa = url.split('/julisteet/pyramidi/')[1] ?? null;
   /*
    * VÄRILAATTA PAIKALLISESTA KANSIOSTA. Osoite on
-   * `<variversio>/vari/z<taso>/<sarake>/<rivi>.webp`, ja kansiossa
-   * laatat ovat suoraan `vari/z…`-polussa ilman versio-osaa.
+   * `<variversio>/vari/<ISO>/z<taso>/<sarake>/<rivi>.webp`, ja
+   * kansiossa laatat ovat samassa muodossa ilman versio-osaa
+   * (generaattorin `ulos/vari/<ISO>/z…`; js/media.js varitasonPolku).
    */
   if (osa && osa.includes('/vari/')) {
     const tiedosto = join(LAATAT, osa.slice(osa.indexOf('/vari/') + 1));

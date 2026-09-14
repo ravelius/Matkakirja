@@ -399,7 +399,8 @@ export function polttaVariLeikkuri(canvas, asetukset, leikkuri) {
       polku(fctx);
       fctx.fill();
       /*
-       * FEIDAUS HÄIPYY LAATASTON REUNALLA (mitattu pilotista 13.9.2026).
+       * FEIDAUS HÄIPYY LAATIKOSTA ULOSPÄIN (korjattu 14.9.2026;
+       * mitattu vika 13.9.2026).
        *
        * SUUNNITELMAN OLETUS EI PIDÄ PYSTYRUUDULLA. Luku 2.5 sanoo, että
        * feidaus ei näy suorakaiteena, *"koska uloszoomauksen esto tekee
@@ -410,12 +411,23 @@ export function polttaVariLeikkuri(canvas, asetukset, leikkuri) {
        * pilottikuva näytti juuri sen: vaaleneva laatikko loppui
        * Välimerellä terävään vaakasuoraan viivaan.
        *
-       * KORJAUS ON HÄIVE EIKÄ ISOMPI LAATASTO. Laataston kasvattaminen
-       * näkyvään alaan (kuvasuhteiden unioni) olisi Ranskassa 4,6-kertainen
-       * laattamäärä, ja sama kerroin koko Euroopassa. Häive on yksi
-       * rakennusaikainen luku: feidaus laskee nollaan laataston uloimmalla
-       * kaistaleella, jolloin reuna lukee vanhan kartan vinjettinä eikä
-       * suorakaiteena — ja juuri sitä omistaja pyysi (*"vanhan ajan fiilis
+       * ENSIMMÄINEN HÄIVE OLI VÄÄRINPÄIN, JA SE ON MITATTU. Kaistale
+       * piirrettiin laatikon reunasta SISÄÄNPÄIN, eli kerma pyyhkiytyi
+       * nollaan juuri reunalla ja palasi täyteen sekä sisempänä että
+       * laatikon ulkopuolella. Laatasta
+       * `2026-09-13-tasoitus/vari/z4/9/4.webp` mitattu alfaprofiili
+       * (laudan x): 5422: 217 → 5440: 20 → 5529: 217. Se on KAKSI
+       * terävää reunaa yhden pehmennyksen sijaan, ja kartalla se näkyi
+       * 37,3 ja 10,2 luminanssiyksikön portaina
+       * (docs/raportit/viesti-fable-kaistat-20260913.md luku 2.2).
+       *
+       * OIKEIN PÄIN: LAATIKON SISÄLLÄ JA REUNALLA TÄYSPEITTO, häive
+       * vasta laatikon ULKOPUOLELLA ja täysi pyyhintä häiveen takana.
+       * Silloin kerma on yhtä vahvaa koko laatikon alalla — sama peitto,
+       * jonka peli maalaa suojatun suorakaiteen ulkopuolelle
+       * (js/pallolaatat.js maalaaTasoitus) — ja laatasto liittyy siihen
+       * saumattomasti. Ulospäin jäävä pehmennys lukee vanhan kartan
+       * vinjettinä, ja juuri sitä omistaja pyysi (*"vanhan ajan fiilis
        * etta katsotaan staattista kasinpiirrettya karttaa"*).
        */
       const reuna = Number.isFinite(leikkuri.feidausReuna) ? leikkuri.feidausReuna : 0;
@@ -432,16 +444,40 @@ export function polttaVariLeikkuri(canvas, asetukset, leikkuri) {
             Math.abs(x1 - x0) || W, Math.abs(y1 - y0) || H,
           );
         };
+        /* Täysi pyyhintä: häiveen takana kermaa ei ole lainkaan. */
+        const pyyhi = (x, y, w, h) => {
+          if (!(w > 0) || !(h > 0)) return;
+          fctx.fillStyle = valkoinen(1);
+          fctx.fillRect(x, y, w, h);
+        };
         const lx0 = kx(laatikko.x);
         const lx1 = kx(laatikko.x + laatikko.w);
         const ly0 = ky(laatikko.y);
         const ly1 = ky(laatikko.y + laatikko.h);
         const rx = reuna * px;
-        // Vasen ja oikea kaistale (vaakasuora liuku), ylä ja ala (pysty).
-        kaista(lx0, 0, lx0 + rx, H, true);
-        kaista(lx1, 0, lx1 - rx, H, true);
-        kaista(0, ly0, W, ly0 + rx, false);
-        kaista(0, ly1, W, ly1 - rx, false);
+        /*
+         * VASTAKOE (`--haive-sisaan`): entinen, väärinpäin ollut häive.
+         * Sama temppu kuin `--ilman-rajausta`lla — savukkeen on
+         * kaaduttava tällä laatastolla, tai mittari ei mittaa häivettä.
+         */
+        if (leikkuri.haiveSisaan) {
+          kaista(lx0, 0, lx0 + rx, H, true);
+          kaista(lx1, 0, lx1 - rx, H, true);
+          kaista(0, ly0, W, ly0 + rx, false);
+          kaista(0, ly1, W, ly1 - rx, false);
+        } else {
+          // Liuku: täysi pyyhintä rx:n päässä laatikosta → nolla reunalla.
+          kaista(lx0 - rx, 0, lx0, H, true);
+          kaista(lx1 + rx, 0, lx1, H, true);
+          kaista(0, ly0 - rx, W, ly0, false);
+          kaista(0, ly1 + rx, W, ly1, false);
+          // Häiveen takana kerma on kokonaan poissa (muuten se palaisi
+          // täyteen ja liuku olisi vain uusi porras).
+          pyyhi(0, 0, lx0 - rx, H);
+          pyyhi(lx1 + rx, 0, W - (lx1 + rx), H);
+          pyyhi(0, 0, W, ly0 - rx);
+          pyyhi(0, ly1 + rx, W, H - (ly1 + rx));
+        }
       }
     } else feidattu = null;
   }

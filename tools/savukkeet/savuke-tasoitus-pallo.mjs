@@ -52,6 +52,14 @@
  *   V7  ULOSZOOMAUKSEN ESTO Ranskassa (erä 2) ennallaan: kamera ei
  *       ylitä laatikko × 1,15 -rajaa.
  *   V8  RUS EI LUKKIUDU: Venäjässä rajaa ei aseteta.
+ *   V9  LAATAN POLUSSA ON MAA: peli pyytää
+ *       `<variversio>/vari/FRA/z…` eikä maatonta `<variversio>/vari/z…`.
+ *       Ilman maata kaikkien 27 maan ajot kirjoittavat samojen
+ *       avainten päälle (mitattu 13.9.2026; js/media.js varitasonPolku).
+ *   V10 HÄIVE HÄIPYY ULOSPÄIN: laatikon reunalla ja sen sisällä
+ *       kerman alfa on TÄYSI peitto ja häive on vasta laatikon
+ *       ULKOPUOLELLA. Mitataan suoraan laatan alfakanavasta
+ *       (vastakoe `--haive-sisaan` on generaattorissa).
  *
  * === VASTAKOKEET OVAT PAKOLLISIA ===================================
  *
@@ -64,10 +72,16 @@
  *   `--rikki-versio`    pyramidin luettelon versio muutetaan niin,
  *                       ettei se vastaa pallon sarjaa. Silloin V1 ON
  *                       KAADUTTAVA (`syy` ei ole tyhjä).
+ *   generaattorin
+ *   `--haive-sisaan`    laatat ajetaan entisellä, väärinpäin olleella
+ *                       häiveellä (kerma nollaan laatikon REUNALLA).
+ *                       Silloin V10 ON KAADUTTAVA — se on ainoa koe
+ *                       siitä, että V10 mittaa häivettä eikä laatan
+ *                       olemassaoloa.
  *
  * === POHJA TULEE OIKEASTA ÄMPÄRISTÄ ================================
  *
- * Vain `vari/z…` tarjoillaan paikallisesta pilottikansiosta; pohja,
+ * Vain `vari/<ISO>/z…` tarjoillaan paikallisesta pilottikansiosta; pohja,
  * ranta-, viiva- ja nostotaso tulevat tuotannon pyramidista. Syy on
  * versioportti: pallon sarja (laatat.json) ja pyramidi (pyramidi.json)
  * on oltava samaa versiota, tai kerros sammuu kokonaan.
@@ -80,6 +94,8 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+/* Laatan polku pelin omasta funktiosta — ei savukkeen mallineesta. */
+import { varitasonPolku } from '../../js/media.js';
 
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -323,6 +339,12 @@ if (kirjasto?.status !== 200) {
  * eroavat täsmälleen siinä, mitä tämä erä lisäsi.
  */
 let variPaalla = false;
+/*
+ * PYYDETYT VÄRILAATAT (V9). Kirjataan reitittimessä, koska vain siellä
+ * näkyy se osoite, jonka PELI oikeasti muodosti — ei se, jonka savuke
+ * arvelee sen muodostavan.
+ */
+const varipyynnot = [];
 
 /** Pilotin väriversio (polun osa): tästä tunnistetaan paikalliset laatat. */
 const VARIVERSIO = VARITASOT.FRA.versio;
@@ -404,11 +426,13 @@ await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
   const osa = url.split('/julisteet/pyramidi/')[1] ?? null;
   /*
    * VÄRILAATTA PAIKALLISESTA KANSIOSTA. Osoite on
-   * `<variversio>/vari/z<taso>/<sarake>/<rivi>.webp`, ja kansiossa
-   * laatat ovat suoraan `vari/z…`-polussa ilman versio-osaa.
+   * `<variversio>/vari/<ISO>/z<taso>/<sarake>/<rivi>.webp`, ja
+   * kansiossa laatat ovat samassa muodossa ilman versio-osaa
+   * (generaattorin `ulos/vari/<ISO>/z…`).
    */
   if (osa && osa.includes('/vari/')) {
     const tiedosto = join(LAATAT, osa.slice(osa.indexOf('/vari/') + 1));
+    varipyynnot.push({ osa, loytyi: existsSync(tiedosto) });
     if (!existsSync(tiedosto)) { route.fulfill({ status: 404, body: 'ei' }); return; }
     route.fulfill({
       status: 200,
@@ -428,7 +452,16 @@ await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
    */
   if (osa === 'pyramidi.json') {
     const luettelo = JSON.parse(vastaus.body.toString('utf8'));
+    /*
+     * A-VAIHE POISTAA `varitasot`-TAULUN, EIKÄ VAIN JÄTÄ LISÄÄMÄTTÄ.
+     * Kun savuke kirjoitettiin (13.9.2026), tuotannon luettelossa ei
+     * ollut väritasoja lainkaan, joten lisäämättä jättäminen riitti.
+     * Ämpärissä on nyt 27 maan kirjaus, ja silloin A-vaihe olisi
+     * MYÖS tasoitettu — A ja B olisivat sama kuva ja V3…V5 mittaisivat
+     * nollaa (mitattu 14.9.2026: Belgia A σ 0,8 eli valmiiksi tasainen).
+     */
     if (variPaalla) luettelo.varitasot = VARITASOT;
+    else delete luettelo.varitasot;
     /*
      * VASTAKOE 2: pyramidin versio muutetaan, pallon sarjaa ei.
      * Silloin lepokerroksenKerrokset palauttaa nullin ja koko
@@ -1236,6 +1269,108 @@ vaadi('V7 uloszoomaus pysähtyy Ranskassa laatikon rajaan',
 vaadi('V8 Venäjässä rajaa ei aseteta (kamera ei lukkiudu)',
   zoomRus.maxKorkeus > 2.4,
   `RUS maxKorkeus ${zoomRus.maxKorkeus?.toFixed(3)}`);
+
+/*
+ * ====== V9: MAA ON LAATAN POLUSSA (14.9.2026) =====================
+ *
+ * Mitattu vika 13.9.2026: osoitteessa ei ollut maata, ja koska
+ * kaikilla 27 maalla on sama `variversio` ja laatikot menevät
+ * päällekkäin, jokainen maa-ajo kirjoitti samojen avainten päälle.
+ * Väite luetaan REITITTIMEN kirjanpidosta eli niistä osoitteista,
+ * jotka peli oikeasti pyysi.
+ */
+const varipolut = varipyynnot.map((v) => v.osa);
+const POLKUMUOTO = /^[^/]+\/vari\/FRA\/z\d+\/\d+\/\d+\.\w+$/;
+const vaaria = varipolut.filter((o) => !POLKUMUOTO.test(o));
+tieto('pyydetyt värilaatat', `${varipolut.length} pyyntöä, `
+  + `${varipyynnot.filter((v) => v.loytyi).length} löytyi kansiosta`
+  + (varipolut.length ? ` · esim. ${varipolut[0]}` : ''));
+vaadi('V9 laatan polussa on kohdemaa (<versio>/vari/FRA/z…)',
+  varipolut.length > 0 && vaaria.length === 0
+    && varipyynnot.some((v) => v.loytyi),
+  varipolut.length === 0
+    ? 'peli ei pyytänyt yhtään värilaattaa'
+    : `${vaaria.length} maatonta osoitetta, esim. ${vaaria[0] ?? '–'}`);
+
+/*
+ * ====== V10: HÄIVE HÄIPYY LAATIKOSTA ULOSPÄIN =====================
+ *
+ * MITATAAN SUORAAN LAATAN ALFAKANAVASTA, koska pelin oma maalaus
+ * (js/pallolaatat.js maalaaTasoitus) peittää laatikon reunan ruudulla
+ * — kartalta häivettä ei enää näe, mutta laatassa se on yhä.
+ *
+ * Entinen häive pyyhki kerman NOLLAAN juuri laatikon reunalla ja
+ * nosti sen täyteen sekä sisempänä että laatikon ulkopuolella
+ * (mitattu 13.9.2026 laatasta z4/9/4: alfa 217 → 20 → 217). Oikein
+ * päin laatikon sisällä ja reunalla on TÄYSPEITTO ja häive on vasta
+ * ulkopuolella. Laatta ja mittauskohdat lasketaan luettelon omasta
+ * laatikosta — savukkeeseen ei kirjoiteta yhtään sarake- tai
+ * pikselilukua.
+ */
+const HAIVE = (() => {
+  const laatikko = VARITASOT.FRA.laatikko ?? null;
+  const reuna = Number(VARITASOT.FRA.feidausReuna);
+  const z = Math.min(...VARITASOT.FRA.tasot);
+  const taso = PILOTTI.tasot.find((t) => t.z === z) ?? null;
+  if (!(laatikko?.w > 0) || !(reuna > 0) || !taso) return null;
+  const ppu = taso.pikseliaPerYksikko;
+  const laatta = PILOTTI.laatta;
+  const pxLansi = (laatikko.x - PILOTTI.arkki.x) * ppu;
+  const pyKeski = (laatikko.y + laatikko.h / 2 - PILOTTI.arkki.y) * ppu;
+  const sarake = Math.floor(pxLansi / laatta);
+  const rivi = Math.floor(pyKeski / laatta);
+  const polku = varitasonPolku(VARIVERSIO, 'FRA', z, sarake, rivi, PILOTTI.muoto ?? 'webp');
+  const tiedosto = join(LAATAT, polku.slice(polku.indexOf('/vari/') + 1));
+  if (!existsSync(tiedosto)) return null;
+  return {
+    z, sarake, rivi, tiedosto, polku,
+    x: pxLansi - sarake * laatta,
+    rx: reuna * ppu,
+    nimellinen: Math.round(PEITTO * 255),
+  };
+})();
+const alfa = HAIVE ? await sivu.evaluate(async ({ b64, x, rx }) => {
+  const blob = await (await fetch(`data:image/webp;base64,${b64}`)).blob();
+  const kuva = await createImageBitmap(blob);
+  const c = document.createElement('canvas');
+  c.width = kuva.width;
+  c.height = kuva.height;
+  const g = c.getContext('2d', { willReadFrequently: true });
+  g.drawImage(kuva, 0, 0);
+  /* Mediaani koko pystyriviltä: yksittäinen reikä ei siirrä lukua. */
+  const pysty = (px) => {
+    const xi = Math.round(px);
+    if (xi < 0 || xi >= c.width) return null;
+    const d = g.getImageData(xi, 0, 1, c.height).data;
+    const a = [];
+    for (let i = 3; i < d.length; i += 4) a.push(d[i]);
+    a.sort((p, q) => p - q);
+    return a[a.length >> 1];
+  };
+  return {
+    leveys: c.width,
+    korkeus: c.height,
+    sisalla: pysty(x + rx),
+    reunalla: pysty(x + 2),
+    haive: pysty(x - rx / 2),
+    ulkona: pysty(x - rx - 6),
+  };
+}, { b64: readFileSync(HAIVE.tiedosto).toString('base64'), x: HAIVE.x, rx: HAIVE.rx }) : null;
+if (HAIVE && alfa) {
+  tieto('V10 alfaprofiili', `${HAIVE.polku} · laatikon reuna laatan x ${Math.round(HAIVE.x)}`
+    + ` (häive ${Math.round(HAIVE.rx)} px) · nimellinen ${HAIVE.nimellinen}`
+    + ` · sisällä ${alfa.sisalla} · reunalla ${alfa.reunalla}`
+    + ` · häiveen keskellä ${alfa.haive} · ulkona ${alfa.ulkona}`);
+}
+vaadi('V10 häive häipyy laatikosta ULOSPÄIN (reunalla täyspeitto)',
+  Boolean(HAIVE && alfa
+    && alfa.reunalla >= 0.9 * HAIVE.nimellinen
+    && alfa.sisalla >= 0.9 * HAIVE.nimellinen
+    && alfa.ulkona <= 0.25 * HAIVE.nimellinen),
+  HAIVE && alfa
+    ? `reunalla ${alfa.reunalla} · sisällä ${alfa.sisalla} · ulkona ${alfa.ulkona} `
+      + `(nimellinen ${HAIVE.nimellinen}): häive on laatikon SISÄLLÄ`
+    : 'laatikkoa, häivettä tai laattaa ei voitu lukea luettelosta');
 
 console.log(`\n  kehysajat (pallon pyöritys, ${RUUTU.w} × ${RUUTU.h} dpr ${RUUTU.puhelin ? 3 : 2}):`);
 console.log(`    A ilman tasoitusta p50 ${A.kehykset?.p50} ms · p95 ${A.kehykset?.p95} ms `

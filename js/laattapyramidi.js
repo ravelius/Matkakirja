@@ -88,7 +88,7 @@
  *    kohtaan leveys, jossa kopio jatkaa.
  */
 import { el } from './mapart.js';
-import { pyramidiUrl } from './media.js';
+import { pyramidiUrl, varitasonPolku } from './media.js';
 import { NOSTOLADONTA_SAANTO } from './nostoladonta.js';
 import { lataaMaapolygonit, maanAluevesiPolku, puraMaanRenkaat } from './maanaariviivat.js';
 
@@ -610,7 +610,9 @@ const tasonVersio = (taso) => {
   if (taso.nosto) return luettelo?.nostotaso?.versio ?? '';
   if (taso.viiva) return luettelo?.viivataso?.versio ?? '';
   if (taso.ranta) return luettelo?.rantataso?.versio ?? '';
-  if (taso.vari) return varitasonKirjaus()?.versio ?? '';
+  // Väritason avaimeen myös MAA: kaikilla mailla on sama versio, ja
+  // maan vaihtuessa saman ruudun laatta on eri tiedosto (ks. laattaUrl).
+  if (taso.vari) return `${varitasonKirjaus()?.versio ?? ''}/${variMaaNyt ?? ''}`;
   return luettelo?.versio ?? '';
 };
 const avain = (taso, sarake, rivi) => `${tasonVersio(taso)}:${taso.z}:${sarake}:${rivi}`;
@@ -665,12 +667,16 @@ function laattaUrl(taso, sarake, rivi) {
     return pyramidiUrl(`${luettelo.rantataso.versio}/ranta/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
-  // Väritaso samoin: <varitasot[ISO].versio>/vari/z… (karttauudistus,
-  // erät 1 ja 1b). Versio tulee KOHDEMAAN kirjauksesta, joten yhden
-  // maan uusintapoltto ei koske toisen maan laattoihin.
+  // Väritaso samoin, mutta KOHDEMAA ON POLUSSA:
+  // <varitasot[ISO].versio>/vari/<ISO>/z… (karttauudistus, erät 1, 1b
+  // ja tämä erä). Versio tulee kohdemaan kirjauksesta, joten yhden
+  // maan uusintapoltto ei koske toisen maan laattoihin — ja maa on
+  // polussa, koska kaikilla 27 maalla on SAMA versio ja niiden
+  // laatikot menevät päällekkäin: ilman maata ajot kirjoittivat
+  // toistensa päälle (js/media.js varitasonPolku, mitattu juurisyy).
   if (taso.vari) {
-    return pyramidiUrl(`${varitasonKirjaus()?.versio ?? ''}/vari/z${taso.z}/${sarake}/${rivi}`
-      + `.${luettelo.muoto ?? 'webp'}`);
+    return pyramidiUrl(varitasonPolku(varitasonKirjaus()?.versio ?? '', variMaaNyt ?? '',
+      taso.z, sarake, rivi, luettelo.muoto ?? 'webp'));
   }
   return pyramidiUrl(`${luettelo.versio}/z${taso.z}/${sarake}/${rivi}`
     + `.${luettelo.muoto ?? 'webp'}`);

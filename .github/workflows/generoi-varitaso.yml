@@ -48,6 +48,26 @@
 # (tools/tarkista-varitason-portti.mjs), ei YAML:iin kirjoitettua
 # kopiota ehdosta.
 #
+# === MAA ON POLUSSA (14.9.2026) =====================================
+#
+# Laatan osoite on `pyramidi/<variversio>/vari/<ISO>/z<taso>/<sarake>/
+# <rivi>.webp`. MAA LISÄTTIIN POLKUUN, koska kaikilla 27 maalla on sama
+# `variversio` ja maiden laatikot menevät päällekkäin: ilman maata
+# jokainen ajo kirjoitti samojen avainten päälle ja voimaan jäi
+# viimeinen (mitattu: Ranskan laataston z4/9/4 alfassa oli musta ala
+# Pohjois-Espanjassa, jota Ranskan ajo ei ole voinut piirtää —
+# docs/raportit/viesti-fable-kaistat-20260913.md luku 5).
+#
+# Polku on YHDESSÄ FUNKTIOSSA (js/media.js varitasonPolku), jota sekä
+# generaattori että peli käyttävät; tests/varitasopolku.test.mjs mittaa,
+# että molemmat päät tuottavat saman merkkijonon. Tämän työnkulun
+# vientisilmukka lukee siksi kansiota `ulos/vari/<MAA>/z*`.
+#
+# VANHA POLKU (ilman maata) SISÄLTÄÄ 13.9.2026:n ajojen sekasotkun.
+# Peli ei enää lue sitä; sitä ei tarvitse siivota, mutta sen sisältöön
+# ei myöskään saa luottaa. Jokaisen maan laatat on ajettava uudestaan
+# uuteen polkuun.
+#
 # === AINEISTO: TASOITUS EI TARVITSE SITÄ ============================
 #
 # Tasoituslaatta on kerma-peite, jonka alfa on kohdemaan sisällä 0 —
@@ -86,7 +106,7 @@ on:
         required: false
         default: ''
       variversio:
-        description: 'Värikerroksen versio ämpärin polussa: julisteet/pyramidi/<variversio>/vari/z… (esim. 2026-09-13-tasoitus)'
+        description: 'Värikerroksen versio ämpärin polussa: julisteet/pyramidi/<variversio>/vari/<ISO>/z… (esim. 2026-09-14-tasoitus)'
         type: string
         required: true
       tasot:
@@ -286,14 +306,14 @@ jobs:
             --paletti "$PALETTI" $LISA
           if [ -n "$KUIVA" ]; then
             echo "--- KUIVA-AJO: nämä polut kirjoitettaisiin ---"
-            echo "  s3://$AMPARI/julisteet/pyramidi/$VARIVERSIO/vari/z<taso>/<sarake>/<rivi>.webp"
+            echo "  s3://$AMPARI/julisteet/pyramidi/$VARIVERSIO/vari/$MAA/z<taso>/<sarake>/<rivi>.webp"
             echo "  s3://$AMPARI/julisteet/pyramidi/pyramidi.json  (varitasot.$MAA täydennettynä)"
             echo "  laatat.json EI muutu (ks. VERSIOPORTTI)."
             exit 0
           fi
           echo "--- tuotos ---"
-          find ulos/vari -name '*.webp' | wc -l
-          du -sh ulos/vari
+          find "ulos/vari/$MAA" -name '*.webp' | wc -l
+          du -sh "ulos/vari/$MAA"
 
       # PORTTI UUDELLA LUETTELOLLA, ENNEN KUIN MITÄÄN ON ÄMPÄRISSÄ.
       # Ämpärin oma laatat.json ja juuri koottu pyramidi.json: jos
@@ -313,11 +333,11 @@ jobs:
         run: |
           set -euo pipefail
           n=0
-          for taso in ulos/vari/z*; do
+          for taso in "ulos/vari/$MAA"/z*; do
             [ -d "$taso" ] || continue
             z=$(basename "$taso")
             aws s3 sync "$taso" \
-              "s3://$AMPARI/julisteet/pyramidi/$VARIVERSIO/vari/$z" \
+              "s3://$AMPARI/julisteet/pyramidi/$VARIVERSIO/vari/$MAA/$z" \
               --endpoint-url "$PAATE" \
               --exclude '*' --include '*.webp' \
               --content-type image/webp \
@@ -325,7 +345,7 @@ jobs:
               --no-progress
             n=$((n + 1))
           done
-          echo "Viety $n tasoa versioon $VARIVERSIO/vari."
+          echo "Viety $n tasoa versioon $VARIVERSIO/vari/$MAA."
 
       # LUETTELO VIIMEISENÄ, JA VAIN JOS LAATAT OVAT PERILLÄ. Luettelo
       # on se, joka tekee kerroksesta julkisen: jos se vietäisiin ensin
