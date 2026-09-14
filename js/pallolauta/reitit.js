@@ -7,11 +7,16 @@
  * KARTTA LAATOISSA, PELI PÄÄLLÄ (Raamattu 5.9.2026): reittiVERKKO on
  * laatoissa tekstuurina eikä sitä piirretä pallolle. Pallolle piirretään
  * vain se, mikä tasokartan elävässä matkareittikerroksessa on
- * (js/ui.js paivitaMatkareitit): siirtovaiheessa ja liu'un ollessa auki
- * nykyisen kaupungin naapurireitit askelhelmineen, kesken reittiä se
- * reitti jolla nappula on, ja lentokaaret vain lentolistan ollessa auki
- * tai valitun lennon ajan (omistaja 1.9.2026: *"Piirretään ne näkyviin
- * reaaliajassa vasta sitten jos pelaaja päättää mennä lentokoneella."*).
+ * (js/ui.js paivitaMatkareitit): nykyisen kaupungin naapurireitit
+ * askelhelmineen VAIN MATKAN AJAN (Raamattu KARTTAUUDISTUKSEN PAATOKSET
+ * 8, omistaja 14.9.2026: *"reittiviuhka tulee nakyviin heti kun pelaaja
+ * painaa 'liiku' nappia ja on kokoajan nakyvissa kunnes pelaaja saapuu
+ * uuteen kaupunkiin tai peruuttaa liikkumisen eli jaakin nykyiseen
+ * kaupunkiin"*; ui.matkaSessioKesken), kesken reittiä se reitti jolla
+ * nappula on sessiosta riippumatta, ja lentokaaret vain lentolistan
+ * ollessa auki tai valitun lennon ajan (omistaja 1.9.2026: *"Piirretään
+ * ne näkyviin reaaliajassa vasta sitten jos pelaaja päättää mennä
+ * lentokoneella."*).
  * SÄÄNTÖ ON YKSI: ui.matkareittienValinta() päättää, tämä vain piirtää.
  *
  * SAMA KIELI KUIN KARTALLA: maareitti hento musteviiva, merireitti
