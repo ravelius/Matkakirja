@@ -4229,6 +4229,18 @@ class Aikajana {
     stopPlaceStream();
     stopDiaryVoice(this.ui);
     pysaytaLukija();
+    /*
+     * PULUN PUHE JA SEN AJASTIMET MYÖS (omistaja 14.9.2026,
+     * sanatarkasti: *"Muut aanet eivat myoskaan pysahdy kun linssi
+     * aktivoituu"*). stopDiaryVoice pysäyttää soivat luennat, mutta
+     * Livian repliikkijono on AJASTIMIA: kupla ja sen äänite lähtivät
+     * vielä linssin mustan päälle. Reitti on pelin oma lähtöportti
+     * (js/ui.js vaiennaPaikanPuhe → haivytaLuenta +
+     * vaiennaLivianKaupunkipuhe + polloKuplatPois) — sama, jolla
+     * kaupungista lähteminen vaientaa molemmat puhujat; linssi ei siis
+     * kirjoita omaa äänilogiikkaansa.
+     */
+    this.ui.vaiennaPaikanPuhe?.();
   }
 
   /** Tausta takaisin: hiljennys pois ja maisema uudelleen pelin tilasta. */

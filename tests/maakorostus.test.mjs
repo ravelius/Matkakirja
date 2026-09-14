@@ -149,7 +149,16 @@ test('pallolauta kysyy korostuksen pelaajan maasta joka päivityksessä', () => 
   // samasta maasta ehtisi olla eri mieltä.
   assert.match(lauta, /const korostusIso = lento \? null : kohteidenNykyinenIso\(ui\);/,
     'maa ei tule laudan omasta kaupunki–maa-taulusta');
-  assert.match(lauta, /iso: korostusIso,/, 'kehä ei lue samaa maata');
+  /*
+   * KEHÄLLÄ ON YKSI PORTTI: LINSSI (omistaja 14.9.2026, iPad,
+   * sanatarkasti: *"Linssissa nakyy kartan korostus"*). Kehä sammuu
+   * linssin ajaksi, mutta se lukee yhä TÄSMÄLLEEN saman `korostusIso`-
+   * muuttujan kuin väritaso ja uloszoomauksen raja — nollaus ei saa
+   * levitä `korostusIso`:oon itseensä, koska maan vaihtuminen nulliksi
+   * mitätöisi kaikki värilaatat (js/pallolaatat.js variMaa).
+   */
+  assert.match(lauta, /iso: (?:linssiPaalla\(\) \? null : )?korostusIso,/,
+    'kehä ei lue samaa maata');
   assert.match(lauta, /asetaVaritasonMaa\(korostusIso\)/, 'väritaso ei lue samaa maata');
   assert.match(lauta, /nollaaPallonMaakorostus\(\);/, 'purku ei nollaa korostusta');
 });
