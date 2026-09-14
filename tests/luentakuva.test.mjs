@@ -783,7 +783,21 @@ test('raahaus ei pienennä kuvaa (ele ei ole kartan liike)', () => {
   });
 });
 
-test('pienennetty kuva pysyy ankkurissaan kartan kohdan päällä', () => {
+/*
+ * PIENENNYS SIIRTÄÄ ANKKURIN KAUPUNGIN YLÄPUOLELLE (omistaja 14.9.2026,
+ * Raamattu PAATOKSET 12 kohta 2: *"isoisan ja pulun kuvat ovat liian
+ * pienella ja vaarassa paikassa (pitaisi olla hieman pariisin
+ * ylapuolella)"*).
+ *
+ * TÄMÄ VARTIO KÄÄNTYI PÄINVASTOIN. Ennen se vaati, ettei pienennys
+ * siirrä ankkuria — ja juuri siksi pieni kuva peri ISON kuvan paikan,
+ * joka tiukassa saapumisnäkymässä oli kaupungin ALAPUOLELLA (mitattu
+ * Chromiumilla 14.9.2026, Pariisi/puhelin: +48 px oikealle, +28 px
+ * alas). Nyt vaaditaan päinvastainen: ankkuri SIIRTYY, ja se siirtyy
+ * kaupungin yläpuolelle. Ankkuri on yhä LAUDAN piste, eli kuva ei
+ * hyppää ruudun kulmaan.
+ */
+test('pienennys siirtää ankkurin kaupungin yläpuolelle, kartan kohtaan', () => {
   pakinKanssa(KOEKUVA, () => {
     const ui = kartallinenUi();
     naytaLuentakuva(ui, KOEKAUPUNKI_KARTALLA);
@@ -791,9 +805,31 @@ test('pienennetty kuva pysyy ankkurissaan kartan kohdan päällä', () => {
     const ennen = { ...naytto.ankkuri };
     kartanVeto();
     assert.ok(ui.luentakuva.classList.contains('pieni'), 'kartan veto ei pienentänyt');
-    assert.deepEqual(naytto.ankkuri, ennen, 'pienennys siirsi ankkuria');
+    assert.notDeepEqual(naytto.ankkuri, ennen, 'pienennys ei siirtänyt ankkuria lainkaan');
+    assert.equal(naytto.kaupunginYlla, true, 'pari ei mennyt kaupungin yläpuolelle');
+    // Laudan y kasvaa etelään: kaupungin yläpuoli on PIENEMPI y.
+    assert.ok(naytto.ankkuri.y < KOEKAUPUNKI_KARTALLA.y,
+      `ankkuri ei ole kaupungin yläpuolella (${naytto.ankkuri.y} vs ${KOEKAUPUNKI_KARTALLA.y})`);
     // Ankkuri on yhä sama kartan kohta, joten pieni kuva ei hyppää kulmaan.
     assert.equal(ui.luentakuvaAnkkuri, naytto);
+    piilotaLuentakuva(ui, { heti: true });
+  });
+});
+
+/*
+ * PELAAJAN OMA SIIRTO VOITTAA (Raamattu: LUENTAKUVAA VOI ITSE
+ * LIIKUTTAA). Raahattua kuvaa pienennys ei saa napata takaisin
+ * kaupungin päälle.
+ */
+test('raahattua kuvaa pienennys ei siirrä kaupungin yläpuolelle', () => {
+  pakinKanssa(KOEKUVA, () => {
+    const ui = kartallinenUi();
+    naytaLuentakuva(ui, KOEKAUPUNKI_KARTALLA);
+    const naytto = ui.luentakuvaAnkkuri;
+    naytto.raahattu = true;
+    const ennen = { ...naytto.ankkuri };
+    kartanVeto();
+    assert.deepEqual(naytto.ankkuri, ennen, 'pelaajan oma paikka hävisi pienennykselle');
     piilotaLuentakuva(ui, { heti: true });
   });
 });

@@ -20408,6 +20408,32 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
 }
 
 /*
+ * PULU KAUPUNGIN YLÄPUOLELLE ISOISÄN KUVAN VIEREEN (omistaja 14.9.2026,
+ * Raamattu PAATOKSET 12 kohta 2, sanatarkasti: *"isoisan ja pulun kuvat
+ * ovat liian pienella ja vaarassa paikassa (pitaisi olla hieman
+ * pariisin ylapuolella)"*).
+ *
+ * PAIKKA TULEE KARTALTA, KOKO JA ULKOASU JÄÄVÄT. Nappi pysyy ikkunan
+ * kalusteena (position: fixed) ja säilyttää kokonsa, värinsä ja
+ * napautusalansa; vain kiinnityskohta vaihtuu ruudun alanurkasta siihen
+ * pisteeseen, jonka js/fokusvirta.js paivitaPulunPaikka kirjoittaa
+ * kehyksittäin isoisän pienen kuvan viereen. Luokka on päällä vain
+ * silloin, kun se kuva on kartalla — muulloin sääntö ei ole voimassa ja
+ * nappi on entisessä kulmassaan.
+ *
+ * TRANSLATE OMANA OMINAISUUTENAAN, EI transformina: napilla on omia
+ * transform-sääntöjä (livia-kasvot, painallus), eikä keskitys saa
+ * pyyhkiä niitä pois.
+ */
+body.pulu-kaupungin-paalla .pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
+  right: auto;
+  bottom: auto;
+  left: var(--pulu-kartalla-x, 50%);
+  top: var(--pulu-kartalla-y, 50%);
+  translate: -50% -50%;
+}
+
+/*
  * LINSSISSÄ TUMMA (omistaja 8.9.2026: *"pulun kuvake voisi olla tummempi
  * tässä linssissä, hyppää nyt liikaa tummalla ruudulla"*). Linssin
  * (body.aikajana-paalla) ruutu on tummennettu kartta, ja vaalea
