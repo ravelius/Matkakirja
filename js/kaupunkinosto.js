@@ -50,8 +50,11 @@
  */
 
 import { piirraNostosymKartalle } from './fokusnosto-symbolit.js';
-import { kaupunginKansi, latoKaupunginEsittely, latoLehtiKuvat } from './lehti.js';
-import { piirraKaupunkiKartta, piirraMatkailijalle } from './nahtavyydet.js';
+import {
+  avaaTiivisLehtiarkki, kaupunginKansi, latoKaupunginEsittely, latoLehtiKuvat,
+  suljeTiivisLehtiarkki,
+} from './lehti.js';
+import { avaaNahtavyys, piirraKaupunkiKartta, piirraMatkailijalle } from './nahtavyydet.js';
 import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { sfx } from './sound.js';
 import { html, kuunteleSulkevaNapautus } from './ui-apurit.js';
@@ -86,6 +89,76 @@ import { html, kuunteleSulkevaNapautus } from './ui-apurit.js';
  * kohti (Ranska ~13° leveä, saapumiskorkeus 0,627).
  */
 export const TURISTI_INFO_SIIRTO = Object.freeze({ lon: 1.5, lat: -0.75 });
+
+/**
+ * MERKKI ON PARIISIN VIERESSÄ JOKA ZOOMILLA — MITATTU, EI ARVATTU
+ * (omistaja 14.9.2026: *"turisti info nappi pitaisi olla pariisin
+ * vieressa"*; Raamattu KARTTAUUDISTUKSEN PAATOKSET 11 kohta 4).
+ *
+ * ASTEISSA ILMAISTU SIIRTO EI PYSY VIERESSÄ. Ylläolevat 1,5° / −0,75°
+ * ovat maantieteellisesti kiinteät, mutta ruudulla yksi aste on sitä
+ * useampi pikseli mitä lähempänä kamera on. MITATTU 14.9.2026 Pariisissa
+ * (saapumisnäkymä, ladonta levossa):
+ *
+ *   390 × 844  →  kaupunkipiste (203, 394), merkki (236, 409) = 36 px
+ *   1400 × 900 →  kaupunkipiste (722, 326), merkki (815, 370) = 103 px
+ *
+ * Sama siirto siis kolminkertaistui työpöydällä: merkki ei ollut enää
+ * kaupungin vieressä vaan sen naapurissa.
+ *
+ * UUSI SIIRTO ON RUUTUPIKSELEITÄ. Halutusta ruutusiirrosta lasketaan
+ * asteet käänteisellä Jacobin matriisilla, jonka alkiot MITATAAN
+ * kamerasta joka ladonnassa (kolme `getScreenCoords`-näytettä:
+ * kaupunki, kaupunki + 1° leveyttä, kaupunki + 1° pituutta). Näin
+ * kaava ei oleta projektiosta mitään — se lukee sen, mitä pallo
+ * juuri nyt tekee — ja merkki on samalla etäisyydellä puhelimella ja
+ * työpöydällä. Merkki on yhä KARTTAAN KIINNITETTY datum (PAATOKSET 2):
+ * asteet lasketaan uudestaan joka levossa, joten merkki kulkee
+ * kaupunkinsa mukana panoroidessa.
+ *
+ * MITTA 36 / 16 px = 39 px ON SAMA LUKU, JOKA MITATTIIN HYVÄKSI erässä
+ * 4 (ks. TURISTI_INFO_SIIRTO yllä): kaksi erillistä napautuskohdetta
+ * (osumatesti on lähin merkki 44 px:n sisällä, js/pallolauta/lauta.js),
+ * jotka ovat silti yhdessä silmäyksessä. Nyt se luku vain pysyy samana
+ * kaikilla ruuduilla eikä vain siinä yhdessä, jolla se mitattiin.
+ */
+export const TURISTI_INFO_RUUTUSIIRTO = Object.freeze({ dx: 36, dy: 16 });
+
+/**
+ * Turisti-infon paikka asteina, kun halutaan KIINTEÄ RUUTUSIIRTO.
+ *
+ * `naytteet` on kolme ruutupistettä samalta kameralta:
+ *   p0    kaupunki itse
+ *   pLat  kaupunki + `dLat` astetta leveyttä
+ *   pLon  kaupunki + `dLon` astetta pituutta
+ *
+ * Niistä saadaan suoraan se, montako pikseliä yksi aste kumpaankin
+ * suuntaan juuri nyt on (Jacobin matriisi), ja sen käänteismatriisi
+ * kertoo, montako astetta haluttu pikselisiirto on. Palauttaa null, jos
+ * näytteitä ei ole tai matriisi on surkastunut (kaupunki pallon
+ * reunalla) — kutsuja palaa silloin asteisiin.
+ */
+export function turistiInfonAsteetRuudulta(lat, lon, naytteet,
+  siirto = TURISTI_INFO_RUUTUSIIRTO) {
+  if (!Number.isFinite(lat) || !Number.isFinite(lon)) return null;
+  const {
+    p0, pLat, pLon, dLat = 1, dLon = 1,
+  } = naytteet ?? {};
+  if (!p0 || !pLat || !pLon || !(dLat > 0) || !(dLon > 0)) return null;
+  const a = (pLon.x - p0.x) / dLon;
+  const b = (pLat.x - p0.x) / dLat;
+  const c = (pLon.y - p0.y) / dLon;
+  const d = (pLat.y - p0.y) / dLat;
+  const det = a * d - b * c;
+  if (!Number.isFinite(det) || Math.abs(det) < 1e-6) return null;
+  const dlon = (siirto.dx * d - siirto.dy * b) / det;
+  const dlat = (a * siirto.dy - c * siirto.dx) / det;
+  if (!Number.isFinite(dlon) || !Number.isFinite(dlat)) return null;
+  // Järjetön tulos (kaupunki lähes horisontissa) hylätään: asteet
+  // palauttavat merkin varmasti kartalle.
+  if (Math.abs(dlat) > 20 || Math.abs(dlon) > 40) return null;
+  return { lat: lat + dlat, lon: lon + dlon };
+}
 /** Kosinin lattia (ks. yllä): napa-alueella siirto ei kasva rajatta. */
 export const TURISTI_INFO_KOSINIRAJA = 0.25;
 
@@ -521,6 +594,43 @@ export function avaaTuristiInfo(ui, city, { ankkuri = null } = {}) {
   });
 }
 
+/**
+ * TURISTI-INFO AVAA SUORAAN ISON OPPAAN (omistaja 14.9.2026
+ * sanatarkasti: *"se saisi suoraan aueta isoon muotoon (jata pienempi
+ * vali popup pois kokonaan)"*; Raamattu KARTTAUUDISTUKSEN PAATOKSET 11
+ * kohta 4).
+ *
+ * "Iso muoto" on matkailijan oppaan oma arkki — täsmälleen se, jonka
+ * matkailuliitteen kolme sisäänkäyntiä (kuva, kulmanauha, Lue lisää
+ * -linkki) avaavat js/nahtavyydet.js:n `piirraMatkailijalle`ssa. Tämä
+ * funktio kutsuu samaa `avaaNahtavyys`ia samoilla asetuksilla; uutta
+ * näkymää ei ole tehty eikä yhtään tekstiä kirjoitettu.
+ *
+ * VÄLIPOP-UP (`avaaTuristiInfo`) JÄÄ MODUULIIN mutta poistuu tästä
+ * polusta: se on yhä se kortti, jonka pelkkä liite-lohko täyttää, ja
+ * sen testit ja tyylit ovat paikallaan, jos välivaihe joskus palaa.
+ * Kartan merkki ei enää avaa sitä.
+ *
+ * Kaikilla 190 kaupungilla, joilla on `matkailijalle`, on myös
+ * `artikkeli.teksti` (tarkistettu datasta 14.9.2026) — merkin ehto
+ * (kaupunginMatkailijalle) riittää siis myös oppaan ehdoksi. Varmuuden
+ * vuoksi puuttuva artikkeli palauttaa null eikä avaa mitään.
+ */
+export function turistiOppaanArtikkeli(cityId) {
+  const opas = kaupunginMatkailijalle(cityId)?.artikkeli ?? null;
+  return opas?.teksti ? opas : null;
+}
+
+/** Avaa kaupungin matkailijan oppaan isossa muodossaan. */
+export function avaaTuristiOpas(ui, city) {
+  const artikkeli = turistiOppaanArtikkeli(city?.id);
+  if (!artikkeli) return null;
+  // Kartan omat kortit pois alta: opas on modaali arkki.
+  suljeKaupunkipopup(ui);
+  avaaNahtavyys(ui, artikkeli, null, { henkilolinkit: [], valikko: false });
+  return artikkeli;
+}
+
 /* ============ TIIVISTETTY KAUPUNKIETUSIVU (PAATOKSET 10) ============ */
 
 /**
@@ -561,18 +671,32 @@ export function avaaTuristiInfo(ui, city, { ankkuri = null } = {}) {
  */
 export const JATKA_NAPIN_TEKSTI = 'Lue loppuun';
 
-/** Kortin tunnusluokka savukkeelle ja tyyleille. */
+/**
+ * Kortin tunnusluokka savukkeelle ja tyyleille.
+ *
+ * ERÄ 11 SIIRSI KORTIN LEHDEN KEHYKSEEN, muttei vaihtanut sen nimeä:
+ * tiivistetty etusivu tunnistetaan yhä tästä luokasta, joka on nyt
+ * lehtiarkin dialogissa (js/lehti.js avaaTiivisLehtiarkki).
+ */
 export const TIIVIS_LUOKKA = 'kaupunkipopup-tiivis';
 
+/** "Lue loppuun" -napin luokka (lehden oma nappityyli + oma koukku). */
+export const JATKA_LUOKKA = 'tiivis-jatka';
+
 export function latoTiivisEtusivu(ui, sisalto, city) {
-  sisalto.closest('.kaupunkipopup')?.classList.add(TIIVIS_LUOKKA);
   const kansi = kaupunginKansi(city.id);
-  const hero = html('div', 'kaupunkipopup-hero');
+  /*
+   * KUVAPAIKAT OVAT LEHDEN OMAT ELEMENTIT (erä 11). Vanha kortti kääri
+   * ne omaan `.kaupunkipopup-hero`-lohkoonsa; lehden etusivulla
+   * `.lehti-paakuva` ja `.lehti-kuvarivi` ovat palstan suoria lapsia
+   * (index.html #arrival-lehti-paakuva, #arrival-lehti-kuvat), ja juuri
+   * siitä niiden marginaalit ja leveydet tulevat. Kääre jätetään siis
+   * pois, jotta taitto on lehden eikä kortin.
+   */
   const paakuva = html('div', 'lehti-paakuva');
   const kuvarivi = html('div', 'lehti-kuvarivi');
-  hero.appendChild(paakuva);
-  hero.appendChild(kuvarivi);
-  sisalto.appendChild(hero);
+  sisalto.appendChild(paakuva);
+  sisalto.appendChild(kuvarivi);
   latoLehtiKuvat(ui, {
     paakuva,
     kuvarivi,
@@ -581,38 +705,55 @@ export function latoTiivisEtusivu(ui, sisalto, city) {
     // Ennen/nyt pois (ero 1): ei suodatusta tässä, vaan kenttää ei lueta.
     ennenNyt: null,
   });
-  if (paakuva.hidden && kuvarivi.hidden) hero.hidden = true;
   // Kohdekartta ENNEN leipätekstiä (ero 4).
-  const kartta = html('div', 'kaupunkipopup-kartta');
+  const kartta = html('div', 'tiivis-kartta');
   sisalto.appendChild(kartta);
   piirraKaupunkiKartta(ui, kartta, { cityId: city.id });
   if (!kartta.childElementCount) kartta.hidden = true;
   const lohko = latoKaupunginEsittely(sisalto, city);
+  // Lehden leipätekstin säännöt (css/styles.css .dialog.lehti .lehti-leipa:
+  // palstoitus, anfangi, koko) — sama luokka kuin index.html:n
+  // #arrival-introlla, ei kopioituja arvoja.
+  lohko.classList.add('lehti-leipa');
   const loput = [...lohko.querySelectorAll(':scope > p')].slice(1);
   if (!loput.length) return;
   for (const p of loput) p.hidden = true;
-  const rivi = html('div', 'kaupunkipopup-alarivi');
-  const nappi = html('button', 'kaupunkipopup-jatka', JATKA_NAPIN_TEKSTI);
+  /*
+   * Nappi on lehden oma "Lue lisää" -nappi (.wiki-btn, css/styles.css):
+   * sama muoto, väri ja marginaali kuin etusivun omalla napilla. Oma
+   * luokka on pelkkä koukku savukkeelle ja kuuntelijalle.
+   */
+  const nappi = html('button', `wiki-btn ${JATKA_LUOKKA}`, JATKA_NAPIN_TEKSTI);
   nappi.type = 'button';
   nappi.addEventListener('click', () => {
     for (const p of loput) p.hidden = false;
-    rivi.remove();
-    asemoiKaupunkipopup(ui);
+    nappi.remove();
   });
-  rivi.appendChild(nappi);
-  sisalto.appendChild(rivi);
+  sisalto.appendChild(nappi);
 }
 
 /**
- * Kaupungin napautuksen kortti: tiivistetty etusivu. Sama kehys,
- * ankkuri ja sulkusopimus kuin vanhalla pop-upilla (avaaKortti) — vain
- * sisällys on eri.
+ * Kaupungin napautuksen kortti: tiivistetty etusivu KAUPUNKILEHDEN
+ * OMASSA KEHYKSESSÄ (omistaja 14.9.2026: *"sisalto on oikea, mutta sen
+ * ulkoasu saisi olla tasmalleen sama kuin kaupunkilehdessa kaikilta
+ * osin (myos pop upin leveys)"*; Raamattu PAATOKSET 11 kohta 3).
+ *
+ * Kehys, leveys, paperi ja typografia tulevat js/lehti.js:n
+ * `avaaTiivisLehtiarkki`sta — ei yhtään kopioitua tyyliä. Ankkuria ei
+ * enää ole: lehti on modaali arkki keskellä ruutua, ei merkin viereen
+ * asemoitu kortti. Parametri jää kytkentäkohdaksi, jotta pallon
+ * napautuspolku (js/pallolauta/lauta.js) pysyy rivilleen entisenä.
  */
 export function avaaTiivisKaupunkietusivu(ui, city, { ankkuri = null } = {}) {
-  return avaaKortti(ui, city, {
-    laji: 'kaupunki',
-    otsikko: city?.name ?? '',
-    ankkuri,
-    lato: latoTiivisEtusivu,
-  });
+  void ankkuri;
+  // Kartan oma kortti (turisti-info) ei saa jäädä lehden alle.
+  suljeKaupunkipopup(ui);
+  const arkki = avaaTiivisLehtiarkki(ui, city, latoTiivisEtusivu);
+  arkki?.classList.add(TIIVIS_LUOKKA);
+  return arkki;
+}
+
+/** Sulkee tiivistetyn etusivun (savukkeet ja kutsujat). */
+export function suljeTiivisKaupunkietusivu() {
+  suljeTiivisLehtiarkki();
 }
