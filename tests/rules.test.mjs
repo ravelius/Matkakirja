@@ -4008,9 +4008,22 @@ test('päiväkirjalla on kaksi kokoa: koko merkintä ja yhden rivin lappu', () =
   // Uusi merkintä avaa kortin: avain vaihdetaan vain uusiFactKeyssä.
   assert.equal((ui.match(/this\.factKey = key;/g) ?? []).length, 1,
     'factKey asetetaan uusiFactKeyn ohi, jolloin kortti voisi jäädä lapuksi');
-  const uusi = ui.match(/uusiFactKey\(key\) \{[^}]*\}/)?.[0] ?? '';
-  assert.match(uusi, /asetaPaivakirjanKoko\(false\)/,
-    `uusi merkintä ei avaa korttia: ${uusi}`);
+  /*
+   * PUHELIN ON POIKKEUS (omistaja 14.9.2026, Raamattu "IPHONE: ISOISAN
+   * JA PULUN TEKSTIT PIILOON": *"Iphonella voisi piilottaa isoisan ja
+   * pulun tekstit."*). Sääntö "uusi merkintä avaa kortin" on yhä
+   * voimassa TYÖPÖYDÄLLÄ, mutta puhelimen kokoisella ruudulla kortti
+   * peitti juuri sen kuvan, jota merkintä kuvailee (mitattu 390 × 844:
+   * 340 × 195 px eli 87 % leveydestä). Koko päätetään siis
+   * puhelintunnistuksesta (js/ui.js puhelinTila), ei kiinteästä
+   * epätodesta — ja teksti on yhä yhden napautuksen päässä, koska
+   * lappu on painike.
+   */
+  const uusi = ui.match(/uusiFactKey\(key\) \{[\s\S]*?\n  \}/)?.[0] ?? '';
+  assert.match(uusi, /asetaPaivakirjanKoko\(puhelinTila\(\)\)/,
+    `uusi merkintä ei aseta kortin kokoa puhelintunnistuksesta: ${uusi}`);
+  assert.match(ui, /const PUHELIN_KYSELY = '\(max-width: 699px\), \(max-height: 520px\)';/,
+    'puhelintunnistus ei ole yhdessä nimetyssä paikassa (PUHELIN_KYSELY)');
 
   // Katto on oltava: ilman sitä pitkä merkintä peittäisi koko kartan,
   // eikä pelaaja näkisi mihin napauttaa kutistaakseen sen.
