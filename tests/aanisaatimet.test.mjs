@@ -217,8 +217,18 @@ test('tehosteiden reitti on masterketju: yksi kerroin kaikille', () => {
 
 test('pulun äänite soi pulun omalla liu\'ulla', () => {
   const puhe = lue('../js/liviapuhe.js');
+  /*
+   * Taso menee 14.9.2026 alkaen asetaLivianTason kautta, koska iOS ei
+   * tottele elementin omaa volumea (js/musiikkivahvistin.js) ja
+   * loppuhäivytys tarvitsee saman polun. Kaava ja rajaus ovat
+   * ennallaan: rajaus asuu nyt asetaLivianTasossa, ja tämä portti
+   * vaatii molemmat.
+   */
   assert.match(puhe,
-    /audio\.volume = Math\.max\(0, Math\.min\(1, pulunVoima\(\) \* LIVIAN_PERUSTASO \* vaimennus\)\);/);
+    /asetaLivianTaso\(audio, pulunVoima\(\) \* LIVIAN_PERUSTASO \* vaimennus\);/);
+  assert.match(puhe,
+    /const taso = Math\.max\(0, Math\.min\(1, Number\(arvo\) \|\| 0\)\);/,
+    'rajaus 0…1 on säilyttävä asetaLivianTasossa');
   assert.doesNotMatch(puhe, /puheVoima/, 'lukijan liuku ei säädä pulua');
   assert.ok(LIVIAN_PERUSTASO > 0 && LIVIAN_PERUSTASO < 1);
   // Ilman soivaa repliikkiä päivitys on hiljainen ei-mitään.

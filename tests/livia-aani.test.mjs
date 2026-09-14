@@ -931,8 +931,18 @@ test('pulun perustaso on kertojan alapuolella ja yhdessä paikassa', () => {
   // Kaikki pulun äänet kulkevat saman kertoimen kautta. PULULLA ON OMA
   // LIUKU 11.9.2026 alkaen (omistaja: *"pulun ja lukijan omat äänen
   // voimakkuus säätimet"*), joten kerroin on pulunVoima eikä puheVoima.
+  /*
+   * Taso menee 14.9.2026 alkaen asetaLivianTason kautta, koska iOS ei
+   * tottele elementin omaa volumea (js/musiikkivahvistin.js) ja
+   * loppuhäivytys tarvitsee saman polun. Kaava ja rajaus ovat
+   * ennallaan: rajaus asuu nyt asetaLivianTasossa, ja tämä portti
+   * vaatii molemmat.
+   */
   assert.match(puhe,
-    /audio\.volume = Math\.max\(0, Math\.min\(1, pulunVoima\(\) \* LIVIAN_PERUSTASO \* vaimennus\)\);/);
+    /asetaLivianTaso\(audio, pulunVoima\(\) \* LIVIAN_PERUSTASO \* vaimennus\);/);
+  assert.match(puhe,
+    /const taso = Math\.max\(0, Math\.min\(1, Number\(arvo\) \|\| 0\)\);/,
+    'rajaus 0…1 on säilyttävä asetaLivianTasossa');
   assert.doesNotMatch(puhe, /puheVoima/, 'lukijan liuku ei enää säädä pulua');
   // Vain häivytys ja liu'un päivitys koskevat voimakkuuteen muualla;
   // perustaso lasketaan samasta kaavasta (paivitaPulunVoima).
