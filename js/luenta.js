@@ -22,6 +22,9 @@ import {
 import { aaniUrl, haeAani } from './media.js';
 import { puheTuettu } from './puhe.js';
 import { sfx } from './sound.js';
+import {
+  irrotaMusiikinVahvistin, liitaMusiikkiin, volumeToimii,
+} from './musiikkivahvistin.js';
 
 /*
  * Luennan loppuhäivytys. Aiempi neljännessekunti oli niin lyhyt, että
@@ -58,6 +61,161 @@ const LOPUN_HAIPYMA_S = 0.12;
 const LOPUN_HILJAISUUS_S = 0.025;
 /** Pehmennyskäyrä: alkaa hitaasti, jyrkkenee lopussa (ease-in). */
 const pehmene = (t) => Math.max(0, Math.min(1, t)) ** 1.8;
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KERTOJAN TASO: YKSI TIE, JOKA TOIMII MYÖS PUHELIMESSA
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Kertojan loppuhäivytys on ollut olemassa kauan (`pehmeaLoppu`), ja
+ * sen perustelu on yhä voimassa: ElevenLabsin tiedosto päättyy keskeltä
+ * signaalia ja kova reuna napsahtaa. MITATTU 14.9.2026 kolmesta
+ * tuotanto-mp3:sta (mpg123-decoder):
+ *
+ *   tiedosto   loppu 50 ms RMS   viimeinen näyte   loppuhiljaisuus
+ *   pariisi    −36,9 dBFS        −0,000850         0,0 ms
+ *   ateena     −37,6 dBFS        −0,005189         0,0 ms
+ *   lontoo     −31,7 dBFS        +0,011618         0,0 ms
+ *
+ * Eli toisin kuin Livialla, KERTOJAN ÄÄNITE EI PÄÄTY HILJAISUUTEEN:
+ * hiljaisuutta on nolla millisekuntia ja viimeinen näyte on kuuluvalla
+ * tasolla. Lontoon 0,0116 on −38,7 dBFS:n DC-hyppy nollaan — juuri se
+ * töksähdys, jonka takia pehmeaLoppu kirjoitettiin. Alku on puhdas
+ * (alkuhiljaisuus 74–138 ms, alun 20 ms huippu −74…−77 dBFS), joten
+ * alkunousua ei tarvita.
+ *
+ * ------------------------------------------------------------------
+ * MIKÄ EI TOIMINUT: KOKO HÄIVYTYS PUUTTUU iOS:SSÄ
+ * ------------------------------------------------------------------
+ *
+ * Jokainen tason kirjoitus tässä moduulissa on mennyt `audio.volumeen`,
+ * jota iOS:n WebKit ei tottele (mittaus ja perustelu:
+ * js/musiikkivahvistin.js, omistajan kaksi vikailmoitusta 8.9. ja
+ * 9.9.2026). Kirjoitus menee läpi ilman virhettä ja lukema palaa
+ * ykköseksi. Puhelimessa siis:
+ *
+ *   – pehmeaLoppu ei vaimenna mitään, ja `pause()` osuu täyteen ääneen
+ *     25 ms ennen tiedoston reunaa: naksahdus, jota koodi luulee
+ *     estävänsä,
+ *   – keskeytyshäivytykset (haivytaAani, haivytaJaSiivoa,
+ *     stopDiaryVoice) ovat kovia leikkauksia,
+ *   – Lukija-liuku ei säädä soivaa luentaa.
+ *
+ * ------------------------------------------------------------------
+ * KORJAUS: VAIN TASON KIRJOITUS VAIHTUU
+ * ------------------------------------------------------------------
+ *
+ * Häivytyskäyriä, kynnyksiä, cue-ajastusta, aikaleimoja ja keskeytyksiä
+ * EI muutettu — ne ovat omistajan hienosäätämiä (LOPUN_HAIPYMA_S 120 ms
+ * → LOPUN_HILJAISUUS_S 25 ms, ease-in). Muuttui se, MIHIN taso
+ * kirjoitetaan, ja valinta tehdään mittaamalla (`volumeToimii()`
+ * kirjoittaa koe-elementtiin ja lukee takaisin — ei user-agentista):
+ *
+ *   TOTTELEE (työpöytä, Android) → `audio.volume` kuten ennen. Ei uusia
+ *     solmuja, ei crossOriginia, pyyntö tavu tavulta entinen.
+ *   EI TOTTELE (iOS) → elementti reititetään pelin OMAN äänikontekstin
+ *     (js/sound.js sfx.ensureContext) vahvistimen läpi, ja taso menee
+ *     gainiin. Sama ketju kuin musiikilla ja Livian puheella.
+ *
+ * CORS. Mitattu 14.9.2026: ämpäri media.matkakirja.app palauttaa
+ * `access-control-allow-origin` pyynnön Originin mukaisena, joten
+ * `crossOrigin = 'anonymous'` toimii. Lupa pyydetään VAIN reitittävällä
+ * polulla. Jos reititys ei onnistu (konteksti nukkuu, ei elettä vielä),
+ * taso jää volumeen kuten ennenkin: hiljaisuutta ei koskaan valita
+ * häivytyksen takia.
+ */
+
+/** Tottelisiko tämä selain elementin omaa volumea? (iOS: ei) */
+function kertojanVolumeToimii() {
+  try {
+    return volumeToimii();
+  } catch {
+    return true;
+  }
+}
+
+/**
+ * Luennan nykyinen taso siltä polulta, jota se käyttää.
+ * @param {HTMLAudioElement} audio
+ * @returns {number}
+ */
+export function luennanTaso(audio) {
+  if (!audio) return 0;
+  const vahvistin = audio.luennanVahvistin;
+  if (vahvistin) return Number(vahvistin.gain.value) || 0;
+  return Number(audio.volume) || 0;
+}
+
+/**
+ * Asettaa luennan tason oikeaan paikkaan: vahvistimeen jos elementti on
+ * reititetty, muuten elementin volumeen.
+ * @param {HTMLAudioElement} audio
+ * @param {number} arvo
+ */
+export function asetaLuennanTaso(audio, arvo) {
+  if (!audio) return;
+  const taso = Math.max(0, Math.min(1, Number(arvo) || 0));
+  const vahvistin = audio.luennanVahvistin;
+  if (vahvistin) {
+    try {
+      vahvistin.gain.value = taso;
+      return;
+    } catch {
+      /* konteksti kiinni — kirjoitetaan volumeen */
+    }
+  }
+  try {
+    audio.volume = taso;
+  } catch {
+    /* selain ei kelpuuta arvoa — seuraava luenta lukee sen itse */
+  }
+}
+
+/**
+ * Reitittää luennan vahvistimen läpi, JOS tämä selain ei tottele
+ * elementin omaa volumea. Palauttaa true, kun reititys onnistui.
+ *
+ * Kutsutaan heti soittimen synnyttyä; `crossOrigin` on jo asetettu
+ * ennen srciä (luentaSoitin).
+ */
+function liitaLuennanVahvistin(audio) {
+  if (!audio || kertojanVolumeToimii()) return false;
+  const vahvistin = liitaMusiikkiin(audio);
+  if (!vahvistin) return false;
+  audio.luennanVahvistin = vahvistin;
+  return true;
+}
+
+/** Purkaa reitityksen. Turvallista kutsua monta kertaa. */
+function irrotaLuennanVahvistin(audio) {
+  if (!audio?.luennanVahvistin) return;
+  audio.luennanVahvistin = null;
+  irrotaMusiikinVahvistin(audio);
+}
+
+/**
+ * Luennan soitin: elementti ilman srciä ensin, koska `crossOrigin` on
+ * asetettava ENNEN srciä — ja se asetetaan vain silloin, kun luenta
+ * aiotaan reitittää vahvistimen läpi. Taso menee samaa tietä kuin
+ * kaikki muukin (asetaLuennanTaso).
+ *
+ * @param {string} osoite valmis ääniosoite
+ * @param {number} taso aloitustaso
+ * @returns {HTMLAudioElement}
+ */
+function luentaSoitin(osoite, taso) {
+  const audio = new Audio();
+  if (!kertojanVolumeToimii()) audio.crossOrigin = 'anonymous';
+  audio.src = osoite;
+  liitaLuennanVahvistin(audio);
+  asetaLuennanTaso(audio, taso);
+  // Reititys on yksisuuntainen: purkamatta jäänyt ketju pitäisi
+  // kuolleen elementin muistissa.
+  const vapauta = () => irrotaLuennanVahvistin(audio);
+  audio.addEventListener('ended', vapauta);
+  audio.addEventListener('error', vapauta);
+  return audio;
+}
 
 /*
  * ── LUENNAN KYTKIN (omistajan tilaus 25.8.2026) ─────────────────────
@@ -135,8 +293,7 @@ export function playIntroVoice(ui) {
   // ('lyhyt' poistettu 3.9.2026).
   if (kertojaTila() !== 'pitka') return;
   stopIntroVoice(ui);
-  const audio = new Audio(aaniUrl('assets/audio/intro-puhe.mp3'));
-  audio.volume = puheVoima();
+  const audio = luentaSoitin(aaniUrl('assets/audio/intro-puhe.mp3'), puheVoima());
   pehmeaLoppu(ui, audio);
   ui.introVoice = audio;
   /*
@@ -219,17 +376,20 @@ export function haivytaJaSiivoa(ui, audio, kesto = 600) {
   luovutaPuhevuoro(audio);
   // Lukija-liuku ei enää kirjoita tason päälle (paivitaLuentojenVoima).
   audio.luennanHaivytys = true;
-  const alkuVoima = audio.volume;
+  const alkuVoima = luennanTaso(audio);
   const t0 = performance.now();
   const askel = () => {
     const osuus = (performance.now() - t0) / kesto;
     if (osuus >= 1 || audio.paused) {
       audio.pause();
       audio.removeAttribute('src');
+      // Reititys puretaan kuolleelta soittimelta: 'ended' ei tule
+      // pysäytetylle äänelle, joten ketju jäisi muistiin.
+      irrotaLuennanVahvistin(audio);
       vapautaPuhuja(ui, audio);
       return;
     }
-    audio.volume = alkuVoima * (1 - osuus);
+    asetaLuennanTaso(audio, alkuVoima * (1 - osuus));
     setTimeout(askel, 40);
   };
   askel();
@@ -393,11 +553,9 @@ export function paivitaLuentojenVoima() {
     if (tieto.rooli === PUHUJA_PULU) continue;
     audio.luennanPerustaso = arvo;
     if (audio.luennanHaivytys || audio.puhevuoroPaattyi || audio.ended || audio.paused) continue;
-    try {
-      audio.volume = arvo;
-    } catch {
-      /* selain ei kelpuuta arvoa — seuraava luenta lukee sen itse */
-    }
+    // Taso menee sitä polkua, jota tämä selain tottelee — iOS:ssä
+    // vahvistimeen, muuten elementin volumeen (asetaLuennanTaso).
+    asetaLuennanTaso(audio, arvo);
   }
 }
 
@@ -573,8 +731,7 @@ export function playDiaryVoice(ui, url, {
    * katkaisijalle; katkaisija sammuttaisi nyt turhaan myös
    * äänimaisemien peilin, joilla varareitti (alkuperäislähde) yhä on.
    */
-  const audio = new Audio(aaniUrl(url));
-  audio.volume = puheVoima();
+  const audio = luentaSoitin(aaniUrl(url), puheVoima());
   pehmeaLoppu(ui, audio);
   /*
    * LUENNAN LOPPU PERUU MATKAKIRJAKORTIN PALUUN (omistaja 10.9.2026:
@@ -885,7 +1042,7 @@ export function lopetuksenLauseraja(rajat, osuus) {
  * kuuluviin.
  */
 export function pehmeaLoppu(ui, audio) {
-  const lahtotaso = audio.volume;
+  const lahtotaso = luennanTaso(audio);
   const perus = () => audio.luennanPerustaso ?? lahtotaso;
   let rampissa = false;
   /*
@@ -897,7 +1054,7 @@ export function pehmeaLoppu(ui, audio) {
   const rullaa = () => {
     if (audio.paused || !audio.duration) {
       rampissa = false;
-      audio.volume = perus();
+      asetaLuennanTaso(audio, perus());
       return;
     }
     const jaljella = audio.duration - audio.currentTime;
@@ -911,8 +1068,9 @@ export function pehmeaLoppu(ui, audio) {
      * napsahda.
      */
     if (jaljella <= LOPUN_HILJAISUUS_S) {
-      // Pysäytys osuu jo vaienneeseen ääneen eikä voi napsahtaa.
-      audio.volume = 0;
+      // Pysäytys osuu jo vaienneeseen ääneen eikä voi napsahtaa —
+      // PUHELIMESSAKIN, koska taso menee nyt vahvistimeen.
+      asetaLuennanTaso(audio, 0);
       /*
        * LUENTA PÄÄTTYI LUONNOLLISESTI — ja vain tästä haarasta.
        * Kuuntelijat (js/luentareaktiot.js loppureaktio, tekstisession
@@ -935,7 +1093,7 @@ export function pehmeaLoppu(ui, audio) {
     }
     if (jaljella < LOPUN_HAIPYMA_S) {
       const matka = (jaljella - LOPUN_HILJAISUUS_S) / (LOPUN_HAIPYMA_S - LOPUN_HILJAISUUS_S);
-      audio.volume = perus() * Math.max(0, Math.min(1, matka));
+      asetaLuennanTaso(audio, perus() * Math.max(0, Math.min(1, matka)));
     }
     requestAnimationFrame(rullaa);
   };
@@ -959,12 +1117,12 @@ export function pehmeaLoppu(ui, audio) {
 export function haivytaAani(ui, audio, kesto = LUENNAN_HAIPYMA_S * 1000) {
   // Lukija-liuku ei enää kirjoita tason päälle (paivitaLuentojenVoima).
   audio.luennanHaivytys = true;
-  const perus = audio.volume;
+  const perus = luennanTaso(audio);
   const t0 = performance.now();
   const askel = (nyt) => {
     if (audio.paused) return;
     const t = Math.min(1, Math.max(0, (nyt - t0) / kesto));
-    audio.volume = perus * pehmene(1 - t);
+    asetaLuennanTaso(audio, perus * pehmene(1 - t));
     if (t < 1) requestAnimationFrame(askel);
     else audio.pause();
   };
@@ -1071,16 +1229,17 @@ export function haivytaLuenta(ui, kestoMs = 700) {
   luovutaPuhevuoro(audio);
   // Lukija-liuku ei enää kirjoita tason päälle (paivitaLuentojenVoima).
   audio.luennanHaivytys = true;
-  const alku = audio.volume;
+  const alku = luennanTaso(audio);
   const t0 = performance.now();
   const askel = (nyt) => {
     const t = Math.min(1, (nyt - t0) / kestoMs);
-    audio.volume = alku * (1 - t);
+    asetaLuennanTaso(audio, alku * (1 - t));
     if (t < 1 && !audio.paused) {
       requestAnimationFrame(askel);
     } else {
       audio.pause();
       audio.removeAttribute('src');
+      irrotaLuennanVahvistin(audio);
       ui.luennat?.delete(audio);
       /*
        * Vapautus puhujan roolista, samasta syystä kuin

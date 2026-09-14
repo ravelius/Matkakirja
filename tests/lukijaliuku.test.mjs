@@ -209,7 +209,14 @@ test('jokainen puheVoima-tasolla alkava luenta merkitsee itsensä puhujaksi', ()
   for (const polku of ['../js/luenta.js', '../js/linssipuhe.js', '../js/ui.js']) {
     const rivit = tyhjaaEiKoodi(lue(polku)).split('\n');
     const osumat = rivit
-      .map((rivi, i) => (/^\s*audio\.volume = puheVoima\(\);\s*$/.test(rivi) ? i : -1))
+      /*
+       * KAKSI ALOITUSMUOTOA 14.9.2026 alkaen. js/luenta.js kirjoittaa
+       * tason luentaSoittimen kautta, koska iOS ei tottele elementin
+       * omaa volumea (js/musiikkivahvistin.js) eikä häivytys muuten
+       * kuuluisi puhelimessa. Portti tunnistaa molemmat muodot, jottei
+       * uusi reitti pääse kirjanpidon ohi.
+       */
+      .map((rivi, i) => (/^\s*(?:audio\.volume = puheVoima\(\);|const audio = luentaSoitin\(.*puheVoima\(\)\);)\s*$/.test(rivi) ? i : -1))
       .filter((i) => i >= 0);
     assert.ok(osumat.length > 0, `${polku}: yhtään luennan aloitusta ei löytynyt`);
     for (const i of osumat) {

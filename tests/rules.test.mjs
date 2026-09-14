@@ -4093,7 +4093,15 @@ test('luennan loppuhäivytys ei niele viimeistä sanaa', () => {
   assert.ok(hiljaisuus <= 0.06, 'hiljaisuus on niin pitkä että siihen mahtuu tavu');
   assert.ok(loppu > hiljaisuus * 2, 'häivytykselle ei jää matkaa hiljaisuuden päälle');
 
-  const pehmea = ui.slice(ui.indexOf('function pehmeaLoppu('), ui.indexOf('function pehmeaLoppu(') + 2000);
+  /*
+   * Rajaus funktion LOPPUUN eikä kiinteään merkkimäärään: 2000 merkin
+   * ikkuna katkesi kesken, kun funktioon lisättiin perustelukommentti,
+   * ja portti kaatui vaikka koodi oli oikein. Funktion oma loppu on
+   * sekä tarkempi että kestävämpi raja.
+   */
+  const pehmeaAlku = ui.indexOf('function pehmeaLoppu(');
+  assert.ok(pehmeaAlku > 0, 'pehmeaLoppu on kadonnut');
+  const pehmea = ui.slice(pehmeaAlku, ui.indexOf('\n}\n', pehmeaAlku));
   assert.match(pehmea, /LOPUN_HILJAISUUS_S/, 'pysäytys ei odota hiljaisuutta');
   assert.match(pehmea, /LOPUN_HAIPYMA_S/, 'loppu käyttää väärää häivytystä');
 });
