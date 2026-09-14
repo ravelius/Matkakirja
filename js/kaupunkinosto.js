@@ -520,3 +520,99 @@ export function avaaTuristiInfo(ui, city, { ankkuri = null } = {}) {
     lato: latoInfoSisalto,
   });
 }
+
+/* ============ TIIVISTETTY KAUPUNKIETUSIVU (PAATOKSET 10) ============ */
+
+/**
+ * TIIVISTETTY KOPIO KAUPUNKILEHDEN ETUSIVUSTA (Raamattu, osio
+ * "Kaupungit": KARTTAUUDISTUKSEN PAATOKSET 10; omistaja 14.9.2026
+ * sanatarkasti: *"kohdekaupunkia klikkaamalla voisi avautua
+ * kaupunkilehden vanha etusivu mutta ilman matkailu liitetta ja alaosan
+ * navigointia. Saasta vanha kaupunki lehti koskemattomana. Tee siita
+ * vain uusi tiivistetty kopio. Ota myos ne kaksi ennen ja nyt
+ * vertailukuvat pois ja siirra kaupungin leipateksti vasta kaupunki
+ * kartan jalkeen ja nayta siita vain ensimmainen kappale ja loppuun
+ * lisaa nappi joka jatkaa tekstin loppuun asti."*).
+ *
+ * TÄMÄ ON KOPIO, EI MUUNNOS. Vanha kaupunkilehti (js/lehti.js
+ * rakennaSivut, piirraLehtiKuvat, sivupino, sisällysvalikko) ja tämän
+ * tiedoston vanha `latoKaupunkiSisalto` jäävät koskemattomiksi — uusi
+ * ladonta lukee TÄSMÄLLEEN samaa dataa samoilla piirtäjillä ja vain
+ * valitsee siitä vähemmän. Yhtään uutta sisältötekstiä ei kirjoiteta.
+ *
+ * NELJÄ EROA VANHAAN ETUSIVUUN, kaikki omistajan luettelosta:
+ *   1. EI ENNEN/NYT -PARIA: `latoLehtiKuvat` saa `ennenNyt: null`,
+ *      jolloin pikkurivi palaa kansikuvien pariin kuten kaupungilla,
+ *      jolla paria ei ole. Data säilyy — vain tämä kortti jättää sen
+ *      lukematta.
+ *   2. EI MATKAILULIITETTÄ: `piirraMatkailijalle`a ei kutsuta. Opas on
+ *      yhä omassa turisti-info-kortissaan (avaaTuristiInfo).
+ *   3. EI ALAOSAN NAVIGOINTIA: ei sivunvaihtoa, ei sisällysvalikkoa,
+ *      ei hampurilaista — eikä myöskään vanhaa ovea kaupunkilehteen
+ *      (latoLehtiOvi), koska se on juuri se alarivi, jonka omistaja
+ *      nimesi. Kaupunkilehti avautuu yhä fokusvirrasta.
+ *   4. JÄRJESTYS: herokuvat → kohdekartta → leipätekstin ENSIMMÄINEN
+ *      kappale → nappi, joka näyttää loput kappaleet PAIKALLEEN.
+ *
+ * LOPUT KAPPALEET OVAT DOMISSA ALUSTA ASTI, piilotettuina. Näin napin
+ * painallus ei lado tekstiä uudestaan (eikä siis voi ladota sitä
+ * toisin), ja kortin korkeus lasketaan uudestaan vasta kun pelaaja itse
+ * pyytää loput (asemoiKaupunkipopup napin jälkeen).
+ */
+export const JATKA_NAPIN_TEKSTI = 'Lue loppuun';
+
+/** Kortin tunnusluokka savukkeelle ja tyyleille. */
+export const TIIVIS_LUOKKA = 'kaupunkipopup-tiivis';
+
+export function latoTiivisEtusivu(ui, sisalto, city) {
+  sisalto.closest('.kaupunkipopup')?.classList.add(TIIVIS_LUOKKA);
+  const kansi = kaupunginKansi(city.id);
+  const hero = html('div', 'kaupunkipopup-hero');
+  const paakuva = html('div', 'lehti-paakuva');
+  const kuvarivi = html('div', 'lehti-kuvarivi');
+  hero.appendChild(paakuva);
+  hero.appendChild(kuvarivi);
+  sisalto.appendChild(hero);
+  latoLehtiKuvat(ui, {
+    paakuva,
+    kuvarivi,
+    kuvat: kansi?.kansikuvat,
+    avauskuvat: kansi?.avauskuvat ?? null,
+    // Ennen/nyt pois (ero 1): ei suodatusta tässä, vaan kenttää ei lueta.
+    ennenNyt: null,
+  });
+  if (paakuva.hidden && kuvarivi.hidden) hero.hidden = true;
+  // Kohdekartta ENNEN leipätekstiä (ero 4).
+  const kartta = html('div', 'kaupunkipopup-kartta');
+  sisalto.appendChild(kartta);
+  piirraKaupunkiKartta(ui, kartta, { cityId: city.id });
+  if (!kartta.childElementCount) kartta.hidden = true;
+  const lohko = latoKaupunginEsittely(sisalto, city);
+  const loput = [...lohko.querySelectorAll(':scope > p')].slice(1);
+  if (!loput.length) return;
+  for (const p of loput) p.hidden = true;
+  const rivi = html('div', 'kaupunkipopup-alarivi');
+  const nappi = html('button', 'kaupunkipopup-jatka', JATKA_NAPIN_TEKSTI);
+  nappi.type = 'button';
+  nappi.addEventListener('click', () => {
+    for (const p of loput) p.hidden = false;
+    rivi.remove();
+    asemoiKaupunkipopup(ui);
+  });
+  rivi.appendChild(nappi);
+  sisalto.appendChild(rivi);
+}
+
+/**
+ * Kaupungin napautuksen kortti: tiivistetty etusivu. Sama kehys,
+ * ankkuri ja sulkusopimus kuin vanhalla pop-upilla (avaaKortti) — vain
+ * sisällys on eri.
+ */
+export function avaaTiivisKaupunkietusivu(ui, city, { ankkuri = null } = {}) {
+  return avaaKortti(ui, city, {
+    laji: 'kaupunki',
+    otsikko: city?.name ?? '',
+    ankkuri,
+    lato: latoTiivisEtusivu,
+  });
+}
