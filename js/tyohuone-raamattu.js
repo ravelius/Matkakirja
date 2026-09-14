@@ -7445,6 +7445,17 @@ export const RAAMATTU = {
           + 'samaan savyyn kuin luennan taustassa - siis sama sumennus, '
           + 'eri tummuus. Savyt ja sumennuksen maara mitataan ja naytetaan '
           + 'omistajalle kuvina. Tila: tyo Opus-agentilla.',
+        'LUENNAN MERKKI: KAIUTINKUVA SYKKII MATKAKIRJAN YLARIVILLA '
+          + '(omistaja 14.9.2026 klo 21.00 UTC, sanatarkasti: "Luennan '
+          + 'aikana matkakirjan ylarivin reunassa voisi sykkia kevyesti '
+          + 'kaiuttimen kuva merkiksi etta luenta on kaynnissa.  Pulun '
+          + 'luennassa riittaa pulun elehtiminen ajamaan saman asian"): '
+          + '1) Horation saapumisluennan aikana saapumiskortin ylarivin '
+          + 'reunassa oleva kaiutinkuvake SYKKII KEVYESTI (opacity/'
+          + 'scale-animaatio, ei suodatinta; hidas, hillitty), ja '
+          + 'pysahtyy kun luenta paattyy tai keskeytetaan; mykistettyna ei '
+          + 'syki. 2) Livian (pulun) repliikissa EI erillista merkkia - '
+          + 'pulun eleet riittavat. Tila: tyo Opus-agentilla.',
         'Saapumiskortti: luettu matkakirjamerkintä + esittely '
           + 'kuvineen.',
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
