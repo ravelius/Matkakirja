@@ -17,7 +17,7 @@
  *      uloimmalla zoomilla yli PAAKARTAN_MERKKIKATTO merkkiä.
  *   0b. VASTAKOE (väite): sama mittaus ILMAN porttia palauttaa
  *      alkuperäiset ylitykset (GRC 33, TUR 29, DEU 28, ESP 25, HRV 23,
- *      ITA 22, RUS 22). Jos ei palauta, vartio 0 ei mittaa porttia.
+ *      ITA 22, RUS 22, FRA 62). Jos ei palauta, vartio 0 ei mittaa porttia.
  *   0c. KOHDEKARTAN KATTO. Maakohtainen luku ≤ KOHDEKARTAN_KATTO ja
  *      yksittäisen kohdekartan pistemäärä ≤ KOHDEKARTAN_PISTEKATTO
  *      (Pariisin mitta, ks. KOHDEKARTAN KATTO alla).
@@ -89,6 +89,17 @@ const KOHDEKARTAN_PISTEKATTO = 31;
 /** Erän 10 mittaama lähtötila (origin/main): maa → merkkejä pääkartalla. */
 const LAHTOTASO = {
   GRC: 33, TUR: 29, DEU: 28, ESP: 25, HRV: 23, ITA: 22, RUS: 22,
+  /*
+   * FRA 20 → 62 (14.9.2026, Ranskan sisältöpilotti). Kolme lisäystä
+   * samassa erässä, kaikki portin takana tai kartan typografiaa:
+   * maalehden sivuilta palasteltu 18 nostoa (`lahi: true`,
+   * js/packs/maalehtinostot-fra.js), Pariisin ja Marseillen
+   * kohdekartan 17 nostoa lähizoomin merkkeinä
+   * (js/fokuskohteet.js KOHDEKARTAN_NOSTOT_LAHIZOOMIIN) ja seitsemän
+   * näkyvää kaupunkia (js/packs/nakyvat-kaupungit-fra.js).
+   * Saapumisnäkymässä portti päästää yhä enintään 21 (vartio 0).
+   */
+  FRA: 62,
 };
 /**
  * Selainvartioiden maat. Espanja on portin näkyvä koe (0 poltettua

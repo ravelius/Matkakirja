@@ -216,7 +216,13 @@ test('poltetut nostot luetaan pallon omasta luettelosta, jonka laattatyökalu ki
   // vaihtaa kyljen ja piilottaa lapun kesken elinkaaren (luku 14).
   assert.match(nostot, /piirraNostosymKartalle\(g, d\.kategoria, nimio, d\.symLaji, puoli\);/);
   assert.match(nostot, /export function asetteleNosto\(el, d\)/);
-  assert.match(nostot, /osumat = \[\.\.\.naytetaan, \.\.\.nakyvat\.filter\(\(r\) => r\.poltettu\)\];/);
+  /*
+   * Poltettu muste on osuma yhtä lailla kuin elävä merkki. Suodatin
+   * perässä (14.9.2026): nimikyltti (`vainNimi`, näkyvä kaupunki ilman
+   * korttia, js/packs/nakyvat-kaupungit-fra.js) ei ole osuma, koska
+   * sillä ei ole korttia.
+   */
+  assert.match(nostot, /osumat = \[\.\.\.naytetaan, \.\.\.nakyvat\.filter\(\(r\) => r\.poltettu\)\]\s*\n?\s*\.filter\(\(r\) => !r\.vainNimi\);/);
   // Kohtaamispiste samalla tuikkeella (css/fokusvirta.css); lukko on
   // sama merkki himmennettynä (karttauudistuksen erä 7).
   assert.match(nostot, /fokuspisteKuvio\(g, \{ lukittu: Boolean\(d\.lukittu\) \}\);/);

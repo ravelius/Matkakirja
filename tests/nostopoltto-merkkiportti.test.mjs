@@ -64,6 +64,8 @@ test('poltettavat ovat täsmälleen ne, jotka elävä portti päästäisi', () =
    * vastauksiin, tämä väite kaatuu.
    */
   let karsittuja = 0;
+  /** Maittain karsitut, jotta luvun muutos kertoo MISTÄ se tuli. */
+  const perMaa = {};
   for (const [iso, ms] of maittain) {
     const pohja = FOKUS_POHJAT[iso];
     const elavat = maanKohdemerkit(pack, iso, pohja, () => false);
@@ -78,22 +80,58 @@ test('poltettavat ovat täsmälleen ne, jotka elävä portti päästäisi', () =
       if (m.poltettava) {
         assert.ok(paastetyt.has(m.tunnus),
           `${iso}/${m.tunnus} palaa, vaikka elävä portti piilottaisi sen`);
-      } else if (!paastetyt.has(m.tunnus)) karsittuja += 1;
+      } else if (!paastetyt.has(m.tunnus)) {
+        karsittuja += 1;
+        perMaa[iso] = (perMaa[iso] ?? 0) + 1;
+      }
     }
   }
-  // Mitattu 14.9.2026: GRC 12, TUR 8, DEU 7, HRV 2, ITA 1, RUS 1, ESP 1.
   assert.ok(karsittuja >= 30, `portti karsii ${karsittuja} merkkiä (odotettu ≥ 30)`);
-  assert.equal(tilasto.porttiPiiloon, 32, 'tilasto kertoo saman luvun kuin mittaus');
+  /*
+   * VÄITE ON KAHDEN RIIPPUMATTOMAN MITTAUKSEN YHTÄPITÄVYYS, EI LUKU.
+   * `karsittuja` lasketaan yllä ELÄVÄSTÄ päästä (js/fokuskohteet.js
+   * maanKohdemerkit + js/pallolauta/nostot.js merkkiPortti) ja
+   * `tilasto.porttiPiiloon` polttoketjun omasta kirjanpidosta
+   * (tools/fokuskartta/nostot.mjs). Jos päät ajautuvat eri sääntöön,
+   * luvut eroavat — ja juuri se on se regressio, jota tämä testi
+   * vartioi. Tämä ehto ei vanhene sisällön kasvaessa.
+   */
+  assert.equal(tilasto.porttiPiiloon, karsittuja,
+    `polttoketju piilottaa ${tilasto.porttiPiiloon}, elävä portti ${karsittuja} `
+    + `(maittain ${JSON.stringify(perMaa)}) — päät ajautuivat eri sääntöön`);
+  /*
+   * KIINTEÄ LUKU 32 EI OLLUT VÄITE VAAN PÄIVÄMÄÄRÄ, ja siksi se
+   * poistettiin. Mitattu 14.9.2026 kaksi lukemaa:
+   *
+   *   ilman Ranskan sisältöpilottia  32 (GRC 12, TUR 8, DEU 7, HRV 2,
+   *                                      ITA 1, RUS 1, ESP 1)
+   *   pilotin kanssa                 73 (edelliset + FRA 41)
+   *
+   * Ranskan 41 on mitattu ja sisällön kasvua, ei sääntöjen eroa: maan
+   * merkit nousivat 20 → 62 (maalehden 18 nostoa, kohdekartalta
+   * lähizoomiin palanneet 17 ja 7 näkyvää kaupunkia), ja 62 − 21 = 41
+   * jää katon ulkopuolelle MOLEMMISSA päissä. Polttovelka on yhä nolla.
+   *
+   * Maakohtainen jakauma kulkee virheviestissä (`perMaa`), jotta luvun
+   * muutos kertoo heti MISTÄ se tuli — mutta se ei ole väite, koska
+   * sisällön kasvu ei ole vika.
+   */
 });
 
 test('lähizoomin kohde (lahi: true) ei pala koskaan', () => {
   /*
-   * AINEISTOSSA EI OLE VIELÄ YHTÄÄN `lahi`-KOHDETTA (mitattu 14.9.2026:
-   * kenttä on portin sopimus, ei vielä sisältöä), joten pelkkä
-   * datasilmukka olisi tyhjä väite. Portti ajetaan siksi myös
-   * TEKOSYÖTTEELLÄ: yksi lahi-kohde katon alla oleval maalla. Jos
-   * portti päästäisi sen, laatta polttaisi sisältöä, joka kuuluu vain
-   * lähikuvaan.
+   * KAKSI MITTAUSTA: TEKOSYÖTE JA AITO AINEISTO.
+   *
+   * Tekosyöte pitää säännön kirjattuna silloinkin, kun aineistossa ei
+   * ole yhtään `lahi`-kohdetta (niin oli 14.9.2026 aamulla).
+   *
+   * AITO SILMUKKA KORJATTIIN 14.9.2026 (#2447): se luki lippua
+   * POLTTOKETJUN merkiltä (`m.kohde?.lahi`), mutta sen merkkioliossa
+   * EI OLE `kohde`-kenttää lainkaan (kentät: tunnus, x, y, ankkuriX,
+   * ankkuriY, symboli, laji, nimio, … poltettava, tiiviste, perhe,
+   * iso, s). Ehto oli siis aina epätosi ja väite tyhjä. Lippu luetaan
+   * nyt ELÄVÄLTÄ puolelta, jossa se asuu — ja aineistossa on
+   * mitattuna 35 `lahi`-merkkiä (FRA), joten väite mittaa oikeasti.
    */
   const koe = [
     { id: 'a', kohde: { tyyppi: 'kaupunki' } },
@@ -106,13 +144,21 @@ test('lähizoomin kohde (lahi: true) ei pala koskaan', () => {
   assert.deepEqual(merkkiPortti(koe, true, (m) => m.kohde).merkit.map((m) => m.id),
     ['a', 'b', 'c'], 'lähizoomilla kaikki');
 
+  let lahiMerkkeja = 0;
   for (const [iso, ms] of maittain) {
-    for (const m of ms) {
-      if (m.kohde?.lahi) {
-        assert.equal(m.poltettava, false, `${iso}/${m.tunnus} on lahi-kohde mutta palaa`);
-      }
+    const poltettavat = new Map(ms.map((m) => [m.tunnus, m.poltettava]));
+    for (const m of maanKohdemerkit(pack, iso, FOKUS_POHJAT[iso], () => false)) {
+      if (!m.kohde?.lahi) continue;
+      lahiMerkkeja += 1;
+      assert.notEqual(poltettavat.get(m.id), true,
+        `${iso}/${m.id} on lahi-kohde mutta palaa`);
     }
   }
+  // Mitattu 14.9.2026 (#2447): FRA 35 — 18 maalehden nostoa `lahi: true`
+  // datassa ja 17 kohdekartalta lähizoomiin palannutta.
+  assert.ok(lahiMerkkeja >= 35,
+    `aidossa aineistossa on ${lahiMerkkeja} lahi-merkkiä (odotettu ≥ 35) — `
+    + 'jos luku on 0, silmukka on taas tyhjä väite');
 });
 
 test('portti ei siirrä ladontaa: poltetun merkin tiiviste on luettelossa', () => {

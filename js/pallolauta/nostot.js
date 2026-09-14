@@ -749,7 +749,18 @@ export function luoNostot({
           puoli: m.puoli ?? 'oikea',
           aihe: nostosymPaakategoria(m.kategoria),
           poltettu: m.poltettu,
-          avaa: (ankkuri) => avaaFokuskohde(ui, kohde, { ankkuri }),
+          /*
+           * NÄKYVÄ KAUPUNKI ILMAN KORTTIA (`vainNimi`, omistaja
+           * KARTTAUUDISTUKSEN PAATOKSET 13). Merkki ja nimi ovat
+           * kartalla, mutta korttia ei ole eikä sitä saanut tässä
+           * erässä kirjoittaa — joten merkki ei myöskään ota
+           * napautusta. Rivi jätetään osumalistalta pois alempana
+           * (`osumat`), jottei se voi voittaa naapurinoston sormea.
+           */
+          vainNimi: Boolean(kohde.vainNimi),
+          avaa: kohde.vainNimi
+            ? null
+            : ((ankkuri) => avaaFokuskohde(ui, kohde, { ankkuri })),
         });
       }
       // Naapurimaan poltettu muste on myös napautettava (2.9.2026,
@@ -973,7 +984,10 @@ export function luoNostot({
       if (!r.poltettu || r.perhe === 'piste') continue;
       r.lappu = (p) => nostonLaatikko(p, r, { nimio: Boolean(r.nimioNakyy && r.nimi) });
     }
-    osumat = [...naytetaan, ...nakyvat.filter((r) => r.poltettu)];
+    // Nimikyltti (`vainNimi`) ei ole osuma: sillä ei ole korttia, ja
+    // osumalistalla se veisi napautuksen naapurinostolta.
+    osumat = [...naytetaan, ...nakyvat.filter((r) => r.poltettu)]
+      .filter((r) => !r.vainNimi);
     /*
      * KIINTEÄ MUSTE ON NIMILADONNAN VARAUS, LIIKKUVA EI (Raamattu,
      * KAUPUNGIN NIMI NOSTOJEN PAALLA). Nimi väistää vain sitä, mikä ei
