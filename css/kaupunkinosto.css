@@ -116,7 +116,8 @@
   justify-content: flex-end;
 }
 
-.kaupunkipopup-lehti {
+.kaupunkipopup-lehti,
+.kaupunkipopup-jatka {
   padding: 0.35rem 0.8rem;
   border: 1px solid rgba(122, 85, 20, 0.45);
   border-radius: 999px;
@@ -128,4 +129,20 @@
 }
 
 .kaupunkipopup-lehti:hover,
-.kaupunkipopup-lehti:focus-visible { background: rgba(122, 85, 20, 0.18); }
+.kaupunkipopup-lehti:focus-visible,
+.kaupunkipopup-jatka:hover,
+.kaupunkipopup-jatka:focus-visible { background: rgba(122, 85, 20, 0.18); }
+
+/*
+ * TIIVISTETTY KAUPUNKIETUSIVU (PAATOKSET 10, js/kaupunkinosto.js
+ * latoTiivisEtusivu): leipätekstin loput kappaleet ovat DOMissa
+ * piilotettuina, kunnes "Lue loppuun" painetaan. Sääntö kirjoitetaan
+ * tähän eikä jätetä selaimen oletukseen, koska .arrival-intron omat
+ * kappalesäännöt (css/styles.css) voisivat voittaa [hidden]-oletuksen.
+ * Uusia värejä tai kirjasimia ei tule: nappi on sama muoto kuin kortin
+ * vanha alarivin nappi yllä.
+ */
+.kaupunkipopup .arrival-intro > p[hidden] { display: none; }
+
+/* Kohdekartta ennen leipätekstiä: sama rako kuin tekstin ympärillä. */
+.kaupunkipopup-tiivis .kaupunkipopup-kartta { margin-bottom: 0.7rem; }

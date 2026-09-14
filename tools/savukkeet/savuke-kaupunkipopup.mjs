@@ -280,7 +280,7 @@ for (const ruutu of RUUDUT) {
       vaadi(`${tunnus}: merkissä on teksti`, /Turisti-info/i.test(teksti), teksti);
     }
 
-    /* --- vartio 1, 2, 3, 4: ISO POP-UP -------------------------------- */
+    /* --- vartio 1, 2, 3, 4: ISO POP-UP (PAATOKSET 10: tiivistetty) ---- */
     if (kaupunkiAlussa) {
       await sivu.mouse.click(kaupunkiAlussa.x, kaupunkiAlussa.y);
       await sivu.waitForTimeout(900);
@@ -316,7 +316,16 @@ for (const ruutu of RUUDUT) {
       vaadi(`${tunnus}: kohdekartta kortissa`, iso.kartta && iso.kohteita > 0,
         `kehys ${iso.kartta}, kohteita ${iso.kohteita}`);
       vaadi(`${tunnus}: kortti on karttaruudun sisällä`, iso.ruudulla);
-      vaadi(`${tunnus}: vanha ovi kaupunkilehteen on kortissa`, iso.lehtiOvi);
+      /*
+       * ALAOSAN NAVIGOINTI ON POISSA (PAATOKSET 10, omistaja 14.9.2026:
+       * *"ilman matkailu liitetta ja alaosan navigointia"*): kaupungin
+       * napautus avaa tiivistetyn etusivun (js/kaupunkinosto.js
+       * latoTiivisEtusivu), jossa vanhaa ovea kaupunkilehteen ei enää
+       * ole. Vartio kääntyi siis päinvastoin — ennen se vaati oven,
+       * nyt se vaatii, ettei sitä ole. Vanha `latoKaupunkiSisalto` ovineen
+       * on yhä koodissa koskemattomana, mutta kartta ei avaa sitä.
+       */
+      vaadi(`${tunnus}: kortissa ei ole alaosan navigointia (PAATOKSET 10)`, !iso.lehtiOvi);
       tieto(`${tunnus}: kohdekartan kohteita`, iso.kohteita);
     }
 
