@@ -254,7 +254,17 @@ const SHELL = [
   './js/linssit/keksinnot.js',
   './js/linssit/ihmisen-matka.js',
   './js/linssit/ihmisen-matka-data.js',
-  './js/linssit/ihmisen-matka-kertomus.js',
+  /*
+   * TÄSSÄ OLI './js/linssit/ihmisen-matka-kertomus.js' TOISEEN KERTAAN
+   * (v1699, 7.9.2026). Sama rivi on alempana omine perusteluineen, eikä
+   * tiedosto ole tästä poistunut kuoresta.
+   *
+   * Kaksoiskappale hylkäsi KOKO ASENNUKSEN: Cache.addAll heittää
+   * InvalidStateError "duplicate requests", jolloin install-käsittelijän
+   * waitUntil-lupaus hylkää eikä self.skipWaiting() ehdi ajoon —
+   * palvelutyöntekijä ei asentunut eikä aktivoitunut lainkaan.
+   * tests/sw.test.mjs vartioi, ettei kaksoiskappale palaa.
+   */
   // Ihmisen matka värivirtoina (6.9.2026): virtojen aineisto ja maamaski
   // tulevat linssin mukana; piirto ja laskenta seuraavat js/aikajana.js:ää.
   './js/linssit/ihmisen-matka-virrat.js',

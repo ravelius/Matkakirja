@@ -18,6 +18,47 @@ test('kaikki SHELLin tiedostot ovat olemassa', () => {
 });
 
 /*
+ * SAMA OSOITE EI SAA OLLA SHELL-LISTALLA KAHDESTI.
+ *
+ * Asennus tekee `cache.addAll(YDIN...)`, ja selaimen Cache.addAll
+ * HYLKÄÄ koko erän, jos samassa listassa on kaksi pyyntöä samaan
+ * osoitteeseen. Chromiumin virhe sanatarkasti (mitattu 14.9.2026):
+ *
+ *   InvalidStateError: Failed to execute 'addAll' on 'Cache':
+ *   Cache.addAll(): duplicate requests (…/js/linssit/…)
+ *
+ * Kun addAll hylkää, install-käsittelijän waitUntil-lupaus hylkää,
+ * eikä `self.skipWaiting()` ehdi ajoon: palvelutyöntekijä EI ASENNU
+ * EIKÄ AKTIVOIDU LAINKAAN. Ensiasennuksessa selain hylkää koko
+ * rekisteröinnin (mitattu: `getRegistration()` palauttaa undefined ja
+ * versiokoriin jää nolla avainta), ja laitteella, jolla on jo vanha
+ * työntekijä, vanha jää ohjaksiin ikuisiksi ajoiksi — peli tarjoillaan
+ * silloin vanhasta korista, joka päivittyy tiedosto kerrallaan
+ * taustalla. Kaksoiskappale on siis hiljainen ja iso vika, jota ei
+ * näe mistään muusta kuin tästä testistä.
+ *
+ * Rivit luetaan VAIN SHELL-listasta: sw.js:n muualla oleva
+ * `caches.match('./index.html')` ei ole listarivi.
+ */
+test('SHELL-listalla ei ole kaksoiskappaleita', () => {
+  const alku = sw.indexOf('const SHELL = [');
+  const loppu = sw.indexOf('\n];', alku);
+  assert.ok(alku >= 0 && loppu > alku, 'sw.js:stä ei löydy SHELL-listaa');
+  // Kommentit pois ensin: listan perustelut kertovat poistetuista
+  // riveistä polkuineen, eikä proosa saa näkyä kaksoiskappaleena.
+  const koodi = sw.slice(alku, loppu)
+    .replace(/\/\*[\s\S]*?\*\//g, '')
+    .replace(/\/\/[^\n]*/g, '');
+  const rivit = [...koodi.matchAll(/'\.\/([^']*)'/g)].map((m) => m[1]);
+  const laskuri = new Map();
+  for (const p of rivit) laskuri.set(p, (laskuri.get(p) ?? 0) + 1);
+  const kahdesti = [...laskuri].filter(([, n]) => n > 1).map(([p, n]) => `${p} (${n}×)`);
+  assert.deepEqual(kahdesti, [],
+    'sama osoite on SHELL-listalla useammin kuin kerran — Cache.addAll hylkää '
+    + 'koko asennuksen, eikä palvelutyöntekijä asennu lainkaan');
+});
+
+/*
  * KAIKKI js/-moduulit kuuluvat SHELLiin — myös js/tyohuone-*.js.
  *
  * Ennen 18.8.2026 työhuone oli erillinen sivusto (tyohuone.html), joka
