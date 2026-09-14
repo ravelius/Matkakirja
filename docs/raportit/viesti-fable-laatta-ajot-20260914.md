@@ -34,3 +34,5 @@ kirjauksessa.
 | 14 | IRL | 34803511901 | success | 2026-09-14-tasoitus | true |
 | 15 | ITA | 34803610669 | success | 2026-09-14-tasoitus | true |
 | 16 | LTU | 34803776066 | success | 2026-09-14-tasoitus | true |
+| 17 | LVA | 34803897447 | success | 2026-09-14-tasoitus | true |
+| 18 | NLD | 34804015482 | success | 2026-09-14-tasoitus | true |
