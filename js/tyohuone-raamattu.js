@@ -7436,7 +7436,11 @@ export const RAAMATTU = {
           + 'oikealle: symboli jaa vasempaan reunaan, teksti "Liiku" '
           + 'tulee oikealle; jonkin ajan kuluttua (Fablen linjaus n. 6 s) '
           + 'se kutistuu takaisin pelkaksi symboliksi. Kohta 2 (piilossa '
-          + 'luennan ajan) pysyy. Tila: tyo Opus-agentilla.',
+          + 'luennan ajan) pysyy. AANETON PELAAJA (omistaja klo 21.50 UTC kysymyskortilla: "Pululla on '
+          + 'se pieni puhekupla jossa plus merkki. Siita tulee teksti '
+          + 'nakyviin"): puhelimella pulun pieni plus-kupla on nakyvissa '
+          + 'aina kun repliikki on olemassa, ja sen napautus avaa repliikin '
+          + 'tekstin; isoisan merkinnan saa esiin lappua napauttamalla. Tila: tyo Opus-agentilla.',
         'KARTTATAUSTA LUENNAN JA KAUPUNKIESITTELYN AIKANA: TUMMEMPI JA '
           + 'PEHMEA (omistaja 14.9.2026 klo 20.55 UTC, sanatarkasti: '
           + '"Luennan aikana kun kuvat nakyvat, kartta tausta voisi olla '
