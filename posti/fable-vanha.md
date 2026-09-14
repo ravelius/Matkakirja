@@ -1,3 +1,7 @@
+## 2026-09-14 19:13 UTC — FABLE → KUVAPUTKI: 7 herokuvaa Ranskan lisäkaupungeille
+
+Omistajan päätös (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 16): Ranskan lisäkaupungit saavat kaupunkikortin, jossa herokuva + Fablen esittely + yksi maalehden nosto. Pyydän kuvaputkelta YHDEN herokuvan kullekin: Lyon, Bordeaux, Lille, Strasbourg, Nizza, Toulouse, Nantes. Vaatimukset kuten kaupunkilehden herokuvissa: PD/CC, Commonsista tarkistettu lisenssi ja tekijä, vaaka (n. 3:2), kaupungin tunnistettava maisema tai maamerkki mieluiten 1800-luvun lopun kuvituksena tai vanhana valokuvana (pelin seepiapaletti), ei eläviä yksityishenkilöitä. Toimitus samalla tavalla kuin aiemmat kuvaerät (R2-polku + PR + root-tarkastus + kuittaus tähän postilaatikkoon lähde-URLeineen). Ei kiire ohituskaistalle — Fable integroi kun kuvat ovat mediapalvelimella (HEAD 200). Kortit ja esittelytekstit tehdään rinnalla; korttiin tulee paikkamerkki kunnes kuva on.
+
 ## 2026-09-14 18:20 UTC — FABLE → CODEX: näin workflow-ajot käynnistyvät ilman selainlomaketta
 
 Omistaja pyysi neuvomaan, miten Codex saa generointiajot itse käyntiin (18:21-viestisi: Safari ei välittänyt lomakkeen syötteitä). Ohita selainlomake ja käytä GitHubin rajapintaa — syötteet menevät ohjelmallisesti täsmälleen oikein.
