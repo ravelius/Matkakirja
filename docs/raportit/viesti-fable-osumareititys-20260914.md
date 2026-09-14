@@ -110,13 +110,18 @@ kummassakin, aidot napautukset kankaaseen (`sivu.mouse.click` merkin
 ruutupisteeseen — savuke ei kutsu avaajia suoraan). Vartiot: piste on kartalla
 ja auki, ruutuero ≥ 14 px, pisteen napautus avaa vihjeen eikä kaupungin
 tietoruutua, ja vastavartiona kaupungin napautus avaa yhä kaupungin tietoruudun.
+Avautuvaa pintaa ODOTETAAN (`avoinPinta`, enintään 8 s) eikä arvata kiinteällä
+viiveellä: napautus kulkee `ui.doAction`in läpi, ja kuormitetulla koneella
+visalaatikko aukesi mitattuna yli sekunnissa — kiinteä odotus teki vartiosta 3
+satunnaisen.
 
 Julkaisukaava:
 
-- `npm test` → NPM_PASS
+- `npm test` → **# pass 3317, # fail 0** (3330 testiä, 13 skipped)
 - `node tools/tarkista-kaksoisavaimet.mjs` → ei kaksoisavaimia
 - `node tools/tarkista-niputus.mjs` → 387 moduulia, ei törmäyksiä
-- `node tools/tarkista-savukkeet.mjs` → SAVUKEVARTIJA
+- `node tools/tarkista-savukkeet.mjs` → savukkeet kunnossa
+  (1604 ui-viittausta, 404 metodia, 533 kenttää)
 - `grep -rn '^<<<<<<<' js css tests tools` → tyhjä
 - `node tools/uusi-versio.mjs` **ei ajettu** (tehtävänannon mukaisesti);
   versionoston tekee Fable.
@@ -151,8 +156,10 @@ pitääkin. Korjaus palautettiin ja molemmat ovat jälleen täysin vihreitä.
 - `docs/raportit/kuvat/osuma-ateena-saapuminen.png`
 - `docs/raportit/kuvat/osuma-ateena-lahi.png`
 
-Kaikki neljä ovat KORJATUSTA ajosta (320 × 240 px rajaus kaupungin ja pisteen
-puolivälistä). "Ennen"-kuvaa ei ole erikseen, koska ennen-tila on se, että
+Kaikki neljä ovat samasta korjatusta 18/18-ajosta (320 × 240 px rajaus
+kaupungin ja pisteen puolivälistä). Selvin näyttö on
+`osuma-budapest-lahi.png`: vihreä piste on nyt selvästi erillään
+Budapestin nappulasta — ennen korjausta se oli nappulan alla. "Ennen"-kuvaa ei ole erikseen, koska ennen-tila on se, että
 merkkejä on ruudussa yksi: vihreä piste on kaupungin merkin alla eikä erotu
 kuvassa mitenkään — ero on numeroissa (0,2 px → 21,0 px) ja siinä, mikä
 napautuksesta aukeaa.
