@@ -881,6 +881,14 @@ export const FOKUSVIRTA_ROOMA = {
           + 'Oceanus.',
         lahde: 'NikonZ7II, Wikimedia Commons (CC BY-SA 4.0)',
       },
+      /*
+       * MUSIIKKI JA ÄÄNI KORTILLE (avoin kohta 11.1, 14.9.2026). Erässä 10
+       * tämä nosto jäi lehden sivulle kaksoiskappaleeksi vain siksi, että
+       * musiikkilinkille ja ääninäytteelle ei ollut paikkaa kortilla.
+       * Kortti piirtää ne nyt SAMOILLA napeilla kuin lehti (js/ui.js
+       * lisaaNostonNapit), joten sivulta jäänyt kaksoiskappale purkautui.
+       */
+      aani: 'https://archive.org/download/aporee_15080_17587/WalkingtoPantheonFountainRome.mp3',
       kysymykset: [
         'Miksi kolikko heitetään juuri oikealla kädellä vasemman olan yli?',
         'Miten kolmentuhannen euron päiväsaalis kerätään altaan pohjasta '
@@ -921,6 +929,25 @@ export const FOKUSVIRTA_ROOMA = {
         lahde: 'daryl_mitchell from Saskatoon, Saskatchewan, Canada, Wikimedia '
           + 'Commons (CC BY-SA 2.0)',
       },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Colosseum (8473462785).jpg',
+          lyhyt: 'Osa areenan lattiaa on rakennettu takaisin; alkuperäinen puulattia peitti koko hypogeumin.',
+          selite: 'Osa areenan lattiaa on rakennettu takaisin paikalleen; '
+            + 'alkuperäinen puulattia peitti koko hypogeumin.',
+          lahde: 'Edgar Jiménez from Porto, Portugal, Wikimedia Commons (CC BY-SA '
+            + '2.0)',
+        },
+      ],
       kysymykset: [
         'Miten kaksikerroksinen kellari käytävineen rakennettiin areenan '
           + 'alle?',
@@ -974,6 +1001,23 @@ export const FOKUSVIRTA_ROOMA = {
           + 'Ferrata, ja se paljastettiin vuonna 1667.',
         lahde: 'Livioandronico2013, Wikimedia Commons (CC BY-SA 4.0)',
       },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Sama kuvasarja
+       * kuin lehden nostolla, josta tämä kortti kirjoitettiin: erässä 10
+       * se jäi siirtämättä, koska nostokortti ei tuntenut `galleria`-
+       * kenttää. Nyt tuntee (js/fokusnosto.js piirraNostonKuvasarja).
+       */
+      galleria: [
+        {
+          otsikko: 'Koko muistomerkki',
+          tiedosto: 'Elephant and Obelisk - Bernini.jpg',
+          lyhyt: 'Norsun selässä oleva obeliski on Rooman kolmestatoista muinaisobeliskista pienin.',
+          selite: 'Norsun selässä oleva obeliski on Rooman '
+            + 'kolmestatoista muinaisobeliskista pienin, viisi ja puoli '
+            + 'metriä.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
       kysymykset: [
         'Miten viisi ja puoli metriä korkea obeliski nostettiin norsun '
           + 'selkään?',
@@ -1054,6 +1098,23 @@ export const FOKUSVIRTA_ROOMA = {
           + 'samaa kuin roomalaisten kotihanoissa.',
         lahde: 'Sotamies, Wikimedia Commons (CC BY-SA 4.0)',
       },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'Pigna-S Eustachio-Colonna - Nasone alla Rotonda.JPG',
+          selite: 'Vanhimpia yhä toimivia nasoneja seisoo Pantheonin vieressä '
+            + 'Piazza della Rotondalla.',
+          lahde: 'Lalupa, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
       kysymykset: [
         'Miksi nasoneiden annetaan juosta yötä päivää?',
         'Mistä nasoneiden vesi tulee kaupunkiin?',

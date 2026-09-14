@@ -953,6 +953,44 @@ export const FOKUSVIRTA_LONTOO = {
           + 'kulkee Thamesilla vastavalmistuneen Westminster Bridgen editse.',
         lahde: 'Canaletto, Wikimedia Commons (PD)',
       },
+      /*
+       * GALLERIA KORTILLE (avoin kohta 11.1, 14.9.2026). Lehden noston
+       * `galleria`-kuvat kulkivat erässä 10 kiertotietä kohdekartan jutun
+       * `kuvat`-listaan, koska nostokortti ei tuntenut kenttää. Nyt
+       * tuntee (js/fokusnosto.js piirraNostonKuvasarja), joten kuvat ovat
+       * siellä missä noston muutkin kuvat — selitteineen ja lähteineen,
+       * merkki merkiltä samoina. Kohdekartan jutun oma kuvalista jäi
+       * ennalleen: sama sisältö kahdella pinnalla, kuten `kuva` jo oli.
+       */
+      galleria: [
+        {
+          tiedosto: 'The Thames and the City Canaletto 46-47 National Gallery Prague.jpg',
+          selite: 'Canaletto muutti Lontooseen vuonna 1746 ja maalasi kaupunkia '
+            + 'yhdeksän vuoden ajan.',
+          lahde: 'Canaletto, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Canaletto - The City Seen Through an Arch of Westminster Bridge.JPG',
+          selite: 'Vuoden 1747 maalaus on tehty rakenteilla olleen Westminster '
+            + 'Bridgen puutelineiltä.',
+          lahde: 'Canaletto, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Northumberland House by Canaletto (1752).JPG',
+          lyhyt: 'Canaletton vuoden 1752 maalaus on tarkin muistikuva 1874 puretusta Northumberland Housesta.',
+          selite: 'Charing Crossin Northumberland House purettiin 1874, ja '
+            + 'Canaletton vuoden 1752 maalaus on sen tarkin muistikuva.',
+          lahde: 'Canaletto, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Canaletto Ranelegh 1754.jpg',
+          lyhyt: 'Ranelagh Gardensin pyörösalissa kahdeksanvuotias Mozart esiintyi musiikin soidessa hienostolle.',
+          selite: 'Ranelagh Gardensin rotundassa hienosto kierteli pyörösalin '
+            + 'lattialla musiikin soidessa, ja Mozart esiintyi siellä '
+            + 'kahdeksanvuotiaana.',
+          lahde: 'Canaletto, Wikimedia Commons (PD)',
+        },
+      ],
       kysymykset: [
         'Miksi Canaletto muutti Venetsiasta Lontooseen juuri 1746?',
         'Mitä hänen maalauksensa kertovat 1700-luvun Thamesista?',
@@ -1027,6 +1065,16 @@ export const FOKUSVIRTA_LONTOO = {
           + 'viereisessä studiossa äänitetään musiikkia edelleen.',
         lahde: 'Misterweiss, Wikimedia Commons (PD)',
       },
+      /*
+       * MUSIIKKI JA ÄÄNI KORTILLE (avoin kohta 11.1, 14.9.2026). Erässä 10
+       * tämä nosto jäi lehden sivulle kaksoiskappaleeksi vain siksi, että
+       * musiikkilinkille ja ääninäytteelle ei ollut paikkaa kortilla.
+       * Kortti piirtää ne nyt SAMOILLA napeilla kuin lehti (js/ui.js
+       * lisaaNostonNapit), joten sivulta jäänyt kaksoiskappale purkautui.
+       */
+      musiikki: 'https://music.apple.com/fi/album/come-together-2019-mix/1474815798?i=1474815799',
+      musiikkiNimi: 'The Beatles Apple Musicissa',
+      esikuuntelu: 'The Beatles Come Together',
       kysymykset: [
         'Miksi juuri tästä suojatiestä tuli maailman kuuluisin?',
         'Millaista kadulla on, kun turistit jonottavat ylitystä ja autot '
