@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1875, teksti: 'Raamattu: kartan päätökset 12–14, ääni-HOLD purettu' },
   { v: 1874, teksti: 'Kaupunkietusivu lehden kehykseen; turisti-info suoraan isoon' },
   { v: 1873, teksti: 'Maan punainen ääriviiva: murretumpi väri, leveämpi viiva' },
   { v: 1872, teksti: 'Saapumisnäkymä rajautuu aivan maan rajojen ulkopuolelle' },
