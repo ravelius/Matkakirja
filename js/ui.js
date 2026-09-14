@@ -260,6 +260,7 @@ import {
  */
 import {
   asetaMusiikinTaso, irrotaMusiikinVahvistin, liitaMusiikkiin, musiikkiSaaSoida,
+  volumeToimii,
 } from './musiikkivahvistin.js';
 /*
  * Siirtymän oma musiikki (omistajan tilaus 2.9.2026). Oma moduulinsa,
@@ -19009,8 +19010,31 @@ export class UI {
    * hihkaisukin on ääninäyttelyä.
    */
   soitaHihkaisu(lahde) {
-    const audio = new Audio(aaniUrl(lahde));
-    audio.volume = puheVoima();
+    /*
+     * TASO SITÄ POLKUA, JOTA SELAIN TOTTELEE. Hihkaisu on kertojan
+     * ääninäyttelyä ja soi puheVoimalla — mutta iOS:n WebKit ei tottele
+     * elementin omaa volumea (js/musiikkivahvistin.js, omistajan vika
+     * 9.9.2026), joten puhelimessa hihkaisu on soinut tiedoston omalla
+     * tasolla eikä Lukija-liuku ole tavoittanut sitä. Reititetään sama
+     * vahvistin kuin musiikilla ja luennoilla; jos reititys ei onnistu,
+     * taso menee volumeen kuten ennen.
+     *
+     * crossOrigin ENNEN srciä ja vain reitittävällä polulla: turha
+     * lupapyyntö muuttaisi työpöydän pyyntöä ilman hyötyä.
+     */
+    const reititetaan = !volumeToimii();
+    const audio = new Audio();
+    if (reititetaan) audio.crossOrigin = 'anonymous';
+    audio.src = aaniUrl(lahde);
+    const vahvistin = reititetaan ? liitaMusiikkiin(audio) : null;
+    // Sama kentän nimi kuin luennoilla, jotta Lukija-liu'un päivitys
+    // löytää gainin eikä kirjoita olemattomaan volumeen.
+    if (vahvistin) audio.luennanVahvistin = vahvistin;
+    if (vahvistin) vahvistin.gain.value = Math.max(0, Math.min(1, puheVoima()));
+    else audio.volume = puheVoima();
+    const irrota = () => irrotaMusiikinVahvistin(audio);
+    audio.addEventListener('ended', irrota);
+    audio.addEventListener('error', irrota);
     // Tausta väistyy hihkaisun ajaksi kuten luennoilla; merkitsePuhuja
     // vapauttaa roolin ended/error-tapahtumista.
     merkitsePuhuja(this, audio);

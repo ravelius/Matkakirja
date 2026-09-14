@@ -209,7 +209,14 @@ test('jokainen puheVoima-tasolla alkava luenta merkitsee itsensä puhujaksi', ()
   for (const polku of ['../js/luenta.js', '../js/linssipuhe.js', '../js/ui.js']) {
     const rivit = tyhjaaEiKoodi(lue(polku)).split('\n');
     const osumat = rivit
-      .map((rivi, i) => (/^\s*audio\.volume = puheVoima\(\);\s*$/.test(rivi) ? i : -1))
+      /*
+       * KOLME ALOITUSMUOTOA 14.9.2026 alkaen. iOS ei tottele elementin
+       * omaa volumea (js/musiikkivahvistin.js), joten linssiluenta
+       * kirjoittaa tasonsa oman soittimensa kautta ja hihkaisu
+       * vahvistimeen. Portti tunnistaa kaikki muodot, jottei uusi
+       * reitti pääse puhujakirjanpidon ohi.
+       */
+      .map((rivi, i) => (/^\s*(?:audio\.volume = puheVoima\(\);|const audio = linssiluennanSoitin\(.*puheVoima\(\)\);|else audio\.volume = puheVoima\(\);)\s*$/.test(rivi) ? i : -1))
       .filter((i) => i >= 0);
     assert.ok(osumat.length > 0, `${polku}: yhtään luennan aloitusta ei löytynyt`);
     for (const i of osumat) {
