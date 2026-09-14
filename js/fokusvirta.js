@@ -119,7 +119,8 @@ import { piilotaSaapumistraileri, soitaKameranKlik } from './saapumistraileri.js
  */
 import {
   laudaltaRuudulle, luentakuvanPerusleveys, luentakuvanSijainti,
-  onRaahaus, ruudultaLaudalle, LUENTAKUVAN_KUVASUHDE,
+  onRaahaus, ruudultaLaudalle, pienenKuvanParinPaikat, LUENTAKUVAN_KUVASUHDE,
+  PIENEN_KUVAN_KORKEUS_PX, PIENEN_KUVAN_NOSTO_PX, PULUN_NAPIN_KOKO_PX, PARIN_RAKO_PX,
 } from './saapumisasento.js';
 // Pallon tarkka ruutupaikka kääntyy takaisin laudan pisteeksi laudan
 // omalla projektiolla (ks. pallonProjektio alempana).
@@ -2565,6 +2566,13 @@ function mitoitaLuentakuva(naytto) {
   const h = pane?.clientHeight ?? 0;
   if (!(w > 0) || !(h > 0)) return null;
   naytto.mitat = { w, h };
+  /*
+   * KARTTAPANEELIN SIIRTO IKKUNASSA. Luentakuva elää karttapinnan
+   * koordinaatistossa, pulun kelluva nappi ikkunan (position: fixed) —
+   * pari saadaan vierekkäin vain, kun välissä on tämä siirto.
+   */
+  const pr = pane?.getBoundingClientRect?.();
+  naytto.paneSiirto = pr ? { x: pr.left, y: pr.top } : { x: 0, y: 0 };
   const kaupunki = lautaRuudulle(ui, { x: city.x, y: city.y }, { w, h });
   if (!kaupunki) return null;
   const yhteiset = {
@@ -2647,6 +2655,7 @@ function mitoitaLuentakuva(naytto) {
   kirjoita(sijainti);
   naytto.kuvasuhde = suhde;
   naytto.sijainti = sijainti;
+  kirjoitaPienennys(naytto, suhde);
   /*
    * ANKKURI SEURAA UUTTA SOVITUSTA — PAITSI PELAAJAN OMAA SIIRTOA.
    *
@@ -2664,8 +2673,18 @@ function mitoitaLuentakuva(naytto) {
    * (Raamattu, LUENTAKUVAA VOI ITSE LIIKUTTAA).
    */
   if (naytto.ankkuri && !naytto.raahattu) {
-    const uusi = ruutuLaudalle(ui, { x: sijainti.x, y: sijainti.y }, naytto.mitat);
-    if (uusi) naytto.ankkuri = uusi;
+    /*
+     * PIENEN KUVAN PAIKKA ON KAUPUNGIN YLÄPUOLELLA, EI ISON KUVAN
+     * PAIKKA. Uusintamittaus (kuvan lataus, pakan nousu, ruudun koko)
+     * veisi ankkurin takaisin siihen kohtaan, johon ISO kuva mahtui —
+     * ja juuri se kohta oli tiukassa saapumisnäkymässä kaupungin
+     * alapuolella (ks. saapumisasento.js PIENEN_KUVAN_KORKEUS_PX).
+     */
+    if (naytto.kaupunginYlla) asetaParinAnkkuri(naytto);
+    else {
+      const uusi = ruutuLaudalle(ui, { x: sijainti.x, y: sijainti.y }, naytto.mitat);
+      if (uusi) naytto.ankkuri = uusi;
+    }
   }
   return sijainti;
 }
@@ -2690,8 +2709,44 @@ function paivitaLuentakuvanPaikka(naytto) {
   if (!paikka) return;
   solmu.style.setProperty('--luentakuva-x', `${paikka.x.toFixed(1)}px`);
   solmu.style.setProperty('--luentakuva-y', `${paikka.y.toFixed(1)}px`);
-  solmu.style.setProperty('--luentakuva-karttaskaala',
-    kartanMittakaava(naytto).toFixed(3));
+  const kartta = kartanMittakaava(naytto);
+  solmu.style.setProperty('--luentakuva-karttaskaala', kartta.toFixed(3));
+  paivitaPulunPaikka(naytto, paikka, kartta);
+}
+
+/**
+ * PULU KULKEE ISOISÄN KUVAN VIERESSÄ (omistaja 14.9.2026).
+ *
+ * Pulun nappi on ikkunan kaluste (`position: fixed`, css/styles.css
+ * `.pollo-kelluu-kartalla`), eikä sitä siirretä kartan kerrokseen —
+ * se rikkoisi kuplapinon, chatin ja lehtinäkymän kiinnityksen. Sen
+ * sijaan kehyssilmukka kirjoittaa NAPIN KESKIPISTEEN ikkunan
+ * pikseleinä kahteen muuttujaan, ja css sijoittaa napin niiden mukaan
+ * niin kauan kuin `body.pulu-kaupungin-paalla` on päällä. Kun pieni
+ * kuva katoaa (kaupungista lähtö), luokka lähtee ja nappi palaa
+ * entiseen kulmaansa — yksi sääntö, ei kahta paikkaa.
+ *
+ * NAPIN OMA KOKO EI MUUTU: se keskitetään laskettuun pisteeseen, joten
+ * napautusala pysyy täytenä myös maailmanäkymässä, jossa kuva on
+ * peukalonkynsi.
+ */
+function paivitaPulunPaikka(naytto, paikka, kartta) {
+  const body = globalThis.document?.body;
+  // Kevyt testi-DOM tarjoaa bodyn ilman classListia: silloin napin
+  // paikka jää css:n omaan sääntöön eikä mikään hajoa.
+  if (typeof body?.classList?.toggle !== 'function') return;
+  const paalla = naytto.kaupunginYlla === true
+    && naytto.paneeli?.classList?.contains('pieni') === true;
+  body.classList.toggle('pulu-kaupungin-paalla', paalla);
+  if (!paalla) return;
+  const mitat = pienenKuvanMitat(naytto, kartta);
+  const siirto = naytto.paneSiirto ?? { x: 0, y: 0 };
+  // `paikka` on PANEELIN alareunan keskipiste karttapinnalla; valokuvan
+  // alareuna on lapun verran ylempänä.
+  const x = paikka.x + siirto.x + mitat.leveys / 2 + PARIN_RAKO_PX + PULUN_NAPIN_KOKO_PX / 2;
+  const y = paikka.y + siirto.y - mitat.lappu - mitat.korkeus / 2;
+  body.style.setProperty('--pulu-kartalla-x', `${x.toFixed(1)}px`);
+  body.style.setProperty('--pulu-kartalla-y', `${y.toFixed(1)}px`);
 }
 
 /**
@@ -2728,6 +2783,189 @@ function kartanMittakaava(naytto) {
   if (!(nyt > 0) || !(perus > 0)) return 1;
   return Math.min(KARTTASKAALAN_RAJAT.ylin,
     Math.max(KARTTASKAALAN_RAJAT.alin, nyt / perus));
+}
+
+/**
+ * PIENEN KUVAN KOKO ON MITTA, EI SATTUMA (omistaja 14.9.2026:
+ * *"liian pienella"*).
+ *
+ * Ennen pienennys oli kiinteä osuus (0,16) ISON kuvan leveydestä, ja
+ * ison kuvan leveys on se, mikä sattuu mahtumaan matkakirjakortin ja
+ * kaupungin laatan väliin — mitattu 14.9.2026: sama valokuva oli
+ * Pariisissa 11 px ja Marseillessa 88 px korkea, kahdeksankertainen ero. Nyt KORKEUS on
+ * annettu (PIENEN_KUVAN_KORKEUS_PX) ja pienennys lasketaan siitä, eli
+ * kuva on saman kokoinen jokaisessa kaupungissa ja jokaisella ruudulla.
+ *
+ * MITTA ON VALOKUVA, EI PANEELI. Paneelin taittolaatikossa on myös
+ * kuvatekstilappu, joka on pienenä läpinäkyvä mutta VARAA YHÄ TILAA
+ * (css `.pieni .fokusvirta-luentateksti`: opacity 0, ei display none —
+ * ankkuri on alareunassa, ja katoava kappale nykäisisi kuvaa). Luvattu
+ * 40 px on siis sen VALOKUVAN korkeus, jonka pelaaja näkee.
+ *
+ * LUKU LASKETAAN, EI MITATA. `paneeli.offsetHeight` on tässä kohtaa
+ * vasta kirjoitetun leveyden varassa eikä kuva ole välttämättä vielä
+ * latautunut; mitattu 14.9.2026, Marseille 1400 × 900: mittaus antoi
+ * pienennykseksi 1,0 ja kuva jäi kartalle täysikokoisena. Sijainnin
+ * oma leveys ja kuvan oma kuvasuhde ovat molemmat tiedossa jo nyt.
+ */
+function kirjoitaPienennys(naytto, suhde) {
+  const { paneeli, sijainti } = naytto;
+  if (!paneeli?.style || !(sijainti?.leveys > 0)) return;
+  const kuvasuhde = suhde > 0 ? suhde : LUENTAKUVAN_KUVASUHDE;
+  const kuvanKorkeus = sijainti.leveys * kuvasuhde;
+  if (!(kuvanKorkeus > 0)) return;
+  const pienennys = PIENEN_KUVAN_KORKEUS_PX / kuvanKorkeus;
+  paneeli.style.setProperty('--luentakuva-pienennys', pienennys.toFixed(4));
+  naytto.pienennys = pienennys;
+  /*
+   * LAPUN KORKEUS TALTEEN ERIKSEEN. Ankkuri on PANEELIN alareuna, ja
+   * paneelin alareunassa on läpinäkyvä kuvatekstilappu — ilman tätä
+   * lukua valokuva jäisi lapun korkeuden verran liian ylös kaupungista
+   * (mitattu 14.9.2026, Pariisi/puhelin: 55 px).
+   */
+  const lappu = Math.max(0, (sijainti.korkeus ?? kuvanKorkeus) - kuvanKorkeus) * pienennys;
+  naytto.pieniKoko = {
+    leveys: sijainti.leveys * pienennys,
+    korkeus: PIENEN_KUVAN_KORKEUS_PX,
+    lappu,
+  };
+}
+
+/**
+ * Pienen kuvan NÄKYVÄT mitat ruudulla (karttaskaala mukana).
+ *
+ * LAPPU MITATAAN, MUU LASKETAAN. Kuvatekstilaatikon korkeus riippuu
+ * rivityksestä eikä skaalaudu leveyden mukana, ja `luentakuvanSijainti`
+ * tuntee siitä vain ARVION (`lisakorkeus`), joka tarkentuu vasta
+ * mittausten myötä. Mitattu 14.9.2026 (Ateena, 1400 × 900): arvio
+ * heilui 2,4 ja 55,6 pikselin välillä, ja valokuva laskeutui sen
+ * mukana nimikyltin päälle. Paneelin ja kuvan omat korkeudet ovat
+ * tässä kohtaa tiedossa, joten erotus on tarkka.
+ */
+function pienenKuvanMitat(naytto, kartta = kartanMittakaava(naytto)) {
+  const perus = naytto.pieniKoko ?? {
+    leveys: PIENEN_KUVAN_KORKEUS_PX / LUENTAKUVAN_KUVASUHDE,
+    korkeus: PIENEN_KUVAN_KORKEUS_PX,
+    lappu: 0,
+  };
+  const img = naytto.nappi?.querySelector?.('img');
+  const paneeliH = naytto.paneeli?.offsetHeight ?? 0;
+  const kuvaH = img?.offsetHeight ?? 0;
+  const lappu = paneeliH > 0 && kuvaH > 0 && naytto.pienennys > 0
+    ? Math.max(0, paneeliH - kuvaH) * naytto.pienennys
+    : (perus.lappu ?? 0);
+  return {
+    leveys: perus.leveys * kartta,
+    korkeus: perus.korkeus * kartta,
+    lappu: lappu * kartta,
+  };
+}
+
+/**
+ * PARI KAUPUNGIN YLÄPUOLELLE: isoisän kuva vasemmalle, pulu oikealle.
+ *
+ * Ankkuri on LAUDAN piste, joten pari pysyy kaupunkinsa päällä myös
+ * panoroitaessa ja zoomatessa — sama kiinnitys kuin ennenkin, vain eri
+ * kohta. Pelaajan omaa siirtoa ei kumota (Raamattu: LUENTAKUVAA VOI
+ * ITSE LIIKUTTAA), ja silloin pulu kulkee kuvan mukana sinne, mihin se
+ * raahattiin.
+ */
+/**
+ * KAUPUNGIN YLÄPUOLELLE LADOTTU NIMIKYLTTI ON TIELLÄ.
+ *
+ * Nimen ladonta (js/karttanimet.js) valitsee kaupungille kyljen sen
+ * mukaan, mitä muuta kartalla on — Ateenassa kyltti oli mitattuna
+ * 14.9.2026 juuri kaupungin YLÄPUOLELLA (55 px), eli tasan siinä, mihin
+ * pari asettuu. Kyltti on kartan omaa mustetta eikä väisty DOM-kerroksen
+ * tieltä, joten pari nousee sen yli.
+ *
+ * @returns {?number} kyltin yläreuna karttapinnalla, tai null
+ */
+function nimikyltinYlaraja(naytto, kaupunki) {
+  const nimi = naytto.city?.name;
+  const doc = globalThis.document;
+  if (!nimi || typeof doc?.querySelectorAll !== 'function') return null;
+  const siirto = naytto.paneSiirto ?? { x: 0, y: 0 };
+  let ylin = null;
+  for (const el of doc.querySelectorAll('.karttanimi-kaupunki')) {
+    if ((el.textContent ?? '').trim().toLowerCase() !== nimi.trim().toLowerCase()) continue;
+    const r = el.getBoundingClientRect?.();
+    if (!r || !(r.width > 0) || !(r.height > 0)) continue;
+    // Vain kaupungin YLÄPUOLELLE ladottu kyltti on parin tiellä.
+    if (r.bottom - siirto.y > kaupunki.y) continue;
+    const ylaosa = r.top - siirto.y;
+    ylin = ylin === null ? ylaosa : Math.min(ylin, ylaosa);
+  }
+  return ylin;
+}
+
+/**
+ * PALJONKO VALOKUVA VIELÄ PEITTÄÄ NIMIKYLTTIÄ (px)?
+ *
+ * Laskettu nosto perustuu kyltin paikkaan ja lapun arvioon; molemmat
+ * elävät (ladonta ajaa viisi kertaa sekunnissa, lapun korkeus tarkentuu
+ * kuvan latatessa). Tämä mittaa PIIRRETYT laatikot ja kertoo, montako
+ * pikseliä kuvan on vielä noustava — takaisinkytkentä, joka korjaa
+ * arvion virheen sen sijaan että arvioon lisättäisiin varmuusvaraa.
+ */
+function kyltinPeitto(naytto) {
+  const img = naytto.nappi?.querySelector?.('img');
+  const kuva = img?.getBoundingClientRect?.();
+  if (!kuva || !(kuva.width > 0) || !(kuva.height > 0)) return 0;
+  const nimi = naytto.city?.name;
+  const doc = globalThis.document;
+  if (!nimi || typeof doc?.querySelectorAll !== 'function') return 0;
+  let tarve = 0;
+  for (const el of doc.querySelectorAll('.karttanimi-kaupunki')) {
+    if ((el.textContent ?? '').trim().toLowerCase() !== nimi.trim().toLowerCase()) continue;
+    const r = el.getBoundingClientRect?.();
+    if (!r || !(r.width > 0) || !(r.height > 0)) continue;
+    if (r.left >= kuva.right || r.right <= kuva.left) continue;
+    if (r.top >= kuva.bottom || r.bottom <= kuva.top) continue;
+    tarve = Math.max(tarve, kuva.bottom - r.top + PARIN_RAKO_PX);
+  }
+  return tarve;
+}
+
+function asetaParinAnkkuri(naytto) {
+  const { w, h } = naytto.mitat ?? {};
+  if (!(w > 0) || !(h > 0)) return false;
+  const city = naytto.city ?? {};
+  if (!Number.isFinite(city.x) || !Number.isFinite(city.y)) return false;
+  const kaupunki = lautaRuudulle(naytto.ui, { x: city.x, y: city.y }, { w, h });
+  if (!kaupunki) return false;
+  const mitat = pienenKuvanMitat(naytto);
+  const kyltti = nimikyltinYlaraja(naytto, kaupunki);
+  /*
+   * NOSTO EI LASKE KESKEN KAUPUNGIN. Nimen ladonta ajetaan viisi kertaa
+   * sekunnissa ja kyltti voi vaihtaa kylkeä; jos pari seuraisi sitä
+   * molempiin suuntiin, kuva nykisi ylös alas koko ajan. Nosto ottaa
+   * siis aina suurimman tähän asti tarvitun arvon ja jää siihen —
+   * kuva asettuu kerran eikä enää liiku.
+   */
+  /*
+   * KATTO ON RUUDUN OMA MITTA. Takaisinkytkentä kasvattaa nostoa, ja
+   * jos kyltti seuraisi kuvaa (tai mittaus osuisi väärään kylttiin),
+   * pari karkaisi ruudulta. Neljännes näkymän korkeudesta riittää
+   * kaikkiin mitattuihin väistöihin (suurin 65 px 900 px:n ruudulla).
+   */
+  const katto = Math.max(PIENEN_KUVAN_NOSTO_PX, h * 0.25);
+  const nosto = Math.min(katto, Math.max(
+    PIENEN_KUVAN_NOSTO_PX,
+    (naytto.pariNosto ?? 0) + kyltinPeitto(naytto),
+    kyltti === null ? 0 : kaupunki.y - kyltti + PARIN_RAKO_PX,
+  ));
+  naytto.pariNosto = nosto;
+  const paikat = pienenKuvanParinPaikat({ kaupunki, ...mitat, nosto });
+  if (!paikat) return false;
+  // Ankkuri on paneelin alareuna, ladonta laski VALOKUVAN alareunan.
+  const kartalla = ruutuLaudalle(
+    naytto.ui, { x: paikat.isoisa.x, y: paikat.isoisa.y + mitat.lappu }, naytto.mitat,
+  );
+  if (!kartalla) return false;
+  naytto.ankkuri = kartalla;
+  naytto.kaupunginYlla = true;
+  return true;
 }
 
 /**
@@ -2823,6 +3061,13 @@ function seuraaKarttaaLuentakuvalla(naytto) {
       // Ruudun koko vaihtui (kääntö, ikkunan veto): mitat uusiksi, mutta
       // ANKKURI JÄÄ — kuva pysyy sen kartan kohdan päällä, jossa se on.
       if (w !== naytto.mitat?.w || h !== naytto.mitat?.h) mitoitaLuentakuva(naytto);
+      /*
+       * KYLTTI VOI SIIRTYÄ PARIN ALLE VASTA MYÖHEMMIN (ks.
+       * nimikyltinYlaraja): ladonta ajaa viisi kertaa sekunnissa, ja
+       * pelkkä kertatarkistus pienennyshetkellä jäisi vanhentuneeksi.
+       * Tarkistus on samassa harvassa tahdissa kuin mittojen tarkistus.
+       */
+      else if (naytto.kaupunginYlla && !naytto.raahattu) asetaParinAnkkuri(naytto);
     }
     paivitaLuentakuvanPaikka(naytto);
     laskuri += 1;
@@ -2882,6 +3127,13 @@ export function irrotaLuentakuvanAnkkuri(ui) {
   if (!naytto) return;
   ui.luentakuvaAnkkuri = null;
   if (naytto.kehys) globalThis.cancelAnimationFrame?.(naytto.kehys);
+  /*
+   * PULU PALAA KULMAANSA. Kehyssilmukka on nyt seis, eikä kukaan enää
+   * kirjoita napin paikkaa — ilman tätä nappi jäisi seuraavassa
+   * näkymässä viimeisen kaupungin kohdalle.
+   */
+  const body = globalThis.document?.body;
+  if (typeof body?.classList?.remove === 'function') body.classList.remove('pulu-kaupungin-paalla');
 }
 
 
@@ -2954,6 +3206,15 @@ export function pienennaLuentakuva(ui) {
   // *"Jos karttaa vierittää niin kuvapino pienentäisi taas varsin
   // pieneksi"*).
   paneeli.classList.remove('levitetty');
+  /*
+   * PIENI KUVA SAA OMAN PAIKKANSA: kaupungin yläpuolelle, pulu
+   * vierelleen (omistaja 14.9.2026, ks. asetaParinAnkkuri). Iso kuva
+   * jää sinne, minne se mahtui — pieni ei enää peri sitä kohtaa.
+   */
+  const naytto = ui.luentakuvaAnkkuri;
+  if (naytto?.paneeli === paneeli && !naytto.raahattu && asetaParinAnkkuri(naytto)) {
+    paivitaLuentakuvanPaikka(naytto);
+  }
   return true;
 }
 

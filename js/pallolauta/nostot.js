@@ -55,6 +55,7 @@ import { karttavaloVari, karttavalotLue } from '../karttavalot.js';
 import { nostoladontaTiiviste } from '../nostoladonta.js';
 import { pallonNostoOnPoltettu } from '../pallo.js';
 import { PALLOLAUDAN_LEVEYS } from './kamera.js';
+import { nimenKarttakerroin } from './nimet.js';
 import { sovitteleLaput } from './sovittelu.js';
 
 /** Eläviä nostoja pallolla enintään kerrallaan (karttapallo.md luku 6). */
@@ -240,6 +241,38 @@ export const NOSTON_MITTA = KARTTANIMI_KOOT.kohde / NOSTOSYM_NIMIO_KOKO;
  * mittaa nostojen laatikot (nostonLaatikko) — yksi mitta, ei kopiota.
  */
 export const KOHDEMERKIN_RUUTU_PX = 2 * NOSTOSYM_MINI_RUUTU * NOSTON_MITTA;
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KARTTANOSTON KYLTTI ON KARTAN MITTA (omistajan päätös 14.9.2026
+ * klo 15.05 UTC, Raamattu KARTTAUUDISTUKSEN PAATOKSET 14 kohta 1:
+ * *"Nimikyltit karttaan"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * `NOSTON_MITTA` on RUUTUVAKIO: nimiö oli 8,5 px joka zoomilla, joten
+ * merkki liukui kartan päällä, kun kartta kasvoi allansa. Kerroin on
+ * täsmälleen sama funktio kuin kaupunkien nimikylteillä
+ * (js/pallolauta/nimet.js `nimenKarttakerroin`, vertailuna KUNKIN
+ * LAITTEEN oma saapumisnäkymä) — yksi sääntö, ei kopiota.
+ *
+ * SYMBOLI JA NIMIÖ SKAALAUTUVAT YHDESSÄ, koska ne ovat samassa
+ * rasterissa (js/fokusnosto-symbolit.js piirraNostosymKartalle): kylttiä
+ * ei voi skaalata erikseen koskematta piirtoon. Sama kerroin menee
+ * siksi sekä piirtoon (`asetteleNosto`) että laatikkoon
+ * (`nostonLaatikko`), jotta ladonta, väistö ja osumapinta mittaavat
+ * juuri sen, mikä ruudulla on. OSUMASÄÄNTÖIHIN EI KOSKETA — vain
+ * mitta, jolla laatikko lasketaan, seuraa nyt karttaa.
+ *
+ * Kerroin on kerroksen tilaa eikä datumin kenttä, koska se on sama
+ * kaikille merkeille ja luetaan piirrossa: `paivita` asettaa sen
+ * ladonnan alussa (lauta antaa kameran mittakaavan), ja oletus 1 on
+ * entinen ruutuvakio.
+ */
+let nostonKarttakerroin = 1;
+/** Noston mitta juuri nyt: ruutuvakio × kartan kerroin. */
+export function nostonMitta() {
+  return NOSTON_MITTA * nostonKarttakerroin;
+}
 
 /**
  * MAAN LEHDEN OSUUS NÄKYMÄN LEVEYDESTÄ — kohdemerkkien portin oma luku.
@@ -509,7 +542,8 @@ export function asetteleNosto(el, d) {
   if (!g) return;
   const dx = d.dx ?? 0;
   const dy = d.dy ?? 0;
-  g.style.transform = `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${NOSTON_MITTA.toFixed(4)})`;
+  const mitta = d.mitta ?? nostonMitta();
+  g.style.transform = `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${mitta.toFixed(4)})`;
   const nimio = d.nimioNakyy && d.nimi ? d.nimi : '';
   const puoli = d.puoli ?? 'oikea';
   const resepti = `${d.kategoria ?? ''}|${d.symLaji ?? ''}|${puoli}|${nimio}`;
@@ -565,7 +599,8 @@ export function asetteleFokuspiste(el, d) {
 export function nostonLaatikko(p, d, {
   kylki = null, dx = 0, dy = 0, nimio = null,
 } = {}) {
-  const r = NOSTOSYM_MINI_RUUTU * NOSTON_MITTA;
+  const mitta = nostonMitta();
+  const r = NOSTOSYM_MINI_RUUTU * mitta;
   const x = p.x + dx;
   const y = p.y + dy;
   const laatikko = {
@@ -576,10 +611,10 @@ export function nostonLaatikko(p, d, {
   const { leveys } = nostosymNimioMitta(d.nimi, d.symLaji);
   const a = nostosymNimioAsemointi(kylki ?? d.puoli ?? 'oikea', leveys);
   return {
-    x0: Math.min(laatikko.x0, x + a.x1 * NOSTON_MITTA),
-    y0: Math.min(laatikko.y0, y + a.y1 * NOSTON_MITTA),
-    x1: Math.max(laatikko.x1, x + a.x2 * NOSTON_MITTA),
-    y1: Math.max(laatikko.y1, y + a.y2 * NOSTON_MITTA),
+    x0: Math.min(laatikko.x0, x + a.x1 * mitta),
+    y0: Math.min(laatikko.y0, y + a.y1 * mitta),
+    x1: Math.max(laatikko.x1, x + a.x2 * mitta),
+    y1: Math.max(laatikko.y1, y + a.y2 * mitta),
   };
 }
 
@@ -714,7 +749,18 @@ export function luoNostot({
           puoli: m.puoli ?? 'oikea',
           aihe: nostosymPaakategoria(m.kategoria),
           poltettu: m.poltettu,
-          avaa: (ankkuri) => avaaFokuskohde(ui, kohde, { ankkuri }),
+          /*
+           * NÄKYVÄ KAUPUNKI ILMAN KORTTIA (`vainNimi`, omistaja
+           * KARTTAUUDISTUKSEN PAATOKSET 13). Merkki ja nimi ovat
+           * kartalla, mutta korttia ei ole eikä sitä saanut tässä
+           * erässä kirjoittaa — joten merkki ei myöskään ota
+           * napautusta. Rivi jätetään osumalistalta pois alempana
+           * (`osumat`), jottei se voi voittaa naapurinoston sormea.
+           */
+          vainNimi: Boolean(kohde.vainNimi),
+          avaa: kohde.vainNimi
+            ? null
+            : ((ankkuri) => avaaFokuskohde(ui, kohde, { ankkuri })),
         });
       }
       // Naapurimaan poltettu muste on myös napautettava (2.9.2026,
@@ -852,7 +898,11 @@ export function luoNostot({
    */
   const paivita = ({
     nakyva, katto = NOSTOJEN_KATTO, keskipiste = null, uloinOsuus = 0,
+    karttaskaala = 0, vertailuskaala = 0,
   } = {}) => {
+    // Kyltti karttaan (ks. KARTTANOSTON KYLTTI ON KARTAN MITTA):
+    // sama kerroin kuin kaupunkien nimikylteillä, laudan mittakaavasta.
+    nostonKarttakerroin = nimenKarttakerroin(karttaskaala, vertailuskaala || undefined);
     viimeisinUloinOsuus = uloinOsuus;
     const rivit = keraa(nakyva, uloinOsuus);
     const nakyvat = [];
@@ -865,8 +915,10 @@ export function luoNostot({
     const elavat = nakyvat.filter((r) => !r.poltettu)
       .sort((a, b) => ((a.perhe === 'piste') - (b.perhe === 'piste')) * -1 || (a.etaisyys - b.etaisyys));
     const naytetaan = elavat.slice(0, Math.max(0, katto));
+    const mittaNyt = nostonMitta();
     datumit = naytetaan.map((r) => ({
       avain: r.avain,
+      mitta: mittaNyt,
       laji: r.perhe === 'piste' ? 'piste' : 'nosto',
       id: r.id,
       perhe: r.perhe,
@@ -932,7 +984,10 @@ export function luoNostot({
       if (!r.poltettu || r.perhe === 'piste') continue;
       r.lappu = (p) => nostonLaatikko(p, r, { nimio: Boolean(r.nimioNakyy && r.nimi) });
     }
-    osumat = [...naytetaan, ...nakyvat.filter((r) => r.poltettu)];
+    // Nimikyltti (`vainNimi`) ei ole osuma: sillä ei ole korttia, ja
+    // osumalistalla se veisi napautuksen naapurinostolta.
+    osumat = [...naytetaan, ...nakyvat.filter((r) => r.poltettu)]
+      .filter((r) => !r.vainNimi);
     /*
      * KIINTEÄ MUSTE ON NIMILADONNAN VARAUS, LIIKKUVA EI (Raamattu,
      * KAUPUNGIN NIMI NOSTOJEN PAALLA). Nimi väistää vain sitä, mikä ei

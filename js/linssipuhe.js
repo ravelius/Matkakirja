@@ -60,6 +60,9 @@ import { puheVoima } from './aani-ehdokkaat.js';
 import { luentaKytkinPaalla, merkitsePuhuja, vapautaPuhuja } from './luenta.js';
 import { seuraaLivianKuuntelua } from './livia-tilanteet.js';
 import { KEKSINTO_KUVAJUURI } from './linssit/keksinnot.js';
+import {
+  irrotaMusiikinVahvistin, liitaMusiikkiin, volumeToimii,
+} from './musiikkivahvistin.js';
 
 const pulunKuuntelut = new WeakMap();
 
@@ -465,6 +468,7 @@ export function pysaytaLinssiluenta(ui) {
   // linssin raita jäisivät pysyvästi väistöön.
   ui.luennat?.delete(audio);
   vapautaPuhuja(ui, audio);
+  irrotaLinssiluennanVahvistin(audio);
   return true;
 }
 
@@ -508,6 +512,137 @@ export function puheenTiiviste(teksti) {
   return h.toString(16).padStart(8, '0');
 }
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LINSSILUENNAN TASO: SE POLKU, JOTA SELAIN TOTTELEE
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Linssiluenta on soinut perustasollaan `audio.volumen` kautta, ja
+ * iOS:n WebKit EI TOTTELE sitä: kirjoitus menee läpi ilman virhettä ja
+ * lukema palaa ykköseksi (mittaus ja perustelu js/musiikkivahvistin.js,
+ * omistajan kaksi vikailmoitusta 8.9. ja 9.9.2026). Puhelimessa
+ * linssiluenta on siis soinut TIEDOSTON OMALLA TASOLLA, eikä
+ * Lukija-liuku (js/luenta.js paivitaLuentojenVoima) ole tavoittanut
+ * sitä lainkaan.
+ *
+ * ------------------------------------------------------------------
+ * MITATTU 14.9.2026: TIEDOSTOJEN PÄISSÄ EI OLE NAKSAHDUSTA
+ * ------------------------------------------------------------------
+ *
+ * Kolme linssiluentaa ämpäristä, dekoodattuna (mpg123-decoder):
+ *
+ *   1769-james-watt          loppu 50 ms −∞ dBFS, viim. näyte 0,000000
+ *   1783-joseph-montgolfier  loppu 50 ms −∞ dBFS, viim. näyte 0,000000
+ *   1796-edward-jenner       loppu 50 ms −∞ dBFS, viim. näyte 0,000000
+ *
+ * Loppuhiljaisuutta 151–164 ms, alkuhiljaisuutta 2–7 ms, alun 20 ms
+ * huippu −32…−56 dBFS. Linssiluenta käyttäytyy siis kuin Livian
+ * repliikit eikä kuin kertojan matkakirjaluenta (jonka loppuhiljaisuus
+ * on 0,0 ms ja viimeinen näyte kuuluvalla tasolla). LOPPUHÄIVYTYSTÄ EI
+ * SIKSI LISÄTTY — sitä ei tarvita, eikä tämä erä muuta luentalogiikkaa.
+ *
+ * ------------------------------------------------------------------
+ * KAKSI REITTIÄ, VALINTA MITTAAMALLA
+ * ------------------------------------------------------------------
+ *
+ * `volumeToimii()` kysyy selaimelta kokeella (ei user-agentista),
+ * meneekö volume-kirjoitus perille.
+ *
+ *   TOTTELEE (työpöytä, Android) → `audio.volume` kuten ennen: ei uusia
+ *     solmuja, ei crossOriginia, pyyntö tavu tavulta entinen.
+ *   EI TOTTELE (iOS) → elementti reititetään pelin OMAN äänikontekstin
+ *     (js/sound.js sfx.ensureContext) vahvistimen läpi ja taso menee
+ *     gainiin. Sama ketju kuin musiikilla, äänimaisemalla ja Livian
+ *     puheella.
+ *
+ * `crossOrigin` on asetettava ENNEN srciä, ja se asetetaan vain
+ * reitittävällä polulla. Ämpäri peilaa Originin (mitattu 14.9.2026),
+ * joten lupa saadaan. Jos reititys ei onnistu (konteksti nukkuu, ei
+ * elettä vielä), taso jää volumeen kuten ennen: hiljaisuutta ei
+ * koskaan valita tason takia.
+ *
+ * VAHVISTIN TALLETETAAN NIMELLÄ `luennanVahvistin` — samalla, jota
+ * js/luenta.js:n tasonasetus käyttää. Silloin Lukija-liu'un kesken
+ * nauhaa tekemä päivitys (paivitaLuentojenVoima) löytää reititetyn
+ * linssiluennan gainin heti kun sekin siirtyy samaan reittiin, eikä
+ * kahta eri nimeä tarvitse sovitella jälkikäteen.
+ */
+
+/** Tottelisiko tämä selain elementin omaa volumea? (iOS: ei) */
+function linssinVolumeToimii() {
+  try {
+    return volumeToimii();
+  } catch {
+    return true;
+  }
+}
+
+/**
+ * Linssiluennan nykyinen taso siltä polulta, jota se käyttää.
+ * @param {HTMLAudioElement} audio
+ * @returns {number}
+ */
+export function linssiluennanTaso(audio) {
+  if (!audio) return 0;
+  const vahvistin = audio.luennanVahvistin;
+  if (vahvistin) return Number(vahvistin.gain.value) || 0;
+  return Number(audio.volume) || 0;
+}
+
+/**
+ * Asettaa linssiluennan tason oikeaan paikkaan: vahvistimeen jos
+ * elementti on reititetty, muuten elementin volumeen.
+ * @param {HTMLAudioElement} audio
+ * @param {number} arvo
+ */
+export function asetaLinssiluennanTaso(audio, arvo) {
+  if (!audio) return;
+  const taso = Math.max(0, Math.min(1, Number(arvo) || 0));
+  const vahvistin = audio.luennanVahvistin;
+  if (vahvistin) {
+    try {
+      vahvistin.gain.value = taso;
+      return;
+    } catch {
+      /* konteksti kiinni — kirjoitetaan volumeen */
+    }
+  }
+  try {
+    audio.volume = taso;
+  } catch {
+    /* selain ei kelpuuta arvoa — luenta soi silti */
+  }
+}
+
+/** Purkaa reitityksen. Turvallista kutsua monta kertaa. */
+function irrotaLinssiluennanVahvistin(audio) {
+  if (!audio?.luennanVahvistin) return;
+  audio.luennanVahvistin = null;
+  irrotaMusiikinVahvistin(audio);
+}
+
+/**
+ * Linssiluennan soitin: elementti ilman srciä ensin, koska
+ * `crossOrigin` on asetettava ENNEN srciä — ja se asetetaan vain
+ * silloin, kun luenta aiotaan reitittää vahvistimen läpi.
+ *
+ * @param {string} osoite valmis ääniosoite
+ * @param {number} taso aloitustaso
+ * @returns {HTMLAudioElement}
+ */
+function linssiluennanSoitin(osoite, taso) {
+  const audio = new Audio();
+  if (!linssinVolumeToimii()) audio.crossOrigin = 'anonymous';
+  audio.preload = 'auto';
+  audio.src = osoite;
+  if (!linssinVolumeToimii()) {
+    const vahvistin = liitaMusiikkiin(audio);
+    if (vahvistin) audio.luennanVahvistin = vahvistin;
+  }
+  asetaLinssiluennanTaso(audio, taso);
+  return audio;
+}
+
 export function soitaLinssiluenta(ui, t, {
   viive = LUENNAN_VIIVE_MS, runko = null, juuri = LINSSILUENTA_JUURI, valmistele = null,
   versio = null,
@@ -522,9 +657,7 @@ export function soitaLinssiluenta(ui, t, {
   const url = runko ? `${juuri}/${runko}.mp3${versio ? `?v=${versio}` : ''}` : luennanOsoite(t, juuri);
   if (!url) return null;
 
-  const audio = new Audio(url);
-  audio.preload = 'auto';
-  audio.volume = puheVoima();
+  const audio = linssiluennanSoitin(url, puheVoima());
   ui.linssiluenta = audio;
   // Yhteinen soitin kattaa myös Ihmisen matkan yhtenäisen äänitteen.
   // Vain todellinen playing aloittaa eleen; lataus/viive eivät puhu.
@@ -543,6 +676,9 @@ export function soitaLinssiluenta(ui, t, {
     pulunKuuntelut.delete(audio);
     ui.luennat?.delete(audio);
     if (ui.linssiluenta === audio) ui.linssiluenta = null;
+    // Reititys on yksisuuntainen: purkamatta jäänyt ketju pitäisi
+    // kuolleen elementin muistissa.
+    irrotaLinssiluennanVahvistin(audio);
   };
   audio.addEventListener('ended', vapaaksi);
   audio.addEventListener('error', vapaaksi);

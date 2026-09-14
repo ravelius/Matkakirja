@@ -4008,9 +4008,31 @@ test('päiväkirjalla on kaksi kokoa: koko merkintä ja yhden rivin lappu', () =
   // Uusi merkintä avaa kortin: avain vaihdetaan vain uusiFactKeyssä.
   assert.equal((ui.match(/this\.factKey = key;/g) ?? []).length, 1,
     'factKey asetetaan uusiFactKeyn ohi, jolloin kortti voisi jäädä lapuksi');
-  const uusi = ui.match(/uusiFactKey\(key\) \{[^}]*\}/)?.[0] ?? '';
-  assert.match(uusi, /asetaPaivakirjanKoko\(false\)/,
-    `uusi merkintä ei avaa korttia: ${uusi}`);
+  /*
+   * PUHELIN ON POIKKEUS (omistaja 14.9.2026, Raamattu "IPHONE: ISOISAN
+   * JA PULUN TEKSTIT PIILOON": *"Iphonella voisi piilottaa isoisan ja
+   * pulun tekstit."*). Sääntö "uusi merkintä avaa kortin" on yhä
+   * voimassa TYÖPÖYDÄLLÄ, mutta puhelimen kokoisella ruudulla kortti
+   * peitti juuri sen kuvan, jota merkintä kuvailee (mitattu 390 × 844:
+   * 340 × 195 px eli 87 % leveydestä). Koko päätetään siis
+   * puhelintunnistuksesta (js/ui.js puhelinTila), ei kiinteästä
+   * epätodesta — ja teksti on yhä yhden napautuksen päässä, koska
+   * lappu on painike.
+   */
+  const uusi = ui.match(/uusiFactKey\(key\) \{[\s\S]*?\n  \}/)?.[0] ?? '';
+  assert.match(uusi, /asetaPaivakirjanKoko\(puhelinTila\(\)\)/,
+    `uusi merkintä ei aseta kortin kokoa puhelintunnistuksesta: ${uusi}`);
+  /*
+   * RAJA SIIRTYI ui-apureihin (v1892). Myös js/pollo.js tarvitsee sen
+   * (puhelimella puhekuplat imeytyvät heti pluskuplaan), eikä pollo saa
+   * tuoda ui.js:ää — ui tuo pollon. Vartio seuraa nimeä sinne, missä se
+   * asuu, ja vaatii yhä että määritys on VAIN yhdessä paikassa.
+   */
+  const apurit = readFileSync(new URL('../js/ui-apurit.js', import.meta.url), 'utf8');
+  assert.match(apurit, /export const PUHELIN_KYSELY = '\(max-width: 699px\), \(max-height: 520px\)';/,
+    'puhelintunnistus ei ole yhdessä nimetyssä paikassa (js/ui-apurit.js PUHELIN_KYSELY)');
+  assert.doesNotMatch(ui, /const PUHELIN_KYSELY =/,
+    'puhelinraja on kirjoitettu toiseen kertaan js/ui.js:ään');
 
   // Katto on oltava: ilman sitä pitkä merkintä peittäisi koko kartan,
   // eikä pelaaja näkisi mihin napauttaa kutistaakseen sen.
@@ -4093,7 +4115,15 @@ test('luennan loppuhäivytys ei niele viimeistä sanaa', () => {
   assert.ok(hiljaisuus <= 0.06, 'hiljaisuus on niin pitkä että siihen mahtuu tavu');
   assert.ok(loppu > hiljaisuus * 2, 'häivytykselle ei jää matkaa hiljaisuuden päälle');
 
-  const pehmea = ui.slice(ui.indexOf('function pehmeaLoppu('), ui.indexOf('function pehmeaLoppu(') + 2000);
+  /*
+   * Rajaus funktion LOPPUUN eikä kiinteään merkkimäärään: 2000 merkin
+   * ikkuna katkesi kesken, kun funktioon lisättiin perustelukommentti,
+   * ja portti kaatui vaikka koodi oli oikein. Funktion oma loppu on
+   * sekä tarkempi että kestävämpi raja.
+   */
+  const pehmeaAlku = ui.indexOf('function pehmeaLoppu(');
+  assert.ok(pehmeaAlku > 0, 'pehmeaLoppu on kadonnut');
+  const pehmea = ui.slice(pehmeaAlku, ui.indexOf('\n}\n', pehmeaAlku));
   assert.match(pehmea, /LOPUN_HILJAISUUS_S/, 'pysäytys ei odota hiljaisuutta');
   assert.match(pehmea, /LOPUN_HAIPYMA_S/, 'loppu käyttää väärää häivytystä');
 });

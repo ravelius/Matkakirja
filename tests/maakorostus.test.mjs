@@ -28,7 +28,7 @@ import {
 } from '../js/maanaariviivat.js';
 import {
   KOROSTUS_MUSTE, KOROSTUS_PEITTO, RAJA_MUSTE, RAJA_PEITTO, RANTA_PEITTO,
-  korostuksenMuste,
+  rajanMuste,
   VEKTORIT_KOROSTUS_LEVEYS_CSS, VEKTORIT_KOROSTUS_RENDER_ORDER, VEKTORIT_LEVEYDET,
   VEKTORIT_LEVEYS_CSS, VEKTORIT_RAJA_LEVEYS_CSS, VEKTORIT_RENDER_ORDER,
   viivanLeveysCss,
@@ -149,7 +149,16 @@ test('pallolauta kysyy korostuksen pelaajan maasta joka päivityksessä', () => 
   // samasta maasta ehtisi olla eri mieltä.
   assert.match(lauta, /const korostusIso = lento \? null : kohteidenNykyinenIso\(ui\);/,
     'maa ei tule laudan omasta kaupunki–maa-taulusta');
-  assert.match(lauta, /iso: korostusIso,/, 'kehä ei lue samaa maata');
+  /*
+   * KEHÄLLÄ ON YKSI PORTTI: LINSSI (omistaja 14.9.2026, iPad,
+   * sanatarkasti: *"Linssissa nakyy kartan korostus"*). Kehä sammuu
+   * linssin ajaksi, mutta se lukee yhä TÄSMÄLLEEN saman `korostusIso`-
+   * muuttujan kuin väritaso ja uloszoomauksen raja — nollaus ei saa
+   * levitä `korostusIso`:oon itseensä, koska maan vaihtuminen nulliksi
+   * mitätöisi kaikki värilaatat (js/pallolaatat.js variMaa).
+   */
+  assert.match(lauta, /iso: (?:linssiPaalla\(\) \? null : )?korostusIso,/,
+    'kehä ei lue samaa maata');
   assert.match(lauta, /asetaVaritasonMaa\(korostusIso\)/, 'väritaso ei lue samaa maata');
   assert.match(lauta, /nollaaPallonMaakorostus\(\);/, 'purku ei nollaa korostusta');
 });
@@ -183,23 +192,24 @@ test('korostus on selvästi tavallista rajaa vahvempi', () => {
 });
 
 /*
- * KOHDEMAAN KEHÄ ON MUSTEEN SININEN, EI PUNAINEN EIKÄ RUSKEA
- * (omistaja 14.9.2026, karttauudistuksen PÄÄTÖKSET 14 kohta 2:
- * *"vaihda samalla kartan reuna musteen siniseksi"*).
+ * KOHDEMAAN KEHÄ ON SAMAA MUSTETTA KUIN MUIDEN MAIDEN RAJAT
+ * (omistaja 14.9.2026, karttauudistuksen PÄÄTÖKSET 15 kohta 3:
+ * *"Muuta maanraja saman variseksi kuin muut rajat."*).
  *
- * Ehto ei ole lieventynyt vaan VAIHTUNUT kolmannen kerran: ruskea →
+ * Ehto ei ole lieventynyt vaan VAIHTUNUT neljännen kerran: ruskea →
  * paletin punainen (13.9.) → murrettu punainen (14.9. aamu) →
- * musteen sininen. Joka kerta sävy on sidottu YHTEEN paletin arvoon,
- * ei mihin tahansa sen sukuiseen väriin.
+ * musteen sininen (14.9. iltapäivä) → SAMA kuin muilla rajoilla.
+ * Kohdemaa erottuu nyt leveydellä, täydellä peitolla ja
+ * yhtenäisyydellä, ei värillä — ja juuri sitä nämä vartiot valvovat.
  */
-test('kohdemaan kehä on paletin --raja-muste eikä oma heksaluku', () => {
+test('kohdemaan kehä on sama muste kuin muilla rajoilla, paletista', () => {
   const osat = (v) => [1, 3, 5].map((i) => parseInt(v.slice(i, i + 2), 16));
   const [r, g, b] = osat(KOROSTUS_MUSTE);
   const [rr, rg, rb] = osat(RAJA_MUSTE);
-  // Tavallinen raja on yhä ruskeaa mustetta: korostus on poikkeus.
+  // Tavallinen raja on ruskeaa mustetta — ja kehä on SAMA muste.
   assert.ok(rr > rg && rg > rb, 'maiden raja ei ole ruskea');
-  // Sininen: sinikanava selvästi suurin eikä sävy ole lämpimällä puolella.
-  assert.ok(b > r * 2 && b > g, `${KOROSTUS_MUSTE} ei ole sininen`);
+  assert.deepEqual([r, g, b], [rr, rg, rb],
+    `kohdemaan kehä ${KOROSTUS_MUSTE} ei ole muiden rajojen väri ${RAJA_MUSTE}`);
   // ARVO ON SAMA KUIN PALETISSA. Kaksi heksalukua eriytyisi
   // ensimmäisessä sävynmuutoksessa (suunnitelman riski 4.3).
   const css = lue('../css/styles.css');
@@ -207,9 +217,7 @@ test('kohdemaan kehä on paletin --raja-muste eikä oma heksaluku', () => {
   assert.equal(KOROSTUS_MUSTE.toLowerCase(), kehanVari?.toLowerCase(),
     'pallon korostus ja paletin --raja-muste ovat eri väri');
   /*
-   * TUMMA JA MURRETTU, EI KIRKAS (omistajan sanat: *"vanhan kartan
-   * musteen suuntaan"*). Kirkas taivaansini olisi sama muoto mutta
-   * väärä kartta, joten kylläisyydelle ja vaaleudelle on katto.
+   * TUMMA JA MURRETTU, EI KIRKAS: kartan muste, ei merkintäväri.
    */
   const hsl = (v) => {
     const [r2, g2, b2] = osat(v).map((x) => x / 255);
@@ -220,8 +228,8 @@ test('kohdemaan kehä on paletin --raja-muste eikä oma heksaluku', () => {
   assert.ok(hsl(KOROSTUS_MUSTE).l < 0.35, 'kehä ei ole tumma');
   assert.ok(hsl(KOROSTUS_MUSTE).s < 0.7, 'kehä on kirkas, ei murrettu muste');
   /*
-   * KONTRASTI ON MITATTU, EI ARVATTU (omistaja: *"kontrasti
-   * seepiapaperiin ja värilliseen maahan ≥ 4,5 mitattuna"*).
+   * KONTRASTI ON MITATTU, EI ARVATTU: kehä piirretään täydellä
+   * peitolla, joten sitä verrataan taustoihin sellaisenaan.
    */
   const lin = (c) => (c / 255 <= 0.03928 ? c / 255 / 12.92 : (((c / 255) + 0.055) / 1.055) ** 2.4);
   const lum = ([r2, g2, b2]) => 0.2126 * lin(r2) + 0.7152 * lin(g2) + 0.0722 * lin(b2);
@@ -243,9 +251,24 @@ test('kohdemaan kehä on paletin --raja-muste eikä oma heksaluku', () => {
   assert.match(css, /\.maatummennus-viiva \{[^}]*stroke: var\(--raja-muste\)/);
 });
 
-test('pallon korostus lukee sävyn --raja-muste-muuttujasta ajossa', () => {
+/*
+ * ERO NAAPURIN RAJAAN ON PAKSUUS, PEITTO JA YHTENÄISYYS — EI VÄRI
+ * (PÄÄTÖKSET 15 kohta 3). Jos joku myöhemmin ohentaa kehän tai
+ * haalentaa sen rajan tasolle, kohdemaa katoaa naapuriensa sekaan,
+ * eikä yksikään värivartio huomaisi sitä.
+ */
+test('kohdemaan kehä erottuu naapurin rajasta paksuudella ja peitolla', () => {
+  const [, kehaLahi] = VEKTORIT_KOROSTUS_LEVEYS_CSS;
+  const [, rajaLahi] = VEKTORIT_RAJA_LEVEYS_CSS;
+  assert.ok(kehaLahi >= 3 * rajaLahi,
+    `kehä ${kehaLahi} css-px ei ole kolminkertainen rajaan (${rajaLahi})`);
+  assert.ok(KOROSTUS_PEITTO >= 2 * RAJA_PEITTO,
+    'kehän peitto ei ole selvästi rajan peittoa vahvempi');
+});
+
+test('pallon rajamateriaalit lukevat sävyn --raja-muste-muuttujasta ajossa', () => {
   // Ilman dokumenttia (testit, niputus ennen CSS:ää) vara on vakio.
-  assert.equal(korostuksenMuste(null), KOROSTUS_MUSTE);
+  assert.equal(rajanMuste(null), RAJA_MUSTE);
   // Dokumentin kanssa arvo tulee muuttujasta: tässä tynkä, joka
   // vastaa CSS-muuttujaan toisella sävyllä.
   const vanhaDoc = globalThis.document;
@@ -253,13 +276,24 @@ test('pallon korostus lukee sävyn --raja-muste-muuttujasta ajossa', () => {
   globalThis.document = { documentElement: {} };
   globalThis.getComputedStyle = () => ({ getPropertyValue: () => ' #123456 ' });
   try {
-    assert.equal(korostuksenMuste(), '#123456');
+    assert.equal(rajanMuste(), '#123456');
   } finally {
     globalThis.document = vanhaDoc;
     globalThis.getComputedStyle = vanhaTyyli;
   }
-  // Materiaali rakennetaan funktiosta eikä vakiosta.
-  assert.match(lue('../js/pallovektorit.js'), /color: korostuksenMuste\(\), opacity: KOROSTUS_PEITTO/);
+  // Selvittämätön var() ei kelpaa väriksi (kaataisi kolmion).
+  globalThis.document = { documentElement: {} };
+  globalThis.getComputedStyle = () => ({ getPropertyValue: () => 'var(--jokin)' });
+  try {
+    assert.equal(rajanMuste(), RAJA_MUSTE);
+  } finally {
+    globalThis.document = vanhaDoc;
+    globalThis.getComputedStyle = vanhaTyyli;
+  }
+  // MOLEMMAT materiaalit rakennetaan samasta funktiosta eikä vakiosta.
+  const lahde = lue('../js/pallovektorit.js');
+  assert.match(lahde, /color: rajanMuste\(\), opacity: KOROSTUS_PEITTO/);
+  assert.match(lahde, /color: rajanMuste\(\), opacity: RAJA_PEITTO/);
 });
 
 test('korostus piirtyy tavallisen rajan jälkeen mutta samassa kerroksessa', () => {

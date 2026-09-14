@@ -375,6 +375,33 @@ test('kaikki 45 Euroopan kaupunkirepliikkiä käyttävät muuttumattomia tuotant
   assert.match(livianAaniOsoite('lontoo', 2), /aanet\/pulu\/versiot\/.+\/livia-lontoo-3\.mp3$/);
 });
 
+/*
+ * ATEENA JA SOFIA SOIVAT UUDESTA, UUDELLEENKOODAAMATTOMASTA ERÄSTÄ.
+ *
+ * Omistaja kuuli vanhassa erässä digitaalisen häiriön; mitattu syy oli
+ * ylimääräinen 128 kbps koodaussukupolvi. Uusi erä
+ * pulu-c4a91d1229f96eaac265 (lähde-SHA fd6db48f) tallentaa mallin mp3:n
+ * sellaisenaan, ja kuitti todistaa sen: raaka- ja final-avaimen sha256 on
+ * sama. Tämä portti kaatuu, jos data putoaa takaisin vanhaan erään tai
+ * jos kuitin kesto vaihtuu — silloin peli soittaisi taas sitä äänitettä,
+ * josta omistaja valitti.
+ */
+test('ateena-3 ja sofia-3 osoittavat uuden putken erään (ei uudelleenkoodausta)', () => {
+  const ERA = 'aanet/pulu/versiot/fd6db48feef7/pulu-c4a91d1229f96eaac265';
+  assert.equal(LIVIAN_VERSIOIDUT_AANET['ateena-3'], `${ERA}/livia-ateena-3.mp3`);
+  assert.equal(LIVIAN_VERSIOIDUT_AANET['sofia-3'], `${ERA}/livia-sofia-3.mp3`);
+  // Kuitin mitatut kestot (kuitti pulu-c4a91d1229f96eaac265.completed.json).
+  assert.equal(LIVIAN_KESTOT['ateena-3'], 17.868);
+  assert.equal(LIVIAN_KESTOT['sofia-3'], 12.356);
+  // Teksti ei muuttunut: tiivisteet ovat samat kuin ennen uusintaa.
+  assert.equal(LIVIAN_AANITETYT['ateena-3'], '572e0e85');
+  assert.equal(LIVIAN_AANITETYT['sofia-3'], '83dd2f15');
+  // Muut kaupungit eivät saa vahingossa siirtyä tähän erään.
+  const uudessa = Object.entries(LIVIAN_VERSIOIDUT_AANET)
+    .filter(([, polku]) => polku.startsWith(ERA)).map(([avain]) => avain).sort();
+  assert.deepEqual(uudessa, ['ateena-3', 'sofia-3']);
+});
+
 /* ---------- kaiku (poistettu pelistä 6.9.2026 ilta) ---------- */
 
 test('työkalu tuntee saapumisrepliikit, mutta peli soittaa aina kuivan', () => {
@@ -592,13 +619,21 @@ test('rajatun erän tuotantokuitti sitoo tekstin, reseptin ja artefaktit lähdec
   assert.match(u.ttsTextSha256, /^[0-9a-f]{64}$/);
   assert.equal(u.voiceId, 'voice-test');
   assert.equal(u.model, 'eleven_v3');
-  assert.equal(u.outputFormat, 'mp3_44100_128');
+  // 14.9.2026: ElevenLabs Pro, 128 → 192 kbps. Kun putki ei enää koodaa
+  // uudelleen, tämä on ainoa koodaus, jonka ääni käy läpi.
+  assert.equal(u.outputFormat, 'mp3_44100_192');
   assert.equal(u.stagingObjectKey, `aanet/pulu/erat/${kuitti.batchId}/livia-marseille-3.mp3`);
   assert.equal(u.finalObjectKey,
     `aanet/pulu/versiot/${'1'.repeat(12)}/${kuitti.batchId}/livia-marseille-3.mp3`);
   assert.equal(u.promotionStatus, 'pending-code-deploy');
   assert.equal(u.settings.stability, 0.5);
-  assert.equal(u.postprocess.tempo, 1.08);
+  // 14.9.2026: rajapinnalle lähetetään vain stability, ja Livian
+  // jälkikäsittely on pois (mallin mp3 sellaisenaan). Kuitin pitää
+  // kertoa juuri se — vanha tempo-rivi olisi nyt valhe.
+  assert.equal(u.settings.similarityBoost, null);
+  assert.equal(u.settings.style, null);
+  assert.equal(u.settings.useSpeakerBoost, null);
+  assert.deepEqual(u.postprocess, { kind: 'none' });
   assert.deepEqual(u.rawArtifact, tulokset.get(rivi.avain).rawArtifact);
   assert.deepEqual(u.finalArtifact, tulokset.get(rivi.avain).finalArtifact);
   assert.equal(u.retryReason, 'owner-approved-text-change');
@@ -896,8 +931,18 @@ test('pulun perustaso on kertojan alapuolella ja yhdessä paikassa', () => {
   // Kaikki pulun äänet kulkevat saman kertoimen kautta. PULULLA ON OMA
   // LIUKU 11.9.2026 alkaen (omistaja: *"pulun ja lukijan omat äänen
   // voimakkuus säätimet"*), joten kerroin on pulunVoima eikä puheVoima.
+  /*
+   * Taso menee 14.9.2026 alkaen asetaLivianTason kautta, koska iOS ei
+   * tottele elementin omaa volumea (js/musiikkivahvistin.js) ja
+   * loppuhäivytys tarvitsee saman polun. Kaava ja rajaus ovat
+   * ennallaan: rajaus asuu nyt asetaLivianTasossa, ja tämä portti
+   * vaatii molemmat.
+   */
   assert.match(puhe,
-    /audio\.volume = Math\.max\(0, Math\.min\(1, pulunVoima\(\) \* LIVIAN_PERUSTASO \* vaimennus\)\);/);
+    /asetaLivianTaso\(audio, pulunVoima\(\) \* LIVIAN_PERUSTASO \* vaimennus\);/);
+  assert.match(puhe,
+    /const taso = Math\.max\(0, Math\.min\(1, Number\(arvo\) \|\| 0\)\);/,
+    'rajaus 0…1 on säilyttävä asetaLivianTasossa');
   assert.doesNotMatch(puhe, /puheVoima/, 'lukijan liuku ei enää säädä pulua');
   // Vain häivytys ja liu'un päivitys koskevat voimakkuuteen muualla;
   // perustaso lasketaan samasta kaavasta (paivitaPulunVoima).
@@ -905,7 +950,10 @@ test('pulun perustaso on kertojan alapuolella ja yhdessä paikassa', () => {
     'perustason kaava on sama soitossa ja liu\'un päivityksessä');
   // Kertoja asettaa oman tasonsa ilman kerrointa: vertailukohta on se.
   const luenta = lue('../js/luenta.js');
-  assert.match(luenta, /audio\.volume = puheVoima\(\);/);
+  // Kertoja kirjoittaa tasonsa 14.9.2026 alkaen luentaSoittimen kautta
+  // (iOS ei tottele elementin volumea), mutta yhä ILMAN kerrointa:
+  // vertailukohta pulun perustasolle on juuri se.
+  assert.match(luenta, /luentaSoitin\(aaniUrl\(url\), puheVoima\(\)\);/);
   assert.doesNotMatch(luenta, /puheVoima\(\) \*/);
   // Vaimennukset kertovat perustasoon eivätkä korvaa sitä.
   assert.ok(LIVIAN_VALIHUOMION_VAIMENNUS < 1);

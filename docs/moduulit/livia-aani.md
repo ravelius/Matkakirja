@@ -27,7 +27,8 @@ ja kuuntelutarkistusta.
 ## Ääni
 
 - Ääni `piI8Kku0DcvcL6TTSeQt`, malli `eleven_v3`
-  (`/v1/text-to-speech/{voice_id}`), `mp3_44100_128`.
+  (`/v1/text-to-speech/{voice_id}`), `mp3_44100_192` (14.9.2026 asti
+  `mp3_44100_128`; omistaja päivitti ElevenLabs Pro -tasoon).
 - `stability 0.5` (Natural, nykyinen hyväksytty ajopohja),
   `similarity_boost 0.75`, `style 0.6`, `use_speaker_boost true`.
 - **Ei ffmpeg-nopeutusta** (omistaja 13.9.2026: "ota pulun äänestä fmpeg

@@ -58,6 +58,10 @@ const MODULES = [
   'js/packs/europe-kulttuuri.js',
   'js/packs/kulttuuri-kategoriat.js',
   'js/packs/maa-kategoriat.js',
+  // Lukee maa-kategoriat.js:ää, joten se on tämän jälkeen ja ennen
+  // fokusvirta-pariisi.js:ää, joka lukee tätä.
+  'js/packs/maalehtinostot-fra.js',
+  'js/packs/nakyvat-kaupungit-fra.js',
   'js/packs/maakartat.js',
   'js/packs/nahtavyysjutut.js',
   'js/packs/miniatyyrit.js',
@@ -844,6 +848,9 @@ const MODULES = [
    * kuvatekstit ja tekijäkortin — kaikki jo yllä.
    */
   'js/nostokuva.js',
+  // Lisäkaupunkien kaupunkikortti (PAATOKSET 16) ennen fokuskohteet.js:ää,
+  // joka tuo sen avaaLisakaupunginKortti-funktion.
+  'js/kaupunkinosto.js',
   // Fokuslehden klikattavat karttakohteet ennen ui:ta (ui tuo sen
   // päivitys- ja nollauskutsun; kohteiden lista, symbolikirjasto,
   // mapart, media, ui-apurit, valokuvat ja äänet ovat kaikki jo yllä).

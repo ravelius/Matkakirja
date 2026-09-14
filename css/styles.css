@@ -89,36 +89,45 @@ body.paivittyy .app { visibility: hidden; }
   --sea-ink: #6e6350;
   --mark: #b03a2b;
   /*
-   * KOHDEMAAN AARIVIIVA — OMA MUUTTUJA, JA 14.9.2026 ALKAEN MUSTEEN
-   * SININEN (karttauudistuksen PAATOKSET 14 kohta 2, omistaja:
-   * *"vaihda samalla kartan reuna musteen siniseksi"*, kortilla
-   * tarkennettuna maan punaiseksi rajaviivaksi). Nimi oli
-   * `--raja-punainen`; kun savy ei enaa ole punainen, nimikin
-   * vaihtui — `--raja-muste`.
+   * MAIDEN RAJOJEN MUSTE — YKSI SAVY KAIKILLE RAJOILLE (karttauudistuksen
+   * PAATOKSET 15 kohta 3, omistaja 14.9.2026 sanatarkasti: *"Muuta
+   * maanraja saman variseksi kuin muut rajat."*).
+   *
+   * Muuttuja on ollut kolmella nimella ja kolmella savylla: kohdemaan
+   * keha oli `--mark`-punainen (13.9.), sitten oma murrettu punainen
+   * `--raja-punainen` (14.9. aamu), sitten musteen sininen
+   * `--raja-muste` #1f3a5f (14.9. iltapaiva). Nyt savy EI OLE
+   * KOHDEMAAN OMA: se on sama ruskea muste, jolla naapurimaiden rajat
+   * piirretaan, eli pallon vektorirajan RAJA_MUSTE
+   * (js/pallovektorit.js). KOHDEMAA EROTTUU PAKSUUDELLA (3 px vs.
+   * tavallisen rajan ~1 px) JA YHTENAISYYDELLA (tavallinen raja on
+   * pisteviiva), EI VARILLA.
+   *
+   * MITATTU (docs/raportit/viesti-fable-rajavari-20260914.md,
+   * Chromium, tyopoyta 1400 x 900): naapurirajan tummin pikseli
+   * Saksa-Puola rgb(205,194,163) ja Espanja-Portugali
+   * rgb(200,187,154) — molemmat tasmalleen taman musteen 34 %:n
+   * peitto omaa taustaansa vasten (RAJA_PEITTO 0,34). Laattoihin
+   * poltettu raja on hiuksenverran tummempi ja kylmempi ruskea
+   * (tools/fokuskartta/maailmapiirto.js RAJATYYLI,
+   * rgba(96,74,46,0.52) = #604a2e); ero on 11/11/11 yksikkoa RGB:ssa,
+   * ja valituksi tuli VEKTORIRAJAN savy, koska juuri se on se raja,
+   * joka kulkee kohdemaan viivan rinnalla samalla piirtokerroksella.
    *
    * MIKSI OMA NIMI EIKA `--mark`. `--mark` #b03a2b on kartan
    * merkintojen punainen (lentoreitti, sinettivaha, maakayrat,
-   * vertailuvalinta) ja se pysyy ennallaan; vain kohdemaan keha
-   * vaihtuu siniseksi, eika sita saa vaihtaa muiden merkintojen alta.
-   * Yksi nimi on silti YKSI TOTUUS: taso- ja pallokartta lukevat
-   * molemmat taman (css .maatummennus-viiva ja js/pallovektorit.js
-   * korostuksenMuste).
+   * vertailuvalinta) eika se ole rajan vari. Yksi nimi on YKSI TOTUUS:
+   * taso- ja pallokartan kohdemaan keha (css .maatummennus-viiva ja
+   * js/pallovektorit.js rajanMuste) lukevat molemmat taman.
    *
-   * MITATTU VALINTA (docs/raportit/viesti-fable-sininen-aariviiva-20260914.md):
-   * kolmesta vaihtoehdosta #2b4a6f / #1f3a5f / #1a2f4a keskimmainen.
-   * Kontrasti seepiapaperia (#efdcb4) vasten 8,51 ja varillista maata
-   * (230,219,172) vasten 8,25 — molemmat reilusti yli vaaditun 4,5 ja
-   * paremmat kuin entinen punainen (6,32 / 6,13). Savy on tumma,
-   * murrettu preussinsininen (H215 S51 % L25 %), ei kirkas: vanhan
-   * kartan musteen suuntaan.
-   *
-   * MERI EI OLE TASSA PELISSA SININEN (tools/fokuskartta/piirto.js:
-   * *"meri on tassa kartassa viileaa paperia"*, syvinkin meri
-   * 134,132,124), joten sininen muste ei sekoitu aluevesiin:
-   * sinikanavan ylivoima B − (R+G)/2 on kehalla +50,5 ja merella
-   * −9,0. Sama mitta on savukkeen vartio.
+   * KONTRASTI RIITTAA TAYDELLA PEITOLLA: kohdemaan keha piirretaan
+   * peitolla 1, jolloin se on ruudulla rgb(107,85,57) — kontrasti
+   * seepiapaperiin (#efdcb4) 5,24 ja varilliseen maahan (230,219,172)
+   * 5,06, molemmat yli vaaditun 4,5. Naapurirajan 34 %:n peitto jaa
+   * vaaleaksi, joten sama muste lukee eri vahvuisena — juuri se on
+   * kaiverruksen tapa korostaa.
    */
-  --raja-muste: #1f3a5f;
+  --raja-muste: #6b5539;
   /*
    * KERMA — kartan oma vaalein paperisävy. Sama luku on jo pelissä
    * kahdessa paikassa (tools/fokuskartta/piirto.js KERMA ja
@@ -1752,12 +1761,14 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
      tässäkään anneta — perintä ryhmästä on se, mitä portaikkofeidaus
      animoi.
 
-     SÄVY ON 14.9.2026 ALKAEN `--raja-muste` EIKÄ `--mark`
-     (karttauudistuksen PÄÄTÖKSET 14 kohta 2): omistaja pyysi kehän
-     musteen siniseksi, ja kartan muut merkinnät (lentoreitti,
-     sinettivaha) jäävät `--mark`in punaiseen.
-     Muuttuja on yhä YKSI: pallon kehä lukee saman
-     (js/pallovektorit.js korostuksenMuste). */
+     SÄVY ON `--raja-muste`, JA SE ON 14.9.2026 ALKAEN SAMA KUIN
+     MUILLA RAJOILLA (karttauudistuksen PÄÄTÖKSET 15 kohta 3,
+     omistaja: *"Muuta maanraja saman variseksi kuin muut rajat."*).
+     Väri ei siis erota kohdemaata — sen tekevät LEVEYS (3 px vs.
+     tavallisen rajan ~1 px) ja YHTENÄISYYS (tavallinen raja on
+     pisteviivaa). Kartan muut merkinnät (lentoreitti, sinettivaha)
+     jäävät `--mark`in punaiseen. Muuttuja on yhä YKSI: pallon kehä
+     lukee saman (js/pallovektorit.js rajanMuste). */
   stroke: var(--raja-muste);
   stroke-linejoin: round;
   stroke-linecap: round;
@@ -20397,6 +20408,32 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
 }
 
 /*
+ * PULU KAUPUNGIN YLÄPUOLELLE ISOISÄN KUVAN VIEREEN (omistaja 14.9.2026,
+ * Raamattu PAATOKSET 12 kohta 2, sanatarkasti: *"isoisan ja pulun kuvat
+ * ovat liian pienella ja vaarassa paikassa (pitaisi olla hieman
+ * pariisin ylapuolella)"*).
+ *
+ * PAIKKA TULEE KARTALTA, KOKO JA ULKOASU JÄÄVÄT. Nappi pysyy ikkunan
+ * kalusteena (position: fixed) ja säilyttää kokonsa, värinsä ja
+ * napautusalansa; vain kiinnityskohta vaihtuu ruudun alanurkasta siihen
+ * pisteeseen, jonka js/fokusvirta.js paivitaPulunPaikka kirjoittaa
+ * kehyksittäin isoisän pienen kuvan viereen. Luokka on päällä vain
+ * silloin, kun se kuva on kartalla — muulloin sääntö ei ole voimassa ja
+ * nappi on entisessä kulmassaan.
+ *
+ * TRANSLATE OMANA OMINAISUUTENAAN, EI transformina: napilla on omia
+ * transform-sääntöjä (livia-kasvot, painallus), eikä keskitys saa
+ * pyyhkiä niitä pois.
+ */
+body.pulu-kaupungin-paalla .pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
+  right: auto;
+  bottom: auto;
+  left: var(--pulu-kartalla-x, 50%);
+  top: var(--pulu-kartalla-y, 50%);
+  translate: -50% -50%;
+}
+
+/*
  * LINSSISSÄ TUMMA (omistaja 8.9.2026: *"pulun kuvake voisi olla tummempi
  * tässä linssissä, hyppää nyt liikaa tummalla ruudulla"*). Linssin
  * (body.aikajana-paalla) ruutu on tummennettu kartta, ja vaalea
@@ -25913,9 +25950,21 @@ svg.rough-annotation { pointer-events: none; }
  * pannataan ja zoomataan (PÄÄTÖKSET 2: *"puhelimella pannataan
  * paneelin luo"*).
  */
+/* ERÄ 13: PLUSSA 2 px YLEMMÄS (omistaja 14.9.2026 klo 13.50 UTC:
+   *"plus merkkia pitaa nostaa hieman"*). Laatikon yläreuna oli 1 px
+   kortin yläreunasta, nyt −1 px, ja palkit liikkuvat saman 2 px:n
+   mukana: MITATTUNA palkkien keskilinja 22,0 → 20,0 px kortin
+   peruskoossa (ruudulla skaalan verran).
+
+   MIKSI KESKILINJA ON 22 EIKÄ 8. Laatikko ei ole 14 × 14 px vaan
+   14 × 42: yleinen `button { min-height: 42px }` (ks. sen oma lohko)
+   voittaa tämän `height`in, ja koska palkit ovat `place-items:
+   center`illä laatikon keskellä, ne piirtyvät 21 px laatikon
+   yläreunasta. Osuma-ala on siis tarkoitustaankin isompi. En muuta
+   sitä tässä erässä — nosto tehdään laatikon paikkaa siirtämällä. */
 .maapaneeli-lisaa {
   position: absolute;
-  top: 1px;
+  top: -1px;
   right: 1px;
   display: grid;
   place-items: center;
@@ -25970,19 +26019,41 @@ button.maapaneeli-lisaa:active:not(:disabled) {
  * rajaus koski kolmea asiaa, eikä valikko ole niistä yksikään: se
  * pitää tumman pergamenttipohjansa, reunuksensa ja värinsä.
  */
+/*
+ * ERÄ 13: YKSI RIVI, EI TYHJÄÄ TILAA, HIEMAN IRTI PANEELISTA
+ * (omistaja 14.9.2026 klo 13.50 UTC: *"maainfon plus merkista aukeava
+ * valikko pitaa olla paljon tiiviimpi, ilman tyhjaa tilaa ja se pitaa
+ * olla yhdessa rivissa ja hieman irto maainfosta."*).
+ *
+ * ENNEN: kahden palstan ruudukko kiinteällä 105 px:n leveydellä, jossa
+ * lyhyen nimen perään jäi tyhjää ruutua ja pitkä nimi katkesi
+ * kolmipisteeseen; rivien väli 1 px ja neljä riviä allekkain.
+ * NYT: yksi rivi, jossa jokainen nappi on tasan nimensä levyinen
+ * (`width: max-content`, `gap: 0`) — tyhjää tilaa ei jää nappien
+ * väliin eikä niiden sisään.
+ *
+ * VAAKA-ANKKURI VAIHTUU KESKELLE. Oikea reuna oli oikea ankkuri
+ * kahdelle palstalle, joka mahtui kortin leveyteen; yksi rivi on
+ * kortin levyinen moninkerroin, ja oikeaan reunaan ankkuroituna se
+ * karkaisi kokonaan vasemmalle (puhelimella ruudun ulkopuolelle,
+ * mitattu). Keskitettynä se levittäytyy tasan kortin molemmin puolin.
+ *
+ * RAKO ON KEHYKSEN OMA MITTA. Kaksoisviivan viivaväli on 1,349 px
+ * (js/kasinpiirto.js), ja rako on kaksi sitä eli 2,7 px — ennen
+ * valikko meni 2 px kortin päälle. Luku ei ole uusi tyyliarvo vaan
+ * kehyksen mitta kerrottuna kahdella.
+ */
 .maapaneeli-valikko {
   position: absolute;
-  top: calc(100% - 2px);
-  right: -3px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  /* Kortin kavettua (erä 9) valikko kapenee sen mukana: 250 px oli
-     erän 3 300 px:n kortin mitta, ja se törröttäisi nyt molemmin
-     puolin. 210 px oli kortti + sen verran, että kaksi palstaa
-     mahtuu ilman rivin katkeamista; erä 11 puolitti sen kortin mukana. */
-  width: 105px;
-  padding: 2.5px;
+  top: calc(100% + 2.7px);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0;
+  width: max-content;
+  max-width: none;
+  padding: 1px;
   background: var(--overlay-card);
   border: 0.5px solid var(--overlay-line);
   border-radius: 2.5px;
@@ -25992,12 +26063,13 @@ button.maapaneeli-lisaa:active:not(:disabled) {
    YLÄPUOLELLE — ks. js/pallolauta/maapaneeli.js sovitaValikko. */
 .maapaneeli-valikko.ylos {
   top: auto;
-  bottom: calc(100% - 2px);
+  bottom: calc(100% + 2.7px);
 }
 .maapaneeli-aihe {
   display: flex;
   align-items: center;
   gap: 2.5px;
+  flex: 0 0 auto;
   min-width: 0;
   font: inherit;
   font-size: 5px;
@@ -26010,9 +26082,8 @@ button.maapaneeli-lisaa:active:not(:disabled) {
   cursor: pointer;
 }
 .maapaneeli-aihe:hover { border-color: var(--overlay-line); }
+/* Yhdellä rivillä nimi ei katkea: nappi on nimensä levyinen (erä 13). */
 .maapaneeli-aihe-nimi {
-  overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
 }
 .maapaneeli-aihe-merkki {
@@ -26504,4 +26575,308 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px;
 
   .ylapalkki-nappi,
   .karttaselite { transition: opacity 0.18s ease; }
+}
+
+/*
+ * ====================================================================
+ * PUHELIN: ISOISÄN JA PULUN TEKSTIT PIILOON, LIIKU HUOMAAMATTOMAKSI
+ * (omistaja, Raamattu "IPHONE: ISOISAN JA PULUN TEKSTIT PIILOON" ja
+ * tarkennus 14.9.2026)
+ * ====================================================================
+ *
+ * *"Iphonella voisi piilottaa isoisan ja pulun tekstit. Lisaksi piilota
+ * tuo liiku nappi luennan ajaksi. Se voisi olla lisaksi vahan
+ * huomaamattomampi nakyessaan."*
+ *
+ * *"Liiku nappi voisi siirtya vas. alareunaan nelion muotoiseksi
+ * symboliksi ilman varikorostusta. Kun aarre on loytynyt nappi voisin
+ * laajentua liiku napiksi niin etta symboli jaisi vasempaan reunaan ja
+ * teksti tulisi oikealle puolelle. Nappi voisi kutistua jonkin ajan
+ * kuluttua sitten takaisin pelkaksi nelio symbooli napiksi."*
+ *
+ * PUHELINRAJA ON SAMA KUIN JS:SSÄ (js/ui.js PUHELIN_KYSELY):
+ * `max-width: 699px` on kartan oma puhelinraja ja `max-height: 520px`
+ * sama raja vaakasuunnassa, jossa iPhone on 844 × 390. Ei
+ * käyttäjäagentin haistelua. Jos rajaa muutetaan, molemmat muuttuvat.
+ */
+
+/*
+ * PULUN PUHEKUPLAT PUHELIMELLA: PLUSKUPLA AVAA TEKSTIN.
+ *
+ * v1891 piilotti koko kuplapinon täältä css:llä, ja se jätti
+ * äänettömälle puhelimelle avoimen kysymyksen: repliikki jäi kokonaan
+ * saamatta. Omistajan vastaus 14.9.2026, sanatarkasti: *"Pululla on se
+ * pieni puhekupla jossa plus merkki. Siitä tulee teksti näkyviin."*
+ *
+ * PIILOTUS SIIRTYI CSS:STÄ PELIN OMAAN MEKANISMIIN (js/pollo.js
+ * lisaaPinoon): puhelimella uusi puhekupla imeytyy heti pluskuplaan
+ * (.pollo-kuplapalautus), jonka napautus palauttaa sen tekstinä ja
+ * josta se sulkeutuu takaisin kuten ennenkin. Kartta ja isoisän kuva
+ * jäävät siis yhtä vapaiksi kuin v1891:ssä, mutta teksti on yhden
+ * napautuksen päässä.
+ *
+ * TÄNNE EI SAA PALAUTTAA `.pollo-kuplapino-kehys { display: none }`:
+ * se piilottaisi myös pelaajan itse avaaman kuplan, ja pluskuplan
+ * napautuksesta ei seuraisi mitään näkyvää.
+ *
+ * .pollo-vihje-yksin on eri asia: se on pinon ULKOPUOLINEN yksittäinen
+ * kupla, jota pluskuplan muisti ei hallitse, joten se on puhelimella
+ * yhä piilossa kuten v1891:ssä.
+ */
+@media (max-width: 699px), (max-height: 520px) {
+  .pollo-vihje-yksin {
+    display: none !important;
+  }
+}
+
+/*
+ * ── LIIKU: NELIÖSYMBOLI VASEMMASSA ALAREUNASSA ──────────────────────
+ *
+ * Nappi oli kullattu 113 × 44 px:n tekstipalkki ruudun alareunan
+ * keskellä (mitattu 14.9.2026: rgb(234,184,78) → rgb(208,144,36)).
+ * Kulta oli kartan ainoa kirkas pinta ja vei katseen kuvalta. Nyt:
+ * neliö sormen mitassa (44 × 44), kartan mustetta pergamentilla, ohut
+ * reunus, ei liukuväriä.
+ *
+ * VASEMPAAN REUNAAN, KOSKA OIKEA ON PULUN. Pulu istuu oikeassa
+ * alanurkassa (mitattu: 390 × 844 -ruudulla x 300…348), joten neliö ei
+ * voi olla siellä. Rivi on entinen ruudukkonsa — vain sen kohdistus
+ * vaihtuu keskeltä alkuun, joten liuku (matkustusnapit) peittää rivin
+ * kuten ennenkin eikä matkustusvalinta muutu miksikään.
+ */
+.toimintorivi.rivi-yksi {
+  /*
+   * Rivi oli itse kapeampi kuin sen kaista ja keskellä sitä (mitattu
+   * 390 px:n ruudulla: kaista x 22…367, rivi x 75…315). Neliö jäisi
+   * siksi 53 px irti vasemmasta reunasta. Rivi venytetään kaistansa
+   * levyiseksi, jolloin sen alku on kaistan alku — liuku peittää yhä
+   * saman rivin, joten matkustusvalinta ei muutu.
+   */
+  justify-self: stretch;
+  width: 100%;
+}
+
+.toimintorivi.rivi-yksi .toimintorivi-perus {
+  justify-items: start;
+}
+
+.toimintorivi.rivi-yksi .monitoimi-nappi {
+  /* Neliö: sormen vähimmäismitta molempiin suuntiin. */
+  width: 44px;
+  min-width: 44px;
+  max-width: 44px;
+  height: 44px;
+  min-height: 44px;
+  margin-inline: 0;
+  padding: 0;
+  gap: 0;
+  border-radius: 7px;
+  /*
+   * Maapaneeli voi nousta samaan nurkkaan: nappi on sen PÄÄLLÄ, muuten
+   * pelaaja jäisi umpikujaan paneelin auettua (omistajan tarkennus).
+   */
+  position: relative;
+  z-index: 6;
+  /* Laajennus liukuu; suodattimia ei animoida (iOS-sääntö). */
+  transition: width 260ms ease, max-width 260ms ease, border-radius 260ms ease;
+}
+
+/*
+ * NELIÖ IRTOAA ALAPALKISTA RUUDUN VASEMPAAN ALANURKKAAN.
+ *
+ * Alapalkki (.card.turn-card) on vaakasuunnassa keskitetty 560 px:n
+ * paneeli (mitattu 844 × 390: palkki x 142…702), joten rivin alussakin
+ * nappi jäi 148 px irti reunasta. Neliö nostetaan siksi omaan
+ * kiinteään paikkaansa ruudun vasempaan alanurkkaan; pystysuunnassa se
+ * osuu samaan kaistaan kuin ennen.
+ *
+ * TÄMÄ EI RIKO MATKUSTUSLIUKUA: liuku on absoluuttinen oman rivinsä
+ * sisällä ja avautuessaan piilottaa monitoiminapin joka tapauksessa
+ * (.toimintorivi.liuku-auki .toimintorivi-perus > *), joten irrotettu
+ * neliö ei voi jäädä liu'un viereen neljänneksi napiksi.
+ *
+ * TURVA-ALUEET: iPhonen pyöristetty nurkka ja kotipalkki otetaan
+ * huomioon env()-arvoilla, jotta neliö ei jää niiden alle.
+ */
+.toimintorivi.rivi-yksi .monitoimi-nappi {
+  position: fixed;
+  left: calc(10px + env(safe-area-inset-left, 0px));
+  bottom: calc(1.7rem + env(safe-area-inset-bottom, 0px));
+}
+
+/*
+ * Rivi varaa yhä napin korkeuden, jottei alapalkki kutistu neliön
+ * irrotessa ja koko alareuna hypähdä.
+ */
+.toimintorivi.rivi-yksi .toimintorivi-perus {
+  min-height: 44px;
+}
+
+/* Symboli näkyviin: kompassi on napin koko sisältö. */
+.toimintorivi.rivi-yksi .monitoimi-nappi .viiva-ikoni {
+  display: block;
+  flex: 0 0 auto;
+}
+
+/* Sana pois: se palaa vain aarteen löydyttyä (body.liiku-laaja). */
+.toimintorivi.rivi-yksi .monitoimi-nappi .icon-label {
+  display: none;
+}
+
+/*
+ * EI VÄRIKOROSTUSTA. Sama pergamentti kuin kartan muilla lapuilla,
+ * kartan muste tekstinä ja ohut mustereunus. Kolme sääntöä (perus,
+ * hover, disabled) kumoavat aiemman kullan täsmälleen niissä kohdissa,
+ * joissa se asetettiin.
+ */
+body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi {
+  background: rgba(244, 231, 202, 0.92);
+  border: 1px solid rgba(70, 51, 31, 0.45);
+  color: #46331f;
+  font-weight: 600;
+  box-shadow: 0 1px 4px rgba(62, 42, 22, 0.22);
+}
+
+body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:hover:not(:disabled) {
+  background: rgba(250, 240, 217, 0.96);
+  border-color: rgba(70, 51, 31, 0.6);
+}
+
+body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
+  background: rgba(244, 231, 202, 0.55);
+  border-color: rgba(70, 51, 31, 0.25);
+  color: rgba(70, 51, 31, 0.45);
+  font-weight: 400;
+}
+
+/*
+ * ── AARRE LÖYTYI: NELIÖ LAAJENEE LIIKU-NAPIKSI ──────────────────────
+ *
+ * Symboli jää vasempaan reunaan ja sana tulee sen oikealle puolelle.
+ * Luokan asettaa js/ui.js laajennaLiiku playTokenRevealin lopussa
+ * (sama kohta, jossa laukku heilahtaa) ja poistaa LIIKU_LAAJENNUS_MS
+ * = 6000 ms myöhemmin.
+ */
+body.liiku-laaja .toimintorivi.rivi-yksi .monitoimi-nappi {
+  width: auto;
+  max-width: min(100%, 12rem);
+  padding-inline: 0.6rem 0.9rem;
+  gap: 0.45rem;
+  justify-content: flex-start;
+}
+
+body.liiku-laaja .toimintorivi.rivi-yksi .monitoimi-nappi .icon-label {
+  display: inline;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+/*
+ * ── LIIKU PIILOSSA LUENNAN AJAKSI ───────────────────────────────────
+ *
+ * `display: none`, ei opacity: piiloon jäänyttä nappia ei saa voida
+ * napauttaa vahingossa. Luokan asettaa js/ui.js kaynnistaLuentavahti,
+ * joka lukee luennan tilan (js/luenta.js puhujaAanessa) ja päästää
+ * napin esiin viimeistään 30 sekunnin kuluttua, vaikka vuoro jäisi
+ * roikkumaan.
+ */
+body.luenta-aanessa .toimintorivi .monitoimi-nappi {
+  display: none;
+}
+
+/*
+ * ====================================================================
+ * KAUPUNKIETUSIVUN HUNTU JA LUENNAN KAIUTINMERKKI
+ * (omistaja 14.9.2026, sanatarkasti)
+ * ====================================================================
+ *
+ * *"Myos kaupunki esittelyssa taustaa voisi pehmentaa mutta vaalentaa
+ * hieman samaan savyyn kuin nyt tulevassa Luennan taustassa."*
+ *
+ * Tiivistetyn kaupunkietusivun (js/lehti.js LEHTIARKIN_LUOKKA) tausta
+ * oli sama lähes musta peite kuin kaikilla dialogeilla
+ * (rgba(14, 9, 4, 0.72)). Nyt siinä on SAMA SUMENNUS kuin luennan
+ * hunnussa (3,5 px) mutta VAALENTAVA pergamenttipeite: kaupunki jää
+ * näkyviin lehden takana eikä katoa mustaan.
+ *
+ * Suodatin on staattinen — ei siirtymää eikä animaatiota (iOS-sääntö,
+ * tests/rules.test.mjs).
+ */
+/* `.dialog.arkki::backdrop` (kaksi luokkaa) on sama kerros: sama paino
+   ei riittäisi, joten valitsimessa on kolme luokkaa. */
+dialog.dialog.arkki.tiivis-lehtiarkki::backdrop {
+  background: rgba(245, 230, 200, 0.35);
+  -webkit-backdrop-filter: blur(3.5px);
+  backdrop-filter: blur(3.5px);
+}
+
+@supports not ((backdrop-filter: blur(3px)) or (-webkit-backdrop-filter: blur(3px))) {
+  dialog.dialog.arkki.tiivis-lehtiarkki::backdrop { background: rgba(245, 230, 200, 0.62); }
+}
+
+/*
+ * ── LUENNAN MERKKI: KAIUTIN SYKKII ──────────────────────────────────
+ *
+ * *"Luennan aikana matkakirjan ylarivin reunassa voisi sykkia kevyesti
+ * kaiuttimen kuva merkiksi etta luenta on kaynnissa. Pulun luennassa
+ * riittaa pulun elehtiminen ajamaan saman asian."*
+ *
+ * Merkki on kortin oma kaiutinnappi (#fact-kuuntele), joka on jo
+ * ylärivin reunassa. Luokan `kertoja-aanessa` asettaa js/ui.js:n
+ * luentavahti VAIN isoisän luennalle: `puhujaAanessa(PUHUJA_PULU)`
+ * jättää pulun laskuista, joten Livian repliikki ei sytytä merkkiä.
+ * Mykistettynä ääntä ei synny, joten merkkikään ei syki — erillistä
+ * mykistysehtoa ei tarvita.
+ *
+ * VAIN SKAALA JA LÄPINÄKYVYYS, EI SUODATINTA (iOS-sääntö).
+ */
+@keyframes fact-kaiutin-syke {
+  0%, 100% { transform: scale(1); opacity: 0.72; }
+  50% { transform: scale(1.12); opacity: 1; }
+}
+
+body.kertoja-aanessa #fact-kuuntele {
+  animation: fact-kaiutin-syke 1600ms ease-in-out infinite;
+}
+
+/* Liike vähennettynä: pelkkä staattinen korostus, ei sykettä. */
+@media (prefers-reduced-motion: reduce) {
+  body.kertoja-aanessa #fact-kuuntele {
+    animation: none;
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+/*
+ * KAIUTIN JÄÄ LAPULLE PUHELIMELLA.
+ *
+ * Kutistettu lappu leikkaa kaiken muun paitsi otsikon (ks.
+ * `body[data-mode] .fact-card.pieni > *:not(#fact-voice)…`). Kaiutin on
+ * kuitenkin kaksi asiaa kerralla: luennan mykistyskytkin ja se merkki,
+ * joka sykkii luennan ajan (omistaja 14.9.2026). Jos se leikkautuisi
+ * pois, puhelimella ei näkyisi merkkiä eikä pääsisi mykistämään.
+ * Tunnistevalitsin voittaa leikkaavan säännön.
+ */
+@media (max-width: 699px), (max-height: 520px) {
+  body[data-mode] .fact-card.pieni {
+    grid-template-columns: auto auto auto;
+  }
+
+  /* Leikkaava sääntö on `> *:not(#fact-voice):not(.fact-place-lyhyt)`,
+     jonka :not(#fact-voice) tuo sille tunnisteen painon. Sama paino ja
+     yksi luokka enemmän riittää voittamaan sen. */
+  body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
+    grid-row: 1;
+    grid-column: 3;
+    width: auto;
+    min-width: 0;
+    height: auto;
+    padding: 0;
+    overflow: visible;
+    opacity: 1;
+    align-self: center;
+  }
 }

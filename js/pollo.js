@@ -57,6 +57,7 @@ import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
+import { puhelinTila } from './ui-apurit.js';
 import { asennaLivianKasvot } from './livia-eleet.js';
 import { kuunteleLivianKasvopuheenElinkaarta } from './livia-puhetila.js';
 import { livianDialogikoti, seuraaLivianDialogeja } from './livia-dialogitila.js';
@@ -1688,6 +1689,10 @@ export class Pollo {
     this.kuplaPiilotusAjastin = null;
     this.viimeisinPiilotettuKupla = null;
     this.kuplaPalautus = null;
+    // Tosi vain palautuksen ajan (ks. lisaaPinoon ja
+    // palautaViimeisinKupla): estää palautetun kuplan imeytymisen
+    // takaisin pluskuplaan puhelimella.
+    this.kuplaaPalautetaan = false;
     this.puluPuhuu = false;
     this.kuplaPuhetilat = new Map();
     /*
@@ -2862,6 +2867,35 @@ export class Pollo {
     return true;
   }
 
+  /**
+   * PUHELIMELLA KUPLA ALOITTAA SULJETTUNA (omistaja 14.9.2026).
+   *
+   * Sama teko kuin piilotaPuhekuplat — pino tyhjenee ja pluskupla jää
+   * jäljelle muistamaan viimeisimmän — mutta LAJISTA RIIPPUMATTA.
+   * piilotaPuhekuplat poimii viimeisimmän `puhe`-kuplan, koska
+   * työpöydällä ohjekupla (`vihje`) katoaa kartan kosketuksesta eikä
+   * sitä kannata muistaa. Puhelimella molemmat ovat samaa asiaa:
+   * pulun tekstiä, joka ei saa peittää karttaa mutta jonka pitää olla
+   * yhden napautuksen päässä.
+   *
+   * Metodi EI muuta työpöydän käytöstä: sitä kutsutaan vain
+   * lisaaPinoonista puhelintunnistuksen takaa.
+   */
+  imePuhelimenKuplaan(kupla) {
+    this.peruKuplanPiilotus();
+    // Muut pinon kuplat pois: pluskupla muistaa aina vain viimeisimmän
+    // repliikin, kuten omistaja tilasi.
+    this.poistaKuplat(this.pinonKuplat().filter((k) => k !== kupla));
+    kupla.remove();
+    this.viimeisinPiilotettuKupla = { kupla, konteksti: this.kuplaKonteksti() };
+    this.paivitaPinonNakyvyys();
+    const palautus = this.varmistaKuplanPalautus();
+    palautus.hidden = false;
+    this.paivitaKuplanPalautus();
+    this.asetaPinonPaikka();
+    return true;
+  }
+
   piilotaPuhekuplat() {
     this.peruKuplanPiilotus();
     const puheet = this.pinonKuplat().filter((k) => k.dataset?.laji === 'puhe');
@@ -2905,7 +2939,17 @@ export class Pollo {
     this.viimeisinPiilotettuKupla = null;
     this.kuplaPalautus.hidden = true;
     this.nollaaKuplanImu(muistettu.kupla);
-    this.lisaaPinoon(muistettu.kupla);
+    /*
+     * PALAUTETTU KUPLA JÄÄ NÄKYVIIN. Puhelimella lisaaPinoon imee uudet
+     * puhekuplat heti pluskuplaan (ks. sen kommentti); lippu kertoo,
+     * ettei tämä ole uusi repliikki vaan pelaajan itse avaama.
+     */
+    this.kuplaaPalautetaan = true;
+    try {
+      this.lisaaPinoon(muistettu.kupla);
+    } finally {
+      this.kuplaaPalautetaan = false;
+    }
     this.ajastaKuplanPiilotus(pulunKuplanPiilotusviive(muistettu.kupla.textContent));
     return true;
   }
@@ -3328,6 +3372,35 @@ export class Pollo {
       }
     }
     this.kuplanAani();
+    /*
+     * PUHELIMELLA KUPLA IMEYTYY HETI PLUSKUPLAAN (omistajan päätös
+     * 14.9.2026, sanatarkasti: *"Pululla on se pieni puhekupla jossa
+     * plus merkki. Siitä tulee teksti näkyviin."*).
+     *
+     * TAUSTA. v1891 piilotti puhelimella koko kuplapinon css:llä, koska
+     * kuplat peittivät kartan ja isoisän kuvan. Silloin äänettömällä
+     * puhelimella repliikki jäi kokonaan saamatta — se oli raportin
+     * avoin kysymys. Omistajan vastaus on pelin OMA mekanismi: kuplien
+     * sulkeminen jättää jäljelle pienen pluskuplan
+     * (.pollo-kuplapalautus, 13.9.2026), jonka napautus palauttaa
+     * viimeisimmän repliikin. Puhelimella kupla siis vain aloittaa
+     * suljettuna: teksti ei peitä mitään, mutta se on yhden napautuksen
+     * päässä ja sulkeutuu takaisin samalla tavalla kuin ennenkin.
+     *
+     * MIKSI TÄSSÄ KOHDASSA, EI AJASTIMESSA. Kutsu on synkroninen ja
+     * lisäyksen viimeinen askel, joten selain ei ehdi piirtää kuplaa
+     * väliin — pelaaja ei näe vilahdusta. Ajastettu piilotus
+     * (ajastaKuplanPiilotus) vilauttaisi tekstin ensin.
+     *
+     * PALAUTUS EI SAA IMEYTYÄ TAKAISIN. palautaViimeisinKupla kutsuu
+     * tätä samaa metodia; ilman lippua kupla katoaisi saman tien
+     * takaisin pluskuplaan eikä napautus näyttäisi mitään.
+     */
+    const puhelimenLaji = kupla.dataset?.laji === 'puhe' || kupla.dataset?.laji === 'vihje';
+    if (puhelinTila() && puhelimenLaji && !this.auki && !this.kuplaaPalautetaan) {
+      this.imePuhelimenKuplaan(kupla);
+      return;
+    }
     if (kupla.dataset?.laji === 'puhe' && !this.puluPuhuu && !this.kuplaPuheOdottaa()) {
       this.ajastaKuplanPiilotus(pulunKuplanPiilotusviive(kupla.textContent));
     }

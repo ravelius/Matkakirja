@@ -4163,6 +4163,19 @@ class Aikajana {
     if (!this.pallolla || paalla === this.laatuPakotettu) return;
     this.laatuPakotettu = paalla;
     pakotaPallonLaatu(paalla);
+    /*
+     * LAATTAKERROS LUKITTUU SAMALLA HETKELLÄ (Fablen päätös 14.9.2026,
+     * raportti docs/raportit/viesti-fable-linssivika-20260914.md luku 8).
+     * Kertomuskamera lentää koko ajon, ja kerros purki laattojaan
+     * nopeammin kuin ehti ladata uudet — kartta putosi toistuvasti
+     * sumeaan pohjaan. Lukko naulaa zoomitason ja pitää jo ladatut
+     * laatat muistissa linssin ajan (js/pallolaatat.js KERTOMUSLUKKO).
+     *
+     * TÄSSÄ EIKÄ OMASSA KUTSUSSAAN, koska tämä on jo linssin ajon
+     * elinkaari: `true` tulee käynnistyksestä ja `false` purusta, ja
+     * lippu takaa, ettei kumpikaan tapahdu kahdesti.
+     */
+    this.ui.pallolauta?.lepokerros?.()?.lukitseKertomus?.(paalla);
   }
 
   /* ---------- musiikki (js/siirtymamusiikki.js) ---------- */
@@ -4229,6 +4242,18 @@ class Aikajana {
     stopPlaceStream();
     stopDiaryVoice(this.ui);
     pysaytaLukija();
+    /*
+     * PULUN PUHE JA SEN AJASTIMET MYÖS (omistaja 14.9.2026,
+     * sanatarkasti: *"Muut aanet eivat myoskaan pysahdy kun linssi
+     * aktivoituu"*). stopDiaryVoice pysäyttää soivat luennat, mutta
+     * Livian repliikkijono on AJASTIMIA: kupla ja sen äänite lähtivät
+     * vielä linssin mustan päälle. Reitti on pelin oma lähtöportti
+     * (js/ui.js vaiennaPaikanPuhe → haivytaLuenta +
+     * vaiennaLivianKaupunkipuhe + polloKuplatPois) — sama, jolla
+     * kaupungista lähteminen vaientaa molemmat puhujat; linssi ei siis
+     * kirjoita omaa äänilogiikkaansa.
+     */
+    this.ui.vaiennaPaikanPuhe?.();
   }
 
   /** Tausta takaisin: hiljennys pois ja maisema uudelleen pelin tilasta. */

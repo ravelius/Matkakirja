@@ -35,7 +35,8 @@ import {
   onRaahaus, LUENTAKUVAN_SIVUSIIRTO, LUENTAKUVAN_VAHIN_PX,
   LUENTAKUVAN_VALI_PX, KAUPUNGIN_LAATTA_PX,
   LUENTAKUVAN_TABLETTIKERROIN, LUENTAKUVAN_TABLETTI_PX, onTablettiruutu,
-  pakanLaatikko,
+  pakanLaatikko, pienenKuvanParinPaikat,
+  PIENEN_KUVAN_KORKEUS_PX, PIENEN_KUVAN_NOSTO_PX, PULUN_NAPIN_KOKO_PX, PARIN_RAKO_PX,
 } from '../js/saapumisasento.js';
 
 /** Ruudut, joilla jokainen sääntö on voimassa (tilaus: eri ruutukoot). */
@@ -475,4 +476,77 @@ test('kiertävä lauta: ankkuri kuuluu lähimpään kopioon', () => {
   const paikka = laudaltaRuudulle({ x: 11980, y: 3000 }, alue, paneW, paneH, jakso);
   assert.ok(paikka.x < 0, `saumaa ei kierretty (x = ${paikka.x.toFixed(0)})`);
   assert.ok(paikka.x > -paneW, 'kiertokorjaus vei pisteen liian kauas');
+});
+
+
+/* ============ PIENI KUVA JA PULU KAUPUNGIN YLÄPUOLELLE ============
+ *
+ * Omistaja 14.9.2026 (Raamattu PAATOKSET 12 kohta 2): *"isoisan ja
+ * pulun kuvat ovat liian pienella ja vaarassa paikassa (pitaisi olla
+ * hieman pariisin ylapuolella)"*.
+ *
+ * Mitattu ennen korjausta (Chromium, 390 × 844, Pariisi): pieni kuva
+ * oli 17 × 31 px kaupungista 48 px oikealle ja 7 px ALAS. Nämä vartiot
+ * mittaavat ladonnan säännön ilman DOMia — selaimen puoli on
+ * tools/savukkeet/savuke-isoisa-pulu.mjs.
+ */
+
+test('pari on kaupungin yläpuolella eikä sen päällä', () => {
+  const kaupunki = { x: 200, y: 400 };
+  const leveys = PIENEN_KUVAN_KORKEUS_PX / 0.72;
+  const paikat = pienenKuvanParinPaikat({
+    kaupunki, leveys, korkeus: PIENEN_KUVAN_KORKEUS_PX,
+  });
+  // Kuvan ankkuri on sen ALAREUNA: senkin on jäätävä pisteen yläpuolelle.
+  assert.ok(paikat.isoisa.y < kaupunki.y - KAUPUNGIN_LAATTA_PX / 2,
+    `kuva ei noussut laatan yli (${paikat.isoisa.y} vs ${kaupunki.y})`);
+  assert.equal(paikat.isoisa.y, kaupunki.y - PIENEN_KUVAN_NOSTO_PX);
+  // Pulu on KESKIPISTEELLÄÄN samalla korkeudella kuin kuvan keskikohta.
+  assert.ok(Math.abs(paikat.pulu.y - (paikat.isoisa.y - PIENEN_KUVAN_KORKEUS_PX / 2)) < 1e-9);
+});
+
+test('pulu on kuvan OIKEALLA puolella eikä sen päällä', () => {
+  const kaupunki = { x: 200, y: 400 };
+  const leveys = 60;
+  const paikat = pienenKuvanParinPaikat({
+    kaupunki, leveys, korkeus: PIENEN_KUVAN_KORKEUS_PX,
+  });
+  const kuvanOikea = paikat.isoisa.x + leveys / 2;
+  const pulunVasen = paikat.pulu.x - PULUN_NAPIN_KOKO_PX / 2;
+  assert.ok(pulunVasen >= kuvanOikea - 1e-9, 'pulu meni kuvan päälle');
+  assert.ok(Math.abs((pulunVasen - kuvanOikea) - PARIN_RAKO_PX) < 1e-9,
+    'rako ei ole luvatun kokoinen');
+});
+
+test('pari on keskitetty kaupungin pystylinjalle', () => {
+  const kaupunki = { x: 200, y: 400 };
+  const leveys = 60;
+  const paikat = pienenKuvanParinPaikat({
+    kaupunki, leveys, korkeus: PIENEN_KUVAN_KORKEUS_PX,
+  });
+  const vasen = paikat.isoisa.x - leveys / 2;
+  const oikea = paikat.pulu.x + PULUN_NAPIN_KOKO_PX / 2;
+  assert.ok(Math.abs((vasen + oikea) / 2 - kaupunki.x) < 1e-9, 'pari ei ole keskellä');
+});
+
+test('nimikyltin väistö nostaa paria, ei laske sitä', () => {
+  const kaupunki = { x: 200, y: 400 };
+  const perus = pienenKuvanParinPaikat({ kaupunki, leveys: 60, korkeus: 40 });
+  const korkealla = pienenKuvanParinPaikat({
+    kaupunki, leveys: 60, korkeus: 40, nosto: 80,
+  });
+  assert.ok(korkealla.isoisa.y < perus.isoisa.y, 'suurempi nosto ei nostanut');
+  assert.ok(korkealla.pulu.y < perus.pulu.y, 'pulu jäi paikalleen');
+  // VASTAKOE: nolla tai puuttuva nosto ei saa pudottaa paria kaupungin
+  // päälle — perusarvo on aina voimassa.
+  const tyhja = pienenKuvanParinPaikat({
+    kaupunki, leveys: 60, korkeus: 40, nosto: Number.NaN,
+  });
+  assert.equal(tyhja.isoisa.y, perus.isoisa.y);
+});
+
+test('pieni kuva on vähintään 24 css-pikseliä korkea', () => {
+  // Tehtävän raja: valittu koko ei saa jäädä puhelimella tämän alle.
+  assert.ok(PIENEN_KUVAN_KORKEUS_PX >= 24,
+    `${PIENEN_KUVAN_KORKEUS_PX} px on alle luvatun 24 px:n`);
 });

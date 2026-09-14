@@ -153,7 +153,7 @@
 
 import { spawnSync } from 'node:child_process';
 import {
-  mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync,
+  mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync,
 } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
@@ -164,6 +164,10 @@ import {
   luennanPuhe, luennanRunko, luennanTeksti, luennanTiedosto, puheeksi,
 } from '../js/linssipuhe.js';
 import { leikkaaHiljaisuusSuodatin } from './generoi-tehosteet.mjs';
+import {
+  eratunnus, kokoaRaakakuitti, lahdeCommit, raakaAmpariKansio, sha256 as raakaSha256,
+  vaadiRaakavienti, vieKuitti, vieRaaka,
+} from './raakavienti.mjs';
 import { julkinenJuuri, tulkitseEbur128, tulkitseLoudnorm } from './generoi-siirtymamusiikki.mjs';
 
 const TAMA = fileURLToPath(import.meta.url);
@@ -861,7 +865,10 @@ function ampariHead(nimi, kansio) {
 // ── ketjun vaiheet ─────────────────────────────────────────────────
 
 /** Yksi maksullinen kutsu: yksi luenta levylle. */
-async function haeApista(puhe, avain, kohde, { malli = MALLI } = {}) {
+/** Viimeksi viedyt raakatiedot tiedostonimen mukaan (kuittia varten). */
+const raakatiedot = new Map();
+
+async function haeApista(puhe, avain, kohde, { malli = MALLI, raakaKansio = null } = {}) {
   const vastaus = await fetch(OSOITE, {
     method: 'POST',
     headers: { 'xi-api-key': avain, 'Content-Type': 'application/json' },
@@ -877,6 +884,20 @@ async function haeApista(puhe, avain, kohde, { malli = MALLI } = {}) {
     throw new Error(`HTTP ${vastaus.status}: ${(await vastaus.text()).slice(0, 400)}`);
   }
   const data = Buffer.from(await vastaus.arrayBuffer());
+
+  /*
+   * RAAKA ÄMPÄRIIN HETI, ennen levylle kirjoitusta ja ennen mitään
+   * viimeistelyä (omistajan sääntö 14.9.2026, Raamattu: ALKUPERÄISET
+   * ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA). Vienti on tässä funktiossa, koska
+   * tämä on ainoa paikka, jossa maksettu vastaus saapuu — kumpikin
+   * ajoreitti (jakso kerrallaan ja yhtenäinen kertomus) kulkee tästä.
+   */
+  if (raakaKansio) {
+    const raaka = vieRaaka(data, { nimi: `raaka-${kohde.split('/').at(-1)}`, kansio: raakaKansio });
+    console.log(`   raaka talteen: ${raaka.url}`);
+    raakatiedot.set(kohde.split('/').at(-1), raaka);
+  }
+
   writeFileSync(kohde, data);
   return data.length;
 }
@@ -1160,7 +1181,8 @@ async function ajaYhtenainen({ kaari, kansio, liput }) {
 
     // 1) ÄÄNI: sama pääte, malli ja asetukset kuin jakso kerrallaan
     // -tilassa (omistaja valitsi v3:n sen ilmaisutagien takia).
-    const tavut = await haeApista(lahetetty.teksti, avain, lahde, { malli });
+    const tavut = await haeApista(lahetetty.teksti, avain, lahde,
+      { malli, raakaKansio: liput.raakaKansio });
     console.log(`\nAPI (${malli}): ${(tavut / 1024).toFixed(0)} kt → ${lahde}`);
     let tulos = viimeisteleJaMittaa();
 
@@ -1257,6 +1279,23 @@ async function main() {
     process.exit(1);
   }
   const kansio = ampariKansio(kaari);
+
+  /*
+   * RAAKAVIENTI ON PAKOLLINEN. Tarkistus ennen ensimmäistäkään
+   * maksullista kutsua (omistajan sääntö 14.9.2026).
+   */
+  vaadiRaakavienti(liput);
+  const sourceCommit = lahdeCommit();
+  const era = eratunnus('linssiluenta', {
+    sourceCommit, linssi: liput.linssi, kertomus: !!liput.kertomus, yhtena: !!liput.yhtena,
+    voiceId: AANI, model: MALLI, stability: STABILITY, outputFormat: 'mp3_44100_128',
+  });
+  const raakaKansio = raakaAmpariKansio(kansio, era);
+  console.log(`Erä ${era}; raakatuotokset avaimeen ${raakaKansio}/ (ei koskaan ylikirjoiteta).`);
+  liput.raakaKansio = raakaKansio;
+  liput.era = era;
+  liput.sourceCommit = sourceCommit;
+
   if (liput.kertomus && !kaari.kertomus?.length) {
     console.error(`Linssillä ${liput.linssi} ei ole kertomusta (aikajana.kertomus).`);
     process.exit(1);
@@ -1347,7 +1386,8 @@ async function main() {
       const kohde = join(kohdekansio, tyo.nimi);
       const lahde = join(raakakansio, `raaka-${tyo.nimi}`);
       // eslint-disable-next-line no-await-in-loop
-      const tavut = await haeApista(tyo.puhe, avain, lahde);
+      const tavut = await haeApista(tyo.puhe, avain, lahde,
+        { raakaKansio: liput.raakaKansio });
       console.log(`   API: ${(tavut / 1024).toFixed(0)} kt → ${lahde}`);
 
       const { leikattu, mitattu, korjaus } = viimeistele(lahde, kohde, tyokansio);
@@ -1372,6 +1412,36 @@ async function main() {
 
     if (liput.vienti) {
       for (const nimi of valmiit) vieAmpariin(join(kohdekansio, nimi), nimi, kansio);
+      /*
+       * KUITTI: mikä raaka vastaa mitäkin valmista luentaa. Mukana
+       * ovat myös ne, jotka kaatuivat validointiin — niidenkin raaka
+       * on ämpärissä, koska kutsu on maksettu.
+       */
+      const kuitti = vieKuitti(kokoaRaakakuitti({
+        putki: 'linssiluennat',
+        batchId: liput.era,
+        sourceCommit: liput.sourceCommit,
+        resepti: {
+          linssi: liput.linssi, kertomus: !!liput.kertomus,
+          voiceId: AANI, model: MALLI, stability: STABILITY, outputFormat: 'mp3_44100_128',
+        },
+        rivit: [...raakatiedot.entries()].map(([raakanimi, raaka]) => {
+          const nimi = raakanimi.replace(/^raaka-/, '');
+          const kelpasi = valmiit.includes(nimi);
+          const polku = join(kohdekansio, nimi);
+          return {
+            fileName: nimi,
+            outputPath: `${kansio}/${nimi}`,
+            status: kelpasi ? 'generated' : 'validation-failed',
+            rawArtifact: raaka,
+            finalArtifact: kelpasi
+              ? { fileName: nimi, sha256: raakaSha256(readFileSync(polku)), bytes: statSync(polku).size }
+              : null,
+          };
+        }),
+        status: virheita ? 'completed-with-errors' : 'completed',
+      }), kansio);
+      console.log(`Kuitti: ${kuitti.objectKey}`);
       /*
        * MANIFESTI ÄMPÄRIIN samaan kansioon kuin luennat. Se kirjoitetaan
        * KOKO kertomuksesta eikä vain tämän ajon jaksoista, jotta

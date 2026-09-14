@@ -24,6 +24,10 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { KOHTAAMISET } from '../js/packs/kohtaamiset.js';
+import {
+  eratunnus, kokoaRaakakuitti, lahdeCommit, raakaAmpariKansio, sha256,
+  vaadiRaakavienti, vieKuitti, vieRaaka,
+} from './raakavienti.mjs';
 
 const JUURI = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const MALLI = 'eleven_v3';
@@ -58,11 +62,30 @@ if (!avain) {
   process.exit(1);
 }
 
-const kaupungit = process.argv.slice(2);
+/*
+ * RAAKAVIENTI ON PAKOLLINEN (omistajan sääntö 14.9.2026, Raamattu:
+ * ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA). Tarkistus ENNEN
+ * ensimmäistäkään maksullista kutsua; --ei-vientia kaataa ajon.
+ */
+export const AMPARIN_JUURI = 'audio/kohtaamiset';
+vaadiRaakavienti({
+  kuiva: process.argv.includes('--kuiva') || process.env.ELEVEN_KUIVA === '1',
+  vienti: !process.argv.includes('--ei-vientia'),
+});
+
+const kaupungit = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 if (!kaupungit.length) {
   console.error('Anna kaupungit: node tools/generoi-kohtaamiset.mjs lontoo …');
   process.exit(1);
 }
+
+const SOURCE_COMMIT = lahdeCommit();
+const ERA = eratunnus('kohtaaminen', {
+  sourceCommit: SOURCE_COMMIT, kertoja: KERTOJA, pelaaja: PELAAJA,
+  model: MALLI, stability: STABILITY, outputFormat: 'mp3_44100_128',
+});
+const RAAKA_KANSIO = raakaAmpariKansio(AMPARIN_JUURI, ERA);
+const kuittirivit = [];
 
 function aani(id, rooli) {
   if (rooli === 'kertoja') return KERTOJA;
@@ -112,15 +135,37 @@ for (const id of kaupungit) {
       console.error(`${id}/${nimi}: HTTP ${vastaus.status}: ${(await vastaus.text()).slice(0, 400)}`);
       process.exit(1);
     }
-    const polku = resolve(JUURI, `assets/audio/puhe-kohtaaminen-${id}-${nimi}.mp3`);
+    const tiedostonimi = `puhe-kohtaaminen-${id}-${nimi}.mp3`;
+    const polku = resolve(JUURI, `assets/audio/${tiedostonimi}`);
     const data = Buffer.from(await vastaus.arrayBuffer());
+
+    // RAAKA ÄMPÄRIIN HETI, ennen levylle kirjoitusta.
+    const raaka = vieRaaka(data, { nimi: `raaka-${tiedostonimi}`, kansio: RAAKA_KANSIO });
+    console.log(`${id}/${nimi}: raaka talteen → ${raaka.url}`);
+
     // assets/audio ei ole enää repossa (omistajan linjaus 11.9.2026:
     // äänet vain ämpärissä), joten kansio voi puuttua tyhjästä
     // checkoutista — luodaan se ennen kirjoitusta.
     mkdirSync(dirname(polku), { recursive: true });
     writeFileSync(polku, data);
+    kuittirivit.push({
+      fileName: tiedostonimi,
+      outputPath: `assets/audio/${tiedostonimi}`,
+      rawArtifact: raaka,
+      finalArtifact: { fileName: tiedostonimi, sha256: sha256(data), bytes: data.length },
+    });
     console.log(`${id}/${nimi}: ${(data.length / 1024).toFixed(0)} kt → ${polku}`);
   }
+}
+if (kuittirivit.length) {
+  const kuitti = vieKuitti(kokoaRaakakuitti({
+    putki: 'kohtaamiset',
+    batchId: ERA,
+    sourceCommit: SOURCE_COMMIT,
+    resepti: { model: MALLI, stability: STABILITY, outputFormat: 'mp3_44100_128' },
+    rivit: kuittirivit,
+  }), AMPARIN_JUURI);
+  console.log(`Kuitti: ${kuitti.objectKey}`);
 }
 console.log('Valmis. Tiedostot ovat paikallisessa assets/audio-kansiossa (ei repoon,');
 console.log('linjaus 11.9.2026) — vie ne ämpäriin. Muista myös avain kiertoon.');

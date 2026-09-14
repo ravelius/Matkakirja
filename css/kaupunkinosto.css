@@ -146,3 +146,42 @@
 
 /* Kohdekartta ennen leipätekstiä: sama rako kuin tekstin ympärillä. */
 .kaupunkipopup-tiivis .kaupunkipopup-kartta { margin-bottom: 0.7rem; }
+
+/*
+ * LISÄKAUPUNGIN KAUPUNKIKORTTI (PAATOKSET 16, js/kaupunkinosto.js
+ * latoLisakaupunginKortti).
+ *
+ * KORTTI EI TUO UUTTA ULKOASUA: kehys, otsikko, sulkunappi ja
+ * kuvapaikka ovat samat kuin tiiviillä kaupunkietusivulla, ja noston
+ * otsikko ja leipä piirtyvät nostokortin omilla luokilla
+ * (css/fokusnosto.css .fokusnosto-kortti-otsikko, .fokusnosto-teksti).
+ *
+ * YKSI SÄÄNTÖ ON UUSI, ja sen on pakko olla: KUVAN PAIKKAMERKKI. Hero
+ * on tilattu kuvaputkelta eikä sitä vielä ole, ja kuvatonta kuvapaikkaa
+ * ei ole ennen ollut olemassa. Ruutu on kartan seepiaa — samat musteen
+ * ja pergamentin arvot kuin kortin muissa säännöissä yllä (rgba(122,
+ * 85, 20, …)) — ja sen suhde on herokuvien 3:2, jotta kortin korkeus ei
+ * hyppää sinä päivänä kun kuva vaihtuu paikalle. Kun putki toimittaa
+ * kuvat, tämä sääntö voi poistua.
+ */
+.kaupunkipopup-heropaikka {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 3 / 2;
+  border: 1px solid rgba(122, 85, 20, 0.32);
+  border-radius: 6px;
+  background: rgba(122, 85, 20, 0.1);
+  color: #6b5636;
+  font-family: var(--font-otsikko, var(--font-luku));
+  font-size: 1.1rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+/* Noston otsikko kortissa on väliotsikko, ei kortin oma otsikko: sama
+   kutistus kuin kohdekartan otsikolla yllä. */
+.kaupunkipopup-lisakaupunki .fokusnosto-kortti-otsikko {
+  margin: 0.2rem 0 0.4rem;
+  font-size: 1rem;
+}
