@@ -544,7 +544,7 @@ export function kohdeKarttarivit({
    * kolme paikkaa menevät niille nostoille, joilla ei ole muuta
    * karttapaikkaa.
    */
-  return karsiKaupunkiruuhka(karsiKaupunkikartanNostot(rivit, kaupungit), kaupungit);
+  return karsiKaupunkiruuhka(karsiKaupunkikartanNostot(rivit, kaupungit, iso), kaupungit);
 }
 
 /*
@@ -639,15 +639,52 @@ function kohdeKaupunkikartanNostot() {
  * kaupunkilistalla saadakseen KAIKKI nostot, ja se listaus ei saa
  * kadottaa juuri niitä, joiden paikkaa se on tarkistamassa.
  */
-function karsiKaupunkikartanNostot(rivit, kaupungit) {
+/*
+ * === PILOTTI: KOHDEKARTAN NOSTO MYÖS PÄÄKARTALLE LÄHIZOOMISSA =====
+ *
+ * Omistaja 14.9.2026 (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 12 kohta
+ * 3): *"karttanostoja ei voi klikata ja niita pitaisi olla enemman."*
+ * ja KARTTAUUDISTUS: *"Nostot voisivat tulla paremmin nakyviin vasta
+ * kun pelaaja zoomaa tarpeeksi lahelle."*
+ *
+ * Mitattuna (docs/raportit/viesti-fable-nostot-20260914.md luku 2)
+ * Ranskan 37 nostosta 17 on kohdekartalla ja pääkartalle jää 20.
+ * Pariisin seudun 16 nostoa ovat siis kartalla vain kaupunkilehden
+ * sisällä. Tämä lippu päästää ne TAKAISIN pääkartalle — mutta vain
+ * lähizoomiin (`lahi: true`, js/pallolauta/nostot.js merkkiPortti),
+ * joten saapumisnäkymä pysyy sellaisena kuin omistaja sen 2.9.2026
+ * pyysi: siinä ei ole kaupungin kohdalla olevia nostoja.
+ *
+ * KOPIOTA EI SYNNY. Rivi on sama nosto samalla tunnuksella ja samalla
+ * tekstillä; vain merkin näkyvyys on kaksiportainen. Kohdekartta ei
+ * muutu millään tavalla.
+ *
+ * PILOTTI ON YHDESSÄ MAASSA. Muissa maissa sääntö on ennallaan (rivi
+ * pudotetaan), koska omistaja pyysi Ranskan pilottia ensin.
+ */
+const KOHDEKARTAN_NOSTOT_LAHIZOOMIIN = new Set(['FRA']);
+
+function karsiKaupunkikartanNostot(rivit, kaupungit, iso = null) {
   if (!kaupungit?.length) return rivit;
   const linkit = kohdeKaupunkikartanNostot();
   if (!linkit.size) return rivit;
   const laudalla = new Set(kaupungit.map((k) => k.id));
-  return rivit.filter((r) => {
+  const lahizoomiin = KOHDEKARTAN_NOSTOT_LAHIZOOMIIN.has(iso);
+  const ulos = [];
+  for (const r of rivit) {
     const kaupunki = linkit.get(r.kohde?.id);
-    return !(kaupunki && laudalla.has(kaupunki));
-  });
+    if (!(kaupunki && laudalla.has(kaupunki))) {
+      ulos.push(r);
+      continue;
+    }
+    if (!lahizoomiin) continue;
+    /*
+     * Kopio eikä mutaatio: KOHDE_MAAT-taulun oliot ovat jaettua dataa,
+     * ja `lahi` on tämän näkymän päätös eikä datan kenttä.
+     */
+    ulos.push({ ...r, kohde: { ...r.kohde, lahi: true } });
+  }
+  return ulos;
 }
 
 /*
@@ -725,6 +762,16 @@ function karsiKaupunkiruuhka(rivit, kaupungit) {
     rivit.forEach((r, i) => {
       if (r.kohde?.tyyppi === 'kaupunki') return; // kaupunkikohde on oma laattansa vieressä
       if (r.kohde?.kattoVapaa) return;            // ei kaupungissa (ks. KATTOVAPAA yllä)
+      /*
+       * LÄHIZOOMIN NOSTO EI OLE SAAPUMISNÄKYMÄSSÄ, joten katolla ei
+       * ole siihen asiaa: katto suojaa juuri sitä näkymää, jossa
+       * `lahi: true` -merkki ei piirry lainkaan
+       * (js/pallolauta/nostot.js merkkiPortti). Ilman tätä ehtoa
+       * kaupungin kohdalle palautetut kohdekartan nostot (ks.
+       * KOHDEKARTAN_NOSTOT_LAHIZOOMIIN yllä) putoaisivat kolmen
+       * merkin kattoon eivätkä olisi kartalla missään.
+       */
+      if (r.kohde?.lahi) return;
       if (Math.hypot(r.paikka.x - c.x, r.paikka.y - c.y) <= KAUPUNKIKATON_SADE) {
         ruuhka.push({ r, i });
       }

@@ -1,4 +1,17 @@
 /*
+ * MAALEHDEN SIVUT NOSTOIKSI (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 13,
+ * Ranskan pilotti). Rivit ovat Ranskan maalehden omia nostoja
+ * palasteltuna kartalle; teksti ja kuva luetaan lehdestä ajon aikana
+ * (js/packs/maalehtinostot-fra.js). Ne liitetään TÄHÄN taulukkoon,
+ * koska tämä taulukko ON Ranskan maapooli (js/fokusnosto.js
+ * NOSTO_MAAT.FRA osoittaa samaan taulukkoon, ei kopioon) — Marseillessa
+ * ei ole omaa poolia, joten sama joukko näkyy molemmissa kaupungeissa
+ * ja laattojen ladonta pysyy kaupungista riippumattomana
+ * (js/fokusnosto.js nostoKaupunginPooli).
+ */
+import { MAALEHTINOSTOT_FRA } from './maalehtinostot-fra.js';
+
+/*
  * PARIISIN FOKUSVIRTA — annostelun sisältö dataksi.
  *
  * Sisartiedosto js/packs/fokusvirta-madrid.js:lle ja -wien.js:lle:
@@ -1386,6 +1399,11 @@ export const FOKUSVIRTA_PARIISI = {
         },
       },
     },
+    // Maalehden sivuilta palastellut nostot (ks. tiedoston yläosan
+    // tuontikommentti). Ne ovat listan lopussa, jotta vanhojen
+    // rivien järjestys — ja siten laattojen ladonnan tasapelisääntö —
+    // ei muutu.
+    ...MAALEHTINOSTOT_FRA,
   ],
 
   /*

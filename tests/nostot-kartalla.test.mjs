@@ -39,7 +39,7 @@ import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
 import { SKANDAALIT } from '../js/packs/skandaalit.js';
 import { HISTORIAN_HETKET } from '../js/packs/historian-hetket.js';
 
-const { rivit, puuttuvat, kesken } = nostojenKarttapaikat();
+const { rivit, puuttuvat, kesken: keskenKaikki } = nostojenKarttapaikat();
 
 test('jokainen karttanosto on pääkartalla tai kohdekartalla', () => {
   const nimet = puuttuvat.map((r) => `${r.kaupunki ?? r.iso}/${r.id} (${r.nimi})`);
@@ -73,7 +73,22 @@ test('kohdekartalla asuva nosto EI ole pääkartalla', () => {
    * ympärillä sattui olemaan yli kolme merkkiä — se ei ollut sääntö
    * vaan sattuma.
    */
-  const molemmilla = rivit.filter((r) => r.paakartalla && r.kohdekartalla)
+  /*
+   * POIKKEUS 14.9.2026: LÄHIZOOMIN PILOTTI (Ranska).
+   *
+   * Omistaja 14.9.2026 (KARTTAUUDISTUKSEN PAATOKSET 12 kohta 3):
+   * *"karttanostoja ei voi klikata ja niita pitaisi olla enemman."*
+   * ja KARTTAUUDISTUS: *"Nostot voisivat tulla paremmin nakyviin vasta
+   * kun pelaaja zoomaa tarpeeksi lahelle."*
+   *
+   * `lahi: true` -merkki EI piirry saapumisnäkymässä lainkaan
+   * (js/pallolauta/nostot.js merkkiPortti), joten se ei ole "kartalla"
+   * siinä merkityksessä, jota sääntö 2.9.2026 tarkoitti. Kohdekartta
+   * on koskematon ja yhä noston koti; pääkartalla merkki on vain
+   * zoomatessa. Kopiota ei synny: sama tunnus, sama teksti, kaksi
+   * näkyvyystasoa (js/fokuskohteet.js KOHDEKARTAN_NOSTOT_LAHIZOOMIIN).
+   */
+  const molemmilla = rivit.filter((r) => r.paakartalla && r.kohdekartalla && !r.lahi)
     .map((r) => `${r.kaupunki ?? r.iso}/${r.id}`);
   assert.deepEqual(molemmilla, [],
     `${molemmilla.length} nostoa on sekä kohdekartalla että pääkartalla`);
@@ -108,8 +123,16 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
   const sallitut = new Set([
     'rajauksen ulkopuolella', 'kartan oma kohde', 'kohdekarttaa ei ole',
     'hetki', 'ankkuri on kaupungin laatta',
+    /*
+     * 'lähizoomi' (14.9.2026, Ranskan pilotti): merkki ei ole
+     * saapumisnäkymässä lainkaan, vaan tulee näkyviin vasta kun
+     * pelaaja zoomaa (js/pallolauta/nostot.js merkkiPortti). Se ei ole
+     * työlistalla oleva "vielä siirtämättä" vaan valmis ratkaisu, ja
+     * siksi se on myös rajattu alla olevista luvuista.
+     */
+    'lähizoomi',
   ]);
-  const oudot = kesken.filter((r) => !sallitut.has(r.kaupunginKohdalla))
+  const oudot = keskenKaikki.filter((r) => !sallitut.has(r.kaupunginKohdalla))
     .map((r) => `${r.kaupunki}/${r.id} (${r.kaupunginKohdalla})`);
   assert.deepEqual(oudot, [],
     'kaupungin kohdalla on nostoja, joille ei ole kirjattua syytä jäädä pääkartalle');
@@ -126,6 +149,9 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
   // pääkartta kattoVapaa-lipulla — sama ratkaisu kuin Restelolla ja
   // Kristianialla. Katto nousee vain hetkien verran; muiden lajien
   // luku ei saa yhä kasvaa.
+  // Lähizoomin merkit eivät ole saapumisnäkymässä, joten ne eivät ole
+  // kaupungin kohdalla olevaa työlistaa (ks. sallitut yllä).
+  const kesken = keskenKaikki.filter((r) => r.kaupunginKohdalla !== 'lähizoomi');
   assert.ok(kesken.length <= 52,
     `kaupungin kohdalla on pääkartalla ${kesken.length} nostoa (säde `
     + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 52 sallittu — uusi nosto kuuluu kohdekartalle`);
