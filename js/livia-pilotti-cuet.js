@@ -681,7 +681,7 @@ export const LIVIAN_LUENTA_CUET = Object.freeze({
   },
   {
     "id": "bergen.livia.c4",
-    "ankkuri": "Meitä! Pidin siivet",
+    "ankkuri": "meitä. Meitä!",
     "esiintyma": 1,
     "tarkoitus": "ilo",
     "voimakkuus": 0.6

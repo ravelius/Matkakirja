@@ -1779,7 +1779,7 @@
           },
           {
             "cueId": "bergen.livia.c4",
-            "anchor": "Meitä! Pidin siivet",
+            "anchor": "meitä. Meitä!",
             "occurrence": 1,
             "intent": "ilo",
             "strength": 0.6
