@@ -84,6 +84,20 @@ const palvelin = http.createServer((req, res) => {
 await new Promise((ok) => palvelin.listen(0, ok));
 const osoite = `http://localhost:${palvelin.address().port}/`;
 
+/*
+ * KUINKA KAUAN VAHDIN VAPAUTUSTA ODOTETAAN.
+ *
+ * js/ui.js:n luentavahti päästää napin esiin vasta VÄLIRAUHAN jälkeen
+ * (LUENNAN_VALIRAUHA_MS = 1300 ms) ja kysyy tilaa 200 ms:n välein, eli
+ * vapautus näkyy noin 1,5 sekunnissa. Odotus oli 2500 ms, ja se oli
+ * liian tiukka: kun kontissa ajoi rinnakkain muita raskaita prosesseja,
+ * kysely myöhästyi ja kaksi vartiota kaatui ilman että pelissä oli
+ * mitään vikaa (mitattu 14.9.2026 — vahti itse vapautti napin 1,5
+ * sekunnissa samassa kontissa). Neljä sekuntia on yhä murto-osa
+ * varaventtiilistä (30 s), joten aito jumi kaatuisi vartion silti.
+ */
+const LUENNAN_VAPAUTUKSEN_ODOTUS_MS = 4000;
+
 let lapi = 0; let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => {
   kaikki += 1;
@@ -261,7 +275,7 @@ const mittaa = () => {
 
   /* VASTAKOE: luennan jälkeen kaikki kolme palaavat ennalleen. */
   await vaikene(sivu);
-  await sivu.waitForTimeout(2500);
+  await sivu.waitForTimeout(LUENNAN_VAPAUTUKSEN_ODOTUS_MS);
   const jalkeen = await sivu.evaluate(mittaa);
   vaadi('luennan jälkeen Liiku palaa näkyviin (vastakoe)',
     jalkeen.liiku?.display !== 'none', JSON.stringify(jalkeen.liiku?.display));
@@ -279,7 +293,7 @@ const mittaa = () => {
   vaadi('pulun repliikin ajan Liiku on silti piilossa',
     pulupuhe.liiku?.display === 'none', String(pulupuhe.liiku?.display));
   await vaikene(sivu);
-  await sivu.waitForTimeout(2500);
+  await sivu.waitForTimeout(LUENNAN_VAPAUTUKSEN_ODOTUS_MS);
 
   /* AARRE LÖYTYI: nappi laajenee ja kutistuu takaisin. */
   await sivu.evaluate(() => window.matkakirja.ui.laajennaLiiku());
