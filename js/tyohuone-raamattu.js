@@ -7472,7 +7472,12 @@ export const RAAMATTU = {
           + 'on oma nakyma; 2) kartan reunan vareily / topografian '
           + 'putoaminen linssissa on kerrosvahdin tai laattajonon vika, '
           + 'juurisyy mitataan iPad-koossa (1180x820 tai 1024x1366, dpr 2) '
-          + 'ja korjataan. Tila: tyo Opus-agentilla.',
+          + 'ja korjataan. LISAYS (omistaja klo 21.30 UTC, sanatarkasti: '
+          + '"Muut aanet eivat myoskaan pysahdy kun linssi aktivoituu"): 3) '
+          + 'linssin avautuessa pelin muut aanet (Horation luenta, Livian '
+          + 'repliikki, pelin musiikki/tehosteet) PYSAHTYVAT tai '
+          + 'keskeytyvat, ja linssin oma aani soi yksin; sulkeutuessa '
+          + 'pelin aanitila palautuu. Tila: tyo Opus-agentilla.',
         'Saapumiskortti: luettu matkakirjamerkintä + esittely '
           + 'kuvineen.',
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
