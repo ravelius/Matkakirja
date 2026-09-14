@@ -119,6 +119,10 @@ import {
   livianKaupunkiKentat, livianKentanKuplat, livianKenttaPinoutuu, livianTiiviste,
 } from '../js/liviapuhe.js';
 import { IHMISEN_MATKA_KERTOMUS } from '../js/linssit/ihmisen-matka-kertomus.js';
+import {
+  ISKULAUSEEN_AANI, SAAPUMISNIMEN_AANI, lueSaapumispuheRivit,
+} from './saapumispuhe-data.mjs';
+import { lueLivianIlmaisupilottiRivit } from './livia-ilmaisupilotti-data.mjs';
 import { FOKUSVIRTA_ALPIT } from '../js/packs/fokusvirta-alpit.js';
 import { FOKUSVIRTA_ATEENA } from '../js/packs/fokusvirta-ateena.js';
 import { FOKUSVIRTA_HELSINKI } from '../js/packs/fokusvirta-helsinki.js';
@@ -291,6 +295,7 @@ const sha256 = (data) => createHash('sha256').update(data).digest('hex');
 
 /** Kaupunkitunnus on kaupunkilähteillä sama kuin repliikkiavaimen alku. */
 function kuitinKaupunkiId(rivi) {
+  if (rivi.cityId) return rivi.cityId;
   return Object.hasOwn(LIVIAN_KAUPUNKILAHTEET, rivi.lahde) ? rivi.lahde : null;
 }
 
@@ -317,6 +322,12 @@ export function kokoaTuotantokuitti(rivit, {
     arrivalEchoSeconds: KAIUN_KESTO,
   } : { kind: 'none' };
   const suunnitelma = rivit.map((rivi) => ({
+    ...(rivi.vaadittuAani ? {
+      cityId: kuitinKaupunkiId(rivi),
+      role: rivi.rooli,
+      source: rivi.lahde,
+      sourceAudioId: rivi.sourceAudioId ?? null,
+    } : {}),
     utteranceKey: rivi.avain,
     visibleTextSha256: sha256(Buffer.from(rivi.teksti, 'utf8')),
     ttsTextSha256: sha256(Buffer.from(rivi.puhe, 'utf8')),
@@ -337,6 +348,11 @@ export function kokoaTuotantokuitti(rivit, {
       const tulos = tulokset.get(rivi.avain) ?? {};
       return {
         cityId: kuitinKaupunkiId(rivi),
+        ...(rivi.vaadittuAani ? {
+          role: rivi.rooli,
+          source: rivi.lahde,
+          sourceAudioId: rivi.sourceAudioId ?? null,
+        } : {}),
         utteranceKey: rivi.avain,
         visibleText: rivi.teksti,
         visibleTextSha256: sha256(Buffer.from(rivi.teksti, 'utf8')),
@@ -1045,6 +1061,45 @@ export function repliikit() {
   }));
 }
 
+/**
+ * Tuotantovalikoima: vanha Pulu-repertuaari muuttumattomana ja sen perässä
+ * lukukatselmoidun saapumispuheraportin rajatut nimi- ja iskulauseäänet.
+ */
+export function tuotantorepliikit(
+  saapumisrivit = lueSaapumispuheRivit(),
+  ilmaisurivit = lueLivianIlmaisupilottiRivit(),
+) {
+  return [...repliikit(), ...saapumisrivit, ...ilmaisurivit];
+}
+
+/**
+ * Saapumisäänierä saa sisältää vain yhden puhujan, ja äänen pitää olla
+ * juuri raportin roolille lukittu. Palauttaa virheen ennen kuittia ja APIa.
+ */
+export function saapumisAanenRooliEste(rivit, voiceId) {
+  const saapumisrivit = rivit.filter(({ vaadittuAani }) => Boolean(vaadittuAani));
+  if (!saapumisrivit.length) return null;
+  const roolit = new Set(saapumisrivit.map(({ rooli }) => rooli));
+  if (roolit.size !== 1) {
+    return 'saapumisäänierässä ei saa sekoittaa kertojan nimiä ja Livian iskulauseita';
+  }
+  const vaaditut = new Set(saapumisrivit.map(({ vaadittuAani }) => vaadittuAani));
+  if (vaaditut.size !== 1) return 'saapumisäänierän riveillä on ristiriitaiset äänilukot';
+  const vaadittu = [...vaaditut][0];
+  if (voiceId !== vaadittu) {
+    const rooli = [...roolit][0] === 'kertoja' ? 'kertojan saapumisnimi' : 'Livian iskulause';
+    return `${rooli} vaatii voice_id:n ${vaadittu}, sai ${voiceId || '(tyhjä)'}`;
+  }
+  // Livian saapumisriviä voi ajaa muun Livian repertuaarin kanssa, mutta
+  // kertojan nimi ei saa koskaan päätyä Pulu-rivien kanssa samaan erään.
+  if (roolit.has('kertoja') && rivit.length !== saapumisrivit.length) {
+    return 'kertojan saapumisnimierässä ei saa olla Livian muita repliikkejä';
+  }
+  if (roolit.has('livia') && voiceId !== ISKULAUSEEN_AANI) return 'Livian äänilukko ei täsmää';
+  if (roolit.has('kertoja') && voiceId !== SAAPUMISNIMEN_AANI) return 'kertojan äänilukko ei täsmää';
+  return null;
+}
+
 /** Ämpärin kansio pelin omasta lähteestä: aanet/pulu. */
 export function ampariKansio() {
   const julkinen = julkinenJuuri();
@@ -1194,7 +1249,12 @@ export function tulkitseArgumentit(argumentit) {
  * liitetään.
  */
 export function tauluksi(rivit) {
-  const vartioidut = rivit.filter((rivi) => rivi.tila !== 'ei vartioitu');
+  // Saapumis- ja ilmaisurivit ovat erillisiä kuuntelukandidaatteja:
+  // niitä ei pidä ehdottaa nykyisen runtime-taulun city-3-avaimiksi.
+  const vartioidut = rivit.filter((rivi) => rivi.tila !== 'ei vartioitu' && !rivi.vaadittuAani);
+  if (!vartioidut.length) {
+    return 'Erillinen kandidaattierä: runtime-tauluja ei päivitetä tämän ajon perusteella.';
+  }
   const sisus = vartioidut
     .map((rivi) => `  '${rivi.avain}': '${rivi.tiiviste}',`).join('\n');
   return 'js/liviapuhe.js LIVIAN_AANITETYT (päivitä ajon jälkeen):\n'
@@ -1609,7 +1669,10 @@ async function main() {
     process.exit(0);
   }
 
-  const kaikki = repliikit();
+  // Vanha valitsematon kuiva ajo tarkoittaa yhä vain vakiintunutta
+  // Pulu-repertuaaria. Uudet kahden roolin kandidaatit tuodaan mukaan
+  // ainoastaan eksplisiittisten --repliikit-avainten ratkaisemiseksi.
+  const kaikki = liput.valitut.length ? tuotantorepliikit() : repliikit();
   const { tyot, tuntemattomat } = valitseRepliikit(kaikki, liput.valitut);
   if (tuntemattomat.length) {
     console.error(`Näitä repliikkejä ei ole: ${tuntemattomat.join(', ')}. `
@@ -1618,6 +1681,11 @@ async function main() {
   }
   if (!tyot.length) {
     console.error('Yhtään repliikkiä ei valittu.');
+    process.exit(1);
+  }
+  const rooliEste = saapumisAanenRooliEste(tyot, liput.aani);
+  if (rooliEste) {
+    console.error(`${rooliEste}. Ajo keskeytettiin ennen kuittia ja verkkokutsuja.`);
     process.exit(1);
   }
   const kansio = ampariKansio();

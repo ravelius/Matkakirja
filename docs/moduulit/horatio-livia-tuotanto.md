@@ -433,3 +433,23 @@ kuvatoimituksen malli, testit ja seuraavan mantereen kattavuuslista.
 Fable kuittaa seuraavan mantereen aloituksen sen kaanonin ja resurssien
 pohjalta. Samaa ketjua jatketaan ilman vanhojen sessioiden muistin varaan
 jäämistä. Tilannekortti on nykytila, pitkät keskustelut ja Git historiaa.
+
+## Uusin ilmaisupäätös 14.9.2026 — hyväksytyn nauru-/kuiskauspilotin jälkeen
+
+Omistaja hyväksyi Sofian ja Venetsian kuunnellut nauru-/kuiskausäänet ja
+pyysi lisää ilmaisua, tarvittaessa pieniä repliikkimuutoksia sekä puhutut
+kaupunki-iskulauseet. Niiden aiempi kuuntelu-HOLD on päättynyt, mutta tämä
+ei merkitse vielä tekemättömiä uusia äänikandidaatteja kuulluiksi tai hyväksytyiksi.
+
+Livia saa hengähtää, huokaista, hämmästyä, kuiskata, naurahtaa ja kerätä
+arvokkuutensa takaisin tilanteen mukaan. Teksti antaa reaktiolle syyn;
+kaikille kaupungeille ei tehdä samaa ilmaisukaavaa eikä vakavia asioita
+kuorruteta hupailulla. Flicker / eleven_v3 / Natural säilyy. Tagien toimivuus
+ja kuuluvuus ratkaistaan oikean äänen perusteella, ei JSONista.
+
+Tarkka uusi toimitus, kuuden puheen koe-erä, 45 saapumisiskulausetta ja
+ajojärjestys: `docs/raportit/livia-ilmaisu-ja-saapumispuheet-20260914.md`.
+Kertoja sanoo saapuessa nimen, Livia iskulauseen itse näkymättä; vasta
+äänien päätyttyä alkaa Horation päiväkirja. Nykyistä pitkää city-3-puhetta
+ei käytetä iskulauseäänenä. Fable on ainoa maksullisten ajojen suorittaja
+ja kanonisen Raamatun/julkaisun omistaja.

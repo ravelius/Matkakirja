@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "revision": "livia-expression-20260914-pilot-v1",
+  "voiceId": "piI8Kku0DcvcL6TTSeQt",
+  "model": "eleven_v3",
+  "stability": 0.5,
+  "status": "generation-authorized-owner-listening-pending",
+  "cities": [
+    {
+      "cityId": "istanbul",
+      "sourceAudioId": "istanbul-3",
+      "visibleText": "Tünel kulkee yhä mäen alla. Minä kuljen yllä! Kisasin vaunun kanssa ja voitin. Mutta minä puuskutin — matkustajat eivät. Myönnetään: kätevä laite.",
+      "ttsText": "[brightly] Tünel kulkee yhä mäen alla. Minä kuljen yllä! [proudly] Kisasin vaunun kanssa ja voitin. [exhales] Mutta minä puuskutin — matkustajat eivät. [reluctantly] Myönnetään: kätevä laite.",
+      "direction": "Voitonriemu vaihtuu hengästymiseen ja vastentahtoiseen tunnustukseen. Ei jatkuvaa läähätystä.",
+      "rewriteReason": "Pieni sanamuutos tekee hengästymisen syyn kuultavaksi. Sama hyväksytty Tünel-havainto ja kilpailu."
+    },
+    {
+      "cityId": "helsinki",
+      "sourceAudioId": "helsinki-3",
+      "visibleText": "Minä kokeilin tuomiokirkon apostolien näköalaa, mutta torin kalat näkyivät paremmin alempaa. Lokki ehti ensin. Se katsoi minua kuin olisin ollut harjoittelija. Harjoittelija! Minä olen sentään kirjekyyhky.",
+      "ttsText": "[curious] Minä kokeilin tuomiokirkon apostolien näköalaa, mutta torin kalat näkyivät paremmin alempaa. [disappointed] Lokki ehti ensin. Se katsoi minua kuin olisin ollut harjoittelija. [indignant] Harjoittelija! [clears throat] Minä olen sentään kirjekyyhky.",
+      "direction": "Pieni arvokkuuden kolahdus, ei vihaista huutoa; kurkun selvitys palauttaa kirjekyyhkyn ryhdin.",
+      "rewriteReason": "Kaksi lyhyttä loppulausetta tuo näkyviin hahmon ylpeyden ja epävarmuuden. Ei uusia faktaväitteitä."
+    },
+    {
+      "cityId": "berliini",
+      "sourceAudioId": "berliini-3",
+      "visibleText": "Tempelhofin vanhalla lentokentällä lensin punaisen leijan rinnalla. Se pysyi ilmassa räpäyttämättä siipeäkään. Hiukan ärsyttävää. Sitten katsoin alas: narun toisessa päässä mies juoksi hiki hatussa. Helpotukseni oli suuri. Joku tässä sentään teki töitä.",
+      "ttsText": "[curious] Tempelhofin vanhalla lentokentällä lensin punaisen leijan rinnalla. Se pysyi ilmassa räpäyttämättä siipeäkään. [annoyed] Hiukan ärsyttävää. [curious] Sitten katsoin alas: narun toisessa päässä mies juoksi hiki hatussa. [sighs] Helpotukseni oli suuri. [amused] Joku tässä sentään teki töitä.",
+      "direction": "Kateellinen mutina vaihtuu oivallukseen ja helpottuneeseen huokaukseen; lopussa huvittuneisuutta ilman erillistä naurua.",
+      "rewriteReason": "Sanat ennallaan."
+    },
+    {
+      "cityId": "amsterdam",
+      "sourceAudioId": "amsterdam-3",
+      "visibleText": "Amsterdamin aseman edessä on pyörähalli veden alla. Seitsemälletuhannelle pyörälle! Kävin kurkistamassa sisään ja palasin rantaan. Vieressä ui ankka. Sen alla minä olin juuri kävellyt, kuivin jaloin. Olisin halunnut nähdä sen ilmeen, jos se olisi tiennyt.",
+      "ttsText": "[curious] Amsterdamin aseman edessä on pyörähalli veden alla. [gasps] Seitsemälletuhannelle pyörälle! [brightly] Kävin kurkistamassa sisään ja palasin rantaan. Vieressä ui ankka. [awed] Sen alla minä olin juuri kävellyt, kuivin jaloin. [mischievously] Olisin halunnut nähdä sen ilmeen, jos se olisi tiennyt.",
+      "direction": "Lyhyt hämmästyksen henkäys suuren pyörämäärän kohdalla; oma maanalainen havainto syntyy vasta ankan nähdessä.",
+      "rewriteReason": "Sanat ennallaan."
+    },
+    {
+      "cityId": "tampere",
+      "sourceAudioId": "tampere-3",
+      "visibleText": "Tampereen Rajaportin saunalla ihmiset jäähdyttelevät pihalla ja juttelevat ventovieraille. Minä jäin aidalle kuuntelemaan. Yksi teki lähtöä kolmesti. Minäkin tiesin lopulta hänen putkiremonttinsa hinnan.",
+      "ttsText": "[warmly] Tampereen Rajaportin saunalla ihmiset jäähdyttelevät pihalla ja juttelevat ventovieraille. [curious] Minä jäin aidalle kuuntelemaan. [mischievously] Yksi teki lähtöä kolmesti. [laughs] Minäkin tiesin lopulta hänen putkiremonttinsa hinnan.",
+      "direction": "Hyväntahtoinen juoru ja pieni loppunaurahdus; ei ihmisten pilkkaamista.",
+      "rewriteReason": "Sanat ennallaan."
+    },
+    {
+      "cityId": "barcelona",
+      "sourceAudioId": "barcelona-3",
+      "visibleText": "Barcelonan Sagrada Famíliassa pesii muuttohaukkoja. Niitä voi katsella pesäkamerasta. Minä näin emon palaavan kyyhky kynsissään. Suosittelen kameraa.",
+      "ttsText": "[curious] Barcelonan Sagrada Famíliassa pesii muuttohaukkoja. Niitä voi katsella pesäkamerasta. [worried] Minä näin emon palaavan kyyhky kynsissään. [whispers] Suosittelen kameraa.",
+      "direction": "Aito linnun oma vaaran tunne ja hiljainen neuvo. Ei naurua saalistuksen päälle eikä koomista kauhukarjuntaa.",
+      "rewriteReason": "Sanat ennallaan."
+    }
+  ]
+}

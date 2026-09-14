@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "revision": "eu-arrival-expression-20260914-v1",
+  "status": "editorial-ready-generation-requested",
+  "scope": "Europe45; visible slogans unchanged; Livia offscreen; narrator city name then Livia slogan",
+  "cities": [
+    {
+      "cityId": "ateena",
+      "cityName": "Ateena",
+      "displaySlogan": "Missä keskustelu keksittiin",
+      "liviaText": "Keskustelun kaupunki. Minä aloitan!",
+      "liviaTtsText": "[curious] Keskustelun kaupunki. [brightly] Minä aloitan!"
+    },
+    {
+      "cityId": "sofia",
+      "cityName": "Sofia",
+      "displaySlogan": "Kuumat lähteet keskellä kaupunkia",
+      "liviaText": "Kuumia lähteitä keskellä kaupunkia!",
+      "liviaTtsText": "[brightly] Kuumia lähteitä keskellä kaupunkia!"
+    },
+    {
+      "cityId": "istanbul",
+      "cityName": "Istanbul",
+      "displaySlogan": "Kaupunki kahdella mantereella",
+      "liviaText": "Kaksi mannerta, yksi kaupunki!",
+      "liviaTtsText": "[excited] Kaksi mannerta, yksi kaupunki!"
+    },
+    {
+      "cityId": "rooma",
+      "cityName": "Rooma",
+      "displaySlogan": "Kaikki tiet, yhä",
+      "liviaText": "Kaikki tiet vievät tänne. Minä tulin lentäen.",
+      "liviaTtsText": "[warmly] Kaikki tiet vievät tänne. [mischievously] Minä tulin lentäen."
+    },
+    {
+      "cityId": "bukarest",
+      "cityName": "Bukarest",
+      "displaySlogan": "Idän ja lännen kohtauspaikka",
+      "liviaText": "Täällä itä ja länsi kohtaavat.",
+      "liviaTtsText": "[curious] Täällä itä ja länsi kohtaavat."
+    },
+    {
+      "cityId": "sarajevo",
+      "cityName": "Sarajevo",
+      "displaySlogan": "Vuorten sylissä, kuparin kaikua",
+      "liviaText": "Vuorten sylissä kaikuu kupari.",
+      "liviaTtsText": "[softly] Vuorten sylissä kaikuu kupari."
+    },
+    {
+      "cityId": "madrid",
+      "cityName": "Madrid",
+      "displaySlogan": "Ylätasangon kirkas pääkaupunki",
+      "liviaText": "Ylätasangon kirkas pääkaupunki.",
+      "liviaTtsText": "[brightly] Ylätasangon kirkas pääkaupunki."
+    },
+    {
+      "cityId": "wien",
+      "cityName": "Wien",
+      "displaySlogan": "Valssin ja kahvilan kaupunki",
+      "liviaText": "Valssia ja kahviloita. Ja leivonnaisia.",
+      "liviaTtsText": "[warmly] Valssia ja kahviloita. [mischievously] Ja leivonnaisia."
+    },
+    {
+      "cityId": "pariisi",
+      "cityName": "Pariisi",
+      "displaySlogan": "Valojen kaupunki Seinen rannalla",
+      "liviaText": "Valojen kaupunki Seinen rannalla.",
+      "liviaTtsText": "[warmly] Valojen kaupunki Seinen rannalla."
+    },
+    {
+      "cityId": "berliini",
+      "cityName": "Berliini",
+      "displaySlogan": "Kaupunki, joka rakentaa itsensä uudelleen",
+      "liviaText": "Kaupunki, joka rakentaa itsensä uudelleen.",
+      "liviaTtsText": "[curious] Kaupunki, joka rakentaa itsensä uudelleen."
+    },
+    {
+      "cityId": "lontoo",
+      "cityName": "Lontoo",
+      "displaySlogan": "Thamesin varrella, maailman rytmissä",
+      "liviaText": "Thamesin varrella, maailman rytmissä!",
+      "liviaTtsText": "[brightly] Thamesin varrella, maailman rytmissä!"
+    },
+    {
+      "cityId": "budapest",
+      "cityName": "Budapest",
+      "displaySlogan": "Kaksi rantaa, yksi kaupunki",
+      "liviaText": "Kaksi rantaa, yksi kaupunki.",
+      "liviaTtsText": "[warmly] Kaksi rantaa, yksi kaupunki."
+    },
+    {
+      "cityId": "dubrovnik",
+      "cityName": "Dubrovnik",
+      "displaySlogan": "Muurien kaupunki Adrianmerellä",
+      "liviaText": "Muurien kaupunki Adrianmerellä.",
+      "liviaTtsText": "[awed] Muurien kaupunki Adrianmerellä."
+    },
+    {
+      "cityId": "praha",
+      "cityName": "Praha",
+      "displaySlogan": "Sadan tornin kaupunki",
+      "liviaText": "Sadan tornin kaupunki. Kukahan ne laski?",
+      "liviaTtsText": "[curious] Sadan tornin kaupunki. Kukahan ne laski?"
+    },
+    {
+      "cityId": "tukholma",
+      "cityName": "Tukholma",
+      "displaySlogan": "Neljätoista saarta ja meri",
+      "liviaText": "Neljätoista saarta ja meri!",
+      "liviaTtsText": "[brightly] Neljätoista saarta ja meri!"
+    },
+    {
+      "cityId": "kobenhavn",
+      "cityName": "Kööpenhamina",
+      "displaySlogan": "Pyöräilijöiden ja satujen kaupunki",
+      "liviaText": "Pyöräilijöiden ja satujen kaupunki. Varo polkimia!",
+      "liviaTtsText": "[mischievously] Pyöräilijöiden ja satujen kaupunki. Varo polkimia!"
+    },
+    {
+      "cityId": "helsinki",
+      "cityName": "Helsinki",
+      "displaySlogan": "Valkoinen kaupunki meren äärellä",
+      "liviaText": "Valkoinen kaupunki meren äärellä.",
+      "liviaTtsText": "[warmly] Valkoinen kaupunki meren äärellä."
+    },
+    {
+      "cityId": "tallinna",
+      "cityName": "Tallinna",
+      "displaySlogan": "Keskiajan muurit, uusi aika",
+      "liviaText": "Vanhat muurit. Uusi aika!",
+      "liviaTtsText": "[curious] Vanhat muurit. [brightly] Uusi aika!"
+    },
+    {
+      "cityId": "sevilla",
+      "cityName": "Sevilla",
+      "displaySlogan": "Appelsiinipuiden ja flamencon kaupunki",
+      "liviaText": "Appelsiinipuita ja flamencoa!",
+      "liviaTtsText": "[excited] Appelsiinipuita ja flamencoa!"
+    },
+    {
+      "cityId": "bergen",
+      "cityName": "Bergen",
+      "displaySlogan": "Seitsemän vuoren satama",
+      "liviaText": "Seitsemän vuoren satama.",
+      "liviaTtsText": "[awed] Seitsemän vuoren satama."
+    },
+    {
+      "cityId": "amsterdam",
+      "cityName": "Amsterdam",
+      "displaySlogan": "Kanavien ja kapeiden talojen kaupunki",
+      "liviaText": "Kanavia, kapeita taloja. Kyllä tästä mahtuu!",
+      "liviaTtsText": "[curious] Kanavia, kapeita taloja. [brightly] Kyllä tästä mahtuu!"
+    },
+    {
+      "cityId": "dublin",
+      "cityName": "Dublin",
+      "displaySlogan": "Tarinoiden ja tumman oluen kaupunki",
+      "liviaText": "Tarinoiden kaupunki. Kuunnellaanpa.",
+      "liviaTtsText": "[warmly] Tarinoiden kaupunki. [curious] Kuunnellaanpa."
+    },
+    {
+      "cityId": "edinburgh",
+      "cityName": "Edinburgh",
+      "displaySlogan": "Kallion ja kahden kaupungin pääkaupunki",
+      "liviaText": "Vanha kaupunki, uusi kaupunki — ja linna kallion laella!",
+      "liviaTtsText": "[curious] Vanha kaupunki, uusi kaupunki — [awed] ja linna kallion laella!"
+    },
+    {
+      "cityId": "lissabon",
+      "cityName": "Lissabon",
+      "displaySlogan": "Seitsemän kukkulaa, yksi joki",
+      "liviaText": "Seitsemän kukkulaa, yksi joki. Siivet helpottavat!",
+      "liviaTtsText": "[brightly] Seitsemän kukkulaa, yksi joki. Siivet helpottavat!"
+    },
+    {
+      "cityId": "riika",
+      "cityName": "Riika",
+      "displaySlogan": "Laulun ja jugendin kaupunki",
+      "liviaText": "Laulun ja jugendin kaupunki.",
+      "liviaTtsText": "[warmly] Laulun ja jugendin kaupunki."
+    },
+    {
+      "cityId": "barcelona",
+      "cityName": "Barcelona",
+      "displaySlogan": "Meren ja Gaudín kaupunki",
+      "liviaText": "Merta ja Gaudín ihmeitä!",
+      "liviaTtsText": "[excited] Merta ja Gaudín ihmeitä!"
+    },
+    {
+      "cityId": "firenze",
+      "cityName": "Firenze",
+      "displaySlogan": "Renessanssin syntykaupunki Arnon rannalla",
+      "liviaText": "Renessanssin syntykaupunki Arnon rannalla.",
+      "liviaTtsText": "[awed] Renessanssin syntykaupunki Arnon rannalla."
+    },
+    {
+      "cityId": "venetsia",
+      "cityName": "Venetsia",
+      "displaySlogan": "Kaupunki, jonka kadut ovat vettä",
+      "liviaText": "Täällä kadut ovat vettä. Ja minulla on tuttu.",
+      "liviaTtsText": "[warmly] Täällä kadut ovat vettä. [whispers] Ja minulla on tuttu."
+    },
+    {
+      "cityId": "marseille",
+      "cityName": "Marseille",
+      "displaySlogan": "Välimeren vanhin satama",
+      "liviaText": "Vanha satama täynnä Välimeren elämää!",
+      "liviaTtsText": "[brightly] Vanha satama täynnä Välimeren elämää!"
+    },
+    {
+      "cityId": "oslo",
+      "cityName": "Oslo",
+      "displaySlogan": "Vuonon päässä, metsän reunalla",
+      "liviaText": "Vuonon päässä, metsän reunalla.",
+      "liviaTtsText": "[softly] Vuonon päässä, metsän reunalla."
+    },
+    {
+      "cityId": "tampere",
+      "cityName": "Tampere",
+      "displaySlogan": "Kosken kaupunki kahden järven välissä",
+      "liviaText": "Kaksi järveä ja koski niiden välissä!",
+      "liviaTtsText": "[brightly] Kaksi järveä ja koski niiden välissä!"
+    },
+    {
+      "cityId": "vilna",
+      "cityName": "Vilna",
+      "displaySlogan": "Barokin ja pihojen kaupunki",
+      "liviaText": "Barokkia ja pihoja. Kurkistetaanko?",
+      "liviaTtsText": "[curious] Barokkia ja pihoja. [whispers] Kurkistetaanko?"
+    },
+    {
+      "cityId": "granada",
+      "cityName": "Granada",
+      "displaySlogan": "Alhambran ja veden kaupunki",
+      "liviaText": "Alhambran ja solisevan veden kaupunki.",
+      "liviaTtsText": "[softly] Alhambran ja solisevan veden kaupunki."
+    },
+    {
+      "cityId": "kiova",
+      "cityName": "Kiova",
+      "displaySlogan": "Kultaisten kupolien kaupunki Dneprillä",
+      "liviaText": "Kultaisia kupoleita Dneprin varrella.",
+      "liviaTtsText": "[warmly] Kultaisia kupoleita Dneprin varrella."
+    },
+    {
+      "cityId": "krakova",
+      "cityName": "Krakova",
+      "displaySlogan": "Torvensoiton ja torin kaupunki",
+      "liviaText": "Torvensoiton ja torin kaupunki. Kuuntele!",
+      "liviaTtsText": "[curious] Torvensoiton ja torin kaupunki. Kuuntele!"
+    },
+    {
+      "cityId": "moskova",
+      "cityName": "Moskova",
+      "displaySlogan": "Kremlin muurien kaupunki",
+      "liviaText": "Kremlin muurien kaupunki.",
+      "liviaTtsText": "[serious] Kremlin muurien kaupunki."
+    },
+    {
+      "cityId": "odessa",
+      "cityName": "Odessa",
+      "displaySlogan": "Portaiden kaupunki Mustanmeren rannalla",
+      "liviaText": "Portaita Mustanmeren rannalla. Minä oikaisen!",
+      "liviaTtsText": "[brightly] Portaita Mustanmeren rannalla. Minä oikaisen!"
+    },
+    {
+      "cityId": "pietari",
+      "cityName": "Pietari",
+      "displaySlogan": "Valkoisten öiden kaupunki",
+      "liviaText": "Valkoisten öiden kaupunki.",
+      "liviaTtsText": "[awed] Valkoisten öiden kaupunki."
+    },
+    {
+      "cityId": "varsova",
+      "cityName": "Varsova",
+      "displaySlogan": "Uudelleen rakennettu vanha kaupunki",
+      "liviaText": "Vanha kaupunki, joka rakennettiin uudelleen.",
+      "liviaTtsText": "[warmly] Vanha kaupunki, joka rakennettiin uudelleen."
+    },
+    {
+      "cityId": "kreeta",
+      "cityName": "Kreeta",
+      "displaySlogan": "Saari, jolla myytit syntyivät",
+      "liviaText": "Saari täynnä myyttien jälkiä.",
+      "liviaTtsText": "[curious] Saari täynnä myyttien jälkiä."
+    },
+    {
+      "cityId": "sisilia",
+      "cityName": "Sisilia",
+      "displaySlogan": "Kolmen kulttuurin kultainen saari",
+      "liviaText": "Kultainen saari, kerroksittain kulttuureja.",
+      "liviaTtsText": "[warmly] Kultainen saari, kerroksittain kulttuureja."
+    },
+    {
+      "cityId": "islanti",
+      "cityName": "Islanti",
+      "displaySlogan": "Tulen ja jään saari",
+      "liviaText": "Tulta ja jäätä. Samalla saarella!",
+      "liviaTtsText": "[awed] Tulta ja jäätä. Samalla saarella!"
+    },
+    {
+      "cityId": "alpit",
+      "cityName": "Alpit",
+      "displaySlogan": "Jäätikön ja vuorten laakso",
+      "liviaText": "Jäätiköitä ja vuoria. Nyt mennään korkealle.",
+      "liviaTtsText": "[awed] Jäätiköitä ja vuoria. [softly] Nyt mennään korkealle."
+    },
+    {
+      "cityId": "lappi",
+      "cityName": "Rovaniemi",
+      "displaySlogan": "Kahden joen ja revontulten kaupunki",
+      "liviaText": "Kahden joen kaupunki revontulten alla.",
+      "liviaTtsText": "[warmly] Kahden joen kaupunki revontulten alla."
+    },
+    {
+      "cityId": "tromssa",
+      "cityName": "Tromssa",
+      "displaySlogan": "Pohjoisen portti ja napapiirin valo",
+      "liviaText": "Pohjoisen portti napapiirin tuolla puolen.",
+      "liviaTtsText": "[warmly] Pohjoisen portti napapiirin tuolla puolen."
+    }
+  ]
+}
