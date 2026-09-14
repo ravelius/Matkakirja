@@ -197,8 +197,63 @@ export const MAAPANEELIN_KORKEUS_PX = 82;
  * (Venäjä, Kazakstan): ilman sitä paneeli olisi niillä maan laatikon
  * korkuinen. Ranskalla se ei sido — leveysosuus on tiukempi.
  */
-export const MAAPANEELIN_LEVEYS_OSUUS = 0.1916;
-export const MAAPANEELIN_KORKEUS_OSUUS = 0.2327;
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * PANEELIN LEVEYS ON KYMMENESOSA RUUDUSTA (omistaja 14.9.2026 klo
+ * 17.55, puhelin: *"maa info edelleen liian iso"*; Fablen mitoitus
+ * samana iltana)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MITTA ON LEVEYS RUUDULLA, EI TEKSTIKOKOJEN SUHDE. Erä 13 kalibroi
+ * paneelin karttanoston tekstikokoon yhdellä ankkuriruudulla
+ * (kerroin 0,696); omistaja katsoi tuloksen puhelimella ja sanoi sen
+ * olevan yhä liian iso. Mitoitus tehdään siksi suoraan siitä, mikä
+ * ruudulla näkyy: **paneeli saa viedä saapumisnäkymässä enintään
+ * kymmenesosan ruudun leveydestä**. Saapuminen on uloin sallittu zoomi
+ * (uloszoomauksen esto), eli se näkymä, jossa paneeli on suurimmillaan
+ * suhteessa ruutuun — sisäänpäin kartta kasvaa paneelin mukana
+ * (PÄÄTÖKSET 9 kohta 4), joten yksi raja riittää.
+ *
+ * MITATTU Chromiumilla 14.9.2026 (Ranska, pelaaja Pariisissa,
+ * saapumisnäkymä; paneelin kortin `getBoundingClientRect().width`):
+ *
+ *   ruutu        kerroin 0,696 (erä 13)      kerroin 0,37 (tämä)
+ *   390 × 844     64,6 px = 16,6 %            35,4 px =  9,5 %
+ *   1400 × 900   161,6 px = 11,5 %            86,0 px =  6,2 %
+ *
+ * Puhelin on sitova mitta, ja MITTA ON KARTTARUUTU EIKÄ IKKUNA: 390
+ * px:n laitteella karttaruutu on 374 px, joten katto on 37,4 px.
+ * Kerroin 0,40 antoi 38,2 px ja 0,39 antoi 37,3 px — molemmat kiinni
+ * katossa, ja saapumiskorkeus heilahtaa ajosta toiseen (mitattu
+ * 0,428…0,452) ja sen mukana paneelin ruutukoko muutaman prosentin.
+ * 0,37 jättää sen varan.
+ *
+ * KERROIN OSUU VAIN OSUUKSIIN (ja skaalan rajoihin). Peruskoko px:nä
+ * ja jokainen tyyliarvo pysyy ennallaan, joten kirjainperheet,
+ * lihavuudet, värit, sisältö (mm. SIJALUKU) ja sisennysten suhde
+ * (erä 12) ovat merkilleen entiset — vain pienempinä. `perusta`
+ * (lautayksikköä per css-px) kutistuu tällä kertoimella, ja sen mukana
+ * sekä paneelin LAUTAMITTA että ruutukoko: ankkuri Biskajanlahdella ja
+ * karttaan sidottu skaala pysyvät koskemattomina.
+ *
+ * TEKSTIKOKOJEN SUHDE EI KADONNUT, SE VAIN TULEE MUUALTA. Samana
+ * iltana myös karttanoston kyltti sidottiin karttaan
+ * (js/pallolauta/nostot.js KARTTANOSTON KYLTTI ON KARTAN MITTA), joten
+ * paneelin leipäteksti ja noston kyltti skaalautuvat nyt SAMAN
+ * kertoimen mukana: niiden suhde on vakio joka zoomilla. Sen mittaa
+ * tools/savukkeet/savuke-nimikyltti.mjs (vartiot 4 ja 6).
+ *
+ * PUHELIMEN TEKSTI JÄÄ PIENEKSI (mitattu 2,95 px → 1,70 px). Se
+ * kirjataan eikä korjata: PÄÄTÖKSET 7 kieltää fonttikoon alarajan ja
+ * sisällön tiivistämisen, ja pienuus tulee saapumisnäkymän rajauksesta
+ * (pystyruudulla Ranska jää kauas) — sama juuri kuin kaupungin
+ * nimikyltillä. Jos omistaja haluaa paneelin tekstin isommaksi, se on
+ * sisällön karsimista tai omaa mitoitusta, ei tämän kertoimen asia.
+ */
+/** Paneelin kokokerroin: leveys ≤ 10 % ruudusta saapumisnäkymässä. */
+export const MAAPANEELIN_TEKSTIKERROIN = 0.37;
+export const MAAPANEELIN_LEVEYS_OSUUS = 0.1916 * MAAPANEELIN_TEKSTIKERROIN;
+export const MAAPANEELIN_KORKEUS_OSUUS = 0.2327 * MAAPANEELIN_TEKSTIKERROIN;
 /** Rako maan laatikon reunan ja paneelin väliin, osuus laatikon korkeudesta. */
 export const MAAPANEELIN_RAKO_OSUUS = 0.02;
 /*
@@ -223,8 +278,15 @@ export const MAAPANEELIN_RAKO_OSUUS = 0.02;
  * Se on kehittäjän maailmanäkymän varaus, jossa maakohtaista
  * zoomikattoa ei ole lainkaan.
  */
-export const MAAPANEELIN_SKAALA_MIN = 0.45;
-export const MAAPANEELIN_SKAALA_MAX = 64;
+/*
+ * ERÄ 13: MOLEMMAT RAJAT KERTYVÄT SAMALLA KERTOIMELLA. Rajat ovat
+ * ruutuskaalan rajoja, ja ruutuskaala kutistui kertoimella 0,696 —
+ * jos rajat jäisivät entisiksi, alaraja alkaisi SITOA puhelimen
+ * saapumisnäkymässä (0,566 × 0,696 = 0,394 < 0,45) ja katkaisisi juuri
+ * sen karttaan sidotun skaalan, jonka PÄÄTÖKSET 9 kohta 4 vaatii.
+ */
+export const MAAPANEELIN_SKAALA_MIN = 0.45 * MAAPANEELIN_TEKSTIKERROIN;
+export const MAAPANEELIN_SKAALA_MAX = 64 * MAAPANEELIN_TEKSTIKERROIN;
 
 /**
  * MAALEHDEN AIHETUNNUS → KARTAN SYMBOLIPERHE.

@@ -107,7 +107,8 @@ import {
 import { NOSTOLADONTA_POLTON_TIHEYS } from '../nostoladonta.js';
 import {
   PALLOKAMERAN_AJO_MS, PALLOLAUDAN_LEVEYS, PALLO_FOV, PALLO_KORKEUS_MAX,
-  PALLON_SALLITTU_VENYTYS, ULOSZOOMAUKSEN_KERROIN, laattojenVenytys, luoPallokamera,
+  PALLON_SALLITTU_VENYTYS, ULOSZOOMAUKSEN_KERROIN, laattojenVenytys, leveysKorkeudesta,
+  luoPallokamera,
 } from './kamera.js';
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
 import { luoNimet, nimibudjetti } from './nimet.js';
@@ -1398,6 +1399,30 @@ export async function avaaPallolauta(ui) {
    * Ilman rajaa (aineisto lataamatta tai kehittäjätilan maailmanappi)
    * luku on 0, jolloin portti pitää katon voimassa.
    */
+  /**
+   * SAAPUMISNÄKYMÄN MITTAKAAVA TÄLLÄ LAITTEELLA (css-px / lautayksikkö).
+   *
+   * NIMIKYLTIT KARTTAAN (omistaja 14.9.2026, Fablen tarkennus samana
+   * iltana): kyltin koko on kartan mitta, ja vertailu on KUNKIN
+   * LAITTEEN OMA saapumisnäkymä — sama näkymä kuin uloszoomauksen esto
+   * (`maanZoomiraja`). Silloin saapumisessa kyltti on joka ruudulla
+   * täsmälleen entisen kokoinen ja kasvaa siitä sisäänpäin kartan
+   * mukana; yksi yhteinen vertailu olisi kutistanut puhelimen kyltin
+   * 5,4 pikseliin (mitattu, js/pallolauta/nimet.js NIMIKYLTIT KARTTAAN).
+   *
+   * Ilman rajaa (kehittäjän maailmanäkymä, laatikko lataamatta) luku on
+   * 0, jolloin ladonta käyttää mitattua työpöytävakiota.
+   */
+  const saapumisenSkaala = () => {
+    const raja = maanZoomiraja();
+    const w = kotelo.clientWidth;
+    const h = kotelo.clientHeight;
+    if (!(raja?.max > 0) || !(w > 0) || !(h > 0)) return 0;
+    const leveysYks = leveysKorkeudesta(raja.max, {
+      laudanLeveys: PALLOLAUDAN_LEVEYS, kuvasuhde: w / h,
+    });
+    return leveysYks > 0 ? w / leveysYks : 0;
+  };
   const uloimmanOsuus = () => {
     const raja = maanZoomiraja();
     const korkeus = pallo.pointOfView()?.altitude;
@@ -2792,6 +2817,11 @@ export async function avaaPallolauta(ui) {
       keskipiste,
       // Merkkiportin mitta (ks. uloimmanOsuus).
       uloinOsuus: uloimmanOsuus(),
+      // Karttanoston kyltti skaalautuu samalla kertoimella kuin
+      // kaupungin nimikyltti (js/pallolauta/nostot.js KARTTANOSTON
+      // KYLTTI ON KARTAN MITTA).
+      karttaskaala: nakyva?.skaala ?? 0,
+      vertailuskaala: saapumisenSkaala(),
       // Avauslennolla ei yhtään nostoa: lento on kartan niukin hetki.
       katto: lento ? 0 : Math.min(NOSTOJEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia)),
     });
@@ -2824,6 +2854,16 @@ export async function avaaPallolauta(ui) {
       katto,
       vain,
       kokoKerroin: kaupunginMitat.nimiKerroin,
+      /*
+       * NIMIKYLTIT KARTTAAN (omistaja 14.9.2026; sääntö ja mitatut
+       * luvut js/pallolauta/nimet.js NIMIKYLTIT KARTTAAN). Kameran
+       * mittakaava on jo laskettu tässä (`nakyva.skaala`), ja se on
+       * sama luku, jolla maapaneeli skaalautuu.
+       */
+      karttaskaala: nakyva?.skaala ?? 0,
+      // Vertailu on TÄMÄN LAITTEEN saapumisnäkymä eli uloin sallittu
+      // zoomi (ks. saapumisenSkaala).
+      vertailuskaala: saapumisenSkaala(),
       // Ladonta varaa pelaajan pisteelle sen tilan, joka sillä ruudulla
       // OIKEASTI on — sama yksi sääntö kuin piirrolla.
       pisteSade: piirrettyHalkaisijaPx(pelaajanKaupunki() ? { id: pelaajanKaupunki() } : null) / 2,
@@ -3226,6 +3266,11 @@ export async function avaaPallolauta(ui) {
     kotelo,
     pallo,
     kamera,
+    /**
+     * SAAPUMISNÄKYMÄN MITTAKAAVA (savukkeet): se vertailu, jota vasten
+     * nimikyltin karttakerroin lasketaan (ks. saapumisenSkaala).
+     */
+    saapumisenSkaala,
     merkit,
     reitit,
     nimet,

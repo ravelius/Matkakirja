@@ -25,10 +25,41 @@
  * ei saa näkyä"*) — js/pallolauta/lauta.js lukee nimettyjen joukon tästä
  * ja antaa pistekerrokselle vain sen.
  *
- * LADONTA LASKETAAN VAIN KUN KAMERA PYSÄHTYY (js/pallo.js laatunoston
- * malli, LAATU_LEPOVIIVE_MS): liikkeessä nimet seuraavat pistettään
- * CSS2D:n mukana, ja vasta levossa ladonta ajetaan uudelleen. Näin
- * 261 nimen mitat eivät koskaan maksa kehystä (karttapallo.md riski 4).
+ * LADONTA AJETAAN MYÖS LIIKKEEN AIKANA (js/pallolauta/lauta.js LADONTA
+ * KULKEE MUKANA, EI ODOTA LIIKKEEN LOPPUA; enintään kerran
+ * LADONNAN_TAHTI_MS = 200 ms:ssä). Nimi seuraa pistettään CSS2D:n
+ * mukana, mutta LADOTTU PAIKKA PISTEEN SUHTEEN LUKITAAN — ks.
+ * NIMIKYLTTI ON KIINNI KAUPUNGISSA alla.
+ *
+ * ══════════════════════════════════════════════════════════════════
+ * NIMIKYLTTI ON KIINNI KAUPUNGISSA, EI RUUDUSSA (omistaja 14.9.2026,
+ * Raamattu KARTTAUUDISTUKSEN PAATOKSET 12 kohta 1, sanatarkasti:
+ * *"Pariisin nimikyltti liikkuu panoroitaessa. sen pitaa pysya
+ * paikallaan."*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * JUURISYY ON TÖRMÄYKSENVÄLTTELY, EI ANKKURI. Nimen CSS2D-solmu on
+ * kaupungin omassa pallopisteessä, joten ankkuri ei liiku. Liikkui
+ * SIJOITUS: `ladoRuutunimet` laskee kyljen ja siirron (dx, dy, ank)
+ * joka ladonnalla uudestaan, ja koska ladonta ajetaan viisi kertaa
+ * sekunnissa panoroinnin aikana, sama nimi vaihtoi kylkeä kesken
+ * vedon sitä mukaa kuin naapurusto ruudulla muuttui. Mitattu
+ * Chromiumilla 14.9.2026 (390 × 844 dpr 2, Pariisi, veto 200 px):
+ * ks. docs/raportit/viesti-fable-nimet-merkit-20260914.md.
+ *
+ * LÄÄKE ON TEHTÄVÄNANNON OMA: laske sijoitus KERRAN, kun nimi
+ * ilmestyy, ja LUKITSE se pisteen suhteen niin kauan kuin nimi pysyy
+ * ladottuna eikä zoomi muuta sen mittoja. Lukko vapautuu, kun nimi
+ * putoaa ladonnasta (reunalta, budjetista tai näkyvistä) — silloin
+ * paluu on uusi saapuminen ja paikka lasketaan taas kerran.
+ *
+ * KOKO ON OSA LUKKOA. `kokoKerroin` ja `pisteSade` tulevat kameran
+ * korkeudesta (lauta.js kohdekaupunginMitat), joten ne eivät muutu
+ * panoroitaessa mutta muuttuvat zoomatessa: lukko on voimassa vain
+ * samoilla mitoilla, ja zoomi latoo nimen uudelleen kuten ennenkin.
+ *
+ * Näin 261 nimen mitat eivät myöskään maksa kehystä (karttapallo.md
+ * riski 4): ladonta on yhä sama kertaluokka, vain sen TULOS pysyy.
  *
  * ILMESTYMINEN JA POISTUMINEN ANIMOIDAAN merkkirekisterissä
  * (js/pallolauta/merkit.js): sisään häivytys, ulos häivytys, siirto
@@ -120,6 +151,89 @@ export const NIMEN_REUNAN_SIETO_PX = 1;
 /** Pelaajan oma kaupunki voittaa kaikki muut ehdokkaat. */
 const OMAN_KAUPUNGIN_TARKEYS = 1000;
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * NIMIKYLTIT KARTTAAN (omistajan päätös kysymyskortilla 14.9.2026 klo
+ * 15.05 UTC; Raamattu KARTTAUUDISTUKSEN PAATOKSET 2: staattinen
+ * käsinpiirretty kartta, jonka elementit *"skaalautuvat zoomatessa kuin
+ * painettu kartta"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * ENNEN nimikyltti oli RUUTUVAKIO: `KARTTANIMI_KOOT` on css-pikseleitä,
+ * eli sama 13,5 px joka zoomilla — teksti liukui kartan päällä, kun
+ * kartta kasvoi allansa. Nyt se on KARTAN MITTA, täsmälleen samalla
+ * säännöllä kuin maapaneeli (js/pallolauta/maapaneeli.js `skaala`):
+ * ruutukoko = peruskoko × (px lautayksikköä kohden nyt) / (px
+ * lautayksikköä kohden vertailunäkymässä).
+ *
+ * VERTAILUNÄKYMÄ ON KUNKIN LAITTEEN OMA SAAPUMINEN (Fablen päätös
+ * 14.9.2026 illalla). Ensimmäinen toteutus käytti YHTÄ vertailua
+ * (työpöydän 1400 × 900), ja mittaus näytti heti, miksi se ei käy:
+ * sama maa sovitetaan 373 px:n ja 1400 px:n ruutuun, joten puhelimella
+ * yksi lautayksikkö on 0,655 px ja työpöydällä 1,837 px. Yhteinen
+ * vertailu olisi kutistanut puhelimen saapumiskyltin 15 pikselistä
+ * 5,4 pikseliin — lukukelvottomaksi, ja vastoin Raamatun PAATOKSET
+ * 2:n lausetta *"tekstin luettavuus mitoitetaan uloimmalle zoomille"*.
+ *
+ * MITATTU Chromiumilla 14.9.2026 (dpr 2, tallenne Pariisissa,
+ * `kamera.nakyvaAlue().skaala`), saapumisnäkymä:
+ *
+ *   ruutu        korkeus   skaala (px / lautayksikkö)   kerroin
+ *   390 × 844    0,6641    0,6552                       1,000
+ *   1400 × 900   0,2509    1,8370                       1,000
+ *   2560 × 1352  0,2509    2,8483                       1,000
+ *
+ * Saapuminen on samalla ULOIN SALLITTU näkymä (uloszoomauksen esto,
+ * js/pallolauta/lauta.js `maanZoomiraja`), joten vertailu on juuri se
+ * zoomi, jolle luettavuus mitoitetaan — ja sisäänpäin kyltti kasvaa
+ * kartan mukana. Lauta laskee vertailun sieltä ja antaa sen ladonnalle;
+ * ilman sitä (kehittäjän maailmanäkymä, laatikko lataamatta) käytetään
+ * mitattua työpöytävakiota, jolloin käytös on entinen.
+ *
+ * Rajat ovat samat kuin maapaneelilla eivätkä sido pelialueella: ne
+ * ovat kehittäjän rajattoman maailmanäkymän varalla.
+ */
+/** Vertailuskaalan varamitta, kun laudan omaa ei ole (mitattu 1400 × 900). */
+export const NIMEN_VERTAILUSKAALA = 1.837;
+/*
+ * Rajat eivät saa sitoa pelialueella (Fablen ohje 14.9.2026: *"ei
+ * rajoja pelialueella"*). Alaraja on siksi 0,20 eikä maapaneelin 0,45:
+ * puhelimen saapumisnäkymä antaa MITATUN kertoimen 0,357, ja 0,45
+ * olisi leikannut juuri sen. Yläraja on maapaneelin 64.
+ */
+export const NIMEN_KARTTAKERROIN_MIN = 0.2;
+export const NIMEN_KARTTAKERROIN_MAX = 64;
+/** Kertoimen porras (suhteellinen), ks. nimenKarttakerroin. */
+export const NIMEN_KERTOIMEN_PORRAS = 1.005;
+/**
+ * Nimikyltin kokokerroin kartan mittakaavasta (px / lautayksikkö).
+ * Tuntematon mittakaava palauttaa 1 eli entisen ruutuvakion.
+ *
+ * @param {number} skaala `kamera.nakyvaAlue().skaala`
+ * @param {number} [vertailu] saapumisnäkymän skaala tällä laitteella
+ */
+export function nimenKarttakerroin(skaala, vertailu = NIMEN_VERTAILUSKAALA) {
+  if (!(skaala > 0)) return 1;
+  const perus = vertailu > 0 ? vertailu : NIMEN_VERTAILUSKAALA;
+  const raaka = Math.min(NIMEN_KARTTAKERROIN_MAX,
+    Math.max(NIMEN_KARTTAKERROIN_MIN, skaala / perus));
+  /*
+   * KERROIN PORRASTETAAN, KOSKA LUKKO VERTAA SITÄ TÄSMÄLLEEN.
+   * Kirjaston kamera kirjoittaa korkeuden liukulukuna, ja panoroinnin
+   * aikana sen viimeiset bitit heiluvat, vaikka zoomi ei muutu. Ilman
+   * porrasta kerroin oli joka ladonnalla eri luku, sijoituslukko
+   * (NIMIKYLTTI ON KIINNI KAUPUNGISSA) purkautui joka kerta, ja kyltti
+   * hyppi täsmälleen kuten ennen korjausta — mitattu Chromiumilla
+   * 14.9.2026: työpöydällä kyltti liikkui 40,5 px yhden vedon yli.
+   *
+   * Porras on SUHTEELLINEN puoli prosenttia: silmälle näkymätön
+   * (13,5 px → 13,57 px) mutta moninkertainen kameran heilahdukseen
+   * nähden, ja sama zoomitaso antaa aina saman luvun.
+   */
+  return NIMEN_KERTOIMEN_PORRAS
+    ** Math.round(Math.log(raaka) / Math.log(NIMEN_KERTOIMEN_PORRAS));
+}
+
 const SVG = 'http://www.w3.org/2000/svg';
 
 /**
@@ -178,6 +292,14 @@ export function luoNimet({
   let laatikot = [];
   let osumat = [];
   let tulos = { nimia: 0, pudotettu: 0, ehdokkaita: 0 };
+  /*
+   * LUKITUT SIJOITUKSET (ks. NIMIKYLTTI ON KIINNI KAUPUNGISSA):
+   * id → { dx, dy, ank, koko, tyylitys, vali, kerroin, sade, rs },
+   * missä `rs` on ladottu laatikko PISTEEN SUHTEEN. Vain edellisellä
+   * ladonnalla selvinneet nimet ovat mukana, joten pudonnut nimi saa
+   * palatessaan uuden sijoituksen.
+   */
+  let lukitut = new Map();
 
   /*
    * LAUTA TULEE PALLOLTA EIKÄ PELISTÄ (aalto 3A). Aineisto ladotaan
@@ -216,8 +338,12 @@ export function luoNimet({
    */
   const lado = ({
     varaukset = [], pinot = [], katto = NIMIEN_KATTO, vain = null,
-    kokoKerroin = 1, pisteSade = 0,
+    kokoKerroin: kaupunginKerroin = 1, pisteSade = 0,
+    karttaskaala = 0, vertailuskaala = 0,
   } = {}) => {
+    // Kyltti on kartan mitta, ei ruudun (ks. NIMIKYLTIT KARTTAAN).
+    const kokoKerroin = kaupunginKerroin
+      * nimenKarttakerroin(karttaskaala, vertailuskaala || NIMEN_VERTAILUSKAALA);
     const w = kotelo.clientWidth;
     const h = kotelo.clientHeight;
     if (!(w > 0) || !(h > 0) || ui.dead) return tulos;
@@ -263,11 +389,98 @@ export function luoNimet({
       && r.y0 >= -NIMEN_REUNAN_SIETO_PX
       && r.x1 <= w + NIMEN_REUNAN_SIETO_PX
       && r.y1 <= h + NIMEN_REUNAN_SIETO_PX);
+    /*
+     * LUKKO ENNEN REUNAPUDOTUSTA (ks. NIMIKYLTTI ON KIINNI
+     * KAUPUNGISSA): reunasääntö mittaa sen laatikon, joka oikeasti
+     * piirtyy, joten lukitun nimen on oltava paikallaan jo tässä.
+     *
+     * RUUDUN REUNA PURKAA LUKON. Jos lukittu kylki työntäisi nimen
+     * ruudun ulkopuolelle, nimi PUTOAISI kokonaan — sivuttain vaihtuva
+     * kyltti on pienempi paha kuin katoava. Reunalla siis vaihdetaan
+     * kylkeä kuten ennenkin (mitattu 14.9.2026: ilman tätä Pariisi
+     * katosi kesken vedon, kun sen laatikko osui ruudun laitaan), ja
+     * uusi sijoitus lukitaan tilalle.
+     */
+    const paikat = new Map(ehdokkaat.map((e) => [e.c, e]));
+    const nakyvat = new Set(ehdokkaat.map((e) => e.c.id));
+    /** Lukon laatikko nykyisessä ruutupisteessä, tai null. */
+    const lukonLaatikko = (id, e) => {
+      const lukko = lukitut.get(id);
+      if (!e || !lukko || lukko.kerroin !== kokoKerroin || lukko.sade !== pisteSade) return null;
+      if (!lukko.rs) return null;
+      return {
+        x0: e.x + lukko.rs.dx0,
+        y0: e.y + lukko.rs.dy0,
+        x1: e.x + lukko.rs.dx1,
+        y1: e.y + lukko.rs.dy1,
+      };
+    };
+    const asetaLukko = (n, lukko, r) => {
+      n.dx = lukko.dx;
+      n.dy = lukko.dy;
+      n.ank = lukko.ank;
+      n.koko = lukko.koko;
+      n.tyylitys = lukko.tyylitys;
+      n.vali = lukko.vali;
+      n.r = r ?? n.r;
+    };
+    for (const n of ladottu.nimiot) {
+      const e = paikat.get(n.c);
+      const r = lukonLaatikko(n.c.id, e);
+      if (!r || !mahtuu(r)) continue;
+      asetaLukko(n, lukitut.get(n.c.id), r);
+    }
+    /*
+     * LUKITTU NIMI EI PUTOA KESKEN VEDON. Ladonta pudottaa nimen, jos
+     * sen tuore sijoitus ei mahdu vapaaseen tilaan — ja koska ajo
+     * toistuu viisi kertaa sekunnissa, kaupungin nimi vilkkui
+     * panoroitaessa (mitattu 14.9.2026: Pariisi katosi ja palasi kahden
+     * vedon aikana kahdesti). Jo ladottu nimi on siis KIINTEÄ: se
+     * palautetaan omalle lukitulle paikalleen, kun se yhä mahtuu
+     * ruutuun eikä osu yhteenkään tämän ajon nimilaatikkoon. Muuten
+     * lukko vapautuu ja nimi ladotaan taas kerran.
+     */
+    const leikkaa = (a, b) => a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0;
+    {
+      const jo = new Set(ladottu.nimiot.map((n) => n.c.id));
+      for (const e of ehdokkaat) {
+        if (jo.has(e.c.id)) continue;
+        const lukko = lukitut.get(e.c.id);
+        const r = lukonLaatikko(e.c.id, e);
+        if (!lukko || !r || !mahtuu(r)) continue;
+        if (ladottu.nimiot.some((n) => n.r && leikkaa(n.r, r))) continue;
+        // Muu muste (nostojen ikonit, turisti-info, pelimerkit) liikkuu
+        // kartan mukana kuten kaupunkikin, joten tämä ehto ei ailahda
+        // panoroitaessa — se vain estää lukitun nimen palaamisen
+        // sellaisen päälle, joka on tullut sen paikalle zoomissa.
+        if ([...varaukset, ...pinot].some((v) => leikkaa(v, r))) continue;
+        /*
+         * BUDJETTI EI SAA SYRJÄYTTÄÄ JO LADOTTUA NIMEÄ. Nimibudjetti
+         * (ks. NIMIBUDJETTI ZOOMTASON MUKAAN) on puhelimen
+         * saapumisnäkymässä vain kourallinen, ja vedon aikana uusi
+         * ehdokas ajoi kartalla jo olevan nimen yli — kaupungin nimi
+         * välähti pois ja palasi toiselle kyljelle. Lukitut voittavat:
+         * tarvittaessa listalta putoaa sen sijaan vähäisin LUKITSEMATON
+         * nimi (ehdokasjärjestys, viimeinen on vähäisin).
+         */
+        if (ladottu.nimiot.length >= katto) {
+          const irti = [...ladottu.nimiot].reverse().find((n) => !lukitut.has(n.c.id));
+          if (!irti) continue;
+          ladottu.nimiot.splice(ladottu.nimiot.indexOf(irti), 1);
+          ladottu.pudotettu += 1;
+        }
+        const n = { c: e.c, r };
+        asetaLukko(n, lukko, r);
+        ladottu.nimiot.push(n);
+        ladottu.pudotettu = Math.max(0, ladottu.pudotettu - 1);
+      }
+    }
     const reunalta = ladottu.nimiot.length;
     ladottu.nimiot = ladottu.nimiot.filter((n) => mahtuu(n.r));
     ladottu.pudotettu += reunalta - ladottu.nimiot.length;
+    const lukot = new Map();
     const datumit = ladottu.nimiot.map((n) => {
-      const e = ehdokkaat.find((k) => k.c === n.c);
+      const e = paikat.get(n.c);
       /*
        * NIMI ON OSA KAUPUNGIN OSUMAPINTAA (omistaja 9.9.2026,
        * sanatarkasti: *"lisäksi kaupungin nimi saisi olla myös
@@ -282,6 +495,19 @@ export function luoNimet({
       const suhde = r && e ? {
         dx0: r.x0 - e.x, dy0: r.y0 - e.y, dx1: r.x1 - e.x, dy1: r.y1 - e.y,
       } : null;
+      // Sijoitus lukkoon: seuraava ladonta antaa saman paikan pisteen
+      // suhteen niin kauan kuin nimi pysyy ladottuna samoilla mitoilla.
+      lukot.set(n.c.id, {
+        dx: n.dx,
+        dy: n.dy,
+        ank: n.ank,
+        koko: n.koko,
+        tyylitys: n.tyylitys,
+        vali: n.vali,
+        kerroin: kokoKerroin,
+        sade: pisteSade,
+        rs: suhde,
+      });
       return {
         avain: `nimi:${n.c.id}`,
         laji: 'nimi',
@@ -304,6 +530,21 @@ export function luoNimet({
         asettele: asetteleNimi,
       };
     });
+    /*
+     * LUKKO SÄILYY YHDEN VÄLIIN JÄÄNEEN LADONNAN YLI. Nimi voi pudota
+     * yhdeltä ajolta (esimerkiksi kun uusi nosto ilmestyy sen paikalle)
+     * ja palata heti seuraavalla — ja jos lukko hävitettäisiin siinä
+     * välissä, paluu olisi UUSI sijoitus ja kyltti hyppäisi. Lukko
+     * pidetään siis niin kauan kuin kaupunki on yhä RUUDULLA
+     * (`paikat`); vasta näkyvistä poistuminen vapauttaa sen, ja silloin
+     * paluu on aidosti uusi saapuminen.
+     */
+    for (const [id, lukko] of lukitut) {
+      if (lukot.has(id) || !nakyvat.has(id)) continue;
+      if (lukko.kerroin !== kokoKerroin || lukko.sade !== pisteSade) continue;
+      lukot.set(id, lukko);
+    }
+    lukitut = lukot;
     nimetyt = new Set(datumit.map((d) => d.id));
     laatikot = datumit.map((d) => d.laatikko).filter(Boolean);
     osumat = datumit.filter((d) => typeof d.osuma === 'function')
@@ -339,6 +580,6 @@ export function luoNimet({
     nimetty: (id) => nimetyt.has(id),
     /** Viimeisimmän ladonnan luvut (savukkeet). */
     tulos: () => tulos,
-    unohda: () => { kaupungit = null; },
+    unohda: () => { kaupungit = null; lukitut = new Map(); },
   };
 }
