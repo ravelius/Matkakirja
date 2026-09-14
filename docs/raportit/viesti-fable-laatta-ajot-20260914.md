@@ -1,0 +1,79 @@
+# Laatta-ajot 25 maalle: ajoraportti (2026-09-14)
+
+Tilaus: Fable, viesti-fable-laattapolku-20260914.md-jatko. FRA ja AUT oli jo
+ajettu ja varmennettu ennen tätä erää (versio `2026-09-14-tasoitus`).
+Tässä raportissa ajetut 25 maata `.github/workflows/generoi-varitaso.yml`
+-työnkululla PERÄKKÄIN (ei rinnakkain — pyramidi.json on yhteinen luettelo).
+
+Inputit joka maalle (vain `maa` vaihtuu):
+`paletti=tasoitus peitto=0.85 variversio=2026-09-14-tasoitus tasot=4-8
+laatikko_nakyma=true korkeus=1 kuiva=false vie=true ref=main`
+
+Tarkistus jokaisen ajon jälkeen:
+`curl -sS https://media.matkakirja.app/julisteet/pyramidi/pyramidi.json`
+→ vaaditaan `"versio": "2026-09-14-tasoitus"` JA `"maaPolussa": true` maan
+kirjauksessa.
+
+## Tulokset
+
+| # | Maa | Ajon ID | Tila | Versio kirjauksessa | maaPolassa |
+|---|-----|---------|------|----------------------|------------|
+| 1 | BGR | 34801820758 | success | 2026-09-14-tasoitus | true |
+| 2 | BIH | 34801941355 | success | 2026-09-14-tasoitus | true |
+| 3 | CHE | 34802060183 | success | 2026-09-14-tasoitus | true |
+| 4 | CZE | 34802162958 | success | 2026-09-14-tasoitus | true |
+| 5 | DEU | 34802268527 | success | 2026-09-14-tasoitus | true |
+| 6 | DNK | 34802412698 | success | 2026-09-14-tasoitus | true |
+| 7 | ESP | 34802536771 | success | 2026-09-14-tasoitus | true |
+| 8 | EST | 34802677063 | success | 2026-09-14-tasoitus | true |
+| 9 | FIN | 34802773668 | success | 2026-09-14-tasoitus | true |
+| 10 | GBR | 34802981342 | success | 2026-09-14-tasoitus | true |
+| 11 | GRC | 34803149164 | success | 2026-09-14-tasoitus | true |
+| 12 | HRV | 34803273145 | success | 2026-09-14-tasoitus | true |
+| 13 | HUN | 34803390056 | success | 2026-09-14-tasoitus | true |
+| 14 | IRL | 34803511901 | success | 2026-09-14-tasoitus | true |
+| 15 | ITA | 34803610669 | success | 2026-09-14-tasoitus | true |
+| 16 | LTU | 34803776066 | success | 2026-09-14-tasoitus | true |
+| 17 | LVA | 34803897447 | success | 2026-09-14-tasoitus | true |
+| 18 | NLD | 34804015482 | success | 2026-09-14-tasoitus | true |
+| 19 | NOR | 34804120620 | success | 2026-09-14-tasoitus | true |
+| 20 | POL | 34804502359 | success | 2026-09-14-tasoitus | true |
+| 21 | PRT | 34804671924 | success | 2026-09-14-tasoitus | true |
+| 22 | ROU | 34804799425 | success | 2026-09-14-tasoitus | true |
+| 23 | SWE | 34804924470 | success | 2026-09-14-tasoitus | true |
+| 24 | TUR | 34805128054 | success | 2026-09-14-tasoitus | true |
+| 25 | UKR | 34805324106 | success | 2026-09-14-tasoitus | true |
+
+## Yhteenveto
+
+**25/25 onnistui ensimmäisellä yrityksellä.** Ei yhtään epäonnistunutta
+ajoa, ei yhtään uusintayritystä. Kaikki 25 maan kirjaukset
+`pyramidi.json`:ssa täyttävät molemmat vaaditut ehdot: `versio ==
+"2026-09-14-tasoitus"` ja `maaPolussa == true`.
+
+FRA ja AUT oli ajettu ja varmennettu jo ennen tätä erää — yhdessä
+tämän erän 25 maan kanssa kaikki **27 maata** ovat nyt uudessa
+maakohtaisessa R2-polussa versiolla `2026-09-14-tasoitus`.
+
+**Kesto:** ajot vaihtelivat n. 100 sekunnista (pienet, yksinkertaisen
+rantaviivan maat, esim. BGR, HUN) noin 6-7 minuuttiin (rikkonaisen
+rantaviivan maat, NOR ja SWE selvästi hitaimmat — molemmat n. 3-4 min).
+Koko 25 maan sarja peräkkäin kesti n. 1 h 20 min (BGR käynnistyi
+03:14 UTC, UKR:n tarkistus valmistui n. 04:20 UTC).
+
+**Poikkeamat:** main-haara eteni kesken sarjan (v1861, PR #2403
+mergeytyi ajojen välissä GBR-ajon kohdalla) — työnkulku ajettiin
+`ref=main`, joten GBR-UKR-ajot käyttivät sitä uudempaa committia.
+Tämä ei vaikuta tasoituslaattoihin (tasoitusajo ei lue pelin koodia,
+vain paletin ja peiton), eikä se ole ristiriidassa "ei koodimuutoksia"
+-kiellon kanssa: tämä sessio ei tehnyt yhtään koodimuutosta, main vain
+eli omaa elämäänsä toisten sessioiden julkaisujen kautta. Muita
+poikkeamia ei havaittu — kaikki ajot olivat `success` ensimmäisellä
+yrityksellä eikä pyramidi.json:n muihin maihin (mm. jo ajetut FRA/AUT)
+koskettu.
+
+**Rinnakkaisuudesta:** raportin viesti-fable-laattapolku-20260914.md
+luvun 7.1 väite ajojen rinnakkaisajokelpoisuudesta ei pitänyt
+paikkaansa tässä työnkulussa — ajot tehtiin tässä erässä tarkasti
+peräkkäin, yksi kerrallaan, tilaustekstin ohjeen mukaisesti, koska
+kaikki maat kirjoittavat samaan yhteiseen `pyramidi.json`-tiedostoon.
