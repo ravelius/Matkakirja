@@ -446,19 +446,10 @@ function taytaKortti(el, d) {
 
     const rivit = kortti.querySelector('.maapaneeli-rivit');
     rivit.textContent = '';
-    /*
-     * SIJALUKU SIIRTYI OSOITTIMEN ALLE (erä 11). Kartussin arvopalsta
-     * on neljäsosaan kutistuttua MITATUSTI 48 px, ja pisimmät rivit
-     * ("0,65 · V-Dem 57.", "310 000 km² 69.") ovat 57 ja 53 px: jompi
-     * kumpi oli pakko jättää pois. Sijaluku on koriste, ARVO on se,
-     * mitä omistaja lukee — ja tehtävänanto nimeää juuri sijaluvun
-     * tiivistettäväksi. Luku ei katoa: se on rivin `title`issä ja
-     * kokonaisuudessaan maalehdessä.
-     */
     for (const [otsikko, arvo, lisa] of d.rivit) {
       rivit.appendChild(luo('dt', 'maapaneeli-otsikko', otsikko));
       const dd = luo('dd', 'maapaneeli-arvo', arvo);
-      if (lisa) dd.title = `${otsikko}: ${arvo} — sija ${lisa}`;
+      if (lisa) dd.appendChild(luo('span', 'maapaneeli-sija', lisa));
       rivit.appendChild(dd);
     }
     /*

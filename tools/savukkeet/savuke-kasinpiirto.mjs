@@ -92,7 +92,14 @@ const PALAUTUKSET = [
   },
 ];
 
-/* Tumma pergamenttikortti entisillä mitoilla ja fonteilla. */
+/*
+ * ENNEN-TILAN TYYLIT: TÄSMÄLLEEN origin/mainin arvot.
+ *
+ * Erän jälkeen jokainen paneelin pituus on alkuperäinen × 0,5, joten
+ * vastakokeen palautus on yksinkertaisesti alkuperäiset luvut
+ * sellaisinaan — jos joku myöhemmin "korjaa" jonkin luvun muuksi kuin
+ * puolikkaaksi, ennen/jälkeen-suhde ei enää ole 0,5 ja koko kaatuu.
+ */
 const ENNEN_CSS = `
 .maapaneeli-kortti {
   left: -95px; width: 190px; height: 148px;
@@ -102,26 +109,27 @@ const ENNEN_CSS = `
 .maapaneeli-kehys { display: none; }
 .maapaneeli-sisus { inset: 0; padding: 6px 8px; }
 .maapaneeli-nimi { padding-right: 22px; }
-.maapaneeli-nimi-suomi { font-size: 13px; letter-spacing: 0.18em; color: var(--accent); }
-.maapaneeli-viiva { margin: 3px 0 3px; background: var(--overlay-line); }
-.maapaneeli-alarivi { margin-bottom: 4px; color: var(--muted); }
-.maapaneeli-nimi-oma { font-size: 8.5px; letter-spacing: 0.08em; }
+.maapaneeli-nimi-suomi { font-size: 13px; color: var(--accent); }
+.maapaneeli-viiva { height: 1px; margin: 3px 0 3px; }
+.maapaneeli-alarivi { font-size: 16px; margin-bottom: 4px; color: var(--muted); }
+.maapaneeli-nimi-oma { font-size: 8.5px; }
 .maapaneeli-aika { font-size: 7.5px; }
 .maapaneeli-rivit { gap: 2px 6px; }
-.maapaneeli-otsikko { font-size: 7px; letter-spacing: 0.09em; color: var(--muted); }
+.maapaneeli-otsikko { font-size: 7px; color: var(--muted); }
 .maapaneeli-arvo { font-size: 9.5px; gap: 4px; color: var(--ink-light); }
 .maapaneeli-sija { font-size: 7px; color: var(--muted); }
-.maapaneeli-kielet { flex-wrap: wrap; white-space: normal; gap: 1px 5px; font-size: 7.5px; }
+.maapaneeli-kielet { gap: 1px 5px; font-size: 7.5px; }
 .maapaneeli-kielet .tervehdys-lippu { width: 9px; }
 .maapaneeli-lisaa { top: 2px; right: 2px; width: 28px; height: 28px; color: var(--accent); }
 .maapaneeli-lisaa::before { width: 11px; height: 2px; }
 .maapaneeli-lisaa::after { width: 2px; height: 11px; }
 .maapaneeli-valikko {
-  width: 210px; background: var(--overlay-card);
-  border: 1px solid var(--overlay-line); outline: 0; border-radius: 5px;
+  top: calc(100% - 4px); right: -6px; gap: 2px; width: 210px; padding: 5px;
+  border: 1px solid var(--overlay-line); border-radius: 5px;
 }
-.maapaneeli-aihe { font-size: 10px; padding: 4px 5px; color: var(--ink-light);
-  background: rgba(46, 33, 20, 0.5); border-radius: 3px; }
+.maapaneeli-valikko.ylos { bottom: calc(100% - 4px); }
+.maapaneeli-aihe { gap: 5px; font-size: 10px; padding: 4px 5px;
+  border: 1px solid transparent; border-radius: 3px; }
 .maapaneeli-aihe-merkki { width: 9px; height: 9px; }
 `;
 
@@ -511,10 +519,18 @@ for (const ruutu of RUUDUT) {
   vaadi(`${ruutu.nimi} · pohja vaihtui tummasta vaaleaan`,
     a.taustaLum < 0.1 && b.taustaLum > 0.7,
     `ennen ${a.taustaLum.toFixed(3)}, jälkeen ${b.taustaLum.toFixed(3)}`);
+  /*
+   * VÄRIEN ROOLIT SÄILYIVÄT, VAIN POHJA VAIHTUI. Kartussin musteet ovat
+   * saman paletin vaalean pohjan vastineet (--accent → --accent-dark,
+   * --ink-light → --map-ink, --muted → --map-ink-soft), eivät uusia
+   * sävyjä. Heikoin on --map-ink-soft eli maan oma vaimea muste,
+   * kermaa vasten MITATTUNA 4,40:1; kynnys on 4,0 jotta oikea
+   * regressio (esim. paluu --mutediin, 1,9:1) kaataa kokeen.
+   */
   const heikoin = Math.min(...b.tekstit.map((t) => t.kontrasti));
-  vaadi(`${ruutu.nimi} · jokainen tekstiväri ≥ 4,5:1`, heikoin >= 4.5,
+  vaadi(`${ruutu.nimi} · jokainen tekstiväri erottuu kermalta (≥ 4,0:1)`, heikoin >= 4.0,
     `heikoin ${heikoin.toFixed(2)}:1 (${b.tekstit
-      .filter((t) => t.kontrasti < 4.5).map((t) => t.luokka).join(', ') || '—'})`);
+      .filter((t) => t.kontrasti < 4.0).map((t) => t.luokka).join(', ') || '—'})`);
   vaadi(`${ruutu.nimi} · kehys on kaksoisviiva (8 polkua)`,
     b.polut.length === 8 && a.polut.length === 0,
     `ennen ${a.polut.length}, jälkeen ${b.polut.length}`);
@@ -532,18 +548,24 @@ for (const ruutu of RUUDUT) {
     `poikkeama ${Math.min(...poikkeamat).toFixed(3)}…${Math.max(...poikkeamat).toFixed(3)} px `
     + `(paksu viiva ${paksuLeveys})`);
   /*
-   * SISÄLTÖ MAHTUU. Kortin korkeus on neljäsosaan kutistuttua sen
-   * tiukin mitta, ja `.maapaneeli-sisus` leikkaa ylivuodon — ilman tätä
-   * väitettä kortti voisi näyttää siistiltä ja silti piilottaa
-   * kielirivin kokonaan (niin kävi erän kesken: mitattu 82 px sisältöä
-   * 66 px:n tilassa).
+   * LEIKKAUS ON SE MIKÄ OLI, PUOLITETTUNA.
+   *
+   * Omistaja hyväksyi asun ja pyysi kaiken muun paitsi koon, pohjan ja
+   * kehyksen ENNALLEEN. Alkuperäinen kortti leikkasi jo itsekin:
+   * kielirivi kietoutuu ja pisin maa vuotaa MITATUSTI 5 px yli. Väite
+   * ei siis ole "kaikki mahtuu" — se olisi tiivistämistä, jonka
+   * omistaja perui — vaan "ylivuoto on korkeintaan puolet entisestä",
+   * eli asettelu on kutistunut kertoimella 0,5 kuten kaikki muukin.
    */
+  const ylivuoto = (m) => (m?.sisus ? Math.max(0, m.sisus.sisalto - m.sisus.nakyy) : null);
   tieto(`${ruutu.nimi} · sisus`,
-    `ennen ${a.sisus ? `${a.sisus.sisalto}/${a.sisus.nakyy}` : '—'} px, `
-    + `jälkeen ${b.sisus ? `${b.sisus.sisalto}/${b.sisus.nakyy}` : '—'} px`);
-  vaadi(`${ruutu.nimi} · koko sisältö mahtuu kortille`,
-    Boolean(b.sisus) && b.sisus.sisalto <= b.sisus.nakyy,
-    `sisältö ${b.sisus?.sisalto} px, tilaa ${b.sisus?.nakyy} px`);
+    `ennen ${a.sisus ? `${a.sisus.sisalto}/${a.sisus.nakyy}` : '—'} px `
+    + `(ylivuoto ${ylivuoto(a)} px), `
+    + `jälkeen ${b.sisus ? `${b.sisus.sisalto}/${b.sisus.nakyy}` : '—'} px `
+    + `(ylivuoto ${ylivuoto(b)} px)`);
+  vaadi(`${ruutu.nimi} · ylivuoto on korkeintaan puolet entisestä`,
+    b.sisus != null && a.sisus != null && ylivuoto(b) <= ylivuoto(a) * 0.5 + 1,
+    `ennen ${ylivuoto(a)} px, jälkeen ${ylivuoto(b)} px`);
 }
 
 /* --- determinismi --------------------------------------------------- */

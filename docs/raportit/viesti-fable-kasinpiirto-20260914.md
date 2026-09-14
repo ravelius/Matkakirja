@@ -1,6 +1,6 @@
-# Viesti Fablelle: maapaneeli neljäsosaan ja sen kehys käsinpiirretyksi
+# Viesti Fablelle: maapaneeli neljäsosaan, kermapohja ja käsinpiirretty kehys
 
-**Erä:** karttauudistus erä 11 (Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 7)
+**Erä:** karttauudistus erä 11 (Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 7), rajattu omistajan kahdella perumisella 14.9.2026
 **Haara:** `claude/era-kasinpiirto` (haarautettu Raamattu-haarasta
 `claude/matkakirja-paatoimitus-raamattu-p7`, `origin/main` mergetty mukaan)
 **Päivä:** 14.9.2026
@@ -13,32 +13,89 @@ nakoinen. esim paksumpi ja sitten ulompi ohuempi viiva tai minkalainen se vain
 oli vanhoissa kartoissa. selvita tarkkaan ja toteuta"* — ja kortilla
 *"Koko paneeli neljasosaan"*.
 
-**RAJAUS SAMANA PÄIVÄNÄ** (omistaja, sanatarkasti): *"ei tehda maan
-aariviivaan kaksoisviivaa. eli keskeyta koko maa aariviiva projekti. pidetaan
-se vain sen maa infopalikan piirtamiseen."* Kartan punainen maan raja jää siis
-**täysin ennalleen**, ja kaksoisviiva koskee vain maapaneelin kehystä.
+**RAJAUS 1 (omistaja 14.9.2026, sanatarkasti):** *"ei tehda maan aariviivaan
+kaksoisviivaa. eli keskeyta koko maa aariviiva projekti. pidetaan se vain sen
+maa infopalikan piirtamiseen."* Kartan punainen maan raja jää **täysin
+ennalleen**, ja kaksoisviiva koskee vain maapaneelin kehystä.
+
+**RAJAUS 2 (omistaja 14.9.2026 kuvat nähtyään, sanatarkasti):** *"julkaise
+noin, mutta muuta teksti tyylit ja kaikki muut takaisin siihen mita ne oli
+alunperin. sinun piti vain lisata kehys"*. Erässä on siis enää **kolme**
+muutosta: paneelin koko puoleen, kerman värinen pohja ja käsinpiirretty
+kaksoisviivakehys. Kaikki muu — typografia, värit, asettelu, sisältö,
+Lisää-valikko — on alkuperäinen, vain samalla 0,5:n kertoimella pienempänä.
 
 ---
 
-## 0. Mitä jouduin palauttamaan
+## 0. Mitä palautettiin
 
-Rajan kaksoisviiva oli ehtinyt valmiiksi ennen perumista. Palautettu
-kokonaan:
+### 0a. Rajaus 1 — maan ääriviiva (peruttu kokonaan)
 
-- `js/pallovektorit.js` — `korostusOhut`-materiaali ja -olio, `kasinpiirronMitat`,
-  tiheyskynnys rajan uudelleenrakennukselle. **Palautettu `git checkout`illa,
-  tiedosto on bitilleen sama kuin `origin/main`issa.**
-- `tests/maakorostus.test.mjs` — kaksoisviivan mukaan päivitetty lähdetekstiväite.
-  **Palautettu, tiedosto on ennallaan.**
+- `js/pallovektorit.js` — `korostusOhut`-materiaali ja -olio,
+  `kasinpiirronMitat`, tiheyskynnys rajan uudelleenrakennukselle.
+  **Palautettu `git checkout`illa, tiedosto on bitilleen sama kuin
+  `origin/main`issa.**
+- `tests/maakorostus.test.mjs` — kaksoisviivan mukaan päivitetty
+  lähdetekstiväite. **Palautettu, tiedosto on ennallaan.**
 - `js/kasinpiirto.js` — rengaspari (`kasirengas`, `kasirenkaat`) ja sen
-  suhdelukujen muunnos asteiksi poistettu moduulista. Jäljellä on vain kehys.
+  suhdelukujen muunnos asteiksi poistettu. Jäljellä on vain kehys.
 - Savukkeesta poistettu rajan väitteet, Norjan ja Italian kaappaukset,
-  rajaviivan lähikuva ja piirtoajan mittaus.
-- `docs/raportit/kuvat/` — Norjan, Italian ja rajaviivan kuvat poistettu, ei
-  committoitu.
+  rajaviivan lähikuva ja piirtoajan mittaus; kuvat poistettu eikä committoitu.
 
 `js/maanaariviivat.js`, `js/maatummennus.js` ja `js/pallolauta/lauta.js` eivät
-ole koko erän aikana olleet muutettuina. Vahvistus lopussa (luku 7).
+ole koko erän aikana olleet muutettuina.
+
+### 0b. Rajaus 2 — kaikki muu paitsi koko, pohja ja kehys
+
+Kävin oman diffini rivi riviltä läpi. Palautettu alkuperäiseksi (kaikki
+pituudet × 0,5, koska paneeli on puolet pienempi):
+
+| Palautettu | Alkuperäinen → nyt | Erän kesken ollut (nyt poistettu) |
+|---|---|---|
+| **Sijaluku kortille** | `<span class="maapaneeli-sija">` | oli siirretty rivin `title`-attribuuttiin |
+| Maan nimi | 13 px, `letter-spacing: 0.18em` → 6,5 px, 0.18em | 9 → 8,5 px, `letter-spacing: 0.10em` |
+| Alarivin oma nimi | 8,5 px → 4,25 px | 6 px |
+| Alarivin valtiomuoto | 7,5 px → 3,75 px | 6 px |
+| Lukurivin otsikko | 7 px, `letter-spacing: 0.09em` → 3,5 px, 0.09em | 5,8 px, `letter-spacing: 0`, oma `line-height` |
+| Lukurivin arvo | 9,5 px, `display: flex`, `gap: 4px` → 4,75 px, flex, 2 px | 6,2 px, `display: block`, `text-overflow: ellipsis`, oma `line-height` |
+| Sijaluku | 7 px → 3,5 px | 5,8 px + `margin-left` |
+| Kielirivi | `flex-wrap: wrap`, `white-space: normal`, 7,5 px → wrap, normal, 3,75 px | `nowrap`, ellipsis, 6,2 px + `.tervehdys { display: inline }` + `.tervehdys img { display: inline }` + `.tervehdys-osuus/.fokus-kieli-tarkenne { font-size: 1em }` |
+| Kielirivin lippu | 9 px → 4,5 px | 6 px |
+| Alleviivaus | koko leveys → koko leveys | `width: calc(100% - 15px)` |
+| Rivien väli | `gap: 2px 6px` → 1px 3px | 0,5px 2px |
+| Sisuksen pehmuste | `padding: 6px 8px` → 4px 4,5px | `inset: 4px; padding: 1px` |
+| Otsakkeen pehmuste | 22 px → 11 px | 15 px |
+| Plus-nappi | 28 × 28 px, merkki 11 × 2 px → 14 × 14, 5,5 × 1 | 18 × 18, merkki 7 × 1,4 |
+| Kortin pyöristys | `border-radius: 5px` → 2,5 px | 0 |
+| **Lisää-valikko** | tumma `--overlay-card`, `1px solid --overlay-line`, radius 5 px, leveys 210 px, rivit 10 px → kaikki × 0,5, värit ennallaan | kerma, CSS-kaksoisviiva `outline`illa, radius 0, leveys 160 px, rivit 9 px |
+
+`MAAPANEELIN_SKAALA_MIN` (0,45) ja `MAAPANEELIN_SKAALA_MAX` (3) ovat ennallaan
+— niihin ei koskettu missään vaiheessa.
+
+### 0c. Kolme kohtaa, joissa alkuperäistä arvoa ei voinut kopioida sellaisenaan
+
+Nämä on kirjattu erikseen, koska ne eivät ole suoria puolikkaita:
+
+1. **`.maapaneeli-sisus` pystypehmuste 4 px eikä 3,5 px.** Alkuperäinen sisus
+   alkoi 6 px pehmusteen + 1 px reunuksen päästä eli 7 px kortin reunasta;
+   puolikas olisi 3,5 px. Kehyksen syvyys on ohut + väli + paksu = 0,49 +
+   1,35 + 1,9 = **3,74 px**, joten teksti olisi mennyt kehyksen alle.
+   Pystypehmuste on siis 4 px — **+0,26 px**, ja se on kehyksen (kohta 3)
+   vaatima. Vaakapehmuste 4,5 px on tarkka puolikas (8 + 1 = 9 → 4,5) ja
+   riittää kehykselle sellaisenaan.
+2. **`.maapaneeli-alarivi { font-size: 8px }` on uusi rivi, ei uusi tyyli.**
+   Rivillä ei ollut omaa fonttikokoa, joten se peri kortin 16 px:n koon ja sen
+   rivilaatikko oli MITATTUNA 18,4 px korkea. Peritty koko ei ole paneelin oma
+   luku eikä olisi puolittunut muiden mukana, jolloin rivi olisi vienyt
+   puolikkaalla kortilla kaksinkertaisen osuuden korkeudesta. 8 px × 1,15 =
+   9,2 px on täsmälleen puolet alkuperäisestä rivilaatikosta.
+3. **Musteiden sävyt.** Kartussin pohja on kermaa (kohta 2), eivätkä tummalle
+   pohjalle tehdyt musteet näy vaalealla (`--ink-light` kermalla 1,1:1).
+   Sävyt vaihtuvat SAMAN paletin vaalean pohjan vastineisiin roolista
+   tinkimättä: `--accent` → `--accent-dark` (otsikko ja plus pysyvät okrana),
+   `--ink-light` → `--map-ink` (luvut pysyvät musteena), `--muted` →
+   `--map-ink-soft` (pikkuotsikot pysyvät vaimeina). Alleviivaus jää
+   `--overlay-lineksi`, se näkyy kermalla sellaisenaan. Uusia värejä ei ole.
 
 ---
 
@@ -223,7 +280,8 @@ Toteutus: `MAAPANEELIN_LEVEYS_PX` 190 → 95, `KORKEUS_PX` 148 → 74,
 `LEVEYS_OSUUS` 0,35 → 0,175, `KORKEUS_OSUUS` 0,42 → 0,21. Kaikki neljä on
 muutettava yhdessä: peruskoko px:nä määrää vain ruutuskaalan ja osuus vain
 lautamitan; jompikumpi yksin joko kutistaisi kortin ruudulla ja kasvattaisi sen
-kartalla tai päinvastoin. Nyt `perusta` (0,175/95 = 0,35/190) on ennallaan.
+kartalla tai päinvastoin. Nyt `perusta` (0,175/95 = 0,35/190) on ennallaan,
+samoin `MAAPANEELIN_SKAALA_MIN` (0,45) ja `_MAX` (3).
 
 Puhelimen ABSOLUUTTILUVUT vaihtelevat ajojen välillä (mitattu 167,1 × 130,1 ja
 119,0 × 92,7 samalla koodilla): saapumisrajaus päätyy hieman eri korkeuteen sen
@@ -236,73 +294,62 @@ aiheuttama.
 Paksu sisempi **1,9 px**, väli **1,35 px** (0,71 ×), ohut ulompi **0,49 px**
 (0,26 ×) — kortin peruskoossa, eli ruudulla kerrottuna skaalalla (0,45–3,0).
 Sivukohtainen leveysheitto ±6,5 % (mitattu, luku 1b), mitattu horjunta polkujen
-suurimpana poikkeamana suorasta jänteestä **0,18–0,33 px**,
-eli alle paksun viivan leveyden joka sivulla.
+suurimpana poikkeamana suorasta jänteestä **0,18–0,33 px**, eli alle paksun
+viivan leveyden joka sivulla.
 
 Suhteet ovat mitatut; itse mittakaava on tarkoituksella liioiteltu — Stielerin
 arkilla kehyksen syvyys on 0,37 % arkin leveydestä, mikä 95 px:n kortilla olisi
 0,35 px eli näkymätön. Kartussin kehys samalla arkilla on 0,93 % kartussin
 leveydestä; meillä 4,0 %.
 
-### Tekstit
+### Tekstit — alkuperäiset tyylit, puolitettuina
 
-| | ENNEN | JÄLKEEN |
+Jokainen fonttikoko on alkuperäinen × 0,5. Mitään ei tiivistetty eikä yhtään
+alarajaa lisätty (omistaja hyväksyi tekstin pienuuden).
+
+| | ENNEN | JÄLKEEN (= ENNEN × 0,5) |
 |---|---|---|
-| Pienin fontti PERUSKOOSSA | 7,0 px (`.maapaneeli-otsikko`) | **5,8 px** (sama) |
-| Pienin fontti ruudulla, Puola 2560 px | 13,97 css-px | **13,27 css-px** |
-| Pienin fontti ruudulla, puhelin 390 px | 4,38 css-px | **3,63 css-px** |
-| Heikoin tekstikontrasti | 1,31 : 1 | **4,99 : 1** |
+| Maan nimi | 13 px | 6,5 px |
+| Lukurivin arvo | 9,5 px | 4,75 px |
+| Alarivin oma nimi | 8,5 px | 4,25 px |
+| Alarivin valtiomuoto / kielirivi | 7,5 px | 3,75 px |
+| Lukurivin otsikko / sijaluku | 7 px | 3,5 px |
+| Kieliosan tarkenne (`.tervehdys-osuus`, 0,78 em) | 5,85 px | **2,925 px** |
 
-Peruskoko putosi 7,0 → 5,8 px eli 17 %, vaikka kortti kutistui 50 %
-molemmista mitoistaan. Loppu tehtiin TIIVISTÄMÄLLÄ ESITYSTAPAA, ei fonttia:
+**Pienin fonttikoko uudelleen mitattuna palautusten jälkeen:** peruskoossa
+**2,925 px** (`.tervehdys-osuus`, maalehden oma 0,78 em kielirivin 3,75 px:stä).
+Ruudulla:
 
-- **Sijaluku pois kortilta** (tehtävänannon oma ehdotus). Arvopalstalle jää
-  48 px, ja pisimmät rivit sijalukuineen ovat MITATTUNA 53–58 px: sijaluku oli
-  joko jätettävä pois tai katkaistava keskeltä lukua. Luku on nyt rivin
-  `title`issä ja kokonaisuudessaan maalehdessä.
-- **Kielirivi ei enää kietoudu** vaan katkeaa kolmella pisteellä. Kortin
-  korkeus on nyt sen tiukin mitta, ja kietoutunut rivi jäi kokonaan
-  leikkauksen alle.
-- **Rivilaatikot 1,15 → 1,05** ja otsikon kirjainvälistys 0,09 em → 0.
-  Välistys vei MITATUSTI 3,8 px "DEMOKRATIA"-rivin leveydestä.
-- **Alariville oma fonttikoko.** Se peri kortin 16 px:n koon, jolloin sen
-  rivilaatikko oli MITATTUNA 18,4 px korkea 6 px:n tekstille — neljäsosa koko
-  kortin korkeudesta hukkaan.
-- **Kieliosat samankokoisiksi.** Maalehden `.tervehdys-osuus` ja
-  `.fokus-kieli-tarkenne` ovat 0,78 em, mikä kartussissa olisi ollut 4,84 px
-  peruskokoa.
-- **Kielirivin lippu inline-kuvaksi.** Maalehden `.tervehdys img` on
-  `display: block`, ja lohkotason lippu pakotti rivinvaihdon keskelle
-  kielilistaa — lippu putosi omalle rivilleen ja jäi leikkauksen alle.
+| Näkymä | ENNEN | JÄLKEEN |
+|---|---|---|
+| Puola 2560 × 1352 (skaala 2,00 → 2,29) | 11,68 css-px | **6,69 css-px** |
+| Puola 390 × 844, dpr 2 (skaala 0,626) | 3,66 css-px | **1,83 css-px** |
+| Lähikuvaruutu 1280 × 720 (skaala 1,01 → 1,15) | 5,88 css-px | **3,37 css-px** |
 
-Mitattu lopputulos: koko sisältö (otsake, kartussin alarivi, viisi lukuriviä
-kielirivi mukaan lukien) mahtuu 87 × 66 px:n sisukseen ilman leikkausta —
-`scrollHeight` 66 = `clientHeight` 66. Savuke vartioi tätä omana väitteenään.
+Luvut ovat tasan puolet entisistä, kuten kaikki muukin. Omistaja tietää
+tekstin pienuuden ja sanoi *"julkaise noin"*; en lisännyt fonttikoon alarajaa,
+en tiivistänyt sisältöä enkä muuttanut `MAAPANEELIN_SKAALA_MIN`-arvoa.
 
-**Puhelimen pienin luku on tämän erän heikoin kohta ja se on kirjattava
-sellaisenaan.** Se on uloimman zoomin luku, ja se vaihtelee saapumisrajauksen
-mukana: mitattu 3,63 css-px (skaala 0,626) ja 5,10 css-px (skaala 0,879).
-ENNEN-luvut samoilla rajauksilla olivat 4,38 ja 5,14 css-px, eli suhteellinen
-muutos on −17 % kuten peruskoossakin. Paneelin luo pannataan ja zoomataan
-(PÄÄTÖKSET 2), jolloin skaala nousee 3,0:aan asti. Jos omistaja haluaa lattian
-ylemmäs, säädin on `MAAPANEELIN_SKAALA_MIN` (nyt 0,45) — sitä EI nostettu
-tässä erässä, koska se kasvattaisi paneelia uloimmalla zoomilla eli juuri
-siinä näkymässä, jota omistaja pyysi pienentämään.
+**Leikkaus on sekin entinen, puolitettuna.** Alkuperäinen kortti leikkaa jo
+itse: kielirivi kietoutuu ja Puolan kolme kieltä vuotavat MITATUSTI 5 px yli
+(151 px sisältöä 146 px:n tilassa). Puolitettuna ylivuoto on 3 px (77/74) eli
+alle puolet entisestä. Savuke vartioi juuri tätä suhdetta — ei sitä, että
+kaikki mahtuisi, koska se olisi juuri sitä tiivistämistä, jonka omistaja perui.
 
 ### Kontrastit vaaleaa kermaa vasten (`--kerma` #faf4d6)
 
-| Väri | Käyttö | Kontrasti |
+| Väri | Rooli (sama kuin ennen) | Kontrasti |
 |---|---|---|
-| `--map-ink` #46331f | maan nimi, luvut, plus-merkki | **10,8 : 1** |
-| `--accent-dark` #8a6114 | pikkuotsikot, alarivi | **4,99 : 1** |
+| `--map-ink` #46331f (ennen `--ink-light`) | luvut, plus-merkin hover | **10,8 : 1** |
+| `--accent-dark` #8a6114 (ennen `--accent`) | maan nimi, plus-merkki | **4,99 : 1** |
+| `--map-ink-soft` #8a6c46 (ennen `--muted`) | pikkuotsikot, sijaluku, alarivi | **4,40 : 1** |
 
-Kaikki ≥ 4,5 : 1 (WCAG AA normaalille tekstille). `--map-ink-soft` (#8a6c46)
-olisi jäänyt 4,40 : 1 eikä sitä käytetä. Pohjaväri EI ole uusi: #faf4d6 on
-pelin oma kerma (`tools/fokuskartta/piirto.js` KERMA ja
-`js/laattapyramidi.js`), sama sävy jolla muut maat tasoitetaan
-(PÄÄTÖKSET 4). Se vain nostettiin CSS-muuttujaksi `--kerma`.
-
----
+Heikoin on 4,40 : 1 eli maan oma vaimea muste, sama rooli kuin alkuperäisellä
+`--mutedilla`. Se jää WCAG AA:n 4,5:n alle; en nostanut sitä, koska se olisi
+ollut uusi tyylivalinta eikä alkuperäisen palautus. Pohjaväri EI ole uusi:
+#faf4d6 on pelin oma kerma (`tools/fokuskartta/piirto.js` KERMA ja
+`js/laattapyramidi.js`), sama sävy jolla muut maat tasoitetaan (PÄÄTÖKSET 4).
+Se vain nostettiin CSS-muuttujaksi `--kerma`.
 
 ## 4. Savuke ja vastakoe
 
@@ -325,21 +372,29 @@ kytkintä. Ero numeroina:
 |---|---|---|
 | Kehyspolkuja kortissa | 0 | **8** (4 ohutta + 4 paksua) |
 | Kortin taustan luminanssi | 0,017 | **0,899** |
-| Heikoin tekstikontrasti | 1,31 : 1 | **4,99 : 1** |
+| Heikoin tekstikontrasti | 1,31 : 1 | **4,40 : 1** |
 | Paneelin osuus maan laatikosta | 0,3500 | **0,1750** |
-| Sisällön korkeus / kortin tila | 146 / 146 px | **66 / 66 px** |
+| Paneeli ruudulla (2560 px) | 379,3 × 295,5 css-px | **217,4 × 169,3** |
+| Paneeli ruudulla (puhelin) | 119,0 × 92,7 css-px | **59,5 × 46,3** |
+| Sisältö / kortin tila (ylivuoto) | 151 / 146 px (5 px) | **77 / 74 px (3 px)** |
 
 Jokainen väite 1–3 kaatuu "ennen"-tilassa, eli ne mittaavat oikeasti tätä erää.
+Vastakokeen ENNEN-tyylit ovat täsmälleen `origin/mainin` arvot, joten jos joku
+myöhemmin "korjaa" jonkin paneelin luvun muuksi kuin alkuperäisen puolikkaaksi,
+koko- ja ylivuotoväitteet kaatuvat.
 
 ### Kuvat
 
 `docs/raportit/kuvat/` — ENNEN/JÄLKEEN-pareina samasta kuvaikkunasta:
 
-- `kasinpiirto-puola-levea-ennen.png` / `-jalkeen.png` (2560 × 1352, sama
-  näkymä kuin omistajan kuvakaappauksessa)
-- `kasinpiirto-puola-puhelin-ennen.png` / `-jalkeen.png` (390 × 844, dpr 2)
-- `kasinpiirto-lahikuva-kehys-ennen.png` / `-jalkeen.png` (kortin vasen
-  ylänurkka — kaksoisviivan ja jiirinurkan näkee tästä)
+- `docs/raportit/kuvat/kasinpiirto-puola-levea-ennen.png` / `-jalkeen.png`
+  (2560 × 1352, sama näkymä kuin omistajan kuvakaappauksessa)
+- `docs/raportit/kuvat/kasinpiirto-puola-puhelin-ennen.png` / `-jalkeen.png`
+  (390 × 844, dpr 2)
+- `docs/raportit/kuvat/kasinpiirto-lahikuva-kehys-ennen.png` / `-jalkeen.png`
+  (kortin vasen ylänurkka — kaksoisviivan ja jiirinurkan näkee tästä)
+
+Kaikki kuusi on kaapattu UUDELLEEN palautusten jälkeen.
 
 Lähikuvat ovat omasta ajostaan (1280 × 720, laitepikselisuhde **4**):
 kaksoisviiva on ruudulla yhteensä noin neljä css-pikseliä, eikä 1:1-kaappaus
@@ -355,7 +410,7 @@ Mittauksiin se ei vaikuta.
 
 | Portti | Tulos |
 |---|---|
-| `npm test` | **# pass 3354, # fail 0** (main mergettyna) |
+| `npm test` | **# pass 3354, # fail 0** |
 | `node tools/tarkista-kaksoisavaimet.mjs` | ei kaksoisavaimia |
 | `node tools/tarkista-niputus.mjs` | niputus kunnossa, ei törmäyksiä |
 | `node tools/tarkista-savukkeet.mjs` | savukkeet kunnossa |
@@ -367,6 +422,11 @@ Mittauksiin se ei vaikuta.
 
 - **Maan ääriviivaan ei koskettu.** Omistaja perui sen 14.9.2026; kartan
   punainen raja on rivilleen sama kuin `origin/main`issa.
+- **Typografiaa, värirooleja, asettelua, sisältöä eikä Lisää-valikkoa ei
+  muutettu.** Ne ovat alkuperäisiä, vain kerrottuna 0,5:llä (luku 0b).
+- **Fonttikoon alarajaa ei lisätty, sisältöä ei tiivistetty,
+  `MAAPANEELIN_SKAALA_MIN`-arvoa ei muutettu** — omistaja hyväksyi tekstin
+  pienuuden sanoilla *"julkaise noin"*.
 - **Värinauhaa (border wash) ei toteutettu.** Mitat ovat luvussa 1c talteen
   kirjattuina, jos asia palaa.
 - **Viivan leveyden vaihtelu pituussuunnassa** toteutettiin sivukohtaisena
@@ -384,15 +444,15 @@ Mittauksiin se ei vaikuta.
    paneelin mukaan laatikkoon, paneelin koon muutos muuttaa myös kameran
    rajausta. Jos omistaja haluaa tasan neljäsosan myös leveällä ruudulla, se
    vaatii kameran rajauksen irrottamisen paneelista — oma päätöksensä.
-2. **Lisää-valikko on nyt kortin kokoon nähden iso** (160 px vs. kortin 95 px
-   peruskoko). Valikon tekstin oli pakko pysyä luettavana (9 px), joten sitä ei
-   kutistettu kortin mukana.
-3. **Puhelimen pienin teksti on uloimmalla zoomilla 3,6–5,1 css-px**
-   saapumisrajauksesta riippuen. `MAAPANEELIN_SKAALA_MIN` on säädin, jos
-   omistaja haluaa lattian ylemmäs.
-4. **Sijaluku ei enää näy kortilla** (vain `title`issä ja maalehdessä). Jos
-   omistaja kaipaa sitä, kortti tarvitsee joko lisää leveyttä tai lyhyemmät
-   otsikot.
+2. **Heikoin tekstikontrasti on 4,40 : 1** (`--map-ink-soft` kermalla), eli
+   juuri WCAG AA:n alle. Sävy on alkuperäisen `--mutedin` vaalean pohjan
+   vastine; sen tummentaminen olisi ollut uusi tyylivalinta.
+3. **Puhelimen pienin teksti on uloimmalla zoomilla 1,83 css-px**
+   (`.tervehdys-osuus`, maalehden 0,78 em kielirivin 3,75 px:stä). Tämä on
+   alkuperäisen 3,66 css-px:n puolikas. `MAAPANEELIN_SKAALA_MIN` on säädin,
+   jos omistaja joskus haluaa lattian ylemmäs.
+4. **Kortti leikkaa kolmikielisen maan viimeisen kielirivin** (ylivuoto 3 px).
+   Sama tapahtui alkuperäisellä kortilla (5 px).
 
 ---
 
@@ -400,12 +460,13 @@ Mittauksiin se ei vaikuta.
 
 | Tiedosto | Muutos |
 |---|---|
-| `js/kasinpiirto.js` | **uusi** — mitatut suhdeluvut, deterministinen aalto, kehyspolut |
-| `js/pallolauta/maapaneeli.js` | peruskoot ja osuudet puoleen, SVG-kehyksen piirto maan vaihtuessa, sijaluku `title`iin |
-| `css/styles.css` | `--kerma` paletiksi, kartussin vaalea asu ja uudet mitat, valikon kaksoisviiva |
-| `sw.js` | `js/kasinpiirto.js` SHELLiin |
-| `tools/savukkeet/savuke-kasinpiirto.mjs` | **uusi** savuke vastakokeineen |
-| `docs/raportit/kuvat/kasinpiirto-*.png` | 6 kuvaa (3 ennen/jälkeen-paria) |
+| `js/kasinpiirto.js` | **uusi, kohta 3** — mitatut suhdeluvut, deterministinen aalto, kehyspolut |
+| `js/pallolauta/maapaneeli.js` | **kohta 1** peruskoot ja osuudet puoleen · **kohta 3** SVG-solmu, `piirraKehys` ja `kasikehys`-tuonti. Muu sisältö ennallaan, sijaluku ladotaan kortille kuten ennen |
+| `css/styles.css` | **kohta 1** kaikki pituudet × 0,5 · **kohta 2** `--kerma` paletiksi, pohja kermaksi ja musteiden pakolliset vaalean pohjan vastineet · **kohta 3** `border` → `.maapaneeli-kehys` |
+| `sw.js` | **kohta 3** — `js/kasinpiirto.js` SHELLiin (uusi moduuli on oltava offline-korissa) |
+| `tools/savukkeet/savuke-kasinpiirto.mjs` | **uusi** — vartioi kaikkia kolmea kohtaa, vastakoe palauttaa `origin/mainin` arvot |
+| `docs/raportit/kuvat/kasinpiirto-*.png` | 6 kuvaa (3 ennen/jälkeen-paria) — erän näyttö omistajalle |
+| `docs/raportit/viesti-fable-kasinpiirto-20260914.md` | tämä raportti |
 
 **Rajan piirtoon liittyviä tiedostoja ei ole listalla.** `js/pallovektorit.js`,
 `js/maanaariviivat.js`, `js/maatummennus.js`, `js/pallolauta/lauta.js` ja
