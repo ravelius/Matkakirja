@@ -89,27 +89,36 @@ body.paivittyy .app { visibility: hidden; }
   --sea-ink: #6e6350;
   --mark: #b03a2b;
   /*
-   * KOHDEMAAN PUNAINEN AARIVIIVA — OMA MUUTTUJA (karttauudistuksen
-   * PAATOKSET 11 kohta 2, omistaja 14.9.2026: *"aariviiva saisi olla
-   * murretumpi ja tummempi punainen"*).
+   * KOHDEMAAN AARIVIIVA — OMA MUUTTUJA, JA 14.9.2026 ALKAEN MUSTEEN
+   * SININEN (karttauudistuksen PAATOKSET 14 kohta 2, omistaja:
+   * *"vaihda samalla kartan reuna musteen siniseksi"*, kortilla
+   * tarkennettuna maan punaiseksi rajaviivaksi). Nimi oli
+   * `--raja-punainen`; kun savy ei enaa ole punainen, nimikin
+   * vaihtui — `--raja-muste`.
    *
-   * MIKSI OMA NIMI EIKA `--mark`. `--mark` on kartan merkintojen
-   * punainen (lentoreitti, sinettivaha, maakayrat, vertailuvalinta) ja
-   * se pysyy ennallaan; kohdemaan kehalle pyydettiin murretumpi ja
-   * tummempi savy, eika sita saa vaihtaa muiden merkintojen alta.
+   * MIKSI OMA NIMI EIKA `--mark`. `--mark` #b03a2b on kartan
+   * merkintojen punainen (lentoreitti, sinettivaha, maakayrat,
+   * vertailuvalinta) ja se pysyy ennallaan; vain kohdemaan keha
+   * vaihtuu siniseksi, eika sita saa vaihtaa muiden merkintojen alta.
    * Yksi nimi on silti YKSI TOTUUS: taso- ja pallokartta lukevat
    * molemmat taman (css .maatummennus-viiva ja js/pallovektorit.js
    * korostuksenMuste).
    *
-   * MITATTU VALINTA (docs/raportit/viesti-fable-aariviiva-20260914.md):
-   * kolmesta vaihtoehdosta #8f3326 / #853124 / #7a2e22 keskimmainen.
-   * Kontrasti seepiapaperia (#efdcb4) vasten 6,32 (ennen 4,47),
-   * varillista maata (230,219,172) vasten 6,13 (ennen 4,33);
-   * kylläisyys 57 % (ennen 61 %) ja vaaleus 33 % (ennen 43 %) — eli
-   * murretumpi ja tummempi, ja yha seepiapaletin lampiman punaisen
-   * asteikolla.
+   * MITATTU VALINTA (docs/raportit/viesti-fable-sininen-aariviiva-20260914.md):
+   * kolmesta vaihtoehdosta #2b4a6f / #1f3a5f / #1a2f4a keskimmainen.
+   * Kontrasti seepiapaperia (#efdcb4) vasten 8,51 ja varillista maata
+   * (230,219,172) vasten 8,25 — molemmat reilusti yli vaaditun 4,5 ja
+   * paremmat kuin entinen punainen (6,32 / 6,13). Savy on tumma,
+   * murrettu preussinsininen (H215 S51 % L25 %), ei kirkas: vanhan
+   * kartan musteen suuntaan.
+   *
+   * MERI EI OLE TASSA PELISSA SININEN (tools/fokuskartta/piirto.js:
+   * *"meri on tassa kartassa viileaa paperia"*, syvinkin meri
+   * 134,132,124), joten sininen muste ei sekoitu aluevesiin:
+   * sinikanavan ylivoima B − (R+G)/2 on kehalla +50,5 ja merella
+   * −9,0. Sama mitta on savukkeen vartio.
    */
-  --raja-punainen: #853124;
+  --raja-muste: #1f3a5f;
   /*
    * KERMA — kartan oma vaalein paperisävy. Sama luku on jo pelissä
    * kahdessa paikassa (tools/fokuskartta/piirto.js KERMA ja
@@ -1732,9 +1741,10 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
    feidauksen kanssa. */
 .maatummennus-viiva {
   fill: none;
-  /* PALETIN PUNAINEN (omistaja 13.9.2026, karttauudistus erä 1):
-     `--mark` #b03a2b on ainoa punainen, jolla on oma muuttujanimi, ja
-     jo kartan omien merkintäkerrosten väri (maakäyrät, sinettivaha).
+  /* KEHÄN MUSTE (omistaja 13.9.2026, karttauudistus erä 1; sävy
+     vaihtui siniseksi 14.9.2026, ks. alla): kehällä on paletissa oma
+     muuttujansa, koska `--mark` #b03a2b jää kartan omien
+     merkintäkerrosten väriksi (maakäyrät, sinettivaha).
      Peittävyys ei ole enää 0,6 vaan täysi: kehän on erotuttava
      kohdemaan VÄRILLISESTÄ pinnasta, ei pelkästä seepiasta, ja himmeä
      punainen luki värikartalla ruskeana. Leveys ja sen perustelu
@@ -1742,13 +1752,13 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
      tässäkään anneta — perintä ryhmästä on se, mitä portaikkofeidaus
      animoi.
 
-     SÄVY ON 14.9.2026 ALKAEN `--raja-punainen` EIKÄ `--mark`
-     (karttauudistuksen PÄÄTÖKSET 11 kohta 2 b): omistaja pyysi
-     kohdemaan kehälle murretumman ja tummemman punaisen, ja kartan
-     muut merkinnät (lentoreitti, sinettivaha) jäävät `--mark`iin.
+     SÄVY ON 14.9.2026 ALKAEN `--raja-muste` EIKÄ `--mark`
+     (karttauudistuksen PÄÄTÖKSET 14 kohta 2): omistaja pyysi kehän
+     musteen siniseksi, ja kartan muut merkinnät (lentoreitti,
+     sinettivaha) jäävät `--mark`in punaiseen.
      Muuttuja on yhä YKSI: pallon kehä lukee saman
      (js/pallovektorit.js korostuksenMuste). */
-  stroke: var(--raja-punainen);
+  stroke: var(--raja-muste);
   stroke-linejoin: round;
   stroke-linecap: round;
   vector-effect: non-scaling-stroke;
