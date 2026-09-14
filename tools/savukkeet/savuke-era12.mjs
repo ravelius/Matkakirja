@@ -65,6 +65,8 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { puraMaanRenkaat } from '../../js/maanaariviivat.js';
+import { KARTTANIMI_KOOT } from '../../js/karttanimet.js';
+import { NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
 import { projisoiLaudalle } from '../../js/fokusmitat.js';
 
 // Playwright repon node_modulesista, muuten kontin globaalista (README).
@@ -132,7 +134,31 @@ const palvelin = http.createServer((req, res) => {
   }
   if (vastakoe === 'C' && polkuOsa.endsWith('/js/pallolauta/maapaneeli.js')) {
     runko = Buffer.from(runko.toString('utf8')
-      .replace(/MAAPANEELIN_SKAALA_MAX = [\d.]+/, 'MAAPANEELIN_SKAALA_MAX = 3'));
+      .replace(/MAAPANEELIN_SKAALA_MAX = [\d.]+ \* MAAPANEELIN_TEKSTIKERROIN/,
+        'MAAPANEELIN_SKAALA_MAX = 3'));
+  }
+  // D: erän 12 paneelikoko takaisin (kerroin 1) → tekstisuhdeväite kaatuu.
+  if (vastakoe === 'D' && polkuOsa.endsWith('/js/pallolauta/maapaneeli.js')) {
+    runko = Buffer.from(runko.toString('utf8')
+      .replace(/MAAPANEELIN_TEKSTIKERROIN = [\d.]+/, 'MAAPANEELIN_TEKSTIKERROIN = 1'));
+  }
+  // E: erän 12 valikko takaisin (kaksi palstaa, kiinni kortissa).
+  if (vastakoe === 'E' && polkuOsa.endsWith('/css/styles.css')) {
+    runko = Buffer.from(runko.toString('utf8')
+      .replace(/\.maapaneeli-valikko \{[\s\S]*?\n\}/, `.maapaneeli-valikko {
+  position: absolute;
+  top: calc(100% - 2px);
+  right: -3px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  width: 105px;
+  padding: 2.5px;
+  background: var(--overlay-card);
+  border: 0.5px solid var(--overlay-line);
+  border-radius: 2.5px;
+  pointer-events: auto;
+}`));
   }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(runko);
@@ -243,6 +269,28 @@ async function avaaPeli({ leveys, korkeus }) {
     .then(() => true).catch(() => false);
   // 9 s: saapumisketju ja mittauspiikki ehtivät molemmat tapahtua.
   if (auki) await sivu.waitForTimeout(9000);
+  /*
+   * ...JA SEN JÄLKEEN ODOTETAAN, ETTÄ KAMERA ON PAIKALLAAN.
+   * Mitattu 14.9.2026: kylmällä latauksella saapumisajo on 9 s:n
+   * kohdalla joskus vielä kesken, ja kamera on silloin lähtökorkeudessa
+   * (390 px: 0,0698 = sisin sallittu) eikä saapumisnäkymässä — väite 1
+   * mittaisi kesken olevan liikkeen ja punastuisi satunnaisesti.
+   * Odotetaan enintään 15 s, että kaksi peräkkäistä lukemaa eroavat
+   * alle 0,5 %. Tämä EI löysää väitettä: mitta on yhä se korkeus,
+   * johon peli itse jää, ja lepo on yhä vähintään erän 12 vaatimat 9 s.
+   */
+  if (auki) {
+    let edellinen = null;
+    for (let i = 0; i < 30; i += 1) {
+      // eslint-disable-next-line no-await-in-loop
+      const nyt = await sivu.evaluate(() => window.matkakirja.ui.pallolauta
+        .pallo.pointOfView().altitude);
+      if (edellinen != null && Math.abs(nyt - edellinen) / nyt < 0.005) break;
+      edellinen = nyt;
+      // eslint-disable-next-line no-await-in-loop
+      await sivu.waitForTimeout(500);
+    }
+  }
   return { ctx, sivu, virheet, auki };
 }
 
@@ -318,12 +366,96 @@ const zoomaa = async (sivu, osuus) => {
   }, osuus);
 };
 
+
+/**
+ * ERÄ 13 — VÄITE 5: PANEELIN LEIPÄTEKSTI ON NOSTON TEKSTIN KOKOINEN.
+ *
+ * Molemmat mitataan RUUDULTA eikä koodivakiosta: kumpikin fonttikoko
+ * kerrotaan sillä muunnosketjulla, joka elementin päällä oikeasti on.
+ * Noston nimiö on rasteri, joten sen "fonttikoko" on piirtoyksikkö
+ * NOSTOSYM_NIMIO_KOKO kerrottuna ryhmän mittakaavalla — sama luku,
+ * jonka selain latoisi, jos nimiö olisi <text>.
+ */
+const tekstiKoot = (sivu, nimioKoko) => sivu.evaluate((koko) => {
+  const ketju = (el) => {
+    let s = 1;
+    let n = el;
+    while (n && n !== document.documentElement) {
+      const t = getComputedStyle(n).transform;
+      if (t && t !== 'none') { const m = new DOMMatrixReadOnly(t); s *= Math.hypot(m.a, m.b); }
+      n = n.parentElement;
+    }
+    return s;
+  };
+  const g = document.querySelector('.pallolauta-nosto .pallolauta-nosto-siirto');
+  const arvo = document.querySelector('.maapaneeli-arvo');
+  return {
+    nosto: g ? koko * ketju(g) : null,
+    paneeli: arvo ? parseFloat(getComputedStyle(arvo).fontSize) * ketju(arvo) : null,
+  };
+}, nimioKoko);
+
+/**
+ * ERÄ 13 — VÄITE 6: LISÄÄ-VALIKKO ON YHDELLÄ RIVILLÄ JA IRTI KORTISTA.
+ *
+ * Rivien määrä luetaan nappien ruutupaikoista (eri y = eri rivi), ei
+ * CSS:n `grid-template-columns`ista: mitta on se, minkä pelaaja näkee.
+ * Rako mitataan kortin alareunan ja valikon yläreunan väliltä (tai
+ * ylöspäin auetessa toisin päin), ja päällekkäisyys on oma testinsä.
+ */
+const valikonMitat = async (sivu) => {
+  await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
+  await sivu.waitForTimeout(600);
+  const ulos = await sivu.evaluate(() => {
+    const kortti = document.querySelector('.maapaneeli-kortti');
+    const valikko = document.querySelector('.maapaneeli-valikko');
+    const plus = document.querySelector('.maapaneeli-lisaa');
+    if (!kortti || !valikko || valikko.hidden) return { auki: false };
+    const r = valikko.getBoundingClientRect();
+    const k = kortti.getBoundingClientRect();
+    const pr = plus.getBoundingClientRect();
+    const napit = [...valikko.querySelectorAll('.maapaneeli-aihe')]
+      .map((b) => { const bb = b.getBoundingClientRect(); return { y: bb.top, w: bb.width, h: bb.height }; });
+    const rivit = new Set(napit.map((n) => Math.round(n.y * 10) / 10)).size;
+    const nappiAla = napit.reduce((a, n) => a + n.w * n.h, 0);
+    return {
+      auki: true,
+      rivit,
+      napit: napit.length,
+      w: r.width,
+      h: r.height,
+      // Tyhjä tila = valikon ala, joka ei ole nappia (pehmuste + välit).
+      tyhja: 1 - nappiAla / (r.width * r.height),
+      rako: r.top >= k.bottom ? r.top - k.bottom : k.top - r.bottom,
+      leikkaa: r.left < k.right && r.right > k.left && r.top < k.bottom && r.bottom > k.top,
+      plusKeskiKortista: pr.top + pr.height / 2 - k.top,
+      skaala: k.width / kortti.offsetWidth,
+    };
+  });
+  await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
+  await sivu.waitForTimeout(300);
+  return ulos;
+};
+
+/**
+ * OMISTAJAN RUUTULUOKKA on tekstisuhteen ankkuri (ks.
+ * js/pallolauta/maapaneeli.js MAAPANEELIN_TEKSTIKERROIN): paneeli on
+ * karttaan sidottu ja noston nimiö ruutuvakio, joten suhde on 1,00
+ * tasan yhdellä kartan mittakaavalla. Muiden ruutujen suhteet
+ * kirjataan INFOna.
+ */
+const ANKKURIRUUTU = { nimi: '2560', leveys: 2560, korkeus: 1352 };
+/** Väitteen 5 vara: omistajan sana on "samaa luokkaa", mitta 5 %. */
+const TEKSTIVARA = 0.05;
+
 const RUUDUT = [
   { nimi: '390', leveys: 390, korkeus: 844 },
   { nimi: '1400', leveys: 1400, korkeus: 900 },
 ];
 
 const zoomiTulokset = [];
+const tekstiTulokset = [];
+const valikkoTulokset = [];
 const meriTulokset = [];
 const suhdeTulokset = [];
 let paaVirheet = [];
@@ -402,9 +534,46 @@ for (const ruutu of RUUDUT) {
       + `kortti/maan laatikko ${t.laatikkosuhde}`).join(' | ')}; `
     + `hajonta ${p(100 * hajonta('suhde'), 2)} % ja ${p(100 * hajonta('laatikkosuhde'), 2)} %`);
 
+  /* --- 5./6. tekstisuhde ja valikko (erä 13) ------------------- */
+  await zoomaa(sivu, 1);
+  const t = await tekstiKoot(sivu, NOSTOSYM_NIMIO_KOKO);
+  tekstiTulokset.push({ ruutu: ruutu.nimi, ...t, suhde: p(t.paneeli / t.nosto, 4) });
+  tieto(`${ruutu.nimi} px · tekstikoot saapumisnäkymässä`,
+    `noston nimiö ${p(t.nosto, 3)} px, paneelin leipäteksti ${p(t.paneeli, 3)} px, `
+    + `suhde ${p(t.paneeli / t.nosto, 3)} (ankkuri on ${ANKKURIRUUTU.nimi} px, INFO tässä)`);
+  const v = await valikonMitat(sivu);
+  valikkoTulokset.push({ ruutu: ruutu.nimi, ...v,
+    ok: Boolean(v.auki) && v.rivit === 1 && !v.leikkaa && v.rako > 0 });
+  tieto(`${ruutu.nimi} px · lisää-valikko`,
+    v.auki
+      ? `${v.napit} nappia ${v.rivit} rivillä, ${p(v.w, 1)} × ${p(v.h, 1)} px, `
+        + `tyhjää tilaa ${p(100 * v.tyhja, 1)} %, rako korttiin ${p(v.rako, 2)} px, `
+        + `leikkaa korttia: ${v.leikkaa ? 'KYLLÄ' : 'ei'}, plussan keskilinja `
+        + `${p(v.plusKeskiKortista, 2)} px kortin yläreunasta (skaala ${p(v.skaala, 3)})`
+      : 'EI AUENNUT');
+
   paaVirheet = paaVirheet.concat(virheet);
   await ctx.close();
   /* eslint-enable no-await-in-loop */
+}
+
+/* --- 5. tekstisuhde ankkuriruudulla (erä 13) --------------------- */
+let ankkuriSuhde = null;
+{
+  const { ctx, sivu, auki } = await avaaPeli(ANKKURIRUUTU);
+  /*
+   * MITATAAN SAAPUMISNÄKYMÄSSÄ SELLAISENAAN, EI ZOOMIKATOSSA.
+   * Kerroin on kalibroitu juuri siihen korkeuteen, johon peli itse jää;
+   * katto on työpöydällä 4,5 % ulompana (ks. väite 1), ja siellä
+   * mitattuna sama paneeli antaisi suhteeksi 0,96. `avaaPeli` odottaa
+   * jo, että kamera on paikallaan, joten tässä ei kosketa kameraan.
+   */
+  const t = auki ? await tekstiKoot(sivu, NOSTOSYM_NIMIO_KOKO) : null;
+  ankkuriSuhde = t && t.nosto > 0 ? t.paneeli / t.nosto : null;
+  tieto(`${ANKKURIRUUTU.nimi} px · tekstisuhde (ANKKURI)`,
+    `noston nimiö ${p(t?.nosto, 3)} px, paneelin leipäteksti ${p(t?.paneeli, 3)} px, `
+    + `suhde ${p(ankkuriSuhde, 4)} (raja 1,00 ± ${100 * TEKSTIVARA} %)`);
+  await ctx.close();
 }
 
 vaadi('1. uloszoomaus ei onnistu Ranskassa (390 px ja 1400 px)',
@@ -416,6 +585,13 @@ vaadi('2. maapaneeli on meren päällä — ei yhdenkään maan polygonissa',
 vaadi('3. paneelin koko seuraa kartan mittakaavaa katkotta (3 zoomia)',
   suhdeTulokset.length === RUUDUT.length && suhdeTulokset.every((t) => t.ok),
   JSON.stringify(suhdeTulokset.map((t) => ({ ruutu: t.ruutu, hTulo: t.hTulo }))));
+vaadi('5. paneelin leipäteksti / noston teksti = 1,00 ± 5 % (ankkuriruutu)',
+  ankkuriSuhde != null && Math.abs(ankkuriSuhde - 1) <= TEKSTIVARA,
+  JSON.stringify({ ankkuriSuhde, muut: tekstiTulokset }));
+vaadi('6. lisää-valikko on yhdellä rivillä ja irti kortista (390 px ja 1400 px)',
+  valikkoTulokset.length === RUUDUT.length && valikkoTulokset.every((t) => t.ok),
+  JSON.stringify(valikkoTulokset.map((t) => ({ ruutu: t.ruutu, rivit: t.rivit,
+    rako: t.rako, leikkaa: t.leikkaa }))));
 tieto('sivun virheet (pääajo)', paaVirheet.length ? paaVirheet.join(' | ') : 'ei yhtään');
 vaadi('4. pääajo ei tuottanut sivuvirheitä', paaVirheet.length === 0, paaVirheet.join(' | '));
 
@@ -471,6 +647,37 @@ vastakoe = 'C';
     + `→ väite 3 ${hajonta <= SUHTEEN_VARA ? 'LÄPI (paha)' : 'PUNAINEN'}`);
   vaadi('VASTAKOE C: katolla 3 skaalaväite kaatuu',
     auki && hajonta > SUHTEEN_VARA, JSON.stringify({ auki, hajonta }));
+  await ctx.close();
+}
+/* D: MAAPANEELIN_TEKSTIKERROIN 1 (erän 12 koko) → väitteen 5 on kaaduttava. */
+vastakoe = 'D';
+{
+  const { ctx, sivu, auki } = await avaaPeli(ANKKURIRUUTU);
+  const t = auki ? await tekstiKoot(sivu, NOSTOSYM_NIMIO_KOKO) : null;
+  const suhde = t && t.nosto > 0 ? t.paneeli / t.nosto : null;
+  tieto('vastakoe D (TEKSTIKERROIN 1)',
+    `noston nimiö ${p(t?.nosto, 3)} px, paneelin leipäteksti ${p(t?.paneeli, 3)} px, `
+    + `suhde ${p(suhde, 4)} → väite 5 `
+    + `${suhde != null && Math.abs(suhde - 1) <= TEKSTIVARA ? 'LÄPI (paha)' : 'PUNAINEN'}`);
+  vaadi('VASTAKOE D: erän 12 kertoimella tekstisuhdeväite kaatuu',
+    suhde != null && Math.abs(suhde - 1) > TEKSTIVARA, JSON.stringify({ auki, suhde }));
+  await ctx.close();
+}
+
+/* E: erän 12 valikkotyyli → väitteen 6 on kaaduttava. */
+vastakoe = 'E';
+{
+  const { ctx, sivu, auki } = await avaaPeli({ leveys: 1400, korkeus: 900 });
+  const v = auki ? await valikonMitat(sivu) : null;
+  tieto('vastakoe E (erän 12 valikko: kaksi palstaa, kiinni kortissa)',
+    v?.auki
+      ? `${v.napit} nappia ${v.rivit} rivillä, rako ${p(v.rako, 2)} px, `
+        + `leikkaa: ${v.leikkaa ? 'KYLLÄ' : 'ei'} → väite 6 `
+        + `${v.rivit === 1 && !v.leikkaa && v.rako > 0 ? 'LÄPI (paha)' : 'PUNAINEN'}`
+      : 'EI AUENNUT');
+  vaadi('VASTAKOE E: erän 12 valikkotyylillä valikkoväite kaatuu',
+    Boolean(v?.auki) && (v.rivit !== 1 || v.leikkaa || !(v.rako > 0)),
+    JSON.stringify(v));
   await ctx.close();
 }
 vastakoe = null;

@@ -197,8 +197,53 @@ export const MAAPANEELIN_KORKEUS_PX = 82;
  * (Venäjä, Kazakstan): ilman sitä paneeli olisi niillä maan laatikon
  * korkuinen. Ranskalla se ei sido — leveysosuus on tiukempi.
  */
-export const MAAPANEELIN_LEVEYS_OSUUS = 0.1916;
-export const MAAPANEELIN_KORKEUS_OSUUS = 0.2327;
+/*
+ * ERÄ 13: PANEELI NOSTOJEN TEKSTIKOKOON — YKSI KERROIN, EI YHTÄÄN
+ * MUUTA (Raamattu, PÄÄTÖKSET 11 kohta 1; omistaja 14.9.2026 klo 13.20
+ * UTC: *"maainfo on aivan liian iso. siina tekstikoko leipatekstissa
+ * pitaisi olla samaa luokkaa kuin karttanostojen tekstin koko."*).
+ *
+ * MITATTU, EI ARVATTU. Karttanoston nimiö on ruutuvakio
+ * `KARTTANIMI_KOOT.kohde` = 8,5 css-px joka zoomilla ja joka ruudulla
+ * (js/pallolauta/nostot.js: NOSTON_MITTA = 8,5 / NOSTOSYM_NIMIO_KOKO,
+ * eli nimiön 11 yksikköä × mitta = 8,5 px; todennettu ruudulta:
+ * rasterin musteen korkeus 4,6–6,7 px eli versaali + alapidennys).
+ * Paneelin leipäteksti on `.maapaneeli-arvo` 4,75 px × paneelin
+ * ruutuskaala, ja ruutuskaala seuraa KARTTAA (PÄÄTÖKSET 9) — se on
+ * siis eri luku eri ruuduilla. Mitattu Ranskassa saapumisnäkymässä
+ * 14.9.2026 (Playwright, dpr 1):
+ *
+ *     390 × 844    skaala 0,566  leipäteksti 2,69 px  suhde 0,32
+ *     1400 × 900   skaala 1,658  leipäteksti 7,87 px  suhde 0,93
+ *     1920 × 1080  skaala 2,021  leipäteksti 9,60 px  suhde 1,13
+ *     2560 × 1352  skaala 2,570  leipäteksti 12,21 px suhde 1,44
+ *
+ * SUHDE EI VOI OLLA 1,00 KAIKILLA RUUDUILLA YHTÄ AIKAA: noston teksti
+ * on ruutuvakio ja paneeli karttaan sidottu, joten suhde on 1,00 tasan
+ * yhdellä kartan mittakaavalla. Ankkuriksi on valittu OMISTAJAN
+ * RUUTULUOKKA 2560 × 1352 (projektin levein todennettu työpöytä,
+ * docs/raportit/viesti-fable-kaistat-20260913.md) — se on se ruutu,
+ * jolla omistaja näki paneelin liian isona. Kerroin on siis
+ * 8,5 / 12,21 = 0,696.
+ *
+ * KERROIN OSUU VAIN OSUUKSIIN (ja skaalan rajoihin). Peruskoko px:nä
+ * ja jokainen tyyliarvo pysyy ennallaan, joten kirjainperheet,
+ * lihavuudet, värit, sisältö (mm. SIJALUKU) ja sisennysten suhde
+ * (erä 12) ovat merkilleen entiset — vain pienempinä. `perusta`
+ * (lautayksikköä per css-px) kutistuu tällä kertoimella, ja sen
+ * mukana sekä paneelin LAUTAMITTA että ruutukoko: ankkuri
+ * Biskajanlahdella ja karttaan sidottu skaala (hajonta 0 % zoomeilla)
+ * pysyvät koskemattomina.
+ *
+ * PUHELIMEN TEKSTI JÄÄ PIENEKSI (2,7–2,8 → 1,9–2,0 px; luku
+ * heilahtaa saapumiskorkeuden mukana ajosta toiseen). Se kirjataan
+ * eikä korjata: PÄÄTÖKSET 7 kieltää fonttikoon alarajan ja sisällön
+ * tiivistämisen, ja puhelimen pienuus tulee saapumisnäkymän
+ * rajauksesta (pystyruudulla Ranska jää kauas), ei tästä kertoimesta.
+ */
+export const MAAPANEELIN_TEKSTIKERROIN = 0.696;
+export const MAAPANEELIN_LEVEYS_OSUUS = 0.1916 * MAAPANEELIN_TEKSTIKERROIN;
+export const MAAPANEELIN_KORKEUS_OSUUS = 0.2327 * MAAPANEELIN_TEKSTIKERROIN;
 /** Rako maan laatikon reunan ja paneelin väliin, osuus laatikon korkeudesta. */
 export const MAAPANEELIN_RAKO_OSUUS = 0.02;
 /*
@@ -223,8 +268,15 @@ export const MAAPANEELIN_RAKO_OSUUS = 0.02;
  * Se on kehittäjän maailmanäkymän varaus, jossa maakohtaista
  * zoomikattoa ei ole lainkaan.
  */
-export const MAAPANEELIN_SKAALA_MIN = 0.45;
-export const MAAPANEELIN_SKAALA_MAX = 64;
+/*
+ * ERÄ 13: MOLEMMAT RAJAT KERTYVÄT SAMALLA KERTOIMELLA. Rajat ovat
+ * ruutuskaalan rajoja, ja ruutuskaala kutistui kertoimella 0,696 —
+ * jos rajat jäisivät entisiksi, alaraja alkaisi SITOA puhelimen
+ * saapumisnäkymässä (0,566 × 0,696 = 0,394 < 0,45) ja katkaisisi juuri
+ * sen karttaan sidotun skaalan, jonka PÄÄTÖKSET 9 kohta 4 vaatii.
+ */
+export const MAAPANEELIN_SKAALA_MIN = 0.45 * MAAPANEELIN_TEKSTIKERROIN;
+export const MAAPANEELIN_SKAALA_MAX = 64 * MAAPANEELIN_TEKSTIKERROIN;
 
 /**
  * MAALEHDEN AIHETUNNUS → KARTAN SYMBOLIPERHE.
