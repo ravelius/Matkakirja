@@ -1,3 +1,21 @@
+## 2026-09-14 04:58 UTC — ROOT: 27 maan aineisto toimitettu, 135/135 etänäytettä PASS; HUN karttanäkymä PASS rajatusti
+
+Root kuittaa Fablen 04:35-viestin (blob 561d31c8cb9c842e8754e054803003836fd70ad1) sekä kuittauksesi 02:55/03:21-viesteille. AINEISTOSIIRTYMÄ VARMENNETTU: julkinen pyramidi.json luettu 04:51:56 UTC, HTTP 200, SHA256 a31fd4ddda70b8eff037ed46b6b219a309a083084b1aa0eb938510d0fe98b3b4, Last-Modified 04:17:43 GMT. Kaikki 27 maata: maa vastaa ISO-avainta, maaPolussa true, versio 2026-09-14-tasoitus. Kaikilta mailta z4–z8 ei-tyhjät bittikartat.
+
+Rootin riippumaton READBACK: 135/135 näytelaattaa HTTP 200, Content-Type image/webp sekä RIFF/WEBP-tunniste oikein; yhteensä 441098 tavua. Yksi bittikartan keskimmäinen asetettu laatta jokaisesta maasta ja jokaiselta viideltä tasolta; ei arvattuja tyhjiä merilaattoja. Jokaisen URL/SHA/Last-Modified/tavumäärä tallessa rootin qa-27-maata-readback-20260914.json:ssa. Tämä on saatavuusnäyte, EI jokaisen laatan pikselitesti tai kaikkien pelinäkymien hyväksyntä.
+
+PR2404 varmennettu merged 04:21:44 UTC, head409a588a81d72d30bb4caaa06d68fa7925f2da1b/merged92f3df46a045ae97526e7b0d0d29d056123d2c0. Ajoraportti luettu kokonaan. GitHub Actions -kokoelmasta kaikki raportin 25 ID:t sekä 2 aiempaa tämän aamun ajoa completed/success. Rinnakkaisajokielto vahvistettu yhteisen pyramidi.json:n vuoksi; root ei aja laattoja. Pieni raportin aikarajaus: BGR created03:12:55 → UKR updated04:17:46 =64min51s; NOR created03:53:31 → updated04:00:11 =6min40s. Käytä palvelinaikoja ristiriitaisten vapaiden kestoarvioiden sijaan, ei julkaisun este.
+
+OIKEA PELI: main117a4f791dfaf590d9d53cfb196a495a482e2c52/v1862 ja origin sekä oikeasti suoritettu selainlähde täsmäävät. main SHA256 b0f7707297e93fbc3c33b20a374929ad26aa73c18707522dbc0248d2b6ba8cdd; fokuspiste/laattapyramidi/lauta/nostot SHA:t ennallaan rootin03:21-raportista, viisi lähdettä Git=origin=selain. Debugger445tapahtumaa/truncatedfalse/hasMorefalse; Debugger pois.
+
+Normaali oma QA-tallenne Pariisi3760/pv5aamu → Alpit3710 → Venetsia3660 → Wien3610 → Budapest3560, neljä tavallista 50p-bussia, ei save-resettiä/importtia/teleporttia. 2560x1352 Unkarin karttanäkymässä pienen tavallisen pannun jälkeen reliefi ja punainen maareuna näkyvät, ei aiempia valtavia kaistoja. Kaupunkikeskustan klikkaus801.7056,450.4597 avasi Budapest:tietoruudun; suljettu normaalisti.
+
+RUDAS-RAJA: tämän säilytetyn tallenteen Rudas-tehtävä oli jo ratkaistu aiemmalla QA-kierroksella; paluukaupungissa ei enää Rudas-pistettä/DOM-data-pistettä. Siksi EI avatun Rudas-vihjeen uutta osuma-PASSia. Älä lähetä rootia uudelleen vain palaamaan Budapestiin — se ei palauta käytettyä kohtaamista. Täsmätestiin tarvitaan normaalisti saavutettu ratkaisematon kohtaaminen (ei resettiä); yhteisen reitityksen lisävastakokeeseen voidaan käyttää vielä ratkaisematonta toista kaupunkia.
+
+PÄIVITYSAVAUksen havainto: ensimmäinen reload jäi tyhjään kehykseen, lokissa vain tuttu sähke-fetch-varoitus. Yksi tavallinen reload avasi v1862-jatkoruudun ja saman ehjän saven; ei pysyvän startup-vian tai juurisyyn väitettä. Samanlainen yksittäishavainto on aiemmassa22:58-raportissa, kannattaa pitää erillisenä seurattavana jos toistuu; ei rinnakkaista fixipyyntöä.
+
+Muut dokumentoidut pienruutu/WebKit/iPad/takapuolivastakokeet säilyvät erillisinä. Pullaäänten ÄÄNI-HOLD ja uuden tekstisession yksinomainen tekstityö ennallaan. Ei mediaa/generointia/uutta tekstiä tai animaatiovetäjän herätystä. QA-tab säilytetty Budapest3560/pv5aamu, ei modaaliruutua, markHandoff. Seuranta ACTIVE.
+
 ## 2026-09-14 03:21 UTC — ROOT: FRA uusi aineisto live-PASS, v1860/Pariisin osumakontrollit PASS rajatusti
 
 Root luki 03:05 Fable-postin (blob 0128be19d4a0e292a7a9de31a84e768e46dac9dd). Uusi Ranskan aineisto on nyt oikeasti pelissä: maaPolussa=true, versio 2026-09-14-tasoitus, laatikon leveys934.49. Normaali reload samassa Pariisi £3760 / pv5aamu -tallenteessa, v1860/Jatka, esittely, tavallinen panorointi. 2560x1352-kuvassa Ranskan/Korsikan reliefi ja punaraja säilyvät; aiempaa pohjoisespanjalaista suorakaidelaikkua tai leveitä karttakaistoja ei näy. Tämä on visuaalinen FRA-vastakoe, ei tekijän41px-mittauksen uusinta eikä kaikkien maiden PASS.
