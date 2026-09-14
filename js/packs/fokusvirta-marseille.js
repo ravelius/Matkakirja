@@ -185,10 +185,7 @@ export const FOKUSVIRTA_MARSEILLE = {
      * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
      * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
      * julkaisua. */
-    teksti: 'Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko '
-      + 'maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. '
-      + 'Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. '
-      + 'Maailma jäi likaiseksi; käteni olivat jo toista mieltä.',
+    teksti: "Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. Maailma jäi likaiseksi; käteni olivat jo toista mieltä.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -205,28 +202,50 @@ export const FOKUSVIRTA_MARSEILLE = {
      * lisäreaktiota.
      */
     reaktiot: [
-      { id: 'marseille.r1', ankkuri: 'saippuaa myytiin tiiliskivinä', tarkoitus: 'huvittuu', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Saippua tiilinä on ensimmäinen pieni hymy, ei vielä nauru.' },
-      { id: 'marseille.r2', ankkuri: 'koko maailman pesuun', tarkoitus: 'epailee', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Kauppiaan ylisana: pulu epäilee lempeästi.' },
-      { id: 'marseille.r3', ankkuri: 'mustat kynnet', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Ristiriita: saippuakauppiaan mustat kynnet.' },
-      { id: 'marseille.r5', ankkuri: 'terva, kala ja suolavesi', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Hajuluettelo seuraa majataloon: pulu huvittuu.' },
-      { id: 'marseille.r6', ankkuri: 'käteni olivat jo toista mieltä', tarkoitus: 'huvittuu', voimakkuus: 0.6, siirtyma: 0,
-        /*
-         * Siirtymä pysyy sisällössä nollana. Lopullinen hetki ja mahdollinen
-         * jälkireaktio ratkaistaan vasta uuden äänitteen kohdistuksesta.
-         */
-        perustelu: 'Loppuvitsi: nauru merkinnän päätteeksi.' },
-    ],
+  {
+    "id": "marseille.r1",
+    "ankkuri": "saippuaa myytiin tiiliskivinä",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "marseille.r2",
+    "ankkuri": "mustat kynnet kertoivat köysitöistä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "marseille.r3",
+    "ankkuri": "terva, kala ja suolavesi seurasivat majataloon",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "marseille.r4",
+    "ankkuri": "Maailma jäi likaiseksi",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "marseille.r5",
+    "ankkuri": "käteni olivat jo toista mieltä",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
      * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
-    luenta: '[curious] Marseillen satamassa saippuaa myytiin tiiliskivinä, '
-      + 'kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat '
-      + 'köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat '
-      + 'majataloon. [softly] Maailma jäi likaiseksi; käteni olivat jo toista '
-      + 'mieltä.',
+    luenta: "[curious] Marseillen satamassa saippuaa myytiin tiiliskivinä, kuulemma koko maailman pesuun. Kauppiaan mustat kynnet kertoivat köysitöistä. Ostin palan, mutta terva, kala ja suolavesi seurasivat majataloon. [warmly] Maailma jäi likaiseksi; käteni olivat jo toista mieltä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-marseille.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-marseille-r20260909-paper-v4;
@@ -300,9 +319,7 @@ export const FOKUSVIRTA_MARSEILLE = {
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* TEKSTIPILOTTI 12.9.2026: yksi sisältöön sidottu virke lisää. */
-    kommentti: [
-      'Marseillen saippuaa tehdään yhä. Minä erotan Vieux-Portin jo äänestä ja suolasta höyhenissä. Lokit tuntevat jokaisen pöydän. Minä vasta harjoittelen.',
-    ],
+    kommentti: ["Vieux-Portin tunnistan äänestä ja suolasta höyhenissä. Seurasin lokkien kierrosta sataman pöydillä. Yksi nyökkäsi minulle. Työlupa myönnetty, ajattelin — ja pidin silti vähän etäisyyttä sen nokkaan."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*

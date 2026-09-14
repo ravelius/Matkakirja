@@ -10,7 +10,7 @@ import {
 import { ankkurinOsumat, livianKohdistustyo, tarkistaKohdistustyo } from '../tools/kohdista-pulu-eleet.mjs';
 
 test('tekninen lähde kattaa neljä pysyvää city-3-pilottia', () => {
-  assert.equal(LIVIAN_PILOTIN_REVISION, 'eu-hl-pilot-20260913-r2-approved1');
+  assert.equal(LIVIAN_PILOTIN_REVISION, 'eu-hl-europe-20260914-r2-approved');
   assert.deepEqual(LIVIAN_PILOTTIKAUPUNGIT, ['marseille', 'ateena', 'sarajevo', 'venetsia']);
   for (const kaupunki of LIVIAN_PILOTTIKAUPUNGIT) {
     const tyo = livianPilottityo(kaupunki, 'kommentti', 0);
@@ -31,22 +31,24 @@ test('cue-lähteen SHA sitoo sen pakin näkyvään kommenttiin', async () => {
   }
 });
 
-test('runtime-cuet vastaavat tekstinomistajan koneellista ajopakettia', () => {
+test('runtime-cuet vastaavat hyväksytyn R2-tuotantomanifestin rivejä', () => {
   const paketti = JSON.parse(readFileSync(new URL(
-    '../docs/raportit/horatio-livia-pilotti-tts-ajopaketti-20260912.json',
+    '../docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260914-r2.json',
     import.meta.url,
   ), 'utf8'));
   for (const kaupunki of LIVIAN_PILOTTIKAUPUNGIT) {
-    const rivi = paketti.livia.items.find((item) => item.key === `${kaupunki}-3`);
+    const rivi = paketti.cities.find((item) => item.city === kaupunki)?.livia;
     assert.ok(rivi, `${kaupunki}: ajopaketin Livia-rivi puuttuu`);
     assert.deepEqual(
       LIVIAN_PILOTTI_CUET[kaupunki].cuet.map(({
         id, ankkuri, esiintyma, tarkoitus, voimakkuus,
       }) => ({
         cueId: id, anchor: ankkuri, occurrence: esiintyma,
-        purpose: tarkoitus, strength: voimakkuus,
+        intent: tarkoitus, strength: voimakkuus,
       })),
-      rivi.cueAnchors,
+      rivi.cues.map(({ cueId, anchor, occurrence = 1, intent, strength }) => ({
+        cueId, anchor, occurrence, intent, strength,
+      })),
       `${kaupunki}: runtime ja ajopaketti ovat eriytyneet`,
     );
   }

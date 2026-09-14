@@ -117,16 +117,12 @@ export const FOKUSVIRTA_ATEENA = {
      * versio ("ilmanpuntari 762 mmHg", "löysi kesäkuussa Troijan
      * kullan") on kokonaan korvattu, ei muokattu.
      */
-    paikkarivi: 'Ateena, heinäkuussa 1873. Seesteistä; ilmanpuntari korkealla.',
+    paikkarivi: "Ateena, elokuussa 1873. Pölyä ja puhetta kullasta.",
     /* HYVÄKSYTTY TEKSTIPILOTTI r2 13.9.2026: yhteinen Horatio–Livia-
      * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
      * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
      * julkaisua. */
-    teksti: 'Ateenassa Troijan kullasta puhuttiin kuin kaikki olisivat olleet '
-      + 'kaivamassa. Kahvilan isäntä piti Schliemannia nerona, asiakas '
-      + 'varkaana; kultaa ei ollut kummallakaan näyttää. Akropolis ei '
-      + 'tarvinnut mainosta. Maksoin kahvin kolikolla, jonka alkuperää ei '
-      + 'kysytty.',
+    teksti: "Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. Maksoin kahvini ja vaihdoin pöytää.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN, vain kolme tunnetagia.
      *
@@ -154,22 +150,42 @@ export const FOKUSVIRTA_ATEENA = {
      * (arkinen liike, pulu kuuntelee).
      */
     reaktiot: [
-      { id: 'ateena.r1', ankkuri: 'kuin kaikki olisivat olleet kaivamassa', tarkoitus: 'epailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Kaupunkilaiset puhuvat kuin omasta työstään: pulu epäilee.' },
-      { id: 'ateena.r3', ankkuri: 'kultaa ei ollut kummallakaan näyttää', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Kiistan molemmat osapuolet ovat yhtä tyhjän päällä.' },
-      { id: 'ateena.r4', ankkuri: 'Akropolis ei tarvinnut mainosta', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Akropolis vaikenee puheen yllä: hetki hiljenee.' },
-      { id: 'ateena.r5', ankkuri: 'jonka alkuperää ei kysytty', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Loppuvitsi: isoisän oman kolikon alkuperä jää kysymättä.' },
-    ],
+  {
+    "id": "ateena.r1",
+    "ankkuri": "kahvilan isäntä piti Schliemannia nerona, asiakas varkaana",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "ateena.r2",
+    "ankkuri": "jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "ateena.r3",
+    "ankkuri": "milloin löytäminen muuttuu ottamiseksi",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "ateena.r4",
+    "ankkuri": "Maksoin kahvini ja vaihdoin pöytää",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.25,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
      * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
-    luenta: '[curious] Ateenassa Troijan kullasta puhuttiin kuin kaikki '
-      + 'olisivat olleet kaivamassa. Kahvilan isäntä piti Schliemannia '
-      + 'nerona, asiakas varkaana; kultaa ei ollut kummallakaan näyttää. '
-      + 'Akropolis ei tarvinnut mainosta. [softly] Maksoin kahvin kolikolla, '
-      + 'jonka alkuperää ei kysytty.',
+    luenta: "[curious] Ateenassa kahvilan isäntä piti Schliemannia nerona, asiakas varkaana. Troijan kulta oli viety salaa Kreikkaan. Minä puolustin löytäjän oikeutta löytöönsä. Aarnin luettelo painoi taskussa: jos tarinat olivat totta, jonakin päivänä löytäjä olisin minä. Asiakas kysyi, milloin löytäminen muuttuu ottamiseksi. [softly] Maksoin kahvini ja vaihdoin pöytää.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-ateena.mp3',
     /*
      * Fablen päätös 4: Sophia Schliemann koruineen. Commonsin
@@ -242,9 +258,7 @@ export const FOKUSVIRTA_ATEENA = {
      * kupla näkyy samalla tavalla kuin muissa kaupungeissa.
      */
     /* TEKSTIPILOTTI 12.9.2026: nykyhavainto ja Pulun oma valinta. */
-    kommentti: [
-      'Schliemannin talo on nyt rahamuseo. Etsin puutarhasta varjoa, mutta kahvilan pöytien alta löytyi pullanmuruja. Siinä unohtui varjo hetkeksi!',
-    ],
+    kommentti: ["Schliemannin talo on nyt rahamuseo. Sen puutarhasta löysin kiiltävän kolikon ja peitin sen jalallani. Sitten lapsi palasi etsimään. Siirsin jalkaa ihan vähän. Hän ilahtui. Niin minäkin."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     kuva: {

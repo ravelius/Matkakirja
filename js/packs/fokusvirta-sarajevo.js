@@ -206,10 +206,7 @@ export const FOKUSVIRTA_SARAJEVO = {
      * paribudjetti alittaa julkaistun lähtöparin. Sanat on hyväksytty
      * tekniseen RC-jatkoon; uusi luenta ja aikaleimat vaaditaan ennen
      * julkaisua. */
-    teksti: 'Sarajevon kupariseppä naputti pannua vasaralla, jonka olisin '
-      + 'hukannut taskuun. Viereisessä puodissa oli samanlainen kahvipannu. '
-      + 'Olin juonut aamulla katsomatta; nyt näin jokaisen jäljen. Basaarin '
-      + 'kilkutuksessa aamiainen muuttui käsityöksi.',
+    teksti: "Sarajevon kupariseppä naputti kahvipannua vasaralla, jonka olisin hukannut taskuun. Aamulla olin juonut kahvini samanlaisesta pannusta vilkaisematta sitä. Nyt näin jokaisen vasaranjäljen. Basaarin kilkutuksessa aamiainen muuttui käsityöksi.",
     /* Kaanon, kohta 1 — luenta ja äänitteen polku sellaisinaan. */
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
@@ -225,21 +222,42 @@ export const FOKUSVIRTA_SARAJEVO = {
      * omaa lisäreaktiota.
      */
     reaktiot: [
-      { id: 'sarajevo.r1', ankkuri: 'hukannut taskuun', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Naurettavan pieni vasara on merkinnän vitsi.' },
-      { id: 'sarajevo.r2', ankkuri: 'aamulla katsomatta', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Isoisä huomaa ohittaneensa työn.' },
-      { id: 'sarajevo.r3', ankkuri: 'jokaisen jäljen', tarkoitus: 'vakavoituu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Katse tarkentuu: hetki vakavoituu.' },
-      { id: 'sarajevo.r4', ankkuri: 'aamiainen muuttui käsityöksi', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Hiljainen kunnianosoitus käsityölle.' },
-    ],
+  {
+    "id": "sarajevo.r1",
+    "ankkuri": "jonka olisin hukannut taskuun",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sarajevo.r2",
+    "ankkuri": "juonut kahvini samanlaisesta pannusta vilkaisematta sitä",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sarajevo.r3",
+    "ankkuri": "Nyt näin jokaisen vasaranjäljen",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "sarajevo.r4",
+    "ankkuri": "aamiainen muuttui käsityöksi",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* LUONNOS: nykyinen v2-äänite on vanhalle tekstille. Uusi luenta ja
      * aikaleimasidonta tuotetaan vasta Fablen hyväksynnän jälkeen. */
-    luenta: '[curious] Sarajevon kupariseppä naputti pannua vasaralla, jonka '
-      + 'olisin hukannut taskuun. Viereisessä puodissa oli samanlainen '
-      + 'kahvipannu. Olin juonut aamulla katsomatta; nyt näin jokaisen '
-      + 'jäljen. [softly] Basaarin kilkutuksessa aamiainen muuttui käsityöksi.',
+    luenta: "[curious] Sarajevon kupariseppä naputti kahvipannua vasaralla, jonka olisin hukannut taskuun. Aamulla olin juonut kahvini samanlaisesta pannusta vilkaisematta sitä. [warmly] Nyt näin jokaisen vasaranjäljen. Basaarin kilkutuksessa aamiainen muuttui käsityöksi.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-sarajevo.mp3',
     /*
      * KUVA: Alois Schönnin maalaus Latinalaissillalta, Österreichische
@@ -340,9 +358,7 @@ export const FOKUSVIRTA_SARAJEVO = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* TEKSTIPILOTTI 12.9.2026: yksi sisältöön sidottu virke lisää. */
-    kommentti: [
-      'Kuparisepät naputtavat basaarissa yhä. Minun piti vain piipahtaa, mutta jäin kuuntelemaan yhtä vasaraa. Yritin naputtaa nokalla samaa tahtia — seppä oli kyllä nopeampi!',
-    ],
+    kommentti: ["Kuparisepät naputtavat basaarissa yhä. Minun piti vain piipahtaa, mutta jäin kuuntelemaan yhtä vasaraa. Yritin naputtaa nokalla samaa tahtia — seppä oli kyllä nopeampi!"],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*

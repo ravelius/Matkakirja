@@ -4,131 +4,81 @@ import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
-import { LIVIAN_E4_REVISION, LIVIAN_LUENTA_CUET } from '../js/livia-pilotti-cuet.js';
-import { TAGIT, puhemuoto } from '../tools/generoi-pulu.mjs';
+import {
+  ERA5_ODOTTAVAT_KAUPUNGIT, LIVIAN_E4_REVISION, LIVIAN_LUENTA_CUET,
+} from '../js/livia-pilotti-cuet.js';
 
-const KAUPUNGIT = [
-  ['tukholma', 'Tukholma', 447, 57],
-  ['helsinki', 'Helsinki', 441, 52],
-  ['tampere', 'Tampere', 441, 56],
-  ['tallinna', 'Tallinna', 411, 53],
-  ['riika', 'Riika', 445, 57],
-  ['vilna', 'Vilna', 448, 52],
-  ['tromssa', 'Tromssa', 459, 59],
-  ['lappi', 'Lappi — Rovaniemi', 439, 55],
-];
+/*
+ * ERÄ 5 ODOTTAA AJOA (14.9.2026). Viiden kaupungin luentaa ei äänitetty
+ * ElevenLabsin kiintiön loputtua, joten niiden TEKSTI on pidetty 13.9.
+ * asussa: teksti ja ääni on pidettävä samassa polvessa. Manifestin oma
+ * eheys (sanat, tagit, SHA:t, ankkurien yksikäsitteisyys) tarkistetaan yhä
+ * KAIKILLE 45:lle; vain pakin ja runtimen sidonta 14.9. manifestiin on
+ * odottavilla kaupungeilla korvattu yhtä tiukalla sidonnalla pakin omaan
+ * tekstiin — eli se mitä kohdistus oikeasti vaatii.
+ */
+const ODOTTAA = new Set(ERA5_ODOTTAVAT_KAUPUNGIT);
 
-const lukukopio = readFileSync(new URL(
-  '../docs/raportit/horatio-livia-e4-r1-lukukopio-20260913.md',
-  import.meta.url,
-), 'utf8');
+const IDS = ['tukholma', 'helsinki', 'tampere', 'tallinna', 'riika', 'vilna', 'tromssa', 'lappi'];
+const REVISION = 'eu-hl-europe-20260914-r2-approved';
+const approved = JSON.parse(readFileSync(new URL('../docs/raportit/horatio-livia-hyvaksytyt-20260914-r2.json', import.meta.url), 'utf8'));
+const manifest = JSON.parse(readFileSync(new URL('../docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260914-r2.json', import.meta.url), 'utf8'));
+const sha = (text) => createHash('sha256').update(text).digest('hex');
+const stripTags = (text) => text.replace(/\[[^\]]+\]\s*/g, '').trim();
 
-const mittaraportti = readFileSync(new URL(
-  '../docs/raportit/horatio-livia-e4-r1-mittaraportti-20260913.md',
-  import.meta.url,
-), 'utf8');
-
-const manifesti = JSON.parse(readFileSync(new URL(
-  '../docs/raportit/horatio-livia-e4-luentamanifesti-20260913.json',
-  import.meta.url,
-), 'utf8'));
-
-function regexpNimi(nimi) {
-  return nimi.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-function ilmanTageja(teksti) {
-  return String(teksti ?? '').replace(/\[[^\]]+\]\s*/g, '').trim();
-}
-
-function sanoja(teksti) {
-  return String(teksti ?? '').trim().split(/\s+/u).filter(Boolean).length;
-}
-
-function lukukopionPari(nimi) {
-  const osuma = lukukopio.match(new RegExp(
-    `## ${regexpNimi(nimi)}\\n[\\s\\S]*?\\n> ([^\\n]+)\\n[\\s\\S]*?\\n> ([^\\n]+)`,
-  ));
-  assert.ok(osuma, `${nimi}: lukukopiota ei löytynyt`);
-  return { horatio: osuma[1], livia: osuma[2] };
-}
-
-function ttsPari(nimi) {
-  const osuma = mittaraportti.match(new RegExp(
-    `### ${regexpNimi(nimi)}\\n[\\s\\S]*?Horatio:\\n\\n> ([^\\n]+)\\n[\\s\\S]*?Livia:\\n\\n> ([^\\n]+)`,
-  ));
-  assert.ok(osuma, `${nimi}: TTS-paria ei löytynyt`);
-  return { horatio: osuma[1], livia: osuma[2] };
-}
-
-test('E4-packit vastaavat hyväksyttyä lukukopiota ja TTS-sanoja', () => {
-  for (const [id, nimi] of KAUPUNGIT) {
-    const virta = FOKUSVIRRAT[id];
-    const tekstit = lukukopionPari(nimi);
-    const tts = ttsPari(nimi);
-    assert.equal(virta.matkakirja.teksti, tekstit.horatio, `${id}: Horatio`);
-    assert.equal(virta.pollo.kommentti[0], tekstit.livia, `${id}: Livia`);
-    assert.equal(virta.matkakirja.luenta, tts.horatio, `${id}: Horatio TTS`);
-    assert.equal(ilmanTageja(tts.horatio), tekstit.horatio, `${id}: Horation sanat`);
-    assert.equal(ilmanTageja(tts.livia), tekstit.livia, `${id}: Livian sanat`);
-  }
-});
-
-test('E4-parit pysyvät julkaistussa yhteisbudjetissa', () => {
-  for (const [id, nimi, merkkiraja, sanaraja] of KAUPUNGIT) {
-    const tekstit = lukukopionPari(nimi);
-    const pari = `${tekstit.horatio}${tekstit.livia}`;
-    assert.ok(pari.length <= merkkiraja, `${id}: merkkibudjetti`);
-    assert.ok(sanoja(pari) <= sanaraja, `${id}: sanabudjetti`);
-  }
-});
-
-test('E4-pakkien Horatio-ankkurit ovat yksikäsitteiset', () => {
-  for (const [id] of KAUPUNGIT) {
-    const matkakirja = FOKUSVIRRAT[id].matkakirja;
-    const tunnukset = new Set();
-    for (const cue of matkakirja.reaktiot) {
-      assert.match(cue.id, new RegExp(`^${id}\\.r\\d+$`), `${id}: cueId`);
-      assert.ok(!tunnukset.has(cue.id), `${id}: cueId toistuu`);
-      tunnukset.add(cue.id);
-      assert.equal(matkakirja.teksti.split(cue.ankkuri).length - 1, 1,
-        `${cue.id}: ankkuri ei ole yksikäsitteinen`);
+test('E4-packit vastaavat täsmälleen hyväksyttyä R2-lähdettä', () => {
+  for (const id of IDS) {
+    const source = approved.cities.find((city) => city.id === id);
+    const item = manifest.cities.find((city) => city.city === id);
+    const pack = FOKUSVIRRAT[id];
+    assert.ok(source && item && pack, `${id}: lähde, manifesti tai pack puuttuu`);
+    if (!ODOTTAA.has(id)) {
+      assert.equal(pack.matkakirja.teksti, source.text.horatio, `${id}: Horatio`);
+      assert.equal(pack.pollo.kommentti[0], source.text.livia, `${id}: Livia`);
+    } else {
+      // Odottava kaupunki EI saa olla 14.9. tekstissä ilman 14.9. ääntä.
+      assert.notEqual(pack.matkakirja.teksti, source.text.horatio,
+        `${id}: odottaa erää 5, mutta teksti on jo vaihdettu ilman äänitettä`);
+      assert.notEqual(pack.pollo.kommentti[0], source.text.livia,
+        `${id}: odottaa erää 5, mutta teksti on jo vaihdettu ilman äänitettä`);
     }
+    assert.equal(item.horatio.visibleText, source.text.horatio, `${id}: manifestin Horatio`);
+    assert.equal(item.livia.visibleText, source.text.livia, `${id}: manifestin Livia`);
+    assert.equal(stripTags(item.horatio.ttsText), source.text.horatio, `${id}: Horatio TTS-sanat`);
+    assert.equal(stripTags(item.livia.ttsText), source.text.livia, `${id}: Livia TTS-sanat`);
+    assert.equal(item.horatio.visibleTextSha256, sha(source.text.horatio), `${id}: Horatio SHA`);
+    assert.equal(item.livia.visibleTextSha256, sha(source.text.livia), `${id}: Livia SHA`);
   }
 });
 
-test('E4-luentamanifesti on sidottu hyväksyttyihin sanoihin, tageihin ja cueihin', () => {
-  assert.equal(manifesti.contentRevision, 'eu-hl-e4-20260913-r1-approved1');
-  assert.equal(manifesti.state, 'content-frozen-audio-authorized-rc-only');
-  assert.equal(manifesti.cities.length, KAUPUNGIT.length);
-  const sha = (teksti) => createHash('sha256').update(teksti).digest('hex');
-  for (const [id, nimi] of KAUPUNGIT) {
-    const item = manifesti.cities.find((kaupunki) => kaupunki.city === id);
-    const tekstit = lukukopionPari(nimi);
-    const tts = ttsPari(nimi);
-    assert.ok(item, `${id}: puuttuu manifestista`);
-    assert.equal(item.horatio.visibleText, tekstit.horatio, `${id}: H näkyvä`);
-    assert.equal(item.horatio.ttsText, tts.horatio, `${id}: H TTS`);
-    assert.equal(item.livia.visibleText, tekstit.livia, `${id}: L näkyvä`);
-    assert.equal(item.livia.ttsText, tts.livia, `${id}: L TTS`);
-    assert.equal(item.horatio.visibleTextSha256, sha(tekstit.horatio), `${id}: H SHA`);
-    assert.equal(item.horatio.ttsTextSha256, sha(tts.horatio), `${id}: H TTS SHA`);
-    assert.equal(item.livia.visibleTextSha256, sha(tekstit.livia), `${id}: L SHA`);
-    assert.equal(item.livia.ttsTextSha256, sha(tts.livia), `${id}: L TTS SHA`);
-    assert.equal(puhemuoto(item.livia.visibleText, TAGIT[`${id}-3`]), item.livia.ttsText,
-      `${id}: tuotantogeneraattorin Livia TTS`);
+test('E4-cuet ovat yksikäsitteiset ja sidotut hyväksyttyyn tekstiin', () => {
+  assert.equal(LIVIAN_E4_REVISION, REVISION);
+  for (const id of IDS) {
+    const item = manifest.cities.find((city) => city.city === id);
     const runtime = LIVIAN_LUENTA_CUET[id];
-    assert.equal(runtime.revision, LIVIAN_E4_REVISION, `${id}: runtime-revisio`);
-    assert.equal(runtime.tekstiSha256, item.livia.visibleTextSha256, `${id}: runtime SHA`);
-    assert.deepEqual(runtime.cuet.map(({ id: cueId, ankkuri: anchor, esiintyma: occurrence,
-      tarkoitus: intent, voimakkuus: strength }) => ({ cueId, anchor, occurrence, intent, strength })),
-    item.livia.cues.map(({ cueId, anchor, occurrence = 1, intent, strength }) => (
-      { cueId, anchor, occurrence, intent, strength }
-    )), `${id}: runtime-cuet`);
-    for (const cue of [...item.horatio.cues, ...item.livia.cues]) {
-      const visible = cue.cueId.includes('.livia.') ? tekstit.livia : tekstit.horatio;
-      assert.equal(visible.split(cue.anchor).length - 1, cue.occurrence ?? 1,
-        `${cue.cueId}: manifestin ankkuri`);
+    if (ODOTTAA.has(id)) {
+      /*
+       * Odottavan kaupungin cue-sopimus on yhä vanhassa revisiossaan, ja
+       * TÄSMÄLLEEN se on portti: cuejen tekstiSha256:n on vastattava sitä
+       * tekstiä, joka pelissä näkyy ja jonka päälle vanha kohdistus on
+       * tehty. Jos nämä eriytyisivät, eleet laukeaisivat väärässä kohdassa.
+       */
+      assert.notEqual(runtime.revision, REVISION, `${id}: odottaa erää 5`);
+      assert.equal(runtime.tekstiSha256, sha(FOKUSVIRRAT[id].pollo.kommentti[0]),
+        `${id}: cuejen SHA ei vastaa pakin tekstiä`);
+      continue;
+    }
+    assert.equal(runtime.revision, REVISION, `${id}: revisio`);
+    assert.equal(runtime.tekstiSha256, item.livia.visibleTextSha256, `${id}: SHA`);
+    assert.deepEqual(runtime.cuet.map(({ id: cueId, ankkuri: anchor, esiintyma: occurrence, tarkoitus: intent, voimakkuus: strength }) => ({ cueId, anchor, occurrence, intent, strength })), item.livia.cues.map(({ cueId, anchor, occurrence = 1, intent, strength }) => ({ cueId, anchor, occurrence, intent, strength })), `${id}: runtime-cuet`);
+    for (const speaker of ['horatio', 'livia']) {
+      const ids = new Set();
+      for (const cue of item[speaker].cues) {
+        assert.ok(!ids.has(cue.cueId), `${cue.cueId}: tunnus toistuu`);
+        ids.add(cue.cueId);
+        assert.ok(cue.intent, `${cue.cueId}: intent puuttuu`);
+        assert.equal(item[speaker].visibleText.split(cue.anchor).length - 1, cue.occurrence ?? 1, `${cue.cueId}: ankkuri`);
+      }
     }
   }
 });

@@ -187,7 +187,7 @@ export const FOKUSVIRTA_DUBLIN = {
     /* KAANON (Fable 29.8.2026) — paikkarivi sellaisenaan. */
     paikkarivi: 'Dublin, syyskuussa 1873. Tihkusadetta; puntari putoaa.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 331 merkkiä (yläraja 400). */
-    teksti: 'Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään. Olin unohtanut vuokrasopimuksen.',
+    teksti: "Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md
      * luku 7). Vain tunnetagit on lisätty, neljä kappaletta, alku ja
@@ -209,19 +209,49 @@ export const FOKUSVIRTA_DUBLIN = {
      * pyyhki otsaansa hihalla" (havainnot).
      */
     reaktiot: [
-      { id: 'dublin.r1', ankkuri: 'yhdeksäksituhanneksi vuodeksi', tarkoitus: 'hammastyy', voimakkuus: 0.6, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'dublin.r2', ankkuri: 'olueen tai janoon', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'dublin.r3', ankkuri: 'loppuuko työ koskaan', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'dublin.r4', ankkuri: 'katsoi minua pitkään', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'dublin.r5', ankkuri: 'Olin unohtanut vuokrasopimuksen', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "dublin.r1",
+    "ankkuri": "vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "dublin.r2",
+    "ankkuri": "vaatii uskoa olueen tai janoon",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "dublin.r3",
+    "ankkuri": "mies vieritti tynnyreitä kärryille",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "dublin.r4",
+    "ankkuri": "loppuuko työ koskaan",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "dublin.r5",
+    "ankkuri": "vieritti seuraavan tynnyrin",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. [mischievously] Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. Hän katsoi minua pitkään. [softly] Olin unohtanut vuokrasopimuksen.',
+    luenta: "[curious] Guinnessin panimon vuokrasopimus oli tehty yhdeksäksituhanneksi vuodeksi. Sellainen vaatii uskoa olueen tai janoon. Portilla mies vieritti tynnyreitä kärryille. Kysyin, loppuuko työ koskaan. [warmly] Hän katsoi minua pitkään ja vieritti seuraavan tynnyrin.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-dublin.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-dublin-r20260909-paper-v4;
@@ -276,9 +306,7 @@ export const FOKUSVIRTA_DUBLIN = {
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'St James’s Gaten vanhassa käymistalossa käy nyt vieraita seitsemässä kerroksessa. Nousin Gravity Barin tasolle ulkokautta. Minun kierrokseni oli lyhyempi, näköala sama.',
-    ],
+    kommentti: ["St James’s Gaten panimolle jonotetaan nyt kameroiden kanssa. Asetuin matkalaukun viereen kuvaan ja kohotin leukaa. Kuvaaja tähtäsi harppumerkkiin. Otin askeleen lähemmäs. Ihan vain sommittelun vuoksi."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'hammastys', voimakkuus: 0.5 },
     teksti: 'Vahtimestarit katsovat kaikkia edelleen kuin varkaita, ja kohta '

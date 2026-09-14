@@ -212,7 +212,7 @@ export const FOKUSVIRTA_BARCELONA = {
     paikkarivi: 'Barcelona, maaliskuussa 1873. Lämmintä jo; satamassa tervan '
       + 'haju; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 317 merkkiä (yläraja 400). */
-    teksti: 'Barcelonan uusista kortteleista oli leikattu kulmat pois. Epäilin muuraria, kunnes kaksi kärryä mahtui kääntymään. Cerdà oli piirtänyt tilaa hengittää. Tulevan kadun paikalla kasvoi vielä kaalia; se ei tiennyt muuttuvansa liikenteeksi.',
+    teksti: "Barcelonan laidalla miehet nousivat toistensa hartioille, kerros kerrokselta. Viimeisenä kiipesi poika. Olin nähnyt miehiä mastossa, mutta tämä masto hengitti. Tartuin vieraan miehen käsivarteen. Poika nosti huipulla kätensä. Minä en uskaltanut irrottaa omaani.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -232,17 +232,49 @@ export const FOKUSVIRTA_BARCELONA = {
      * kaalia" (havainto ennen loppua).
      */
     reaktiot: [
-      { id: 'barcelona.r1', ankkuri: 'leikattu kulmat pois', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'barcelona.r2', ankkuri: 'Epäilin muuraria', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'barcelona.r3', ankkuri: 'tilaa hengittää', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'barcelona.r4', ankkuri: 'muuttuvansa liikenteeksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "barcelona.r1",
+    "ankkuri": "miehet nousivat toistensa hartioille, kerros kerrokselta",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "barcelona.r2",
+    "ankkuri": "Viimeisenä kiipesi poika",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "barcelona.r3",
+    "ankkuri": "tämä masto hengitti",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "barcelona.r4",
+    "ankkuri": "Tartuin vieraan miehen käsivarteen",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "barcelona.r5",
+    "ankkuri": "Minä en uskaltanut irrottaa omaani",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Barcelonan uusista kortteleista oli leikattu kulmat pois. Epäilin muuraria, kunnes kaksi kärryä mahtui kääntymään. Cerdà oli piirtänyt tilaa hengittää. [softly] Tulevan kadun paikalla kasvoi vielä kaalia; se ei tiennyt muuttuvansa liikenteeksi.',
+    luenta: "[curious] Barcelonan laidalla miehet nousivat toistensa hartioille, kerros kerrokselta. Viimeisenä kiipesi poika. Olin nähnyt miehiä mastossa, mutta tämä masto hengitti. [softly] Tartuin vieraan miehen käsivarteen. Poika nosti huipulla kätensä. Minä en uskaltanut irrottaa omaani.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-barcelona.mp3',
   },
 
@@ -270,9 +302,7 @@ export const FOKUSVIRTA_BARCELONA = {
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Cerdàn viistetyt kulmat näkyvät ilmasta yhä. Laskeuduin räystäälle tarkkailemaan risteystä: jalankulkijat, pyörät ja autot kulkivat kukin suuntaansa. Minulle jäi taivas. Hyvin suunniteltu.',
-    ],
+    kommentti: ["Barcelonan Sagrada Famíliassa pesii muuttohaukkoja. Niitä voi katsella pesäkamerasta. Minä näin emon palaavan kyyhky kynsissään. Suosittelen kameraa."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*

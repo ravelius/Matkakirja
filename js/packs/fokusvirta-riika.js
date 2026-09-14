@@ -155,11 +155,7 @@ export const FOKUSVIRTA_RIIKA = {
     paikkarivi: 'Riika, heinäkuussa 1873. Lämmintä; joella pellavan haju; '
       + 'puntari korkealla.',
     /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
-    teksti: 'Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. '
-      + 'Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. '
-      + 'Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan '
-      + 'sataman ja kirkot; kaupungin tärkein rakennus olikin hetken '
-      + 'ihmisäänistä.',
+    teksti: "Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: neljä tagia, alku ja loppu eri
@@ -179,21 +175,49 @@ export const FOKUSVIRTA_RIIKA = {
      * karttaan sataman ja kirkot" (selitys).
      */
     reaktiot: [
-      { id: 'riika.r1', ankkuri: 'kuoro veti henkeä kuin yksi', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Monesta kuorosta tulee yksi ääni.' },
-      { id: 'riika.r2', ankkuri: 'En ymmärtänyt sanoja', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
-        perustelu: 'Kielimuuri todetaan rauhallisesti.' },
-      { id: 'riika.r3', ankkuri: 'kyynel poskellaan', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
-        perustelu: 'Vieraan miehen kyynel on merkinnän vakavin hetki.' },
-      { id: 'riika.r4', ankkuri: 'hetken ihmisäänistä', tarkoitus: 'vakavoituu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Päätöslause kantaa koko merkinnän.' },
-    ],
+  {
+    "id": "riika.r1",
+    "ankkuri": "ensimmäiset suuret laulujuhlat olivat juuri päättyneet",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "riika.r2",
+    "ankkuri": "kuoro veti henkeä kuin yksi",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "riika.r3",
+    "ankkuri": "En ymmärtänyt sanoja",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "riika.r4",
+    "ankkuri": "mies lauloi kyynel poskellaan",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "riika.r5",
+    "ankkuri": "kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.5,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Riian ensimmäiset suuret laulujuhlat olivat juuri '
-      + 'päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt '
-      + 'sanoja. [softly] Vieressä mies lauloi kyynel poskellaan. Olin '
-      + 'merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus '
-      + 'olikin hetken ihmisäänistä.',
+    luenta: "[curious] Riian ensimmäiset suuret laulujuhlat olivat juuri päättyneet. Majatalossa kuoro veti henkeä kuin yksi. En ymmärtänyt sanoja. [warmly] Vieressä mies lauloi kyynel poskellaan. Olin merkinnyt karttaan sataman ja kirkot; kaupungin tärkein rakennus olikin hetken tehty ihmisäänistä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-riika.mp3',
   },
 
@@ -258,9 +282,7 @@ export const FOKUSVIRTA_RIIKA = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
-    kommentti: [
-      'Laulujuhlat jatkuvat yhä, ja Mežaparksin lava näyttää ilmasta suurelta pesältä. Laskeuduin hetkeksi sen reunalle. Kun kuoro aloitti, en yrittänyt laskea laulajia. Kuuntelin vain.',
-    ],
+    kommentti: ["Riian oopperan vieressä majaville tuodaan oksia, jotta puistopuut säästyisivät. Katselin yhden illallista. Minä olen selvästi ollut aivan liian helppo naapuri."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*

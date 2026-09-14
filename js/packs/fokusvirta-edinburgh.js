@@ -160,7 +160,7 @@ export const FOKUSVIRTA_EDINBURGH = {
     paikkarivi: 'Edinburgh, elokuussa 1873. Viileää; linna sumun yllä; '
       + 'puntari putoaa.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 348 merkkiä (yläraja 400). */
-    teksti: 'Edinburghissa katu saattoi olla toisen kadun katto. Menin portaita alas ja tulin ulos jonkun ikkunan yläpuolella. Sukat riippuivat kuilun yllä vailla huimausta. Linnan musta kallio kohosi kaiken takana. Kaupungin karttaan tarvittaisiin toinen arkki päälle.',
+    teksti: "Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä.",
     /*
      * LUENTA: sama teksti, vain tunnetagit lisätty (Raamattu,
      * luentaprosessi: ruututeksti = luentateksti sanasta sanaan).
@@ -180,17 +180,49 @@ export const FOKUSVIRTA_EDINBURGH = {
      * (liikkeen kuvaus).
      */
     reaktiot: [
-      { id: 'edinburgh.r1', ankkuri: 'toisen kadun katto', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'edinburgh.r2', ankkuri: 'vailla huimausta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'edinburgh.r3', ankkuri: 'musta kallio', tarkoitus: 'vakavoituu', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'edinburgh.r4', ankkuri: 'toinen arkki päälle', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "edinburgh.r1",
+    "ankkuri": "vanha rautahäkki peitti hautaa",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "edinburgh.r2",
+    "ankkuri": "Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.55,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "edinburgh.r3",
+    "ankkuri": "kauanko häkkiä oli tarvittu",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "edinburgh.r4",
+    "ankkuri": "Kunnes ruumis ei enää kelvannut kaupaksi",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.55,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "edinburgh.r5",
+    "ankkuri": "jäin lukemaan nimeä kivestä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Edinburghissa katu saattoi olla toisen kadun katto. Menin portaita alas ja tulin ulos jonkun ikkunan yläpuolella. [mischievously] Sukat riippuivat kuilun yllä vailla huimausta. Linnan musta kallio kohosi kaiken takana. [softly] Kaupungin karttaan tarvittaisiin toinen arkki päälle.',
+    luenta: "[softly] Edinburghin hautausmaalla vanha rautahäkki peitti hautaa. Ruumiinryöstäjät olivat myyneet vainajia lääkäreiden opetukseen. Kysyin haudankaivajalta, kauanko häkkiä oli tarvittu. Kunnes ruumis ei enää kelvannut kaupaksi. [thoughtfully] Hän jatkoi työtään. Minä jäin lukemaan nimeä kivestä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-edinburgh.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-edinburgh-r20260909-paper-v4;
@@ -245,9 +277,7 @@ export const FOKUSVIRTA_EDINBURGH = {
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Elokuussa Edinburghin kadutkin muuttuvat näyttämöiksi. Lensin esiintyjän yli ja laskeuduin väärälle katolle. Täällä hyvä aitiopaikka ei vielä kerro, missä kerroksessa esitys on.',
-    ],
+    kommentti: ["1800-luvun alun lääkäriopiskelijat tutkivat vainajia oppiakseen ihmisen rakennetta. Ruumiita saatiin laillisesti liian vähän, joten varkaille maksettiin. Minä luulin, että hautausmaalla sai olla rauhassa."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ylpea', voimakkuus: 0.5 },
     teksti: 'Ja se isoisäsi ihmettelemä järjestys — köyhät ylhäällä — '
