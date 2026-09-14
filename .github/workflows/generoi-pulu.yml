@@ -219,7 +219,7 @@ jobs:
       # pureta eikä koodata uudelleen (omistaja, Raamattu: "PULUN AANI:
       # ELEVENLABSIN OLETUSASETUKSET, EI FFMPEG-KASITTELYA") — juuri se
       # toinen 128 kbps sukupolvi oli kuultu "digitaalinen häiriö".
-      - name: Asenna ffmpeg (vain ffprobe: keston luku)
+      - name: Asenna ffmpeg (vain ffprobe lukee keston)
         if: ${{ inputs.toiminto == 'generoi' }}
         run: |
           set -euo pipefail
