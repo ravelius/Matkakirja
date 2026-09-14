@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1893, teksti: 'Ranskan tasoituslaatat korjatulla leikkurilla (raportti)' },
   { v: 1892, teksti: 'Horation taso ja loppuhäivytys Web Audiolla iOS:lla' },
   { v: 1891, teksti: 'Puhelimella tekstit piiloon; Liiku-nappi; luennan huntu' },
   { v: 1890, teksti: 'Raakavienti pakolliseksi kaikkiin ääniputkiin' },
