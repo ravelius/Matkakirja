@@ -1389,9 +1389,32 @@ export function luoLaattakerros({
     for (let i = 0; i < kuvat.length; i += 1) {
       const kuva = kuvat[i];
       if (tasoitus && kerrostasot[i]?.vari) {
-        maalaaTasoitus(ctx, {
-          tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki, kuva,
-        });
+        /*
+         * KARKEA SUOJA EI SAA PÄÄTYÄ RUUDULLE (mitattu 14.9.2026,
+         * puhelimen saapumisnäkymä; omistajan kuvakaappaus klo 17.55
+         * UTC: *"laattojen reunoilla repaleiset kermaläiskät"*).
+         *
+         * Ennen maapolygonien saapumista suoja on KOKO LAATASTON
+         * LAATIKKO (js/laattapyramidi.js pyramidinTasoitus, `tarkka`
+         * epätosi), eikä maalaus silloin peitä laataston sisältä
+         * mitään: laatan oma kuva piirtyy sellaisenaan myös
+         * Välimerelle, Espanjaan ja Marokkoon — harmaa meri ja
+         * Atlaksen rinteet seepian päällä, laatan reunaan katkeavina
+         * läiskinä. Mitattu 390 × 844 dpr 3: näin näytti 35 s ajan,
+         * koska hitaalla laitteella suojan tarkentumisen jälkeinen
+         * uudelleenpiirto ei ehtinyt valmiiksi (valmiita 4/30).
+         *
+         * VÄRITASO JÄTETÄÄN SILLOIN KOKONAAN POIS. Kartta on sen
+         * hetken täsmälleen se seepiakartta, joka se oli ennen
+         * tasoituskerrosta — ei koskaan väärä kuva. Suojan
+         * tarkentuessa `tasoitus.avain` vaihtuu (L → T) ja kerros
+         * mitätöi laattansa itse (ks. MAANVAIHTO MITÄTÖI LAATAT).
+         */
+        if (tasoitus.suoja?.tarkka) {
+          maalaaTasoitus(ctx, {
+            tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki, kuva,
+          });
+        }
         kuva?.close?.();
         continue;
       }
