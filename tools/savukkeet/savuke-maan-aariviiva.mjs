@@ -1,13 +1,17 @@
 /*
- * Savuke: KOHDEMAAN ÄÄRIVIIVA PALLOLLA — EHJÄ, MUSTEEN SININEN,
- * LEVEÄMPI (karttauudistuksen PÄÄTÖKSET 11 kohta 2 ja 14 kohta 2;
- * ensin omistaja 14.9.2026 klo 13.20 UTC: *"jostain syysta kartan
- * punainen aariviiva ei piirry koko matkalta. aariviiva saisi olla
- * murretumpi ja tummempi punainen ja aariviiva hieman leveampi."*,
- * sitten samana päivänä: *"vaihda samalla kartan reuna musteen
- * siniseksi"*. Leveys ja katkokorjaus pysyvät; vain sävy vaihtui,
- * ja sen mukana tämän savukkeen VÄRIMITTA: kehä ei enää erotu
- * punakanavan vaan SINIKANAVAN ylivoimalla.)
+ * Savuke: KOHDEMAAN ÄÄRIVIIVA PALLOLLA — EHJÄ, MUIDEN RAJOJEN VÄRINEN,
+ * EROTTUU PAKSUUDELLA (karttauudistuksen PÄÄTÖKSET 11 kohta 2, 14
+ * kohta 2 ja 15 kohta 3; omistaja 14.9.2026 ensin *"jostain syysta
+ * kartan punainen aariviiva ei piirry koko matkalta. aariviiva saisi
+ * olla murretumpi ja tummempi punainen ja aariviiva hieman leveampi."*,
+ * sitten *"vaihda samalla kartan reuna musteen siniseksi"*, ja
+ * lopuksi *"Muuta maanraja saman variseksi kuin muut rajat."*)
+ *
+ * Leveys ja katkokorjaus pysyvät; VÄRI vaihtui kolmannen kerran, ja
+ * sen mukana tämän savukkeen VÄRIMITTA. Kehä ei enää erotu omalla
+ * sävyllään — se on täsmälleen naapurirajojen muste (RAJA_MUSTE
+ * #6b5539, paletissa `--raja-muste`) — vaan LEVEYDELLÄ (3 css-px
+ * vs. tavallisen rajan ~1) ja TÄYDELLÄ PEITOLLA (1 vs. 0,34).
  *
  * ── MITÄ TÄMÄ MITTAA ───────────────────────────────────────────────
  *
@@ -24,10 +28,10 @@
  *
  * Savuke mittaa PEITTOA renkaan omilta pisteiltä: jokainen näkyvä
  * rengaspiste projisoidaan ruudulle (pallon oma getScreenCoords) ja
- * kuvasta katsotaan, onko sen kohdalla rajan mustetta. Kahdeksan
- * NIMETTYÄ kohtaa rajaa (Pyreneet, Atlantti, Bretagne, Kanaali,
- * Belgia, Rein, Alpit, Välimeri) mitataan erikseen, jotta katko ei voi
- * piiloutua keskiarvoon.
+ * kuvasta katsotaan, onko sen kohdalla rajan mustetta TÄYDELLÄ
+ * PEITOLLA. Kahdeksan NIMETTYÄ kohtaa rajaa (Pyreneet, Atlantti,
+ * Bretagne, Kanaali, Belgia, Rein, Alpit, Välimeri) mitataan erikseen,
+ * jotta katko ei voi piiloutua keskiarvoon.
  *
  * ── VARTIOT ────────────────────────────────────────────────────────
  *
@@ -35,19 +39,21 @@
  *     `korostusRenkaita` = assets/data/maapolygonit.json FRA-renkaat
  *     (16, Korsika mukaan lukien). Yksikään rengas ei saa pudota.
  *  2. PEITTO: vähintään PEITTO_RAJA osuus näkyvistä rengaspisteistä on
- *     rajan väriä. Ennen korjausta 60 % (puhelin, saapumisnäkymä).
+ *     täyden peiton rajamustetta.
  *  3. KAHDEKSAN KOHTAA: jokaisessa nimetyssä kohdassa on rajan väriä.
- *  4. VÄRI on paletin `--raja-muste` eikä oma heksaluku, eikä se ole
- *     `--mark` (kartan merkinnät pysyvät punaisina).
- *  5. LEVEYS on yli entisen 2,5 css-pikselin lähipäässä.
+ *  4. VÄRI ON MUIDEN RAJOJEN VÄRI: kehän materiaalin sävy = paletin
+ *     `--raja-muste` = pallon RAJA_MUSTE (naapurirajan muste) ±0
+ *     ja, kun tavallinen raja on samassa kuvassa, sama kuin SEN
+ *     materiaalin sävy VARITOLERANSSIn rajoissa. Se ei ole `--mark`
+ *     eikä entinen sininen #1f3a5f.
+ *  5. LEVEYS on 3 css-pikselin luokkaa lähipäässä ja moninkertainen
+ *     tavalliseen rajaan — juuri se erottaa kohdemaan, kun väri ei.
  *
- * VASTAKOE: `SAVUKE_VASTAKOE=1` palauttaa ajossa ENTISEN kehän —
- * paletin `--mark`-PUNAISEN ja 2,5 css-pikseliä, ja päätypyörylät
- * pois — eli täsmälleen sen, mistä omistaja huomautti. Silloin sekä
- * VÄRIVARTIOT (4) että PEITTO putoavat punaisiksi: sininen mitta ei
- * löydä punaisesta viivasta mitään, joten peitto romahtaa nollaan.
- * Juuri se osoittaa, että mitta mittaa uutta väriä eikä mitä tahansa
- * viivaa.
+ * VASTAKOE: `SAVUKE_VASTAKOE=1` maalaa kehän ajossa takaisin ENTISEEN
+ * SINISEEN (#1f3a5f) leveyteen koskematta. Silloin värivartiot (4) ja
+ * PEITTO putoavat punaisiksi: ruskea mitta ei löydä sinisestä
+ * viivasta mitään. Juuri se osoittaa, että mitta mittaa uutta väriä
+ * eikä mitä tahansa viivaa.
  *
  * ÄMPÄRI KULKEE NODEN KAUTTA (CLAUDE.md: NODE_USE_ENV_PROXY=1).
  *
@@ -61,6 +67,7 @@ import {
 import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
+import { RAJA_MUSTE } from '../../js/pallovektorit.js';
 import { packById } from '../../js/pack.js';
 import { decodePng } from './pallon-liike-mittarit.mjs';
 
@@ -78,20 +85,34 @@ mkdirSync(ULOS, { recursive: true });
 
 /* ── rajat (perustelut yllä) ──────────────────────────────────────── */
 /**
- * Rajan väri erottuu SINIKANAVAN ylivoimalla B − (R+G)/2. Mitatut
- * arvot: kehä (#1f3a5f) +50,5, seepiapaperi (#efdcb4) −49,5,
- * värillinen maa (230,219,172) −52,5 ja pelin meri — joka EI ole
- * sininen vaan viileää paperia (tools/fokuskartta/piirto.js: syvinkin
- * meri 134,132,124) — −9,0. Kynnys on kehän ja nollan puolivälissä:
- * se kestää reunanpehmennyksen (noin 70 %:n peitolla sekoittunut
- * pikseli yltää yhä yli) mutta ei kelpuuta yhtään taustaa, sillä
- * kaikki taustat ovat pakkasen puolella.
+ * TÄYDEN PEITON RAJAMUSTE, MITATTUNA. Kehä ja naapurien rajat ovat
+ * samaa mustetta #6b5539, joten VÄRI EI ENÄÄ EROTA NIITÄ — peitto
+ * erottaa. Mitatut pikselit (Chromium, työpöytä 1400 × 900,
+ * docs/raportit/viesti-fable-rajavari-20260914.md):
  *
- * MIKSI EI ENÄÄ PUNAKANAVA: sama mitta toisin päin oli oikea niin
- * kauan kuin kehä oli punainen. Sinisellä kehällä punamitta antaisi
- * peitoksi 0 % — eli savuke mittaisi väärää asiaa.
+ *   kohdemaan kehä (peitto 1)          rgb(107, 85, 57)   L  88  mitattu
+ *   naapurin raja  (peitto 0,34)       rgb(205,194,163)   L 196  mitattu
+ *   rantaviiva     (peitto 0,58)       rgb(153,131,103)   L 134  laskettu
+ *   syvin meri (ei sininen, viileä)    rgb(134,132,124)   L 131  vakio
+ *   seepiapaperi                       rgb(239,220,180)   L 222  vakio
+ *
+ * Mitta on siis kaksiosainen: pikseli on kehää, jos se on TUMMA
+ * (L ≤ TUMMUUS_RAJA) ja LÄMMIN (R − B ≥ LAMPO_RAJA). Tummuusraja on
+ * kehän (88) ja seuraavaksi tummimman taustan (rantaviiva 134)
+ * puolivälissä: se kestää reunanpehmennyksen mutta ei kelpuuta
+ * rantaviivaa, naapurirajaa eikä merta. Lämpöehto pudottaa lisäksi
+ * kaiken kylmän (meri +10, entinen sininen kehä −64).
+ *
+ * MIKSI EI ENÄÄ SINIKANAVA: sinimitta oli oikea niin kauan kuin kehä
+ * oli sininen. Ruskealla kehällä se antaisi peitoksi 0 % — savuke
+ * mittaisi väärää asiaa.
  */
-const SINIKYNNYS = 25;
+const TUMMUUS_RAJA = 111;
+const LAMPO_RAJA = 25;
+/** Värivartion sieto sRGB-kanavaa kohti, kun kahta materiaalia verrataan. */
+const VARITOLERANSSI = 4;
+/** Entinen sävy: ei saa enää esiintyä (vastakoe maalaa juuri tämän). */
+const ENTINEN_SININEN = '#1f3a5f';
 /** Kuinka läheltä rengaspistettä väri kelpaa (css-pikseliä). */
 const HAKUSADE_CSS = 3;
 /** Peiton alaraja: osuus näkyvistä rengaspisteistä, joilla on väri. */
@@ -138,6 +159,13 @@ const vaadi = (nimi, ehto, lisa = '') => {
   if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
 };
 const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
+/** Suurin kanavaero kahden heksavärin välillä (0 = sama väri). */
+const kanavaEro = (a, b) => {
+  const osat = (v) => [1, 3, 5].map((i) => parseInt(String(v).slice(i, i + 2), 16));
+  if (!a || !b) return 255;
+  const [r1, g1, b1] = osat(a); const [r2, g2, b2] = osat(b);
+  return Math.max(Math.abs(r1 - r2), Math.abs(g1 - g2), Math.abs(b1 - b2));
+};
 
 const AMPARI = 'https://media.matkakirja.app/';
 const valimuisti = new Map();
@@ -245,21 +273,20 @@ async function ajo(nimi, viewport, dpr, mobiili) {
   await sivu.waitForTimeout(SAAPUMISKOHTAUS_MS);
   await sivu.waitForTimeout(4000);
   if (VASTAKOE) {
-    const tulos = await sivu.evaluate(() => {
+    const tulos = await sivu.evaluate((sininen) => {
       const pallo = window.matkakirja.ui.pallolauta.pallo;
-      const mark = getComputedStyle(document.documentElement).getPropertyValue('--mark').trim();
       let n = 0;
       pallo.scene().traverse((o) => {
         if (o.userData?.pallovektorit?.laji !== 'korostus') return;
-        if (o.material?.uniforms?.paatyt) o.material.uniforms.paatyt.value = 0;
-        o.material.color.set(mark);
-        o.material.linewidth = 2.5;
+        // Vain VÄRI takaisin entiseen siniseen: leveys ja pyörylät
+        // pysyvät, jotta vastakoe koettelee juuri sitä, mikä muuttui.
+        o.material.color.set(sininen);
         o.material.needsUpdate = true;
         n += 1;
       });
       return n;
-    });
-    tieto(`${nimi}: VASTAKOE — entinen kehä (--mark, 2,5 px, ei pyörylöitä)`, `${tulos} materiaalia`);
+    }, ENTINEN_SININEN);
+    tieto(`${nimi}: VASTAKOE — entinen sininen kehä (${ENTINEN_SININEN})`, `${tulos} materiaalia`);
   }
 
   const ulos = [];
@@ -294,7 +321,14 @@ async function ajo(nimi, viewport, dpr, mobiili) {
       const pallo = lauta.pallo;
       const mittarit = lauta.vektorit?.().mittarit?.() ?? null;
       let olio = null;
-      pallo.scene().traverse((o) => { if (!olio && o.userData?.pallovektorit?.laji === 'korostus') olio = o; });
+      let rajaOlio = null;
+      pallo.scene().traverse((o) => {
+        const laji = o.userData?.pallovektorit?.laji;
+        if (!olio && laji === 'korostus') olio = o;
+        // Naapurien raja SAMASTA KUVASTA: sen materiaali on se totuus,
+        // johon kehän sävyä verrataan (ei toinen heksaluku savukkeessa).
+        if (!rajaOlio && laji === 'rajat') rajaOlio = o;
+      });
       const kotelo = pallo.renderer().domElement;
       const kehys = kotelo.getBoundingClientRect();
       const pov = pallo.pointOfView();
@@ -318,7 +352,22 @@ async function ajo(nimi, viewport, dpr, mobiili) {
           const s = pallo.getScreenCoords(lat, lon, 0);
           if (!s) continue;
           if (!(s.x >= 3 && s.y >= 3 && s.x < kotelo.clientWidth - 3 && s.y < kotelo.clientHeight - 3)) continue;
-          pisteet.push([+(s.x + kehys.left).toFixed(1), +(s.y + kehys.top).toFixed(1), +lat.toFixed(3), +lon.toFixed(3)]);
+          const rx = s.x + kehys.left; const ry = s.y + kehys.top;
+          /*
+           * PANEELIN ALLA OLEVAA VIIVAA EI MITATA. Työpöydällä
+           * matkapäiväkirjan kortti ja maapaneeli ovat puoliläpinäkyviä
+           * ja PELIN OMIA: niiden alla kehä näkyy haaleana (mitattu
+           * Bretagnen kärjessä rgb(180,164,138) = noin puolet mustetta),
+           * eikä se ole kehän vika vaan kortin. Piste, jossa
+           * elementFromPoint ei anna pallon kangasta, jätetään pois
+           * sekä peitosta että nimetyistä kohdista — pelaajakaan ei näe
+           * sitä kohtaa. (Kortit, joiden pointer-events on none, eivät
+           * osu tähän: ne läpäisevät elementFromPointin, ja niiden alta
+           * mitataan kuten ennenkin.)
+           */
+          const paalla = document.elementFromPoint(rx, ry);
+          const peitossa = !(paalla === kotelo || kotelo.contains(paalla));
+          pisteet.push([+rx.toFixed(1), +ry.toFixed(1), +lat.toFixed(3), +lon.toFixed(3), peitossa ? 1 : 0]);
         }
       }
       return {
@@ -329,6 +378,12 @@ async function ajo(nimi, viewport, dpr, mobiili) {
           vari: `#${olio.material.color.getHexString()}`,
           linewidth: olio.material.linewidth,
           paatyt: olio.material.uniforms?.paatyt?.value ?? null,
+          opacity: olio.material.opacity,
+        } : null,
+        rajaMateriaali: rajaOlio ? {
+          vari: `#${rajaOlio.material.color.getHexString()}`,
+          linewidth: rajaOlio.material.linewidth,
+          opacity: rajaOlio.material.opacity,
         } : null,
         paletti: getComputedStyle(document.documentElement).getPropertyValue('--raja-muste').trim(),
         mark: getComputedStyle(document.documentElement).getPropertyValue('--mark').trim(),
@@ -343,13 +398,18 @@ async function ajo(nimi, viewport, dpr, mobiili) {
           const x = px + dx; const y = py + dy;
           if (x < 0 || y < 0 || x >= kuva.width || y >= kuva.height) continue;
           const i = (y * kuva.width + x) * 4;
-          if (kuva.data[i + 2] - (kuva.data[i] + kuva.data[i + 1]) / 2 >= SINIKYNNYS) return true;
+          const R = kuva.data[i]; const G = kuva.data[i + 1]; const B = kuva.data[i + 2];
+          const L = 0.2126 * R + 0.7152 * G + 0.0722 * B;
+          if (L <= TUMMUUS_RAJA && R - B >= LAMPO_RAJA) return true;
         }
       }
       return false;
     };
+    const nakyvat = mitta.pisteet.filter((p) => !p[4]);
     const osumat = mitta.pisteet.map((p) => (musteinen(p[0], p[1]) ? 1 : 0));
-    const peitto = osumat.length ? osumat.reduce((a, b) => a + b, 0) / osumat.length : 0;
+    const nakyvatOsumat = mitta.pisteet.map((p, i) => (p[4] ? null : osumat[i])).filter((x) => x !== null);
+    const peitto = nakyvatOsumat.length
+      ? nakyvatOsumat.reduce((a, b) => a + b, 0) / nakyvatOsumat.length : 0;
     // Kahdeksan nimettyä kohtaa: lähin rengaspiste ja sen osuma.
     const kohdat = KOHDAT.map((k) => {
       let paras = null; let parasEt = Infinity;
@@ -361,12 +421,14 @@ async function ajo(nimi, viewport, dpr, mobiili) {
         nimi: k.nimi,
         etaisyysAst: paras === null ? null : +Math.sqrt(parasEt).toFixed(2),
         osuma: paras === null ? false : Boolean(osumat[paras]),
+        paneelinAlla: paras === null ? false : Boolean(mitta.pisteet[paras][4]),
       };
     });
     ulos.push({
       avain, pov: mitta.pov, mittarit: mitta.mittarit, materiaali: mitta.materiaali,
-      paletti: mitta.paletti, mark: mitta.mark,
-      pisteita: mitta.pisteet.length, peitto: +peitto.toFixed(3), kohdat,
+      rajaMateriaali: mitta.rajaMateriaali, paletti: mitta.paletti, mark: mitta.mark,
+      pisteita: mitta.pisteet.length, nakyvia: nakyvat.length,
+      peitto: +peitto.toFixed(3), kohdat,
     });
   }
   vaadi(`${nimi}: sivu ei kaadu`, virheet.filter((v) => !/ERR_FAILED|ERR_ABORTED/.test(v)).length === 0,
@@ -381,9 +443,13 @@ const tulokset = [
 ];
 
 for (const t of tulokset) {
-  tieto(`${t.avain} rengaspisteitä ruudulla`, t.pisteita);
+  tieto(`${t.avain} rengaspisteitä ruudulla`, `${t.pisteita} (paneelien alla ${t.pisteita - t.nakyvia})`);
   tieto(`${t.avain} peitto`, `${(100 * t.peitto).toFixed(1)} %`);
-  tieto(`${t.avain} väri / leveys (css-px)`, `${t.materiaali?.vari} / ${t.materiaali?.linewidth?.toFixed(2)}`);
+  tieto(`${t.avain} kehä: väri / leveys (css-px) / peitto`,
+    `${t.materiaali?.vari} / ${t.materiaali?.linewidth?.toFixed(2)} / ${t.materiaali?.opacity}`);
+  tieto(`${t.avain} naapurin raja: väri / leveys / peitto`, t.rajaMateriaali
+    ? `${t.rajaMateriaali.vari} / ${t.rajaMateriaali.linewidth?.toFixed(2)} / ${t.rajaMateriaali.opacity}`
+    : 'ei kuvassa');
   tieto(`${t.avain} renkaita kerroksessa`, `${t.mittarit?.korostusRenkaita} (aineistossa ${RENKAITA_FRA})`);
   tieto(`${t.avain} kohdat`, t.kohdat.map((k) => `${k.osuma ? '+' : '−'}${k.nimi}`).join(', '));
   vaadi(`${t.avain}: renkaita yhtä monta kuin aineistossa`,
@@ -392,15 +458,38 @@ for (const t of tulokset) {
   vaadi(`${t.avain}: kehä on ehjä (peitto ≥ ${PEITTO_RAJA})`,
     t.peitto >= PEITTO_RAJA, `${(100 * t.peitto).toFixed(1)} %`);
   for (const k of t.kohdat) {
+    if (k.paneelinAlla) {
+      tieto(`${t.avain}: ${k.nimi}`, 'pelin oman paneelin alla — ei mitattavissa');
+      continue;
+    }
     vaadi(`${t.avain}: ${k.nimi}`, k.osuma, `ei rajan väriä (lähin rengaspiste ${k.etaisyysAst}°)`);
   }
   vaadi(`${t.avain}: väri on paletin --raja-muste`,
     t.materiaali?.vari?.toLowerCase() === t.paletti?.toLowerCase(),
     `${t.materiaali?.vari} ≠ ${t.paletti}`);
+  // MUIDEN RAJOJEN VÄRI: paletin arvo on sama kuin pallon RAJA_MUSTE,
+  // eli se muste, jolla naapurimaiden rajat piirretään.
+  vaadi(`${t.avain}: paletin sävy on muiden rajojen muste (RAJA_MUSTE)`,
+    t.paletti?.toLowerCase() === RAJA_MUSTE.toLowerCase(),
+    `${t.paletti} ≠ ${RAJA_MUSTE}`);
+  if (t.rajaMateriaali) {
+    // Sama kuva, kaksi materiaalia: kehä ja naapurin raja rinnakkain.
+    vaadi(`${t.avain}: kehä ja naapurin raja ovat samaa väriä (±${VARITOLERANSSI})`,
+      kanavaEro(t.materiaali?.vari, t.rajaMateriaali.vari) <= VARITOLERANSSI,
+      `${t.materiaali?.vari} vs. ${t.rajaMateriaali.vari}`);
+    vaadi(`${t.avain}: kehä on naapurin rajaa selvästi leveämpi`,
+      (t.materiaali?.linewidth ?? 0) >= 1.5 * (t.rajaMateriaali.linewidth ?? 99),
+      `${t.materiaali?.linewidth?.toFixed(2)} vs. ${t.rajaMateriaali.linewidth?.toFixed(2)}`);
+  } else {
+    tieto(`${t.avain} naapurin raja kuvassa`, 'ei piirry tällä kameralla (VEKTORIT_RAJAT_PX_ASTE)');
+  }
   vaadi(`${t.avain}: väri ei ole --mark`, t.materiaali?.vari?.toLowerCase() !== t.mark?.toLowerCase(),
     String(t.materiaali?.vari));
+  vaadi(`${t.avain}: väri ei ole entinen sininen`,
+    t.materiaali?.vari?.toLowerCase() !== ENTINEN_SININEN,
+    String(t.materiaali?.vari));
   if (t.avain.endsWith('zoom')) {
-    vaadi(`${t.avain}: viiva on entistä (2,5 px) leveämpi`,
+    vaadi(`${t.avain}: viiva on 3 css-pikselin luokkaa (yli entisen 2,5)`,
       (t.materiaali?.linewidth ?? 0) > 2.5, String(t.materiaali?.linewidth));
   }
 }
