@@ -515,12 +515,15 @@ test('jokaisella pakin luentakuvalla on osoite, selite ja lähde', async () => {
   assert.equal(maara, 45, 'Euroopan kaikilla 45 matkakirjapaikalla pitää olla lopullinen luentakuva');
 });
 
-test('alkuerän seitsemän retain-kuvaa käyttää hyväksyttyä paper-v4-versiota', async () => {
+test('alkuerän kuusi säilyvää kuvaa käyttää paper-v4-versiota, Pariisi uutta tarinakuvaa', async () => {
   const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
-  for (const id of ['istanbul', 'dublin', 'edinburgh', 'pariisi', 'marseille', 'lissabon', 'madrid']) {
+  for (const id of ['istanbul', 'dublin', 'edinburgh', 'marseille', 'lissabon', 'madrid']) {
     assert.match(FOKUSVIRRAT[id].matkakirja.luentakuva.osoite,
       new RegExp(`-${id}-r20260909-paper-v4\\.jpg$`), id);
   }
+  assert.match(FOKUSVIRRAT.pariisi.matkakirja.luentakuva.osoite,
+    /matkakirja-pariisi-i1-r20260914-tarina-v1\.jpg$/,
+    'Tuileries-tekstin rinnalle hyväksyttiin uusi rauniokuva 14.9.');
 });
 
 /* ---------------------------------------------------------------- */

@@ -170,23 +170,20 @@ export const FOKUSVIRTA_PARIISI = {
      * toimituksen tausta-aineisto (ei näy pelaajalle).
      */
     luentakuva: {
-      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pariisi-r20260909-paper-v4.jpg',
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i1-r20260914-tarina-v1.jpg",
       // Kuvatekstit tekstisessiolta (KOKO-EUROOPPA V1.2, omistaja 9.9.: hyväksyy
       // kaiken mitä se ehdottaa). Lyhyt kuvan alle, pitkä suurennokseen.
-      lyhyt: 'Pariisi, 1873. Ooppera harjoitteli juhlapukuaan.',
-      selite: 'Uusi oopperatalo seisoo jo juhlapuvussaan, vaikka telineet, kivilohkot ja mutainen työmaa paljastavat harjoitusten jatkuvan. Arki tekee vielä töitä, jotta yleisö voisi myöhemmin vain astua sisään.',
-      lahde: 'Matkakirjan havainnekuva',
-      lahteet: [
-      'https://www.parismuseescollections.paris.fr/en/node/490866',
-      'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/construction-du-palais-garnier-actuel-opera-national-de-paris-9eme',
-      ],
+      lyhyt: "Pariisi, 1873. Tuileries’n tyhjät ikkunat puutarhan laidalla.",
+      selite: "Vuoden 1871 palon jäljiltä palatsin runko seisoo yhä puutarhan edessä. Näkymä pohjautuu Henri Emile Godefroyn historialliseen valokuvaan.",
+      lahde: "Matkakirjan havainnekuva",
+      lahteet: ["https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/vue-des-tuileries-apres-l-incendie-de-1871-5"],
     },
     luentakuva2: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-pariisi-r20260911-paper2-v1.jpg",
-      lyhyt: "Pariisi, 1873. Leipä kainalossa kulki kadun paras esiintyjä.",
-      selite: 'Sade kiillotti kadun, ja mies kulki edellä leipä kainalossa. Seurasin häntä kaksi korttelia kuulematta pääsymaksusta sanaakaan.',
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-pariisi-i2-r20260914-tarina-v1.jpg",
+      lyhyt: "Pariisi, 1873. Rauniot näkyivät myös puiden alta.",
+      selite: "Puiden varjosta avautuu toinen näkymä palaneen Tuileries’n julkisivuun. Puutarhan rajaus on kuviteltu saman historiallisen valokuvalähteen pohjalta.",
       lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/construction-du-palais-garnier-actuel-opera-national-de-paris-9eme"],
+      lahteet: ["https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/vue-des-tuileries-apres-l-incendie-de-1871-5"],
     },
   },
 
@@ -201,15 +198,11 @@ export const FOKUSVIRTA_PARIISI = {
      */
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-pariisi-01-r20260909-euv1-v1.jpg',
-        lyhyt: 'Pariisi: oopperan paras aitiopaikka jäi ilman samettia.',
-        selite: 'Palais Garnierin katon reunalla kulta, saumat ja sadejäljet näkyvät samassa lähikuvassa. Juhla-asukin tarvitsee huoltoa, ja minun aitiopaikastani puuttui vain tuoli.',
-        lahde: 'Matkakirjan havainnekuva',
-        lahteet: [
-          'https://www.operadeparis.fr/actualites/restauration-de-la-facade-principale-du-palais-garnier',
-          'https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/loggia-et-toit-de-l-opera-garnier-9eme-arrondissement-paris',
-          'https://www.operadeparis.fr/en/enterprises/film-and-spaces-locations',
-        ],
+        osoite: "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-pariisi-p1-r20260914-tarina-v1.jpg",
+        lyhyt: "Pariisi: tuoli kääntyi ystävää kohti.",
+        selite: "Tuileries’n vihreillä tuoleilla kaksi ystävää jatkaa keskusteluaan puiden varjossa. Näkymä avautuu tuolin selkänojan korkeudelta.",
+        lahde: "Matkakirjan havainnekuva",
+        lahteet: ["https://votrebanc.louvre.fr/en/the-project/","https://www.edmond-fils.com/les-collections/tuileries-mobilier-en-acier/"],
       },
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */

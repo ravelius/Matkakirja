@@ -144,18 +144,18 @@ export const FOKUSVIRTA_BERGEN = {
   matkakirja: {
     /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 8f941560edf447ee29ea7fb51dc50b7dbaaa95f8a0edb5e0f18541321153a26c. */
     luentakuva: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bergen-r20260909-paper-v4.jpg",
-      lyhyt: "Bergen, 1873. Kuiva kala, märkä vierailija.",
-      selite: 'Kauppias nosti kapakalan esiin Bryggenin katoksen alla kuin arvotavaran. Kala ja myyjä pysyivät suojassa, kun sade kasteli laiturin ja kamerani jalat.',
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-bergen-i1-r20260914-tarina-v1.jpg",
+      lyhyt: "Bergen, 1873. Opas ja kuula tuomiokirkolla.",
+      selite: "Opas odottaa Bergenin tuomiokirkon seinään kiinnitetyn kuulan alapuolella. Kuulan kiinnityksen ajankohtaa ei tunneta.",
       lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://hanseatiskemuseum.museumvest.no/kongetorsk-engelsk"],
+      lahteet: ["https://tohundrefortellinger.w.uib.no/1966/06/20/2017-kanonkule/"],
     },
     luentakuva2: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bergen-r20260911-paper2-v1.jpg",
-      lyhyt: "Bergen, 1873. Katon alla kala pysyi kuivempana kuin vieras.",
-      selite: 'Sade valui katoksen reunalta, mutta kapakalat pysyivät kuivina puuseinän vieressä. Takkini kiilsi vedestä, ja kaupungin arvojärjestys tuli selväksi.',
+      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-bergen-i2-r20260914-tarina-v1.jpg",
+      lyhyt: "Bergen, 1873. Pieni kuula korkealla kiviseinässä.",
+      selite: "Pieni rautakuula on kiinnitetty tuomiokirkon kiviseinään. Kiinnityksen ajankohtaa ei tunneta.",
       lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://hanseatiskemuseum.museumvest.no/kongetorsk-engelsk"],
+      lahteet: ["https://tohundrefortellinger.w.uib.no/1966/06/20/2017-kanonkule/"],
     },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
@@ -237,22 +237,18 @@ export const FOKUSVIRTA_BERGEN = {
      */
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bergen-01-r20260909-euv1-v1.jpg',
-        lyhyt: 'Bergen: varastotalot saivat suojan, minä etsin oman.',
-        selite: 'Bryggenin kapean puukäytävän sade piirtää lautoihin oman karttansa. Pysähdyin kynnyksen suojaan ja totesin, että kuiva paikka on yhä arvokas löytö.',
-        lahde: 'Matkakirjan havainnekuva',
-        lahteet: [
-          'https://en.visitbergen.com/things-to-do/bryggen-in-bergen-p878553',
-        ],
+        osoite: "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bergen-p1-r20260914-tarina-v1.jpg",
+        lyhyt: "Bergen: rumpujoukon tahdissa kadunrajasta.",
+        selite: "Lasten ja nuorten rumpujoukko marssii kadulla. Katsojat kuvaavat kulkuetta.",
+        lahde: "Matkakirjan havainnekuva",
+        lahteet: ["https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/the-living-tradition-of-buekorps-bergen"],
       },
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bergen-02-r20260909-euv1-v4.jpg',
-        lyhyt: 'Bergen: ulkona satoi aivan samaa sadetta.',
-        selite: 'Käytävän suulta näkyvät Bryggenin talorivi, märkä katu ja satama. Otin kuvan nopeasti ulkona ja palasin puolen siivenmitan kuivemmalle.',
-        lahde: 'Matkakirjan havainnekuva',
-        lahteet: [
-          'https://en.visitbergen.com/things-to-do/bryggen-in-bergen-p878553',
-        ],
+        osoite: "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bergen-p2-r20260914-tarina-v1.jpg",
+        lyhyt: "Bergen: nuori johtaja tarkistaa rumpujoukon järjestystä.",
+        selite: "Nuori johtaja tarkistaa rumpujoukon järjestystä. Matalalta ikkunalaudalta näkee nuoremmat soittajat muodostelmassa.",
+        lahde: "Matkakirjan havainnekuva",
+        lahteet: ["https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/the-living-tradition-of-buekorps-bergen"],
       },
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */

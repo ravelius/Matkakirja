@@ -304,14 +304,11 @@ export const FOKUSVIRTA_BUKAREST = {
      */
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bukarest-01-r20260909-euv1-v1.jpg',
-        lyhyt: 'Bukarest: parvelta löytyi suora yhteys lounaaseen.',
-        selite: 'Manucin majatalon puuparvet kehystävät nykyään ravintolan täyttä sisäpihaa. Etsin pöytien alta murusia, kun viereisestä pöydästä kuultu salaisuus vei huomioni.',
-        lahde: 'Matkakirjan havainnekuva',
-        lahteet: [
-          'https://hanumanucrestaurant.ro/en/',
-          'https://www.hanulluimanuc.ro/en/',
-        ],
+        osoite: "https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bukarest-p1-r20260914-tarina-v1.jpg",
+        lyhyt: "Bukarest: lintuharrastajat kiikaroivat Văcăreștin ruovikossa.",
+        selite: "Lintuharrastajat kiikaroivat Văcăreștin ruovikossa. Hylätyn tekojärvihankkeen betonivallien sisään on syntynyt luonnonpuisto.",
+        lahde: "Matkakirjan havainnekuva",
+        lahteet: ["https://parculnaturalbucuresti.ro/en/the-park/"],
       },
     ],
     /*
