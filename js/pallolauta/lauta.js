@@ -2128,8 +2128,13 @@ export async function avaaPallolauta(ui) {
      * olevan kaupungin napautuksen. Sivusiirto hoitaa erottelun
      * (fokuspisteenAsteet); tämä on varmistus sille, että jos merkit
      * silti osuvat päällekkäin, VOITTAA SE, JOTA SORMI KOSKETTAA.
+     *
+     * VAIN KAMERAN PUOLELTA, kuten kaikki muutkin osumat (ks. lahin):
+     * pallon takapuolen merkki projisoituu samaan pikseliin kuin
+     * napautettu piste.
      */
-    const kohtaamispiste = ehdokkaat.find((e) => e.o?.perhe === 'piste');
+    const kohtaamispiste = ehdokkaat
+      .find((e) => e.o?.perhe === 'piste' && edessa(e.lat, e.lng));
     if (kohtaamispiste && lahella(lat, lng, kohtaamispiste, FOKUSPISTE_MUSTE_R_PX)) {
       return kohtaamispiste;
     }

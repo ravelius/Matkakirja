@@ -205,7 +205,7 @@ test('lahinMerkki ratkaisee kohtaamispisteen ENNEN kaupunkipisteen omaa mustetta
   const lauta = lue('../js/pallolauta/lauta.js');
   assert.match(lauta, /import \{ FOKUSPISTE_MUSTE_R_PX \} from '\.\.\/fokuspiste\.js';/);
   const pisteSaanto = lauta.indexOf(
-    "const kohtaamispiste = ehdokkaat.find((e) => e.o?.perhe === 'piste');",
+    ".find((e) => e.o?.perhe === 'piste' && edessa(e.lat, e.lng));",
   );
   const pisteOsuma = lauta.indexOf(
     'if (kohtaamispiste && lahella(lat, lng, kohtaamispiste, FOKUSPISTE_MUSTE_R_PX))',

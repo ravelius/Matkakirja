@@ -241,15 +241,33 @@ const mittaa = (sivu, cityId) => sivu.evaluate((id) => {
   };
 }, cityId);
 
-/** Mitä ruudulla on auki napautuksen jälkeen. */
-const avoinPinta = (sivu) => sivu.evaluate(() => ({
-  kaupunkipopup: Boolean(document.querySelector('.kaupunkipopup-kaupunki')),
-  turistiinfo: Boolean(document.querySelector('.kaupunkipopup-info')),
-  visa: Boolean(document.getElementById('quiz-dialog')?.open),
-  kohtaaminen: Boolean(document.querySelector('.fokusvirta-kortti, .fokuskohde-popup')),
-  kupla: ([...document.querySelectorAll('.pollo-vihje')]
-    .find((k) => !k.hidden && (k.textContent ?? '').trim())?.textContent ?? '').trim(),
-}));
+/**
+ * Mitä ruudulla on auki napautuksen jälkeen.
+ *
+ * PINTAA ODOTETAAN, EI ARVATA. Napautus kulkee `ui.doAction`in läpi
+ * (js/fokusvirta.js avaaFokusKohtaaminen), joten visalaatikko aukeaa
+ * vasta muutaman mikrotehtävän päästä — kuormitetulla koneella se on
+ * mitattu yli sekunnin. Kiinteä odotus teki vartiosta 3 satunnaisen;
+ * nyt kysytään kunnes jokin pinta on auki tai aika loppuu.
+ */
+const avoinPinta = (sivu, odota = 8000) => sivu.evaluate(async (ms) => {
+  const lue = () => ({
+    kaupunkipopup: Boolean(document.querySelector('.kaupunkipopup-kaupunki')),
+    turistiinfo: Boolean(document.querySelector('.kaupunkipopup-info')),
+    visa: Boolean(document.getElementById('quiz-dialog')?.open),
+    kohtaaminen: Boolean(document.querySelector('.fokusvirta-kortti, .fokuskohde-popup')),
+    kupla: ([...document.querySelectorAll('.pollo-vihje')]
+      .find((k) => !k.hidden && (k.textContent ?? '').trim())?.textContent ?? '').trim(),
+  });
+  const loppu = Date.now() + ms;
+  let tila = lue();
+  while (Date.now() < loppu
+    && !(tila.kaupunkipopup || tila.turistiinfo || tila.visa || tila.kohtaaminen)) {
+    await new Promise((v) => setTimeout(v, 250));
+    tila = lue();
+  }
+  return tila;
+}, odota);
 
 /** Sulje kaikki auki oleva pinta, jotta seuraava napautus on puhdas. */
 const sulje = (sivu) => sivu.evaluate(async () => {
@@ -312,7 +330,6 @@ for (const kaupunki of KAUPUNGIT) {
     if (m.piste) {
       await sulje(sivu);
       await sivu.mouse.click(m.piste.x, m.piste.y);
-      await sivu.waitForTimeout(1200);
       const pinta = await avoinPinta(sivu);
       tieto(`${tunnus}: pisteen napautus`, JSON.stringify(pinta));
       vaadi(`${tunnus}: 3. pisteen napautus avaa vihjeen, EI kaupungin tietoruutua`,
@@ -330,7 +347,6 @@ for (const kaupunki of KAUPUNGIT) {
     const tuore = await mittaa(sivu, kaupunki.id);
     if (tuore.kaupunki) {
       await sivu.mouse.click(tuore.kaupunki.x, tuore.kaupunki.y);
-      await sivu.waitForTimeout(1400);
       const pinta = await avoinPinta(sivu);
       tieto(`${tunnus}: kaupungin napautus`, JSON.stringify(pinta));
       vaadi(`${tunnus}: 4. kaupungin napautus avaa yhä kaupungin tietoruudun`,
