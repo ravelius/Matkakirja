@@ -325,12 +325,25 @@ jobs:
             const k=require("./assets/audio/luennat-tuotantokuitti.json");
             for(const r of k.cities){
               if(r.generation.status!=="success")continue;
+              // RAAKAVIENTI ON PAKOLLINEN (omistaja 14.9.2026, Raamattu:
+              // ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA). Ilman
+              // raaka-avainta ja sen sha256:ta ajo ei vie mitään.
+              if(!r.objectKeys?.raw||!r.rawAudio?.sha256)process.exit(3);
               if(!r.objectKeys?.staging||!r.objectKeys?.final||r.objectKeys.live!==null)process.exit(2);
-              console.log([r.outputPath,r.objectKeys.staging,r.objectKeys.final].join("\t"));
+              console.log([r.outputPath,r.objectKeys.raw,r.objectKeys.staging,r.objectKeys.final].join("\t"));
             }
-          ' > /tmp/horatio-vienti.tsv
+          ' > /tmp/horatio-vienti.tsv || {
+            echo "::error::Kuitista puuttuu raaka-avain tai sen sha256 — alkuperäinen katoaisi, joten mitään ei viedä."
+            exit 1
+          }
           test -s /tmp/horatio-vienti.tsv || { echo "::error::Kuitissa ei ole onnistuneita luentoja."; exit 1; }
-          while IFS=$'\t' read -r paikallinen staging final; do
+          while IFS=$'\t' read -r paikallinen raaka staging final; do
+            # RAAKA ENSIN: alkuperäinen tavujono omaan eräkohtaiseen
+            # avaimeensa ennen kuin mitään muuta kirjoitetaan.
+            aws s3 cp "$paikallinen" "s3://${{ secrets.R2_BUCKET }}/$raaka" \
+              --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \
+              --no-progress --content-type audio/mpeg \
+              --cache-control "public, max-age=2592000"
             # Ei koskaan kirjoiteta live-avaimeen audio/puhe-fokus-... .
             aws s3 cp "$paikallinen" "s3://${{ secrets.R2_BUCKET }}/$staging" \
               --endpoint-url "https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com" \

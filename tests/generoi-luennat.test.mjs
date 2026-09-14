@@ -71,7 +71,11 @@ test('tuotantokuitti sitoo näkyvän ja TTS-tekstin sekä koko reseptin', () => 
   });
   const sha = (data) => createHash('sha256').update(data).digest('hex');
   assert.equal(rivi.cityId, 'ateena');
+  // Raaka-avain tuli mukaan 14.9.2026 (omistajan sääntö: ALKUPERÄISET
+  // ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA). Se on eräkohtainen, ei revisio-
+  // kohtainen: uusi koodideploy ei saa siirtää alkuperäistä muualle.
   assert.deepEqual(rivi.objectKeys, {
+    raw: 'audio/raw/horatio/12345-2/puhe-fokus-matkakirja-ateena.mp3',
     staging: 'audio/staging/horatio/12345-2/puhe-fokus-matkakirja-ateena.mp3',
     final: 'audio/versions/horatio/0123456789ab/12345-2/puhe-fokus-matkakirja-ateena.mp3',
     live: null,
@@ -85,8 +89,29 @@ test('tuotantokuitti sitoo näkyvän ja TTS-tekstin sekä koko reseptin', () => 
     outputFormat: 'mp3_44100_128', postprocess: { kind: 'none' },
   });
   assert.deepEqual(rivi.generation, { status: 'success', retryReason: 'HTTP 503 edellisessä erässä' });
-  assert.deepEqual(rivi.rawAudio, { sha256: sha(raw), bytes: raw.length, actualDurationSeconds: 12.3456 });
-  assert.deepEqual(rivi.finalAudio, { sha256: sha(final), bytes: final.length, actualDurationSeconds: 12.3456 });
+  // Kuitti kirjaa raa'alle sekä sha256:n ETTÄ avaimen — pelkkä tiiviste
+  // ei kertoisi, mistä alkuperäinen löytyy uusintaleikkausta varten.
+  assert.deepEqual(rivi.rawAudio, {
+    sha256: sha(raw), bytes: raw.length, actualDurationSeconds: 12.3456,
+    objectKey: 'audio/raw/horatio/12345-2/puhe-fokus-matkakirja-ateena.mp3',
+  });
+  assert.deepEqual(rivi.finalAudio, {
+    sha256: sha(final), bytes: final.length, actualDurationSeconds: 12.3456,
+    objectKey: 'audio/versions/horatio/0123456789ab/12345-2/puhe-fokus-matkakirja-ateena.mp3',
+  });
+});
+
+test('Horation vienti kieltäytyy ilman raaka-avainta', async () => {
+  const { readFileSync } = await import('node:fs');
+  const tyonkulku = readFileSync(
+    new URL('../.github/workflows/generoi-luennat.yml', import.meta.url), 'utf8',
+  );
+  // Vartio: työnkulku ei saa viedä mitään, jos kuitista puuttuu raaka.
+  assert.match(tyonkulku, /if\(!r\.objectKeys\?\.raw\|\|!r\.rawAudio\?\.sha256\)process\.exit\(3\)/);
+  // Ja raaka on kopioitava ennen staging- ja final-avaimia.
+  const raaka = tyonkulku.indexOf('R2_BUCKET }}/$raaka');
+  const staging = tyonkulku.indexOf('R2_BUCKET }}/$staging');
+  assert.ok(raaka > 0 && raaka < staging, 'raaka on vietävä ensin');
 });
 
 test('dry-run ratkaisee kaupungit ilman verkkoa tai kirjoituksia', async () => {

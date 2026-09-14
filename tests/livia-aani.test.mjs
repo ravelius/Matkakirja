@@ -598,7 +598,13 @@ test('rajatun erän tuotantokuitti sitoo tekstin, reseptin ja artefaktit lähdec
     `aanet/pulu/versiot/${'1'.repeat(12)}/${kuitti.batchId}/livia-marseille-3.mp3`);
   assert.equal(u.promotionStatus, 'pending-code-deploy');
   assert.equal(u.settings.stability, 0.5);
-  assert.equal(u.postprocess.tempo, 1.08);
+  // 14.9.2026: rajapinnalle lähetetään vain stability, ja Livian
+  // jälkikäsittely on pois (mallin mp3 sellaisenaan). Kuitin pitää
+  // kertoa juuri se — vanha tempo-rivi olisi nyt valhe.
+  assert.equal(u.settings.similarityBoost, null);
+  assert.equal(u.settings.style, null);
+  assert.equal(u.settings.useSpeakerBoost, null);
+  assert.deepEqual(u.postprocess, { kind: 'none' });
   assert.deepEqual(u.rawArtifact, tulokset.get(rivi.avain).rawArtifact);
   assert.deepEqual(u.finalArtifact, tulokset.get(rivi.avain).finalArtifact);
   assert.equal(u.retryReason, 'owner-approved-text-change');

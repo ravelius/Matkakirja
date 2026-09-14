@@ -77,6 +77,33 @@ export function livianKohdistustyo(kaupunki, kuittirivi = null) {
   return { ...sopimus, teksti, aaniOsoite, r2Kohde, kuittiAani: kuittirivi?.finalArtifact ?? null };
 }
 
+/**
+ * KAKSI LUKITTUA SOINTIRESEPTIÄ, EI YHTÄÄN MUUTA.
+ *
+ * Kohdistus saa luottaa vain äänitteeseen, joka on syntynyt omistajan
+ * hyväksymillä asetuksilla. Niitä on nyt kaksi polvea:
+ *
+ * 1. 13.–14.9.2026: stability 0,5, similarity_boost 0,75, style 0,6,
+ *    use_speaker_boost päällä. Näillä on generoitu ne 40 city-3-ääntä,
+ *    joiden kohdistus on yhä ajamatta — resepti on siis pidettävä
+ *    voimassa, tai noiden 40:n kohdistus kaatuisi.
+ * 2. 14.9.2026 alkaen: pelkkä stability 0,5; similarity_boost, style ja
+ *    use_speaker_boost jätetään pyynnöstä pois, jolloin ElevenLabs
+ *    käyttää omia oletuksiaan (omistajan päätös, Raamattu: "PULUN AANI:
+ *    ELEVENLABSIN OLETUSASETUKSET, EI FFMPEG-KASITTELYA").
+ *
+ * Mikä tahansa muu yhdistelmä hylätään: portti ei saa löystyä
+ * "mikä tahansa stability" -tasolle.
+ */
+export function kelpaaSointiresepti(asetukset) {
+  if (asetukset?.stability !== 0.5) return false;
+  const vanha = asetukset.similarityBoost === 0.75 && asetukset.style === 0.6;
+  const uusi = (asetukset.similarityBoost ?? null) === null
+    && (asetukset.style ?? null) === null
+    && (asetukset.useSpeakerBoost ?? null) === null;
+  return vanha || uusi;
+}
+
 /** Hyväksy vain valmistuneen tuotantokuitin muuttumaton, SHA-sidottu city-3-tulos. */
 export async function kuittirivit(data) {
   if (!data || data.schemaVersion !== 1 || data.generationStatus !== 'completed'
@@ -95,8 +122,7 @@ export async function kuittirivit(data) {
       || await tekstinSha256(rivi.visibleText) !== sopimus.tekstiSha256
       || rivi.ttsText !== odotettuPuhe || await tekstinSha256(rivi.ttsText) !== rivi.ttsTextSha256
       || rivi.voiceId !== PULU_AANI_OLETUS || rivi.model !== PULU_MALLI_OLETUS
-      || rivi.settings?.stability !== 0.5 || rivi.settings?.similarityBoost !== 0.75
-      || rivi.settings?.style !== 0.6 || rivi.outputFormat !== 'mp3_44100_128'
+      || !kelpaaSointiresepti(rivi.settings) || rivi.outputFormat !== 'mp3_44100_128'
       || rivi.generationStatus !== 'generated' || !/^[0-9a-f]{64}$/.test(artefakti?.sha256 ?? '')
       || !Number.isInteger(artefakti?.bytes) || artefakti.bytes <= 0
       || !(Number(artefakti?.actualDurationSeconds) > 0) || artefakti.fileName !== sopimus.aaniNimi
