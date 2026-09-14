@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1886, teksti: 'Tehosteputki: raakatiedostot ämpäriin, 320 kbps' },
   { v: 1885, teksti: 'Nimikyltit karttaan; maapaneeli kymmenesosaan' },
   { v: 1884, teksti: 'Kerma-naamio odottaa maapolygonit ennen piirtoa' },
   { v: 1883, teksti: 'Ääniputki: raakatiedostot ämpäriin, 192 kbps' },
