@@ -126,7 +126,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
     paikkarivi: 'Kööpenhamina, kesäkuussa 1873. Valoisaa iltamyöhään; koko '
       + 'kaupunki ulkona; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 342 merkkiä (yläraja 400). */
-    teksti: 'Tivolissa vanha pari tanssi niin hitaasti, että orkesteri ehti edelle. He eivät lähteneet sen perään. Puiston lamput syttyivät ennen tähtiä. Olin tullut katsomaan huvituksia; muistin heidät.',
+    teksti: "Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.",
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -140,15 +140,49 @@ export const FOKUSVIRTA_KOBENHAVN = {
      * Hiljaiset osuudet: "Olin tullut katsomaan huvituksia" (asetelma).
      */
     reaktiot: [
-      { id: 'kobenhavn.r1', ankkuri: 'orkesteri ehti edelle', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'kobenhavn.r2', ankkuri: 'lähteneet sen perään', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'kobenhavn.r4', ankkuri: 'muistin heidät', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "kobenhavn.r1",
+    "ankkuri": "palvelija piilotti paistin isännältään",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kobenhavn.r2",
+    "ankkuri": "Sanaakaan ei lausuttu",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kobenhavn.r3",
+    "ankkuri": "poika nauroi samoissa kohdissa kuin minä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kobenhavn.r4",
+    "ankkuri": "piirtämään majatalon isännälle munan",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "kobenhavn.r5",
+    "ankkuri": "ymmärsin vieraan ihmisen juonet vaivatta",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Tivolissa vanha pari tanssi niin hitaasti, että orkesteri ehti edelle. [mischievously] He eivät lähteneet sen perään. Puiston lamput syttyivät ennen tähtiä. [softly] Olin tullut katsomaan huvituksia; muistin heidät.',
+    luenta: "[curious] Tivolin teatterissa palvelija piilotti paistin isännältään. Sanaakaan ei lausuttu. Vieressäni tanskalainen poika nauroi samoissa kohdissa kuin minä. [warmly] Aamulla olin joutunut piirtämään majatalon isännälle munan saadakseni aamiaisen; täällä ymmärsin vieraan ihmisen juonet vaivatta. Jäin toiseen näytökseen.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-kobenhavn.mp3',
   },
 
@@ -174,9 +208,7 @@ export const FOKUSVIRTA_KOBENHAVN = {
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Tivoli huvittaa yhä. Orkesterin sävel sai minut laskeutumaan tanssilattian reunalle. Otin kaksi pientä askelta ja poistuin ennen kuin kukaan ehti pyytää kolmatta.',
-    ],
+    kommentti: ["Tivolin pantomiimiteatterin esirippu on valtava riikinkukon pyrstö. Se laskeutui, ja näyttämö aukesi! Minä kurkistin sivulta, minne pyrstö oikein meni. Halusin nähdä koneiston. Kun viimein käännyin katsomaan näyttelijöitä, yleisö nauroi jo. Mitä minä nyt menetin?"],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*

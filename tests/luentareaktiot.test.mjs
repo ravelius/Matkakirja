@@ -897,7 +897,18 @@ test('kohdistustyökalun kuiva ajo kertoo osoitteet eikä tarvitse verkkoa', () 
   assert.ok(loki.includes(aaniUrl('assets/audio/puhe-fokus-matkakirja-marseille.mp3')),
     'kuiva ajo kertoo saman versionoidun äänen, jonka peli soittaa');
   assert.match(loki, /assets\/aikaleimat\/puhe-fokus-matkakirja-marseille\.aikaleimat\.json/);
-  assert.match(loki, /marseille\.r6: ankkuri sanoissa/);
+  /*
+   * 14.9.2026: hyväksytyssä Eurooppa-revisiossa Marseillella on viisi
+   * reaktiota (r1–r5), ei kuutta. Vartio pysyy yhtä tiukkana: jokaisen
+   * pakin reaktion on ratkettava sanoiksi, eikä ylimääräisiä saa olla.
+   */
+  const reaktiot = FOKUSVIRRAT.marseille.matkakirja.reaktiot;
+  assert.equal(reaktiot.length, 5);
+  for (const { id } of reaktiot) {
+    assert.match(loki, new RegExp(`${id.replace('.', '\\.')}: ankkuri sanoissa`));
+  }
+  assert.equal((loki.match(/marseille\.r\d+: ankkuri sanoissa/g) ?? []).length, reaktiot.length,
+    'kuiva ajo ratkaisee tasan pakin reaktiot');
   assert.doesNotMatch(loki, /xi-api-key|ELEVEN_API_KEY=/, 'avainta ei tulosteta');
 });
 

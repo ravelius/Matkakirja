@@ -450,3 +450,54 @@ test('häive piirretään laatikon reunasta ULOSPÄIN eikä sisäänpäin', () =
   assert.ok(peittaa((lx0 + lx1) / 2, ly0 - REUNA - 1), 'laataston pohjoislaita jäi kermalle');
   assert.ok(peittaa((lx0 + lx1) / 2, ly1 + REUNA + 1), 'laataston eteläinen laita jäi kermalle');
 });
+
+/*
+ * ====== LEIKKURI ILMAN PUSKURIA ON SAMA RENGAS KUIN ÄÄRIVIIVA ======
+ *
+ * Mitattu 14.9.2026 (docs/raportit/viesti-fable-siirtyma-20260914.md):
+ * omistajan havainto *"miksi punainen rajaviiva ei myötäile kartan
+ * rajoja kaikkialla?"* oli tämä. Kerman reikä leikattiin
+ * HARVENNETUISTA renkaista (`harvenna`, 1,2 yksikköä) ja elävä
+ * ääriviiva piirrettiin harventamattomista — kaksi geometriaa samasta
+ * aineistosta. Harvennus on perusteltu sillä, että 6,7 yksikön
+ * aluevesipuskuri piilottaa sen; tasoituksessa puskuria ei ole, joten
+ * perustelu ei päde eikä harvennustakaan saa olla.
+ *
+ * Väite on mitta eikä kirjoitusasun tarkistus: leikkurin renkaan
+ * jokaisen kärkipisteen on oltava ääriviivan renkaassa.
+ */
+test('tasoituksen leikkuri (puskuri 0) on sama geometria kuin elävä ääriviiva', async () => {
+  const { puraMaanRenkaat, maanAluevesiRenkaat } = await import('../js/maanaariviivat.js');
+  const data = JSON.parse(readFileSync(join(JUURI, 'assets/data/maapolygonit.json'), 'utf8'));
+  for (const iso of ['GRC', 'FRA']) {
+    const raa = puraMaanRenkaat(data, iso);
+    const leikkuri = maanAluevesiRenkaat(data, iso, 0).filter((_, i) => i % 2 === 0);
+    assert.equal(leikkuri.length, raa.length, `${iso}: renkaiden määrä muuttui leikkurissa`);
+    for (let i = 0; i < raa.length; i += 1) {
+      const kärjet = new Set(raa[i].map(([x, y]) => `${x},${y}`));
+      const vieraita = leikkuri[i].filter(([x, y]) => !kärjet.has(`${x},${y}`));
+      assert.equal(vieraita.length, 0,
+        `${iso} rengas ${i}: leikkurissa on ${vieraita.length} pistettä, joita ääriviivassa ei ole`);
+      /*
+       * JA TOISIN PÄIN: yksikään ääriviivan kärki ei saa pudota pois,
+       * tai kerma leikkaa mutkan oikaisten saaren yli.
+       */
+      const leikkurinKarjet = new Set(leikkuri[i].map(([x, y]) => `${x},${y}`));
+      const kadonneet = raa[i].filter(([x, y]) => !leikkurinKarjet.has(`${x},${y}`));
+      assert.equal(kadonneet.length, 0,
+        `${iso} rengas ${i}: leikkurista puuttuu ${kadonneet.length} ääriviivan kärkeä`);
+    }
+  }
+});
+
+/* Puskurin kanssa harvennus on yhä voimassa (se on siellä perusteltu). */
+test('aluevesipuskurin kanssa renkaat yhä harvennetaan', async () => {
+  const { puraMaanRenkaat, maanAluevesiRenkaat, ALUEVESI_YKSIKKOA } = await import('../js/maanaariviivat.js');
+  const data = JSON.parse(readFileSync(join(JUURI, 'assets/data/maapolygonit.json'), 'utf8'));
+  const raa = puraMaanRenkaat(data, 'GRC');
+  const puskurilla = maanAluevesiRenkaat(data, 'GRC', ALUEVESI_YKSIKKOA).filter((_, i) => i % 2 === 0);
+  const raakaPisteita = raa.reduce((s, r) => s + r.length, 0);
+  const harvaPisteita = puskurilla.reduce((s, r) => s + r.length, 0);
+  assert.ok(harvaPisteita < raakaPisteita * 0.9,
+    `puskurillinen leikkuri ei harventunut (${harvaPisteita}/${raakaPisteita})`);
+});

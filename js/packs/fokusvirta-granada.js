@@ -235,7 +235,7 @@ export const FOKUSVIRTA_GRANADA = {
     paikkarivi: 'Granada, huhtikuussa 1873. Kirkasta; Sierra Nevadalla lunta; '
       + 'puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 315 merkkiä (yläraja 400). */
-    teksti: 'Alhambran hienoin rakennusaine oli vesi. Se kulki kapeissa uomissa ja puhui niin hiljaa, että minäkin vaikenin. Altaassa palatsi oli tehty valosta. Särjin sen sormellani ja odotin, kunnes se rakentui takaisin.',
+    teksti: "Alhambran palatsista vietiin koristeita matkamuistoiksi. Poimin jätekasasta sinisen kaakelinpalan. Mies keräsi sirpaleita museota varten ja ojensi kätensä. Annoin palan hänelle. Olin pitänyt sitä vain hetken, mutta tuntui kuin hän olisi ottanut jotakin minun omaani.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu (Raamattu:
      * ruututeksti = luentateksti sanasta sanaan). Neljä tagia, alku ja
@@ -255,17 +255,49 @@ export const FOKUSVIRTA_GRANADA = {
      * ennen kuvaa).
      */
     reaktiot: [
-      { id: 'granada.r1', ankkuri: 'hienoin rakennusaine oli vesi', tarkoitus: 'hammastyy', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'granada.r2', ankkuri: 'että minäkin vaikenin', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'granada.r3', ankkuri: 'Särjin sen sormellani', tarkoitus: 'vakavoituu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'granada.r4', ankkuri: 'rakentui takaisin', tarkoitus: 'myotailee', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "granada.r1",
+    "ankkuri": "vietiin koristeita matkamuistoiksi",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "granada.r2",
+    "ankkuri": "Poimin jätekasasta sinisen kaakelinpalan",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "granada.r3",
+    "ankkuri": "keräsi sirpaleita museota varten",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "granada.r4",
+    "ankkuri": "Annoin palan hänelle",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "granada.r5",
+    "ankkuri": "kuin hän olisi ottanut jotakin minun omaani",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Alhambran hienoin rakennusaine oli vesi. Se kulki kapeissa uomissa ja puhui niin hiljaa, että minäkin vaikenin. Altaassa palatsi oli tehty valosta. [softly] Särjin sen sormellani ja odotin, kunnes se rakentui takaisin.',
+    luenta: "[softly] Alhambran palatsista vietiin koristeita matkamuistoiksi. Poimin jätekasasta sinisen kaakelinpalan. Mies keräsi sirpaleita museota varten ja ojensi kätensä. Annoin palan hänelle. Olin pitänyt sitä vain hetken, mutta tuntui kuin hän olisi ottanut jotakin minun omaani.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-granada.mp3',
   },
 
@@ -292,9 +324,7 @@ export const FOKUSVIRTA_GRANADA = {
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Alhambran Myrttipihan allas peilaa tornia yhä. Laskeuduin reunalle saadakseni kuvan, mutta tuuli rikkoi palatsin ensin. Odotin aivan liikkumatta. Kerrankin nokkani ei ollut syyllinen.',
-    ],
+    kommentti: ["Alhambran puutarhat ovat kukkulalla, mutta vesi ei kiivennyt sinne. Se johdettiin Darrojoesta vielä korkeammalta, yli kuuden kilometrin kanavaa pitkin. Koko matka alamäkeä! Siinä olisi kelvannut lepuuttaa siipiä."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'lammin', voimakkuus: 0.5 },
     /*

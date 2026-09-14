@@ -120,7 +120,7 @@ export const FOKUSVIRTA_MADRID = {
     paikkarivi: 'Madrid, maaliskuussa 1873. Kirkasta; ylätasangon tuuli '
       + 'kylmä; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 353 merkkiä (yläraja 400). */
-    teksti: 'Pradossa pieni prinsessa sai huomion, suuri koira ei välittänyt. Maalari katsoi minuun; peilissä seisoi kuningaspari. Minä olin saanut paikan heidän edestään. Kahviloissa väiteltiin tasavallasta. Taulussa valta vaihtui ilman sanomalehteä.',
+    teksti: "Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.",
     /*
      * Luenta on sama teksti tunnetagein — sanat eivät muutu. Äänite
      * generoidaan tästä kentästä työnkulussa .github/workflows/
@@ -148,17 +148,49 @@ export const FOKUSVIRTA_MADRID = {
      * tasavallasta" (selittävä tausta).
      */
     reaktiot: [
-      { id: 'madrid.r1', ankkuri: 'suuri koira ei välittänyt', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'madrid.r2', ankkuri: 'Maalari katsoi minuun', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'madrid.r3', ankkuri: 'paikan heidän edestään', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'madrid.r4', ankkuri: 'ilman sanomalehteä', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "madrid.r1",
+    "ankkuri": "valmistauduin näyttämään käyntikorttini",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "madrid.r2",
+    "ankkuri": "Vartija viittasi sisään katsomatta nimeä",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "madrid.r3",
+    "ankkuri": "mies levitti eväänsä penkille ja teki minulle tilaa",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "madrid.r4",
+    "ankkuri": "Panin kortin takaisin taskuun",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "madrid.r5",
+    "ankkuri": "ilman esittelyä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Pradossa pieni prinsessa sai huomion, suuri koira ei välittänyt. Maalari katsoi minuun; peilissä seisoi kuningaspari. Minä olin saanut paikan heidän edestään. Kahviloissa väiteltiin tasavallasta. [softly] Taulussa valta vaihtui ilman sanomalehteä.',
+    luenta: "[curious] Retiron portilla valmistauduin näyttämään käyntikorttini. Vartija viittasi sisään katsomatta nimeä. Kuningattaren entinen puisto kuului nyt kaupungille. Lammen rannalla mies levitti eväänsä penkille ja teki minulle tilaa. [warmly] Panin kortin takaisin taskuun. Tähän seuraan pääsi ilman esittelyä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-madrid.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-madrid-r20260909-paper-v4;
@@ -212,9 +244,7 @@ export const FOKUSVIRTA_MADRID = {
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Las Meninas on yhä Pradon salissa 12. Minä tarkkailin jonon vieressä nukkuvaa koiraa. Se ei vilkaissut museoon päinkään. Velázquez olisi hyväksynyt asennon.',
-    ],
+    kommentti: ["Retiron lammella vuokrataan nyt soutuveneitä. Laskeuduin yhden keulaan kokeilemaan matkustajan osaa. Soutaja sai veneen pyörimään ympyrää. Olisin voinut lentää, tietenkin. Mutta hän nauroi jo itsekin, ja minä jäin vielä yhdelle kierrokselle."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.5 },
     /*

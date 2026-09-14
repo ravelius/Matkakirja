@@ -122,7 +122,7 @@ export const FOKUSVIRTA_BERLIINI = {
     paikkarivi: 'Berliini, syyskuussa 1873. Pilvistä; laastin ja kivipölyn '
       + 'haju; puntari matalalla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 324 merkkiä (yläraja 400). */
-    teksti: 'Berliinin voitonpylväs koristeltiin vallatuilla tykinputkilla. Korkealle nostettu tykki ei osunut ohikulkijaan. Katsojat polkivat lehtipojan numeron mutaan; ostin sen. Suuret voitot painettiin paksuin kirjaimin, pieni tappio näkyi pojan kasvoilla.',
+    teksti: "Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.",
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -145,19 +145,49 @@ export const FOKUSVIRTA_BERLIINI = {
      * saa reaktion).
      */
     reaktiot: [
-      { id: 'berliini.r1', ankkuri: 'vallatuilla tykinputkilla', tarkoitus: 'vakavoituu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'berliini.r2', ankkuri: 'ei osunut ohikulkijaan', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'berliini.r3', ankkuri: 'lehtipojan numeron mutaan', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'berliini.r4', ankkuri: 'ostin sen', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'berliini.r5', ankkuri: 'pojan kasvoilla', tarkoitus: 'vakavoituu', voimakkuus: 0.6, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "berliini.r1",
+    "ankkuri": "sähkösanoma suljettiin kapseliin",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "berliini.r2",
+    "ankkuri": "Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "berliini.r3",
+    "ankkuri": "oliko minulla jotakin lähetettävää",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "berliini.r4",
+    "ankkuri": "Ei vielä",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "berliini.r5",
+    "ankkuri": "Halusin nähdä seuraavankin kapselin lähtevän",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Berliinin voitonpylväs koristeltiin vallatuilla tykinputkilla. Korkealle nostettu tykki ei osunut ohikulkijaan. Katsojat polkivat lehtipojan numeron mutaan; ostin sen. [softly] Suuret voitot painettiin paksuin kirjaimin, pieni tappio näkyi pojan kasvoilla.',
+    luenta: "[curious] Berliinin lennätintoimistossa sähkösanoma suljettiin kapseliin. Paineilma vei sen katujen alla kulkevaa putkea pitkin pörssiin. Virkailija kysyi, oliko minulla jotakin lähetettävää. [thoughtfully] Ei vielä. Halusin nähdä seuraavankin kapselin lähtevän.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-berliini.mp3',
   },
 
@@ -185,9 +215,7 @@ export const FOKUSVIRTA_BERLIINI = {
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Pylväs siirrettiin 1938–1939 Großer Sternille. Nousin patsaan tasalle hetkeksi — tuuli ei arvostanut vertailua. Alhaalla ajattelin lehtipoikaa, kuten isoisäkin.',
-    ],
+    kommentti: ["Tempelhofin vanhalla lentokentällä lensin punaisen leijan rinnalla. Se pysyi ilmassa räpäyttämättä siipeäkään. Hiukan ärsyttävää. Sitten katsoin alas: narun toisessa päässä mies juoksi hiki hatussa. Helpotukseni oli suuri. Joku tässä sentään teki töitä."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'vakava', voimakkuus: 0.5 },
     /*
