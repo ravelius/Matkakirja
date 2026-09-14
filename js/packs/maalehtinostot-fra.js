@@ -204,13 +204,6 @@ const JAKO = [
         europe: { x: 300.9, y: 703.8 },
       },
     },
-    visa: {
-      kysymys: 'Kuinka kauan Versaillesin pihalta noussut lento kesti?',
-      vaihtoehdot: ['Kahdeksan minuuttia', 'Kolme tuntia', 'Kaksi vuorokautta'],
-      oikea: 0,
-      fakta: 'Matkustajat päätyivät kolmen kilometrin päähän, ja kaikki '
-        + 'kolme selvisivät.',
-    },
   },
   {
     sivu: 'keksinnot',
@@ -273,7 +266,7 @@ const JAKO = [
     visa: {
       kysymys: 'Kuinka monta elokuvaa ensimmäisessä maksullisessa '
         + 'näytöksessä esitettiin?',
-      vaihtoehdot: ['Kymmenen', 'Yksi', 'Neljäkymmentä'],
+      vaihtoehdot: ['Kymmenen', 'Yksi', 'Sata'],
       oikea: 0,
       fakta: 'Jokainen niistä kesti alle minuutin, ja yleisöä oli noin '
         + 'neljäkymmentä.',
@@ -335,13 +328,6 @@ const JAKO = [
         maailmankartta: { x: 5932.1, y: 1569.8 },
         europe: { x: 268.1, y: 689.8 },
       },
-    },
-    visa: {
-      kysymys: 'Kuinka korkea Puy de Dôme on?',
-      vaihtoehdot: ['1 465 metriä', '4 807 metriä', '106 metriä'],
-      oikea: 0,
-      fakta: 'Ketjussa on yli seitsemänkymmentä tulivuorta neljänkymmenen '
-        + 'kilometrin matkalla.',
     },
   },
   {
@@ -444,12 +430,6 @@ const JAKO = [
         europe: { x: 215, y: 631 },
       },
     },
-    visa: {
-      kysymys: 'Kuka käveli autoonsa vuonna 1969 ja voitti silti kisan?',
-      vaihtoehdot: ['Jacky Ickx', 'Maurice Garin', 'Roland Garros'],
-      oikea: 0,
-      fakta: 'Seuraavana vuonna juoksulähdöstä luovuttiin kokonaan.',
-    },
   },
   {
     sivu: 'arki',
@@ -487,15 +467,11 @@ const JAKO = [
       },
     },
     visa: {
-      kysymys: 'Minkä värisiä bouquinistien laatikot ovat?',
-      vaihtoehdot: [
-        'Vaunuvihreitä kuten ensimmäisen metron kyltit',
-        'Mustia kuten Seinen kaiteet',
-        'Punaisia kuten kirjakauppojen markiisit',
-      ],
+      kysymys: 'Kuinka monta laatikkoa yksi kirjamyyjä saa enintään?',
+      vaihtoehdot: ['Neljä', 'Kaksikymmentä', 'Kolmesataa'],
       oikea: 0,
-      fakta: 'Yksi myyjä saa kahdeksan metriä kaidetta ja enintään neljä '
-        + 'laatikkoa.',
+      fakta: 'Maali on aina sama vaunuvihreä kuin ensimmäisen metron '
+        + 'kylteissä.',
     },
   },
 ];
