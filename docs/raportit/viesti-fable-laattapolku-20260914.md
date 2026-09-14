@@ -224,13 +224,50 @@ PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers NODE_USE_ENV_PROXY=1 \
   node tools/savukkeet/savuke-tasoitus-pallo.mjs --laatat <kansio>
 ```
 
-SAVUKKEEN_TULOS
+**TULOS: 13/13 väitettä läpi** (390 × 844, pilottilaatasto
+`--vari FRA --paletti tasoitus --peitto 0.85 --laatikko-nakyma`,
+1377 laattaa; pohja tuotannon ämpäristä):
+
+| väite | tulos |
+| --- | --- |
+| V0 tasoituskerros on pallolla ja se on Ranskan | OK (`tasoitettuja 22`, `variMaa FRA`) |
+| V1 versioportti ei sammuttanut kerrosta | OK (`syy ""`) |
+| V2 Ranskan sisältä A ja B pikselilleen identtiset | OK (Sologne A = B rgb(246,237,191) σ 3,5 · ΔL 0,0) |
+| V3 Belgian Ardennit vaaleni ja kontrasti pieneni | OK (ΔL **+23,7**, σ 5,4 → 0,8) |
+| V4 avomeri vaaleni kermaa kohti | OK (ΔL **+35,7**) |
+| V5 aluevesi tasoittui eikä sinertynyt | OK (ΔL **+28,3**) |
+| V6 ei lisää laattoja eikä tekstuurimuistia | OK |
+| V7 uloszoomauksen esto Ranskassa | OK |
+| V8 RUS ei lukkiudu | OK |
+| **V9 maa laatan polussa** | OK — **80 pyyntöä, 80 löytyi kansiosta**, esim. `pilotti-uusi/vari/FRA/z5/20/9.webp`; yhtään maatonta osoitetta ei pyydetty |
+| **V10 häive ulospäin** | OK — sisällä **217** · reunalla **217** · häiveen keskellä 110 · ulkona **0** (nimellinen 217) |
 
 **VASTAKOE ON PAKOLLINEN JA SE ON PUNAINEN.** Sama savuke, samat
 asetukset, mutta laatat ajettu generaattorin lipulla
 `--haive-sisaan` eli korjaus palautettuna:
 
-VASTAKOE_TULOS
+**TULOS: 12/13 — V10 kaatuu, eikä mikään muu.**
+
+```
+INFO  V10 alfaprofiili: pilotti-sisaan/vari/FRA/z4/9/4.webp · laatikon reuna laatan x 288
+      (häive 126 px) · nimellinen 217 · sisällä 217 · reunalla 5 · häiveen keskellä 217 · ulkona 217
+FAIL  V10 häive häipyy laatikosta ULOSPÄIN (reunalla täyspeitto)
+      — reunalla 5 · sisällä 217 · ulkona 217 (nimellinen 217): häive on laatikon SISÄLLÄ
+12/13 väitettä läpi
+```
+
+Ero numeroina: **reunalla 217 → 5** ja **ulkona 0 → 217**. V0…V9
+pysyvät vihreinä myös vastakokeessa, ja se on oikein: polku, leikkuri
+ja versioportti eivät muutu häiveen suunnasta. Vastakoe, joka kaataisi
+muutakin, mittaisi jotain muuta kuin häivettä.
+
+**ERÄN OMA ANSA JÄI KIINNI JUURI TÄHÄN SAVUKKEESEEN.** Ensimmäinen ajo
+tällä haaralla oli **9/13** (V0, V3, V4, V5 punaisina, `varillisia 0`):
+laataston bittikartta luettiin yhä maattomasta kansiosta, joten se oli
+tyhjä ja peli päätteli, ettei yhtään laattaa ole olemassa — kartta olisi
+ollut ämpärissä mutta peli ei olisi pyytänyt sitä. Ilman savuketta se
+olisi mennyt läpi (yksikkötestit olivat vihreitä, koska polku oli oikea).
+Korjaus: `tools/generoi-laattapyramidi.mjs:3466`.
 
 `savuke-kaistat-levea.mjs` (edellisen erän savuke, mittaa TUOTANNON
 laatastoa) sai tässä erässä ohituksen: se tarkistaa nyt, onko
@@ -243,7 +280,15 @@ bittikartasta eikä ole kirjoitettu savukkeeseen.
 
 ## 6. Julkaisu
 
-JULKAISU_TULOS
+| vaihe | tulos |
+| --- | --- |
+| `node tools/uusi-versio.mjs` | **v1858** (2026-08-09.1858) |
+| `npm test` | **# pass 3312 · # fail 0** (3325 testiä, 13 ohitettu) |
+| `node tools/tarkista-kaksoisavaimet.mjs` | ei kaksoisavaimia |
+| `node tools/tarkista-niputus.mjs` | niputus kunnossa: 387 moduulia, 4200 top-level-julistusta |
+| `node tools/tarkista-savukkeet.mjs` | savukkeet kunnossa: 1602 ui-viittausta, 404 metodia |
+| `node tools/build-standalone.mjs` | dist/matkakirja.html (31970 kt) — **dist/ ei committiin** (.gitignore) |
+| `grep -rn '^<<<<<<<' js css tests tools` | 0 osumaa |
 
 ## 7. AJOLISTA: 27 maata, PERÄKKÄIN
 
