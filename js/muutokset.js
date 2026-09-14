@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1863, teksti: 'Palvelutyontekija asentuu taas (sw.js kaksoiskappale pois)' },
   { v: 1862, teksti: 'Tyhjentyneiden aihesivujen johdannot kartalle' },
   { v: 1861, teksti: 'Nostokortti: galleria ja musiikki, Wienin johdanto' },
   { v: 1860, teksti: 'Tyohuoneen tilannekortti ajan tasalle' },
