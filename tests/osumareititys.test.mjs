@@ -216,8 +216,17 @@ test('lahinMerkki ratkaisee kohtaamispisteen ENNEN kaupunkipisteen omaa mustetta
   assert.ok(pisteSaanto > 0 && pisteOsuma > 0 && kaupunkiSaanto > 0, 'kaikki kolme sääntöä löytyvät');
   assert.ok(pisteSaanto < kaupunkiSaanto && pisteOsuma < kaupunkiSaanto,
     'kohtaamispisteen etuoikeus on ennen kaupunkipisteen omaa mustetta');
-  // Turisti-infon oma sääntö säilyy koskemattomana.
-  assert.match(lauta, /if \(voittaja\?\.laji === 'turistiinfo'\) return voittaja;/);
+  /*
+   * Turisti-infon oma sääntö säilyy — mutta se on 14.9.2026 alkaen
+   * myönnytys vain KAUPUNGIN nimimusteen yli, ei noston oman musteen
+   * yli (js/pallolauta/lauta.js lahinMerkki, "MUTTA VAIN KAUPUNGIN
+   * NIMIMUSTEEN YLI"): saapumisnäkymässä info oli usein lähin merkki
+   * 44 px:n sisällä ja vei napautuksen toisen noston nimiön päältä.
+   */
+  assert.match(lauta,
+    /if \(voittaja\?\.laji === 'turistiinfo' && muste\?\.laji !== 'nosto'\) return voittaja;/);
+  const infoSaanto = lauta.indexOf("voittaja?.laji === 'turistiinfo' && muste?.laji !== 'nosto'");
+  assert.ok(infoSaanto > kaupunkiSaanto, 'turisti-infon sääntö on yhä kaupunkisäännön jäljessä');
   // Kaupungin oma myönnytys säilyy: sormi kaupunkipisteen halkaisijan sisällä.
   assert.match(lauta, /if \(voittaja\?\.laji === 'kaupunki' && lahella\(lat, lng, voittaja, pisteenPx \/ 2\)\)/);
 });

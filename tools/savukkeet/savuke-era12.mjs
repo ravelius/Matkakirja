@@ -31,6 +31,13 @@
  *      ruutukoko ∝ kartan mittakaava ilman katkoa. Sama mitataan
  *      suoraan kortin ruutuleveyden ja paneelin OMAN lautamitan
  *      ruutuprojektion suhteena.
+ *   5. RAJAUS ON AIVAN MAAN RAJOJEN ULKOPUOLELLA (erä 13, omistaja
+ *      14.9.2026: *"kartta zoomautuu liian kauas. pitaa rajautua aivan
+ *      rajojen ulkopuolelle."*). Rajauksen ruutulaatikko on maan
+ *      laatikon kehän projektio yhdistettynä maapaneelin korttiin, ja
+ *      SITOVALLA akselilla tyhjää tilaa on enintään TYHJAN_KATTO
+ *      (3,5 %, ks. vakion perustelu);
+ *      lisäksi laatikko on kokonaan ruudussa (mikään ei leikkaudu).
  *
  * === VASTAKOKEET (pakolliset) ======================================
  *
@@ -44,6 +51,11 @@
  *      Espanjaan).
  *   C. MAAPANEELIN_SKAALA_MAX 64 → 3 (erän 11 arvo). VÄITTEEN 3 ON
  *      KAADUTTAVA: katto katkaisee skaalauksen kesken pelialueen.
+ *   D. `pallonKorkeus` palauttamaan null → rajaus lasketaan taas laudan
+ *      Mercator-yksiköistä, kuten ennen erää 13. Kokeessa muutetaan
+ *      VAIN MITTA, ei varaa, joten tulos ei ole vanha näkymä vaan
+ *      vastaus kysymykseen *"tekeekö mitta eron"*. VÄITTEEN 5 ON
+ *      KAADUTTAVA.
  *
  * === MIKSI 9 SEKUNNIN LEPO ON OSA KOETTA ============================
  *
@@ -81,13 +93,13 @@ if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: tr
  * saapumiskorkeutta ulompana. Luku EI ole mitoitus vaan väite, ja se
  * on valittu suunnitellun varan ja mitatun vian väliin:
  *
- *   suunniteltu  uloszoomauksen kerroin 1,15 vs. saapumismarginaali
- *                1 + 2 × 0,05 = 1,10  →  4,5 % (mitattu työpöydällä
- *                4,55 %, puhelimella 0 %)
+ *   suunniteltu  erässä 13 uloszoomauksen kerroin JA saapumisen vara
+ *                ovat sama luku 1 + 2 × 0,01 = 1,02  →  0 % (ennen
+ *                erää 13: 1,15 vs. 1,10 → 4,5 % työpöydällä)
  *   mitattu vika  mittauspiikin jälkeen 49 % (puhelin, 14.9.2026)
  *   vastakoe A    kerroin 3            →  yli 150 %
  */
-const ULOSZOOMAUSVARA = 0.08;
+const ULOSZOOMAUSVARA = 0.02;
 /**
  * Väitteen 3 sallittu hajonta kolmen zoomitason välillä.
  *
@@ -102,6 +114,30 @@ const ULOSZOOMAUSVARA = 0.08;
  * skaalausta: skaala ∝ px per lautayksikkö ∝ 1 / korkeus.
  */
 const SUHTEEN_VARA = 0.02;
+/**
+ * VÄITE 5: TYHJÄ TILA SITOVALLA AKSELILLA (erä 13, omistaja 14.9.2026
+ * sanatarkasti: *"kartta zoomautuu liian kauas. pitaa rajautua aivan
+ * rajojen ulkopuolelle."*).
+ *
+ * Mitta on RAJAUKSEN (maa + maapaneeli) ruutulaatikko: maan laatikon
+ * kehä projisoituna `getScreenCoords`illa ja maapaneelin kortin oma
+ * ruutulaatikko yhdistettynä. Tyhjä tila = ruudun mitta miinus
+ * laatikon mitta, jaettuna ruudun mitalla; SITOVA AKSELI on se, jolla
+ * tyhjää on vähemmän — toisella akselilla tyhjää saa olla, koska
+ * laatikon kuvasuhde ei ole ruudun kuvasuhde.
+ *
+ * KATTO 3,5 % JA SEN PERUSTELU. Saapumisen vara on 1 + 2 × 0,01 =
+ * 1,02, eli KAUIMMAINEN laatikon reuna asettuu tasan 98 %:iin ruudun
+ * puolikkaasta. Koko akselin tyhjä on silti hitusen enemmän, koska
+ * kamera osoittaa laatikon keskipisteeseen LAUDAN yksiköissä eikä
+ * pallon projektion keskelle: toiselle reunalle jää enemmän tilaa kuin
+ * toiselle. MITATTU Ranskassa erän 13 jälkeen 1,08 % (390 × 844) ja
+ * 3,01 % (1400 × 900); ennen erää 13 luvut olivat 35,3 % ja 27,5 %.
+ * Katto on 3,5 % eikä 3,0 %, jottei vartio kaadu kuormitetun koneen
+ * puolen prosentin heitosta — se erottaa silti korjatun rajauksen
+ * korjaamattomasta kymmenkertaisella marginaalilla (vastakoe D).
+ */
+const TYHJAN_KATTO = 0.035;
 /**
  * Kolme zoomitasoa osuuksina uloimmasta sallitusta korkeudesta.
  * Sisin on valittu niin, että se YLITTÄÄ erän 11 katon (SKAALA_MAX 3)
@@ -124,11 +160,23 @@ const palvelin = http.createServer((req, res) => {
   let runko = readFileSync(polku);
   if (vastakoe === 'A' && polkuOsa.endsWith('/js/pallolauta/kamera.js')) {
     runko = Buffer.from(runko.toString('utf8')
-      .replace(/ULOSZOOMAUKSEN_KERROIN = [\d.]+/, 'ULOSZOOMAUKSEN_KERROIN = 3'));
+      .replace(/ULOSZOOMAUKSEN_KERROIN = [^;]+;/, 'ULOSZOOMAUKSEN_KERROIN = 3;'));
   }
   if (vastakoe === 'B' && polkuOsa.endsWith('/js/pallolauta/maapaneeli.js')) {
     runko = Buffer.from(runko.toString('utf8')
       .replace(/MAAPANEELIN_ANKKURIT = \{[\s\S]*?\n\};/, 'MAAPANEELIN_ANKKURIT = {};'));
+  }
+  if (vastakoe === 'D' && polkuOsa.endsWith('/js/pallolauta/kamera.js')) {
+    /*
+     * Erää 13 edeltänyt MITTA: korkeus laskettiin laudan
+     * Mercator-yksiköistä eikä pallon perspektiivistä. Yksi rivi
+     * riittää — `pallonKorkeus` palauttaa null, jolloin kameranKohde
+     * putoaa takaisin vanhaan `korkeus(leveys)`-polkuun. Vara pysyy
+     * uutena (1,02), joten koe eristää nimenomaan mitan.
+     */
+    runko = Buffer.from(runko.toString('utf8')
+      .replace('const pallonKorkeus = (bbox, vara = 1) => {',
+        'const pallonKorkeus = (bbox, vara = 1) => { if (bbox || vara) return null;'));
   }
   if (vastakoe === 'C' && polkuOsa.endsWith('/js/pallolauta/maapaneeli.js')) {
     runko = Buffer.from(runko.toString('utf8')
@@ -242,7 +290,29 @@ async function avaaPeli({ leveys, korkeus }) {
     .waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 60000 })
     .then(() => true).catch(() => false);
   // 9 s: saapumisketju ja mittauspiikki ehtivät molemmat tapahtua.
-  if (auki) await sivu.waitForTimeout(9000);
+  if (auki) {
+    await sivu.waitForTimeout(9000);
+    /*
+     * VAKIINTUMINEN ON OSA MITTAUSTA. `pointOfView()` voi palauttaa
+     * ajon KOHTEEN, kun kirjaston oma tween on kesken, joten mittaus
+     * odottaa, että PIIRRETTY mittakaava (kahden pisteen ruutuväli) ei
+     * enää liiku. Ilman tätä rajausmitta luki kerran kameran korkeuden
+     * 0,4667 vaikka kuva oli yhä korkeudella 0,65 (mitattu 14.9.2026).
+     */
+    const otos = () => sivu.evaluate(() => {
+      const l = window.matkakirja.ui.pallolauta;
+      const a = l.pallo.getScreenCoords(0, 0, 0);
+      const b = l.pallo.getScreenCoords(0, 10, 0);
+      return Math.abs(b.x - a.x);
+    });
+    let edel = await otos();
+    for (let i = 0; i < 8; i += 1) {
+      await sivu.waitForTimeout(1500);
+      const nyt = await otos();
+      if (Math.abs(nyt - edel) < 0.5) { edel = nyt; break; }
+      edel = nyt;
+    }
+  }
   return { ctx, sivu, virheet, auki };
 }
 
@@ -267,6 +337,66 @@ const mittaa = (sivu) => sivu.evaluate(() => {
     kortti: r ? { x0: r.left - kotelo.left, y0: r.top - kotelo.top, x1: r.right - kotelo.left, y1: r.bottom - kotelo.top, w: r.width, h: r.height } : null,
     kotelo: { w: kotelo.width, h: kotelo.height, x0: kotelo.left, y0: kotelo.top },
     ylivuoto: sisus ? sisus.scrollHeight - sisus.clientHeight : null,
+  };
+});
+
+/**
+ * Rajauksen ruutulaatikko ja tyhjä tila (väite 5).
+ *
+ * KOORDINAATISTO ON KOTELON, EI SIVUN. `getScreenCoords` antaa jo
+ * kotelon suhteelliset pikselit, kun taas `getBoundingClientRect` on
+ * sivun koordinaatistossa — kortista vähennetään siksi kotelon nurkka
+ * ja maan laatikosta EI. Sekoitus siirtäisi laatikot toistensa suhteen
+ * yläpalkin verran (mitattu 68 px), ja mitta olisi hölynpölyä.
+ */
+const rajausNyt = (sivu) => sivu.evaluate(() => {
+  const l = window.matkakirja.ui.pallolauta;
+  const kotelo = l.kotelo.getBoundingClientRect();
+  const datum = l.pallo.htmlElementsData().find((d) => d.laji === 'maapaneeli') ?? null;
+  const bb = datum?.laatikko ?? null;
+  if (!bb || !l.asteet) return null;
+  let x0 = Infinity; let x1 = -Infinity; let y0 = Infinity; let y1 = -Infinity;
+  const N = 40;
+  const lisaa = (bx, by) => {
+    const a = l.asteet({ x: bx, y: by });
+    if (!a) return;
+    const s = l.pallo.getScreenCoords(a.lat, a.lon ?? a.lng, 0);
+    if (!s || !Number.isFinite(s.x) || !Number.isFinite(s.y)) return;
+    x0 = Math.min(x0, s.x); x1 = Math.max(x1, s.x);
+    y0 = Math.min(y0, s.y); y1 = Math.max(y1, s.y);
+  };
+  for (let i = 0; i <= N; i += 1) {
+    const t = i / N;
+    lisaa(bb.x + bb.w * t, bb.y);
+    lisaa(bb.x + bb.w * t, bb.y + bb.h);
+    lisaa(bb.x, bb.y + bb.h * t);
+    lisaa(bb.x + bb.w, bb.y + bb.h * t);
+  }
+  if (!Number.isFinite(x0)) return null;
+  const maa = { x0, x1, y0, y1 };
+  const k = document.querySelector('.maapaneeli-kortti')?.getBoundingClientRect() ?? null;
+  const kortti = k
+    ? { x0: k.left - kotelo.left, x1: k.right - kotelo.left,
+      y0: k.top - kotelo.top, y1: k.bottom - kotelo.top }
+    : null;
+  const yhd = kortti
+    ? { x0: Math.min(x0, kortti.x0), x1: Math.max(x1, kortti.x1),
+      y0: Math.min(y0, kortti.y0), y1: Math.max(y1, kortti.y1) }
+    : maa;
+  const tyhjaX = (kotelo.width - (yhd.x1 - yhd.x0)) / kotelo.width;
+  const tyhjaY = (kotelo.height - (yhd.y1 - yhd.y0)) / kotelo.height;
+  return {
+    maa,
+    kortti,
+    yhd,
+    kotelo: { w: kotelo.width, h: kotelo.height },
+    tyhjaX,
+    tyhjaY,
+    sitova: Math.min(tyhjaX, tyhjaY),
+    akseli: tyhjaX <= tyhjaY ? 'X' : 'Y',
+    // Leikkautuuko rajaus ruudun ulkopuolelle?
+    ruudussa: yhd.x0 >= -1 && yhd.y0 >= -1
+      && yhd.x1 <= kotelo.width + 1 && yhd.y1 <= kotelo.height + 1,
   };
 });
 
@@ -326,6 +456,7 @@ const RUUDUT = [
 const zoomiTulokset = [];
 const meriTulokset = [];
 const suhdeTulokset = [];
+const rajausTulokset = [];
 let paaVirheet = [];
 
 for (const ruutu of RUUDUT) {
@@ -333,6 +464,20 @@ for (const ruutu of RUUDUT) {
   const { ctx, sivu, virheet, auki } = await avaaPeli(ruutu);
   vaadi(`pallolauta aukesi (${ruutu.nimi} px)`, auki, virheet.join(' | '));
   if (!auki) { await ctx.close(); continue; }
+
+  /* --- 5. rajaus aivan maan rajojen ulkopuolelle ------------------ */
+  const r = await rajausNyt(sivu);
+  rajausTulokset.push({ ruutu: ruutu.nimi, sitova: p(r?.sitova, 4), akseli: r?.akseli,
+    ruudussa: r?.ruudussa ?? false,
+    ok: Boolean(r && r.sitova <= TYHJAN_KATTO && r.sitova >= 0 && r.ruudussa) });
+  tieto(`${ruutu.nimi} px · rajaus (maa + maapaneeli)`,
+    r
+      ? `laatikko x ${p(r.yhd.x0, 1)}…${p(r.yhd.x1, 1)} / 0…${p(r.kotelo.w, 1)}, `
+        + `y ${p(r.yhd.y0, 1)}…${p(r.yhd.y1, 1)} / 0…${p(r.kotelo.h, 1)}; `
+        + `tyhjä X ${p(100 * r.tyhjaX, 2)} % · Y ${p(100 * r.tyhjaY, 2)} % → `
+        + `sitova ${r.akseli} ${p(100 * r.sitova, 2)} % (katto ${p(100 * TYHJAN_KATTO, 1)} %), `
+        + `kokonaan ruudussa ${r.ruudussa}`
+      : 'EI MITATTAVISSA');
 
   /* --- 1. uloszoomaus ei onnistu -------------------------------- */
   const m = await mittaa(sivu);
@@ -416,6 +561,9 @@ vaadi('2. maapaneeli on meren päällä — ei yhdenkään maan polygonissa',
 vaadi('3. paneelin koko seuraa kartan mittakaavaa katkotta (3 zoomia)',
   suhdeTulokset.length === RUUDUT.length && suhdeTulokset.every((t) => t.ok),
   JSON.stringify(suhdeTulokset.map((t) => ({ ruutu: t.ruutu, hTulo: t.hTulo }))));
+vaadi('5. saapumisnäkymä rajautuu aivan maan rajojen ulkopuolelle (tyhjä ≤ 3,5 %)',
+  rajausTulokset.length === RUUDUT.length && rajausTulokset.every((t) => t.ok),
+  JSON.stringify(rajausTulokset));
 tieto('sivun virheet (pääajo)', paaVirheet.length ? paaVirheet.join(' | ') : 'ei yhtään');
 vaadi('4. pääajo ei tuottanut sivuvirheitä', paaVirheet.length === 0, paaVirheet.join(' | '));
 
@@ -472,6 +620,25 @@ vastakoe = 'C';
   vaadi('VASTAKOE C: katolla 3 skaalaväite kaatuu',
     auki && hajonta > SUHTEEN_VARA, JSON.stringify({ auki, hajonta }));
   await ctx.close();
+}
+/* D: rajaus takaisin laudan yksiköihin → väitteen 5 on kaaduttava. */
+vastakoe = 'D';
+{
+  const tulokset = [];
+  for (const ruutu of RUUDUT) {
+    /* eslint-disable no-await-in-loop */
+    const { ctx, sivu, auki } = await avaaPeli(ruutu);
+    const r = auki ? await rajausNyt(sivu) : null;
+    tulokset.push({ ruutu: ruutu.nimi, sitova: p(r?.sitova, 4), akseli: r?.akseli });
+    tieto(`vastakoe D (${ruutu.nimi} px, rajaus laudan Mercator-yksiköistä)`,
+      r ? `tyhjä X ${p(100 * r.tyhjaX, 2)} % · Y ${p(100 * r.tyhjaY, 2)} % → sitova `
+        + `${r.akseli} ${p(100 * r.sitova, 2)} %` : 'EI MITATTAVISSA');
+    await ctx.close();
+    /* eslint-enable no-await-in-loop */
+  }
+  const kaatui = tulokset.some((t) => !(t.sitova >= 0) || t.sitova > TYHJAN_KATTO);
+  tieto('vastakoe D', `→ väite 5 ${kaatui ? 'PUNAINEN' : 'LÄPI (paha)'}`);
+  vaadi('VASTAKOE D: laudan yksiköillä rajausväite kaatuu', kaatui, JSON.stringify(tulokset));
 }
 vastakoe = null;
 
