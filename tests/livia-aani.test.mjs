@@ -375,6 +375,33 @@ test('kaikki 45 Euroopan kaupunkirepliikkiä käyttävät muuttumattomia tuotant
   assert.match(livianAaniOsoite('lontoo', 2), /aanet\/pulu\/versiot\/.+\/livia-lontoo-3\.mp3$/);
 });
 
+/*
+ * ATEENA JA SOFIA SOIVAT UUDESTA, UUDELLEENKOODAAMATTOMASTA ERÄSTÄ.
+ *
+ * Omistaja kuuli vanhassa erässä digitaalisen häiriön; mitattu syy oli
+ * ylimääräinen 128 kbps koodaussukupolvi. Uusi erä
+ * pulu-c4a91d1229f96eaac265 (lähde-SHA fd6db48f) tallentaa mallin mp3:n
+ * sellaisenaan, ja kuitti todistaa sen: raaka- ja final-avaimen sha256 on
+ * sama. Tämä portti kaatuu, jos data putoaa takaisin vanhaan erään tai
+ * jos kuitin kesto vaihtuu — silloin peli soittaisi taas sitä äänitettä,
+ * josta omistaja valitti.
+ */
+test('ateena-3 ja sofia-3 osoittavat uuden putken erään (ei uudelleenkoodausta)', () => {
+  const ERA = 'aanet/pulu/versiot/fd6db48feef7/pulu-c4a91d1229f96eaac265';
+  assert.equal(LIVIAN_VERSIOIDUT_AANET['ateena-3'], `${ERA}/livia-ateena-3.mp3`);
+  assert.equal(LIVIAN_VERSIOIDUT_AANET['sofia-3'], `${ERA}/livia-sofia-3.mp3`);
+  // Kuitin mitatut kestot (kuitti pulu-c4a91d1229f96eaac265.completed.json).
+  assert.equal(LIVIAN_KESTOT['ateena-3'], 17.868);
+  assert.equal(LIVIAN_KESTOT['sofia-3'], 12.356);
+  // Teksti ei muuttunut: tiivisteet ovat samat kuin ennen uusintaa.
+  assert.equal(LIVIAN_AANITETYT['ateena-3'], '572e0e85');
+  assert.equal(LIVIAN_AANITETYT['sofia-3'], '83dd2f15');
+  // Muut kaupungit eivät saa vahingossa siirtyä tähän erään.
+  const uudessa = Object.entries(LIVIAN_VERSIOIDUT_AANET)
+    .filter(([, polku]) => polku.startsWith(ERA)).map(([avain]) => avain).sort();
+  assert.deepEqual(uudessa, ['ateena-3', 'sofia-3']);
+});
+
 /* ---------- kaiku (poistettu pelistä 6.9.2026 ilta) ---------- */
 
 test('työkalu tuntee saapumisrepliikit, mutta peli soittaa aina kuivan', () => {
