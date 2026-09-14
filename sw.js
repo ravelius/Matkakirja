@@ -231,6 +231,11 @@ const SHELL = [
   './js/pallolauta/merkit.js',
   // Maan perustiedot ja Lisää-valikko kartalla (karttauudistus erä 3).
   './js/pallolauta/maapaneeli.js',
+  // Kartussin käsinpiirretty kaksoisviivakehys (erä 11, 14.9.2026,
+  // Raamattu PÄÄTÖKSET 7): mitatut suhdeluvut ja deterministinen aalto.
+  // Ainoa tuoja on maapaneeli, joka on niputuksen ulkopuolella, joten
+  // tämäkin on vain SHELLissä.
+  './js/kasinpiirto.js',
   // Avaruuden tähdet ja pöly (7.9.2026): kertomusesityksen musta alku.
   './js/pallolauta/tahdet.js',
   './js/pallolauta/nimet.js',
