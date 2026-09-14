@@ -59,6 +59,46 @@
  * Bulgaria, Itävalta) oma lista ei riko mitään, koska kaupunkeja on
  * vain se yksi. Monen kaupungin maissa (Britannia, Turkki, Ranska,
  * Espanja, Italia, Puola, Ukraina, Venäjä, Suomi, Norja) rikkoo.
+ *
+ * === MERKKIPORTTI: ULOIN ZOOMI POLTTAA ENINTÄÄN 21 MERKKIÄ =========
+ *
+ * (14.9.2026, docs/raportit/viesti-fable-merkkirajat-20260914.md luku 7,
+ * "POLTTOVELKA".) Elävä kerros sai v1867:ssä pääkartan merkkirajan
+ * (js/pallolauta/nostot.js `merkkiPortti`): uloimmalla zoomilla piirtyy
+ * enintään PAAKARTAN_MERKKIKATTO tärkeintä merkkiä maata kohti ja
+ * `lahi: true` -kohteet eivät lainkaan; loput tulevat näkyviin
+ * zoomatessa. POLTTOKETJU EI TUNTENUT PORTTIA, ja siitä syntyi
+ * POLTTOVELKA: portin hylkäämä merkki on laatassa mustetta, jota
+ * kerros ei voi piilottaa. Mitattu tässä tiedostossa 14.9.2026:
+ * GRC 12, TUR 8, DEU 7, HRV 2, ITA 1, RUS 1 — 31 merkkiä, jotka
+ * palavat vaikka sääntö kieltää ne uloimmalta zoomilta.
+ *
+ * TÄMÄ ON SE YKSI KUTSU. Portti ajetaan `lahella = false` eli uloimman
+ * zoomin asetuksella, SAMALLA funktiolla ja samalla
+ * tärkeysjärjestyksellä kuin elävä kerros — ei omaa kopiota säännöstä,
+ * koska kaksi sääntöä ajautuisi eri vastauksiin (Raamatun ehto: yksi
+ * ladonta, yksi lähde).
+ *
+ * PORTTI AJETAAN VASTA KOLMEN PASSIN JÄLKEEN, täsmälleen kuten pelissä
+ * (js/pallolauta/nostot.js `keraa`: `maanKohdemerkit` latoo KAIKKI
+ * merkit ja portti karsii vasta valmiista ladonnasta). Jos portti
+ * karsisi ennen kasausta, poltettujen merkkien paikat eroaisivat
+ * elävistä — ja juuri sitä Raamattu kieltää.
+ *
+ * YLIMÄÄRÄINEN MERKKI JÄTETÄÄN KOKONAAN POLTTAMATTA, EI POLTETA
+ * LÄHIZOOMILAATOILLE. Nostolaatan tunnus→tiiviste-luettelo
+ * (`nostotaso.nostot`) ei ole tasokohtainen: peli päättää siitä, onko
+ * merkki laatassa VAI elävä (js/pallo.js `pallonNostoOnPoltettu`,
+ * js/fokuskohteet.js `maanKohdemerkit`). Jos merkki poltettaisiin vain
+ * z6–z7-laatoille ja jäisi luetteloon, se olisi lähizoomilla laatassa
+ * JA uloimmalla zoomilla näkymätön mutta yhä napautettava — eli velka
+ * ei nollautuisi. Jos taas merkki poltettaisiin laatoille mutta EI
+ * luetteloon, lähizoomilla piirtyisi sekä laatan muste että elävä
+ * merkki päällekkäin (kaksoiskuva). Kun merkki jää polttamatta,
+ * ELÄVÄ KERROS HOITAA SEN KOKONAAN: sen oma portti näyttää merkin
+ * lähizoomilla ja piilottaa uloimmalla — sama lopputulos ruudulla,
+ * nolla polttovelkaa eikä yhtään kaksoiskuvaa.
+ *
  */
 import {
   KOHDE_SYMBOLI_SKAALA, eritteleKohdeRyhmat, kohdeKarttarivit, kohdeMerkinLadonta,
@@ -74,6 +114,7 @@ import { elaintakyKarttarivit, elaintakyNimioKylki } from '../../js/elaintaky-ri
 import { hetkiKarttarivit, kytkeHistorianHetket } from '../../js/historian-hetket.js';
 import { kytkeSkandaalit, skandaaliKarttarivit } from '../../js/skandaalit.js';
 import { kytkeSyvennys, syvennysKarttarivit } from '../../js/syvennys.js';
+import { PAAKARTAN_MERKKIKATTO, merkkiPortti } from '../../js/pallolauta/nostot.js';
 
 /**
  * Maan kaupungit laudan paketista.
@@ -193,6 +234,20 @@ function nostoladontaMerkit({
   eritteleKohdeRyhmat(ui, s);
   paivitaKohdeNimiot(ui, s);
   /*
+   * MERKKIPORTTI VALMIISEEN LADONTAAN (ks. MERKKIPORTTI tiedoston
+   * alussa). Sama funktio, sama tärkeysjärjestys ja sama
+   * `lahella = false` kuin elävällä kerroksella uloimmalla zoomilla;
+   * rivit menevät portille DATAN järjestyksessä, kuten pelissä.
+   * `kohde` on rivin oma tietue, josta portti lukee tyypin, `ihme`-
+   * lipun ja `lahi`-lipun.
+   *
+   * Portti ei siirrä eikä poista mitään ladonnasta — se päättää vain,
+   * mikä rivi on `poltettava`. Piiloon jäävät merkit hoitaa elävä
+   * kerros omalla portillaan.
+   */
+  const portti = merkkiPortti(ui.fokuskohdeRyhmat, false, (r) => r.kohde ?? null);
+  const paastetyt = new Set(portti.merkit.map((r) => r.id));
+  /*
    * SIIRTOVIIVAT KASAUSPASSIN OMASTA PALUUARVOSTA (1.9.2026 ilta,
    * omistaja: *"otetaan siirtoviivat takaisin karttanostoille (esim.
    * ateena)"*). Janan päät laskee js/fokusniput.js nippuViivanJana —
@@ -279,12 +334,18 @@ function nostoladontaMerkit({
        * mistä tahansa maan kaupungista. Yksikin epävakaa täky tekee
        * koko maan ladonnasta pelitilasta riippuvan.
        */
-      poltettava: !estetty,
+      /*
+       * MERKKIPORTTI: portin hylkäämä merkki EI PALA lainkaan, vaan
+       * jää eläväksi (ks. MERKKIPORTTI tiedoston alussa). Maa palaa
+       * yhä kokonaan tai ei lainkaan täkyehdon mielessä — portti on
+       * eri sääntö ja koskee yksittäistä merkkiä.
+       */
+      poltettava: !estetty && paastetyt.has(r.id),
     };
     merkki.tiiviste = nostoladontaTiiviste(merkki);
     merkit.push(merkki);
   }
-  return { s, merkit };
+  return { s, merkit, porttiPiiloon: merkit.length - paastetyt.size };
 }
 
 /**
@@ -401,6 +462,9 @@ export function keraaNostot(pack) {
     poltettu: 0,
     monimaisia: 0,
     elaimia: 0,
+    // Merkkiportin uloimmalla zoomilla karsimat merkit (ks. MERKKIPORTTI).
+    porttiPiiloon: 0,
+    porttiMaat: [],
     estot: [],
   };
   for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
@@ -423,11 +487,16 @@ export function keraaNostot(pack) {
       ...hetkiKarttarivit(iso, pack.id).map(({ kohde, paikka }) => ({ kohde, paikka })),
       ...takyt.rivit.map(({ kohde, paikka }) => ({ kohde, paikka })),
     ];
-    const { s, merkit: maanMerkit } = nostoladontaMerkit({
+    const { s, merkit: maanMerkit, porttiPiiloon } = nostoladontaMerkit({
       pack, iso, pohja, lisat, estetty: !takyt.vakaa,
     });
     if (!maanMerkit.length) continue;
     tilasto.maita += 1;
+    if (porttiPiiloon > 0) {
+      tilasto.porttiPiiloon += porttiPiiloon;
+      tilasto.porttiMaat.push(`${iso}: ${maanMerkit.length} merkkiä, `
+        + `${porttiPiiloon} yli katon ${PAAKARTAN_MERKKIKATTO}`);
+    }
     if (!takyt.vakaa) {
       tilasto.maitaEstetty += 1;
       tilasto.estot.push(`${iso}: ${takyt.syy}`);
@@ -488,5 +557,8 @@ export function nostojenYhteenveto(tilasto) {
     + `poltetaan ${tilasto.poltettu}`
     + (tilasto.maitaEstetty ? ` · ${tilasto.maitaEstetty} maata estetty (täky)` : '')
     + (tilasto.monimaisia ? ` · ${tilasto.monimaisia} monen maan merkkiä eläväksi` : '')
-    + (tilasto.elaimia ? ` · ${tilasto.elaimia} eläintäkyä` : '');
+    + (tilasto.elaimia ? ` · ${tilasto.elaimia} eläintäkyä` : '')
+    + (tilasto.porttiPiiloon
+      ? ` · ${tilasto.porttiPiiloon} merkkiä merkkiportin taakse (katto ${PAAKARTAN_MERKKIKATTO})`
+      : '');
 }
