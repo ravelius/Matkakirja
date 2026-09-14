@@ -169,7 +169,7 @@ const EU_CITIES = [
    * väärän pisteen (omistajan kuvakaappaus 17.8.2026). Todellinen paikka
    * annetaan käsin: tools/vanha-maailma.mjs TARKAT_PAIKAT.
    */
-  { id: 'islanti', name: 'Islanti', ambience: 'pohjoinen', wiki: 'Islanti', x: 62, y: 60, la: 'middle', lx: 0, ly: 42 },
+  { id: 'islanti', name: 'Reykjavík', ambience: 'pohjoinen', wiki: 'Reykjavík', x: 62, y: 60, la: 'middle', lx: 0, ly: 42 },
 ];
 
 /*

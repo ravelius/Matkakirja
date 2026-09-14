@@ -282,7 +282,7 @@ const CITIES = [
   // 69.7°N 7.8°W. Uusi paikka on Reykjavíkin seutu 64.15°N 21.94°W
   // projisoituna (5102.0,711.9) ja siirrettynä maalle koostajan omalla
   // maalle()-haulla. Lähdekorjaus: tools/vanha-maailma.mjs TARKAT_PAIKAT.
-  {"id":"islanti","name":"Islanti","wiki":"Islanti","ambience":"pohjoinen","x":5106,"y":711.9,"la":"middle","lx":0,"ly":-24},
+  {"id":"islanti","name":"Reykjavík","wiki":"Reykjavík","ambience":"pohjoinen","x":5106,"y":711.9,"la":"middle","lx":0,"ly":-24},
   {"id":"tanger","name":"Tanger","wiki":"Tanger","ambience":"basaari","x":5643.1,"y":1964.6,"start":true,"airport":true,"la":"end","lx":-20,"ly":5},
   {"id":"kairo","name":"Kairo","wiki":"Kairo","ambience":"basaari","x":6874.2,"y":2180.9,"start":true,"airport":true,"la":"start","lx":20,"ly":5},
   {"id":"karthago","name":"Karthago","wiki":"Karthago","ambience":"meri","x":6108.1,"y":1921.9,"la":"start","lx":20,"ly":5},
