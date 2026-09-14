@@ -35,10 +35,11 @@
  *   6.  NIMIÖT EIVÄT MENE PÄÄLLEKKÄIN (osumalaatikoiden leikkaus).
  *   7.  JOKAINEN UUSI NOSTO AVAA OMAN KORTTINSA — hiirellä ja
  *       kosketuksella, merkin omasta ruutupisteestä.
- *   8.  LISÄKAUPUNGIT NÄKYVÄT KARTALLA mutta EIVÄT OLE OSUMALISTALLA
- *       (nimikyltti ilman korttia, `vainNimi`).
- *   8b. VASTAKOE: kun `vainNimi` poistetaan ajon ajaksi, sama kaupunki
- *       ilmestyy osumalistalle — vartio 8 mittaa siis juuri lippua.
+ *   8.  LISÄKAUPUNGIT NÄKYVÄT KARTALLA JA OVAT OSUMALISTALLA
+ *       (kaupunkikortti, PAATOKSET 16 — erän 13 `vainNimi` poistui).
+ *   8b. VASTAKOE: kun rivi merkitään ajon ajaksi takaisin
+ *       `vainNimi`ksi, sama kaupunki katoaa osumalistalta — vartio 8
+ *       mittaa siis juuri osumakelpoisuutta eikä merkin olemassaoloa.
  *   9.  MINIKYSYMYS MAKSAA. Noston visaan vastataan oikein, ja pelaajan
  *       rahat kasvavat NOSTON_VISA_PALKKIO:n verran.
  *
@@ -277,15 +278,16 @@ async function sulje(sivu) {
  * Yksi mittaus: saapumisnäkymä (`porras` 0) tai N zoomiporrasta
  * sisäänpäin. Sama kaava kuin savuke-merkkirajat.mjs:ssä.
  *
- * `paljasta` poistaa annetulta kohteelta `vainNimi`-lipun mittauksen
- * ajaksi (vastakoe 8b).
+ * `paljasta` merkitsee annetun kohteen mittauksen ajaksi takaisin
+ * `vainNimi`-nimikyltiksi (vastakoe 8b): rivin pitää silloin kadota
+ * osumalistalta.
  */
 const mittaa = (sivu, porras, paljasta = null) => sivu.evaluate(async ([n, tunnus]) => {
   const l = window.matkakirja.ui.pallolauta;
   const { KOHDE_MAAT, kohteidenNykyinenIso } = await import('/js/fokuskohteet.js');
   const iso = kohteidenNykyinenIso(window.matkakirja.ui);
   const kohde = tunnus ? (KOHDE_MAAT[iso] ?? []).find((k) => k.id === tunnus) : null;
-  if (kohde) delete kohde.vainNimi;
+  if (kohde) kohde.vainNimi = true;
   await l.saavu({ kesto: 0 });
   await new Promise((v) => setTimeout(v, 1100));
   for (let i = 0; i < n; i += 1) {
@@ -298,7 +300,7 @@ const mittaa = (sivu, porras, paljasta = null) => sivu.evaluate(async ([n, tunnu
   const p = l.nostot.portti();
   const osumat = l.nostot.osumat();
   const laatikot = l.nostot.osumaLaatikot?.() ?? [];
-  if (kohde) kohde.vainNimi = true;
+  if (kohde) delete kohde.vainNimi;
   return {
     iso,
     leveys: Math.round(l.kamera.nakyvaAlue().w * 10) / 10,
@@ -502,7 +504,7 @@ for (const koko of RUUDUT) {
   vaadi(`${nimi}: 7b. sama kosketuksella`,
     vaaratKosketus.length === 0, vaaratKosketus.join(', '));
 
-  /* --- 8. lisäkaupungit näkyvät mutta eivät ota napautusta --- */
+  /* --- 8. lisäkaupungit näkyvät JA ottavat napautuksen (PAATOKSET 16) --- */
   await sulje(sivu);
   const kaupunkitunnukset = NAKYVAT_KAUPUNGIT_FRA.map((k) => k.id);
   const saap = await mittaa(sivu, 0);
@@ -512,11 +514,12 @@ for (const koko of RUUDUT) {
     `${kartalla2.length} / ${osumissa.length}`);
   vaadi(`${nimi}: 8. kaikki ${kaupunkitunnukset.length} lisäkaupunkia ovat kartalla`,
     kartalla2.length === kaupunkitunnukset.length, kartalla2.join(', '));
-  vaadi(`${nimi}: 8a. lisäkaupunki ei ole osumalistalla (nimikyltti ilman korttia)`,
-    osumissa.length === 0, osumissa.join(', '));
+  vaadi(`${nimi}: 8a. jokainen lisäkaupunki on osumalistalla (kaupunkikortti)`,
+    osumissa.length === kaupunkitunnukset.length,
+    kaupunkitunnukset.filter((id) => !osumissa.includes(id)).join(', '));
   const koe = await mittaa(sivu, 0, kaupunkitunnukset[0]);
-  vaadi(`${nimi}: 8b. VASTAKOE — ilman \`vainNimi\`-lippua ${kaupunkitunnukset[0]} on osumalistalla`,
-    koe.omat.includes(kaupunkitunnukset[0]), koe.omat.filter((i) => i.startsWith('nakyva')).join(', '));
+  vaadi(`${nimi}: 8b. VASTAKOE — \`vainNimi\`-lipulla ${kaupunkitunnukset[0]} katoaa osumalistalta`,
+    !koe.omat.includes(kaupunkitunnukset[0]), koe.omat.filter((i) => i.startsWith('nakyva')).join(', '));
 
   /* --- 9. minikysymys maksaa (pelilogiikkaa, mitataan yhdellä ruudulla) --- */
   if (koko.w > 400) { continue; }

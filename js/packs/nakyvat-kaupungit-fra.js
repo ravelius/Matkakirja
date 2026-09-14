@@ -19,26 +19,53 @@
  * Ne ovat maan kohdemerkkejä (js/fokuskohteet.js KOHDE_MAAT), kuten
  * 135 muun maan ei-pelattavat kaupungit jo ovat.
  *
- * === MIKSI NÄILLÄ EI OLE KORTTIA ===================================
+ * === KAUPUNKIKORTTI (PAATOKSET 16) =================================
  *
- * Muiden maiden kaupunkikohteilla on tietoruutu ja sen teksti. Tässä
- * erässä tekstiä EI SAANUT KIRJOITTAA (tehtävänanto: *"Ei uutta
- * tekstiä eikä faktoja"*), eikä Ranskan aineistossa ole valmista,
- * tarkistettua kuvausta näistä seitsemästä kaupungista. Vaihtoehdot
- * olivat siis keksitty teksti tai tyhjä kortti; kumpikaan ei ole
- * hyväksyttävä.
+ * Edellinen erä merkitsi nämä rivit `vainNimi: true` -lipulla, koska
+ * korttiin ei ollut tekstiä. Omistaja päätti 14.9.2026 (Raamattu,
+ * KARTTAUUDISTUKSEN PAATOKSET 16) sanatarkasti: *"Yhdista nuo kaksi
+ * ens. Vaihtoehtoa ja pyyda putkelta kuhunkin kaupunkiin hero kuva.
+ * Esittelyn jalkeen voi siis tulla yksi nosto teksti. Jos useampi
+ * olisi tarjolla niin jatetaan seuraavat kartalle omiksi
+ * nostoikseen."*
  *
- * Siksi rivi on merkitty `vainNimi: true`, ja se tarkoittaa kahta
- * asiaa:
+ * Lippu on siis poissa ja merkki ottaa napautuksen. Kortti on kolme
+ * lohkoa, samassa lehden kehyksessä kuin tiivis kaupunkietusivu
+ * (js/kaupunkinosto.js latoLisakaupunginKortti):
  *
- *   1. kartalla on merkki ja nimi, kuten omistaja pyysi;
- *   2. merkki EI OLE NAPAUTETTAVA — se ei siis ole "mustetta ilman
- *      korttia" vaan karttatypografiaa, samaa lajia kuin maan ja meren
- *      nimi kartalla.
+ *   1. `herokuva` — kuvaputken toimittama hero. TOISTAISEKSI `null`,
+ *      jolloin kortti piirtää oman paikkamerkkinsä (kartan seepiaruutu
+ *      ja kaupungin nimi) EIKÄ HAE ULKOISTA KUVAA. Kun putki toimittaa
+ *      kuvan, vaihto on tämä yksi rivi: `herokuva: '…media.matkakirja
+ *      .app/…'`.
+ *   2. `esittely` — 2–3 lauseen esittely. TOISTAISEKSI `null`, ja
+ *      kortti jättää lohkon pois kokonaan. Luonnokset ovat Fablen
+ *      hyväksyttävänä (docs/raportit/viesti-fable-kaupunkikortit-
+ *      20260914.md luku 3); kirjoittamatonta tekstiä ei saa panna
+ *      dataan, koska kortti on kaanonia heti kun se on näkyvissä.
+ *   3. `korttiNosto` — YKSI kaupunkiin ankkuroitu maalehden nosto,
+ *      viite samaan olioon jonka kartta piirtää (ei kopio). Loput
+ *      jäävät kartalle omiksi nostoikseen, kuten omistaja sanoi.
  *
- * FABLELLE PÄÄTETTÄVÄKSI: jos kaupungit halutaan napautettaviksi, ne
- * tarvitsevat kortin tekstin — se on sisältöerä ja kirjoittajan työ,
- * ei tämän erän. Lippu on silloin yksi rivi pois.
+ * === MILLÄ KAUPUNGILLA ON NOSTO — MITATTU, EI ARVATTU ==============
+ *
+ * Jokaisen lisäkaupungin laudan piste mitattiin jokaista kahdeksaatoista
+ * maalehtinoston ankkuria vastaan (js/packs/maalehtinostot-fra.js,
+ * lauta `maailmankartta`). Vain YKSI osuu kaupunkiin:
+ *
+ *   Lyon        maalehti-cinematographe   0,3 yksikköä  → KORTILLE
+ *   Bordeaux    maalehti-dune-du-pilat   23,1
+ *   Nantes      maalehti-chandeleur      37,5
+ *   Toulouse    maalehti-roquefort       53,5
+ *   Nizza       maalehti-petanque        59,3
+ *   Lille       maalehti-braille         81,6
+ *   Strasbourg  maalehti-cinematographe 153,3
+ *
+ * Kuuden lähin nosto on eri paikan nosto (Dune du Pilat, Bretagne,
+ * Roquefort-sur-Soulzon, La Ciotat, Pariisi), jolla on kartalla oma
+ * merkkinsä. Sen siirtäminen kaupungin korttiin olisi uusi, keksitty
+ * ankkuri — kielletty. Näillä kuudella kortti on siis kuva + esittely,
+ * ja lohko puuttuu ilman tyhjää kehystä.
  *
  * === KOORDINAATIT ==================================================
  *
@@ -49,13 +76,26 @@
  * omalla kaavalla (tools/johda-maastokohteet.mjs `laudat`).
  */
 
+import { MAALEHTINOSTOT_FRA } from './maalehtinostot-fra.js';
+
+/**
+ * Maalehden nosto tunnuksella — SAMA OLIO, EI KOPIO. Kortti lukee siis
+ * otsikon ja tekstin samasta paikasta kuin kartan nostokortti, eikä
+ * kahta versiota voi ajautua erilleen (sama rakenteellinen tae kuin
+ * js/packs/maalehtinostot-fra.js:llä lehteen).
+ */
+const nosto = (id) => MAALEHTINOSTOT_FRA.find((n) => n.id === id) ?? null;
+
 /** Ranskan kartalle tuodut ei-pelattavat kaupungit. */
 export const NAKYVAT_KAUPUNGIT_FRA = [
   {
     id: 'nakyva-kaupunki-lyon',
     nimi: 'Lyon',
     tyyppi: 'kaupunki',
-    vainNimi: true,
+    kaupunkikortti: true,
+    herokuva: null,
+    esittely: null,
+    korttiNosto: nosto('maalehti-cinematographe'),
     // 4,8281 E / 45,772 N — js/packs/fokus-grc.js FOKUS_LISANIMET.FRA
     laudat: { maailmankartta: { x: 5994.3, y: 1569.8 } },
     lahde: 'js/packs/fokus-grc.js FOKUS_LISANIMET.FRA (pelin omaa '
@@ -65,7 +105,10 @@ export const NAKYVAT_KAUPUNGIT_FRA = [
     id: 'nakyva-kaupunki-bordeaux',
     nimi: 'Bordeaux',
     tyyppi: 'kaupunki',
-    vainNimi: true,
+    kaupunkikortti: true,
+    herokuva: null,
+    esittely: null,
+    korttiNosto: null,
     // -0,597 E / 44,852 N — js/packs/fokus-grc.js FOKUS_LISANIMET.FRA
     laudat: { maailmankartta: { x: 5813.4, y: 1607.9 } },
     lahde: 'js/packs/fokus-grc.js FOKUS_LISANIMET.FRA (pelin omaa '
@@ -75,7 +118,10 @@ export const NAKYVAT_KAUPUNGIT_FRA = [
     id: 'nakyva-kaupunki-lille',
     nimi: 'Lille',
     tyyppi: 'kaupunki',
-    vainNimi: true,
+    kaupunkikortti: true,
+    herokuva: null,
+    esittely: null,
+    korttiNosto: null,
     // 3,0781 E / 50,6519 N — js/packs/fokus-grc.js FOKUS_LISANIMET.FRA
     laudat: { maailmankartta: { x: 5935.9, y: 1361.7 } },
     lahde: 'js/packs/fokus-grc.js FOKUS_LISANIMET.FRA (pelin omaa '
@@ -85,7 +131,10 @@ export const NAKYVAT_KAUPUNGIT_FRA = [
     id: 'nakyva-kaupunki-strasbourg',
     nimi: 'Strasbourg',
     tyyppi: 'kaupunki',
-    vainNimi: true,
+    kaupunkikortti: true,
+    herokuva: null,
+    esittely: null,
+    korttiNosto: null,
     // 7,75 E / 48,58 N — js/packs/fokus-grc.js FOKUS_LISANIMET.FRA
     laudat: { maailmankartta: { x: 6091.7, y: 1451.5 } },
     lahde: 'js/packs/fokus-grc.js FOKUS_LISANIMET.FRA (pelin omaa '
@@ -97,7 +146,10 @@ export const NAKYVAT_KAUPUNGIT_FRA = [
     // (js/packs/saatiedot.js, js/packs/maastokohteet-nzl.js).
     nimi: 'Nizza',
     tyyppi: 'kaupunki',
-    vainNimi: true,
+    kaupunkikortti: true,
+    herokuva: null,
+    esittely: null,
+    korttiNosto: null,
     // 7,2631 E / 43,717 N — js/packs/fokus-grc.js FOKUS_LISANIMET.FRA
     laudat: { maailmankartta: { x: 6075.4, y: 1654.3 } },
     lahde: 'js/packs/fokus-grc.js FOKUS_LISANIMET.FRA (pelin omaa '
@@ -107,7 +159,10 @@ export const NAKYVAT_KAUPUNGIT_FRA = [
     id: 'nakyva-kaupunki-toulouse',
     nimi: 'Toulouse',
     tyyppi: 'kaupunki',
-    vainNimi: true,
+    kaupunkikortti: true,
+    herokuva: null,
+    esittely: null,
+    korttiNosto: null,
     // 1,448 E / 43,6219 N — js/packs/fokus-grc.js FOKUS_LISANIMET.FRA
     laudat: { maailmankartta: { x: 5881.6, y: 1658.2 } },
     lahde: 'js/packs/fokus-grc.js FOKUS_LISANIMET.FRA (pelin omaa '
@@ -117,7 +172,10 @@ export const NAKYVAT_KAUPUNGIT_FRA = [
     id: 'nakyva-kaupunki-nantes',
     nimi: 'Nantes',
     tyyppi: 'kaupunki',
-    vainNimi: true,
+    kaupunkikortti: true,
+    herokuva: null,
+    esittely: null,
+    korttiNosto: null,
     // -1,5528 E / 47,2181 N — en-Wikipedia "Nantes", prop=coordinates
     // (haettu 14.9.2026); laudan luvut tools/johda-maastokohteet.mjs
     laudat: { maailmankartta: { x: 5781.6, y: 1509.3 } },
