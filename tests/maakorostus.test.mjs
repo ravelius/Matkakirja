@@ -191,7 +191,7 @@ test('korostus on selvästi tavallista rajaa vahvempi', () => {
  * lieventynyt vaan VAIHTUNUT: sävy on nyt sidottu yhteen arvoon, joka
  * on paletin `--mark` — eikä mihin tahansa punaiseen.
  */
-test('kohdemaan kehä on paletin --mark eikä oma heksaluku', () => {
+test('kohdemaan kehä on paletin --raja-punainen eikä oma heksaluku', () => {
   const osat = (v) => [1, 3, 5].map((i) => parseInt(v.slice(i, i + 2), 16));
   const [r, g, b] = osat(KOROSTUS_MUSTE);
   const [rr, rg, rb] = osat(RAJA_MUSTE);
@@ -202,14 +202,28 @@ test('kohdemaan kehä on paletin --mark eikä oma heksaluku', () => {
   // ARVO ON SAMA KUIN PALETISSA. Kaksi heksalukua eriytyisi
   // ensimmäisessä sävynmuutoksessa (suunnitelman riski 4.3).
   const css = lue('../css/styles.css');
+  const kehanVari = css.match(/--raja-punainen:\s*(#[0-9a-fA-F]{6})/)?.[1] ?? null;
+  assert.equal(KOROSTUS_MUSTE.toLowerCase(), kehanVari?.toLowerCase(),
+    'pallon korostus ja paletin --raja-punainen ovat eri väri');
+  /*
+   * MURRETUMPI JA TUMMEMPI KUIN `--mark` (PÄÄTÖKSET 11 kohta 2 b,
+   * omistaja 14.9.2026). Kehällä on oma muuttujansa juuri siksi, että
+   * kartan muut merkinnät (lentoreitti, sinettivaha) jäävät --markiin.
+   */
   const mark = css.match(/--mark:\s*(#[0-9a-fA-F]{6})/)?.[1] ?? null;
-  assert.equal(KOROSTUS_MUSTE.toLowerCase(), mark?.toLowerCase(),
-    'pallon korostus ja paletin --mark ovat eri väri');
+  const hsl = (v) => {
+    const [r, g, b] = osat(v).map((x) => x / 255);
+    const mx = Math.max(r, g, b); const mn = Math.min(r, g, b);
+    const l = (mx + mn) / 2;
+    return { s: mx === mn ? 0 : (mx - mn) / (1 - Math.abs(2 * l - 1)), l };
+  };
+  assert.ok(hsl(KOROSTUS_MUSTE).l < hsl(mark).l, 'kehä ei ole --markia tummempi');
+  assert.ok(hsl(KOROSTUS_MUSTE).s < hsl(mark).s, 'kehä ei ole --markia murretumpi');
   // Tasokartan kehä lukee saman muuttujan eikä kovakoodattua arvoa.
-  assert.match(css, /\.maatummennus-viiva \{[^}]*stroke: var\(--mark\)/);
+  assert.match(css, /\.maatummennus-viiva \{[^}]*stroke: var\(--raja-punainen\)/);
 });
 
-test('pallon korostus lukee sävyn --mark-muuttujasta ajossa', () => {
+test('pallon korostus lukee sävyn --raja-punainen-muuttujasta ajossa', () => {
   // Ilman dokumenttia (testit, niputus ennen CSS:ää) vara on vakio.
   assert.equal(korostuksenMuste(null), KOROSTUS_MUSTE);
   // Dokumentin kanssa arvo tulee muuttujasta: tässä tynkä, joka
