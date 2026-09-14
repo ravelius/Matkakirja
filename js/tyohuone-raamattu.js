@@ -7462,6 +7462,17 @@ export const RAAMATTU = {
           + 'pysahtyy kun luenta paattyy tai keskeytetaan; mykistettyna ei '
           + 'syki. 2) Livian (pulun) repliikissa EI erillista merkkia - '
           + 'pulun eleet riittavat. Tila: tyo Opus-agentilla.',
+        'LINSSIVIKA: KOHDEMAAN KOROSTUS JA MAAPANEELI VUOTAVAT LINSSIIN, '
+          + 'KARTAN REUNA VAREILEE (omistaja 14.9.2026 klo 21.15 UTC, '
+          + 'iPad-kuva Ihmisen matka -linssista, sanatarkasti: "Linssissa '
+          + 'nakyy kartan korostus seka infolaatikko seka valilla kartan '
+          + 'pienta vareilee meinaten pudottaa topografian"): 1) linssin '
+          + 'ollessa auki pelin karttakerrokset (kohdemaan aariviiva, '
+          + 'maapaneeli, nostot, tasoituskerma) EIVAT saa nakya - linssi '
+          + 'on oma nakyma; 2) kartan reunan vareily / topografian '
+          + 'putoaminen linssissa on kerrosvahdin tai laattajonon vika, '
+          + 'juurisyy mitataan iPad-koossa (1180x820 tai 1024x1366, dpr 2) '
+          + 'ja korjataan. Tila: tyo Opus-agentilla.',
         'Saapumiskortti: luettu matkakirjamerkintä + esittely '
           + 'kuvineen.',
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
