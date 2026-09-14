@@ -4,59 +4,30 @@ import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 
 import { FOKUSVIRRAT } from '../js/packs/fokusvirrat.js';
-import { TAGIT, puhemuoto } from '../tools/generoi-pulu.mjs';
+import { AANI as HORATIO_AANI, MALLI as HORATIO_MALLI, STABILITY as HORATIO_VAKAUS } from '../tools/generoi-luennat.mjs';
+import {
+  PULU_AANI_OLETUS, PULU_MALLI_OLETUS, TAGIT, puhemuoto, tulkitseArgumentit,
+} from '../tools/generoi-pulu.mjs';
 
-const batches = ['e1', 'e2', 'e3', 'e4b', 'e5', 'e6'];
-const correctionBatches = new Set(['e2', 'e3', 'e4b', 'e5']);
+const APPROVED_SOURCE_SHA = '44b3192a64ee18efa1fce43c1729ba4b410440328dcc5b6ce694f6885bf85fbc';
+const approvedUrl = new URL('../docs/raportit/horatio-livia-hyvaksytyt-20260914-r2.json', import.meta.url);
+const approved = JSON.parse(readFileSync(approvedUrl, 'utf8'));
+const combined = JSON.parse(readFileSync(new URL(
+  '../docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260914-r2.json', import.meta.url,
+), 'utf8'));
 const sha = (text) => createHash('sha256').update(text).digest('hex');
 const stripTags = (text) => text.replace(/\[[^\]]+\]\s*/g, '').trim();
 
-for (const batch of batches) {
-  const manifest = JSON.parse(readFileSync(new URL(
-    `../docs/raportit/horatio-livia-${batch}-luentamanifesti-20260913.json`,
-    import.meta.url,
-  ), 'utf8'));
-
-  test(`${batch}: manifesti ja runtime-packit ovat sisältöjäädytetyt`, () => {
-    const revision = correctionBatches.has(batch) ? 'r2' : 'r1';
-    assert.equal(manifest.contentRevision, `eu-hl-${batch}-20260913-${revision}-approved1`);
-    assert.equal(manifest.state, 'content-frozen-audio-authorized-rc-only');
-    for (const city of manifest.cities) {
-      const pack = FOKUSVIRRAT[city.city];
-      assert.ok(pack, `${city.city}: pack puuttuu`);
-      assert.equal(pack.matkakirja.teksti, city.horatio.visibleText, `${city.city}: H näkyvä`);
-      assert.equal(pack.matkakirja.luenta, city.horatio.ttsText, `${city.city}: H TTS`);
-      assert.equal(pack.pollo.kommentti[0], city.livia.visibleText, `${city.city}: L näkyvä`);
-      for (const speaker of ['horatio', 'livia']) {
-        const item = city[speaker];
-        assert.equal(stripTags(item.ttsText), item.visibleText, `${city.city}: ${speaker} TTS-sanat`);
-        assert.equal(item.visibleTextSha256, sha(item.visibleText), `${city.city}: ${speaker} näkyvä SHA`);
-        assert.equal(item.ttsTextSha256, sha(item.ttsText), `${city.city}: ${speaker} TTS SHA`);
-        for (const cue of item.cues) {
-          assert.equal(item.visibleText.split(cue.anchor).length - 1, 1,
-            `${cue.cueId}: ankkuri ei ole yksikäsitteinen`);
-        }
-      }
-      assert.deepEqual(
-        pack.matkakirja.reaktiot.map(({ id, ankkuri, tarkoitus, voimakkuus }) => ({
-          cueId: id, anchor: ankkuri, intent: tarkoitus, strength: voimakkuus,
-        })),
-        city.horatio.cues.map(({ cueId, anchor, intent, strength }) => ({
-          cueId, anchor, intent, strength,
-        })),
-        `${city.city}: runtime-cuet`,
-      );
-    }
-  });
-}
+test('R2-hyväksyntälähde on tarkalleen käyttäjän hyväksymä 45 kaupungin versio', () => {
+  assert.equal(approved.sourceSha256, APPROVED_SOURCE_SHA);
+  assert.equal(approved.cities.length, 45);
+  assert.equal(new Set(approved.cities.map(({ id }) => id)).size, 45);
+});
 
 test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia', () => {
-  const combined = JSON.parse(readFileSync(new URL(
-    '../docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260913.json',
-    import.meta.url,
-  ), 'utf8'));
   assert.equal(combined.cityCount, 45);
-  assert.equal(combined.contentRevision, 'eu-hl-europe-20260913-r2-approved1');
+  assert.equal(combined.contentRevision, 'eu-hl-europe-20260914-r2-approved');
+  assert.equal(combined.requestedAudioCount, 90);
   assert.equal(combined.cities.length, 45);
   assert.equal(new Set(combined.cities.map((city) => city.city)).size, 45);
   assert.equal(combined.liviaCityUtteranceCount, 55);
@@ -67,8 +38,11 @@ test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia'
   );
   assert.equal(combined.cities.find((city) => city.city === 'sofia').livia.audioId, 'sofia-3');
   for (const city of combined.cities) {
+    const source = approved.cities.find(({ id }) => id === city.city);
+    assert.ok(source, `${city.city}: hyväksyntälähde puuttuu`);
     assert.equal(city.livia.audioId, `${city.city}-3`, `${city.city}: audio-ID`);
-    assert.match(city.sourcePackBlobSha, /^[0-9a-f]{40}$/, `${city.city}: baseline-blob-SHA`);
+    assert.equal(city.horatio.visibleText, source.text.horatio, `${city.city}: hyväksytty H`);
+    assert.equal(city.livia.visibleText, source.text.livia, `${city.city}: hyväksytty L`);
     assert.equal(city.horatio.visibleText, FOKUSVIRRAT[city.city].matkakirja.teksti,
       `${city.city}: koonti-H`);
     assert.equal(city.livia.visibleText, FOKUSVIRRAT[city.city].pollo.kommentti[0],
@@ -80,8 +54,14 @@ test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia'
       assert.equal(stripTags(item.ttsText), item.visibleText, `${city.city}: koonti-${speaker}-TTS`);
       assert.equal(item.visibleTextSha256, sha(item.visibleText), `${city.city}: koonti-${speaker}-SHA`);
       assert.equal(item.ttsTextSha256, sha(item.ttsText), `${city.city}: koonti-${speaker}-TTS-SHA`);
-      for (const cue of item.cues) assert.equal(item.visibleText.split(cue.anchor).length - 1, 1,
-        `${cue.cueId}: koontiankkuri`);
+      const cueIds = new Set();
+      for (const cue of item.cues) {
+        assert.ok(!cueIds.has(cue.cueId), `${cue.cueId}: cue-ID toistuu`);
+        cueIds.add(cue.cueId);
+        assert.ok(cue.intent, `${cue.cueId}: intent puuttuu`);
+        assert.equal(item.visibleText.split(cue.anchor).length - 1, cue.occurrence ?? 1,
+          `${cue.cueId}: koontiankkuri`);
+      }
     }
   }
   for (const item of combined.sofiaSupplementalLiviaUtterances) {
@@ -99,13 +79,20 @@ test('Eurooppa-koonti kattaa 45 kaupunkia ja Sofian kanssa 55 Livia-utteranssia'
   }
 });
 
-test('rajattu r2-korjaus sisältää täsmälleen sovitut merkityskorjaukset', () => {
-  assert.match(FOKUSVIRRAT.budapest.matkakirja.teksti, /Lämmössä kaupungit saivat odottaa järjestystä\.$/);
-  assert.match(FOKUSVIRRAT.lissabon.pollo.kommentti[0], /päätepysäkille asti\.$/);
-  assert.match(FOKUSVIRRAT.sisilia.pollo.kommentti[0], /sillä sisälle en lentänyt\.$/);
-  for (const city of ['sofia', 'istanbul', 'bukarest', 'budapest', 'dubrovnik', 'kreeta', 'kobenhavn', 'bergen', 'oslo', 'islanti']) {
-    assert.ok(FOKUSVIRRAT[city].pollo.kommentti[0].length >= 130, `${city}: Livia jäi liian ohueksi`);
-  }
+test('tuotantomanifesti lukitsee hyväksytyt äänet ja luonnollisen tempon', () => {
+  assert.deepEqual(combined.voices.horatio, {
+    name: 'Viisas Kertoja', id: 'Sz0tRTEpybtDJ9ru2kgD', model: 'eleven_v3', stability: 0.5,
+  });
+  assert.deepEqual(combined.voices.livia, {
+    name: 'Flicker — cheerful fairy & sparkly sweetness',
+    id: 'piI8Kku0DcvcL6TTSeQt', model: 'eleven_v3', stability: 0.5, tempo: 1,
+  });
+  assert.equal(HORATIO_AANI, combined.voices.horatio.id);
+  assert.equal(HORATIO_MALLI, combined.voices.horatio.model);
+  assert.equal(HORATIO_VAKAUS, combined.voices.horatio.stability);
+  assert.equal(PULU_AANI_OLETUS, combined.voices.livia.id);
+  assert.equal(PULU_MALLI_OLETUS, combined.voices.livia.model);
+  assert.equal(tulkitseArgumentit([]).tempo, combined.voices.livia.tempo);
 });
 
 test('jäljellä olleiden 33 kaupungin 106 nykykuvaa saivat kahden lauseen readbackit', () => {
@@ -140,10 +127,6 @@ test('jäljellä olleiden 33 kaupungin 106 nykykuvaa saivat kahden lauseen readb
 });
 
 test('kaikkien 45 Euroopan kaupungin 149 nykykuvaa täyttävät kuvatekstirajauksen', () => {
-  const combined = JSON.parse(readFileSync(new URL(
-    '../docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260913.json',
-    import.meta.url,
-  ), 'utf8'));
   const images = combined.cities.flatMap(({ city }) => {
     const pack = FOKUSVIRRAT[city];
     return [pack.matkakirja.luentakuva, pack.matkakirja.luentakuva2, ...(pack.pollo.kuvat ?? [])];

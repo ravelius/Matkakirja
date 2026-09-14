@@ -196,7 +196,7 @@ export const FOKUSVIRTA_BUKAREST = {
     paikkarivi: 'Bukarest, lokakuussa 1873. Ensimmäinen halla; savu nousee '
       + 'suoraan; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 350 merkkiä (yläraja 400). */
-    teksti: 'Manucin majatalossa huoneet kiersivät pihaa puuparvien takana. Alhaalla mies nukkui säkkinsä päällä kuin pankki omaisuutensa vartijana. Keittiön tuoksulle ei tarvittu tulkkia. Huoneeni löysin illalla naapurini kuorsauksesta.',
+    teksti: "Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.",
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -211,15 +211,41 @@ export const FOKUSVIRTA_BUKAREST = {
      * kuin ehdin laskea parven pylväät" (havainnot).
      */
     reaktiot: [
-      { id: 'bukarest.r2', ankkuri: 'kuin pankki omaisuutensa vartijana', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'bukarest.r3', ankkuri: 'ei tarvittu tulkkia', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'bukarest.r4', ankkuri: 'naapurini kuorsauksesta', tarkoitus: 'huvittuu', voimakkuus: 0.55, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "bukarest.r1",
+    "ankkuri": "uutta raitiovaunua vetivät hevoset",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "bukarest.r2",
+    "ankkuri": "kehumaan hevosia: ne vetivät meidät",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "bukarest.r3",
+    "ankkuri": "Pysähdyimme juottamaan niitä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "bukarest.r4",
+    "ankkuri": "koko uudistus hengitti ja tarvitsi vettä",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Manucin majatalossa huoneet kiersivät pihaa puuparvien takana. [mischievously] Alhaalla mies nukkui säkkinsä päällä kuin pankki omaisuutensa vartijana. Keittiön tuoksulle ei tarvittu tulkkia. [softly] Huoneeni löysin illalla naapurini kuorsauksesta.',
+    luenta: "[curious] Bukarestin uutta raitiovaunua vetivät hevoset. Nousin kyytiin ja kehuin ajurille kaupungin edistystä. Hän pyysi kehumaan hevosia: ne vetivät meidät. Pysähdyimme juottamaan niitä. [thoughtfully] Kiskot olivat suorat, vaunu komea, mutta koko uudistus hengitti ja tarvitsi vettä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-bukarest.mp3',
     /*
      * KUVA: Carol Szathmarin valokuva Colțean tornista (kaanon, kohta 1).
@@ -331,9 +357,7 @@ export const FOKUSVIRTA_BUKAREST = {
      */
     // Huudahdus poistettu 9.9.2026 (omistajan tekstipaketti, yksi kupla per kaupunki).
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Manucin majatalon sisäpihalla syödään yhä. Etsin pöytien alta murusia, kun viereisestä pöydästä kuului sana ”salaisuus”. Muruset unohtuivat siihen.',
-    ],
+    kommentti: ["Bukarestin kerrostalojen välissä on Văcăreștin luonnonpuisto, hylätyn tekojärvihankkeen paikalla. Lensin betonivallin yli ruovikon ylle. Täällä ihmiset kantavat kiikareita nähdäkseen meidät paremmin! Valitsin näkyvän oksan ja käänsin paremman kylkeni. Kiikaroikaa rauhassa."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.55 },
     /*

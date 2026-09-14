@@ -166,11 +166,7 @@ export const FOKUSVIRTA_VILNA = {
     paikkarivi: 'Vilna, kesäkuussa 1873. Poutaa; kirkonkellot kuuluvat '
       + 'kukkulalle; puntari korkealla.',
     /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
-    teksti: 'Vilnan observatoriossa näin valokuvan auringonpilkuista. Olin '
-      + 'pitänyt aurinkoa virheettömänä valaisimena; silläkin oli tahroja. '
-      + 'Pilviä odotellessa joimme teetä. On '
-      + 'lohdullista, että taivaan tutkiminenkin vaatii toisinaan vain hyvän '
-      + 'tuolin.',
+    teksti: "Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.",
     /*
      * LUENTA = RUUTUTEKSTI SANASTA SANAAN (docs/moduulit/tarinakaari.md,
      * luku 7). Vain tunnetagit on lisätty: kolme tagia, alku ja loppu eri
@@ -190,19 +186,49 @@ export const FOKUSVIRTA_VILNA = {
      * väistymistä" (taustaa).
      */
     reaktiot: [
-      { id: 'vilna.r1', ankkuri: 'silläkin oli tahroja', tarkoitus: 'hammastyy', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Aurinko ei olekaan virheetön.' },
-      { id: 'vilna.r3', ankkuri: 'joimme teetä', tarkoitus: 'myotailee', voimakkuus: 0.3, siirtyma: 0,
-        perustelu: 'Odotus kuluu rauhassa.' },
-      { id: 'vilna.r4', ankkuri: 'vain hyvän tuolin', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Loppuvitsi tieteen vaatimuksista.' },
-    ],
+  {
+    "id": "vilna.r1",
+    "ankkuri": "tarjosi salakuljetettua tavaraa",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "vilna.r2",
+    "ankkuri": "Aapisen",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "vilna.r3",
+    "ankkuri": "kieltäneet liettuan painamisen latinalaisin kirjaimin",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.55,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "vilna.r4",
+    "ankkuri": "Ostin kirjan ja piilotin sen",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "vilna.r5",
+    "ankkuri": "pelkäämään vain opettajaa",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.25,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Vilnan observatoriossa näin valokuvan '
-      + 'auringonpilkuista. Olin pitänyt aurinkoa virheettömänä valaisimena; '
-      + 'silläkin oli tahroja. Pilviä odotellessa joimme teetä. [softly] On '
-      + 'lohdullista, että taivaan '
-      + 'tutkiminenkin vaatii toisinaan vain hyvän tuolin.',
+    luenta: "[softly] Vilnassa mies avasi takkinsa ja tarjosi salakuljetettua tavaraa. Aapisen. Venäjän viranomaiset olivat kieltäneet liettuan painamisen latinalaisin kirjaimin. [thoughtfully] Ostin kirjan ja piilotin sen. Omassa aapisessani samat kirjaimet olivat saaneet minut pelkäämään vain opettajaa.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-vilna.mp3',
   },
 
@@ -273,9 +299,7 @@ export const FOKUSVIRTA_VILNA = {
      */
     // Huudahdus poistettu 8.9.2026 (omistaja: puolet välihuomautuksista pois).
     /* HYVÄKSYTTY: eu-hl-e4-20260913-r1-approved1. Uusi audio ja alignment tarvitaan. */
-    kommentti: [
-      'Vanha observatorio kuuluu yhä yliopistolle, mutta taivasta ei tutkita siellä enää. Nousin ikkunan korkeudelle; kaupungin valot voittivat tähdet. Tähtitieteilijät lähtivät kauemmas, minä jäin kierrokselle.',
-    ],
+    kommentti: ["Vilnan Užupisin taiteilijat julistivat kaupunginosansa leikillään tasavallaksi. Sen perustuslaki vapauttaa kissan rakastamasta omistajaansa. Minä etsin lintujen pykälää. Se puuttuu. Minulla olisi lisättävää."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'miettiva', voimakkuus: 0.45 },
     /*

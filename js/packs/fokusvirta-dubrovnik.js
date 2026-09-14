@@ -122,7 +122,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
     paikkarivi: 'Dubrovnik, syyskuussa 1873. Poutaa; muurilla käy tuuli '
       + 'mereltä; puntari korkealla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 341 merkkiä (yläraja 400). */
-    teksti: 'Ragusan muureilta katsottuna meri pysyi ulkopuolella. Portin sisällä vesi tuli vastaan Onofrion kaivon kivikasvoista. Join kahdesta suusta; ne näyttivät olevan eri mieltä mausta. Sama vesi. Kuusitoista päätä neuvoi ottamaan vielä kulauksen.',
+    teksti: "Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.",
     /*
      * TEKSTIN SISÄISET REAKTIOT (omistaja 11.9.2026, Raamattu PULU REAGOI
      * TEKSTIN SISALLA; docs/pulu-reaktiot.md "Luentareaktiot"; Marseillen
@@ -137,17 +137,41 @@ export const FOKUSVIRTA_DUBROVNIK = {
      * vastaan..." (selittävä käänne).
      */
     reaktiot: [
-      { id: 'dubrovnik.r1', ankkuri: 'meri pysyi ulkopuolella', tarkoitus: 'hammastyy', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'dubrovnik.r2', ankkuri: 'eri mieltä mausta', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'dubrovnik.r3', ankkuri: 'Sama vesi', tarkoitus: 'myotailee', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'dubrovnik.r4', ankkuri: 'ottamaan vielä kulauksen', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "dubrovnik.r1",
+    "ankkuri": "vanhoja karanteenirakennuksia",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "dubrovnik.r2",
+    "ankkuri": "etteivät toisi tautia kaupunkiin",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.45,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "dubrovnik.r3",
+    "ankkuri": "pitänyt satamaan saapumista matkan loppuna",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.3,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "dubrovnik.r4",
+    "ankkuri": "nähdä kaupungin katot joka aamu pääsemättä niiden alle",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.5,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Ragusan muureilta katsottuna meri pysyi ulkopuolella. Portin sisällä vesi tuli vastaan Onofrion kaivon kivikasvoista. [mischievously] Join kahdesta suusta; ne näyttivät olevan eri mieltä mausta. Sama vesi. [softly] Kuusitoista päätä neuvoi ottamaan vielä kulauksen.',
+    luenta: "[curious] Ragusan itäportin vieressä katselin vanhoja karanteenirakennuksia. Niissä merimiehet olivat joutuneet odottamaan, etteivät toisi tautia kaupunkiin. Olin aina pitänyt satamaan saapumista matkan loppuna. [softly] Täällä sen jälkeen oli voinut alkaa vaikein osuus: nähdä kaupungin katot joka aamu pääsemättä niiden alle.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-dubrovnik.mp3',
   },
 
@@ -191,9 +215,7 @@ export const FOKUSVIRTA_DUBROVNIK = {
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Onofrion kaivon kuusitoista kivikasvoa antavat yhä vettä. Kun kuvittelin niiden puhuvan yhtä aikaa, minäkin hiljenin hetkeksi. Sitten laskin ne uudelleen.',
-    ],
+    kommentti: ["Lazaretin pihalla katselin linđo-tanssia. Johtaja huusi, ja parit vaihtoivat suuntaa kuin yhteisestä ajatuksesta. Kokeilin samaa kaiteella: askel, käännös, toinen askel. Siivet piti avata heti. Ihmiset tekivät kaiken ilman niitä! Jäin vielä yhden tanssin ajaksi tutkimaan jalkoja."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'utelias', voimakkuus: 0.45 },
     /*

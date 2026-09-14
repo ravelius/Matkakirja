@@ -191,7 +191,7 @@ export const FOKUSVIRTA_ROOMA = {
     paikkarivi: 'Rooma, lokakuussa 1873. Sadetta; katukivet kiiltävät; '
       + 'puntari matalalla.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 344 merkkiä (yläraja 400). */
-    teksti: 'Rooman Pantheonin kattoaukosta satoi sisään. Sade löysi lattialta paikkansa, joten näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Uusia virkamiehiä kulki vanhojen keisarien ohi. Pantheon päästi yhä taivaan sisään kysymättä nimeä.',
+    teksti: "Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
     /*
      * Luenta ja äänite: kaanon, kohta 1. Teksti on sama kuin yllä —
      * vain tunnetagit on lisätty, samoin kuin Ateenassa ja Sofiassa.
@@ -218,17 +218,49 @@ export const FOKUSVIRTA_ROOMA = {
      * (selittävä sivulause, pulu kuuntelee).
      */
     reaktiot: [
-      { id: 'rooma.r1', ankkuri: 'kattoaukosta satoi sisään', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'rooma.r2', ankkuri: 'Sade löysi lattialta paikkansa', tarkoitus: 'vakavoituu', voimakkuus: 0.35, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'rooma.r3', ankkuri: 'tohtinut huomauttaa katosta', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'rooma.r4', ankkuri: 'kysymättä nimeä', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "rooma.r1",
+    "ankkuri": "kattoaukosta satoi sisään",
+    "tarkoitus": "hammastyy",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "rooma.r2",
+    "ankkuri": "Vesi katosi lattian pieniin reikiin",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "rooma.r3",
+    "ankkuri": "ei kai tohtinut huomauttaa katosta",
+    "tarkoitus": "huvittuu",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "rooma.r4",
+    "ankkuri": "Kaupungin hallitsijat olivat vaihtuneet monta kertaa",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "rooma.r5",
+    "ankkuri": "taivaan sisään kysymättä nimeä",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Rooman Pantheonin kattoaukosta satoi sisään. Sade löysi lattialta paikkansa, joten näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Uusia virkamiehiä kulki vanhojen keisarien ohi. [softly] Pantheon päästi yhä taivaan sisään kysymättä nimeä.',
+    luenta: "[curious] Rooman Pantheonin kattoaukosta satoi sisään. Vesi katosi lattian pieniin reikiin. Näin vanhalle talolle ei kai tohtinut huomauttaa katosta. Kaupungin hallitsijat olivat vaihtuneet monta kertaa. [thoughtfully] Pantheon päästi yhä taivaan sisään kysymättä nimeä.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-rooma.mp3',
     /*
      * KUVA: kaanonin ensisijainen valinta — Ludovico Tuminellon
@@ -279,9 +311,7 @@ export const FOKUSVIRTA_ROOMA = {
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Pantheoniin ostetaan nyt pääsylippu. Minä kiersin aukon yläpuolella ja vilkaisin alas. Ihmiset väistivät sadetta; minä väistin vain väärään suuntaan nousevaa ilmavirtaa.',
-    ],
+    kommentti: ["Pantheoniin ostetaan nyt pääsylippu. Minä kiersin kattoaukkoa juuri, kun sade alkoi. Alhaalla ihmiset siirtyivät kuivaan. Löysin itsekin suojan räystäältä — mutta ensin oli pakko katsoa, mihin sade sisällä menee."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'miettiva', voimakkuus: 0.45 },
     teksti: 'Muurin sisällä pysyttiin viisikymmentäyhdeksän vuotta — vasta '

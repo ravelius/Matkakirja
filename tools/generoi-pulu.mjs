@@ -320,8 +320,12 @@ const HAIVYTYS_S = 0.03;
 const HANNAN_PADDING_S = 0.15;
 // Huudahdukset ("Kääk.", "Vesi ei.") ovat alle sekunnin (7.9.2026).
 const KESTO_MIN_S = 0.3;
-/** Pisin repliikki on kuplan lukuajan mittainen; yli menee jauhamiseksi. */
-const KESTO_MAX_S = 20.0;
+/**
+ * Pisin repliikki on kuplan lukuajan mittainen; yli menee jauhamiseksi.
+ * Omistaja 14.9.2026: katto 30 s, koska eleven_v3:n todelliset kestot ovat
+ * 10–25 % arviota pidempiä; teksti ennallaan.
+ */
+const KESTO_MAX_S = 30.0;
 
 /** Kaiun häipymä sekunteina (omistaja: "kaiku feidataan pois perillä"). */
 const KAIUN_KESTO = 1.5;
@@ -737,7 +741,7 @@ export function tagiresepti(nakyva, tts) {
 }
 
 const EUROOPPA_TTS_MANIFESTI = JSON.parse(readFileSync(resolve(
-  JUURI, 'docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260913.json',
+  JUURI, 'docs/raportit/horatio-livia-eurooppa-luentamanifesti-20260914-r2.json',
 ), 'utf8'));
 for (const city of EUROOPPA_TTS_MANIFESTI.cities) {
   TAGIT[`${city.city}-3`] = tagiresepti(city.livia.visibleText, city.livia.ttsText);

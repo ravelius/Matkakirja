@@ -94,7 +94,7 @@ export const FOKUSVIRTA_PARIISI = {
     paikkarivi: 'Pariisi, lokakuussa 1873. Sateen jälkeen kirkasta; puntari '
       + 'nousee.',
     /* KAANON: OMISTAJAN TEKSTI (postilaatikko 9.9.2026, EUROOPPA-MATKAKIRJA-1873-20260909). Sanasta sanaan. 352 merkkiä (yläraja 400). */
-    teksti: 'Pariisin uusi oopperatalo oli yhä kesken. Kultaa, pylväitä, marmoria: kokonainen rakennus juhlatamineissaan. Paluumatkalla seurasin miestä, joka vihelsi leipä kainalossa. Jos hänelle annettaisiin tuo talo, menisin kuuntelemaan. Toistaiseksi hän esiintyi ilmaiseksi.',
+    teksti: "Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.",
     /*
      * Luenta on sama teksti tunnetagein. Äänite generoidaan tästä
      * kentästä työnkulussa .github/workflows/generoi-luennat.yml
@@ -117,19 +117,49 @@ export const FOKUSVIRTA_PARIISI = {
      * (kuljetus kohtaukseen).
      */
     reaktiot: [
-      { id: 'pariisi.r1', ankkuri: 'yhä kesken', tarkoitus: 'epailee', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'pariisi.r2', ankkuri: 'Kultaa, pylväitä, marmoria', tarkoitus: 'hammastyy', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'pariisi.r3', ankkuri: 'rakennus juhlatamineissaan', tarkoitus: 'huvittuu', voimakkuus: 0.45, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'pariisi.r4', ankkuri: 'menisin kuuntelemaan', tarkoitus: 'myotailee', voimakkuus: 0.4, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-      { id: 'pariisi.r5', ankkuri: 'esiintyi ilmaiseksi', tarkoitus: 'huvittuu', voimakkuus: 0.5, siirtyma: 0,
-        perustelu: 'Toimituksellisen Eurooppa-revision hyväksytty reaktio.' },
-    ],
+  {
+    "id": "pariisi.r1",
+    "ankkuri": "palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.5,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "pariisi.r2",
+    "ankkuri": "Tyhjät ikkunat seisoivat yhä puutarhan laidalla",
+    "tarkoitus": "vakavoituu",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "pariisi.r3",
+    "ankkuri": "etsin kulmaa, josta rauniot eivät näkyisi",
+    "tarkoitus": "epailee",
+    "voimakkuus": 0.4,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "pariisi.r4",
+    "ankkuri": "Halusin viedä kotiin kauniin Pariisin",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.35,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  },
+  {
+    "id": "pariisi.r5",
+    "ankkuri": "käänsin kameran suoraan palatsiin",
+    "tarkoitus": "myotailee",
+    "voimakkuus": 0.5,
+    "siirtyma": 0,
+    "perustelu": "Hyväksytyn 14.9.2026 tekstin sisältöön sidottu kuuntelureaktio."
+  }
+],
     /* ÄÄNITE: luenta generoitu 9.9.2026 tästä tekstistä (generoi-luennat.yml ajo 17). */
-    luenta: '[curious] Pariisin uusi oopperatalo oli yhä kesken. Kultaa, pylväitä, marmoria: kokonainen rakennus juhlatamineissaan. Paluumatkalla seurasin miestä, joka vihelsi leipä kainalossa. [warmly] Jos hänelle annettaisiin tuo talo, menisin kuuntelemaan. [softly] Toistaiseksi hän esiintyi ilmaiseksi.',
+    luenta: "[softly] Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. [warmly] Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-pariisi.mp3',
     /*
      * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-pariisi-r20260909-paper-v4;
@@ -184,9 +214,7 @@ export const FOKUSVIRTA_PARIISI = {
     ],
     /* Maadoitus poistettu 8.9.2026 (omistaja: yksi kupla per kaupunki); kupla alla. */
     /* KUPLA: OMISTAJAN TEKSTI (postilaatikko 9.9.2026). Sanasta sanaan. */
-    kommentti: [
-      'Palais Garnier avattiin kaksi vuotta isoisän käynnin jälkeen. Minä tarkistin katon kultaukset ennen lippujonoa. Sisälläkin esiinnytään yhä, mutta räystäällä ei pyydetty pääsymaksua.',
-    ],
+    kommentti: ["Palatsia ei enää ole, mutta Tuileries’n puutarhassa voi siirtää vihreän tuolin juuri siihen, missä haluaa istua. Valitsin selkänojan auringosta. Tuolilla istuva nainen käänsi sen ystäväänsä kohti, ja minä sain uuden näkymän liikahtamatta. Jäin kuuntelemaan. He olivat tavanneet täällä jo koululaisina."],
     /* Pulun reaktiotagi (docs/pulu-reaktiot.md), ei näy tekstissä. */
     tunne: { tunne: 'ilo', voimakkuus: 0.55 },
     /*
