@@ -7369,6 +7369,15 @@ export const RAAMATTU = {
           + 'eivat ole matkakohteita (PAATOKSET 13 kohta 4 pysyy). Tila: '
           + 'kuvapyynto kuvaputkelle postilaatikkoon; kortit ja esittelyt '
           + 'tyossa.',
+        'HAMPURILAISEN IKONI: ALKUPERAINEN TAKAISIN, NYKYINEN VAIN '
+          + 'IPHONEN VAAKATILASSA KUN YLAPALKKI ON PIILOSSA (omistaja '
+          + '14.9.2026 klo 19.55 UTC, sanatarkasti: "Hampurilaisen ikonin '
+          + 'voi vaihtaa alkuperaiseen mutta jata nykyinen iPhonen vaaka '
+          + 'tilaa varten kayttoon silloin kun Ylapalkki on piilossa"): '
+          + 'paavalikon (hampurilaisen) nappi kayttaa alkuperaista '
+          + 'kolmen viivan ikonia; v1835:n vakasikoni (karttaruudun '
+          + 'oikea ylanurkka) jaa kayttoon VAIN silloin, kun ylapalkki on '
+          + 'piilossa (iPhonen vaakatila). Tila: tyo Opus-agentilla.',
         'Saapumiskortti: luettu matkakirjamerkintä + esittely '
           + 'kuvineen.',
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
