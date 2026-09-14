@@ -725,3 +725,40 @@ test('kun ämpäri vastaa, koko ydinsetti päätyy äänikoriin kuten ennenkin',
   // Ja osoitteet ovat ämpärin audio/-polusta, eivät repon poluista.
   assert.ok([...kori.keys()].every((o) => o.startsWith('https://media.matkakirja.app/audio/')));
 });
+
+/*
+ * REKISTERÖINTI EI SAA JÄÄDÄ SIVUN `load`IN VARAAN (mitattu 14.9.2026).
+ *
+ * `load` odottaa jokaista alipyyntöä, myös kuvia. Kun ämpäri
+ * (media.matkakirja.app) ottaa yhteyden vastaan muttei vastaa, pelin
+ * omat kuvapyynnöt jäävät roikkumaan, ja mitattuna (Chromium, 4 ajoa,
+ * jumittuva ämpäri) `load` laukesi vasta 45,98–46,59 s kohdalla —
+ * täsmälleen silloin myös palvelutyöntekijä rekisteröitiin, eli koko
+ * offline-tuki odotti estynyttä mediaa. Terveellä ämpärillä sama
+ * lukema on 1,31–1,51 s.
+ *
+ * Korjaus on yksi katto: `load` jää ensisijaiseksi (normaalitilanne ei
+ * muutu, mitattu 1,28–1,47 s myös korjauksen jälkeen), mutta ajastin
+ * rekisteröi viimeistään katon kuluttua. Mitattu jumittuvalla
+ * ämpärillä korjauksen jälkeen: 4,89–5,04 s.
+ *
+ * Testi lukee js/main.js:n tekstinä, koska moduulia ei voi ajaa ilman
+ * DOMia. Se vahtii kolmea asiaa, joista mikä tahansa yksin katoaisi
+ * hiljaa: että katto on olemassa, että se on järkevän kokoinen, ja
+ * että rekisteröinti tapahtuu vain kerran.
+ */
+test('palvelutyöntekijä rekisteröidään myös ilman `load`-tapahtumaa', () => {
+  const main = readFileSync(join(JUURI, 'js/main.js'), 'utf8');
+  const katto = /const REKISTEROINNIN_KATTO_MS = (\d+);/.exec(main);
+  assert.ok(katto, 'REKISTEROINNIN_KATTO_MS puuttuu — rekisteröinti jäisi `load`in varaan');
+  const ms = Number(katto[1]);
+  assert.ok(ms >= 2000 && ms <= 10000,
+    `katto ${ms} ms: alle 2 s kilpailisi käynnistyksen kaistasta, yli 10 s ylittäisi `
+    + 'index.html:n varaventtiilin');
+  assert.match(main, /setTimeout\(rekisteroiTyontekija, REKISTEROINNIN_KATTO_MS\)/,
+    'kattoa ei ajasteta — vakio olisi pelkkä luku');
+  assert.match(main, /window\.addEventListener\('load', rekisteroiTyontekija, \{ once: true \}\)/,
+    '`load` ei enää rekisteröi — normaalitilanteessa rekisteröinnin pitää tapahtua siellä');
+  assert.match(main, /if \(rekisteroity\) return;\s*\n\s*rekisteroity = true;/,
+    'kaksoisvahti puuttuu — sama sw.js rekisteröitäisiin kahdesti');
+});
