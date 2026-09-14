@@ -120,7 +120,27 @@ export const PALLOLAUDAN_SAAPUMISLEVEYS = 240;
  * estää maan rajaa osumasta kiinni ruudun laitaan ja kartuutsiin.
  * Osuus laatikon sivusta joka reunalla.
  */
-export const SAAPUMISRAJAUKSEN_MARGINAALI = 0.05;
+/*
+ * TIUKENNETTU (erä 13, omistaja 14.9.2026 sanatarkasti: *"kartta
+ * zoomautuu liian kauas. pitaa rajautua aivan rajojen ulkopuolelle."*,
+ * Raamattu KARTTAUUDISTUKSEN PÄÄTÖKSET 12 kohta 5).
+ *
+ * 0,05 tarkoitti 10 % tyhjää (1 + 2 × 0,05), mutta MITATTU tyhjä tila
+ * oli Ranskassa 34,6 % (390 × 844) ja 27,5 % (1400 × 900) — marginaali
+ * ei ollut syy vaan rajauksen mitta: laatikkoa verrattiin laudan
+ * Mercator-yksiköihin eikä pallon perspektiiviin (ks. `pallonKorkeus`).
+ * Kun korkeus ratkaistaan perspektiivistä, marginaali tarkoittaa taas
+ * sitä mitä lupaa.
+ *
+ * LUKU ON 0,01 EIKÄ 0,015, KOSKA TYHJÄ EI JAKAUDU TASAN. Vara sitoo
+ * sen laatikon reunan, joka on ruudun keskipisteestä kauimpana, ja
+ * kamera osoittaa laatikon KESKIPISTEESEEN laudan yksiköissä — pallon
+ * projektiossa keskipiste ei ole reunojen puolivälissä, joten toiselle
+ * reunalle jää hitusen enemmän tilaa. MITATTU Ranskassa varalla 1,03:
+ * tyhjää 2,05 % (390 × 844) ja 3,94 % (1400 × 900). Varalla 1,02
+ * kumpikin mahtuu kolmeen prosenttiin.
+ */
+export const SAAPUMISRAJAUKSEN_MARGINAALI = 0.01;
 /*
  * SAAPUMISRAJAUKSEN KATTO lautayksikköinä (2000 = 60° pituuspiiriä).
  *
@@ -138,6 +158,17 @@ export const SAAPUMISRAJAUKSEN_MARGINAALI = 0.05;
  */
 export const SAAPUMISRAJAUKSEN_MAX = 2000;
 /*
+ * KATON VARA ON OMA VAKIONSA (erä 13). Katto vastaa kysymykseen
+ * *"näkyykö tämä maa pallolta ollenkaan"*, ja sen vastaus jakaa maat
+ * kahteen pysyvään joukkoon (RUS, USA, CAN, GRL, CHN saavat
+ * kaupunkinäkymän). Ennen erää 13 katto laskettiin
+ * SAAPUMISRAJAUKSEN_MARGINAALIsta, jolloin rajauksen tiukentaminen
+ * olisi liikuttanut myös tuota joukkoa — kaksi eri asiaa yhdessä
+ * luvussa. Arvo on erää 13 edeltänyt 1 + 2 × 0,05, jotta joukko pysyy
+ * täsmälleen ennallaan (tests/maakartuutsi.test.mjs vartioi sitä).
+ */
+export const SAAPUMISRAJAUKSEN_KATTOVARA = 1.10;
+/*
  * ======== ULOSZOOMAUKSEN ESTO (KARTTAUUDISTUS, ERÄ 2) ==============
  *
  * Omistaja 13.9.2026: *"kartta zoomaa automaattisesti maan niin
@@ -146,13 +177,24 @@ export const SAAPUMISRAJAUKSEN_MAX = 2000;
  * zoomaamaan oli muuten siita ideasta, etta kartta saisi nayttaa
  * staattiselta"*. PÄÄTÖKSET 1 laski kertoimen 3 → 1,15.
  *
- * KERROIN ON SAMA LUKU KUIN VÄRILAATASTON LAATIKOLLA
- * (tools/generoi-laattapyramidi.mjs `--laatikkokerroin`), ja se on
+ * KERROIN EI SAA YLITTÄÄ VÄRILAATASTON LAATIKKOA
+ * (tools/generoi-laattapyramidi.mjs `--laatikkokerroin` 1,15), ja se on
  * ehto eikä varmuusvara: värilaatasto kattaa maan laatikon × 1,15, ja
  * jos kamera pääsisi kauemmas, feidattu laatikko näkyisi
  * suorakaiteena keskellä seepiaa. Siksi erät 1b ja 2 ovat sama PR.
+ *
+ * ERÄSSÄ 13 KERROIN ON 1,02 EIKÄ 1,15 (omistaja 14.9.2026: *"kartta
+ * zoomautuu liian kauas"*). PIENEMPI KERROIN ON LAATTAKATTAVUUDEN
+ * SISÄLLÄ — värilaatasto kattaa yhä 1,15 — joten ehto pitää; vanha
+ * kommentti väitti lukujen olevan sama luku, mikä oli totta vain
+ * niin kauan kuin kumpaakaan ei tiukennettu. EHTO ON YLÄRAJA:
+ * kerroin ≤ 1,15.
+ *
+ * KERROIN ON SAMA KUIN SAAPUMISEN VARA (1 + 2 × 0,01 = 1,02), jotta
+ * uloszoomaus ei pääse saapumisnäkymää kauemmas yhdelläkään ruudulla
+ * (erässä 12 jäi työpöydälle 4,5 % varaa 1,15 vs. 1,10).
  */
-export const ULOSZOOMAUKSEN_KERROIN = 1.15;
+export const ULOSZOOMAUKSEN_KERROIN = 1 + 2 * SAAPUMISRAJAUKSEN_MARGINAALI;
 
 /*
  * ══════════════════════════════════════════════════════════════════
@@ -396,6 +438,96 @@ export function luoPallokamera({
     return { x: tila.x - w / 2, y: tila.y - h / 2, w, h, skaala: tila.skaala };
   };
 
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * LAATIKKO PALLON PINNALLA, EI MERCATORIN KARTALLA (erä 13)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * Omistaja 14.9.2026 (Raamattu KARTTAUUDISTUKSEN PÄÄTÖKSET 12 kohta
+   * 5, sanatarkasti): *"kartta zoomautuu liian kauas. pitaa rajautua
+   * aivan rajojen ulkopuolelle."*
+   *
+   * JUURISYY ON MITATTU EIKÄ ARVATTU. Maan laatikko on LAUDAN
+   * yksiköissä, ja lauta on Mercator-sukuinen: x on suoraan
+   * pituusastetta (12000 yks = 360°), mutta y venyy leveyspiiriä
+   * kohti. Kamera taas näyttää PALLOA, jolla
+   *
+   *   • pituusasteen 1° kattaa ruudulla vain cos(φ) verran siitä,
+   *     mitä sama 1° kattaa päiväntasaajalla, ja
+   *   • pystysuunta on todellinen leveysastekaari, ei Mercatorin
+   *     venyttämä y.
+   *
+   * Ranskassa (φ 41,4…51,1) tämä on kaksi kertaa iso virhe: leveys
+   * 489,8 yks vaatii pallolla vain 489,8 × cos 41,4° = 367 yks, ja
+   * korkeus 406,3 Mercator-yksikköä on todellisuudessa 9,72° = 324 yks.
+   * Kamera nousi siis noin 1,35× liian korkealle, ja MITATTU tyhjä
+   * tila oli 34,6 % (390 × 844) ja 27,5 % (1400 × 900) — juuri se, mitä
+   * omistaja näkee.
+   *
+   * RATKAISU ON SULJETTU KAAVA, EI KERROIN. Kolmiulotteinen
+   * perspektiivi (three.js PerspectiveCamera, fov pystykulma) antaa
+   * pisteelle (φ, λ) kameran ollessa (φ0, λ0) korkeudella h
+   * yksikköpallolla:
+   *
+   *   syvyys = (1 + h) − [sin φ sin φ0 + cos φ cos φ0 cos Δλ]
+   *   sivu   = cos φ sin Δλ
+   *   pysty  = sin φ cos φ0 − cos φ sin φ0 cos Δλ
+   *   ruutu  = (sivu / (tan(fov/2) · kuvasuhde), pysty / tan(fov/2)) / syvyys
+   *
+   * Piste on ruudulla, kun kumpikin ruutukoordinaatti on itseisarvoltaan
+   * enintään 1. Ehto on h:ssa LINEAARINEN, joten tarvittava korkeus
+   * ratkeaa suoraan:
+   *
+   *   1 + h ≥ cos(kaari) + vara · max(|sivu|/(tan·kuvasuhde), |pysty|/tan)
+   *
+   * ja koko laatikon korkeus on näistä suurin (laatikon kehältä
+   * näytteinä). Iterointia ei tarvita, ja `vara` tarkoittaa nyt tasan
+   * sitä mitä lupaa: varalla 1,02 kauimmainen laatikon reuna asettuu
+   * tasan 1/1,02 = 98,0 %:iin ruudun puolikkaasta.
+   *
+   * MITTAUS 14.9.2026 (Ranska, ennen → jälkeen): tyhjä tila sitovalla
+   * akselilla 390 × 844 ja 1400 × 900 — luvut raportissa
+   * docs/raportit/viesti-fable-zoomi2-20260914.md.
+   */
+  const PERIMETRIN_NAYTTEET = 12;
+  const pallonKorkeus = (bbox, vara = 1) => {
+    if (!(bbox?.w > 0) || !(bbox?.h > 0)) return null;
+    const keski = laudaltaAsteiksi(lauta, bbox.x + bbox.w / 2, bbox.y + bbox.h / 2);
+    if (!keski || !Number.isFinite(keski.lat)) return null;
+    const rad = Math.PI / 180;
+    const lat0 = keski.lat * rad;
+    const lng0 = (keski.lon ?? keski.lng) * rad;
+    const sin0 = Math.sin(lat0);
+    const cos0 = Math.cos(lat0);
+    const T = Math.tan((PALLO_FOV / 2) * rad);
+    const A = Math.max(0.01, kuvasuhde());
+    let etaisyys = 0; // vaadittu (1 + korkeus)
+    for (let i = 0; i <= PERIMETRIN_NAYTTEET; i += 1) {
+      const t = i / PERIMETRIN_NAYTTEET;
+      const pisteet = [
+        [bbox.x + bbox.w * t, bbox.y],
+        [bbox.x + bbox.w * t, bbox.y + bbox.h],
+        [bbox.x, bbox.y + bbox.h * t],
+        [bbox.x + bbox.w, bbox.y + bbox.h * t],
+      ];
+      for (const [bx, by] of pisteet) {
+        const a = laudaltaAsteiksi(lauta, bx, by);
+        if (!a || !Number.isFinite(a.lat)) continue;
+        const lat = a.lat * rad;
+        const dLng = ((a.lon ?? a.lng) - (keski.lon ?? keski.lng)) * rad;
+        const sinP = Math.sin(lat);
+        const cosP = Math.cos(lat);
+        const syvyysOsa = sinP * sin0 + cosP * cos0 * Math.cos(dLng); // cos(kaari)
+        const sivu = Math.abs(cosP * Math.sin(dLng));
+        const pysty = Math.abs(sinP * cos0 - cosP * sin0 * Math.cos(dLng));
+        const tarve = syvyysOsa + vara * Math.max(sivu / (T * A), pysty / T);
+        if (tarve > etaisyys) etaisyys = tarve;
+      }
+    }
+    if (!(etaisyys > 1)) return null;
+    return Math.min(PALLO_KORKEUS_MAX, etaisyys - 1);
+  };
+
   /** Kohteen asteet ja korkeus laudan yksiköistä (ks. Kartta.kameranKohde). */
   const kameranKohde = (kohde) => {
     if (!kohde) return null;
@@ -403,6 +535,7 @@ export function luoPallokamera({
     let x = kohde.x;
     let y = kohde.y;
     let leveys = kohde.leveys ?? null;
+    let bboxKorkeus = null;
     if (kohde.bbox) {
       /*
        * LAATIKKO MAHTUU MOLEMPIIN SUUNTIIN. Korkeusehto muutetaan
@@ -416,6 +549,9 @@ export function luoPallokamera({
       x = bbox.x + bbox.w / 2;
       y = bbox.y + bbox.h / 2;
       const vara = 1 + 2 * marginaali;
+      // Korkeus pallon perspektiivistä (erä 13, ks. pallonKorkeus):
+      // laudan Mercator-yksiköt nostivat kameran noin 1,35× liian kauas.
+      bboxKorkeus = pallonKorkeus(bbox, vara);
       leveys = Math.max(bbox.w * vara, (bbox.h * vara * ruudunLeveys()) / ruudunKorkeus());
     } else if (kohde.kerroin > 0) {
       leveys = laudanLeveys / kohde.kerroin;
@@ -428,7 +564,9 @@ export function luoPallokamera({
       lat = asteet.lat;
       lng = asteet.lon;
     }
-    const pyydetty = kohde.korkeus ?? (leveys > 0 ? korkeus(leveys) : nyt.altitude);
+    const pyydetty = kohde.korkeus
+      ?? bboxKorkeus
+      ?? (leveys > 0 ? korkeus(leveys) : nyt.altitude);
     // Kamera ei mene laattojen tarkkuuden alle, ei myöskään suoraan
     // korkeutena annetulla kohteella.
     const altitude = Math.min(PALLO_KORKEUS_MAX, Math.max(korkeusMin(), pyydetty));
@@ -548,6 +686,11 @@ export function luoPallokamera({
    * Laudan yksiköt, jotka laatikko vaatii ruudun leveydellä kertoimella
    * `kerroin`. Sama kaava kuin kameranKohde: korkeusehto muutetaan
    * leveydeksi kuvasuhteella, ja tiukempi voittaa.
+   *
+   * TÄMÄ ON KATON PORTIN MITTA (laatikkoMahtuu), EI RAJAUKSEN MITTA.
+   * Rajaus lasketaan erässä 13 alkaen `pallonKorkeus`illa suoraan
+   * pallon perspektiivistä; tämä jää sille yhdelle kysymykselle,
+   * näkyykö maa pallolta ollenkaan.
    */
   const laatikonTarve = (bbox, kerroin) => {
     if (!(bbox?.w > 0) || !(bbox?.h > 0)) return null;
@@ -560,9 +703,16 @@ export function luoPallokamera({
    * *"maa mahdollisimman isona"* -saapumisen entisestä
    * kaupunkinäkymästä — ja SAMA ehto ratkaisee uloszoomauksen eston
    * (ks. uloszoomausRaja), jotta kumpikin puhuu samasta katosta.
+   *
+   * KATTO LUETAAN LAUDAN OMISTA YKSIKÖISTÄ (ei `pallonKorkeus`esta) JA
+   * KIINTEÄLLÄ VARALLA. Katto vastaa kysymykseen *"näkyykö tämä maa
+   * pallolta ollenkaan"*, ja sen vastaus ei saa liikkua sen mukaan,
+   * kuinka tiukaksi rajauksen marginaali säädetään: se jakaa maat
+   * kahteen pysyvään joukkoon (RUS, USA, CAN, GRL, CHN saavat
+   * kaupunkinäkymän — tests/maakartuutsi.test.mjs vartioi joukkoa).
    */
   const laatikkoMahtuu = (bbox) => {
-    const tarve = laatikonTarve(bbox, 1 + 2 * SAAPUMISRAJAUKSEN_MARGINAALI);
+    const tarve = laatikonTarve(bbox, SAAPUMISRAJAUKSEN_KATTOVARA);
     return Boolean(tarve !== null && tarve <= SAAPUMISRAJAUKSEN_MAX);
   };
 
@@ -581,9 +731,12 @@ export function luoPallokamera({
    */
   const uloszoomausRaja = (bbox, kerroin = ULOSZOOMAUKSEN_KERROIN) => {
     if (!laatikkoMahtuu(bbox)) return null;
-    const tarve = laatikonTarve(bbox, kerroin);
+    // SAMA KAAVA KUIN SAAPUMISELLA (erä 13): katto lasketaan
+    // `pallonKorkeus`illa, jotta uloin sallittu näkymä ja
+    // saapumisnäkymä ovat kertoimen 1,02 kohdalla sama näkymä.
+    const tarve = pallonKorkeus(bbox, kerroin);
     if (!(tarve > 0)) return null;
-    const max = Math.min(PALLO_KORKEUS_MAX, korkeus(tarve));
+    const max = Math.min(PALLO_KORKEUS_MAX, Math.max(korkeusMin(), tarve));
     // Katto ei saa mennä lattian alle: pikkuvaltiossa (Singapore)
     // laatikon tarve on jo lähempänä kuin lähin sallittu korkeus.
     if (!(max > korkeusMin())) return null;
