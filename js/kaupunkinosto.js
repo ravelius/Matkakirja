@@ -284,7 +284,7 @@ export function asetteleTuristiInfo(el, d) {
 
 /* ===================== POP-UPIN TYYLI ===================== */
 
-const TYYLIN_TUNNUS = 'kaupunkinosto-tyyli';
+const KAUPUNKINOSTON_TYYLIN_TUNNUS = 'kaupunkinosto-tyyli';
 
 /**
  * Tyyli ladataan vasta ensimmäisellä avauksella (sama kuvio kuin
@@ -293,11 +293,11 @@ const TYYLIN_TUNNUS = 'kaupunkinosto-tyyli';
  */
 function lataaKaupunkiTyyli() {
   if (typeof document === 'undefined') return;
-  if (document.getElementById(TYYLIN_TUNNUS)) return;
+  if (document.getElementById(KAUPUNKINOSTON_TYYLIN_TUNNUS)) return;
   const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
   if (!peruslinkki) return;
   const linkki = document.createElement('link');
-  linkki.id = TYYLIN_TUNNUS;
+  linkki.id = KAUPUNKINOSTON_TYYLIN_TUNNUS;
   linkki.rel = 'stylesheet';
   linkki.href = new URL('kaupunkinosto.css', peruslinkki.href).href;
   document.head.appendChild(linkki);
@@ -319,7 +319,7 @@ function polloPaneeli() {
 }
 
 /** Ankkurin ruutupiste laatikoksi (piste, ei ala). */
-function ankkurinLaatikko(auki, pane) {
+function kaupunkinostonAnkkurinLaatikko(auki, pane) {
   const ankkuri = typeof auki.ankkuri === 'function' ? auki.ankkuri() : auki.ankkuri;
   if (Number.isFinite(ankkuri?.x) && Number.isFinite(ankkuri?.y)) {
     return {
@@ -350,7 +350,7 @@ export function asemoiKaupunkipopup(ui) {
   const koti = auki.popup.offsetParent ?? auki.popup.parentNode;
   const pane = koti?.getBoundingClientRect?.();
   if (!pane || !(pane.width > 0)) return;
-  const m = ankkurinLaatikko(auki, pane);
+  const m = kaupunkinostonAnkkurinLaatikko(auki, pane);
   let alaraja = pane.bottom - MARGINAALI;
   const ylaraja = pane.top + MARGINAALI;
   let oikeaRaja = pane.right - MARGINAALI;
@@ -812,15 +812,15 @@ export function suljeTiivisKaupunkietusivu() {
  */
 
 /** Nostokortin tyylitiedosto; sama kuvio kuin `lataaKaupunkiTyyli`. */
-const NOSTO_TYYLIN_TUNNUS = 'fokusnosto-tyyli';
+const KAUPUNKINOSTON_NOSTO_TYYLIN_TUNNUS = 'fokusnosto-tyyli';
 
 function lataaNostotyyliKortille() {
   if (typeof document === 'undefined') return;
-  if (document.getElementById(NOSTO_TYYLIN_TUNNUS)) return;
+  if (document.getElementById(KAUPUNKINOSTON_NOSTO_TYYLIN_TUNNUS)) return;
   const peruslinkki = document.querySelector('link[rel="stylesheet"][href*="styles.css"]');
   if (!peruslinkki) return;
   const linkki = document.createElement('link');
-  linkki.id = NOSTO_TYYLIN_TUNNUS;
+  linkki.id = KAUPUNKINOSTON_NOSTO_TYYLIN_TUNNUS;
   linkki.rel = 'stylesheet';
   linkki.href = new URL('fokusnosto.css', peruslinkki.href).href;
   document.head.appendChild(linkki);
