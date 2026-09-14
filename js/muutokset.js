@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1870, teksti: 'Zoomin rajaus ja maapaneeli Biskajanlahdelle, Ranska-pilotti' },
   { v: 1869, teksti: 'Kaupungin klikkaus avaa tiivistetyn kaupunkietusivun' },
   { v: 1868, teksti: 'Reittiviuhka piiloon: poltettu viivataso pois pallolta' },
   { v: 1867, teksti: 'Pääkartan merkkiraja lähizoomiportilla, kohdekartan katto' },
