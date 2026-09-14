@@ -79,15 +79,16 @@ Kohdat tiedosto:rivi:
 
 | tiedosto:rivi | muutos |
 | --- | --- |
-| `js/media.js:331` | **UUSI vienti `varitasonPolku(versio, iso, z, sarake, rivi, muoto)`** — pelin ja työkalun yhteinen polku. media.js on lehtimoduuli (ei tuonteja), joten generaattori voi tuoda sen sellaisenaan. |
+| `js/media.js:360` | **UUSI vienti `varitasonPolku(versio, iso, z, sarake, rivi, muoto)`** — pelin ja työkalun yhteinen polku. media.js on lehtimoduuli (ei yhtään tuontia), joten generaattori voi tuoda sen sellaisenaan. |
 | `js/laattapyramidi.js:91` | tuonti `varitasonPolku` |
-| `js/laattapyramidi.js:672` | `laattaUrl` väritason haara käyttää yhteistä funktiota ja antaa sille kohdemaan (`variMaaNyt`) |
-| `js/laattapyramidi.js:613` | laatan välimuistiavaimeen myös MAA (`<versio>/<ISO>`) — kaikilla mailla on sama versio, joten pelkkä versio ei enää erota kahta tiedostoa |
-| `tools/generoi-laattapyramidi.mjs:100` | tuonti `varitasonPolku` `../js/media.js`:stä |
-| `tools/generoi-laattapyramidi.mjs:3185` | vientikansio `vari/<ISO>/z<taso>/<sarake>` |
-| `tools/generoi-laattapyramidi.mjs:1142` | lokirivi `polku vari/<ISO>/z<taso>` |
-| `tools/generoi-laattapyramidi.mjs:1940` | kuiva-ajon **polkuotos**: todellinen merkkijono ensimmäisestä laatasta |
-| `tools/generoi-laattapyramidi.mjs:3717` | loppurivi `Vie ämpäriin: pyramidi/<variversio>/vari/<ISO>/z…` |
+| `js/laattapyramidi.js:678` | `laattaUrl` väritason haara käyttää yhteistä funktiota ja antaa sille kohdemaan (`variMaaNyt`) |
+| `js/laattapyramidi.js:615` | laatan välimuistiavaimeen myös MAA (`<versio>/<ISO>`) — kaikilla mailla on sama versio, joten pelkkä versio ei enää erota kahta tiedostoa |
+| `tools/generoi-laattapyramidi.mjs:107` | tuonti `varitasonPolku` `../js/media.js`:stä |
+| `tools/generoi-laattapyramidi.mjs:3187` | vientikansio `vari/<ISO>/z<taso>/<sarake>` |
+| `tools/generoi-laattapyramidi.mjs:3466` | **laataston bittikartta luetaan samasta kansiosta** (`laatastoBase64(m, join('vari', VARI_MAA))`). TÄMÄ OLI ERÄN OMA ANSA: maaton skannaus antoi tyhjän bittikartan, peli päätteli ettei yhtään laattaa ole eikä pyytänyt mitään. Savuke näki sen (V0 punaisena, `varillisia 0`), ja siksi savuke on erässä mukana. |
+| `tools/generoi-laattapyramidi.mjs:1155` | lokirivi `polku vari/<ISO>/z<taso>` |
+| `tools/generoi-laattapyramidi.mjs:1969` | kuiva-ajon **polkuotos**: todellinen merkkijono ensimmäisestä laatasta |
+| `tools/generoi-laattapyramidi.mjs:3692` | loppurivi `Vie ämpäriin: pyramidi/<variversio>/vari/<ISO>/z…` |
 | `.github/workflows/generoi-varitaso.yml` | vientisilmukka lukee `ulos/vari/$MAA/z*` ja vie `…/$VARIVERSIO/vari/$MAA/$z`; kuiva-ajon tuloste ja `variversio`-kentän kuvaus päivitetty; uusi kommenttilohko "MAA ON POLUSSA" |
 
 **Mittaus (tests/varitasopolku.test.mjs, UUSI, 4 väitettä):**
@@ -109,7 +110,7 @@ tests/varitasopolku.test.mjs   # pass 4  # fail 0
 
 ## 2. Korjaus 2: häive laatikosta ULOSPÄIN
 
-`tools/fokuskartta/maailmapiirto.js:421` (`polttaVariLeikkuri`) piirsi
+`tools/fokuskartta/maailmapiirto.js:463-480` (`polttaVariLeikkuri`) piirsi
 häiveen neljänä kaistaleena laatikon reunasta **sisäänpäin**
 (`kaista(lx0, 0, lx0 + rx, H, true)`, `destination-out`): kerma pyyhkiytyi
 nollaan juuri reunalla ja palasi täyteen sekä sisempänä että laatikon
@@ -141,7 +142,7 @@ häiveellä, jolloin savukkeen V10 on kaaduttava (luku 5).
 
 ## 3. Korjaus 3: laatikko kuvasuhteelle 2,0
 
-`tools/generoi-laattapyramidi.mjs:728` `NAKYMAN_KUVASUHTEET`: levein
+`tools/generoi-laattapyramidi.mjs:736` `NAKYMAN_KUVASUHTEET`: levein
 ruutu oli 1920 × 1080 = **1,778**, mutta rootin oma ruutu on
 2560 × 1352 = **1,893** — leveämpi kuin laatikko, jolloin laatasto
 loppuu kesken ja kartalla näkyy laattaruudukon reuna. Listaan lisättiin
@@ -174,21 +175,31 @@ polkumuoto ei vaikuta siihen — ja juuri siksi se ei tarvinnut
 muutosta. Ajettu molemmilla luetteloilla:
 
 ```
+# 1) ÄMPÄRIN NYKYINEN LUETTELO (ladattu tänään)
 $ node tools/tarkista-varitason-portti.mjs --pallo laatat-ampari.json \
     --pyramidi pyramidi-ampari.json --maa FRA
-  pallon sarja    versio 2026-09-07a · viivat 2026-09-08a-viivat · nostot 2026-09-08a-nostot · ranta 2026-09-07a-ranta
+  pallon sarja    versio 2026-09-07a · viivat 2026-09-08a-viivat · nostot 2026-09-08a-nostot · ranta –
   pyramidi        versio 2026-09-07a · viivataso 2026-09-08a-viivat · nostotaso 2026-09-08a-nostot · rantataso 2026-09-07a-ranta
   varitasot[FRA]  versio 2026-09-13-tasoitus · paletti tasoitus · tasot 4,5,6,7,8
-  kerrokset       {"pohja":true,"ranta":true,"viiva":true,"nosto":true,"vari":true}
-  TULOS           laattakerros on päällä ja FRA:n väritaso näkyy.
+  kerrokset       {"pohja":true,"ranta":false,"viiva":true,"nosto":true,"vari":true}
+  TULOS           laattakerros on päällä ja FRA:n väritaso näkyy.   (exit 0)
+
+# 2) TÄMÄN ERÄN OIKEAN FRA-AJON LUETTELO, yhdistettynä ämpärin luetteloon
+#    samalla funktiolla ja samoilla valitsimilla kuin ajossa
+#    (tools/pyramidiluettelo.mjs yhdistaLuettelo, generaattorin rivi 3646)
 $ node tools/tarkista-varitason-portti.mjs --pallo laatat-ampari.json \
-    --pyramidi uusi-ajon-pyramidi.json --maa FRA
-  … TULOS         laattakerros on päällä ja FRA:n väritaso näkyy.
+    --pyramidi pyramidi-uusi.json --maa FRA
+  pyramidi        versio 2026-09-07a · viivataso 2026-09-08a-viivat · nostotaso 2026-09-08a-nostot · rantataso 2026-09-07a-ranta
+  varitasot[FRA]  versio pilotti-uusi · paletti tasoitus · tasot 4,5,6,7,8
+  kerrokset       {"pohja":true,"ranta":false,"viiva":true,"nosto":true,"vari":true}
+  TULOS           laattakerros on päällä ja FRA:n väritaso näkyy.   (exit 0)
 ```
 
-(Jälkimmäinen luettelo on tämän erän oikeasta FRA-ajosta, jossa
-polku, laatikko ja häive ovat uudet.) Myös `tests/varitaso-luettelo.test.mjs`
-ajaa portin ja on vihreä.
+Pohjan versio säilyi (`2026-09-07a`) ja kaikkien 27 maan kirjaukset
+säilyivät (mitattu: `maita 27`). `ranta: false` on ämpärin nykytila
+eikä tämän erän muutos: pallon sarjan `laatat.json`:issa ei ole
+`ranta`-kenttää. Myös `tests/varitaso-luettelo.test.mjs` ajaa portin ja
+on vihreä.
 
 ## 5. Savuke ja vastakoe
 
