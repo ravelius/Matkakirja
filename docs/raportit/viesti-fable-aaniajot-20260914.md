@@ -38,7 +38,7 @@ on `6e3a07e879bb` erässä 1 ja `439bf050af65` kaikessa muussa.
 | Erä | Rooli | Run | Concl. | Erätunnus (completed-kuitti) | MP3 | Kesto yht. |
 |---|---|---|---|---|---|---|
 | 1 | Horatio | [34863559099](https://github.com/ravelius/Matkakirja/actions/runs/34863559099) | success | `horatio-9c5b6e4dd75608cdbe8e` | 10/10 | 235,0 s |
-| 1 | Livia | [34863565984](https://github.com/ravelius/Matkakirja/actions/runs/34863565984) | **failure** | `pulu-b3a8d61baa0c4dd24123` (completed-with-errors) | 7/10 | 108,3 s |
+| 1 | Livia | [34863565984](https://github.com/ravelius/Matkakirja/actions/runs/34863565984) | **failure** | `pulu-b3a8d61baa0c4dd24123` (completed-with-errors) | 7/10 | 106,7 s |
 | 1 | Livia, uusinta | [34865329896](https://github.com/ravelius/Matkakirja/actions/runs/34865329896) | success | `pulu-3388cdde59d36a971f1a` | 3/3 | 70,7 s |
 | 2 | Horatio | [34865721673](https://github.com/ravelius/Matkakirja/actions/runs/34865721673) | success | `horatio-91c7e2c997078439dee1` | 10/10 | 238,9 s |
 | 2 | Livia | [34865732749](https://github.com/ravelius/Matkakirja/actions/runs/34865732749) | success | `pulu-415d0075be837be8c5bd` | 10/10 | 184,8 s |
@@ -92,7 +92,7 @@ koska erän 5 tiedostoja ei viety kertaakaan.
   `audio/versions/horatio/<sha12>/<erätunnus>/puhe-fokus-matkakirja-<kaupunki>.mp3`;
   Livia: `aanet/pulu/versiot/<sha12>/<erätunnus>/livia-<kaupunki>-3.mp3`.
   `<sha12>` on `6e3a07e879bb` erässä 1 ja `439bf050af65` muualla, ja erätunnus
-  vaihtuu erittäin — eli **yhdeksän eri prefiksiä**, ei yhtä. Live-avaimiin ei
+  vaihtuu eräkohtaisesti — eli **yhdeksän eri prefiksiä**, ei yhtä. Live-avaimiin ei
   ole kirjoitettu mitään, joten julkaisu live-avaimeen on yhä erillinen vaihe.
 - **Kuittien SHA/digest-sidonnat.** Jokaisessa kuitissa on näkyvän tekstin ja
   TTS-tekstin SHA-256 sekä äänitteen tarkistussumma; nämä sidotaan pelidataan ja
