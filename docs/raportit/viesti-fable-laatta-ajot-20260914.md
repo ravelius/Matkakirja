@@ -22,3 +22,8 @@ kirjauksessa.
 | 2 | BIH | 34801941355 | success | 2026-09-14-tasoitus | true |
 | 3 | CHE | 34802060183 | success | 2026-09-14-tasoitus | true |
 | 4 | CZE | 34802162958 | success | 2026-09-14-tasoitus | true |
+| 5 | DEU | 34802268527 | success | 2026-09-14-tasoitus | true |
+| 6 | DNK | 34802412698 | success | 2026-09-14-tasoitus | true |
+| 7 | ESP | 34802536771 | success | 2026-09-14-tasoitus | true |
+| 8 | EST | 34802677063 | success | 2026-09-14-tasoitus | true |
+| 9 | FIN | 34802773668 | success | 2026-09-14-tasoitus | true |
