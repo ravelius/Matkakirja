@@ -74,7 +74,8 @@ import {
 import {
   asetaLuentaKytkin, haivytaJaSiivoa, haivytaLuenta, lueMerkinta,
   luennanLoppuun, luentaKytkinPaalla, merkitsePuhuja, playDiaryVoice,
-  playIntroVoice, stopDiaryVoice, stopIntroVoice, vapautaPuhuja,
+  playIntroVoice, PUHUJA_PULU, puhujaAanessa, stopDiaryVoice, stopIntroVoice,
+  vapautaPuhuja,
 } from './luenta.js';
 import {
   answerDuelUi, answerQuiz, renderDuel, renderQuiz, stopQuizTimer,
@@ -783,6 +784,63 @@ const SAAPUMISEN_KUPLA_VALI_MS = 2500;
  * lauseen — pöllö odottaa, että kertoja on vaiennut.
  */
 const SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS = 900;
+
+/*
+ * ── PUHELIN: ISOISÄN JA PULUN TEKSTIT PIILOON ───────────────────────
+ *
+ * Omistaja (Raamattu, "IPHONE: ISOISAN JA PULUN TEKSTIT PIILOON"):
+ * *"Iphonella voisi piilottaa isoisan ja pulun tekstit. Lisaksi piilota
+ * tuo liiku nappi luennan ajaksi. Se voisi olla lisaksi vahan
+ * huomaamattomampi nakyessaan."*
+ *
+ * PUHELIN TUNNISTETAAN RUUDUN MITASTA, EI KÄYTTÄJÄAGENTISTA. Molemmat
+ * rajat ovat pelissä jo käytössä: `max-width: 699px` on kartan oma
+ * puhelinraja (css/styles.css) ja `max-height: 520px` sama raja
+ * vaakasuunnassa, jossa iPhone on 844 × 390 eikä leveysraja osuisi.
+ * Mitattu 14.9.2026: 390 × 844 → leveysraja osuu, 844 × 390 →
+ * korkeusraja osuu, 1400 × 900 → kumpikaan ei osu.
+ *
+ * SAMA MERKKIJONO ON CSS:SSÄ (css/styles.css "PUHELIN: ISOISÄN JA
+ * PULUN TEKSTIT PIILOON"). Jos rajaa muutetaan, molemmat muuttuvat.
+ */
+const PUHELIN_KYSELY = '(max-width: 699px), (max-height: 520px)';
+
+/** Onko peli puhelimen kokoisella ruudulla (ks. PUHELIN_KYSELY)? */
+export function puhelinTila() {
+  return Boolean(globalThis.matchMedia?.(PUHELIN_KYSELY)?.matches);
+}
+
+/*
+ * ── LIIKU-NAPIN NÄKYVYYS JA LAAJENNUS ───────────────────────────────
+ *
+ * Nappi on piilossa niin kauan kuin joku on äänessä (saapumisluenta
+ * tai Livian repliikki) ja palaa heti, kun vuoro vapautuu. Tila
+ * LUETAAN luennasta (js/luenta.js puhujaAanessa) — luenta- tai
+ * äänilogiikkaa ei muuteta, vain kuunnellaan.
+ *
+ * KAKSI TURVAA:
+ *   1. VÄLIRAUHA. Isoisän luennan ja Livian repliikin väliin jää
+ *      hengähdys (SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS = 900 ms).
+ *      Ilman välirauhaa nappi välähtäisi siinä välissä näkyviin.
+ *   2. VARAVENTTIILI. Jos vuoro jää jostain syystä roikkumaan, nappi
+ *      tulee näkyviin viimeistään 30 sekunnin kuluttua — piiloon
+ *      jäänyt Liiku olisi umpikuja.
+ */
+/** Kuinka usein napin vahti kysyy, onko joku äänessä. */
+const LUENTAVAHDIN_VALI_MS = 200;
+/** Välirauha puheenvuorojen välissä: nappi ei välähdä esiin. */
+const LUENNAN_VALIRAUHA_MS = SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS + 400;
+/** Varaventtiili: nappi näkyy viimeistään tämän jälkeen. */
+const LUENNAN_VARAVENTTIILI_MS = 30000;
+/**
+ * Kauanko Liiku on laajennettuna aarteen löytymisen jälkeen.
+ *
+ * Omistaja 14.9.2026: *"Kun aarre on loytynyt nappi voisin laajentua
+ * liiku napiksi niin etta symboli jaisi vasempaan reunaan ja teksti
+ * tulisi oikealle puolelle. Nappi voisi kutistua jonkin ajan kuluttua
+ * sitten takaisin pelkaksi nelio symbooli napiksi."*
+ */
+export const LIIKU_LAAJENNUS_MS = 6000;
 /*
  * KUPLIEN SANAMUOTO ON KAANON (omistajan tilaus 26.8.2026). Maa ja
  * kaupunki taipuvat js/ui-apurit.js:n taulukoilla, mutta lauseiden
@@ -2946,6 +3004,9 @@ export class UI {
     this.peruutusLaput = [this.quizDialog, this.eventDialog, this.arrivalDialog];
     for (const lappu of this.peruutusLaput) lappu.addEventListener('cancel', this.lappuPeruutus);
 
+    // Liiku-napin luentavahti käyntiin heti kytkentöjen kanssa.
+    this.kaynnistaLuentavahti();
+
     /*
      * LEHTI HILJENTÄÄ ÄÄNIMAISEMAN (omistajan tilaus 13.8.2026:
      * *"ambienssi voisi hiljentyä hieman myös jos lehti avataan"*).
@@ -4653,6 +4714,14 @@ export class UI {
     if (this.previewFrame) cancelAnimationFrame(this.previewFrame);
     for (const timer of Object.values(this.typeTimers ?? {})) clearTimeout(timer);
     stopQuizTimer(this);
+    // Liiku-napin vahdit: kuollut näkymä ei enää kysele luennan tilaa
+    // eikä kutista nappia takaisin.
+    clearInterval(this.luentavahti);
+    this.luentavahti = null;
+    clearTimeout(this.liikuLaajennusAjastin);
+    document.body?.classList?.remove?.(
+      'luenta-aanessa', 'liiku-laaja', 'kertoja-aanessa', 'luenta-huntu',
+    );
     for (const lappu of this.taustaLaput ?? []) lappu.removeEventListener('click', this.lappuTausta);
     for (const lappu of this.peruutusLaput ?? []) lappu.removeEventListener('cancel', this.lappuPeruutus);
     // Nipistyksen kuuntelijat pois: ne ovat paneelissa, joka jää eloon.
@@ -11392,6 +11461,94 @@ export class UI {
   }
 
   /**
+   * LUENNAN VAHTI: piilottaa Liiku-napin niin kauaksi kuin joku puhuu.
+   *
+   * Vahti vain LUKEE luennan tilan (puhujaAanessa) — se ei käynnistä,
+   * pysäytä eikä muuta yhtäkään ääntä. Tila kirjoitetaan bodyn
+   * luokkaan `luenta-aanessa`, josta css piilottaa napin kokonaan
+   * (display: none, ei pelkkä opacity — piiloon jäänyttä nappia ei saa
+   * voida napauttaa).
+   *
+   * Kysely eikä tapahtuma: luentoja syntyy monella reitillä
+   * (playDiaryVoice, lueKertojana, Livian repliikit), eikä niillä ole
+   * yhteistä tapahtumaa, jota voisi kuunnella muuttamatta luentaa.
+   * 200 ms:n kysely on halpa ja koskematon.
+   *
+   * Ks. LUENTAVAHDIN_VALI_MS, LUENNAN_VALIRAUHA_MS ja
+   * LUENNAN_VARAVENTTIILI_MS.
+   */
+  kaynnistaLuentavahti() {
+    /*
+     * VAHTI KÄYNNISTETÄÄN KERRAN. Kahvaa EI nollata konstruktorissa
+     * erikseen: kytkennät tehdään konstruktorissa ennen kenttien
+     * alustusrivejä, ja nollaus söisi juuri asetetun ajastinkahvan —
+     * silloin destroy ei saisi vahtia enää kiinni ja kaksi vahtia
+     * kilpailisi samasta bodyn luokasta (mitattu 14.9.2026: luokka
+     * välkkyi päälle ja pois 400 ms:n välein).
+     */
+    if (this.luentavahti || typeof document === 'undefined') return;
+    // Puheenvuoron alku: varaventtiilin kello lähtee tästä.
+    let puheAlkoi = 0;
+    // Viimeisin hetki, jolloin joku oli äänessä: välirauhan kello.
+    let puheLoppui = 0;
+    const askel = () => {
+      if (this.dead) return;
+      const nyt = Date.now();
+      const aanessa = Boolean(puhujaAanessa());
+      if (aanessa) {
+        if (!puheAlkoi) puheAlkoi = nyt;
+        puheLoppui = nyt;
+      } else if (!puheLoppui) {
+        puheAlkoi = 0;
+      }
+      const varaventtiili = puheAlkoi && nyt - puheAlkoi > LUENNAN_VARAVENTTIILI_MS;
+      // Välirauha: kahden puheenvuoron väliin jäävä hengähdys ei
+      // paljasta nappia välähdykseksi.
+      const valirauhassa = Boolean(puheLoppui) && nyt - puheLoppui < LUENNAN_VALIRAUHA_MS;
+      const piiloon = !varaventtiili && (aanessa || valirauhassa);
+      if (!piiloon) { puheAlkoi = 0; puheLoppui = 0; }
+      document.body.classList.toggle('luenta-aanessa', piiloon);
+      /*
+       * KERTOJA ERIKSEEN PULUSTA (omistaja 14.9.2026): *"Luennan aikana
+       * matkakirjan ylarivin reunassa voisi sykkia kevyesti kaiuttimen
+       * kuva merkiksi etta luenta on kaynnissa. Pulun luennassa riittaa
+       * pulun elehtiminen ajamaan saman asian."* `puhujaAanessa` osaa
+       * jättää pulun laskuista, joten merkki kytkeytyy vain isoisän
+       * luentaan — ja mykistettynä ääntä ei synny lainkaan, joten
+       * merkkikään ei syki.
+       */
+      const kertoja = !varaventtiili && puhujaAanessa(PUHUJA_PULU) !== null;
+      document.body.classList.toggle('kertoja-aanessa', kertoja);
+      /*
+       * LUENNAN HUNTU (omistaja 14.9.2026): *"Luennan aikana kun kuvat
+       * nakyvat, kartta tausta voisi olla tummempi ja vahan blurri."*
+       * Huntu nousee vain kun kuva on oikeasti ruudulla — pelkkä
+       * luenta ilman kuvaa ei saa tummentaa karttaa.
+       */
+      const kuvaRuudulla = Boolean(document.querySelector('.fokusvirta-luentakuva.nakyy'));
+      document.body.classList.toggle('luenta-huntu', kertoja && kuvaRuudulla);
+    };
+    askel();
+    this.luentavahti = setInterval(askel, LUENTAVAHDIN_VALI_MS);
+  }
+
+  /**
+   * AARRE LÖYTYI: neliösymboli laajenee hetkeksi Liiku-napiksi.
+   *
+   * Omistaja 14.9.2026 (ks. LIIKU_LAAJENNUS_MS). Tila on bodyn
+   * luokassa eikä napissa, koska toimintorivi piirretään uudelleen
+   * useasti: luokka säilyy piirtojen yli itsestään.
+   */
+  laajennaLiiku() {
+    if (typeof document === 'undefined') return;
+    document.body.classList.add('liiku-laaja');
+    clearTimeout(this.liikuLaajennusAjastin);
+    this.liikuLaajennusAjastin = setTimeout(() => {
+      document.body.classList.remove('liiku-laaja');
+    }, LIIKU_LAAJENNUS_MS);
+  }
+
+  /**
    * ALANAPPIRIVI: KAKSI PAIKKAA (omistajan linjaus 24.8.2026).
    *
    *   vasen   Liiku  — monitoiminappi, avaa matkustusnapit
@@ -12773,7 +12930,17 @@ export class UI {
     // Uusi merkintä nollaa myös kartan liikkeestä odottavan paluun:
     // edellisen merkinnän ajastin ei saa avata korttia uuden alla.
     this.peruKortinPalautus();
-    this.asetaPaivakirjanKoko(false);
+    /*
+     * PUHELIMELLA MERKINTÄ JÄÄ LAPUKSI (omistajan linjaus, ks.
+     * PUHELIN_KYSELY). Mitattu 14.9.2026: auki oleva kortti on
+     * 390 × 844 ruudulla 340 × 195 px (87 % leveydestä) ja 844 × 390
+     * ruudulla 340 × 244 px (63 % korkeudesta) — se peittää juuri sen
+     * kuvan, jota merkintä kuvailee. Luenta soi normaalisti, ja teksti
+     * on yhä saatavilla: lappu on painike, jonka napautus avaa kortin
+     * (ks. asetaPaivakirjanKoko ja factCardin click-kuuntelija).
+     * Työpöydällä kortti avautuu kuten ennenkin.
+     */
+    this.asetaPaivakirjanKoko(puhelinTila());
     this.paivitaJatkuuVihje?.();
   }
 
@@ -19531,7 +19698,11 @@ export class UI {
     overlay.remove();
     // Löytö päätyy matkalaukkuun: yläreunan Laukku-nappi heilahtaa
     // eloisasti merkiksi (omistajan toive). Rosvo ei tuo mitään.
-    if (onAarre(type)) this.elavoitaLaukku();
+    if (onAarre(type)) {
+      this.elavoitaLaukku();
+      // Aarre löytyi: neliösymboli laajenee hetkeksi Liiku-napiksi.
+      this.laajennaLiiku();
+    }
   }
 
   /**
