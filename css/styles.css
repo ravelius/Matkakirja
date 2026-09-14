@@ -89,36 +89,45 @@ body.paivittyy .app { visibility: hidden; }
   --sea-ink: #6e6350;
   --mark: #b03a2b;
   /*
-   * KOHDEMAAN AARIVIIVA — OMA MUUTTUJA, JA 14.9.2026 ALKAEN MUSTEEN
-   * SININEN (karttauudistuksen PAATOKSET 14 kohta 2, omistaja:
-   * *"vaihda samalla kartan reuna musteen siniseksi"*, kortilla
-   * tarkennettuna maan punaiseksi rajaviivaksi). Nimi oli
-   * `--raja-punainen`; kun savy ei enaa ole punainen, nimikin
-   * vaihtui — `--raja-muste`.
+   * MAIDEN RAJOJEN MUSTE — YKSI SAVY KAIKILLE RAJOILLE (karttauudistuksen
+   * PAATOKSET 15 kohta 3, omistaja 14.9.2026 sanatarkasti: *"Muuta
+   * maanraja saman variseksi kuin muut rajat."*).
+   *
+   * Muuttuja on ollut kolmella nimella ja kolmella savylla: kohdemaan
+   * keha oli `--mark`-punainen (13.9.), sitten oma murrettu punainen
+   * `--raja-punainen` (14.9. aamu), sitten musteen sininen
+   * `--raja-muste` #1f3a5f (14.9. iltapaiva). Nyt savy EI OLE
+   * KOHDEMAAN OMA: se on sama ruskea muste, jolla naapurimaiden rajat
+   * piirretaan, eli pallon vektorirajan RAJA_MUSTE
+   * (js/pallovektorit.js). KOHDEMAA EROTTUU PAKSUUDELLA (3 px vs.
+   * tavallisen rajan ~1 px) JA YHTENAISYYDELLA (tavallinen raja on
+   * pisteviiva), EI VARILLA.
+   *
+   * MITATTU (docs/raportit/viesti-fable-rajavari-20260914.md,
+   * Chromium, tyopoyta 1400 x 900): naapurirajan tummin pikseli
+   * Saksa-Puola rgb(205,194,163) ja Espanja-Portugali
+   * rgb(200,187,154) — molemmat tasmalleen taman musteen 34 %:n
+   * peitto omaa taustaansa vasten (RAJA_PEITTO 0,34). Laattoihin
+   * poltettu raja on hiuksenverran tummempi ja kylmempi ruskea
+   * (tools/fokuskartta/maailmapiirto.js RAJATYYLI,
+   * rgba(96,74,46,0.52) = #604a2e); ero on 11/11/11 yksikkoa RGB:ssa,
+   * ja valituksi tuli VEKTORIRAJAN savy, koska juuri se on se raja,
+   * joka kulkee kohdemaan viivan rinnalla samalla piirtokerroksella.
    *
    * MIKSI OMA NIMI EIKA `--mark`. `--mark` #b03a2b on kartan
    * merkintojen punainen (lentoreitti, sinettivaha, maakayrat,
-   * vertailuvalinta) ja se pysyy ennallaan; vain kohdemaan keha
-   * vaihtuu siniseksi, eika sita saa vaihtaa muiden merkintojen alta.
-   * Yksi nimi on silti YKSI TOTUUS: taso- ja pallokartta lukevat
-   * molemmat taman (css .maatummennus-viiva ja js/pallovektorit.js
-   * korostuksenMuste).
+   * vertailuvalinta) eika se ole rajan vari. Yksi nimi on YKSI TOTUUS:
+   * taso- ja pallokartan kohdemaan keha (css .maatummennus-viiva ja
+   * js/pallovektorit.js rajanMuste) lukevat molemmat taman.
    *
-   * MITATTU VALINTA (docs/raportit/viesti-fable-sininen-aariviiva-20260914.md):
-   * kolmesta vaihtoehdosta #2b4a6f / #1f3a5f / #1a2f4a keskimmainen.
-   * Kontrasti seepiapaperia (#efdcb4) vasten 8,51 ja varillista maata
-   * (230,219,172) vasten 8,25 — molemmat reilusti yli vaaditun 4,5 ja
-   * paremmat kuin entinen punainen (6,32 / 6,13). Savy on tumma,
-   * murrettu preussinsininen (H215 S51 % L25 %), ei kirkas: vanhan
-   * kartan musteen suuntaan.
-   *
-   * MERI EI OLE TASSA PELISSA SININEN (tools/fokuskartta/piirto.js:
-   * *"meri on tassa kartassa viileaa paperia"*, syvinkin meri
-   * 134,132,124), joten sininen muste ei sekoitu aluevesiin:
-   * sinikanavan ylivoima B − (R+G)/2 on kehalla +50,5 ja merella
-   * −9,0. Sama mitta on savukkeen vartio.
+   * KONTRASTI RIITTAA TAYDELLA PEITOLLA: kohdemaan keha piirretaan
+   * peitolla 1, jolloin se on ruudulla rgb(107,85,57) — kontrasti
+   * seepiapaperiin (#efdcb4) 5,24 ja varilliseen maahan (230,219,172)
+   * 5,06, molemmat yli vaaditun 4,5. Naapurirajan 34 %:n peitto jaa
+   * vaaleaksi, joten sama muste lukee eri vahvuisena — juuri se on
+   * kaiverruksen tapa korostaa.
    */
-  --raja-muste: #1f3a5f;
+  --raja-muste: #6b5539;
   /*
    * KERMA — kartan oma vaalein paperisävy. Sama luku on jo pelissä
    * kahdessa paikassa (tools/fokuskartta/piirto.js KERMA ja
@@ -1752,12 +1761,14 @@ body.kartta-raahaus .fokuslaatta-syke { animation-play-state: paused; }
      tässäkään anneta — perintä ryhmästä on se, mitä portaikkofeidaus
      animoi.
 
-     SÄVY ON 14.9.2026 ALKAEN `--raja-muste` EIKÄ `--mark`
-     (karttauudistuksen PÄÄTÖKSET 14 kohta 2): omistaja pyysi kehän
-     musteen siniseksi, ja kartan muut merkinnät (lentoreitti,
-     sinettivaha) jäävät `--mark`in punaiseen.
-     Muuttuja on yhä YKSI: pallon kehä lukee saman
-     (js/pallovektorit.js korostuksenMuste). */
+     SÄVY ON `--raja-muste`, JA SE ON 14.9.2026 ALKAEN SAMA KUIN
+     MUILLA RAJOILLA (karttauudistuksen PÄÄTÖKSET 15 kohta 3,
+     omistaja: *"Muuta maanraja saman variseksi kuin muut rajat."*).
+     Väri ei siis erota kohdemaata — sen tekevät LEVEYS (3 px vs.
+     tavallisen rajan ~1 px) ja YHTENÄISYYS (tavallinen raja on
+     pisteviivaa). Kartan muut merkinnät (lentoreitti, sinettivaha)
+     jäävät `--mark`in punaiseen. Muuttuja on yhä YKSI: pallon kehä
+     lukee saman (js/pallovektorit.js rajanMuste). */
   stroke: var(--raja-muste);
   stroke-linejoin: round;
   stroke-linecap: round;

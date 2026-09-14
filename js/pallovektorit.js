@@ -198,7 +198,15 @@ export const VEKTORIT_HARVENNUS_KATTO = 8;
  */
 export const RANTA_MUSTE = '#5a4330';
 export const RANTA_PEITTO = 0.58;
-/** Maiden raja: sama ruskea vaaleampana ja selvästi hennompana. */
+/**
+ * Maiden raja: sama ruskea vaaleampana ja selvästi hennompana.
+ *
+ * TÄMÄ ON 14.9.2026 ALKAEN KAIKKIEN RAJOJEN MUSTE, myös kohdemaan
+ * kehän (karttauudistuksen PÄÄTÖKSET 15 kohta 3, omistaja: *"Muuta
+ * maanraja saman variseksi kuin muut rajat."*). Arvo on paletissa
+ * (`--raja-muste`); tämä vakio on VARA sille, kun CSS:ää ei ole
+ * luettu, eikä se saa erota paletista (tests/maakorostus.test.mjs).
+ */
 export const RAJA_MUSTE = '#6b5539';
 export const RAJA_PEITTO = 0.34;
 /*
@@ -210,10 +218,9 @@ export const RAJA_PEITTO = 0.34;
  * KOROSTUS ON SAMAA MUSTETTA, EI TOISTA VÄRIÄ. Kartta on vuoden 1873
  * atlas, joten korostus tehdään niin kuin se tehtäisiin kaiverruksessa:
  * sama ruskea muste tummempana ja paksumpana, ei toista väriä eikä
- * hehkua. Sävy on rantaviivan musteen (#5a4330) ja poltetun rajan
- * välistä tummemmasta päästä; peitto on kaksinkertainen tavalliseen
- * rajaan (0,34) ja hitusen rantaviivan (0,58) yli, jotta oma maa
- * erottuu myös naapurinsa rannikosta.
+ * hehkua. Sävy on 14.9.2026 alkaen TÄSMÄLLEEN naapurien rajan sävy
+ * (RAJA_MUSTE, ks. alla PÄÄTÖKSET 15); peitto on täysi eikä rajan
+ * 0,34, jotta oma maa erottuu myös naapurinsa rannikosta.
  *
  * LEVEYS ON SAMA SUHDE KUIN TASOKARTALLA. Tasokartan vahvistettu
  * ääriviiva on 2 ruutupikseliä eli runsas puolitoista kertaa poltettu
@@ -229,19 +236,28 @@ export const RAJA_PEITTO = 0.34;
  * jossa vahvistettu ääriviiva on yhtenäinen ja poltettu raja pisteinä.
  */
 /*
- * ======== KEHÄN OMA MUSTE (KARTTAUUDISTUKSEN PÄÄTÖKSET 1 JA 14) ====
+ * ======== KEHÄN MUSTE (KARTTAUUDISTUKSEN PÄÄTÖKSET 1, 14 JA 15) ====
  *
  * Omistaja 13.9.2026: *"Maan rajat vahvistetaan punaisella viivalla
- * (pelin varipaletista)"*, ja kysymyskortilla: *"Punainen maan
- * rajaviiva PALAUTETAAN kohdemaalle (paletin --mark #b03a2b, 2,5 px)"*.
- * PÄÄTÖKSET 14 kohta 2 (omistaja 14.9.2026) vaihtoi sävyn: *"vaihda
- * samalla kartan reuna musteen siniseksi"* — kehä on nyt tummaa,
- * murrettua musteensinistä (`--raja-muste` #1f3a5f), ja `--mark`
- * jää kartan muille merkinnöille. Leveys ja katkokorjaus pysyvät.
- * Yllä oleva perustelu *"KOROSTUS ON SAMAA MUSTETTA, EI TOISTA VÄRIÄ"*
- * kirjoitettiin 11.9.2026 seepiakartalle, ja päätös kumoaa sen
- * kohdemaan osalta: kohdemaan sisus on tästä erästä alkaen VÄRILLINEN,
- * ja ruskea kehä hukkuisi omaan maastoonsa.
+ * (pelin varipaletista)"* — kehä oli hetken `--mark`-punainen, sitten
+ * murrettu punainen ja 14.9. iltapäivällä musteen sininen #1f3a5f.
+ * PÄÄTÖKSET 15 kohta 3 (omistaja 14.9.2026) päättää sarjan
+ * sanatarkasti: *"Muuta maanraja saman variseksi kuin muut rajat."*
+ *
+ * KEHÄ ON SIIS SAMAA MUSTETTA KUIN NAAPURIEN RAJAT (RAJA_MUSTE
+ * #6b5539, paletissa `--raja-muste`). Ero naapuriin ei ole väri vaan
+ *
+ *   LEVEYS    3,1 css-px vs. tavallisen rajan 0,95 (yli kolminkertainen),
+ *   PEITTO    1 vs. 0,34 (sama muste täytenä eikä haaleana),
+ *   KUVIO     yhtenäinen viiva vs. pisteviiva (RAJA_KATKO_YKS).
+ *
+ * Tämä palauttaa myös 11.9.2026 kirjatun perustelun *"KOROSTUS ON
+ * SAMAA MUSTETTA, EI TOISTA VÄRIÄ"* (yllä): kartta on vuoden 1873
+ * atlas, ja kaiverruksessa oma maa korostetaan vahvemmalla vedolla,
+ * ei toisella värillä. Värillisen kohdemaan päällä muste erottuu,
+ * koska peitto on täysi: mitattu kontrasti seepiapaperiin 5,24 ja
+ * värilliseen maahan (230,219,172) 5,06 (tests/maakorostus.test.mjs
+ * laskee molemmat).
  *
  * === ARVO ON YHDESSÄ PAIKASSA, JA SE PAIKKA ON CSS ================
  *
@@ -250,26 +266,29 @@ export const RAJA_PEITTO = 0.34;
  * ja pallolla WebGL-viivana (tämä tiedosto). Pelaaja ei näe molempia,
  * mutta kaksi kovakoodattua heksalukua eriytyisi ensimmäisessä
  * sävynmuutoksessa — juuri se vika, jonka suunnitelman riski 4.3
- * nimeää. Pallo lukee siis saman CSS-muuttujan kuin tasokartta;
- * vakio alla on VARA sille tilanteelle, jossa muuttujaa ei ole
- * (testit ilman tyylitiedostoa, yhden tiedoston versio ennen CSS:n
- * latausta), eikä sen arvo saa erota `--raja-muste`esta.
+ * nimeää. Molemmat pallon rajamateriaalit (tavallinen raja ja kehä)
+ * lukevat saman muuttujan `rajanMuste()`-funktiolla, joten ne eivät
+ * voi ajossa erota toisistaan; vakiot alla ovat VARA sille
+ * tilanteelle, jossa muuttujaa ei ole (testit ilman tyylitiedostoa,
+ * yhden tiedoston versio ennen CSS:n latausta).
  */
-export const KOROSTUS_MUSTE = '#1f3a5f';
+export const KOROSTUS_MUSTE = RAJA_MUSTE;
 
 /**
- * Korostuksen muste juuri nyt: paletin `--raja-muste`, tai
- * KOROSTUS_MUSTE jos muuttujaa ei saada luettua.
+ * Rajan muste juuri nyt: paletin `--raja-muste`, tai RAJA_MUSTE jos
+ * muuttujaa ei saada luettua. Sama funktio kummallekin rajalajille —
+ * kohdemaan kehä ei ole oma värinsä (PÄÄTÖKSET 15 kohta 3).
  */
-export function korostuksenMuste(dokumentti = null) {
+export function rajanMuste(dokumentti = null) {
   const doc = dokumentti ?? globalThis.document ?? null;
   const juuri = doc?.documentElement ?? null;
-  if (!juuri || typeof globalThis.getComputedStyle !== 'function') return KOROSTUS_MUSTE;
+  if (!juuri || typeof globalThis.getComputedStyle !== 'function') return RAJA_MUSTE;
   try {
     const arvo = globalThis.getComputedStyle(juuri).getPropertyValue('--raja-muste').trim();
-    return arvo || KOROSTUS_MUSTE;
+    // Kelpaa vain, jos se on väri: selvittämätön var() kaataisi kolmion.
+    return /^#[0-9a-fA-F]{3,8}$|^rgba?\(/.test(arvo) ? arvo : RAJA_MUSTE;
   } catch {
-    return KOROSTUS_MUSTE;
+    return RAJA_MUSTE;
   }
 }
 
@@ -277,6 +296,10 @@ export function korostuksenMuste(dokumentti = null) {
  * PEITTO ON TÄYSI, EI 0,68 (sama perustelu kuin tasokartalla,
  * css/styles.css .maatummennus-viiva): himmeä punainen luki
  * värikartalla ruskeana, eli juuri siltä, miltä sen ei pitänyt.
+ *
+ * TÄYSI PEITTO ON 14.9.2026 ALKAEN MYÖS SE, MIKÄ EROTTAA kehän
+ * naapurin rajasta leveyden ja yhtenäisyyden ohella: sävy on nyt
+ * sama, joten haalennettu kehä sulaisi naapurirajaan.
  */
 export const KOROSTUS_PEITTO = 1;
 /*
@@ -804,9 +827,9 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
    * false), ei syvyyskirjoitusta, syvyystesti pallon pintaa vasten ja
    * polygonOffset laattojen edelle (ks. tiedoston alun mittaukset).
    *
-   * Korostus on samaa mustetta tummempana ja YHTENÄISENÄ viivana
-   * (ks. KOROSTUS_MUSTE): se on sama kerros ja samat säännöt kuin
-   * muillakin vektoreilla, vain oma leveys ja peitto.
+   * Korostus on samaa mustetta täytenä ja YHTENÄISENÄ viivana
+   * (ks. RAJA_MUSTE): se on sama kerros, sama sävy ja samat säännöt
+   * kuin muillakin vektoreilla, vain oma leveys ja peitto.
    */
   function teeMateriaalit() {
     const yhteiset = {
@@ -822,14 +845,16 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       ...yhteiset, color: RANTA_MUSTE, opacity: RANTA_PEITTO,
     });
     const raja = new luokat.LineMaterial({
-      ...yhteiset, color: RAJA_MUSTE, opacity: RAJA_PEITTO, dashed: true,
+      // Sama sävy paletista kuin kehällä (ks. rajanMuste): rajan väri
+      // on yksi, ero on peitossa, leveydessä ja pistekuviossa.
+      ...yhteiset, color: rajanMuste(), opacity: RAJA_PEITTO, dashed: true,
     });
     [raja.dashSize, raja.gapSize] = RAJA_KATKO_YKS;
     raja.dashScale = 1;
     const korostusMateriaali = new luokat.LineMaterial({
-      // Sävy paletista (ks. korostuksenMuste): sama lähde kuin
-      // tasokartan kehällä, eikä toista heksalukua.
-      ...yhteiset, color: korostuksenMuste(), opacity: KOROSTUS_PEITTO,
+      // Sävy paletista (ks. rajanMuste): sama lähde kuin tasokartan
+      // kehällä JA kuin tavallisella rajalla, eikä toista heksalukua.
+      ...yhteiset, color: rajanMuste(), opacity: KOROSTUS_PEITTO,
     });
     /*
      * PEHMEÄ REUNA, EI PÄÄTYPYÖRYLÖITÄ (omistaja 7.9.2026). Paikka
