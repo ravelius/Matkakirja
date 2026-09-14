@@ -387,8 +387,49 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null)
    */
   const variKirjaus = variMaa ? (pyramidi.varitasot?.[variMaa] ?? null) : null;
   const vari = Boolean(variKirjaus?.versio && variKirjaus.tasot?.length);
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * VIIVATASO EI TULE PALLOLLE — REITTIVIUHKA OLI POLTETTU LAATTAAN
+   * ══════════════════════════════════════════════════════════════
+   *
+   * Raamattu KARTTAUUDISTUKSEN PAATOKSET 9 kohta 6 (omistaja
+   * 14.9.2026, sanatarkasti): *"lisaksi reittiviuhka nakyy edelleen
+   * vaikka ei olla liikkumistilassa. korjaa se myos."* Ja lähtötilaus
+   * (PAATOKSET 8): *"onko kaupunkien valiset siirtymalinjat ja
+   * merireitit omalla tasollaan? jos on niin ne voi ottaa pois
+   * nakyvista ja palauttaa vasta kun pelaaja painaa liiku nappia."*
+   *
+   * MITATTU JUURISYY (Chromium 14.9.2026, Pariisi, ks. raportti
+   * docs/raportit/viesti-fable-reittiviuhka-20260914.md): v1865 vei
+   * viuhkan pois ELÄVÄSTÄ kerroksesta (js/ui.js matkareittienValinta →
+   * js/pallolauta/reitit.js), ja se kerros mittaa nollaa kaupungissa
+   * seistessä. Ruudulla viuhka näkyi silti, koska REITTIVERKKO ON
+   * POLTETTU VIIVATASON LAATTOIHIN (tools/generoi-laattapyramidi.mjs
+   * VIIVATASO, osoite .../viivat/z<taso>/…) ja pallo latoo ne joka
+   * laatan kankaalle. Kokeessa `/viivat/`-laattojen esto poisti
+   * TÄSMÄLLEEN ne neljä katkoviivaa askelhelmineen, jotka omistaja
+   * näki — eikä mitään muuta tarpeellista.
+   *
+   * MIKSI KERROKSEN SAA JÄTTÄÄ POIS KOKONAAN. Viivatasolla on kolme
+   * asiaa: reitit, erikoispiirit ja maiden rajat. Piirit on poltettu
+   * pois jo 1.9.2026 (luettelon `viivataso.piirit` on epätosi), ja
+   * RAJAT PALLO PIIRTÄÄ ITSE VEKTORINA (js/pallovektorit.js
+   * VEKTORIT_RAJA_LEVEYS_CSS) — poltettu raja oli vektorin alla
+   * kaksinkertaisena musteena. Jäljelle jää siis vain reittiverkko, ja
+   * juuri se on se, minkä omistaja käski ottaa pois. Sama ratkaisu kuin
+   * RANTATASOLLA yllä: kun pallolla on sama viiva vektorina, poltettua
+   * ei ladata.
+   *
+   * MATKAN AIKANA VIUHKA TULEE ELÄVÄSTÄ KERROKSESTA — se on ainoa
+   * lähde, ja siksi PAATOKSET 8:n matkasessio (js/ui.js
+   * matkaSessioKesken) ratkaisee nyt yksin sen, mitä ruudulla on.
+   *
+   * TASOKARTTA ENNALLAAN: se latoo viivatason kuten ennenkin
+   * (js/laattapyramidi.js pyramidiViivaKerros) — siellä rajat eivät ole
+   * vektorina. Tämä portti on pallon oma.
+   */
   return {
-    pohja: true, ranta: Boolean(ranta), viiva: Boolean(viivat), nosto: Boolean(nostot), vari,
+    pohja: true, ranta: Boolean(ranta), viiva: false, nosto: Boolean(nostot), vari,
   };
 }
 

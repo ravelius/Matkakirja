@@ -45,11 +45,27 @@
  *      painallus ja liu'un sulku kartalta (ui.suljeLiuku, sama metodi
  *      jonka kytkeLiukuSulku kutsuu).
  *   7. KATSELUTILA JA BOTIN VUORO OVAT ENNALLAAN tyhjiä.
+ *   9. POLTETTUA REITTIVERKKOA EI LADATA PALLOLLE. Viivatason laatta
+ *      (.../viivat/z…) on oma tiedostonsa, ja pallon pitää pärjätä
+ *      ilman: rajat se piirtää vektorina, reitit elävänä kerroksena.
+ *      Mittarina on pyyntöjen määrä — poltettua mustetta ei voi lukea
+ *      kerroksista, koska se on laatan kankaassa.
+ *  10. SIVUNLATAUS KAUPUNGISSA on tyhjä: sessio ei ole tallenteessa,
+ *      eikä uusi sivukaan hae viivatason laattoja.
+ *
  *   8. LENTOKAARTEN SÄÄNTÖ EI MUUTU (omistaja 1.9.2026): Ateenassa
  *      lentolista auki → kaaria yli nollan, ilman listaa nolla. Tämä on
  *      erän tärkein vastavartio: viuhkan piilotus ei saa viedä kaaria.
  *
  * ── VASTAKOE ──────────────────────────────────────────────────────
+ *
+ * VARTIO 9:N VASTAKOE (erä 9, 14.9.2026): palauta js/pallolaatat.js
+ * lepokerroksenKerrokset-funktion `viiva: false` takaisin muotoon
+ * `viiva: Boolean(viivat)`. Silloin pallo latoo poltetun reittiverkon
+ * takaisin kartalle, viivalaattapyyntöjä tulee kymmeniä ja vartiot 9 ja
+ * 10b muuttuvat punaisiksi — vaikka vartiot 1–8 pysyvät vihreinä. Juuri
+ * se ero on tämän erän vika: elävä kerros oli oikein jo v1865:ssä,
+ * mutta ruudulla viuhka näkyi laatoista.
  *
  * Vartiot 1 ja 6 erottavat vanhan ja uuden säännön. Vanha ehto
  * (`liukuAuki || vaiheessa`) näyttäisi viuhkan jo lepotilassa ja jättäisi
@@ -165,7 +181,16 @@ const virheet = [];
 sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
 await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
 await sivu.route(/wikimedia\.org/, (r) => r.abort());
+/*
+ * POLTETTU REITTIVERKKO ON OMA MITTARINSA (vartio 9). Viivatason laatta
+ * on oma tiedostonsa (.../viivat/z<taso>/<sarake>/<rivi>), joten
+ * pyyntöjen määrä kertoo suoraan, latooko pallo poltettua reittiverkkoa
+ * kartalle — sitä ei voi lukea pallon kerroksista, koska poltettu muste
+ * on laatan kankaassa eikä datumina missään.
+ */
+let viivalaattaPyyntoja = 0;
 await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
+  if (/\/viivat\//.test(route.request().url())) viivalaattaPyyntoja += 1;
   const v = await ampariHaku(route.request().url());
   if (!v || v.status !== 200) { route.abort(); return; }
   route.fulfill({
@@ -477,6 +502,47 @@ if (auki) {
     JSON.stringify({ lentoEnnen, lentoLista }));
   vaadi('8b. ilman lentolistaa ei kaaria',
     lentoIlman.kaaria === 0, JSON.stringify(lentoIlman));
+
+  /* ---- 9. poltettu reittiverkko ei tule pallolle ----------------- */
+  /*
+   * TÄMÄ ON ERÄN 9 VARTIO (Raamattu KARTTAUUDISTUKSEN PAATOKSET 9 kohta
+   * 6, omistaja 14.9.2026: *"lisaksi reittiviuhka nakyy edelleen vaikka
+   * ei olla liikkumistilassa. korjaa se myos."*).
+   *
+   * Vartiot 1–8 mittaavat elävää kerrosta, ja ne olivat vihreitä jo
+   * v1865:ssä — silti viuhka näkyi ruudulla, koska REITTIVERKKO ON
+   * POLTETTU VIIVATASON LAATTOIHIN ja pallo latoi ne joka laatan
+   * kankaalle (js/pallolaatat.js lepokerroksenKerrokset). Poltettua
+   * mustetta ei voi mitata kerroksista; se mitataan siitä, ettei
+   * laattoja edes haeta.
+   */
+  tieto('9 viivalaattapyyntöjä koko ajon aikana', viivalaattaPyyntoja);
+  vaadi('9. poltettua reittiverkkoa ei ladata pallolle (0 viivalaattaa)',
+    viivalaattaPyyntoja === 0,
+    `pallo haki ${viivalaattaPyyntoja} viivatason laattaa`);
+
+  /* ---- 10. sivunlataus kaupungissa -------------------------------- */
+  /*
+   * TALLENNUKSESTA PALUU. Sessio ei ole tallenteessa (se on ruudun
+   * tila), joten kaupungissa seisova pelaaja saa tyhjän kartan myös
+   * sivunlatauksen jälkeen — ja koska viivalaskuri jatkuu latauksen yli,
+   * sama vartio 9 kattaa uuden sivun laatat.
+   */
+  await sivu.evaluate(() => { window.matkakirja.ui.game.save?.(); });
+  await sivu.goto(`${osoite}?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: 120000 });
+  await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: 120000 });
+  const uudelleen = await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta),
+    null, { timeout: 120000 }).then(() => true).catch(() => false);
+  await sivu.waitForTimeout(6000);
+  const lataus = uudelleen ? await lue() : null;
+  tieto('10 sivunlatauksen jälkeen', JSON.stringify(lataus));
+  vaadi('10. sivunlataus kaupungissa: ei viuhkaa eikä sessiota',
+    Boolean(lataus) && lataus.viivoja === 0 && lataus.helmia === 0
+      && lataus.matkaSessio === null,
+    JSON.stringify(lataus));
+  tieto('10 viivalaattapyyntöjä latauksen jälkeen', viivalaattaPyyntoja);
+  vaadi('10b. sivunlatauskaan ei hae viivatason laattoja',
+    viivalaattaPyyntoja === 0, `pallo haki ${viivalaattaPyyntoja} viivatason laattaa`);
 }
 
 vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
