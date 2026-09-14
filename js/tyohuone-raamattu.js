@@ -7404,6 +7404,22 @@ export const RAAMATTU = {
           + 'korjataan dpr 3:n varitaso-laattojen naantyminen (4/30 '
           + 'valmiina vs. dpr 1:n 20/24), joka nakyi repaleina. Kerma-'
           + 'naamion ennenaikainen piirto korjattu erikseen (#2452).',
+        'IPHONE: ISOISAN JA PULUN TEKSTIT PIILOON, LIIKU-NAPPI PIILOON '
+          + 'LUENNAN AJAKSI JA HUOMAAMATTOMAMMAKSI (omistaja 14.9.2026 klo '
+          + '20.30 UTC, iPhonen vaakakuva Ateenan saapumisesta, '
+          + 'sanatarkasti: "Iphonella voisi piilottaa isoisan ja pulun '
+          + 'tekstit. Lisaksi piilota tuo liiku nappi luennan ajaksi. Se '
+          + 'voisi olla lisaksi vahan huomaamattomampi nakyessaan."): 1) '
+          + 'PUHELIMELLA (iPhone, seka pysty etta vaaka) saapumiskortin '
+          + 'isoisan paivakirjateksti ja pulun puhekupla EIVAT nay - '
+          + 'luenta kuullaan, kuva ja kuvateksti nakyvat; tyopoydalla '
+          + 'tekstit pysyvat. 2) LIIKU-NAPPI on piilossa luennan ajan '
+          + '(saapumiskortin ja Livian repliikin keston) ja tulee '
+          + 'nakyviin vasta niiden jalkeen. 3) Nakyessaan Liiku on '
+          + 'huomaamattomampi: pienempi, hillitympi vari/kontrasti, '
+          + 'kartan sävyyn - ei kirkas keltainen laatta; tarkka mitoitus '
+          + 'mittaamalla, kaksi vaihtoehtoa omistajalle kuvina. Tila: tyo '
+          + 'Opus-agentilla.',
         'Saapumiskortti: luettu matkakirjamerkintä + esittely '
           + 'kuvineen.',
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
