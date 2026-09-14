@@ -128,13 +128,17 @@ test('kohtaamispisteen sivusiirto: laatan vieressä koilliseen, kaukana ei siirt
   assert.deepEqual(fokuspisteenSiirto(city, null), { x: 0, y: 0 });
 });
 
-test('tasokartta ja pallo lukevat saman siirron: merkki ja osuma siirtyvät, data ei', () => {
+test('tasokartta ja pallo siirtävät merkin ja osuman, eivät dataa', () => {
   const fokuspiste = lue('../js/fokuspiste.js');
   assert.match(fokuspiste, /const \{ x: sx, y: sy \} = fokuspisteenSiirto\(city, piste\);/);
   assert.match(fokuspiste, /x: x \+ sx, y: piste\.y \+ sy/);
   const nostot = lue('../js/pallolauta/nostot.js');
-  assert.match(nostot, /import \{ avaaFokuspiste, fokuspisteKuvio, fokuspisteenSiirto \} from '\.\.\/fokuspiste\.js';/);
-  assert.match(nostot, /const siirto = fokuspisteenSiirto\(city, piste\);\n\s*const a = asteet\(\{ x: piste\.x \+ siirto\.x, y: piste\.y \+ siirto\.y \}\);/);
+  assert.match(nostot, /import \{ avaaFokuspiste, fokuspisteKuvio, fokuspisteenAsteet \} from '\.\.\/fokuspiste\.js';/);
+  // Pallo mittaa ASTEISSA ja kaupungin PIIRRETYSTÄ pallopisteestä
+  // (tests/osumareititys.test.mjs mittaa, mitä se tekee pikseleinä).
+  assert.match(nostot, /const a = fokuspisteenAsteet\(asteet\(\{ x: city\.x, y: city\.y \}\), asteet\(piste\)\);/);
+  // Laudan yksikköinen siirto ei enää ohjaa palloa.
+  assert.doesNotMatch(nostot, /fokuspisteenSiirto\(/);
   // Pallon osumatesti lukee saman rivin lat/lng:n (lahinMerkki → nostot.osumat()).
   assert.match(nostot, /lat: a\.lat,\n\s*lng: a\.lon,/);
   const lauta = lue('../js/pallolauta/lauta.js');

@@ -83,6 +83,7 @@ import {
 // Tarkistusapu: kaupungit, joiden uusi pulukulku on kuunneltavissa.
 import { livianKorostetutKaupungit } from '../liviapuhe.js';
 import { asemoiFokuskohde, kohteidenNykyinenIso } from '../fokuskohteet.js';
+import { FOKUSPISTE_MUSTE_R_PX } from '../fokuspiste.js';
 import {
   laudaltaAsteiksi, maapaneeliKartassa, nollaaFokusmitat, paivitaFokusmitat, pallolaudanMaa,
 } from '../fokusmitat.js';
@@ -2111,6 +2112,28 @@ export async function avaaPallolauta(ui) {
     }
     const voittaja = lahin(lat, lng, ehdokkaat, (e) => e.lat, (e) => e.lng);
     /*
+     * KOHTAAMISPISTE PITÄÄ PAIKKANSA MYÖS KAUPUNKIPISTEEN OMASSA
+     * MUSTEKILPAILUSSA (mitattu 14.9.2026). Alempana oleva sääntö
+     * ("KOHTAAMISPISTE PITÄÄ PAIKKANSA") lukee vain KILPAILUN
+     * VOITTAJAA, joten se ei koskaan ehdi puhua silloin, kun jokin
+     * kaupunkipiste sattuu olemaan pikselin verran lähempänä: alla
+     * oleva kaupunkisääntö palauttaa kaupungin ennen sitä. Juuri niin
+     * kävi Budapestissa, Barcelonassa, Marseillessa ja Helsingissä,
+     * joissa vihreä piste oli 0,1–1,9 px kaupungin merkistä.
+     *
+     * SÄÄNTÖ ON SAMA MYÖNNYTYS KUIN KAUPUNGILLA JA TURISTI-INFOLLA:
+     * sormi merkin OMAN MUSTEEN päällä tarkoittaa sitä merkkiä. Säde on
+     * pisteen oma hehkukehä (js/fokuspiste.js FOKUSPISTE_MUSTE_R_PX),
+     * ei 44 px:n sormivara — muuten piste nielaisisi myös naapurissa
+     * olevan kaupungin napautuksen. Sivusiirto hoitaa erottelun
+     * (fokuspisteenAsteet); tämä on varmistus sille, että jos merkit
+     * silti osuvat päällekkäin, VOITTAA SE, JOTA SORMI KOSKETTAA.
+     */
+    const kohtaamispiste = ehdokkaat.find((e) => e.o?.perhe === 'piste');
+    if (kohtaamispiste && lahella(lat, lng, kohtaamispiste, FOKUSPISTE_MUSTE_R_PX)) {
+      return kohtaamispiste;
+    }
+    /*
      * KAUPUNKIPISTEEN OMA MUSTE VOITTAA LAPUN. Jos sormi on pisteen
      * päällä, pelaaja tähtäsi kaupunkiin — sama myönnytys kuin
      * aarrepisteen sivusiirrolla (js/fokuspiste.js). Kaikkialla muualla
@@ -2125,7 +2148,7 @@ export async function avaaPallolauta(ui) {
     /*
      * KOHTAAMISPISTE PITÄÄ PAIKKANSA. Vihreä tuike on kevyen kulun oma
      * merkki, joka on jo kerran siirretty sivuun nappulan alta
-     * (js/fokuspiste.js fokuspisteenSiirto, omistaja 6.9.2026:
+     * (js/fokuspiste.js fokuspisteenAsteet, omistaja 6.9.2026:
      * *"aarteen piste syttyy liian lähelle ateenaa, ei pysty
      * painamaan"*) — se ei väisty vielä toistamiseen naapurin nimiön
      * alta. Lappu voittaa siis vain toisen noston tai tyhjän.
