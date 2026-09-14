@@ -490,18 +490,10 @@ export function luoPallokamera({
    * docs/raportit/viesti-fable-zoomi2-20260914.md.
    */
   const PERIMETRIN_NAYTTEET = 12;
-  const pallonKorkeus = (bbox, vara = 1) => {
+  /** Laatikon kehän näytepisteet asteina — sama kehä kaikille mitoille. */
+  const kehanAsteet = (bbox) => {
     if (!(bbox?.w > 0) || !(bbox?.h > 0)) return null;
-    const keski = laudaltaAsteiksi(lauta, bbox.x + bbox.w / 2, bbox.y + bbox.h / 2);
-    if (!keski || !Number.isFinite(keski.lat)) return null;
-    const rad = Math.PI / 180;
-    const lat0 = keski.lat * rad;
-    const lng0 = (keski.lon ?? keski.lng) * rad;
-    const sin0 = Math.sin(lat0);
-    const cos0 = Math.cos(lat0);
-    const T = Math.tan((PALLO_FOV / 2) * rad);
-    const A = Math.max(0.01, kuvasuhde());
-    let etaisyys = 0; // vaadittu (1 + korkeus)
+    const ulos = [];
     for (let i = 0; i <= PERIMETRIN_NAYTTEET; i += 1) {
       const t = i / PERIMETRIN_NAYTTEET;
       const pisteet = [
@@ -512,20 +504,196 @@ export function luoPallokamera({
       ];
       for (const [bx, by] of pisteet) {
         const a = laudaltaAsteiksi(lauta, bx, by);
-        if (!a || !Number.isFinite(a.lat)) continue;
-        const lat = a.lat * rad;
-        const dLng = ((a.lon ?? a.lng) - (keski.lon ?? keski.lng)) * rad;
-        const sinP = Math.sin(lat);
-        const cosP = Math.cos(lat);
-        const syvyysOsa = sinP * sin0 + cosP * cos0 * Math.cos(dLng); // cos(kaari)
-        const sivu = Math.abs(cosP * Math.sin(dLng));
-        const pysty = Math.abs(sinP * cos0 - cosP * sin0 * Math.cos(dLng));
-        const tarve = syvyysOsa + vara * Math.max(sivu / (T * A), pysty / T);
-        if (tarve > etaisyys) etaisyys = tarve;
+        if (a && Number.isFinite(a.lat)) ulos.push({ lat: a.lat, lng: a.lon ?? a.lng });
       }
     }
+    return ulos.length ? ulos : null;
+  };
+
+  /**
+   * Vaadittu etäisyys (1 + korkeus) annetusta keskipisteestä, AKSELI
+   * KERRALLAAN: 'X' = vain vaakasuunta sitoo, 'Y' = vain pystysuunta,
+   * null = molemmat (PÄÄTÖKSET 12:n rajaus). Kaava on yllä kuvattu
+   * suljettu muoto; iterointia ei tarvita.
+   */
+  const kehanTarve = (pisteet, lat0, lng0, vara, akseli = null) => {
+    const rad = Math.PI / 180;
+    const sin0 = Math.sin(lat0 * rad);
+    const cos0 = Math.cos(lat0 * rad);
+    const T = Math.tan((PALLO_FOV / 2) * rad);
+    const A = Math.max(0.01, kuvasuhde());
+    let etaisyys = 0;
+    for (const piste of pisteet) {
+      const lat = piste.lat * rad;
+      const dLng = (piste.lng - lng0) * rad;
+      const sinP = Math.sin(lat);
+      const cosP = Math.cos(lat);
+      const cosDl = Math.cos(dLng);
+      const syvyysOsa = sinP * sin0 + cosP * cos0 * cosDl; // cos(kaari)
+      const sivu = Math.abs(cosP * Math.sin(dLng)) / (T * A);
+      const pysty = Math.abs(sinP * cos0 - cosP * sin0 * cosDl) / T;
+      let osa = Math.max(sivu, pysty);
+      if (akseli === 'X') osa = sivu;
+      else if (akseli === 'Y') osa = pysty;
+      const tarve = syvyysOsa + vara * osa;
+      if (tarve > etaisyys) etaisyys = tarve;
+    }
+    return etaisyys;
+  };
+
+  const pallonKorkeus = (bbox, vara = 1) => {
+    const pisteet = kehanAsteet(bbox);
+    if (!pisteet) return null;
+    const keski = laudaltaAsteiksi(lauta, bbox.x + bbox.w / 2, bbox.y + bbox.h / 2);
+    if (!keski || !Number.isFinite(keski.lat)) return null;
+    const etaisyys = kehanTarve(pisteet, keski.lat, keski.lon ?? keski.lng, vara);
     if (!(etaisyys > 1)) return null;
     return Math.min(PALLO_KORKEUS_MAX, etaisyys - 1);
+  };
+
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * PUHELIN PYSTYSSÄ: SAAPUMISNÄKYMÄ SOVITETAAN KORKEUTEEN (erä 14)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * Omistaja 14.9.2026 (Raamattu KARTTAUUDISTUKSEN PÄÄTÖKSET 17): kun
+   * ruudun kuvasuhde on KAPEAMPI kuin maan laatikon kuvasuhde pallolla,
+   * saapumisnäkymä sovitetaan KORKEUTEEN — maa täyttää ruudun
+   * pystysuunnassa (maapaneeli mukana laatikossa), pelaajan kaupunki
+   * keskellä, ja maan itä- ja länsireuna jäävät aluksi ruudun
+   * ulkopuolelle. Pelaaja panoroi niihin, ja panorointiraja pitää
+   * laatikon reunan ruudun laidassa tai sen ulkopuolella.
+   *
+   * MIKSI (mitattu 14.9.2026, viesti-fable-karttabugi-20260914.md):
+   * Ranskan laatikko on pallolla noin 10,2° × 9,7°, mutta puhelimen
+   * kotelo on pystyssä 0,48. Molempiin suuntiin sovitettuna X sitoo ja
+   * pystyyn jää 59,3 % tyhjää — ja se tyhjä täyttyy naapurimailla
+   * (Britannia, Espanja, Marokko). Korkeuteen sovitettuna laatikko on
+   * 138 % ruudun leveydestä.
+   *
+   * SITOVA AKSELI MITATAAN, EI ARVATA: sama `kehanTarve` akseli
+   * kerrallaan laatikon keskipisteestä. Jos X vaatii kauemmas kuin Y,
+   * laatikko on ruutua leveämpi — täsmälleen ehto *"ruudun kuvasuhde <
+   * laatikon kuvasuhde pallolla"*. Muuten palautetaan null ja
+   * PÄÄTÖKSET 12:n rajaus jää voimaan sellaisenaan (työpöytä, vaaka).
+   *
+   * X-KESKIPISTE ON PELAAJAN KAUPUNKI, RAJATTUNA. Keskipiste ei saa
+   * mennä niin lähelle laatikon reunaa, että reuna tulisi ruudun
+   * sisään: sallittu vyöhyke on [länsireuna + puoli, itäreuna − puoli].
+   * Sama `puoli` on panoroinnin X-raja. Näin myös reunakaupunki
+   * (GRC:n Ateena) pysyy ruudulla ilman omaa erikoistapausta —
+   * PÄÄTÖSJONON *"painota pelaajan kaupunkia"* ratkeaa tässä.
+   */
+  const KORKEUSSOVITUKSEN_HAARUKAT = 24;
+  const KORKEUSSOVITUKSEN_KIERROKSET = 3;
+  /**
+   * Pienin |Δlng| (asteina) laatikon reunameridiaanista kameran
+   * keskipisteeseen, jolla KOKO reunameridiaani on vielä ruudun
+   * laidassa tai sen ulkopuolella, kun kamera on etäisyydellä
+   * `etaisyys` (= 1 + korkeus).
+   *
+   * Ehto on pisteittäin `syvyysOsa + sivu ≥ etaisyys` (sama suljettu
+   * kaava varalla 1, vain X-akseli) ja se on u:ssa KASVAVA koko
+   * käytännön alueella — kääntyy vasta kun tan u = 1/(T·A·cos φ0), eli
+   * puhelimella u ≈ 80° — joten haarukointi on turvallinen.
+   */
+  const reunanPuoli = (latMin, latMax, lat0, etaisyys) => {
+    const rad = Math.PI / 180;
+    const sin0 = Math.sin(lat0 * rad);
+    const cos0 = Math.cos(lat0 * rad);
+    const T = Math.tan((PALLO_FOV / 2) * rad);
+    const A = Math.max(0.01, kuvasuhde());
+    const pieninTarve = (u) => {
+      const cosDl = Math.cos(u * rad);
+      const sinDl = Math.sin(u * rad);
+      let pienin = Infinity;
+      for (let i = 0; i <= PERIMETRIN_NAYTTEET; i += 1) {
+        const lat = (latMin + ((latMax - latMin) * i) / PERIMETRIN_NAYTTEET) * rad;
+        const sinP = Math.sin(lat);
+        const cosP = Math.cos(lat);
+        const tarve = sinP * sin0 + cosP * cos0 * cosDl + (cosP * sinDl) / (T * A);
+        if (tarve < pienin) pienin = tarve;
+      }
+      return pienin;
+    };
+    let ala = 0;
+    let yla = 90;
+    if (!(pieninTarve(yla) >= etaisyys)) return yla;
+    for (let i = 0; i < KORKEUSSOVITUKSEN_HAARUKAT; i += 1) {
+      const keski = (ala + yla) / 2;
+      if (pieninTarve(keski) >= etaisyys) yla = keski;
+      else ala = keski;
+    }
+    return yla;
+  };
+
+  /** Pelaajan kaupungin asteet (X-keskipisteen toive) tai null. */
+  const pelaajanAsteet = () => {
+    const { game } = ui ?? {};
+    const pos = game?.player?.pos;
+    if (!pos || !game.board) return null;
+    const kohta = pixelOf(game.board, pos);
+    if (!Number.isFinite(kohta?.x)) return null;
+    const a = laudaltaAsteiksi(lauta, kohta.x, kohta.y);
+    return a && Number.isFinite(a.lat) ? { lat: a.lat, lng: a.lon ?? a.lng } : null;
+  };
+
+  /**
+   * Korkeuteen sovitettu saapumisnäkymä tai null, jos ruutu ei ole
+   * laatikkoa kapeampi (silloin PÄÄTÖKSET 12:n rajaus on voimassa).
+   * Palauttaa korkeuden, keskipisteen ja laatikon reunat asteina.
+   */
+  const korkeuteenSovitus = (bbox, vara = 1) => {
+    const pisteet = kehanAsteet(bbox);
+    if (!pisteet) return null;
+    const keski = laudaltaAsteiksi(lauta, bbox.x + bbox.w / 2, bbox.y + bbox.h / 2);
+    const lansi = laudaltaAsteiksi(lauta, bbox.x, bbox.y + bbox.h / 2);
+    const ita = laudaltaAsteiksi(lauta, bbox.x + bbox.w, bbox.y + bbox.h / 2);
+    if (!keski || !lansi || !ita || !Number.isFinite(keski.lat)) return null;
+    const lat0 = keski.lat;
+    const lngKeski = keski.lon ?? keski.lng;
+    const lngW = lansi.lon ?? lansi.lng;
+    const lngE = ita.lon ?? ita.lng;
+    // Päivämäärärajan yli kääntyvä laatikko: turvallinen tila on vanha sääntö.
+    if (!(lngE > lngW) || !(lngE - lngW < 180)) return null;
+    const tarveX = kehanTarve(pisteet, lat0, lngKeski, vara, 'X');
+    const tarveY = kehanTarve(pisteet, lat0, lngKeski, vara, 'Y');
+    if (!(tarveX > tarveY)) return null;
+    let latMin = Infinity;
+    let latMax = -Infinity;
+    for (const piste of pisteet) {
+      if (piste.lat < latMin) latMin = piste.lat;
+      if (piste.lat > latMax) latMax = piste.lat;
+    }
+    const toive = pelaajanAsteet()?.lng ?? lngKeski;
+    let lng0 = Math.min(lngE, Math.max(lngW, toive));
+    let etaisyys = 0;
+    let puoli = 0;
+    /*
+     * KOLME KIERROSTA: korkeus riippuu keskipisteestä (kaari kasvaa,
+     * kun keskipiste siirtyy reunaa kohti) ja sallittu vyöhyke
+     * korkeudesta. Kiinteä piste löytyy muutamalla kierroksella.
+     */
+    for (let i = 0; i < KORKEUSSOVITUKSEN_KIERROKSET; i += 1) {
+      etaisyys = kehanTarve(pisteet, lat0, lng0, vara, 'Y');
+      puoli = reunanPuoli(latMin, latMax, lat0, etaisyys);
+      const alaraja = lngW + puoli;
+      const ylaraja = lngE - puoli;
+      lng0 = ylaraja > alaraja
+        ? Math.min(ylaraja, Math.max(alaraja, toive))
+        : (lngW + lngE) / 2;
+    }
+    if (!(etaisyys > 1)) return null;
+    return {
+      korkeus: Math.min(PALLO_KORKEUS_MAX, etaisyys - 1),
+      lat: lat0,
+      lng: lng0,
+      lngW,
+      lngE,
+      latMin,
+      latMax,
+      puoli,
+    };
   };
 
   /** Kohteen asteet ja korkeus laudan yksiköistä (ks. Kartta.kameranKohde). */
@@ -536,6 +704,7 @@ export function luoPallokamera({
     let y = kohde.y;
     let leveys = kohde.leveys ?? null;
     let bboxKorkeus = null;
+    let sovitettu = null;
     if (kohde.bbox) {
       /*
        * LAATIKKO MAHTUU MOLEMPIIN SUUNTIIN. Korkeusehto muutetaan
@@ -549,9 +718,14 @@ export function luoPallokamera({
       x = bbox.x + bbox.w / 2;
       y = bbox.y + bbox.h / 2;
       const vara = 1 + 2 * marginaali;
-      // Korkeus pallon perspektiivistä (erä 13, ks. pallonKorkeus):
-      // laudan Mercator-yksiköt nostivat kameran noin 1,35× liian kauas.
-      bboxKorkeus = pallonKorkeus(bbox, vara);
+      /*
+       * KAPEA RUUTU SOVITETAAN KORKEUTEEN (erä 14, PÄÄTÖKSET 17); muuten
+       * korkeus pallon perspektiivistä molempiin suuntiin (erä 13, ks.
+       * pallonKorkeus): laudan Mercator-yksiköt nostivat kameran noin
+       * 1,35× liian kauas.
+       */
+      sovitettu = korkeuteenSovitus(bbox, vara);
+      bboxKorkeus = sovitettu ? sovitettu.korkeus : pallonKorkeus(bbox, vara);
       leveys = Math.max(bbox.w * vara, (bbox.h * vara * ruudunLeveys()) / ruudunKorkeus());
     } else if (kohde.kerroin > 0) {
       leveys = laudanLeveys / kohde.kerroin;
@@ -564,6 +738,8 @@ export function luoPallokamera({
       lat = asteet.lat;
       lng = asteet.lon;
     }
+    // Korkeuteen sovitettaessa X-keskipiste on pelaajan kaupunki (rajattuna).
+    if (sovitettu) { lat = sovitettu.lat; lng = sovitettu.lng; }
     const pyydetty = kohde.korkeus
       ?? bboxKorkeus
       ?? (leveys > 0 ? korkeus(leveys) : nyt.altitude);
@@ -734,7 +910,8 @@ export function luoPallokamera({
     // SAMA KAAVA KUIN SAAPUMISELLA (erä 13): katto lasketaan
     // `pallonKorkeus`illa, jotta uloin sallittu näkymä ja
     // saapumisnäkymä ovat kertoimen 1,02 kohdalla sama näkymä.
-    const tarve = pallonKorkeus(bbox, kerroin);
+    // Korkeuteen sovitetulla ruudulla katto on sama korkeus kuin saapumisella.
+    const tarve = korkeuteenSovitus(bbox, kerroin)?.korkeus ?? pallonKorkeus(bbox, kerroin);
     if (!(tarve > 0)) return null;
     const max = Math.min(PALLO_KORKEUS_MAX, Math.max(korkeusMin(), tarve));
     // Katto ei saa mennä lattian alle: pikkuvaltiossa (Singapore)
@@ -774,6 +951,37 @@ export function luoPallokamera({
     const lngMax = Math.max(a.lon, b.lon);
     const lngOk = Number.isFinite(lngMin) && Number.isFinite(lngMax)
       && lngMax - lngMin < 180;
+    /*
+     * AKSELIKOHTAINEN X-RAJA KORKEUTEEN SOVITETULLA RUUDULLA (erä 14).
+     * Laatikko on silloin ruutua leveämpi, joten kertoimen 1,3 vyöhyke
+     * päästäisi maan reunan ruudun sisään ja sen taakse näkyisi
+     * naapurimaita. Raja on se, mikä se luonnostaan on: keskipiste saa
+     * liikkua vain niin lähelle reunaa, että reuna pysyy ruudun
+     * laidassa (`reunanPuoli`). Y jää kertoimen varaan kuten ennen —
+     * pystysuunnassa laatikko jo täyttää ruudun.
+     *
+     * LUKU RIIPPUU ZOOMISTA: lähempänä vyöhyke on leveämpi, joten maan
+     * reunalle pääsee myös sisäzoomilla. Siksi raja merkitään
+     * ELÄVÄKSI — js/pallolauta/lauta.js ei muista sitä laatikon mukana.
+     */
+    const sovitus = korkeuteenSovitus(bbox, ULOSZOOMAUKSEN_KERROIN);
+    if (sovitus) {
+      const nyt = pallo.pointOfView()?.altitude;
+      const puoli = reunanPuoli(
+        sovitus.latMin, sovitus.latMax, sovitus.lat,
+        1 + (nyt > 0 ? Math.min(nyt, sovitus.korkeus) : sovitus.korkeus),
+      );
+      const alaraja = sovitus.lngW + puoli;
+      const ylaraja = sovitus.lngE - puoli;
+      const keskiLng = (sovitus.lngW + sovitus.lngE) / 2;
+      return {
+        latMin,
+        latMax,
+        lngMin: ylaraja > alaraja ? alaraja : keskiLng,
+        lngMax: ylaraja > alaraja ? ylaraja : keskiLng,
+        elava: true,
+      };
+    }
     return {
       latMin,
       latMax,
