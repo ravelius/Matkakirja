@@ -29,7 +29,9 @@
  *   --repliikit a,b  vain nämä avaimet (avaus-1, paljastus-2,
  *                    mannerivihje-1, ateena-1, sofia-7). Tyhjä = kaikki.
  *   --pakota         generoi vaikka tiedosto on jo ämpärissä.
- *   --ei-vientia     generoi ja viimeistele, mutta jätä levylle.
+ *   --ei-vientia     VAIN kuivaan ajoon. Maksullinen generointi kieltäytyy
+ *                    tästä lipusta: raakatuotos on aina vietävä ämpäriin
+ *                    (Raamattu: ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA).
  *   --tempo <luku>   puheen nopeutus ffmpegillä (oletus 1,0 = ei mitään).
  *   --haku <nimi>    --aanet: listaa vain äänet, joiden nimessä on <nimi>.
  *                    Jos arvo on voice_id (20 merkkiä), haetaan nimi
@@ -102,7 +104,7 @@
 import { spawnSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import {
-  mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync,
+  copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, statSync, writeFileSync,
 } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
@@ -205,6 +207,18 @@ export const PULU_MALLI_OLETUS = 'eleven_v3';
 export const PULU_VAKAUS_OLETUS = 'natural';
 /** "flicker - cheerful fairy & sparkly sweetness" (omistajan valinta 12.9.2026). */
 export const PULU_AANI_OLETUS = 'piI8Kku0DcvcL6TTSeQt';
+/*
+ * ULOSTULOMUOTO 192 kbps (omistaja 14.9.2026, ElevenLabs Pro).
+ *
+ * Aiempi mp3_44100_128 vaati Pro-tason ohittamisen; nyt tilaus sallii
+ * 192 kbps:n. Kun putki ei enää koodaa uudelleen (LIVIA_KASITTELY),
+ * tämä on se AINOA koodaus, jonka ääni käy läpi — siksi sen laadulla
+ * on suora vaikutus lopputulokseen, toisin kuin ennen, jolloin
+ * korkeampi lähtölaatu olisi hukkunut toiseen 128 kbps sukupolveen.
+ * Vanhat, 128 kbps:llä generoidut kuitit pysyvät kelvollisina
+ * (ks. kohdista-pulu-eleet.mjs kelpaaUlostulomuoto).
+ */
+export const PULU_ULOSTULOMUOTO = 'mp3_44100_192';
 const MALLI = process.env.PULU_MALLI ?? PULU_MALLI_OLETUS;
 const TAGIT_KAYTOSSA = MALLI === 'eleven_v3';
 const VAKAUS = process.env.PULU_VAKAUS ?? PULU_VAKAUS_OLETUS;
@@ -220,14 +234,52 @@ const SPEED = 1.05;
  * suodatinketjusta, ei ajeta yksikkösuodattimena.
  */
 const TEMPO = 1.0;
-/** Lopputauko, jonka ffmpeg leikkaa naksahduksen kanssa pois. */
+/** Lopputauko. Käsittelyn ollessa pois ElevenLabs hoitaa sen itse. */
 const LOPPUTAUKO = ' <break time="1.0s" />';
+
+/*
+ * ------------------------------------------------------------------
+ * LIVIAN VIIMEISTELY ON POIS (omistaja 14.9.2026)
+ * ------------------------------------------------------------------
+ * Raamattu: "PULUN AANI: ELEVENLABSIN OLETUSASETUKSET, EI FFMPEG-
+ * KASITTELYA". Omistaja kuuli uusissa äänissä "pienen digitaalisen
+ * häiriön". Mitattu syy: ketju purki ElevenLabsin valmiin
+ * mp3_44100_128:n ja koodasi sen UUDELLEEN libmp3lamella samalla
+ * 128 kbps:llä — toinen häviöllinen sukupolvi. Mittaus 14.9.2026
+ * (kuusi Livia-mp3:a + kolme Horatiota): yksi ylimääräinen 128 kbps
+ * sukupolvi tuottaa virheen −25 dB signaaliin nähden, kun sama
+ * sukupolvi 320 kbps:llä jää −59…−71 dB:hen. Horation putki ei ole
+ * koskaan koodannut uudelleen (tiedostoissa vain ElevenLabsin oma
+ * Lavf-tunniste, Livian tiedostoissa myös Lavc-kooderitunniste), ja
+ * juuri Horation äänistä ei ole valitettu.
+ *
+ * Päätös: Livian mp3 viedään SELLAISENAAN — sama tavujono raaka- ja
+ * final-avaimeen, sama sha256. Ei leikkausta, ei häivytystä, ei
+ * loudnormia, ei atempoa, ei kaikua. Kesto mitataan dekooderilla
+ * pelkkää validointia varten. Vakio on lippu, jotta Horation puoli
+ * (tools/generoi-luennat.mjs) ja tehosteputki eivät muutu.
+ */
+export const LIVIA_KASITTELY = false;
 
 // ── kansiot ja vaatimukset ─────────────────────────────────────────
 
 const KOHDE_KANSIO = 'media/pulu';
 /** Mallin raaka tuotos talteen: uuden leikkauksen voi tehdä ilmaiseksi. */
 const RAAKA_KANSIO = 'media/pulu-raaka';
+/*
+ * RAAKATUOTOS ÄMPÄRIIN AINA (omistajan sitova sääntö 14.9.2026,
+ * Raamattu: "ALKUPERÄISET ÄÄNITIEDOSTOT SÄILYTETÄÄN AINA").
+ *
+ * Mallin oma tuotos on ainoa asia, josta on maksettu; viimeistely on
+ * ilmainen ja toistettava. Ennen tätä sääntöä raaka jäi vain ajajan
+ * levylle (media/pulu-raaka on .gitignoressa) ja katosi Actions-ajon
+ * mukana, joten korjattu leikkaus vaati uuden maksullisen kutsun.
+ * Nyt raaka menee ämpäriin erätunnuksella versionoituun avaimeen
+ * ENNEN viimeistelyä: avain on eräkohtainen eikä mikään ajo voi
+ * kirjoittaa toisen erän raakaa yli. Jos vienti ei ole käytössä tai
+ * se epäonnistuu, ajo kaatuu — hiljaista jatkamista ei ole.
+ */
+const RAAKA_AMPARI_ALIKANSIO = 'raaka';
 /** Eräkohtaiset kuitit eivät korvaa koko repertuaarin manifestia. */
 const KUITTI_KANSIO = 'media/pulu-kuitit';
 /** Manifestin tiedostonimi ämpärissä. */
@@ -253,15 +305,17 @@ export function kokoaTuotantokuitti(rivit, {
   retryReason = null, status = 'planned', tulokset = new Map(), staged = false,
 } = {}) {
   if (!sourceCommit) throw new Error('tuotantokuitti vaatii sourceCommit-tunnuksen');
+  // Kuitti kertoo, mitä rajapinnalle OIKEASTI lähetetään: pois
+  // jätetty kenttä on null, ei vanha vakio (muuten kuitti valehtelisi).
   const asetukset = {
-    stability, similarityBoost: SIMILARITY, style: STYLE,
-    useSpeakerBoost: true, speed: TAGIT_KAYTOSSA ? null : SPEED,
+    stability, similarityBoost: null, style: null,
+    useSpeakerBoost: null, speed: TAGIT_KAYTOSSA ? null : SPEED,
   };
-  const postprocess = {
+  const postprocess = LIVIA_KASITTELY ? {
     silenceTrim: true, targetLufs: TAVOITE_LUFS, lufsTolerance: LUFS_TOLERANSSI,
     fadeSeconds: HAIVYTYS_S, tailPaddingSeconds: HANNAN_PADDING_S, tempo,
     arrivalEchoSeconds: KAIUN_KESTO,
-  };
+  } : { kind: 'none' };
   const suunnitelma = rivit.map((rivi) => ({
     utteranceKey: rivi.avain,
     visibleTextSha256: sha256(Buffer.from(rivi.teksti, 'utf8')),
@@ -291,7 +345,7 @@ export function kokoaTuotantokuitti(rivit, {
         voiceId,
         model,
         settings: asetukset,
-        outputFormat: 'mp3_44100_128',
+        outputFormat: PULU_ULOSTULOMUOTO,
         stagingObjectKey: staged ? `${batchPrefix}/${rivi.nimi}` : `${ampariKansio()}/${rivi.nimi}`,
         finalObjectKey: staged ? `${finalPrefix}/${rivi.nimi}` : `${ampariKansio()}/${rivi.nimi}`,
         promotionStatus: staged ? 'pending-code-deploy' : 'not-required',
@@ -1000,6 +1054,42 @@ export function ampariKansio() {
 }
 
 /**
+ * Raakatuotosten ämpärikansio: eräkohtainen, jotta kaksi ajoa ei voi
+ * kirjoittaa toistensa alkuperäisiä yli. Raakaa ei koskaan poisteta
+ * eikä ylikirjoiteta (Raamattu 14.9.2026).
+ *
+ * @param {string} kansio ampariKansio()-juuri, esim. 'aanet/pulu'
+ * @param {string} batchId tuotantokuitin batchId
+ */
+export function raakaAmpariKansio(kansio, batchId) {
+  // Erätunnus on aina `pulu-<hex>`. Muu hylätään eikä siivota: siivottu
+  // tunnus voisi törmätä toisen erän kanssa ja ylikirjoittaa sen raa'an.
+  if (!/^[a-zA-Z0-9_-]+$/.test(String(batchId ?? ''))) {
+    throw new Error(`raakavienti vaatii kelvollisen erätunnuksen, sai: ${batchId}`);
+  }
+  return `${kansio}/${RAAKA_AMPARI_ALIKANSIO}/${batchId}`;
+}
+
+/**
+ * Saako maksullinen generointi alkaa? Palauttaa syyn merkkijonona,
+ * jos ei saa, muuten null. Erotettu funktioksi, jotta testi voi
+ * kaataa itsensä ilman API-avainta ja ilman ämpäriä.
+ *
+ * @param {{ toiminto: string, vienti: boolean }} liput tulkitseArgumentit()
+ */
+export function raakavientiEste(liput) {
+  if (liput?.toiminto === 'kuiva' || liput?.toiminto === 'aanet') return null;
+  if (!liput?.vienti) {
+    return 'maksullinen generointi ei ole sallittu ilman raakavientiä: '
+      + '--ei-vientia jättäisi mallin alkuperäisen tuotoksen vain ajajan levylle. '
+      + 'Omistajan sääntö 14.9.2026 (Raamattu: ALKUPERÄISET ÄÄNITIEDOSTOT '
+      + 'SÄILYTETÄÄN AINA) vaatii raakatiedoston ämpäriin ennen käsittelyä. '
+      + 'Käytä --kuiva, jos haluat vain katsoa mitä ajettaisiin.';
+  }
+  return null;
+}
+
+/**
  * MANIFESTIN MUOTO. Yksi rivi per repliikki; `kesto` on valmiin
  * äänitteen pituus sekunteina ja null, jos sitä ei tässä ajossa
  * generoitu (ohitettu tai rajattu pois).
@@ -1298,18 +1388,22 @@ async function haeAanet(avain, haku = '') {
 
 /** Yksi maksullinen kutsu: yksi repliikki levylle. */
 async function haeApista(puhe, aani, avain, kohde) {
-  const osoite = `${PUHE_OSOITE}/${aani}?output_format=mp3_44100_128`;
+  const osoite = `${PUHE_OSOITE}/${aani}?output_format=${PULU_ULOSTULOMUOTO}`;
   const vastaus = await fetch(osoite, {
     method: 'POST',
     headers: { 'xi-api-key': avain, 'Content-Type': 'application/json' },
     body: JSON.stringify({
       text: puhe + LOPPUTAUKO,
       model_id: MALLI,
+      /*
+       * ELEVENLABSIN OMAT OLETUKSET (omistaja 14.9.2026). Vain
+       * stability annetaan; similarity_boost, style ja
+       * use_speaker_boost jätetään pois pyynnöstä kokonaan, jolloin
+       * rajapinta käyttää omia oletuksiaan. Malli (eleven_v3), ääni
+       * (Flicker) ja tekstin tagit pysyvät ennallaan.
+       */
       voice_settings: {
         stability: STABILITY,
-        similarity_boost: SIMILARITY,
-        style: STYLE,
-        use_speaker_boost: true,
         ...(TAGIT_KAYTOSSA ? {} : { speed: SPEED }),
       },
     }),
@@ -1433,17 +1527,27 @@ function teeKaiku(lahde, kohde) {
   return kestoSekunteina(kohde);
 }
 
+/** Kestorajat erikseen: ainoa tarkistus, kun käsittely on pois. */
+export function tarkistaKesto(pituus) {
+  return (pituus < KESTO_MIN_S || pituus > KESTO_MAX_S)
+    ? [`kesto ${pituus.toFixed(2)} s ei ole välillä ${KESTO_MIN_S}–${KESTO_MAX_S} s`] : [];
+}
+
 /** Valmiin äänitteen tarkistukset: kesto ja taso. */
 function tarkista(kohde) {
   const pituus = kestoSekunteina(kohde);
+  /*
+   * Käsittelyn ollessa pois taso on se, jonka malli antoi: sitä ei ole
+   * korjattu eikä sitä siksi mitata tavoitetta vasten. Kesto on ainoa
+   * validointi (omistaja 14.9.2026). ffprobe vain LUKEE keston eikä
+   * koske tavuihin — siksi se saa jäädä.
+   */
+  if (!LIVIA_KASITTELY) return { pituus, taso: null, virheet: tarkistaKesto(pituus) };
   const taso = tulkitseEbur128(aja('ffmpeg', [
     '-hide_banner', '-v', 'info', '-i', kohde, '-af', 'ebur128=peak=true',
     '-f', 'null', '-',
   ]).loki);
-  const virheet = [];
-  if (pituus < KESTO_MIN_S || pituus > KESTO_MAX_S) {
-    virheet.push(`kesto ${pituus.toFixed(2)} s ei ole välillä ${KESTO_MIN_S}–${KESTO_MAX_S} s`);
-  }
+  const virheet = tarkistaKesto(pituus);
   if (taso === null) {
     // Alle sekunnin huudahduksesta ebur128 ei anna integroitua tasoa;
     // taso on jo korjattu huipun mukaan (viimeistele), joten se ei ole virhe.
@@ -1524,6 +1628,15 @@ async function main() {
       + 'koko repertuaaria ei generoida yhdellä vahinkokomennolla.');
     process.exit(1);
   }
+  /*
+   * RAAKAVIENTI ON PAKOLLINEN. Tarkistus tehdään ennen kuittia ja
+   * ennen yhtäkään API-kutsua, jotta kiellettyä ajoa ei makseta.
+   */
+  const este = raakavientiEste(liput);
+  if (este) {
+    console.error(este);
+    process.exit(1);
+  }
   const suunnitelmakuitti = kokoaTuotantokuitti(tyot, {
     sourceCommit, voiceId: liput.aani, tempo: liput.tempo,
     pakota: liput.pakota, retryReason: liput.retryReason, staged: rajattuEra,
@@ -1532,6 +1645,17 @@ async function main() {
   if (liput.toiminto === 'kuiva') {
     console.log('KUIVA AJO (--kuiva) — APIa ei kutsuta, ämpäriin ei viedä. '
       + `${tyot.length} repliikkiä, malli ${MALLI}, tempo ${liput.tempo}.`);
+    console.log(`  voice_settings: stability ${STABILITY} — similarity_boost, style ja `
+      + 'use_speaker_boost jätetään pois (ElevenLabsin omat oletukset, omistaja 14.9.2026).');
+    console.log(`  ulostulomuoto: ${PULU_ULOSTULOMUOTO} (ElevenLabs Pro, omistaja 14.9.2026).`);
+    console.log(`  jälkikäsittely: ${LIVIA_KASITTELY ? 'ffmpeg-ketju' : 'EI MITÄÄN — mallin mp3 '
+      + 'sellaisenaan, sama sha256 raaka- ja final-avaimessa'}.`);
+    console.log(`  raakatuotokset menisivät avaimeen ${
+      raakaAmpariKansio(kansio, suunnitelmakuitti.batchId)}/ :`);
+    for (const tyo of tyot) {
+      console.log(`    ${raakaAmpariKansio(kansio, suunnitelmakuitti.batchId)}/raaka-${tyo.nimi}`);
+    }
+    console.log('  raakavienti on pakollinen: --ei-vientia kaataa maksullisen ajon.');
     for (const tyo of tyot) {
       console.log(`\n${kansio}/${tyo.nimi}${tyo.kaikuNimi ? ` (+ ${tyo.kaikuNimi})` : ''}`);
       console.log(`  teksti (${tyo.merkit} merkkiä, puhe ~${tyo.arvioSekunteina} s, `
@@ -1606,6 +1730,9 @@ async function main() {
     console.log(`Suunnitelmakuitti tallennettu ennen API-kutsuja: ${vanha.url}`);
   }
 
+  const raakaKansioAmpari = raakaAmpariKansio(kansio, suunnitelmakuitti.batchId);
+  console.log(`Raakatuotokset viedään avaimeen ${raakaKansioAmpari}/ (ei koskaan ylikirjoiteta).`);
+
   const tyokansio = mkdtempSync(join(tmpdir(), 'pulu-'));
   const kestot = new Map();
   const kuittitulokset = new Map();
@@ -1641,9 +1768,44 @@ async function main() {
       const raakaKesto = kestoSekunteina(lahde);
       console.log(`   API: ${(tavut / 1024).toFixed(0)} kt → ${lahde}`);
 
-      const { leikattu, mitattu, korjaus } = viimeistele(lahde, kohde, tyokansio, liput.tempo);
-      console.log(`   leikkaus: ${leikattu.toFixed(2)} s, taso ${mitattu.taso.toFixed(1)} LUFS, `
-        + `korjaus ${korjaus.toFixed(2)} dB, tempo ${liput.tempo}`);
+      /*
+       * RAAKA ÄMPÄRIIN ENNEN KÄSITTELYÄ. Tämä on ainoa kohta, jossa
+       * mallin alkuperäinen tuotos on olemassa; viimeistely kirjoittaa
+       * eri tiedostoon, mutta ajon työkansio katoaa Actions-ajon
+       * mukana. Vienti ennen viimeistelyä tarkoittaa myös, että
+       * hylätynkin äänitteen raaka säilyy — juuri siitä uusi leikkaus
+       * tehdään ilmaiseksi.
+       */
+      const raakaNimi = `raaka-${tyo.nimi}`;
+      vieAmpariin(lahde, raakaNimi, raakaKansioAmpari);
+      const raakaLuku = ampariHead(raakaNimi, raakaKansioAmpari);
+      if (raakaLuku.koodi !== null && raakaLuku.koodi !== '200') {
+        throw new Error(`raakatiedoston vienti epäonnistui (${raakaLuku.url} → HTTP `
+          + `${raakaLuku.koodi}); ajoa ei jatketa, koska alkuperäinen katoaisi`);
+      }
+      const raakaTiedot = {
+        fileName: raakaNimi,
+        objectKey: `${raakaKansioAmpari}/${raakaNimi}`,
+        url: raakaLuku.url,
+        sha256: sha256(readFileSync(lahde)),
+        bytes: statSync(lahde).size,
+        actualDurationSeconds: Number(raakaKesto.toFixed(3)),
+      };
+      console.log(`   raaka talteen: ${raakaTiedot.url}`);
+
+      if (LIVIA_KASITTELY) {
+        const { leikattu, mitattu, korjaus } = viimeistele(lahde, kohde, tyokansio, liput.tempo);
+        console.log(`   leikkaus: ${leikattu.toFixed(2)} s, taso ${mitattu.taso.toFixed(1)} LUFS, `
+          + `korjaus ${korjaus.toFixed(2)} dB, tempo ${liput.tempo}`);
+      } else {
+        /*
+         * EI KÄSITTELYÄ: sama tavujono raakaan ja finaaliin. Pelkkä
+         * kopio, ei purkua eikä uudelleenkoodausta — juuri se toinen
+         * häviöllinen sukupolvi oli omistajan kuulema häiriö.
+         */
+        copyFileSync(lahde, kohde);
+        console.log('   ei käsittelyä (omistaja 14.9.2026): mallin mp3 sellaisenaan.');
+      }
 
       const tulos = tarkista(kohde);
       console.log(`   valmis: ${tulos.pituus.toFixed(2)} s, `
@@ -1653,11 +1815,7 @@ async function main() {
         virheita += 1;
         kuittitulokset.set(tyo.avain, {
           status: 'validation-failed', retryReason: tulos.virheet.join('; '),
-          rawArtifact: {
-            fileName: `raaka-${tyo.nimi}`,
-            sha256: sha256(readFileSync(lahde)), bytes: statSync(lahde).size,
-            actualDurationSeconds: Number(raakaKesto.toFixed(3)),
-          },
+          rawArtifact: raakaTiedot,
           finalArtifact: {
             fileName: tyo.nimi,
             sha256: sha256(readFileSync(kohde)), bytes: statSync(kohde).size,
@@ -1676,7 +1834,11 @@ async function main() {
       }
       const rivi = { kesto: Number(tulos.pituus.toFixed(2)), kaikuKesto: null };
       valmiit.push(tyo.nimi);
-      if (tyo.kaikuNimi) {
+      if (tyo.kaikuNimi && !LIVIA_KASITTELY) {
+        // Kaiku on ffmpeg-käsittelyä: se putoaa pois samalla päätöksellä
+        // (kaiku on muutenkin pois pelissä, js/liviapuhe.js LIVIAN_KAIKU).
+        console.log(`   kaikuversiota ${tyo.kaikuNimi} ei tehdä: käsittely on pois.`);
+      } else if (tyo.kaikuNimi) {
         /*
          * Saapumisrepliikin kaikuversio. Tasoa ei mitata: alun väistely
          * laskee integroitua tasoa tarkoituksella (ks. KAIKU
@@ -1693,11 +1855,7 @@ async function main() {
       kestot.set(tyo.avain, rivi);
       kuittitulokset.set(tyo.avain, {
         status: 'generated', retryReason: liput.retryReason ?? (liput.pakota ? 'forced-regeneration' : null),
-        rawArtifact: {
-          fileName: `raaka-${tyo.nimi}`,
-          sha256: sha256(readFileSync(lahde)), bytes: statSync(lahde).size,
-          actualDurationSeconds: Number(raakaKesto.toFixed(3)),
-        },
+        rawArtifact: raakaTiedot,
         finalArtifact: {
           fileName: tyo.nimi,
           sha256: sha256(readFileSync(kohde)), bytes: statSync(kohde).size,

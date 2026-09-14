@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1883, teksti: 'Ääniputki: raakatiedostot ämpäriin, 192 kbps' },
   { v: 1882, teksti: 'Kohdemaan raja muiden rajojen väriseksi, paksumpi' },
   { v: 1881, teksti: 'Livia: Ateena ja Sofia uudella putkella' },
   { v: 1880, teksti: 'Tasoituskerman reikä harventamattomasta rannasta' },
