@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "batch": {
+    "id": "horatio-773527843cfa4d9cc31b",
+    "sourceCommit": "439bf050af65b310f5cd85334a10fdf822197e3c",
+    "retryOf": "horatio-9ac94d7e1f8142beb972"
+  },
+  "cities": [
+    {
+      "cityId": "sisilia",
+      "source": "fokusvirta",
+      "outputPath": "assets/audio/puhe-fokus-matkakirja-sisilia.mp3",
+      "objectKeys": {
+        "staging": "audio/staging/horatio/horatio-773527843cfa4d9cc31b/puhe-fokus-matkakirja-sisilia.mp3",
+        "final": "audio/versions/horatio/439bf050af65/horatio-773527843cfa4d9cc31b/puhe-fokus-matkakirja-sisilia.mp3",
+        "live": null
+      },
+      "visibleText": {
+        "text": "Palermon nukketeatterissa puiset ritarit taistelivat ja yleisö huusi niille neuvoja. Sankari jäi vangiksi, ja tarina jatkuisi vasta seuraavana iltana. Ostin uuden lipun. Ei miestä voinut sinne jättää.",
+        "sha256": "448b9c1fb880ebe8080454b962939d6958436946562c14a0bb9e1b621959594d"
+      },
+      "ttsText": {
+        "text": "[curious] Palermon nukketeatterissa puiset ritarit taistelivat ja yleisö huusi niille neuvoja. Sankari jäi vangiksi, ja tarina jatkuisi vasta seuraavana iltana. [warmly] Ostin uuden lipun. Ei miestä voinut sinne jättää. <break time=\"1.0s\" />",
+        "sha256": "881f9394c041190f094739aa7355d9752077fc88d30cc90f18761be9a5e24bec"
+      },
+      "synthesis": {
+        "voiceId": "Sz0tRTEpybtDJ9ru2kgD",
+        "model": "eleven_v3",
+        "settings": {
+          "stability": 0.5
+        },
+        "outputFormat": "mp3_44100_128",
+        "postprocess": {
+          "kind": "none"
+        }
+      },
+      "generation": {
+        "status": "success",
+        "retryReason": null
+      },
+      "rawAudio": {
+        "sha256": "e96df42e91d18e9d934b13d7b0e996a1f767375375dc4e0e377f29300d4be239",
+        "bytes": 275061,
+        "actualDurationSeconds": 17.162
+      },
+      "finalAudio": {
+        "sha256": "e96df42e91d18e9d934b13d7b0e996a1f767375375dc4e0e377f29300d4be239",
+        "bytes": 275061,
+        "actualDurationSeconds": 17.162
+      }
+    },
+    {
+      "cityId": "islanti",
+      "source": "fokusvirta",
+      "outputPath": "assets/audio/puhe-fokus-matkakirja-islanti.mp3",
+      "objectKeys": {
+        "staging": "audio/staging/horatio/horatio-773527843cfa4d9cc31b/puhe-fokus-matkakirja-islanti.mp3",
+        "final": "audio/versions/horatio/439bf050af65/horatio-773527843cfa4d9cc31b/puhe-fokus-matkakirja-islanti.mp3",
+        "live": null
+      },
+      "visibleText": {
+        "text": "Lähdin Islannissa hainpyyntiin soutuveneellä. Hain maksasta saatiin öljyä Euroopan katulamppuihin. Kun saalis vedettiin laidan viereen, vene tuntui äkkiä kovin pieneltä. Kalastaja kohotti harppuunan. Minä painoin airot veteen ja pidin keulan aaltoja vasten.",
+        "sha256": "4745f223927107c8d112592524ef52e6acd937b013ffc197adfcf48bda3b89c6"
+      },
+      "ttsText": {
+        "text": "[curious] Lähdin Islannissa hainpyyntiin soutuveneellä. Hain maksasta saatiin öljyä Euroopan katulamppuihin. Kun saalis vedettiin laidan viereen, vene tuntui äkkiä kovin pieneltä. Kalastaja kohotti harppuunan. [softly] Minä painoin airot veteen ja pidin keulan aaltoja vasten. <break time=\"1.0s\" />",
+        "sha256": "f563f46f81f98347f70860ccdd23af02df93ec849c011818d7833854a98b169f"
+      },
+      "synthesis": {
+        "voiceId": "Sz0tRTEpybtDJ9ru2kgD",
+        "model": "eleven_v3",
+        "settings": {
+          "stability": 0.5
+        },
+        "outputFormat": "mp3_44100_128",
+        "postprocess": {
+          "kind": "none"
+        }
+      },
+      "generation": {
+        "status": "success",
+        "retryReason": null
+      },
+      "rawAudio": {
+        "sha256": "5c7274267ccc38d23e9819c9b3ec1b65344ca316cb93f0bf545b03e1c911c9cf",
+        "bytes": 349039,
+        "actualDurationSeconds": 21.786
+      },
+      "finalAudio": {
+        "sha256": "5c7274267ccc38d23e9819c9b3ec1b65344ca316cb93f0bf545b03e1c911c9cf",
+        "bytes": 349039,
+        "actualDurationSeconds": 21.786
+      }
+    },
+    {
+      "cityId": "alpit",
+      "source": "fokusvirta",
+      "outputPath": "assets/audio/puhe-fokus-matkakirja-alpit.mp3",
+      "objectKeys": {
+        "staging": "audio/staging/horatio/horatio-773527843cfa4d9cc31b/puhe-fokus-matkakirja-alpit.mp3",
+        "final": "audio/versions/horatio/439bf050af65/horatio-773527843cfa4d9cc31b/puhe-fokus-matkakirja-alpit.mp3",
+        "live": null
+      },
+      "visibleText": {
+        "text": "Grindelwaldin jäätiköltä halusin kiven aivan railon reunasta. Opas kielsi oikaisemasta, mutta minulla oli tarkka kartta. Lumi petti saappaan alta. Köysi löi ilmat keuhkoistani, ja jäin riippumaan sinisen jään väliin. Opas veti minut ylös, ja köysi viilsi hänen kämmenensä rikki. Minä pitelin yhä kiveä.",
+        "sha256": "c39bbfbeceae45ae2421542d7f4ff7f69f6e13b195e0365a5aa64b60d0c21e4d"
+      },
+      "ttsText": {
+        "text": "[curious] Grindelwaldin jäätiköltä halusin kiven aivan railon reunasta. Opas kielsi oikaisemasta, mutta minulla oli tarkka kartta. Lumi petti saappaan alta. Köysi löi ilmat keuhkoistani, ja jäin riippumaan sinisen jään väliin. Opas veti minut ylös, ja köysi viilsi hänen kämmenensä rikki. [thoughtfully] Minä pitelin yhä kiveä. <break time=\"1.0s\" />",
+        "sha256": "1492906265d0660600ee9f1adb147d82d674d387e3d3f8afc7250f0a32b9495b"
+      },
+      "synthesis": {
+        "voiceId": "Sz0tRTEpybtDJ9ru2kgD",
+        "model": "eleven_v3",
+        "settings": {
+          "stability": 0.5
+        },
+        "outputFormat": "mp3_44100_128",
+        "postprocess": {
+          "kind": "none"
+        }
+      },
+      "generation": {
+        "status": "success",
+        "retryReason": null
+      },
+      "rawAudio": {
+        "sha256": "795b40630bad65cd8087d69799f3dbe0ad43b16474879070a07233f66d1c68e4",
+        "bytes": 437647,
+        "actualDurationSeconds": 27.324
+      },
+      "finalAudio": {
+        "sha256": "795b40630bad65cd8087d69799f3dbe0ad43b16474879070a07233f66d1c68e4",
+        "bytes": 437647,
+        "actualDurationSeconds": 27.324
+      }
+    }
+  ],
+  "recovery": {
+    "kind": "existing-bytes-no-resynthesis",
+    "sourceRunId": 34867464698,
+    "sourceArtifactId": 10357527410,
+    "sourceArtifactName": "luennat-38-1",
+    "sourceZipSha256": "2a7906bb3795596dc0c288c1e4bcddfa1b1ab56f7638366b559738a8c8d06cf5",
+    "sourceBatchId": "horatio-9ac94d7e1f8142beb972",
+    "uploadState": "not-uploaded"
+  }
+}
