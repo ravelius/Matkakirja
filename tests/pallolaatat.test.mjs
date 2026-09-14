@@ -310,9 +310,19 @@ test('kerros pitää juuri nähdyt laatat jonossa ja lataa liikesuuntaan ennakol
   assert.match(laatat, /jono\.sort\(\(a, b\) => \(a\.nakyva \? 0 : 1\) - \(b\.nakyva \? 0 : 1\) \|\| a\.etaisyys - b\.etaisyys\);/);
   // 3. Valmis laatta menee sceneen, jos se on yhä alueella (ei vain näkyvissä).
   assert.match(laatat, /if \(t\.nakyva \|\| t\.pito\) lisaaSceneen\(t\);/);
-  // 4. Pito lasketaan viimeisestä näöstä.
+  /*
+   * 4. Pito lasketaan viimeisestä näöstä — JA KERTOMUSLUKKO SAA PIDENTÄÄ
+   *    SEN, MUTTA VAIN VALMIILLE LAATALLE (Fablen päätös 14.9.2026,
+   *    js/pallolaatat.js KERTOMUSLUKKO). Pito on kaksikäyttöinen: se
+   *    suojaa LRU:lta ja pitää tietueen latausjonossa (kohta 1). Jos
+   *    lukko pitäisi myös aloittamattomat, jokainen lennolla ohitettu
+   *    laatta jäisi jonoon ikuisesti — siksi ehto on `t.tila ===
+   *    'valmis'` eikä pelkkä lippu, ja tämä testi vartioi juuri sitä.
+   */
   assert.match(laatat,
-    /for \(const t of laatat\.values\(\)\) t\.pito = nyt - \(t\.kaytetty \?\? 0\) <= LAATTAKERROS_PITO_MS;/);
+    /const tuore = nyt - \(t\.kaytetty \?\? 0\) <= LAATTAKERROS_PITO_MS;/);
+  assert.match(laatat,
+    /t\.pito = tuore \|\| \(kertomuslukko && t\.tila === 'valmis'\);/);
   // 5. Aloittamaton, pitämätön tietue ei jää roikkumaan tilaan "ladataan".
   assert.match(laatat,
     /if \(!t\.nakyva && !t\.pito && t\.tila === 'ladataan' && !t\.aloitettu\) poista\(t\);/);
