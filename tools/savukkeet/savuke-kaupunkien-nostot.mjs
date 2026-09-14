@@ -372,6 +372,14 @@ for (const { id, nakyma } of KAUPUNGIT) {
   const mediaiset = kaupunginNostot.filter((n) => MEDIAKENTAT.some((k) => n[k]));
   tieto(`${id}: gallerianostoja / mediaanostoja`,
     `${galleriset.length} / ${mediaiset.length}`);
+  /*
+   * KENTTIEN ON OLTAVA DATASSA. Ilman tätä vartiot 7–9 katoaisivat
+   * hiljaa, jos `galleria`- ja mediakentät poistuisivat paketeista:
+   * tyhjä silmukka ei väitä mitään.
+   */
+  vaadi(`7c. ${id}: kaupungissa on galleria- tai mediakenttäisiä nostoja`,
+    galleriset.length + mediaiset.length > 0,
+    `galleriset ${galleriset.length}, mediaiset ${mediaiset.length}`);
 
   for (const nosto of galleriset) {
     const kortti = await avaaKortti(nosto.id);

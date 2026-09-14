@@ -20,7 +20,7 @@ nostolla ja 25 lisäkuvalla**, mediarivi **kuudella nostolla**, ja
 pisteytys ja lähdekytkös **ilman kaupungin nimen vartaloa**.
 
 `npm test` **3335 testiä, # pass 3322, # fail 0** (skipped 13). Savuke
-**203/203 läpi**. Punainen vastakoe ajettu ja kirjattu (luku 6).
+**209/209 läpi**. Punainen vastakoe ajettu ja kirjattu (luku 6).
 
 **Ulkoasu ja minikysymykset ovat ennallaan.** Kuvaton ja yhden kuvan
 nosto piirtyy merkilleen kuten ennen; uudet rivit syntyvät vain, kun
@@ -272,12 +272,12 @@ grep -rn '^<<<<<<<' js css tests tools   → ei osumia
 ## 5. Savuke
 
 Laajennettu `tools/savukkeet/savuke-kaupunkien-nostot.mjs` (erän 10 oma
-savuke) kolmella uudella vartiolla. Ajo:
+savuke) neljällä uudella vartiolla (yhteensä 50 uutta väitettä). Ajo:
 
 ```
 NODE_USE_ENV_PROXY=1 PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers \
   node tools/savukkeet/savuke-kaupunkien-nostot.mjs docs/raportit/kuvat
-→ 203/203 läpi   (ennen laajennusta 159/159)
+→ 209/209 läpi   (ennen laajennusta 159/159)
 ```
 
 Uudet vartiot ja niiden osumat:
@@ -285,6 +285,7 @@ Uudet vartiot ja niiden osumat:
 | vartio | väitteitä | mitä |
 | --- | --- | --- |
 | 7 + 7b | 26 | 13 gallerianostoa: kaksi nuolta, laskuri `1 / n`, ja nuoli vaihtaa kuvan **ja** selitteen |
+| 7c | 6 | kaupungissa on oltava galleria- tai mediakenttäisiä nostoja — tyhjä silmukka ei mene läpi hiljaa |
 | 8 | 6 | 6 mediaanostoa: mediarivi on kortilla, ja Apple Music -linkkejä täsmälleen niin monta kuin `musiikki`-kenttiä |
 | 9 + 9b | 12 | kaupunkikohtainen vastakoe (ks. 6.1) |
 
@@ -336,22 +337,66 @@ Kortin leipäteksti säilyi joka kerta (`kappaleet > 0`), eli kortti ei
 hajonnut — vain kentistä riippuvat osat katosivat. Vartio 9b tarkisti,
 että kentät palautuivat ajon jälkeen.
 
-### 6.2 Punainen ajo: korjaus palautettuna
+### 6.2 Punainen ajo A: DATA palautettuna, koodi paikallaan
 
-Koodi- ja datamuutokset (js/fokusnosto.js, js/skandaalit.js,
-css/fokusnosto.css, kuusi fokusvirta-pakettia,
-js/packs/kulttuuri-kategoriat.js) palautettiin `origin/main`-tilaan,
-mutta **uudet testit ja laajennettu savuke jätettiin paikoilleen**.
+Kuusi fokusvirta-pakettia ja js/packs/kulttuuri-kategoriat.js
+palautettiin `origin/main`-tilaan — eli galleria- ja mediakentät pois
+korteilta ja musiikkinostot takaisin lehden sivuille — mutta uudet
+testit, uusi koodi ja laajennettu savuke jätettiin paikoilleen.
 
-| ajo | korjattu | korjaus palautettuna |
+| ajo | korjattu | data palautettuna |
 | --- | --- | --- |
-| `npm test` — # pass | 3322 | VASTAKOE_TESTIT_PASS |
-| `npm test` — # fail | 0 | VASTAKOE_TESTIT_FAIL |
-| savuke `berliini,wien` | 64/64 | VASTAKOE_SAVUKE |
+| tests/nostokortti-media.test.mjs | 7 läpi / 0 kaatui | **1 läpi / 6 kaatui** |
+| savuke `berliini,wien` | 66/66 | **47/49** |
 
-Kaatuneet testit palautetussa tilassa:
+Kaatuneet väitteet, sanatarkasti:
 
-VASTAKOE_LISTA
+```
+not ok 1 - kohdekartan jutun kuvat ovat myös noston omalla kortilla
+  lontoo/canaletto-lontoossa: kohdekartan jutun "Canaletto Lontoossa" kuva
+  The Thames and the City Canaletto 46-47 National Gallery Prague.jpg
+  ei ole noston omassa kuvajoukossa — galleria on taas kiertotiellä
+not ok 2 - mediakenttäinen nosto ei jää lehteen kortin kaksoiskappaleeksi
+not ok 3 - erän 10 viisi musiikkinostoa asuvat kortilla eivätkä enää lehdessä
+  lontoo/abbey-roadin-suojatie: kortilta puuttuvat musiikki- ja äänikentät
+not ok 4 - gallerian nosto saa kortille selailunuolet ja laskurin
+  kuvasarjan kehys puuttuu kortilta
+not ok 6 - musiikkinosto saa kortille mediarivin samoilla napeilla kuin lehti
+  kortilta puuttuu mediarivi
+not ok 7 - ääninosto saa mediarivin myös ilman musiikkilinkkiä
+  kortilta puuttuu mediarivi
+
+FAIL  7c. berliini: kaupungissa on galleria- tai mediakenttäisiä nostoja
+      — galleriset 0, mediaiset 0
+FAIL  7c. wien: kaupungissa on galleria- tai mediakenttäisiä nostoja
+      — galleriset 0, mediaiset 0
+```
+
+Läpi meni vain "kuvaton ja galleriaton nosto piirtyy kuten ennenkin" —
+juuri niin kuin pitääkin: se mittaa, ettei muutos koske kentättömiin
+nostoihin.
+
+**Vartio 7c syntyi tämän ajon takia.** Ensimmäinen punainen ajo antoi
+savukkeelle 47/47 läpi, koska ilman kenttiä vartioiden 7–9 silmukat
+jäivät tyhjiksi eivätkä väittäneet mitään. Savuke vaatii nyt, että
+jokaisessa kaupungissa on vähintään yksi galleria- tai mediakenttäinen
+nosto — tyhjä silmukka ei enää mene läpi hiljaa.
+
+### 6.3 Punainen ajo B: KOODI palautettuna
+
+Kun KOKO korjaus palautetaan `origin/main`-tilaan (js/fokusnosto.js,
+js/skandaalit.js, css/fokusnosto.css, kuusi fokusvirta-pakettia,
+js/packs/kulttuuri-kategoriat.js ja luvun 4.3 neljä päivitettyä
+vartiota), `tests/nostokortti-media.test.mjs` ei käynnisty lainkaan:
+
+```
+SyntaxError: The requested module '../js/fokusnosto.js'
+does not provide an export named 'nostonKuvat'
+```
+
+`npm test` antoi silloin **3329 testiä, # pass 3315, # fail 1** (koko
+testitiedosto kaatuu yhtenä) — eli kaikki 7 väitettä menetetään.
+Korjatussa tilassa vastaava luku on **3335 / 3322 / 0**.
 
 Ero on siis se, mitä väitettiinkin: **ilman korjausta uudet vartiot
 kaatuvat, korjauksen kanssa ne ovat vihreitä.**
