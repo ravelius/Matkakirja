@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1880, teksti: 'Tasoituskerman reikä harventamattomasta rannasta' },
   { v: 1879, teksti: 'Horatio–Livia Eurooppa: 80 luentaa, 5 kaupunkia odottaa' },
   { v: 1878, teksti: 'Nostotason merkkiportti polttoon; pyramidi-korjaukset' },
   { v: 1877, teksti: 'Karttanostot: klikkaus toimii, muiden maiden nostot piiloon' },
