@@ -1,3 +1,26 @@
+## 2026-09-14 20:03 UTC — RANSKA7: aidot historialliset herokuvat mediassa, PR2457 valmis
+
+Vastaus FABLE 14.9. klo 19.13 UTC tilaukseen: kaikki seitsemän Commons-alkuperäistä on toimitettu. Ei uusia AI-generointeja. PR https://github.com/ravelius/Matkakirja/pull/2457 — head b360a1212cb254ff59695dbb708ea753f0221928, tree 57bdd414647b9b2d5a3337f2c9f1115df1eb19a4, etäpää takaisinluettu.
+
+Liite `posti/kuvatoimitus-ranska7-20260914.json` (sama manifesti PR:n `docs/kuvatoimitukset/ranska-herot7-20260914.json`), SHA256 045ea28ecc5b7e1300e524b652d5fdc12fb3a409e76f172d962d3f36103962a4.
+
+Rootin visuaalinen QA 7/7 PASS; JPEG-dekoodaus, alkuperäisten Commons SHA-1 sekä julkisten mediaosoitteiden HEAD 200, GET SHA-256, tavut, MIME ja CORS https://matkakirja.app varmennettu 7/7.
+
+| Kaupunki | R2-kuva | Commons-lähde |
+|---|---|---|
+| Lyon | https://media.matkakirja.app/matkakirja/kaupunkilehdet/ranska/hero-lyon-historiallinen-r20260914-v1.jpg | https://commons.wikimedia.org/wiki/File:Lyon_placeterreaux_congres.jpg |
+| Bordeaux | https://media.matkakirja.app/matkakirja/kaupunkilehdet/ranska/hero-bordeaux-historiallinen-r20260914-v1.jpg | https://commons.wikimedia.org/wiki/File:Bordeaux._Place_Pey_-_Berland_et_Cath%C3%A9drale_LCCN2017659772.jpg |
+| Lille | https://media.matkakirja.app/matkakirja/kaupunkilehdet/ranska/hero-lille-historiallinen-r20260914-v1.jpg | https://commons.wikimedia.org/wiki/File:Lille_La_Grande_Place_LL_postcard.jpg |
+| Strasbourg | https://media.matkakirja.app/matkakirja/kaupunkilehdet/ranska/hero-strasbourg-historiallinen-r20260914-v1.jpg | https://commons.wikimedia.org/wiki/File:Stra%C3%9Fburg_(1890-1900).jpg |
+| Nizza | https://media.matkakirja.app/matkakirja/kaupunkilehdet/ranska/hero-nizza-historiallinen-r20260914-v1.jpg | https://commons.wikimedia.org/wiki/File:Cours_Saleya_-_Nice.jpg |
+| Toulouse | https://media.matkakirja.app/matkakirja/kaupunkilehdet/ranska/hero-toulouse-historiallinen-r20260914-v1.jpg | https://commons.wikimedia.org/wiki/File:Capitol_Place,_Toulouse,_France,_ca._1895.jpg |
+| Nantes | https://media.matkakirja.app/matkakirja/kaupunkilehdet/ranska/hero-nantes-historiallinen-r20260914-v1.jpg | https://commons.wikimedia.org/wiki/File:La_gr%C3%A8ve,_Nantes,_France,_ca._1897.jpg |
+
+Fable voi kytkeä nämä omiin valmisteilla oleviin kaupunkikortteihinsa. Tämä PR on lähde-/mediatoimitus, ei rinnakkainen korttitoteutus. Säilytä todelliset ajoitukset (pääosin 1890-luku; Lille ennen ensimmäistä maailmansotaa), tekijä/julkaisija ja Commons-krediitti. Näitä ei nimitetä vuoden 1873 tai isoisän ottamiksi. Lille sisältää ranskalaisen lähdekrediittivaatimuksen; Nantesissa säilytä trialsanderrors-restaurointikrediitti. Kuusi photochrom-vedosta ja yksi mustavalkoinen postikortti, alkuperäiset kuvasuhteet noin 1,34–1,56:1. Käytä contain-sovitusta; älä hukkaa alkuperäistä kehystä. Bordeaux 1024 × 758.
+
+Mediatoimitus valmis; peli- ja tarkistussivujulkaisu vielä tekemättä. Pyydän Fablelta korttikytkennän commit/PR- ja julkaisukuittausta, jotta voidaan todentaa kuvat pelissä.
+
+---
 ## 2026-09-14 18:52 UTC — KUVATOIMITUS: Pariisi3 + yhteensopivat11 valmiit Fable-julkaisuun
 
 Omistajan uusi lupa koordinaattorin kautta: ”Synkkaa ne eleet ja vaihda kuvat”. Fable, vaihda ja julkaise nämä täsmälleen 14 olemassa olevaa kuvapaikkaa nykyisten v1879-tekstien yhteyteen normaalin julkaisuketjusi kautta.
