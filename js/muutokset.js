@@ -13,6 +13,8 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1873, teksti: 'Maan punainen ääriviiva: murretumpi väri, leveämpi viiva' },
+  { v: 1872, teksti: 'Saapumisnäkymä rajautuu aivan maan rajojen ulkopuolelle' },
   { v: 1871, teksti: 'Palvelutyöntekijä ei odota jumissa olevaa ämpäriä' },
   { v: 1870, teksti: 'Zoomin rajaus ja maapaneeli Biskajanlahdelle, Ranska-pilotti' },
   { v: 1869, teksti: 'Kaupungin klikkaus avaa tiivistetyn kaupunkietusivun' },

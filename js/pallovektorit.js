@@ -251,7 +251,7 @@ export const RAJA_PEITTO = 0.34;
  * (testit ilman tyylitiedostoa, yhden tiedoston versio ennen CSS:n
  * latausta), eikä sen arvo saa erota `--mark`ista.
  */
-export const KOROSTUS_MUSTE = '#b03a2b';
+export const KOROSTUS_MUSTE = '#853124';
 
 /**
  * Korostuksen muste juuri nyt: paletin `--mark`, tai KOROSTUS_MUSTE
@@ -262,7 +262,7 @@ export function korostuksenMuste(dokumentti = null) {
   const juuri = doc?.documentElement ?? null;
   if (!juuri || typeof globalThis.getComputedStyle !== 'function') return KOROSTUS_MUSTE;
   try {
-    const arvo = globalThis.getComputedStyle(juuri).getPropertyValue('--mark').trim();
+    const arvo = globalThis.getComputedStyle(juuri).getPropertyValue('--raja-punainen').trim();
     return arvo || KOROSTUS_MUSTE;
   } catch {
     return KOROSTUS_MUSTE;
@@ -275,8 +275,23 @@ export function korostuksenMuste(dokumentti = null) {
  * värikartalla ruskeana, eli juuri siltä, miltä sen ei pitänyt.
  */
 export const KOROSTUS_PEITTO = 1;
-/** Korostetun rajan leveys css-pikseleinä [kaukana, lähellä]. */
-export const VEKTORIT_KOROSTUS_LEVEYS_CSS = [1.7, 2.5];
+/*
+ * Korostetun rajan leveys css-pikseleinä [kaukana, lähellä].
+ *
+ * LEVEÄMPI 14.9.2026 (karttauudistuksen PÄÄTÖKSET 11 kohta 2 c,
+ * omistaja: *"aariviiva saisi olla hieman leveampi"*). Lähipää 2,5 →
+ * 3,1 css-px on *hieman*: se on 24 % lisää eli yhden pikselin
+ * kuudesosien tarkkuudella juuri se, mitä silmä lukee samana viivana
+ * hitusen vahvempana. Kaukopää liukuu samassa suhteessa (1,7 → 2,1),
+ * jottei yleiskuva paksune tolpaksi — liukusuhde on kerroksen oma
+ * (viivanLeveysCss).
+ *
+ * TASOKARTAN KEHÄ EI LEVENE. Siellä 3 px mitattiin 1.9.2026 tolpaksi,
+ * joka peitti Bretagnen pikkusaaret (js/maatummennus.js
+ * TUMMENNUS_VIIVA); pallolla saaret piirtyvät laatoista eri
+ * mittakaavassa eikä sama mittaus päde.
+ */
+export const VEKTORIT_KOROSTUS_LEVEYS_CSS = [2.1, 3.1];
 /**
  * Korostus piirtyy tavallisen rajan JÄLKEEN (läpinäkyvien jono),
  * jotta hennompi pisteviiva jää sen alle eikä sekoita reunaa. Sama
@@ -438,10 +453,34 @@ export function harvennaViivat(viivat, tol) {
  *  - `pehmennys` (osuus puolileveydestä) häivyttää peiton reunavyössä
  *    nollaan, jolloin viiva on antialiasoitu myös ilman MSAA:ta.
  *
- * Palauttaa true, jos paikka meni läpi; false, jos varjostin ei ole
+ * ===== PÄÄTYPYÖRYLÄT PALAAVAT TÄYSIN PEITTÄVÄLLE VIIVALLE ==========
+ *
+ * KARTTAUUDISTUKSEN PÄÄTÖKSET 11 kohta 2 a (omistaja 14.9.2026:
+ * *"jostain syysta kartan punainen aariviiva ei piirry koko
+ * matkalta"*). Vika MITATTIIN, ja se on tässä: LineSegments2 piirtää
+ * jokaisen janan omana nelikulmiona, eivätkä peräkkäiset janat kohtaa
+ * kulmassa — pyörylä on se, mikä kulman täyttää. Kun pyörylä
+ * heitetään pois, jokaiseen kulmaan jää lovi, ja lovia on sitä
+ * enemmän mitä rosoisempi raja on: Ranskan MAARAJAT (Belgia, Rein,
+ * Alpit, Pyreneet) ovat aineistossa lyhyttä siksakkia ja rannikko
+ * pitkää kaarta, joten viiva näyttää katkeavan juuri maarajoilla ja
+ * pysyvän ehjänä rannikolla.
+ *
+ * PYÖRYLÄN POISTON PERUSTELU EI KOSKE KOROSTUSTA. Se kirjoitettiin
+ * 7.9.2026 LÄPINÄKYVÄLLE mustelle (rantaviiva 0,58, rajat 0,34):
+ * limittyvä läpinäkyvä muste kasautuu tummaksi kärkien kohdalla.
+ * Kohdemaan kehä piirretään TÄYDELLÄ peitolla (KOROSTUS_PEITTO 1),
+ * eikä täysin peittävä muste voi kasautua — sama väri päällekkäin on
+ * sama väri. Pyörylät ovat siis korostukselle puhdas voitto.
+ *
+ * @param {object} materiaali LineMaterial
+ * @param {object} [valinnat]
+ * @param {boolean} [valinnat.paatypyorylat] true = kulmat täytetään
+ *   (täysin peittävä viiva), false = pyörylä leikataan pois (oletus).
+ * @returns true, jos paikka meni läpi; false, jos varjostin ei ole
  * odotetun näköinen (silloin kutsuja jättää leveyden ennalleen).
  */
-export function pehmennaLineMaterial(materiaali) {
+export function pehmennaLineMaterial(materiaali, { paatypyorylat = false } = {}) {
   if (!materiaali || materiaali.userData?.pallovektoritPehmennys) return Boolean(materiaali);
   const frag = materiaali.fragmentShader;
   const kohta = 'gl_FragColor = vec4( diffuseColor.rgb, alpha );';
@@ -449,11 +488,14 @@ export function pehmennaLineMaterial(materiaali) {
     return false;
   }
   materiaali.uniforms.pehmennys = { value: 0 };
+  // Uniform eikä käännösaikainen haara: sama varjostinkoodi kaikilla
+  // kolmella materiaalilla, yksi luku erottaa ne.
+  materiaali.uniforms.paatyt = { value: paatypyorylat ? 1 : 0 };
   materiaali.fragmentShader = frag
-    .replace('uniform float linewidth;', 'uniform float linewidth;\n\t\tuniform float pehmennys;')
+    .replace('uniform float linewidth;', 'uniform float linewidth;\n\t\tuniform float pehmennys;\n\t\tuniform float paatyt;')
     .replace(kohta, [
       '#ifndef WORLD_UNITS',
-      '  if ( abs( vUv.y ) > 1.0 ) discard;',
+      '  if ( paatyt < 0.5 && abs( vUv.y ) > 1.0 ) discard;',
       '  if ( pehmennys > 0.0 ) alpha *= 1.0 - smoothstep( 1.0 - pehmennys, 1.0, abs( vUv.x ) );',
       '  if ( alpha < 0.003 ) discard;',
       '#endif',
@@ -461,6 +503,7 @@ export function pehmennaLineMaterial(materiaali) {
     ].join('\n\t\t\t'));
   materiaali.needsUpdate = true;
   materiaali.userData.pallovektoritPehmennys = true;
+  materiaali.userData.pallovektoritPaatyt = Boolean(paatypyorylat);
   return true;
 }
 
@@ -617,6 +660,8 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
     pehmennysPaikka: false,
     /** Korostettu maa (ISO A3) tai null — pelaajan oma maa. */
     korostus: null,
+    /** Korostuksen renkaat (maapolygonien rengasmäärä kohdemaalle). */
+    korostusRenkaita: 0,
     /** Korostuksen janat (0 = maata ei ole aineistossa). */
     korostusJanoja: 0,
   };
@@ -789,7 +834,7 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
      * ja viiva on entisellään.
      */
     pehmennysPaikka = pehmennaLineMaterial(ranta) && pehmennaLineMaterial(raja)
-      && pehmennaLineMaterial(korostusMateriaali);
+      && pehmennaLineMaterial(korostusMateriaali, { paatypyorylat: true });
     mittarit.pehmennysPaikka = pehmennysPaikka;
     ranta.linewidth = cssLeveys('rannikko');
     raja.linewidth = cssLeveys('rajat');
@@ -1162,6 +1207,7 @@ export function luoPallovektorit({ pallo, kotelo, ikkuna = globalThis, reitit })
       korostus.iso = uusiIso;
       korostus.renkaat = uudet;
       mittarit.korostus = uusiIso;
+      mittarit.korostusRenkaita = uudet?.length ?? 0;
       if (!uudet) { vapautaKorostus(); mittarit.korostusJanoja = 0; return true; }
       rakennaKorostus(true);
       return true;
