@@ -193,6 +193,10 @@ on:
         description: 'Vie ämpäriin (pois = pelkkä harjoitus)'
         type: boolean
         default: true
+      vie_luettelo:
+        description: 'Vie myös pyramidi.json (pois = laatat ämpäriin, luettelo EI — uusi versio odottaa asiakkaan julkaisua)'
+        type: boolean
+        default: true
 
 permissions:
   contents: read
@@ -441,6 +445,12 @@ jobs:
           fi
           LISA=""
           if [ -n "${SARAKKEET}" ]; then LISA="--sarakkeet ${SARAKKEET}"; fi
+          # PAIKKAUS TARVITSEE VAIN ALUEENSA PALAT. Ilman `--alue` lista
+          # on koko maailma (612 palaa, 194 Mt) vaikka piirto koskee
+          # yhtä laatikkoa — Ranskan laatikko on kymmenkunta palaa.
+          # Sama laatikko kuin piirrossa, joten lista ei voi jäädä
+          # palaa vajaaksi.
+          if [ -n "${PAIKKAUS}" ] && [ -n "${ALUE:-}" ]; then LISA="$LISA --alue ${ALUE}"; fi
           mkdir -p korkeuspalat
           node tools/generoi-laattapyramidi.mjs korkeuspalat \
             --tasot 7 $LISA --kaariminuutit 1 --vain-palat korkeuspalat/palat.txt
@@ -532,7 +542,14 @@ jobs:
             aja "$TASOT" "$KORKEUS"
           else
             aja "$ALIN-6" 3
-            aja "7" 1
+            # SYVÄT TASOT YHDESSÄ AJOSSA, EI VAIN z7. Ämpärin pyramidi on
+            # z0–z8 (luettelo 14.9.2026), ja `aja "7" 1` jätti z8:n
+            # piirtämättä: paikattu versio olisi saanut z8:aan
+            # KOPIOIDUT vanhat laatat eli juuri sen geometrian, jonka
+            # takia paikkaus ajetaan. Sama 1′-ruudukko kelpaa
+            # molemmille (kaariminuutitTasolle: z >= 7 -> 1′), joten ne
+            # ajetaan yhtenä eränä z7:stä ylimpään tasoon.
+            aja "7-$YLIN" 1
           fi
           echo "--- tuotos ---"
           find ulos -name "*.${MUOTO:-webp}" | wc -l
@@ -644,9 +661,28 @@ jobs:
             --lista paikkauslista/laatat.json
 
   # ---------------------------------------------------------- luettelo
+  #
+  # === LUETTELO ON SE HETKI, JOLLOIN UUSI VERSIO TULEE VOIMAAN =======
+  #
+  # Laatat ovat versioidussa polussa eivätkä näy kenellekään ennen kuin
+  # `pyramidi.json` osoittaa niihin. Luettelo on siis JULKAISU, ja sen
+  # ajoitus on osa julkaisujärjestystä:
+  #
+  # Pohjan tai nostotason VERSION VAIHTO SAMMUTTAA KOKO LAATTAKERROKSEN
+  # siihen asti, kunnes pallon Mercator-sarja on poltettu samasta
+  # versiosta ja js/pallo.js osoittaa siihen (js/pallolaatat.js
+  # `lepokerroksenKerrokset`: `pallonLuettelo.versio !== pyramidi.versio`
+  # tai `pallonLuettelo.nostot !== pyramidi.nostotaso.versio` -> null,
+  # eli kartta muuttuu sumeaksi palloksi). Mitattu 14.9.2026: ämpärin
+  # pallosarja `2026-09-07a-nostot-f` kantaa versiot `2026-09-07a` ja
+  # `2026-09-08a-nostot`.
+  #
+  # `vie_luettelo: false` ajaa laatat ämpäriin JULKAISEMATTA niitä:
+  # uusi versio odottaa valmiina, kunnes pallosarja ja asiakas ovat
+  # mainissa. Sen jälkeen luettelo viedään omalla ajollaan.
   luettelo:
     needs: laatat
-    if: ${{ inputs.vie }}
+    if: ${{ inputs.vie && inputs.vie_luettelo }}
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
@@ -661,6 +697,44 @@ jobs:
         with:
           node-version: '22'
       - run: npm install --no-fund --no-audit
+
+      # ================================================================
+      # LUETTELO TÄYDENTYY, EI KORVAUDU — ÄMPÄRIN LUETTELO POHJAKSI.
+      #
+      # `yhdistaLuettelo` (tools/pyramidiluettelo.mjs) yhdistää tämän
+      # ajon luettelon AJOKANSIOSSA olevaan vanhaan. Tässä jobissa
+      # ajokansio oli tyhjä, joten vanhaa ei ollut ja tuore luettelo
+      # kirjoitettiin sellaisenaan päälle. Mitattu ämpärin luettelosta
+      # 14.9.2026: silloin katoaisivat `varitasot` (27 maan
+      # tasoituslaatastot, 25 niistä ajettu 14.9.2026) ja pohja-ajon
+      # kentät, joita tämä ajo ei tunne. Peli ei näkisi 404:ää eikä
+      # virhettä — kerros olisi vain poissa (sama hiljainen vika kuin
+      # docs/raportit/viesti-fable-laattapolku-20260914.md luvussa 4).
+      #
+      # generoi-varitaso.yml tekee tämän saman askeleen; tässä
+      # työnkulussa se puuttui. `|| true`: ensimmäisellä ajolla
+      # ämpärissä ei ole luetteloa, ja silloin tuore on oikea tulos.
+      - name: Pohjusta ajokansio ämpärin luettelolla
+        env:
+          AMPARI: ${{ secrets.R2_BUCKET }}
+          PAATE: https://${{ secrets.R2_ACCOUNT_ID }}.r2.cloudflarestorage.com
+        run: |
+          set -euo pipefail
+          mkdir -p luettelo-ulos
+          aws s3 cp "s3://$AMPARI/julisteet/pyramidi/pyramidi.json" \
+            luettelo-ulos/pyramidi.json --endpoint-url "$PAATE" --no-progress \
+            || echo "::warning::ämpärissä ei ole luetteloa — kirjoitetaan tuore"
+          if [ -f luettelo-ulos/pyramidi.json ]; then
+            node -e "
+              const l = require('./luettelo-ulos/pyramidi.json');
+              console.log('pohjaksi: versio', l.versio,
+                '· tasot', (l.tasot ?? []).map((t) => t.z).join(','),
+                '· nostotaso', l.nostotaso?.versio,
+                '· viivataso', l.viivataso?.versio,
+                '· rantataso', l.rantataso?.versio,
+                '· varitasot', Object.keys(l.varitasot ?? {}).length);
+            "
+          fi
 
       # `--kuiva` on pelkkää geometriaa: ei selainta, ei aineistoa, ei
       # piirtoa. Luettelo kuvaa KAIKKI tasot riippumatta siitä, mitkä
