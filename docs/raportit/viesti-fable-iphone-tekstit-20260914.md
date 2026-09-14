@@ -132,7 +132,7 @@ vain `transform: scale` ja `opacity`, **ei suodatinta**. Luokan
 
 | portti | tulos |
 | --- | --- |
-| `npm test` | ks. alla |
+| `npm test` | 3365 testiä, 3349 läpi, 3 kaatui — yksi niistä (rules.test.mjs "päiväkirjalla on kaksi kokoa") oli oma, ja se on korjattu puhelinpoikkeuksella; kaksi muuta ovat `tests/pollo.test.mjs`:n KUORMAVARTIOITA (`indeksi rakentuu ja on kokoluokaltaan järkevä`, `haku on nopea myös koko aineistolla`). Ne menivät yksin ajettuna läpi 124/124 — kontissa ajoi samaan aikaan 35 muuta node-prosessia. `rules.test.mjs` yksin: 334/334. |
 | `tarkista-kaksoisavaimet` | ei kaksoisavaimia |
 | `tarkista-niputus` | 387 moduulia, ei törmäyksiä |
 | `tarkista-savukkeet` | 1659 ui-viittausta, kunnossa |
