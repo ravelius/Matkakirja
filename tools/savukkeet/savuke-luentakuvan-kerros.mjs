@@ -498,7 +498,105 @@ await ctx.close();
 }
 
 /* ================================================================
-   6. ENSISAAPUMINEN: KUVA VASTA LYKÄTYN LUENNAN ALKAESSA
+   6. LUENNAN HUNTU EI NOUSE KEHITTÄJÄN MAAILMANÄKYMÄSSÄ
+   ================================================================
+
+   Omistajan päätös 15.9.2026 (Raamattu "KARTTATAUSTA LUENNAN JA
+   KAUPUNKIESITTELYN AIKANA", POIKKEUS-kohta): kun kehittäjän
+   maailmanäkymä on päällä, luennan huntua (body.luenta-huntu) ei
+   nosteta lainkaan — muut luennan merkit (kaiutin, tekstipiilo,
+   Liiku-piilo) pysyvät. Korjaus js/ui.js kaynnistaLuentavahti:
+   huntu-ehtoon lisätty `&& !(kehittajaTilaPaalla() &&
+   kehittajaMaailmaPaalla())`. */
+{
+  const ajo = await avaaAjo({ width: 390, height: 844 });
+  await ajo.sivu.waitForFunction(() => document.body.classList.contains('kertoja-aanessa')
+    && Boolean(document.querySelector('.fokusvirta-isokuva.nakyy, .fokusvirta-luentakuva.nakyy')),
+  null, { timeout: 30000 }).catch(() => console.log('HUOM  isoisän luenta+kuva ei ehtinyt ruudulle 30 s:ssa'));
+  await ajo.sivu.waitForTimeout(300);
+
+  const ennenMaailmaa = await ajo.sivu.evaluate(() => ({
+    kertojaAanessa: document.body.classList.contains('kertoja-aanessa'),
+    kuvaRuudulla: Boolean(document.querySelector(
+      '.fokusvirta-luentakuva.nakyy, .fokusvirta-isokuva.nakyy',
+    )),
+    huntuPaalla: document.body.classList.contains('luenta-huntu'),
+  }));
+  tieto('tila ennen kehittäjän maailmanäkymää', JSON.stringify(ennenMaailmaa));
+  vaadi('mittauksen ehto: kertoja äänessä ja kuva ruudulla', ennenMaailmaa.kertojaAanessa
+    && ennenMaailmaa.kuvaRuudulla, JSON.stringify(ennenMaailmaa));
+  /*
+   * VASTAKOE (ehto pois olisi näyttänyt huntua): koska kertoja on
+   * äänessä ja kuva ruudulla ILMAN kehittäjän maailmanäkymää, huntu on
+   * tässä tilassa oikeasti päällä — juuri se todistaa, ettei alempi
+   * "huntu pois" -tulos johdu siitä, että kertoja tai kuva sattuisivat
+   * olemaan epätosia.
+   */
+  vaadi('vastakoe: huntu on päällä ilman kehittäjän maailmanäkymää (ehto olisi punainen)',
+    ennenMaailmaa.huntuPaalla === true, JSON.stringify(ennenMaailmaa));
+
+  // Kehittäjätila JA maailmanäkymä päälle KESKEN LUENNAN (js/ui-apurit.js).
+  await ajo.sivu.evaluate(async () => {
+    const apurit = await import('/js/ui-apurit.js');
+    apurit.asetaKehittajaTila(true);
+    apurit.asetaKehittajaMaailma(true);
+  });
+  // Vahti kysyy LUENTAVAHDIN_VALI_MS (200 ms) välein: 700 ms antaa
+  // reilusti tilaa CI:n hitaammalle koneelle (mitattu flakki 400 ms:llä).
+  await ajo.sivu.waitForTimeout(700);
+  const maailmaPaalla = await ajo.sivu.evaluate(() => {
+    const mapPane = document.querySelector('.map-pane');
+    const after = mapPane ? getComputedStyle(mapPane, '::after') : null;
+    return {
+      kertojaAanessa: document.body.classList.contains('kertoja-aanessa'),
+      kuvaRuudulla: Boolean(document.querySelector(
+        '.fokusvirta-luentakuva.nakyy, .fokusvirta-isokuva.nakyy',
+      )),
+      huntuPaalla: document.body.classList.contains('luenta-huntu'),
+      afterContent: after?.content ?? null,
+    };
+  });
+  tieto('tila kehittäjän maailmanäkymässä', JSON.stringify(maailmaPaalla));
+  vaadi('mittauksen ehto pysyy: kertoja yhä äänessä ja kuva ruudulla',
+    maailmaPaalla.kertojaAanessa && maailmaPaalla.kuvaRuudulla, JSON.stringify(maailmaPaalla));
+  vaadi('luenta-huntu EI ole päällä kehittäjän maailmanäkymässä',
+    maailmaPaalla.huntuPaalla === false, JSON.stringify(maailmaPaalla));
+  vaadi('::after content on none kehittäjän maailmanäkymässä',
+    maailmaPaalla.afterContent === 'none', String(maailmaPaalla.afterContent));
+
+  // Maailmanäkymä pois kesken luennan: huntu palaa heti (vahti 200 ms).
+  await ajo.sivu.evaluate(async () => {
+    const apurit = await import('/js/ui-apurit.js');
+    apurit.asetaKehittajaMaailma(false);
+  });
+  await ajo.sivu.waitForTimeout(700);
+  const maailmaPois = await ajo.sivu.evaluate(async () => {
+    const apurit = await import('/js/ui-apurit.js');
+    return {
+      kertojaAanessa: document.body.classList.contains('kertoja-aanessa'),
+      kuvaRuudulla: Boolean(document.querySelector(
+        '.fokusvirta-luentakuva.nakyy, .fokusvirta-isokuva.nakyy',
+      )),
+      huntuPaalla: document.body.classList.contains('luenta-huntu'),
+      dev: apurit.kehittajaTilaPaalla(),
+      world: apurit.kehittajaMaailmaPaalla(),
+      lsDev: localStorage.getItem('matkakirja-kehittaja'),
+      lsWorld: localStorage.getItem('matkakirja-kehittaja-maailma'),
+    };
+  });
+  tieto('tila maailmanäkymän sammuttamisen jälkeen', JSON.stringify(maailmaPois));
+  if (maailmaPois.kertojaAanessa && maailmaPois.kuvaRuudulla) {
+    vaadi('luenta-huntu PALAA kun maailmanäkymä kytketään pois kesken luennan',
+      maailmaPois.huntuPaalla === true, JSON.stringify(maailmaPois));
+  } else {
+    console.log('HUOM  luenta ehti loppua ennen maailmanäkymän sammuttamista — paluuväite ohitettu');
+  }
+
+  await ajo.ctx.close();
+}
+
+/* ================================================================
+   7. ENSISAAPUMINEN: KUVA VASTA LYKÄTYN LUENNAN ALKAESSA
    ================================================================
 
    Omistaja 12.9.2026: *"kun tullaan ateenaan niin isoisän kuvat saisi
