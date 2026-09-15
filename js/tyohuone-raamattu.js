@@ -7598,7 +7598,8 @@ export const RAAMATTU = {
           + 'ottamia valokuvia, NASA (sanamuoto Fablen, tarkistetaan '
           + 'lahteesta js/linssit/satelliitti.js); 4) Liiku-nappi on '
           + 'piilossa linssin ollessa auki (kuten luennan aikana). Tila: '
-          + 'tyo Sonnet-agentilla; reliefi omistajan koneella.',
+          + 'julkaistu v1913 (#2519); reliefi omistajan koneella, ohje '
+          + 'docs/raportit/viesti-fable-reliefi-mac-ohje-20260915.md.',
         'ASTRONAUTIN KAMERA: VALOKUVANAKYMAN ASETTELU (omistaja 15.9.2026 '
           + 'klo 11.45 UTC, tyopoytakuva Etnasta, sanatarkasti: "Tassa '
           + 'nakymassa siirrat alakulman X niin kuvan oikean ylareunaan '
@@ -7630,7 +7631,7 @@ export const RAAMATTU = {
           + 'ei ole kuvan kulmassa vaan YLAPALKISSA heti nimi/paiva-pillerin '
           + 'oikealla puolella; kuvan oikeassa ylakulmassa on vain pieni X; '
           + 'lisatietokentta avautuu ylapalkin alta i-napin kohdalta. Tila: '
-          + 'tyo Sonnet-agentilla. MINIPULU (omistaja 15.9.2026 klo 13.55 '
+          + 'julkaistu v1913. MINIPULU (omistaja 15.9.2026 klo 13.55 '
           + 'UTC, sanatarkasti: "pulu voisi olla tassa nakymassa esille. '
           + 'pyyda codexia tekemaan pulusta miniversio, jota voidaan '
           + 'kayttaa tallaisissa tilanteissa."): Astronautin kameran '
@@ -7661,8 +7662,7 @@ export const RAAMATTU = {
           + 'aikana (sama saanto kuin Astronautin kamerassa, kaikki '
           + 'linssit); 4) Astronautin kamera saa oman kuvakkeen '
           + 'matkalaukkuun (linssien kuvakesarjan tyyliin). Tila: tyo '
-          + 'Opus-agentilla (1-2), Liiku Sonnet-agentin PR:ssa (3), kuvake '
-          + 'Sonnet-agentilla (4).',
+          + 'kaikki julkaistu v1913 (#2519, #2520).',
         'MATKALAUKKU ON FOGGIN MATTOLAUKKU (omistaja 15.9.2026 klo 12.10 '
           + 'UTC; kysymys sanatarkasti: "matkalaukusta: pitaisiko se olla '
           + 'oikeasti matka-arkku? oliko tuohon aikaan viela edes '
