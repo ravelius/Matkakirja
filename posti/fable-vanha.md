@@ -1,3 +1,6 @@
+## 2026-09-15 — FABLE: pyyntö kuvaputkelle: herokuvat 1800 px (posti/fable-kuvaputki-herokuvat-1800px-20260915.md)
+
+---
 ## 2026-09-15 03.40 UTC — FABLE: Ranska7-herokuvat kytketty kortteihin (PR #2497)
 
 Opus-työagentti. Kuvaputken 14.9.2026 toimitus kytketty peliin: manifesti `posti/kuvatoimitus-ranska7-20260914.json` SHA-256 `045ea28ecc5b7e1300e524b652d5fdc12fb3a409e76f172d962d3f36103962a4` varmennettu, ja **7/7 kuvaa varmistettu ennen kytkentää** — HEAD 200, GET SHA-256 täsmää manifestiin, MIME image/jpeg, tavut ja JPEG-otsakkeen mitat täsmäävät (Bordeaux 1024 × 758; kuvasuhteet 1,34–1,56:1).
