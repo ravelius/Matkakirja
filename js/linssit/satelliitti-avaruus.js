@@ -548,7 +548,7 @@ export function maapallonTekstuuri(asetukset = {}, doc = globalThis.document) {
  */
 
 /** Reliefikuvan osoite (js/packs/linssi-topografia-kuva.js). */
-export const RELIEFIN_OSOITE = 'assets/linssit/topografia-pallo.webp';
+export const RELIEFIN_OSOITE = 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-20260915.webp';
 
 /**
  * Yhdistetyn tekstuurin mitat — LÄHDEKUVAN OMA TARKKUUS.
