@@ -7686,7 +7686,16 @@ export const RAAMATTU = {
           + 'aikana (sama saanto kuin Astronautin kamerassa, kaikki '
           + 'linssit); 4) Astronautin kamera saa oman kuvakkeen '
           + 'matkalaukkuun (linssien kuvakesarjan tyyliin). Tila: tyo '
-          + 'kaikki julkaistu v1913 (#2519, #2520).',
+          + 'kaikki julkaistu v1913 (#2519, #2520). JATKO (omistaja 15.9.2026 '
+          + 'klo 19.05 UTC, iPhone-kuva avaruusvaiheesta "He vain lahtivat.", '
+          + 'sanatarkasti: "Alussa oli vain musta mutta sitten kehys palasi '
+          + 'liian aikaisin"): linssin ylapalkin reunaviiva ja valikkonappi '
+          + 'palaavat jo avaruusvaiheessa (tahdet, pieni Maa, alkuteksti), '
+          + 'vaikka nakyma on yha tumma. Linjaus: kehys (ylapalkki, '
+          + 'reunaviiva, valikkonappi, aikajanan alapalkki) pysyy poissa '
+          + 'KOKO avaruusvaiheen ajan ja palaa vasta kun kartta valkenee '
+          + 'nakyviin - samassa feidauksessa kuin kartta. Tila: tyo '
+          + 'Opus-agentilla.',
         'MATKALAUKKU ON FOGGIN MATTOLAUKKU (omistaja 15.9.2026 klo 12.10 '
           + 'UTC; kysymys sanatarkasti: "matkalaukusta: pitaisiko se olla '
           + 'oikeasti matka-arkku? oliko tuohon aikaan viela edes '
