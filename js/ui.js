@@ -8139,6 +8139,20 @@ export class UI {
      */
     this.paivitaMaailmanRajaus();
     this.kartta?.tarkistaFokusZoom?.();
+    /*
+     * PALLOLAUTA SAA TIETÄÄ KYTKENNÄSTÄ HETI (omistaja 15.9.2026,
+     * Raamattu: KARTTAUUDISTUKSEN PAATOKSET 23). Maailmanäkymässä
+     * tasoituksen kerma ei peitä kohdemaan ulkopuolta, ja tila luetaan
+     * laudan `paivita`-ohjauksessa (js/pallolauta/lauta.js
+     * asetaTasoituksenMaailma). Ilman tätä kutsua kartta jäisi
+     * entiselleen siihen asti, kunnes jokin muu pelin tapahtuma
+     * ajaisi ohjauksen — eli nappi ei näyttäisi tekevän mitään.
+     *
+     * `pallolauta?.paivita()` eikä `paivitaPallolauta()`: jälkimmäinen
+     * AVAISI pallon, jos sitä halutaan mutta sitä ei vielä ole, ja
+     * kehittäjän kytkin ei ole se hetki, jossa lauta syntyy.
+     */
+    this.pallolauta?.paivita();
   }
 
   /* --- MERKKIKERROSTEN NÄKYMÄRAJAUS (mitattu 29.8.2026) ------------- */

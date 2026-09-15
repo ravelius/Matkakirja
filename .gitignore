@@ -87,3 +87,8 @@ assets/audio/*.mp3
 # polkuun julisteet/pallo/napakalotit/<versio>/.
 napakalotit-ulos/
 ne-data/
+
+# Macilla ajettavan reliefityönkulun Python-venv (Homebrew Python on
+# PEP 668 "externally-managed" -tilassa, ks.
+# .github/workflows/renderoi-reliefi-macilla.yml).
+.venv-reliefi/

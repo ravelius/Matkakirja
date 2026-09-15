@@ -20487,6 +20487,14 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
  * TRANSLATE OMANA OMINAISUUTENAAN, EI transformina: napilla on omia
  * transform-sääntöjä (livia-kasvot, painallus), eikä keskitys saa
  * pyyhkiä niitä pois.
+ *
+ * KUOLLUT VARA 15.9.2026 KLO 15.15 UTC (Raamattu "KARTTAUUDISTUKSEN
+ * PAATOKSET 12 TARKENNUS: PULUN HAHMO PYSYY KULMASSA"): "kuvat"
+ * PAATOKSET 12:ssa tarkoitti isoisan luentakuvaa ja pulu-cam-valokuvaa,
+ * EI pulun hahmoa. js/fokusvirta.js paivitaPulunPaikka ei enaa lisaa
+ * body.pulu-kaupungin-paalla -luokkaa (poistaa sen aina), joten tama
+ * saanto ei koskaan laukea. Jatetty paikoilleen dokumentiksi 14.9.
+ * paatoksesta — ei poisteta, ettei historia katoa jos linjaus muuttuu.
  */
 body.pulu-kaupungin-paalla .pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
   right: auto;
