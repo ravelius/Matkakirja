@@ -457,18 +457,59 @@ export const MAAPANEELIN_ANKKURIT = {
   FRA: { lat: 45.9, lng: -4.6 },
 };
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * ERÄ 16: KAPEALLA RUUDULLA RANSKAN ANKKURI ON LYONINLAHDELLA
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 18 (omistaja 15.9.2026):
+ * pystypuhelimella — siis silloin kun saapumisnäkymä sovitetaan
+ * KORKEUTEEN (PÄÄTÖKSET 17, v1898) — Ranskan maapaneelin ankkuri on
+ * LYONINLAHDELLA Välimerellä Ranskan eteläreunan alla; työpöytä ja
+ * vaakatila pitävät Biskajanlahden (PÄÄTÖKSET 9).
+ *
+ * MIKSI: korkeuteen sovitettu saapumisnäkymä rajaa ruudun Ranskan
+ * PYSTYMITTAAN, jolloin maan itä- ja länsireuna jäävät ruudun
+ * ulkopuolelle. Biskajanlahti on laatikon LÄNSIREUNAN takana, joten
+ * paneeli olisi siellä saapuessa ruudun vasemmalla puolella näkymättä.
+ * Lyoninlahti on laatikon ALLA ja lähellä sen X-keskilinjaa, joten se
+ * on saapumisnäkymässä ruudulla — eikä silti maan päällä.
+ *
+ * VALINTA SEURAA SAMAA KUVASUHDE-EHTOA KUIN KORKEUSSOVITUS
+ * (js/pallolauta/kamera.js `korkeuteenSovitettu`: ruudun kuvasuhde <
+ * maan laatikon kuvasuhde pallolla) — EI LAITETUNNISTUSTA. Ehto
+ * luetaan MAAN omasta laatikosta eikä paneelilla laajennetusta, jottei
+ * valinta söisi omaa häntäänsä.
+ *
+ * PISTE 42,6 N / 3,9 E on Lyoninlahden avovettä (mitattu
+ * tools/savukkeet/savuke-era12.mjs väite 8: paneelin nelikulmion 25
+ * näytepistettä, 0 maaosumaa — ei Ranskaa, Espanjaa eikä Korsikaa).
+ *
+ * VAIN RANSKALLA on kapea-ankkuri; muilla mailla puuttuva rivi
+ * tarkoittaa, että oletusankkuri (laatikon eteläreuna) pätee kuten
+ * ennen — pilotti on pilotti (PÄÄTÖKSET 9 kohta 1).
+ */
+export const MAAPANEELIN_KAPEAT_ANKKURIT = {
+  FRA: { lat: 42.6, lng: 3.9 },
+};
+
 /**
  * Paneelin ankkuri laudan koordinaateissa.
  *
- * Maalla voi olla oma karttapiste (`MAAPANEELIN_ANKKURIT`); muuten
- * ankkuri on laatikon eteläreunan keskellä, raon verran sen
- * ULKOPUOLELLA. Laudan y kasvaa etelään (js/fokusmitat.js
+ * Maalla voi olla oma karttapiste (`MAAPANEELIN_ANKKURIT`, ja kapealla
+ * ruudulla `MAAPANEELIN_KAPEAT_ANKKURIT`); muuten ankkuri on laatikon
+ * eteläreunan keskellä, raon verran sen ULKOPUOLELLA.
+ *
+ * `kapea` = kutsujan lukema kuvasuhde-ehto (erä 16, ks. taulun
+ * perustelu). Ilman sitä käytös on entinen. Laudan y kasvaa etelään (js/fokusmitat.js
  * laudaltaAsteiksi), joten "ulkopuolella" on `+`.
  */
-export function paneelinAnkkuri(laatikko, iso = null, lauta = PALLO_LAUTA) {
+export function paneelinAnkkuri(laatikko, iso = null, lauta = PALLO_LAUTA, { kapea = false } = {}) {
   const mitat = paneelinMitat(laatikko);
   if (!mitat) return null;
-  const oma = iso ? MAAPANEELIN_ANKKURIT[iso] : null;
+  const oma = iso
+    ? ((kapea && MAAPANEELIN_KAPEAT_ANKKURIT[iso]) || MAAPANEELIN_ANKKURIT[iso])
+    : null;
   if (oma) {
     const kohta = projisoiLaudalle(lauta, oma.lng, oma.lat);
     if (kohta) return { x: kohta.x, y: kohta.y };
@@ -487,9 +528,9 @@ export function paneelinAnkkuri(laatikko, iso = null, lauta = PALLO_LAUTA) {
  * Tuntematon laatikko palautuu sellaisenaan: kamera saa silloin saman
  * laatikon kuin ennen tätä erää.
  */
-export function paneelinLaatikko(laatikko, iso = null) {
+export function paneelinLaatikko(laatikko, iso = null, { kapea = false } = {}) {
   const mitat = paneelinMitat(laatikko);
-  const ankkuri = paneelinAnkkuri(laatikko, iso);
+  const ankkuri = paneelinAnkkuri(laatikko, iso, PALLO_LAUTA, { kapea });
   if (!mitat || !ankkuri) return laatikko ?? null;
   /*
    * YHDISTE, EI ENÄÄ PELKKÄ ALASPÄIN VENYTYS (erä 12). Ankkuri voi
@@ -785,7 +826,9 @@ function sovitaValikko(kortti) {
  *   valikkoAuki()               savukkeille ja vartijoille
  *   pura()
  */
-export function luoMaapaneeli({ ui, merkit, kamera, asteet, saapumisnakyma = null }) {
+export function luoMaapaneeli({
+  ui, merkit, kamera, asteet, saapumisnakyma = null, kapeaRuutu = null,
+}) {
   let tila = null; // { iso, laatikko, mitat, ankkuri }
   let valikkoAuki = false;
 
@@ -807,6 +850,13 @@ export function luoMaapaneeli({ ui, merkit, kamera, asteet, saapumisnakyma = nul
    * antamaa lähdettä tyhjä olio eli ei kattoa.
    */
   const nakyma = () => saapumisnakyma?.() ?? {};
+
+  /**
+   * Sovitetaanko TÄMÄN maan saapumisnäkymä korkeuteen (erä 16)?
+   * Kysytään kameralta maan OMASTA laatikosta; ilman kutsujan antamaa
+   * lähdettä vastaus on ei, jolloin ankkuri on entinen.
+   */
+  const kapea = (laatikko) => Boolean(kapeaRuutu?.(laatikko));
 
   /** Mittakaava kameran tilasta: lautayksikkö → css-pikseli. */
   const skaala = () => {
@@ -852,7 +902,9 @@ export function luoMaapaneeli({ ui, merkit, kamera, asteet, saapumisnakyma = nul
      */
     paivita({ iso = null, laatikko = null } = {}) {
       const mitat = maapaneeliKartassa() ? paneelinMitat(laatikko, nakyma()) : null;
-      const ankkuri = mitat ? paneelinAnkkuri(laatikko, iso) : null;
+      const ankkuri = mitat
+        ? paneelinAnkkuri(laatikko, iso, PALLO_LAUTA, { kapea: kapea(laatikko) })
+        : null;
       const a = iso && ankkuri ? asteet(ankkuri) : null;
       if (!a) {
         if (tila) { tila = null; valikkoAuki = false; kirjoita(); }
@@ -893,6 +945,17 @@ export function luoMaapaneeli({ ui, merkit, kamera, asteet, saapumisnakyma = nul
       if (!tila) return;
       const mitat = paneelinMitat(tila.laatikko, nakyma());
       if (mitat) tila.mitat = mitat;
+      /*
+       * ANKKURI LUETAAN SAMALLA (erä 16). Kuvasuhde-ehto ratkeaa vasta,
+       * kun maan laatikko on luettu ja zoomirajat tahdistettu, ja se
+       * voi vaihtua kesken pelin (ruudun kääntö). Ilman tätä paneeli
+       * jäisi kapealla ruudulla Biskajanlahdelle ruudun ulkopuolelle.
+       */
+      const ankkuri = tila.mitat
+        ? paneelinAnkkuri(tila.laatikko, tila.iso, PALLO_LAUTA, { kapea: kapea(tila.laatikko) })
+        : null;
+      const a = ankkuri ? asteet(ankkuri) : null;
+      if (a) { tila.lat = a.lat; tila.lng = a.lon ?? a.lng; }
       kirjoita();
     },
     /** Savukkeen ja vartijan mittarit. */

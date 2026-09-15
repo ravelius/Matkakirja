@@ -1423,6 +1423,17 @@ export async function avaaPallolauta(ui) {
     });
     return leveysYks > 0 ? w / leveysYks : 0;
   };
+  /**
+   * ONKO RUUTU MAAN LAATIKKOA KAPEAMPI (erä 16, Raamattu
+   * KARTTAUUDISTUKSEN PÄÄTÖKSET 18)?
+   *
+   * Sama ehto kuin saapumisnäkymän korkeussovituksella (PÄÄTÖKSET 17):
+   * kysytään kameralta, ei laitteesta. Maapaneeli valitsee sillä
+   * ankkurinsa (Ranskalla Lyoninlahti kapealla, Biskajanlahti
+   * leveällä). LAATIKKO ON MAAN OMA eikä paneelilla laajennettu —
+   * muuten ankkurin valinta muuttaisi omaa ehtoaan.
+   */
+  const kapeaRuutu = (laatikko) => Boolean(kamera.korkeuteenSovitettu?.(laatikko));
   const uloimmanOsuus = () => {
     const raja = maanZoomiraja();
     const korkeus = pallo.pointOfView()?.altitude;
@@ -1734,6 +1745,13 @@ export async function avaaPallolauta(ui) {
       vertailuskaala: saapumisenSkaala(),
       ruutuLeveys: kotelo.clientWidth,
     }),
+    /*
+     * KAPEA RUUTU = KORKEUTEEN SOVITETTU SAAPUMISNÄKYMÄ (erä 16,
+     * Raamattu KARTTAUUDISTUKSEN PÄÄTÖKSET 18). Ehto kysytään
+     * kameralta MAAN omasta laatikosta — ei laitetunnistusta eikä
+     * paneelilla laajennettua laatikkoa.
+     */
+    kapeaRuutu,
   });
   maapaneeliKerros = maapaneeli;
 
@@ -3229,9 +3247,9 @@ export async function avaaPallolauta(ui) {
     const laatikko = await saapumisrajaus();
     if (!laatikko || !maapaneeliKartassa()) return laatikko;
     // ISO kulkee mukana, koska ankkuri on erästä 12 alkaen maakohtainen
-    // (Ranskalla Biskajanlahti) — laajennus tehdään siihen suuntaan,
-    // jossa paneeli oikeasti on.
-    return paneelinLaatikko(laatikko, iso);
+    // (Ranskalla Biskajanlahti, kapealla ruudulla Lyoninlahti) —
+    // laajennus tehdään siihen suuntaan, jossa paneeli oikeasti on.
+    return paneelinLaatikko(laatikko, iso, { kapea: kapeaRuutu(laatikko) });
   };
 
   /** Saapumisajo: maan laatikko ruutuun, tai entinen kaupunkinäkymä. */
