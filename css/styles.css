@@ -1414,6 +1414,31 @@ button, .brand, .turn-pill, .fact-card h2 {
   border: 1px solid var(--line);
   background: #241a12;
   overflow: hidden;
+  /*
+   * KARTTARUUTU ON OMA PINONSA (korjaus 15.9.2026, omistajan
+   * iPhone-vikailmoitus: *"luennan huntu sumentaa myös isoisän ison
+   * luentakuvan"*).
+   *
+   * MITATTU JUURISYY: `position: relative` + `z-index: auto` EI luo
+   * pinontayhteyttä, joten ruudun sisäiset z-luvut karkasivat ulos
+   * `.app`-pinoon (`.app` on `position: fixed` eli lähin yhteys).
+   * Siellä luennan huntu (`body.luenta-huntu .map-pane::after`,
+   * z-index 4) päätyi SAMAAN pinoon kuin iso luentapäällys
+   * (`.fokusvirta-isokuva`, `.stage`:n lapsi, z-index 3) — ja 4 > 3,
+   * eli huntu maalautui kuvan PÄÄLLE ja sumensi sen. Mitattu
+   * Chromiumilla 390 × 844 (Ateena ja Dubrovnik): kuvan alueen
+   * Laplacian-varianssi romahti huntu päällä 1083 → 1,4 (Ateena) ja
+   * 553 → 1,2 (Dubrovnik) eli −99,8 %.
+   *
+   * `isolation: isolate` sulkee ruudun omat kerrokset (huntu 4, pieni
+   * luentakuva 5, fokuskortti 6 …) ruudun sisään. Ruutu itse jää
+   * `z-index: auto` -tasolle, joten iso luentapäällys (3) on koko
+   * ruudun päällä ja matkakirjakortti (`.rail`, 4) yhä sen päällä —
+   * järjestys ei riipu enää siitä, miten selain tulkitsee
+   * pinontayhteyksiä. `overflow: hidden` rajaa sisällön jo valmiiksi
+   * ruutuun, joten eristys ei muuta mitään näkyvää ruudun sisällä.
+   */
+  isolation: isolate;
   display: flex;
   /* Myös säiliölle, ei vain SVG:lle: WebKitin touch-action-tuki on
      SVG-elementeillä puutteellinen, ja pelkkä #boardin sääntö jätti
