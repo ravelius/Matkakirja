@@ -250,6 +250,42 @@ CORS-otsakkeettomalla vastauksella.
 
 ---
 
+## 6b. Porttien tulokset
+
+| Portti | Tulos |
+|---|---|
+| `npm test` | **3441 testiä, 3428 läpi, fail 0** |
+| `tarkista-kaksoisavaimet` | ei kaksoisavaimia |
+| `tarkista-niputus` | 391 moduulia, ei törmäyksiä |
+| `tarkista-savukkeet` | kunnossa |
+| `rules.test` + `dokumentit.test` | 337/337 |
+| `savuke-kaiutin-luentakuvat` (ajo 1) | 48/49 |
+| `savuke-kaiutin-luentakuvat` (ajo 2) | 47/49 |
+
+**Kaikki 13 kaiutin/VU-vartiota ja kolme vastakoetta menivät läpi
+MOLEMMISSA ajoissa**, ja korrelaatio toistui: 0,758 → 0,756 (pakotettu
+kuvio 0,060 → 0,057).
+
+Punaiseksi jääneet ovat v1908:n TEKSTIPIILO-osion vartioita, joiden
+mittaus nojaa 400 ms:n odotukseen, ja ne vaihtoivat paikkaa ajojen
+välillä — merkki kuormasta, ei tästä muutoksesta:
+
+- ajo 1: `ipad: lapun napautus näyttää merkinnän kesken luennan`
+  (meni läpi ajossa 2);
+- ajo 2: `ipad`/`tyopoyta: pulun repliikki ei jää ruudulle vaan
+  pluskuplaan`, molemmat `piilo: false` eli kertoja ei ollut äänessä
+  mittaushetkellä (menivät läpi ajossa 1).
+
+Kumpikaan ei kosketa luennan äänireittiä eikä kaiutinmittaria. Kone oli
+molemmissa ajoissa raskaasti kuormitettu (rinnakkainen `npm test` ja
+toisen session ajo); samasta syystä 50 ms:n näytteistys jouduttiin
+tekemään eristetyllä sivulla (osio 4).
+
+Ei uusia moduuleja, joten `sw.js` SHELL ja `build-standalone` MODULES
+ovat ennallaan (`js/kaiutinmittari.js` oli niissä jo).
+
+---
+
 ## 7. Mitä omistajan pitää vahvistaa iPhonella
 
 1. Saapumisluenta **istunnon ensimmäisenä** (juuri se tapaus, joka
