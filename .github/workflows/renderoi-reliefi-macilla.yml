@@ -1,0 +1,222 @@
+# Topografialinssin reliefikuvien renderöinti omistajan Mac Studiolla
+# (self-hosted runner) ja vienti R2-ämpäriin.
+#
+# Tausta: docs/raportit/viesti-fable-reliefi-mac-ohje-20260915.md (Sonnet-
+# agentti, 15.9.2026) — omistajan pyyntö "Taman topografialinssin voisi
+# renderoida paremmalle tarkkuudelle. Sen varmaan saa tehtya minun
+# Macilla, niin ei vie tokeneita." Raportti perustelee parametrit
+# (--kaariminuutit 1, --leveys 10800, pallo pysyy 4096:ssa) — tämä
+# työnkulku vain AJAA ne, ei valitse niitä uudelleen.
+#
+# Malli: aja-macilla.yml (turva: workflow_dispatch vain, vain omistaja,
+# self-hosted macOS, mac-ajovalmis.sh) ja polta-macilla.yml (R2-vienti,
+# salaisuuksien tarkistus, ei salaisuuksia lokiin).
+#
+# TURVA (repo on julkinen): laukeaa VAIN käsin, ja job ajetaan vain, jos
+# käynnistäjä on repon omistaja. Työnkulkuun ei koskaan lisätä
+# pull_request- tai push-laukaisua.
+#
+# Työkalu (tools/tee-reliefikartta.mjs) kirjoittaa js/packs/
+# linssi-topografia-kuva.js:n uudelleen paikallisen ajon osana — TÄTÄ
+# EI COMMITOIDA eikä pushata: uudet kuvat menevät R2:een, eivät
+# repoon, ja koodin osoitteiden vaihto (js/packs/linssi-topografia-kuva.js,
+# js/linssit/satelliitti-avaruus.js, sw.js) tehdään erillisenä PR:nä
+# ajon jälkeen, käsin tarkistettuna.
+name: Renderöi reliefi Macilla
+
+on:
+  workflow_dispatch:
+    inputs:
+      kaariminuutit:
+        description: 'Korkeusruudukon tarkkuus kaariminuutteina (ETOPO1 natiivi = 1)'
+        required: false
+        type: string
+        default: '1'
+      leveys:
+        description: 'Litteän reliefikartan leveys pikseleinä'
+        required: false
+        type: string
+        default: '10800'
+      katto:
+        description: 'Litteän reliefikartan tiedostokoon katto (kt)'
+        required: false
+        type: string
+        default: '12000'
+      pallo_leveys:
+        description: 'Pallon tekstuurin leveys pikseleinä'
+        required: false
+        type: string
+        default: '4096'
+      pallo_laatu:
+        description: 'Pallon tekstuurin WebP-laatu (0-100)'
+        required: false
+        type: string
+        default: '76'
+      tunniste:
+        description: 'Tiedostonimen tunniste (tyhjä = ajopäivä VVVVKKPP)'
+        required: false
+        type: string
+        default: ''
+      kuiva:
+        description: 'Vain renderöinti ja luvut, ei vientiä R2:een'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: renderoi-reliefi-macilla
+  cancel-in-progress: false
+
+jobs:
+  renderoi:
+    # Vain omistaja saa ajaa self-hosted-koneella (repo on julkinen).
+    if: github.event_name == 'workflow_dispatch' && github.actor == github.repository_owner
+    runs-on: [self-hosted, macOS]
+    timeout-minutes: 120
+    env:
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Tarkista salaisuudet
+        if: ${{ inputs.kuiva != true }}
+        run: |
+          set -euo pipefail
+          for v in R2_BUCKET AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY; do
+            [ -n "${!v:-}" ] || { echo "::error::$v puuttuu secreteistä"; exit 1; }
+          done
+          [ -n "${R2_ACCOUNT_ID:-}" ] || { echo "::error::R2_ACCOUNT_ID puuttuu"; exit 1; }
+
+      # Homebrew polkuun aina, jotta brew/python3 löytyvät myös silloin
+      # kun mac-ajovalmis.sh ei itse tarvitse niitä.
+      - name: Homebrew polkuun
+        run: echo "PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH" >> "$GITHUB_ENV"
+
+      # node@22 + awscli polkuun, sharp (npm install --no-save) reliefin
+      # pallo-uudelleenprojisointia varten (tools/tee-pallotopografia.mjs).
+      - name: Mac-ajokoneen valmistelu
+        run: tools/mac-ajovalmis.sh --sharp
+
+      # tools/tee-reliefikartta.mjs pakkaa lopputuloksen WebPiksi Pythonin
+      # Pillow'lla (Node ei osaa kirjoittaa WebPiä) — ks. raportin kohta 5.
+      - name: Python + numpy + pillow
+        run: |
+          set -euo pipefail
+          python3 --version
+          python3 -m pip install --user --upgrade numpy pillow
+
+      # Macilla Noden oma fetch toimii suoraan (NODE_USE_ENV_PROXY on vain
+      # konttiympäristön HTTPS_PROXY-kierto, ks. raportin kohta 5 lopussa) —
+      # jos ensimmäinen ajo silti tarvitsisi sitä (owner-verkko reitittää
+      # proxyn kautta), lippu on turvallinen asettaa myös Macilla.
+      - name: Litteä reliefikartta (Topografia-linssi)
+        env:
+          NODE_USE_ENV_PROXY: '1'
+        run: |
+          set -euo pipefail
+          node tools/tee-reliefikartta.mjs \
+            --kaariminuutit "${{ inputs.kaariminuutit }}" \
+            --leveys "${{ inputs.leveys }}" \
+            --katto "${{ inputs.katto }}" \
+            ${{ inputs.kuiva == true && '--kuiva' || '' }}
+
+      - name: Pallon tekstuuri
+        run: |
+          set -euo pipefail
+          node tools/tee-pallotopografia.mjs \
+            --leveys "${{ inputs.pallo_leveys }}" \
+            --laatu "${{ inputs.pallo_laatu }}" \
+            ${{ inputs.kuiva == true && '--kuiva' || '' }}
+
+      - name: Luvut (koko, mitat, sha256)
+        if: ${{ inputs.kuiva != true }}
+        run: |
+          set -euo pipefail
+          for f in assets/linssit/topografia.webp assets/linssit/topografia-pallo.webp; do
+            [ -f "$f" ] || { echo "::error::$f puuttuu — renderöinti ei kirjoittanut tiedostoa"; exit 1; }
+            KT=$(( $(stat -f%z "$f") / 1024 ))
+            MITAT=$(python3 -c "from PIL import Image; im = Image.open('$f'); print(f'{im.width}x{im.height}')")
+            SHA=$(shasum -a 256 "$f" | cut -d' ' -f1)
+            echo "$f: ${KT} kt, ${MITAT}, sha256 ${SHA}"
+            echo "${f}|${KT}|${MITAT}|${SHA}" >> luvut.txt
+          done
+
+      - name: Tunniste
+        if: ${{ inputs.kuiva != true }}
+        run: |
+          set -euo pipefail
+          TUNNISTE="${{ inputs.tunniste }}"
+          [ -n "$TUNNISTE" ] || TUNNISTE="$(date -u +%Y%m%d)"
+          echo "TUNNISTE=$TUNNISTE" >> "$GITHUB_ENV"
+
+      - name: Vienti R2:een
+        if: ${{ inputs.kuiva != true }}
+        run: |
+          set -euo pipefail
+          PAATE="https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+
+          aws s3 cp assets/linssit/topografia.webp \
+            "s3://${R2_BUCKET}/matkakirja/linssit/topografia-${TUNNISTE}.webp" \
+            --endpoint-url "$PAATE" \
+            --content-type image/webp \
+            --cache-control "public, max-age=31536000, immutable"
+
+          aws s3 cp assets/linssit/topografia-pallo.webp \
+            "s3://${R2_BUCKET}/matkakirja/linssit/topografia-pallo-${TUNNISTE}.webp" \
+            --endpoint-url "$PAATE" \
+            --content-type image/webp \
+            --cache-control "public, max-age=31536000, immutable"
+
+      - name: Varmista julkinen saatavuus
+        if: ${{ inputs.kuiva != true }}
+        run: |
+          set -euo pipefail
+          for nimi in "topografia-${TUNNISTE}" "topografia-pallo-${TUNNISTE}"; do
+            OSOITE="https://media.matkakirja.app/matkakirja/linssit/${nimi}.webp"
+            KOODI=$(curl -s -o /dev/null -w '%{http_code}' --head "$OSOITE")
+            if [ "$KOODI" != "200" ]; then
+              echo "::error::$OSOITE vastasi $KOODI (odotettu 200)"; exit 1
+            fi
+            echo "$OSOITE -> $KOODI"
+          done
+
+      - name: Kuitti yhteenvetoon
+        if: always()
+        run: |
+          set +e
+          {
+            echo "## Reliefin renderöinti Macilla"
+            echo
+            echo "Parametrit: kaariminuutit=${{ inputs.kaariminuutit }}, "\
+              "leveys=${{ inputs.leveys }}, katto=${{ inputs.katto }} kt, "\
+              "pallo_leveys=${{ inputs.pallo_leveys }}, "\
+              "pallo_laatu=${{ inputs.pallo_laatu }}, kuiva=${{ inputs.kuiva }}"
+            echo
+            if [ "${{ inputs.kuiva }}" = "true" ]; then
+              echo "Kuiva ajo — ei vientiä R2:een."
+            else
+              echo "Tunniste: ${TUNNISTE:-(ei asetettu)}"
+              echo
+              echo "| Tiedosto | Koko | Mitat | sha256 |"
+              echo "| --- | --- | --- | --- |"
+              if [ -f luvut.txt ]; then
+                while IFS='|' read -r tiedosto kt mitat sha; do
+                  echo "| $tiedosto | ${kt} kt | $mitat | $sha |"
+                done < luvut.txt
+              fi
+              echo
+              echo "Osoitteet:"
+              echo "- https://media.matkakirja.app/matkakirja/linssit/topografia-${TUNNISTE:-?}.webp"
+              echo "- https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-${TUNNISTE:-?}.webp"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit 0
