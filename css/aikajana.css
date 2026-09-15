@@ -2192,6 +2192,35 @@
 .aikajana.esitys-pimea .aikajana-kello { display: none; }
 
 /*
+ * MUSTA ALKU ON KOKONAAN MUSTA (omistaja 15.9.2026 klo 12.00,
+ * sanatarkasti: *"kun linssi alkaa täydestä mustuudesta, niin myös
+ * yläosa saisi olla kokonaan poissa. Nyt sinne näkyy pieni viiva
+ * yläpalkin alaosasta sekä hampurilaisen nuoli alaspäin. Otan nekin
+ * pois ihan siitä alusta."*)
+ *
+ * JUURISYY (mitattu 15.9.2026, tools/savukkeet/savuke-ihmisen-rintama.mjs):
+ * mustan peitteen (.aikajana-esitys-peite) yli jäi kaksi asiaa.
+ *   1. `.aikajana.palkki .aikajana-ylarivi` on TÄSSÄ TIEDOSTOSSA
+ *      MYÖHEMMIN ja yhtä painava (0-2-0) kuin yllä oleva
+ *      `.esitys-pimea`-sääntö, joten sen `border-color` ja `background`
+ *      voittavat: palkin 1 px alareuna piirtyi mustan päälle koko
+ *      ruudun leveydeltä.
+ *   2. Hampurilainen on tarkoituksella rajattu `esitys-pimea`-piilotuksen
+ *      ulkopuolelle (`:not(.aikajana-valikko-nappi)`), joten sen
+ *      alaspäin osoittava nuoli näkyi mustalla.
+ *
+ * Luokka `esitys-musta` on päällä VAIN ensimmäisen virkkeen ajan
+ * (js/linssit/ihmisen-matka-esitys.js avaruusavaus → nostaMusta), ja
+ * palkki palaa samassa feidauksessa kuin musta itse. Kerros katoaa
+ * kokonaan (opacity 0), joten mikään sen sisällä ei voi jäädä yli.
+ */
+.aikajana.esitys-musta .aikajana-ylarivi {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--avauksen-feidi, 1800ms) ease;
+}
+
+/*
  * ESINERIVI POIS KOKO ESITYKSEN AJAKSI (omistaja 7.9.2026: kertomus on
  * yksi kaari eikä korttien selausta). Kortit palaavat, kun ohjaaja
  * poistaa luokan ennen tutkimusvaihetta.
@@ -2407,6 +2436,7 @@ body.aikajana-pulu-piilossa .livia-kasvot-pinta {
   /* Ei liukuja: musta vaihtuu, teksti vaihtuu, kuva ilmestyy. */
   .aikajana-esitys-peite,
   .aikajana-esitys-peite.pois,
+  .aikajana.esitys-musta .aikajana-ylarivi,
   .aikajana-kertomusteksti,
   .aikajana-kertomusteksti-sisus,
   .aikajana-kertomuskuva,

@@ -10,7 +10,8 @@
  * tekstitasolla, kuten muissakin pallon kerroksissa.
  *
  * 1. Kasvu: matkaHetkella (uniformi uKuljettu).
- * 2. Kärjen väri: karjenPaino (sama kaava kuin ruudunTila kalvolla ja varjostimessa).
+ * 2. Kärjen väri: karjenPaino (sama kaava kuin ruudunTila kalvolla ja varjostimessa)
+ *    ja pitotilan vara, joka pitää kasvavan kärjen välkkymättä.
  * 3. Kaista: leveyskerroin, kaistanLeveysKm, vahimmaisleveysKm, aineiston alueet.
  * 4. Kärki kameralle: karkiHetkella oikealla selkärangalla.
  * 5. Kotipesän rengas.
@@ -26,7 +27,7 @@ import {
   leveyskerroin, kaistanLeveysKm, vahimmaisleveysKm, karkiMerella, merisyys, etaisyysMaahan, rantamaskinRuutu,
   KAISTAN_MERI_RAJAT_KM,
   KAISTAN_PEITTO, KAISTAN_LEVEYS_KM, KAISTAN_MIN_PX, KAISTAN_MERI_MIN_PX, KAISTAN_MERI_KERROIN,
-  KAISTAN_KERROIN_RAJAT, KAISTAN_RENDER_ORDER, KOTIPESAN_RENDER_ORDER, KAISTAN_SYVYYSBIAS, KAISTAN_ALFABIAS,
+  KAISTAN_KERROIN_RAJAT, KAISTAN_PITO_VARA, KAISTAN_RENDER_ORDER, KOTIPESAN_RENDER_ORDER, KAISTAN_SYVYYSBIAS, KAISTAN_ALFABIAS,
   KOROSTUKSEN_HEHKU, KOROSTUKSEN_VAIMEA,
   VANAN_ENNAKKO, VANAN_ENNAKKO_MAX_AST, VANAN_KORKEUS,
 } from '../js/aikajana-vanat.js';
@@ -398,7 +399,8 @@ test('vanamoduuli: kaista omalla varjostimella, pinnan syvyys, kalvojen jälkeen
   assert.match(VANAT_JS, /if \(alpha < 0\.004\) discard;/, 'näkymätön fragmentti ei kirjoita syvyyttä');
   // Kärkiväri samalla kaavalla kuin karjenPaino (rintama, pito).
   assert.match(VANAT_JS, /clamp\(1\.0 - \(aika - uNyt\) \/ uRintama, 0\.0, 1\.0\)/);
-  assert.match(VANAT_JS, /if \(uPito > 0\.5 && uNyt > aika\) paino = 0\.0;/);
+  // Pitotilan ehdossa on VARA (ks. testi "rintaman kärki ei välky").
+  assert.match(VANAT_JS, /if \(uPito > 0\.5 && uNyt - aika > uRintama \* PITO_VARA\) paino = 0\.0;/);
   // Materiaali: kirjoittaa syvyyden tiukalla testillä (idempotentti peitto), ei polygonOffsetia.
   assert.match(VANAT_JS, /depthWrite: true,\n\s*depthFunc: LESS_DEPTH,/);
   assert.match(VANAT_JS, /fragDepth: true/);
@@ -432,4 +434,95 @@ test('vanamoduuli: kaista omalla varjostimella, pinnan syvyys, kalvojen jälkeen
   assert.ok(SW.includes("'./js/linssit/ihmisen-matka-rantamaski.js'"), 'rantamaski puuttuu sw.js SHELListä');
   // Työkalu, joka maskin tekee, rasteroi repon ne50.geojson:n.
   assert.match(lue('../tools/tee-rantamaski.mjs'), /ne50\.geojson/);
+});
+
+
+/*
+ * PUOLIPALLON MUOTOINEN KÄRKI EI SAA VÄLKKYÄ (omistaja 15.9.2026 klo
+ * 12.00: *"Kun ihmisjana etenee, niin sen etuosa, joka on puolipallon
+ * muotoinen, välkkyy koko ajan."*).
+ *
+ * Tämä testi AJAA VARJOSTIMEN KAAVAN float32:lla (Math.fround) niin kuin
+ * GPU sen ajaa, ja mittaa kehyssarjan kasvavan kärjen kohdalta:
+ *
+ *   f      = (uKuljettu − ma) / (mb − ma)          janan katkaisuosuus
+ *   aika   = mix(aika_a, aika_b, f)                kärjen saapumisaika
+ *   paino  = pito && uNyt > aika ? 0 : rintamapaino
+ *
+ * Reaaliluvuilla aika on TASAN uNyt, joten vanha ehto `uNyt > aika` on
+ * pyöristyksen varassa ja kääntyy kehyksestä toiseen: koko pyöreä kupu
+ * (jonka jokainen fragmentti käyttää samaa t = 1 → f) vaihtaa väriä
+ * rintaman kirkkaasta vanhan väestön tummaan ja takaisin. Uusi sääntö
+ * (KAISTAN_PITO_VARA) vaatii kärjen olevan SELVÄSTI kellon edellä.
+ */
+const f32 = Math.fround;
+
+/** Yksi kehys: varjostimen luvut kasvavan kärjen kohdalla. */
+function karjenKehys({ ma, mb, aikaA, aikaB, nyt, rintama }) {
+  const matka = Float32Array.from([ma, mb]);
+  const aikaP = Float32Array.from([aikaA, aikaB]);
+  const kulj = f32(matkaHetkella(matka, aikaP, nyt));
+  const f = f32(f32(kulj - matka[0]) / f32(matka[1] - matka[0]));
+  const aika = f32(aikaP[0] + f32(f32(aikaP[1] - aikaP[0]) * f));
+  const n = f32(nyt);
+  return { aika, nyt: n, ero: f32(n - aika), kulj };
+}
+
+test('rintaman kärki ei välky: pitotilan vara vie ehdon pois pyöristysrajalta', () => {
+  /*
+   * Mitat kuin mallissa: kumulatiivinen matka sadoissa maailmayksiköissä
+   * (pallon säde 100, 1 km ≈ 0,0157 yks), jakso 60–90 km, jakson
+   * aikaväli muutama sata vuotta. Kello etenee noin kehyksen verran
+   * kerrallaan eikä osu tasavuosiin.
+   */
+  const tapaukset = [
+    { nimi: '248 ka, matka 120', ma: 120, mb: 120.94, aikaA: 248000, span: 800 },
+    { nimi: '100 ka, matka 470', ma: 470, mb: 470.9, aikaA: 100000, span: 600 },
+    { nimi: '60 ka, matka 300', ma: 300, mb: 300.6, aikaA: 60000, span: 300 },
+  ];
+  let vuorotteluitaVanha = 0;
+  for (const t of tapaukset) {
+    const rintama = rintamanLeveys(t.aikaA);
+    const vara = rintama * KAISTAN_PITO_VARA;
+    const kehykset = [];
+    for (let i = 1; i <= 24; i += 1) {
+      const nyt = t.aikaA - (t.span * i) / 30 - 0.137 * i;
+      const k = karjenKehys({ ...t, aikaB: t.aikaA - t.span, nyt, rintama });
+      kehykset.push({
+        ...k,
+        // Vanha sääntö: pelkkä uNyt > aika.
+        vanha: k.nyt > k.aika ? 0 : 1,
+        // Uusi sääntö: vara mukana.
+        uusi: k.nyt - k.aika > vara ? 0 : 1,
+      });
+    }
+    // Uusi sääntö ei koskaan nollaa kasvavaa kärkeä.
+    assert.ok(kehykset.every((k) => k.uusi === 1),
+      `${t.nimi}: vara ei riitä — kärki sammuu kasvaessaan`);
+    // Pyöristysvirhe on korkeintaan yksi ulp, vara on sitä tuhansia kertoja suurempi.
+    const maksEro = Math.max(...kehykset.map((k) => Math.abs(k.ero)));
+    assert.ok(maksEro < vara / 100,
+      `${t.nimi}: pyöristys ${maksEro} on liian lähellä varaa ${vara}`);
+    for (let i = 1; i < kehykset.length; i += 1) {
+      if (kehykset[i].vanha !== kehykset[i - 1].vanha) vuorotteluitaVanha += 1;
+    }
+  }
+  // VASTAKOE: ilman varaa merkki heilahtaa kehysten välillä — juuri se
+  // on omistajan näkemä välkyntä. (Kolme tapausta, 24 kehystä kukin.)
+  assert.ok(vuorotteluitaVanha >= 3,
+    `vastakoe ei toistu: vanha sääntö vuorotteli vain ${vuorotteluitaVanha} kertaa`);
+
+  // karjenPaino (varjostimen Node-vastine) noudattaa samaa varaa.
+  const rintama = rintamanLeveys(248000);
+  assert.equal(karjenPaino(248000, 248000, rintama, { pito: true }), 1, 'kärki on rintamaa');
+  assert.equal(karjenPaino(248000 - rintama * KAISTAN_PITO_VARA * 0.5, 248000, rintama, { pito: true }), 1,
+    'varan sisällä kärki pysyy rintamana');
+  assert.equal(karjenPaino(248000 - rintama * KAISTAN_PITO_VARA * 2, 248000, rintama, { pito: true }), 0,
+    'varan ulkopuolella pito nollaa värin (aikahypyn jälkeen pidetty vana)');
+
+  // Varjostimessa on sama vara, ja se tulee määritteestä (ei taikanumeroa).
+  const LAHDE = lue('../js/aikajana-vanat.js');
+  assert.match(LAHDE, /if \(uPito > 0\.5 && uNyt - aika > uRintama \* PITO_VARA\) paino = 0\.0;/);
+  assert.match(LAHDE, /PITO_VARA: KAISTAN_PITO_VARA\.toFixed\(4\),/);
+  assert.ok(KAISTAN_PITO_VARA > 0 && KAISTAN_PITO_VARA < 0.1);
 });

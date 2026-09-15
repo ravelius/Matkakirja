@@ -668,7 +668,18 @@ test('esityksen pinnat ovat olemassa: pimeä, teksti, kuva ja koukku', () => {
   assert.match(CSS, /\.aikajana\.esitys-pimea \.aikajana-nappi:not\(\.aikajana-valikko-nappi\)/);
   // Esinerivi pois esityksen ajaksi ja takaisin lopuksi.
   assert.match(CSS, /\.aikajana\.esitys-kaynnissa \.aikajana-nauha \{/);
-  assert.match(OHJAAJA, /ajo\.juuri\?\.classList\.remove\('esitys-kaynnissa'\);/);
+  assert.match(OHJAAJA, /ajo\.juuri\?\.classList\.remove\('esitys-kaynnissa', 'esitys-musta'\);/);
+  /*
+   * MUSTA ALKU ON KOKONAAN MUSTA (omistaja 15.9.2026): linssin oma
+   * yläpalkki — sen 1 px alareuna ja hampurilaisen nuoli — piirtyi
+   * DOM-järjestyksessä mustan peitteen päälle. Luokka `esitys-musta`
+   * on päällä vain ensimmäisen virkkeen ajan.
+   */
+  assert.match(OHJAAJA, /ajo\.juuri\?\.classList\.add\('esitys-musta'\);/);
+  assert.match(OHJAAJA, /ajo\.juuri\?\.classList\.remove\('esitys-musta'\);/);
+  assert.match(CSS, /\.aikajana\.esitys-musta \.aikajana-ylarivi \{\n\s*opacity: 0;/);
+  // Mustan noustessa palkki palaa samassa feidauksessa.
+  assert.match(OHJAAJA, /ajo\.juuri\?\.style\?\.setProperty\('--avauksen-feidi'/);
   // Kuva on sivuosassa: pieni, kohteen vieressä, kytkettävissä pois.
   assert.equal(IHMISEN_MATKA_KUVAT_ESITYKSESSA, true);
   assert.ok(KUVAN_OSUUS > 0.15 && KUVAN_OSUUS < 0.3, `kuvan osuus ${KUVAN_OSUUS}`);
