@@ -71,7 +71,7 @@ import { tmpdir } from 'node:os';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { haeKorkeusruudukko, LAHTEET } from './hae-korkeusruudukko.mjs';
+import { haeKorkeusruudukko, LAHTEET, OLETUKSET } from './hae-korkeusruudukko.mjs';
 import { varjosta, tasainenVarjo, AURINKO } from './varjostus.mjs';
 import { sovitaMaailma, miller } from './vanha-maailma.mjs';
 
@@ -123,6 +123,23 @@ const arvo = (lippu, oletus) => {
  */
 const LEVEYS_PX = arvo('--leveys', 3600);
 const KATTO_KT = arvo('--katto', 1200);
+
+/*
+ * Korkeusruudukon tarkkuus kaariminuutteina — VÄLITETÄÄN haeKorkeusruudukolle.
+ *
+ * Ennen tämä lippu luettiin argv:stä mutta unohdettiin antaa eteenpäin:
+ * alla oleva haeKorkeusruudukko()-kutsu ajettiin oletuksilla, jolloin
+ * --kaariminuutit 1 ei koskaan pyytänyt 1′-ruudukkoa vaan sai aina
+ * repon 3′-välimuistin (tools/korkeusaineisto/etopo-3kaariminuuttia.bin.gz)
+ * suurennettuna. Bugi näkyi vain lokista ("ruudukko reposta: ...") eikä
+ * lopputuloksesta, koska suurennettu 3′-kuva näyttää yhä reliefikartalta.
+ *
+ * null tarkoittaa "lippua ei annettu" ja jättää haeKorkeusruudukon oman
+ * OLETUKSET.ruutu:n (0,05° = 3′) voimaan — sama käytös kuin ennen tätä
+ * korjausta, kun lippua ei käytetä.
+ */
+const KAARIMINUUTIT = arvo('--kaariminuutit', null);
+const RUUTU = KAARIMINUUTIT === null ? OLETUKSET.ruutu : KAARIMINUUTIT / 60;
 
 /*
  * LIIOITTELU on linssillä suurempi kuin varjostuksen oletus (10), muttei
@@ -477,9 +494,16 @@ console.log(`kohde: ${LEVEYS_PX} x ${korkeusPx} px `
   + `(${(sovitus.leveys / LEVEYS_PX).toFixed(1)} lautayksikköä eli `
   + `noin ${Math.round(40075 / LEVEYS_PX)} km päiväntasaajalla per pikseli)`);
 
-const g = await haeKorkeusruudukko();
+console.log(`pyydetty tarkkuus: ${KAARIMINUUTIT === null ? '(oletus)' : `${KAARIMINUUTIT}′`} `
+  + `(ruutu ${RUUTU}°)`);
+
+const g = await haeKorkeusruudukko({ ruutu: RUUTU });
 console.log(`ruudukko: ${g.leveys} x ${g.korkeus} (${g.ruutu}°), `
   + `${(g.leveys / LEVEYS_PX * (g.korkeus / korkeusPx)).toFixed(1)} ruutua per kuvapikseli`);
+if (g.ruutu !== RUUTU) {
+  throw new Error(`pyydettiin ${RUUTU}° ruudukkoa mutta saatiin ${g.ruutu}° — `
+    + 'haeKorkeusruudukko ei kunnioittanut pyyntöä');
+}
 
 const { varjo } = varjosta(g, { liioittelu: LIIOITTELU });
 const tasainen = tasainenVarjo();
