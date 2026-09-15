@@ -30,6 +30,18 @@
  *      vierellä), jota vahti ei koskaan nähnyt. Vartio mittaa PIKSELIN
  *      kirkkauden kartalta huntu päällä ja ilman (luokka pois PÄÄLLE
  *      OTETUSTA ruudusta, ei koodimuutos) — vastakoe samassa ajossa.
+ *   6. ISO LUENTAKUVA EI SUMENE HUNNUN ALLA (korjaus 15.9.2026,
+ *      omistajan iPhone-vikailmoitus: *"luennan huntu sumentaa myös
+ *      isoisän ison luentakuvan"*). Mitattu juurisyy: `.map-pane` ei
+ *      luonut pinontayhteyttä (position: relative, z-index: auto),
+ *      joten huntu (`::after`, z 4) karkasi `.app`-pinoon ja ohitti
+ *      siellä ison luentapäällyksen (`.fokusvirta-isokuva`, z 3).
+ *      Korjaus on css/styles.css `.map-pane { isolation: isolate }`.
+ *      Vartio mittaa KUVAN ALUEEN Laplacian-varianssin huntu päällä ja
+ *      ilman — saa poiketa enintään 2 % — ja tekee VASTAKOKEEN samassa
+ *      ajossa: eristys pois (`style.isolation = 'auto'`) palauttaa vian,
+ *      ja varianssin ON romahdettava. Ilman vastakoetta mittari
+ *      näyttäisi vihreää myös silloin, kun se ei mittaa mitään.
  *
  * KOEKAUPUNKI ON VENETSIA: sillä on isoisän kaksi luentakuvaa ja VIISI
  * PuluCam-kuvaa eli pisin mahdollinen sarja. Juuri Venetsiassa ketju
@@ -373,6 +385,99 @@ await ctx.close();
   await ajo.sivu.waitForTimeout(450); // opacity-siirtymä (400 ms) ehtii pois
   const kuvaPois = await ajo.cdp.send('Page.captureScreenshot', { format: 'png' });
   await ajo.sivu.evaluate(() => document.body.classList.add('luenta-huntu'));
+
+  /*
+   * TERÄVYYS LAPLACIAN-VARIANSSINA. Sumennus tasoittaa naapuripikselien
+   * erot, joten toisen derivaatan (Laplace-ytimen) varianssi romahtaa —
+   * se on suora mitta sille, onko alue terävä vai huntuinen. Pelkkä
+   * kirkkaus ei riittäisi: huntu myös tummentaa, ja tummeneminen yksin
+   * ei kerro sumennuksesta mitään.
+   */
+  const teravyys = async (b64, rect) => {
+    if (!rect) return null;
+    const p = await ajo.ctx.newPage();
+    await p.setContent(`<img id="k" src="data:image/png;base64,${b64}">`);
+    const v = await p.evaluate(([r]) => new Promise((resolve) => {
+      const img = document.getElementById('k');
+      const valmis = () => {
+        const c = document.createElement('canvas');
+        c.width = img.naturalWidth; c.height = img.naturalHeight;
+        const cx = c.getContext('2d');
+        cx.drawImage(img, 0, 0);
+        const x = Math.max(0, Math.round(r.x));
+        const y = Math.max(0, Math.round(r.y));
+        const w = Math.min(c.width - x, Math.round(r.width));
+        const h = Math.min(c.height - y, Math.round(r.height));
+        if (w < 5 || h < 5) { resolve(null); return; }
+        const d = cx.getImageData(x, y, w, h).data;
+        const g = new Float64Array(w * h);
+        for (let i = 0; i < w * h; i += 1) {
+          g[i] = d[i * 4] * 0.299 + d[i * 4 + 1] * 0.587 + d[i * 4 + 2] * 0.114;
+        }
+        let s = 0; let s2 = 0; let n = 0;
+        for (let yy = 1; yy < h - 1; yy += 1) {
+          for (let xx = 1; xx < w - 1; xx += 1) {
+            const i = yy * w + xx;
+            const L = 4 * g[i] - g[i - 1] - g[i + 1] - g[i - w] - g[i + w];
+            s += L; s2 += L * L; n += 1;
+          }
+        }
+        resolve(s2 / n - ((s / n) ** 2));
+      };
+      if (img.complete) valmis(); else img.onload = valmis;
+    }), [rect]);
+    await p.close();
+    return v;
+  };
+
+  /* Mitattava alue on KUVAN SISUS (reunat 15 % pois): kehys ja
+     kuvateksti eivät sotke mittaria, ja rajaus on sama kummassakin
+     kuvakaappauksessa, koska kuva ei liiku mittauksen aikana. */
+  const isokuvaRect = await ajo.sivu.evaluate(() => {
+    const el = document.querySelector('.fokusvirta-isokuva-ruutu.nakyy .fokusvirta-isokuva-kuva')
+      ?? document.querySelector('.fokusvirta-isokuva-kuva');
+    if (!el) return null;
+    const b = el.getBoundingClientRect();
+    if (b.width < 40 || b.height < 40) return null;
+    return {
+      x: b.x + b.width * 0.15,
+      y: b.y + b.height * 0.15,
+      width: b.width * 0.7,
+      height: b.height * 0.7,
+    };
+  });
+  vaadi('iso luentakuva on ruudulla (mittauksen ehto)', Boolean(isokuvaRect),
+    'isokuvan kuvaelementtiä ei löytynyt');
+  if (isokuvaRect) {
+    const teravaPaalla = await teravyys(kuvaPaalla.data, isokuvaRect);
+    const teravaPois = await teravyys(kuvaPois.data, isokuvaRect);
+    const muutos = teravaPois ? ((teravaPaalla - teravaPois) / teravaPois) * 100 : null;
+    tieto('isokuvan terävyys (Laplacian-varianssi)',
+      `huntu päällä ${teravaPaalla?.toFixed(1)}, huntu pois ${teravaPois?.toFixed(1)}, `
+      + `muutos ${muutos?.toFixed(2)} %`);
+    vaadi('ISO LUENTAKUVA EI SUMENE HUNNUN ALLA (±2 %)',
+      teravaPois > 20 && Math.abs(muutos) <= 2,
+      `päällä ${teravaPaalla?.toFixed(1)}, pois ${teravaPois?.toFixed(1)} (${muutos?.toFixed(2)} %)`);
+
+    /*
+     * VASTAKOE: eristys pois `.map-panelta` → huntu karkaa `.app`-pinoon
+     * ja ohittaa isokuvan (z 4 > 3), kuten ennen korjausta. Varianssin
+     * on romahdettava; jos se ei romahda, mittari ei mittaa kuvaa.
+     */
+    await ajo.sivu.evaluate(() => {
+      document.querySelector('.map-pane').style.isolation = 'auto';
+    });
+    await ajo.sivu.waitForTimeout(300);
+    const rikki = await ajo.cdp.send('Page.captureScreenshot', { format: 'png' });
+    const teravaRikki = await teravyys(rikki.data, isokuvaRect);
+    await ajo.sivu.evaluate(() => {
+      document.querySelector('.map-pane').style.isolation = '';
+    });
+    tieto('vastakoe: eristys pois', `varianssi ${teravaRikki?.toFixed(1)}`);
+    vaadi('VASTAKOE: ilman .map-panen eristystä kuva TODELLA sumenee',
+      teravaRikki !== null && teravaRikki < teravaPois * 0.5,
+      `rikki ${teravaRikki?.toFixed(1)}, ehjä ${teravaPois?.toFixed(1)}`);
+  }
 
   const hilaPaalla = await kirkkausHila(kuvaPaalla.data, mapRect);
   const hilaPois = await kirkkausHila(kuvaPois.data, mapRect);
