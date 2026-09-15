@@ -11636,7 +11636,17 @@ export class UI {
       const kuvaRuudulla = Boolean(document.querySelector(
         '.fokusvirta-luentakuva.nakyy, .fokusvirta-isokuva.nakyy',
       ));
-      document.body.classList.toggle('luenta-huntu', kertoja && kuvaRuudulla);
+      /*
+       * POIKKEUS KEHITTÄJÄN MAAILMANÄKYMÄSSÄ (omistaja 15.9.2026,
+       * Raamattu "KARTTATAUSTA LUENNAN JA KAUPUNKIESITTELYN AIKANA",
+       * POIKKEUS-kohta): kehittäjän maailmanäkymässä huntua ei nosteta
+       * lainkaan — muut luennan merkit (kaiutin, tekstipiilo, Liiku-
+       * piilo) pysyvät ennallaan. Nappi tarkistetaan joka kyselyllä,
+       * jotta huntu poistuu heti kun maailmanäkymä kytketään päälle
+       * kesken luennan.
+       */
+      const huntuSallittu = !(kehittajaTilaPaalla() && kehittajaMaailmaPaalla());
+      document.body.classList.toggle('luenta-huntu', kertoja && kuvaRuudulla && huntuSallittu);
     };
     askel();
     this.luentavahti = setInterval(askel, LUENTAVAHDIN_VALI_MS);
