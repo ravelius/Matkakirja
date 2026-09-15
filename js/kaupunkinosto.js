@@ -50,6 +50,7 @@
  */
 
 import { piirraNostosymKartalle } from './fokusnosto-symbolit.js';
+import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import {
   avaaTiivisLehtiarkki, kaupunginKansi, latoKaupunginEsittely, latoLehtiKuvat,
   suljeTiivisLehtiarkki,
@@ -57,6 +58,7 @@ import {
 import { avaaNahtavyys, piirraKaupunkiKartta, piirraMatkailijalle } from './nahtavyydet.js';
 import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { sfx } from './sound.js';
+import { taytaLahderivi } from './tekijakortti.js';
 import { html, jaaKappaleiksi, kuunteleSulkevaNapautus } from './ui-apurit.js';
 
 /* ===================== MERKIN MITAT KARTALLA ===================== */
@@ -854,13 +856,42 @@ export function latoLisakaupunginKortti(ui, sisalto, kohde) {
   const hero = html('div', 'kaupunkipopup-hero');
   const paakuva = html('div', 'lehti-paakuva');
   hero.appendChild(paakuva);
-  if (kohde?.herokuva) {
+  /*
+   * HEROKUVA JA SEN KREDITTI (kuvatoimitus 14.9.2026, kytkentä
+   * 15.9.2026). Kenttä on joko pelkkä osoite (vanha muoto) tai
+   * kuvaolio, jolla on `osoite` ja kuvateksti-/lähdekentät samassa
+   * muodossa kuin lehden herokuvilla (js/lehti.js latoLehtiKuvat):
+   * sivulla lyhyt teksti (js/kuvatekstit.js kuvatekstiLyhyt) ja sen
+   * perässä lähderivi samalla rivillä (js/tekijakortti.js
+   * taytaLahderivi, css/styles.css "LÄHDERIVI KUVATEKSTIN JATKEEKSI").
+   * Krediitti on lisenssin vaatimus eikä koriste: Commons-sivu ja
+   * lisenssi linkittyvät lähderivistä, ja kuvan todellinen ajoitus
+   * kulkee kuvatekstissä — näitä EI esitetä vuoden 1873 kuvina.
+   *
+   * Kuva sovitetaan CONTAIN-tavalla (css/kaupunkinosto.css): toimitetut
+   * vedokset ovat suhteessa 1,34–1,56:1 eikä alkuperäistä kehystä saa
+   * rajata pois.
+   */
+  const heroKuva = kohde?.herokuva ?? null;
+  const heroOsoite = typeof heroKuva === 'string' ? heroKuva : (heroKuva?.osoite ?? '');
+  if (heroOsoite) {
     const kehys = html('figure', 'lehti-kuva');
     const kuva = document.createElement('img');
-    kuva.src = kohde.herokuva;
-    kuva.alt = nimi;
+    kuva.src = heroOsoite;
+    const lyhyt = typeof heroKuva === 'string' ? '' : kuvatekstiLyhyt(heroKuva);
+    kuva.alt = lyhyt || nimi;
     kuva.loading = 'lazy';
+    kuva.decoding = 'async';
     kehys.appendChild(kuva);
+    if (lyhyt) {
+      const teksti = html('figcaption', 'kuvateksti', lyhyt);
+      if (heroKuva.lahde) {
+        teksti.appendChild(taytaLahderivi(
+          html('span', 'lehti-kuvalahde'), heroKuva.lahde, heroKuva,
+        ));
+      }
+      kehys.appendChild(teksti);
+    }
     paakuva.appendChild(kehys);
   } else {
     // PAIKKAMERKKI EI HAE MITÄÄN ULKOA: pelkkä ruutu ja nimi, jotta
