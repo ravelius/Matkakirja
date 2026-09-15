@@ -720,9 +720,11 @@ async function ajaNakyma(nakymanNimi) {
   await kaappaa('havainto');
 
   /*
-   * --- 6. Napit: ✕ ja i kuvan oikeassa yläkulmassa, pikkukuvat
-   * vasemmassa alakulmassa (omistaja 15.9.2026 klo 11.45 UTC,
-   * työpöytäkuva Etnasta) — mikään ei mene päällekkäin.
+   * --- 6. Napit: ✕ kuvan oikeassa yläkulmassa, i YLÄPALKISSA pillerin
+   * oikealla puolella (omistaja 15.9.2026 klo 11.45 UTC, työpöytäkuva
+   * Etnasta; TÄSMENNYS samana päivänä: "siirrä i pillerin oikealle
+   * puolelle"), pikkukuvat vasemmassa alakulmassa — mikään ei mene
+   * päällekkäin.
    */
   const napit = await s.evaluate(() => {
     const r = (v) => {
@@ -736,7 +738,8 @@ async function ajaNakyma(nakymanNimi) {
     };
     const nauha = r('.satelliitti-nauha');
     const sulku = r('.satelliitti-sulku');
-    const info = r('.satelliitti-info');
+    const info = r('.satelliittipalkki-info');
+    const kohde = r('.satelliittipalkki-kohde');
     const kuva = r('.satelliitti-kuva');
     const paallekkain = (a, b) => Boolean(a && b)
       && a.x < b.oikea && b.x < a.oikea && a.y < b.ala && b.y < a.ala;
@@ -748,38 +751,33 @@ async function ajaNakyma(nakymanNimi) {
       const b = el.getBoundingClientRect();
       return { x: Math.round(b.left), y: Math.round(b.top), w: Math.round(b.width), h: Math.round(b.height), oikea: Math.round(b.right), ala: Math.round(b.bottom) };
     });
-    // Kortti on FIXED ja alkaa yläpalkin ALAREUNASTA, ei ikkunan
-    // yläreunasta (ks. asemoiYlareuna) — "lähellä yläreunaa" on siis
-    // suhteessa korttiin, ei ikkunaan.
-    const kortinYlareuna = document.querySelector('.satelliitti-katselu')?.getBoundingClientRect().top ?? 0;
     return {
       nauha,
       sulku,
       info,
+      kohde,
       kuva,
       ikkuna: [window.innerWidth, window.innerHeight],
-      kortinYlareuna: Math.round(kortinYlareuna),
-      sulkuInfoPaallekkain: paallekkain(sulku, info),
+      infoKohteenOikealla: Boolean(info && kohde) && info.x >= kohde.oikea - 2,
       sulkuPikkujenPaalla: pikkuja.some((p) => paallekkain(sulku, p)),
-      infoPikkujenPaalla: pikkuja.some((p) => paallekkain(info, p)),
-      // ✕:n ja i:n väli pystysuunnassa (i on ✕:n alla).
-      sulkuInfoVali: sulku && info ? info.y - sulku.ala : null,
       pikkuja: pikkuja.length,
-      // OVATKO NAPIT JA PIKKUKUVAT KUVAN (ei lavan/kortin) sisällä?
+      // ON ✕ JA OVATKO PIKKUKUVAT KUVAN (ei lavan/kortin) sisällä?
       // Jälkikaappaus 15.9.2026: napit kelluivat kuvan MUSTASSA
       // MARGINAALISSA, ei kuvan päällä.
       sulkuKuvanSisalla: sisalla(sulku, kuva, 3),
-      infoKuvanSisalla: sisalla(info, kuva, 3),
       nauhaKuvanSisalla: sisalla(nauha, kuva, 3),
     };
   });
-  vaadi(nimessa('✕ on i:n yläpuolella, pieninä pyöreinä nappeina KUVAN oikeassa yläkulmassa'),
-    napit.sulku && napit.info
-      && napit.sulku.w >= 28 && napit.sulku.h >= 28 && napit.info.w >= 28 && napit.info.h >= 28
-      && napit.sulkuKuvanSisalla && napit.infoKuvanSisalla
-      && napit.sulku.ala <= napit.info.y
-      && !napit.sulkuInfoPaallekkain && !napit.sulkuPikkujenPaalla && !napit.infoPikkujenPaalla
-      && (napit.sulkuInfoVali ?? 0) >= 2,
+  vaadi(nimessa('✕ on pieni pyöreä nappi KUVAN oikeassa yläkulmassa'),
+    napit.sulku && napit.sulku.w >= 28 && napit.sulku.h >= 28
+      && napit.sulkuKuvanSisalla && !napit.sulkuPikkujenPaalla,
+    JSON.stringify(napit));
+  vaadi(nimessa('i-nappi on yläpalkissa pillerin oikealla puolella, ei kuvan kulmassa'),
+    napit.info && napit.info.w >= 24 && napit.info.h >= 24
+      && napit.infoKohteenOikealla
+      // i EI ole kuvan kulmassa (siellä missä ✕ on) — pystysuunnassa
+      // selvästi ylempänä, palkin sisällä.
+      && napit.info.y < napit.sulku.y,
     JSON.stringify(napit));
   /*
    * PIKKUKUVAT OVAT AINA KUVAN VASEMMASSA ALAKULMASSA, HYVIN PIENINÄ,
@@ -865,27 +863,13 @@ async function ajaNakyma(nakymanNimi) {
   await kaappaa('zoomattu');
 
   /* --- 8. Info-popup: kaikki tietorivit ja lisenssi ------------------ */
-  await s.evaluate(() => document.querySelector('.satelliitti-info').click());
+  await s.evaluate(() => document.querySelector('.satelliittipalkki-info').click());
   await s.waitForTimeout(400);
   const info = await s.evaluate(() => {
     const popup = document.querySelector('.satelliitti-popup');
     const b = popup?.getBoundingClientRect();
-    /*
-     * KUVAN REUNAT LASKETAAN LAVASTA + TALLENNETUSTA MARGINAALISTA,
-     * EI KUVAN LIVE-RECTISTÄ: tämä mittaus tapahtuu sormizoom-testin
-     * (kohta 7) JÄLKEEN, ja kuva on siinä yhä zoomattu/panoroitu —
-     * `getBoundingClientRect()` sisältäisi transformin ja antaisi
-     * väärän, järjettömän kulman (mitattu 15.9.2026: kuvanOikea tuli
-     * ikkunaa leveämmäksi). `--satelliitti-kuva-marginaali-*` mittaa
-     * asemoiKulmat-funktio VAIN latauksen/koon muutoksen yhteydessä,
-     * ei zoomatessa, joten se kertoo kuvan alkuperäisen (asetellun)
-     * paikan luotettavasti myös zoomin aikana.
-     */
-    const lava = document.querySelector('.satelliitti-lava')?.getBoundingClientRect();
-    const katselu = document.querySelector('.satelliitti-katselu');
-    const tyyli = katselu ? getComputedStyle(katselu) : null;
-    const marginaaliX = Number.parseFloat(tyyli?.getPropertyValue('--satelliitti-kuva-marginaali-x') ?? '0') || 0;
-    const marginaaliY = Number.parseFloat(tyyli?.getPropertyValue('--satelliitti-kuva-marginaali-y') ?? '0') || 0;
+    const napinRect = document.querySelector('.satelliittipalkki-info')?.getBoundingClientRect();
+    const katseluRect = document.querySelector('.satelliitti-katselu')?.getBoundingClientRect();
     return {
       auki: Boolean(popup),
       leveys: b ? Math.round(b.width) : null,
@@ -893,27 +877,33 @@ async function ajaNakyma(nakymanNimi) {
       x: b ? Math.round(b.left) : null,
       y: b ? Math.round(b.top) : null,
       ikkuna: [window.innerWidth, window.innerHeight],
-      // Kuvan omat reunat (ei lavan/kortin) — jälkikaappaus 15.9.2026:
-      // popupin ankkuri on KUVAN kulmassa, ei koko kortin kulmassa.
-      kuvanOikea: lava ? Math.round(lava.right - marginaaliX) : null,
-      kuvanYla: lava ? Math.round(lava.top + marginaaliY) : null,
+      // i-napin x yläpalkissa ja kortin (fixed) omat reunat — popup
+      // seuraa NAPPIA, ei kuvaa (täsmennys 15.9.2026).
+      napinX: napinRect ? Math.round(napinRect.left) : null,
+      kortinYlareuna: katseluRect ? Math.round(katseluRect.top) : null,
       tekstit: [...(popup?.querySelectorAll('div') ?? [])].map((d) => d.textContent),
       linkkeja: [...(popup?.querySelectorAll('.satelliitti-linkki') ?? [])].map((a) => a.href),
       sulku: Boolean(popup?.querySelector('.satelliitti-popup-sulku')),
     };
   });
   /*
-   * POPUP AVAUTUU SAMAAN OIKEAAN YLÄKULMAAN KUIN ✕ JA i, NIIDEN PÄÄLLE,
-   * KUVAN SISÄLLE (omistaja 15.9.2026: *"lisatietokentta voisi avautua
-   * sitten heti sulkemisnapin ja I-napin paalle sinne oikeaan
-   * ylareunaan"*, täsmennys samana päivänä jälkikaappauksesta) — EI
-   * enää vasempaan alakulmaan eikä lavan/kortin kulmaan.
+   * POPUP AVAUTUU YLÄPALKIN ALTA i-NAPIN KOHDALTA (omistaja 15.9.2026,
+   * TÄSMENNYS: *"lisätietokentta avautuu yläpalkin alta i-napin
+   * kohdalta"*, korvaa aiemman "kuvan oikea yläkulma" -sijoituksen).
+   * Popupin vasen reuna on lähellä napin x-paikkaa TYÖPÖYDÄLLÄ, missä
+   * tilaa riittää. KAPEALLA RUUDULLA (esim. 390 px, popup 366 px
+   * leveä) `asemoiPopup` rajaa sen ruudun sisään VASEMMALLE — se on
+   * oikea käytös, ei virhe — niin että popup ei koskaan mene napin
+   * OIKEALLE puolelle eikä ulos ikkunasta.
    */
-  vaadi(nimessa('info-popup avautuu KUVAN oikeaan yläkulmaan, samaan kuin ✕ ja i'),
-    info.x !== null && info.y !== null && info.kuvanOikea !== null
-      && info.kuvanOikea - (info.x + info.leveys) <= 20
-      && info.y - info.kuvanYla <= 20,
-    JSON.stringify({ x: info.x, y: info.y, leveys: info.leveys, kuvanOikea: info.kuvanOikea, kuvanYla: info.kuvanYla }));
+  const kohdistuu = Math.abs(info.x - info.napinX) <= 60;
+  const rajattuVasemmalle = info.x <= info.napinX
+    && info.x + info.leveys <= info.ikkuna[0] - 4;
+  vaadi(nimessa('info-popup avautuu yläpalkin alta, i-napin kohdalta (tai rajattuna ruudun sisään)'),
+    info.x !== null && info.y !== null && info.napinX !== null
+      && (kohdistuu || rajattuVasemmalle)
+      && info.y - (info.kortinYlareuna ?? 0) <= 20,
+    JSON.stringify(info));
   const infoTeksti = (info.tekstit ?? []).join(' | ');
   vaadi(nimessa('info-nappi avaa pienen popupin, jossa koko lähdeketju'),
     info.auki && info.leveys < info.ikkuna[0] && info.korkeus < info.ikkuna[1] * 0.7

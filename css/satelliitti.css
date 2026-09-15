@@ -313,6 +313,36 @@ body.aikajana-palkki-auki .topbar {
 }
 
 /*
+ * i-NAPPI HETI PILLERIN OIKEALLA PUOLELLA (omistaja 15.9.2026,
+ * TÄSMENNYS: *"siirrä 'i' pillerin oikealle puolelle"*). Sama pieni
+ * pyöreä nappityyli kuin ✕-napilla (`.satelliittipalkki-sulje`), mutta
+ * ilman `margin-left: auto` — se pysyy paikallaan pillerin vierellä,
+ * ja ✕ jää yksin työntämään itsensä oikeaan reunaan. Piilossa, kun
+ * pilleri on tyhjä (ei kuvaa auki): `rakennaPalkki().nimeaKohde` näyttää/
+ * piilottaa sen yhdessä pillerin kanssa.
+ */
+.satelliittipalkki-info {
+  flex: 0 0 auto;
+  width: 1.9rem;
+  height: 1.9rem;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(93, 255, 168, 0.4);
+  background: rgba(6, 13, 10, 0.55);
+  color: #eafff3;
+  font-family: var(--font-type, system-ui), system-ui, sans-serif;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.satelliittipalkki-info:hover { background: rgba(93, 255, 168, 0.22); }
+.satelliittipalkki-info[hidden] { display: none; }
+
+/*
  * NASA-rivi näkyy kartalla ilman kuvaa; kuvan ollessa auki `[hidden]`
  * piilottaa sen ja pilleri (yllä) kertoo kohteen ja päivän sen
  * tilalla (js/linssit/satelliitti.js rakennaPalkki nimeaKohde).
@@ -471,21 +501,25 @@ body.aikajana-palkki-auki .topbar {
  * on, ja vasta sitten milloin.
  */
 /*
- * ═══ KULMA: ✕ JA i KUVAN OIKEASSA YLÄKULMASSA (omistaja 15.9.2026 klo
- * 11.45 UTC, työpöytäkuva Etnasta; TÄSMENNYS samana päivänä
- * jälkikaappauksesta) ═══════════════════════════════════════════
+ * ═══ KULMA: PELKKÄ ✕ KUVAN OIKEASSA YLÄKULMASSA (omistaja 15.9.2026
+ * klo 11.45 UTC, työpöytäkuva Etnasta; TÄSMENNYS samana päivänä
+ * kahdesti — jälkikaappauksesta JA "siirrä i pillerin oikealle
+ * puolelle") ═══════════════════════════════════════════════════
  *
- * Sanatarkasti: *"siirrat alakulman X niin kuvan oikean ylareunaan
- * pienena pyoreana X... I-nappi saisi tulla kuvan sulkemisen napin
- * alapuolelle"*. Kaksi pientä pyöreää nappia pinossa, KUVAN sisällä
- * pienellä sisennyksellä — EI lavan (koko ruudun) kulmassa.
+ * ALKUPERÄINEN SIJOITUS: *"siirrat alakulman X niin kuvan oikean
+ * ylareunaan pienena pyoreana X... I-nappi saisi tulla kuvan
+ * sulkemisen napin alapuolelle"* — ✕ ja i olivat molemmat kuvan
+ * kulmassa pinossa. TOINEN TÄSMENNYS siirsi i:n YLÄPALKKIIN pillerin
+ * (kohde+päivä) oikealle puolelle (ks. `.satelliittipalkki-info`
+ * alempana `.satelliittipalkki`-säännöistä) — kuvan kulmaan jää
+ * enää VAIN ✕.
  *
  * KUVA EI TÄYTÄ AINA KOKO LAVAA. `.satelliitti-kuva` säilyttää oman
  * kuvasuhteensa (max-width/height: 100%, ei object-fitiä) ja on
  * keskitetty lavan sisällä — muun muotoisella kuvalla syntyy musta
  * marginaali sivuille TAI ylä-/alapuolelle. Jälkikaappaus 15.9.2026
- * paljasti, että napit olivat tässä marginaalissa eivätkä kuvan
- * päällä, koska `right/top: 10px` mitattiin LAVASTA eikä kuvasta.
+ * paljasti, että ✕ oli tässä marginaalissa eikä kuvan päällä, koska
+ * `right/top: 10px` mitattiin LAVASTA eikä kuvasta.
  *
  * KORJAUS: js/linssit/satelliitti.js `asemoiKulmat` mittaa kuvan
  * todellisen piirtoalueen ja kirjoittaa marginaalin CSS-muuttujiin
@@ -503,8 +537,7 @@ body.aikajana-palkki-auki .topbar {
   gap: 8px;
 }
 
-.satelliitti-sulku,
-.satelliitti-info {
+.satelliitti-sulku {
   flex: 0 0 auto;
   width: 2.1rem;
   height: 2.1rem;
@@ -519,18 +552,9 @@ body.aikajana-palkki-auki .topbar {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-
-.satelliitti-sulku {
   font-size: 1.3rem;
   border-color: rgba(93, 255, 168, 0.6);
   background: rgba(93, 255, 168, 0.16);
-}
-
-.satelliitti-info {
-  font-family: var(--font-type, system-ui), system-ui, sans-serif;
-  font-size: 1.05rem;
-  font-style: italic;
 }
 
 /*
@@ -581,16 +605,21 @@ body.aikajana-palkki-auki .topbar {
 .satelliitti-pikku img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 /*
- * ── info-popup: pieni ikkuna KUVAN oikeassa yläkulmassa, nappien
- * PÄÄLLÄ (omistaja 15.9.2026: *"lisatietokentta voisi avautua sitten
- * heti sulkemisnapin ja I-napin paalle sinne oikeaan ylareunaan"*) —
- * SAMASSA kulmassa kuin ✕ ja i (samat marginaalimuuttujat), ei enää
- * vasemmalla alhaalla eikä lavan kulmassa.
+ * ── info-popup: pieni ikkuna YLÄPALKIN ALTA, i-NAPIN KOHDALTA
+ * (omistaja 15.9.2026, TÄSMENNYS: *"siirrä i pillerin oikealle
+ * puolelle"* — i-nappi asuu nyt yläpalkissa (`.satelliittipalkki-
+ * info`), ei kuvan kulmassa, ja lisätietokenttä seuraa sitä).
+ *
+ * `left` LASKETAAN JS:LLÄ (js/linssit/satelliitti.js avaaPopup →
+ * asemoiPopup), koska i-napin x-paikka yläpalkissa vaihtelee kohteen
+ * nimen pituuden mukaan — kiinteä CSS-arvo ei voisi osua sen kohdalle.
+ * `top` on kiinteä: katselu (fixed) alkaa jo yläpalkin alareunasta,
+ * joten pieni lisäys riittää viemään popupin heti sen alle.
  */
 .satelliitti-popup {
   position: absolute;
-  right: calc(var(--satelliitti-kuva-marginaali-x, 0px) + 12px);
-  top: calc(var(--satelliitti-kuva-marginaali-y, 0px) + 12px);
+  top: 8px;
+  left: 12px;
   z-index: 5;
   box-sizing: border-box;
   width: min(380px, calc(100vw - 24px));

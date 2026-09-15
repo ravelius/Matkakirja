@@ -35,6 +35,25 @@ löytyi ensimmäisestä kaappauksesta ja korjattiin samaan haaraan:
 Mitattu uudelleen: `tests/satelliitti.test.mjs` 44/44,
 `savuke-satelliittilinssi.mjs` 33/33 (1400×900) ja 31/31 (390×844).
 
+**TOINEN JÄLKIKORJAUS 15.9.2026 (omistaja, sanatarkasti: "siirrä 'i'
+pillerin oikealle puolelle"):** i-nappi siirrettiin kuvan oikeasta
+yläkulmasta (✕:n alta) YLÄPALKKIIN, heti nimi/päivä-pillerin oikealle
+puolelle — sama pieni pyöreä nappityyli (uusi `.satelliittipalkki-info`),
+näkyy/piiloutuu samalla ehdolla kuin pilleri (`rakennaPalkki().
+nimeaKohde`). Kuvan oikeaan yläkulmaan jää enää vain ✕ (`.satelliitti-
+kulma`, nyt yhden napin kotelo). Lisätietokenttä avautuu YLÄPALKIN
+ALTA i-napin x-paikan kohdalta (uusi `asemoiPopup()`, mittaa i-napin
+`getBoundingClientRect()`:n ja rajaa popupin ruudun sisään kapealla
+ruudulla — 390 px:llä popup on leveämpi kuin tila napin oikealla
+puolella, joten se siirtyy vasemmalle mutta pysyy yläpalkin alla).
+`avaaHavaintokortti` kytkee ja irrottaa klikkauskuuntelijan
+(`infoNapinKlikkaus`) joka avauksella/sulkemisella, koska i-nappi on
+nyt palkin PYSYVÄ elementti eikä kuvan oma kertakäyttöinen nappi.
+
+Mitattu kolmannen kerran: `tests/satelliitti.test.mjs` 45/45,
+`savuke-satelliittilinssi.mjs` 34/34 (1400×900) ja 32/32 (390×844).
+Kaappaukset päivitetty uudelleen samoihin tiedostoihin.
+
 ## Osa 1: X-nappi, NASA-rivi, Liiku-nappi piiloon (js/tyohuone-raamattu.js
 "ASTRONAUTIN KAMERA -LINSSI: TARKEMPI RELIEFI, X-NAPPI, NASA-RIVI, EI
 LIIKU-NAPPIA")

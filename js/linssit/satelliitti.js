@@ -564,7 +564,12 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
    * popupin "Kuvausaika" (aikateksti), aikaa ei keksitä.
    */
 
-  /* ---- kulma: ✕ ylhäällä, i sen alla, oikeassa yläkulmassa --------- */
+  /*
+   * ---- kulma: pelkkä ✕ kuvan oikeassa yläkulmassa ------------------
+   * i-nappi asuu YLÄPALKISSA (`palkki.infoNappi`, pillerin oikealla
+   * puolella) toisen täsmennyksen jälkeen — tämä havaintokortti kytkee
+   * vain sen klikkauksen ja piilotuksen (alla), ei luo omaa nappia.
+   */
   const nappi = (luokka, teksti, otsikko) => {
     const b = html('button', luokka, teksti);
     b.type = 'button';
@@ -573,16 +578,28 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
     return b;
   };
   const sulku = nappi('satelliitti-sulku', '×', 'Sulje havainto');
-  const infoNappi = nappi('satelliitti-info', 'i', 'Havainnon tiedot');
   const kulma = html('div', 'satelliitti-kulma');
-  kulma.append(sulku, infoNappi);
+  kulma.append(sulku);
+  const infoNappi = palkki?.infoNappi ?? null;
 
   /* ---- pikkukuvat hyvin pieninä kuvan vasemmassa alakulmassa ------- */
   const nauha = html('div', 'satelliitti-nauha');
   katselu.append(lava, kulma, nauha);
   document.body.appendChild(katselu);
+  // Julistettu TÄSSÄ (ei vasta "sulkeminen"-lohkossa), koska
+  // paivitaAsemointi (alla) lukee sitä myös ENSIMMÄISELLÄ, synkronisella
+  // kutsulla — let-muuttuja ei saa olla vielä alustamatta silloin.
+  let popup = null;
   /** Molemmat mittaukset yhdellä kutsulla: palkin alareuna JA kuvan oma alue. */
-  const paivitaAsemointi = () => { asemoiYlareuna(); asemoiKulmat(); };
+  const paivitaAsemointi = () => {
+    asemoiYlareuna();
+    asemoiKulmat();
+    // Popup seuraa i-nappia (yläpalkissa) — jos se on auki resize/
+    // kääntökohdassa, se pysyy napin kohdalla (asemoiPopup on määritelty
+    // vasta myöhemmin tässä funktiossa, mutta tähän mennessä popup on
+    // aina null ensimmäisellä, synkronisella kutsulla).
+    if (popup) asemoiPopup();
+  };
   paivitaAsemointi();
   const kokovahti = typeof ResizeObserver === 'function' && palkki?.el
     ? new ResizeObserver(paivitaAsemointi) : null;
@@ -595,7 +612,6 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
   window.addEventListener('orientationchange', paivitaAsemointi);
 
   /* ---- sulkeminen -------------------------------------------------- */
-  let popup = null;
   const nappain = (e) => {
     if (e.key === 'Escape') { if (popup) { suljePopup(); return; } sulje(); return; }
     if (e.key === 'ArrowRight') nayta(indeksi + 1);
@@ -609,6 +625,11 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
     window.removeEventListener('resize', paivitaAsemointi);
     window.removeEventListener('orientationchange', paivitaAsemointi);
     document.removeEventListener('keydown', nappain);
+    // i-nappi on palkin OMA, pysyvä elementti — sen kuuntelija
+    // irrotetaan tässä, jotta seuraava havaintokortti ei kasaa niitä
+    // päällekkäin (palkki elää linssin koko avoinnaolon ajan).
+    infoNappi?.removeEventListener('click', infoNapinKlikkaus);
+    infoNappi?.setAttribute('aria-expanded', 'false');
     palkki?.nimeaKohde?.(null);
     onSuljettu?.();
   }
@@ -622,7 +643,25 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
   function suljePopup() {
     popup?.remove();
     popup = null;
-    infoNappi.setAttribute('aria-expanded', 'false');
+    infoNappi?.setAttribute('aria-expanded', 'false');
+  }
+  /*
+   * POPUP YLÄPALKIN i-NAPIN KOHDALLE (omistaja 15.9.2026: *"lisätietokentta
+   * avautuu yläpalkin alta i-napin kohdalta"*). i-napin x-paikka
+   * yläpalkissa vaihtelee kohteen nimen pituuden mukaan, joten se
+   * mitataan joka avauksella eikä kiinnitetä CSS:ään.
+   */
+  function asemoiPopup() {
+    if (!popup) return;
+    const napinRect = infoNappi?.getBoundingClientRect?.();
+    const katseluRect = katselu.getBoundingClientRect();
+    if (!napinRect || !(katseluRect.width > 0)) return;
+    const leveys = popup.offsetWidth || 380;
+    const vasenRajattu = Math.max(8, Math.min(
+      napinRect.left - katseluRect.left, katseluRect.width - leveys - 8,
+    ));
+    popup.style.left = `${Math.round(vasenRajattu)}px`;
+    popup.style.top = '8px';
   }
   const teeRivi = (nimi, arvo) => {
     if (!arvo) return null;
@@ -659,9 +698,11 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
       teeRivi('Kuvakirjasto', ulkolinkki('NASA Image and Video Library', SATELLIITTI_LAHDE.osoite)),
     ]) if (rivi) popup.appendChild(rivi);
     katselu.appendChild(popup);
-    infoNappi.setAttribute('aria-expanded', 'true');
+    asemoiPopup();
+    infoNappi?.setAttribute('aria-expanded', 'true');
   };
-  infoNappi.addEventListener('click', (e) => { e.stopPropagation(); avaaPopup(); });
+  const infoNapinKlikkaus = (e) => { e.stopPropagation(); avaaPopup(); };
+  infoNappi?.addEventListener('click', infoNapinKlikkaus);
 
   /*
    * VERTAA-TOIMINTO ON POISTETTU (omistaja 15.9.2026, kysymyskortilla:
@@ -907,6 +948,23 @@ export function rakennaPalkki({ ui, kohteet, onSulje, doc = document }) {
   kohdenimi.textContent = '';
 
   /*
+   * i-NAPPI HETI PILLERIN OIKEALLA PUOLELLA (omistaja 15.9.2026,
+   * TÄSMENNYS: *"siirrä 'i' pillerin oikealle puolelle"*). Nappi asui
+   * ensin kuvan oikeassa yläkulmassa ✕:n alla; toinen kaappaus siirsi
+   * sen tähän. Klikkauksen käsittelijän kytkee avaaHavaintokortti
+   * (havainnon tiedot riippuvat auki olevasta kohteesta, ei palkista
+   * itsestään) — tämä on vain paikka ja ulkoasu. Piilossa, kun kuvaa
+   * ei ole auki (sama ehto kuin pillerillä).
+   */
+  const infoNappi = doc.createElement('button');
+  infoNappi.type = 'button';
+  infoNappi.className = 'satelliittipalkki-info';
+  infoNappi.textContent = 'i';
+  infoNappi.title = 'Havainnon tiedot';
+  infoNappi.setAttribute('aria-label', 'Havainnon tiedot');
+  infoNappi.hidden = true;
+
+  /*
    * OHJETEKSTI KERTOO LÄHTEEN, EI KÄYTTÖÄ (omistaja 15.9.2026,
    * työpöytäkuva linssistä: *"ota pois tuon 'Napauta hohtavaa vihreää
    * pistettä' -teksti. Ja sen tilalla voisi lukea jotain NASAsta ...
@@ -938,7 +996,7 @@ export function rakennaPalkki({ ui, kohteet, onSulje, doc = document }) {
   sulje.title = 'Sulje linssi ja palaa peliin';
   sulje.addEventListener('click', () => onSulje?.());
 
-  palkki.append(nimi, kohdenimi, ohje, sulje);
+  palkki.append(nimi, kohdenimi, infoNappi, ohje, sulje);
 
   /*
    * YLÄPALKIN KORKEUS MITATAAN ENNEN PIILOTUSTA — sama kaava kuin
@@ -956,15 +1014,19 @@ export function rakennaPalkki({ ui, kohteet, onSulje, doc = document }) {
   return {
     el: palkki,
     kohdenimi,
+    /** i-nappi (havaintokortti kytkee klikkauksen ja piilotuksen tähän). */
+    infoNappi,
     /*
      * Kohteen nimi (+ päivä) palkkiin (tai null pois). Korkeus ei
      * muutu. NASA-rivi (ohje) näkyy VAIN kun pilleri on tyhjä — kuva
      * auki -tilassa pilleri korvaa sen, kartalla ilman kuvaa NASA-rivi
-     * palaa (ks. tiedoston yllä oleva kommentti).
+     * palaa (ks. tiedoston yllä oleva kommentti). i-nappi näkyy ja
+     * piilee SAMALLA ehdolla kuin pilleri.
      */
     nimeaKohde: (teksti) => {
       kohdenimi.textContent = teksti ?? '';
       ohje.hidden = Boolean(teksti);
+      infoNappi.hidden = !teksti;
     },
     pura: () => {
       palkki.remove();
