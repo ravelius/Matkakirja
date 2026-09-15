@@ -115,9 +115,9 @@ kirjattuna `tools/savukkeet/README.md`:hen.
   maapaneelin päällä: paneeli 0,0597 vs. kartta 0,0242, suhde 2,47)
   eli PÄÄTÖKSET 21:n maapaneelityö, jota toinen agentti tekee
   rinnalla (`js/pallolauta/maapaneeli.js`). Se ei koske tätä erää:
-  tämä muutos ei kajoa paneeliin eikä eleiden käsittelyyn, ja
-  väite 12 (*"Ranska ei muutu"*) sekä kaikki 11 vastakoetta ovat
-  vihreitä
+  tämä muutos ei kajoa paneeliin eikä eleiden käsittelyyn. Kaikki
+  muut 26 vartiota — Ranskan uloszoomaus, rajaus, ankkurit ja
+  kaikki yksitoista vastakoetta — ovat vihreitä
 
 ## 6. Mitä EI tehty
 
