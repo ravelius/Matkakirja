@@ -20,6 +20,16 @@
  *      lenkki katkesi: kommentti tuli vasta sen jälkeen, kun sarja oli
  *      jo purkautunut, eikä yksikään vartio nähnyt sitä.
  *   4. JÄRJESTYS: isoisän kuva ei tule ennen isoisän luentaa.
+ *   5. LUENNAN HUNTU (korjaus 15.9.2026, omistajan vikailmoitus:
+ *      Dubrovnikin saapumisluenta, kaiutin näkyy mutta kartta ei
+ *      tummene eikä sumene). Mitattu juurisyy: `js/ui.js`
+ *      kaynnistaLuentavahti katsoi vain pientä, kartalle ANKKUROITUA
+ *      pakkaa (`.fokusvirta-luentakuva.nakyy`), joka piirtyy vasta
+ *      SARJAN LOPUKSI — isoisän ÄÄNEN aikana ruudulla on ISO
+ *      keskipäällys (`.fokusvirta-isokuva`, `.stage`:ssa `.map-panen`
+ *      vierellä), jota vahti ei koskaan nähnyt. Vartio mittaa PIKSELIN
+ *      kirkkauden kartalta huntu päällä ja ilman (luokka pois PÄÄLLE
+ *      OTETUSTA ruudusta, ei koodimuutos) — vastakoe samassa ajossa.
  *
  * KOEKAUPUNKI ON VENETSIA: sillä on isoisän kaksi luentakuvaa ja VIISI
  * PuluCam-kuvaa eli pisin mahdollinen sarja. Juuri Venetsiassa ketju
@@ -264,7 +274,126 @@ vaadi('pieni pakka jää kartalle vasta pulun kuvien jälkeen',
 await ctx.close();
 
 /* ================================================================
-   5. ENSISAAPUMINEN: KUVA VASTA LYKÄTYN LUENNAN ALKAESSA
+   5. LUENNAN HUNTU: KARTTA TUMMENEE JA SUMENEE KUVAN TAKANA
+   ================================================================
+
+   Omistajan vikailmoitus 15.9.2026 (Dubrovnikin saapumisluenta,
+   iPhone-kuvakaappaus): kaiutin näkyi (luenta käynnissä) mutta kartta
+   pysyi terävänä ja vaaleana isoisän kuvan takana — huntu (js/ui.js
+   kaynnistaLuentavahti, css/fokusvirta.css body.luenta-huntu
+   .map-pane::after) ei nostanut lainkaan. */
+{
+  const ajo = await avaaAjo({ width: 390, height: 844 });
+  await ajo.sivu.waitForFunction(() => document.body.classList.contains('kertoja-aanessa')
+    && Boolean(document.querySelector('.fokusvirta-isokuva.nakyy, .fokusvirta-luentakuva.nakyy')),
+  null, { timeout: 30000 }).catch(() => console.log('HUOM  isoisän luenta+kuva ei ehtinyt ruudulle 30 s:ssa'));
+  await ajo.sivu.waitForTimeout(300);
+
+  const tila = await ajo.sivu.evaluate(() => {
+    const mapPane = document.querySelector('.map-pane');
+    const after = mapPane ? getComputedStyle(mapPane, '::after') : null;
+    return {
+      kertojaAanessa: document.body.classList.contains('kertoja-aanessa'),
+      huntuPaalla: document.body.classList.contains('luenta-huntu'),
+      afterContent: after?.content ?? null,
+      afterBackdrop: after ? (after.backdropFilter || after.webkitBackdropFilter) : null,
+    };
+  });
+  tieto('luennan huntu -tila', JSON.stringify(tila));
+  vaadi('kertoja on äänessä (mittauksen ehto)', tila.kertojaAanessa === true);
+  vaadi('luenta-huntu on päällä isoisän luennan aikana', tila.huntuPaalla === true);
+  vaadi('::after ei ole content:none', tila.afterContent !== 'none', String(tila.afterContent));
+  vaadi('::after sumentaa (backdrop-filter blur)', /blur/.test(tila.afterBackdrop ?? ''),
+    String(tila.afterBackdrop));
+
+  // PIKSELIMITTAUS: kartan kirkkaus huntu päällä vs. ilman (vastakoe
+  // SAMASSA ajossa — luokka pois vain mittauksen ajaksi, ei koodimuutos).
+  //
+  // HILA, EI YKSI PISTE. Yksi kiinteä piste osui toistuvasti väärään
+  // kohtaan (kortti, ylapalkin nappi, isoisän kuvan keskikohta — kaikki
+  // pysyvät samana huntu päällä/pois ja näyttäisivät vahingossa
+  // nollaeron eikä huntu-vikaa; mitattu Venetsian 390×844-ruudulla
+  // kolmesti). Sen sijaan otetaan 7×9 pisteen hila `.map-panen` alalta
+  // KUMMASTAKIN kuvakaappauksesta ja katsotaan SUURIN kirkkausero
+  // hilan yli — jossain nurkassa kartta on aina näkyvissä ilman kortin,
+  // kuvan tai napin peittoa, joten suurin ero paljastaa hunnun
+  // vaikutuksen luotettavasti riippumatta kaupungin asettelusta.
+  const kirkkausHila = async (b64, rect) => {
+    const p = await ajo.ctx.newPage();
+    await p.setContent(`<img id="k" src="data:image/png;base64,${b64}">`);
+    const arvot = await p.evaluate(([r]) => new Promise((resolve) => {
+      const img = document.getElementById('k');
+      const valmis = () => {
+        const c = document.createElement('canvas');
+        c.width = img.naturalWidth; c.height = img.naturalHeight;
+        const cx = c.getContext('2d');
+        cx.drawImage(img, 0, 0);
+        const tulos = [];
+        for (let gy = 1; gy <= 9; gy += 1) {
+          for (let gx = 1; gx <= 7; gx += 1) {
+            const x = Math.round(r.x + (r.width * gx) / 8);
+            const y = Math.round(r.y + (r.height * gy) / 10);
+            const d = cx.getImageData(x, y, 1, 1).data;
+            tulos.push((d[0] + d[1] + d[2]) / 3);
+          }
+        }
+        resolve(tulos);
+      };
+      if (img.complete) valmis(); else img.onload = valmis;
+    }), [rect]);
+    await p.close();
+    return arvot;
+  };
+  const mapRect = await ajo.sivu.evaluate(() => {
+    const r = document.querySelector('.map-pane').getBoundingClientRect();
+    return { x: r.x, y: r.y, width: r.width, height: r.height };
+  });
+  const kuvaPaalla = await ajo.cdp.send('Page.captureScreenshot', { format: 'png' });
+  /*
+   * VAHTI PYSÄYTETTÄVÄ ENNEN LUOKAN POISTOA (korjaus 15.9.2026, mitattu
+   * julkaisuhaarassa: kirkkausero 0,0 KAHDESTI PERÄKKÄIN, jokaisessa
+   * hilan 63 pisteessä identtisenä — ei kohdistusvirhe vaan täysi
+   * nollatulos). JUURISYY: `kaynnistaLuentavahti` (js/ui.js) ajaa
+   * `setInterval`-kyselyn `LUENTAVAHDIN_VALI_MS` (200 ms) välein, ja
+   * kysely näkee yhä `kertoja && kuvaRuudulla` totena — se PALAUTTAA
+   * `luenta-huntu`-luokan kartalle jo ennen 450 ms:n odotuksen
+   * loppua, jolloin "huntu pois" -kuvakaappaus näyttääkin huntua
+   * PÄÄLLÄ. Testi ei siis mitannut väärää pistettä eikä
+   * backdrop-filterin puutetta headlessissä — se mittasi kahta
+   * IDENTTISTÄ tilaa. Vahdin ajastin pysäytetään tässä ajaksi, jotta
+   * manuaalinen luokanpoisto pysyy voimassa koko mittauksen ajan;
+   * ajastinta ei tarvitse käynnistää uudelleen, koska tämä ajo (`ajo`)
+   * suljetaan tämän lohkon lopussa.
+   */
+  await ajo.sivu.evaluate(() => {
+    const { ui } = window.matkakirja;
+    if (ui.luentavahti) { clearInterval(ui.luentavahti); ui.luentavahti = null; }
+    document.body.classList.remove('luenta-huntu');
+  });
+  await ajo.sivu.waitForTimeout(450); // opacity-siirtymä (400 ms) ehtii pois
+  const kuvaPois = await ajo.cdp.send('Page.captureScreenshot', { format: 'png' });
+  await ajo.sivu.evaluate(() => document.body.classList.add('luenta-huntu'));
+
+  const hilaPaalla = await kirkkausHila(kuvaPaalla.data, mapRect);
+  const hilaPois = await kirkkausHila(kuvaPois.data, mapRect);
+  const erot = hilaPaalla.map((v, i) => hilaPois[i] - v);
+  const suurinEro = Math.max(...erot);
+  const suurinIdx = erot.indexOf(suurinEro);
+  tieto('hilan suurin kirkkausero (pois − päällä)',
+    `${suurinEro.toFixed(1)} (piste ${suurinIdx}: päällä ${hilaPaalla[suurinIdx].toFixed(1)}, `
+    + `pois ${hilaPois[suurinIdx].toFixed(1)})`);
+  vaadi('huntu tummentaa karttaa mitattavasti jossain hilan pisteessä (vastakoe: luokka pois)',
+    suurinEro >= 20, `suurin ero ${suurinEro.toFixed(1)}`);
+
+  if (KUVAKANSIO) {
+    writeFileSync(join(KUVAKANSIO, 'huntu-paalla.png'), Buffer.from(kuvaPaalla.data, 'base64'));
+    writeFileSync(join(KUVAKANSIO, 'huntu-pois.png'), Buffer.from(kuvaPois.data, 'base64'));
+  }
+  await ajo.ctx.close();
+}
+
+/* ================================================================
+   6. ENSISAAPUMINEN: KUVA VASTA LYKÄTYN LUENNAN ALKAESSA
    ================================================================
 
    Omistaja 12.9.2026: *"kun tullaan ateenaan niin isoisän kuvat saisi

@@ -11525,8 +11525,23 @@ export class UI {
        * nakyvat, kartta tausta voisi olla tummempi ja vahan blurri."*
        * Huntu nousee vain kun kuva on oikeasti ruudulla — pelkkä
        * luenta ilman kuvaa ei saa tummentaa karttaa.
+       *
+       * KAKSI KUVAKERROSTA, EI VAIN YKSI (korjaus 15.9.2026, mitattu
+       * Dubrovnikilla: huntu ei näkynyt kertaakaan). `.fokusvirta-
+       * luentakuva.nakyy` on vain se PIENI, KARTALLE ANKKUROITU pakka,
+       * jonka `naytaLuentakuva` piirtää sarjan LOPUKSI (js/fokusvirta.js
+       * nostaPieniPakka) — siihen mennessä isoisä on jo vaiennut, joten
+       * `kertoja` on tuolloin lähes aina epätosi eivätkä ehdot
+       * koskaan osu yhteen. Isoisän ÄÄNEN AIKANA näkyvä kuva on ISO
+       * KESKIPÄÄLLYS `.fokusvirta-isokuva` (js/fokusvirta.js
+       * avaaIsokuvaPaallys), joka asuu `.stage`:ssa `.map-panen`
+       * VIERESSÄ eikä sisällä — juuri se kuva, joka omistajan
+       * kuvakaappauksessa oli kaiuttimen kanssa ruudulla huntutta.
+       * Kysely kattaa nyt molemmat kerrokset.
        */
-      const kuvaRuudulla = Boolean(document.querySelector('.fokusvirta-luentakuva.nakyy'));
+      const kuvaRuudulla = Boolean(document.querySelector(
+        '.fokusvirta-luentakuva.nakyy, .fokusvirta-isokuva.nakyy',
+      ));
       document.body.classList.toggle('luenta-huntu', kertoja && kuvaRuudulla);
     };
     askel();
