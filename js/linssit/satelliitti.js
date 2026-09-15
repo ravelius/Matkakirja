@@ -513,6 +513,37 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
     katselu.style.top = `${Math.round(r.bottom)}px`;
   };
 
+  /*
+   * KULMANAPIT JA PIKKUKUVAT KUVAN SISÄLLE, EI LAVAN KULMAAN (omistaja
+   * 15.9.2026, jälkikaappaus astronautin-kamera-1400-20260915.jpg:stä:
+   * *"✕/i-napit ja pienoiskuvat ovat nyt kuvan ULKOPUOLELLA mustalla
+   * marginaalilla ... sijoita ne kuvan todellisen piirtoalueen
+   * sisäpuolelle"*).
+   *
+   * `.satelliitti-kuva` säilyttää oman kuvasuhteensa (max-width/height:
+   * 100%, ei object-fitiä) ja on keskitetty lavan sisällä — muun
+   * muotoisella kuvalla (esim. leveä 4:3 kapealla puhelimella) syntyy
+   * musta marginaali sivuille TAI ylä-/alapuolelle. `right/top: 10px`
+   * mitattuna LAVASTA osui siis marginaaliin, ei kuvaan.
+   *
+   * MITTA LUETAAN KUVAN OMASTA RECTISTÄ. Ero lavan ja kuvan reunojen
+   * välillä (symmetrinen, koska kuva on keskitetty flex-boxilla)
+   * kirjoitetaan CSS-muuttujiin `.satelliitti-katselu`-elementtiin,
+   * josta ne perivät kulma, nauha ja popup (css/satelliitti.css).
+   * Mittaus EI saa osua zoomin transformin aikaan — siksi tätä
+   * kutsutaan vain kuvan latautuessa ja ikkunan koon muuttuessa, ei
+   * jokaisella piirrolla.
+   */
+  const asemoiKulmat = () => {
+    const lr = lava.getBoundingClientRect();
+    const ir = kuva.getBoundingClientRect();
+    if (!(lr.width > 0) || !(ir.width > 0)) return;
+    const marginaaliX = Math.max(0, (lr.width - ir.width) / 2);
+    const marginaaliY = Math.max(0, (lr.height - ir.height) / 2);
+    katselu.style.setProperty('--satelliitti-kuva-marginaali-x', `${marginaaliX}px`);
+    katselu.style.setProperty('--satelliitti-kuva-marginaali-y', `${marginaaliY}px`);
+  };
+
   const havainnot = kohde.havainnot ?? [];
   let indeksi = oletusIndeksi(kohde);
   if (!havainnot[indeksi]) return null;
@@ -550,12 +581,18 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
   const nauha = html('div', 'satelliitti-nauha');
   katselu.append(lava, kulma, nauha);
   document.body.appendChild(katselu);
-  asemoiYlareuna();
+  /** Molemmat mittaukset yhdellä kutsulla: palkin alareuna JA kuvan oma alue. */
+  const paivitaAsemointi = () => { asemoiYlareuna(); asemoiKulmat(); };
+  paivitaAsemointi();
   const kokovahti = typeof ResizeObserver === 'function' && palkki?.el
-    ? new ResizeObserver(asemoiYlareuna) : null;
+    ? new ResizeObserver(paivitaAsemointi) : null;
   kokovahti?.observe(palkki.el);
-  window.addEventListener('resize', asemoiYlareuna);
-  window.addEventListener('orientationchange', asemoiYlareuna);
+  // Lavan oma koko (esim. puhelimen kääntö ilman erillistä orientationchange-
+  // tapahtumaa selaimissa, joissa se ei laukea) vaikuttaa kuvan marginaaliin.
+  const lavavahti = typeof ResizeObserver === 'function' ? new ResizeObserver(asemoiKulmat) : null;
+  lavavahti?.observe(lava);
+  window.addEventListener('resize', paivitaAsemointi);
+  window.addEventListener('orientationchange', paivitaAsemointi);
 
   /* ---- sulkeminen -------------------------------------------------- */
   let popup = null;
@@ -568,8 +605,9 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
     if (!katselu.isConnected) return;
     katselu.remove();
     kokovahti?.disconnect?.();
-    window.removeEventListener('resize', asemoiYlareuna);
-    window.removeEventListener('orientationchange', asemoiYlareuna);
+    lavavahti?.disconnect?.();
+    window.removeEventListener('resize', paivitaAsemointi);
+    window.removeEventListener('orientationchange', paivitaAsemointi);
     document.removeEventListener('keydown', nappain);
     palkki?.nimeaKohde?.(null);
     onSuljettu?.();
@@ -817,7 +855,10 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
     if (popup) { suljePopup(); avaaPopup(); }
   }
   kuva.addEventListener('error', () => katselu.classList.add('satelliitti-kuvatta'), { once: true });
-  kuva.addEventListener('load', () => piirra());
+  // Otokset ovat eri kuvasuhteissa: marginaali mitataan uudestaan joka
+  // latauksella, jotta kulmanapit pysyvät KUVAN reunassa myös
+  // otosta vaihdettaessa (ks. asemoiKulmat).
+  kuva.addEventListener('load', () => { piirra(); asemoiKulmat(); });
   nayta(indeksi);
   kuva.src = havainnot[indeksi].kuva;
   kuva.alt = kuvatiedot(kohde, havainnot[indeksi]).lyhyt;

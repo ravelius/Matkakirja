@@ -288,8 +288,17 @@ test('✕ ja i ovat kuvan oikeassa yläkulmassa, pikkukuvat vasemmassa alakulmas
   assert.ok(!tyyli.includes('.satelliitti-napit'), 'vanha nappirivi on yhä tyylissä');
   assert.ok(!lahde.includes("html('div', 'satelliitti-ala')"), 'ala rakennetaan yhä lähteessä');
   assert.match(lahde, /kulma\.append\(sulku, infoNappi\)/);
-  assert.match(tyyli, /\.satelliitti-kulma \{[\s\S]*position: absolute;[\s\S]*right: 10px;[\s\S]*top: 10px/);
-  assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*position: absolute;[\s\S]*left: 10px;[\s\S]*bottom:/);
+  /*
+   * TÄSMENNYS 15.9.2026 (jälkikaappaus): napit ovat KUVAN sisällä, eivät
+   * lavan (koko ruudun) kulmassa — kiinteä 10px korvattu kuvan omaan
+   * marginaaliin sidotulla calc()-lausekkeella (js/linssit/satelliitti.js
+   * asemoiKulmat).
+   */
+  assert.match(tyyli, /\.satelliitti-kulma \{[\s\S]*position: absolute;[\s\S]*right: calc\(var\(--satelliitti-kuva-marginaali-x, 0px\) \+ 12px\);[\s\S]*top: calc\(var\(--satelliitti-kuva-marginaali-y, 0px\) \+ 12px\)/);
+  assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*position: absolute;[\s\S]*left: calc\(var\(--satelliitti-kuva-marginaali-x, 0px\) \+ 12px\);[\s\S]*bottom:/);
+  assert.match(lahde, /const asemoiKulmat = \(\) => \{/);
+  assert.match(lahde, /setProperty\('--satelliitti-kuva-marginaali-x'/);
+  assert.match(lahde, /setProperty\('--satelliitti-kuva-marginaali-y'/);
 });
 
 test('sulkuristi on pieni pyöreä nappi kuvan oikeassa yläkulmassa', () => {
@@ -764,11 +773,16 @@ test('kortin yläreuna luetaan palkin mitatusta alareunasta', () => {
   assert.match(lahde, /const asemoiYlareuna = \(\) => \{/);
   assert.match(lahde, /palkki\?\.el\?\.getBoundingClientRect\?\.\(\)/);
   assert.match(lahde, /katselu\.style\.top = `\$\{Math\.round\(r\.bottom\)\}px`/);
-  // Mittaus uusitaan, kun laite käännetään tai palkki muuttuu.
-  assert.match(lahde, /new ResizeObserver\(asemoiYlareuna\)/);
-  assert.match(lahde, /addEventListener\('orientationchange', asemoiYlareuna\)/);
+  /*
+   * Mittaus uusitaan, kun laite käännetään tai palkki muuttuu — samalla
+   * kutsulla, joka mittaa myös kuvan oman marginaalin (asemoiKulmat,
+   * täsmennys 15.9.2026).
+   */
+  assert.match(lahde, /const paivitaAsemointi = \(\) => \{ asemoiYlareuna\(\); asemoiKulmat\(\); \};/);
+  assert.match(lahde, /new ResizeObserver\(paivitaAsemointi\)/);
+  assert.match(lahde, /addEventListener\('orientationchange', paivitaAsemointi\)/);
   // Ja puretaan sulkiessa: kuuntelijoita ei jää roikkumaan.
-  assert.match(lahde, /removeEventListener\('orientationchange', asemoiYlareuna\)/);
+  assert.match(lahde, /removeEventListener\('orientationchange', paivitaAsemointi\)/);
 });
 
 test('vaakanäkymän oma pystysarake on poistettu — kulmanapit toimivat molemmissa asennoissa', () => {
@@ -781,8 +795,8 @@ test('vaakanäkymän oma pystysarake on poistettu — kulmanapit toimivat molemm
    */
   assert.ok(!tyyli.includes('--satelliitti-sarake'), 'vanha pystysarakemuuttuja on yhä tyylissä');
   assert.ok(!/\.satelliitti-ala\b/.test(tyyli), 'vanha alapalkki on yhä tyylissä');
-  assert.match(tyyli, /\.satelliitti-kulma \{[\s\S]*position: absolute;[\s\S]*right: 10px;[\s\S]*top: 10px/);
-  assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*position: absolute;[\s\S]*left: 10px/);
+  assert.match(tyyli, /\.satelliitti-kulma \{[\s\S]*position: absolute;[\s\S]*right: calc\(var\(--satelliitti-kuva-marginaali-x/);
+  assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*position: absolute;[\s\S]*left: calc\(var\(--satelliitti-kuva-marginaali-x/);
 });
 
 /* ═══ 11. OMA KUVAKE MATKALAUKKUUN (omistaja 15.9.2026) ═══════════ */

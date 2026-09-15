@@ -5,6 +5,36 @@ lisäystehtävää samassa haarassa/PR:ssä, kaikki mitattu Chromiumilla
 1400×900 ja 390×844. Tehtiin worktreessä `/home/user/wt-astro`, haara
 `claude/bold-ride-vow4ki-astronautin-kamera` (pohja `origin/main`).
 
+**JÄLKIKORJAUS 15.9.2026 (omistajan kaappauskatselu):** kaksi virhettä
+löytyi ensimmäisestä kaappauksesta ja korjattiin samaan haaraan:
+
+1. **× oli väärässä paikassa yläpalkissa** — pillerin (kohde+päivä)
+   VIERESSÄ vasemmalla, ei palkin oikeassa reunassa. Syy:
+   `.satelliittipalkki-ohje` oli AINOA `flex: 1 1 auto` -elementti, joka
+   työnsi napin oikeaan reunaan; kun se piilotettiin kuvan ajaksi
+   (`[hidden]`), sen flex-tila katosi ja nappi valahti pillerin
+   viereen. Korjaus: `.satelliittipalkki-sulje { margin-left: auto; }`
+   — pysyy oikeassa reunassa aina, riippumatta sisarusten näkyvyydestä.
+2. **✕/i-napit ja pikkukuvat olivat kuvan ULKOPUOLELLA, mustassa
+   marginaalissa** — `right/top/left/bottom: 10px` mitattiin LAVASTA
+   (koko ruudun alue), ei itse `<img>`:n piirtoalueesta. Kuva säilyttää
+   kuvasuhteensa (ei object-fitiä) ja on keskitetty lavaan, jolloin
+   muun muotoisilla kuvilla syntyy musta marginaali. Korjaus:
+   `js/linssit/satelliitti.js` uusi `asemoiKulmat()` mittaa kuvan
+   todellisen piirtoalueen lavaan nähden ja kirjoittaa marginaalin CSS-
+   muuttujiin (`--satelliitti-kuva-marginaali-x/-y` `.satelliitti-
+   katselu`-elementtiin); `.satelliitti-kulma`, `.satelliitti-nauha` ja
+   `.satelliitti-popup` laskevat sijaintinsa niistä 12 px:n sisennyksellä
+   KUVAN reunasta. Mittaus uusitaan kuvan latautuessa, ikkunan koon
+   muuttuessa ja otosta vaihdettaessa (eri kuvat eri kuvasuhteissa).
+   Savukkeen vartiot päivitetty tarkistamaan, että napit ja pikkukuvat
+   ovat KUVAN bounding boxin sisällä (ei vain lähellä ikkunan reunaa).
+   Uudet kaappaukset korvasivat vanhat: `astronautin-kamera-1400-
+   20260915.jpg` ja uusi `astronautin-kamera-390-20260915.jpg`.
+
+Mitattu uudelleen: `tests/satelliitti.test.mjs` 44/44,
+`savuke-satelliittilinssi.mjs` 33/33 (1400×900) ja 31/31 (390×844).
+
 ## Osa 1: X-nappi, NASA-rivi, Liiku-nappi piiloon (js/tyohuone-raamattu.js
 "ASTRONAUTIN KAMERA -LINSSI: TARKEMPI RELIEFI, X-NAPPI, NASA-RIVI, EI
 LIIKU-NAPPIA")
