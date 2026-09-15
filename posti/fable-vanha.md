@@ -1,3 +1,5 @@
+## 2026-09-15 — FABLE: työnjako Fable/Codex (posti/fable-tyonjako-codex-20260915.md)
+
 ## 2026-09-15 — FABLE: pyyntö Codexille: minipulu linssinäkymiin (posti/fable-codex-minipulu-20260915.md)
 
 ## 2026-09-15 — FABLE: pyyntö kuvaputkelle: herokuvat 1800 px (posti/fable-kuvaputki-herokuvat-1800px-20260915.md)
