@@ -26160,11 +26160,43 @@ button.maapaneeli-lisaa:active:not(:disabled) {
  * sivuun, jottei se mene ruudun ulkopuolelle (js/pallolauta/
  * maapaneeli.js sovitaValikko, --valikko-siirto).
  */
+/*
+ * ERÄ 22 (omistaja 15.9.2026, PÄÄTÖKSET 22 KORJAUS): kaksi virhettä
+ * erässä 18 korjattu, mitattuna Chromiumilla kolmella zoomilla:
+ *
+ *   A. RIVIT OLIVAT KAUKANA TOISISTAAN. `.maapaneeli-aihe` on
+ *      <button>, ja yleinen `button { min-height: 42px }` (tämän
+ *      tiedoston alkupäässä) VOITTI erän 18 `gap: 0`:n — jokainen
+ *      rivi oli siis vähintään 42 kortin-yksikköä korkea, mikä
+ *      zoomatussa kartassa näkyi kymmenien ruutupikselien rakoina
+ *      (mitattu: Unkari zoomattuna, rivit ~100 px välein). Skaala
+ *      pysyi vakiona zoomin mukana (koko kortti on `scale`attu), joten
+ *      vika ei näkynyt suhteena vaan vasta absoluuttisena etäisyytenä
+ *      — siksi se jäi kolmen zoomin savukkeista huomaamatta. Korjaus:
+ *      `min-height: 0` tässä lohkossa, ja rivinkorkeus tulee VAIN
+ *      `line-height`:sta (1,3 × fontin oma rivikorkeus — tasan se
+ *      suhde, jota omistaja pyysi).
+ *   B. TEKSTIKOKO EI OLLUT NIMIÖN KOKOINEN. Erä 18:n 5 px vaihtuu
+ *      6,5 px:ksi — sama kuin `.maapaneeli-nimi-suomi` (paneelin
+ *      nimiöteksti). Merkki, rako ja sisennys skaalataan samalla
+ *      kertoimella (6,5/5 = 1,3), jotta rivin oma mittasuhde säilyy.
+ */
 .maapaneeli-valikko {
   position: absolute;
-  top: calc(100% + 2.7px);
-  left: 50%;
-  transform: translateX(calc(-50% + var(--valikko-siirto, 0px)));
+  top: -1px;
+  /*
+   * OIKEALLE PUOLELLE, PLUSSAN VIEREEN (PÄÄTÖKSET 22 KORJAUS kohta 2).
+   * `.maapaneeli-lisaa` on `right: 1px; width: 14px` 104 px:n kortissa
+   * — sen oikea reuna on siis 103 px. Rako on 5 px kortin omissa
+   * yksiköissä (ei enää kehyksen 2,7 px:n väli): mitattu 15.9.2026
+   * uloimmalla sallitulla zoomilla kortin skaala on vain ~0,9, jolloin
+   * 2,7 px:n rako olisi ruudulla alle 2,5 px — omistajan vaatima
+   * ≥ 4 ruutu-px:n rako plussaan vaatii isomman kortin-yksikön raon.
+   * Valikko alkaa siis 103 + 5 = 108 px:stä. Yläreuna on sama kuin
+   * plussan (`top: -1px`), ei paneelin alla.
+   */
+  left: 108px;
+  transform: translateY(var(--valikko-pysty, 0px));
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -26177,24 +26209,43 @@ button.maapaneeli-lisaa:active:not(:disabled) {
   border-radius: 0;
   pointer-events: none;
 }
-/* Alle ei mahdu (alanapit, vuorokortti): valikko aukeaa napin
-   YLÄPUOLELLE — ks. js/pallolauta/maapaneeli.js sovitaValikko. */
-.maapaneeli-valikko.ylos {
-  top: auto;
-  bottom: calc(100% + 2.7px);
+/*
+ * KÄÄNTYY PLUSSAN VASEMMALLE PUOLELLE, KUN OIKEA REUNA ON LIIAN
+ * LÄHELLÄ (PÄÄTÖKSET 22 KORJAUS kohta 2, 390 px -ruutu).
+ *
+ * VASEN PUOLI ON KOKO PANEELIN VASEN PUOLI, EI VAIN PLUSSAN. Plussa on
+ * kortin OIKEASSA ylänurkassa (`right: 1px`), joten "plussan vasemmalla
+ * puolella" oleva valikko olisi vielä kortin OMAN 104 px:n leveyden
+ * sisällä ja peittäisi nimiön ja lukurivit — juuri se, mitä PÄÄTÖKSET
+ * 22 kielsi (*"ei peitä paneelia"*). Sen sijaan valikko siirtyy koko
+ * kortin VASEMMALLE PUOLELLE: oikea reuna on kortin vasemman reunan
+ * (0 px) tasalla + sama 5 px:n rako, eli `right: 104 + 5 = 109 px`
+ * kortin omasta oikeasta reunasta laskettuna. Yläreuna pysyy plussan
+ * tasalla (`top: -1px`) — ks. js/pallolauta/maapaneeli.js sovitaValikko.
+ */
+.maapaneeli-valikko.vasen {
+  left: auto;
+  right: 109px;
 }
 .maapaneeli-aihe {
   display: flex;
   align-items: center;
-  gap: 2.5px;
+  gap: 3.25px;
   flex: 0 0 auto;
   min-width: 0;
+  /* Kumoaa yleisen `button { min-height: 42px }`:n (kohta A yllä) —
+     rivinkorkeus tulee vain line-heightista. */
+  min-height: 0;
   font: inherit;
-  font-size: 5px;
+  font-size: 6.5px;
+  /* 1,3 × fontin oma rivikorkeus (omistajan pyytämä suhde), tasan
+     tämä eikä mitään ylimääräistä gapia tai paddingia pystyssä. */
+  line-height: 1.3;
   text-align: left;
-  /* Tiiviisti allekkain (erä 18): pystyväli on 0, vaakasisennys vain
-     sen verran, ettei väripallo koske kortin keskilinjaa. */
-  padding: 0 1px;
+  /* Tiiviisti allekkain (erä 18): pystyväli tulee vain line-heightista
+     (kohta A), vaakasisennys vain sen verran, ettei väripallo koske
+     kortin keskilinjaa. */
+  padding: 0 1.3px;
   color: var(--map-ink);
   background: none;
   border: 0;
@@ -26218,13 +26269,13 @@ button.maapaneeli-lisaa:active:not(:disabled) {
 }
 .maapaneeli-aihe-merkki {
   flex: 0 0 auto;
-  width: 4.5px;
-  height: 4.5px;
+  width: 5.85px;
+  height: 5.85px;
   border-radius: 50%;
   background: var(--sym-silma);
   /* Sama kerman veto pallon ympäri kuin nimen ympäri (erä 18): ilman
      laatikkoa väripallo erottuu myös tummalta mereltä. */
-  box-shadow: 0 0 0 0.5px var(--kerma);
+  box-shadow: 0 0 0 0.65px var(--kerma);
 }
 .maapaneeli-aihe[data-sym="historia"] .maapaneeli-aihe-merkki { background: var(--sym-historia); }
 .maapaneeli-aihe[data-sym="ruoka"] .maapaneeli-aihe-merkki { background: var(--sym-ruoka); }
