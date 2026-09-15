@@ -57,7 +57,7 @@ import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva } from './media.js';
-import { puhelinTila } from './ui-apurit.js';
+import { tekstitPiilossa } from './ui-apurit.js';
 import { asennaLivianKasvot } from './livia-eleet.js';
 import { kuunteleLivianKasvopuheenElinkaarta } from './livia-puhetila.js';
 import { livianDialogikoti, seuraaLivianDialogeja } from './livia-dialogitila.js';
@@ -2878,8 +2878,9 @@ export class Pollo {
    * pulun tekstiä, joka ei saa peittää karttaa mutta jonka pitää olla
    * yhden napautuksen päässä.
    *
-   * Metodi EI muuta työpöydän käytöstä: sitä kutsutaan vain
-   * lisaaPinoonista puhelintunnistuksen takaa.
+   * Metodi EI muuta työpöydän käytöstä luennan ulkopuolella: sitä
+   * kutsutaan vain lisaaPinoonista tekstitPiilossa()-portin takaa
+   * (puhelin tai kertojan luenta, ks. js/ui-apurit.js).
    */
   imePuhelimenKuplaan(kupla) {
     this.peruKuplanPiilotus();
@@ -2894,6 +2895,30 @@ export class Pollo {
     this.paivitaKuplanPalautus();
     this.asetaPinonPaikka();
     return true;
+  }
+
+  /**
+   * LUENTA ALKOI: JO RUUDULLA OLEVAT KUPLAT PLUSKUPLAAN.
+   *
+   * Omistaja 15.9.2026 (Raamattu "TEKSTIT PIILOON KAIKILLA
+   * LAITTEILLA"). lisaaPinoon imee vain UUDET repliikit (tekstitPiilossa);
+   * luennan alkaessa ruudulla voi olla vanha kupla, joka jäisi
+   * peittämään kuvaa ja kuvatekstiä koko luennan ajan. Tämä sulkee ne
+   * samalla mekanismilla: viimeisin jää pluskuplan muistiin ja muut
+   * poistuvat, kuten puhelimella uuden kuplan tullessa.
+   *
+   * Laji on sama kuin puhelinportissa (puhe tai vihje): muut kuplat
+   * (esim. valikkovihje) eivät ole pulun repliikkejä eivätkä kuulu
+   * pluskuplan muistiin.
+   */
+  piilotaLuennanKuplat() {
+    if (this.auki) return false;
+    const kuplat = this.pinonKuplat().filter(
+      (k) => k.dataset?.laji === 'puhe' || k.dataset?.laji === 'vihje',
+    );
+    const viimeinen = kuplat.at(-1);
+    if (!viimeinen) return false;
+    return this.imePuhelimenKuplaan(viimeinen);
   }
 
   piilotaPuhekuplat() {
@@ -3396,8 +3421,16 @@ export class Pollo {
      * tätä samaa metodia; ilman lippua kupla katoaisi saman tien
      * takaisin pluskuplaan eikä napautus näyttäisi mitään.
      */
+    /*
+     * SAMA MEKANISMI MYÖS LUENNAN AIKANA, KAIKILLA LAITTEILLA
+     * (omistaja 15.9.2026, Raamattu "TEKSTIT PIILOON KAIKILLA
+     * LAITTEILLA"): kertojan luennan ajan pulun repliikki ei peitä
+     * kuvaa eikä kuvatekstiä, vaan odottaa pluskuplassa. Ehto on
+     * luennan tila eikä ruudun koko (js/ui-apurit.js tekstitPiilossa),
+     * joten luennan ulkopuolella työpöydän kuplat ovat ennallaan.
+     */
     const puhelimenLaji = kupla.dataset?.laji === 'puhe' || kupla.dataset?.laji === 'vihje';
-    if (puhelinTila() && puhelimenLaji && !this.auki && !this.kuplaaPalautetaan) {
+    if (tekstitPiilossa() && puhelimenLaji && !this.auki && !this.kuplaaPalautetaan) {
       this.imePuhelimenKuplaan(kupla);
       return;
     }
@@ -6902,6 +6935,17 @@ export function polloVihjePois() {
  */
 export function polloKuplatPois() {
   nykyinenPollo?.tyhjennaPino();
+}
+
+/**
+ * LUENNAN TEKSTIPIILO ALKOI (js/ui.js kaynnistaLuentavahti).
+ *
+ * Ruudulla olevat pulun repliikit siirtyvät pluskuplaan, jotta luennan
+ * kuva ja kuvateksti näkyvät esteettä kaikilla laitteilla (omistaja
+ * 15.9.2026). Teksti ei katoa: pluskuplan napautus palauttaa sen.
+ */
+export function polloLuennanKuplatPiiloon() {
+  return Boolean(nykyinenPollo?.piilotaLuennanKuplat());
 }
 
 /**

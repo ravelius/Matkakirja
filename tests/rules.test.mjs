@@ -4018,10 +4018,17 @@ test('päiväkirjalla on kaksi kokoa: koko merkintä ja yhden rivin lappu', () =
    * puhelintunnistuksesta (js/ui.js puhelinTila), ei kiinteästä
    * epätodesta — ja teksti on yhä yhden napautuksen päässä, koska
    * lappu on painike.
+   *
+   * LUENTA ON TOINEN POIKKEUS (omistaja 15.9.2026, Raamattu "TEKSTIT
+   * PIILOON KAIKILLA LAITTEILLA"): luennan aikana merkintä on lappuna
+   * KAIKILLA laitteilla, jotta kuva ja kuvateksti näkyvät. Molemmat
+   * syyt ovat saman portin takana (js/ui-apurit.js tekstitPiilossa =
+   * puhelin TAI kertojan luenta), joten vartio seuraa sitä porttia —
+   * kiinteä epätosi ja ruutukokoehto ovat yhä kiellettyjä.
    */
   const uusi = ui.match(/uusiFactKey\(key\) \{[\s\S]*?\n  \}/)?.[0] ?? '';
-  assert.match(uusi, /asetaPaivakirjanKoko\(puhelinTila\(\)\)/,
-    `uusi merkintä ei aseta kortin kokoa puhelintunnistuksesta: ${uusi}`);
+  assert.match(uusi, /asetaPaivakirjanKoko\(tekstitPiilossa\(\)\)/,
+    `uusi merkintä ei aseta kortin kokoa tekstipiilon portista: ${uusi}`);
   /*
    * RAJA SIIRTYI ui-apureihin (v1892). Myös js/pollo.js tarvitsee sen
    * (puhelimella puhekuplat imeytyvät heti pluskuplaan), eikä pollo saa
@@ -4033,6 +4040,19 @@ test('päiväkirjalla on kaksi kokoa: koko merkintä ja yhden rivin lappu', () =
     'puhelintunnistus ei ole yhdessä nimetyssä paikassa (js/ui-apurit.js PUHELIN_KYSELY)');
   assert.doesNotMatch(ui, /const PUHELIN_KYSELY =/,
     'puhelinraja on kirjoitettu toiseen kertaan js/ui.js:ään');
+  /*
+   * LUENNAN TEKSTIPIILO ON YHTÄ LAILLA YHDESSÄ PAIKASSA (15.9.2026):
+   * portti on ui-apureissa, sen ehto luetaan bodyn luokasta, jonka
+   * luentavahti kirjoittaa — ei ruudun koosta. Näin sekä js/ui.js että
+   * js/pollo.js kysyvät samaa porttia.
+   */
+  assert.match(apurit, /export const LUENNAN_TEKSTIPIILO = 'luenta-tekstit-piiloon';/,
+    'luennan tekstipiilon luokka ei ole yhdessä nimetyssä paikassa (js/ui-apurit.js)');
+  assert.match(apurit, /export function tekstitPiilossa\(\) \{\s*return puhelinTila\(\) \|\| luennanTekstipiilo\(\);/,
+    'tekstitPiilossa ei ole puhelin TAI luenta -portti (js/ui-apurit.js)');
+  const pollo = readFileSync(new URL('../js/pollo.js', import.meta.url), 'utf8');
+  assert.match(pollo, /if \(tekstitPiilossa\(\) && puhelimenLaji/,
+    'pulun kupla ei kysy tekstipiilon porttia (js/pollo.js lisaaPinoon)');
 
   // Katto on oltava: ilman sitä pitkä merkintä peittäisi koko kartan,
   // eikä pelaaja näkisi mihin napauttaa kutistaakseen sen.

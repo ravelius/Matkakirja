@@ -2513,11 +2513,16 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
      - PAIKKA on ruudun keskus, ei laudan piste. Kortin ALLE, ei päälle
        (omistaja 12.9.2026, sanatarkasti: *"kuva saisi jäädä matkakirjan
        alle"*) — tämä kumoaa 11.9. kirjatun "sarja saa peittää kortin".
-     - KALLISTUSTA EI OLE. Vino valokuva on pöydälle jätetty kuva
-       kartalla; keskellä ruutua se olisi virhe. Pakassa kallistus
-       säilyy ennallaan.
-     - REUNAT HÄIVYTETÄÄN läpinäkyviksi maskilla (kaikki neljä reunaa,
-       n. 7 %) ja kulmat ovat aiempaa pyöreämmät (22 px).
+     - KALLISTUS ON PAKAN KALLISTUS (omistaja 15.9.2026, sanatarkasti:
+       *"lado ne hieman vinottain toistensa paalle vuorotellen
+       vasemmalle ja oikealle kallistettuina"*). Tämä kumoaa 11.9.
+       kirjatun "kallistusta ei ole": kuvat eivät enää ristihäivy
+       toistensa tilalle vaan JÄÄVÄT RUUDULLE PAKAKSI, ensimmäinen
+       vasemmalle ja seuraava oikealle kallistettuna.
+     - REUNAT OVAT TERÄVÄT (omistaja 15.9.2026: *"Ota isoisan ja pulun
+       valokuvista haivytykset pois"*). Tämä kumoaa 11.9. kirjatun
+       maskihäivytyksen: kuva on valokuva paperireunalla, ja sen reuna
+       saa näkyä — muuten pakan päällekkäisyys ei erotu lainkaan.
 
    NAPAUTUKSET LÄPI: päällys ei ota osoitintapahtumia, jotta kartan
    liike päättää sarjan (js/fokusvirta.js kytkeSarjanKartanLiike).
@@ -2553,8 +2558,26 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
 
 .fokusvirta-isokuva.nakyy { opacity: 1; }
 
-/* Ruudut ovat päällekkäin: ristihäivytys on kahden opacityn vaihto. */
+/*
+ * RUUDUT LADOTAAN PAKAKSI (omistaja 15.9.2026, sanatarkasti: *"lado ne
+ * hieman vinottain toistensa paalle vuorotellen vasemmalle ja oikealle
+ * kallistettuina"*).
+ *
+ * Ennen ruudut olivat päällekkäin ja vaihtuivat ristihäivytyksellä:
+ * edellinen häipyi ja poistettiin. Nyt EDELLINEN JÄÄ — uusi kortti
+ * laskeutuu sen päälle vastakkaiseen kallistukseen, ja alta pilkottava
+ * reuna kertoo, että kuvia on useampi. Kuvateksti on kortin osa
+ * (figcaption), joten se kallistuu kuvan mukana.
+ *
+ * KALLISTUS JA SIIRTO TULEVAT MUUTTUJINA, jotka js kirjoittaa kortin
+ * omaan tyyliin (js/fokusvirta.js isonKuvanRuutu). Vain opacity
+ * animoituu; transform on staattinen, joten kartan rasterointi ei
+ * kilpaile animaation kanssa (sama sääntö kuin luentakuvalla).
+ */
 .fokusvirta-isokuva-ruutu {
+  --pakka-kallistus: 0deg;
+  --pakka-siirto-x: 0px;
+  --pakka-siirto-y: 0px;
   position: absolute;
   display: flex;
   align-items: center;
@@ -2562,10 +2585,20 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
   max-width: 92vw;
   max-height: 78vh;
   opacity: 0;
+  transform: translate(var(--pakka-siirto-x), var(--pakka-siirto-y))
+    rotate(var(--pakka-kallistus));
   transition: opacity 500ms ease;
 }
 
 .fokusvirta-isokuva-ruutu.nakyy { opacity: 1; }
+
+/* Peittyneen kortin kuvateksti pois: pakassa tekstit menisivät
+   päällekkäin. Teksti on yhä kortin oma (figcaption), se vain odottaa
+   kuvansa vuoroa. */
+.fokusvirta-isokuva-ruutu.alla .fokusvirta-isokuva-teksti {
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
 
 .fokusvirta-isokuva-kotelo {
   position: relative;
@@ -2576,24 +2609,30 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
   max-width: 92vw;
 }
 
-/* KUVA NIIN ISONA KUIN MAHTUU, KUVASUHDE SÄILYEN. Reunat sulavat
-   läpinäkyviksi molempien suuntien maskeilla; WebKit tarvitsee oman
-   etuliitteensä. Kehystä ei ole (Raamattu 9.9.). */
+/* KUVA NIIN ISONA KUIN MAHTUU, KUVASUHDE SÄILYEN.
+ *
+ * TERÄVÄ REUNA JA PAPERIREUNUS (omistaja 15.9.2026, sanatarkasti:
+ * *"Ota isoisan ja pulun valokuvista haivytykset pois ja lado ne
+ * hieman vinottain toistensa paalle"*). Maskihäivytys (7 % joka
+ * reunasta) on poistettu kokonaan: pakassa häivytetyt reunat sulaisivat
+ * toisiinsa eikä kuvien päällekkäisyys erottuisi. Tilalla on vanhan
+ * valokuvan oma paperireuna — ohut vaalea kehys ja pehmeä varjo, sama
+ * kieli kuin kartan pikkupakalla.
+ *
+ * VARJO EI OLE SUODATIN. `box-shadow` maalataan kuvan laatikosta, ei
+ * `filter: drop-shadow`illa — iOS-sääntö (tests/rules.test.mjs) koskee
+ * suodattimia, eikä varjo ole animaatiossa.
+ */
 .fokusvirta-isokuva-kuva {
   width: auto;
   height: auto;
   max-width: 92vw;
   max-height: 78vh;
-  border-radius: 22px;
+  border-radius: 3px;
   object-fit: contain;
-  -webkit-mask-image:
-    linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%),
-    linear-gradient(to bottom, transparent 0, #000 7%, #000 93%, transparent 100%);
-  mask-image:
-    linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%),
-    linear-gradient(to bottom, transparent 0, #000 7%, #000 93%, transparent 100%);
-  -webkit-mask-composite: source-in;
-  mask-composite: intersect;
+  box-sizing: border-box;
+  border: 6px solid #f7f1e2;
+  box-shadow: 0 10px 26px rgba(20, 14, 6, 0.45);
 }
 
 /* Lyhyt kuvateksti kiinni kuvan alalaidassa, kuten kartalla. */

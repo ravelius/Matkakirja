@@ -7501,7 +7501,17 @@ export const RAAMATTU = {
           + 'oikealle kallistettuina (pieni kulma, mitataan ja naytetaan '
           + 'omistajalle kuvina; kuvateksti kuvan mukana); 5) kartta '
           + 'kuvien takana pysyy PEHMENNETTYNA JA TUMMENNETTUNA '
-          + '(KARTTATAUSTA-linjaus ei muutu). Tila: tyo Opus-agentilla.',
+          + '(KARTTATAUSTA-linjaus ei muutu). Tila: PR #2504 odottaa '
+          + 'julkaisua. TEKSTIT PIILOON KAIKILLA LAITTEILLA (omistaja '
+          + '15.9.2026 klo 06.20 UTC, kun 1400 px kuvakaappaus naytti '
+          + 'isoisan lapun ja pulun kuplan luennan aikana, sanatarkasti: '
+          + '"Kuvassa nakyy matkakirjan ja pulun tekstit. Nehan pitaisi '
+          + 'jaada nykyaan piiloon."; kysymyskortin valinta: "Piiloon '
+          + 'kaikilla laitteilla"): IPHONE-linjauksen kohta 1 laajenee '
+          + 'kaikkiin laitteisiin - luennan aikana nakyy vain kuva ja '
+          + 'kuvateksti; isoisan merkinnan saa esiin lappua napauttamalla '
+          + 'ja pulun repliikin pluskuplasta, kuten puhelimella. Luennan '
+          + 'jalkeen tekstit palaavat kuten ennen. Tila: tyo Opus-agentilla.',
         'LINSSIVIKA: KOHDEMAAN KOROSTUS JA MAAPANEELI VUOTAVAT LINSSIIN, '
           + 'KARTAN REUNA VAREILEE (omistaja 14.9.2026 klo 21.15 UTC, '
           + 'iPad-kuva Ihmisen matka -linssista, sanatarkasti: "Linssissa '
