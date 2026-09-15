@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1912, teksti: 'Huntu pois maailmasta; laukku mattolaukuksi; Fogg-kaanon' },
   { v: 1911, teksti: 'Luenta kestää asetukset; Kreikan paneeli; valikko pystyyn' },
   { v: 1910, teksti: 'Kaiuttimen kaaret seuraavat puheen äänitasoa' },
   { v: 1909, teksti: 'Huntu vain kartalle: luentakuva terävänä iOS:llä' },
