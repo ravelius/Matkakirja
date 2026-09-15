@@ -25,7 +25,9 @@
  * VARTIOT (jokaisella VASTAKOE — sääntö on turha, jos se pätee myös
  * silloin kun sen ei pitäisi):
  *   1. Puhelimella matkakirja on lappu eikä merkinnän teksti näy;
- *      TYÖPÖYDÄLLÄ kortti on auki ja teksti näkyy (vastakoe).
+ *      TYÖPÖYDÄLLÄ kortti on auki ja teksti näkyy (vastakoe) — paitsi
+ *      LUENNAN AIKANA, jolloin tekstipiilo koskee kaikkia laitteita
+ *      (omistaja 15.9.2026, ks. työpöytäosion loppu).
  *   2. Lapun napautus avaa merkinnän — teksti ei ole peruuttamattomasti
  *      poissa. Kaiutin (mykistys ja luennan merkki) jää lapulle.
  *   3. Kuva ja kuvateksti näkyvät puhelimella molemmissa suunnissa.
@@ -41,7 +43,8 @@
  *      jälkeen (vastakoe); huntu on kuvan ALLA (z-index < kuvan 5).
  *   9. Kaupunkietusivun huntu on VAALEAMPI kuin luennan huntu
  *      (pikselivertailu) ja sumennus on sama luokka.
- *  10. Kaiutin sykkii kertojan luennassa ja vaikenee sen jälkeen
+ *  10. Kaiuttimen VU-mittari elää kertojan luennassa ja sammuu sen
+ *      jälkeen (merkki vaihtui sykkeestä mittariksi 15.9.2026, #2504)
  *      (vastakoe); pulun repliikki ei sytytä sykettä.
  *
  * Peli istutetaan Ateenaan pelitallenteen kautta samalla tavalla kuin
@@ -233,6 +236,15 @@ const mittaa = () => {
     })(),
     kaiutinNakyy: Boolean(kr && kr.width > 2 && kr.height > 2),
     kaiutinSyke: kaiutin ? getComputedStyle(kaiutin).animationName : null,
+    /*
+     * LUENNAN MERKKI ON NYT VU-MITTARI, EI KOKO KUVAKKEEN SYKE
+     * (omistaja 15.9.2026, js/kaiutinmittari.js; PR #2504 poisti
+     * `fact-kaiutin-syke` -animaation kokonaan). Merkki luetaan siis
+     * kaarien tilasta: luennan aikana niistä palaa ainakin yksi,
+     * hiljaisuudessa ei yksikään.
+     */
+    kaiutinKaaret: [...document.querySelectorAll('#fact-kuuntele .kaiutin-kaari')]
+      .map((k) => (k.classList.contains('palaa') ? '1' : '0')).join(''),
     kuvaNakyy: Boolean(document.querySelector('.fokusvirta-luentakuva')),
     kuvatekstiNakyy: (() => {
       const e = document.querySelector('.fokusvirta-luentateksti');
@@ -316,8 +328,9 @@ const mittaa = () => {
     && /rgba\(30, 22, 12/.test(String(luennassa.huntu?.bg)), JSON.stringify(luennassa.huntu));
   vaadi('huntu jää isoisän kuvan ALLE (z-index pienempi kuin kuvan 5)',
     Number(luennassa.huntu?.z) < 5, String(luennassa.huntu?.z));
-  vaadi('kaiutin sykkii kertojan luennassa',
-    luennassa.kaiutinSyke === 'fact-kaiutin-syke', String(luennassa.kaiutinSyke));
+  vaadi('kaiuttimen VU-mittari elää kertojan luennassa',
+    luennassa.kaiutinKaaret.includes('1') && luennassa.kaiutinSyke === 'none',
+    `kaaret=${luennassa.kaiutinKaaret} animaatio=${luennassa.kaiutinSyke}`);
 
   /* VASTAKOE: luennan jälkeen kaikki kolme palaavat ennalleen. */
   await vaikene(sivu);
@@ -327,15 +340,17 @@ const mittaa = () => {
     jalkeen.liiku?.display !== 'none', JSON.stringify(jalkeen.liiku?.display));
   vaadi('luennan jälkeen huntu on poissa (vastakoe)',
     jalkeen.huntu?.content === 'none', JSON.stringify(jalkeen.huntu));
-  vaadi('luennan jälkeen kaiutin ei syki (vastakoe)',
-    jalkeen.kaiutinSyke === 'none', String(jalkeen.kaiutinSyke));
+  vaadi('luennan jälkeen kaiuttimen kaaret ovat sammuksissa (vastakoe)',
+    !jalkeen.kaiutinKaaret.includes('1') && jalkeen.kaiutinSyke === 'none',
+    `kaaret=${jalkeen.kaiutinKaaret} animaatio=${jalkeen.kaiutinSyke}`);
 
   /* PULUN REPLIIKKI EI SYTYTÄ KAIUTINTA (omistaja: pulun elehtiminen riittää). */
   await puhu(sivu, 'pulu');
   await sivu.waitForTimeout(600);
   const pulupuhe = await sivu.evaluate(mittaa);
-  vaadi('pulun repliikki ei sytytä kaiuttimen sykettä',
-    pulupuhe.kaiutinSyke === 'none', String(pulupuhe.kaiutinSyke));
+  vaadi('pulun repliikki ei sytytä kaiuttimen mittaria',
+    !pulupuhe.kaiutinKaaret.includes('1') && pulupuhe.kaiutinSyke === 'none',
+    `kaaret=${pulupuhe.kaiutinKaaret} animaatio=${pulupuhe.kaiutinSyke}`);
   vaadi('pulun repliikin ajan Liiku on silti piilossa',
     pulupuhe.liiku?.display === 'none', String(pulupuhe.liiku?.display));
   await vaikene(sivu);
@@ -424,6 +439,31 @@ const mittaa = () => {
     m.kuplapino !== 'none', m.kuplapino);
   vaadi('työpöytä: Liiku on sama neliö vasemmassa alanurkassa',
     m.liiku?.laatikko?.w === 44 && m.liiku.laatikko.x < 40);
+
+  /*
+   * LUENNAN AIKANA TYÖPÖYTÄKIN PIILOTTAA TEKSTIT (omistaja 15.9.2026,
+   * Raamattu "TEKSTIT PIILOON KAIKILLA LAITTEILLA").
+   *
+   * Yllä oleva vastakoe mittaa luennan ULKOPUOLISEN työpöydän — se
+   * pysyi ennallaan. Tässä sama ruutu luennan AIKANA: kortti kutistuu
+   * lapuksi ja merkinnän teksti katoaa mitasta, ja luennan jälkeen
+   * molemmat palaavat (oma vastakokeensa). Laajemmat mittaukset
+   * kolmella ruudulla ovat savuke-kaiutin-luentakuvat.mjs:ssä.
+   */
+  await puhu(sivu);
+  await sivu.waitForTimeout(700);
+  const tyoLuennassa = await sivu.evaluate(mittaa);
+  vaadi('työpöytä: luennan aikana matkakirja on lappu eikä teksti näy',
+    tyoLuennassa.factPieni === true && tyoLuennassa.factTekstiNakyy === false,
+    JSON.stringify({ pieni: tyoLuennassa.factPieni, teksti: tyoLuennassa.factTekstiNakyy }));
+  vaadi('työpöytä: luennan aikana kaiutin on lapulla näkyvissä',
+    tyoLuennassa.kaiutinNakyy === true, JSON.stringify(tyoLuennassa.kaiutinNakyy));
+  await vaikene(sivu);
+  await sivu.waitForTimeout(LUENNAN_VAPAUTUKSEN_ODOTUS_MS);
+  const tyoJalkeen = await sivu.evaluate(mittaa);
+  vaadi('työpöytä (vastakoe): luennan jälkeen kortti on taas auki ja teksti näkyy',
+    tyoJalkeen.factPieni === false && tyoJalkeen.factTekstiNakyy === true,
+    JSON.stringify({ pieni: tyoJalkeen.factPieni, teksti: tyoJalkeen.factTekstiNakyy }));
 
   /* Kaupunkietusivun huntu: sama sumennus, vaaleampi peite. */
   const hunnut = await sivu.evaluate(() => {

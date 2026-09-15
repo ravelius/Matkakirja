@@ -339,7 +339,18 @@ test('isoisän kuva pysyy suurena koko luennan ajan', (t) => {
   kelaa(t, ISON_KUVAN_VAIHTO_MS);
   assert.equal(isot().length, 1, 'PuluCam ei ala luennan aikana');
   kelaa(t, 30000);
-  assert.equal(isot().length, 1, 'isoisä pysyy suurena niin kauan kuin luenta');
+  /*
+   * KAKSI KORTTIA, EI YKSI (omistaja 15.9.2026: kuvat ladotaan pakaksi
+   * eivätkä vaihdu toistensa tilalle). Dubrovnikilla on `luentakuva2`,
+   * joka laskeutuu pakkaan 9 s kohdalla — molemmat isoisän kuvat siis
+   * jäävät ruudulle. Testin varsinainen väite on yhä sama: PuluCam ei
+   * ala luennan aikana eikä pakka nouse kartalle.
+   */
+  assert.equal(isot().length, 2, 'isoisän molemmat kuvat pakassa luennan ajan');
+  for (const ruutu of isot()) {
+    assert.equal(ruutu.querySelectorAll('.pulucam-merkki').length, 0,
+      'luennan aikana ruudulla on vain isoisän kuvia');
+  }
   assert.equal(paneelit().length, 0, 'pakka ei nouse kesken luennan');
 
   siivoa(ui);
@@ -360,7 +371,8 @@ test('pulun kommentti aloittaa PuluCam-sarjan: 4 s välein ja 6 s lopuksi', (t) 
   // Ensimmäinen PuluCam-kuva tulee heti kommentin alkaessa.
   assert.equal(pulunKommentti(ui), true, 'kommentti aloittaa sarjan');
   t.mock.timers.tick(60);
-  assert.equal(isot().length, 2, 'vanha ruutu jää hetkeksi ristihäivytykseen');
+  // Pakka: isoisän kuva jää alle ja pulun kuva laskeutuu sen päälle.
+  assert.equal(isot().length, 2, 'vanha ruutu jää pakkaan uuden alle');
   assert.equal(isot().at(-1).querySelectorAll('.pulucam-merkki').length, 1,
     'pulun kuvassa on PULU-CAM-sinetti');
 

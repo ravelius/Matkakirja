@@ -3384,8 +3384,15 @@ export const ISON_KUVAN_VAIHTO_MS = 4000;
 /** Kuinka kauan viimeinen iso kuva jää ruudulle ennen häipymistä (6 s). */
 export const ISON_KUVAN_LOPPU_MS = 6000;
 
-/** Kuvien ristihäivytys isossa keskitilassa. */
-export const ISON_KUVAN_RISTIHAIVE_MS = 500;
+/**
+ * PAKAN KATTO: enintään näin monta korttia kerralla ruudulla. Isoisän
+ * kaksi kuvaa ja PuluCamin viisi (PULUCAM_KATTO) mahtuvat, eikä
+ * mahdollinen pidempi tuleva sarja kasvata pinoa loputtomiin.
+ *
+ * Tämä korvaa vakion ISON_KUVAN_RISTIHAIVE_MS: kuvat eivät enää häivy
+ * toistensa tieltä, vaan ne jäävät pakaksi (omistaja 15.9.2026).
+ */
+const ISON_PAKAN_KATTO = 7;
 
 /** Koko sarjan häipyminen ruudulta. */
 export const ISON_KUVAN_POISTUMA_MS = 700;
@@ -3403,9 +3410,6 @@ export const ISON_KUVAN_POISTUMA_MS = 700;
  */
 export const LUENTAKUVAN_VAIHTO_MS = 9000;
 
-/** Isoisän kahden kuvan ristihäivytys (omistaja: pehmeä vaihto). */
-export const LUENTAKUVAN_RISTIHAIVE_MS = 600;
-
 /** Kuinka usein sarja kysyy, onko luenta yhä kesken. */
 const SARJAN_LUENTAVAHTI_MS = 250;
 
@@ -3421,6 +3425,21 @@ const SARJAN_LUENNAN_ALKUKATTO_MS = 4000;
 const SARJAN_LUENNAN_KATTO_MS = 180000;
 
 /**
+ * PAKAN KALLISTUS ASTEINA (omistaja 15.9.2026: *"hieman vinottain"*).
+ * Ensimmäinen kortti 2,0°, ja jokainen seuraava 0,4° enemmän — viides
+ * on siis 3,6°. Omistajan mitta on "hieman", joten kulma pysyy
+ * kahden ja neljän asteen välissä.
+ */
+const PAKAN_KALLISTUS_MIN = 2.0;
+const PAKAN_KALLISTUS_ASKEL = 0.4;
+
+/** Pakan vaakasiirto: kortti väistää kallistuksensa suuntaan. */
+const PAKAN_SIIRTO_PX = 14;
+
+/** Pakan pystysiirto korttia kohti: pino laskeutuu hitusen alaspäin. */
+const PAKAN_SIIRTO_Y_PX = 8;
+
+/**
  * Sarjan yksi ruutu: kuva, PULU-CAM-sinetti ja lyhyt kuvateksti.
  *
  * Kuvateksti on kiinni kuvan alalaidassa kuten kartallakin (omistaja
@@ -3428,8 +3447,24 @@ const SARJAN_LUENNAN_KATTO_MS = 180000;
  * merkillä kuin pakan korteissa (js/pulucam.js puluCamMerkki) — merkkiä
  * ei polteta kuviin.
  */
-function isonKuvanRuutu(kuva, pulusta) {
+function isonKuvanRuutu(kuva, pulusta, jarjestys = 0) {
   const ruutu = html('div', 'fokusvirta-isokuva-ruutu');
+  /*
+   * PAKAN ASENTO: VUOROTELLEN VASEMMALLE JA OIKEALLE (omistaja
+   * 15.9.2026, sanatarkasti: *"lado ne hieman vinottain toistensa
+   * paalle vuorotellen vasemmalle ja oikealle kallistettuina"*).
+   * Ensimmäinen kortti kallistuu vasemmalle, toinen oikealle, ja
+   * kulman itseisarvo kasvaa hitusen syvemmälle pakkaan — muuten
+   * kolmas ja neljäs kortti peittäisivät kaksi ensimmäistä täysin.
+   * Siirto on saman verran vastakkaiseen suuntaan, jotta pakka levittyy
+   * eikä kasva yhteen suuntaan.
+   */
+  const merkki = jarjestys % 2 === 0 ? -1 : 1;
+  const kulma = (PAKAN_KALLISTUS_MIN + Math.min(jarjestys, 4) * PAKAN_KALLISTUS_ASKEL) * merkki;
+  ruutu.style.setProperty('--pakka-kallistus', `${kulma.toFixed(2)}deg`);
+  ruutu.style.setProperty('--pakka-siirto-x', `${(merkki * PAKAN_SIIRTO_PX).toFixed(0)}px`);
+  ruutu.style.setProperty('--pakka-siirto-y',
+    `${(Math.min(jarjestys, 4) * PAKAN_SIIRTO_Y_PX).toFixed(0)}px`);
   const kotelo = html('figure', 'fokusvirta-isokuva-kotelo');
   const img = document.createElement('img');
   /*
@@ -3505,9 +3540,25 @@ function avaaIsokuvaPaallys(ui, city, pohjakuva) {
   globalThis.requestAnimationFrame?.(nayta);
   ajastimet.push(setTimeout(nayta, 50));
 
-  let edellinen = null;
-  const vaihda = (kuva, pulusta, haive = ISON_KUVAN_RISTIHAIVE_MS) => {
-    const ruutu = isonKuvanRuutu(kuva, pulusta);
+  /*
+   * PAKKA EIKÄ RISTIHÄIVYTYS (omistaja 15.9.2026, sanatarkasti: *"lado
+   * ne hieman vinottain toistensa paalle vuorotellen vasemmalle ja
+   * oikealle kallistettuina"*).
+   *
+   * Ennen tämä oli kuvan VAIHTO: uusi kortti tuli näkyviin ja vanha
+   * häivytettiin pois ja poistettiin DOM:ista. Nyt vanha JÄÄ — kortit
+   * kasaantuvat pakaksi, ja järjestysnumero päättää kortin kallistuksen
+   * (isonKuvanRuutu). Nimi `vaihda` säilyy, koska kutsupaikkoja on
+   * neljä eikä niiden merkitys muutu: se on yhä "seuraava kuva esiin".
+   *
+   * PAKAN KATTO: kortteja on enintään kaksi isoisän kuvaa ja viisi
+   * PuluCam-kuvaa (PULUCAM_KATTO), eli seitsemän. Vanhimmat poistetaan
+   * vasta sen yli, jottei mahdollinen tuleva pidempi sarja kasvattaisi
+   * pinoa loputtomiin.
+   */
+  const kortit = [];
+  const vaihda = (kuva, pulusta) => {
+    const ruutu = isonKuvanRuutu(kuva, pulusta, kortit.length);
     /*
      * KAMERAN KLIK JOKAISELLE SARJAN KUVALLE (omistaja 11.9.2026 klo
      * 12.55: *"Kuville tarvitaan kameran KLIK aani tehoste"*) — sama
@@ -3516,16 +3567,19 @@ function avaaIsokuvaPaallys(ui, city, pohjakuva) {
      */
     soitaKameranKlik();
     kehys.appendChild(ruutu);
+    /*
+     * PEITTYNEEN KORTIN KUVATEKSTI PIILOON. Kuvateksti kulkee kortin
+     * mukana (figcaption on kortin oma lapsi), mutta pakassa alempien
+     * korttien tekstit osuivat päällekkäin ja kartan päälle jäi kolme
+     * riviä sekaisin (mitattu 390 × 844, kolme korttia). Näkyvissä on
+     * siis PÄÄLLIMMÄISEN kortin teksti — sen kuvan, jota katsotaan.
+     */
+    for (const vanha of kortit) vanha.classList.add('alla');
+    kortit.push(ruutu);
     const esiin = () => { if (ruutu.isConnected) ruutu.classList.add('nakyy'); };
     globalThis.requestAnimationFrame?.(esiin);
     ajastimet.push(setTimeout(esiin, 50));
-    const vanha = edellinen;
-    edellinen = ruutu;
-    // Ristihäivytys: vanha jää hetkeksi uuden alle ja häipyy.
-    if (vanha) {
-      vanha.classList.remove('nakyy');
-      ajastimet.push(setTimeout(() => vanha.remove(), haive));
-    }
+    while (kortit.length > ISON_PAKAN_KATTO) kortit.shift()?.remove();
   };
   tila.vaihda = vaihda;
   tila.aja = aja;
@@ -3563,9 +3617,19 @@ function avaaIsoisanSarja(ui, city, pohjakuvat) {
    */
   if (pohjakuvat[1]) {
     aja(LUENTAKUVAN_VAIHTO_MS, () => {
+      /*
+       * EI ISOISÄN KAKKOSKUVAA PULUN KUVIEN PÄÄLLE. Ennen pakkaa kuvat
+       * vaihtuivat toistensa tilalle, joten myöhässä laukeava
+       * kakkoskuva vain korvasi soivan PuluCam-kuvan hetkeksi. Pakassa
+       * se jäisi ruudulle väärään kohtaan järjestystä: isoisä, pulu,
+       * isoisä. Jos pulun sarja on jo alkanut, kakkoskuva jää pois —
+       * karusellissa se on yhä mukana (pulucamKaruselli lukee kuvat
+       * pakista).
+       */
+      if (tila.puluAlkoi) return;
       tila.pohjakuva = pohjakuvat[1];
       ui.luentakuvaNyt = pohjakuvat[1];
-      vaihda(pohjakuvat[1], false, LUENTAKUVAN_RISTIHAIVE_MS);
+      vaihda(pohjakuvat[1], false);
     });
   }
 
