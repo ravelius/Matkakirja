@@ -58,16 +58,21 @@
  *   B. MAAPANEELIN_ANKKURIT tyhjäksi → ankkuri palaa maan laatikon
  *      eteläreunaan. VÄITTEEN 2 ON KAADUTTAVA (paneeli osuu
  *      Espanjaan).
- *   C. MAAPANEELIN_SKAALA_MAX 64 → 3 (erän 11 arvo). VÄITTEEN 3 ON
- *      KAADUTTAVA: katto katkaisee skaalauksen kesken pelialueen.
+ *   C. MAAPANEELIN_SKAALA_MAX → 0,5 (katto kesken pelialueen, ks.
+ *      kokeen oma perustelu). VÄITTEEN 3 ON KAADUTTAVA: katto
+ *      katkaisee skaalauksen kesken pelialueen.
  *   D. `pallonKorkeus` palauttamaan null → rajaus lasketaan taas laudan
  *      Mercator-yksiköistä, kuten ennen erää 13. Kokeessa muutetaan
  *      VAIN MITTA, ei varaa, joten tulos ei ole vanha näkymä vaan
  *      vastaus kysymykseen *"tekeekö mitta eron"*. VÄITTEEN 5 ON
  *      KAADUTTAVA.
- *   E. `korkeuteenSovitus` palauttamaan null → rajaus tehdään taas
- *      MOLEMPIIN suuntiin, kuten ennen erää 14. VÄITTEEN 6 ON
- *      KAADUTTAVA (sitova akseli vaihtuu X:ksi ja pystyyn jää
+ *   E. MAAPANEELIN_KATTO_RUUDUSTA 0,095 → 10 (erän 15 katto pois) →
+ *      paneeli mitoitetaan taas pelkästä maan laatikosta.
+ *      LEVEYSVÄITTEEN ON KAADUTTAVA (puhelimella mitattu 21,7 %).
+ *   F. Erän 12 valikkotyyli takaisin → VALIKKOVÄITTEEN ON KAADUTTAVA.
+ *   G. `korkeuteenSovitus` palauttamaan null → rajaus tehdään taas
+ *      MOLEMPIIN suuntiin, kuten ennen erää 14. KORKEUSSOVITUSVÄITTEEN
+ *      ON KAADUTTAVA (sitova akseli vaihtuu X:ksi ja pystyyn jää
  *      mitattu 59 % tyhjää).
  *
  * === MIKSI 9 SEKUNNIN LEPO ON OSA KOETTA ============================
@@ -198,7 +203,13 @@ const palvelin = http.createServer((req, res) => {
      */
     runko = Buffer.from(runko.toString('utf8')
       .replace(/MAAPANEELIN_ANKKURIT = \{[\s\S]*?\n\};/, 'MAAPANEELIN_ANKKURIT = {};')
-      .replace(/MAAPANEELIN_TEKSTIKERROIN = [\d.]+/, 'MAAPANEELIN_TEKSTIKERROIN = 1'));
+      .replace(/MAAPANEELIN_TEKSTIKERROIN = [\d.]+/, 'MAAPANEELIN_TEKSTIKERROIN = 1')
+      /*
+       * ERÄ 15: MYÖS KATTO ON PURETTAVA. Uusi ruutukatto leikkaisi
+       * paneelin pieneksi kertoimesta riippumatta, ja pieni kortti
+       * mahtuu Ranskan eteläreunallakin merelle (mitattu: osumia 0).
+       */
+      .replace(/MAAPANEELIN_KATTO_RUUDUSTA = [\d.]+/, 'MAAPANEELIN_KATTO_RUUDUSTA = 10'));
   }
   if (vastakoe === 'D' && polkuOsa.endsWith('/js/pallolauta/kamera.js')) {
     /*
@@ -212,11 +223,15 @@ const palvelin = http.createServer((req, res) => {
       .replace('const pallonKorkeus = (bbox, vara = 1) => {',
         'const pallonKorkeus = (bbox, vara = 1) => { if (bbox || vara) return null;'));
   }
-  if (vastakoe === 'E' && polkuOsa.endsWith('/js/pallolauta/kamera.js')) {
+  if (vastakoe === 'G' && polkuOsa.endsWith('/js/pallolauta/kamera.js')) {
     /*
      * Erää 14 edeltänyt sovitus: `korkeuteenSovitus` palauttaa null,
      * jolloin rajaus tehdään taas MOLEMPIIN suuntiin (PÄÄTÖKSET 12) ja
      * puhelimen pystyruudulle jää mitattu 59 % tyhjää pystysuunnassa.
+     *
+     * KOUKKU OLI ERÄSSÄ 14 KIRJOITETTU 'E':lle (kirjoitusvirhe), joten
+     * vastakoe G ajoi täysin normaalilla koodilla ja oli siksi
+     * punaisena (17/19). Nyt se on sillä kirjaimella, jonka koe lukee.
      */
     runko = Buffer.from(runko.toString('utf8')
       .replace('const korkeuteenSovitus = (bbox, vara = 1) => {',
@@ -225,19 +240,31 @@ const palvelin = http.createServer((req, res) => {
   if (vastakoe === 'C' && polkuOsa.endsWith('/js/pallolauta/maapaneeli.js')) {
     runko = Buffer.from(runko.toString('utf8')
       /*
-       * KATTO SKAALAUTUU KERTOIMEN MUKANA. Ruutuskaala kutistui
-       * paneelin mukana (saapumisessa 1400 px: 1,55 → 0,87), joten
-       * kiinteä 3 ei enää sitonut kolmen zoomin sisällä eikä koe
-       * kaatanut väitettä (mitattu: hajonta 0). Sama kerroin pitää
-       * katon samassa kohdassa suhteessa karttaan.
+       * KATTO ON ASETETTAVA SIIHEN, MISSÄ RUUTUSKAALA NYT KULKEE.
+       * Erän 11 luku 3 oli sidottu silloiseen paneelikokoon; ruutuskaala
+       * on sen jälkeen kutistunut kahdesti (erän 13 kerroin ja erän 15
+       * ruutukatto), ja saapumisessa se on nyt 0,34 (390 px) ja 0,83
+       * (1400 px). Kiinteä 3 ei enää sitoisi kolmen zoomin sisällä
+       * eikä koe kaataisi väitettä (mitattu: hajonta 0). Luku 0,5 on
+       * sama koe samassa kohdassa: se katkaisee skaalauksen kesken
+       * pelialuetta, ja väitteen 3 ON kaaduttava.
        */
       .replace(/MAAPANEELIN_SKAALA_MAX = [\d.]+ \* MAAPANEELIN_TEKSTIKERROIN/,
-        'MAAPANEELIN_SKAALA_MAX = 3 * MAAPANEELIN_TEKSTIKERROIN'));
+        'MAAPANEELIN_SKAALA_MAX = 0.5'));
   }
-  // E: erän 12 paneelikoko takaisin (kerroin 1) → leveysväite kaatuu.
+  /*
+   * E: ERÄN 15 KATTO POIS → LEVEYSVÄITTEEN ON KAADUTTAVA.
+   *
+   * Ennen erää 15 koe palautti erän 12 paneelikoon (TEKSTIKERROIN 1).
+   * Se ei enää kaataisi väitettä siitä syystä, jota väite mittaa: uusi
+   * katto (MAAPANEELIN_KATTO_RUUDUSTA) leikkaisi myös kertoimella 1
+   * molemmat ruudut kymmenesosaan. Koe purkaa siksi juuri sen katon —
+   * jäljelle jää erän 13 mitoitus maan laatikosta, joka PÄÄTÖKSET 17:n
+   * korkeussovituksen jälkeen antaa puhelimelle mitatut 21,7 %.
+   */
   if (vastakoe === 'E' && polkuOsa.endsWith('/js/pallolauta/maapaneeli.js')) {
     runko = Buffer.from(runko.toString('utf8')
-      .replace(/MAAPANEELIN_TEKSTIKERROIN = [\d.]+/, 'MAAPANEELIN_TEKSTIKERROIN = 1'));
+      .replace(/MAAPANEELIN_KATTO_RUUDUSTA = [\d.]+/, 'MAAPANEELIN_KATTO_RUUDUSTA = 10'));
   }
   // F: erän 12 valikko takaisin (kaksi palstaa, kiinni kortissa).
   if (vastakoe === 'F' && polkuOsa.endsWith('/css/styles.css')) {
@@ -713,6 +740,16 @@ const valikkoTulokset = [];
  * paneeli on ruudulla suurimmillaan suhteessa karttaan.
  */
 const LEVEYDEN_KATTO = 0.10;
+/*
+ * ERÄ 15: KATTO PITÄÄ NYT MYÖS PYSTYPUHELIMELLA. PÄÄTÖKSET 17 vei
+ * puhelimen saapumisnäkymän noin kaksi kertaa lähemmäs, ja koska
+ * paneeli on kartan mitta, sen ruutuosuus kasvoi mitatusti 9,5 %:sta
+ * 21,7 %:iin. Paneelin katto lasketaan siksi samasta vertailusta kuin
+ * nimikylttien koko (kunkin laitteen oma saapumisnäkymä,
+ * js/pallolauta/maapaneeli.js MAAPANEELIN_KATTO_RUUDUSTA). Mitattu
+ * tämän erän jälkeen: 390 px 35,5 px = 9,5 %, 1400 px 85,9 px = 6,2 %
+ * (työpöytä ei muuttunut lainkaan).
+ */
 const leveysTulokset = [];
 const meriTulokset = [];
 const suhdeTulokset = [];
@@ -997,11 +1034,11 @@ vastakoe = 'C';
   const arvot = tasot.map((t) => t.tulo);
   const hajonta = arvot.length === 3
     ? (Math.max(...arvot) - Math.min(...arvot)) / (arvot.reduce((a, b) => a + b, 0) / 3) : Infinity;
-  tieto('vastakoe C (SKAALA_MAX 3)',
+  tieto('vastakoe C (SKAALA_MAX 0,5)',
     `${tasot.map((t) => `alt ${t.alt} → skaala ${t.skaala}, tulo ${t.tulo}`).join(' | ')}; `
     + `hajonta ${p(100 * hajonta, 2)} % `
     + `→ väite 3 ${hajonta <= SUHTEEN_VARA ? 'LÄPI (paha)' : 'PUNAINEN'}`);
-  vaadi('VASTAKOE C: katolla 3 skaalaväite kaatuu',
+  vaadi('VASTAKOE C: katolla 0,5 skaalaväite kaatuu',
     auki && hajonta > SUHTEEN_VARA, JSON.stringify({ auki, hajonta }));
   await ctx.close();
 }
@@ -1034,14 +1071,14 @@ vastakoe = 'E';
     const m = auki ? await mittaa(sivu) : null;
     const osuus = m?.kortti?.w > 0 && m?.kotelo?.w > 0 ? m.kortti.w / m.kotelo.w : null;
     tulokset.push({ ruutu: ruutu.nimi, leveysPx: p(m?.kortti?.w, 1), osuus: p(osuus, 4) });
-    tieto(`vastakoe E (${ruutu.nimi} px, TEKSTIKERROIN 1)`,
+    tieto(`vastakoe E (${ruutu.nimi} px, KATTO_RUUDUSTA pois)`,
       `paneeli ${p(m?.kortti?.w, 1)} px = ${p(100 * (osuus ?? 0), 2)} % ruudusta`);
     await ctx.close();
     /* eslint-enable no-await-in-loop */
   }
   const kaatuiE = tulokset.some((t) => !(t.osuus >= 0) || t.osuus > LEVEYDEN_KATTO);
   tieto('vastakoe E', `→ väite 6 ${kaatuiE ? 'PUNAINEN' : 'LÄPI (paha)'}`);
-  vaadi('VASTAKOE E: erän 12 kertoimella leveysväite kaatuu', kaatuiE, JSON.stringify(tulokset));
+  vaadi('VASTAKOE E: ilman erän 15 kattoa leveysväite kaatuu', kaatuiE, JSON.stringify(tulokset));
 }
 
 /* F: erän 12 valikkotyyli → väitteen 7 on kaaduttava. */
