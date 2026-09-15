@@ -9,17 +9,38 @@
  * tilalle tulee mittari, jossa kaiuttimen KOLME KAARTA syttyvät ja
  * sammuvat luennan tahdissa. Kuvake itse ei liiku eikä häivy.
  *
- * ── KAKSI LÄHDETTÄ, SAMA KUVA RUUDULLA ─────────────────────────────
+ * ══════════════════════════════════════════════════════════════════
+ * KAARET SEURAAVAT PUHETTA, EIVÄT AJASTUSTA (omistaja 15.9.2026 klo
+ * 08.35 UTC, iPhone v1908, sanatarkasti: *"Kajutin kuvake elää, mutta
+ * se ei elä puheen tahdissa."*)
+ * ══════════════════════════════════════════════════════════════════
  *
- *   1. TODELLINEN TASO, kun luenta kulkee Web Audion läpi. iOS ei
- *      tottele <audio>-elementin volumea, joten luenta reititetään
- *      GainNoden kautta (js/luenta.js liitaLuennanVahvistin →
- *      js/musiikkivahvistin.js liitaMusiikkiin). Sama ketju sisältää jo
- *      AnalyserNoden (`audio.aaniMittari`), joten taso saadaan
- *      ILMAISEKSI — mitään ei lisätä äänigraafiin tätä varten.
- *   2. AJASTETTU KUVIO, kun reititystä ei ole (työpöytäselaimet, joissa
- *      elementin oma volume toimii). Kuvio on hillitty ja hidas: se
- *      kertoo "ääni käy", ei esitä aaltomuotoa.
+ * JUURISYY, jonka omistaja näki. v1908 luki analysaattoria vain jos
+ * luenta sattui olemaan reititetty Web Audioon — ja js/luenta.js
+ * reititti VAIN iOS:llä JA vain jos äänikonteksti oli sillä sekunnilla
+ * jo `running`. `resume()` on asynkroninen, joten istunnon ensimmäinen
+ * luenta (juuri saapumisluenta) jäi lähes aina reitittämättä. Silloin
+ * `audio.aaniMittari` oli null ja mittari piirsi AJASTETTUA KUVIOTA:
+ * kaaret elivät, mutta oman sinikäyränsä eivätkä isoisän tahdissa.
+ *
+ * KORJAUS on kahdessa paikassa:
+ *   1. js/luenta.js reitittää luennan KAIKILLA laitteilla ja yrittää
+ *      uudelleen, kun äänikonteksti herää (varaaReitityksenUusinta).
+ *   2. Tämä moduuli mittaa aidon RMS:n ja liikuttaa kaaria sillä.
+ *
+ * ── LÄHDE ON AINA MITATTU, JOS AUDIOCONTEXT ON OLEMASSA ────────────
+ *
+ * Ajastettu kuvio on jäljellä vain varapolkuna sille selaimelle, jossa
+ * AudioContextia EI OLE lainkaan, ja silloin siitä jää console.info.
+ * Näin ajastus ei voi enää piiloutua "elävän" mittarin taakse.
+ *
+ * ── ATTACK NOPEA, RELEASE ~120 ms ──────────────────────────────────
+ *
+ * Verhokäyrän seuraaja on epäsymmetrinen ja SIDOTTU AIKAAN, ei
+ * kehyksiin: nouseva reuna otetaan lähes sellaisenaan (tavun alku
+ * näkyy heti), laskeva reuna vaimenee ~120 ms:n aikavakiolla, jotta
+ * puheen sisäiset mikrotauot eivät välkytä kaaria. Puheen oikeat tauot
+ * (satojen millisekuntien hiljaisuus) näkyvät silti: kaikki sammuu.
  *
  * ── MIKSI KOLME TASOA EIKÄ LIUKUVA ARVO ────────────────────────────
  *
@@ -40,25 +61,87 @@ export const KAARIA = 3;
 const KUVION_JAKSO_MS = 900;
 
 /**
- * Analysaattorin lukemien tasoitus: uusi lukema painaa tämän verran.
- * Ilman tasoitusta kaaret värisisivät puheen tavurajoilla.
+ * Verhokäyrän laskuaika (aikavakio, ms). Nousu on lähes hetkellinen.
+ *
+ * MITTAAMALLA VALITTU: 120 ms on lyhyempi kuin puheen tauko (tyypillinen
+ * lausetauko 300–700 ms), joten tauot näkyvät; ja pitempi kuin tavujen
+ * välinen notkahdus (30–80 ms), joten kaaret eivät välky.
  */
-const TASOITUS = 0.35;
+const RELEASE_MS = 120;
 
-/** Tasot, joilla kaari syttyy analysaattorin RMS:llä (0…1). */
-const KYNNYKSET = [0.012, 0.045, 0.11];
+/** Nousevan reunan aikavakio (ms). Käytännössä heti. */
+const ATTACK_MS = 18;
+
+/**
+ * Tasot, joilla kaari syttyy analysaattorin RMS:llä (0…1).
+ *
+ * MITATTU Horation luennasta (Chromium, tools/savukkeet/
+ * savuke-kaiutin-luentakuvat.mjs): puheen RMS kulkee tasolla
+ * 0,03…0,25, hiljaisuus alle 0,01. Kynnykset asetetaan siihen, että
+ * hiljaisuus on tasan nolla kaarta ja normaali puhe elää välillä 1–3.
+ */
+const KYNNYKSET = [0.04, 0.10, 0.20];
+
+/** Alle tämän tason kaikki kaaret sammuvat — hiljaisuus on hiljaisuus. */
+const HILJAISUUS = KYNNYKSET[0];
 
 /**
  * Ajastetun kuvion omat kynnykset (0…1).
  *
- * MITATTU SYY OMILLE KYNNYKSILLE: kun kuvion 0…1 kuvattiin RMS:n
- * asteikolle, mittari jumittui kahteen palavaan kaareen — kolmas vaati
- * yli 0,8:n huipun ja nolla alle 0,09:n pohjan, eikä kahden siniaallon
- * summa käy siellä kuin harvoin (mitattu Chromiumilla 15.9.2026:
- * kolme näytettä 320 ms:n välein antoi 110 → 110 → 110). Omat,
- * tasavälisemmät kynnykset käyvät kaikki neljä tilaa läpi.
+ * Kuvion 0…1 ei ole RMS:ää, joten sillä on omat, tasavälisemmät
+ * kynnyksensä — muuten mittari jumittuisi kahteen kaareen.
  */
 const KUVION_KYNNYKSET = [0.18, 0.45, 0.72];
+
+/**
+ * Onko tässä selaimessa AudioContextia lainkaan? Vain tämä oikeuttaa
+ * ajastettuun kuvioon (Raamattu: KAIUTTIMEN KAARET SEURAAVAT PUHETTA).
+ */
+function audioContextOlemassa() {
+  return typeof globalThis.AudioContext === 'function'
+    || typeof globalThis.webkitAudioContext === 'function';
+}
+
+/** Kuvion loki kerran istunnossa, ei joka luennasta. */
+let kuviostaKerrottu = false;
+
+function kerroKuviosta(syy) {
+  if (kuviostaKerrottu) return;
+  kuviostaKerrottu = true;
+  globalThis.console?.info?.(
+    `[kaiutinmittari] ajastettu kuvio käytössä: ${syy}. `
+    + 'Kaaret eivät seuraa todellista äänitasoa.',
+  );
+}
+
+/** Odotuslokin kertaluontoinen lippu. */
+let odotuksestaKerrottu = false;
+
+function kerroOdotuksesta() {
+  if (odotuksestaKerrottu) return;
+  odotuksestaKerrottu = true;
+  globalThis.console?.info?.(
+    '[kaiutinmittari] analysaattoria ei vielä ole (luennan reititys '
+    + 'avautumassa) — kaaret pysyvät sammuksissa.',
+  );
+}
+
+/**
+ * Mittarin nykyinen lähde vartijoille ja testeille:
+ * 'mitattu' = analysaattorin RMS, 'kuvio' = ajastettu, null = seis.
+ */
+let lahde = null;
+
+/** @returns {?string} 'mitattu' | 'kuvio' | null */
+export function kaiutinmittarinLahde() {
+  return lahde;
+}
+
+/** Vain testejä varten: unohtaa kertaluontoisen lokin. */
+export function nollaaKaiutinmittarinLoki() {
+  kuviostaKerrottu = false;
+  odotuksestaKerrottu = false;
+}
 
 /** Käynnissä oleva mittari, tai null. */
 let mittariKay = null;
@@ -122,38 +205,84 @@ function piirraKaaret(kaaret, n) {
  *
  * @param {?Element} nappi kaiutinnappi (#fact-kuuntele)
  * @param {() => ?AnalyserNode} [haeMittari] luennan analysaattori, jos on
+ * @param {{pakotaKuvio?: boolean, haeVahvistus?: () => ?number}} [asetukset]
+ *   `haeVahvistus` palauttaa luennan gain-arvon, jolla mitattu taso
+ *   normalisoidaan: analysaattori on ketjussa GAININ JÄLKEEN (yhteinen
+ *   js/musiikkivahvistin.js), joten ilman normalisointia Lukija-liuku
+ *   himmentäisi kaaret. Mittari näyttää PUHEEN tason, ei säätimen.
+ *   `pakotaKuvio` on vain vastakoetta varten.
  * @returns {boolean} lähtikö mittari käyntiin tällä kutsulla
  */
-export function kaynnistaKaiutinmittari(nappi, haeMittari = null) {
+export function kaynnistaKaiutinmittari(nappi, haeMittari = null, asetukset = {}) {
   if (!nappi || typeof globalThis.requestAnimationFrame !== 'function') return false;
   if (mittariKay?.nappi === nappi) return false;
   pysaytaKaiutinmittari();
   const kaaret = haeKaaret(nappi);
   if (!kaaret.length) return false;
+  const kuvioKielletty = !asetukset.pakotaKuvio && audioContextOlemassa();
   const tila = {
-    nappi, kaaret, haeMittari, kahva: 0, alku: 0, taso: 0, nyt: -1, puskuri: null,
+    nappi,
+    kaaret,
+    haeMittari: asetukset.pakotaKuvio ? null : haeMittari,
+    kuvioKielletty,
+    haeVahvistus: asetukset.haeVahvistus ?? null,
+    kahva: 0,
+    alku: 0,
+    edellinen: 0,
+    taso: 0,
+    nyt: -1,
+    puskuri: null,
   };
   mittariKay = tila;
+  lahde = null;
   const askel = (aika) => {
     if (mittariKay !== tila || !nappi.isConnected) return;
-    if (!tila.alku) tila.alku = aika;
+    if (!tila.alku) { tila.alku = aika; tila.edellinen = aika; }
+    const dt = Math.max(1, Math.min(250, aika - tila.edellinen));
+    tila.edellinen = aika;
     const mittari = tila.haeMittari?.() ?? null;
     if (mittari && (!tila.puskuri || tila.puskuri.length !== mittari.fftSize)) {
       tila.puskuri = new Uint8Array(mittari.fftSize);
     }
-    const mitattu = mittari ? mittarinTaso(mittari, tila.puskuri) : null;
-    /*
-     * TASOITUS VAIN ANALYSAATTORILLE. Ajastettu kuvio on jo sileä, ja
-     * kehyskohtainen tasoitus söi sen: kun kartta kuormittaa ruudun-
-     * päivitystä, kehyksiä tulee 5–10 sekunnissa, jolloin 0,35:n
-     * tasoitus on jo puolen sekunnin aikavakio — kuvion 0,9 s:n jakso
-     * litistyi keskiarvokseen ja mittari jäi yhteen tai kahteen
-     * kaareen (mitattu Chromiumilla 15.9.2026: 30 näytettä, vain tilat
-     * 100 ja 110). Kuvio ohjaa siis kaaria suoraan.
-     */
-    const kohde = mitattu === null ? kuvionTaso(aika - tila.alku) : mitattu;
-    tila.taso = mitattu === null ? kohde : tila.taso + (kohde - tila.taso) * TASOITUS;
-    const n = tasosta(tila.taso, mitattu === null ? KUVION_KYNNYKSET : KYNNYKSET);
+    const raaka = mittari ? mittarinTaso(mittari, tila.puskuri) : null;
+    const vahvistus = Number(tila.haeVahvistus?.());
+    const jakaja = Number.isFinite(vahvistus) && vahvistus > 0
+      ? Math.max(0.2, Math.min(1, vahvistus)) : 1;
+    const mitattu = raaka === null ? null : Math.min(1, raaka / jakaja);
+    let n;
+    if (mitattu !== null) {
+      /*
+       * AIKAAN SIDOTTU VERHOKÄYRÄ. Kerroin lasketaan kehysvälistä,
+       * jotta seuraaja käyttäytyy samoin 60 fps:n puhelimella ja
+       * kartan kuormittamalla 10 fps:n ruudulla — kehyskohtainen
+       * vakiokerroin olisi jälkimmäisessä puolen sekunnin aikavakio ja
+       * litistäisi puheen keskiarvokseen (mitattu v1908:ssa).
+       */
+      const vakio = mitattu > tila.taso ? ATTACK_MS : RELEASE_MS;
+      const k = 1 - Math.exp(-dt / vakio);
+      tila.taso += (mitattu - tila.taso) * k;
+      n = tila.taso < HILJAISUUS ? 0 : tasosta(tila.taso, KYNNYKSET);
+      lahde = 'mitattu';
+    } else if (tila.kuvioKielletty) {
+      /*
+       * AudioContext on olemassa mutta analysaattoria ei — reititys on
+       * vasta avautumassa (js/luenta.js varaaReitityksenUusinta).
+       * Kaaret pysyvät sammuksissa sen sijaan että valehtelisivat
+       * puheen tahtia; tila kestää korkeintaan yhden eleen verran.
+       * Loki jää kerran istunnossa, jottei aukko voi jäädä hiljaiseksi.
+       */
+      kerroOdotuksesta();
+      tila.taso = 0;
+      n = 0;
+      lahde = null;
+    } else {
+      // Ei AudioContextia lainkaan: ajastettu kuvio, ja siitä jää loki.
+      kerroKuviosta(asetukset.pakotaKuvio
+        ? 'vastakoe pakotti kuvion' : 'AudioContext puuttuu selaimesta');
+      tila.taso = kuvionTaso(aika - tila.alku);
+      n = tasosta(tila.taso, KUVION_KYNNYKSET);
+      lahde = 'kuvio';
+    }
     if (n !== tila.nyt) {
       tila.nyt = n;
       piirraKaaret(kaaret, n);
@@ -175,6 +304,7 @@ export function pysaytaKaiutinmittari() {
   const tila = mittariKay;
   if (!tila) return false;
   mittariKay = null;
+  lahde = null;
   globalThis.cancelAnimationFrame?.(tila.kahva);
   piirraKaaret(tila.kaaret, 0);
   return true;

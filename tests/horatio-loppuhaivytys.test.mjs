@@ -79,14 +79,41 @@ test('häivytyksen käyrää ei muutettu', () => {
   assert.match(luenta, /asetaLuennanTaso\(audio, 0\);\n\s*\/\*/);
 });
 
-test('crossOrigin asetetaan ennen srciä ja vain reitittävällä polulla', () => {
-  // Turha crossOrigin muuttaisi työpöydän pyyntöä ilman hyötyä, ja
-  // srcin jälkeen asetettuna se ei vaikuttaisi lainkaan.
+test('crossOrigin asetetaan ennen srciä ja kaikilla laitteilla', () => {
+  /*
+   * MUUTOS 15.9.2026 (omistaja: *"Kajutin kuvake elää, mutta se ei elä
+   * puheen tahdissa."*). Ennen crossOrigin pyydettiin vain iOS:n
+   * reitittävällä polulla, koska reititystä tarvittiin vain tason
+   * kirjoittamiseen. Nyt luenta reititetään KAIKILLA laitteilla, jotta
+   * kaiuttimen VU-mittari saa ketjun AnalyserNodesta todellisen
+   * äänitason — ja ilman CORS-lupaa MediaElementSource antaisi
+   * hiljaisuutta ilman virhettä. Srcin jälkeen asetettuna lupa ei
+   * vaikuttaisi lainkaan, joten järjestys on yhä sitova.
+   */
   const luenta = lue('../js/luenta.js');
   const kohta = luenta.slice(luenta.indexOf('function luentaSoitin'));
   const runko = kohta.slice(0, kohta.indexOf('\n}'));
   const cross = runko.indexOf('crossOrigin');
   const src = runko.indexOf('audio.src =');
   assert.ok(cross > 0 && src > cross, 'crossOrigin on asetettava ennen srciä');
-  assert.match(runko, /if \(!kertojanVolumeToimii\(\)\) audio\.crossOrigin = 'anonymous';/);
+  assert.match(runko, /^\s*audio\.crossOrigin = 'anonymous';$/m);
+  assert.doesNotMatch(runko, /kertojanVolumeToimii/,
+    'iOS-portti on poistettu: reititys on kaikilla laitteilla');
+});
+
+test('luenta reititetään kaikilla laitteilla ja uusitaan kontekstin herätessä', () => {
+  /*
+   * JUURISYY, jonka tämä vartioi (omistaja 15.9.2026, iPhone v1908):
+   * `AudioContext.resume()` on asynkroninen, joten istunnon
+   * ensimmäinen luenta jäi reitittämättä, analysaattoria ei ollut ja
+   * kaiuttimen kaaret piirsivät ajastettua kuviota. Uusinta korjaa sen.
+   */
+  const luenta = lue('../js/luenta.js');
+  assert.match(luenta, /function liitaLuennanVahvistin\(audio\) \{\n\s*if \(!audio \|\| audio\.luennanVahvistin\)/,
+    'reititys ei saa portittua volumen tottelemisella');
+  assert.match(luenta, /kuunteleReitityksenAvautumista/,
+    'reititys on yritettävä uudelleen, kun äänikonteksti herää');
+  assert.match(luenta, /if \(!liitaLuennanVahvistin\(audio\)\) varaaReitityksenUusinta\(audio\);/);
+  // Vahti on purettava, ettei kuollut soitin jää odottajaksi.
+  assert.match(luenta, /function irrotaLuennanVahvistin\(audio\) \{\n\s*audio\?\.luennanReititysvahti\?\.\(\);/);
 });
