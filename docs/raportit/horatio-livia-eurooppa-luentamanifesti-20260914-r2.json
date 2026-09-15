@@ -170,8 +170,8 @@
         "audioId": "sofia-3",
         "visibleText": "Sofian lähteeltä haetaan yhä kuumaa vettä. Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. Arvokkuus palasi vasta seuraavalla räystäällä.",
         "visibleTextSha256": "a2d6d6ffb6ccabd33da64e053acdce5b63479109e4b8de0433ad57671f067f14",
-        "ttsText": "[curious] Sofian lähteeltä haetaan yhä kuumaa vettä. [mischievously] Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. [softly] Arvokkuus palasi vasta seuraavalla räystäällä.",
-        "ttsTextSha256": "6b5a1553221770bc9d6997d6bf39f1d3a2c9b66a76a9f6456fd83573dfc2d0ab",
+        "ttsText": "[curious] Sofian lähteeltä haetaan yhä kuumaa vettä. [mischievously] Kurkistin kannuun niin läheltä, että höyry pörrötti otsasulkani. [laughs] Arvokkuus palasi vasta seuraavalla räystäällä.",
+        "ttsTextSha256": "2ffb40edf5e975b63bd469c6ee742687e0ada23e0b1fc85ef9eb2c2c55fcde50",
         "cues": [
           {
             "cueId": "sofia.livia.c1",
@@ -2462,8 +2462,8 @@
         "audioId": "venetsia-3",
         "visibleText": "Venetsiassa kuljetaan yhä vesibusseilla. Minä lennän nykyään vähän pidempää reittiä. Yhden tutun takia. Hetkinen — nuo kuvat ovat yksityisiä! Hän vain sattui jokaiseen hyvään kuvakulmaan. No, ehkä minä vähän odotin.",
         "visibleTextSha256": "2cbd024d573c4a3aee0900a057d2260ad0056570cbae2f1239cbf44410cf0601",
-        "ttsText": "[curious] Venetsiassa kuljetaan yhä vesibusseilla. [softly] Minä lennän nykyään vähän pidempää reittiä. [warmly] Yhden tutun takia. [excited] Hetkinen — nuo kuvat ovat yksityisiä! Hän vain sattui jokaiseen hyvään kuvakulmaan. [mischievously] No, ehkä minä vähän odotin.",
-        "ttsTextSha256": "c0dbf0a471b8f73ca89d134aa37e01b4fa23895ee17ef9beefffe104f2a0914b",
+        "ttsText": "[curious] Venetsiassa kuljetaan yhä vesibusseilla. [softly] Minä lennän nykyään vähän pidempää reittiä. [whispers] Yhden tutun takia. [excited] Hetkinen — nuo kuvat ovat yksityisiä! Hän vain sattui jokaiseen hyvään kuvakulmaan. [laughs] No, ehkä minä vähän odotin.",
+        "ttsTextSha256": "d9dfb8af71c32f43e38f8505e26ec1a05d625b0ba9bfd23590450bc4661e59ea",
         "cues": [
           {
             "cueId": "venetsia.livia.c1",
