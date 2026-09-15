@@ -25794,6 +25794,44 @@ svg.rough-annotation { pointer-events: none; }
   height: 0;
   pointer-events: none;
 }
+
+/* ===========================================================================
+   ERÄ 19 — MAAINFO TAKAISIN RUUDUN VASEMPAAN ALAKULMAAN
+
+   Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 28 (omistaja 15.9.2026 klo 20.45
+   UTC): *"Palautetaan alkuperainen vasemman alakulman maainfo mutta
+   sailytetaan se plussasta avautuva valikko."*
+
+   SÄILIÖ ON KARTTARUUDUN SUORA LAPSI, joten se saa `.pallo-kotelo > div`
+   -säännöstä koko alan (inset: 0). Se ei ota eleitä vastaan lainkaan —
+   PÄÄTÖKSET 21 (rulla, nipistys ja raahaus menevät kortin läpi kartalle)
+   on nurkassa voimassa samasta syystä kuin kartalla: vain plus ja valikon
+   rivit ovat `pointer-events: auto`.
+
+   ANKKURI ON KORTIN VASEN ALAKULMA. `transform-origin: 0 100%` pitää sen
+   paikallaan, kun js kirjoittaa mittakaavan — kortti kasvaa siis ylös ja
+   oikealle, ei nurkan yli.
+
+   MARGINAALI ON SAMA KUIN VANHALLA NURKKATAULULLA (.fokusmitat: left
+   0,7rem, bottom 0,9rem), plus iPhonen turva-alueet.
+   =========================================================================== */
+.maapaneeli-nurkka {
+  z-index: 4;
+  pointer-events: none;
+}
+.maapaneeli-nurkka[hidden] { display: none; }
+.maapaneeli-nurkka .pallolauta-maapaneeli {
+  position: absolute;
+  left: calc(0.7rem + env(safe-area-inset-left, 0px));
+  bottom: calc(0.9rem + env(safe-area-inset-bottom, 0px));
+  width: 104px;
+  height: 82px;
+}
+.maapaneeli-nurkka .maapaneeli-kortti {
+  left: 0;
+  top: 0;
+  transform-origin: 0 100%;
+}
 /*
    ERÄ 11 — KOLME MUUTOSTA, EI YHTÄÄN MUUTA (Raamattu, PÄÄTÖKSET 7;
    omistajan rajaus 14.9.2026: *"julkaise noin, mutta muuta teksti
@@ -26189,26 +26227,46 @@ button.maapaneeli-lisaa:active:not(:disabled) {
  *      nimiöteksti). Merkki, rako ja sisennys skaalataan samalla
  *      kertoimella (6,5/5 = 1,3), jotta rivin oma mittasuhde säilyy.
  */
+/*
+ * ERÄ 19: VALIKKO PLUSSAN PAIKALLE JA YLÖSPÄIN, KAHTEEN SARAKKEESEEN
+ * (Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 28 kohta 2, omistaja
+ * 15.9.2026: *"valikko tulee plussan paikalle ja kasvaa ylospain
+ * kahdessa rivissa tiiviisti ladottuna"*; kysymyskortilla tarkennettu
+ * kahdeksi SARAKKEEKSI).
+ *
+ * ENNEN: pystylista plussan oikealla puolella (`left: 108px`), joka
+ * kääntyi vasemmalle kun ruudun reuna tuli vastaan. Se kumoutuu.
+ * NYT: valikon ALAREUNA on plussan kohdalla (`bottom: calc(100% + 1px)`
+ * eli tasan plussan yläreunassa, joka on `top: -1px`), ja rivit
+ * latoutuvat siitä YLÖSPÄIN kahteen vierekkäiseen sarakkeeseen.
+ *
+ * VASEN REUNA ON KORTIN VASEN REUNA, EI PLUSSAN. Plus on kortin
+ * OIKEASSA ylänurkassa, ja kortti itse on ruudun VASEMMASSA
+ * alakulmassa: plussaan ankkuroitu lista kasvaisi vasemmalle ruudun
+ * ulkopuolelle. Lista aloittaa siis kortin vasemmasta reunasta ja
+ * levittäytyy oikealle — plussan paikka on sen ALAREUNA, ja plus itse
+ * muuttuu auki ollessaan sulkumerkiksi (ks. .valikko-auki
+ * .maapaneeli-lisaa).
+ *
+ * LADONTA ON GRID, EI FLEX. Sarakkeittain virtaava grid
+ * (`grid-auto-flow: column`) täyttää ensin vasemman sarakkeen
+ * ylhäältä alas ja jatkaa seuraavaan — js antaa rivimäärän
+ * (--valikko-rivit), jolloin sarakkeiden määrä seuraa siitä
+ * itsestään. Pystyväli on 0: rivin korkeus tulee yhä VAIN
+ * `line-height`ista (1,3 × fontin rivikorkeus, PÄÄTÖKSET 22).
+ */
 .maapaneeli-valikko {
   position: absolute;
-  top: -1px;
-  /*
-   * OIKEALLE PUOLELLE, PLUSSAN VIEREEN (PÄÄTÖKSET 22 KORJAUS kohta 2).
-   * `.maapaneeli-lisaa` on `right: 1px; width: 14px` 104 px:n kortissa
-   * — sen oikea reuna on siis 103 px. Rako on 5 px kortin omissa
-   * yksiköissä (ei enää kehyksen 2,7 px:n väli): mitattu 15.9.2026
-   * uloimmalla sallitulla zoomilla kortin skaala on vain ~0,9, jolloin
-   * 2,7 px:n rako olisi ruudulla alle 2,5 px — omistajan vaatima
-   * ≥ 4 ruutu-px:n rako plussaan vaatii isomman kortin-yksikön raon.
-   * Valikko alkaa siis 103 + 5 = 108 px:stä. Yläreuna on sama kuin
-   * plussan (`top: -1px`), ei paneelin alla.
-   */
-  left: 108px;
-  transform: translateY(var(--valikko-pysty, 0px));
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
+  left: 0;
+  bottom: calc(100% + 1px);
+  transform: translateX(var(--valikko-siirto, 0px));
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(var(--valikko-rivit, 6), auto);
+  grid-auto-columns: max-content;
+  align-items: end;
+  column-gap: 5px;
+  row-gap: 0;
   width: max-content;
   max-width: none;
   padding: 0;
@@ -26218,23 +26276,18 @@ button.maapaneeli-lisaa:active:not(:disabled) {
   pointer-events: none;
 }
 /*
- * KÄÄNTYY PLUSSAN VASEMMALLE PUOLELLE, KUN OIKEA REUNA ON LIIAN
- * LÄHELLÄ (PÄÄTÖKSET 22 KORJAUS kohta 2, 390 px -ruutu).
+ * ERÄ 19: PLUS ON AUKI OLLESSAAN SULKUMERKKI (PÄÄTÖKSET 28 kohta 2:
+ * *"valikko tulee plussan paikalle"*). Valikko peittää plussan
+ * yläpuolisen tilan, joten plussan on kerrottava mitä napautus tekee:
+ * sama kaksi palkkia 45 asteen kulmassa on rasti. Muunnos ei ole
+ * siirtymä eikä animaatio (iOS-sääntö, tests/rules.test.mjs).
  *
- * VASEN PUOLI ON KOKO PANEELIN VASEN PUOLI, EI VAIN PLUSSAN. Plussa on
- * kortin OIKEASSA ylänurkassa (`right: 1px`), joten "plussan vasemmalla
- * puolella" oleva valikko olisi vielä kortin OMAN 104 px:n leveyden
- * sisällä ja peittäisi nimiön ja lukurivit — juuri se, mitä PÄÄTÖKSET
- * 22 kielsi (*"ei peitä paneelia"*). Sen sijaan valikko siirtyy koko
- * kortin VASEMMALLE PUOLELLE: oikea reuna on kortin vasemman reunan
- * (0 px) tasalla + sama 5 px:n rako, eli `right: 104 + 5 = 109 px`
- * kortin omasta oikeasta reunasta laskettuna. Yläreuna pysyy plussan
- * tasalla (`top: -1px`) — ks. js/pallolauta/maapaneeli.js sovitaValikko.
+ * VANHENTUNUT TÄSSÄ ERÄSSÄ: `.maapaneeli-valikko.vasen` (kääntyminen
+ * plussan vasemmalle puolelle) poistettiin — valikko ei ole enää
+ * plussan sivulla vaan sen yläpuolella, ja ruudulla pysymisen hoitaa
+ * js/pallolauta/maapaneeli.js sovitaValikko (--valikko-siirto).
  */
-.maapaneeli-valikko.vasen {
-  left: auto;
-  right: 109px;
-}
+.maapaneeli-kortti.valikko-auki .maapaneeli-lisaa { transform: rotate(45deg); }
 .maapaneeli-aihe {
   display: flex;
   align-items: center;
@@ -26850,7 +26903,26 @@ body.luenta-tekstit-piiloon .pollo-vihje-yksin {
 }
 
 /*
- * ── LIIKU: NELIÖSYMBOLI VASEMMASSA ALAREUNASSA ──────────────────────
+ * ── LIIKU: KUULTAVA SANA RUUDUN ALAREUNAN KESKELLÄ ──────────────────
+ *
+ * ERÄ 19 (Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 28 kohta 3; omistaja
+ * 15.9.2026 klo 20.45 UTC, sanatarkasti): *"Siirra liiku nappi alas
+ * keskelle ja vaihda symboli tekstiksi mutta Tee napista lapinakyva ja
+ * teksti kuultavaksi ja sijoita se alas keskelle pienella"*.
+ *
+ * MIKÄ KUMOUTUU. Vasen alanurkka on nyt maainfon (PÄÄTÖKSET 28 kohta
+ * 1), joten neliö ei voi jäädä sinne; ja LIIKU-SYMBOLIN PAIKKA
+ * -linjaus (irti reunoista, sama etäisyys ylös ja alas) kumoutuu
+ * kokonaan. Symboli, pergamenttitausta, mustereunus ja varjo poistuvat
+ * — jäljelle jää pelkkä sana.
+ *
+ * OSUMA-ALA ON ISOMPI KUIN SANA. Nappi on 36 px korkea ja vähintään
+ * 44 px leveä, vaikka teksti on 11,5 px: läpinäkyvyys on maalia, ei
+ * kosketusalan pienennys.
+ *
+ * ALLA OLEVAT LOHKOT KUVAAVAT ERÄÄ 18 JA SITÄ EDELTÄVÄÄ NELIÖTÄ.
+ * Historia jätetään näkyviin, koska se kertoo mitä omistaja pyysi
+ * 14.9. ja mitä 15.9.
  *
  * Nappi oli kullattu 113 × 44 px:n tekstipalkki ruudun alareunan
  * keskellä (mitattu 14.9.2026: rgb(234,184,78) → rgb(208,144,36)).
@@ -26892,8 +26964,19 @@ body.luenta-tekstit-piiloon .pollo-vihje-yksin {
   gap: 0;
   border-radius: 7px;
   /*
-   * Maapaneeli voi nousta samaan nurkkaan: nappi on sen PÄÄLLÄ, muuten
-   * pelaaja jäisi umpikujaan paneelin auettua (omistajan tarkennus).
+   * ERÄ 19: KOKO ON SANAN KOKO, EI NELIÖN. Leveys seuraa tekstiä,
+   * mutta osuma-ala ei saa kutistua sanan mittaan: 44 x 36 px on
+   * reilusti yli vaaditun 32 x 32:n.
+   */
+  width: auto;
+  min-width: 44px;
+  max-width: none;
+  height: 36px;
+  min-height: 36px;
+  /*
+   * Maapaneeli on nyt ruudun vasemmassa alakulmassa ja nappi ruudun
+   * alareunan keskellä — ne eivät voi osua toisiinsa. z-index jää,
+   * koska napin on oltava kartan lappujen päällä.
    */
   position: relative;
   z-index: 6;
@@ -26935,29 +27018,88 @@ body.luenta-tekstit-piiloon .pollo-vihje-yksin {
  * karttaselitteen väli reunaviivaan 7,39 px, ilman lisä-pikseliä tämä
  * nappi olisi 6,41 px:n päässä).
  */
+/*
+ * ERÄ 19: RUUDUN ALAREUNAN KESKELLE (PÄÄTÖKSET 28 kohta 3). Nappi on
+ * `position: fixed` eli ruudun eikä alapalkin suhteen, ja keskitys
+ * tehdään 50 %:n vasemmasta reunasta ja puolen leveyden siirrosta —
+ * se osuu ruudun keskilinjalle riippumatta siitä, kuinka leveä sana
+ * on. Alareunan väli on sama var(--gap) + 0,4rem kuin neliöllä oli,
+ * turva-alue mukaan luettuna.
+ */
 .toimintorivi.rivi-yksi .monitoimi-nappi {
   position: fixed;
-  left: calc(var(--gap) + 0.4rem + 1px + env(safe-area-inset-left, 0px));
-  bottom: calc(var(--gap) + 0.4rem + 1px + env(safe-area-inset-bottom, 0px));
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  bottom: calc(var(--gap) + 0.4rem + env(safe-area-inset-bottom, 0px));
 }
 
 /*
- * Rivi varaa yhä napin korkeuden, jottei alapalkki kutistu neliön
+ * Rivi varaa yhä napin korkeuden, jottei alapalkki kutistu napin
  * irrotessa ja koko alareuna hypähdä.
+ *
+ * ERÄ 19: VARAUS EI SAA SIEPATA NAPAUTUSTA. Kun nappi on irrotettu
+ * omaan kiinteään paikkaansa, tämä laatikko on TYHJÄ mutta yhä
+ * 44 px korkea ja alapalkin levyinen — ja se peitti maapaneelin
+ * plus-napin ruudun vasemmassa alakulmassa (mitattu 15.9.2026:
+ * Playwright ei saanut `.maapaneeli-lisaa`-napautusta läpi, koska
+ * `.toimintorivi-perus` sieppasi sen). Tyhjä varaus on siis
+ * kartalle läpinäkyvä; irrotettu nappi ottaa napautuksensa itse.
  */
+/*
+ * ALAPALKIN TYHJÄ ALA ON LÄPINÄKYVÄ NAPAUTUKSELLE (erä 19).
+ *
+ * `.turn-card` on taustaton ja reunukseton kelluva kortti (ks.
+ * body[data-mode] .turn-card), joka kattaa ruudun alalaidan koko
+ * leveydeltä. Kun sen ainoa nappi on irrotettu omaan kiinteään
+ * paikkaansa, kortista jää NÄKYMÄTÖN mutta napautuksia SIEPPAAVA
+ * laatikko — ja se peitti maapaneelin plus-napin ruudun vasemmassa
+ * alakulmassa (mitattu 15.9.2026 Playwrightilla: `#actions` ja
+ * `.turn-card` sieppasivat napautuksen vuorotellen).
+ *
+ * Napautus menee siis kortin läpi kartalle, ja vain klikattavat osat
+ * ottavat sen vastaan: irrotettu Liiku (alempana) ja auki oleva
+ * matkustusliuku (`.toimintorivi.liuku-auki .toimintorivi-liuku`,
+ * oma lohkonsa). Suljettua liukua EI saa avata täällä — se on
+ * `pointer-events: none` ja kattaa koko rivin alan.
+ */
+body[data-mode] .turn-card:has(.toimintorivi.rivi-yksi),
+body[data-mode] .turn-card:has(.toimintorivi.rivi-yksi) .actions,
+.toimintorivi.rivi-yksi,
 .toimintorivi.rivi-yksi .toimintorivi-perus {
-  min-height: 44px;
+  pointer-events: none;
 }
+.toimintorivi.rivi-yksi .toimintorivi-perus { min-height: 44px; }
+/* Klikattava osa ottaa napautuksensa itse; liuku saa omansa
+   `.toimintorivi.liuku-auki .toimintorivi-liuku` -säännöstä, eikä sitä
+   saa avata tässä — suljettuna se on `pointer-events: none` ja
+   sieppaisi muuten koko rivin alan matkanappeineen. */
+.toimintorivi.rivi-yksi .monitoimi-nappi { pointer-events: auto; }
 
-/* Symboli näkyviin: kompassi on napin koko sisältö. */
+/*
+ * ERÄ 19: SYMBOLI POIS, SANA TILALLE. Kompassi oli napin koko sisältö;
+ * nyt se on piilossa ja sana "Liiku" on ainoa, mikä näkyy.
+ */
 .toimintorivi.rivi-yksi .monitoimi-nappi .viiva-ikoni {
-  display: block;
-  flex: 0 0 auto;
+  display: none;
 }
 
-/* Sana pois: se palaa vain aarteen löydyttyä (body.liiku-laaja). */
 .toimintorivi.rivi-yksi .monitoimi-nappi .icon-label {
-  display: none;
+  display: inline;
+  /* Pieni ja kuultava: 11,5 px on omistajan pyytämä "pienella", ja
+     peittävyys 0,65 on "kuultava" — teksti erottuu kartalta mutta ei
+     vie katsetta kuvalta. Kevyt kerman veto pitää sen luettavana myös
+     tummalla merellä (sama keino kuin kartan nimikylteillä, ei
+     suodatinta). */
+  font-size: 11.5px;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  text-transform: none;
+  white-space: nowrap;
+  opacity: 0.65;
+  text-shadow:
+    0 0 2px rgba(244, 232, 205, 0.9),
+    0 0 5px rgba(244, 232, 205, 0.7);
 }
 
 /*
@@ -26966,22 +27108,34 @@ body.luenta-tekstit-piiloon .pollo-vihje-yksin {
  * hover, disabled) kumoavat aiemman kullan täsmälleen niissä kohdissa,
  * joissa se asetettiin.
  */
+/*
+ * ERÄ 19: TÄYSIN LÄPINÄKYVÄ NAPPI (PÄÄTÖKSET 28 kohta 3: *"Tee napista
+ * lapinakyva ja teksti kuultavaksi"*). Tausta on `rgba(…, 0)` eikä
+ * `transparent`, jotta savuke voi mitata alphan nollaksi; reunus ja
+ * varjo ovat poissa kokonaan. Kolme sääntöä (perus, hover, disabled)
+ * kumoavat pergamentin täsmälleen niissä kohdissa, joissa se
+ * asetettiin.
+ */
 body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi {
-  background: rgba(244, 231, 202, 0.92);
-  border: 1px solid rgba(70, 51, 31, 0.45);
+  background: rgba(244, 231, 202, 0);
+  border: 0;
   color: #46331f;
   font-weight: 600;
-  box-shadow: 0 1px 4px rgba(62, 42, 22, 0.22);
+  box-shadow: none;
 }
 
 body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:hover:not(:disabled) {
-  background: rgba(250, 240, 217, 0.96);
-  border-color: rgba(70, 51, 31, 0.6);
+  background: rgba(244, 231, 202, 0);
+  border: 0;
+}
+
+body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:hover:not(:disabled) .icon-label {
+  opacity: 0.9;
 }
 
 body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
-  background: rgba(244, 231, 202, 0.55);
-  border-color: rgba(70, 51, 31, 0.25);
+  background: rgba(244, 231, 202, 0);
+  border: 0;
   color: rgba(70, 51, 31, 0.45);
   font-weight: 400;
 }
@@ -26994,20 +27148,15 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
  * (sama kohta, jossa laukku heilahtaa) ja poistaa LIIKU_LAAJENNUS_MS
  * = 6000 ms myöhemmin.
  */
-body.liiku-laaja .toimintorivi.rivi-yksi .monitoimi-nappi {
-  width: auto;
-  max-width: min(100%, 12rem);
-  padding-inline: 0.6rem 0.9rem;
-  gap: 0.45rem;
-  justify-content: flex-start;
-}
-
+/*
+ * ERÄ 19: SANA ON JO NÄKYVISSÄ, JOTEN AARTEEN LÖYTYMINEN VAIN
+ * KIRKASTAA SEN HETKEKSI. Entinen laajennus (neliö → tekstinappi) on
+ * tarpeeton, kun nappi on koko ajan sana; huomio tehdään
+ * peittävyydellä, ei koon muutoksella — mikään ei hypähdä.
+ */
 body.liiku-laaja .toimintorivi.rivi-yksi .monitoimi-nappi .icon-label {
-  display: inline;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 0.82rem;
-  white-space: nowrap;
+  opacity: 1;
+  font-size: 12.5px;
 }
 
 /*

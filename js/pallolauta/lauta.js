@@ -1733,6 +1733,13 @@ export async function avaaPallolauta(ui) {
   const maapaneeli = luoMaapaneeli({
     ui,
     merkit,
+    /*
+     * ERÄ 19: KOTELO ON SE RUUTU, JONKA VASEMPAAN ALAKULMAAN PANEELI
+     * ANKKUROIDAAN (Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 28). Kamera
+     * ja asteet kulkevat yhä mukana, jotta paluu kartta-ankkuriin on
+     * yhden tiedoston muutos, mutta maapaneeli.js ei lue niitä.
+     */
+    kotelo,
     kamera,
     asteet: pallonAsteet,
     /*
