@@ -7482,6 +7482,22 @@ export const RAAMATTU = {
           + 'repliikki, pelin musiikki/tehosteet) PYSAHTYVAT tai '
           + 'keskeytyvat, ja linssin oma aani soi yksin; sulkeutuessa '
           + 'pelin aanitila palautuu. Tila: tyo Opus-agentilla.',
+        'KARTTAUUDISTUKSEN PAATOKSET 18: PUHELIMELLE OMA PANEELIANKKURI '
+          + 'LYONINLAHDELLE (omistaja 14.9.2026 klo 23.40 UTC '
+          + 'kysymyskortilla, kun mittaus osoitti etta Biskajanlahden '
+          + 'paneeli jaa pystypuhelimella saapuessa kokonaan ruudun '
+          + 'ulkopuolelle lanteen ja panoroimallakin nakyy vain 63 %; '
+          + 'valinta: "Puhelimelle oma ankkuri Lyoninlahdelle"): 1) '
+          + 'PYSTYPUHELIMELLA (kun saapumisnakyma sovitetaan korkeuteen, '
+          + 'PAATOKSET 17) Ranskan maapaneelin ankkuri on LYONINLAHDELLA '
+          + 'Valimerella Ranskan etelareunan alla, kokonaan meren paalla, '
+          + 'ja se nakyy saapuessa ruudulla; 2) tyopoyta ja vaakatila '
+          + 'pitavat Biskajanlahden ankkurin (PAATOKSET 9); 3) maalla voi '
+          + 'siis olla kaksi ankkuria (leveaan ja kapeaan ruutuun), ja '
+          + 'valinta seuraa samaa kuvasuhde-ehtoa kuin korkeussovitus - ei '
+          + 'laitetunnistusta; 4) paneelin koko saapumisnakymassa on sama '
+          + 'joka laitteella (<= 10 % ruudun leveydesta, #2492). Tila: tyo '
+          + 'Opus-agentilla.',
         'Saapumiskortti: luettu matkakirjamerkintä + esittely '
           + 'kuvineen.',
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
