@@ -23,6 +23,11 @@
  *   6. KARTTA ENNALLAAN: luennan hunnun sumennus ja peite mitataan ja
  *      raportoidaan (linjaus ei muutu).
  *
+ * TEKSTIT PIILOON KAIKILLA LAITTEILLA (omistaja 15.9.2026, lisätty
+ * tähän savukkeeseen samana päivänä): vartiot 7–12 ja oma vastakokeensa
+ * mittaavat luennan aikaisen tekstipiilon kolmella ruudulla (390 × 844,
+ * 1024 × 1366 iPad, 1400 × 900) — ks. osio alempana.
+ *
  * VASTAKOE: mittari pysäytetään pakolla → kaarien tila ei enää vaihdu
  * → vartio 2 kääntyy punaiseksi. Näin tiedetään, että vartio mittaa
  * animaatiota eikä pelkkää luokan olemassaoloa.
@@ -263,6 +268,225 @@ for (const ruutu of RUUDUT) {
     writeFileSync(join(KUVAKANSIO, `kaiutin-luentakuvat-${ruutu.width}-20260915.jpg`),
       Buffer.from(data, 'base64'));
   }
+  await ctx.close();
+}
+
+
+/* ================================================================
+   TEKSTIT PIILOON KAIKILLA LAITTEILLA (omistaja 15.9.2026)
+   ================================================================
+
+   Raamattu "TEKSTIT PIILOON KAIKILLA LAITTEILLA": luennan aikana
+   isoisän matkakirjamerkinnän teksti (saapumiskortin lappu) ja pulun
+   puhekupla piilotetaan KAIKILLA laitteilla. Näkyviin jää kuva ja
+   kuvateksti; merkinnän saa esiin lappua napauttamalla ja pulun
+   repliikin pluskuplasta.
+
+   VARTIOT (kolmella ruudulla, myös iPadilla, jossa kumpikaan
+   puhelinraja ei osu):
+     7.  Luennan aikana kortti on lappu ja merkinnän teksti mitaton.
+     8.  Kuva ja kuvateksti näkyvät samaan aikaan.
+     9.  Lapun napautus avaa merkinnän kesken luennan.
+     10. Pulun uusi repliikki ei jää ruudulle vaan pluskuplaan.
+     11. Pluskuplan napautus palauttaa repliikin.
+     12. Luennan jälkeen (1400 px) kortti on auki ja teksti näkyy.
+
+   VASTAKOE: piilotus otetaan pois (luokka pois bodystä ja kortti
+   auki) → 1400 px näyttää tekstit luennan aikana → vartio 7 kääntyy
+   punaiseksi. Näin tiedetään, että vartio mittaa piilotusta eikä
+   ruudun kokoa. */
+const TEKSTIRUUDUT = [
+  { nimi: 'puhelin', width: 390, height: 844 },
+  { nimi: 'ipad', width: 1024, height: 1366 },
+  { nimi: 'tyopoyta', width: 1400, height: 900 },
+];
+
+/* Yksi näyte lapun, merkinnän ja kuvatekstin tilasta. */
+const TEKSTINAYTE = `(() => {
+  const mitta = (el) => {
+    if (!el) return null;
+    const r = el.getBoundingClientRect();
+    const t = getComputedStyle(el);
+    return {
+      w: Math.round(r.width), h: Math.round(r.height),
+      display: t.display, visibility: t.visibility, opacity: t.opacity,
+    };
+  };
+  const kortti = document.querySelector('.fact-card');
+  return {
+    piilo: document.body.classList.contains('luenta-tekstit-piiloon'),
+    kertoja: document.body.classList.contains('kertoja-aanessa'),
+    lappu: Boolean(kortti && kortti.classList.contains('pieni')),
+    kortti: mitta(kortti),
+    rivi: mitta(document.querySelector('.fact-teksti-rivi')),
+    teksti: mitta(document.getElementById('fact-text')),
+    tekstinPituus: (document.getElementById('fact-text')?.textContent ?? '').trim().length,
+    kuvateksti: mitta(document.querySelector('.fokusvirta-isokuva-teksti')),
+    kuva: mitta(document.querySelector('.fokusvirta-isokuva-kuva')),
+    kuplia: document.querySelectorAll('.pollo-kuplapino .pollo-vihje').length,
+    pluskupla: mitta(document.querySelector('.pollo-kuplapalautus')),
+    kuplateksti: (document.querySelector('.pollo-kuplapino .pollo-vihje')?.textContent ?? '').trim(),
+  };
+})()`;
+
+const KUPLAN_TEKSTI = 'Savukkeen koerepliikki pluskuplasta.';
+
+/*
+ * NAPAUTUS CDP:N KAUTTA, EI page.click.
+ *
+ * Playwrightin oma napautus jäi aikakatkaisuun sekä pluskuplalla että
+ * lapulla iPadilla ja työpöydällä (mitattu 15.9.2026: "page.click:
+ * Timeout 5000ms exceeded", myös `force: true`). Syy on siinä, että
+ * molemmat elementit elävät omissa siirtymissään koko luennan ajan.
+ * CDP:n hiiritapahtuma on silti aitoa syötettä — sama, jonka selain
+ * antaa sormelle — ja osuu mitattuun keskipisteeseen (elementFromPoint
+ * varmistaa, että kohde on päällimmäisenä).
+ */
+async function napauta(sivu, cdp, valitsin) {
+  const kohde = await sivu.evaluate((v) => {
+    const el = document.querySelector(v);
+    if (!el) return null;
+    const r = el.getBoundingClientRect();
+    const x = r.left + r.width / 2;
+    const y = r.top + r.height / 2;
+    const paalla = document.elementFromPoint(x, y);
+    return { x, y, paalla: paalla ? `${paalla.tagName}.${paalla.className}` : 'null' };
+  }, valitsin);
+  if (!kohde) return 'ei elementtiä';
+  for (const type of ['mousePressed', 'mouseReleased']) {
+    await cdp.send('Input.dispatchMouseEvent', {
+      type, x: kohde.x, y: kohde.y, button: 'left', clickCount: 1, buttons: type === 'mousePressed' ? 1 : 0,
+    });
+  }
+  return `ok (${Math.round(kohde.x)},${Math.round(kohde.y)} → ${kohde.paalla})`;
+}
+
+for (const ruutu of TEKSTIRUUDUT) {
+  console.log(`\n=== TEKSTIT PIILOON: ${ruutu.nimi} ${ruutu.width}x${ruutu.height} ===`);
+  const { ctx, sivu, cdp } = await avaaAjo({ width: ruutu.width, height: ruutu.height });
+  await sivu.waitForFunction(() => document.body.classList.contains('luenta-tekstit-piiloon'),
+    null, { timeout: 60000 }).catch(() => {});
+  // Kuva ja kuvateksti ruudulle ennen mittausta.
+  await sivu.waitForFunction(() => document.querySelector('.fokusvirta-isokuva-teksti'),
+    null, { timeout: 60000 }).catch(() => {});
+
+  // 7–8. LAPPU JA KUVATEKSTI.
+  const luennassa = await sivu.evaluate(TEKSTINAYTE);
+  tieto(`${ruutu.nimi} luennan aikana`, JSON.stringify(luennassa));
+  vaadi(`${ruutu.nimi}: luennan tekstipiilo on päällä`, luennassa.piilo);
+  vaadi(`${ruutu.nimi}: merkintä on lappuna ja sen teksti mitaton`,
+    luennassa.lappu && (luennassa.rivi?.w ?? 99) <= 1 && (luennassa.teksti?.w ?? 99) <= 1,
+    `lappu=${luennassa.lappu} rivi=${JSON.stringify(luennassa.rivi)}`);
+  vaadi(`${ruutu.nimi}: kuva ja kuvateksti näkyvät`,
+    (luennassa.kuvateksti?.h ?? 0) > 4 && luennassa.kuvateksti?.display !== 'none'
+      && (luennassa.kuva?.w ?? 0) > 20,
+    JSON.stringify({ kuvateksti: luennassa.kuvateksti, kuva: luennassa.kuva }));
+
+  if (KUVAKANSIO && ruutu.width === 1400) {
+    const { data } = await cdp.send('Page.captureScreenshot', { format: 'jpeg', quality: 62 });
+    writeFileSync(join(KUVAKANSIO, 'tekstit-piiloon-1400-20260915.jpg'), Buffer.from(data, 'base64'));
+  }
+
+  // 9. LAPUN NAPAUTUS AVAA MERKINNÄN KESKEN LUENNAN.
+  const lappuKlikki = await napauta(sivu, cdp, '.fact-card');
+  await sivu.waitForTimeout(400);
+  const lappuAuki = await sivu.evaluate(TEKSTINAYTE);
+  tieto(`${ruutu.nimi} lapun napautuksen jälkeen`, JSON.stringify({
+    klikki: lappuKlikki, lappu: lappuAuki.lappu, rivi: lappuAuki.rivi, piilo: lappuAuki.piilo,
+  }));
+  vaadi(`${ruutu.nimi}: lapun napautus näyttää merkinnän kesken luennan`,
+    lappuAuki.piilo && !lappuAuki.lappu && (lappuAuki.rivi?.w ?? 0) > 40
+      && lappuAuki.tekstinPituus > 10,
+    JSON.stringify({ klikki: lappuKlikki, piilo: lappuAuki.piilo, rivi: lappuAuki.rivi }));
+
+  // 10–11. PULU: uusi repliikki imeytyy pluskuplaan, napautus palauttaa.
+  await sivu.evaluate(async (teksti) => {
+    const m = await import('/js/pollo.js');
+    m.polloSaapumiskupla(teksti, { linssinOma: true });
+  }, KUPLAN_TEKSTI);
+  await sivu.waitForTimeout(400);
+  const kuplaKiinni = await sivu.evaluate(TEKSTINAYTE);
+  tieto(`${ruutu.nimi} pulun kupla luennan aikana`,
+    `piilo=${kuplaKiinni.piilo} kuplia=${kuplaKiinni.kuplia} pluskupla=${JSON.stringify(kuplaKiinni.pluskupla)}`);
+  vaadi(`${ruutu.nimi}: pulun repliikki ei jää ruudulle vaan pluskuplaan`,
+    kuplaKiinni.piilo && kuplaKiinni.kuplia === 0 && (kuplaKiinni.pluskupla?.w ?? 0) > 4,
+    JSON.stringify({ piilo: kuplaKiinni.piilo, kuplia: kuplaKiinni.kuplia, plus: kuplaKiinni.pluskupla }));
+  const plusKlikki = await napauta(sivu, cdp, '.pollo-kuplapalautus');
+  await sivu.waitForTimeout(500);
+  const kuplaAuki = await sivu.evaluate(TEKSTINAYTE);
+  vaadi(`${ruutu.nimi}: pluskuplan napautus näyttää repliikin`,
+    kuplaAuki.kuplia >= 1 && kuplaAuki.kuplateksti.includes('koerepliikki'),
+    JSON.stringify({ klikki: plusKlikki, kuplia: kuplaAuki.kuplia, teksti: kuplaAuki.kuplateksti }));
+
+  await ctx.close();
+}
+
+/* 12. LUENNAN JÄLKEEN TYÖPÖYTÄ ON ENNALLAAN. Luenta katkaistaan
+   lukijasta (sama tila kuin luennan loppuessa itsestään), ja kortin
+   pitää palata auki ilman napautuksia. */
+console.log('\n=== TEKSTIT PIILOON: luennan jälkeen 1400x900 ===');
+{
+  const { ctx, sivu } = await avaaAjo({ width: 1400, height: 900 });
+  await sivu.waitForFunction(() => document.body.classList.contains('luenta-tekstit-piiloon'),
+    null, { timeout: 60000 }).catch(() => {});
+  const luennassa = await sivu.evaluate(TEKSTINAYTE);
+  vaadi('tyopoyta: kortti on lappuna ennen luennan loppua', luennassa.lappu,
+    JSON.stringify(luennassa.kortti));
+  await sivu.evaluate(async () => {
+    const { ui } = window.matkakirja;
+    /*
+     * LUENTA POIKKI KUTEN SEN LOPPUESSA: jokainen soiva luenta
+     * pysäytetään ja merkitään puheenvuoronsa päättyneeksi
+     * (js/luenta.js puhujaAanessa lukee juuri tämän lipun), ja
+     * laitteen oma lukija vaiennetaan. Vahtiin ei kosketa — juuri sen
+     * pitää havaita loppu ja palauttaa kortti.
+     */
+    const aanet = [ui.diaryVoice, ...(ui.luennat ?? []), ...document.querySelectorAll('audio')];
+    for (const a of aanet) {
+      if (!a) continue;
+      try { a.pause(); } catch { /* selain voi kieltää */ }
+      a.puhevuoroPaattyi = true;
+    }
+    globalThis.speechSynthesis?.cancel?.();
+    const lukija = await import('/js/lukija.js').catch(() => null);
+    lukija?.pysaytaLukija?.();
+  });
+  const palasi = await sivu.waitForFunction(
+    () => !document.body.classList.contains('luenta-tekstit-piiloon')
+      && !document.querySelector('.fact-card').classList.contains('pieni'),
+    null, { timeout: 30000 },
+  ).then(() => true).catch(() => false);
+  const jalkeen = await sivu.evaluate(TEKSTINAYTE);
+  tieto('tyopoyta luennan jälkeen', JSON.stringify(jalkeen));
+  vaadi('tyopoyta: luennan jälkeen tekstit näkyvät kuten ennen',
+    palasi && !jalkeen.lappu && (jalkeen.rivi?.w ?? 0) > 40,
+    JSON.stringify({ palasi, lappu: jalkeen.lappu, rivi: jalkeen.rivi }));
+  await ctx.close();
+}
+
+/* VASTAKOE: piilotus pois → 1400 px näyttää tekstit luennan aikana. */
+console.log('\n=== VASTAKOE: tekstipiilo pois päältä 1400x900 ===');
+{
+  const { ctx, sivu } = await avaaAjo({ width: 1400, height: 900 });
+  await sivu.waitForFunction(() => document.body.classList.contains('luenta-tekstit-piiloon'),
+    null, { timeout: 60000 }).catch(() => {});
+  await sivu.evaluate(() => {
+    const { ui } = window.matkakirja;
+    // Vahti pois ja piilotus perumaan: luenta jatkuu, mutta tekstit
+    // jäävät ruudulle kuten ennen tätä muutosta.
+    clearInterval(ui.luentavahti);
+    ui.luentavahti = null;
+    document.body.classList.remove('luenta-tekstit-piiloon');
+    ui.asetaPaivakirjanKoko(false);
+  });
+  await sivu.waitForTimeout(600);
+  const ilman = await sivu.evaluate(TEKSTINAYTE);
+  tieto('vastakoe ilman piilotusta', JSON.stringify({
+    piilo: ilman.piilo, lappu: ilman.lappu, rivi: ilman.rivi, kertoja: ilman.kertoja,
+  }));
+  vaadi('VASTAKOE: ilman piilotusta 1400 px EI läpäise tekstipiilovartiota',
+    !(ilman.piilo && ilman.lappu && (ilman.rivi?.w ?? 99) <= 1),
+    JSON.stringify(ilman.rivi));
   await ctx.close();
 }
 

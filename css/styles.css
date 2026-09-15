@@ -26646,6 +26646,34 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px;
 }
 
 /*
+ * ══════════════════════════════════════════════════════════════════
+ * TEKSTIT PIILOON KAIKILLA LAITTEILLA LUENNAN AJAKSI
+ * (omistaja 15.9.2026, Raamattu "TEKSTIT PIILOON KAIKILLA LAITTEILLA")
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Luennan aikana isoisän matkakirjamerkinnän teksti ja pulun
+ * puhekupla piilotetaan KAIKILLA laitteilla, ei vain puhelimella.
+ * Näkyviin jää kuva ja kuvateksti. Merkinnän saa esiin lappua
+ * napauttamalla, pulun repliikin pluskuplasta — sama mekanismi kuin
+ * puhelimella (v1891 + pluskupla).
+ *
+ * EHTO ON LUENNAN TILA, EI RUUTUKOKO. Kaksi kolmesta piilotuksesta
+ * tehdään pelin omalla mekanismilla eikä css:llä, aivan kuten
+ * puhelimella: kortti kutistuu lapuksi (.fact-card.pieni, js/ui.js
+ * kaynnistaLuentavahti) ja uusi puhekupla imeytyy pluskuplaan
+ * (js/pollo.js lisaaPinoon → imePuhelimenKuplaan). Tänne ei saa
+ * lisätä `.pollo-kuplapino-kehys { display: none }`: se piilottaisi
+ * myös pelaajan itse pluskuplasta avaaman kuplan.
+ *
+ * Tänne jää vain pinon ULKOPUOLINEN yksittäinen ohjekupla, jota
+ * pluskuplan muisti ei hallitse — sama poikkeus kuin puhelimella yllä.
+ * Luokan kirjoittaa luentavahti (js/ui-apurit.js LUENNAN_TEKSTIPIILO).
+ */
+body.luenta-tekstit-piiloon .pollo-vihje-yksin {
+  display: none !important;
+}
+
+/*
  * ── LIIKU: NELIÖSYMBOLI VASEMMASSA ALAREUNASSA ──────────────────────
  *
  * Nappi oli kullattu 113 × 44 px:n tekstipalkki ruudun alareunan
@@ -26887,7 +26915,14 @@ body.kertoja-aanessa #fact-kuuntele.mykistetty .kaiutin-kaari.palaa {
 }
 
 /*
- * KAIUTIN JÄÄ LAPULLE PUHELIMELLA.
+ * KAIUTIN JÄÄ LAPULLE — KAIKILLA LAITTEILLA.
+ *
+ * SÄÄNTÖ EI OLE ENÄÄ PUHELINRAJAN TAKANA (omistaja 15.9.2026,
+ * "TEKSTIT PIILOON KAIKILLA LAITTEILLA"): luennan ajan kortti kutistuu
+ * lapuksi myös työpöydällä ja tabletilla, joten lapun kaiutin — sekä
+ * merkki että mykistyskytkin — tarvitaan samalla rivillä joka ruudulla.
+ * Ehto on lapun oma luokka (.pieni), ei ruudun koko; lappuun päädytään
+ * yhä samoista syistä kuin ennen (puhelin, linssi, kartan liike).
  *
  * Kutistettu lappu leikkaa kaiken muun paitsi otsikon (ks.
  * `body[data-mode] .fact-card.pieni > *:not(#fact-voice)…`). Kaiutin on
@@ -26896,43 +26931,42 @@ body.kertoja-aanessa #fact-kuuntele.mykistetty .kaiutin-kaari.palaa {
  * pois, puhelimella ei näkyisi merkkiä eikä pääsisi mykistämään.
  * Tunnistevalitsin voittaa leikkaavan säännön.
  */
-@media (max-width: 699px), (max-height: 520px) {
-  body[data-mode] .fact-card.pieni {
-    grid-template-columns: auto auto auto;
-  }
-
-  /* Leikkaava sääntö on `> *:not(#fact-voice):not(.fact-place-lyhyt)`,
-     jonka :not(#fact-voice) tuo sille tunnisteen painon. Sama paino ja
-     yksi luokka enemmän riittää voittamaan sen. */
-  /*
-   * SAMALLE RIVILLE JA PYSTYKESKITETYKSI (omistaja 15.9.2026,
-   * sanatarkasti: *"Tasaa kaiutin symboli tekstin kanssa samalle
-   * riville."*, iPhone-kuva Dubrovnikin saapumisluennasta).
-   *
-   * JUURISYY: nappi oli yhä `position: absolute` (.fact-card
-   * .fact-kuuntele), ja absoluuttisen ruudukkolapsen `top` mitataan
-   * sen OMASTA ruudukkoalueesta — jolloin `align-self: center` jää
-   * käyttämättä, koska offset ei ole auto. Kuvake istui siis
-   * --kortti-pehmuste-y:n verran otsikkorivin YLÄLAIDAN alapuolella ja
-   * roikkui kuvan mukaisesti alempana kuin teksti.
-   *
-   * Korjaus on asemointi eikä luku: `relative` tekee napista tavallisen
-   * ruudukkolapsen, jolloin `align-self: center` keskittää sen rivin
-   * korkeuteen. Relative eikä static, koska osuma-ala (::before) ja
-   * mykistysviiva (::after) asemoidaan napin sisään.
-   */
-  body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
-    position: relative;
-    top: auto;
-    right: auto;
-    grid-row: 1;
-    grid-column: 3;
-    width: auto;
-    min-width: 0;
-    height: auto;
-    padding: 0;
-    overflow: visible;
-    opacity: 1;
-    align-self: center;
-  }
+body[data-mode] .fact-card.pieni {
+  grid-template-columns: auto auto auto;
 }
+
+/* Leikkaava sääntö on `> *:not(#fact-voice):not(.fact-place-lyhyt)`,
+   jonka :not(#fact-voice) tuo sille tunnisteen painon. Sama paino ja
+   yksi luokka enemmän riittää voittamaan sen. */
+/*
+ * SAMALLE RIVILLE JA PYSTYKESKITETYKSI (omistaja 15.9.2026,
+ * sanatarkasti: *"Tasaa kaiutin symboli tekstin kanssa samalle
+ * riville."*, iPhone-kuva Dubrovnikin saapumisluennasta).
+ *
+ * JUURISYY: nappi oli yhä `position: absolute` (.fact-card
+ * .fact-kuuntele), ja absoluuttisen ruudukkolapsen `top` mitataan
+ * sen OMASTA ruudukkoalueesta — jolloin `align-self: center` jää
+ * käyttämättä, koska offset ei ole auto. Kuvake istui siis
+ * --kortti-pehmuste-y:n verran otsikkorivin YLÄLAIDAN alapuolella ja
+ * roikkui kuvan mukaisesti alempana kuin teksti.
+ *
+ * Korjaus on asemointi eikä luku: `relative` tekee napista tavallisen
+ * ruudukkolapsen, jolloin `align-self: center` keskittää sen rivin
+ * korkeuteen. Relative eikä static, koska osuma-ala (::before) ja
+ * mykistysviiva (::after) asemoidaan napin sisään.
+ */
+body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
+  position: relative;
+  top: auto;
+  right: auto;
+  grid-row: 1;
+  grid-column: 3;
+  width: auto;
+  min-width: 0;
+  height: auto;
+  padding: 0;
+  overflow: visible;
+  opacity: 1;
+  align-self: center;
+}
+

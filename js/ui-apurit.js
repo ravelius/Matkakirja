@@ -40,6 +40,43 @@ export function puhelinTila() {
   return Boolean(globalThis.matchMedia?.(PUHELIN_KYSELY)?.matches);
 }
 
+/*
+ * LUENNAN AIKANA TEKSTIT PIILOON KAIKILLA LAITTEILLA (omistaja
+ * 15.9.2026, Raamattu "TEKSTIT PIILOON KAIKILLA LAITTEILLA").
+ *
+ * Sanatarkasti: luennan aikana isoisän matkakirjamerkinnän teksti ja
+ * pulun puhekupla piilotetaan KAIKILLA laitteilla, ei vain
+ * puhelimella. Näkyviin jää kuva ja kuvateksti; merkinnän saa esiin
+ * lappua napauttamalla ja pulun repliikin pluskuplasta.
+ *
+ * RAJA EI OLE RUUTUKOKO VAAN LUENNAN TILA. Mekanismi on sama kuin
+ * v1891:n puhelinpiilotus (lappu + pluskupla), mutta ehto luetaan
+ * bodyn luokasta, jonka luentavahti kirjoittaa (js/ui.js
+ * kaynnistaLuentavahti). Niin työpöydän käytös luennan ULKOPUOLELLA
+ * pysyy entisellään: luokka on silloin poissa, ja tämä palautuu
+ * pelkäksi puhelintunnistukseksi.
+ *
+ * KERTOJA EIKÄ KOKO LUENTA: luokka nousee vain isoisän (kertojan)
+ * luennasta, ei pulun omasta puheesta — muuten pulun oma repliikki
+ * imeytyisi aina pluskuplaan jo syntyessään, ja työpöydän
+ * kuplakäytös muuttuisi kaikkialla.
+ */
+export const LUENNAN_TEKSTIPIILO = 'luenta-tekstit-piiloon';
+
+/** Onko kertojan luenta käynnissä (ks. LUENNAN_TEKSTIPIILO)? */
+export function luennanTekstipiilo() {
+  return Boolean(globalThis.document?.body?.classList?.contains?.(LUENNAN_TEKSTIPIILO));
+}
+
+/**
+ * Aloittavatko isoisän merkintä ja pulun kupla suljettuina?
+ * Kaksi syytä, sama mekanismi: puhelin (v1891) tai kertojan luenta
+ * (15.9.2026).
+ */
+export function tekstitPiilossa() {
+  return puhelinTila() || luennanTekstipiilo();
+}
+
 // Tapahtumakuplien kestot (siirretty ui.js:stä M3:ssa: myös
 // vertailutila tarvitsee oletuskeston ilman kiertotuontia).
 export const TOAST_MS = { die: 950, default: 1200 };
