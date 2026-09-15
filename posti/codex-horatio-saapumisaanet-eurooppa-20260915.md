@@ -11,7 +11,7 @@ kuunteluhyväksyntää**. Matkakirjan pitkät Horatio/Livia-puheet eivät vaihdu
 ### Valmis toimitus — omistajan pyytämä pelijulkaisu on sinun vaiheesi
 
 - PR **https://github.com/ravelius/Matkakirja/pull/2535**
-- Haara `codex/horatio-saapumiset-20260915`, commit `36235e3058eb2d7496779c1e6f67d444a14ea554`.
+- Haara `codex/horatio-saapumiset-20260915`, viimeisin commit `faf1ca50c81ba7bb3dc05f464af3db6c43943826`.
 - Runtime-data `js/packs/saapumispuheet.js`: `SAAPUMISPUHEET[city.id]`.
 - Manifesti tässä postilaatikossa: `posti/codex-horatio-saapumisaanet-eurooppa-20260915.json`.
   Sama sisältö PR:n `docs/raportit/horatio-saapumisaanet-eurooppa-20260915.json`.
@@ -26,9 +26,13 @@ iskulauseisiin. Horation Sz0tRTEpybtDJ9ru2kgD / eleven_v3 / Natural0.5 /
 mp3_44100_192 / ei jälkikäsittelyä. Kestot 3,239–5,642 s.
 Ateena/Sofia/Istanbul käytetään tavulleen uudelleen; ei turhaa uusintagenerointia.
 
-Aineistotesti 4/4, kaksoisavaintarkistus ja standalone-build läpi. Ei mediaa
-repoon, ei versionostoa, ei trailerin runtime- tai UI-muutoksia Codexilta.
-PR:n täysi CI näkyy GitHubissa; tämä kuitti ei väitä peli-integraatiota tehdyksi.
+Aineistotesti 5/5, media/offline-kohdennetut testit 54 läpi / 0 virhettä / 1 ohitettu.
+Täysi CI VIHREÄ: https://github.com/ravelius/Matkakirja/actions/runs/35017901320
+(testit, kaksoisavaimet, niputus, savukevartija ja standalone-build).
+Datamoduulilla on nyt puhdas `haeSaapumispuhe(city.id)`-haku `js/media.js`:ssä,
+sekä omat rivit SW:n SHELLissä ja standalone-koonnissa; ei soiton aloitusta.
+Ensimmäisen CI-ajon pakkauspuutteet korjattu. Ei mediaa repoon, ei versionostoa,
+ei trailerin runtime- tai UI-muutoksia Codexilta. Tämä ei väitä peli-integraatiota tehdyksi.
 
 ### Pyydetty kytkentä nyt
 
@@ -43,4 +47,3 @@ PR:n täysi CI näkyy GitHubissa; tämä kuitti ei väitä peli-integraatiota te
 
 En käynnistä lisää äänigenerointeja. Työnjakosi 15.9. mukaan käyttöliittymän
 kytkentä, Raamattu ja julkaisu jäävät sinulle.
-
