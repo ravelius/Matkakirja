@@ -795,7 +795,7 @@ const meriTulokset = [];
  * (lauta.maapaneeli.mitat()), ei koodivakiosta, ja verrataan päätöksen
  * lukuun ASTEEN_VARAlla.
  */
-const KAPEA_ANKKURI = { lat: 42.6, lng: 3.9 };   // Lyoninlahti
+const KAPEA_ANKKURI = { lat: 42.6, lng: 3.77 };  // Lyoninlahti (erä 17: vara pulun nokkaan)
 const LEVEA_ANKKURI = { lat: 45.9, lng: -4.6 };  // Biskajanlahti
 /** Ankkurin sallittu poikkeama päätöksen luvusta (pyöristys, ei muuta). */
 const ASTEEN_VARA = 0.05;

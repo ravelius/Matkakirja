@@ -481,16 +481,28 @@ export const MAAPANEELIN_ANKKURIT = {
  * luetaan MAAN omasta laatikosta eikä paneelilla laajennetusta, jottei
  * valinta söisi omaa häntäänsä.
  *
- * PISTE 42,6 N / 3,9 E on Lyoninlahden avovettä (mitattu
+ * PISTE 42,6 N / 3,77 E on Lyoninlahden avovettä (mitattu
  * tools/savukkeet/savuke-era12.mjs väite 8: paneelin nelikulmion 25
  * näytepistettä, 0 maaosumaa — ei Ranskaa, Espanjaa eikä Korsikaa).
+ *
+ * MIKSI 3,77 E EIKÄ 3,9 E (erä 17, Raamattu KARTTAUUDISTUKSEN
+ * PÄÄTÖKSET 19, omistaja 15.9.2026). Ankkuri on kortin YLÄREUNAN
+ * KESKIKOHTA, joten se vie korttia itään päin kohti Livian pulua,
+ * joka istuu ruudun oikeassa alanurkassa. Erän 16 luvulla 3,9 E
+ * kortin oikean reunan ja pulun nokan väliin jäi pystypuhelimella
+ * MITATTU 0,4 px (390 × 844) — saapumiskorkeus heiluu ajosta toiseen
+ * muutaman prosentin, joten alle pikselin rako voi mennä nollan alle.
+ * 0,13° länteen siirtää korttia 7,3 px vasemmalle ja rako on mitattu
+ * 7,7 px (390 × 844) ja 8,2 px (393 × 852). Kauemmas länteen ei saa
+ * mennä: kortin länsireuna lähestyy Cap de Creusia, ja vaatimus on
+ * että kaikki 25 näytepistettä pysyvät merellä.
  *
  * VAIN RANSKALLA on kapea-ankkuri; muilla mailla puuttuva rivi
  * tarkoittaa, että oletusankkuri (laatikon eteläreuna) pätee kuten
  * ennen — pilotti on pilotti (PÄÄTÖKSET 9 kohta 1).
  */
 export const MAAPANEELIN_KAPEAT_ANKKURIT = {
-  FRA: { lat: 42.6, lng: 3.9 },
+  FRA: { lat: 42.6, lng: 3.77 },
 };
 
 /**
