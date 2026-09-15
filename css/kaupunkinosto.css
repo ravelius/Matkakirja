@@ -161,9 +161,29 @@
  * ei ole ennen ollut olemassa. Ruutu on kartan seepiaa — samat musteen
  * ja pergamentin arvot kuin kortin muissa säännöissä yllä (rgba(122,
  * 85, 20, …)) — ja sen suhde on herokuvien 3:2, jotta kortin korkeus ei
- * hyppää sinä päivänä kun kuva vaihtuu paikalle. Kun putki toimittaa
- * kuvat, tämä sääntö voi poistua.
+ * hyppää sinä päivänä kun kuva vaihtuu paikalle. Kuvaputki toimitti
+ * seitsemän Ranskan-kuvaa 14.9.2026, mutta sääntö JÄÄ: `herokuva: null`
+ * on yhä kelvollinen rivi, ja seuraava kuvaton lisäkaupunki tarvitsee
+ * saman ruudun.
  */
+/*
+ * KORTIN HEROKUVA EI RAJAUDU (kuvatoimitus 14.9.2026: *"alkuperäiset
+ * kuvasuhteet noin 1,34–1,56:1. Käytä contain-sovitusta; älä hukkaa
+ * alkuperäistä kehystä"*). Lehden etusivulla pääkuva rajataan
+ * tasakorkuiseksi (css/styles.css `.lehti-paakuva .lehti-kuva img`:
+ * max-height 360 px + object-fit: cover), mutta lisäkaupungin kortissa
+ * kuva on historiallinen vedos: sen reunoja ei saa leikata pois.
+ * Korkeus seuraa siis leveyttä, ja katto puretaan.
+ */
+.kaupunkipopup-lisakaupunki .lehti-paakuva .lehti-kuva img {
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  /* Lehden kuvassa osoitin on zoom-in, koska napautus avaa suurennoksen.
+     Kortin kuva ei avaa mitään, joten osoitin ei saa luvata sitä. */
+  cursor: default;
+}
+
 .kaupunkipopup-heropaikka {
   display: flex;
   align-items: center;
