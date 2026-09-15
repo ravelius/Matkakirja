@@ -297,5 +297,64 @@ git rm assets/linssit/topografia.webp assets/linssit/topografia-pallo.webp
 # käsin: poista molemmat rivit sw.js:n SHELL-listalta, lisää R2-reititys
 ```
 
+## 11. Työnkulku
+
+Tämän raportin komennot on koneistettu `.github/workflows/
+renderoi-reliefi-macilla.yml`-työnkuluksi (Sonnet-agentti, 15.9.2026,
+sama sessio kuin tämä raportti). Se ajaa kohtien 6 ja 7 komennot
+peräkkäin Macilla ja vie molemmat kuvat R2:een — kohtien 8 ja 9
+koodimuutokset (osoitteiden vaihto, `sw.js`:n SHELL-lista, paikallisten
+tiedostojen poisto reposta) EIVÄT sisälly työnkulkuun, koska ne
+vaativat silmämääräisen tarkistuksen ennen julkaisua.
+
+(`sharp` lisättiin samalla `package.json`:n `devDependencies`-tasolle —
+kohdan 5 huomio puuttuvasta riippuvuudesta on siis korjattu, `npm ci`
+asentaa sen jatkossa. Työnkulku ajaa lisäksi `tools/mac-ajovalmis.sh
+--sharp`:n varmuuden vuoksi, koska se `npm install --no-save`
+-asentaa paketin myös silloin, jos Macin `node_modules` on tyhjä tai
+vanhentunut lock-tiedostoon nähden.)
+
+**Käynnistys** (Fable, `actions_run_trigger`):
+
+```
+mcp__github__actions_run_trigger
+  owner: ravelius, repo: Matkakirja
+  workflow_id: renderoi-reliefi-macilla.yml
+  ref: main
+  inputs: { kaariminuutit: "1", leveys: "10800", katto: "12000",
+            pallo_leveys: "4096", pallo_laatu: "76",
+            tunniste: "", kuiva: false }
+```
+
+Jätä `tunniste` tyhjäksi normaaliajossa (työnkulku käyttää ajopäivää
+VVVVKKPP:nä) — anna se vain, jos samalle päivälle tarvitaan useampi
+ajo. `kuiva: true` renderöi ja tulostaa luvut vientiä tekemättä, jos
+parametreja halutaan koetella ensin.
+
+**Ajon jälkeen koodissa** (Opus tai Fable, käsin — ei osa työnkulkua):
+
+1. Katso työnkulun yhteenveto (`$GITHUB_STEP_SUMMARY`): siinä on
+   molempien kuvien koko, mitat, sha256 ja lopulliset R2-osoitteet
+   (`https://media.matkakirja.app/matkakirja/linssit/topografia-<tunniste>.webp`
+   ja `topografia-pallo-<tunniste>.webp`) sekä vahvistus, että
+   molemmat vastasivat HTTP 200:lla.
+2. Katso kuvat silmin osoitteista selaimessa (tai lataa ne) ennen
+   kuin osoitteet viedään koodiin — työnkulku ei arvioi laatua,
+   vain tiedostokoon.
+3. Päivitä `js/packs/linssi-topografia-kuva.js`:n `SUHTEELLINEN` ja
+   `js/linssit/satelliitti-avaruus.js`:n `RELIEFIN_OSOITE` uusiin
+   R2-osoitteisiin (kohta 8).
+4. Poista `assets/linssit/topografia.webp` ja
+   `assets/linssit/topografia-pallo.webp` reposta (`git rm`) ja
+   päivitä `sw.js`:n SHELL-lista ja R2-reititys (kohta 9).
+5. Aja testit ja tee normaali PR — tämä on tavallinen koodimuutos,
+   ei työnkulun ajo, niin sen voi tehdä kuka tahansa sessio
+   roolituksen mukaan.
+
+Työnkulku itse EI committoi eikä pushaa mitään — `tools/
+tee-reliefikartta.mjs` kirjoittaa `js/packs/linssi-topografia-kuva.js`:n
+ajon aikana runnerin työkansiossa, mutta se jää sinne eikä koske
+git-tilaa. Koodimuutos on aina erillinen, käsin tarkistettu commit.
+
 — Sonnet-agentti (session
 https://claude.ai/code/session_01TehnTdSkC74DnzEqcXkynA)
