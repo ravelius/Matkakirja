@@ -7630,7 +7630,16 @@ export const RAAMATTU = {
           + 'ei ole kuvan kulmassa vaan YLAPALKISSA heti nimi/paiva-pillerin '
           + 'oikealla puolella; kuvan oikeassa ylakulmassa on vain pieni X; '
           + 'lisatietokentta avautuu ylapalkin alta i-napin kohdalta. Tila: '
-          + 'tyo Sonnet-agentilla.',
+          + 'tyo Sonnet-agentilla. MINIPULU (omistaja 15.9.2026 klo 13.55 '
+          + 'UTC, sanatarkasti: "pulu voisi olla tassa nakymassa esille. '
+          + 'pyyda codexia tekemaan pulusta miniversio, jota voidaan '
+          + 'kayttaa tallaisissa tilanteissa."): Astronautin kameran '
+          + 'valokuvanakymassa (ja vastaavissa koko ruudun linssi- ja '
+          + 'kuvanakymissa) pulu on nakyvissa PIENENA versiona kuvan '
+          + 'kulmassa; Codex tekee pulusta miniversion (sama hahmo, '
+          + 'pienempi mitta ja yksinkertaisemmat eleet, sopii tummalle '
+          + 'pohjalle), Fable pyytaa postilaatikon kautta. Tila: pyynto '
+          + 'Codexille.',
         'IHMISEN MATKA -LINSSI: RINTAMAN VALKKYMINEN, MUSTA ALKU, LIIKU '
           + 'POIS; ASTRONAUTTILINSSILLE OMA KUVAKE (omistaja 15.9.2026 klo '
           + '12.00 UTC, tyopoytakuva 248 000 v. sitten, sanatarkasti: "Kun '
