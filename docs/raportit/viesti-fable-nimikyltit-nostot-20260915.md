@@ -195,8 +195,15 @@ siitä, että nykyiset 22 ovat liian pieniä nähtäväksi (vaihtoehto 3)?
   tests/nimiolimitys.test.mjs tests/karttanimet.test.mjs
   tests/karttamerkit.test.mjs tests/kohdekaupunki.test.mjs
   tests/nostoladonta.test.mjs tests/aikajana.test.mjs` — kaikki läpi.
-- `tools/tarkista-savukkeet.mjs`, `savuke-era12`, `savuke-kaupunkikortit`,
-  `savuke-nimikyltti` — tulokset commit-viestissä.
+- `tools/tarkista-savukkeet.mjs` — kunnossa (1745 ui-viittausta).
+- `tools/tarkista-nimiolimitys.mjs` — sama tulos kuin mainissa
+  (naapurimaat 9, sama maa 36, eläintäky 5), eli poltettujen laattojen
+  ladonta ei muuttunut.
+- `savuke-era12` **27/27**, `savuke-kaupunkikortit` **121/121**,
+  `savuke-nimikyltti` **43/43** (uusi vartio 7 mitattiin puhelimella
+  Pariisista ja työpöydällä kuudesta kaupungista: Pariisi, Alpit,
+  Venetsia, Firenze, Marseille, Rooma — kaikilla sama kylki, suunta
+  ±5° ja etäisyys ±10 %).
 
 ## 5. Mitä EI tehty
 
