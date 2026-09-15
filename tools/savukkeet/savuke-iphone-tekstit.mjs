@@ -75,9 +75,27 @@ const TYYPIT = {
   '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png',
   '.webp': 'image/webp',
 };
+/*
+ * VASTAKOE-KYTKIN (Liiku-symbolin paikka, omistaja 15.9.2026): kun
+ * `vastakoe === 'LIIKU_INSET0'`, palvelin tarjoilee css/styles.css:n
+ * niin, että Liiku-napin `left`/`bottom` palaavat nollaan — nappi
+ * liimautuu takaisin kartan vasempaan alakulmaan ilman marginaalia.
+ * VÄITTEEN "sama marginaali kuin karttaselitteellä" ON KAADUTTAVA.
+ */
+let vastakoe = null;
 const palvelin = http.createServer((req, res) => {
-  const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
+  const polkuOsa = req.url.split('?')[0];
+  const polku = join(JUURI, polkuOsa === '/' ? 'index.html' : polkuOsa);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
+  if (vastakoe === 'LIIKU_INSET0' && polkuOsa.endsWith('/css/styles.css')) {
+    const runko = readFileSync(polku, 'utf8').replace(
+      /\.toimintorivi\.rivi-yksi \.monitoimi-nappi \{\s*position: fixed;\s*left: calc\([^;]+\);\s*bottom: calc\([^;]+\);\s*\}/,
+      '.toimintorivi.rivi-yksi .monitoimi-nappi { position: fixed; left: 0px; bottom: 0px; }',
+    );
+    res.writeHead(200, { 'content-type': 'text/css' });
+    res.end(runko);
+    return;
+  }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(readFileSync(polku));
 });
@@ -191,6 +209,21 @@ const mittaa = () => {
   const huntu = kartta ? getComputedStyle(kartta, '::after') : null;
   const kaiutin = document.getElementById('fact-kuuntele');
   const kr = kaiutin?.getBoundingClientRect();
+  /*
+   * MARGINAALI KARTAN REUNOIHIN (omistaja 15.9.2026): Liiku (vasen
+   * alakulma) verrattuna karttaselitteeseen (oikea yläkulma), molemmat
+   * `.map-pane`:n reunaviivaan asti — TARKKA (ei pyöristetty) mitta,
+   * jotta ±1 px:n vaatimus ei huku Math.round-virheeseen.
+   */
+  const mp = kartta?.getBoundingClientRect() ?? null;
+  const nr = nappi?.getBoundingClientRect() ?? null;
+  const selite = document.querySelector('.karttaselite')?.getBoundingClientRect() ?? null;
+  const marginaalit = (mp && nr && selite) ? {
+    liikuVasen: nr.x - mp.x,
+    liikuAlas: (mp.y + mp.height) - (nr.y + nr.height),
+    seliteYlos: selite.y - mp.y,
+    seliteOikea: (mp.x + mp.width) - (selite.x + selite.width),
+  } : null;
   return {
     ikkuna: { w: window.innerWidth, h: window.innerHeight },
     factPieni: Boolean(document.querySelector('.fact-card')?.classList.contains('pieni')),
@@ -217,6 +250,7 @@ const mittaa = () => {
       ikoni: getComputedStyle(nappi.querySelector('.viiva-ikoni')).display,
     } : null,
     liikuOsuuPuluun: osuu,
+    marginaalit,
     huntu: huntu ? {
       content: huntu.content,
       bg: huntu.backgroundColor,
@@ -249,6 +283,18 @@ const mittaa = () => {
   vaadi('puhelin pysty: symboli näkyy, sana on piilossa',
     perus.liiku?.ikoni !== 'none' && perus.liiku?.sana === 'none', JSON.stringify(perus.liiku));
   vaadi('puhelin pysty: Liiku ei osu pulun nappiin', perus.liikuOsuuPuluun === false);
+  /*
+   * LIIKU-SYMBOLIN PAIKKA (omistaja 15.9.2026): marginaali kartan
+   * vasempaan ja alareunaan yhtä suuri, ja sama kuin karttaselitteen
+   * marginaali kartan ylä- ja oikeaan reunaan (±1 px).
+   */
+  vaadi('puhelin pysty: Liikun marginaali vasemmalle ja alas yhtä suuri (±1 px)',
+    Math.abs(perus.marginaalit?.liikuVasen - perus.marginaalit?.liikuAlas) <= 1,
+    JSON.stringify(perus.marginaalit));
+  vaadi('puhelin pysty: Liikun marginaali sama kuin karttaselitteellä (±1 px)',
+    Math.abs(perus.marginaalit?.liikuVasen - perus.marginaalit?.seliteOikea) <= 1
+    && Math.abs(perus.marginaalit?.liikuAlas - perus.marginaalit?.seliteYlos) <= 1,
+    JSON.stringify(perus.marginaalit));
   vaadi('puhelin pysty: huntua ei ole ennen luentaa (vastakoe)',
     perus.huntu?.content === 'none', JSON.stringify(perus.huntu));
 
@@ -321,6 +367,33 @@ const mittaa = () => {
   });
   vaadi('mykistettynä Liiku näkyy heti', mykka.puhuja === null && mykka.liiku !== 'none',
     JSON.stringify(mykka));
+  await konteksti.close();
+}
+
+/*
+ * VASTAKOE LIIKU_INSET0: Liikun left/bottom pakotetaan nollaan, jolloin
+ * marginaali ei täsmää karttaselitteen kanssa — edellisen lohkon
+ * marginaalivartion ON KAADUTTAVA.
+ */
+{
+  vastakoe = 'LIIKU_INSET0';
+  const { konteksti, sivu } = await avaa({
+    viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2,
+  });
+  const m = await sivu.evaluate(mittaa);
+  vastakoe = null;
+  /*
+   * Nolla-inset siirtää Liikun karttapaneelin OMAAN nurkkaan (jonka
+   * omat reunat ovat map-panen sisällä 1 px:n reunaviivan verran) —
+   * marginaali karttaselitteen kanssa vertailtuna on siis NEGATIIVINEN
+   * (nappi lähempänä reunaa kuin reunaviiva itse), kun karttaselitteen
+   * omat marginaalit pysyvät ennallaan (+7,4 px). Ero on reilusti yli
+   * 1 px:n rajan.
+   */
+  const eroaSeliteesta = Math.abs(m.marginaalit?.liikuVasen - m.marginaalit?.seliteOikea) > 1
+    || Math.abs(m.marginaalit?.liikuAlas - m.marginaalit?.seliteYlos) > 1;
+  vaadi('vastakoe LIIKU_INSET0: marginaalivartion ON KAADUTTAVA (nappi liimautuu nurkkaan)',
+    eroaSeliteesta, JSON.stringify(m.marginaalit));
   await konteksti.close();
 }
 
