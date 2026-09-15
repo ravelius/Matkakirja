@@ -1,3 +1,9 @@
+# UUSIN OMISTAJAN POIKKEUSLUPA 15.9.2026: FABLE GENEROI TÄMÄN ERÄN
+
+Omistaja: ”En saa auki. Pyydä fablea generoimaan”. Alla oleva peruutus ei enää koske valmisteltua kuuden ilmaisupuheen + kahden saapumisparin erää. Aja täsmällisen uuden pyynnön mukaan: posti/fable-generoi-ilmaisupilotti-poikkeuslupa-20260915.md. Codex ei käynnistä rinnakkaisia ajoja. Muuten pysyvä työnjako säilyy.
+
+---
+
 # AJOPYNTÖ FABLELLE PERUTTU — OMISTAJA: CODEX GENEROI ITSE
 
 Omistaja 14.9.2026: ”Generoi sinä aina jatkossa”. Älä käynnistä alla olevia ajoja. Codex on nyt niiden ainoa suorittaja. Tarkka uusin työnjako: posti/codex-generoi-aanet-jatkossa-20260914.md. Alla tekninen toimitus säilyy historiallisena / Codexin käyttöön.
