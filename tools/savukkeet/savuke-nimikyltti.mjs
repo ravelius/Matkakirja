@@ -19,6 +19,9 @@
  *      mittauksessa, jossa kaupunki on syvällä ruudulla (yli 90 px
  *      joka reunasta). Laidalla lukko purkautuu tarkoituksella
  *      (js/pallolauta/nimet.js RUUDUN REUNA PURKAA LUKON).
+ *   8. KOHDEMAAN MERKIT ILMAN KATTOA JA KAUPUNGIN NIMIÖ 11–12 px
+ *      saapumisnäkymässä (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 25),
+ *      vastakokeena sama aineisto katon kanssa (22 / 62).
  *
  * MITTA ON KAUPUNGIN PIIRRETTY PISTE, EI LAUDAN KOHTA: pallolla
  * kaupungilla on oma pallopiste (js/pallo.js pallonOmatPisteet), ja
@@ -45,6 +48,11 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { MAAILMANKARTTA } from '../../js/packs/maailmankartta.js';
+import { NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
+import { PAAKARTAN_MERKKIKATTO, merkkiPortti } from '../../js/pallolauta/nostot.js';
+import { RYHMITYKSEN_ETAISYYS_PX, ryhmitaNostot } from '../../js/pallolauta/aihemerkit.js';
+import { paakartanNostot } from '../tarkista-nostopaikat.mjs';
 
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -79,7 +87,22 @@ const RUUDUT = [
  */
 /** Kuinka paljon saapumisnäkymän karttakerroin saa poiketa ykkösestä. */
 const SAAPUMISEN_VARA = 0.02;
+/*
+ * ANKKURIN VARAT (vartio 7, tehtävänannon mitta): kyltin suunta
+ * merkistä ±5° ja tekstikorkeuteen suhteutettu etäisyys ±10 %.
+ */
+const ANKKURIN_KULMAVARA = 5;
+const ANKKURIN_ETAISYYSVARA = 0.1;
 const KAUPUNGIT = ['pariisi', 'marseille'];
+/** Ranskan merkit pääkartalla (savuke-ranska-sisalto FRA_MERKKEJA). */
+const FRA_MERKKEJA = 62;
+/*
+ * Limittyvien nimiöparien katto saapumisnäkymässä (PAATOKSET 27:n
+ * mittaus). Mitattu tämän erän jälkeen: työpöydällä 1 pari ja
+ * puhelimella 3 — kaikki ERI aiheiden välillä, joita ryhmitys ei
+ * sääntönsä mukaan yhdistä. Ennen erää pareja oli 9 ja 11.
+ */
+const LIMITYSPARIEN_KATTO = 4;
 
 let lapi = 0;
 let kaikki = 0;
@@ -240,6 +263,39 @@ async function veda(sivu, dx, dy) {
 }
 
 /*
+ * 8d. VASTAKOE ILMAN SELAINTA: KATTO TAKAISIN → 22 MERKKIÄ.
+ *
+ * Selainvartio 8 vaatii, ettei saapumisnäkymässä jää yhtään kohdemaan
+ * merkkiä piiloon. Jos merkkejä sattuisi olemaan alle katon, väite
+ * menisi läpi ilman että katto on todella poistettu — siksi sama
+ * aineisto ajetaan tässä portin läpi ILMAN kohdemaa-lippua: silloin
+ * läpi menee enintään PAAKARTAN_MERKKIKATTO + poltettu velka ja
+ * loput jäävät lähizoomiin. Mitattu 15.9.2026: 22 / 62 ja 40 piiloon.
+ */
+{
+  /*
+   * MERKIT SAMASTA LÄHTEESTÄ KUIN POLTTOKETJU (tools/
+   * tarkista-nostopaikat.mjs paakartanNostot) — sama tapa kuin
+   * tools/savukkeet/savuke-ranska-sisalto.mjs vartiossa 3. Pelin oma
+   * `maanKohdemerkit` ei kelpaa tähän ilman selainta: se lukee
+   * lisälähteet ui-rekisteristä, joka on Nodessa tyhjä.
+   */
+  const { kaikki: rivit, kartalla } = paakartanNostot(MAAILMANKARTTA);
+  const elavat = rivit.filter((r) => r.iso === 'FRA' && kartalla.has(r.id));
+  const kohdemaa = merkkiPortti(elavat, false, (m) => m, { kohdemaa: true });
+  const katollinen = merkkiPortti(elavat, false, (m) => m);
+  const paastetyt = katollinen.merkit.length - katollinen.polttovelka.length;
+  tieto('vastakoe: FRA merkit portin läpi',
+    `kohdemaana ${kohdemaa.merkit.length} / ${elavat.length}, `
+    + `katon kanssa ${paastetyt} (piiloon ${katollinen.piiloon.length})`);
+  vaadi(`8d. VASTAKOE — ilman kohdemaa-lippua katto ${PAAKARTAN_MERKKIKATTO} puree yhä`,
+    paastetyt <= PAAKARTAN_MERKKIKATTO && katollinen.piiloon.length >= 30
+      && kohdemaa.merkit.length === elavat.length && elavat.length >= FRA_MERKKEJA,
+    `katon kanssa ${paastetyt}, piiloon ${katollinen.piiloon.length}, `
+    + `kohdemaana ${kohdemaa.merkit.length} / ${elavat.length}`);
+}
+
+/*
  * YKSI SIVU RUUTUA KOHDEN, KAKSI KAUPUNKIA SAMASTA NÄKYMÄSTÄ: pelaaja
  * on Pariisissa ja Marseille näkyy samassa Ranskan saapumisnäkymässä,
  * joten molemmat mitataan samoista vedoista. Kaksi sivua neljän sijaan
@@ -265,7 +321,7 @@ for (const ruutu of RUUDUT) {
    * muuttuisi zoomin mukana.
    */
   const zoomit = [];
-  for (const osuus of [1, 0.6, 0.35]) {
+  for (const osuus of [1, 0.85, 0.7, 0.6, 0.35]) {
     const mitta = await sivu.evaluate(async ([kerroin, pov]) => {
       const l = window.matkakirja.ui.pallolauta;
       // Takaisin saapumisnäkymän keskelle: vedot ovat vieneet Pariisin
@@ -280,15 +336,87 @@ for (const ruutu of RUUDUT) {
       // Karttanoston merkki: sama kerroin kuin kyltillä (nostot.js
       // KARTTANOSTON KYLTTI ON KARTAN MITTA). Mitta luetaan siitä
       // transformista, jota kerros oikeasti kirjoittaa.
-      const nosto = document.querySelector('.pallolauta-nosto .pallolauta-nosto-siirto');
+      // EI KAUPUNKIMERKKIÄ: sen mitta on 1,35-kertainen (nostot.js
+      // KAUPUNKIMERKIN NIMIÖ ON ISOMPI KUIN NOSTON), ja DOM-järjestyksen
+      // ensimmäinen merkki vaihtuisi zoomin mukana kaupungin ja noston
+      // välillä — suhde 6 mittaisi silloin kahta eri mittaa.
+      const nosto = document.querySelector(
+        '.pallolauta-nosto:not(.pallolauta-nosto-kaupunki) .pallolauta-nosto-siirto');
+      const kaupunkiMerkki = document.querySelector(
+        '.pallolauta-nosto-kaupunki .pallolauta-nosto-siirto');
+      const kaupunginMitta = kaupunkiMerkki
+        ? Number((kaupunkiMerkki.style.transform.match(/scale\(([\d.]+)\)/u) ?? [])[1] ?? 0) : 0;
+      const portti = l.nostot?.portti?.() ?? null;
       const nostonMitta = nosto
         ? Number((nosto.style.transform.match(/scale\(([\d.]+)\)/u) ?? [])[1] ?? 0) : 0;
+      /*
+       * AIHEMERKIT JA VIUHKA (vartio 9, Raamattu KARTTAUUDISTUKSEN
+       * PAATOKSET 27). Ryhmien määrä luetaan kerrokselta, limitys
+       * samoista nimiölaatikoista kuin sovittelu käytti, ja viuhka
+       * kokeillaan saapumisnäkymässä (kerroin 1) napauttamalla
+       * suurinta aihemerkkiä — sama kutsu kuin sormella.
+       */
+      const aihemerkit = l.nostot?.aihemerkit?.() ?? [];
+      const laput = l.nostot?.lappuLaatikot?.() ?? [];
+      const limittyy = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
+      let pareja = 0;
+      for (let i = 0; i < laput.length; i += 1) {
+        for (let j = i + 1; j < laput.length; j += 1) if (limittyy(laput[i], laput[j])) pareja += 1;
+      }
+      let viuhka = null;
+      if (kerroin === 1 && aihemerkit.length) {
+        const suurin = [...aihemerkit].sort((a, b) => b.maara - a.maara)[0];
+        l.napautaNosto(suurin.id);
+        await new Promise((v) => setTimeout(v, 300));
+        l.ladoHeti();
+        await new Promise((v) => setTimeout(v, 300));
+        const koti = (document.querySelector('.pallo-kotelo') ?? document.body).getBoundingClientRect();
+        const laatikot = l.nostot?.viuhkanOsumalaatikot?.() ?? [];
+        viuhka = {
+          jasenia: suurin.maara,
+          kohtia: laatikot.length,
+          ruudulla: laatikot.filter((b) => b.x0 >= 0 && b.y0 >= 0
+            && b.x1 <= koti.width && b.y1 <= koti.height).length,
+          auki: Boolean(l.nostot?.viuhkaAuki?.()),
+          kohtia_dom: document.querySelectorAll('.pallolauta-viuhka-kohta').length,
+        };
+        l.nostot.suljeViuhka();
+        l.ladoHeti();
+        await new Promise((v) => setTimeout(v, 200));
+        viuhka.sulkeutui = !l.nostot?.viuhkaAuki?.();
+      }
       const arvo = document.querySelector('.pallolauta-maapaneeli .maapaneeli-arvo');
       const paneeli = document.querySelector('.pallolauta-maapaneeli .maapaneeli-kortti');
       const skaala = paneeli
         ? Number((paneeli.style.transform.match(/scale\(([\d.]+)\)/u) ?? [])[1] ?? 1) : 1;
       const perus = arvo ? parseFloat(getComputedStyle(arvo).fontSize) : 0;
+      /*
+       * KYLTIN ANKKURI MERKKIIN NÄHDEN (vartio 7, Raamattu
+       * KARTTAUUDISTUKSEN PAATOKSET 24). Mitta on tekstin keskipiste
+       * MIINUS oman CSS2D-solmun keskipiste: solmu on kaupungin
+       * pisteessä (translate(-50%, -50%), css/styles.css), joten sen
+       * 1 × 1 -laatikon keskipiste ON merkin paikka ruudulla.
+       * `getScreenCoords(lat, lon, 0)` ei kelpaa tähän: se on eri
+       * korkeudella kuin merkkikerros, ja ero kasvaa zoomatessa —
+       * silloin mitta liikkuisi, vaikka kyltti olisi paikallaan.
+       */
+      const kyltit = [...document.querySelectorAll('.pallolauta-nimi')].map((el) => {
+        const t = el.querySelector('text');
+        const r = t ? t.getBoundingClientRect() : null;
+        const a = el.getBoundingClientRect();
+        const koko = t ? Number(t.getAttribute('font-size')) : 0;
+        if (!r || !(r.width > 0) || !(koko > 0)) return null;
+        const dx = r.left + r.width / 2 - (a.left + a.width / 2);
+        const dy = r.top + r.height / 2 - (a.top + a.height / 2);
+        return {
+          id: el.dataset.kaupunki,
+          kulma: (Math.atan2(dy, dx) * 180) / Math.PI,
+          suhde: Math.hypot(dx, dy) / koko,
+          ank: t.getAttribute('text-anchor'),
+        };
+      }).filter(Boolean);
       return {
+        kyltit,
         alt: l.pallo.pointOfView().altitude,
         kyltti: teksti ? Number(teksti.getAttribute('font-size')) : 0,
         paneeli: perus * skaala,
@@ -297,6 +425,21 @@ for (const ruutu of RUUDUT) {
         // uloimmalla sallitulla zoomilla tasan 1 joka ruudulla.
         vertailuskaala: l.saapumisenSkaala?.() ?? 0,
         nostonMitta,
+        /*
+         * KOHDEMAAN MERKIT JA KAUPUNGIN NIMIÖ (vartio 8, Raamattu
+         * KARTTAUUDISTUKSEN PAATOKSET 25). Portin luvut tulevat
+         * kerrokselta itseltään, kaupunkimerkin mitta sen omasta
+         * transformista — sama lukutapa kuin nostolla yllä.
+         */
+        portinMerkkeja: portti?.merkit?.length ?? 0,
+        portinPiiloon: portti?.piiloon?.length ?? 0,
+        kaupunkeja: document.querySelectorAll('.pallolauta-nosto-kaupunki').length,
+        kaupunginMitta,
+        aihemerkkeja: aihemerkit.length,
+        aiheryhmissa: aihemerkit.reduce((a, r) => a + r.maara, 0),
+        lappuja: laput.length,
+        limitysPareja: pareja,
+        viuhka,
       };
     }, [osuus, alkuPov]);
     zoomit.push(mitta);
@@ -351,6 +494,123 @@ for (const ruutu of RUUDUT) {
   vaadi(`6. ${ruutu.nimi}: karttanoston kyltti seuraa samaa kerrointa `
     + `(${parit6.length} tasoa, ±3 %)`,
     ero6 <= 0.03, `hajonta ${p(100 * ero6, 2)} %`);
+
+  /*
+   * 8. KOHDEMAAN MERKIT ILMAN KATTOA JA KAUPUNGIN ISOMPI NIMIÖ
+   * (omistaja 15.9.2026 klo 17.20 UTC, Raamattu KARTTAUUDISTUKSEN
+   * PAATOKSET 25: *"Kohdemaalle ei kattoa"*, *"Isommaksi, n. 11-12
+   * px"*). Mitta on SAAPUMISNÄKYMÄ eli sarjan ensimmäinen taso
+   * (kerroin 1): siinä portti oli ennen tätä erää kiinni ja katto
+   * voimassa, ja juuri siitä omistaja kysyi, miksi Ranskan nostot ja
+   * muut kaupungit puuttuvat.
+   */
+  const saapuen = zoomit[0];
+  tieto(`${ruutu.nimi} · saapumisnäkymän portti`,
+    `päästää ${saapuen.portinMerkkeja}, piiloon ${saapuen.portinPiiloon}, `
+    + `kaupunkimerkkejä ${saapuen.kaupunkeja}, kaupungin mitta ${p(saapuen.kaupunginMitta, 4)}`);
+  vaadi(`8. ${ruutu.nimi}: saapumisnäkymässä ei jää yhtään kohdemaan merkkiä piiloon`,
+    saapuen.portinPiiloon === 0 && saapuen.portinMerkkeja >= FRA_MERKKEJA,
+    `päästää ${saapuen.portinMerkkeja}, piiloon ${saapuen.portinPiiloon}`);
+  const kaupunginNimio = saapuen.kaupunginMitta * NOSTOSYM_NIMIO_KOKO;
+  vaadi(`8b. ${ruutu.nimi}: lisäkaupungin nimiö on saapumiszoomilla 11–12 px`,
+    saapuen.kaupunkeja > 0 && kaupunginNimio >= 11 && kaupunginNimio <= 12,
+    `${p(kaupunginNimio, 2)} px, kaupunkimerkkejä ${saapuen.kaupunkeja}`);
+  const nostonNimio = saapuen.nostonMitta * NOSTOSYM_NIMIO_KOKO;
+  vaadi(`8c. ${ruutu.nimi}: noston nimiö on pienempi kuin kaupungin `
+    + '(PAATOKSET 25 kohta 3)',
+    nostonNimio > 0 && nostonNimio < kaupunginNimio,
+    `nosto ${p(nostonNimio, 2)} px, kaupunki ${p(kaupunginNimio, 2)} px`);
+
+  /*
+   * 9. AIHEMERKIT JA VIUHKA (omistaja 15.9.2026 klo 20.00 UTC,
+   * Raamattu KARTTAUUDISTUKSEN PAATOKSET 27: *"Tee saman aiheen
+   * nostot yhdeksi ilman selitettyä. Klikattaessa vaihtoehdot tulevat
+   * viuhkana näkyviin nimien kanssa"*).
+   *
+   * Mitat ovat samasta sarjasta kuin muutkin: saapuminen on kerroin 1
+   * ja yksi zoomporras sisään on kerroin 0,5 — sarjan 0,6 on jo
+   * lähizoomin puolella (LAHIZOOMIN_OSUUS_ULOIMMASTA 0,7), joten
+   * siellä ryhmiä ei saa olla yhtään.
+   */
+  const sisalla = zoomit[zoomit.length - 1];
+  tieto(`${ruutu.nimi} · aihemerkit`,
+    `saapuen ${saapuen.aihemerkkeja} merkkiä / ${saapuen.aiheryhmissa} nostoa, `
+    + `limityspareja ${saapuen.limitysPareja} (${saapuen.lappuja} nimiötä); `
+    + `lähizoomilla ${sisalla.aihemerkkeja}`);
+  vaadi(`9a. ${ruutu.nimi}: saapumisnäkymässä syntyy aihemerkkejä (Pariisin rykelmä)`,
+    saapuen.aihemerkkeja >= 1 && saapuen.aiheryhmissa >= 2,
+    `${saapuen.aihemerkkeja} merkkiä, ${saapuen.aiheryhmissa} nostoa`);
+  vaadi(`9b. ${ruutu.nimi}: limittyviä nimiöpareja enintään ${LIMITYSPARIEN_KATTO}`,
+    saapuen.limitysPareja <= LIMITYSPARIEN_KATTO, `${saapuen.limitysPareja} paria`);
+  vaadi('9c. ' + `${ruutu.nimi}: viuhka avautuu ja jokainen kohta mahtuu ruudulle`,
+    Boolean(saapuen.viuhka) && saapuen.viuhka.auki
+      && saapuen.viuhka.kohtia === saapuen.viuhka.jasenia
+      && saapuen.viuhka.ruudulla === saapuen.viuhka.kohtia
+      && saapuen.viuhka.kohtia_dom === saapuen.viuhka.kohtia,
+    saapuen.viuhka
+      ? `kohtia ${saapuen.viuhka.kohtia}/${saapuen.viuhka.jasenia}, ruudulla `
+        + `${saapuen.viuhka.ruudulla}, DOMissa ${saapuen.viuhka.kohtia_dom}`
+      : 'viuhkaa ei avattu');
+  vaadi(`9d. ${ruutu.nimi}: viuhka sulkeutuu`,
+    Boolean(saapuen.viuhka?.sulkeutui), 'jäi auki');
+  vaadi(`9e. ${ruutu.nimi}: yhden zoomportaan sisällä aihemerkkejä ei ole`,
+    sisalla.aihemerkkeja === 0, `${sisalla.aihemerkkeja} merkkiä`);
+  /*
+   * 9f. VASTAKOE ILMAN SELAINTA: sama ryhmitys, mutta merkit
+   * kaukana toisistaan eivätkä nimiöt koske — yksikään ryhmä ei saa
+   * syntyä (PAATOKSET 27 kohta 4: maan laajat yksittäiset nostot
+   * näkyvät nimiöin heti).
+   */
+  const kaukana = [0, 1, 2, 3].map((i) => ({
+    avain: `k${i}`,
+    aihe: 'historia',
+    p: { x: 100 + i * 4 * RYHMITYKSEN_ETAISYYS_PX, y: 100 },
+  }));
+  const vastakoe = ryhmitaNostot(kaukana, (m) => ({
+    x0: m.p.x - 5, y0: m.p.y - 5, x1: m.p.x + 5, y1: m.p.y + 5,
+  }));
+  vaadi('9f. vastakoe: kaukana toisistaan olevat saman aiheen nostot eivät ryhmity',
+    vastakoe.ryhmat.length === 0 && vastakoe.yksin.length === kaukana.length,
+    `${vastakoe.ryhmat.length} ryhmää`);
+
+  /*
+   * 7. KYLTIN ANKKURI ON KIINTEÄ KAIKILLA ZOOMEILLA (omistaja
+   * 15.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 24: *"nyt ne
+   * hyppivat eri puolille kaupungin merkkia. pitaisi pysya samassa
+   * kohdassa"*, ja *"koko voi muuttua"*). Jokaiselle kaupungille,
+   * jonka kyltti on olemassa vähintään kahdella tämän sarjan
+   * zoomtasolla: sama kylki (text-anchor), suunta ±ANKKURIN_KULMAVARA
+   * astetta ja tekstikorkeuteen suhteutettu etäisyys
+   * ±ANKKURIN_ETAISYYSVARA.
+   */
+  const ankkurit = new Map();
+  for (const z of zoomit) {
+    for (const k of z.kyltit ?? []) {
+      if (!ankkurit.has(k.id)) ankkurit.set(k.id, []);
+      ankkurit.get(k.id).push(k);
+    }
+  }
+  const hajonta = (luvut) => Math.max(...luvut) - Math.min(...luvut);
+  let mitattuja = 0;
+  for (const [id, sarja] of ankkurit) {
+    if (sarja.length < 2) continue;
+    mitattuja += 1;
+    const kulmat = sarja.map((k) => k.kulma);
+    const suhteet7 = sarja.map((k) => k.suhde);
+    const keski7 = suhteet7.reduce((a, b) => a + b, 0) / suhteet7.length;
+    tieto(`${ruutu.nimi}/${id} · ankkuri zoomeittain`,
+      sarja.map((k) => `${p(k.kulma, 1)}° / ${p(k.suhde, 2)}× ${k.ank}`).join('  |  '));
+    vaadi(`7a. ${ruutu.nimi}/${id}: kylki sama kaikilla zoomeilla (${sarja.length} tasoa)`,
+      sarja.every((k) => k.ank === sarja[0].ank), sarja.map((k) => k.ank).join('/'));
+    vaadi(`7b. ${ruutu.nimi}/${id}: suunta pysyy (±${ANKKURIN_KULMAVARA}°)`,
+      hajonta(kulmat) <= 2 * ANKKURIN_KULMAVARA, `hajonta ${p(hajonta(kulmat), 1)}°`);
+    vaadi(`7c. ${ruutu.nimi}/${id}: etäisyys tekstikorkeuteen suhteutettuna pysyy `
+      + `(±${100 * ANKKURIN_ETAISYYSVARA} %)`,
+      hajonta(suhteet7) <= 2 * ANKKURIN_ETAISYYSVARA * keski7,
+      `hajonta ${p((100 * hajonta(suhteet7)) / keski7, 1)} %`);
+  }
+  vaadi(`7. ${ruutu.nimi}: ankkuri mitattiin vähintään yhdestä kaupungista`,
+    mitattuja > 0, `${mitattuja} kaupunkia kahdella zoomtasolla`);
 
   if (KUVAKANSIO) {
     await sivu.screenshot({

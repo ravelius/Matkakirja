@@ -25749,6 +25749,78 @@ svg.rough-annotation { pointer-events: none; }
 .pallolauta-nimi-siirto { transition: transform 250ms ease-in-out; }
 
 /* ===========================================================================
+   AIHEMERKKI JA VIUHKA (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 27;
+   js/pallolauta/aihemerkit.js)
+
+   Omistaja 15.9.2026 klo 20.00 UTC, Pariisin rykelmästä: *"Tee saman
+   aiheen nostot yhdeksi ilman selitettyä. Klikattaessa vaihtoehdot
+   tulevat viuhkana näkyviin nimien kanssa"*.
+
+   AIHEMERKKI on aiheen väripallo, ryhmän kärkisymboli ja pieni
+   lukumäärä — ei nimiötä. Väri tulee kärkisymbolin omasta
+   mustemuuttujasta (--sym-*), samasta lähteestä kuin lisää-valikon
+   pallot (js/karttaselite.js), joten valikko ja kartta ovat samaa
+   sävyä.
+
+   VIUHKA piirtyy AIHEMERKIN OMAAN elementtiin: kohdat ovat sen svg:n
+   lapsia, siirrettyinä kaarelle ruutupikseleinä. Napautus ei kulje
+   elementin kautta vaan laudan omasta osumatestistä
+   (js/pallolauta/lauta.js napautaPintaan → nostot.napautaViuhkasta),
+   kuten kaikilla pallon merkeillä — kangas on osumajärjestyksessä
+   CSS2D-kerroksen päällä, joten pointer-events ei kohtaa auttaisi.
+   Kohdan paperilautanen on siksi pelkkää kuvaa; sen mitta on sama
+   laatikko, jota sormi vertaa.
+
+   EI SUODATTIMIA (iOS-sääntö, tests/rules.test.mjs): avaus on
+   transform ja opacity.
+   =========================================================================== */
+
+.pallolauta-aihemerkki-pohja { fill: var(--paper, #efdcb4); opacity: 0.95; }
+.pallolauta-aihemerkki-lautanen { opacity: 0.5; }
+.pallolauta-aihemerkki-keha {
+  fill: none;
+  stroke: var(--sym-muste, #4b3a1c);
+  stroke-width: 1.1;
+  opacity: 0.85;
+}
+.pallolauta-aihemerkki-sym { transform: scale(0.62); }
+.pallolauta-aihemerkki-luku {
+  fill: var(--sym-muste, #4b3a1c);
+  font-family: var(--font-atlas, Georgia, serif);
+  paint-order: stroke;
+  stroke: var(--paper, #efdcb4);
+  stroke-width: 2.2;
+  stroke-linejoin: round;
+}
+.pallolauta-aihemerkki-auki .pallolauta-aihemerkki-keha { stroke-width: 1.8; }
+
+.pallolauta-viuhka {
+  /* Kaari aukeaa merkin keskeltä ulos: origo on merkin oma piste. */
+  animation: pallolauta-viuhka-avaa 180ms ease-out;
+}
+@keyframes pallolauta-viuhka-avaa {
+  from { transform: scale(0.72); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.pallolauta-viuhka-viiva {
+  stroke: var(--sym-muste, #4b3a1c);
+  stroke-width: 0.9;
+  opacity: 0.45;
+}
+.pallolauta-viuhka-osuma {
+  fill: var(--paper, #efdcb4);
+  fill-opacity: 0.86;
+  stroke: var(--sym-muste, #4b3a1c);
+  stroke-opacity: 0.25;
+  stroke-width: 0.8;
+  rx: 7;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pallolauta-viuhka { animation: none; }
+}
+
+/* ===========================================================================
    MAAN PERUSTIEDOT JA LISÄÄ-VALIKKO KARTALLA (karttauudistus erä 3,
    asu ja koko erä 9; js/pallolauta/maapaneeli.js)
 
