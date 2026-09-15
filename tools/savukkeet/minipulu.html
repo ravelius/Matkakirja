@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fi">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Minipulun selainkoe</title>
+<link rel="stylesheet" href="../../css/satelliitti.css">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #040907; color: #dff6e8; font: 14px system-ui; }
+  .satelliitti-katselu { top: 0; }
+  .koepohja { position: absolute; inset: 0; background: radial-gradient(ellipse at 35% 30%, #344652, #101a21 55%, #040907); }
+  .koeohje { position: absolute; left: 18px; top: 18px; max-width: calc(100% - 190px); font-size: 12px; line-height: 1.5; opacity: .8; }
+  .koeohje h1 { font-size: 16px; }
+  .minipulu-paikka { position: absolute; z-index: 4; pointer-events: none; }
+  .koekuvat { display: flex; gap: 22px; margin-top: 24px; align-items: end; }
+  .koekuva { min-width: 66px; padding: 6px; border-radius: 6px; }
+  .koekuva:last-child { background: #edece5; }
+  .koekuva small { display: block; margin-bottom: 4px; color: #87959e; }
+  .satelliitti-pikku .koepikku { display: block; height: 40px; background: linear-gradient(135deg, #71847a, #183334); }
+  @media (orientation: portrait) { .koeohje { max-width: calc(100% - 36px); } }
+</style>
+<section class="satelliitti-katselu">
+  <div class="satelliitti-lava"><div class="koepohja"></div></div>
+  <div class="koeohje">
+    <h1>Minipulu · erillinen selainkoe</h1>
+    <p>Sama SVG-hahmo. Alla lepo, katse ja vaalea tausta.<br>Oikean reunan Pulu väistää oikean linssin hallintapalkkia.</p>
+    <div class="koekuvat"><div class="koekuva" id="lepo"><small>Lepo</small></div><div class="koekuva" id="katse"><small>Katse</small></div><div class="koekuva" id="vaalea"><small>Vaalea</small></div></div>
+  </div>
+  <div class="satelliitti-ala">
+    <div class="satelliitti-nauha">
+      <button class="satelliitti-pikku valittu"><span class="koepikku"></span><span>1</span></button>
+      <button class="satelliitti-pikku"><span class="koepikku"></span><span>2</span></button>
+      <button class="satelliitti-pikku"><span class="koepikku"></span><span>3</span></button>
+    </div>
+    <div class="satelliitti-napit">
+      <button class="satelliitti-nuoli satelliitti-edellinen" aria-label="Edellinen">‹</button>
+      <span class="satelliitti-laskuri">1 / 3</span>
+      <button class="satelliitti-nuoli satelliitti-seuraava" aria-label="Seuraava">›</button>
+      <span class="satelliitti-vali"></span>
+      <button class="satelliitti-info" aria-label="Tiedot">i</button>
+      <button class="satelliitti-vertaa">Vertaa</button>
+      <button class="satelliitti-sulku" aria-label="Sulje havainto">×</button>
+    </div>
+  </div>
+  <div class="minipulu-paikka"></div>
+</section>
+<script type="module">
+  import { luoMinipulu } from '../../js/minipulu.js';
+  const q = s => document.querySelector(s);
+  const mini = luoMinipulu(q('.minipulu-paikka'));
+  mini.katso();
+  const muut = [luoMinipulu(q('#lepo')), luoMinipulu(q('#katse')), luoMinipulu(q('#vaalea'))];
+  muut[1].katso();
+  const paikka = () => {
+    const ruutu = q('.satelliitti-katselu').getBoundingClientRect();
+    const palkki = q('.satelliitti-ala').getBoundingClientRect();
+    const vaaka = matchMedia('(orientation: landscape)').matches;
+    q('.minipulu-paikka').style.right = `calc(${vaaka ? ruutu.right - palkki.left + 12 : 12}px + env(safe-area-inset-right, 0px))`;
+    q('.minipulu-paikka').style.bottom = `calc(${vaaka ? 12 : ruutu.bottom - palkki.top + 12}px + env(safe-area-inset-bottom, 0px))`;
+  };
+  const observer = new ResizeObserver(paikka);
+  observer.observe(q('.satelliitti-ala'));
+  observer.observe(q('.satelliitti-katselu'));
+  paikka();
+  window.koe = { mini, muut, luoMinipulu };
+</script>
+</html>
