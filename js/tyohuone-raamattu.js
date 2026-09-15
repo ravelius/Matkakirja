@@ -7838,7 +7838,15 @@ export const RAAMATTU = {
           + '(PAATOKSET 24); 3) mitataan ettei nimiot ja nostot peita '
           + 'toisiaan kohtuuttomasti saapumisnakymassa (limitysmittari '
           + 'tarkista-nimiolimitys) - jos peittoa, nostojen nimiot '
-          + 'pienemmalla kuin kaupunkien. Tila: tyo Opus-agentilla.',
+          + 'pienemmalla kuin kaupunkien. TULOS (#2533): 62/62 merkkia '
+          + 'saapuessa, kaupunkinimio 11,5 px; lahi-lippu ei enaa pidata '
+          + 'kohdemaan nostoja (se oli katon kiertotie datassa). '
+          + 'TARKENNUS (omistaja 15.9.2026 klo 19.50 UTC kysymyskortilla, '
+          + 'kun Pariisin ymparille tuli 20 noston rykelma ja 36 % '
+          + 'nimioista limittyi: "Nostojen nimiot pienemmaksi (7 px)"): '
+          + 'nostojen nimio saapumiszoomilla 7 px (kaupungit 11,5 px), '
+          + 'kaikki nimiot nakyvat heti; skaalautuu zoomissa kuten muut. '
+          + 'Tila: tyo Sonnet-agentilla samaan PR:aan.',
         'KARTTAUUDISTUKSEN PAATOKSET 20: MAAPANEELILLE JOKA MAALLE OMA '
           + 'PAIKKA, FABLE ARVIOI VISUAALISESTI (omistaja 15.9.2026 klo '
           + '10.55 UTC, tyopoytakuva Kreikasta, sanatarkasti: "tuon maan '
