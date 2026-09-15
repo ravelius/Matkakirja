@@ -1081,6 +1081,16 @@ export function luoPallokamera({
     /** Uloszoomauksen katto maan laatikosta tai null (ks. uloszoomausRaja). */
     uloszoomausRaja,
     /**
+     * Sovitetaanko tämän laatikon saapumisnäkymä KORKEUTEEN (erä 14,
+     * PÄÄTÖKSET 17)? Sama ehto kuin `korkeuteenSovitus`illa — ruudun
+     * kuvasuhde on kapeampi kuin laatikon kuvasuhde pallolla — vain
+     * luettavaksi ulos. Maapaneeli valitsee sillä ankkurinsa (erä 16,
+     * PÄÄTÖKSET 18); kameran oma logiikka ei muutu.
+     */
+    korkeuteenSovitettu: (bbox, vara = ULOSZOOMAUKSEN_KERROIN) => (
+      Boolean(bbox && korkeuteenSovitus(bbox, vara))
+    ),
+    /**
      * Kesken oleva ajo mittausta varten (savuke-siirtokoreografia
      * `--lauta pallo`): sama muoto kuin Kartta.kameraAjo — nykyinen
      * kehys laudan yksiköissä, kesto ja alkuhetki. Null, kun ajoa ei ole.

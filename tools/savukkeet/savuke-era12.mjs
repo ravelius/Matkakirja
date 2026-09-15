@@ -47,6 +47,13 @@
  *      ruudun sisään: kummassakin ääripäässä (länsi = Bretagne, itä =
  *      Elsass) maan kärki on ruudulla ja laatikon reuna ruudun
  *      ulkopuolella.
+ *   8. ANKKURI SEURAA KUVASUHDE-EHTOA (erä 16, Raamattu
+ *      KARTTAUUDISTUKSEN PÄÄTÖKSET 18, omistaja 15.9.2026). Kapealla
+ *      ruudulla (390 px pystyssä — sama ehto kuin PÄÄTÖKSET 17:n
+ *      korkeussovituksella, ei laitetunnistusta) Ranskan maapaneelin
+ *      ankkuri on LYONINLAHDELLA, kortti on saapuessa kokonaan
+ *      ruudulla ja meren päällä; leveällä ruudulla (1400 px) ankkuri
+ *      on ennallaan BISKAJANLAHDELLA.
  *
  * === VASTAKOKEET (pakolliset) ======================================
  *
@@ -74,6 +81,11 @@
  *      MOLEMPIIN suuntiin, kuten ennen erää 14. KORKEUSSOVITUSVÄITTEEN
  *      ON KAADUTTAVA (sitova akseli vaihtuu X:ksi ja pystyyn jää
  *      mitattu 59 % tyhjää).
+ *   H. MAAPANEELIN_KAPEAT_ANKKURIT tyhjäksi → Ranska jää
+ *      Biskajanlahdelle myös pystypuhelimella. VÄITTEEN 8 ON
+ *      KAADUTTAVA: korkeuteen sovitettu saapumisnäkymä rajaa ruudun
+ *      maan pystymittaan, ja laatikon länsireunan takana oleva kortti
+ *      jää ruudun ULKOPUOLELLE.
  *
  * === MIKSI 9 SEKUNNIN LEPO ON OSA KOETTA ============================
  *
@@ -203,6 +215,10 @@ const palvelin = http.createServer((req, res) => {
      */
     runko = Buffer.from(runko.toString('utf8')
       .replace(/MAAPANEELIN_ANKKURIT = \{[\s\S]*?\n\};/, 'MAAPANEELIN_ANKKURIT = {};')
+      // ERÄ 16: kapea ruutu (390 px) käyttää Lyoninlahtea, joten
+      // pelkkä leveän ankkurin poisto ei enää palauttaisi paneelia
+      // eteläreunaan. Molemmat taulut on tyhjennettävä.
+      .replace(/MAAPANEELIN_KAPEAT_ANKKURIT = \{[\s\S]*?\n\};/, 'MAAPANEELIN_KAPEAT_ANKKURIT = {};')
       .replace(/MAAPANEELIN_TEKSTIKERROIN = [\d.]+/, 'MAAPANEELIN_TEKSTIKERROIN = 1')
       /*
        * ERÄ 15: MYÖS KATTO ON PURETTAVA. Uusi ruutukatto leikkaisi
@@ -210,6 +226,18 @@ const palvelin = http.createServer((req, res) => {
        * mahtuu Ranskan eteläreunallakin merelle (mitattu: osumia 0).
        */
       .replace(/MAAPANEELIN_KATTO_RUUDUSTA = [\d.]+/, 'MAAPANEELIN_KATTO_RUUDUSTA = 10'));
+  }
+  if (vastakoe === 'H' && polkuOsa.endsWith('/js/pallolauta/maapaneeli.js')) {
+    /*
+     * ERÄ 16 — VASTAKOE H: KAPEA-ANKKURI POIS. Ranska jää
+     * Biskajanlahdelle myös pystypuhelimella, jolloin korkeuteen
+     * sovitettu saapumisnäkymä (PÄÄTÖKSET 17) rajaa ruudun maan
+     * PYSTYMITTAAN ja laatikon länsireunan takana oleva kortti jää
+     * ruudun ULKOPUOLELLE. Väitteen 8 on kaaduttava.
+     */
+    runko = Buffer.from(runko.toString('utf8')
+      .replace(/MAAPANEELIN_KAPEAT_ANKKURIT = \{[\s\S]*?\n\};/,
+        'MAAPANEELIN_KAPEAT_ANKKURIT = {};'));
   }
   if (vastakoe === 'D' && polkuOsa.endsWith('/js/pallolauta/kamera.js')) {
     /*
@@ -435,6 +463,9 @@ const mittaa = (sivu) => sivu.evaluate(() => {
     maxAlt: ohj.maxDistance / sade - 1,
     minAlt: ohj.minDistance / sade - 1,
     skaala: datum?.skaala ?? null,
+    // ERÄ 16: sovitetaanko TÄMÄN maan saapumisnäkymä korkeuteen?
+    // Sama ehto, jolla maapaneeli valitsee ankkurinsa.
+    kapea: datum?.laatikko ? Boolean(l.kamera.korkeuteenSovitettu?.(datum.laatikko)) : null,
     mitat,
     kortti: r ? { x0: r.left - kotelo.left, y0: r.top - kotelo.top, x1: r.right - kotelo.left, y1: r.bottom - kotelo.top, w: r.width, h: r.height } : null,
     kotelo: { w: kotelo.width, h: kotelo.height, x0: kotelo.left, y0: kotelo.top },
@@ -752,6 +783,23 @@ const LEVEYDEN_KATTO = 0.10;
  */
 const leveysTulokset = [];
 const meriTulokset = [];
+/*
+ * VÄITE 8: ANKKURI SEURAA KUVASUHDE-EHTOA (erä 16, Raamattu
+ * KARTTAUUDISTUKSEN PÄÄTÖKSET 18, omistaja 15.9.2026).
+ *
+ * Kapealla ruudulla (390 px pystyssä — sama ehto kuin PÄÄTÖKSET 17:n
+ * korkeussovituksella, EI laitetunnistusta) Ranskan maapaneelin
+ * ankkuri on LYONINLAHDELLA, kortti on saapuessa KOKONAAN RUUDULLA ja
+ * MEREN PÄÄLLÄ; leveällä ruudulla (1400 px) ankkuri on ennallaan
+ * BISKAJANLAHDELLA. Kumpikin piste luetaan ajossa olevasta pelistä
+ * (lauta.maapaneeli.mitat()), ei koodivakiosta, ja verrataan päätöksen
+ * lukuun ASTEEN_VARAlla.
+ */
+const KAPEA_ANKKURI = { lat: 42.6, lng: 3.9 };   // Lyoninlahti
+const LEVEA_ANKKURI = { lat: 45.9, lng: -4.6 };  // Biskajanlahti
+/** Ankkurin sallittu poikkeama päätöksen luvusta (pyöristys, ei muuta). */
+const ASTEEN_VARA = 0.05;
+const ankkuriTulokset = [];
 const suhdeTulokset = [];
 const rajausTulokset = [];
 let paaVirheet = [];
@@ -808,6 +856,33 @@ for (const ruutu of RUUDUT) {
     + `${osumat?.length ? ` (${[...new Set(osumat.map((o) => o.iso))].join(', ')})` : ''}, `
     + `kortti ruudulla x ${p(m.kortti?.x0, 1)}…${p(m.kortti?.x1, 1)} / 0…${p(m.kotelo.w, 1)}, `
     + `y ${p(m.kortti?.y0, 1)}…${p(m.kortti?.y1, 1)} / 0…${p(m.kotelo.h, 1)}`);
+
+  /* --- 8. ankkuri seuraa kuvasuhde-ehtoa (erä 16) ---------------- */
+  {
+    const odotettu = ruutu.nimi === '390' ? KAPEA_ANKKURI : LEVEA_ANKKURI;
+    const ero = m.mitat
+      ? Math.max(Math.abs(m.mitat.lat - odotettu.lat), Math.abs(m.mitat.lng - odotettu.lng))
+      : null;
+    const ruudulla = Boolean(m.kortti && m.kortti.x0 >= -0.5 && m.kortti.y0 >= -0.5
+      && m.kortti.x1 <= m.kotelo.w + 0.5 && m.kortti.y1 <= m.kotelo.h + 0.5);
+    ankkuriTulokset.push({
+      ruutu: ruutu.nimi,
+      kapea: m.kapea,
+      odotettuKapea: ruutu.nimi === '390',
+      lat: p(m.mitat?.lat, 3),
+      lng: p(m.mitat?.lng, 3),
+      ero: p(ero, 4),
+      ruudulla,
+      merella: Boolean(osumat && osumat.length === 0),
+      ok: Boolean(m.kapea === (ruutu.nimi === '390') && ero !== null && ero <= ASTEEN_VARA
+        && ruudulla && osumat && osumat.length === 0),
+    });
+    tieto(`${ruutu.nimi} px · maapaneelin ankkuri (erä 16)`,
+      `korkeussovitus ${m.kapea} → odotettu ${ruutu.nimi === '390' ? 'Lyoninlahti' : 'Biskajanlahti'} `
+      + `${p(odotettu.lat, 2)} N / ${p(odotettu.lng, 2)} E, mitattu ${p(m.mitat?.lat, 3)} N / `
+      + `${p(m.mitat?.lng, 3)} E (ero ${p(ero, 4)}°, vara ${ASTEEN_VARA}°), `
+      + `kortti kokonaan ruudulla ${ruudulla}, merellä ${Boolean(osumat && osumat.length === 0)}`);
+  }
 
   if (KUVAKANSIO) {
     await sivu.evaluate(() => {
@@ -909,6 +984,10 @@ vaadi('7. lisää-valikko on yhdellä rivillä ja irti kortista (390 px ja 1400 
   valikkoTulokset.length === RUUDUT.length && valikkoTulokset.every((t) => t.ok),
   JSON.stringify(valikkoTulokset.map((t) => ({ ruutu: t.ruutu, rivit: t.rivit,
     rako: t.rako, leikkaa: t.leikkaa }))));
+vaadi('8. ankkuri: kapealla ruudulla Lyoninlahti, leveällä Biskajanlahti — '
+  + 'kortti ruudulla ja meren päällä kummallakin',
+  ankkuriTulokset.length === RUUDUT.length && ankkuriTulokset.every((t) => t.ok),
+  JSON.stringify(ankkuriTulokset));
 tieto('sivun virheet (pääajo)', paaVirheet.length ? paaVirheet.join(' | ') : 'ei yhtään');
 vaadi('4. pääajo ei tuottanut sivuvirheitä', paaVirheet.length === 0, paaVirheet.join(' | '));
 
@@ -1016,6 +1095,24 @@ vastakoe = 'B';
     + `→ väite 2 ${osumat && osumat.length === 0 ? 'LÄPI (paha)' : 'PUNAINEN'}`);
   vaadi('VASTAKOE B: eteläreunan ankkurilla meriväite kaatuu',
     Boolean(auki && osumat) && osumat.length > 0, JSON.stringify({ auki, osumia: osumat?.length }));
+  await ctx.close();
+}
+
+/* H: kapea-ankkuri pois → väitteen 8 on kaaduttava (erä 16). */
+vastakoe = 'H';
+{
+  const { ctx, sivu, auki } = await avaaPeli({ leveys: 390, korkeus: 844 });
+  const m = auki ? await mittaa(sivu) : null;
+  const ruudulla = Boolean(m?.kortti && m.kortti.x0 >= -0.5 && m.kortti.y0 >= -0.5
+    && m.kortti.x1 <= m.kotelo.w + 0.5 && m.kortti.y1 <= m.kotelo.h + 0.5);
+  tieto('vastakoe H (kapea-ankkuri pois → Biskajanlahti myös pystypuhelimella)',
+    `keskiylä ${p(m?.mitat?.lat, 3)} N / ${p(m?.mitat?.lng, 3)} E, `
+    + `kortti x ${p(m?.kortti?.x0, 1)}…${p(m?.kortti?.x1, 1)} / 0…${p(m?.kotelo?.w, 1)}, `
+    + `y ${p(m?.kortti?.y0, 1)}…${p(m?.kortti?.y1, 1)} / 0…${p(m?.kotelo?.h, 1)} `
+    + `→ väite 8 ${ruudulla ? 'LÄPI (paha)' : 'PUNAINEN'}`);
+  vaadi('VASTAKOE H: ilman kapea-ankkuria paneeli jää pystypuhelimella ruudun ulkopuolelle',
+    Boolean(auki && m?.kortti) && !ruudulla,
+    JSON.stringify({ auki, kortti: m?.kortti, kotelo: m?.kotelo }));
   await ctx.close();
 }
 
