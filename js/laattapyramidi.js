@@ -90,7 +90,9 @@
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
 import { NOSTOLADONTA_SAANTO } from './nostoladonta.js';
-import { lataaMaapolygonit, maanAluevesiPolku, puraMaanRenkaat } from './maanaariviivat.js';
+import {
+  lataaMaapolygonit, maanAluevesiPolku, maanAluevesiRenkaat, puraMaanRenkaat,
+} from './maanaariviivat.js';
 
 /*
  * === NOUTAMINEN JA KIINNITTÄMINEN OVAT ERI ASIOITA =================
@@ -1730,6 +1732,67 @@ let variSuoja = null;
 let variSuojaHaku = false;
 let variSuojaPolygonit = null;
 
+/*
+ * ====== MAAILMANÄKYMÄSSÄ EI KERMAA (omistaja 15.9.2026) =============
+ *
+ * Raamattu, KARTTAUUDISTUKSEN PAATOKSET 23, sanatarkasti: *"maailma
+ * tilan ollessa paalla huntua ei pitanyt nakya. eli korkeuserot
+ * kaikkialle nakyviin"*. Kehittäjän maailmanäkymän ollessa päällä
+ * tasoituksen kerma ei siis peitä kohdemaan ulkopuolta lainkaan.
+ *
+ * KERMA ON KAHDESSA PAIKASSA, JA VAIN TOINEN ON ASIAKKAAN KÄDESSÄ:
+ *   1. laatan KANKAASEEN poltettu peite (tools/fokuskartta/
+ *      maailmapiirto.js polttaVariLeikkuri) kohdemaan renkaiden
+ *      ULKOPUOLELLA — sitä ei voi pyyhkiä laatasta pois;
+ *   2. pelin oma maalaus suojatun suorakaiteen ulkopuolelle
+ *      (js/pallolaatat.js maalaaTasoitus).
+ * Siksi maailmanäkymässä ei riitä, että maalaus jätetään tekemättä:
+ * VÄRILAATAN KUVA PIIRRETÄÄN VAIN KOHDEMAAN RENKAIDEN SISÄÄN, ja
+ * kaikkialla muualla jää näkyviin se pohjalaatta, joka on jo piirretty
+ * saman laatan kankaalle — koko maailman topografia varjostuksineen ja
+ * korkeuseroineen. Kohdemaan sisällä kuva on pikselilleen sama kuin
+ * ennen, joten korostus ja ääriviiva pysyvät paikallaan.
+ *
+ * RENKAAT OVAT SAMAT KUIN LAATTAAN POLTETTU REIKÄ: `maanAluevesiRenkaat`
+ * puskurilla 0 (tools/generoi-laattapyramidi.mjs LEIKKURIN_PUSKURI),
+ * eli sama raja samasta aineistosta — ei toista totuutta rannikolle.
+ *
+ * TILA ON `avain`-OSANA, joten laattakerros mitätöi kankaansa itse, kun
+ * maailmanappi kytketään päälle tai pois (js/pallolaatat.js
+ * MAANVAIHTO MITÄTÖI LAATAT).
+ */
+let variMaailma = false;
+
+/**
+ * Onko kehittäjän maailmanäkymä päällä (kerma pois)? Asetetaan samassa
+ * hetkessä kuin väritason maa (js/pallolauta/lauta.js).
+ *
+ * @returns {boolean} true, jos tila vaihtui
+ */
+export function asetaTasoituksenMaailma(paalla) {
+  const uusi = Boolean(paalla);
+  if (uusi === variMaailma) return false;
+  variMaailma = uusi;
+  return true;
+}
+
+/** Onko tasoituksen maailmanäkymä päällä (savukkeet, testit). */
+export function tasoituksenMaailma() {
+  return variMaailma;
+}
+
+/**
+ * Kohdemaan renkaat laudan yksiköissä maailmanäkymän leikkuria varten,
+ * tai null, jos aineistoa ei vielä ole. Muisti on `maanAluevesiRenkaat`:n
+ * omassa välimuistissa, joten tämä on maakohtainen haku eikä uusi
+ * laskenta joka laatalle.
+ */
+function variMaanRenkaat() {
+  if (!variSuojaPolygonit || !variMaaNyt) return null;
+  const renkaat = maanAluevesiRenkaat(variSuojaPolygonit, variMaaNyt, 0);
+  return renkaat?.length ? renkaat : null;
+}
+
 /**
  * Kohdemaan renkaiden yhteinen laatikko laudan yksiköissä, rajattuna
  * laataston laatikkoon — tai null, jos aineisto on vielä haussa.
@@ -1788,7 +1851,8 @@ function variMaanSuoja(iso, L) {
  * `avain` muuttuu, kun suoja tarkentuu renkaiden saavuttua — pallon
  * lepokerros mitätöi laattansa siitä (js/pallolaatat.js).
  *
- * @returns {{kerma: string, peitto: number, suoja: object, avain: string}|null}
+ * @returns {{kerma: string, peitto: number, suoja: object, maailma: boolean,
+ *   renkaat: Array|null, avain: string}|null}
  */
 export function pyramidinTasoitus() {
   const vt = varitasonKirjaus();
@@ -1805,11 +1869,17 @@ export function pyramidinTasoitus() {
   }
   if (!variSuoja) return null;
   const s = variSuoja;
+  // Maailmanäkymässä kermaa ei ole: leikkuri on kohdemaan rengas, ja
+  // avaimen `M` mitätöi kankaat napin kytkennässä (ks. yllä).
+  const renkaat = variMaailma ? variMaanRenkaat() : null;
   return {
     kerma: vt.kerma || '#faf4d6',
     peitto,
     suoja: s,
-    avain: `${variMaaNyt}|${s.tarkka ? 'T' : 'L'}|${Math.round(s.x)}|${Math.round(s.y)}`
+    maailma: variMaailma,
+    renkaat,
+    avain: `${variMaaNyt}|${variMaailma ? 'M' : 'K'}|${renkaat ? renkaat.length : 0}`
+      + `|${s.tarkka ? 'T' : 'L'}|${Math.round(s.x)}|${Math.round(s.y)}`
       + `|${Math.round(s.w)}|${Math.round(s.h)}`,
   };
 }

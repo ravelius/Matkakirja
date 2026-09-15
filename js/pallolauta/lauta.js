@@ -76,7 +76,7 @@ import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
  * päättele maata itse (js/pallolaatat.js), koska väri on osa laatan
  * kangasta eikä kerros, jonka voisi jälkikäteen piilottaa.
  */
-import { asetaVaritasonMaa } from '../laattapyramidi.js';
+import { asetaTasoituksenMaailma, asetaVaritasonMaa } from '../laattapyramidi.js';
 import {
   lataaMaapolygonit, maanLautalaatikko, nollaaPallonMaakorostus, paivitaPallonMaakorostus,
 } from '../maanaariviivat.js';
@@ -3122,6 +3122,17 @@ export async function avaaPallolauta(ui) {
       asteet: pallonAsteet,
       lataa: lataaMaapolygonit,
     });
+    /*
+     * MAAILMANÄKYMÄ LUETAAN SAMASTA HETKESTÄ KUIN MAA (omistaja
+     * 15.9.2026, Raamattu: KARTTAUUDISTUKSEN PAATOKSET 23). Kun
+     * kehittäjän maailmanappi on päällä, tasoituksen kerma ei peitä
+     * kohdemaan ulkopuolta lainkaan — korkeuserot näkyvät koko
+     * laudalla. Tila muuttaa `pyramidinTasoitus`:n avainta, joten
+     * laattakerros mitätöi kankaansa itse napin kytkennässä (sama
+     * portti kuin muualla tässä tiedostossa: katselukuva on pelaajan
+     * kuva eikä kehittäjän).
+     */
+    asetaTasoituksenMaailma(kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu);
     /*
      * VÄRITASON MAA JA ULOSZOOMAUKSEN KATTO SAMASTA HETKESTÄ KUIN KEHÄ
      * (erät 1b ja 2). Kolme asiaa kertoo samaa maata — punainen kehä,
