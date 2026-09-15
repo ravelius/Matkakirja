@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync, statSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 
 /*
  * LINSSIT PALLOLLA — AALTO 1A (omistaja 5.9.2026, Raamattu KAIKKI
@@ -162,19 +162,20 @@ test('polygonsData on sallittu kerros ja moottori asettaa sen sopimuksen mukaan'
   assert.match(reitit, /aseta\('peli', polut\);/, 'pelin reitit ovat oma osansa');
 });
 
-test('topografia piirtyy pallolle tasavälisenä kalvona, ja kuva on repossa', () => {
+test('topografia piirtyy pallolle tasavälisenä kalvona, ja kuva on R2:ssa', () => {
   const src = lue('../js/linssit/topografia.js');
   assert.match(src, /pallolle\(lauta\) \{/, 'linssillä on pallolle-kahva');
   assert.match(src, /lauta\?\.linssit\?\.kalvo\('topografia'/, 'piirto kulkee linssimoottorin kautta');
   assert.match(src, /peittavyys: PEITTAVYYS/, 'sama 0,72 peittävyys kuin tasokartalla');
-  assert.match(src, /const PALLOKUVA = 'assets\/linssit\/topografia-pallo\.webp';/);
-  const kuva = new URL('../assets/linssit/topografia-pallo.webp', import.meta.url);
-  assert.ok(existsSync(kuva), 'pallon tasavälinen reliefi puuttuu (tools/tee-pallotopografia.mjs)');
-  assert.ok(statSync(kuva).size < 1_500_000, 'kuva on liian iso esiladattavaksi');
-  // Sama kuva ja moduuli myös service workerin esilatauslistalla.
+  // Kuva ei enää asu repossa (15.9.2026) vaan Cloudflare R2:ssa — mediaa
+  // ei säilytetä repossa.
+  assert.match(
+    src,
+    /const PALLOKUVA = 'https:\/\/media\.matkakirja\.app\/matkakirja\/linssit\/topografia-pallo-\d{8}\.webp';/,
+  );
+  // Moduuli itse (ei kuva) on yhä service workerin esilatauslistalla.
   const sw = lue('../sw.js');
   assert.ok(sw.includes("'./js/pallolauta/linssit.js'"));
-  assert.ok(sw.includes("'./assets/linssit/topografia-pallo.webp'"));
 });
 
 test('ui: pallolaudalla pallolle-linssi piirtyy pallolle eikä avaa linssikarttaa', () => {

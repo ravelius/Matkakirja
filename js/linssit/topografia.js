@@ -141,7 +141,7 @@ const KAISTAN_VENYTYS = 90;
  * Kaistat (KAISTAN_VENYTYS) ovat tasokartan asia eivätkä koske palloa —
  * pallolla ei ole ylä- eikä alareunaa.
  */
-const PALLOKUVA = 'assets/linssit/topografia-pallo.webp';
+const PALLOKUVA = 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-20260915.webp';
 
 const SELITERIVIT = [
   { vari: '#e8e8eb', teksti: 'Lumiraja, yli 6000 m' },

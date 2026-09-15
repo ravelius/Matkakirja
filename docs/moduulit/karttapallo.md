@@ -645,7 +645,10 @@ taulukko on toteutettu tiedostossa `js/pallolauta/linssit.js`
 - **Topografia.** `js/linssit/topografia.js` sai `pallolle(lauta)`, joka
   pyytää yhden kalvon peittävyydellä 0,72. Kuva on uudelleenprojisoitu
   laudan Milleristä tasaväliseksi (`tools/tee-pallotopografia.mjs` →
-  `assets/linssit/topografia-pallo.webp`, 4096 × 2048, 431 kt; navat
+  Cloudflare R2:
+  `https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-20260915.webp`,
+  4096 × 2048, 768 kt — uudelleenrenderöity 1′-korkeusdatasta 15.9.2026,
+  mediaa ei säilytetä repossa; navat
   läpinäkyviä, koska lauta kattaa 76° P … 58° E). Selitekortti toimii
   kuten ennen; kaistat eivät koske palloa.
 - **Käyttöliittymä.** `ui.pallolinssiKelpaa` on se yksi portti, joka
@@ -663,7 +666,8 @@ taulukko on toteutettu tiedostossa `js/pallolauta/linssit.js`
 **Aalto 1B — vesistöt pallolle (js/linssit/vesistot.js).** Linssi sai
 `pallolle(lauta)`, joka kutsuu `lauta.linssit`-apuria neljästi: kalvo
 (reliefi tasavälisenä, `TOPOGRAFIA_PALLOKUVA` =
-`assets/linssit/topografia-pallo.webp`, peittävyys 0,72), polygonit (38
+`https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-20260915.webp`
+(R2, 15.9.2026), peittävyys 0,72), polygonit (38
 järveä GeoJSON-renkaina, korkeus 0,003), polut (84 pengertä + 169 uomaa
 = 253, paksuus asteina 0,14/0,10 ja 0,06/0,04/0,025 tärkeysluokittain)
 ja merkit (20 tärkeimmän joen nimet, `.pallolauta-vesinimi`; kytkin
