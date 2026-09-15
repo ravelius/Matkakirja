@@ -10762,11 +10762,18 @@ export class UI {
     this.turnPill.textContent = '';
     // Laukun kahva pillerin edessä: pilleri on samalla matkalaukun nappi,
     // ja ilman kuvaketta mikään ei kertoisi sen aukeavan (omistajan toive).
+    //
+    // Isoisän mattolaukku (omistaja 15.9.2026, Raamattu "MATKALAUKKU ON
+    // FOGGIN MATTOLAUKKU"): pyöreähkö kangaslaukku, nahkakahva ja
+    // messinkilukko/kehys ylhäällä, kuvioitu kangas viitteellisesti
+    // siksak-rivinä. Bounding box (x4-20, y4.6-19.5) on tarkoituksella
+    // sama kuin vanhassa laukkukuvakkeessa.
     const laukku = html('span', 'laukku-ikoni');
     laukku.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true">'
-      + '<rect x="4" y="8" width="16" height="11.5" rx="2"/>'
-      + '<path d="M9.3 8V6.3a1.7 1.7 0 0 1 1.7-1.7h2a1.7 1.7 0 0 1 1.7 1.7V8'
-      + 'M8.6 8v11.5M15.4 8v11.5"/></svg>';
+      + '<rect x="4" y="8" width="16" height="11.5" rx="4"/>'
+      + '<path d="M9.3 8V6.3a1.7 1.7 0 0 1 1.7-1.7h2a1.7 1.7 0 0 1 1.7 1.7V8"/>'
+      + '<path d="M6.6 9.6h10.8"/><circle cx="12" cy="9.6" r="0.85"/>'
+      + '<path d="M7 13.6 10.3 16.4 13.7 13.6 17 16.4"/></svg>';
     this.turnPill.appendChild(laukku);
     if (game.phase === 'over') {
       this.turnPill.appendChild(html('span', '', `${game.winner.name} voitti`));
@@ -11636,7 +11643,17 @@ export class UI {
       const kuvaRuudulla = Boolean(document.querySelector(
         '.fokusvirta-luentakuva.nakyy, .fokusvirta-isokuva.nakyy',
       ));
-      document.body.classList.toggle('luenta-huntu', kertoja && kuvaRuudulla);
+      /*
+       * POIKKEUS KEHITTÄJÄN MAAILMANÄKYMÄSSÄ (omistaja 15.9.2026,
+       * Raamattu "KARTTATAUSTA LUENNAN JA KAUPUNKIESITTELYN AIKANA",
+       * POIKKEUS-kohta): kehittäjän maailmanäkymässä huntua ei nosteta
+       * lainkaan — muut luennan merkit (kaiutin, tekstipiilo, Liiku-
+       * piilo) pysyvät ennallaan. Nappi tarkistetaan joka kyselyllä,
+       * jotta huntu poistuu heti kun maailmanäkymä kytketään päälle
+       * kesken luennan.
+       */
+      const huntuSallittu = !(kehittajaTilaPaalla() && kehittajaMaailmaPaalla());
+      document.body.classList.toggle('luenta-huntu', kertoja && kuvaRuudulla && huntuSallittu);
     };
     askel();
     this.luentavahti = setInterval(askel, LUENTAVAHDIN_VALI_MS);
