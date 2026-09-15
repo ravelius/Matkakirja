@@ -96,7 +96,10 @@ const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '
  * alakolmanneksen ja napit hajosivat neljään nurkkaan.
  */
 const NAKYMAT = {
-  tyopoyta: { viewport: { width: 1280, height: 800 }, deviceScaleFactor: 1 },
+  // 1400 × 900 (omistaja 15.9.2026, Astronautin kamera -mittausvaatimus):
+  // sama koko kuin muut työpöytämittaukset, jotta X-nappi, NASA-rivi ja
+  // Liiku-napin piilotus mitataan täsmälleen tilatussa ikkunassa.
+  tyopoyta: { viewport: { width: 1400, height: 900 }, deviceScaleFactor: 1 },
   ipad: { viewport: { width: 834, height: 1194 }, deviceScaleFactor: 2, hasTouch: true },
   puhelin: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, hasTouch: true },
   puhelinvaaka: { viewport: { width: 844, height: 390 }, deviceScaleFactor: 2, hasTouch: true },
@@ -309,16 +312,32 @@ async function ajaNakyma(nakymanNimi) {
       ikkunanKorkeus: window.innerHeight,
       bodyLuokat: ['aikajana-palkki-auki', 'aikajana-paalla'].filter((l) => document.body.classList.contains(l)),
       sulje: document.querySelector('.satelliittipalkki-sulje')?.textContent ?? null,
+      suljeAria: document.querySelector('.satelliittipalkki-sulje')?.getAttribute('aria-label') ?? null,
       // OMISTAJA 12.9.2026: "Ota yläpalkin vetolaatikko pois".
       valintoja: document.querySelectorAll('.satelliittipalkki select, .satelliittipalkki-valinta').length,
       kohdenimi: document.querySelector('.satelliittipalkki-kohde')?.textContent ?? null,
       ohjeNakyy: oma && omaTyyli
         ? getComputedStyle(document.querySelector('.satelliittipalkki-ohje')).display !== 'none' : null,
+      ohjeTeksti: document.querySelector('.satelliittipalkki-ohje')?.textContent ?? null,
+      // Liiku-nappi (js/ui.js .monitoimi-nappi) piilossa linssin ajan
+      // (omistaja 15.9.2026: "Vasemman alareunan liikunnappi pitaa ottaa
+      // pois"). getComputedStyle, koska CSS piilottaa display:nonella.
+      liikuNakyy: (() => {
+        const n = document.querySelector('.toimintorivi .monitoimi-nappi');
+        return n ? getComputedStyle(n).display !== 'none' : null;
+      })(),
     };
   });
-  vaadi(nimessa('yläpalkissa EI ole vetolaatikkoa — vain linssin nimi, kohteen nimi ja Sulje linssi'),
-    palkki.valintoja === 0 && palkki.sulje === 'Sulje linssi' && palkki.kohdenimi === '',
+  vaadi(nimessa('yläpalkissa EI ole vetolaatikkoa — vain linssin nimi, kohteen nimi ja Sulje-X'),
+    palkki.valintoja === 0 && palkki.kohdenimi === '', JSON.stringify(palkki));
+  vaadi(nimessa('"Sulje linssi" -nappi on pelkkä X, aria-label kertoo täyden merkityksen'),
+    palkki.sulje === '×' && palkki.suljeAria === 'Sulje linssi', JSON.stringify(palkki));
+  vaadi(nimessa('ohjeteksti on lyhyt totuudenmukainen NASA-rivi, ei enää "Napauta hohtavaa..."'),
+    !/Napauta hohtavaa/.test(palkki.ohjeTeksti ?? '')
+      && /NASA/.test(palkki.ohjeTeksti ?? '') && (palkki.ohjeTeksti ?? '').length <= 50,
     JSON.stringify(palkki));
+  vaadi(nimessa('Liiku-nappi on piilossa linssin ollessa auki'),
+    palkki.liikuNakyy === false, JSON.stringify(palkki));
   vaadi(nimessa('koko yläpalkki vaihtuu: Matkakirjan palkki piilossa, yksi linssipalkki, kartta ei kutistu'),
     palkki.topbarNakyvyys === 'hidden' && palkki.topbarKorkeus === 0 && palkki.palkkeja === 1
       && Math.abs(palkki.omaKorkeus - topbarEnnen) < 2
@@ -958,6 +977,10 @@ async function ajaNakyma(nakymanNimi) {
       topbarNakyvyys: topbar ? getComputedStyle(topbar).visibility : null,
       topbarKorkeus: topbar?.getBoundingClientRect().height ?? null,
       lautaNakyy: window.matkakirja.ui.pallolauta?.paalla?.() === true,
+      liikuNakyy: (() => {
+        const n = document.querySelector('.toimintorivi .monitoimi-nappi');
+        return n ? getComputedStyle(n).display !== 'none' : null;
+      })(),
       tila: (() => {
         const { game } = window.matkakirja;
         return JSON.stringify({
@@ -977,6 +1000,8 @@ async function ajaNakyma(nakymanNimi) {
       && jalkeen.topbarNakyvyys === 'visible' && jalkeen.topbarKorkeus > 20
       && jalkeen.lautaNakyy && jalkeen.tila === ennen,
     JSON.stringify(jalkeen));
+  vaadi(nimessa('Liiku-nappi palaa näkyviin, kun linssi suljetaan'),
+    jalkeen.liikuNakyy === true, JSON.stringify(jalkeen));
   await kaappaa('suljettu');
 
   vaadi(nimessa('ei sivuvirheitä'), virheet.length === 0, virheet.slice(0, 3).join(' / '));

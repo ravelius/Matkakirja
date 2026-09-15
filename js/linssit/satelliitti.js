@@ -895,14 +895,35 @@ export function rakennaPalkki({ ui, kohteet, onSulje, doc = document }) {
   kohdenimi.setAttribute('aria-live', 'polite');
   kohdenimi.textContent = '';
 
+  /*
+   * OHJETEKSTI KERTOO LÄHTEEN, EI KÄYTTÖÄ (omistaja 15.9.2026,
+   * työpöytäkuva linssistä: *"ota pois tuon 'Napauta hohtavaa vihreää
+   * pistettä' -teksti. Ja sen tilalla voisi lukea jotain NASAsta ...
+   * lyhyesti"*). Vanha rivi opasti napautukseen, jonka pelaaja oppii
+   * ensimmäisellä kokeilulla; tilalla on lyhyt totuudenmukainen rivi
+   * kuvien alkuperästä. Sanamuoto ei väitä ISS:ää: aineisto
+   * (SATELLIITTI_LAHDE, satelliitti-data.js) tulee NASAn koko
+   * kuvakirjastosta (images.nasa.gov), eivät kaikki kuvat ole
+   * varmasti avaruusasemalta, vaikka moni onkin.
+   */
   const ohje = doc.createElement('span');
   ohje.className = 'satelliittipalkki-ohje';
-  ohje.textContent = 'Napauta hohtavaa vihreää pistettä: valokuva avautuu.';
+  ohje.textContent = 'Astronauttien ottamia valokuvia · NASA';
 
+  /*
+   * "SULJE LINSSI" -NAPPI ON PELKKÄ X (omistaja 15.9.2026, sama kuva:
+   * *"tuosta voisi muuttaa suljelinssi-napin pelkaksi X:ksi"*). Muilla
+   * linsseillä (js/pallo.js .pallo-sulje, js/pallolauta/linssikartta.js
+   * .linssikartta-sulje) sulkunappi on jo pelkkä ×-merkki aria-labelin
+   * kanssa — tämä nappi oli poikkeus täydellä lukutekstillä. aria-label
+   * ja title kantavat edelleen saman lauseen kuin ennen, jotta
+   * ruudunlukija ja hiiren vihje kertovat täyden merkityksen.
+   */
   const sulje = doc.createElement('button');
   sulje.type = 'button';
   sulje.className = 'satelliittipalkki-sulje';
-  sulje.textContent = 'Sulje linssi';
+  sulje.textContent = '×';
+  sulje.setAttribute('aria-label', 'Sulje linssi');
   sulje.title = 'Sulje linssi ja palaa peliin';
   sulje.addEventListener('click', () => onSulje?.());
 

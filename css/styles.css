@@ -26860,15 +26860,31 @@ body.liiku-laaja .toimintorivi.rivi-yksi .monitoimi-nappi .icon-label {
 }
 
 /*
- * ── LIIKU PIILOSSA LUENNAN AJAKSI ───────────────────────────────────
+ * ── LIIKU PIILOSSA LUENNAN JA LINSSIN AJAKSI ─────────────────────────
  *
  * `display: none`, ei opacity: piiloon jäänyttä nappia ei saa voida
- * napauttaa vahingossa. Luokan asettaa js/ui.js kaynnistaLuentavahti,
- * joka lukee luennan tilan (js/luenta.js puhujaAanessa) ja päästää
- * napin esiin viimeistään 30 sekunnin kuluttua, vaikka vuoro jäisi
- * roikkumaan.
+ * napauttaa vahingossa. Luennan luokan asettaa js/ui.js
+ * kaynnistaLuentavahti, joka lukee luennan tilan (js/luenta.js
+ * puhujaAanessa) ja päästää napin esiin viimeistään 30 sekunnin
+ * kuluttua, vaikka vuoro jäisi roikkumaan.
+ *
+ * SAMA KOSKEE LINSSIÄ (omistaja 15.9.2026, Astronautin kamera
+ * -työpöytäkuva: *"Vasemman alareunan liikunnappi pitaa ottaa pois."*)
+ * — EI VAIN SATELLIITTILINSSIÄ, kaikkia linssejä, jotka vievät koko
+ * ruudun omaan näkymäänsä: `body.aikajana-paalla` (Ihmisen matka,
+ * Keksinnöt, Satelliitti — "linssin yhteinen portti", ks. js/ui.js
+ * linssikarttaEstaa), `body.pallo-auki` (karttapallo, js/pallo.js) ja
+ * `body.radio-tila` (maailmanradio). Nappi on jo näissä tiloissa
+ * ESTETTY (linssikarttaEstaa → disabled), mutta jäi näkyviin harmaana;
+ * tämä piilottaa sen kokonaan ja palauttaa, kun linssi suljetaan,
+ * koska luokka poistuu samalla. Karttakerroksena piirtyvät linssit
+ * (topografia, vertailu, maat, vesistöt) EIVÄT aseta näitä luokkia —
+ * pelaaja pysyy kartalla ja voi liikkua, joten nappi jää näkyviin.
  */
-body.luenta-aanessa .toimintorivi .monitoimi-nappi {
+body.luenta-aanessa .toimintorivi .monitoimi-nappi,
+body.aikajana-paalla .toimintorivi .monitoimi-nappi,
+body.pallo-auki .toimintorivi .monitoimi-nappi,
+body.radio-tila .toimintorivi .monitoimi-nappi {
   display: none;
 }
 
