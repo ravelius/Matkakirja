@@ -7552,6 +7552,18 @@ export const RAAMATTU = {
           + 'kaarien tilasarja vs. aanitiedoston amplitudiverhokayra '
           + '(korrelaatio > 0,6; tauot tasan). Tila: julkaistu v1910 (#2509), '
           + 'mitattu r = 0,75, tauot 5/5.',
+        'KUVAPUTKEN TOIMITUSKOKO: 1800 PX (omistaja 15.9.2026 klo 10.40 '
+          + 'UTC, kun Ranskan 7 lisakaupungin herokuvat tulivat peliin '
+          + 'Commonsin alkuperaisina 0,4-4,5 Mt vedoksina; sanatarkasti: '
+          + '"pidetaan 1800px, jotta nayttaa isollakin naytolla viela '
+          + 'hyvalta"): pelin kayttamat valokuvat (herokuvat, '
+          + 'kaupunkikorttien kuvat ja muut Commons-toimitukset) '
+          + 'toimitetaan ampariin pelin kokoon skaalattuina: pitka sivu '
+          + '1800 px, laadukas JPEG (tavoite 200-450 kt). Alkuperainen '
+          + 'vedos jaa ampariin lahteena, mutta peli lataa skaalatun. '
+          + 'Ranskan 7 herokuvaa (hero-*-historiallinen-r20260914-v1.jpg) '
+          + 'skaalataan jalkikateen samalla saannolla ja pakin osoitteet '
+          + 'paivitetaan. Tila: kuvaputkelle pyynto postilaatikkoon.',
         'LINSSIVIKA: KOHDEMAAN KOROSTUS JA MAAPANEELI VUOTAVAT LINSSIIN, '
           + 'KARTAN REUNA VAREILEE (omistaja 14.9.2026 klo 21.15 UTC, '
           + 'iPad-kuva Ihmisen matka -linssista, sanatarkasti: "Linssissa '
