@@ -7496,8 +7496,22 @@ export const RAAMATTU = {
           + 'siis olla kaksi ankkuria (leveaan ja kapeaan ruutuun), ja '
           + 'valinta seuraa samaa kuvasuhde-ehtoa kuin korkeussovitus - ei '
           + 'laitetunnistusta; 4) paneelin koko saapumisnakymassa on sama '
-          + 'joka laitteella (<= 10 % ruudun leveydesta, #2492). Tila: tyo '
-          + 'Opus-agentilla.',
+          + 'joka laitteella (<= 10 % ruudun leveydesta, #2492). Tila: '
+          + 'julkaistu v1904 (#2495).',
+        'KARTTAUUDISTUKSEN PAATOKSET 19: LYONINLAHDEN ANKKURIIN VARA '
+          + 'PULUN NOKKAAN (omistaja 15.9.2026 klo 04.15 UTC '
+          + 'kysymyskortilla, kun mittaus osoitti etta pystypuhelimella '
+          + 'paneelin ja pulun nokan valiin jaa vain 0,6-1,0 px ja '
+          + 'saapumiskorkeus heilahtaa ajosta toiseen; valinta: "Siirra '
+          + '0,13 astetta lanteen"): 1) Ranskan kapean ruudun ankkuri '
+          + 'siirtyy 42,6 N / 3,9 E -> 42,6 N / 3,77 E, tavoite noin 10 px '
+          + 'rako pulun nokkaan 390 ja 393 px leveilla ruuduilla; 2) '
+          + 'kortin on pysyttava kokonaan merella - Cap de Creus ja '
+          + 'Espanjan rannikko mitataan naytepisteilla (0 maaosumaa); 3) '
+          + 'Biskajan ankkuri ei liiku. Samalla kortilla omistaja paatti: '
+          + 'ilmaisupilotin 10 aanta ("Kuuntelen ensin") ja #2459 '
+          + '("Odota") odottavat omistajan kuuntelua - ei kytkentaa '
+          + 'peliin. Tila: tyo Opus-agentilla.',
         'Saapumiskortti: luettu matkakirjamerkintä + esittely '
           + 'kuvineen.',
         'Lehtikaupungissa kortti on paikallislehti: sivut, '
