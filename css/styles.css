@@ -26697,11 +26697,28 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px;
  *
  * TURVA-ALUEET: iPhonen pyöristetty nurkka ja kotipalkki otetaan
  * huomioon env()-arvoilla, jotta neliö ei jää niiden alle.
+ *
+ * MARGINAALI ON SAMA KUIN KARTTASELITTEEN NAPILLA OIKEASSA
+ * YLÄKULMASSA (omistajan päätös 15.9.2026: neliö oli kiinni kartan
+ * vasemmassa reunassa ja liian ylhäällä — tasainen marginaali
+ * kartan molempiin reunoihin puuttui). `.karttaselite` istuu 0,4rem
+ * päässä `.map-pane`:n omista reunoista, ja `.map-pane` itse on
+ * `var(--gap)` päässä ruudun reunasta (css .stage { padding:
+ * var(--gap) }) — nappi on `position: fixed` eli ruudun eikä kartan
+ * suhteen, joten sen on lisättävä molemmat välit yhteen päästäkseen
+ * samaan kartan-reunan-marginaaliin (mitattu 390 × 844: 0,4rem +
+ * var(--gap) 0,45rem = 13,6 px ruudusta = 6,4 px kartan reunasta,
+ * täsmälleen karttaselitteen 0,4rem — plus 1 px, koska karttaselite on
+ * `position: absolute` `.map-pane`:n SISÄPUOLELLA (sen reunaviiva, 1 px,
+ * ei kuulu asemointikehykseen), kun tämä nappi on `position: fixed`
+ * ruudun suhteen eli reunaviivan ULKOPUOLELLA — mitattu 390 × 844:
+ * karttaselitteen väli reunaviivaan 7,39 px, ilman lisä-pikseliä tämä
+ * nappi olisi 6,41 px:n päässä).
  */
 .toimintorivi.rivi-yksi .monitoimi-nappi {
   position: fixed;
-  left: calc(10px + env(safe-area-inset-left, 0px));
-  bottom: calc(1.7rem + env(safe-area-inset-bottom, 0px));
+  left: calc(var(--gap) + 0.4rem + 1px + env(safe-area-inset-left, 0px));
+  bottom: calc(var(--gap) + 0.4rem + 1px + env(safe-area-inset-bottom, 0px));
 }
 
 /*
