@@ -7465,7 +7465,15 @@ export const RAAMATTU = {
           + 'takana kartta PEHMENNETAAN samoin, mutta VAALENNETAAN hieman, '
           + 'samaan savyyn kuin luennan taustassa - siis sama sumennus, '
           + 'eri tummuus. Savyt ja sumennuksen maara mitataan ja naytetaan '
-          + 'omistajalle kuvina. Tila: tyo Opus-agentilla.',
+          + 'omistajalle kuvina. Tila: julkaistu v1891, korjattu v1907 ja '
+          + 'v1909. POIKKEUS (omistaja 15.9.2026 klo 11.15 UTC, '
+          + 'sanatarkasti: "Kun maailmatila on paalla, niin hunnun voisi '
+          + 'ottaa pois paalta."): kehittajan maailmanakyman (maailmanappi, '
+          + 'kehittajaMaailmaPaalla) ollessa paalla luennan huntua ei '
+          + 'nosteta lainkaan - kartta pysyy teravana ja vaaleana, koska '
+          + 'omistaja pelitestaa ja selaa koko maailmanlautaa siina tilassa. '
+          + 'Muut luennan merkit (kaiutin, tekstipiilo, Liiku) pysyvat. '
+          + 'Tila: tyo Sonnet-agentilla.',
         'LUENNAN MERKKI: KAIUTINKUVA SYKKII MATKAKIRJAN YLARIVILLA '
           + '(omistaja 14.9.2026 klo 21.00 UTC, sanatarkasti: "Luennan '
           + 'aikana matkakirjan ylarivin reunassa voisi sykkia kevyesti '
