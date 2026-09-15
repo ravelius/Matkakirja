@@ -142,20 +142,24 @@ export const FOKUSVIRTA_BERGEN = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 8f941560edf447ee29ea7fb51dc50b7dbaaa95f8a0edb5e0f18541321153a26c. */
+    /* Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json */
     luentakuva: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bergen-r20260909-paper-v4.jpg",
-      lyhyt: "Bergen, 1873. Kuiva kala, märkä vierailija.",
-      selite: 'Kauppias nosti kapakalan esiin Bryggenin katoksen alla kuin arvotavaran. Kala ja myyjä pysyivät suojassa, kun sade kasteli laiturin ja kamerani jalat.',
-      lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://hanseatiskemuseum.museumvest.no/kongetorsk-engelsk"],
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-bergen-i1-r20260914-tarina-v1.jpg',
+      lyhyt: 'Bergen, 1873. Opas ja kuula tuomiokirkolla.',
+      selite: 'Opas odottaa Bergenin tuomiokirkon seinään kiinnitetyn kuulan alapuolella. Kuulan kiinnityksen ajankohtaa ei tunneta.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://tohundrefortellinger.w.uib.no/1966/06/20/2017-kanonkule/',
+      ],
     },
     luentakuva2: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-bergen-r20260911-paper2-v1.jpg",
-      lyhyt: "Bergen, 1873. Katon alla kala pysyi kuivempana kuin vieras.",
-      selite: 'Sade valui katoksen reunalta, mutta kapakalat pysyivät kuivina puuseinän vieressä. Takkini kiilsi vedestä, ja kaupungin arvojärjestys tuli selväksi.',
-      lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://hanseatiskemuseum.museumvest.no/kongetorsk-engelsk"],
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-bergen-i2-r20260914-tarina-v1.jpg',
+      lyhyt: 'Bergen, 1873. Pieni kuula korkealla kiviseinässä.',
+      selite: 'Rautakuula on kiinnitetty tuomiokirkon kiviseinän syvennykseen. Perimätieto yhdistää sen Vågenin meritaisteluun vuonna 1665, mutta kiinnityksen ajankohtaa ei tunneta.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://tohundrefortellinger.w.uib.no/1966/06/20/2017-kanonkule/',
+      ],
     },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
@@ -233,25 +237,25 @@ export const FOKUSVIRTA_BERGEN = {
      * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
      * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
      * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
-     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-bergen-01-r20260909-euv1-v1.jpg, pulu-cam-bergen-02-r20260909-euv1-v4.jpg.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
      */
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bergen-01-r20260909-euv1-v1.jpg',
-        lyhyt: 'Bergen: varastotalot saivat suojan, minä etsin oman.',
-        selite: 'Bryggenin kapean puukäytävän sade piirtää lautoihin oman karttansa. Pysähdyin kynnyksen suojaan ja totesin, että kuiva paikka on yhä arvokas löytö.',
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bergen-p1-r20260914-tarina-v1.jpg',
+        lyhyt: 'Bergen: rumpujoukon tahdissa kadunrajasta.',
+        selite: 'Lasten ja nuorten rumpujoukko marssii kuvaavien katsojien ohi. Bergenin buekorps-perinne on jatkunut 1800-luvun puolivälistä.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
-          'https://en.visitbergen.com/things-to-do/bryggen-in-bergen-p878553',
+          'https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/the-living-tradition-of-buekorps-bergen',
         ],
       },
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-bergen-02-r20260909-euv1-v4.jpg',
-        lyhyt: 'Bergen: ulkona satoi aivan samaa sadetta.',
-        selite: 'Käytävän suulta näkyvät Bryggenin talorivi, märkä katu ja satama. Otin kuvan nopeasti ulkona ja palasin puolen siivenmitan kuivemmalle.',
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bergen-p2-r20260914-tarina-v1.jpg',
+        lyhyt: 'Bergen: nuori johtaja tarkistaa rumpujoukon järjestystä.',
+        selite: 'Nuorempien soittajien muodostelma näkyy matalalta ikkunalaudalta. Joukon johtaja kulkee rivien edessä ja pitää tahdin.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
-          'https://en.visitbergen.com/things-to-do/bryggen-in-bergen-p878553',
+          'https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/the-living-tradition-of-buekorps-bergen',
         ],
       },
     ],

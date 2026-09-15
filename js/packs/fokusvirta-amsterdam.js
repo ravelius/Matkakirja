@@ -135,20 +135,24 @@ export const FOKUSVIRTA_AMSTERDAM = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 a60ae0db42cc9aa50492ba93713bd65cd4ef683f5d115e15ff4b307e9df03193. */
+    /* Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json */
     luentakuva: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-amsterdam-r20260909-paper-v5.jpg",
-      lyhyt: "Amsterdam, 1873. Tuoli saapui omasta ikkunastaan.",
-      selite: 'Kattokoukku ja kaksi miestä pitivät tuolin matkalla kohti yläikkunaa. Kaluste pysähtyi kuvaani arvokkaasti kesken nousun.',
-      lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://www.rijksmuseum.nl/en/stories/operation-night-watch/story/hoisting-paintings"],
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-amsterdam-i1-r20260914-tarina-v1.jpg',
+      lyhyt: 'Amsterdam, 1873. Kanavatalon ullakolle mahtui kokonainen kirkko.',
+      selite: 'Pappi seisoo kapean ullakkokirkon alttarin vierellä puuparvien alla. Kirkko rakennettiin kolmen kanavatalon ullakoille 1660-luvulla, kun katolinen jumalanpalvelus oli julkisesti kielletty.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://opsolder.nl/en/the-monument/',
+      ],
     },
     luentakuva2: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-amsterdam-r20260911-paper2-v1.jpg",
-      lyhyt: "Amsterdam, 1873. Tuoli pääsi sisään, portaat jäivät sivuun.",
-      selite: 'Kaksi miestä ohjasi tuolin ikkunasta sisään ja jaloilleen. Köysi lepäsi lattialla, kun kapea porras jäi aivan vieressä käyttämättä.',
-      lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://www.rijksmuseum.nl/en/stories/operation-night-watch/story/hoisting-paintings","https://www.amsterdam.nl/stadsarchief/canon/windows/12/"],
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-amsterdam-i2-r20260914-tarina-v1.jpg',
+      lyhyt: 'Amsterdam, 1873. Ullakkokirkon urut salin toisessa päädyssä.',
+      selite: 'Vuonna 1794 rakennetut urut ovat parven päädyssä penkkien yläpuolella. Kaksikerroksiset parvet kiertävät salia, ja soitin täyttää sen ahtaan päädyn kokonaan.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://opsolder.nl/wp-content/uploads/2024/04/haantje36.pdf',
+      ],
     },
     /* KAANON (Fable) — paikkarivi sellaisenaan; toinen virke on kortin
        tunnelmarivi (Fablen kaanon 8.9.2026). */
@@ -226,31 +230,25 @@ export const FOKUSVIRTA_AMSTERDAM = {
      * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
      * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
      * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
-     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-amsterdam-01-r20260909-euv1-v1.jpg, pulu-cam-amsterdam-02-r20260909-euv1-v1.jpg.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
      */
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-amsterdam-01-r20260909-euv1-v1.jpg',
-        lyhyt: 'Amsterdam: lentokoulun oppilas on tällä kertaa nojatuoli.',
-        selite: 'Nostolava kuljettaa nojatuolia Amsterdamin kapean talon ikkunaan, kun portaat eivät taivu tehtävään. Seurasin oppilaan nousua: lentoasento kunnossa, suuntavaisto täysin nostimen varassa.',
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-amsterdam-p1-r20260914-tarina-v1.jpg',
+        lyhyt: 'Amsterdam: pyörät parkissa veden alla, kuivin renkain.',
+        selite: 'Stationsplein-hallin pyörätelineet ja valkoiset pylväät kohoavat matalan kameran yllä. Halli on rakennettu veden alle aseman edustan satama-altaaseen.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
-          'https://www.iamsterdam.com/en/travel-stay/getting-around/why-a-canal-cruise-is-the-best-introduction-to-amsterdam',
-          'https://huurverhuislift.nl/ladderlift-amsterdam',
-          'https://huurverhuislift.nl/uploads/pages/283/normal/original/ladderlift-huurverhuislift.nl-amsterdam-4.jpg',
-          'https://fotoamsterdam.com/',
+          'https://www.prorail.nl/nieuws/twee-grote-fietsenstallingen-bij-station-amsterdam-centraal-geopend',
         ],
       },
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-amsterdam-02-r20260909-euv1-v1.jpg',
-        lyhyt: 'Amsterdam: saavuin ikkunalle ennen huonekaluja.',
-        selite: 'Saavuin ikkunalle ennen nojatuolia, joka lähestyi muuttajaa omalla pienellä lavallaan. En huomauttanut lentoreitistäni, sillä vaivalla tehty suoritus ansaitsee hienotunteisen asiantuntijan.',
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-amsterdam-p2-r20260914-tarina-v1.jpg',
+        lyhyt: 'Amsterdam: ankka ui pyörähallin katon yllä.',
+        selite: 'Ankka kelluu Open Havenfrontilla, jonka alla sijaitsee aseman edustan pyörähalli. Pinnan alla on tilaa tuhansille polkupyörille.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
-          'https://www.iamsterdam.com/en/travel-stay/getting-around/why-a-canal-cruise-is-the-best-introduction-to-amsterdam',
-          'https://huurverhuislift.nl/ladderlift-amsterdam',
-          'https://huurverhuislift.nl/uploads/pages/283/normal/original/ladderlift-huurverhuislift.nl-amsterdam-4.jpg',
-          'https://fotoamsterdam.com/',
+          'https://www.prorail.nl/nieuws/twee-grote-fietsenstallingen-bij-station-amsterdam-centraal-geopend',
         ],
       },
     ],

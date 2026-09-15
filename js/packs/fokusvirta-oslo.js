@@ -160,13 +160,16 @@ export const FOKUSVIRTA_OSLO = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 256890fd6fcbe4fdda283a028e93cd739d9c73406df7fac4fcee895365339349. */
+    /* Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json (luentakuva); luentakuva2 ennallaan. */
     luentakuva: {
-      osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-oslo-r20260909-paper-v4.jpg",
-      lyhyt: "Christiania, 1873. Metsä valmistautui lähtemään laivalla.",
-      selite: 'Christianian rannassa lankut odottavat suorina pinoina purjelaivan vieressä. Metsä on saanut merimatkaa varten siistimmän järjestyksen kuin moni matkustaja.',
-      lahde: "Matkakirjan havainnekuva",
-      lahteet: ["https://www.oslobilder.no/search?page=10&query=%22havna%22"],
+      osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-oslo-i1-r20260914-tarina-v1.jpg',
+      lyhyt: 'Christiania, 1873. Työmies kantoi astiaa Lysakerin tehtaan luona.',
+      selite: 'Vuoteen 1873 sijoittuva kuviteltu kohtaaminen pohjautuu Lysakerin nitroglyseriinitehtaan noin vuonna 1870 kuvattuun ympäristöön. Tehdas oli Alfred Nobelin yhtiökumppanien ensimmäisiä Norjassa.',
+      lahde: 'Matkakirjan havainnekuva',
+      lahteet: [
+        'https://snl.no/nitroglyserin',
+        'https://media.snl.no/media/263334/standard_compressed_Nitroglyserinfabrikken_Lysaker_Justert.jpg',
+      ],
     },
     luentakuva2: {
       osoite: "https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-eurooppa-1873-oslo-r20260911-paper2-v1.jpg",
