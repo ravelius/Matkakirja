@@ -7847,6 +7847,17 @@ export const RAAMATTU = {
           + 'nostojen nimio saapumiszoomilla 7 px (kaupungit 11,5 px), '
           + 'kaikki nimiot nakyvat heti; skaalautuu zoomissa kuten muut. '
           + 'Tila: tyo Sonnet-agentilla samaan PR:aan.',
+        'KARTTAUUDISTUKSEN PAATOKSET 26: NOSTOPOPUPIN AIKANA MATKAKIRJA JA '
+          + 'LIIKU PIILOON (omistaja 15.9.2026 klo 19.30 UTC, iPhone-kuva '
+          + 'Psiloritis-noston popupista, jonka paalla nakyvat saapumiskortin '
+          + 'lappu "Ateena, elokuussa 1873" ja Liiku-symboli, sanatarkasti: '
+          + '"Liiku nappi ja Matkakirja pitoisi jaada piiloon."): kun '
+          + 'karttanoston tai kohdenoston popup (fokuskohde-popup, '
+          + 'kaupunkikortti, turisti-info tms. koko ruudun kortti) on auki, '
+          + 'saapumiskortin lappu (Matkakirja) ja Liiku-nappi eivat nay - ne '
+          + 'palaavat popupin sulkeuduttua. Sama saanto kaikille kartan '
+          + 'paalle avautuville korteille puhelimella ja tyopoydalla. Tila: '
+          + 'tyo Sonnet-agentilla.',
         'KARTTAUUDISTUKSEN PAATOKSET 20: MAAPANEELILLE JOKA MAALLE OMA '
           + 'PAIKKA, FABLE ARVIOI VISUAALISESTI (omistaja 15.9.2026 klo '
           + '10.55 UTC, tyopoytakuva Kreikasta, sanatarkasti: "tuon maan '
