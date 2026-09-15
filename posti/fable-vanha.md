@@ -8903,3 +8903,55 @@ Kaikki ovat 1536 × 1024 JPG/sRGB. Kuvat, täydet promptit, lähdemäärät, ava
 
 Älä kytke näitä kolmea vielä peliin tai peli-R2:een. Ne odottavat omistajan hyväksyntää; hyväksytyistä versioista lähetetään erillinen peli-integraatiokuittaus.
 
+---
+
+## 15.9.2026 03:10 UTC — FABLE: ilmaisupilotti erä 3 — kuivan ajon AANI-vika korjattu ja koestettu omassa haarassa
+
+Omistajan 15.9.2026 päätöksellä korjasin ja koestin edellisen ajon (run **34923063972**, ref `codex/livia-ilmaisu-20260914` @ `2068c510`) kaataneen kuiva-ajovian **omassa haarassa** `claude/fable-livia-ilmaisu-fix`; Codexin haaraan `codex/livia-ilmaisu-20260914` ei kosketa.
+
+**Vika:** `.github/workflows/generoi-pulu.yml`:n "Kuiva ajo (repliikit ja kestot)" -askel välitti `tools/generoi-pulu.mjs`:lle vain `REPLIIKIT`, `PULU_MALLI` ja `PULU_VAKAUS` — ei `AANI`a. Työkalun saapumisäänilukko (`saapumisAanenRooliEste`) tarkisti siksi aina oletusäänellä `piI8Kku0DcvcL6TTSeQt`, vaikka syöte `aani` olisi ollut mikä tahansa, ja kaatui viestillä "kertojan saapumisnimi vaatii voice_id:n Sz0tRTEpybtDJ9ru2kgD, sai piI8Kku0DcvcL6TTSeQt". Maksullinen "Generoi ja vie ämpäriin" -askel sai `AANI`n oikein alusta asti.
+
+**Korjaus** (commit `b36c4d0d`, haarassa `claude/fable-livia-ilmaisu-fix`), pienin mahdollinen muutos, samalla tavalla kuin maksullinen askel:
+
+```diff
+       - name: Kuiva ajo (repliikit ja kestot)
+         if: ${{ inputs.toiminto == 'kuiva' || inputs.toiminto == 'generoi' }}
+         env:
++          AANI: ${{ inputs.aani }}
+           REPLIIKIT: ${{ inputs.repliikit }}
+           PULU_MALLI: ${{ inputs.malli }}
+           PULU_VAKAUS: ${{ inputs.vakaus }}
+         run: |
+           set -euo pipefail
+-          if [ -n "$REPLIIKIT" ]; then
+-            node tools/generoi-pulu.mjs --kuiva --repliikit "$REPLIIKIT"
+-          else
+-            node tools/generoi-pulu.mjs --kuiva
+-          fi
++          liput=()
++          if [ -n "$AANI" ]; then liput+=(--aani "$AANI"); fi
++          if [ -n "$REPLIIKIT" ]; then liput+=(--repliikit "$REPLIIKIT"); fi
++          node tools/generoi-pulu.mjs --kuiva "${liput[@]}"
+```
+
+Muita lippuja (pakota, haku, retry_reason, kuitti) kuiva-askel ei koskaan käytä, eikä niissä ollut poikkeamaa maksulliseen askeleeseen.
+
+**Vastakoe paikallisesti** (ei verkkokutsuja, kuiva ajo ei tarvitse API-avainta):
+- `node tools/generoi-pulu.mjs --kuiva --repliikit saapumisnimi-sofia,saapumisnimi-venetsia` (ilman `--aani`) → kaatui täsmälleen samalla viestillä kuin run 34923063972: "kertojan saapumisnimi vaatii voice_id:n Sz0tRTEpybtDJ9ru2kgD, sai piI8Kku0DcvcL6TTSeQt" (toisti alkuperäisen vian).
+- `node tools/generoi-pulu.mjs --kuiva --aani Sz0tRTEpybtDJ9ru2kgD --repliikit saapumisnimi-sofia,saapumisnimi-venetsia` → läpäisi, tulosti kestot (~0,4 s / ~0,6 s) ja kohdetiedostot.
+- YAML validoitu Python-`yaml`-parserilla; dispatch-inputit ja step-rakenne parsiutuivat oikein.
+
+**Run haarassa `claude/fable-livia-ilmaisu-fix`:** GitHub Actions run **34923656443** (`generoi-pulu.yml`, toiminto=generoi, malli eleven_v3, vakaus natural, pakota=ei, repliikit `saapumisnimi-sofia,saapumisnimi-venetsia`, aani `Sz0tRTEpybtDJ9ru2kgD`) — **conclusion: success**. Kuiva-askel ja maksullinen askel molemmat vihreitä.
+
+**Tuotantokuitti:** `https://media.matkakirja.app/aanet/pulu/kuitit/pulu-0987c98c5185f5842d12.completed.json` — batchId `pulu-0987c98c5185f5842d12`.
+
+**Kuuntelulinkit (staging, ei vielä pelissä):**
+- `https://media.matkakirja.app/aanet/pulu/erat/pulu-0987c98c5185f5842d12/horatio-saapumisnimi-sofia.mp3` — 1,72 s
+- `https://media.matkakirja.app/aanet/pulu/erat/pulu-0987c98c5185f5842d12/horatio-saapumisnimi-venetsia.mp3` — 2,35 s
+
+**Mittaukset:** raaka- ja final-tiedostojen SHA-256 täsmäävät molemmilla (sofia `11800138…076a`, venetsia `a462a5b4…d30a1f`) — ei ffmpeg-jälkikäsittelyä, mallin mp3 sellaisenaan (omistaja 14.9.2026). 192 kbps (mp3_44100_192), encoder-tagi vain `Lavf60.16.101` — ei `Lavc`-jälkeä toisesta koodauskierroksesta. Tavut: sofia 42049, venetsia 57095.
+
+**Näitä ei ole kytketty peliin.** Ne odottavat kuuntelua ja erillistä hyväksyntää samalla linjalla kuin muu ilmaisupilotti.
+
+**Codexille:** kuiva-ajoaskelen `AANI`-vika on korjattu haarassa `claude/fable-livia-ilmaisu-fix` commitissa `b36c4d0d`. Voit poimia korjauksen (kirry-pick tai vastaava muutos samaan kohtaan) omaan haaraasi `codex/livia-ilmaisu-20260914` — en koskenut siihen haaraan itse.
+
