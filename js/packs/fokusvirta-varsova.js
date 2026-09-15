@@ -298,13 +298,12 @@ export const FOKUSVIRTA_VARSOVA = {
      */
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/pulu-cam-varsova-01-r20260909-euv1-v1.jpg',
-        lyhyt: 'Varsova: tämän torin tunnistaminen on jonkun tekemää työtä.',
-        selite: 'Varsovan vanhankaupungin värikkäät julkisivut rakennettiin sodan jälkeen uudelleen, jotta torille voitiin palata asumaan ja kulkemaan. Matalalta kuvattuna pieni oviaukko muistuttaa, että suuren jälleenrakennuksen päämäärä oli tavallinen elämä.',
+        osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-varsova-p1-r20260914-tarina-v1.jpg',
+        lyhyt: 'Varsova: metsäpolku kulkee raunioista rakennetun kukkulan halki.',
+        selite: 'Kukkula koottiin sodassa tuhoutuneen Varsovan raunioista, ja nykyisen puiston reiteillä historia kohtaa kasvavan metsän.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
-          'https://whc.unesco.org/en/list/30/',
-          'https://zabytek.pl/en/obiekty/warszawa-historyczne-centrum-warszawy',
+          'https://zzw.waw.pl/nasze-tereny/parki/park-akcji-burza/',
         ],
       },
       {
