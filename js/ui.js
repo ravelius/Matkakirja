@@ -78,7 +78,10 @@ import {
 import {
   asetaLuentaKytkin, haivytaJaSiivoa, haivytaLuenta, lueMerkinta,
   luennanLoppuun, luentaKytkinPaalla, merkitsePuhuja, playDiaryVoice,
-  playIntroVoice, PUHUJA_PULU, puhujaAanessa, stopDiaryVoice, stopIntroVoice,
+  playIntroVoice, PUHUJA_PULU, stopDiaryVoice, stopIntroVoice,
+  // Luennan NÄKYVÄT merkit lukevat kuuluvaa ääntä, eivät varattua
+  // puheenvuoroa (15.9.2026, ks. kaynnistaLuentavahti).
+  soivaPuhuja,
   vapautaPuhuja,
 } from './luenta.js';
 import {
@@ -823,7 +826,7 @@ export { puhelinTila, luennanTekstipiilo, tekstitPiilossa };
  *
  * Nappi on piilossa niin kauan kuin joku on äänessä (saapumisluenta
  * tai Livian repliikki) ja palaa heti, kun vuoro vapautuu. Tila
- * LUETAAN luennasta (js/luenta.js puhujaAanessa) — luenta- tai
+ * LUETAAN luennasta (js/luenta.js soivaPuhuja) — luenta- tai
  * äänilogiikkaa ei muuteta, vain kuunnellaan.
  *
  * KAKSI TURVAA:
@@ -11475,8 +11478,20 @@ export class UI {
   /**
    * LUENNAN VAHTI: piilottaa Liiku-napin niin kauaksi kuin joku puhuu.
    *
-   * Vahti vain LUKEE luennan tilan (puhujaAanessa) — se ei käynnistä,
-   * pysäytä eikä muuta yhtäkään ääntä. Tila kirjoitetaan bodyn
+   * Vahti vain LUKEE luennan tilan (soivaPuhuja) — se ei käynnistä,
+   * pysäytä eikä muuta yhtäkään ääntä.
+   *
+   * KUULUVA ÄÄNI, EI VARATTU VUORO (korjaus 15.9.2026). Vahti kysyi
+   * ennen `puhujaAanessa`, joka on TOSI jo ennen kuin ääni alkaa: vuoro
+   * varataan merkitsePuhujassa ja play() ratkeaa vasta myöhemmin. Jos
+   * play() hylkääntyy (headless-selain, offline, rikkinäinen tiedosto),
+   * ruudulla ehti silti välähtää koko luennan asu — tekstit piiloon,
+   * kartalle huntu, Liiku pois — vaikka mitään ei kuulu. Mitattu
+   * julkaisuhaarassa 15.9.2026: Ateenan ääniraita kaatui headlessissä
+   * NotSupportedErroriin ja kutisti matkakirjakortin juuri
+   * mittaushetkellä. `soivaPuhuja` lukee kuuluvaa ääntä
+   * (js/luenta.js aaniKuuluu), joten epäonnistunut käynnistys ei näy
+   * ruudulla lainkaan. Tila kirjoitetaan bodyn
    * luokkaan `luenta-aanessa`, josta css piilottaa napin kokonaan
    * (display: none, ei pelkkä opacity — piiloon jäänyttä nappia ei saa
    * voida napauttaa).
@@ -11508,7 +11523,7 @@ export class UI {
     const askel = () => {
       if (this.dead) return;
       const nyt = Date.now();
-      const aanessa = Boolean(puhujaAanessa());
+      const aanessa = Boolean(soivaPuhuja());
       if (aanessa) {
         if (!puheAlkoi) puheAlkoi = nyt;
         puheLoppui = nyt;
@@ -11526,12 +11541,12 @@ export class UI {
        * KERTOJA ERIKSEEN PULUSTA (omistaja 14.9.2026): *"Luennan aikana
        * matkakirjan ylarivin reunassa voisi sykkia kevyesti kaiuttimen
        * kuva merkiksi etta luenta on kaynnissa. Pulun luennassa riittaa
-       * pulun elehtiminen ajamaan saman asian."* `puhujaAanessa` osaa
+       * pulun elehtiminen ajamaan saman asian."* `soivaPuhuja` osaa
        * jättää pulun laskuista, joten merkki kytkeytyy vain isoisän
        * luentaan — ja mykistettynä ääntä ei synny lainkaan, joten
        * merkkikään ei syki.
        */
-      const kertoja = !varaventtiili && puhujaAanessa(PUHUJA_PULU) !== null;
+      const kertoja = !varaventtiili && soivaPuhuja(PUHUJA_PULU) !== null;
       document.body.classList.toggle('kertoja-aanessa', kertoja);
       /*
        * TEKSTIT PIILOON KAIKILLA LAITTEILLA LUENNAN AJAKSI (omistaja
