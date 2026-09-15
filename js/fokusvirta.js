@@ -121,7 +121,7 @@ import { piilotaSaapumistraileri, soitaKameranKlik } from './saapumistraileri.js
 import {
   laudaltaRuudulle, luentakuvanPerusleveys, luentakuvanSijainti,
   onRaahaus, ruudultaLaudalle, pienenKuvanParinPaikat, LUENTAKUVAN_KUVASUHDE,
-  PIENEN_KUVAN_KORKEUS_PX, PIENEN_KUVAN_NOSTO_PX, PULUN_NAPIN_KOKO_PX, PARIN_RAKO_PX,
+  PIENEN_KUVAN_KORKEUS_PX, PIENEN_KUVAN_NOSTO_PX, PARIN_RAKO_PX,
 } from './saapumisasento.js';
 // Pallon tarkka ruutupaikka kääntyy takaisin laudan pisteeksi laudan
 // omalla projektiolla (ks. pallonProjektio alempana).
@@ -2712,42 +2712,41 @@ function paivitaLuentakuvanPaikka(naytto) {
   solmu.style.setProperty('--luentakuva-y', `${paikka.y.toFixed(1)}px`);
   const kartta = kartanMittakaava(naytto);
   solmu.style.setProperty('--luentakuva-karttaskaala', kartta.toFixed(3));
-  paivitaPulunPaikka(naytto, paikka, kartta);
+  paivitaPulunPaikka(naytto);
 }
 
 /**
- * PULU KULKEE ISOISÄN KUVAN VIERESSÄ (omistaja 14.9.2026).
+ * PULUN HAHMO PYSYY OIKEASSA ALAKULMASSA (omistaja 15.9.2026 klo 15.15
+ * UTC, Raamattu "KARTTAUUDISTUKSEN PAATOKSET 12 TARKENNUS: PULUN HAHMO
+ * PYSYY KULMASSA").
  *
- * Pulun nappi on ikkunan kaluste (`position: fixed`, css/styles.css
- * `.pollo-kelluu-kartalla`), eikä sitä siirretä kartan kerrokseen —
- * se rikkoisi kuplapinon, chatin ja lehtinäkymän kiinnityksen. Sen
- * sijaan kehyssilmukka kirjoittaa NAPIN KESKIPISTEEN ikkunan
- * pikseleinä kahteen muuttujaan, ja css sijoittaa napin niiden mukaan
- * niin kauan kuin `body.pulu-kaupungin-paalla` on päällä. Kun pieni
- * kuva katoaa (kaupungista lähtö), luokka lähtee ja nappi palaa
- * entiseen kulmaansa — yksi sääntö, ei kahta paikkaa.
+ * 14.9.2026 PAATOKSET 12 kohta 2 ("isoisan ja pulun kuvat hieman
+ * kaupungin ylapuolelle") toteutettiin niin, etta TAMA funktio siirsi
+ * myos pulun HAHMON ja sen kelluvan kuplanapin kartalle isoisan pienen
+ * kuvapakan viereen — se ei ollut tarkoitus: "kuvat" tarkoitti isoisan
+ * luentakuvaa ja pulu-cam-valokuvaa, ei pulun hahmoa. Omistaja huomasi
+ * tuloksen Budapestissa ("miksi pulu hyppaa tuonne keskelle?") ja
+ * Fable linjasi 15.9.2026, etta kuvapakka jaa kaupungin ylapuolelle
+ * kartalle (asetaParinAnkkuri, ennallaan), mutta pulun hahmo ja
+ * kuplanappi pysyvat AINA css:n omassa kulma-asemassa
+ * (.pollo-kelluu-kartalla, right/bottom).
  *
- * NAPIN OMA KOKO EI MUUTU: se keskitetään laskettuun pisteeseen, joten
- * napautusala pysyy täytenä myös maailmanäkymässä, jossa kuva on
- * peukalonkynsi.
+ * Funktio jatetaan paikoilleen KUTSUPAIKKANA (paivitaLuentakuvanPaikka
+ * kutsuu sita edelleen) mutta se ei enaa tee mitaan: se varmistaa
+ * vain, etta body.pulu-kaupungin-paalla ei koskaan jaa paalle (esim.
+ * kesken jaanyt raahaus tai vanha tila). --pulu-kartalla-x/y -muuttujia
+ * ei kirjoiteta, joten css/styles.css:n
+ * `body.pulu-kaupungin-paalla .pollo-nappi...` -saanto ei koskaan
+ * laukea kaytannossa — se jatetaan kommentoituna kuolleena varana eika
+ * poisteta, koska se on ainoa paikka, jossa aiempi 14.9. paatos on
+ * kirjattu nakyviin.
  */
-function paivitaPulunPaikka(naytto, paikka, kartta) {
+function paivitaPulunPaikka(naytto) {
   const body = globalThis.document?.body;
   // Kevyt testi-DOM tarjoaa bodyn ilman classListia: silloin napin
   // paikka jää css:n omaan sääntöön eikä mikään hajoa.
-  if (typeof body?.classList?.toggle !== 'function') return;
-  const paalla = naytto.kaupunginYlla === true
-    && naytto.paneeli?.classList?.contains('pieni') === true;
-  body.classList.toggle('pulu-kaupungin-paalla', paalla);
-  if (!paalla) return;
-  const mitat = pienenKuvanMitat(naytto, kartta);
-  const siirto = naytto.paneSiirto ?? { x: 0, y: 0 };
-  // `paikka` on PANEELIN alareunan keskipiste karttapinnalla; valokuvan
-  // alareuna on lapun verran ylempänä.
-  const x = paikka.x + siirto.x + mitat.leveys / 2 + PARIN_RAKO_PX + PULUN_NAPIN_KOKO_PX / 2;
-  const y = paikka.y + siirto.y - mitat.lappu - mitat.korkeus / 2;
-  body.style.setProperty('--pulu-kartalla-x', `${x.toFixed(1)}px`);
-  body.style.setProperty('--pulu-kartalla-y', `${y.toFixed(1)}px`);
+  if (typeof body?.classList?.remove !== 'function') return;
+  body.classList.remove('pulu-kaupungin-paalla');
 }
 
 /**
