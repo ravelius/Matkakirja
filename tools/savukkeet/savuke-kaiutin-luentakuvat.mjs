@@ -31,6 +31,12 @@
  * mittaavat luennan aikaisen tekstipiilon kolmella ruudulla (390 × 844,
  * 1024 × 1366 iPad, 1400 × 900) — ks. osio alempana.
  *
+ * PÄÄLLYSIKKUNA EI PURA LUENNAN NÄKYMÄÄ (omistaja 15.9.2026, Raamattu
+ * "VIKA: ASETUSTEN AVAAMINEN KESKEN LUENNAN KUTISTAA LUENTAKUVAT"):
+ * vartiot 14–17 ja kaksi vastakoetta mittaavat hammasrattaan ja
+ * hampurilaisen avaamisen kahdella ruudulla (1400 × 900, 390 × 844) —
+ * ks. osio alempana.
+ *
  *   13. KAARET SEURAAVAT AMPLITUDIVERHOKÄYRÄÄ (eristetty mittaus,
  *       oma osionsa alempana): kaarien tilasarja 50 ms:n välein vs.
  *       saman äänitiedoston RMS-verhokäyrä → Pearson-korrelaatio yli
@@ -732,6 +738,212 @@ window.valmis = true;
   tieto('VASTAKOE hiljaisuus (gain 0)', JSON.stringify(c));
   vaadi('VASTAKOE: hiljainen signaali sammuttaa kaikki kaaret',
     c.naytteita > 100 && c.palavia === 0, `palavia näytteitä ${c.palavia}`);
+}
+
+/* ================================================================
+   PÄÄLLYSIKKUNAN AVAAMINEN EI PURA LUENNAN NÄKYMÄÄ (omistaja
+   15.9.2026, Raamattu "VIKA: ASETUSTEN AVAAMINEN KESKEN LUENNAN
+   KUTISTAA LUENTAKUVAT")
+   ================================================================
+
+   Omistaja sanatarkasti: *"Jos klikkaan esimerkiksi hammasratasta,
+   sinä aikana kun isoisän luenta on päällä, niin kuvat pienentyvät
+   heti"*.
+
+   JUURISYY (mitattu 1400 × 900, Dubrovnik): luennan isokuvasarja
+   päättyy kartan liikkeeseen, mutta vartija kuunteli KOKO dokumentin
+   pointerdownia (js/fokusvirta.js kytkeSarjanKartanLiike). Rattaan,
+   hampurilaisen ja matkalaukun napautus luettiin siis kartan
+   liikkeeksi, ja `.fokusvirta-isokuva` katosi ruudulta alle sekunnissa.
+   Ääneen napautus ei koske lainkaan — luenta jatkoi soimistaan
+   (`paused === false`, currentTime 0,93 → 2,97 s) ikkunan alla. Valittu
+   käytös on siis (a): ääni jatkuu ikkunan alla JA näkymä pysyy.
+
+   VARTIOT (molemmilla ruuduilla, rattaalle ja hampurilaiselle):
+     14. Isokuvan mitat ovat avaamisen jälkeen samat ±2 px.
+     15. Huntu ja tekstipiilo pysyvät päällä, sarja on yhä käynnissä.
+     16. Luenta jatkuu: soitin ei ole tauolla ja currentTime kasvaa.
+     17. Ikkunan sulkeuduttua kaaret elävät (vähintään kaksi tilaa).
+
+   VASTAKOE: napautus itse karttaan (.map-pane) purkaa sarjan kuten
+   ennenkin — ilman sitä vartio mittaisi vain sitä, ettei sarja purkaudu
+   koskaan. */
+const PAALLYSRUUDUT = [
+  { nimi: 'tyopoyta', width: 1400, height: 900 },
+  { nimi: 'puhelin', width: 390, height: 844 },
+];
+
+/* Luennan näkymän tila yhtenä näytteenä. */
+const PAALLYSNAYTE = `(() => {
+  const iso = document.querySelector('.fokusvirta-isokuva-kuva');
+  const r = iso ? iso.getBoundingClientRect() : null;
+  const ui = window.matkakirja.ui;
+  const a = ui.diaryVoice;
+  return {
+    isokuva: r ? { w: Math.round(r.width), h: Math.round(r.height) } : null,
+    ruutuja: document.querySelectorAll('.fokusvirta-isokuva-ruutu').length,
+    pikkupakka: document.querySelectorAll('.fokusvirta-luentakuva.nakyy').length,
+    sarja: Boolean(ui.luentakuvasarja),
+    huntu: document.body.classList.contains('luenta-huntu'),
+    piilo: document.body.classList.contains('luenta-tekstit-piiloon'),
+    kertoja: document.body.classList.contains('kertoja-aanessa'),
+    paused: a ? a.paused : null,
+    aika: a ? Number(a.currentTime.toFixed(2)) : null,
+  };
+})()`;
+
+/* Odota, että isoisän luenta soi ja iso kuva on ruudulla. */
+async function odotaLuentanakyma(sivu) {
+  return sivu.waitForFunction(
+    () => document.body.classList.contains('kertoja-aanessa')
+      && document.querySelector('.fokusvirta-isokuva-kuva'),
+    null, { timeout: 90000 },
+  ).then(() => true).catch(() => false);
+}
+
+/* Pelkkä pointerdown+up annettuun pisteeseen (kartan napautus). */
+async function napautaPiste(cdp, x, y) {
+  for (const type of ['mousePressed', 'mouseReleased']) {
+    await cdp.send('Input.dispatchMouseEvent', {
+      type, x, y, button: 'left', clickCount: 1, buttons: type === 'mousePressed' ? 1 : 0,
+    });
+  }
+}
+
+const PAALLYKSET = [
+  { nimi: 'hammasratas', nappi: '#kehittaja-valikko-btn', valikko: '#kehittaja-valikko' },
+  { nimi: 'valikko ≡', nappi: '#menu-btn', valikko: '#paavalikko' },
+];
+
+for (const ruutu of PAALLYSRUUDUT) {
+  for (const paallys of PAALLYKSET) {
+    console.log(`\n=== PÄÄLLYSIKKUNA: ${paallys.nimi} ${ruutu.width}x${ruutu.height} ===`);
+    const { ctx, sivu, cdp } = await avaaAjo({ width: ruutu.width, height: ruutu.height });
+    const nakyma = await odotaLuentanakyma(sivu);
+    vaadi(`${ruutu.nimi}/${paallys.nimi}: luennan näkymä on ruudulla ennen koetta`, nakyma);
+
+    const ennen = await sivu.evaluate(PAALLYSNAYTE);
+    const klikki = await napauta(sivu, cdp, paallys.nappi);
+    await sivu.waitForTimeout(700);
+    const jalkeen = await sivu.evaluate(PAALLYSNAYTE);
+    const auki = await sivu.evaluate((v) => document.querySelector(v)?.hidden === false,
+      paallys.valikko);
+    tieto(`${ruutu.nimi}/${paallys.nimi} ennen`, JSON.stringify(ennen));
+    tieto(`${ruutu.nimi}/${paallys.nimi} jälkeen`,
+      `${JSON.stringify(jalkeen)} valikkoAuki=${auki} klikki=${klikki}`);
+    vaadi(`${ruutu.nimi}/${paallys.nimi}: ikkuna oikeasti aukesi`, auki === true, String(klikki));
+
+    const leveysEro = Math.abs((jalkeen.isokuva?.w ?? -999) - (ennen.isokuva?.w ?? 0));
+    const korkeusEro = Math.abs((jalkeen.isokuva?.h ?? -999) - (ennen.isokuva?.h ?? 0));
+    vaadi(`${ruutu.nimi}/${paallys.nimi}: isokuva pysyy isona (mitat ±2 px)`,
+      Boolean(jalkeen.isokuva) && leveysEro <= 2 && korkeusEro <= 2,
+      `${JSON.stringify(ennen.isokuva)} → ${JSON.stringify(jalkeen.isokuva)}`);
+    vaadi(`${ruutu.nimi}/${paallys.nimi}: sarja on yhä käynnissä eikä pakka noussut kartalle`,
+      jalkeen.sarja === true && jalkeen.pikkupakka === 0,
+      `sarja=${jalkeen.sarja} pakka=${jalkeen.pikkupakka}`);
+    vaadi(`${ruutu.nimi}/${paallys.nimi}: huntu ja tekstipiilo pysyvät päällä`,
+      jalkeen.huntu === true && jalkeen.piilo === true,
+      `huntu=${jalkeen.huntu} piilo=${jalkeen.piilo}`);
+    vaadi(`${ruutu.nimi}/${paallys.nimi}: luenta jatkuu ikkunan alla (currentTime kasvaa)`,
+      jalkeen.paused === false && jalkeen.aika > ennen.aika,
+      `paused=${jalkeen.paused} ${ennen.aika} → ${jalkeen.aika}`);
+
+    // Ikkuna kiinni Escapella: näkymän pitää jatkua ehjänä ja kaarien elää.
+    await sivu.keyboard.press('Escape');
+    await sivu.waitForTimeout(400);
+    const naytteet = [];
+    for (let i = 0; i < 10; i += 1) {
+      naytteet.push((await sivu.evaluate(KAARINAYTE)).tila);
+      if (i < 9) await sivu.waitForTimeout(250);
+    }
+    const sulkien = await sivu.evaluate(PAALLYSNAYTE);
+    tieto(`${ruutu.nimi}/${paallys.nimi} sulkemisen jälkeen`,
+      `${JSON.stringify(sulkien)} kaaret ${naytteet.join(' → ')}`);
+    vaadi(`${ruutu.nimi}/${paallys.nimi}: sulkemisen jälkeen kaaret elävät ja luenta etenee`,
+      new Set(naytteet).size >= 2 && sulkien.paused === false && sulkien.aika > jalkeen.aika,
+      `kaaret ${naytteet.join(' → ')} aika ${jalkeen.aika} → ${sulkien.aika}`);
+
+    if (KUVAKANSIO && ruutu.width === 1400 && paallys.nimi === 'hammasratas') {
+      // Kaappaus otetaan ikkuna auki: juuri se näkymä, jonka omistaja
+      // näki kutistuneena.
+      await napauta(sivu, cdp, paallys.nappi);
+      await sivu.waitForTimeout(400);
+      const { data } = await cdp.send('Page.captureScreenshot', { format: 'jpeg', quality: 62 });
+      writeFileSync(join(KUVAKANSIO, 'asetukset-luenta-1400-20260915.jpg'),
+        Buffer.from(data, 'base64'));
+    }
+    await ctx.close();
+  }
+}
+
+/* VASTAKOE: napautus itse karttaan purkaa sarjan kuten ennenkin. */
+console.log('\n=== VASTAKOE: napautus kartalle purkaa sarjan 1400x900 ===');
+{
+  const { ctx, sivu, cdp } = await avaaAjo({ width: 1400, height: 900 });
+  await odotaLuentanakyma(sivu);
+  const ennen = await sivu.evaluate(PAALLYSNAYTE);
+  /*
+   * PISTE HAETAAN RUUDULTA, EI ARVATA. Kartan päällä kelluu muutakin
+   * kuin iso kuva — saapumiskortin lappu istuu 1400 px:llä juuri kartan
+   * vasemmassa laidassa (mitattu: elementFromPoint palautti
+   * `.fact-card.pieni` koko vasemmalta reunalta) — joten napautuspiste
+   * on ensimmäinen ruudukon piste, jossa päällimmäisenä on oikeasti
+   * kartta eikä nappi tai kortti.
+   */
+  const piste = await sivu.evaluate(() => {
+    const r = document.querySelector('.map-pane').getBoundingClientRect();
+    const napit = 'a, button, input, select, textarea, label, [role="button"]';
+    for (let sy = 0.2; sy <= 0.8; sy += 0.1) {
+      for (let sx = 0.05; sx <= 0.95; sx += 0.05) {
+        const x = r.left + r.width * sx;
+        const y = r.top + r.height * sy;
+        const el = document.elementFromPoint(x, y);
+        if (el?.closest?.('.map-pane') && !el.closest(napit)) {
+          return { x, y, osui: el.tagName };
+        }
+      }
+    }
+    return null;
+  });
+  tieto('vastakokeen kartta-piste', JSON.stringify(piste));
+  if (piste) await napautaPiste(cdp, piste.x, piste.y);
+  await sivu.waitForTimeout(700);
+  const jalkeen = await sivu.evaluate(PAALLYSNAYTE);
+  tieto('VASTAKOE kartan napautus', `${JSON.stringify(ennen)} → ${JSON.stringify(jalkeen)}`);
+  vaadi('VASTAKOE: kartan napautus purkaa sarjan (isokuva pois, pakka kartalle)',
+    Boolean(piste) && Boolean(ennen.isokuva) && jalkeen.sarja === false
+      && jalkeen.isokuva === null,
+    JSON.stringify({ sarja: jalkeen.sarja, isokuva: jalkeen.isokuva }));
+  await ctx.close();
+}
+
+/* VASTAKOE: KORJAUS POIS — vanha, rajaamaton vartija takaisin päälle.
+   Silloin rattaan napautus purkaa sarjan kuten ennen korjausta, ja
+   vartiot 14–15 kääntyvät punaisiksi. Vanha käytös asennetaan samalla
+   tavalla kuin se oli koodissa: dokumentin pointerdown → sarja loppuun
+   ilman kartta-aluerajausta. */
+console.log('\n=== VASTAKOE: korjaus pois (rajaamaton vartija) 1400x900 ===');
+{
+  const { ctx, sivu, cdp } = await avaaAjo({ width: 1400, height: 900 });
+  await odotaLuentanakyma(sivu);
+  await sivu.evaluate(async () => {
+    const f = await import('/js/fokusvirta.js');
+    const { ui } = window.matkakirja;
+    document.addEventListener('pointerdown', (e) => {
+      if (e.target?.closest?.('.fokusvirta-isokuva, .fokuszoom')) return;
+      if (ui.luentakuvasarja) f.paataLuentakuvasarja(ui, { heti: true });
+    });
+  });
+  const ennen = await sivu.evaluate(PAALLYSNAYTE);
+  await napauta(sivu, cdp, '#kehittaja-valikko-btn');
+  await sivu.waitForTimeout(700);
+  const jalkeen = await sivu.evaluate(PAALLYSNAYTE);
+  tieto('VASTAKOE korjaus pois', `${JSON.stringify(ennen)} → ${JSON.stringify(jalkeen)}`);
+  const leveysEro = Math.abs((jalkeen.isokuva?.w ?? -999) - (ennen.isokuva?.w ?? 0));
+  vaadi('VASTAKOE: rajaamaton vartija EI läpäise isokuvavartiota (kuva kutistuu)',
+    !(Boolean(jalkeen.isokuva) && leveysEro <= 2 && jalkeen.sarja === true),
+    JSON.stringify({ isokuva: jalkeen.isokuva, sarja: jalkeen.sarja }));
+  await ctx.close();
 }
 
 vaadi('sivulla ei ole JS-virheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));

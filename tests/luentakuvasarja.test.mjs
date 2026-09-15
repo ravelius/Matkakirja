@@ -244,11 +244,38 @@ globalThis.document = asiakirja;
 // Suurennos esilataa kuvansa Image-oliolla (sama tynkä kuin pulucam-testissä).
 globalThis.Image = function Image() { return new Elementti('img'); };
 
-/** Kartan veto: pointerdown, jonka kohde ei ole sarja eikä paneeli. */
-function kartanVeto() {
-  const kohde = new Elementti('canvas');
+/** Lähettää pointerdownin dokumentin kuuntelijoille. */
+function napautus(kohde) {
   [...(dokumentinKuuntelijat.get('pointerdown') ?? [])]
     .forEach((k) => k({ type: 'pointerdown', target: kohde }));
+}
+
+/*
+ * KARTAN VETO on napautus, joka osuu KARTTA-ALUEELLE (.map-pane).
+ * Kohde rakennetaan kartan sisään, koska sarjan vartija kysyy juuri
+ * sitä (js/ui-apurit.js onkoKartanLiike): päällysikkunan napautus ei
+ * ole kartan liike (omistaja 15.9.2026).
+ */
+function kartanVeto() {
+  const kartta = new Elementti('section');
+  kartta.luokat.push('map-pane');
+  const kohde = new Elementti('canvas');
+  kohde.parentNode = kartta;
+  napautus(kohde);
+}
+
+/** Päällysikkunan napautus: ylärivin nappi kartan ULKOPUOLELLA. */
+function paallysikkunanNapautus() {
+  napautus(new Elementti('button'));
+}
+
+/** Kartan päällä kelluva nappi (zoomipainike): komento, ei kartan liike. */
+function kartanNapinNapautus() {
+  const kartta = new Elementti('section');
+  kartta.luokat.push('map-pane');
+  const nappi = new Elementti('button');
+  nappi.parentNode = kartta;
+  napautus(nappi);
 }
 
 const {
@@ -592,6 +619,42 @@ test('kartan liike vie sarjan loppuun heti pieneen pakkaan', (t) => {
   assert.equal(paallys().length, 0, 'iso päällys lähtee heti');
   assert.equal(paneelit().length, 1, 'pakka nousee kartalle');
   assert.ok(paneelit()[0].classList.contains('pieni'));
+
+  siivoa(ui);
+  t.mock.timers.reset();
+});
+
+/*
+ * PÄÄLLYSIKKUNAN AVAAMINEN EI PURA LUENNAN NÄKYMÄÄ (omistaja
+ * 15.9.2026, Raamattu "VIKA: ASETUSTEN AVAAMINEN KESKEN LUENNAN
+ * KUTISTAA LUENTAKUVAT", sanatarkasti: *"Jos klikkaan esimerkiksi
+ * hammasratasta, sinä aikana kun isoisän luenta on päällä, niin kuvat
+ * pienentyvät heti"*).
+ *
+ * Vartija kuunteli koko dokumentin pointerdownia, joten hammasratas,
+ * hampurilainen ja matkalaukku luettiin kartan liikkeeksi. Ääni ei
+ * pysähdy niiden ajaksi (mitattu 1400 × 900: `paused === false`,
+ * currentTime 0,93 → 2,97 s), joten näkymänkään ei kuulu purkautua.
+ */
+test('päällysikkunan napautus ei pura sarjaa', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+  naytaLuentakuvasarja(ui, KOEKAUPUNKI);
+  t.mock.timers.tick(60);
+  assert.equal(paallys().length, 1);
+
+  // Ylärivin nappi (hammasratas, hampurilainen) kartan ulkopuolella.
+  paallysikkunanNapautus();
+  assert.equal(paallys().length, 1, 'iso päällys pysyy ruudulla');
+  assert.equal(paneelit().length, 0, 'pakka ei nouse kartalle');
+
+  // Kartan päällä kelluva nappi on komento, ei kartan liike.
+  kartanNapinNapautus();
+  assert.equal(paallys().length, 1, 'kartan oma nappi ei pura sarjaa');
+
+  // Kartta itse purkaa sarjan yhä.
+  kartanVeto();
+  assert.equal(paallys().length, 0, 'kartan liike vie sarjan loppuun');
 
   siivoa(ui);
   t.mock.timers.reset();
