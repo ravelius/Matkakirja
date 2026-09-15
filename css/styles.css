@@ -27040,6 +27040,40 @@ body.radio-tila .toimintorivi .monitoimi-nappi {
 }
 
 /*
+ * NOSTOPOPUPIN AIKANA LAPPU JA LIIKU POIS (omistajan päätös 15.9.2026,
+ * Psilorítis-kaappaus kapealla ruudulla: matkakirjan kutistettu lappu
+ * — vasemman yläkulman "Ateena, elokuussa 1873" ja kaiutin, `.fact-card`
+ * — ja Liiku-symbolinappi jäivät kohdekortin PÄÄLLE). Lippu
+ * `body.nosto-popup-auki` asettuu ja poistuu kartan päälle avautuvien
+ * korttien avaus/sulkukohdissa (js/fokuskohteet.js avaaFokuskohde /
+ * suljeFokuskohde, js/kaupunkinosto.js avaaKortti / suljeKaupunkipopup
+ * — kaupunkikortti ja Lyonin-tyyppinen kaupunkipopup). Sama `display:
+ * none` -mekanismi kuin linssien Liiku-piilossa yllä: piiloon jäänyttä
+ * nappia ei saa voida napauttaa vahingossa.
+ *
+ * TURISTI-INFO EI TARVITSE TÄTÄ: se avaa suoraan nähtävyys-dialogin
+ * (`showModal`, selaimen top layer), joka peittää jo lapun ja Liikun
+ * z-indexistä riippumatta (ks. js/ui.js suurennosIsanta).
+ */
+body.nosto-popup-auki .toimintorivi .monitoimi-nappi {
+  display: none;
+}
+/*
+ * LAPPU: `visibility: hidden` EIKÄ `display: none`. Kutistettu lappu
+ * (`body[data-mode] .fact-card.pieni`, puhelimen media-lohko) asettaa
+ * jo `display: grid`illä KOLME luokkaa/tunnistetta — täsmällisyys
+ * (0,3,1) voittaisi tämän kahden luokan säännön (0,2,1) lähdejärjestyksestä
+ * riippumatta, ja `display: none` jäisi vaikutuksettomaksi (mitattu
+ * 15.9.2026, savuke-iphone-tekstit.mjs: lappu jäi `grid`iksi). Visibility
+ * ei kilpaile display-arvon kanssa, ja `pointer-events: none` estää
+ * silti napautuksen näkymättömään lappuun.
+ */
+body.nosto-popup-auki .fact-card {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*
  * ====================================================================
  * KAUPUNKIETUSIVUN HUNTU JA LUENNAN KAIUTINMERKKI
  * (omistaja 14.9.2026, sanatarkasti)
