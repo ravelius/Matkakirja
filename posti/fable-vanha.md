@@ -1,3 +1,23 @@
+## 2026-09-15 03.26 UTC — FABLE: tarina14-kuvapaikat vaihdettu (PR #2496)
+
+Opus-työagentti. Kuvatoimituksen manifesti `posti/kuvatoimitus-tarina14-20260914.json` SHA-256 `dfea7c13b3fbd6fcaf6afabf3dda00f9f4e5248c826cd2f0fbfe6bfa829f8229` varmennettu. **14/14 kuvapaikkaa vaihdettu** täsmälleen manifestin `replacement`-kentistä sanasta sanaan: Pariisi I1/I2/P1, Bergen I1/I2/P1/P2, Amsterdam I1/I2/P1/P2, Varsova P1, Bukarest P1, Oslo I1. Tromssa P1 jätetty koskematta `held`-merkinnän mukaisesti. Vain kuvien vaihto — eleiden kohdistusajoja ei käynnistetty.
+
+PR https://github.com/ravelius/Matkakirja/pull/2496, haara `claude/bold-ride-vow4ki-tarina14`, pohja `origin/main` @ `f8b98294`. Ei versionostoa, ei mergeä, ei mediaa repoon.
+
+Mitattu: ennen vaihtoa 14/14 vanha URL, lyhyt, selite ja tarinatekstin SHA-256 vastasivat manifestin odotusta (ei poikkeamia). Uudet media-URLit 14/14 HTTP 200 + GET SHA-256 + tavumäärä täsmäävät. Rakenteellinen kaikki-kentät-diff kuudesta pakista: 69 muuttunutta kenttää, kaikki 14 kohdepaikan sisällä, **muualla 0**. Tarinatekstit ja kuplat muuttumattomia. Chromium 141: naturalWidth 1536 × 1024, oikea URL ja näkyvä kuvateksti 14/14 (Pariisi ja Bergen myös erikseen). VANHA/UUSI-parit ja kuva: `docs/raportit/viesti-fable-tarina14-20260915.md`, `docs/raportit/kuvat/tarina14-kuvapaikat-20260915.jpg`.
+
+**POIKKEAMA, Fablen päätettäväksi:** kolme aiemmin vihreää porttitestiä kaatuu manifestin teksteistä (mitattu `origin/main`-worktreessa ennen muutosta: `# pass 29, # fail 0`).
+
+1. `tests/horatio-livia-europe-batches.test.mjs:122` ja `:153` vaativat pitkältä selitteeltä kaksi sisältölausetta. **10/14 uutta selitettä on yksilauseinen**: bergen I2/P1/P2, amsterdam I1/I2/P1/P2, varsova P1, bukarest P1, oslo I1. Pariisin kolme ja bergen I1 täyttävät säännön. Lyhyiden yhden lauseen sääntö täyttyy 14/14.
+2. `tests/luentakuva.test.mjs:518` lukitsee Pariisin luentakuvan osoitteen `-pariisi-r20260909-paper-v4.jpg`:hen, jonka manifesti tarkoituksella korvaa uudella Tuileries-kuvalla.
+
+En muuttanut manifestin tekstejä enkä testejä. Vaihtoehdot: (a) kymmeneen selitteeseen toinen sisältölause + Pariisin lukon päivitys, tai (b) porttien päivitys vastaamaan uutta hyväksyttyä sisältöä. Kumpikin on kaanonpäätös.
+
+Muut portit vihreät: `npm test` 3424 pass / 3 fail (yllä kuvatut) + kuormavartio `tests/pollo.test.mjs:919` (indeksointi 4962 ms, kirjattu kuormavartiona); `tarkista-kaksoisavaimet` ei kaksoisavaimia; `tarkista-niputus` 390 moduulia, ei törmäyksiä; `tarkista-savukkeet` 1702 ui-viittausta.
+
+Huom myös: joidenkin vaihdettujen lohkojen yläpuolella on yhä vanhaan kuvaan viittaavia kaanonkommentteja (esim. Bergenin "Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 8f941560…"). En koskenut niihin.
+
+---
 ## 2026-09-15 03:05 UTC — FABLE: ilmaisupilotti generoitu — kuuntelulinkit (8/10 valmiina, erä 3 kaatui ennen maksua)
 
 Opus-työagentti. Kolme erää ajettu yksi kerrallaan. Erät 1 ja 2 menivät läpi ja ovat mitattuina kunnossa; erä 3 (kertojan saapumisnimet) kaatui ajon esitarkistukseen ENNEN yhtäkään API-kutsua — mitään ei veloitettu eikä uusittu. Kuuntelu on omistajan tehtävä.
