@@ -7625,7 +7625,12 @@ export const RAAMATTU = {
           + 'vaihdetaan kuvaa; 4) oikean alareunan rivi (nuolet, laskuri, '
           + 'i, Vertaa, X) poistuu kokonaan, Vertaa-toiminto poistuu; kuva '
           + 'tayttaa mahdollisimman suuren alueen. Mitataan 1400 ja 390 px, '
-          + 'kuvat omistajalle. Tila: tyo Sonnet-agentilla.',
+          + 'kuvat omistajalle. TARKENNUS (omistaja 15.9.2026 klo 13.50 UTC, '
+          + 'sanatarkasti: "siirra i pillerin oikealle puolelle"): i-nappi '
+          + 'ei ole kuvan kulmassa vaan YLAPALKISSA heti nimi/paiva-pillerin '
+          + 'oikealla puolella; kuvan oikeassa ylakulmassa on vain pieni X; '
+          + 'lisatietokentta avautuu ylapalkin alta i-napin kohdalta. Tila: '
+          + 'tyo Sonnet-agentilla.',
         'IHMISEN MATKA -LINSSI: RINTAMAN VALKKYMINEN, MUSTA ALKU, LIIKU '
           + 'POIS; ASTRONAUTTILINSSILLE OMA KUVAKE (omistaja 15.9.2026 klo '
           + '12.00 UTC, tyopoytakuva 248 000 v. sitten, sanatarkasti: "Kun '
