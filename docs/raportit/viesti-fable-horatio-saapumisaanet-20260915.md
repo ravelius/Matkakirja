@@ -14,8 +14,14 @@ tavulleen uudelleen. Ei uusia ottoja tai uudelleenkoodausta hyväksytyille pilot
 
 - Data: `js/packs/saapumispuheet.js` — `SAAPUMISPUHEET[city.id]` sisältää `url`,
   `duration`, `text`, `name`, `slogan`, `sha256`, `singleTake: true`.
+- `js/media.js` tarjoaa puhtaan `haeSaapumispuhe(city.id)`-haun (tuntematon
+  kohde → null). Se tuo moduulin koontiin mutta ei käynnistä soittoa tai
+  muuta olemassa olevia luentapolkuja.
 - Kuitit ja koko provenienssi: `docs/raportit/horatio-saapumisaanet-eurooppa-20260915.json`.
 - Testi: `node --test tests/saapumispuhe-aineisto.test.mjs`.
+- Uusi datamoduuli on rekisteröity `sw.js`:n SHELL-listaan ja
+  `tools/build-standalone.mjs`:n MODULES-listaan. Nämä kaksi paketointiriviä
+  varmistavat offline- ja standalone-kattavuuden; trailerin soittoa ne eivät muuta.
 - Horation ääni `Sz0tRTEpybtDJ9ru2kgD`, ElevenLabs v3 / stability 0.5 /
   mp3_44100_192 / ei jälkikäsittelyä.
 - Puhe: `kaupunginnimi + ".\n" + nykyinen iskulause + "."`, yhdessä API-otossa.
@@ -73,4 +79,3 @@ Hyväksymiskoe: Ateena (uudelleen käytetty pilotti), Rooma, Kööpenhamina,
 Rovaniemi ja pisin otto. Normaali saapuminen, mykistys, ohitus keskeltä,
 nopea kaupunkivaihto, hylätty play(), mobiili/työpöytä sekä seuraavan
 matkakirjaluennan odotus. Vähintään yksi oikea iOS/Safari-toisto.
-

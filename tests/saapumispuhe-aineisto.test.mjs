@@ -5,7 +5,13 @@ import {EUROPE} from '../js/packs/europe.js';
 import {FOKUSVIRRAT} from '../js/packs/fokusvirrat.js';
 import {ISKULAUSEET} from '../js/packs/iskulauseet.js';
 import {SAAPUMISPUHEET, SAAPUMISPUHE_AANI} from '../js/packs/saapumispuheet.js';
+import {haeSaapumispuhe} from '../js/media.js';
 const delivery=JSON.parse(readFileSync(new URL('../docs/raportit/horatio-saapumisaanet-eurooppa-20260915.json',import.meta.url),'utf8'));
+test('media lookup exposes the new take without fallback or playback',()=>{
+  assert.equal(haeSaapumispuhe('ateena'),SAAPUMISPUHEET.ateena);
+  assert.equal(haeSaapumispuhe({id:'sofia'}),SAAPUMISPUHEET.sofia);
+  for(const id of ['missing','toString','__proto__',undefined,null])assert.equal(haeSaapumispuhe(id),null);
+});
 test('saapumispuheet cover exactly the canonical 45 Europe cities',()=>{
   assert.deepEqual(Object.keys(SAAPUMISPUHEET),Object.keys(FOKUSVIRRAT));
   assert.equal(delivery.cities.length,45);
@@ -50,4 +56,3 @@ test('the three approved pilot takes are reused byte-for-byte',()=>{
   assert.equal(delivery.verification.reusedApprovedPilot,3);
   assert.equal(delivery.voice.postprocess,'none');
 });
-
