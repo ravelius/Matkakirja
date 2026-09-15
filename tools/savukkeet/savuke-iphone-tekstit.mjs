@@ -594,6 +594,125 @@ const mittaa = () => {
   await konteksti.close();
 }
 
+/*
+ * NOSTOPOPUPIN AIKANA LAPPU JA LIIKU POIS (omistajan päätös 15.9.2026,
+ * Psilorítis-kaappaus: kohdekortti kartan päällä peitti lapun ja
+ * Liikun ALLE, kun ne olisi pitänyt piilottaa). Lippu
+ * `body.nosto-popup-auki` (css/styles.css, js/fokuskohteet.js
+ * avaaFokuskohde/suljeFokuskohde, js/kaupunkinosto.js
+ * avaaKortti/suljeKaupunkipopup) piilottaa Liikun `display: none`illä (sama mekanismi kuin linssien
+ * Liiku-piilo yllä) ja lapun `visibility: hidden`illä (ks.
+ * css/styles.css body.nosto-popup-auki .fact-card -kommentti:
+ * `display: none` hävisi kutistetun lapun omalle, tarkemmalle
+ * `display: grid` -säännölle).
+ * Molemmat ruudunkoot, koska omistajan kaappaus oli puhelimella
+ * (390 px) ja vartion pitää päteä myös työpöydällä (1400 px).
+ */
+for (const ruutu of [
+  { nimi: '390 px', asetukset: { viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 } },
+  { nimi: '1400 px', asetukset: { viewport: { width: 1400, height: 900 } } },
+]) {
+  const { konteksti, sivu } = await avaa(ruutu.asetukset);
+
+  /* --- FOKUSKOHDE-POPUP (esim. Psilorítis) --- */
+  const kohdeAuki = await sivu.evaluate(async () => {
+    const { KOHDE_MAAT, kohteidenNykyinenIso, avaaFokuskohde } = await import('/js/fokuskohteet.js');
+    const ui = window.matkakirja.ui;
+    const kohteet = KOHDE_MAAT[kohteidenNykyinenIso(ui)] ?? [];
+    const kohde = kohteet[0];
+    if (!kohde) return { avattu: false };
+    avaaFokuskohde(ui, kohde, {});
+    return { avattu: true, nimi: kohde.nimi };
+  });
+  vaadi(`${ruutu.nimi}: fokuskohde-popup aukesi mittausta varten`, kohdeAuki.avattu,
+    JSON.stringify(kohdeAuki));
+  if (kohdeAuki.avattu) {
+    await sivu.waitForTimeout(300);
+    const auki = await sivu.evaluate(() => ({
+      lippu: document.body.classList.contains('nosto-popup-auki'),
+      lappu: getComputedStyle(document.querySelector('.fact-card')).visibility,
+      liiku: getComputedStyle(document.querySelector('.monitoimi-nappi')).display,
+      popup: Boolean(document.querySelector('.fokuskohde-popup')),
+    }));
+    vaadi(`${ruutu.nimi} ${kohdeAuki.nimi}: fokuskohde-popupin AIKANA lippu on päällä`,
+      auki.lippu && auki.popup, JSON.stringify(auki));
+    vaadi(`${ruutu.nimi} ${kohdeAuki.nimi}: lappu ja Liiku ovat display:none`,
+      auki.lappu === 'hidden' && auki.liiku === 'none', JSON.stringify(auki));
+
+    await sivu.evaluate(async () => {
+      const { suljeFokuskohde } = await import('/js/fokuskohteet.js');
+      suljeFokuskohde(window.matkakirja.ui);
+    });
+    await sivu.waitForTimeout(300);
+    const suljettu = await sivu.evaluate(() => ({
+      lippu: document.body.classList.contains('nosto-popup-auki'),
+      lappu: getComputedStyle(document.querySelector('.fact-card')).visibility,
+      liiku: getComputedStyle(document.querySelector('.monitoimi-nappi')).display,
+    }));
+    vaadi(`${ruutu.nimi}: sulkemisen JÄLKEEN lippu poistuu ja lappu/Liiku palaavat (vastakoe)`,
+      !suljettu.lippu && suljettu.lappu !== 'hidden' && suljettu.liiku !== 'none',
+      JSON.stringify(suljettu));
+
+    /*
+     * VASTAKOE JUURISYYLLE: ilman lippua CSS-sääntö ei tee mitään —
+     * lappu ja Liiku näkyvät, vaikka kortti olisi auki. Tämä
+     * kaataisi vartion, jos piilo tulisikin jostain muusta säännöstä
+     * eikä `body.nosto-popup-auki`-luokasta.
+     */
+    await sivu.evaluate(async () => {
+      const { KOHDE_MAAT, kohteidenNykyinenIso, avaaFokuskohde } = await import('/js/fokuskohteet.js');
+      const ui = window.matkakirja.ui;
+      const kohteet = KOHDE_MAAT[kohteidenNykyinenIso(ui)] ?? [];
+      avaaFokuskohde(ui, kohteet[0], {});
+      document.body.classList.remove('nosto-popup-auki');
+    });
+    await sivu.waitForTimeout(300);
+    const ilmanLippua = await sivu.evaluate(() => ({
+      lappu: getComputedStyle(document.querySelector('.fact-card')).visibility,
+      liiku: getComputedStyle(document.querySelector('.monitoimi-nappi')).display,
+    }));
+    vaadi(`${ruutu.nimi} VASTAKOE: ilman lippua lappu ja Liiku näkyvät kortin ollessa auki`,
+      ilmanLippua.lappu !== 'hidden' && ilmanLippua.liiku !== 'none', JSON.stringify(ilmanLippua));
+    await sivu.evaluate(async () => {
+      const { suljeFokuskohde } = await import('/js/fokuskohteet.js');
+      suljeFokuskohde(window.matkakirja.ui);
+    });
+  }
+
+  /* --- KAUPUNKIPOPUP (Ateenan oma kaupunkikortti, sama runko kuin Lyonilla) --- */
+  await sivu.evaluate(async () => {
+    const { avaaKaupunkipopup } = await import('/js/kaupunkinosto.js');
+    avaaKaupunkipopup(window.matkakirja.ui, window.matkakirja.ui.game.cityOf(), {});
+  });
+  await sivu.waitForTimeout(300);
+  const kaupunkiAuki = await sivu.evaluate(() => ({
+    lippu: document.body.classList.contains('nosto-popup-auki'),
+    lappu: getComputedStyle(document.querySelector('.fact-card')).visibility,
+    liiku: getComputedStyle(document.querySelector('.monitoimi-nappi')).display,
+    popup: Boolean(document.querySelector('.kaupunkipopup')),
+  }));
+  vaadi(`${ruutu.nimi}: kaupunkipopupin AIKANA lappu ja Liiku ovat display:none`,
+    kaupunkiAuki.popup && kaupunkiAuki.lippu
+    && kaupunkiAuki.lappu === 'hidden' && kaupunkiAuki.liiku === 'none',
+    JSON.stringify(kaupunkiAuki));
+
+  await sivu.evaluate(async () => {
+    const { suljeKaupunkipopup } = await import('/js/kaupunkinosto.js');
+    suljeKaupunkipopup(window.matkakirja.ui);
+  });
+  await sivu.waitForTimeout(300);
+  const kaupunkiSuljettu = await sivu.evaluate(() => ({
+    lippu: document.body.classList.contains('nosto-popup-auki'),
+    lappu: getComputedStyle(document.querySelector('.fact-card')).visibility,
+    liiku: getComputedStyle(document.querySelector('.monitoimi-nappi')).display,
+  }));
+  vaadi(`${ruutu.nimi}: kaupunkipopupin sulkemisen JÄLKEEN lappu ja Liiku palaavat (vastakoe)`,
+    !kaupunkiSuljettu.lippu && kaupunkiSuljettu.lappu !== 'hidden' && kaupunkiSuljettu.liiku !== 'none',
+    JSON.stringify(kaupunkiSuljettu));
+
+  await konteksti.close();
+}
+
 await selain.close();
 palvelin.close();
 console.log(`\n${lapi}/${kaikki} vartiota läpi`);
