@@ -36,6 +36,10 @@
  * selitteelle kappaleet samasta joukosta.
  */
 
+import {
+  aiheenNimi, aihemerkinLaatikko, aihemerkkiElementti, asetteleAihemerkki,
+  kohdanLaatikko, ryhmitaNostot, viuhkanAsemat, viuhkanNimioLeveys,
+} from './aihemerkit.js';
 import { FOKUS_POHJAT } from '../packs/fokus-grc.js';
 import { MAASTOKOHTEET_ARK } from '../packs/maastokohteet-ark.js';
 import { MAASTOKOHTEET_ATA } from '../packs/maastokohteet-ata.js';
@@ -60,6 +64,18 @@ import { sovitteleLaput } from './sovittelu.js';
 
 /** Eläviä nostoja pallolla enintään kerrallaan (karttapallo.md luku 6). */
 export const NOSTOJEN_KATTO = 40;
+/**
+ * AIHEMERKKIEN VASTAKOE YHDELLÄ LIPULLA: `?aihemerkit=0` sammuttaa
+ * ryhmityksen, jolloin kartta latoo nostot kuten ennen PAATOKSET
+ * 27:ää. Savuke mittaa molemmat samalla ajolla ja näkee, mitä ryhmitys
+ * oikeasti maksaa ja tuottaa — sama tapa kuin `?vektorit=0`.
+ */
+export function ryhmitysSallittu() {
+  try {
+    const arvo = new URLSearchParams(globalThis.location?.search ?? '').get('aihemerkit');
+    return !/^(0|ei|off)$/.test(arvo ?? '');
+  } catch { return true; }
+}
 /*
  * ══ ETELÄMANNER: NOSTO ASTEINA, EI LAUDAN PISTEENÄ ════════════════
  *
@@ -764,6 +780,15 @@ export function napanostonRivi(ui, kohde, { avain }) {
  */
 export function luoNostot({
   ui, merkit, asteet, ruudulla, onPoltettu = pallonNostoOnPoltettu,
+  /*
+   * VIUHKA TARVITSEE KOLME ASIAA LAUDALTA (ks. js/pallolauta/aihemerkit.js).
+   * `ruutu` on kotelon koko: kaari sovitetaan ruudulle eikä palloon.
+   * `ankkuri` antaa kortin ankkurin RUUDUN pikseleinä, jotta viuhkasta
+   * avattu kortti nousee sen kohdan kohdalta, jota sormi kosketti.
+   * `ladoUudelleen` pyytää uuden ladonnan, kun viuhka aukeaa tai
+   * sulkeutuu — kerros ei omista kameraa eikä ladonnan tahtia.
+   */
+  ruutu = null, ankkuri = null, ladoUudelleen = null,
 }) {
   let osumat = []; // ruudulla olevat, napautettavat merkit
   let laatikot = [];
@@ -778,6 +803,19 @@ export function luoNostot({
     siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0, lappuja: 0,
   };
   let laskeLaatikot = () => { laatikot = []; };
+  /*
+   * AUKI OLEVA VIUHKA: { avain, p, uloinOsuus } tai null. Viuhka
+   * sulkeutuu kartan napautuksesta (js/pallolauta/lauta.js
+   * napautaPintaan), zoomista ja panoroinnista (paivita vertaa
+   * kameran osuutta ja merkin ruutupistettä avaushetkeen) sekä
+   * toisen viuhkan avauksesta — PAATOKSET 27 kohta 2.
+   */
+  let viuhka = null;
+  // Ryhmiin sulautuneiden nostojen id:t: auki oleva kortti ei sulkeudu
+  // sen takia, että sen merkki on juuri nyt aihemerkin sisällä.
+  let ryhmitetytIdt = new Set();
+  // Auki olevan viuhkan kohdat ruutulaatikkoineen (osumatesti lukee).
+  let viuhkanKohdat = [];
   const varit = new Map();
 
   /** Aiheen väri CSS-muuttujasta pistekerroksen väriksi (rgba). */
@@ -1007,6 +1045,53 @@ export function luoNostot({
     return rivit;
   };
 
+  /*
+   * VIUHKAN OMAT MITAT. Lepo on se, minkä verran merkin ruutupiste saa
+   * huojua ladonnasta toiseen ilman että viuhka sulkeutuu (kirjaston
+   * siirtymä ja pallon pyöristykset liikuttavat pistettä pari
+   * pikseliä levossakin); zoomivara on sama ajatus kameran osuudelle.
+   */
+  const VIUHKAN_LEPO_PX = 12;
+  const VIUHKAN_ZOOMIVARA = 0.01;
+
+  /** Avaa viuhkan aihemerkistä; toinen viuhka sulkeutuu samalla. */
+  const avaaViuhka = (rivi) => {
+    viuhka = {
+      avain: rivi.avain, p: { x: rivi.p.x, y: rivi.p.y }, uloinOsuus: viimeisinUloinOsuus,
+    };
+    ladoUudelleen?.();
+    return true;
+  };
+
+  /** Sulkee auki olevan viuhkan; palauttaa tosi, jos jokin sulkeutui. */
+  const suljeViuhka = () => {
+    if (!viuhka) return false;
+    viuhka = null;
+    ladoUudelleen?.();
+    return true;
+  };
+
+  /**
+   * NAPAUTUS VIUHKAN KOHTAAN: kortti aukeaa kohdan omasta paikasta.
+   *
+   * Ankkuri on aihemerkin ruutupiste + kohdan siirto — sama kaksi
+   * lukua, joilla kohta piirrettiin — jotta kortti nousee siitä, mitä
+   * sormi kosketti (js/fokuskohteet.js avaaFokuskohde { ankkuri }).
+   * Viuhka sulkeutuu avauksessa: kortti on vastaus, viuhka oli kysymys.
+   */
+  const napautaViuhkastaan = (rivi, m, asema) => {
+    if (ui.dead || ui.busy || typeof m.avaa !== 'function') return false;
+    const pohja = ankkuri ? ankkuri(rivi.lat, rivi.lng) : null;
+    const kohdanAnkkuri = pohja ? () => {
+      const a = pohja();
+      return a ? { x: a.x + asema.dx, y: a.y + asema.dy } : null;
+    } : undefined;
+    viuhka = null;
+    m.avaa(kohdanAnkkuri);
+    ladoUudelleen?.();
+    return true;
+  };
+
   /**
    * Päivittää kerroksen: kutsutaan levossa (js/pallolauta/lauta.js).
    * Palauttaa elävien laatikot nimiladonnan varauksiksi ja määrän.
@@ -1043,13 +1128,106 @@ export function luoNostot({
      * toistetaan tässä. Kaupunkeja on maata kohti kourallinen, joten
      * ne eivät voi täyttää budjettia.
      */
-    const elavat = nakyvat.filter((r) => !r.poltettu)
-      .sort((a, b) => ((a.perhe === 'piste') - (b.perhe === 'piste')) * -1
-        || (Number(Boolean(b.kaupunki)) - Number(Boolean(a.kaupunki)))
-        || (a.etaisyys - b.etaisyys));
-    const naytetaan = elavat.slice(0, Math.max(0, katto));
+    const jarjestys = (a, b) => ((a.perhe === 'piste') - (b.perhe === 'piste')) * -1
+      || (Number(Boolean(b.kaupunki)) - Number(Boolean(a.kaupunki)))
+      || (a.etaisyys - b.etaisyys);
+    const elavat = nakyvat.filter((r) => !r.poltettu).sort(jarjestys);
     const mittaNyt = nostonMitta();
-    datumit = naytetaan.map((r) => ({
+    /*
+     * SAMAN AIHEEN LÄHEKKÄISET NOSTOT YHDEKSI AIHEMERKIKSI (omistaja
+     * 15.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 27; säännöt ja
+     * mitat js/pallolauta/aihemerkit.js).
+     *
+     * KAKSI EHTOA: nimiöt limittyisivät JA zoomi on yhä saapumisen
+     * tuntumassa. Jälkimmäinen on sama mitattu porras kuin
+     * merkkiportilla (lahizoomiAuki): yksi zoomporras sisään ja
+     * merkit hajoavat omiksi nostoiksi nimiöineen — limitysehto yksin
+     * ei voisi sitä antaa, koska nimiö on kartan mitta ja kasvaa
+     * zoomissa samassa suhteessa kuin merkkien väli.
+     *
+     * RYHMÄÄN KELPAAVAT VAIN ELÄVÄT KOHDENOSTOT. Poltettu muste on
+     * laatassa eikä sitä voi piilottaa; kaupunkimerkki on kartan
+     * hierarkiaa eikä nosto; kohtaamispiste ja eläintäky ovat omia
+     * merkkejään; nimikyltti (`vainNimi`) ei avaa mitään.
+     */
+    const ryhmitysPaalla = ryhmitysSallittu() && !lahizoomiAuki(uloinOsuus);
+    const ehdokkaat = ryhmitysPaalla
+      ? elavat.filter((r) => r.perhe === 'nosto' && r.aihe && !r.kaupunki
+        && !r.vainNimi && typeof r.avaa === 'function')
+      : [];
+    const { ryhmat } = ryhmitysPaalla
+      ? ryhmitaNostot(ehdokkaat, (r) => nostonLaatikko(r.p, r))
+      : { ryhmat: [] };
+    const ryhmassa = new Set();
+    ryhmitetytIdt = new Set();
+    for (const kasa of ryhmat) {
+      for (const r of kasa) { ryhmassa.add(r.avain); ryhmitetytIdt.add(r.id); }
+    }
+    const aiherivit = ryhmat.map((kasa) => {
+      const lat = kasa.reduce((a, r) => a + r.lat, 0) / kasa.length;
+      const lng = kasa.reduce((a, r) => a + r.lng, 0) / kasa.length;
+      const p = ruudulla(lat, lng) ?? kasa[0].p;
+      return {
+        avain: `aihemerkki:${kasa[0].avain}`,
+        id: `aihemerkki:${kasa[0].id}`,
+        perhe: 'aihemerkki',
+        lat,
+        lng,
+        p,
+        etaisyys: Math.min(...kasa.map((r) => r.etaisyys)),
+        aihe: kasa[0].aihe,
+        kategoria: kasa[0].kategoria,
+        symLaji: kasa[0].symLaji,
+        nimi: aiheenNimi(kasa[0].aihe),
+        maara: kasa.length,
+        jasenet: kasa,
+        nimioNakyy: false,
+        poltettu: false,
+        avaa: null,
+      };
+    });
+    for (const r of aiherivit) r.avaa = () => avaaViuhka(r);
+    /*
+     * VIUHKA SULKEUTUU ZOOMISTA JA PANOROINNISTA (PAATOKSET 27 kohta
+     * 2). Kerros ei kuuntele kameraa itse — se näkee sen ladonnassa:
+     * jos merkin ruutupiste on siirtynyt VIUHKAN_LEPO_PX:ää enemmän
+     * tai kameran osuus uloimmasta on muuttunut, ele oli kameran ele
+     * ja viuhka on mennyttä. Sama sulku hoitaa myös sen, että ryhmä
+     * itse katosi (zoomi sisään hajotti sen).
+     */
+    if (viuhka) {
+      const rivi = aiherivit.find((r) => r.avain === viuhka.avain);
+      const siirtyi = rivi
+        ? Math.hypot(rivi.p.x - viuhka.p.x, rivi.p.y - viuhka.p.y) > VIUHKAN_LEPO_PX
+        : true;
+      const zoomasi = Math.abs(uloinOsuus - viuhka.uloinOsuus)
+        > VIUHKAN_ZOOMIVARA * Math.max(uloinOsuus, viuhka.uloinOsuus, 1e-6);
+      if (!rivi || siirtyi || zoomasi) viuhka = null;
+    }
+    const piirrettavat = [...elavat.filter((r) => !ryhmassa.has(r.avain)), ...aiherivit]
+      .sort(jarjestys);
+    const naytetaan = piirrettavat.slice(0, Math.max(0, katto));
+    datumit = naytetaan.map((r) => (r.perhe === 'aihemerkki' ? {
+      avain: r.avain,
+      mitta: mittaNyt,
+      laji: 'nosto',
+      id: r.id,
+      perhe: r.perhe,
+      lat: r.lat,
+      lng: r.lng,
+      nimi: r.nimi,
+      maara: r.maara,
+      aihe: r.aihe,
+      kategoria: r.kategoria,
+      symLaji: r.symLaji,
+      nimioNakyy: false,
+      avattu: viuhka?.avain === r.avain,
+      // Viuhka täytetään alempana, kun kaari on laskettu; kenttä on
+      // oltava tässä, koska datum on pysyvä (merkit.aseta Object.assign).
+      viuhka: null,
+      elementti: aihemerkkiElementti,
+      asettele: asetteleAihemerkki,
+    } : {
       avain: r.avain,
       // Kaupunki on isompi kuin nosto (merkinKerroin).
       mitta: mittaNyt * merkinKerroin(r),
@@ -1074,6 +1252,49 @@ export function luoNostot({
       elementti: r.perhe === 'piste' ? pisteElementti : nostoElementti,
       asettele: r.perhe === 'piste' ? asetteleFokuspiste : asetteleNosto,
     }));
+    /*
+     * VIUHKAN KAARI LASKETAAN TÄSSÄ, koska vain ladonta tietää merkin
+     * ruutupisteen ja ruudun koon. Kohdat eivät ole omia merkkejään
+     * vaan aihemerkin oman datumin kenttä, jonka merkin `asettele`
+     * piirtää (ks. js/pallolauta/aihemerkit.js VIUHKA PIIRTYY
+     * AIHEMERKIN OMAAN ELEMENTTIIN) — ne eivät siis kuluta
+     * CSS2D-kattoa eivätkä odota kirjaston seuraavaa kehystä.
+     * Sama lista jää osumatestin käyttöön (viuhkanKohdat).
+     */
+    viuhkanKohdat = [];
+    if (viuhka) {
+      const rivi = naytetaan.find((r) => r.avain === viuhka.avain);
+      if (!rivi) viuhka = null;
+      else {
+        const leveydet = rivi.jasenet.map((m) => viuhkanNimioLeveys(
+          m.nimi ? nostosymNimioMitta(m.nimi, m.symLaji).leveys : 0, mittaNyt,
+        ));
+        const { puoli, asemat } = viuhkanAsemat({
+          p: rivi.p,
+          ruutu: ruutu?.() ?? { leveys: 1400, korkeus: 900 },
+          leveydet,
+        });
+        viuhkanKohdat = rivi.jasenet.map((m, i) => ({
+          m, rivi, asema: asemat[i], leveys: leveydet[i], puoli,
+        }));
+        // Kohdat ovat aihemerkin oman datumin kenttä, eivät omia
+        // merkkejään (ks. js/pallolauta/aihemerkit.js VIUHKA PIIRTYY
+        // AIHEMERKIN OMAAN ELEMENTTIIN).
+        const datum = datumit[naytetaan.indexOf(rivi)];
+        if (datum) {
+          datum.viuhka = rivi.jasenet.map((m, i) => ({
+            id: m.id,
+            nimi: m.nimi,
+            dx: asemat[i].dx,
+            dy: asemat[i].dy,
+            puoli,
+            leveys: leveydet[i],
+            mitta: mittaNyt,
+            piirra: (g, kylki) => piirraNostosymKartalle(g, m.kategoria, m.nimi, m.symLaji, kylki),
+          }));
+        }
+      }
+    }
     merkit.aseta('nostot', datumit);
     /*
      * NIMILAPPU ON OSA OSUMAPINTAA (Raamattu, VIAT v1672; omistaja
@@ -1102,6 +1323,13 @@ export function luoNostot({
     naytetaan.forEach((r, i) => {
       const d = datumit[i];
       if (r.perhe === 'piste') return;
+      // Aihemerkillä ei ole nimiötä eikä kylkeä: osumapinta on sen
+      // oma värilautanen (js/pallolauta/aihemerkit.js).
+      if (r.perhe === 'aihemerkki') {
+        r.datum = d;
+        r.lappu = (piste) => aihemerkinLaatikko(piste, d);
+        return;
+      }
       // Datum kantaa sovittelun jälkeisen asennon (kylki ja siirto);
       // osuma lukee sen vasta napautuksessa, jotta väistö näkyy myös
       // osumapinnassa.
@@ -1142,9 +1370,9 @@ export function luoNostot({
       ikonit.push({ r, datum: datumit[i] });
       if (r.nimioNakyy && r.nimi) lappuja.push({ r, datum: datumit[i] });
     });
-    const ikonilaatikko = ({ r, datum }) => nostonLaatikko(r.p, r, {
-      dx: datum.dx, dy: datum.dy, nimio: false,
-    });
+    const ikonilaatikko = ({ r, datum }) => (r.perhe === 'aihemerkki'
+      ? aihemerkinLaatikko(r.p, datum)
+      : nostonLaatikko(r.p, r, { dx: datum.dx, dy: datum.dy, nimio: false }));
     laskeLaatikot = () => {
       laatikot = [
         ...ikonit.map(ikonilaatikko),
@@ -1156,12 +1384,19 @@ export function luoNostot({
       siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0, lappuja: lappuja.length,
     };
     laskurit = new Map();
-    for (const o of osumat) if (o.aihe) laskurit.set(o.aihe, (laskurit.get(o.aihe) ?? 0) + 1);
+    // Aihemerkki on monta nostoa: selite laskee kappaleet, ei merkkejä.
+    for (const o of osumat) {
+      if (o.aihe) laskurit.set(o.aihe, (laskurit.get(o.aihe) ?? 0) + (o.maara ?? 1));
+    }
     paivitaValot();
     // Auki oleva kortti, jonka merkki ei ole enää ruudulla, sulkeutuu
     // kuten kartalla kerroksen piiloutuessa.
     const auki = ui.fokuskohdeAuki;
-    if (auki?.ankkuri && !osumat.some((o) => o.id === auki.id)) suljeFokuskohde(ui);
+    // Ryhmään sulautunut nosto EI ole kadonnut ruudulta: sen merkki on
+    // aihemerkin sisällä, ja juuri viuhkasta avattu kortti sulkeutuisi
+    // muuten samalla ladonnalla, joka sen avasi.
+    if (auki?.ankkuri && !osumat.some((o) => o.id === auki.id)
+      && !ryhmitetytIdt.has(auki.id)) suljeFokuskohde(ui);
     return { maara: naytetaan.length, laatikot, osumia: osumat.length };
   };
 
@@ -1216,6 +1451,62 @@ export function luoNostot({
     paivita,
     sovittele,
     paivitaValot,
+    /** Auki olevan viuhkan aihemerkin avain tai null (PAATOKSET 27). */
+    viuhkaAuki: () => viuhka?.avain ?? null,
+    /** Sulkee viuhkan (kartan napautus, js/pallolauta/lauta.js). */
+    suljeViuhka,
+    /**
+     * OSUIKO NAPAUTUS VIUHKAN KOHTAAN (js/pallolauta/lauta.js
+     * napautaPintaan). `kohta` on napautuksen ruutupiste kotelon
+     * pikseleinä. Laatikko on sama kaava, jolla kohta piirrettiin
+     * (js/pallolauta/aihemerkit.js kohdanLaatikko) — sormi ja silmä
+     * mittaavat samaa. Avaa noston ja palauttaa tosi, jos osui.
+     */
+    napautaViuhkasta: (kohta) => {
+      if (!kohta || !viuhkanKohdat.length) return false;
+      for (const k of viuhkanKohdat) {
+        const p = ruudulla(k.rivi.lat, k.rivi.lng);
+        if (!p) continue;
+        const l = kohdanLaatikko(p.x + k.asema.dx, p.y + k.asema.dy, k.leveys, k.puoli);
+        if (kohta.x >= l.x0 && kohta.x <= l.x1 && kohta.y >= l.y0 && kohta.y <= l.y1) {
+          return napautaViuhkastaan(k.rivi, k.m, k.asema);
+        }
+      }
+      return false;
+    },
+    /**
+     * Viuhkan kohtien OSUMALAATIKOT ruudulla (savukkeet ja vartijat):
+     * sama kaava, jota napautus vertaa — kohta mahtuu ruudulle silloin
+     * ja vain silloin, kun tämä laatikko mahtuu.
+     */
+    viuhkanOsumalaatikot: () => viuhkanKohdat.map((k) => {
+      const p = ruudulla(k.rivi.lat, k.rivi.lng);
+      if (!p) return null;
+      return {
+        id: k.m.id,
+        nimi: k.m.nimi,
+        ...kohdanLaatikko(p.x + k.asema.dx, p.y + k.asema.dy, k.leveys, k.puoli),
+      };
+    }).filter(Boolean),
+    /**
+     * Viuhkan kohdat juuri nyt (savukkeet ja vartijat): kohdan
+     * ruutupiste ja nimi samasta laskusta, jolla se piirrettiin.
+     */
+    viuhkanKohdat: () => viuhkanKohdat.map((k) => ({
+      id: k.m.id, nimi: k.m.nimi, dx: k.asema.dx, dy: k.asema.dy, puoli: k.puoli, leveys: k.leveys,
+    })),
+    /**
+     * Aihemerkit juuri nyt: aihe, kappalemäärä ja jäsenten id:t
+     * (PAATOKSET 27:n mittari).
+     */
+    aihemerkit: () => osumat.filter((o) => o.perhe === 'aihemerkki').map((o) => ({
+      id: o.id,
+      aihe: o.aihe,
+      maara: o.maara,
+      jasenet: o.jasenet.map((m) => ({ id: m.id, x: m.p.x, y: m.p.y })),
+      x: o.p?.x ?? 0,
+      y: o.p?.y ?? 0,
+    })),
     /**
      * Napautettavat merkit ruudulla ({ avain, id, lat, lng, nimi, avaa,
      * perhe, poltettu }). Nostoilla ja eläintäyillä on lisäksi

@@ -51,6 +51,7 @@ import { packById } from '../../js/pack.js';
 import { MAAILMANKARTTA } from '../../js/packs/maailmankartta.js';
 import { NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
 import { PAAKARTAN_MERKKIKATTO, merkkiPortti } from '../../js/pallolauta/nostot.js';
+import { RYHMITYKSEN_ETAISYYS_PX, ryhmitaNostot } from '../../js/pallolauta/aihemerkit.js';
 import { paakartanNostot } from '../tarkista-nostopaikat.mjs';
 
 const paketti = await import('playwright')
@@ -95,6 +96,13 @@ const ANKKURIN_ETAISYYSVARA = 0.1;
 const KAUPUNGIT = ['pariisi', 'marseille'];
 /** Ranskan merkit pääkartalla (savuke-ranska-sisalto FRA_MERKKEJA). */
 const FRA_MERKKEJA = 62;
+/*
+ * Limittyvien nimiöparien katto saapumisnäkymässä (PAATOKSET 27:n
+ * mittaus). Mitattu tämän erän jälkeen: työpöydällä 1 pari ja
+ * puhelimella 3 — kaikki ERI aiheiden välillä, joita ryhmitys ei
+ * sääntönsä mukaan yhdistä. Ennen erää pareja oli 9 ja 11.
+ */
+const LIMITYSPARIEN_KATTO = 4;
 
 let lapi = 0;
 let kaikki = 0;
@@ -341,6 +349,42 @@ for (const ruutu of RUUDUT) {
       const portti = l.nostot?.portti?.() ?? null;
       const nostonMitta = nosto
         ? Number((nosto.style.transform.match(/scale\(([\d.]+)\)/u) ?? [])[1] ?? 0) : 0;
+      /*
+       * AIHEMERKIT JA VIUHKA (vartio 9, Raamattu KARTTAUUDISTUKSEN
+       * PAATOKSET 27). Ryhmien määrä luetaan kerrokselta, limitys
+       * samoista nimiölaatikoista kuin sovittelu käytti, ja viuhka
+       * kokeillaan saapumisnäkymässä (kerroin 1) napauttamalla
+       * suurinta aihemerkkiä — sama kutsu kuin sormella.
+       */
+      const aihemerkit = l.nostot?.aihemerkit?.() ?? [];
+      const laput = l.nostot?.lappuLaatikot?.() ?? [];
+      const limittyy = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
+      let pareja = 0;
+      for (let i = 0; i < laput.length; i += 1) {
+        for (let j = i + 1; j < laput.length; j += 1) if (limittyy(laput[i], laput[j])) pareja += 1;
+      }
+      let viuhka = null;
+      if (kerroin === 1 && aihemerkit.length) {
+        const suurin = [...aihemerkit].sort((a, b) => b.maara - a.maara)[0];
+        l.napautaNosto(suurin.id);
+        await new Promise((v) => setTimeout(v, 300));
+        l.ladoHeti();
+        await new Promise((v) => setTimeout(v, 300));
+        const koti = (document.querySelector('.pallo-kotelo') ?? document.body).getBoundingClientRect();
+        const laatikot = l.nostot?.viuhkanOsumalaatikot?.() ?? [];
+        viuhka = {
+          jasenia: suurin.maara,
+          kohtia: laatikot.length,
+          ruudulla: laatikot.filter((b) => b.x0 >= 0 && b.y0 >= 0
+            && b.x1 <= koti.width && b.y1 <= koti.height).length,
+          auki: Boolean(l.nostot?.viuhkaAuki?.()),
+          kohtia_dom: document.querySelectorAll('.pallolauta-viuhka-kohta').length,
+        };
+        l.nostot.suljeViuhka();
+        l.ladoHeti();
+        await new Promise((v) => setTimeout(v, 200));
+        viuhka.sulkeutui = !l.nostot?.viuhkaAuki?.();
+      }
       const arvo = document.querySelector('.pallolauta-maapaneeli .maapaneeli-arvo');
       const paneeli = document.querySelector('.pallolauta-maapaneeli .maapaneeli-kortti');
       const skaala = paneeli
@@ -391,6 +435,11 @@ for (const ruutu of RUUDUT) {
         portinPiiloon: portti?.piiloon?.length ?? 0,
         kaupunkeja: document.querySelectorAll('.pallolauta-nosto-kaupunki').length,
         kaupunginMitta,
+        aihemerkkeja: aihemerkit.length,
+        aiheryhmissa: aihemerkit.reduce((a, r) => a + r.maara, 0),
+        lappuja: laput.length,
+        limitysPareja: pareja,
+        viuhka,
       };
     }, [osuus, alkuPov]);
     zoomit.push(mitta);
@@ -471,6 +520,58 @@ for (const ruutu of RUUDUT) {
     + '(PAATOKSET 25 kohta 3)',
     nostonNimio > 0 && nostonNimio < kaupunginNimio,
     `nosto ${p(nostonNimio, 2)} px, kaupunki ${p(kaupunginNimio, 2)} px`);
+
+  /*
+   * 9. AIHEMERKIT JA VIUHKA (omistaja 15.9.2026 klo 20.00 UTC,
+   * Raamattu KARTTAUUDISTUKSEN PAATOKSET 27: *"Tee saman aiheen
+   * nostot yhdeksi ilman selitettyä. Klikattaessa vaihtoehdot tulevat
+   * viuhkana näkyviin nimien kanssa"*).
+   *
+   * Mitat ovat samasta sarjasta kuin muutkin: saapuminen on kerroin 1
+   * ja yksi zoomporras sisään on kerroin 0,5 — sarjan 0,6 on jo
+   * lähizoomin puolella (LAHIZOOMIN_OSUUS_ULOIMMASTA 0,7), joten
+   * siellä ryhmiä ei saa olla yhtään.
+   */
+  const sisalla = zoomit[zoomit.length - 1];
+  tieto(`${ruutu.nimi} · aihemerkit`,
+    `saapuen ${saapuen.aihemerkkeja} merkkiä / ${saapuen.aiheryhmissa} nostoa, `
+    + `limityspareja ${saapuen.limitysPareja} (${saapuen.lappuja} nimiötä); `
+    + `lähizoomilla ${sisalla.aihemerkkeja}`);
+  vaadi(`9a. ${ruutu.nimi}: saapumisnäkymässä syntyy aihemerkkejä (Pariisin rykelmä)`,
+    saapuen.aihemerkkeja >= 1 && saapuen.aiheryhmissa >= 2,
+    `${saapuen.aihemerkkeja} merkkiä, ${saapuen.aiheryhmissa} nostoa`);
+  vaadi(`9b. ${ruutu.nimi}: limittyviä nimiöpareja enintään ${LIMITYSPARIEN_KATTO}`,
+    saapuen.limitysPareja <= LIMITYSPARIEN_KATTO, `${saapuen.limitysPareja} paria`);
+  vaadi('9c. ' + `${ruutu.nimi}: viuhka avautuu ja jokainen kohta mahtuu ruudulle`,
+    Boolean(saapuen.viuhka) && saapuen.viuhka.auki
+      && saapuen.viuhka.kohtia === saapuen.viuhka.jasenia
+      && saapuen.viuhka.ruudulla === saapuen.viuhka.kohtia
+      && saapuen.viuhka.kohtia_dom === saapuen.viuhka.kohtia,
+    saapuen.viuhka
+      ? `kohtia ${saapuen.viuhka.kohtia}/${saapuen.viuhka.jasenia}, ruudulla `
+        + `${saapuen.viuhka.ruudulla}, DOMissa ${saapuen.viuhka.kohtia_dom}`
+      : 'viuhkaa ei avattu');
+  vaadi(`9d. ${ruutu.nimi}: viuhka sulkeutuu`,
+    Boolean(saapuen.viuhka?.sulkeutui), 'jäi auki');
+  vaadi(`9e. ${ruutu.nimi}: yhden zoomportaan sisällä aihemerkkejä ei ole`,
+    sisalla.aihemerkkeja === 0, `${sisalla.aihemerkkeja} merkkiä`);
+  /*
+   * 9f. VASTAKOE ILMAN SELAINTA: sama ryhmitys, mutta merkit
+   * kaukana toisistaan eivätkä nimiöt koske — yksikään ryhmä ei saa
+   * syntyä (PAATOKSET 27 kohta 4: maan laajat yksittäiset nostot
+   * näkyvät nimiöin heti).
+   */
+  const kaukana = [0, 1, 2, 3].map((i) => ({
+    avain: `k${i}`,
+    aihe: 'historia',
+    p: { x: 100 + i * 4 * RYHMITYKSEN_ETAISYYS_PX, y: 100 },
+  }));
+  const vastakoe = ryhmitaNostot(kaukana, (m) => ({
+    x0: m.p.x - 5, y0: m.p.y - 5, x1: m.p.x + 5, y1: m.p.y + 5,
+  }));
+  vaadi('9f. vastakoe: kaukana toisistaan olevat saman aiheen nostot eivät ryhmity',
+    vastakoe.ryhmat.length === 0 && vastakoe.yksin.length === kaukana.length,
+    `${vastakoe.ryhmat.length} ryhmää`);
 
   /*
    * 7. KYLTIN ANKKURI ON KIINTEÄ KAIKILLA ZOOMEILLA (omistaja
