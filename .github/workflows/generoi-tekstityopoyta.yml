@@ -1,0 +1,63 @@
+name: Tekstityöpöydän yksi puhe
+run-name: ${{ inputs.dry_run && 'Tarkistus' || 'Tekstipöytä' }} ${{ inputs.request_id }}
+on:
+  workflow_dispatch:
+    inputs:
+      request_id:
+        description: Tekstipöydän muuttumaton äänityspyyntö
+        required: true
+        type: string
+      request_json:
+        description: Tarkistettu teksti ja tagit sekä SHA256-tarkiste
+        required: true
+        type: string
+      dry_run:
+        description: Vain syötteen tarkistus, ei maksullista puhetta
+        type: boolean
+        default: true
+permissions:
+  contents: read
+concurrency:
+  group: tekstipoyta-${{ inputs.request_id }}
+  cancel-in-progress: false
+jobs:
+  speech:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Tarkista yksittäinen tilaus ennen avaimien käyttöä
+        env:
+          REQUEST_JSON: ${{ inputs.request_json }}
+          REQUEST_ID: ${{ inputs.request_id }}
+        run: |
+          node --input-type=module -e 'import {validateRequest} from "./tools/tekstityopoyta-audio.mjs"; const p=validateRequest(process.env.REQUEST_JSON); if(p.requestId!==process.env.REQUEST_ID)throw Error("Request ID mismatch"); console.log("One immutable speech validated");'
+      - name: Asenna vain luennan tarkistustyökalut
+        if: ${{ !inputs.dry_run }}
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+      - name: Generoi yksi puhe ja varmista tallennus
+        env:
+          REQUEST_JSON: ${{ inputs.request_json }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          ELEVEN_API_KEY: ${{ secrets.ELEVEN_API_KEY }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+          AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+          AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        run: node tools/tekstityopoyta-audio.mjs
+      - name: Säilytä myös epäonnistuneen ajon alkuperäinen ääni
+        if: ${{ always() && !inputs.dry_run }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: tekstipoyta-${{ inputs.request_id }}
+          path: textdesk-output/
+          if-no-files-found: ignore
+          retention-days: 90
