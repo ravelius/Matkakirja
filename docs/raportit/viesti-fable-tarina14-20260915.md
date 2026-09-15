@@ -51,6 +51,17 @@ vastaamaan uutta hyväksyttyä sisältöä. Kumpikin on Fablen kaanonpäätös.
 | `node tools/tarkista-niputus.mjs` | ✅ 390 moduulia, 4308 top-level-julistusta, ei törmäyksiä |
 | `PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers node tools/tarkista-savukkeet.mjs` | ✅ 1702 ui-viittausta, 407 metodia, 536 kenttää, 31 lehtitilan kenttää |
 
+## Sisältöpistokoe (`tools/vertaa-sisaltodiff.mjs`)
+
+`node tools/vertaa-sisaltodiff.mjs origin/main HEAD <pakki> <EXPORT>`:
+bergen 4, amsterdam 4, oslo 1, varsova 1 muuttunutta `selite`/`teksti`-kenttää
+— kaikki kohdepaikkojen `selite`-kenttiä, yhtään `teksti`-kenttää (tarina,
+kupla) ei muuttunut. Pariisi ja Bukarest eivät aja tällä työkalulla:
+työkalu kopioi pakin `/tmp`-hakemistoon, jolloin sisarmoduulien
+(`maalehtinostot-fra.js`, `fokuskohteet-rou.js`) tuonti hajoaa. Tämä on
+työkalun ennestään oleva rajoitus, ei tämän muutoksen seuraus. Nämä kaksi
+katettiin omalla, rakenteellisella kaikki-kentät-diffillä (ks. yllä).
+
 ## Selaintarkistus
 
 Mittaussivu tarjoiltiin paikallisesti ja se latasi pakit oikeista
