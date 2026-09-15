@@ -18588,9 +18588,22 @@ export class UI {
     nappi.title = nimi;
     nappi.setAttribute('aria-label', nimi);
     if (tunnus) {
-      // Sama pyöreä rajaus kuin aarteilla; jos kuva ei lataudu,
-      // aarreIkoni pudottaa tilalle laattatyypin viivakuvakkeen.
-      nappi.appendChild(aarreIkoni({ kuva: `assets/varusteet/varuste-${tunnus}.jpg`, name: nimi }, 'linssi', 64));
+      /*
+       * Sama pyöreä rajaus kuin aarteilla; jos kuva ei lataudu, aarreIkoni
+       * pudottaa tilalle laattatyypin viivakuvakkeen. ASTRONAUTIN KAMERA
+       * -linssillä (satelliitti) EI ole maalattua varustekuvaa (omistaja
+       * 15.9.2026: "SVG inline ... ei ulkoisia tiedostoja") — sille
+       * varasolu on oma vektorikuvake (js/mapart.js drawTokenIcon
+       * 'linssi-satelliitti') eikä muiden linssien jaettu taikalasi.
+       */
+      const onSatelliitti = tunnus === 'satelliitti';
+      // Ei kuva-osoitetta ollenkaan tälle linssille: aarreIkoni piirtää
+      // vektorikuvakkeen suoraan sen sijaan, että se yrittäisi ensin
+      // turhaan latautuvaa jpg:tä ja vaihtaisi vasta virheestä.
+      const tiedot = onSatelliitti
+        ? { name: nimi }
+        : { kuva: `assets/varusteet/varuste-${tunnus}.jpg`, name: nimi };
+      nappi.appendChild(aarreIkoni(tiedot, onSatelliitti ? 'linssi-satelliitti' : 'linssi', 64));
     } else {
       // "Ei linssiä" ei ole esine, jolla olisi valokuva: yliviivatut
       // taikalasit pyöreässä kehyksessä pitävät sen samassa rivissä
