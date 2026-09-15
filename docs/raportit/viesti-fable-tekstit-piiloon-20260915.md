@@ -129,9 +129,55 @@ jälkeen se palaa auki (uusi vastakoe).
 | `tests/rules.test.mjs` (ei css-suodatinanimaatioita) | 334/334 |
 | `tests/dokumentit.test.mjs` | läpi (raportit ovat kartan ulkopuolella) |
 | `savuke-kaiutin-luentakuvat.mjs` | **41/41 vartiota** (19 vanhaa + 22 uutta, molemmat vastakokeet) |
-| `savuke-iphone-tekstit.mjs` | **36/36 vartiota** (33 vanhaa + 3 uutta työpöytävartiota) |
+| `savuke-iphone-tekstit.mjs` | **38/38 vartiota** (33 vanhaa + 3 uutta työpöytävartiota + 2 juurisyyn vastakoetta) |
 
-## 6. Huomioita
+## 6. Juurisyy: merkit seuraavat KUULUVAA ääntä, ei varattua vuoroa
+
+**Julkaisuagentin havainto 15.9.2026** (julkaisuhaara
+`claude/julkaisu-kaiutin-tekstit`, PR #2507): vartio "työpöytä
+(vastakoe): luennan jälkeen kortti on taas auki ja teksti näkyy" jäi
+punaiseksi myös puhtaassa #2506-haarassa. Diagnoosi osui: pelin oma
+aito luentayritys (Ateenan ääniraita) kaatuu headlessissä
+`NotSupportedError`iin, mutta ehtii näkyä hetken "kertoja äänessä"
+-tilana ja kutistaa kortin juuri mittaushetkellä.
+
+**Yhdellä lauseella:** puheenVUORO varataan `merkitsePuhuja`ssa ennen
+`play()`-kutsua, ja luennan näkyvät merkit luettiin siitä vuorosta —
+joten epäonnistunut käynnistys näytti ruudulla samalta kuin soiva
+luenta.
+
+Tämä ei ole vain testin kiusa vaan **tuotantoriski**: jos äänitiedosto
+ei lataudu (offline, verkkovirhe, rikkinäinen tiedosto), tekstit
+piiloutuisivat, kartalle nousisi huntu ja Liiku katoaisi, vaikka mitään
+ei kuulu.
+
+**Korjaus** (`js/luenta.js`, `js/ui.js`):
+
+- `merkitsePuhuja` kuuntelee `playing`-tapahtumaa ja merkitsee siitä
+  `audio.aaniAlkoiSoida`. Se on selaimen oma vahvistus toiston alusta;
+  `play()` palauttaa vain lupauksen.
+- Uusi `aaniKuuluu(audio)`: ei tauolla, ei loppunut, ei virhettä, ja
+  toisto on joko vahvistetusti alkanut tai edennyt nollasta. Juuri
+  luotu tai käynnistymättä jäänyt soitin on `paused`, joten se ei
+  koskaan läpäise.
+- Uusi `soivaPuhuja(paitsi)`: sama kysely kuin `puhujaAanessa`, mutta
+  vuoron sijaan mitataan kuuluvaa ääntä.
+- `kaynnistaLuentavahti` lukee nyt `soivaPuhujaa` — eli **kaikki neljä
+  näkyvää merkkiä** (tekstipiilo, kartan huntu, kaiuttimen VU-mittari,
+  Liiku-napin piilo) seuraavat kuuluvaa ääntä.
+- Puheenvuorojen **jonotus** käyttää yhä `puhujaAanessa`a: vuoro on
+  varattava jo ennen kuin ääni alkaa, tai kaksi luentaa alkaisi
+  päällekkäin. Vain ruudulla näkyvä puoli muuttui.
+
+**Vastakoe** (`savuke-iphone-tekstit.mjs`, työpöytäosio): ajetaan pelin
+oma `playDiaryVoice` tiedostolla, jota ei ole, ja otetaan 12 näytettä
+1,8 sekunnin ajalta — kortti ei kutistu kertaakaan eikä kumpikaan
+luennan luokka nouse. Ennen korjausta juuri tämä välähdys kutisti
+kortin. Savukkeen `puhu()`-apuri simuloi nyt onnistuneen toiston
+samoilla merkeillä kuin selain (`paused` epätodeksi ja
+`playing`-tapahtuma), koska pelkkä vuoron varaus ei enää ole luentaa.
+
+## 7. Huomioita
 
 - **`tests/rules.test.mjs` vaati ennen `asetaPaivakirjanKoko(puhelinTila())`.**
   Vartio päivitettiin seuraamaan porttia (`tekstitPiilossa()`) ja

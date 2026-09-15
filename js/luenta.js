@@ -462,6 +462,58 @@ export function merkitsePuhuja(ui, audio, rooli = PUHUJA_KERTOJA) {
   const lopeta = () => vapautaPuhuja(ui, audio);
   audio.addEventListener('ended', lopeta);
   audio.addEventListener('error', lopeta);
+  /*
+   * KUULUVAN ÄÄNEN KUITTAUS (15.9.2026, ks. soivaPuhuja).
+   *
+   * 'playing' on selaimen oma vahvistus siitä, että toisto on
+   * oikeasti alkanut — play() palauttaa vain lupauksen, ja se voi
+   * hylkääntyä (NotSupportedError latausvirheestä, NotAllowedError
+   * eleen puutteesta). Lippu ei korvaa `paused`-tarkistusta vaan
+   * täydentää sitä: se kertoo, että toisto ON kerran alkanut.
+   */
+  audio.addEventListener('playing', () => { audio.aaniAlkoiSoida = true; });
+}
+
+/**
+ * KUULUUKO TÄSTÄ ÄÄNESTÄ JUURI NYT ÄÄNTÄ?
+ *
+ * Ero puheVUOROON on koko tämän vartion ydin: vuoro varataan ENNEN
+ * play()-kutsua, ja jos play() hylkääntyy (headless-selain, offline,
+ * rikkinäinen tiedosto), vuoro ehtii silti näkyä ruudulla. Se on
+ * tuotantovika eikä vain testin kiusa: luennan visuaaliset merkit
+ * (tekstipiilo, kartan huntu, kaiuttimen mittari, Liiku-napin piilo)
+ * kytkeytyisivät vaikka mitään ei kuulu.
+ *
+ * Kuuluvaksi lasketaan soitin, joka ei ole tauolla eikä loppunut ja
+ * jonka toisto on joko vahvistetusti alkanut ('playing') tai ehtinyt
+ * edetä nollasta. Juuri luotu tai käynnistymättä jäänyt soitin on
+ * `paused === true`, joten se ei koskaan läpäise tätä.
+ */
+export function aaniKuuluu(audio) {
+  if (!audio || audio.ended || audio.paused || audio.error) return false;
+  return audio.aaniAlkoiSoida === true || audio.currentTime > 0;
+}
+
+/**
+ * KUKA ON KUULUVASTI ÄÄNESSÄ — tai null.
+ *
+ * Sama kysely kuin puhujaAanessa, mutta VUORON sijaan mitataan
+ * kuuluvaa ääntä (ks. aaniKuuluu). Puheenvuorojen jonotus käyttää yhä
+ * puhujaAanessaa: vuoro on varattava jo ennen kuin ääni alkaa, tai
+ * kaksi luentaa alkaisi päällekkäin. Ruudulla näkyvät merkit taas
+ * eivät saa syttyä ennen kuin ääntä oikeasti kuuluu.
+ *
+ * @param {string|null} [paitsi] rooli, jota ei lasketa.
+ * @returns {string|null} PUHUJA_KERTOJA, PUHUJA_PULU tai null.
+ */
+export function soivaPuhuja(paitsi = null) {
+  for (const [audio, tieto] of soivatLuennat) {
+    if (paitsi && tieto.rooli === paitsi) continue;
+    if (audio.puhevuoroPaattyi) continue;
+    if (!aaniKuuluu(audio)) continue;
+    return tieto.rooli;
+  }
+  return null;
 }
 
 /**

@@ -27,7 +27,9 @@
  *   1. Puhelimella matkakirja on lappu eikä merkinnän teksti näy;
  *      TYÖPÖYDÄLLÄ kortti on auki ja teksti näkyy (vastakoe) — paitsi
  *      LUENNAN AIKANA, jolloin tekstipiilo koskee kaikkia laitteita
- *      (omistaja 15.9.2026, ks. työpöytäosion loppu).
+ *      (omistaja 15.9.2026, ks. työpöytäosion loppu). Epäonnistunut
+ *      play() ei kuitenkaan piilota mitään: merkit seuraavat KUULUVAA
+ *      ääntä, eivät varattua puheenvuoroa (vastakoe samassa osiossa).
  *   2. Lapun napautus avaa merkinnän — teksti ei ole peruuttamattomasti
  *      poissa. Kaiutin (mykistys ja luennan merkki) jää lapulle.
  *   3. Kuva ja kuvateksti näkyvät puhelimella molemmissa suunnissa.
@@ -182,12 +184,23 @@ const avaa = async (asetukset) => {
   return { konteksti, sivu };
 };
 
-/** Kertoja ääneen / vaikenemaan luennan omalla rajapinnalla. */
+/*
+ * Kertoja ääneen / vaikenemaan luennan omalla rajapinnalla.
+ *
+ * ÄÄNEN PITÄÄ MYÖS KUULUA (15.9.2026). Pelkkä merkitsePuhuja varaa
+ * vain puheenVUORON, eivätkä luennan näkyvät merkit enää seuraa sitä —
+ * ne seuraavat kuuluvaa ääntä (js/luenta.js soivaPuhuja/aaniKuuluu).
+ * Savuke simuloi siis onnistuneen toiston samoilla merkeillä, jotka
+ * selain antaa: `paused` epätodeksi ja 'playing'-tapahtuma. Ilman tätä
+ * savuke mittaisi tilaa, jota pelissä ei ole.
+ */
 const puhu = (sivu, rooli = 'kertoja') => sivu.evaluate(async (r) => {
   const L = await import('/js/luenta.js');
   const audio = new Audio();
   window.__savukkeenPuhe = audio;
   L.merkitsePuhuja(window.matkakirja.ui, audio, r);
+  Object.defineProperty(audio, 'paused', { value: false, configurable: true });
+  audio.dispatchEvent(new Event('playing'));
 }, rooli);
 const vaikene = (sivu) => sivu.evaluate(async () => {
   const L = await import('/js/luenta.js');
@@ -464,6 +477,41 @@ const mittaa = () => {
   vaadi('työpöytä (vastakoe): luennan jälkeen kortti on taas auki ja teksti näkyy',
     tyoJalkeen.factPieni === false && tyoJalkeen.factTekstiNakyy === true,
     JSON.stringify({ pieni: tyoJalkeen.factPieni, teksti: tyoJalkeen.factTekstiNakyy }));
+
+  /*
+   * VASTAKOE JUURISYYLLE: EPÄONNISTUNUT play() EI SAA PIILOTTAA MITÄÄN
+   * (julkaisuagentin havainto 15.9.2026).
+   *
+   * Vuoro varataan ennen play()-kutsua, ja jos play() hylkääntyy
+   * (headless-selain, offline, rikkinäinen tiedosto), ruudulla ehti
+   * ennen tätä korjausta välähtää koko luennan asu: tekstit piiloon ja
+   * Liiku pois, vaikka mitään ei kuulu. Tässä ajetaan pelin OMA
+   * luentareitti tiedostolla, jota ei ole: kortin pitää pysyä auki koko
+   * yrityksen ajan, ja luennan luokkien pitää pysyä poissa.
+   */
+  const epaonnistunut = await sivu.evaluate(async () => {
+    const L = await import('/js/luenta.js');
+    L.playDiaryVoice(window.matkakirja.ui, '/ei-ole-olemassa-savuke.mp3');
+    const naytteet = [];
+    for (let i = 0; i < 12; i += 1) {
+      naytteet.push({
+        pieni: document.querySelector('.fact-card')?.classList.contains('pieni') === true,
+        piilo: document.body.classList.contains('luenta-tekstit-piiloon'),
+        aanessa: document.body.classList.contains('luenta-aanessa'),
+      });
+      await new Promise((ok) => { setTimeout(ok, 150); });
+    }
+    return {
+      kutistui: naytteet.some((n) => n.pieni),
+      piilo: naytteet.some((n) => n.piilo),
+      aanessa: naytteet.some((n) => n.aanessa),
+    };
+  });
+  vaadi('työpöytä: epäonnistunut play() ei kutista korttia eikä piilota tekstejä',
+    epaonnistunut.kutistui === false && epaonnistunut.piilo === false,
+    JSON.stringify(epaonnistunut));
+  vaadi('työpöytä: epäonnistunut play() ei piilota Liiku-nappia (luenta-aanessa)',
+    epaonnistunut.aanessa === false, JSON.stringify(epaonnistunut));
 
   /* Kaupunkietusivun huntu: sama sumennus, vaaleampi peite. */
   const hunnut = await sivu.evaluate(() => {
