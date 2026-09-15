@@ -110,7 +110,14 @@ kirjattuna `tools/savukkeet/README.md`:hen.
   tests/maakorostus.test.mjs` — 59/59
 - `tools/tarkista-savukkeet.mjs` — kunnossa
 - `savuke-maailma-ei-kermaa` 6/6, vastakoe 4/6 (punainen kuten pitää)
-- `savuke-era12` ja `savuke-linssivika` — ks. PR:n kuvaus
+- `savuke-linssivika` — 6/6
+- `savuke-era12` — 26/27. Ainoa punainen on **väite 10** (rulla
+  maapaneelin päällä: paneeli 0,0597 vs. kartta 0,0242, suhde 2,47)
+  eli PÄÄTÖKSET 21:n maapaneelityö, jota toinen agentti tekee
+  rinnalla (`js/pallolauta/maapaneeli.js`). Se ei koske tätä erää:
+  tämä muutos ei kajoa paneeliin eikä eleiden käsittelyyn, ja
+  väite 12 (*"Ranska ei muutu"*) sekä kaikki 11 vastakoetta ovat
+  vihreitä
 
 ## 6. Mitä EI tehty
 
