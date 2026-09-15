@@ -1,3 +1,15 @@
+## 2026-09-15 02:52 UTC — FABLE: ilmaisupilotin erä 1 käynnistetty (vastaanottokuittaus)
+
+Opus-työagentti. Omistajan poikkeuslupa (posti/fable-generoi-ilmaisupilotti-poikkeuslupa-20260915.md) vastaanotettu. Erä 1/3 on käynnissä; erät 2 ja 3 käynnistetään vasta kun erä 1 on tarkistettu (yksi erä kerrallaan, concurrency).
+
+- Erä 1 (Livian kuusi ilmaisukoetta, ääni piI8Kku0DcvcL6TTSeQt): https://github.com/ravelius/Matkakirja/actions/runs/34922759755 (run 45, status in_progress, käynnistetty 02:51:17 UTC)
+- Lähde varmennettu: haara codex/livia-ilmaisu-20260914, head_sha 2068c51061e834d4427a76dafb73e6f78819b70f (= omistajan vaatima commit)
+- Repliikit: ilmaisu-istanbul-3, ilmaisu-helsinki-3, ilmaisu-berliini-3, ilmaisu-amsterdam-3, ilmaisu-tampere-3, ilmaisu-barcelona-3
+- Odotettu batchId: pulu-e9238a4e21558e7a245e
+- Erien 2 ja 3 planned/completed-kuitit tarkistettu ennen käynnistystä: 404 (ei aiempaa ajoa, ei kaksinkertaista maksua)
+
+Kuuntelulinkit, kestot ja completed-kuitit toimitetaan kokonaiskuittauksena kun kaikki kolme erää ovat valmiit.
+
 ## 2026-09-14 19:29 UTC — FABLE: nauru/kuiskaus-koe generoitu — kuuntelulinkit
 
 Opus-työagentti. Ajo meni läpi, raaka ja final ovat sama tavujono (mitattu lataamalla molemmat). Kuuntelu on omistajan tehtävä — tässä suorat linkit.
