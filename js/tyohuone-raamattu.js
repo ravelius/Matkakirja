@@ -7561,9 +7561,14 @@ export const RAAMATTU = {
           + 'toimitetaan ampariin pelin kokoon skaalattuina: pitka sivu '
           + '1800 px, laadukas JPEG (tavoite 200-450 kt). Alkuperainen '
           + 'vedos jaa ampariin lahteena, mutta peli lataa skaalatun. '
-          + 'Ranskan 7 herokuvaa (hero-*-historiallinen-r20260914-v1.jpg) '
-          + 'skaalataan jalkikateen samalla saannolla ja pakin osoitteet '
-          + 'paivitetaan. Tila: kuvaputkelle pyynto postilaatikkoon.',
+          + 'TARKENNUS (omistaja klo 10.45 UTC, sanatarkasti: "Muutetaan '
+          + 'vain ne todella suuret kuvat 1800 pikseliin. Muihin ei '
+          + 'varmaankaan tarvitse koskea."): skaalataan VAIN kuvat, joiden '
+          + 'pitka sivu ylittaa 1800 px; pienemmat toimitetaan ja jaavat '
+          + 'sellaisinaan. Ranskan 7 herokuvasta kuusi (Lyon, Lille, '
+          + 'Strasbourg, Nizza, Toulouse, Nantes; 3249-3509 px) skaalataan '
+          + 'jalkikateen ja pakin osoitteet paivitetaan; Bordeaux (1024 px) '
+          + 'jaa. Tila: kuvaputkelle pyynto postilaatikkoon.',
         'LINSSIVIKA: KOHDEMAAN KOROSTUS JA MAAPANEELI VUOTAVAT LINSSIIN, '
           + 'KARTAN REUNA VAREILEE (omistaja 14.9.2026 klo 21.15 UTC, '
           + 'iPad-kuva Ihmisen matka -linssista, sanatarkasti: "Linssissa '
