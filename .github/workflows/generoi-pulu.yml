@@ -248,16 +248,16 @@ jobs:
       - name: Kuiva ajo (repliikit ja kestot)
         if: ${{ inputs.toiminto == 'kuiva' || inputs.toiminto == 'generoi' }}
         env:
+          AANI: ${{ inputs.aani }}
           REPLIIKIT: ${{ inputs.repliikit }}
           PULU_MALLI: ${{ inputs.malli }}
           PULU_VAKAUS: ${{ inputs.vakaus }}
         run: |
           set -euo pipefail
-          if [ -n "$REPLIIKIT" ]; then
-            node tools/generoi-pulu.mjs --kuiva --repliikit "$REPLIIKIT"
-          else
-            node tools/generoi-pulu.mjs --kuiva
-          fi
+          liput=()
+          if [ -n "$AANI" ]; then liput+=(--aani "$AANI"); fi
+          if [ -n "$REPLIIKIT" ]; then liput+=(--repliikit "$REPLIIKIT"); fi
+          node tools/generoi-pulu.mjs --kuiva "${liput[@]}"
 
       - name: Kohdista valmiin erän puhe-eleet versionoitujen MP3-tiedostojen viereen
         if: ${{ inputs.toiminto == 'kohdista' }}
