@@ -13,9 +13,12 @@
  * VARTIOT:
  *   1. SAMA RIVI: kaiutinkuvakkeen keskilinja = otsikon ensimmäisen
  *      rivin keskilinja ±1 px, molemmilla ruuduilla.
- *   2. VU-MITTARI ELÄÄ: kolme kaarta ovat omia polkujaan, ja niiden
- *      tila vaihtuu luennan aikana (kolme näytettä, vähintään kaksi
- *      eri tilaa).
+ *   2. VU-MITTARI SEURAA PUHETTA (tiukennettu 15.9.2026, omistaja:
+ *      *"Kajutin kuvake elaa, mutta se ei ela puheen tahdissa."*):
+ *      kolme kaarta ovat omia polkujaan, luenta on reititetty Web
+ *      Audioon (luennanVahvistin + aaniMittari) ja mittarin lähde on
+ *      `mitattu` — EI ajastettu kuvio. Pelkkä "tila vaihtuu" ei enää
+ *      riitä: ajastettu kuvio läpäisi sen, ja juuri se oli vika.
  *   3. KOKO KUVAKKEEN SYKE ON POISSA: napilla ei ole animaatiota.
  *   4. HÄIVYTYS POIS: isojen luentakuvien mask-image on `none`.
  *   5. PAKKA VINOON: kortteja on useampi yhtä aikaa ruudulla ja
@@ -28,9 +31,18 @@
  * mittaavat luennan aikaisen tekstipiilon kolmella ruudulla (390 × 844,
  * 1024 × 1366 iPad, 1400 × 900) — ks. osio alempana.
  *
- * VASTAKOE: mittari pysäytetään pakolla → kaarien tila ei enää vaihdu
- * → vartio 2 kääntyy punaiseksi. Näin tiedetään, että vartio mittaa
- * animaatiota eikä pelkkää luokan olemassaoloa.
+ *   13. KAARET SEURAAVAT AMPLITUDIVERHOKÄYRÄÄ (eristetty mittaus,
+ *       oma osionsa alempana): kaarien tilasarja 50 ms:n välein vs.
+ *       saman äänitiedoston RMS-verhokäyrä → Pearson-korrelaatio yli
+ *       0,6, ja jokainen yli 150 ms:n tauko näkyy kaaret sammuksissa
+ *       (100 ms:n armonaika taukojakson alussa, release-vakio).
+ *
+ * VASTAKOKEET:
+ *   – mittari pysäytetään pakolla → kaarien tila ei enää vaihdu →
+ *     vartio 2 kääntyy punaiseksi;
+ *   – ajastettu kuvio pakotetaan päälle → korrelaatio romahtaa ~0:aan
+ *     ja tauot palavat → vartio 13 kääntyisi punaiseksi;
+ *   – gain nollaan → kaikki kaaret sammuvat koko ajaksi.
  *
  * Aja:  NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-kaiutin-luentakuvat.mjs [kuvakansio]
  */
@@ -85,6 +97,9 @@ async function ampariHaku(url) {
   return lupaus;
 }
 
+/* Ensimmäisen luennan osoite talteen eristettyä mittausta varten. */
+let AANIOSOITE = null;
+
 let lapi = 0;
 let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => {
@@ -101,7 +116,12 @@ const peli = new Game({
 peli.phase = 'action';
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({
+  executablePath: '/opt/pw-browsers/chromium',
+  // Ilman tätä Chromium ei päästä <audio>-elementtiä soimaan ilman
+  // elettä, eikä analysaattorilla olisi mitään mitattavaa.
+  args: ['--autoplay-policy=no-user-gesture-required'],
+});
 const virheet = [];
 
 /** Avaa pelin ja saapuu koekaupunkiin. */
@@ -187,18 +207,54 @@ for (const ruutu of RUUDUT) {
   vaadi(`${ruutu.nimi}: kuvakkeen ja tekstin keskilinjat ±1 px`,
     Boolean(rivi) && rivi.napinNakyy && ero <= 1, `ero ${ero.toFixed(2)} px`);
 
+  /*
+   * NÄYTTEITÄ USEAMPI KUIN KOLME. Mittari seuraa nyt oikeaa puhetta,
+   * ja isoisällä on lauseiden välissä useamman sekunnin taukoja —
+   * kolme näytettä 320 ms:n välein voisi osua kokonaan tauon sisään ja
+   * antaa perusteettoman punaisen. Kolme sekuntia kattaa varmasti
+   * sekä puhetta että taukoa.
+   */
   const naytteet = [];
-  for (let i = 0; i < 3; i += 1) {
+  for (let i = 0; i < 12; i += 1) {
     naytteet.push(await sivu.evaluate(KAARINAYTE));
-    if (i < 2) await sivu.waitForTimeout(320);
+    if (i < 11) await sivu.waitForTimeout(250);
   }
   const tilat = naytteet.map((n) => n.tila);
-  tieto(`${ruutu.nimi} kaarien tilat (3 hetkeä, 320 ms välein)`,
-    `${tilat.join(' → ')}  opacity ${naytteet[2].opacity}`);
+  tieto(`${ruutu.nimi} kaarien tilat (12 hetkeä, 250 ms välein)`,
+    `${tilat.join(' → ')}  opacity ${naytteet.at(-1).opacity}`);
   vaadi(`${ruutu.nimi}: kaaria on kolme omana polkunaan`, naytteet[0].maara === 3,
     `kaaria ${naytteet[0].maara}`);
   vaadi(`${ruutu.nimi}: VU-mittari elää (vähintään kaksi eri tilaa)`,
     new Set(tilat).size >= 2, tilat.join(' → '));
+
+  /*
+   * TIUKENNUS 15.9.2026. Edellinen ehto ("vähintään kaksi eri tilaa")
+   * oli väljä: ajastettu kuvio läpäisi sen, ja juuri sen omistaja näki
+   * iPhonella. Nyt vaaditaan, että luenta on REITITETTY Web Audioon ja
+   * että mittarin lähde on `mitattu`.
+   */
+  const reitti = await sivu.evaluate(async () => {
+    const { ui } = window.matkakirja;
+    const s = await import('/js/sound.js');
+    const m = await import('/js/kaiutinmittari.js');
+    const a = ui.diaryVoice;
+    return {
+      ctx: s.sfx?.ctx?.state ?? 'ei kontekstia',
+      crossOrigin: a?.crossOrigin ?? null,
+      vahvistin: Boolean(a?.luennanVahvistin),
+      gain: a?.luennanVahvistin?.gain?.value ?? null,
+      mittari: Boolean(a?.aaniMittari),
+      lahde: m.kaiutinmittarinLahde(),
+      src: a?.src ?? null,
+    };
+  });
+  if (!AANIOSOITE && reitti.src) AANIOSOITE = reitti.src;
+  tieto(`${ruutu.nimi} luennan äänireitti`, JSON.stringify({ ...reitti, src: undefined }));
+  vaadi(`${ruutu.nimi}: luenta kulkee Web Audion läpi (vahvistin + analysaattori)`,
+    reitti.vahvistin && reitti.mittari && reitti.crossOrigin === 'anonymous',
+    JSON.stringify(reitti));
+  vaadi(`${ruutu.nimi}: mittarin lähde on MITATTU, ei ajastettu kuvio`,
+    reitti.lahde === 'mitattu', String(reitti.lahde));
 
   const syke = await sivu.evaluate(() => {
     const nappi = document.getElementById('fact-kuuntele');
@@ -521,6 +577,161 @@ console.log('\n=== VASTAKOE: mittari pysäytettynä ===');
   vaadi('VASTAKOE: pysäytetty mittari EI läpäise elävyysvartiota',
     new Set(tilat).size < 2, tilat.join(' → '));
   await ctx.close();
+}
+
+
+/* ================================================================
+   13. KAARET SEURAAVAT AMPLITUDIVERHOKÄYRÄÄ (eristetty mittaus)
+   ================================================================
+
+   MIKSI ERISTETTY SIVU EIKÄ PELI. Mittaus tarvitsee 50 ms:n
+   näytevälin. Pelisivulla kartan piirto varaa pääsäikeen niin, että
+   `setTimeout(50)` venyy mitattuna 600 ms:iin ja näytteitä kertyy 25
+   sekunnista noin 30 — liian harva sarja korrelaatioon. Sama
+   js/kaiutinmittari.js, sama äänitiedosto ja sama äänigraafi kuin
+   js/musiikkivahvistin.js rakentaa (lähde → gain → analyser → ulos),
+   mutta tyhjällä sivulla.
+
+   VERTAILUKOHTA ON RIIPPUMATON: äänitiedosto puretaan erikseen
+   OfflineAudioContextissa ja siitä lasketaan 50 ms:n RMS-verhokäyrä.
+   Kaarien tilaa verrataan siihen soittimen `currentTime`-kohdalla,
+   eli mittarin omaa lukemaa ei käytetä missään.
+*/
+console.log('\n=== 13. kaaret vs. amplitudiverhokäyrä (eristetty) ===');
+if (!AANIOSOITE) {
+  vaadi('eristetty mittaus: luennan ääniosoite saatiin', false, 'ei osoitetta');
+} else {
+  const aani = await ampariHaku(AANIOSOITE);
+  const KOESIVU = `<!doctype html><meta charset="utf-8"><body>
+<button id="nappi"><svg viewBox="0 0 24 24">
+<path class="kaiutin-kaari" d="M1 1"/><path class="kaiutin-kaari" d="M2 2"/><path class="kaiutin-kaari" d="M3 3"/>
+</svg></button>
+<script type="module">
+import { kaynnistaKaiutinmittari } from '/js/kaiutinmittari.js';
+window.koe = async (url, asetukset) => {
+  const ctx = new AudioContext();
+  await ctx.resume();
+  const audio = new Audio();
+  audio.crossOrigin = 'anonymous';
+  audio.src = url;
+  const lahde = ctx.createMediaElementSource(audio);
+  const gain = ctx.createGain();
+  gain.gain.value = asetukset.mykka ? 0 : 0.9;
+  const an = ctx.createAnalyser();
+  an.fftSize = 256;
+  lahde.connect(gain).connect(an).connect(ctx.destination);
+  window.__audio = audio;
+  kaynnistaKaiutinmittari(document.getElementById('nappi'), () => an,
+    { pakotaKuvio: Boolean(asetukset.pakotaKuvio), haeVahvistus: () => gain.gain.value });
+  await audio.play();
+};
+window.naytteista = async (kesto) => {
+  const audio = window.__audio;
+  const kaaret = [...document.querySelectorAll('#nappi .kaiutin-kaari')];
+  const out = [];
+  const alku = performance.now();
+  while (performance.now() - alku < kesto && !audio.ended) {
+    out.push({ t: audio.currentTime, n: kaaret.filter((k) => k.classList.contains('palaa')).length });
+    await new Promise((r) => setTimeout(r, 50));
+  }
+  return out;
+};
+window.verhokayra = async (url) => {
+  const buf = await (await fetch(url)).arrayBuffer();
+  const oc = new OfflineAudioContext(1, 44100, 44100);
+  const dek = await oc.decodeAudioData(buf);
+  const d = dek.getChannelData(0);
+  const ikkuna = Math.round(dek.sampleRate * 0.05);
+  const v = [];
+  for (let i = 0; i + ikkuna <= d.length; i += ikkuna) {
+    let s = 0;
+    for (let j = i; j < i + ikkuna; j += 1) s += d[j] * d[j];
+    v.push(Math.sqrt(s / ikkuna));
+  }
+  return v;
+};
+window.valmis = true;
+<\/script></body>`;
+
+  const KOEOSOITE = `${osoite.split('?')[0].replace(/\/$/, '')}/__vu-koe.html`;
+  const HILJAISUUSRAJA = 0.015;
+
+  /** Pearsonin korrelaatio pareille [x, y]. */
+  const korrelaatio = (parit) => {
+    const n = parit.length;
+    if (n < 30) return NaN;
+    const mx = parit.reduce((a, b) => a + b[0], 0) / n;
+    const my = parit.reduce((a, b) => a + b[1], 0) / n;
+    let sxy = 0; let sxx = 0; let syy = 0;
+    for (const [x, y] of parit) {
+      sxy += (x - mx) * (y - my); sxx += (x - mx) ** 2; syy += (y - my) ** 2;
+    }
+    return sxy / Math.sqrt(sxx * syy);
+  };
+
+  async function mittaa(asetukset) {
+    const kctx = await selain.newContext();
+    const ksivu = await kctx.newPage();
+    ksivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
+    await ksivu.route(KOEOSOITE, (r) => r.fulfill({
+      status: 200, contentType: 'text/html', body: KOESIVU,
+    }));
+    await ksivu.route(/media\.matkakirja\.app|r2\.dev\//, (r) => r.fulfill({
+      status: 200, contentType: aani.tyyppi ?? 'audio/mpeg', body: aani.body,
+      headers: { 'access-control-allow-origin': '*' },
+    }));
+    await ksivu.goto(KOEOSOITE);
+    await ksivu.waitForFunction(() => window.valmis === true, null, { timeout: 30000 });
+    await ksivu.evaluate(([u, a]) => window.koe(u, a), [AANIOSOITE, asetukset]);
+    const naytteet = (await ksivu.evaluate(() => window.naytteista(22000)))
+      .filter((x) => x.t > 0.1);
+    const verho = await ksivu.evaluate((u) => window.verhokayra(u), AANIOSOITE);
+    await kctx.close();
+    const sarja = naytteet.map((x) => ({
+      t: x.t, n: x.n, v: verho[Math.min(verho.length - 1, Math.floor(x.t / 0.05))],
+    })).filter((x) => Number.isFinite(x.v));
+    // Taukojaksot: yli 150 ms hiljaisuutta. Jakson alusta annetaan
+    // 100 ms armonaikaa (release-vakio 120 ms), sen jälkeen kaarien on
+    // oltava sammuksissa loppuun asti.
+    let jaksoja = 0; let rikki = 0;
+    for (let i = 0; i < sarja.length;) {
+      if (sarja[i].v >= HILJAISUUSRAJA) { i += 1; continue; }
+      let j = i;
+      while (j < sarja.length && sarja[j].v < HILJAISUUSRAJA) j += 1;
+      if ((sarja[j - 1].t - sarja[i].t) >= 0.15) {
+        jaksoja += 1;
+        if (sarja.slice(i, j).some((x) => x.t - sarja[i].t > 0.1 && x.n > 0)) rikki += 1;
+      }
+      i = j;
+    }
+    const jakauma = sarja.reduce((a, x) => { a[x.n] = (a[x.n] ?? 0) + 1; return a; }, {});
+    return {
+      r: korrelaatio(sarja.map((x) => [x.n, x.v])),
+      jaksoja,
+      rikki,
+      jakauma,
+      naytteita: sarja.length,
+      palavia: sarja.filter((x) => x.n > 0).length,
+    };
+  }
+
+  const a = await mittaa({});
+  tieto('mitattu lähde: korrelaatio ja tauot', JSON.stringify(a));
+  vaadi('13a: kaarien tilasarja korreloi amplitudiverhokäyrän kanssa (r > 0,6)',
+    Number.isFinite(a.r) && a.r > 0.6, `r = ${Number(a.r).toFixed(3)}, n = ${a.naytteita}`);
+  vaadi('13b: jokainen yli 150 ms:n tauko näkyy kaaret sammuksissa (±100 ms)',
+    a.jaksoja >= 3 && a.rikki === 0, `${a.rikki}/${a.jaksoja} taukojaksoa palaa`);
+
+  const b = await mittaa({ pakotaKuvio: true });
+  tieto('VASTAKOE ajastettu kuvio', JSON.stringify(b));
+  vaadi('VASTAKOE: pakotettu ajastettu kuvio EI läpäise korrelaatiovartiota',
+    !(Number.isFinite(b.r) && b.r > 0.6) || b.rikki > 0,
+    `r = ${Number(b.r).toFixed(3)}, tauot rikki ${b.rikki}/${b.jaksoja}`);
+
+  const c = await mittaa({ mykka: true });
+  tieto('VASTAKOE hiljaisuus (gain 0)', JSON.stringify(c));
+  vaadi('VASTAKOE: hiljainen signaali sammuttaa kaikki kaaret',
+    c.naytteita > 100 && c.palavia === 0, `palavia näytteitä ${c.palavia}`);
 }
 
 vaadi('sivulla ei ole JS-virheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));

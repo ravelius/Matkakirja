@@ -23,7 +23,7 @@ import { aaniUrl, haeAani } from './media.js';
 import { puheTuettu } from './puhe.js';
 import { sfx } from './sound.js';
 import {
-  irrotaMusiikinVahvistin, liitaMusiikkiin, volumeToimii,
+  irrotaMusiikinVahvistin, kuunteleReitityksenAvautumista, liitaMusiikkiin,
 } from './musiikkivahvistin.js';
 
 /*
@@ -108,31 +108,22 @@ const pehmene = (t) => Math.max(0, Math.min(1, t)) ** 1.8;
  * Häivytyskäyriä, kynnyksiä, cue-ajastusta, aikaleimoja ja keskeytyksiä
  * EI muutettu — ne ovat omistajan hienosäätämiä (LOPUN_HAIPYMA_S 120 ms
  * → LOPUN_HILJAISUUS_S 25 ms, ease-in). Muuttui se, MIHIN taso
- * kirjoitetaan, ja valinta tehdään mittaamalla (`volumeToimii()`
- * kirjoittaa koe-elementtiin ja lukee takaisin — ei user-agentista):
+ * kirjoitetaan.
  *
- *   TOTTELEE (työpöytä, Android) → `audio.volume` kuten ennen. Ei uusia
- *     solmuja, ei crossOriginia, pyyntö tavu tavulta entinen.
- *   EI TOTTELE (iOS) → elementti reititetään pelin OMAN äänikontekstin
- *     (js/sound.js sfx.ensureContext) vahvistimen läpi, ja taso menee
- *     gainiin. Sama ketju kuin musiikilla ja Livian puheella.
+ * PÄIVITYS 15.9.2026 (kaiuttimen VU-mittari): reititys tehdään nyt
+ * KAIKILLA laitteilla, ei vain iOS:llä. Sama ketju, joka ohittaa iOS:n
+ * tottelemattoman volumen, kantaa myös AnalyserNoden, jota kaiuttimen
+ * kolme kaarta lukevat — ilman sitä mittari joutuu arvaamaan.
  *
- * CORS. Mitattu 14.9.2026: ämpäri media.matkakirja.app palauttaa
- * `access-control-allow-origin` pyynnön Originin mukaisena, joten
- * `crossOrigin = 'anonymous'` toimii. Lupa pyydetään VAIN reitittävällä
- * polulla. Jos reititys ei onnistu (konteksti nukkuu, ei elettä vielä),
- * taso jää volumeen kuten ennenkin: hiljaisuutta ei koskaan valita
- * häivytyksen takia.
+ *   REITITETTY → taso menee gainiin, elementin volume jää ykköseen.
+ *   REITITTÄMÄTÖN (ei AudioContextia) → taso menee `volumeen` kuten
+ *     ennen, eikä hiljaisuutta koskaan valita häivytyksen takia.
+ *
+ * CORS. Mitattu 14.9. ja uudelleen 15.9.2026: ämpäri
+ * media.matkakirja.app palauttaa GET-pyyntöön `access-control-allow-
+ * origin` pyynnön Originin mukaisena ja `vary: Origin`, joten
+ * `crossOrigin = 'anonymous'` toimii.
  */
-
-/** Tottelisiko tämä selain elementin omaa volumea? (iOS: ei) */
-function kertojanVolumeToimii() {
-  try {
-    return volumeToimii();
-  } catch {
-    return true;
-  }
-}
 
 /**
  * Luennan nykyinen taso siltä polulta, jota se käyttää.
@@ -172,22 +163,68 @@ export function asetaLuennanTaso(audio, arvo) {
 }
 
 /**
- * Reitittää luennan vahvistimen läpi, JOS tämä selain ei tottele
- * elementin omaa volumea. Palauttaa true, kun reititys onnistui.
+ * Reitittää luennan vahvistimen läpi. Palauttaa true, kun reititys
+ * onnistui.
+ *
+ * ── KAIKILLA LAITTEILLA, EI VAIN iOS:LLÄ (omistaja 15.9.2026 klo
+ * 08.35 UTC, iPhone v1908, sanatarkasti: *"Kajutin kuvake elää, mutta
+ * se ei elä puheen tahdissa."*; Raamattu, KAIUTTIMEN KAARET SEURAAVAT
+ * PUHETTA, EIVÄT AJASTUSTA) ──
+ *
+ * Aiemmin tämä palasi heti, jos selain totteli elementin omaa volumea
+ * (`kertojanVolumeToimii()`), koska reititystä tarvittiin VAIN tason
+ * kirjoittamiseen. Samassa ketjussa asuu kuitenkin AnalyserNode
+ * (`audio.aaniMittari`), jota kaiuttimen VU-mittari lukee — ja ilman
+ * reititystä mittarilla ei ole mitään mitattavaa, joten se piirtää
+ * ajastettua kuviota. Sama ketju kaikille: taso menee gainiin ja
+ * mittari saa todellisen puheen.
  *
  * Kutsutaan heti soittimen synnyttyä; `crossOrigin` on jo asetettu
  * ennen srciä (luentaSoitin).
  */
 function liitaLuennanVahvistin(audio) {
-  if (!audio || kertojanVolumeToimii()) return false;
+  if (!audio || audio.luennanVahvistin) return Boolean(audio?.luennanVahvistin);
+  // Taso talteen ennen reititystä: liitaMusiikkiin nollaa gainin ja
+  // nostaa elementin volumen ykköseen, joten liu'un keskellä oleva
+  // luenta hyppäisi muuten joko täyteen tai hiljaisuuteen.
+  const ennen = luennanTaso(audio);
   const vahvistin = liitaMusiikkiin(audio);
   if (!vahvistin) return false;
   audio.luennanVahvistin = vahvistin;
+  asetaLuennanTaso(audio, ennen);
   return true;
+}
+
+/**
+ * ODOTTAJA: jos äänikonteksti nukkui soittimen syntyessä, reititys
+ * yritetään uudelleen heti kun konteksti herää.
+ *
+ * MIKSI TÄMÄ ON VÄLTTÄMÄTÖN. `AudioContext.resume()` on asynkroninen,
+ * ja iOS:ssä konteksti on eleen jälkeenkin hetken `suspended`. Ilman
+ * uusintaa juuri istunnon ensimmäinen luenta — saapumisluenta, jonka
+ * omistaja näki iPhonella — jäi reitittämättä, jolloin kaiuttimessa
+ * ei ollut analysaattoria ja kaaret piirsivät ajastettua kuviota.
+ * Sama aukko oli musiikilla 8.9.2026 (js/musiikkivahvistin.js).
+ */
+function varaaReitityksenUusinta(audio) {
+  if (!audio || audio.luennanReititysvahti) return;
+  const pura = kuunteleReitityksenAvautumista(() => {
+    if (audio.luennanVahvistin) { audio.luennanReititysvahti?.(); return; }
+    if (liitaLuennanVahvistin(audio)) audio.luennanReititysvahti?.();
+  });
+  audio.luennanReititysvahti = () => {
+    audio.luennanReititysvahti = null;
+    try { pura(); } catch { /* jo purettu */ }
+  };
+  // kuunteleReitityksenAvautumista kutsuu takaisin heti, jos konteksti
+  // oli jo käynnissä — silloin vahti purki itsensä ennen kuin kahva
+  // ehti tähän kenttään.
+  if (audio.luennanVahvistin) audio.luennanReititysvahti();
 }
 
 /** Purkaa reitityksen. Turvallista kutsua monta kertaa. */
 function irrotaLuennanVahvistin(audio) {
+  audio?.luennanReititysvahti?.();
   if (!audio?.luennanVahvistin) return;
   audio.luennanVahvistin = null;
   irrotaMusiikinVahvistin(audio);
@@ -205,9 +242,18 @@ function irrotaLuennanVahvistin(audio) {
  */
 function luentaSoitin(osoite, taso) {
   const audio = new Audio();
-  if (!kertojanVolumeToimii()) audio.crossOrigin = 'anonymous';
+  /*
+   * CORS-LUPA KAIKILLE, koska reititys on nyt kaikilla laitteilla.
+   * Web Audio lukee elementin ääntä, ja ilman `crossOrigin`-lupaa
+   * MediaElementSource antaisi hiljaisuutta ILMAN VIRHETTÄ. Mitattu
+   * 15.9.2026: `GET https://media.matkakirja.app/audio/…` Originilla
+   * vastaa `access-control-allow-origin: https://matkakirja.app` ja
+   * `vary: Origin`, joten lupa on olemassa. Repon oma varapolku on
+   * samaa alkuperää, jolloin lupa ei tee mitään.
+   */
+  audio.crossOrigin = 'anonymous';
   audio.src = osoite;
-  liitaLuennanVahvistin(audio);
+  if (!liitaLuennanVahvistin(audio)) varaaReitityksenUusinta(audio);
   asetaLuennanTaso(audio, taso);
   // Reititys on yksisuuntainen: purkamatta jäänyt ketju pitäisi
   // kuolleen elementin muistissa.
