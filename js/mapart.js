@@ -2274,6 +2274,30 @@ export function drawTokenIcon(parent, type) {
       el('path', { d: 'M-6.6,-4.4 A5,5 0 0 1 -2.8,-7.8', class: 'icon-linssi-kajo' }, g);
       break;
 
+    case 'linssi-satelliitti':
+      /*
+       * ASTRONAUTIN KAMERA -linssin OMA varasolu (omistaja 15.9.2026:
+       * *"tee astronauttilinssille oma kuvake matkalaukkuun ... SVG
+       * inline samassa viivapaksuudessa ja värissä"*). Ennen tätä
+       * matkalaukussa näkyi jaettu 'linssi'-taikalasi (yllä), koska
+       * varuste-satelliitti.jpg ei ole olemassa (js/ui.js linssiLiuska
+       * pyytää tämän tyypin nimenomaan tälle tunnukselle).
+       *
+       * SAMAT LUOKAT KUIN TAIKALASILLA: Maa on lasin väriä (sininen,
+       * läpikuultava) — se on planeetta, ei täysin väritetty aarre —
+       * ja pieni kamera kiertoradalla käyttää samaa paksua tummaa
+       * viivaa kuin lasin varsi.
+       */
+      el('circle', { cx: 0, cy: 3.2, r: 7.6, class: 'icon-linssi-lasi' }, g);
+      // Ilmakehän kajo Maan reunalla, sama tyyli kuin taikalasin lasissa.
+      el('path', { d: 'M-5.6,0.4 A7.6,7.6 0 0 1 0.4,-4.2', class: 'icon-linssi-kajo' }, g);
+      // Pieni kamera kiertoradalla: runko ja objektiivi.
+      el('rect', {
+        x: -3.4, y: -11.6, width: 6.8, height: 4.8, rx: 1.2, class: 'icon-satelliitti-kamera',
+      }, g);
+      el('circle', { cx: 3.6, cy: -9.2, r: 1.3, class: 'icon-linssi-kajo' }, g);
+      break;
+
     case 'pieniAarre':
       // Pieni paikallisaarre: kolikkopino. Varasolu maalle, jonka
       // omaa aarreparia ei ole vielä kirjoitettu — ja sille hetkelle,
