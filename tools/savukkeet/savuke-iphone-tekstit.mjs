@@ -147,7 +147,12 @@ const PIKSELI = Buffer.from(
   'base64',
 );
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({
+  executablePath: '/opt/pw-browsers/chromium',
+  // Ilman tätä äänikonteksti jää `suspended`ksi eleettömässä ajossa,
+  // eikä kaiuttimen VU-mittarilla olisi mitattavaa signaalia.
+  args: ['--autoplay-policy=no-user-gesture-required'],
+});
 
 const avaa = async (asetukset) => {
   const konteksti = await selain.newContext(asetukset);
@@ -198,6 +203,46 @@ const puhu = (sivu, rooli = 'kertoja') => sivu.evaluate(async (r) => {
   const L = await import('/js/luenta.js');
   const audio = new Audio();
   window.__savukkeenPuhe = audio;
+  /*
+   * KERTOJALLE MYÖS MITATTAVAA ÄÄNTÄ (15.9.2026, julkaisuagentin
+   * pysäyttämä v1910). Kaiuttimen VU-mittari luki v1908:ssa pelkkää
+   * analysaattorin OLEMASSAOLOA ja putosi muuten ajastettuun kuvioon,
+   * joka eli ilman ääntäkin — siksi tämä tynkä riitti sytyttämään
+   * kaaret. Nyt mittari lukee TODELLISEN RMS:n (js/kaiutinmittari.js),
+   * eikä ajastettua varapolkua enää ole, joten pelkkä `new Audio()`
+   * ilman äänigraafia jättää kaaret perustellusti sammuksiin.
+   *
+   * Savuke rakentaa siis kertojalle SAMAN KETJUN kuin tuotanto
+   * (js/musiikkivahvistin.js liitaMusiikkiin: lähde → gain →
+   * analyser → ulos) ja syöttää siihen testisignaalin. Analysaattori
+   * on täsmälleen samassa kohdassa kuin pelissä, eli mittari mittaa
+   * sitä mitä se pelissäkin mittaa. Mykkä loppusolmu pitää ajon
+   * hiljaisena muuttamatta analysaattorin näkemää tasoa.
+   *
+   * VAIN KERTOJALLE: pulun repliikki ei saa sytyttää kaiutinta
+   * (oma vartionsa alempana), joten pululle jätetään pelkkä
+   * puheenvuoro ilman äänigraafia ja ilman `ui.diaryVoicea`.
+   */
+  if (r === 'kertoja') {
+    const Ctx = window.AudioContext ?? window.webkitAudioContext;
+    const ctx = (window.__savukkeenCtx ??= new Ctx());
+    await ctx.resume();
+    const osk = ctx.createOscillator();
+    osk.frequency.value = 180;
+    const vahvistin = ctx.createGain();
+    vahvistin.gain.value = 0.3;
+    const mittari = ctx.createAnalyser();
+    mittari.fftSize = 256;
+    const mykka = ctx.createGain();
+    mykka.gain.value = 0;
+    osk.connect(vahvistin).connect(mittari).connect(mykka).connect(ctx.destination);
+    osk.start();
+    window.__savukkeenOskillaattori = osk;
+    audio.aaniMittari = mittari;
+    audio.luennanVahvistin = vahvistin;
+    // Luentavahti (js/ui.js) hakee analysaattorin `ui.diaryVoicesta`.
+    window.matkakirja.ui.diaryVoice = audio;
+  }
   L.merkitsePuhuja(window.matkakirja.ui, audio, r);
   Object.defineProperty(audio, 'paused', { value: false, configurable: true });
   audio.dispatchEvent(new Event('playing'));
@@ -205,6 +250,13 @@ const puhu = (sivu, rooli = 'kertoja') => sivu.evaluate(async (r) => {
 const vaikene = (sivu) => sivu.evaluate(async () => {
   const L = await import('/js/luenta.js');
   L.vapautaPuhuja(window.matkakirja.ui, window.__savukkeenPuhe);
+  // Testisignaali seis ja kahva pois: vastakoe mittaa kaarien
+  // sammumista, eikä sitä saa auttaa jättämällä ääntä soimaan.
+  try { window.__savukkeenOskillaattori?.stop(); } catch { /* jo seis */ }
+  window.__savukkeenOskillaattori = null;
+  if (window.matkakirja.ui.diaryVoice === window.__savukkeenPuhe) {
+    window.matkakirja.ui.diaryVoice = null;
+  }
 });
 
 /** Yksi mittaus: kortti, kuva, nappi, huntu ja kaiutin. */

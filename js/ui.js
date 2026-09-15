@@ -11595,15 +11595,19 @@ export class UI {
        * vaan kaarien vuorottelu: mittari käy täsmälleen niin kauan kuin
        * kertoja on äänessä, ja sammuttaa kaaret pysähtyessään.
        *
-       * ANALYSAATTORI ON JO KETJUSSA, kun luenta kulkee Web Audion läpi
-       * (iOS; js/musiikkivahvistin.js liitaMusiikkiin tallettaa sen
-       * elementtiin nimellä `aaniMittari`). Työpöydällä reititystä ei
-       * ole, jolloin mittari piirtää ajastetun kuvion.
+       * ANALYSAATTORI ON JO KETJUSSA: luenta reititetään Web Audion
+       * läpi KAIKILLA laitteilla (js/luenta.js liitaLuennanVahvistin,
+       * korjaus 15.9.2026 — aiemmin vain iOS:llä ja vain jos
+       * äänikonteksti sattui olemaan hereillä, jolloin mittari joutui
+       * ajastettuun kuvioon ja kaaret elivät omaa tahtiaan). Mittari
+       * lukee `audio.aaniMittari`-analysaattorin RMS:n ja normalisoi
+       * sen luennan gainilla, jotta Lukija-liuku ei himmennä kaaria.
        */
       const mykka = this.factKuuntele?.classList?.contains('mykistetty') === true;
       if (kertoja && !mykka) {
         kaynnistaKaiutinmittari(this.factKuuntele,
-          () => this.diaryVoice?.aaniMittari ?? null);
+          () => this.diaryVoice?.aaniMittari ?? null,
+          { haeVahvistus: () => this.diaryVoice?.luennanVahvistin?.gain?.value ?? null });
       } else {
         // Mykistettynä kaikki kaaret sammuksissa (omistajan sanoma
         // ehto) — sammutus tulee tästä eikä luennan puuttumisesta,
