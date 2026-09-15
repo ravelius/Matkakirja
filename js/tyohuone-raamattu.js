@@ -7777,7 +7777,17 @@ export const RAAMATTU = {
           + 'paalle, kategoriat pystysuoraan tiiviisti allekkain (varipallo '
           + '+ nimi), luettavuus varmistetaan tekstin omalla '
           + 'kevyella reunuksella tai varjolla, ei laatikolla. Tama korvaa '
-          + 'aiemman yhden rivin linjauksen. Tila: tyo Opus-agentilla.',
+          + 'aiemman yhden rivin linjauksen. Tila: julkaistu v1911 (#2514). '
+          + 'KORJAUS (omistaja 15.9.2026 klo 15.10 UTC, tyopoytakuva '
+          + 'Unkarista zoomattuna, sanatarkasti: "tuo valikko piti tulla '
+          + 'tiiviisti paallekkain. ovat nyt todella kaukana toisistaan. '
+          + 'valikko saisi aueta plus merkin oikelle puolelle."): 1) rivit '
+          + 'TIIVIISTI allekkain - rivivali seuraa tekstin kokoa (n. 1,3 x '
+          + 'riviKorkeus), ei kartan mittakaavaa; zoomattaessa valikko ei '
+          + 'saa hajota; 2) valikko aukeaa PLUS-MERKIN OIKEALLE PUOLELLE '
+          + 'paneelin viereen (ylareuna plus-merkin tasalla), ei paneelin '
+          + 'alle; jos ruudun oikea reuna on liian lahella, valikko kaantyy '
+          + 'vasemmalle. Tila: tyo Sonnet-agentilla.',
         'VIKA: ASETUSTEN AVAAMINEN KESKEN LUENNAN KUTISTAA LUENTAKUVAT '
           + '(omistaja 15.9.2026 klo 10.55 UTC, sanatarkasti: "Jos klikkaan '
           + 'esimerkiksi hammasratasta, sina aikana kun isoisan luenta on '
