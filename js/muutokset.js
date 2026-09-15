@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1916, teksti: 'Valikko tiiviisti plussan viereen; reliefityökalu 1′' },
   { v: 1915, teksti: 'Pulu kulmassa; maailmanäkymä ilman kermaa; reliefi-venv' },
   { v: 1914, teksti: 'Työnkulku: reliefi Macilla ja vienti R2:een' },
   { v: 1913, teksti: 'Astronautin kamera uusiksi; Ihmisen matkan rintama ja alku' },

@@ -874,59 +874,65 @@ function asetteleKortti(el, d) {
 const VALIKON_KALUSTEET = ['.rail', '.toimintorivi', '.pollo-nappi.pollo-kelluu'];
 
 /**
- * Aukeaako valikko alas vai ylös? Mitta otetaan vasta kun valikko on
+ * Kummalle puolelle plussaa valikko avautuu, ja pysyykö se kokonaan
+ * ruudulla pystysuunnassa? Mitta otetaan vasta kun valikko on
  * näkyvissä, koska muunnos (scale) on osa sen ruutulaatikkoa.
  *
- * VAIN VAAKASUUNNASSA LIMITTYVÄT KALUSTEET LASKETAAN. Työpöydällä
- * `.rail` on ruudun laidassa eikä alalaidassa; sen yläreuna ei silloin
- * kerro mitään siitä, mihin valikko mahtuu.
+ * PÄÄTÖKSET 22 KORJAUS (omistaja 15.9.2026): entinen "keskitä kortin
+ * alle ja siirrä sivuun tarvittaessa" -asettelu on vaihtunut
+ * "avaa plussan oikealle puolelle, ylareuna plussan tasalla" -asetteluun
+ * (css .maapaneeli-valikko `left: 108px`); tämä funktio päättää
+ * VAIN, kääntyykö se plussan VASEMMALLE puolelle (kun oikea reuna ei
+ * mahdu ruutuun) ja tarvitseeko sitä siirtää pystyyn, jotta se pysyy
+ * kokonaan ruudulla eikä osu alalaidan kalusteisiin.
+ *
+ * VAIN VAAKASUUNNASSA LIMITTYVÄT KALUSTEET LASKETAAN pystyrajaa
+ * varten. Työpöydällä `.rail` on ruudun laidassa eikä alalaidassa; sen
+ * yläreuna ei silloin kerro mitään siitä, mihin valikko mahtuu.
  */
 function sovitaValikko(kortti) {
   const valikko = kortti.querySelector('.maapaneeli-valikko');
   if (!valikko || valikko.hidden) return;
-  valikko.classList.remove('ylos');
-  valikko.style.setProperty('--valikko-siirto', '0px');
-  const r = valikko.getBoundingClientRect();
-  if (!(r.height > 0)) return;
+  valikko.classList.remove('vasen');
+  valikko.style.setProperty('--valikko-pysty', '0px');
   const kotelo = kortti.closest('.pallo-kotelo')?.getBoundingClientRect();
-  let raja = kotelo ? kotelo.bottom : (globalThis.innerHeight ?? 0);
+  if (!kotelo) return;
+  const kr = kortti.getBoundingClientRect();
+  const skaala = kortti.offsetWidth > 0 ? kr.width / kortti.offsetWidth : 1;
+  if (!(skaala > 0)) return;
+
+  let r = valikko.getBoundingClientRect();
+  if (!(r.width > 0)) return;
+
+  /*
+   * VAAKA: KÄÄNNY VASEMMALLE, JOS OIKEA REUNA EI MAHDU (PÄÄTÖKSET 22
+   * KORJAUS kohta 2: *"jos ruudun oikea reuna on liian lähellä
+   * (390 px), valikko kääntyy plus-merkin vasemmalle puolelle"*).
+   */
+  if (r.right > kotelo.right) {
+    valikko.classList.add('vasen');
+    r = valikko.getBoundingClientRect();
+  }
+
+  /*
+   * PYSTY: PYSY RUUDULLA JA ALALAIDAN KALUSTEIDEN YLÄPUOLELLA. Rajaa
+   * ei enää nosteta koko listaa ylös plussan ympäri (kohta 2 poisti
+   * sen tarpeen — valikko ei ole enää paneelin alla), vaan koko lista
+   * liu'utetaan pystyyn tasan sen verran kuin ylivuoto vaatii.
+   */
+  let alaraja = kotelo.bottom;
   for (const valitsin of VALIKON_KALUSTEET) {
     for (const e of document.querySelectorAll(valitsin)) {
       const k = e.getBoundingClientRect();
       if (!(k.width > 0) || !(k.height > 0)) continue;
       if (k.right <= r.left || k.left >= r.right) continue;
-      if (k.top < raja && k.top > r.top) raja = k.top;
+      if (k.top < alaraja && k.top > r.top) alaraja = k.top;
     }
   }
-  /*
-   * YLÖS VAIN JOS SINNE MAHTUU (erä 18). Pystysuora lista (PÄÄTÖKSET
-   * 22) on moninkertaisesti entistä yhtä riviä korkeampi, joten
-   * ylösnosto voi työntää sen ruudun YLÄREUNAN yli — silloin alhaalla
-   * oleva kaluste on pienempi paha kuin ruudun ulkopuoli.
-   */
-  const ylaraja = kotelo ? kotelo.top : 0;
-  if (r.bottom > raja && kortti.getBoundingClientRect().top - r.height >= ylaraja) {
-    valikko.classList.add('ylos');
-  }
-
-  /*
-   * VAAKASUUNNASSA RUUDUN SISÄÄN (erä 18, PÄÄTÖKSET 22: *"ei mene
-   * ruudun ulkopuolelle 390 px:llä"*). Valikko on keskitetty kortin
-   * alle, ja pisin kategorianimi on kortin levyinen moninkerroin, joten
-   * puhelimella se yltää helposti ruudun laidan yli.
-   *
-   * SIIRTO ON KORTIN OMISSA YKSIKÖISSÄ, koska valikko on `scale`atun
-   * kortin lapsi: ruutupikselit jaetaan mittakaavalla, joka luetaan
-   * kortin omasta laatikosta (ei transform-merkkijonosta).
-   */
-  const kr = kortti.getBoundingClientRect();
-  const skaala = kortti.offsetWidth > 0 ? kr.width / kortti.offsetWidth : 1;
-  if (!(skaala > 0) || !kotelo) return;
-  const rr = valikko.getBoundingClientRect();
-  let siirto = 0;
-  if (rr.left < kotelo.left) siirto = kotelo.left - rr.left;
-  else if (rr.right > kotelo.right) siirto = kotelo.right - rr.right;
-  if (siirto) valikko.style.setProperty('--valikko-siirto', `${(siirto / skaala).toFixed(3)}px`);
+  let pysty = 0;
+  if (r.bottom > alaraja) pysty = alaraja - r.bottom;
+  else if (r.top < kotelo.top) pysty = kotelo.top - r.top;
+  if (pysty) valikko.style.setProperty('--valikko-pysty', `${(pysty / skaala).toFixed(3)}px`);
 }
 
 /**

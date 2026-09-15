@@ -92,6 +92,10 @@
  *      LEVEYSVÄITTEEN ON KAADUTTAVA (puhelimella mitattu 21,7 %).
  *   F. Erän 12 valikkotyyli takaisin (kaksi palstaa tummassa
  *      laatikossa) → VALIKKOVÄITTEEN 7 ON KAADUTTAVA.
+ *   K. PÄÄTÖKSET 22 KORJAUS: yleinen `button { min-height: 42px }`
+ *      palautetaan voittamaan `.maapaneeli-aihe`n oman
+ *      `min-height: 0`:n → VÄITTEIDEN 7 JA 7B ON KAADUTTAVA (rivien
+ *      väli/tekstikoko-suhde karkaa kauas 1,3:sta, myös zoomattuna).
  *   G. `korkeuteenSovitus` palauttamaan null → rajaus tehdään taas
  *      MOLEMPIIN suuntiin, kuten ennen erää 14. KORKEUSSOVITUSVÄITTEEN
  *      ON KAADUTTAVA (sitova akseli vaihtuu X:ksi ja pystyyn jää
@@ -369,6 +373,18 @@ const palvelin = http.createServer((req, res) => {
   border-radius: 2.5px;
   pointer-events: auto;
 }`));
+  }
+  /*
+   * K: PÄÄTÖKSET 22 KORJAUS kohta d PALAUTETAAN VIKAAN. Yleinen
+   * `button { min-height: 42px }` voittaa taas rivin oman
+   * `min-height: 0`:n (lisätään sääntö tiedoston LOPPUUN, jolloin se
+   * voittaa kaskadissa saman erityisyyden `.maapaneeli-aihe`-säännöt).
+   * Tämä on TÄSMÄLLEEN se vika, jonka omistaja kuvasi (Unkari
+   * zoomattuna, rivit kaukana toisistaan) — vastakokeen on siis
+   * kaadutettava sekä väite 7 että 7b.
+   */
+  if (vastakoe === 'K' && polkuOsa.endsWith('/css/styles.css')) {
+    runko = Buffer.concat([runko, Buffer.from('\n.maapaneeli-aihe { min-height: 42px; }\n')]);
   }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(runko);
@@ -794,6 +810,24 @@ const tekstiKoot = (sivu, nimioKoko) => sivu.evaluate((koko) => {
  *
  * Rako mitataan kortin alareunan ja valikon yläreunan väliltä (tai
  * ylöspäin auetessa toisin päin).
+ *
+ * PÄÄTÖKSET 22 KORJAUS (omistaja 15.9.2026) lisäsi kaksi uutta mittaa
+ * samaan funktioon, jotta vartio ja vastakokeet lukevat yhden totuuden:
+ *   d) RIVIVÄLI ON 1,3 × TEKSTIN OMA KOKO joka vierekkäisen napin
+ *      parilla (`suhteet`) — EI ABSOLUUTTISENA PIKSELINÄ, koska koko
+ *      kortti skaalautuu zoomin mukana (vika, joka jäi kolmen zoomin
+ *      savukkeista huomaamatta, oli juuri se, että VAIN suhde pysyy
+ *      vakiona, ei ollenkaan pikselimäärä).
+ *   e) VALIKKO ON PLUSSAN VIERESSÄ, EI PANEELIN ALLA: valikko on joko
+ *      plussan/kortin OIKEALLA puolella riittävän raolla (`vasen` ===
+ *      false) tai kokonaan kortin VASEMMALLA puolella (`vasen` ===
+ *      true) — ei kummassakaan tapauksessa kortin PÄÄLLÄ. `plusYlaero`
+ *      (yläreunan ero plussaan) jää INFO-mitaksi, ei ehdoksi: normaalisti
+ *      se on 0 (molemmilla `top: -1px`), mutta se voi olla suurempikin,
+ *      kun `sovitaValikko` (js/pallolauta/maapaneeli.js) liu'uttaa
+ *      listaa pystyyn alalaidan kalusteiden yläpuolelle — SIVUSUUNNAN
+ *      rako yksinään takaa, ettei valikko koskaan peitä korttia,
+ *      koska ne eivät vaakasuunnassa osu päällekkäin.
  */
 const valikonMitat = async (sivu) => {
   await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
@@ -824,6 +858,28 @@ const valikonMitat = async (sivu) => {
     const tyyli = getComputedStyle(valikko);
     const nappiTyyli = napit.length ? getComputedStyle(valikko.querySelector('.maapaneeli-aihe')) : null;
     const kotelo = valikko.closest('.pallo-kotelo')?.getBoundingClientRect() ?? null;
+    /*
+     * d) rivivälin suhde tekstin omaan kokoon (kohta A yllä).
+     *
+     * `napit[i].y` on RUUDUN pikseleitä (getBoundingClientRect, CSS3D-
+     * skaalan LÄPI), mutta `getComputedStyle(...).fontSize` on kortin
+     * OMA, skaalaamaton arvo (transform ei muuta computed styleä).
+     * Jos suhde laskettaisiin suoraan näistä kahdesta, se ei koskaan
+     * pysyisi vakiona zoomilla — se olisi aina 1,3 × kortin skaala
+     * (mitattu 15.9.2026: skaala 0.342 → suhde 0.443, skaala 0.826 →
+     * suhde 1.072 — tasan 1,3 × skaala kummassakin). Fontin koko on
+     * siis skaalattava SAMALLA kortin skaalalla kuin rivien paikat,
+     * jotta molemmat puolet ovat samaa yksikköä (ruutupikseliä).
+     */
+    const skaalaNyt = kortti.offsetWidth > 0 ? k.width / kortti.offsetWidth : 1;
+    const fontSizePx = nappiTyyli ? parseFloat(nappiTyyli.fontSize) * skaalaNyt : null;
+    const pitches = [];
+    for (let i = 1; i < napit.length; i += 1) pitches.push(napit[i].y - napit[i - 1].y);
+    const suhteet = fontSizePx ? pitches.map((pp) => pp / fontSizePx) : [];
+    // e) plussan viereen, ei paneelin alle (kohta B yllä).
+    const vasen = valikko.classList.contains('vasen');
+    const oikeaRako = pr.left - r.right; // >0 kun valikko on OIKEALLA plussasta
+    const vasenRako = r.left - k.left; // <0 kun valikko on kokonaan kortin VASEMMALLA puolella
     return {
       auki: true,
       rivit,
@@ -843,6 +899,13 @@ const valikonMitat = async (sivu) => {
       leikkaa: r.left < k.right && r.right > k.left && r.top < k.bottom && r.bottom > k.top,
       plusKeskiKortista: pr.top + pr.height / 2 - k.top,
       skaala: k.width / kortti.offsetWidth,
+      fontSizePx,
+      pitches,
+      suhteet,
+      vasen,
+      oikeaRako: -oikeaRako, // >0 kun valikko on plussan OIKEALLA puolella
+      vasenRako,
+      plusYlaero: r.top - pr.top,
     };
   });
   await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
@@ -850,16 +913,59 @@ const valikonMitat = async (sivu) => {
   return ulos;
 };
 
+/** Rivivälin suhde: kaikki napinparit 1,3 ± 5 % (PÄÄTÖKSET 22 KORJAUS d). */
+const RIVIVALIN_SUHDE = 1.3;
+const RIVIVALIN_VARA = 0.05;
+const rivivaliKelpaa = (v) => Boolean(v?.suhteet?.length)
+  && v.suhteet.every((s) => Math.abs(s / RIVIVALIN_SUHDE - 1) <= RIVIVALIN_VARA);
+
 /**
- * Täyttääkö valikko erän 18 linjauksen (PÄÄTÖKSET 22)? Kaikki kolme
- * ehtoa yhdessä paikassa, jotta vartio ja vastakoe F lukevat SAMAN
- * säännön eivätkä kahta kopiota.
+ * Plussan vieressä eikä paneelin päällä (PÄÄTÖKSET 22 KORJAUS e): rako
+ * plussaan/korttiin vähintään SIVURAON_VARA ruutu-px, ei leikkausta
+ * kortin kanssa.
+ *
+ * `plusYlaero` (yläreunan ero plussaan) EI OLE ehto tässä, vaikka
+ * normaalisti valikon yläreuna ON plussan tasalla (`top: -1px`
+ * molemmilla). js/pallolauta/maapaneeli.js `sovitaValikko` liu'uttaa
+ * koko listaa pystyyn, kun se osuisi alalaidan kalusteisiin (rail,
+ * toimintorivi, kelluva pollo-nappi) — TARKOITUKSELLINEN, dokumentoitu
+ * käytös, ei vika. Mitattu 15.9.2026: Ranska 390 px -ruudulla kortti
+ * on niin alhaalla, että valikko osuisi kelluvaan pollo-nappiin ja
+ * toimintoriviin ilman siirtoa (`--valikko-pysty: -51.6px`, mitattuna
+ * `plusYlaero` -17.6 ruutu-px) — SIVUSUUNNAN rako (`oikeaRako`/
+ * `vasenRako`, tarkistettu tässä) takaa YKSINÄÄN, ettei valikko
+ * koskaan peitä korttia tai plussaa pystysuunnasta riippumatta, koska
+ * ne eivät vaakasuunnassa osu päällekkäin. "Ruudulla" (tarkistetaan
+ * `valikkoKelpaa`:ssa) takaa, ettei siirto vie valikkoa ruudun
+ * ulkopuolelle.
+ */
+const SIVURAON_VARA = 4;
+const sivuKelpaa = (v) => Boolean(v?.auki) && !v.leikkaa
+  && (v.vasen ? v.vasenRako <= -SIVURAON_VARA : v.oikeaRako >= SIVURAON_VARA);
+
+/**
+ * Täyttääkö valikko erän 18 linjauksen (PÄÄTÖKSET 22) ja sen korjauksen
+ * (PÄÄTÖKSET 22 KORJAUS)? Kaikki ehdot yhdessä paikassa, jotta vartio
+ * ja vastakokeet lukevat SAMAN säännön eivätkä useaa kopiota.
+ *
+ * PÄÄTÖKSET 22 KORJAUS (kohta c): `v.rako` mittaa raon KORTIN
+ * ALAREUNAAN — vanhan, erän 18 "valikko paneelin alla" -asettelun
+ * mitta. Uudessa "plussan vierellä" -asettelussa valikko on korttia
+ * SIVUSSA eikä alla, jolloin tuo pystyrako on rakenteellisesti
+ * negatiivinen (valikko limittyy kortin oman korkeuden kanssa
+ * pystysuunnassa) vaikka valikko olisi täysin oikein sivussa — mitattu
+ * 15.9.2026 sekä 390 että 1400 px:llä. "Ei kortin päällä" -vaatimus
+ * tulee jo `!v.leikkaa`:sta, ja "plussan vierellä" tarkemmin
+ * `sivuKelpaa`:sta (oikeaRako/vasenRako + plusYlaero), joten `v.rako`
+ * jää tästä eteenpäin vain INFO-mitaksi, ei ehdoksi.
  */
 const valikkoKelpaa = (v) => Boolean(v?.auki)
   && v.napit > 1 && v.rivit === v.napit          // a) joka kategoria omalla rivillään
   && v.taustaAlfa === 0 && v.reunusPx === 0 && v.nappiTaustaAlfa === 0  // b) ei laatikkoa
   && v.varjo && v.varjo !== 'none'               //    luettavuus on tekstin oma
-  && v.ruudulla && !v.leikkaa && v.rako > 0;     // c) ruudulla eikä kortin päällä
+  && v.ruudulla && !v.leikkaa                    // c) ruudulla eikä kortin päällä
+  && rivivaliKelpaa(v)                           // d) rivivälin suhde 1,3 ± 5 %
+  && sivuKelpaa(v);                              // e) plussan vierellä, ei paneelin alla
 
 
 /*
@@ -969,6 +1075,7 @@ const RUUDUT = [
 const zoomiTulokset = [];
 const tekstiTulokset = [];
 const valikkoTulokset = [];
+const valikkoZoomiTulokset = [];
 /*
  * PANEELIN LEVEYS SAAPUMISNÄKYMÄSSÄ (omistaja 14.9.2026 klo 17.55,
  * puhelin: *"maa info edelleen liian iso"*; Fablen mitoitus samana
@@ -1167,8 +1274,52 @@ for (const ruutu of RUUDUT) {
         + `leikkaa korttia: ${v.leikkaa ? 'KYLLÄ' : 'ei'}, kokonaan ruudulla `
         + `${v.ruudulla}, tekstin reunus: ${v.varjo && v.varjo !== 'none' ? 'on' : 'EI'}, `
         + `plussan keskilinja ${p(v.plusKeskiKortista, 2)} px kortin yläreunasta `
-        + `(skaala ${p(v.skaala, 3)})`
+        + `(skaala ${p(v.skaala, 3)}), rivien väli/tekstikoko ${JSON.stringify(v.suhteet.map((s) => p(s, 3)))} `
+        + `(tavoite ${RIVIVALIN_SUHDE} ± ${100 * RIVIVALIN_VARA} %), sivu ${v.vasen ? 'VASEN' : 'oikea'}, `
+        + `rako plussaan ${p(v.vasen ? -v.vasenRako : v.oikeaRako, 2)} px, `
+        + `yläreunan ero plussaan ${p(v.plusYlaero, 2)} px`
       : 'EI AUENNUT');
+
+  /*
+   * --- 7b. rivivälin suhde pysyy 1,3 ± 5 %:ssa KOLMELLA ZOOMILLA
+   * (saapumis + 2 porrasta sisään; PÄÄTÖKSET 22 KORJAUS). Skaalautuva
+   * PIKSELIRAKO ei riitä todisteeksi — juuri se piti vian piilossa
+   * kolmen zoomin savukkeista, kun `min-height: 42px` venytti rivit
+   * (ks. valikonMitat-funktion selitys).
+   */
+  await zoomaa(sivu, 1);
+  await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
+  await sivu.waitForTimeout(600);
+  const valikkoZoomit = [];
+  for (const osuus of ZOOMITASOT) {
+    await zoomaa(sivu, osuus); // eslint-disable-line no-await-in-loop
+    await sivu.waitForTimeout(200); // eslint-disable-line no-await-in-loop
+    const vz = await sivu.evaluate(() => { // eslint-disable-line no-await-in-loop
+      const kortti = document.querySelector('.maapaneeli-kortti');
+      const valikko = document.querySelector('.maapaneeli-valikko');
+      const napit = [...(valikko?.querySelectorAll('.maapaneeli-aihe') ?? [])]
+        .map((b) => b.getBoundingClientRect().top);
+      // Sama skaalaus kuin valikonMitat:ssa (kohta d yllä) — muuten
+      // suhde ei koskaan pysyisi vakiona zoomilla.
+      const skaalaNyt = kortti && kortti.offsetWidth > 0
+        ? kortti.getBoundingClientRect().width / kortti.offsetWidth : 1;
+      const fontSizePx = valikko && napit.length
+        ? parseFloat(getComputedStyle(valikko.querySelector('.maapaneeli-aihe')).fontSize) * skaalaNyt
+        : null;
+      const pitches = [];
+      for (let i = 1; i < napit.length; i += 1) pitches.push(napit[i] - napit[i - 1]);
+      return { fontSizePx, suhteet: fontSizePx ? pitches.map((pp) => pp / fontSizePx) : [] };
+    });
+    valikkoZoomit.push({ osuus, ...vz, ok: rivivaliKelpaa(vz) });
+  }
+  await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
+  await sivu.waitForTimeout(300);
+  await zoomaa(sivu, 1);
+  valikkoZoomiTulokset.push({ ruutu: ruutu.nimi, zoomit: valikkoZoomit,
+    ok: valikkoZoomit.length === ZOOMITASOT.length && valikkoZoomit.every((z) => z.ok) });
+  tieto(`${ruutu.nimi} px · rivivälin suhde kolmella zoomilla`,
+    valikkoZoomit.map((z) => `osuus ${z.osuus}: fontti ${p(z.fontSizePx, 3)} px, suhteet `
+      + `${JSON.stringify(z.suhteet.map((s) => p(s, 3)))}`).join(' | '));
 
   paaVirheet = paaVirheet.concat(virheet);
   await ctx.close();
@@ -1201,12 +1352,17 @@ vaadi('5. saapumisnäkymä rajautuu aivan maan rajojen ulkopuolelle (tyhjä ≤ 
 vaadi('6. paneelin leveys saapumisnäkymässä ≤ 10 % ruudun leveydestä',
   leveysTulokset.length === RUUDUT.length && leveysTulokset.every((t) => t.ok),
   JSON.stringify(leveysTulokset));
-vaadi('7. lisää-valikko: kategoriat allekkain, ei taustalaatikkoa, kokonaan ruudulla '
-  + '(390 px ja 1400 px)',
+vaadi('7. lisää-valikko: kategoriat allekkain tiiviisti (rivivali 1,3× tekstin koko), '
+  + 'ei taustalaatikkoa, plussan vierellä ja kokonaan ruudulla (390 px ja 1400 px)',
   valikkoTulokset.length === RUUDUT.length && valikkoTulokset.every((t) => t.ok),
   JSON.stringify(valikkoTulokset.map((t) => ({ ruutu: t.ruutu, napit: t.napit, rivit: t.rivit,
     taustaAlfa: t.taustaAlfa, reunusPx: t.reunusPx, nappiTaustaAlfa: t.nappiTaustaAlfa,
-    ruudulla: t.ruudulla, rako: t.rako, leikkaa: t.leikkaa }))));
+    ruudulla: t.ruudulla, rako: t.rako, leikkaa: t.leikkaa, suhteet: t.suhteet,
+    vasen: t.vasen, oikeaRako: t.oikeaRako, vasenRako: t.vasenRako, plusYlaero: t.plusYlaero }))));
+vaadi('7b. rivivälin suhde (1,3 ± 5 %) pysyy vakiona kolmella zoomilla '
+  + '(saapumis + 2 porrasta sisään, 390 px ja 1400 px)',
+  valikkoZoomiTulokset.length === RUUDUT.length && valikkoZoomiTulokset.every((t) => t.ok),
+  JSON.stringify(valikkoZoomiTulokset));
 vaadi('8. ankkuri: kapealla ruudulla Lyoninlahti, leveällä Biskajanlahti — '
   + 'kortti ruudulla ja meren päällä kummallakin',
   ankkuriTulokset.length === RUUDUT.length && ankkuriTulokset.every((t) => t.ok),
@@ -1557,6 +1713,55 @@ vastakoe = 'F';
       : 'EI AUENNUT');
   vaadi('VASTAKOE F: erän 12 valikkotyylillä valikkoväite kaatuu',
     Boolean(v?.auki) && !valikkoKelpaa(v), JSON.stringify(v));
+  await ctx.close();
+}
+/*
+ * K: PÄÄTÖKSET 22 KORJAUS — skaalautuva mutta LIIAN SUURI rivinväli
+ * (`button { min-height: 42px }` palaa voittamaan `.maapaneeli-aihe`n
+ * oman `min-height: 0`:n) → väitteiden 7 ja 7b on kaaduttava. Tämä on
+ * juuri se vika, joka jäi kolmen zoomin savukkeista huomaamatta,
+ * koska rako PYSYI VAKIONA suhteessa zoomiin — vain suhde tekstin
+ * kokoon oli väärä. Siksi koe ajetaan MYÖS kahdella zoomilla.
+ */
+vastakoe = 'K';
+{
+  const { ctx, sivu, auki } = await avaaPeli({ leveys: 1400, korkeus: 900 });
+  const v = auki ? await valikonMitat(sivu) : null;
+  let vz = null;
+  if (auki) {
+    await zoomaa(sivu, 1);
+    await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
+    await sivu.waitForTimeout(600);
+    await zoomaa(sivu, 0.25);
+    await sivu.waitForTimeout(200);
+    vz = await sivu.evaluate(() => {
+      const kortti = document.querySelector('.maapaneeli-kortti');
+      const valikko = document.querySelector('.maapaneeli-valikko');
+      const napit = [...(valikko?.querySelectorAll('.maapaneeli-aihe') ?? [])]
+        .map((b) => b.getBoundingClientRect().top);
+      // Sama skaalaus kuin valikonMitat:ssa — muuten suhde ei koskaan
+      // pysyisi vakiona zoomilla (ks. valikonMitat kohta d).
+      const skaalaNyt = kortti && kortti.offsetWidth > 0
+        ? kortti.getBoundingClientRect().width / kortti.offsetWidth : 1;
+      const fontSizePx = valikko && napit.length
+        ? parseFloat(getComputedStyle(valikko.querySelector('.maapaneeli-aihe')).fontSize) * skaalaNyt
+        : null;
+      const pitches = [];
+      for (let i = 1; i < napit.length; i += 1) pitches.push(napit[i] - napit[i - 1]);
+      return { fontSizePx, suhteet: fontSizePx ? pitches.map((pp) => pp / fontSizePx) : [] };
+    });
+  }
+  tieto('vastakoe K (button min-height: 42px voittaa rivinkorkeuden)',
+    v?.auki
+      ? `saapumis rivien väli/tekstikoko ${JSON.stringify(v.suhteet.map((s) => p(s, 2)))}, `
+        + `zoomattuna ${JSON.stringify((vz?.suhteet ?? []).map((s) => p(s, 2)))} `
+        + `(tavoite ${RIVIVALIN_SUHDE} ± ${100 * RIVIVALIN_VARA} %) `
+        + `→ väite 7 ${valikkoKelpaa(v) ? 'LÄPI (paha)' : 'PUNAINEN'}, `
+        + `väite 7b ${rivivaliKelpaa(vz) ? 'LÄPI (paha)' : 'PUNAINEN'}`
+      : 'EI AUENNUT');
+  vaadi('VASTAKOE K: button-oletuksen min-height: 42px palautettuna rivivälin suhde kaatuu '
+    + 'saapumiszoomilla ja zoomattuna',
+    Boolean(v?.auki) && !rivivaliKelpaa(v) && !rivivaliKelpaa(vz), JSON.stringify({ v, vz }));
   await ctx.close();
 }
 /* G: korkeussovitus pois → väitteiden 6 ja 7 on kaaduttava. */
