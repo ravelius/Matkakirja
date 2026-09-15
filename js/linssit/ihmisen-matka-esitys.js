@@ -1145,6 +1145,29 @@ export function luoEsitys({ ajo }) {
       : null;
     tila.tahdet?.paivita(0, 0);
     peite.classList.add('avaruus', 'musta');
+    /*
+     * MUSTA ALKU ON KOKONAAN MUSTA (omistaja 15.9.2026 klo 12.00,
+     * työpöytäkuva 248 000 v. sitten, sanatarkasti: *"kun linssi alkaa
+     * täydestä mustuudesta, niin myös yläosa saisi olla kokonaan
+     * poissa. Nyt sinne näkyy pieni viiva yläpalkin alaosasta sekä
+     * hampurilaisen nuoli alaspäin. Otan nekin pois ihan siitä
+     * alusta."*).
+     *
+     * JUURISYY MITATTIIN 15.9.2026 (savuke-ihmisen-rintama.mjs,
+     * 834 × 1100): peite on linssin juuren ENSIMMÄINEN lapsi, joten
+     * linssin oma yläpalkki `.aikajana-ylarivi` — taustaväri, 1 px
+     * alareuna ja hampurilainen — piirtyy DOM-järjestyksessä sen
+     * PÄÄLLE. Luokka `esitys-pimea` piilottaa palkin SISÄLLÖN mutta
+     * jättää palkin itsensä ja hampurilaisen (se on ollut ainoa tie
+     * ulos linssistä). Mitattuna palkin alareunan rivi oli kirkas koko
+     * leveydeltä ja hampurilaisen nuoli 241/255.
+     *
+     * KORJAUS: mustan ajaksi koko palkki menee opasiteetilla nollaan
+     * (`esitys-musta`) ja palaa samassa feidauksessa kuin musta itse.
+     * Hampurilainen on poissa vain sen muutaman sekunnin, jonka
+     * ensimmäinen virke kestää — linssiin ei jää jumiin.
+     */
+    ajo.juuri?.classList.add('esitys-musta');
     tila.avausOdottaa = true;
     tila.mustaPaalla = true;
     if (!k?.ajaKamera) return false;
@@ -1170,6 +1193,9 @@ export function luoEsitys({ ajo }) {
     tila.mustaPaalla = false;
     peite.style.setProperty('--avauksen-feidi', `${Math.max(0, Math.round(feidi))}ms`);
     peite.classList.remove('musta');
+    // Yläpalkki takaisin samassa feidauksessa (ks. avaruusavaus).
+    ajo.juuri?.style?.setProperty('--avauksen-feidi', `${Math.max(0, Math.round(feidi))}ms`);
+    ajo.juuri?.classList.remove('esitys-musta');
     return true;
   }
 
@@ -1746,7 +1772,7 @@ export function luoEsitys({ ajo }) {
     tila.valotOdottaa = false;
     // Pallo on perillä: kamera saa heti lähteä kohti Marokkoa.
     aloitaKohdeajo();
-    ajo.juuri?.classList.remove('esitys-pimea', 'esitys-avaruus');
+    ajo.juuri?.classList.remove('esitys-pimea', 'esitys-avaruus', 'esitys-musta');
     peite.classList.add('pois');
     if (reduced) peite.remove();
     else setTimeout(() => peite.remove(), VALOJEN_MS);
@@ -1974,7 +2000,7 @@ export function luoEsitys({ ajo }) {
     tekstirivi.classList.remove('esilla');
     // Esinerivi ja ohjaimet takaisin pelaajalle ennen koukkua: kartta
     // on nyt hänen.
-    ajo.juuri?.classList.remove('esitys-kaynnissa');
+    ajo.juuri?.classList.remove('esitys-kaynnissa', 'esitys-musta');
     if (ajo.taukoNappi) {
       ajo.taukoNappi.textContent = 'Loppu';
       ajo.taukoNappi.disabled = true;
@@ -2184,7 +2210,7 @@ export function luoEsitys({ ajo }) {
       palautaKaukaisuus();
       peite.remove();
       tekstirivi.remove();
-      ajo.juuri?.classList.remove('esitys-pimea', 'esitys-avaruus', 'esitys-kaynnissa');
+      ajo.juuri?.classList.remove('esitys-pimea', 'esitys-avaruus', 'esitys-kaynnissa', 'esitys-musta');
     },
     /** Mittarit savukkeelle ja testeille. */
     tila: () => ({
@@ -2197,6 +2223,8 @@ export function luoEsitys({ ajo }) {
       tauolla: tila.tauolla,
       paattynyt: tila.paattynyt,
       pimea: Boolean(ajo.juuri?.classList.contains('esitys-pimea')),
+      // Yläpalkki piilossa mustan ajan (avaruusavaus → nostaMusta).
+      palkkiPiilossa: Boolean(ajo.juuri?.classList.contains('esitys-musta')),
       kuvia: tila.kuviaNaytetty,
       /*
        * ESILLÄ, EI VAIN LIITETTY. Kehys syntyy nollakoossa

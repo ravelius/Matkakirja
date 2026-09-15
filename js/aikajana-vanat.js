@@ -151,6 +151,34 @@ export const VANAN_ENNAKKO = 0.04;
 export const VANAN_ENNAKKO_MAX_AST = 10;
 /** Reduced motion: värit ja kasvu päivittyvät puolen sekunnin askelin. */
 export const VANAN_ASKEL_MS = 500;
+/*
+ * PITOTILAN VARA RINTAMAN KÄRJESSÄ — osuus rintaman leveydestä.
+ *
+ * OMISTAJA 15.9.2026 klo 12.00 (työpöytäkuva 248 000 v. sitten,
+ * sanatarkasti: *"Kun ihmisjana etenee, niin sen etuosa, joka on
+ * puolipallon muotoinen, välkkyy koko ajan."*).
+ *
+ * JUURISYY. Kasvava kärki on TÄSMÄLLEEN siinä kohdassa janaa, johon
+ * kello on ehtinyt: varjostin katkaisee janan osuudella
+ * f = (kuljettu − ma) / (mb − ma) ja laskee kärjen saapumisajan samalla
+ * osuudella, aika = mix(aika_a, aika_b, f). Reaaliluvuilla se on tasan
+ * `nyt` — eli pitotilan ehto `nyt > aika` on nollan molemmin puolin.
+ * Varjostin laskee float32:lla, joten pyöristys heittää eron milloin
+ * plussalle milloin miinukselle KEHYKSESTÄ TOISEEN, ja pyöreä kärki
+ * (koko kupu käyttää samaa t = 1 → f) vaihtaa väriä rintaman
+ * kirkkaasta (#FFB347) vanhan väestön tummaan (#D9731E) ja takaisin.
+ * Juuri se on omistajan näkemä välkyntä: se ei ole kahden kerroksen
+ * päällekkäisyyttä eikä gradientin sädettä vaan pitotilan ehdon
+ * osuminen kärjen omaan pyöristysrajaan.
+ *
+ * KORJAUS. Pito nollaa värin vasta kun kärki on SELVÄSTI kellon
+ * edellä — yli tämän osuuden rintaman leveydestä (300 ka:n kohdalla
+ * 30 000 × 0,02 = 600 vuotta, alle sekunnin kelloa). Pyöristysvirhe on
+ * luokkaa sadasosavuosi, joten ehto ei enää heilu, mutta aikahypyn
+ * jälkeen pidetty vana (kymmeniätuhansia vuosia kellon edellä) on yhä
+ * vanhaa väestöä niin kuin PITOTILA vaatii.
+ */
+export const KAISTAN_PITO_VARA = 0.02;
 /** Kotipesän renkaan kärkien määrä. */
 export const KOTIPESAN_KARKIA = 24;
 /** Kotipesän renkaan leveys css-pikseleinä. */
@@ -228,8 +256,13 @@ export function karjenPaino(aika, nyt, rintama, { pito = false } = {}) {
    * kärkiä, joiden aika EI ole vielä tullut (aika < nyt). Ilman tätä
    * ehtoa kaava antaisi niille painon yli yhden — koko vana leimahtaisi
    * rintaman väriin. Pidetty osa on vanhaa väestöä, ei rintamaa.
+   *
+   * VARA KÄRJESSÄ (KAISTAN_PITO_VARA, omistaja 15.9.2026 "etuosa …
+   * välkkyy koko ajan"): kasvavassa kärjessä aika on tasan `nyt`, ja
+   * ilman varaa ehto kääntyisi pyöristyksestä. Pito puree vasta, kun
+   * kärki on yli varan verran kellon edellä.
    */
-  if (pito && nyt > aika) return 0;
+  if (pito && nyt - aika > rintama * KAISTAN_PITO_VARA) return 0;
   return Math.max(0, Math.min(1, 1 - (aika - nyt) / rintama));
 }
 
@@ -630,7 +663,13 @@ void main() {
 
   /* Kärkiväri: sama kaava kuin karjenPaino (rintama kymmenesosa kellosta). */
   float paino = uRintama > 0.0 ? clamp(1.0 - (aika - uNyt) / uRintama, 0.0, 1.0) : 0.0;
-  if (uPito > 0.5 && uNyt > aika) paino = 0.0;
+  /*
+   * PITO EI SAA OSUA KÄRJEN OMAAN PYÖRISTYSRAJAAN (ks. KAISTAN_PITO_VARA):
+   * kasvavassa kärjessä aika ≈ uNyt reaaliluvuilla, ja ilman varaa ehto
+   * kääntyi float32:n pyöristyksestä kehyksestä toiseen — koko pyöreä
+   * kupu välkkyi rintaman ja vanhan värin väliä.
+   */
+  if (uPito > 0.5 && uNyt - aika > uRintama * PITO_VARA) paino = 0.0;
   int v0 = int(vMeta.x + 0.5);
   int v1 = int(vMeta.y + 0.5);
   vec3 vanha = mix(uVanha[v0], uVanha[v1], t2);
@@ -867,7 +906,11 @@ export function luoVanat({
       uniforms: uniformit,
       vertexShader: KARKIVARJOSTIN,
       fragmentShader: FRAGMENTTIVARJOSTIN,
-      defines: { VANOJA: KAISTAN_VANOJA_MAX, VIRTOJA: KAISTAN_VIRTOJA_MAX },
+      defines: {
+        VANOJA: KAISTAN_VANOJA_MAX,
+        VIRTOJA: KAISTAN_VIRTOJA_MAX,
+        PITO_VARA: KAISTAN_PITO_VARA.toFixed(4),
+      },
       transparent: true,
       depthTest: true,
       depthWrite: true,
