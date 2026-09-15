@@ -948,6 +948,72 @@ export function tasoituksenUlkopuolella({
   return !(x1 > x0) || !(y1 > y0);
 }
 
+/**
+ * MAAILMANÄKYMÄN VÄRILAATTA: kuva vain kohdemaan renkaiden sisään,
+ * kermaa ei lainkaan (Raamattu: KARTTAUUDISTUKSEN PAATOKSET 23).
+ *
+ * Laatan kankaalle on tässä vaiheessa jo piirretty pohjalaatta, eli
+ * koko maailman topografia varjostuksineen. Värilaatan kuva leikataan
+ * kohdemaan renkaisiin (`tasoitus.renkaat`, js/laattapyramidi.js) ja
+ * piirretään niiden sisään sellaisenaan: kohdemaassa pikseli on sama
+ * kuin kerman kanssa, sen ulkopuolella jää näkyviin pohja, eikä laatan
+ * kankaaseen poltettu kerma (polttaVariLeikkuri) päädy ruudulle
+ * ollenkaan.
+ *
+ * KOKONAAN RENKAIDEN ULKOPUOLINEN LAATTA EI PIIRRÄ MITÄÄN eikä avaa
+ * leikkuria: se on valtaosa laatoista, ja jokainen niistä olisi muuten
+ * turha `clip` + `drawImage` koko kankaan yli.
+ *
+ * SAUMAN MONISTUSTA EI TEHDÄ: värilaatasto on aina kohdemaan laatikon
+ * alalla, eikä yhdenkään kohdemaan laatikko ylitä päivämääränrajaa.
+ *
+ * @returns {boolean} piirrettiinkö kuvaa
+ */
+export function maalaaMaailmanVari(ctx, {
+  tasoitus, kartta, ppu, arkki, kuva = null,
+}) {
+  if (!ctx || !kuva || !arkki || !(ppu > 0)) return false;
+  const renkaat = tasoitus?.renkaat;
+  if (!renkaat?.length) return false;
+  if (!(kartta?.leveys > 0) || !(kartta.korkeus > 0)) return false;
+  const W = kartta.leveys;
+  const H = kartta.korkeus;
+  const kx = (bx) => (bx - arkki.x) * ppu - kartta.kansX0;
+  const ky = (by) => (by - arkki.y) * ppu - kartta.kansY0;
+  let osui = false;
+  ctx.save();
+  ctx.beginPath();
+  for (const rengas of renkaat) {
+    if (!rengas || rengas.length < 3) continue;
+    let minX = Infinity;
+    let maxX = -Infinity;
+    let minY = Infinity;
+    let maxY = -Infinity;
+    for (const piste of rengas) {
+      const x = kx(piste[0]);
+      const y = ky(piste[1]);
+      if (x < minX) minX = x;
+      if (x > maxX) maxX = x;
+      if (y < minY) minY = y;
+      if (y > maxY) maxY = y;
+    }
+    if (maxX < 0 || minX > W || maxY < 0 || minY > H) continue;
+    osui = true;
+    for (let i = 0; i < rengas.length; i += 1) {
+      const x = kx(rengas[i][0]);
+      const y = ky(rengas[i][1]);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+  }
+  if (!osui) { ctx.restore(); return false; }
+  ctx.clip();
+  ctx.drawImage(kuva, 0, 0, W, H);
+  ctx.restore();
+  return true;
+}
+
 export function maalaaTasoitus(ctx, {
   tasoitus, kartta, ppu, arkki, kuva = null,
 }) {
@@ -1471,6 +1537,20 @@ export function luoLaattakerros({
          * täältä. Lipulla merkitty laatta puretaan lukon auetessa, jotta
          * kerma palaa entiselleen (lukitseKertomus).
          */
+        /*
+         * MAAILMANÄKYMÄSSÄ EI KERMAA (omistaja 15.9.2026, Raamattu:
+         * KARTTAUUDISTUKSEN PAATOKSET 23). Kuva leikataan kohdemaan
+         * renkaisiin ja muualle jää pohjan topografia; ilman renkaita
+         * (aineisto vielä haussa) värilaatta jätetään kokonaan pois,
+         * jolloin kartta on se pohjakartta, joka se muutenkin on.
+         */
+        if (tasoitus.maailma) {
+          maalaaMaailmanVari(ctx, {
+            tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki, kuva,
+          });
+          kuva?.close?.();
+          continue;
+        }
         const tyhjaKerma = kertomuslukko && tasoituksenUlkopuolella({
           tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki,
         });
