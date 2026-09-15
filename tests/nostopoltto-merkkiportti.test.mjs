@@ -31,7 +31,9 @@ import { packById } from '../js/pack.js';
 import { FOKUS_POHJAT } from '../js/packs/fokus-grc.js';
 import { keraaNostot } from '../tools/fokuskartta/nostot.mjs';
 import { maanKohdemerkit } from '../js/fokuskohteet.js';
-import { PAAKARTAN_MERKKIKATTO, merkkiPortti } from '../js/pallolauta/nostot.js';
+import {
+  KAUPUNKIMERKIN_KERROIN, PAAKARTAN_MERKKIKATTO, merkinKerroin, merkkiPortti,
+} from '../js/pallolauta/nostot.js';
 
 const pack = packById('maailmankartta');
 const { merkit, luettelo, tilasto } = keraaNostot(pack);
@@ -159,6 +161,58 @@ test('lähizoomin kohde (lahi: true) ei pala koskaan', () => {
   assert.ok(lahiMerkkeja >= 35,
     `aidossa aineistossa on ${lahiMerkkeja} lahi-merkkiä (odotettu ≥ 35) — `
     + 'jos luku on 0, silmukka on taas tyhjä väite');
+});
+
+test('kohdemaassa katto ei pidätä mitään — muualla pidättää', () => {
+  /*
+   * KATTO EI KOSKE KOHDEMAATA (omistaja 15.9.2026, Raamattu
+   * KARTTAUUDISTUKSEN PAATOKSET 25: *"Kohdemaalle ei kattoa"*).
+   * Elävä kerros antaa portille `kohdemaa: true`, koska se kerää
+   * merkit vain korostetusta maasta; polttoketju ja savukkeet
+   * kysyvät samaa porttia ilman lippua ja saavat katon entisellään.
+   *
+   * VÄITE MITATAAN AIDOLLA AINEISTOLLA JA VASTAKOKEELLA: Ranska on
+   * ainoa maa, jossa merkkejä on yli katon kaksinkertaisesti (62),
+   * joten juuri siinä ero näkyy — ilman lippua läpi menee katollinen
+   * ja lipun kanssa kaikki.
+   */
+  const koe = [
+    { id: 'a', kohde: { tyyppi: 'kaupunki' } },
+    { id: 'b', kohde: { lahi: true } },
+    { id: 'c', kohde: {} },
+  ];
+  assert.deepEqual(
+    merkkiPortti(koe, false, (m) => m.kohde, { kohdemaa: true }).merkit.map((m) => m.id),
+    ['a', 'b', 'c'], 'kohdemaassa myös lahi-merkki piirtyy saapumisnäkymässä');
+
+  const elavat = maanKohdemerkit(pack, 'FRA', FOKUS_POHJAT.FRA, () => false);
+  const kohdemaa = merkkiPortti(elavat, false, (m) => m.kohde ?? null, { kohdemaa: true });
+  const muu = merkkiPortti(elavat, false, (m) => m.kohde ?? null);
+  assert.ok(elavat.length >= 62, `FRA merkkejä ${elavat.length} (odotettu ≥ 62)`);
+  assert.equal(kohdemaa.merkit.length, elavat.length,
+    `kohdemaassa piirtyy ${kohdemaa.merkit.length} / ${elavat.length}`);
+  assert.equal(kohdemaa.piiloon.length, 0);
+  // VASTAKOE: sama aineisto ilman lippua jää katon alle — jos tämä
+  // menisi myös läpi, ylempi väite ei mittaisi mitään.
+  assert.ok(muu.piiloon.length > 0, 'ilman lippua mitään ei jäänyt piiloon');
+  assert.ok(muu.merkit.length - muu.polttovelka.length <= PAAKARTAN_MERKKIKATTO,
+    `ilman lippua läpi ${muu.merkit.length - muu.polttovelka.length}`);
+});
+
+test('kaupunkimerkin nimiö on isompi kuin noston — ja vain elävänä', () => {
+  /*
+   * PAATOKSET 25 kohta 2 (*"Isommaksi, n. 11-12 px"*). Kerroin on
+   * merkin mitta, koska nimiö ja symboli ovat samassa rasterissa
+   * (js/pallolauta/nostot.js KAUPUNKIMERKIN NIMIÖ ON ISOMPI KUIN
+   * NOSTON). Poltettu kaupunkimerkki EI kasva: laatassa oleva muste
+   * on 8,5 px:n nimiöllä, eikä osumapinta saa irrota musteesta.
+   */
+  const koko = KAUPUNKIMERKIN_KERROIN * 8.5;
+  assert.ok(koko >= 11 && koko <= 12, `lisäkaupungin nimiö ${koko} px`);
+  assert.equal(merkinKerroin({ kaupunki: true }), KAUPUNKIMERKIN_KERROIN);
+  assert.equal(merkinKerroin({ kaupunki: true, poltettu: true }), 1);
+  assert.equal(merkinKerroin({}), 1);
+  assert.equal(merkinKerroin(null), 1);
 });
 
 test('portti ei siirrä ladontaa: poltetun merkin tiiviste on luettelossa', () => {
