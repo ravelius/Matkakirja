@@ -2697,6 +2697,17 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
  * kuvateksti ja pulun pakka jäävät terävinä hunnun päälle, ja vain
  * kartta pehmenee niiden takana.
  *
+ * HUNTU PYSYY KARTTARUUDUSSA (korjaus 15.9.2026, omistajan
+ * iPhone-vikailmoitus: huntu sumensi myös isoisän ISON luentakuvan).
+ * Nämä z-luvut pitävät vain, jos `.map-pane` on OMA PINONSA. Ennen se
+ * ei ollut (position: relative, z-index: auto), joten huntu karkasi
+ * `.app`-pinoon ja ohitti siellä ison luentapäällyksen
+ * (`.fokusvirta-isokuva`, z-index 3) — 4 > 3, eli huntu maalautui
+ * kuvan päälle. Eristys tehdään css/styles.css `.map-pane`
+ * (`isolation: isolate`); siellä on mittaukset ja koko perustelu.
+ * Vartio: tools/savukkeet/savuke-luentakuvan-kerros.mjs, kohta
+ * "ISO LUENTAKUVA EI SUMENE HUNNUN ALLA".
+ *
  * MIKSI ::after EIKÄ OMA SOLMU. css/styles.css sammuttaa kartan
  * jälkielementin (`.map-pane::after { content: none; }`), joten se on
  * vapaana — eikä js:ään tarvitse lisätä yhtään uutta solmua, jonka
