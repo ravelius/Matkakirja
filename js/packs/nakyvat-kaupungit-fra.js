@@ -41,11 +41,19 @@
  * lohkoa, samassa lehden kehyksessä kuin tiivis kaupunkietusivu
  * (js/kaupunkinosto.js latoLisakaupunginKortti):
  *
- *   1. `herokuva` — kuvaputken toimittama hero. TOISTAISEKSI `null`,
- *      jolloin kortti piirtää oman paikkamerkkinsä (kartan seepiaruutu
- *      ja kaupungin nimi) EIKÄ HAE ULKOISTA KUVAA. Kun putki toimittaa
- *      kuvan, vaihto on tämä yksi rivi: `herokuva: '…media.matkakirja
- *      .app/…'`.
+ *   1. `herokuva` — kuvaputken toimittama hero. Kuvaputki toimitti
+ *      seitsemän Commons-alkuperäistä 14.9.2026 (manifesti
+ *      posti/kuvatoimitus-ranska7-20260914.json), ja jokainen rivi
+ *      osoittaa nyt omaan kuvaansa: `osoite`, `lyhyt` (kortin
+ *      kuvateksti), `selite` (pitkä), `tekija`, `ajoitus`, `lahde`,
+ *      `lahdeUrl`, `lisenssi` ja `lisenssiUrl`. KENTÄT OVAT
+ *      MANIFESTISTA SANASTA SANAAN, eikä yhtäkään kuvaa esitetä
+ *      vuoden 1873 tai isoisän ottamana — ajoitus lukee kortissa.
+ *      Kuva sovitetaan CONTAIN-tavalla (alkuperäiset kuvasuhteet
+ *      1,34–1,56:1), ei rajata. Tyhjä kenttä (`null`) on yhä
+ *      kelvollinen: silloin kortti piirtää oman paikkamerkkinsä
+ *      (kartan seepiaruutu ja kaupungin nimi) EIKÄ HAE ULKOISTA
+ *      KUVAA.
  *   2. `esittely` — 2–3 lauseen esittely. **Fable hyväksyi kaikki
  *      seitsemän sellaisinaan 14.9.2026 klo 21.25 UTC**, ja ne ovat
  *      tässä sanasta sanaan siinä muodossa, jossa ne olivat
@@ -103,6 +111,17 @@ import { MAALEHTINOSTOT_FRA } from './maalehtinostot-fra.js';
  */
 const nosto = (id) => MAALEHTINOSTOT_FRA.find((n) => n.id === id) ?? null;
 
+/*
+ * HEROKUVIEN MEDIAJUURI. Kuvat ovat kuvaputken 14.9.2026 toimittamia
+ * Commons-alkuperaisia (manifesti posti/kuvatoimitus-ranska7-20260914
+ * .json, SHA256 045ea28e…): kuusi photochrom-vedosta ja yksi
+ * postikortti, kaikki 1890-luvulta tai sen tienoilta. Jokaisen rivin
+ * `ajoitus`, `tekija` ja `lahde` ovat manifestista sanasta sanaan,
+ * eika yhtakaan kuvaa esiteta vuoden 1873 tai isoisan ottamana.
+ */
+const RANSKAN_HEROT = 'https://media.matkakirja.app/matkakirja/'
+  + 'kaupunkilehdet/ranska/';
+
 /** Ranskan kartalle tuodut ei-pelattavat kaupungit. */
 export const NAKYVAT_KAUPUNGIT_FRA = [
   {
@@ -110,7 +129,21 @@ export const NAKYVAT_KAUPUNGIT_FRA = [
     nimi: 'Lyon',
     tyyppi: 'kaupunki',
     kaupunkikortti: true,
-    herokuva: null,
+    herokuva: {
+      osoite: `${RANSKAN_HEROT}hero-lyon-historiallinen-r20260914-v1.jpg`,
+      lyhyt: 'Lyonin kaupungintalo kohoaa Place des Terreaux’n laidalla.',
+      selite: 'Hevosvaunut ja jalankulkijat liikkuvat Lyonin Place des '
+        + 'Terreaux’lla. Photochrom-vedos on ajoitettu vuosien 1890–1905 '
+        + 'välille.',
+      tekija: 'Unknown author',
+      ajoitus: 'between 1890 and 1905',
+      lahde: 'Place des Terreaux, Lyons, France, unknown author, 1890-1905, '
+        + 'Library of Congress Prints and Photographs Division '
+        + '(ppmsc.05083), via Wikimedia Commons. Public domain.',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lyon_placeterreaux_congres.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    },
     esittely: 'Vuonna 1873 Fourvièren kukkulalla seisoi '
       + 'rakennustelineitä: basilikan muuraus oli alkanut '
       + 'edellisvuonna ja jatkui 1884 asti. Alarinteillä kalisivat '
@@ -142,7 +175,21 @@ export const NAKYVAT_KAUPUNGIT_FRA = [
     nimi: 'Bordeaux',
     tyyppi: 'kaupunki',
     kaupunkikortti: true,
-    herokuva: null,
+    herokuva: {
+      osoite: `${RANSKAN_HEROT}hero-bordeaux-historiallinen-r20260914-v1.jpg`,
+      lyhyt: 'Bordeaux’n katedraali ja Pey-Berlandin torni hallitsevat aukiota.',
+      selite: 'Kivetty aukio avautuu Saint-Andrén katedraalin ja erillisen '
+        + 'Pey-Berlandin tornin edessä. Photochrom-vedos on ajoitettu '
+        + 'vuoteen 1890.',
+      tekija: 'Unknown photographer',
+      ajoitus: '1890',
+      lahde: 'Bordeaux. Place Pey-Berland et Cathedrale, unknown photographer, '
+        + 'published by Photoglob Co., 1890, Library of Congress (LCCN '
+        + '2017659772 / ppmsca.52461), via Wikimedia Commons. Public domain.',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bordeaux._Place_Pey_-_Berland_et_Cath%C3%A9drale_LCCN2017659772.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/File:Bordeaux._Place_Pey_-_Berland_et_Cath%C3%A9drale_LCCN2017659772.jpg#Licensing',
+    },
     esittely: 'Garonnen yli pääsi 1873 vain yhtä tietä: kivisiltaa, jonka '
       + 'seitsemäntoista kaarta valmistuivat 1822. Se jäi kaupungin '
       + 'ainoaksi ajosillaksi vuoteen 1965. Nykyään sen kupeessa '
@@ -168,7 +215,21 @@ export const NAKYVAT_KAUPUNGIT_FRA = [
     nimi: 'Lille',
     tyyppi: 'kaupunki',
     kaupunkikortti: true,
-    herokuva: null,
+    herokuva: {
+      osoite: `${RANSKAN_HEROT}hero-lille-historiallinen-r20260914-v1.jpg`,
+      lyhyt: 'Lillen Grande Placella kohtaavat raitiovaunut ja hevoskärryt.',
+      selite: 'Jumalattaren pylväs kohoaa Grande Placen keskellä liikenteen ja '
+        + 'jalankulkijoiden yllä. Léon & Lévyn postikorttikuva on ajalta '
+        + 'ennen ensimmäistä maailmansotaa.',
+      tekija: 'Unknown photographer',
+      ajoitus: 'before World War I; surviving card postmarked 7 July 1925',
+      lahde: 'Lille, La Grande Place, unknown photographer, published by Leon & '
+        + 'Levy (LL), before World War I; postcard via Wikimedia Commons. '
+        + 'Public domain in France and the United States.',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lille_La_Grande_Place_LL_postcard.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/File:Lille_La_Grande_Place_LL_postcard.jpg#Licensing',
+    },
     esittely: 'Lille oli 1873 puuvillan kaupunki: kivihiili ja '
       + 'höyrykoneet pitivät kutomot käynnissä, ja Vaubanin '
       + 'linnoitus oli vartioinut niitä jo vuodesta 1670. Nykyään '
@@ -192,7 +253,20 @@ export const NAKYVAT_KAUPUNGIT_FRA = [
     nimi: 'Strasbourg',
     tyyppi: 'kaupunki',
     kaupunkikortti: true,
-    herokuva: null,
+    herokuva: {
+      osoite: `${RANSKAN_HEROT}hero-strasbourg-historiallinen-r20260914-v1.jpg`,
+      lyhyt: 'Strasbourgin kattojen yllä kohoaa katedraalin torni.',
+      selite: 'Kaupungin katot levittäytyvät katedraalin ja Saint-Thomasin '
+        + 'kirkon ympärille. Photochrom-vedos on ajoitettu vuosien '
+        + '1890–1905 välille.',
+      tekija: 'Tuntematon kuvaaja; Photoglob/Detroit-photochrom-kokoelma',
+      ajoitus: '1890–1905',
+      lahde: 'Tuntematon kuvaaja; Photoglob/Detroit-photochrom-kokoelma / '
+        + 'Library of Congress / Wikimedia Commons, Public domain',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stra%C3%9Fburg_(1890-1900).jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    },
     esittely: 'Vuonna 1873 Strasbourg ei ollut Ranskaa: kaupunki oli '
       + 'liitetty Saksaan 1871, ja tuomiokirkon katto oli palanut '
       + 'piirityksessä. Sen 142-metrinen torni oli yhä maailman '
@@ -223,7 +297,19 @@ export const NAKYVAT_KAUPUNGIT_FRA = [
     nimi: 'Nizza',
     tyyppi: 'kaupunki',
     kaupunkikortti: true,
-    herokuva: null,
+    herokuva: {
+      osoite: `${RANSKAN_HEROT}hero-nizza-historiallinen-r20260914-v1.jpg`,
+      lyhyt: 'Nizzan Cours Saleyan torilla käy kuhina.',
+      selite: 'Torikojujen varjot täyttävät Cours Saleyan rakennusten välissä. '
+        + 'Photochrom-vedos on ajoitettu vuosien 1890–1905 välille.',
+      tekija: 'Tuntematon kuvaaja; Photoglob/Detroit-photochrom-kokoelma',
+      ajoitus: '1890–1905',
+      lahde: 'Tuntematon kuvaaja; Photoglob/Detroit-photochrom-kokoelma / '
+        + 'Library of Congress / Wikimedia Commons, Public domain',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cours_Saleya_-_Nice.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    },
     esittely: 'Nizza oli ollut Ranskaa vasta kolmetoista vuotta, kun '
       + 'isoisä kulki ohi 1873. Rantabulevardin olivat kustantaneet '
       + 'englantilaiset talvivieraat 1820-luvulta alkaen, ja '
@@ -251,7 +337,20 @@ export const NAKYVAT_KAUPUNGIT_FRA = [
     nimi: 'Toulouse',
     tyyppi: 'kaupunki',
     kaupunkikortti: true,
-    herokuva: null,
+    herokuva: {
+      osoite: `${RANSKAN_HEROT}hero-toulouse-historiallinen-r20260914-v1.jpg`,
+      lyhyt: 'Hevosvaunut odottavat Toulousen Place du Capitolella.',
+      selite: 'Aukiolla kulkevat hevosvaunut ja jalankulkijat Capitolen '
+        + 'edustalla. Photochrom-vedos on ajoitettu vuosien 1890–1905 '
+        + 'välille.',
+      tekija: 'Tuntematon kuvaaja; Photoglob/Detroit-photochrom-kokoelma',
+      ajoitus: '1890–1905',
+      lahde: 'Tuntematon kuvaaja; Photoglob/Detroit-photochrom-kokoelma / '
+        + 'Library of Congress / Wikimedia Commons, Public domain',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Capitol_Place,_Toulouse,_France,_ca._1895.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    },
     esittely: 'Toulousen tiilet ovat vaaleanpunaisia, ja siitä tuli nimi '
       + 'Ville rose. Vuonna 1873 kaupungin läpi kulki jo Canal du '
       + 'Midi, 1681 valmistunut vesitie Välimerelle. Nykyään täällä '
@@ -275,7 +374,24 @@ export const NAKYVAT_KAUPUNGIT_FRA = [
     nimi: 'Nantes',
     tyyppi: 'kaupunki',
     kaupunkikortti: true,
-    herokuva: null,
+    herokuva: {
+      osoite: `${RANSKAN_HEROT}hero-nantes-historiallinen-r20260914-v1.jpg`,
+      lyhyt: 'Veneet lepäävät Nantesin vanhassa Loire-satamassa.',
+      selite: 'Quai de la Fossen rantatalot ja veneet reunustavat Loirea '
+        + 'Nantesissa. Photochrom-vedos on ajoitettu 1890-luvulle.',
+      tekija: 'Commons states that the underlying Swiss photochrom\'s author is '
+        + 'unknown; Detroit Publishing Co. is credited under license from '
+        + 'Photoglob Zurich; digital restoration by trialsanderrors',
+      ajoitus: '1890–1900',
+      lahde: 'La greve, Nantes, France, ca. 1897; underlying photochrom author '
+        + 'unknown as documented by Wikimedia Commons; Detroit Publishing '
+        + 'Co. under license from Photoglob Zurich; Library of Congress '
+        + 'ppmsc.05143; digital restoration by trialsanderrors. Public '
+        + 'domain in Switzerland and the United States.',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:La_gr%C3%A8ve,_Nantes,_France,_ca._1897.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/File:La_gr%C3%A8ve,_Nantes,_France,_ca._1897.jpg#Licensing',
+    },
     esittely: 'Nantesissa syntyi 1828 Jules Verne, jonka Maailman ympäri '
       + '80 päivässä ilmestyi lehdessä 1872 — vuotta ennen isoisän '
       + 'matkaa. Loiren rannassa kolisivat telakat. Nykyään samalla '

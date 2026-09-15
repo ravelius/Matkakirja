@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1905, teksti: 'Tarina14-kuvat, Ranskan herokuvat ja Raamattu 18' },
   { v: 1904, teksti: 'Puhelimen maapaneelin ankkuri Lyoninlahdelle' },
   { v: 1903, teksti: 'Maapaneeli saapumisnäkymän mukaan joka laitteella' },
   { v: 1902, teksti: 'Raamattu: karttauudistuksen päätökset 15–17 ja äänipäätökset' },

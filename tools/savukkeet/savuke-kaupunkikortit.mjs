@@ -20,8 +20,18 @@
  *   1. LYONIN NAPAUTUS AVAA KAUPUNKIKORTIN lehden kehyksessä
  *      (.kaupunkipopup.kaupunkipopup-lisakaupunki), ja kortti on
  *      karttaruudun sisällä. Otsikko on kaupungin nimi.
- *   2. KUVAN PAIKKAMERKKI NÄKYY eikä kortti hae yhtään ulkoista kuvaa
- *      (.kaupunkipopup-heropaikka näkyvissä, kortissa 0 <img>).
+ *   2. HEROKUVA LATAUTUU JA KREDITTI NÄKYY. Kuvaputki toimitti
+ *      seitsemän Commons-alkuperäistä 14.9.2026 (manifesti
+ *      posti/kuvatoimitus-ranska7-20260914.json), ja jokaisen
+ *      seitsemän kortin kuva on kytketty: <img> on kortissa,
+ *      naturalWidth > 0 (kuva todella dekoodautui), lähderivi
+ *      (.lehti-kuvalahde) on näkyvissä ja sen teksti on datan oma
+ *      merkilleen, eikä kuvateksti väitä vuotta 1873.
+ *   2b. KUVAA EI RAJATA: piirtoalan kuvasuhde on kuvan oman
+ *      luonnollisen suhteen sisällä ±2 % (contain, toimituksen ehto).
+ *   2c. VASTAKOE: kun `herokuva` nollataan ajon ajaksi, kortti piirtää
+ *      paikkamerkin (.kaupunkipopup-heropaikka) eikä hae yhtään
+ *      ulkoista kuvaa — paikkamerkki jää tyhjän kentän varaksi.
  *   3. NOSTOLOHKO ON DATAN OMA TEKSTI MERKILLEEN: otsikko ja leipä
  *      ovat js/packs/maalehtinostot-fra.js:n `maalehti-cinematographe`
  *      sanasta sanaan, nostokortin omilla luokilla.
@@ -100,6 +110,33 @@ const vaadi = (nimi, ehto, lisa = '') => {
 };
 const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
 
+/*
+ * VARTIOT 2, 2a ja 2b YHDESSÄ PAIKASSA, koska sama mitta ajetaan sekä
+ * napautetuille korteille (Lyon, Lille) että koko seitsikon
+ * läpikäynnille. `hero` on lueKortin lukema DOM-mitta, `kohde` pakan
+ * rivi — kaikki odotukset tulevat siis datasta, eivät tästä
+ * tiedostosta.
+ */
+const tarkastaHero = (tunnus, kohde, hero) => {
+  const odote = kohde.herokuva ?? null;
+  vaadi(`${tunnus}: 2. herokuva on kortissa ja latautui`,
+    Boolean(hero) && hero.ladattu && hero.osoite === odote?.osoite,
+    `hero ${JSON.stringify(hero && { osoite: hero.osoite, ladattu: hero.ladattu })}`);
+  if (!hero) return;
+  vaadi(`${tunnus}: 2a. kuvateksti ja lähderivi ovat datan omat merkilleen`,
+    hero.kuvateksti === `${odote.lyhyt}${odote.lahde}`
+    && hero.lahdeTeksti === odote.lahde && hero.lahdeNakyy,
+    `kortissa "${hero.kuvateksti}"`);
+  vaadi(`${tunnus}: 2a2. kuvateksti ei väitä vuotta 1873`,
+    !`${hero.kuvateksti}`.includes('1873'), hero.kuvateksti);
+  const suhde = hero.luonnollinen > 0 ? hero.piirretty / hero.luonnollinen : 0;
+  tieto(`${tunnus} kuvasuhde`,
+    `luonnollinen ${hero.luonnollinen.toFixed(3)}, piirretty `
+    + `${hero.piirretty.toFixed(3)} (${hero.leveys}×${hero.korkeus} px)`);
+  vaadi(`${tunnus}: 2b. kuvaa ei rajata — piirtosuhde ±2 % luonnollisesta`,
+    Math.abs(suhde - 1) <= 0.02, `poikkeama ${((suhde - 1) * 100).toFixed(2)} %`);
+};
+
 const AMPARI = 'https://media.matkakirja.app/';
 const valimuisti = new Map();
 async function ampariHaku(url) {
@@ -129,6 +166,27 @@ vaadi('7. yksikään lisäkaupunki ei ole laudan matkakohde',
 /* ---------------- selainvartiot ---------------- */
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 
+/*
+ * KUVA MITATAAN VASTA KUN SE ON DEKOODATTU. `loading="lazy"` ja ämpärin
+ * välitys tarkoittavat, että kortti on DOMissa ennen kuin kuva on
+ * ladattu; mitattu 15.9.2026 (1400 × 900: naturalWidth 0 ja piirtoala
+ * 928 × 6 px heti napautuksen jälkeen). Raja on väljä (40 s), koska
+ * toimitetut vedokset ovat 0,4–4,5 Mt ja kulkevat ämpärin kautta:
+ * mitattu 15.9.2026, että Toulouse (3,0 Mt) ei ehtinyt 15 sekunnissa
+ * puhelinruudulla. Odotin ei piilota vikaa — lataamaton kuva jää yhä
+ * `ladattu: false`ksi ja kaataa vartion 2.
+ */
+const odotaHero = (sivu) => sivu.evaluate(async () => {
+  const kuva = () => document.querySelector('.kaupunkipopup-lisakaupunki .lehti-kuva img');
+  if (!kuva()) return false;
+  for (let i = 0; i < 160; i += 1) {
+    const el = kuva();
+    if (el?.complete && el.naturalWidth > 0) return true;
+    await new Promise((v) => setTimeout(v, 250));
+  }
+  return false;
+});
+
 /** Yhden kortin mitat DOMista. */
 const lueKortti = (sivu) => sivu.evaluate(() => {
   const p = document.querySelector('.kaupunkipopup-lisakaupunki');
@@ -142,6 +200,24 @@ const lueKortti = (sivu) => sivu.evaluate(() => {
     paikkamerkki: nakyy(paikka),
     paikkamerkinTeksti: paikka?.textContent ?? '',
     kuvia: p.querySelectorAll('img').length,
+    hero: (() => {
+      const k = p.querySelector('.lehti-paakuva .lehti-kuva img');
+      if (!k) return null;
+      const r = k.getBoundingClientRect();
+      const lahde = p.querySelector('.lehti-kuvalahde');
+      return {
+        osoite: k.currentSrc || k.src,
+        ladattu: k.complete && k.naturalWidth > 0,
+        luonnollinen: k.naturalWidth / Math.max(1, k.naturalHeight),
+        piirretty: r.width / Math.max(1, r.height),
+        leveys: Math.round(r.width),
+        korkeus: Math.round(r.height),
+        alt: k.alt,
+        kuvateksti: p.querySelector('.lehti-kuva .kuvateksti')?.textContent ?? '',
+        lahdeTeksti: lahde?.textContent ?? '',
+        lahdeNakyy: Boolean(lahde) && lahde.getClientRects().length > 0,
+      };
+    })(),
     esittelyja: p.querySelectorAll('.arrival-intro').length,
     esittelyTeksti: p.querySelector('.arrival-intro')?.textContent ?? null,
     nostoOtsikko: p.querySelector('.fokusnosto-kortti-otsikko')?.textContent ?? null,
@@ -173,10 +249,31 @@ const piste = async (sivu, id) => {
       await new Promise((v) => setTimeout(v, 250));
       const o = l.nostot.osumat().find((x) => x.id === tunnus);
       if (!o) return null;
-      const s = l.pallo.getScreenCoords(o.lat, o.lng, 0);
+      /*
+       * KOHDE KÄÄNNETÄÄN RUUDUN KESKELLE ENNEN MITTAA. Mitattu
+       * 15.9.2026 (390 × 844): Lillen merkki osui pallon yläreunaan
+       * ruutupisteeseen (231, 122), jossa päällimmäisenä on pelin oma
+       * palkki (elementFromPoint → SPAN.typed) — sormi ei siis olisi
+       * osunut karttaan lainkaan, ja vartio 1 jäi punaiseksi ilman
+       * mitään vikaa kortissa. Keskitys ei laimenna vartiota: napautus
+       * on yhä aito sormi kankaalla siinä pisteessä, johon kaupunki
+       * projisoituu.
+       */
+      const pov = l.pallo.pointOfView();
+      l.pallo.pointOfView({ lat: o.lat, lng: o.lng, altitude: pov.altitude }, 0);
+      await new Promise((v) => setTimeout(v, 500));
+      l.ladoHeti();
+      await new Promise((v) => setTimeout(v, 250));
+      const uusi = l.nostot.osumat().find((x) => x.id === tunnus) ?? o;
+      const s = l.pallo.getScreenCoords(uusi.lat, uusi.lng, 0);
       if (!s) return null;
       const kr = l.pallo.renderer().domElement.getBoundingClientRect();
-      return { px: Math.round(s.x + kr.x), py: Math.round(s.y + kr.y) };
+      const px = Math.round(s.x + kr.x);
+      const py = Math.round(s.y + kr.y);
+      // Piste kelpaa vain jos sormi todella osuisi karttakankaaseen.
+      const alla = document.elementFromPoint(px, py);
+      if (!alla || alla.tagName !== 'CANVAS') return null;
+      return { px, py };
     }, id);
     if (p) return p;
     await sivu.waitForTimeout(400);
@@ -270,8 +367,29 @@ for (const ruutu of RUUDUT) {
       Boolean(p) && p.px > 0 && p.py > 0 && p.px < ruutu.width && p.py < ruutu.height,
       JSON.stringify(p));
     if (!p) continue;
-    await sivu.mouse.click(p.px, p.py);
-    await sivu.waitForTimeout(900);
+    /*
+     * NAPAUTUS UUSITAAN KERRAN. Merkki on pallon pinnalla ja kortti
+     * avautuu osumalistan kautta; mitattu 15.9.2026, että 390 px:n
+     * ruudulla yksi napautus meni kerran ohi (Lille). Uusinta ei
+     * piilota vikaa: jos kortti ei aukea kahdestikaan, vartio 1 on
+     * punainen.
+     */
+    for (let yritys = 0; yritys < 3; yritys += 1) {
+      /* eslint-disable no-await-in-loop */
+      // Piste mitataan joka yrityksellä uudestaan: pallo pyörii itsestään,
+      // ja edellisen kortin kuvan lataus vei sekunteja — vanha ruutupiste
+      // olisi silloin jo väärässä paikassa (mitattu 15.9.2026, 390 px Lille).
+      const kohta = yritys === 0 ? p : await piste(sivu, kohde.id);
+      if (kohta) await sivu.mouse.click(kohta.px, kohta.py);
+      await sivu.waitForTimeout(900);
+      const auki = await sivu.evaluate(
+        () => Boolean(document.querySelector('.kaupunkipopup-lisakaupunki')),
+      );
+      if (auki) break;
+      await sulje(sivu);
+      /* eslint-enable no-await-in-loop */
+    }
+    await odotaHero(sivu);
     const kortti = await lueKortti(sivu);
     vaadi(`${ruutu.nimi} ${kohde.nimi}: 1. napautus avaa kaupunkikortin lehden kehyksessä`,
       Boolean(kortti), virheet.join(' | '));
@@ -279,9 +397,7 @@ for (const ruutu of RUUDUT) {
     vaadi(`${ruutu.nimi} ${kohde.nimi}: 1b. otsikko on kaupungin nimi ja kortti on karttaruudussa`,
       kortti.otsikko === kohde.nimi && kortti.ruudulla,
       `"${kortti.otsikko}", ruudulla ${kortti.ruudulla}`);
-    vaadi(`${ruutu.nimi} ${kohde.nimi}: 2. kuvan paikkamerkki näkyy, ulkoisia kuvia 0`,
-      kortti.paikkamerkki && kortti.paikkamerkinTeksti === kohde.nimi && kortti.kuvia === 0,
-      `merkki ${kortti.paikkamerkki}, teksti "${kortti.paikkamerkinTeksti}", kuvia ${kortti.kuvia}`);
+    tarkastaHero(`${ruutu.nimi} ${kohde.nimi}`, kohde, kortti.hero);
     const esittelyOdote = jaaKappaleiksi(kohde.esittely ?? '').join('');
     tieto(`${ruutu.nimi} ${kohde.nimi} esittelyn pituus`, `${(kohde.esittely ?? '').length} merkkiä`);
     vaadi(`${ruutu.nimi} ${kohde.nimi}: 4. esittely on kortissa datan oma merkilleen`,
@@ -322,6 +438,34 @@ for (const ruutu of RUUDUT) {
     }
   }
 
+  /* --- 2. KOKO SEITSIKKO: jokaisen kortin kuva latautuu ja krediitti näkyy ---
+   *
+   * Napautus mitataan Lyonilla ja Lillellä yllä; tämä kierros avaa
+   * loputkin viisi samalla koodipolulla kuin napautus
+   * (js/fokuskohteet.js avaaFokuskohde) ja lukee kuvan DOMista vasta
+   * kun selain on dekoodannut sen. Kuvat tulevat oikeasta ämpäristä
+   * (route-välitys yllä), joten mitta koskee toimitettuja tiedostoja.
+   */
+  for (const kohde of NAKYVAT_KAUPUNGIT_FRA) {
+    await sulje(sivu);
+    /* eslint-disable no-await-in-loop */
+    const avautui = await sivu.evaluate(async (id) => {
+      const { KOHDE_MAAT, kohteidenNykyinenIso, avaaFokuskohde } = await import('/js/fokuskohteet.js');
+      const ui = window.matkakirja.ui;
+      const kohteet = KOHDE_MAAT[kohteidenNykyinenIso(ui)] ?? [];
+      const k = kohteet.find((x) => x.id === id);
+      if (!k) return false;
+      avaaFokuskohde(ui, k, {});
+      return true;
+    }, kohde.id);
+    await odotaHero(sivu);
+    vaadi(`${ruutu.nimi} ${kohde.nimi}: kortti aukesi kuvamittausta varten`, avautui);
+    if (!avautui) continue;
+    const kortti = await lueKortti(sivu);
+    tarkastaHero(`${ruutu.nimi} ${kohde.nimi}`, kohde, kortti?.hero ?? null);
+    /* eslint-enable no-await-in-loop */
+  }
+
   /* --- 4b ja 6. VASTAKOKEET: datakenttä pois ajon ajaksi --- */
   await sulje(sivu);
   /*
@@ -341,10 +485,13 @@ for (const ruutu of RUUDUT) {
     avaaFokuskohde(ui, kohde, {});
     await new Promise((v) => setTimeout(v, 500));
     const p = document.querySelector('.kaupunkipopup-lisakaupunki');
+    const paikka = p?.querySelector('.kaupunkipopup-heropaikka') ?? null;
     const tulos = {
       kortti: Boolean(p),
       nostolohkoja: p ? p.querySelectorAll('.fokusnosto-teksti').length : -1,
       esittelyja: p ? p.querySelectorAll('.arrival-intro').length : -1,
+      paikkamerkki: Boolean(paikka) && paikka.getClientRects().length > 0,
+      kuvia: p ? p.querySelectorAll('img').length : -1,
     };
     kohde[nimi] = talteen;
     return tulos;
@@ -353,6 +500,12 @@ for (const ruutu of RUUDUT) {
   const koeEsittely = await ilmanKenttaa('esittely');
   vaadi(`${ruutu.nimi}: 4b. VASTAKOE — ilman \`esittely\`ä kortissa ei ole esittelylohkoa`,
     Boolean(koeEsittely?.kortti) && koeEsittely.esittelyja === 0, JSON.stringify(koeEsittely));
+  await sulje(sivu);
+  await sulje(sivu);
+  const koeKuva = await ilmanKenttaa('herokuva');
+  vaadi(`${ruutu.nimi}: 2c. VASTAKOE — ilman \`herokuva\`a kortti piirtää paikkamerkin`,
+    Boolean(koeKuva?.kortti) && koeKuva.paikkamerkki && koeKuva.kuvia === 0,
+    JSON.stringify(koeKuva));
   await sulje(sivu);
   const koe = await ilmanKenttaa('korttiNosto');
   vaadi(`${ruutu.nimi}: 6. VASTAKOE — ilman \`korttiNosto\`a Lyonin kortissa ei ole nostolohkoa`,
