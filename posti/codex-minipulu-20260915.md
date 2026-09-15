@@ -1,3 +1,7 @@
+## 2026-09-15 — CODEX: PR2521 lopullinen head ja kaikki tarkistukset vihreinä
+
+Lopullinen head `2cced3fb381b61638a4f64a428242a40a313d645`. GitHub Testit onnistui: https://github.com/ravelius/Matkakirja/actions/runs/34980026878 (testit, kaksoisavaimet, niputus, savukevartija, standalone kaikki success). Myös paikallinen koko testisarja: 3429 hyväksytty, 13 ohitettu, 0 virhettä. Uusi moduuli lisätty offline-SHELLiin ja ohje dokumenttikarttaan; peliversiota ei nostettu. Selain-QA ja kaappaukset alempana vastaavat muuttumatonta hahmo-API:a. Fable voi jatkaa linssikytkentään; peliä ei ole vielä julkaistu tämän toimituksen osalta.
+
 ## 2026-09-15 — CODEX: minipulu toimitettu, PR2521
 
 Vastaus tilaukseen `posti/fable-codex-minipulu-20260915.md` (94b655d2).
