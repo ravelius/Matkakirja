@@ -127,3 +127,71 @@ Raakadata: `tools/savukkeet/kaappaukset/tmp-pulu/budapest-1400.json`
 ja `ateena-1400.json` (tämän ajon skratsipadissa, ei committoitu —
 katso koontitaulukko yllä). Kuvakaappaus tallessa
 `docs/raportit/kuvat/pulun-paikka-1400-20260915.jpg`.
+
+---
+
+## Jatko 15.9.2026 klo n. 16.30 UTC: PULUN HAHMO KORJATTU PYSYMÄÄN KULMASSA
+
+Fable linjasi ehdotuksen 1 (yllä) omistajan tuoreen huomion pohjalta
+(Raamattu "KARTTAUUDISTUKSEN PAATOKSET 12 TARKENNUS: PULUN HAHMO PYSYY
+KULMASSA", omistaja 15.9.2026 klo 15.15 UTC): "kuvat" 14.9. lauseessa
+tarkoitti isoisän luentakuvaa ja pulu-cam-valokuvaa, EI pulun hahmoa.
+Kuvapakka pysyy kaupungin yläpuolella kartalla; pulun hahmo ja
+kuplanappi palautettiin pysyvästi oikeaan alakulmaan.
+
+### Muutos
+
+- `js/fokusvirta.js` `paivitaPulunPaikka`: funktio ei enää laske eikä
+  kirjoita `--pulu-kartalla-x/y`-muuttujia eikä lisää
+  `body.pulu-kaupungin-paalla`-luokkaa — se ainoastaan varmistaa, että
+  luokka on aina pois päältä. Kutsupaikka (`paivitaLuentakuvanPaikka`)
+  ja `asetaParinAnkkuri`/`naytto.kaupunginYlla` (pienen kuvapakan oma
+  ankkurointi kartalle) jätettiin koskematta — ne koskevat vain
+  isoisän/pulu-cam-kuvaparia, eivät pulun hahmoa.
+- `css/styles.css`: `body.pulu-kaupungin-paalla .pollo-nappi...`
+  -sääntö jätetty koodiin kommentoituna kuolleena varana (dokumentoi
+  14.9. päätöksen), koska se ei enää koskaan laukea.
+- `tools/savukkeet/savuke-isoisa-pulu.mjs`: vartiot 3–4 (jotka
+  odottivat pulun siirtyvän isoisän kuvan viereen) korvattu vartioilla,
+  jotka varmistavat napin pysyvän kulmassa ja `pulu-kaupungin-paalla`
+  pois päältä. 57/57 vartiota läpi (aiemmin 51/57 uudella koodilla
+  ennen kynnysarvon säätöä, ks. alla).
+
+### Mittaus (Chromium, 1400×900, todellinen ämpäri)
+
+- **Budapest ja Ateena, 0–60 s 1 s välein saapumisesta** (mittaus
+  suoraan pelin tilasta, saapumisvirta käynnissä koko ajan): pulun
+  nappi pysyi paikassa `{x:1310.4, y:767.2}` (48×48 px) läpi koko
+  60 sekunnin ikkunan, poikkeamia >4 px: **0/61** näytteessä
+  molemmissa kaupungeissa. `body.pulu-kaupungin-paalla` ei ollut
+  päällä yhdessäkään näytteessä. Kuvapakka (isoisän pieni luentakuva)
+  näkyi kartalla molemmissa ajoissa (`pakkaKartalla: true`).
+- **Repliikki tulee kulmasta:** `js/pollo.js asetaPinonPaikka` ankkuroi
+  kuplapinon (`.pollo-kuplapino-kehys`) suoraan napin (`this.nappi`)
+  ruutulaatikosta — koska nappi pysyy kulmassa, kuplapino seuraa sitä
+  automaattisesti eikä tarvinnut erillistä korjausta.
+- **Vastakoe (punainen ennen korjausta):** koodi palautettiin hetkeksi
+  vanhaan tilaan (`git stash`) ja pieni kuvapakka pakotettiin esiin
+  (kuten `savuke-isoisa-pulu.mjs` tekee) — nappi hyppäsi paikkaan
+  `{x:633.5, y:280.6}` (Budapestin kartan keskivaiheille,
+  `pulu-kaupungin-paalla: true`), täsmälleen alkuperäisen bugiraportin
+  kuvaama tilanne. Korjauksen palauttamisen jälkeen (`git stash pop`)
+  samalla toistolla nappi pysyi `{x:1310.4, y:767.2}`:ssä,
+  `pulu-kaupungin-paalla: false`. Vastakoe vahvistaa, että korjaus
+  vaikuttaa juuri havaittuun ongelmaan.
+- Kuvakaappaus: `docs/raportit/kuvat/pulu-kulmassa-1400-20260915.jpg`
+  (93,6 kt, Budapest, kuvapakka kartalla + pulu oikeassa alakulmassa).
+
+### Testit
+
+`node --test tests/pollo*.test.mjs tests/pulucam.test.mjs
+tests/rules.test.mjs tests/dokumentit.test.mjs tests/fokusvirta.test.mjs`
+— kaikki läpi (175+26+337+42 testiä, 0 fail). `savuke-isoisa-pulu.mjs`
+57/57.
+
+### Ei tehty
+
+- Ei versionostoa, ei mergeä, ei Raamattu-muutosta.
+- `js/pallolauta/maapaneeli.js` ei koskettu (toinen agentti
+  työskentelee siinä rinnalla).
+- Worktree (`/home/user/wt-pulu2`) poistetaan tämän commitin jälkeen.

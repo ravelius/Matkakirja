@@ -10,14 +10,25 @@
  * +7 ALAS, pulun kelluva nappi 48 × 48 px karttaruudun oikeassa
  * alanurkassa — kumpikaan ei ollut kaupungin yläpuolella.
  *
+ * TARKENNUS 15.9.2026 klo 15.15 UTC (Raamattu "KARTTAUUDISTUKSEN
+ * PAATOKSET 12 TARKENNUS: PULUN HAHMO PYSYY KULMASSA"): omistaja
+ * huomasi Budapestissa, että pulun HAHMO ja kuplanappi hyppäsivät
+ * kartan keskelle isoisän pienen kuvan viereen. "Kuvat" 14.9. lauseessa
+ * tarkoitti isoisän luentakuvaa ja pulu-cam-valokuvaa, ei pulun
+ * hahmoa — nappi ja hahmo pysyvät AINA oikeassa alakulmassa, kuva
+ * kaupungin yläpuolella yksin. Vartiot 3–4 (pulun oletettu paikka
+ * isoisän vierellä) on korvattu vartiolla, joka varmistaa napin
+ * pysyvän kulmassaan.
+ *
  * VARTIOT (kolme kaupunkia × kaksi ruutua):
  *   1. Isoisän pieni kuva on kaupungin YLÄPUOLELLA (alareuna kaupungin
  *      pisteen yläpuolella).
  *   2. Isoisän pieni kuva on vähintään ISOISAN_VAHIN_PX korkea.
- *   3. Pulun nappi on kaupungin YLÄPUOLELLA isoisän kuvan vieressä
- *      (sama korkeus, oikealla puolella).
- *   4. Kumpikaan ei peitä kaupungin nimikylttiä eikä turisti-info-merkkiä
- *      (päällekkäisyys 0 px²).
+ *   3. Pulun nappi PYSYY oikeassa alakulmassa (css:n oletuspaikka,
+ *      body.pulu-kaupungin-paalla ei ole päällä) eikä seuraa isoisän
+ *      kuvaa kartalle.
+ *   4. Isoisän kuva ei peitä kaupungin nimikylttiä eikä
+ *      turisti-info-merkkiä (päällekkäisyys 0 px²).
  *   5. Pulun napautus avaa chatin kuten ennenkin.
  *
  * Aja:  PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers \
@@ -207,6 +218,10 @@ const MITTAA = () => {
     nimikyltti: laatikko(nimi),
     turisti: laatikko(document.querySelector('.pallolauta-turisti-info svg')),
     nappula: laatikko(document.querySelector('.pallolauta-nappula')),
+    // Pulun hahmo pysyy kulmassa (15.9.2026 tarkennus): tämä luokka ei
+    // saa olla päällä, vaikka isoisän kuva on kartalla.
+    kaupunginPaalla: document.body.classList.contains('pulu-kaupungin-paalla'),
+    ikkuna: { w: window.innerWidth, h: window.innerHeight },
   };
 };
 
@@ -267,27 +282,28 @@ for (const ruutu of RUUDUT) {
         korkeus >= ISOISAN_VAHIN_PX, `${korkeus} px`);
     }
     vaadi(`${tunnus}: pulun nappi löytyy`, Boolean(m.pulu), 'ei nappia');
-    if (m.pulu && m.kaupunki) {
-      vaadi(`${tunnus}: pulun nappi on kaupungin YLÄPUOLELLA`,
-        m.pulu.y + m.pulu.h < m.kaupunki.y,
-        `napin alareuna ${(m.pulu.y + m.pulu.h).toFixed(1)}, kaupunki ${m.kaupunki.y}`);
+    // PULUN HAHMO PYSYY KULMASSA (15.9.2026 tarkennus): isoisän kuva on
+    // kartalla, mutta se ei saa siirtää pulun nappia sen viereen.
+    vaadi(`${tunnus}: body.pulu-kaupungin-paalla EI ole päällä`,
+      m.kaupunginPaalla === false, `kaupunginPaalla=${m.kaupunginPaalla}`);
+    if (m.pulu && m.ikkuna) {
+      // css .pollo-kelluu-kartalla: right ~1.1rem, bottom ~5.3rem —
+      // nappi pysyy oikeassa alanurkassa, kaukana isoisän kuvasta.
+      const oikealla = m.ikkuna.w - (m.pulu.x + m.pulu.w) < 50;
+      const alhaalla = m.ikkuna.h - (m.pulu.y + m.pulu.h) < 120;
+      vaadi(`${tunnus}: pulun nappi pysyy oikeassa alakulmassa`,
+        oikealla && alhaalla, `nappi ${JSON.stringify(m.pulu)}, ikkuna ${JSON.stringify(m.ikkuna)}`);
     }
     if (m.pulu && m.isoisa) {
-      vaadi(`${tunnus}: pulu on isoisän OIKEALLA puolella`,
-        m.pulu.x >= m.isoisa.x + m.isoisa.w - 1,
-        `pulu x ${m.pulu.x}, isoisän oikea reuna ${(m.isoisa.x + m.isoisa.w).toFixed(1)}`);
-      const keskiEro = Math.abs((m.pulu.y + m.pulu.h / 2) - (m.isoisa.y + m.isoisa.h / 2));
-      vaadi(`${tunnus}: pulu ja isoisä samalla korkeudella`, keskiEro <= 26,
-        `keskipisteiden ero ${keskiEro.toFixed(1)} px`);
-      vaadi(`${tunnus}: kuvat eivät ole päällekkäin`,
-        paallekkain(m.pulu, m.isoisa) === 0, `${paallekkain(m.pulu, m.isoisa)} px²`);
+      vaadi(`${tunnus}: pulu EI ole isoisän kuvan vierellä`,
+        paallekkain(m.pulu, m.isoisa) === 0
+          && Math.abs((m.pulu.y + m.pulu.h / 2) - (m.isoisa.y + m.isoisa.h / 2)) > 26,
+        `pulu ${JSON.stringify(m.pulu)}, isoisä ${JSON.stringify(m.isoisa)}`);
     }
     for (const [nimi, laatikko] of [['nimikyltti', m.nimikyltti], ['turisti-info', m.turisti]]) {
       if (!laatikko) { tieto(`${tunnus}: ${nimi} ei ruudulla`, 'ohitettu'); continue; }
       vaadi(`${tunnus}: isoisän kuva ei peitä ${nimi}ä`,
         paallekkain(m.isoisa, laatikko) === 0, `${paallekkain(m.isoisa, laatikko)} px²`);
-      vaadi(`${tunnus}: pulun nappi ei peitä ${nimi}ä`,
-        paallekkain(m.pulu, laatikko) === 0, `${paallekkain(m.pulu, laatikko)} px²`);
     }
 
     // 5. Pulun napautus avaa chatin (vain Pariisi, molemmat ruudut).
