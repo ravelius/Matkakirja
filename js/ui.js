@@ -47,6 +47,9 @@ import {
   laukunTilastotAuki, tallennaLaukunTilastot,
   shortIntro, suojaa, tallennaLinssi, tallennettuLinssi, viivaIkoni,
   puhelinTila,
+  // Luennan aikainen tekstipiilo (omistaja 15.9.2026): sama mekanismi
+  // kuin puhelimella, mutta ehtona luennan tila eikä ruudun koko.
+  LUENNAN_TEKSTIPIILO, luennanTekstipiilo, tekstitPiilossa,
 } from './ui-apurit.js';
 import { onAarre } from './tokens.js';
 import { ilmoitaLivianTilanne, ilmoitaLivianTunne } from './livia-tilanteet.js';
@@ -75,7 +78,10 @@ import {
 import {
   asetaLuentaKytkin, haivytaJaSiivoa, haivytaLuenta, lueMerkinta,
   luennanLoppuun, luentaKytkinPaalla, merkitsePuhuja, playDiaryVoice,
-  playIntroVoice, PUHUJA_PULU, puhujaAanessa, stopDiaryVoice, stopIntroVoice,
+  playIntroVoice, PUHUJA_PULU, stopDiaryVoice, stopIntroVoice,
+  // Luennan NÄKYVÄT merkit lukevat kuuluvaa ääntä, eivät varattua
+  // puheenvuoroa (15.9.2026, ks. kaynnistaLuentavahti).
+  soivaPuhuja,
   vapautaPuhuja,
 } from './luenta.js';
 import {
@@ -142,7 +148,10 @@ import { MINIATYYRIT } from './packs/miniatyyrit.js';
 // kehittäjäkartan vihreä merkintä lukevat kaikki tämän saman taulun.
 import { JULISTEET, JULISTE_LAHDE, kaupunginJuliste } from './packs/julisteet.js';
 import {
-  POLLO_AARRE, polloAnkkuri, polloAuki, polloKuplatPois, polloLisavihje, polloOnnittelu,
+  POLLO_AARRE, polloAnkkuri, polloAuki, polloKuplatPois, polloLisavihje,
+  // Luennan tekstipiilo: ruudulla olevat repliikit pluskuplaan.
+  polloLuennanKuplatPiiloon,
+  polloOnnittelu,
   polloPaivitaNakyvyys, polloSulje, polloVihje, polloVihjePois,
 } from './pollo.js';
 import { ajastaEhdotusKupla, ehdotusOsio, proHakuRasti, proOsio } from './ehdotukset.js';
@@ -197,6 +206,7 @@ import {
  * (renderFact).
  */
 import { naytaSaapumistraileri } from './saapumistraileri.js';
+import { kaynnistaKaiutinmittari, pysaytaKaiutinmittari } from './kaiutinmittari.js';
 
 const wikiGalleryCache = new Map();
 
@@ -809,14 +819,14 @@ const SAAPUMISEN_KUPLA_LUENNAN_JALKEEN_MS = 900;
  * sen, eikä pollo saa tuoda ui.js:ää (ui tuo pollon). Nimi viedään yhä
  * täältä eteenpäin, joten ui.js:n käyttäjien ei tarvinnut muuttua.
  */
-export { puhelinTila };
+export { puhelinTila, luennanTekstipiilo, tekstitPiilossa };
 
 /*
  * ── LIIKU-NAPIN NÄKYVYYS JA LAAJENNUS ───────────────────────────────
  *
  * Nappi on piilossa niin kauan kuin joku on äänessä (saapumisluenta
  * tai Livian repliikki) ja palaa heti, kun vuoro vapautuu. Tila
- * LUETAAN luennasta (js/luenta.js puhujaAanessa) — luenta- tai
+ * LUETAAN luennasta (js/luenta.js soivaPuhuja) — luenta- tai
  * äänilogiikkaa ei muuteta, vain kuunnellaan.
  *
  * KAKSI TURVAA:
@@ -4720,8 +4730,12 @@ export class UI {
     clearInterval(this.luentavahti);
     this.luentavahti = null;
     clearTimeout(this.liikuLaajennusAjastin);
+    // Kaiuttimen VU-mittari seis: kuollut näkymä ei jätä rAF-silmukkaa
+    // pyörimään eikä kaaria palamaan (js/kaiutinmittari.js).
+    pysaytaKaiutinmittari();
     document.body?.classList?.remove?.(
       'luenta-aanessa', 'liiku-laaja', 'kertoja-aanessa', 'luenta-huntu',
+      LUENNAN_TEKSTIPIILO,
     );
     for (const lappu of this.taustaLaput ?? []) lappu.removeEventListener('click', this.lappuTausta);
     for (const lappu of this.peruutusLaput ?? []) lappu.removeEventListener('cancel', this.lappuPeruutus);
@@ -11464,8 +11478,20 @@ export class UI {
   /**
    * LUENNAN VAHTI: piilottaa Liiku-napin niin kauaksi kuin joku puhuu.
    *
-   * Vahti vain LUKEE luennan tilan (puhujaAanessa) — se ei käynnistä,
-   * pysäytä eikä muuta yhtäkään ääntä. Tila kirjoitetaan bodyn
+   * Vahti vain LUKEE luennan tilan (soivaPuhuja) — se ei käynnistä,
+   * pysäytä eikä muuta yhtäkään ääntä.
+   *
+   * KUULUVA ÄÄNI, EI VARATTU VUORO (korjaus 15.9.2026). Vahti kysyi
+   * ennen `puhujaAanessa`, joka on TOSI jo ennen kuin ääni alkaa: vuoro
+   * varataan merkitsePuhujassa ja play() ratkeaa vasta myöhemmin. Jos
+   * play() hylkääntyy (headless-selain, offline, rikkinäinen tiedosto),
+   * ruudulla ehti silti välähtää koko luennan asu — tekstit piiloon,
+   * kartalle huntu, Liiku pois — vaikka mitään ei kuulu. Mitattu
+   * julkaisuhaarassa 15.9.2026: Ateenan ääniraita kaatui headlessissä
+   * NotSupportedErroriin ja kutisti matkakirjakortin juuri
+   * mittaushetkellä. `soivaPuhuja` lukee kuuluvaa ääntä
+   * (js/luenta.js aaniKuuluu), joten epäonnistunut käynnistys ei näy
+   * ruudulla lainkaan. Tila kirjoitetaan bodyn
    * luokkaan `luenta-aanessa`, josta css piilottaa napin kokonaan
    * (display: none, ei pelkkä opacity — piiloon jäänyttä nappia ei saa
    * voida napauttaa).
@@ -11492,10 +11518,12 @@ export class UI {
     let puheAlkoi = 0;
     // Viimeisin hetki, jolloin joku oli äänessä: välirauhan kello.
     let puheLoppui = 0;
+    // Sama kello erikseen kertojalle (tekstipiilo, ks. alempana).
+    let kertojaLoppui = 0;
     const askel = () => {
       if (this.dead) return;
       const nyt = Date.now();
-      const aanessa = Boolean(puhujaAanessa());
+      const aanessa = Boolean(soivaPuhuja());
       if (aanessa) {
         if (!puheAlkoi) puheAlkoi = nyt;
         puheLoppui = nyt;
@@ -11513,13 +11541,75 @@ export class UI {
        * KERTOJA ERIKSEEN PULUSTA (omistaja 14.9.2026): *"Luennan aikana
        * matkakirjan ylarivin reunassa voisi sykkia kevyesti kaiuttimen
        * kuva merkiksi etta luenta on kaynnissa. Pulun luennassa riittaa
-       * pulun elehtiminen ajamaan saman asian."* `puhujaAanessa` osaa
+       * pulun elehtiminen ajamaan saman asian."* `soivaPuhuja` osaa
        * jättää pulun laskuista, joten merkki kytkeytyy vain isoisän
        * luentaan — ja mykistettynä ääntä ei synny lainkaan, joten
        * merkkikään ei syki.
        */
-      const kertoja = !varaventtiili && puhujaAanessa(PUHUJA_PULU) !== null;
+      const kertoja = !varaventtiili && soivaPuhuja(PUHUJA_PULU) !== null;
       document.body.classList.toggle('kertoja-aanessa', kertoja);
+      /*
+       * TEKSTIT PIILOON KAIKILLA LAITTEILLA LUENNAN AJAKSI (omistaja
+       * 15.9.2026, Raamattu "TEKSTIT PIILOON KAIKILLA LAITTEILLA"):
+       * *"luennan aikana isoisän matkakirjamerkinnän teksti ja pulun
+       * puhekupla piilotetaan KAIKILLA laitteilla, ei vain
+       * puhelimella. Näkyviin jää kuva ja kuvateksti."*
+       *
+       * OMA VÄLIRAUHANSA. `kertoja` sammuu jokaisen äänitteen väliin,
+       * ja jos lappu palautuisi siitä, kortti välähtäisi auki ja kiinni
+       * kesken merkinnän. Sama hengähdysaika kuin Liiku-napilla
+       * (LUENNAN_VALIRAUHA_MS) pitää piilon päällä puheenvuorojen yli.
+       */
+      if (kertoja) kertojaLoppui = nyt;
+      const kertojaRauhassa = Boolean(kertojaLoppui)
+        && nyt - kertojaLoppui < LUENNAN_VALIRAUHA_MS;
+      const tekstitPiiloon = !varaventtiili && (kertoja || kertojaRauhassa);
+      if (!tekstitPiiloon) kertojaLoppui = 0;
+      document.body.classList.toggle(LUENNAN_TEKSTIPIILO, tekstitPiiloon);
+      /*
+       * Kortti kutistuu lapuksi VAIN reunalla, ei joka kyselyssä: jos
+       * pelaaja avaa lapun napauttamalla kesken luennan, 200 ms:n
+       * kysely kutistaisi sen muuten heti takaisin eikä napautuksesta
+       * seuraisi mitään. Sama reuna palauttaa kortin luennan jälkeen —
+       * mutta vain jos kutistus oli tämän vahdin tekemä (lippu), jotta
+       * kartan liikkeestä kutistunut lappu ei aukea luennan lopusta.
+       */
+      if (tekstitPiiloon !== this.luennanTekstipiiloPaalla) {
+        this.luennanTekstipiiloPaalla = tekstitPiiloon;
+        if (tekstitPiiloon) {
+          this.luennanKortinKutistus = this.factCard?.classList?.contains('pieni') === false;
+          this.asetaPaivakirjanKoko(true);
+          // Jo ruudulla oleva repliikki pluskuplaan: uudet imeytyvät
+          // sinne itsestään (js/pollo.js lisaaPinoon).
+          polloLuennanKuplatPiiloon();
+        } else if (this.luennanKortinKutistus) {
+          this.luennanKortinKutistus = false;
+          // Puhelimella lappu jää lapuksi (v1891), työpöydällä kortti
+          // palaa auki kuten ennen luentaa.
+          this.asetaPaivakirjanKoko(puhelinTila());
+        }
+      }
+      /*
+       * KAIUTTIMEN KOLME KAARTA VU-MITTARINA (omistaja 15.9.2026, ks.
+       * js/kaiutinmittari.js). Merkki ei ole enää koko kuvakkeen syke
+       * vaan kaarien vuorottelu: mittari käy täsmälleen niin kauan kuin
+       * kertoja on äänessä, ja sammuttaa kaaret pysähtyessään.
+       *
+       * ANALYSAATTORI ON JO KETJUSSA, kun luenta kulkee Web Audion läpi
+       * (iOS; js/musiikkivahvistin.js liitaMusiikkiin tallettaa sen
+       * elementtiin nimellä `aaniMittari`). Työpöydällä reititystä ei
+       * ole, jolloin mittari piirtää ajastetun kuvion.
+       */
+      const mykka = this.factKuuntele?.classList?.contains('mykistetty') === true;
+      if (kertoja && !mykka) {
+        kaynnistaKaiutinmittari(this.factKuuntele,
+          () => this.diaryVoice?.aaniMittari ?? null);
+      } else {
+        // Mykistettynä kaikki kaaret sammuksissa (omistajan sanoma
+        // ehto) — sammutus tulee tästä eikä luennan puuttumisesta,
+        // koska mykistetty luenta voi silti olla "äänessä" vaimennettuna.
+        pysaytaKaiutinmittari();
+      }
       /*
        * LUENNAN HUNTU (omistaja 14.9.2026): *"Luennan aikana kun kuvat
        * nakyvat, kartta tausta voisi olla tummempi ja vahan blurri."*
@@ -12956,7 +13046,7 @@ export class UI {
      * (ks. asetaPaivakirjanKoko ja factCardin click-kuuntelija).
      * Työpöydällä kortti avautuu kuten ennenkin.
      */
-    this.asetaPaivakirjanKoko(puhelinTila());
+    this.asetaPaivakirjanKoko(tekstitPiilossa());
     this.paivitaJatkuuVihje?.();
   }
 
@@ -12992,6 +13082,9 @@ export class UI {
       // Auki kortti on tavallista sisältöä omine nappeineen, joten
       // painikkeen rooli ja tila otetaan pois — sisäkkäinen painike
       // painikkeen sisällä ei ole luettavissa oleva tila.
+      // Kortti on auki: luennan lopetus ei enää palauta sitä (lippu on
+      // vahdin oma, ks. kaynnistaLuentavahti).
+      this.luennanKortinKutistus = false;
       this.factCard.removeAttribute('role');
       this.factCard.removeAttribute('tabindex');
       this.factCard.removeAttribute('aria-expanded');
@@ -13085,6 +13178,14 @@ export class UI {
       }
       // Luenta ehti loppua odotuksen aikana: kortti jää lapuksi.
       if (!this.luentaKesken()) return;
+      /*
+       * KERTOJAN LUENNAN AIKANA KORTTI EI NOUSE AUKI (omistaja
+       * 15.9.2026). Ennen tätä teksti ja puhe kuuluivat yhteen ja
+       * kortti palasi auki kartan rauhoituttua; nyt luennan aikana
+       * näkyviin jäävät kuva ja kuvateksti, ja merkinnän saa esiin
+       * lappua napauttamalla.
+       */
+      if (luennanTekstipiilo()) return;
       this.asetaPaivakirjanKoko(false);
     }, Math.max(0, viive));
   }
