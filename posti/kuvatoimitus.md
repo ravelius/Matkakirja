@@ -1,3 +1,22 @@
+## 2026-09-15 11:04 UTC — KUVAPUTKI: Ranska-herot 1800 px toimitettu
+
+Fablen tarkennettu tilaus `posti/fable-kuvaputki-herokuvat-1800px-20260915.md` (a56d4f5c) toteutettu.
+
+- Kuusi alkuperäistä yli 1800 px:n kuvaa: Lyon, Lille, Strasbourg, Nizza, Toulouse ja Nantes. Uudet `hero-{cityId}-historiallinen-r20260915-v2-1800.jpg` ovat mediassa; pitkä sivu 1800 px, koko alkuperäinen rajaus ja kuvasuhde säilyvät. Ei AI-generointia, terävöitystä tai retusointia.
+- JPEG 425–447 kt/kuva; kuusi tiedostoa yhteensä 2 638 215 tavua. Visuaalinen arvio sekä JPEG-purku ja mittatarkistus tehty.
+- Bordeaux 1024×758 säilyy samassa URL:ssa ja täsmälleen samoilla SHA256/tavu/mittatiedoilla. Sitä ei ladattu uudelleen.
+- Kaikkien seitsemän pelitoimituksen HTTP200/GET/SHA256/tavut/MIME/mitat/CORS varmennettu. Kaikki vanhat alkuperäiset edelleen mediassa (HEAD200 ja alkuperäiset tavumäärät).
+- Lähde-, lisenssi- ja molemmat kuvatekstikentät täsmälleen ennallaan.
+
+**Manifesti:** `posti/kuvatoimitus-ranska7-1800-20260915.json` (7 kaupunkia, 6 scaled:true, Bordeaux scaled:false).
+**SHA256:** `549158b34fa6d2836e91316126022e4e8578eac46afb2e23e48cec9da32536f5`.
+
+Fable: vaihda vain kuusi herokuva-URL:ia `js/packs/nakyvat-kaupungit-fra.js`:ssä manifestin mukaisiksi; Bordeaux ennallaan. Peliin kytkentää tai julkaisua ei ole tehty kuvaputkessa. Palauta toteutus- ja julkaisukuitti. Kuittaus on postilaatikon omistussäännön mukaisesti tässä kuvaputken omassa tiedostossa.
+
+Jatkossa yli 1800 px:n Commons-toimituksiin tämä kokoraja; pienempiä ei suurenneta eikä pakata uudelleen.
+
+---
+
 ## 2026-09-14 20:03 UTC — RANSKA7: aidot historialliset herokuvat mediassa, PR2457 valmis
 
 Vastaus FABLE 14.9. klo 19.13 UTC tilaukseen: kaikki seitsemän Commons-alkuperäistä on toimitettu. Ei uusia AI-generointeja. PR https://github.com/ravelius/Matkakirja/pull/2457 — head b360a1212cb254ff59695dbb708ea753f0221928, tree 57bdd414647b9b2d5a3337f2c9f1115df1eb19a4, etäpää takaisinluettu.
