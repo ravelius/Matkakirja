@@ -742,6 +742,11 @@ const MODULES = [
    * median, valokuvat ja kulttuurikategoriat — kaikki jo yllä.
    */
   'js/saapumistraileri.js',
+  /*
+   * Kaiuttimen VU-mittari (15.9.2026): ei tuo mitään, joten paikka on
+   * vapaa — kunhan se on ennen js/ui.js:ää, joka tuo sen.
+   */
+  'js/kaiutinmittari.js',
   'js/fokusvirta.js',
   /*
    * Laattapyramidin lataaja ennen kameraa: kamera lukee siitä arkin

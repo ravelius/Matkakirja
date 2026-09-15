@@ -197,6 +197,7 @@ import {
  * (renderFact).
  */
 import { naytaSaapumistraileri } from './saapumistraileri.js';
+import { kaynnistaKaiutinmittari, pysaytaKaiutinmittari } from './kaiutinmittari.js';
 
 const wikiGalleryCache = new Map();
 
@@ -4720,6 +4721,9 @@ export class UI {
     clearInterval(this.luentavahti);
     this.luentavahti = null;
     clearTimeout(this.liikuLaajennusAjastin);
+    // Kaiuttimen VU-mittari seis: kuollut näkymä ei jätä rAF-silmukkaa
+    // pyörimään eikä kaaria palamaan (js/kaiutinmittari.js).
+    pysaytaKaiutinmittari();
     document.body?.classList?.remove?.(
       'luenta-aanessa', 'liiku-laaja', 'kertoja-aanessa', 'luenta-huntu',
     );
@@ -11520,6 +11524,27 @@ export class UI {
        */
       const kertoja = !varaventtiili && puhujaAanessa(PUHUJA_PULU) !== null;
       document.body.classList.toggle('kertoja-aanessa', kertoja);
+      /*
+       * KAIUTTIMEN KOLME KAARTA VU-MITTARINA (omistaja 15.9.2026, ks.
+       * js/kaiutinmittari.js). Merkki ei ole enää koko kuvakkeen syke
+       * vaan kaarien vuorottelu: mittari käy täsmälleen niin kauan kuin
+       * kertoja on äänessä, ja sammuttaa kaaret pysähtyessään.
+       *
+       * ANALYSAATTORI ON JO KETJUSSA, kun luenta kulkee Web Audion läpi
+       * (iOS; js/musiikkivahvistin.js liitaMusiikkiin tallettaa sen
+       * elementtiin nimellä `aaniMittari`). Työpöydällä reititystä ei
+       * ole, jolloin mittari piirtää ajastetun kuvion.
+       */
+      const mykka = this.factKuuntele?.classList?.contains('mykistetty') === true;
+      if (kertoja && !mykka) {
+        kaynnistaKaiutinmittari(this.factKuuntele,
+          () => this.diaryVoice?.aaniMittari ?? null);
+      } else {
+        // Mykistettynä kaikki kaaret sammuksissa (omistajan sanoma
+        // ehto) — sammutus tulee tästä eikä luennan puuttumisesta,
+        // koska mykistetty luenta voi silti olla "äänessä" vaimennettuna.
+        pysaytaKaiutinmittari();
+      }
       /*
        * LUENNAN HUNTU (omistaja 14.9.2026): *"Luennan aikana kun kuvat
        * nakyvat, kartta tausta voisi olla tummempi ja vahan blurri."*

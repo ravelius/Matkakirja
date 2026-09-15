@@ -4650,17 +4650,21 @@ button.ghost { background: transparent; min-height: 36px; padding: 0.35rem 0.7re
  * Kirjasinkoko nousee hitusen: pienaakkoset näyttävät samalla koolla
  * kevyemmiltä kuin versaalit.
  *
- * RIVILAATIKKO EI OLE ENÄÄ VAKIO. Otsake mahtui aina yhdelle riville,
- * joten sen rivimitta sai olla kaiuttimen korkuinen (ks. .fact-card h2).
- * Paikka ja aika on pidempi ja kiertyy puhelimella kahdelle riville:
- * rivimitta tulee siis tekstistä ja kaiuttimen tilanvaraus jää
- * vähimmäiskorkeudeksi.
+ * RIVILAATIKKO ON KAIUTTIMEN KORKUINEN (omistaja 15.9.2026,
+ * sanatarkasti: *"Tasaa kaiutin symboli tekstin kanssa samalle
+ * riville."*). Paikka ja aika kiertyy puhelimella kahdelle riville,
+ * joten rivimitta sai välillä tulla tekstistä (1,25) — mutta silloin
+ * ENSIMMÄISEN RIVIN keskilinja ei osu kaiuttimen keskilinjaan, koska
+ * kaiuttimen laatikko on --kaiutin-koko:n korkuinen ja alkaa samalta
+ * ylälaidalta. Sitomalla rivimitta samaan lukuun keskilinjat osuvat
+ * yhteen pikselilleen joka ruudunleveydellä, ja kahdelle riville
+ * kiertyvä otsikko saa vain hitusen väljemmän riviltä riville -välin.
  */
 .fact-card h2.paikka-aika {
   text-transform: none;
   letter-spacing: 0.02em;
   font-size: 0.86rem;
-  line-height: 1.25;
+  line-height: var(--kaiutin-koko);
   min-height: var(--kaiutin-koko);
 }
 
@@ -9636,6 +9640,18 @@ body[data-mode] .fact-card.pieni > #fact-voice {
   padding-inline-end: 0;
   font-size: var(--pieni-rivi);
   line-height: 1.5;
+  /*
+   * VÄHIMMÄISKORKEUS POIS LAPULTA (omistaja 15.9.2026: *"Tasaa kaiutin
+   * symboli tekstin kanssa samalle riville."*).
+   *
+   * `.fact-card h2.paikka-aika` varaa kaiuttimelle 1,2 rem:n korkeuden,
+   * mutta lapun oma rivi on vain 1,05 rem (0,7 rem × 1,5). Erotus jäi
+   * rivilaatikon ALAPUOLELLE, joten otsikon teksti istui laatikkonsa
+   * yläreunassa ja pystykeskitetty kaiutin 1,6 px sen alapuolella
+   * (mitattu 390 × 844). Lapussa varausta ei tarvita: kaiutin on oma
+   * ruudukkosarakkeensa eikä otsikon perässä.
+   */
+  min-height: 0;
   white-space: nowrap;
   pointer-events: auto;
 }
@@ -26817,36 +26833,56 @@ dialog.dialog.arkki.tiivis-lehtiarkki::backdrop {
 }
 
 /*
- * ── LUENNAN MERKKI: KAIUTIN SYKKII ──────────────────────────────────
+ * ── LUENNAN MERKKI: KAIUTTIMEN KOLME KAARTA VU-MITTARINA ────────────
  *
- * *"Luennan aikana matkakirjan ylarivin reunassa voisi sykkia kevyesti
- * kaiuttimen kuva merkiksi etta luenta on kaynnissa. Pulun luennassa
- * riittaa pulun elehtiminen ajamaan saman asian."*
+ * Omistaja 14.9.2026: *"Luennan aikana matkakirjan ylarivin reunassa
+ * voisi sykkia kevyesti kaiuttimen kuva merkiksi etta luenta on
+ * kaynnissa. Pulun luennassa riittaa pulun elehtiminen ajamaan saman
+ * asian."* — ja tarkennus 15.9.2026 iPhone-kuvan kanssa: *"onko
+ * mahdollista animoida kaiuttimen kolmea kaarta elamaan Vu mittarin
+ * tapaan ja ottaa feidaus animaatio siita pois?"*
  *
- * Merkki on kortin oma kaiutinnappi (#fact-kuuntele), joka on jo
- * ylärivin reunassa. Luokan `kertoja-aanessa` asettaa js/ui.js:n
- * luentavahti VAIN isoisän luennalle: `puhujaAanessa(PUHUJA_PULU)`
- * jättää pulun laskuista, joten Livian repliikki ei sytytä merkkiä.
- * Mykistettynä ääntä ei synny, joten merkkikään ei syki — erillistä
- * mykistysehtoa ei tarvita.
+ * KOKO KUVAKKEEN SYKE ON POISTETTU. Ennen tässä oli
+ * `@keyframes fact-kaiutin-syke` (scale + opacity), joka häivytti koko
+ * napin. Nyt kuvake seisoo paikallaan ja MERKKI ON MITTARISSA: kolme
+ * kaarta syttyvät ja sammuvat luennan tasosta (js/kaiutinmittari.js
+ * lisää ja poistaa luokan `palaa`).
  *
- * VAIN SKAALA JA LÄPINÄKYVYYS, EI SUODATINTA (iOS-sääntö).
+ * Luokan `kertoja-aanessa` asettaa js/ui.js:n luentavahti VAIN isoisän
+ * luennalle: `puhujaAanessa(PUHUJA_PULU)` jättää pulun laskuista, joten
+ * Livian repliikki ei sytytä merkkiä. Mykistettynä mittari pysäytetään
+ * erikseen (js/ui.js `mykka`): vaimennettu luenta voi olla yhä
+ * "äänessä", eikä mykistetty kaiutin saa silti näyttää tasoa.
+ *
+ * VAIN LÄPINÄKYVYYS, EI SUODATINTA EIKÄ SKAALAA (iOS-sääntö,
+ * tests/rules.test.mjs).
+ *
+ * LUENNAN ULKOPUOLELLA KUVAKE ON ENNALLAAN: kaaret ovat täydessä
+ * voimassaan, koska himmennys kuuluu vain mittarille.
  */
-@keyframes fact-kaiutin-syke {
-  0%, 100% { transform: scale(1); opacity: 0.72; }
-  50% { transform: scale(1.12); opacity: 1; }
+body.kertoja-aanessa #fact-kuuntele .kaiutin-kaari {
+  opacity: 0.2;
+  transition: opacity 120ms linear;
 }
 
-body.kertoja-aanessa #fact-kuuntele {
-  animation: fact-kaiutin-syke 1600ms ease-in-out infinite;
+body.kertoja-aanessa #fact-kuuntele .kaiutin-kaari.palaa { opacity: 1; }
+
+/* MYKISTETTYNÄ KAIKKI KAARET SAMMUKSISSA (omistajan ehto 15.9.2026).
+   js/ui.js pysäyttää mittarin, ja tämä sääntö on sen varmistus: jos
+   luokka `palaa` jäisi kaareen kytkintä painettaessa, se ei silti
+   pala. */
+body.kertoja-aanessa #fact-kuuntele.mykistetty .kaiutin-kaari,
+body.kertoja-aanessa #fact-kuuntele.mykistetty .kaiutin-kaari.palaa {
+  opacity: 0.2;
 }
 
-/* Liike vähennettynä: pelkkä staattinen korostus, ei sykettä. */
+/* Liike vähennettynä: kaikki kaaret palavat tasaisesti, ei vuorottelua.
+   Mittari voi yhä pyöriä, mutta tämä sääntö voittaa sen painollaan. */
 @media (prefers-reduced-motion: reduce) {
-  body.kertoja-aanessa #fact-kuuntele {
-    animation: none;
+  body.kertoja-aanessa #fact-kuuntele .kaiutin-kaari,
+  body.kertoja-aanessa #fact-kuuntele .kaiutin-kaari.palaa {
     opacity: 1;
-    transform: scale(1.08);
+    transition: none;
   }
 }
 
@@ -26868,7 +26904,27 @@ body.kertoja-aanessa #fact-kuuntele {
   /* Leikkaava sääntö on `> *:not(#fact-voice):not(.fact-place-lyhyt)`,
      jonka :not(#fact-voice) tuo sille tunnisteen painon. Sama paino ja
      yksi luokka enemmän riittää voittamaan sen. */
+  /*
+   * SAMALLE RIVILLE JA PYSTYKESKITETYKSI (omistaja 15.9.2026,
+   * sanatarkasti: *"Tasaa kaiutin symboli tekstin kanssa samalle
+   * riville."*, iPhone-kuva Dubrovnikin saapumisluennasta).
+   *
+   * JUURISYY: nappi oli yhä `position: absolute` (.fact-card
+   * .fact-kuuntele), ja absoluuttisen ruudukkolapsen `top` mitataan
+   * sen OMASTA ruudukkoalueesta — jolloin `align-self: center` jää
+   * käyttämättä, koska offset ei ole auto. Kuvake istui siis
+   * --kortti-pehmuste-y:n verran otsikkorivin YLÄLAIDAN alapuolella ja
+   * roikkui kuvan mukaisesti alempana kuin teksti.
+   *
+   * Korjaus on asemointi eikä luku: `relative` tekee napista tavallisen
+   * ruudukkolapsen, jolloin `align-self: center` keskittää sen rivin
+   * korkeuteen. Relative eikä static, koska osuma-ala (::before) ja
+   * mykistysviiva (::after) asemoidaan napin sisään.
+   */
   body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
+    position: relative;
+    top: auto;
+    right: auto;
     grid-row: 1;
     grid-column: 3;
     width: auto;

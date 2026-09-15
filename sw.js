@@ -85,6 +85,7 @@ const SHELL = [
   './js/fokusvirta.js',
   // Kaupungin minitraileri (11.9.2026): ui.js ja fokusvirta tuovat sen.
   './js/saapumistraileri.js',
+  './js/kaiutinmittari.js',
   // PULU-CAM-pakka isoisän luentakuvan päälle (9.9.2026): fokusvirta tuo
   // sen staattisesti, ja se itse tuo pöllön kuvakkeen ja median.
   './js/pulucam.js',
