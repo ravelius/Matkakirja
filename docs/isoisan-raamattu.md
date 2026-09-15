@@ -54,6 +54,19 @@ Kuninkaallisen laivaston kartanpiirtäjä, joka erosi virastaan keväällä
 1873. Hänen oma perustelunsa matkakirjan alkulehdellä: *"He käskivät
 piirtää rannikon. Minä halusin tietää, mitä rannikon takana on."*
 
+**Sukulaisuus (omistajan päätös 15.9.2026, sitova):** Horatio on
+Jules Vernen **Phileas Foggin nuorempi veli**. Phileas kiersi maailman
+loka–joulukuussa 1872 (Reform Clubin veto, 20 000 puntaa, mattolaukku,
+Passepartout, Aouda) ja antoi palattuaan veljelleen mattolaukkunsa ja
+vuoden 1872 maailmankartan. Siksi ne ovat nuoren Foggin perinnössä.
+Horatio erosi laivastosta keväällä 1873 ja lähti omalle matkalleen
+Eurooppaan Aarnin luettelon jäljille — ei maailman ympäri eikä vedon
+vuoksi, vaan siksi että halusi tietää, mitä rannikon takana on.
+Käyttösäännöt: Phileas mainitaan harvoin ja vain Horation kynästä
+("veljeni"), ei pelin kertojan äänellä; Vernen tapahtumia ei kerrota
+uudelleen, niihin viitataan. Horation persoona, nimi ja äänitteet
+pysyvät ennallaan.
+
 Persoona paperilla — nämä piirteet toistuvat, koska niistä hahmo
 tunnistetaan:
 
