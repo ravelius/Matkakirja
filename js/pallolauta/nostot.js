@@ -241,6 +241,54 @@ export const NOSTON_MITTA = KARTTANIMI_KOOT.kohde / NOSTOSYM_NIMIO_KOKO;
  * mittaa nostojen laatikot (nostonLaatikko) — yksi mitta, ei kopiota.
  */
 export const KOHDEMERKIN_RUUTU_PX = 2 * NOSTOSYM_MINI_RUUTU * NOSTON_MITTA;
+/*
+ * ══ KAUPUNKIMERKIN NIMIÖ ON ISOMPI KUIN NOSTON (omistaja 15.9.2026
+ * klo 17.20 UTC, Raamattu KARTTAUUDISTUKSEN PAATOKSET 25 kohta 2:
+ * *"Isommaksi, n. 11-12 px"*) ═════════════════════════════════════
+ *
+ * MIKSI: lisäkaupungit (js/packs/nakyvat-kaupungit-fra.js) OVAT
+ * kartalla jo saapumisnäkymässä, mutta niiden nimiö on kohdenimiön
+ * mitta 8,5 px (KARTTANIMI_KOOT.kohde, PAATOKSET 14) — Ranskan
+ * kokoisella rajauksella hädin tuskin erottuva, ja juuri siksi
+ * omistaja kysyi *"eika toisia kaupunkeja?"* vaikka ne olivat
+ * ruudulla. Kaupunki on kartan hierarkiassa nimi muiden yläpuolella,
+ * joten se saa oman mittansa: 11,5 px on tilatun välin 11–12
+ * keskellä ja samalla kartan oma vuori-nimiön koko
+ * (KARTTANIMI_KOOT.vuori 11), eli luku ei ole uusi tyyli vaan
+ * olemassa oleva porras.
+ *
+ * SYMBOLI KASVAA MUKANA, EIKÄ SITÄ VOI ESTÄÄ: nimiö ja viivamerkki
+ * ovat SAMASSA RASTERISSA (js/fokusnosto-symbolit.js
+ * piirraNostosymKartalle), joten kerroin on merkin mitta eikä
+ * pelkkä kirjasinkoko — sama sääntö kuin KARTTANOSTON KYLTTI ON
+ * KARTAN MITTA -osiossa. Kaupungin piste kasvaa siis 1,35-kertaiseksi,
+ * mikä on kartografisesti oikein päin (kaupunki > maastokohde).
+ *
+ * VAIN ELÄVÄ MERKKI. Poltettua mustetta ei voi suurentaa jälkikäteen
+ * (sama syy kuin POLTETTUA MUSTETTA EI VOI PIILOTTAA alempana): jos
+ * kaupungin merkki on laatassa, se on siellä 8,5 px:n nimiöllä, ja
+ * kerroin vain irrottaisi osumapinnan musteesta. Kerroin koskee siksi
+ * vain polttamattomia kaupunkimerkkejä; poltetut korjaantuvat, kun
+ * nostotaso poltetaan uudelleen (R2-ajo).
+ *
+ * YKSI MITTA, EI KOPIOTA. Sama kerroin menee piirtoon
+ * (`asetteleNosto` datumin `mitta`) ja laatikkoon (`nostonLaatikko`),
+ * jotta ladonta, väistö ja osumapinta mittaavat sitä, mikä ruudulla
+ * on — muuten isompi kaupunki söisi naapurinsa nimen.
+ */
+/** Lisäkaupungin nimiön koko saapumiszoomilla (px, PAATOKSET 25). */
+export const KAUPUNKIMERKIN_NIMIO_PX = 11.5;
+/** Kaupunkimerkin mittakerroin noston mittaan nähden (8,5 px → 11,5 px). */
+export const KAUPUNKIMERKIN_KERROIN = KAUPUNKIMERKIN_NIMIO_PX / KARTTANIMI_KOOT.kohde;
+
+/**
+ * Merkin oma mittakerroin: kaupunki on isompi kuin nosto (ks. yllä).
+ *
+ * @param {?object} d  merkin rivi tai datum (`kaupunki`, `poltettu`)
+ */
+export function merkinKerroin(d) {
+  return d?.kaupunki && !d?.poltettu ? KAUPUNKIMERKIN_KERROIN : 1;
+}
 
 /*
  * ══════════════════════════════════════════════════════════════════
@@ -389,6 +437,51 @@ export function lehdenOsuus(pohja, nakyva, packId = null) {
 /** Pääkartan merkkikatto maata kohti uloimmalla zoomilla. */
 export const PAAKARTAN_MERKKIKATTO = 21;
 /*
+ * ══ KATTO EI KOSKE KOHDEMAATA (omistaja 15.9.2026 klo 17.20 UTC,
+ * Raamattu KARTTAUUDISTUKSEN PAATOKSET 25 kohta 1: *"Kohdemaalle ei
+ * kattoa"*) ═══════════════════════════════════════════════════════
+ *
+ * MIKSI: katto 21 on olemassa siksi, ettei PÄÄKARTTA ruuhkaudu — se
+ * mitoitettiin 13.9.2026 maailmankuvaan, jossa jokainen maa on yksi
+ * nimi muiden joukossa. Saapumisnäkymässä ruudulla on VAIN YKSI maa,
+ * ja pelaaja on siinä nimenomaan katsomassa sitä maata. Kun v1894
+ * kolminkertaisti Ranskan merkkimäärän (maalehden nostot + seitsemän
+ * lisäkaupunkia), sama katto piilotti 62 merkistä 40 — eli kaksi
+ * kolmasosaa pilotin sisällöstä jäi yhden zoomiportaan taakse, ja
+ * juuri sen omistaja näki (SELVITYS: RANSKAN NOSTOT JA MUUT
+ * KAUPUNGIT PUUTTUVAT).
+ *
+ * MITÄ MUUTTUU JA MITÄ EI. Kohdemaan merkit piirtyvät kaikki heti;
+ * MUIDEN MAIDEN merkit pysyvät katon alla, eli Fablen sääntö
+ * *"raja ei nouse hiljaa"* on yhä voimassa siellä, missä se
+ * mitoitettiin.
+ *
+ * MYÖS `lahi: true` AUKEAA KOHDEMAASSA — JA SE ON MITATTU EIKÄ
+ * TULKITTU. Ranskan saapumisnäkymässä kattoa nostamalla jäi piiloon
+ * täsmälleen 18 merkkiä, ja jokainen niistä oli `nosto-maalehti-*`
+ * eli v1894:n maalehtinostoja. Niiden `lahi`-lipun PERUSTELU on
+ * kirjoitettu auki datassa (js/packs/maalehtinostot-fra.js
+ * "LÄHIZOOMIPORTTI `lahi`"): *"Pääkartan 21 merkin raja — pysyy,
+ * joten tämän erän uudet nostot on merkitty `lahi: true` -portin
+ * taakse"*. Lippu oli siis kiertotie tälle katolle, ja kun omistaja
+ * poisti katon kohdemaasta, kiertotien syy poistui samalla — muuten
+ * PAATOKSET 25:n *"KAIKKI nostot ja kaupungit"* jäisi 44:ään 62:sta.
+ *
+ * LIPPUA EI SILTI POISTETTU DATASTA, koska se tekee kohdemaassa vielä
+ * toista työtä: `lahi`-merkki ohittaa kaupunkiruuhkan kolmen merkin
+ * katon (js/fokuskohteet.js karsiKaupunkiruuhka), ja ilman lippua
+ * kaupungin kohdalle osuvat nostot putoaisivat kartalta kokonaan.
+ * Lippu jää siksi voimaan datana; vain tämä portti päästää sen
+ * kohdemaassa läpi. Muualla (laattageneraattori, savukkeet, muut
+ * maat) `lahi` toimii entiseen tapaan.
+ *
+ * MISSÄ TÄMÄ NÄKYY. Pelin oma kerros (keraa alempana) kerää merkit
+ * VAIN kohdemaasta (kohteidenNykyinenIso; katselutilassa ei
+ * lainkaan), joten se antaa lipun aina. Laattageneraattori ja
+ * savukkeet kysyvät samaa porttia ilman lippua ja saavat katon
+ * entisellään — siksi lippu on parametri eikä vakion muutos.
+ */
+/*
  * ══ VAIN KOHDEMAAN NOSTOT ═════════════════════════════════════════
  *
  * OMISTAJA 14.9.2026, sanatarkasti (Raamattu, KARTTAUUDISTUKSEN
@@ -467,19 +560,25 @@ export function lahizoomiAuki(uloinOsuus) {
  * @param {Array} merkit   maanKohdemerkit-rivit datan järjestyksessä
  * @param {boolean} lahella  onko lähizoomi auki (lahizoomiAuki)
  * @param {function} kohdeHaku  rivi → kohdeolio (oletuksena rivin oma)
+ * @param {{kohdemaa?: boolean}} [asetukset]  `kohdemaa: true` = merkit
+ *   ovat korostetun kohdemaan omia, jolloin niitä ei pidätä katto
+ *   eikä `lahi`-lippu (KATTO EI KOSKE KOHDEMAATA yllä).
  * @returns {{merkit: Array, piiloon: Array<string>, polttovelka: Array<string>}}
  *   `merkit` piirretään, `piiloon` jäi lähizoomia odottamaan,
  *   `polttovelka` on portin hylkäämä mutta laatoissa yhä oleva muste.
  */
-export function merkkiPortti(merkit, lahella, kohdeHaku = (m) => m.kohde ?? null) {
+export function merkkiPortti(
+  merkit, lahella, kohdeHaku = (m) => m.kohde ?? null, { kohdemaa = false } = {},
+) {
   if (lahella) return { merkit, piiloon: [], polttovelka: [] };
+  const katto = kohdemaa ? Infinity : PAAKARTAN_MERKKIKATTO;
   const kuuluu = new Set();
   const jarjestys = merkit.map((m, i) => ({ m, i }))
     .sort((a, b) => (merkinTarkeys(kohdeHaku(a.m)) - merkinTarkeys(kohdeHaku(b.m)))
       || (a.i - b.i));
   for (const { m, i } of jarjestys) {
-    if (kohdeHaku(m)?.lahi) continue;
-    if (kuuluu.size >= PAAKARTAN_MERKKIKATTO) continue;
+    if (!kohdemaa && kohdeHaku(m)?.lahi) continue;
+    if (kuuluu.size >= katto) continue;
     kuuluu.add(i);
   }
   const ulos = [];
@@ -554,6 +653,11 @@ export function asetteleNosto(el, d) {
   }
   el.dataset.nimio = nimio;
   el.classList.toggle('lunastettu', Boolean(d.lunastettu));
+  // Kaupunkimerkki on isompi (ks. KAUPUNKIMERKIN NIMIÖ ON ISOMPI KUIN
+  // NOSTON). Luokka on savukkeiden ja CSS:n kahva: ilman sitä
+  // mittaava savuke poimisi DOM-järjestyksen ensimmäisen merkin eikä
+  // tietäisi, kumman mitan se luki.
+  el.classList.toggle('pallolauta-nosto-kaupunki', Boolean(d.kaupunki));
 }
 
 /** Kohtaamispisteen elementti: sama tuike kuin kartalla (css/fokusvirta.css). */
@@ -599,7 +703,7 @@ export function asetteleFokuspiste(el, d) {
 export function nostonLaatikko(p, d, {
   kylki = null, dx = 0, dy = 0, nimio = null,
 } = {}) {
-  const mitta = nostonMitta();
+  const mitta = nostonMitta() * merkinKerroin(d);
   const r = NOSTOSYM_MINI_RUUTU * mitta;
   const x = p.x + dx;
   const y = p.y + dy;
@@ -725,11 +829,18 @@ export function luoNostot({
        * Portti saa merkit DATAN järjestyksessä ja päättää, mitkä
        * kuuluvat tälle zoomille; `tiedot` kantaa kohdeolion, jolta
        * `lahi`-lippu ja tyyppi luetaan.
+       *
+       * KOHDEMAA-LIPPU (ks. KATTO EI KOSKE KOHDEMAATA). Tämä kerros
+       * kerää merkit vain siitä maasta, jossa pelaaja seisoo ja joka
+       * on kartalla korostettuna (js/pallolauta/lauta.js korostusIso =
+       * sama kohteidenNykyinenIso), eikä katselutilassa lainkaan —
+       * ylempänä tässä funktiossa. Siksi lippu on tässä aina tosi.
        */
       portti = merkkiPortti(
         maanKohdemerkit(pack, iso, pohja, onPoltettu),
         lahizoomiAuki(uloinOsuus),
         (m) => tiedot.get(m.id) ?? m.kohde ?? null,
+        { kohdemaa: true },
       );
       for (const m of portti.merkit) {
         const a = asteet(m);
@@ -758,6 +869,10 @@ export function luoNostot({
            * (`osumat`), jottei se voi voittaa naapurinoston sormea.
            */
           vainNimi: Boolean(kohde.vainNimi),
+          // Kaupunkimerkin nimiö on isompi (ks. KAUPUNKIMERKIN NIMIÖ
+          // ON ISOMPI KUIN NOSTON); sama lippu ohjaa piirron ja
+          // laatikon, jotta väistö mittaa ruudulla olevaa mittaa.
+          kaupunki: kohde.tyyppi === 'kaupunki',
           avaa: kohde.vainNimi
             ? null
             : ((ankkuri) => avaaFokuskohde(ui, kohde, { ankkuri })),
@@ -911,14 +1026,35 @@ export function luoNostot({
       if (!p) continue;
       nakyvat.push({ ...r, p, etaisyys: keskipiste ? Math.hypot(p.x - keskipiste.x, p.y - keskipiste.y) : 0 });
     }
-    // Elävät: kohtaamispiste ensin, sitten lähimmät ruudun keskipistettä.
+    /*
+     * Elävät: kohtaamispiste ensin, SITTEN KAUPUNGIT, sitten lähimmät
+     * ruudun keskipistettä.
+     *
+     * KAUPUNKI EI SAA PUDOTA DOM-KATTOON (omistaja 15.9.2026,
+     * KARTTAUUDISTUKSEN PAATOKSET 25: *"kohdemaan KAIKKI nostot ja
+     * kaupungit piirtyvät heti saapumisnäkymässä"*). Kun katto 21
+     * poistui kohdemaasta, eläviä merkkejä on Ranskassa enemmän kuin
+     * CSS2D-budjetti (`NOSTOJEN_KATTO` 40, karttapallo.md luku 6)
+     * päästää, ja pelkkä etäisyysjärjestys pudotti Strasbourgin,
+     * Nizzan ja Lillen — kolme seitsemästä lisäkaupungista, jotka
+     * olivat kartalla ennen tätä erää (mitattu 15.9.2026). Merkkiportin
+     * oma tärkeysjärjestys (merkinTarkeys: kaupungit ensin) ei auta
+     * tässä, koska tämä on eri katto eri syystä; siksi sama järjestys
+     * toistetaan tässä. Kaupunkeja on maata kohti kourallinen, joten
+     * ne eivät voi täyttää budjettia.
+     */
     const elavat = nakyvat.filter((r) => !r.poltettu)
-      .sort((a, b) => ((a.perhe === 'piste') - (b.perhe === 'piste')) * -1 || (a.etaisyys - b.etaisyys));
+      .sort((a, b) => ((a.perhe === 'piste') - (b.perhe === 'piste')) * -1
+        || (Number(Boolean(b.kaupunki)) - Number(Boolean(a.kaupunki)))
+        || (a.etaisyys - b.etaisyys));
     const naytetaan = elavat.slice(0, Math.max(0, katto));
     const mittaNyt = nostonMitta();
     datumit = naytetaan.map((r) => ({
       avain: r.avain,
-      mitta: mittaNyt,
+      // Kaupunki on isompi kuin nosto (merkinKerroin).
+      mitta: mittaNyt * merkinKerroin(r),
+      kaupunki: Boolean(r.kaupunki),
+      poltettu: Boolean(r.poltettu),
       laji: r.perhe === 'piste' ? 'piste' : 'nosto',
       id: r.id,
       perhe: r.perhe,
