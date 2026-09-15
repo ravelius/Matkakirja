@@ -135,11 +135,11 @@ export const FOKUSVIRTA_AMSTERDAM = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 a60ae0db42cc9aa50492ba93713bd65cd4ef683f5d115e15ff4b307e9df03193. */
+    /* Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json */
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-amsterdam-i1-r20260914-tarina-v1.jpg',
       lyhyt: 'Amsterdam, 1873. Kanavatalon ullakolle mahtui kokonainen kirkko.',
-      selite: 'Pappi seisoo kapean ullakkokirkon alttarin vierellä puuparvien alla.',
+      selite: 'Pappi seisoo kapean ullakkokirkon alttarin vierellä puuparvien alla. Kirkko rakennettiin kolmen kanavatalon ullakoille 1660-luvulla, kun katolinen jumalanpalvelus oli julkisesti kielletty.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
         'https://opsolder.nl/en/the-monument/',
@@ -148,7 +148,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
     luentakuva2: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-amsterdam-i2-r20260914-tarina-v1.jpg',
       lyhyt: 'Amsterdam, 1873. Ullakkokirkon urut salin toisessa päädyssä.',
-      selite: 'Vuonna 1794 rakennetut urut ovat parven päädyssä penkkien yläpuolella.',
+      selite: 'Vuonna 1794 rakennetut urut ovat parven päädyssä penkkien yläpuolella. Kaksikerroksiset parvet kiertävät salia, ja soitin täyttää sen ahtaan päädyn kokonaan.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
         'https://opsolder.nl/wp-content/uploads/2024/04/haantje36.pdf',
@@ -230,13 +230,13 @@ export const FOKUSVIRTA_AMSTERDAM = {
      * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
      * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
      * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
-     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-amsterdam-01-r20260909-euv1-v1.jpg, pulu-cam-amsterdam-02-r20260909-euv1-v1.jpg.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
      */
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-amsterdam-p1-r20260914-tarina-v1.jpg',
         lyhyt: 'Amsterdam: pyörät parkissa veden alla, kuivin renkain.',
-        selite: 'Stationsplein-hallin pyörätelineet ja valkoiset pylväät kohoavat matalan kameran yllä.',
+        selite: 'Stationsplein-hallin pyörätelineet ja valkoiset pylväät kohoavat matalan kameran yllä. Halli on rakennettu veden alle aseman edustan satama-altaaseen.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.prorail.nl/nieuws/twee-grote-fietsenstallingen-bij-station-amsterdam-centraal-geopend',
@@ -245,7 +245,7 @@ export const FOKUSVIRTA_AMSTERDAM = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-amsterdam-p2-r20260914-tarina-v1.jpg',
         lyhyt: 'Amsterdam: ankka ui pyörähallin katon yllä.',
-        selite: 'Ankka kelluu Open Havenfrontilla, jonka alla sijaitsee aseman edustan pyörähalli.',
+        selite: 'Ankka kelluu Open Havenfrontilla, jonka alla sijaitsee aseman edustan pyörähalli. Pinnan alla on tilaa tuhansille polkupyörille.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://www.prorail.nl/nieuws/twee-grote-fietsenstallingen-bij-station-amsterdam-centraal-geopend',

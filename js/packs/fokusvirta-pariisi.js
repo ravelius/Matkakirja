@@ -175,9 +175,7 @@ export const FOKUSVIRTA_PARIISI = {
     luenta: "[softly] Tuileries’n keisarillinen palatsi oli poltettu Pariisin kapinan aikana kaksi vuotta sitten. Tyhjät ikkunat seisoivat yhä puutarhan laidalla. Asetin kameran puiden alle ja etsin kulmaa, josta rauniot eivät näkyisi. Halusin viedä kotiin kauniin Pariisin. Siirsin jalustaa kahdesti. [warmly] Sitten käänsin kameran suoraan palatsiin: tämäkin oli kaupunki, jossa olin käynyt.",
     aanite: 'assets/audio/puhe-fokus-matkakirja-pariisi.mp3',
     /*
-     * LUENTAKUVA KARTAN PÄÄLLE (kuvatoimitus 10.9.2026, matkakirja-eurooppa-1873-pariisi-r20260909-paper-v4;
-     * SHA-256 55a759868bf735bd36dde99d97298615766696004752ef6ad7aac45d197f2837;
-     * omistaja: "Voit lähettää nämä kahdeksan versiota suoraan peliin").
+     * LUENTAKUVA KARTAN PÄÄLLE. Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json.
      * Kuvatekstit toimituksesta sanasta sanaan: lyhyt kartalle, pitkä
      * suurennokseen. Lähde on pelin oma havainnekuvamerkintä; lahteet on
      * toimituksen tausta-aineisto (ei näy pelaajalle).
@@ -209,7 +207,7 @@ export const FOKUSVIRTA_PARIISI = {
      * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
      * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
      * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
-     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-pariisi-01-r20260909-euv1-v1.jpg.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
      */
     kuvat: [
       {

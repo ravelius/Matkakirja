@@ -260,3 +260,76 @@ tarinateksti muuttumaton, SHA-256 `a1e38ff0f7dd9a5da7842a59622f01ec167ee50c41215
 
 tarinateksti muuttumaton, SHA-256 `3b524abb834d06e629bef36e5d672a0c118e71cbee05b7ae24099d0df7171230`; julkaistun JPEG:n SHA-256 `bbcfa1f47b7f1c0d24b9931f105d871a7fc10731d74a9c565d941663aad01f9a` (671909 tavua, HTTP 200 varmennettu).
 
+
+---
+
+## Täydennys 15.9.: toiset lauseet ja portit
+
+Fablen (päätoimittaja) päätös 15.9.2026: porttitestit pysyvät ennallaan,
+selitteisiin lisätään toinen sisältölause Fablen kirjoittamana, ja Pariisin
+luentakuvan testilukko päivitetään uuteen hyväksyttyyn kuvaan.
+
+### 1. Selitteet (10 kohtaa 14:stä kuvapaikasta)
+
+Fablen tekstit vietiin pakkeihin sanasta sanaan. Lyhyt-, osoite-, lahde- ja
+teksti-kentät jäivät koskematta.
+
+| paikka | tiedosto · kenttä |
+|---|---|
+| amsterdam:I1 | js/packs/fokusvirta-amsterdam.js · matkakirja.luentakuva.selite |
+| amsterdam:I2 | js/packs/fokusvirta-amsterdam.js · matkakirja.luentakuva2.selite |
+| amsterdam:P1 | js/packs/fokusvirta-amsterdam.js · pollo.kuvat[0].selite |
+| amsterdam:P2 | js/packs/fokusvirta-amsterdam.js · pollo.kuvat[1].selite |
+| bergen:I2 | js/packs/fokusvirta-bergen.js · matkakirja.luentakuva2.selite |
+| bergen:P1 | js/packs/fokusvirta-bergen.js · pollo.kuvat[0].selite |
+| bergen:P2 | js/packs/fokusvirta-bergen.js · pollo.kuvat[1].selite |
+| bukarest:P1 | js/packs/fokusvirta-bukarest.js · pollo.kuvat[0].selite |
+| oslo:I1 | js/packs/fokusvirta-oslo.js · matkakirja.luentakuva.selite |
+| varsova:P1 | js/packs/fokusvirta-varsova.js · pollo.kuvat[0].selite |
+
+Pariisi I1/I2/P1 ja bergen:I1 jätettiin ennalleen Fablen ohjeen mukaan.
+
+### 2. Pariisin luentakuvan testilukko
+
+`tests/luentakuva.test.mjs` — testi "alkuerän seitsemän retain-kuvaa käyttää
+hyväksyttyä paper-v4-versiota" nimettiin muotoon "alkuerän retain-kuvat
+käyttävät hyväksyttyä versiota". Pariisi poistettiin paper-v4-silmukasta, ja
+sille lisättiin oma lukko uuteen hyväksyttyyn osoitteeseen
+`matkakirja-pariisi-i1-r20260914-tarina-v1.jpg`. Muut kuusi kaupunkia
+(istanbul, dublin, edinburgh, marseille, lissabon, madrid) pysyvät
+paper-v4-lukossa. Muihin testeihin ei koskettu; porttitestit ennallaan.
+
+### 3. Kaanonkommentit vaihdettujen kuvien yllä
+
+Vanhaan kuvaan viittaavat kommenttirivit päivitettiin muotoon
+"Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti
+posti/kuvatoimitus-tarina14-20260914.json".
+
+- `js/packs/fokusvirta-amsterdam.js` — matkakirjan kommentti
+  ("…paperikuva; toimitus 10.9.2026, SHA-256 a60ae0db…") sekä PULUCAM-lohkon
+  tiedostorivi (pulu-cam-amsterdam-01/02).
+- `js/packs/fokusvirta-bergen.js` — matkakirjan kommentti ("…SHA-256
+  8f941560…") sekä PULUCAM-lohkon tiedostorivi (pulu-cam-bergen-01/02).
+- `js/packs/fokusvirta-bukarest.js` — PULUCAM-lohkon tiedostorivi
+  (pulu-cam-bukarest-01). Matkakirjan kommentti jätettiin, koska bukarestin
+  luentakuva on yhä paper-v4.
+- `js/packs/fokusvirta-oslo.js` — matkakirjan kommentti ("…SHA-256
+  256890fd…"); riville merkittiin, että luentakuva2 on ennallaan. PULUCAM-lohkoon
+  ei koskettu, koska oslon pulu-cam-kuvat ovat yhä vanhat.
+- `js/packs/fokusvirta-varsova.js` — PULUCAM-lohkon tiedostorivi: vaihdettu
+  pulu-cam-varsova-01 poistettiin listasta ja tilalle merkittiin kuvapaikka 1:n
+  uusi hyväksyntä; pulu-cam-varsova-02 jäi listaan, koska se on ennallaan.
+  Matkakirjan kommentti jätettiin (varsovan luentakuva on yhä paper-v4).
+- `js/packs/fokusvirta-pariisi.js` — luentakuvan kommenttilohkon kolme riviä
+  (vanha tiedostonimi + SHA-256 55a75986… + omistajan hyväksyntälainaus)
+  korvattiin yhdellä rivillä; PULUCAM-lohkon tiedostorivi (pulu-cam-pariisi-01).
+
+### 4. Testit
+
+`NODE_USE_ENV_PROXY=1 npm test`: **tests 3440, pass 3427, fail 0**, skipped 13
+(kesto n. 282 s). tests/horatio-livia-europe-batches.test.mjs ja
+tests/luentakuva.test.mjs vihreitä. `node tools/tarkista-kaksoisavaimet.mjs`
+→ "ei kaksoisavaimia". `node tools/tarkista-niputus.mjs` → "niputus kunnossa:
+390 moduulia, 4308 top-level-julistusta, ei törmäyksiä".
+
+Ei versionostoa, ei mergeä.

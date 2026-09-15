@@ -515,12 +515,16 @@ test('jokaisella pakin luentakuvalla on osoite, selite ja lähde', async () => {
   assert.equal(maara, 45, 'Euroopan kaikilla 45 matkakirjapaikalla pitää olla lopullinen luentakuva');
 });
 
-test('alkuerän seitsemän retain-kuvaa käyttää hyväksyttyä paper-v4-versiota', async () => {
+test('alkuerän retain-kuvat käyttävät hyväksyttyä versiota', async () => {
   const { FOKUSVIRRAT } = await import('../js/packs/fokusvirrat.js');
-  for (const id of ['istanbul', 'dublin', 'edinburgh', 'pariisi', 'marseille', 'lissabon', 'madrid']) {
+  for (const id of ['istanbul', 'dublin', 'edinburgh', 'marseille', 'lissabon', 'madrid']) {
     assert.match(FOKUSVIRRAT[id].matkakirja.luentakuva.osoite,
       new RegExp(`-${id}-r20260909-paper-v4\\.jpg$`), id);
   }
+  // Pariisin luentakuva vaihtui tarina14-kuvatoimituksessa 14.9.2026
+  // (manifesti posti/kuvatoimitus-tarina14-20260914.json).
+  assert.match(FOKUSVIRRAT.pariisi.matkakirja.luentakuva.osoite,
+    /-pariisi-i1-r20260914-tarina-v1\.jpg$/, 'pariisi');
 });
 
 /* ---------------------------------------------------------------- */

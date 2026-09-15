@@ -142,7 +142,7 @@ export const FOKUSVIRTA_BERGEN = {
 
   /* ---------- 1. Matkakirja (isoisän ääni) ---------- */
   matkakirja: {
-    /* Hyväksytty lopullinen paperikuva; toimitus 10.9.2026, SHA-256 8f941560edf447ee29ea7fb51dc50b7dbaaa95f8a0edb5e0f18541321153a26c. */
+    /* Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json */
     luentakuva: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-bergen-i1-r20260914-tarina-v1.jpg',
       lyhyt: 'Bergen, 1873. Opas ja kuula tuomiokirkolla.',
@@ -155,7 +155,7 @@ export const FOKUSVIRTA_BERGEN = {
     luentakuva2: {
       osoite: 'https://media.matkakirja.app/matkakirja/eurooppa-1873/matkakirja-bergen-i2-r20260914-tarina-v1.jpg',
       lyhyt: 'Bergen, 1873. Pieni kuula korkealla kiviseinässä.',
-      selite: 'Rautakuula on kiinnitetty tuomiokirkon kiviseinän syvennykseen, mutta kiinnityksen ajankohtaa ei tunneta.',
+      selite: 'Rautakuula on kiinnitetty tuomiokirkon kiviseinän syvennykseen. Perimätieto yhdistää sen Vågenin meritaisteluun vuonna 1665, mutta kiinnityksen ajankohtaa ei tunneta.',
       lahde: 'Matkakirjan havainnekuva',
       lahteet: [
         'https://tohundrefortellinger.w.uib.no/1966/06/20/2017-kanonkule/',
@@ -237,13 +237,13 @@ export const FOKUSVIRTA_BERGEN = {
      * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
      * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
      * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
-     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-bergen-01-r20260909-euv1-v1.jpg, pulu-cam-bergen-02-r20260909-euv1-v4.jpg.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
      */
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bergen-p1-r20260914-tarina-v1.jpg',
         lyhyt: 'Bergen: rumpujoukon tahdissa kadunrajasta.',
-        selite: 'Lasten ja nuorten rumpujoukko marssii kuvaavien katsojien ohi.',
+        selite: 'Lasten ja nuorten rumpujoukko marssii kuvaavien katsojien ohi. Bergenin buekorps-perinne on jatkunut 1800-luvun puolivälistä.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/the-living-tradition-of-buekorps-bergen',
@@ -252,7 +252,7 @@ export const FOKUSVIRTA_BERGEN = {
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-bergen-p2-r20260914-tarina-v1.jpg',
         lyhyt: 'Bergen: nuori johtaja tarkistaa rumpujoukon järjestystä.',
-        selite: 'Nuorempien soittajien muodostelma näkyy matalalta ikkunalaudalta.',
+        selite: 'Nuorempien soittajien muodostelma näkyy matalalta ikkunalaudalta. Joukon johtaja kulkee rivien edessä ja pitää tahdin.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://en.visitbergen.com/ideas-and-inspiration/explore-bergen/the-living-tradition-of-buekorps-bergen',

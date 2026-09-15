@@ -294,13 +294,13 @@ export const FOKUSVIRTA_VARSOVA = {
      * PULU-CAM-EUROOPPA-20260909, tekstisession kuvakohtaiset promptit;
      * omistaja: "ne voi hyvaksya sellaisenaan suoraan peliin").
      * Kuvatekstit sanasta sanaan: lyhyt kuvan alle, pitka karuselliin.
-     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-varsova-01-r20260909-euv1-v1.jpg, pulu-cam-varsova-02-r20260909-euv1-v2.jpg.
+     * Lahteet on tausta-aineisto (ei nay pelaajalle). Tiedostot: pulu-cam-varsova-02-r20260909-euv1-v2.jpg. Kuvapaikka 1: Hyväksytty kuva; kuvatoimitus tarina14 14.9.2026, manifesti posti/kuvatoimitus-tarina14-20260914.json
      */
     kuvat: [
       {
         osoite: 'https://media.matkakirja.app/matkakirja/pulu-cam/matkakirja-varsova-p1-r20260914-tarina-v1.jpg',
         lyhyt: 'Varsova: metsäpolku kulkee raunioista rakennetun kukkulan halki.',
-        selite: 'Kukkula koottiin sodassa tuhoutuneen Varsovan raunioista, ja nykyisen puiston reiteillä historia kohtaa kasvavan metsän.',
+        selite: 'Kukkula koottiin sodassa tuhoutuneen Varsovan raunioista. Nykyisen puiston reiteillä historia kohtaa kasvavan metsän.',
         lahde: 'Matkakirjan havainnekuva',
         lahteet: [
           'https://zzw.waw.pl/nasze-tereny/parki/park-akcji-burza/',
