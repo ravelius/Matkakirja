@@ -291,7 +291,9 @@ test('kamera ottaa saapumisrajauksen laatikkona ja säilyttää varapolun', () =
    * jäisi ruudun alalaidan alle. ERÄ 12: ankkuri on maakohtainen
    * (Ranskalla Biskajanlahti), joten ISO kulkee laajennukselle mukana.
    */
-  assert.match(lauta, /return paneelinLaatikko\(laatikko, iso\);/);
+  // ERÄ 16: kapea ruutu siirtää Ranskan ankkurin Lyoninlahdelle, joten
+  // laajennus tehdään sillä ankkurilla, joka on oikeasti voimassa.
+  assert.match(lauta, /return paneelinLaatikko\(laatikko, iso, \{ kapea: kapeaRuutu\(laatikko\) \}\);/);
   /*
    * ERÄ 2 + ERÄ 3 YHDESSÄ: saapumisajo lukee PANEELILLA LAAJENNETUN
    * laatikon (`saapumislaatikko`) ja asettaa sen myös uloszoomauksen
