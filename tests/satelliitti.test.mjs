@@ -152,18 +152,15 @@ test('yläpalkki vaihtuu kokonaan ja palautuu täsmälleen', () => {
   assert.equal(mapPane.lapset.length, 1);
   assert.equal(mapPane.lapset[0].className, 'satelliittipalkki');
 
-  // Sisältö: linssin nimi, kohteen nimi, ohje ja sulkunappi (X).
+  // Sisältö: linssin nimi, kohteen nimi, ohje ja Sulje linssi.
   const osat = palkki.el.lapset.map((x) => x.className);
   assert.deepEqual(osat, [
     'satelliittipalkki-nimi', 'satelliittipalkki-kohde',
     'satelliittipalkki-ohje', 'satelliittipalkki-sulje',
   ]);
-  // "Sulje linssi" -nappi on pelkkä X (omistaja 15.9.2026); aria-label
-  // ja title kantavat edelleen täyden lauseen.
-  assert.equal(palkki.el.lapset[3].textContent, '×');
-  assert.equal(palkki.el.lapset[3].attribuutit['aria-label'], 'Sulje linssi');
+  assert.equal(palkki.el.lapset[3].textContent, 'Sulje linssi');
   palkki.el.lapset[3].laukaise('click');
-  assert.equal(suljettu, 1, 'Sulje-X kutsuu sulkemista');
+  assert.equal(suljettu, 1, 'Sulje linssi kutsuu sulkemista');
 
   palkki.pura();
   assert.ok(!doc.body.classList.contains('aikajana-palkki-auki'));

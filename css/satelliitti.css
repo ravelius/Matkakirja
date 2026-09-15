@@ -304,27 +304,15 @@ body.aikajana-palkki-auki .topbar {
   white-space: nowrap;
 }
 
-/*
- * PELKKÄ X (omistaja 15.9.2026): sama pyöreä ikoninappi kuin muiden
- * linssien sulkunapeissa (js/pallo.js .pallo-sulje,
- * js/pallolauta/linssikartta.js .linssikartta-sulje) — kiinteä koko,
- * ei enää lukutekstin mittaista laatikkoa.
- */
 .satelliittipalkki-sulje {
   flex: 0 0 auto;
-  width: 2.1rem;
-  height: 2.1rem;
-  padding: 0;
-  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
   border: 1px solid rgba(93, 255, 168, 0.45);
   background: rgba(93, 255, 168, 0.12);
   color: #eafff3;
   font: inherit;
-  font-size: 1.15rem;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 0.85rem;
   cursor: pointer;
 }
 
@@ -336,7 +324,7 @@ body.aikajana-palkki-auki .topbar {
   .satelliittipalkki-ohje { display: none; }
   .satelliittipalkki-nimi { font-size: 0.62rem; letter-spacing: 0.06em; }
   .satelliittipalkki-kohde { flex: 1 1 auto; font-size: 0.82rem; }
-  .satelliittipalkki-sulje { width: 1.9rem; height: 1.9rem; font-size: 1rem; }
+  .satelliittipalkki-sulje { padding: 0.3rem 0.5rem; font-size: 0.8rem; }
 }
 
 /* ─────────────────────── havaintoikkuna (koko ruutu) ─────────────── */
