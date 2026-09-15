@@ -286,6 +286,63 @@ ovat ennallaan (`js/kaiutinmittari.js` oli niissä jo).
 
 ---
 
+## 6c. Jatko 15.9.2026: savuke-iphone-tekstit 40/41 (julkaisuagentin pysäytys)
+
+Julkaisuagentti pysäytti v1910:n: tässä haarassa
+`tools/savukkeet/savuke-iphone-tekstit.mjs` antoi **40/41 kahdesti
+identtisesti**, rivi ~344: *"FAIL kaiuttimen VU-mittari elää kertojan
+luennassa — kaaret=000 animaatio=none"*. Puhtaalla mainilla 41/41.
+
+**Syy ei ollut tuotantokoodissa — vartio löysi oikean asian.** Savukkeen
+`puhu()`-apuri luo oman `new Audio()`:n ja kutsuu `merkitsePuhuja():a`
+suoraan, ohittaen `luentaSoitin()` / `liitaLuennanVahvistin()` -ketjun,
+eikä aseta `ui.diaryVoicea`. Luentavahdin `haeMittari` palautti siis
+`null`. v1908:ssa tämä ei näkynyt, koska mittarilla oli ajastettu
+varapolku, joka eli ilman ääntäkin; nyt varapolku on poistettu ja
+mittari lukee todellisen RMS:n, joten **äänetön tynkä jättää kaaret
+perustellusti sammuksiin**. Savuke mittasi tilaa, jota pelissä ei ole.
+
+**Korjaus savukkeeseen, ei tuotantoon.** `puhu()` rakentaa kertojalle
+saman ketjun kuin tuotanto (lähde → gain → analyser → ulos) ja syöttää
+siihen testisignaalin (180 Hz, gain 0,3); analysaattori asetetaan
+`audio.aaniMittari`ksi ja soitin `ui.diaryVoice`ksi. Mykkä loppusolmu
+pitää ajon hiljaisena muuttamatta analysaattorin näkemää tasoa.
+
+- Vain kertojalle: pulun repliikki ei saa sytyttää kaiutinta (oma
+  vartionsa), joten pululle jää pelkkä puheenvuoro ilman äänigraafia.
+- `vaikene()` pysäyttää testisignaalin ja nollaa `ui.diaryVoicen`,
+  jottei vastakoe saa apua soimaan jääneestä äänestä.
+- Chromiumille `--autoplay-policy=no-user-gesture-required`.
+
+**Ajastettua varapolkua EI palautettu tuotantokoodiin.**
+
+Tulokset korjauksen jälkeen: `savuke-iphone-tekstit` **41/41**,
+`savuke-kaiutin-luentakuvat` **49/49**, `npm test`
+**3441 / 3428 läpi / fail 0**, `tarkista-savukkeet` kunnossa.
+
+### Aiemmat 47–48/49 olivat mittarin oma kuormavika, eivät koodin
+
+Aiemmissa ajoissa `savuke-kaiutin-luentakuvat` jäi 48/49:ään ja
+47/49:ään vaihtuvilla punaisilla (`ipad: lapun napautus näyttää
+merkinnän kesken luennan`, `pulun repliikki ei jää ruudulle`). Nämä
+ajot tehtiin koneella, jota kuormitti rinnakkainen `npm test` JA tämän
+session omat jumiin jääneet odotusprosessit — kun taas puhtaan mainin
+verrokkiajo (41/41) ajettiin tyhjällä koneella. Vertailu ei siis ollut
+kelvollinen.
+
+Kun haara ajettiin YKSIN tyhjällä koneella, tulos oli **49/49**, ja
+iPadin napautusvartio antoi täsmälleen samat luvut kuin puhdas main:
+`klikki "ok (143,87 → H2.paikka-aika)"`, `lappu:false`,
+`rivi {w:329, h:0}`. Ero aiempiin ajoihin oli kuormassa, ei koodissa.
+Nämä vartiot nojaavat 400 ms:n odotukseen napautuksen jälkeen, joten
+ne on ajettava yksi kerrallaan.
+
+Korrelaatio toistui kolmannen kerran: **r = 0,746** (tauot 5/5
+sammuksissa), pakotettu kuvio 0,085 ja 5/5 taukoa rikki, hiljaisuus
+436/436 näytettä nolla kaarta.
+
+---
+
 ## 7. Mitä omistajan pitää vahvistaa iPhonella
 
 1. Saapumisluenta **istunnon ensimmäisenä** (juuri se tapaus, joka
