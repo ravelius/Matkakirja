@@ -7535,7 +7535,9 @@ export const RAAMATTU = {
           + '(kuva ja huntu eri pinoamiskonteksteissa, kuva paallimmaisena '
           + 'DOM-jarjestyksen ja z-indexin nojalla). Chromium ei toista '
           + 'vikaa, joten mittaus tehdaan pinoamiskonteksteista ja '
-          + 'omistaja vahvistaa iPhonella. Tila: tyo Opus-agentilla.',
+          + 'omistaja vahvistaa iPhonella. Tila: julkaistu v1909 (#2508); '
+          + 'juurisyy oli kerrosjarjestys (.map-pane ilman omaa pinoa), ei '
+          + 'selainero.',
         'KAIUTTIMEN KAARET SEURAAVAT PUHETTA, EIVAT AJASTUSTA (omistaja '
           + '15.9.2026 klo 08.35 UTC, iPhone v1908, sanatarkasti: '
           + '"Kajutin kuvake elaa, mutta se ei ela puheen tahdissa."): '
@@ -7548,7 +7550,8 @@ export const RAAMATTU = {
           + 'nakyvat. Ajastettu kuvio on sallittu vain jos AudioContext ei '
           + 'ole saatavilla, ja silloinkin se merkitaan lokiin. Mittaus: '
           + 'kaarien tilasarja vs. aanitiedoston amplitudiverhokayra '
-          + '(korrelaatio > 0,6; tauot tasan). Tila: tyo Opus-agentilla.',
+          + '(korrelaatio > 0,6; tauot tasan). Tila: julkaistu v1910 (#2509), '
+          + 'mitattu r = 0,75, tauot 5/5.',
         'LINSSIVIKA: KOHDEMAAN KOROSTUS JA MAAPANEELI VUOTAVAT LINSSIIN, '
           + 'KARTAN REUNA VAREILEE (omistaja 14.9.2026 klo 21.15 UTC, '
           + 'iPad-kuva Ihmisen matka -linssista, sanatarkasti: "Linssissa '
