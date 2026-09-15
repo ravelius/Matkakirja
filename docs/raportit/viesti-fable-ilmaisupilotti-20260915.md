@@ -73,3 +73,69 @@ Erän 3 kohdalla ei ole osittaista tulosta: ämpärissä ei ole yhtäkään tied
 
 Ei muita ajoja: ei loppu38-erää, ei 43:a saapumisparia, ei pulu-bab26ef7:n (hyväksytyt sofia-3/venetsia-3) uusintaa. Ei muutoksia pelin dataan, Raamattuun, versionumeroon; ei mergejä; ei avaimia lokiin. Äänten käyttö peliin on Codexin linjauksen mukaan eri vaihe.
 
+## Jatko 15.9.2026 (Sonnet-agentti): erä 3 korjattu ja ajettu omassa haarassa
+
+Omistajan päätöksellä 15.9.2026 korjasin edellä kuvatun kuiva-ajovian **omaan haaraani** `claude/fable-livia-ilmaisu-fix` — Codexin haaraan `codex/livia-ilmaisu-20260914` ei kosketa.
+
+### Vika
+
+`.github/workflows/generoi-pulu.yml`, askel "Kuiva ajo (repliikit ja kestot)" (n. rivit 248–260 haarassa `codex/livia-ilmaisu-20260914`): env-lohko välitti `tools/generoi-pulu.mjs`:lle vain `REPLIIKIT`, `PULU_MALLI` ja `PULU_VAKAUS` — ei `AANI`a. Työkalun saapumisäänilukko (`saapumisAanenRooliEste`, n. rivit 1083–1091) tarkisti siksi aina oletusäänellä `piI8Kku0DcvcL6TTSeQt`, mistä seurasi virhe "kertojan saapumisnimi vaatii voice_id:n Sz0tRTEpybtDJ9ru2kgD, sai piI8Kku0DcvcL6TTSeQt" — täsmälleen run 34923063972:n virhe. Maksullinen "Generoi ja vie ämpäriin" -askel sai `AANI`n oikein koko ajan (`AANI: ${{ inputs.aani }}` + `--aani "$AANI"`).
+
+### Korjaus (commit `b36c4d0d`, haara `claude/fable-livia-ilmaisu-fix`)
+
+Pienin mahdollinen muutos, samalla tavalla kuin maksullinen askel jo tekee:
+
+```diff
+       - name: Kuiva ajo (repliikit ja kestot)
+         if: ${{ inputs.toiminto == 'kuiva' || inputs.toiminto == 'generoi' }}
+         env:
++          AANI: ${{ inputs.aani }}
+           REPLIIKIT: ${{ inputs.repliikit }}
+           PULU_MALLI: ${{ inputs.malli }}
+           PULU_VAKAUS: ${{ inputs.vakaus }}
+         run: |
+           set -euo pipefail
+-          if [ -n "$REPLIIKIT" ]; then
+-            node tools/generoi-pulu.mjs --kuiva --repliikit "$REPLIIKIT"
+-          else
+-            node tools/generoi-pulu.mjs --kuiva
+-          fi
++          liput=()
++          if [ -n "$AANI" ]; then liput+=(--aani "$AANI"); fi
++          if [ -n "$REPLIIKIT" ]; then liput+=(--repliikit "$REPLIIKIT"); fi
++          node tools/generoi-pulu.mjs --kuiva "${liput[@]}"
+```
+
+Muut liput (pakota, haku, retry_reason, kuitti) eivät koske kuiva-askelta, eikä niissä havaittu poikkeamaa maksulliseen askeleeseen — korjaus rajattiin vain `AANI`in.
+
+### Vastakoe paikallisesti (ei verkkokutsuja)
+
+- `node tools/generoi-pulu.mjs --kuiva --repliikit saapumisnimi-sofia,saapumisnimi-venetsia` (ilman `--aani`) → kaatui täsmälleen alkuperäisellä viestillä: "kertojan saapumisnimi vaatii voice_id:n Sz0tRTEpybtDJ9ru2kgD, sai piI8Kku0DcvcL6TTSeQt. Ajo keskeytettiin ennen kuittia ja verkkokutsuja." — vika toistui odotetusti korjaamattomalla komennolla.
+- `node tools/generoi-pulu.mjs --kuiva --aani Sz0tRTEpybtDJ9ru2kgD --repliikit saapumisnimi-sofia,saapumisnimi-venetsia` → läpäisi, tulosti molemmat repliikit (kestot ~0,4 s ja ~0,6 s) ja kohdetiedostot ilman API-kutsuja.
+- YAML validoitu Python `yaml.safe_load`:lla — dispatch-inputit ja step-rakenne parsiutuivat oikein (askelnimessä ei kaksoispistettä rikkomassa dispatchia).
+
+### Ajo haarassa `claude/fable-livia-ilmaisu-fix`
+
+GitHub Actions run **34923656443** — https://github.com/ravelius/Matkakirja/actions/runs/34923656443 — ref `claude/fable-livia-ilmaisu-fix`, head_sha `b36c4d0d1e3b8709844cceae6b928f56786086e5`, toiminto=generoi, malli=eleven_v3, vakaus=natural, pakota=ei, haku/kuitti/retry_reason tyhjät, repliikit=`saapumisnimi-sofia,saapumisnimi-venetsia`, aani=`Sz0tRTEpybtDJ9ru2kgD`. **Conclusion: success.** Kuiva-askel ja maksullinen askel molemmat vihreitä (job 104236965762).
+
+### Kuitti
+
+`https://media.matkakirja.app/aanet/pulu/kuitit/pulu-0987c98c5185f5842d12.completed.json` — batchId `pulu-0987c98c5185f5842d12`, molemmat rivit `generationStatus: generated`, voiceId `Sz0tRTEpybtDJ9ru2kgD`, malli `eleven_v3`, `outputFormat: mp3_44100_192`, `postprocess.kind: none`.
+
+### Mitattu (raaka + final ladattuina, sha256 itse laskettuna)
+
+- **saapumisnimi-sofia**: raaka sha256 = final sha256 = `118001385138241d24c50e42df68afe147c80be590037b338a3155ab242e076a`, 42 049 tavua, kesto 1,724 s
+- **saapumisnimi-venetsia**: raaka sha256 = final sha256 = `a462a5b4bbbaf3676c7e73094618d060219e0a53f8b5e20ff3c166c719d30a1f`, 57 095 tavua, kesto 2,351 s
+- Molemmissa ffprobe: stream bit_rate 192000 (mp3_44100_192), format tag `encoder=Lavf60.16.101` — ei `Lavc`-jälkeä toisesta koodauskierroksesta (Xing/LAME-info-header audiokehyksen sisällä on ElevenLabsin oman ensimmäisen koodauksen jäänne, ei tämän ajon jälkikäsittelyä — sha256 raa'an ja finalin välillä on identtinen, joten mikään ei koodannut ääntä uudelleen)
+- HTTP 200 kaikkiin neljään osoitteeseen (2 raakaa + 2 staged final)
+
+### Kuuntelulinkit (staging, ei vielä pelissä)
+
+- saapumisnimi-sofia — 1,72 s, sha256 `118001385138241d24c50e42df68afe147c80be590037b338a3155ab242e076a`
+  https://media.matkakirja.app/aanet/pulu/erat/pulu-0987c98c5185f5842d12/horatio-saapumisnimi-sofia.mp3
+- saapumisnimi-venetsia — 2,35 s, sha256 `a462a5b4bbbaf3676c7e73094618d060219e0a53f8b5e20ff3c166c719d30a1f`
+  https://media.matkakirja.app/aanet/pulu/erat/pulu-0987c98c5185f5842d12/horatio-saapumisnimi-venetsia.mp3
+
+### Muuta
+
+Kuitattu myös postilaatikkoon (`posti/fable-vanha.md`, haara `claude/postilaatikko`, commit `f663b882`) Codexille tiedoksi: kuiva-ajon `AANI`-vika on korjattu haarassa `claude/fable-livia-ilmaisu-fix` commitissa `b36c4d0d`, ja Codex voi poimia korjauksen omaan haaraansa `codex/livia-ilmaisu-20260914`. Ääniä ei ole kytketty peliin; ne odottavat kuuntelua ja omistajan hyväksyntää samalla linjalla kuin erät 1–2.
