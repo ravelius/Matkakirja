@@ -349,7 +349,27 @@ await ctx.close();
     return { x: r.x, y: r.y, width: r.width, height: r.height };
   });
   const kuvaPaalla = await ajo.cdp.send('Page.captureScreenshot', { format: 'png' });
-  await ajo.sivu.evaluate(() => document.body.classList.remove('luenta-huntu'));
+  /*
+   * VAHTI PYSÄYTETTÄVÄ ENNEN LUOKAN POISTOA (korjaus 15.9.2026, mitattu
+   * julkaisuhaarassa: kirkkausero 0,0 KAHDESTI PERÄKKÄIN, jokaisessa
+   * hilan 63 pisteessä identtisenä — ei kohdistusvirhe vaan täysi
+   * nollatulos). JUURISYY: `kaynnistaLuentavahti` (js/ui.js) ajaa
+   * `setInterval`-kyselyn `LUENTAVAHDIN_VALI_MS` (200 ms) välein, ja
+   * kysely näkee yhä `kertoja && kuvaRuudulla` totena — se PALAUTTAA
+   * `luenta-huntu`-luokan kartalle jo ennen 450 ms:n odotuksen
+   * loppua, jolloin "huntu pois" -kuvakaappaus näyttääkin huntua
+   * PÄÄLLÄ. Testi ei siis mitannut väärää pistettä eikä
+   * backdrop-filterin puutetta headlessissä — se mittasi kahta
+   * IDENTTISTÄ tilaa. Vahdin ajastin pysäytetään tässä ajaksi, jotta
+   * manuaalinen luokanpoisto pysyy voimassa koko mittauksen ajan;
+   * ajastinta ei tarvitse käynnistää uudelleen, koska tämä ajo (`ajo`)
+   * suljetaan tämän lohkon lopussa.
+   */
+  await ajo.sivu.evaluate(() => {
+    const { ui } = window.matkakirja;
+    if (ui.luentavahti) { clearInterval(ui.luentavahti); ui.luentavahti = null; }
+    document.body.classList.remove('luenta-huntu');
+  });
   await ajo.sivu.waitForTimeout(450); // opacity-siirtymä (400 ms) ehtii pois
   const kuvaPois = await ajo.cdp.send('Page.captureScreenshot', { format: 'png' });
   await ajo.sivu.evaluate(() => document.body.classList.add('luenta-huntu'));

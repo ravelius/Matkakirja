@@ -138,6 +138,41 @@ harhauttavat vastakokeen väärään nollatulokseen. Kelpaava piste vaatii
 osuman `.kartta-kuori`-elementtiin ja sulkee pois napit, kiikarin,
 karttaselitteen, fokusmitat, fact-cardin ja isokuvan.
 
+## 6b. Julkaisuagentin havaitsema 19/20 — vartion oma ajoitusvirhe, ei uusi korjausvirhe
+
+Julkaisuhaarassa `claude/julkaisu-huntu-liiku` (PR #2505) savuke antoi
+19/20 kahdesti: hilan suurin kirkkausero oli **0,0** JOKAISESSA 63
+pisteessä — ei pieni ero väärässä pisteessä, vaan täydellinen
+nollatulos. Sama toistui puhtaassa worktreessä suoraan haarasta
+`claude/bold-ride-vow4ki-huntu-korjaus`.
+
+**Juurisyy on vartion omassa mittaustavassa, ei itse korjauksessa.**
+`kaynnistaLuentavahti` (js/ui.js) ajaa `setInterval`-kyselyn
+`LUENTAVAHDIN_VALI_MS` (200 ms) välein. Vartion vastakoe poisti
+`luenta-huntu`-luokan käsin ja odotti 450 ms ennen "huntu pois"
+-kuvakaappausta — mutta vahti näki koko ajan `kertoja && kuvaRuudulla`
+totena ja **palautti luokan takaisin jo ennen kuvakaappausta**, 1–2
+kertaa 200 ms:n välein. Molemmat kuvakaappaukset ("päällä" ja "pois")
+olivat siis todellisuudessa SAMAA tilaa — ei ajoitusta kuormassa eikä
+backdrop-filterin puutetta headlessissä (`.map-pane::after`:n
+computed-arvot olivat koko ajan oikein: `content`, `z-index: 4`,
+`backdrop-filter: blur(3.5px)`), vaan vartion oma käsinkosketus hävisi
+elävälle ajastimelle.
+
+**Korjaus vartioon** (`tools/savukkeet/savuke-luentakuvan-kerros.mjs`):
+pysäytetään `ui.luentavahti`-ajastin (`clearInterval`) ENNEN luokan
+poistoa, jotta manuaalinen "pois"-tila pysyy koko mittauksen ajan.
+Ajoa ei tarvitse käynnistää uudelleen, koska sama selainkonteksti
+suljetaan lohkon lopussa. Ajettu kahdesti korjauksen jälkeen samassa
+worktreessä: kirkkausero **119,7** molemmilla kerroilla (kynnys 20) —
+20/20 vartiota läpi kahdesti peräkkäin.
+
+Itse tuotantokorjaus (`js/ui.js` `kuvaRuudulla`-kyselyn laajennus) oli
+koko ajan oikein — `body.luenta-huntu` oli mitatusti `true` isoisän
+luennan aikana jo ensimmäisessä PR #2502:n mittauksessa, ja
+`.map-pane::after`:n computed-arvot olivat oikein myös julkaisuhaaran
+epäonnistuneissa ajoissa. Vain vastakoe mittasi väärin.
+
 ## 7. Portit (kaikki ajettu 15.9.2026, `/home/user/wt-huntu`)
 
 - `tools/savukkeet/savuke-luentakuvan-kerros.mjs`: **20/20 vartiota
