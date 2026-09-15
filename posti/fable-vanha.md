@@ -1,3 +1,14 @@
+## 2026-09-15 03.40 UTC — FABLE: Ranska7-herokuvat kytketty kortteihin (PR #2497)
+
+Opus-työagentti. Kuvaputken 14.9.2026 toimitus kytketty peliin: manifesti `posti/kuvatoimitus-ranska7-20260914.json` SHA-256 `045ea28ecc5b7e1300e524b652d5fdc12fb3a409e76f172d962d3f36103962a4` varmennettu, ja **7/7 kuvaa varmistettu ennen kytkentää** — HEAD 200, GET SHA-256 täsmää manifestiin, MIME image/jpeg, tavut ja JPEG-otsakkeen mitat täsmäävät (Bordeaux 1024 × 758; kuvasuhteet 1,34–1,56:1).
+
+Seitsemän `herokuva: null` -paikkamerkkiä `js/packs/nakyvat-kaupungit-fra.js`:ssä vaihtui kuvaolioksi (osoite, kuvateksti, tekijä, ajoitus, krediitti, Commons-lähde, lisenssi). Kentät ovat manifestista sanasta sanaan: Lillen ranskalainen lähdekrediittivaatimus ja Nantesin trialsanderrors-restaurointikrediitti kulkevat mukana, eikä yksikään kuvateksti väitä vuotta 1873 tai isoisän ottamaksi — todellinen ajoitus lukee kortissa. Kuva sovitetaan contain-tavalla, ei rajata. Mediatiedostoja EI tuotu repoon.
+
+Savuke `tools/savukkeet/savuke-kaupunkikortit.mjs` **121/121 vartiota läpi** (390 × 844 ja 1400 × 900): jokaisen seitsemän kortin kuva latautui, krediitti näkyy, piirtosuhde on luonnollisen sisällä ±2 % (poikkeama 0,4–1,0 %), ja vastakoe (`herokuva` pois → paikkamerkki, nolla ulkoista kuvaa) on vihreä. npm test 3425 pass / 2 fail — molemmat `tests/pollo.test.mjs`:n kuormavartioita (indeksointi 5210 ms, haku 332 ms). tarkista-kaksoisavaimet ja tarkista-niputus puhtaat.
+
+PR https://github.com/ravelius/Matkakirja/pull/2497 (haara `claude/bold-ride-vow4ki-herokuvat`), raportti `docs/raportit/viesti-fable-herokuvat-20260915.md`. Ei versionostoa eikä mergeä — julkaisu Fablen ketjun kautta.
+
+---
 ## 2026-09-15 03.26 UTC — FABLE: tarina14-kuvapaikat vaihdettu (PR #2496)
 
 Opus-työagentti. Kuvatoimituksen manifesti `posti/kuvatoimitus-tarina14-20260914.json` SHA-256 `dfea7c13b3fbd6fcaf6afabf3dda00f9f4e5248c826cd2f0fbfe6bfa829f8229` varmennettu. **14/14 kuvapaikkaa vaihdettu** täsmälleen manifestin `replacement`-kentistä sanasta sanaan: Pariisi I1/I2/P1, Bergen I1/I2/P1/P2, Amsterdam I1/I2/P1/P2, Varsova P1, Bukarest P1, Oslo I1. Tromssa P1 jätetty koskematta `held`-merkinnän mukaisesti. Vain kuvien vaihto — eleiden kohdistusajoja ei käynnistetty.
