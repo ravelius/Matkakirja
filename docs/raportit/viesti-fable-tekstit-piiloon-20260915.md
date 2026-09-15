@@ -129,6 +129,7 @@ jälkeen se palaa auki (uusi vastakoe).
 | `tests/rules.test.mjs` (ei css-suodatinanimaatioita) | 334/334 |
 | `tests/dokumentit.test.mjs` | läpi (raportit ovat kartan ulkopuolella) |
 | `savuke-kaiutin-luentakuvat.mjs` | **41/41 vartiota** (19 vanhaa + 22 uutta, molemmat vastakokeet) |
+| Julkaisuhaara `claude/julkaisu-kaiutin-tekstit` (PR #2507) | `savuke-iphone-tekstit` **41/41**, `npm test` 3440 / **fail 0** |
 | `savuke-iphone-tekstit.mjs` | **38/38 vartiota** (33 vanhaa + 3 uutta työpöytävartiota + 2 juurisyyn vastakoetta) |
 
 ## 6. Juurisyy: merkit seuraavat KUULUVAA ääntä, ei varattua vuoroa
