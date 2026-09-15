@@ -95,6 +95,24 @@
  * `MAAPANEELIN_SKAALA_MAX` (katto ei enää katkaise pelialueella) ja
  * peruskoon kasvu tasan pehmusteen verran.
  *
+ * === ERÄ 18: JOKA MAALLE OMA PAIKKA, PANEELI EI ESTÄ ELEITÄ, ========
+ * === VALIKKO ALLEKKAIN ILMAN TAUSTAA ================================
+ *
+ * PÄÄTÖKSET 20-22 (omistaja 15.9.2026, työpöytä- ja puhelinkuvalla).
+ * Kolme muutosta, kukin omassa lohkossaan:
+ *
+ *   20. JOKA MAALLE OMA ANKKURI. `MAAPANEELIN_ANKKURIT` ja
+ *       `MAAPANEELIN_KAPEAT_ANKKURIT` eivät ole enää Ranskan pilotti
+ *       vaan avoimia tauluja; Kreikka on toinen mitattu maa
+ *       (Joonianmeri / Aigeianmeri).
+ *   21. ELE MENEE KORTIN LÄPI KARTALLE. Kortin neljän tapahtuman
+ *       `stopPropagation` on poistettu ja runko on
+ *       `pointer-events: none` (css/styles.css .maapaneeli-kortti);
+ *       vain plus-nappi ja valikon rivit ottavat napautuksen vastaan.
+ *   22. VALIKKO ILMAN TAUSTAA, KATEGORIAT ALLEKKAIN. Tyyli on
+ *       css/styles.css .maapaneeli-valikko; `sovitaValikko` pitää
+ *       pystylistan ruudun sisällä myös vaakasuunnassa.
+ *
  * === OLETUSPAIKKA: MAAN ALAPUOLELLA, RAJAN ULKOPUOLELLA ==============
  *
  * Ilman maakohtaista ankkuria paneeli on maan laatikon ETELÄREUNAN
@@ -443,9 +461,9 @@ export function paneelinMitat(laatikko, { vertailuskaala = 0, ruutuLeveys = 0 } 
  * on 50 % 0, ks. css .maapaneeli-kortti), joten kortti riippuu
  * pisteestä alaspäin ja levittyy siitä tasan sivuille.
  *
- * RANSKA ON PILOTTI (PÄÄTÖKSET 9 kohta 1): vain sillä on oma piste,
- * muut maat pitävät eteläreunan oletuksen, kunnes omistaja on
- * hyväksynyt Ranskan.
+ * RANSKA OLI PILOTTI (PÄÄTÖKSET 9 kohta 1). Erästä 18 alkaen taulu on
+ * avoin jokaiselle maalle (PÄÄTÖKSET 20), mutta rivi lisätään VASTA
+ * MITATTUNA: maa, jolla ei ole riviä, pitää eteläreunan oletuksen.
  *
  * PISTE 45,9 N / 4,6 W on Biskajanlahden avovettä. Paneeli (Ranskalla
  * 94 × 74 lautayksikköä eli 2,8° × 1,6°) peittää siitä alaspäin
@@ -453,8 +471,34 @@ export function paneelinMitat(laatikko, { vertailuskaala = 0, ruutuLeveys = 0 } 
  * leveydellä noin 1,2 W ja Espanjan pohjoisrannikko 43,4 N, joten
  * kortti on kokonaan merellä kummankin maan ulkopuolella.
  */
+/*
+ * ERÄ 18: KREIKALLE OMA ANKKURI JOONIANMERELLE (Raamattu,
+ * KARTTAUUDISTUKSEN PÄÄTÖKSET 20, omistaja 15.9.2026 työpöytäkuvalla:
+ * *"tuon maan inforuudun sijoitteluun pitaisi miettia periaatteessa
+ * jokaiselle maalle oma jarkevin paikka… Kreikassa esimerkiksi se
+ * varmasti olisi tuon merikilpikonna noston vasemmalle puolelle meren
+ * paalle"*).
+ *
+ * "RANSKA ON PILOTTI" EI ENÄÄ RAJOITA TAULUA. Päätös 20 kumoaa
+ * eteläreunan oletuksen periaatteena: jokainen maa saa oman paikkansa
+ * sitä mukaa kuin se on MITATTU. Kreikka on toinen mitattu maa, ja
+ * loput 25 odottavat ehdotuslistalla (docs/raportit/
+ * viesti-fable-paneeli-grc-20260915.md).
+ *
+ * MIKSI 37,8 N / 19,9 E. Ankkuri on kortin YLÄREUNAN KESKIKOHTA, joten
+ * kortti riippuu siitä alaspäin ja levittyy tasan sivuille: Kreikassa
+ * se peittää saapumisnäkymässä (1400 × 900) noin lat 37,2…37,8 N ja
+ * lng 19,5…20,3 E eli Joonianmeren avovettä Kefalonian ja Zakynthoksen
+ * LÄNSIPUOLELLA. Mitattu kolmesta ehdokkaasta (ks. raportin taulukko):
+ * 25 näytepistettä, 0 maaosumaa (ei GRC, ALB, TUR, ITA eikä saaria),
+ * ja kortti on merikilpikonna-noston (n. Kyparissian lahti) VASEMMALLA
+ * puolella mitatun 115 px:n raolla — juuri se paikka, jonka omistaja
+ * kuvasta osoitti. Kortti on kokonaan ruudulla eikä osu yhteenkään
+ * nostoon, nimikylttiin, kaupunkimerkkiin, reittiin tai puluun.
+ */
 export const MAAPANEELIN_ANKKURIT = {
   FRA: { lat: 45.9, lng: -4.6 },
+  GRC: { lat: 37.8, lng: 19.9 },
 };
 
 /*
@@ -497,12 +541,30 @@ export const MAAPANEELIN_ANKKURIT = {
  * mennä: kortin länsireuna lähestyy Cap de Creusia, ja vaatimus on
  * että kaikki 25 näytepistettä pysyvät merellä.
  *
- * VAIN RANSKALLA on kapea-ankkuri; muilla mailla puuttuva rivi
- * tarkoittaa, että oletusankkuri (laatikon eteläreuna) pätee kuten
- * ennen — pilotti on pilotti (PÄÄTÖKSET 9 kohta 1).
+ * PUUTTUVA RIVI tarkoittaa, että kapealla ruudulla käytetään maan
+ * leveän ruudun ankkuria, ja jos sitäkään ei ole, oletusta (laatikon
+ * eteläreuna). Rivi lisätään vain mitattuna (PÄÄTÖKSET 20).
+ */
+/*
+ * ERÄ 18: KREIKAN KAPEA ANKKURI ON AIGEIANMERELLÄ (PÄÄTÖKSET 20 kohta
+ * 1: oma ankkuri valitaan sekä leveälle että kapealle ruudulle).
+ *
+ * MIKSI EI JOONIANMERI. Pystypuhelimella saapumisnäkymä sovitetaan
+ * KORKEUTEEN (PÄÄTÖKSET 17), jolloin ruudulle mahtuu Kreikan
+ * pystymitta mutta vain noin kolme astetta pituutta: Joonianmeren
+ * 19,9 E jäisi ruudun ULKOPUOLELLE länteen, aivan kuten Ranskan
+ * Biskaja (PÄÄTÖKSET 18).
+ *
+ * MIKSI 36,15 N / 24,35 E. Piste on Kreikan itä-länsi-keskilinjalla
+ * ja Aigeianmeren avovedellä Milosin eteläpuolella, Peloponnesoksen ja
+ * Kreetan VÄLISSÄ olevassa aukossa — siis kartan omassa tyhjässä,
+ * jonka kumpikin maanosa kehystää. Mitattu (390 × 844): 25
+ * näytepistettä, 0 maaosumaa; kortti on kokonaan ruudulla (x
+ * 224…259 / 374, y 635…663 / 775) ja lähimpään nostoon jää 37 px.
  */
 export const MAAPANEELIN_KAPEAT_ANKKURIT = {
   FRA: { lat: 42.6, lng: 3.77 },
+  GRC: { lat: 36.15, lng: 24.35 },
 };
 
 /**
@@ -676,15 +738,25 @@ function paneeliElementti(d) {
     d.avaaValikko?.(!d.valikkoAuki);
   });
   /*
-   * ELE JÄÄ KORTTIIN. Kartta panoroi pallon kankaalta, mutta kortin
-   * yli vedetty sormi ei saa aloittaa panorointia eikä kortin napautus
-   * saa mennä pallon napautuslogiikkaan (js/pallolauta/lauta.js
-   * napautaPintaan). Sama kolmen tapahtuman suoja kuin maataululla
-   * (js/fokusmitat.js rakennaMaataulu, sääntö 4).
+   * ELE EI ENÄÄ JÄÄ KORTTIIN (erä 18; Raamattu, KARTTAUUDISTUKSEN
+   * PÄÄTÖKSET 21, omistaja 15.9.2026: *"jos osoitin on tai sormi tuon
+   * infotaulun kohdalla, niin vierittaminen tai zoomaus ei silloin
+   * onnistu"*).
+   *
+   * ENNEN tässä oli neljän tapahtuman `stopPropagation` — pointerdown,
+   * touchstart, wheel ja click — jotta kortin yli vedetty sormi ei
+   * aloittaisi panorointia. Sivuvaikutus oli juuri se, mistä omistaja
+   * kirjoitti: kortin kohdalla kartta ei liikkunut eikä zoomannut
+   * lainkaan.
+   *
+   * NYT eleitä ei pysäytetä ollenkaan, vaan kortin RUNKO on kartalle
+   * läpinäkyvä (`pointer-events: none`, css/styles.css
+   * .maapaneeli-kortti) ja vain plus-nappi ja valikon rivit ottavat
+   * napautuksen vastaan. Ne pysäyttävät oman `click`insä alla, joten
+   * napautus ei mene pallon napautuslogiikkaan (lauta.js
+   * napautaPintaan) — mutta rulla, nipistys ja raahaus menevät
+   * kankaalle kuin korttia ei olisi.
    */
-  for (const tapahtuma of ['pointerdown', 'touchstart', 'wheel', 'click']) {
-    kortti.addEventListener(tapahtuma, (e) => e.stopPropagation(), { passive: true });
-  }
   el.appendChild(kortti);
   return el;
 }
@@ -813,6 +885,7 @@ function sovitaValikko(kortti) {
   const valikko = kortti.querySelector('.maapaneeli-valikko');
   if (!valikko || valikko.hidden) return;
   valikko.classList.remove('ylos');
+  valikko.style.setProperty('--valikko-siirto', '0px');
   const r = valikko.getBoundingClientRect();
   if (!(r.height > 0)) return;
   const kotelo = kortti.closest('.pallo-kotelo')?.getBoundingClientRect();
@@ -825,7 +898,35 @@ function sovitaValikko(kortti) {
       if (k.top < raja && k.top > r.top) raja = k.top;
     }
   }
-  if (r.bottom > raja) valikko.classList.add('ylos');
+  /*
+   * YLÖS VAIN JOS SINNE MAHTUU (erä 18). Pystysuora lista (PÄÄTÖKSET
+   * 22) on moninkertaisesti entistä yhtä riviä korkeampi, joten
+   * ylösnosto voi työntää sen ruudun YLÄREUNAN yli — silloin alhaalla
+   * oleva kaluste on pienempi paha kuin ruudun ulkopuoli.
+   */
+  const ylaraja = kotelo ? kotelo.top : 0;
+  if (r.bottom > raja && kortti.getBoundingClientRect().top - r.height >= ylaraja) {
+    valikko.classList.add('ylos');
+  }
+
+  /*
+   * VAAKASUUNNASSA RUUDUN SISÄÄN (erä 18, PÄÄTÖKSET 22: *"ei mene
+   * ruudun ulkopuolelle 390 px:llä"*). Valikko on keskitetty kortin
+   * alle, ja pisin kategorianimi on kortin levyinen moninkerroin, joten
+   * puhelimella se yltää helposti ruudun laidan yli.
+   *
+   * SIIRTO ON KORTIN OMISSA YKSIKÖISSÄ, koska valikko on `scale`atun
+   * kortin lapsi: ruutupikselit jaetaan mittakaavalla, joka luetaan
+   * kortin omasta laatikosta (ei transform-merkkijonosta).
+   */
+  const kr = kortti.getBoundingClientRect();
+  const skaala = kortti.offsetWidth > 0 ? kr.width / kortti.offsetWidth : 1;
+  if (!(skaala > 0) || !kotelo) return;
+  const rr = valikko.getBoundingClientRect();
+  let siirto = 0;
+  if (rr.left < kotelo.left) siirto = kotelo.left - rr.left;
+  else if (rr.right > kotelo.right) siirto = kotelo.right - rr.right;
+  if (siirto) valikko.style.setProperty('--valikko-siirto', `${(siirto / skaala).toFixed(3)}px`);
 }
 
 /**

@@ -47,6 +47,20 @@
  *      ruudun sisään: kummassakin ääripäässä (länsi = Bretagne, itä =
  *      Elsass) maan kärki on ruudulla ja laatikon reuna ruudun
  *      ulkopuolella.
+ *   9. KREIKAN ANKKURI (erä 18, Raamattu KARTTAUUDISTUKSEN PÄÄTÖKSET
+ *      20, omistaja 15.9.2026 työpöytäkuvalla). Leveällä ruudulla
+ *      Kreikan maapaneeli on JOONIANMERELLÄ Peloponnesoksen
+ *      länsipuolella, merikilpikonna-noston vasemmalla puolella;
+ *      kapealla ruudulla AIGEIANMERELLÄ Peloponnesoksen ja Kreetan
+ *      välissä. Molemmilla: 25 näytepistettä merellä, kortti kokonaan
+ *      ruudulla, ei yhtään päällekkäisyyttä nostojen, nimikylttien,
+ *      kaupunkimerkkien, reitin tai pulun kanssa.
+ *  10. PANEELI EI ESTÄ ZOOMIA EIKÄ VIERITYSTÄ (erä 18, PÄÄTÖKSET 21).
+ *      Ctrl-rulla paneelin päällä muuttaa kameran korkeutta yhtä
+ *      paljon kuin kartan päällä (±10 %; mitattu 0,93, ero on
+ *      osoittimen paikka eikä vika), raahaus paneelin päältä
+ *      panoroi, tekstivalinta ei ala raahauksesta ja plus-nappi avaa
+ *      yhä valikon ruutunapautuksella.
  *   8. ANKKURI SEURAA KUVASUHDE-EHTOA (erä 16, Raamattu
  *      KARTTAUUDISTUKSEN PÄÄTÖKSET 18, omistaja 15.9.2026). Kapealla
  *      ruudulla (390 px pystyssä — sama ehto kuin PÄÄTÖKSET 17:n
@@ -76,11 +90,18 @@
  *   E. MAAPANEELIN_KATTO_RUUDUSTA 0,095 → 10 (erän 15 katto pois) →
  *      paneeli mitoitetaan taas pelkästä maan laatikosta.
  *      LEVEYSVÄITTEEN ON KAADUTTAVA (puhelimella mitattu 21,7 %).
- *   F. Erän 12 valikkotyyli takaisin → VALIKKOVÄITTEEN ON KAADUTTAVA.
+ *   F. Erän 12 valikkotyyli takaisin (kaksi palstaa tummassa
+ *      laatikossa) → VALIKKOVÄITTEEN 7 ON KAADUTTAVA.
  *   G. `korkeuteenSovitus` palauttamaan null → rajaus tehdään taas
  *      MOLEMPIIN suuntiin, kuten ennen erää 14. KORKEUSSOVITUSVÄITTEEN
  *      ON KAADUTTAVA (sitova akseli vaihtuu X:ksi ja pystyyn jää
  *      mitattu 59 % tyhjää).
+ *   I. Kreikan ankkuririvit pois → paneeli palaa eteläreunaan Kreetan
+ *      alle. VÄITTEEN 9 ON KAADUTTAVA: kortti ei ole enää nostojen
+ *      vasemmalla puolella.
+ *   J. `stopPropagation` ja `pointer-events: auto` takaisin korttiin →
+ *      VÄITTEEN 10 ON KAADUTTAVA: ctrl-rulla paneelin päällä ei muuta
+ *      kameran korkeutta.
  *   H. MAAPANEELIN_KAPEAT_ANKKURIT tyhjäksi → Ranska jää
  *      Biskajanlahdelle myös pystypuhelimella. VÄITTEEN 8 ON
  *      KAADUTTAVA: korkeuteen sovitettu saapumisnäkymä rajaa ruudun
@@ -227,6 +248,37 @@ const palvelin = http.createServer((req, res) => {
        */
       .replace(/MAAPANEELIN_KATTO_RUUDUSTA = [\d.]+/, 'MAAPANEELIN_KATTO_RUUDUSTA = 10'));
   }
+  if (vastakoe === 'I' && polkuOsa.endsWith('/js/pallolauta/maapaneeli.js')) {
+    /*
+     * ERÄ 18 — VASTAKOE I: KREIKAN ANKKURIT POIS. Paneeli palaa maan
+     * laatikon eteläreunaan eli Kreetan alle Libyanmerelle. Se on yhä
+     * merellä ja ruudulla, joten kokeen kaataa VÄITTEEN 9 se osa, joka
+     * on omistajan oma sana: kortti ei ole enää merikilpikonna-noston
+     * vasemmalla puolella vaan ruudun toisella laidalla.
+     */
+    runko = Buffer.from(runko.toString('utf8')
+      .replace(/GRC: \{ lat: 37\.8, lng: 19\.9 \},\n/, '')
+      .replace(/GRC: \{ lat: 36\.15, lng: 24\.35 \},\n/, ''));
+  }
+  if (vastakoe === 'J' && polkuOsa.endsWith('/js/pallolauta/maapaneeli.js')) {
+    /*
+     * ERÄ 18 — VASTAKOE J: ELEIDEN PYSÄYTYS TAKAISIN KORTTIIN. Tämä on
+     * täsmälleen se koodi, joka oli ennen PÄÄTÖKSET 21:tä: neljä
+     * tapahtumaa pysäytetään kortissa. Yhdessä CSS:n `pointer-events:
+     * auto`n kanssa (alla) väitteen 10 ON kaaduttava — ctrl-rulla
+     * paneelin päällä ei muuta kameran korkeutta lainkaan.
+     */
+    runko = Buffer.from(runko.toString('utf8')
+      .replace('  el.appendChild(kortti);\n  return el;',
+        '  for (const t of [\'pointerdown\', \'touchstart\', \'wheel\', \'click\']) {\n'
+        + '    kortti.addEventListener(t, (e) => e.stopPropagation(), { passive: true });\n'
+        + '  }\n  el.appendChild(kortti);\n  return el;'));
+  }
+  if (vastakoe === 'J' && polkuOsa.endsWith('/css/styles.css')) {
+    runko = Buffer.from(runko.toString('utf8')
+      .replace('  pointer-events: none;\n  user-select: none;\n  touch-action: manipulation;',
+        '  pointer-events: auto;\n  touch-action: manipulation;'));
+  }
   if (vastakoe === 'H' && polkuOsa.endsWith('/js/pallolauta/maapaneeli.js')) {
     /*
      * ERÄ 16 — VASTAKOE H: KAPEA-ANKKURI POIS. Ranska jää
@@ -297,7 +349,13 @@ const palvelin = http.createServer((req, res) => {
   // F: erän 12 valikko takaisin (kaksi palstaa, kiinni kortissa).
   if (vastakoe === 'F' && polkuOsa.endsWith('/css/styles.css')) {
     runko = Buffer.from(runko.toString('utf8')
-      .replace(/\.maapaneeli-valikko \{[\s\S]*?\n\}/, `.maapaneeli-valikko {
+      /*
+       * ANKKUROITU RIVIN ALKUUN (`^…/m`). Ilman sitä ensimmäinen osuma
+       * on `.pallolauta-poistuu .maapaneeli-valikko { … }` rivillä
+       * ~25837, ja koe muutti väärää sääntöä — mitattu 15.9.2026:
+       * vastakoe F oli punainen, koska valikon tyyli ei muuttunut.
+       */
+      .replace(/^\.maapaneeli-valikko \{[\s\S]*?\n\}/m, `.maapaneeli-valikko {
   position: absolute;
   top: calc(100% - 2px);
   right: -3px;
@@ -386,10 +444,25 @@ peli.phase = 'action';
 peli.tokens.delete('pariisi');
 const tallenne = JSON.stringify(peli.toJSON());
 
+/*
+ * ERÄ 18: TOINEN TALLENNE, FOGG ATEENASSA (Raamattu, KARTTAUUDISTUKSEN
+ * PÄÄTÖKSET 20). Kreikka on toinen maa, jolle ankkuri on MITATTU, ja
+ * sen vartiot ajetaan samassa savukkeessa kuin Ranskan — eri maa on
+ * eri tallenne, ei eri savuke, koska mitattava koneisto on sama.
+ */
+const peliGRC = new Game({
+  players: [{ name: 'Fogg', color: '#c9a227', start: 'ateena' }],
+  pack: packById('maailmankartta'),
+  seed: 5,
+});
+peliGRC.phase = 'action';
+peliGRC.tokens.delete('ateena');
+const tallenneGRC = JSON.stringify(peliGRC.toJSON());
+
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 
 /** Yksi ajo: konteksti, peli Pariisissa, 9 s lepoa (ks. tiedoston alku). */
-async function avaaPeli({ leveys, korkeus, dpr = 1, lepo = true }) {
+async function avaaPeli({ leveys, korkeus, dpr = 1, lepo = true, save = tallenne }) {
   const ctx = await selain.newContext({
     viewport: { width: leveys, height: korkeus }, deviceScaleFactor: dpr, serviceWorkers: 'block',
   });
@@ -398,7 +471,7 @@ async function avaaPeli({ leveys, korkeus, dpr = 1, lepo = true }) {
       localStorage.setItem('matkakirja-save-v1', data);
       localStorage.removeItem('matkakirja-lauta');
     } catch { /* yksityinen tila */ }
-  }, tallenne);
+  }, save);
   const sivu = await ctx.newPage();
   const virheet = [];
   sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
@@ -703,12 +776,24 @@ const tekstiKoot = (sivu, nimioKoko) => sivu.evaluate((koko) => {
 }, nimioKoko);
 
 /**
- * ERÄ 13 — VÄITE 6: LISÄÄ-VALIKKO ON YHDELLÄ RIVILLÄ JA IRTI KORTISTA.
+ * VÄITE 7: LISÄÄ-VALIKKO ON ALLEKKAIN, ILMAN TAUSTAA JA RUUDULLA.
  *
- * Rivien määrä luetaan nappien ruutupaikoista (eri y = eri rivi), ei
- * CSS:n `grid-template-columns`ista: mitta on se, minkä pelaaja näkee.
+ * ERÄ 18 (Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 22) KORVAA ERÄN 13
+ * YHDEN RIVIN: omistaja 15.9.2026 *"tuo sisallysluettelo… voisi tulla
+ * kokonaan ilman tuota taustaikkunaa ja eri kategoriat saisivat tulla
+ * tiiviisti allekkain"*. Vartio mittaa siis kolme asiaa:
+ *
+ *   a) JOKA KATEGORIA OMALLA RIVILLÄÄN: eri y-arvoja on yhtä monta kuin
+ *      nappeja. Rivit luetaan nappien RUUTUPAIKOISTA eikä CSS:n
+ *      `flex-direction`ista — mitta on se, minkä pelaaja näkee.
+ *   b) EI TAUSTALAATIKKOA: valikon oman rungon taustaväri on täysin
+ *      läpinäkyvä ja reunus 0 px. Myös nappien oma tausta on pois,
+ *      joten laatikkoa ei ole missään kerroksessa.
+ *   c) KOKONAAN RUUDULLA EIKÄ KORTIN PÄÄLLÄ: valikon laatikko on
+ *      kotelon sisällä joka reunasta, eikä se leikkaa korttia.
+ *
  * Rako mitataan kortin alareunan ja valikon yläreunan väliltä (tai
- * ylöspäin auetessa toisin päin), ja päällekkäisyys on oma testinsä.
+ * ylöspäin auetessa toisin päin).
  */
 const valikonMitat = async (sivu) => {
   await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
@@ -725,12 +810,33 @@ const valikonMitat = async (sivu) => {
       .map((b) => { const bb = b.getBoundingClientRect(); return { y: bb.top, w: bb.width, h: bb.height }; });
     const rivit = new Set(napit.map((n) => Math.round(n.y * 10) / 10)).size;
     const nappiAla = napit.reduce((a, n) => a + n.w * n.h, 0);
+    /*
+     * TAUSTA LUETAAN LASKETUSTA TYYLISTÄ (erä 18). `rgba(…, 0)` ja
+     * `transparent` ovat sama asia, joten mitta on alfa: mikä tahansa
+     * yli nollan on laatikko. Sama luetaan myös yhdeltä napilta,
+     * jottei laatikko palaisi kerrosta alempana.
+     */
+    const alfa = (vari) => {
+      const osat = String(vari).match(/[\d.]+/g) ?? [];
+      if (String(vari) === 'transparent' || osat.length === 0) return 0;
+      return osat.length >= 4 ? Number(osat[3]) : 1;
+    };
+    const tyyli = getComputedStyle(valikko);
+    const nappiTyyli = napit.length ? getComputedStyle(valikko.querySelector('.maapaneeli-aihe')) : null;
+    const kotelo = valikko.closest('.pallo-kotelo')?.getBoundingClientRect() ?? null;
     return {
       auki: true,
       rivit,
       napit: napit.length,
       w: r.width,
       h: r.height,
+      taustaAlfa: alfa(tyyli.backgroundColor),
+      reunusPx: parseFloat(tyyli.borderTopWidth) || 0,
+      nappiTaustaAlfa: nappiTyyli ? alfa(nappiTyyli.backgroundColor) : null,
+      varjo: nappiTyyli
+        ? getComputedStyle(valikko.querySelector('.maapaneeli-aihe-nimi')).textShadow : null,
+      ruudulla: Boolean(kotelo && r.left >= kotelo.left - 0.5 && r.right <= kotelo.right + 0.5
+        && r.top >= kotelo.top - 0.5 && r.bottom <= kotelo.bottom + 0.5),
       // Tyhjä tila = valikon ala, joka ei ole nappia (pehmuste + välit).
       tyhja: 1 - nappiAla / (r.width * r.height),
       rako: r.top >= k.bottom ? r.top - k.bottom : k.top - r.bottom,
@@ -742,6 +848,106 @@ const valikonMitat = async (sivu) => {
   await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
   await sivu.waitForTimeout(300);
   return ulos;
+};
+
+/**
+ * Täyttääkö valikko erän 18 linjauksen (PÄÄTÖKSET 22)? Kaikki kolme
+ * ehtoa yhdessä paikassa, jotta vartio ja vastakoe F lukevat SAMAN
+ * säännön eivätkä kahta kopiota.
+ */
+const valikkoKelpaa = (v) => Boolean(v?.auki)
+  && v.napit > 1 && v.rivit === v.napit          // a) joka kategoria omalla rivillään
+  && v.taustaAlfa === 0 && v.reunusPx === 0 && v.nappiTaustaAlfa === 0  // b) ei laatikkoa
+  && v.varjo && v.varjo !== 'none'               //    luettavuus on tekstin oma
+  && v.ruudulla && !v.leikkaa && v.rako > 0;     // c) ruudulla eikä kortin päällä
+
+
+/*
+ * ═══════════════════════════════════════════════════════════════════
+ * ERÄ 18 — KREIKKA: KARTAN KALUSTEET, ZOOMI JA RAAHAUS
+ * ═══════════════════════════════════════════════════════════════════
+ */
+
+/**
+ * Kartan kalusteiden RUUTULAAJUUS (nostot, nimikyltit, kaupunkimerkit,
+ * reittipisteet, pulu).
+ *
+ * CSS2D-ANKKURI ON 0 × 0, JOTEN SEN OMA LAATIKKO EI KELPAA MITAKSI:
+ * näkyvä jälki on ankkurin lapsissa (svg, g), joilla on oma muunnos.
+ * Laajuus on siis ankkurin ja kaikkien sen jälkeläisten yhdiste —
+ * muuten päällekkäisyys jäisi mittaamatta ja väite 9 olisi tyhjä.
+ */
+const kartanKalusteet = (sivu) => sivu.evaluate(() => {
+  const l = window.matkakirja.ui.pallolauta;
+  const kotelo = l.kotelo.getBoundingClientRect();
+  const ulos = [];
+  for (const valitsin of ['.pallolauta-nosto', '.pallolauta-nimi', '.pallolauta-kohde',
+    '.pallolauta-piste', '.pulu-paikka']) {
+    for (const e of document.querySelectorAll(valitsin)) {
+      if (e.closest('.pallolauta-takana') || e.closest('.pallolauta-poistuu')) continue;
+      const r = e.getBoundingClientRect();
+      if (!(r.width > 0) && !(r.height > 0)) continue;
+      let laatikko = { left: r.left, top: r.top, right: r.right, bottom: r.bottom };
+      for (const c of e.querySelectorAll('*')) {
+        const cr = c.getBoundingClientRect();
+        if (!(cr.width > 0) || !(cr.height > 0)) continue;
+        laatikko = { left: Math.min(laatikko.left, cr.left), top: Math.min(laatikko.top, cr.top),
+          right: Math.max(laatikko.right, cr.right), bottom: Math.max(laatikko.bottom, cr.bottom) };
+      }
+      ulos.push({ laji: valitsin, nimi: (e.textContent ?? '').trim().slice(0, 20),
+        x0: laatikko.left - kotelo.left, y0: laatikko.top - kotelo.top,
+        x1: laatikko.right - kotelo.left, y1: laatikko.bottom - kotelo.top });
+    }
+  }
+  return ulos;
+});
+
+/** Leikkaavatko kaksi ruutulaatikkoa? */
+const leikkaavat = (a, b) => a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0;
+
+/**
+ * VÄITE 10: ZOOMI JA RAAHAUS MENEVÄT PANEELIN LÄPI KARTALLE
+ * (Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 21).
+ *
+ * MIKSI CTRL-RULLA: pallon eleissä (js/pallo.js) paljas rulla PANOROI
+ * ja ctrl/cmd-rulla ZOOMAA — ctrl-rulla on myös trackpadin nipistys.
+ * Panorointi kuuntelee kotelon KAAPPAUSVAIHEESSA ja toimi siksi
+ * paneelinkin päällä jo ennen tätä erää; zoomin ottaa vastaan
+ * OrbitControlsin oma kuuntelija KANKAALLA, joten se jäi kokonaan
+ * saamatta, kun kortti oli osumakohde. Tämä on se, mistä omistaja
+ * kirjoitti, ja siksi mitta on nimenomaan zoomi.
+ *
+ * MITTA ON SUHTEELLINEN: sama pykälämäärä kartan päällä ja paneelin
+ * päällä on muutettava kameran korkeutta yhtä paljon.
+ */
+const rullaa = async (sivu, x, y, pykalia = 6) => {
+  const ennen = await sivu.evaluate(() => window.matkakirja.ui.pallolauta.pallo.pointOfView().altitude);
+  await sivu.keyboard.down('Control');
+  await sivu.mouse.move(x, y);
+  for (let i = 0; i < pykalia; i += 1) {
+    await sivu.mouse.wheel(0, -120); // eslint-disable-line no-await-in-loop
+    await sivu.waitForTimeout(30); // eslint-disable-line no-await-in-loop
+  }
+  await sivu.keyboard.up('Control');
+  await sivu.waitForTimeout(800);
+  const jalkeen = await sivu.evaluate(() => window.matkakirja.ui.pallolauta.pallo.pointOfView().altitude);
+  return { ennen, jalkeen, muutos: ennen - jalkeen };
+};
+
+/** Raahaus pisteestä (x, y) — paljonko kartan keskipiste siirtyy? */
+const raahaa = async (sivu, x, y) => {
+  const ennen = await sivu.evaluate(() => window.matkakirja.ui.pallolauta.pallo.pointOfView());
+  await sivu.mouse.move(x, y);
+  await sivu.mouse.down();
+  for (let i = 1; i <= 8; i += 1) {
+    await sivu.mouse.move(x + i * 10, y); // eslint-disable-line no-await-in-loop
+    await sivu.waitForTimeout(30); // eslint-disable-line no-await-in-loop
+  }
+  await sivu.mouse.up();
+  await sivu.waitForTimeout(700);
+  const jalkeen = await sivu.evaluate(() => window.matkakirja.ui.pallolauta.pallo.pointOfView());
+  const valinta = await sivu.evaluate(() => String(window.getSelection?.() ?? ''));
+  return { dLng: Math.abs(jalkeen.lng - ennen.lng), dLat: Math.abs(jalkeen.lat - ennen.lat), valinta };
 };
 
 /**
@@ -797,6 +1003,19 @@ const meriTulokset = [];
  */
 const KAPEA_ANKKURI = { lat: 42.6, lng: 3.77 };  // Lyoninlahti (erä 17: vara pulun nokkaan)
 const LEVEA_ANKKURI = { lat: 45.9, lng: -4.6 };  // Biskajanlahti
+/*
+ * VÄITE 9: KREIKAN ANKKURI (erä 18, Raamattu KARTTAUUDISTUKSEN
+ * PÄÄTÖKSET 20, omistaja 15.9.2026 työpöytäkuvalla). Leveällä ruudulla
+ * paneeli on JOONIANMERELLÄ Peloponnesoksen länsipuolella,
+ * merikilpikonna-noston VASEMMALLA puolella; kapealla ruudulla
+ * Aigeianmerellä Peloponnesoksen ja Kreetan välissä. Molemmilla:
+ * kokonaan merellä, kokonaan ruudulla, ei yhtään päällekkäisyyttä
+ * nostojen, nimikylttien, kaupunkimerkkien, reitin tai pulun kanssa.
+ */
+const GRC_LEVEA = { lat: 37.8, lng: 19.9 };     // Joonianmeri
+const GRC_KAPEA = { lat: 36.15, lng: 24.35 };   // Aigeianmeri
+/** Kortin ja lähimmän noston vaadittu rako leveällä ruudulla (mitattu 115 px). */
+const NOSTON_RAKO = 20;
 /** Ankkurin sallittu poikkeama päätöksen luvusta (pyöristys, ei muuta). */
 const ASTEEN_VARA = 0.05;
 const ankkuriTulokset = [];
@@ -939,14 +1158,16 @@ for (const ruutu of RUUDUT) {
     `noston nimiö ${p(t.nosto, 3)} px, paneelin leipäteksti ${p(t.paneeli, 3)} px, `
     + `suhde ${p(t.paneeli / t.nosto, 3)} (ankkuri on ${ANKKURIRUUTU.nimi} px, INFO tässä)`);
   const v = await valikonMitat(sivu);
-  valikkoTulokset.push({ ruutu: ruutu.nimi, ...v,
-    ok: Boolean(v.auki) && v.rivit === 1 && !v.leikkaa && v.rako > 0 });
+  valikkoTulokset.push({ ruutu: ruutu.nimi, ...v, ok: valikkoKelpaa(v) });
   tieto(`${ruutu.nimi} px · lisää-valikko`,
     v.auki
       ? `${v.napit} nappia ${v.rivit} rivillä, ${p(v.w, 1)} × ${p(v.h, 1)} px, `
-        + `tyhjää tilaa ${p(100 * v.tyhja, 1)} %, rako korttiin ${p(v.rako, 2)} px, `
-        + `leikkaa korttia: ${v.leikkaa ? 'KYLLÄ' : 'ei'}, plussan keskilinja `
-        + `${p(v.plusKeskiKortista, 2)} px kortin yläreunasta (skaala ${p(v.skaala, 3)})`
+        + `taustan alfa ${p(v.taustaAlfa, 3)} / reunus ${p(v.reunusPx, 2)} px / `
+        + `napin tausta ${p(v.nappiTaustaAlfa, 3)}, rako korttiin ${p(v.rako, 2)} px, `
+        + `leikkaa korttia: ${v.leikkaa ? 'KYLLÄ' : 'ei'}, kokonaan ruudulla `
+        + `${v.ruudulla}, tekstin reunus: ${v.varjo && v.varjo !== 'none' ? 'on' : 'EI'}, `
+        + `plussan keskilinja ${p(v.plusKeskiKortista, 2)} px kortin yläreunasta `
+        + `(skaala ${p(v.skaala, 3)})`
       : 'EI AUENNUT');
 
   paaVirheet = paaVirheet.concat(virheet);
@@ -980,10 +1201,12 @@ vaadi('5. saapumisnäkymä rajautuu aivan maan rajojen ulkopuolelle (tyhjä ≤ 
 vaadi('6. paneelin leveys saapumisnäkymässä ≤ 10 % ruudun leveydestä',
   leveysTulokset.length === RUUDUT.length && leveysTulokset.every((t) => t.ok),
   JSON.stringify(leveysTulokset));
-vaadi('7. lisää-valikko on yhdellä rivillä ja irti kortista (390 px ja 1400 px)',
+vaadi('7. lisää-valikko: kategoriat allekkain, ei taustalaatikkoa, kokonaan ruudulla '
+  + '(390 px ja 1400 px)',
   valikkoTulokset.length === RUUDUT.length && valikkoTulokset.every((t) => t.ok),
-  JSON.stringify(valikkoTulokset.map((t) => ({ ruutu: t.ruutu, rivit: t.rivit,
-    rako: t.rako, leikkaa: t.leikkaa }))));
+  JSON.stringify(valikkoTulokset.map((t) => ({ ruutu: t.ruutu, napit: t.napit, rivit: t.rivit,
+    taustaAlfa: t.taustaAlfa, reunusPx: t.reunusPx, nappiTaustaAlfa: t.nappiTaustaAlfa,
+    ruudulla: t.ruudulla, rako: t.rako, leikkaa: t.leikkaa }))));
 vaadi('8. ankkuri: kapealla ruudulla Lyoninlahti, leveällä Biskajanlahti — '
   + 'kortti ruudulla ja meren päällä kummallakin',
   ankkuriTulokset.length === RUUDUT.length && ankkuriTulokset.every((t) => t.ok),
@@ -1039,6 +1262,149 @@ vaadi('6. puhelin pystyssä: sitova akseli Y, tyhjä ≤ 3,5 %, kaupunki keskell
   Boolean(kuusi?.ok), JSON.stringify(kuusi));
 vaadi('7. panorointi tuo maan reunan ruudulle, laatikon reuna ei tule ruudun sisään',
   Boolean(seitseman?.ok), JSON.stringify(seitseman));
+
+/* ===== 9 JA 10: KREIKKA (erä 18, PÄÄTÖKSET 20 ja 21) ============== */
+const kreikkaTulokset = [];
+let kreikanVirheet = [];
+let kymmenen = null;
+for (const ruutu of RUUDUT) {
+  /* eslint-disable no-await-in-loop */
+  const { ctx, sivu, virheet, auki } = await avaaPeli({ ...ruutu, save: tallenneGRC });
+  vaadi(`pallolauta aukesi Kreikassa (${ruutu.nimi} px)`, auki, virheet.join(' | '));
+  if (!auki) { await ctx.close(); continue; }
+  const m = await mittaa(sivu);
+  const osumat = m.mitat ? maaosumat(m.mitat) : null;
+  const kalusteet = await kartanKalusteet(sivu);
+  const odotettu = ruutu.nimi === '390' ? GRC_KAPEA : GRC_LEVEA;
+  const ero = m.mitat
+    ? Math.max(Math.abs(m.mitat.lat - odotettu.lat), Math.abs(m.mitat.lng - odotettu.lng)) : null;
+  const ruudulla = Boolean(m.kortti && m.kortti.x0 >= -0.5 && m.kortti.y0 >= -0.5
+    && m.kortti.x1 <= m.kotelo.w + 0.5 && m.kortti.y1 <= m.kotelo.h + 0.5);
+  const tormaykset = m.kortti ? kalusteet.filter((k) => leikkaavat(m.kortti, k)) : [];
+  /*
+   * "MERIKILPIKONNAN VASEMMALLA PUOLELLA" MITATAAN KAIKISTA NOSTOISTA.
+   * Nostolla ei ole tekstisolmua (nimiö on rasteri), joten yksittäistä
+   * kilpikonnaa ei voi nimetä ruudulta — mutta *kaikkien* nostojen
+   * vasen puoli on vahvempi väite kuin yhden, ja se pitää sisällään
+   * omistajan pyynnön.
+   */
+  const nostot = kalusteet.filter((k) => k.laji === '.pallolauta-nosto');
+  const lahinNosto = nostot.length ? Math.min(...nostot.map((k) => k.x0)) : null;
+  const rako = m.kortti && lahinNosto !== null ? lahinNosto - m.kortti.x1 : null;
+  const vasemmalla = ruutu.nimi !== '1400' || (rako !== null && rako >= NOSTON_RAKO);
+  kreikkaTulokset.push({ ruutu: ruutu.nimi, kapea: m.kapea, lat: p(m.mitat?.lat, 3),
+    lng: p(m.mitat?.lng, 3), ero: p(ero, 4), osumia: osumat?.length ?? null, ruudulla,
+    tormayksia: tormaykset.length, rakoNostoon: p(rako, 1), vasemmalla,
+    ok: Boolean(m.kapea === (ruutu.nimi === '390') && ero !== null && ero <= ASTEEN_VARA
+      && osumat && osumat.length === 0 && ruudulla && tormaykset.length === 0 && vasemmalla) });
+  tieto(`${ruutu.nimi} px · Kreikan maapaneeli`,
+    `korkeussovitus ${m.kapea} → odotettu ${ruutu.nimi === '390' ? 'Aigeianmeri' : 'Joonianmeri'} `
+    + `${p(odotettu.lat, 2)} N / ${p(odotettu.lng, 2)} E, mitattu ${p(m.mitat?.lat, 3)} N / `
+    + `${p(m.mitat?.lng, 3)} E (ero ${p(ero, 4)}°), maaosumia ${osumat?.length ?? '—'}`
+    + `${osumat?.length ? ` (${[...new Set(osumat.map((o) => o.iso))].join(', ')})` : ''}, `
+    + `kortti x ${p(m.kortti?.x0, 1)}…${p(m.kortti?.x1, 1)} / 0…${p(m.kotelo.w, 1)}, `
+    + `y ${p(m.kortti?.y0, 1)}…${p(m.kortti?.y1, 1)} / 0…${p(m.kotelo.h, 1)}, ruudulla ${ruudulla}, `
+    + `päällekkäisyyksiä ${tormaykset.length}`
+    + `${tormaykset.length ? ` (${tormaykset.map((t) => `${t.laji}${t.nimi ? ` ${t.nimi}` : ''}`).join(', ')})` : ''}, `
+    + `rako lähimpään nostoon ${p(rako, 1)} px`);
+
+  if (KUVAKANSIO) {
+    await sivu.evaluate(() => {
+      for (const node of document.querySelectorAll('.fokusvirta-isokuva')) {
+        node.style.setProperty('display', 'none', 'important');
+      }
+    });
+    await sivu.waitForTimeout(400);
+    await sivu.screenshot({ path: join(KUVAKANSIO, `paneeli-grc-${ruutu.nimi}.png`) });
+    await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
+    await sivu.waitForTimeout(700);
+    await sivu.screenshot({ path: join(KUVAKANSIO, `lisaa-valikko-${ruutu.nimi}.png`) });
+    await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
+    await sivu.waitForTimeout(300);
+  }
+
+  /* --- 10. zoomi ja raahaus menevät paneelin läpi (vain 1400 px) --- */
+  if (ruutu.nimi === '1400' && m.kortti) {
+    const px = Math.round(m.kotelo.x0 + (m.kortti.x0 + m.kortti.x1) / 2);
+    const py = Math.round(m.kotelo.y0 + (m.kortti.y0 + m.kortti.y1) / 2);
+    /*
+     * PLUS-NAPPI MITATAAN ENSIN. Kortti on kartan mitta, joten zoomaus
+     * kasvattaa sen ja vie napin toiseen kohtaan ruutua — napin
+     * osumatesti kuuluu siksi saapumisnäkymään, ennen rullaa.
+     * Napautus tehdään OIKEALLA HIIRELLÄ ruudun koordinaatteihin (ei
+     * `el.click()`), koska juuri osumatestaus on se, mitä erä 18
+     * muutti.
+     */
+    const nappi = await sivu.evaluate(() => {
+      const b = document.querySelector('.maapaneeli-lisaa');
+      const r = b?.getBoundingClientRect();
+      return r && r.width > 0 ? { x: r.left + r.width / 2, y: r.top + r.height / 2 } : null;
+    });
+    let plusToimii = false;
+    if (nappi) {
+      await sivu.mouse.click(nappi.x, nappi.y);
+      await sivu.waitForTimeout(600);
+      plusToimii = await sivu.evaluate(() => {
+        const v = document.querySelector('.maapaneeli-valikko');
+        return Boolean(v && !v.hidden && v.getBoundingClientRect().height > 0);
+      });
+      await sivu.mouse.click(nappi.x, nappi.y);
+      await sivu.waitForTimeout(300);
+    }
+    /*
+     * RULLA ENNEN RAAHAUSTA, JOTTA VERTAILU ON REILU. Kartan puolen
+     * mitta otetaan tuoreesta sivusta saapumisnäkymässä, joten myös
+     * paneelin puolen on lähdettävä saapumisnäkymästä — raahaus ennen
+     * rullaa siirsi keskipistettä ja mitattu suhde oli 0,93 eikä 1,00.
+     */
+    const paneeli = await rullaa(sivu, px, py);
+    // Kortti on kartan mitta: zoomin jälkeen se on toisessa kohdassa.
+    const m3 = await mittaa(sivu);
+    const veto = m3.kortti
+      ? await raahaa(sivu, Math.round(m3.kotelo.x0 + (m3.kortti.x0 + m3.kortti.x1) / 2),
+        Math.round(m3.kotelo.y0 + (m3.kortti.y0 + m3.kortti.y1) / 2))
+      : { dLng: 0, dLat: 0, valinta: '' };
+    // Vertailu kartan päältä: sama pykälämäärä tyhjän meren kohdalla.
+    const { ctx: ctx2, sivu: sivu2, auki: auki2 } = await avaaPeli({ ...ruutu, save: tallenneGRC });
+    const m2 = auki2 ? await mittaa(sivu2) : null;
+    const kartta = auki2
+      ? await rullaa(sivu2, Math.round(m2.kotelo.x0 + m2.kotelo.w / 2),
+        Math.round(m2.kotelo.y0 + m2.kotelo.h / 2))
+      : null;
+    await ctx2.close();
+    const suhde = kartta && kartta.muutos > 0 ? paneeli.muutos / kartta.muutos : null;
+    kymmenen = {
+      paneeli: p(paneeli.muutos, 5), kartta: p(kartta?.muutos, 5), suhde: p(suhde, 3),
+      dLng: p(veto.dLng, 3), valinta: veto.valinta, plusToimii,
+      /*
+       * VARA 10 %, MITATTU 0,93. Sama pykälämäärä samasta
+       * saapumiskorkeudesta EI anna tasan samaa muutosta: kirjasto
+       * zoomaa osoittimen kohtaa kohti, ja paneeli on ruudun laidassa
+       * kun vertailupiste on keskellä — ero on mitattu 7 % ja se on
+       * geometriaa, ei vikaa. Vara ei silti höllennä väitettä:
+       * vastakokeessa J suhde on 0 (paneeli syö rullan kokonaan).
+       */
+      ok: Boolean(kartta && kartta.muutos > 1e-4 && suhde !== null && Math.abs(suhde - 1) <= 0.10
+        && veto.dLng > 0.03 && veto.valinta === '' && plusToimii),
+    };
+    tieto('1400 px · zoomi ja raahaus paneelin päältä',
+      `ctrl-rulla paneelin päällä muutti korkeutta ${p(paneeli.muutos, 5)}, kartan päällä `
+      + `${p(kartta?.muutos, 5)} (suhde ${p(suhde, 3)}, vara 10 %), raahaus paneelin päältä `
+      + `panoroi ${p(veto.dLng, 3)}°, tekstivalinta "${veto.valinta}", plus-nappi avasi valikon `
+      + `${plusToimii}`);
+  }
+
+  kreikanVirheet = kreikanVirheet.concat(virheet);
+  await ctx.close();
+  /* eslint-enable no-await-in-loop */
+}
+tieto('sivun virheet (Kreikka)', kreikanVirheet.length ? kreikanVirheet.join(' | ') : 'ei yhtään');
+vaadi('9. Kreikan maapaneeli: Joonianmeri (leveä) ja Aigeianmeri (kapea) — merellä, '
+  + 'ruudulla, ilman päällekkäisyyksiä, nostojen vasemmalla puolella',
+  kreikkaTulokset.length === RUUDUT.length && kreikkaTulokset.every((t) => t.ok),
+  JSON.stringify(kreikkaTulokset));
+vaadi('10. rulla ja raahaus paneelin päältä menevät kartalle, plus-nappi toimii yhä',
+  Boolean(kymmenen?.ok), JSON.stringify(kymmenen));
 
 /*
  * ===== INFO: DPR 3:N LAATTATASO (erä 14, MITATTU JA KIRJATTU) ======
@@ -1183,15 +1549,14 @@ vastakoe = 'F';
 {
   const { ctx, sivu, auki } = await avaaPeli({ leveys: 1400, korkeus: 900 });
   const v = auki ? await valikonMitat(sivu) : null;
-  tieto('vastakoe F (erän 12 valikko: kaksi palstaa, kiinni kortissa)',
+  tieto('vastakoe F (erän 12 valikko: kaksi palstaa tummassa laatikossa)',
     v?.auki
-      ? `${v.napit} nappia ${v.rivit} rivillä, rako ${p(v.rako, 2)} px, `
-        + `leikkaa: ${v.leikkaa ? 'KYLLÄ' : 'ei'} → väite 6 `
-        + `${v.rivit === 1 && !v.leikkaa && v.rako > 0 ? 'LÄPI (paha)' : 'PUNAINEN'}`
+      ? `${v.napit} nappia ${v.rivit} rivillä, taustan alfa ${p(v.taustaAlfa, 3)}, `
+        + `reunus ${p(v.reunusPx, 2)} px, rako ${p(v.rako, 2)} px `
+        + `→ väite 7 ${valikkoKelpaa(v) ? 'LÄPI (paha)' : 'PUNAINEN'}`
       : 'EI AUENNUT');
   vaadi('VASTAKOE F: erän 12 valikkotyylillä valikkoväite kaatuu',
-    Boolean(v?.auki) && (v.rivit !== 1 || v.leikkaa || !(v.rako > 0)),
-    JSON.stringify(v));
+    Boolean(v?.auki) && !valikkoKelpaa(v), JSON.stringify(v));
   await ctx.close();
 }
 /* G: korkeussovitus pois → väitteiden 6 ja 7 on kaaduttava. */
@@ -1207,6 +1572,47 @@ vastakoe = 'G';
     + `→ väite 6 ${kaatui ? 'PUNAINEN' : 'LÄPI (paha)'}`);
   vaadi('VASTAKOE G: ilman korkeussovitusta pystyruudun väite kaatuu',
     Boolean(auki) && kaatui, JSON.stringify({ auki, akseli: r?.akseli, sitova: p(r?.sitova, 4) }));
+  await ctx.close();
+}
+
+/* I: Kreikan ankkurit pois → väitteen 9 on kaaduttava (erä 18). */
+vastakoe = 'I';
+{
+  const { ctx, sivu, auki } = await avaaPeli({ leveys: 1400, korkeus: 900, save: tallenneGRC });
+  const m = auki ? await mittaa(sivu) : null;
+  const kalusteet = auki ? await kartanKalusteet(sivu) : [];
+  const nostot = kalusteet.filter((k) => k.laji === '.pallolauta-nosto');
+  const lahin = nostot.length ? Math.min(...nostot.map((k) => k.x0)) : null;
+  const rako = m?.kortti && lahin !== null ? lahin - m.kortti.x1 : null;
+  const kaatui = !(rako !== null && rako >= NOSTON_RAKO);
+  tieto('vastakoe I (Kreikan ankkurit pois → eteläreuna, Kreetan alle)',
+    `keskiylä ${p(m?.mitat?.lat, 3)} N / ${p(m?.mitat?.lng, 3)} E, kortti x `
+    + `${p(m?.kortti?.x0, 1)}…${p(m?.kortti?.x1, 1)}, lähin nosto x ${p(lahin, 1)}, `
+    + `rako ${p(rako, 1)} px → väite 9 ${kaatui ? 'PUNAINEN' : 'LÄPI (paha)'}`);
+  vaadi('VASTAKOE I: ilman Kreikan ankkuria paneeli ei ole nostojen vasemmalla puolella',
+    Boolean(auki && m?.kortti) && kaatui, JSON.stringify({ auki, rako: p(rako, 1) }));
+  await ctx.close();
+}
+
+/* J: eleiden pysäytys takaisin → väitteen 10 on kaaduttava (erä 18). */
+vastakoe = 'J';
+{
+  const { ctx, sivu, auki } = await avaaPeli({ leveys: 1400, korkeus: 900, save: tallenneGRC });
+  const m = auki ? await mittaa(sivu) : null;
+  let paneeli = null;
+  if (auki && m?.kortti) {
+    paneeli = await rullaa(sivu, Math.round(m.kotelo.x0 + (m.kortti.x0 + m.kortti.x1) / 2),
+      Math.round(m.kotelo.y0 + (m.kortti.y0 + m.kortti.y1) / 2));
+  }
+  const kaatui = !(paneeli && kymmenen?.kartta > 0
+    && Math.abs(paneeli.muutos / kymmenen.kartta - 1) <= 0.10);
+  tieto('vastakoe J (stopPropagation ja pointer-events: auto takaisin)',
+    `ctrl-rulla paneelin päällä muutti korkeutta ${p(paneeli?.muutos, 5)} `
+    + `(kartan päällä mitattu ${p(kymmenen?.kartta, 5)}) → väite 10 `
+    + `${kaatui ? 'PUNAINEN' : 'LÄPI (paha)'}`);
+  vaadi('VASTAKOE J: eleiden pysäytyksellä zoomi ei mene paneelin läpi',
+    Boolean(auki && paneeli) && kaatui,
+    JSON.stringify({ auki, paneeli: p(paneeli?.muutos, 5), kartta: p(kymmenen?.kartta, 5) }));
   await ctx.close();
 }
 
