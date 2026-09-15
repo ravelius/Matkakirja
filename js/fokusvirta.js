@@ -85,7 +85,8 @@ import { ilmoitaLivianTilanne, ilmoitaLivianTunne } from './livia-tilanteet.js';
 
 import {
   fokusmoodiPaalla, html, jaaKappaleiksi, jaaPuheenvuoroksi,
-  linssiEstaa, nielaiseSulkevaNapautus, polloNimilappu, suurennoksenMitat,
+  linssiEstaa, nielaiseSulkevaNapautus, onkoKartanLiike, polloNimilappu,
+  suurennoksenMitat,
 } from './ui-apurit.js';
 import {
   asetaTehtavakuittaus, fokusAarreAvattu,
@@ -3835,11 +3836,29 @@ function aloitaMyohastynytPuluSarja(ui, city) {
  * kartan liike on pelaajan tahdonilmaus). Sarjaa ei jäädytetä eikä
  * jatketa taustalla — se hyppää suoraan siihen tilaan, johon se olisi
  * päätynyt: pieni kuvapakka kartalla.
+ *
+ * PÄÄLLYSIKKUNAN AVAAMINEN EI OLE KARTAN LIIKE (omistaja 15.9.2026,
+ * Raamattu "VIKA: ASETUSTEN AVAAMINEN KESKEN LUENNAN KUTISTAA
+ * LUENTAKUVAT"). Vartija kuunteli koko dokumentin pointerdownia ja
+ * luki myös hammasrattaan, hampurilaisen ja matkalaukun napautuksen
+ * kartan liikkeeksi — iso luentakuva kutistui pakaksi heti, vaikka
+ * luenta jatkoi soimistaan ikkunan alla (mitattu 1400 × 900,
+ * Dubrovnik: `paused === false`, currentTime 0,93 → 2,97 s). Ääni ei
+ * siis pysähdy asetusikkunan ajaksi, joten näkymänkään ei kuulu
+ * purkautua: sarja jatkuu ikkunan alla entiseen tahtiin ja päättyy
+ * omaan kelloonsa tai oikeaan kartan liikkeeseen.
+ *
+ * Rajaus tehdään yhdellä ehdolla (js/ui-apurit.js onkoKartanLiike),
+ * jota myös valikon sulkuvartija käyttää: kartta-alueen sisällä, ei
+ * sen päällä kelluvissa napeissa eikä valikoissa. Isokuvan ja
+ * suurennoksen oma poikkeus jää näkyviin, vaikka ne asuvatkin
+ * `.map-panen` ulkopuolella — se on ehdon ydin, ei sattuma.
  */
 function kytkeSarjanKartanLiike(ui, tila) {
   if (typeof document?.addEventListener !== 'function') return;
   const kasittele = (tapahtuma) => {
     if (tapahtuma.target?.closest?.('.fokusvirta-isokuva, .fokuszoom')) return;
+    if (!onkoKartanLiike(tapahtuma)) return;
     if (ui.luentakuvasarja === tila) paataLuentakuvasarja(ui, { heti: true });
   };
   document.addEventListener('pointerdown', kasittele);

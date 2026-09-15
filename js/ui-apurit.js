@@ -1039,6 +1039,47 @@ export const KARTAN_ALUE = '.map-pane';
  */
 const OMA_HALLINTA = 'a, button, input, select, textarea, label, [role="button"]';
 
+/**
+ * ONKO TÄMÄ NAPAUTUS KARTAN OMA — vai jonkin päällysrakenteen?
+ *
+ * PÄÄLLYSIKKUNAN AVAAMINEN EI OLE KARTAN LIIKE (omistaja 15.9.2026,
+ * Raamattu "VIKA: ASETUSTEN AVAAMINEN KESKEN LUENNAN KUTISTAA
+ * LUENTAKUVAT", sanatarkasti: *"Jos klikkaan esimerkiksi
+ * hammasratasta, sinä aikana kun isoisän luenta on päällä, niin kuvat
+ * pienentyvät heti"*).
+ *
+ * Luennan isokuvasarja päättyy kartan liikkeeseen, koska kartan liike
+ * on pelaajan tahdonilmaus (js/fokusvirta.js kytkeSarjanKartanLiike).
+ * Vartija kuunteli kuitenkin KOKO dokumentin pointerdownia, joten
+ * jokainen napautus mihin tahansa — hammasratas, hampurilainen,
+ * matkalaukku, saapumiskortin lappu — luettiin kartan liikkeeksi ja
+ * kutisti kuvat. Mitattu 15.9.2026 (1400 × 900, Dubrovnik): rattaan
+ * napautus vei `.fokusvirta-isokuva`-päällyksen ruudulta 0,6 s
+ * kuluessa, vaikka luenta soi häiriöttä (`paused === false`,
+ * currentTime 0,93 → 2,97 s). Ääneen napautus ei koske lainkaan, joten
+ * korjaus on rajata "kartan liike" siihen, mitä se lukee: kartta-alue.
+ *
+ * Rajaus on sama kuin valikon sulkuvartijalla (asennaValikonSulkuvartija):
+ * kartta-alueen sisällä, mutta ei sen päällä kelluvissa napeissa ja
+ * kentissä (OMA_HALLINTA) eikä kelluvissa valikoissa. Kartan päällä
+ * elävät päällykset (iso luentakuva, sen suurennos) ovat DOM-puussa
+ * `.stage`:ssa `.map-panen` VIERESSÄ, joten ne jäävät ulkopuolelle jo
+ * tämän ehdon nojalla.
+ *
+ * @param {Event} tapahtuma pointerdown
+ * @returns {boolean} osuiko napautus itse kartalle
+ */
+export function onkoKartanLiike(tapahtuma) {
+  const kohde = tapahtuma?.target;
+  if (typeof kohde?.closest !== 'function') return false;
+  if (!kohde.closest(KARTAN_ALUE)) return false;
+  if (kohde.closest(OMA_HALLINTA)) return false;
+  for (const { valikko } of VALIKKOKERROKSET) {
+    if (kohde.closest(valikko)) return false;
+  }
+  return true;
+}
+
 /** Kartan päällä kelluvat valikot, jotka ovat juuri nyt auki. */
 export function avoimetValikot(doc = typeof document === 'undefined' ? null : document) {
   const auki = [];

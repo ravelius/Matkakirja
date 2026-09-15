@@ -25798,9 +25798,27 @@ svg.rough-annotation { pointer-events: none; }
   height: 82px;
   box-sizing: border-box;
   transform-origin: 50% 0;
-  /* Napautukset kortille (js/pallolauta/maapaneeli.js: NAPAUTUS KULKEE
-     ELEMENTIN KAUTTA) — ele pysäytetään js:ssä, jottei kartta panoroi. */
-  pointer-events: auto;
+  /*
+     ERÄ 18 — KORTTI EI OTA ELEITÄ VASTAAN (Raamattu, KARTTAUUDISTUKSEN
+     PÄÄTÖKSET 21; omistaja 15.9.2026: *"jos osoitin on tai sormi tuon
+     infotaulun kohdalla, niin vierittaminen tai zoomaus ei silloin
+     onnistu"*).
+
+     ENNEN: kortti otti kaikki eleet (`pointer-events: auto`) ja js
+     pysäytti ne kuplimasta, joten rulla, nipistys ja raahaus kuolivat
+     kortin kohdalla — kartta ei liikkunut lainkaan.
+     NYT: kortin RUNKO on kartalle läpinäkyvä (`none`), ja vain
+     KLIKATTAVAT osat — plus-nappi ja valikon rivit — ottavat eleen
+     vastaan (`pointer-events: auto` omissa lohkoissaan). Kartan rulla-
+     ja vetokuuntelijat ovat kankaalla kortin ALLA, joten ne saavat
+     tapahtuman suoraan eikä kuplimista tarvita.
+
+     SIVUTUOTE, JOKA ON TARKOITETTU: tekstiä ei voi enää maalata
+     kortista, joten raahaus ei koskaan aloita valintaa (`user-select`
+     on siksi turha, mutta jää selväksi säännöksi jos joku palauttaa
+     osumat). */
+  pointer-events: none;
+  user-select: none;
   touch-action: manipulation;
   background: var(--kerma);
   border: 0;
@@ -25812,7 +25830,11 @@ svg.rough-annotation { pointer-events: none; }
 /* Pallon takana oleva paneeli on läpinäkyvä — se ei saa ottaa
    napautuksia vastaan sielläkään (.pallolauta-takana on opacity 0). */
 .pallolauta-merkki.pallolauta-takana .maapaneeli-kortti,
-.pallolauta-merkki.pallolauta-poistuu .maapaneeli-kortti { pointer-events: none; }
+.pallolauta-merkki.pallolauta-poistuu .maapaneeli-kortti,
+.pallolauta-merkki.pallolauta-takana .maapaneeli-lisaa,
+.pallolauta-merkki.pallolauta-poistuu .maapaneeli-lisaa,
+.pallolauta-merkki.pallolauta-takana .maapaneeli-valikko,
+.pallolauta-merkki.pallolauta-poistuu .maapaneeli-valikko { pointer-events: none; }
 
 /*
  * KÄSINPIIRRETTY KAKSOISVIIVAKEHYS (js/pallolauta/maapaneeli.js
@@ -26004,6 +26026,9 @@ svg.rough-annotation { pointer-events: none; }
    yläreunasta. Osuma-ala on siis tarkoitustaankin isompi. En muuta
    sitä tässä erässä — nosto tehdään laatikon paikkaa siirtämällä. */
 .maapaneeli-lisaa {
+  /* Ainoa osa kortin rungosta, joka ottaa eleen vastaan (erä 18,
+     PÄÄTÖKSET 21) — kaikki muu on kartalle läpinäkyvää. */
+  pointer-events: auto;
   position: absolute;
   top: -1px;
   right: 1px;
@@ -26061,6 +26086,10 @@ button.maapaneeli-lisaa:active:not(:disabled) {
  * pitää tumman pergamenttipohjansa, reunuksensa ja värinsä.
  */
 /*
+ * VANHENTUNUT ERÄSSÄ 18 (ks. seuraava lohko): yhden rivin linjaus on
+ * korvattu pystylistalla ilman taustaa. Historia jätetään näkyviin,
+ * koska se kertoo, mitä omistaja pyysi 14.9. ja mitä 15.9.
+ *
  * ERÄ 13: YKSI RIVI, EI TYHJÄÄ TILAA, HIEMAN IRTI PANEELISTA
  * (omistaja 14.9.2026 klo 13.50 UTC: *"maainfon plus merkista aukeava
  * valikko pitaa olla paljon tiiviimpi, ilman tyhjaa tilaa ja se pitaa
@@ -26084,21 +26113,47 @@ button.maapaneeli-lisaa:active:not(:disabled) {
  * valikko meni 2 px kortin päälle. Luku ei ole uusi tyyliarvo vaan
  * kehyksen mitta kerrottuna kahdella.
  */
+/*
+ * ERÄ 18: EI TAUSTAA, KATEGORIAT ALLEKKAIN (Raamattu,
+ * KARTTAUUDISTUKSEN PÄÄTÖKSET 22; omistaja 15.9.2026 puhelinkuvalla:
+ * *"tuo sisallysluettelo, joka aukeaa, voisi tulla kokonaan ilman
+ * tuota taustaikkunaa ja eri kategoriat saisivat tulla tiiviisti
+ * allekkain"*). TÄMÄ KORVAA ERÄN 13 YHDEN RIVIN.
+ *
+ * ENNEN: yksi vaakarivi tummalla pergamenttilaatikolla, reunuksella ja
+ * pyöristyksellä — kartan päällä oma ikkunansa.
+ * NYT: pystysuora lista suoraan kartalle. Laatikko, reunus, pyöristys
+ * ja pehmuste ovat poissa kokonaan, joten valikko on vain riveistään.
+ *
+ * LUETTAVUUS ON TEKSTIN OMA, EI LAATIKON. Nimet saavat kerman värisen
+ * kevyen reunuksen (`text-shadow` neljään suuntaan, ks.
+ * .maapaneeli-aihe-nimi), joka on sama keino kuin kartan nimikylteillä
+ * — EI `filter`iä eikä `backdrop-filter`iä, jotka pakottaisivat
+ * CSS2D-kerroksen omalle piirtotasolleen.
+ *
+ * RUNKO EI OTA ELEITÄ VASTAAN (PÄÄTÖKSET 21): rivien VÄLI on kartalle
+ * läpinäkyvää, ja vain rivit itse ovat klikattavia.
+ *
+ * VAAKA-ANKKURI ON YHÄ KESKELLÄ, mutta js siirtää valikkoa tarvittaessa
+ * sivuun, jottei se mene ruudun ulkopuolelle (js/pallolauta/
+ * maapaneeli.js sovitaValikko, --valikko-siirto).
+ */
 .maapaneeli-valikko {
   position: absolute;
   top: calc(100% + 2.7px);
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(calc(-50% + var(--valikko-siirto, 0px)));
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 0;
   width: max-content;
   max-width: none;
-  padding: 1px;
-  background: var(--overlay-card);
-  border: 0.5px solid var(--overlay-line);
-  border-radius: 2.5px;
-  pointer-events: auto;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: 0;
+  pointer-events: none;
 }
 /* Alle ei mahdu (alanapit, vuorokortti): valikko aukeaa napin
    YLÄPUOLELLE — ks. js/pallolauta/maapaneeli.js sovitaValikko. */
@@ -26115,17 +26170,29 @@ button.maapaneeli-lisaa:active:not(:disabled) {
   font: inherit;
   font-size: 5px;
   text-align: left;
-  padding: 2px 2.5px;
-  color: var(--ink-light);
-  background: rgba(46, 33, 20, 0.5);
-  border: 0.5px solid transparent;
-  border-radius: 1.5px;
+  /* Tiiviisti allekkain (erä 18): pystyväli on 0, vaakasisennys vain
+     sen verran, ettei väripallo koske kortin keskilinjaa. */
+  padding: 0 1px;
+  color: var(--map-ink);
+  background: none;
+  border: 0;
+  border-radius: 0;
   cursor: pointer;
+  /* Rivi on ainoa klikattava osa valikkoa (PÄÄTÖKSET 21). */
+  pointer-events: auto;
 }
-.maapaneeli-aihe:hover { border-color: var(--overlay-line); }
-/* Yhdellä rivillä nimi ei katkea: nappi on nimensä levyinen (erä 13). */
+.maapaneeli-aihe:hover { color: var(--accent-dark); }
+/* Nimi ei katkea, ja luettavuus tulee kerman värisestä reunuksesta
+   (erä 18) — neljä 0,5 px:n varjoa on ohut veto tekstin ympäri, ei
+   laatikko eikä suodatin. Mitat ovat kortin omia yksikköjä, joten ne
+   skaalautuvat kartan mukana kuten fonttikin. */
 .maapaneeli-aihe-nimi {
   white-space: nowrap;
+  text-shadow:
+    0.5px 0 0.5px var(--kerma),
+    -0.5px 0 0.5px var(--kerma),
+    0 0.5px 0.5px var(--kerma),
+    0 -0.5px 0.5px var(--kerma);
 }
 .maapaneeli-aihe-merkki {
   flex: 0 0 auto;
@@ -26133,6 +26200,9 @@ button.maapaneeli-lisaa:active:not(:disabled) {
   height: 4.5px;
   border-radius: 50%;
   background: var(--sym-silma);
+  /* Sama kerman veto pallon ympäri kuin nimen ympäri (erä 18): ilman
+     laatikkoa väripallo erottuu myös tummalta mereltä. */
+  box-shadow: 0 0 0 0.5px var(--kerma);
 }
 .maapaneeli-aihe[data-sym="historia"] .maapaneeli-aihe-merkki { background: var(--sym-historia); }
 .maapaneeli-aihe[data-sym="ruoka"] .maapaneeli-aihe-merkki { background: var(--sym-ruoka); }
