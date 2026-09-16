@@ -411,6 +411,15 @@
    ei näkyvyys. */
 .fokusvirta-luentakuva.pieni {
   --luentakuva-skaala: var(--luentakuva-pienennys);
+  /* PAKKA POIS KARTALTA TOISTAISEKSI (omistaja 16.9.2026, Raamattu
+     KARTTAUUDISTUKSEN PAATOKSET 31 kohta 1: *"Piilotetaan nuo kuvat
+     kartalta toistaiseksi"*). Tämä on KOLMAS varmistus: js/fokusvirta.js
+     LUENTAKUVAPAKKA_KARTALLA estää jo pakan noston ja pienennyksen,
+     mutta `pieni` on kartalle jäävän kuvan ainoa tila — jos jokin polku
+     silti antaa sen luokan, kuva ei näy. Isot kuvat luennan aikana
+     (ilman `pieni`-luokkaa) ja Pulu Cam eivät koske tähän sääntöön.
+     PALAUTUS: poista display-rivi ja aseta kytkin true. */
+  display: none;
 }
 
 /* KOLME VAIHETTA KARTALLA (omistaja 11.9.2026, sanatarkasti:

@@ -57,6 +57,8 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+// Pakkavartiot kääntyvät tästä kytkimestä (ks. ketjun viimeinen lenkki).
+import { LUENTAKUVAPAKKA_KARTALLA } from '../../js/fokusvirta.js';
 
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -263,13 +265,24 @@ for (let i = 0; i < 200; i += 1) {
       isoisa: ruudut.some((r) => !r.querySelector('.pulucam-merkki-iso')),
       pulu: ruudut.some((r) => r.querySelector('.pulucam-merkki-iso')),
       pakka: document.querySelectorAll('.pulucam-kortti').length > 0,
+      // Pulun ISO sarja on ohi, kun päällys on poistunut ruudulta.
+      puluOhi: ruudut.length === 0,
     };
   });
   const t = Date.now() - t0;
   for (const [nimi, arvo] of Object.entries(tila)) {
     if (arvo && hetket[nimi] === undefined) hetket[nimi] = t;
   }
+  /*
+   * LOPETUSEHTO KYTKIMEN MUKAAN (16.9.2026, Raamattu KARTTAUUDISTUKSEN
+   * PAATOKSET 31 kohta 1). Ketju päättyi ennen pieneen pakkaan, ja
+   * silmukka odotti juuri sitä. Pakka on nyt piilotettu
+   * (js/fokusvirta.js LUENTAKUVAPAKKA_KARTALLA = false), joten ketjun
+   * VIIMEINEN mitattava lenkki on pulun oman ison sarjan päättyminen —
+   * sama hetki, vain ilman kartalle jäävää jälkeä.
+   */
   if (hetket.pakka !== undefined) break;
+  if (!LUENTAKUVAPAKKA_KARTALLA && hetket.pulu !== undefined && tila.puluOhi) break;
   await sivu.waitForTimeout(400);
 }
 tieto('ketjun hetket (ms saapumisesta)', JSON.stringify(hetket));
@@ -280,9 +293,24 @@ vaadi('isoisän kuva EI tule ennen isoisän luentaa',
 vaadi('PULUCAM-KUVAT TULEVAT ISOINA isoisän kuvien jälkeen',
   hetket.pulu !== undefined && hetket.pulu > hetket.isoisa,
   `pulu ${hetket.pulu} ms, isoisä ${hetket.isoisa} ms`);
-vaadi('pieni pakka jää kartalle vasta pulun kuvien jälkeen',
-  hetket.pakka !== undefined && hetket.pakka > hetket.pulu,
-  `pakka ${hetket.pakka} ms, pulu ${hetket.pulu} ms`);
+/*
+ * PAKKAVARTIO KYTKIMEN MUKAAN (omistaja 16.9.2026, Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 31 kohta 1: *"Piilotetaan nuo kuvat
+ * kartalta toistaiseksi"*). Väite oli ennen "pieni pakka jää kartalle
+ * vasta pulun kuvien jälkeen"; se on KUMOTTU niin kauan kuin
+ * js/fokusvirta.js LUENTAKUVAPAKKA_KARTALLA on false, ja tilalla on
+ * sen kääntöpuoli: kartalle ei jää pakkaa lainkaan. Kun omistaja
+ * antaa kuville paremman paikan ja kytkin kääntyy, vanha väite palaa
+ * sellaisenaan.
+ */
+if (LUENTAKUVAPAKKA_KARTALLA) {
+  vaadi('pieni pakka jää kartalle vasta pulun kuvien jälkeen',
+    hetket.pakka !== undefined && hetket.pakka > hetket.pulu,
+    `pakka ${hetket.pakka} ms, pulu ${hetket.pulu} ms`);
+} else {
+  vaadi('KUMOTTU (LUENTAKUVAPAKKA_KARTALLA=false): pakkaa ei jää kartalle',
+    hetket.pakka === undefined, `pakka ilmestyi ${hetket.pakka} ms kohdalla`);
+}
 await ctx.close();
 
 /* ================================================================

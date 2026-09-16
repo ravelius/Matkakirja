@@ -51,8 +51,8 @@ import { avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
 import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenAsteet } from '../fokuspiste.js';
 import { fokusvirtaAarrepisteOhje, fokusvirtaKohtaamispiste } from '../fokusvirta.js';
 import {
-  NOSTOSYM_MINI_RUUTU, NOSTOSYM_NIMIO_KOKO, nostosymNimioAsemointi, nostosymNimioMitta,
-  nostosymPaakategoria, piirraNostosymKartalle,
+  NOSTOSYM_MINI_RUUTU, NOSTOSYM_NIMIO_KOKO, nostosymAsetaPorras, nostosymNimioAsemointi,
+  nostosymNimioMitta, nostosymPaakategoria, nostosymVirkistaRasterit, piirraNostosymKartalle,
 } from '../fokusnosto-symbolit.js';
 import { KARTTANIMI_KOOT } from '../karttanimet.js';
 import { karttavaloVari, karttavalotLue } from '../karttavalot.js';
@@ -353,9 +353,81 @@ export function merkinKerroin(d) {
  * entinen ruutuvakio.
  */
 let nostonKarttakerroin = 1;
-/** Noston mitta juuri nyt: ruutuvakio × kartan kerroin. */
-export function nostonMitta() {
-  return NOSTON_MITTA * nostonKarttakerroin;
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * NIMIÖLLÄ ON RUUTUPIKSELIKATTO (omistaja 16.9.2026 klo 16.05 UTC,
+ * Raamattu KARTTAUUDISTUKSEN PAATOKSET 31 kohta 2, iPhone-kuva
+ * Pariisin lähizoomista: nimiöt *"jattimaisia ja sumeita"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MITATTU VIKA (Chromium 390 × 844 dpr 2, Ranska-tallenne, pelaaja
+ * Pariisissa, 16.9.2026). Nimiö on PAATOKSET 14:stä lähtien KARTAN
+ * mitta: kerroin = kameran mittakaava / saapumisnäkymän mittakaava, ja
+ * koska se kasvaa rajatta sisäänpäin zoomatessa, nimiön RUUTUKOKO
+ * kasvaa samassa suhteessa:
+ *
+ *   uloinOsuus            kerroin   noston nimiö   kaupunkimerkin
+ *   1,000 (saapuminen)      1,00      8,5 px         11,5 px
+ *   0,700                   1,43     12,1 px         16,4 px
+ *   0,500                   2,00     17,0 px         23,0 px
+ *   0,341 (SISIN MAHDOLLINEN) 2,94    25,0 px         33,8 px
+ *
+ * Uloszoomauksen esto pitää pohjan kohdassa 0,341 (mitattu
+ * `pointOfView().altitude` 0,0698 ja `maanZoomiraja().max`), joten
+ * 25 px / 33,8 px EI ole reunatapaus vaan se, mitä pelaaja näkee, kun
+ * hän zoomaa Pariisiin niin lähelle kuin peli sallii. Kolme nimiötä
+ * (*Mona Lisan varkaus* 205 px, *Kaulanauhajuttu* 207 px, *Torni
+ * romuraudaksi* 239 px) on silloin leveämpi kuin puolet 373 px:n
+ * kotelosta: ne leikkautuvat ruudun laidoista ja peittävät toisensa —
+ * juuri se, minkä omistaja näki.
+ *
+ * KATTO ON MERKIN OMASSA MITASSA, EI KERTOIMESSA. Sama kerroin ajaa
+ * sekä nostoa (perusnimiö 8,5 px) että kaupunkimerkkiä (11,5 px,
+ * KAUPUNKIMERKIN_KERROIN), joten yksi kerroinkatto antaisi niille eri
+ * lopputuloksen. Katto asetetaan siksi siihen lukuun, joka ruudulla
+ * oikeasti mitataan: nimiön kirjasinkoko on
+ * `mitta × NOSTOSYM_NIMIO_KOKO`, joten mitta katkaistaan kohtaan
+ * NOSTON_NIMIO_KATTO_PX / NOSTOSYM_NIMIO_KOKO. Molemmat pysähtyvät
+ * silloin TÄSMÄLLEEN 16 px:iin, kumpikin omalla zoomillaan
+ * (nosto 0,53 · uloimmasta, kaupunkimerkki 0,72 ·).
+ *
+ * SYMBOLI PYSÄHTYY NIMIÖN MUKANA, koska ne ovat samassa rasterissa
+ * (ks. SYMBOLI JA NIMIÖ SKAALAUTUVAT YHDESSÄ yllä): kylttiä ei voi
+ * kattaa koskematta piirtoon. Se on myös oikein — merkki on kartan
+ * merkki eikä kartan alue.
+ *
+ * KAUPUNKIEN NIMIKYLTTEIHIN (js/pallolauta/nimet.js `.pallolauta-nimi`)
+ * EI KOSKETA: ne ovat PAATOKSET 14:n mukaan samaa mittaa kuin
+ * maapaneelin leipäteksti, ja katto irrottaisi ne siitä. Omistajan
+ * kuvassa jättimäiset nimiöt ovat kaikki NOSTOJEN nimiöitä (Mona
+ * Lisan varkaus, Paras patonki, Metron.), ja PAATOKSET 25 kohta 3
+ * sallii nimenomaan nostojen nimiön jäädä kaupunkien alle.
+ *
+ * KATON LUKU on omistajan mitta PAATOKSET 31:stä (*"ei kasva yli n.
+ * 16 px ruudulla"*): kaksinkertainen saapumisnäkymän 8,5 px:ään ja
+ * hitusen yli kaupunkimerkin 11,5 px:n, eli lähikuvassa teksti on
+ * selvästi isompi mutta mahtuu yhä puhelimen ruudulle (leveimmät
+ * nimiöt 131–153 px 373 px:n kotelossa, mitattu).
+ *
+ * KATTO PURKAA MYÖS RYHMITYKSEN UMPIKUJAN. Ilman kattoa nimiö kasvoi
+ * samassa suhteessa kuin merkkien väli, eikä limitys voinut koskaan
+ * purkautua zoomaamalla (se oli syy aihemerkkien zoomiporttiin,
+ * js/pallolauta/aihemerkit.js). Katon yläpuolella nimiö seisoo ja
+ * merkkien väli kasvaa, joten limitys purkautuu itsestään — ja
+ * ryhmitys voi vihdoin noudattaa PAATOKSET 27 kohtaa 3 sellaisenaan.
+ */
+/** Nimiön suurin kirjasinkoko ruudulla (px), ks. yllä. */
+export const NOSTON_NIMIO_KATTO_PX = 16;
+/** Merkin mitan katto: nimiö ei kasva yli NOSTON_NIMIO_KATTO_PX:n. */
+export const NOSTON_MITAN_KATTO = NOSTON_NIMIO_KATTO_PX / NOSTOSYM_NIMIO_KOKO;
+/**
+ * Noston mitta juuri nyt: ruutuvakio × kartan kerroin × merkin oma
+ * kerroin, katkaistuna nimiön ruutupikselikattoon (ks. yllä).
+ *
+ * @param {number} [omaKerroin] merkin oma kerroin (merkinKerroin)
+ */
+export function nostonMitta(omaKerroin = 1) {
+  return Math.min(NOSTON_MITAN_KATTO, NOSTON_MITTA * nostonKarttakerroin * omaKerroin);
 }
 
 /**
@@ -739,7 +811,10 @@ export function asetteleFokuspiste(el, d) {
 export function nostonLaatikko(p, d, {
   kylki = null, dx = 0, dy = 0, nimio = null,
 } = {}) {
-  const mitta = nostonMitta() * merkinKerroin(d);
+  // Katto on merkin omassa mitassa, joten oma kerroin menee mukaan
+  // laskuun eikä sen jälkeen (ks. NIMIÖLLÄ ON RUUTUPIKSELIKATTO):
+  // laatikon on oltava täsmälleen se, mikä ruudulle piirtyy.
+  const mitta = nostonMitta(merkinKerroin(d));
   const r = NOSTOSYM_MINI_RUUTU * mitta;
   const x = p.x + dx;
   const y = p.y + dy;
@@ -1115,6 +1190,53 @@ export function luoNostot({
     return true;
   };
 
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * PALLON MERKIT OVAT RASTEREITA — JOTEN PALLON ON MYÖS TILATTAVA
+   * NIILLE TARKKUUS (omistaja 16.9.2026, PAATOKSET 31 kohta 2:
+   * nimiöt ovat *"jattimaisia ja SUMEITA"*)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * MITATTU VIKA. Kartan merkki ei ole vektoria vaan yksi <image>,
+   * joka on paistettu canvasille PORTAALLA = laitepikseliä kirjaston
+   * yksikköä kohti (js/fokusnosto-symbolit.js NOSTOSYM_PORTAAT
+   * [1,5 · 3 · 6 · 9]), ja `asetteleNosto` venyttää sen ruudulle
+   * CSS-muunnoksella `scale(mitta)`. Portaan tilaa kutsuja —
+   * mutta tilaajia oli vain yksi, TASOKARTTA (js/fokuskohteet.js
+   * paivitaRasteriporras). Pallolauta ei kutsunut
+   * `nostosymAsetaPorras`ta kertaakaan, joten pallolla porras oli se,
+   * minkä tasokartta oli viimeksi jättänyt — käytännössä oletus 1,5.
+   *
+   * Tarve on merkin NÄKYVÄ koko: `mitta × devicePixelRatio`. Mitattu
+   * 390 × 844 dpr 2: saapumisnäkymässä tarve 2,09 ja sisimmällä
+   * zoomilla 2,91 — eli kuva venytettiin 1,4–1,9-kertaiseksi omasta
+   * tarkkuudestaan JO ENNEN nimiökattoa, ja ilman kattoa (kaupunki-
+   * merkki 33,8 px) tarve oli 6,1 eli nelinkertainen venytys. Siitä
+   * sumeus.
+   *
+   * KATTO TEKEE TARPEESTA RAJALLISEN. Koska nimiö ei enää kasva yli
+   * NOSTON_NIMIO_KATTO_PX:n, suurin mahdollinen tarve on
+   * `NOSTON_MITAN_KATTO × tiheys` = 2,91 (dpr 2) tai 4,36 (dpr 3):
+   * porras 3 riittää puhelimelle koko zoomivälille ja porras 6
+   * retinalle. Tarve lasketaan silti mitatusta suurimmasta mitasta
+   * eikä katosta, jotta uloin zoomi ei tilaa lähikuvan rasteria.
+   *
+   * PORRAS VAIHTUU VAIN LEVOSSA, koska tämä ajetaan ladonnasta, jota
+   * lauta kuristaa (LADONNAN_TAHTI_MS). Vaihtuessaan se EI pura
+   * kerrosta: `nostosymVirkistaRasterit` vaihtaa vain valmistuvien
+   * rasterien osoitteet erissä (kahdeksan merkkiä kehystä kohti).
+   */
+  const tahdistaRasteriporras = () => {
+    if (typeof document === 'undefined') return;
+    const tiheys = typeof window === 'undefined' ? 1 : (window.devicePixelRatio || 1);
+    // Suurin ruudulla oleva mitta: kaupunkimerkki, jos sellainen on.
+    const suurin = datumit.reduce((a, d) => Math.max(a, d.mitta ?? 0), 0)
+      || nostonMitta();
+    if (!nostosymAsetaPorras(suurin * Math.min(tiheys, 3))) return;
+    const juuri = ui?.pallolauta?.kuori ?? document;
+    nostosymVirkistaRasterit(juuri);
+  };
+
   /**
    * Päivittää kerroksen: kutsutaan levossa (js/pallolauta/lauta.js).
    * Palauttaa elävien laatikot nimiladonnan varauksiksi ja määrän.
@@ -1161,19 +1283,52 @@ export function luoNostot({
      * 15.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 27; säännöt ja
      * mitat js/pallolauta/aihemerkit.js).
      *
-     * KAKSI EHTOA: nimiöt limittyisivät JA zoomi on yhä saapumisen
-     * tuntumassa. Jälkimmäinen on sama mitattu porras kuin
-     * merkkiportilla (lahizoomiAuki): yksi zoomporras sisään ja
-     * merkit hajoavat omiksi nostoiksi nimiöineen — limitysehto yksin
-     * ei voisi sitä antaa, koska nimiö on kartan mitta ja kasvaa
-     * zoomissa samassa suhteessa kuin merkkien väli.
+     * EHTO ON LIMITYS, EI ZOOMIPORRAS (korjattu 16.9.2026, Raamattu
+     * KARTTAUUDISTUKSEN PAATOKSET 31 kohta 2; sääntö on PAATOKSET 27
+     * kohta 3 sellaisenaan: merkit hajoavat omikseen *"yhden zoom-
+     * portaan sisään TAI KUN NOSTOT MAHTUVAT LIMITTYMÄTTÄ"*).
+     *
+     * MITÄ ZOOMIPORTTI TEKI (mitattu Chromium 390 × 844 dpr 2,
+     * Ranska-tallenne, pelaaja Pariisissa, 16.9.2026): ryhmitys
+     * sammui heti kun `lahizoomiAuki(uloinOsuus)` — eli kun kamera
+     * ohitti 0,7 uloimmasta — ja sen jälkeen Pariisin 21 nostoa
+     * latoivat nimiönsä yksi kerrallaan. Ne EIVÄT kuitenkaan olleet
+     * erkaantuneet. Rykelmän omat ruutupisteet (ei sovittelun
+     * siirtämät) zoomeittain:
+     *
+     *   osuus   px/yks   rykelmän ala      lyhin väli   pareja ≤ 44 px
+     *   1,000   2,12     26,6 × 135,4 px   13,4 px      97 / 210
+     *   0,700   3,03     38,0 × 193,3 px   19,1 px      65 / 210
+     *   0,500   4,25     53,2 × 270,6 px   26,7 px      19 / 210
+     *   0,341   6,23     78,1 × 396,9 px   39,2 px      19 / 210
+     *
+     * Uloszoomauksen esto pysähtyy 0,341:een, joten LYHIN VÄLI EI
+     * KOSKAAN YLITÄ SORMEN 44 px:ää (RYHMITYKSEN_ETAISYYS_PX):
+     * rykelmä ei voi hajota kokonaan millään pelin sallimalla
+     * zoomilla puhelimella. Portti kuitenkin sammutti ryhmityksen jo
+     * 0,7:ssä, jolloin jokainen 21:stä latoi oman nimiönsä. Nimiö oli
+     * silloin 25 px korkea ja jopa 239 px leveä (*Torni
+     * romuraudaksi*), joten sovittelun oli singottava ne tikapuiksi,
+     * ja viisi laatikkoa valui 373,6 px:n kotelon laidoista ulos:
+     * pelaajalle jäi kasa palloja ja viisi päällekkäistä nimeä. Juuri
+     * tämän omistaja näki (*"iso osa nostoista on jossain piilossa"*).
+     *
+     * PORTIN PERUSTELU KAATUI RUUTUPIKSELIKATTOON. Portti oli
+     * olemassa siksi, ettei limitys voinut purkautua itsestään, kun
+     * nimiö kasvoi samaa tahtia kuin merkkien väli (ks.
+     * js/pallolauta/aihemerkit.js). Nimiöllä on nyt katto
+     * (NOSTON_NIMIO_KATTO_PX), joten katon yläpuolella teksti seisoo
+     * ja väli kasvaa: limitys purkautuu zoomaamalla siellä, missä
+     * merkit oikeasti erkanevat, ja rykelmä pysyy aihemerkkinä
+     * siellä, missä ne eivät erkane. Ryhmitys noudattaa siis omaa
+     * mittaansa eikä kameran kelloa.
      *
      * RYHMÄÄN KELPAAVAT VAIN ELÄVÄT KOHDENOSTOT. Poltettu muste on
      * laatassa eikä sitä voi piilottaa; kaupunkimerkki on kartan
      * hierarkiaa eikä nosto; kohtaamispiste ja eläintäky ovat omia
      * merkkejään; nimikyltti (`vainNimi`) ei avaa mitään.
      */
-    const ryhmitysPaalla = ryhmitysSallittu() && !lahizoomiAuki(uloinOsuus);
+    const ryhmitysPaalla = ryhmitysSallittu();
     const ehdokkaat = ryhmitysPaalla
       ? elavat.filter((r) => r.perhe === 'nosto' && r.aihe && !r.kaupunki
         && !r.vainNimi && typeof r.avaa === 'function')
@@ -1252,8 +1407,10 @@ export function luoNostot({
       asettele: asetteleAihemerkki,
     } : {
       avain: r.avain,
-      // Kaupunki on isompi kuin nosto (merkinKerroin).
-      mitta: mittaNyt * merkinKerroin(r),
+      // Kaupunki on isompi kuin nosto (merkinKerroin) — mutta nimiön
+      // ruutupikselikatto katkaisee molemmat samaan 16 px:iin
+      // (ks. NIMIÖLLÄ ON RUUTUPIKSELIKATTO).
+      mitta: nostonMitta(merkinKerroin(r)),
       kaupunki: Boolean(r.kaupunki),
       poltettu: Boolean(r.poltettu),
       laji: r.perhe === 'piste' ? 'piste' : 'nosto',
@@ -1319,6 +1476,7 @@ export function luoNostot({
       }
     }
     merkit.aseta('nostot', datumit);
+    tahdistaRasteriporras();
     /*
      * NIMILAPPU ON OSA OSUMAPINTAA (Raamattu, VIAT v1672; omistaja
      * 7.9.2026 illalla sanatarkasti: *"Karttanostoissa teksti ei ota
