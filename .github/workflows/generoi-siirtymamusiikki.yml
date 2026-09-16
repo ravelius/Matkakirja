@@ -75,7 +75,7 @@ on:
         required: true
         type: choice
         default: 'kaikki'
-        options: ['kaikki', 'jalan', 'laiva', 'lento', 'keksinnot', 'ihmisen-matka']
+        options: ['kaikki', 'jalan', 'laiva', 'lento', 'keksinnot', 'ihmisen-matka', 'astronautin-kamera']
       moottori:
         description: >-
           Musiikkimoottori: lyria = Google Lyria 3.5 (pelin raidat,
