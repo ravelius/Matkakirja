@@ -1095,11 +1095,11 @@ export const FOKUS_MAANIMET = {
   // kuningaskunta (en-Wikipedia, Denmark).
   DNK: { paikallinen: 'Danmark', valtiomuoto: 'kuningaskunta v. 1873' },
   // es: "España" (en-Wikipedia, Spain, langx es). Ensimmäinen tasavalta
-  // kaatui ja Alfonso XII julistettiin kuninkaaksi 29.12.1874, mutta
-  // Amadeo I:n ja tasavallan välissä 1873 maa oli jo tosiasiassa
-  // kuningaskunnaksi palautumassa; tässä käytetään pelin yleiskaavaa
+  // julistettiin 11.2.1873 ja kesti koko vuoden 1873 — Alfonso XII
+  // julistettiin kuninkaaksi vasta 29.12.1874 (korjattu 16.9.2026,
+  // omistajan vahvistus Sonnetin raportoimaan epävarmuuteen)
   // (en-Wikipedia, First Spanish Republic; Alfonso XII of Spain).
-  ESP: { paikallinen: 'España', valtiomuoto: 'kuningaskunta v. 1873' },
+  ESP: { paikallinen: 'España', valtiomuoto: 'tasavalta v. 1873' },
   // et: "Eesti" (en-Wikipedia, Estonia, langx et). Viron- ja
   // Liivinmaan kuvernementit olivat osa Venäjän keisarikuntaa
   // (en-Wikipedia, Governorate of Estonia).
@@ -1113,9 +1113,11 @@ export const FOKUS_MAANIMET = {
   // (en-Wikipedia, French Third Republic).
   FRA: { paikallinen: 'France', valtiomuoto: 'tasavalta v. 1873' },
   // hr: "Hrvatska" (en-Wikipedia, Croatia, langx hr). Kroatia-Slavonia
-  // oli Unkarin kruunun alainen osa Itävalta-Unkaria (en-Wikipedia,
-  // Kingdom of Croatia-Slavonia).
-  HRV: { paikallinen: 'Hrvatska', valtiomuoto: 'Itävalta-Unkaria v. 1873' },
+  // oli Unkarin kruunun (Unkarin puoliskon) alainen autonominen
+  // kuningaskunta Nagodban (1868) nojalla — täsmennetty 16.9.2026
+  // samaan Unkari-tarkkuuteen kuin SVK (en-Wikipedia, Kingdom of
+  // Croatia-Slavonia; Croatian–Hungarian Settlement).
+  HRV: { paikallinen: 'Hrvatska', valtiomuoto: 'Itävalta-Unkaria (Unkari) v. 1873' },
   // hu: "Magyarország" (en-Wikipedia, Hungary, native_name). Unkarin
   // kuningaskunta oli Itävalta-Unkarin toinen puolisko (en-Wikipedia,
   // Kingdom of Hungary; Austria-Hungary).

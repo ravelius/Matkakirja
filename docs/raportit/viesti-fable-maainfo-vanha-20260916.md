@@ -188,7 +188,7 @@ lähde).
 | HUN | Itävalta-Unkari, kaksoismonarkia v. 1873 | Ausgleich 1867; Unkarin kruunun puolisko. |
 | BEL | kuningaskunta v. 1873 | Itsenäinen 1830. |
 | DNK | kuningaskunta v. 1873 | — |
-| **ESP** | kuningaskunta v. 1873 | **EPÄVARMA / MAHDOLLISESTI VIRHEELLINEN.** Tehtävänannon kaava sanoi tasavalta·kuningaskunta-listalla ESP = kuningaskunta, mutta oman tietämykseni mukaan Espanja oli **käytännössä tasavalta koko vuoden 1873** (Ensimmäinen tasavalta 11.2.1873 → Alfonso XII:n kuningaskunta palautui vasta 29.12.1874). Rivi on kirjoitettu annetun kaavan mukaan, mutta Fablen kannattaisi harkita "tasavalta v. 1873" -riviä tilalle, jos historiallinen tarkkuus painaa enemmän kuin annettu kaava. |
+| ESP | tasavalta v. 1873 | **KORJATTU 16.9.2026** (omistajan vahvistus): Ensimmäinen tasavalta 11.2.1873 kesti koko vuoden 1873; Alfonso XII:n kuningaskunta palautui vasta 29.12.1874. Alun perin kirjoitettu "kuningaskunta v. 1873" annetun kaavan mukaan — merkittiin epävarmaksi raportissa, omistaja vahvisti Sonnetin huomion ja rivi korjattiin. |
 | ITA | kuningaskunta v. 1873 | Italian kuningaskunta 1861, pääkaupunki Roomassa 1871. |
 | NLD | kuningaskunta v. 1873 | — |
 | PRT | kuningaskunta v. 1873 | Tasavalta vasta 1910. |
@@ -206,7 +206,8 @@ lähde).
 | POL | jaettu Venäjän, Preussin ja Itävallan kesken v. 1873 | **TERMINOLOGIAHUOMIO:** "Preussin" on vakiintunut historiankirjoituksen nimitys Puolan jaoille, vaikka Preussi oli 1873 muodollisesti osa Saksan keisarikuntaa (yhdistyminen 1871) — alue hallinnoitiin yhä Preussin kuningaskuntana Saksan sisällä, niin kuin annettu kaava sanoi. Ei muutettu. |
 | CZE | Itävalta-Unkaria (Böömi) v. 1873 | Böömin kruunumaa, Itävallan puolisko (Cisleithania). |
 | SVK | Itävalta-Unkaria (Unkari) v. 1873 | Ylä-Unkari, Unkarin kruunun puolisko. |
-| **SVN** ja **HRV** | Itävalta-Unkaria v. 1873 | **PIENI YKSINKERTAISTUS HRV:LLÄ:** annettu kaava käytti samaa yleistä riviä molemmille, mutta Kroatia-Slavonia (HRV) oli tarkemmin sanottuna Unkarin kruunun (siis Unkarin puoliskon, kuten SVK) alainen autonominen kuningaskunta, ei Itävallan puoliskon (Cisleithania) kruunumaa kuten Slovenian alue (SVN). Annetun kaavan yleisrivi on historiallisesti harmiton mutta epätarkka; tarkempi rivi olisi "Itävalta-Unkaria (Unkari) v. 1873" HRV:lle, samoin kuin SVK:lla. Ei muutettu annetusta kaavasta poikkeavaksi omasta aloitteesta. |
+| SVN | Itävalta-Unkaria v. 1873 | Slovenian alue (Krain ym.) Itävallan puoliskon (Cisleithania) kruunumaata. |
+| HRV | Itävalta-Unkaria (Unkari) v. 1873 | **TÄSMENNETTY 16.9.2026** (omistajan vahvistus): Kroatia-Slavonia oli Unkarin kruunun (Unkarin puoliskon) alainen autonominen kuningaskunta Nagodban (1868) nojalla — sama tarkkuus kuin SVK:lla, ei Itävallan puoliskon (Cisleithania) kruunumaa kuten Slovenia. Alun perin kirjoitettu yleisrivinä "Itävalta-Unkaria v. 1873" annetun kaavan mukaan; merkittiin yksinkertaistukseksi raportissa, omistaja vahvisti ja rivi täsmennettiin. |
 | BIH | osmanivaltakuntaa v. 1873 | Bosnian vilajetti; Itävalta-Unkari miehitti vasta 1878. |
 | EST | Venäjän keisarikuntaa v. 1873 | Viron ja osin Liivinmaan kuvernementit. |
 | LVA | Venäjän keisarikuntaa v. 1873 | Liivinmaan ja Kuurinmaan kuvernementit. |
@@ -215,6 +216,14 @@ lähde).
 | MDA | Venäjän keisarikuntaa (Bessarabia) v. 1873 | Nykyisen Moldovan alue on pääosin Bessarabia (Venäjän 1812); Romanian ruhtinaskunnalla oli 1873 vain Preutin länsipuoli. |
 | ISL | Tanskan alainen v. 1873 | Home Rule vasta 1904, itsenäisyys 1918/1944. |
 | CYP | osmanivaltakuntaa v. 1873 | Brittihallintaan vasta 1878. |
+
+**Omistaja vahvisti 16.9.2026 molemmat raportissa merkityt
+epävarmuudet** ja pyysi korjaukset: ESP → *tasavalta v. 1873*, HRV →
+*Itävalta-Unkaria (Unkari) v. 1873* (rivit ja `js/packs/fokus-grc.js`
+lähdekommentit päivitetty yllä olevaan tauluun). LUX pysyy
+ennallaan (*suurherttuakunta v. 1873*, persoonaliitto-huomio jää
+kommentiksi eikä riviin). Fokus-kartuutsia (`.fokus-kartuutsi-alarivi`)
+ei muuteta tässä vaiheessa — pysyy omistajan päätöksellä ennallaan.
 
 **Pituudet ja rivitys.** 33/37 riviä on ≤ 40 merkkiä. Neljä ylittää
 ohjeen tietoisesti annetun sisällön vuoksi: **POL** (52), **NOR** (47),
