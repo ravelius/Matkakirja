@@ -391,7 +391,7 @@ async function avaaPeli(s) {
  * tarkoitus: silloin pelaaja ei pääse linssiin lainkaan, eikä muilla
  * väitteillä ole väliä.
  */
-async function avaaLinssiEleella(s) {
+async function avaaLinssiEleella(s, odota = 4500) {
   /*
    * NAPAUTUS ELI EI MITÄÄN MUUTA. Kontin ohjelmisto-WebGL piirtää
    * puhelinmitalla (dpr 2) pari kehystä sekunnissa, ja Playwrightin
@@ -414,7 +414,7 @@ async function avaaLinssiEleella(s) {
   await aktivoi.scrollIntoViewIfNeeded();
   await aktivoi.click({ timeout: 20000 })
     .catch(() => s.evaluate(() => document.querySelector('.linssi-aktivoi')?.click()));
-  await s.waitForTimeout(4500);
+  await s.waitForTimeout(odota);
   return s.evaluate(() => ({
     linssi: window.matkakirja.ui.linssiValittu,
     laukku: Boolean(document.getElementById('passport-dialog')?.open),
@@ -441,9 +441,96 @@ async function ajaNakyma(nimi) {
   const dpr = NAKYMAT[nimi].deviceScaleFactor ?? 1;
 
   await avaaPeli(s);
-  const ele = await avaaLinssiEleella(s);
+  /*
+   * AVAUSAJO MITATAAN HETI. Odotus on lyhyt (600 ms) eikä 4,5 s, koska
+   * ajo kestää viisi sekuntia: pitkä odotus katsoisi vasta valmista
+   * loppuasentoa eikä näkisi alkua lainkaan. Kahva haetaan kyselyllä,
+   * jotta mittaus osuu heti kun linssi on olemassa.
+   */
+  const ele = await avaaLinssiEleella(s, 600);
   vaadi(t('linssi aukeaa pelaajan omalla eleellä'), ele.linssi === 'satelliitti',
     `linssi ${ele.linssi}`);
+  await s.waitForFunction(
+    () => Boolean(window.matkakirja?.ui?.pallolinssi?.kahva?.avaruus?.tila?.()),
+    null, { timeout: 60000 },
+  ).catch(() => {});
+  const alku = await s.evaluate(() => window.matkakirja.ui.pallolinssi.kahva.avaruus.tila());
+  vaadi(t('avausajo on käynnissä ja pallo näkyy ensin kokonaan'),
+    alku?.avausajo?.kaynnissa === true && alku.avausajo.osuus < 0.6
+      && alku.halkaisijaAlussaPx / Math.min(alku.kotelo.leveys, alku.kotelo.korkeus) >= 0.6
+      && alku.halkaisijaAlussaPx / Math.min(alku.kotelo.leveys, alku.kotelo.korkeus) <= 0.7,
+    `osuus ${alku?.avausajo?.osuus} (${alku?.avausajo?.kulunutMs} ms ajettu),`
+    + ` halkaisija alussa ${alku?.halkaisijaAlussaPx} px /`
+    + ` ruutu ${alku?.kotelo?.leveys} × ${alku?.kotelo?.korkeus},`
+    + ` nyt ${alku?.halkaisijaNytPx} px, säde ${alku?.kalvo?.sadePx}`);
+  // Ajo perille (kesto 5 s + kontin hitaus): odotetaan sen loppumista.
+  await s.waitForFunction(
+    () => window.matkakirja.ui.pallolinssi.kahva.avaruus.tila()?.avausajo?.kaynnissa === false,
+    null, { timeout: 120000 },
+  ).catch(() => {});
+  const loppu = await s.evaluate(() => window.matkakirja.ui.pallolinssi.kahva.avaruus.tila());
+  const kapein = Math.min(loppu.kotelo.leveys, loppu.kotelo.korkeus);
+  const kasvu = loppu.halkaisijaNytPx / (alku.halkaisijaAlussaPx || 1);
+  vaadi(t('pallo kasvaa avausajossa vähintään 1,3× ja peittää melkein koko ruudun'),
+    kasvu >= 1.3 && loppu.halkaisijaNytPx / kapein >= 0.9
+      && loppu.halkaisijaNytPx / kapein <= 0.95,
+    `${alku.halkaisijaAlussaPx} → ${loppu.halkaisijaNytPx} px (${kasvu.toFixed(2)}×,`
+    + ` ${(100 * loppu.halkaisijaNytPx / kapein).toFixed(1)} % ruudusta)`);
+  /*
+   * REUNAVARJON SÄDE LUETAAN KAMERAN KORKEUDESTA JOKA KEHYKSELLÄ.
+   * Väite: kalvon säde kasvoi samassa suhteessa kuin pallo. Jos se
+   * luettaisiin vain avattaessa, varjo jäisi zoomin jälkeen pallon
+   * sisään renkaaksi.
+   */
+  const sadeKasvu = (loppu.kalvo?.sadePx ?? 0) / (alku.kalvo?.sadePx || 1);
+  vaadi(t('reunavarjon säde seuraa zoomia'),
+    Math.abs(loppu.kalvo.sadePx * 2 - loppu.halkaisijaNytPx) <= 2 && sadeKasvu > 1.15,
+    `säde ${alku.kalvo?.sadePx} → ${loppu.kalvo?.sadePx} px (${sadeKasvu.toFixed(2)}×),`
+    + ` pallo ${loppu.halkaisijaNytPx} px`);
+
+  /* ---- hidas pyöriminen ja sen pysähtyminen ------------------------ */
+  const lng = () => s.evaluate(() => window.matkakirja.ui.pallonInstanssi.pointOfView().lng);
+  const kulma = (a, b) => {
+    let d = b - a;
+    while (d > 180) d -= 360;
+    while (d < -180) d += 360;
+    return d;
+  };
+  const a1 = await lng();
+  await s.waitForTimeout(4000);
+  const a2 = await lng();
+  const nopeus = Math.abs(kulma(a1, a2)) / 4;
+  vaadi(t('pallo jää pyörimään hitaasti ajon jälkeen'),
+    loppu.pyorii === true && nopeus > 0.05 && nopeus < 0.6,
+    `${a1.toFixed(3)}° → ${a2.toFixed(3)}° = ${nopeus.toFixed(3)} °/s`
+    + ` (tilaus 0,16; kirjaston autoRotateSpeed ${loppu.pyorimisenNopeus})`);
+  /*
+   * PELAAJAN OTE PYSÄYTTÄÄ. Veto pallon yli: sormi alas, liike, ylös —
+   * sama ele, jolla pelaaja kääntää palloa. Liu'un annetaan ensin
+   * sammua (js/pallo.js vauhti), ja vasta sen jälkeen mitataan, ettei
+   * kulma enää muutu kahdessa sekunnissa.
+   */
+  const keskiX = Math.round(NAKYMAT[nimi].viewport.width / 2);
+  const keskiY = Math.round(NAKYMAT[nimi].viewport.height / 2);
+  await s.mouse.move(keskiX, keskiY);
+  await s.mouse.down();
+  for (let i = 1; i <= 5; i += 1) await s.mouse.move(keskiX - i * 8, keskiY);
+  await s.mouse.up();
+  await s.waitForTimeout(2000);
+  const b1 = await lng();
+  await s.waitForTimeout(2000);
+  const b2 = await lng();
+  const jaljella = Math.abs(kulma(b1, b2));
+  const pyoriiEnaa = await s.evaluate(
+    () => window.matkakirja.ui.pallolinssi.kahva.avaruus.tila().pyorii,
+  );
+  vaadi(t('pyöriminen loppuu, kun pelaaja tarttuu palloon'),
+    pyoriiEnaa === false && jaljella < 0.05,
+    `pyörii ${pyoriiEnaa}, kulma ${b1.toFixed(3)}° → ${b2.toFixed(3)}° (${jaljella.toFixed(3)}°)`);
+  vaadi(t('VASTAKOE: sama mittari näki liikkeen ennen tarttumista'),
+    Math.abs(kulma(a1, a2)) > jaljella * 4 && Math.abs(kulma(a1, a2)) > 0.2,
+    `ennen ${Math.abs(kulma(a1, a2)).toFixed(3)}°, jälkeen ${jaljella.toFixed(3)}° (2 s)`);
+
   await rauhoitu(s);
   const linssi = await s.evaluate(MITAT);
 
@@ -714,15 +801,29 @@ async function ajaNakyma(nimi) {
     });
   });
   await avaaPeli(h);
-  await avaaLinssiEleella(h);
+  await avaaLinssiEleella(h, 1500);
+  /*
+   * LIIKKEENVÄHENNYS: zoom on hyppy eikä ajo, eikä pallo pyöri. Mittaus
+   * heti avauksen jälkeen — jos ajo olisi käynnissä, se näkyisi tässä.
+   */
+  const hidasTila = await h.evaluate(
+    () => window.matkakirja.ui.pallolinssi.kahva.avaruus.tila(),
+  );
+  vaadi(t('VASTAKOE: liikkeenvähennyksellä zoom on heti perillä eikä pallo pyöri'),
+    hidasTila?.avausajo?.kaynnissa === false && hidasTila.avausajo.osuus === 1
+      && hidasTila.pyorii === false
+      && Math.abs(hidasTila.korkeusNyt - hidasTila.avauskorkeus) < 0.01,
+    `ajo ${JSON.stringify(hidasTila?.avausajo)}, pyörii ${hidasTila?.pyorii},`
+    + ` korkeus ${hidasTila?.korkeusNyt} (loppu ${hidasTila?.avauskorkeus},`
+    + ` alku ${hidasTila?.aloituskorkeus})`);
   await rauhoitu(h);
-  const a1 = (await h.evaluate(MITAT)).avaruus?.kalvo?.iss ?? null;
+  const h1 = (await h.evaluate(MITAT)).avaruus?.kalvo?.iss ?? null;
   await h.waitForTimeout(2500);
-  const a2 = (await h.evaluate(MITAT)).avaruus?.kalvo?.iss ?? null;
-  const liike = a1 && a2 ? Math.hypot(a2.x - a1.x, a2.y - a1.y) : -1;
+  const h2 = (await h.evaluate(MITAT)).avaruus?.kalvo?.iss ?? null;
+  const liike = h1 && h2 ? Math.hypot(h2.x - h1.x, h2.y - h1.y) : -1;
   vaadi(t('VASTAKOE: liikkeenvähennyksellä ISS on paikallaan mutta näkyvissä'),
-    Boolean(a1) && Boolean(a2) && liike < 0.5,
-    `${JSON.stringify(a1)} → ${JSON.stringify(a2)}, ${liike.toFixed(2)} px`);
+    Boolean(h1) && Boolean(h2) && liike < 0.5,
+    `${JSON.stringify(h1)} → ${JSON.stringify(h2)}, ${liike.toFixed(2)} px`);
   await hidas.close();
 }
 

@@ -103,6 +103,13 @@
  * Samalla reliefistä on kaksi tarkkuutta (valitseReliefi): 8 192 ×
  * 4 096 leveille ruuduille ja 4 096 × 2 048 puhelimelle, jolla
  * isompi purkautuisi 134 Mt:n puskuriksi.
+ *
+ *  9. AVAUSAJO JA HIDAS PYÖRIMINEN (Raamattu LISÄYS 4, kohta 18).
+ *     Linssi avautuu niin, että pallo näkyy KOKONAAN (65 % ruudun
+ *     kapeimmasta sivusta) ja pyörii hitaasti; viidessä sekunnissa
+ *     kamera laskeutuu pehmeästi siihen, että pallo peittää melkein
+ *     koko ruudun (92 %), ja jää pyörimään, kunnes pelaaja tarttuu
+ *     palloon. Ks. luvun 1 kohta "AVAUSAJO".
  */
 
 import { MAAMASKI } from './ihmisen-matka-maamaski.js';
@@ -112,12 +119,85 @@ import { luoTahtitaivas } from '../pallolauta/tahdet.js';
 /* ═════════════════ 1. AVAUSNÄKYMÄN KORKEUS ══════════════════════ */
 
 /**
- * Reunan rako: osuus ruudun kapeimmasta sivusta, joka jää pallon ja
- * ruudun laidan väliin. Pallon REUNAT ovat tilauksen ydin, joten rakoa
- * on oltava sen verran, että kaari erottuu tähtitaustaa vasten myös
- * silloin kun pelaaja on pyörittänyt palloa hieman sivuun.
+ * Reunan rako LEPONÄKYMÄSSÄ eli avausajon LOPUSSA: osuus ruudun
+ * kapeimmasta sivusta, joka jää pallon ja ruudun laidan väliin.
+ *
+ * OMISTAJA 16.9.2026 (Raamattu LISÄYS 4, kohta 18, sanatarkasti):
+ * *"…ja lopuksi pallo peittää melkein koko ruudun ja jää sen jälkeen
+ * vain hitaasti pyörimään…"* — "melkein koko ruutu" on 92 % ruudun
+ * kapeimmasta sivusta (rako 0,08). Reunat ovat yhä näkyvissä, mikä on
+ * koko linssin alkuperäinen tilaus; ennen tätä rako oli 0,12.
  */
-export const AVAUKSEN_MARGINAALI = 0.12;
+export const AVAUKSEN_MARGINAALI = 0.08;
+
+/*
+ * ── AVAUSAJO: KOKO PALLO → MELKEIN KOKO RUUTU ─────────────────────
+ *
+ * OMISTAJA 16.9.2026, sanatarkasti: *"maapallo voisi pyöriä hitaasti
+ * kun linssi avautuu ja samalla zoomautua alussa pehmeästi lähemmäs
+ * niin että alussa pallo näkyy kokonaan ja lopuksi pallo peittää
+ * melkein koko ruudun ja jää sen jälkeen vain hitaasti pyörimään,
+ * kunnes pelaaja alkaa ohjata palloa, jolloin pyöriminen loppuu."*
+ *
+ * ALKU on 65 % ruudun kapeimmasta sivusta (rako 0,35): pallo on
+ * kokonaan ruudussa väljästi, tähtitaivasta ympärillä. LOPPU on
+ * AVAUKSEN_MARGINAALIn 92 %. Kesto on viisi sekuntia, pehmennys
+ * kuutiollinen ease-in-out — sama tunne kuin kirjaston omassa
+ * kamera-ajossa (globe.gl tweenaa Cubic.InOut).
+ *
+ * ── MIKSI KORKEUS AJETAAN KEHYKSITTÄIN EIKÄ pointOfView-TWEENILLÄ ──
+ *
+ * Kirjaston oma `pointOfView(pov, kesto)` tweenaa lat/lng/korkeuden
+ * YHTENÄ pakettina: se lukee nykyisen paikan lähtöarvoksi ja
+ * kirjoittaa kameran paikan joka kehyksellä myös lat/lng:stä. Samaan
+ * aikaan pyörivä `autoRotate` jäisi siis tween alle — pallo
+ * pysähtyisi juuri zoomin ajaksi, ja tilaus sanoo "pyörii hitaasti JA
+ * SAMALLA zoomautuu". Kirjastossa on kuitenkin toinen sisäänkäynti:
+ * `pointOfView({ altitude }, 0)` yhdistää annetun kentän NYKYISEEN
+ * näkymään (`Object.assign({}, nykyinen, muutos)`), joten pelkkä
+ * korkeus voidaan kirjoittaa ilman että lat/lng liikkuu. Linssillä on
+ * jo oma kehyssilmukka (tähdet ja karttapintojen pyyhkäisy), joten
+ * uutta koneistoa ei synny — vain kuusi riviä pehmennystä siihen.
+ *
+ * PYÖRIMINEN ON KIRJASTON OMA: OrbitControlsin `autoRotate`.
+ * Kolme syytä: (1) sen kulma lasketaan kehysajasta
+ * (`controls.update(dt)`, three-render-objects antaa deltan), joten
+ * nopeus on 0,16 °/s myös hitaalla laitteella; (2) pelin oma elekerros
+ * SAMMUTTAA sen jo valmiiksi ensimmäisestä sormesta ja rullasta
+ * (js/pallo.js asennaPallonEleet: `ohjaimet.autoRotate = false`
+ * sormiAlas- ja wheel-käsittelijöissä), eli "kunnes pelaaja alkaa
+ * ohjata palloa" tulee ilmaiseksi ja täsmälleen samasta paikasta kuin
+ * valikkopallolla; (3) `enableRotate = false` ei estä sitä — kirjasto
+ * tarkistaa vain, ettei sormi ole alhaalla.
+ */
+/** Reunan rako avausajon ALUSSA (pallo 65 % ruudun kapeimmasta). */
+export const ALOITUKSEN_MARGINAALI = 0.35;
+/** Avausajon kesto (ms). Tilaus: 4–6 s. */
+export const AVAUSZOOMIN_KESTO_MS = 5000;
+/**
+ * Yhden kehyksen enimmäisaskel avausajossa (ms). Pitkä nykäys —
+ * tekstuurin purku, laattojen saapuminen, taustavälilehti — ei saa
+ * syödä ajoa, vaan se on yksi askel muiden joukossa. 100 ms vastaa
+ * kymmentä kehystä sekunnissa.
+ */
+export const AVAUSAJON_KEHYSKATTO_MS = 100;
+/** Hidas pyöriminen astetta sekunnissa (sama kuin avauspallolla). */
+export const PYORIMISTA_ASTETTA_S = 0.16;
+/**
+ * OrbitControlsin `autoRotateSpeed` samalle nopeudelle. Kirjaston kaava
+ * on 2π/60 · speed radiaania sekunnissa eli 6 · speed astetta
+ * sekunnissa, joten nopeus on asteet jaettuna kuudella.
+ */
+export const PYORIMISEN_NOPEUS = PYORIMISTA_ASTETTA_S / 6;
+
+/**
+ * Avausajon pehmennys: kuutiollinen ease-in-out (0 → 1).
+ * Puhdas funktio (tests/satelliitti-avaruus.test.mjs).
+ */
+export function avausPehmennys(p) {
+  const x = p < 0 ? 0 : (p > 1 ? 1 : Number(p) || 0);
+  return x < 0.5 ? 4 * x * x * x : 1 - ((-2 * x + 2) ** 3) / 2;
+}
 
 /** Globe.gl:n kameran avauskulma pystysuunnassa (sama kuin PALLO_FOV). */
 export const AVARUUDEN_FOV = 50;
@@ -1474,10 +1554,94 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     nimetPaalla = nyt;
     ikkuna.document?.body?.classList?.toggle?.(NIMIEN_LUOKKA, nyt);
   };
+  /*
+   * ── HIDAS PYÖRIMINEN (kirjaston oma autoRotate) ──────────────────
+   *
+   * Lauta sammuttaa pyörimisen käynnistyessään (js/pallolauta/lauta.js:
+   * *"Lauta ei pyöri itsekseen: se on pelilauta, ei näyteikkuna"*), ja
+   * linssi sytyttää sen omaksi ajakseen. Lähtöarvo otetaan talteen ja
+   * kirjoitetaan purkaessa takaisin — muuten pallo jäisi pyörimään
+   * pelilaudalle linssin sulkemisen jälkeen.
+   */
+  const ohjaimet = pallo.controls?.();
+  const pyorimisenLahto = ohjaimet
+    ? { paalla: ohjaimet.autoRotate, nopeus: ohjaimet.autoRotateSpeed }
+    : null;
+  if (ohjaimet && !reduced) {
+    ohjaimet.autoRotateSpeed = PYORIMISEN_NOPEUS;
+    ohjaimet.autoRotate = true;
+  }
+  /** Pyöriikö pallo juuri nyt (vartio lukee tämän). */
+  const pyorii = () => Boolean(ohjaimet?.autoRotate);
+
+  /**
+   * AVAUSAJON YKSI KEHYS: korkeus aloituksesta leponäkymään pehmeästi.
+   * `dt` on kehysten väli millisekunteina (0 = pelkkä uudelleenpiirto,
+   * esim. kotelon koon muutos kesken ajon).
+   *
+   * AIKA LASKETAAN KEHYKSISTÄ EIKÄ SEINÄKELLOSTA, ja yksittäinen väli
+   * katkaistaan AVAUSAJON_KEHYSKATTO_MS:ään. Syy on MITATTU 16.9.2026
+   * kontissa: linssin avaus tekee samaan aikaan reliefitekstuurin
+   * (8 192 × 4 096 -kuvan purku, ladonta ja PNG-blob, 9–13 s), ja
+   * seinäkellolla koko viiden sekunnin ajo kului SIINÄ — pallo hyppäsi
+   * suoraan loppuasentoon eikä pelaaja nähnyt ajoa lainkaan. Katko
+   * tekee pitkästä nykäyksestä yhden kehyksen mittaisen askeleen,
+   * jolloin ajo näkyy kokonaan myös silloin kun laite tökkii.
+   */
+  const ajaAvaus = (dt) => {
+    if (!avausajo.kaynnissa) return;
+    if (reduced) {
+      avausajo.osuus = 1;
+    } else if (dt > 0) {
+      avausajo.kulunut += Math.min(dt, AVAUSAJON_KEHYSKATTO_MS);
+      avausajo.osuus = Math.min(1, avausajo.kulunut / AVAUSZOOMIN_KESTO_MS);
+    }
+    const k = avausPehmennys(avausajo.osuus);
+    const korkeus = aloitusAlt + (alt - aloitusAlt) * k;
+    // VAIN KORKEUS: kirjasto yhdistää tämän nykyiseen näkymään, joten
+    // pyörivä lat/lng säilyy (ks. luvun 1 perustelu).
+    pallo.pointOfView?.({ altitude: korkeus }, 0);
+    lauta?.heraa?.();
+    if (avausajo.osuus >= 1) paataAvausajo();
+  };
+
+  /**
+   * AJO PÄÄTTYY joko perille tultuaan tai siihen, että pelaaja tarttuu
+   * palloon. Katto lasketaan takaisin leponäkymän kaistaan ja kameran
+   * sen hetkinen korkeus kirjataan linssin omaksi (omaKorkeus), jotta
+   * myöhempi kotelon koon muutos ei nykäise pelaajan omaa zoomia.
+   */
+  const paataAvausajo = () => {
+    if (!avausajo.kaynnissa) return;
+    avausajo.kaynnissa = false;
+    omaKorkeus = pallo.pointOfView?.()?.altitude ?? alt;
+    lauta?.zoomirajat?.({ min: rajat.min, max: rajat.max });
+  };
+
+  /*
+   * PELAAJAN OTE KESKEYTTÄÄ AJON. Pyörimisen sammuttaa pelin oma
+   * elekerros (js/pallo.js asennaPallonEleet), mutta zoom-ajo on
+   * linssin omaa — se on pysäytettävä samasta eleestä, ettei kamera
+   * kiskoisi vastaan sormea. Kuuntelijat ovat kaappausvaiheessa ja
+   * passiivisia, jottei mikään ele hidastu.
+   */
+  const otePalloon = () => paataAvausajo();
+  kotelo?.addEventListener?.('pointerdown', otePalloon, { capture: true, passive: true });
+  kotelo?.addEventListener?.('wheel', otePalloon, { capture: true, passive: true });
+
   const askel = (t) => {
     kehys = ikkuna.requestAnimationFrame?.(askel) ?? 0;
     pinnat.pyyhkaise();
     tahdistaNimet();
+    /*
+     * KEHYSVÄLI AVAUSAJOLLE: katkaistu delta, ei seinäkello (ks.
+     * ajaAvaus). Sama kello kuin tähtien ajautumalla, mutta oma
+     * katkaisunsa — tähdet saavat jäädä nykäisyssä jälkeen, ajo ei.
+     */
+    const kello = t ?? 0;
+    const kehysvali = avausajo.edellinenKehys ? kello - avausajo.edellinenKehys : 0;
+    avausajo.edellinenKehys = kello;
+    ajaAvaus(kehysvali);
     /*
      * KALVO JOKA KEHYS. ISS liikkuu radallaan, ja varjon ympyrä
      * seuraa zoomia — molemmat luetaan kameran korkeudesta, joten
@@ -1505,14 +1669,25 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   const avattu = Date.now();
   const mitat = { leveys: 0, korkeus: 0 };
   let alt = 0;
+  let aloitusAlt = 0;
   let rajat = { min: 0, max: 0 };
   let omaKorkeus = 0;
+  /*
+   * AVAUSAJON TILA. `kaynnissa` on tosi siitä hetkestä, kun linssi
+   * avautuu, siihen asti kun zoom on perillä TAI pelaaja tarttuu
+   * palloon. Kello luetaan kehyssilmukan omasta ajasta, jotta zoom ja
+   * tähtien ajautuma kulkevat samassa tahdissa.
+   */
+  const avausajo = {
+    kaynnissa: true, kulunut: 0, osuus: 0, edellinenKehys: 0,
+  };
   const sovita = () => {
     mitat.leveys = kotelo?.clientWidth ?? 0;
     mitat.korkeus = kotelo?.clientHeight ?? 0;
     const uusi = avausKorkeus(mitat);
     if (Math.abs(uusi - alt) < 0.001) return;
     alt = uusi;
+    aloitusAlt = avausKorkeus({ ...mitat, marginaali: ALOITUKSEN_MARGINAALI });
     rajat = zoomirajat(alt);
     /*
      * ZOOMIRAJAT ENSIN, KAMERA VASTA SEN JÄLKEEN. OrbitControls rajaa
@@ -1521,7 +1696,17 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      * PALLO_KORKEUS_MAX 2,5 on puhelimen avauskorkeutta 4,5 pienempi:
      * ilman nostoa kamera vedettäisiin takaisin eikä pallo mahtuisi.
      */
-    lauta?.zoomirajat?.({ min: rajat.min, max: rajat.max });
+    /*
+     * AVAUSAJON AJAKSI KATTO ON ALOITUSKORKEUS. Ajo alkaa YLEMPÄÄ kuin
+     * leponäkymä (pallo 65 % ruudusta), ja OrbitControls vetäisi kameran
+     * takaisin kattoonsa heti ensimmäisellä kehyksellä. Katto lasketaan
+     * takaisin normaaliksi, kun ajo on ohi — silloin pelaajan oma
+     * zoom-ulos on taas se sama kapea kaista kuin ennenkin.
+     */
+    lauta?.zoomirajat?.({
+      min: rajat.min,
+      max: avausajo.kaynnissa ? Math.max(rajat.max, aloitusAlt * 1.02) : rajat.max,
+    });
     /*
      * PELAAJAN OMA ZOOMI EI SAA HYPÄTÄ: kamera siirretään vain, jos se
      * on yhä siinä korkeudessa, johon linssi sen viimeksi vei. Jos
@@ -1533,6 +1718,17 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      * tahdosta mitään, eikä vertailu siihen kelpaa (mitattu 12.9.2026:
      * puhelin jäi korkeuteen 4,12, kun oikea oli 4,49).
      */
+    /*
+     * AVAUSAJON AIKANA KAMERAN VIE SILMUKKA. Sovitus päivittää vain
+     * luvut ja rajat; korkeuden kirjoittaa `ajaAvaus` joka kehyksellä,
+     * jolloin kesken ajon tehty koon muutos (yläpalkin vaihtuminen,
+     * laitteen kääntö) muuttaa ajon päätepistettä eikä nykäise kameraa.
+     */
+    if (avausajo.kaynnissa) {
+      omaKorkeus = alt;
+      ajaAvaus(0);
+      return;
+    }
     const tuore = Date.now() - avattu < ASETTUMISEN_IKKUNA_MS;
     const nyt = pallo.pointOfView()?.altitude ?? 0;
     const omassa = tuore || !omaKorkeus || Math.abs(nyt - omaKorkeus) < omaKorkeus * 0.02;
@@ -1554,6 +1750,19 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     /** Mitatut luvut savukkeelle ja vartijoille. */
     tila: () => ({
       avauskorkeus: +alt.toFixed(3),
+      aloituskorkeus: +aloitusAlt.toFixed(3),
+      korkeusNyt: +(pallo.pointOfView?.()?.altitude ?? 0).toFixed(3),
+      halkaisijaNytPx: Math.round(halkaisijaRuudulla(
+        pallo.pointOfView?.()?.altitude ?? alt, { korkeus: mitat.korkeus },
+      )),
+      halkaisijaAlussaPx: Math.round(halkaisijaRuudulla(aloitusAlt, { korkeus: mitat.korkeus })),
+      avausajo: {
+        kaynnissa: avausajo.kaynnissa,
+        osuus: +avausajo.osuus.toFixed(3),
+        kulunutMs: Math.round(avausajo.kulunut),
+      },
+      pyorii: pyorii(),
+      pyorimisenNopeus: ohjaimet?.autoRotateSpeed ?? null,
       halkaisijaPx: Math.round(halkaisijaRuudulla(alt, { korkeus: mitat.korkeus })),
       kotelo: { ...mitat },
       rajat,
@@ -1574,6 +1783,18 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     asetaVarjostus: (paalla) => kalvo?.asetaVarjostus?.(paalla),
     pura() {
       purettu = true;
+      avausajo.kaynnissa = false;
+      kotelo?.removeEventListener?.('pointerdown', otePalloon, { capture: true });
+      kotelo?.removeEventListener?.('wheel', otePalloon, { capture: true });
+      /*
+       * PYÖRIMINEN TAKAISIN LÄHTÖARVOONSA ENNEN KAMERAN PALAUTUSTA:
+       * jos autoRotate jäisi päälle, naulattu lähtöpaikka valuisi heti
+       * sivuun eikä pallo palaisi täsmälleen siihen, mistä lähdettiin.
+       */
+      if (ohjaimet && pyorimisenLahto) {
+        ohjaimet.autoRotate = pyorimisenLahto.paalla;
+        ohjaimet.autoRotateSpeed = pyorimisenLahto.nopeus;
+      }
       kokovahti?.disconnect?.();
       if (kehys) ikkuna.cancelAnimationFrame?.(kehys);
       kehys = 0;

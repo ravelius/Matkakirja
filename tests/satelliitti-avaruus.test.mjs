@@ -368,6 +368,15 @@ function valepallo() {
     needsUpdate: false,
   };
   const kuuntelijat = [];
+  const ohjaimet = {
+    autoRotate: false,
+    autoRotateSpeed: 2,
+    addEventListener: (n, f) => kuuntelijat.push([n, f]),
+    removeEventListener: (n, f) => {
+      const i = kuuntelijat.findIndex(([a, b]) => a === n && b === f);
+      if (i >= 0) kuuntelijat.splice(i, 1);
+    },
+  };
   const pallo = {
     tila,
     materiaali,
@@ -386,13 +395,11 @@ function valepallo() {
     globeMaterial: () => materiaali,
     // Näyttämön läpikäynti lasketaan: pyyhkäisyn on ajettava avatessa.
     scene: () => { pallo.pyyhkaisyja += 1; return { traverse() {} }; },
-    controls: () => ({
-      addEventListener: (n, f) => kuuntelijat.push([n, f]),
-      removeEventListener: (n, f) => {
-        const i = kuuntelijat.findIndex(([a, b]) => a === n && b === f);
-        if (i >= 0) kuuntelijat.splice(i, 1);
-      },
-    }),
+    // YKSI JA SAMA OHJAINOLIO kuten kirjastossa: linssi ottaa
+    // pyörimisen lähtöarvon talteen ja kirjoittaa sen purkaessa
+    // takaisin, eikä se onnistuisi, jos jokainen kutsu antaisi uuden.
+    ohjaimet,
+    controls: () => ohjaimet,
     // Tähtitaivas jää pois ilman kirjaston hiukkaskerrosta (luoTahtitaivas
     // palauttaa null) — juuri niin kuin selaimessa vanhalla kirjastolla.
     kuuntelijat,
@@ -478,8 +485,16 @@ test('avaruusnäkymä asettuu ja purkautuu täsmälleen ennalleen', () => {
   assert.ok(pallo.tila.pov.altitude > PALLO_KORKEUS_MAX, 'kamera ei noussut');
   assert.equal(pallo.materiaali.shininess, 0, 'kiilto jäi päälle');
   assert.equal(pallo.materiaali.specular.getHex(), 0, 'heijastus jäi päälle');
-  assert.equal(lauta.rajat.length, 1);
-  assert.ok(lauta.rajat[0].min > 0.5 && lauta.rajat[0].max > lauta.rajat[0].min);
+  /*
+   * ZOOMIRAJAT KIRJOITETAAN KAHDESTI: ensin avausajon nostettu katto
+   * (kamera aloittaa leponäkymää ylempää), sitten leponäkymän oma
+   * kaista, kun ajo on perillä. Liikkeenvähennyksellä ajo on perillä
+   * heti, joten molemmat tulevat samassa avauksessa.
+   */
+  assert.equal(lauta.rajat.length, 2, JSON.stringify(lauta.rajat));
+  assert.ok(lauta.rajat[0].max > lauta.rajat[1].max,
+    'avausajon katto ei ollut leponäkymää korkeammalla');
+  assert.ok(lauta.rajat[1].min > 0.5 && lauta.rajat[1].max > lauta.rajat[1].min);
   assert.ok(ikkuna.luokat.has('satelliitti-avaruus'), 'ruumiin luokka puuttuu');
   assert.ok(!ikkuna.luokat.has(NIMIEN_LUOKKA), 'nimet olivat päällä heti avattaessa');
   // Pinta vaihtui oikeasti: laattamoottori kiinni, pohjapallolla oma kuva.
@@ -754,4 +769,103 @@ test('avaruuskalvo palaa nullina ilman koteloa eikä kaada linssiä', async () =
   const { luoAvaruusKalvo } = await import('../js/linssit/satelliitti-avaruus.js');
   assert.equal(luoAvaruusKalvo({}), null);
   assert.equal(luoAvaruusKalvo({ pallo: { getScreenCoords: () => ({}) }, kotelo: null }), null);
+});
+
+/* ══ 12. avausajo: koko pallo → melkein koko ruutu (16.9.2026) ═════ */
+
+/*
+ * Raamattu LISÄYS 4, kohta 18 (omistaja, sanatarkasti): *"maapallo
+ * voisi pyöriä hitaasti kun linssi avautuu ja samalla zoomautua alussa
+ * pehmeästi lähemmäs niin että alussa pallo näkyy kokonaan ja lopuksi
+ * pallo peittää melkein koko ruudun ja jää sen jälkeen vain hitaasti
+ * pyörimään, kunnes pelaaja alkaa ohjata palloa, jolloin pyöriminen
+ * loppuu."*
+ */
+
+test('avausajo alkaa koko pallosta ja päättyy melkein koko ruutuun', async () => {
+  const m = await import('../js/linssit/satelliitti-avaruus.js');
+  for (const [nimi, mitat] of Object.entries(RUUDUT)) {
+    const kapein = Math.min(mitat.leveys, mitat.korkeus);
+    const alku = m.avausKorkeus({ ...mitat, marginaali: m.ALOITUKSEN_MARGINAALI });
+    const loppu = m.avausKorkeus(mitat);
+    const dAlku = m.halkaisijaRuudulla(alku, { korkeus: mitat.korkeus }) / kapein;
+    const dLoppu = m.halkaisijaRuudulla(loppu, { korkeus: mitat.korkeus }) / kapein;
+    // Alussa pallo näkyy KOKONAAN väljästi: 60–70 % kapeimmasta sivusta.
+    assert.ok(dAlku >= 0.6 && dAlku <= 0.7, `${nimi}: alku ${(dAlku * 100).toFixed(1)} %`);
+    // Lopuksi se peittää melkein koko ruudun: 90–95 %.
+    assert.ok(dLoppu >= 0.9 && dLoppu <= 0.95, `${nimi}: loppu ${(dLoppu * 100).toFixed(1)} %`);
+    // Ajo menee SISÄÄNPÄIN ja kasvattaa pallon vähintään 1,3-kertaiseksi.
+    assert.ok(alku > loppu, `${nimi}: ajo ei tule lähemmäs`);
+    assert.ok(dLoppu / dAlku >= 1.3, `${nimi}: kasvu ${(dLoppu / dAlku).toFixed(2)}×`);
+  }
+});
+
+test('avausajon pehmennys on ease-in-out ja pysyy kaistassa', async () => {
+  const { avausPehmennys, AVAUSZOOMIN_KESTO_MS } = await import('../js/linssit/satelliitti-avaruus.js');
+  assert.equal(avausPehmennys(0), 0);
+  assert.equal(avausPehmennys(1), 1);
+  assert.ok(Math.abs(avausPehmennys(0.5) - 0.5) < 1e-9);
+  // Rajat eivät vuoda: alle nollan ja yli ykkösen leikataan.
+  assert.equal(avausPehmennys(-3), 0);
+  assert.equal(avausPehmennys(7), 1);
+  assert.equal(avausPehmennys('roska'), 0);
+  // Ease-IN: alussa liike on hitaampaa kuin lineaarinen…
+  assert.ok(avausPehmennys(0.2) < 0.2, String(avausPehmennys(0.2)));
+  // …ja ease-OUT: lopussa se hidastuu takaisin.
+  assert.ok(avausPehmennys(0.8) > 0.8, String(avausPehmennys(0.8)));
+  // Monotoninen: zoom ei nykäise taaksepäin kertaakaan.
+  let edellinen = -1;
+  for (let i = 0; i <= 100; i += 1) {
+    const v = avausPehmennys(i / 100);
+    assert.ok(v >= edellinen, `pehmennys kääntyi kohdassa ${i}`);
+    edellinen = v;
+  }
+  // Kesto on tilauksen kaistassa 4–6 s.
+  assert.ok(AVAUSZOOMIN_KESTO_MS >= 4000 && AVAUSZOOMIN_KESTO_MS <= 6000,
+    String(AVAUSZOOMIN_KESTO_MS));
+});
+
+test('pyörimisnopeus on 0,16 °/s kirjaston omalla kaavalla', async () => {
+  const { PYORIMISTA_ASTETTA_S, PYORIMISEN_NOPEUS } = await import('../js/linssit/satelliitti-avaruus.js');
+  assert.equal(PYORIMISTA_ASTETTA_S, 0.16);
+  // OrbitControls: kulma = 2π/60 · autoRotateSpeed radiaania sekunnissa
+  // (three-render-objects antaa update(dt):lle kehysajan), eli
+  // 6 · speed astetta sekunnissa.
+  assert.ok(Math.abs(PYORIMISEN_NOPEUS * 6 - PYORIMISTA_ASTETTA_S) < 1e-12);
+});
+
+test('linssi sytyttää pyörimisen ja purku palauttaa sen ennalleen', () => {
+  const pallo = valepallo();
+  const lauta = valelauta(pallo);
+  const ikkuna = valeikkuna();
+  pallo.ohjaimet.autoRotate = false;
+  pallo.ohjaimet.autoRotateSpeed = 2;
+  const nakyma = avaaAvaruusnakyma(lauta, { ui: { reducedMotion: false }, ikkuna });
+  assert.equal(pallo.ohjaimet.autoRotate, true, 'pallo ei jäänyt pyörimään');
+  assert.ok(Math.abs(pallo.ohjaimet.autoRotateSpeed * 6 - 0.16) < 1e-12,
+    String(pallo.ohjaimet.autoRotateSpeed));
+  assert.equal(nakyma.tila().pyorii, true);
+  nakyma.pura();
+  // Lauta ei pyöri itsekseen: lähtöarvo takaisin, myös nopeus.
+  assert.equal(pallo.ohjaimet.autoRotate, false, 'pyöriminen jäi pelilaudalle');
+  assert.equal(pallo.ohjaimet.autoRotateSpeed, 2);
+});
+
+test('liikkeenvähennys: ei pyörimistä ja zoom suoraan loppuasentoon', () => {
+  const pallo = valepallo();
+  const lauta = valelauta(pallo);
+  const ikkuna = valeikkuna();
+  const nakyma = avaaAvaruusnakyma(lauta, { ui: { reducedMotion: true }, ikkuna });
+  assert.equal(pallo.ohjaimet.autoRotate, false, 'pallo pyöri liikkeenvähennyksellä');
+  const tila = nakyma.tila();
+  assert.equal(tila.pyorii, false);
+  assert.equal(tila.avausajo.kaynnissa, false, 'ajo jäi kesken');
+  assert.equal(tila.avausajo.osuus, 1);
+  // Kamera on LOPPUASENNOSSA heti, ei aloituskorkeudessa.
+  assert.ok(Math.abs(pallo.tila.pov.altitude - tila.avauskorkeus) < 0.001,
+    `${pallo.tila.pov.altitude} vs ${tila.avauskorkeus}`);
+  assert.ok(tila.aloituskorkeus > tila.avauskorkeus);
+  // Ja kaikki kamerakirjoitukset ovat hyppyjä (kesto 0).
+  assert.ok(pallo.tila.ajot.every((k) => k === 0), JSON.stringify(pallo.tila.ajot));
+  nakyma.pura();
 });
