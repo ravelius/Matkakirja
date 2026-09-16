@@ -150,8 +150,8 @@ import {
  * livianKentanKuplat normalisoi kummankin muodon samaksi listaksi.
  */
 import {
-  livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu, livianKuplanAika,
-  livianKuplanAjastin, livianKuplat, pysaytaLivianAani,
+  livianAanenKesto, livianKaupunkiAanitetty, livianKentanKuplat, livianKenttaPinoutuu,
+  livianKuplanAika, livianKuplanAjastin, livianKuplat, pysaytaLivianAani,
   soitaLivianAani, soitaLivianKaupunkiAani,
 } from './liviapuhe.js';
 import { luennanLoppuun } from './luenta.js';
@@ -3795,9 +3795,109 @@ export function aloitaPuluCamSarja(ui, city) {
     if (i === 0) tila.vaihda(kuva, true);
     else tila.aja(i * ISON_KUVAN_VAIHTO_MS, () => tila.vaihda(kuva, true));
   });
-  tila.aja((kuvat.length - 1) * ISON_KUVAN_VAIHTO_MS + ISON_KUVAN_LOPPU_MS,
-    () => paataLuentakuvasarja(ui));
+  /*
+   * VARAKELLO, EI ENSISIJAINEN. Jos ääni ei koskaan kerro kestoaan
+   * (mykistys, teksti-ilman-ääntä-tila, puuttuva äänite),
+   * vahtiPulunLoppua ei koskaan löydä äänitettä eikä siis koskaan
+   * lyhennä tätä — sarja päättyy silloin täsmälleen kuten ennenkin.
+   * Ääntä KUULEVA sarja korvaa tämän lyhyemmällä ajastimella heti kun
+   * kesto on tiedossa (ks. vahtiPulunLoppua).
+   */
+  tila.loppuAjastin = tila.aja(
+    (kuvat.length - 1) * ISON_KUVAN_VAIHTO_MS + ISON_KUVAN_LOPPU_MS,
+    () => paataLuentakuvasarja(ui),
+  );
+  vahtiPulunLoppua(ui, tila);
   return true;
+}
+
+/** Kuinka kauan ennen puheen LASKETTUA loppua kuva alkaa hipua pois. */
+const PULUN_KUVAN_ENNAKKO_MS = 1000;
+
+/**
+ * Kuinka pitkän hiljaisuuden vahti sietää kahden pulun OMAN repliikin
+ * välissä ennen kuin päättelee koko puheenvuoron oikeasti loppuneeksi.
+ * Osiin jaettu puheenvuoro (js/pollo.js naytaPuheenvuoro) vaihtaa
+ * äänitettä osasta toiseen pienen tauon yli — sillä välin
+ * `ui.liviaAani` on hetken null, eikä se saa näyttää sarjan lopulta.
+ */
+const PULUN_KUVAN_HILJAISUUSKATTO_MS = 1500;
+
+/**
+ * PULUN KUVIEN POISTUMA SEURAA OIKEAA ÄÄNTÄ, EI KIINTEÄÄ AJASTUSTA
+ * (omistaja: Pulu Cam -kuva ja huntu jäivät iPhonella katoamaan liian
+ * aikaisin/myöhään verrattuna oikeaan puheeseen, koska sarjan loppu
+ * laskettiin pelkästä kuvien lukumäärästä × kiinteä ISON_KUVAN_VAIHTO_MS
+ * — ei siitä, kuinka pitkä pulun ääninauha oikeasti on).
+ *
+ * Vahti lukee `ui.liviaAani`-elementin (js/liviapuhe.js
+ * soitaLivianAani, joka vaihtuu joka osan mukana) ja sen todellisen
+ * keston heti kun selain on ehtinyt hakea metatiedot. Kun ääntä on
+ * jäljellä enää PULUN_KUVAN_ENNAKKO_MS, sarjan varakello korvataan
+ * täsmällisemmällä — kuva siis häipyy VASTA juuri ennen viimeistä
+ * sanaa, ei aiemmin.
+ *
+ * ILMAN ÄÄNTÄ (mykistys, puuttuva äänite, tekstitila) `ui.liviaAani`
+ * ei koskaan kerro kestoa, ja vahti jättää alkuperäisen varakellon
+ * (kuvien lukumäärään perustuva ajastus, ks. aloitaPuluCamSarja)
+ * koskemattomaksi — sama sopimus kuin luennan tekstiaikataululla
+ * muuallakin (js/liviapuhe.js livianKuplanAika).
+ *
+ * Kahden osan välinen tauko ei saa näyttää sarjan lopulta: jos ääni on
+ * juuri nyt hiljaa, vahti odottaa PULUN_KUVAN_HILJAISUUSKATTO_MS ajan
+ * ennen kuin päättelee puheen oikeasti loppuneen.
+ */
+function vahtiPulunLoppua(ui, tila, hiljaisuus = 0) {
+  if (ui.dead || ui.luentakuvasarja !== tila) return;
+  const audio = ui.liviaAani;
+  if (audio) {
+    // Ääni on ainakin kerran kuultu: hiljaisuuskatto saa alkaa mitata.
+    tila.puluAaniNahty = true;
+    const kesto = livianAanenKesto(audio);
+    if (kesto !== null) {
+      /*
+       * KORVAA VARAKELLO HETI, EI VASTA LOPUSSA. `aloitaPuluCamSarja`
+       * asetti alussa kiinteän varakellon (kuvien lukumäärä ×
+       * ISON_KUVAN_VAIHTO_MS), joka voi laueta ENNEN oikeaa puheen
+       * loppua, jos äänite on pidempi kuin se kiinteä arvio (mitattu:
+       * 5 kuvaa → varakello 22 s, oikea äänite 26,07 s — kuva ja huntu
+       * katosivat 4 s liian aikaisin). Heti kun kesto on tiedossa,
+       * ajastin lasketaan UUDELLEEN todellisesta jäljellä olevasta
+       * ajasta joka kyselyllä, jotta pidempi äänite ei koskaan jää
+       * kiinteän varakellon armoille.
+       */
+      const jaljella = kesto - (Number(audio.currentTime) || 0) * 1000;
+      const poistumaan = Math.max(0, jaljella - PULUN_KUVAN_ENNAKKO_MS);
+      clearTimeout(tila.loppuAjastin);
+      tila.loppuAjastin = tila.aja(poistumaan, () => paataLuentakuvasarja(ui));
+      if (jaljella <= PULUN_KUVAN_ENNAKKO_MS) return;
+    }
+    tila.ajastimet.push(setTimeout(
+      () => vahtiPulunLoppua(ui, tila, 0), SARJAN_LUENTAVAHTI_MS,
+    ));
+    return;
+  }
+  /*
+   * ÄÄNI EI OLE VIELÄ KOSKAAN ALKANUT (soitaLivianAani odottaa vielä
+   * kuplan omaa viivettä) — tämä ei ole tauko osien välissä eikä
+   * puheen loppu, joten hiljaisuuskatto ei saa laueta tästä.
+   */
+  if (!tila.puluAaniNahty) {
+    tila.ajastimet.push(setTimeout(
+      () => vahtiPulunLoppua(ui, tila, 0), SARJAN_LUENTAVAHTI_MS,
+    ));
+    return;
+  }
+  if (hiljaisuus + SARJAN_LUENTAVAHTI_MS < PULUN_KUVAN_HILJAISUUSKATTO_MS) {
+    tila.ajastimet.push(setTimeout(
+      () => vahtiPulunLoppua(ui, tila, hiljaisuus + SARJAN_LUENTAVAHTI_MS),
+      SARJAN_LUENTAVAHTI_MS,
+    ));
+    return;
+  }
+  // Ääntä ei ole kuulunut pitkään aikaan: puhe on aidosti ohi.
+  clearTimeout(tila.loppuAjastin);
+  tila.loppuAjastin = tila.aja(0, () => paataLuentakuvasarja(ui));
 }
 
 /**

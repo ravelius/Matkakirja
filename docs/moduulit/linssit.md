@@ -1465,8 +1465,10 @@ lokiin tulee varoitus — peli ei kaadu.
 laudan Milleriin projisoitu linssikuva kelpaa sinne sellaisenaan (se
 työntäisi mantereet pohjoiseen). Topografialinssin kuva on siksi
 uudelleenprojisoitu kerran rakennusaikana:
-`node tools/tee-pallotopografia.mjs` →
-`assets/linssit/topografia-pallo.webp` (4096 × 2048, 431 kt). Lauta
+`node tools/tee-pallotopografia.mjs` → Cloudflare R2:
+`https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-20260915.webp`
+(4096 × 2048, 768 kt; uudelleenrenderöity 1′-korkeusdatasta 15.9.2026,
+mediaa ei säilytetä repossa). Lauta
 kattaa 76° P … 58° E, joten navat jäävät kuvassa läpinäkyviksi ja pallon
 oma laattapinta näkyy niiden kohdalla läpi. Sama kuvio kelpaa muillekin
 rasterilinsseille: uusi kuva, ei uutta aineistoa.

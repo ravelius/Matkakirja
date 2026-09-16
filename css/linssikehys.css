@@ -1,0 +1,113 @@
+/* ===========================================================================
+   LINSSIEN KEHYS LIUKUU SISÄÄN MUSTAN JÄLKEEN (omistaja 16.9.2026).
+
+   Raamattu, "IHMISEN MATKA -LINSSI … JATKO": kun linssi on piilottanut
+   pelin kehyksen — yläpalkin, sen reunaviivan, valikkonapin, alapalkin
+   (aikaselaimen), Liikun ja nurkkien napit — mustan/avaruusvaiheen
+   ajaksi, kehys palaa LIUKUMALLA ruudun ulkopuolelta paikalleen, EI
+   pelkällä peittävyyden feidillä: yläpalkki ylhäältä alas, alapalkki
+   alhaalta ylös, reunanapit omalta reunaltaan.
+
+   YKSI MEKANISMI KAIKILLE LINSSEILLE, ei linssikohtaisia kopioita.
+   Tämä tiedosto on ladattu index.html:ssä (ei linssin omaa
+   lataaTyyli-kutsua), jotta myös ne linssit, jotka eivät lataa
+   css/aikajana.css:ää, voivat käyttää samoja luokkia.
+
+   KAKSI LUOKKAA JA YKSI MUUTTUJA (kaikki <body>:llä):
+
+     kehys-liukuu    mekanismi on aseistettu: kehyselementeillä on
+                     siirtymä. Linssi lisää tämän avatessaan ja poistaa,
+                     kun paluuliuku on ohi.
+     kehys-piilossa  kehys on ruudun ulkopuolella (transform) ja
+                     läpinäkyvä. Luokan poisto = paluuliuku.
+     --kehys-liuku   liu'un kesto. PIILOTUS ALUSSA TAPAHTUU ILMAN
+                     SIIRTYMÄÄ (musta peittää joka tapauksessa): ohjaaja
+                     asettaa 0ms ennen luokan lisäystä ja liu'un keston
+                     (n. 500 ms) ennen sen poistoa. Sama kädenliike kuin
+                     --avaruuden-feidi-muuttujalla css/aikajana.css:ssä.
+
+   MIKSI TARKAT VALITSIMET. Kehyselementeillä on jo omat siirtymänsä
+   linssikohtaisissa säännöissä (esim. `.aikajana.esitys-kaynnissa
+   .aikaselain { transition: opacity … }`, 0-3-0). Tämän tiedoston
+   säännöt nimeävät body-luokan lisäksi linssin juuren, jolloin paino on
+   0-3-1 ja siirtymä on tämän — ilman !important-merkkejä. Siksi myös
+   peittävyys on mukana samassa lyhenteessä: `transition`-lyhenne
+   korvaa koko ominaisuuden, ja ilman peittävyyttä kehys olisi
+   loikannut näkyviin ilman feidiä.
+
+   PEITTÄVYYS ON MUKANA, MUTTA LIIKE ON LIU'USSA. Kehys sekä liukuu
+   (500 ms) että kirkastuu kartan tahtiin (--avaruuden-feidi, 2600 ms):
+   liuku on se, mitä silmä lukee liikkeenä, eikä kehys silti pomppaa
+   täyteen kirkkauteen ennen karttaa.
+   =========================================================================== */
+
+body.kehys-liukuu .aikajana .aikajana-ylarivi,
+body.kehys-liukuu .aikajana .aikaselain,
+body.kehys-liukuu .topbar,
+body.kehys-liukuu .kehys-liukuva {
+  transition: transform var(--kehys-liuku, 500ms) ease-out,
+    opacity var(--avaruuden-feidi, 2600ms) ease;
+  will-change: transform;
+}
+
+/*
+ * SIIRTO ON OMA MITTA PLUS VARA (mitattu 16.9.2026,
+ * tools/savukkeet/savuke-ihmisen-kehys.mjs, 390 x 844). Pelkkä
+ * `translateY(-110%)` EI vienyt yläpalkkia ruudun ulkopuolelle: linssin
+ * juuri alkaa noin 8 px ruudun yläreunasta (kartan ruutu pelin
+ * nollakorkuisen yläpalkin alla), joten 53 px korkean palkin alareuna
+ * jäi 2,9 pikselin päähän näkyviin. Vara (2rem) kattaa tuon etäisyyden
+ * riippumatta palkin korkeudesta — sama alareunassa.
+ */
+
+/* YLÄREUNAN KEHYS: linssin oma palkki ja pelin yläpalkki ylös ulos. */
+body.kehys-piilossa .aikajana .aikajana-ylarivi,
+body.kehys-piilossa .topbar,
+body.kehys-piilossa .kehys-liukuva.reuna-yla {
+  transform: translateY(calc(-110% - 2rem));
+  pointer-events: none;
+}
+
+/* ALAREUNAN KEHYS: aikaselain ja muut alalaidan nauhat alas ulos. */
+body.kehys-piilossa .aikajana .aikaselain,
+body.kehys-piilossa .kehys-liukuva.reuna-ala {
+  transform: translateY(calc(110% + 2rem));
+  pointer-events: none;
+}
+
+/* NURKKIEN JA REUNOJEN NAPIT: kukin omalle laidalleen. */
+body.kehys-piilossa .kehys-liukuva.reuna-vasen {
+  transform: translateX(calc(-130% - 2rem));
+  pointer-events: none;
+}
+body.kehys-piilossa .kehys-liukuva.reuna-oikea {
+  transform: translateX(calc(130% + 2rem));
+  pointer-events: none;
+}
+
+/*
+ * LIIKKEENVÄHENNYS (prefers-reduced-motion: reduce): ei liukua lainkaan,
+ * vaan lyhyt feidi. Samat valitsimet samalla painolla myöhemmin
+ * tiedostossa, joten nämä voittavat ilman !important-merkkejä.
+ */
+@media (prefers-reduced-motion: reduce) {
+  body.kehys-liukuu .aikajana .aikajana-ylarivi,
+  body.kehys-liukuu .aikajana .aikaselain,
+  body.kehys-liukuu .topbar,
+  body.kehys-liukuu .kehys-liukuva {
+    transition: opacity 200ms ease;
+    will-change: auto;
+  }
+  body.kehys-piilossa .aikajana .aikajana-ylarivi,
+  body.kehys-piilossa .aikajana .aikaselain,
+  body.kehys-piilossa .topbar,
+  body.kehys-piilossa .kehys-liukuva,
+  body.kehys-piilossa .kehys-liukuva.reuna-yla,
+  body.kehys-piilossa .kehys-liukuva.reuna-ala,
+  body.kehys-piilossa .kehys-liukuva.reuna-vasen,
+  body.kehys-piilossa .kehys-liukuva.reuna-oikea {
+    transform: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+}

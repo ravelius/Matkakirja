@@ -7055,13 +7055,59 @@ body.aloitusverho-paalla .pollo-nappi {
  * Sama häivytys kuin arkilla, ja nappi palaa itsestään perillä, kun
  * body.flight-active / body.kartalento poistuvat (js/ui.js).
  */
+/*
+ * PALLOLAUDAN OMA LENTO ON SAMA KOHTAUS (`lento-kesken`, omistaja
+ * 16.9.2026, KARTTAUUDISTUKSEN PAATOKSET 30: *"pulu näkyy lennon
+ * aikana"*). Pallolaudalla lento menee doFly:n kalvottomaan haaraan
+ * (pack `maailmankartta`), joten body.flight-active ei ole päällä eikä
+ * mikään vienyt pulua pois — kelluva nappi jäi koneen päälle oikeaan
+ * alanurkkaan. Luokka tulee ja menee js/ui.js:n doFly:ssä, ja sama
+ * sääntö vie myös pulun hahmon ja paluunapin kartalta.
+ */
 body.flight-active .pollo-nappi,
 body.kartalento .pollo-nappi,
+body.lento-kesken .pollo-nappi,
 body.flight-active .pollo-paneeli,
-body.kartalento .pollo-paneeli {
+body.kartalento .pollo-paneeli,
+body.lento-kesken .pollo-paneeli,
+body.lento-kesken .pulu-paikkamerkki,
+body.lento-kesken .pulu-palaa {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  /*
+   * ILMESTYMISANIMAATIO EI SAA VOITTAA VÄISTÖÄ (mitattu 16.9.2026).
+   * `.pollo-nappi.pollo-ilmestyy` ajaa keyframe-animaation, ja
+   * css-animaatio on kaskadissa tavallisen määreen YLÄPUOLELLA: jos
+   * nappi syntyy uudestaan kesken lennon (render lennon alussa), se
+   * animoitui takaisin näkyviin vaikka runkoluokka oli päällä —
+   * vartion näyte luki peittävyydeksi 1. Sama koskee kalvolentoa.
+   */
+  animation: none;
+}
+
+/*
+ * PULUN HAHMO ON KOLMAS ELEMENTTI (mitattu 16.9.2026: kelluvan napin
+ * peittävyys oli 0, mutta lennon puolivälin raporttikuvassa pulu seisoi
+ * yhä oikeassa alanurkassa). `.livia-kasvot-pinta.livia-lentonayttamo`
+ * on BODYN lapsi (js/livia-eleet.js), 152 × 304 px position: fixed —
+ * napin häivytys ei koske siihen lainkaan.
+ *
+ * SAMA KEINO KUIN LINSSISSÄ (css/aikajana.css
+ * body.aikajana-pulu-piilossa): `visibility` eikä peittävyys, koska
+ * livia-eleiden oma näkyvyystesti (js/livia-eleet.js `nakyy`) lukee
+ * juuri sitä — piilossa oleva pulu ei elehdi eikä piirrä kangastaan
+ * lennon ajan. Sääntö koskee VAIN pelin omaa lentoa: avauslennossa
+ * (body.kartalento) Livia puhuu ja kuuluu kohtaukseen.
+ *
+ * PUHEKUPLA MENEE SAMAA TIETÄ (`.pollo-vihje`): 1400 px:n
+ * raporttikuvassa pulun ohjekupla jäi yksin lentokoneen viereen, kun
+ * sen puhuja oli jo poissa. Kupla palaa luokan poistuessa.
+ */
+body.lento-kesken .livia-kasvot-pinta,
+body.lento-kesken .pollo-vihje {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /*
@@ -11755,6 +11801,67 @@ body.kartalento .elaintakyt {
 body.kartalento .karttaselite {
   opacity: 0;
   pointer-events: none;
+}
+
+/*
+ * LINSSIN AIKANA PALLOLAUDAN OMAT LAPPUSET POIS (Raamattu,
+ * TOPOGRAFIALINSSI: TARKKUUS EI NAY, PELIN ELEMENTIT POIS, KOKO
+ * MAAPALLO KATSOTTAVISSA; omistaja 16.9.2026, sanatarkasti: *"siinä
+ * näkyy myös kaikkia pelin aikaisia juttuja kartalla, mitkä pitäisivät
+ * siis olla pois"*).
+ *
+ * SÄÄNTÖ OLI ENNEN KAHTENA KOPIONA linssien omissa tyylitiedostoissa
+ * (css/aikajana.css ja css/satelliitti.css), joita ladataan vain
+ * kyseisen linssin kanssa. Topografialinssillä ei ole omaa
+ * tyylitiedostoa, ja mitattuna 16.9.2026 sen päällä ruudulla oli 8
+ * nimikylttiä ja 13 nostoa. Sääntö on siksi tässä, aina ladatussa
+ * tiedostossa, linssien yhteisen portin (`body.aikajana-paalla`, ks.
+ * js/ui.js linssikarttaEstaa) alla — kopiot saavat jäädä, ne sanovat
+ * saman asian eivätkä muutu tästä.
+ *
+ * `display: none`, ei opacity: piiloon jäänyt kyltti ei saa jäädä
+ * napautettavaksi linssin päälle.
+ */
+body.aikajana-paalla .pallolauta-nimi,
+body.aikajana-paalla .pallolauta-nosto,
+body.aikajana-paalla .pallolauta-piste,
+body.aikajana-paalla .pallolauta-kohde,
+body.aikajana-paalla .pallolauta-vesinimi,
+body.aikajana-paalla .pallolauta-nappula,
+body.aikajana-paalla .pallolauta-maapaneeli {
+  display: none;
+}
+
+/*
+ * PULU, SAAPUMISLAPPU JA SAAPUMISEN VALOKUVA POIS TOPOGRAFIALINSSIN
+ * AJAKSI (sama omistajan lista 16.9.2026: *"pulu"*, *"saapumislappu"*).
+ *
+ * KOLME SYYTÄ, MIKSI NÄMÄ OVAT TÄSSÄ EIVÄTKÄ LINSSIEN YHTEISEN PORTIN
+ * ALLA:
+ *
+ *   1. PÖLLÖ jää muissa linsseissä näkyviin, koska Livia puhuu niiden
+ *      aikana (ks. body.aikajana-paalla .pollo-nappi alempana tässä
+ *      tiedostossa). Topografialinssi on vaiti ja katsoo maastoa.
+ *   2. SAAPUMISLAPPU häivytetään muissa linsseissä peittävyydellä
+ *      (body.aikajana-paalla .fact-card alempana), mutta mitattuna
+ *      16.9.2026 se jäi silti näkyviin saapumisnäkymässä. `display:
+ *      none` on se, mitä omistaja pyysi, eikä jätä tulkinnanvaraa.
+ *   3. SAAPUMISEN VALOKUVA (.fokusvirta-isokuva, js/fokusvirta.js)
+ *      peitti mitattuna työpöytäruudulla 1077 × 770 pikseliä kartan
+ *      PÄÄLLÄ koko linssin ajan — juuri sellainen "pelin aikainen
+ *      juttu", jota omistaja ei halunnut nähdä. Se ei ole yhdenkään
+ *      linssin oman tyylitiedoston listalla, ja muiden linssien
+ *      kertomukset käyttävät samaa kerrosta omiin kuviinsa, joten
+ *      sääntö rajataan tähän linssiin.
+ *
+ * Luokan `linssi-topografia` asettaa linssimoottori
+ * (js/linssit/kerros.js) jokaiselle linssille sen tunnuksesta.
+ */
+body.linssi-topografia .pollo-nappi,
+body.linssi-topografia .fact-card,
+body.linssi-topografia .fokusvirta-isokuva,
+body.linssi-topografia .fokuszoom {
+  display: none;
 }
 
 /*
@@ -20544,6 +20651,21 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
  * jäsenen. Sama hillitty ele kuin laukkunapin .laukku-elo.
  */
 .pollo-nappi.pollo-ilmestyy { animation: pollo-ilmesty 0.75s ease-out 1; }
+/*
+ * LENNON VÄISTÖ VOITTAA ILMESTYMISEN (mitattu 16.9.2026, 1400 × 900).
+ * Yllä oleva sääntö on kaskadissa lennon väistön (`body.flight-active`,
+ * `body.kartalento`, `body.lento-kesken` — kaikki 0-2-0) JÄLKEEN, joten
+ * yhtä painavana se jyräsi sen: kun nappi syntyi uudestaan kesken
+ * lennon, keyframe piti peittävyyden ykkösessä koko animaation ajan
+ * (25 näytettä 27:stä luki peittävyydeksi 1). Kolmen luokan valitsin on
+ * painavampi riippumatta järjestyksestä, joten väistö pysyy väistönä.
+ */
+body.flight-active .pollo-nappi.pollo-ilmestyy,
+body.kartalento .pollo-nappi.pollo-ilmestyy,
+body.lento-kesken .pollo-nappi.pollo-ilmestyy {
+  animation: none;
+  opacity: 0;
+}
 
 @keyframes pollo-ilmesty {
   0% { transform: scale(0.4); opacity: 0; }
@@ -25531,7 +25653,37 @@ body.radio-tila .linssikartta-kehys, body.aikajana-paalla .linssikartta-kehys { 
  * valitsin ja oma laatikko. CSS2D-kerroksen (kirjaston div) jälkeen
  * DOMissa, joten ne piirtyvät paikallaan olevien merkkien päälle.
  */
-.pallo-kotelo > .pallolauta-liikkuva,
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LIIKKUVA NAPPULA ON NÄKYVISSÄ KOKO MATKAN (omistaja 16.9.2026,
+ * iPhone-kuva Ateenasta, Raamattu KARTTAUUDISTUKSEN PAATOKSET 29,
+ * sanatarkasti: *"kamera taitaa panoroida mutta pelinappula ei nay
+ * liikkeen aikana"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MITATTU JUURISYY. Liikkuva nappula jakoi ryhmävalitsimen alla olevan
+ * KONEEN säännön kanssa, ja siinä on `opacity: 0` — kone häivyttyy
+ * näkyviin vasta kun js/pallolauta/siirto.js lisää luokan `nakyy`.
+ * Luokka lisätään VAIN lennolla (`if (lento) el.classList.add('nakyy')`),
+ * joten liftauksen, bussin ja laivan nappula oli koko matkan täysin
+ * läpinäkyvä: elementti oli DOMissa, sen transform päivittyi joka
+ * kehys ja sen ruutupaikka oli oikea — mutta laskettu peittävyys oli 0
+ * ensimmäisestä kehyksestä viimeiseen (mitattu 10 näytettä matkalta).
+ *
+ * KORJAUS: nappulalla on oma sääntönsä, jossa peittävyys on 1. Koneen
+ * häivytys jää koneelle, jolle se kirjoitettiin.
+ */
+.pallo-kotelo > .pallolauta-liikkuva {
+  position: absolute;
+  inset: auto;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  pointer-events: none;
+  will-change: transform;
+  opacity: 1;
+}
 /*
  * KONE ON HETI LENTOSUUNNASSA — ASENTO EI ANIMOIDU (omistaja 5.9.2026
  * klo 00.35: *"lentokoneen ei tarvitse kääntyä alussa vaan voi lehtää
@@ -25747,6 +25899,78 @@ svg.rough-annotation { pointer-events: none; }
 .pallolauta-nosto svg,
 .pallolauta-piste svg { display: block; overflow: visible; }
 .pallolauta-nimi-siirto { transition: transform 250ms ease-in-out; }
+
+/* ===========================================================================
+   AIHEMERKKI JA VIUHKA (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 27;
+   js/pallolauta/aihemerkit.js)
+
+   Omistaja 15.9.2026 klo 20.00 UTC, Pariisin rykelmästä: *"Tee saman
+   aiheen nostot yhdeksi ilman selitettyä. Klikattaessa vaihtoehdot
+   tulevat viuhkana näkyviin nimien kanssa"*.
+
+   AIHEMERKKI on aiheen väripallo, ryhmän kärkisymboli ja pieni
+   lukumäärä — ei nimiötä. Väri tulee kärkisymbolin omasta
+   mustemuuttujasta (--sym-*), samasta lähteestä kuin lisää-valikon
+   pallot (js/karttaselite.js), joten valikko ja kartta ovat samaa
+   sävyä.
+
+   VIUHKA piirtyy AIHEMERKIN OMAAN elementtiin: kohdat ovat sen svg:n
+   lapsia, siirrettyinä kaarelle ruutupikseleinä. Napautus ei kulje
+   elementin kautta vaan laudan omasta osumatestistä
+   (js/pallolauta/lauta.js napautaPintaan → nostot.napautaViuhkasta),
+   kuten kaikilla pallon merkeillä — kangas on osumajärjestyksessä
+   CSS2D-kerroksen päällä, joten pointer-events ei kohtaa auttaisi.
+   Kohdan paperilautanen on siksi pelkkää kuvaa; sen mitta on sama
+   laatikko, jota sormi vertaa.
+
+   EI SUODATTIMIA (iOS-sääntö, tests/rules.test.mjs): avaus on
+   transform ja opacity.
+   =========================================================================== */
+
+.pallolauta-aihemerkki-pohja { fill: var(--paper, #efdcb4); opacity: 0.95; }
+.pallolauta-aihemerkki-lautanen { opacity: 0.5; }
+.pallolauta-aihemerkki-keha {
+  fill: none;
+  stroke: var(--sym-muste, #4b3a1c);
+  stroke-width: 1.1;
+  opacity: 0.85;
+}
+.pallolauta-aihemerkki-sym { transform: scale(0.62); }
+.pallolauta-aihemerkki-luku {
+  fill: var(--sym-muste, #4b3a1c);
+  font-family: var(--font-atlas, Georgia, serif);
+  paint-order: stroke;
+  stroke: var(--paper, #efdcb4);
+  stroke-width: 2.2;
+  stroke-linejoin: round;
+}
+.pallolauta-aihemerkki-auki .pallolauta-aihemerkki-keha { stroke-width: 1.8; }
+
+.pallolauta-viuhka {
+  /* Kaari aukeaa merkin keskeltä ulos: origo on merkin oma piste. */
+  animation: pallolauta-viuhka-avaa 180ms ease-out;
+}
+@keyframes pallolauta-viuhka-avaa {
+  from { transform: scale(0.72); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+.pallolauta-viuhka-viiva {
+  stroke: var(--sym-muste, #4b3a1c);
+  stroke-width: 0.9;
+  opacity: 0.45;
+}
+.pallolauta-viuhka-osuma {
+  fill: var(--paper, #efdcb4);
+  fill-opacity: 0.86;
+  stroke: var(--sym-muste, #4b3a1c);
+  stroke-opacity: 0.25;
+  stroke-width: 0.8;
+  rx: 7;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pallolauta-viuhka { animation: none; }
+}
 
 /* ===========================================================================
    MAAN PERUSTIEDOT JA LISÄÄ-VALIKKO KARTALLA (karttauudistus erä 3,
@@ -27219,15 +27443,52 @@ body.liiku-laaja .toimintorivi.rivi-yksi .monitoimi-nappi .icon-label {
  * `body.radio-tila` (maailmanradio). Nappi on jo näissä tiloissa
  * ESTETTY (linssikarttaEstaa → disabled), mutta jäi näkyviin harmaana;
  * tämä piilottaa sen kokonaan ja palauttaa, kun linssi suljetaan,
- * koska luokka poistuu samalla. Karttakerroksena piirtyvät linssit
- * (topografia, vertailu, maat, vesistöt) EIVÄT aseta näitä luokkia —
- * pelaaja pysyy kartalla ja voi liikkua, joten nappi jää näkyviin.
+ * koska luokka poistuu samalla. Karttakerroksena TASOKARTALLA
+ * piirtyvät linssit (vertailu, maat, vesistöt) EIVÄT aseta näitä
+ * luokkia — pelaaja pysyy kartalla ja voi liikkua, joten nappi jää
+ * näkyviin. TOPOGRAFIALINSSI ASETTAA (16.9.2026, Raamattu
+ * TOPOGRAFIALINSSI: … PELIN ELEMENTIT POIS): se on pallolla oma
+ * näkymänsä, jonka aikana Liiku on poissa muiden kerrosten mukana.
  */
 body.luenta-aanessa .toimintorivi .monitoimi-nappi,
 body.aikajana-paalla .toimintorivi .monitoimi-nappi,
 body.pallo-auki .toimintorivi .monitoimi-nappi,
 body.radio-tila .toimintorivi .monitoimi-nappi {
   display: none;
+}
+
+/*
+ * NOSTOPOPUPIN AIKANA LAPPU JA LIIKU POIS (omistajan päätös 15.9.2026,
+ * Psilorítis-kaappaus kapealla ruudulla: matkakirjan kutistettu lappu
+ * — vasemman yläkulman "Ateena, elokuussa 1873" ja kaiutin, `.fact-card`
+ * — ja Liiku-symbolinappi jäivät kohdekortin PÄÄLLE). Lippu
+ * `body.nosto-popup-auki` asettuu ja poistuu kartan päälle avautuvien
+ * korttien avaus/sulkukohdissa (js/fokuskohteet.js avaaFokuskohde /
+ * suljeFokuskohde, js/kaupunkinosto.js avaaKortti / suljeKaupunkipopup
+ * — kaupunkikortti ja Lyonin-tyyppinen kaupunkipopup). Sama `display:
+ * none` -mekanismi kuin linssien Liiku-piilossa yllä: piiloon jäänyttä
+ * nappia ei saa voida napauttaa vahingossa.
+ *
+ * TURISTI-INFO EI TARVITSE TÄTÄ: se avaa suoraan nähtävyys-dialogin
+ * (`showModal`, selaimen top layer), joka peittää jo lapun ja Liikun
+ * z-indexistä riippumatta (ks. js/ui.js suurennosIsanta).
+ */
+body.nosto-popup-auki .toimintorivi .monitoimi-nappi {
+  display: none;
+}
+/*
+ * LAPPU: `visibility: hidden` EIKÄ `display: none`. Kutistettu lappu
+ * (`body[data-mode] .fact-card.pieni`, puhelimen media-lohko) asettaa
+ * jo `display: grid`illä KOLME luokkaa/tunnistetta — täsmällisyys
+ * (0,3,1) voittaisi tämän kahden luokan säännön (0,2,1) lähdejärjestyksestä
+ * riippumatta, ja `display: none` jäisi vaikutuksettomaksi (mitattu
+ * 15.9.2026, savuke-iphone-tekstit.mjs: lappu jäi `grid`iksi). Visibility
+ * ei kilpaile display-arvon kanssa, ja `pointer-events: none` estää
+ * silti napautuksen näkymättömään lappuun.
+ */
+body.nosto-popup-auki .fact-card {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /*

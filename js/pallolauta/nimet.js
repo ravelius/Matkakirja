@@ -55,11 +55,47 @@
  *
  * KOKO ON OSA LUKKOA. `kokoKerroin` ja `pisteSade` tulevat kameran
  * korkeudesta (lauta.js kohdekaupunginMitat), joten ne eivät muutu
- * panoroitaessa mutta muuttuvat zoomatessa: lukko on voimassa vain
- * samoilla mitoilla, ja zoomi latoo nimen uudelleen kuten ennenkin.
+ * panoroitaessa mutta muuttuvat zoomatessa.
  *
  * Näin 261 nimen mitat eivät myöskään maksa kehystä (karttapallo.md
  * riski 4): ladonta on yhä sama kertaluokka, vain sen TULOS pysyy.
+ *
+ * ══════════════════════════════════════════════════════════════════
+ * ZOOMI EI SAA VAIHTAA KYLTIN PUOLTA (omistaja 15.9.2026, Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 24, sanatarkasti: *"pariisi ja muut
+ * kaupungintekstit liikkuva ja hyppivat zoomatessa. saisiko ne
+ * rauhoitettua paikoilleen? koko voi muuttua. mutta nyt ne hyppivat
+ * eri puolille kaupungin merkkia. pitaisi pysya samassa kohdassa."*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * ENSIMMÄINEN LUKKO PITI VAIN PANOROINNIN YLI. Lukko oli voimassa
+ * täsmälleen samoilla mitoilla (`kerroin`, `sade`), ja zoomi muuttaa
+ * molempia — silloin lukko purkautui ja `ladoRuutunimet` valitsi
+ * kyljen uudestaan sen mukaan, mitä naapurustossa sattui olemaan
+ * ruudulla. MITATTU Chromiumilla 15.9.2026 (1400 × 900, Ranskan
+ * saapumisnäkymä ja neljä porrasta sisään; kyltin keskipisteen suunta
+ * kaupungin omasta pallopisteestä): Alpit 56,7° → 51,4° → 46,1° eli
+ * 10,6 asteen heitto, ja etäisyys tekstikorkeuteen suhteutettuna
+ * 6,23 → 4,61 → 3,54 (56 %). Marseille 48,2° → 40,7° (7,5°). Juuri se
+ * on omistajan näkemä hyppy.
+ *
+ * LÄÄKE: ZOOMI SKAALAA LUKON, EI PURA SITÄ. Sijoitus on kokonaan
+ * kirjasinkoon mitta (ehdokkaiden dx, dy ja laatikko lasketaan
+ * `koko`-luvusta, js/karttanimet.js sijoitaKaupunginNimi), joten sama
+ * ehdokas uudella kertoimella on täsmälleen vanha sijoitus kerrottuna
+ * kertoimien suhteella. Lukkoa ei siis tarvitse purkaa: se kerrotaan
+ * suhteella, jolloin KYLKI JA SUUNTA PYSYVÄT ja vain koko muuttuu —
+ * juuri se, mitä omistaja pyytää (*"koko voi muuttua"*). Lukko
+ * purkautuu yhä samoista syistä kuin ennenkin: nimi katoaa näkyvistä,
+ * tai ruudun reuna ei anna sille tilaa.
+ *
+ * PUOLI VALITAAN KERRAN KAUPUNGILLE. Lukko on kaupungin oma, ja
+ * ensimmäinen laskenta ratkaisee puolen — lukko vain kantaa sen
+ * zoomista toiseen. Jotta myös se ensimmäinen laskenta antaisi saman
+ * puolen zoomista riippumatta, laudan käsin hiottu asettelu (lx/ly) ja
+ * sivuehdokkaiden vähimmäisetäisyys skaalautuvat kirjasinkoon mukana
+ * (js/karttanimet.js EHDOKASKEHÄ ON KARTAN MITTA): ehdokaskuvio on
+ * silloin sama joka zoomilla, vain suurempana.
  *
  * ILMESTYMINEN JA POISTUMINEN ANIMOIDAAN merkkirekisterissä
  * (js/pallolauta/merkit.js): sisään häivytys, ulos häivytys, siirto
@@ -403,11 +439,40 @@ export function luoNimet({
      */
     const paikat = new Map(ehdokkaat.map((e) => [e.c, e]));
     const nakyvat = new Set(ehdokkaat.map((e) => e.c.id));
+    /*
+     * LUKKO TÄMÄN LADONNAN MITOISSA (ks. ZOOMI EI SAA VAIHTAA KYLTIN
+     * PUOLTA). Sama ehdokas eri kirjasinkoolla on vanha sijoitus
+     * kerrottuna kertoimien suhteella, joten zoomi vain skaalaa lukon
+     * — kylki, suunta ja tekstikorkeuteen suhteutettu etäisyys pysyvät
+     * täsmälleen samoina.
+     */
+    const skaalattuLukko = (lukko) => {
+      if (!lukko) return null;
+      if (lukko.kerroin === kokoKerroin) return lukko;
+      if (!(lukko.kerroin > 0) || !(kokoKerroin > 0)) return null;
+      const s = kokoKerroin / lukko.kerroin;
+      const rs = lukko.rs ? {
+        dx0: lukko.rs.dx0 * s,
+        dy0: lukko.rs.dy0 * s,
+        dx1: lukko.rs.dx1 * s,
+        dy1: lukko.rs.dy1 * s,
+      } : null;
+      return {
+        dx: lukko.dx * s,
+        dy: lukko.dy * s,
+        ank: lukko.ank,
+        koko: lukko.koko * s,
+        tyylitys: lukko.tyylitys,
+        vali: Number.isFinite(lukko.vali) ? lukko.vali * s : lukko.vali,
+        kerroin: kokoKerroin,
+        sade: pisteSade,
+        rs,
+      };
+    };
     /** Lukon laatikko nykyisessä ruutupisteessä, tai null. */
     const lukonLaatikko = (id, e) => {
-      const lukko = lukitut.get(id);
-      if (!e || !lukko || lukko.kerroin !== kokoKerroin || lukko.sade !== pisteSade) return null;
-      if (!lukko.rs) return null;
+      const lukko = skaalattuLukko(lukitut.get(id));
+      if (!e || !lukko || !lukko.rs) return null;
       return {
         x0: e.x + lukko.rs.dx0,
         y0: e.y + lukko.rs.dy0,
@@ -428,7 +493,7 @@ export function luoNimet({
       const e = paikat.get(n.c);
       const r = lukonLaatikko(n.c.id, e);
       if (!r || !mahtuu(r)) continue;
-      asetaLukko(n, lukitut.get(n.c.id), r);
+      asetaLukko(n, skaalattuLukko(lukitut.get(n.c.id)), r);
     }
     /*
      * LUKITTU NIMI EI PUTOA KESKEN VEDON. Ladonta pudottaa nimen, jos
@@ -445,7 +510,7 @@ export function luoNimet({
       const jo = new Set(ladottu.nimiot.map((n) => n.c.id));
       for (const e of ehdokkaat) {
         if (jo.has(e.c.id)) continue;
-        const lukko = lukitut.get(e.c.id);
+        const lukko = skaalattuLukko(lukitut.get(e.c.id));
         const r = lukonLaatikko(e.c.id, e);
         if (!lukko || !r || !mahtuu(r)) continue;
         if (ladottu.nimiot.some((n) => n.r && leikkaa(n.r, r))) continue;
@@ -541,8 +606,12 @@ export function luoNimet({
      */
     for (const [id, lukko] of lukitut) {
       if (lukot.has(id) || !nakyvat.has(id)) continue;
-      if (lukko.kerroin !== kokoKerroin || lukko.sade !== pisteSade) continue;
-      lukot.set(id, lukko);
+      // Talteen tämän ladonnan mitoissa (ks. ZOOMI EI SAA VAIHTAA
+      // KYLTIN PUOLTA): näin puoli säilyy myös zoomin yli, vaikka nimi
+      // olisi juuri tältä ajolta pudonnut.
+      const sovitettu = skaalattuLukko(lukko);
+      if (!sovitettu) continue;
+      lukot.set(id, sovitettu);
     }
     lukitut = lukot;
     nimetyt = new Set(datumit.map((d) => d.id));

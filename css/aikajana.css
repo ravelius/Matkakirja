@@ -2221,6 +2221,41 @@
 }
 
 /*
+ * KEHYS POISSA KOKO AVARUUSVAIHEEN AJAN (omistaja 15.9.2026 klo 19.05,
+ * iPhone-kuva "He vain lähtivät.", sanatarkasti: *"Alussa oli vain
+ * musta mutta sitten kehys palasi liian aikaisin"*).
+ *
+ * JUURISYY: `esitys-musta` elää vain ensimmäisen virkkeen ajan
+ * (js/linssit/ihmisen-matka-esitys.js nostaMusta), joten yläpalkin
+ * reunaviiva ja hampurilainen palasivat jo tähtitaivaalle ja pienen
+ * Maan päälle. Luokka `esitys-avaruus` on päällä koko avaruusvaiheen
+ * (aloita → sytytaValot), joten kehys roikkuu siinä ja palaa vasta
+ * kartan valjetessa. Feidaus on sama kuin peitteen 'pois' (VALOJEN_MS):
+ * ohjaaja asettaa --avaruuden-feidi juuri ennen luokan poistoa.
+ *
+ * SAMA KOSKEE ALAPALKKIA (linssin aikaselain). Se oli jo piilossa
+ * `esitys-pimea`-luokassa, mutta omalla 500 ms:n liu'ullaan: mitattuna
+ * (savuke-ihmisen-kehys.mjs) selaimen peittävyys oli vielä 1,0 kun
+ * musta oli jo päällä, eli valaistu nauha jäi puoleksi sekunniksi
+ * mustan päälle. Nyt se noudattaa samaa --avaruuden-feidi-muuttujaa
+ * kuin yläpalkki: pois ilman liukua, takaisin kartan kanssa.
+ *
+ * EI PAKOTIETÄ. Kehys on poissa koko avaruusvaiheen (mitattuna noin
+ * 19 s), eikä sitä saa takaisin kesken kaiken: napautus laukeaisi
+ * vahingossa (pallolauta ottaa kosketukset vastaan koko esityksen
+ * ajan) ja Esc sulkee linssin jo valmiiksi (js/aikajana.js nappain).
+ */
+.aikajana.esitys-kaynnissa .aikajana-ylarivi,
+.aikajana.esitys-kaynnissa .aikaselain {
+  transition: opacity var(--avaruuden-feidi, 2600ms) ease;
+}
+.aikajana.esitys-avaruus .aikajana-ylarivi,
+.aikajana.esitys-avaruus .aikaselain {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*
  * ESINERIVI POIS KOKO ESITYKSEN AJAKSI (omistaja 7.9.2026: kertomus on
  * yksi kaari eikä korttien selausta). Kortit palaavat, kun ohjaaja
  * poistaa luokan ennen tutkimusvaihetta.
@@ -2437,6 +2472,8 @@ body.aikajana-pulu-piilossa .livia-kasvot-pinta {
   .aikajana-esitys-peite,
   .aikajana-esitys-peite.pois,
   .aikajana.esitys-musta .aikajana-ylarivi,
+  .aikajana.esitys-kaynnissa .aikajana-ylarivi,
+  .aikajana.esitys-kaynnissa .aikaselain,
   .aikajana-kertomusteksti,
   .aikajana-kertomusteksti-sisus,
   .aikajana-kertomuskuva,

@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1916';
+const CACHE = 'matkakirja-2026-08-09.1920';
 const SHELL = [
   './',
   './index.html',
@@ -240,11 +240,18 @@ const SHELL = [
   // Avaruuden tähdet ja pöly (7.9.2026): kertomusesityksen musta alku.
   './js/pallolauta/tahdet.js',
   './js/pallolauta/nimet.js',
+  // Saman aiheen nostot yhdeksi merkiksi ja viuhka napautuksesta
+  // (PAATOKSET 27): nostot.js:n oma alimoduuli, samaa polkua kuin muu
+  // pallolauta eikä yhden tiedoston niputuksessa.
+  './js/pallolauta/aihemerkit.js',
   './js/pallolauta/nostot.js',
   './js/pallolauta/reitit.js',
   './js/pallolauta/siirto.js',
   './js/pallolauta/sovittelu.js',
   './css/aikajana.css',
+  // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
+  // suoraan, joten se kuuluu kuoreen kuten css/styles.css.
+  './css/linssikehys.css',
   // Etusivun esirenderöity pallo (pallolauta vaihe 5a, 5.9.2026):
   // tuodaan dynaamisesti kuten pallo.js, mutta kuuluu SHELLiin
   // offline-käyttöä varten. Ei niputeta yhden tiedoston versioon
@@ -400,6 +407,7 @@ const SHELL = [
   './js/packs/kohtaamiset.js',
   './js/packs/fokusvirrat.js',
   './js/packs/iskulauseet.js',
+  './js/packs/saapumispuheet.js',
   './js/packs/fokuskohteet-grc.js',
   './js/packs/fokusvirta-ateena.js',
   './js/packs/fokuskohteet-bgr.js',
@@ -687,10 +695,9 @@ const SHELL = [
   // esilatausta ne puuttuisivat juuri offline-tilassa, jossa linssejä
   // selaillaan eniten.
   './assets/linssit/yokartta.jpg',
-  './assets/linssit/topografia.webp',
-  // Sama reliefi pallon pinnalle tasavälisenä (karttapallo.md luku 10,
-  // aalto 1A; tools/tee-pallotopografia.mjs).
-  './assets/linssit/topografia-pallo.webp',
+  // Reliefikuvat (litteä ja pallo) siirtyivät Cloudflare R2:een
+  // 15.9.2026 (js/packs/linssi-topografia-kuva.js) — mediaa ei
+  // säilytetä repossa, eikä niitä siksi enää esilatauslistalla.
   // Varustekuvat (linssien toimintakuvat, 10.8.2026).
   './assets/varusteet/varuste-topografia.jpg',
   './assets/varusteet/varuste-vesistot.jpg',

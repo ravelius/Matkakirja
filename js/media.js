@@ -1,3 +1,11 @@
+import { SAAPUMISPUHEET } from './packs/saapumispuheet.js';
+
+/** Yhtenäinen saapumisotto; ei käynnistä soittoa eikä korvaa matkakirjan luentaa. */
+export function haeSaapumispuhe(kaupunki) {
+  const id = typeof kaupunki === 'string' ? kaupunki : kaupunki?.id;
+  return Object.hasOwn(SAAPUMISPUHEET, id) ? SAAPUMISPUHEET[id] : null;
+}
+
 // Peili: pelin kaikista repon ulkopuolelta ladattavista kuvista ja
 // äänistä on oma kopio yhdessä paikassa (ämpäri, ks. R2_JUURI alla).
 // Peli hakee aineiston ensisijaisesti sieltä, jottei yksi kaatunut

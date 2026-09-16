@@ -17,6 +17,7 @@ const read = (p) => readFileSync(join(root, p), 'utf8');
 const MODULES = [
   'js/tokens.js',
   'js/wiki.js',
+  'js/packs/saapumispuheet.js',
   'js/media.js',
   'js/kuvatekstit.js',
   'js/galleria.js',
@@ -996,6 +997,9 @@ const STYLES = [
   // Sähkepinta on osa peruspeliä (js/ui.js ja js/main.js tuovat
   // js/sahke.js:n), eikä css/styles.css sisällä yhtään sahke-sääntöä.
   'css/sahke.css',
+  // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
+  // omalla <link>-elementillään, joka ei päädy yhden tiedoston versioon.
+  'css/linssikehys.css',
 ];
 
 const css = STYLES.map((file) => read(file)).join('\n\n');
