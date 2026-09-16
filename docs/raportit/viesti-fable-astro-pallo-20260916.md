@@ -1,6 +1,6 @@
 # Avaruusvaiheen pallo: ISS radallaan, aurinko sivulta, kylläisyys alas
 
-*Opus-työagentti Fablelle 16.9.2026. Haara
+*Opus-työagentti Fablelle 16.9.2026 (päivitetty samana päivänä omistajan pistetilauksen jälkeen). Haara
 `claude/bold-ride-vow4ki-astro-pallo`, pohja origin/main (78e60489,
 v1917). Ei PR:ää, ei versionostoa, ei Raamattu-muutoksia. Alue oli
 AVARUUSVAIHEEN PALLO — valokuvanäkymään ja yläpalkkiin ei koskettu
@@ -25,15 +25,19 @@ AVARUUSVAIHEEN PALLO — valokuvanäkymään ja yläpalkkiin ei koskettu
    olemassa ja se on 8192 × 4096 (ei 8192 × 2048). Se purkautuu 128
    Mt:n RGBA-puskuriksi, joten puhelin saa 4k:n. Valinta on kahden
    vakion ja yhden puhtaan funktion takana. Luku 4.
-5. **Vartio** `tools/savukkeet/savuke-astro-pallo.mjs`: 19/19 läpi
-   työpöydällä (1400 × 900) ja 20/20 puhelimella (390 × 844),
-   vastakokeineen. Luku 5.
+5. **Kohdepisteet ovat nyt PELKKIÄ vihreitä pisteitä** (omistajan
+   lisätilaus 16.9.2026): 7 px, sama sävy, ei rengasta eikä
+   hohtokehää. Osuma-ala säilyi. Luku 5.
+6. **Vartiot**: `tools/savukkeet/savuke-astro-pallo.mjs` 24/24 läpi
+   molemmilla näytöillä, `savuke-satelliittilinssi.mjs` 34/34, kaikki
+   vastakokeineen. Luku 6.
 
 Muutetut tiedostot: `js/linssit/satelliitti-avaruus.js` (uusi luku 2c
-ja reliefin valinta), `tests/satelliitti-avaruus.test.mjs` (kuusi uutta
-testiä), `tools/savukkeet/savuke-astro-pallo.mjs` (uusi).
-`js/linssit/satelliitti.js` säilyi koskemattomana — kaikki mahtui
-avaruusnäkymän omaan moduuliin.
+ja reliefin valinta), `css/satelliitti.css` ja
+`js/linssit/satelliitti.js` (pisteen ulkoasu, luku 5),
+`tests/satelliitti-avaruus.test.mjs` ja `tests/satelliitti.test.mjs`,
+`tools/savukkeet/savuke-astro-pallo.mjs` (uusi) ja
+`savuke-satelliittilinssi.mjs`.
 
 ## 1. ISS radallaan
 
@@ -174,13 +178,57 @@ eivät ole odotusaikaa avauksessa — ne ovat aika, jonka pallo on
 "vyöhykevärinen". Oikealla laitteella luvut ovat murto-osa näistä
 (kontissa piirto on ohjelmistolla).
 
-## 5. Vartio ja vastakokeet
+## 5. Kohdepisteet: pelkkä vihreä piste
+
+**Omistaja 16.9.2026, sanatarkasti:** *"Muutamilla nuo hehkuvat
+pisteet pelkeiksi vihreäksi pisteeksi ilman ympyrää ja pisteen
+ympärillä."*
+
+**Ennen** merkki oli kolme kerrosta: 46 px:n sädekehä
+(`radial-gradient`), 18 px:n rengas (`border: 2px` + `box-shadow` +
+tumma tausta) ja 6 px:n VALKOINEN ydin omalla hohdollaan. Kolme
+kerrosta teki avausnäkymässä rypäleitä — kaksi lähekkäistä kohdetta
+sulautui yhdeksi läiskäksi.
+
+**Nyt** merkissä on kaksi elementtiä:
+
+* `.satelliitti-osuma` — 36 px, **täysin läpinäkyvä**: ei taustaa, ei
+  reunaa, ei varjoa. Se on ruutuala, ei ulkoasu.
+* `.satelliitti-ydin` — **7 px, tasainen `#5dffa8`**, `border-radius:
+  50%`. Ei reunaa, ei `box-shadow`ia, ei suodatinta.
+
+Nimilappu nousi 16 px:stä 11 px:iin, koska rengasta ei enää ole.
+Mitään erillistä hover-, valittu- tai aktiivinen-tilaa ei ollut eikä
+lisätty: merkillä ei ole tiloja, ja `pointer-events` on yhä `none`.
+
+**Osuma-alue ei pienentynyt.** Napautus lasketaan pallon pinnasta
+(`js/pallolauta/lauta.js lahinLinssimerkki`, 44 px:n säde) eikä
+elementistä — tämä on ennallaan. Läpinäkyvä 36 px:n ala pitää merkin
+ruutualan sormen kokoisena myös DOMissa, ja vartio mittaa sen.
+
+**Mitattu maalatusta tuloksesta** (computed style, molemmat näytöt ja
+myös vanha linssisavuke):
+
+```
+halkaisija 7 px · tausta rgb(93, 255, 168) · box-shadow none
+reunan leveys 0 · suodatin none · merkin oma varjo none
+.satelliitti-rengas / .satelliitti-hehku ruudulla: 0 kpl
+osuma-ala 36 px, tausta rgba(0, 0, 0, 0)
+```
+
+**Vastakoe:** savuke lisää hetkeksi tyylin, joka palauttaa renkaan ja
+hohdon (`border: 2px`, `box-shadow`, 18 px). Mittari näkee sen
+(halkaisija 18, varjo `rgba(93,255,168,0.9) 0 0 8px`, reuna 2 px), ja
+tyylin poiston jälkeen piste on taas 7 px ilman varjoa. Ilman tätä
+koetta vihreä väri ei todistaisi mitään.
+
+## 6. Vartio ja vastakokeet
 
 `tools/savukkeet/savuke-astro-pallo.mjs` (1400 × 900 ja 390 × 844,
 NAKYMAT-muuttuja rajaa näytöt):
 
 ```
-19/19 läpi (tyopoyta)      20/20 läpi (puhelin)
+24/24 läpi (tyopoyta)      24/24 läpi (puhelin)
 ```
 
 Väitteet: ISS on DOMissa ja 8 px; ruutupaikka muuttuu 2 s:ssa; merkki
@@ -188,31 +236,39 @@ on etupuolella näkyvissä; kaari on piirretty ja takapuoli karsittu;
 varjon puoli tummuu ja valon puoli kirkastuu; keskusta ei muutu; varjo
 ei ulotu puoliväliin; varjon pudotus on tilauksen luokkaa;
 kylläisyys on mitattu alas; kohdepisteet näkyvät (myös varjon
-puolella) ja ovat klikattavissa; kalvo ei syö napautusta; reliefin
-tarkkuus on ruudun mukainen; molemmat tarkkuudet latautuvat.
+puolella) ja ovat klikattavissa; **piste on pelkkä vihreä piste ≤ 9 px
+ilman rengasta ja hohtoa ja osuma-ala ≥ 32 px**; kalvo ei syö
+napautusta; reliefin tarkkuus on ruudun mukainen; molemmat tarkkuudet
+latautuvat.
 
 Vastakokeet: (a) **varjostuskytkin pois** palauttaa samat pikselit
-(45,6 → 61,6 → 45,6), eli mittari osaa mennä punaiseksi; (b)
-**liikkeenvähennys** jäädyttää ISS:n 0,00 px:iin, eli liikemittari ei
-lue kohinaa.
+(63 → 85,6 → 63 viimeisimmässä ajossa), eli mittari osaa mennä
+punaiseksi; (b) **liikkeenvähennys** jäädyttää ISS:n 0,00 px:iin,
+eli liikemittari ei lue kohinaa; (c) **rengas ja hohto takaisin
+hetkeksi** — pisteen mittari näkee ne ja palaa vihreäksi vasta kun
+tyyli on poistettu.
 
 Lisäksi ajettu: `node --test tests/satelliitti*.test.mjs
 tests/pallolinssit.test.mjs tests/rules.test.mjs
-tests/dokumentit.test.mjs` → **430/430 läpi** (kuusi uutta testiä
-tässä), `node --check` kaikille muutetuille tiedostoille, ja
-`tools/savukkeet/savuke-satelliittilinssi.mjs NAKYMAT=tyopoyta` →
-**34/34 läpi** (linssin muu toiminta ei rikkoutunut).
+tests/dokumentit.test.mjs` → **430/430 läpi** ensimmäisellä kierroksella
+ja `tests/satelliitti*.test.mjs tests/pallolinssit.test.mjs` →
+**93/93** pistemuutoksen jälkeen, `node --check` kaikille muutetuille
+tiedostoille, ja `tools/savukkeet/savuke-satelliittilinssi.mjs
+NAKYMAT=tyopoyta` → **34/34 läpi** (pistettä koskeva väite kirjoitettu
+uusiksi: ei rengasta, ei hohtoa, osuma-ala ennallaan).
 
-Kuvat: `docs/raportit/kuvat/astro-pallo-1400-20260916.jpg` (65 kt) ja
+Kuvat (molemmat päivitetty pistemuutoksen jälkeen):
+`docs/raportit/kuvat/astro-pallo-1400-20260916.jpg` (79 kt) ja
 `docs/raportit/kuvat/astro-pallo-390-20260916.jpg` (76 kt).
-Työpöytäkuvassa ISS on pallon alareunalla omalla kaarellaan.
+Työpöytäkuvassa näkyvät sekä ratakaari että pelkät vihreät pisteet.
 
-## 6. Mitä EI tehty
+## 7. Mitä EI tehty
 
-* Valokuvanäkymään, yläpalkkiin (selite, X, hampurilainen,
-  pienoiskuvat) tai `css/satelliitti.css`:ään ei koskettu — kalvon
-  tyylit ovat inline-tyylejä linssin omassa moduulissa, jotta
-  rinnakkainen työ ei törmää.
+* Valokuvanäkymään ja yläpalkkiin (selite, X, hampurilainen,
+  pienoiskuvat) ei koskettu. Avaruuskalvon tyylit ovat inline-tyylejä
+  linssin omassa moduulissa, jotta rinnakkainen työ ei törmää;
+  `css/satelliitti.css`:ään tehtiin vain kohdepisteen oma sääntö
+  (luku 5), jota omistaja erikseen pyysi.
 * Ei versionostoa, ei muutoslokiriviä, ei PR:ää, ei Raamattu-muutosta.
 * `js/packs/linssi-topografia-kuva.js` on koneen kirjoittama
   (`tools/tee-reliefikartta.mjs`) eikä sitä muokattu käsin; jos 8k

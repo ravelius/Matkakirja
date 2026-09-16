@@ -223,7 +223,32 @@ const MITAT = () => {
     return el ? `${el.tagName.toLowerCase()}.${(el.className?.baseVal ?? el.className ?? '').toString().split(' ')[0]}` : 'null';
   });
   const kalvonTyyli = kalvo ? getComputedStyle(kalvo) : null;
+  /*
+   * PISTEEN ULKOASU MAALATUSTA TULOKSESTA (omistaja 16.9.2026: pelkkä
+   * vihreä piste ilman ympyrää ja hohtoa). Luetaan ensimmäisestä
+   * kameran puolen merkistä; kaikki merkit saavat saman säännön.
+   */
+  const ekaMerkki = [...document.querySelectorAll('.satelliitti-piste')]
+    .find((el) => !el.closest('.pallolauta-takana'));
+  const ydin = ekaMerkki?.querySelector('.satelliitti-ydin');
+  const osumaAla = ekaMerkki?.querySelector('.satelliitti-osuma');
+  const yt = ydin ? getComputedStyle(ydin) : null;
+  const ot = osumaAla ? getComputedStyle(osumaAla) : null;
+  const piste = {
+    halkaisija: yt ? +parseFloat(yt.width).toFixed(1) : null,
+    tausta: yt?.backgroundColor ?? null,
+    varjo: yt?.boxShadow ?? null,
+    reunanLeveys: yt ? +parseFloat(yt.borderTopWidth).toFixed(1) : null,
+    reunanVari: yt?.borderTopColor ?? null,
+    osumanLeveys: ot ? +parseFloat(ot.width).toFixed(1) : null,
+    osumanTausta: ot?.backgroundColor ?? null,
+    renkaita: document.querySelectorAll('.satelliitti-rengas, .satelliitti-hehku').length,
+    // Hohtoa voi tulla myös suodattimesta tai ulommasta kääreestä.
+    suodatin: yt?.filter ?? null,
+    merkinVarjo: ekaMerkki ? getComputedStyle(ekaMerkki).boxShadow : null,
+  };
   return {
+    piste,
     kotelo: { leveys: Math.round(r.width), korkeus: Math.round(r.height) },
     kalvoDomissa: Boolean(kalvo),
     kalvonOsoitin: kalvonTyyli?.pointerEvents ?? null,
@@ -519,6 +544,52 @@ async function ajaNakyma(nimi) {
     linssi.pisteitaNakyvissa >= 5 && linssi.pisteitaVarjonPuolella >= 1,
     `${linssi.pisteitaNakyvissa}/${linssi.pisteita} näkyvissä, varjon puolella `
     + `${linssi.pisteitaVarjonPuolella}`);
+  /*
+   * PELKKÄ VIHREÄ PISTE. Väite luetaan maalatusta tuloksesta eikä
+   * tyylitiedostosta: pisteen halkaisija ≤ 9 px, tausta se sama
+   * vihreä, `box-shadow` none, reunan leveys 0 — eikä sädekehää tai
+   * rengasta ole enää olemassa.
+   */
+  vaadi(t('kohdepiste on pelkkä vihreä piste ilman rengasta ja hohtoa'),
+    linssi.piste?.halkaisija > 0 && linssi.piste.halkaisija <= 9
+      && /rgb\(93, 255, 168\)/.test(linssi.piste.tausta ?? '')
+      && linssi.piste.varjo === 'none' && linssi.piste.merkinVarjo === 'none'
+      && linssi.piste.reunanLeveys === 0 && linssi.piste.renkaita === 0
+      && (linssi.piste.suodatin === 'none' || !linssi.piste.suodatin),
+    JSON.stringify(linssi.piste));
+  vaadi(t('osuma-ala on yhä sormen kokoinen'),
+    linssi.piste?.osumanLeveys >= 32
+      && /rgba\(0, 0, 0, 0\)|transparent/.test(linssi.piste.osumanTausta ?? ''),
+    `osuma ${linssi.piste?.osumanLeveys} px, tausta ${linssi.piste?.osumanTausta}`);
+  /*
+   * VASTAKOE: mittari osaa mennä punaiseksi. Pisteelle annetaan
+   * hetkeksi rengas ja hohto — jos mittari näyttää silloinkin
+   * vihreää, se ei mittaa mitään. Tyyli poistetaan heti perään.
+   */
+  const vastakoe = await s.evaluate(() => {
+    const tyyli = document.createElement('style');
+    tyyli.id = 'astro-vastakoe';
+    tyyli.textContent = '.satelliitti-ydin { border: 2px solid #5dffa8;'
+      + ' box-shadow: 0 0 8px rgba(93,255,168,0.9); width: 18px; height: 18px; }';
+    document.head.appendChild(tyyli);
+    const ydin = document.querySelector('.satelliitti-piste .satelliitti-ydin');
+    const t = ydin ? getComputedStyle(ydin) : null;
+    const ulos = {
+      halkaisija: t ? +parseFloat(t.width).toFixed(1) : null,
+      varjo: t?.boxShadow ?? null,
+      reunanLeveys: t ? +parseFloat(t.borderTopWidth).toFixed(1) : null,
+    };
+    tyyli.remove();
+    return ulos;
+  });
+  vaadi(t('VASTAKOE: mittari näkee renkaan ja hohdon, jos ne palaavat'),
+    vastakoe.halkaisija > 9 && vastakoe.varjo !== 'none' && vastakoe.reunanLeveys > 0,
+    JSON.stringify(vastakoe));
+  const palasi = (await s.evaluate(MITAT)).piste;
+  vaadi(t('VASTAKOE purkautui: piste on taas pelkkä piste'),
+    palasi?.halkaisija <= 9 && palasi.varjo === 'none' && palasi.reunanLeveys === 0,
+    JSON.stringify(palasi));
+
   vaadi(t('kalvo ei syö napautusta eikä ole merkkien päällä'),
     linssi.kalvonOsoitin === 'none' && linssi.kalvoMerkkienAlla
       && !linssi.kohdalla.some((x) => x.includes('astro-')),

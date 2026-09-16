@@ -414,12 +414,20 @@ function ulkolinkki(teksti, osoite) {
   return a;
 }
 
-/** Yhden merkin elementti: sädekehä, rengas, ydin ja nimi. */
+/**
+ * Yhden merkin elementti: LÄPINÄKYVÄ osuma-ala, vihreä piste ja nimi.
+ *
+ * OMISTAJA 16.9.2026, sanatarkasti: *"Muutamilla nuo hehkuvat pisteet
+ * pelkeiksi vihreäksi pisteeksi ilman ympyrää ja pisteen ympärillä."*
+ * Sädekehä (46 px) ja hehkuva rengas (18 px) ovat siis poissa; jäljellä
+ * on yksi tasainen piste (css/satelliitti.css .satelliitti-ydin).
+ * Osuma-ala ei piirrä mitään — se pitää merkin ruutualan sormen
+ * kokoisena, vaikka napautus lasketaankin pallon pinnasta.
+ */
 function merkkiElementti(kohde) {
   const el = html('div', 'satelliitti-piste');
   el.append(
-    html('span', 'satelliitti-hehku'),
-    html('span', 'satelliitti-rengas'),
+    html('span', 'satelliitti-osuma'),
     html('span', 'satelliitti-ydin'),
     html('span', 'satelliitti-nimi', kohde.nimi),
   );

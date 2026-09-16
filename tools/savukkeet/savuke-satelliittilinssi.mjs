@@ -415,30 +415,45 @@ async function ajaNakyma(nakymanNimi) {
     await new Promise((r) => setTimeout(r, 1200));
   });
   await s.waitForTimeout(1500);
+  /*
+   * PELKKÄ VIHREÄ PISTE (omistaja 16.9.2026, sanatarkasti: *"Muutamilla
+   * nuo hehkuvat pisteet pelkeiksi vihreäksi pisteeksi ilman ympyrää ja
+   * pisteen ympärillä."*). Mitataan MAALATUSTA tuloksesta: pisteen
+   * halkaisija, sen tausta, `box-shadow` ja reunaväri — ja että
+   * sädekehää ja rengasta ei ole enää olemassa lainkaan.
+   */
   const hehku = await s.evaluate(() => {
     const merkit = [...document.querySelectorAll('.satelliitti-piste')];
     const edessa = merkit.filter((el) => !el.classList.contains('pallolauta-takana'));
     const yksi = edessa[0];
-    const rengas = yksi?.querySelector('.satelliitti-rengas');
-    const hehkuEl = yksi?.querySelector('.satelliitti-hehku');
+    const ydin = yksi?.querySelector('.satelliitti-ydin');
+    const osuma = yksi?.querySelector('.satelliitti-osuma');
     const nimi = yksi?.querySelector('.satelliitti-nimi');
-    const t = rengas ? getComputedStyle(rengas) : null;
-    const h = hehkuEl ? getComputedStyle(hehkuEl) : null;
+    const t = ydin ? getComputedStyle(ydin) : null;
+    const o = osuma ? getComputedStyle(osuma) : null;
     return {
       yhteensa: merkit.length,
       edessa: edessa.length,
       takana: merkit.length - edessa.length,
-      reuna: t?.borderTopColor ?? null,
+      pisteenLeveys: t ? +parseFloat(t.width).toFixed(1) : null,
+      tausta: t?.backgroundColor ?? null,
       varjo: t?.boxShadow ?? null,
-      hehkunLeveys: h ? Math.round(parseFloat(h.width)) : null,
+      reuna: t?.borderTopColor ?? null,
+      reunanLeveys: t ? +parseFloat(t.borderTopWidth).toFixed(1) : null,
+      osumanLeveys: o ? +parseFloat(o.width).toFixed(1) : null,
+      osumanTausta: o?.backgroundColor ?? null,
+      renkaita: document.querySelectorAll('.satelliitti-rengas, .satelliitti-hehku').length,
       nimi: nimi?.textContent ?? null,
       animaatio: yksi ? getComputedStyle(yksi).animationIterationCount : null,
       osumat: yksi ? getComputedStyle(yksi).pointerEvents : null,
     };
   });
-  vaadi(nimessa('hohtava vihreä piste: sädekehä, hehkuva rengas, nimi — eikä loputonta pulssia'),
-    hehku.edessa > 0 && hehku.takana > 0 && /rgb\(93, 255, 168\)/.test(hehku.reuna ?? '')
-      && /rgba?\(93, 255, 168/.test(hehku.varjo ?? '') && hehku.hehkunLeveys >= 40
+  vaadi(nimessa('pelkkä vihreä piste: ei rengasta, ei hohtoa — nimi ja osuma-ala ennallaan'),
+    hehku.edessa > 0 && hehku.takana > 0
+      && hehku.pisteenLeveys > 0 && hehku.pisteenLeveys <= 9
+      && /rgb\(93, 255, 168\)/.test(hehku.tausta ?? '')
+      && hehku.varjo === 'none' && hehku.reunanLeveys === 0
+      && hehku.renkaita === 0 && hehku.osumanLeveys >= 32
       && Boolean(hehku.nimi) && hehku.animaatio === '1' && hehku.osumat === 'none',
     JSON.stringify(hehku));
   await kaappaa('pisteet');
