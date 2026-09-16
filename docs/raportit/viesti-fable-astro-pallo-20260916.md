@@ -28,12 +28,17 @@ AVARUUSVAIHEEN PALLO — valokuvanäkymään ja yläpalkkiin ei koskettu
 5. **Kohdepisteet ovat nyt PELKKIÄ vihreitä pisteitä** (omistajan
    lisätilaus 16.9.2026): 7 px, sama sävy, ei rengasta eikä
    hohtokehää. Osuma-ala säilyi. Luku 5.
-6. **Vartiot**: `tools/savukkeet/savuke-astro-pallo.mjs` 24/24 läpi
+6. **Avausajo**: linssi avautuu niin, että pallo näkyy kokonaan
+   (65 % ruudun kapeimmasta sivusta) ja pyörii hitaasti; viidessä
+   sekunnissa kamera laskeutuu pehmeästi siihen, että pallo peittää
+   92 % ruudusta, ja jää pyörimään 0,16 °/s, kunnes pelaaja tarttuu
+   palloon. Luku 6.
+7. **Vartiot**: `tools/savukkeet/savuke-astro-pallo.mjs` 31/31 läpi
    molemmilla näytöillä, `savuke-satelliittilinssi.mjs` 34/34, kaikki
-   vastakokeineen. Luku 6.
+   vastakokeineen. Luku 7.
 
-Muutetut tiedostot: `js/linssit/satelliitti-avaruus.js` (uusi luku 2c
-ja reliefin valinta), `css/satelliitti.css` ja
+Muutetut tiedostot: `js/linssit/satelliitti-avaruus.js` (uusi luku 2c,
+reliefin valinta ja avausajo), `css/satelliitti.css` ja
 `js/linssit/satelliitti.js` (pisteen ulkoasu, luku 5),
 `tests/satelliitti-avaruus.test.mjs` ja `tests/satelliitti.test.mjs`,
 `tools/savukkeet/savuke-astro-pallo.mjs` (uusi) ja
@@ -222,16 +227,86 @@ hohdon (`border: 2px`, `box-shadow`, 18 px). Mittari näkee sen
 tyylin poiston jälkeen piste on taas 7 px ilman varjoa. Ilman tätä
 koetta vihreä väri ei todistaisi mitään.
 
-## 6. Vartio ja vastakokeet
+## 6. Avausajo ja hidas pyöriminen
+
+**Omistaja 16.9.2026 (Raamattu LISÄYS 4, kohta 18), sanatarkasti:**
+*"maapallo voisi pyöriä hitaasti kun linssi avautuu ja samalla
+zoomautua alussa pehmeästi lähemmäs niin että alussa pallo näkyy
+kokonaan ja lopuksi pallo peittää melkein koko ruudun ja jää sen
+jälkeen vain hitaasti pyörimään, kunnes pelaaja alkaa ohjata palloa,
+jolloin pyöriminen loppuu."*
+
+**Kolme mittaa.** Alku 65 % ruudun kapeimmasta sivusta
+(`ALOITUKSEN_MARGINAALI` 0,35), loppu 92 % (`AVAUKSEN_MARGINAALI`
+0,12 → **0,08**), kesto 5 s kuutiollisella ease-in-outilla
+(`avausPehmennys`). Mitattu molemmilla näytöillä: työpöytä
+571 → 809 px (1,42×, 92,0 % ruudusta), puhelin 243 → 344 px (1,42×,
+92,0 %).
+
+**Pyöriminen on kirjaston oma `autoRotate`**, ei omaa koneistoa. Kolme
+syytä: (1) kulma lasketaan KEHYSAJASTA (three-render-objects kutsuu
+`controls.update(dt)`), joten 0,16 °/s pitää myös hitaalla laitteella
+— mitattu 0,184 °/s työpöydällä ja 0,139 °/s puhelimella; (2) pelin
+oma elekerros sammuttaa sen jo valmiiksi ensimmäisestä sormesta ja
+rullasta (`js/pallo.js asennaPallonEleet`: `ohjaimet.autoRotate =
+false`), eli *"kunnes pelaaja alkaa ohjata palloa"* tulee samasta
+paikasta kuin valikkopallolla; (3) `enableRotate = false` ei estä
+sitä. Purku kirjoittaa lähtöarvon takaisin — muuten pallo jäisi
+pyörimään pelilaudalle ja kameran palautus valuisi sivuun.
+
+**Miksi korkeus ajetaan kehyksittäin eikä `pointOfView`-tweenillä.**
+Kirjaston tween vetää lat/lng/korkeuden yhtenä pakettina ja kirjoittaa
+kameran paikan joka kehyksellä myös lat/lng:stä — pyörivä pallo
+pysähtyisi juuri zoomin ajaksi, ja tilaus sanoo "pyörii JA SAMALLA
+zoomautuu". Kirjastossa on kuitenkin toinen sisäänkäynti:
+`pointOfView({ altitude }, 0)` yhdistää annetun kentän nykyiseen
+näkymään (`Object.assign({}, nykyinen, muutos)`), joten pelkkä korkeus
+voidaan kirjoittaa ja pyörimisen tuottama lng säilyy. Linssillä on jo
+oma kehyssilmukka, joten uutta koneistoa ei synny.
+
+**Aika lasketaan kehyksistä, ei seinäkellosta** (`AVAUSAJON_KEHYSKATTO_MS`
+100). Ensimmäinen mittaus paljasti vian: linssin avaus tekee samaan
+aikaan reliefitekstuurin (8k-kuvan purku ja PNG-blob, 9–13 s
+kontissa), ja seinäkellolla **koko viiden sekunnin ajo kului siinä** —
+pallo hyppäsi suoraan loppuasentoon eikä ajoa nähnyt kukaan. Nyt
+pitkä nykäys on yksi askel muiden joukossa, ja ajo näkyy kokonaan
+myös tökkivällä laitteella.
+
+**Zoomikatto nostetaan ajon ajaksi.** Ajo alkaa leponäkymää
+ylempää, ja OrbitControls vetäisi kameran takaisin kattoonsa heti
+ensimmäisellä kehyksellä. Katto on ajon ajan aloituskorkeus ja
+palautuu leponäkymän kaistaan, kun ajo päättyy — pelaajan oma
+zoom-ulos on siis ennallaan.
+
+**Ajo päättyy myös pelaajan otteeseen:** linssi kuuntelee kotelon
+`pointerdown`- ja `wheel`-tapahtumat kaappausvaiheessa ja lopettaa
+ajon, ettei kamera kisko vastaan sormea. Kohdepisteen napautus toimii
+normaalisti (avaa havaintokortin) ja pysäyttää samalla pyörimisen.
+
+**Liikkeenvähennys:** ei pyörimistä lainkaan, ja zoom on perillä heti
+(`osuus 1`, korkeus = leponäkymän korkeus, kaikki kamerakirjoitukset
+kestolla 0).
+
+**Mitattu vartiossa** (molemmat näytöt): ajo on käynnissä avattaessa
+(osuus 0,12–0,18 ensimmäisellä mittauksella), pallo kasvaa 1,42×,
+**reunavarjon säde kasvaa samassa suhteessa** (287,6 → 404 px, 1,40×;
+2 × säde = pallon halkaisija ±2 px) eli valaistus seuraa kameraa joka
+kehys, pyöriminen jatkuu ajon jälkeen ja **loppuu vetoon** (0,035°
+kahdessa sekunnissa, kun ennen vetoa 0,74°).
+
+## 7. Vartio ja vastakokeet
 
 `tools/savukkeet/savuke-astro-pallo.mjs` (1400 × 900 ja 390 × 844,
 NAKYMAT-muuttuja rajaa näytöt):
 
 ```
-24/24 läpi (tyopoyta)      24/24 läpi (puhelin)
+31/31 läpi (tyopoyta)      31/31 läpi (puhelin)
 ```
 
-Väitteet: ISS on DOMissa ja 8 px; ruutupaikka muuttuu 2 s:ssa; merkki
+Väitteet: avausajo on käynnissä ja pallo näkyy ensin kokonaan; pallo
+kasvaa ajossa ≥ 1,3× ja peittää 90–95 % ruudusta; reunavarjon säde
+seuraa zoomia; pallo jää pyörimään hitaasti; pyöriminen loppuu, kun
+pelaaja tarttuu palloon; ISS on DOMissa ja 8 px; ruutupaikka muuttuu 2 s:ssa; merkki
 on etupuolella näkyvissä; kaari on piirretty ja takapuoli karsittu;
 varjon puoli tummuu ja valon puoli kirkastuu; keskusta ei muutu; varjo
 ei ulotu puoliväliin; varjon pudotus on tilauksen luokkaa;
@@ -246,29 +321,40 @@ Vastakokeet: (a) **varjostuskytkin pois** palauttaa samat pikselit
 punaiseksi; (b) **liikkeenvähennys** jäädyttää ISS:n 0,00 px:iin,
 eli liikemittari ei lue kohinaa; (c) **rengas ja hohto takaisin
 hetkeksi** — pisteen mittari näkee ne ja palaa vihreäksi vasta kun
-tyyli on poistettu.
+tyyli on poistettu; (d) **sama kulmamittari näki liikkeen ennen
+tarttumista** (0,74° vastaan 0,035°), eli pysähtymisväite ei ole
+mittarin sokeutta; (e) **liikkeenvähennyksellä** zoom on perillä heti
+eikä pallo pyöri.
 
 Lisäksi ajettu: `node --test tests/satelliitti*.test.mjs
 tests/pallolinssit.test.mjs tests/rules.test.mjs
-tests/dokumentit.test.mjs` → **430/430 läpi** ensimmäisellä kierroksella
-ja `tests/satelliitti*.test.mjs tests/pallolinssit.test.mjs` →
-**93/93** pistemuutoksen jälkeen, `node --check` kaikille muutetuille
-tiedostoille, ja `tools/savukkeet/savuke-satelliittilinssi.mjs
-NAKYMAT=tyopoyta` → **34/34 läpi** (pistettä koskeva väite kirjoitettu
-uusiksi: ei rengasta, ei hohtoa, osuma-ala ennallaan).
+tests/dokumentit.test.mjs` → **435/435 läpi** (yksikkötestejä on nyt
+yksitoista lisää: ISS, valaistus, kylläisyys, 8k-valinta, piste ja
+avausajo), `node --check` kaikille muutetuille tiedostoille, ja
+`tools/savukkeet/savuke-satelliittilinssi.mjs NAKYMAT=tyopoyta` →
+**34/34 läpi**. Siihen tehtiin kaksi muutosta: pistettä koskeva väite
+kirjoitettiin uusiksi (ei rengasta, ei hohtoa, osuma-ala ennallaan),
+ja kameran "ei liikkunut" -vertailu sai ajautumavaran — hitaasti
+pyörivä pallo ei enää ole merkkijonoltaan sama kahdella mittauksella,
+mutta hyppy (sukellus, kohteen avaus) on satoja yksiköitä ja raja
+60 yksikköä erottaa ne. Yksi ajo kaatui ennen tätä kokonaan
+("pallolauta ei syntynyt"): se oli kontin WebGL-konteksti eikä
+koodi — heti perään sama savuke ajoi 34/34 läpi.
 
 Kuvat (molemmat päivitetty pistemuutoksen jälkeen):
 `docs/raportit/kuvat/astro-pallo-1400-20260916.jpg` (79 kt) ja
 `docs/raportit/kuvat/astro-pallo-390-20260916.jpg` (76 kt).
 Työpöytäkuvassa näkyvät sekä ratakaari että pelkät vihreät pisteet.
 
-## 7. Mitä EI tehty
+## 8. Mitä EI tehty
 
 * Valokuvanäkymään ja yläpalkkiin (selite, X, hampurilainen,
   pienoiskuvat) ei koskettu. Avaruuskalvon tyylit ovat inline-tyylejä
   linssin omassa moduulissa, jotta rinnakkainen työ ei törmää;
   `css/satelliitti.css`:ään tehtiin vain kohdepisteen oma sääntö
-  (luku 5), jota omistaja erikseen pyysi.
+  (luku 5), jota omistaja erikseen pyysi. Avausajon loppuasento on
+  laskettu KOTELON mitoista, joten se osuu oikein myös sitten, kun
+  yläpalkki poistuu toisessa haarassa ja kotelo täyttää koko ruudun.
 * Ei versionostoa, ei muutoslokiriviä, ei PR:ää, ei Raamattu-muutosta.
 * `js/packs/linssi-topografia-kuva.js` on koneen kirjoittama
   (`tools/tee-reliefikartta.mjs`) eikä sitä muokattu käsin; jos 8k
