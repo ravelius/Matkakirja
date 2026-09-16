@@ -20292,6 +20292,27 @@ export class UI {
      * saapumisrajauksen itse, ja tässä palautetaan pelkät rajat.
      */
     this.matkaZoomivapaus(true);
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * PULU VÄISTYY LENNON AJAKSI (omistaja 16.9.2026,
+     * KARTTAUUDISTUKSEN PAATOKSET 30: *"pulu näkyy lennon aikana"*)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * Kalvolennolla (pack `maailma`) pulu on jo piilossa —
+     * body.flight-active vie kelluvan napin ja paneelin (css/styles.css).
+     * PALLOLAUDAN oma lento menee kuitenkin doFly:n TOISTA haaraa
+     * (pack `maailmankartta`, MANNER_LENTO_MS), jossa kalvoa ei ole eikä
+     * siis mitään runkoluokkaakaan: mitattu 16.9.2026 (390 × 844,
+     * Ateena → Rooma) kelluvan pulunapin laskettu peittävyys oli 1
+     * jokaisessa lennon näytteessä.
+     *
+     * `lento-kesken` on sama mekanismi kuin body.flight-active: yksi
+     * runkoluokka, sama häivytys, ja se poistuu perillä `finally`ssä
+     * (myös keskeytyksessä ja virheessä). Luokka on lisäksi
+     * js/main.js:n siivouslistalla, joten se ei voi jäädä päälle
+     * pelin vaihtuessa.
+     */
+    document.body.classList.add('lento-kesken');
     this.paivitaMatkareitit();
     this.run(() => game.actionFly(destination), {
       after: async (result) => {
@@ -20324,6 +20345,7 @@ export class UI {
             sfx.stopFlight();
           }
         } finally {
+          document.body.classList.remove('lento-kesken');
           this.lopetaSiirronMusiikki();
           this.lentoKaari = null;
           this.paivitaMatkareitit();

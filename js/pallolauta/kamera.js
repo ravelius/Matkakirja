@@ -714,7 +714,7 @@ export function luoPallokamera({
        * ehto meni käytännössä väärinpäin; nyt kamera saa kuvasuhteen ja
        * `leveys` tarkoittaa lautayksiköitä ruudun leveydellä.
        */
-      const { bbox, marginaali = 0 } = kohde;
+      const { bbox, marginaali = 0, kokonaan = false } = kohde;
       x = bbox.x + bbox.w / 2;
       y = bbox.y + bbox.h / 2;
       const vara = 1 + 2 * marginaali;
@@ -724,7 +724,21 @@ export function luoPallokamera({
        * pallonKorkeus): laudan Mercator-yksiköt nostivat kameran noin
        * 1,35× liian kauas.
        */
-      sovitettu = korkeuteenSovitus(bbox, vara);
+      /*
+       * `kokonaan`: KOKO LAATIKKO RUUTUUN, MYÖS LEVEYSSUUNNASSA
+       * (KARTTAUUDISTUKSEN PAATOKSET 30, lennon rajaus).
+       *
+       * korkeuteenSovitus on SAAPUMISEN sääntö (PÄÄTÖKSET 17): kun maan
+       * laatikko on kapealla ruudulla leveämpi kuin ruutu sallii, kuva
+       * sovitetaan KORKEUTEEN ja laatikko saa vuotaa sivuille — maa
+       * näkyy silloin mahdollisimman isona ja pelaajan kaupunki valitsee
+       * X-keskipisteen. Lennon laatikossa sama sääntö on tuhoisa:
+       * mitattu 16.9.2026 (390 × 844, Ateena → Rooma, laatikko 375 × 154
+       * lautayksikköä) se antoi näkyväksi leveydeksi 85 yksikköä, eli
+       * kuvaan mahtui alle neljännes matkasta. Lennolla laatikko EI ole
+       * maa vaan matka, ja matkan molempien päiden on oltava ruudulla.
+       */
+      sovitettu = kokonaan ? null : korkeuteenSovitus(bbox, vara);
       bboxKorkeus = sovitettu ? sovitettu.korkeus : pallonKorkeus(bbox, vara);
       leveys = Math.max(bbox.w * vara, (bbox.h * vara * ruudunLeveys()) / ruudunKorkeus());
     } else if (kohde.kerroin > 0) {

@@ -7055,13 +7055,59 @@ body.aloitusverho-paalla .pollo-nappi {
  * Sama häivytys kuin arkilla, ja nappi palaa itsestään perillä, kun
  * body.flight-active / body.kartalento poistuvat (js/ui.js).
  */
+/*
+ * PALLOLAUDAN OMA LENTO ON SAMA KOHTAUS (`lento-kesken`, omistaja
+ * 16.9.2026, KARTTAUUDISTUKSEN PAATOKSET 30: *"pulu näkyy lennon
+ * aikana"*). Pallolaudalla lento menee doFly:n kalvottomaan haaraan
+ * (pack `maailmankartta`), joten body.flight-active ei ole päällä eikä
+ * mikään vienyt pulua pois — kelluva nappi jäi koneen päälle oikeaan
+ * alanurkkaan. Luokka tulee ja menee js/ui.js:n doFly:ssä, ja sama
+ * sääntö vie myös pulun hahmon ja paluunapin kartalta.
+ */
 body.flight-active .pollo-nappi,
 body.kartalento .pollo-nappi,
+body.lento-kesken .pollo-nappi,
 body.flight-active .pollo-paneeli,
-body.kartalento .pollo-paneeli {
+body.kartalento .pollo-paneeli,
+body.lento-kesken .pollo-paneeli,
+body.lento-kesken .pulu-paikkamerkki,
+body.lento-kesken .pulu-palaa {
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  /*
+   * ILMESTYMISANIMAATIO EI SAA VOITTAA VÄISTÖÄ (mitattu 16.9.2026).
+   * `.pollo-nappi.pollo-ilmestyy` ajaa keyframe-animaation, ja
+   * css-animaatio on kaskadissa tavallisen määreen YLÄPUOLELLA: jos
+   * nappi syntyy uudestaan kesken lennon (render lennon alussa), se
+   * animoitui takaisin näkyviin vaikka runkoluokka oli päällä —
+   * vartion näyte luki peittävyydeksi 1. Sama koskee kalvolentoa.
+   */
+  animation: none;
+}
+
+/*
+ * PULUN HAHMO ON KOLMAS ELEMENTTI (mitattu 16.9.2026: kelluvan napin
+ * peittävyys oli 0, mutta lennon puolivälin raporttikuvassa pulu seisoi
+ * yhä oikeassa alanurkassa). `.livia-kasvot-pinta.livia-lentonayttamo`
+ * on BODYN lapsi (js/livia-eleet.js), 152 × 304 px position: fixed —
+ * napin häivytys ei koske siihen lainkaan.
+ *
+ * SAMA KEINO KUIN LINSSISSÄ (css/aikajana.css
+ * body.aikajana-pulu-piilossa): `visibility` eikä peittävyys, koska
+ * livia-eleiden oma näkyvyystesti (js/livia-eleet.js `nakyy`) lukee
+ * juuri sitä — piilossa oleva pulu ei elehdi eikä piirrä kangastaan
+ * lennon ajan. Sääntö koskee VAIN pelin omaa lentoa: avauslennossa
+ * (body.kartalento) Livia puhuu ja kuuluu kohtaukseen.
+ *
+ * PUHEKUPLA MENEE SAMAA TIETÄ (`.pollo-vihje`): 1400 px:n
+ * raporttikuvassa pulun ohjekupla jäi yksin lentokoneen viereen, kun
+ * sen puhuja oli jo poissa. Kupla palaa luokan poistuessa.
+ */
+body.lento-kesken .livia-kasvot-pinta,
+body.lento-kesken .pollo-vihje {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 /*
@@ -20544,6 +20590,21 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
  * jäsenen. Sama hillitty ele kuin laukkunapin .laukku-elo.
  */
 .pollo-nappi.pollo-ilmestyy { animation: pollo-ilmesty 0.75s ease-out 1; }
+/*
+ * LENNON VÄISTÖ VOITTAA ILMESTYMISEN (mitattu 16.9.2026, 1400 × 900).
+ * Yllä oleva sääntö on kaskadissa lennon väistön (`body.flight-active`,
+ * `body.kartalento`, `body.lento-kesken` — kaikki 0-2-0) JÄLKEEN, joten
+ * yhtä painavana se jyräsi sen: kun nappi syntyi uudestaan kesken
+ * lennon, keyframe piti peittävyyden ykkösessä koko animaation ajan
+ * (25 näytettä 27:stä luki peittävyydeksi 1). Kolmen luokan valitsin on
+ * painavampi riippumatta järjestyksestä, joten väistö pysyy väistönä.
+ */
+body.flight-active .pollo-nappi.pollo-ilmestyy,
+body.kartalento .pollo-nappi.pollo-ilmestyy,
+body.lento-kesken .pollo-nappi.pollo-ilmestyy {
+  animation: none;
+  opacity: 0;
+}
 
 @keyframes pollo-ilmesty {
   0% { transform: scale(0.4); opacity: 0; }
