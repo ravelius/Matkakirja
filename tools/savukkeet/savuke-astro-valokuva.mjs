@@ -474,14 +474,24 @@ async function ajaNakyma(nakymanNimi) {
       kelautui: loki.find((r) => r.kiinni)?.t ?? null,
       ilmestyi: loki[0]?.t ?? null,
       aukiNaytteita: loki.filter((r) => r.kiinni === false).length,
+      /*
+       * MITTARIN OMA KARKEUS. Kontin ohjelmisto-WebGL voi nälkiinnyttää
+       * pääsäikeen sekunneiksi (iPad-mitta, dpr 2): silloin sekä
+       * näytteenotto ETTÄ vinkin oma 1,5 s:n ajastin myöhästyvät saman
+       * verran. Suurin näytteiden väli kertoo, kuinka tarkkaan tässä
+       * ajossa ylipäätään voi mitata, ja yläraja joustaa sen mukana —
+       * alaraja (1 s auki) ei jousta, koska liian lyhyt vinkki olisi
+       * aito vika.
+       */
+      karkeus: loki.reduce((m, r, i) => (i ? Math.max(m, r.t - loki[i - 1].t) : m), 0),
       muisti: sessionStorage.getItem('matkakirja-astro-vinkki-richat'),
     };
   });
   const vinkinKesto = vinkki.kelautui !== null && vinkki.ilmestyi !== null
     ? vinkki.kelautui - vinkki.ilmestyi : null;
-  vaadi(nimessa('ensimmäinen avaus vinkkaa: selite auki ≥ 1 s ja kelautuu itsestään ≤ 3 s'),
+  vaadi(nimessa('ensimmäinen avaus vinkkaa: selite auki ≥ 1 s ja kelautuu itsestään'),
     muistiEnnen === null && vinkki.aukiNaytteita > 0 && vinkinKesto !== null
-      && vinkinKesto >= 1000 && vinkinKesto <= 3000
+      && vinkinKesto >= 1000 && vinkinKesto <= 3000 + vinkki.karkeus
       && vinkki.viimeinen?.kiinni === true && vinkki.muisti === '1',
     JSON.stringify({ muistiEnnen, vinkinKesto, ...vinkki }));
   await kaappaa('selite-vinkki');
