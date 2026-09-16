@@ -76,7 +76,7 @@ import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
  * päättele maata itse (js/pallolaatat.js), koska väri on osa laatan
  * kangasta eikä kerros, jonka voisi jälkikäteen piilottaa.
  */
-import { asetaTasoituksenMaailma, asetaVaritasonMaa } from '../laattapyramidi.js';
+import { asetaTasoituksenLiike, asetaTasoituksenMaailma, asetaVaritasonMaa } from '../laattapyramidi.js';
 import {
   lataaMaapolygonit, maanLautalaatikko, nollaaPallonMaakorostus, paivitaPallonMaakorostus,
 } from '../maanaariviivat.js';
@@ -3327,6 +3327,31 @@ export async function avaaPallolauta(ui) {
     tahdistaZoomirajat();
   };
 
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * KERMA POIS LIIKKEEN AJAKSI (omistaja 16.9.2026, Raamattu
+   * KARTTAUUDISTUKSEN PAATOKSET 29 kohta 2)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * Kerma on poltettu laattojen kankaisiin, joten sitä ei pyyhitä
+   * jälkikäteen: ainoa kytkin on sama leikkuri kuin maailmanäkymässä
+   * (js/laattapyramidi.js asetaTasoituksenLiike). Tila on osa
+   * tasoituksen `avain`ta, joten laattakerros mitätöi kankaansa itse —
+   * tässä ei siis pureta laattoja käsin, vain herätetään pallo, jotta
+   * lepokerros huomaa vaihdoksen heti eikä vasta seuraavasta eleestä.
+   *
+   * LUOKKA RUNGOSSA on saman tilan luettava puoli: vartio (tools/
+   * savukkeet/savuke-nappula-liike.mjs) lukee sen, ja css saa
+   * tarvittaessa tarttua siihen.
+   */
+  const matkanKerma = (pois) => {
+    const paalla = Boolean(pois);
+    document.body.classList.toggle('kerma-pois-liikkeessa', paalla);
+    if (!asetaTasoituksenLiike(paalla)) return;
+    heraa();
+    paivita();
+  };
+
   /** Pelin paikan (pos) piste ruudulla (kotelon px) — nopan lähtö. */
   const ruutupiste = (pos) => {
     const a = pallonAsteet(pallonKohta(pos));
@@ -3400,6 +3425,11 @@ export async function avaaPallolauta(ui) {
      * `false` palauttaa laudan omat rajat.
      */
     matkaZoomirajat,
+    /**
+     * Kerma (muiden maiden vaalennus) pois matkan ajaksi ja takaisin
+     * perillä (ks. KERMA POIS LIIKKEEN AJAKSI).
+     */
+    matkanKerma,
     /**
      * Zoomirajojen syrjäytys linssin ajaksi: `{ min, max }` korkeuksina
      * pallonsäteinä, `null` palauttaa laudan omat rajat. Ainoa käyttäjä

@@ -6,7 +6,7 @@ import {
   NAPPULAN_LAHDON_VIIVE_MS, SAATON_PEHMENNYS, SAATON_VAHIN_OSUUS, SAATON_VAHIN_PX,
   MATKARAJAUKSEN_MARGINAALI, MATKARAJAUKSEN_PALUU_MS, MATKARAJAUKSEN_VAHIN_YKS,
   SIIRTOZOOMIN_LAHENNYS, STEP_MS, autokyydinAskel, autokyydinVaihe, hypynHuippu, hypynVaihe,
-  siirtoajonKesto,
+  matkanVaihe, siirtoajonKesto,
 } from './siirtokoreografia.js';
 import {
   chooseDuelAnswer,
@@ -22231,6 +22231,23 @@ export class UI {
   }
 
   /**
+   * KERMA POIS LIIKKEEN AJAKSI JA TAKAISIN PERILLÄ (omistaja 16.9.2026,
+   * Raamattu KARTTAUUDISTUKSEN PAATOKSET 29 kohta 2, sanatarkasti:
+   * *"otetaan sitten huntu kaikkialta pois liikkeen ajaksi ja
+   * palautetaan takaisin sitten kun pelaaja on paassyt uuteen kohde
+   * kaupunkiin"*).
+   *
+   * Reitin maiden erottelu jäi tekemättä tarkoituksella: kerma on
+   * poltettu laattojen kankaisiin, joten yhden maan vapauttaminen
+   * vaatisi sen maan omat renkaat leikkuriksi kesken animaation
+   * (perustelu js/laattapyramidi.js, KERMA POIS MATKAN AJAKSI).
+   * Tasokartalla kermaa ei ole, joten kutsu on siellä tyhjä sana.
+   */
+  matkanKermattomuus(pois) {
+    if (this.pallolautaPaalla()) this.pallolauta?.matkanKerma?.(Boolean(pois));
+  }
+
+  /**
    * KARTTA PALAA MAAN RAJAUKSEEN SAAPUMISEN JÄLKEEN (omistaja
    * 13.9.2026): matkan ajan näkymä on koko matkan mittainen, ja
    * perillä kamera asettuu takaisin maan ikkunaan — samaan, johon
@@ -22520,6 +22537,15 @@ export class UI {
     if (musiikki) this.aloitaSiirronMusiikki(musiikki);
 
     /*
+     * KERMA POIS HETI KOKO KOREOGRAFIAN ALUSSA (ks. matkanKermattomuus):
+     * laattakerros kokoaa kankaansa uudelleen, ja ennakkozoomi on juuri
+     * se hetki, jonka aikana se ehtii tapahtua — kun nappula lähtee
+     * liikkeelle, kartta on jo kermaton. Palautus on tämän funktion
+     * lopussa ja kuolleen pelin haarassa, jottei huntu jää pois.
+     */
+    this.matkanKermattomuus(true);
+
+    /*
      * === 1. ENNAKKOZOOMI, JA VASTA SITTEN NAPPULA ==================
      *
      * Omistajan tilaus 1.9.2026 ilta: *"kartta saisi zoomautua
@@ -22535,7 +22561,11 @@ export class UI {
     if (saatto) await this.ennakoiSiirtoZoomi(from, path, tapa);
     // Peli kuoli kesken ennakkozoomin: musiikki ei saa jäädä soimaan
     // (loppusammutus alempana jää tekemättä, koska tästä poistutaan).
-    if (this.dead) { if (musiikki) this.lopetaSiirronMusiikki(); return; }
+    if (this.dead) {
+      if (musiikki) this.lopetaSiirronMusiikki();
+      this.matkanKermattomuus(false);
+      return;
+    }
 
     this.movingPlayerId = player.id;
     this.piirraNappulat();
@@ -22637,7 +22667,15 @@ export class UI {
     if (ajettiin) {
       const maali = path[path.length - 1];
       const kesto = path.length * stepMs;
-      const ajo = kuljettaja.aja(from, path, kesto, { vaihe: autokyydinVaihe });
+      /*
+       * VAIHEKÄYRÄ TUNTEE MATKAPISTEET (omistaja 16.9.2026, Raamattu
+       * KARTTAUUDISTUKSEN PAATOKSET 29: *"pelinappula saisi silti
+       * liikkua jokaisen matkapisteen lapi ja kiihdyttaa ja jarruttaa
+       * niiden valilla"*). `matkanVaihe` on `autokyydinVaihe` ja sen
+       * päällä pisteiden aaltoilu, joten matkan iso ele ja kesto ovat
+       * ennallaan — vain vauhti notkahtaa jokaisen pisteen kohdalla.
+       */
+      const ajo = kuljettaja.aja(from, path, kesto, { vaihe: matkanVaihe(path.length) });
       const viimeisenAlku = Math.max(0, (kesto * (path.length - 1)) / path.length);
       await this.wait(viimeisenAlku);
       if (!this.dead) {
@@ -22752,6 +22790,12 @@ export class UI {
       && path[path.length - 1]?.type === 'city') {
       void this.palaaMaanRajaukseen();
     }
+    /*
+     * KERMA TAKAISIN PERILLÄ (ks. matkanKermattomuus). Nappula on
+     * maassa ja saapumisajo on käynnissä, joten laattojen uudelleen-
+     * kokoaminen ei osu enää liikkeen päälle.
+     */
+    this.matkanKermattomuus(false);
   }
 
   /** Nopanheitto: noppa lentää nappulan vierestä laudalle ja jää siihen. */
