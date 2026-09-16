@@ -407,12 +407,24 @@ for (const ruutu of RUUDUT) {
      * hetken (odotukset yllä), joten `currentTime` on jo nollaa
      * suurempi — koko `duration`:n odottaminen NYT-hetkestä ampuisi
      * reilusti yli oikean loppuhetken.
+     *
+     * `ui.liviaAani` VOI OLLA NULL TÄSSÄ (mitattu julkaisuhaarassa
+     * v1919, 1400 px: TypeError "Cannot read properties of null
+     * (reading 'duration')"). `kestoTiedossa` luettiin YLLÄ, mutta
+     * VASTAKOE-kutsu, kuvakaappaus ja `tieto()`-lokitus kuluttavat
+     * oikeaa kelloa niiden välissä — jos kupla ehtii vaihtua tai koko
+     * puheenvuoro loppua siinä välissä, `ui.liviaAani` on jo `null`
+     * tähän mennessä. Sama sopimus kuin pelikoodilla (js/fokusvirta.js
+     * `vahtiPulunLoppua`, js/liviapuhe.js `livianAanenKesto`): ääni
+     * luetaan VASTA sen jälkeen, kun sen olemassaolo on tarkistettu
+     * SAMASSA evaluate-kutsussa, ei aiemman kutsun perusteella.
      */
     const aanenTila = puluHuntu.kestoTiedossa
-      ? await sivu.evaluate(() => ({
-        kesto: window.matkakirja.ui.liviaAani.duration * 1000,
-        kulunut: window.matkakirja.ui.liviaAani.currentTime * 1000,
-      }))
+      ? await sivu.evaluate(() => {
+        const a = window.matkakirja.ui.liviaAani;
+        if (!a || !Number.isFinite(a.duration) || a.duration <= 0) return null;
+        return { kesto: a.duration * 1000, kulunut: a.currentTime * 1000 };
+      })
       : null;
     const kesto = aanenTila?.kesto ?? null;
     const jaljellaNyt = aanenTila ? aanenTila.kesto - aanenTila.kulunut : null;

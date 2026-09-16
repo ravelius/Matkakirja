@@ -420,6 +420,55 @@ test('pulun kommentti aloittaa PuluCam-sarjan: 4 s välein ja 6 s lopuksi', (t) 
   t.mock.timers.reset();
 });
 
+/*
+ * PULU CAM -SARJA EI KAADU ILMAN ÄÄNTÄ (julkaisuagentin löydös
+ * v1919-julkaisuhaarasta: savuke-kaiutin-luentakuvat.mjs kaatui
+ * TypeErroriin "Cannot read properties of null (reading 'duration')"
+ * 1400 px:n ajolla, kun `ui.liviaAani` oli null). Vika oli SAVUKKEEN
+ * omassa suorassa `.duration`-luvussa, ei pelikoodissa —
+ * `js/fokusvirta.js` `vahtiPulunLoppua` lukee `ui.liviaAani`n aina
+ * `if (audio)`-vartion takana ja `js/liviapuhe.js`
+ * `livianAanenKesto`n omalla `audio?.duration`-optiochainingillaan —
+ * mutta tämä testi lukitsee sopimuksen myös pelikoodin puolelta:
+ * mykistys, tekstitila ja hylätty `play()` jättävät `ui.liviaAani`n
+ * `null`iksi (tai `undefined`iksi) koko sarjan ajaksi, joten
+ * `vahtiPulunLoppua` ei koskaan löydä äänen kestoa ja nojaa
+ * kokonaan `aloitaPuluCamSarja`n kiinteään varakelloon — sarja
+ * päättyy oikeaan aikaan EIKÄ heitä poikkeusta.
+ */
+test('PuluCam-sarja ei kaadu eikä jää auki, jos ui.liviaAani on aina null', (t) => {
+  t.mock.timers.enable({ apis: ['setTimeout'] });
+  const ui = tekoUi();
+  // Selvästi null EIKÄ pelkkä undefined — savukkeen omassa suorassa
+  // `.duration`-luvussa juuri null kaatoi TypeErrorin.
+  ui.liviaAani = null;
+  assert.equal(naytaLuentakuvasarja(ui, KOEKAUPUNKI), true);
+  t.mock.timers.tick(60);
+  ui.luentaaKesken = false;
+  t.mock.timers.tick(1000);
+
+  assert.doesNotThrow(() => {
+    assert.equal(pulunKommentti(ui), true, 'kommentti aloittaa sarjan äänettä');
+    t.mock.timers.tick(60);
+    // Ääni pysyy nullina koko sarjan ajan (mykistys/tekstitila/hylätty play()).
+    assert.equal(ui.liviaAani, null, 'ääni ei koskaan ilmesty');
+    const pulunKuvia = PAKKI.pollo.kuvat.length;
+    for (let i = 1; i < pulunKuvia; i += 1) {
+      t.mock.timers.tick(ISON_KUVAN_VAIHTO_MS);
+      assert.equal(ui.liviaAani, null, 'ääni pysyy nullina kesken sarjaa');
+    }
+    t.mock.timers.tick(ISON_KUVAN_LOPPU_MS);
+  }, 'vahtiPulunLoppua ei saa heittää poikkeusta, kun ui.liviaAani on null');
+
+  // Kiinteä varakello vei sarjan loppuun ajallaan: pieni pakka kartalle.
+  assert.equal(paneelit().length, 1, 'kartalle jää kuvapakka kiinteän varakellon mukaan');
+  assert.ok(paneelit()[0].classList.contains('pieni'), 'pakka jää pieneen kokoon');
+  assert.equal(ui.luentakuvasarja, null, 'sarja on suljettu, ei jää auki roikkumaan');
+
+  siivoa(ui);
+  t.mock.timers.reset();
+});
+
 test('kommentti kesken luennan aloittaa sarjan silti', (t) => {
   t.mock.timers.enable({ apis: ['setTimeout'] });
   const ui = tekoUi();
