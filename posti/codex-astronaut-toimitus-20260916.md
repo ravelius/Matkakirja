@@ -28,8 +28,11 @@ kun R2-toimitus on varmennettu. Lisämusiikkia ei ole hyväksytty tällä viesti
   tavuille. Käytä hyväksyttyä MP3:aa sellaisenaan, jos mahdollista.
 - Signaalitarkistus läpäisty: decoded duration 84 s, saumahyppy −55,2 dBFS,
   alun/lopun 100 ms RMS-ero noin 0,2 dB. Omistajan kuunteluhyväksyntä yllä.
-- Julkinen tavoite: `https://media.matkakirja.app/matkakirja/aanet/linssit/astronautin-kamera-tausta.mp3`.
-  **Ei vielä ladattu R2:een.** Älä kytke tavoiteosoitetta ennen varmennettua kuittia.
+- Julkinen osoite: `https://media.matkakirja.app/matkakirja/aanet/linssit/astronautin-kamera-tausta.mp3`.
+  **R2-vienti ja tavuntarkka readback varmennettu 16.9.2026 klo 08.18 UTC.**
+  Ajo `35072965615` onnistui. Kuitti `tools/astronaut/delivery-receipt.json`:
+  1 345 091 tavua, hyväksytty SHA täsmää, purettu PCM täsmää, HTTP200,
+  audio/mpeg, peli-originin CORS ja byte-range HTTP206 / 16 tavua kunnossa.
 
 Toistokytkentä Fablella: yksi yhteinen soitin koko linssille, 2 s
 gain-feidi käynnistyksessä, kohteen/kuvan vaihto ei nollaa soitinta,
@@ -59,9 +62,9 @@ siirtää pelialiaksen hyväksyttyyn MP3:aan. Se ei saa vaihtaa tuntematonta
 aiempaa tiedostoa. Julkinen SHA, MIME, CORS ja byte-range varmennetaan.
 Vanha uudelleenkoodauspolku pysähtyy jatkossa, jos hyväksytty SHA muuttuu.
 
-Lisäpostin musiikkitoive on luettu. Omistajalta kysytty erikseen, tarkoittaako
-”yksi” yhteistä huminaa ja yhteistä musiikkia vai pelkkää huminaa.
-Musiikkia ei ole generoitu.
+Fablen 16.9. työkuittauksen mukaan omistaja valitsi sen kortilla yhteisen
+musiikin huminan lisäksi. Codexin kortille ei tullut vastakkaista vastausta.
+Tämä toimitus sisältää vain hyväksytyn huminan; musiikkia ei ole generoitu.
 
 ## 64 kohdetta, 128 lyhyttä vastausta
 
@@ -116,9 +119,10 @@ leipätekstissä on lisäksi eri otostunnus. Nämä eivät muuta ääntä.
 - Rajatut ääni-/kysymys-/SW-testit: **29/29 pass**.
 - Lopullisen tuontityökalun syntaksi sekä ääni-/kysymystestit: **6/6 pass**.
 - Kaksoisavainvartija ja standalone-build onnistuvat.
-- CI headille `55146145`: ajo `35067520168` onnistui. Kuuntelu on nyt
-  omistajan hyväksymä yllä yksilöidylle MP3:lle. R2-vienti ja julkaistun
-  pelin testi ovat yhä tekemättä; näitä ei väitetä tehdyiksi.
+- CI headille `55146145`: ajo `35067520168` onnistui. Uusimmat rajatut
+  ääni-/kysymystestit 8/8. Kuuntelu on omistajan hyväksymä ja R2-vienti
+  varmennettu tavuntarkasti. Pelikytkentä, julkaisu ja julkaistun pelin
+  toistokoe ovat vielä Fablella; niitä ei väitetä tehdyiksi.
 
 ## Muut toimitukset
 
