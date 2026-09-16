@@ -36,11 +36,11 @@
  *      rajojen ulkopuolelle."*). Rajauksen ruutulaatikko on maan
  *      laatikon kehän projektio yhdistettynä maapaneelin korttiin, ja
  *      SITOVALLA akselilla tyhjää tilaa on enintään TYHJAN_KATTO
- *      (3,5 %, ks. vakion perustelu);
+ *      (9 % erästä 19d alkaen, ks. vakion perustelu);
  *      lisäksi laatikko on kokonaan ruudussa (mikään ei leikkaudu).
  *   6. PUHELIN PYSTYSSÄ SOVITETAAN KORKEUTEEN (erä 14, Raamattu
  *      KARTTAUUDISTUKSEN PÄÄTÖKSET 17): 390 × 844 -ruudulla sitova
- *      akseli on Y, sen tyhjä on enintään TYHJAN_KATTO, ja pelaajan
+ *      akseli on Y, sen tyhjä on enintään TYHJAN_KATTO (9 %), ja pelaajan
  *      kaupunki on ruudun keskellä vaakasuunnassa enintään
  *      KAUPUNGIN_POIKKEAMA verran sivussa. X-ylivuoto on PÄÄTÖS.
  *   7. PANOROINTI TUO MAAN REUNAN RUUDULLE eikä laatikon reuna tule
@@ -190,11 +190,37 @@ const SUHTEEN_VARA = 0.02;
  * pallon projektion keskelle: toiselle reunalle jää enemmän tilaa kuin
  * toiselle. MITATTU Ranskassa erän 13 jälkeen 1,08 % (390 × 844) ja
  * 3,01 % (1400 × 900); ennen erää 13 luvut olivat 35,3 % ja 27,5 %.
- * Katto on 3,5 % eikä 3,0 %, jottei vartio kaadu kuormitetun koneen
+ * Katto oli 3,5 % eikä 3,0 %, jottei vartio kaadu kuormitetun koneen
  * puolen prosentin heitosta — se erottaa silti korjatun rajauksen
  * korjaamattomasta kymmenkertaisella marginaalilla (vastakoe D).
+ *
+ * ══════════════════════════════════════════════════════════════════
+ * KATTO 9 % ERÄSTÄ 19d ALKAEN — SAMA NÄKYMÄ, ERI MITTA
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * 3,5 % mitattiin aikana, jolloin MAAPANEELI OLI KARTALLA ja riippui
+ * maan laatikon alapuolella: yllä oleva `yhd` on maan laatikon JA
+ * PANEELIN KORTIN yhdiste, joten kortti täytti juuri sen tilan, jonka
+ * sama paneeli oli saapumislaatikkoon lisännyt. Tyhjää ei siis jäänyt
+ * mitattavaksi.
+ *
+ * ERÄ 19 siirsi paneelin RUUDUN nurkkaan (PÄÄTÖKSET 28), jolloin
+ * kortti ei enää ole kartalla eikä täytä kehystä. Erä 19d palautti
+ * saapumisnäkymän väljyyden v1917:n tasolle omana vakionaan
+ * (js/pallolauta/maapaneeli.js SAAPUMISEN_VARA, 5 % per sivu), koska
+ * omistaja on nähnyt ja hyväksynyt juuri sen näkymän eikä pyytänyt
+ * zoomin muutosta. SAMA NÄKYMÄ lukee nyt eri tavalla:
+ *
+ *   ilman väljyyttä (v1918)   tyhjä Y 2,91 % (390) ja 2,90 % (1400)
+ *   väljyys takaisin (19d)    tyhjä Y 7,12 % (390) ja 7,11 % (1400)
+ *
+ * Ero on tasan se 10 %:n laatikkoväljennys, joka on omistajan
+ * hyväksymä. Katto on siksi 9 %: se päästää läpi mitatun 7,1 %:n ja
+ * jättää heittovaran, mutta kaataisi yhä korjaamattoman rajauksen
+ * (vastakoe D mittasi 35,3 % ja 27,5 %) nelinkertaisella
+ * marginaalilla.
  */
-const TYHJAN_KATTO = 0.035;
+const TYHJAN_KATTO = 0.09;
 /*
  * VÄITE 6: PYSTYRUUDULLA SITOVA AKSELI ON Y (erä 14, Raamattu
  * KARTTAUUDISTUKSEN PÄÄTÖKSET 17). Puhelimen kotelo on 0,46-suhteinen
@@ -1392,7 +1418,8 @@ kumottu('2. maapaneeli on meren päällä — ei yhdenkään maan polygonissa',
 kumottu('3. paneelin koko seuraa kartan mittakaavaa katkotta (3 zoomia)',
   suhdeTulokset.length === RUUDUT.length && suhdeTulokset.every((t) => t.ok),
   JSON.stringify(suhdeTulokset.map((t) => ({ ruutu: t.ruutu, hTulo: t.hTulo }))));
-vaadi('5. saapumisnäkymä rajautuu aivan maan rajojen ulkopuolelle (tyhjä ≤ 3,5 %)',
+vaadi('5. saapumisnäkymä rajautuu aivan maan rajojen ulkopuolelle (tyhjä ≤ 9 %, '
+  + 'sisältää erän 19d saapumisvaran)',
   rajausTulokset.length === RUUDUT.length && rajausTulokset.every((t) => t.ok),
   JSON.stringify(rajausTulokset));
 kumottu('6. paneelin leveys saapumisnäkymässä ≤ 10 % ruudun leveydestä',
@@ -1463,7 +1490,7 @@ let seitseman = null;
   }
   await ctx.close();
 }
-vaadi('6. puhelin pystyssä: sitova akseli Y, tyhjä ≤ 3,5 %, kaupunki keskellä',
+vaadi('6. puhelin pystyssä: sitova akseli Y, tyhjä ≤ TYHJAN_KATTO, kaupunki keskellä',
   Boolean(kuusi?.ok), JSON.stringify(kuusi));
 vaadi('7. panorointi tuo maan reunan ruudulle, laatikon reuna ei tule ruudun sisään',
   Boolean(seitseman?.ok), JSON.stringify(seitseman));

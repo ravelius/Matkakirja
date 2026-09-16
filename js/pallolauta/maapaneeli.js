@@ -709,24 +709,64 @@ export function paneelinAnkkuri(laatikko, iso = null, lauta = PALLO_LAUTA, { kap
  * laatikon kuin ennen tätä erää.
  */
 /*
- * ERÄ 19: LAAJENNUSTA EI ENÄÄ TEHDÄ (PÄÄTÖKSET 28 kohta 1).
+ * ══════════════════════════════════════════════════════════════════
+ * SAAPUMISNÄKYMÄN VÄLJYYS ON NYT VAKIO, EI PANEELIN LAATIKKO
+ * (erä 19d, korjaus 16.9.2026)
+ * ══════════════════════════════════════════════════════════════════
  *
- * Laajennus oli olemassa YHDESTÄ syystä: kartassa kiinni oleva paneeli
- * riippui maan laatikon ULKOPUOLELLA, joten saapumisrajauksen piti
- * ottaa se mukaan tai kortti olisi jäänyt ruudun alalaidan alle.
- * Nurkkakortti on ruudun oma kaluste — se on näkyvissä joka zoomilla
- * riippumatta siitä, mihin kamera maan rajaa — eikä saa enää siirtää
- * saapumisnäkymää eikä uloszoomauksen kattoa. Kartta rajautuu siis
- * tästä eteenpäin MAAHAN, kuten ennen erää 3.
+ * ERÄ 19 POISTI LAAJENNUKSEN KOKONAAN, ja se oli liikaa. Laajennus oli
+ * alun perin paneelia varten (kartassa kiinni oleva kortti riippui
+ * maan laatikon ULKOPUOLELLA, joten saapumisrajauksen piti ottaa se
+ * mukaan), mutta sen sivuvaikutus oli se VÄLJYYS, jonka omistaja on
+ * nähnyt ja hyväksynyt joka maassa v1917:ään asti.
  *
- * FUNKTIO JÄÄ JA PALAUTTAA LAATIKON SELLAISENAAN. Kutsu on yhä
+ * MITATTU SIVUVAIKUTUS (v1918, savuke-maailma-ei-kermaa mittauskamera
+ * "Alpeilta Karpaateille", nakyvaAlue lautayksikköinä):
+ *
+ *   v1917  179 × 107  @ (6394, 1483)
+ *   v1918  163 ×  97  @ (6402, 1488)   ← 9…10 % kapeampi
+ *
+ * Seuraus: savukkeen näytepisteet Steiermark ja Szatmár putosivat
+ * ruudun ulkopuolelle (5/6), ja kohdemaan saapumisnäkymä oli tiukempi
+ * kuin hyväksytty. Omistaja ei pyytänyt zoomin muutosta.
+ *
+ * KORJAUS: SAMA VÄLJYYS, ILMAN PANEELIA. Laatikkoa levennetään
+ * `SAAPUMISEN_VARA` verran joka suuntaan — symmetrisesti, laatikon
+ * omissa mitoissa. Mitattu ero v1917 ↔ v1918 oli tasan symmetrinen
+ * (+8 lautayksikköä x:ssä ja +5 y:ssä kummallekin puolelle eli
+ * 163 → 179 ja 97 → 107), koska kamera sovittaa laatikon ruutuun
+ * keskipisteen ympäri. 5 % per sivu antaa 163 × 1,10 = 179,3 ja
+ * 97 × 1,10 = 106,7 — molemmat ± 2 %:n sisällä tavoitteesta.
+ *
+ * MIKSI VAKIO EIKÄ PANEELI. Paneeli on erästä 19 alkaen KIINTEÄ RUUDUN
+ * NURKASSA (PÄÄTÖKSET 28), joten sillä ei ole enää karttalaatikkoa,
+ * josta väljyys voisi tulla. Väljyys on nyt oma päätöksensä ja yksi
+ * luku, joka ei riipu paneelista, maasta eikä ruudun muodosta.
+ *
+ * FUNKTION NIMI JÄÄ, KOSKA KUTSU JÄÄ. `paneelinLaatikko` on yhä
  * js/pallolauta/lauta.js:n saapumislaatikossa (tests/maakartuutsi.test.mjs
- * vahtii sitä), ja jos paneeli joskus palaa kartalle, laajennus
- * palautetaan tähän yhteen paikkaan eikä kutsuketjua tarvitse etsiä.
+ * vahtii kutsua sanatarkasti), joten väljennys tehdään tässä ja
+ * varsinainen laskenta on `saapumisenValjennys`issä.
  */
+export const SAAPUMISEN_VARA = 0.05;
+
+/** Laatikko väljennettynä SAAPUMISEN_VARA:n verran joka suuntaan. */
+export function saapumisenValjennys(laatikko) {
+  if (!(laatikko?.w > 0) || !(laatikko?.h > 0)) return laatikko ?? null;
+  const dx = SAAPUMISEN_VARA * laatikko.w;
+  const dy = SAAPUMISEN_VARA * laatikko.h;
+  return {
+    x: laatikko.x - dx,
+    y: laatikko.y - dy,
+    w: laatikko.w + 2 * dx,
+    h: laatikko.h + 2 * dy,
+  };
+}
+
 export function paneelinLaatikko(laatikko, iso = null, { kapea = false } = {}) {
+  // ISO ja kuvasuhde eivät enää vaikuta: väljyys on vakio (ks. yllä).
   void iso; void kapea;
-  return laatikko ?? null;
+  return saapumisenValjennys(laatikko);
 }
 
 const luo = (tagi, luokka, teksti) => {

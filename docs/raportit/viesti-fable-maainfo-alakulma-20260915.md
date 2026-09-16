@@ -482,3 +482,85 @@ kirjoitettu vartion viereen. 1400 px:llä korkeusraja sitoo ja osuus on
 **Ajot 16.9.2026, 34–47 chromiumia rinnakkain:**
 `savuke-maapaneeli` 15/15, `savuke-era12` 15/15,
 `tests/maakartuutsi` + `tests/rules` 347/347.
+
+---
+
+## 10. Erä 19d (16.9.2026): saapumisnäkymän väljyys takaisin v1917:n tasolle
+
+### Mitä tapahtui
+
+Erä 19 poisti `paneelinLaatikko()`-laajennuksen kokonaan, koska sen
+ainoa peruste oli kartassa kiinni oleva paneeli. Laajennuksella oli
+kuitenkin SIVUVAIKUTUS, jota kukaan ei ollut kirjannut: se oli se
+VÄLJYYS, jonka omistaja on nähnyt ja hyväksynyt joka maassa v1917:ään
+asti.
+
+Mitattu (savuke-maailma-ei-kermaa mittauskamera "Alpeilta
+Karpaateille", `kamera.nakyvaAlue()` lautayksikköinä):
+
+| | näkyvä alue |
+|---|---|
+| v1917 | **179 × 107 @ (6394, 1483)** |
+| v1918 (erä 19) | 163 × 97 @ (6402, 1488) — 9…10 % kapeampi |
+| **nyt (erä 19d)** | **179 × 107 @ (6394, 1483)** — pikselilleen v1917 |
+
+Seuraus v1918:ssa: `savuke-maailma-ei-kermaa` 5/6 (näytepisteet
+Steiermark ja Szatmár putosivat ruudun ulkopuolelle) ja kohdemaan
+saapumisnäkymä oli tiukempi kuin hyväksytty. Omistaja ei pyytänyt
+zoomin muutosta.
+
+### Korjaus: väljyys on nyt oma vakionsa
+
+`js/pallolauta/maapaneeli.js`:
+
+```
+export const SAAPUMISEN_VARA = 0.05;   // osuus laatikon mitasta, per sivu
+export function saapumisenValjennys(laatikko) { … }
+```
+
+`paneelinLaatikko()` delegoi siihen (kutsu lauta.js:ssä jää
+sanatarkasti, `tests/maakartuutsi.test.mjs` vahtii sitä). Väljyys on
+siis SYMMETRINEN ja riippumaton paneelin sijainnista, maasta ja ruudun
+muodosta — paneeli on erästä 19 alkaen kiinteä nurkassa eikä sillä ole
+enää karttalaatikkoa, josta väljyys voisi tulla.
+
+**Miksi 5 % per sivu.** Mitattu ero v1917 ↔ v1918 oli tasan
+symmetrinen (+8 lautayksikköä x:ssä ja +5 y:ssä kummallekin puolelle),
+koska kamera sovittaa laatikon ruutuun keskipisteen ympäri:
+163 → 179 on ×1,098 ja 97 → 107 on ×1,103. 2 × 5 % = ×1,10 osuu
+molempiin ± 2 %:n sisällä — ja mitattuna se antoi tasan 179 × 107
+samassa pisteessä (6394, 1483).
+
+### Sivuvaikutus, joka piti kirjata: era12:n tyhjän katto
+
+`savuke-era12` väite 5 ("saapumisnäkymä rajautuu aivan maan rajojen
+ulkopuolelle") mittaa maan laatikon JA MAAPANEELIN KORTIN yhdisteen
+tyhjää tilaa. Katto 3,5 % mitattiin aikana, jolloin paneeli oli
+KARTALLA ja riippui maan alapuolella: kortti täytti juuri sen tilan,
+jonka sama paneeli oli saapumislaatikkoon lisännyt, joten tyhjää ei
+jäänyt mitattavaksi.
+
+Nyt kortti on ruudun nurkassa eikä täytä kehystä, joten SAMA omistajan
+hyväksymä näkymä lukee eri tavalla:
+
+| | tyhjä Y 390 px | tyhjä Y 1400 px |
+|---|---|---|
+| ilman väljyyttä (v1918) | 2,91 % | 2,90 % |
+| väljyys takaisin (19d) | **7,12 %** | **7,11 %** |
+
+Ero on tasan se 10 %:n laatikkoväljennys. `TYHJAN_KATTO` nostettiin
+siksi 3,5 % → **9 %**: se päästää läpi mitatun 7,1 %:n heittovaroineen
+mutta kaataisi yhä korjaamattoman rajauksen (vastakoe D mittasi 35,3 %
+ja 27,5 %) nelinkertaisella marginaalilla. Perustelu on kirjoitettu
+vakion viereen.
+
+### Ajot (16.9.2026, 23–47 chromiumia rinnakkain)
+
+| Savuke | Tulos |
+|---|---|
+| `savuke-maailma-ei-kermaa.mjs` | **6/6 vihreä** (V0 näkymä 179 × 107 molemmissa ajoissa) |
+| `savuke-maapaneeli.mjs` | **15/15 vihreä** |
+| `savuke-era12.mjs` | **15/15 vihreä** (timeout 1700) |
+| `tests/maakartuutsi.test.mjs` | **13/13** |
+
+Savukkeen näytepisteisiin ei koskettu.
