@@ -25531,7 +25531,37 @@ body.radio-tila .linssikartta-kehys, body.aikajana-paalla .linssikartta-kehys { 
  * valitsin ja oma laatikko. CSS2D-kerroksen (kirjaston div) jälkeen
  * DOMissa, joten ne piirtyvät paikallaan olevien merkkien päälle.
  */
-.pallo-kotelo > .pallolauta-liikkuva,
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LIIKKUVA NAPPULA ON NÄKYVISSÄ KOKO MATKAN (omistaja 16.9.2026,
+ * iPhone-kuva Ateenasta, Raamattu KARTTAUUDISTUKSEN PAATOKSET 29,
+ * sanatarkasti: *"kamera taitaa panoroida mutta pelinappula ei nay
+ * liikkeen aikana"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MITATTU JUURISYY. Liikkuva nappula jakoi ryhmävalitsimen alla olevan
+ * KONEEN säännön kanssa, ja siinä on `opacity: 0` — kone häivyttyy
+ * näkyviin vasta kun js/pallolauta/siirto.js lisää luokan `nakyy`.
+ * Luokka lisätään VAIN lennolla (`if (lento) el.classList.add('nakyy')`),
+ * joten liftauksen, bussin ja laivan nappula oli koko matkan täysin
+ * läpinäkyvä: elementti oli DOMissa, sen transform päivittyi joka
+ * kehys ja sen ruutupaikka oli oikea — mutta laskettu peittävyys oli 0
+ * ensimmäisestä kehyksestä viimeiseen (mitattu 10 näytettä matkalta).
+ *
+ * KORJAUS: nappulalla on oma sääntönsä, jossa peittävyys on 1. Koneen
+ * häivytys jää koneelle, jolle se kirjoitettiin.
+ */
+.pallo-kotelo > .pallolauta-liikkuva {
+  position: absolute;
+  inset: auto;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  pointer-events: none;
+  will-change: transform;
+  opacity: 1;
+}
 /*
  * KONE ON HETI LENTOSUUNNASSA — ASENTO EI ANIMOIDU (omistaja 5.9.2026
  * klo 00.35: *"lentokoneen ei tarvitse kääntyä alussa vaan voi lehtää
