@@ -393,7 +393,7 @@ test('vaihe 2: siirto haarautuu laudan mukaan kuljettajalle, koreografia pysyy y
   assert.match(reititLahde, /pointAlong\(poly, i \/ askelia\)/, 'helmet eivät ole samalla kaavalla kuin pixelOf');
   assert.match(lue('../js/pallolauta/siirto.js'), /pointAlong\(lauta\.reitit\.poly\(h\.reitti\), h\.ta \+ \(h\.tb - h\.ta\) \* e\)/,
     'nappula ei kulje samaa korjattua polya kuin helmet');
-  assert.match(lue('../js/pallolauta/lauta.js'), /const valinta = lento \? lento\.valinta : ui\.matkareittienValinta\(\);/);
+  assert.match(lue('../js/pallolauta/lauta.js'), /\(lento \? lento\.valinta : ui\.matkareittienValinta\(\)\);/);
   // Kehäriippuvuus poistui: pallolauta ei tuo ui.js:ää; koreografian
   // luvut tulevat kummallekin laudalle samasta moduulista.
   assert.ok(!pallolauta.includes("from '../ui.js'"), 'js/pallolauta tuo ui.js:ää');
@@ -555,7 +555,7 @@ test('vaihe 5b: kone on vaiheen 2 kuljettaja, kaari vaiheen 2 kaari', () => {
    * saa käyttää, koska kuva ei enää mahduta molempia päitä.
    */
   assert.match(siirto, /^export function lennonRajaus\(board, a, b\) \{/m);
-  assert.match(siirto, /\{ bbox: lennonRajaus\(board, a, b\), marginaali: LENNON_RAJAUKSEN_MARGINAALI \}/);
+  assert.match(siirto, /\{ bbox: lennonRajaus\(board, a, b\), marginaali: LENNON_RAJAUKSEN_MARGINAALI, kokonaan: true \}/);
   assert.doesNotMatch(avaus, /lennonRajaus\(/, 'avauslento ei enää rajaa kaupunkiparia');
   assert.doesNotMatch(avaus, /import[^;]*lennonRajaus/, 'kuollut tuonti siirrosta');
   assert.match(avaus, /\{ \.\.\.pixelOf\(board, lahtoPos\), leveys: AVAUSLENNON_ALKULEVEYS \}/);
@@ -565,12 +565,16 @@ test('vaihe 5b: kone on vaiheen 2 kuljettaja, kaari vaiheen 2 kaari', () => {
     'avauslento ei saa tarvita uutta Globe.gl-kerrosta');
   assert.match(avaus, /ui\.lentoKaari = \{ a: lahto\.id, b: kohde\.id \};/);
   // Niukkuus: ei nappulaa, ei kohteita, ei nostoja, kaksi nimeä.
-  assert.match(lauta, /merkit\.paivita\(\{ nappula: liikkuu \|\| lento \? null : kohta, kohteet \}\);/);
-  assert.match(lauta, /const kohteet = lento \? \[\] : kohdevalinta\(\);/);
+  assert.match(lauta, /merkit\.paivita\(\{ nappula: liikkuu \|\| lento \|\| linssiPaalla\(\) \? null : kohta, kohteet \}\);/);
+  assert.match(lauta, /const kohteet = lento \|\| linssiPaalla\(\) \? \[\] : kohdevalinta\(\);/);
   assert.match(lauta, /katto: lento \? 0 : Math\.min\(NOSTOJEN_KATTO/);
   assert.ok(!lauta.includes('objectsData'), 'lentotila lisäisi three.js-objektin');
-  // Kamera ei sukella nappulan perään lennon aikana (peli on jo perillä).
-  assert.match(lauta, /if \(!liikkuu && !lento && pos\) \{/);
+  /*
+   * Kamera ei sukella nappulan perään lennon aikana (peli on jo
+   * perillä) — ei avauslennolla (`lento`) eikä pelin omalla lennolla
+   * (`ui.lentoKaari`, KARTTAUUDISTUKSEN PAATOKSET 30).
+   */
+  assert.match(lauta, /if \(!liikkuu && !lento && !ui\.lentoKaari && pos\) \{/);
 });
 
 test('matkakirja on vasemmassa ylänurkassa myös pallolla (omistaja 5.9.2026)', () => {
@@ -837,9 +841,15 @@ test('avauslento: kone kulkee kameran vaiheella, ei omalla käyrällään', () =
   assert.match(avaus, /kuljettaja\.hyppaa\(lahtoPos, kohdePos, kesto, \{ vaihe: lennonVaihe \}\)/);
   // Kuljettaja ei aja omaa kameraansa avauslennolla.
   assert.match(siirto, /export function luoNappulanKuljettaja\(\{ ui, lauta, player, lento = false, omaKamera = false \}\)/);
-  assert.match(siirto, /if \(!omaKamera\) \{\n\s+void kamera\.ajaKamera\(/);
-  // …mutta tavallisen lennon rajaus on tallella (FLIGHT_MS, MANNER_LENTO_MS).
-  assert.match(siirto, /\{ bbox: lennonRajaus\(board, a, b\), marginaali: LENNON_RAJAUKSEN_MARGINAALI \}/);
+  assert.match(siirto, /if \(omaKamera\) \{ lahde\(\); return; \}/);
+  /*
+   * KARTTAUUDISTUKSEN PAATOKSET 30: tavallisen lennon rajausajo
+   * ODOTETAAN loppuun ennen kuin kone lähtee, ja laatikko sovitetaan
+   * kokonaan ruutuun (`kokonaan: true`). Avauslento ohittaa ajon
+   * kokonaan kuten ennenkin.
+   */
+  assert.match(siirto, /\{ bbox: lennonRajaus\(board, a, b\), marginaali: LENNON_RAJAUKSEN_MARGINAALI, kokonaan: true \}/);
+  assert.match(siirto, /\)\.then\(lahde, lahde\);/);
 });
 
 test('avauslento: kone piirtää etusivun paksun punaisen viivan, ei uutta kerrosta', () => {
