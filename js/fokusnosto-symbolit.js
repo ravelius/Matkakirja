@@ -1979,6 +1979,17 @@ export const NOSTOSYM_PISTE_HIMMEYS = 0.86;
 let NOSTOSYM_MITTA = null;
 
 /**
+ * Voimassa oleva tarkkuusporras (laitepikseliä kirjaston yksikköä
+ * kohti) — savukkeiden ja vartijoiden mittari. Terävyys on sitä ja
+ * vain sitä, että porras on vähintään merkin näkyvä tarve
+ * (`mitta × devicePixelRatio`), joten sumeuden voi mitata luvuilla
+ * eikä kuvavertailulla (tools/savukkeet/savuke-pariisi-lahizoom.mjs).
+ */
+export function nostosymPorrasNyt() {
+  return NOSTOSYM_PORRAS;
+}
+
+/**
  * Valitsee portaan annetulle tarpeelle. Palauttaa true, jos porras
  * vaihtui — silloin kutsujan on rakennettava merkkinsä uudelleen.
  */

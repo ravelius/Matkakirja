@@ -280,7 +280,7 @@ function kartanNapinNapautus() {
 
 const {
   naytaLuentakuvasarja, paataLuentakuvasarja, piilotaLuentakuva,
-  naytaPulunKuvapakka,
+  naytaPulunKuvapakka, LUENTAKUVAPAKKA_KARTALLA,
   ISON_KUVAN_VAIHTO_MS, ISON_KUVAN_LOPPU_MS, LUENTAKUVAN_VAIHTO_MS,
 } = await import('../js/fokusvirta.js');
 const { fokusvirtaKaupungille } = await import('../js/packs/fokusvirrat.js');
@@ -340,6 +340,34 @@ function siivoa(ui) {
 const isot = () => asiakirja.body.querySelectorAll('.fokusvirta-isokuva-ruutu');
 const paallys = () => asiakirja.body.querySelectorAll('.fokusvirta-isokuva');
 const paneelit = () => asiakirja.body.querySelectorAll('.fokusvirta-luentakuva');
+
+/*
+ * ══ PAKKAVARTIOT KYTKIMEN MUKAAN (omistaja 16.9.2026, Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 31 kohta 1) ═════════════════════════
+ *
+ * Kartalle jäävä pieni kuvapakka on TOISTAISEKSI KUMOTTU
+ * (js/fokusvirta.js LUENTAKUVAPAKKA_KARTALLA = false). Vartioita ei
+ * poisteta vaan käännetään kytkimen mukaan: sarjan KELLO on yhä se,
+ * mitä tämä tiedosto mittaa (4 s ja 6 s, kaupungin vaihto, kartan
+ * liike), ja sarjan päätös on yhä sama tapahtuma — vain sen jälki
+ * kartalla on eri. Kun omistaja antaa kuville paremman paikan ja
+ * kytkin kääntyy takaisin, nämä vartiot palaavat sanasta sanaan
+ * entiselleen ilman että testiä kirjoitetaan uudestaan.
+ *
+ * @param {number} kortteja montako PuluCam-korttia pakassa olisi
+ * @param {string} viesti   vartion oma viesti
+ */
+const vaadiPakkaKartalla = (kortteja, viesti) => {
+  if (!LUENTAKUVAPAKKA_KARTALLA) {
+    assert.equal(paneelit().length, 0,
+      `KUMOTTU (LUENTAKUVAPAKKA_KARTALLA=false): ${viesti}`);
+    return;
+  }
+  assert.equal(paneelit().length, 1, viesti);
+  assert.ok(paneelit()[0].classList.contains('pieni'), 'pakka jää PIENEEN kokoon');
+  assert.equal(paneelit()[0].querySelectorAll('.pulucam-kortti').length, kortteja,
+    'kaikki kortit heti mukana, ei pulpahdusviiveitä');
+};
 
 /* ---------------------------------------------------------------- */
 /* 2. Sarjan ajastus                                                 */
@@ -410,11 +438,9 @@ test('pulun kommentti aloittaa PuluCam-sarjan: 4 s välein ja 6 s lopuksi', (t) 
 
   // Kuusi sekuntia viimeisen jälkeen: iso häipyy, pieni pakka kartalle.
   t.mock.timers.tick(ISON_KUVAN_LOPPU_MS);
-  assert.equal(paneelit().length, 1, 'kartalle jää kuvapakka');
-  assert.ok(paneelit()[0].classList.contains('pieni'), 'pakka jää PIENEEN kokoon');
-  assert.equal(paneelit()[0].querySelectorAll('.pulucam-kortti').length, pulunKuvia,
-    'kaikki kortit heti mukana, ei pulpahdusviiveitä');
-  assert.ok(ui.luentakuva, 'paneeli jää muistiin kartan omaksi kuvaksi');
+  vaadiPakkaKartalla(pulunKuvia, 'kartalle jää kuvapakka');
+  assert.equal(Boolean(ui.luentakuva), LUENTAKUVAPAKKA_KARTALLA,
+    'paneeli jää muistiin kartan omaksi kuvaksi vain kytkimen ollessa päällä');
 
   siivoa(ui);
   t.mock.timers.reset();
@@ -461,8 +487,8 @@ test('PuluCam-sarja ei kaadu eikä jää auki, jos ui.liviaAani on aina null', (
   }, 'vahtiPulunLoppua ei saa heittää poikkeusta, kun ui.liviaAani on null');
 
   // Kiinteä varakello vei sarjan loppuun ajallaan: pieni pakka kartalle.
-  assert.equal(paneelit().length, 1, 'kartalle jää kuvapakka kiinteän varakellon mukaan');
-  assert.ok(paneelit()[0].classList.contains('pieni'), 'pakka jää pieneen kokoon');
+  vaadiPakkaKartalla(PAKKI.pollo.kuvat.length,
+    'kartalle jää kuvapakka kiinteän varakellon mukaan');
   assert.equal(ui.luentakuvasarja, null, 'sarja on suljettu, ei jää auki roikkumaan');
 
   siivoa(ui);
@@ -501,9 +527,7 @@ test('ilman pulun kuvia isoisän kuva pienenee 6 s LUENNAN lopusta', (t) => {
     kelaa(t, 250 + ISON_KUVAN_LOPPU_MS - 400);
     assert.equal(paneelit().length, 0, 'kuusi sekuntia on kuusi sekuntia');
     kelaa(t, 800);
-    assert.equal(paneelit().length, 1);
-    assert.ok(paneelit()[0].classList.contains('pieni'));
-    assert.equal(paneelit()[0].querySelectorAll('.pulucam-kortti').length, 0);
+    vaadiPakkaKartalla(0, 'isoisän kuva pienenee kartalle ilman pulun kuvia');
     siivoa(ui);
   } finally {
     PAKKI.pollo.kuvat = kuvat;
@@ -531,7 +555,7 @@ test('ilman luentaa kello lähtee alkukatosta eikä kuva jää roikkumaan', (t) 
     kelaa(t, 4200, 200);
     assert.equal(paallys().length, 1, 'kuva tulee ilman luentaakin, alkukaton jälkeen');
     kelaa(t, 4000 + ISON_KUVAN_LOPPU_MS + 500);
-    assert.equal(paneelit().length, 1, 'kuva pienenee myös ilman luentaa');
+    vaadiPakkaKartalla(0, 'kuva pienenee myös ilman luentaa');
     siivoa(ui);
   } finally {
     PAKKI.pollo.kuvat = kuvat;
@@ -595,7 +619,10 @@ test('toinen kuva vaihtuu 9 s kohdalla, kuvateksti mukana', (t) => {
     ui.luentaaKesken = false;
     kelaa(t, 250 + ISON_KUVAN_LOPPU_MS + 200);
     const kartalla = paneelit()[0]?.querySelector('img');
-    assert.equal(kartalla?.alt, KUVA2.lyhyt, 'pieneen pakkaan jää kuva 2');
+    // Pakkavartio kytkimen mukaan (ks. vaadiPakkaKartalla): kumottuna
+    // kartalle ei jää kuvaa lainkaan, ja juuri se on nyt väite.
+    assert.equal(kartalla?.alt ?? null, LUENTAKUVAPAKKA_KARTALLA ? KUVA2.lyhyt : null,
+      'pieneen pakkaan jää kuva 2 (kumottuna: kartalle ei jää mitään)');
     siivoa(ui);
   });
   t.mock.timers.reset();
@@ -626,6 +653,19 @@ test('karusellissa ovat molemmat isoisän kuvat ja sitten PuluCam', (t) => {
     t.mock.timers.tick((pulunKuvia - 1) * ISON_KUVAN_VAIHTO_MS + ISON_KUVAN_LOPPU_MS + 60);
 
     const kortit = asiakirja.body.querySelectorAll('.pulucam-kortti');
+    /*
+     * KUMOTTU KYTKIMELLÄ (ks. vaadiPakkaKartalla): koko tämä vartio
+     * mittaa sitä, mitä kartalle jääneen PAKAN napautus tekee. Pakkaa
+     * ei ole, joten väite on nyt "kortteja ei ole" — ja loppu (viuhka,
+     * karuselli) palaa sellaisenaan, kun kytkin kääntyy takaisin.
+     */
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      assert.equal(kortit.length, 0,
+        'KUMOTTU (LUENTAKUVAPAKKA_KARTALLA=false): pakka ei nouse kartalle');
+      assert.equal(paneelit().length, 0, 'eikä paneelia jää kartalle');
+      siivoa(ui);
+      return;
+    }
     assert.equal(kortit.length, pulunKuvia, 'pakka nousi kartalle');
     /*
      * KOLME VAIHETTA (omistaja 11.9.2026): pieni pakka aukeaa
@@ -666,8 +706,7 @@ test('kartan liike vie sarjan loppuun heti pieneen pakkaan', (t) => {
   // Kartan veto = pelaaja haluaa kartan: sarja hyppää pakkaan.
   kartanVeto();
   assert.equal(paallys().length, 0, 'iso päällys lähtee heti');
-  assert.equal(paneelit().length, 1, 'pakka nousee kartalle');
-  assert.ok(paneelit()[0].classList.contains('pieni'));
+  vaadiPakkaKartalla(PAKKI.pollo.kuvat.length, 'pakka nousee kartalle');
 
   siivoa(ui);
   t.mock.timers.reset();
@@ -816,7 +855,7 @@ test('pulun kuvat tulevat isoina VAIKKA isoisän sarja on jo ehtinyt päättyä'
   kelaa(t, ISON_KUVAN_LOPPU_MS + 1000);
   assert.equal(ui.luentakuvasarja, null, 'sarja on purkautunut ennen kommenttia');
   assert.equal(paallys().length, 0, 'iso päällys on poissa');
-  assert.equal(paneelit().length, 1, 'kartalla on isoisän kuva');
+  vaadiPakkaKartalla(0, 'kartalla on isoisän kuva');
 
   // Kommentti tulee vasta nyt — ja pulun kuvat on silti nähtävä isoina.
   assert.equal(pulunKommentti(ui), true, 'myöhästynyt kommentti aloittaa sarjan');
@@ -830,9 +869,7 @@ test('pulun kuvat tulevat isoina VAIKKA isoisän sarja on jo ehtinyt päättyä'
   const pulunKuvia = PAKKI.pollo.kuvat.length;
   for (let i = 1; i < pulunKuvia; i += 1) t.mock.timers.tick(ISON_KUVAN_VAIHTO_MS);
   t.mock.timers.tick(ISON_KUVAN_LOPPU_MS);
-  assert.equal(paneelit().length, 1, 'kartalle jää yksi paneeli');
-  assert.equal(paneelit()[0].querySelectorAll('.pulucam-kortti').length, pulunKuvia,
-    'pakassa ovat kaikki pulun kuvat');
+  vaadiPakkaKartalla(pulunKuvia, 'kartalle jää yksi paneeli');
 
   siivoa(ui);
   t.mock.timers.reset();
@@ -870,13 +907,13 @@ test('pakka ei nouse kartalle ennen pulun kommenttia', (t) => {
   t.mock.timers.tick(60);
   ui.luentaaKesken = false;
   kelaa(t, ISON_KUVAN_LOPPU_MS + 1000);
-  assert.equal(paneelit().length, 1, 'isoisän kuva jää kartalle');
   /*
    * PAKKA KUULUU PULUN HETKEEN (Raamattu): jos se nousisi jo tässä,
    * pelaaja näkisi pulun kuvat pikkukuvina ennen niiden omaa sarjaa.
+   * Kytkimen ollessa pois kartalle ei jää kuvaa lainkaan, joten väite
+   * pitää kahdella tavalla (ks. vaadiPakkaKartalla).
    */
-  assert.equal(paneelit()[0].querySelectorAll('.pulucam-kortti').length, 0,
-    'pulun kortteja ei ole vielä');
+  vaadiPakkaKartalla(0, 'isoisän kuva jää kartalle ilman pulun kortteja');
   siivoa(ui);
   t.mock.timers.reset();
 });

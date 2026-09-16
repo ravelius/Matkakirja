@@ -1003,6 +1003,13 @@ for (const ruutu of PAALLYSRUUDUT) {
     vaadi(`${ruutu.nimi}/${paallys.nimi}: isokuva pysyy isona (mitat ±2 px)`,
       Boolean(jalkeen.isokuva) && leveysEro <= 2 && korkeusEro <= 2,
       `${JSON.stringify(ennen.isokuva)} → ${JSON.stringify(jalkeen.isokuva)}`);
+    /*
+     * PAKKAVARTIO PITÄÄ KYTKIMESTÄ RIIPPUMATTA (16.9.2026, Raamattu
+     * KARTTAUUDISTUKSEN PAATOKSET 31 kohta 1). Väite on "kesken sarjan
+     * pakkaa EI ole kartalla", ja kun pakka on kokonaan piilotettu
+     * (js/fokusvirta.js LUENTAKUVAPAKKA_KARTALLA = false), se pitää
+     * sitäkin suuremmalla syyllä — vartiota ei siis käännetä.
+     */
     vaadi(`${ruutu.nimi}/${paallys.nimi}: sarja on yhä käynnissä eikä pakka noussut kartalle`,
       jalkeen.sarja === true && jalkeen.pikkupakka === 0,
       `sarja=${jalkeen.sarja} pakka=${jalkeen.pikkupakka}`);
@@ -1075,7 +1082,11 @@ console.log('\n=== VASTAKOE: napautus kartalle purkaa sarjan 1400x900 ===');
   await sivu.waitForTimeout(700);
   const jalkeen = await sivu.evaluate(PAALLYSNAYTE);
   tieto('VASTAKOE kartan napautus', `${JSON.stringify(ennen)} → ${JSON.stringify(jalkeen)}`);
-  vaadi('VASTAKOE: kartan napautus purkaa sarjan (isokuva pois, pakka kartalle)',
+  // Väitteen loppuosa "pakka kartalle" on KUMOTTU 16.9.2026 (Raamattu
+  // KARTTAUUDISTUKSEN PAATOKSET 31 kohta 1): sarja purkautuu yhä samalla
+  // hetkellä, mutta kartalle ei jää pakkaa. Vartio ei koskaan mitannut
+  // pakkaa vaan sarjan purkautumisen, joten mitta pysyy ennallaan.
+  vaadi('VASTAKOE: kartan napautus purkaa sarjan (isokuva pois; pakkaa ei jää kartalle)',
     Boolean(piste) && Boolean(ennen.isokuva) && jalkeen.sarja === false
       && jalkeen.isokuva === null,
     JSON.stringify({ sarja: jalkeen.sarja, isokuva: jalkeen.isokuva }));
