@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "astronautin-kamera-yhteinen-20260916",
+  "scope": "one-background-for-the-entire-lens",
+  "flowId": "AuJbSt9TW5UEMGCy5DRH",
+  "model": "eleven_text_to_sound_v2",
+  "prompt": "Quiet space station cabin ambience: a soft steady low ventilation hum, faint distant radio static and very occasional subdued electronic beeps; constant gentle level, no voices, no intelligible speech, no music, no melody, no alarms.",
+  "paidGenerationAlreadyCompleted": true,
+  "generatedTakes": 4,
+  "selectedGenerationId": "IjNSZWpBzQUbApftkh17",
+  "rawSources": [
+    {
+      "generationId": "IjNSZWpBzQUbApftkh17",
+      "file": "raw-IjNSZWpBzQUbApftkh17.mp3",
+      "bytes": 497951,
+      "sha256": "55565eb723cee2c97de41ac84a87f7f435d6c061936aa992b0c39213e5754471",
+      "duration": 30,
+      "loudness": {
+        "taso": -45.93,
+        "huippu": -27.82,
+        "kirjo": 0.8
+      }
+    },
+    {
+      "generationId": "fa443cxCDPffAkDw1mmj",
+      "file": "raw-fa443cxCDPffAkDw1mmj.mp3",
+      "bytes": 497951,
+      "sha256": "a54ced6a6cf6183a38762fd7453fa02d28046ddd3bfb97c651b07faa783182ce",
+      "duration": 30,
+      "loudness": {
+        "taso": -39.47,
+        "huippu": -23.12,
+        "kirjo": 0.6
+      }
+    },
+    {
+      "generationId": "ZluD3id8FZxMoxz6DoGM",
+      "file": "raw-ZluD3id8FZxMoxz6DoGM.mp3",
+      "bytes": 497951,
+      "sha256": "5c9e8115764ab4f11d0a6134a6ba0be5c6b2c07412a8637fb58e9b7b6b1b43e0",
+      "duration": 30,
+      "loudness": {
+        "taso": -43.89,
+        "huippu": -27.56,
+        "kirjo": 1.2
+      }
+    },
+    {
+      "generationId": "MZehcygWCa4qCfITgIpQ",
+      "file": "raw-MZehcygWCa4qCfITgIpQ.mp3",
+      "bytes": 497951,
+      "sha256": "604306dc04d652d6fe05e63438531811fc1028fddcb97a6893e9c709afd7350d",
+      "duration": 30,
+      "loudness": {
+        "taso": -50.62,
+        "huippu": -36.05,
+        "kirjo": 1
+      }
+    }
+  ],
+  "output": {
+    "file": "astronautin-kamera-tausta.mp3",
+    "r2Key": "matkakirja/aanet/linssit/astronautin-kamera-tausta.mp3",
+    "bytes": 1345091,
+    "sha256": "93aaf7fb15092bac80abd1d740aa2a22a0fdb761558df2273673bc263fde2f2b",
+    "duration": 84,
+    "decodedDuration": 84,
+    "loudness": {
+      "taso": -30.48,
+      "huippu": -9.44,
+      "kirjo": 1.2
+    },
+    "boundary": {
+      "stepDbfs": -55.20056527570752,
+      "first100msRmsDbfs": -22.81488820947688,
+      "last100msRmsDbfs": -22.616224442885766
+    }
+  },
+  "processing": {
+    "type": "fixed-gain-crossfaded-loop",
+    "seam": {
+      "alku": 0.25,
+      "looppi": 28,
+      "risti": 1.5
+    },
+    "repeatedCycles": 3,
+    "gainDb": 15.840000000000003,
+    "targetLufs": -30,
+    "bakedStartOrEndFade": false
+  },
+  "playback": {
+    "loop": true,
+    "fadeInSeconds": 2,
+    "fadeInOnlyAtLensEntry": true,
+    "restartOnTargetChange": false,
+    "gainMustRespectMuteAndBackgroundPreference": true,
+    "stopOnLensExit": true,
+    "useDecodedAudioBufferForGaplessLoop": true
+  },
+  "review": {
+    "signalChecksPassed": true,
+    "subjectiveListening": "pending-owner-or-Fable-listening",
+    "gameIntegration": "Fable-owned-not-in-this-PR"
+  }
+}
