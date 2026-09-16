@@ -79,6 +79,12 @@ const RUUDUT = [
  */
 /** Kuinka paljon saapumisnäkymän karttakerroin saa poiketa ykkösestä. */
 const SAAPUMISEN_VARA = 0.02;
+/*
+ * ANKKURIN VARAT (vartio 7, tehtävänannon mitta): kyltin suunta
+ * merkistä ±5° ja tekstikorkeuteen suhteutettu etäisyys ±10 %.
+ */
+const ANKKURIN_KULMAVARA = 5;
+const ANKKURIN_ETAISYYSVARA = 0.1;
 const KAUPUNGIT = ['pariisi', 'marseille'];
 
 let lapi = 0;
@@ -265,7 +271,7 @@ for (const ruutu of RUUDUT) {
    * muuttuisi zoomin mukana.
    */
   const zoomit = [];
-  for (const osuus of [1, 0.6, 0.35]) {
+  for (const osuus of [1, 0.85, 0.7, 0.6, 0.35]) {
     const mitta = await sivu.evaluate(async ([kerroin, pov]) => {
       const l = window.matkakirja.ui.pallolauta;
       // Takaisin saapumisnäkymän keskelle: vedot ovat vieneet Pariisin
@@ -288,7 +294,33 @@ for (const ruutu of RUUDUT) {
       const skaala = paneeli
         ? Number((paneeli.style.transform.match(/scale\(([\d.]+)\)/u) ?? [])[1] ?? 1) : 1;
       const perus = arvo ? parseFloat(getComputedStyle(arvo).fontSize) : 0;
+      /*
+       * KYLTIN ANKKURI MERKKIIN NÄHDEN (vartio 7, Raamattu
+       * KARTTAUUDISTUKSEN PAATOKSET 24). Mitta on tekstin keskipiste
+       * MIINUS oman CSS2D-solmun keskipiste: solmu on kaupungin
+       * pisteessä (translate(-50%, -50%), css/styles.css), joten sen
+       * 1 × 1 -laatikon keskipiste ON merkin paikka ruudulla.
+       * `getScreenCoords(lat, lon, 0)` ei kelpaa tähän: se on eri
+       * korkeudella kuin merkkikerros, ja ero kasvaa zoomatessa —
+       * silloin mitta liikkuisi, vaikka kyltti olisi paikallaan.
+       */
+      const kyltit = [...document.querySelectorAll('.pallolauta-nimi')].map((el) => {
+        const t = el.querySelector('text');
+        const r = t ? t.getBoundingClientRect() : null;
+        const a = el.getBoundingClientRect();
+        const koko = t ? Number(t.getAttribute('font-size')) : 0;
+        if (!r || !(r.width > 0) || !(koko > 0)) return null;
+        const dx = r.left + r.width / 2 - (a.left + a.width / 2);
+        const dy = r.top + r.height / 2 - (a.top + a.height / 2);
+        return {
+          id: el.dataset.kaupunki,
+          kulma: (Math.atan2(dy, dx) * 180) / Math.PI,
+          suhde: Math.hypot(dx, dy) / koko,
+          ank: t.getAttribute('text-anchor'),
+        };
+      }).filter(Boolean);
       return {
+        kyltit,
         alt: l.pallo.pointOfView().altitude,
         kyltti: teksti ? Number(teksti.getAttribute('font-size')) : 0,
         paneeli: perus * skaala,
@@ -351,6 +383,45 @@ for (const ruutu of RUUDUT) {
   vaadi(`6. ${ruutu.nimi}: karttanoston kyltti seuraa samaa kerrointa `
     + `(${parit6.length} tasoa, ±3 %)`,
     ero6 <= 0.03, `hajonta ${p(100 * ero6, 2)} %`);
+
+  /*
+   * 7. KYLTIN ANKKURI ON KIINTEÄ KAIKILLA ZOOMEILLA (omistaja
+   * 15.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 24: *"nyt ne
+   * hyppivat eri puolille kaupungin merkkia. pitaisi pysya samassa
+   * kohdassa"*, ja *"koko voi muuttua"*). Jokaiselle kaupungille,
+   * jonka kyltti on olemassa vähintään kahdella tämän sarjan
+   * zoomtasolla: sama kylki (text-anchor), suunta ±ANKKURIN_KULMAVARA
+   * astetta ja tekstikorkeuteen suhteutettu etäisyys
+   * ±ANKKURIN_ETAISYYSVARA.
+   */
+  const ankkurit = new Map();
+  for (const z of zoomit) {
+    for (const k of z.kyltit ?? []) {
+      if (!ankkurit.has(k.id)) ankkurit.set(k.id, []);
+      ankkurit.get(k.id).push(k);
+    }
+  }
+  const hajonta = (luvut) => Math.max(...luvut) - Math.min(...luvut);
+  let mitattuja = 0;
+  for (const [id, sarja] of ankkurit) {
+    if (sarja.length < 2) continue;
+    mitattuja += 1;
+    const kulmat = sarja.map((k) => k.kulma);
+    const suhteet7 = sarja.map((k) => k.suhde);
+    const keski7 = suhteet7.reduce((a, b) => a + b, 0) / suhteet7.length;
+    tieto(`${ruutu.nimi}/${id} · ankkuri zoomeittain`,
+      sarja.map((k) => `${p(k.kulma, 1)}° / ${p(k.suhde, 2)}× ${k.ank}`).join('  |  '));
+    vaadi(`7a. ${ruutu.nimi}/${id}: kylki sama kaikilla zoomeilla (${sarja.length} tasoa)`,
+      sarja.every((k) => k.ank === sarja[0].ank), sarja.map((k) => k.ank).join('/'));
+    vaadi(`7b. ${ruutu.nimi}/${id}: suunta pysyy (±${ANKKURIN_KULMAVARA}°)`,
+      hajonta(kulmat) <= 2 * ANKKURIN_KULMAVARA, `hajonta ${p(hajonta(kulmat), 1)}°`);
+    vaadi(`7c. ${ruutu.nimi}/${id}: etäisyys tekstikorkeuteen suhteutettuna pysyy `
+      + `(±${100 * ANKKURIN_ETAISYYSVARA} %)`,
+      hajonta(suhteet7) <= 2 * ANKKURIN_ETAISYYSVARA * keski7,
+      `hajonta ${p((100 * hajonta(suhteet7)) / keski7, 1)} %`);
+  }
+  vaadi(`7. ${ruutu.nimi}: ankkuri mitattiin vähintään yhdestä kaupungista`,
+    mitattuja > 0, `${mitattuja} kaupunkia kahdella zoomtasolla`);
 
   if (KUVAKANSIO) {
     await sivu.screenshot({

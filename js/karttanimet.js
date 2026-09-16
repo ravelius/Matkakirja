@@ -1472,10 +1472,25 @@ function sijoitaKaupunginNimi({
    * pisteen säde rakoineen, kumpi on suurempi. Ilman jälkimmäistä
    * suurennettu kaupunkipiste (js/pallolauta/lauta.js) jäisi oman
    * nimensä alle — piste ja nimi ovat sama merkintä.
+   *
+   * ── EHDOKASKEHÄ ON KARTAN MITTA (omistaja 15.9.2026, Raamattu
+   * KARTTAUUDISTUKSEN PAATOKSET 24: *"pitaisi pysya samassa
+   * kohdassa"*) ─────────────────────────────────────────────────────
+   *
+   * Laudan oma asettelu (lx/ly) ja sivuehdokkaiden vähimmäisetäisyys
+   * olivat RUUTUVAKIOITA, kun taas nimen mitat (kork, kehä) tulevat
+   * kirjasinkoosta. Pallolaudalla kirjasin on kartan mitta
+   * (js/pallolauta/nimet.js NIMIKYLTIT KARTTAAN), joten ehdokaskuvio
+   * muutti muotoaan zoomatessa: sama kaupunki sai eri kyljen eri
+   * zoomilla. Nyt kuvio kerrotaan samalla kertoimella kuin teksti —
+   * silloin se on joka zoomilla sama kuvio, vain suurempana, ja puoli
+   * on kaupungin oma eikä kameran. Tasokartalla `kokoKerroin` on 1,
+   * joten siellä luvut ovat tavu tavulta entiset.
    */
-  const d = Math.max(c.iso ? 7 : 5, pisteSade > 0 ? pisteSade + 2 : 0);
+  const k = kokoKerroin > 0 ? kokoKerroin : 1;
+  const d = Math.max((c.iso ? 7 : 5) * k, pisteSade > 0 ? pisteSade + 2 : 0);
   const ehdokkaat = [
-    { dx: c.lx * (11 / 13), dy: c.ly * (11 / 13), ank: c.la },
+    { dx: c.lx * (11 / 13) * k, dy: c.ly * (11 / 13) * k, ank: c.la },
   ];
   const tavanomaiset = [
     { dx: d, dy: kork * 0.35, ank: 'start' },
@@ -1539,7 +1554,9 @@ function sijoitaKaupunginNimi({
    * nostoviivaa: nimi tunnistetaan merkkinsä nimeksi vain
    * lähituntumasta. Siksi kehä on tässä puolet noston pituuksista.
    */
-  for (const pituus of KAUPUNGIN_KEHA) {
+  for (const perusPituus of KAUPUNGIN_KEHA) {
+    // Kehäkin on kartan mitta (ks. EHDOKASKEHÄ ON KARTAN MITTA).
+    const pituus = perusPituus * k;
     const vino = pituus * 0.7;
     ehdokkaat.push(
       { dx: d + pituus, dy: kork * 0.35, ank: 'start' },
@@ -1594,7 +1611,7 @@ function sijoitaKaupunginNimi({
    * päädy kauemmas merkistään kuin kehä muutenkin veisi.
    */
   if (!asetettu && pakota) {
-    const liuku = Math.max(...KAUPUNGIN_KEHA);
+    const liuku = Math.max(...KAUPUNGIN_KEHA) * k;
     for (const e of ehdokkaat) {
       const p = laatikko(e);
       const tulppa = este(p.r);
