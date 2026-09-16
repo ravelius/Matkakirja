@@ -192,3 +192,30 @@ työtä**: lataa 2,9 Mt:n 8k-kuvan ja latoo sen sitten puolikkaana.
 Siistein korjaus olisi sitoa 8k:n valinta myös siihen, pystyykö laite
 latomaan sen. Se on kuitenkin oma päätöksensä ja oma mittauksensa, ja
 tämä haara on kiireellinen vikakorjaus — jätän sen sinulle.
+
+## 7. Ajotulokset
+
+- `node --test tests/satelliitti-avaruus.test.mjs tests/satelliitti.test.mjs
+  tests/pallolinssit.test.mjs tests/dokumentit.test.mjs` — **129/129 läpi**.
+- `savuke-astro-pallo NAKYMAT=puhelin` — **37/37 läpi**. Diag:
+  `kangas=2048x1024`, ladonta ok ensimmäisellä yrityksellä
+  (`tapa=suodatin`), koko ketju 4 583 ms, keskipisteen kirkkaus 48,4.
+- `savuke-astro-pallo NAKYMAT=tyopoyta` — **37/37 läpi**. 8k ladotaan
+  yhä täydessä koossa, kirkkaus 54,4.
+- **Safarin rajoilla (väite 8b) molemmilla ruuduilla.** Puhelimella
+  kylläisyys putosi pikselisilmukkaan (`tapa=pikselit`) ja ladonta
+  onnistui heti. Työpöydällä näkyy puolitusketju kokonaisuudessaan:
+
+  ```
+  ladonta koko=8192x4096 ok=0     <- Safarin katto ylittyi, kangas tyhjä
+  ladonta koko=4096x2048 ok=0     <- yhä liikaa
+  ladonta koko=2048x1024 ok=1     <- mahtui
+  ```
+
+  Kirkkaus 88,2 eli pallo oli värillinen, ei musta. Ennen korjausta
+  ensimmäinen tyhjä kangas olisi mennyt suoraan pinnalle.
+
+**EI AJETTU:** `savuke-satelliittilinssi NAKYMAT=tyopoyta` — sessio
+loppui kesken. Se ei koske tämän korjauksen koodia (kartta-asetelma ja
+kuvakortit, ei pallon tekstuuriketju), mutta se on syytä ajaa ennen
+julkaisua.
