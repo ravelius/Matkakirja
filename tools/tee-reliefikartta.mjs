@@ -74,6 +74,9 @@ import { fileURLToPath } from 'node:url';
 import { haeKorkeusruudukko, LAHTEET, OLETUKSET } from './hae-korkeusruudukko.mjs';
 import { varjosta, tasainenVarjo, AURINKO } from './varjostus.mjs';
 import { sovitaMaailma, miller } from './vanha-maailma.mjs';
+import {
+  LUT, LUT_POHJA, LUT_YLA, KALVO,
+} from './reliefivarit.mjs';
 
 if (!process.env.NODE_USE_ENV_PROXY && (process.env.HTTPS_PROXY || process.env.https_proxy)) {
   const ajo = spawnSync(process.execPath, [fileURLToPath(import.meta.url), ...process.argv.slice(2)], {
@@ -159,125 +162,15 @@ const RUUTU = KAARIMINUUTIT === null ? OLETUKSET.ruutu : KAARIMINUUTIT / 60;
  */
 const LIIOITTELU = arvo('--liioittelu', 12);
 
-// --- hypsometrinen väriasteikko ----------------------------------------------
-
-/*
- * Fyysisen kartan perinteinen väriasteikko. Se ei ole makuasia vaan
- * sopimus, jonka jokainen koulukartaston nähnyt osaa lukea ilman
- * selitystä: matala on vihreä, korkea on ruskea, korkein on valkoinen.
- *
- * Väri EI KERRO KASVILLISUUDESTA. Sahara on tällä kartalla vihertävän
- * keltainen, koska se on 300 metrissä, eikä siksi että siellä kasvaisi
- * mitään. Amazonin sademetsä ja Argentiinan pampa ovat samaa vihreää.
- * Tämä on hypsometrinen kartta, ja se lupaa vain korkeuden.
- *
- * Portaiden VÄLI on tarkoituksella epätasainen. Maailman maasta yli
- * puolet on alle 500 metrissä, ja tasavälinen asteikko käyttäisi siihen
- * yhden ainoan värin: koko asuttu maailma olisi samaa vihreää eikä
- * alankojen muoto näkyisi lainkaan. Siksi portaat ovat tiheässä alhaalla
- * ja harvenevat ylöspäin.
- *
- * Portaiden VÄLISSÄ väri liukuu. Terävät rajat piirtäisivät kartalle
- * korkeuskäyrät, ja ne on jo piirretty toisessa linssissä
- * (js/packs/linssi-topografia.js). Tämä linssi näyttää maaston, ei rajoja.
- */
-const MAA = [
-  [0, 62, 110, 66],       // tummanvihreä alanko
-  [150, 104, 145, 72],
-  [400, 152, 174, 84],
-  [800, 205, 196, 112],   // kellertävä ylänkö
-  [1400, 208, 170, 100],
-  [2200, 182, 132, 82],   // ruskea vuoristo
-  [3200, 148, 98, 62],    // tummanruskea
-  [4200, 152, 112, 84],
-  [5200, 186, 164, 152],  // paljas kivi
-  [6000, 232, 232, 235],  // lumiraja
-  [7000, 255, 255, 255],
-];
-
-/*
- * Meren syvyysasteikko. Sama logiikka toisin päin: matala on vaalea,
- * syvä on tumma.
- *
- * Portaat on valittu merenpohjan omista muodoista eikä tasavälein.
- * -200 m on mannerjalustan reuna (sama raja, jolla varjostuksen
- * merivaimennus on täysi ja jolla vyöhykelinssin matalin merivyöhyke
- * kulkee), -4000 m on valtamerten pohjan yleiskorkeus ja -6000 m alkaa
- * syvänteiden alue. Näin mannerjalusta erottuu vaaleana kaistaleena
- * rannikoilla — se on maailman suurimpia maastonmuotoja ja katoaisi
- * tasavälisellä asteikolla kokonaan.
- */
-const MERI = [
-  [-11000, 10, 28, 78],
-  [-6000, 22, 50, 112],
-  [-4000, 38, 78, 145],
-  [-2500, 62, 112, 176],
-  [-1000, 100, 155, 208],
-  [-200, 140, 190, 228],
-  [0, 176, 214, 240],     // matala rannikkovesi
-];
-
-/*
- * Rantaviiva on ainoa terävä raja koko asteikolla: nollan alapuolella
- * vaalea sini, yläpuolella tumma vihreä. Se on tarkoitus — ranta on
- * maailman selvin raja, ja ilman sitä mantereilla ei olisi muotoa.
- *
- * Sama kolikko kääntöpuolelta: ETOPO1 ei tiedä, onko kuiva painanne
- * kuivaa. Kaspianmeren alanko, Qattaran painanne, Kuolemanlaakso ja
- * Hollannin polderit ovat merenpinnan alapuolella ja saavat siksi
- * merenvärin. Kaspianmeren tapauksessa se on enimmäkseen oikein (siellä
- * ON meri), muualla se levittää sinistä muutaman pikselin verran sinne
- * missä on kuivaa maata. Korjaus vaatisi erillisen maa-merimaskin, ja
- * se olisi uusi aineisto uusine virheineen — tämä työkalu kertoo mitä
- * korkeus kertoo.
- */
-const poimi = (asteikko, z) => {
-  if (z <= asteikko[0][0]) return asteikko[0].slice(1);
-  const viimeinen = asteikko[asteikko.length - 1];
-  if (z >= viimeinen[0]) return viimeinen.slice(1);
-  let i = 1;
-  while (asteikko[i][0] < z) i += 1;
-  const [aM, aR, aG, aB] = asteikko[i - 1];
-  const [bM, bR, bG, bB] = asteikko[i];
-  const t = (z - aM) / (bM - aM);
-  return [aR + (bR - aR) * t, aG + (bG - aG) * t, aB + (bB - aB) * t];
-};
-
-/*
- * Väri metrin tarkkuudella hakutauluksi.
- *
- * Ruudukossa on 26 miljoonaa lukua ja jokainen niistä luetaan pystyvaiheessa
- * pariin kertaan: asteikon haarukointi jokaiselle erikseen olisi kymmeniä
- * miljoonia turhia vertailuja. Metri on värissä näkymätön askel — koko
- * asteikko käy 20 000 portaassa läpi, ja taulu on 60 kilotavua.
- */
-const LUT_POHJA = 11000;
-const LUT_YLA = 9000;
-const LUT = new Uint8Array((LUT_POHJA + LUT_YLA + 1) * 3);
-for (let m = -LUT_POHJA; m <= LUT_YLA; m++) {
-  const [r, g, b] = m >= 0 ? poimi(MAA, m) : poimi(MERI, m);
-  const i = (m + LUT_POHJA) * 3;
-  LUT[i] = Math.round(r); LUT[i + 1] = Math.round(g); LUT[i + 2] = Math.round(b);
-}
-
-// --- varjon kalvo ------------------------------------------------------------
-
-/*
- * TUMMENNUS ja VAALENNUS ovat eri suuruiset, eikä se ole epäsymmetriaa
- * epäsymmetrian vuoksi.
- *
- * Valkoiseen leikkautunut pikseli on menettänyt värinsä lopullisesti:
- * lumiraja, ruskea vuori ja vihreä laakso ovat kaikki 255,255,255 eikä
- * korkeutta voi enää lukea. Mustaan leikkautunut on yhä varjo, ja varjo
- * kuuluu maastoon. Siksi tummennus saa mennä lähes täysille ja vaalennus
- * vain reiluun puoleen.
- *
- * Tummennus on 0,85 eikä 1: täysin musta pikseli ei ole muoto vaan reikä.
- * Kuudesosa väriä jäljellä riittää siihen, että syvinkin varjo näyttää
- * yhä vuorelta eikä kartan repeämältä — Andien itäkylki on tumma mutta
- * yhä ruskea.
- */
-const KALVO = { tummennus: 0.85, vaalennus: 0.5 };
+// --- hypsometrinen väriasteikko ja varjon kalvo -------------------------------
+//
+// Asteikot (MAA, MERI), niistä koottu metrin hakutaulu (LUT) ja varjon
+// kalvon kertoimet asuvat 16.9.2026 alkaen tools/reliefivarit.mjs:ssä.
+// Ne olivat ennen tässä, mutta tools/tee-pallotopografia-koko.mjs
+// tarvitsee TÄSMÄLLEEN samat värit — ja kaksi kuvaa samasta maailmasta
+// eri väreillä olisi juuri se virhe, jota ei huomaa katsomalla
+// kumpaakaan yksin. Luvut perustelevat kommentit siirtyivät mukana
+// sanasta sanaan; tämän tiedoston laskenta ei muuttunut.
 
 // --- kohdepikselien maantiede ------------------------------------------------
 

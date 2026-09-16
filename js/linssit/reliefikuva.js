@@ -75,22 +75,98 @@ export const RELIEFIN_8K_RAJA_LAITEPX = 1024;
  */
 export const RELIEFIN_8K_KAYTOSSA = true;
 
+/*
+ * ── KOKO PALLON RELIEFI: NAVAT MUKAAN (omistaja 16.9.2026) ─────────
+ *
+ * Sanatarkasti: *"onhan tarkemmassa topografia ajossa myos pohjois ja
+ * etelanavat mukana, etta ei tule tyhjia kohtia niihin?"* — vastaus oli
+ * ei, ja päätös oli *"Kyllä, koko pallo 1′-datasta."* (Raamattu,
+ * ASTRONAUTIN KAMERA, LISÄYS 5.)
+ *
+ * Yllä olevat kaksi kuvaa (4k ja 8k) ovat kulkeneet PELIN LAUDAN
+ * Millerin kautta, ja lauta ulottuu vain 76 °N…58 °S: navat ovat
+ * niissä läpinäkyviä. Avaruusnäkymä maalaa reikiin generoidun
+ * napajään (vyöhykeväri ilman rantaviivaa) ja topografialinssin alla
+ * näkyy pallon oma pinta.
+ *
+ * tools/tee-pallotopografia-koko.mjs maalaa saman maailman SUORAAN
+ * 1′-korkeusruudukosta navasta napaan — Etelämanner ja Jäämeri mukaan
+ * lukien, ilman yhtään läpinäkyvää pikseliä. Kuvia on kaksi samoilla
+ * mitoilla kuin yllä, joten RUUDUN VALINTA ON SAMA: 8k leveille
+ * ruuduille, 4k puhelimelle.
+ *
+ * KYTKIN ON POIS PÄÄLTÄ, JA SE ON TARKOITUS. Kuvat syntyvät omistajan
+ * Macilla (.github/workflows/renderoi-reliefi-macilla.yml, syöte
+ * koko_pallo), ja ennen sitä osoitteiden takana ei ole mitään. Kun ajo
+ * on tehty, tunniste tarkistetaan, RELIEFI_KOKO_PALLO käännetään
+ * todeksi ja muutos julkaistaan omana pienenä PR:nään.
+ *
+ * KUN KOKO PALLON KUVA ON KÄYTÖSSÄ, NAPAJÄÄTÄ EI MAALATA PÄÄLLE. Jää
+ * tulee kuvasta (tools/reliefivarit.mjs, jaapaino: korkeus +
+ * leveysaste → jäävari), ja napojen häivytys söisi juuri sen
+ * rantaviivan, jonka takia kuva tehtiin — ks.
+ * js/linssit/satelliitti-avaruus.js napaLiuku.
+ */
+
+/** Onko koko pallon reliefi (navat mukaan) käytössä? Ks. yllä. */
+export const RELIEFI_KOKO_PALLO = false;
+
+/*
+ * Koko pallon kuvat. Tunniste on Mac-ajon syöte; nämä osoitteet
+ * tarkistetaan ja päivitetään kytkentä-PR:ssä.
+ */
+export const RELIEFIN_KOKO_4K = {
+  osoite: 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-4k-20260916.webp',
+  leveys: RELIEFIN_LEVEYS,
+  korkeus: RELIEFIN_KORKEUS,
+};
+export const RELIEFIN_KOKO_8K = {
+  osoite: 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-8k-20260916.webp',
+  leveys: RELIEFIN_8K_LEVEYS,
+  korkeus: RELIEFIN_8K_KORKEUS,
+};
+
 /**
  * Kumpi reliefi tälle ruudulle? Puhdas funktio
  * (tests/satelliitti-avaruus.test.mjs).
  *
- * @param {{ leveys?: number, dpr?: number, salli8k?: boolean }} ruutu
+ * `tunnus` kertoo TARKKUUDEN ('8k' tai '4k') ja `kokoPallo` sen, onko
+ * kuvassa navat. Tarkkuuden valinta on sama molemmilla kuvapareilla,
+ * joten kytkin vaihtaa vain osoitteen — ei muistinkulutusta.
+ *
+ * @param {{ leveys?: number, dpr?: number, salli8k?: boolean,
+ *   kokoPallo?: boolean }} ruutu
  */
-export function valitseReliefi({ leveys = 0, dpr = 1, salli8k = RELIEFIN_8K_KAYTOSSA } = {}) {
+export function valitseReliefi({
+  leveys = 0, dpr = 1, salli8k = RELIEFIN_8K_KAYTOSSA, kokoPallo = RELIEFI_KOKO_PALLO,
+} = {}) {
   const L = Number(leveys) || 0;
   const p = Number(dpr) > 0 ? Number(dpr) : 1;
-  if (salli8k && L >= RELIEFIN_8K_RAJA_CSS && L * p >= RELIEFIN_8K_RAJA_LAITEPX) {
+  const iso = salli8k && L >= RELIEFIN_8K_RAJA_CSS && L * p >= RELIEFIN_8K_RAJA_LAITEPX;
+  if (kokoPallo) {
+    const k = iso ? RELIEFIN_KOKO_8K : RELIEFIN_KOKO_4K;
     return {
-      tunnus: '8k', osoite: RELIEFIN_OSOITE_8K,
-      leveys: RELIEFIN_8K_LEVEYS, korkeus: RELIEFIN_8K_KORKEUS,
+      tunnus: iso ? '8k' : '4k',
+      osoite: k.osoite,
+      leveys: k.leveys,
+      korkeus: k.korkeus,
+      kokoPallo: true,
+    };
+  }
+  if (iso) {
+    return {
+      tunnus: '8k',
+      osoite: RELIEFIN_OSOITE_8K,
+      leveys: RELIEFIN_8K_LEVEYS,
+      korkeus: RELIEFIN_8K_KORKEUS,
+      kokoPallo: false,
     };
   }
   return {
-    tunnus: '4k', osoite: RELIEFIN_OSOITE, leveys: RELIEFIN_LEVEYS, korkeus: RELIEFIN_KORKEUS,
+    tunnus: '4k',
+    osoite: RELIEFIN_OSOITE,
+    leveys: RELIEFIN_LEVEYS,
+    korkeus: RELIEFIN_KORKEUS,
+    kokoPallo: false,
   };
 }
