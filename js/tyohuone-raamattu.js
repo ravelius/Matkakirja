@@ -7833,7 +7833,16 @@ export const RAAMATTU = {
           + 'pallonakymasta (hampurilainen nakyy siella). Mitataan 390 '
           + '(pysty ja vaaka) ja 1400 px: kelattu selite 1 rivi, '
           + 'hampurilainen ei DOMissa/nakyvissa kuvanakymassa, panorointi '
-          + 'kelaa selitteen. Tila: tyo Opus-agentilla.',
+          + 'kelaa selitteen. LISAYS 7 (omistaja 16.9.2026 klo 15.50 UTC, '
+          + 'sanatarkasti: "Pienennetty inforuutu saisi olla himmenntty ja '
+          + 'lapinakyvampi ja se saisi olla myos vaaka ruudulla vasemmassa '
+          + 'reunassa (nyt irti reunasta liikaa)"): 23) kelattu selite on '
+          + 'himmennetty ja lapinakyvampi kuin avattu (esim. tausta alpha '
+          + '0,25, teksti 0,7); 24) vaaka-asennossa (leveys > korkeus) '
+          + 'selite on kiinni vasemmassa reunassa samalla sisennyksella kuin '
+          + 'pystyssa (12 px + turva-alue), ei irti reunasta - '
+          + 'safe-area-inset-left otetaan huomioon vain lovella. Tila: tyo '
+          + 'Opus-agentilla.',
         'IHMISEN MATKA -LINSSI: RINTAMAN VALKKYMINEN, MUSTA ALKU, LIIKU '
           + 'POIS; ASTRONAUTTILINSSILLE OMA KUVAKE (omistaja 15.9.2026 klo '
           + '12.00 UTC, tyopoytakuva 248 000 v. sitten, sanatarkasti: "Kun '
