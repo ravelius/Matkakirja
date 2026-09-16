@@ -998,6 +998,130 @@ export function playDiaryVoice(ui, url, {
   return audio;
 }
 
+/*
+ * ── SAAPUMISPUHE: HORATIO SANOO KAUPUNGIN NIMEN JA ISKULAUSEEN ──────
+ *
+ * Omistaja 15.9.2026, sanatarkasti: *"Kokeile tehdä pelkästään isoisän
+ * äänellä. Siinä paras että generaattori tekee itse tauon"* ja
+ * hyväksyntä *"Nyt hyvä. Tee kaikkiin ja vie peliin"*. Aineisto on
+ * Codexin toimittama (js/packs/saapumispuheet.js, 45 Euroopan
+ * kaupunkia): yksi otto, jossa nimi ja nykyinen iskulause sanotaan
+ * peräkkäin. Pulu ei puhu saapumisessa.
+ *
+ * MIKSI TÄMÄ ON TÄSSÄ EIKÄ TRAILERISSA. Luennan koko koneisto —
+ * crossOrigin, Web Audio -reititys vahvistimen läpi (iOS), Lukija-liuku,
+ * taustan väistö ja taustalle menon hiljennys — asuu tässä moduulissa
+ * ja seuraa `merkitsePuhujan` kirjanpitoa. Traileri saa siis yhden
+ * kutsun, ei omaa Audio-koneistoa (js/saapumistraileri.js).
+ *
+ * KOLME EROA MATKAKIRJALUENTAAN:
+ *
+ *  1. EI PEHMEÄÄ LOPPUA. Codexin toimitusohje: *"Älä leikkaa puhetta
+ *     kellon perusteella: luota soittimen luonnolliseen
+ *     `ended`-tapahtumaan."* pehmeaLoppu pysäyttää 25 ms ennen reunaa,
+ *     eikä lyhyessä otossa ole mitään leikattavaa.
+ *  2. EI PULUN ODOTUSTA EIKÄ LAUSERAJOJA. Otto on 3–6 s ja sidottu
+ *     ruudulla näkyvään nimeen; odotus rikkoisi juuri sen synkan.
+ *  3. OMA KAHVANSA (`saapumispuheenSoitin`), koska tämä ei ole
+ *     `ui.diaryVoice`: matkakirjaluenta alkaa vasta tämän jälkeen, ja
+ *     kaiuttimen VU-mittari löytää analysaattorin täältä.
+ *
+ * Soitin on silti `ui.luennat`-joukossa ja puhujien kirjanpidossa,
+ * joten jokainen olemassa oleva pysäytystie (stopDiaryVoice,
+ * haivytaLuenta, taustaHiljennaLuennat) vaientaa myös saapumispuheen.
+ */
+
+/** Soiva saapumispuhe tai null — yksi kerrallaan koko pelissä. */
+let saapumispuheSoitin = null;
+
+/**
+ * Soivan saapumispuheen soitin (kaiuttimen VU-mittari lukee tästä
+ * analysaattorin, js/ui.js luentavahti).
+ * @returns {HTMLAudioElement|null}
+ */
+export function saapumispuheenSoitin() {
+  return saapumispuheSoitin;
+}
+
+/**
+ * SAAPUMISPUHE SOIMAAN. Palauttaa soittimen tai null, jos puhetta ei
+ * soitettu (ei osoitetta, kertoja pois päältä tai radiotila).
+ *
+ * `onLoppu` laukeaa TASAN KERRAN: luonnollisesta lopusta ('ended'),
+ * pysäytyksestä ('pause'), latausvirheestä ('error') ja hylätystä
+ * autoplaysta. Kutsuja (traileri) odottaa sitä ennen kuin
+ * matkakirjaluenta alkaa — hylätty play() ei siis jumita mitään.
+ *
+ * @param {object} ui
+ * @param {string} url
+ * @param {{onLoppu?: (() => void)|null}} [asetukset]
+ * @returns {HTMLAudioElement|null}
+ */
+export function soitaSaapumispuhe(ui, url, { onLoppu = null } = {}) {
+  pysaytaSaapumispuhe(ui);
+  if (!url) return null;
+  // Kertojan oma kytkin, sama kuin matkakirjaluennalla (playDiaryVoice).
+  if (!luentaKytkinPaalla()) return null;
+  if (ui?.radioModuuli && !ui.radioModuuli.luentaSallittu()) return null;
+  const audio = luentaSoitin(aaniUrl(url), puheVoima());
+  saapumispuheSoitin = audio;
+  (ui.luennat ??= new Set()).add(audio);
+  // Tausta väistyy puheen ajaksi ja vuoro varataan ENNEN play():ta,
+  // jotta merkintä pariutuu vapautuksen kanssa myös silloin, kun
+  // soitto ei koskaan käynnisty (sama kaava kuin playDiaryVoice).
+  merkitsePuhuja(ui, audio);
+  let ilmoitettu = false;
+  const loppu = () => {
+    if (ilmoitettu) return;
+    ilmoitettu = true;
+    if (saapumispuheSoitin === audio) saapumispuheSoitin = null;
+    ui?.luennat?.delete(audio);
+    vapautaPuhuja(ui, audio);
+    onLoppu?.();
+  };
+  audio.addEventListener('ended', loppu);
+  audio.addEventListener('pause', loppu);
+  audio.addEventListener('error', loppu);
+  const lupaus = audio.play();
+  if (lupaus?.catch) {
+    lupaus.catch((virhe) => {
+      // iOS hylkää play():n NotAllowedError-virheellä ilman elettä.
+      // Virhe näkyviin, mutta traileri jatkaa kuin puhetta ei olisi.
+      console.warn('saapumispuhe ei käynnistynyt:', virhe?.name ?? virhe, url);
+      loppu();
+    });
+  }
+  return audio;
+}
+
+/**
+ * SAAPUMISPUHE KIINNI JA SIIVOON — ohitus, kaupungin vaihto ja
+ * trailerin poisto. Turvallista kutsua monta kertaa.
+ *
+ * @returns {boolean} oliko puhetta pysäytettävänä
+ */
+export function pysaytaSaapumispuhe(ui) {
+  const audio = saapumispuheSoitin;
+  saapumispuheSoitin = null;
+  if (!audio) return false;
+  try {
+    audio.pause();
+    audio.removeAttribute('src');
+  } catch {
+    /* soitin oli jo purettu */
+  }
+  ui?.luennat?.delete(audio);
+  // Reititys puretaan kuolleelta soittimelta: 'ended' ei tule
+  // pysäytetylle äänelle, joten ketju jäisi muistiin roikkumaan
+  // äänikontekstin ja destinationin väliin (sama purku kuin
+  // haivytaJaSiivoassa ja haivytaLuennassa).
+  irrotaLuennanVahvistin(audio);
+  // Pysäytetty soitin ei laukaise enää 'ended'-tapahtumaa; ilman tätä
+  // taustan väistö jäisi päälle (sama vika kuin haivytaLuennassa).
+  vapautaPuhuja(ui, audio);
+  return true;
+}
+
 /**
  * Ensimmäisen virkkeen jälkeisen hengähdyksen paikka äänitteessä.
  * Pelkkä "ensimmäinen hiljaisuus" osui lukijan hengitykseen ja katkaisi

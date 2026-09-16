@@ -78,7 +78,8 @@ import {
 import {
   asetaLuentaKytkin, haivytaJaSiivoa, haivytaLuenta, lueMerkinta,
   luennanLoppuun, luentaKytkinPaalla, merkitsePuhuja, playDiaryVoice,
-  playIntroVoice, PUHUJA_PULU, stopDiaryVoice, stopIntroVoice,
+  playIntroVoice, PUHUJA_PULU, saapumispuheenSoitin,
+  stopDiaryVoice, stopIntroVoice,
   // Luennan NÄKYVÄT merkit lukevat kuuluvaa ääntä, eivät varattua
   // puheenvuoroa (15.9.2026, ks. kaynnistaLuentavahti).
   soivaPuhuja,
@@ -11625,10 +11626,18 @@ export class UI {
        * sen luennan gainilla, jotta Lukija-liuku ei himmennä kaaria.
        */
       const mykka = this.factKuuntele?.classList?.contains('mykistetty') === true;
+      /*
+       * SAAPUMISPUHE ON SAMA KERTOJA (16.9.2026). Kaupungin nimen ja
+       * iskulauseen otto ei ole `diaryVoice` vaan trailerin oma soitin
+       * (js/luenta.js saapumispuheenSoitin) — ilman tätä hakua mittari
+       * jäisi ilman analysaattoria juuri isoisän ensimmäisen lauseen
+       * ajaksi ja piirtäisi ajastettua kuviota (ks. js/kaiutinmittari.js).
+       */
+      const puhuva = () => this.diaryVoice ?? saapumispuheenSoitin();
       if (kertoja && !mykka) {
         kaynnistaKaiutinmittari(this.factKuuntele,
-          () => this.diaryVoice?.aaniMittari ?? null,
-          { haeVahvistus: () => this.diaryVoice?.luennanVahvistin?.gain?.value ?? null });
+          () => puhuva()?.aaniMittari ?? null,
+          { haeVahvistus: () => puhuva()?.luennanVahvistin?.gain?.value ?? null });
       } else {
         // Mykistettynä kaikki kaaret sammuksissa (omistajan sanoma
         // ehto) — sammutus tulee tästä eikä luennan puuttumisesta,

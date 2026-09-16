@@ -170,6 +170,22 @@ async function avaaAjo(viewport) {
   return { ctx, sivu, cdp };
 }
 
+/*
+ * ODOTUKSEN EHTO ON MATKAKIRJALUENTA, EI PELKKÄ `kertoja-aanessa`
+ * (16.9.2026, saapumisäänten kytkentä).
+ *
+ * Kaupungin minitraileri soittaa nyt isoisän saapumispuheen (nimi ja
+ * iskulause, js/luenta.js soitaSaapumispuhe), ja se on saman kertojan
+ * ääni: `kertoja-aanessa` ja luennan tekstipiilo syttyvät jo trailerin
+ * aikana, sekunteja ennen matkakirjaluentaa. Pelkkään luokkaan nojaava
+ * odotus mittaisi siis trailerin hetken eikä sitä luentaa, jota nämä
+ * vartiot koskevat. `ui.diaryVoice` on vain matkakirjaluennalla.
+ */
+const LUENTA_SOI = `(() => {
+  const a = window.matkakirja?.ui?.diaryVoice;
+  return Boolean(a) && !a.paused && a.currentTime > 0;
+})()`;
+
 /** Kaarien tila merkkijonona, esim. "110" = kaksi alinta palaa. */
 const KAARINAYTE = `(() => {
   const kaaret = [...document.querySelectorAll('#fact-kuuntele .kaiutin-kaari')];
@@ -186,7 +202,8 @@ for (const ruutu of RUUDUT) {
 
   // 1–3. KAIUTIN: sama rivi ja VU-mittari. Odotetaan kertojan vuoroa.
   const kertoja = await sivu.waitForFunction(
-    () => document.body.classList.contains('kertoja-aanessa'), null, { timeout: 60000 },
+    `document.body.classList.contains('kertoja-aanessa') && ${LUENTA_SOI}`,
+    null, { timeout: 90000 },
   ).then(() => true).catch(() => false);
   vaadi(`${ruutu.nimi}: isoisän luenta alkaa (kertoja-aanessa)`, kertoja);
 
@@ -426,8 +443,9 @@ async function napauta(sivu, cdp, valitsin) {
 for (const ruutu of TEKSTIRUUDUT) {
   console.log(`\n=== TEKSTIT PIILOON: ${ruutu.nimi} ${ruutu.width}x${ruutu.height} ===`);
   const { ctx, sivu, cdp } = await avaaAjo({ width: ruutu.width, height: ruutu.height });
-  await sivu.waitForFunction(() => document.body.classList.contains('luenta-tekstit-piiloon'),
-    null, { timeout: 60000 }).catch(() => {});
+  await sivu.waitForFunction(
+    `document.body.classList.contains('luenta-tekstit-piiloon') && ${LUENTA_SOI}`,
+    null, { timeout: 90000 }).catch(() => {});
   // Kuva ja kuvateksti ruudulle ennen mittausta.
   await sivu.waitForFunction(() => document.querySelector('.fokusvirta-isokuva-teksti'),
     null, { timeout: 60000 }).catch(() => {});
@@ -489,8 +507,9 @@ for (const ruutu of TEKSTIRUUDUT) {
 console.log('\n=== TEKSTIT PIILOON: luennan jälkeen 1400x900 ===');
 {
   const { ctx, sivu } = await avaaAjo({ width: 1400, height: 900 });
-  await sivu.waitForFunction(() => document.body.classList.contains('luenta-tekstit-piiloon'),
-    null, { timeout: 60000 }).catch(() => {});
+  await sivu.waitForFunction(
+    `document.body.classList.contains('luenta-tekstit-piiloon') && ${LUENTA_SOI}`,
+    null, { timeout: 90000 }).catch(() => {});
   const luennassa = await sivu.evaluate(TEKSTINAYTE);
   vaadi('tyopoyta: kortti on lappuna ennen luennan loppua', luennassa.lappu,
     JSON.stringify(luennassa.kortti));
@@ -530,8 +549,9 @@ console.log('\n=== TEKSTIT PIILOON: luennan jälkeen 1400x900 ===');
 console.log('\n=== VASTAKOE: tekstipiilo pois päältä 1400x900 ===');
 {
   const { ctx, sivu } = await avaaAjo({ width: 1400, height: 900 });
-  await sivu.waitForFunction(() => document.body.classList.contains('luenta-tekstit-piiloon'),
-    null, { timeout: 60000 }).catch(() => {});
+  await sivu.waitForFunction(
+    `document.body.classList.contains('luenta-tekstit-piiloon') && ${LUENTA_SOI}`,
+    null, { timeout: 90000 }).catch(() => {});
   await sivu.evaluate(() => {
     const { ui } = window.matkakirja;
     // Vahti pois ja piilotus perumaan: luenta jatkuu, mutta tekstit
@@ -558,8 +578,9 @@ console.log('\n=== VASTAKOE: tekstipiilo pois päältä 1400x900 ===');
 console.log('\n=== VASTAKOE: mittari pysäytettynä ===');
 {
   const { ctx, sivu } = await avaaAjo({ width: 1400, height: 900 });
-  await sivu.waitForFunction(() => document.body.classList.contains('kertoja-aanessa'),
-    null, { timeout: 60000 }).catch(() => {});
+  await sivu.waitForFunction(
+    `document.body.classList.contains('kertoja-aanessa') && ${LUENTA_SOI}`,
+    null, { timeout: 90000 }).catch(() => {});
   await sivu.evaluate(async () => {
     const { ui } = window.matkakirja;
     /*
@@ -795,8 +816,8 @@ const PAALLYSNAYTE = `(() => {
 /* Odota, että isoisän luenta soi ja iso kuva on ruudulla. */
 async function odotaLuentanakyma(sivu) {
   return sivu.waitForFunction(
-    () => document.body.classList.contains('kertoja-aanessa')
-      && document.querySelector('.fokusvirta-isokuva-kuva'),
+    `document.body.classList.contains('kertoja-aanessa')
+      && Boolean(document.querySelector('.fokusvirta-isokuva-kuva')) && ${LUENTA_SOI}`,
     null, { timeout: 90000 },
   ).then(() => true).catch(() => false);
 }
