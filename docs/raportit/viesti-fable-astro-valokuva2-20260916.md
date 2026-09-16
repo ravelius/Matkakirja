@@ -1,4 +1,4 @@
-# Viesti Fablelle — Astronautin kameran valokuvanäkymä uusiksi 2 (kohdat 1–7)
+# Viesti Fablelle — Astronautin kameran valokuvanäkymä uusiksi 2 (kohdat 1–7 + LISÄYS 3)
 
 **Opus-työagentti, 16.9.2026.** Haara
 `claude/bold-ride-vow4ki-astro-valokuva2`, pohjana `origin/main`
@@ -109,3 +109,77 @@ Kaikki kolme ovat valokuvanäkymä selite auki (Saharan silmä), alle
   valmista kysymystä kohdetta kohti — Codexin postilaatikko. Nauhan
   `max-width: 50%` jättää oikean alakulman vapaaksi pululle.
 - Ei versionostoa, ei PR:ää, ei Raamatun muokkausta.
+
+
+---
+
+# LISÄYS 3 — koko yläpalkki pois (sama haara, myöhemmin 16.9.2026)
+
+Omistaja (sanatarkasti): *"Astronauttilinssistä voisi ottaa koko
+yläpalkin pois, niin että oikeassa yläkulmassa on pelkkä hampurilainen
+ja kaikki muut yläpalkin jutut pois, koska ne eivät tuo mitään lisää,
+vievät vain tilaa."*
+
+## 1. Mitä muuttui
+
+| Tilaus | Toteutus |
+|--------|----------|
+| Yläpalkki pois kokonaan (pallo- ja valokuvanäkymä) | `rakennaPalkki` → **`rakennaValikko`**: linssi ei rakenna palkkia lainkaan. Poistuivat linssin ikoni + kaksirivinen nimi ja NASA-rivi; koko `.satelliittipalkki*`-tyylisarja on poistettu CSS:stä. Matkakirjan oma palkki pysyy piilossa (`aikajana-palkki-auki`), eikä `--aikajana-palkki-korkeus`-muuttujaa enää kirjoiteta |
+| Vain hampurilainen oikeassa yläkulmassa | `.satelliitti-valikkokehys` on `position: fixed`, `top: calc(10px + env(safe-area-inset-top))`, `right: calc(12px + env(safe-area-inset-right))`. Kehys menee **bodyyn**, ei karttaruutuun: karttaruudun transform tekisi siitä fixedin sisältävän lohkon |
+| Selite ja harmaa ✕ ruudun yläreunaan | Molemmat lukevat samaa `--satelliitti-yla`-muuttujaa (10 px + turva-alue); selite myös `env(safe-area-inset-left)` |
+| Kuva ja pallo saavat palkin tilan | `.satelliitti-katselu` alkaa nyt `top: 0`; palkin alareunan mittaus (`asemoiYlareuna`, `paivitaAsemointi`, ResizeObserver, orientationchange) **poistettu kokonaan** — mitattavaa ei ole |
+
+**NASA-rivi** (aineiston lähde) ei kadonnut: aineisto ja lisenssi
+luetaan valokuvan selitteen lisätiedoista (väkäsen takaa).
+
+## 2. Mitattu päätös: ✕ on hampurilaisen VASEMMALLA puolella
+
+Valikko aukeaa hampurilaisen **alle** (11 rem leveä, kaksi kohtaa), joten
+✕ sen alapuolella jäisi auki olevan valikon peittoon juuri silloin, kun
+valikkoa käytetään. Samalla rivillä vasemmalla ne eivät voi leikata
+toisiaan: molemmat lukevat samaa `--satelliitti-nappi`-kokoa ja samaa
+yläreunaa, ja ✕:n oikea reuna on napin leveyden + 10 px:n päässä.
+Savuke mittaa sekä laatikoiden erillisyyden että sen, ettei **auki
+oleva valikko** osu ✕:ään (`peittaaSulun: false`).
+
+## 3. Mitatut luvut (selite auki, LISÄYS 3 jälkeen)
+
+| Ruutu | Kortti | Selite | ✕ | Hampurilainen | Pienoiskuvat |
+|-------|--------|--------|---|---------------|--------------|
+| 1400 × 900 | 0, 0 – 1400 × 900 | 12, 10 | 1311–1344, 10 (34 × 34) | 1354–1388, 10 | 12, ala 888 |
+| 390 × 844 | 0, 0 – 390 × 844 | 12, 10 (leveys 279) | 291–330, 10 (38 × 38) | 348–378, 10 | 12, ala 832 |
+| iPad 1024 × 1366 | 0, 0 – 1024 × 1366 | 12, 10 (leveys 471) | 935–968, 10 (34 × 34) | 978–1012, 10 | 12, ala 1354 |
+
+**Pyöreä on pyöreä:** pelin oma nappisääntö antaa kaikille napeille
+44 px:n `min-height`in, ja se venytti kulmanapit soikeiksi (mitattu
+390 × 844: ✕ oli 30 × 46 px). Kulmanapit nollaavat min-mitat ja
+lukitsevat `aspect-ratio: 1`; kosketusalue säilyy kasvattamalla nappia
+kapealla ruudulla (2,4 rem ≈ 38 px) eikä pienentämällä.
+
+**Kapean ruudun selite** ei mene nappien alle: leveys on
+`100 % − 24 px − 2 × nappi − 26 px` = 279 px (390 px:n ruudulla), ja
+✕ alkaa vasta 291 px:stä.
+
+## 4. Vartiot LISÄYS 3:n jälkeen
+
+- `savuke-astro-valokuva.mjs`: **18/18 läpi** kaikissa kolmessa
+  ruudussa (uudet väitteet: palkkia ei ole DOMissa ja kortti täyttää
+  ruudun; ✕ ja hampurilainen eivät leikkaa; selite ei mene nappien
+  alle; auki oleva valikko ei peitä ✕:ää).
+- `savuke-satelliittilinssi.mjs NAKYMAT=tyopoyta`: **34/34 läpi**
+  (väite 2 mittaa nyt palkin PUUTTUMISEN, kelluvan hampurilaisen
+  paikan ja sen, että kartta saa koko ruudun korkeuden).
+- `node --test tests/satelliitti*.test.mjs tests/rules.test.mjs
+  tests/dokumentit.test.mjs`: **417/417, 0 fail**.
+
+## 5. Pallonäkymä: EI muutoksia satelliitti-avaruus.js:ään
+
+Pallon kotelon sovitus (`sovita`) ajetaan uudestaan jokaisesta kotelon
+koon muutoksesta, joten palkin poistuminen kasvattaa koteloa ja avaus-
+korkeus lasketaan automaattisesti uudelleen. Tiedostoon ei siis tarvinnut
+koskea — merge astro-pallo-haaran kanssa on puhdas. (Tiedoston
+kommentissa rivillä ~991 mainitaan yhä "linssin oma yläpalkki";
+sen voi siivota se agentti, joka tiedostoa muokkaa.)
+
+Kuvat kirjoitettu yli samoihin polkuihin (valokuvanäkymä selite auki,
+ilman yläpalkkia).

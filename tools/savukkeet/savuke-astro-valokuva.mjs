@@ -11,8 +11,12 @@
  * RUUDUSSA, joista yksi on juuri se iPad-kuvasuhde, josta tilaus tuli.
  *
  * VÄITTEET:
- *   1. Selitteen laatikon vasen yläkulma on enintään 16 px ruudun
- *      vasemmasta reunasta ja heti yläpalkin alapuolella.
+ *   1. Linssillä EI OLE YLÄPALKKIA (omistaja 16.9.2026, LISÄYS 3):
+ *      kortti alkaa ruudun yläreunasta, ja selitteen laatikon vasen
+ *      yläkulma on enintään 16 px ruudun vasemmasta ja yläreunasta.
+ *      Oikeassa yläkulmassa kelluu vain hampurilainen, ja kuvan ✕ on
+ *      sen vasemmalla puolella — ne eivät leikkaa toisiaan eikä auki
+ *      oleva valikko peitä ✕:ää.
  *   2. Sama pätee, vaikka kuva EI kata koko ruutua: pinnat on
  *      kiinnitetty ruutuun, ei kuvaelementtiin. Mitataan kutistamalla
  *      kuva puoleen — selite, ✕ ja pienoiskuvat eivät saa liikkua.
@@ -227,7 +231,19 @@ const MITAT = () => {
     sulku: r('.satelliitti-sulku'),
     nauha: r('.satelliitti-nauha'),
     kuva: r('.satelliitti-kuva'),
-    palkinAla: Math.round(document.querySelector('.satelliittipalkki')?.getBoundingClientRect().bottom ?? 0),
+    kortti: r('.satelliitti-katselu'),
+    hampurilainen: (() => {
+      const b = document.querySelector('.satelliitti-hampurilainen')?.getBoundingClientRect();
+      return b
+        ? { x: Math.round(b.left), y: Math.round(b.top), oikea: Math.round(b.right), ala: Math.round(b.bottom) }
+        : null;
+    })(),
+    // LISÄYS 3: linssin yläpalkkia ei ole enää olemassa.
+    palkkeja: document.querySelectorAll('.satelliittipalkki').length,
+    palkinOsia: document.querySelectorAll(
+      '.satelliittipalkki-nimi, .satelliittipalkki-ohje, .satelliittipalkki-kohde,'
+      + ' .satelliittipalkki-info, .satelliittipalkki-sulje, .satelliittipalkki-ikoni',
+    ).length,
     ikkuna: [window.innerWidth, window.innerHeight],
     varit: t
       ? { teksti: t.color, tausta: t.backgroundColor, reuna: t.borderTopColor, pyorea: t.borderTopLeftRadius }
@@ -330,16 +346,33 @@ async function ajaNakyma(nakymanNimi) {
 
   /* --- 1, 3, 4: kulmat ja värit koko ruudun kuvalla ----------------- */
   const mitat = await s.evaluate(MITAT);
-  vaadi(nimessa('selitteen vasen yläkulma ≤ 16 px vasemmasta reunasta, heti palkin alla'),
-    Boolean(mitat.selite) && mitat.selite.x <= 16
-      && mitat.selite.y >= mitat.palkinAla - 1 && mitat.selite.y - mitat.palkinAla <= 20,
+  vaadi(nimessa('linssin yläpalkkia ei ole DOMissa, kuva saa sen tilan'),
+    mitat.palkkeja === 0 && mitat.palkinOsia === 0 && mitat.kortti.y <= 1
+      && mitat.kortti.h >= mitat.ikkuna[1] - 1,
+    JSON.stringify({ palkkeja: mitat.palkkeja, osia: mitat.palkinOsia, kortti: mitat.kortti }));
+  vaadi(nimessa('selitteen vasen yläkulma ≤ 16 px ruudun vasemmasta ja yläreunasta'),
+    Boolean(mitat.selite) && mitat.selite.x <= 16 && mitat.selite.y <= 16,
     JSON.stringify(mitat));
-  vaadi(nimessa('✕ on pyöreä, harmaa ja ruudun oikeassa yläkulmassa palkin alla'),
-    Boolean(mitat.sulku) && mitat.ikkuna[0] - mitat.sulku.oikea <= 20
-      && mitat.sulku.y >= mitat.palkinAla - 1 && mitat.sulku.y - mitat.palkinAla <= 20
+  vaadi(nimessa('✕ on pyöreä, harmaa ja ruudun oikeassa yläkulmassa'),
+    Boolean(mitat.sulku) && mitat.ikkuna[0] - mitat.sulku.oikea <= 80 && mitat.sulku.y <= 16
       && Math.round(parseFloat(mitat.varit?.pyorea ?? '0')) >= 14
       && harmaa(mitat.varit?.teksti) && harmaa(mitat.varit?.tausta) && harmaa(mitat.varit?.reuna),
-    JSON.stringify({ sulku: mitat.sulku, varit: mitat.varit, palkinAla: mitat.palkinAla }));
+    JSON.stringify({ sulku: mitat.sulku, varit: mitat.varit }));
+  /*
+   * ✕ JA HAMPURILAINEN EIVÄT SAA OLLA PÄÄLLEKKÄIN. Mitattu päätös:
+   * ✕ on hampurilaisen VASEMMALLA puolella samalla rivillä, koska
+   * valikko aukeaa hampurilaisen ALLE ja peittäisi siellä olevan ✕:n.
+   * Tässä mitataan sekä laatikoiden erillisyys että se, ettei auki
+   * oleva valikko osu ✕:ään (oma väite valikko-osiossa).
+   */
+  vaadi(nimessa('✕ ja hampurilainen eivät leikkaa toisiaan'),
+    Boolean(mitat.sulku && mitat.hampurilainen)
+      && mitat.sulku.oikea <= mitat.hampurilainen.x - 4
+      && Math.abs(mitat.sulku.y - mitat.hampurilainen.y) <= 2,
+    JSON.stringify({ sulku: mitat.sulku, hampurilainen: mitat.hampurilainen }));
+  vaadi(nimessa('selite ei mene ✕:n eikä hampurilaisen alle'),
+    mitat.selite.oikea <= mitat.sulku.x - 4,
+    JSON.stringify({ selite: mitat.selite, sulku: mitat.sulku }));
   vaadi(nimessa('pienoiskuvat ≤ 16 px ruudun vasemmasta alakulmasta'),
     Boolean(mitat.nauha) && mitat.nauha.x <= 16 && mitat.ikkuna[1] - mitat.nauha.ala <= 24,
     JSON.stringify({ nauha: mitat.nauha, ikkuna: mitat.ikkuna }));
@@ -442,32 +475,38 @@ async function ajaNakyma(nakymanNimi) {
 
   /* --- 7: hampurilaisen valikko ------------------------------------- */
   const ennenValikkoa = await s.evaluate(
-    () => document.querySelector('.satelliittipalkki-valikko').hidden,
+    () => document.querySelector('.satelliitti-valikko').hidden,
   );
-  await s.evaluate(() => document.querySelector('.satelliittipalkki-hampurilainen').click());
+  await s.evaluate(() => document.querySelector('.satelliitti-hampurilainen').click());
   await s.waitForTimeout(300);
   const valikko = await s.evaluate(() => {
-    const v = document.querySelector('.satelliittipalkki-valikko');
+    const v = document.querySelector('.satelliitti-valikko');
     const r = v.getBoundingClientRect();
-    const nappi = document.querySelector('.satelliittipalkki-hampurilainen').getBoundingClientRect();
+    const nappi = document.querySelector('.satelliitti-hampurilainen').getBoundingClientRect();
+    const x = document.querySelector('.satelliitti-sulku')?.getBoundingClientRect() ?? null;
     return {
       auki: !v.hidden,
       kohdat: [...v.querySelectorAll('button')].map((b) => b.textContent),
       napinAlla: r.top >= nappi.bottom - 1,
-      aani: document.querySelector('.satelliittipalkki-aani')?.textContent ?? null,
+      // Auki oleva valikko ei saa peittää kuvan sulkevaa ✕:ää — juuri
+      // siksi ✕ on hampurilaisen vasemmalla puolella eikä sen alla.
+      peittaaSulun: Boolean(x) && r.left < x.right && x.left < r.right
+        && r.top < x.bottom && x.top < r.bottom,
+      aani: document.querySelector('.satelliitti-aani')?.textContent ?? null,
     };
   });
   vaadi(nimessa('hampurilaisen valikossa on kaksi kohtaa napin alla'),
     ennenValikkoa === true && valikko.auki && valikko.kohdat.length === 2
       && /^Äänet (päällä|pois)$/.test(valikko.kohdat[0])
-      && valikko.kohdat[1] === 'Poistu linssistä' && valikko.napinAlla,
+      && valikko.kohdat[1] === 'Poistu linssistä' && valikko.napinAlla
+      && valikko.peittaaSulun === false,
     JSON.stringify(valikko));
   await kaappaa('valikko');
   // Ääninapin napautus vaihtaa tekstin ja tallentaa valinnan.
-  await s.evaluate(() => document.querySelector('.satelliittipalkki-aani').click());
+  await s.evaluate(() => document.querySelector('.satelliitti-aani').click());
   await s.waitForTimeout(200);
   const aani = await s.evaluate(() => ({
-    teksti: document.querySelector('.satelliittipalkki-aani').textContent,
+    teksti: document.querySelector('.satelliitti-aani').textContent,
     tallennus: localStorage.getItem('matkakirja-linssiaani'),
   }));
   vaadi(nimessa('ääninappi vaihtaa tilan ja tallentaa sen'),

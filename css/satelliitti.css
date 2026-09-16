@@ -216,22 +216,19 @@ body.aikajana-paalla .fokusvirta-luentakuva,
 body.aikajana-paalla .fokusvirta-luentakuva-ankkuri,
 body.aikajana-paalla .fokuszoom { display: none; }
 
-/* ───────────────────────────────── yläpalkki ─────────────────────── */
+/* ──────────────── EI YLÄPALKKIA — KELLUVA HAMPURILAINEN ─────────── */
 
 /*
- * KOKO YLÄPALKKI VAIHTUU (omistaja 12.9.2026: *"koko Yläpalkki vaihtuu
- * erilaiseen kuten pelin kahdessa uudessa ihmis- ja tiedekeksintö
- * linssissä"*). Matkakirjan oman palkin piilottaa sama body-luokka kuin
- * aikajanalinsseillä (css/aikajana.css `body.aikajana-palkki-auki
- * .topbar`), ja tämä palkki saa SEN mitatun korkeuden
- * (--aikajana-palkki-korkeus), jotta kartta ei hyppää.
- */
-/*
- * SAMA SÄÄNTÖ KUIN css/aikajana.css:ssä, omassa tiedostossa. Luokka
- * `aikajana-palkki-auki` on jaettu sopimus (koko yläpalkki on linssin),
- * mutta css/aikajana.css ladataan vasta aikajanalinssin mukana — ilman
- * tätä kopiota Matkakirjan palkki jäi näkyviin satelliittilinssissä
- * (mitattu 12.9.2026: topbar visibility visible, korkeus 57 px).
+ * OMISTAJA 16.9.2026 (Raamattu, LISÄYS 3): *"Astronauttilinssistä
+ * voisi ottaa koko yläpalkin pois, niin että oikeassa yläkulmassa on
+ * pelkkä hampurilainen ja kaikki muut yläpalkin jutut pois, koska ne
+ * eivät tuo mitään lisää, vievät vain tilaa."*
+ *
+ * Matkakirjan oma palkki piilotetaan samalla jaetulla body-luokalla
+ * kuin aikajanalinsseillä (`aikajana-palkki-auki`), mutta TILALLE EI
+ * TULE MITÄÄN: kartta ja pallo saavat koko ruudun korkeuden. Tämä
+ * sääntö on kopio css/aikajana.css:stä, koska satelliittilinssi lataa
+ * vain oman tyylinsä (ks. tiedoston alku).
  *
  * Yläpalkki jää RUUDUKKOON nollan korkuisena (visibility, ei display):
  * karttaruutu on grid-solu, ja display: none pudottaisi kartan
@@ -247,111 +244,50 @@ body.aikajana-palkki-auki .topbar {
   pointer-events: none;
 }
 
-.satelliittipalkki {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 8;
-  box-sizing: border-box;
-  height: var(--aikajana-palkki-korkeus, 3.4rem);
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0 0.6rem 0 0.9rem;
-  border-bottom: 1px solid rgba(93, 255, 168, 0.35);
-  background: linear-gradient(180deg, #14261d, #0d1913);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
-  color: #dff6e8;
+/*
+ * NAPPIEN KOKO JA YLÄREUNA YHDESTÄ PAIKASTA. Hampurilainen ja kuvan
+ * sulkeva ✕ ovat samalla rivillä ruudun oikeassa yläkulmassa, joten
+ * niiden koko ja yläsisennys on pakko olla sama luku — muuten ne
+ * eivät osu samalle riville, ja ✕:n vaakasiirtymä (napin leveys +
+ * väli) menisi pieleen kapealla ruudulla, jossa nappi kutistuu.
+ *
+ * TURVA-ALUE on mukana molemmissa: puhelimen lovi ja kulmamaski eivät
+ * saa syödä nappeja (env(safe-area-inset-*) on 0px työpöydällä).
+ */
+/*
+ * PYÖREÄ ON PYÖREÄ. Pelin oma nappisääntö (css/styles.css) antaa
+ * kaikille napeille kosketuskokoisen `min-height`in (44 px), ja se
+ * venytti nämä pienet kulmanapit soikeiksi: mitattu 390 × 844 ✕ oli
+ * 30 × 46 px, vaikka omistaja pyysi *"ympyrän muotoiseksi"*. Siksi
+ * jokainen kulmanappi nollaa min-mitat ja lukitsee `aspect-ratio: 1`
+ * — ja koska kosketusalue ei saa kadota, nappi on kapealla ruudulla
+ * ISOMPI (2,4 rem ≈ 38 px) eikä pienempi kuin työpöydällä.
+ */
+:root {
+  --satelliitti-nappi: 2.1rem;
+  --satelliitti-yla: calc(10px + env(safe-area-inset-top, 0px));
+  --satelliitti-oikea: calc(12px + env(safe-area-inset-right, 0px));
+}
+
+.satelliitti-valikkokehys {
+  position: fixed;
+  top: var(--satelliitti-yla);
+  right: var(--satelliitti-oikea);
+  z-index: 49;
   font-family: var(--font-luku, system-ui), system-ui, sans-serif;
+  color: #dff6e8;
 }
 
-/*
- * ── TUNNUS: IKONI VASEMMALLA, KAKSIRIVINEN NIMI SEN OIKEALLA ──────
- *
- * OMISTAJA 16.9.2026: *"Astronautin kameratekstin voisi rivittää
- * kahdelle riville ja sen vasemmalle puolelle voisi tulla linssin
- * ikoni. Ja tasaa astronautin kamera vasempaan reunaan niin, että ne
- * lähtevät linssin ikonin oikealta puolelta."*
- *
- * Kaksi riviä mahtuu palkkiin, koska rivinkorkeus on 1,05 ja kirjasin
- * pieni: 2 × 0,72 rem ≈ 1,5 rem, kun palkki on 3,4 rem. Palkin korkeus
- * ei siis muutu — se tulee yhä muuttujasta.
- */
-.satelliittipalkki-tunnus {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-}
-
-.satelliittipalkki-ikoni {
-  flex: 0 0 auto;
-  width: 1.55rem;
-  height: 1.55rem;
-  fill: none;
-  stroke: var(--satelliitti-vihrea, #5dffa8);
-  stroke-width: 1.5;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.satelliittipalkki-nimi {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  font-family: var(--font-type, system-ui), system-ui, sans-serif;
-  font-size: 0.72rem;
-  line-height: 1.05;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--satelliitti-vihrea, #5dffa8);
-  white-space: nowrap;
-}
-
-.satelliittipalkki-rivi { display: block; }
-
-/*
- * NASA-rivi näkyy kartalla ilman kuvaa; kuvan ollessa auki `[hidden]`
- * piilottaa sen (js/linssit/satelliitti.js rakennaPalkki nimeaKohde),
- * jotta valokuvan oma selite saa kertoa kohteen yksin.
- */
-.satelliittipalkki-ohje {
-  flex: 1 1 auto;
+.satelliitti-hampurilainen {
+  width: var(--satelliitti-nappi);
+  height: var(--satelliitti-nappi);
   min-width: 0;
-  font-size: 0.8rem;
-  color: rgba(223, 246, 232, 0.72);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-.satelliittipalkki-ohje[hidden] { display: none; }
-
-/*
- * ── HAMPURILAINEN JA SEN VALIKKO (omistaja 16.9.2026: *"Muuta oikean
- * yläreunan X-merkki hampurilaiseksi ja laita siihen äänet päälle ja
- * pois nappi sekä poistu linssistä kohta."*) ──────────────────────
- *
- * Kehys on `position: relative`, jotta valikko aukeaa TÄSMÄLLEEN napin
- * alle ilman mittausta — palkki itse on absoluuttinen karttaruudussa,
- * joten kiinteä oikea reuna riittää molemmissa suunnissa.
- * `margin-left: auto` pitää napin oikeassa reunassa myös silloin, kun
- * NASA-rivi on piilossa (sama vika korjattiin ✕:lle 15.9.2026).
- */
-.satelliittipalkki-valikkokehys {
-  position: relative;
-  flex: 0 0 auto;
-  margin-left: auto;
-}
-
-.satelliittipalkki-hampurilainen {
-  width: 2.1rem;
-  height: 2.1rem;
+  min-height: 0;
+  aspect-ratio: 1;
   padding: 0;
   border-radius: 8px;
   border: 1px solid rgba(93, 255, 168, 0.45);
-  background: rgba(93, 255, 168, 0.12);
+  background: rgba(6, 13, 10, 0.72);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -359,9 +295,9 @@ body.aikajana-palkki-auki .topbar {
   gap: 3px;
   cursor: pointer;
 }
-.satelliittipalkki-hampurilainen:hover { background: rgba(93, 255, 168, 0.22); }
+.satelliitti-hampurilainen:hover { background: rgba(93, 255, 168, 0.22); }
 
-.satelliittipalkki-viiva {
+.satelliitti-viiva {
   display: block;
   width: 1.05rem;
   height: 2px;
@@ -369,11 +305,12 @@ body.aikajana-palkki-auki .topbar {
   background: #eafff3;
 }
 
-.satelliittipalkki-valikko {
+/* Valikko aukeaa napin ALLE ilman mittausta (kehys on sen ankkuri). */
+.satelliitti-valikko {
   position: absolute;
   top: calc(100% + 6px);
   right: 0;
-  z-index: 9;
+  z-index: 50;
   min-width: 11rem;
   display: flex;
   flex-direction: column;
@@ -383,9 +320,9 @@ body.aikajana-palkki-auki .topbar {
   background: rgba(9, 20, 15, 0.97);
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.7);
 }
-.satelliittipalkki-valikko[hidden] { display: none; }
+.satelliitti-valikko[hidden] { display: none; }
 
-.satelliittipalkki-kohta {
+.satelliitti-kohta {
   padding: 0.5rem 0.7rem;
   border: 0;
   border-radius: 6px;
@@ -396,15 +333,10 @@ body.aikajana-palkki-auki .topbar {
   text-align: left;
   cursor: pointer;
 }
-.satelliittipalkki-kohta:hover { background: rgba(93, 255, 168, 0.18); }
+.satelliitti-kohta:hover { background: rgba(93, 255, 168, 0.18); }
 
-/* Puhelin: yksi tiivis palkki — ohje väistyy ensimmäisenä. */
 @media (max-width: 620px) {
-  .satelliittipalkki { gap: 0.4rem; padding: 0 0.4rem 0 0.5rem; }
-  .satelliittipalkki-ohje { display: none; }
-  .satelliittipalkki-nimi { font-size: 0.62rem; letter-spacing: 0.08em; }
-  .satelliittipalkki-ikoni { width: 1.3rem; height: 1.3rem; }
-  .satelliittipalkki-hampurilainen { width: 1.9rem; height: 1.9rem; }
+  :root { --satelliitti-nappi: 2.4rem; }
 }
 
 /* ─────────────────────── havaintoikkuna (koko ruutu) ─────────────── */
@@ -422,12 +354,12 @@ body.aikajana-palkki-auki .topbar {
   position: fixed;
   inset: 0;
   /*
-   * LINSSIN YLÄPALKKI JÄÄ NÄKYVIIN. Kohteen nimi on omistajan päätöksen
-   * mukaan VAIN yläpalkissa (12.9.2026), joten ikkuna ei saa peittää
-   * palkkia — muuten nimeä ei näkyisi missään eikä Sulje linssi olisi
-   * tavoitettavissa. Kuva täyttää siis kaiken palkin alapuolelta.
+   * KUVA SAA KOKO RUUDUN (omistaja 16.9.2026, LISÄYS 3): linssin
+   * yläpalkki on poistettu, joten kortin ei tarvitse enää jättää sille
+   * tilaa. Kelluva hampurilainen (z-index 49) ja kuvan omat pinnat
+   * piirtyvät tämän päälle.
    */
-  top: var(--aikajana-palkki-korkeus, 0px);
+  top: 0;
   z-index: 47;
   display: flex;
   flex-direction: column;
@@ -501,10 +433,16 @@ body.aikajana-palkki-auki .topbar {
  */
 .satelliitti-selite {
   position: absolute;
-  left: 12px;
-  top: 10px;
+  left: calc(12px + env(safe-area-inset-left, 0px));
+  top: var(--satelliitti-yla);
   z-index: 5;
   box-sizing: border-box;
+  /*
+   * LEVEYS JÄTTÄÄ TILAA OIKEAN YLÄKULMAN KAHDELLE NAPILLE (✕ ja
+   * hampurilainen), jotka ovat samalla rivillä selitteen kanssa —
+   * työpöydällä 46 % ei yllä lähellekään niitä, kapealla ruudulla
+   * vähennys on pakko laskea.
+   */
   max-width: min(46%, 560px);
   padding: 8px 10px 6px;
   border-radius: 10px;
@@ -557,8 +495,11 @@ body.aikajana-palkki-auki .topbar {
 }
 
 .satelliitti-vakanen {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 1;
   padding: 0;
   border-radius: 999px;
   border: 1px solid rgba(93, 255, 168, 0.35);
@@ -599,10 +540,16 @@ body.aikajana-palkki-auki .topbar {
 .satelliitti-seutu { color: rgba(223, 246, 232, 0.7); font-size: 0.85rem; }
 .satelliitti-linkki { color: var(--satelliitti-vihrea, #5dffa8); }
 
+/*
+ * KAPEALLA RUUDULLA selite ei saa mennä ✕:n eikä hampurilaisen alle:
+ * leveys on koko ruutu miinus omat marginaalit JA kahden napin rivi
+ * (2 × nappi + välit). Mitattu 390 × 844: selite 268 px, ✕ ja
+ * hampurilainen alkavat 296 px:stä.
+ */
 @media (max-width: 620px) {
   .satelliitti-selite {
     max-width: none;
-    width: calc(100% - 24px);
+    width: calc(100% - 24px - 2 * var(--satelliitti-nappi) - 26px);
   }
 }
 
@@ -623,10 +570,19 @@ body.aikajana-palkki-auki .topbar {
  * oikeassa yläkulmassa heti palkin alla, olipa kuva minkä kokoinen
  * tahansa (vrt. 15.9.2026 kuvan reunaan mitattu paikka).
  */
+/*
+ * ✕ ON HAMPURILAISEN VASEMMALLA PUOLELLA, EI SEN ALLA (mitattu
+ * 16.9.2026). Valikko aukeaa hampurilaisen ALLE (11 rem leveä,
+ * ~5 rem korkea), joten ✕ sen alapuolella jäisi auki olevan valikon
+ * peittoon juuri silloin, kun valikkoa käytetään. Samalla rivillä
+ * vasemmalla ne eivät voi leikata toisiaan missään tilassa: ✕:n oikea
+ * reuna on napin leveyden + 10 px:n päässä hampurilaisen vasemmasta
+ * reunasta, ja molemmat lukevat SAMAA --satelliitti-nappi-muuttujaa.
+ */
 .satelliitti-kulma {
   position: absolute;
-  right: 12px;
-  top: 10px;
+  right: calc(var(--satelliitti-oikea) + var(--satelliitti-nappi) + 10px);
+  top: var(--satelliitti-yla);
   z-index: 6;
   display: flex;
   flex-direction: column;
@@ -635,8 +591,11 @@ body.aikajana-palkki-auki .topbar {
 
 .satelliitti-sulku {
   flex: 0 0 auto;
-  width: 2.1rem;
-  height: 2.1rem;
+  width: var(--satelliitti-nappi, 2.1rem);
+  height: var(--satelliitti-nappi, 2.1rem);
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 1;
   padding: 0;
   border-radius: 999px;
   border: 1px solid rgb(170, 170, 170);
