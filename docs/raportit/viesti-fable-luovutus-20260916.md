@@ -12,7 +12,7 @@ LIUKUU, PULUN KUVAT, SAAPUMISAANET OVAT HORATION YKSIN.
 
 | haara | tila | sisältö |
 |---|---|---|
-| claude/bold-ride-vow4ki-julkaisu-v1925 (0da79234) | WIP: merget + versionosto v1925 tehty, npm test ja savukkeet KESKEN, ei PR:ää | topo-tokkii + pariisi-lahizoom + Raamattu |
+| claude/bold-ride-vow4ki-julkaisu-v1925 (0da79234) | WIP: merget + versionosto v1925 tehty, npm test ja savukkeet KESKEN, ei PR:ää | topo-tokkii + pariisi-lahizoom + Raamattu. HUOM: npm test haarassa antoi 3499 pass / **18 fail** (nimet eivät tallentuneet) — selvitä ennen PR:ää, liittyvätkö mergeihin (topo-tokkii vs. pariisi) vai aikarajoihin |
 | claude/bold-ride-vow4ki-topo-tokkii (de06a3c9) | valmis, savukkeet 38/38 | topografialinssin odotuspeite, ImageBitmap-purku, jäänteet pois |
 | claude/bold-ride-vow4ki-pariisi-lahizoom (27b97172) | valmis, 24/24 | nostojen nimiökatto 16 px, ryhmitys limityksestä, luentakuvapakka pois (kytkin) |
 | claude/bold-ride-vow4ki-pallo-musta (a416ff0f) | commit + raportti docs/raportit/viesti-fable-pallo-musta-20260916.md valmiit (juurisyy: kaksi 4096x2048-kangasta iOS Safarissa → tyhjä kangas ilman virhettä); agentin loppuraportti ei ehtinyt → tarkista savuketulokset raportista ennen julkaisua | Astronautin kameran pallo musta iPhonella: ladonta Safari-kestäväksi |
