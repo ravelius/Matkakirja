@@ -11667,7 +11667,18 @@ export class UI {
        * kesken luennan.
        */
       const huntuSallittu = !(kehittajaTilaPaalla() && kehittajaMaailmaPaalla());
-      document.body.classList.toggle('luenta-huntu', kertoja && kuvaRuudulla && huntuSallittu);
+      /*
+       * PULUN KUVAT SAAVAT SAMAN HUNNUN KUIN ISOISÄN KUVAT (omistajan
+       * iPhone-kuva Ateenasta 16.9.2026): `kertoja` yllä on TARKOITUKSELLA
+       * puluton (ks. kommentti sen määrittelyssä — kaiuttimen syke on
+       * vain isoisällä), mutta huntu on kuvan, ei puhujan, ominaisuus.
+       * Kartan pitää tummua ja sumentua yhtä lailla silloin, kun ruudulla
+       * on PuluCam-kuva ja pulu puhuu, joten huntu kysyy KENEN TAHANSA
+       * kuuluvaa ääntä (soivaPuhuja() ilman `paitsi`-rajausta) eikä
+       * pelkkää kertojaa.
+       */
+      const puheKaynnissa = !varaventtiili && soivaPuhuja() !== null;
+      document.body.classList.toggle('luenta-huntu', puheKaynnissa && kuvaRuudulla && huntuSallittu);
     };
     askel();
     this.luentavahti = setInterval(askel, LUENTAVAHDIN_VALI_MS);
