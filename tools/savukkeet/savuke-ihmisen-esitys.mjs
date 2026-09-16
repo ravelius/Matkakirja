@@ -31,10 +31,12 @@
  *      ENSIMMÄISEN VIRKKEEN jälkeen, pallo on tähtien keskellä
  *      pisteenä (korkeus 300, n. 6 px), ja avausjakson lauseet tulevat
  *      YKSITELLEN KESKELLE RUUTUA isolla kirjasimella.
- *   2b. AFRIKKA-SANA: zoomi PÄÄTTYY neljännen lauseen ("Afrikasta.")
- *      kohdalle — pallo kasvaa pisteestä ruudun täyttäväksi Afrikka
- *      keskellä juuri silloin kun sana kuuluu — ja samalla hetkellä
- *      kamera lähtee kohti Marokkoa (MAROKKO-väite kohdassa 3).
+ *   2b. AFRIKKA-SANA: zoomi LÄHTEE entisestä hetkestään ja jatkuu sanan
+ *      "Afrikasta" yli — pallo on perillä AFRIKAN_VIIVE_MS +
+ *      ZOOMIN_JATKO_MS sanan jälkeen (JATKO 3 TARKENNUS 2, omistaja
+ *      16.9.2026: *"Ei haittaa, vaikka Marokon teksti alkaa tulla ennen
+ *      kuin kartta on zoomautunut sinne asti."*). Marokon ajo lähtee
+ *      vasta tauon jälkeen (MAROKKO-väite kohdassa 3).
  *   2c. TAUKO/JATKA: kello, luenta JA zoomi pysähtyvät samasta kohdasta
  *      ja jatkuvat siitä.
  *   3. VALOT: musta väistyy vasta kun pallo on perillä, kamera on
@@ -147,6 +149,23 @@ const palvelin = createServer((req, res) => {
   res.end(sisalto);
 });
 await new Promise((r) => palvelin.listen(PORTTI, r));
+
+/*
+ * AVAUKSEN VAKIOT SUORAAN LÄHTEESTÄ: savuke mittaa sitä, mitä peli
+ * ajaa, eikä kopioi lukuja tänne.
+ */
+const {
+  AFRIKAN_VIIVE_MS, ZOOMIN_JATKO_MS, MAROKON_TAUKO_MS, MAROKON_POHJA_MS, jaaOsiin,
+} = await import(join(JUURI, 'js/linssit/ihmisen-matka-esitys.js'));
+const { IHMISEN_MATKA_KERTOMUS } = await import(join(JUURI, 'js/linssit/ihmisen-matka-kertomus.js'));
+/**
+ * Ensimmäisen kohteen kappaleen OSAT (jaaOsiin). Kumpi osa on ruudulla
+ * mittaushetkellä, riippuu kontin tahdista — väite katsoo paikkaa, ei
+ * sitä, kumpi osista sattui olemaan vuorossa.
+ */
+const JEBELIN_OSAT = jaaOsiin(
+  IHMISEN_MATKA_KERTOMUS.find((j) => j.id === 'jebel-irhoud')?.teksti ?? '',
+).map((o) => o.teksti);
 
 const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
 const chromium = paketti.chromium ?? paketti.default?.chromium;
@@ -536,12 +555,19 @@ await jatkaEsitys();
 /* ------------------------------------------- zoomi lähtee Afrikka-sanasta */
 
 /*
- * ZOOMI PÄÄTTYY SANAAN (Raamattu ALKUANIMAATIO, omistaja 9.9.2026:
- * *"afrikka täyttää koko peli-ikkunan sillä hetkellä kun lukija
- * mainitsee afrikan ensimmäistä kertaa"*). Ennen zoomin lähtöä
- * `avausOdottaa` on tosi ja kamera seisoo korkeudella 300; ajo lähtee
- * hetkellä `kulunut` ja on perillä hetkellä `hetki` (sanan aikaleima
- * tai arvio luennan merkkiosuudesta).
+ * ZOOMI LÄHTEE ENTISESTÄ HETKESTÄ JA PÄÄTTYY SANAN JÄLKEEN (Raamattu
+ * ALKUANIMAATIO + JATKO 3 TARKENNUS 2). Omistaja 9.9.2026: *"afrikka
+ * täyttää koko peli-ikkunan sillä hetkellä kun lukija mainitsee afrikan
+ * ensimmäistä kertaa"* — ja 16.9.2026 klo 18.50 UTC, sanatarkasti:
+ * *"Tee vain se 5sek hitaampi sisaan zoomaus… Ei haittaa, vaikka
+ * Marokon teksti alkaa tulla ennen kuin kartta on zoomautunut sinne
+ * asti."* Zoomin LÄHTÖ ei liiku, mutta se on perillä vasta
+ * AFRIKAN_VIIVE_MS + ZOOMIN_JATKO_MS sanan jälkeen: sana "Afrikasta"
+ * ehtii kuulua kesken zoomin, ja se on nyt sääntö eikä vika.
+ *
+ * Ennen zoomin lähtöä `avausOdottaa` on tosi ja kamera seisoo
+ * korkeudella 300; ajo lähtee hetkellä `kulunut` ja sanan hetki on
+ * `hetki` (aikaleima tai arvio luennan merkkiosuudesta).
  */
 const zoomHetki = await odotaJaPysayta('avausOdottaa', '===', false, 900);
 const piste = await mittaaPinnat();
@@ -552,13 +578,14 @@ await s.screenshot({ path: kuva('2-afrikka-pisteena') });
  * näytteenotto mahdu siihen. Ohjaaja kirjaa hetken silloin kun se
  * tapahtuu, joten väite on tarkka riippumatta kehystahdista.
  */
-vaadi('AFRIKKA-SANA: zoomi päättyy neljännen lauseen kohdalle',
+vaadi('AFRIKKA-SANA: zoomi lähtee entisestä hetkestä ja jatkuu sanan yli',
   zoomHetki.osui && zoomHetki.zoomLahti?.jakso === 'avaus'
     && zoomHetki.zoomLahti.hetki > 0
-    // Ajo lähtee ENNEN sanaa ja on perillä sanan kohdalla (±150 ms).
+    // Ajo lähtee ENNEN sanaa …
     && zoomHetki.zoomLahti.kulunut < zoomHetki.zoomLahti.hetki
+    // … ja on perillä AFRIKAN_VIIVE_MS + ZOOMIN_JATKO_MS sen jälkeen.
     && Math.abs((zoomHetki.zoomLahti.kulunut + zoomHetki.zoomLahti.kesto)
-      - zoomHetki.zoomLahti.hetki) < 60
+      - (zoomHetki.zoomLahti.hetki + AFRIKAN_VIIVE_MS + ZOOMIN_JATKO_MS)) < 60
     // Sana on jakson loppupuolella: musta virke ja piste ehtivät ensin.
     && zoomHetki.zoomLahti.hetki > zoomHetki.zoomLahti.luenta * 0.55
     /*
@@ -674,11 +701,18 @@ const valot = await s.evaluate(async () => {
     keskiX: nakyma ? Math.round(nakyma.x + nakyma.w / 2) : null,
     keskiY: nakyma ? Math.round(nakyma.y + nakyma.h / 2) : null,
     pito: ui.aikajana?.virrat?.tila().pito,
-    // Kamera lähtee Marokkoon samalla hetkellä (ALKUANIMAATIO 9.9.2026).
+    /*
+     * MAROKON AJO ODOTTAA PIENEN TAUON (JATKO 3 TARKENNUS 2): valojen
+     * hetkellä ajo EI ole vielä käynnissä, vaan esitys kertoo lipulla
+     * `kohdeajoOdottaa` odottavansa.
+     */
     kohdeajo: t?.kohdeajo ?? null,
+    kohdeajoOdottaa: Boolean(t?.kohdeajoOdottaa),
   };
   // Musta häipyy 2,6 sekunnissa (VALOJEN_MS) — kuva otetaan sen jälkeen.
   await new Promise((r) => setTimeout(r, 2800));
+  // Tauon (MAROKON_TAUKO_MS 1,2 s) jälkeen ajon on oltava käynnissä.
+  const jalkeen = ui.aikajana?.esitys?.tila() ?? {};
   /*
    * KUVA OTETAAN TAUOLLA. Kontissa yksi kuvakaappaus maksaa lähes
    * minuutin (ohjelmisto-WebGL, koko ruudun täyttävä pallo), ja
@@ -686,7 +720,12 @@ const valot = await s.evaluate(async () => {
    * 8.9.2026: seuraava mittaus osui jaksoon 'loppu'.
    */
   ui.aikajana.esitys.tauko();
-  return { ...heti, peite: Boolean(document.querySelector('.aikajana-esitys-peite')) };
+  return {
+    ...heti,
+    ajonKesto: jalkeen.kohdeajo ?? null,
+    ajonMyohassa: jalkeen.kohdeajonMyohassa ?? null,
+    peite: Boolean(document.querySelector('.aikajana-esitys-peite')),
+  };
 });
 await s.screenshot({ path: kuva('5-valot-afrikkaan') });
 /*
@@ -704,15 +743,34 @@ vaadi('VALOT: musta väistyy vasta kun pallo on rajattuna koko Afrikkaan',
 vaadi('VALOT: vanojen pito kytkeytyy päälle (rintama ei katoa kelauksessa)',
   valot.pito === true, JSON.stringify({ pito: valot.pito }));
 /*
- * KAMERA LÄHTEE MAROKKOON SAMALLA HETKELLÄ (Raamattu ALKUANIMAATIO,
- * omistaja 9.9.2026: *"tämän jälkeen kamera saa alkaa hitaasti liikkua
- * kohti ensimmäistä kohdetta marokossa"*). Ajon kesto on aika
- * 'jebel-irhoud'-jakson alkuun, eli useita sekunteja — hidas lähtö,
- * kiihtyvä keskiosa, jarrutus perille.
+ * KAMERA LÄHTEE MAROKKOON VASTA ZOOMIN JA TAUON JÄLKEEN (Raamattu
+ * ALKUANIMAATIO + JATKO 3 TARKENNUS 2, omistaja 16.9.2026 klo 18.50
+ * UTC: *"aloita siten vasta liikuttamaan kohti Marokkoa"*). Valojen
+ * hetkellä ajo ei ole käynnissä vaan odottaa MAROKON_TAUKO_MS; sen
+ * jälkeen se lähtee ja PITÄÄ ENTISEN PITUUTENSA, eli sen kesto on
+ * jäljellä oleva aika 'jebel-irhoud'-jaksoon PLUS ZOOMIN_JATKO_MS.
+ * Mittari `kohdeajonMyohassa` kertoo juuri tuon erotuksen.
  */
-vaadi('MAROKKO: kamera lähtee ensimmäistä kohdetta kohti heti valojen kanssa',
-  Number.isFinite(valot.kohdeajo) && valot.kohdeajo >= 1600,
-  JSON.stringify({ kohdeajo: valot.kohdeajo }));
+/*
+ * AJON ALKUHETKEÄ EI MITATA TÄSTÄ. Sivun silmukka odottaa `pimea ===
+ * false` 60 ms:n välein, mutta kontissa yksi kierros maksaa enemmän
+ * kuin koko tauko (MAROKON_TAUKO_MS 1,2 s): mitattuna 16.9.2026 ajo
+ * oli jo käynnissä ensimmäisessä näytteessä. Alkuhetki mitataan
+ * tiheällä sarjalla savukkeessa savuke-ihmisen-kappaleet.mjs (väite
+ * "Marokon ajo alkaa vasta zoomin jälkeen"); tässä katsotaan ajon
+ * PITUUTTA, joka ei riipu näytteenotosta.
+ */
+vaadi('MAROKKO: ajo pitää entisen pituutensa, saapuminen siirtyy',
+  Number.isFinite(valot.ajonKesto)
+    && valot.ajonKesto >= ZOOMIN_JATKO_MS + MAROKON_POHJA_MS
+    && valot.ajonMyohassa === ZOOMIN_JATKO_MS,
+  JSON.stringify({
+    valoillaKohdeajo: valot.kohdeajo,
+    odottaa: valot.kohdeajoOdottaa,
+    taukoMs: MAROKON_TAUKO_MS,
+    ajonKesto: valot.ajonKesto,
+    ajonMyohassa: valot.ajonMyohassa,
+  }));
 
 /* --------------------------------- teksti hyppää alas ensimmäisessä kohteessa */
 
@@ -743,7 +801,13 @@ await s.screenshot({ path: kuva('6-teksti-alhaalla') });
 vaadi('TEKSTI: rivi laskeutuu alalaitaan ensimmäisessä kohteessa',
   kohdeHetki.osui && alhaalla.keskella === false
     && alhaalla.tekstiKeskiY > alhaalla.ruutuKorkeus * 0.7
-    && String(alhaalla.teksti ?? '').startsWith('…on löydetty'),
+    /*
+     * KUMPI OSA, SE EI OLE VÄITE. Kappale näytetään OSISSA (jaaOsiin),
+     * ja 1,5 sekunnin odotuksen jälkeen ruudulla on kontin tahdista
+     * riippuen ensimmäinen tai toinen osa. Väite on paikka: rivi on
+     * alalaidassa ja teksti on TÄMÄN jakson kappaletta.
+     */
+    && JEBELIN_OSAT.includes(String(alhaalla.teksti ?? '')),
   JSON.stringify({
     jakso: alhaalla.jakso,
     keskella: alhaalla.keskella,
@@ -751,6 +815,7 @@ vaadi('TEKSTI: rivi laskeutuu alalaitaan ensimmäisessä kohteessa',
     ruutu: alhaalla.ruutuKorkeus,
     kirjasin: alhaalla.kirjasin,
     teksti: String(alhaalla.teksti ?? '').slice(0, 30),
+    osia: JEBELIN_OSAT.length,
   }));
 await jatkaEsitys();
 

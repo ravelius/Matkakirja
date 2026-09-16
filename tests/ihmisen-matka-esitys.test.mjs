@@ -384,8 +384,8 @@ test('pulu on piilossa koko esityksen ajan ja kävelee sisään vasta lopussa', 
    *    tutkimusvaiheeseen jatkava muisti päätyy `paata`an, joka tuo
    *    pulun ruudulle.
    */
-  assert.match(OHJAAJA, /naytaPulu\(\{ ele: false \}\);\n      palautaKaukaisuus\(\);/,
-    'pura ei palauta pulua näkyviin');
+  assert.match(OHJAAJA, /naytaPulu\(\{ ele: false \}\);\n(?:\s*\/\/[^\n]*\n)*\s*vapautaZoomikatto\(\);/,
+    'pura ei palauta pulua näkyviin ja laudan zoomirajoja laudalle');
   const muisti = OHJAAJA.slice(OHJAAJA.indexOf('tila.muistista = true;'));
   assert.ok(!/naytaPulu/.test(muisti.slice(0, 400)),
     'muistista jatko tuo pulun ruudulle kesken esityksen');
@@ -411,13 +411,50 @@ test('avauksen vaiheet lasketaan luennan aikaleimoista', () => {
    * entinen mitta ja määrää lähtöhetken; todellinen kesto on
    * peruskesto + ZOOMIN_JATKO_MS.
    *
-   * JATKO ON 2,5 s, EI 5 s (omistajan päätös kortilla 16.9.2026:
-   * *"Zoomin jatko 2–3 s, ei 5 s"*): jokainen zoomiin lisätty sekunti
-   * lyhentää Marokon ajoa yhtä paljon, koska ajon päätepiste on kiinni
-   * luennassa. Viidellä sekunnilla ajo kutistui 8,9 s → 2,7 s.
+   * JATKO ON VIISI SEKUNTIA (omistaja 16.9.2026 klo 18.50 UTC, Raamattu
+   * JATKO 3 TARKENNUS 2, sanatarkasti: *"Tee vain se 5sek hitaampi
+   * sisaan zoomaus, ja aloita siten vasta liikuttamaan kohti
+   * Marokkoa."*). Tämä KUMOAA saman päivän klo 17.15 tarkennuksen
+   * (2,5 s): silloin jatkoa kutistettiin, koska Marokon ajon päätepiste
+   * oli kiinni luennassa ja jokainen zoomiin lisätty sekunti lyhensi
+   * ajoa yhtä paljon (8,9 s → 2,7 s). Nyt ajo pitää entisen pituutensa
+   * ja saapuminen siirtyy — ks. seuraava vartio.
    */
-  assert.ok(ZOOMIN_JATKO_MS >= 2000 && ZOOMIN_JATKO_MS <= 3000, `${ZOOMIN_JATKO_MS} ms`);
-  assert.equal(ZOOMIN_JATKO_MS, 2500);
+  assert.equal(ZOOMIN_JATKO_MS, 5000, `${ZOOMIN_JATKO_MS} ms`);
+  /*
+   * MAROKON AJO PITÄÄ ENTISEN PITUUTENSA. Ajo lähtee vasta zoomin (ja
+   * tauon) jälkeen, ja sen kesto on jäljellä oleva aika jaksoon PLUS
+   * zoomin jatko — juuri se, minkä jatko söi. Ilman tätä riviä
+   * `aloitaKohdeajo` palaisi hiljaa entiseen "saapuminen ei liiku"
+   * -sääntöön ja ajo kutistuisi taas.
+   */
+  assert.match(OHJAAJA, /const jaljella = kohteeseenAsti\(\);\n\s*const kesto = Number\.isFinite\(jaljella\) \? jaljella \+ ZOOMIN_JATKO_MS : NaN;/,
+    'Marokon ajo ei pidä entistä pituuttaan');
+  /*
+   * KOKO AFRIKKA RUUTUUN (JATKO 3 TARKENNUS 2 kohta 3). Nimetyn alueen
+   * rajaus ajetaan lipulla `kokonaan: true`, joka kiertää laudan
+   * SAAPUMISSÄÄNNÖN (js/pallolauta/kamera.js korkeuteenSovitus): se
+   * sovitti kuvan pelkkään korkeuteen ja siirsi X-keskipisteen pelaajan
+   * kaupungin pituusasteelle, jolloin Afrikan itä- ja länsikärki jäivät
+   * ruudun ulkopuolelle (mitattu 390 × 844: korkeus 1,1734, lon 23,74).
+   */
+  assert.match(OHJAAJA, /\{ bbox, marginaali: 0\.04, kokonaan: true \}/,
+    'alueen rajaus ei kulje kokonaan-lipulla');
+  /*
+   * ZOOMIKATTO ON LINSSIN OMA KOKO ESITYKSEN AJAN. Ennen avaus
+   * kirjoitti suoraan OrbitControlsin maxDistanceen ja palautti valojen
+   * syttyessä PELAAJAN MAAN uloszoomauseston (Ateenassa korkeus
+   * 0,1431): OrbitControls puristi kameran 1,1734 → 0,1431 samalla
+   * kehyksellä, ja koko maanosa vaihtui lähikuvaksi (omistajan kuvassa
+   * Guineanlahti). Nyt katto kulkee laudan `zoomirajat`-syrjäytyksen
+   * kautta ja palaa laudalle vasta linssin purussa.
+   */
+  assert.match(OHJAAJA, /lauta\.zoomirajat\(korkeus === null \? null : \{ max: korkeus \}\);/,
+    'katto ei kulje laudan zoomirajat-syrjäytyksen kautta');
+  assert.match(OHJAAJA, /const palautaKaukaisuus = \(\) => \{[\s\S]{0,200}asetaKatto\(PALLO_KORKEUS_MAX\);/,
+    'valojen syttyessä katoksi ei tule esityksen oma katto');
+  assert.ok(!/ohjaimet\.maxDistance = tila\.kattoEnnen/.test(OHJAAJA),
+    'maan zoomiesto palaa yhä kesken esityksen');
   assert.equal(v.zoomAlku + v.zoomPerus, v.afrikka, 'zoomin lähtöhetki siirtyi');
   assert.equal(v.zoomKesto, v.zoomPerus + ZOOMIN_JATKO_MS);
   assert.equal(v.zoomLoppu, v.zoomAlku + v.zoomKesto);
@@ -794,7 +831,7 @@ test('kehys on poissa koko avaruusvaiheen ajan ja palaa kartan kanssa (15.9.2026
   assert.match(CSS, /\.aikajana\.esitys-kaynnissa \.aikajana-ylarivi,\n\.aikajana\.esitys-kaynnissa \.aikaselain \{\n\s*transition: opacity var\(--avaruuden-feidi, 2600ms\) ease;/);
   // Luokka syntyy aloituksessa ja lähtee VAIN valojen syttyessä.
   assert.match(OHJAAJA, /classList\.add\('esitys-pimea', 'esitys-avaruus'\);/);
-  assert.match(OHJAAJA, /function sytytaValot\(\) \{[\s\S]{0,1600}paljastaKehys\(VALOJEN_MS\);[\s\S]{0,200}peite\.classList\.add\('pois'\);/);
+  assert.match(OHJAAJA, /function sytytaValot\(\) \{[\s\S]{0,2200}paljastaKehys\(VALOJEN_MS\);[\s\S]{0,200}peite\.classList\.add\('pois'\);/);
   // nostaMusta EI enää saa paljastaa kehystä: se poistaa vain esitys-mustan.
   const nosta = OHJAAJA.slice(OHJAAJA.indexOf('function nostaMusta('), OHJAAJA.indexOf('function paljastaKehys('));
   assert.ok(!/esitys-avaruus/.test(nosta), 'nostaMusta ei saa poistaa esitys-avaruus-luokkaa');

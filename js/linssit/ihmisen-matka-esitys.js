@@ -95,18 +95,25 @@
  *      23.00, sanatarkasti): *"Siirrä Afrikan ilmestymistä puoli
  *      sekuntia aiemmaksi."* (aiempi klo 23.35 linjaus oli 1,2 s). Jos
  *      jakso loppuu ennen sitä, päätepiste jää jakson loppuun.
- *      JATKO 3 (omistaja 16.9.2026): zoomi LÄHTEE yhä tästä hetkestä,
- *      mutta kestää ZOOMIN_JATKO_MS (2,5 s) pidempään — sana
- *      "Afrikasta" ehtii kuulua kesken zoomin, ja pallo on perillä
- *      vasta sen jälkeen.
+ *      JATKO 3 TARKENNUS 2 (omistaja 16.9.2026 klo 18.50): zoomi LÄHTEE
+ *      yhä tästä hetkestä, mutta kestää ZOOMIN_JATKO_MS (5 s)
+ *      pidempään — sana "Afrikasta" ehtii kuulua kesken zoomin, ja
+ *      pallo on perillä vasta sen jälkeen.
  *   4. KAMERA KIIHTYY MAROKKOON. Zoomin päätyttyä kamera jää hetkeksi
  *      paikalleen (MAROKON_TAUKO_MS) ja lähtee sitten HYVIN HITAASTI
  *      kohti ensimmäistä kohdetta (Jebel Irhoud), kiihtyy ja jarruttaa
  *      juuri ennen perille tuloa (marokonKaari = marokonPehmennys
- *      hitaalla esivaiheella). Ajon PÄÄTEPISTE luetaan luennasta:
- *      perillä ollaan kun 'jebel-irhoud'-jakson aikaleima alkaa, joten
- *      zoomin jatko ja tauko lyhentävät tätä ajoa eivätkä siirrä
- *      saapumista.
+ *      hitaalla esivaiheella). AJO PITÄÄ ENTISEN PITUUTENSA ja
+ *      saapuminen siirtyy: ajo alkaa vasta zoomin (ja tauon) jälkeen ja
+ *      kestää `kohteeseenAsti() + ZOOMIN_JATKO_MS`, joten kamera on
+ *      perillä vasta 'jebel-irhoud'-jakson alettua — Marokon teksti saa
+ *      alkaa ennen kuin kamera on maalissa (omistajan lupa).
+ *   4b. KOKO AFRIKKA RUUTUUN, EI MAAN ZOOMIKATTOA (JATKO 3 TARKENNUS 2
+ *      kohta 3, iPhone-kuva v1924: kartta oli zoomattu Guineanlahdelle).
+ *      Avauksen rajaus ajetaan lipulla `kokonaan: true` (koko laatikko
+ *      molempiin suuntiin, keskipiste laatikon oma) ja linssi pitää
+ *      zoomikaton omissa käsissään laudan `zoomirajat`-syrjäytyksellä
+ *      koko esityksen ajan — ks. avaaKaukaisuus/palautaKaukaisuus.
  *   5. LAUSEET KESKELLÄ, KAPPALEET OSISSA. Avaus- ja afrikka-jaksojen
  *      teksti ladotaan lause kerrallaan RUUDUN KESKELLE
  *      (.aikajana-kertomusteksti .keskella): lause tulee omalla
@@ -206,6 +213,7 @@ import { LIVIAN_VALIHUOMION_VAIMENNUS, soitaLivianLinssiAani } from '../liviapuh
 import { polloLinssikupla } from '../pollo.js';
 import { karkiHetkella } from '../aikajana-vanat.js';
 import { luoTahtitaivas } from '../pallolauta/tahdet.js';
+import { PALLO_KORKEUS_MAX } from '../pallolauta/kamera.js';
 import { kulmaEro } from './ihmisen-matka-kortti.js';
 import { rajauksenLeveys, vananRajaus } from './ihmisen-matka-tutkimus.js';
 import { ilmoitaLivianTunne } from '../livia-tilanteet.js';
@@ -332,15 +340,24 @@ export const AVARUUDEN_MIN_MS = 1200;
  * jälkeisen entisen päätepisteen (`afrikka`) jälkeen. Sanan "Afrikasta"
  * hetki ja koko luennan ajoitus ovat ennallaan.
  *
- * KAKSI JA PUOLI SEKUNTIA, EI VIITTÄ (omistajan päätös kortilla
- * 16.9.2026: *"Zoomin jatko 2–3 s, ei 5 s"*). Ensimmäinen toteutus oli
- * viisi sekuntia, ja se söi Marokon ajosta liikaa: ajon PÄÄTEPISTE on
- * kiinni luennassa (`kohteeseenAsti`), joten jokainen zoomiin lisätty
- * sekunti lyhentää ajoa yhtä paljon. Mitattuna varakestoilla ajo oli
- * 8,9 s → 2,7 s, mikä teki loppuosasta nopeamman kuin ennen. Tällä
- * arvolla ajolle jää noin 5 s eikä saapumishetki liiku.
+ * VIISI SEKUNTIA, JA MAROKON AJO SIIRTYY (omistaja 16.9.2026 klo 18.50
+ * UTC, iPhone-kuva v1924, Raamattu JATKO 3 TARKENNUS 2, sanatarkasti:
+ * *"Tee vain se 5sek hitaampi sisaan zoomaus, ja aloita siten vasta
+ * liikuttamaan kohti Marokkoa. Ei haittaa, vaikka Marokon teksti alkaa
+ * tulla ennen kuin kartta on zoomautunut sinne asti."*). Tämä KUMOAA
+ * saman päivän klo 17.15 tarkennuksen (2,5 s).
+ *
+ * MIKSI 2,5 s EI RIITTÄNYT. Ensimmäinen viiden sekunnin toteutus söi
+ * Marokon ajon (8,9 s → 2,7 s), koska ajon PÄÄTEPISTE oli kiinni
+ * luennassa: jokainen zoomiin lisätty sekunti lyhensi ajoa yhtä paljon,
+ * ja siksi jatko kutistettiin 2,5 sekuntiin. Omistaja katsoi tuloksen
+ * ja piti avauszoomia yhä kiireisenä. NYT SAAPUMINEN SAA SIIRTYÄ: ajo
+ * pitää entisen pituutensa (`aloitaKohdeajo` lisää tämän verran
+ * takaisin), kertomus ja luenta etenevät ennallaan, ja Marokon teksti
+ * saa alkaa ennen kuin kamera on perillä — juuri niin kuin omistaja
+ * kirjoitti.
  */
-export const ZOOMIN_JATKO_MS = 2500;
+export const ZOOMIN_JATKO_MS = 5000;
 /** Zoomin enimmäiskesto jatkon kanssa (katto kaynnistaAvaruusajolle). */
 export const AVARUUDEN_KATTO_MS = AVARUUDEN_MS + ZOOMIN_JATKO_MS;
 /**
@@ -1178,6 +1195,8 @@ export function luoEsitys({ ajo }) {
     kohdeajo: false,
     /** Sen ajon kesto (savukkeen mittari). */
     kohdeajonKesto: null,
+    /** Saapumisen siirtymä 'jebel-irhoud'-jakson alusta (mittari). */
+    kohdeajonMyohassa: null,
     /**
      * MISTÄ KOHTAA LUENTAA ZOOMI LÄHTI (savukkeen mittari). Kontissa
      * kehystahti on noin kehys sekunnissa, eikä mittaava savuke ehdi
@@ -1285,11 +1304,33 @@ export function luoEsitys({ ajo }) {
 
   const kamera = () => (ajo.pallolla ? ajo.kamera() : null);
 
+  /**
+   * NIMETTY ALUE RUUTUUN KOKONAAN (Raamattu JATKO 3 TARKENNUS 2 kohta 3,
+   * omistaja 16.9.2026 klo 18.50 UTC, iPhone-kuva v1924: *"Zoomaan
+   * jostain syysta nain lahelle"* — kartta oli zoomattu Guineanlahdelle).
+   *
+   * JUURISYY MITATTU (390 × 844, dpr 2, pelaaja Ateenassa): ilman
+   * `kokonaan`-lippua bbox-rajaus kulkee laudan SAAPUMISSÄÄNNÖN kautta
+   * (js/pallolauta/kamera.js korkeuteenSovitus, PÄÄTÖKSET 17). Se on
+   * tehty maan laatikolle kapealla ruudulla: kuva sovitetaan vain
+   * KORKEUTEEN ja X-keskipisteeksi otetaan PELAAJAN KAUPUNGIN
+   * pituusaste. Afrikan laatikolla (lat −35…37, lon −18…52) se antoi
+   * korkeuden 1,1734 ja keskipisteen lon 23,74 (Ateena) laatikon oman
+   * 17:n sijaan — Afrikan itä- ja länsikärki jäivät ruudun ulkopuolelle.
+   * Omistajan pelissä pelaaja oli muualla, ja sama sääntö vei kuvan
+   * Guineanlahdelle. `kokonaan: true` on sama lippu, jolla lennon rajaus
+   * kiersi säännön v1921:ssä: koko laatikko ruutuun MOLEMPIIN suuntiin,
+   * keskipiste laatikon oma. Mitattuna korkeus 2,5 ja kaikki neljä
+   * Afrikan kärkeä ruudulla.
+   */
   const ajaAlueeseen = (tunnus, kesto) => {
     const k = kamera();
     if (!k?.ajaKamera) return Promise.resolve(false);
     const bbox = alueenLaatikko(tunnus);
-    return k.ajaKamera({ bbox, marginaali: 0.04 }, { kesto: reduced ? 0 : kesto });
+    return k.ajaKamera(
+      { bbox, marginaali: 0.04, kokonaan: true },
+      { kesto: reduced ? 0 : kesto },
+    );
   };
 
   const kuvasuhde = () => {
@@ -1359,25 +1400,70 @@ export function luoEsitys({ ajo }) {
    * tähdet paikallaan ilman ajautumista.
    */
   /**
-   * Ohjaimen etäisyyskatto hetkeksi auki, jotta pallo mahtuu kauas.
-   * Palautetaan aina (palautaKaukaisuus): ilman sitä pelaaja voisi
-   * nipistää itsensä avaruuteen kesken kertomuksen.
+   * ZOOMIKATTO ON LINSSIN OMA KOKO ESITYKSEN AJAN (Raamattu JATKO 3
+   * TARKENNUS 2 kohta 3, omistaja 16.9.2026: *"Zoomaan jostain syysta
+   * nain lahelle"*).
+   *
+   * JUURISYY MITATTU (390 × 844, dpr 2, pelaaja Ateenassa,
+   * tools/savukkeet/savuke-ihmisen-kappaleet.mjs väite 4b): avaus
+   * kirjoitti ENNEN suoraan `OrbitControls.maxDistance`iin ja palautti
+   * sen `tila.kattoEnnen`-lukemaan valojen syttyessä. Se lukema on
+   * PELAAJAN MAAN uloszoomausesto (js/pallolauta/lauta.js
+   * maanZoomiraja) — Ateenassa korkeus 0,1431. Aikasarjassa kamera oli
+   * juuri saapunut Afrikan rajaukseen korkeudelle 1,1734, ja samalla
+   * kehyksellä, jolla katto palasi 300 → 0,1431, OrbitControls puristi
+   * kameran 1,1734 → 0,1431: maanosa vaihtui yhdessä silmänräpäyksessä
+   * Kreikan kokoiseksi lähikuvaksi siihen pituusasteeseen, johon zoomi
+   * sattui päättymään (omistajan pelissä Guineanlahti).
+   *
+   * KORJAUS: katto kulkee laudan oman syrjäytyksen kautta
+   * (`lauta.zoomirajat`), jota myös satelliitti- ja topografialinssi
+   * käyttävät. Silloin katto EI myöskään palaa maan estoon kesken
+   * esityksen, kun kotelon koko muuttuu (kehyksen paluu → kokovahti →
+   * tahdistaZoomirajat). Esityksen ajan katto on koko pallon katto
+   * (PALLO_KORKEUS_MAX), avaruusvaiheessa AVARUUDEN_KORKEUS, ja laudan
+   * omat rajat palaavat vasta kun linssi suljetaan (`pura`).
    */
+  const asetaKatto = (korkeus) => {
+    const lauta = ajo.lauta ?? ajo.ui?.pallolauta ?? null;
+    if (!lauta?.zoomirajat) return false;
+    lauta.zoomirajat(korkeus === null ? null : { max: korkeus });
+    return true;
+  };
+
   const avaaKaukaisuus = (keski) => {
     const pallo = ajo.ui?.pallonInstanssi ?? null;
-    const ohjaimet = pallo?.controls?.();
-    if (!pallo?.pointOfView || !ohjaimet) return false;
-    const sade = pallo.getGlobeRadius?.() ?? 100;
-    tila.kattoEnnen = ohjaimet.maxDistance;
-    ohjaimet.maxDistance = sade * (1 + AVARUUDEN_KORKEUS);
+    if (!pallo?.pointOfView) return false;
+    tila.kattoEnnen = AVARUUDEN_KORKEUS;
+    /*
+     * KATTO ENSIN, VASTA SITTEN KAMERA: OrbitControls puristaa kameran
+     * kattoon heti, joten korkeus 300 ei mahtuisi laudan omaan kattoon.
+     */
+    if (!asetaKatto(AVARUUDEN_KORKEUS)) {
+      const ohjaimet = pallo.controls?.();
+      if (!ohjaimet) return false;
+      const sade = pallo.getGlobeRadius?.() ?? 100;
+      ohjaimet.maxDistance = sade * (1 + AVARUUDEN_KORKEUS);
+    }
     pallo.pointOfView({ ...keski, altitude: AVARUUDEN_KORKEUS }, 0);
     return true;
   };
 
+  /**
+   * AVARUUDEN KATTO POIS, ESITYKSEN KATTO TILALLE. Ei siis paluuta
+   * pelaajan maan estoon: se palautetaan vasta linssin purussa
+   * (`vapautaZoomikatto`).
+   */
   const palautaKaukaisuus = () => {
-    const ohjaimet = ajo.ui?.pallonInstanssi?.controls?.();
-    if (ohjaimet && tila.kattoEnnen != null) ohjaimet.maxDistance = tila.kattoEnnen;
+    if (tila.kattoEnnen == null) return;
     tila.kattoEnnen = null;
+    asetaKatto(PALLO_KORKEUS_MAX);
+  };
+
+  /** Laudan omat zoomirajat takaisin (linssi kiinni). */
+  const vapautaZoomikatto = () => {
+    tila.kattoEnnen = null;
+    asetaKatto(null);
   };
 
   /**
@@ -1420,7 +1506,10 @@ export function luoEsitys({ ajo }) {
     tila.mustaPaalla = true;
     if (!k?.ajaKamera) return false;
     if (reduced) {
-      // Ei liikettä: pallo on heti Afrikassa, tähdet näkyvissä.
+      // Ei liikettä: pallo on heti Afrikassa, tähdet näkyvissä. Katto on
+      // silti linssin oma, tai laudan maakohtainen esto puristaisi koko
+      // maanosan lähikuvaksi (ks. palautaKaukaisuus).
+      asetaKatto(PALLO_KORKEUS_MAX);
       nostaMusta(0);
       kaynnistaAvaruusajo();
       return true;
@@ -2091,9 +2180,16 @@ export function luoEsitys({ ajo }) {
      * tarkistetaan kehyssilmukasta, jotta tauko ei vie omaa ajastinta
      * eikä jää roikkumaan linssin sulkeutuessa.
      */
+    /*
+     * TAUKO ON TÄYSIMITTAINEN (JATKO 3 TARKENNUS 2). Ennen tauko
+     * joustui, koska se söi Marokon ajosta: ajon päätepiste oli kiinni
+     * luennassa. Nyt ajo pitää entisen pituutensa (aloitaKohdeajo),
+     * joten tauolle ei tarvitse tinkiä — vain ajokelvoton loppupää
+     * (jakso lähes ohi) lyhentää sitä.
+     */
     const jaljella = kohteeseenAsti();
     const vara = Number.isFinite(jaljella)
-      ? Math.max(0, jaljella - MAROKON_POHJA_MS)
+      ? Math.max(0, jaljella + ZOOMIN_JATKO_MS - MAROKON_POHJA_MS)
       : MAROKON_TAUKO_MS;
     tila.kohdeajonTauko = performance.now()
       + (reduced ? 0 : Math.min(MAROKON_TAUKO_MS, vara));
@@ -2156,16 +2252,34 @@ export function luoEsitys({ ajo }) {
     const kohde = ensimmainenKohde?.kohde;
     if (!kohde) return false;
     /*
-     * PÄÄTEPISTE ON KIINNI LUENNASSA, EI KESTOSSA (kohteeseenAsti):
-     * kamera on perillä juuri kun 'jebel-irhoud' -jakso alkaa, oli
-     * zoomi kuinka pitkä tahansa. Zoomin jatko (ZOOMIN_JATKO_MS) ja
-     * tauko siis LYHENTÄVÄT tätä ajoa — saapumishetki ei liiku.
+     * AJO PITÄÄ ENTISEN PITUUTENSA, SAAPUMINEN SIIRTYY (Raamattu JATKO 3
+     * TARKENNUS 2, omistaja 16.9.2026 klo 18.50 UTC: *"aloita siten
+     * vasta liikuttamaan kohti Marokkoa. Ei haittaa, vaikka Marokon
+     * teksti alkaa tulla ennen kuin kartta on zoomautunut sinne
+     * asti."*).
+     *
+     * `kohteeseenAsti` on aika TÄSTÄ hetkestä 'jebel-irhoud'-jakson
+     * alkuun, ja koska zoomi päättyy nyt ZOOMIN_JATKO_MS entistä
+     * myöhemmin, se on täsmälleen sen verran lyhyempi kuin ennen. Ajon
+     * ENTINEN pituus saadaan siis takaisin lisäämällä jatko: kamera on
+     * perillä ZOOMIN_JATKO_MS jakson alun JÄLKEEN, eli Marokon teksti
+     * ehtii alkaa ennen kuin kamera on maalissa. Kertomuksen ja luennan
+     * ajoitus ei muutu — vain kamera tulee perässä.
      */
-    const kesto = kohteeseenAsti();
+    const jaljella = kohteeseenAsti();
+    const kesto = Number.isFinite(jaljella) ? jaljella + ZOOMIN_JATKO_MS : NaN;
     if (!Number.isFinite(kesto) || kesto < MAROKON_POHJA_MS) return false;
     const tahti = jaksonTahti(kertomus, kertomus.indexOf(ensimmainenKohde));
     tila.kohdeajo = true;
     tila.kohdeajonKesto = Math.round(kesto);
+    /*
+     * PALJONKO SAAPUMINEN MYÖHÄSTYY JAKSON ALUSTA (mittari savukkeelle).
+     * Ajon päätepiste oli ennen tasan 'jebel-irhoud'-jakson alku; nyt
+     * ajo kestää jatkon verran pidempään, joten tämä luku on
+     * ZOOMIN_JATKO_MS. Mitattavissa myös mykistetyllä pelillä, jossa
+     * seinäkello ja äänite eivät kulje samaa tahtia.
+     */
+    tila.kohdeajonMyohassa = Math.round(kesto - jaljella);
     ajaKohteeseen(kohde, kesto, {
       alku: tahti.alku, loppu: tahti.loppu, pehmennys: marokonKaari,
     });
@@ -2594,7 +2708,9 @@ export function luoEsitys({ ajo }) {
       // Linssin sulkeminen palauttaa pulun normaalisti näkyviin — ilman
       // kävelyelettä, joka kuuluu vain esityksen sisääntuloon.
       naytaPulu({ ele: false });
-      palautaKaukaisuus();
+      // Linssi kiinni: laudan omat zoomirajat (pelaajan maan
+      // uloszoomausesto) takaisin voimaan.
+      vapautaZoomikatto();
       peite.remove();
       tekstirivi.remove();
       ajo.juuri?.classList.remove('esitys-pimea', 'esitys-avaruus', 'esitys-kaynnissa', 'esitys-musta');
@@ -2689,6 +2805,8 @@ export function luoEsitys({ ajo }) {
       puluTullut: tila.puluTullut,
       /** Marokon ajo odottaa pientä taukoa zoomin jälkeen (JATKO 3). */
       kohdeajoOdottaa: tila.kohdeajonTauko !== null,
+      /** Saapumisen siirtymä jakson alusta (= ZOOMIN_JATKO_MS). */
+      kohdeajonMyohassa: tila.kohdeajonMyohassa ?? null,
     }),
   };
 }
