@@ -393,7 +393,7 @@ test('vaihe 2: siirto haarautuu laudan mukaan kuljettajalle, koreografia pysyy y
   assert.match(reititLahde, /pointAlong\(poly, i \/ askelia\)/, 'helmet eivät ole samalla kaavalla kuin pixelOf');
   assert.match(lue('../js/pallolauta/siirto.js'), /pointAlong\(lauta\.reitit\.poly\(h\.reitti\), h\.ta \+ \(h\.tb - h\.ta\) \* e\)/,
     'nappula ei kulje samaa korjattua polya kuin helmet');
-  assert.match(lue('../js/pallolauta/lauta.js'), /const valinta = lento \? lento\.valinta : ui\.matkareittienValinta\(\);/);
+  assert.match(lue('../js/pallolauta/lauta.js'), /\(lento \? lento\.valinta : ui\.matkareittienValinta\(\)\);/);
   // Kehäriippuvuus poistui: pallolauta ei tuo ui.js:ää; koreografian
   // luvut tulevat kummallekin laudalle samasta moduulista.
   assert.ok(!pallolauta.includes("from '../ui.js'"), 'js/pallolauta tuo ui.js:ää');
@@ -565,8 +565,8 @@ test('vaihe 5b: kone on vaiheen 2 kuljettaja, kaari vaiheen 2 kaari', () => {
     'avauslento ei saa tarvita uutta Globe.gl-kerrosta');
   assert.match(avaus, /ui\.lentoKaari = \{ a: lahto\.id, b: kohde\.id \};/);
   // Niukkuus: ei nappulaa, ei kohteita, ei nostoja, kaksi nimeä.
-  assert.match(lauta, /merkit\.paivita\(\{ nappula: liikkuu \|\| lento \? null : kohta, kohteet \}\);/);
-  assert.match(lauta, /const kohteet = lento \? \[\] : kohdevalinta\(\);/);
+  assert.match(lauta, /merkit\.paivita\(\{ nappula: liikkuu \|\| lento \|\| linssiPaalla\(\) \? null : kohta, kohteet \}\);/);
+  assert.match(lauta, /const kohteet = lento \|\| linssiPaalla\(\) \? \[\] : kohdevalinta\(\);/);
   assert.match(lauta, /katto: lento \? 0 : Math\.min\(NOSTOJEN_KATTO/);
   assert.ok(!lauta.includes('objectsData'), 'lentotila lisäisi three.js-objektin');
   /*
