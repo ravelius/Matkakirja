@@ -26032,43 +26032,6 @@ svg.rough-annotation { pointer-events: none; }
 }
 .maapaneeli-nurkka[hidden] { display: none; }
 /*
- * ERÄ 19b: ANKKURI ON RUUTU, EI KARTTARUUTU (korjaus 16.9.2026).
- *
- * ENNEN: `position: absolute` karttaruudun (`.pallo-kotelo`) sisällä.
- * Karttaruutu on flex-lapsi, jonka MITATTU korkeus elää sen mukaan
- * mitä ruudulla on (saapumisen asettuminen, alapalkin korkeus) — ja
- * koska kortti riippui sen ALAREUNASTA, kortti liikkui ruudulla aina
- * kun kotelo eli. Julkaisuajossa (kuormitettu kontti) savukkeen väite
- * "paneeli ei liiku zoomatessa" kaatui juuri siihen: zoomi ei
- * liikuttanut korttia, kotelon asettuminen liikutti.
- *
- * NYT: `position: fixed` eli RUUDUN suhteen, kuten omistaja sanoi
- * ("kiinteä ruudun vasen alakulma"). Yksikään kotelon koonmuutos ei
- * voi enää siirtää korttia. Marginaali on SAMA KUIN LIIKU-NAPILLA ja
- * karttaselitteellä: `var(--gap) + 0,4rem + 1px` (perustelu on
- * Liiku-napin lohkossa — nappi on ruudun suhteen eli kartan
- * reunaviivan ulkopuolella, joten molemmat välit lasketaan yhteen),
- * plus iPhonen turva-alueet.
- *
- * FIXED TOIMII TÄSSÄ PUUSSA: yhdelläkään esivanhemmalla (.app,
- * .stage, .map-pane, .pallo-kuori, .pallo-kotelo) ei ole
- * `transform`ia, `filter`iä eikä `perspective`iä, jotka tekisivät
- * niistä fixedin asemointikehyksen. `.map-pane`n `overflow: hidden`
- * ei leikkaa fixed-jälkeläistä.
- */
-.maapaneeli-nurkka .pallolauta-maapaneeli {
-  position: fixed;
-  left: calc(var(--gap) + 0.4rem + 1px + env(safe-area-inset-left, 0px));
-  bottom: calc(var(--gap) + 0.4rem + 1px + env(safe-area-inset-bottom, 0px));
-  width: 104px;
-  height: 82px;
-}
-.maapaneeli-nurkka .maapaneeli-kortti {
-  left: 0;
-  top: 0;
-  transform-origin: 0 100%;
-}
-/*
  * ANKKURI ON RUUTU, EI KARTTARUUTU (erä 19b, säilyy).
  *
  * Karttaruutu (`.pallo-kotelo`) on flex-lapsi, jonka MITATTU korkeus
