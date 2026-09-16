@@ -42,7 +42,7 @@ import assert from 'node:assert/strict';
 import {
   fokusvirtaLuentakuva, luentakuvanOsoite, luentakuvanVara,
   luentakuvanKallistus, naytaLuentakuva, pienennaLuentakuva,
-  piilotaLuentakuva,
+  piilotaLuentakuva, LUENTAKUVAPAKKA_KARTALLA,
 } from '../js/fokusvirta.js';
 import { laudaltaRuudulle, ruudultaLaudalle } from '../js/saapumisasento.js';
 import { julisteUrl } from '../js/media.js';
@@ -432,6 +432,38 @@ test('uusi luenta ei jätä kahta paneelia päällekkäin', () => {
 /* 4. Kartan liike pienentää, kaupungista lähtö poistaa             */
 /* ---------------------------------------------------------------- */
 
+/*
+ * ══ PIENENNYSVARTIOT KYTKIMEN MUKAAN (omistaja 16.9.2026, Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 31 kohta 1) ═════════════════════════
+ *
+ * Kartalle jäävä PIENI luentakuva on TOISTAISEKSI KUMOTTU
+ * (js/fokusvirta.js LUENTAKUVAPAKKA_KARTALLA = false): pienennys on
+ * nyt piilotus. Vartioita ei poisteta vaan käännetään kytkimen
+ * mukaan — kartan liike on yhä se tapahtuma, jota tämä osio mittaa,
+ * ja kun kuville löytyy parempi paikka ja kytkin kääntyy takaisin,
+ * alkuperäiset väitteet ovat tässä sanasta sanaan tallella.
+ *
+ * Sama kuvio kuin tests/luentakuvasarja.test.mjs:n vaadiPakkaKartalla.
+ *
+ * @param {object} ui      koe-ui, jonka luentakuvan piti pienentyä
+ * @param {object} paneeli paneeli, joka kartalle olisi jäänyt
+ * @param {string} viesti  vartion oma viesti
+ */
+const vaadiPienennysPiilottaa = (ui, paneeli, viesti) => {
+  assert.equal(ui.luentakuva, null,
+    `KUMOTTU (LUENTAKUVAPAKKA_KARTALLA=false): ${viesti} — paneeli jäi muistiin`);
+  assert.ok(!paneeli.classList.contains('nakyy'),
+    `KUMOTTU (LUENTAKUVAPAKKA_KARTALLA=false): ${viesti} — paneeli jäi näkyviin`);
+  assert.equal(pienennaLuentakuva(ui), false, 'piilotetun kuvan pienennys ei tee mitään');
+  /*
+   * HÄIVYTYS VIE SOLMUN 400 ms:N PÄÄSTÄ (piilotaLuentakuva ilman
+   * `heti`). Testit jakavat saman asiakirjan eivätkä kelaa oikeaa
+   * kelloa, joten teemme tässä sen, minkä häivytyskello tekisi —
+   * muuten seuraava vartio laskisi edellisen testin häipyvän solmun.
+   */
+  paneeli.remove();
+};
+
 test('kartan veto pienentää kuvan eikä poista sitä', () => {
   pakinKanssa(KOEKUVA, () => {
     const ui = tekoUi();
@@ -440,6 +472,12 @@ test('kartan veto pienentää kuvan eikä poista sitä', () => {
     assert.ok(!paneeli.classList.contains('pieni'), 'kuva nousee isona');
 
     kartanVeto();
+
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      vaadiPienennysPiilottaa(ui, paneeli, 'kartan veto piilottaa kuvan');
+      piilotaLuentakuva(ui, { heti: true });
+      return;
+    }
 
     assert.equal(ui.luentakuva, paneeli, 'kuva jää kartalle kartan liikkeestä');
     assert.equal(asiakirja.querySelectorAll('.fokusvirta-luentakuva').length, 1);
@@ -469,7 +507,21 @@ test('kaupungista lähtö poistaa kuvan myös pienennettynä', () => {
   pakinKanssa(KOEKUVA, () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
+    const paneeli = ui.luentakuva;
     kartanVeto();
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      /*
+       * KUMOTTU KYTKIMELLÄ: kartan veto vei kuvan jo pois, joten
+       * kaupungista lähdön loppuvaatimus (ei paneelia, ei solmua) on
+       * voimassa jo tässä — ja piilotaLuentakuva on yhä se kutsu, joka
+       * ei saa herättää mitään henkiin.
+       */
+      vaadiPienennysPiilottaa(ui, paneeli, 'kartan veto piilottaa kuvan');
+      piilotaLuentakuva(ui, { heti: true });
+      assert.equal(ui.luentakuva, null);
+      assert.equal(asiakirja.querySelectorAll('.fokusvirta-luentakuva').length, 0);
+      return;
+    }
     assert.ok(ui.luentakuva.classList.contains('pieni'));
 
     // vaiennaLivianKaupunkipuhe tekee juuri tämän kaupungista
@@ -806,8 +858,20 @@ test('pienennys siirtää ankkurin kaupungin yläpuolelle, kartan kohtaan', () =
     const ui = kartallinenUi();
     naytaLuentakuva(ui, KOEKAUPUNKI_KARTALLA);
     const naytto = ui.luentakuvaAnkkuri;
+    const paneeli = ui.luentakuva;
     const ennen = { ...naytto.ankkuri };
     kartanVeto();
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      /*
+       * KUMOTTU KYTKIMELLÄ: ankkurin siirto kaupungin yläpuolelle oli
+       * korjaus siihen, mihin PIENI kuva jää kartalle. Pientä kuvaa ei
+       * ole, joten väite on nyt "kartalle ei jää mitään siirrettävää".
+       */
+      vaadiPienennysPiilottaa(ui, paneeli, 'pienennys piilottaa kuvan');
+      assert.equal(ui.luentakuvaAnkkuri, null, 'ankkuri jäi roikkumaan kartalle');
+      piilotaLuentakuva(ui, { heti: true });
+      return;
+    }
     assert.ok(ui.luentakuva.classList.contains('pieni'), 'kartan veto ei pienentänyt');
     assert.notDeepEqual(naytto.ankkuri, ennen, 'pienennys ei siirtänyt ankkuria lainkaan');
     assert.equal(naytto.kaupunginYlla, true, 'pari ei mennyt kaupungin yläpuolelle');

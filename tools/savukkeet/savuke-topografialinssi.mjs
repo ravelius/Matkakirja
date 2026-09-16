@@ -967,13 +967,32 @@ async function ajaAvaus({ peite = true } = {}) {
 const a = await ajaAvaus();
 const nimiA = '390 px, luenta';
 
+/*
+ * KUVAPAKKA ON TOISTAISEKSI KUMOTTU (omistaja 16.9.2026 klo 16.05 UTC,
+ * Raamattu KARTTAUUDISTUKSEN PAATOKSET 31 kohta 1). Kartalle jäävää
+ * pientä luentakuvapakkaa ei enää nosteta lainkaan
+ * (js/fokusvirta.js LUENTAKUVAPAKKA_KARTALLA = false), joten sitä ei
+ * voi vaatia omistajan tilan osaksi — se olisi vaatimus siitä, että
+ * kumottu asia palaa. Väitettä ei silti poisteta: kytkin luetaan
+ * lähteestä, ja kun se kääntyy takaisin, pakka on jälleen pakollinen
+ * osa omistajan tilaa ilman että tätä savuketta kirjoitetaan uusiksi.
+ *
+ * MUU EI MUUTU: luenta, saapumiskuva ja pulun pluskupla ovat yhä
+ * pakollisia, ja juuri ne ovat se tila, jossa omistaja linssin avasi.
+ * Mittaukset (a) kirkkaus, (b) paljas kartta ja (c) jäänteet ajetaan
+ * kytkimestä riippumatta.
+ */
+const PAKKA_KARTALLA = /^export const LUENTAKUVAPAKKA_KARTALLA = true;$/m
+  .test(readFileSync(new URL('../../js/fokusvirta.js', import.meta.url), 'utf8'));
+const pakkaRuudulla = a.ennenJaanteet.some((x) => x.valitsin.includes('fokusvirta-luentakuva'));
+
 vaadi(`${nimiA}: omistajan tila toistui (luenta, saapumiskuva, pluskupla, kuvapakka)`,
   a.luentaSoi
     && a.ennenJaanteet.some((x) => x.valitsin.includes('pollo-kuplapalautus'))
-    && a.ennenJaanteet.some((x) => x.valitsin.includes('fokusvirta-luentakuva')),
+    && (PAKKA_KARTALLA ? pakkaRuudulla : !pakkaRuudulla),
   `luenta ${a.luentaSoi}, pluskupla `
   + `${a.ennenJaanteet.some((x) => x.valitsin.includes('pollo-kuplapalautus'))}, kuvapakka `
-  + `${a.ennenJaanteet.some((x) => x.valitsin.includes('fokusvirta-luentakuva'))}; `
+  + `${pakkaRuudulla} (odotus ${PAKKA_KARTALLA}, LUENTAKUVAPAKKA_KARTALLA=${PAKKA_KARTALLA}); `
   + `ennen linssiä ruudulla ${JSON.stringify(a.ennenJaanteet.slice(0, 6))}`);
 
 /*
