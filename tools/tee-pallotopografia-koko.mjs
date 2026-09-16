@@ -9,7 +9,7 @@
  *
  * Ulos tulee KAKSI tiedostoa samasta laskennasta:
  *
- *   topografia-pallo-koko-<tunniste>.webp     8192 × 4096
+ *   topografia-pallo-koko-8k-<tunniste>.webp  8192 × 4096
  *   topografia-pallo-koko-4k-<tunniste>.webp  4096 × 2048
  *
  * Molemmat ovat TASAVÄLISIÄ (equirectangular) ±90° ja ±180°, eikä
@@ -162,13 +162,15 @@ const KOEKUVA = teksti('--koekuva', null);
 const ULOS = join(JUURI, teksti('--ulos', 'pallo-topografia-ulos'));
 const TUNNISTE = teksti('--tunniste', new Date().toISOString().slice(0, 10).replace(/-/g, ''));
 
-const NIMI_ISO = `topografia-pallo-koko-${TUNNISTE}.webp`;
 /*
- * Pienemmän nimessä on "4k" eikä pikselimäärä: se on PELIN LATAAMA
- * versio, ja nimi on osoite, joka kirjoitetaan js/linssit/
- * satelliitti-avaruus.js:ään. Jos --pieni joskus muuttuu, nimi pysyy —
- * mitat kerrotaan ajon kuitissa.
+ * NIMISSÄ ON "8k" JA "4k" EIKÄ PIKSELIMÄÄRÄ. Sama sopimus kuin pelin
+ * vanhalla kuvaparilla (topografia-pallo-20260915 ja
+ * topografia-pallo-8k-20260916): "koko" kertoo, että navat ovat mukana,
+ * ja 8k/4k sen, kummalle ruudulle kuva on. Nimet ovat osoitteita, jotka
+ * kirjoitetaan js/linssit/reliefikuva.js:ään; jos --leveys tai --pieni
+ * joskus muuttuu, nimet pysyvät ja tarkat mitat kerrotaan ajon kuitissa.
  */
+const NIMI_ISO = `topografia-pallo-koko-8k-${TUNNISTE}.webp`;
 const NIMI_PIENI = `topografia-pallo-koko-4k-${TUNNISTE}.webp`;
 
 // ------------------------------------------------------------ maantiede

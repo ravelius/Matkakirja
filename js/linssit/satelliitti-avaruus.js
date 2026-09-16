@@ -82,19 +82,143 @@
  * nipistyksestä. Ks. NIMIEN_KYNNYS.
  */
 
+/*
+ * ── KOLME LISÄYSTÄ 16.9.2026 (Raamattu, "ASTRONAUTIN KAMERA:
+ *    VALOKUVANÄKYMÄ UUSIKSI 2", PALLONÄKYMÄ 11–13) ────────────────
+ *
+ *  6. ISS KIERTÄÄ PALLOA. Kirkas merkki 51,6 asteen radalla 6 %
+ *     pinnan yläpuolella, kierros 75 sekunnissa, ja himmeä ratakaari
+ *     näkyy vain pallon etupuolella. Liikkeenvähennyksellä merkki on
+ *     paikallaan. Ks. luku 2c.
+ *  7. AURINKO SIVULTA. Pallon toinen reuna painuu varjoon (alfa 0 →
+ *     0,55 viimeisellä 12 %:lla säteestä) ja vastakkainen saa kapean
+ *     kirkkaan kaistan (0 → 0,18 viimeisellä 8 %:lla). Keskusta jää
+ *     koskematta, ja kohdepisteet jäävät varjon PÄÄLLE, koska kalvo
+ *     työnnetään CSS2D-merkkikerroksen eteen.
+ *  8. KYLLÄISYYS 0,8:AAN. Hypsometrinen asteikko on kartan asteikko;
+ *     astronautin ikkunassa värit ovat vaimeampia. Kylläisyys
+ *     lasketaan kankaan suodattimella samassa piirrossa, jolla
+ *     reliefi ladotaan (kyllaisyysAlas).
+ *
+ * Samalla reliefistä on kaksi tarkkuutta (valitseReliefi): 8 192 ×
+ * 4 096 leveille ruuduille ja 4 096 × 2 048 puhelimelle, jolla
+ * isompi purkautuisi 134 Mt:n puskuriksi.
+ *
+ *  9. AVAUSAJO JA HIDAS PYÖRIMINEN (Raamattu LISÄYS 4, kohta 18).
+ *     Linssi avautuu niin, että pallo näkyy KOKONAAN (65 % ruudun
+ *     kapeimmasta sivusta) ja pyörii hitaasti; viidessä sekunnissa
+ *     kamera laskeutuu pehmeästi siihen, että pallo peittää melkein
+ *     koko ruudun (92 %), ja jää pyörimään, kunnes pelaaja tarttuu
+ *     palloon. Ks. luvun 1 kohta "AVAUSAJO".
+ */
+
 import { MAAMASKI } from './ihmisen-matka-maamaski.js';
 import { puraPeitto } from '../aikajana-virrat-laskenta.js';
 import { luoTahtitaivas } from '../pallolauta/tahdet.js';
+import { kokoPallonKorkeus } from '../pallolauta/kamera.js';
+/*
+ * Reliefin vakiot ja valinta ovat omassa moduulissaan (ks. alempana
+ * RELIEFIN VAKIOT JA VALINTA MUUTTIVAT OSOITETTA): tuodaan tähän
+ * moduulin omaan käyttöön ja viedään samalla edelleen ulos.
+ */
+import {
+  RELIEFIN_OSOITE,
+  RELIEFIN_LEVEYS,
+  RELIEFIN_KORKEUS,
+  RELIEFIN_OSOITE_8K,
+  RELIEFIN_8K_LEVEYS,
+  RELIEFIN_8K_KORKEUS,
+  RELIEFIN_8K_RAJA_CSS,
+  RELIEFIN_8K_RAJA_LAITEPX,
+  RELIEFIN_8K_KAYTOSSA,
+  RELIEFI_KOKO_PALLO,
+  RELIEFIN_KOKO_4K,
+  RELIEFIN_KOKO_8K,
+  valitseReliefi,
+} from './reliefikuva.js';
 
 /* ═════════════════ 1. AVAUSNÄKYMÄN KORKEUS ══════════════════════ */
 
 /**
- * Reunan rako: osuus ruudun kapeimmasta sivusta, joka jää pallon ja
- * ruudun laidan väliin. Pallon REUNAT ovat tilauksen ydin, joten rakoa
- * on oltava sen verran, että kaari erottuu tähtitaustaa vasten myös
- * silloin kun pelaaja on pyörittänyt palloa hieman sivuun.
+ * Reunan rako LEPONÄKYMÄSSÄ eli avausajon LOPUSSA: osuus ruudun
+ * kapeimmasta sivusta, joka jää pallon ja ruudun laidan väliin.
+ *
+ * OMISTAJA 16.9.2026 (Raamattu LISÄYS 4, kohta 18, sanatarkasti):
+ * *"…ja lopuksi pallo peittää melkein koko ruudun ja jää sen jälkeen
+ * vain hitaasti pyörimään…"* — "melkein koko ruutu" on 92 % ruudun
+ * kapeimmasta sivusta (rako 0,08). Reunat ovat yhä näkyvissä, mikä on
+ * koko linssin alkuperäinen tilaus; ennen tätä rako oli 0,12.
  */
-export const AVAUKSEN_MARGINAALI = 0.12;
+export const AVAUKSEN_MARGINAALI = 0.08;
+
+/*
+ * ── AVAUSAJO: KOKO PALLO → MELKEIN KOKO RUUTU ─────────────────────
+ *
+ * OMISTAJA 16.9.2026, sanatarkasti: *"maapallo voisi pyöriä hitaasti
+ * kun linssi avautuu ja samalla zoomautua alussa pehmeästi lähemmäs
+ * niin että alussa pallo näkyy kokonaan ja lopuksi pallo peittää
+ * melkein koko ruudun ja jää sen jälkeen vain hitaasti pyörimään,
+ * kunnes pelaaja alkaa ohjata palloa, jolloin pyöriminen loppuu."*
+ *
+ * ALKU on 65 % ruudun kapeimmasta sivusta (rako 0,35): pallo on
+ * kokonaan ruudussa väljästi, tähtitaivasta ympärillä. LOPPU on
+ * AVAUKSEN_MARGINAALIn 92 %. Kesto on viisi sekuntia, pehmennys
+ * kuutiollinen ease-in-out — sama tunne kuin kirjaston omassa
+ * kamera-ajossa (globe.gl tweenaa Cubic.InOut).
+ *
+ * ── MIKSI KORKEUS AJETAAN KEHYKSITTÄIN EIKÄ pointOfView-TWEENILLÄ ──
+ *
+ * Kirjaston oma `pointOfView(pov, kesto)` tweenaa lat/lng/korkeuden
+ * YHTENÄ pakettina: se lukee nykyisen paikan lähtöarvoksi ja
+ * kirjoittaa kameran paikan joka kehyksellä myös lat/lng:stä. Samaan
+ * aikaan pyörivä `autoRotate` jäisi siis tween alle — pallo
+ * pysähtyisi juuri zoomin ajaksi, ja tilaus sanoo "pyörii hitaasti JA
+ * SAMALLA zoomautuu". Kirjastossa on kuitenkin toinen sisäänkäynti:
+ * `pointOfView({ altitude }, 0)` yhdistää annetun kentän NYKYISEEN
+ * näkymään (`Object.assign({}, nykyinen, muutos)`), joten pelkkä
+ * korkeus voidaan kirjoittaa ilman että lat/lng liikkuu. Linssillä on
+ * jo oma kehyssilmukka (tähdet ja karttapintojen pyyhkäisy), joten
+ * uutta koneistoa ei synny — vain kuusi riviä pehmennystä siihen.
+ *
+ * PYÖRIMINEN ON KIRJASTON OMA: OrbitControlsin `autoRotate`.
+ * Kolme syytä: (1) sen kulma lasketaan kehysajasta
+ * (`controls.update(dt)`, three-render-objects antaa deltan), joten
+ * nopeus on 0,16 °/s myös hitaalla laitteella; (2) pelin oma elekerros
+ * SAMMUTTAA sen jo valmiiksi ensimmäisestä sormesta ja rullasta
+ * (js/pallo.js asennaPallonEleet: `ohjaimet.autoRotate = false`
+ * sormiAlas- ja wheel-käsittelijöissä), eli "kunnes pelaaja alkaa
+ * ohjata palloa" tulee ilmaiseksi ja täsmälleen samasta paikasta kuin
+ * valikkopallolla; (3) `enableRotate = false` ei estä sitä — kirjasto
+ * tarkistaa vain, ettei sormi ole alhaalla.
+ */
+/** Reunan rako avausajon ALUSSA (pallo 65 % ruudun kapeimmasta). */
+export const ALOITUKSEN_MARGINAALI = 0.35;
+/** Avausajon kesto (ms). Tilaus: 4–6 s. */
+export const AVAUSZOOMIN_KESTO_MS = 5000;
+/**
+ * Yhden kehyksen enimmäisaskel avausajossa (ms). Pitkä nykäys —
+ * tekstuurin purku, laattojen saapuminen, taustavälilehti — ei saa
+ * syödä ajoa, vaan se on yksi askel muiden joukossa. 100 ms vastaa
+ * kymmentä kehystä sekunnissa.
+ */
+export const AVAUSAJON_KEHYSKATTO_MS = 100;
+/** Hidas pyöriminen astetta sekunnissa (sama kuin avauspallolla). */
+export const PYORIMISTA_ASTETTA_S = 0.16;
+/**
+ * OrbitControlsin `autoRotateSpeed` samalle nopeudelle. Kirjaston kaava
+ * on 2π/60 · speed radiaania sekunnissa eli 6 · speed astetta
+ * sekunnissa, joten nopeus on asteet jaettuna kuudella.
+ */
+export const PYORIMISEN_NOPEUS = PYORIMISTA_ASTETTA_S / 6;
+
+/**
+ * Avausajon pehmennys: kuutiollinen ease-in-out (0 → 1).
+ * Puhdas funktio (tests/satelliitti-avaruus.test.mjs).
+ */
+export function avausPehmennys(p) {
+  const x = p < 0 ? 0 : (p > 1 ? 1 : Number(p) || 0);
+  return x < 0.5 ? 4 * x * x * x : 1 - ((-2 * x + 2) ** 3) / 2;
+}
 
 /** Globe.gl:n kameran avauskulma pystysuunnassa (sama kuin PALLO_FOV). */
 export const AVARUUDEN_FOV = 50;
@@ -245,16 +369,13 @@ export const ASETTUMISEN_IKKUNA_MS = 2500;
 export function avausKorkeus({
   leveys, korkeus, fov = AVARUUDEN_FOV, marginaali = AVAUKSEN_MARGINAALI,
 } = {}) {
-  const K = Number(korkeus) > 0 ? Number(korkeus) : 0;
-  const L = Number(leveys) > 0 ? Number(leveys) : 0;
-  if (!K || !L) return 2.5;
-  const m = Math.max(0, Math.min(0.6, Number(marginaali) || 0));
-  const mahtuu = Math.min(L, K) * (1 - m);
-  // tan(a) = (mahtuu / K) · tan(fov / 2)
-  const tanA = (mahtuu / K) * Math.tan((fov / 2) * (Math.PI / 180));
-  const sinA = tanA / Math.sqrt(1 + tanA * tanA);
-  if (!(sinA > 0)) return 2.5;
-  return 1 / sinA - 1;
+  /*
+   * KAAVA MUUTTI OSOITETTA 16.9.2026 (js/pallolauta/kamera.js
+   * kokoPallonKorkeus). Topografialinssi tarvitsee saman laskun
+   * vapauttaakseen zoomin koko palloon, eikä kahta kopiota oteta —
+   * tämä jää nimeksi, jonka savukkeet ja testit tuntevat.
+   */
+  return kokoPallonKorkeus({ leveys, korkeus, fov, marginaali });
 }
 
 /**
@@ -547,95 +668,47 @@ export function maapallonTekstuuri(asetukset = {}, doc = globalThis.document) {
  * asetuksia eivätkä tekstuurin.
  */
 
-/** Reliefikuvan osoite (js/packs/linssi-topografia-kuva.js). */
-export const RELIEFIN_OSOITE = 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-20260915.webp';
-
-/* ── KOKO PALLON RELIEFI: NAVAT MUKAAN (omistaja 16.9.2026) ─────────
- *
- * Sanatarkasti: *"onhan tarkemmassa topografia ajossa myos pohjois ja
- * etelanavat mukana, etta ei tule tyhjia kohtia niihin?"* — vastaus oli
- * ei, ja päätös oli *"Kyllä, koko pallo 1′-datasta."* (Raamattu,
- * ASTRONAUTIN KAMERA, LISÄYS 5.)
- *
- * Yllä oleva RELIEFIN_OSOITE on laudan Millerin kautta kulkenut kuva:
- * se kattaa vain 76 °N…58 °S, ja navat ovat siinä läpinäkyviä.
- * tools/tee-pallotopografia-koko.mjs maalaa saman maailman SUORAAN
- * 1′-korkeusruudukosta navasta napaan — Etelämanner ja Jäämeri mukaan
- * lukien, ilman yhtään läpinäkyvää pikseliä.
- *
- * KYTKIN ON POIS PÄÄLTÄ, JA SE ON TARKOITUS. Kuvat syntyvät omistajan
- * Macilla (.github/workflows/renderoi-reliefi-macilla.yml, syöte
- * koko_pallo), ja ennen sitä osoitteiden takana ei ole mitään. Tämä
- * tiedosto on siis VALMIS mutta EI KÄYTÖSSÄ: kun ajo on tehty,
- * tunniste tarkistetaan, RELIEFI_KOKO_PALLO käännetään todeksi ja
- * muutos julkaistaan omana pienenä PR:nään.
- *
- * KUN KOKO PALLON KUVA ON KÄYTÖSSÄ, NAPAJÄÄTÄ EI MAALATA. Jää tulee
- * kuvasta (tools/reliefivarit.mjs, jaapaino: korkeus + leveysaste →
- * jäävari), ja generoidun napajään sekoittaminen sen päälle peittäisi
- * juuri sen rantaviivan, jonka takia koko kuva tehtiin. Sama koskee
- * napojen häivytystä: reliefi ei lopu 76°:seen, joten sitä ei häivytetä.
- */
-
-/** Onko koko pallon reliefi (navat mukaan) käytössä? Ks. yllä. */
-export const RELIEFI_KOKO_PALLO = false;
-
 /*
- * Koko pallon kuvat. Tunniste on Mac-ajon syöte; nämä osoitteet
- * tarkistetaan ja päivitetään kytkentä-PR:ssä.
+ * RELIEFIN VAKIOT JA VALINTA MUUTTIVAT OSOITETTA 16.9.2026
+ * (js/linssit/reliefikuva.js). Topografialinssi ottaa pallon
+ * pohjatekstuuriin saman valinnan kuin avaruusnäkymä, eikä samaa
+ * laskua pidetä kahtena kopiona. Nimet viedään täältä edelleen ulos:
+ * savukkeet, testit ja tämän moduulin oma koodi tuntevat ne näillä
+ * nimillä, eikä rajapinta muuttunut.
  */
-export const RELIEFIN_KOKO = {
-  osoite: 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-20260916.webp',
-  leveys: 8192,
-  korkeus: 4096,
-};
-/*
- * PELI LATAA OLETUKSENA 4K-VERSION. 8192 × 4096 on kankaana 134 Mt
- * RGBA:na, eikä puhelin sitä kestä; 4096 riittää lähimmässäkin
- * zoomissa (ks. RELIEFIN_LEVEYS). Iso jää työpöydän varaan, jos
- * zoomia joskus jatketaan.
- */
-export const RELIEFIN_KOKO_4K = {
-  osoite: 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-4k-20260916.webp',
-  leveys: 4096,
-  korkeus: 2048,
+export {
+  RELIEFIN_OSOITE,
+  RELIEFIN_LEVEYS,
+  RELIEFIN_KORKEUS,
+  RELIEFIN_OSOITE_8K,
+  RELIEFIN_8K_LEVEYS,
+  RELIEFIN_8K_KORKEUS,
+  RELIEFIN_8K_RAJA_CSS,
+  RELIEFIN_8K_RAJA_LAITEPX,
+  RELIEFIN_8K_KAYTOSSA,
+  RELIEFI_KOKO_PALLO,
+  RELIEFIN_KOKO_4K,
+  RELIEFIN_KOKO_8K,
+  valitseReliefi,
 };
 
-/**
- * Kumpi reliefi ladataan — puhdas funktio, jotta testi näkee saman
- * valinnan kuin selain.
+/*
+ * ── KYLLÄISYYS HIEMAN ALAS (PALLONÄKYMÄ 13) ───────────────────────
  *
- * @param {{ kokoPallo?: boolean, tarkka?: boolean }} asetukset
- * @returns {{ osoite: string, leveys: number, korkeus: number, kokoPallo: boolean }}
- */
-export function valitseReliefi({ kokoPallo = RELIEFI_KOKO_PALLO, tarkka = false } = {}) {
-  if (!kokoPallo) {
-    return {
-      osoite: RELIEFIN_OSOITE,
-      leveys: RELIEFIN_LEVEYS,
-      korkeus: RELIEFIN_KORKEUS,
-      kokoPallo: false,
-    };
-  }
-  const k = tarkka ? RELIEFIN_KOKO : RELIEFIN_KOKO_4K;
-  return {
-    osoite: k.osoite, leveys: k.leveys, korkeus: k.korkeus, kokoPallo: true,
-  };
-}
-
-/**
- * Yhdistetyn tekstuurin mitat — LÄHDEKUVAN OMA TARKKUUS.
+ * Hypsometrinen väriasteikko on kartan asteikko: se on tehty
+ * erottumaan paperilla, ei näyttämään maapallolta. Astronautin
+ * ikkunassa värit ovat vaimeampia. Kylläisyys viedään siksi 0,8:aan
+ * KANKAAN SUODATTIMELLA (`filter: saturate(0.8)`) siinä samassa
+ * piirrossa, jolla reliefi ladotaan — ei omana pikselisilmukkanaan,
+ * joka olisi 8,4 miljoonaa pikseliä JS-muistissa.
  *
- * MITATTU 12.9.2026 (kaappaus puhelimelta lähimmässä zoomissa):
- * 2048 px:n tekstuurilla Italia ja Etna olivat selvästi sumeat. Syy on
- * suoraa laskentaa: lähimmällä sallitulla korkeudella pallon halkaisija
- * on 1 518 px, joten sen kehä ruudulla on π · 1 518 ≈ 4 770 px 360
- * asteelle. 2048 px:n tekstuuri venyy siinä 2,3-kertaiseksi; 4096 px:n
- * venymä on 1,16 eli käytännössä pikselintarkka. Lähdekuva on juuri
- * 4096 × 2048, joten tätä suuremmasta ei saisi lisää tietoa.
+ * VARAREITTI: jos selain ei tue kankaan suodatinta (vanha Safari),
+ * sama tulos syntyy sekoitustilalla `saturation` harmaalla täytöllä —
+ * alfa 1 − 0,8 vie kylläisyydestä viidenneksen. Tuki tunnistetaan
+ * kirjoittamalla arvo ja lukemalla se takaisin.
  */
-export const RELIEFIN_LEVEYS = 4096;
-export const RELIEFIN_KORKEUS = 2048;
+/** Reliefin kylläisyyskerroin (1 = ennallaan). */
+export const RELIEFIN_SATURAATIO = 0.8;
 
 /*
  * NAPOJEN HÄIVYTYS — reliefin reuna ei saa olla viiva.
@@ -729,23 +802,69 @@ function napaLiuku(ctx, leveys, korkeus) {
 }
 
 /**
+ * Reliefi kankaalle kylläisyys laskettuna (RELIEFIN_SATURAATIO).
+ * Palauttaa käytetyn tavan: `suodatin`, `sekoitus` tai `ei` (kumpikaan
+ * ei ollut käytettävissä) — vartio lukee sen mittarista.
+ */
+export function kyllaisyysAlas(ctx, kuva, leveys, korkeus, kerroin = RELIEFIN_SATURAATIO) {
+  const arvo = `saturate(${kerroin})`;
+  let tapa = 'ei';
+  try {
+    ctx.filter = arvo;
+    if (ctx.filter === arvo || ctx.filter === `saturate(${kerroin * 100}%)`) tapa = 'suodatin';
+  } catch { tapa = 'ei'; }
+  ctx.drawImage(kuva, 0, 0, leveys, korkeus);
+  try { ctx.filter = 'none'; } catch { /* suodatinta ei ollut */ }
+  if (tapa === 'suodatin') return tapa;
+  /*
+   * VARAREITTI: harmaa täyttö sekoitustilassa `saturation` vie
+   * kylläisyyttä alfan verran. `destination-in` palauttaa alfan
+   * täsmälleen (sama syy kuin valoLiuussa: navat ovat läpinäkyvät).
+   */
+  try {
+    ctx.globalCompositeOperation = 'saturation';
+    ctx.globalAlpha = Math.max(0, Math.min(1, 1 - kerroin));
+    ctx.fillStyle = '#808080';
+    ctx.fillRect(0, 0, leveys, korkeus);
+    ctx.globalAlpha = 1;
+    ctx.globalCompositeOperation = 'destination-in';
+    ctx.drawImage(kuva, 0, 0, leveys, korkeus);
+    ctx.globalCompositeOperation = 'source-over';
+    tapa = 'sekoitus';
+  } catch {
+    ctx.globalAlpha = 1;
+    ctx.globalCompositeOperation = 'source-over';
+  }
+  return tapa;
+}
+
+/**
  * RELIEFI GENEROIDUN MAAN PÄÄLLE. Palauttaa lupauksen osoitteesta
  * (blob- tai data-URL) tai nullista (lataus ei onnistunut, canvasia ei
  * ole). Osoite vapautetaan linssin purkaessa (vapautaReliefi).
  *
- * @param {{ leveys?: number, korkeus?: number, osoite?: string }} asetukset
+ * `kokoPallo` kertoo, kattaako kuva navat: silloin napoja ei häivytetä
+ * eikä generoitua napajäätä maalata päälle (ks. napaLiuku).
+ *
+ * @param {{ leveys?: number, korkeus?: number, osoite?: string,
+ *   kokoPallo?: boolean }} asetukset
  */
 export function reliefiTekstuuri(asetukset = {}, doc = globalThis.document, ikkuna = globalThis) {
   /*
-   * Valinta ensin, sitten mahdolliset syrjäytykset. Näin kutsuja saa
-   * yhä antaa oman osoitteen ja mitat (testit tekevät niin), mutta
-   * oletus tulee yhdestä paikasta — valitseReliefi().
+   * OLETUKSET TULEVAT VALINNASTA, EIVÄT VAKIOISTA. valitseReliefi({})
+   * ilman ruudun mittoja antaa 4k-haaran — ja koko pallon kytkimen
+   * ollessa päällä sen koko pallon version. Näin oletusosoite ja
+   * oletuslippu eivät voi olla eri kuvista.
+   *
+   * ASETUKSIA EI ANNETA valitseReliefille: sen `leveys` on RUUDUN
+   * leveys, tämän `leveys` on TEKSTUURIN leveys. Sekaannus valitsisi
+   * 8k:n aina, koska tekstuuri on aina yli tuhat pikseliä leveä.
    */
-  const valinta = valitseReliefi(asetukset);
+  const oletus = valitseReliefi({});
   const {
-    leveys = valinta.leveys, korkeus = valinta.korkeus, osoite = valinta.osoite,
+    leveys = oletus.leveys, korkeus = oletus.korkeus, osoite = oletus.osoite,
+    kokoPallo = oletus.kokoPallo,
   } = asetukset;
-  const kokoPallo = valinta.kokoPallo;
   const kangas = doc?.createElement?.('canvas');
   const ctx = kangas?.getContext?.('2d');
   if (!ctx || !ikkuna?.Image) return Promise.resolve(null);
@@ -785,7 +904,7 @@ export function reliefiTekstuuri(asetukset = {}, doc = globalThis.document, ikku
         apu.width = leveys;
         apu.height = korkeus;
         const actx = apu.getContext('2d');
-        actx.drawImage(kuva, 0, 0, leveys, korkeus);
+        kyllaisyysAlas(actx, kuva, leveys, korkeus);
         valoLiuku(actx, leveys, korkeus);
         // Alfa takaisin täsmälleen: multiply täytti navat harmaalla.
         actx.globalCompositeOperation = 'destination-in';
@@ -819,6 +938,352 @@ export function reliefiTekstuuri(asetukset = {}, doc = globalThis.document, ikku
     }, { once: true });
     kuva.src = osoite;
   });
+}
+
+/* ═══════════ 2c. ISS RADALLAAN JA AURINKO SIVULTA ═══════════════ */
+
+/*
+ * OMISTAJAN LINJAUS (Raamattu, "ASTRONAUTIN KAMERA: VALOKUVANÄKYMÄ
+ * UUSIKSI 2", PALLONÄKYMÄ 11–13): avaruusvaiheen pallo saa kolme
+ * lisää — kiertävän ISS:n, auringon sivuvalon pallon reunalla ja
+ * hillitymmän kylläisyyden.
+ *
+ * ── MISSÄ NÄMÄ PIIRRETÄÄN JA MIKSI ────────────────────────────────
+ *
+ * ISS, ratakaari ja reunavarjo ovat KOTELON KALVOLLA (DOM + SVG)
+ * eivätkä three.js-olioita. Kolme syytä, kaikki mitattuja tämän pelin
+ * omista ratkaisuista:
+ *
+ *  1. Globe.gl kantaa three.js:n sisällään EIKÄ vie sitä ulos
+ *     (js/pallolauta/linssit.js kertoo saman): jokainen uusi olio
+ *     pitäisi rakentaa heijastuksella jonkin olemassa olevan
+ *     `constructor`ista. Kalvo ei tarvitse kirjastosta mitään.
+ *  2. PISTEET JÄÄVÄT VARJON PÄÄLLE ILMAN ERIKOISJÄRJESTELYÄ. Kalvo
+ *     työnnetään kirjaston CSS2D-kerroksen ETEEN samaan vanhempaan
+ *     (sama kuvio kuin js/pallolauta/linssit.js kalvoRuudulle `alle`):
+ *     se peittää WebGL-kankaan mutta jää kohdemerkkien alle. Varjo ei
+ *     siis voi himmentää yhtäkään kohdepistettä eikä estää napautusta
+ *     (pointer-events: none, ja osuma lasketaan pallon omasta
+ *     napautuksesta).
+ *  3. PALLO ON AINA KOTELON KESKELLÄ ja sen halkaisija ruudulla
+ *     tiedetään kaavasta (halkaisijaRuudulla). Reunavarjo on siis
+ *     täsmälleen se ympyrä, jonka pelaaja näkee — ilman
+ *     syvyyspuskurin, polygonOffsetin tai ilmakehäkuoren kanssa
+ *     painimista.
+ *
+ * SYVYYS HOIDETAAN HORISONTTITESTILLÄ, ei syvyyspuskurilla: piste P
+ * (|P| = säde · 1,06) on kameran C näkemällä puolella tasan silloin,
+ * kun P · C > säde² — pallon oma horisontti. Takapuolen kaari ja
+ * takana oleva ISS jäävät siis pois piirrosta, kuten tilaus sanoo.
+ */
+
+/** ISS:n radan kaltevuus (astetta) — oikean aseman inklinaatio. */
+export const ISS_INKLINAATIO = 51.6;
+/** Radan korkeus pallonsäteinä (n. 6 % pinnan yläpuolella). */
+export const ISS_KORKEUS = 0.06;
+/**
+ * Yksi kierros sekunteina. Oikea kierrosaika on 92 minuuttia; se olisi
+ * ruudulla liikkumaton piste. Nopeutus on tilauksen oma luku (60–90 s),
+ * ja 75 s antaa 4,8 astetta sekunnissa: kahdessa sekunnissa merkki on
+ * siirtynyt selvästi (vartio mittaa juuri sen).
+ */
+export const ISS_KIERROS_S = 75;
+/**
+ * Radan solmun hidas kierto sekunteina. Rata pyörii maan mukana: yksi
+ * kierros 15 minuutissa eli kahdestoistaosa siitä, mitä merkki itse
+ * kulkee. Silmä näkee sen vain pitkään katsoessa, ja se estää radan
+ * jäämisen ikuisesti samaan kohtaan ruutua.
+ */
+export const ISS_SOLMUN_KIERTO_S = 900;
+/** Merkin halkaisija ruudulla (px) — tilaus 6–10. */
+export const ISS_MERKIN_PX = 8;
+/** Ratakaaren pisteet (koko kierros); takapuoli karsitaan piirrossa. */
+export const ISS_KAAREN_PISTEITA = 240;
+/** Kaaren paksuus ja sävy: kuultava viiva, ei valokaapeli. */
+export const ISS_KAAREN_LEVEYS_PX = 1.1;
+export const ISS_KAAREN_VARI = 'rgba(198, 222, 255, 0.34)';
+/** Merkin sävy: kirkas, hieman sinertävä piste. */
+export const ISS_VARI = '#f2f8ff';
+
+/**
+ * Radan piste: kulma radalla (u) ja nousevan solmun pituus (solmu),
+ * molemmat asteina. Puhdas funktio (tests/satelliitti-avaruus.test.mjs).
+ *
+ * Pallokolmio: sin(lat) = sin(i) · sin(u), ja pituusero solmusta on
+ * atan2(cos(i) · sin(u), cos(u)).
+ */
+export function radanPiste(u, solmu = 0, inklinaatio = ISS_INKLINAATIO) {
+  const r = Math.PI / 180;
+  const i = inklinaatio * r;
+  const a = (Number(u) || 0) * r;
+  const lat = Math.asin(Math.sin(i) * Math.sin(a)) / r;
+  let lng = (Number(solmu) || 0) + Math.atan2(Math.cos(i) * Math.sin(a), Math.cos(a)) / r;
+  lng = ((lng + 180) % 360 + 360) % 360 - 180;
+  return { lat, lng };
+}
+
+/** ISS:n paikka hetkellä t (sekunteina linssin avauksesta). */
+export function issPaikka(t) {
+  const s = Number(t) || 0;
+  return radanPiste((360 * s) / ISS_KIERROS_S, (-360 * s) / ISS_SOLMUN_KIERTO_S);
+}
+
+/** Koko radan pisteet hetkellä t (kaaren piirtoa varten). */
+export function issKaari(t, maara = ISS_KAAREN_PISTEITA) {
+  const s = Number(t) || 0;
+  const solmu = (-360 * s) / ISS_SOLMUN_KIERTO_S;
+  const n = Math.max(8, Math.round(maara));
+  const ulos = [];
+  for (let k = 0; k <= n; k += 1) ulos.push(radanPiste((360 * k) / n, solmu));
+  return ulos;
+}
+
+/**
+ * Onko piste kameran näkemällä puolella? Pallon horisonttitaso on
+ * { X : X · C = säde² }, joten näkyvä puoli on P · C > säde².
+ * Pinnan pisteillä tämä on sama kuin js/pallolauta/lauta.js
+ * pisteEdessa; radan korkeudella se päästää merkin näkyviin myös
+ * horisontin yli, kuten oikeastikin.
+ */
+export function radallaEdessa(kamera, piste, sade) {
+  if (!kamera || !piste) return false;
+  const R = Number(sade) || 0;
+  return kamera.x * piste.x + kamera.y * piste.y + kamera.z * piste.z > R * R;
+}
+
+/*
+ * ── AURINKO SIVULLA (PALLONÄKYMÄ 12) ──────────────────────────────
+ *
+ * Astronautin ikkunassa Maa ei ole tasaisesti valaistu levy: toinen
+ * reuna painuu varjoon ja toisella on kapea kirkas kaistale. Vaikutus
+ * on REUNAN OMA — keskusta jää koskematta, koska muuten koko pallo
+ * tummuisi ja reliefin maasto katoaisi.
+ *
+ * Luvut ovat tilauksesta: varjo 0 → 0,55 viimeisellä 12 %:lla säteestä,
+ * vastakkainen reuna 0 → 0,18 valkoista viimeisellä 8 %:lla. Molemmat
+ * ovat CSS-liukuja ympyrässä, jonka säde on pallon oma säde ruudulla;
+ * liu'un ulkopuolella (yli 100 %) alfa katkaistaan nollaan, jottei
+ * tummennus vuoda tähtitaivaalle.
+ */
+/** Varjon syvin alfa ja sen kaista säteestä. */
+export const VARJON_ALFA = 0.55;
+export const VARJON_KAISTA = 0.12;
+/** Valoreunan voimakkain alfa ja sen kaista säteestä. */
+export const VALOREUNAN_ALFA = 0.18;
+export const VALOREUNAN_KAISTA = 0.08;
+/**
+ * Kummalla puolella aurinko on. `oikea` = valo oikealta, varjo
+ * vasemmalla — sama suunta kuin reliefin omassa varjostuksessa
+ * (luoteesta) ei ole mahdollinen, koska reliefi on pinnan kuva ja tämä
+ * on ruudun ilmiö; tilaus sanoo vain "esim. vasen/oikea".
+ */
+export const AURINGON_PUOLI = 'oikea';
+/**
+ * Puolen häivytys: sivuttaisliuku, joka vie varjon nollaan ruudun
+ * toisella laidalla. Ilman sitä varjo olisi tasainen rengas eikä
+ * sirppi.
+ */
+export const PUOLEN_HAIVYTYS = 0.62;
+
+/** Varjon liukutausta (CSS). Puhdas funktio, jotta testi näkee saman. */
+export function varjonTausta() {
+  const alku = ((1 - VARJON_KAISTA) * 100).toFixed(1);
+  return `radial-gradient(circle closest-side at 50% 50%, rgba(0,0,0,0) ${alku}%,`
+    + ` rgba(0,0,0,${VARJON_ALFA}) 100%, rgba(0,0,0,0) 100%)`;
+}
+
+/** Valoreunan liukutausta (CSS). */
+export function valoreunanTausta() {
+  const alku = ((1 - VALOREUNAN_KAISTA) * 100).toFixed(1);
+  return `radial-gradient(circle closest-side at 50% 50%, rgba(255,255,255,0) ${alku}%,`
+    + ` rgba(255,255,255,${VALOREUNAN_ALFA}) 100%, rgba(255,255,255,0) 100%)`;
+}
+
+/** Puolen maski: `varjo` menee auringosta poispäin, `valo` aurinkoon. */
+export function puolenMaski(laji) {
+  const aurinkoOikealla = AURINGON_PUOLI === 'oikea';
+  const varjoVasemmalla = laji === 'varjo' ? aurinkoOikealla : !aurinkoOikealla;
+  const suunta = varjoVasemmalla ? 'right' : 'left';
+  const loppu = (PUOLEN_HAIVYTYS * 100).toFixed(0);
+  // `to right` = musta vasemmalla → maski jättää vasemman laidan näkyviin.
+  return `linear-gradient(to ${suunta}, #000 0%, rgba(0,0,0,0) ${loppu}%)`;
+}
+
+/** Kalvon elementtien luokat (vartiot etsivät näillä). */
+export const KALVON_LUOKKA = 'astro-kalvo';
+export const ISSIN_LUOKKA = 'astro-iss';
+export const RADAN_LUOKKA = 'astro-rata';
+export const VARJON_LUOKKA = 'astro-varjo';
+export const VALOREUNAN_LUOKKA = 'astro-valoreuna';
+
+/**
+ * AVARUUSVAIHEEN KALVO: ISS, ratakaari ja auringon sivuvalo.
+ *
+ * Palauttaa kahvan, jonka `paivita(nyt, korkeus)` ajetaan linssin
+ * omassa kehyssilmukassa. Kaikki mitat luetaan kotelosta ja kameran
+ * korkeudesta, joten zoom ja laitteen kääntö hoituvat itsestään.
+ *
+ * LIIKKEENVÄHENNYS: `reduced` jäädyttää ISS:n ja radan hetkeen 0 —
+ * merkki ja kaari ovat paikallaan, mutta näkyvissä.
+ */
+export function luoAvaruusKalvo({
+  pallo, kotelo, reduced = false, ikkuna = globalThis,
+} = {}) {
+  const doc = ikkuna?.document;
+  if (!pallo?.getScreenCoords || !kotelo || !doc?.createElement) return null;
+  const SVG = 'http://www.w3.org/2000/svg';
+  const kalvo = doc.createElement('div');
+  kalvo.className = KALVON_LUOKKA;
+  kalvo.style.cssText = 'position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden;';
+
+  const varjo = doc.createElement('div');
+  varjo.className = VARJON_LUOKKA;
+  const valoreuna = doc.createElement('div');
+  valoreuna.className = VALOREUNAN_LUOKKA;
+  for (const [el, tausta, laji] of [[varjo, varjonTausta(), 'varjo'],
+    [valoreuna, valoreunanTausta(), 'valo']]) {
+    const maski = puolenMaski(laji);
+    el.style.cssText = 'position:absolute;left:0;top:0;pointer-events:none;'
+      + `background:${tausta};-webkit-mask-image:${maski};mask-image:${maski};`;
+  }
+
+  const rata = doc.createElementNS(SVG, 'svg');
+  rata.setAttribute('class', RADAN_LUOKKA);
+  rata.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;';
+  const viiva = doc.createElementNS(SVG, 'path');
+  viiva.setAttribute('fill', 'none');
+  viiva.setAttribute('stroke', ISS_KAAREN_VARI);
+  viiva.setAttribute('stroke-width', String(ISS_KAAREN_LEVEYS_PX));
+  viiva.setAttribute('stroke-linecap', 'round');
+  rata.appendChild(viiva);
+
+  const iss = doc.createElement('div');
+  iss.className = ISSIN_LUOKKA;
+  iss.setAttribute('aria-hidden', 'true');
+  iss.style.cssText = `position:absolute;left:0;top:0;width:${ISS_MERKIN_PX}px;height:${ISS_MERKIN_PX}px;`
+    + `margin:${-ISS_MERKIN_PX / 2}px 0 0 ${-ISS_MERKIN_PX / 2}px;border-radius:50%;`
+    + `background:${ISS_VARI};box-shadow:0 0 ${ISS_MERKIN_PX}px rgba(210,230,255,0.85),`
+    + `0 0 ${ISS_MERKIN_PX * 2}px rgba(150,190,255,0.45);pointer-events:none;`;
+
+  kalvo.append(varjo, valoreuna, rata, iss);
+
+  /*
+   * PAIKKA PINOSSA: kirjaston CSS2D-kerroksen ETEEN, jolloin kalvo on
+   * WebGL-kankaan päällä mutta kohdemerkkien ALLA (ks. luvun alku,
+   * kohta 2). Kerros syntyy vasta ensimmäisestä merkistä, joten paikka
+   * tarkistetaan uudelleen, kunnes se löytyy.
+   */
+  let paikallaan = false;
+  const merkkikerros = () => {
+    const merkki = kotelo.querySelector?.('.pallolauta-merkki, .satelliitti-piste');
+    const kerros = merkki?.closest?.('.pallolauta-merkki')?.parentElement
+      ?? merkki?.parentElement ?? null;
+    return kerros && kerros !== kotelo && kotelo.contains(kerros) ? kerros : null;
+  };
+  const sijoita = () => {
+    if (paikallaan) return;
+    const kerros = merkkikerros();
+    if (kerros?.parentElement) {
+      kerros.parentElement.insertBefore(kalvo, kerros);
+      paikallaan = true;
+      return;
+    }
+    if (!kalvo.parentElement) kotelo.appendChild(kalvo);
+  };
+  sijoita();
+
+  let varjostus = true;
+  let sadePx = 0;
+  let issPiste = null;
+  let kaarenPisteita = 0;
+  let aika = 0;
+  let purettu = false;
+
+  const asetaSade = (r) => {
+    if (Math.abs(r - sadePx) < 0.5) return;
+    sadePx = r;
+    const d = `${(r * 2).toFixed(1)}px`;
+    for (const el of [varjo, valoreuna]) {
+      el.style.width = d;
+      el.style.height = d;
+      el.style.left = `calc(50% - ${r.toFixed(1)}px)`;
+      el.style.top = `calc(50% - ${r.toFixed(1)}px)`;
+    }
+  };
+
+  /**
+   * Yksi kehys. `nyt` on kello millisekunteina (performance.now) ja
+   * `korkeus` kameran korkeus pallonsäteinä.
+   */
+  const paivita = (nyt = 0, korkeus = 1) => {
+    if (purettu) return;
+    sijoita();
+    const sade3d = pallo.getGlobeRadius?.() ?? 0;
+    const kamera = pallo.camera?.()?.position;
+    if (!sade3d || !kamera) return;
+    asetaSade(halkaisijaRuudulla(korkeus, { korkeus: kotelo.clientHeight }) / 2);
+    aika = reduced ? 0 : (Number(nyt) || 0) / 1000;
+
+    /* ratakaari: näkyvä puoli katkoviivattomina jaksoina */
+    const osat = [];
+    let jakso = [];
+    for (const p of issKaari(aika)) {
+      const xyz = pallo.getCoords(p.lat, p.lng, ISS_KORKEUS);
+      if (xyz && radallaEdessa(kamera, xyz, sade3d)) {
+        const s = pallo.getScreenCoords(p.lat, p.lng, ISS_KORKEUS);
+        if (s && Number.isFinite(s.x)) { jakso.push(s); continue; }
+      }
+      if (jakso.length > 1) osat.push(jakso);
+      jakso = [];
+    }
+    if (jakso.length > 1) osat.push(jakso);
+    kaarenPisteita = osat.reduce((n, o) => n + o.length, 0);
+    viiva.setAttribute('d', osat
+      .map((o) => o.map((s, i) => `${i ? 'L' : 'M'}${s.x.toFixed(1)} ${s.y.toFixed(1)}`).join(''))
+      .join(' '));
+
+    /*
+     * MERKKI. Paikka lasketaan AINA, myös pallon takana: mittari
+     * (tools/savukkeet/savuke-astro-pallo.mjs) lukee radan etenemisen
+     * siitä, ja `nakyvissa` kertoo erikseen, piirretäänkö merkki.
+     * Takapuolella elementti on peittävyydeltään nolla.
+     */
+    const kohta = issPaikka(aika);
+    const xyz = pallo.getCoords(kohta.lat, kohta.lng, ISS_KORKEUS);
+    const ruudulla = pallo.getScreenCoords(kohta.lat, kohta.lng, ISS_KORKEUS);
+    const nakyvissa = Boolean(xyz && radallaEdessa(kamera, xyz, sade3d));
+    if (ruudulla && Number.isFinite(ruudulla.x)) {
+      issPiste = {
+        x: +ruudulla.x.toFixed(1), y: +ruudulla.y.toFixed(1), ...kohta, nakyvissa,
+      };
+      iss.style.transform = `translate(${ruudulla.x.toFixed(1)}px, ${ruudulla.y.toFixed(1)}px)`;
+    } else {
+      issPiste = { x: null, y: null, ...kohta, nakyvissa: false };
+    }
+    iss.style.opacity = nakyvissa && issPiste.x !== null ? '1' : '0';
+  };
+
+  return {
+    paivita,
+    /** Vartion kytkin: varjo ja valoreuna pois/päälle samaan näkymään. */
+    asetaVarjostus(paalla) {
+      varjostus = Boolean(paalla);
+      varjo.style.opacity = varjostus ? '1' : '0';
+      valoreuna.style.opacity = varjostus ? '1' : '0';
+    },
+    tila: () => ({
+      iss: issPiste,
+      kaarenPisteita,
+      sadePx: +sadePx.toFixed(1),
+      varjostus,
+      paikallaan,
+      aika: +aika.toFixed(2),
+    }),
+    pura() {
+      purettu = true;
+      kalvo.remove?.();
+    },
+  };
 }
 
 /* ═════════════════ 3. NÄKYMÄN ASENNUS JA PURKU ══════════════════ */
@@ -989,6 +1454,16 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
    */
   let reliefiPaalla = false;
   let reliefinUrl = null;
+  /*
+   * TERÄVÄMPI KUVA VAIN LEVEÄLLE RUUDULLE (ks. valitseReliefi).
+   * Valinta tehdään avattaessa eikä muutu kesken linssin: laitteen
+   * kääntäminen ei saa panna toista 134 Mt:n tekstuuria latautumaan.
+   */
+  const reliefinValinta = valitseReliefi({
+    leveys: ikkuna.innerWidth ?? 0, dpr: ikkuna.devicePixelRatio ?? 1,
+  });
+  const reliefiAlkoi = Date.now();
+  let reliefinKesto = 0;
   /** Blob-osoite pois muistista (ks. reliefiTekstuuri). */
   const vapautaReliefi = () => {
     if (reliefinUrl?.startsWith?.('blob:')) {
@@ -996,8 +1471,14 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     }
     reliefinUrl = null;
   };
-  reliefiTekstuuri({}, ikkuna.document, ikkuna)
+  reliefiTekstuuri({
+    leveys: reliefinValinta.leveys,
+    korkeus: reliefinValinta.korkeus,
+    osoite: reliefinValinta.osoite,
+    kokoPallo: reliefinValinta.kokoPallo,
+  }, ikkuna.document, ikkuna)
     .then((url) => {
+      reliefinKesto = Date.now() - reliefiAlkoi;
       if (!url) return;
       // Linssi ehti sulkeutua latauksen aikana: osoite pois heti,
       // eikä pelin omalle pallolle kirjoiteta mitään.
@@ -1037,6 +1518,10 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     reducedMotion: reduced, ikkuna, kerroin: TAHTIEN_KERROIN,
   });
   taivas?.paivita?.(0, 1);
+  /* ---- 2b. ISS, ratakaari ja auringon sivuvalo (luku 2c) ----------- */
+  const kalvo = luoAvaruusKalvo({
+    pallo, kotelo, reduced, ikkuna,
+  });
   /*
    * LINSSIN OMA KEHYSSILMUKKA. Kaksi työtä samassa silmukassa: pölyn
    * hidas ajautuma (tarvitsee kehyskellon; liikkeenvähennyksellä dt
@@ -1065,10 +1550,100 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     nimetPaalla = nyt;
     ikkuna.document?.body?.classList?.toggle?.(NIMIEN_LUOKKA, nyt);
   };
+  /*
+   * ── HIDAS PYÖRIMINEN (kirjaston oma autoRotate) ──────────────────
+   *
+   * Lauta sammuttaa pyörimisen käynnistyessään (js/pallolauta/lauta.js:
+   * *"Lauta ei pyöri itsekseen: se on pelilauta, ei näyteikkuna"*), ja
+   * linssi sytyttää sen omaksi ajakseen. Lähtöarvo otetaan talteen ja
+   * kirjoitetaan purkaessa takaisin — muuten pallo jäisi pyörimään
+   * pelilaudalle linssin sulkemisen jälkeen.
+   */
+  const ohjaimet = pallo.controls?.();
+  const pyorimisenLahto = ohjaimet
+    ? { paalla: ohjaimet.autoRotate, nopeus: ohjaimet.autoRotateSpeed }
+    : null;
+  if (ohjaimet && !reduced) {
+    ohjaimet.autoRotateSpeed = PYORIMISEN_NOPEUS;
+    ohjaimet.autoRotate = true;
+  }
+  /** Pyöriikö pallo juuri nyt (vartio lukee tämän). */
+  const pyorii = () => Boolean(ohjaimet?.autoRotate);
+
+  /**
+   * AVAUSAJON YKSI KEHYS: korkeus aloituksesta leponäkymään pehmeästi.
+   * `dt` on kehysten väli millisekunteina (0 = pelkkä uudelleenpiirto,
+   * esim. kotelon koon muutos kesken ajon).
+   *
+   * AIKA LASKETAAN KEHYKSISTÄ EIKÄ SEINÄKELLOSTA, ja yksittäinen väli
+   * katkaistaan AVAUSAJON_KEHYSKATTO_MS:ään. Syy on MITATTU 16.9.2026
+   * kontissa: linssin avaus tekee samaan aikaan reliefitekstuurin
+   * (8 192 × 4 096 -kuvan purku, ladonta ja PNG-blob, 9–13 s), ja
+   * seinäkellolla koko viiden sekunnin ajo kului SIINÄ — pallo hyppäsi
+   * suoraan loppuasentoon eikä pelaaja nähnyt ajoa lainkaan. Katko
+   * tekee pitkästä nykäyksestä yhden kehyksen mittaisen askeleen,
+   * jolloin ajo näkyy kokonaan myös silloin kun laite tökkii.
+   */
+  const ajaAvaus = (dt) => {
+    if (!avausajo.kaynnissa) return;
+    if (reduced) {
+      avausajo.osuus = 1;
+    } else if (dt > 0) {
+      avausajo.kulunut += Math.min(dt, AVAUSAJON_KEHYSKATTO_MS);
+      avausajo.osuus = Math.min(1, avausajo.kulunut / AVAUSZOOMIN_KESTO_MS);
+    }
+    const k = avausPehmennys(avausajo.osuus);
+    const korkeus = aloitusAlt + (alt - aloitusAlt) * k;
+    // VAIN KORKEUS: kirjasto yhdistää tämän nykyiseen näkymään, joten
+    // pyörivä lat/lng säilyy (ks. luvun 1 perustelu).
+    pallo.pointOfView?.({ altitude: korkeus }, 0);
+    lauta?.heraa?.();
+    if (avausajo.osuus >= 1) paataAvausajo();
+  };
+
+  /**
+   * AJO PÄÄTTYY joko perille tultuaan tai siihen, että pelaaja tarttuu
+   * palloon. Katto lasketaan takaisin leponäkymän kaistaan ja kameran
+   * sen hetkinen korkeus kirjataan linssin omaksi (omaKorkeus), jotta
+   * myöhempi kotelon koon muutos ei nykäise pelaajan omaa zoomia.
+   */
+  const paataAvausajo = () => {
+    if (!avausajo.kaynnissa) return;
+    avausajo.kaynnissa = false;
+    omaKorkeus = pallo.pointOfView?.()?.altitude ?? alt;
+    lauta?.zoomirajat?.({ min: rajat.min, max: rajat.max });
+  };
+
+  /*
+   * PELAAJAN OTE KESKEYTTÄÄ AJON. Pyörimisen sammuttaa pelin oma
+   * elekerros (js/pallo.js asennaPallonEleet), mutta zoom-ajo on
+   * linssin omaa — se on pysäytettävä samasta eleestä, ettei kamera
+   * kiskoisi vastaan sormea. Kuuntelijat ovat kaappausvaiheessa ja
+   * passiivisia, jottei mikään ele hidastu.
+   */
+  const otePalloon = () => paataAvausajo();
+  kotelo?.addEventListener?.('pointerdown', otePalloon, { capture: true, passive: true });
+  kotelo?.addEventListener?.('wheel', otePalloon, { capture: true, passive: true });
+
   const askel = (t) => {
     kehys = ikkuna.requestAnimationFrame?.(askel) ?? 0;
     pinnat.pyyhkaise();
     tahdistaNimet();
+    /*
+     * KEHYSVÄLI AVAUSAJOLLE: katkaistu delta, ei seinäkello (ks.
+     * ajaAvaus). Sama kello kuin tähtien ajautumalla, mutta oma
+     * katkaisunsa — tähdet saavat jäädä nykäisyssä jälkeen, ajo ei.
+     */
+    const kello = t ?? 0;
+    const kehysvali = avausajo.edellinenKehys ? kello - avausajo.edellinenKehys : 0;
+    avausajo.edellinenKehys = kello;
+    ajaAvaus(kehysvali);
+    /*
+     * KALVO JOKA KEHYS. ISS liikkuu radallaan, ja varjon ympyrä
+     * seuraa zoomia — molemmat luetaan kameran korkeudesta, joten
+     * sama kutsu hoitaa myös nipistyksen ja laitteen kääntämisen.
+     */
+    kalvo?.paivita?.(t ?? 0, kameranKorkeus());
     if (!taivas) return;
     const dt = reduced || !edellinen ? 0 : (t - edellinen) / 1000;
     edellinen = t;
@@ -1090,14 +1665,25 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   const avattu = Date.now();
   const mitat = { leveys: 0, korkeus: 0 };
   let alt = 0;
+  let aloitusAlt = 0;
   let rajat = { min: 0, max: 0 };
   let omaKorkeus = 0;
+  /*
+   * AVAUSAJON TILA. `kaynnissa` on tosi siitä hetkestä, kun linssi
+   * avautuu, siihen asti kun zoom on perillä TAI pelaaja tarttuu
+   * palloon. Kello luetaan kehyssilmukan omasta ajasta, jotta zoom ja
+   * tähtien ajautuma kulkevat samassa tahdissa.
+   */
+  const avausajo = {
+    kaynnissa: true, kulunut: 0, osuus: 0, edellinenKehys: 0,
+  };
   const sovita = () => {
     mitat.leveys = kotelo?.clientWidth ?? 0;
     mitat.korkeus = kotelo?.clientHeight ?? 0;
     const uusi = avausKorkeus(mitat);
     if (Math.abs(uusi - alt) < 0.001) return;
     alt = uusi;
+    aloitusAlt = avausKorkeus({ ...mitat, marginaali: ALOITUKSEN_MARGINAALI });
     rajat = zoomirajat(alt);
     /*
      * ZOOMIRAJAT ENSIN, KAMERA VASTA SEN JÄLKEEN. OrbitControls rajaa
@@ -1106,7 +1692,17 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      * PALLO_KORKEUS_MAX 2,5 on puhelimen avauskorkeutta 4,5 pienempi:
      * ilman nostoa kamera vedettäisiin takaisin eikä pallo mahtuisi.
      */
-    lauta?.zoomirajat?.({ min: rajat.min, max: rajat.max });
+    /*
+     * AVAUSAJON AJAKSI KATTO ON ALOITUSKORKEUS. Ajo alkaa YLEMPÄÄ kuin
+     * leponäkymä (pallo 65 % ruudusta), ja OrbitControls vetäisi kameran
+     * takaisin kattoonsa heti ensimmäisellä kehyksellä. Katto lasketaan
+     * takaisin normaaliksi, kun ajo on ohi — silloin pelaajan oma
+     * zoom-ulos on taas se sama kapea kaista kuin ennenkin.
+     */
+    lauta?.zoomirajat?.({
+      min: rajat.min,
+      max: avausajo.kaynnissa ? Math.max(rajat.max, aloitusAlt * 1.02) : rajat.max,
+    });
     /*
      * PELAAJAN OMA ZOOMI EI SAA HYPÄTÄ: kamera siirretään vain, jos se
      * on yhä siinä korkeudessa, johon linssi sen viimeksi vei. Jos
@@ -1118,6 +1714,17 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      * tahdosta mitään, eikä vertailu siihen kelpaa (mitattu 12.9.2026:
      * puhelin jäi korkeuteen 4,12, kun oikea oli 4,49).
      */
+    /*
+     * AVAUSAJON AIKANA KAMERAN VIE SILMUKKA. Sovitus päivittää vain
+     * luvut ja rajat; korkeuden kirjoittaa `ajaAvaus` joka kehyksellä,
+     * jolloin kesken ajon tehty koon muutos (yläpalkin vaihtuminen,
+     * laitteen kääntö) muuttaa ajon päätepistettä eikä nykäise kameraa.
+     */
+    if (avausajo.kaynnissa) {
+      omaKorkeus = alt;
+      ajaAvaus(0);
+      return;
+    }
     const tuore = Date.now() - avattu < ASETTUMISEN_IKKUNA_MS;
     const nyt = pallo.pointOfView()?.altitude ?? 0;
     const omassa = tuore || !omaKorkeus || Math.abs(nyt - omaKorkeus) < omaKorkeus * 0.02;
@@ -1139,6 +1746,19 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     /** Mitatut luvut savukkeelle ja vartijoille. */
     tila: () => ({
       avauskorkeus: +alt.toFixed(3),
+      aloituskorkeus: +aloitusAlt.toFixed(3),
+      korkeusNyt: +(pallo.pointOfView?.()?.altitude ?? 0).toFixed(3),
+      halkaisijaNytPx: Math.round(halkaisijaRuudulla(
+        pallo.pointOfView?.()?.altitude ?? alt, { korkeus: mitat.korkeus },
+      )),
+      halkaisijaAlussaPx: Math.round(halkaisijaRuudulla(aloitusAlt, { korkeus: mitat.korkeus })),
+      avausajo: {
+        kaynnissa: avausajo.kaynnissa,
+        osuus: +avausajo.osuus.toFixed(3),
+        kulunutMs: Math.round(avausajo.kulunut),
+      },
+      pyorii: pyorii(),
+      pyorimisenNopeus: ohjaimet?.autoRotateSpeed ?? null,
       halkaisijaPx: Math.round(halkaisijaRuudulla(alt, { korkeus: mitat.korkeus })),
       kotelo: { ...mitat },
       rajat,
@@ -1150,13 +1770,32 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       pyyhkaisyja: pinnat.kertoja(),
       tekstuuri: Boolean(tekstuuri),
       reliefi: reliefiPaalla,
+      reliefinTarkkuus: reliefinValinta.tunnus,
+      reliefinOsoite: reliefinValinta.osoite,
+      reliefinKestoMs: reliefinKesto,
+      kalvo: kalvo?.tila?.() ?? null,
     }),
+    /** Vartion kytkin: reunavarjo pois/päälle samaan näkymään. */
+    asetaVarjostus: (paalla) => kalvo?.asetaVarjostus?.(paalla),
     pura() {
       purettu = true;
+      avausajo.kaynnissa = false;
+      kotelo?.removeEventListener?.('pointerdown', otePalloon, { capture: true });
+      kotelo?.removeEventListener?.('wheel', otePalloon, { capture: true });
+      /*
+       * PYÖRIMINEN TAKAISIN LÄHTÖARVOONSA ENNEN KAMERAN PALAUTUSTA:
+       * jos autoRotate jäisi päälle, naulattu lähtöpaikka valuisi heti
+       * sivuun eikä pallo palaisi täsmälleen siihen, mistä lähdettiin.
+       */
+      if (ohjaimet && pyorimisenLahto) {
+        ohjaimet.autoRotate = pyorimisenLahto.paalla;
+        ohjaimet.autoRotateSpeed = pyorimisenLahto.nopeus;
+      }
       kokovahti?.disconnect?.();
       if (kehys) ikkuna.cancelAnimationFrame?.(kehys);
       kehys = 0;
       taivas?.pura?.();
+      kalvo?.pura?.();
       pinnat.pura();
       ikkuna.document?.body?.classList?.remove?.('satelliitti-avaruus');
       ikkuna.document?.body?.classList?.remove?.(NIMIEN_LUOKKA);

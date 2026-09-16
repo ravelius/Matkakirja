@@ -4965,3 +4965,94 @@ Luentakuva (`js/fokusvirta.js`) käyttää siksi **pallon omaa
 projektiota**, kun pallolauta on hereillä, ja `nakyvaAlue`-arviota vasta
 sen puuttuessa. Sama korjaus kuuluisi Etsi aarre -napille ja pulun
 paikkamerkille — se on oma eränsä, ei tämän.
+
+## 23. Lento on matka, ei määränpää (16.9.2026)
+
+Omistajan havainto pelin SISÄISESTÄ lennosta (Raamattu,
+KARTTAUUDISTUKSEN PAATOKSET 30): *"lentomatkalla punainen viiva ei
+piirry, kartta zoomaa suoraan kohdemaahan, pulu näkyy lennon aikana."*
+Kolme havaintoa, viisi juurisyytä — kaikki mitattu Chromiumilla
+390 × 844, lento Ateena → Rooma (`tools/savukkeet/savuke-lento-rajaus.mjs`).
+
+**1. Kamera zoomasi kohdemaahan 45 ms:ssa.** `game.actionFly` siirtää
+pelaajan kohdekaupunkiin JO ENNEN animaatiota, ja `ui.movingPlayerId`
+asetetaan vasta `animatePawn`issa. Siinä välissä `ui.run`in oma render
+osui `lauta.js`:n *"KAMERA SEURAA TELEPORTTIA"* -haaraan: kuljettajan
+rajausajo alkoi t = 21 ms ja `saavu()` ohitti sen t = 45 ms. Haara ei
+enää laukea, kun `ui.lentoKaari` on päällä — se on tosi täsmälleen
+lennon ajan (doFly asettaa ennen `actionFly`ta, nollaa vasta kun
+nappula on maassa).
+
+**2. Rajaus ei mahtunut ruutuun.** Kapealla ruudulla kameran
+`korkeuteenSovitus` (PÄÄTÖKSET 17) sovittaa laatikon RUUDUN KORKEUTEEN
+ja antaa sen vuotaa sivuille. Maalle se on oikein (maa mahdollisimman
+isona), matkalle tuhoisa: lennon laatikosta (375 × 154 lautayksikköä)
+näkyi 85 yksikköä eli alle neljännes. Kameran kohteelle lisättiin
+`kokonaan: true`, joka ohittaa korkeussovituksen ja sovittaa koko
+laatikon — lennon rajaus on ainoa käyttäjä.
+
+**3. Marginaali 0,35 → 0,158.** `marginaali` on osuus LAATIKOSTA joka
+reunalla, joten laatikon pää päätyy ruudun reunasta `m / (1 + 2m)`
+päähän: 0,35 antoi 20,6 % (matkasta näkyi lyhyt pätkä keskellä),
+0,158 antaa 12 %. Mitattu tulos 390 × 844: lähtö 88,0 % ja kohde
+14,1 % ruudun leveydestä.
+
+**4. Maan uloszoomauskatto puristi kuvan takaisin.**
+`matkaZoomirajat` nollasi vain linssin syrjäytyksen, ei `maanLaatikko`n
+kattoa: rajausajo nousi näkyvään leveyteen 385 yksikköä ja
+`tahdistaZoomirajat` veti sen kesken lennon 205:een (kohdemaan katto),
+jolloin lähtökaupunki valui ruudun ulkopuolelle (x = 1,21 ruudun
+leveyttä). `maanZoomiraja()` palauttaa nyt `null` matkan ajan — matka
+on määritelmän mukaan maan ikkunaa isompi. Katto palaa perillä
+(`palaaMaanRajaukseen`). Sama korjaus teki vihreäksi
+savuke-liiku.mjs:n vartion *"lento: koko matka näkyi ruudulla matkan
+ajan"*, joka oli punainen esiolemassa.
+
+**5. Kamera-ajo odotetaan, kone lähtee vasta sitten.** `hyppaa` ei enää
+heitä ajoa menemään (`void`) vaan lähettää koneen ajon lupauksesta
+(`.then(lahde, lahde)`), ja ajo venyi 900 → 1100 ms. Kone seisoo sen
+ajan lähtökaupungin yllä oikeassa asennossa (`aseta`), joten ruudulla ei
+ole hetkeäkään tyhjää. Odotuksen aikana purku ja ohitus ratkaistaan
+`lentoOdottaa`-tilasta, ettei katkaistu lento jäisi odottamaan lupausta.
+Mitattu: kameran keskipiste ja mittakaava eivät muutu lennon aikana
+lainkaan (poikkeama 0,000).
+
+**6. Punainen viiva oli vain avauslennon kutsu.** `lauta.reitit.jalki`
+(paksu sinooperi, geometria kerran ja kasvu katkoviivan osuudella) oli
+`avaus.js`:n oma; pelin lento ei koskenut siihen, eikä jäljen datumia
+ollut kerroksessa yhdelläkään lennon näytteellä. Nyt `siirto.js`
+rakentaa saman 64 pisteen kaaren (`lentokaarenKohta`, korkeus
+`REITIN_KORKEUS`) lennon alussa ja piirtää osuuden JOKA KEHYS samasta
+vaiheesta kuin koneen paikan — viivan kärki on koneen alla koko matkan.
+`laske()` piirtää jäljen täyteen ja poistaa sen kerroksen omalla
+siirtymällä. Avauslento (`omaKamera`) piirtää oman jälkensä kuten ennen,
+eikä kuljettaja kirjoita samaan kerrokseen kahdesti.
+
+**7. Pulu jäi ruudulle kolmessa paikassa.** Pallolaudan lento menee
+doFly:n KALVOTTOMAAN haaraan (pack `maailmankartta`, MANNER_LENTO_MS),
+jossa `body.flight-active` ei ole päällä. Uusi runkoluokka
+`lento-kesken` (doFly, poistuu `finally`ssä ja on js/main.js:n
+siivouslistalla) vie kelluvan napin ja paneelin samalla häivytyksellä
+kuin kalvolento — ja lisäksi:
+
+- `.pollo-nappi.pollo-ilmestyy` ajaa keyframe-animaation, joka on
+  kaskadissa yhtä painava kuin väistö mutta MYÖHEMPI: kun nappi syntyi
+  uudestaan kesken lennon, se animoitui takaisin näkyviin (25 näytettä
+  27:stä luki peittävyydeksi 1). Kolmen luokan valitsin voittaa
+  järjestyksestä riippumatta.
+- `.livia-kasvot-pinta.livia-lentonayttamo` on BODYN lapsi
+  (js/livia-eleet.js), 152 × 304 px `position: fixed` — napin häivytys
+  ei koske siihen lainkaan. Sama keino kuin linssissä
+  (`body.aikajana-pulu-piilossa`): `visibility: hidden`, jota myös
+  livia-eleiden oma näkyvyystesti lukee. Pulun ohjekupla
+  (`.pollo-vihje`) menee samaa tietä.
+
+Sääntö koskee vain pelin omaa lentoa: avauslennossa (`body.kartalento`)
+Livia puhuu ja kuuluu kohtaukseen.
+
+**Vartio:** `tools/savukkeet/savuke-lento-rajaus.mjs` (390 ja 1400,
+31 vartiota ja kolme vastakoetta). Se mittaa päiden ruutupaikat, kameran
+liikkumattomuuden, jäljen kasvun suoraan viivakerroksen kutsuista ja
+pulun kolme elementtiä — ja ottaa raporttikuvan jäädyttämällä lennon
+puoliväliin, koska Playwrightin kuvankaappaus kestää tässä kontissa
+16–28 sekuntia eli monta lentoa.

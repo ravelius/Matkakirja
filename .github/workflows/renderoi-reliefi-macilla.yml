@@ -201,7 +201,7 @@ jobs:
           set -euo pipefail
           TIEDOSTOT="assets/linssit/topografia.webp assets/linssit/topografia-pallo.webp"
           if [ "${{ inputs.koko_pallo }}" = "true" ]; then
-            TIEDOSTOT="$TIEDOSTOT pallo-topografia-ulos/topografia-pallo-koko-${TUNNISTE}.webp"
+            TIEDOSTOT="$TIEDOSTOT pallo-topografia-ulos/topografia-pallo-koko-8k-${TUNNISTE}.webp"
             TIEDOSTOT="$TIEDOSTOT pallo-topografia-ulos/topografia-pallo-koko-4k-${TUNNISTE}.webp"
           fi
           for f in $TIEDOSTOT; do
@@ -241,7 +241,7 @@ jobs:
           set -euo pipefail
           PAATE="https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
 
-          for nimi in "topografia-pallo-koko-${TUNNISTE}" "topografia-pallo-koko-4k-${TUNNISTE}"; do
+          for nimi in "topografia-pallo-koko-8k-${TUNNISTE}" "topografia-pallo-koko-4k-${TUNNISTE}"; do
             aws s3 cp "pallo-topografia-ulos/${nimi}.webp" \
               "s3://${R2_BUCKET}/matkakirja/linssit/${nimi}.webp" \
               --endpoint-url "$PAATE" \
@@ -255,7 +255,7 @@ jobs:
           set -euo pipefail
           NIMET="topografia-${TUNNISTE} topografia-pallo-${TUNNISTE}"
           if [ "${{ inputs.koko_pallo }}" = "true" ]; then
-            NIMET="$NIMET topografia-pallo-koko-${TUNNISTE} topografia-pallo-koko-4k-${TUNNISTE}"
+            NIMET="$NIMET topografia-pallo-koko-8k-${TUNNISTE} topografia-pallo-koko-4k-${TUNNISTE}"
           fi
           for nimi in $NIMET; do
             OSOITE="https://media.matkakirja.app/matkakirja/linssit/${nimi}.webp"
@@ -297,7 +297,7 @@ jobs:
               echo "- https://media.matkakirja.app/matkakirja/linssit/topografia-${TUNNISTE:-?}.webp"
               echo "- https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-${TUNNISTE:-?}.webp"
               if [ "${{ inputs.koko_pallo }}" = "true" ]; then
-                echo "- https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-${TUNNISTE:-?}.webp"
+                echo "- https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-8k-${TUNNISTE:-?}.webp"
                 echo "- https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-4k-${TUNNISTE:-?}.webp"
               fi
             fi

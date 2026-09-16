@@ -58,7 +58,7 @@ node tools/tee-pallotopografia-koko.mjs \
 Ulos tulee kaksi tiedostoa:
 
 ```
-topografia-pallo-koko-<tunniste>.webp      8192 × 4096
+topografia-pallo-koko-8k-<tunniste>.webp      8192 × 4096
 topografia-pallo-koko-4k-<tunniste>.webp   4096 × 2048
 ```
 
@@ -149,7 +149,7 @@ ajon kuitista):
 
 | Tiedosto | Mitat | Arvioitu koko |
 | --- | --- | --- |
-| `topografia-pallo-koko-<tunniste>.webp` | 8192 × 4096 | ~3–6 Mt |
+| `topografia-pallo-koko-8k-<tunniste>.webp` | 8192 × 4096 | ~3–6 Mt |
 | `topografia-pallo-koko-4k-<tunniste>.webp` | 4096 × 2048 | ~0,9–1,6 Mt |
 
 Ajoaika: 1′-palat (648 kpl) latautuvat ensimmäisellä kerralla R2:sta,
@@ -158,15 +158,22 @@ puolisen tuntia; työnkulun aikakatto on 120 min.
 
 ## 5. Kytkentä peliin — VASTA AJON JÄLKEEN
 
-Pelin puoli on valmis mutta **kytkin on pois päältä**
-(`js/linssit/satelliitti-avaruus.js`):
+Pelin puoli on valmis mutta **kytkin on pois päältä**. Vakiot ja valinta
+ovat v1921:n jälkeen omassa moduulissaan `js/linssit/reliefikuva.js`,
+jota käyttävät MOLEMMAT pallolinssit (Astronautin kamera ja kartan
+topografialinssin pohjakuva):
 
 ```js
 export const RELIEFI_KOKO_PALLO = false;   // ← tämä käännetään
-export const RELIEFIN_KOKO      = { osoite: '…topografia-pallo-koko-20260916.webp',    leveys: 8192, korkeus: 4096 };
-export const RELIEFIN_KOKO_4K   = { osoite: '…topografia-pallo-koko-4k-20260916.webp', leveys: 4096, korkeus: 2048 };
-export function valitseReliefi({ kokoPallo = RELIEFI_KOKO_PALLO, tarkka = false }) { … }
+export const RELIEFIN_KOKO_4K = { osoite: '…topografia-pallo-koko-4k-20260916.webp', leveys: 4096, korkeus: 2048 };
+export const RELIEFIN_KOKO_8K = { osoite: '…topografia-pallo-koko-8k-20260916.webp', leveys: 8192, korkeus: 4096 };
+export function valitseReliefi({ leveys, dpr, salli8k, kokoPallo = RELIEFI_KOKO_PALLO }) { … }
 ```
+
+**Tarkkuuden valinta ei muutu**: sama ruutukynnys (CSS-leveys ≥ 1024 JA
+laitepikseleitä ≥ 1024) valitsee 8k:n tai 4k:n kummallakin kuvaparilla,
+joten kytkin vaihtaa vain osoitteen — ei muistinkulutusta. Siksi koko
+pallon kuvia on kaksi, samoilla mitoilla kuin nykyiset.
 
 Kytkentä-PR:ssä (oma pieni PR, versionosto mukana):
 
@@ -176,18 +183,17 @@ Kytkentä-PR:ssä (oma pieni PR, versionosto mukana):
 3. Päivitä testi *"koko pallon reliefi on VALMIS mutta EI vielä
    kytketty"* vastaamaan uutta tilaa
    (`tests/satelliitti-avaruus.test.mjs`).
-4. Katso pallo 390 px:n ja 1400 px:n leveydellä: Etelämantereen
-   reunaviivan on erotuttava.
+4. Katso pallo 390 px:n ja 1400 px:n leveydellä molemmilla linsseillä:
+   Etelämantereen reunaviivan on erotuttava.
+5. Muista `sw.js`:n esilataus/R2-reititys, jos vanhat osoitteet on
+   siellä nimetty.
 
-Kun kytkin on tosi, `reliefiTekstuuri` **ohittaa napojen häivytyksen**
-(`napaLiuku`) — jää tulee kuvasta, ja häivytys söisi juuri sen
-rantaviivan, jonka takia kuva tehtiin. Generoitu Maa jää yhä pohjalle
-vakuudeksi, mutta koko pallon kuva peittää sen kokonaan. Valon
-vastakaava (`VALON_KOMPENSAATIO`) toimii ennallaan molemmilla kuvilla.
-
-Peli lataa oletuksena **4k-version**: 8192 × 4096 olisi kankaana 134 Mt
-RGBA:na eikä puhelin sitä kestä. Iso jää työpöydän varaan, jos zoomia
-joskus jatketaan (`valitseReliefi({ kokoPallo: true, tarkka: true })`).
+Kun kytkin on tosi, `reliefiTekstuuri` saa valinnalta `kokoPallo: true`
+ja **ohittaa napojen häivytyksen** (`napaLiuku`) — jää tulee kuvasta, ja
+häivytys söisi juuri sen rantaviivan, jonka takia kuva tehtiin.
+Generoitu Maa jää yhä pohjalle vakuudeksi, mutta koko pallon kuva peittää
+sen kokonaan. Valon vastakaava (`VALON_KOMPENSAATIO`) ja kylläisyyden
+lasku (`RELIEFIN_SATURAATIO`) toimivat ennallaan molemmilla kuvilla.
 
 ## 6. Muut muutokset tässä PR:ssä
 
@@ -201,6 +207,9 @@ joskus jatketaan (`valitseReliefi({ kokoPallo: true, tarkka: true })`).
   leveyspiireillä. Koko maailman ajot eivät muutu.
 - **`.gitignore`**: `pallo-topografia-ulos/` — megatavujen kuvat eivät
   kuulu repoon.
+- **`js/linssit/reliefikuva.js`** (v1921:n uusi moduuli): koko pallon
+  kytkin, osoitteet ja `valitseReliefi`-laajennus `kokoPallo`-lipulla.
+  Sama valinta palvelee molempia pallolinssejä, kuten v1921 linjasi.
 
 Ei versionostoa: peliin ei tullut käytössä olevaa muutosta, vain työkalu
 ja työnkulku. Versio nostetaan kytkentä-PR:ssä.

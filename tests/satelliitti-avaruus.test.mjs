@@ -40,7 +40,7 @@ import {
   ZOOMIN_KAUIN, ZOOMIN_LAHIN, ZOOMIN_POHJA, reliefinAlfa, valokerroin, liuunPysakit,
   avaaAvaruusnakyma, avausKorkeus, halkaisijaRuudulla, maapallonVarit, nimetNakyvat,
   pilvipaino, vyohykeVari, zoomirajat,
-  JAAN_VARI, RELIEFI_KOKO_PALLO, RELIEFIN_KOKO, RELIEFIN_KOKO_4K, RELIEFIN_LEVEYS,
+  JAAN_VARI, RELIEFI_KOKO_PALLO, RELIEFIN_KOKO_8K, RELIEFIN_KOKO_4K, RELIEFIN_LEVEYS,
   RELIEFIN_KORKEUS, RELIEFIN_OSOITE, valitseReliefi,
 } from '../js/linssit/satelliitti-avaruus.js';
 import {
@@ -373,6 +373,15 @@ function valepallo() {
     needsUpdate: false,
   };
   const kuuntelijat = [];
+  const ohjaimet = {
+    autoRotate: false,
+    autoRotateSpeed: 2,
+    addEventListener: (n, f) => kuuntelijat.push([n, f]),
+    removeEventListener: (n, f) => {
+      const i = kuuntelijat.findIndex(([a, b]) => a === n && b === f);
+      if (i >= 0) kuuntelijat.splice(i, 1);
+    },
+  };
   const pallo = {
     tila,
     materiaali,
@@ -391,13 +400,11 @@ function valepallo() {
     globeMaterial: () => materiaali,
     // Näyttämön läpikäynti lasketaan: pyyhkäisyn on ajettava avatessa.
     scene: () => { pallo.pyyhkaisyja += 1; return { traverse() {} }; },
-    controls: () => ({
-      addEventListener: (n, f) => kuuntelijat.push([n, f]),
-      removeEventListener: (n, f) => {
-        const i = kuuntelijat.findIndex(([a, b]) => a === n && b === f);
-        if (i >= 0) kuuntelijat.splice(i, 1);
-      },
-    }),
+    // YKSI JA SAMA OHJAINOLIO kuten kirjastossa: linssi ottaa
+    // pyörimisen lähtöarvon talteen ja kirjoittaa sen purkaessa
+    // takaisin, eikä se onnistuisi, jos jokainen kutsu antaisi uuden.
+    ohjaimet,
+    controls: () => ohjaimet,
     // Tähtitaivas jää pois ilman kirjaston hiukkaskerrosta (luoTahtitaivas
     // palauttaa null) — juuri niin kuin selaimessa vanhalla kirjastolla.
     kuuntelijat,
@@ -483,8 +490,16 @@ test('avaruusnäkymä asettuu ja purkautuu täsmälleen ennalleen', () => {
   assert.ok(pallo.tila.pov.altitude > PALLO_KORKEUS_MAX, 'kamera ei noussut');
   assert.equal(pallo.materiaali.shininess, 0, 'kiilto jäi päälle');
   assert.equal(pallo.materiaali.specular.getHex(), 0, 'heijastus jäi päälle');
-  assert.equal(lauta.rajat.length, 1);
-  assert.ok(lauta.rajat[0].min > 0.5 && lauta.rajat[0].max > lauta.rajat[0].min);
+  /*
+   * ZOOMIRAJAT KIRJOITETAAN KAHDESTI: ensin avausajon nostettu katto
+   * (kamera aloittaa leponäkymää ylempää), sitten leponäkymän oma
+   * kaista, kun ajo on perillä. Liikkeenvähennyksellä ajo on perillä
+   * heti, joten molemmat tulevat samassa avauksessa.
+   */
+  assert.equal(lauta.rajat.length, 2, JSON.stringify(lauta.rajat));
+  assert.ok(lauta.rajat[0].max > lauta.rajat[1].max,
+    'avausajon katto ei ollut leponäkymää korkeammalla');
+  assert.ok(lauta.rajat[1].min > 0.5 && lauta.rajat[1].max > lauta.rajat[1].min);
   assert.ok(ikkuna.luokat.has('satelliitti-avaruus'), 'ruumiin luokka puuttuu');
   assert.ok(!ikkuna.luokat.has(NIMIEN_LUOKKA), 'nimet olivat päällä heti avattaessa');
   // Pinta vaihtui oikeasti: laattamoottori kiinni, pohjapallolla oma kuva.
@@ -638,7 +653,229 @@ test('reliefiTekstuuri palaa nullina ilman canvasia eikä kaadu', async () => {
   assert.equal(await reliefiTekstuuri({}, { createElement: () => ({}) }, {}), null);
 });
 
-/* ══ 11. koko pallon reliefi: navat mukaan (omistaja 16.9.2026) ═════ */
+/* ══ 11. ISS, auringon sivuvalo ja kylläisyys (omistaja 16.9.2026) ══ */
+
+/*
+ * Raamattu, "ASTRONAUTIN KAMERA: VALOKUVANÄKYMÄ UUSIKSI 2",
+ * PALLONÄKYMÄ 11–13: kiertävä ISS, auringon sivuvalo pallon reunalla
+ * ja hillitympi kylläisyys. Kaavat mitataan tässä; pikselit ja DOM
+ * ovat savukkeessa tools/savukkeet/savuke-astro-pallo.mjs.
+ */
+
+test('ISS kulkee 51,6 asteen radalla eikä käy koskaan navoilla', async () => {
+  const { radanPiste, issPaikka, ISS_INKLINAATIO, ISS_KIERROS_S } = await import('../js/linssit/satelliitti-avaruus.js');
+  assert.equal(ISS_INKLINAATIO, 51.6);
+  // Nouseva solmu: päiväntasaajalla ja solmun pituudella.
+  const solmussa = radanPiste(0, 25);
+  assert.ok(Math.abs(solmussa.lat) < 1e-9, String(solmussa.lat));
+  assert.ok(Math.abs(solmussa.lng - 25) < 1e-9, String(solmussa.lng));
+  // Neljännes radasta: täsmälleen inklinaation verran pohjoista.
+  assert.ok(Math.abs(radanPiste(90).lat - ISS_INKLINAATIO) < 1e-9);
+  assert.ok(Math.abs(radanPiste(270).lat + ISS_INKLINAATIO) < 1e-9);
+  // Koko kierros: leveysaste pysyy kaistassa, pituus laillisena.
+  for (let u = 0; u < 360; u += 3) {
+    const p = radanPiste(u);
+    assert.ok(Math.abs(p.lat) <= ISS_INKLINAATIO + 1e-9, `${u}: ${p.lat}`);
+    assert.ok(p.lng >= -180 && p.lng <= 180, `${u}: ${p.lng}`);
+  }
+  // Kierrosaika on tilauksen kaistassa 60–90 s ja merkki liikkuu
+  // kahdessa sekunnissa (vartion mittari).
+  assert.ok(ISS_KIERROS_S >= 60 && ISS_KIERROS_S <= 90, String(ISS_KIERROS_S));
+  const a = issPaikka(0);
+  const b = issPaikka(2);
+  assert.ok(Math.abs(a.lat - b.lat) + Math.abs(a.lng - b.lng) > 1,
+    `ISS ei liikkunut kahdessa sekunnissa: ${JSON.stringify(a)} ${JSON.stringify(b)}`);
+  // Kierroksen jälkeen ollaan lähellä lähtöä, mutta rata on kiertynyt
+  // maan mukana: pituus on siirtynyt, leveys palannut.
+  const kierros = issPaikka(ISS_KIERROS_S);
+  assert.ok(Math.abs(kierros.lat - a.lat) < 1e-6, String(kierros.lat));
+  assert.ok(Math.abs(kierros.lng - a.lng) > 1, `rata ei pyörinyt: ${kierros.lng} vs ${a.lng}`);
+});
+
+test('ratakaari kiertää ympäri ja horisonttitesti karsii takapuolen', async () => {
+  const { issKaari, radallaEdessa, ISS_KORKEUS, ISS_KAAREN_PISTEITA } = await import('../js/linssit/satelliitti-avaruus.js');
+  const kaari = issKaari(0);
+  assert.equal(kaari.length, ISS_KAAREN_PISTEITA + 1);
+  assert.ok(Math.abs(kaari[0].lat - kaari[kaari.length - 1].lat) < 1e-9, 'kaari ei sulkeudu');
+  // Radan korkeus on 6 % pinnan yläpuolella.
+  assert.ok(Math.abs(ISS_KORKEUS - 0.06) < 1e-9);
+  // Kamera +Z:llä etäisyydellä 3R: etupuoli näkyy, takapuoli ei.
+  const R = 100;
+  const kamera = { x: 0, y: 0, z: 3 * R };
+  const edessa = { x: 0, y: 0, z: R * 1.06 };
+  const takana = { x: 0, y: 0, z: -R * 1.06 };
+  const reunalla = { x: R * 1.06, y: 0, z: 0 };
+  assert.equal(radallaEdessa(kamera, edessa, R), true);
+  assert.equal(radallaEdessa(kamera, takana, R), false);
+  // Horisontin päällä oleva piste on radan korkeudella yhä piilossa
+  // (P · C = 0 < R²), kuten pallon oma horisontti sanoo.
+  assert.equal(radallaEdessa(kamera, reunalla, R), false);
+  assert.equal(radallaEdessa(null, edessa, R), false);
+});
+
+test('auringon sivuvalo koskee vain reunaa ja jättää keskustan rauhaan', async () => {
+  const m = await import('../js/linssit/satelliitti-avaruus.js');
+  assert.equal(m.VARJON_ALFA, 0.55);
+  assert.equal(m.VARJON_KAISTA, 0.12);
+  assert.equal(m.VALOREUNAN_ALFA, 0.18);
+  assert.equal(m.VALOREUNAN_KAISTA, 0.08);
+  // Varjo alkaa vasta 88 %:n säteellä ja katkeaa nollaan pallon reunaan
+  // (ei vuotoa tähtitaivaalle).
+  const varjo = m.varjonTausta();
+  assert.match(varjo, /rgba\(0,0,0,0\) 88\.0%/);
+  assert.match(varjo, /rgba\(0,0,0,0\.55\) 100%, rgba\(0,0,0,0\) 100%/);
+  const valo = m.valoreunanTausta();
+  assert.match(valo, /rgba\(255,255,255,0\) 92\.0%/);
+  assert.match(valo, /rgba\(255,255,255,0\.18\) 100%, rgba\(255,255,255,0\) 100%/);
+  // Puolet ovat vastakkaiset: varjo poispäin auringosta.
+  assert.notEqual(m.puolenMaski('varjo'), m.puolenMaski('valo'));
+  assert.match(m.puolenMaski('varjo'), /to right/);
+  assert.match(m.puolenMaski('valo'), /to left/);
+});
+
+test('reliefin 8k-kuva tulee vain leveälle ruudulle, puhelin saa 4k:n', async () => {
+  const m = await import('../js/linssit/satelliitti-avaruus.js');
+  assert.equal(m.RELIEFIN_8K_LEVEYS, 8192);
+  assert.equal(m.RELIEFIN_8K_KORKEUS, 4096);
+  const puhelin = m.valitseReliefi({ leveys: 390, dpr: 3 });
+  assert.equal(puhelin.tunnus, '4k');
+  assert.equal(puhelin.osoite, m.RELIEFIN_OSOITE);
+  // Leveä puhelin kolminkertaisella pikselisuhteella on yhä puhelin.
+  assert.equal(m.valitseReliefi({ leveys: 430, dpr: 3 }).tunnus, '4k');
+  const tyopoyta = m.valitseReliefi({ leveys: 1400, dpr: 1 });
+  assert.equal(tyopoyta.tunnus, m.RELIEFIN_8K_KAYTOSSA ? '8k' : '4k');
+  // Pääkytkin vie kaikki takaisin 4k:hon.
+  assert.equal(m.valitseReliefi({ leveys: 1400, dpr: 2, salli8k: false }).tunnus, '4k');
+});
+
+test('kylläisyys lasketaan suodattimella ja varareitti on sekoitus', async () => {
+  const { kyllaisyysAlas, RELIEFIN_SATURAATIO } = await import('../js/linssit/satelliitti-avaruus.js');
+  assert.equal(RELIEFIN_SATURAATIO, 0.8);
+  const kutsut = [];
+  const tukeva = {
+    filter: 'none', globalAlpha: 1, globalCompositeOperation: 'source-over', fillStyle: '',
+    drawImage: () => kutsut.push('draw'), fillRect: () => kutsut.push('fill'),
+  };
+  assert.equal(kyllaisyysAlas(tukeva, {}, 4, 2), 'suodatin');
+  assert.deepEqual(kutsut, ['draw']);
+  assert.equal(tukeva.filter, 'none', 'suodatin jäi päälle');
+  // Selain ilman kankaan suodatinta: arvo ei jää kiinni → sekoitus.
+  const vanha = {
+    globalAlpha: 1, globalCompositeOperation: 'source-over', fillStyle: '',
+    get filter() { return 'none'; }, set filter(_) { /* ei tue */ },
+    drawImage: () => {}, fillRect: () => {},
+  };
+  assert.equal(kyllaisyysAlas(vanha, {}, 4, 2), 'sekoitus');
+  assert.equal(vanha.globalAlpha, 1);
+  assert.equal(vanha.globalCompositeOperation, 'source-over');
+});
+
+test('avaruuskalvo palaa nullina ilman koteloa eikä kaada linssiä', async () => {
+  const { luoAvaruusKalvo } = await import('../js/linssit/satelliitti-avaruus.js');
+  assert.equal(luoAvaruusKalvo({}), null);
+  assert.equal(luoAvaruusKalvo({ pallo: { getScreenCoords: () => ({}) }, kotelo: null }), null);
+});
+
+/* ══ 12. avausajo: koko pallo → melkein koko ruutu (16.9.2026) ═════ */
+
+/*
+ * Raamattu LISÄYS 4, kohta 18 (omistaja, sanatarkasti): *"maapallo
+ * voisi pyöriä hitaasti kun linssi avautuu ja samalla zoomautua alussa
+ * pehmeästi lähemmäs niin että alussa pallo näkyy kokonaan ja lopuksi
+ * pallo peittää melkein koko ruudun ja jää sen jälkeen vain hitaasti
+ * pyörimään, kunnes pelaaja alkaa ohjata palloa, jolloin pyöriminen
+ * loppuu."*
+ */
+
+test('avausajo alkaa koko pallosta ja päättyy melkein koko ruutuun', async () => {
+  const m = await import('../js/linssit/satelliitti-avaruus.js');
+  for (const [nimi, mitat] of Object.entries(RUUDUT)) {
+    const kapein = Math.min(mitat.leveys, mitat.korkeus);
+    const alku = m.avausKorkeus({ ...mitat, marginaali: m.ALOITUKSEN_MARGINAALI });
+    const loppu = m.avausKorkeus(mitat);
+    const dAlku = m.halkaisijaRuudulla(alku, { korkeus: mitat.korkeus }) / kapein;
+    const dLoppu = m.halkaisijaRuudulla(loppu, { korkeus: mitat.korkeus }) / kapein;
+    // Alussa pallo näkyy KOKONAAN väljästi: 60–70 % kapeimmasta sivusta.
+    assert.ok(dAlku >= 0.6 && dAlku <= 0.7, `${nimi}: alku ${(dAlku * 100).toFixed(1)} %`);
+    // Lopuksi se peittää melkein koko ruudun: 90–95 %.
+    assert.ok(dLoppu >= 0.9 && dLoppu <= 0.95, `${nimi}: loppu ${(dLoppu * 100).toFixed(1)} %`);
+    // Ajo menee SISÄÄNPÄIN ja kasvattaa pallon vähintään 1,3-kertaiseksi.
+    assert.ok(alku > loppu, `${nimi}: ajo ei tule lähemmäs`);
+    assert.ok(dLoppu / dAlku >= 1.3, `${nimi}: kasvu ${(dLoppu / dAlku).toFixed(2)}×`);
+  }
+});
+
+test('avausajon pehmennys on ease-in-out ja pysyy kaistassa', async () => {
+  const { avausPehmennys, AVAUSZOOMIN_KESTO_MS } = await import('../js/linssit/satelliitti-avaruus.js');
+  assert.equal(avausPehmennys(0), 0);
+  assert.equal(avausPehmennys(1), 1);
+  assert.ok(Math.abs(avausPehmennys(0.5) - 0.5) < 1e-9);
+  // Rajat eivät vuoda: alle nollan ja yli ykkösen leikataan.
+  assert.equal(avausPehmennys(-3), 0);
+  assert.equal(avausPehmennys(7), 1);
+  assert.equal(avausPehmennys('roska'), 0);
+  // Ease-IN: alussa liike on hitaampaa kuin lineaarinen…
+  assert.ok(avausPehmennys(0.2) < 0.2, String(avausPehmennys(0.2)));
+  // …ja ease-OUT: lopussa se hidastuu takaisin.
+  assert.ok(avausPehmennys(0.8) > 0.8, String(avausPehmennys(0.8)));
+  // Monotoninen: zoom ei nykäise taaksepäin kertaakaan.
+  let edellinen = -1;
+  for (let i = 0; i <= 100; i += 1) {
+    const v = avausPehmennys(i / 100);
+    assert.ok(v >= edellinen, `pehmennys kääntyi kohdassa ${i}`);
+    edellinen = v;
+  }
+  // Kesto on tilauksen kaistassa 4–6 s.
+  assert.ok(AVAUSZOOMIN_KESTO_MS >= 4000 && AVAUSZOOMIN_KESTO_MS <= 6000,
+    String(AVAUSZOOMIN_KESTO_MS));
+});
+
+test('pyörimisnopeus on 0,16 °/s kirjaston omalla kaavalla', async () => {
+  const { PYORIMISTA_ASTETTA_S, PYORIMISEN_NOPEUS } = await import('../js/linssit/satelliitti-avaruus.js');
+  assert.equal(PYORIMISTA_ASTETTA_S, 0.16);
+  // OrbitControls: kulma = 2π/60 · autoRotateSpeed radiaania sekunnissa
+  // (three-render-objects antaa update(dt):lle kehysajan), eli
+  // 6 · speed astetta sekunnissa.
+  assert.ok(Math.abs(PYORIMISEN_NOPEUS * 6 - PYORIMISTA_ASTETTA_S) < 1e-12);
+});
+
+test('linssi sytyttää pyörimisen ja purku palauttaa sen ennalleen', () => {
+  const pallo = valepallo();
+  const lauta = valelauta(pallo);
+  const ikkuna = valeikkuna();
+  pallo.ohjaimet.autoRotate = false;
+  pallo.ohjaimet.autoRotateSpeed = 2;
+  const nakyma = avaaAvaruusnakyma(lauta, { ui: { reducedMotion: false }, ikkuna });
+  assert.equal(pallo.ohjaimet.autoRotate, true, 'pallo ei jäänyt pyörimään');
+  assert.ok(Math.abs(pallo.ohjaimet.autoRotateSpeed * 6 - 0.16) < 1e-12,
+    String(pallo.ohjaimet.autoRotateSpeed));
+  assert.equal(nakyma.tila().pyorii, true);
+  nakyma.pura();
+  // Lauta ei pyöri itsekseen: lähtöarvo takaisin, myös nopeus.
+  assert.equal(pallo.ohjaimet.autoRotate, false, 'pyöriminen jäi pelilaudalle');
+  assert.equal(pallo.ohjaimet.autoRotateSpeed, 2);
+});
+
+test('liikkeenvähennys: ei pyörimistä ja zoom suoraan loppuasentoon', () => {
+  const pallo = valepallo();
+  const lauta = valelauta(pallo);
+  const ikkuna = valeikkuna();
+  const nakyma = avaaAvaruusnakyma(lauta, { ui: { reducedMotion: true }, ikkuna });
+  assert.equal(pallo.ohjaimet.autoRotate, false, 'pallo pyöri liikkeenvähennyksellä');
+  const tila = nakyma.tila();
+  assert.equal(tila.pyorii, false);
+  assert.equal(tila.avausajo.kaynnissa, false, 'ajo jäi kesken');
+  assert.equal(tila.avausajo.osuus, 1);
+  // Kamera on LOPPUASENNOSSA heti, ei aloituskorkeudessa.
+  assert.ok(Math.abs(pallo.tila.pov.altitude - tila.avauskorkeus) < 0.001,
+    `${pallo.tila.pov.altitude} vs ${tila.avauskorkeus}`);
+  assert.ok(tila.aloituskorkeus > tila.avauskorkeus);
+  // Ja kaikki kamerakirjoitukset ovat hyppyjä (kesto 0).
+  assert.ok(pallo.tila.ajot.every((k) => k === 0), JSON.stringify(pallo.tila.ajot));
+  nakyma.pura();
+});
+
+/* ══ 12. koko pallon reliefi: navat mukaan (omistaja 16.9.2026) ═════ */
 
 /*
  * Sanatarkasti: *"onhan tarkemmassa topografia ajossa myos pohjois ja
@@ -651,6 +888,7 @@ test('koko pallon reliefi on VALMIS mutta EI vielä kytketty', () => {
   // tarkistettu. Tämä testi on se vartija: jos kytkin kääntyy vahingossa
   // tässä PR:ssä, ajoa ei ole vielä tehty eikä kuvaa ole olemassa.
   assert.equal(RELIEFI_KOKO_PALLO, false);
+  // Sama ruutu, kytkin pois: vanha kuva molemmilla tarkkuuksilla.
   const nyt = valitseReliefi();
   assert.equal(nyt.osoite, RELIEFIN_OSOITE);
   assert.equal(nyt.leveys, RELIEFIN_LEVEYS);
@@ -658,25 +896,38 @@ test('koko pallon reliefi on VALMIS mutta EI vielä kytketty', () => {
   assert.equal(nyt.kokoPallo, false);
 });
 
-test('kytkin vaihtaa kuvan ja peli lataa oletuksena 4k-version', () => {
-  const koko = valitseReliefi({ kokoPallo: true });
-  assert.equal(koko.osoite, RELIEFIN_KOKO_4K.osoite);
-  assert.equal(koko.leveys, 4096);
-  assert.equal(koko.korkeus, 2048);
-  assert.equal(koko.kokoPallo, true);
-  // Iso versio on olemassa, muttei oletus: 8192 × 4096 on kankaana
-  // 134 Mt RGBA:na eikä puhelin sitä kestä.
-  const tarkka = valitseReliefi({ kokoPallo: true, tarkka: true });
-  assert.equal(tarkka.osoite, RELIEFIN_KOKO.osoite);
-  assert.equal(tarkka.leveys, 8192);
-  assert.equal(tarkka.korkeus, 4096);
+test('kytkin vaihtaa kuvan mutta EI tarkkuuden valintaa', () => {
+  // Puhelin: 4k myös koko pallon kuvalla — muistinkulutus ei muutu.
+  const puhelin = valitseReliefi({ kokoPallo: true, leveys: 390, dpr: 3 });
+  assert.equal(puhelin.osoite, RELIEFIN_KOKO_4K.osoite);
+  assert.equal(puhelin.tunnus, '4k');
+  assert.equal(puhelin.leveys, RELIEFIN_LEVEYS);
+  assert.equal(puhelin.korkeus, RELIEFIN_KORKEUS);
+  assert.equal(puhelin.kokoPallo, true);
+  // Työpöytä: sama 8k-kynnys kuin vanhalla kuvaparilla.
+  const tyopoyta = valitseReliefi({ kokoPallo: true, leveys: 1440, dpr: 2 });
+  assert.equal(tyopoyta.osoite, RELIEFIN_KOKO_8K.osoite);
+  assert.equal(tyopoyta.tunnus, '8k');
+  assert.equal(tyopoyta.leveys, 8192);
+  assert.equal(tyopoyta.korkeus, 4096);
+  assert.equal(tyopoyta.kokoPallo, true);
+  // Tarkkuuden valinta on SAMA kummallakin kuvaparilla: vain osoite
+  // vaihtuu, ei mitat.
+  for (const ruutu of [{ leveys: 390, dpr: 3 }, { leveys: 1440, dpr: 2 }]) {
+    const vanha = valitseReliefi(ruutu);
+    const uusi = valitseReliefi({ ...ruutu, kokoPallo: true });
+    assert.equal(uusi.tunnus, vanha.tunnus);
+    assert.equal(uusi.leveys, vanha.leveys);
+    assert.equal(uusi.korkeus, vanha.korkeus);
+    assert.notEqual(uusi.osoite, vanha.osoite);
+  }
   // Molemmat osoitteet ovat samassa ämpärikansiossa kuin muut
   // linssikuvat, ja molemmissa on tunniste (ikuinen välimuisti).
-  for (const k of [RELIEFIN_KOKO, RELIEFIN_KOKO_4K]) {
+  for (const k of [RELIEFIN_KOKO_8K, RELIEFIN_KOKO_4K]) {
     assert.match(k.osoite, /^https:\/\/media\.matkakirja\.app\/matkakirja\/linssit\//);
-    assert.match(k.osoite, /topografia-pallo-koko(-4k)?-\d{8}\.webp$/);
+    assert.match(k.osoite, /topografia-pallo-koko-(4k|8k)-\d{8}\.webp$/);
   }
-  assert.notEqual(RELIEFIN_KOKO.osoite, RELIEFIN_KOKO_4K.osoite);
+  assert.notEqual(RELIEFIN_KOKO_8K.osoite, RELIEFIN_KOKO_4K.osoite);
 });
 
 test('napajäätä ei häivytetä päälle, kun jää tulee kuvasta', () => {

@@ -371,7 +371,7 @@ maalaa tasavälisen kuvan navasta napaan:
 - uusi syöte **`koko_pallo` (oletus false)**, lisäksi `koko_leveys`
   (8192) ja `koko_lohko` (512),
 - uusi askel *"Koko pallon reliefi (navat mukaan)"* ja oma vientiaskel
-  `matkakirja/linssit/topografia-pallo-koko-<tunniste>.webp` ja
+  `matkakirja/linssit/topografia-pallo-koko-8k-<tunniste>.webp` ja
   `…-koko-4k-<tunniste>.webp`,
 - tunnisteen laskenta siirtyi ENNEN renderöintiä, koska uusi työkalu
   kirjoittaa tunnisteen jo tiedostonimeen.
