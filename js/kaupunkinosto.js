@@ -458,6 +458,7 @@ export function suljeKaupunkipopup(ui) {
   const auki = ui?.kaupunkipopupAuki;
   if (!auki) return;
   ui.kaupunkipopupAuki = null;
+  document.body.classList.remove('nosto-popup-auki');
   auki.purku?.();
   auki.popup?.remove();
 }
@@ -554,6 +555,8 @@ function avaaKortti(ui, city, { laji, otsikko, ankkuri, lato }) {
   ui.kaupunkipopupAuki = {
     laji, city, popup, ankkuri, purku: null,
   };
+  // Yhteinen nostopopupin lippu, ks. js/fokuskohteet.js avaaFokuskohde.
+  document.body.classList.add('nosto-popup-auki');
   // Sisällys vasta kun kortti on DOMissa: kohdekartta mittaa oikeita
   // ruutulaatikoita (js/nahtavyydet.js mitoitaKehys, hajautaPiirrospisteet),
   // eikä irrallisella elementillä ole sellaisia.
