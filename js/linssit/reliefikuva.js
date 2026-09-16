@@ -95,11 +95,11 @@ export const RELIEFIN_8K_KAYTOSSA = true;
  * mitoilla kuin yllä, joten RUUDUN VALINTA ON SAMA: 8k leveille
  * ruuduille, 4k puhelimelle.
  *
- * KYTKIN ON POIS PÄÄLTÄ, JA SE ON TARKOITUS. Kuvat syntyvät omistajan
- * Macilla (.github/workflows/renderoi-reliefi-macilla.yml, syöte
- * koko_pallo), ja ennen sitä osoitteiden takana ei ole mitään. Kun ajo
- * on tehty, tunniste tarkistetaan, RELIEFI_KOKO_PALLO käännetään
- * todeksi ja muutos julkaistaan omana pienenä PR:nään.
+ * KYTKETTY 16.9.2026: Mac-ajo (tunniste 20260916) on valmis, kuvat
+ * ovat ämpärissä (HEAD 200, mitat ja tavumäärät tarkistettu) ja
+ * RELIEFI_KOKO_PALLO on käännetty todeksi. Ks.
+ * docs/raportit/viesti-fable-pallo-navat-20260916.md, osio
+ * "Kytketty 16.9.".
  *
  * KUN KOKO PALLON KUVA ON KÄYTÖSSÄ, NAPAJÄÄTÄ EI MAALATA PÄÄLLE. Jää
  * tulee kuvasta (tools/reliefivarit.mjs, jaapaino: korkeus +
@@ -109,11 +109,12 @@ export const RELIEFIN_8K_KAYTOSSA = true;
  */
 
 /** Onko koko pallon reliefi (navat mukaan) käytössä? Ks. yllä. */
-export const RELIEFI_KOKO_PALLO = false;
+export const RELIEFI_KOKO_PALLO = true;
 
 /*
- * Koko pallon kuvat. Tunniste on Mac-ajon syöte; nämä osoitteet
- * tarkistetaan ja päivitetään kytkentä-PR:ssä.
+ * Koko pallon kuvat. Tunniste 20260916 on Mac-ajon syöte (tarkistettu
+ * HEAD-kyselyllä 16.9.2026: 8k 2 872 604 tavua/8192×4096, 4k 770 066
+ * tavua/4096×2048).
  */
 export const RELIEFIN_KOKO_4K = {
   osoite: 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-4k-20260916.webp',
