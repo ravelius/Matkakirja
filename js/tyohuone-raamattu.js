@@ -7902,7 +7902,8 @@ export const RAAMATTU = {
           + 'button:hover:not(:disabled) voittaa minipulun pohjatyylin; '
           + 'korjataan: lepo-, hover-, active-, focus- ja focus-visible-'
           + 'tilat ilman taustalaatikkoa, nappaimistokohdistuksen ilmaisin '
-          + 'sailyy (kohta 28 koskee myos naita tiloja). 34) VIKA '
+          + 'sailyy (kohta 28 koskee myos naita tiloja). Tila: KORJATTU '
+          + 'astro-chatti-haarassa (88e6d7f1), julkaistaan v1926. 34) VIKA '
           + 'KIIREELLINEN: asennetussa macOS Safari WebAppissa (v1924, '
           + 'matkalaukku - Astronautin kamera - Aktivoi) nakyma jaa tyhjaksi: '
           + 'ruskea pinta ja X, ei palloa eika pisteita; toistuu '
@@ -8015,7 +8016,12 @@ export const RAAMATTU = {
           + 'ruudun 300 000 v. sitten) - juurisyy mitataan mainista '
           + '(kokoPallonKorkeus-siirto v1921 tai kotelon koko ilman '
           + 'ylapalkkia) ja korjataan: avauksen loppuasennossa koko Afrikka '
-          + 'nakyy puhelimella. Tila: tyo Opus-agentilla.',
+          + 'nakyy puhelimella. Tila: TOTEUTETTU haarassa ihmisen-matka-'
+          + 'kappaleet (ffb394ae; juurisyy: laudan maakohtainen zoomikatto '
+          + 'puristi kameran ja kapean ruudun saapumissaanto keskitti '
+          + 'pelaajan pituusasteeseen; mitattu 390 px: koko Afrikka ruudussa, '
+          + 'zoomi perilla 12,3 s, Marokon ajo alkaa 23,9 s, saapuminen '
+          + '+5,0 s, kertomus ennallaan), julkaistaan v1926.',
         'LINSSIEN KEHYS LIUKUU SISAAN MUSTAN JALKEEN, EI FEIDAA (omistaja '
           + '16.9.2026 klo 05.00 UTC, sanatarkasti: "Tuo ihmis linssissa '
           + 'mustan ruudun jalkeen elementit ruudulle niin etta ne liukuvat '
