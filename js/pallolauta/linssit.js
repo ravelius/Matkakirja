@@ -13,6 +13,8 @@
  * SOPIMUS ON LUVUN 10.1 TAULUKKO, eikä sitä laajenneta täältä käsin:
  *
  *   kalvo(osa, { kuva, peittavyys })  oma pallokuori pinnan päälle
+ *                                    (valinnainen `ikkuna` rajaa kuoren
+ *                                     pelkäksi palaksi, ks. kalvo)
  *   polut(osa, lista)                 pathsData (reitit.js osarekisteri)
  *   polygonit(osa, lista)             polygonsData
  *   merkit(osa, lista)                htmlElementsData (merkit.js aseta)
@@ -218,6 +220,62 @@ function teeMateriaali(pallo, tekstuuri, pinta) {
   return kopio;
 }
 
+/**
+ * IKKUNAN GEOMETRIA — PALLOKUOREN PALA, EI KOKO KUORTA.
+ *
+ * TARKENNUSLAASTARI (Raamattu, TOPOGRAFIALINSSI: TARKKUUS EI NAY).
+ * Koko pallon kalvo on yksi tasavälinen kuva, ja sen tarkkuudelle on
+ * kova katto: gl.MAX_TEXTURE_SIZE on mitattuna 8192 (Chromium,
+ * 16.9.2026), ja 8192 × 4096 RGBA veisi 134 Mt näytönohjaimelta. Koko
+ * pallon kuva ei siis voi olla tarkempi kuin noin 11 pikseliä astetta
+ * kohti — ja lähizoomilla ruudulla on 178 pikseliä astetta kohti.
+ *
+ * Laastari on sama kalvo mutta VAIN NÄKYVÄLLE IKKUNALLE: pallokuoren
+ * pala, jonka oma tekstuuri on lähdeaineiston omassa tiheydessä. Pieni
+ * tekstuuri, koko tarkkuus.
+ *
+ * KULMAT TULEVAT SUORAAN SPHEREGEOMETRIAN SOPIMUKSESTA. Pinnan oma
+ * pallo on kokonainen SphereGeometry, jonka uv-kartta on tasavälinen:
+ * u kasvaa phin mukana (u = 0 on pituusaste -180) ja v ylhäältä alas
+ * (v = 1 on pohjoisnapa). Osapallo saa samat uv:t 0…1 OMAN kaistansa
+ * yli, joten laastarin kangas menee siihen sellaisenaan, kunhan
+ * kankaan ylin rivi on pohjoisin leveysaste.
+ *
+ * Ruutujako seuraa ikkunan kokoa (vähintään 24 kumpaankin suuntaan):
+ * pieni pala isolla jaolla olisi tuhlausta, iso pala pienellä jaolla
+ * näkyisi kulmikkaana reunana pallon kaarella.
+ *
+ * @param pinta  pallon pinnan mesh (geometrian malli ja säde)
+ * @param ikkuna { lat0, lat1, lng0, lng1 } asteina, lat1 > lat0
+ * @returns uusi geometria tai null, jos mallia ei saatu
+ */
+function ikkunanGeometria(pinta, ikkuna) {
+  const malli = pinta?.geometry;
+  const G = malli?.constructor;
+  if (typeof G !== 'function') return null;
+  const p = malli.parameters ?? {};
+  const aste = Math.PI / 180;
+  const lat0 = Math.max(-90, Math.min(90, Number(ikkuna.lat0)));
+  const lat1 = Math.max(-90, Math.min(90, Number(ikkuna.lat1)));
+  const lng0 = Number(ikkuna.lng0);
+  const lng1 = Number(ikkuna.lng1);
+  if (!(lat1 > lat0) || !(lng1 > lng0)) return null;
+  const jako = (ala) => Math.max(24, Math.min(96, Math.round(ala / 2)));
+  try {
+    return new G(
+      p.radius ?? 100,
+      jako(lng1 - lng0),
+      jako(lat1 - lat0),
+      (lng0 + 180) * aste,
+      (lng1 - lng0) * aste,
+      (90 - lat1) * aste,
+      (lat1 - lat0) * aste,
+    );
+  } catch {
+    return null;
+  }
+}
+
 /** Kuva ladattuna ja purettuna. Palauttaa null, jos haku epäonnistui. */
 function lataaKuva(osoite) {
   return new Promise((valmis) => {
@@ -256,8 +314,19 @@ export function luoLinssit({
   };
   let polygonitAlustettu = false;
 
+  /**
+   * Häivytysten kirjanpito (savukkeet ja vartijat). Kertoo, kävikö
+   * animaatio kehyksillä vai varmistimella ja peruttiinko se kesken —
+   * juuri se tieto, jota 16.9.2026 jouduttiin arvailemaan, kun kalvo
+   * jäi näkymättömäksi.
+   */
+  const haivytysMittari = {
+    aloituksia: 0, kehyksia: 0, valmiita: 0, varmistimia: 0, peruutuksia: 0,
+  };
+
   /** Peittävyysanimaatio: rAF, ei kirjastoa. Reduced motion → heti. */
   const haivyta = (kohde, mihin, valmis = null) => {
+    haivytysMittari.aloituksia += 1;
     const alku = kohde.opacity ?? 0;
     if (!(siirtyma > 0)) {
       kohde.opacity = mihin;
@@ -267,15 +336,60 @@ export function luoLinssit({
     }
     const t0 = performance.now();
     let kehys = 0;
+    /*
+     * VARMISTIN: HÄIVYTYS EI SAA JÄÄDÄ PUOLITIEHEN.
+     *
+     * Häivytys nojaa requestAnimationFrameen, ja kuormitetussa
+     * selaimessa (ohjelmistorenderöinti, monta rinnakkaista näkymää)
+     * kehys voi jäädä tulematta sekunneiksi. Mitattuna 16.9.2026: koko
+     * pallon kalvon peittävyys jäi NOLLAAN, kun laastarin vaihdossa
+     * aloitettu häivytys ei saanut yhtään kehystä — linssi näytti
+     * tyhjältä eikä lokissa ollut mitään. Ajastin vie arvon perille
+     * vaikka kehyksiä ei tulisi, ja `valmis` (mesh pois) ajetaan sekin,
+     * jottei näyttämölle jää kuoria. Se ei korvaa animaatiota vaan
+     * varmistaa sen lopputuloksen.
+     */
+    let vartija = 0;
+    const paata = () => {
+      haivytysMittari.varmistimia += 1;
+      if (kehys) cancelAnimationFrame(kehys);
+      kehys = 0;
+      clearTimeout(vartija);
+      vartija = 0;
+      kohde.opacity = mihin;
+      lauta?.heraa?.();
+      valmis?.();
+    };
+    vartija = setTimeout(paata, siirtyma + 120);
     const askel = (nyt) => {
       const t = Math.min(1, (nyt - t0) / siirtyma);
-      kohde.opacity = alku + (mihin - alku) * t;
+      /*
+       * PEITTÄVYYS EI SAA KARATA VÄLIN ULKOPUOLELLE. Kun samaan
+       * materiaaliin osuu kaksi häivytystä (kalvo sammutetaan ja
+       * sytytetään nopeasti peräkkäin, kuten topografian laastarin
+       * vaihtuessa), välitulos voi jäädä miinukselle — mitattuna
+       * 16.9.2026 koko pallon kalvo jäi arvoon −0,09 eli näkymättömäksi
+       * ilman yhtään virhettä. Leikkaus on yksi rivi ja tekee tilasta
+       * mahdottoman.
+       */
+      haivytysMittari.kehyksia += 1;
+      kohde.opacity = Math.max(0, Math.min(1, alku + (mihin - alku) * t));
       lauta?.heraa?.();
-      if (t < 1) kehys = requestAnimationFrame(askel);
-      else valmis?.();
+      if (t < 1) { kehys = requestAnimationFrame(askel); return; }
+      haivytysMittari.valmiita += 1;
+      kehys = 0;
+      clearTimeout(vartija);
+      vartija = 0;
+      valmis?.();
     };
     kehys = requestAnimationFrame(askel);
-    return () => cancelAnimationFrame(kehys);
+    return () => {
+      haivytysMittari.peruutuksia += 1;
+      if (kehys) cancelAnimationFrame(kehys);
+      kehys = 0;
+      clearTimeout(vartija);
+      vartija = 0;
+    };
   };
 
   /* ---------------------------------------------------------- kalvo --- */
@@ -294,11 +408,29 @@ export function luoLinssit({
    * kankaan näytönohjaimelle (`needsUpdate`) ja herättää laudan. Yksi
    * 720 × 360 -tekstuuri kymmenen kertaa sekunnissa on laattojen
    * rinnalla pieni (suunnitelman luku 7.2).
+   *
+   * IKKUNA TEKEE KALVOSTA PALAN (16.9.2026, topografian
+   * tarkennuslaastari). `ikkuna` = { lat0, lat1, lng0, lng1 } asteina:
+   * kuori kattaa vain sen kaistan, ja kuva menee siihen sellaisenaan
+   * (ks. ikkunanGeometria). `sade` ja `jarjestys` kertovat, mihin
+   * kohtaan pinoa pala tulee — pala on koko pallon kalvon PÄÄLLÄ, jos
+   * molemmat ovat hetken näkyvissä.
    */
-  const kalvo = (nimi, { kuva, peittavyys = 0.72 } = {}) => {
+  const kalvo = (nimi, {
+    kuva, peittavyys = 0.72, ikkuna = null, sade = KALVON_SADE, jarjestys = 1,
+  } = {}) => {
     const o = osa(nimi);
     puraKalvo(o);
-    const tila = { peruttu: false, mesh: null, materiaali: null, tekstuuri: null };
+    const tila = {
+      peruttu: false, mesh: null, materiaali: null, tekstuuri: null, geometria: null,
+      /*
+       * Tavoitepeittävyys elää TILASSA eikä sulkeumassa: kutsuja voi
+       * vaihtaa sen jo ennen kuin kuva on ladattu (kahvan `peittavyys`),
+       * ja silloin kalvo häivyttyy suoraan oikeaan arvoonsa sen sijaan
+       * että välähtäisi ensin näkyviin.
+       */
+      peittavyys,
+    };
     o.kalvo = tila;
     const onKangas = Boolean(kuva) && typeof kuva === 'object' && typeof kuva.getContext === 'function';
     void (async () => {
@@ -320,18 +452,31 @@ export function luoLinssit({
        * voi piilottaa pinnan meshin, eikä kalvo saa kadota sen mukana.
        */
       const isanta = pinta.parent ?? pallo.scene();
-      const mesh = new pinta.constructor(pinta.geometry, materiaali);
+      const geometria = ikkuna ? ikkunanGeometria(pinta, ikkuna) : null;
+      if (ikkuna && !geometria) {
+        console.warn('Linssin tarkennuslaastarille ei saatu geometriaa.');
+        return;
+      }
+      const mesh = new pinta.constructor(geometria ?? pinta.geometry, materiaali);
       mesh.rotation.copy(pinta.rotation);
       mesh.position.copy(pinta.position);
-      mesh.scale.copy(pinta.scale).multiplyScalar(KALVON_SADE);
-      mesh.renderOrder = 1;
+      mesh.scale.copy(pinta.scale).multiplyScalar(sade);
+      mesh.renderOrder = jarjestys;
       isanta.add(mesh);
       tila.mesh = mesh;
+      // Oma geometria vapautetaan purussa; pinnan omaa EI (ks. puraKalvo).
+      tila.geometria = geometria;
       tila.materiaali = materiaali;
       tila.tekstuuri = tekstuuri;
-      tila.peittavyys = peittavyys;
-      if (tila.peruttu) { puraKalvo(o); return; }
-      tila.peru = haivyta(materiaali, peittavyys);
+      /*
+       * KALVO EHTI VANHENTUA LATAUKSEN AIKANA. Silloin puretaan TÄMÄ
+       * kalvo eikä osaa — `o.kalvo` on jo se uusi, jonka kutsuja on
+       * pannut tilalle, ja sen purkaminen jättäisi juuri tämän meshin
+       * näyttämölle ikuisiksi ajoiksi (mitattu 16.9.2026: pallolle jäi
+       * kaksi tarkennuslaastaria päällekkäin).
+       */
+      if (tila.peruttu) { vapautaKalvo(tila); return; }
+      tila.peru = haivyta(materiaali, tila.peittavyys);
     })();
     return {
       pura: () => pura(nimi),
@@ -341,8 +486,48 @@ export function luoLinssit({
         tila.tekstuuri.needsUpdate = true;
         lauta?.heraa?.();
       },
+      /**
+       * Kalvo pois näkyvistä ja takaisin PURKAMATTA sitä.
+       *
+       * Topografian tarkennuslaastari tarvitsee juuri tämän: laastarin
+       * ollessa päällä koko pallon kalvo ei saa näkyä (kaksi kalvoa
+       * päällekkäin rikkoisi sovitun 0,72 peittävyyden), mutta sen
+       * purkaminen ja rakentaminen uudestaan joka zoomilla latauttaisi
+       * ja purkaisi kuvan turhaan — ja jätti kalvon mitattuna
+       * näkymättömäksi kahden häivytyksen jäädessä päällekkäin.
+       * Häivytys korvaa edellisen, ei kilpaile sen kanssa.
+       */
+      /** Kalvon TODELLINEN peittävyys juuri nyt (savukkeet, vartijat). */
+      nakyvyys: () => (tila.peruttu ? 0 : (tila.materiaali?.opacity ?? null)),
+      /**
+       * Mihin peittävyyteen kalvo on matkalla, ja onko sen kuva jo
+       * puretttu. Kahden luvun ero kertoo vartijalle, onko vika
+       * häivytyksessä (tavoite oikein, arvo väärin) vai kytkennässä
+       * (tavoite väärin) — arvaamista ei tarvita.
+       */
+      tavoite: () => (tila.peruttu ? 0 : tila.peittavyys),
+      ladattu: () => Boolean(tila.materiaali),
+      peittavyys: (arvo) => {
+        if (tila.peruttu) return;
+        tila.peittavyys = Math.max(0, Math.min(1, arvo));
+        if (!tila.materiaali) return;
+        tila.peru?.();
+        tila.peru = haivyta(tila.materiaali, tila.peittavyys);
+      },
     };
   };
+
+  /** Yhden kalvon mesh, materiaali ja oma geometria pois heti. */
+  function vapautaKalvo(tila) {
+    if (tila.mesh) tila.mesh.parent?.remove(tila.mesh);
+    tila.materiaali?.dispose?.();
+    tila.tekstuuri?.dispose?.();
+    // Pinnan oma geometria EI kuulu tänne; laastarin oma kuuluu.
+    tila.geometria?.dispose?.();
+    tila.geometria = null;
+    tila.mesh = null;
+    lauta?.heraa?.();
+  }
 
   /** Kalvo pois: häivytys ulos, sitten mesh, materiaali ja tekstuuri. */
   function puraKalvo(o) {
@@ -351,16 +536,8 @@ export function luoLinssit({
     o.kalvo = null;
     tila.peruttu = true;
     tila.peru?.();
-    const vapauta = () => {
-      if (tila.mesh) tila.mesh.parent?.remove(tila.mesh);
-      tila.materiaali?.dispose?.();
-      tila.tekstuuri?.dispose?.();
-      // Geometria on pinnan omaa — sitä EI vapauteta täältä.
-      tila.mesh = null;
-      lauta?.heraa?.();
-    };
-    if (tila.materiaali) haivyta(tila.materiaali, 0, vapauta);
-    else vapauta();
+    if (tila.materiaali) haivyta(tila.materiaali, 0, () => vapautaKalvo(tila));
+    else vapautaKalvo(tila);
   }
 
   /* ---------------------------------------------------------- polut --- */
@@ -570,6 +747,8 @@ export function luoLinssit({
     pura,
     /** Onko osalla kerroksia (savukkeet ja vartijat). */
     paalla: (nimi) => osat.has(nimi),
+    /** Häivytysten kirjanpito (ks. haivytysMittari). */
+    haivytykset: () => ({ ...haivytysMittari }),
     reducedMotion: () => !(siirtyma > 0) || Boolean(ui?.reducedMotion),
   };
 }

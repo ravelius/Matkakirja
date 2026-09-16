@@ -1383,8 +1383,24 @@ export async function avaaPallolauta(ui) {
    *      (js/pallolauta/kamera.js uloszoomausRaja).
    */
   let maanLaatikko = null;
+  /*
+   * NELJÄS OHITUS: MATKA (matkaZoomirajat alempana, karttauudistus erä 8
+   * ja KARTTAUUDISTUKSEN PAATOKSET 30). Lippu on tässä eikä vasta
+   * kytkimen vieressä, koska `tahdistaZoomirajat()` ajetaan jo laudan
+   * rakentamisessa — myöhempi `let` jäisi ajalliseen katvealueeseen.
+   *
+   * MITATTU 16.9.2026 (390 × 844, Ateena → Rooma): `matkaZoomirajat`
+   * nollasi vain linssin syrjäytyksen, ei maan kattoa. Lennon rajausajo
+   * nousi näkyvään leveyteen 385 lautayksikköä ja `tahdistaZoomirajat`
+   * puristi sen takaisin 205:een (kohdemaan katto) kesken lennon —
+   * lähtökaupunki valui ruudun ulkopuolelle (x = 1,21 ruudun leveyttä).
+   * Matkan ajan katto on siis pois: matka on määritelmän mukaan maan
+   * ikkunaa isompi, ja se palautuu perillä (palaaMaanRajaukseen).
+   */
+  let matkallaVapaana = false;
   const maanZoomiraja = () => {
     if (!maanLaatikko) return null;
+    if (matkallaVapaana) return null;
     if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu) return null;
     return kamera.uloszoomausRaja(maanLaatikko, ULOSZOOMAUKSEN_KERROIN);
   };
@@ -3156,8 +3172,19 @@ export async function avaaPallolauta(ui) {
     const liikkuu = ui.movingPlayerId != null;
     // Avauslennolla lauta on niukka: ei kohteita, ei nappulaa, ja
     // reittikerros saa lennon oman valinnan (yksi kaari).
-    const kohteet = lento ? [] : kohdevalinta();
-    const valinta = lento ? lento.valinta : ui.matkareittienValinta();
+    const kohteet = lento || linssiPaalla() ? [] : kohdevalinta();
+    /*
+     * REITTI JA PELINAPPULA POIS LINSSIN AJAKSI (Raamattu,
+     * TOPOGRAFIALINSSI: … PELIN ELEMENTIT POIS, omistaja 16.9.2026).
+     * Molemmat ovat kolmiulotteisia kerroksia — reitti pathsDatassa,
+     * nappula merkkikerroksessa — eikä css yllä kumpaankaan, joten ne
+     * sammutetaan samasta portista kuin korostuskehä ja maapaneeli.
+     * Tyhjä avain tyhjentää reittikerroksen pelin osalta; linssin omat
+     * polut (js/pallolauta/linssit.js polut) eivät kulje täältä.
+     */
+    const valinta = linssiPaalla()
+      ? { reittiTunnukset: [], lennot: [], lentoLahto: null, avain: '' }
+      : (lento ? lento.valinta : ui.matkareittienValinta());
     const posAvain = pos ? posKey(pos) : '';
     /*
      * MAAN KARTUUTSI, MAATAULU JA MAALEHTILINKKI VASEMPAAN ALANURKKAAN
@@ -3183,6 +3210,7 @@ export async function avaaPallolauta(ui) {
       [...kaydyt].sort().join(','), posAvain, liikkuu ? 'liikkuu' : '',
       kohteet.map((k) => k.key).join(','), valinta.avain, ui.lentoKaari?.b ?? '',
       game.phase, ui.maailmanakyma?.() ? 'maailma' : '', lento ? 'lento' : '',
+      linssiPaalla() ? 'linssi' : '',
     ].join('|');
     if (avain === merkkiAvain) return;
     merkkiAvain = avain;
@@ -3197,7 +3225,7 @@ export async function avaaPallolauta(ui) {
       for (const k of kaupungit) k.kayty = kaydyt.has(k.id);
     }
     helmet = reitit.paivita(valinta);
-    merkit.paivita({ nappula: liikkuu || lento ? null : kohta, kohteet });
+    merkit.paivita({ nappula: liikkuu || lento || linssiPaalla() ? null : kohta, kohteet });
     paivitaPisteet();
     pyydaLadonta();
     /*
@@ -3246,7 +3274,16 @@ export async function avaaPallolauta(ui) {
      * portti kuin muualla tässä tiedostossa: katselukuva on pelaajan
      * kuva eikä kehittäjän).
      */
-    asetaTasoituksenMaailma(kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu);
+    /*
+     * KERMA POIS MYÖS LINSSIN AJAKSI (Raamattu, TOPOGRAFIALINSSI: …
+     * PELIN ELEMENTIT POIS: *"kohdemaan korostus ja kerma"*). Sama
+     * leikkuri kuin maailmanäkymässä (PÄÄTÖKSET 23): kohdemaan
+     * ulkopuolta vaalentava tasoituskerma ei ole käytössä, joten
+     * reliefi näkyy linssissä koko laudalla eikä vain kohdemaassa.
+     */
+    asetaTasoituksenMaailma(
+      linssiPaalla() || (kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu),
+    );
     /*
      * VÄRITASON MAA JA ULOSZOOMAUKSEN KATTO SAMASTA HETKESTÄ KUIN KEHÄ
      * (erät 1b ja 2). Kolme asiaa kertoo samaa maata — punainen kehä,
@@ -3282,8 +3319,24 @@ export async function avaaPallolauta(ui) {
      * lennon alussa (actionPickStart), joten tämä veisi kameran
      * kohdekaupunkiin ennen kuin kone on lähtenyt Lontoosta. Lennon
      * kamera on lennon omassa kohtauksessa (js/pallolauta/avaus.js).
+     *
+     * EIKÄ PELIN OMALLA LENNOLLA (mitattu 16.9.2026, KARTTAUUDISTUKSEN
+     * PAATOKSET 30). Sama ansa oli auki myös doFly:ssä: `game.actionFly`
+     * siirtää pelaajan kohdekaupunkiin JO ENNEN animaatiota, ja
+     * `ui.movingPlayerId` asetetaan vasta animatePawnissa — siinä välissä
+     * `ui.run`in oma render osui tähän haaraan ja luki paikanvaihdon
+     * teleportiksi. Mittaus 390 × 844 (Ateena → Rooma): kuljettajan
+     * rajausajo alkoi t = 21 ms ja TÄMÄ `saavu()` ohitti sen t = 45 ms,
+     * joten kamera oli kohdemaan saapumisnäkymässä ennen kuin kone ehti
+     * ensimmäiselle kehykselleen — juuri omistajan havainto *"kartta
+     * zoomaa suoraan kohdemaahan"*.
+     *
+     * `ui.lentoKaari` on tosi täsmälleen lennon ajan: doFly asettaa sen
+     * ennen `actionFly`ta ja nollaa vasta kun nappula on maassa. Perillä
+     * kuljettajan `laske()` merkitsee paikan (merkitseNappulanPaikka) ja
+     * ajaa saapumisrajauksen itse, joten mitään ei jää ajamatta.
      */
-    if (!liikkuu && !lento && pos) {
+    if (!liikkuu && !lento && !ui.lentoKaari && pos) {
       if (nappulanPaikka !== null && nappulanPaikka !== posAvain) {
         void saavu({ kesto: PALLOKAMERAN_AJO_MS });
       }
@@ -3420,7 +3473,6 @@ export async function avaaPallolauta(ui) {
    * matkan päätös palauttaa vain sen, mikä oli tallessa.
    */
   let matkasyrjaytysTalteen = null;
-  let matkallaVapaana = false;
   const matkaZoomirajat = (vapaa) => {
     if (Boolean(vapaa) === matkallaVapaana) return;
     matkallaVapaana = Boolean(vapaa);
@@ -3539,10 +3591,27 @@ export async function avaaPallolauta(ui) {
     matkanKerma,
     /**
      * Zoomirajojen syrjäytys linssin ajaksi: `{ min, max }` korkeuksina
-     * pallonsäteinä, `null` palauttaa laudan omat rajat. Ainoa käyttäjä
-     * on satelliittilinssin avaruusnäkymä (js/linssit/satelliitti-avaruus.js).
+     * pallonsäteinä, `null` palauttaa laudan omat rajat. Käyttäjiä on
+     * kaksi: satelliittilinssin avaruusnäkymä
+     * (js/linssit/satelliitti-avaruus.js) ja topografialinssi, jonka
+     * ajaksi zoomin katto nousee koko palloon (js/linssit/topografia.js).
      */
-    zoomirajat: (rajat) => { zoomirajaSyrjaytys = rajat ?? null; tahdistaZoomirajat(); },
+    zoomirajat: (rajat) => {
+      zoomirajaSyrjaytys = rajat ?? null;
+      /*
+       * SYRJÄYTYS EI OLE MITTAUSPIIKKI (mitattu 16.9.2026,
+       * topografialinssi, 1400 × 900). Katon puristusmuisti on siellä
+       * hetkellisiä kuvasuhdepiikkejä varten (ks. KATTO EI SAA VIEDÄ
+       * KAMERAA MUKANAAN), ja kun linssi nostaa katon 0,186:sta
+       * 1,63:een, muisti veti kameran SAMAN TIEN koko pallon näkymään:
+       * pelaaja lensi avaruuteen linssiä avatessaan, vaikka linssin oli
+       * määrä vain SALLIA se (Raamattu: *"pelaaja pääsee katsomaan
+       * koko maapalloa"* — pääsee, ei viedä). Muisti nollataan siksi
+       * aina, kun linssi vaihtaa rajoja tahallaan.
+       */
+      kattoPuristus = null;
+      tahdistaZoomirajat();
+    },
     /** Ladonta heti ilman lepoviivettä (savukkeet ja vartijat). */
     ladoHeti: () => { clearTimeout(lepoAjastin); return ladoLevossa(); },
     /**

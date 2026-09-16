@@ -19,10 +19,10 @@
  *   1. Linssi syttyy laukusta pallolle: ui.pallolinssi === 'satelliitti',
  *      jokaiselle kohteelle yksi merkki, linssikarttaa EI avata
  *      (svg#board pysyy tyhjänä) ja pallo on yhä lautana.
- *   2. KOKO YLÄPALKKI VAIHTUU eikä siinä ole VETOLAATIKKOA (omistaja
- *      12.9.2026: *"Ota yläpalkin vetolaatikko pois"*). Palkin korkeus
- *      on Matkakirjan oman palkin mitattu korkeus — myös silloin kun
- *      kohteen nimi on siinä.
+ *   2. YLÄPALKKI POISTUU KOKONAAN (omistaja 16.9.2026, LISÄYS 3:
+ *      *"koko yläpalkin pois, niin että oikeassa yläkulmassa on pelkkä
+ *      hampurilainen"*): Matkakirjan palkki on piilossa, linssillä ei
+ *      ole omaa palkkia, ja kartta saa koko ruudun korkeuden.
  *   3. Hohtavat vihreät pisteet: merkit ovat vihreitä, näkyviä ja
  *      nimettyjä; hehku ei sykähtele (ei loputonta animaatiota).
  *   4. PALLON TAKAPUOLEN MERKKI EI OTA NAPAUTUKSIA, ja LINSSIN AIKANA
@@ -31,19 +31,20 @@
  *      vihreitä kohteita"*): kaupunkipiste, karttanosto, eläintäky,
  *      nimilappu ja tyhjä meri eivät avaa mitään eivätkä liikuta kameraa.
  *   5. Vihreän pisteen napautus avaa kuvan HETI KOKO RUUTUUN, oma
- *      kuvasuhde säilyy, eikä kuvan päällä ole enää MITÄÄN tekstiä —
- *      nimi JA päivä ovat vain yläpalkin pillerissä (uusittu
- *      15.9.2026, korvaa NASA-rivin kuvan ajan).
- *   6. UUSI ASETTELU (omistaja 15.9.2026 klo 11.45 UTC): ✕ ja i ovat
- *      pieniä pyöreitä nappeja kuvan OIKEASSA YLÄKULMASSA (✕ ylhäällä,
- *      i sen alla), pikkukuvat hyvin pieninä kuvan VASEMMASSA
- *      ALAKULMASSA. Vanha kaksirivinen alapalkki (nuolet, laskuri, i,
- *      Vertaa, ✕) ja koko Vertaa-toiminto ovat poistettu.
+ *      kuvasuhde säilyy, ja kuvan päällä on VAIN selite (kohteen nimi,
+ *      seutu ja kuvateksti) ruudun vasemmassa yläkulmassa — uusittu
+ *      16.9.2026, korvaa 15.9. tehdyn yläpalkin pillerin.
+ *   6. UUSI ASETTELU (omistaja 16.9.2026): selite ruudun VASEMMASSA
+ *      YLÄKULMASSA, harmaa pyöreä ✕ ruudun OIKEASSA YLÄKULMASSA heti
+ *      palkin alla ja pikkukuvat ruudun VASEMMASSA ALAKULMASSA —
+ *      kaikki kiinnitettynä ruutuun, ei kuvaelementtiin. i-nappia ja
+ *      nimi/päivä-pilleriä ei ole enää olemassa.
  *   7. Sormizoom: nipistys zoomaa kuvaa, pallon kamera EI liiku,
  *      katto on kuvan oma tarkkuus, panorointi toimii.
- *   8. Info-nappi avaa pienen popupin OIKEAAN YLÄKULMAAN (✕:n ja i:n
- *      päälle), jossa aineisto, aika, alue, kuvaustapa, lisenssi ja
- *      lähdelinkit; popup sulkeutuu.
+ *   8. Selitteen väkänen avaa lisätiedot (aineisto, aika, alue,
+ *      kuvaustapa, lisenssi, lähdelinkit) selitteen alle samaan
+ *      laatikkoon, ja selitetekstin napautus kelaa tekstin ylös niin
+ *      että vain otsikkorivi jää.
  *   9. Galleria: hyvin pienet pikkukuvat vaihtavat otosta (EI laskuria,
  *      nuolia eikä Vertaa-nappia); zoom nollautuu otosta vaihdettaessa.
  *  10. ✕ sulkee havaintoikkunan mutta EI linssiä.
@@ -223,6 +224,30 @@ const PELITILA = () => {
 /** Kameran tila: ele kuvan päällä ei saa liikuttaa palloa. */
 const KAMERA = () => JSON.stringify(window.matkakirja.ui.pallolauta.kamera.kameranTila() ?? null);
 
+/*
+ * KAMERA ON "SAMA", KUN SE EI OLE HYPÄNNYT.
+ *
+ * Linssi pyörittää palloa hitaasti (0,16 °/s, js/linssit/
+ * satelliitti-avaruus.js PYORIMISTA_ASTETTA_S) siihen asti, kunnes
+ * pelaaja tarttuu palloon — omistajan tilaus 16.9.2026. Siksi kahden
+ * mittauksen välillä on AINA pientä ajautumaa, eikä merkkijonojen
+ * vertailu enää kelpaa: 0,16 °/s on laudan yksiköissä noin 5 yksikköä
+ * sekunnissa, kun sukellus tai kohteen avaus siirtäisi kameraa
+ * satoja tai tuhansia. Raja on siis 60 yksikköä ja 2 % näkyvästä
+ * leveydestä — yli sen on hyppy, alle sen on se pyöriminen, jota
+ * tilattiin.
+ */
+const KAMERAN_AJAUTUMA_YKS = 60;
+function kameraLahella(a, b) {
+  const x = JSON.parse(a ?? 'null');
+  const y = JSON.parse(b ?? 'null');
+  if (!x || !y) return a === b;
+  const leveysEro = Math.abs((y.leveys ?? 0) - (x.leveys ?? 0));
+  return Math.abs((y.x ?? 0) - (x.x ?? 0)) <= KAMERAN_AJAUTUMA_YKS
+    && Math.abs((y.y ?? 0) - (x.y ?? 0)) <= KAMERAN_AJAUTUMA_YKS
+    && leveysEro <= (x.leveys ?? 1) * 0.02;
+}
+
 /** Merkin ruutupaikka kohteen tunnuksella (pallon oma projektio). */
 const RUUTUPAIKKA = (tunnus) => {
   const { ui } = window.matkakirja;
@@ -350,31 +375,35 @@ async function ajaNakyma(nakymanNimi) {
       && syttyi.merkkeja === syttyi.kohteita && syttyi.boardLapsia === 0,
     JSON.stringify(syttyi));
 
-  /* --- 2. Koko yläpalkki vaihtuu — EIKÄ SIINÄ OLE VETOLAATIKKOA ----- */
+  /* --- 2. Yläpalkki poistuu KOKONAAN, tilalla kelluva hampurilainen -- */
   const palkki = await s.evaluate(() => {
     const topbar = document.querySelector('.topbar');
-    const oma = document.querySelector('.satelliittipalkki');
     const tyyli = topbar ? getComputedStyle(topbar) : null;
-    const omaTyyli = oma ? getComputedStyle(oma) : null;
-    const kartta = oma?.parentElement ?? null;
+    const kehys = document.querySelector('.satelliitti-valikkokehys');
+    const nappi = document.querySelector('.satelliitti-hampurilainen');
+    const r = nappi?.getBoundingClientRect() ?? null;
+    const kartta = document.querySelector('.map-pane, .kartta-kuori')?.getBoundingClientRect() ?? null;
     return {
       topbarNakyvyys: tyyli?.visibility ?? null,
       topbarKorkeus: topbar?.getBoundingClientRect().height ?? null,
+      // LISÄYS 3 (omistaja 16.9.2026): linssin omaa palkkia ei enää ole.
       palkkeja: document.querySelectorAll('.satelliittipalkki').length,
-      omaKorkeus: oma?.getBoundingClientRect().height ?? null,
-      omaLeveys: oma?.getBoundingClientRect().width ?? null,
-      karttaLeveys: kartta?.getBoundingClientRect().width ?? null,
-      karttaKorkeus: kartta?.getBoundingClientRect().height ?? null,
-      ikkunanKorkeus: window.innerHeight,
+      palkinOsia: document.querySelectorAll(
+        '.satelliittipalkki-nimi, .satelliittipalkki-ohje, .satelliittipalkki-kohde,'
+        + ' .satelliittipalkki-info, .satelliittipalkki-sulje, .satelliittipalkki-ikoni',
+      ).length,
+      karttaKorkeus: kartta?.height ?? null,
+      ikkuna: [window.innerWidth, window.innerHeight],
       bodyLuokat: ['aikajana-palkki-auki', 'aikajana-paalla'].filter((l) => document.body.classList.contains(l)),
-      sulje: document.querySelector('.satelliittipalkki-sulje')?.textContent ?? null,
-      suljeAria: document.querySelector('.satelliittipalkki-sulje')?.getAttribute('aria-label') ?? null,
-      // OMISTAJA 12.9.2026: "Ota yläpalkin vetolaatikko pois".
-      valintoja: document.querySelectorAll('.satelliittipalkki select, .satelliittipalkki-valinta').length,
-      kohdenimi: document.querySelector('.satelliittipalkki-kohde')?.textContent ?? null,
-      ohjeNakyy: oma && omaTyyli
-        ? getComputedStyle(document.querySelector('.satelliittipalkki-ohje')).display !== 'none' : null,
-      ohjeTeksti: document.querySelector('.satelliittipalkki-ohje')?.textContent ?? null,
+      palkkiMuuttuja: getComputedStyle(document.body).getPropertyValue('--aikajana-palkki-korkeus').trim(),
+      // Kelluva hampurilainen ruudun oikeassa yläkulmassa.
+      kehyksia: document.querySelectorAll('.satelliitti-valikkokehys').length,
+      kehysBodyssa: kehys?.parentElement === document.body,
+      hampurilainen: r
+        ? { x: Math.round(r.left), y: Math.round(r.top), w: Math.round(r.width), h: Math.round(r.height), oikea: Math.round(r.right) }
+        : null,
+      viivoja: document.querySelectorAll('.satelliitti-hampurilainen .satelliitti-viiva').length,
+      hampurilainenAria: nappi?.getAttribute('aria-label') ?? null,
       // Liiku-nappi (js/ui.js .monitoimi-nappi) piilossa linssin ajan
       // (omistaja 15.9.2026: "Vasemman alareunan liikunnappi pitaa ottaa
       // pois"). getComputedStyle, koska CSS piilottaa display:nonella.
@@ -384,27 +413,22 @@ async function ajaNakyma(nakymanNimi) {
       })(),
     };
   });
-  vaadi(nimessa('yläpalkissa EI ole vetolaatikkoa — vain linssin nimi, kohteen nimi ja Sulje-X'),
-    palkki.valintoja === 0 && palkki.kohdenimi === '', JSON.stringify(palkki));
-  vaadi(nimessa('"Sulje linssi" -nappi on pelkkä X, aria-label kertoo täyden merkityksen'),
-    palkki.sulje === '×' && palkki.suljeAria === 'Sulje linssi', JSON.stringify(palkki));
-  vaadi(nimessa('ohjeteksti on lyhyt totuudenmukainen NASA-rivi, ei enää "Napauta hohtavaa..."'),
-    !/Napauta hohtavaa/.test(palkki.ohjeTeksti ?? '')
-      && /NASA/.test(palkki.ohjeTeksti ?? '') && (palkki.ohjeTeksti ?? '').length <= 50,
+  vaadi(nimessa('linssin yläpalkkia ei ole DOMissa — ei palkkia eikä sen osia'),
+    palkki.palkkeja === 0 && palkki.palkinOsia === 0
+      && ['', '0px'].includes(palkki.palkkiMuuttuja),
+    JSON.stringify(palkki));
+  vaadi(nimessa('kelluva hampurilainen (kolme viivaa) ruudun oikeassa yläkulmassa'),
+    palkki.kehyksia === 1 && palkki.kehysBodyssa && palkki.viivoja === 3
+      && palkki.hampurilainenAria === 'Linssin valikko'
+      && palkki.ikkuna[0] - palkki.hampurilainen.oikea <= 20 && palkki.hampurilainen.y <= 20,
     JSON.stringify(palkki));
   vaadi(nimessa('Liiku-nappi on piilossa linssin ollessa auki'),
     palkki.liikuNakyy === false, JSON.stringify(palkki));
-  vaadi(nimessa('koko yläpalkki vaihtuu: Matkakirjan palkki piilossa, yksi linssipalkki, kartta ei kutistu'),
-    palkki.topbarNakyvyys === 'hidden' && palkki.topbarKorkeus === 0 && palkki.palkkeja === 1
-      && Math.abs(palkki.omaKorkeus - topbarEnnen) < 2
-      && palkki.omaLeveys >= palkki.karttaLeveys - 4
-      && palkki.karttaKorkeus > palkki.ikkunanKorkeus * 0.9
+  vaadi(nimessa('Matkakirjan palkki piilossa ja kartta saa koko ruudun korkeuden'),
+    palkki.topbarNakyvyys === 'hidden' && palkki.topbarKorkeus === 0
+      && palkki.karttaKorkeus > palkki.ikkuna[1] * 0.9
       && palkki.bodyLuokat.length === 2,
     JSON.stringify({ ...palkki, topbarEnnen }));
-  if (nakymanNimi === 'puhelin') {
-    vaadi(nimessa('mobiilissa yksi tiivis rivi: ohje väistyy, palkki ei kasva kahdeksi riviksi'),
-      palkki.ohjeNakyy === false && palkki.omaKorkeus < 80, JSON.stringify(palkki));
-  }
   await kaappaa('palkki');
 
   /* --- 3. Hohtavat vihreät pisteet ---------------------------------- */
@@ -415,30 +439,45 @@ async function ajaNakyma(nakymanNimi) {
     await new Promise((r) => setTimeout(r, 1200));
   });
   await s.waitForTimeout(1500);
+  /*
+   * PELKKÄ VIHREÄ PISTE (omistaja 16.9.2026, sanatarkasti: *"Muutamilla
+   * nuo hehkuvat pisteet pelkeiksi vihreäksi pisteeksi ilman ympyrää ja
+   * pisteen ympärillä."*). Mitataan MAALATUSTA tuloksesta: pisteen
+   * halkaisija, sen tausta, `box-shadow` ja reunaväri — ja että
+   * sädekehää ja rengasta ei ole enää olemassa lainkaan.
+   */
   const hehku = await s.evaluate(() => {
     const merkit = [...document.querySelectorAll('.satelliitti-piste')];
     const edessa = merkit.filter((el) => !el.classList.contains('pallolauta-takana'));
     const yksi = edessa[0];
-    const rengas = yksi?.querySelector('.satelliitti-rengas');
-    const hehkuEl = yksi?.querySelector('.satelliitti-hehku');
+    const ydin = yksi?.querySelector('.satelliitti-ydin');
+    const osuma = yksi?.querySelector('.satelliitti-osuma');
     const nimi = yksi?.querySelector('.satelliitti-nimi');
-    const t = rengas ? getComputedStyle(rengas) : null;
-    const h = hehkuEl ? getComputedStyle(hehkuEl) : null;
+    const t = ydin ? getComputedStyle(ydin) : null;
+    const o = osuma ? getComputedStyle(osuma) : null;
     return {
       yhteensa: merkit.length,
       edessa: edessa.length,
       takana: merkit.length - edessa.length,
-      reuna: t?.borderTopColor ?? null,
+      pisteenLeveys: t ? +parseFloat(t.width).toFixed(1) : null,
+      tausta: t?.backgroundColor ?? null,
       varjo: t?.boxShadow ?? null,
-      hehkunLeveys: h ? Math.round(parseFloat(h.width)) : null,
+      reuna: t?.borderTopColor ?? null,
+      reunanLeveys: t ? +parseFloat(t.borderTopWidth).toFixed(1) : null,
+      osumanLeveys: o ? +parseFloat(o.width).toFixed(1) : null,
+      osumanTausta: o?.backgroundColor ?? null,
+      renkaita: document.querySelectorAll('.satelliitti-rengas, .satelliitti-hehku').length,
       nimi: nimi?.textContent ?? null,
       animaatio: yksi ? getComputedStyle(yksi).animationIterationCount : null,
       osumat: yksi ? getComputedStyle(yksi).pointerEvents : null,
     };
   });
-  vaadi(nimessa('hohtava vihreä piste: sädekehä, hehkuva rengas, nimi — eikä loputonta pulssia'),
-    hehku.edessa > 0 && hehku.takana > 0 && /rgb\(93, 255, 168\)/.test(hehku.reuna ?? '')
-      && /rgba?\(93, 255, 168/.test(hehku.varjo ?? '') && hehku.hehkunLeveys >= 40
+  vaadi(nimessa('pelkkä vihreä piste: ei rengasta, ei hohtoa — nimi ja osuma-ala ennallaan'),
+    hehku.edessa > 0 && hehku.takana > 0
+      && hehku.pisteenLeveys > 0 && hehku.pisteenLeveys <= 9
+      && /rgb\(93, 255, 168\)/.test(hehku.tausta ?? '')
+      && hehku.varjo === 'none' && hehku.reunanLeveys === 0
+      && hehku.renkaita === 0 && hehku.osumanLeveys >= 32
       && Boolean(hehku.nimi) && hehku.animaatio === '1' && hehku.osumat === 'none',
     JSON.stringify(hehku));
   await kaappaa('pisteet');
@@ -541,7 +580,8 @@ async function ajaNakyma(nakymanNimi) {
     const jalkeenPinnat = await pelinPinnat();
     // eslint-disable-next-line no-await-in-loop
     const jalkeenKamera = await s.evaluate(KAMERA);
-    if (jalkeenPinnat.length > ennenPinnat.length || jalkeenKamera !== ennenKamera) {
+    if (jalkeenPinnat.length > ennenPinnat.length
+      || !kameraLahella(ennenKamera, jalkeenKamera)) {
       avautui += 1;
       avautuneet.push(`${kohta.laji}: ${jalkeenPinnat.join(',') || 'kamera liikkui'}`);
     }
@@ -621,13 +661,12 @@ async function ajaNakyma(nakymanNimi) {
     const r = img?.getBoundingClientRect();
     const kr = katselu?.getBoundingClientRect();
     /*
-     * KUVAN PÄÄLLE EI SAA JÄÄDÄ MUUTA TEKSTIÄ KUIN KULMANAPIT (omistaja
-     * 15.9.2026: vanha otsake ja alapalkin päiväykset ovat poissa).
-     * .satelliitti-kulma (✕, i) suljetaan pois, koska ne ovat odotettuja
-     * nappeja — pikkukuvilla ei enää ole omaa tekstiä ollenkaan.
+     * KUVAN PÄÄLLÄ ON VAIN SELITE (omistaja 16.9.2026). Kulmanappi ja
+     * selite suljetaan pois — mitään MUUTA tekstiä ei saa jäädä.
      */
     const tekstit = [...(katselu?.querySelectorAll('*') ?? [])]
-      .filter((el) => !el.closest('.satelliitti-kulma') && el.children.length === 0 && el.textContent.trim())
+      .filter((el) => !el.closest('.satelliitti-kulma') && !el.closest('.satelliitti-selite')
+        && el.children.length === 0 && el.textContent.trim())
       .map((el) => el.textContent.trim());
     return {
       auki: Boolean(katselu),
@@ -642,25 +681,23 @@ async function ajaNakyma(nakymanNimi) {
        * pystysarake poistui): kuvan pitää mahtua kokonaan sekä pysty-
        * että vaakaruudulla, eikä yläpalkki saa peittää sitä.
        */
-      kuvaPalkinAlla: (() => {
-        const pr = document.querySelector('.satelliittipalkki')?.getBoundingClientRect();
-        return Boolean(r && pr && r.top < pr.bottom - 0.5 && r.bottom > pr.top);
-      })(),
+      // Kuva saa palkin tilan: sen yläreuna on ruudun yläreunassa.
+      kuvaYlareunassa: Boolean(r && kr && r.top >= kr.top - 0.5),
       kuvaKokonaan: Boolean(r && r.top >= -0.5 && r.bottom <= window.innerHeight + 0.5
         && r.left >= -0.5 && r.right <= window.innerWidth + 0.5),
       tekstit,
       popupeja: document.querySelectorAll('.satelliitti-popup').length,
-      // Yläpalkin pilleri kantaa NYT nimen JA päivän yhdessä (omistaja
-      // 15.9.2026), esim. "Saharan silmä · 10.1.2004".
-      palkinKohde: document.querySelector('.satelliittipalkki-kohde')?.textContent ?? null,
-      palkinKorkeus: document.querySelector('.satelliittipalkki')?.getBoundingClientRect().height ?? null,
+      // Selite kuvan päällä: otsikkorivi (kohde — seutu) ja kuvateksti.
+      seliteOtsikko: document.querySelector('.satelliitti-selite-otsikko')?.textContent ?? null,
+      seliteTeksti: document.querySelector('.satelliitti-selite-teksti')?.textContent ?? null,
+      // Yläpalkkia ei ole: NASA-riviä ei ole missään (LISÄYS 3).
+      ohjerivia: document.querySelectorAll('.satelliittipalkki-ohje').length,
+      palkkeja: document.querySelectorAll('.satelliittipalkki').length,
       /*
-       * PALKIN ALAREUNA, EI PELKKÄ KORKEUS (12.9.2026). Palkki on
-       * KARTTARUUDUN sisällä ja alkaa pelin kehyksen verran alempaa
-       * kuin ikkuna, joten korkeus yksin ei kerro, mistä kortin pitää
-       * alkaa — juuri siitä syntyi vaakanäkymän 11 px:n limitys.
+       * KORTTI ALKAA RUUDUN YLÄREUNASTA (LISÄYS 3). Palkkia ei ole,
+       * joten mitattavaa alareunaa ei ole — nolla on oikea vertailuluku.
        */
-      palkinAla: document.querySelector('.satelliittipalkki')?.getBoundingClientRect().bottom ?? 0,
+      palkinAla: 0,
       // Kuvan oma alue (lava): sama kuin koko kortti nyt, kun oma
       // hallintasarake on poistettu (15.9.2026).
       lava: (() => {
@@ -679,52 +716,41 @@ async function ajaNakyma(nakymanNimi) {
     kokoruutu.auki && kokoruutu.ladattu > 0 && tayttoaste > 0.98
       && kokoruutu.kuvaKorkeus <= kokoruutu.ruutu[1] + 1
       && kokoruutu.ruutu[0] === kokoruutu.ikkuna[0]
-      && kokoruutu.ruutu[1] >= kokoruutu.ikkuna[1] - (kokoruutu.palkinAla ?? 0) - 1
+      && kokoruutu.ruutu[1] >= kokoruutu.ikkuna[1] - 1
       && /images-assets\.nasa\.gov/.test(kokoruutu.osoite ?? ''),
     JSON.stringify({ ...kokoruutu, tekstit: kokoruutu.tekstit.slice(0, 6), tayttoaste: Number(tayttoaste.toFixed(2)), lyhyempi }));
   /*
-   * NIMI JA PÄIVÄ OVAT VAIN YLÄPALKIN PILLERISSÄ (omistaja 15.9.2026
-   * klo 11.45 UTC: *"Poista vasemman ylareunan kuvan paalla oleva
-   * teksti ja siirra se ylarivin palkkiin"*). Kuvan päällä EI SAA olla
-   * enää mitään tekstiä (kulmanapit pois lukien) — pilleri korvaa myös
-   * NASA-rivin kuvan ajaksi.
+   * SELITE ON KUVAN PÄÄLLÄ (omistaja 16.9.2026: *"näytä suoraan
+   * kohteen nimi ja selite vasemmassa yläreunassa kuvan päällä"*).
+   * Muuta tekstiä kuvan päälle ei jää, ja NASA-rivi väistyy palkista.
    */
-  vaadi(nimessa('nimi ja päivä ovat yläpalkin pillerissä, kuvan päällä ei ole enää tekstiä'),
-    (kokoruutu.palkinKohde ?? '').startsWith('Saharan silmä · ')
-      && /\d{1,2}\.\d{1,2}\.\d{4}/.test(kokoruutu.palkinKohde ?? '')
+  vaadi(nimessa('kohteen nimi ja selite lukevat kuvan päällä, muuta tekstiä ei ole'),
+    (kokoruutu.seliteOtsikko ?? '').startsWith('Saharan silmä')
+      && (kokoruutu.seliteTeksti ?? '').length > 40
+      && kokoruutu.ohjerivia === 0
       && kokoruutu.popupeja === 0
       && kokoruutu.tekstit.length === 0,
-    JSON.stringify({ palkinKohde: kokoruutu.palkinKohde, tekstit: kokoruutu.tekstit }));
-  /*
-   * KELLONAIKAA EI KEKSITÄ: NASA merkitsee useimmiten vain päivän, ja
-   * silloin ruudulla on vain päivä. Kello näkyy vain, jos aineistossa
-   * on T-osa — ja silloin aikavyöhyke sanotaan ääneen.
-   */
-  vaadi(nimessa('kuvauspäivässä ei ole keksittyä kellonaikaa'),
-    !/klo/.test(kokoruutu.palkinKohde ?? '') || /UTC/.test(kokoruutu.palkinKohde ?? ''),
-    String(kokoruutu.palkinKohde));
+    JSON.stringify({ otsikko: kokoruutu.seliteOtsikko, tekstit: kokoruutu.tekstit }));
 
   /* --- 5b. VAAKANÄKYMÄ: kuva mahtuu, palkit eivät peitä ------------- */
-  vaadi(nimessa('yläpalkki ja kuva eivät mene päällekkäin'),
-    kokoruutu.kuvaPalkinAlla === false,
-    JSON.stringify({ palkinAlla: kokoruutu.kuvaPalkinAlla }));
+  vaadi(nimessa('kuva saa palkin tilan: kortti alkaa ruudun yläreunasta'),
+    kokoruutu.kuvaYlareunassa === true && kokoruutu.ruutu[1] >= kokoruutu.ikkuna[1] - 1,
+    JSON.stringify({ ylareunassa: kokoruutu.kuvaYlareunassa, ruutu: kokoruutu.ruutu, ikkuna: kokoruutu.ikkuna }));
   if (vaaka(nakymanNimi)) {
     vaadi(nimessa('vaakanäkymässä kuva mahtuu kokonaan — ei omaa hallintasaraketta enää'),
       kokoruutu.kuvaKokonaan === true,
       JSON.stringify({ kokonaan: kokoruutu.kuvaKokonaan,
         kuva: [kokoruutu.kuvaLeveys, kokoruutu.kuvaKorkeus], ikkuna: kokoruutu.ikkuna }));
   }
-  vaadi(nimessa('palkin korkeus ei muutu pillerin ilmestyessä'),
-    Math.abs((kokoruutu.palkinKorkeus ?? 0) - (palkki.omaKorkeus ?? 0)) < 0.5,
-    JSON.stringify({ korkeus: kokoruutu.palkinKorkeus, ennen: palkki.omaKorkeus }));
+  vaadi(nimessa('kuvan avaaminen ei tuo palkkia takaisin'),
+    kokoruutu.palkkeja === 0, JSON.stringify({ palkkeja: kokoruutu.palkkeja }));
   await kaappaa('havainto');
 
   /*
-   * --- 6. Napit: ✕ kuvan oikeassa yläkulmassa, i YLÄPALKISSA pillerin
-   * oikealla puolella (omistaja 15.9.2026 klo 11.45 UTC, työpöytäkuva
-   * Etnasta; TÄSMENNYS samana päivänä: "siirrä i pillerin oikealle
-   * puolelle"), pikkukuvat vasemmassa alakulmassa — mikään ei mene
-   * päällekkäin.
+   * --- 6. Asettelu (omistaja 16.9.2026): selite ruudun vasemmassa
+   * yläkulmassa, harmaa ✕ oikeassa yläkulmassa heti palkin alla,
+   * pienoiskuvat ruudun vasemmassa alakulmassa — kaikki kiinnitettynä
+   * RUUTUUN, ei kuvaelementtiin.
    */
   const napit = await s.evaluate(() => {
     const r = (v) => {
@@ -736,58 +762,63 @@ async function ajaNakyma(nakymanNimi) {
         oikea: Math.round(b.right), ala: Math.round(b.bottom),
       };
     };
+    const sulkuEl = document.querySelector('.satelliitti-sulku');
+    const t = sulkuEl ? getComputedStyle(sulkuEl) : null;
     const nauha = r('.satelliitti-nauha');
     const sulku = r('.satelliitti-sulku');
-    const info = r('.satelliittipalkki-info');
-    const kohde = r('.satelliittipalkki-kohde');
-    const kuva = r('.satelliitti-kuva');
+    const selite = r('.satelliitti-selite');
+    const nappi = document.querySelector('.satelliitti-hampurilainen');
+    const hr = nappi?.getBoundingClientRect() ?? null;
     const paallekkain = (a, b) => Boolean(a && b)
       && a.x < b.oikea && b.x < a.oikea && a.y < b.ala && b.y < a.ala;
-    // Onko a KOKONAAN b:n sisällä (pieni toleranssi pyöristykselle)?
-    const sisalla = (a, b, toleranssi = 2) => Boolean(a && b)
-      && a.x >= b.x - toleranssi && a.oikea <= b.oikea + toleranssi
-      && a.y >= b.y - toleranssi && a.ala <= b.ala + toleranssi;
     const pikkuja = [...document.querySelectorAll('.satelliitti-pikku')].map((el) => {
       const b = el.getBoundingClientRect();
-      return { x: Math.round(b.left), y: Math.round(b.top), w: Math.round(b.width), h: Math.round(b.height), oikea: Math.round(b.right), ala: Math.round(b.bottom) };
+      return { x: Math.round(b.left), y: Math.round(b.top), oikea: Math.round(b.right), ala: Math.round(b.bottom) };
     });
     return {
       nauha,
       sulku,
-      info,
-      kohde,
-      kuva,
+      selite,
+      // Palkkia ei ole: pinnat mitataan RUUDUN yläreunasta.
+      hampurilainen: hr
+        ? { x: Math.round(hr.left), y: Math.round(hr.top), oikea: Math.round(hr.right), ala: Math.round(hr.bottom) }
+        : null,
       ikkuna: [window.innerWidth, window.innerHeight],
-      infoKohteenOikealla: Boolean(info && kohde) && info.x >= kohde.oikea - 2,
+      varit: t ? { teksti: t.color, tausta: t.backgroundColor, reuna: t.borderTopColor, pyorea: t.borderTopLeftRadius } : null,
       sulkuPikkujenPaalla: pikkuja.some((p) => paallekkain(sulku, p)),
       pikkuja: pikkuja.length,
-      // ON ✕ JA OVATKO PIKKUKUVAT KUVAN (ei lavan/kortin) sisällä?
-      // Jälkikaappaus 15.9.2026: napit kelluivat kuvan MUSTASSA
-      // MARGINAALISSA, ei kuvan päällä.
-      sulkuKuvanSisalla: sisalla(sulku, kuva, 3),
-      nauhaKuvanSisalla: sisalla(nauha, kuva, 3),
+      infoja: document.querySelectorAll('.satelliittipalkki-info').length,
+      palkkeja: document.querySelectorAll('.satelliittipalkki').length,
     };
   });
-  vaadi(nimessa('✕ on pieni pyöreä nappi KUVAN oikeassa yläkulmassa'),
-    napit.sulku && napit.sulku.w >= 28 && napit.sulku.h >= 28
-      && napit.sulkuKuvanSisalla && !napit.sulkuPikkujenPaalla,
+  /** Onko laskettu väri harmaa (r = g = b)? */
+  const harmaa = (v) => {
+    const o = String(v ?? '').match(/rgba?\((\d+), (\d+), (\d+)/);
+    return Boolean(o) && o[1] === o[2] && o[2] === o[3];
+  };
+  vaadi(nimessa('✕ on ruudun oikeassa yläkulmassa hampurilaisen vieressä, pyöreä ja HARMAA'),
+    Boolean(napit.sulku) && napit.sulku.w >= 28 && napit.sulku.h >= 28
+      // Hampurilaisen vasemmalla puolella: sen leveys + välit mahtuvat väliin.
+      && napit.ikkuna[0] - napit.sulku.oikea <= 90
+      && napit.sulku.y <= 20
+      && Math.round(parseFloat(napit.varit?.pyorea ?? '0')) >= 14
+      && harmaa(napit.varit?.teksti) && harmaa(napit.varit?.tausta) && harmaa(napit.varit?.reuna)
+      && !napit.sulkuPikkujenPaalla,
     JSON.stringify(napit));
-  vaadi(nimessa('i-nappi on yläpalkissa pillerin oikealla puolella, ei kuvan kulmassa'),
-    napit.info && napit.info.w >= 24 && napit.info.h >= 24
-      && napit.infoKohteenOikealla
-      // i EI ole kuvan kulmassa (siellä missä ✕ on) — pystysuunnassa
-      // selvästi ylempänä, palkin sisällä.
-      && napit.info.y < napit.sulku.y,
+  vaadi(nimessa('selite on ruudun vasemmassa yläkulmassa heti palkin alla, i-nappia ei ole'),
+    Boolean(napit.selite) && napit.selite.x <= 16
+      && napit.selite.y <= 20
+      && napit.infoja === 0,
     JSON.stringify(napit));
-  /*
-   * PIKKUKUVAT OVAT AINA KUVAN VASEMMASSA ALAKULMASSA, HYVIN PIENINÄ,
-   * KUVAN PÄÄLLÄ EIKÄ MUSTASSA MARGINAALISSA (omistaja 15.9.2026 —
-   * vanha erillinen vaakanäkymän hallintasarake on poistettu, samat
-   * säännöt pätevät molemmissa suunnissa).
-   */
-  vaadi(nimessa('pikkukuvat ovat kuvan (ei lavan) vasemmassa alakulmassa, hyvin pieninä'),
-    napit.nauha && napit.nauhaKuvanSisalla && napit.pikkuja === 2,
-    JSON.stringify({ nauha: napit.nauha, kuva: napit.kuva }));
+  vaadi(nimessa('✕ ja kelluva hampurilainen eivät leikkaa toisiaan'),
+    Boolean(napit.sulku && napit.hampurilainen)
+      && napit.sulku.oikea <= napit.hampurilainen.x - 4
+      && napit.palkkeja === 0,
+    JSON.stringify({ sulku: napit.sulku, hampurilainen: napit.hampurilainen }));
+  vaadi(nimessa('pienoiskuvat kelluvat ruudun vasemmassa alakulmassa'),
+    Boolean(napit.nauha) && napit.nauha.x <= 16
+      && napit.ikkuna[1] - napit.nauha.ala <= 24 && napit.pikkuja === 2,
+    JSON.stringify({ nauha: napit.nauha, ikkuna: napit.ikkuna }));
 
   /* --- 7. Sormizoom: ele ei vuoda pallolle, katto pitää, nollautuu -- */
   const kameraEnnen = await s.evaluate(KAMERA);
@@ -824,8 +855,13 @@ async function ajaNakyma(nakymanNimi) {
    */
   vaadi(nimessa('nipistys zoomaa kuvaa EIKÄ pallon kamera liiku'),
     zoomTulos.skaala > 1.02 && zoomTulos.skaala >= Math.min(1.6, zoomTulos.katto) - 0.02
-      && kameraJalkeen === kameraEnnen && zoomTulos.zoomLuokka,
-    JSON.stringify({ ...zoomTulos, kameraSama: kameraJalkeen === kameraEnnen }));
+      && kameraLahella(kameraEnnen, kameraJalkeen) && zoomTulos.zoomLuokka,
+    JSON.stringify({
+      ...zoomTulos,
+      kameraSama: kameraLahella(kameraEnnen, kameraJalkeen),
+      ennen: kameraEnnen,
+      jalkeen: kameraJalkeen,
+    }));
   vaadi(nimessa('zoomin katto on kuvan oma tarkkuus — ei pikselipuuroa'),
     zoomTulos.skaala <= Math.max(1, zoomTulos.katto) + 0.01,
     JSON.stringify(zoomTulos));
@@ -862,67 +898,81 @@ async function ajaNakyma(nakymanNimi) {
     JSON.stringify(panorointi));
   await kaappaa('zoomattu');
 
-  /* --- 8. Info-popup: kaikki tietorivit ja lisenssi ------------------ */
-  await s.evaluate(() => document.querySelector('.satelliittipalkki-info').click());
+  /* --- 8. Väkänen avaa lisätiedot, tekstin napautus kelaa ----------- */
+  const ennenKelaus = await s.evaluate(
+    () => Math.round(document.querySelector('.satelliitti-selite-runko').getBoundingClientRect().height),
+  );
+  await s.evaluate(() => document.querySelector('.satelliitti-vakanen').click());
   await s.waitForTimeout(400);
   const info = await s.evaluate(() => {
-    const popup = document.querySelector('.satelliitti-popup');
-    const b = popup?.getBoundingClientRect();
-    const napinRect = document.querySelector('.satelliittipalkki-info')?.getBoundingClientRect();
-    const katseluRect = document.querySelector('.satelliitti-katselu')?.getBoundingClientRect();
+    const lisa = document.querySelector('.satelliitti-lisatiedot');
+    const selite = document.querySelector('.satelliitti-selite');
+    const b = selite?.getBoundingClientRect();
     return {
-      auki: Boolean(popup),
-      leveys: b ? Math.round(b.width) : null,
-      korkeus: b ? Math.round(b.height) : null,
-      x: b ? Math.round(b.left) : null,
-      y: b ? Math.round(b.top) : null,
+      auki: Boolean(lisa) && !lisa.hidden,
+      // Lisätiedot ovat SELITTEEN sisällä, saman laatikon alaosassa.
+      samassaLaatikossa: Boolean(lisa && selite && selite.contains(lisa)),
+      seliteLeveys: b ? Math.round(b.width) : null,
       ikkuna: [window.innerWidth, window.innerHeight],
-      // i-napin x yläpalkissa ja kortin (fixed) omat reunat — popup
-      // seuraa NAPPIA, ei kuvaa (täsmennys 15.9.2026).
-      napinX: napinRect ? Math.round(napinRect.left) : null,
-      kortinYlareuna: katseluRect ? Math.round(katseluRect.top) : null,
-      tekstit: [...(popup?.querySelectorAll('div') ?? [])].map((d) => d.textContent),
-      linkkeja: [...(popup?.querySelectorAll('.satelliitti-linkki') ?? [])].map((a) => a.href),
-      sulku: Boolean(popup?.querySelector('.satelliitti-popup-sulku')),
+      vakasenAria: document.querySelector('.satelliitti-vakanen')?.getAttribute('aria-expanded') ?? null,
+      vakanenKaantyi: Boolean(document.querySelector('.satelliitti-vakanen.satelliitti-vakanen-auki')),
+      tekstit: [...(lisa?.querySelectorAll('div') ?? [])].map((d) => d.textContent),
+      linkkeja: [...(lisa?.querySelectorAll('.satelliitti-linkki') ?? [])].map((a) => a.href),
+      // Väkäsen napautus EI saa kelata selitettä kiinni.
+      kelautui: Boolean(selite?.classList.contains('satelliitti-selite-kiinni')),
     };
   });
-  /*
-   * POPUP AVAUTUU YLÄPALKIN ALTA i-NAPIN KOHDALTA (omistaja 15.9.2026,
-   * TÄSMENNYS: *"lisätietokentta avautuu yläpalkin alta i-napin
-   * kohdalta"*, korvaa aiemman "kuvan oikea yläkulma" -sijoituksen).
-   * Popupin vasen reuna on lähellä napin x-paikkaa TYÖPÖYDÄLLÄ, missä
-   * tilaa riittää. KAPEALLA RUUDULLA (esim. 390 px, popup 366 px
-   * leveä) `asemoiPopup` rajaa sen ruudun sisään VASEMMALLE — se on
-   * oikea käytös, ei virhe — niin että popup ei koskaan mene napin
-   * OIKEALLE puolelle eikä ulos ikkunasta.
-   */
-  const kohdistuu = Math.abs(info.x - info.napinX) <= 60;
-  const rajattuVasemmalle = info.x <= info.napinX
-    && info.x + info.leveys <= info.ikkuna[0] - 4;
-  vaadi(nimessa('info-popup avautuu yläpalkin alta, i-napin kohdalta (tai rajattuna ruudun sisään)'),
-    info.x !== null && info.y !== null && info.napinX !== null
-      && (kohdistuu || rajattuVasemmalle)
-      && info.y - (info.kortinYlareuna ?? 0) <= 20,
-    JSON.stringify(info));
   const infoTeksti = (info.tekstit ?? []).join(' | ');
-  vaadi(nimessa('info-nappi avaa pienen popupin, jossa koko lähdeketju'),
-    info.auki && info.leveys < info.ikkuna[0] && info.korkeus < info.ikkuna[1] * 0.7
-      && /Aineisto:.*NASA/.test(infoTeksti) && /Kuvausaika: \d+\.\d+\.\d{4}/.test(infoTeksti)
+  vaadi(nimessa('väkänen avaa lisätiedot selitteen alle samaan laatikkoon — eikä kelaa tekstiä'),
+    info.auki && info.samassaLaatikossa && info.vakasenAria === 'true'
+      && info.vakanenKaantyi && !info.kelautui
+      && info.seliteLeveys <= Math.round(info.ikkuna[0] * (info.ikkuna[0] > 620 ? 0.47 : 1)),
+    JSON.stringify({ ...info, tekstit: info.tekstit?.slice(0, 2) }));
+  vaadi(nimessa('lisätiedoissa on koko lähdeketju aineistosta kuvakirjastoon'),
+    /Aineisto:.*NASA/.test(infoTeksti) && /Kuvausaika: \d+\.\d+\.\d{4}/.test(infoTeksti)
       && /Paikka:.*°/.test(infoTeksti) && /Kuvaustapa:.*avaruusasemalta/.test(infoTeksti)
       && /Kuvatunnus: iss/.test(infoTeksti)
       && /Lisenssi: Public domain \(NASA\)/.test(infoTeksti)
-      // Kuvateksti on popupin ensimmäinen rivi: se on ainoa teksti,
-      // jonka pelaaja lukee, eikä se saa jäädä lähdetietojen alle.
-      && /Saharan silmä/.test(info.tekstit?.[0] ?? '')
-      && (info.tekstit?.[1] ?? '').length > 80
       && info.linkkeja.some((u) => /images\.nasa\.gov\/details\//.test(u))
-      && info.linkkeja.some((u) => /^https:\/\/images\.nasa\.gov\/$/.test(u)) && info.sulku,
-    JSON.stringify({ ...info, tekstit: info.tekstit?.slice(0, 3) }));
-  await kaappaa('info-popup');
-  await s.evaluate(() => document.querySelector('.satelliitti-popup-sulku').click());
-  await s.waitForTimeout(300);
-  const popupKiinni = await s.evaluate(() => document.querySelectorAll('.satelliitti-popup').length);
-  vaadi(nimessa('info-popup sulkeutuu omasta rististään'), popupKiinni === 0, String(popupKiinni));
+      && info.linkkeja.some((u) => /^https:\/\/images\.nasa\.gov\/$/.test(u)),
+    JSON.stringify({ tekstit: info.tekstit?.slice(0, 3), linkkeja: info.linkkeja }));
+  await kaappaa('lisatiedot');
+  // Selitetekstin napautus kelaa tekstin ylös: vain otsikkorivi jää.
+  await s.evaluate(() => document.querySelector('.satelliitti-selite-teksti')
+    .dispatchEvent(new MouseEvent('click', { bubbles: true })));
+  /*
+   * ODOTETAAN TULOSTA, EI KELLOA. Korkeussiirtymä on 250 ms, mutta
+   * kontin ohjelmisto-WebGL ja rinnakkaiset savukkeet voivat nälkiinnyttää
+   * ruudunpiirron sekunneiksi — kiinteä odotus mittasi silloin siirtymän
+   * puolivälistä. Tämä odottaa mitattavaa arvoa ja antaa periksi vasta
+   * aikakatkaisussa, jolloin väite kaatuu aidosti.
+   */
+  await s.waitForFunction(
+    () => document.querySelector('.satelliitti-selite-runko').getBoundingClientRect().height <= 1,
+    null, { timeout: 15000 },
+  ).catch(() => {});
+  const kelaus = await s.evaluate(() => {
+    const otsikko = document.querySelector('.satelliitti-selite-otsikko').getBoundingClientRect();
+    return {
+      kiinni: document.querySelector('.satelliitti-selite').classList.contains('satelliitti-selite-kiinni'),
+      runko: Math.round(document.querySelector('.satelliitti-selite-runko').getBoundingClientRect().height),
+      otsikkoNakyy: otsikko.height > 4,
+    };
+  });
+  vaadi(nimessa('selitetekstin napautus kelaa tekstin ylös — vain otsikkorivi jää'),
+    kelaus.kiinni && kelaus.runko <= 1 && kelaus.otsikkoNakyy && ennenKelaus > 10,
+    JSON.stringify({ ...kelaus, ennenKelaus }));
+  // Uusi napautus avaa takaisin.
+  await s.evaluate(() => document.querySelector('.satelliitti-selite')
+    .dispatchEvent(new MouseEvent('click', { bubbles: true })));
+  await s.waitForFunction(
+    () => document.querySelector('.satelliitti-selite-runko').getBoundingClientRect().height > 10,
+    null, { timeout: 15000 },
+  ).catch(() => {});
+  const takaisin = await s.evaluate(
+    () => Math.round(document.querySelector('.satelliitti-selite-runko').getBoundingClientRect().height),
+  );
+  vaadi(nimessa('uusi napautus avaa selitteen takaisin'), takaisin > 10, String(takaisin));
 
   /* --- 9. Galleria kuvan päällä: Etnan kaksi purkausvuotta ---------- */
   await s.evaluate(() => document.querySelector('.satelliitti-sulku').click());
@@ -950,7 +1000,7 @@ async function ajaNakyma(nakymanNimi) {
     const ennenSrc = img.src;
     const pikkukuvat = [...katselu.querySelectorAll('.satelliitti-pikku')];
     const valittuIndeksi = pikkukuvat.findIndex((el) => el.classList.contains('valittu'));
-    const palkinKohdeEnnen = document.querySelector('.satelliittipalkki-kohde')?.textContent ?? '';
+    const seliteEnnen = document.querySelector('.satelliitti-selite-teksti')?.textContent ?? '';
     // EI NUOLIA ENÄÄ (omistaja 15.9.2026): vaihto tapahtuu TOISESTA
     // pikkukuvasta, ei .satelliitti-seuraava-napista (poistettu).
     pikkukuvat[1]?.click();
@@ -958,8 +1008,9 @@ async function ajaNakyma(nakymanNimi) {
     return {
       pikkuja: pikkukuvat.length,
       valittuIndeksi,
-      palkinKohdeEnnen,
-      palkinKohdeJalkeen: document.querySelector('.satelliittipalkki-kohde')?.textContent ?? '',
+      seliteEnnen,
+      seliteJalkeen: document.querySelector('.satelliitti-selite-teksti')?.textContent ?? '',
+      otsikko: document.querySelector('.satelliitti-selite-otsikko')?.textContent ?? '',
       srcVaihtui: katselu.querySelector('.satelliitti-kuva').src !== ennenSrc,
       zoomEnnen,
       zoomJalkeen: getComputedStyle(katselu.querySelector('.satelliitti-kuva')).transform,
@@ -972,8 +1023,8 @@ async function ajaNakyma(nakymanNimi) {
   vaadi(nimessa('galleria kuvan päällä: 2 hyvin pientä pikkukuvaa, EI laskuria, nuolia eikä Vertaa-nappia'),
     galleria.pikkuja === 2 && galleria.valittuIndeksi === 0 && galleria.srcVaihtui
       && !galleria.vertaaOlemassa && !galleria.nuoletOlemassa && !galleria.laskuriOlemassa
-      && galleria.palkinKohdeEnnen.startsWith('Etna · ') && galleria.palkinKohdeJalkeen.startsWith('Etna · ')
-      && galleria.palkinKohdeEnnen !== galleria.palkinKohdeJalkeen,
+      && galleria.otsikko.startsWith('Etna')
+      && galleria.seliteEnnen !== galleria.seliteJalkeen,
     JSON.stringify(galleria));
   vaadi(nimessa('zoom nollautuu otosta vaihdettaessa'),
     galleria.zoomEnnen !== 'none' && (galleria.zoomJalkeen === 'none' || /matrix\(1, 0, 0, 1, 0, 0\)/.test(galleria.zoomJalkeen)),
@@ -986,13 +1037,13 @@ async function ajaNakyma(nakymanNimi) {
   const suljettuIkkuna = await s.evaluate(() => ({
     ikkunoita: document.querySelectorAll('.satelliitti-katselu').length,
     linssi: window.matkakirja.ui.pallolinssi?.tunnus ?? null,
+    valikkoja: document.querySelectorAll('.satelliitti-valikkokehys').length,
     palkkeja: document.querySelectorAll('.satelliittipalkki').length,
-    kohdenimi: document.querySelector('.satelliittipalkki-kohde')?.textContent ?? null,
     merkkeja: document.querySelectorAll('.satelliitti-piste').length,
   }));
   vaadi(nimessa('sulkuristi sulkee havaintoikkunan mutta EI linssiä'),
     suljettuIkkuna.ikkunoita === 0 && suljettuIkkuna.linssi === 'satelliitti'
-      && suljettuIkkuna.palkkeja === 1 && suljettuIkkuna.kohdenimi === ''
+      && suljettuIkkuna.palkkeja === 0 && suljettuIkkuna.valikkoja === 1
       && suljettuIkkuna.merkkeja > 0,
     JSON.stringify(suljettuIkkuna));
 
@@ -1002,7 +1053,10 @@ async function ajaNakyma(nakymanNimi) {
     kesken === ennen, `${ennen}\n    vs ${kesken}`);
 
   /* --- 12. Linssin sulkeminen palauttaa kaiken ---------------------- */
-  await s.evaluate(() => document.querySelector('.satelliittipalkki-sulje').click());
+  await s.evaluate(() => {
+    document.querySelector('.satelliitti-hampurilainen').click();
+    document.querySelector('.satelliitti-poistu').click();
+  });
   /*
    * MERKIT HÄIVYTETÄÄN ULOS ja elementit irtoavat vasta seuraavassa
    * piirrossa. Kontin ohjelmisto-WebGL piirtää noin kehyksen
@@ -1016,6 +1070,7 @@ async function ajaNakyma(nakymanNimi) {
     return {
       pallolinssi: window.matkakirja.ui.pallolinssi?.tunnus ?? null,
       palkkeja: document.querySelectorAll('.satelliittipalkki').length,
+      valikkoja: document.querySelectorAll('.satelliitti-valikkokehys').length,
       merkkeja: document.querySelectorAll('.satelliitti-piste').length,
       ikkunoita: document.querySelectorAll('.satelliitti-katselu').length,
       bodyLuokat: ['aikajana-palkki-auki', 'aikajana-paalla'].filter((l) => document.body.classList.contains(l)),
@@ -1040,7 +1095,8 @@ async function ajaNakyma(nakymanNimi) {
     };
   });
   vaadi(nimessa('Sulje linssi palauttaa yläpalkin, pelitilan ja tallennuksen täsmälleen'),
-    jalkeen.pallolinssi === null && jalkeen.palkkeja === 0 && jalkeen.merkkeja === 0
+    jalkeen.pallolinssi === null && jalkeen.palkkeja === 0 && jalkeen.valikkoja === 0
+      && jalkeen.merkkeja === 0
       && jalkeen.ikkunoita === 0 && jalkeen.bodyLuokat.length === 0
       && jalkeen.topbarNakyvyys === 'visible' && jalkeen.topbarKorkeus > 20
       && jalkeen.lautaNakyy && jalkeen.tila === ennen,
