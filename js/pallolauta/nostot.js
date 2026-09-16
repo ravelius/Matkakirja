@@ -1395,7 +1395,9 @@ export function luoNostot({
     });
     const ikonilaatikko = ({ r, datum }) => (r.perhe === 'aihemerkki'
       ? aihemerkinLaatikko(r.p, datum)
-      : nostonLaatikko(r.p, r, { dx: datum.dx, dy: datum.dy, nimio: false }));
+      : nostonLaatikko(r.p, r, {
+        dx: datum.dx, dy: datum.dy, nimio: false,
+      }));
     laskeLaatikot = () => {
       laatikot = [
         ...ikonit.map(ikonilaatikko),

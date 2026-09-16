@@ -2452,6 +2452,9 @@ export async function avaaPallolauta(ui) {
    * voi olla minkä tahansa kerroksen päällä.
    */
   const viuhkanNapautus = (lat = null, lng = null) => {
+    // Linssin aikana viuhka ei ota napautuksia mistään polusta (yksi
+    // portti): pistekerros kysyy tämän ennen omaa linssiporttiaan.
+    if (linssiPaalla()) return false;
     if (!nostot.viuhkaAuki()) return false;
     const kohta = tuoreNapautuskohta()
       ?? (Number.isFinite(lat) ? pallo.getScreenCoords(lat, lng, 0) : null);
@@ -2472,26 +2475,6 @@ export async function avaaPallolauta(ui) {
     if (valikkoSulkeutuiNapautuksesta()) { korttiOliAuki = false; return; }
     if (korttiOliAuki) { korttiOliAuki = false; return; }
     /*
-     * AUKI OLEVA VIUHKA SULKEUTUU KARTAN NAPAUTUKSESTA (Raamattu,
-     * KARTTAUUDISTUKSEN PAATOKSET 27 kohta 2). Poikkeus on toinen
-     * aihemerkki: sen napautus avaa oman viuhkansa, joka sulkee
-     * edellisen — muuten sama merkki vaatisi kaksi napautusta.
-     * Viuhkan omat kohdat eivät kulje tästä lainkaan: ne ottavat
-     * napautuksen itse (js/pallolauta/aihemerkit.js).
-     */
-    if (nostot.viuhkaAuki()) {
-      // Viuhkan oma kohta ensin: se on ruutulaatikko, ei pallon piste.
-      if (viuhkanNapautus(lat, lng)) return;
-      const uusi = lahinMerkki(lat, lng);
-      if (uusi?.o?.perhe === 'aihemerkki' && uusi.o.avain !== nostot.viuhkaAuki()) {
-        napautaNosto(uusi.o);
-        return;
-      }
-      heraa();
-      nostot.suljeViuhka();
-      return;
-    }
-    /*
      * LINSSIN AIKANA VAIN LINSSIN OMA MERKKI AVAA MITÄÄN (omistaja
      * 12.9.2026, sanatarkasti: *"Ja kartalta ei saa voida klikata
      * mitään muita kohteita kuin niitä vihreitä kohteita"*).
@@ -2508,6 +2491,33 @@ export async function avaaPallolauta(ui) {
     if (linssiPaalla()) {
       const merkki = lahinLinssimerkki(lat, lng);
       if (merkki) { heraa(); merkki.napautus(merkki); }
+      return;
+    }
+    /*
+     * AUKI OLEVA VIUHKA SULKEUTUU KARTAN NAPAUTUKSESTA (Raamattu,
+     * KARTTAUUDISTUKSEN PAATOKSET 27 kohta 2). Poikkeus on toinen
+     * aihemerkki: sen napautus avaa oman viuhkansa, joka sulkee
+     * edellisen — muuten sama merkki vaatisi kaksi napautusta.
+     * Viuhkan omat kohdat eivät kulje tästä lainkaan: ne ottavat
+     * napautuksen itse (js/pallolauta/aihemerkit.js).
+     *
+     * TÄMÄ ON LINSSIPORTIN JÄLKEEN, EI ENNEN (omistajan 12.9.2026 yksi
+     * portti -sääntö, tests/satelliitti.test.mjs): linssin aikana pelin
+     * oma viuhka on piilossa, mutta ennen porttia se otti napautuksen
+     * yhä vastaan — kartan napautus olisi avannut viuhkan kortin tai
+     * toisen aihemerkin viuhkan keskellä linssiä. Sama piilotettu
+     * osumalaatikko, joka kaatoi v1789:n ja v1794:n.
+     */
+    if (nostot.viuhkaAuki()) {
+      // Viuhkan oma kohta ensin: se on ruutulaatikko, ei pallon piste.
+      if (viuhkanNapautus(lat, lng)) return;
+      const uusi = lahinMerkki(lat, lng);
+      if (uusi?.o?.perhe === 'aihemerkki' && uusi.o.avain !== nostot.viuhkaAuki()) {
+        napautaNosto(uusi.o);
+        return;
+      }
+      heraa();
+      nostot.suljeViuhka();
       return;
     }
     const kohde = lahinKohde(lat, lng);
