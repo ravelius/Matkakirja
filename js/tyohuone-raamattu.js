@@ -7862,7 +7862,15 @@ export const RAAMATTU = {
           + 'osalta; Codexille tieto, ei uusia musiikkiajoja; 28) minipulun '
           + 'ympyrapohja (tumma pyorea tausta/reunus) POIS - pulu seisoo '
           + 'suoraan kuvan paalla ilman ympyraa; osuma-alue sailyy. Tila: '
-          + 'tyo Opus-agentilla, v1924.',
+          + 'tyo Opus-agentilla, v1924 (julkaistu). VIKA (omistaja 16.9.2026 '
+          + 'klo 18.30 UTC, iPhone-kuva v1924: pallo on KOKONAAN MUSTA, vain '
+          + 'vihreat pisteet, ISS ja sininen kehahohto nakyvat): pallon '
+          + 'tekstuuri ei lataudu tai piirry iPhonella - juurisyy selvitetaan '
+          + '(koko pallon 4k-kuvan lataus/CORS/dekoodaus iOS Safarissa, '
+          + 'ladontakankaan muisti, virhe reliefiketjussa); korjaus + '
+          + 'varapolku (jos tekstuuri ei valmistu 10 s:ssa, kaytetaan '
+          + 'generoitua vyohykepalloa) ja diagnostiikka lokiin. Tila: tyo '
+          + 'Opus-agentilla, kiireellinen.',
         'IHMISEN MATKA -LINSSI: RINTAMAN VALKKYMINEN, MUSTA ALKU, LIIKU '
           + 'POIS; ASTRONAUTTILINSSILLE OMA KUVAKE (omistaja 15.9.2026 klo '
           + '12.00 UTC, tyopoytakuva 248 000 v. sitten, sanatarkasti: "Kun '
