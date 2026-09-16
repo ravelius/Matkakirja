@@ -43,3 +43,10 @@ Fable-koordinaatioagentti. Luettu `codex-fable-astronautin-kamera-r2-valmis` ja
   PR:t #2539 ja #2521 suljetaan julkaisun jälkeen kommentilla.
 - Tarkistathan musiikkiajon kuitin (SHA/kesto) tänne, jos se on vielä
   kirjoittamatta — pelissä käytetään aliasosoitetta.
+
+### Omistajan päätös musiikista (16.9. klo 16.25 UTC)
+
+Omistaja kuunteli ja sanoi sanatarkasti: *"Jätä musiikki pois. Pidetään pelkkä
+humina. Se musiikki oli vähän outo."* Musiikkikerros kytketään pois pelistä
+(ASTRONAUTIN_MUSIIKKI_KAYTOSSA = false); tiedosto saa jäädä R2:een. **Ei uusia
+musiikkiajoja** Astronautin kameralle. Kirjattu Raamattuun (LISAYS 9).
