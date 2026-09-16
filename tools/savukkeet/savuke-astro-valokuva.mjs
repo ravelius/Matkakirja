@@ -125,9 +125,39 @@ async function avaaSivu(nakyma, virheet) {
         headers: { 'access-control-allow-origin': '*' },
       });
     });
+  /*
+   * PULUN PALVELIN VASTAA SAVUKKEESSA (omistaja 16.9.2026, LISÄYS 10):
+   * vapaa kysymys menee samaa reittiä kuin kartan pulu, ja juuri se on
+   * mitattava asia. Oikeaa mallia ei kutsuta — reitti vastaa valmiilla
+   * JSONilla ja LASKEE kutsut, jolloin voidaan myös todistaa, ettei
+   * ehdotuspilleri kutsu palvelinta lainkaan.
+   */
+  const laskuri = { kutsut: 0 };
+  await sivu.route(/matkakirja-pollo\.samireivinen\.workers\.dev/, (route) => {
+    const otsakkeet = {
+      'access-control-allow-origin': '*',
+      'access-control-allow-headers': '*',
+      'access-control-allow-methods': 'POST, OPTIONS',
+    };
+    // Esitarkistus ei ole kysymys: sitä ei lasketa.
+    if (route.request().method() === 'OPTIONS') {
+      route.fulfill({ status: 204, headers: otsakkeet, body: '' });
+      return;
+    }
+    laskuri.kutsut += 1;
+    route.fulfill({
+      status: 200,
+      contentType: 'application/json',
+      headers: otsakkeet,
+      body: JSON.stringify({ vastaus: MALLIVASTAUS, jatkot: [] }),
+    });
+  });
   sivu.on('pageerror', (e) => virheet.push(String(e)));
-  return { konteksti, sivu };
+  return { konteksti, sivu, laskuri };
 }
+
+/** Savukkeen oma "mallivastaus": tunnistettava teksti, joka ei voi tulla muualta. */
+const MALLIVASTAUS = 'Savukkeen mallivastaus: tama tuli pulun omaa chattireittia pitkin.';
 
 async function avaaPeli(s) {
   await s.goto('http://127.0.0.1:8757/index.html?lauta=pallo', { waitUntil: 'load' });
@@ -292,7 +322,7 @@ const MITAT = () => {
 
 async function ajaNakyma(nakymanNimi) {
   const virheet = [];
-  const { konteksti, sivu: s } = await avaaSivu(NAKYMAT[nakymanNimi], virheet);
+  const { konteksti, sivu: s, laskuri } = await avaaSivu(NAKYMAT[nakymanNimi], virheet);
   const kaappaa = async (t) => {
     await s.screenshot({ path: join(ULOS, `astro-valokuva-${nakymanNimi}-${t}.png`), timeout: 90000 })
       .catch((e) => console.log(`    (kaappaus ${t} ei onnistunut: ${e.message.split('\n')[0]})`));
@@ -401,10 +431,112 @@ async function ajaNakyma(nakymanNimi) {
     await new Promise((r) => setTimeout(r, 1200));
   });
   await s.waitForTimeout(1500);
+  /*
+   * ── VINKKIAVAUKSEN KELLO KÄYNTIIN ENNEN NAPAUTUSTA ───────────────
+   *
+   * OMISTAJA 16.9.2026: *"ensimmäisellä kerralla info ruutu voisi aueta
+   * ja pienentyä itsestään heti takaisin."* Vinkki kestää 1,5 s, joten
+   * sitä ei voi mitata jälkikäteen yhdellä kyselyllä — selitteen tila
+   * kirjataan 60 ms:n välein siitä hetkestä, kun kuvaa ei ole vielä
+   * avattu, ja loki luetaan kun vinkin on määrä olla ohi.
+   */
+  await s.evaluate(() => {
+    window.__seliteLoki = [];
+    const alku = performance.now();
+    window.__seliteKello = setInterval(() => {
+      const el = document.querySelector('.satelliitti-selite');
+      window.__seliteLoki.push({
+        t: Math.round(performance.now() - alku),
+        on: Boolean(el),
+        kiinni: el ? el.classList.contains('satelliitti-selite-kiinni') : null,
+      });
+    }, 60);
+  });
+  // VASTAKOE VINKILLE: istuntomuisti on tyhjä, joten vinkin KUULUU tulla.
+  const muistiEnnen = await s.evaluate(
+    () => sessionStorage.getItem('matkakirja-astro-vinkki-richat'),
+  );
   await napautaPistetta('richat');
   const auki = await s.evaluate(() => Boolean(document.querySelector('.satelliitti-katselu')));
   vaadi(nimessa('valokuvanäkymä avautuu vihreästä pisteestä'), auki, '');
   if (!auki) { await konteksti.close(); return; }
+
+  /* --- VINKKIAVAUS: auki ensin, kelattu itsestään 1,5 s:n jälkeen --- */
+  await s.waitForTimeout(2600);
+  const vinkki = await s.evaluate(() => {
+    clearInterval(window.__seliteKello);
+    const loki = window.__seliteLoki.filter((r) => r.on);
+    return {
+      naytteita: loki.length,
+      ensimmainen: loki[0] ?? null,
+      viimeinen: loki[loki.length - 1] ?? null,
+      // Ensimmäinen hetki, jolloin selite oli kelattuna.
+      kelautui: loki.find((r) => r.kiinni)?.t ?? null,
+      ilmestyi: loki[0]?.t ?? null,
+      aukiNaytteita: loki.filter((r) => r.kiinni === false).length,
+      muisti: sessionStorage.getItem('matkakirja-astro-vinkki-richat'),
+    };
+  });
+  const vinkinKesto = vinkki.kelautui !== null && vinkki.ilmestyi !== null
+    ? vinkki.kelautui - vinkki.ilmestyi : null;
+  vaadi(nimessa('ensimmäinen avaus vinkkaa: selite auki ≥ 1 s ja kelautuu itsestään ≤ 3 s'),
+    muistiEnnen === null && vinkki.aukiNaytteita > 0 && vinkinKesto !== null
+      && vinkinKesto >= 1000 && vinkinKesto <= 3000
+      && vinkki.viimeinen?.kiinni === true && vinkki.muisti === '1',
+    JSON.stringify({ muistiEnnen, vinkinKesto, ...vinkki }));
+  await kaappaa('selite-vinkki');
+
+  /* --- LISÄYS 10 kohta 30: selite on nyt PIENENNETTY ---------------- */
+  const kelattuAlussa = await s.evaluate(() => {
+    const selite = document.querySelector('.satelliitti-selite');
+    const otsikko = document.querySelector('.satelliitti-selite-otsikko');
+    const runko = document.querySelector('.satelliitti-selite-runko');
+    return {
+      kiinni: selite.classList.contains('satelliitti-selite-kiinni'),
+      otsikko: Math.round(otsikko.getBoundingClientRect().height),
+      fontti: parseFloat(getComputedStyle(otsikko).fontSize),
+      runko: Math.round(runko.getBoundingClientRect().height),
+      vari: getComputedStyle(otsikko).color,
+    };
+  });
+  vaadi(nimessa('selite avautuu pienennettynä: vain otsikkorivi, korkeus ≤ 1,6 × fonttikoko'),
+    kelattuAlussa.kiinni && kelattuAlussa.runko <= 1
+      && kelattuAlussa.otsikko <= Math.ceil(1.6 * kelattuAlussa.fontti),
+    JSON.stringify(kelattuAlussa));
+
+  /* --- otsikkorivin napautus avaa sisällön (LISÄYS 10, kohta 30) ---- */
+  await s.evaluate(() => document.querySelector('.satelliitti-selite-otsikko')
+    .dispatchEvent(new MouseEvent('click', { bubbles: true })));
+  await s.waitForFunction(
+    () => document.querySelector('.satelliitti-selite-runko').getBoundingClientRect().height > 10,
+    null, { timeout: 15000 },
+  ).catch(() => {});
+  const avattuNapautuksesta = await s.evaluate(() => ({
+    kiinni: document.querySelector('.satelliitti-selite').classList.contains('satelliitti-selite-kiinni'),
+    runko: Math.round(document.querySelector('.satelliitti-selite-runko').getBoundingClientRect().height),
+    vari: getComputedStyle(document.querySelector('.satelliitti-selite-otsikko')).color,
+    seutu: getComputedStyle(document.querySelector('.satelliitti-seutu')).color,
+  }));
+  vaadi(nimessa('otsikkorivin napautus avaa selitteen sisällön'),
+    !avattuNapautuksesta.kiinni && avattuNapautuksesta.runko > 10,
+    JSON.stringify(avattuNapautuksesta));
+
+  /*
+   * OTSIKKORIVI ON VIHREÄ (omistaja 16.9.2026: *"Infon otsikkorivi
+   * voisi olla vihreällä"*) — sekä auki että kelattuna, koska himmennys
+   * tehdään läpinäkyvyydellä eikä värillä. Maa-osa on harmaa.
+   */
+  const vihrea = (v) => {
+    const o = String(v ?? '').match(/rgba?\((\d+), (\d+), (\d+)/);
+    return Boolean(o) && Number(o[2]) > Number(o[1]) && Number(o[2]) > Number(o[3]);
+  };
+  vaadi(nimessa('selitteen otsikkorivi on vihreä auki ja kelattuna, maa-osa ei'),
+    vihrea(avattuNapautuksesta.vari) && vihrea(kelattuAlussa.vari)
+      && !vihrea(avattuNapautuksesta.seutu),
+    JSON.stringify({ auki: avattuNapautuksesta.vari, kiinni: kelattuAlussa.vari,
+      seutu: avattuNapautuksesta.seutu }));
+  vaadi(nimessa('vastakoe: vihreysmittari hylkää harmaan ja hyväksyy #5dffa8'),
+    !vihrea('rgb(224, 224, 224)') && vihrea('rgb(93, 255, 168)'), '');
   await kaappaa('selite-auki');
 
   /* --- 1, 3, 4: kulmat ja värit koko ruudun kuvalla ----------------- */
@@ -659,42 +791,109 @@ async function ajaNakyma(nakymanNimi) {
     JSON.stringify({ luokka: pulu.puluPiilossa, isoPulu: pulu.isoPulu }));
   await kaappaa('minipulu');
 
-  /* --- 9b: kysymyskortti ja esikirjoitettu vastaus ------------------ */
+  /* --- 9b: PULUN NORMAALI CHATTI (LISÄYS 10, kohta 29) -------------- */
   const ennenKorttia = await s.evaluate(
     () => document.querySelector('.satelliitti-pulukortti')?.hidden ?? null,
   );
+  const kutsutEnnen = laskuri.kutsut;
   await s.evaluate(() => document.querySelector('.satelliitti-pulunappi').click());
   await s.waitForTimeout(350);
   const kortti = await s.evaluate(() => {
     const k = document.querySelector('.satelliitti-pulukortti');
     const b = k?.getBoundingClientRect();
+    const x = document.querySelector('.satelliitti-katselu .satelliitti-sulku')?.getBoundingClientRect();
+    const kentta = k?.querySelector('.satelliitti-pulu-kentta');
+    const laheta = k?.querySelector('.satelliitti-pulu-laheta');
+    const kb = kentta?.getBoundingClientRect();
     return {
       auki: k ? !k.hidden : false,
       kysymyksia: k?.querySelectorAll('.satelliitti-pulu-kysymys').length ?? 0,
-      tekstit: [...(k?.querySelectorAll('.satelliitti-pulu-kysymys') ?? [])].map((x) => x.textContent),
-      vastausPiilossa: k?.querySelector('.satelliitti-pulu-vastaus')?.hidden ?? null,
+      tekstit: [...(k?.querySelectorAll('.satelliitti-pulu-kysymys') ?? [])].map((t) => t.textContent),
+      kuplia: k?.querySelectorAll('.satelliitti-pulu-vastaus').length ?? 0,
+      kentta: Boolean(kentta) && kentta.tagName === 'INPUT',
+      kenttaNakyy: Boolean(kb) && kb.width > 40 && kb.height > 10
+        && kb.bottom <= window.innerHeight + 1,
+      laheta: Boolean(laheta),
       ruudulla: Boolean(b) && b.left >= 0 && b.top >= 0
         && b.right <= window.innerWidth + 1 && b.bottom <= window.innerHeight + 1,
+      // EI SAA PEITTÄÄ ✕:ÄÄ (omistajan asettelusääntö kuvanäkymälle).
+      peittaaX: Boolean(b && x) && b.left < x.right && x.left < b.right
+        && b.top < x.bottom && x.top < b.bottom,
     };
   });
-  vaadi(nimessa('minipulun napautus avaa kortin, jossa on kohteen kaksi kysymystä'),
+  vaadi(nimessa('minipulun napautus avaa chatin: 2 ehdotusta, vapaa kenttä, ei peitä ✕:ää'),
     ennenKorttia === true && kortti.auki && kortti.kysymyksia === 2
-      && kortti.tekstit.every((t) => t.length > 5) && kortti.vastausPiilossa === true
-      && kortti.ruudulla,
+      && kortti.tekstit.every((t) => t.length > 5) && kortti.kuplia === 0
+      && kortti.kentta && kortti.kenttaNakyy && kortti.laheta
+      && kortti.ruudulla && !kortti.peittaaX,
     JSON.stringify(kortti));
+
+  /* --- ehdotus vastaa ESIKIRJOITETUSTI, ilman verkkokutsua ---------- */
   await s.evaluate(() => document.querySelector('.satelliitti-pulu-kysymys').click());
-  await s.waitForTimeout(300);
+  await s.waitForTimeout(400);
   const vastaus = await s.evaluate(() => {
-    const v = document.querySelector('.satelliitti-pulu-vastaus');
-    return { nakyy: v ? !v.hidden : false, teksti: v?.textContent ?? '' };
+    const kuplat = [...document.querySelectorAll('.satelliitti-pulu-vastaus')];
+    const v = kuplat[kuplat.length - 1];
+    return {
+      nakyy: Boolean(v) && v.getBoundingClientRect().height > 0,
+      teksti: v?.textContent ?? '',
+      omia: document.querySelectorAll('.satelliitti-pulu-oma').length,
+    };
   });
-  vaadi(nimessa('kysymyksen napautus näyttää esikirjoitetun vastauksen'),
-    vastaus.nakyy && vastaus.teksti.length > 20, vastaus.teksti.slice(0, 60));
-  await kaappaa('kysymyskortti');
+  vaadi(nimessa('ehdotuksen napautus vastaa esikirjoitetusti ilman verkkokutsua'),
+    vastaus.nakyy && vastaus.teksti.length > 20 && vastaus.omia === 1
+      && laskuri.kutsut - kutsutEnnen === 0,
+    JSON.stringify({ kutsuja: laskuri.kutsut - kutsutEnnen, omia: vastaus.omia,
+      teksti: vastaus.teksti.slice(0, 60) }));
+  await kaappaa('chatti-ehdotus');
+
+  /* --- vapaa kysymys menee SAMAA REITTIÄ kuin kartan pulu ----------- */
+  await s.evaluate(() => {
+    // Minipulun eleet kirjataan, jotta reagointi voidaan todeta jälkikäteen.
+    const lintu = document.querySelector('.satelliitti-pulunappi .minipulu');
+    window.__pulunEleet = [];
+    if (!lintu) return;
+    new MutationObserver(() => window.__pulunEleet.push(lintu.dataset.tila))
+      .observe(lintu, { attributes: true, attributeFilter: ['data-tila'] });
+  });
+  await s.evaluate(() => {
+    const k = document.querySelector('.satelliitti-pulu-kentta');
+    k.value = 'Mitä tuo vaalea rengas kuvassa oikein on?';
+    k.dispatchEvent(new Event('input', { bubbles: true }));
+    document.querySelector('.satelliitti-pulu-syote')
+      .dispatchEvent(new Event('submit', { bubbles: true, cancelable: true }));
+  });
+  const mallivastausNakyi = await s.waitForFunction(
+    (odotettu) => [...document.querySelectorAll('.satelliitti-pulu-vastaus')]
+      .some((v) => v.textContent.includes(odotettu)),
+    MALLIVASTAUS, { timeout: 20000 },
+  ).then(() => true).catch(() => false);
+  const vapaa = await s.evaluate(() => {
+    const kuplat = [...document.querySelectorAll('.satelliitti-pulu-vastaus')];
+    const v = kuplat[kuplat.length - 1];
+    const b = v?.getBoundingClientRect();
+    return {
+      teksti: v?.textContent ?? '',
+      nakyy: Boolean(b) && b.width > 0 && b.height > 0,
+      omat: [...document.querySelectorAll('.satelliitti-pulu-oma')].map((o) => o.textContent),
+      kentta: document.querySelector('.satelliitti-pulu-kentta').value,
+      eleet: window.__pulunEleet ?? [],
+    };
+  });
+  vaadi(nimessa('vapaa kysymys menee pulun omaa chattireittiä ja vastaus näkyy kuplana'),
+    mallivastausNakyi && vapaa.nakyy && vapaa.teksti.includes(MALLIVASTAUS)
+      && laskuri.kutsut - kutsutEnnen === 1
+      && vapaa.omat.length === 2 && /vaalea rengas/.test(vapaa.omat[1] ?? '')
+      && vapaa.kentta === '',
+    JSON.stringify({ kutsuja: laskuri.kutsut - kutsutEnnen, omat: vapaa.omat,
+      teksti: vapaa.teksti.slice(0, 50) }));
+  vaadi(nimessa('minipulu reagoi vastauksen aikana'),
+    vapaa.eleet.includes('reaction'), JSON.stringify(vapaa.eleet.slice(0, 6)));
+  await kaappaa('chatti-vastaus');
   await s.evaluate(() => document.querySelector('.satelliitti-pulu-sulku').click());
   await s.waitForTimeout(250);
   const suljettu = await s.evaluate(() => document.querySelector('.satelliitti-pulukortti').hidden);
-  vaadi(nimessa('kysymyskortti sulkeutuu X:stä'), suljettu === true, String(suljettu));
+  vaadi(nimessa('chatti sulkeutuu X:stä'), suljettu === true, String(suljettu));
 
   /* --- 10 (LISÄYS 6): kelattu selite mahtuu aina yhdelle riville ---- */
   const pitkaNimi = 'Al Wadjin riuttamatalikko — Punainenmeri, Saudi-Arabia';
@@ -812,6 +1011,34 @@ async function ajaNakyma(nakymanNimi) {
   vaadi(nimessa('kuvan ✕ sulkee kuvan ja linssin ✕ palaa pallonäkymään'),
     paluu.kuviaAuki === 0 && paluu.kuvaLuokka === false && paluu.kehysNakyy,
     JSON.stringify(paluu));
+  /*
+   * ── TOINEN AVAUS: EI VINKKIÄ, SUORAAN KELATTUNA ──────────────────
+   *
+   * Vinkki on kertaluonteinen (istuntomuisti `matkakirja-astro-vinkki-
+   * <kohde>`). Sama kohde avataan uudelleen, ja selitteen KUULUU olla
+   * kelattu heti — ei enää 1,5 s:n avausta. Tämä on samalla vastakoe
+   * ensimmäisen avauksen mittaukselle: sama mittari, eri lopputulos.
+   */
+  await s.waitForTimeout(900);
+  const paikkaUudestaan = await napautaPistetta('richat');
+  const toinenAvaus = await s.evaluate(() => {
+    const selite = document.querySelector('.satelliitti-selite');
+    return {
+      auki: Boolean(document.querySelector('.satelliitti-katselu')),
+      kiinni: selite ? selite.classList.contains('satelliitti-selite-kiinni') : null,
+      runko: selite
+        ? Math.round(selite.querySelector('.satelliitti-selite-runko').getBoundingClientRect().height)
+        : null,
+      muisti: sessionStorage.getItem('matkakirja-astro-vinkki-richat'),
+    };
+  });
+  vaadi(nimessa('toinen avaus: selite on heti kelattu, vinkki ei toistu'),
+    toinenAvaus.auki && toinenAvaus.kiinni === true && toinenAvaus.runko <= 1
+      && toinenAvaus.muisti === '1',
+    JSON.stringify({ ...toinenAvaus, paikka: paikkaUudestaan }));
+  await s.evaluate(() => document.querySelector('.satelliitti-katselu .satelliitti-sulku')?.click());
+  await s.waitForTimeout(500);
+
   await s.evaluate(() => document.querySelector('.satelliitti-linssisulku').click());
   await s.waitForTimeout(900);
   const ulkona = await s.evaluate(() => ({

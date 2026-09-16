@@ -160,7 +160,9 @@
  */
 
 import { html } from '../ui-apurit.js';
-import { polloKuplatPois, polloLinssiAlkoi, polloLinssiPaattyi } from '../pollo.js';
+import {
+  polloKuplatPois, polloLinssiAlkoi, polloLinssiPaattyi, polloUlkoinenKysymys,
+} from '../pollo.js';
 import { hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream } from '../ambience-stream.js';
 import { LINSSIN_HILJENNYS } from '../siirtymamusiikki.js';
 import { stopDiaryVoice } from '../luenta.js';
@@ -695,7 +697,37 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
     selite.setAttribute('aria-expanded', kiinni ? 'false' : 'true');
     sovitaOtsikko();
   };
-  const kelaaSelite = () => asetaSelite(!selite.classList.contains('satelliitti-selite-kiinni'));
+  /*
+   * ── VINKKIAVAUS: KERRAN KOHDETTA KOHTI ───────────────────────────
+   *
+   * OMISTAJA 16.9.2026, sanatarkasti: *"ensimmäisellä kerralla info
+   * ruutu voisi aueta ja pienentyä itsestään heti takaisin, niin
+   * pelaajalle tulisi vinkki että tekstiä on enemmän."*
+   *
+   * Kelattu selite on pelkkä otsikkorivi, eikä siitä näe, että sen
+   * takana on tekstiä. Vinkki näyttää sen kerran: laatikko avautuu,
+   * jää auki 1,5 s ja kelautuu takaisin. MUISTI ON KOHDEKOHTAINEN JA
+   * ISTUNTOKOHTAINEN (`sessionStorage`): sama kohde ei vinku kahdesti,
+   * mutta uusi pelisessio saa vinkin uudelleen.
+   *
+   * PELAAJAN ELE VOITTAA VINKIN: napautus kesken vinkin lopettaa
+   * ajastimen ja JÄTTÄÄ selitteen auki — muuten laatikko sulkeutuisi
+   * juuri kun pelaaja alkaa lukea.
+   */
+  const VINKIN_AVAIN = `matkakirja-astro-vinkki-${kohde.tunnus}`;
+  const VINKIN_KESTO_MS = 1500;
+  let vinkkiAjastin = null;
+  const lopetaVinkki = () => {
+    if (vinkkiAjastin === null) return false;
+    clearTimeout(vinkkiAjastin);
+    vinkkiAjastin = null;
+    return true;
+  };
+  const kelaaSelite = () => {
+    // Vinkki kesken: ele keskeyttää sen eikä kelaa laatikkoa kiinni.
+    if (lopetaVinkki()) { asetaSelite(false); return; }
+    asetaSelite(!selite.classList.contains('satelliitti-selite-kiinni'));
+  };
   /*
    * KUVAN KÄSITTELY PIENENTÄÄ SELITTEEN ITSESTÄÄN (LISÄYS 6:
    * *"Inforuutu saisi pienentyä automaattisesti kun kuvaa klikataan,
@@ -705,10 +737,36 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
    * laatikkoa auki ja kiinni.
    */
   const kelaaKuvasta = () => {
+    lopetaVinkki();
     if (selite.classList.contains('satelliitti-selite-kiinni')) return;
     asetaSelite(true);
   };
-  selite.setAttribute('aria-expanded', 'true');
+  /*
+   * ── SELITE AVAUTUU PIENENNETTYNÄ (Raamattu LISÄYS 10, kohta 30) ──
+   *
+   * OMISTAJA 16.9.2026 klo 18.35 UTC, sanatarkasti: *"Lisäksi inforuutu
+   * voisi avautua pienennettynä, eli käyttäjän pitäisi klikata sitä
+   * nähdäkseen sisällön."* Valokuva on sisältö; selite on sen päällä
+   * oleva pinta, joka ei saa peittää kuvaa ennen kuin sitä pyydetään.
+   * Kohteen vaihto luo koko näkymän uudelleen, joten kelattu tila
+   * palautuu itsestään jokaisella kohteella.
+   */
+  asetaSelite(true);
+  const liikePois = Boolean(globalThis.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches);
+  let vinkkiNahty = true;
+  try {
+    vinkkiNahty = globalThis.sessionStorage?.getItem(VINKIN_AVAIN) === '1';
+    globalThis.sessionStorage?.setItem(VINKIN_AVAIN, '1');
+  } catch {
+    /* Yksityinen tila tai estetty talletus: vinkki jää väliin, ei kaaduta. */
+  }
+  if (!vinkkiNahty && !liikePois) {
+    asetaSelite(false);
+    vinkkiAjastin = setTimeout(() => {
+      vinkkiAjastin = null;
+      asetaSelite(true);
+    }, VINKIN_KESTO_MS);
+  }
   selite.addEventListener('click', (e) => { e.stopPropagation(); kelaaSelite(); });
   /* Ruudun kääntö vaakaan muuttaa käytettävissä olevan leveyden. */
   const otsikkoMitataanUudestaan = () => sovitaOtsikko();
@@ -786,22 +844,37 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
   }
 
   /*
-   * ── KAKSI VALMISTA KYSYMYSTÄ PER KOHDE ───────────────────────────
+   * ── PULUN NORMAALI CHATTI, MINIPULUN KOKOISENA ───────────────────
    *
-   * SAMA MEKANIIKKA KUIN PELIN NYKYISILLÄ VALMIILLA KYSYMYKSILLÄ
-   * (js/fokusnosto.js piirraNostonKysymykset, "Kysy pululta:"):
-   * napautettava kysymysnappi, pulun nimilappu otsikkona ja vastaus
-   * pulun kuplana. YKSI ERO, JA SE ON TARKOITUKSELLINEN: kartan
-   * valmiit kysymykset menevät `polloKysy`-reittiä mallille, mutta
-   * tässä VASTAUS ON JO OLEMASSA (js/linssit/astronaut-kysymykset.js,
-   * Codexin PR 2539: 64 kohdetta × 2 kysymystä + lähteistetty vastaus).
-   * Mallikutsua ei tehdä — se maksaisi, ja vastaus olisi huonompi kuin
-   * tarkistettu teksti.
+   * OMISTAJA 16.9.2026 klo 18.35 UTC (iPhone-kuva Issaouanen
+   * hiekkamerestä, Raamattu LISÄYS 10, kohta 29), sanatarkasti:
+   * *"Pulun chatti pitäisi toimia normaalisti vaikka itse pulu olisi
+   * pienemmän kokoinen."*
+   *
+   * TÄMÄ KUMOAA AIEMMAN "VAIN KAKSI ESIKIRJOITETTUA KYSYMYSTÄ"
+   * -KORTIN. Kortti osasi vastata vain kahteen kysymykseen eikä
+   * ottanut vastaan pelaajan omia — pulu näytti tyhmemmältä pienenä
+   * kuin isona, ja juuri sen omistaja huomasi.
+   *
+   * KOLME OSAA, SAMASSA JÄRJESTYKSESSÄ KUIN KARTAN CHATISSA:
+   *
+   *   • EHDOTUSPILLERIT (kohteen kaksi valmista kysymystä, js/linssit/
+   *     astronaut-kysymykset.js) chatin alussa. Näiden napautus vastaa
+   *     ESIKIRJOITETULLA tekstillä ILMAN MALLIKUTSUA: vastaus on jo
+   *     olemassa ja lähteistetty, joten kutsu maksaisi ja antaisi
+   *     huonomman vastauksen. Sama sääntö kuin ennenkin.
+   *   • VIRTA: pelaajan kysymykset ja pulun kuplat allekkain.
+   *   • VAPAA KYSYMYSKENTTÄ, joka menee SAMAA REITTIÄ kuin kartan
+   *     pulu (js/pollo.js polloUlkoinenKysymys → Pollo.kysyUlkoisesti):
+   *     sama palvelin, sama konteksti, sama historia, sama striimi ja
+   *     samat rajoitukset (yksi pyyntö kerrallaan, pulu pitää olla
+   *     löydetty).
    *
    * MIKSI KUPLA PIIRRETÄÄN TÄHÄN EIKÄ `polloLinssikupla`lla: pelin
-   * kuplapino on linssin ajan `visibility: hidden` (KRIITTINEN_TYYLI),
-   * joten sitä kautta tullut vastaus EI NÄKYISI. Kortti on kuvan oma
-   * pinta samalla tavalla kuin selite ja pienoiskuvat.
+   * paneeli ja kuplapino ovat linssin ajan `visibility: hidden`
+   * (KRIITTINEN_TYYLI), joten sitä kautta tullut vastaus EI NÄKYISI.
+   * Kupla kiinnittyy siis MINIPULUUN — kortti kasvaa hahmon yläpuolelle
+   * samassa kulmassa, kuten omistaja pyysi.
    */
   const kysymykset = haeAstronautinKysymykset(kohde.tunnus);
   const pulukortti = html('div', 'satelliitti-pulukortti');
@@ -814,10 +887,45 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
   pulunYlarivi.append(pulunOtsikko, pulunSulku);
   const pulunRivi = html('div', 'satelliitti-pulu-kysymykset');
   pulunRivi.setAttribute('role', 'group');
-  const pulunVastaus = html('div', 'satelliitti-pulu-vastaus');
-  pulunVastaus.hidden = true;
-  pulunVastaus.setAttribute('role', 'status');
-  pulukortti.append(pulunYlarivi, pulunRivi, pulunVastaus);
+  const pulunVirta = html('div', 'satelliitti-pulu-virta');
+  pulunVirta.setAttribute('role', 'log');
+  pulunVirta.setAttribute('aria-live', 'polite');
+  const pulunSyote = html('form', 'satelliitti-pulu-syote');
+  const pulunKentta = html('input', 'satelliitti-pulu-kentta');
+  pulunKentta.type = 'text';
+  pulunKentta.maxLength = 300;
+  pulunKentta.placeholder = 'Kysy mitä tahansa…';
+  pulunKentta.setAttribute('aria-label', `Kysy pululta kohteesta ${kohde.nimi}`);
+  pulunKentta.autocomplete = 'off';
+  const pulunLaheta = nappi('satelliitti-pulu-laheta', '↑', 'Lähetä kysymys');
+  pulunLaheta.type = 'submit';
+  pulunSyote.append(pulunKentta, pulunLaheta);
+  pulukortti.append(pulunYlarivi, pulunRivi, pulunVirta, pulunSyote);
+
+  /**
+   * Yksi kupla virtaan.
+   *
+   * TEKSTINÄ, EI innerHTML:nä (astronaut-kysymykset.js:n ohje eikä
+   * mallin vastauskaan saa tuoda merkkausta ruudulle).
+   *
+   * @param {'oma'|'pulu'} laji kuka puhuu.
+   * @param {string} teksti kuplan sisältö.
+   * @returns {HTMLElement} kupla, jota striimi voi päivittää.
+   */
+  const lisaaKupla = (laji, teksti) => {
+    const kupla = html('div', laji === 'oma' ? 'satelliitti-pulu-oma' : 'satelliitti-pulu-vastaus');
+    if (laji !== 'oma') kupla.setAttribute('role', 'status');
+    kupla.replaceChildren(document.createTextNode(String(teksti ?? '')));
+    /*
+     * VAIN TUOREIN PULUN KUPLA ON `.satelliitti-pulu-vastaus`in
+     * viimeinen: vanhat jäävät virtaan luettaviksi, eikä chatti nollaa
+     * keskustelua joka kysymyksen kohdalla.
+     */
+    pulunVirta.appendChild(kupla);
+    pulunVirta.scrollTop = pulunVirta.scrollHeight;
+    pulukortti.scrollTop = pulukortti.scrollHeight;
+    return kupla;
+  };
 
   /** Vastaus kuplaan pulun äänellä — esikirjoitettuna, ilman mallikutsua. */
   const vastaaKysymykseen = (kysymys, painike) => {
@@ -826,15 +934,8 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
       b.classList.toggle('valittu', b === painike);
       b.setAttribute('aria-pressed', b === painike ? 'true' : 'false');
     }
-    /*
-     * TEKSTINÄ, EI innerHTML:nä (astronaut-kysymykset.js:n ohje):
-     * vastaus on aineistoa, eikä aineisto saa tuoda merkkausta
-     * ruudulle.
-     */
-    pulunVastaus.replaceChildren(
-      document.createTextNode(tieto?.vastaus ?? 'Tästä kuvasta pulu ei osaa vielä kertoa.'),
-    );
-    pulunVastaus.hidden = false;
+    lisaaKupla('oma', kysymys);
+    lisaaKupla('pulu', tieto?.vastaus ?? 'Tästä kuvasta pulu ei osaa vielä kertoa.');
     /* Sama pieni päänkääntö kuin kartan pululla: hahmo reagoi. */
     try { minipulu?.reagoi?.(); } catch { /* liikkeenvähennys tai purettu hahmo */ }
   };
@@ -847,7 +948,61 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
     pulunRivi.appendChild(b);
   }
 
-  /** Kysymyskortti auki/kiinni. Kohteen vaihto sulkee koko näkymän. */
+  /*
+   * ── VAPAA KYSYMYS MENEE PELIN OMAA REITTIÄ ───────────────────────
+   *
+   * Kysymys on PELAAJAN ÄÄNTÄ (Raamattu, PULUN KARAKTÄÄRI koskee
+   * vastausta): tänne ei kirjoiteta repliikkiä pulun suuhun. Vastaus
+   * striimataan kuplaan palasittain, aivan kuten paneelissa, ja
+   * epäonnistuminen näkyy yhtenä siistinä rivinä — ei konsolissa.
+   */
+  let kysymysKesken = false;
+  const lahetaVapaa = async () => {
+    const teksti = String(pulunKentta.value ?? '').replace(/\s+/g, ' ').trim();
+    if (!teksti || kysymysKesken) return;
+    kysymysKesken = true;
+    pulunKentta.value = '';
+    pulunLaheta.disabled = true;
+    lisaaKupla('oma', teksti);
+    const kupla = lisaaKupla('pulu', '…');
+    kupla.classList.add('satelliitti-pulu-odottaa');
+    try { minipulu?.reagoi?.(); } catch { /* liikkeenvähennys tai purettu hahmo */ }
+    try {
+      const vastaus = await polloUlkoinenKysymys(teksti, {
+        onPala: (kertynyt) => {
+          if (!kupla.isConnected) return;
+          kupla.classList.remove('satelliitti-pulu-odottaa');
+          kupla.replaceChildren(document.createTextNode(kertynyt));
+          pulunVirta.scrollTop = pulunVirta.scrollHeight;
+        },
+      });
+      if (kupla.isConnected) {
+        kupla.classList.remove('satelliitti-pulu-odottaa');
+        kupla.replaceChildren(document.createTextNode(vastaus));
+      }
+      try { minipulu?.reagoi?.(); } catch { /* liikkeenvähennys tai purettu hahmo */ }
+    } catch (virhe) {
+      if (kupla.isConnected) {
+        kupla.classList.remove('satelliitti-pulu-odottaa');
+        kupla.replaceChildren(document.createTextNode(
+          virhe?.message === 'kesken'
+            ? 'Pulu vastaa vielä edelliseen. Hetki vain.'
+            : 'Pulu ei saanut kysymyksestä kiinni. Yritä hetken päästä uudelleen.',
+        ));
+      }
+    } finally {
+      kysymysKesken = false;
+      pulunLaheta.disabled = false;
+      pulunVirta.scrollTop = pulunVirta.scrollHeight;
+    }
+  };
+  pulunSyote.addEventListener('submit', (e) => { e.preventDefault(); e.stopPropagation(); lahetaVapaa(); });
+  /* Kuvan eleet (zoom, panorointi, selitteen kelaus) eivät kuulu chattiin. */
+  for (const laji of ['click', 'pointerdown', 'wheel', 'keydown']) {
+    pulukortti.addEventListener(laji, (e) => e.stopPropagation());
+  }
+
+  /** Chatti auki/kiinni. Kohteen vaihto sulkee koko näkymän. */
   const naytaPulukortti = (auki) => {
     pulukortti.hidden = !auki;
     pulunappi.setAttribute('aria-expanded', auki ? 'true' : 'false');
@@ -859,8 +1014,6 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
     naytaPulukortti(Boolean(pulukortti.hidden));
   });
   pulunSulku.addEventListener('click', (e) => { e.stopPropagation(); naytaPulukortti(false); });
-  /* Yhden kysymyksettömän kohteen varalta: nappi ilman kysymyksiä ei aukea. */
-  if (!kysymykset.length) pulunappi.disabled = true;
   pulukulma.append(pulukortti, pulunappi);
 
   katselu.append(lava, selite, kulma, nauha, pulukulma);
@@ -884,6 +1037,8 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
      */
     try { minipulu?.tuhoa?.(); } catch { /* jo purettu */ }
     minipulu = null;
+    /* Vinkkiajastin ei saa herätä suljetun näkymän päälle. */
+    lopetaVinkki();
     globalThis.removeEventListener?.('resize', otsikkoMitataanUudestaan);
     globalThis.removeEventListener?.('orientationchange', otsikkoMitataanUudestaan);
     /*
