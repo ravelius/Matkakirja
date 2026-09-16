@@ -18,24 +18,47 @@
  * kohtaan osuvat saman aiheen nostot ovat yksi aihemerkki, ja nimet
  * ovat napautuksen takana.
  *
- * ══ KAKSI EHTOA, MOLEMMAT MITATTUJA ═══════════════════════════════
+ * ══ YKSI EHTO, MITATTU: NIMIÖT LIMITTYISIVÄT ══════════════════════
  *
- * 1. NIMIÖT LIMITTYISIVÄT. Ryhmä syntyy vain, jos merkkien omat
- *    nimiölaatikot (js/pallolauta/nostot.js nostonLaatikko, sama kaava
- *    kuin sovittelulla ja osumapinnalla) leikkaavat toisensa. Yksin
- *    seisova nosto ei siis koskaan katoa merkin sisään — PAATOKSET 27
- *    kohta 4: *"maan laajat yksittäiset nostot näkyvät nimiöin heti"*.
+ * Ryhmä syntyy vain, jos merkkien omat nimiölaatikot
+ * (js/pallolauta/nostot.js nostonLaatikko, sama kaava kuin
+ * sovittelulla ja osumapinnalla) leikkaavat toisensa tai merkit ovat
+ * sormen säteen sisällä toisistaan (RYHMITYKSEN_ETAISYYS_PX). Yksin
+ * seisova nosto ei siis koskaan katoa merkin sisään — PAATOKSET 27
+ * kohta 4: *"maan laajat yksittäiset nostot näkyvät nimiöin heti"*.
  *
- * 2. ZOOMI ON YHÄ SAAPUMISEN TUNTUMASSA. Kohta 3 tilaa hajoamisen
- *    *"yhden zoomportaan sisään"*, ja pelkkä limitysehto ei voi sitä
- *    antaa: nimiö on PAATOKSET 14:stä lähtien KARTAN mitta
- *    (js/pallolauta/nimet.js nimenKarttakerroin), joten zoomatessa
- *    teksti kasvaa samassa suhteessa kuin merkkien väli — limitys ei
- *    purkaudu itsestään koskaan. Siksi ryhmitys on kytketty samaan
- *    mitattuun portaaseen kuin merkkiportti: `lahizoomiAuki`
- *    (LAHIZOOMIN_OSUUS_ULOIMMASTA 0,7 = saapumisen 1,0 ja yhden
- *    portaan 0,5 geometrinen keskiväli). Yksi zoomporras sisään →
- *    ryhmitys pois → jokainen nosto omalla nimiöllään, kuten ennen.
+ * ── ZOOMIPORTTI OLI TÄSSÄ, JA SE POISTETTIIN 16.9.2026 ────────────
+ *
+ * Ryhmityksellä oli 15.–16.9.2026 TOINEN ehto: zoomin oli oltava yhä
+ * saapumisen tuntumassa (`lahizoomiAuki`, LAHIZOOMIN_OSUUS_ULOIMMASTA
+ * 0,7). Perustelu oli, ettei limitys voi purkautua itsestään: nimiö
+ * on PAATOKSET 14:stä lähtien KARTAN mitta, joten zoomatessa teksti
+ * kasvoi samassa suhteessa kuin merkkien väli.
+ *
+ * PERUSTELU KAATUI KAHTEEN MITTAAN (Chromium 390 × 844 dpr 2,
+ * Ranska-tallenne, pelaaja Pariisissa; Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 31):
+ *
+ *   a) PORTTI AVAUTUI ENNEN KUIN MERKIT ERKANIVAT. Uloszoomauksen
+ *      esto pitää puhelimen sisimmän näkymän kohdassa 0,341
+ *      uloimmasta (6,23 px lautayksikköä kohden), ja siellä Pariisin
+ *      21 noston LYHIN keskinäinen ruutuväli on 39,2 px — yhä alle
+ *      sormen 44 px:n, ja 19 nostoparia 210:stä on sen sisällä.
+ *      Rykelmä EI siis voi hajota kokonaan millään pelin sallimalla
+ *      zoomilla, mutta portti sammutti ryhmityksen jo 0,7:ssä, ja
+ *      pelaajalle jäi kasa palloja ja viisi päällekkäistä nimeä
+ *      (omistaja 16.9.2026: *"iso osa nostoista on jossain
+ *      piilossa"*). Luvut ovat merkkien OMISTA ruutupisteistä, eivät
+ *      sovittelun siirtämistä — taulukko js/pallolauta/nostot.js:ssä.
+ *
+ *   b) NIMIÖLLÄ ON NYT RUUTUPIKSELIKATTO (js/pallolauta/nostot.js
+ *      NOSTON_NIMIO_KATTO_PX 16). Katon yläpuolella teksti seisoo ja
+ *      merkkien väli kasvaa, joten limitys PURKAUTUU itsestään —
+ *      juuri se, minkä puuttumiselle portti rakennettiin.
+ *
+ * Ryhmitys noudattaa siksi PAATOKSET 27 kohtaa 3 sellaisenaan:
+ * merkit hajoavat omiksi nostoiksi nimiöineen *"kun nostot mahtuvat
+ * limittymättä"* — oma mitta, ei kameran kello.
  *
  * ══ VIUHKA ════════════════════════════════════════════════════════
  *

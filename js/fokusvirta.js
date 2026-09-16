@@ -1842,6 +1842,40 @@ function piirraJalkikuva(ui, kohde, kuva) {
  */
 const LUENTAKUVAN_PX = 800;
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LUENTAKUVAPAKKA POIS KARTALTA TOISTAISEKSI (omistaja 16.9.2026 klo
+ * 16.05 UTC, Raamattu KARTTAUUDISTUKSEN PAATOKSET 31 kohta 1,
+ * sanatarkasti: *"Piilotetaan nuo kuvat kartalta toistaiseksi. Täytyy
+ * miettiä niille joku parempi paikka."*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MIKÄ PIILOTETAAN: se PIENI KUVAPAKKA, joka jäi luennan jälkeen
+ * kartalle pelinappulan viereen (`.fokusvirta-luentakuva.pieni` ja sen
+ * päällä olevat PuluCam-kortit). Omistajan iPhone-kuvassa se peitti
+ * Pariisin nostoja.
+ *
+ * MIKÄ JÄÄ: isot luentakuvat LUENNAN AIKANA (isoisän sarja keskellä
+ * ruutua ja ankkuroitu iso kuva) sekä Pulu Cam omine sarjoineen —
+ * ne eivät ole kartalle jäävää tavaraa vaan hetkiä, jotka menevät ohi.
+ *
+ * KYTKIN EIKÄ POISTO, koska omistaja sanoi *"toistaiseksi"*: kun
+ * kuville löytyy parempi paikka, tämä palautetaan yhdellä rivillä.
+ * `true` tuo pakan takaisin sellaisenaan.
+ *
+ * KAKSI PORTTIA, JOTTA ELEMENTTIÄ EI EDES RAKENNETA:
+ *   1. `nostaPieniPakka` ei nosta pakkaa eikä ankkuroi luentakuvaa
+ *      sarjan jälkeen — kartalle ei jää mitään rakennettavaa.
+ *   2. `pienennaLuentakuva` PIILOTTAA paneelin sen sijaan että
+ *      kutistaisi sen. Tämä on se polku, jolla kartan liike ennen
+ *      jätti peukalonkynnen kartalle myös silloin, kun sarjaa ei ollut
+ *      (yksi luentakuva, ei pulun kuvia).
+ * Kolmas varmistus on CSS (css/fokusvirta.css: .fokusvirta-luentakuva
+ * .pieni { display: none }) niitä polkuja varten, joita nämä kaksi
+ * eivät kata.
+ */
+export const LUENTAKUVAPAKKA_KARTALLA = false;
+
 /** Nousun ja häipymisen kesto (css .fokusvirta-luentakuva transition). */
 const LUENTAKUVAN_HAIVE_MS = 400;
 
@@ -2325,6 +2359,12 @@ export function naytaPulunKuvapakka(ui, city, { heti = false } = {}) {
     if (aloitaPuluCamSarja(ui, city)) return true;
   }
   if (puluCamPakassa(ui) && !heti) return false;
+  /*
+   * PAKKAA EI RAKENNETA KARTALLE (ks. LUENTAKUVAPAKKA_KARTALLA).
+   * Tähän asti on jo ehditty tarjota pulun oma ISO sarja (yllä), joka
+   * jää voimaan — vain kartalle jäävä pieni pakka jää nostamatta.
+   */
+  if (!LUENTAKUVAPAKKA_KARTALLA) return false;
   const kuvat = fokusvirtaPulunKuvat(ui, city);
   if (!kuvat.length) return false;
   // Kartalla on viimeksi näytetty isoisän kuva (kuva 2, jos sellainen on).
@@ -3195,6 +3235,18 @@ export function pienennaLuentakuva(ui) {
   const paneeli = ui?.luentakuva;
   if (!paneeli || paneeli.classList.contains('pieni')) return false;
   /*
+   * PIENENNYS ON PIILOTUS, KUN PAKKA EI OLE KARTALLA (ks.
+   * LUENTAKUVAPAKKA_KARTALLA). Pienennys on juuri se hetki, jossa
+   * kuva lakkaa olemasta luennan iso kuva ja muuttuu kartalle jääväksi
+   * peukalonkynneksi — ja juuri se omistaja pyysi pois.
+   */
+  if (!LUENTAKUVAPAKKA_KARTALLA) {
+    clearTimeout(ui.luentakuvaAjastin);
+    ui.luentakuvaAjastin = null;
+    piilotaLuentakuva(ui);
+    return true;
+  }
+  /*
    * LUENNAN ODOTUS PÄÄTTYY TÄHÄN. Jos kartta liikahti kesken luennan,
    * kuva on jo pienenä eikä luennan loppu tee sille enää mitään —
    * ajastin jäisi muuten kysymään turhaan luennan loppua.
@@ -4017,6 +4069,12 @@ function nostaPieniPakka(ui, city, pohjakuva = null, { pakka = true } = {}) {
   if (!ui || ui.dead || !city) return false;
   // Pelaaja on voinut lähteä kaupungista sarjan aikana.
   if (ui.game?.cityOf?.()?.id !== city.id) return false;
+  /*
+   * PAKKA EI PALAA KARTALLE (ks. LUENTAKUVAPAKKA_KARTALLA). Elementtiä
+   * ei rakenneta lainkaan: sarja on jo purkanut isot kuvat, ja kartalle
+   * jäisi muuten juuri se peukalonkynsi, jonka omistaja pyysi pois.
+   */
+  if (!LUENTAKUVAPAKKA_KARTALLA) return false;
   // Kartalle jää se isoisän kuva, joka oli viimeksi ruudulla (kuva 2,
   // jos vaihto ehti tapahtua) — karuselli näyttää silti molemmat.
   if (!naytaLuentakuva(ui, city, { kuva: pohjakuva })) return false;
