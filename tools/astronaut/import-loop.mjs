@@ -40,9 +40,11 @@ await writeFile(resolve(directory, 'delivery-manifest.json'), JSON.stringify(man
 files.push({ file: 'delivery-manifest.json', key: archive + 'manifest.json', sha256: sha(await readFile(resolve(directory, 'delivery-manifest.json'))), type: 'application/json' });
 
 async function existing(file) {
-  const r = await fetch(origin + file.key + '?verify=' + Date.now(), { redirect: 'error', signal: AbortSignal.timeout(30000) });
+  const r = await fetch(origin + file.key + '?verify=' + Date.now(), { headers: { Origin: 'https://matkakirja.app' }, redirect: 'error', signal: AbortSignal.timeout(30000) });
   if (r.status === 404) return false;
   if (!r.ok) throw Error(`Readback HTTP ${r.status}`);
+  if (!r.headers.get('content-type')?.startsWith(file.type)) throw Error(`Wrong MIME type: ${file.key}`);
+  if (!['*', 'https://matkakirja.app'].includes(r.headers.get('access-control-allow-origin'))) throw Error(`Missing game CORS access: ${file.key}`);
   if (sha(Buffer.from(await r.arrayBuffer())) !== file.sha256) throw Error(`Existing object differs: ${file.key}; not overwriting`);
   return true;
 }
@@ -59,4 +61,6 @@ for (const file of files) {
   if (!await existing(file)) throw Error(`Object still missing after upload: ${file.key}`);
   console.log(`Verified ${file.key} (${file.sha256})`);
 }
+const range = await fetch(manifest.output.url + '?range-check=' + Date.now(), { headers: { Range: 'bytes=0-15', Origin: 'https://matkakirja.app' }, redirect: 'error', signal: AbortSignal.timeout(30000) });
+if (range.status !== 206 || !range.headers.get('content-range')?.startsWith('bytes 0-15/') || (await range.arrayBuffer()).byteLength !== 16) throw Error('Audio byte-range playback check failed');
 console.log(`One shared background ready: ${manifest.output.url}; ${manifest.output.duration}s; ${manifest.output.loudness.taso} LUFS. No generation calls.`);

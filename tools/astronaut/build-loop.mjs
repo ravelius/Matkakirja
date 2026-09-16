@@ -13,7 +13,7 @@ const ffmpeg = args => execFileSync('ffmpeg', ['-hide_banner', '-y', ...args], {
 const probe = file => JSON.parse(execFileSync('ffprobe', ['-v', 'error', '-show_format', '-show_streams', '-of', 'json', file], { encoding: 'utf8' }));
 export function validateSourceUrl(value) {
   const url = new URL(value);
-  if (url.protocol !== 'https:' || url.hostname !== 'storage.googleapis.com' || !url.pathname.startsWith('/xi-backend/database/workspace/') || !url.pathname.endsWith('/content.mp3')) throw Error('Not an ElevenLabs generated source');
+  if (url.protocol !== 'https:' || url.username || url.password || url.hostname !== 'storage.googleapis.com' || !url.pathname.startsWith('/xi-backend/database/workspace/') || !url.pathname.endsWith('/content.mp3')) throw Error('Not an ElevenLabs generated source');
   return url;
 }
 
@@ -29,7 +29,7 @@ async function main() {
   await mkdir(directory, { recursive: true });
   const sources = JSON.parse(await readFile(resolve(directory, 'source-downloads.json'), 'utf8'));
   const expected = JSON.parse(await readFile(resolve(root, 'tools/astronaut/ambient-manifest.json'), 'utf8'));
-  if (sources.flow !== expected.flowId || sources.media.length !== expected.rawSources.length) throw Error('Unexpected source set');
+  if (sources.flow !== expected.flowId || sources.media.length !== expected.rawSources.length || new Set(sources.media.map(row => row.id)).size !== sources.media.length) throw Error('Unexpected source set');
   const raws = [];
   for (const source of sources.media) {
     const approved = expected.rawSources.find(row => row.generationId === source.id);
