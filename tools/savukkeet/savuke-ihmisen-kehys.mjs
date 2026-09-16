@@ -24,8 +24,11 @@
  *      LIIKU (pelin monitoiminappi, laatikon leveys 0 — se on koko
  *      linssin ajan display:none, ei vain avaruusvaiheessa).
  *   2. SAMA FEIDAUS. Kehyksen nousu alkaa samasta näytteestä kuin
- *      kartan valkeneminen (ero <= 500 ms) ja kestää saman ajan
- *      (VALOJEN_MS 2600 ms, sallittu heitto 750 ms).
+ *      kartan valkeneminen (ero <= 500 ms) eikä kumpikaan jää
+ *      roikkumaan (VALOJEN_MS 2600 ms).
+ *   2b. JA SE ON SAMA FEIDAUS: kehyksen ja kartan peittävyys on joka
+ *      näytteessä sama ± 0,25. Tämä korvasi ylityshetkien vertailun,
+ *      joka oli sidottu kontin näytteenottoväliin (ks. mittaa).
  *   3. RUUDULLA EI OLE KEHYSTÄ. Avaruusvaiheessa pysäytetystä
  *      esityksestä yläreunan nauhassa ei ole kirkkaita pikseleitä
  *      palkin reunaviivasta eikä hampurilaisesta.
@@ -385,12 +388,33 @@ async function mittaa(leveys, korkeus) {
     }));
 
 
-  vaadi(`${leveys}px: kehys nousee vasta kartan kanssa ja samalla nopeudella`,
+  vaadi(`${leveys}px: kehys nousee vasta kartan kanssa`,
     Boolean(kehys && kartta)
       && Math.abs(kehys.alku - kartta.alku) <= 500
-      && Math.abs(kehys.kesto - kartta.kesto) <= 750
+      // Kumpikaan ei jää roikkumaan: feidaus on VALOJEN_MS (2600 ms).
+      && kehys.kesto <= 4000 && kartta.kesto <= 4000
       && kehys.alku > musta.perilla + 2000,
     JSON.stringify({ kehys, kartta, mustanLasku: musta }));
+
+  /*
+   * SAMA FEIDAUS MITATAAN PISTE PISTEELTÄ, EI YLITYSHETKISTÄ (16.9.2026).
+   * Ennen tässä verrattiin sitä hetkeä, jolloin kumpikin ylittää 0,95.
+   * Kun zoomi venyi viidellä sekunnilla (Raamattu JATKO 3), valkeneminen
+   * siirtyi kohtaan, jossa kontin näytteenottoväli on jo 1,2 s: mitattuna
+   * kehys luki 0,948 ja kartta 1,000 SAMASSA näytteessä, ja ylityshetket
+   * erosivat tasan yhden näytteen verran (961 ms) — vaikka käyrät
+   * kulkivat päällekkäin. Pistevertailu sanoo saman asian tiukemmin:
+   * kehyksen ja kartan peittävyys on joka näytteessä sama ± 0,25.
+   */
+  const feidissa = sarja.filter((r) => r.ms >= (kehys?.alku ?? Infinity));
+  const eriTahdissa = feidissa.filter((r) => Math.abs((r.palkki ?? 0) - r.kartta) > 0.25);
+  vaadi(`${leveys}px: kehys ja kartta nousevat SAMASSA feidauksessa (piste pisteeltä)`,
+    feidissa.length >= 2 && eriTahdissa.length === 0,
+    JSON.stringify({
+      naytteita: feidissa.length,
+      eroja: eriTahdissa.length,
+      parit: feidissa.slice(0, 4).map((r) => `${r.palkki?.toFixed(2)}/${r.kartta.toFixed(2)}`),
+    }));
 
   /* --------- 3. LIUKU: ULKONA VALKENEMISEN ALKAESSA, PAIKALLAAN 700 MS:N PÄÄSTÄ --------- */
   const heti = await s.evaluate(() => window.__kehysLiuku?.heti ?? null);
