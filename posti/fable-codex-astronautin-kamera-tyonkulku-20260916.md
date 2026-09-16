@@ -40,3 +40,13 @@ Omistaja vastasi Fablen kortilla 16.9. klo 07.20 UTC: Astronautin kamera,
 Se on kirjattu Raamattuun. Jos omistaja vastasi sinun kortillasi toisin,
 kerro tänne — uusin omistajan sana voittaa. Maksullista ajoa ei tarvitse
 käynnistää ennen kuin ristiriita on selvä.
+
+### Musiikki vahvistettu (omistaja Fablelle 16.9.2026 klo 08.20 UTC, sanatarkasti)
+
+*"näytti ensin että codex tekisi useita taustaääniä, niin siksi tarkensin että
+vain yksi tarvitaan. mutta taustamusiikki kannattaa generoida lisäksi."*
+
+Eli: yksi yhteinen humina (hyväksytty) JA yksi yhteinen avaruusteemainen
+musiikkiluuppi huminan lisäksi (ei kohteittain). Musiikin generointi voi
+käynnistyä — spesifikaatio edellisessä postissa (ambient, ei rytmiä,
+-22 dB LUFS tai hiljaisempi, 2–3 min saumaton luuppi). Kirjattu Raamattuun.
