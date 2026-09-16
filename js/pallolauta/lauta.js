@@ -1383,8 +1383,24 @@ export async function avaaPallolauta(ui) {
    *      (js/pallolauta/kamera.js uloszoomausRaja).
    */
   let maanLaatikko = null;
+  /*
+   * NELJÄS OHITUS: MATKA (matkaZoomirajat alempana, karttauudistus erä 8
+   * ja KARTTAUUDISTUKSEN PAATOKSET 30). Lippu on tässä eikä vasta
+   * kytkimen vieressä, koska `tahdistaZoomirajat()` ajetaan jo laudan
+   * rakentamisessa — myöhempi `let` jäisi ajalliseen katvealueeseen.
+   *
+   * MITATTU 16.9.2026 (390 × 844, Ateena → Rooma): `matkaZoomirajat`
+   * nollasi vain linssin syrjäytyksen, ei maan kattoa. Lennon rajausajo
+   * nousi näkyvään leveyteen 385 lautayksikköä ja `tahdistaZoomirajat`
+   * puristi sen takaisin 205:een (kohdemaan katto) kesken lennon —
+   * lähtökaupunki valui ruudun ulkopuolelle (x = 1,21 ruudun leveyttä).
+   * Matkan ajan katto on siis pois: matka on määritelmän mukaan maan
+   * ikkunaa isompi, ja se palautuu perillä (palaaMaanRajaukseen).
+   */
+  let matkallaVapaana = false;
   const maanZoomiraja = () => {
     if (!maanLaatikko) return null;
+    if (matkallaVapaana) return null;
     if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu) return null;
     return kamera.uloszoomausRaja(maanLaatikko, ULOSZOOMAUKSEN_KERROIN);
   };
@@ -3303,8 +3319,24 @@ export async function avaaPallolauta(ui) {
      * lennon alussa (actionPickStart), joten tämä veisi kameran
      * kohdekaupunkiin ennen kuin kone on lähtenyt Lontoosta. Lennon
      * kamera on lennon omassa kohtauksessa (js/pallolauta/avaus.js).
+     *
+     * EIKÄ PELIN OMALLA LENNOLLA (mitattu 16.9.2026, KARTTAUUDISTUKSEN
+     * PAATOKSET 30). Sama ansa oli auki myös doFly:ssä: `game.actionFly`
+     * siirtää pelaajan kohdekaupunkiin JO ENNEN animaatiota, ja
+     * `ui.movingPlayerId` asetetaan vasta animatePawnissa — siinä välissä
+     * `ui.run`in oma render osui tähän haaraan ja luki paikanvaihdon
+     * teleportiksi. Mittaus 390 × 844 (Ateena → Rooma): kuljettajan
+     * rajausajo alkoi t = 21 ms ja TÄMÄ `saavu()` ohitti sen t = 45 ms,
+     * joten kamera oli kohdemaan saapumisnäkymässä ennen kuin kone ehti
+     * ensimmäiselle kehykselleen — juuri omistajan havainto *"kartta
+     * zoomaa suoraan kohdemaahan"*.
+     *
+     * `ui.lentoKaari` on tosi täsmälleen lennon ajan: doFly asettaa sen
+     * ennen `actionFly`ta ja nollaa vasta kun nappula on maassa. Perillä
+     * kuljettajan `laske()` merkitsee paikan (merkitseNappulanPaikka) ja
+     * ajaa saapumisrajauksen itse, joten mitään ei jää ajamatta.
      */
-    if (!liikkuu && !lento && pos) {
+    if (!liikkuu && !lento && !ui.lentoKaari && pos) {
       if (nappulanPaikka !== null && nappulanPaikka !== posAvain) {
         void saavu({ kesto: PALLOKAMERAN_AJO_MS });
       }
@@ -3441,7 +3473,6 @@ export async function avaaPallolauta(ui) {
    * matkan päätös palauttaa vain sen, mikä oli tallessa.
    */
   let matkasyrjaytysTalteen = null;
-  let matkallaVapaana = false;
   const matkaZoomirajat = (vapaa) => {
     if (Boolean(vapaa) === matkallaVapaana) return;
     matkallaVapaana = Boolean(vapaa);

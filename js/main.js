@@ -1381,7 +1381,7 @@ function nollaaValitila(game) {
   // ikkunat. DOM on latauksen jäljiltä puhdas, mutta tämä on halpa ja
   // tekee säännöstä yksiselitteisen.
   document.body.classList.remove(
-    'flight-active', 'kartalento', 'zoom-kaynnissa', 'manner-zoom',
+    'flight-active', 'kartalento', 'lento-kesken', 'zoom-kaynnissa', 'manner-zoom',
     'manner-odottaa', 'kartta-raahaus', 'radio-tila',
   );
   for (const dialogi of document.querySelectorAll('dialog[open]')) dialogi.close();
