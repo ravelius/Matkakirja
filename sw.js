@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1916';
+const CACHE = 'matkakirja-2026-08-09.1917';
 const SHELL = [
   './',
   './index.html',
@@ -688,10 +688,9 @@ const SHELL = [
   // esilatausta ne puuttuisivat juuri offline-tilassa, jossa linssejä
   // selaillaan eniten.
   './assets/linssit/yokartta.jpg',
-  './assets/linssit/topografia.webp',
-  // Sama reliefi pallon pinnalle tasavälisenä (karttapallo.md luku 10,
-  // aalto 1A; tools/tee-pallotopografia.mjs).
-  './assets/linssit/topografia-pallo.webp',
+  // Reliefikuvat (litteä ja pallo) siirtyivät Cloudflare R2:een
+  // 15.9.2026 (js/packs/linssi-topografia-kuva.js) — mediaa ei
+  // säilytetä repossa, eikä niitä siksi enää esilatauslistalla.
   // Varustekuvat (linssien toimintakuvat, 10.8.2026).
   './assets/varusteet/varuste-topografia.jpg',
   './assets/varusteet/varuste-vesistot.jpg',

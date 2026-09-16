@@ -106,6 +106,28 @@ mallisääntö ei muuta tiedosto- tai julkaisuvastuuta.
 
 ## Viestintä sessioiden välillä
 
+### Työnjako Fable / Codex (omistaja 15.9.2026, sitova)
+
+Omistajan sanoin: *"Codex tekee kuvat, tarinat, ääni generoinnin ja
+animaatiot. Loput jää sinulle."* Tarkennus kysymyskortilla: kaanon
+Fablella, tekstit Codexilla; Opus-kuvaputki jatkaa erillisenä.
+
+| Alue | Codex | Fable |
+| --- | --- | --- |
+| Tarinakaanon (tarina.md, Isoisän raamattu, Fogg-suku, Grimshaw) | – | kirjoittaa, hyväksyy ristiriidat |
+| Pelin tekstit (kaupunki- ja pulutekstit, luennat, selitteet) | kirjoittaa kaanonin mukaan | kytkee peliin |
+| Äänigenerointi (työkulut, ElevenLabs, R2, kuitit, ääniviat) | kokonaan | – |
+| Animaatiot ja hahmot (pulu, minipulu, eleet) | kokonaan | kytkee linsseihin/näkymiin |
+| Generoidut kuvat | tekee | kytkee |
+| Commons-kuvat (kuvaputki, 1800 px, manifestit) | – | Opus-kuvaputki, Fable ohjaa |
+| Karttauudistus, UI, linssit, portit, työkalut, julkaisut, Raamattu | – | kokonaan |
+
+Säännöt: korjaus vain omaan alueeseen; toisen rikkinäisestä työstä yksi
+postilaatikkoviesti, ei korjata ohi (poikkeuslupa vain omistajalta).
+Toimitus on manifesti + kuittaus postilaatikkoon; kytkennän tekee
+Fablen agentti. Tämä korvaa alla olevan 11.9. jaon siltä osin kuin ne
+ovat ristiriidassa.
+
 ### Yhteiskehitys tekstisession (Codex) kanssa (omistaja 11.9.2026)
 
 Kanava on git-postilaatikko (haara `claude/postilaatikko`): Fable

@@ -1,7 +1,11 @@
-// Reliefikartta: maailma maastona. Kuvan polku ja sen paikka laudalla.
+// Reliefikartta: maailma maastona. Kuvan osoite ja sen paikka laudalla.
 //
 // TÄMÄ TIEDOSTO ON KONEEN KIRJOITTAMA. Älä muokkaa käsin:
 //   NODE_USE_ENV_PROXY=1 node tools/tee-reliefikartta.mjs
+//
+// PÄIVITYS 15.9.2026: kuva renderöitiin uudelleen 1′-korkeusdatasta
+// omistajan Macilla ja ladattiin Cloudflare R2 -ämpäriin; osoite alla
+// vaihdettiin siitä (ei enää assets/-polku, ks. myös git-historia).
 //
 // Aineisto: NOAA NGDC ETOPO1 Global Relief Model, Ice Surface, 1
 //           kaariminuutti
@@ -14,11 +18,12 @@
 //           free but is not intended for legal use, since it may contain
 //           inaccuracies."
 //
-// TÄSSÄ TIEDOSTOSSA EI OLE KUVAA vaan sen polku. Kuva on binääri ja
-// asuu assets-kansiossa: assets/linssit/topografia.webp (1019 kt).
-// Yhden tiedoston versio (dist/matkakirja.html) ei siis saa tätä
-// linssiä mukaansa — se on tarkoituksellinen raja, sillä kuvan
-// upottaminen base64:nä kasvattaisi paketin megatavulla.
+// TÄSSÄ TIEDOSTOSSA EI OLE KUVAA vaan sen osoite. Kuva on binääri ja
+// asuu Cloudflare R2:ssa (11 643 678 tavua, 10800x4859), ei repossa —
+// mediaa ei säilytetä repossa. Yhden tiedoston versio
+// (dist/matkakirja.html) ei siis saa tätä linssiä mukaansa — se on
+// tarkoituksellinen raja, sillä kuvan upottaminen base64:nä
+// kasvattaisi paketin megatavulla.
 //
 // --- mistä kuva on tehty ---
 //
@@ -62,12 +67,12 @@
 // aineistosta vaan laudalta.
 
 export const TOPOGRAFIA_KUVA = {
-  kuva: 'assets/linssit/topografia.webp',
+  kuva: 'https://media.matkakirja.app/matkakirja/linssit/topografia-20260915.webp',
 
   // Kuvan omat mitat pikseleinä. Piirtäjä ei tarvitse näitä venytykseen
   // (raja riittää), mutta esilataus ja mittasuhteen tarkistus tarvitsevat.
-  leveysPx: 3600,
-  korkeusPx: 1620,
+  leveysPx: 10800,
+  korkeusPx: 4859,
 
   // Kuvan paikka laudan koordinaatteina. Peittää laudan kokonaan.
   raja: { x: 0, y: 0, leveys: 12000, korkeus: 5399 },
@@ -120,4 +125,4 @@ export const TOPOGRAFIA_KUVA = {
  * kuvan ominaisuus vaan sen pallosisar: kaksi linssiä (topografia ja
  * vesistöt) pyytää samaa kalvoa, ja molemmat lukevat sen tästä nimestä.
  */
-export const TOPOGRAFIA_PALLOKUVA = 'assets/linssit/topografia-pallo.webp';
+export const TOPOGRAFIA_PALLOKUVA = 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-20260915.webp';
