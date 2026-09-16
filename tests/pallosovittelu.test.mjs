@@ -130,6 +130,71 @@ test('väistänyt lappu on este seuraavalle, paikallaan pysynyt ei', () => {
   assert.notDeepEqual([a.kylki, a.dx, a.dy], [b.kylki, b.dx, b.dy]);
 });
 
+/* ══ AIHENOSTO VÄISTÄÄ KAIKKEA (`este`, PAATOKSET 27 TARKENNUS 2) ══ */
+
+/** Näkyykö lapun nimiö, ja missä asennossa? */
+const asentoOn = (t, avain) => {
+  const a = t.asennot.get(avain);
+  return `${a.kylki}|${a.dx}|${a.dy}|${a.nimio ? 'nimio' : 'piilo'}`;
+};
+
+test('`este`-lappu väistää toista `este`-lappua ilman kiinteitä esteitä', () => {
+  // Kaksi aihenostoa lähekkäin eikä yhtään kaupungin nimeä: oikean
+  // kyljen nimiökaistat menisivät päällekkäin, ja vain `este`-lippu
+  // saa jälkimmäisen etsimään toisen asennon.
+  const t = sovitteleLaput({
+    laput: [
+      { ...koelappu('a', 100, 100), este: true },
+      { ...koelappu('b', 118, 108), este: true },
+    ],
+    esteet: [],
+  });
+  assert.notEqual(asentoOn(t, 'a'), asentoOn(t, 'b'),
+    'aihenostot eivät saa latoa nimiöitään päällekkäin');
+  assert.equal(t.piilotettu, 0, 'väljässä maastossa nimiön ei tarvitse kadota');
+});
+
+test('VASTAKOE: ilman `este`-lippua samat kaksi lappua jäävät päällekkäin', () => {
+  const t = sovitteleLaput({
+    laput: [koelappu('a', 100, 100), koelappu('b', 118, 108)],
+    esteet: [],
+  });
+  assert.equal(asentoOn(t, 'a'), asentoOn(t, 'b'),
+    'käsin ladotut laput eivät väistä toisiaan — sääntö ei saa muuttua');
+});
+
+test('`este`-lappu sovitellaan viimeisenä ja väistää käsin ladottua, ei toisinpäin', () => {
+  const t = sovitteleLaput({
+    laput: [
+      { ...koelappu('aihe', 118, 108), este: true },
+      koelappu('kasin', 100, 100),
+    ],
+    esteet: [],
+  });
+  assert.deepEqual(t.asennot.get('kasin'), {
+    kylki: 'oikea', dx: 0, dy: 0, nimio: true, syy: 'oma',
+  }, 'käsin ladottu pitää oman kylkensä');
+  assert.notEqual(asentoOn(t, 'aihe'), 'oikea|0|0|nimio',
+    'aihenosto on se, joka väistää');
+});
+
+test('`este`-lapun nimi ei katoa naapurin takia — vain kiinteä muste voi viedä sen', () => {
+  // Kolme aihenostoa niin tiheässä, ettei kolmannelle ole vapaata
+  // asentoa: nimiön on silti jäätävä näkyviin (PAATOKSET 27 TARKENNUS
+  // 2 kohta 8), koska mikään KIINTEÄ este ei ole sen tiellä.
+  const t = sovitteleLaput({
+    laput: [0, 1, 2].map((i) => ({ ...koelappu(`a${i}`, 100 + i * 4, 100 + i * 4), este: true })),
+    esteet: [],
+  });
+  assert.equal(t.piilotettu, 0, 'naapurin lappu ei saa viedä aihenoston nimeä');
+  for (const i of [0, 1, 2]) assert.equal(t.asennot.get(`a${i}`).nimio, true);
+});
+
+test('aihenoston lappu saa `este`-lipun nostokerroksessa', () => {
+  const nostot = lue('../js/pallolauta/nostot.js');
+  assert.match(nostot, /este: r\.perhe === 'aihemerkki',/);
+});
+
 test('kyljet ovat kirjaston omat neljä, eikä sovittelu keksi omiaan', () => {
   assert.deepEqual([...SOVITTELUN_KYLJET], [...NOSTOSYM_NIMIO_KYLJET]);
 });
@@ -157,4 +222,7 @@ test('siirto animoidaan ja reduced motion poistaa siirtymän', () => {
   const css = lue('../css/styles.css');
   assert.match(css, /\.pallolauta-nosto-siirto \{ transition: transform 200ms ease-in-out; \}/);
   assert.match(css, /\.pallolauta-nimi-siirto,\n\s*\.pallolauta-nosto-siirto \{ transition: none; \}/);
+  // Aihenosto siirtyy samalla tavalla (PAATOKSET 27 TARKENNUS 2).
+  assert.match(css, /\.pallolauta-aihemerkki-siirto \{ transition: transform 200ms ease-in-out; \}/);
+  assert.match(css, /\.pallolauta-aihemerkki-siirto \{ transition: none; \}/);
 });

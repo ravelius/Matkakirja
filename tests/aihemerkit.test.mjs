@@ -5,8 +5,15 @@
  * *"Tee saman aiheen nostot yhdeksi ilman selitettyä. Klikattaessa
  * vaihtoehdot tulevat viuhkana näkyviin nimien kanssa"*.
  *
- * Nämä testit pitävät kiinni päätöksen neljästä reunaehdosta, jotka
- * ovat pelkkää geometriaa eivätkä vaadi selainta:
+ * TARKENNUS 2 (omistaja 16.9.2026 klo 19.00 UTC, Pariisin lähizoomin
+ * ennen/jälkeen-kuvasta), sanatarkasti: *"Nuo saman kategorian jutut
+ * piti yhdistaa yhdeksi nostoksi ja sitten sita klikkaamalla sen
+ * kategorian nostot aukeaisi omaksi viuhkakseen esille. Sen
+ * yhdistetyn noston voi nimeta tarkeimman noston nimella ja laittaa
+ * loppuun vain kolme pistetta."*
+ *
+ * Nämä testit pitävät kiinni päätöksen reunaehdoista, jotka ovat
+ * pelkkää geometriaa ja merkkijonoja eivätkä vaadi selainta:
  *
  *   1. VAIN SAMA AIHE yhdistyy (kohta 1).
  *   2. YKSINÄINEN NOSTO EI KATOA merkin sisään (kohta 4: maan laajat
@@ -15,12 +22,17 @@
  *      laidassa (kohta 2:n mittaus, kohta 6).
  *   4. Kohdat eivät kasaudu päällekkäin: pystyväli on vähintään
  *      nimiörivin verran.
+ *   5. SAMA KAUPUNKI YHDISTÄÄ AINA, zoomista riippumatta (kohta 7) —
+ *      ja vastakoe: ilman kaupunkiavainta samat nostot jäävät erilleen.
+ *   6. NIMIÖ ON *"tärkeimmän noston nimi + kolme pistettä"* (kohta 8),
+ *      ja aihenoston laatikko kattaa sen (sovittelu ja osumapinta).
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import {
-  RYHMITYKSEN_ETAISYYS_PX, VIUHKAN_RIVI_PX, kohdanLaatikko, ryhmitaNostot, viuhkanAsemat,
+  AIHENOSTON_ELLIPSI, RYHMITYKSEN_ETAISYYS_PX, VIUHKAN_RIVI_PX, aihemerkinLaatikko,
+  aihenostonNimio, kohdanLaatikko, ryhmitaNostot, viuhkanAsemat,
 } from '../js/pallolauta/aihemerkit.js';
 
 /** Merkki ruutupisteessä; nimiölaatikko on kaista merkin oikealla. */
@@ -97,6 +109,131 @@ test('limittyvät nimiöt yhdistyvät, vaikka merkit olisivat kaukana', () => {
   assert.ok(etaisyys > RYHMITYKSEN_ETAISYYS_PX, 'koeasetelma: merkit ovat kynnystä kauempana');
   const { ryhmat } = ryhmitaNostot(merkit, laatikko);
   assert.equal(ryhmat.length, 1);
+});
+
+/* ══ TARKENNUS 2 kohta 7: SAMA KAUPUNKI YHDISTÄÄ AINA ═══════════════ */
+
+test('saman kaupungin saman aiheen nostot yhdistyvät zoomista riippumatta', () => {
+  // Kaukana toisistaan ruudulla (10 × kynnys) eivätkä nimiöt kosketa:
+  // vain kaupunkijäsenyys voi sitoa nämä yhteen.
+  const merkit = [
+    { ...merkki('mona-lisa', 'skandaalit', 100, 100), kaupunkiAvain: 'pariisi' },
+    {
+      ...merkki('vrain-lucas', 'skandaalit', 100 + 10 * RYHMITYKSEN_ETAISYYS_PX, 400),
+      kaupunkiAvain: 'pariisi',
+    },
+  ];
+  const { ryhmat, yksin } = ryhmitaNostot(merkit, laatikko);
+  assert.equal(ryhmat.length, 1, 'saman kaupungin saman aiheen nostot ovat yksi aihenosto');
+  assert.equal(yksin.length, 0);
+});
+
+test('VASTAKOE: ilman kaupunkiavainta samat kaksi nostoa jäävät erilleen', () => {
+  const merkit = [
+    merkki('mona-lisa', 'skandaalit', 100, 100),
+    merkki('vrain-lucas', 'skandaalit', 100 + 10 * RYHMITYKSEN_ETAISYYS_PX, 400),
+  ];
+  const { ryhmat, yksin } = ryhmitaNostot(merkit, laatikko);
+  assert.equal(ryhmat.length, 0, 'kaupungin ulkopuolella mitta jää voimaan');
+  assert.equal(yksin.length, 2);
+});
+
+test('eri kaupungin sama aihe ei yhdisty pelkän kaupunkiavaimen nojalla', () => {
+  const merkit = [
+    { ...merkki('a', 'historia', 100, 100), kaupunkiAvain: 'pariisi' },
+    {
+      ...merkki('b', 'historia', 100 + 10 * RYHMITYKSEN_ETAISYYS_PX, 400),
+      kaupunkiAvain: 'lyon',
+    },
+  ];
+  assert.equal(ryhmitaNostot(merkit, laatikko).ryhmat.length, 0);
+});
+
+test('saman kaupungin ERI aiheet eivät yhdisty', () => {
+  const merkit = [
+    { ...merkki('a', 'historia', 100, 100), kaupunkiAvain: 'pariisi' },
+    { ...merkki('b', 'ruoka', 104, 102), kaupunkiAvain: 'pariisi' },
+  ];
+  assert.equal(ryhmitaNostot(merkit, laatikko).ryhmat.length, 0,
+    'aihe on yhä ensimmäinen ehto (kohta 1)');
+});
+
+test('maastokohde ei yhdisty edes samassa kaupungissa (kohta 6 voittaa kohdan 7)', () => {
+  const merkit = [
+    {
+      ...merkki('mont-saint-michel', 'kulttuuri', 100, 100),
+      kaupunkiAvain: 'pariisi',
+      maasto: true,
+    },
+    { ...merkki('chandeleur', 'kulttuuri', 108, 104), kaupunkiAvain: 'pariisi' },
+  ];
+  const { ryhmat, yksin } = ryhmitaNostot(merkit, laatikko);
+  assert.equal(ryhmat.length, 0);
+  assert.deepEqual(yksin.map((m) => m.avain).sort(), ['chandeleur', 'mont-saint-michel']);
+});
+
+test('yksinäinen saman aiheen nosto pysyy omana nostonaan kaupungissakin', () => {
+  const merkit = [
+    { ...merkki('a', 'historia', 100, 100), kaupunkiAvain: 'pariisi' },
+    {
+      ...merkki('b', 'ruoka', 100 + 10 * RYHMITYKSEN_ETAISYYS_PX, 400),
+      kaupunkiAvain: 'pariisi',
+    },
+  ];
+  const { ryhmat, yksin } = ryhmitaNostot(merkit, laatikko);
+  assert.equal(ryhmat.length, 0, 'kohta 9: yksinäinen saman aiheen nosto pysyy omanaan');
+  assert.equal(yksin.length, 2);
+});
+
+/* ══ TARKENNUS 2 kohta 8: NIMIÖ ON NIMI + KOLME PISTETTÄ ════════════ */
+
+test('aihenoston nimiö on tärkeimmän noston nimi ja kolme pistettä', () => {
+  assert.equal(aihenostonNimio('Bastilji'), `Bastilji${AIHENOSTON_ELLIPSI}`);
+  assert.equal(AIHENOSTON_ELLIPSI, '…', 'kolme pistettä on YKSI merkki, kuten muualla pelissä');
+});
+
+test('pitkä nimi lyhennetään kartan omalla tavalla, mutta loppuun jää vain ellipsi', () => {
+  const nimio = aihenostonNimio('Mona Lisan varkaus 1911');
+  assert.ok(nimio.endsWith(AIHENOSTON_ELLIPSI), `nimiö oli ${nimio}`);
+  assert.ok(!nimio.includes('.'), `lyhennyspiste ei saa jäädä ellipsin eteen: ${nimio}`);
+  // Kartan lyhennys katkaisee 18 merkkiin; ellipsi tulee sen perään.
+  assert.ok([...nimio].length <= 19, `nimiö oli ${[...nimio].length} merkkiä: ${nimio}`);
+});
+
+test('tyhjästä nimestä ei synny pelkkää ellipsiä', () => {
+  assert.equal(aihenostonNimio(''), '');
+  assert.equal(aihenostonNimio(null), '');
+});
+
+test('aihenoston laatikko kattaa nimiön, ja ilman nimiötä vain lautasen', () => {
+  const d = {
+    mitta: 1,
+    nimi: `Mona Lisan varkaus${AIHENOSTON_ELLIPSI}`,
+    symLaji: null,
+    nimioNakyy: true,
+    puoli: 'oikea',
+  };
+  const p = { x: 200, y: 200 };
+  const kanssa = aihemerkinLaatikko(p, d);
+  const ilman = aihemerkinLaatikko(p, d, { nimio: false });
+  assert.ok(kanssa.x1 > ilman.x1, 'nimiö leventää laatikkoa oikealle');
+  assert.equal(ilman.x1 - ilman.x0, ilman.y1 - ilman.y0, 'ilman nimiötä laatikko on neliö');
+  const vasen = aihemerkinLaatikko(p, d, { kylki: 'vasen' });
+  assert.ok(vasen.x0 < ilman.x0, 'vasen kylki leventää laatikkoa vasemmalle');
+});
+
+test('aihenoston laatikko seuraa sovittelun siirtoa', () => {
+  const d = {
+    mitta: 1,
+    nimi: `Bastilji${AIHENOSTON_ELLIPSI}`,
+    symLaji: null,
+    nimioNakyy: true,
+    puoli: 'oikea',
+  };
+  const a = aihemerkinLaatikko({ x: 200, y: 200 }, d);
+  const b = aihemerkinLaatikko({ x: 200, y: 200 }, d, { dx: 6, dy: -6 });
+  assert.ok(Math.abs((b.x0 - a.x0) - 6) < 1e-9);
+  assert.ok(Math.abs((b.y0 - a.y0) + 6) < 1e-9);
 });
 
 /** Mahtuuko jokainen kohta ruudulle, kun merkki on kohdassa p? */

@@ -79,7 +79,10 @@
  * avausliike on transform ja opacity, ei filter.
  */
 
-import { piirraNostosymMini } from '../fokusnosto-symbolit.js';
+import {
+  nostosymLyhennaNimio, nostosymNimioAsemointi, nostosymNimioMitta,
+  piirraNostosymMini, piirraNostosymNimio,
+} from '../fokusnosto-symbolit.js';
 import { KARTTAVALO_AIHEET, karttavaloKarkisymboli, karttavaloVari } from '../karttavalot.js';
 
 const SVG = 'http://www.w3.org/2000/svg';
@@ -102,6 +105,34 @@ export const RYHMITYKSEN_VARA_PX = 1;
 export const RYHMITYKSEN_ETAISYYS_PX = 44;
 /** Pienin ryhmä: kaksi nostoa. Yksi nosto on aina oma merkkinsä. */
 export const RYHMAN_VAHIN = 2;
+
+/*
+ * ══ KOLMAS KYNNYS EI OLE KYNNYS: SAMA KAUPUNKI YHDISTÄÄ AINA ══════
+ *
+ * OMISTAJA 16.9.2026 klo 19.00 UTC (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 27 TARKENNUS 2, Pariisin lähizoomin ennen/jälkeen-kuvasta,
+ * sanatarkasti): *"Nuo saman kategorian jutut piti yhdistaa yhdeksi
+ * nostoksi ja sitten sita klikkaamalla sen kategorian nostot aukeaisi
+ * omaksi viuhkakseen esille."*
+ *
+ * Kohta 7 sanoo sen säännöksi: kaupungin rykelmässä saman AIHEEN
+ * nostot yhdistetään AINA yhdeksi aihenostoksi *"zoomista riippumatta
+ * - ei vain limityksen perusteella"*.
+ *
+ * MIKSI MITTA EI RIITTÄNYT. Limitys ja sormen säde ovat NÄKYMÄN
+ * mittoja: kun pelaaja zoomaa Pariisiin, Mona Lisan varkaus ja
+ * Vrain-Lucasin väärennökset erkanevat ruudulla toisistaan ja
+ * hajoavat kahdeksi nimiöksi — vaikka ne ovat pelaajan silmissä yhä
+ * "Pariisin skandaalit". Omistaja katsoi juuri sitä näkymää. Kaupunki
+ * on siis oma, zoomista riippumaton jäsenyytensä (js/fokuskohteet.js
+ * nostonKaupunkiAvain), ja se sitoo saman aiheen nostot yhteen
+ * riippumatta siitä, kuinka kaukana ne ruudulla ovat.
+ *
+ * KAUPUNGIN ULKOPUOLELLA MITTA JÄÄ VOIMAAN. Nosto, jolla ei ole
+ * kaupunkia (`kaupunkiAvain` on null), ryhmittyy yhä vain limityksen
+ * tai sormen säteen perusteella — maaseudun kaksi lähekkäistä nostoa
+ * eivät saa uutta sääntöä, ja maastokohde ei ryhmity lainkaan.
+ */
 
 /**
  * Saman aiheen lähekkäiset nostot ryhmiksi.
@@ -143,6 +174,11 @@ export function ryhmitaNostot(
     for (let j = i + 1; j < n; j += 1) {
       if (merkit[i].maasto || merkit[j].maasto) continue;
       if (merkit[i].aihe !== merkit[j].aihe) continue;
+      // Sama kaupunki yhdistää aina, zoomista riippumatta (ks. lohko
+      // KOLMAS KYNNYS EI OLE KYNNYS yllä, PAATOKSET 27 kohta 7).
+      const samaKaupunki = Boolean(merkit[i].kaupunkiAvain)
+        && merkit[i].kaupunkiAvain === merkit[j].kaupunkiAvain;
+      if (samaKaupunki) { isa[juuri(i)] = juuri(j); continue; }
       const a = laatikot[i];
       const b = laatikot[j];
       if (!a || !b) continue;
@@ -267,8 +303,44 @@ export function viuhkanAsemat({ p, ruutu, leveydet }) {
 
 /** Aihemerkin värilautasen säde merkin omissa yksiköissä. */
 export const AIHEMERKIN_R = 9.2;
-/** Lukumäärän kirjasinkoko merkin omissa yksiköissä. */
-export const AIHEMERKIN_LUKU_KOKO = 7.6;
+
+/*
+ * ══ AIHENOSTON NIMIÖ: TÄRKEIMMÄN NOSTON NIMI JA KOLME PISTETTÄ ════
+ *
+ * OMISTAJA 16.9.2026 klo 19.00 UTC (Raamattu, PAATOKSET 27 TARKENNUS
+ * 2 kohta 8), sanatarkasti: *"Sen yhdistetyn noston voi nimeta
+ * tarkeimman noston nimella ja laittaa loppuun vain kolme pistetta."*
+ * Sama kohta poistaa lukumäärän: *"ei lukumaaraa palloon"*.
+ *
+ * KOLME PISTETTÄ ON YKSI MERKKI. Pelissä ellipsi on kaikkialla `…`
+ * (js/pollo.js, js/ui-apurit.js, js/kuvagalleria.js), ei kolme
+ * peräkkäistä pistettä — sama merkki tässä, jottei kartalle tule
+ * omaa typografiaansa.
+ *
+ * LYHENNYS ENSIN, ELLIPSI SEN JÄLKEEN. Kartan oma lyhennystapa
+ * (nostosymLyhennaNimio) katkaisee nimen 18 merkkiin ja päättää sen
+ * YHTEEN pisteeseen (*"Halikarnassoksen."*). Aihenostossa tuo piste
+ * ei ole lyhennysmerkki vaan väärä lupaus, joten se korvataan
+ * ellipsillä: *"Mona Lisan varkaus…"*. Piirto ja mittaus on siksi
+ * tehtävä `enintaan = Infinity` -mitalla, muuten kartan 18 merkin
+ * sääntö söisi juuri lisätyn ellipsin.
+ */
+/** Kolmen pisteen merkki — sama kuin muualla pelissä. */
+export const AIHENOSTON_ELLIPSI = '…';
+
+/**
+ * Aihenoston nimiö: tärkeimmän noston nimi + `…` (PAATOKSET 27
+ * kohta 8). Tyhjä nimi antaa tyhjän nimiön (merkki jää pelkäksi
+ * palloksi, kuten ennen tarkennusta).
+ *
+ * @param {?string} nimi  tärkeimmän noston nimi
+ * @returns {string}
+ */
+export function aihenostonNimio(nimi) {
+  const lyhyt = nostosymLyhennaNimio(nimi);
+  const runko = lyhyt.replace(/\.+$/u, '').trim();
+  return runko ? `${runko}${AIHENOSTON_ELLIPSI}` : '';
+}
 
 const el = (nimi, maareet, isa) => {
   const s = document.createElementNS(SVG, nimi);
@@ -278,8 +350,10 @@ const el = (nimi, maareet, isa) => {
 };
 
 /**
- * AIHEMERKKI: aiheen väripallo, ryhmän kärkisymboli ja pieni
- * lukumäärä — ei nimiötä (PAATOKSET 27 kohta 1).
+ * AIHEMERKKI (= AIHENOSTO): aiheen väripallo, ryhmän kärkisymboli ja
+ * NIMIÖ *"tärkeimmän noston nimi + kolme pistettä"* (PAATOKSET 27
+ * TARKENNUS 2 kohta 8). Lukumäärää ei ole — omistaja poisti sen
+ * samassa kohdassa.
  *
  * Väri ja symboli tulevat SAMASTA LÄHTEESTÄ kuin lisää-valikon
  * (karttaselitteen) rivit: `karttavaloVari` lukee kärkisymbolin oman
@@ -308,14 +382,27 @@ export function aihemerkkiElementti(d) {
   return kuori;
 }
 
-/** Aihemerkin sisäasettelu: mittakaava ja resepti (väri, symboli, luku). */
+/**
+ * Aihemerkin sisäasettelu: mittakaava, sovittelun siirto ja resepti
+ * (väri, symboli, nimiö).
+ *
+ * SIIRTO JA KYLKI OVAT SAMAA SOVITTELUA KUIN NOSTOILLA (js/pallolauta/
+ * sovittelu.js): nyt kun aihenostolla on nimiö, se on myös väistävä
+ * lappu — ilman siirtoa se makaisi kaupungin nimen päällä samalla
+ * tavalla kuin nostojen laput ennen 7.9.2026 (Raamattu, KAUPUNGIN
+ * NIMI NOSTOJEN PAALLA).
+ */
 export function asetteleAihemerkki(kuori, d) {
   const g = kuori.querySelector('.pallolauta-aihemerkki-siirto');
   if (!g) return;
   const mitta = d.mitta ?? 1;
-  g.style.transform = `scale(${mitta.toFixed(4)})`;
+  const dx = d.dx ?? 0;
+  const dy = d.dy ?? 0;
+  g.style.transform = `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${mitta.toFixed(4)})`;
   kuori.classList.toggle('pallolauta-aihemerkki-auki', Boolean(d.avattu));
-  kuori.setAttribute('aria-label', `${d.nimi ?? ''} (${d.maara ?? 0})`);
+  const nimio = d.nimioNakyy && d.nimi ? d.nimi : '';
+  kuori.dataset.nimio = nimio;
+  kuori.setAttribute('aria-label', `${d.aiheNimi ?? ''}: ${d.nimi ?? ''} (${d.maara ?? 0})`);
   // Viuhka on merkin oma sisus (ks. VIUHKA PIIRTYY AIHEMERKIN OMAAN
   // ELEMENTTIIN): resepti on kohtien nimet ja paikat, jottei kaari
   // piirry uudelleen joka ladonnassa.
@@ -328,7 +415,8 @@ export function asetteleAihemerkki(kuori, d) {
       piirraViuhka(juuri, d);
     }
   }
-  const resepti = `${d.aihe ?? ''}|${d.maara ?? 0}|${d.avattu ? 1 : 0}`;
+  const resepti = `${d.aihe ?? ''}|${d.maara ?? 0}|${d.avattu ? 1 : 0}`
+    + `|${nimio}|${d.puoli ?? 'oikea'}`;
   if (g.dataset.resepti === resepti) return;
   g.dataset.resepti = resepti;
   g.replaceChildren();
@@ -349,22 +437,39 @@ export function asetteleAihemerkki(kuori, d) {
   }, g);
   const sym = el('g', { class: 'pallolauta-aihemerkki-sym' }, g);
   piirraNostosymMini(sym, karttavaloKarkisymboli(d.kategoria ?? d.aihe) ?? 'historia', d.symLaji ?? null);
-  if (d.maara > 1) {
-    const luku = el('text', {
-      class: 'pallolauta-aihemerkki-luku',
-      x: AIHEMERKIN_R * 0.95,
-      y: AIHEMERKIN_R * 1.15,
-      'font-size': AIHEMERKIN_LUKU_KOKO,
-    }, g);
-    luku.textContent = String(d.maara);
-  }
+  // Nimiö on jo ladottu mittaansa (aihenostonNimio), joten kartan 18
+  // merkin sääntö ei saa koskea siihen: Infinity = älä lyhennä.
+  if (nimio) piirraNostosymNimio(g, nimio, d.symLaji ?? null, d.puoli ?? 'oikea', Infinity);
 }
 
-/** Aihemerkin osumalaatikko ruudulla (pyöreä lautanen neliönä). */
-export function aihemerkinLaatikko(p, d) {
-  const r = AIHEMERKIN_R * (d.mitta ?? 1);
+/**
+ * Aihenoston laatikko ruudulla: värilautanen neliönä JA nimiön kaista
+ * samasta kaavasta kuin nostolla (js/pallolauta/nostot.js
+ * nostonLaatikko) — yksi mitta piirtoon, sovitteluun ja osumapintaan.
+ *
+ * @param {{x:number,y:number}} p  merkin ruutupiste
+ * @param {object} d  aihemerkin datum
+ * @param {object} [asetukset]  kylki/siirto/nimiö sovittelun kokeiluun
+ */
+export function aihemerkinLaatikko(p, d, {
+  kylki = null, dx = 0, dy = 0, nimio = null,
+} = {}) {
+  const mitta = d.mitta ?? 1;
+  const r = AIHEMERKIN_R * mitta;
+  const x = p.x + dx;
+  const y = p.y + dy;
+  const laatikko = {
+    x0: x - r, y0: y - r, x1: x + r, y1: y + r,
+  };
+  const nakyy = nimio === null ? Boolean(d.nimioNakyy) : Boolean(nimio);
+  if (!nakyy || !d.nimi) return laatikko;
+  const { leveys } = nostosymNimioMitta(d.nimi, d.symLaji ?? null, Infinity);
+  const a = nostosymNimioAsemointi(kylki ?? d.puoli ?? 'oikea', leveys);
   return {
-    x0: p.x - r, y0: p.y - r, x1: p.x + r, y1: p.y + r,
+    x0: Math.min(laatikko.x0, x + a.x1 * mitta),
+    y0: Math.min(laatikko.y0, y + a.y1 * mitta),
+    x1: Math.max(laatikko.x1, x + a.x2 * mitta),
+    y1: Math.max(laatikko.y1, y + a.y2 * mitta),
   };
 }
 

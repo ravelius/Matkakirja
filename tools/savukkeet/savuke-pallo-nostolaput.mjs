@@ -180,11 +180,21 @@ if (auki) {
     for (const n of nimet) {
       for (const k of kiinteat) if (limittyy(n, k)) nimiKiintea.push(`${n.x0.toFixed(0)},${n.y0.toFixed(0)}`);
     }
-    // Piirtyikö sovittelun asento myös elementtiin (muunnos ja kylki)?
+    /*
+     * Piirtyikö sovittelun asento myös elementtiin (muunnos ja kylki)?
+     *
+     * KAKSI SIIRTORYHMÄÄ, YKSI VÄITE. Nostolla siirto on
+     * `.pallolauta-nosto-siirto`, aihenostolla (PAATOKSET 27
+     * TARKENNUS 2, js/pallolauta/aihemerkit.js) oma
+     * `.pallolauta-aihemerkki-siirto` — molemmat ovat samaa sovittelua
+     * ja molempien datumin `laji` on 'nosto', joten kumpikin luetaan
+     * omasta ryhmästään. Aihenoston nimiö piirretään elävänä tekstinä
+     * eikä rasterina, joten kyljen vertailu koskee vain rasteria.
+     */
     let elementitTasmaa = true;
     for (const d of l.pallo.htmlElementsData()) {
       if (d.laji !== 'nosto' || !d.el?.isConnected || d.poistuu) continue;
-      const g = d.el.querySelector('.pallolauta-nosto-siirto');
+      const g = d.el.querySelector('.pallolauta-nosto-siirto, .pallolauta-aihemerkki-siirto');
       if (!g) { elementitTasmaa = false; continue; }
       // Selain normalisoi muunnoksen tekstin (0.00px -> 0px), joten
       // luvut luetaan eikä merkkijonoa verrata.

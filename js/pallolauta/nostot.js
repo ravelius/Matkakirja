@@ -37,7 +37,7 @@
  */
 
 import {
-  aiheenNimi, aihemerkinLaatikko, aihemerkkiElementti, asetteleAihemerkki,
+  aiheenNimi, aihemerkinLaatikko, aihemerkkiElementti, aihenostonNimio, asetteleAihemerkki,
   kohdanLaatikko, ryhmitaNostot, viuhkanAsemat, viuhkanNimioLeveys,
 } from './aihemerkit.js';
 import { FOKUS_POHJAT } from '../packs/fokus-grc.js';
@@ -93,6 +93,21 @@ function onMaastokohde(kohde) {
 export function ryhmitysSallittu() {
   try {
     const arvo = new URLSearchParams(globalThis.location?.search ?? '').get('aihemerkit');
+    return !/^(0|ei|off)$/.test(arvo ?? '');
+  } catch { return true; }
+}
+/**
+ * KAUPUNGIN AINA-YHDISTYKSEN VASTAKOE: `?aihekaupunki=0` jättää
+ * kaupunkijäsenyyden (PAATOKSET 27 TARKENNUS 2 kohta 7) huomiotta,
+ * jolloin ryhmitys putoaa takaisin pelkkään limitykseen ja sormen
+ * säteeseen. Lippu luetaan JOKA LADONNASSA osoitteesta, joten savuke
+ * voi kääntää sen päälle ja pois ilman uutta sivunlatausta
+ * (history.replaceState + uusi ladonta) — sama tapa kuin
+ * `?aihemerkit=0`, mutta yhtä sääntöä tarkempi.
+ */
+export function kaupunkiYhdistysSallittu() {
+  try {
+    const arvo = new URLSearchParams(globalThis.location?.search ?? '').get('aihekaupunki');
     return !/^(0|ei|off)$/.test(arvo ?? '');
   } catch { return true; }
 }
@@ -949,6 +964,14 @@ export function luoNostot({
     const { game } = ui;
     const pack = game?.pack;
     const rivit = [];
+    /*
+     * LADONNAN JÄRJESTYSNUMERO (`ladontaNro`) — aihenoston nimiön
+     * ankkuri (PAATOKSET 27 TARKENNUS 2 kohta 8, ks. AIHENOSTON NIMIÖ
+     * alempana). Rivit syntyvät DATAN järjestyksessä, joka ei muutu
+     * kameran mukana; ruutujärjestys muuttuu joka panoroinnissa.
+     */
+    let nro = 0;
+    const lisaa = (rivi) => { rivit.push({ ...rivi, ladontaNro: nro++ }); };
     if (!pack || ui.katselu || game.phase === 'pickstart' || ui.aloituslentoKesken) return rivit;
     const liikkuu = ui.movingPlayerId != null;
     const iso = kohteidenNykyinenIso(ui);
@@ -980,7 +1003,7 @@ export function luoNostot({
         if (!a) continue;
         const kohde = tiedot.get(m.id) ?? m.kohde;
         if (!kohde) continue;
-        rivit.push({
+        lisaa({
           avain: `nosto:${m.id}`,
           id: m.id,
           perhe: 'nosto',
@@ -1009,6 +1032,14 @@ export function luoNostot({
           // MAASTOKOHDE EI SULAUDU AIHEMERKKIIN (ks. MAASTOKOHDE EI
           // SULAUDU AIHEMERKKIIN yllä ja aihemerkit.js ryhmitaNostot).
           maasto: onMaastokohde(kohde),
+          /*
+           * KAUPUNKIJÄSENYYS (PAATOKSET 27 TARKENNUS 2 kohta 7,
+           * js/fokuskohteet.js nostonKaupunkiAvain): saman kaupungin
+           * saman aiheen nostot yhdistyvät AINA yhdeksi aihenostoksi,
+           * zoomista riippumatta. Kenttä tulee ladonnasta eikä
+           * näkymästä, joten se ei muutu kameran mukana.
+           */
+          kaupunkiAvain: m.kaupunkiAvain ?? null,
           avaa: kohde.vainNimi
             ? null
             : ((ankkuri) => avaaFokuskohde(ui, kohde, { ankkuri })),
@@ -1022,7 +1053,7 @@ export function luoNostot({
       for (const m of naapurit) {
         const a = asteet(m);
         if (!a || !m.kohde) continue;
-        rivit.push({
+        lisaa({
           avain: `naapuri:${m.iso}:${m.id}`,
           id: m.id,
           perhe: 'nosto',
@@ -1052,7 +1083,7 @@ export function luoNostot({
         const tiiviste = nostoladontaTiiviste({
           tunnus: t.tunnus, symboli: 'elain', laji: 'elain', nimio: t.nimio, x: t.x, y: t.y, osat: [],
         });
-        rivit.push({
+        lisaa({
           avain: `elain:${t.iso}`,
           id: t.tunnus,
           perhe: 'elain',
@@ -1083,13 +1114,13 @@ export function luoNostot({
     if (alueenMerkitNakyvat(nakyva, ETELAMANNER_NAKYY_ASTETTA) && !liikkuu) {
       for (const kohde of MAASTOKOHTEET_ATA) {
         const rivi = napanostonRivi(ui, kohde, { avain: `ata:${kohde.id}` });
-        if (rivi) rivit.push(rivi);
+        if (rivi) lisaa(rivi);
       }
     }
     if (alueenMerkitNakyvat(nakyva, ARKTIS_NAKYY_ASTETTA) && !liikkuu) {
       for (const kohde of MAASTOKOHTEET_ARK) {
         const rivi = napanostonRivi(ui, kohde, { avain: `ark:${kohde.id}` });
-        if (rivi) rivit.push(rivi);
+        if (rivi) lisaa(rivi);
       }
     }
     // Kevyen kulun vihreä kohtaamispiste (js/fokuspiste.js sääntö).
@@ -1124,7 +1155,7 @@ export function luoNostot({
        */
       const a = fokuspisteenAsteet(asteet({ x: city.x, y: city.y }), asteet(piste));
       if (a) {
-        rivit.push({
+        lisaa({
           avain: `piste:${city.id}`,
           id: `piste:${city.id}`,
           perhe: 'piste',
@@ -1333,33 +1364,69 @@ export function luoNostot({
       ? elavat.filter((r) => r.perhe === 'nosto' && r.aihe && !r.kaupunki
         && !r.vainNimi && typeof r.avaa === 'function')
       : [];
+    // VASTAKOE `?aihekaupunki=0` (ks. kaupunkiYhdistysSallittu):
+    // kaupunkijäsenyys pois, jolloin jäljelle jää pelkkä mitta.
+    const ryhmitettavat = kaupunkiYhdistysSallittu()
+      ? ehdokkaat : ehdokkaat.map((r) => ({ ...r, kaupunkiAvain: null }));
     const { ryhmat } = ryhmitysPaalla
-      ? ryhmitaNostot(ehdokkaat, (r) => nostonLaatikko(r.p, r))
+      ? ryhmitaNostot(ryhmitettavat, (r) => nostonLaatikko(r.p, r))
       : { ryhmat: [] };
     const ryhmassa = new Set();
     ryhmitetytIdt = new Set();
     for (const kasa of ryhmat) {
       for (const r of kasa) { ryhmassa.add(r.avain); ryhmitetytIdt.add(r.id); }
     }
-    const aiherivit = ryhmat.map((kasa) => {
+    /*
+     * AIHENOSTON NIMIÖ ON TÄRKEIMMÄN NOSTON NIMI + `…` (omistaja
+     * 16.9.2026 klo 19.00 UTC, Raamattu PAATOKSET 27 TARKENNUS 2
+     * kohta 8; muoto js/pallolauta/aihemerkit.js aihenostonNimio).
+     *
+     * TÄRKEIN ON PAKETIN ENSIMMÄINEN LADONNASSA, EI RUUDULLA.
+     * Ryhmän jäsenet järjestetään `ladontaNro`:n mukaan — siis siihen
+     * järjestykseen, jossa maan kohdemerkit syntyvät datasta
+     * (js/fokuskohteet.js maanKohdemerkit). Kaksi syytä, molemmat
+     * mitattuja 16.9.2026 (Chromium, Pariisi 390 × 844):
+     *
+     *   a) SE ON OMISTAJAN OMA ESIMERKKI. Pariisin skandaalirykelmän
+     *      ensimmäinen ladottu on *Mona Lisan varkaus* — täsmälleen se
+     *      nimi, jonka omistaja kirjoitti tarkennukseen (*"esim. 'Mona
+     *      Lisan varkaus…'"*).
+     *   b) SE EI VAIHDU KAMERAN MUKANA. Ruutujärjestys (`jarjestys`:
+     *      lähimmät ruudun keskipistettä) antoi saman rykelmän
+     *      nimiöksi saapumisnäkymässä *Kaulanauhajuttu…* ja
+     *      lähizoomissa *Carmenin ensi-ilta…*: nimi olisi vaihtunut
+     *      joka panoroinnissa. Sama luku on myös aihenoston AVAIN,
+     *      joten vakaa järjestys pitää auki olevan viuhkan auki.
+     *
+     * Jäsenten järjestys on samalla VIUHKAN järjestys, joten kaari
+     * alkaa siitä nostosta, jonka nimi on pallon kyljessä.
+     */
+    const aiherivit = ryhmat.map((kasaRaaka) => {
+      const kasa = [...kasaRaaka].sort((a, b) => (a.ladontaNro ?? 0) - (b.ladontaNro ?? 0));
       const lat = kasa.reduce((a, r) => a + r.lat, 0) / kasa.length;
       const lng = kasa.reduce((a, r) => a + r.lng, 0) / kasa.length;
       const p = ruudulla(lat, lng) ?? kasa[0].p;
+      const tarkein = kasa[0];
+      const nimio = aihenostonNimio(tarkein.nimi);
       return {
-        avain: `aihemerkki:${kasa[0].avain}`,
-        id: `aihemerkki:${kasa[0].id}`,
+        avain: `aihemerkki:${tarkein.avain}`,
+        id: `aihemerkki:${tarkein.id}`,
         perhe: 'aihemerkki',
         lat,
         lng,
         p,
         etaisyys: Math.min(...kasa.map((r) => r.etaisyys)),
-        aihe: kasa[0].aihe,
-        kategoria: kasa[0].kategoria,
-        symLaji: kasa[0].symLaji,
-        nimi: aiheenNimi(kasa[0].aihe),
+        aihe: tarkein.aihe,
+        kategoria: tarkein.kategoria,
+        symLaji: tarkein.symLaji,
+        nimi: nimio,
+        // Aiheen oma nimi jää saavutettavuustekstiin (selitteen taulu).
+        aiheNimi: aiheenNimi(tarkein.aihe),
+        kaupunkiAvain: tarkein.kaupunkiAvain ?? null,
+        puoli: tarkein.puoli ?? 'oikea',
         maara: kasa.length,
         jasenet: kasa,
-        nimioNakyy: false,
+        nimioNakyy: Boolean(nimio),
         poltettu: false,
         avaa: null,
       };
@@ -1394,11 +1461,17 @@ export function luoNostot({
       lat: r.lat,
       lng: r.lng,
       nimi: r.nimi,
+      aiheNimi: r.aiheNimi,
       maara: r.maara,
       aihe: r.aihe,
       kategoria: r.kategoria,
       symLaji: r.symLaji,
-      nimioNakyy: false,
+      // Aihenostolla on nimiö (PAATOKSET 27 TARKENNUS 2 kohta 8), ja
+      // sen myötä myös kylki ja sovittelun siirto kuten nostoilla.
+      nimioNakyy: Boolean(r.nimioNakyy && r.nimi),
+      puoli: r.puoli ?? 'oikea',
+      dx: 0,
+      dy: 0,
       avattu: viuhka?.avain === r.avain,
       // Viuhka täytetään alempana, kun kaari on laskettu; kenttä on
       // oltava tässä, koska datum on pysyvä (merkit.aseta Object.assign).
@@ -1504,11 +1577,14 @@ export function luoNostot({
     naytetaan.forEach((r, i) => {
       const d = datumit[i];
       if (r.perhe === 'piste') return;
-      // Aihemerkillä ei ole nimiötä eikä kylkeä: osumapinta on sen
-      // oma värilautanen (js/pallolauta/aihemerkit.js).
+      // Aihenostolla on nyt nimiö (PAATOKSET 27 TARKENNUS 2 kohta 8),
+      // joten sen osumapinta on lautanen JA nimiö — sama kaava kuin
+      // nostolla (js/pallolauta/aihemerkit.js aihemerkinLaatikko).
       if (r.perhe === 'aihemerkki') {
         r.datum = d;
-        r.lappu = (piste) => aihemerkinLaatikko(piste, d);
+        r.lappu = (piste) => aihemerkinLaatikko(piste, d, {
+          kylki: d.puoli, dx: d.dx, dy: d.dy, nimio: Boolean(d.nimioNakyy && d.nimi),
+        });
         return;
       }
       // Datum kantaa sovittelun jälkeisen asennon (kylki ja siirto);
@@ -1546,13 +1622,31 @@ export function luoNostot({
      */
     lappuja = [];
     const ikonit = [];
+    /*
+     * YKSI LAPPU, KAKSI KAAVAA. Aihenoston nimiö istuu värilautasen
+     * kyljessä (aihemerkinLaatikko) ja noston nimiö symbolin ruudun
+     * kyljessä (nostonLaatikko); kumpikin antaa saman neljän luvun
+     * laatikon, joten sovittelu, ladonnan varaus ja osumapinta
+     * lukevat niitä samalla tavalla. Kaava valitaan tässä kerran ja
+     * kannetaan lapun mukana, jottei sovittelu joudu tuntemaan
+     * merkkien perheitä.
+     */
+    const lapunLaatikko = (r, datum) => (r.perhe === 'aihemerkki'
+      ? (kylki, dx, dy, nimio) => aihemerkinLaatikko(r.p, datum, {
+        kylki, dx, dy, nimio,
+      })
+      : (kylki, dx, dy, nimio) => nostonLaatikko(r.p, r, {
+        kylki, dx, dy, nimio,
+      }));
     naytetaan.forEach((r, i) => {
       if (r.perhe === 'piste') return;
       ikonit.push({ r, datum: datumit[i] });
-      if (r.nimioNakyy && r.nimi) lappuja.push({ r, datum: datumit[i] });
+      if (r.nimioNakyy && r.nimi) {
+        lappuja.push({ r, datum: datumit[i], laatikko: lapunLaatikko(r, datumit[i]) });
+      }
     });
     const ikonilaatikko = ({ r, datum }) => (r.perhe === 'aihemerkki'
-      ? aihemerkinLaatikko(r.p, datum)
+      ? aihemerkinLaatikko(r.p, datum, { dx: datum.dx, dy: datum.dy, nimio: false })
       : nostonLaatikko(r.p, r, {
         dx: datum.dx, dy: datum.dy, nimio: false,
       }));
@@ -1596,12 +1690,19 @@ export function luoNostot({
   const sovittele = ({ nimet = [] } = {}) => {
     if (!lappuja.length) return sovittelu;
     const tulos = sovitteleLaput({
-      laput: lappuja.map(({ r, datum }) => ({
+      laput: lappuja.map(({ r, datum, laatikko }) => ({
         avain: datum.avain,
         kylki: datum.puoli,
-        laatikko: (kylki, dx, dy, nimio) => nostonLaatikko(r.p, r, {
-          kylki, dx, dy, nimio,
-        }),
+        laatikko,
+        /*
+         * AIHENOSTO VÄISTÄÄ KAIKKEA (js/pallolauta/sovittelu.js
+         * AIHENOSTO SOVITELLAAN VIIMEISENÄ). Sen paikka ja nimi
+         * syntyvät vasta ajossa ryhmän jäsenistä, joten sillä ei ole
+         * sitä käsin hiottua ladontaa, jonka nojalla muut laput
+         * saavat jäädä paikoilleen — ja kaupungin rykelmän
+         * aihenostot syntyvät kaikki saman kaupungin päälle.
+         */
+        este: r.perhe === 'aihemerkki',
       })),
       esteet: nimet,
     });
@@ -1685,8 +1786,21 @@ export function luoNostot({
     aihemerkit: () => osumat.filter((o) => o.perhe === 'aihemerkki').map((o) => ({
       id: o.id,
       aihe: o.aihe,
+      // Aihenoston nimiö (PAATOKSET 27 TARKENNUS 2 kohta 8) ja se
+      // kaupunki, joka sitoi ryhmän (kohta 7) — vartijoiden mittarit.
+      nimi: o.nimi,
+      nimioNakyy: Boolean(o.datum?.nimioNakyy ?? o.nimioNakyy),
+      kaupunkiAvain: o.kaupunkiAvain ?? null,
       maara: o.maara,
-      jasenet: o.jasenet.map((m) => ({ id: m.id, x: m.p.x, y: m.p.y })),
+      jasenet: o.jasenet.map((m) => ({
+        id: m.id,
+        nimi: m.nimi,
+        aihe: m.aihe,
+        kaupunkiAvain: m.kaupunkiAvain ?? null,
+        maasto: Boolean(m.maasto),
+        x: m.p.x,
+        y: m.p.y,
+      })),
       x: o.p?.x ?? 0,
       y: o.p?.y ?? 0,
     })),
@@ -1738,18 +1852,16 @@ export function luoNostot({
      */
     lappuLaatikot: () => lappuja
       .filter(({ datum }) => datum.nimioNakyy && datum.nimi)
-      .map(({ r, datum }) => ({
+      .map(({ datum, laatikko }) => ({
         id: datum.id,
         nimi: datum.nimi,
         // Perhe kertoo savukkeelle, mikä ovi lapun takaa aukeaa
-        // (nosto = kohdekortti, elain = eläintäky).
+        // (nosto = kohdekortti, elain = eläintäky, aihemerkki = viuhka).
         perhe: datum.perhe,
         puoli: datum.puoli,
         dx: datum.dx,
         dy: datum.dy,
-        ...nostonLaatikko(r.p, r, {
-          kylki: datum.puoli, dx: datum.dx, dy: datum.dy, nimio: true,
-        }),
+        ...laatikko(datum.puoli, datum.dx, datum.dy, true),
       })),
     /**
      * NAPAUTETTAVIEN LAPPUJEN LAATIKOT juuri nyt (savukkeet ja
