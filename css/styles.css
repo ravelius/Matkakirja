@@ -27026,12 +27026,29 @@ body.luenta-tekstit-piiloon .pollo-vihje-yksin {
  * on. Alareunan väli on sama var(--gap) + 0,4rem kuin neliöllä oli,
  * turva-alue mukaan luettuna.
  */
+/*
+ * ERÄ 19b: SANA VÄISTÄÄ MAAINFOA PYSTYEN, EI SIVUUN (omistajan päätös
+ * 15.9.2026 illalla: maainfo alkuperäiseen luettavaan kokoon).
+ *
+ * Isompi maainfo yltää 390 px:n ruudulla ruudun keskilinjalle asti, ja
+ * sana osuisi siihen. `--liiku-pohja` on maapaneelin kirjoittama mitta
+ * (js/pallolauta/maapaneeli.js tahdistaLiikunPohja): kortin YLÄREUNA
+ * ruudun alareunasta laskettuna + 2 px, ja se on olemassa VAIN silloin
+ * kun kortti oikeasti yltää sanan kaistalle. `max()` ottaa siitä ja
+ * perusvälistä suuremman, joten leveällä ruudulla — jossa muuttujaa ei
+ * kirjoiteta lainkaan — sana on entisellä paikallaan ruudun
+ * alalaidassa. Vaakasuunnassa mikään ei muutu: sana pysyy
+ * keskilinjalla kummassakin tapauksessa.
+ */
 .toimintorivi.rivi-yksi .monitoimi-nappi {
   position: fixed;
   left: 50%;
   right: auto;
   transform: translateX(-50%);
-  bottom: calc(var(--gap) + 0.4rem + env(safe-area-inset-bottom, 0px));
+  bottom: max(
+    calc(var(--gap) + 0.4rem + env(safe-area-inset-bottom, 0px)),
+    var(--liiku-pohja, 0px)
+  );
 }
 
 /*

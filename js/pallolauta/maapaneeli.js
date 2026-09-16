@@ -396,30 +396,55 @@ export const MAAPANEELIN_SKAALA_MAX = 64 * MAAPANEELIN_TEKSTIKERROIN;
  *
  * KAKSI RAJAA, TIUKEMPI VOITTAA:
  *
- *   KORKEUS ≤ 10 % RUUDUSTA. Sama kymmenesosan katto, jonka omistaja
- *   asetti v1885/v1903 ("paneeli kymmenesosaan"), mutta mitattuna nyt
- *   RUUDUN KORKEUDESTA. Karttaan kiinnitettynä katto oli ruudun
- *   LEVEYDESTÄ (MAAPANEELIN_KATTO_RUUDUSTA), koska silloin sitova
- *   mitta oli se, paljonko kortti vei leveydeltään kartan päältä
- *   pystypuhelimella. Nurkkakortin sitova mitta on korkeus: se seisoo
- *   ruudun alalaidassa, ja leveyssuunnassa sen rinnalla ei ole mitään.
+ *   KORKEUS ≤ 22 % RUUDUSTA. Ks. "ALKUPERÄINEN LUETTAVA KOKO" alla.
+ *   Karttaan kiinnitettynä katto oli ruudun LEVEYDESTÄ
+ *   (MAAPANEELIN_KATTO_RUUDUSTA), koska silloin sitova mitta oli se,
+ *   paljonko kortti vei leveydeltään kartan päältä pystypuhelimella.
+ *   Nurkkakortin sitova mitta on korkeus: se seisoo ruudun
+ *   alalaidassa.
  *
- *   LEVEYS ≤ 28 % RUUDUSTA. Toinen raja on olemassa vaakapuhelinta
- *   varten (844 × 390), jossa 10 % korkeudesta olisi 39 px eikä
+ *   LEVEYS ≤ 58 % RUUDUSTA. Toinen raja on olemassa vaakapuhelinta
+ *   varten (844 × 390), jossa 22 % korkeudesta olisi 86 px eikä
  *   leveysraja sido; ja toisin päin hyvin kapealla ruudulla, jossa
- *   korkeusraja antaisi kortille yli kolmanneksen leveydestä.
+ *   korkeusraja antaisi kortille yli kolme neljäsosaa leveydestä.
  *
- * RAJAT 0,8…1,6 PITÄVÄT TEKSTIN LUETTAVANA. Kortin typografia on
- * mitoitettu peruskokoon (leipäteksti 6,5 px kortin yksiköissä), joten
- * kerroin lähellä yhtä on se, jota varten se on ladottu. Mitattuna
- * 390 × 844 antaa 1,03 ja 1400 × 900 antaa 1,10 — kortti on siis
- * molemmilla ruuduilla lähes peruskokoinen, mikä on juuri se
- * "alkuperäinen vasemman alakulman maainfo", jota päätös pyytää.
+ * ══════════════════════════════════════════════════════════════════
+ * ALKUPERÄINEN LUETTAVA KOKO (omistajan päätös 15.9.2026 illalla,
+ * PÄÄTÖKSET 28:n jatkona, kysymyskortilla)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * ERÄN 19 ENSIMMÄINEN MITOITUS OLI LUKUKELVOTON. Katto oli 10 % ruudun
+ * korkeudesta (rajat 0,8…1,6), jolloin kortti oli 390 px:n ruudulla
+ * 107 × 84 px — ja koska kortin typografia on mitoitettu sille, että
+ * KARTTA suurentaa korttia zoomatessa, leipäteksti oli ruudulla
+ * MITATTUNA 3,6 px ja maan nimi 6,7 px. Kuvakaappauksessa
+ * (docs/raportit/kuvat/maainfo-alakulma-390-kiinni.jpg) kortti oli
+ * tunnistettava kartuutsi mutta sen rivit harmaata sumua.
+ *
+ * VERTAILU: se nurkkataulu, jonka omistaja pyysi takaisin, oli
+ * kartuutsin nimi 1,05 rem = 16,8 px puhelimella (1,35 rem = 21,6 px
+ * työpöydällä), lukurivin otsikko 0,72 rem = 11,5 px ja arvo 0,84 rem
+ * = 13,4 px (css .fokus-kartuutsi-nimi, .fokus-maataulu-otsikko).
+ *
+ * OMISTAJAN VALINTA: "maainfo ALKUPERÄISEEN LUETTAVAAN KOKOON (nimi
+ * 14–16 px, lukurivit n. 8 px, paneeli n. 22 % ruudun korkeudesta)".
+ * ≤ 10 % -mitoitus (v1885 "maapaneeli kymmenesosaan", v1903
+ * saapumisnäkymän katto) KUMOUTUU TÄMÄN PANEELIN OSALTA — se oli
+ * kartalla liukuvan kortin raja, ei nurkkakalusteen.
+ *
+ * YHTÄÄN FONTTIKOKOA EI MUUTETA (PÄÄTÖKSET 7). Kortti on yhä 104 × 82
+ * css-px ja sen sisällä kaikki entiset mitat; vain kerroin kasvaa,
+ * jolloin koko kortti — kehys, kartuutsi, lukurivit, kielirivi, plus
+ * ja valikko — suurenee yhtenä kuvana samassa suhteessa.
+ *
+ * RAJAT 1,4…3,2. Mitattuna 390 × 844 antaa 2,175 ja 1400 × 900 antaa
+ * 2,41, eli maan nimi on 14,1 / 15,7 px ja lukurivin otsikko 7,6 /
+ * 8,4 px — juuri se, minkä omistaja valitsi.
  */
-export const MAAPANEELIN_NURKKA_KORKEUS_OSUUS = 0.10;
-export const MAAPANEELIN_NURKKA_LEVEYS_OSUUS = 0.28;
-export const MAAPANEELIN_NURKKA_SKAALA_MIN = 0.8;
-export const MAAPANEELIN_NURKKA_SKAALA_MAX = 1.6;
+export const MAAPANEELIN_NURKKA_KORKEUS_OSUUS = 0.22;
+export const MAAPANEELIN_NURKKA_LEVEYS_OSUUS = 0.58;
+export const MAAPANEELIN_NURKKA_SKAALA_MIN = 1.4;
+export const MAAPANEELIN_NURKKA_SKAALA_MAX = 3.2;
 
 /** Nurkkakortin mittakaava ruudun koosta; tuntematon ruutu → 1. */
 export function nurkanSkaala({ leveys = 0, korkeus = 0 } = {}) {
@@ -939,6 +964,85 @@ function asetteleKortti(el, d) {
 }
 
 /*
+ * LIIKU VÄISTÄÄ PANEELIN, KUN PANEELI YLTÄÄ RUUDUN KESKILINJALLE.
+ *
+ * Omistajan päätös 15.9.2026 illalla: maainfo alkuperäiseen luettavaan
+ * kokoon (ks. ALKUPERÄINEN LUETTAVA KOKO yllä). 390 px:n ruudulla
+ * kortti on silloin MITATTUNA 226 px leveä ja yltää x 237:ään asti —
+ * ruudun keskilinja on 195, ja Liiku-sana istuu siinä 44 px:n
+ * levyisenä (x 173…217). Ne osuisivat toisiinsa.
+ *
+ * SANA PYSYY KESKELLÄ, MUTTA NOUSEE PANEELIN YLÄREUNAN TASALLE —
+ * omistajan sanoin *"nosta Liikun tekstiä tarvittaessa paneelin
+ * yläreunan tasalle"*. Vaihtoehto olisi ollut siirtää sana sivuun, ja
+ * se rikkoisi PÄÄTÖKSET 28 kohdan 3 ("alas keskelle").
+ *
+ * EHTO JA MITTA LASKETAAN TÄÄLLÄ, EI CSS:SSÄ. Kortin ruutukorkeus
+ * riippuu mittakaavasta, jonka vain tämä moduuli tietää, ja sen alin
+ * kohta riippuu iPhonen turva-alueesta, jota js ei voi laskea — siksi
+ * mitta otetaan LIVENÄ kortin omasta ruutulaatikosta ja kirjoitetaan
+ * yhtenä muuttujana (--liiku-pohja). CSS ottaa siitä ja omasta
+ * perusvälistään suuremman (css .toimintorivi.rivi-yksi
+ * .monitoimi-nappi, `bottom: max(...)`), joten leveällä ruudulla,
+ * jossa ehto ei täyty, mikään ei muutu.
+ *
+ * VAPAA KAISTA ON PUOLET NAPISTA JA RAKO: nappi on 44 px leveä ja
+ * keskitetty, joten sen vasen reuna on keskilinja − 22; 12 px:n rako
+ * päälle tekee 34.
+ */
+const LIIKUN_VAPAA_KAISTA_PX = 34;
+/** Rako kortin yläreunan ja sanan alareunan väliin. */
+const LIIKUN_RAKO_PX = 2;
+
+/*
+ * KESKEN ASETTUVAA RUUTUA EI USKOTA (mitattu 16.9.2026). Karttaruutu on
+ * flex-lapsi, jonka korkeus heiluu saapumisen aikana — ensimmäisellä
+ * mittauksella kortin yläreuna oli 132 px ruudun YLÄPUOLELLA, ja
+ * siitä laskettu väistö (978 px) olisi vienyt sanan kokonaan pois
+ * ruudulta. Mitta hyväksytään siis vain, jos se on järjellinen: kortti
+ * on ruudulla ja väistö korkeintaan puoli ruutua.
+ *
+ * MITTA OTETAAN UUDESTAAN SEURAAVASSA KEHYKSESSÄ. Sama kirjoitus
+ * ajetaan rAF:ssä, jolloin selain on ehtinyt asettaa kortin lopulliseen
+ * kohtaansa. Hylätty mittaus EI pyyhi entistä arvoa — muuten sana
+ * hyppäisi paikaltaan joka kerta, kun ruutu on hetken kesken.
+ */
+function mittaaLiikunPohja(kortti) {
+  const juuri = typeof document === 'undefined' ? null : document.documentElement;
+  if (!juuri) return;
+  const r = kortti?.getBoundingClientRect();
+  const leveys = globalThis.innerWidth || 0;
+  const korkeus = globalThis.innerHeight || 0;
+  if (!r || !(r.width > 0) || !(r.height > 0) || !(leveys > 0) || !(korkeus > 0)) return;
+  // Kesken asettuva ruutu: kortin on oltava kokonaan ruudulla.
+  if (r.top < 0 || r.bottom > korkeus + 1) return;
+  const vapaaAlkaa = leveys / 2 - LIIKUN_VAPAA_KAISTA_PX;
+  if (r.right <= vapaaAlkaa) { juuri.style.removeProperty('--liiku-pohja'); return; }
+  const pohja = Math.round(korkeus - r.top + LIIKUN_RAKO_PX);
+  if (!(pohja > 0) || pohja > korkeus / 2) return;
+  juuri.style.setProperty('--liiku-pohja', `${pohja}px`);
+}
+
+/*
+ * KOLME YRITYSTÄ: NYT, SEURAAVASSA KEHYKSESSÄ JA PUOLEN SEKUNNIN
+ * PÄÄSTÄ. Karttaruudun korkeus asettuu vasta saapumisajon jälkeen, ja
+ * kirjoituksia voi tulla vain muutama — yksikin hylätty mittaus
+ * jättäisi sanan paneelin päälle. Ajastin on YKSI ja se nollataan joka
+ * kirjoituksella, joten peräkkäiset päivitykset eivät kasaannu.
+ */
+let liikunPohjaAjastin = null;
+
+function tahdistaLiikunPohja(kortti) {
+  if (typeof document === 'undefined' || !kortti) return;
+  mittaaLiikunPohja(kortti);
+  globalThis.requestAnimationFrame?.(() => mittaaLiikunPohja(kortti));
+  clearTimeout(liikunPohjaAjastin);
+  liikunPohjaAjastin = setTimeout(() => {
+    if (kortti.isConnected) mittaaLiikunPohja(kortti);
+  }, 500);
+}
+
+/*
  * RUUDUN KALUSTEET, JOTKA VALIKKO VÄISTÄÄ.
  *
  * Valikko aukeaa kortin yläpuolelle ruudun vasemmassa alakulmassa, ja
@@ -1126,6 +1230,8 @@ export function luoMaapaneeli({
     if (!sailio?.isConnected && !tila) return;
     if (!tila) {
       if (sailio) sailio.hidden = true;
+      // Ilman paneelia Liiku palaa perusväliinsä.
+      document.documentElement?.style.removeProperty('--liiku-pohja');
       return;
     }
     const kortti = varmistaKortti();
@@ -1141,6 +1247,8 @@ export function luoMaapaneeli({
     d.skaala = nurkanSkaala(ruutu());
     d.valikkoAuki = valikkoAuki;
     taytaKortti(kortti, d);
+    // Liiku väistää kortin, jos kortti yltää ruudun keskilinjalle.
+    tahdistaLiikunPohja(kortti.querySelector('.maapaneeli-kortti'));
   };
 
   return {
@@ -1205,6 +1313,11 @@ export function luoMaapaneeli({
       sailio?.remove();
       sailio = null;
       el = null;
+      clearTimeout(liikunPohjaAjastin);
+      liikunPohjaAjastin = null;
+      if (typeof document !== 'undefined') {
+        document.documentElement?.style.removeProperty('--liiku-pohja');
+      }
     },
   };
 }

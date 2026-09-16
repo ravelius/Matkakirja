@@ -1,11 +1,18 @@
-# Maainfo takaisin ruudun vasempaan alakulmaan (erä 19)
+# Maainfo takaisin ruudun vasempaan alakulmaan (erät 19 ja 19b)
 
-Viesti Fablelle · 15.9.2026 · Opus-agentti · haara
+Viesti Fablelle · 15.–16.9.2026 · Opus-agentti · haara
 `claude/bold-ride-vow4ki-maainfo-alakulma`
 
 Toteutettu Raamatun **KARTTAUUDISTUKSEN PÄÄTÖKSET 28** (omistaja
-15.9.2026 klo 20.45 UTC). Ei versionostoa, ei PR:ää, ei Raamatun
-muokkausta — ne jäävät Fablelle.
+15.9.2026 klo 20.45 UTC) ja sen jatkopäätös samana iltana: **maainfo
+alkuperäiseen luettavaan kokoon** (nimi 14–16 px, lukurivit n. 8 px,
+paneeli n. 22 % ruudun korkeudesta). Ei versionostoa, ei PR:ää, ei
+Raamatun muokkausta — ne jäävät Fablelle.
+
+> **Erä 19b (16.9.2026):** omistaja valitsi kortilla ison koon. Luvun 6
+> avoin asia on siis RATKAISTU ja toteutettu; vakiot ovat nyt
+> 0,22 / 0,58 / rajat 1,4…3,2. Luku 6 kertoo mitä tehtiin ja mitä siitä
+> seurasi Liiku-sanalle.
 
 ---
 
@@ -21,8 +28,10 @@ muokkausta — ne jäävät Fablelle.
   `bottom: 0,9rem` + iPhonen turva-alueet — sama marginaali kuin
   vanhalla nurkkataululla `.fokusmitat`).
 - Mittakaava tulee RUUDUSTA eikä kamerasta (`nurkanSkaala`): korkeus
-  ≤ 10 % ruudun korkeudesta, leveys ≤ 28 % ruudun leveydestä, rajat
-  0,8…1,6. Kamera ei kirjoita kortin kokoa eikä paikkaa kertaakaan.
+  **≤ 22 %** ruudun korkeudesta, leveys **≤ 58 %** ruudun leveydestä,
+  rajat **1,4…3,2** (erä 19b; ensimmäinen mitoitus oli 10 % / 28 % /
+  0,8…1,6 ja se osoittautui lukukelvottomaksi, ks. luku 6). Kamera ei
+  kirjoita kortin kokoa eikä paikkaa kertaakaan.
 - `transform-origin: 0 100%` — kortin vasen alakulma on ankkuri, joten
   kortti kasvaa ylös ja oikealle eikä nurkan yli.
 - Sisältö, typografia, kaksoisviivakehys ja kaikki kortin omat mitat
@@ -78,6 +87,20 @@ muokkausta — ne jäävät Fablelle.
 - Aarteen löytyessä (`body.liiku-laaja`) sana kirkastuu peittävyyteen
   1 ja 12,5 px:iin — entinen "neliö laajenee tekstinapiksi" poistui,
   koska nappi on jo sana. Mikään ei enää hypähdä.
+- **Erä 19b — sana väistää maainfoa pystyyn, ei sivuun.** Iso paneeli
+  yltää 390 px:n ruudulla x 246:een asti eli ruudun keskilinjan (195)
+  yli, jossa sana istuu. `js/pallolauta/maapaneeli.js`
+  `tahdistaLiikunPohja` kirjoittaa muuttujan `--liiku-pohja` (kortin
+  yläreuna ruudun alareunasta + 2 px) VAIN silloin kun kortin oikea
+  reuna yltää sanan kaistalle (keskilinja − 34 px), ja CSS ottaa
+  `bottom: max(perusväli, var(--liiku-pohja, 0px))`. Leveällä ruudulla
+  muuttujaa ei kirjoiteta lainkaan eikä mikään muutu. Vaakasuunnassa
+  sana pysyy keskilinjalla kummassakin tapauksessa.
+- Mittaus hylkää kesken asettuvan ruudun (kortti ruudun ulkopuolella
+  tai väistö yli puoli ruutua) ja otetaan uudestaan rAF:ssä ja 500 ms
+  päästä: mitattu 16.9.2026, että ensimmäinen mittaus antoi 978 px ja
+  olisi vienyt sanan kokonaan pois ruudulta. Savuke vartioi nyt myös
+  sen, että sana on kokonaan ruudulla ja ruudun alemmassa puoliskossa.
 - Piilotussäännöt ENNALLAAN: `body.luenta-aanessa`,
   `body.aikajana-paalla`, `body.pallo-auki`, `body.radio-tila` ja
   `body.maataulu-auki` osuvat yhä valitsimeen
@@ -106,20 +129,27 @@ savukkeella `savuke-liiku.mjs` ja `savuke-maapaneeli.mjs` väite 4.
 Kaikki mitattu Chromiumilla, Ranska, Pariisin saapumisnäkymä,
 `tools/savukkeet/savuke-maapaneeli.mjs`.
 
-| Mitta | Ennen (v1916, kartassa) | Nyt (erä 19, nurkassa) |
-|---|---|---|
-| Kortti 390 × 844 | ~37 × 29 px, paikka Biskajanlahdella/Lyoninlahdella, liikkui ja kasvoi zoomatessa | **107 × 84 px**, x 19…126, y 737…821 |
-| Kortti 1400 × 900 | ~86 × 68 px, Biskajanlahdella | **114 × 90 px**, x 22…136, y 785…875 |
-| Väli ruudun vasempaan reunaan | vaihteli zoomin mukana | **11,2 px** (molemmat ruudut) |
-| Väli ruudun alareunaan | vaihteli | **14,4 px** (molemmat ruudut) |
-| Osuus ruudun korkeudesta | vaihteli 5…22 % | **10,0 %** (molemmat) |
-| Kortin skaala | 0,45…64 kameran mukaan | **1,029** (390) / **1,098** (1400), vakio |
-| Zoom 2× sisään | kortti leveni | **ei muutu: 107 × 84 / 114 × 90, ±0 px** |
-| Valikko 390 px | pystylista plussan oikealla, y kortin tasalta alas | **8 riviä, 2 saraketta**, x 19…165, y 701…736 (kortin yläreuna 737) |
-| Valikko 1400 px | sama | **8 riviä, 2 saraketta**, x 22…177, y 747…784 (kortin yläreuna 785) |
-| Valikon rivinkorkeus / rivivali | 1,3 (v1916) | **8,68 / 8,68 px (suhde 1,00)** 390 px; **9,26 / 9,26 (1,00)** 1400 px |
-| Liiku | 44 × 44 neliö, kompassi, pergamentti + reunus, vasen alanurkka | **44 × 36, sana "Liiku", tausta rgba(…,0), reunus 0px, peittävyys 0,65, keskipoikkeama 0,0 px** |
-| Liiku vs. pulu / lappu / kaupunkikortti / paneeli | — | **ei yhtään päällekkäisyyttä** (390 ja 1400) |
+| Mitta | Ennen (v1916, kartassa) | Erä 19 (10 %) | **Nyt, erä 19b (22 %)** |
+|---|---|---|---|
+| Kortti 390 × 844 | ~37 × 29 px, Biskajanlahdella, liikkui ja kasvoi zoomatessa | 107 × 84 px | **226 × 178 px**, x 19…246, y 643…821 |
+| Kortti 1400 × 900 | ~86 × 68 px | 114 × 90 px | **251 × 198 px**, x 22…273, y 677…875 |
+| Väli ruudun vasempaan reunaan | vaihteli zoomin mukana | 11,2 px | **11,2 px** |
+| Väli ruudun alareunaan | vaihteli | 14,4 px | **14,4 px** |
+| Osuus ruudun korkeudesta | vaihteli 5…22 % | 10,0 % | **21,1 %** (390) / **22,0 %** (1400) |
+| Kortin skaala | 0,45…64 kameran mukaan | 1,03 / 1,10 | **2,175** (390) / **2,415** (1400), vakio |
+| Zoom 2× sisään | kortti leveni | ei muutu | **ei muutu: 226 × 178 / 251 × 198, ±0 px** |
+| Maan nimi ruudulla | 2…6 px | 6,7 px | **14,1 px** (390) / **15,7 px** (1400) |
+| Lukurivin otsikko ruudulla | 1,7…3 px | 3,6 px | **7,6 px** (390) / **8,4 px** (1400) |
+| Valikko 390 px | pystylista plussan oikealla | 8 riviä / 2 saraketta, x 19…165, y 701…736 | **8 riviä / 2 saraketta**, x 19…327, y 567…641 (kortin yläreuna 643) |
+| Valikko 1400 px | sama | 8 / 2, x 22…177 | **8 riviä / 2 saraketta**, y 601…675 (kortin yläreuna 677) |
+| Valikon rivinkorkeus / rivivali | 1,3 (v1916) | 8,68 / 8,68 (1,00) | **18,35 / 18,35 px (suhde 1,00)** 390 px |
+| Liiku | 44 × 44 neliö, kompassi, pergamentti + reunus, vasen alanurkka | 44 × 36 sana, alareuna 16 px | **44 × 36, sana "Liiku", alpha 0, peitto 0,65, keskipoikkeama 0,0 px** |
+| Liikun alareuna ruudun alareunasta | — | 16 px (molemmat) | **203 px (390, väistää paneelia)** / **16 px (1400)** |
+| Liiku vs. paneeli / pulu / lappu / kaupunkikortti | — | ei päällekkäisyyttä | **ei päällekkäisyyttä** (390 ja 1400) |
+
+Valikko mahtuu kokonaan ruudulle molemmilla: 390 px:llä se yltää
+x 327:ään (ruutu 390) ja y 567:ään (ruudun yläreuna 0) — eli ruudun
+yläreunan yli ei mennä edes isolla paneelilla.
 
 ---
 
@@ -130,8 +160,8 @@ Kaikki ajettu yksi kerrallaan etualalla,
 
 | Savuke | Tulos |
 |---|---|
-| `savuke-maapaneeli.mjs` | **13/13 vihreä** (uudet vartiot, ks. alla) |
-| `savuke-iphone-tekstit.mjs` | **40/40 vihreä** |
+| `savuke-maapaneeli.mjs` | **15/15 vihreä** (uudet vartiot ja vastakokeet A–F, ks. alla) |
+| `savuke-iphone-tekstit.mjs` | **40/40 vihreä** (ajettu uudestaan erän 19b jälkeen) |
 | `savuke-liiku.mjs` | **40/43 — sama kuin mainissa** (vertailuajo `origin/main`-työtilassa antoi täsmälleen samat kolme punaista: uloimman matkanapin leikkaus 2033 px², lennon näkyvyys ja liftauksen nopeusprofiilin näytemäärä). Ei siis regressiota; matkustusliuku toimii pointer-events-muutoksen jälkeen. |
 | `tests/maakartuutsi.test.mjs` + `tests/rules.test.mjs` | **347/347 vihreä** |
 
@@ -140,14 +170,17 @@ Kaikki ajettu yksi kerrallaan etualalla,
 Väitteet nyt:
 
 1. Paneeli on ruudun vasemmassa alakulmassa, kokonaan ruudulla ja
-   ≤ 10 % ruudun korkeudesta (390 ja 1400 px).
+   **22 % (± 2 %-yks.) ruudun korkeudesta** (390 ja 1400 px) — erässä
+   19 tämä oli ≤ 10 %, ja se kumoutui omistajan päätöksellä.
 2. Paneeli EI liiku eikä kasva zoomatessa (nurkka ja koko ±1 px).
 3. Valikko aukeaa plussan paikalle ylös, ≥ 2 saraketta, rivivali
    ≤ 1,5 × rivinkorkeus, kokonaan ruudulla.
 4. Jokainen otsikko avaa maalehden oman sivunsa (ennallaan).
 5. Värit ovat kartan omia `--sym-`sävyjä (ennallaan).
 6. Liiku on kuultava sana ruudun alareunan keskellä (±8 px), tausta
-   alpha 0, sana näkyy, osuma-ala ≥ 32 × 32, ei päällekkäisyyksiä.
+   alpha 0, sana näkyy, osuma-ala ≥ 32 × 32, **sana on kokonaan
+   ruudulla ja ruudun alemmassa puoliskossa**, ei päällekkäisyyksiä
+   paneelin, pulun, lapun eikä kaupunkikortin kanssa.
 
 Vastakokeet:
 
@@ -160,6 +193,12 @@ Vastakokeet:
   mitään. Mitattu 390 px: 188,193 → 189,1. *(vihreä)*
 - **D** Pulun nappi EI ole ruudun keskilinjalla (poikkeama 129,4 px /
   634,4 px) → väitteen 6 keskitysmitta kaatuu siihen. *(vihreä)*
+- **E** (erä 19b) Nurkan katot palautetaan pieniksi (10 % / 28 %,
+  rajat 0,8…1,6) palvelimessa → väitteen 1 LUETTAVAN KOON osan on
+  kaaduttava. *(vihreä)*
+- **F** (erä 19b) Liikun `bottom: max(…, var(--liiku-pohja))`
+  palautetaan pelkäksi perusväliksi → sanan ON osuttava paneeliin
+  390 px:n ruudulla, tai väistö ei todistaisi mitään. *(vihreä)*
 
 ### savuke-iphone-tekstit.mjs
 
@@ -209,82 +248,122 @@ julkaistu.
 
 ## 5. Kuvat
 
+Uudet (erä 19b, iso paneeli) kirjoitettu samoihin polkuihin:
+
 - `docs/raportit/kuvat/maainfo-alakulma-390-kiinni.jpg` — koko ruutu
-  390 × 844, valikko kiinni (paneeli alakulmassa, Liiku keskellä alhaalla)
-- `docs/raportit/kuvat/maainfo-alakulma-390-auki.jpg` — alakulma
-  suurennettuna, valikko auki (2 saraketta ylöspäin)
+  390 × 844, valikko kiinni: paneeli alakulmassa luettavana, Liiku
+  keskellä paneelin yläreunan tasalla
+- `docs/raportit/kuvat/maainfo-alakulma-390-auki.jpg` — koko ruutu,
+  valikko auki (2 saraketta plussan paikalta ylöspäin)
 - `docs/raportit/kuvat/maainfo-alakulma-1400-kiinni.jpg` — koko ruutu
-  1400 × 900, valikko kiinni
-- `docs/raportit/kuvat/maainfo-alakulma-1400-auki.jpg` — alakulma
-  suurennettuna, valikko auki
+  1400 × 900, valikko kiinni, Liiku ruudun alalaidassa keskellä
+- `docs/raportit/kuvat/maainfo-alakulma-1400-auki.jpg` — koko ruutu,
+  valikko auki
 
-Kaikki ≤ 100 kt, jpeg laatu 60.
+Kaikki ≤ 40 kt, jpeg laatu 60. Kuvissa näkyy nyt kartta terävänä:
+saapumisen luentakuva ja luennan huntu on neutralisoitu kuvaa varten
+(headless-ajossa luentavahti ei koskaan päästä puhujaa vaikenemaan) —
+pelin omat tyylit ovat kuvissa muuten koskemattomat.
 
-Huomio kuvasta `maainfo-alakulma-1400-kiinni.jpg`: sana "Liiku" osuu
-1400 px:n Ranska-näkymässä kartan oman **BARCELONA**-nimiön päälle.
-Se on kartan nimiö eikä pelin kaluste, eikä sitä voi väistää ilman
-että nappi siirtyy pois keskeltä — omistaja pyysi juuri keskelle, joten
-jätin sen. Sana on kuultava (0,65), joten nimiö näkyy sen alta.
+Kuvista näkyy myös kaksi asiaa, jotka kannattaa katsoa omistajan
+kanssa:
+
+1. **390 px, valikko auki:** sana "Liiku" nousee paneelin yläreunan
+   tasalle, ja auki oleva valikko latoutuu samalle korkeudelle sen
+   molemmin puolin — sana jää siis hetkeksi valikon sarakkeiden väliin.
+   Valikko on auki vain napautuksen ajan, eikä kortti 28 vaadi tästä
+   mitään, joten jätin sen; jos omistaja haluaa, sana voi väistää myös
+   auki olevaa valikkoa (sama muuttuja, yksi ehto lisää).
+2. **1400 px:** sana osuu kartan oman BARCELONA-nimiön kohdalle. Se on
+   kartan nimiö eikä pelin kaluste, eikä sitä voi väistää ilman että
+   sana siirtyy pois keskeltä. Sana on kuultava (0,65), joten nimiö
+   näkyy sen alta.
 
 ---
 
-## 6. AVOIN ASIA OMISTAJALLE: paneelin teksti on yhä hyvin pientä
+## 6. RATKAISTU: paneeli alkuperäiseen luettavaan kokoon (erä 19b)
 
-Tämä on tärkein asia, joka jää päätettäväksi.
+### Mikä oli vikana
 
-Toimeksianto sanoi "säilytä nykyinen sisältö ja mitoitus (paneeli
-≤ 10 % ruudusta)", ja niin tehtiin. Mutta kortin oma typografia on
-mitoitettu sille, että KARTTA suurentaa korttia zoomatessa:
+Erän 19 ensimmäinen mitoitus noudatti vanhaa ≤ 10 % -kattoa, ja kortti
+oli 390 px:n ruudulla 107 × 84 px. Koska kortin typografia on mitoitettu
+sille, että KARTTA suurensi korttia zoomatessa, teksti oli ruudulla
+mitattuna näin pientä:
 
-| Elementti | Kortin yksikkö | Ruudulla nyt (390 px, skaala 1,03) |
-|---|---|---|
-| Maan nimi | 6,5 px | **6,7 px** |
-| Lukurivin otsikko | 3,5 px | **3,6 px** |
-| Maan oma nimi | 4,25 px | **4,4 px** |
-| Valikon rivi | 6,5 px | **6,7 px** |
+| Elementti | Kortin yksikkö | Vanha (skaala 1,03) | **Nyt (skaala 2,175)** |
+|---|---|---|---|
+| Maan nimi | 6,5 px | 6,7 px | **14,1 px** |
+| Maan oma nimi | 4,25 px | 4,4 px | **9,2 px** |
+| Lukurivin otsikko | 3,5 px | 3,6 px | **7,6 px** |
+| Valikon rivi | 6,5 px | 6,7 px | **14,1 px** |
+
+Työpöydällä (skaala 2,415): maan nimi **15,7 px**, lukurivin otsikko
+**8,4 px**, valikon rivi **15,7 px**.
 
 Vertailun vuoksi ALKUPERÄINEN nurkkataulu, jonka omistaja pyysi
-takaisin: kartuutsin nimi 1,05 rem = **16,8 px** puhelimella (1,35 rem
-= 21,6 px työpöydällä), lukurivin otsikko 0,72 rem = **11,5 px**, arvo
-0,84 rem = **13,4 px**.
+takaisin: kartuutsin nimi 1,05 rem = 16,8 px puhelimella (1,35 rem =
+21,6 px työpöydällä), lukurivin otsikko 0,72 rem = 11,5 px.
 
-Eli nykyisellä mitoituksella paneeli on oikeassa nurkassa ja oikean
-näköinen — kaksoisviivakehys, kartuutsi, lukurivit, kielirivi ja plus
-ovat kaikki paikoillaan — mutta sen tekstiä EI VOI LUKEA 390 px:n
-ruudulla. Se näkyy kuvasta `maainfo-alakulma-390-kiinni.jpg`: kortti on
-tunnistettava kartuutsi, mutta rivit ovat harmaata sumua. Kartalla ollessaan se oli
-vielä pienempi (mitattu aiemmin 1,7…3,0 px leipätekstiä), joten tämä on
-jo noin kaksinkertainen parannus — mutta ei vielä "alkuperäinen".
+### Omistajan päätös ja mitä tehtiin
 
-**Korjaus on kaksi vakiota** `js/pallolauta/maapaneeli.js`:ssä, ei
-yhtään fonttia (PÄÄTÖKSET 7 ei siis riko):
+Omistaja valitsi kortilla: **maainfo alkuperäiseen luettavaan kokoon**
+(nimi 14–16 px, lukurivit n. 8 px, paneeli n. 22 % ruudun korkeudesta).
+**≤ 10 % -mitoitus kumoutuu tämän paneelin osalta** — se oli kartalla
+liukuvan kortin raja, ei nurkkakalusteen.
+
+Muutos on KOLME VAKIOTA `js/pallolauta/maapaneeli.js`:ssä. **Yhtään
+fonttikokoa, väriä tai riviä ei muutettu** (PÄÄTÖKSET 7 pitää): kortti
+on yhä 104 × 82 css-px ja koko sen sisältö entisillä mitoillaan, vain
+kerroin kasvaa, jolloin kehys, kartuutsi, lukurivit, kielirivi, plus ja
+valikko suurenevat yhtenä kuvana.
 
 ```
 MAAPANEELIN_NURKKA_KORKEUS_OSUUS  0.10 → 0.22
 MAAPANEELIN_NURKKA_LEVEYS_OSUUS   0.28 → 0.58
+MAAPANEELIN_NURKKA_SKAALA_MIN      0.8 → 1.4
 MAAPANEELIN_NURKKA_SKAALA_MAX      1.6 → 3.2
 ```
 
-Silloin mitat olisivat (laskettu, ei mitattu):
+### Seuraus: Liiku-sana väistää paneelia pystyyn
 
-| Ruutu | Skaala | Kortti | Maan nimi | Lukurivin otsikko |
-|---|---|---|---|---|
-| 390 × 844 | 2,18 | 226 × 178 px (58 % lev., 21 % kork.) | 14,1 px | 7,6 px |
-| 1400 × 900 | 2,41 | 251 × 198 px | 15,7 px | 8,4 px |
+390 px:n ruudulla iso kortti yltää x 246:een asti, ja ruudun keskilinja
+on 195 — sana olisi jäänyt kortin päälle. Ratkaisu on omistajan oma
+ohje: *"nosta Liikun tekstiä tarvittaessa paneelin yläreunan tasalle"*.
 
-Sen kanssa on tehtävä YKSI lisämuutos: 390 px:n ruudulla noin 226 px
-leveä kortti yltäisi ruudun keskilinjalle asti ja osuisi Liiku-sanaan.
-Silloin Liiku on nostettava kortin korkeuden verran ylemmäs tai kortin
-alareuna Liikun yläpuolelle. En tehnyt kumpaakaan omin päin, koska
-molemmat muuttaisivat omistajan juuri päättämää "alas keskelle" -paikkaa
-ja "≤ 10 %" -mitoitusta.
+- `tahdistaLiikunPohja` kirjoittaa `--liiku-pohja`n VAIN kun kortin
+  oikea reuna yltää sanan kaistalle (keskilinja − 34 px = puoli nappia
+  + 12 px rako).
+- CSS: `bottom: max(perusväli, var(--liiku-pohja, 0px))`. Leveällä
+  ruudulla muuttujaa ei kirjoiteta, joten mikään ei muutu.
+- Vaakasuunnassa sana pysyy keskilinjalla molemmissa tapauksissa
+  (keskipoikkeama mitattu 0,0 px).
 
-**Pyyntö Fablelle:** näytä omistajalle kuvat
-`maainfo-alakulma-390-kiinni.jpg` ja `-auki.jpg` ja kysy, riittääkö
-tämä koko vai halutaanko iso versio (taulukko yllä). Molemmat ovat
-yhden vakion päässä.
+Mitattu: 390 px `--liiku-pohja` **203 px**, sanan alareuna 203 px
+ruudun alareunasta, kortin yläreuna 201 px — sana on siis tasan 2 px
+kortin yläreunan yläpuolella, keskellä. 1400 px: muuttujaa ei aseteta,
+sana on 16 px ruudun alareunasta kuten ennenkin, ja kortin yläreuna on
+223 px korkeudella eli kaukana.
 
----
+### Mittaus voi valehdella kesken saapumisen — ja valehteli
+
+Ensimmäisessä ajossa mitta oli **978 px** ja olisi vienyt sanan
+kokonaan ruudun yläpuolelle. Syy on sama kuin kortin koossa aiemmin:
+karttaruutu on flex-lapsi, jonka korkeus heiluu saapumisen aikana, ja
+kortin yläreuna oli mittaushetkellä 132 px ruudun yläpuolella.
+
+Korjaus kahdessa osassa:
+
+1. **Mittaus hylätään**, jos kortti ei ole kokonaan ruudulla tai
+   väistö olisi yli puoli ruutua — hylätty mittaus ei pyyhi entistä
+   arvoa, joten sana ei hypähdä.
+2. **Mittaus otetaan kolmesti**: heti, seuraavassa kehyksessä (rAF) ja
+   500 ms päästä (yksi ajastin, nollataan joka kirjoituksella).
+
+Ja mikä tärkeintä: **savuke vartioi nyt sen, että sana on kokonaan
+ruudulla ja ruudun alemmassa puoliskossa.** Ilman sitä vartiota
+978 px:n virhe meni läpi kaikista muista vartioista (15/15 vihreä,
+sana ruudun ulkopuolella) — se on kirjattu tähän muistiksi siitä, että
+"ei osu mihinkään" ei ole sama asia kuin "on oikeassa paikassa".
 
 ## 7. Mitä EI tehty
 
@@ -296,3 +375,22 @@ yhden vakion päässä.
   `tests/rules.test.mjs` ja `node --check` muutetuille tiedostoille.
   `tests/sw.test.mjs` jätettiin ajamatta, koska uusia tiedostoja ei
   lisätty eikä service workerin kuori muuttunut.
+
+---
+
+## 8. Fablelle: mitä Raamattuun kannattaa kirjata
+
+PÄÄTÖKSET 28:n tilaksi "toteutettu", ja sen perään omistajan
+jatkopäätös 15.9.2026 illalta (kysymyskortti):
+
+> **MAAINFO ALKUPERÄISEEN LUETTAVAAN KOKOON.** Nurkkapaneelin koko on
+> 22 % ruudun korkeudesta (leveysraja 58 %), jolloin maan nimi on
+> ruudulla 14–16 px ja lukurivit n. 8 px. Aiempi "paneeli
+> kymmenesosaan" (v1885) ja saapumisnäkymän leveyskatto (v1903)
+> KUMOUTUVAT tämän paneelin osalta: ne olivat kartalla liukuvan kortin
+> rajoja, eivät ruudun nurkkakalusteen. Liiku-sana pysyy alhaalla
+> keskellä, mutta nousee paneelin yläreunan tasalle silloin kun
+> paneeli yltää ruudun keskilinjalle (390 px).
+
+Mitattu 16.9.2026: 390 px kortti 226 × 178 px (21,1 %), 1400 px kortti
+251 × 198 px (22,0 %); Liiku 203 px / 16 px ruudun alareunasta.

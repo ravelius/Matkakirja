@@ -22,7 +22,11 @@
  * Väitteet:
  *
  *   1. PANEELI ON RUUDUN VASEMMASSA ALAKULMASSA JA KOKONAAN RUUDULLA
- *      (390 ja 1400 px), ja sen korkeus on ≤ 10 % ruudun korkeudesta.
+ *      (390 ja 1400 px), ja sen korkeus on 22 % ruudun korkeudesta
+ *      (± 2 %-yksikköä) — omistajan päätös 15.9.2026 illalla:
+ *      "maainfo ALKUPERÄISEEN LUETTAVAAN KOKOON". Erän 19 ensimmäinen
+ *      ≤ 10 % -katto KUMOUTUI: sillä kortin leipäteksti oli ruudulla
+ *      3,6 px eikä sitä voinut lukea.
  *   2. PANEELI EI LIIKU EIKÄ KASVA ZOOMATESSA. Kortin vasen alakulma
  *      ja koko mitataan kahdella zoomilla: erot ≤ 1 px. VASTAKOE on
  *      kartan oma kaluste (kaupungin nimikyltti), jonka ON liikuttava
@@ -35,8 +39,12 @@
  *   5. VÄRIT OVAT KARTAN OMAT (ennallaan).
  *   6. LIIKU ON KUULTAVA SANA RUUDUN ALAREUNAN KESKELLÄ (PÄÄTÖKSET 28
  *      kohta 3): keskipiste ±8 px ruudun keskilinjalta, taustan alpha
- *      0, sana näkyy, osuma-ala ≥ 32 × 32, eikä se osu paneeliin,
- *      pulun nappiin eikä matkapäiväkirjan lappuun.
+ *      0, sana näkyy, osuma-ala ≥ 32 × 32, sana on KOKONAAN RUUDULLA
+ *      ja ruudun alemmassa puoliskossa, eikä se osu paneeliin, pulun
+ *      nappiin, matkapäiväkirjan lappuun eikä kaupunkikorttiin. 390
+ *      px:n ruudulla iso paneeli yltää keskilinjalle, jolloin sana
+ *      NOUSEE paneelin yläreunan tasalle (--liiku-pohja) mutta pysyy
+ *      keskellä vaakasuunnassa.
  *
  * === VASTAKOKEET (pakolliset) ======================================
  *
@@ -51,6 +59,11 @@
  *      mitään.
  *   D. PULUN NAPPI EI OLE KESKELLÄ. Väitteen 6 keskitysmitta ajetaan
  *      `.pollo-nappi`iin; sen ON kaaduttava.
+ *   E. PIENI KOKO TAKAISIN (nurkan katot 10 % / 28 %, erän 19
+ *      ensimmäinen mitoitus). Väitteen 1 koko-osan ON kaaduttava.
+ *   F. LIIKU EI VÄISTÄ. `bottom: max(…, var(--liiku-pohja))`
+ *      palautetaan perusväliksi; sanan ON osuttava paneeliin 390
+ *      px:n ruudulla, tai väistö ei todista mitään.
  *
  * === VERKKO ========================================================
  *
@@ -85,6 +98,18 @@ const TYYPIT = {
  * aihesivuja, eikä valikolla ole mitään mistä rakentua.
  */
 let poistaKategoriat = null;
+/*
+ * VASTAKOKEIDEN KYTKIN (erä 19b, omistajan päätös 15.9.2026 illalla):
+ *
+ *   'PIENI_KOKO'   — nurkan katot palautetaan erän 19 ensimmäiseen
+ *                    mitoitukseen (10 % / 28 %, rajat 0,8…1,6).
+ *                    KOKOVÄITTEEN ON KAADUTTAVA.
+ *   'EI_VAISTOA'   — Liiku-napin `bottom: max(..., var(--liiku-pohja))`
+ *                    palautetaan pelkäksi perusväliksi, jolloin sana
+ *                    jää ruudun alalaitaan ison paneelin päälle.
+ *                    PÄÄLLEKKÄISYYSVÄITTEEN ON KAADUTTAVA.
+ */
+let vastakoe = null;
 const palvelin = http.createServer((req, res) => {
   const polkuOsa = req.url.split('?')[0];
   const polku = join(JUURI, polkuOsa === '/' ? 'index.html' : polkuOsa);
@@ -93,6 +118,23 @@ const palvelin = http.createServer((req, res) => {
   if (poistaKategoriat && polkuOsa.endsWith('/js/packs/maa-kategoriat.js')) {
     runko = Buffer.concat([runko,
       Buffer.from(`\ndelete MAA_KATEGORIAT[${JSON.stringify(poistaKategoriat)}];\n`)]);
+  }
+  if (vastakoe === 'PIENI_KOKO' && polkuOsa.endsWith('/js/pallolauta/maapaneeli.js')) {
+    runko = Buffer.from(runko.toString('utf8')
+      .replace(/MAAPANEELIN_NURKKA_KORKEUS_OSUUS = [\d.]+/,
+        'MAAPANEELIN_NURKKA_KORKEUS_OSUUS = 0.10')
+      .replace(/MAAPANEELIN_NURKKA_LEVEYS_OSUUS = [\d.]+/,
+        'MAAPANEELIN_NURKKA_LEVEYS_OSUUS = 0.28')
+      .replace(/MAAPANEELIN_NURKKA_SKAALA_MIN = [\d.]+/,
+        'MAAPANEELIN_NURKKA_SKAALA_MIN = 0.8')
+      .replace(/MAAPANEELIN_NURKKA_SKAALA_MAX = [\d.]+/,
+        'MAAPANEELIN_NURKKA_SKAALA_MAX = 1.6'));
+  }
+  if (vastakoe === 'EI_VAISTOA' && polkuOsa.endsWith('/css/styles.css')) {
+    runko = Buffer.from(runko.toString('utf8').replace(
+      /bottom: max\(\s*calc\(var\(--gap\)[^;]*?var\(--liiku-pohja, 0px\)\s*\);/,
+      'bottom: calc(var(--gap) + 0.4rem + env(safe-area-inset-bottom, 0px));',
+    ));
   }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(runko);
@@ -282,6 +324,22 @@ const mittaaPaneeli = (sivu) => sivu.evaluate(() => {
       osuuLappuun: osuu(napinLaatikko, laatikko('.fact-card')),
       osuuKaupunkikorttiin: osuu(napinLaatikko, laatikko('.kaupunkikortti')),
     } : null,
+    /* ERÄ 19b: Liikun väistömuuttuja ja kortin tekstikoot ruudulla. */
+    liikuPohja: getComputedStyle(document.documentElement)
+      .getPropertyValue('--liiku-pohja').trim(),
+    tekstit: {
+      nimi: document.querySelector('.maapaneeli-nimi-suomi')
+        ? getComputedStyle(document.querySelector('.maapaneeli-nimi-suomi')).fontSize : null,
+      otsikko: document.querySelector('.maapaneeli-otsikko')
+        ? getComputedStyle(document.querySelector('.maapaneeli-otsikko')).fontSize : null,
+      aihe: document.querySelector('.maapaneeli-aihe')
+        ? getComputedStyle(document.querySelector('.maapaneeli-aihe')).fontSize : null,
+    },
+    /*
+     * TEKSTIKOKO ON KORTIN YKSIKKÖ × SKAALA, koska kortti on
+     * `transform: scale()`attu — getComputedStyle antaa yksikön, ei
+     * ruutupikseliä. Ruutukoko lasketaan raportissa skaalalla.
+     */
     pollonPoikkeama: (() => {
       const k = document.querySelector('.pollo-nappi')?.getBoundingClientRect();
       return k ? Math.abs((k.left + k.width / 2) - globalThis.innerWidth / 2) : null;
@@ -341,9 +399,22 @@ for (const ruutu of RUUDUT) {
   const nurkassa = Boolean(ulko.kortti
     && ulko.kortti.x0 - ulko.kotelo.x0 <= NURKKA_VARA_PX
     && ulko.kotelo.y1 - ulko.kortti.y1 <= NURKKA_VARA_PX);
-  const kymmenesosa = Boolean(ulko.kortti && ulko.kortti.h <= ulko.ruutu.h * 0.1 + 1);
+  /*
+   * ERÄ 19b: KORKEUS ON 22 % RUUDUSTA (± 2 %-yksikköä), EI 10 %.
+   * Omistajan päätös 15.9.2026 illalla: maainfo alkuperäiseen
+   * LUETTAVAAN kokoon — 10 %:n katto kumoutuu tämän paneelin osalta.
+   * Vara on ± 2 %-yksikköä, koska kerroin voi tulla leveysrajasta
+   * (58 % ruudun leveydestä) hyvin kapealla ruudulla.
+   */
+  const osuus = ulko.kortti ? ulko.kortti.h / ulko.ruutu.h : 0;
+  const luettava = osuus >= 0.20 && osuus <= 0.24;
   sijaintiOk.push({
-    ruutu: ruutu.nimi, ok: nurkassa && ruudulla && kymmenesosa, nurkassa, ruudulla, kymmenesosa,
+    ruutu: ruutu.nimi,
+    ok: nurkassa && ruudulla && luettava,
+    nurkassa,
+    ruudulla,
+    luettava,
+    osuus: Number(osuus.toFixed(4)),
   });
   tieto(`${ruutu.nimi} px · uloin zoomi`,
     `kortti ${ulko.kortti ? `${Math.round(ulko.kortti.w)} x ${Math.round(ulko.kortti.h)} px `
@@ -357,7 +428,16 @@ for (const ruutu of RUUDUT) {
 
   /* --- 6. Liiku: kuultava sana alareunan keskellä ------------------ */
   const liiku = ulko.liiku;
+  /*
+   * ERÄ 19b: SANA ON YHÄ ALHAALLA JA KOKONAAN RUUDULLA. Väistö nostaa
+   * sanaa vain sen verran kuin paneeli vaatii — mitattu 16.9.2026:
+   * ilman tätä vartiota virheellinen väistömitta (978 px kesken
+   * asettuvasta ruudusta) vei sanan ruudun yläpuolelle, ja kaikki muut
+   * vartiot menivät silti läpi.
+   */
   const liikuHyva = Boolean(liiku
+    && liiku.laatikko.y0 >= 0 && liiku.laatikko.y1 <= ulko.ruutu.h + 1
+    && liiku.laatikko.y0 > ulko.ruutu.h * 0.5
     && liiku.keskipoikkeama <= 8
     && /rgba\([^)]*,\s*0\)/.test(String(liiku.tausta))
     && liiku.reunus === '0px'
@@ -375,6 +455,15 @@ for (const ruutu of RUUDUT) {
       + `pulu ${liiku.osuuPuluun} lappu ${liiku.osuuLappuun} `
       + `kaupunkikortti ${liiku.osuuKaupunkikorttiin}`
     : 'EI OLE');
+  tieto(`${ruutu.nimi} px · Liikun väistö`,
+    `--liiku-pohja ${ulko.liikuPohja || '(ei asetettu)'}, `
+    + `napin alareuna ruudun alareunasta `
+    + `${liiku ? Math.round(ulko.ruutu.h - liiku.laatikko.y1) : '—'} px, `
+    + `kortin yläreuna ruudun alareunasta `
+    + `${ulko.kortti ? Math.round(ulko.ruutu.h - ulko.kortti.y0) : '—'} px`);
+  tieto(`${ruutu.nimi} px · tekstikoot ruudulla`,
+    `maan nimi ${ulko.tekstit?.nimi ?? '—'}, lukurivin otsikko `
+    + `${ulko.tekstit?.otsikko ?? '—'}, valikon rivi ${ulko.tekstit?.aihe ?? '—'}`);
   tieto(`${ruutu.nimi} px · vastakoe D (pulun nappi keskellä?)`,
     `poikkeama ${ulko.pollonPoikkeama == null ? '—' : ulko.pollonPoikkeama.toFixed(1)} px`);
 
@@ -550,8 +639,8 @@ for (const ruutu of RUUDUT) {
   await ctx.close();
 }
 
-vaadi('1. paneeli on RUUDUN VASEMMASSA ALAKULMASSA, kokonaan ruudulla ja ≤ 10 % '
-  + 'ruudun korkeudesta (390 px ja 1400 px)',
+vaadi('1. paneeli on RUUDUN VASEMMASSA ALAKULMASSA, kokonaan ruudulla ja 22 % '
+  + '(± 2 %-yks.) ruudun korkeudesta (390 px ja 1400 px)',
 sijaintiOk.length === RUUDUT.length && sijaintiOk.every((t) => t.ok),
 `tulokset ${JSON.stringify(sijaintiOk)}`);
 vaadi('2. paneeli EI liiku eikä kasva zoomatessa (nurkka ja koko ±1 px)',
@@ -640,6 +729,49 @@ poistaKategoriat = null;
   vaadi('VASTAKOE D: pulun nappi EI ole ruudun keskilinjalla (keskitysmitta kaatuu)',
     ulko?.pollonPoikkeama != null && ulko.pollonPoikkeama > 8,
     `poikkeama ${ulko?.pollonPoikkeama}`);
+  await ctx.close();
+}
+
+/* ====== VASTAKOE E: pieni koko takaisin (10 % / 28 %) ============== */
+/*
+ * Erän 19 ensimmäinen mitoitus palautetaan palvelimessa. VÄITTEEN 1
+ * KOKO-OSAN ON KAADUTTAVA: kortti on silloin 10 % ruudun korkeudesta
+ * eikä 22 %. Jos väite menisi silti läpi, se ei mittaisi kokoa.
+ */
+{
+  vastakoe = 'PIENI_KOKO';
+  const { ctx, sivu, auki } = await avaaPeli({ leveys: 390, korkeus: 844 });
+  const m = auki ? await mittaaPaneeli(sivu) : null;
+  vastakoe = null;
+  const osuus = m?.kortti ? m.kortti.h / m.ruutu.h : 0;
+  tieto('vastakoe E (nurkan katot 10 % / 28 %)',
+    `kortti ${m?.kortti ? `${Math.round(m.kortti.w)} x ${Math.round(m.kortti.h)} px` : 'EI OLE'}, `
+    + `osuus ${(100 * osuus).toFixed(1)} %`);
+  vaadi('VASTAKOE E: pienellä katolla LUETTAVAN KOON väite kaatuu',
+    Boolean(auki && m?.kortti) && !(osuus >= 0.20 && osuus <= 0.24),
+    JSON.stringify({ auki, osuus }));
+  await ctx.close();
+}
+
+/* ====== VASTAKOE F: Liiku ei väistä paneelia ====================== */
+/*
+ * `bottom: max(..., var(--liiku-pohja))` palautetaan pelkäksi
+ * perusväliksi, jolloin sana jää ruudun alalaitaan ison paneelin
+ * päälle 390 px:n ruudulla. VÄITTEEN 6 PÄÄLLEKKÄISYYSOSAN ON
+ * KAADUTTAVA — muuten väistö ei todista mitään.
+ */
+{
+  vastakoe = 'EI_VAISTOA';
+  const { ctx, sivu, auki } = await avaaPeli({ leveys: 390, korkeus: 844 });
+  const m = auki ? await mittaaPaneeli(sivu) : null;
+  vastakoe = null;
+  tieto('vastakoe F (ei väistöä)',
+    `Liiku y ${m?.liiku ? `${Math.round(m.liiku.laatikko.y0)}…${Math.round(m.liiku.laatikko.y1)}` : '—'}, `
+    + `kortti y ${m?.kortti ? `${Math.round(m.kortti.y0)}…${Math.round(m.kortti.y1)}` : '—'}, `
+    + `osuu paneeliin ${m?.liiku?.osuuPaneeliin}`);
+  vaadi('VASTAKOE F: ilman väistöä Liiku OSUU paneeliin (390 px)',
+    Boolean(auki && m?.liiku?.osuuPaneeliin),
+    JSON.stringify({ auki, osuu: m?.liiku?.osuuPaneeliin }));
   await ctx.close();
 }
 
