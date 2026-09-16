@@ -4139,6 +4139,7 @@ export function suljeFokuskohde(ui) {
   const auki = ui?.fokuskohdeAuki;
   if (!auki) return;
   ui.fokuskohdeAuki = null;
+  document.body.classList.remove('nosto-popup-auki');
   asetaAkustiikka(null);
   auki.merkki?.classList.remove('auki');
   // Kuvaesittelyn ikkunakuuntelijat pois (js/nostokuva.js).
@@ -5869,6 +5870,16 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
   ui.fokuskohdeAuki = {
     id: kohde.id, kohde, popup, merkki, ankkuri, purku: null,
   };
+  /*
+   * NOSTOPOPUPIN LIPPU (omistaja 15.9.2026: matkakirjan lappu ja
+   * Liiku-nappi eivät saa jäädä kohdekortin ALLE — ks. css/styles.css
+   * body.nosto-popup-auki .fact-card / .toimintorivi .monitoimi-nappi).
+   * Yhteinen lippu kaikille kartan päälle avautuville korteille
+   * (tämä, js/kaupunkinosto.js avaaKortti); turisti-info avaa
+   * suoraan nähtävyys-dialogin (showModal, top layer), joka peittää
+   * jo kaiken eikä tarvitse tätä lippua.
+   */
+  document.body.classList.add('nosto-popup-auki');
   ui.fokuskohdeAuki.purku = kuunteleKohdetta(ui, popup);
   // Puhujan akustiikka kortin ajaksi (js/tehosteketju.js): luolan kortilla
   // Livian ja kertojan ääni saa luolan kaiun; sulkeminen nollaa (ks.
