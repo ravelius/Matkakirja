@@ -17,6 +17,16 @@ export function validateSourceUrl(value) {
   return url;
 }
 
+export function reviewForOutput(expected, outputHash) {
+  const approval = expected.review?.ownerApproval;
+  return {
+    signalChecksPassed: true,
+    subjectiveListening: approval?.sha256 === outputHash ? 'owner-approved' : 'pending-owner-or-Fable-listening',
+    ...(approval ? { ownerApproval: { ...approval } } : {}),
+    gameIntegration: 'Fable-owned-not-in-this-PR',
+  };
+}
+
 async function main() {
   const { spawnSync } = await import('node:child_process');
   const loudness = file => {
@@ -83,7 +93,7 @@ async function main() {
     rawSources: raws, output: { file: 'astronautin-kamera-tausta.mp3', r2Key: 'matkakirja/aanet/linssit/astronautin-kamera-tausta.mp3', bytes: bytes.length, sha256: sha(bytes), duration: Number(info.format.duration), decodedDuration: samples.length / 44100, loudness: metrics, boundary },
     processing: { type: 'fixed-gain-crossfaded-loop', seam, repeatedCycles: 3, gainDb, targetLufs: -30, bakedStartOrEndFade: false },
     playback: { loop: true, fadeInSeconds: 2, fadeInOnlyAtLensEntry: true, restartOnTargetChange: false, gainMustRespectMuteAndBackgroundPreference: true, stopOnLensExit: true, useDecodedAudioBufferForGaplessLoop: true },
-    review: { signalChecksPassed: true, subjectiveListening: 'pending-owner-or-Fable-listening', gameIntegration: 'Fable-owned-not-in-this-PR' },
+    review: reviewForOutput(expected, sha(bytes)),
   };
   await writeFile(resolve(directory, 'manifest.json'), JSON.stringify(manifest, null, 2) + '\n');
   console.log(JSON.stringify({ output: manifest.output, processing: manifest.processing }, null, 2));

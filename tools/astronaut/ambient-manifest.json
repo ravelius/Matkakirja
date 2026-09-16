@@ -99,7 +99,12 @@
   },
   "review": {
     "signalChecksPassed": true,
-    "subjectiveListening": "pending-owner-or-Fable-listening",
+    "subjectiveListening": "owner-approved",
+    "ownerApproval": {
+      "date": "2026-09-16",
+      "sha256": "93aaf7fb15092bac80abd1d740aa2a22a0fdb761558df2273673bc263fde2f2b",
+      "request": "hyvä, lisää peliin"
+    },
     "gameIntegration": "Fable-owned-not-in-this-PR"
   }
 }

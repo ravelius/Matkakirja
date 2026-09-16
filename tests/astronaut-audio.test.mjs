@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { validateSourceUrl } from '../tools/astronaut/build-loop.mjs';
+import { validateSourceUrl, reviewForOutput } from '../tools/astronaut/build-loop.mjs';
 
 const manifest = JSON.parse(readFileSync(new URL('../tools/astronaut/ambient-manifest.json', import.meta.url)));
 test('astronaut ambience is one shared, quiet, gapless-loop-ready recording', () => {
@@ -21,6 +21,16 @@ test('astronaut ambience is one shared, quiet, gapless-loop-ready recording', ()
 test('source importer accepts only ElevenLabs generated media URLs', () => {
   assert.ok(validateSourceUrl('https://storage.googleapis.com/xi-backend/database/workspace/test/content.mp3?signature=temporary'));
   for (const value of ['http://storage.googleapis.com/xi-backend/database/workspace/test/content.mp3', 'https://evil.example/content.mp3', 'file:///etc/passwd', 'https://storage.googleapis.com/other/content.mp3']) assert.throws(() => validateSourceUrl(value));
+});
+test('owner listening approval is preserved only for the exact approved output', () => {
+  assert.equal(manifest.review.subjectiveListening, 'owner-approved');
+  assert.equal(manifest.review.ownerApproval.sha256, manifest.output.sha256);
+  assert.equal(reviewForOutput(manifest, manifest.output.sha256).subjectiveListening, 'owner-approved');
+  const changed = reviewForOutput(manifest, 'different-output');
+  assert.equal(changed.subjectiveListening, 'pending-owner-or-Fable-listening');
+  assert.deepEqual(changed.ownerApproval, manifest.review.ownerApproval);
+  assert.notEqual(changed.ownerApproval, manifest.review.ownerApproval);
+  assert.equal(reviewForOutput({}, manifest.output.sha256).subjectiveListening, 'pending-owner-or-Fable-listening');
 });
 test('import branch never receives a generation API key and requires one final', () => {
   const script = readFileSync(new URL('../tools/astronaut/import-loop.mjs', import.meta.url), 'utf8');

@@ -11,6 +11,12 @@ jokaiselle kohteelle. Yksi MCP-ajo on jo maksettu ja valmis. Se tuotti
 neljä lähdeottoa; vain yksi valittiin yhteisen loppuraidan lähteeksi.
 **Älä generoi mitään uudelleen.**
 
+**Omistaja kuunteli yllä toimitetun 84 sekunnin MP3:n ja hyväksyi sen
+16.9.2026: ”hyvä, lisää peliin”.** Hyväksytty SHA-256:
+`93aaf7fb15092bac80abd1d740aa2a22a0fdb761558df2273673bc263fde2f2b`.
+Tämä on nyt Fablelle pyyntö kytkeä ja julkaista tämä yksi yhteinen humina,
+kun R2-toimitus on varmennettu. Lisämusiikkia ei ole hyväksytty tällä viestillä.
+
 - Valmis paikallinen MP3: `media/astronaut/astronautin-kamera-tausta.mp3`.
 - 84 sekuntia, mono 44,1 kHz / 128 kbit/s, −30,48 LUFS, −9,44 dBTP.
 - Yksi 28 sekunnin sykli kolmesti; 1,5 s saumaa ompeleva ristihäivytys.
@@ -18,8 +24,10 @@ neljä lähdeottoa; vain yksi valittiin yhteisen loppuraidan lähteeksi.
 - Manifesti: `tools/astronaut/ambient-manifest.json`. Paikallisen
   lopputuloksen SHA-256 on siinä. Eri ffmpeg-versiolla viimeistelty
   tiedosto voi saada eri tavutiivisteen; tuontiajo tuottaa oman kuitin.
+  Kuunteluhyväksyntä siirtyy tuontimanifestiin vain täsmälleen samoille
+  tavuille. Käytä hyväksyttyä MP3:aa sellaisenaan, jos mahdollista.
 - Signaalitarkistus läpäisty: decoded duration 84 s, saumahyppy −55,2 dBFS,
-  alun/lopun 100 ms RMS-ero noin 0,2 dB. Tämä ei ole kuunteluhyväksyntä.
+  alun/lopun 100 ms RMS-ero noin 0,2 dB. Omistajan kuunteluhyväksyntä yllä.
 - Julkinen tavoite: `https://media.matkakirja.app/matkakirja/aanet/linssit/astronautin-kamera-tausta.mp3`.
   **Ei vielä ladattu R2:een.** Älä kytke tavoiteosoitetta ennen varmennettua kuittia.
 
@@ -94,18 +102,17 @@ Tiranin NASA-kuvaus 24.6.2013 vs paikallinen 23.6.; Galápagos STS-99
 helmikuu 2000 vs metadatan maaliskuun luontipäivä. Manicouaganin API:n
 leipätekstissä on lisäksi eri otostunnus. Nämä eivät muuta ääntä.
 
-## Muut toimitukset
-
 ## Tarkistukset
 
 - Koko testisarja: 3 455 testiä, **3 442 pass, 0 fail, 13 skip**.
 - Rajatut ääni-/kysymys-/SW-testit: **29/29 pass**.
 - Lopullisen tuontityökalun syntaksi sekä ääni-/kysymystestit: **6/6 pass**.
 - Kaksoisavainvartija ja standalone-build onnistuvat.
-- CI, R2-vienti, kuunteluhyväksyntä ja julkaistun pelin testi ovat
-  erilliset portit. Tämä toimitus ei väitä niitä tehdyiksi.
+- CI headille `55146145`: ajo `35067520168` onnistui. Kuuntelu on nyt
+  omistajan hyväksymä yllä yksilöidylle MP3:lle. R2-vienti ja julkaistun
+  pelin testi ovat yhä tekemättä; näitä ei väitetä tehdyiksi.
 
-## Muut toimitukset (jatkuu)
+## Muut toimitukset
 
 Minipulu on jo PR #2521, head `2cced3fb381b61638a4f64a428242a40a313d645`.
 Ei uutta minipulua tai rasterikuvaa tässä toimituksessa.
