@@ -54,6 +54,8 @@ import { valitseKertomus, kokoaKertomusManifesti } from '../tools/generoi-linssi
 const OHJAAJA = readFileSync(new URL('../js/linssit/ihmisen-matka-esitys.js', import.meta.url), 'utf8');
 const MOOTTORI = readFileSync(new URL('../js/aikajana.js', import.meta.url), 'utf8');
 const CSS = readFileSync(new URL('../css/aikajana.css', import.meta.url), 'utf8');
+// Pelin oma tyylitiedosto: Liiku-napin piilotus linssin ajaksi asuu siellä.
+const PELI_CSS = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
 
 const VAIHEET = new Set(['pimea', 'valot', 'matka', 'hyppy', 'loppu']);
 const TUNNUKSET = new Set(IHMISEN_MATKA.map((t) => t.tunnus));
@@ -689,6 +691,42 @@ test('esityksen pinnat ovat olemassa: pimeä, teksti, kuva ja koukku', () => {
   assert.ok(ESITYKSEN_LAHIKUVA > 560 && ESITYKSEN_LAHIKUVA < 4000);
   // Tutkimusvaiheen koukku on ohjaajan viimeinen teko.
   assert.match(OHJAAJA, /ajo\.ui\?\.aloitaTutkimusvaihe\?\.\(\);/);
+});
+
+test('kehys on poissa koko avaruusvaiheen ajan ja palaa kartan kanssa (15.9.2026)', () => {
+  /*
+   * OMISTAJA 15.9.2026 klo 19.05 (iPhone-kuva avaruusvaiheesta "He vain
+   * lähtivät.", sanatarkasti): *"Alussa oli vain musta mutta sitten
+   * kehys palasi liian aikaisin"*. Luokka `esitys-musta` elää vain
+   * ensimmäisen virkkeen ajan (nostaMusta), joten yläpalkin reunaviiva
+   * ja hampurilainen palasivat jo tähtitaivaalle. Kehyksen piilotus
+   * roikkuu nyt luokassa `esitys-avaruus`, joka on päällä koko
+   * avaruusvaiheen (aloita → sytytaValot).
+   */
+  assert.match(CSS, /\.aikajana\.esitys-avaruus \.aikajana-ylarivi,\n\.aikajana\.esitys-avaruus \.aikaselain \{\n\s*opacity: 0;\n\s*pointer-events: none;/);
+  // Feidaus on sidottu samaan muuttujaan, jonka ohjaaja asettaa.
+  assert.match(CSS, /\.aikajana\.esitys-kaynnissa \.aikajana-ylarivi,\n\.aikajana\.esitys-kaynnissa \.aikaselain \{\n\s*transition: opacity var\(--avaruuden-feidi, 2600ms\) ease;/);
+  // Luokka syntyy aloituksessa ja lähtee VAIN valojen syttyessä.
+  assert.match(OHJAAJA, /classList\.add\('esitys-pimea', 'esitys-avaruus'\);/);
+  assert.match(OHJAAJA, /function sytytaValot\(\) \{[\s\S]{0,900}paljastaKehys\(VALOJEN_MS\);[\s\S]{0,200}peite\.classList\.add\('pois'\);/);
+  // nostaMusta EI enää saa paljastaa kehystä: se poistaa vain esitys-mustan.
+  const nosta = OHJAAJA.slice(OHJAAJA.indexOf('function nostaMusta('), OHJAAJA.indexOf('function paljastaKehys('));
+  assert.ok(!/esitys-avaruus/.test(nosta), 'nostaMusta ei saa poistaa esitys-avaruus-luokkaa');
+  /*
+   * EI PAKOTIETA. Kehys ei saa palata kesken avaruusvaiheen millään
+   * napautuksella eikä näppäimellä: paljastaKehys-kutsuja on tasan
+   * yksi, sytytaValot. (Esc sulkee linssin jo valmiiksi, js/aikajana.js
+   * nappain → ui.pysaytaAikajana.)
+   */
+  assert.equal(OHJAAJA.match(/paljastaKehys\(/g).length, 2, 'paljastaKehys: määrittely + yksi kutsu');
+  assert.ok(!/addEventListener\('pointerdown'/.test(OHJAAJA), 'napautus ei saa paljastaa kehystä');
+  // Alapalkki (aikaselain) ja Liiku ovat poissa samaa matkaa: aikaselain
+  // roikkuu `esitys-pimea`-luokassa, joka lähtee samassa sytytaValot-
+  // kutsussa, ja Liiku pelin omassa body.aikajana-paalla-säännössä.
+  assert.match(CSS, /\.aikajana\.esitys-pimea \.aikaselain \{ opacity: 0; pointer-events: none; \}/);
+  assert.match(PELI_CSS, /body\.aikajana-paalla \.toimintorivi \.monitoimi-nappi/);
+  // Mittari savukkeelle.
+  assert.match(OHJAAJA, /kehysPiilossa: Boolean\(ajo\.juuri\?\.classList\.contains\('esitys-avaruus'\)\)/);
 });
 
 test('aikaselain seuraa esitystä ja ohjaa sitä (7.9.2026)', () => {

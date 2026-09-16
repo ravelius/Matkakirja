@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1918';
+const CACHE = 'matkakirja-2026-08-09.1919';
 const SHELL = [
   './',
   './index.html',
@@ -245,6 +245,9 @@ const SHELL = [
   './js/pallolauta/siirto.js',
   './js/pallolauta/sovittelu.js',
   './css/aikajana.css',
+  // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
+  // suoraan, joten se kuuluu kuoreen kuten css/styles.css.
+  './css/linssikehys.css',
   // Etusivun esirenderöity pallo (pallolauta vaihe 5a, 5.9.2026):
   // tuodaan dynaamisesti kuten pallo.js, mutta kuuluu SHELLiin
   // offline-käyttöä varten. Ei niputeta yhden tiedoston versioon
