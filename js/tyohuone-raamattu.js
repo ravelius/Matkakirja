@@ -7881,8 +7881,12 @@ export const RAAMATTU = {
           + 'kysymysta nakyvat chatin alussa ehdotuksina; pelkka esikirjoitettu '
           + 'kortti ei riita; 30) valokuvanakyman selite AVAUTUU '
           + 'PIENENNETTYNA (vain otsikkorivi, himmea); sisalto nakyy vasta '
-          + 'otsikkorivin napautuksesta; autokelaus (kohta 21) sailyy. Tila: '
-          + 'tyo Opus-agentilla.',
+          + 'otsikkorivin napautuksesta; autokelaus (kohta 21) sailyy; 31) '
+          + '(omistaja 16.9.2026 klo 18.40 UTC, sanatarkasti: "Infon '
+          + 'otsikkorivi voisi olla vihrealla") selitteen otsikkorivi '
+          + '(kohteen nimi) on linssin vihrealla (#5dffa8-savy, sama kuin '
+          + 'kohdepisteissa ja Kysy pululta -otsikossa), maa-osa himmeampi. '
+          + 'Tila: tyo Opus-agentilla.',
         'IHMISEN MATKA -LINSSI: RINTAMAN VALKKYMINEN, MUSTA ALKU, LIIKU '
           + 'POIS; ASTRONAUTTILINSSILLE OMA KUVAKE (omistaja 15.9.2026 klo '
           + '12.00 UTC, tyopoytakuva 248 000 v. sitten, sanatarkasti: "Kun '
