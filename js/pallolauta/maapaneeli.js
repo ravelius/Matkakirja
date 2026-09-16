@@ -173,7 +173,6 @@
  * eleen itseensä, jottei kartta ala panoroida napin alta.
  */
 import { MAA_KATEGORIAT } from '../packs/maa-kategoriat.js';
-import { kasikehys } from '../kasinpiirto.js';
 import {
   kieliOsat, maanNimi, maanRivit, maapaneeliKartassa, projisoiLaudalle,
 } from '../fokusmitat.js';
@@ -386,76 +385,31 @@ export const MAAPANEELIN_SKAALA_MAX = 64 * MAAPANEELIN_TEKSTIKERROIN;
 
 /*
  * ══════════════════════════════════════════════════════════════════
- * ERÄ 19: NURKAN MITTAKAAVA ON RUUDUN MITTA (PÄÄTÖKSET 28 kohta 1)
+ * ERÄ 20: NURKAN MITTAKAAVA KUMOUTUI — KALUSTEELLA ON RUUTUMITAT
  * ══════════════════════════════════════════════════════════════════
  *
- * Kun kortti on kiinni RUUDUSSA eikä kartassa, kameran korkeus ei saa
- * enää näkyä sen koossa lainkaan — muuten se "hengittäisi" zoomatessa
- * juuri niin kuin omistaja ei halua. Kerroin lasketaan siis kerran
- * ruudun koosta, ja se päivittyy vain ruudun koon muuttuessa.
+ * Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 28 TARKENNUS 2 (omistaja
+ * 16.9.2026 klo 10.45 UTC, iPad-kuva 27.8.2026 Kreikasta): maainfo
+ * palaa siihen asuun, jossa EI OLE LAATIKKOA — vain maan nimi, ohut
+ * viiva ja alarivi suoraan kartan päällä.
  *
- * KAKSI RAJAA, TIUKEMPI VOITTAA:
+ * ERÄSSÄ 19 kaluste oli yhä 104 × 82 css-px:n KORTTI, jonka koko
+ * kirjoitettiin `transform: scale()`illa ruudun mitoista
+ * (`nurkanSkaala`, katot 22 % / 58 %, rajat 1,4…3,2). Se oli
+ * LAATIKON mitta: kortin koko sisältö oli mitoitettu kortin omiin
+ * yksiköihin (nimi 6,5 px, lukurivi 3,5 px), ja vasta skaala teki
+ * siitä luettavan. Kun laatikko poistuu, poistuvat sen mitatkin.
  *
- *   KORKEUS ≤ 22 % RUUDUSTA. Ks. "ALKUPERÄINEN LUETTAVA KOKO" alla.
- *   Karttaan kiinnitettynä katto oli ruudun LEVEYDESTÄ
- *   (MAAPANEELIN_KATTO_RUUDUSTA), koska silloin sitova mitta oli se,
- *   paljonko kortti vei leveydeltään kartan päältä pystypuhelimella.
- *   Nurkkakortin sitova mitta on korkeus: se seisoo ruudun
- *   alalaidassa.
+ * NYT TYPOGRAFIA ON SUORAAN RUUTUPIKSELEISSÄ (css/styles.css
+ * .maapaneeli-nimi-suomi ja sen mediakyselyt), ja ainoa ajossa
+ * laskettu koko on otsikkorivien fonttikoko silloin, kun kaksi riviä
+ * ei muuten mahtuisi ruudun leveyteen (`sovitaOtsikot`).
  *
- *   LEVEYS ≤ 58 % RUUDUSTA. Toinen raja on olemassa vaakapuhelinta
- *   varten (844 × 390), jossa 22 % korkeudesta olisi 86 px eikä
- *   leveysraja sido; ja toisin päin hyvin kapealla ruudulla, jossa
- *   korkeusraja antaisi kortille yli kolme neljäsosaa leveydestä.
- *
- * ══════════════════════════════════════════════════════════════════
- * ALKUPERÄINEN LUETTAVA KOKO (omistajan päätös 15.9.2026 illalla,
- * PÄÄTÖKSET 28:n jatkona, kysymyskortilla)
- * ══════════════════════════════════════════════════════════════════
- *
- * ERÄN 19 ENSIMMÄINEN MITOITUS OLI LUKUKELVOTON. Katto oli 10 % ruudun
- * korkeudesta (rajat 0,8…1,6), jolloin kortti oli 390 px:n ruudulla
- * 107 × 84 px — ja koska kortin typografia on mitoitettu sille, että
- * KARTTA suurentaa korttia zoomatessa, leipäteksti oli ruudulla
- * MITATTUNA 3,6 px ja maan nimi 6,7 px. Kuvakaappauksessa
- * (docs/raportit/kuvat/maainfo-alakulma-390-kiinni.jpg) kortti oli
- * tunnistettava kartuutsi mutta sen rivit harmaata sumua.
- *
- * VERTAILU: se nurkkataulu, jonka omistaja pyysi takaisin, oli
- * kartuutsin nimi 1,05 rem = 16,8 px puhelimella (1,35 rem = 21,6 px
- * työpöydällä), lukurivin otsikko 0,72 rem = 11,5 px ja arvo 0,84 rem
- * = 13,4 px (css .fokus-kartuutsi-nimi, .fokus-maataulu-otsikko).
- *
- * OMISTAJAN VALINTA: "maainfo ALKUPERÄISEEN LUETTAVAAN KOKOON (nimi
- * 14–16 px, lukurivit n. 8 px, paneeli n. 22 % ruudun korkeudesta)".
- * ≤ 10 % -mitoitus (v1885 "maapaneeli kymmenesosaan", v1903
- * saapumisnäkymän katto) KUMOUTUU TÄMÄN PANEELIN OSALTA — se oli
- * kartalla liukuvan kortin raja, ei nurkkakalusteen.
- *
- * YHTÄÄN FONTTIKOKOA EI MUUTETA (PÄÄTÖKSET 7). Kortti on yhä 104 × 82
- * css-px ja sen sisällä kaikki entiset mitat; vain kerroin kasvaa,
- * jolloin koko kortti — kehys, kartuutsi, lukurivit, kielirivi, plus
- * ja valikko — suurenee yhtenä kuvana samassa suhteessa.
- *
- * RAJAT 1,4…3,2. Mitattuna 390 × 844 antaa 2,175 ja 1400 × 900 antaa
- * 2,41, eli maan nimi on 14,1 / 15,7 px ja lukurivin otsikko 7,6 /
- * 8,4 px — juuri se, minkä omistaja valitsi.
+ * MAAN LAATIKON MITAT JÄÄVÄT. `paneelinMitat` ja `paneelinAnkkuri`
+ * eivät sijoita mitään (PÄÄTÖKSET 28), mutta `paneelinLaatikko` on yhä
+ * saapumisrajauksen väljennys — tests/maakartuutsi.test.mjs vahtii sen
+ * kutsua sanatarkasti, ja savukkeet lukevat tauluja vastakokeissaan.
  */
-export const MAAPANEELIN_NURKKA_KORKEUS_OSUUS = 0.22;
-export const MAAPANEELIN_NURKKA_LEVEYS_OSUUS = 0.58;
-export const MAAPANEELIN_NURKKA_SKAALA_MIN = 1.4;
-export const MAAPANEELIN_NURKKA_SKAALA_MAX = 3.2;
-
-/** Nurkkakortin mittakaava ruudun koosta; tuntematon ruutu → 1. */
-export function nurkanSkaala({ leveys = 0, korkeus = 0 } = {}) {
-  if (!(leveys > 0) || !(korkeus > 0)) return 1;
-  const raja = Math.min(
-    (MAAPANEELIN_NURKKA_KORKEUS_OSUUS * korkeus) / MAAPANEELIN_KORKEUS_PX,
-    (MAAPANEELIN_NURKKA_LEVEYS_OSUUS * leveys) / MAAPANEELIN_LEVEYS_PX,
-  );
-  return Math.min(MAAPANEELIN_NURKKA_SKAALA_MAX,
-    Math.max(MAAPANEELIN_NURKKA_SKAALA_MIN, raja));
-}
 
 /**
  * MAALEHDEN AIHETUNNUS → KARTAN SYMBOLIPERHE.
@@ -776,159 +730,136 @@ const luo = (tagi, luokka, teksti) => {
   return e;
 };
 
-/** SVG-solmu oikeassa nimiavaruudessa (createElement tekisi HTML-solmun). */
-const luoSvg = (tagi) => document.createElementNS('http://www.w3.org/2000/svg', tagi);
-
-/**
- * PAKSU SISÄLLÄ, OHUT ULKONA — kartussin kehys käsinpiirrettynä.
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * NAPAUTUS ON OSUMATESTI, EI OSUMAKOHDE
+ * (PÄÄTÖKSET 21 + PÄÄTÖKSET 28 TARKENNUS 2)
+ * ══════════════════════════════════════════════════════════════════
  *
- * Mitat ja niiden lähteet ovat js/kasinpiirto.js:ssä (Stieler 1874 ja
- * Johnston 1879, pikselimittaukset); täällä on vain ladonta. Kehys on
- * SVG eikä CSS-reunus kahdesta syystä:
+ * PÄÄTÖKSET 21 (omistaja 15.9.2026): *"jos osoitin on tai sormi tuon
+ * infotaulun kohdalla, niin vierittaminen tai zoomaus ei silloin
+ * onnistu"* — rullan, nipistyksen ja raahauksen on mentävä kalusteen
+ * LÄPI kartalle. Erässä 19 se hoitui sillä, että vain pieni plus-nappi
+ * oli `pointer-events: auto` ja kortin runko läpinäkyvä kartalle.
  *
- *   1. CSS:n `border` on täsmälleen suora — juuri se "vektorimainen"
- *      jälki, jonka omistaja halusi pois. SVG-polku saa mitatun
- *      horjunnan (0,32 × viivan leveys, aallonpituus 30 × leveys).
- *   2. Kortti skaalautuu `transform: scale()`illa, ja SVG skaalautuu
- *      mukana tarkkana — reunuksen leveys pyöristyisi laitepikseliin.
+ * TARKENNUS 2 POISTI PLUSSAN ja teki KOKO KALUSTEESTA napautettavan:
+ * maan nimi avaa ja sulkee, kategoriaotsikot avaavat lehden sivun. Jos
+ * ne olisivat `pointer-events: auto`, ne söisivät rullan täsmälleen
+ * siinä kohdassa, jossa kaluste on — ja PÄÄTÖKSET 21 kaatuisi. Se ei
+ * ole teoria: kalusteen keskikohta on nyt maan nimen päällä, ja juuri
+ * siitä pisteestä savuke-era12 väite 10 rullaa.
  *
- * KEHYS EI KOSKAAN OTA NAPAUTUSTA (`pointer-events: none`
- * tyylitiedostossa): sen alla on kortin oma napautuslogiikka.
+ * RATKAISU: KAIKKI ON `pointer-events: none`, ja napautus poimitaan
+ * dokumentin KAAPPAUSVAIHEESSA osumatestillä. Rulla, nipistys ja
+ * raahaus eivät kulje tätä kautta lainkaan — ne menevät kankaalle
+ * kuten ennenkin. Vain `click` tutkitaan, ja vain jos sormi ei ollut
+ * liikkunut: raahaus ei ole napautus. Osuma pysäyttää tapahtuman,
+ * jottei pallon oma napautuslogiikka (js/pallolauta/lauta.js
+ * napautaPintaan) siirrä nappulaa saman sormen alta.
+ *
+ * NÄPPÄIMISTÖ TOIMII ENTISEEN TAPAAN: painikkeet ovat yhä <button>, ja
+ * Enter lähettää niille oikean `click`in, jonka kohde on nappi itse —
+ * se tunnistetaan ilman osumatestiä (`e.target.closest`).
  */
-const KEHYKSEN_PAKSU_PX = 1.9;
+const NAPAUTUKSEN_SIIRTO_PX = 8;
 
-function piirraKehys(kortti, iso) {
-  const svg = kortti.querySelector('.maapaneeli-kehys');
-  if (!svg || svg.dataset.iso === iso) return;
-  svg.dataset.iso = iso ?? '';
-  while (svg.firstChild) svg.removeChild(svg.firstChild);
-  const { ohut, paksu } = kasikehys({
-    leveys: MAAPANEELIN_LEVEYS_PX,
-    korkeus: MAAPANEELIN_KORKEUS_PX,
-    paksu: KEHYKSEN_PAKSU_PX,
-    siemen: iso || 'kehys',
-  });
-  // Ohut ensin, paksu päälle: päällekkäisyys nurkassa jää paksun alle.
-  for (const [luokka, sivut] of [['ohut', ohut], ['paksu', paksu]]) {
-    for (const sivu of sivut) {
-      const polku = luoSvg('path');
-      polku.setAttribute('d', sivu.d);
-      polku.setAttribute('class', `maapaneeli-kehys-${luokka}`);
-      polku.setAttribute('stroke-width', String(sivu.leveys));
-      svg.appendChild(polku);
-    }
-  }
+/** Osuuko ruutupiste näkyvän elementin laatikkoon? */
+function osuuLaatikkoon(el, x, y) {
+  if (!el || el.hidden || !el.isConnected) return false;
+  const r = el.getBoundingClientRect();
+  return r.width > 0 && r.height > 0
+    && x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
 }
 
 /**
- * Kortin runko. Sisältö täytetään erikseen (`taytaKortti`), koska sama
- * elementti jää eloon maan vaihtuessa — datum on pysyvä avaimeltaan ja
- * kirjasto siirtää sitä sen sijaan, että loisi uuden (merkit.js).
+ * OTSIKOT KAHDELLE RIVILLE, TASAN PUOLIKSI (PÄÄTÖKSET 28 TARKENNUS 3:
+ * *"kahdessa rivissa … jaa tasaisesti"*).
+ *
+ * Jako tehdään TÄSSÄ eikä CSS:n rivityksellä, koska kahden rivin on
+ * oltava kaksi myös silloin, kun nimet ovat eri pituisia: `flex-wrap`
+ * katkaisisi rivin sieltä mihin leveys sattuu loppumaan, ja pitkien
+ * otsikoiden maissa rivejä tulisi kolme. Pariton määrä menee niin, että
+ * YLÄRIVI on pidempi — sama tapa kuin kirjan sisällysluettelossa.
+ */
+function otsikkoRivit(aiheet) {
+  if (!aiheet?.length) return [];
+  const puoli = Math.ceil(aiheet.length / 2);
+  return [aiheet.slice(0, puoli), aiheet.slice(puoli)].filter((rivi) => rivi.length);
+}
+
+/**
+ * Kalusteen runko. Sisältö täytetään erikseen (`taytaKortti`), koska
+ * sama elementti jää eloon maan vaihtuessa.
+ *
+ * KOLME OSAA, ALHAALTA YLÖS: avain (nimi + viiva + alarivi), sen
+ * yläpuolella perustiedot ja niiden yläpuolella kategoriaotsikot.
+ * Ladonta on pystysuora flex ja kaluste on ankkuroitu ruudun
+ * ALAREUNAAN (css), joten avautuva sisältö kasvaa YLÖSPÄIN itsestään —
+ * mitään ei lasketa js:ssä.
  */
 function paneeliElementti(d) {
   const el = luo('div', 'pallolauta-maapaneeli');
   const kortti = luo('div', 'maapaneeli-kortti');
   kortti.setAttribute('role', 'group');
+
   /*
-   * KEHYS ON ENSIMMÄINEN LAPSI eli kaiken alla: se on paperin painatus,
-   * ei kortin reunus. Sisältö saa oman pehmusteensa kehyksen sisään.
-   */
-  const kehys = luoSvg('svg');
-  kehys.setAttribute('class', 'maapaneeli-kehys');
-  kehys.setAttribute('viewBox', `0 0 ${MAAPANEELIN_LEVEYS_PX} ${MAAPANEELIN_KORKEUS_PX}`);
-  kehys.setAttribute('aria-hidden', 'true');
-  kortti.appendChild(kehys);
-  /*
-   * OTSAKE ON KARTUUTSI (erä 9): versaali nimi, ohut alleviivaus ja
-   * alarivi, jolla on maan oma nimi ja aikakauden valtiomuoto. Samat
-   * kolme solmua ja sama järjestys kuin nurkkataulun kartuutsissa
-   * (js/fokusmitat.js rakenna → .fokus-kartuutsi-nimi / -viiva /
-   * -alarivi), jotta asu on se, jonka pelaaja tunnistaa.
-   */
-  /*
-   * SISUS ON OMA SOLMUNSA, JOTTA VALIKKO EI LEIKKAUDU. Kortin korkeus
-   * on kiinteä (se on myös LAUDAN mitta, ks. tyylitiedosto), joten
-   * sisältö on leikattava — mutta `overflow: hidden` kortissa
-   * leikkaisi myös kortin ulkopuolelle aukeavan valikon, eikä
-   * napautus osuisi siihen enää lainkaan (mitattu savukkeessa
-   * 13.9.2026: kangas sieppasi napautuksen). Leikkaus on siis tässä
-   * sisemmässä solmussa; valikko ja plus ovat kortin omia lapsia.
+   * SISUS ON AVATTAVA OSA. Se on oma solmunsa, jotta auki/kiinni on
+   * yksi `hidden` eikä usean elementin tilan summa — ja jotta kalusteen
+   * levossa mitattava korkeus on tasan avaimen korkeus (savukkeen
+   * vartio: levossa näkyy täsmälleen kaksi tekstiriviä ja viiva).
    */
   const sisus = luo('div', 'maapaneeli-sisus');
-  const nimi = luo('div', 'maapaneeli-nimi');
-  nimi.appendChild(luo('span', 'maapaneeli-nimi-suomi'));
-  sisus.appendChild(nimi);
-  sisus.appendChild(luo('div', 'maapaneeli-viiva'));
-  const alarivi = luo('div', 'maapaneeli-alarivi');
-  alarivi.appendChild(luo('span', 'maapaneeli-nimi-oma'));
-  alarivi.appendChild(luo('span', 'maapaneeli-aika'));
-  sisus.appendChild(alarivi);
-  sisus.appendChild(luo('dl', 'maapaneeli-rivit'));
+  sisus.hidden = true;
+  const valikko = luo('div', 'maapaneeli-valikko');
+  valikko.hidden = true;
+  sisus.appendChild(valikko);
+  const rivit = luo('dl', 'maapaneeli-rivit');
+  rivit.hidden = true;
+  sisus.appendChild(rivit);
   kortti.appendChild(sisus);
 
   /*
-   * PALJAS PLUS, EI SANAA (erä 9; nurkkataulun `.fokus-maataulu-lehti`,
-   * omistaja 25.8.2026: *"pelkästään paksummaksi plus merkiksi ilman
-   * pyöreää ympyrää"*). Merkin piirtävät CSS:n kaksi palkkia, ja
-   * tekstisolmu on ruudunlukijaa varten — se piilotetaan `font-size:
-   * 0`:lla kuten nurkkataulussakin.
+   * AVAIN ON KARTUUTSI (27.8.2026 asu, js/fokusmitat.js
+   * `.fokus-kartuutsi`): versaali harvennettu nimi, ohut alleviivaus ja
+   * kursiivi alarivi, jolla on maan oma nimi ja aikakauden valtiomuoto.
+   * Se on <button>, koska se avaa ja sulkee — mutta napautus tulee
+   * osumatestistä (ks. yllä), ei osumakohteesta.
    */
-  const lisaa = luo('button', 'maapaneeli-lisaa', '+');
-  lisaa.type = 'button';
-  lisaa.setAttribute('aria-expanded', 'false');
-  kortti.appendChild(lisaa);
+  const avain = luo('button', 'maapaneeli-avain');
+  avain.type = 'button';
+  avain.setAttribute('aria-expanded', 'false');
+  avain.appendChild(luo('span', 'maapaneeli-nimi-suomi'));
+  avain.appendChild(luo('span', 'maapaneeli-viiva'));
+  const alarivi = luo('span', 'maapaneeli-alarivi');
+  alarivi.appendChild(luo('span', 'maapaneeli-nimi-oma'));
+  alarivi.appendChild(luo('span', 'maapaneeli-aika'));
+  avain.appendChild(alarivi);
+  avain.addEventListener('click', () => d.avaaValikko?.(!d.valikkoAuki));
+  kortti.appendChild(avain);
 
-  const valikko = luo('div', 'maapaneeli-valikko');
-  valikko.hidden = true;
-  kortti.appendChild(valikko);
-
-  lisaa.addEventListener('click', (e) => {
-    e.stopPropagation();
-    d.avaaValikko?.(!d.valikkoAuki);
-  });
-  /*
-   * ELE EI ENÄÄ JÄÄ KORTTIIN (erä 18; Raamattu, KARTTAUUDISTUKSEN
-   * PÄÄTÖKSET 21, omistaja 15.9.2026: *"jos osoitin on tai sormi tuon
-   * infotaulun kohdalla, niin vierittaminen tai zoomaus ei silloin
-   * onnistu"*).
-   *
-   * ENNEN tässä oli neljän tapahtuman `stopPropagation` — pointerdown,
-   * touchstart, wheel ja click — jotta kortin yli vedetty sormi ei
-   * aloittaisi panorointia. Sivuvaikutus oli juuri se, mistä omistaja
-   * kirjoitti: kortin kohdalla kartta ei liikkunut eikä zoomannut
-   * lainkaan.
-   *
-   * NYT eleitä ei pysäytetä ollenkaan, vaan kortin RUNKO on kartalle
-   * läpinäkyvä (`pointer-events: none`, css/styles.css
-   * .maapaneeli-kortti) ja vain plus-nappi ja valikon rivit ottavat
-   * napautuksen vastaan. Ne pysäyttävät oman `click`insä alla, joten
-   * napautus ei mene pallon napautuslogiikkaan (lauta.js
-   * napautaPintaan) — mutta rulla, nipistys ja raahaus menevät
-   * kankaalle kuin korttia ei olisi.
-   */
   el.appendChild(kortti);
   return el;
 }
 
-/** Kortin sisältö maalle: nimi, luvut ja valikon rivit. */
+/** Kalusteen sisältö maalle: nimi, alarivi, perustiedot ja otsikot. */
 function taytaKortti(el, d) {
   const kortti = el.querySelector('.maapaneeli-kortti');
   if (!kortti) return;
-  piirraKehys(kortti, d.iso);
   if (kortti.dataset.iso !== d.iso) {
     kortti.dataset.iso = d.iso;
     kortti.querySelector('.maapaneeli-nimi-suomi').textContent = d.nimi.toUpperCase();
     /*
-     * ALARIVI ON KARTUUTSIN ALARIVI (erä 9). Maan oma nimi
-     * 1873-atlaksen asussa ja sen perässä aikakauden valtiomuoto —
-     * SAMA SÄÄNTÖ kuin kartuutsilla (js/fokusmitat.js): valtiomuoto
-     * näkyy vain, jos maan oma nimikin tunnetaan, jottei rivi jää
-     * puolikkaaksi lauseeksi. Tyhjä alarivi kutistuu itsestään pois.
+     * ALARIVI ON KARTUUTSIN ALARIVI. Maan oma nimi 1873-atlaksen asussa
+     * ja sen perässä aikakauden valtiomuoto — SAMA SÄÄNTÖ kuin
+     * kartuutsilla (js/fokusmitat.js): valtiomuoto näkyy vain, jos maan
+     * oma nimikin tunnetaan, jottei rivi jää puolikkaaksi lauseeksi.
+     * Tyhjä alarivi kutistuu itsestään pois.
      */
     kortti.querySelector('.maapaneeli-nimi-oma').textContent = d.paikallinen ?? '';
     kortti.querySelector('.maapaneeli-aika').textContent = d.paikallinen && d.valtiomuoto
       ? ` · ${d.valtiomuoto}` : '';
-    kortti.setAttribute('aria-label', `${d.nimi}: maan perustiedot`);
+    const avain = kortti.querySelector('.maapaneeli-avain');
+    avain.setAttribute('aria-label', `${d.nimi}: näytä perustiedot ja lehden otsikot`);
 
     const rivit = kortti.querySelector('.maapaneeli-rivit');
     rivit.textContent = '';
@@ -942,8 +873,7 @@ function taytaKortti(el, d) {
      * KIELET LIPPUINEEN VIIMEISENÄ RIVINÄ (omistaja 25.8.2026;
      * nurkkataulun taytaMaataulu). Osat tulevat js/fokusmitat.js:n
      * `kieliOsat`ista, eli samasta datasta ja samoilla
-     * `.tervehdys`-tyyleillä kuin maalehdessä — tässä ei ole omaa
-     * lippulähdettä eikä omaa ladontaa.
+     * `.tervehdys`-tyyleillä kuin maalehdessä.
      */
     if (d.kielet?.length) {
       rivit.appendChild(luo('dt', 'maapaneeli-otsikko', 'Kielet'));
@@ -951,56 +881,66 @@ function taytaKortti(el, d) {
       for (const osa of d.kielet) dd.appendChild(osa);
       rivit.appendChild(dd);
     }
+    rivit.hidden = !rivit.firstChild;
 
-    const lisaaNappi = kortti.querySelector('.maapaneeli-lisaa');
-    lisaaNappi.setAttribute('aria-label', `Lisää ${d.nimi}-lehdestä`);
     /*
-     * MAA ILMAN AIHEITA EI SAA VALIKKOA (vastakoe 1). Nappi on silloin
-     * kokonaan poissa eikä vain sammutettu: painike, joka ei tee
-     * mitään, on lupaus jota ei ole. Peli ei kaadu, ja perustiedot
-     * näkyvät entiseen tapaan.
+     * KATEGORIAOTSIKOT OVAT PELKKÄÄ TEKSTIÄ (PÄÄTÖKSET 28 TARKENNUS 3,
+     * omistaja 16.9.2026 kortilla): harvennetut kapiteelit samalla
+     * antiikvalla kuin nimi ja alarivi, erottimena sama välipiste " · "
+     * kuin alarivissä. VÄRIPALLOT POISTUVAT — ainoa väri on valitun
+     * otsikon ohut alleviivaus, ja sekin on aiheen oma kartta-sävy
+     * (--sym-*, asetetaan CSS:ssä data-sym-attribuutin mukaan).
      */
-    lisaaNappi.hidden = d.aiheet.length === 0;
-
     const valikko = kortti.querySelector('.maapaneeli-valikko');
     valikko.textContent = '';
-    for (const aihe of d.aiheet) {
-      const nappi = luo('button', 'maapaneeli-aihe');
-      nappi.type = 'button';
-      nappi.dataset.sym = aihe.perhe;
-      nappi.dataset.aihe = aihe.id;
-      nappi.appendChild(luo('span', 'maapaneeli-aihe-merkki'));
-      nappi.appendChild(luo('span', 'maapaneeli-aihe-nimi', aihe.nimi));
-      nappi.addEventListener('click', (e) => {
-        e.stopPropagation();
-        d.avaaValikko?.(false);
-        d.avaaSivu?.(aihe.id);
+    valikko.style.removeProperty('--otsikko-koko');
+    for (const rivi of otsikkoRivit(d.aiheet)) {
+      const rivisolmu = luo('div', 'maapaneeli-otsikkorivi');
+      rivi.forEach((aihe, i) => {
+        if (i) rivisolmu.appendChild(luo('span', 'maapaneeli-erotin', ' · '));
+        const nappi = luo('button', 'maapaneeli-aihe');
+        nappi.type = 'button';
+        nappi.dataset.sym = aihe.perhe;
+        nappi.dataset.aihe = aihe.id;
+        nappi.appendChild(luo('span', 'maapaneeli-aihe-nimi', aihe.nimi));
+        nappi.addEventListener('click', () => {
+          d.avaaValikko?.(false);
+          d.avaaSivu?.(aihe.id);
+        });
+        rivisolmu.appendChild(nappi);
       });
-      valikko.appendChild(nappi);
+      valikko.appendChild(rivisolmu);
     }
   }
-  asetteleKortti(el, d);
+  asetaAuki(el, d);
 }
 
 /**
- * Kortin ruutuasento: mittakaava kamerasta ja valikon tila.
+ * AUKI VAI KIINNI — kalusteen ainoa tila.
  *
- * TÄMÄ ON SE YKSI PAIKKA, JOSSA KARTAN ZOOMI MUUTTUU PIKSELEIKSI.
- * `d.skaala` on laskettu kutsujalla kameran tilasta; tässä se vain
- * kirjoitetaan muunnokseksi. Muunnos on `scale`, ei leveys/korkeus:
- * asettelua ei lasketa uudelleen, joten zoomaus pysyy sujuvana
- * (sama sääntö kuin nostoilla, js/pallolauta/nostot.js asetteleNosto).
+ * LEVOSSA NÄKYY VAIN AVAIN: nimi, viiva ja alarivi (PÄÄTÖKSET 28
+ * TARKENNUS 2: *"nakyisi vain nimi ja alarivi"*). Napautus nimeen avaa
+ * perustiedot ja niiden yläpuolelle otsikot; uusi napautus sulkee.
+ *
+ * VALITTU AIHE MERKITÄÄN VAIN ALLEVIIVAUKSELLA (TARKENNUS 3). Merkintä
+ * on `on`-luokka, ja viivan värin antaa CSS aiheen `data-sym`in
+ * mukaan — js ei kirjoita yhtään väriä.
  */
-function asetteleKortti(el, d) {
+function asetaAuki(el, d) {
   const kortti = el.querySelector('.maapaneeli-kortti');
   if (!kortti) return;
-  kortti.style.transform = `scale(${(d.skaala ?? 1).toFixed(4)})`;
+  const auki = Boolean(d.valikkoAuki);
+  const sisus = kortti.querySelector('.maapaneeli-sisus');
   const valikko = kortti.querySelector('.maapaneeli-valikko');
-  const lisaa = kortti.querySelector('.maapaneeli-lisaa');
-  if (valikko) valikko.hidden = !d.valikkoAuki;
-  if (lisaa) lisaa.setAttribute('aria-expanded', String(Boolean(d.valikkoAuki)));
-  kortti.classList.toggle('valikko-auki', Boolean(d.valikkoAuki));
-  if (d.valikkoAuki) sovitaValikko(kortti);
+  const avain = kortti.querySelector('.maapaneeli-avain');
+  if (sisus) sisus.hidden = !auki;
+  if (valikko) valikko.hidden = !auki || !d.aiheet?.length;
+  if (avain) avain.setAttribute('aria-expanded', String(auki));
+  kortti.classList.toggle('valikko-auki', auki);
+  for (const nappi of kortti.querySelectorAll('.maapaneeli-aihe')) {
+    nappi.classList.toggle('on', Boolean(d.avattuSivu) && nappi.dataset.aihe === d.avattuSivu);
+  }
+  if (auki) sovitaOtsikot(kortti);
 }
 
 /*
@@ -1083,108 +1023,74 @@ function tahdistaLiikunPohja(kortti) {
 }
 
 /*
- * RUUDUN KALUSTEET, JOTKA VALIKKO VÄISTÄÄ.
+ * ══════════════════════════════════════════════════════════════════
+ * KAKSI OTSIKKORIVIÄ MAHTUU RUUDULLE (PÄÄTÖKSET 28 TARKENNUS 3)
+ * ══════════════════════════════════════════════════════════════════
  *
- * Valikko aukeaa kortin yläpuolelle ruudun vasemmassa alakulmassa, ja
- * sen tiellä voi olla alanappirivi tai vuorokortti. Lista on
- * VALITSIMIA eikä mittoja, koska yksikään kaluste ei ole kiinteässä
- * kohdassa (sama peruste kuin js/fokusmitat.js KALUSTEET).
+ * Omistaja pyysi otsikot KAHTEEN RIVIIN. Rivien pituus ei ole meidän
+ * valittavissamme: se tulee maalehden omista otsikoista (Ranskassa 74
+ * merkkiä kahdeksassa otsikossa, Kreikassa 75 kuudessa, ja
+ * MAA_KATEGORIAT-taulussa on maita, joilla otsikoita on 15). Yksi
+ * kiinteä fonttikoko ei siis voi kelvata joka maalle ja joka ruudulle
+ * — 390 px:n puhelimella Ranskan ylärivi on 13 px:n koossa mitattuna
+ * leveämpi kuin koko ruutu.
+ *
+ * MITTA OTETAAN SELAIMESTA, EI ARVATA. Peruskoko tulee tyylitiedostosta
+ * (`--otsikko-perus`, mediakyselyt), ja jos leveämpi rivi ei mahdu
+ * kalusteen vasemmasta reunasta ruudun oikeaan reunaan, koko kerrotaan
+ * tasan sillä suhteella, joka mahtuu. Leveys kasvaa fonttikoon mukana
+ * lineaarisesti (myös harvennus ja erottimen väli ovat em-mittoja),
+ * joten yksi jako riittää; toinen kierros korjaa pyöristyksen.
+ *
+ * ALARAJA ON LUETTAVUUDEN RAJA. Jos edes 8,5 px ei riitä, rivit jäävät
+ * sen kokoisiksi ja saavat kiertyä — kolme luettavaa riviä on parempi
+ * kuin kaksi, joita ei voi lukea.
+ *
+ * MIKÄ KUMOUTUI. Erän 19 `sovitaValikko` latoi valikon KAHTEEN
+ * SARAKKEESEEN pystyyn ja väisti ruudun kalusteita (`VALIKON_KALUSTEET`,
+ * `--valikko-rivit`, `--valikko-siirto`). TARKENNUS 3 tekee otsikoista
+ * vaakarivejä, joten sarakelaskenta ja pystyväistö eivät sijoita enää
+ * mitään.
  */
-const VALIKON_KALUSTEET = ['.rail', '.toimintorivi', '.pollo-nappi.pollo-kelluu'];
+const OTSIKON_MIN_PX = 8.5;
+/** Rako otsikkorivin lopun ja ruudun oikean reunan väliin. */
+const OTSIKON_REUNAVARA_PX = 10;
+/** Montako kertaa koko lasketaan uudestaan (toinen korjaa pyöristyksen). */
+const OTSIKON_KIERROKSET = 2;
 
-/** Valikon sarakkeiden enimmäismäärä, kun kaksi ei riitä (PÄÄTÖKSET 28). */
-const VALIKON_SARAKKEET_MAX = 3;
-
-/**
- * VALIKKO KASVAA YLÖS, KAHDESSA SARAKKEESSA (PÄÄTÖKSET 28 kohta 2).
- *
- * Kortti on ruudun ALALAIDASSA, joten alaspäin ei ole tilaa: valikon
- * ALAREUNA on plussan kohdalla ja rivit latoutuvat siitä ylöspäin.
- * Ladonta on CSS:n grid `column`-virtaus (css .maapaneeli-valikko), ja
- * tämä funktio päättää VAIN kaksi lukua:
- *
- *   --valikko-rivit    montako riviä yhteen sarakkeeseen mahtuu
- *   --valikko-siirto   vaakasiirto, jos oikea reuna karkaa ruudulta
- *
- * SARAKKEITA ON KAKSI, KOLME VAIN JOS EI MAHDU. Omistaja pyysi kaksi;
- * kolmas on turvaventtiili 390 px:n ruudulle, jolla kaluste
- * (alanappirivi, vuorokortti) syö pystytilaa. Rivien tiiviys tulee
- * CSS:n `line-height`ista (1,3 × fontin rivikorkeus) eikä tästä.
- */
-function sovitaValikko(kortti) {
-  const valikko = kortti.querySelector('.maapaneeli-valikko');
+function sovitaOtsikot(kortti) {
+  const valikko = kortti?.querySelector('.maapaneeli-valikko');
   if (!valikko || valikko.hidden) return;
-  const rivit = valikko.querySelectorAll('.maapaneeli-aihe');
+  const rivit = [...valikko.querySelectorAll('.maapaneeli-otsikkorivi')];
   if (!rivit.length) return;
-  valikko.style.setProperty('--valikko-siirto', '0px');
-
-  /*
-   * RAJAT OVAT RUUDUN RAJAT (erä 19b). Kortti on `position: fixed` eli
-   * ruudun vasemmassa alakulmassa, joten myös valikon on pysyttävä
-   * RUUDUN sisällä — karttaruudun laatikko eli saapumisen aikana eikä
-   * kelpaa rajaksi.
-   */
   const leveys = globalThis.innerWidth || 0;
-  const korkeus = globalThis.innerHeight || 0;
-  if (!(leveys > 0) || !(korkeus > 0)) return;
-  const kotelo = { top: 0, left: 0, right: leveys, bottom: korkeus };
-  const kr = kortti.getBoundingClientRect();
-  const skaala = kortti.offsetWidth > 0 ? kr.width / kortti.offsetWidth : 1;
-  if (!(skaala > 0)) return;
-
-  /*
-   * YLÄRAJA: RUUDUN YLÄREUNA TAI ALIN KALUSTE, JOKA LIMITTYY VALIKON
-   * KANSSA VAAKASUUNNASSA. Vain vaakasuunnassa limittyvät lasketaan:
-   * työpöydällä `.rail` on ruudun laidassa eikä valikon tiellä.
-   */
-  let ylaraja = kotelo.top;
-  const vasen = kr.left;
-  const oikea = kotelo.right;
-  for (const valitsin of VALIKON_KALUSTEET) {
-    for (const e of document.querySelectorAll(valitsin)) {
-      const k = e.getBoundingClientRect();
-      if (!(k.width > 0) || !(k.height > 0)) continue;
-      if (k.right <= vasen || k.left >= oikea) continue;
-      if (k.bottom > ylaraja && k.bottom < kr.top) ylaraja = k.bottom;
-    }
+  if (!(leveys > 0)) return;
+  // Peruskoko luetaan puhtaalta pöydältä: edellinen sovitus pois ensin.
+  valikko.style.removeProperty('--otsikko-koko');
+  const perus = parseFloat(getComputedStyle(valikko).getPropertyValue('--otsikko-perus'));
+  if (!(perus > 0)) return;
+  const tilaa = leveys - kortti.getBoundingClientRect().left - OTSIKON_REUNAVARA_PX;
+  if (!(tilaa > 0)) return;
+  let koko = perus;
+  for (let kierros = 0; kierros < OTSIKON_KIERROKSET; kierros += 1) {
+    const levein = Math.max(...rivit.map((r) => r.scrollWidth));
+    if (!(levein > tilaa)) break;
+    koko = Math.max(OTSIKON_MIN_PX, Math.floor((koko * tilaa * 10) / levein) / 10);
+    valikko.style.setProperty('--otsikko-koko', `${koko}px`);
+    if (koko <= OTSIKON_MIN_PX) break;
   }
-
-  /*
-   * RIVIÄ KOHTI YKSI KORKEUS. Rivin korkeus mitataan LIVENÄ (fontti ja
-   * skaala vaikuttavat molemmat), ja käytettävissä oleva korkeus on
-   * valikon alareunasta ylärajaan.
-   */
-  const yksi = rivit[0].getBoundingClientRect().height || 1;
-  const alareuna = valikko.getBoundingClientRect().bottom;
-  const tilaa = Math.max(yksi, alareuna - ylaraja);
-  const mahtuu = Math.max(1, Math.floor(tilaa / yksi));
-  const sarakkeita = Math.min(VALIKON_SARAKKEET_MAX,
-    Math.max(2, Math.ceil(rivit.length / mahtuu)));
-  const riveja = Math.ceil(rivit.length / sarakkeita);
-  valikko.style.setProperty('--valikko-rivit', String(riveja));
-
-  /*
-   * VAAKA: PYSY RUUDULLA. Valikko alkaa kortin vasemmasta reunasta ja
-   * levittäytyy oikealle; kapealla ruudulla kolmas sarake voi yltää
-   * reunan yli, jolloin koko lista liu'utetaan vasemmalle tasan
-   * ylivuodon verran (kortin omissa yksiköissä, koska siirto on
-   * muunnoksen sisällä).
-   */
-  const r = valikko.getBoundingClientRect();
-  let siirto = 0;
-  if (r.right > kotelo.right) siirto = kotelo.right - r.right;
-  else if (r.left < kotelo.left) siirto = kotelo.left - r.left;
-  if (siirto) valikko.style.setProperty('--valikko-siirto', `${(siirto / skaala).toFixed(3)}px`);
 }
 
 /**
- * Maapaneelin kerros — ERÄ 19: RUUDUN VASEN ALAKULMA (PÄÄTÖKSET 28).
+ * Maapaneelin kerros — ERÄ 20: RUUDUN VASEN ALAKULMA ILMAN LAATIKKOA
+ * (PÄÄTÖKSET 28 + TARKENNUS 2 ja 3).
  *
- * Kortti ei ole enää merkkikerroksen datum vaan karttaruudun oma lapsi
+ * Kaluste ei ole merkkikerroksen datum vaan karttaruudun oma lapsi
  * (`.maapaneeli-nurkka`), joka istuu kiinteästi ruudun vasemmassa
- * alakulmassa. Kamera ei siis kirjoita sen paikkaa eikä kokoa
- * kertaakaan; ainoa ruudusta luettava luku on mittakaava
- * (`nurkanSkaala`), joka päivittyy vain ruudun koon muuttuessa.
+ * alakulmassa. Kamera ei kirjoita sen paikkaa eikä kokoa kertaakaan, ja
+ * erästä 20 alkaen ei kirjoita ruutukaan: typografia on ruutupikseleitä
+ * (css), ja ainoa ajossa laskettu koko on otsikkorivien fonttikoko
+ * (`sovitaOtsikot`).
  *
  * `kotelo` on karttaruutu (js/pallolauta/lauta.js), johon säiliö
  * ripustetaan. `merkit` on yhä parametrina, koska KERROS ON
@@ -1193,8 +1099,9 @@ function sovitaValikko(kortti) {
  *
  * Palauttaa:
  *   paivita({ iso, laatikko })  maa vaihtui tai kaluste on nollattu
- *   tahdistaKoko()              ruutu vaihtoi kokoa: uusi mittakaava
+ *   tahdistaKoko()              ruutu vaihtoi kokoa: otsikot uusiksi
  *   valikkoAuki()               savukkeille ja vartijoille
+ *   mitat()                     kalusteen ruutulaatikko savukkeille
  *   pura()
  */
 export function luoMaapaneeli({
@@ -1204,11 +1111,12 @@ export function luoMaapaneeli({
   void kamera; void asteet; void saapumisnakyma; void kapeaRuutu;
   let tila = null; // { iso, laatikko, nimi, rivit, kielet, aiheet }
   let valikkoAuki = false;
+  let avattuSivu = null;
   let sailio = null;
   let el = null;
 
   const avaaValikko = (auki) => {
-    const uusi = Boolean(auki) && Boolean(tila?.aiheet?.length);
+    const uusi = Boolean(auki);
     if (uusi === valikkoAuki) return;
     valikkoAuki = uusi;
     kirjoita();
@@ -1216,13 +1124,16 @@ export function luoMaapaneeli({
 
   const avaaSivu = (sivuId) => {
     if (!tila?.iso) return;
+    // Valittu otsikko jää merkityksi: alleviivaus näkyy, kun kaluste
+    // avataan seuraavan kerran (PÄÄTÖKSET 28 TARKENNUS 3).
+    avattuSivu = sivuId;
     ui.avaaMaalehti?.(tila.iso, { sivu: sivuId });
   };
 
   /*
-   * YKSI PYSYVÄ DATUM. Kortin napautuskäsittelijät sulkevat tämän
+   * YKSI PYSYVÄ TILAOLIO. Kalusteen napautuskäsittelijät sulkevat tämän
    * olion sisäänsä kerran (`paneeliElementti`), joten sen kenttiä
-   * PÄIVITETÄÄN eikä koskaan korvata uudella oliolla — muuten plussa
+   * PÄIVITETÄÄN eikä koskaan korvata uudella oliolla — muuten avain
    * lukisi vanhentunutta `valikkoAuki`-tilaa.
    */
   const d = {
@@ -1234,30 +1145,16 @@ export function luoMaapaneeli({
     rivit: [],
     kielet: [],
     aiheet: [],
-    skaala: 1,
     valikkoAuki: false,
+    avattuSivu: null,
     avaaValikko,
     avaaSivu,
   };
 
   /**
-   * Ruudun mitat mittakaavaa varten.
-   *
-   * MITTA ON IKKUNA, EI KARTTARUUTU. Karttaruutu on flex-lapsi, jonka
-   * MITATTU korkeus heiluu saapumisen aikana sen mukaan, mitä ruudulla
-   * on juuri sillä hetkellä (mitattu 13.9.2026: 775, 589 ja 0 px
-   * samalla 844 px:n ruudulla) — kortin koko olisi silloin arpapeliä.
-   * `innerWidth/innerHeight` ei elä saapumisanimaation mukana.
-   */
-  const ruutu = () => ({
-    leveys: globalThis.innerWidth || kotelo?.clientWidth || 0,
-    korkeus: globalThis.innerHeight || kotelo?.clientHeight || 0,
-  });
-
-  /**
-   * Säiliö ja kortti ruutuun. Säiliö on karttaruudun suora lapsi, joten
-   * se saa `.pallo-kotelo > div`:n koko alan (css) ja asemoi kortin
-   * omalla lohkollaan vasempaan alakulmaan.
+   * Säiliö ja kaluste ruutuun. Säiliö on karttaruudun suora lapsi, joten
+   * se saa `.pallo-kotelo > div`:n koko alan (css) ja asemoi kalusteen
+   * omalla lohkollaan ruudun vasempaan alakulmaan.
    */
   const varmistaKortti = () => {
     if (typeof document === 'undefined' || !kotelo) return null;
@@ -1274,16 +1171,42 @@ export function luoMaapaneeli({
     return el;
   };
 
+  /*
+   * OSUMATESTI DOKUMENTIN KAAPPAUSVAIHEESSA (ks. NAPAUTUS ON
+   * OSUMATESTI yllä). Kaksi kuuntelijaa ja molemmat kaappaavina:
+   * `pointerdown` muistaa mistä sormi lähti, `click` ratkaisee.
+   */
+  let alku = null;
+  const painallus = (e) => { alku = { x: e.clientX, y: e.clientY }; };
+  const napautus = (e) => {
+    if (!el?.isConnected || !tila || sailio?.hidden) return;
+    const kortti = el.querySelector('.maapaneeli-kortti');
+    if (!kortti) return;
+    // Näppäimistön Enter osuu nappiin itseensä: nappi hoitaa oman clickinsä.
+    if (e.target instanceof Element && e.target.closest('.maapaneeli-kortti')) return;
+    // Raahaus ei ole napautus: kartta on jo pannannut sormen alla.
+    if (alku && Math.hypot(e.clientX - alku.x, e.clientY - alku.y) > NAPAUTUKSEN_SIIRTO_PX) return;
+    const kohteet = [kortti.querySelector('.maapaneeli-avain'),
+      ...kortti.querySelectorAll('.maapaneeli-aihe')];
+    for (const kohde of kohteet) {
+      if (!osuuLaatikkoon(kohde, e.clientX, e.clientY)) continue;
+      e.preventDefault();
+      e.stopPropagation();
+      kohde.click();
+      return;
+    }
+  };
+
   const kirjoita = () => {
     if (!sailio?.isConnected && !tila) return;
     if (!tila) {
       if (sailio) sailio.hidden = true;
-      // Ilman paneelia Liiku palaa perusväliinsä.
+      // Ilman kalustetta Liiku palaa perusväliinsä.
       document.documentElement?.style.removeProperty('--liiku-pohja');
       return;
     }
-    const kortti = varmistaKortti();
-    if (!kortti) return;
+    const kaluste = varmistaKortti();
+    if (!kaluste) return;
     sailio.hidden = false;
     d.iso = tila.iso;
     d.nimi = tila.nimi;
@@ -1292,17 +1215,22 @@ export function luoMaapaneeli({
     d.rivit = tila.rivit;
     d.kielet = tila.kielet;
     d.aiheet = tila.aiheet;
-    d.skaala = nurkanSkaala(ruutu());
     d.valikkoAuki = valikkoAuki;
-    taytaKortti(kortti, d);
-    // Liiku väistää kortin, jos kortti yltää ruudun keskilinjalle.
-    tahdistaLiikunPohja(kortti.querySelector('.maapaneeli-kortti'));
+    d.avattuSivu = avattuSivu;
+    taytaKortti(kaluste, d);
+    // Liiku väistää kalusteen, jos se yltää ruudun keskilinjalle.
+    tahdistaLiikunPohja(kaluste.querySelector('.maapaneeli-kortti'));
   };
+
+  if (typeof document !== 'undefined') {
+    document.addEventListener('pointerdown', painallus, true);
+    document.addEventListener('click', napautus, true);
+  }
 
   return {
     /**
      * Maa ja sen laatikko. `null` maassa (ei maata, nurkkatila päällä,
-     * linssi päällä) purkaa paneelin — TURVALLINEN TILA, ei virhe.
+     * linssi päällä) purkaa kalusteen — TURVALLINEN TILA, ei virhe.
      * `laatikko` kulkee mukana vain savukkeen mittaa varten; nurkassa
      * se ei vaikuta sijaintiin eikä kokoon.
      */
@@ -1324,18 +1252,18 @@ export function luoMaapaneeli({
         kielet: kieliOsat(ui, iso),
         aiheet: maanAiheet(iso),
       };
-      // Maan vaihtuessa valikko sulkeutuu: sen rivit ovat toisen maan.
-      if (tila?.iso !== uusi.iso) valikkoAuki = false;
+      // Maan vaihtuessa kaluste sulkeutuu: sen rivit ovat toisen maan.
+      if (tila?.iso !== uusi.iso) { valikkoAuki = false; avattuSivu = null; }
       tila = uusi;
       kirjoita();
     },
     /**
-     * Ruutu vaihtoi kokoa (tai kamera liikkui): uusi mittakaava.
+     * Ruutu vaihtoi kokoa (tai kamera liikkui).
      *
-     * KAMERA EI ENÄÄ VAIKUTA MITTAAN (PÄÄTÖKSET 28), joten tämä on
-     * käytännössä ruudun koon tahdistus — kutsu jää ennalleen, koska
-     * ResizeObserver ja kameran tahdistus kulkevat lauta.js:ssä samaa
-     * reittiä.
+     * KAMERA EI VAIKUTA MITTAAN (PÄÄTÖKSET 28) eikä ruutu enää kokoon
+     * (TARKENNUS 2), joten tämä on käytännössä otsikkorivien uusi
+     * sovitus — kutsu jää ennalleen, koska ResizeObserver ja kameran
+     * tahdistus kulkevat lauta.js:ssä samaa reittiä.
      */
     tahdistaKoko() {
       if (!tila) return;
@@ -1343,20 +1271,31 @@ export function luoMaapaneeli({
     },
     /** Savukkeen ja vartijan mittarit. */
     valikkoAuki: () => valikkoAuki,
-    mitat: () => (tila ? {
-      skaala: d.skaala,
-      w: MAAPANEELIN_LEVEYS_PX * d.skaala,
-      h: MAAPANEELIN_KORKEUS_PX * d.skaala,
-      /*
-       * MAAN LAATIKKO KULKEE MUKANA SAVUKKEEN MITTAA VARTEN. Se ei
-       * enää sijoita paneelia (PÄÄTÖKSET 28), mutta savukkeet lukivat
-       * sen ennen merkkikerroksen datumista — nyt tästä.
-       */
-      laatikko: tila.laatikko,
-    } : null),
+    /*
+     * MITAT LUETAAN ELEMENTISTÄ, EI VAKIOISTA. Kalusteella ei ole enää
+     * kiinteää 104 × 82 px:n laatikkoa: sen koko on sen sisältö, ja
+     * auki se on moninkertainen. Savukkeet mittaavat ruutulaatikon.
+     */
+    mitat: () => {
+      if (!tila) return null;
+      const kaluste = el?.querySelector('.maapaneeli-kortti');
+      const r = kaluste?.getBoundingClientRect?.() ?? null;
+      return {
+        auki: valikkoAuki,
+        w: r?.width ?? 0,
+        h: r?.height ?? 0,
+        /*
+         * MAAN LAATIKKO KULKEE MUKANA SAVUKKEEN MITTAA VARTEN. Se ei
+         * sijoita kalustetta (PÄÄTÖKSET 28), mutta savukkeet lukivat
+         * sen ennen merkkikerroksen datumista — nyt tästä.
+         */
+        laatikko: tila.laatikko,
+      };
+    },
     pura() {
       tila = null;
       valikkoAuki = false;
+      avattuSivu = null;
       merkit?.aseta?.('maapaneeli', [], { haivyta: false });
       sailio?.remove();
       sailio = null;
@@ -1364,6 +1303,8 @@ export function luoMaapaneeli({
       clearTimeout(liikunPohjaAjastin);
       liikunPohjaAjastin = null;
       if (typeof document !== 'undefined') {
+        document.removeEventListener('pointerdown', painallus, true);
+        document.removeEventListener('click', napautus, true);
         document.documentElement?.style.removeProperty('--liiku-pohja');
       }
     },

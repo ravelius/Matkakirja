@@ -96,17 +96,26 @@ const RUUTU = 41;
 
 /*
  * MITTAUSPISTEET ON VALITTU MITATUSTA NÄKYMÄSTÄ (1400 × 900, Unkarin
- * saapumisrajaus): ruudulle jää lon 15,4…23,6 ja lat 44,8…48,4, eli
- * kohdemaan ulkopuolelta Itävalta/Slovenia lännessä, Romania idässä ja
- * Serbia/Kroatia etelässä. Pohjoisessa Slovakia jää ruudun ulkopuolelle,
- * joten sieltä ei mitata. Jokainen piste on vähintään 0,2° Unkarin
- * rajan ulkopuolella ja vähintään 40 px ruudun reunasta.
+ * saapumisrajaus): kohdemaan ulkopuolelta Romania idässä ja
+ * Serbia/Kroatia etelässä. Jokainen piste on vähintään 0,2° Unkarin
+ * rajan ulkopuolella (mitattu assets/data/maapolygonit.json HUN-
+ * renkaasta) ja vähintään 40 px ruudun reunasta.
+ *
+ * SAAPUMISRAJAUS ON KAVENTUNUT (mitattu 16.9.2026): sama pakotettu
+ * kamera kiinnittyy nyt näkymään 163 × 97 lautayksikköä, kun se v1915:n
+ * mittauksessa oli 179 × 107. Ruudulle jää siis reunavaralla lat
+ * 45,5…48,0 ja lon 16,5…22,5 (lat 47,5:stä ylöspäin lon 23,0 asti), ja
+ * kaksi vanhaa pistettä — Itävalta/Steiermark (46,8 / 15,7) ja Romania
+ * (47,5 / 23,1) — jäivät ruudun ulkopuolelle. Ruudun ulkopuolinen piste
+ * ei ole mittaus vaan mittaamatta jäänyt piste, ja V1 kaatui siihen
+ * ilman yhtäkään kermahavaintoa. Molemmat on siirretty ruudulle,
+ * samoihin ilmansuuntiin: Kroatia lännessä, Romania koillisessa.
  */
 /** Mittauspisteet kohdemaan ULKOPUOLELLA (V1). */
 const ULKONA = [
-  { nimi: 'Itävalta/Steiermark', lat: 46.8, lon: 15.7 },
+  { nimi: 'Kroatia (Podravina)', lat: 45.7, lon: 17.0 },
   { nimi: 'Romania (Apuseni)', lat: 46.5, lon: 23.0 },
-  { nimi: 'Romania (Szatmár)', lat: 47.5, lon: 23.1 },
+  { nimi: 'Romania (Szatmár)', lat: 47.5, lon: 22.6 },
   { nimi: 'Serbia (Banat)', lat: 45.3, lon: 20.0 },
   { nimi: 'Kroatia (Slavonia)', lat: 45.2, lon: 17.5 },
 ];
@@ -270,6 +279,40 @@ const kaappaa = async (muoto = 'png') => Buffer.from(
 const piilotaPaallikset = () => sivu.evaluate(() => {
   const kangas = document.querySelector('.pallolauta canvas') ?? document.querySelector('canvas');
   if (!kangas) return 0;
+  /*
+   * LUENNAN HUNTU ON ESIVANHEMMAN ::after, JOTEN `visibility` EI YLLÄ
+   * SIIHEN (mitattu 16.9.2026, tämä savuke main-haarassa 4/6).
+   *
+   * `body.luenta-huntu .map-pane::after` (css/fokusvirta.css) on
+   * `rgba(30, 22, 12, 0.42)` + `backdrop-filter: blur(3.5px)` KARTAN
+   * PÄÄLLÄ, ja `.map-pane` on pallon kankaan esivanhempi — eli juuri se
+   * ketju, jonka tämä funktio jättää tahallaan näkyviin. Silmukka
+   * piilottaa kyllä luentakuvan (`.fokusvirta-isokuva`), mutta
+   * js/ui.js:n luentavahti kysyy `.nakyy`-luokkaa eikä näkyvyyttä,
+   * joten luokka jää bodylle ja huntu jää kartan päälle.
+   *
+   * MITÄ SE MITTASI: huntu on PÄÄLLÄ ajossa A (kerma päällä) ja POIS
+   * ajossa B, koska luentavahdilla on nimenomainen poikkeus
+   * kehittäjän maailmanäkymälle (js/ui.js `huntuSallittu`, vartio
+   * tools/savukkeet/savuke-luentakuvan-kerros.mjs "luenta-huntu EI ole
+   * päällä kehittäjän maailmanäkymässä"). Mitattuna A oli kohdemaan
+   * ulkopuolella 151 ja B 230 — eli 0,42 tummaa ruskeaa kerman päällä,
+   * täsmälleen hunnun verran. Kirkkaus siis KASVOI maailmanäkymässä,
+   * ja V1 ja V3 kaatuivat mittaamatta kertaakaan kermaa. Vika oli
+   * mittauksessa, ei kartassa.
+   *
+   * KORJAUS ON TYYLISÄÄNTÖ, EI LUOKAN POISTO: luentavahti ajaa
+   * välein (LUENTAVAHDIN_VALI_MS) ja palauttaisi luokan kesken
+   * mittauksen. `content: none` poistaa koko jälkielementin, joten
+   * myös backdrop-filter jää pois. Sääntö menee `head`:iin, jota tämä
+   * silmukka ei piilota, ja se on sama molemmissa ajoissa.
+   */
+  if (!document.getElementById('savuke-ei-huntua')) {
+    const tyyli = document.createElement('style');
+    tyyli.id = 'savuke-ei-huntua';
+    tyyli.textContent = 'body.luenta-huntu .map-pane::after { content: none !important; }';
+    document.head.append(tyyli);
+  }
   const ketju = new Set();
   for (let e = kangas; e; e = e.parentElement) ketju.add(e);
   let n = 0;
@@ -281,6 +324,11 @@ const piilotaPaallikset = () => sivu.evaluate(() => {
   }
   return n;
 });
+
+/** Oliko luennan huntu päällä mittaushetkellä (kirjataan kumpaankin ajoon)? */
+const huntuTila = () => sivu.evaluate(
+  () => document.body.classList.contains('luenta-huntu'),
+);
 
 /** Laudan tila: kohdemaa, korostuskehä, laattakerroksen mittarit. */
 const tila = () => sivu.evaluate(() => {
@@ -415,6 +463,7 @@ async function ajaMittauskamera() {
 async function mittaa(nimi) {
   await piilotaPaallikset();
   await sivu.waitForTimeout(800);
+  tieto(`${nimi} luennan huntu`, `${await huntuTila() ? 'luokka päällä' : 'ei luokkaa'} (mitattaessa aina poissa piirrosta)`);
   const png = await kaappaa('png');
   const m = await mittaaKuva(png, [...ULKONA, ...SISALLA], KONTRASTI);
   if (KUVAKANSIO) {
