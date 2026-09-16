@@ -829,6 +829,44 @@ body.aikajana-pulu-piilossa .satelliitti-pulukulma .minipulu {
 .satelliitti-pulunappi[disabled] { cursor: default; opacity: 0.6; }
 
 /*
+ * HOVER/ACTIVE/FOCUS EIVÄT SAA TUODA TAUSTALAATIKKOA TAKAISIN
+ * (Codexin live-QA Mac Chromella v1924: nappi 70×84 px, levossa
+ * läpinäkyvä, vaihtui osoitettaessa ruskeaksi rgb(67, 51, 31)).
+ *
+ * JUURISYY MITATTU: tiedoston alun yleissääntö
+ * `button:hover:not(:disabled) { background: #43331f; }`
+ * (css/styles.css, tarkkuus 0,2,1 — elementti + kaksi pseudoluokkaa)
+ * voittaa `.satelliitti-pulunappi`-luokan levon säännön (tarkkuus
+ * 0,1,0), koska `:hover`-osoitin ei poista luokkasääntöä käytöstä,
+ * vain häviää tarkkuudessa. `.satelliitti-pulunappi:hover` yllä
+ * asettaa vain suotimen (filter), ei taustaa, joten mikään tässä
+ * tiedostossa ei ennen tätä sääntöä voittanut yleissääntöä.
+ *
+ * SAMA RATKAISU KUIN MUUALLA TIEDOSTOSSA (css/styles.css rivit ~21493,
+ * ~23847 ja ~26857): tarkkuus nostetaan toistamalla elementti +
+ * luokka + tila, jolloin tulos on 0,3,1 ja voittaa yleissäännön
+ * järjestyksestä riippumatta.
+ */
+button.satelliitti-pulunappi:hover:not(:disabled),
+button.satelliitti-pulunappi:active:not(:disabled),
+button.satelliitti-pulunappi:focus:not(:disabled),
+button.satelliitti-pulunappi:focus-visible {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/*
+ * Näppäimistökohdistus säilyy silti näkyvänä — vain ilman taustaa.
+ * Vihreä on linssin oma sävy (--satelliitti-vihrea, sama kuin
+ * "Kysy pululta:" -otsikolla ja kohdepisteillä).
+ */
+button.satelliitti-pulunappi:focus-visible {
+  outline: 2px solid var(--satelliitti-vihrea, #5dffa8);
+  outline-offset: 2px;
+}
+
+/*
  * KYSYMYSKORTTI TUMMALLE POHJALLE. Sama paperiton, läpikuultava
  * tummuus kuin selitteellä — valokuva on sisältö, kortti sen päällä
  * oleva pinta. Korkeus on rajattu, jottei pitkä vastaus työnnä korttia

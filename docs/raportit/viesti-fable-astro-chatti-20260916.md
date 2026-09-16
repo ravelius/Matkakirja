@@ -82,3 +82,112 @@ lyhyt vinkki olisi aito vika.
 
 Kuva: `docs/raportit/kuvat/astro-chatti-390-20260916.jpg` (chatti auki
 ehdotuksineen, 390 px).
+
+(Yllä olevat 43/43-luvut mitattiin ennen alla olevaa hover-korjausta;
+korjaus lisäsi `savuke-astro-valokuva.mjs`:ään kaksi uutta väitettä,
+joten uusi kokonaisluku on 45/45 — ks. kohta 5.)
+
+## 4. Minipulun napin ruskea hover-tausta korjattu (Sonnet, 16.9.2026)
+
+Codexin live-QA Mac Chromella v1924 löysi vian: minipulun nappi
+(`.satelliitti-pulunappi`) on levossa läpinäkyvä, mutta hover/active/
+focus-tilassa tausta muuttui ruskeaksi `rgb(67, 51, 31)` (70×84 px).
+
+**Juurisyy mitattu selaimessa** (ei arvattu): tiedoston alun
+yleissääntö `css/styles.css:2287` `button:hover:not(:disabled) {
+background: #43331f; }` (tarkkuus 0,2,1) voitti
+`.satelliitti-pulunappi`-luokan levon säännön (tarkkuus 0,1,0).
+`.satelliitti-pulunappi:hover`-sääntö asetti ennen korjausta vain
+suotimen (`filter: brightness(1.15)`), ei taustaa, joten mikään
+`css/satelliitti.css`:ssä ei ennen tätä voittanut yleissääntöä. Sama
+vika ja sama ratkaisumalli on jo dokumentoitu kolmesti tiedostossa
+`css/styles.css` (rivit ~21493, ~23847, ~26857): pöllöpaneelin napit,
+maataulun kartuutsi ja ylapalkin nappi.
+
+**Korjaus** (`css/satelliitti.css`, uusi sääntö
+`.satelliitti-pulunappi:hover:not(:disabled)`-lohkon jälkeen, rivi
+~828 alkaen): tarkkuus nostettu samalla tavalla kuin muualla
+tiedostossa — elementti + luokka + tila = 0,3,1, joka voittaa
+yleissäännön (0,2,1) järjestyksestä riippumatta.
+
+```css
+button.satelliitti-pulunappi:hover:not(:disabled),
+button.satelliitti-pulunappi:active:not(:disabled),
+button.satelliitti-pulunappi:focus:not(:disabled),
+button.satelliitti-pulunappi:focus-visible {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+button.satelliitti-pulunappi:focus-visible {
+  outline: 2px solid var(--satelliitti-vihrea, #5dffa8);
+  outline-offset: 2px;
+}
+```
+
+Näppäimistökohdistuksen ilmaisin säilyy: `:focus-visible` saa vihreän
+`#5dffa8`-ääriviivan (sama sävy kuin "Kysy pululta:" -otsikolla ja
+kohdepisteillä), mutta ei taustaa.
+
+**Mitattu Playwrightilla** (`tools/savukkeet/savuke-astro-valokuva.mjs`,
+uusi väite `page.hover('.satelliitti-pulunappi')` →
+`getComputedStyle(nappi)`): hover-tilassa
+`backgroundColor = "rgba(0, 0, 0, 0)"`, `borderTopWidth = "0px"`,
+`boxShadow = "none"` — kaikilla neljällä ruudulla (1400, 390, 1024 ×
+1366, 844 × 390). Vastakoe ajettu KÄSIN korjausta ennen
+(`git stash` väliaikaisesti pois `css/satelliitti.css`:stä, ajo
+uudelleen, `git stash pop` takaisin): väite meni punaiseksi ja mitattu
+tausta oli täsmälleen `rgb(67, 51, 31)` — sama luku kuin Codexin
+raportoima bugi. Lisäksi väitesarjaan lisättiin pysyvä vastakoe, joka
+varmistaa, ettei läpinäkyvyysmittari (`lapinakyva`) hyväksyisi tätä
+samaa ruskeaa väriä.
+
+## 5. Savukkeiden ajo (Sonnet, 16.9.2026) — KESKEN-osio ajettu läpi
+
+Kaikki edellisen agentin ajamatta jääneet savukkeet ajettu yksi
+kerrallaan etualalla:
+
+- `savuke-astro-valokuva.mjs`, iPad-näkymä (1024 × 1366):
+  **45/45 läpi** (43 vanhaa + 2 uutta hover-väitettä).
+- `savuke-astro-valokuva.mjs`, puhelin (390 × 844), uuden
+  hover-väitteen kanssa: **45/45 läpi**.
+- `savuke-astro-aani.mjs`: **24/24 läpi**, ei muutoksia tiedostoon.
+- `savuke-satelliittilinssi.mjs` (`NAKYMAT=tyopoyta`): **34/34 läpi**
+  toisella ajolla. Ensimmäisellä ajolla **33/34** — väite "pallon
+  takapuolen merkki ei ota napautusta" epäonnistui kertaalleen
+  (`ikkunoita: 1`, siis jokin avasi katseluikkunan). SYY SELVITETTY:
+  testin oma kommentti tiedostossa (rivit 495-502) kuvaa tarkalleen
+  tämän: pallo pyörii linssin avauduttua hitaasti, ja testi mittaa
+  ruutukoordinaatin, jossa lähelle (< 40 px) ei silloin osu yhtään
+  etupuolen merkkiä — mutta pallon pyöriessä ehtii toinen etupuolen
+  merkki liukua koordinaatin kohdalle ennen kuin `s.mouse.click`
+  ehtii perille. Toisella ajolla sama merkki (`sarytsev`) mitattiin
+  hieman eri ruutukohdasta eikä osuma tapahtunut (`ikkunoita: 0`).
+  Tämä on testin OMA, olemassa oleva ajoitusherkkyys — ei liity
+  tämän session muutoksiin (`css/satelliitti.css`,
+  `savuke-astro-valokuva.mjs`); tiedostoa `savuke-satelliittilinssi.mjs`
+  ei kosketettu. Ei korjattu eikä poistettu — kirjattu tähän
+  omistajan/seuraavan agentin tietoon, koska mittari saattaa satunnaisesti
+  punastua jatkossakin.
+
+Työpöydän ja vaaan `savuke-astro-valokuva.mjs`-ajoja ei toistettu
+tässä sessiossa (eivät olleet KESKEN-listalla eivätkä muuten
+pyydettyjä); portti 8757 on lisäksi yhteinen usean rinnakkaisen
+session kesken tässä konttiympäristössä, ja yksi yritys osui
+toisen session ajoon (`EADDRINUSE`) — ei muiden prosessien
+tappamista, yritys vain jätettiin väliin.
+
+**Yhteenveto läpi/ei-läpi:**
+
+| Savuke | Näkymä | Tulos |
+| --- | --- | --- |
+| savuke-astro-valokuva.mjs | iPad 1024×1366 | 45/45 |
+| savuke-astro-valokuva.mjs | puhelin 390×844 (uusi hover-väite) | 45/45 |
+| savuke-astro-aani.mjs | tyopoyta + puhelin (sisäinen) | 24/24 |
+| savuke-satelliittilinssi.mjs | tyopoyta | 34/34 (33/34 ensimmäisellä ajolla, tunnettu ajoitusherkkyys) |
+
+Kaikki neljä ajoa ovat nyt vihreitä. Ainoa punaiseksi mennyt väite
+("pallon takapuolen merkki ei ota napautusta") on selvitetty juurisyyhyn
+asti ja on toistettavuudeltaan satunnainen, ei tämän session muutosten
+aiheuttama.

@@ -34,7 +34,8 @@
  *   9. MINIPULU kelluu ruudun oikeassa alakulmassa (≤ 16 px reunoista)
  *      eikä leikkaa pienoiskuvia; napautus avaa kysymyskortin, jossa on
  *      kohteen kaksi valmista kysymystä, ja kysymyksen napautus näyttää
- *      esikirjoitetun vastauksen.
+ *      esikirjoitetun vastauksen. Nappi pysyy läpinäkyvänä myös hoverissa
+ *      (16.9.2026 Codex-QA: yleissääntö ei saa maalata sitä ruskeaksi).
  *  10. KELATTU SELITE MAHTUU YHDELLE RIVILLE (LISÄYS 6) myös pitkällä
  *      nimellä, ja se kelautuu itsestään kuvan napautuksesta,
  *      panoroinnista ja rullasta.
@@ -759,6 +760,31 @@ async function ajaNakyma(nakymanNimi) {
   // VASTAKOE: mittari hylkää täysin läpinäkymättömän taustan.
   vaadi(nimessa('vastakoe: läpinäkyvyysmittari hylkää tumman pohjan'),
     !lapinakyva('rgba(6, 13, 10, 0.78)') && lapinakyva('rgba(0, 0, 0, 0)'), '');
+
+  /*
+   * HOVER-TILA EI SAA TUODA TAUSTALAATIKKOA TAKAISIN (Codexin live-QA
+   * Mac Chromella v1924: minipulun nappi 70×84 px vaihtui osoitettaessa
+   * ruskeaksi rgb(67, 51, 31) — tiedoston yleissääntö
+   * `button:hover:not(:disabled)` (css/styles.css) voitti minipulun oman
+   * läpinäkyvän levon; korjaus css/satelliitti.css rivi ~828-861).
+   * Osoitin siirretään OIKEASTI Playwrightin hoverilla, koska CSS:n
+   * :hover ei herää JS:llä lähetetystä mouseover-tapahtumasta.
+   */
+  await s.hover('.satelliitti-pulunappi').catch(() => {});
+  const puluHover = await s.evaluate(() => {
+    const nappi = document.querySelector('.satelliitti-pulunappi');
+    if (!nappi) return null;
+    const t = getComputedStyle(nappi);
+    return { tausta: t.backgroundColor, reuna: t.borderTopWidth, varjo: t.boxShadow };
+  });
+  vaadi(nimessa('minipulun nappi pysyy läpinäkyvänä hoverissa (ei ruskeaa taustalaatikkoa)'),
+    Boolean(puluHover) && lapinakyva(puluHover.tausta)
+      && Math.round(parseFloat(puluHover.reuna)) === 0 && puluHover.varjo === 'none',
+    JSON.stringify(puluHover));
+  // VASTAKOE: sama mittari hylkäisi bugin todellisen ruskean värin.
+  vaadi(nimessa('vastakoe: läpinäkyvyysmittari hylkää bugin ruskean rgb(67, 51, 31)'),
+    !lapinakyva('rgb(67, 51, 31)'), '');
+  await s.mouse.move(0, 0).catch(() => {});
 
   /*
    * PULUN PLUSKUPLA EI SAA JÄÄDÄ VALOKUVAN PÄÄLLE (omistajan havainto
