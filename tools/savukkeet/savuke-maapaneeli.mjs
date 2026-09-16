@@ -1,69 +1,77 @@
 /*
- * Savuke: MAAINFO RUUDUN VASEMMASSA ALAKULMASSA (erä 19).
+ * Savuke: MAAINFO 27.8.2026 ASUSSA — EI LAATIKKOA, NIMI AVAA (erä 20).
  *
  * === MITÄ TÄMÄ VARTIOI =============================================
  *
- * Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 28 (omistaja 15.9.2026 klo
- * 20.45 UTC, sanatarkasti): *"Palautetaan alkuperainen vasemman
- * alakulman maainfo mutta sailytetaan se plussasta avautuva valikko
- * (valikko tulee plussan paikalle ja kasvaa ylospain kahdessa rivissa
- * tiiviisti ladottuna."*
+ * Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 28 TARKENNUS 2 (omistaja
+ * 16.9.2026 klo 10.45 UTC, iPad-kuva 27.8.2026 Kreikasta,
+ * sanatarkasti): *"se maainfon vanha versio oli sellainen missa ei ole
+ * tuota valkoista taustaa. Muistatko minkalainen se oli?"* ja
+ * kysymyskortilla: *"nakyisi vain nimi ja alarivi ja klikkaamalla sita
+ * tulisi perustiedot seka otsikot kahdessa rivissa perustietojen
+ * ylapuolelle. kaikki samalla fontilla"*.
  *
- * KUMOUTUNEET VARTIOT (erät 3–18, tässä samassa tiedostossa):
+ * TARKENNUS 3 (omistaja 16.9.2026 kortilla): kategoriaotsikot PELKKÄNÄ
+ * TEKSTINÄ — harvennetut kapiteelit, erottimena välipiste " · " kuten
+ * alarivissä, EI väripalloja; valittu otsikko erottuu vain ohuella
+ * alleviivauksella aiheen omassa --sym-sävyssä.
  *
- *   - "paneeli on maan laatikon ETELÄREUNAN ULKOPUOLELLA kartalla"
- *     (PÄÄTÖKSET 2 kohta 2) — paneeli ei ole enää kartalla lainkaan.
- *   - "paneeli skaalautuu kuin painettu kartta (lähempänä leveämpi)"
- *     (PÄÄTÖKSET 9 kohta 4) — juuri tämä on nyt KIELLETTY.
- *   - vastakoe B `?maapaneeli=nurkka` mittasi eroa kartta-ankkurin ja
- *     nurkan välillä; nurkka on nyt oletus, joten vastakoe mittaa nyt
- *     päinvastaista asiaa (ks. alempana).
+ * KUMOUTUNEET VARTIOT (erät 3–19, tässä samassa tiedostossa):
+ *
+ *   - "kortin korkeus on 22 % ruudun korkeudesta" ja sen vastakoe E
+ *     (nurkan katot 10 % / 28 %) — kalusteella ei ole enää laatikkoa
+ *     eikä `nurkanSkaala`-mittakaavaa, joten korkeus on sen sisältö.
+ *   - "valikko aukeaa plussan paikalle ylös KAHTEEN SARAKKEESEEN" —
+ *     plus-nappi on poistettu ja otsikot ovat kahdella VAAKARIVILLÄ.
+ *   - "valikon värit ovat kartan omia --sym-sävyjä" väripalloina —
+ *     palloja ei ole; väri on vain valitun otsikon alleviivauksessa.
  *
  * Väitteet:
  *
- *   1. PANEELI ON RUUDUN VASEMMASSA ALAKULMASSA JA KOKONAAN RUUDULLA
- *      (390 ja 1400 px), ja sen korkeus on 22 % ruudun korkeudesta
- *      (± 2 %-yksikköä) — omistajan päätös 15.9.2026 illalla:
- *      "maainfo ALKUPERÄISEEN LUETTAVAAN KOKOON". Erän 19 ensimmäinen
- *      ≤ 10 % -katto KUMOUTUI: sillä kortin leipäteksti oli ruudulla
- *      3,6 px eikä sitä voinut lukea.
- *   2. PANEELI EI LIIKU EIKÄ KASVA ZOOMATESSA. Kortin vasen alakulma
- *      ja koko mitataan kahdella zoomilla: erot ≤ 1 px. VASTAKOE on
- *      kartan oma kaluste (kaupungin nimikyltti), jonka ON liikuttava
- *      samassa zoomissa — muuten mittaus ei mittaa mitään.
- *   3. VALIKKO AUKEAA PLUSSAN PAIKALLE JA KASVAA YLÖS KAHDESSA
- *      SARAKKEESSA. Valikon alareuna on kortin yläreunan tasalla tai
- *      sen yläpuolella, sarakkeita on ≥ 2, rivien pystyväli on
- *      ≤ 1,5 × rivin korkeus, ja koko valikko on ruudulla.
- *   4. JOKAINEN OTSIKKO AVAA OMAN SIVUNSA (ennallaan).
- *   5. VÄRIT OVAT KARTAN OMAT (ennallaan).
- *   6. LIIKU ON KUULTAVA SANA RUUDUN ALAREUNAN KESKELLÄ (PÄÄTÖKSET 28
- *      kohta 3): keskipiste ±8 px ruudun keskilinjalta, taustan alpha
- *      0, sana näkyy, osuma-ala ≥ 32 × 32, sana on KOKONAAN RUUDULLA
- *      ja ruudun alemmassa puoliskossa, eikä se osu paneeliin, pulun
- *      nappiin, matkapäiväkirjan lappuun eikä kaupunkikorttiin. 390
- *      px:n ruudulla iso paneeli yltää keskilinjalle, jolloin sana
- *      NOUSEE paneelin yläreunan tasalle (--liiku-pohja) mutta pysyy
- *      keskellä vaakasuunnassa.
+ *   1. LEVOSSA VAIN NIMI, VIIVA JA ALARIVI — EI TAUSTAA. Kaluste on
+ *      ruudun vasemmassa alakulmassa ja kokonaan ruudulla; näkyviä
+ *      tekstirivejä on TÄSMÄLLEEN kaksi (nimi ja alarivi) ja niiden
+ *      välissä viiva; perustiedot ja otsikot ovat piilossa;
+ *      plus-nappia (.maapaneeli-lisaa) EI OLE; jokaisen osan laskettu
+ *      taustaväri on alpha 0, taustakuva `none`, `box-shadow` `none` ja
+ *      reunus 0 px.
+ *   2. NAPAUTUS NIMEEN AVAA, UUSI SULKEE. Auki: kategoriaotsikot
+ *      KAHDELLA rivillä (mitattuja y-rivejä ≤ 2), perustiedot niiden
+ *      ALAPUOLELLA ja nimen YLÄPUOLELLA, kaikki kokonaan ruudulla ja
+ *      yhä ilman taustaa. Toinen napautus palauttaa levon.
+ *   3. KAIKKI SAMALLA FONTILLA (omistajan sana): nimi, alarivi,
+ *      perustiedot ja otsikot jakavat saman `font-family`n.
+ *   4. OTSIKOT OVAT PELKKÄÄ TEKSTIÄ (TARKENNUS 3): väripallo-
+ *      elementtejä 0 kpl, erottimet ovat välipisteitä " · ",
+ *      otsikot ovat kapiteeleja ja harvennettuja (letter-spacing
+ *      ≥ 0,1 em).
+ *   5. KALUSTE EI LIIKU EIKÄ KASVA ZOOMATESSA (nurkka ja koko ±1 px).
+ *      VASTAKOE C: kartan oma piste, jonka ON liikuttava.
+ *   6. RULLA MENEE KALUSTEEN LÄPI KARTALLE (PÄÄTÖKSET 21): ctrl-rulla
+ *      kalusteen päältä muuttaa kameran korkeutta saman verran kuin
+ *      SAMASTA pisteestä ilman kalustetta (suhde 1,0 ± 10 %).
+ *   7. JOKAINEN OTSIKKO AVAA OMAN SIVUNSA (ennallaan).
+ *   8. LIIKU ON KUULTAVA SANA RUUDUN ALAREUNAN KESKELLÄ (PÄÄTÖKSET 28
+ *      kohta 3) eikä osu kalusteeseen — ei levossa eikä avattuna.
+ *      Avattuna kaluste yltää 390 px:n ruudulla keskilinjalle, jolloin
+ *      sana NOUSEE sen yläreunan tasalle (--liiku-pohja).
  *
  * === VASTAKOKEET (pakolliset) ======================================
  *
- *   A. MAA ILMAN MAA_KATEGORIAT-RIVIÄ. Paneeli on yhä nurkassa,
- *      Lisää-nappia EI ole, valikko ei aukea eikä sivulle tule
- *      virhettä.
- *   B. `?maapaneeli=nurkka` PURKAA PANEELIN KOKONAAN (js/fokusmitat.js
+ *   A. MAA ILMAN MAA_KATEGORIAT-RIVIÄ. Kaluste on yhä nurkassa, mutta
+ *      otsikkorivejä ei ole eikä sivulle tule virhettä.
+ *   B. `?maapaneeli=nurkka` PURKAA KALUSTEEN KOKONAAN (js/fokusmitat.js
  *      MAAPANEELI_KARTASSA = false → vanha kartuutsi-nurkkataulu).
- *      Väitteen 1 ON kaaduttava: korttia ei ole.
- *   C. KARTAN KALUSTE LIIKKUU. Nimikyltin mittaus samalla zoomilla
- *      kuin väite 2 — sen ON muututtava, tai "ei liiku" ei todista
- *      mitään.
- *   D. PULUN NAPPI EI OLE KESKELLÄ. Väitteen 6 keskitysmitta ajetaan
+ *      Väitteen 1 ON kaaduttava: kalustetta ei ole.
+ *   C. KARTAN KALUSTE LIIKKUU. Pariisin karttapiste samalla zoomilla
+ *      kuin väite 5 — sen ON muututtava.
+ *   D. PULUN NAPPI EI OLE KESKELLÄ. Väitteen 8 keskitysmitta ajetaan
  *      `.pollo-nappi`iin; sen ON kaaduttava.
- *   E. PIENI KOKO TAKAISIN (nurkan katot 10 % / 28 %, erän 19
- *      ensimmäinen mitoitus). Väitteen 1 koko-osan ON kaaduttava.
+ *   E. LAATIKKO TAKAISIN. Palvelin maalaa kalusteelle kermapohjan,
+ *      reunuksen ja varjon. Väitteen 1 TAUSTAOSAN ON kaaduttava.
  *   F. LIIKU EI VÄISTÄ. `bottom: max(…, var(--liiku-pohja))`
- *      palautetaan perusväliksi; sanan ON osuttava paneeliin 390
- *      px:n ruudulla, tai väistö ei todista mitään.
+ *      palautetaan perusväliksi; sanan ON osuttava AVATTUUN
+ *      kalusteeseen 390 px:n ruudulla, tai väistö ei todista mitään.
  *
  * === VERKKO ========================================================
  *
@@ -99,14 +107,14 @@ const TYYPIT = {
  */
 let poistaKategoriat = null;
 /*
- * VASTAKOKEIDEN KYTKIN (erä 19b, omistajan päätös 15.9.2026 illalla):
+ * VASTAKOKEIDEN KYTKIN:
  *
- *   'PIENI_KOKO'   — nurkan katot palautetaan erän 19 ensimmäiseen
- *                    mitoitukseen (10 % / 28 %, rajat 0,8…1,6).
- *                    KOKOVÄITTEEN ON KAADUTTAVA.
+ *   'LAATIKKO'     — kalusteelle maalataan takaisin kermapohja, reunus
+ *                    ja varjo (erän 19 kortti). VÄITTEEN 1 TAUSTAOSAN
+ *                    ON KAADUTTAVA.
  *   'EI_VAISTOA'   — Liiku-napin `bottom: max(..., var(--liiku-pohja))`
  *                    palautetaan pelkäksi perusväliksi, jolloin sana
- *                    jää ruudun alalaitaan ison paneelin päälle.
+ *                    jää ruudun alalaitaan avatun kalusteen päälle.
  *                    PÄÄLLEKKÄISYYSVÄITTEEN ON KAADUTTAVA.
  */
 let vastakoe = null;
@@ -119,16 +127,12 @@ const palvelin = http.createServer((req, res) => {
     runko = Buffer.concat([runko,
       Buffer.from(`\ndelete MAA_KATEGORIAT[${JSON.stringify(poistaKategoriat)}];\n`)]);
   }
-  if (vastakoe === 'PIENI_KOKO' && polkuOsa.endsWith('/js/pallolauta/maapaneeli.js')) {
-    runko = Buffer.from(runko.toString('utf8')
-      .replace(/MAAPANEELIN_NURKKA_KORKEUS_OSUUS = [\d.]+/,
-        'MAAPANEELIN_NURKKA_KORKEUS_OSUUS = 0.10')
-      .replace(/MAAPANEELIN_NURKKA_LEVEYS_OSUUS = [\d.]+/,
-        'MAAPANEELIN_NURKKA_LEVEYS_OSUUS = 0.28')
-      .replace(/MAAPANEELIN_NURKKA_SKAALA_MIN = [\d.]+/,
-        'MAAPANEELIN_NURKKA_SKAALA_MIN = 0.8')
-      .replace(/MAAPANEELIN_NURKKA_SKAALA_MAX = [\d.]+/,
-        'MAAPANEELIN_NURKKA_SKAALA_MAX = 1.6'));
+  if (vastakoe === 'LAATIKKO' && polkuOsa.endsWith('/css/styles.css')) {
+    runko = Buffer.concat([runko, Buffer.from('\n.maapaneeli-kortti {'
+      + ' background: var(--kerma) !important;'
+      + ' border: 1px solid var(--map-ink) !important;'
+      + ' box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;'
+      + ' padding: 8px 9px !important; }\n')]);
   }
   if (vastakoe === 'EI_VAISTOA' && polkuOsa.endsWith('/css/styles.css')) {
     runko = Buffer.from(runko.toString('utf8').replace(
@@ -275,7 +279,16 @@ async function avaaPeli({ leveys, korkeus, lisaparametrit = '' }) {
         + ' { display: flex !important; }'
         + ' .fokusvirta-isokuva, .fokusvirta-luentakuva,'
         + ' .fokusvirta-luentakuva-ankkuri, .fokusvirta-luentateksti'
-        + ' { display: none !important; }',
+        + ' { display: none !important; }'
+        /*
+         * LUENNAN HUNTU POIS MYÖS. `body.luenta-huntu .map-pane::after`
+         * (css/fokusvirta.css) sumentaa ja tummentaa koko karttaruudun
+         * luennan ajaksi — ja headless-ajossa kertoja ei koskaan
+         * vaikene, joten huntu jää päälle. Se peittää myös kalusteen,
+         * eikä mittaus (tai kuva) kertoisi kalusteen omasta ulkoasusta
+         * mitään. Huntu on OMA vartionsa (savuke-pulun-kuvat).
+         */
+        + ' body.luenta-huntu .map-pane::after { display: none !important; }',
     });
     await sivu.waitForFunction(() => {
       const n = document.querySelector('.toimintorivi .monitoimi-nappi');
@@ -322,10 +335,12 @@ const odotaAsettunut = async (sivu, aikaaMs = 12000) => {
 };
 
 /**
- * Yksi mittaus: kortti, valikko, Liiku ja kartan oma vertailukaluste.
+ * Yksi mittaus: kaluste, sen osat, otsikot, Liiku ja kartan oma
+ * vertailupiste.
  *
- * KAIKKI LUETAAN LIVENÄ RUUDUN PIKSELEINÄ. Kortti ei ole enää kartan
- * datum (erä 19), joten mitään ei projisoida — mitataan vain se, mitä
+ * KAIKKI LUETAAN LIVENÄ RUUDUN PIKSELEINÄ. Kaluste ei ole kartan datum
+ * (erä 19) eikä enää skaalattu kortti (erä 20), joten mitään ei
+ * projisoida eikä kerrota mittakaavalla — mitataan vain se, mitä
  * pelaaja näkee.
  */
 const mittaaPaneeli = (sivu) => sivu.evaluate(() => {
@@ -336,29 +351,101 @@ const mittaaPaneeli = (sivu) => sivu.evaluate(() => {
       x0: r.left, y0: r.top, x1: r.right, y1: r.bottom, w: r.width, h: r.height,
     } : null;
   };
-  const kortti = document.querySelector('.maapaneeli-kortti');
-  const r = kortti?.getBoundingClientRect() ?? null;
+  const kaluste = document.querySelector('.maapaneeli-kortti');
+  const r = kaluste?.getBoundingClientRect() ?? null;
   const kotelo = l.kotelo.getBoundingClientRect();
-  const valikko = document.querySelector('.maapaneeli-valikko');
-  const rivit = [...document.querySelectorAll('.maapaneeli-valikko:not([hidden]) .maapaneeli-aihe')]
-    .map((n) => {
-      const k = n.getBoundingClientRect();
-      return { x: k.left, y: k.top, w: k.width, h: k.height };
-    });
+
   /*
-   * SARAKKEET JA RIVIVÄLI LUETAAN RIVIEN LAATIKOISTA. Sarake = eri
-   * x-alku (2 px:n tarkkuudella); pystyväli = saman sarakkeen
-   * peräkkäisten rivien ylälaitojen etäisyys.
+   * POHJATTOMUUS MITATAAN LASKETUSTA TYYLISTÄ, EI LÄHDEKOODISTA.
+   * Jokainen osa erikseen: jos vaikka valikko saisi laatikon takaisin,
+   * kalusteen runko ei sitä kertoisi.
    */
-  const sarakkeet = [...new Set(rivit.map((k) => Math.round(k.x / 2)))].length;
-  const ensimmainen = rivit.length ? Math.round(rivit[0].x / 2) : null;
-  const sama = rivit.filter((k) => Math.round(k.x / 2) === ensimmainen)
-    .sort((a, b) => a.y - b.y);
-  let rivivali = null;
-  for (let i = 1; i < sama.length; i += 1) {
-    const d = sama[i].y - sama[i - 1].y;
-    if (rivivali == null || d > rivivali) rivivali = d;
-  }
+  const pohja = (q) => {
+    const e = document.querySelector(q);
+    if (!e) return null;
+    const t = getComputedStyle(e);
+    return {
+      tausta: t.backgroundColor,
+      kuva: t.backgroundImage,
+      varjo: t.boxShadow,
+      reunus: `${t.borderTopWidth} ${t.borderRightWidth} `
+        + `${t.borderBottomWidth} ${t.borderLeftWidth}`,
+    };
+  };
+  const OSAT = ['.maapaneeli-kortti', '.maapaneeli-avain', '.maapaneeli-sisus',
+    '.maapaneeli-valikko', '.maapaneeli-rivit', '.maapaneeli-aihe'];
+  const pohjat = Object.fromEntries(OSAT.map((q) => [q, pohja(q)]));
+
+  const nakyy = (q) => {
+    const e = document.querySelector(q);
+    if (!e) return false;
+    const k = e.getBoundingClientRect();
+    return k.width > 0 && k.height > 0;
+  };
+  /* Näkyvät tekstirivit: eri y-alkukohdat kalusteen sisällä. */
+  const tekstisolmut = kaluste
+    ? [...kaluste.querySelectorAll('.maapaneeli-nimi-suomi, .maapaneeli-alarivi,'
+      + ' .maapaneeli-otsikko, .maapaneeli-arvo, .maapaneeli-aihe')]
+      .filter((e) => {
+        const k = e.getBoundingClientRect();
+        return k.width > 0 && k.height > 0;
+      })
+    : [];
+  const tekstirivit = [...new Set(tekstisolmut.map((e) => Math.round(
+    e.getBoundingClientRect().top / 2,
+  )))].length;
+
+  const otsikkoSolmut = [...document.querySelectorAll(
+    '.maapaneeli-valikko:not([hidden]) .maapaneeli-aihe',
+  )];
+  const otsikot = otsikkoSolmut.map((n) => {
+    const k = n.getBoundingClientRect();
+    const t = getComputedStyle(n);
+    return {
+      id: n.dataset.aihe,
+      nimi: n.querySelector('.maapaneeli-aihe-nimi')?.textContent ?? '',
+      x: k.left, y: k.top, w: k.width, h: k.height,
+      perhe: t.fontFamily,
+      koko: parseFloat(t.fontSize),
+      harvennus: parseFloat(t.letterSpacing) / (parseFloat(t.fontSize) || 1),
+      kapiteeli: t.textTransform,
+      valittu: n.classList.contains('on'),
+      alleviivaus: getComputedStyle(n.querySelector('.maapaneeli-aihe-nimi')).borderBottomColor,
+    };
+  });
+  // Otsikkorivi = eri y-alku (2 px:n tarkkuudella).
+  const otsikkorivit = [...new Set(otsikot.map((k) => Math.round(k.y / 2)))].length;
+  const erottimet = [...document.querySelectorAll('.maapaneeli-erotin')]
+    .map((n) => (n.textContent ?? '').trim());
+  const pallot = document.querySelectorAll(
+    '.maapaneeli-aihe-merkki, .valikko-pallo, .maapaneeli-valikko svg',
+  ).length;
+
+  const perheet = {
+    nimi: nakyy('.maapaneeli-nimi-suomi')
+      ? getComputedStyle(document.querySelector('.maapaneeli-nimi-suomi')).fontFamily : null,
+    alarivi: document.querySelector('.maapaneeli-nimi-oma')
+      ? getComputedStyle(document.querySelector('.maapaneeli-nimi-oma')).fontFamily : null,
+    otsikko: document.querySelector('.maapaneeli-otsikko')
+      ? getComputedStyle(document.querySelector('.maapaneeli-otsikko')).fontFamily : null,
+    arvo: document.querySelector('.maapaneeli-arvo')
+      ? getComputedStyle(document.querySelector('.maapaneeli-arvo')).fontFamily : null,
+    aihe: otsikot.length ? otsikot[0].perhe : null,
+  };
+  const koot = {
+    nimi: document.querySelector('.maapaneeli-nimi-suomi')
+      ? getComputedStyle(document.querySelector('.maapaneeli-nimi-suomi')).fontSize : null,
+    harvennus: document.querySelector('.maapaneeli-nimi-suomi')
+      ? getComputedStyle(document.querySelector('.maapaneeli-nimi-suomi')).letterSpacing : null,
+    alarivi: document.querySelector('.maapaneeli-nimi-oma')
+      ? getComputedStyle(document.querySelector('.maapaneeli-nimi-oma')).fontSize : null,
+    aika: document.querySelector('.maapaneeli-aika')
+      ? getComputedStyle(document.querySelector('.maapaneeli-aika')).fontSize : null,
+    lukurivi: document.querySelector('.maapaneeli-arvo')
+      ? getComputedStyle(document.querySelector('.maapaneeli-arvo')).fontSize : null,
+    otsikko: otsikot.length ? `${otsikot[0].koko}px` : null,
+  };
+
   const nappi = document.querySelector('.toimintorivi .monitoimi-nappi');
   const nr = nappi?.getBoundingClientRect() ?? null;
   const tyyli = nappi ? getComputedStyle(nappi) : null;
@@ -373,39 +460,45 @@ const mittaaPaneeli = (sivu) => sivu.evaluate(() => {
     ? { x0: r.left, y0: r.top, x1: r.right, y1: r.bottom, w: r.width, h: r.height }
     : null;
   return {
-    onKortti: Boolean(kortti),
+    onKortti: Boolean(kaluste),
     kortti: korttiLaatikko,
+    avain: laatikko('.maapaneeli-avain'),
+    nimi: laatikko('.maapaneeli-nimi-suomi'),
+    viiva: laatikko('.maapaneeli-viiva'),
+    alarivi: laatikko('.maapaneeli-alarivi'),
+    perustiedot: nakyy('.maapaneeli-rivit') ? laatikko('.maapaneeli-rivit') : null,
+    perustietoja: document.querySelectorAll('.maapaneeli-rivit dt').length,
+    plussia: document.querySelectorAll('.maapaneeli-lisaa').length,
+    kehyksia: document.querySelectorAll('.maapaneeli-kehys').length,
+    tekstirivit,
+    pohjat,
+    perheet,
+    koot,
     kotelo: {
       w: kotelo.width, h: kotelo.height, x0: kotelo.left, y0: kotelo.top,
       x1: kotelo.right, y1: kotelo.bottom,
     },
     ruutu: { w: globalThis.innerWidth, h: globalThis.innerHeight },
-    skaala: l.maapaneeli?.mitat?.()?.skaala ?? null,
     korkeus: l.pallo.pointOfView()?.altitude ?? null,
-    valikkoAuki: Boolean(valikko && !valikko.hidden),
-    valikko: valikko && !valikko.hidden ? laatikko('.maapaneeli-valikko') : null,
-    rivit: rivit.length,
-    sarakkeet,
-    rivivali,
-    rivinKorkeus: rivit.length ? rivit[0].h : null,
+    valikkoAuki: Boolean(l.maapaneeli?.valikkoAuki?.()),
+    valikko: nakyy('.maapaneeli-valikko') ? laatikko('.maapaneeli-valikko') : null,
+    otsikot,
+    otsikkorivit,
+    erottimet,
+    pallot,
     /*
      * VASTAKOE C: kartan oma piste, jonka ON liikuttava zoomatessa.
-     * Pariisin ruutukoordinaatti pallon omalla projektiolla — DOM-
-     * merkki ei kelpaa vertailuun, koska kerros voi ladata merkkinsä
-     * uudestaan zoomin jälkeen (mitattu: `.pallolauta-nimi` katosi).
+     * Pariisin ruutukoordinaatti pallon omalla projektiolla — DOM-merkki
+     * ei kelpaa vertailuun, koska kerros voi ladata merkkinsä uudestaan.
      */
     karttapiste: (() => {
       const pp = l.pallo.getScreenCoords(48.8566, 2.3522, 0);
       return pp ? { x0: pp.x, y0: pp.y } : null;
     })(),
     /*
-     * Väite 6 ja vastakoe D.
-     *
-     * NOLLAN KOKOINEN LAATIKKO EI OLE MITTA (erä 19b). Luennan ajaksi
-     * nappi on `display: none`, jolloin se löytyy DOM:sta mutta sen
-     * ruutulaatikko on pelkkiä nollia — silloin mittausta EI ole, ja
-     * `liiku: null` kertoo sen suoraan väitteen viestissä sen sijaan
-     * että väite kaatuisi kuin napissa olisi vika.
+     * Väite 8 ja vastakoe D. NOLLAN KOKOINEN LAATIKKO EI OLE MITTA:
+     * luennan ajaksi nappi on `display: none`, jolloin se löytyy DOM:sta
+     * mutta sen ruutulaatikko on pelkkiä nollia.
      */
     liiku: nr && nr.width > 0 && nr.height > 0 ? {
       laatikko: napinLaatikko,
@@ -420,22 +513,8 @@ const mittaaPaneeli = (sivu) => sivu.evaluate(() => {
       osuuLappuun: osuu(napinLaatikko, laatikko('.fact-card')),
       osuuKaupunkikorttiin: osuu(napinLaatikko, laatikko('.kaupunkikortti')),
     } : null,
-    /* ERÄ 19b: Liikun väistömuuttuja ja kortin tekstikoot ruudulla. */
     liikuPohja: getComputedStyle(document.documentElement)
       .getPropertyValue('--liiku-pohja').trim(),
-    tekstit: {
-      nimi: document.querySelector('.maapaneeli-nimi-suomi')
-        ? getComputedStyle(document.querySelector('.maapaneeli-nimi-suomi')).fontSize : null,
-      otsikko: document.querySelector('.maapaneeli-otsikko')
-        ? getComputedStyle(document.querySelector('.maapaneeli-otsikko')).fontSize : null,
-      aihe: document.querySelector('.maapaneeli-aihe')
-        ? getComputedStyle(document.querySelector('.maapaneeli-aihe')).fontSize : null,
-    },
-    /*
-     * TEKSTIKOKO ON KORTIN YKSIKKÖ × SKAALA, koska kortti on
-     * `transform: scale()`attu — getComputedStyle antaa yksikön, ei
-     * ruutupikseliä. Ruutukoko lasketaan raportissa skaalalla.
-     */
     pollonPoikkeama: (() => {
       const k = document.querySelector('.pollo-nappi')?.getBoundingClientRect();
       return k ? Math.abs((k.left + k.width / 2) - globalThis.innerWidth / 2) : null;
@@ -445,6 +524,37 @@ const mittaaPaneeli = (sivu) => sivu.evaluate(() => {
       && !document.querySelector('.fokusmitat')?.hidden),
   };
 });
+
+/** Onko laskettu taustaväri läpinäkyvä? */
+const lapinakyva = (arvo) => /rgba\([^)]*,\s*0\)/.test(String(arvo))
+  || String(arvo) === 'transparent';
+
+/** Onko yksi osa täysin pohjaton (tausta, kuva, varjo, reunus)? */
+const pohjaton = (o) => Boolean(o && lapinakyva(o.tausta) && o.kuva === 'none'
+  && o.varjo === 'none' && /^0px 0px 0px 0px$/.test(o.reunus));
+
+/** Kaikki mitatut osat pohjattomia? */
+const kaikkiPohjattomia = (pohjat) => Object.values(pohjat)
+  .filter(Boolean).every(pohjaton);
+
+/*
+ * NAPAUTUS ON RUUTUPISTE, EI `page.click(valitsin)`.
+ *
+ * Kaluste on `pointer-events: none` (PÄÄTÖKSET 21), joten Playwrightin
+ * valitsinnapautus jäisi odottamaan osumaa ikuisesti. Napautus tehdään
+ * siis samalla tavalla kuin sormella: ruudun koordinaatteihin. Juuri
+ * se onkin mitattava asia — osumatestin on poimittava napautus,
+ * vaikka osumakohde on kartta.
+ */
+const napautaKohtaa = async (sivu, laatikko) => {
+  if (!laatikko) return false;
+  await sivu.mouse.click(
+    Math.round(laatikko.x0 + laatikko.w / 2),
+    Math.round(laatikko.y0 + laatikko.h / 2),
+  );
+  await sivu.waitForTimeout(400);
+  return true;
+};
 
 /** Zoom sisään: sama keskipiste, puolet korkeudesta. */
 const zoomaaSisaan = (sivu, kerroin) => sivu.evaluate(async (k) => {
@@ -456,33 +566,71 @@ const zoomaaSisaan = (sivu, kerroin) => sivu.evaluate(async (k) => {
   await new Promise((v) => setTimeout(v, 400));
 }, kerroin);
 
+/*
+ * VÄITE 6: CTRL-RULLA MENEE KALUSTEEN LÄPI (PÄÄTÖKSET 21).
+ *
+ * MIKSI CTRL-RULLA: pallon eleissä (js/pallo.js) paljas rulla PANOROI
+ * ja ctrl/cmd-rulla ZOOMAA — ctrl-rulla on myös trackpadin nipistys.
+ * Panorointi kuuntelee kotelon kaappausvaiheessa ja toimisi kalusteen
+ * päälläkin; zoomin ottaa vastaan OrbitControlsin oma kuuntelija
+ * KANKAALLA, joten se jää saamatta, jos kaluste on osumakohde.
+ *
+ * MITTA ON SUHTEELLINEN JA SAMASTA PISTEESTÄ: Globe.gl zoomaa
+ * osoittimen kohtaa kohti, joten vertailu on otettava samasta
+ * ruutupisteestä samalla sivulla — ainoa ero on, onko kaluste siinä.
+ */
+const rullaa = async (sivu, x, y, pykalia = 6) => {
+  const lue = () => sivu.evaluate(
+    () => window.matkakirja.ui.pallolauta.pallo.pointOfView().altitude,
+  );
+  const ennen = await lue();
+  await sivu.keyboard.down('Control');
+  await sivu.mouse.move(x, y);
+  for (let i = 0; i < pykalia; i += 1) {
+    await sivu.mouse.wheel(0, -120); // eslint-disable-line no-await-in-loop
+    await sivu.waitForTimeout(30); // eslint-disable-line no-await-in-loop
+  }
+  await sivu.keyboard.up('Control');
+  await sivu.waitForTimeout(800);
+  const jalkeen = await lue();
+  return { ennen, jalkeen, muutos: ennen - jalkeen };
+};
+
+/** Kamera takaisin saapumisnäkymään mittausten väliin. */
+const palautaNakyma = async (sivu) => {
+  await sivu.evaluate(async () => {
+    await window.matkakirja.ui.pallolauta.saavu?.({ kesto: 0 });
+  }).catch(() => {});
+  await sivu.waitForTimeout(1200).catch(() => {});
+};
+
 /* ==================== PÄÄAJO: 390 px ja 1400 px ==================== */
 
 /*
  * `sivuvara` ja `ylavara` ovat KUVAN rajaus, eivät mittaus: rajaus
- * jättää kuvaan ruudun vasemman alakulman paneeleineen.
+ * jättää kuvaan ruudun vasemman alakulman kalusteineen.
  */
 const RUUDUT = [
-  { nimi: '390', leveys: 390, korkeus: 844, sivuvara: 90, ylavara: 200 },
-  { nimi: '1400', leveys: 1400, korkeus: 900, sivuvara: 120, ylavara: 200 },
+  { nimi: '390', leveys: 390, korkeus: 844, sivuvara: 60, ylavara: 120 },
+  { nimi: '1400', leveys: 1400, korkeus: 900, sivuvara: 120, ylavara: 160 },
 ];
 
 /*
- * Paneelin nurkka-marginaali on erästä 19b alkaen RUUDUN suhteen
- * (css .maapaneeli-nurkka .pallolauta-maapaneeli, `position: fixed`,
- * var(--gap) + 0,4rem + 1px ≈ 14,6 px). Vara 24 px kattaa myös
- * iPhonen turva-alueen.
+ * Nurkka-marginaali on RUUDUN suhteen (css .maapaneeli-nurkka
+ * .pallolauta-maapaneeli, `position: fixed`, var(--gap) + 0,4rem + 1px
+ * ≈ 14,6 px). Vara 24 px kattaa myös iPhonen turva-alueen.
  */
 const NURKKA_VARA_PX = 24;
 
-const sijaintiOk = [];
+const levossaOk = [];
+const avautuuOk = [];
+const fonttiOk = [];
+const tekstiOtsikotOk = [];
 const paikallaanOk = [];
 const kalusteLiikkui = [];
-const valikkoOk = [];
+const lapiOk = [];
 const liikuOk = [];
 const otsikkoTulokset = [];
-let variVirheita = 0;
-let variRiveja = 0;
 let paaVirheet = [];
 
 for (const ruutu of RUUDUT) {
@@ -491,70 +639,54 @@ for (const ruutu of RUUDUT) {
   vaadi(`pallolauta aukesi (${ruutu.nimi} px)`, auki, virheet.join(' | '));
   if (!auki) { /* eslint-disable-next-line no-await-in-loop */ await ctx.close(); continue; }
 
-  /* --- 1. paikka: ruudun vasen alakulma --------------------------- */
-  // Ruutu asettuu ensin: kesken asettuva kotelo siirtäisi korttia (erä 19b).
+  /* --- 1. levossa vain nimi, viiva ja alarivi, ei taustaa ---------- */
   // eslint-disable-next-line no-await-in-loop
   await odotaAsettunut(sivu);
   // eslint-disable-next-line no-await-in-loop
-  const ulko = await mittaaPaneeli(sivu);
-  const ruudulla = Boolean(ulko.kortti
-    && ulko.kortti.y0 >= -1 && ulko.kortti.y1 <= ulko.ruutu.h + 1
-    && ulko.kortti.x0 >= -1 && ulko.kortti.x1 <= ulko.ruutu.w + 1);
-  /*
-   * NURKKA MITATAAN RUUDUSTA, EI KARTTARUUDUSTA (erä 19b). Kortti on
-   * `position: fixed` eli ruudun vasemmassa alakulmassa; karttaruudun
-   * oma laatikko elää saapumisen aikana eikä kelpaa ankkuriksi.
-   */
-  const nurkassa = Boolean(ulko.kortti
-    && ulko.kortti.x0 <= NURKKA_VARA_PX
-    && ulko.ruutu.h - ulko.kortti.y1 <= NURKKA_VARA_PX);
-  /*
-   * ERÄ 19b: KORKEUS ON 22 % RUUDUSTA (± 2 %-yksikköä), EI 10 %.
-   * Omistajan päätös 15.9.2026 illalla: maainfo alkuperäiseen
-   * LUETTAVAAN kokoon — 10 %:n katto kumoutuu tämän paneelin osalta.
-   * Vara on ± 2 %-yksikköä, koska kerroin voi tulla leveysrajasta
-   * (58 % ruudun leveydestä) hyvin kapealla ruudulla.
-   */
-  const osuus = ulko.kortti ? ulko.kortti.h / ulko.ruutu.h : 0;
-  /*
-   * 20…24 % ON OIKEA HAARUKKA EIKÄ HÖLLENNYS (mitattu 16.9.2026).
-   * 390 px:n ruudulla sitova raja on LEVEYS (0,58 × 390 / 104 =
-   * 2,175) eikä korkeus (0,22 × 844 / 82 = 2,264), joten kortin
-   * korkeus on 21,1 % eikä tasan 22 %. Se on kaavan oikea tulos, ei
-   * poikkeama: kapealla ruudulla kortti ei saa levitä yli 58 %:n
-   * leveydestä. 1400 px:llä korkeusraja sitoo ja osuus on 22,0 %.
-   */
-  const luettava = osuus >= 0.20 && osuus <= 0.24;
-  sijaintiOk.push({
+  const lepo = await mittaaPaneeli(sivu);
+  const ruudulla = Boolean(lepo.kortti
+    && lepo.kortti.y0 >= -1 && lepo.kortti.y1 <= lepo.ruutu.h + 1
+    && lepo.kortti.x0 >= -1 && lepo.kortti.x1 <= lepo.ruutu.w + 1);
+  const nurkassa = Boolean(lepo.kortti
+    && lepo.kortti.x0 <= NURKKA_VARA_PX
+    && lepo.ruutu.h - lepo.kortti.y1 <= NURKKA_VARA_PX);
+  const viivaOk = Boolean(lepo.viiva && lepo.viiva.h >= 0.5 && lepo.viiva.w > 0
+    && lepo.nimi && lepo.alarivi
+    && lepo.viiva.y0 >= lepo.nimi.y1 - 1 && lepo.viiva.y1 <= lepo.alarivi.y0 + 1);
+  const levossaHyva = Boolean(lepo.onKortti && nurkassa && ruudulla && viivaOk
+    && lepo.tekstirivit === 2
+    && !lepo.perustiedot && !lepo.valikko
+    && lepo.plussia === 0 && lepo.kehyksia === 0
+    && kaikkiPohjattomia(lepo.pohjat));
+  levossaOk.push({
     ruutu: ruutu.nimi,
-    ok: nurkassa && ruudulla && luettava,
+    ok: levossaHyva,
     nurkassa,
     ruudulla,
-    luettava,
-    osuus: Number(osuus.toFixed(4)),
+    viivaOk,
+    tekstirivit: lepo.tekstirivit,
+    plussia: lepo.plussia,
+    pohjaton: kaikkiPohjattomia(lepo.pohjat),
   });
-  tieto(`${ruutu.nimi} px · uloin zoomi`,
-    `kortti ${ulko.kortti ? `${Math.round(ulko.kortti.w)} x ${Math.round(ulko.kortti.h)} px `
-      + `(x ${Math.round(ulko.kortti.x0)}…${Math.round(ulko.kortti.x1)}, `
-      + `y ${Math.round(ulko.kortti.y0)}…${Math.round(ulko.kortti.y1)})` : 'EI OLE'}, `
-    + `vasen väli ruudusta ${ulko.kortti ? ulko.kortti.x0.toFixed(1) : '—'} px, `
-    + `ala väli ruudusta ${ulko.kortti ? (ulko.ruutu.h - ulko.kortti.y1).toFixed(1) : '—'} px, `
-    + `osuus ruudun korkeudesta `
-    + `${ulko.kortti ? ((100 * ulko.kortti.h) / ulko.ruutu.h).toFixed(1) : '—'} %, `
-    + `skaala ${ulko.skaala?.toFixed(3) ?? '—'}, korkeus ${ulko.korkeus?.toFixed(4) ?? '—'}`);
+  tieto(`${ruutu.nimi} px · levossa`,
+    `kaluste ${lepo.kortti ? `${Math.round(lepo.kortti.w)} x ${Math.round(lepo.kortti.h)} px `
+      + `(x ${Math.round(lepo.kortti.x0)}…${Math.round(lepo.kortti.x1)}, `
+      + `y ${Math.round(lepo.kortti.y0)}…${Math.round(lepo.kortti.y1)})` : 'EI OLE'}, `
+    + `tekstirivejä ${lepo.tekstirivit}, viiva `
+    + `${lepo.viiva ? `${Math.round(lepo.viiva.w)} x ${lepo.viiva.h.toFixed(1)} px` : '—'}, `
+    + `plussia ${lepo.plussia}, kehyksiä ${lepo.kehyksia}, `
+    + `vasen väli ${lepo.kortti ? lepo.kortti.x0.toFixed(1) : '—'} px, `
+    + `ala väli ${lepo.kortti ? (lepo.ruutu.h - lepo.kortti.y1).toFixed(1) : '—'} px`);
+  tieto(`${ruutu.nimi} px · pohjattomuus`, JSON.stringify(lepo.pohjat));
+  tieto(`${ruutu.nimi} px · typografia`,
+    `nimi ${lepo.koot.nimi} (harvennus ${lepo.koot.harvennus}), `
+    + `alarivi ${lepo.koot.alarivi}, valtiomuoto ${lepo.koot.aika}`);
 
-  /* --- 6. Liiku: kuultava sana alareunan keskellä ------------------ */
-  const liiku = ulko.liiku;
-  /*
-   * ERÄ 19b: SANA ON YHÄ ALHAALLA JA KOKONAAN RUUDULLA. Väistö nostaa
-   * sanaa vain sen verran kuin paneeli vaatii — mitattu 16.9.2026:
-   * ilman tätä vartiota virheellinen väistömitta (978 px kesken
-   * asettuvasta ruudusta) vei sanan ruudun yläpuolelle, ja kaikki muut
-   * vartiot menivät silti läpi.
-   */
+  /* --- 8a. Liiku levossa ------------------------------------------ */
+  const liiku = lepo.liiku;
   const liikuHyva = Boolean(liiku
-    && liiku.laatikko.y0 >= 0 && liiku.laatikko.y1 <= ulko.ruutu.h + 1
-    && liiku.laatikko.y0 > ulko.ruutu.h * 0.5
+    && liiku.laatikko.y0 >= 0 && liiku.laatikko.y1 <= lepo.ruutu.h + 1
+    && liiku.laatikko.y0 > lepo.ruutu.h * 0.5
     && liiku.keskipoikkeama <= 8
     && /rgba\([^)]*,\s*0\)/.test(String(liiku.tausta))
     && liiku.reunus === '0px'
@@ -563,160 +695,212 @@ for (const ruutu of RUUDUT) {
     && liiku.laatikko.w >= 32 && liiku.laatikko.h >= 32
     && !liiku.osuuPaneeliin && !liiku.osuuPuluun
     && !liiku.osuuLappuun && !liiku.osuuKaupunkikorttiin);
-  liikuOk.push({ ruutu: ruutu.nimi, ok: liikuHyva, ...liiku });
-  tieto(`${ruutu.nimi} px · Liiku`, liiku
+  tieto(`${ruutu.nimi} px · Liiku levossa`, liiku
     ? `keskipoikkeama ${liiku.keskipoikkeama.toFixed(1)} px, `
       + `laatikko ${Math.round(liiku.laatikko.w)} x ${Math.round(liiku.laatikko.h)}, `
-      + `tausta ${liiku.tausta}, reunus ${liiku.reunus}, sana ${liiku.sana} `
-      + `(peitto ${liiku.sananPeitto}), osumat paneeli ${liiku.osuuPaneeliin} `
-      + `pulu ${liiku.osuuPuluun} lappu ${liiku.osuuLappuun} `
-      + `kaupunkikortti ${liiku.osuuKaupunkikorttiin}`
+      + `tausta ${liiku.tausta}, sana ${liiku.sana} (peitto ${liiku.sananPeitto}), `
+      + `osuu kalusteeseen ${liiku.osuuPaneeliin}, --liiku-pohja `
+      + `${lepo.liikuPohja || '(ei asetettu)'}`
     : 'EI OLE');
-  tieto(`${ruutu.nimi} px · Liikun väistö`,
-    `--liiku-pohja ${ulko.liikuPohja || '(ei asetettu)'}, `
-    + `napin alareuna ruudun alareunasta `
-    + `${liiku ? Math.round(ulko.ruutu.h - liiku.laatikko.y1) : '—'} px, `
-    + `kortin yläreuna ruudun alareunasta `
-    + `${ulko.kortti ? Math.round(ulko.ruutu.h - ulko.kortti.y0) : '—'} px`);
-  tieto(`${ruutu.nimi} px · tekstikoot ruudulla`,
-    `maan nimi ${ulko.tekstit?.nimi ?? '—'}, lukurivin otsikko `
-    + `${ulko.tekstit?.otsikko ?? '—'}, valikon rivi ${ulko.tekstit?.aihe ?? '—'}`);
-  tieto(`${ruutu.nimi} px · vastakoe D (pulun nappi keskellä?)`,
-    `poikkeama ${ulko.pollonPoikkeama == null ? '—' : ulko.pollonPoikkeama.toFixed(1)} px`);
 
-  if (KUVAKANSIO && ulko.kortti) {
+  if (KUVAKANSIO && lepo.kortti) {
     // eslint-disable-next-line no-await-in-loop
     await sivu.evaluate(() => window.matkakirja.ui.asetaPaivakirjanKoko(true));
     // eslint-disable-next-line no-await-in-loop
     await sivu.waitForTimeout(500);
-    const x = Math.max(0, Math.round(ulko.kortti.x0 - ruutu.sivuvara));
-    const y = Math.max(0, Math.round(ulko.kortti.y0 - ruutu.ylavara));
+    const x = Math.max(0, Math.round(lepo.kortti.x0 - ruutu.sivuvara));
+    const y = Math.max(0, Math.round(lepo.kortti.y0 - ruutu.ylavara));
     // eslint-disable-next-line no-await-in-loop
     await sivu.screenshot({
-      path: join(KUVAKANSIO, `maainfo-alakulma-${ruutu.nimi}.png`),
+      path: join(KUVAKANSIO, `maainfo-vanha-${ruutu.nimi}-kiinni.png`),
       clip: {
         x,
         y,
-        width: Math.min(ruutu.leveys - x, Math.round(ulko.kortti.w + 2 * ruutu.sivuvara)),
-        height: Math.min(ruutu.korkeus - y, Math.round(ulko.kortti.y1 + 25 - y)),
+        width: Math.min(ruutu.leveys - x, Math.round(lepo.kortti.w + 2 * ruutu.sivuvara)),
+        height: Math.min(ruutu.korkeus - y, Math.round(lepo.kortti.y1 + 25 - y)),
       },
     });
   }
 
-  /* --- 2. ei liiku eikä kasva zoomatessa (vastakoe C) -------------- */
+  /* --- 5. ei liiku eikä kasva zoomatessa (vastakoe C) -------------- */
   // eslint-disable-next-line no-await-in-loop
   await zoomaaSisaan(sivu, 0.5);
   // eslint-disable-next-line no-await-in-loop
   await odotaAsettunut(sivu, 6000);
   // eslint-disable-next-line no-await-in-loop
   const lahi = await mittaaPaneeli(sivu);
-  const paikallaan = Boolean(ulko.kortti && lahi.kortti
-    && Math.abs(lahi.kortti.x0 - ulko.kortti.x0) <= 1
-    && Math.abs(lahi.kortti.y1 - ulko.kortti.y1) <= 1
-    && Math.abs(lahi.kortti.w - ulko.kortti.w) <= 1
-    && Math.abs(lahi.kortti.h - ulko.kortti.h) <= 1);
+  const paikallaan = Boolean(lepo.kortti && lahi.kortti
+    && Math.abs(lahi.kortti.x0 - lepo.kortti.x0) <= 1
+    && Math.abs(lahi.kortti.y1 - lepo.kortti.y1) <= 1
+    && Math.abs(lahi.kortti.w - lepo.kortti.w) <= 1
+    && Math.abs(lahi.kortti.h - lepo.kortti.h) <= 1);
   paikallaanOk.push({ ruutu: ruutu.nimi, ok: paikallaan });
-  const kylttiLiikkui = Boolean(ulko.karttapiste && lahi.karttapiste
-    && (Math.abs(lahi.karttapiste.x0 - ulko.karttapiste.x0) > 1
-      || Math.abs(lahi.karttapiste.y0 - ulko.karttapiste.y0) > 1));
+  const kylttiLiikkui = Boolean(lepo.karttapiste && lahi.karttapiste
+    && (Math.abs(lahi.karttapiste.x0 - lepo.karttapiste.x0) > 1
+      || Math.abs(lahi.karttapiste.y0 - lepo.karttapiste.y0) > 1));
   kalusteLiikkui.push({ ruutu: ruutu.nimi, ok: kylttiLiikkui });
   tieto(`${ruutu.nimi} px · lähempi zoomi`,
-    `kortti ${lahi.kortti ? `${Math.round(lahi.kortti.w)} x ${Math.round(lahi.kortti.h)} px `
+    `kaluste ${lahi.kortti ? `${Math.round(lahi.kortti.w)} x ${Math.round(lahi.kortti.h)} px `
       + `(x ${Math.round(lahi.kortti.x0)}, alareuna y ${Math.round(lahi.kortti.y1)})` : 'EI OLE'}`
-    + `, vastakoe C: Pariisin karttapiste ${ulko.karttapiste
-      ? `${Math.round(ulko.karttapiste.x0)},${Math.round(ulko.karttapiste.y0)} → `
+    + `, vastakoe C: Pariisin karttapiste ${lepo.karttapiste
+      ? `${Math.round(lepo.karttapiste.x0)},${Math.round(lepo.karttapiste.y0)} → `
         + `${Math.round(lahi.karttapiste?.x0 ?? NaN)},${Math.round(lahi.karttapiste?.y0 ?? NaN)}`
       : 'ei pistettä'}`);
 
-  /* --- 3. valikko plussan paikalle ja ylös kahteen sarakkeeseen ---- */
+  /* --- 2. napautus nimeen avaa, uusi sulkee ------------------------ */
   // eslint-disable-next-line no-await-in-loop
   await zoomaaSisaan(sivu, 2); // takaisin uloimpaan
   // eslint-disable-next-line no-await-in-loop
-  await sivu.click('.maapaneeli-lisaa');
-  // eslint-disable-next-line no-await-in-loop
-  await sivu.waitForTimeout(300);
+  await napautaKohtaa(sivu, lepo.avain);
   // eslint-disable-next-line no-await-in-loop
   const auki2 = await mittaaPaneeli(sivu);
-  const valikkoHyva = Boolean(auki2.valikkoAuki && auki2.valikko && auki2.rivit >= 4
-    // Alareuna plussan kohdalla eli kortin yläreunassa tai sen yllä.
-    && auki2.valikko.y1 <= auki2.kortti.y0 + 2
-    && auki2.sarakkeet >= 2
-    && auki2.rivinKorkeus > 0
-    && auki2.rivivali != null && auki2.rivivali <= auki2.rivinKorkeus * 1.5
+  const jarjestys = Boolean(auki2.valikko && auki2.perustiedot && auki2.avain
+    && auki2.valikko.y1 <= auki2.perustiedot.y0 + 2
+    && auki2.perustiedot.y1 <= auki2.avain.y0 + 2);
+  const avautuuHyva = Boolean(auki2.valikkoAuki && auki2.valikko && auki2.perustiedot
+    && auki2.otsikot.length >= 4 && auki2.otsikkorivit === 2
+    && auki2.perustietoja >= 4
+    && jarjestys
     && auki2.valikko.y0 >= -1 && auki2.valikko.x0 >= -1
-    && auki2.valikko.x1 <= auki2.ruutu.w + 1);
-  valikkoOk.push({
-    ruutu: ruutu.nimi,
-    ok: valikkoHyva,
-    sarakkeet: auki2.sarakkeet,
-    rivivali: auki2.rivivali,
-    rivinKorkeus: auki2.rivinKorkeus,
-  });
-  tieto(`${ruutu.nimi} px · valikko auki`,
-    `rivejä ${auki2.rivit}, sarakkeita ${auki2.sarakkeet}, `
-    + `rivinkorkeus ${auki2.rivinKorkeus?.toFixed(2) ?? '—'} px, `
-    + `rivivali ${auki2.rivivali?.toFixed(2) ?? '—'} px `
-    + `(suhde ${auki2.rivivali && auki2.rivinKorkeus
-      ? (auki2.rivivali / auki2.rivinKorkeus).toFixed(2) : '—'}), `
-    + `valikko x ${auki2.valikko ? `${Math.round(auki2.valikko.x0)}…${Math.round(auki2.valikko.x1)}` : '—'} `
-    + `y ${auki2.valikko ? `${Math.round(auki2.valikko.y0)}…${Math.round(auki2.valikko.y1)}` : '—'}, `
-    + `kortin yläreuna ${auki2.kortti ? Math.round(auki2.kortti.y0) : '—'}`);
+    && auki2.valikko.x1 <= auki2.ruutu.w + 1
+    && auki2.kortti.y1 <= auki2.ruutu.h + 1
+    && kaikkiPohjattomia(auki2.pohjat));
+  tieto(`${ruutu.nimi} px · avattuna`,
+    `otsikoita ${auki2.otsikot.length} rivillä ${auki2.otsikkorivit}, `
+    + `perustietorivejä ${auki2.perustietoja}, `
+    + `otsikot y ${auki2.valikko ? `${Math.round(auki2.valikko.y0)}…${Math.round(auki2.valikko.y1)}` : '—'}, `
+    + `perustiedot y ${auki2.perustiedot ? `${Math.round(auki2.perustiedot.y0)}…${Math.round(auki2.perustiedot.y1)}` : '—'}, `
+    + `nimi y ${auki2.avain ? Math.round(auki2.avain.y0) : '—'}, `
+    + `kaluste ${auki2.kortti ? `${Math.round(auki2.kortti.w)} x ${Math.round(auki2.kortti.h)} px` : '—'}, `
+    + `otsikkokoko ${auki2.koot.otsikko}, lukurivi ${auki2.koot.lukurivi}, `
+    + `pohjaton ${kaikkiPohjattomia(auki2.pohjat)}`);
 
-  if (KUVAKANSIO && auki2.valikko) {
+  /* --- 3. kaikki samalla fontilla ---------------------------------- */
+  const perheet = Object.values(auki2.perheet).filter(Boolean);
+  const fonttiHyva = perheet.length >= 5 && new Set(perheet).size === 1;
+  fonttiOk.push({ ruutu: ruutu.nimi, ok: fonttiHyva, perheita: new Set(perheet).size });
+  tieto(`${ruutu.nimi} px · fontit`, JSON.stringify(auki2.perheet));
+
+  /* --- 4. otsikot ovat pelkkää tekstiä ----------------------------- */
+  const erotinOk = auki2.erottimet.length === auki2.otsikot.length - auki2.otsikkorivit
+    && auki2.erottimet.every((t) => t === '·');
+  const kapiteeliOk = auki2.otsikot.every(
+    (k) => k.kapiteeli === 'uppercase' && k.harvennus >= 0.1,
+  );
+  const tekstiHyva = Boolean(auki2.otsikot.length >= 4 && auki2.pallot === 0
+    && erotinOk && kapiteeliOk);
+  tekstiOtsikotOk.push({
+    ruutu: ruutu.nimi,
+    ok: tekstiHyva,
+    pallot: auki2.pallot,
+    erottimia: auki2.erottimet.length,
+    erotinOk,
+    kapiteeliOk,
+  });
+  tieto(`${ruutu.nimi} px · otsikot tekstinä`,
+    `väripalloja ${auki2.pallot}, erottimia ${auki2.erottimet.length} `
+    + `("${[...new Set(auki2.erottimet)].join('","')}"), kapiteeli `
+    + `${auki2.otsikot[0]?.kapiteeli}, harvennus `
+    + `${auki2.otsikot[0]?.harvennus?.toFixed(3)} em, rivit `
+    + `${[0, 1].map((i) => auki2.otsikot.filter(
+      (k) => Math.round(k.y / 2) === [...new Set(auki2.otsikot.map(
+        (o) => Math.round(o.y / 2),
+      ))].sort((a, b) => a - b)[i],
+    ).map((k) => k.nimi).join(' · ')).filter(Boolean).join(' || ')}`);
+
+  /* --- 8b. Liiku avattuna: väistö nostaa sanan -------------------- */
+  const liikuAuki = auki2.liiku;
+  const liikuAukiHyva = Boolean(liikuAuki
+    && liikuAuki.laatikko.y0 >= 0 && liikuAuki.laatikko.y1 <= auki2.ruutu.h + 1
+    && liikuAuki.laatikko.y0 > auki2.ruutu.h * 0.5
+    && liikuAuki.keskipoikkeama <= 8
+    && !liikuAuki.osuuPaneeliin && !liikuAuki.osuuPuluun
+    && !liikuAuki.osuuLappuun && !liikuAuki.osuuKaupunkikorttiin);
+  liikuOk.push({
+    ruutu: ruutu.nimi,
+    ok: liikuHyva && liikuAukiHyva,
+    levossa: liikuHyva,
+    avattuna: liikuAukiHyva,
+    poikkeama: liiku?.keskipoikkeama,
+    tausta: liiku?.tausta,
+    peitto: liiku?.sananPeitto,
+    osumaAuki: liikuAuki?.osuuPaneeliin,
+  });
+  tieto(`${ruutu.nimi} px · Liiku avattuna`,
+    `--liiku-pohja ${auki2.liikuPohja || '(ei asetettu)'}, sana y `
+    + `${liikuAuki ? `${Math.round(liikuAuki.laatikko.y0)}…${Math.round(liikuAuki.laatikko.y1)}` : '—'}, `
+    + `kalusteen yläreuna y ${auki2.kortti ? Math.round(auki2.kortti.y0) : '—'}, `
+    + `osuu kalusteeseen ${liikuAuki?.osuuPaneeliin}`);
+
+  if (KUVAKANSIO && auki2.kortti) {
     // eslint-disable-next-line no-await-in-loop
     await sivu.screenshot({
-      path: join(KUVAKANSIO, `maainfo-alakulma-${ruutu.nimi}-valikko.png`),
+      path: join(KUVAKANSIO, `maainfo-vanha-${ruutu.nimi}-auki.png`),
       clip: {
         x: 0,
-        y: Math.max(0, Math.round(auki2.valikko.y0 - 30)),
-        width: Math.min(ruutu.leveys, Math.round(auki2.valikko.x1 + 40)),
-        height: Math.min(ruutu.korkeus, Math.round(ruutu.korkeus - auki2.valikko.y0 + 30)),
+        y: Math.max(0, Math.round(auki2.kortti.y0 - 40)),
+        width: ruutu.leveys,
+        height: Math.min(ruutu.korkeus, Math.round(ruutu.korkeus - auki2.kortti.y0 + 40)),
       },
     });
   }
 
-  /* --- 4. jokainen otsikko avaa oman sivunsa ---------------------- */
-  if (ruutu.nimi === '390') {
-    /*
-     * Napautukset tehdään VAIN kapealla ruudulla, koska ne ovat sama
-     * DOM-polku molemmilla eikä lehden avaus riipu kuvasuhteesta —
-     * ja koska kapea ruutu on se, jolla valikon on ahtainta mahtua.
-     */
-    // eslint-disable-next-line no-await-in-loop
-    const rivit = await sivu.$$eval('.maapaneeli-valikko:not([hidden]) .maapaneeli-aihe',
-      (nodet) => nodet.map((n) => ({
-        id: n.dataset.aihe,
-        nimi: n.querySelector('.maapaneeli-aihe-nimi')?.textContent ?? '',
-        vari: getComputedStyle(n.querySelector('.maapaneeli-aihe-merkki')).backgroundColor,
-      })));
-    tieto('Ranskan valikon otsikot', rivit.map((r) => r.nimi).join(' · ') || 'EI YHTÄÄN');
+  /* Uusi napautus nimeen sulkee. */
+  // eslint-disable-next-line no-await-in-loop
+  await napautaKohtaa(sivu, auki2.avain);
+  // eslint-disable-next-line no-await-in-loop
+  const kiinni2 = await mittaaPaneeli(sivu);
+  const sulkeutui = Boolean(!kiinni2.valikkoAuki && !kiinni2.valikko
+    && !kiinni2.perustiedot && kiinni2.tekstirivit === 2);
+  avautuuOk.push({ ruutu: ruutu.nimi, ok: avautuuHyva && sulkeutui, avautuu: avautuuHyva, sulkeutui });
+  tieto(`${ruutu.nimi} px · uusi napautus sulkee`,
+    `valikkoAuki ${kiinni2.valikkoAuki}, tekstirivejä ${kiinni2.tekstirivit}, `
+    + `kaluste ${kiinni2.kortti ? `${Math.round(kiinni2.kortti.w)} x ${Math.round(kiinni2.kortti.h)} px` : '—'}`);
 
-    /*
-     * VÄRIT OVAT KARTAN OMAT. Sallittu joukko luetaan juuresta
-     * (--sym-*), joten koe kaatuu heti, jos valikkoon ilmestyy väri,
-     * jota kartalla ei ole.
-     */
-    // eslint-disable-next-line no-await-in-loop
-    const sallitut = await sivu.evaluate(() => {
-      const juuri = getComputedStyle(document.documentElement);
-      const nimet = ['historia', 'ruoka', 'kulttuuri', 'luonto', 'elain', 'urheilu',
-        'tekniikka', 'kauppa', 'sana', 'merenkulku', 'kaupunki', 'hetki', 'silma'];
-      const muunna = (arvo) => {
-        const d = document.createElement('div');
-        d.style.color = arvo;
-        document.body.appendChild(d);
-        const v = getComputedStyle(d).color;
-        d.remove();
-        return v;
-      };
-      return nimet.map((n) => muunna(juuri.getPropertyValue(`--sym-${n}`).trim()));
+  /* --- 6. rulla menee kalusteen läpi kartalle (vain 1400 px) ------ */
+  if (ruutu.nimi === '1400' && lepo.kortti) {
+    const px = Math.round((lepo.kortti.x0 + lepo.kortti.x1) / 2);
+    const py = Math.round((lepo.kortti.y0 + lepo.kortti.y1) / 2);
+    /* eslint-disable no-await-in-loop */
+    await palautaNakyma(sivu);
+    const yli = await rullaa(sivu, px, py);
+    await palautaNakyma(sivu);
+    await sivu.evaluate(() => {
+      document.querySelector('.maapaneeli-nurkka')
+        ?.style.setProperty('display', 'none', 'important');
     });
-    variRiveja += rivit.length;
-    for (const r of rivit) if (!sallitut.includes(r.vari)) variVirheita += 1;
+    const ilman = await rullaa(sivu, px, py);
+    await sivu.evaluate(() => {
+      document.querySelector('.maapaneeli-nurkka')?.style.removeProperty('display');
+    });
+    await palautaNakyma(sivu);
+    /* eslint-enable no-await-in-loop */
+    const suhde = ilman.muutos > 1e-4 ? yli.muutos / ilman.muutos : null;
+    lapiOk.push({
+      ruutu: ruutu.nimi,
+      ok: Boolean(suhde !== null && Math.abs(suhde - 1) <= 0.1),
+      suhde,
+    });
+    tieto('1400 px · rulla kalusteen päältä',
+      `ctrl-rulla kalusteen päällä muutti korkeutta ${yli.muutos.toFixed(5)}, `
+      + `SAMASTA pisteestä ilman kalustetta ${ilman.muutos.toFixed(5)} `
+      + `(suhde ${suhde === null ? '—' : suhde.toFixed(3)}, vara 10 %)`);
+  }
 
-    for (const rivi of rivit) {
-      /* eslint-disable no-await-in-loop */
-      await sivu.click(`.maapaneeli-aihe[data-aihe="${rivi.id}"]`);
+  /* --- 7. jokainen otsikko avaa oman sivunsa (vain 390 px) -------- */
+  if (ruutu.nimi === '390') {
+    /* eslint-disable no-await-in-loop */
+    tieto('Ranskan otsikot', auki2.otsikot.map((r) => r.nimi).join(' · ') || 'EI YHTÄÄN');
+    for (const rivi of auki2.otsikot) {
+      // Kaluste on kiinni edellisen napautuksen jäljiltä: avaa uudestaan.
+      const lepo2 = await mittaaPaneeli(sivu);
+      if (!lepo2.valikkoAuki) await napautaKohtaa(sivu, lepo2.avain);
+      const nyt = await mittaaPaneeli(sivu);
+      const kohde = nyt.otsikot.find((k) => k.id === rivi.id);
+      if (!kohde) { otsikkoTulokset.push({ pyydetty: rivi.id, auki: false }); continue; }
+      await napautaKohtaa(sivu, {
+        x0: kohde.x, y0: kohde.y, w: kohde.w, h: kohde.h,
+      });
       await sivu.waitForTimeout(500);
       const tulos = await sivu.evaluate(() => {
         const { ui } = window.matkakirja;
@@ -734,23 +918,22 @@ for (const ruutu of RUUDUT) {
       tieto(`otsikko "${rivi.nimi}"`,
         `lehti auki ${tulos.auki}, maa ${tulos.maa}, sivu ${tulos.sivu} = ${tulos.id}`);
       /*
-       * Lehti kiinni ja valikko auki seuraavaa riviä varten. Sulku
-       * tehdään dialogin omalla metodilla eikä Escillä: modaali
-       * dialogi nielee näppäimen lukijan ja sivunkäännön kuuntelijoihin
-       * eikä sulkeudu joka kerta, ja silloin seuraava napautus osuisi
-       * lehden tekstiin.
+       * Lehti kiinni dialogin omalla metodilla eikä Escillä: modaali
+       * dialogi nielee näppäimen eikä sulkeudu joka kerta.
        */
       await sivu.evaluate(() => window.matkakirja.ui.arrivalDialog?.close());
       await sivu.waitForTimeout(500);
-      const valikkoAuki = await sivu.evaluate(
-        () => !document.querySelector('.maapaneeli-valikko')?.hidden,
-      );
-      if (!valikkoAuki) {
-        await sivu.click('.maapaneeli-lisaa');
-        await sivu.waitForTimeout(200);
-      }
-      /* eslint-enable no-await-in-loop */
     }
+    /* Valittu otsikko merkitään alleviivauksella aiheen värissä. */
+    const lepo3 = await mittaaPaneeli(sivu);
+    if (!lepo3.valikkoAuki) await napautaKohtaa(sivu, lepo3.avain);
+    const merkitty = await mittaaPaneeli(sivu);
+    const valitut = merkitty.otsikot.filter((k) => k.valittu);
+    tieto('valittu otsikko',
+      `merkittyjä ${valitut.length}: `
+      + `${valitut.map((k) => `${k.nimi} (${k.alleviivaus})`).join(', ') || 'ei yhtään'}`);
+    await napautaKohtaa(sivu, merkitty.avain);
+    /* eslint-enable no-await-in-loop */
   }
 
   paaVirheet = paaVirheet.concat(virheet);
@@ -758,142 +941,141 @@ for (const ruutu of RUUDUT) {
   await ctx.close();
 }
 
-vaadi('1. paneeli on RUUDUN VASEMMASSA ALAKULMASSA, kokonaan ruudulla ja 22 % '
-  + '(± 2 %-yks.) ruudun korkeudesta (390 px ja 1400 px)',
-sijaintiOk.length === RUUDUT.length && sijaintiOk.every((t) => t.ok),
-`tulokset ${JSON.stringify(sijaintiOk)}`);
-vaadi('2. paneeli EI liiku eikä kasva zoomatessa (nurkka ja koko ±1 px)',
+vaadi('1. LEVOSSA vain nimi, viiva ja alarivi — ei taustaa, ei plussaa, ruudun vasen '
+  + 'alakulma (390 px ja 1400 px)',
+levossaOk.length === RUUDUT.length && levossaOk.every((t) => t.ok),
+`tulokset ${JSON.stringify(levossaOk)}`);
+vaadi('2. napautus nimeen AVAA (otsikot 2 rivillä, perustiedot niiden alla) ja uusi '
+  + 'napautus SULKEE',
+avautuuOk.length === RUUDUT.length && avautuuOk.every((t) => t.ok),
+`tulokset ${JSON.stringify(avautuuOk)}`);
+vaadi('3. nimi, alarivi, perustiedot ja otsikot ovat SAMALLA fontilla',
+  fonttiOk.length === RUUDUT.length && fonttiOk.every((t) => t.ok),
+  `tulokset ${JSON.stringify(fonttiOk)}`);
+vaadi('4. otsikot ovat pelkkää tekstiä: 0 väripalloa, erottimina välipisteet, '
+  + 'harvennetut kapiteelit',
+tekstiOtsikotOk.length === RUUDUT.length && tekstiOtsikotOk.every((t) => t.ok),
+`tulokset ${JSON.stringify(tekstiOtsikotOk)}`);
+vaadi('5. kaluste EI liiku eikä kasva zoomatessa (nurkka ja koko ±1 px)',
   paikallaanOk.length === RUUDUT.length && paikallaanOk.every((t) => t.ok),
   `tulokset ${JSON.stringify(paikallaanOk)}`);
 vaadi('VASTAKOE C: kartan oma piste (Pariisi) SIIRTYY samassa zoomissa',
   kalusteLiikkui.length === RUUDUT.length && kalusteLiikkui.every((t) => t.ok),
   `tulokset ${JSON.stringify(kalusteLiikkui)}`);
-vaadi('3. valikko aukeaa plussan paikalle YLÖS, ≥ 2 saraketta, rivivali ≤ 1,5 × rivinkorkeus, '
-  + 'kokonaan ruudulla',
-valikkoOk.length === RUUDUT.length && valikkoOk.every((t) => t.ok),
-`tulokset ${JSON.stringify(valikkoOk)}`);
+vaadi('6. ctrl-rulla menee kalusteen LÄPI kartalle (suhde 1,0 ± 10 %)',
+  lapiOk.length === 1 && lapiOk.every((t) => t.ok), `tulokset ${JSON.stringify(lapiOk)}`);
 
 const otsikotOsui = otsikkoTulokset.filter(
   (t) => t.auki && t.maa === 'FRA' && t.id === t.pyydetty,
 ).length;
-vaadi('4. jokainen valikon otsikko avaa maalehden OMAN sivunsa',
+vaadi('7. jokainen otsikko avaa maalehden OMAN sivunsa',
   otsikkoTulokset.length >= 8 && otsikotOsui === otsikkoTulokset.length,
   `otsikoita ${otsikkoTulokset.length}, oikein ${otsikotOsui}: `
   + JSON.stringify(otsikkoTulokset.filter((t) => t.id !== t.pyydetty)));
-vaadi('5. valikon värit ovat kartan omia --sym-sävyjä (ei uusia kirkkaita)',
-  variRiveja >= 8 && variVirheita === 0, `rivejä ${variRiveja}, vieraita värejä ${variVirheita}`);
-vaadi('6. Liiku on kuultava sana ruudun alareunan keskellä, läpinäkyvä, ei päällekkäisyyksiä',
-  liikuOk.length === RUUDUT.length && liikuOk.every((t) => t.ok),
-  `tulokset ${JSON.stringify(liikuOk.map((t) => ({
-    ruutu: t.ruutu,
-    ok: t.ok,
-    poikkeama: t.keskipoikkeama,
-    tausta: t.tausta,
-    reunus: t.reunus,
-    peitto: t.sananPeitto,
-    laatikko: t.laatikko,
-    osumat: [t.osuuPaneeliin, t.osuuPuluun, t.osuuLappuun, t.osuuKaupunkikorttiin],
-  })))}`);
+vaadi('8. Liiku on kuultava sana alareunan keskellä eikä osu kalusteeseen — ei levossa '
+  + 'eikä avattuna',
+liikuOk.length === RUUDUT.length && liikuOk.every((t) => t.ok),
+`tulokset ${JSON.stringify(liikuOk)}`);
 tieto('sivun virheet (pääajo)', paaVirheet.length ? paaVirheet.join(' | ') : 'ei yhtään');
-vaadi('7. pääajo ei tuottanut sivuvirheitä', paaVirheet.length === 0, paaVirheet.join(' | '));
+vaadi('9. pääajo ei tuottanut sivuvirheitä', paaVirheet.length === 0, paaVirheet.join(' | '));
 
 /* ==================== VASTAKOE A: maa ilman aiheita ================ */
 
 poistaKategoriat = 'FRA';
 {
   const { ctx, sivu, virheet, auki } = await avaaPeli({ leveys: 390, korkeus: 844 });
-  const tulos = auki ? await sivu.evaluate(() => ({
-    kortti: Boolean(document.querySelector('.maapaneeli-kortti')),
-    lisaa: Boolean(document.querySelector('.maapaneeli-lisaa:not([hidden])')),
-    rivit: document.querySelectorAll('.maapaneeli-aihe').length,
-    nimi: document.querySelector('.maapaneeli-nimi-suomi')?.textContent ?? '',
-  })) : null;
+  if (auki) await odotaAsettunut(sivu, 6000);
+  const lepo = auki ? await mittaaPaneeli(sivu) : null;
+  if (auki && lepo?.avain) await napautaKohtaa(sivu, lepo.avain);
+  const tulos = auki ? await mittaaPaneeli(sivu) : null;
   tieto('vastakoe A (Ranska ilman MAA_KATEGORIAT-riviä)',
-    tulos ? `kortti ${tulos.kortti} ("${tulos.nimi}"), Lisää-nappi ${tulos.lisaa}, `
-      + `valikkorivejä ${tulos.rivit}, virheitä ${virheet.length}` : 'lauta ei auennut');
-  vaadi('VASTAKOE A: maa ilman aiheita → paneeli on, valikkoa ei, peli ei kaadu',
-    Boolean(auki && tulos?.kortti && !tulos.lisaa && tulos.rivit === 0 && virheet.length === 0),
-    JSON.stringify({ auki, tulos, virheet }));
+    tulos ? `kaluste ${tulos.onKortti}, otsikoita ${tulos.otsikot.length}, `
+      + `perustietoja ${tulos.perustietoja}, virheitä ${virheet.length}` : 'lauta ei auennut');
+  vaadi('VASTAKOE A: maa ilman aiheita → kaluste on, otsikkorivejä ei, peli ei kaadu',
+    Boolean(auki && tulos?.onKortti && tulos.otsikot.length === 0
+      && tulos.perustietoja >= 4 && virheet.length === 0),
+    JSON.stringify({ auki, onKortti: tulos?.onKortti, otsikoita: tulos?.otsikot.length, virheet }));
   await ctx.close();
 }
 poistaKategoriat = null;
 
-/* ============ VASTAKOE B: paneeli puretaan kokonaan ================ */
+/* ============ VASTAKOE B: kaluste puretaan kokonaan ================ */
 /*
  * `?maapaneeli=nurkka` asettaa js/fokusmitat.js MAAPANEELI_KARTASSA
- * -lipun epätodeksi, jolloin `luoMaapaneeli.paivita` purkaa kortin ja
+ * -lipun epätodeksi, jolloin `luoMaapaneeli.paivita` purkaa kalusteen ja
  * VANHA kartuutsi-nurkkataulu (.fokus-kartuutsi) palaa tilalle.
- * VÄITTEEN 1 ON KAADUTTAVA: korttia ei ole, joten mitään ei voi mitata
- * ruudun vasempaan alakulmaan. Jos väite menisi silti läpi, se ei
- * mittaisi paneelia vaan jotain muuta.
+ * VÄITTEEN 1 ON KAADUTTAVA: kalustetta ei ole, joten mitään ei voi
+ * mitata ruudun vasempaan alakulmaan.
  */
 {
   const { ctx, sivu, auki } = await avaaPeli({
     leveys: 390, korkeus: 844, lisaparametrit: '&maapaneeli=nurkka',
   });
   if (auki) await odotaAsettunut(sivu, 6000);
-  const ulko = auki ? await mittaaPaneeli(sivu) : null;
-  const vaite1 = Boolean(ulko?.onKortti && ulko.kortti
-    && ulko.kortti.x0 <= NURKKA_VARA_PX
-    && ulko.ruutu.h - ulko.kortti.y1 <= NURKKA_VARA_PX);
+  const lepo = auki ? await mittaaPaneeli(sivu) : null;
+  const vaite1 = Boolean(lepo?.onKortti && lepo.kortti
+    && lepo.kortti.x0 <= NURKKA_VARA_PX
+    && lepo.ruutu.h - lepo.kortti.y1 <= NURKKA_VARA_PX);
   tieto('vastakoe B (?maapaneeli=nurkka)',
-    `kortti ${Boolean(ulko?.onKortti)}, vanha nurkkataulu ${Boolean(ulko?.nurkassa)}, `
+    `kaluste ${Boolean(lepo?.onKortti)}, vanha nurkkataulu ${Boolean(lepo?.nurkassa)}, `
     + `väite 1 ${vaite1 ? 'LÄPI (paha)' : 'PUNAINEN'}`);
-  vaadi('VASTAKOE B: ilman paneelia sijaintiväite kaatuu ja vanha nurkkataulu palaa',
-    Boolean(auki) && !vaite1 && Boolean(ulko?.nurkassa),
-    JSON.stringify({ auki, vaite1, nurkassa: ulko?.nurkassa }));
+  vaadi('VASTAKOE B: ilman kalustetta levon väite kaatuu ja vanha nurkkataulu palaa',
+    Boolean(auki) && !vaite1 && Boolean(lepo?.nurkassa),
+    JSON.stringify({ auki, vaite1, nurkassa: lepo?.nurkassa }));
   /*
-   * VASTAKOE D samalla ruudulla: väitteen 6 keskitysmitta ajetaan
-   * pulun nappiin, joka on tarkoituksella kulmassa. Sen ON kaaduttava.
+   * VASTAKOE D samalla ruudulla: väitteen 8 keskitysmitta ajetaan pulun
+   * nappiin, joka on tarkoituksella kulmassa. Sen ON kaaduttava.
    */
   vaadi('VASTAKOE D: pulun nappi EI ole ruudun keskilinjalla (keskitysmitta kaatuu)',
-    ulko?.pollonPoikkeama != null && ulko.pollonPoikkeama > 8,
-    `poikkeama ${ulko?.pollonPoikkeama}`);
+    lepo?.pollonPoikkeama != null && lepo.pollonPoikkeama > 8,
+    `poikkeama ${lepo?.pollonPoikkeama}`);
   await ctx.close();
 }
 
-/* ====== VASTAKOE E: pieni koko takaisin (10 % / 28 %) ============== */
+/* ====== VASTAKOE E: laatikko takaisin ============================= */
 /*
- * Erän 19 ensimmäinen mitoitus palautetaan palvelimessa. VÄITTEEN 1
- * KOKO-OSAN ON KAADUTTAVA: kortti on silloin 10 % ruudun korkeudesta
- * eikä 22 %. Jos väite menisi silti läpi, se ei mittaisi kokoa.
+ * Palvelin maalaa kalusteelle kermapohjan, reunuksen ja varjon — siis
+ * täsmälleen sen laatikon, jonka omistaja pyysi pois. VÄITTEEN 1
+ * TAUSTAOSAN ON KAADUTTAVA.
  */
 {
-  vastakoe = 'PIENI_KOKO';
+  vastakoe = 'LAATIKKO';
   const { ctx, sivu, auki } = await avaaPeli({ leveys: 390, korkeus: 844 });
   if (auki) await odotaAsettunut(sivu);
   const m = auki ? await mittaaPaneeli(sivu) : null;
   vastakoe = null;
-  const osuus = m?.kortti ? m.kortti.h / m.ruutu.h : 0;
-  tieto('vastakoe E (nurkan katot 10 % / 28 %)',
-    `kortti ${m?.kortti ? `${Math.round(m.kortti.w)} x ${Math.round(m.kortti.h)} px` : 'EI OLE'}, `
-    + `osuus ${(100 * osuus).toFixed(1)} %`);
-  vaadi('VASTAKOE E: pienellä katolla LUETTAVAN KOON väite kaatuu',
-    Boolean(auki && m?.kortti) && !(osuus >= 0.20 && osuus <= 0.24),
-    JSON.stringify({ auki, osuus }));
+  const pohjatOk = m ? kaikkiPohjattomia(m.pohjat) : true;
+  tieto('vastakoe E (laatikko takaisin)',
+    `kalusteen pohja ${JSON.stringify(m?.pohjat['.maapaneeli-kortti'])} → `
+    + `väite 1 ${pohjatOk ? 'LÄPI (paha)' : 'PUNAINEN'}`);
+  vaadi('VASTAKOE E: kermapohjalla, reunuksella ja varjolla POHJATTOMUUS-väite kaatuu',
+    Boolean(auki && m?.onKortti) && !pohjatOk,
+    JSON.stringify({ auki, pohja: m?.pohjat['.maapaneeli-kortti'] }));
   await ctx.close();
 }
 
-/* ====== VASTAKOE F: Liiku ei väistä paneelia ====================== */
+/* ====== VASTAKOE F: Liiku ei väistä avattua kalustetta ============ */
 /*
  * `bottom: max(..., var(--liiku-pohja))` palautetaan pelkäksi
- * perusväliksi, jolloin sana jää ruudun alalaitaan ison paneelin
- * päälle 390 px:n ruudulla. VÄITTEEN 6 PÄÄLLEKKÄISYYSOSAN ON
+ * perusväliksi, jolloin sana jää ruudun alalaitaan AVATUN kalusteen
+ * päälle 390 px:n ruudulla. VÄITTEEN 8 PÄÄLLEKKÄISYYSOSAN ON
  * KAADUTTAVA — muuten väistö ei todista mitään.
  */
 {
   vastakoe = 'EI_VAISTOA';
   const { ctx, sivu, auki } = await avaaPeli({ leveys: 390, korkeus: 844 });
   if (auki) await odotaAsettunut(sivu);
+  const lepo = auki ? await mittaaPaneeli(sivu) : null;
+  if (auki && lepo?.avain) await napautaKohtaa(sivu, lepo.avain);
   const m = auki ? await mittaaPaneeli(sivu) : null;
   vastakoe = null;
-  tieto('vastakoe F (ei väistöä)',
+  tieto('vastakoe F (ei väistöä, kaluste auki)',
     `Liiku y ${m?.liiku ? `${Math.round(m.liiku.laatikko.y0)}…${Math.round(m.liiku.laatikko.y1)}` : '—'}, `
-    + `kortti y ${m?.kortti ? `${Math.round(m.kortti.y0)}…${Math.round(m.kortti.y1)}` : '—'}, `
-    + `osuu paneeliin ${m?.liiku?.osuuPaneeliin}`);
-  vaadi('VASTAKOE F: ilman väistöä Liiku OSUU paneeliin (390 px)',
-    Boolean(auki && m?.liiku?.osuuPaneeliin),
-    JSON.stringify({ auki, osuu: m?.liiku?.osuuPaneeliin }));
+    + `kaluste y ${m?.kortti ? `${Math.round(m.kortti.y0)}…${Math.round(m.kortti.y1)}` : '—'}, `
+    + `osuu kalusteeseen ${m?.liiku?.osuuPaneeliin}`);
+  vaadi('VASTAKOE F: ilman väistöä Liiku OSUU avattuun kalusteeseen (390 px)',
+    Boolean(auki && m?.valikkoAuki && m?.liiku?.osuuPaneeliin),
+    JSON.stringify({ auki, avattu: m?.valikkoAuki, osuu: m?.liiku?.osuuPaneeliin }));
   await ctx.close();
 }
 
