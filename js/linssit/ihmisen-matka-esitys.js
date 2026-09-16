@@ -1200,6 +1200,29 @@ export function luoEsitys({ ajo }) {
   }
 
   /**
+   * KEHYS TAKAISIN (yläpalkki reunaviivoineen ja valikkonappi sekä
+   * alapalkki eli aikaselain). Kutsuja on yksi: sytytaValot, kun kartta
+   * valkenee. Kehys ei siis palaa kesken avaruusvaiheen millään
+   * tavalla — juuri sitä omistaja pyysi (*"kehys palasi liian
+   * aikaisin"*).
+   *
+   * OMAA PAKOTIETÄ EI TARVITA. Kokeiltiin ensin napautusta ja Esciä,
+   * mutta napautus olisi laukennut vahingossa (pallolauta ottaa
+   * kosketukset vastaan koko esityksen ajan) ja Esc sulkee linssin jo
+   * valmiiksi (js/aikajana.js nappain → ui.pysaytaAikajana). Oma
+   * Esc-kuuntelija olisi siis vain paljastanut kehyksen sulkeutuvasta
+   * linssistä.
+   *
+   * @param {number} feidi häivytyksen kesto (ms)
+   */
+  function paljastaKehys(feidi = VALOJEN_MS) {
+    if (!ajo.juuri?.classList.contains('esitys-avaruus')) return false;
+    ajo.juuri.style?.setProperty('--avaruuden-feidi', `${Math.max(0, Math.round(feidi))}ms`);
+    ajo.juuri.classList.remove('esitys-avaruus');
+    return true;
+  }
+
+  /**
    * ZOOMI PÄÄTTYY 0,7 SEKUNTIA SANAN "AFRIKASTA" JÄLKEEN (Raamattu
    * ALKUANIMAATIO + AFRIKKA 0,7 S SANAN JALKEEN, omistaja 10.9.2026
    * klo 23.00). Kutsutaan kehyssilmukasta hetkellä
@@ -1772,7 +1795,19 @@ export function luoEsitys({ ajo }) {
     tila.valotOdottaa = false;
     // Pallo on perillä: kamera saa heti lähteä kohti Marokkoa.
     aloitaKohdeajo();
-    ajo.juuri?.classList.remove('esitys-pimea', 'esitys-avaruus', 'esitys-musta');
+    /*
+     * KEHYS PALAA VASTA KARTAN KANSSA (omistaja 15.9.2026 klo 19.05,
+     * iPhone-kuva avaruusvaiheesta "He vain lähtivät.", sanatarkasti:
+     * *"Alussa oli vain musta mutta sitten kehys palasi liian
+     * aikaisin"*). Luokka `esitys-musta` eli vain ensimmäisen virkkeen
+     * ajan (nostaMusta), joten yläpalkin reunaviiva ja hampurilainen
+     * palasivat jo tähtitaivaalle. Nyt kehyksen piilotus roikkuu
+     * luokassa `esitys-avaruus`, joka lähtee TÄSSÄ — samassa
+     * silmänräpäyksessä kuin peite saa 'pois'-luokkansa — ja feidaus
+     * on css:ssä sidottu samaan VALOJEN_MS:ään kuin kartan valkeneminen.
+     */
+    paljastaKehys(VALOJEN_MS);
+    ajo.juuri?.classList.remove('esitys-pimea', 'esitys-musta');
     peite.classList.add('pois');
     if (reduced) peite.remove();
     else setTimeout(() => peite.remove(), VALOJEN_MS);
@@ -2140,6 +2175,15 @@ export function luoEsitys({ ajo }) {
       if (tila.purettu || tila.i >= 0) return false;
       if (muisti) return jatkaMuistista(muisti);
       asennaPinnat();
+      /*
+       * KEHYS POIS ILMAN LIUKUA. `esitys-avaruus` vie yläpalkin
+       * peittävyyden nollaan, mutta sama sääntö kantaa myös feidauksen
+       * takaisin — ilman tätä nollaa palkki olisi häipynyt vasta
+       * 2,6 sekunnissa, ja mitattuna (savuke-ihmisen-kehys.mjs, 390 ja
+       * 1400 px) se näkyi vielä puoli sekuntia mustan alettua.
+       * Feidaus asetetaan uudestaan vasta paljastaKehys-kutsussa.
+       */
+      ajo.juuri?.style?.setProperty('--avaruuden-feidi', '0ms');
       ajo.juuri?.classList.add('esitys-pimea', 'esitys-avaruus');
       /*
        * PEITE ON ENSIN MUSTA JA SITTEN HARSO (Raamattu MUSTA ALKU ON
@@ -2225,6 +2269,12 @@ export function luoEsitys({ ajo }) {
       pimea: Boolean(ajo.juuri?.classList.contains('esitys-pimea')),
       // Yläpalkki piilossa mustan ajan (avaruusavaus → nostaMusta).
       palkkiPiilossa: Boolean(ajo.juuri?.classList.contains('esitys-musta')),
+      /*
+       * KEHYS (yläpalkki reunaviivoineen ja valikkonappi) on poissa
+       * koko avaruusvaiheen ajan ja palaa vasta kartan kanssa
+       * (sytytaValot → paljastaKehys).
+       */
+      kehysPiilossa: Boolean(ajo.juuri?.classList.contains('esitys-avaruus')),
       kuvia: tila.kuviaNaytetty,
       /*
        * ESILLÄ, EI VAIN LIITETTY. Kehys syntyy nollakoossa

@@ -22,8 +22,10 @@
  *      nauha on mustaa koko leveydeltä (kirkkaus < 8) — ei yläpalkin
  *      alareunan viivaa eikä hampurilaisen nuolta. Lippu
  *      esitys.tila().palkkiPiilossa on tosi.
- *   1b. VASTAKOE: kun luokka `esitys-musta` otetaan pois, sama nauha saa
- *      kirkkaita pikseleitä (viiva + nuoli palaavat).
+ *   1b. VASTAKOE: kun MOLEMMAT piilotusluokat otetaan pois
+ *      (`esitys-musta` ja `esitys-avaruus` — jälkimmäinen pitää kehyksen
+ *      poissa koko avaruusvaiheen, ks. savuke-ihmisen-kehys.mjs), sama
+ *      nauha saa kirkkaita pikseleitä (viiva + nuoli palaavat).
  *   2. RINTAMA EI VÄLKY. Kasvavan kärjen VÄRIPAINO luetaan kehys
  *      kehykseltä suoraan elävän varjostimen uniformeista ja saman
  *      verkon instanssipuskurista (sama float32-laskenta kuin GPU:lla).
@@ -250,18 +252,26 @@ vaadi('musta alku: linssin yläreuna on mustaa koko leveydeltä (ei palkin viiva
     && musta.maks < 8 && musta.kirkkaita === 0,
   JSON.stringify({ ...mustaTila, ...musta, nauhanRajaus }));
 
-/* 1b. VASTAKOE: peitto pois → viiva ja nuoli palaavat. */
-await s.evaluate(() => document.querySelector('.aikajana')?.classList.remove('esitys-musta'));
+/*
+ * 1b. VASTAKOE: peitto pois → viiva ja nuoli palaavat. MOLEMMAT luokat
+ * on poistettava: `esitys-musta` kattaa ensimmäisen virkkeen ja
+ * `esitys-avaruus` koko avaruusvaiheen (omistaja 15.9.2026 klo 19.05,
+ * *"kehys palasi liian aikaisin"*). Pelkän mustan poisto jätti nauhan
+ * mustaksi, eli vastakoe olisi vihertynyt väärästä syystä.
+ */
+await s.evaluate(() => document.querySelector('.aikajana')?.classList.remove('esitys-musta', 'esitys-avaruus'));
 await s.waitForTimeout(400);
 await s.screenshot({ path: join(ULOS, 'savuke-ihmisen-rintama-vastakoe.png') });
 const vastakoe = kirkkaudet(await s.screenshot({ clip: nauhanRajaus }));
 const yhaMusta = await s.evaluate(() => window.matkakirja.ui.aikajana.esitys.tila().mustaPaalla);
-vaadi('VASTAKOE: ilman esitys-musta-luokkaa yläreunaan palaa kirkkaita pikseleitä',
+vaadi('VASTAKOE: ilman piilotusluokkia (esitys-musta, esitys-avaruus) yläreunaan palaa kirkkaita pikseleitä',
   yhaMusta === true && vastakoe.kirkkaita > 100 && vastakoe.maks >= 8,
   JSON.stringify({ ...vastakoe, yhaMusta }));
 await s.evaluate(() => {
   const j = document.querySelector('.aikajana');
   if (window.matkakirja.ui.aikajana.esitys.tila().mustaPaalla) j?.classList.add('esitys-musta');
+  // Avaruusvaihe jatkuu, joten kehyksen piilotus palautetaan sellaisenaan.
+  j?.classList.add('esitys-avaruus');
   window.matkakirja.ui.aikajana.esitys.jatka();
 });
 
