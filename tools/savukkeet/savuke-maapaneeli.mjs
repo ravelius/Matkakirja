@@ -229,9 +229,97 @@ async function avaaPeli({ leveys, korkeus, lisaparametrit = '' }) {
       l.ladoHeti();
       await new Promise((v) => setTimeout(v, 400));
     });
+    /*
+     * LUENTA VAIETAAN ENNEN MITTAUSTA (korjaus 16.9.2026, erä 19b).
+     *
+     * Saapuminen käynnistää isoisän luennan, ja sen ajaksi Liiku on
+     * `display: none` (css `body.luenta-aanessa .toimintorivi
+     * .monitoimi-nappi`). Kevyessä kontissa luenta ehti loppua ennen
+     * mittausta, mutta JULKAISUAJOSSA (20–60 chromiumia) ei ehtinyt:
+     * `.monitoimi-nappi` löytyi DOM:sta mutta sen ruutulaatikko oli
+     * pelkkiä nollia, ja väite 6 sekä vastakoe F kaatuivat ilman että
+     * napissa oli mitään vikaa. Kytkin sammuttaa puhujan ja
+     * js/ui.js:n luentavahti päästää napin esiin ~1,5 s kuluessa.
+     */
+    await sivu.evaluate(async () => {
+      try {
+        const L = await import('/js/luenta.js');
+        L.asetaLuentaKytkin(false);
+      } catch { /* moduuli ei latautunut: tyyli hoitaa loput */ }
+    });
+    /*
+     * LUENNAN PIILOTUS NEUTRALISOIDAAN MITTAUKSEN AJAKSI. Kytkimen
+     * sammuttaminen ei riitä: headless-ajossa luentavahti pitää
+     * `body.luenta-aanessa`-luokan päällä (puhuja ei koskaan
+     * "vaikene"), ja mitattuna 16.9.2026 napin ruutulaatikko oli
+     * pelkkiä nollia vielä 30 sekunnin odotuksen jälkeenkin.
+     *
+     * TÄMÄ EI PIILOTA VIKAA: luennan aikainen piilotus on OMA
+     * vartionsa tools/savukkeet/savuke-iphone-tekstit.mjs:ssä
+     * ("luennan aikana Liiku on display:none, ei pelkkä opacity").
+     * Täällä mitataan napin PAIKKAA ja ULKOASUA, ja sitä varten napin
+     * on oltava näkyvissä — muuten mittaus kertoo vain siitä, ehtikö
+     * luenta loppua ennen kelloa.
+     */
+    /*
+     * SAAPUMISEN KUVAKORTTI PIILOON MYÖS. `.fokusvirta-isokuva` on se
+     * iso valokuva, jonka saapuminen nostaa kartan päälle; 1400 px:n
+     * ruudulla se peittää paneelin plus-napin, ja mitattuna 16.9.2026
+     * `page.click('.maapaneeli-lisaa')` jäi odottamaan osumaa 30 s ja
+     * kaatoi koko savukkeen. Kortti ei kuulu tähän mittaukseen — se on
+     * saapumisen oma kaluste, ei maapaneelin.
+     */
+    await sivu.addStyleTag({
+      content: 'body.luenta-aanessa .toimintorivi .monitoimi-nappi,'
+        + ' body.luenta-tekstit-piiloon .toimintorivi .monitoimi-nappi'
+        + ' { display: flex !important; }'
+        + ' .fokusvirta-isokuva, .fokusvirta-luentakuva,'
+        + ' .fokusvirta-luentakuva-ankkuri, .fokusvirta-luentateksti'
+        + ' { display: none !important; }',
+    });
+    await sivu.waitForFunction(() => {
+      const n = document.querySelector('.toimintorivi .monitoimi-nappi');
+      const r = n?.getBoundingClientRect();
+      return Boolean(r && r.width > 0 && r.height > 0);
+    }, null, { timeout: 20000 }).catch(() => {});
   }
   return { ctx, sivu, virheet, auki };
 }
+
+/**
+ * ODOTA, ETTÄ RUUTU ON ASETTUNUT (erä 19b).
+ *
+ * Karttaruutu (`.pallo-kotelo`) on flex-lapsi, jonka MITATTU korkeus
+ * heiluu saapumisen aikana — ja paneeli on ankkuroitu sen alareunaan,
+ * joten kortti liikkuu ruudulla niin kauan kuin kotelo elää. Se ei ole
+ * zoomin aiheuttamaa liikettä (väite 2), vaan asettumista, ja
+ * kuormitetussa kontissa se kesti pidempään kuin mittauksen odotus.
+ *
+ * Mitataan kortin ruutulaatikkoa, kunnes se on kaksi kertaa peräkkäin
+ * sama (± 0,5 px) — tai kunnes aika loppuu, jolloin palataan
+ * viimeiseen lukemaan ja väite ratkaisee asian.
+ */
+const odotaAsettunut = async (sivu, aikaaMs = 12000) => {
+  const lue = () => sivu.evaluate(() => {
+    const r = document.querySelector('.maapaneeli-kortti')?.getBoundingClientRect();
+    return r ? { x: r.left, y: r.top, w: r.width, h: r.height } : null;
+  });
+  const loppuu = Date.now() + aikaaMs;
+  let edellinen = await lue();
+  while (Date.now() < loppuu) {
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.waitForTimeout(400);
+    // eslint-disable-next-line no-await-in-loop
+    const nyt = await lue();
+    if (edellinen && nyt
+      && Math.abs(nyt.x - edellinen.x) <= 0.5 && Math.abs(nyt.y - edellinen.y) <= 0.5
+      && Math.abs(nyt.w - edellinen.w) <= 0.5 && Math.abs(nyt.h - edellinen.h) <= 0.5) {
+      return nyt;
+    }
+    edellinen = nyt;
+  }
+  return edellinen;
+};
 
 /**
  * Yksi mittaus: kortti, valikko, Liiku ja kartan oma vertailukaluste.
@@ -310,8 +398,16 @@ const mittaaPaneeli = (sivu) => sivu.evaluate(() => {
       const pp = l.pallo.getScreenCoords(48.8566, 2.3522, 0);
       return pp ? { x0: pp.x, y0: pp.y } : null;
     })(),
-    /* Väite 6 ja vastakoe D. */
-    liiku: nr ? {
+    /*
+     * Väite 6 ja vastakoe D.
+     *
+     * NOLLAN KOKOINEN LAATIKKO EI OLE MITTA (erä 19b). Luennan ajaksi
+     * nappi on `display: none`, jolloin se löytyy DOM:sta mutta sen
+     * ruutulaatikko on pelkkiä nollia — silloin mittausta EI ole, ja
+     * `liiku: null` kertoo sen suoraan väitteen viestissä sen sijaan
+     * että väite kaatuisi kuin napissa olisi vika.
+     */
+    liiku: nr && nr.width > 0 && nr.height > 0 ? {
       laatikko: napinLaatikko,
       keskipoikkeama: Math.abs((nr.left + nr.width / 2) - globalThis.innerWidth / 2),
       tausta: tyyli.backgroundImage === 'none' ? tyyli.backgroundColor : tyyli.backgroundImage,
@@ -371,7 +467,12 @@ const RUUDUT = [
   { nimi: '1400', leveys: 1400, korkeus: 900, sivuvara: 120, ylavara: 200 },
 ];
 
-/* Paneelin nurkka-marginaali css:ssä on 0,7rem / 0,9rem (11,2 / 14,4 px). */
+/*
+ * Paneelin nurkka-marginaali on erästä 19b alkaen RUUDUN suhteen
+ * (css .maapaneeli-nurkka .pallolauta-maapaneeli, `position: fixed`,
+ * var(--gap) + 0,4rem + 1px ≈ 14,6 px). Vara 24 px kattaa myös
+ * iPhonen turva-alueen.
+ */
 const NURKKA_VARA_PX = 24;
 
 const sijaintiOk = [];
@@ -391,14 +492,22 @@ for (const ruutu of RUUDUT) {
   if (!auki) { /* eslint-disable-next-line no-await-in-loop */ await ctx.close(); continue; }
 
   /* --- 1. paikka: ruudun vasen alakulma --------------------------- */
+  // Ruutu asettuu ensin: kesken asettuva kotelo siirtäisi korttia (erä 19b).
+  // eslint-disable-next-line no-await-in-loop
+  await odotaAsettunut(sivu);
   // eslint-disable-next-line no-await-in-loop
   const ulko = await mittaaPaneeli(sivu);
   const ruudulla = Boolean(ulko.kortti
     && ulko.kortti.y0 >= -1 && ulko.kortti.y1 <= ulko.ruutu.h + 1
     && ulko.kortti.x0 >= -1 && ulko.kortti.x1 <= ulko.ruutu.w + 1);
+  /*
+   * NURKKA MITATAAN RUUDUSTA, EI KARTTARUUDUSTA (erä 19b). Kortti on
+   * `position: fixed` eli ruudun vasemmassa alakulmassa; karttaruudun
+   * oma laatikko elää saapumisen aikana eikä kelpaa ankkuriksi.
+   */
   const nurkassa = Boolean(ulko.kortti
-    && ulko.kortti.x0 - ulko.kotelo.x0 <= NURKKA_VARA_PX
-    && ulko.kotelo.y1 - ulko.kortti.y1 <= NURKKA_VARA_PX);
+    && ulko.kortti.x0 <= NURKKA_VARA_PX
+    && ulko.ruutu.h - ulko.kortti.y1 <= NURKKA_VARA_PX);
   /*
    * ERÄ 19b: KORKEUS ON 22 % RUUDUSTA (± 2 %-yksikköä), EI 10 %.
    * Omistajan päätös 15.9.2026 illalla: maainfo alkuperäiseen
@@ -407,6 +516,14 @@ for (const ruutu of RUUDUT) {
    * (58 % ruudun leveydestä) hyvin kapealla ruudulla.
    */
   const osuus = ulko.kortti ? ulko.kortti.h / ulko.ruutu.h : 0;
+  /*
+   * 20…24 % ON OIKEA HAARUKKA EIKÄ HÖLLENNYS (mitattu 16.9.2026).
+   * 390 px:n ruudulla sitova raja on LEVEYS (0,58 × 390 / 104 =
+   * 2,175) eikä korkeus (0,22 × 844 / 82 = 2,264), joten kortin
+   * korkeus on 21,1 % eikä tasan 22 %. Se on kaavan oikea tulos, ei
+   * poikkeama: kapealla ruudulla kortti ei saa levitä yli 58 %:n
+   * leveydestä. 1400 px:llä korkeusraja sitoo ja osuus on 22,0 %.
+   */
   const luettava = osuus >= 0.20 && osuus <= 0.24;
   sijaintiOk.push({
     ruutu: ruutu.nimi,
@@ -420,8 +537,8 @@ for (const ruutu of RUUDUT) {
     `kortti ${ulko.kortti ? `${Math.round(ulko.kortti.w)} x ${Math.round(ulko.kortti.h)} px `
       + `(x ${Math.round(ulko.kortti.x0)}…${Math.round(ulko.kortti.x1)}, `
       + `y ${Math.round(ulko.kortti.y0)}…${Math.round(ulko.kortti.y1)})` : 'EI OLE'}, `
-    + `vasen väli ${ulko.kortti ? (ulko.kortti.x0 - ulko.kotelo.x0).toFixed(1) : '—'} px, `
-    + `ala väli ${ulko.kortti ? (ulko.kotelo.y1 - ulko.kortti.y1).toFixed(1) : '—'} px, `
+    + `vasen väli ruudusta ${ulko.kortti ? ulko.kortti.x0.toFixed(1) : '—'} px, `
+    + `ala väli ruudusta ${ulko.kortti ? (ulko.ruutu.h - ulko.kortti.y1).toFixed(1) : '—'} px, `
     + `osuus ruudun korkeudesta `
     + `${ulko.kortti ? ((100 * ulko.kortti.h) / ulko.ruutu.h).toFixed(1) : '—'} %, `
     + `skaala ${ulko.skaala?.toFixed(3) ?? '—'}, korkeus ${ulko.korkeus?.toFixed(4) ?? '—'}`);
@@ -489,6 +606,8 @@ for (const ruutu of RUUDUT) {
   /* --- 2. ei liiku eikä kasva zoomatessa (vastakoe C) -------------- */
   // eslint-disable-next-line no-await-in-loop
   await zoomaaSisaan(sivu, 0.5);
+  // eslint-disable-next-line no-await-in-loop
+  await odotaAsettunut(sivu, 6000);
   // eslint-disable-next-line no-await-in-loop
   const lahi = await mittaaPaneeli(sivu);
   const paikallaan = Boolean(ulko.kortti && lahi.kortti
@@ -712,10 +831,11 @@ poistaKategoriat = null;
   const { ctx, sivu, auki } = await avaaPeli({
     leveys: 390, korkeus: 844, lisaparametrit: '&maapaneeli=nurkka',
   });
+  if (auki) await odotaAsettunut(sivu, 6000);
   const ulko = auki ? await mittaaPaneeli(sivu) : null;
   const vaite1 = Boolean(ulko?.onKortti && ulko.kortti
-    && ulko.kortti.x0 - ulko.kotelo.x0 <= NURKKA_VARA_PX
-    && ulko.kotelo.y1 - ulko.kortti.y1 <= NURKKA_VARA_PX);
+    && ulko.kortti.x0 <= NURKKA_VARA_PX
+    && ulko.ruutu.h - ulko.kortti.y1 <= NURKKA_VARA_PX);
   tieto('vastakoe B (?maapaneeli=nurkka)',
     `kortti ${Boolean(ulko?.onKortti)}, vanha nurkkataulu ${Boolean(ulko?.nurkassa)}, `
     + `väite 1 ${vaite1 ? 'LÄPI (paha)' : 'PUNAINEN'}`);
@@ -741,6 +861,7 @@ poistaKategoriat = null;
 {
   vastakoe = 'PIENI_KOKO';
   const { ctx, sivu, auki } = await avaaPeli({ leveys: 390, korkeus: 844 });
+  if (auki) await odotaAsettunut(sivu);
   const m = auki ? await mittaaPaneeli(sivu) : null;
   vastakoe = null;
   const osuus = m?.kortti ? m.kortti.h / m.ruutu.h : 0;
@@ -763,6 +884,7 @@ poistaKategoriat = null;
 {
   vastakoe = 'EI_VAISTOA';
   const { ctx, sivu, auki } = await avaaPeli({ leveys: 390, korkeus: 844 });
+  if (auki) await odotaAsettunut(sivu);
   const m = auki ? await mittaaPaneeli(sivu) : null;
   vastakoe = null;
   tieto('vastakoe F (ei väistöä)',
