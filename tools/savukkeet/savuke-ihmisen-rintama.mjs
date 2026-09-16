@@ -22,10 +22,11 @@
  *      nauha on mustaa koko leveydeltä (kirkkaus < 8) — ei yläpalkin
  *      alareunan viivaa eikä hampurilaisen nuolta. Lippu
  *      esitys.tila().palkkiPiilossa on tosi.
- *   1b. VASTAKOE: kun MOLEMMAT piilotusluokat otetaan pois
- *      (`esitys-musta` ja `esitys-avaruus` — jälkimmäinen pitää kehyksen
- *      poissa koko avaruusvaiheen, ks. savuke-ihmisen-kehys.mjs), sama
- *      nauha saa kirkkaita pikseleitä (viiva + nuoli palaavat).
+ *   1b. VASTAKOE: kun KAIKKI KOLME piilotusta otetaan pois
+ *      (`esitys-musta`, `esitys-avaruus` — joka pitää kehyksen poissa
+ *      koko avaruusvaiheen — ja body-luokka `kehys-piilossa`, joka
+ *      pitää palkin ruudun ulkopuolella, ks. savuke-ihmisen-kehys.mjs),
+ *      sama nauha saa kirkkaita pikseleitä (viiva + nuoli palaavat).
  *   2. RINTAMA EI VÄLKY. Kasvavan kärjen VÄRIPAINO luetaan kehys
  *      kehykseltä suoraan elävän varjostimen uniformeista ja saman
  *      verkon instanssipuskurista (sama float32-laskenta kuin GPU:lla).
@@ -259,7 +260,16 @@ vaadi('musta alku: linssin yläreuna on mustaa koko leveydeltä (ei palkin viiva
  * *"kehys palasi liian aikaisin"*). Pelkän mustan poisto jätti nauhan
  * mustaksi, eli vastakoe olisi vihertynyt väärästä syystä.
  */
-await s.evaluate(() => document.querySelector('.aikajana')?.classList.remove('esitys-musta', 'esitys-avaruus'));
+await s.evaluate(() => {
+  document.querySelector('.aikajana')?.classList.remove('esitys-musta', 'esitys-avaruus');
+  /*
+   * KOLMAS PIILOTUS (16.9.2026): yhteinen kehysliuku pitää palkin ruudun
+   * ULKOPUOLELLA (css/linssikehys.css, body.kehys-piilossa). Vanha
+   * käytös tarkoittaa, että kaikki kolme ovat poissa — muuten nauha
+   * pysyisi mustana ja vastakoe vihertyisi väärästä syystä.
+   */
+  document.body.classList.remove('kehys-piilossa');
+});
 await s.waitForTimeout(400);
 await s.screenshot({ path: join(ULOS, 'savuke-ihmisen-rintama-vastakoe.png') });
 const vastakoe = kirkkaudet(await s.screenshot({ clip: nauhanRajaus }));
@@ -272,6 +282,8 @@ await s.evaluate(() => {
   if (window.matkakirja.ui.aikajana.esitys.tila().mustaPaalla) j?.classList.add('esitys-musta');
   // Avaruusvaihe jatkuu, joten kehyksen piilotus palautetaan sellaisenaan.
   j?.classList.add('esitys-avaruus');
+  document.body.style.setProperty('--kehys-liuku', '0ms');
+  document.body.classList.add('kehys-piilossa');
   window.matkakirja.ui.aikajana.esitys.jatka();
 });
 

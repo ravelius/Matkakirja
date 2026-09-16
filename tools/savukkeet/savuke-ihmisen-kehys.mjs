@@ -32,6 +32,16 @@
  *   3b. VASTAKOE (vanha käytös): kun `esitys-avaruus` otetaan pois
  *      samassa kohdassa — juuri niin kuin nostaMusta ennen teki —
  *      nauhaan palaa kirkkaita pikseleitä. Punainen.
+ *   3c. KEHYS LIUKUU SISÄÄN, EI FEIDAA (omistaja 16.9.2026). Kun
+ *      valkeneminen alkaa (body-luokka `kehys-piilossa` pois),
+ *      yläpalkin alareuna on +50 ms:n kohdalla ruudun yläpuolella
+ *      (bottom <= 0) ja alapalkin yläreuna ruudun alapuolella
+ *      (top >= ruudun korkeus). Liu'un LAATU mitataan omalla
+ *      kierroksella hidastettuna (sama mekanismi, kesto 10 000 ms):
+ *      molemmilla palkeilla on käynnissä TRANSFORM-siirtymä, ei
+ *      peittävyyden feidi. VASTAKOE: kun liu'un kesto on nolla,
+ *      transform-siirtymää ei synny lainkaan — kehys on perillä
+ *      samassa silmänräpäyksessä, juuri niin kuin pelkkä feidi.
  *   4. NAPAUTUS EI TUO KEHYSTÄ kesken avaruusvaiheen: pallolauta
  *      ottaa kosketuksia vastaan koko esityksen ajan, joten
  *      vahinkokosketus toisi kehyksen juuri "liian aikaisin".
@@ -245,6 +255,36 @@ async function mittaa(leveys, korkeus) {
   const { pallo, lahto } = await avaaLinssi(s);
   vaadi(`${leveys}px: linssi laukusta, vanat valmiina`, pallo && lahto.ok && lahto.vanoja >= 15, JSON.stringify(lahto));
 
+  /*
+   * LIU'UN TARKKAILIJA (16.9.2026). Kehys palaa LIUKUMALLA ruudun
+   * ulkopuolelta paikalleen, ei pelkällä feidillä: yläpalkki ylhäältä,
+   * alapalkki alhaalta (css/linssikehys.css, body.kehys-piilossa).
+   * Tässä luetaan VALKENEMISEN ALKUHETKI: kun ohjaaja poistaa body-luokan
+   * `kehys-piilossa`, laatikot mitataan 50 ms myöhemmin — yläpalkin on
+   * silloin oltava yhä ruudun yläpuolella ja alapalkin sen alapuolella.
+   * Itse liu'un kesto mitataan alempana omalla kierroksellaan, koska
+   * kontin pääsäie nykii juuri valkenemisen kohdalla.
+   */
+  await s.evaluate(() => {
+    const mittaa = () => {
+      const yla = document.querySelector('.aikajana-ylarivi')?.getBoundingClientRect();
+      const ala = document.querySelector('.aikaselain')?.getBoundingClientRect();
+      return {
+        ylaAla: yla ? +yla.bottom.toFixed(1) : null,
+        ylaKorkeus: yla ? +yla.height.toFixed(1) : null,
+        alaYla: ala ? +ala.top.toFixed(1) : null,
+        korkeus: window.innerHeight,
+      };
+    };
+    window.__kehysLiuku = { mittaa };
+    const vahti = new MutationObserver(() => {
+      if (document.body.classList.contains('kehys-piilossa')) return;
+      vahti.disconnect();
+      setTimeout(() => { window.__kehysLiuku.heti = mittaa(); }, 50);
+    });
+    vahti.observe(document.body, { attributes: true, attributeFilter: ['class'] });
+  });
+
   /* Käynnistä-nappi: musta ruutu, avausluenta, avaruusvaihe. */
   await s.evaluate(() => document.querySelector('.aikajana-avaus-nappi')?.click());
 
@@ -352,8 +392,88 @@ async function mittaa(leveys, korkeus) {
       && kehys.alku > musta.perilla + 2000,
     JSON.stringify({ kehys, kartta, mustanLasku: musta }));
 
+  /* --------- 3. LIUKU: ULKONA VALKENEMISEN ALKAESSA, PAIKALLAAN 700 MS:N PÄÄSTÄ --------- */
+  const heti = await s.evaluate(() => window.__kehysLiuku?.heti ?? null);
+  vaadi(`${leveys}px: valkenemisen alkaessa kehys on ruudun ULKOPUOLELLA (+50 ms)`,
+    Boolean(heti) && heti.ylaAla <= 0 && heti.alaYla >= heti.korkeus,
+    JSON.stringify(heti));
+  /*
+   * LIU'UN MUOTO MITATAAN OMALLA KIERROKSELLA, EI SEINÄKELLOLLA. Kontin
+   * ohjelmisto-WebGL vie pääsäikeen niin tiukasti, ettei 500 ms:n liukua
+   * voi näytteistää: mitattuna setTimeout(50) laukesi 502 ms:n ja
+   * setTimeout(700) 2 211 ms:n kohdalla, ja koska transform-siirtymä
+   * ajetaan yhdistäjäsäikeessä, getBoundingClientRect luki koko liu'un
+   * ajan lähtöarvoa (pääsäie ei ehtinyt näytteistää sitä kertaakaan).
+   *
+   * Siksi mekanismi mitataan SIIRTYMÄOLIOISTA (Web Animations API):
+   * sama body-luokka ja sama muuttuja, mutta liu'un kesto 10 000 ms,
+   * jolloin siirtymä on varmasti yhä käynnissä, kun näyte otetaan.
+   * Väite on juuri se, mitä omistaja pyysi: paluu on TRANSFORM-siirtymä
+   * molemmille palkeille, ei peittävyyden feidi. Liu'un todellinen
+   * kesto (500 ms) on CSS:ssä, ja tests/linssikehys.test.mjs vartioi sen.
+   */
+  const kierros = async (kesto) => s.evaluate(async (liukuKesto) => {
+    const odota = (ms) => new Promise((r) => setTimeout(r, ms));
+    const mittaa = window.__kehysLiuku.mittaa;
+    const palkit = () => [
+      ['ylapalkki', document.querySelector('.aikajana-ylarivi')],
+      ['alapalkki', document.querySelector('.aikaselain')],
+    ];
+    const siirtymat = () => palkit().flatMap(([nimi, el]) => (el?.getAnimations?.() ?? []).map((a) => ({
+      palkki: nimi,
+      ominaisuus: a.transitionProperty ?? null,
+      kesto: Number(a.effect?.getComputedTiming?.().duration) || 0,
+    })));
+    /*
+     * MEKANISMI AUKI. Ohjaaja purkaa `kehys-liukuu`-luokan, kun paluu on
+     * ohi (js/linssit/ihmisen-matka-esitys.js paljastaKehys), joten
+     * kierros aseistaa siirtymän uudestaan.
+     */
+    document.body.classList.add('kehys-liukuu');
+    document.body.style.setProperty('--kehys-liuku', '0ms');
+    document.body.classList.add('kehys-piilossa');
+    await odota(500);
+    const piilossa = mittaa();
+    document.body.style.setProperty('--kehys-liuku', liukuKesto);
+    document.body.classList.remove('kehys-piilossa');
+    await new Promise((r) => requestAnimationFrame(r));
+    const kaynnissa = siirtymat();
+    /* Kesken jäänyt hidastus katkaistaan: nollan mittainen kierros vie
+       kehyksen lähtöön ja takaisin paikalleen ilman liukua. */
+    document.body.style.setProperty('--kehys-liuku', '0ms');
+    document.body.classList.add('kehys-piilossa');
+    await odota(100);
+    document.body.classList.remove('kehys-piilossa');
+    await odota(400);
+    return { piilossa, kaynnissa, lopullinen: mittaa() };
+  }, kesto);
+
+  const liuku = await kierros('10000ms');
+  const liukuu = (nimi) => liuku.kaynnissa.filter((a) => a.palkki === nimi && a.ominaisuus === 'transform');
+  vaadi(`${leveys}px: kehyksen paluu on TRANSFORM-liuku molemmille palkeille, ei peittävyyden feidi`,
+    liuku.piilossa.ylaAla <= 0 && liuku.piilossa.alaYla >= liuku.piilossa.korkeus
+      && liukuu('ylapalkki').length === 1 && liukuu('alapalkki').length === 1
+      && liukuu('ylapalkki')[0].kesto === 10000 && liukuu('alapalkki')[0].kesto === 10000
+      // Kierroksen lopuksi kehys on taas paikallaan, ei ruudun ulkopuolella.
+      && liuku.lopullinen.ylaAla > 0 && liuku.lopullinen.alaYla < liuku.lopullinen.korkeus,
+    JSON.stringify(liuku));
+
+  /*
+   * VASTAKOE: ILMAN SIIRTYMÄÄ EI OLE LIUKUA. Sama kierros nollan
+   * mittaisella liu'ulla — juuri niin kuin pelkkä peittävyyden feidi
+   * käyttäytyisi: transform-siirtymää ei synny lainkaan, vaan kehys on
+   * perillä samassa silmänräpäyksessä. Jos tämä väite kaatuu, edellä
+   * mitattu liuku ei ole liukua vaan mittausvirhe.
+   */
+  const vastakoe = await kierros('0ms');
+  vaadi(`${leveys}px: VASTAKOE — ilman siirtymää transform-liukua ei synny`,
+    vastakoe.piilossa.ylaAla <= 0
+      && vastakoe.kaynnissa.filter((a) => a.ominaisuus === 'transform').length === 0
+      && Math.abs(vastakoe.lopullinen.ylaAla - liuku.lopullinen.ylaAla) <= 1,
+    JSON.stringify(vastakoe));
+
   await konteksti.close();
-  return { sarja, kehys, kartta, musta };
+  return { sarja, kehys, kartta, musta, liuku };
 }
 
 /**
@@ -368,12 +488,20 @@ async function kuvamitta(leveys, korkeus) {
 
   if (!pallo || !lahto.ok) { await konteksti.close(); return; }
   await s.evaluate(() => document.querySelector('.aikajana-avaus-nappi')?.click());
-  /* Odotetaan, että musta on noussut harsoksi: tähdet ja pieni Maa. */
-  for (let n = 0; n < 40; n += 1) {
-    const t = await s.evaluate(() => window.matkakirja.ui.aikajana.esitys.tila());
-    if (!t.mustaPaalla && t.kehysPiilossa) break;
-    await s.waitForTimeout(500);
-  }
+  /*
+   * Odotetaan, että musta on noussut harsoksi: tähdet ja pieni Maa.
+   *
+   * ODOTUS ON SIVUN SISÄLLÄ, EI EVALUATE-SILMUKASSA (16.9.2026). Ennen
+   * tässä oli 40 kierroksen silmukka 500 ms:n välein, mutta jokainen
+   * evaluate maksaa kontissa jopa sekunnin: silmukka kesti yli 40 s ja
+   * ehti valojen syttymisen yli, jolloin kuvamitta otettiin valkoiselta
+   * kartalta ja vastakoe kaatui satunnaisesti. waitForFunction pollaa
+   * sivun sisällä 100 ms:n välein.
+   */
+  await s.waitForFunction(() => {
+    const t = window.matkakirja?.ui?.aikajana?.esitys?.tila?.() ?? {};
+    return t.mustaPaalla === false && t.kehysPiilossa === true;
+  }, null, { timeout: 30000, polling: 100 }).catch(() => { /* mitataan silti */ });
   await s.evaluate(() => window.matkakirja.ui.aikajana.esitys.tauko());
   await s.waitForTimeout(400);
   const tila = await s.evaluate(() => window.matkakirja.ui.aikajana.esitys.tila());
@@ -401,7 +529,12 @@ async function kuvamitta(leveys, korkeus) {
     JSON.stringify({ kehysPiilossa: tila.kehysPiilossa, nyt, nolla }));
 
   /* 3b. VASTAKOE: vanha käytös — kehys palasi jo avaruusvaiheessa. */
-  await s.evaluate(() => document.querySelector('.aikajana')?.classList.remove('esitys-avaruus'));
+  await s.evaluate(() => {
+    document.querySelector('.aikajana')?.classList.remove('esitys-avaruus');
+    // Yhteinen kehysliuku pitäisi palkin ruudun ulkopuolella (16.9.2026):
+    // vanha käytös tarkoittaa, että MOLEMMAT piilotukset ovat poissa.
+    document.body.classList.remove('kehys-piilossa');
+  });
   await s.waitForTimeout(3000);
   await s.screenshot({ path: join(ULOS, `savuke-ihmisen-kehys-vastakoe-${leveys}.png`) });
   const vanha = kirkkaudet(await s.screenshot({ clip: rajaus }));
@@ -421,6 +554,8 @@ async function kuvamitta(leveys, korkeus) {
     // Sama nolla kuin aloituksessa: kehys katoaa ilman liukua.
     j?.style.setProperty('--avaruuden-feidi', '0ms');
     j?.classList.add('esitys-avaruus');
+    document.body.style.setProperty('--kehys-liuku', '0ms');
+    document.body.classList.add('kehys-piilossa');
   });
   await s.waitForTimeout(400);
   const ennen = await s.evaluate(() => Number(getComputedStyle(document.querySelector('.aikajana-ylarivi')).opacity));

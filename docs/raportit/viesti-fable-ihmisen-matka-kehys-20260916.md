@@ -111,3 +111,124 @@ ennen kuin kartta valkenee. Tämä on linjauksen mukaista ("kehys pysyy
 poissa KOKO avaruusvaiheen ajan"), mutta jos odotus tuntuu pitkältä,
 vaihtoehto olisi tuoda pelkkä hampurilainen näkyviin esimerkiksi
 kymmenen sekunnin kohdalla.
+
+## Liuku (16.9.)
+
+Omistajan tarkennus (Raamattu, "LINSSIEN KEHYS LIUKUU SISAAN MUSTAN
+JALKEEN"): kun linssi on piilottanut kehyksen mustan/avaruusvaiheen
+ajaksi, kehys palaa **liukumalla** ruudun ulkopuolelta paikalleen — ei
+pelkällä peittävyyden feidillä. Liuku alkaa samalla hetkellä kuin kartta
+valkenee.
+
+### Mekanismi — yksi kaikille linsseille
+
+Uusi **`css/linssikehys.css`** (ladataan `index.html`:ssä, ei linssin
+omassa `lataaTyyli`-kutsussa, jotta myös ne linssit, jotka eivät lataa
+`css/aikajana.css`:ää, voivat käyttää sitä; lisätty myös `sw.js`:n
+SHELL-listaan ja `tools/build-standalone.mjs`:n STYLES-listaan).
+
+Kaksi body-luokkaa ja yksi muuttuja:
+
+| | merkitys |
+|---|---|
+| `kehys-liukuu` | siirtymä aseistettu (transform + peittävyys) |
+| `kehys-piilossa` | kehys ruudun ulkopuolella; luokan poisto = paluuliuku |
+| `--kehys-liuku` | liu'un kesto: 0 ms piilotuksessa, 500 ms paluussa |
+
+Piilotus alussa tapahtuu siis **ilman siirtymää** (musta peittää joka
+tapauksessa) — sama kädenliike kuin `--avaruuden-feidi`-muuttujalla.
+Siirtymä on `transform var(--kehys-liuku, 500ms) ease-out` ja sen
+rinnalla vanha `opacity var(--avaruuden-feidi, 2600ms) ease`, jotta
+kehys ei pompahda täyteen kirkkauteen ennen karttaa. Valitsimet nimeävät
+body-luokan lisäksi linssin juuren (paino 0-3-1), jolloin ne voittavat
+linssikohtaiset siirtymäsäännöt ilman `!important`-merkkejä.
+
+Liikkeenvähennyksellä (`prefers-reduced-motion: reduce`) transform on
+pois ja jäljelle jää 200 ms:n feidi.
+
+### Mitkä elementit liukuvat
+
+- **Yläpalkki** `.aikajana-ylarivi` (kello, otsikot, hampurilainen,
+  reunaviiva) ylös ulos: `translateY(calc(-110% - 2rem))`.
+- **Pelin oma yläpalkki** `.topbar` samassa säännössä (linssin aikana se
+  on nollakorkuinen, mutta mekanismi kattaa senkin).
+- **Alapalkki** `.aikaselain` alas ulos: `translateY(calc(110% + 2rem))`.
+- **Reuna- ja nurkkanapit**: valmiit koukut `.kehys-liukuva` +
+  `.reuna-yla|.reuna-ala|.reuna-vasen|.reuna-oikea`; Ihmisen matkassa
+  niitä ei tarvita, koska Liiku on koko linssin ajan `display: none`.
+
+Vara (2rem) tuli mittauksesta: pelkkä `-110%` jätti 53 px korkean palkin
+alareunan 2,9 pikselin päähän näkyviin, koska linssin juuri alkaa noin
+8 px ruudun yläreunasta.
+
+### Mitkä linssit käyttävät
+
+- **Ihmisen matka** (`js/linssit/ihmisen-matka-esitys.js`): `aloita`
+  lisää luokat kestolla 0 ms, `paljastaKehys` antaa kestoksi
+  `KEHYKSEN_LIUKU_MS` (500 ms) ja poistaa `kehys-piilossa`-luokan
+  samassa silmänräpäyksessä kuin peite saa `pois`-luokkansa; `pura`
+  siivoaa molemmat. Vanha `esitys-avaruus`-peittävyys jää voimaan
+  rinnalle.
+- **Astronautin kamera** (`js/linssit/satelliitti*.js`): EI SOVELLU NYT.
+  Linssissä ei ole mustaa vaihetta, joka piilottaisi kehyksen — se
+  piilottaa vain pulun ja Liikun (`body.aikajana-paalla`), eikä
+  yläpalkkia viedä pois. Mekanismi on valmis odottamassa, jos
+  avaruusnäkymään joskus tulee musta avaus: riittää lisätä samat
+  body-luokat.
+
+### Mittaukset (savuke-ihmisen-kehys.mjs, 390 × 844 ja 1400 × 900)
+
+| mitta | 390 px | 1400 px |
+|---|---|---|
+| yläpalkin alareuna valkenemisen alkaessa (+50 ms) | −29,1 px (ruudun yläpuolella) | −27,1 px |
+| alapalkin yläreuna samalla hetkellä | 873,2 px (ruutu 844) | 927,6 px (ruutu 900) |
+| samat perillä kierroksen lopussa | 61,2 / 781,8 px | 67,6 / 827,4 px |
+| paluun siirtymä (Web Animations) | `transform`, molemmat palkit | `transform`, molemmat palkit |
+
+Vastakoe: kun liu'un kesto on nolla (`--kehys-liuku: 0ms`),
+transform-siirtymää ei synny lainkaan ja kehys on perillä samassa
+silmänräpäyksessä — juuri niin kuin pelkkä peittävyyden feidi
+näyttäisi. Punainen, jos mekanismi purettaisiin.
+
+**Miksi mittaus ei ole seinäkellossa.** Ensin liuku yritettiin mitata
+näytteinä (+50 ms ja +700 ms valkenemisen alusta), mutta kontin
+ohjelmisto-WebGL vie pääsäikeen: `setTimeout(50)` laukesi mitattuna
+502 ms:n ja `setTimeout(700)` 2 211 ms:n kohdalla, ja koska
+transform-siirtymä ajetaan yhdistäjäsäikeessä, `getBoundingClientRect`
+luki koko liu'un ajan lähtöarvoa. Myös `transitionstart` ja
+`transitionend` tulivat samassa nipussa. Siksi savuke mittaa
++50 ms:n kohdalta sen, mitä voi luotettavasti mitata (kehys on ruudun
+ULKOPUOLELLA, kun valkeneminen alkaa), ja liu'un LAADUN hidastetulla
+kierroksella (sama mekanismi, kesto 10 000 ms): molemmilla palkeilla on
+käynnissä transform-siirtymä. Liu'un todellinen kesto (500 ms) on
+CSS:ssä, ja `tests/linssikehys.test.mjs` vartioi sen.
+
+### Vartiot
+
+- Uusi `tests/linssikehys.test.mjs` (4 testiä): yhteisessä säännössä on
+  `transform`-siirtymä eikä pelkkää `opacity`-siirtymää, kesto tulee
+  `--kehys-liuku`-muuttujasta (500 ms ease-out), suunnat oikein,
+  liikkeenvähennys feidaa 200 ms:ssä, ohjaaja piilottaa 0 ms:llä ja
+  paljastaa liu'ulla, tiedosto on `index.html`:ssä, `sw.js`:ssä ja
+  yhden tiedoston version listassa.
+- `tests/ihmisen-matka-esitys.test.mjs`, `tests/rules.test.mjs`,
+  `tests/dokumentit.test.mjs`, `tests/linssikehys.test.mjs`:
+  **381/381 läpi.** `node --check` puhdas kaikille muutetuille
+  tiedostoille.
+- `tools/savukkeet/savuke-ihmisen-kehys.mjs`: **10/10 (390 px)** ja
+  **10/10 (1400 px)**, kaksi uutta väitettä + vastakoe.
+- `tools/savukkeet/savuke-ihmisen-rintama.mjs`: **7/7.** Sen vastakoe
+  piti päivittää poistamaan myös `kehys-piilossa` — kaksi vanhaa
+  luokkaa ei enää riittänyt tuomaan viivaa näkyviin.
+- Kehyssavukkeen kuvamitan odotus siirrettiin sivun sisään
+  (`waitForFunction`): 40 kierroksen evaluate-silmukka kesti kontissa
+  yli 40 s ja ehti satunnaisesti valojen syttymisen yli, jolloin
+  kuvamitta otettiin valkoiselta kartalta.
+
+### Huomio omistajalle
+
+Liuku (500 ms) on lyhyempi kuin kartan valkeneminen (2 600 ms):
+kehys tulee ensin paikalleen ja kirkastuu sitten kartan tahdissa. Jos
+tuntuu siltä, että kehys saapuu liian aikaisin suhteessa karttaan, liu'un
+kesto on yksi luku (`KEHYKSEN_LIUKU_MS`) — esimerkiksi 900 ms venyttäisi
+saapumisen puoliväliin kartan valkenemisesta.
