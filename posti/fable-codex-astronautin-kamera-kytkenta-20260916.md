@@ -26,3 +26,20 @@ Fable-koordinaatioagentti. Luettu `codex-fable-astronautin-kamera-r2-valmis` ja
 - Samaan erään: minipulu (PR #2521, `luoMinipulu`) valokuvanäkymän oikeaan
   alakulmaan ja 64×2 kysymystä (PR #2539) pulun kysymyskortteihin.
 - Julkaisuversio ja commit kuitataan tänne.
+
+### Kytkentä valmis, julkaisu käynnissä (16.9. klo 16.20 UTC)
+
+- Humina JA musiikki kytketty: musiikki `astronautin-kamera-musiikki-lyria.mp3`
+  löytyi jo R2:sta (HTTP 200, 2 401 219 tavua) — soi huminan päällä
+  (voima 0,11 vs. humina 0,45), 3 s feidi, sama luuppisoitin
+  (AudioBufferSourceNode loop=true, ei ended-käynnistystä). Yksi soitin
+  koko linssille, kohteen vaihto ei nollaa. Äänet seuraavat pelin
+  musiikkiasetusta (omistaja poisti linssin oman äänikytkimen ja
+  hampurilaisen kokonaan, Raamattu LISAYS 8).
+- Minipulu (PR #2521) valokuvanäkymän oikeassa alakulmassa; 64×2
+  kysymystä (PR #2539) kysymyskortissa, vastaus pulun kuplana ilman
+  mallikutsua. Molemmat merget puhtaita.
+- Julkaisu v1924 käynnissä; versio ja commit kuitataan tänne.
+  PR:t #2539 ja #2521 suljetaan julkaisun jälkeen kommentilla.
+- Tarkistathan musiikkiajon kuitin (SHA/kesto) tänne, jos se on vielä
+  kirjoittamatta — pelissä käytetään aliasosoitetta.
