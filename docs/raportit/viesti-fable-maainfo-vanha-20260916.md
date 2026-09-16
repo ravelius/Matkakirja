@@ -166,6 +166,97 @@ tervehdys leikkautuu** kalusteen oikeasta reunasta. Sama tapahtui
 nurkkataulussa ja erän 19 kortissa; ei korjattu tässä erässä, koska se on
 sisällön mitoitus eikä omistajan pyytämä asia.
 
+## Valtiomuodot v. 1873
+
+**Sonnet-sessio 16.9.2026 · haara `claude/bold-ride-vow4ki-valtiomuodot`**
+(pohja: tämä haara, `claude/bold-ride-vow4ki-maainfo-vanha`). Jatkoa
+edelliseen "Datapuutteet"-osioon: `valtiomuoto` on nyt **kaikilla 37
+maalla**, joilla on `paikallinen`-kenttä (`js/packs/fokus-grc.js`
+`FOKUS_MAANIMET`). Jokainen rivi on omalla lyhyellä kommentillaan
+tiedostossa (lähde: yleistieto/en-Wikipedian tunnetut tapahtumat, ei
+uutta hakua — omistajan antama kaava ja vuosiluvut on ensisijainen
+lähde).
+
+| maa | rivi (`valtiomuoto`) | huomiot |
+| --- | --- | --- |
+| GRC | kuningaskunta v. 1873 | Ennallaan (Sonnet-riippumaton, jo olemassa). |
+| ALB | osmanivaltakuntaa v. 1873 | Ennallaan. |
+| BGR | osmanivaltakuntaa v. 1873 | Ennallaan. |
+| TUR | osmanivaltakunta v. 1873 | Ennallaan. |
+| MKD | osmanivaltakuntaa v. 1873 | Ennallaan. |
+| AUT | Itävalta-Unkari, kaksoismonarkia v. 1873 | Ausgleich 1867; Itävallan puolisko (Cisleithania). |
+| HUN | Itävalta-Unkari, kaksoismonarkia v. 1873 | Ausgleich 1867; Unkarin kruunun puolisko. |
+| BEL | kuningaskunta v. 1873 | Itsenäinen 1830. |
+| DNK | kuningaskunta v. 1873 | — |
+| **ESP** | kuningaskunta v. 1873 | **EPÄVARMA / MAHDOLLISESTI VIRHEELLINEN.** Tehtävänannon kaava sanoi tasavalta·kuningaskunta-listalla ESP = kuningaskunta, mutta oman tietämykseni mukaan Espanja oli **käytännössä tasavalta koko vuoden 1873** (Ensimmäinen tasavalta 11.2.1873 → Alfonso XII:n kuningaskunta palautui vasta 29.12.1874). Rivi on kirjoitettu annetun kaavan mukaan, mutta Fablen kannattaisi harkita "tasavalta v. 1873" -riviä tilalle, jos historiallinen tarkkuus painaa enemmän kuin annettu kaava. |
+| ITA | kuningaskunta v. 1873 | Italian kuningaskunta 1861, pääkaupunki Roomassa 1871. |
+| NLD | kuningaskunta v. 1873 | — |
+| PRT | kuningaskunta v. 1873 | Tasavalta vasta 1910. |
+| SWE | kuningaskunta v. 1873 | Unionissa Norjan kanssa. |
+| NOR | kuningaskunta, unionissa Ruotsin kanssa v. 1873 | Ruotsi-Norja 1814–1905, oma perustuslaki ja hallitus. |
+| DEU | keisarikunta v. 1873 | Perustettu 18.1.1871. |
+| FRA | tasavalta v. 1873 | Kolmas tasavalta julistettu 4.9.1870 (perustuslait vasta 1875, mutta tasavaltamuoto oli olemassa 1873). |
+| CHE | liittovaltio v. 1873 | Liittovaltio vuoden 1848 perustuslaista. |
+| FIN | suuriruhtinaskunta Venäjän yhteydessä v. 1873 | Autonominen osa Venäjän keisarikuntaa. |
+| LUX | suurherttuakunta v. 1873 | **PIENI YKSINKERTAISTUS:** rivi ei mainitse, että suurherttuakunta oli persoonallisessa liitossa Alankomaiden kruunun kanssa vuoteen 1890 (Lontoon sopimus 1867 teki siitä pysyvästi puolueettoman, itsenäisen valtion, mutta hallitsija oli sama kuin Alankomailla). Ei ristiriidassa annetun kaavan kanssa, mutta lisätieto puuttuu tilan vuoksi. |
+| ROU | ruhtinaskunta, osmanien alainen v. 1873 | Moldovan ja Valakian liitto; itsenäisyys vasta 1877. |
+| SRB | ruhtinaskunta, osmanien alainen v. 1873 | Itsenäisyys vasta 1878 (Berliini). |
+| MNE | ruhtinaskunta v. 1873 | Tosiasiassa itsehallinnollinen, ei osmanien veronalainen enää 1870-luvulla — annettu kaava jätti osmani-maininnan pois, ja se on oikein. |
+| IRL | osa Yhdistynyttä kuningaskuntaa v. 1873 | Koko Irlanti osa UK:ta 1801–1922. |
+| POL | jaettu Venäjän, Preussin ja Itävallan kesken v. 1873 | **TERMINOLOGIAHUOMIO:** "Preussin" on vakiintunut historiankirjoituksen nimitys Puolan jaoille, vaikka Preussi oli 1873 muodollisesti osa Saksan keisarikuntaa (yhdistyminen 1871) — alue hallinnoitiin yhä Preussin kuningaskuntana Saksan sisällä, niin kuin annettu kaava sanoi. Ei muutettu. |
+| CZE | Itävalta-Unkaria (Böömi) v. 1873 | Böömin kruunumaa, Itävallan puolisko (Cisleithania). |
+| SVK | Itävalta-Unkaria (Unkari) v. 1873 | Ylä-Unkari, Unkarin kruunun puolisko. |
+| **SVN** ja **HRV** | Itävalta-Unkaria v. 1873 | **PIENI YKSINKERTAISTUS HRV:LLÄ:** annettu kaava käytti samaa yleistä riviä molemmille, mutta Kroatia-Slavonia (HRV) oli tarkemmin sanottuna Unkarin kruunun (siis Unkarin puoliskon, kuten SVK) alainen autonominen kuningaskunta, ei Itävallan puoliskon (Cisleithania) kruunumaa kuten Slovenian alue (SVN). Annetun kaavan yleisrivi on historiallisesti harmiton mutta epätarkka; tarkempi rivi olisi "Itävalta-Unkaria (Unkari) v. 1873" HRV:lle, samoin kuin SVK:lla. Ei muutettu annetusta kaavasta poikkeavaksi omasta aloitteesta. |
+| BIH | osmanivaltakuntaa v. 1873 | Bosnian vilajetti; Itävalta-Unkari miehitti vasta 1878. |
+| EST | Venäjän keisarikuntaa v. 1873 | Viron ja osin Liivinmaan kuvernementit. |
+| LVA | Venäjän keisarikuntaa v. 1873 | Liivinmaan ja Kuurinmaan kuvernementit. |
+| BLR | Venäjän keisarikuntaa v. 1873 | Luoteis-alue (Vitebsk, Minsk ym.). |
+| UKR | Venäjän keisarikuntaa v. 1873 | Lounaisalue ja Novorossija. |
+| MDA | Venäjän keisarikuntaa (Bessarabia) v. 1873 | Nykyisen Moldovan alue on pääosin Bessarabia (Venäjän 1812); Romanian ruhtinaskunnalla oli 1873 vain Preutin länsipuoli. |
+| ISL | Tanskan alainen v. 1873 | Home Rule vasta 1904, itsenäisyys 1918/1944. |
+| CYP | osmanivaltakuntaa v. 1873 | Brittihallintaan vasta 1878. |
+
+**Pituudet ja rivitys.** 33/37 riviä on ≤ 40 merkkiä. Neljä ylittää
+ohjeen tietoisesti annetun sisällön vuoksi: **POL** (52), **NOR** (47),
+**FIN** (45), **MDA** (42) — kaikki juuri niin kuin tehtävänanto
+sanamuotoili ne, koska historiallinen tarkkuus ohitti mittarajan.
+Näiden neljän lisäksi **AUT/HUN** (40, juuri rajalla) ovat pisimmät
+seuraavaksi.
+
+Mitattu (oma mittaus, sama tekniikka kuin
+`tools/savukkeet/savuke-maapaneeli.mjs`: `scrollWidth` vs. `clientWidth`
+kalusteen `.maapaneeli-alarivi`-elementissä, ei pelin sisällä vaan
+samalla CSS:llä ja DOM-rakenteella): **Puola, Norja ja Moldova
+ylittivät alarivin leveyden jo 390 px:n ruudulla** (ja Suomi/Itävalta
+320 px:llä) `white-space: nowrap`illa. Korjaus:
+`css/styles.css` `.maapaneeli-alarivi` saa nyt `white-space: normal`
+-säännön olemassa olevaan `@media (max-width: 700px)`-lohkoon, joka
+sallii pitkän rivin **kietoutua kahdelle riville** — lyhyt rivi pysyy
+yhdellä, koska selain rivittää vain kun sisältö ei mahdu. Uudella
+mittauksella yksikään testattu leveys (320, 390, 460, 461, 500, 700 px)
+ei enää ylitä (`scrollWidth === clientWidth` kaikilla viidellä pisimmällä
+rivillä). `tools/savukkeet/savuke-maapaneeli.mjs`-savuke ei mittaa
+tätä suoraan (pilottimaa on Ranska, lyhyt rivi), mutta savukkeen
+"tekstirivit === 2" -väite ei riko rivitystä, koska se laskee
+elementtien Y-alkukohtia (`.maapaneeli-alarivi` on yhä yksi elementti)
+eikä sisäisiä tekstiriveja — savuke pysyi **17/17**.
+
+**HUOMIO Fablelle fokus-kartuutsista.** `js/fokusmitat.js` /
+`css/styles.css` `.fokus-kartuutsi-alarivi` (tasokartan/linssikartan
+zoomattu maanäkymä, eri kaluste kuin pallolaudan `maapaneeli.js`) lukee
+SAMAA `FOKUS_MAANIMET`-taulua, mutta sen oma suunnitteludokumentti
+(rivi 1005–1007) sanoo nimenomaan: *"jos rivi ei mahtuisi kapealle
+ruudulle, kentän saa jättää pois taulusta — sitä ei typistetä tässä"*
+eli sen malli on käsin kuratoitu sisältö, ei CSS-rivitys. Tätä kalustetta
+EI muutettu tässä erässä (tehtävänanto rajasi työn `maapaneeli.js`:ään),
+mutta koska taulu on nyt yhteinen ja neljä riviä ylittää 390 px:n
+leveyden nowrap-tyylillä, **`.fokus-kartuutsi-alarivi` saattaa nyt
+ylivuotaa Puolalla, Norjalla ja Moldovalla siinä näkymässä** samalla
+tavalla kuin `maapaneeli.js`:ssä ennen tätä korjausta. Fablen
+päätettävä: sama rivitys-korjaus toiseenkin kalusteeseen, tai
+kentät pois taulusta juuri näiltä maailta tuon näkymän osalta (taulu on
+yhteinen, ei per-näkymä).
+
 ## Vartiot
 
 `tools/savukkeet/savuke-maapaneeli.mjs` kirjoitettiin uusiksi (erä 20).

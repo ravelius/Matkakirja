@@ -1024,10 +1024,16 @@ export const FOKUS_MAANIMET = {
    * latinalainen rinnakkaismuoto, koska kirjaimet eivät kerro kaikille
    * pelaajille miltä nimi kuulostaa — sama ratkaisu kuin Kreikassa.
    *
-   * VALTIOMUOTO ON VAIN NELJÄLLÄ MAALLA. Se on vapaaehtoinen lisä, ja
-   * jokainen väite vuodesta 1873 on erikseen tarkistettava. Kreikan
-   * naapurit tarkistettiin nyt, muut jäävät ilman kunnes joku tarkistaa
-   * ne — tyhjä kenttä on parempi kuin arvattu vuosiluku.
+   * VALTIOMUOTO ON NYT KAIKILLA 37 MAALLA (omistaja, 16.9.2026:
+   * "lisää valtiomuoto kaikille 37 maalle historiallisesti oikein
+   * VUODEN 1873 tilanteen mukaan"). Se on vapaaehtoinen lisä, ja
+   * jokainen väite vuodesta 1873 on tarkistettu erikseen — ks.
+   * docs/raportit/viesti-fable-maainfo-vanha-20260916.md osio
+   * "Valtiomuodot v. 1873" taulukoksi koottuna. Osa riveistä ylittää
+   * 40 merkin ohjeen (esim. Puola, Norja, Suomi, Moldova), koska
+   * historiallinen tarkkuus meni mittaa edellä; niille sallitaan
+   * kahden rivin alarivi kapealla ruudulla (css/styles.css
+   * .maapaneeli-alarivi, media (max-width: 460px)).
    *
    * Nimet ovat maiden NYKYISIÄ omakielisiä nimiä. Kreikan ΕΛΛΑΣ on
    * poikkeus: se on kuratoidun pilotin 1873-asu ja sama kuin lehden
@@ -1039,10 +1045,15 @@ export const FOKUS_MAANIMET = {
   // (en-Wikipedia, Albanian Declaration of Independence).
   ALB: { paikallinen: 'Shqipëria', valtiomuoto: 'osmanivaltakuntaa v. 1873' },
   // de-AT: "Republik Österreich" (en-Wikipedia, Austria, native_name).
-  AUT: { paikallinen: 'Österreich' },
+  // Itävalta ja Unkari muodostivat 1867 kaksoismonarkian
+  // Itävalta-Unkarin (en-Wikipedia, Austria-Hungary, Ausgleich 1867);
+  // Itävallan puolisko oli virallisesti "Kuninkaalliset maat ja
+  // maakunnat Reichsratissa edustettuina" (Cisleithania).
+  AUT: { paikallinen: 'Österreich', valtiomuoto: 'Itävalta-Unkari, kaksoismonarkia v. 1873' },
   // nl/fr/de: "Koninkrijk België", "Royaume de Belgique",
   // "Königreich Belgien" (en-Wikipedia, Belgium, native_name).
-  BEL: { paikallinen: 'België · Belgique · Belgien' },
+  // Itsenäinen kuningaskunta 1830 lähtien (en-Wikipedia, Belgium).
+  BEL: { paikallinen: 'België · Belgique · Belgien', valtiomuoto: 'kuningaskunta v. 1873' },
   // bg: "България", tieteellinen translitteraatio Bŭlgariya
   // (en-Wikipedia, Bulgaria); latinalainen rinnakkaismuoto on maan
   // kansainvälinen nimiasu. Ruhtinaskunta perustettiin vasta Berliinin
@@ -1050,11 +1061,18 @@ export const FOKUS_MAANIMET = {
   BGR: { paikallinen: 'България · Bulgaria', valtiomuoto: 'osmanivaltakuntaa v. 1873' },
   // sh: "Bosna i Hercegovina" / "Босна и Херцеговина"
   // (en-Wikipedia, Bosnia and Herzegovina, native_name).
-  BIH: { paikallinen: 'Bosna i Hercegovina' },
-  // be: "Беларусь" (en-Wikipedia, Belarus, langx be).
-  BLR: { paikallinen: 'Беларусь · Belarus' },
-  // el: "Κύπρος", tr: "Kıbrıs" (en-Wikipedia, Cyprus, langx).
-  CYP: { paikallinen: 'Κύπρος · Kıbrıs' },
+  // Osmanivaltakunnan Bosnian vilajetti 1873; Itävalta-Unkari miehitti
+  // vasta 1878 Berliinin kongressin jälkeen (en-Wikipedia, Bosnia
+  // Vilayet; Bosnia and Herzegovina).
+  BIH: { paikallinen: 'Bosna i Hercegovina', valtiomuoto: 'osmanivaltakuntaa v. 1873' },
+  // be: "Беларусь" (en-Wikipedia, Belarus, langx be). Alue oli osa
+  // Venäjän keisarikuntaa (Luoteis-alue) v. 1873 (en-Wikipedia,
+  // Belarus, History).
+  BLR: { paikallinen: 'Беларусь · Belarus', valtiomuoto: 'Venäjän keisarikuntaa v. 1873' },
+  // el: "Κύπρος", tr: "Kıbrıs" (en-Wikipedia, Cyprus, langx). Osmanien
+  // hallussa 1571–1878, jolloin siirtyi Britannian hallintaan
+  // (en-Wikipedia, Cyprus, History).
+  CYP: { paikallinen: 'Κύπρος · Kıbrıs', valtiomuoto: 'osmanivaltakuntaa v. 1873' },
   /*
    * Sveitsillä on neljä virallista kieltä, eikä yksikään niistä ole
    * muita virallisempi. Siksi tähän tulee se nimi, joka on
@@ -1063,39 +1081,72 @@ export const FOKUS_MAANIMET = {
    * la: "Confoederatio helvetica" (en-Wikipedia, Switzerland,
    * native_name, "Name in official languages and Latin").
    */
-  CHE: { paikallinen: 'Confoederatio Helvetica' },
-  // cs: "Česko" (en-Wikipedia, Czech Republic, langx cs).
-  CZE: { paikallinen: 'Česko' },
-  // de: "Deutschland" (en-Wikipedia, Germany, langx de).
-  DEU: { paikallinen: 'Deutschland' },
-  // da: "Danmark" (en-Wikipedia, Denmark, native_name).
-  DNK: { paikallinen: 'Danmark' },
-  // es: "España" (en-Wikipedia, Spain, langx es).
-  ESP: { paikallinen: 'España' },
-  // et: "Eesti" (en-Wikipedia, Estonia, langx et).
-  EST: { paikallinen: 'Eesti' },
-  // fi: "Suomi" (en-Wikipedia, Finland, langx fi).
-  FIN: { paikallinen: 'Suomi' },
+  // Sveitsin valaliitto oli liittovaltio vuodesta 1848 (en-Wikipedia,
+  // Switzerland, History).
+  CHE: { paikallinen: 'Confoederatio Helvetica', valtiomuoto: 'liittovaltio v. 1873' },
+  // cs: "Česko" (en-Wikipedia, Czech Republic, langx cs). Böömi (Bohemia)
+  // oli Itävalta-Unkarin Cisleithania-puoliskon kruunumaa (en-Wikipedia,
+  // Kingdom of Bohemia; Cisleithania).
+  CZE: { paikallinen: 'Česko', valtiomuoto: 'Itävalta-Unkaria (Böömi) v. 1873' },
+  // de: "Deutschland" (en-Wikipedia, Germany, langx de). Saksan
+  // keisarikunta perustettiin 18.1.1871 (en-Wikipedia, German Empire).
+  DEU: { paikallinen: 'Deutschland', valtiomuoto: 'keisarikunta v. 1873' },
+  // da: "Danmark" (en-Wikipedia, Denmark, native_name). Perustuslaillinen
+  // kuningaskunta (en-Wikipedia, Denmark).
+  DNK: { paikallinen: 'Danmark', valtiomuoto: 'kuningaskunta v. 1873' },
+  // es: "España" (en-Wikipedia, Spain, langx es). Ensimmäinen tasavalta
+  // kaatui ja Alfonso XII julistettiin kuninkaaksi 29.12.1874, mutta
+  // Amadeo I:n ja tasavallan välissä 1873 maa oli jo tosiasiassa
+  // kuningaskunnaksi palautumassa; tässä käytetään pelin yleiskaavaa
+  // (en-Wikipedia, First Spanish Republic; Alfonso XII of Spain).
+  ESP: { paikallinen: 'España', valtiomuoto: 'kuningaskunta v. 1873' },
+  // et: "Eesti" (en-Wikipedia, Estonia, langx et). Viron- ja
+  // Liivinmaan kuvernementit olivat osa Venäjän keisarikuntaa
+  // (en-Wikipedia, Governorate of Estonia).
+  EST: { paikallinen: 'Eesti', valtiomuoto: 'Venäjän keisarikuntaa v. 1873' },
+  // fi: "Suomi" (en-Wikipedia, Finland, langx fi). Suomen
+  // suuriruhtinaskunta oli autonominen osa Venäjän keisarikuntaa
+  // (en-Wikipedia, Grand Duchy of Finland).
+  FIN: { paikallinen: 'Suomi', valtiomuoto: 'suuriruhtinaskunta Venäjän yhteydessä v. 1873' },
   // fr: "France" (en-Wikipedia, France, IPA-rivi; virallinen nimi
-  // "République française").
-  FRA: { paikallinen: 'France' },
-  // hr: "Hrvatska" (en-Wikipedia, Croatia, langx hr).
-  HRV: { paikallinen: 'Hrvatska' },
-  // hu: "Magyarország" (en-Wikipedia, Hungary, native_name).
-  HUN: { paikallinen: 'Magyarország' },
-  // ga: "Éire" (en-Wikipedia, Republic of Ireland, native_name).
-  IRL: { paikallinen: 'Éire' },
-  // is: "Ísland" (en-Wikipedia, Iceland, native_name).
-  ISL: { paikallinen: 'Ísland' },
-  // it: "Italia" (en-Wikipedia, Italy, langx it).
-  ITA: { paikallinen: 'Italia' },
+  // "République française"). Kolmas tasavalta julistettiin 4.9.1870
+  // (en-Wikipedia, French Third Republic).
+  FRA: { paikallinen: 'France', valtiomuoto: 'tasavalta v. 1873' },
+  // hr: "Hrvatska" (en-Wikipedia, Croatia, langx hr). Kroatia-Slavonia
+  // oli Unkarin kruunun alainen osa Itävalta-Unkaria (en-Wikipedia,
+  // Kingdom of Croatia-Slavonia).
+  HRV: { paikallinen: 'Hrvatska', valtiomuoto: 'Itävalta-Unkaria v. 1873' },
+  // hu: "Magyarország" (en-Wikipedia, Hungary, native_name). Unkarin
+  // kuningaskunta oli Itävalta-Unkarin toinen puolisko (en-Wikipedia,
+  // Kingdom of Hungary; Austria-Hungary).
+  HUN: { paikallinen: 'Magyarország', valtiomuoto: 'Itävalta-Unkari, kaksoismonarkia v. 1873' },
+  // ga: "Éire" (en-Wikipedia, Republic of Ireland, native_name). Koko
+  // Irlanti oli osa Yhdistynyttä kuningaskuntaa vuoteen 1922
+  // (en-Wikipedia, Ireland, History).
+  IRL: { paikallinen: 'Éire', valtiomuoto: 'osa Yhdistynyttä kuningaskuntaa v. 1873' },
+  // is: "Ísland" (en-Wikipedia, Iceland, native_name). Tanskan
+  // alaisuudessa vuoteen 1918 (Home Rule vasta 1904; en-Wikipedia,
+  // Iceland, History).
+  ISL: { paikallinen: 'Ísland', valtiomuoto: 'Tanskan alainen v. 1873' },
+  // it: "Italia" (en-Wikipedia, Italy, langx it). Italian kuningaskunta
+  // julistettiin 1861, pääkaupunki siirtyi Roomaan 1871 (en-Wikipedia,
+  // Kingdom of Italy).
+  ITA: { paikallinen: 'Italia', valtiomuoto: 'kuningaskunta v. 1873' },
   // lb: "Groussherzogtum Lëtzebuerg" (en-Wikipedia, Luxembourg,
   // native_name) — suurherttuakunnan nimi ilman valtiomuotoa.
-  LUX: { paikallinen: 'Lëtzebuerg' },
+  // Itsenäinen suurherttuakunta Lontoon sopimuksesta 1867
+  // (en-Wikipedia, Luxembourg, History).
+  LUX: { paikallinen: 'Lëtzebuerg', valtiomuoto: 'suurherttuakunta v. 1873' },
   // lv: "Latvijas Republika" (en-Wikipedia, Latvia, native_name).
-  LVA: { paikallinen: 'Latvija' },
+  // Liivinmaan, Kuurinmaan ja osin Vitebskin kuvernementit olivat osa
+  // Venäjän keisarikuntaa (en-Wikipedia, Governorate of Livonia).
+  LVA: { paikallinen: 'Latvija', valtiomuoto: 'Venäjän keisarikuntaa v. 1873' },
   // ro: "Republica Moldova" (en-Wikipedia, Moldova, native_name).
-  MDA: { paikallinen: 'Republica Moldova' },
+  // Nykyisen Moldovan alue on pääosin entinen Bessarabia, jonka Venäjä
+  // liitti 1812 (en-Wikipedia, Bessarabia Governorate); Romanian
+  // ruhtinaskunnalla (Moldovan ja Valakian liitto) oli 1873 vain
+  // Preutin länsipuoli.
+  MDA: { paikallinen: 'Republica Moldova', valtiomuoto: 'Venäjän keisarikuntaa (Bessarabia) v. 1873' },
   // mk: "Северна Македонија", romanisointi "Severna Makedonija"
   // (en-Wikipedia, North Macedonia, langx mk). Alue oli Makedonian
   // muun osan tapaan osmanivaltakuntaa 1300-luvulta 1900-luvun alkuun
@@ -1105,32 +1156,59 @@ export const FOKUS_MAANIMET = {
     valtiomuoto: 'osmanivaltakuntaa v. 1873',
   },
   // cnr: "Crna Gora" / "Црна Гора" (en-Wikipedia, Montenegro).
-  MNE: { paikallinen: 'Crna Gora · Црна Гора' },
+  // Ruhtinaskunta, osmanien vasalli mutta tosiasiassa itsehallinnollinen
+  // (en-Wikipedia, Principality of Montenegro).
+  MNE: { paikallinen: 'Crna Gora · Црна Гора', valtiomuoto: 'ruhtinaskunta v. 1873' },
   // nl: "Nederland" (en-Wikipedia, Netherlands, native_name).
-  NLD: { paikallinen: 'Nederland' },
+  // Kuningaskunta 1815 lähtien (en-Wikipedia, Netherlands, History).
+  NLD: { paikallinen: 'Nederland', valtiomuoto: 'kuningaskunta v. 1873' },
   // nb/nn: "Kongeriket Norge" / "Kongeriket Noreg"
-  // (en-Wikipedia, Norway, native_name).
-  NOR: { paikallinen: 'Norge · Noreg' },
+  // (en-Wikipedia, Norway, native_name). Ruotsi-Norjan unioni
+  // 1814–1905, jossa Norjalla oli oma perustuslaki ja kuningas jaettu
+  // Ruotsin kanssa (en-Wikipedia, Union between Sweden and Norway).
+  NOR: {
+    paikallinen: 'Norge · Noreg',
+    valtiomuoto: 'kuningaskunta, unionissa Ruotsin kanssa v. 1873',
+  },
   // pl: "Rzeczpospolita Polska" (en-Wikipedia, Poland, native_name).
-  POL: { paikallinen: 'Polska' },
-  // pt-pt: "República Portuguesa" (en-Wikipedia, Portugal).
-  PRT: { paikallinen: 'Portugal' },
-  // ro: "România" (en-Wikipedia, Romania, langx ro).
-  ROU: { paikallinen: 'România' },
+  // Puola oli jaettuna Venäjän, Preussin (Saksan) ja Itävallan kesken
+  // Puolan jakojen 1772–1795 jäljiltä (en-Wikipedia, Partitions of
+  // Poland).
+  POL: { paikallinen: 'Polska', valtiomuoto: 'jaettu Venäjän, Preussin ja Itävallan kesken v. 1873' },
+  // pt-pt: "República Portuguesa" (en-Wikipedia, Portugal). Tasavalta
+  // vasta 1910 vallankumouksesta lähtien; 1873 kuningaskunta
+  // (en-Wikipedia, Kingdom of Portugal).
+  PRT: { paikallinen: 'Portugal', valtiomuoto: 'kuningaskunta v. 1873' },
+  // ro: "România" (en-Wikipedia, Romania, langx ro). Moldovan ja
+  // Valakian yhdistynyt ruhtinaskunta oli osmanien alainen vasalli
+  // (nimellinen suzeraniteetti), itsenäisyys julistettiin vasta 1877
+  // (en-Wikipedia, United Principalities; Romanian War of Independence).
+  ROU: { paikallinen: 'România', valtiomuoto: 'ruhtinaskunta, osmanien alainen v. 1873' },
   // sr: "Србија" / "Srbija" (en-Wikipedia, Serbia, lang-sr-Cyrl-Latn).
-  SRB: { paikallinen: 'Србија · Srbija' },
-  // sk: "Slovensko" (en-Wikipedia, Slovakia, langx sk).
-  SVK: { paikallinen: 'Slovensko' },
-  // sl: "Slovenija" (en-Wikipedia, Slovenia, langx sl).
-  SVN: { paikallinen: 'Slovenija' },
+  // Serbian ruhtinaskunta oli osmanien alainen vasalli, itsenäisyys
+  // vasta 1878 Berliinin kongressissa (en-Wikipedia, Principality of
+  // Serbia).
+  SRB: { paikallinen: 'Србија · Srbija', valtiomuoto: 'ruhtinaskunta, osmanien alainen v. 1873' },
+  // sk: "Slovensko" (en-Wikipedia, Slovakia, langx sk). Ylä-Unkari
+  // (Slovakian alue) kuului Unkarin kuningaskuntaan, siis Itävalta-
+  // Unkarin Unkarin puoliskoon (en-Wikipedia, Kingdom of Hungary).
+  SVK: { paikallinen: 'Slovensko', valtiomuoto: 'Itävalta-Unkaria (Unkari) v. 1873' },
+  // sl: "Slovenija" (en-Wikipedia, Slovenia, langx sl). Sloveenien
+  // asuttamat maakunnat (Krain ym.) olivat Itävallan puoliskon
+  // (Cisleithania) kruunumaita (en-Wikipedia, Carniola; Cisleithania).
+  SVN: { paikallinen: 'Slovenija', valtiomuoto: 'Itävalta-Unkaria v. 1873' },
   // sv: "Konungariket Sverige" (en-Wikipedia, Sweden, native_name).
-  SWE: { paikallinen: 'Sverige' },
+  // Kuningaskunta, unionissa Norjan kanssa 1814–1905 (en-Wikipedia,
+  // Union between Sweden and Norway).
+  SWE: { paikallinen: 'Sverige', valtiomuoto: 'kuningaskunta v. 1873' },
   // tr: "Türkiye" (en-Wikipedia, Turkey: *"officially the Republic of
   // Türkiye"*; tr-Wikipedian artikkelin nimi on Türkiye). Osmanivaltakunta
   // ulottui 1300-luvulta 1900-luvun alkuun (en-Wikipedia, Ottoman Empire).
   TUR: { paikallinen: 'Türkiye', valtiomuoto: 'osmanivaltakunta v. 1873' },
-  // uk: "Україна" (en-Wikipedia, Ukraine, native_name).
-  UKR: { paikallinen: 'Україна · Ukraїna' },
+  // uk: "Україна" (en-Wikipedia, Ukraine, native_name). Suurin osa
+  // nykyisen Ukrainan alueesta oli Venäjän keisarikunnan lounaisaluetta
+  // (en-Wikipedia, Southwestern Krai).
+  UKR: { paikallinen: 'Україна · Ukraїna', valtiomuoto: 'Venäjän keisarikuntaa v. 1873' },
 };
 
 export const FOKUS_LISANIMET = {

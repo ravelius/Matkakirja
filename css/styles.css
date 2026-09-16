@@ -26167,8 +26167,20 @@ button.maapaneeli-avain:active:not(:disabled) {
 }
 /*
  * ALARIVI: maan oma nimi ja pieni aikakauden valtiomuoto. Rivi ei katkea
- * — "ΕΛΛΑΣ · Hellas · kuningaskunta v. 1873" on yksi ajatus. Tyhjä
- * alarivi (maa, jonka omaa nimeä ei tunneta) kutistuu itsestään pois.
+ * LEVEÄLLÄ ruudulla — "ΕΛΛΑΣ · Hellas · kuningaskunta v. 1873" on yksi
+ * ajatus. Tyhjä alarivi (maa, jonka omaa nimeä ei tunneta) kutistuu
+ * itsestään pois.
+ *
+ * KAPEALLA RUUDULLA RIVITYS SALLITAAN (valtiomuotojen lisäys 37
+ * maalle, 16.9.2026): mitattuna tools/savukkeet/savuke-maapaneeli.mjs
+ * -tyylisellä mittauksella pisimmät valtiomuodot — Puola "jaettu
+ * Venäjän, Preussin ja Itävallan kesken v. 1873" ja Norja
+ * "kuningaskunta, unionissa Ruotsin kanssa v. 1873" — ylittävät
+ * kalusteen leveyden (`scrollWidth > clientWidth`) jo noin 500 px:n
+ * ruudulla, ja Suomi/Itävalta ylittävät 320 px:llä. Alempi
+ * @media (max-width: 700px) -kohta vaihtaa siis `white-space`n
+ * `normal`iksi: pitkä rivi rivittyy kahdelle, lyhyt pysyy yhdellä
+ * (selain rivittää vain kun sisältö ei mahdu).
  *
  * OMA, TIHEÄMPI HALO kuin nimellä: rivi on kalusteen pienintä tekstiä ja
  * ulottuu pisimmälle, joten sen loppupää osuu varmimmin vuoristoon.
@@ -26385,6 +26397,14 @@ button.maapaneeli-aihe:active:not(:disabled) {
   .maapaneeli-nimi-oma { font-size: 0.87rem; }
   .maapaneeli-aika { font-size: 0.73rem; }
   .maapaneeli-valikko { --otsikko-perus: 11px; }
+  /*
+   * PITKÄ VALTIOMUOTO SAA RIVITTYÄ KAHDELLE RIVILLE (ks. selitys
+   * .maapaneeli-alarivi:n kohdalla yllä). `tekstirivit`-mittaus
+   * (savuke) laskee elementtien Y-alkukohtia, ei sisäisiä
+   * tekstiriveja, joten rivitys ei muuta väitettä "täsmälleen kaksi
+   * riviä" — alarivi on yhä yksi elementti, korkeampi tarvittaessa.
+   */
+  .maapaneeli-alarivi { white-space: normal; }
 }
 @media (max-width: 460px) {
   .maapaneeli-nimi-suomi { font-size: 1.3rem; letter-spacing: 0.16em; }
