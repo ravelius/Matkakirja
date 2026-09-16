@@ -17,6 +17,7 @@ const read = (p) => readFileSync(join(root, p), 'utf8');
 const MODULES = [
   'js/tokens.js',
   'js/wiki.js',
+  'js/packs/saapumispuheet.js',
   'js/media.js',
   'js/kuvatekstit.js',
   'js/galleria.js',

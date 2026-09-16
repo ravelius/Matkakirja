@@ -1,5 +1,6 @@
 import { html } from './ui-apurit.js';
-import { julisteUrl, asetaKuva } from './media.js';
+import { julisteUrl, asetaKuva, haeSaapumispuhe } from './media.js';
+import { soitaSaapumispuhe, pysaytaSaapumispuhe } from './luenta.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { ISKULAUSEET } from './packs/iskulauseet.js';
@@ -51,6 +52,15 @@ import { sfx } from './sound.js';
  *     vain KERTOO tilanteensa (ilmoitaLivianTilanne 'trailer'), eikä
  *     tiedä mitään pulun eleistä.
  *
+ *  5. SAAPUMISÄÄNI ON HORATION YKSIN (omistaja 15.9.2026: *"Kokeile
+ *     tehdä pelkästään isoisän äänellä… Nyt hyvä. Tee kaikkiin ja vie
+ *     peliin"*). Kun nimi lähtee lentoon, isoisä sanoo kaupungin nimen
+ *     ja nykyisen iskulauseen YHTENÄ ottona (js/packs/saapumispuheet.js,
+ *     soitto js/luenta.js soitaSaapumispuhe). Pulu ei puhu eikä näy
+ *     saapumisäänessä, eikä traileriin tullut omaa Audio-koneistoa.
+ *     Matkakirjaluenta odottaa puheen loppuun: trailerin LUPAUS (kohta
+ *     2) ratkeaa vasta kun puhe on ohi — tai heti, jos pelaaja ohittaa.
+ *
  *  4. LIIKE ON VAIN TRANSFORMIA JA OPACITYÄ. Sama sääntö kuin kartan
  *     kamera-ajossa ja kuvasuurennoksessa: asettelu tehdään kerran ja
  *     liike jätetään kompositorille. Kirjainten lento on perspektiivi-
@@ -83,6 +93,16 @@ export const NIMEN_ULOS_MS = 450;
 export const ISKULAUSEEN_VIIVE_MS = 500;
 /** Iskulauseen oma häivytys (ms) — se ei lennä, se vain feidaa. */
 export const ISKULAUSEEN_FEIDI_MS = 600;
+
+/**
+ * Kauanko lupaus korkeintaan odottaa saapumispuheen loppua (ms).
+ *
+ * VARMUUSRAJA, EI AJASTUS: pisin otto on 5,6 s, joten tähän ei osuta
+ * kuin silloin kun soitin jää jumiin (verkko poikki kesken latauksen).
+ * Ilman rajaa matkakirjaluenta jäisi odottamaan 'ended'-tapahtumaa,
+ * jota ei tule.
+ */
+export const SAAPUMISPUHEEN_KATTO_MS = 20000;
 
 /** Ohituksen häivytys (ms). */
 export const TRAILERIN_OHITUS_MS = 200;
@@ -256,7 +276,7 @@ function lataaTrailerinTyyli() {
  *
  * @returns {boolean} oliko traileri ruudulla
  */
-export function piilotaSaapumistraileri(ui, { peru = false } = {}) {
+export function piilotaSaapumistraileri(ui, { peru = false, odotaPuhe = false } = {}) {
   const tila = ui?.saapumistraileri;
   if (!tila) return false;
   ui.saapumistraileri = null;
@@ -282,6 +302,30 @@ export function piilotaSaapumistraileri(ui, { peru = false } = {}) {
       vaihe: peru ? 'peru' : 'loppu', tunnus: tila.tunnus, kaupunki: tila.kaupunki,
     });
   }
+  /*
+   * MATKAKIRJALUENTA ALKAA VASTA SAAPUMISPUHEEN JÄLKEEN.
+   *
+   * Luonnollisessa kulussa (odotaPuhe) kuvat ja nimi ovat jo poissa,
+   * mutta isoisä voi olla vielä kesken lauseen: lupaus jää odottamaan
+   * puheen omaa 'ended'-tapahtumaa, eikä puhetta leikata kellon
+   * perusteella. Kaikissa muissa poistumisteissä — napautusohitus,
+   * kaupungin vaihto, virran sulkeminen — puhe vaietaan heti, koska
+   * pelaaja on jo lähtenyt tästä hetkestä.
+   */
+  if (odotaPuhe && tila.puheKesken) {
+    const katko = setTimeout(() => {
+      tila.puheKesken = false;
+      tila.puheValmis = null;
+      pysaytaSaapumispuhe(ui);
+      tila.ratkaise?.(true);
+    }, SAAPUMISPUHEEN_KATTO_MS);
+    tila.puheValmis = () => {
+      clearTimeout(katko);
+      tila.ratkaise?.(true);
+    };
+    return true;
+  }
+  pysaytaSaapumispuhe(ui);
   // Lupaus ratkeaa aina: kutsuja odottaa sitä ennen luentaa.
   tila.ratkaise?.(true);
   return true;
@@ -384,6 +428,13 @@ export function paivitaTrailerinMitat(kehys, ikkuna = globalThis) {
 export function naytaSaapumistraileri(ui, city) {
   if (typeof document === 'undefined' || !ui || !city) return Promise.resolve(false);
   piilotaSaapumistraileri(ui);
+  /*
+   * EDELLISEN KAUPUNGIN PUHE VAIKENEE AINA. Puhe voi elää trailerinsa
+   * jälkeen (lupaus odottaa sen loppua), joten kehittäjän hyppy tai
+   * nopea kaupunginvaihto ei saa jättää vanhaa nimeä soimaan uuden
+   * kaupungin päälle.
+   */
+  pysaytaSaapumispuhe(ui);
   const kuvat = trailerinKuvat(city);
   if (!kuvat.length) return Promise.resolve(false);
   lataaTrailerinTyyli();
@@ -463,6 +514,7 @@ export function naytaSaapumistraileri(ui, city) {
   const tila = {
     kehys, ajastimet, ratkaise, irrota: null,
     tunnus, kaupunki: city.id, loppuIlmoitettu: false,
+    puheKesken: false, puheValmis: null,
     alku: Date.now(), kesto: trailerinKesto(kuvat.length),
   };
   ui.saapumistraileri = tila;
@@ -474,6 +526,10 @@ export function naytaSaapumistraileri(ui, city) {
    */
   const ohita = () => {
     if (ui.saapumistraileri !== tila) return;
+    // Ohitus vaientaa isoisän heti eikä vasta häivytyksen lopussa:
+    // pelaaja pyysi eteenpäin, ja matkakirjaluenta odottaa lupausta.
+    tila.puheKesken = false;
+    pysaytaSaapumispuhe(ui);
     kehys.classList.add('ohitettu');
     for (const t of ajastimet) clearTimeout(t);
     ajastimet.length = 0;
@@ -549,13 +605,46 @@ export function naytaSaapumistraileri(ui, city) {
   // Nimi lähtee lentoon heti ensimmäisen kuvan mukana ja jää paikalleen
   // kaikkien kuvien ajaksi (omistaja: yksi nimi, kolme kuvaa).
   let kirjaimetLahtivat = false;
+  /*
+   * ISOISÄN SAAPUMISPUHE SAMASTA HETKESTÄ KUIN NIMI (ks. kohta 5).
+   * Sama `kirjaimetLahtivat`-lippu suojaa kaksoissoitolta: rAF ja 50 ms
+   * :n varakutsu nostavat saman nimen, mutta puhe lähtee kerran.
+   * Puhumaton kaupunki (Euroopan ulkopuoli) jättää trailerin ennalleen.
+   */
+  const aloitaSaapumispuhe = () => {
+    const puhe = haeSaapumispuhe(city);
+    if (!puhe?.url) return;
+    tila.puheKesken = true;
+    let soitin = null;
+    try {
+      soitin = soitaSaapumispuhe(ui, puhe.url, {
+        onLoppu: () => {
+          tila.puheKesken = false;
+          const valmis = tila.puheValmis;
+          tila.puheValmis = null;
+          valmis?.();
+        },
+      });
+    } catch {
+      /*
+       * Traileri on tervehdys: ääni ei saa koskaan kaataa saapumista
+       * (sama sääntö kuin tehosteilla, trailerinTehoste) eikä
+       * testiajoa, jossa Audio-elementtiä ei ole.
+       */
+      soitin = null;
+    }
+    // Kertoja pois päältä, radiotila tai äänetön ajo: ei odotusta.
+    if (!soitin) tila.puheKesken = false;
+  };
   const nostaNimi = () => {
     nimi.classList.add('nakyy');
-    // Kaksi herätystä (rAF ja 50 ms) nostavat saman nimen; suhina ja
-    // tilannetapahtuma kuuluvat silti vain ensimmäiselle kirjaimelle.
+    // Kaksi herätystä (rAF ja 50 ms) nostavat saman nimen; suhina,
+    // saapumispuhe ja tilannetapahtuma kuuluvat silti vain
+    // ensimmäiselle kirjaimelle.
     if (kirjaimetLahtivat) return;
     kirjaimetLahtivat = true;
     soitaKirjaintenSuhina();
+    aloitaSaapumispuhe();
     ilmoitaLivianTilanne('trailer', {
       vaihe: 'kirjaimet', tunnus, kaupunki: city.id,
     });
@@ -596,7 +685,7 @@ export function naytaSaapumistraileri(ui, city) {
     iskurivi?.classList.add('ulos');
     soitaKirjaintenSuhina();
   });
-  aja(trailerinKesto(kuvat.length), () => piilotaSaapumistraileri(ui));
+  aja(trailerinKesto(kuvat.length), () => piilotaSaapumistraileri(ui, { odotaPuhe: true }));
 
   return lupaus;
 }

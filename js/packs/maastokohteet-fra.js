@@ -268,6 +268,11 @@ export const MAASTOKOHTEET_FRA = [
     },
     nimi: 'Mont-Saint-Michel',
     tyyppi: 'kulttuuri',
+    // MAASTOKOHDE EI SULAUDU AIHEMERKKIIN (omistaja 16.9.2026, ks.
+    // js/pallolauta/nostot.js onMaastokohde). Tyyppi on kulttuuri, joten
+    // luonnon tyyppitaulu ei tunnista tätä maan laajaksi yksittäiseksi
+    // nostoksi (PAATOKSET 27 kohta 4) ilman tätä lippua.
+    maasto: true,
     kysymykset: [
       'Miksi saarta ei koskaan vallattu?',
       'Mihin luostaria käytettiin Ancien régimen aikana?',
@@ -673,6 +678,10 @@ export const MAASTOKOHTEET_FRA = [
     id: 'millaun-silta',
     nimi: 'Millaun silta',
     tyyppi: 'tekniikka',
+    // MAASTOKOHDE EI SULAUDU AIHEMERKKIIN — ks. Mont-Saint-Michelin
+    // vastaava kommentti yllä; Millaun silta on PAATOKSET 27 kohta 4:n
+    // toinen nimetty esimerkki, ja tyyppi tekniikka jää muuten sivuun.
+    maasto: true,
     kysymykset: [
       'Miksi sillan rakentamiseen ryhdyttiin?',
       'Kuinka korkea rakenne on?',

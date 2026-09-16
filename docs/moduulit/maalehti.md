@@ -342,3 +342,23 @@ en-Wiktionaryn kate. Siksi Chilelle jäi vain kaksi tervehdystä
 (espanja ja mapudungun): rapanuin ja aymaran tervehdyksistä ei
 löytynyt Wiktionary-artikkelia, ja arvattu sana olisi huonompi kuin
 puuttuva rivi.
+
+## Kentät `tyyppi` ja `maasto` — maastokohde ei sulaudu aihemerkkiin (16.9.2026)
+
+Karttanoston (myös `js/packs/maastokohteet-*.js`-pakkien) `tyyppi`-kenttä
+kertoo jo, onko kohde luontoa: `vuori`, `meri`, `joki`, `saari` ja
+`jarvi` ovat sama viisikko kuin `js/fokuskohteet.js`:n
+`KOHDE_TYYPPISYMBOLIT`-taulun `'luonto'`-rivit, ja pallolaudan
+aihemerkkilogiikka (`js/pallolauta/nostot.js` `onMaastokohde`) lukee
+sen sellaisenaan: näillä tyypeillä kohde ei koskaan sulaudu saman
+aiheen aihemerkkiin, vaan pysyy omana nostonaan nimiöineen (Raamattu,
+KARTTAUUDISTUKSEN PAATOKSET 27 kohta 4: "maan laajat yksittäiset
+nostot näkyvät nimiöin heti"). Osa maan laajoista nostoista on
+kuitenkin sisällöltään historiaa tai tekniikkaa eikä luontoa — Ranskan
+Mont-Saint-Michel (`tyyppi: 'kulttuuri'`) ja Millaun silta
+(`tyyppi: 'tekniikka'`) ovat juuri PAATOKSET 27 kohta 4:n nimeämät
+esimerkit — joten niille lisätään sama sääntö pienimmällä mahdollisella
+merkinnällä, `maasto: true`, suoraan pakin rivillä; uutta kohdetta
+kirjoitettaessa lippu kannattaa lisätä, jos kohde on maan laaja,
+nimetty ja visuaalisesti muista erottuva yksittäinen nähtävyys eikä
+tavallinen lehtinosto.
