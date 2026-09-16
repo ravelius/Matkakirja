@@ -68,17 +68,17 @@ napautus avaa, vinkkiavaus mitataan 60 ms:n välein otetusta lokista
 laskettu väri on vihreä sekä auki että kiinni. Vastakokeet: vihreysmittari
 hylkää harmaan, istuntomuisti tyhjänä vinkki tulee ja täytettynä ei tule.
 
-- `savuke-astro-valokuva.mjs`: **43/43** työpöydällä (1400), puhelimella
-  (390 × 844) ja vaaassa (844 × 390).
+- `savuke-astro-valokuva.mjs`: **43/43** kaikissa neljässä mitassa —
+  työpöytä 1400 × 900, puhelin 390 × 844, vaaka 844 × 390 ja iPad
+  1024 × 1366.
+- `savuke-astro-aani.mjs`: **24/24**.
+- `savuke-satelliittilinssi.mjs` (`NAKYMAT=tyopoyta`): **34/34**.
+
+Vinkkiavauksen ylärajasta: kontin ohjelmisto-WebGL nälkiinnyttää
+pääsäikeen iPad-mitalla sekunneiksi, jolloin sekä näytteenotto että
+vinkin oma 1,5 s:n ajastin myöhästyvät saman verran. Yläraja on siksi
+3 s + suurin näytteiden väli; alaraja (1 s auki) ei jousta, koska liian
+lyhyt vinkki olisi aito vika.
 
 Kuva: `docs/raportit/kuvat/astro-chatti-390-20260916.jpg` (chatti auki
 ehdotuksineen, 390 px).
-
-## KESKEN
-
-- `savuke-astro-valokuva.mjs` iPad-näkymä (1024 × 1366) jäi kesken ajon
-  aikana — kolme omistajan pyytämää mittaa (1400, 390, 844 × 390) ajettiin
-  täysinä.
-- `savuke-astro-aani.mjs` (24/24) ja `savuke-satelliittilinssi.mjs`
-  (`NAKYMAT=tyopoyta`, 34/34) jäivät ajamatta: sessio päättyi. Kumpaakaan
-  tiedostoa ei muutettu, mutta ajo on syytä toistaa ennen julkaisua.
