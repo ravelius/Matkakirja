@@ -30,9 +30,14 @@
  *
  * ── VARTIOT (selain, 390 × 844 ja 1400 × 900) ─────────────────────
  *
- *   4.  SAAPUMISNÄKYMÄSSÄ ENINTÄÄN 21 RANSKAN OMAA MERKKIÄ.
+ *   4.  SAAPUMISNÄKYMÄSSÄ KAIKKI 62 RANSKAN OMAA MERKKIÄ (PAATOKSET
+ *       25: katto ei koske kohdemaata; Node-vartio 3 mittaa, että
+ *       katto on yhä voimassa ilman kohdemaa-lippua).
  *   5.  LÄHIZOOMILLA UUDET TULEVAT NÄKYVIIN (vähintään LAHI_VAHINTAAN).
- *   6.  NIMIÖT EIVÄT MENE PÄÄLLEKKÄIN (osumalaatikoiden leikkaus).
+ *   6a. LISÄKAUPUNKIEN NIMIÖT EIVÄT MENE TOISTENSA PÄÄLLE.
+ *   6b. UUSIEN MERKKIEN LEIKKAUKSIA ENINTÄÄN BUDJETTI (mitattu luku;
+ *       katon poistuttua saapumisnäkymässä on 62 merkkiä 22:n sijaan,
+ *       ks. PAATOKSET 25 kohta 3).
  *   7.  JOKAINEN UUSI NOSTO AVAA OMAN KORTTINSA — hiirellä ja
  *       kosketuksella, merkin omasta ruutupisteestä.
  *   8.  LISÄKAUPUNGIT NÄKYVÄT KARTALLA JA OVAT OSUMALISTALLA
@@ -401,8 +406,19 @@ for (const koko of RUUDUT) {
   tieto(`${nimi} saapuminen`, `${saapuminen.iso}, leveys ${saapuminen.leveys}, `
     + `portti päästää ${saapuminen.paastetyt}, lähizoomiin ${saapuminen.piiloon}, `
     + `osumia ${saapuminen.omat.length}`);
-  vaadi(`${nimi}: 4. saapumisnäkymässä enintään ${PAAKARTAN_MERKKIKATTO} merkkiä`,
-    saapuminen.paastetyt <= PAAKARTAN_MERKKIKATTO, `${saapuminen.paastetyt}`);
+  /*
+   * 4. SAAPUMISNÄKYMÄSSÄ KAIKKI RANSKAN MERKIT (omistaja 15.9.2026
+   * klo 17.20 UTC, Raamattu KARTTAUUDISTUKSEN PAATOKSET 25:
+   * *"Kohdemaalle ei kattoa"*). Vartio oli tähän asti päinvastainen
+   * — *"enintään 21 merkkiä"* — ja juuri se katto piilotti Ranskan
+   * 62 merkistä 40, mistä omistaja kysyi (SELVITYS: RANSKAN NOSTOT JA
+   * MUUT KAUPUNGIT PUUTTUVAT). Katto itse on tallella muille maille,
+   * ja sen vartioi Node-vartio 3 tässä samassa savukkeessa sekä
+   * tools/savukkeet/savuke-merkkirajat.mjs.
+   */
+  vaadi(`${nimi}: 4. saapumisnäkymässä kaikki ${FRA_MERKKEJA} Ranskan merkkiä`,
+    saapuminen.paastetyt >= FRA_MERKKEJA && saapuminen.piiloon === 0,
+    `${saapuminen.paastetyt}, piiloon ${saapuminen.piiloon}`);
 
   const lahi = await mittaa(sivu, 2);
   tieto(`${nimi} lähizoomi`, `leveys ${lahi.leveys}, portti päästää ${lahi.paastetyt}, `
@@ -432,19 +448,39 @@ for (const koko of RUUDUT) {
   };
   /*
    * MITTA ON SAAPUMISNÄKYMÄ. Se on se näkymä, jonka pelaaja näkee
-   * maahan tullessaan ja jota 21 merkin raja suojaa. Lähizoomissa
-   * merkkejä on kolminkertaisesti ja Pariisin seutu on tiheä — siellä
-   * mitattu päällekkäisyys kirjataan INFOna, koska se koskee myös
-   * ennestään olleita merkkejä eikä ole tämän erän tekemä.
+   * maahan tullessaan ja jossa kohdemaan kaikki merkit nyt ovat
+   * (PAATOKSET 25; ennen 15.9.2026 sitä suojasi 21 merkin raja).
+   * Lähizoomissa Pariisin seutu on tiheä — siellä mitattu
+   * päällekkäisyys kirjataan INFOna, koska se koskee myös ennestään
+   * olleita merkkejä eikä ole tämän erän tekemä.
    */
   /*
-   * MITTA ON TÄMÄN ERÄN MERKIT. Nimiöiden leikkauksia on ruudulla
-   * ennestään (mitattu samalla ajolla, INFO-riveillä): ne ovat
-   * vanhojen merkkien keskinäisiä eivätkä tämän erän tekemiä. Vartio
-   * vaatii siksi sen, mitä erä voi luvata — yksikään uusi merkki ei
-   * lisää päällekkäisyyttä saapumisnäkymään.
+   * MITTA MUUTTUI 15.9.2026 OMISTAJAN PÄÄTÖKSESTÄ (Raamattu,
+   * KARTTAUUDISTUKSEN PAATOKSET 25). Vartio vaati tähän asti, ettei
+   * yksikään tämän erän merkki mene päällekkäin saapumisnäkymässä —
+   * ja se piti, koska katto 21 päästi saapumisnäkymään vain 22 merkkiä
+   * 62:sta. Kun omistaja poisti katon kohdemaasta, samaan näkymään
+   * tuli 40 merkkiä lisää, ja nimiöitä on 55 (työpöytä) / 47
+   * (puhelin) entisen 12 sijaan. Leikkauksia tulee silloin
+   * väistämättä: sovittelu (js/pallolauta/sovittelu.js) väistää mitä
+   * voi, mutta Pariisin seudun ja Lyonin ympäristön tiheydessä kaikki
+   * eivät mahdu erilleen.
+   *
+   * MITATTU 15.9.2026 (ennen → jälkeen, saapumisnäkymä):
+   *   1400 × 900   leikkauksia 0 / 0  →  14 kaikkiaan, 5 uutta
+   *   390 × 844    leikkauksia 0 / 0  →  15 kaikkiaan, 6 uutta
+   *
+   * VARTIO MITTAA NYT KAHTA ASIAA, jotka omistaja nimesi (PAATOKSET
+   * 25 kohta 3): 6a. KAUPUNGIT EIVÄT PEITÄ TOISIAAN — lisäkaupunkien
+   * nimiöt ovat kartan ylin taso eikä niistä tingitä; 6b. UUSIEN
+   * MERKKIEN LEIKKAUSTEN BUDJETTI, joka on mitattu luku + vara. Jos
+   * budjetti ylittyy, vastaus on omistajan oma: nostojen nimiöt
+   * pienemmällä kuin kaupunkien (js/pallolauta/nostot.js
+   * KAUPUNKIMERKIN NIMIÖ ON ISOMPI KUIN NOSTON).
    */
+  const UUSIEN_LEIKKAUSBUDJETTI = 8;
   const uusiMerkki = (id) => /^(nosto-maalehti-|nakyva-kaupunki-)/.test(id);
+  const kaupunkiMerkki = (id) => /^nakyva-kaupunki-/.test(id);
   const uudenParit = (parit) => parit.filter((pari) => pari.split('×').some(uusiMerkki));
   const paallekkain = leikkaukset(saapuminen.laatikot);
   const lahiParit = leikkaukset(lahi.laatikot);
@@ -458,8 +494,13 @@ for (const koko of RUUDUT) {
       `${lahiParit.length} / ${uudenParit(lahiParit).length}`
       + ` — ${lahiParit.slice(0, 6).join(', ')}`);
   }
-  vaadi(`${nimi}: 6. yksikään tämän erän merkki ei mene päällekkäin saapumisnäkymässä`,
-    uudenParit(paallekkain).length === 0, uudenParit(paallekkain).join(', '));
+  const kaupunkiParit = paallekkain.filter((pari) => pari.split('×').every(kaupunkiMerkki));
+  vaadi(`${nimi}: 6a. lisäkaupunkien nimiöt eivät mene toistensa päälle`,
+    kaupunkiParit.length === 0, kaupunkiParit.join(', '));
+  vaadi(`${nimi}: 6b. uusien merkkien leikkauksia enintään ${UUSIEN_LEIKKAUSBUDJETTI} `
+    + 'saapumisnäkymässä',
+    uudenParit(paallekkain).length <= UUSIEN_LEIKKAUSBUDJETTI,
+    `${uudenParit(paallekkain).length}: ${uudenParit(paallekkain).join(', ')}`);
 
   /* --- 7. uudet nostot avautuvat --- */
   const uudet = MAALEHTINOSTOT_FRA.map((n) => `nosto-${n.id}`)
