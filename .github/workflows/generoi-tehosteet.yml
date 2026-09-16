@@ -53,7 +53,7 @@ on:
         required: true
         type: choice
         default: 'kohahdus'
-        options: ['kohahdus']
+        options: ['kohahdus', 'astronautin-kamera-tuonti']
       maara:
         description: >-
           Montako varianttia (1–8). Jokainen on oma maksullinen
@@ -61,6 +61,10 @@ on:
         required: true
         type: string
         default: '4'
+      astronaut_lahteet:
+        description: 'Vain tuonti: jo generoitujen lähteiden väliaikaiset osoitteet JSON-muodossa. Ei uutta maksullista generointia.'
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -74,6 +78,7 @@ concurrency:
 
 jobs:
   generoi:
+    if: inputs.laji == 'kohahdus'
     runs-on: ubuntu-latest
     timeout-minutes: 30
     env:
@@ -151,3 +156,30 @@ jobs:
             exit 1
           fi
           echo "Työhakemisto on siisti."
+
+  astronautin-kamera-tuonti:
+    if: inputs.laji == 'astronautin-kamera-tuonti'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Asenna äänitiedoston viimeistelytyökalu
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg
+      - name: Viimeistele ja tallenna yksi yhteinen tausta (ei generointia)
+        env:
+          ASTRONAUT_SOURCES_JSON: ${{ inputs.astronaut_lahteet }}
+          ASTRONAUT_FINAL_COUNT: ${{ inputs.maara }}
+        run: node tools/astronaut/import-loop.mjs
