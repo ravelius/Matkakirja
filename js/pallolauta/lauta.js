@@ -1721,7 +1721,42 @@ export async function avaaPallolauta(ui) {
     ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack,
   });
   const nostot = luoNostot({
-    ui, merkit, asteet: pallonAsteet, ruudulla, onPoltettu: pallonNostoOnPoltettu,
+    ui,
+    merkit,
+    asteet: pallonAsteet,
+    ruudulla,
+    onPoltettu: pallonNostoOnPoltettu,
+    /*
+     * AIHEMERKIN VIUHKA (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 27;
+     * js/pallolauta/aihemerkit.js). Kaari sovitetaan RUUDULLE, kortti
+     * ankkuroidaan kohdan omaan ruutupisteeseen, ja avaus/sulku
+     * pyytää uuden ladonnan — kerros ei omista kameraa eikä tahtia.
+     */
+    ruutu: () => ({ leveys: kotelo.clientWidth, korkeus: kotelo.clientHeight }),
+    ankkuri,
+    /*
+     * VIUHKA ON UUSIA CSS2D-ELEMENTTEJÄ, JA NE SYNTYVÄT VASTA TOISESSA
+     * LADONNASSA (mitattu Chromiumilla 15.9.2026: viuhkan avauksen
+     * jälkeen `.pallolauta-viuhka`-elementtejä oli DOMissa 0, ja sama
+     * mittaus heti uuden `ladoHeti`-ajon jälkeen antoi 6).
+     *
+     * Kirjaston merkkikerros on Kapsulen digest: uusi lista menee
+     * jonoon ja elementit rakennetaan vasta sen jälkeisellä kehyksellä.
+     * Napautuksesta avautuva viuhka ei voi jäädä odottamaan seuraavaa
+     * kameran elettä, joten herätys ja toinen ladonta ajetaan heti
+     * perään. Ladonta on idempotentti (sama näkymä, sama tulos), joten
+     * toinen ajo ei liikuta mitään muuta.
+     */
+    ladoUudelleen: () => {
+      heraa();
+      clearTimeout(lepoAjastin);
+      ladoLevossa();
+      // AJASTIN EIKÄ KEHYSPYYNTÖ: nukkuvalla pallolla kehyksiä ei
+      // välttämättä tule lainkaan (mitattu: rAF ei laukennut lainkaan,
+      // kun sivu oli muuten toimeton), joten toinen ladonta ajetaan
+      // ajastimella, joka juoksee myös levossa.
+      setTimeout(() => { if (!kuori.hidden) ladoLevossa(); }, 0);
+    },
   });
   /*
    * MAAN PERUSTIEDOT JA LISÄÄ-VALIKKO KARTTAAN KIINNITETTYNÄ
@@ -2381,9 +2416,51 @@ export async function avaaPallolauta(ui) {
   let korttiOliAuki = false;
   // DOKUMENTIN kaappausvaiheessa ja ennen kortin omaa kuuntelijaa
   // (rekisteröity aiemmin): kortti on vielä DOMissa, kun tämä lukee.
+  /*
+   * NAPAUTUKSEN OMA RUUTUPISTE (viuhka, PAATOKSET 27).
+   *
+   * Viuhkan kohta on RUUTULAATIKKO merkin ympärillä, ei pallon pinnan
+   * piste, joten osumatesti tarvitsee sen pikselin, jota sormi
+   * kosketti. Kirjaston napautuskutsut antavat lat/lng:n, ja se ei
+   * riitä: MITATTU 15.9.2026 Chromiumilla, että viuhkan kohdan
+   * napautus meni `onPointClick`-polkuun (aihevalon täplä merkin alla)
+   * ja kutsui pintaa TÄPLÄN koordinaateilla — kymmeniä pikseleitä
+   * sivussa siitä, mihin sormi osui, jolloin viuhka vain sulkeutui.
+   * Piste luetaan siksi itse tapahtumasta, ja vain tuoreena.
+   */
+  let napautuskohta = null;
+  const NAPAUTUSKOHDAN_IKA_MS = 1500;
   const korttivahti = (e) => {
     if (!kotelo.contains(e.target)) return;
+    const r = kotelo.getBoundingClientRect();
+    napautuskohta = {
+      x: e.clientX - r.left,
+      y: e.clientY - r.top,
+      hetki: globalThis.performance?.now?.() ?? Date.now(),
+    };
     korttiOliAuki = Boolean(document.querySelector(KORTTIVALITSIN));
+  };
+  /** Sormen ruutupiste, jos napautus on tuore; muuten null. */
+  const tuoreNapautuskohta = () => {
+    if (!napautuskohta) return null;
+    const nyt = globalThis.performance?.now?.() ?? Date.now();
+    return nyt - napautuskohta.hetki <= NAPAUTUSKOHDAN_IKA_MS ? napautuskohta : null;
+  };
+  /**
+   * Osuiko tämä napautus auki olevan viuhkan kohtaan? Kysytään
+   * KAIKISSA napautuspoluissa (pinta ja pisteet), koska viuhkan kohta
+   * voi olla minkä tahansa kerroksen päällä.
+   */
+  const viuhkanNapautus = (lat = null, lng = null) => {
+    // Linssin aikana viuhka ei ota napautuksia mistään polusta (yksi
+    // portti): pistekerros kysyy tämän ennen omaa linssiporttiaan.
+    if (linssiPaalla()) return false;
+    if (!nostot.viuhkaAuki()) return false;
+    const kohta = tuoreNapautuskohta()
+      ?? (Number.isFinite(lat) ? pallo.getScreenCoords(lat, lng, 0) : null);
+    if (!kohta || !nostot.napautaViuhkasta(kohta)) return false;
+    heraa();
+    return true;
   };
   document.addEventListener('pointerdown', korttivahti, true);
 
@@ -2414,6 +2491,33 @@ export async function avaaPallolauta(ui) {
     if (linssiPaalla()) {
       const merkki = lahinLinssimerkki(lat, lng);
       if (merkki) { heraa(); merkki.napautus(merkki); }
+      return;
+    }
+    /*
+     * AUKI OLEVA VIUHKA SULKEUTUU KARTAN NAPAUTUKSESTA (Raamattu,
+     * KARTTAUUDISTUKSEN PAATOKSET 27 kohta 2). Poikkeus on toinen
+     * aihemerkki: sen napautus avaa oman viuhkansa, joka sulkee
+     * edellisen — muuten sama merkki vaatisi kaksi napautusta.
+     * Viuhkan omat kohdat eivät kulje tästä lainkaan: ne ottavat
+     * napautuksen itse (js/pallolauta/aihemerkit.js).
+     *
+     * TÄMÄ ON LINSSIPORTIN JÄLKEEN, EI ENNEN (omistajan 12.9.2026 yksi
+     * portti -sääntö, tests/satelliitti.test.mjs): linssin aikana pelin
+     * oma viuhka on piilossa, mutta ennen porttia se otti napautuksen
+     * yhä vastaan — kartan napautus olisi avannut viuhkan kortin tai
+     * toisen aihemerkin viuhkan keskellä linssiä. Sama piilotettu
+     * osumalaatikko, joka kaatoi v1789:n ja v1794:n.
+     */
+    if (nostot.viuhkaAuki()) {
+      // Viuhkan oma kohta ensin: se on ruutulaatikko, ei pallon piste.
+      if (viuhkanNapautus(lat, lng)) return;
+      const uusi = lahinMerkki(lat, lng);
+      if (uusi?.o?.perhe === 'aihemerkki' && uusi.o.avain !== nostot.viuhkaAuki()) {
+        napautaNosto(uusi.o);
+        return;
+      }
+      heraa();
+      nostot.suljeViuhka();
       return;
     }
     const kohde = lahinKohde(lat, lng);
@@ -2687,6 +2791,9 @@ export async function avaaPallolauta(ui) {
     .pointsTransitionDuration(PISTEIDEN_SIIRTYMA_MS)
     .onPointClick((d) => {
       if (eleet.sormet.nipistys) return;
+      // Auki oleva viuhka on kaiken päällä: sen kohta vie napautuksen
+      // myös pistekerrokselta (aihevalon täplä on merkin alla).
+      if (viuhkanNapautus(d.lat, d.lon)) return;
       // Valikon sulku ei avaa kaupunkia (sama sääntö kuin pinnalla).
       if (valikkoSulkeutuiNapautuksesta()) { korttiOliAuki = false; return; }
       // Linssin aikana pallon pisteetkin kulkevat pinnan portin kautta,

@@ -126,14 +126,79 @@ test('2. VASTAKOE: ilman lukkoa sama panorointi ailahtelee', () => {
     `lukoton ladonta vaihtoi ${vaihtuneita} sijoitusta — jos tämä on 0, vartio 1 ei mittaa mitään`);
 });
 
-test('3. zoomi latoo uudelleen: kokoKerroin vapauttaa lukon', () => {
+/*
+ * 3. ZOOMI SKAALAA LUKON, EI PURA SITÄ (omistaja 15.9.2026, Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 24, sanatarkasti: *"nyt ne hyppivat eri
+ * puolille kaupungin merkkia. pitaisi pysya samassa kohdassa"*; koko
+ * saa muuttua). Ennen tätä vartio 3 vaati päinvastaista — että
+ * `kokoKerroin` VAPAUTTAA lukon — ja juuri se oli omistajan näkemä
+ * hyppy: vapautunut nimi sai uuden kyljen naapurustosta.
+ */
+test('3. zoomi skaalaa lukon: kylki ja suunta pysyvät, vain koko muuttuu', () => {
   const y = ymparisto();
   y.nimet.lado({ katto: 40, kokoKerroin: 1 });
   const alku = y.koot().get('pariisi');
+  const ennen = y.sijoitukset().get('pariisi').split('|');
   y.nimet.lado({ katto: 40, kokoKerroin: 2 });
   const iso = y.koot().get('pariisi');
-  assert.ok(alku > 0 && iso > alku,
-    `suurempi kirjasin latoo nimen uudelleen (${alku} → ${iso})`);
+  const jalkeen = y.sijoitukset().get('pariisi').split('|');
+  assert.ok(alku > 0 && Math.abs(iso - 2 * alku) < 1e-6,
+    `kirjasin kaksinkertaistuu kertoimen mukana (${alku} → ${iso})`);
+  assert.equal(jalkeen[2], ennen[2], 'ankkuri (kylki) pysyy');
+  for (const i of [0, 1]) {
+    assert.ok(Math.abs(Number(jalkeen[i]) - 2 * Number(ennen[i])) < 1e-2,
+      `siirto skaalautuu kirjasinkoon mukana (${ennen[i]} → ${jalkeen[i]})`);
+  }
+  // Suunta on sama kulma: etäisyys kasvaa kaksinkertaiseksi kuten
+  // tekstikin, joten etäisyys tekstikorkeuteen suhteutettuna on vakio.
+  const kulma = (v) => Math.atan2(Number(v[1]), Number(v[0]));
+  assert.ok(Math.abs(kulma(jalkeen) - kulma(ennen)) < 1e-6, 'suunta pysyy');
+});
+
+/*
+ * 3b. VASTAKOE: ilman skaalattua lukkoa sama zoomisarja vaihtaa
+ * kylkeä tai suuntaa. Ladonta ajetaan suoraan `ladoRuutunimet`illa
+ * (kuten vartio 2 tekee panoroinnille), eli juuri ilman sitä lukkoa,
+ * jonka vartio 3 mittaa — jos tämä ei vaihda mitään, vartio 3 ei
+ * mittaa mitään.
+ */
+test('3b. VASTAKOE: lukoton ladonta vaihtaa kylkeä tai suuntaa zoomatessa', () => {
+  const px = 1400 / 1200;
+  const W = 1400;
+  const H = 900;
+  const ehdokkaat = () => {
+    const ulos = [];
+    for (const c of karttanimienKaupungit(MAAILMANKARTTA)) {
+      const x = (c.x - PARIISI.x) * px + W / 2;
+      const y = (c.y - PARIISI.y) * px + H / 2;
+      if (x < 0 || y < 0 || x > W || y > H) continue;
+      ulos.push({ c, x, y, tarkeys: c.tarkeys + (c.id === 'pariisi' ? 1000 : 0) });
+    }
+    return ulos.sort((a, b) => (b.tarkeys - a.tarkeys)
+      || ((b.c.aste ?? 0) - (a.c.aste ?? 0)) || (a.c.nimi < b.c.nimi ? -1 : 1));
+  };
+  /** Sijoitus tekstikorkeuteen suhteutettuna: kylki + suunta + etäisyys. */
+  const lado = (kokoKerroin) => {
+    const t = ladoRuutunimet(ehdokkaat(), { katto: 40, kokoKerroin, ruutu: { w: W, h: H } });
+    return new Map(t.nimiot.map((n) => [n.c.id, {
+      ank: n.ank,
+      kulma: Math.atan2(n.dy, n.dx),
+      suhde: Math.hypot(n.dx, n.dy) / n.koko,
+    }]));
+  };
+  const a = lado(1);
+  let muuttuneita = 0;
+  for (const kerroin of [1.5, 2, 3]) {
+    for (const [id, b] of lado(kerroin)) {
+      const alku = a.get(id);
+      if (!alku) continue;
+      if (alku.ank !== b.ank || Math.abs(alku.kulma - b.kulma) > 5 * (Math.PI / 180)
+        || Math.abs(alku.suhde - b.suhde) > 0.1 * alku.suhde) muuttuneita += 1;
+    }
+  }
+  assert.ok(muuttuneita > 0,
+    `lukoton ladonta vaihtoi ${muuttuneita} sijoitusta zoomatessa — `
+    + 'jos tämä on 0, vartio 3 ei mittaa mitään');
 });
 
 test('4. pudonnut nimi ei kanna vanhaa lukkoa mukanaan', () => {
