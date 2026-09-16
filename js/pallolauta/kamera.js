@@ -299,6 +299,47 @@ export function korkeusLeveydesta(leveysYks, {
  * ZOOMI_LAHIN 88) on eri vakio eikä muutu.
  */
 /** Laattatason tarkkuus pikseleinä astetta kohden (Z8 = 182). */
+/**
+ * KOKO PALLO RUUTUUN — kameran korkeus pallonsäteinä.
+ *
+ * PUHDAS FUNKTIO (tests/satelliitti-avaruus.test.mjs, tests/pallolinssit.test.mjs)
+ * ja riippumaton pallon säteestä: kulma on sama olipa pallo minkä
+ * kokoinen tahansa.
+ *
+ * Kamera on etäisyydellä d = R · (1 + korkeus). Pallon siluetin
+ * kulmasäde on a = asin(R / d), ja perspektiivikuvassa sen ruutusäde on
+ *
+ *     r = (K / 2) · tan(a) / tan(fov / 2),
+ *
+ * missä K on kotelon KORKEUS pikseleinä (fov on pystykulma). Pallon on
+ * mahduttava MOLEMPIIN suuntiin, joten halkaisijan katto on ruudun
+ * kapeampi sivu marginaalilla vähennettynä — ja juuri tämä on se kohta,
+ * joka pystyruudulla menee väärin, jos leveyttä ei katsota lainkaan.
+ *
+ * KAKSI LINSSIÄ LUKEE TÄTÄ: satelliittilinssin avaruusnäkymä
+ * (js/linssit/satelliitti-avaruus.js avausKorkeus) ja topografialinssi,
+ * jonka ajaksi zoomin minimi vapautetaan koko palloon (Raamattu,
+ * TOPOGRAFIALINSSI: ... KOKO MAAPALLO KATSOTTAVISSA). Kaava on tässä
+ * yhtenä totuutena eikä kopiona kahdessa linssissä.
+ *
+ * @param {{leveys: number, korkeus: number, fov?: number, marginaali?: number}} mitat
+ * @returns {number} Globe.gl:n `altitude`
+ */
+export function kokoPallonKorkeus({
+  leveys, korkeus, fov = PALLO_FOV, marginaali = 0.12,
+} = {}) {
+  const K = Number(korkeus) > 0 ? Number(korkeus) : 0;
+  const L = Number(leveys) > 0 ? Number(leveys) : 0;
+  if (!K || !L) return PALLO_KORKEUS_MAX;
+  const m = Math.max(0, Math.min(0.6, Number(marginaali) || 0));
+  const mahtuu = Math.min(L, K) * (1 - m);
+  // tan(a) = (mahtuu / K) · tan(fov / 2)
+  const tanA = (mahtuu / K) * Math.tan((fov / 2) * (Math.PI / 180));
+  const sinA = tanA / Math.sqrt(1 + tanA * tanA);
+  if (!(sinA > 0)) return PALLO_KORKEUS_MAX;
+  return 1 / sinA - 1;
+}
+
 export function laatanTarkkuus(taso, laatanPikselit = LAATAN_PIKSELIT) {
   return (laatanPikselit * 2 ** taso) / 360;
 }

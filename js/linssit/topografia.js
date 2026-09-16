@@ -41,6 +41,8 @@
  */
 
 import { el } from '../mapart.js';
+import { kokoPallonKorkeus } from '../pallolauta/kamera.js';
+import { luoTarkennus } from './topografia-tarkennus.js';
 
 /*
  * PEITTÄVYYS.
@@ -143,6 +145,17 @@ const KAISTAN_VENYTYS = 90;
  */
 const PALLOKUVA = 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-20260915.webp';
 
+/**
+ * LINSSIEN YHTEINEN PORTTI (js/ui.js linssikarttaEstaa). Luokka ei ole
+ * aikajanan oma vaikka nimi on sen perua: sitä lukevat kaikki linssit,
+ * jotka vievät koko näkymän itselleen, ja sen kautta pelin kerrokset
+ * sammuvat yhdestä paikasta.
+ */
+const LINSSIPORTTI = 'aikajana-paalla';
+
+/** Kameran paluuajo linssin sulkeutuessa (ms); reduced motion → 0. */
+const PALUUAJON_MS = 900;
+
 const SELITERIVIT = [
   { vari: '#e8e8eb', teksti: 'Lumiraja, yli 6000 m' },
   { vari: '#baa498', teksti: 'Paljas kivi' },
@@ -231,12 +244,22 @@ export function piirraReliefi(ryhma, raja, osoite, peittavyys, tunniste = 'topo'
   }, ryhma);
 }
 
-/** Kuvan sijaintitiedot ja itse kuva valmiiksi ladattuina. */
-export async function lataaReliefi() {
+/**
+ * Kuvan sijaintitiedot ja (valinnaisesti) itse kuva valmiiksi.
+ *
+ * ESILATAUS ON TASOKARTAN ASIA (mitattu 16.9.2026). Millerin kuva on
+ * 10800 × 4859 eli 52 megapikseliä, ja `<img>`-esilataus purkaa sen
+ * kokonaan — RGBA:na 210 Mt. Tasokartalla se on pakko tehdä, koska
+ * `<image>` välähtäisi muuten tyhjänä; PALLOLLA sitä ei piirretä
+ * elementtinä lainkaan, ja esilataus vain viivytti linssin avautumista
+ * (mitattuna yli 15 sekuntia) ja vei muistin. Pallolla kuvasta
+ * puretaan vain näkyvä kaistale (js/linssit/topografia-tarkennus.js).
+ */
+export async function lataaReliefi({ esilataus = true } = {}) {
   if (!kuvatiedot) {
     ({ TOPOGRAFIA_KUVA: kuvatiedot } = await import('../packs/linssi-topografia-kuva.js'));
   }
-  await esilataa(kuvatiedot.kuva);
+  if (esilataus) await esilataa(kuvatiedot.kuva);
   return kuvatiedot;
 }
 
@@ -291,7 +314,14 @@ export const LINSSI = {
    * ensimmäistä piirtoa.
    */
   async lataa() {
-    await lataaReliefi();
+    /*
+     * Pallolaudalla esilatausta ei tehdä (ks. lataaReliefi): laudan
+     * Milleriä ei piirretä pallolle, ja 52 megapikselin purku olisi
+     * pelkkää odotusta ja muistia ennen linssin avautumista.
+     */
+    const pallolla = typeof document !== 'undefined'
+      && Boolean(document.body?.classList?.contains('pallolauta-paalla'));
+    await lataaReliefi({ esilataus: !pallolla });
   },
 
   /**
@@ -335,11 +365,150 @@ export const LINSSI = {
    * Selitekortti (selite) toimii kummallakin laudalla samoin.
    */
   pallolle(lauta) {
-    const kahva = lauta?.linssit?.kalvo('topografia', {
+    if (!lauta?.linssit) return { pura: () => {} };
+    let suljettu = false;
+
+    /*
+     * ────────────────────────────────────────────────────────────────
+     * 1. KOKO PALLON KALVO — yleiskuva
+     * ────────────────────────────────────────────────────────────────
+     * Tasavälinen 4096 × 2048 -kuva koko pallon pinnalle. Se riittää
+     * yleiskuvaan (ruudulla on silloin pari pikseliä astetta kohti) ja
+     * on se, mitä lähizoomissa täydennetään laastarilla.
+     */
+    const perus = lauta.linssit.kalvo('topografia', {
       kuva: PALLOKUVA,
       peittavyys: PEITTAVYYS,
     });
-    return { pura: () => kahva?.pura?.() };
+
+    /*
+     * ────────────────────────────────────────────────────────────────
+     * 2. TARKENNUSLAASTARI — 1′-reliefi lähizoomiin
+     * ────────────────────────────────────────────────────────────────
+     * Juurisyy, mittaukset ja ratkaisu ovat
+     * js/linssit/topografia-tarkennus.js:n alussa. Lyhyesti: pallon oma
+     * kuva on tehty vanhasta 3600 pikselin Millerista, ja uusi
+     * 10800 pikselin reliefi tuodaan ruudulle ikkuna kerrallaan.
+     * Laastarin ollessa päällä koko pallon kalvo häivytetään
+     * läpinäkyväksi, jotta peittävyys pysyy sovitussa 0,72:ssa eikä
+     * kahta kalvoa lasketa päällekkäin.
+     */
+    let tarkennus = null;
+    void (async () => {
+      const tiedot = await lataaReliefi({ esilataus: false }).catch(() => null);
+      if (!tiedot || suljettu) return;
+      tarkennus = luoTarkennus({
+        lauta,
+        kuva: tiedot,
+        peittavyys: PEITTAVYYS,
+        /*
+         * KALVO HÄIVYTETÄÄN, EI PURETA. Purku ja uudelleenrakennus joka
+         * zoomilla latauttaisi kuvan uudestaan, ja mitattuna 16.9.2026
+         * se jätti kalvon peittävyyteen −0,09 eli näkymättömäksi, kun
+         * kaksi häivytystä jäi päällekkäin. Kalvo on koko ajan
+         * olemassa; laastarin ajan se on läpinäkyvä, jolloin
+         * peittävyys pysyy sovitussa 0,72:ssa eikä kahta kalvoa lasketa
+         * päällekkäin.
+         */
+        perus: {
+          paalle: () => perus?.peittavyys?.(PEITTAVYYS),
+          pois: () => perus?.peittavyys?.(0),
+        },
+      });
+    })();
+
+    /*
+     * ────────────────────────────────────────────────────────────────
+     * 3. PELIN ELEMENTIT POIS — linssi on oma näkymänsä
+     * ────────────────────────────────────────────────────────────────
+     * OMISTAJA 16.9.2026 (Raamattu, TOPOGRAFIALINSSI…, sanatarkasti):
+     * *"siinä näkyy myös kaikkia pelin aikaisia juttuja kartalla, mitkä
+     * pitäisivät siis olla pois"*.
+     *
+     * LUOKKA ON SE, JOKA JO ON — `aikajana-paalla` on linssien yhteinen
+     * portti (js/ui.js linssikarttaEstaa, js/ui-apurit.js linssiEstaa,
+     * js/pallolauta/lauta.js linssiPaalla). Sen kautta topografialinssi
+     * saa saman sammutuksen kuin Ihmisen matka ja Satelliitti: kohdemaan
+     * korostuskehä, maapaneeli, kaupunkipisteet, saapumislappu, Liiku ja
+     * kartuutsi. Reitti, pelinappula ja tasoituskerma sammutetaan laudan
+     * omassa päivityksessä samasta portista; nimikyltit, nostot ja pulu
+     * tyylitiedostosta (css/styles.css, `body.linssi-topografia`).
+     *
+     * Ilman tätä luokkaa mikään niistä ei tapahtunut: mitattuna
+     * 16.9.2026 linssin päällä ollessa ruudulla oli 8 nimikylttiä,
+     * 13 nostoa, kaupunkipiste, pulu, saapumislappu, Liiku ja 2110
+     * janan korostuskehä.
+     */
+    const runko = typeof document === 'undefined' ? null : document.body;
+    const luokkaOli = Boolean(runko?.classList?.contains(LINSSIPORTTI));
+    if (!luokkaOli) runko?.classList?.add(LINSSIPORTTI);
+
+    /*
+     * ────────────────────────────────────────────────────────────────
+     * 4. KOKO MAAPALLO KATSOTTAVISSA
+     * ────────────────────────────────────────────────────────────────
+     * OMISTAJA 16.9.2026 (sanatarkasti): *"topografialinssi kun on
+     * päällä, niin huolimatta siitä, onko maailmatila päällä vai pois,
+     * niin pelaaja pääsee katsomaan koko maapalloa"*.
+     *
+     * Laudan uloszoomauksen esto lukitsee kameran kohdemaan laatikkoon
+     * (js/pallolauta/lauta.js maanZoomiraja) — mitattuna Ranskassa
+     * korkeuteen 0,186. Linssin ajaksi katto nostetaan korkeuteen, jolla
+     * KOKO PALLO mahtuu ruudulle (kamera.js kokoPallonKorkeus), ja koska
+     * syrjäytys on voimassa, myös panoroinnin rajaus vapautuu samalla
+     * (maanPanoraja palauttaa nullin) — pelaaja pääsee pyörittämään
+     * palloa. Zoomin lähin raja jää laudan omaksi: linssi ei saa viedä
+     * pelaajaa lähemmäs kuin laatat kestävät.
+     */
+    const kotelo = lauta.kotelo ?? null;
+    const sovitaKatto = () => {
+      const leveys = kotelo?.clientWidth ?? 0;
+      const korkeus = kotelo?.clientHeight ?? 0;
+      if (!(leveys > 0) || !(korkeus > 0)) return;
+      lauta.zoomirajat?.({ max: kokoPallonKorkeus({ leveys, korkeus }) });
+    };
+    sovitaKatto();
+    const kokovahti = kotelo && typeof ResizeObserver === 'function'
+      ? new ResizeObserver(sovitaKatto) : null;
+    kokovahti?.observe(kotelo);
+
+    /*
+     * KAMERA TALTEEN AVATESSA. Linssin sulkeutuessa palataan siihen
+     * näkymään, josta pelaaja linssin avasi — muuten hän jäisi
+     * avaruuteen keskelle peliä.
+     */
+    const kameraTalteen = lauta.pallo?.pointOfView?.()
+      ? { ...lauta.pallo.pointOfView() } : null;
+
+    return {
+      pura: () => {
+        suljettu = true;
+        kokovahti?.disconnect?.();
+        tarkennus?.pura?.();
+        tarkennus = null;
+        perus?.pura?.();
+        if (!luokkaOli) runko?.classList?.remove(LINSSIPORTTI);
+        lauta.zoomirajat?.(null);
+        if (kameraTalteen) {
+          lauta.kamera?.pysaytaKameraAjo?.();
+          lauta.pallo?.pointOfView?.(
+            kameraTalteen,
+            lauta.linssit?.reducedMotion?.() ? 0 : PALUUAJON_MS,
+          );
+        }
+        lauta.heraa?.();
+      },
+      /** Mitatut luvut savukkeelle ja vartijoille. */
+      tila: () => ({
+        // Koko pallon kalvo on aina olemassa; `perusKalvo` kertoo, onko
+        // se NÄKYVISSÄ (laastarin ajan se on läpinäkyvä). Luku on
+        // MITATTU materiaalista eikä pääteltu — juuri se ero paljasti
+        // 16.9.2026, että kalvo jäi läpinäkyväksi uloszoomatessa.
+        perusKalvo: (perus?.nakyvyys?.() ?? 0) > 0.5,
+        perusPeitto: perus?.nakyvyys?.() ?? null,
+        tarkennus: tarkennus?.tila?.() ?? null,
+      }),
+    };
   },
 
   selite() {

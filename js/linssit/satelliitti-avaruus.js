@@ -85,6 +85,7 @@
 import { MAAMASKI } from './ihmisen-matka-maamaski.js';
 import { puraPeitto } from '../aikajana-virrat-laskenta.js';
 import { luoTahtitaivas } from '../pallolauta/tahdet.js';
+import { kokoPallonKorkeus } from '../pallolauta/kamera.js';
 
 /* ═════════════════ 1. AVAUSNÄKYMÄN KORKEUS ══════════════════════ */
 
@@ -245,16 +246,13 @@ export const ASETTUMISEN_IKKUNA_MS = 2500;
 export function avausKorkeus({
   leveys, korkeus, fov = AVARUUDEN_FOV, marginaali = AVAUKSEN_MARGINAALI,
 } = {}) {
-  const K = Number(korkeus) > 0 ? Number(korkeus) : 0;
-  const L = Number(leveys) > 0 ? Number(leveys) : 0;
-  if (!K || !L) return 2.5;
-  const m = Math.max(0, Math.min(0.6, Number(marginaali) || 0));
-  const mahtuu = Math.min(L, K) * (1 - m);
-  // tan(a) = (mahtuu / K) · tan(fov / 2)
-  const tanA = (mahtuu / K) * Math.tan((fov / 2) * (Math.PI / 180));
-  const sinA = tanA / Math.sqrt(1 + tanA * tanA);
-  if (!(sinA > 0)) return 2.5;
-  return 1 / sinA - 1;
+  /*
+   * KAAVA MUUTTI OSOITETTA 16.9.2026 (js/pallolauta/kamera.js
+   * kokoPallonKorkeus). Topografialinssi tarvitsee saman laskun
+   * vapauttaakseen zoomin koko palloon, eikä kahta kopiota oteta —
+   * tämä jää nimeksi, jonka savukkeet ja testit tuntevat.
+   */
+  return kokoPallonKorkeus({ leveys, korkeus, fov, marginaali });
 }
 
 /**

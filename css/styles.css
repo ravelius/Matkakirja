@@ -11758,6 +11758,67 @@ body.kartalento .karttaselite {
 }
 
 /*
+ * LINSSIN AIKANA PALLOLAUDAN OMAT LAPPUSET POIS (Raamattu,
+ * TOPOGRAFIALINSSI: TARKKUUS EI NAY, PELIN ELEMENTIT POIS, KOKO
+ * MAAPALLO KATSOTTAVISSA; omistaja 16.9.2026, sanatarkasti: *"siinä
+ * näkyy myös kaikkia pelin aikaisia juttuja kartalla, mitkä pitäisivät
+ * siis olla pois"*).
+ *
+ * SÄÄNTÖ OLI ENNEN KAHTENA KOPIONA linssien omissa tyylitiedostoissa
+ * (css/aikajana.css ja css/satelliitti.css), joita ladataan vain
+ * kyseisen linssin kanssa. Topografialinssillä ei ole omaa
+ * tyylitiedostoa, ja mitattuna 16.9.2026 sen päällä ruudulla oli 8
+ * nimikylttiä ja 13 nostoa. Sääntö on siksi tässä, aina ladatussa
+ * tiedostossa, linssien yhteisen portin (`body.aikajana-paalla`, ks.
+ * js/ui.js linssikarttaEstaa) alla — kopiot saavat jäädä, ne sanovat
+ * saman asian eivätkä muutu tästä.
+ *
+ * `display: none`, ei opacity: piiloon jäänyt kyltti ei saa jäädä
+ * napautettavaksi linssin päälle.
+ */
+body.aikajana-paalla .pallolauta-nimi,
+body.aikajana-paalla .pallolauta-nosto,
+body.aikajana-paalla .pallolauta-piste,
+body.aikajana-paalla .pallolauta-kohde,
+body.aikajana-paalla .pallolauta-vesinimi,
+body.aikajana-paalla .pallolauta-nappula,
+body.aikajana-paalla .pallolauta-maapaneeli {
+  display: none;
+}
+
+/*
+ * PULU, SAAPUMISLAPPU JA SAAPUMISEN VALOKUVA POIS TOPOGRAFIALINSSIN
+ * AJAKSI (sama omistajan lista 16.9.2026: *"pulu"*, *"saapumislappu"*).
+ *
+ * KOLME SYYTÄ, MIKSI NÄMÄ OVAT TÄSSÄ EIVÄTKÄ LINSSIEN YHTEISEN PORTIN
+ * ALLA:
+ *
+ *   1. PÖLLÖ jää muissa linsseissä näkyviin, koska Livia puhuu niiden
+ *      aikana (ks. body.aikajana-paalla .pollo-nappi alempana tässä
+ *      tiedostossa). Topografialinssi on vaiti ja katsoo maastoa.
+ *   2. SAAPUMISLAPPU häivytetään muissa linsseissä peittävyydellä
+ *      (body.aikajana-paalla .fact-card alempana), mutta mitattuna
+ *      16.9.2026 se jäi silti näkyviin saapumisnäkymässä. `display:
+ *      none` on se, mitä omistaja pyysi, eikä jätä tulkinnanvaraa.
+ *   3. SAAPUMISEN VALOKUVA (.fokusvirta-isokuva, js/fokusvirta.js)
+ *      peitti mitattuna työpöytäruudulla 1077 × 770 pikseliä kartan
+ *      PÄÄLLÄ koko linssin ajan — juuri sellainen "pelin aikainen
+ *      juttu", jota omistaja ei halunnut nähdä. Se ei ole yhdenkään
+ *      linssin oman tyylitiedoston listalla, ja muiden linssien
+ *      kertomukset käyttävät samaa kerrosta omiin kuviinsa, joten
+ *      sääntö rajataan tähän linssiin.
+ *
+ * Luokan `linssi-topografia` asettaa linssimoottori
+ * (js/linssit/kerros.js) jokaiselle linssille sen tunnuksesta.
+ */
+body.linssi-topografia .pollo-nappi,
+body.linssi-topografia .fact-card,
+body.linssi-topografia .fokusvirta-isokuva,
+body.linssi-topografia .fokuszoom {
+  display: none;
+}
+
+/*
  * KEKSINNÖT-LINSSI (omistaja 3.9.2026): matkakirja häviää näkyvistä ja
  * oikean yläkulman karttaselite poistuu, jotta linssin ilmiökuva pääsee
  * ylemmäs (css/aikajana.css .aikajana-ilmio). js/aikajana.js lisää ja
@@ -27028,9 +27089,12 @@ body.liiku-laaja .toimintorivi.rivi-yksi .monitoimi-nappi .icon-label {
  * `body.radio-tila` (maailmanradio). Nappi on jo näissä tiloissa
  * ESTETTY (linssikarttaEstaa → disabled), mutta jäi näkyviin harmaana;
  * tämä piilottaa sen kokonaan ja palauttaa, kun linssi suljetaan,
- * koska luokka poistuu samalla. Karttakerroksena piirtyvät linssit
- * (topografia, vertailu, maat, vesistöt) EIVÄT aseta näitä luokkia —
- * pelaaja pysyy kartalla ja voi liikkua, joten nappi jää näkyviin.
+ * koska luokka poistuu samalla. Karttakerroksena TASOKARTALLA
+ * piirtyvät linssit (vertailu, maat, vesistöt) EIVÄT aseta näitä
+ * luokkia — pelaaja pysyy kartalla ja voi liikkua, joten nappi jää
+ * näkyviin. TOPOGRAFIALINSSI ASETTAA (16.9.2026, Raamattu
+ * TOPOGRAFIALINSSI: … PELIN ELEMENTIT POIS): se on pallolla oma
+ * näkymänsä, jonka aikana Liiku on poissa muiden kerrosten mukana.
  */
 body.luenta-aanessa .toimintorivi .monitoimi-nappi,
 body.aikajana-paalla .toimintorivi .monitoimi-nappi,

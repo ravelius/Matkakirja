@@ -88,8 +88,14 @@ test('kalvo piirtyy laattakerroksen päälle: syvyyssiirto, ei sädekorotusta', 
   assert.ok(!/depthTest: false/.test(src), 'depthTest pois vuotaisi kalvon pallon takapuolelle');
   // Varapolku (kloonattu pintamateriaali) saa saman siirron.
   assert.match(src, /kopio\.polygonOffsetUnits = KALVON_SYVYYSSIIRTO;/);
-  // Kalvo piirtyy läpinäkyvien jonossa laattojen JÄLKEEN (renderOrder).
-  assert.match(src, /mesh\.renderOrder = 1;/);
+  /*
+   * Kalvo piirtyy läpinäkyvien jonossa laattojen JÄLKEEN (renderOrder).
+   * Luku tulee 16.9.2026 alkaen kutsujalta (`jarjestys`), koska
+   * topografian tarkennuslaastari on kalvo kalvon päällä ja tarvitsee
+   * oman paikkansa jonossa (2) — oletus on yhä 1.
+   */
+  assert.match(src, /mesh\.renderOrder = jarjestys;/);
+  assert.match(src, /kuva, peittavyys = 0\.72, ikkuna = null, sade = KALVON_SADE, jarjestys = 1,/);
   for (let z = 0; z <= 8; z += 1) {
     assert.ok(1 > LAATTAKERROS_RENDER_ORDER_POHJA + z, `taso ${z} ennen kalvoa`);
   }
@@ -165,7 +171,7 @@ test('polygonsData on sallittu kerros ja moottori asettaa sen sopimuksen mukaan'
 test('topografia piirtyy pallolle tasavälisenä kalvona, ja kuva on R2:ssa', () => {
   const src = lue('../js/linssit/topografia.js');
   assert.match(src, /pallolle\(lauta\) \{/, 'linssillä on pallolle-kahva');
-  assert.match(src, /lauta\?\.linssit\?\.kalvo\('topografia'/, 'piirto kulkee linssimoottorin kautta');
+  assert.match(src, /lauta\.linssit\.kalvo\('topografia', \{/, 'piirto kulkee linssimoottorin kautta');
   assert.match(src, /peittavyys: PEITTAVYYS/, 'sama 0,72 peittävyys kuin tasokartalla');
   // Kuva ei enää asu repossa (15.9.2026) vaan Cloudflare R2:ssa — mediaa
   // ei säilytetä repossa.
@@ -267,4 +273,158 @@ test('naapurireitti piirtyy varjon kanssa: kaksi polkua per reitti', () => {
   assert.match(reitit, /pisteet\.map\(\(\[lat, lng\]\) => \[lat, lng, REITIN_VARJON_KORKEUS\]\)/);
   assert.match(reitit, /export const REITIN_VARJON_KORKEUS = 0\.0018;/);
   assert.match(reitit, /\.pathPointAlt\(\(p\) => \(p\.length > 2 \? p\[2\] : REITIN_KORKEUS\)\)/);
+});
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * TOPOGRAFIAN TARKENNUSLAASTARI (Raamattu, TOPOGRAFIALINSSI: TARKKUUS
+ * EI NAY, PELIN ELEMENTIT POIS, KOKO MAAPALLO KATSOTTAVISSA)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Laastarin ajava silmukka tarvitsee selaimen (kangas, kamera,
+ * createImageBitmap), ja sen vartioi tools/savukkeet/savuke-topografialinssi.mjs.
+ * TÄÄLLÄ vartioidaan päätökset, jotka ovat pelkkää laskentaa: mistä
+ * kynnys kulkee, mihin ikkuna asettuu, mistä kohdasta lähdekuvaa
+ * kaistale otetaan ja kuinka tiheäksi kangas mitoitetaan. Jos jokin
+ * näistä lipsahtaa, laastari piirtyisi väärään paikkaan tai väärällä
+ * tarkkuudella — kumpikin vika näyttäisi ruudulla "ihan hyvältä".
+ */
+const T = await import('../js/linssit/topografia-tarkennus.js');
+const { TOPOGRAFIA_KUVA } = await import('../js/packs/linssi-topografia-kuva.js');
+const { kokoPallonKorkeus, PALLO_FOV } = await import('../js/pallolauta/kamera.js');
+
+test('tarkennus syttyy vasta kun ruutu on pallokuvaa tiheämpi', () => {
+  // Pallokuva on 4096 / 360 ≈ 11,4 px/aste: yleiskuvassa se riittää.
+  assert.equal(T.tarkennusTarpeen(2), false, 'koko pallo ruudulla: ei laastaria');
+  assert.equal(T.tarkennusTarpeen(11), false, 'sama tiheys kuin lähteellä: ei vielä');
+  // Mitattu saapumiszoomi (1400 × 900, Ranska) oli 56,9 px/aste ja
+  // lähizoomi 178,5 px/aste — molemmissa laastari on tarpeen.
+  assert.equal(T.tarkennusTarpeen(56.9), true);
+  assert.equal(T.tarkennusTarpeen(178.5), true);
+});
+
+test('tarkennusikkuna on näkyvää alaa laajempi ja pysyy kuvan kaistassa', () => {
+  const ikkuna = T.tarkennusIkkuna({
+    lat: 45.8, lng: 6.9, leveysAst: 7.72, korkeusAst: 3.21,
+  });
+  assert.ok(ikkuna, 'ikkuna syntyy');
+  // Marginaali 2,4× molempiin suuntiin.
+  assert.ok(Math.abs((ikkuna.lng1 - ikkuna.lng0) - 7.72 * 2.4) < 0.01);
+  assert.ok(Math.abs((ikkuna.lat1 - ikkuna.lat0) - 3.21 * 2.4) < 0.01);
+  // Keskipiste on kameran kohdalla.
+  assert.ok(Math.abs((ikkuna.lng0 + ikkuna.lng1) / 2 - 6.9) < 1e-9);
+  // Kuvassa ei ole riviäkään laudan kaistan ulkopuolelta: ikkuna ei saa
+  // luvata sellaista, mitä lähteessä ei ole.
+  const napa = T.tarkennusIkkuna({
+    lat: 74, lng: 0, leveysAst: 40, korkeusAst: 40,
+  });
+  assert.ok(napa.lat1 <= T.KUVAN_POHJOINEN + 1e-9, 'pohjoisreuna kaistassa');
+  const etela = T.tarkennusIkkuna({
+    lat: -56, lng: 0, leveysAst: 40, korkeusAst: 40,
+  });
+  assert.ok(etela.lat0 >= T.KUVAN_ETELA - 1e-9, 'eteläreuna kaistassa');
+});
+
+test('turvavyöhyke pitää kankaan paikallaan pienessä liikkeessä', () => {
+  const nakyma = { lat: 45.8, lng: 6.9, leveysAst: 7.72, korkeusAst: 3.21 };
+  const ikkuna = T.tarkennusIkkuna(nakyma);
+  assert.equal(T.ikkunaRiittaa(ikkuna, nakyma), true, 'paikallaan ei rakenneta uutta');
+  assert.equal(
+    T.ikkunaRiittaa(ikkuna, { ...nakyma, lng: 7.4 }), true,
+    'pieni panorointi mahtuu vyöhykkeeseen',
+  );
+  assert.equal(
+    T.ikkunaRiittaa(ikkuna, { ...nakyma, lng: 12 }), false,
+    'ruudullisen veto vaatii uuden kankaan',
+  );
+  assert.equal(
+    T.ikkunaRiittaa(ikkuna, { ...nakyma, leveysAst: 40, korkeusAst: 20 }), false,
+    'uloszoomaus vaatii uuden kankaan',
+  );
+});
+
+test('kaistale osuu lähdekuvaan ja sauma jätetään väliin', () => {
+  const ikkuna = T.tarkennusIkkuna({
+    lat: 45.8, lng: 6.9, leveysAst: 7.72, korkeusAst: 3.21,
+  });
+  const rajaus = T.millerRajaus(ikkuna, TOPOGRAFIA_KUVA);
+  assert.ok(rajaus, 'Alpit osuvat kuvaan');
+  assert.ok(rajaus.sx >= 0 && rajaus.sx + rajaus.sw <= TOPOGRAFIA_KUVA.leveysPx);
+  assert.ok(rajaus.sy >= 0 && rajaus.sy + rajaus.sh <= TOPOGRAFIA_KUVA.korkeusPx);
+  /*
+   * Leveys lähdekuvassa on 30 px/aste (10800 / 360) — juuri se tiheys,
+   * jonka takia laastari on olemassa. Pallokuva antaisi 11,4.
+   */
+  const tiheys = rajaus.sw / (ikkuna.lng1 - ikkuna.lng0);
+  assert.ok(tiheys > 29 && tiheys < 31, `lähteen tiheys ${tiheys}`);
+  assert.ok(tiheys > T.PERUSKUVAN_TIHEYS * 2.5, 'yli 2,5× pallokuvan tiheys');
+  // Sauma (lon0 = -175) keskellä Tyyntämerta: kaistale olisi kahdessa
+  // osassa, joten laastaria ei tehdä ja koko pallon kalvo jää voimaan.
+  const sauma = T.tarkennusIkkuna({
+    lat: 0, lng: -175, leveysAst: 20, korkeusAst: 10,
+  });
+  assert.equal(T.millerRajaus(sauma, TOPOGRAFIA_KUVA), null, 'sauma ohitetaan');
+});
+
+test('kankaan koko on lähteen tiheys, katolla rajattuna', () => {
+  assert.deepEqual(T.kankaanKoko({ sw: 557, sh: 289 }), { leveys: 557, korkeus: 289 });
+  const iso = T.kankaanKoko({ sw: 5400, sh: 3000 });
+  assert.equal(iso.leveys, T.KANKAAN_KATTO, 'katto pitää muistin kurissa');
+  assert.equal(iso.korkeus, T.KANKAAN_KATTO);
+});
+
+test('?tarkennus=0 ottaa laastarin pois (vastakoe ja varapolku)', () => {
+  const ikkuna = (haku) => ({ location: { search: haku } });
+  assert.equal(T.tarkennusPaalla(ikkuna('')), true);
+  assert.equal(T.tarkennusPaalla(ikkuna('?lauta=pallo&tarkennus=0')), false);
+  assert.equal(T.tarkennusPaalla(ikkuna('?tarkennus=1')), true);
+});
+
+test('linssi vapauttaa zoomin koko palloon ja palauttaa kameran', () => {
+  const src = lue('../js/linssit/topografia.js');
+  // Katto lasketaan yhdestä paikasta (kamera.js), ei linssin omalla kaavalla.
+  assert.match(src, /kokoPallonKorkeus\(\{ leveys, korkeus \}\)/);
+  assert.match(src, /lauta\.zoomirajat\?\.\(\{ max: kokoPallonKorkeus/);
+  assert.match(src, /lauta\.zoomirajat\?\.\(null\)/, 'sulkeminen palauttaa laudan rajat');
+  assert.match(src, /kameraTalteen/, 'kamera otetaan talteen avatessa');
+  // Linssien yhteinen portti sammuttaa pelin kerrokset.
+  assert.match(src, /const LINSSIPORTTI = 'aikajana-paalla';/);
+  assert.match(src, /classList\?\.add\(LINSSIPORTTI\)/);
+  assert.match(src, /classList\?\.remove\(LINSSIPORTTI\)/);
+  /*
+   * KOKO PALLO RUUTUUN on sama kaava kuin satelliittilinssin
+   * avausnäkymällä: 1400 × 900 -ruudulla korkeus 1,63, ja silloin
+   * pallon halkaisija on ruudun kapeamman sivun sisällä.
+   */
+  const alt = kokoPallonKorkeus({ leveys: 1379, korkeus: 821 });
+  const d = 1 + alt;
+  const halkaisija = 821 * Math.tan(Math.asin(1 / d)) / Math.tan((PALLO_FOV / 2) * (Math.PI / 180));
+  assert.ok(halkaisija <= 821, `pallo mahtuu korkeuteen: ${halkaisija}`);
+  assert.ok(halkaisija > 821 * 0.8, 'eikä jää turhan pieneksi');
+  // Pystypuhelin: leveys on kapeampi sivu, ja sen mukaan mitoitetaan.
+  const puhelin = kokoPallonKorkeus({ leveys: 390, korkeus: 844 });
+  const halkPuhelin = 844 * Math.tan(Math.asin(1 / (1 + puhelin)))
+    / Math.tan((PALLO_FOV / 2) * (Math.PI / 180));
+  assert.ok(halkPuhelin <= 390, `pallo mahtuu leveyteen: ${halkPuhelin}`);
+});
+
+test('pelin kerrokset sammuvat linssin ajaksi laudalla ja tyyleissä', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  // Reitti, pelinappula ja kerma samasta portista kuin korostus.
+  assert.match(lauta, /const valinta = linssiPaalla\(\)/);
+  assert.match(lauta, /nappula: liikkuu \|\| lento \|\| linssiPaalla\(\) \? null : kohta/);
+  assert.match(lauta, /asetaTasoituksenMaailma\(\s*\n?\s*linssiPaalla\(\)/);
+  // Katon puristusmuisti ei saa viedä kameraa, kun linssi nostaa katon.
+  assert.match(lauta, /kattoPuristus = null;\s*\n\s*tahdistaZoomirajat\(\);/);
+  const css = lue('../css/styles.css');
+  for (const valitsin of [
+    '.pallolauta-nimi', '.pallolauta-nosto', '.pallolauta-piste', '.pallolauta-kohde',
+    '.pallolauta-vesinimi', '.pallolauta-nappula', '.pallolauta-maapaneeli',
+  ]) {
+    assert.ok(
+      css.includes(`body.aikajana-paalla ${valitsin}`),
+      `${valitsin} piilotetaan aina ladatussa tyylitiedostossa`,
+    );
+  }
+  assert.ok(css.includes('body.linssi-topografia .pollo-nappi'), 'pulu pois topografialinssissä');
 });
