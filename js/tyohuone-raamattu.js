@@ -7938,7 +7938,16 @@ export const RAAMATTU = {
           + 'zoomaus saa hitaan esivaiheen, ei uutta odotusta; kertomuksen '
           + 'ja luennan ajoitus ei muutu. Mitataan: kameran korkeuden '
           + 'aikasarja (ei tasannetta zoomin ja Marokon valilla paitsi '
-          + 'tauko), zoomin kesto +5 s. Tila: tyo Opus-agentilla.',
+          + 'tauko), zoomin kesto +5 s. TARKENNUS (omistaja 16.9.2026 klo '
+          + '17.15 UTC, kysymyskortti: +5 s ja tauko olisivat lyhentaneet '
+          + 'Marokon ajon 8,9 s -> 2,7 s, koska saapumishetki pidettiin): '
+          + 'valinta "Zoomin jatko 2-3 s, ei 5 s" - zoom valmistuu n. 2,5 s '
+          + 'myohemmin, Marokon ajolle jaa n. 5 s, saapuminen ennallaan. '
+          + 'Pulun repliikit kesken kaaren ("Simpukoita. Hyva alku.") '
+          + 'jaavat pois, pulu puhuu vasta lopussa (kortti: "Sopii"). '
+          + 'Simpukkavirkkeen poisto vaatii kertomuksen aanitteen uusinnan '
+          + 'Codexilla (avain aikajana/ihmisen-matka/puhe/'
+          + 'ihmisen-matka-kertomus.mp3). Tila: tyo Opus-agentilla.',
         'LINSSIEN KEHYS LIUKUU SISAAN MUSTAN JALKEEN, EI FEIDAA (omistaja '
           + '16.9.2026 klo 05.00 UTC, sanatarkasti: "Tuo ihmis linssissa '
           + 'mustan ruudun jalkeen elementit ruudulle niin etta ne liukuvat '
