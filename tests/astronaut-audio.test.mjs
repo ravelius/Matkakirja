@@ -2,6 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { validateSourceUrl, reviewForOutput } from '../tools/astronaut/build-loop.mjs';
+import { sealTransfer } from '../tools/astronaut/exact-transfer.mjs';
+import { generateKeyPairSync, privateDecrypt, createDecipheriv } from 'node:crypto';
 
 const manifest = JSON.parse(readFileSync(new URL('../tools/astronaut/ambient-manifest.json', import.meta.url)));
 test('astronaut ambience is one shared, quiet, gapless-loop-ready recording', () => {
@@ -41,4 +43,14 @@ test('import branch never receives a generation API key and requires one final',
   assert.match(workflow, /generoi:\s+if: inputs\.laji == 'kohahdus'/);
   const importJob = workflow.slice(workflow.indexOf('\n  astronautin-kamera-tuonti:'));
   assert.doesNotMatch(importJob, /ELEVEN_API_KEY|generoi-tehosteet\.mjs/);
+});
+test('exact transfer capability is sealed to the local owner key', () => {
+  const { publicKey, privateKey } = generateKeyPairSync('rsa', { modulusLength: 3072 });
+  const value = { url: 'https://test.r2.cloudflarestorage.com/approved.mp3?private-capability', sha256: manifest.output.sha256 };
+  const packet = sealTransfer(value, publicKey.export({ type: 'spki', format: 'pem' }));
+  assert.ok(!JSON.stringify(packet).includes('private-capability'));
+  const key = privateDecrypt({ key: privateKey, oaepHash: 'sha256' }, Buffer.from(packet.key, 'base64'));
+  const decipher = createDecipheriv('aes-256-gcm', key, Buffer.from(packet.iv, 'base64'));
+  decipher.setAuthTag(Buffer.from(packet.tag, 'base64'));
+  assert.deepEqual(JSON.parse(Buffer.concat([decipher.update(Buffer.from(packet.data, 'base64')), decipher.final()])), value);
 });

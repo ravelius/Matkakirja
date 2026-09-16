@@ -5,6 +5,7 @@ import { execFileSync } from 'node:child_process';
 import { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validateSourceUrl } from './build-loop.mjs';
+import { exactTransfer } from './exact-transfer.mjs';
 
 const root = fileURLToPath(new URL('../../', import.meta.url));
 const directory = resolve(root, 'media/astronaut');
@@ -17,6 +18,11 @@ for (const name of ['R2_ACCOUNT_ID', 'R2_BUCKET', 'AWS_ACCESS_KEY_ID', 'AWS_SECR
   if (!process.env[name]) throw Error(`Missing ${name}`);
 }
 const source = JSON.parse(process.env.ASTRONAUT_SOURCES_JSON || '{}');
+if (source.exactTransfer) {
+  if (source.flow !== expected.flowId) throw Error('Unexpected flow');
+  await exactTransfer({ source, expected, directory });
+  process.exit(0);
+}
 if (source.flow !== expected.flowId || !Array.isArray(source.media) || source.media.length !== expected.rawSources.length || new Set(source.media.map(row => row.id)).size !== source.media.length) throw Error('Unexpected source set');
 for (const row of source.media) {
   validateSourceUrl(row.url);
