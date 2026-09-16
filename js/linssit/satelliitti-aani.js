@@ -36,9 +36,12 @@
  * ------------------------------------------------------------------
  *
  *   humina    aseman hiljainen pohja, −30,48 LUFS, 84 s, soi aina.
- *   musiikki  avaruusteemainen raita huminan PÄÄLLE. Tiedostoa ei ole
- *             vielä olemassa; puuttuva raita on normaali tila, ei
- *             virhe (sama sääntö kuin js/siirtymamusiikki.js:ssä).
+ *   musiikki  avaruusteemainen raita huminan PÄÄLLE — KYTKETTY POIS
+ *             (omistaja 16.9.2026 kuunneltuaan: *"Jätä musiikki pois.
+ *             Pidetään pelkkä humina."*). Kerros jää koodiin vakion
+ *             ASTRONAUTIN_MUSIIKKI_KAYTOSSA taakse. Puuttuva raita on
+ *             joka tapauksessa normaali tila eikä virhe (sama sääntö
+ *             kuin js/siirtymamusiikki.js:ssä).
  *
  * Molemmat elävät SAMASSA soittimessa: yksi `avaaAstronautinAani`
  * koko linssille. Kohteen tai kuvan vaihto ei kutsu tätä lainkaan,
@@ -100,16 +103,23 @@ export const ASTRONAUTIN_HUMINA = 'https://media.matkakirja.app/matkakirja/aanet
   + '93aaf7fb15092bac80abd1d740aa2a22a0fdb761558df2273673bc263fde2f2b.mp3';
 
 /*
- * MUSIIKIN OSOITE ON VAKIO, VAIKKA TIEDOSTOA EI VIELÄ OLE (Raamattu
- * kohta 17: musiikki on vahvistettu, Codex generoi). Sama
- * etukäteisnimeäminen kuin siirtymäraidoilla: kytkentä on pelissä
- * ennen raitaa, ja 404 on hiljainen normaalitila.
+ * MUSIIKIN OSOITE JÄÄ, MUTTA MUSIIKKI EI SOI (omistaja 16.9.2026,
+ * kuuntelun jälkeen, sanatarkasti: *"Jätä musiikki pois. Pidetään pelkkä
+ * humina. Se musiikki oli vähän outo."*).
+ *
+ * Raita on ämpärissä (astronautin-kamera-musiikki-lyria.mp3), ja Raamatun
+ * kohta 17 tilasi sen huminan lisäksi — mutta kuultuaan sen omistaja
+ * peruutti. KOODIA EI POISTETA VAAN KYTKETÄÄN POIS: kerros, osoite ja
+ * koko soitinkoneisto jäävät paikalleen yhden vakion taakse, joten uuden
+ * raidan kokeilu on yhden rivin muutos eikä uusi toteutus. Pois
+ * kytkettynä kerrosta EI ladata lainkaan — verkkoa ei kuluteta raidalla,
+ * jota ei soiteta.
  */
 export const ASTRONAUTIN_MUSIIKKI = 'https://media.matkakirja.app/matkakirja/aanet/linssit/'
   + 'astronautin-kamera-musiikki-lyria.mp3';
 
-/** Soitetaanko musiikkikerros lainkaan? (Soi vain jos tiedosto löytyy.) */
-export const ASTRONAUTIN_MUSIIKKI_KAYTOSSA = true;
+/** Soitetaanko musiikkikerros lainkaan? EI (omistaja 16.9.2026). */
+export const ASTRONAUTIN_MUSIIKKI_KAYTOSSA = false;
 
 /*
  * KERROSTEN VOIMAT — kuulokokeen nupit, kuten kaikki pelin äänitasot.
@@ -120,8 +130,9 @@ export const ASTRONAUTIN_MUSIIKKI_KAYTOSSA = true;
  * Humina ei kuitenkaan ole kappale vaan pohjaväri: se saa jäädä
  * selvästi sen alle (0,45 ≈ −3,7 dB linssiraidan tasosta).
  *
- * Musiikki generoidaan samalla Lyria-reseptillä kuin muut linssiraidat,
- * joten sen voima on sama 0,11 — ja se soi huminan PÄÄLLÄ.
+ * Musiikin voima on sama 0,11 kuin muilla Lyria-linssiraidoilla. Se on
+ * yhä tässä, vaikka kerros on kytketty pois: jos omistaja joskus haluaa
+ * toisen raidan, taso on jo mietitty eikä sitä tarvitse arvata uudelleen.
  */
 export const KERROKSET = {
   humina: { osoite: ASTRONAUTIN_HUMINA, voima: 0.45, nousuMs: 2000 },
@@ -174,6 +185,12 @@ export function astronautinTaso(nimi) {
  * peilattu tiedosto: 404 kertoo vain, ettei raitaa vielä ole.
  */
 async function haePuskuri(nimi, ctx) {
+  /*
+   * POIS KYTKETTYÄ KERROSTA EI LADATA. `kaynnista` palaa jo ennen tätä,
+   * mutta sääntö kuuluu myös tänne: lataus on moduulin ainoa verkkokutsu,
+   * eikä sitä saa tehdä raidalle, jota ei soiteta.
+   */
+  if (nimi === 'musiikki' && !ASTRONAUTIN_MUSIIKKI_KAYTOSSA) return null;
   if (puuttuvat.has(nimi)) return null;
   if (puskurit.has(nimi)) return puskurit.get(nimi);
   const osoite = KERROKSET[nimi]?.osoite;
@@ -311,6 +328,8 @@ export function avaaAstronautinAani() {
           taso: soiva ? Number(soiva.gain.gain.value.toFixed(4)) : 0,
           tavoite: Number(astronautinTaso(nimi).toFixed(4)),
           puuttuu: puuttuvat.has(nimi),
+          /* Kytketty pois (omistaja 16.9.2026): ei ladata eikä soiteta. */
+          poissa: nimi === 'musiikki' && !ASTRONAUTIN_MUSIIKKI_KAYTOSSA,
         };
       }
       return { elossa, kytkin: musiikkiPaalla(), kerrokset };

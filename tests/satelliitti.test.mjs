@@ -979,7 +979,16 @@ test('kaksi kerrosta, omat sisääntulofeidit ja yksi soitin koko linssille', as
   // Humina 2 s, musiikki 3 s (omistajan tilaus ja Codexin ohje).
   assert.equal(KERROKSET.humina.nousuMs, 2000);
   assert.equal(KERROKSET.musiikki.nousuMs, 3000);
-  assert.equal(ASTRONAUTIN_MUSIIKKI_KAYTOSSA, true);
+  /*
+   * MUSIIKKI ON KYTKETTY POIS (omistaja 16.9.2026 kuunneltuaan:
+   * *"Jätä musiikki pois. Pidetään pelkkä humina. Se musiikki oli vähän
+   * outo."*). Kerros, osoite ja taso jäävät koodiin vakion taakse, jotta
+   * uuden raidan kokeilu on yhden rivin muutos — mutta pois kytkettynä
+   * sitä ei ladata eikä soiteta.
+   */
+  assert.equal(ASTRONAUTIN_MUSIIKKI_KAYTOSSA, false);
+  assert.match(aanilahde, /if \(nimi === 'musiikki' && !ASTRONAUTIN_MUSIIKKI_KAYTOSSA\) return;/);
+  assert.match(aanilahde, /if \(nimi === 'musiikki' && !ASTRONAUTIN_MUSIIKKI_KAYTOSSA\) return null;/);
   // Versioitu osoite, ei aliasta: alias ehti osoittaa hylättyyn kokeiluun.
   assert.ok(!KERROKSET.humina.osoite.includes('astronautin-kamera-tausta'), 'alias on yhä käytössä');
   assert.match(ASTRONAUTIN_MUSIIKKI, /astronautin-kamera-musiikki-lyria\.mp3$/);
@@ -1022,6 +1031,31 @@ test('minipulu kelluu valokuvan oikeassa alakulmassa eikä piilotu pulun kanssa'
   assert.match(lahde, /luoMinipulu\(pulunappi, \{ koko: 'auto', suunta: 'vasen' \}\)/);
   assert.match(tyyli, /\.satelliitti-pulukulma \{[\s\S]*position: absolute;[\s\S]*right: 12px;[\s\S]*bottom: calc\(12px \+ env\(safe-area-inset-bottom, 0px\)\)/);
   assert.match(tyyli, /body\.aikajana-pulu-piilossa \.satelliitti-pulukulma,[\s\S]*visibility: visible/);
+  /*
+   * PULUN PLUSKUPLA KUULUU PIILOTETTAVIIN (omistajan havainto
+   * 16.9.2026, puhelin): `.pollo-kuplapalautus` on oma `position: fixed`
+   * -nappinsa suoraan bodyssa, ei kuplapinon sisällä, joten pinon
+   * piilotus ei osunut siihen ja se jäi valokuvan päälle. Sääntö on
+   * sekä tyylitiedostossa että kriittisessä varatyylissä — ja
+   * tests/satelliitti-avaruus.test.mjs vartioi, että ne ovat sanatarkka
+   * osajoukko toisistaan.
+   */
+  assert.match(tyyli, /body\.aikajana-pulu-piilossa \.pollo-kuplapalautus \{[\s\S]{0,80}visibility: hidden/);
+  assert.match(lahde, /body\.aikajana-pulu-piilossa \.pollo-kuplapalautus,/);
+  /*
+   * EI YMPYRÄÄ PULUN YMPÄRILLÄ (omistaja 16.9.2026: *"saisiko pulun
+   * ympäriltä tuon ympyrän pois?"*). Tausta on läpinäkyvä, reunaa ja
+   * pyöristystä ei ole — mutta osuma-ala pysyy 44 px:ssä, koska
+   * läpinäkyvä ala ei näy mutta ottaa sormen vastaan.
+   */
+  const pulunappi = tyyli.slice(tyyli.indexOf('.satelliitti-pulunappi {'),
+    tyyli.indexOf('.satelliitti-pulunappi:hover'));
+  assert.match(pulunappi, /background: transparent;/);
+  assert.match(pulunappi, /border: 0;/);
+  assert.match(pulunappi, /border-radius: 0;/);
+  assert.match(pulunappi, /min-width: 44px;/);
+  assert.match(pulunappi, /min-height: 44px;/);
+  assert.ok(!/border-radius: 999px/.test(pulunappi), 'pulun ympyrä on yhä tyylissä');
   // Pienoiskuvat ovat vasemmassa alakulmassa ja enintään puolet leveydestä.
   assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*max-width: 50%/);
   // Hahmo puretaan kortin mukana: rAF ja kuuntelijat eivät jää elämään.
