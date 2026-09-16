@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1923';
+const CACHE = 'matkakirja-2026-08-09.1924';
 const SHELL = [
   './',
   './index.html',
@@ -126,6 +126,7 @@ const SHELL = [
   './js/livia-pikselit.js',
   './js/livia-svg-paa.js',
   './js/livia-svg.js',
+  './js/minipulu.js',
   './js/livia-eleet.js',
   './js/livia-dialogitila.js',
   './js/livia-tilanteet.js',
@@ -323,6 +324,8 @@ const SHELL = [
   // eivätkä SHELLissä — ne tulevat ICEYEn omasta ämpäristä pyydettäessä.
   './js/linssit/satelliitti.js',
   './js/linssit/satelliitti-data.js',
+  './js/linssit/astronaut-kysymykset.js',
+  './js/linssit/satelliitti-aani.js',
   './js/linssit/satelliitti-avaruus.js',
   './css/satelliitti.css',
   './js/linssit/topografia.js',

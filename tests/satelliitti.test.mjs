@@ -27,9 +27,9 @@ import { readFileSync } from 'node:fs';
 const lue = (p) => readFileSync(new URL(p, import.meta.url), 'utf8');
 
 const {
-  LINSSI, LINSSIN_AANI_AVAIN, LINSSIN_IKONI, SATELLIITTI_OSA, aikateksti,
-  asetaLinssiAani, kuvatiedot, linssiAaniPaalla, oletusIndeksi,
-  paikkateksti, paivateksti, parasHavainto, rakennaValikko,
+  KUVA_AUKI_LUOKKA, LINSSI, LINSSIN_IKONI, SATELLIITTI_OSA, aikateksti,
+  kuvatiedot, oletusIndeksi, paikkateksti, paivateksti, parasHavainto,
+  rakennaLinssikehys,
 } = await import('../js/linssit/satelliitti.js');
 const { SATELLIITTI_KOHTEET, SATELLIITTI_LAHDE } = await import('../js/linssit/satelliitti-data.js');
 const tyokalu = await import('../tools/hae-satelliittihavainnot.mjs');
@@ -159,17 +159,18 @@ function teeDoc() {
   };
 }
 
-test('yläpalkki poistuu kokonaan — ruudulla on vain kelluva hampurilainen', () => {
+test('yläpalkki poistuu kokonaan — ruudulla on vain kelluva ✕', () => {
   /*
    * OMISTAJA 16.9.2026 (Raamattu, LISÄYS 3): *"Astronauttilinssistä
    * voisi ottaa koko yläpalkin pois, niin että oikeassa yläkulmassa on
-   * pelkkä hampurilainen ja kaikki muut yläpalkin jutut pois, koska ne
-   * eivät tuo mitään lisää, vievät vain tilaa."*
+   * pelkkä hampurilainen ja kaikki muut yläpalkin jutut pois"* — ja
+   * LISÄYS 8 samana päivänä: *"Poista hampurilainen myös
+   * maapallonäkymästä ja vaihda sen tilalle x joka sulkee linssin."*
    */
   const doc = teeDoc();
   const mapPane = doc.createElement('div');
   let suljettu = 0;
-  const valikko = rakennaValikko({
+  const kehys = rakennaLinssikehys({
     ui: { mapPane, valitseLinssi: () => { suljettu += 1; } },
     onSulje: () => { suljettu += 1; },
     doc,
@@ -183,29 +184,50 @@ test('yläpalkki poistuu kokonaan — ruudulla on vain kelluva hampurilainen', (
   assert.ok(!lahde.includes('satelliittipalkki'), 'yläpalkki on yhä lähteessä');
   assert.ok(!tyyli.includes('.satelliittipalkki'), 'yläpalkin tyyli on yhä jäljellä');
   // Kelluva kehys menee bodyyn (fixed; karttaruudun transform ei saa siirtää sitä).
-  assert.equal(doc.body.lapset.at(-1).className, 'satelliitti-valikkokehys');
-  assert.equal(valikko.el.className, 'satelliitti-valikkokehys');
+  assert.equal(doc.body.lapset.at(-1).className, 'satelliitti-linssikehys');
+  assert.equal(kehys.el.className, 'satelliitti-linssikehys');
 
-  // Hampurilainen: kolme viivaa, valikko piilossa kunnes sitä painetaan.
-  assert.equal(valikko.hampurilainen.lapset.length, 3);
-  assert.equal(valikko.valikko.hidden, true);
-  valikko.hampurilainen.laukaise('click');
-  assert.equal(valikko.valikko.hidden, false, 'hampurilainen avaa valikon');
-  // Valikossa on täsmälleen kaksi kohtaa: äänet ja poistuminen.
-  assert.deepEqual(valikko.valikko.lapset.map((x) => x.className), [
-    'satelliitti-kohta satelliitti-aani',
-    'satelliitti-kohta satelliitti-poistu',
-  ]);
-  assert.match(valikko.valikko.lapset[0].textContent, /^Äänet (päällä|pois)$/);
-  assert.equal(valikko.valikko.lapset[1].textContent, 'Poistu linssistä');
-  valikko.valikko.lapset[1].laukaise('click');
-  assert.equal(suljettu, 1, '"Poistu linssistä" kutsuu sulkemista');
+  // HAMPURILAISTA EI OLE ENÄÄ OLEMASSA (LISÄYS 8): ei nappia, ei
+  // valikkoa, ei valikon kohtia — ei lähteessä eikä tyylissä.
+  for (const jaanne of [
+    'satelliitti-hampurilainen', 'satelliitti-valikkokehys', 'satelliitti-valikko',
+    'satelliitti-viiva', 'satelliitti-kohta',
+  ]) {
+    assert.ok(!lahde.includes(jaanne), `${jaanne} on yhä lähteessä`);
+    assert.ok(!tyyli.includes(jaanne), `${jaanne} on yhä tyylissä`);
+  }
+  assert.equal(kehys.el.lapset.length, 1, 'kehyksessä on muutakin kuin ✕');
 
-  valikko.pura();
+  // Ainoa nappi on harmaa ✕, ja se sulkee LINSSIN.
+  assert.equal(kehys.poistu.className, 'satelliitti-linssisulku');
+  assert.equal(kehys.poistu.textContent, '×');
+  kehys.poistu.laukaise('click');
+  assert.equal(suljettu, 1, '✕ kutsuu linssin sulkemista');
+
+  kehys.pura();
   assert.ok(!doc.body.classList.contains('aikajana-palkki-auki'));
   assert.ok(!doc.body.classList.contains('aikajana-paalla'));
-  assert.ok(!doc.body.lapset.some((x) => x.className === 'satelliitti-valikkokehys'),
-    'kelluva valikko jäi ruudulle');
+  assert.ok(!doc.body.lapset.some((x) => x.className === 'satelliitti-linssikehys'),
+    'kelluva ✕ jäi ruudulle');
+});
+
+test('kuvanäkymässä näkyy vain kuvan ✕ — linssin ✕ on piilossa', () => {
+  /*
+   * OMISTAJA 16.9.2026 (Raamattu LISÄYS 6): *"Poista hampurilainen
+   * näkyvistä kun kuva isona ruudulla. Silloin näkyy vain x. Eli
+   * linssistä pääsee pois vain päänäkymästä."*
+   *
+   * `display: none` eikä `visibility: hidden`: näkymätön nappi ottaisi
+   * yhä napautuksia vastaan valokuvan päällä — ja juuri se olisi se
+   * ulospääsy, jota omistaja ei halua kuvanäkymään.
+   */
+  assert.equal(KUVA_AUKI_LUOKKA, 'satelliitti-kuva-auki');
+  assert.match(tyyli, /body\.satelliitti-kuva-auki \.satelliitti-linssikehys \{ display: none; \}/);
+  // Luokka elää havaintokortin mukana: päälle auetessa, pois sulkiessa.
+  assert.match(lahde, /document\.body\.classList\.add\(KUVA_AUKI_LUOKKA\)/);
+  assert.match(lahde, /document\.body\.classList\.remove\(KUVA_AUKI_LUOKKA\)/);
+  // Myös linssin purku siivoaa luokan, jos kuva jäi auki.
+  assert.match(lahde, /'aikajana-palkki-auki', 'aikajana-paalla', KUVA_AUKI_LUOKKA/);
 });
 
 test('yläpalkin osat (nimi, ikoni, NASA-rivi, pilleri, i-nappi) ovat kaikki poissa', () => {
@@ -235,80 +257,63 @@ test('yläpalkin osat (nimi, ikoni, NASA-rivi, pilleri, i-nappi) ovat kaikki poi
   assert.match(lahde, /seliteOtsikko\.appendChild\(html\('span', 'satelliitti-seutu', ` — \$\{kohde\.seutu\}`\)\)/);
 });
 
-test('kelluva hampurilainen on ruudun oikeassa yläkulmassa turva-alue huomioiden', () => {
-  assert.match(tyyli, /\.satelliitti-valikkokehys \{[\s\S]*position: fixed;[\s\S]*top: var\(--satelliitti-yla\);[\s\S]*right: var\(--satelliitti-oikea\)/);
+test('kelluva ✕ on ruudun oikeassa yläkulmassa turva-alue huomioiden', () => {
+  assert.match(tyyli, /\.satelliitti-linssikehys \{[\s\S]*position: fixed;[\s\S]*top: var\(--satelliitti-yla\);[\s\S]*right: var\(--satelliitti-oikea\)/);
   assert.match(tyyli, /--satelliitti-yla: calc\(10px \+ env\(safe-area-inset-top, 0px\)\)/);
   assert.match(tyyli, /--satelliitti-oikea: calc\(12px \+ env\(safe-area-inset-right, 0px\)\)/);
-  // Valikko aukeaa napin alle ilman mittausta.
-  assert.match(tyyli, /\.satelliitti-valikko \{[\s\S]*top: calc\(100% \+ 6px\);[\s\S]*right: 0/);
-  assert.match(tyyli, /\.satelliitti-valikko\[hidden\] \{ display: none; \}/);
   // Kuva ja pallo saavat palkin tilan: kortti alkaa ruudun yläreunasta.
   assert.match(tyyli, /\.satelliitti-katselu \{[\s\S]*position: fixed;[\s\S]*top: 0;/);
   assert.ok(!lahde.includes('asemoiYlareuna'), 'palkin alareunan mittaus on yhä lähteessä');
 });
 
-test('valikon ääniasetus tallentuu samaan paikkaan kuin pelin muut ääniasetukset', () => {
+test('linssillä ei ole omaa äänikytkintä — äänet seuraavat pelin musiikkiasetusta', () => {
   /*
-   * OMISTAJA 16.9.2026: *"laita siihen äänet päälle ja pois nappi"*.
-   * Linssillä ei ole vielä omaa ääntä (avaruusambienssi on tilattu
-   * Codexilta), joten kytkin kirjoittaa valinnan localStorageen samalla
-   * kaavalla kuin musiikkivalitsin ('matkakirja-musiikki') — oletus on
-   * päällä ja luku on try/catchin takana.
+   * OMISTAJA 16.9.2026 (Raamattu LISÄYS 8, kysymyskortti): linssin oma
+   * "Äänet päälle/pois" ja sen localStorage-avain poistuivat, ja
+   * humina ja musiikki noudattavat pelin yleistä musiikkiasetusta
+   * ('matkakirja-musiikki'). Kaksi säädintä samalle asialle oli juuri
+   * se, mistä musiikin tasovika aikanaan alkoi.
    */
-  assert.equal(LINSSIN_AANI_AVAIN, 'matkakirja-linssiaani');
-  const muisti = new Map();
-  const vanha = globalThis.localStorage;
-  globalThis.localStorage = {
-    getItem: (k) => (muisti.has(k) ? muisti.get(k) : null),
-    setItem: (k, v) => muisti.set(k, v),
-  };
-  try {
-    assert.equal(linssiAaniPaalla(), true, 'oletus on päällä');
-    asetaLinssiAani(false);
-    assert.equal(muisti.get(LINSSIN_AANI_AVAIN), 'off');
-    assert.equal(linssiAaniPaalla(), false);
-    asetaLinssiAani(true);
-    assert.equal(linssiAaniPaalla(), true);
-  } finally {
-    if (vanha === undefined) delete globalThis.localStorage;
-    else globalThis.localStorage = vanha;
-  }
+  assert.ok(!lahde.includes('LINSSIN_AANI_AVAIN'), 'linssin oma ääniavain on yhä lähteessä');
+  assert.ok(!lahde.includes('linssiAaniPaalla'), 'linssin oma äänikytkin on yhä lähteessä');
+  assert.ok(!lahde.includes('asetaLinssiAani'), 'linssin oma ääniasetus on yhä lähteessä');
+  assert.ok(!lahde.includes("satelliitti-aani'"), 'äänikytkimen nappi on yhä lähteessä');
+  const aani = lue('../js/linssit/satelliitti-aani.js');
+  assert.ok(!/localStorage[\s\S]{0,40}linssiaani/.test(aani), 'ääniavain on yhä soittimessa');
+  assert.match(aani, /musiikkiPaalla/);
+  assert.match(aani, /kuunteleMusiikkitilaa\(\(\) => nykyinen\?\.musiikkiKytkin\?\.\(\)\)/);
 });
 
 test('kulmanapit ovat pyöreitä ja kasvavat kapealla ruudulla', () => {
   /*
-   * ✕ ja hampurilainen ovat samalla rivillä, ja ✕:n vaakasiirtymä
-   * lasketaan napin leveydestä — siksi koko on YKSI muuttuja, joka
-   * muuttuu kerralla molemmille (muuten napit erkanisivat rivistä).
-   *
    * Pelin oma nappisääntö antaa kaikille napeille 44 px:n min-height,
    * joka venytti nämä soikeiksi (mitattu 390 × 844: ✕ 30 × 46 px).
    * Jokainen kulmanappi nollaa min-mitat ja lukitsee aspect-ration,
    * ja kosketusalue säilyy kasvattamalla nappia kapealla ruudulla.
+   *
+   * LISÄYS 8: sekä kuvan että linssin ✕ ovat SAMA nappi-ulkoasu
+   * (`.satelliitti-sulku`), joten mitattavia kulmanappeja on kaksi.
    */
-  for (const luokka of ['satelliitti-hampurilainen', 'satelliitti-sulku', 'satelliitti-vakanen']) {
+  for (const luokka of ['satelliitti-sulku,\n.satelliitti-linssisulku', 'satelliitti-vakanen']) {
     const lohko = tyyli.slice(tyyli.indexOf(`.${luokka} {`));
     assert.match(lohko.slice(0, 400), /min-height: 0;\n  aspect-ratio: 1;/, `${luokka} ei ole ympyrä`);
   }
   assert.match(tyyli, /@media \(max-width: 620px\) \{\s*:root \{ --satelliitti-nappi: 2\.4rem; \}/);
-  assert.match(tyyli, /\.satelliitti-hampurilainen \{[\s\S]*width: var\(--satelliitti-nappi\)/);
-  assert.match(tyyli, /\.satelliitti-sulku \{[\s\S]*width: var\(--satelliitti-nappi, 2\.1rem\)/);
-  // Selite ei mene nappien alle kapealla ruudulla.
-  assert.match(tyyli, /@media \(max-width: 620px\) \{[\s\S]*\.satelliitti-selite \{[\s\S]*width: calc\(100% - 24px - 2 \* var\(--satelliitti-nappi\) - 26px\)/);
+  assert.match(tyyli, /\.satelliitti-sulku,\n\.satelliitti-linssisulku \{[\s\S]*width: var\(--satelliitti-nappi, 2\.1rem\)/);
+  // Selite ei mene napin alle kapealla ruudulla (yksi nappi, ei kaksi).
+  assert.match(tyyli, /@media \(max-width: 620px\) \{[\s\S]*\.satelliitti-selite \{[\s\S]*width: calc\(100% - 24px - var\(--satelliitti-nappi\) - 16px\)/);
 });
 
-test('✕ ja hampurilainen eivät voi leikata toisiaan', () => {
+test('kuvan ✕ ja linssin ✕ ovat samassa kulmassa eivätkä ole yhtä aikaa ruudulla', () => {
   /*
-   * MITATTU PÄÄTÖS 16.9.2026 (LISÄYS 3): ✕ on hampurilaisen VASEMMALLA
-   * puolella, ei sen alla. Valikko aukeaa hampurilaisen alle, joten
-   * alapuolinen ✕ jäisi auki olevan valikon peittoon juuri silloin kun
-   * valikkoa käytetään; samalla rivillä vasemmalla ne eivät leikkaa
-   * toisiaan missään tilassa.
+   * LISÄYS 8: hampurilaista ei ole, joten kuvan sulkeva ✕ saa ruudun
+   * oikean yläkulman itselleen — täsmälleen sen paikan, jossa
+   * pallonäkymän linssi-✕ on. Merkki ei siis hyppää näkymästä toiseen,
+   * ja päällekkäisyys on mahdotonta, koska linssin ✕ on piilossa
+   * kuvanäkymässä (KUVA_AUKI_LUOKKA).
    */
-  assert.match(tyyli, /\.satelliitti-kulma \{[\s\S]*right: calc\(var\(--satelliitti-oikea\) \+ var\(--satelliitti-nappi\) \+ 10px\);[\s\S]*top: var\(--satelliitti-yla\)/);
-  // Molemmat lukevat samaa yläreunaa ja samaa napin kokoa.
-  assert.match(tyyli, /\.satelliitti-valikkokehys \{[\s\S]*top: var\(--satelliitti-yla\)/);
-  assert.match(tyyli, /\.satelliitti-hampurilainen \{[\s\S]*height: var\(--satelliitti-nappi\)/);
+  assert.match(tyyli, /\.satelliitti-kulma \{[\s\S]*right: var\(--satelliitti-oikea\);[\s\S]*top: var\(--satelliitti-yla\)/);
+  assert.match(tyyli, /\.satelliitti-linssikehys \{[\s\S]*top: var\(--satelliitti-yla\)/);
 });
 
 /* ═══════ 4. kuva koko ruutuun heti, kaikki muu sen päälle ═══════ */
@@ -339,7 +344,7 @@ test('✕ ja pienoiskuvat on kiinnitetty RUUTUUN, ei kuvaelementtiin', () => {
     'kuvan marginaalimuuttuja on yhä tyylissä');
   assert.ok(!lahde.includes('asemoiKulmat'), 'kuvan marginaalimittaus on yhä lähteessä');
   assert.match(lahde, /kulma\.append\(sulku\)/);
-  assert.match(tyyli, /\.satelliitti-kulma \{[\s\S]*position: absolute;[\s\S]*right: calc\(var\(--satelliitti-oikea\)/);
+  assert.match(tyyli, /\.satelliitti-kulma \{[\s\S]*position: absolute;[\s\S]*right: var\(--satelliitti-oikea\)/);
   assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*position: absolute;[\s\S]*left: 12px;[\s\S]*bottom: calc\(12px/);
   // Oikea alakulma jää vapaaksi minipululle (Codexin työ).
   assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*max-width: 50%/);
@@ -352,7 +357,7 @@ test('kuvan sulkeva ✕ on harmaa, ei vihreä', () => {
    * harmaalla"*. Jokainen napin väri on puhtaan harmaa (r = g = b);
    * linssin vihreää tehosteväriä ei saa jäädä yhteenkään.
    */
-  const lohko = tyyli.slice(tyyli.indexOf('.satelliitti-sulku {'),
+  const lohko = tyyli.slice(tyyli.indexOf('.satelliitti-sulku,'),
     tyyli.indexOf('.satelliitti-sulku:hover'));
   assert.match(lohko, /border-radius: 999px/);
   assert.ok(!/93, 255, 168/.test(lohko), 'sulkunapissa on yhä linssin vihreä');
@@ -373,13 +378,22 @@ test('selite lukee kuvan päällä ruudun vasemmassa yläkulmassa, i-nappi on po
   assert.ok(!lahde.includes('satelliitti-popup'), 'vanha info-popup on yhä lähteessä');
   assert.ok(!tyyli.includes('.satelliitti-popup'), 'info-popupin tyyli on yhä jäljellä');
   assert.match(lahde, /html\('div', 'satelliitti-selite'\)/);
-  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha\)/);
+  // Minipulun kulma on viides pinta (16.9.2026, Raamattu kohta 9).
+  assert.match(lahde, /katselu\.append\(lava, selite, kulma, nauha, pulukulma\)/);
   // Kiinnitys on RUUTUUN (kortti alkaa ruudun yläreunasta, LISÄYS 3),
   // ei kuvaelementtiin — 12 px vasemmalta, 10 px + turva-alue ylhäältä.
-  assert.match(tyyli, /\.satelliitti-selite \{[\s\S]*position: absolute;[\s\S]*left: calc\(12px \+ env\(safe-area-inset-left, 0px\)\);[\s\S]*top: var\(--satelliitti-yla\)/);
+  /*
+   * VASEN SISENNYS ON 12 px, TURVA-ALUE VAIN KATTONA (LISÄYS 7,
+   * 16.9.2026): `max()` eikä `calc(12px + env(...))` — muuten
+   * vaaka-asennon turva-alue LISÄTTIIN sisennykseen ja laatikko
+   * karkasi reunasta (omistajan kuvassa n. 170 px).
+   */
+  assert.match(tyyli, /\.satelliitti-selite \{[\s\S]*position: absolute;[\s\S]*left: max\(12px, env\(safe-area-inset-left, 0px\)\);[\s\S]*top: var\(--satelliitti-yla\)/);
+  assert.ok(!/left: calc\(12px \+ env\(safe-area-inset-left/.test(tyyli),
+    'selite lisää turva-alueen yhä 12 px:n päälle');
   // Leveys: työpöydällä enintään 46 % ruudusta, puhelimella koko leveys.
   assert.match(tyyli, /\.satelliitti-selite \{[\s\S]*max-width: min\(46%, 560px\)/);
-  assert.match(tyyli, /@media \(max-width: 620px\) \{[\s\S]*\.satelliitti-selite \{[\s\S]*width: calc\(100% - 24px - 2 \* var\(--satelliitti-nappi\) - 26px\)/);
+  assert.match(tyyli, /@media \(max-width: 620px\) \{[\s\S]*\.satelliitti-selite \{[\s\S]*width: calc\(100% - 24px - var\(--satelliitti-nappi\) - 16px\)/);
   // Kuultava tumma pohja: kontrasti ei riipu valokuvasta.
   assert.match(tyyli, /\.satelliitti-selite \{[\s\S]*background: rgba\(6, 13, 10, 0\.72\)/);
 });
@@ -392,7 +406,7 @@ test('selitetekstin napautus kelaa tekstin ylös, väkänen avaa lisätiedot', (
    * silloin se seliteteksti kelautuu ylös ja näkyville jää vain
    * otsikkorivi."*
    */
-  assert.match(lahde, /selite\.classList\.toggle\('satelliitti-selite-kiinni'\)/);
+  assert.match(lahde, /selite\.classList\.toggle\('satelliitti-selite-kiinni', kiinni\)/);
   assert.match(lahde, /selite\.addEventListener\('click', \(e\) => \{ e\.stopPropagation\(\); kelaaSelite\(\); \}\)/);
   assert.match(tyyli, /\.satelliitti-selite-runko \{[\s\S]*overflow: hidden;[\s\S]*transition: max-height 250ms/);
   assert.match(tyyli, /\.satelliitti-selite\.satelliitti-selite-kiinni \.satelliitti-selite-runko \{[\s\S]*max-height: 0/);
@@ -411,7 +425,7 @@ test('selitetekstin napautus kelaa tekstin ylös, väkänen avaa lisätiedot', (
 test('sulkuristi on pieni pyöreä nappi kuvan oikeassa yläkulmassa', () => {
   // Omistaja 15.9.2026: "pienena pyoreana X" (siirretty pois alakulmasta).
   assert.match(lahde, /nappi\('satelliitti-sulku', '×', 'Sulje havainto'\)/);
-  assert.match(tyyli, /\.satelliitti-sulku \{[\s\S]*border-radius: 999px/);
+  assert.match(tyyli, /\.satelliitti-sulku,\n\.satelliitti-linssisulku \{[\s\S]*border-radius: 999px/);
   // Sulkeminen ei kosketa linssiin: vain ikkuna poistuu.
   assert.match(lahde, /sulku\.addEventListener\('click', \(e\) => \{ e\.stopPropagation\(\); sulje\(\); \}\)/);
 });
@@ -895,7 +909,7 @@ test('vaakanäkymän oma pystysarake on poistettu — kulmanapit toimivat molemm
    */
   assert.ok(!tyyli.includes('--satelliitti-sarake'), 'vanha pystysarakemuuttuja on yhä tyylissä');
   assert.ok(!/\.satelliitti-ala\b/.test(tyyli), 'vanha alapalkki on yhä tyylissä');
-  assert.match(tyyli, /\.satelliitti-kulma \{[\s\S]*position: absolute;[\s\S]*right: calc\(var\(--satelliitti-oikea\)/);
+  assert.match(tyyli, /\.satelliitti-kulma \{[\s\S]*position: absolute;[\s\S]*right: var\(--satelliitti-oikea\)/);
   assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*position: absolute;[\s\S]*left: 12px/);
 });
 
@@ -934,4 +948,159 @@ test('matkalaukun linssivalikko saa oman varasolun, ei jaettua taikalasia', () =
   assert.match(mapart, /class: 'icon-satelliitti-kamera'/);
   const tyyli2 = lue('../css/styles.css');
   assert.match(tyyli2, /\.icon-satelliitti-kamera \{ fill: #3b2a13; stroke: #3b2a13;/);
+});
+
+/* ═══ 12. LINSSIN OMA ÄÄNI, MINIPULU JA VALMIIT KYSYMYKSET ════════
+ *
+ * Omistaja 16.9.2026 (Raamattu, kohdat 8–10 ja 14, LISÄYKSET 6–8).
+ */
+
+const aanilahde = lue('../js/linssit/satelliitti-aani.js');
+
+test('humina soitetaan puskurista silmukkana — ei elementin ended-käynnistystä', () => {
+  /*
+   * Codexin toimittamassa huminassa on 1,5 s ristihäivytys luupin
+   * saumassa (posti/codex-fable-astronautin-kamera-r2-valmis-
+   * 20260916.md). `<audio loop>` katkaisisi nauhan pään alkuun ja
+   * dekooderi lisäisi tauon: ristihäivytys menisi hukkaan.
+   */
+  assert.match(aanilahde, /decodeAudioData/);
+  assert.match(aanilahde, /createBufferSource\(\)/);
+  assert.match(aanilahde, /lahde\.loop = true;/);
+  assert.ok(!/new Audio\(/.test(aanilahde), 'soitin on yhä äänielementti');
+  assert.ok(!/'ended'/.test(aanilahde), 'kierros käynnistetään yhä ended-tapahtumasta');
+  // Versioitu osoite, ei aliasta: alias ehti osoittaa hylättyyn kokeiluun.
+  assert.match(aanilahde, /93aaf7fb15092bac80abd1d740aa2a22a0fdb761558df2273673bc263fde2f2b\.mp3/);
+});
+
+test('kaksi kerrosta, omat sisääntulofeidit ja yksi soitin koko linssille', async () => {
+  const { KERROKSET, ASTRONAUTIN_MUSIIKKI, ASTRONAUTIN_MUSIIKKI_KAYTOSSA } = await import('../js/linssit/satelliitti-aani.js');
+  assert.deepEqual(Object.keys(KERROKSET), ['humina', 'musiikki']);
+  // Humina 2 s, musiikki 3 s (omistajan tilaus ja Codexin ohje).
+  assert.equal(KERROKSET.humina.nousuMs, 2000);
+  assert.equal(KERROKSET.musiikki.nousuMs, 3000);
+  /*
+   * MUSIIKKI ON KYTKETTY POIS (omistaja 16.9.2026 kuunneltuaan:
+   * *"Jätä musiikki pois. Pidetään pelkkä humina. Se musiikki oli vähän
+   * outo."*). Kerros, osoite ja taso jäävät koodiin vakion taakse, jotta
+   * uuden raidan kokeilu on yhden rivin muutos — mutta pois kytkettynä
+   * sitä ei ladata eikä soiteta.
+   */
+  assert.equal(ASTRONAUTIN_MUSIIKKI_KAYTOSSA, false);
+  assert.match(aanilahde, /if \(nimi === 'musiikki' && !ASTRONAUTIN_MUSIIKKI_KAYTOSSA\) return;/);
+  assert.match(aanilahde, /if \(nimi === 'musiikki' && !ASTRONAUTIN_MUSIIKKI_KAYTOSSA\) return null;/);
+  // Versioitu osoite, ei aliasta: alias ehti osoittaa hylättyyn kokeiluun.
+  assert.ok(!KERROKSET.humina.osoite.includes('astronautin-kamera-tausta'), 'alias on yhä käytössä');
+  assert.match(ASTRONAUTIN_MUSIIKKI, /astronautin-kamera-musiikki-lyria\.mp3$/);
+  // Kohteen tai kuvan vaihto ei kutsu soitinta lainkaan: avaus on
+  // linssin avauksessa, purku sen purussa — ei havaintokortissa.
+  assert.match(lahde, /linssiAani = avaaAstronautinAani\(\);/);
+  assert.equal((lahde.match(/avaaAstronautinAani\(/g) ?? []).length, 1,
+    'soitin käynnistetään useammasta kuin yhdestä paikasta');
+});
+
+test('puuttuva musiikki on hiljainen normaalitila eikä sammuta huminaa', () => {
+  // 404 ja purkuvirhe merkitsevät kerroksen puuttuvaksi istunnon ajaksi.
+  assert.match(aanilahde, /puuttuvat\.add\(nimi\)/);
+  // Tavallinen fetch, EI js/media.js haeAani: haeAani kirjaisi puuttuvan
+  // musiikin äänipeilin viaksi ja kolme sellaista sulkisi peilin.
+  assert.ok(!/^import[^\n]*media\.js/m.test(aanilahde), 'soitin käyttää äänipeilin hakua');
+  assert.match(aanilahde, /fetch\(osoite, \{ mode: 'cors' \}\)/);
+});
+
+test('linssin ääni käyttää pelin omaa äänikontekstia ja väistää kuten muu musiikki', () => {
+  assert.match(aanilahde, /musiikkiKonteksti\(\)/);
+  assert.ok(!/new AudioContext|webkitAudioContext/.test(aanilahde), 'oma AudioContext on yhä koodissa');
+  assert.match(aanilahde, /lisaaVaistaja/);
+  assert.match(aanilahde, /kuunteleMusiikinKerrointa/);
+  // Linssin OMA hiljennys ei väistä itseään (sama sääntö kuin
+  // js/siirtymamusiikki.js lajinVaisto).
+  assert.match(aanilahde, /vaistonSyyt\.includes\(LINSSIN_HILJENNYS\) \? vaistonPohja : vaisto/);
+  // Autoplay-esto: odotetaan elettä, ei kirjoiteta konsoliin.
+  assert.match(aanilahde, /kuunteleReitityksenAvautumista/);
+  assert.ok(!/console\./.test(aanilahde), 'soitin kirjoittaa konsoliin');
+});
+
+test('minipulu kelluu valokuvan oikeassa alakulmassa eikä piilotu pulun kanssa', () => {
+  /*
+   * OMISTAJA 16.9.2026 (Raamattu kohta 9): *"minipulu ... saisi olla
+   * oikeassa alareunassa näkyvillä"*. Pelin ISO pulu on linssin ajan
+   * piilossa; minipulu on oma hahmonsa eikä saa lähteä sen mukana.
+   */
+  assert.match(lahde, /import \{ luoMinipulu \} from '\.\.\/minipulu\.js'/);
+  assert.match(lahde, /luoMinipulu\(pulunappi, \{ koko: 'auto', suunta: 'vasen' \}\)/);
+  assert.match(tyyli, /\.satelliitti-pulukulma \{[\s\S]*position: absolute;[\s\S]*right: 12px;[\s\S]*bottom: calc\(12px \+ env\(safe-area-inset-bottom, 0px\)\)/);
+  assert.match(tyyli, /body\.aikajana-pulu-piilossa \.satelliitti-pulukulma,[\s\S]*visibility: visible/);
+  /*
+   * PULUN PLUSKUPLA KUULUU PIILOTETTAVIIN (omistajan havainto
+   * 16.9.2026, puhelin): `.pollo-kuplapalautus` on oma `position: fixed`
+   * -nappinsa suoraan bodyssa, ei kuplapinon sisällä, joten pinon
+   * piilotus ei osunut siihen ja se jäi valokuvan päälle. Sääntö on
+   * sekä tyylitiedostossa että kriittisessä varatyylissä — ja
+   * tests/satelliitti-avaruus.test.mjs vartioi, että ne ovat sanatarkka
+   * osajoukko toisistaan.
+   */
+  assert.match(tyyli, /body\.aikajana-pulu-piilossa \.pollo-kuplapalautus \{[\s\S]{0,80}visibility: hidden/);
+  assert.match(lahde, /body\.aikajana-pulu-piilossa \.pollo-kuplapalautus,/);
+  /*
+   * EI YMPYRÄÄ PULUN YMPÄRILLÄ (omistaja 16.9.2026: *"saisiko pulun
+   * ympäriltä tuon ympyrän pois?"*). Tausta on läpinäkyvä, reunaa ja
+   * pyöristystä ei ole — mutta osuma-ala pysyy 44 px:ssä, koska
+   * läpinäkyvä ala ei näy mutta ottaa sormen vastaan.
+   */
+  const pulunappi = tyyli.slice(tyyli.indexOf('.satelliitti-pulunappi {'),
+    tyyli.indexOf('.satelliitti-pulunappi:hover'));
+  assert.match(pulunappi, /background: transparent;/);
+  assert.match(pulunappi, /border: 0;/);
+  assert.match(pulunappi, /border-radius: 0;/);
+  assert.match(pulunappi, /min-width: 44px;/);
+  assert.match(pulunappi, /min-height: 44px;/);
+  assert.ok(!/border-radius: 999px/.test(pulunappi), 'pulun ympyrä on yhä tyylissä');
+  // Pienoiskuvat ovat vasemmassa alakulmassa ja enintään puolet leveydestä.
+  assert.match(tyyli, /\.satelliitti-nauha \{[\s\S]*max-width: 50%/);
+  // Hahmo puretaan kortin mukana: rAF ja kuuntelijat eivät jää elämään.
+  assert.match(lahde, /minipulu\?\.tuhoa\?\.\(\)/);
+});
+
+test('minipulun napautus avaa kortin, jossa kohteen kaksi valmista kysymystä', async () => {
+  const { ASTRONAUTIN_KYSYMYKSET, haeAstronautinKysymykset, haeAstronautinVastaus } = await import('../js/linssit/astronaut-kysymykset.js');
+  // Jokaiselle linssin kohteelle on kaksi kysymystä ja niille vastaukset.
+  for (const kohde of SATELLIITTI_KOHTEET) {
+    assert.equal(haeAstronautinKysymykset(kohde.tunnus).length, 2, kohde.tunnus);
+  }
+  assert.equal(Object.keys(ASTRONAUTIN_KYSYMYKSET).length, 64);
+  // Vastaus tulee aineistosta, EI mallilta: pulun chattireittiä ei
+  // kutsuta lainkaan (js/pollo.js polloKysy maksaisi mallikutsun).
+  assert.match(lahde, /haeAstronautinVastaus\(kohde\.tunnus, kysymys\)/);
+  assert.ok(!/polloKysy\(/.test(lahde), 'linssi kysyy yhä mallilta');
+  // Teksti ladotaan tekstisolmuna, ei innerHTML:nä.
+  assert.match(lahde, /document\.createTextNode\(tieto\?\.vastaus/);
+  const kysymys = haeAstronautinKysymykset('etna')[0];
+  assert.ok(haeAstronautinVastaus('etna', kysymys).vastaus.length > 0);
+  // Kortti sulkeutuu X:stä ja kohteen vaihdosta (koko näkymä puretaan).
+  assert.match(lahde, /pulunSulku\.addEventListener\('click'/);
+  assert.match(tyyli, /\.satelliitti-pulukortti\[hidden\] \{ display: none; \}/);
+});
+
+test('kelattu selite mahtuu yhdelle riville ja on himmeämpi kuin avattu', () => {
+  /*
+   * OMISTAJA 16.9.2026 (Raamattu LISÄYS 6 ja 7): *"Pienennetty
+   * inforuutu pitää mahtua aina yhdelle riville"* ja *"saisi olla
+   * himmennetty ja läpinäkyvämpi"*.
+   */
+  // Fonttikoko kutistuu 16 → 11 px ja vasta sitten ellipsi.
+  assert.match(lahde, /const OTSIKON_ISOIN = 16;/);
+  assert.match(lahde, /const OTSIKON_PIENIN = 11;/);
+  assert.match(lahde, /seliteOtsikko\.scrollWidth[\s\S]{0,60}clientWidth/);
+  assert.match(tyyli, /\.satelliitti-selite\.satelliitti-selite-kiinni \.satelliitti-selite-otsikko \{[\s\S]*white-space: nowrap;[\s\S]*text-overflow: ellipsis;[\s\S]*opacity: 0\.7/);
+  // Kelattu laatikko on läpikuultavampi kuin avattu (0,25 vs. 0,72).
+  assert.match(tyyli, /\.satelliitti-selite \{[\s\S]*background: rgba\(6, 13, 10, 0\.72\)/);
+  assert.match(tyyli, /\.satelliitti-selite\.satelliitti-selite-kiinni \{[\s\S]*background: rgba\(6, 13, 10, 0\.25\)/);
+  // Leveys on sisällön, katto ruudun: lyhyt nimi ei venytä laatikkoa.
+  assert.match(tyyli, /\.satelliitti-selite\.satelliitti-selite-kiinni \{[\s\S]*width: auto;/);
+  // Kuvan napautus, panorointi ja rulla kelaavat selitteen automaattisesti.
+  assert.match(lahde, /kelaaKuvasta\(\);\n    sormet\.set/);
+  assert.match(lahde, /kelaaKuvasta\(\);\n    zoomaa\(skaala/);
+  // Kuva ei koskaan AVAA selitettä: avaus tulee otsikkorivin napautuksesta.
+  assert.match(lahde, /const kelaaKuvasta = \(\) => \{\n    if \(selite\.classList\.contains\('satelliitti-selite-kiinni'\)\) return;/);
 });
