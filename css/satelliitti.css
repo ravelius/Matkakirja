@@ -166,8 +166,17 @@ body.aikajana-pulu-piilossa .livia-kasvot-pinta {
  * tätä kesken jäänyt kuplasarja jäi ruudun alalaitaan avaruuden
  * päälle.
  */
+/*
+ * PLUSKUPLA KUULUU SAMAAN JOUKKOON (omistajan havainto 16.9.2026,
+ * puhelin). Kun luenta tai linssi imee pulun repliikit pinoon, niiden
+ * tilalle jää PLUSKUPLA (js/pollo.js `.pollo-kuplapalautus`) — oma
+ * `position: fixed` -nappinsa SUORAAN bodyssa, ei pinon sisällä. Se ei
+ * siis kadonnut pinon mukana, vaan jäi kellumaan valokuvan päälle
+ * ruudun alalaitaan. Mitattu 390 px:llä.
+ */
 body.aikajana-pulu-piilossa .pollo-kuplapino,
-body.aikajana-pulu-piilossa .pollo-kuplapino-kehys {
+body.aikajana-pulu-piilossa .pollo-kuplapino-kehys,
+body.aikajana-pulu-piilossa .pollo-kuplapalautus {
   visibility: hidden;
   pointer-events: none;
 }
@@ -765,21 +774,49 @@ body.aikajana-pulu-piilossa .satelliitti-pulukulma .minipulu {
   visibility: visible;
 }
 
+/*
+ * ── PULU SEISOO SUORAAN KUVAN PÄÄLLÄ, ILMAN YMPYRÄÄ ──────────────
+ *
+ * OMISTAJA 16.9.2026 kuunneltuaan ja katsottuaan, sanatarkasti:
+ * *"Ja saisiko pulun ympäriltä tuon ympyrän pois?"*
+ *
+ * Tumma pyöreä pohja ja vihreä reunus ovat poissa: nappi on
+ * LÄPINÄKYVÄ KEHYS, jonka sisällä hahmo erottuu omasta
+ * varjostaan (js/minipulu.js asettaa kaksi drop-shadowia, vaalean
+ * ääriviivan ja tumman pudotusvarjon — juuri siksi se toimii myös
+ * ilman pohjaa).
+ *
+ * KOSKETUSALUE EI SAA KADOTA YMPYRÄN MUKANA. Ilman taustaa napin oma
+ * ala olisi pelkkä hahmon laatikko, ja kapealla ruudulla hahmo on vain
+ * 46 px leveä. `min-width`/`min-height` pitää osuma-alan vähintään
+ * 44 px:ssä (pelin oma kosketusraja), ja koska tausta on läpinäkyvä,
+ * ylimääräinen ala ei näy — se vain ottaa sormen vastaan.
+ */
 .satelliitti-pulunappi {
   align-self: flex-end;
   width: auto;
-  min-width: 0;
-  min-height: 0;
-  padding: 4px;
-  border: 1px solid rgba(93, 255, 168, 0.35);
-  border-radius: 999px;
-  background: rgba(6, 13, 10, 0.78);
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
   line-height: 0;
   cursor: pointer;
-  display: block;
 }
 
-.satelliitti-pulunappi:hover { border-color: var(--satelliitti-vihrea, #5dffa8); }
+/*
+ * Osoittimen alla hahmo kirkastuu hieman — ei kehystä eikä pohjaa,
+ * koska juuri ne omistaja poisti. Suodin on NAPISSA eikä hahmossa:
+ * js/minipulu.js kirjoittaa hahmon oman `filter`in inline-tyyliksi
+ * (kaksi drop-shadowia), ja inline voittaa tyylitiedoston — hahmoon
+ * osoitettu sääntö ei siis menisi koskaan perille.
+ */
+.satelliitti-pulunappi:hover { filter: brightness(1.15); }
 .satelliitti-pulunappi[disabled] { cursor: default; opacity: 0.6; }
 
 /*

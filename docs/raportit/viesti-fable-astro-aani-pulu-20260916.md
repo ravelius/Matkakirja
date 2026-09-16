@@ -222,3 +222,48 @@ jossa on kohteen kaksi kysymystä ja napautetun kysymyksen vastaus.
    kanssa. Kytkentä on valmis ja soi; jos raita halutaan vaihtaa, vain
    tiedosto vaihtuu — koodiin ei kosketa.
 3. Versionosto ja julkaisu Fablen aikataulun mukaan.
+
+---
+
+## LISÄYS raporttiin 16.9.2026 illalla — kuuntelun jälkeen
+
+Omistaja kuunteli ja katsoi, sanatarkasti: *"Jätä musiikki pois.
+Pidetään pelkkä humina. Se musiikki oli vähän outo. Ja saisiko pulun
+ympäriltä tuon ympyrän pois?"* Lisäksi puhelimella havaittiin, että
+pulun **pluskupla** jäi valokuvan päälle.
+
+1. **MUSIIKKI POIS.** `ASTRONAUTIN_MUSIIKKI_KAYTOSSA = false`. Kerros,
+   osoite, taso ja koko soitinkoneisto jäävät koodiin yhden vakion
+   taakse — uuden raidan kokeilu on yhden rivin muutos — mutta pois
+   kytkettynä kerrosta **ei ladata** (`haePuskuri` palaa heti) eikä
+   soiteta. Mitattu savukkeella: pyyntöjä musiikin osoitteeseen **0**,
+   pitkiä soittimia **1** (humina).
+2. **PULUN YMPYRÄ POIS.** Tumma pohja, vihreä reunus, pyöristys ja varjo
+   ovat poissa; hahmo seisoo suoraan kuvan päällä ja erottuu omasta
+   kaksoisvarjostaan (js/minipulu.js). Osuma-ala säilyy läpinäkyvänä:
+   `min-width`/`min-height` 44 px. Mitattu: tausta `rgba(0, 0, 0, 0)`,
+   reuna 0 px, pyöristys 0 px, varjo `none`, nappi 70 × 84 px
+   (työpöytä) ja 46 × 56 px (puhelin).
+3. **PLUSKUPLA PIILOON.** `button.pollo-kuplapalautus` on oma
+   `position: fixed` -nappinsa **suoraan bodyssa**, ei kuplapinon
+   sisällä — siksi pinon piilotus ei osunut siihen ja se jäi puhelimella
+   valokuvan päälle. Valitsin lisättiin sekä `css/satelliitti.css`:ään
+   että kriittiseen varatyyliin (`js/linssit/satelliitti.js`
+   `KRIITTINEN_TYYLI`); `tests/satelliitti-avaruus.test.mjs` vartioi,
+   että ne pysyvät sanatarkkana osajoukkona toisistaan.
+
+**Feidin kesto mitataan nyt suoraan.** Aiempi näytteistys ei kestänyt
+kontin pääsäikeen nälkiinnyttämistä (ensimmäinen näyte osui joskus vasta
+nousun jälkeen). Savuke kirjaa nyt `setValueAtTime`- ja
+`linearRampToValueAtTime`-kutsut ja lukee nousun niistä: **0 → 0,2609
+täsmälleen 2,00 sekunnissa** molemmilla ruuduilla.
+
+`savuke-astro-aani.mjs` ohittaa `vendor/globe.gl`-kirjaston omat
+animaatiosilmukan virheet sivuvirheiden laskennasta (ohjelmisto-WebGL
+kaataa sen ajoittain) ja tulostaa ohitettujen määrän; pelin omat virheet
+lasketaan yhä yhtä tarkasti.
+
+**Tulokset tämän muutoksen jälkeen:** `tests/satelliitti*.test.mjs`
+104/104, `savuke-astro-aani.mjs` **24/24**, `savuke-astro-valokuva.mjs`
+**35/35** työpöytä ja **35/35** puhelin. Kuvat päivitetty (ympyrätön
+pulu).

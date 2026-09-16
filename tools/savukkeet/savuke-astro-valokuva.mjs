@@ -569,6 +569,20 @@ async function ajaNakyma(nakymanNimi) {
       oikealta: k ? Math.round(window.innerWidth - k.right) : null,
       alhaalta: k ? Math.round(window.innerHeight - k.bottom) : null,
       nappiAla: n ? Math.round(n.width * n.height) : 0,
+      // EI YMPYRÄÄ PULUN YMPÄRILLÄ (omistaja 16.9.2026): tausta on
+      // läpinäkyvä, reunaa ei ole eikä pyöristystä — mutta osuma-ala
+      // pysyy vähintään 44 px:ssä kummallakin sivulla.
+      napinTyyli: nappi ? (() => {
+        const t = getComputedStyle(nappi);
+        return {
+          tausta: t.backgroundColor,
+          reuna: t.borderTopWidth,
+          pyoristys: t.borderTopLeftRadius,
+          varjo: t.boxShadow,
+          leveys: Math.round(n.width),
+          korkeus: Math.round(n.height),
+        };
+      })() : null,
       // Leikkaako minipulun nappi pienoiskuvanauhaa?
       leikkaaNauhan: Boolean(n && r) && n.left < r.right && r.left < n.right
         && n.top < r.bottom && r.top < n.bottom,
@@ -583,7 +597,59 @@ async function ajaNakyma(nakymanNimi) {
     pulu.on && pulu.lintuja === 1 && pulu.nakyvyys === 'visible'
       && pulu.oikealta <= 16 && pulu.alhaalta <= 16 && pulu.nappiAla > 0
       && !pulu.leikkaaNauhan,
-    JSON.stringify(pulu));
+    JSON.stringify({ ...pulu, napinTyyli: undefined }));
+  /*
+   * PULUN YMPÄRILTÄ ON OTETTU YMPYRÄ POIS (omistaja 16.9.2026:
+   * *"saisiko pulun ympäriltä tuon ympyrän pois?"*). Tausta on
+   * läpinäkyvä (alfa 0), reunaa ei ole, pyöristystä ei ole eikä varjoa —
+   * ja silti osuma-ala on vähintään 44 × 44 px, koska läpinäkyvä
+   * ylimääräinen ala ei näy mutta ottaa sormen vastaan.
+   */
+  const lapinakyva = (v) => /^rgba\(\s*\d+,\s*\d+,\s*\d+,\s*0\s*\)$/.test(String(v ?? ''))
+    || String(v ?? '') === 'transparent';
+  vaadi(nimessa('pulun ympärillä ei ole ympyrää — läpinäkyvä pohja, osuma-ala ≥ 44 px'),
+    Boolean(pulu.napinTyyli) && lapinakyva(pulu.napinTyyli.tausta)
+      && Math.round(parseFloat(pulu.napinTyyli.reuna)) === 0
+      && Math.round(parseFloat(pulu.napinTyyli.pyoristys)) === 0
+      && pulu.napinTyyli.varjo === 'none'
+      && pulu.napinTyyli.leveys >= 44 && pulu.napinTyyli.korkeus >= 44,
+    JSON.stringify(pulu.napinTyyli));
+  // VASTAKOE: mittari hylkää täysin läpinäkymättömän taustan.
+  vaadi(nimessa('vastakoe: läpinäkyvyysmittari hylkää tumman pohjan'),
+    !lapinakyva('rgba(6, 13, 10, 0.78)') && lapinakyva('rgba(0, 0, 0, 0)'), '');
+
+  /*
+   * PULUN PLUSKUPLA EI SAA JÄÄDÄ VALOKUVAN PÄÄLLE (omistajan havainto
+   * 16.9.2026, puhelin). Kun pulun repliikit imetään pinoon, tilalle jää
+   * `button.pollo-kuplapalautus` — oma `position: fixed` -nappinsa
+   * SUORAAN bodyssa, ei kuplapinon sisällä, joten pinon piilotus ei
+   * osunut siihen.
+   *
+   * ELEMENTTI LUODAAN TÄSSÄ KÄSIN, koska linssin aikana pulu ei saa
+   * puhua eikä pinoa voi täyttää oikeaa reittiä (puheenvuorot menevät
+   * jonoon, js/pollo.js linssiAlkoi). Mitattava asia on SÄÄNTÖ: osuuko
+   * `body.aikajana-pulu-piilossa` tähän luokkaan. Elementti on
+   * sanatarkasti sama kuin js/pollo.js:n luoma, ja se poistetaan heti
+   * mittauksen jälkeen.
+   */
+  const pluskupla = await s.evaluate(() => {
+    const nappi = document.createElement('button');
+    nappi.className = 'pollo-kuplapalautus';
+    nappi.textContent = '+';
+    document.body.appendChild(nappi);
+    const t = getComputedStyle(nappi);
+    const tulos = {
+      nakyvyys: t.visibility,
+      osumat: t.pointerEvents,
+      luokka: document.body.classList.contains('aikajana-pulu-piilossa'),
+    };
+    nappi.remove();
+    return tulos;
+  });
+  vaadi(nimessa('pulun pluskupla on piilossa linssin ajan'),
+    pluskupla.luokka === true && pluskupla.nakyvyys === 'hidden'
+      && pluskupla.osumat === 'none',
+    JSON.stringify(pluskupla));
   /*
    * VASTAKOE: pelin ISO pulu on yhä piilossa (`aikajana-pulu-piilossa`),
    * eli minipulun näkyvyys ei tullut purkamalla linssin piilotusta.

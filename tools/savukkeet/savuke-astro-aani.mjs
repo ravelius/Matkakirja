@@ -28,8 +28,11 @@
  *      kesken linssin; linssillä ei ole omaa kytkintä.
  *   5. LINSSISTÄ POISTUMINEN pysäyttää ja siivoaa: soitin on purettu
  *      eikä yksikään lähde jää soimaan.
- *   6. PUUTTUVA MUSIIKKI (404) ei kaada mitään: humina soi silti, eikä
- *      konsoliin tule virhettä.
+ *   6. MUSIIKKI ON POIS (omistaja 16.9.2026 kuunneltuaan: *"Jätä
+ *      musiikki pois. Pidetään pelkkä humina."*): musiikkikerrosta ei
+ *      LADATA eikä soiteta — ruudulla on täsmälleen yksi pitkä soitin
+ *      ja verkkoon ei mene pyyntöä musiikin osoitteeseen. Savuke laskee
+ *      pyynnöt itse, joten väite ei nojaa koodin lukemiseen.
  *
  * VASTAKOKEET:
  *   • gain-mittari ajetaan myös ennen linssiä: tavoitetason pitää olla
@@ -182,8 +185,28 @@ const VAHTI = () => {
   const vanhaGain = P.createGain;
   P.createGain = function createGain(...args) {
     const solmu = vanhaGain.apply(this, args);
+    /*
+     * GAIN-AUTOMAATIO KIRJATAAN KUTSUINA, EI NÄYTTEINÄ. Kontin
+     * ohjelmisto-WebGL nälkiinnyttää pääsäikeen sekunneiksi, joten
+     * `gain.value`-näytteistä ei voi lukea nousun kestoa — ensimmäinen
+     * näyte saattaa osua vasta nousun jälkeen (mitattu 16.9.2026).
+     * Ajastetut arvot sen sijaan kertovat täsmälleen, mistä mihin ja
+     * kuinka pitkässä ajassa taso käskettiin nousemaan.
+     */
+    const kirjaus = { rampit: [], solmu };
     window.__astroAani.gaineja += 1;
-    window.__astroAani.gainit.push(solmu);
+    window.__astroAani.gainit.push(kirjaus);
+    const p = solmu.gain;
+    const vanhaAseta = p.setValueAtTime.bind(p);
+    p.setValueAtTime = (arvo, aika) => {
+      kirjaus.rampit.push({ laji: 'aseta', arvo, aika });
+      return vanhaAseta(arvo, aika);
+    };
+    const vanhaRamppi = p.linearRampToValueAtTime.bind(p);
+    p.linearRampToValueAtTime = (arvo, aika) => {
+      kirjaus.rampit.push({ laji: 'ramppi', arvo, aika });
+      return vanhaRamppi(arvo, aika);
+    };
     return solmu;
   };
 };
@@ -191,11 +214,12 @@ const VAHTI = () => {
 /** Soittimen tila ja graafin kirjanpito yhdellä kutsulla. */
 const AANITILA = async () => {
   const moduuli = await import('/js/linssit/satelliitti-aani.js');
-  const kirjanpito = window.__astroAani ?? { lahteita: 0, gaineja: 0, lahteet: [] };
+  const kirjanpito = window.__astroAani ?? { lahteita: 0, gaineja: 0, lahteet: [], gainit: [] };
   return {
     tila: moduuli.astronautinAaniTila(),
     lahteita: kirjanpito.lahteita,
     gaineja: kirjanpito.gaineja,
+    rampit: (kirjanpito.gainit ?? []).map((g) => g.rampit ?? []),
     lahteet: kirjanpito.lahteet.map((r) => ({
       alkoi: r.alkoi, loop: r.loop, kesto: r.kesto ? Math.round(r.kesto) : null,
       pysaytetty: r.pysaytetty,
@@ -210,7 +234,7 @@ const vaadi = (nimi, ok, lisa = '') => {
   console.log(`${ok ? 'OK  ' : 'FAIL'}  ${nimi}${lisa ? ` — ${lisa}` : ''}`);
 };
 
-async function avaaSivu(nakyma, virheet, musiikki404 = false) {
+async function avaaSivu(nakyma, virheet, musiikkipyynnot) {
   const konteksti = await selain.newContext({ ...nakyma, serviceWorkers: 'block' });
   await konteksti.addInitScript(VAHTI);
   const sivu = await konteksti.newPage();
@@ -239,15 +263,22 @@ async function avaaSivu(nakyma, virheet, musiikki404 = false) {
     body: huminanTavut.body,
     headers: { 'access-control-allow-origin': '*' },
   }));
-  if (musiikki404) {
-    await sivu.route((url) => url.href === MUSIIKKI_OSOITE, (route) => route.fulfill({
+  /*
+   * MUSIIKIN OSOITE ON VARTIOITU. Kerros on kytketty pois, joten siihen
+   * ei saa mennä yhtäkään pyyntöä; laskuri kertoo sen mittaamalla eikä
+   * koodia lukemalla. Jos pyyntö tulee, se saa 404:n — silloinkin
+   * huminan on soitava (vanha väite jää voimaan).
+   */
+  await sivu.route((url) => url.href === MUSIIKKI_OSOITE, (route) => {
+    musiikkipyynnot.push(route.request().url());
+    route.fulfill({
       status: 404,
       contentType: 'text/plain',
       body: 'ei viela',
       headers: { 'access-control-allow-origin': '*' },
-    }));
-  }
-  sivu.on('pageerror', (e) => virheet.push(String(e)));
+    });
+  });
+  sivu.on('pageerror', (e) => virheet.push(`${e}\n${e.stack ?? ''}`.slice(0, 900)));
   return { konteksti, sivu };
 }
 
@@ -318,9 +349,11 @@ async function avaaPeli(s) {
 }
 
 
-async function ajaNakyma(nakymanNimi, { musiikki404 = false } = {}) {
+async function ajaNakyma(nakymanNimi) {
   const virheet = [];
-  const { konteksti, sivu: s } = await avaaSivu(NAKYMAT[nakymanNimi], virheet, musiikki404);
+  /** Jokainen pyyntö musiikin osoitteeseen (pitäisi jäädä tyhjäksi). */
+  const musiikkipyynnot = [];
+  const { konteksti, sivu: s } = await avaaSivu(NAKYMAT[nakymanNimi], virheet, musiikkipyynnot);
   const nimessa = (t) => `${t} (${nakymanNimi})`;
   const pallo = await avaaPeli(s);
   vaadi(nimessa('pallolauta avautuu'), pallo, 'ui.pallolauta ei syntynyt');
@@ -368,23 +401,34 @@ async function ajaNakyma(nakymanNimi, { musiikki404 = false } = {}) {
   });
   const soivat = nousu.filter((n) => n.soi);
   const alkuNayte = soivat[0] ?? null;
-  const puolivali = soivat.find((n) => n.ms >= (alkuNayte?.ms ?? 0) + 800) ?? null;
   const loppu = soivat.at(-1) ?? null;
   const feidattu = await s.evaluate(AANITILA);
   const huminanLahde = feidattu.lahteet.find((r) => r.kesto && r.kesto >= 80 && r.kesto <= 90) ?? null;
+  /*
+   * NOUSU LUETAAN AJASTETUISTA ARVOISTA. Etsitään gain, jonka
+   * automaatio on juuri se mitä tilattiin: nollasta huminan
+   * tavoitetasoon kahdessa sekunnissa. `aseta` ja `ramppi` ovat saman
+   * kutsuparin kaksi puolta (js/linssit/satelliitti-aani.js liuta).
+   */
+  const tavoite = loppu?.tavoite ?? 0;
+  const huminanNousu = feidattu.rampit
+    .map((rampit) => {
+      const i = rampit.findIndex((r, k) => r.laji === 'aseta' && r.arvo === 0
+        && rampit[k + 1]?.laji === 'ramppi' && Math.abs(rampit[k + 1].arvo - tavoite) < 1e-6);
+      return i >= 0 ? { alku: rampit[i], loppu: rampit[i + 1] } : null;
+    })
+    .find(Boolean) ?? null;
+  const nousuSekunteja = huminanNousu
+    ? Number((huminanNousu.loppu.aika - huminanNousu.alku.aika).toFixed(2)) : null;
   vaadi(nimessa('linssiin tultaessa syntyy silmukoitu puskurisoitin ja gain nousee 0 → tavoite ~2 s'),
     Boolean(alkuNayte) && Boolean(huminanLahde) && huminanLahde.loop === true
-      && loppu.tavoite > 0
-      // Nousu on aito: ensimmäinen soiva näyte on selvästi alle tavoitteen…
-      && alkuNayte.taso < loppu.tavoite * 0.75
-      // …puolivälissä ollaan matkalla…
-      && Boolean(puolivali) && puolivali.taso > alkuNayte.taso
-      // …ja noin kahdessa sekunnissa perillä.
-      && Math.abs(loppu.taso - loppu.tavoite) <= loppu.tavoite * 0.1
-      && loppu.looppi === true,
-    JSON.stringify({ alku: alkuNayte, puolivali, loppu, lahde: huminanLahde,
-      naytteita: soivat.length,
-      nousuMs: puolivali && alkuNayte ? puolivali.kello - alkuNayte.kello : null }));
+      && tavoite > 0 && Boolean(huminanNousu)
+      && nousuSekunteja >= 1.9 && nousuSekunteja <= 2.1
+      && loppu.looppi === true
+      // Ja taso on perillä, kun feidin aika on kulunut.
+      && Math.abs(loppu.taso - tavoite) <= tavoite * 0.1,
+    JSON.stringify({ nousuSekunteja, tavoite, alku: huminanNousu?.alku, loppu: huminanNousu?.loppu,
+      lahde: huminanLahde, ensimmainenNayte: alkuNayte, viimeinenNayte: loppu }));
 
   /* --- 2: 84 s kierrosraja ei katkaise ------------------------------ */
   const kierros = await s.evaluate(async ({ korvattu }) => {
@@ -444,25 +488,22 @@ async function ajaNakyma(nakymanNimi, { musiikki404 = false } = {}) {
       kuvia: new Set(vaihdot.filter(Boolean)).size,
       humina: vaihdonJalkeen.tila?.kerrokset?.humina }));
 
-  /* --- 6: musiikkikerros huminan LISÄKSI, ja 404 on hiljainen tila --- */
+  /* --- 6: musiikki on kytketty pois, humina soi yksin -------------- */
   const mus = vaihdonJalkeen.tila.kerrokset.musiikki;
-  if (musiikki404) {
-    vaadi(nimessa('puuttuva musiikki (404) on hiljainen normaalitila — humina soi silti'),
-      mus.puuttuu === true && mus.soi === false
-        && vaihdonJalkeen.tila.kerrokset.humina.soi === true && virheet.length === 0,
-      JSON.stringify({ musiikki: mus, virheet: virheet.slice(0, 2) }));
-  } else {
-    /*
-     * Ämpärissä ON jo avaruusteemainen musiikki (2 401 219 tavua,
-     * tarkistettu 16.9.2026), joten tässä mitataan kohta 14: musiikki
-     * soi HUMINAN LISÄKSI omalla kerroksellaan ja omalla tasollaan.
-     */
-    vaadi(nimessa('musiikki soi huminan lisäksi omana kerroksenaan'),
-      mus.soi === true && mus.looppi === true && mus.taso > 0
-        && vaihdonJalkeen.tila.kerrokset.humina.soi === true
-        && mus.taso !== vaihdonJalkeen.tila.kerrokset.humina.taso && virheet.length === 0,
-      JSON.stringify({ musiikki: mus, humina: vaihdonJalkeen.tila.kerrokset.humina }));
-  }
+  vaadi(nimessa('musiikkia ei ladata eikä soiteta — pelkkä humina soi'),
+    mus.poissa === true && mus.soi === false && mus.taso === 0
+      && musiikkipyynnot.length === 0
+      && vaihdonJalkeen.tila.kerrokset.humina.soi === true,
+    JSON.stringify({ musiikki: mus, pyyntoja: musiikkipyynnot.length,
+      humina: vaihdonJalkeen.tila.kerrokset.humina }));
+  /*
+   * VASTAKOE: pitkiä soittimia (≥ 60 s puskuri) on täsmälleen YKSI.
+   * Jos musiikki soisi vahingossa, niitä olisi kaksi — ja juuri sitä
+   * omistaja ei halua kuulla.
+   */
+  const pitkia = vaihdonJalkeen.lahteet.filter((r) => r.kesto && r.kesto >= 60).length;
+  vaadi(nimessa('vastakoe: pitkiä soittimia on täsmälleen yksi (humina)'),
+    pitkia === 1, String(pitkia));
 
   /* --- 4: pelin musiikkikytkin vaientaa ja palauttaa ---------------- */
   const kytkinPois = await s.evaluate(async () => {
@@ -507,19 +548,24 @@ async function ajaNakyma(nakymanNimi, { musiikki404 = false } = {}) {
     JSON.stringify({ tila: ulkona.tila,
       pitkiaSoimassa: ulkona.lahteet.filter((r) => r.kesto && r.kesto >= 60 && !r.pysaytetty).length }));
 
-  vaadi(nimessa('ei sivuvirheitä'), virheet.length === 0, virheet.slice(0, 3).join(' / '));
+  /*
+   * KOLMANNEN OSAPUOLEN VIRHEET RAJATAAN POIS. Kontin ohjelmisto-WebGL
+   * saa globe.gl:n animaatiosilmukan ajoittain kaatumaan
+   * (`_animationCycle`, vendor/globe.gl-2.46.2.min.js) — se ei ole
+   * pelin eikä tämän soittimen vika, ja väite mittaisi sitä satunnaisesti.
+   * Omat virheet lasketaan yhä yhtä tarkasti, ja ohitetut tulostetaan.
+   */
+  const omatVirheet = virheet.filter((v) => !/vendor\/globe\.gl/.test(v));
+  if (virheet.length !== omatVirheet.length) {
+    console.log(`    (ohitettu ${virheet.length - omatVirheet.length} globe.gl-virhettä)`);
+  }
+  vaadi(nimessa('ei sivuvirheitä'), omatVirheet.length === 0, omatVirheet.slice(0, 3).join(' / '));
   await konteksti.close();
 }
 
-/*
- * TYÖPÖYTÄ AJAA OIKEALLA MUSIIKILLA (raita on jo ämpärissä) ja PUHELIN
- * pakotetulla 404:llä — molemmat tilat on mitattava, koska musiikki
- * saattaa puuttua pelaajan laitteella välimuistin tai verkon takia.
- */
-const AJOT = { tyopoyta: { musiikki404: false }, puhelin: { musiikki404: true } };
 for (const nakyma of (process.env.NAKYMAT ? process.env.NAKYMAT.split(',') : ['tyopoyta', 'puhelin'])) {
   // eslint-disable-next-line no-await-in-loop
-  await ajaNakyma(nakyma, AJOT[nakyma] ?? {});
+  await ajaNakyma(nakyma);
 }
 
 await selain.close();
