@@ -994,7 +994,13 @@ test('kaksi kerrosta, omat sisääntulofeidit ja yksi soitin koko linssille', as
   assert.match(ASTRONAUTIN_MUSIIKKI, /astronautin-kamera-musiikki-lyria\.mp3$/);
   // Kohteen tai kuvan vaihto ei kutsu soitinta lainkaan: avaus on
   // linssin avauksessa, purku sen purussa — ei havaintokortissa.
-  assert.match(lahde, /linssiAani = avaaAstronautinAani\(\);/);
+  /*
+   * VAIHEVARTIJA VÄLISSÄ (16.9.2026, WebKit-haara): soitin avataan yhä
+   * TÄSMÄLLEEN kerran ja linssin avauksessa, mutta kutsu kulkee
+   * `vaihe`-kääreen läpi, jotta äänen kaatuminen ei enää vie
+   * kohdepisteitä mukanaan (Raamattu LISÄYS 11 kohta 34).
+   */
+  assert.match(lahde, /linssiAani = vaihe\('linssiaani', \(\) => avaaAstronautinAani\(\)\);/);
   assert.equal((lahde.match(/avaaAstronautinAani\(/g) ?? []).length, 1,
     'soitin käynnistetään useammasta kuin yhdestä paikasta');
 });

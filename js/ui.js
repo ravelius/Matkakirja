@@ -99,6 +99,15 @@ import {
   avaaNahtavyys, mitoitaNahtavyysDialogi, nahtavyydenKaruselli,
 } from './nahtavyydet.js';
 import { taitaOpas } from './opas.js';
+import { naytaLinssivirhe, poistaLinssivirhe } from './linssivirhe.js';
+
+/*
+ * Kuinka kauan linssin avaukselle annetaan aikaa, ennen kuin pelaaja
+ * saa ilmoituksen (ks. varmistaLinssinAvaus). Sama luku kuin
+ * astronauttilinssin omalla vartijalla (js/linssit/satelliitti.js
+ * VARTIJAN_AIKAKATKO_MS) — pitkä kuvalataus ehtii perille.
+ */
+const LINSSIN_AVAUSVAHTI_MS = 12000;
 // Laitemittari (?mittari=1): pois päältä se ei tee eikä maksa mitään.
 import { kaynnistaKarttamittari, mittariPaalla } from './karttamittari.js';
 // Lautojen yhdistetyt sisältötaulut, luentajoukot ja kuratoidut
@@ -3205,6 +3214,8 @@ export class UI {
      */
     this.pallolauta = null;
     this.pallolautaAvautuu = false;
+    /* Linssin avauksen vartija (ks. varmistaLinssinAvaus). */
+    this.linssinAvausVahti = 0;
     this.pallolautaEpaonnistui = false;
     // Turvatilan rivi näytetään kerran istunnossa (ilmoitaPallonTurvatila).
     this.pallonTurvatilaIlmoitettu = false;
@@ -4579,6 +4590,11 @@ export class UI {
     // peli ei saa periä vanhan instanssin kuplaa.
     clearTimeout(this.ehdotusKuplaAjastin);
     this.ehdotusKuplaAjastin = null;
+    // Linssin avausvartija on sekunteja pitkä: kuolleen instanssin
+    // vartija ei saa näyttää ilmoitusta uuden pelin päälle.
+    clearTimeout(this.linssinAvausVahti);
+    this.linssinAvausVahti = 0;
+    poistaLinssivirhe();
     // Tarkkuusvahti on documentin kuuntelija: ilman purkua kuollut
     // instanssi jäisi tarkkailemaan näkyvyyttä uuden pelin rinnalle.
     if (this.tarkkuusVahti) {
@@ -18578,6 +18594,55 @@ export class UI {
     // rasteroidaan, eikä napin pidä odottaa sitä näyttääkseen valinnan.
     this.paivitaLinssiTiedot();
     void this.sytytaLinssi(tunnus);
+    this.varmistaLinssinAvaus(tunnus);
+  }
+
+  /*
+   * ── LINSSI EI SAA JÄÄDÄ AUKEAMATTA ÄÄNEEN ───────────────────────
+   *
+   * MITATTU 16.9.2026 (Raamattu, ASTRONAUTIN KAMERA LISÄYS 11 kohta
+   * 34): jos pallolautaa ei ole — esimerkiksi kun Globe.gl ei
+   * latautunut ämpäristä — laukun "Aktivoi linssi" merkitsee valinnan
+   * mutta EI AVAA MITÄÄN. Pelaaja jää katsomaan pelin omaa tummaa
+   * pohjaa ilman yhtään riviä siitä, mitä tapahtui.
+   *
+   * Vartija katsoo ruutua AIKAKATKON JÄLKEEN: jos valinta on yhä sama
+   * eikä linssistä syntynyt kahvaa eikä linssikarttaa, pelaajalle
+   * näytetään yksi lause ja nappi ulos (js/linssivirhe.js). Aikakatko
+   * on sama kuin astronauttilinssin omalla vartijalla, jotta hidas
+   * laite ehtii perille ennen ilmoitusta.
+   */
+  varmistaLinssinAvaus(tunnus) {
+    clearTimeout(this.linssinAvausVahti);
+    this.linssinAvausVahti = 0;
+    poistaLinssivirhe();
+    if (!tunnus) return;
+    this.linssinAvausVahti = setTimeout(() => {
+      this.linssinAvausVahti = 0;
+      if (this.dead || this.linssiValittu !== tunnus) return;
+      /*
+       * PALLOLINSSI ON OMA TAPAUKSENSA. Kerroksettomalla linssillä
+       * (`kerros: false`, kuten Astronautin kamera) tasokartan moottori
+       * merkitsee valinnan TEHDYKSI piirtämättä mitään — se ei siis
+       * kelpaa todisteeksi siitä, että pelaaja näkee jotain. Ainoa
+       * kelpaava todiste on laudan oma kahva (`pallolinssi`).
+       */
+      const linssi = this.linssiTuki?.kaikki?.find((l) => l.tunnus === tunnus) ?? null;
+      if (typeof linssi?.pallolle === 'function') {
+        if (this.pallolinssi?.tunnus === tunnus) return;
+      } else {
+        if (this.linssikartta) return;
+        if (this.linssiTuki?.moottori?.tunnus === tunnus) return;
+      }
+      naytaLinssivirhe({
+        otsikko: 'Linssi ei käynnistynyt',
+        syy: this.pallolauta
+          ? 'Linssiä ei saatu piirrettyä pallolle.'
+          : 'Maapalloa ei saatu ladattua, joten linssiä ei voi avata. Tarkista verkkoyhteys ja yritä uudelleen.',
+        nappi: 'Sulje',
+        onSulje: () => this.valitseLinssi(null),
+      });
+    }, LINSSIN_AVAUSVAHTI_MS);
   }
 
   /*

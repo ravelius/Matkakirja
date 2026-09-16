@@ -112,6 +112,9 @@
  *     palloon. Ks. luvun 1 kohta "AVAUSAJO".
  */
 
+import {
+  diagNyt, pallodiag, pallodiagLoki,
+} from '../pallodiag.js';
 import { MAAMASKI } from './ihmisen-matka-maamaski.js';
 import { puraPeitto } from '../aikajana-virrat-laskenta.js';
 import { luoTahtitaivas } from '../pallolauta/tahdet.js';
@@ -810,69 +813,15 @@ function napaLiuku(ctx, leveys, korkeus) {
 /* ═══════════ 2b-diag. PALLODIAG: KETJU NÄKYVIIN PUHELIMELLA ═════ */
 
 /*
- * MUSTA PALLO EI KERRO ITSESTÄÄN MITÄÄN. Kun tekstuuriketju epäonnistuu
- * iOS Safarissa, se epäonnistuu HILJAA: kangas jää tyhjäksi, toBlob
- * onnistuu, osoite syntyy — eikä yksikään virhehaara laukea. Omistaja
- * ei voi avata puhelimesta konsolia, joten ketju kirjoittaa itsestään
- * lokia, jonka saa näkyviin osoiteriviltä: `?pallodiag=1`.
- *
- * Loki kerätään AINA (muutama kymmenen riviä, ei mittaustaakkaa);
- * lippu ratkaisee vain sen, tulostetaanko se konsoliin ja ruudulle.
- * Savuke ja tila() lukevat saman taulukon.
+ * LOKIN YDIN ASUU js/pallodiag.js:SSÄ (16.9.2026, WebKit-haara).
+ * Avausketju alkaa jo ENNEN tätä moduulia — kirjaston lataus ja laudan
+ * rakennus ovat js/pallo.js:ssä — eikä niistä saanut yhtään riviä,
+ * kun loki oli linssin oma. Nimet viedään tästä edelleen ulos, joten
+ * yksikään savukkeen tai testin tuonti ei muuttunut.
  */
-const DIAGIN_RIVIT = 60;
-const diaginLoki = [];
-
-/** Onko `?pallodiag=1` osoiterivillä? */
-export function pallodiagPaalla(ikkuna = globalThis) {
-  try {
-    return /[?&]pallodiag=1(?:&|$)/.test(String(ikkuna?.location?.search ?? ''));
-  } catch { return false; }
-}
-
-/** Kerätty loki kopiona (savuke ja tila lukevat tämän). */
-export function pallodiagLoki() { return diaginLoki.slice(); }
-
-function diagRuudulle(rivi, ikkuna) {
-  const doc = ikkuna?.document;
-  if (!doc?.createElement) return;
-  try {
-    let laatikko = doc.getElementById?.('pallodiag');
-    if (!laatikko) {
-      laatikko = doc.createElement('div');
-      laatikko.id = 'pallodiag';
-      laatikko.setAttribute('style', [
-        'position:fixed', 'left:4px', 'bottom:4px', 'z-index:2147483647',
-        'max-width:calc(100vw - 8px)', 'max-height:38vh', 'overflow:auto',
-        'font:11px/1.35 ui-monospace,monospace', 'color:#cfe',
-        'background:rgba(0,0,0,.72)', 'padding:4px 6px', 'border-radius:6px',
-        'pointer-events:none', 'white-space:pre-wrap',
-      ].join(';'));
-      doc.body?.appendChild?.(laatikko);
-    }
-    laatikko.textContent = `${laatikko.textContent}${rivi}\n`.split('\n').slice(-DIAGIN_RIVIT).join('\n');
-  } catch { /* ruutuloki on lisä, ei ehto */ }
-}
-
-/** Yksi vaihe lokiin (ja lipun ollessa päällä konsoliin ja ruudulle). */
-export function pallodiag(vaihe, tiedot = {}, ikkuna = globalThis) {
-  const rivi = { vaihe, ...tiedot };
-  diaginLoki.push(rivi);
-  if (diaginLoki.length > DIAGIN_RIVIT) diaginLoki.shift();
-  if (!pallodiagPaalla(ikkuna)) return rivi;
-  const teksti = `${vaihe} ${Object.entries(tiedot).map(([k, v]) => `${k}=${v}`).join(' ')}`;
-  try { ikkuna?.console?.log?.(`[pallodiag] ${teksti}`); } catch { /* ei konsolia */ }
-  diagRuudulle(teksti, ikkuna);
-  return rivi;
-}
-
-const diagNyt = (ikkuna) => {
-  try {
-    const t = ikkuna?.performance?.now?.();
-    if (Number.isFinite(t)) return t;
-  } catch { /* ei performancea */ }
-  return Date.now();
-};
+export {
+  DIAGIN_RIVIT, pallodiag, pallodiagLoki, pallodiagPaalla, pallodiagTeksti,
+} from '../pallodiag.js';
 
 /**
  * Kangas pois muistista. iOS Safari ei vapauta kankaan taustapuskuria
@@ -1553,6 +1502,65 @@ export function luoAvaruusKalvo({
 
 /** Avaruuden taustaväri (kangas pallon takana). */
 export const AVARUUDEN_TAUSTA = '#04060e';
+
+/* ═══════════ 2d. AVAUS EI SAA JÄÄDÄ KESKEN ════════════════ */
+
+/*
+ * OMISTAJAN VIKA 16.9.2026 (Raamattu, ASTRONAUTIN KAMERA LISÄYS 11
+ * kohta 34; Codexin live-QA asennetusta macOS Safari -sovelluksesta):
+ * *"matkalaukku → Astronautin kamera → Aktivoi: näkymä jää tyhjäksi,
+ * ruskea pinta ja X, ei palloa eikä pisteitä"*. Chrome toimi samasta
+ * julkaisusta.
+ *
+ * KOLME ASIAA, JOTKA TEKIVÄT VIASTA NÄKYMÄTTÖMÄN:
+ *   1. avausketjussa oli odotuksia ILMAN AIKAKATKOA (kirjaston lataus),
+ *   2. yksi poikkeus kesken `avaa`-funktion jätti kohdepisteet
+ *      lisäämättä mutta kelluvan ✕:n ruudulle, ja
+ *   3. mikään ei TARKISTANUT, näkyykö ruudulla lopulta mitään.
+ *
+ * Tämä puhdas funktio on kohta 3. Se lukee mitatut luvut ja kertoo,
+ * mikä avauksesta puuttuu — tai `null`, kun kaikki on paikallaan.
+ * Puhdas, jotta yksikkötesti näkee sen ilman selainta
+ * (tests/satelliitti-avaruus.test.mjs).
+ *
+ * JÄRJESTYS ON TARKOITUKSELLINEN: ensin ne puutteet, jotka selittävät
+ * kaikki muut. Ilman kangasta ei ole pintaa, ilman pintaa ei ole
+ * pisteitä — ja pelaajalle riittää yksi syy, ei viisi.
+ */
+export function avauksenPuute({
+  avaruus = false, kotelo = null, kangas = null, pinnanOsoite = '',
+  pisteita = 0, kontekstiHukassa = false,
+} = {}) {
+  if (!avaruus) return 'avaruusnakyma';
+  if (kontekstiHukassa) return 'webgl-konteksti';
+  if (!(Number(kangas?.leveys) > 0) || !(Number(kangas?.korkeus) > 0)) return 'kangas';
+  if (!(Number(kotelo?.leveys) > 0) || !(Number(kotelo?.korkeus) > 0)) return 'kotelo';
+  if (!String(pinnanOsoite ?? '')) return 'pinta';
+  if (!(Number(pisteita) > 0)) return 'pisteet';
+  return null;
+}
+
+/** Puutteen selitys pelaajalle — yksi lause, ei koodinimiä. */
+export const PUUTTEEN_SELITE = {
+  avaruusnakyma: 'Maapalloa ei saatu käynnistettyä.',
+  'webgl-konteksti': 'Laitteen 3D-piirto katkesi kesken avauksen.',
+  kangas: 'Maapallon piirtopinta jäi tyhjäksi.',
+  kotelo: 'Näkymälle ei jäänyt tilaa ruudulla.',
+  pinta: 'Maapallon pintakuva ei latautunut.',
+  pisteet: 'Kohdepisteitä ei saatu pallolle.',
+  kirjasto: 'Maapallokirjasto ei latautunut.',
+};
+
+/** Onko pallon WebGL-konteksti menetetty? Null, jos ei tiedetä. */
+export function kontekstiHukassa(pallo) {
+  try {
+    const gl = pallo?.renderer?.()?.getContext?.();
+    if (!gl?.isContextLost) return false;
+    return Boolean(gl.isContextLost());
+  } catch { return false; }
+}
+
+
 /** Ilmakehän hehku reunalla: astronautin näkemä sininen kaista. */
 export const ILMAKEHAN_VARI = '#7fb6ff';
 export const ILMAKEHAN_KORKEUS = 0.25;
@@ -1679,8 +1687,25 @@ function piilotaKarttapinnat(pallo, lauta, ikkuna = globalThis) {
 export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}) {
   const pallo = lauta?.pallo;
   const kotelo = lauta?.kotelo;
-  if (!pallo?.pointOfView) return null;
+  if (!pallo?.pointOfView) {
+    pallodiag('avaruus', { ok: 0, syy: 'ei-palloa' }, ikkuna);
+    return null;
+  }
   const reduced = Boolean(ui?.reducedMotion);
+  /*
+   * VAIHELOKI AVAUKSESTA (`?pallodiag=1`). Asennetusta Safari-
+   * sovelluksesta ei saa konsolia, joten jokainen avauksen vaihe
+   * kirjataan lokiin: mistä ketju katkesi näkyy sitten ilmoituksessa
+   * ilman kehittyökaluja (Raamattu, LISÄYS 11 kohta 34).
+   */
+  const kangasAlussa = pallo.renderer?.()?.domElement ?? null;
+  pallodiag('avaruus-alku', {
+    kotelo: `${kotelo?.clientWidth ?? 0}x${kotelo?.clientHeight ?? 0}`,
+    kangas: `${kangasAlussa?.width ?? 0}x${kangasAlussa?.height ?? 0}`,
+    hukassa: kontekstiHukassa(pallo) ? 1 : 0,
+    itsenainen: ikkuna.navigator?.standalone === true ? 1 : 0,
+    dpr: Math.round((ikkuna.devicePixelRatio ?? 1) * 10) / 10,
+  }, ikkuna);
   /* Linssi on purettu: myöhässä saapuva reliefi ei enää kirjoita. */
   let purettu = false;
 
@@ -1782,6 +1807,9 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   pallo.backgroundColor?.(AVARUUDEN_TAUSTA);
   pallo.atmosphereColor?.(ILMAKEHAN_VARI);
   pallo.atmosphereAltitude?.(ILMAKEHAN_KORKEUS);
+  pallodiag('avaruus-pinta', {
+    tekstuuri: tekstuuri ? 1 : 0, tarkkuus: reliefinValinta.tunnus,
+  }, ikkuna);
   const pinnat = piilotaKarttapinnat(pallo, lauta, ikkuna);
   // Luokka kertoo CSS:lle, että pisteitä on ruudulla koko pallon verran
   // (css/satelliitti.css: nimet pienemmällä). Poistetaan purkaessa.
@@ -2015,6 +2043,17 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   sovita();
   const kokovahti = kotelo && ikkuna.ResizeObserver ? new ikkuna.ResizeObserver(sovita) : null;
   kokovahti?.observe(kotelo);
+  /** Piirtokankaan mitat (0 × 0 = mitään ei piirry). */
+  const kangasMitat = () => {
+    const k = pallo.renderer?.()?.domElement ?? null;
+    return { leveys: Number(k?.width) || 0, korkeus: Number(k?.height) || 0 };
+  };
+  pallodiag('avaruus-valmis', {
+    alt: +alt.toFixed(2),
+    kotelo: `${mitat.leveys}x${mitat.korkeus}`,
+    tahtia: taivas?.tila?.()?.pisteita ?? 0,
+    kalvo: kalvo ? 1 : 0,
+  }, ikkuna);
 
   return {
     /** Mitatut luvut savukkeelle ja vartijoille. */
@@ -2051,6 +2090,23 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       pinnanOsoite: String(pallo.globeImageUrl?.() ?? '').slice(0, 24),
       diag: pallodiagLoki(),
       kalvo: kalvo?.tila?.() ?? null,
+      /* Piirtokangas ja kontekstin kunto: vartija lukee nämä. */
+      kangas: kangasMitat(),
+      kontekstiHukassa: kontekstiHukassa(pallo),
+    }),
+    /*
+     * ONKO NÄKYMÄ VALMIS? Yksi totuus, jota sekä linssin vartija että
+     * savuke lukevat: `null` = kaikki paikallaan, muuten puutteen
+     * nimi (ks. avauksenPuute). `pisteita` tulee linssiltä, koska
+     * kohdemerkit lisätään avaruusnäkymän ULKOPUOLELLA.
+     */
+    puute: (pisteita = 0) => avauksenPuute({
+      avaruus: true,
+      kotelo: { leveys: kotelo?.clientWidth ?? 0, korkeus: kotelo?.clientHeight ?? 0 },
+      kangas: kangasMitat(),
+      pinnanOsoite: String(pallo.globeImageUrl?.() ?? ''),
+      pisteita,
+      kontekstiHukassa: kontekstiHukassa(pallo),
     }),
     /** Vartion kytkin: reunavarjo pois/päälle samaan näkymään. */
     asetaVarjostus: (paalla) => kalvo?.asetaVarjostus?.(paalla),

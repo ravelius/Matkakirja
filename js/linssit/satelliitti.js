@@ -166,10 +166,26 @@ import { LINSSIN_HILJENNYS } from '../siirtymamusiikki.js';
 import { stopDiaryVoice } from '../luenta.js';
 import { pysaytaLukija } from '../lukija.js';
 import { SATELLIITTI_KOHTEET, SATELLIITTI_LAHDE } from './satelliitti-data.js';
-import { avaaAvaruusnakyma } from './satelliitti-avaruus.js';
+import {
+  PUUTTEEN_SELITE, avaaAvaruusnakyma, avauksenPuute,
+} from './satelliitti-avaruus.js';
+import { naytaLinssivirhe, poistaLinssivirhe } from '../linssivirhe.js';
+import { diagNyt, pallodiag } from '../pallodiag.js';
 import { luoMinipulu } from '../minipulu.js';
 import { haeAstronautinKysymykset, haeAstronautinVastaus } from './astronaut-kysymykset.js';
 import { avaaAstronautinAani } from './satelliitti-aani.js';
+
+/*
+ * VARTIJAN KELLOT (Raamattu, ASTRONAUTIN KAMERA LISÄYS 11 kohta 34).
+ * Varhainen tarkistus nappaa sen, ettei mitään ole edes alkanut;
+ * varsinainen aikakatko antaa hitaan laitteen (ja 8 s:n reliefin)
+ * ehtiä perille ennen kuin ilmoitus näytetään.
+ */
+export const VARTIJAN_VARHAINEN_MS = 2500;
+export const VARTIJAN_AIKAKATKO_MS = 12000;
+/** Jälkitarkistus: ilmoitus poistuu, jos näkymä valmistuu myöhässä. */
+export const VARTIJAN_JALKIVALI_MS = 2000;
+export const VARTIJAN_JALKITARKISTUKSET = 15;
 
 /** Linssiosan nimi laudan linssiapurissa (lauta.linssit.merkit/pura). */
 export const SATELLIITTI_OSA = 'satelliitti';
@@ -1291,18 +1307,50 @@ function avaa(lauta, tila, ui) {
   });
 
   /*
+   * ── YKSI VAIHE EI SAA VIEDÄ KOKO AVAUSTA ────────────────────────
+   *
+   * MITATTU 16.9.2026 (Raamattu LISÄYS 11 kohta 34): yksi poikkeus
+   * kesken tämän funktion — vaikkapa äänikerroksesta tai pulusta —
+   * jätti KOHDEPISTEET LISÄÄMÄTTÄ mutta kelluvan ✕:n ruudulle, koska
+   * js/ui.js sytytaLinssi nappasi virheen vasta täältä ulkoa eikä
+   * kahvaa syntynyt. Pelaaja näki tyhjän näkymän ja X:n — täsmälleen
+   * sen kuvan, jonka Codex toimitti asennetusta Safari-sovelluksesta.
+   *
+   * Siksi jokainen avauksen vaihe ajetaan tämän läpi: virhe kirjataan
+   * vaihelokiin ja avaus JATKUU seuraavaan vaiheeseen. Pisteet ja
+   * poistumistie ovat tärkeämpiä kuin ääni tai pulu.
+   */
+  const kaatuneetVaiheet = [];
+  const vaihe = (nimi, tyo) => {
+    const t0 = diagNyt();
+    try {
+      const tulos = tyo();
+      pallodiag('vaihe', { nimi, ok: 1, ms: Math.round(diagNyt() - t0) });
+      return tulos;
+    } catch (syy) {
+      kaatuneetVaiheet.push(nimi);
+      pallodiag('vaihe', {
+        nimi, ok: 0, syy: String(syy?.message ?? syy).slice(0, 60),
+        ms: Math.round(diagNyt() - t0),
+      });
+      try { console.warn(`Astronautin kamera: vaihe "${nimi}" ei onnistunut.`, syy); } catch { /* ei konsolia */ }
+      return null;
+    }
+  };
+
+  /*
    * AVARUUSNÄKYMÄ PÄÄLLE ENNEN MERKKEJÄ: kamera nousee niin, että koko
    * pallo reunoineen on ruudulla, ja merkkien ruutupaikat lasketaan
    * vasta sen jälkeen. Näkymä on vapaaehtoinen — jos pallo puuttuu
    * (tasokartta, kaatunut WebGL), linssi toimii kuten ennen.
    */
-  const avaruus = avaaAvaruusnakyma(lauta, { ui });
+  const avaruus = vaihe('avaruus', () => avaaAvaruusnakyma(lauta, { ui }));
 
   // Pulu piiloon ja sen puheenvuorot jonoon (ks. tiedoston alku).
-  const pulu = piilotaPulu();
+  const pulu = vaihe('pulu', () => piilotaPulu()) ?? { pura: () => {} };
 
   // Muut äänet vaikenevat linssin ajaksi (ks. vaiennaAanet).
-  const aanet = vaiennaAanet(ui);
+  const aanet = vaihe('aanet', () => vaiennaAanet(ui)) ?? { pura: () => {} };
 
   /*
    * LINSSIN OMA ÄÄNI PÄÄLLE VASTA MUIDEN VAIENTAMISEN JÄLKEEN: silloin
@@ -1310,8 +1358,12 @@ function avaa(lauta, tila, ui) {
    * jättää OMAN hiljennyksensä huomiotta ensimmäisestä tasosta lähtien
    * (js/linssit/satelliitti-aani.js astronautinTaso). Kutsu palaa heti
    * — lataus ja autoplay-eston odotus tapahtuvat taustalla.
+   *
+   * ÄÄNEN VALMISTUMINEN EI SAA ESTÄÄ PALLON PIIRTOA: kutsu ei odota
+   * verkkoa eikä autoplay-eston aukeamista, ja jos se kaatuu, avaus
+   * jatkuu äänettömänä (ks. `vaihe` yllä).
    */
-  linssiAani = avaaAstronautinAani();
+  linssiAani = vaihe('linssiaani', () => avaaAstronautinAani());
 
   const avaaKohde = (kohde) => {
     /*
@@ -1334,7 +1386,94 @@ function avaa(lauta, tila, ui) {
     elementti: () => merkkiElementti(kohde),
     napautus: () => avaaKohde(kohde),
   }));
-  lauta?.linssit?.merkit?.(SATELLIITTI_OSA, merkit);
+  vaihe('pisteet', () => lauta?.linssit?.merkit?.(SATELLIITTI_OSA, merkit));
+
+  /*
+   * ══════════ VARTIJA: TYHJÄ NÄKYMÄ EI JÄÄ TYHJÄKSI ═══════════════
+   *
+   * OMISTAJAN VIKA (Raamattu LISÄYS 11 kohta 34): asennetussa macOS
+   * Safari -sovelluksessa aktivointi jätti ruudulle tumman pohjan ja
+   * ✕:n. Mikään koodissa ei tarkistanut, näkyykö ruudulla lopulta
+   * mitään — ja juuri siksi vika oli näkymätön sekä pelaajalle että
+   * mittareille.
+   *
+   * VARTIJA MITTAA RUUTUA, EI AIKOMUSTA. Se lukee avauksen jälkeen
+   * kuusi asiaa (avaruusnäkymän kahva, WebGL-kontekstin kunto,
+   * piirtokankaan mitat, kotelon mitat, pinnan osoite ja
+   * kohdepisteiden määrä DOMissa) ja kysyy `avauksenPuute`-funktiolta,
+   * onko jokin niistä pielessä.
+   *
+   * KAKSI TARKISTUSTA, EI YHTÄ. Ensimmäinen on VARHAINEN
+   * (VARTIJAN_VARHAINEN_MS): se nappaa ne viat, joissa mitään ei ole
+   * edes alkanut — kahva puuttuu, kangas on nolla, konteksti kuollut.
+   * Toinen on VARSINAINEN aikakatko: hidas laite ehtii siihen mennessä
+   * saada pinnan ja pisteet paikalleen. Ilmoitus poistuu itsestään,
+   * jos näkymä valmistuu myöhässä.
+   *
+   * MIKSI EI PELKKÄ AIKAKATKO: pelaaja tuijottaisi tyhjää ruutua
+   * kymmenen sekuntia. Varhainen tarkistus kertoo heti, kun on selvää
+   * ettei mitään ole tulossa.
+   */
+  let vartijanKello = 0;
+  let jalkikello = 0;
+  let jalkitarkistuksia = 0;
+  let virheKahva = null;
+  const pisteitaRuudulla = () => {
+    try { return document.querySelectorAll('.satelliitti-piste').length; } catch { return 0; }
+  };
+  const nykyinenPuute = () => {
+    if (!avaruus) {
+      return avauksenPuute({ avaruus: false });
+    }
+    try { return avaruus.puute?.(pisteitaRuudulla()) ?? null; } catch { return 'avaruusnakyma'; }
+  };
+  const tarkistaNakyma = (viimeinen) => {
+    const puute = nykyinenPuute();
+    pallodiag('vartija', {
+      puute: puute ?? 'ei', pisteita: pisteitaRuudulla(),
+      vaiheet: kaatuneetVaiheet.length,
+    });
+    if (!puute) {
+      // Näkymä valmistui (mahdollisesti myöhässä): ilmoitus pois.
+      virheKahva?.pura?.();
+      virheKahva = null;
+      return;
+    }
+    if (!viimeinen) return;
+    virheKahva = naytaLinssivirhe({
+      otsikko: 'Astronautin kamera ei käynnistynyt',
+      syy: `${PUUTTEEN_SELITE[puute] ?? 'Näkymä jäi kesken.'} Voit poistua linssistä ja yrittää uudelleen.`,
+      onSulje: () => ui?.valitseLinssi?.(null),
+    });
+    /*
+     * ILMOITUS EI SAA JÄÄDÄ VALHEEKSI. Hyvin hidas laite voi saada
+     * pinnan ja pisteet vasta aikakatkon jälkeen; silloin ilmoitus
+     * poistuu itsestään eikä pelaajalle jää väärää tietoa ruudulle.
+     * Jälkitarkistus on harva ja loppuu itsestään.
+     */
+    jalkitarkistuksia = VARTIJAN_JALKITARKISTUKSET;
+    try {
+      jalkikello = setInterval(() => {
+        jalkitarkistuksia -= 1;
+        if (!nykyinenPuute()) {
+          virheKahva?.pura?.();
+          virheKahva = null;
+          pallodiag('vartija', { puute: 'ei', myohassa: 1 });
+        }
+        if (jalkitarkistuksia <= 0 || !virheKahva) {
+          try { clearInterval(jalkikello); } catch { /* ei kelloa */ }
+          jalkikello = 0;
+        }
+      }, VARTIJAN_JALKIVALI_MS);
+    } catch { jalkikello = 0; }
+  };
+  const ajastaVartija = (ms, viimeinen) => {
+    try {
+      return setTimeout(() => tarkistaNakyma(viimeinen), ms);
+    } catch { return 0; }
+  };
+  const varhainen = ajastaVartija(VARTIJAN_VARHAINEN_MS, false);
+  vartijanKello = ajastaVartija(VARTIJAN_AIKAKATKO_MS, true);
 
   return {
     kohteet,
@@ -1361,7 +1500,17 @@ function avaa(lauta, tila, ui) {
     aanet,
     /** Linssin oman huminan ja musiikin kahva (savukkeet ja vartijat). */
     linssiAani: () => linssiAani,
+    /** Vartijan mittari savukkeille: puutteen nimi tai null. */
+    puute: () => nykyinenPuute(),
+    /** Kaatuneet avausvaiheet (vartijat ja savukkeet). */
+    kaatuneetVaiheet: () => kaatuneetVaiheet.slice(),
     pura: () => {
+      try { clearTimeout(varhainen); } catch { /* ei kelloa */ }
+      try { clearTimeout(vartijanKello); } catch { /* ei kelloa */ }
+      try { clearInterval(jalkikello); } catch { /* ei kelloa */ }
+      virheKahva?.pura?.();
+      virheKahva = null;
+      poistaLinssivirhe();
       suljeKortti();
       // Pallon lähtötila takaisin ENSIN: kamera, pinta, ilmakehä,
       // tähdet ja zoomirajat. Merkkien häivytys jatkuu tämän päälle.
