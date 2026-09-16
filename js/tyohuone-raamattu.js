@@ -7752,8 +7752,15 @@ export const RAAMATTU = {
           + 'tuntumassa (kapea vyohyke, ei hairitse lukemista). Mitataan '
           + '1400, 390 ja iPad 1024 px: selite kulmassa, X harmaa, '
           + 'pienoiskuvat kulmassa kuvan koosta riippumatta; kuvat '
-          + 'omistajalle. Tila: tyo Opus-agenteilla (valokuvanakyma, '
-          + 'pallonakyma), postilaatikko Codexille.',
+          + 'omistajalle. LISAYS (omistaja 16.9.2026 klo 07.20 UTC, '
+          + 'sanatarkasti: "Avaruuslinssiin voisi tehda myos oman '
+          + 'taustamusiikin avaruusteemalla"; kortilla tarkennettu: '
+          + 'Astronautin kamera, musiikki huminan LISAKSI): 14) linssille '
+          + 'oma avaruusteemainen taustamusiikki, joka soi hiljaisen '
+          + 'aseman huminan paalla; hampurilaisen aanikytkin ohjaa '
+          + 'molempia. Codex generoi (postilaatikko). Tila: tyo '
+          + 'Opus-agenteilla (valokuvanakyma, pallonakyma), postilaatikko '
+          + 'Codexille.',
         'IHMISEN MATKA -LINSSI: RINTAMAN VALKKYMINEN, MUSTA ALKU, LIIKU '
           + 'POIS; ASTRONAUTTILINSSILLE OMA KUVAKE (omistaja 15.9.2026 klo '
           + '12.00 UTC, tyopoytakuva 248 000 v. sitten, sanatarkasti: "Kun '
