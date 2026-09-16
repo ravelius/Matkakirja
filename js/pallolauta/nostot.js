@@ -64,6 +64,26 @@ import { sovitteleLaput } from './sovittelu.js';
 
 /** Eläviä nostoja pallolla enintään kerrallaan (karttapallo.md luku 6). */
 export const NOSTOJEN_KATTO = 40;
+/*
+ * MAASTOKOHDE EI SULAUDU AIHEMERKKIIN (omistaja 16.9.2026, jatkoa
+ * PAATOKSET 27 kohtaan 4 — perustelut js/pallolauta/aihemerkit.js
+ * ryhmitaNostot-funktion alkukommentissa). Kenttä on jo TUNNISTETTAVA
+ * datassa useimmille: `tyyppi` erottelee luonnon kohteet (vuori, meri,
+ * joki, saari, järvi — sama viisikko kuin js/fokuskohteet.js
+ * KOHDE_TYYPPISYMBOLIT:n 'luonto'-rivit) muusta sisällöstä, joten niitä
+ * EI tarvitse merkitä erikseen. Mont-Saint-Michel ja Millaun silta ovat
+ * poikkeus: niiden tyyppi on kulttuuri/tekniikka (js/packs/
+ * maastokohteet-fra.js), koska ne ovat sisällöltään historiaa eivätkä
+ * maastoa — mutta omistajan silmissä ne ovat silti "maan laajoja
+ * yksittäisiä nostoja" siinä missä vuori tai saari. Näille datassa on
+ * pienin mahdollinen merkintä, `maasto: true` (dokumentoitu
+ * docs/moduulit/maalehti.md:ssä).
+ */
+const MAASTOTYYPIT = new Set(['vuori', 'meri', 'joki', 'saari', 'jarvi']);
+/** Onko kohde MAASTOKOHDE, joka ei koskaan sulaudu aihemerkkiin. */
+function onMaastokohde(kohde) {
+  return Boolean(kohde) && (MAASTOTYYPIT.has(kohde.tyyppi) || kohde.maasto === true);
+}
 /**
  * AIHEMERKKIEN VASTAKOE YHDELLÄ LIPULLA: `?aihemerkit=0` sammuttaa
  * ryhmityksen, jolloin kartta latoo nostot kuten ennen PAATOKSET
@@ -911,6 +931,9 @@ export function luoNostot({
           // ON ISOMPI KUIN NOSTON); sama lippu ohjaa piirron ja
           // laatikon, jotta väistö mittaa ruudulla olevaa mittaa.
           kaupunki: kohde.tyyppi === 'kaupunki',
+          // MAASTOKOHDE EI SULAUDU AIHEMERKKIIN (ks. MAASTOKOHDE EI
+          // SULAUDU AIHEMERKKIIN yllä ja aihemerkit.js ryhmitaNostot).
+          maasto: onMaastokohde(kohde),
           avaa: kohde.vainNimi
             ? null
             : ((ankkuri) => avaaFokuskohde(ui, kohde, { ankkuri })),

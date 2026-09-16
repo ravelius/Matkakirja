@@ -87,6 +87,22 @@ export const RYHMAN_VAHIN = 2;
  * B limittyy C:n kanssa, kaikki kolme ovat samaa rykelmää, vaikka A ja
  * C eivät koskettaisi. Näin Pariisin jono ei jää puoliksi puretuksi.
  *
+ * MAASTOKOHDE EI RYHMITY (omistaja 16.9.2026, jatkoa PAATOKSET 27
+ * kohtaan 4 — ks. docs/raportit/viesti-fable-aihemerkit-20260915.md
+ * luku 3, jossa Opus jätti tämän Fablen ratkaistavaksi). Kohta 4 nimeää
+ * Mont-Saint-Michelin ja Millaun sillan esimerkkeinä nostoista, jotka
+ * näkyvät nimiöin heti — mutta 44 px:n kynnys yhdisti Mont-Saint-Michelin
+ * Chandeleur-nostoon, koska molemmat ovat samaa aihetta (kulttuuri) ja
+ * lähekkäin. Ratkaisu ei ole kynnyksen lasku (se maksoi mitatusti
+ * moninkertaisesti muualla kartalla) vaan tämä rivi: merkki, jolla on
+ * `maasto: true` (js/pallolauta/nostot.js merkinMaasto — vuori, meri,
+ * joki, saari ja järvi ovat sitä TYYPIN perusteella; Mont-Saint-Michel
+ * ja Millaun silta saavat lipun suoraan datassa, koska niiden tyyppi on
+ * kulttuuri/tekniikka), EI liity mihinkään ryhmään EIKÄ vedä muita
+ * ryhmäänsä — se pysyy aina omana nostonaan, riippumatta etäisyydestä
+ * tai limityksestä. Tarkistus on ensimmäisenä silmukassa, ennen
+ * aihevertailua, koska sääntö on ehdoton eikä aihekohtainen.
+ *
  * @param {Array<object>} merkit  ehdokkaat (ryhmiteltävät nostot)
  * @param {function} laatikko  merkki → { x0, y0, x1, y1 } ruudulla
  * @param {number} [vara]  väljyys pikseleinä
@@ -102,6 +118,7 @@ export function ryhmitaNostot(
   const laatikot = merkit.map((m) => laatikko(m));
   for (let i = 0; i < n; i += 1) {
     for (let j = i + 1; j < n; j += 1) {
+      if (merkit[i].maasto || merkit[j].maasto) continue;
       if (merkit[i].aihe !== merkit[j].aihe) continue;
       const a = laatikot[i];
       const b = laatikot[j];

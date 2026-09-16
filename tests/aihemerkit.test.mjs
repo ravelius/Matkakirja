@@ -65,6 +65,27 @@ test('yksinäinen nosto ei koskaan katoa aihemerkin sisään', () => {
   assert.equal(yksin.length, 3);
 });
 
+test('maastokohde ei sulaudu lähellä olevaan saman aiheen nostoon (16.9.2026)', () => {
+  // Fablen jättämä ratkaistava (docs/raportit/viesti-fable-aihemerkit-
+  // 20260915.md luku 3): Mont-Saint-Michel sulautui 44 px:n kynnyksellä
+  // Chandeleur-nostoon, koska molemmat ovat kulttuuria ja 40 px:n
+  // päässä toisistaan. `maasto: true` -lipulla varustettu merkki EI
+  // liity mihinkään ryhmään eikä vedä toista mukaansa, vaikka nimiöt
+  // limittyisivät (40 px < 44 px:n kynnys).
+  const montSaintMichel = { ...merkki('mont-saint-michel', 'kulttuuri', 100, 100), maasto: true };
+  const chandeleur = merkki('chandeleur', 'kulttuuri', 140, 100); // 40 px päässä
+  const { ryhmat, yksin } = ryhmitaNostot([montSaintMichel, chandeleur], laatikko);
+  assert.equal(ryhmat.length, 0, 'maastokohde ei saa muodostaa ryhmää');
+  assert.deepEqual(yksin.map((m) => m.avain).sort(), ['chandeleur', 'mont-saint-michel']);
+});
+
+test('vastaväite: ilman maasto-lippua samat kaksi nostoa sulautuisivat', () => {
+  const a = merkki('mont-saint-michel', 'kulttuuri', 100, 100);
+  const b = merkki('chandeleur', 'kulttuuri', 140, 100); // 40 px päässä
+  const { ryhmat } = ryhmitaNostot([a, b], laatikko);
+  assert.equal(ryhmat.length, 1, 'ilman maasto-lippua nämä kaksi sulautuvat (koeasetelman kontrolli)');
+});
+
 test('limittyvät nimiöt yhdistyvät, vaikka merkit olisivat kaukana', () => {
   // Pitkä nimi ulottuu naapurin päälle: kynnys ei ole pelkkä etäisyys
   // vaan myös se muste, joka ruudulla on.

@@ -276,3 +276,74 @@ uusi linjaus, jota päätöksessä ei ole.
 
 Työpöytäkuvassa saapumiskortti on auki (kertojan teksti kirjoittuu yhä),
 puhelinkuvissa suljettu.
+
+---
+
+## 6. Maastokohdesääntö (16.9.)
+
+Jatkoa lukuun 3: Fablen ratkaisu jätettyyn kysymykseen on juuri se, jota
+tässä ehdotin — **"maastokohde ei sulaudu lehtinostoon"** on nyt oma
+ehto `ryhmitaNostot`-kutsussa (`js/pallolauta/aihemerkit.js`), eikä
+kynnystä (44 px) tarvinnut koskea.
+
+**Kenttä.** `tyyppi`-arvot `vuori`, `meri`, `joki`, `saari` ja `jarvi`
+(sama viisikko kuin `js/fokuskohteet.js` `KOHDE_TYYPPISYMBOLIT`:n
+`'luonto'`-rivit) tunnistavat maastokohteen jo valmiiksi datassa, joten
+niitä ei merkitty erikseen. Mont-Saint-Michel (`tyyppi: 'kulttuuri'`) ja
+Millaun silta (`tyyppi: 'tekniikka'`) — juuri PAATOKSET 27 kohta 4:n
+nimeämät esimerkit — saivat pienimmän mahdollisen merkinnän,
+`maasto: true`, suoraan `js/packs/maastokohteet-fra.js`:n riville.
+Pallon nostokerros lukee molemmat lähteet yhdellä funktiolla
+(`js/pallolauta/nostot.js` `onMaastokohde`) ja siirtää tuloksen rivin
+`maasto`-kenttään. Dokumentoitu `docs/moduulit/maalehti.md`:ssä.
+
+**Ehto.** `ryhmitaNostot` ohittaa parin heti, jos kummalla tahansa on
+`maasto: true` — merkki ei liity mihinkään ryhmään EIKÄ vedä muita
+ryhmäänsä, ennen aihevertailua. Yksikkötestit
+`tests/aihemerkit.test.mjs`:ssä: maastokohde 40 px:n päässä samaa
+aihetta olevasta nostosta (nimiölaatikot leikkaavat, jotka
+todellisuudessa Mont-Saint-Michel ja Chandeleur tekivät) ei sulaudu;
+vastaväite samalla asetelmalla mutta ilman lippua sulautuu (koeasetelman
+kontrolli). `node --test tests/aihemerkit.test.mjs tests/rules.test.mjs
+tests/dokumentit.test.mjs` — 347/347 läpi.
+
+**Mitattu vaikutus, Ranskan saapumisnäkymä** (`tools/savukkeet/
+mittaa-aihemerkit.mjs`, pelaaja Pariisissa):
+
+| | 1400 × 900 ennen | 1400 × 900 jälkeen | 390 × 844 ennen | 390 × 844 jälkeen |
+|---|---|---|---|---|
+| aihemerkkejä | 9 | **8** | 8 | 8 |
+| nimiöitä näkyvissä | 28 | 30 | 21 | 21 |
+| päällekkäisiä nimiöitä | 2 (1 pari) | 4 (**2 paria**) | 5 (3 paria) | 5 (3 paria) |
+| Mont-Saint-Michel | Chandeleur-aihemerkin sisällä, ei omaa nimiötä | **oma nosto, oma nimiö** | oma nosto (ei koskenut) | oma nosto (muuttumaton) |
+
+1400 × 900:lla Mont-Saint-Michel irtosi Chandeleur-ryhmästä ja sai oman
+nimiönsä (kohta 4:n kirjaimellinen tulkinta); limittyvien parien määrä
+nousi yhdestä kahteen, koska MSM:n nimiö osuu nyt naapuriin
+(Couesnonin vuorovesi -nosto) — **2 paria on tilatun katon (≤ 3 paria
+1400:lla) sisällä**, eikä uutta väistösääntöä tarvittu: olemassa oleva
+nimiölimityksen laskenta ja sovittelu (`js/pallolauta/sovittelu.js`)
+käsittelevät sen kuten mitä tahansa kahta vierekkäistä nimiötä. 390 ×
+844:llä lukema ei muuttunut, koska Mont-Saint-Michel ei ollut
+Chandeleurin kanssa samassa rykelmässä tälläkään ruudulla ennen
+muutosta — kynnys 44 px ei riipu ruudun koosta, vain merkkien omasta
+ruutuetäisyydestä, joka 390 px:llä oli eri.
+
+**Savukkeet.**
+`tools/savukkeet/savuke-ranska-sisalto.mjs`: **28/30**, samat kaksi
+punaista kuin luvussa 4 (8a puhelimen kolme lisäkaupunkia, 9 minikysymyksen
+palkkio 390 px:llä) — ei uusia punaisia.
+`tools/savukkeet/savuke-nimikyltti.mjs`: puhelinpuoli (vartiot 1–9f, myös
+9a–9f aihemerkkivartiot) läpi joka ajossa; työpöytäpuoli (1400 × 900) ei
+saatu suoritettua asti tässä istunnossa — Chromium sulkeutuu
+toistuvasti ("Target page, context or browser has been closed")
+juuri puhelin- ja työpöytäajon välissä, SEITSEMÄSSÄ ajossa peräkkäin,
+samassa kohdassa. Sama kaatuminen toistuu identtisesti myös
+KOSKEMATTOMALLA pohjahaaralla (testattu `git stash`illa), riippumatta
+rinnakkaisten sessioiden kuormasta (mitattu 25–53 chrome/node-prosessia
+samaan aikaan) — kyse on tämän hetken ajoympäristöstä, ei tästä
+muutoksesta. `node --check` kaikkiin muutettuihin tiedostoihin on
+kunnossa, ja `savuke-ranska-sisalto` mittaa 1400 × 900 -ruudun samat
+merkit ja nimiölaatikot omalla, päätökseen asti ajettavalla ajollaan —
+kaatunut vartio 9b siinä (limittyviä nimiöpareja enintään 4) on
+tarkistettu jo yllä olevassa mittataulussa.
