@@ -43,6 +43,7 @@
 import { el } from '../mapart.js';
 import { kokoPallonKorkeus } from '../pallolauta/kamera.js';
 import { luoTarkennus } from './topografia-tarkennus.js';
+import { valitseReliefi } from './reliefikuva.js';
 
 /*
  * PEITTÄVYYS.
@@ -142,8 +143,32 @@ const KAISTAN_VENYTYS = 90;
  * läpinäkyviä: pallon oma laattapinta näkyy niiden kohdalla läpi.
  * Kaistat (KAISTAN_VENYTYS) ovat tasokartan asia eivätkä koske palloa —
  * pallolla ei ole ylä- eikä alareunaa.
+ *
+ * KAKSI TARKKUUTTA, VALINTA RUUDUN MUKAAN (16.9.2026). Sama reliefi on
+ * ämpärissä myös 8192 × 4096:na, ja leveillä ruuduilla se otetaan
+ * pohjaksi: 22,8 pikseliä astetta kohti entisen 11,4:n sijaan.
+ * Puhelin pitää 4k:n — 8k purkautuu 134 Mt:n RGBA-puskuriksi, ja se on
+ * puhelimelle liikaa. Valinta on YKSI FUNKTIO kahdelle linssille
+ * (js/linssit/reliefikuva.js valitseReliefi), sama jota Astronautin
+ * kamera käyttää avaruusnäkymänsä Maahan.
+ *
+ * TARKENNUSLAASTARI EI KORVAUDU TÄLLÄ vaan jää pohjan päälle: pohja on
+ * koko pallolle, laastari näkyvälle ikkunalle (30 px/aste). 8k nostaa
+ * sen, mitä pelaaja näkee ENNEN laastarin valmistumista ja laastarin
+ * ulkopuolella; laastari on yhä se, mikä tekee lähizoomin.
  */
 const PALLOKUVA = 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-20260915.webp';
+
+/**
+ * Pallon pohjatekstuurin osoite tälle ruudulle. `PALLOKUVA` jää
+ * varapoluksi, jos kotelon mittaa ei ole (testit, mittaamaton kotelo).
+ */
+function pohjakuva(kotelo, ikkuna = (typeof window === 'undefined' ? null : window)) {
+  const leveys = kotelo?.clientWidth ?? 0;
+  const dpr = Number(ikkuna?.devicePixelRatio) > 0 ? Number(ikkuna.devicePixelRatio) : 1;
+  if (!(leveys > 0)) return { osoite: PALLOKUVA, tunnus: '4k', leveys: 4096 };
+  return valitseReliefi({ leveys, dpr });
+}
 
 /**
  * LINSSIEN YHTEINEN PORTTI (js/ui.js linssikarttaEstaa). Luokka ei ole
@@ -372,12 +397,14 @@ export const LINSSI = {
      * ────────────────────────────────────────────────────────────────
      * 1. KOKO PALLON KALVO — yleiskuva
      * ────────────────────────────────────────────────────────────────
-     * Tasavälinen 4096 × 2048 -kuva koko pallon pinnalle. Se riittää
-     * yleiskuvaan (ruudulla on silloin pari pikseliä astetta kohti) ja
-     * on se, mitä lähizoomissa täydennetään laastarilla.
+     * Tasavälinen kuva koko pallon pinnalle: leveällä ruudulla 8192 ×
+     * 4096 (22,8 px/aste), puhelimella 4096 × 2048 (11,4 px/aste) —
+     * valinta on `pohjakuva` yllä. Se riittää yleiskuvaan ja on se,
+     * mitä lähizoomissa täydennetään laastarilla.
      */
+    const pohja = pohjakuva(lauta.kotelo ?? null);
     const perus = lauta.linssit.kalvo('topografia', {
-      kuva: PALLOKUVA,
+      kuva: pohja.osoite,
       peittavyys: PEITTAVYYS,
     });
 
@@ -401,6 +428,9 @@ export const LINSSI = {
         lauta,
         kuva: tiedot,
         peittavyys: PEITTAVYYS,
+        // Kynnys pohjakuvan omasta tiheydestä: 8k-ruudulla laastaria ei
+        // rakenneta siellä, missä pohja on jo yhtä tarkka.
+        perusTiheys: pohja.leveys / 360,
         /*
          * KALVO HÄIVYTETÄÄN, EI PURETA. Purku ja uudelleenrakennus joka
          * zoomilla latauttaisi kuvan uudestaan, ja mitattuna 16.9.2026
@@ -506,6 +536,12 @@ export const LINSSI = {
         // 16.9.2026, että kalvo jäi läpinäkyväksi uloszoomatessa.
         perusKalvo: (perus?.nakyvyys?.() ?? 0) > 0.5,
         perusPeitto: perus?.nakyvyys?.() ?? null,
+        perusTavoite: perus?.tavoite?.() ?? null,
+        perusLadattu: perus?.ladattu?.() ?? false,
+        haivytykset: lauta.linssit?.haivytykset?.() ?? null,
+        /** Kumpi pohjakuva tälle ruudulle valittiin ('8k' vai '4k'). */
+        pohja: pohja.tunnus,
+        pohjanTiheys: +(pohja.leveys / 360).toFixed(2),
         tarkennus: tarkennus?.tila?.() ?? null,
       }),
     };

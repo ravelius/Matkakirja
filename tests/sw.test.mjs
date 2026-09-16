@@ -173,11 +173,29 @@ const SUODATINSAANNOT = [
 /** Kokonaan kommentiksi kirjoitettu rivi — sääntöä saa selittää sanoin. */
 const kommenttirivi = (rivi) => /^\s*(\/\/|\/?\*)/.test(rivi);
 
+/*
+ * KANKAAN OMA SUODATIN EI OLE SVG-SUODATIN (16.9.2026).
+ *
+ * Sääntö on olemassa iOS:n webapp-vian takia: SVG-suodatin ELÄVÄN
+ * kerroksen päällä palauttaa kerroksen tyhjänä taustalta palatessa.
+ * `ctx.filter` on eri asia — se on 2D-kankaan piirto-ominaisuus, joka
+ * vaikuttaa YHTEEN drawImage-kutsuun ja on valmis siinä samassa;
+ * lopputulos on tavallinen bittikartta ilman elävää suodatinta.
+ * Astronautin kamera vie sillä reliefin kylläisyyden 0,8:aan
+ * (js/linssit/satelliitti-avaruus.js), ja sillä on lisäksi
+ * sekoitustilavarareitti selaimille, jotka eivät sitä tue.
+ *
+ * Poikkeus on TÄSMÄLLINEN: vain `ctx.filter = …`. SVG:n
+ * `filter="url(#…)"`, tyyliolion `{ filter: … }` ja `<filter>` jäävät
+ * kiinni kuten ennenkin.
+ */
+const kankaanSuodatin = (rivi) => /\bctx\.filter\s*=/.test(rivi);
+
 test('linssimoduuleissa ei ole SVG-suodattimia', () => {
   const loydot = [];
   for (const polku of moduulitLevylla('js/linssit')) {
     readFileSync(join(JUURI, polku), 'utf8').split('\n').forEach((rivi, i) => {
-      if (kommenttirivi(rivi)) return;
+      if (kommenttirivi(rivi) || kankaanSuodatin(rivi)) return;
       for (const { nimi, saanto } of SUODATINSAANNOT) {
         const osuma = rivi.match(saanto);
         if (osuma) loydot.push(`${polku}:${i + 1} ${nimi}: ${osuma[0]}`);

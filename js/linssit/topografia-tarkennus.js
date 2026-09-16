@@ -158,10 +158,19 @@ export function tarkennusPaalla(ikkuna = globalThis) {
  *
  * Puhdas funktio (tests/pallolinssit.test.mjs).
  *
+ * VERTAILU ON POHJAKUVAN OMA TIHEYS, EI VAKIO (16.9.2026). Pohjakuvia
+ * on kaksi: 4096 px (11,4 px/aste) puhelimella ja 8192 px (22,8
+ * px/aste) leveällä ruudulla (js/linssit/reliefikuva.js valitseReliefi).
+ * Laastari kannattaa vasta kun ruutu on POHJAA tiheämpi — 8k-ruudulla
+ * kynnys on siis kaksinkertainen, eikä laastaria rakenneta siellä,
+ * missä se ei toisi lisää.
+ *
  * @param {number} pxPerAste ruutupikseliä pituusastetta kohti
+ * @param {number} perusTiheys pohjakuvan pikseliä astetta kohti
  */
-export function tarkennusTarpeen(pxPerAste) {
-  return Number(pxPerAste) > PERUSKUVAN_TIHEYS * TARKENNUKSEN_KYNNYS;
+export function tarkennusTarpeen(pxPerAste, perusTiheys = PERUSKUVAN_TIHEYS) {
+  const pohja = Number(perusTiheys) > 0 ? Number(perusTiheys) : PERUSKUVAN_TIHEYS;
+  return Number(pxPerAste) > pohja * TARKENNUKSEN_KYNNYS;
 }
 
 /**
@@ -359,6 +368,7 @@ export async function teeKangas(blob, kuva, ikkuna) {
  */
 export function luoTarkennus({
   lauta, kuva, peittavyys = 0.72, osa = 'topografia-tarkennus', perus = null,
+  perusTiheys = PERUSKUVAN_TIHEYS,
   ikkunaOlio = (typeof window === 'undefined' ? null : window),
 }) {
   const pallo = lauta?.pallo;
@@ -451,7 +461,7 @@ export function luoTarkennus({
     if (purettu) return;
     const n = nakyma();
     if (!n) return;
-    if (!tarkennusTarpeen(n.pxLng)) { poistaLaastari(); return; }
+    if (!tarkennusTarpeen(n.pxLng, perusTiheys)) { poistaLaastari(); return; }
     if (nykyinen && ikkunaRiittaa(nykyinen.ikkuna, n)) return;
     const nyt = Date.now();
     /*
@@ -523,6 +533,8 @@ export function luoTarkennus({
     /** Mitatut luvut savukkeelle ja vartijoille. */
     tila: () => ({
       paalla: laastariPaalla,
+      /** Kynnys, jonka yli ruudun on mentävä (pohjakuvan tiheys × 1,4). */
+      kynnys: +(perusTiheys * TARKENNUKSEN_KYNNYS).toFixed(2),
       ikkuna: nykyinen?.ikkuna ?? null,
       kangas: nykyinen?.koko ?? null,
       ...mittari,

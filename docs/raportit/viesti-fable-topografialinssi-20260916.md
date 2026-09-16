@@ -54,7 +54,8 @@ LINSSIIN; KARTTAUUDISTUKSEN PAATOKSET 7 ja 23.)*
 | `js/linssit/topografia.js` | `pallolle()` rakentaa laastarin, asettaa linssien yhteisen portin, vapauttaa zoomin ja ottaa kameran talteen. `lataaReliefi({ esilataus })` — pallolla 52 megapikselin esilatausta ei tehdä. |
 | `js/pallolauta/linssit.js` | `kalvo()` ottaa vastaan `ikkuna`, `sade` ja `jarjestys`: sama kalvo voi olla koko pallo tai sen pala (`ikkunanGeometria`). Kahvaan tuli `peittavyys()` (kalvo pois näkyvistä purkamatta), häivytys leikkaa peittävyyden välille 0…1, ja latauksen aikana vanhentunut kalvo purkaa ITSENSÄ eikä osaa. |
 | `js/pallolauta/kamera.js` | `kokoPallonKorkeus()` — koko pallo ruutuun, yhtenä totuutena kahdelle linssille. |
-| `js/linssit/satelliitti-avaruus.js` | `avausKorkeus()` delegoi samaan kaavaan (nimi ja rajapinta ennallaan). |
+| `js/linssit/satelliitti-avaruus.js` | `avausKorkeus()` delegoi samaan kaavaan; reliefin vakiot ja `valitseReliefi` siirtyivät `reliefikuva.js`:ään ja viedään täältä edelleen ulos (rajapinta ennallaan). |
+| `js/linssit/reliefikuva.js` | **uusi.** Pallon reliefikuvan kaksi tarkkuutta ja valinta ruudun mukaan — yksi totuus kahdelle linssille (luku 9). |
 | `js/pallolauta/lauta.js` | Reitti, pelinappula ja tasoituskerma sammuvat samasta portista kuin korostuskehä. `zoomirajat()` nollaa katon puristusmuistin. |
 | `css/styles.css` | Pallolaudan lappuset piiloon aina ladatussa tyylitiedostossa; pulu, saapumislappu ja saapumisen valokuva pois topografialinssissä. |
 | `sw.js` | Uusi moduuli SHELL-listalle. |
@@ -267,12 +268,14 @@ jättäisi joko kalvon näkymättömäksi tai kuoren näyttämölle.
 
 | portti | tulos |
 | --- | --- |
-| `node --test tests/pallolinssit.test.mjs` | **16/16** |
-| `node --test tests/satelliitti.test.mjs tests/satelliitti-avaruus.test.mjs tests/rules.test.mjs tests/dokumentit.test.mjs tests/sw.test.mjs` | 455/455 (yhdessä pallolinssien kanssa) |
+| `node --test tests/pallolinssit.test.mjs` | **17/17** |
+| `node --test tests/satelliitti.test.mjs tests/satelliitti-avaruus.test.mjs tests/rules.test.mjs tests/dokumentit.test.mjs tests/sw.test.mjs` | **462/462** (yhdessä pallolinssien kanssa, luvun 9 jälkeen) |
 | `node --check` (kaikki muutetut) | puhdas |
-| `savuke-topografialinssi.mjs` | **26/26** (kaksi ruutua, vastakokeet) |
+| `savuke-topografialinssi.mjs` | **28/28** (kaksi ruutua, vastakokeet; luku 9 lisäsi kaksi väitettä) |
+| `savuke-astro-pallo.mjs` | **48/48** (molemmat ruudut) |
 | `savuke-linssivika.mjs` | **6/6** |
 | `savuke-maailma-ei-kermaa.mjs` | **6/6** |
+| `savuke-satelliittilinssi.mjs` (NAKYMAT=tyopoyta) | **34/34** |
 
 Koko `npm test` -ajoa ei tehty (tehtävänannon rajaus).
 
@@ -308,3 +311,102 @@ Koko `npm test` -ajoa ei tehty (tehtävänannon rajaus).
   (390 × 844, dpr 2): koko pallo ja lähizoom, linssi auki.
 - `docs/raportit/kuvat/topografialinssi-1400-20260916.jpg` — työpöytä
   (1400 × 900, dpr 1): koko pallo ja lähizoom, linssi auki.
+
+## 9. LISÄYS 16.9.2026: 8k-pohjakuva myös kartan topografialinssille
+
+Astronautin kameran erä (`claude/bold-ride-vow4ki-astro-pallo`) renderöi
+samasta 1′-datasta **8192 × 4096** pallokuvan
+(`topografia-pallo-8k-20260916.webp`, 2,3 Mt) ja otti sen käyttöön
+avaruusnäkymässä leveillä ruuduilla. Se haara on nyt yhdistetty tähän, ja
+sama valinta on kartan topografialinssin pallon **pohjatekstuurina**.
+
+### 9.1 Yksi valinta, kaksi linssiä
+
+Vakiot ja valintafunktio siirrettiin omaan moduuliinsa
+**`js/linssit/reliefikuva.js`** (`valitseReliefi({ leveys, dpr })`,
+`RELIEFIN_8K_KAYTOSSA`, kynnykset 1024 CSS-px JA 1024 laitepikseliä).
+`js/linssit/satelliitti-avaruus.js` vie samat nimet edelleen ulos, joten
+sen rajapinta, savukkeet ja testit eivät muuttuneet — kaksi linssiä ei
+vain pidä samaa laskua kahtena kopiona. Sama kuvio kuin
+`kokoPallonKorkeus`-kaavalla (luku 5).
+
+### 9.2 Mitattu: saapumiszoomin tarkkuus kaksinkertaistui
+
+Chromium 1400 × 900, dpr 1, Ranska, linssi auki:
+
+| | ennen (4k-pohja) | jälkeen (8k-pohja) |
+| --- | --- | --- |
+| pohjatekstuuri | 4096 × 2048 | **8192 × 4096** |
+| pohjan tiheys | 11,38 px/aste | **22,76 px/aste** |
+| ruutu saapumiszoomilla | 56,92 px/aste | 56,92 px/aste |
+| **tehollinen tarkkuus saapuessa** | **0,200** | **0,400** |
+| tehollinen tarkkuus laastarin kanssa | 0,527 | 0,527 |
+| lähizoom (alt 0,06, 178,5 px/aste) | 0,168 | 0,168 |
+
+Merkitys pelaajalle: saapumisnäkymä on **heti kaksi kertaa tarkempi**,
+ilman että mitään tarvitsee odottaa. Laastari on yhä se, mikä tekee
+lähizoomin (30 px/aste), ja se on nyt mitattu ruudulla myös 8k-pohjan
+päällä: kangas 1745 × 908 ikkunalle 58,2° × 24,2°.
+
+### 9.3 Laastarin kynnys seuraa pohjaa
+
+Laastari kannattaa vasta kun ruutu on POHJAA tiheämpi, joten kynnys ei
+ole enää vakio vaan `pohjan tiheys × 1,4`:
+
+| pohja | kynnys | laastari syttyy |
+| --- | --- | --- |
+| 4k (puhelin) | 15,9 px/aste | saapumiszoomista alkaen |
+| 8k (työpöytä, iPad vaaka) | **31,9 px/aste** | saapumiszoomista alkaen (56,9) |
+
+8k-ruudulla laastaria ei siis rakenneta siellä, missä pohja on jo yhtä
+tarkka — turha 52 megapikselin purku jää tekemättä. Huomaa samalla, että
+8k-pohjan rinnalla laastarin hyöty on enää **1,32×** (30 vs 22,76)
+entisen 2,64× sijaan: se on yhä kaikki mitä aineistossa on, mutta ero on
+pienempi kuin 4k-ruudulla.
+
+### 9.4 Muisti: kolmea isoa ei ole koskaan yhtä aikaa
+
+- **8k-tekstuuri** on GPU:lla 134 Mt — vain leveillä ruuduilla, ja
+  puhelin putoaa CSS-leveysehtoon (`valitseReliefi`).
+- **Laastarin kangas** on pieni: mitattuna 1745 × 908 (6,3 Mt) 1400 px:n
+  ruudulla, muutama sata pikseliä sivultaan lähizoomissa.
+- **Millerin 52 megapikselin kuva EI ole koskaan kokonaan purettuna.**
+  Muistiin jää blob (11,6 Mt) ja `createImageBitmap(blob, sx, sy, sw, sh)`
+  purkaa vain kaistaleen, joka suljetaan heti kankaan piirron jälkeen.
+  Tämä ei muuttunut tässä erässä — se tarkistettiin uudelleen, koska 8k
+  nostaa muistin pohjatasoa.
+
+### 9.5 Häivytyksen kirjanpito ja savukkeen odotukset
+
+8k-pohja paljasti mittausongelman, joka ei ole tuotteen vika vaan
+kontin: **sivun kehyssilmukka ja ajastimet voivat pysähtyä sekunneiksi**
+(SwiftShader, monta rinnakkaista selainta). Häivytys sai siksi
+kirjanpidon (`linssit.haivytykset()`: aloituksia, kehyksiä, valmiita,
+varmistimia, peruutuksia), ja se osoitti tilanteen tarkalleen:
+
+```
+aloituksia 1, kehyksia 1, valmiita 0, varmistimia 0, peruutuksia 0
+```
+
+— yksi häivytys alkoi, sai YHDEN kehyksen eikä sen jälkeen mitään: ei
+lisää kehyksiä eikä varmistimen ajastinta. Kun sivu jatkaa, arvo menee
+perille; mutta savuke ehti lukea tilan sillä välin. Korjaus on
+savukkeessa: se **odottaa linssin sopimusta** (koko pallon kalvo tai
+laastari näkyvissä) rajatusti 30 sekuntia sen sijaan että laskisi
+sekunteja. Jos sopimus ei toteudu, väite kaatuu kuten kuuluukin.
+
+Kirjanpito jää tuotantokoodiin, koska se maksaa viisi lukua ja säästi
+tässä erässä kolme arvausta: sillä erottaa häivytysvian (kehyksiä tuli,
+arvo väärä) kytkentävian (tavoite väärä) ja ympäristön pysähdyksen
+(kehyksiä ei tullut lainkaan) toisistaan.
+
+### 9.6 Yhdistämisessä korjattu
+
+`tests/sw.test.mjs`:n SVG-suodatinvahti kaatui yhdistämisen jälkeen
+(21/23 → 23/23). Syy ei ollut kummankaan erän virhe vaan vahdin liian
+laaja sääntö: se osui `ctx.filter = 'none'` -riviin, joka on **2D-kankaan
+oma piirto-ominaisuus** eikä SVG-suodatin. Kankaan suodatin vaikuttaa
+yhteen `drawImage`-kutsuun ja on valmis siinä samassa; iOS:n webapp-vika
+koskee elävän kerroksen päällä olevaa SVG-suodatinta. Sääntöön lisättiin
+täsmällinen poikkeus (`ctx.filter = …`) perusteluineen; `filter="url(#…)"`,
+`{ filter: … }` ja `<filter>` jäävät kiinni kuten ennen.

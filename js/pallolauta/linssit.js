@@ -314,8 +314,19 @@ export function luoLinssit({
   };
   let polygonitAlustettu = false;
 
+  /**
+   * Häivytysten kirjanpito (savukkeet ja vartijat). Kertoo, kävikö
+   * animaatio kehyksillä vai varmistimella ja peruttiinko se kesken —
+   * juuri se tieto, jota 16.9.2026 jouduttiin arvailemaan, kun kalvo
+   * jäi näkymättömäksi.
+   */
+  const haivytysMittari = {
+    aloituksia: 0, kehyksia: 0, valmiita: 0, varmistimia: 0, peruutuksia: 0,
+  };
+
   /** Peittävyysanimaatio: rAF, ei kirjastoa. Reduced motion → heti. */
   const haivyta = (kohde, mihin, valmis = null) => {
+    haivytysMittari.aloituksia += 1;
     const alku = kohde.opacity ?? 0;
     if (!(siirtyma > 0)) {
       kohde.opacity = mihin;
@@ -340,6 +351,7 @@ export function luoLinssit({
      */
     let vartija = 0;
     const paata = () => {
+      haivytysMittari.varmistimia += 1;
       if (kehys) cancelAnimationFrame(kehys);
       kehys = 0;
       clearTimeout(vartija);
@@ -360,9 +372,11 @@ export function luoLinssit({
        * ilman yhtään virhettä. Leikkaus on yksi rivi ja tekee tilasta
        * mahdottoman.
        */
+      haivytysMittari.kehyksia += 1;
       kohde.opacity = Math.max(0, Math.min(1, alku + (mihin - alku) * t));
       lauta?.heraa?.();
       if (t < 1) { kehys = requestAnimationFrame(askel); return; }
+      haivytysMittari.valmiita += 1;
       kehys = 0;
       clearTimeout(vartija);
       vartija = 0;
@@ -370,6 +384,7 @@ export function luoLinssit({
     };
     kehys = requestAnimationFrame(askel);
     return () => {
+      haivytysMittari.peruutuksia += 1;
       if (kehys) cancelAnimationFrame(kehys);
       kehys = 0;
       clearTimeout(vartija);
@@ -484,6 +499,14 @@ export function luoLinssit({
        */
       /** Kalvon TODELLINEN peittävyys juuri nyt (savukkeet, vartijat). */
       nakyvyys: () => (tila.peruttu ? 0 : (tila.materiaali?.opacity ?? null)),
+      /**
+       * Mihin peittävyyteen kalvo on matkalla, ja onko sen kuva jo
+       * puretttu. Kahden luvun ero kertoo vartijalle, onko vika
+       * häivytyksessä (tavoite oikein, arvo väärin) vai kytkennässä
+       * (tavoite väärin) — arvaamista ei tarvita.
+       */
+      tavoite: () => (tila.peruttu ? 0 : tila.peittavyys),
+      ladattu: () => Boolean(tila.materiaali),
       peittavyys: (arvo) => {
         if (tila.peruttu) return;
         tila.peittavyys = Math.max(0, Math.min(1, arvo));
@@ -724,6 +747,8 @@ export function luoLinssit({
     pura,
     /** Onko osalla kerroksia (savukkeet ja vartijat). */
     paalla: (nimi) => osat.has(nimi),
+    /** Häivytysten kirjanpito (ks. haivytysMittari). */
+    haivytykset: () => ({ ...haivytysMittari }),
     reducedMotion: () => !(siirtyma > 0) || Boolean(ui?.reducedMotion),
   };
 }

@@ -428,3 +428,40 @@ test('pelin kerrokset sammuvat linssin ajaksi laudalla ja tyyleissä', () => {
   }
   assert.ok(css.includes('body.linssi-topografia .pollo-nappi'), 'pulu pois topografialinssissä');
 });
+
+test('pohjakuva valitaan ruudun mukaan, ja laastarin kynnys seuraa sitä', async () => {
+  /*
+   * KAKSI TARKKUUTTA (16.9.2026). Sama reliefi on ämpärissä 4096 ja
+   * 8192 pikselin levyisenä, ja valinta on yksi funktio kahdelle
+   * linssille: Astronautin kamera ja topografialinssi
+   * (js/linssit/reliefikuva.js). Puhelimella 8k:ta EI oteta — se
+   * purkautuu 134 Mt:n RGBA-puskuriksi.
+   */
+  const R = await import('../js/linssit/reliefikuva.js');
+  assert.equal(R.valitseReliefi({ leveys: 390, dpr: 3 }).tunnus, '4k', 'pystypuhelin');
+  assert.equal(R.valitseReliefi({ leveys: 1400, dpr: 1 }).tunnus, '8k', 'työpöytä');
+  assert.equal(R.valitseReliefi({ leveys: 1180, dpr: 2 }).tunnus, '8k', 'iPad vaakatasossa');
+  // Satelliittilinssi vie samat nimet ulos: yksi totuus, kaksi ovea.
+  const S = await import('../js/linssit/satelliitti-avaruus.js');
+  assert.equal(S.RELIEFIN_OSOITE_8K, R.RELIEFIN_OSOITE_8K);
+  assert.equal(S.valitseReliefi({ leveys: 1400, dpr: 1 }).osoite, R.RELIEFIN_OSOITE_8K);
+
+  /*
+   * LAASTARIN KYNNYS ON POHJAN OMA TIHEYS × 1,4. 4k-pohjalla laastari
+   * syttyy jo 15,9 px/asteella, 8k-pohjalla vasta 31,9:llä — siellä
+   * missä pohja on jo yhtä tarkka, laastaria ei rakenneta.
+   */
+  const nelja = R.RELIEFIN_LEVEYS / 360;
+  const kahdeksan = R.RELIEFIN_8K_LEVEYS / 360;
+  assert.equal(T.tarkennusTarpeen(20, nelja), true, '4k-pohja: 20 px/aste riittää');
+  assert.equal(T.tarkennusTarpeen(20, kahdeksan), false, '8k-pohja: 20 px/aste ei vielä');
+  // Mitattu saapumiszoomi 56,9 ja lähizoomi 178,5: molemmilla pohjilla kyllä.
+  assert.equal(T.tarkennusTarpeen(56.9, kahdeksan), true);
+  assert.equal(T.tarkennusTarpeen(178.5, kahdeksan), true);
+
+  // Linssi lukee valinnan kotelon leveydestä ja vie sen laastarille.
+  const src = lue('../js/linssit/topografia.js');
+  assert.match(src, /function pohjakuva\(kotelo/);
+  assert.match(src, /kuva: pohja\.osoite,/, 'kalvo saa valitun kuvan');
+  assert.match(src, /perusTiheys: pohja\.leveys \/ 360,/, 'kynnys pohjan tiheydestä');
+});

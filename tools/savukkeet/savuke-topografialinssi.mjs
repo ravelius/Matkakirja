@@ -343,6 +343,20 @@ async function ajaRuutu(ruutu, { tarkennus = true } = {}) {
     lauta.kamera?.pysaytaKameraAjo?.();
     lauta.pallo.pointOfView({ lat: 45.8, lng: 6.9, altitude: 0.06 }, 0);
   });
+  /*
+   * LINSSIN ON PIIRRETTÄVÄ JOTAIN ENNEN KUIN SITÄ MITATAAN. Ilman
+   * laastaria (vastakoe) se on koko pallon kalvo, laastarin kanssa
+   * laastari. Odotus on rajattu: jos kumpikaan ei ole näkyvissä 30
+   * sekunnissa, seuraavat väitteet kaatuvat kuten kuuluukin. Ilman
+   * tätä savuke mittasi ajoittain kesken jäänyttä häivytystä —
+   * mitattuna 16.9.2026 kuormitetussa kontissa sivun kehyssilmukka ja
+   * ajastimet voivat pysähtyä sekunneiksi kesken linssin avautumisen.
+   */
+  await sivu.waitForFunction(() => {
+    const t = window.matkakirja?.ui?.pallolinssi?.kahva?.tila?.();
+    return Boolean(t) && (t.perusKalvo === true || t.tarkennus?.paalla === true);
+  }, null, { timeout: 30000 }).catch(() => null);
+
   if (tarkennus) {
     await sivu.waitForFunction(
     () => window.matkakirja?.ui?.pallolinssi?.kahva?.tila?.()?.tarkennus?.paalla === true,
@@ -355,6 +369,14 @@ async function ajaRuutu(ruutu, { tarkennus = true } = {}) {
      */
     null, { timeout: 120000 },
     ).catch(() => null);
+  }
+  if (!tarkennus) {
+    // Vastakoe: laastaria ei tule, joten mitataan vasta kun koko pallon
+    // kalvo on oikeasti näkyvissä (sama rajattu odotus kuin yllä).
+    await sivu.waitForFunction(() => {
+      const t = window.matkakirja?.ui?.pallolinssi?.kahva?.tila?.();
+      return Boolean(t) && t.perusKalvo === true;
+    }, null, { timeout: 30000 }).catch(() => null);
   }
   await sivu.waitForTimeout(3000);
   const lahi = await lue();
@@ -423,7 +445,20 @@ async function ajaRuutu(ruutu, { tarkennus = true } = {}) {
     lauta.kamera?.pysaytaKameraAjo?.();
     lauta.pallo.pointOfView({ lat: pov.lat, lng: pov.lng, altitude: ohj.maxDistance / R - 1 }, 0);
   });
-  await sivu.waitForTimeout(3500);
+  /*
+   * ODOTETAAN TILAA, EI KELLOA. Yleiskuvaan siirtyminen purkaa
+   * laastarin ja häivyttää koko pallon kalvon takaisin näkyviin, ja
+   * 8k-pohja puretaan 33,5 megapikselistä — kuormitetussa kontissa se
+   * vie sekunteja. Kiinteä odotus mittasi silloin kontin nopeutta eikä
+   * linssiä (mitattu 16.9.2026: 3,5 s riitti 4k:lle muttei 8k:lle).
+   * Raja on silti tiukka: jos tila ei asetu 20 sekunnissa, väite
+   * kaatuu.
+   */
+  await sivu.waitForFunction(() => {
+    const t = window.matkakirja?.ui?.pallolinssi?.kahva?.tila?.();
+    return Boolean(t) && t.perusKalvo === true && t.tarkennus?.paalla === false;
+  }, null, { timeout: 20000 }).catch(() => null);
+  await sivu.waitForTimeout(600);
   const uloin = await lue();
   const pallokuva = await kuvaa();
   writeFileSync(join(ULOS, `topografialinssi-${ruutu.nimi}-pallo${tarkennus ? '' : '-vastakoe'}.png`), pallokuva);
@@ -455,7 +490,20 @@ for (const ruutu of RUUDUT) {
     JSON.stringify({ paalla: t?.paalla, perus: r.lahi.laastari?.perusKalvo, rakennuksia: t?.rakennuksia }));
   vaadi(`${nimi}: laastarin kangas on lähteen omassa tiheydessä`,
     tiheys >= LAHTEEN_TIHEYS * 0.9 && tiheys >= PERUSKUVAN_TIHEYS * 2.5,
-    `${tiheys.toFixed(1)} px/aste (pallokuva ${PERUSKUVAN_TIHEYS.toFixed(1)}, lähde ${LAHTEEN_TIHEYS})`);
+    `${tiheys.toFixed(1)} px/aste (4k-pallokuva ${PERUSKUVAN_TIHEYS.toFixed(1)}, lähde ${LAHTEEN_TIHEYS})`);
+
+  /*
+   * POHJAKUVA VALITAAN RUUDUN MUKAAN (16.9.2026, js/linssit/reliefikuva.js
+   * valitseReliefi): leveällä ruudulla 8192 px (22,8 px/aste), kapealla
+   * 4096 px (11,4 px/aste). Sama valinta kuin Astronautin kameralla.
+   */
+  const odotettuPohja = ruutu.viewport.width >= 1024 ? '8k' : '4k';
+  vaadi(`${nimi}: pohjakuva on ruudulle oikea (${odotettuPohja})`,
+    r.lahi.laastari?.pohja === odotettuPohja,
+    JSON.stringify({
+      pohja: r.lahi.laastari?.pohja, tiheys: r.lahi.laastari?.pohjanTiheys,
+      kynnys: r.lahi.laastari?.tarkennus?.kynnys,
+    }));
 
   /* 2. PELIN ELEMENTIT */
   const e = r.lahi.elementit;
@@ -485,7 +533,11 @@ for (const ruutu of RUUDUT) {
    */
   vaadi(`${nimi}: yleiskuvassa laastari on pois ja koko pallon kalvo näkyvissä`,
     r.uloin.laastari?.tarkennus?.paalla === false && r.uloin.laastari?.perusKalvo === true,
-    JSON.stringify(r.uloin.laastari));
+    JSON.stringify({
+      peitto: r.uloin.laastari?.perusPeitto, tavoite: r.uloin.laastari?.perusTavoite,
+      ladattu: r.uloin.laastari?.perusLadattu, pohja: r.uloin.laastari?.pohja,
+      laastari: r.uloin.laastari?.tarkennus?.paalla,
+    }));
   vaadi(`${nimi}: linssin katto on laudan omaa kattoa ulompana`,
     (r.uloin.rajat?.max ?? 0) > (r.ennen.rajat?.max ?? 0) * 1.5,
     `linssi ${(r.uloin.rajat?.max ?? 0).toFixed(3)} vs peli ${(r.ennen.rajat?.max ?? 0).toFixed(3)}`);
