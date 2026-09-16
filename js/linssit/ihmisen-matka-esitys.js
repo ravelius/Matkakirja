@@ -252,6 +252,16 @@ export const ESITYKSEN_ALUEET = {
 /** Mustan häivytys valojen syttyessä (omistaja: "2–3 s"). */
 export const VALOJEN_MS = 2600;
 /*
+ * KEHYS LIUKUU SISÄÄN, EI FEIDAA (omistaja 16.9.2026). Kun kartta
+ * valkenee, kehys tulee ruudun ulkopuolelta paikalleen: yläpalkki
+ * ylhäältä alas, alapalkki alhaalta ylös. Liuku on lyhyempi kuin
+ * kartan valkeneminen (VALOJEN_MS) — liike luetaan heti, kirkkaus
+ * nousee kartan tahdissa. Mekanismi on kaikkien linssien yhteinen
+ * (css/linssikehys.css, body-luokat `kehys-liukuu` ja `kehys-piilossa`
+ * sekä muuttuja --kehys-liuku).
+ */
+export const KEHYKSEN_LIUKU_MS = 500;
+/*
  * AVARUUSAVAUS (Raamattu "IHMISEN MATKA: MUSTA ALKU ON AVARUUS, PALLO
  * ZOOMAUTUU PIMEYDESTA AFRIKKA EDELLA", omistaja 7.9.2026 ilta:
  * *"Ja se pimeys on avaruus"*, ja tarkennus *"Kertoja alkaa jo
@@ -962,6 +972,8 @@ export function luoEsitys({ ajo }) {
     /** OrbitControlsin oma etäisyyskatto ennen avausta (palautetaan). */
     kattoEnnen: null,
     kattoAjastin: 0,
+    /** Yhteisen kehysliu'un purkuajastin (css/linssikehys.css). */
+    kehysAjastin: 0,
     /*
      * AIKASELAIMEN VETO KESKEN (js/linssit/aikaselain.js). Null, kun
      * sormi ei ole nauhalla; vedon ajaksi tähän jää tieto siitä, oliko
@@ -1196,6 +1208,51 @@ export function luoEsitys({ ajo }) {
     // Yläpalkki takaisin samassa feidauksessa (ks. avaruusavaus).
     ajo.juuri?.style?.setProperty('--avauksen-feidi', `${Math.max(0, Math.round(feidi))}ms`);
     ajo.juuri?.classList.remove('esitys-musta');
+    return true;
+  }
+
+  /**
+   * KEHYS TAKAISIN (yläpalkki reunaviivoineen ja valikkonappi sekä
+   * alapalkki eli aikaselain). Kutsuja on yksi: sytytaValot, kun kartta
+   * valkenee. Kehys ei siis palaa kesken avaruusvaiheen millään
+   * tavalla — juuri sitä omistaja pyysi (*"kehys palasi liian
+   * aikaisin"*).
+   *
+   * OMAA PAKOTIETÄ EI TARVITA. Kokeiltiin ensin napautusta ja Esciä,
+   * mutta napautus olisi laukennut vahingossa (pallolauta ottaa
+   * kosketukset vastaan koko esityksen ajan) ja Esc sulkee linssin jo
+   * valmiiksi (js/aikajana.js nappain → ui.pysaytaAikajana). Oma
+   * Esc-kuuntelija olisi siis vain paljastanut kehyksen sulkeutuvasta
+   * linssistä.
+   *
+   * @param {number} feidi häivytyksen kesto (ms)
+   */
+  function paljastaKehys(feidi = VALOJEN_MS) {
+    if (!ajo.juuri?.classList.contains('esitys-avaruus')) return false;
+    ajo.juuri.style?.setProperty('--avaruuden-feidi', `${Math.max(0, Math.round(feidi))}ms`);
+    /*
+     * LIUKU, EI PELKKÄ FEIDI (omistaja 16.9.2026). Kehys on odottanut
+     * ruudun ulkopuolella (css/linssikehys.css, body.kehys-piilossa);
+     * nyt sille annetaan liu'un kesto ja luokka poistetaan, jolloin
+     * yläpalkki tulee ylhäältä ja alapalkki alhaalta samalla hetkellä,
+     * kun kartta alkaa valjeta. Aloituksessa sama muuttuja on 0 ms,
+     * joten piilotus tapahtui ilman liukua.
+     */
+    const runko = ajo.juuri.ownerDocument?.body ?? null;
+    runko?.style?.setProperty('--kehys-liuku', `${KEHYKSEN_LIUKU_MS}ms`);
+    runko?.classList.remove('kehys-piilossa');
+    ajo.juuri.classList.remove('esitys-avaruus');
+    /*
+     * MEKANISMI PURETAAN VASTA KUN MOLEMMAT OVAT PERILLÄ (liuku 500 ms,
+     * kirkastuminen VALOJEN_MS): siihen asti siirtymä on tämän tiedoston
+     * hallussa, sen jälkeen kehyselementit saavat omat siirtymänsä
+     * takaisin (esim. aikaselaimen 500 ms:n peittävyys).
+     */
+    clearTimeout(tila.kehysAjastin);
+    tila.kehysAjastin = setTimeout(
+      () => runko?.classList.remove('kehys-liukuu'),
+      Math.max(KEHYKSEN_LIUKU_MS, Math.max(0, Math.round(feidi))) + 100,
+    );
     return true;
   }
 
@@ -1772,7 +1829,19 @@ export function luoEsitys({ ajo }) {
     tila.valotOdottaa = false;
     // Pallo on perillä: kamera saa heti lähteä kohti Marokkoa.
     aloitaKohdeajo();
-    ajo.juuri?.classList.remove('esitys-pimea', 'esitys-avaruus', 'esitys-musta');
+    /*
+     * KEHYS PALAA VASTA KARTAN KANSSA (omistaja 15.9.2026 klo 19.05,
+     * iPhone-kuva avaruusvaiheesta "He vain lähtivät.", sanatarkasti:
+     * *"Alussa oli vain musta mutta sitten kehys palasi liian
+     * aikaisin"*). Luokka `esitys-musta` eli vain ensimmäisen virkkeen
+     * ajan (nostaMusta), joten yläpalkin reunaviiva ja hampurilainen
+     * palasivat jo tähtitaivaalle. Nyt kehyksen piilotus roikkuu
+     * luokassa `esitys-avaruus`, joka lähtee TÄSSÄ — samassa
+     * silmänräpäyksessä kuin peite saa 'pois'-luokkansa — ja feidaus
+     * on css:ssä sidottu samaan VALOJEN_MS:ään kuin kartan valkeneminen.
+     */
+    paljastaKehys(VALOJEN_MS);
+    ajo.juuri?.classList.remove('esitys-pimea', 'esitys-musta');
     peite.classList.add('pois');
     if (reduced) peite.remove();
     else setTimeout(() => peite.remove(), VALOJEN_MS);
@@ -2140,7 +2209,25 @@ export function luoEsitys({ ajo }) {
       if (tila.purettu || tila.i >= 0) return false;
       if (muisti) return jatkaMuistista(muisti);
       asennaPinnat();
+      /*
+       * KEHYS POIS ILMAN LIUKUA. `esitys-avaruus` vie yläpalkin
+       * peittävyyden nollaan, mutta sama sääntö kantaa myös feidauksen
+       * takaisin — ilman tätä nollaa palkki olisi häipynyt vasta
+       * 2,6 sekunnissa, ja mitattuna (savuke-ihmisen-kehys.mjs, 390 ja
+       * 1400 px) se näkyi vielä puoli sekuntia mustan alettua.
+       * Feidaus asetetaan uudestaan vasta paljastaKehys-kutsussa.
+       */
+      ajo.juuri?.style?.setProperty('--avaruuden-feidi', '0ms');
       ajo.juuri?.classList.add('esitys-pimea', 'esitys-avaruus');
+      /*
+       * SAMA KÄDENLIIKE YHTEISELLE LIU'ULLE (css/linssikehys.css).
+       * Kesto nollataan ENNEN luokkaa, jotta kehys katoaa ruudun
+       * ulkopuolelle ilman liukua — musta peittää sen joka tapauksessa.
+       * Luokka `kehys-liukuu` aseistaa siirtymän paluuta varten.
+       */
+      const runko = ajo.juuri?.ownerDocument?.body ?? null;
+      runko?.style?.setProperty('--kehys-liuku', '0ms');
+      runko?.classList.add('kehys-liukuu', 'kehys-piilossa');
       /*
        * PEITE ON ENSIN MUSTA JA SITTEN HARSO (Raamattu MUSTA ALKU ON
        * AVARUUS + AVAUS MUSTASTA TAHTIIN, omistaja 8.9.2026: *"kokonaan
@@ -2211,6 +2298,11 @@ export function luoEsitys({ ajo }) {
       peite.remove();
       tekstirivi.remove();
       ajo.juuri?.classList.remove('esitys-pimea', 'esitys-avaruus', 'esitys-kaynnissa', 'esitys-musta');
+      // Yhteinen kehysliuku pois: kehys ei saa jäädä ruudun ulkopuolelle,
+      // jos linssi suljetaan kesken avaruusvaiheen.
+      clearTimeout(tila.kehysAjastin);
+      const runko = ajo.juuri?.ownerDocument?.body ?? null;
+      runko?.classList.remove('kehys-liukuu', 'kehys-piilossa');
     },
     /** Mittarit savukkeelle ja testeille. */
     tila: () => ({
@@ -2225,6 +2317,17 @@ export function luoEsitys({ ajo }) {
       pimea: Boolean(ajo.juuri?.classList.contains('esitys-pimea')),
       // Yläpalkki piilossa mustan ajan (avaruusavaus → nostaMusta).
       palkkiPiilossa: Boolean(ajo.juuri?.classList.contains('esitys-musta')),
+      /*
+       * KEHYS (yläpalkki reunaviivoineen ja valikkonappi) on poissa
+       * koko avaruusvaiheen ajan ja palaa vasta kartan kanssa
+       * (sytytaValot → paljastaKehys).
+       */
+      kehysPiilossa: Boolean(ajo.juuri?.classList.contains('esitys-avaruus')),
+      /*
+       * KEHYS RUUDUN ULKOPUOLELLA (yhteinen liuku, css/linssikehys.css).
+       * Sama tieto body-luokasta: savuke mittaa liu'un tästä hetkestä.
+       */
+      kehysUlkona: Boolean(ajo.juuri?.ownerDocument?.body?.classList?.contains('kehys-piilossa')),
       kuvia: tila.kuviaNaytetty,
       /*
        * ESILLÄ, EI VAIN LIITETTY. Kehys syntyy nollakoossa

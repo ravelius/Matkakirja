@@ -416,6 +416,63 @@ export function autokyydinVaihe(t) {
 }
 
 /*
+ * ══════════════════════════════════════════════════════════════════
+ * MATKAPISTEET NÄKYVÄT VAUHDISSA (omistaja 16.9.2026, Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 29)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Sanatarkasti: *"vaikka otetaan se pomppiminen pois niin pelinappula
+ * saisi silti liikkua jokaisen matkapisteen lapi ja kiihdyttaa ja
+ * jarruttaa niiden valilla."*
+ *
+ * KAKSI KÄYRÄÄ PÄÄLLEKKÄIN, EI KAHTA SÄÄNTÖÄ. Matkan iso ele on yhä
+ * `autokyydinVaihe`: yksi kiihdytys lähdössä ja yksi jarrutus
+ * perillä (PAATOKSET 1 kohta 4 ei ole kumottu). Sen PÄÄLLE tulee
+ * pisteiden oma aaltoilu: eteneminen `x` vääristetään niin, että
+ * jokaisen matkapisteen kohdalla (x = i / n) vauhti notkahtaa
+ * osuuteen MATKAPISTEEN_VAUHTI ja välissä nousee saman verran yli.
+ * Nappula siis JARRUTTAA jokaiseen pisteeseen ja KIIHDYTTÄÄ siitä
+ * pois — mutta ei pysähdy, joten matka on yhä yhtä liikettä eikä
+ * hyppyketju.
+ *
+ * MIKSI VÄÄRISTYS EIKÄ OMA AIKATAULU. Vääristys tehdään ETENEMISEN
+ * (ei ajan) suhteen, joten pisteet osuvat täsmälleen kohdalleen:
+ * W(i / n) = i / n jokaisella i. Nappula kulkee siis jokaisen
+ * matkapisteen LÄPI pikselilleen — ja kokonaiskesto on tismalleen
+ * sama kuin ennen, koska aikamuuttujaan ei kosketa.
+ *
+ * KAAVA. Yhden välin sisällä u ↦ u − (k / 2π)·sin(2πu), missä
+ * k = 1 − MATKAPISTEEN_VAUHTI. Se on C¹-jatkuva välien yli
+ * (derivaatta 1 − k molemmissa päissä), aidosti kasvava kun k ≤ 1
+ * (nappula ei koskaan peruuta) ja kiinnittää välin päät paikoilleen.
+ */
+/** Vauhti matkapisteen kohdalla suhteessa välin keskinopeuteen. */
+export const MATKAPISTEEN_VAUHTI = 0.4;
+
+/**
+ * Matkan vaihekäyrä `pisteita` matkapisteelle: t (0…1) → etenemisosuus
+ * (0…1). Jokainen matkapiste osuu kohdalleen, vauhti notkahtaa siinä ja
+ * nousee välillä; lähdössä ja perillä käyrä pysähtyy kokonaan.
+ *
+ * @param {number} pisteita matkapisteiden määrä (polun pituus)
+ * @returns {(t: number) => number}
+ */
+export function matkanVaihe(pisteita) {
+  const n = Math.max(1, Math.floor(pisteita) || 1);
+  if (n < 2) return autokyydinVaihe;
+  const k = 1 - MATKAPISTEEN_VAUHTI;
+  return (t) => {
+    const x = autokyydinVaihe(t);
+    if (x <= 0) return 0;
+    if (x >= 1) return 1;
+    const raaka = x * n;
+    const i = Math.min(n - 1, Math.floor(raaka));
+    const u = raaka - i;
+    return (i + (u - (k / (2 * Math.PI)) * Math.sin(2 * Math.PI * u))) / n;
+  };
+}
+
+/*
  * BUSSI ON NOPEAMPI KUIN LIFTAUS (omistaja 13.9.2026: bussi maksaa 50
  * puntaa eikä kuluta päiviä). Ero näkyy myös ruudulla: sama kaari
  * ajetaan tässä osuudessa liftauksen ajasta. 0,6 on se, millä bussi

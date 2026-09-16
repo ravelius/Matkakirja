@@ -1781,6 +1781,51 @@ export function tasoituksenMaailma() {
   return variMaailma;
 }
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KERMA POIS MATKAN AJAKSI (omistaja 16.9.2026, Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 29 kohta 2)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Sanatarkasti: *"pitaisi ottaa ainakin kaikkien maiden paalta pois
+ * minka lapi liike menee… Jos se on vaikea toteuttaa niin otetaan
+ * sitten huntu kaikkialta pois liikkeen ajaksi ja palautetaan takaisin
+ * sitten kun pelaaja on paassyt uuteen kohde kaupunkiin."*
+ *
+ * REITIN MAAT EIVÄT OLE HALPA VALINTA. Kerma on kahdessa paikassa
+ * (ks. yllä), ja vain toinen on asiakkaan kädessä: laatan kankaaseen
+ * POLTETTU peite katoaa ainoastaan niin, ettei värilaattaa piirretä
+ * lainkaan kohdemaan renkaiden ulkopuolelle. Yhden maan vapauttaminen
+ * vaatisi siis sen maan omat renkaat leikkuriksi — eli
+ * maa-aineiston haun ja renkaiden laskennan jokaiselle reitin maalle
+ * KESKEN ANIMAATION. Kaikkialta pois on sama yksi leikkuri, joka on jo
+ * olemassa (maailmanäkymä), joten se on omistajan jälkimmäinen
+ * vaihtoehto ja tämä lippu.
+ *
+ * ILMAN RENKAITA EI KYTKETÄ. Jos kohdemaan rengasaineisto on vielä
+ * haussa, maailmaleikkuri jättäisi koko värilaatan pois ja KOHDEMAAN
+ * topografia katoaisi matkan ajaksi. Silloin kerma jää — matka ei ole
+ * hetki, jolla kartta saa muuttua vääräksi kuvaksi.
+ */
+let variLiike = false;
+
+/**
+ * Kerma pois matkan ajaksi (true) ja takaisin perillä (false).
+ *
+ * @returns {boolean} true, jos tila vaihtui
+ */
+export function asetaTasoituksenLiike(paalla) {
+  const uusi = Boolean(paalla);
+  if (uusi === variLiike) return false;
+  variLiike = uusi;
+  return true;
+}
+
+/** Onko matkan kermattomuus pyydetty (savukkeet, testit). */
+export function tasoituksenLiike() {
+  return variLiike;
+}
+
 /**
  * Kohdemaan renkaat laudan yksiköissä maailmanäkymän leikkuria varten,
  * tai null, jos aineistoa ei vielä ole. Muisti on `maanAluevesiRenkaat`:n
@@ -1869,16 +1914,20 @@ export function pyramidinTasoitus() {
   }
   if (!variSuoja) return null;
   const s = variSuoja;
-  // Maailmanäkymässä kermaa ei ole: leikkuri on kohdemaan rengas, ja
-  // avaimen `M` mitätöi kankaat napin kytkennässä (ks. yllä).
-  const renkaat = variMaailma ? variMaanRenkaat() : null;
+  // Maailmanäkymässä eikä matkalla ole kermaa: leikkuri on kohdemaan
+  // rengas, ja avaimen `M`/`L` mitätöi kankaat kytkennässä (ks. yllä).
+  const renkaat = variMaailma || variLiike ? variMaanRenkaat() : null;
+  // Ilman renkaita matkan kermattomuus jää pois (ks. ILMAN RENKAITA);
+  // maailmanäkymä on kehittäjän oma näkymä ja saa jäädä ennalleen.
+  const kermatta = variMaailma || (variLiike && Boolean(renkaat));
+  const tila = variMaailma ? 'M' : (kermatta ? 'L' : 'K');
   return {
     kerma: vt.kerma || '#faf4d6',
     peitto,
     suoja: s,
-    maailma: variMaailma,
+    maailma: kermatta,
     renkaat,
-    avain: `${variMaaNyt}|${variMaailma ? 'M' : 'K'}|${renkaat ? renkaat.length : 0}`
+    avain: `${variMaaNyt}|${tila}|${renkaat ? renkaat.length : 0}`
       + `|${s.tarkka ? 'T' : 'L'}|${Math.round(s.x)}|${Math.round(s.y)}`
       + `|${Math.round(s.w)}|${Math.round(s.h)}`,
   };

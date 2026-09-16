@@ -321,6 +321,150 @@ for (const ruutu of RUUDUT) {
   tieto(`${ruutu.nimi} kartan huntu`,
     `paalla=${kuvat.huntuPaalla} suodatin=${kuvat.huntuSuodatin} peite=${kuvat.huntuPeite}`);
 
+  /*
+   * PULUN KUVAT: SAMA HUNTU KUIN ISOISÄN KUVILLA (omistajan iPhone-kuva
+   * Ateenasta 16.9.2026: pulun kuva isona ruudulla, mutta kartta sen
+   * ALLA oli terävä ja vaalea, kun isoisän kuvien alla kartta on sumea
+   * ja tumma). JUURISYY: js/ui.js kaynnistaLuentavahti käytti hunnulle
+   * samaa `kertoja`-muuttujaa kuin kaiuttimen sykkeelle — ja se on
+   * TARKOITUKSELLA puluton (kaiutin ei saa sykkiä pulun repliikissä).
+   * Huntu on kuitenkin kuvan, ei puhujan, ominaisuus, joten se korjattiin
+   * kysymään KENEN TAHANSA kuuluvaa ääntä (soivaPuhuja() ilman
+   * `paitsi`-rajausta).
+   *
+   * Odotetaan, että pulun oma ääni oikeasti alkaa (`ui.liviaAani`), ja
+   * mitataan huntu sen aikana. POISTUMA-AJASTUS (omistajan tilaus):
+   * pulun kuvat pysyvät ruudulla pulun oman puheen loppuun asti ja
+   * hiipuvat vasta n. 1 s ennen puheen loppua — ei aiemmin
+   * (js/fokusvirta.js vahtiPulunLoppua, sidottu `ui.liviaAani`-elementin
+   * TODELLISEEN kestoon, ei kiinteään kuvamäärä × ajastukseen).
+   */
+  const puluAlkoi = await sivu.waitForFunction(
+    () => Boolean(window.matkakirja?.ui?.liviaAani)
+      && document.querySelector('.pulucam-merkki-iso'),
+    null, { timeout: 150000 },
+  ).then(() => true).catch(() => false);
+  vaadi(`${ruutu.nimi}: pulun oma ääni ja PuluCam-kuva käynnistyvät`, puluAlkoi);
+
+  if (puluAlkoi) {
+    /*
+     * ASETTUMISAIKA. `liviaAani` ilmestyy hieman ENNEN kuin selain
+     * ehtii vahvistaa toiston 'playing'-tapahtumalla (js/luenta.js
+     * aaniKuuluu) ja ENNEN kuin luentavahti (200 ms:n kello) on ehtinyt
+     * lukea sen — samoin metatiedot (`duration`) tulevat vasta hetken
+     * kuluttua verkon yli. Odotetaan molemmat, jotta mittaus osuu
+     * vakaaseen tilaan eikä tähän lyhyeen käynnistysrakoon.
+     */
+    await sivu.waitForFunction(
+      () => document.body.classList.contains('luenta-huntu')
+        && Number.isFinite(window.matkakirja?.ui?.liviaAani?.duration)
+        && window.matkakirja.ui.liviaAani.duration > 0,
+      null, { timeout: 5000 },
+    ).catch(() => {});
+    const puluHuntu = await sivu.evaluate(() => {
+      const kartta = document.querySelector('.map-pane');
+      const huntu = kartta ? getComputedStyle(kartta, '::after') : null;
+      return {
+        huntuPaalla: document.body.classList.contains('luenta-huntu'),
+        suodatin: huntu ? (huntu.backdropFilter || huntu.webkitBackdropFilter) : null,
+        peite: huntu ? huntu.backgroundColor : null,
+        kestoTiedossa: Number.isFinite(window.matkakirja.ui.liviaAani?.duration)
+          && window.matkakirja.ui.liviaAani.duration > 0,
+      };
+    });
+    tieto(`${ruutu.nimi} huntu pulun oman äänen aikana`, JSON.stringify(puluHuntu));
+    vaadi(`${ruutu.nimi}: huntu on päällä myös pulun oman äänen aikana`,
+      puluHuntu.huntuPaalla && /blur\(/.test(String(puluHuntu.suodatin)),
+      JSON.stringify(puluHuntu));
+
+    /*
+     * VASTAKOE: EHTO POIS → HUNTU EI TULE. Lasketaan VANHA (pulun
+     * poissulkeva) ehto samasta hetkestä samoilla, oikeilla luenta.js-
+     * funktioilla (soivaPuhuja, PUHUJA_PULU — kaiuttimen sykkeen käyttämä
+     * `paitsi`-rajaus): jos huntu riippuisi yhä siitä, se olisi juuri nyt
+     * pois päältä, vaikka pulu puhuu kuuluvasti ja kuva on ruudulla.
+     */
+    const vastakoe = await sivu.evaluate(async () => {
+      const L = await import('/js/luenta.js');
+      return {
+        vanhaEhtoNostaisiHunnun: L.soivaPuhuja(L.PUHUJA_PULU) !== null,
+        oikeaHuntuNyt: document.body.classList.contains('luenta-huntu'),
+      };
+    });
+    tieto(`${ruutu.nimi} VASTAKOE (vanha pulun poissulkeva ehto)`, JSON.stringify(vastakoe));
+    vaadi(`${ruutu.nimi}: VASTAKOE — vanha, pulun poissulkeva ehto EI olisi nostanut huntua`,
+      vastakoe.vanhaEhtoNostaisiHunnun === false && vastakoe.oikeaHuntuNyt === true,
+      JSON.stringify(vastakoe));
+
+    if (KUVAKANSIO && ruutu.width === 390) {
+      const { data } = await cdp.send('Page.captureScreenshot', { format: 'jpeg', quality: 70 });
+      writeFileSync(join(KUVAKANSIO, 'pulun-kuvat-huntu-390-20260916.jpg'),
+        Buffer.from(data, 'base64'));
+    }
+
+    /*
+     * ODOTETAAN JÄLJELLÄ OLEVA AIKA, EI KOKO KESTOA. Ääni on jo soinut
+     * hetken (odotukset yllä), joten `currentTime` on jo nollaa
+     * suurempi — koko `duration`:n odottaminen NYT-hetkestä ampuisi
+     * reilusti yli oikean loppuhetken.
+     *
+     * `ui.liviaAani` VOI OLLA NULL TÄSSÄ (mitattu julkaisuhaarassa
+     * v1919, 1400 px: TypeError "Cannot read properties of null
+     * (reading 'duration')"). `kestoTiedossa` luettiin YLLÄ, mutta
+     * VASTAKOE-kutsu, kuvakaappaus ja `tieto()`-lokitus kuluttavat
+     * oikeaa kelloa niiden välissä — jos kupla ehtii vaihtua tai koko
+     * puheenvuoro loppua siinä välissä, `ui.liviaAani` on jo `null`
+     * tähän mennessä. Sama sopimus kuin pelikoodilla (js/fokusvirta.js
+     * `vahtiPulunLoppua`, js/liviapuhe.js `livianAanenKesto`): ääni
+     * luetaan VASTA sen jälkeen, kun sen olemassaolo on tarkistettu
+     * SAMASSA evaluate-kutsussa, ei aiemman kutsun perusteella.
+     */
+    const aanenTila = puluHuntu.kestoTiedossa
+      ? await sivu.evaluate(() => {
+        const a = window.matkakirja.ui.liviaAani;
+        if (!a || !Number.isFinite(a.duration) || a.duration <= 0) return null;
+        return { kesto: a.duration * 1000, kulunut: a.currentTime * 1000 };
+      })
+      : null;
+    const kesto = aanenTila?.kesto ?? null;
+    const jaljellaNyt = aanenTila ? aanenTila.kesto - aanenTila.kulunut : null;
+    tieto(`${ruutu.nimi} pulun äänen kesto`,
+      kesto ? `${Math.round(kesto)} ms (jäljellä nyt ${Math.round(jaljellaNyt)} ms)` : 'tuntematon');
+    if (jaljellaNyt && jaljellaNyt > 1500) {
+      await sivu.waitForTimeout(Math.max(0, jaljellaNyt - 1500));
+      const ennen = await sivu.evaluate(() => ({
+        kuva: Boolean(document.querySelector('.fokusvirta-isokuva.nakyy')),
+        huntu: document.body.classList.contains('luenta-huntu'),
+      }));
+      vaadi(`${ruutu.nimi}: pulun kuva näkyy vielä 1,5 s ennen puheen loppua`,
+        ennen.kuva && ennen.huntu, JSON.stringify(ennen));
+
+      /*
+       * OSIIN JAETTU PUHEENVUORO: se "puhe", jonka kestoa yllä
+       * mitattiin, on vain YKSI osa pulun kommentista — seuraava osa
+       * voi alkaa lähes saumatta perään (js/pollo.js naytaPuheenvuoro),
+       * jolloin huntu perustellusti PYSYY päällä. Kiinteä 2000 ms:n
+       * odotus tästä osasta olisi siis väärä mittari monen osan
+       * kommentissa. Sen sijaan odotetaan, että huntu OIKEASTI sammuu
+       * (koko kommentti loppuu) — vasta silloin kuva ja huntu saavat
+       * olla poissa.
+       */
+      await sivu.waitForFunction(
+        () => !document.body.classList.contains('luenta-huntu'),
+        null, { timeout: 20000 },
+      ).catch(() => {});
+      await sivu.waitForTimeout(500);
+      const jalkeen = await sivu.evaluate(() => ({
+        kuva: Boolean(document.querySelector('.fokusvirta-isokuva.nakyy')),
+        huntu: document.body.classList.contains('luenta-huntu'),
+      }));
+      vaadi(`${ruutu.nimi}: pulun kuva ja huntu ovat poissa, kun koko puheenvuoro on loppunut`,
+        !jalkeen.kuva && !jalkeen.huntu, JSON.stringify(jalkeen));
+    } else {
+      tieto(`${ruutu.nimi} poistuma-ajastus`, 'ohitettu — ääni liian lyhyt tai kesto tuntematon');
+    }
+  }
+
   if (KUVAKANSIO) {
     // Kaappaus otetaan HETI kolmen kortin mittauksen jälkeen: sarja
     // purkautuu pieneksi pakaksi noin 44 s kohdalla, ja neljättä korttia
