@@ -126,6 +126,7 @@ const SHELL = [
   './js/livia-pikselit.js',
   './js/livia-svg-paa.js',
   './js/livia-svg.js',
+  './js/minipulu.js',
   './js/livia-eleet.js',
   './js/livia-dialogitila.js',
   './js/livia-tilanteet.js',

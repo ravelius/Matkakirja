@@ -9028,6 +9028,8 @@ export const RAAMATTU = {
           + 'ja tavoite per maa; täytetään koneellisesti erissä.',
         'docs/moduulit/livia-aani.md — pulun ääni: ElevenLabs-resepti, tagit, '
           + 'kaiku, manifesti ja repliikkien pituusraja.',
+        'docs/moduulit/minipulu.md — nykyisen SVG-pulun pieni hahmo-API '
+          + 'linssien kuvanäkymiin, sijoittelu, kuplakytkentä ja selainkoe.',
         'docs/moduulit/horatio-livia-tuotanto.md — Horatio ja Livia: '
           + 'hahmojen tuotantoketju, kaupunkiparin työnjako, pituus- ja '
           + 'kuvapäätökset sekä erien tarkistuslistat (toteutusohje; '
