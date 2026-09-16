@@ -399,6 +399,24 @@ const vaadi = (nimi, ehto, lisa = '') => {
   if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
 };
 const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
+/*
+ * ERÄ 19 (Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 28, omistaja 15.9.2026
+ * klo 20.45 UTC): maapaneeli palasi RUUDUN VASEMPAAN ALAKULMAAN, eikä
+ * se ole enää kartassa kiinni. Tämän savukkeen erä 12 -vartiot
+ * mittasivat juuri karttaan kiinnitystä — maakohtaista ankkuria
+ * (Biskajanlahti/Lyoninlahti/Joonianmeri), zoomin mukana kasvavaa
+ * kokoa, leveyskattoa ruudun leveydestä ja valikon paikkaa plussan
+ * vierellä. NE OVAT KUMOUTUNEET: mitattava asia ei ole olemassa.
+ *
+ * Vartiot EI POISTETA vaan merkitään kumotuiksi: rivi kertoo mikä
+ * päätös ne kumosi ja mikä savuke mittaa niiden tilalla (erän 19
+ * vartiot ovat tools/savukkeet/savuke-maapaneeli.mjs:ssä). Mittaus
+ * ajetaan yhä ja tulos jää INFO-riville, jotta luku on nähtävissä.
+ */
+const kumottu = (nimi, ehto, lisa = '') => console.log(
+  `KUMOTTU  ${nimi} — PÄÄTÖKSET 28 (erä 19); tilalla savuke-maapaneeli.mjs`
+  + ` · mittaus ${ehto ? 'läpi' : 'punainen'}${lisa ? ` (${lisa})` : ''}`,
+);
 const p = (v, d = 4) => (typeof v === 'number' ? +v.toFixed(d) : v);
 
 const AMPARI = 'https://media.matkakirja.app/';
@@ -1340,30 +1358,30 @@ for (const ruutu of RUUDUT) {
 vaadi('1. uloszoomaus ei onnistu Ranskassa (390 px ja 1400 px)',
   zoomiTulokset.length === RUUDUT.length && zoomiTulokset.every((t) => t.ok),
   JSON.stringify(zoomiTulokset));
-vaadi('2. maapaneeli on meren päällä — ei yhdenkään maan polygonissa',
+kumottu('2. maapaneeli on meren päällä — ei yhdenkään maan polygonissa',
   meriTulokset.length === RUUDUT.length && meriTulokset.every((t) => t.ok),
   JSON.stringify(meriTulokset));
-vaadi('3. paneelin koko seuraa kartan mittakaavaa katkotta (3 zoomia)',
+kumottu('3. paneelin koko seuraa kartan mittakaavaa katkotta (3 zoomia)',
   suhdeTulokset.length === RUUDUT.length && suhdeTulokset.every((t) => t.ok),
   JSON.stringify(suhdeTulokset.map((t) => ({ ruutu: t.ruutu, hTulo: t.hTulo }))));
 vaadi('5. saapumisnäkymä rajautuu aivan maan rajojen ulkopuolelle (tyhjä ≤ 3,5 %)',
   rajausTulokset.length === RUUDUT.length && rajausTulokset.every((t) => t.ok),
   JSON.stringify(rajausTulokset));
-vaadi('6. paneelin leveys saapumisnäkymässä ≤ 10 % ruudun leveydestä',
+kumottu('6. paneelin leveys saapumisnäkymässä ≤ 10 % ruudun leveydestä',
   leveysTulokset.length === RUUDUT.length && leveysTulokset.every((t) => t.ok),
   JSON.stringify(leveysTulokset));
-vaadi('7. lisää-valikko: kategoriat allekkain tiiviisti (rivivali 1,3× tekstin koko), '
+kumottu('7. lisää-valikko: kategoriat allekkain tiiviisti (rivivali 1,3× tekstin koko), '
   + 'ei taustalaatikkoa, plussan vierellä ja kokonaan ruudulla (390 px ja 1400 px)',
   valikkoTulokset.length === RUUDUT.length && valikkoTulokset.every((t) => t.ok),
   JSON.stringify(valikkoTulokset.map((t) => ({ ruutu: t.ruutu, napit: t.napit, rivit: t.rivit,
     taustaAlfa: t.taustaAlfa, reunusPx: t.reunusPx, nappiTaustaAlfa: t.nappiTaustaAlfa,
     ruudulla: t.ruudulla, rako: t.rako, leikkaa: t.leikkaa, suhteet: t.suhteet,
     vasen: t.vasen, oikeaRako: t.oikeaRako, vasenRako: t.vasenRako, plusYlaero: t.plusYlaero }))));
-vaadi('7b. rivivälin suhde (1,3 ± 5 %) pysyy vakiona kolmella zoomilla '
+kumottu('7b. rivivälin suhde (1,3 ± 5 %) pysyy vakiona kolmella zoomilla '
   + '(saapumis + 2 porrasta sisään, 390 px ja 1400 px)',
   valikkoZoomiTulokset.length === RUUDUT.length && valikkoZoomiTulokset.every((t) => t.ok),
   JSON.stringify(valikkoZoomiTulokset));
-vaadi('8. ankkuri: kapealla ruudulla Lyoninlahti, leveällä Biskajanlahti — '
+kumottu('8. ankkuri: kapealla ruudulla Lyoninlahti, leveällä Biskajanlahti — '
   + 'kortti ruudulla ja meren päällä kummallakin',
   ankkuriTulokset.length === RUUDUT.length && ankkuriTulokset.every((t) => t.ok),
   JSON.stringify(ankkuriTulokset));
@@ -1555,7 +1573,7 @@ for (const ruutu of RUUDUT) {
   /* eslint-enable no-await-in-loop */
 }
 tieto('sivun virheet (Kreikka)', kreikanVirheet.length ? kreikanVirheet.join(' | ') : 'ei yhtään');
-vaadi('9. Kreikan maapaneeli: Joonianmeri (leveä) ja Aigeianmeri (kapea) — merellä, '
+kumottu('9. Kreikan maapaneeli: Joonianmeri (leveä) ja Aigeianmeri (kapea) — merellä, '
   + 'ruudulla, ilman päällekkäisyyksiä, nostojen vasemmalla puolella',
   kreikkaTulokset.length === RUUDUT.length && kreikkaTulokset.every((t) => t.ok),
   JSON.stringify(kreikkaTulokset));
@@ -1615,7 +1633,7 @@ vastakoe = 'B';
     `keskiylä ${p(m?.mitat?.lat, 3)} N / ${p(m?.mitat?.lng, 3)} E, maaosumia ${osumat?.length ?? '—'}`
     + `${osumat?.length ? ` (${[...new Set(osumat.map((o) => o.iso))].join(', ')})` : ''} `
     + `→ väite 2 ${osumat && osumat.length === 0 ? 'LÄPI (paha)' : 'PUNAINEN'}`);
-  vaadi('VASTAKOE B: eteläreunan ankkurilla meriväite kaatuu',
+  kumottu('VASTAKOE B: eteläreunan ankkurilla meriväite kaatuu',
     Boolean(auki && osumat) && osumat.length > 0, JSON.stringify({ auki, osumia: osumat?.length }));
   await ctx.close();
 }
@@ -1632,7 +1650,7 @@ vastakoe = 'H';
     + `kortti x ${p(m?.kortti?.x0, 1)}…${p(m?.kortti?.x1, 1)} / 0…${p(m?.kotelo?.w, 1)}, `
     + `y ${p(m?.kortti?.y0, 1)}…${p(m?.kortti?.y1, 1)} / 0…${p(m?.kotelo?.h, 1)} `
     + `→ väite 8 ${ruudulla ? 'LÄPI (paha)' : 'PUNAINEN'}`);
-  vaadi('VASTAKOE H: ilman kapea-ankkuria paneeli jää pystypuhelimella ruudun ulkopuolelle',
+  kumottu('VASTAKOE H: ilman kapea-ankkuria paneeli jää pystypuhelimella ruudun ulkopuolelle',
     Boolean(auki && m?.kortti) && !ruudulla,
     JSON.stringify({ auki, kortti: m?.kortti, kotelo: m?.kotelo }));
   await ctx.close();
@@ -1657,7 +1675,7 @@ vastakoe = 'C';
     `${tasot.map((t) => `alt ${t.alt} → skaala ${t.skaala}, tulo ${t.tulo}`).join(' | ')}; `
     + `hajonta ${p(100 * hajonta, 2)} % `
     + `→ väite 3 ${hajonta <= SUHTEEN_VARA ? 'LÄPI (paha)' : 'PUNAINEN'}`);
-  vaadi('VASTAKOE C: katolla 0,5 skaalaväite kaatuu',
+  kumottu('VASTAKOE C: katolla 0,5 skaalaväite kaatuu',
     auki && hajonta > SUHTEEN_VARA, JSON.stringify({ auki, hajonta }));
   await ctx.close();
 }
@@ -1697,7 +1715,7 @@ vastakoe = 'E';
   }
   const kaatuiE = tulokset.some((t) => !(t.osuus >= 0) || t.osuus > LEVEYDEN_KATTO);
   tieto('vastakoe E', `→ väite 6 ${kaatuiE ? 'PUNAINEN' : 'LÄPI (paha)'}`);
-  vaadi('VASTAKOE E: ilman erän 15 kattoa leveysväite kaatuu', kaatuiE, JSON.stringify(tulokset));
+  kumottu('VASTAKOE E: ilman erän 15 kattoa leveysväite kaatuu', kaatuiE, JSON.stringify(tulokset));
 }
 
 /* F: erän 12 valikkotyyli → väitteen 7 on kaaduttava. */
@@ -1711,7 +1729,7 @@ vastakoe = 'F';
         + `reunus ${p(v.reunusPx, 2)} px, rako ${p(v.rako, 2)} px `
         + `→ väite 7 ${valikkoKelpaa(v) ? 'LÄPI (paha)' : 'PUNAINEN'}`
       : 'EI AUENNUT');
-  vaadi('VASTAKOE F: erän 12 valikkotyylillä valikkoväite kaatuu',
+  kumottu('VASTAKOE F: erän 12 valikkotyylillä valikkoväite kaatuu',
     Boolean(v?.auki) && !valikkoKelpaa(v), JSON.stringify(v));
   await ctx.close();
 }
@@ -1759,7 +1777,7 @@ vastakoe = 'K';
         + `→ väite 7 ${valikkoKelpaa(v) ? 'LÄPI (paha)' : 'PUNAINEN'}, `
         + `väite 7b ${rivivaliKelpaa(vz) ? 'LÄPI (paha)' : 'PUNAINEN'}`
       : 'EI AUENNUT');
-  vaadi('VASTAKOE K: button-oletuksen min-height: 42px palautettuna rivivälin suhde kaatuu '
+  kumottu('VASTAKOE K: button-oletuksen min-height: 42px palautettuna rivivälin suhde kaatuu '
     + 'saapumiszoomilla ja zoomattuna',
     Boolean(v?.auki) && !rivivaliKelpaa(v) && !rivivaliKelpaa(vz), JSON.stringify({ v, vz }));
   await ctx.close();
@@ -1794,7 +1812,7 @@ vastakoe = 'I';
     `keskiylä ${p(m?.mitat?.lat, 3)} N / ${p(m?.mitat?.lng, 3)} E, kortti x `
     + `${p(m?.kortti?.x0, 1)}…${p(m?.kortti?.x1, 1)}, lähin nosto x ${p(lahin, 1)}, `
     + `rako ${p(rako, 1)} px → väite 9 ${kaatui ? 'PUNAINEN' : 'LÄPI (paha)'}`);
-  vaadi('VASTAKOE I: ilman Kreikan ankkuria paneeli ei ole nostojen vasemmalla puolella',
+  kumottu('VASTAKOE I: ilman Kreikan ankkuria paneeli ei ole nostojen vasemmalla puolella',
     Boolean(auki && m?.kortti) && kaatui, JSON.stringify({ auki, rako: p(rako, 1) }));
   await ctx.close();
 }
