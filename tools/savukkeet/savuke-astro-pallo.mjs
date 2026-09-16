@@ -724,7 +724,9 @@ async function ajaNakyma(nimi) {
     await s.mouse.click(piste.x, piste.y);
     await s.waitForTimeout(2500);
     auki1 = await s.evaluate(AUKI);
-    await s.evaluate(() => document.querySelector('.satelliitti-sulku')?.click());
+    // LISÄYS 8: `.satelliitti-sulku` osuu vain KUVAN sulkuun; linssin
+    // oma ✕ on `.satelliitti-linssisulku` eikä sitä saa napauttaa tässä.
+    await s.evaluate(() => document.querySelector('.satelliitti-katselu .satelliitti-sulku')?.click());
     await s.keyboard.press('Escape');
     await s.waitForTimeout(1000);
   }

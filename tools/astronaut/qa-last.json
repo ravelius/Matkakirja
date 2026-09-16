@@ -1,0 +1,684 @@
+[
+  {
+    "tunnus": "onekotan",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi vuori näyttää olevan järven sisällä?",
+        "vastaus": "Vuoden 2024 kuvassa Krenitsynin tulivuoren kartio kohoaa Tao-Rusyrin kalderan keskeltä, ja sitä ympäröi rengasmainen järvi. Näky on niin siisti, että tekisi mieli kiertää koko rengas siivillä.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss071e046421", "title": "NASA: Onekotan, an uninhabited volcanic island" },
+          { "url": "https://science.nasa.gov/earth/earth-observatory/tao-rusyr-caldera-onekotan-island-kuril-islands-40891/", "title": "NASA Earth Observatory: Tao-Rusyr Caldera, Onekotan Island" }
+        ],
+        "havaintoId": "iss071e046421"
+      },
+      {
+        "kysymys": "Millainen paikka Onekotan on?",
+        "vastaus": "Onekotan on asumaton tulivuorisaari Kuriilien pohjoisosassa. Saari kuuluu Tyynenmeren tulirenkaaseen, ja sen eteläpäässä Krenitsynin kartio kohoaa järven täyttämän Tao-Rusyrin kalderan sisältä.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss071e046421", "title": "NASA: Onekotan, an uninhabited volcanic island" },
+          { "url": "https://science.nasa.gov/earth/earth-observatory/tao-rusyr-caldera-onekotan-island-kuril-islands-40891/", "title": "NASA Earth Observatory: Tao-Rusyr Caldera, Onekotan Island" }
+        ],
+        "havaintoId": "iss071e046421"
+      }
+    ]
+  },
+  {
+    "tunnus": "mataiva",
+    "kysymykset": [
+      {
+        "kysymys": "Mitä valkoiset viivat laguunissa ovat?",
+        "vastaus": "Vuoden 2010 kuvassa vaaleat harjanteet ovat kuluneiden koralliriuttojen jäänteitä. Ne jakavat Mataivan laguunin pieniksi altaiksi — aivan kuin meri olisi piirtänyt itselleen mosaiikin.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss024e011914", "title": "NASA: Earth Observations — Mataiva Atoll" }
+        ],
+        "havaintoId": "iss024e011914"
+      },
+      {
+        "kysymys": "Mistä Mataivan nimi tulee?",
+        "vastaus": "Mataiva tarkoittaa tuamotun kielessä yhdeksää silmää, eli saaren yhdeksää kapeaa kanavaa. Pahua on atollin ainoa kylä, ja se sijaitsee laguunin ainoan pysyvästi mereen yhdistyvän solan molemmin puolin.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss024e011914", "title": "NASA: Earth Observations — Mataiva Atoll" }
+        ],
+        "havaintoId": "iss024e011914"
+      }
+    ]
+  },
+  {
+    "tunnus": "seurasaaret",
+    "kysymykset": [
+      {
+        "kysymys": "Mitkä renkaat kiertävät saaria?",
+        "vastaus": "Vuoden 1999 sukkulakuvassa Bora Boraa, Tahaa ja Raiateaa ympäröivät koralliriutat. Vaaleat, hienot kehät erottuvat meressä niin selvästi, että kolmen saaren seuraaminen käy yhdellä silmäyksellä.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/sts093-717-066", "title": "NASA: Bora-Bora's coral reefs during STS-93" }
+        ],
+        "havaintoId": "sts093-717-066"
+      },
+      {
+        "kysymys": "Mihin saariryhmään nämä saaret kuuluvat?",
+        "vastaus": "Bora Bora, Tahaa ja Raiatea kuuluvat Seurasaariin Ranskan Polynesiassa keskisellä eteläisellä Tyynellämerellä. Samaan saariryhmään kuuluu myös Tahiti, vaikka se ei ole tässä rajauksessa mukana.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/sts093-717-066", "title": "NASA: Bora-Bora's coral reefs during STS-93" }
+        ],
+        "havaintoId": "sts093-717-066"
+      }
+    ]
+  },
+  {
+    "tunnus": "al-wadj",
+    "kysymykset": [
+      {
+        "kysymys": "Mistä veden kirjavat muodot syntyvät?",
+        "vastaus": "Joulukuun 2007 kuvassa vain hiekanväriset saaret ovat vedenpinnan yläpuolella. NASA tulkitsee tummanvihreän meriheinäksi ja turkoosit sävyt matalan riuttajärjestelmän vedeksi, mutta väri ei yksin ole syvyysmittari.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss016e019394", "title": "NASA: Al Wadj Bank, Saudi Arabia" }
+        ],
+        "havaintoId": "iss016e019394"
+      },
+      {
+        "kysymys": "Miksi Al Wadj on tärkeä meriluonnolle?",
+        "vastaus": "Vuoden 2007 kuvaan liittyvässä selosteessa NASA kuvasi Al Wadjin riuttoja hyväkuntoisiksi ja monimuotoisiksi. Seloste mainitsi myös laajat meriheinäniityt ja huomattavan dugongikannan; se ei ole arvio alueen nykytilasta.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss016e019394", "title": "NASA: Al Wadj Bank, Saudi Arabia" }
+        ],
+        "havaintoId": "iss016e019394"
+      }
+    ]
+  },
+  {
+    "tunnus": "ganges",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi suisto näyttää sokkelolta?",
+        "vastaus": "Vuoden 1994 kuvassa Gangesin ja Brahmaputran haarat kuljettavat ja kasaavat lietettä ja savea. Siksi saaret ja vesiväylät muodostavat muuttuvan sokkelon Bengalinlahden rannalle — kartta elää joen mukana.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/sts066-92-013", "title": "NASA: Ganges River Delta, Bangladesh, India" }
+        ],
+        "havaintoId": "sts066-92-013"
+      },
+      {
+        "kysymys": "Mikä tekee Gangesin suistosta erityisen?",
+        "vastaus": "NASA kuvaa sitä maailman suurimmaksi vuorovesien vaikutuspiirissä olevaksi suistoksi. Mangroveliejukot, suokasvillisuus ja hiekkadyynit tekevät siitä tyypillisen mutta poikkeuksellisen laajan trooppisen rannikon.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/sts066-92-013", "title": "NASA: Ganges River Delta, Bangladesh, India" }
+        ],
+        "havaintoId": "sts066-92-013"
+      }
+    ]
+  },
+  {
+    "tunnus": "mississippi-suisto",
+    "kysymykset": [
+      {
+        "kysymys": "Miten linnunjalan muoto syntyy?",
+        "vastaus": "Vuoden 1994 kuvassa joki haarautuu pitkiksi uomiksi ennen Meksikonlahtea. Kun virtaus hidastuu, hiekka, liete ja savi laskeutuvat ja pidentävät suiston kapeita “varpaita” merelle päin.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/STS062-85-021", "title": "NASA: Mississippi River Delta as seen from STS-62" }
+        ],
+        "havaintoId": "STS062-85-021"
+      },
+      {
+        "kysymys": "Onko tämä suisto aina ollut samassa paikassa?",
+        "vastaus": "Ei. Mississippi on historiansa aikana rakentanut uusia suistohaaroja, kun tulvat ovat löytäneet lyhyemmän reitin mereen; vanhat haarat painuvat ja muuttuvat soiksi ja lahdiksi. Kuvan Balize-haara on näistä nuorimpia.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/STS062-85-021", "title": "NASA: Mississippi River Delta as seen from STS-62" }
+        ],
+        "havaintoId": "STS062-85-021"
+      }
+    ]
+  },
+  {
+    "tunnus": "zeeland",
+    "kysymykset": [
+      {
+        "kysymys": "Mitä vesien ja kaupunkien verkko esittää?",
+        "vastaus": "Vuoden 2024 kuvassa Haag ja Rotterdam näkyvät Reinin, Maasin ja Schelden yhteisen suistoalueen vierellä Pohjanmeren rannalla. Täällä joet, satamat ja meriväylät lomittuvat hyvin tiheäksi verkoksi.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss071e488058", "title": "NASA: The Hague and Rotterdam by the river delta" }
+        ],
+        "havaintoId": "iss071e488058"
+      },
+      {
+        "kysymys": "Miksi Zeelandissa on valtavia sulkuportteja?",
+        "vastaus": "Vuoden 1953 tuhoisan Pohjanmeren tulvan jälkeen Alankomaat rakensi Deltawerken-suojajärjestelmän. Oosterschelden liikkuvat portit suljetaan vaarallisen korkean veden ajaksi, mutta tavallisesti vuorovesi pääsee kulkemaan.",
+        "lahteet": [
+          { "url": "https://www.rijkswaterstaat.nl/en/projects/iconic-structures/eastern-scheldt-barrier", "title": "Rijkswaterstaat: Eastern Scheldt barrier" }
+        ],
+        "havaintoId": "iss071e488058"
+      }
+    ]
+  },
+  {
+    "tunnus": "niger-suisto",
+    "kysymykset": [
+      {
+        "kysymys": "Kuinka suisto voi olla keskellä mannerta?",
+        "vastaus": "Vuoden 2023 kuvassa Nigerjoki leviää Malin tasaiselle sisämaalle moniksi uomiksi ja tulvatasangoiksi. Se näyttää merisuistolta, vaikka vesi kokoontuu myöhemmin takaisin joeksi ja jatkaa matkaansa etelään.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss070e030773", "title": "NASA: Niger River creates an inland delta in Mali" },
+          { "url": "https://www.ramsar.org/sites/default/files/documents/library/wurc_mgt_planning2008.pdf", "title": "Ramsar: Stakeholder involvement in the Inner Niger Delta" }
+        ],
+        "havaintoId": "iss070e030773"
+      },
+      {
+        "kysymys": "Miten sisämaan suisto elättää ihmisiä?",
+        "vastaus": "Kausittainen tulva muuttaa alueen vesien ja tulvatasankojen mosaiikiksi. Ramsarin aineiston mukaan kalastus, karjanhoito ja riisinviljely ovat suiston keskeisiä elinkeinoja — veden rytmi määrää vuoden tahdin.",
+        "lahteet": [
+          { "url": "https://www.ramsar.org/sites/default/files/documents/library/wurc_mgt_planning2008.pdf", "title": "Ramsar: Stakeholder involvement in the Inner Niger Delta" }
+        ],
+        "havaintoId": "iss070e030773"
+      }
+    ]
+  },
+  {
+    "tunnus": "uyuni",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi tasanko hohtaa valkoisena?",
+        "vastaus": "Vuoden 2005 kuvassa Uyunin pinta on vaalea mineraalikuori, jossa on etenkin haliittia eli ruokasuolaa ja kipsiä. Tumma Tunupan tulivuori nousee sen reunalta, joten vastakohta näkyy kiertoradalle asti.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss012e06456", "title": "NASA: Salar de Uyuni and Mount Tunupa" }
+        ],
+        "havaintoId": "iss012e06456"
+      },
+      {
+        "kysymys": "Miten Uyunin suolatasanko syntyi?",
+        "vastaus": "Bolivian Altiplanon altailla ei ole laskujokia merelle. Muinaisen järven veden haihtuessa mineraalit jäivät pohjalle, ja kerrostumiin tallentui myös alueen aiempien vedenkorkeuksien ja ilmaston vaihtelujen historiaa.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss012e06456", "title": "NASA: Salar de Uyuni and Mount Tunupa" }
+        ],
+        "havaintoId": "iss012e06456"
+      }
+    ]
+  },
+  {
+    "tunnus": "araljarvi",
+    "kysymykset": [
+      {
+        "kysymys": "Mitä vuoden 1994 kuvassa näkyy?",
+        "vastaus": "Kuva näyttää Araljärven osittain jään peittämänä huhtikuussa 1994, ei sen nykytilaa. Etelässä näkyvät Amudarjan kasteltu viuhkasuisto ja laajat suolatasangot — tämä on yhden ajanhetken historiallinen havainto.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/sts059-l22-140", "title": "NASA: Aral Sea seen from STS-59" }
+        ],
+        "havaintoId": "sts059-l22-140"
+      },
+      {
+        "kysymys": "Miksi Araljärvi alkoi kutistua?",
+        "vastaus": "Aral oli aikanaan maailman neljänneksi suurin sisäjärvi. NASA liittää sen pienenemisen siihen, että järveen virtaavaa jokivettä ohjattiin ja käytettiin liikaa kasteluun kuivassa ilmastossa.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/sts059-l22-140", "title": "NASA: Aral Sea seen from STS-59" }
+        ],
+        "havaintoId": "sts059-l22-140"
+      }
+    ]
+  },
+  {
+    "tunnus": "baikal",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Baikal on kokonaan vaalea?",
+        "vastaus": "Huhtikuun 1994 sukkulakuvassa Baikaljärven pinta on jään peitossa. Pilvet kulkevat osan kuvan yli, mutta pitkä järviallas erottuu silti selvästi Siperian suuren repeämälaakson sisällä.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/sts059-90-098", "title": "NASA: Ice-covered Lake Baikal during STS-59" }
+        ],
+        "havaintoId": "sts059-90-098"
+      },
+      {
+        "kysymys": "Kuinka syvä Baikal on?",
+        "vastaus": "Baikal on syvimmillään runsaat 1,6 kilometriä ja maailman syvin järvi. Sen pitkä allas sijaitsee maankuoren repeämässä, ja valtava vesimäärä tekee siitä myös maailman suurimman makean veden järven tilavuudeltaan.",
+        "lahteet": [
+          { "url": "https://pubs.usgs.gov/fs/baikal/", "title": "USGS: Lake Baikal — A Touchstone for Global Change and Rift Studies" },
+          { "url": "https://whc.unesco.org/en/list/754", "title": "UNESCO World Heritage Centre: Lake Baikal" }
+        ],
+        "havaintoId": "sts059-90-098"
+      }
+    ]
+  },
+  {
+    "tunnus": "suolajarvi-utah",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi järven puoliskot ovat eri väriset?",
+        "vastaus": "Vuoden 2025 kuvassa rautatiepenger rajoittaa veden sekoittumista Ison Suolajärven puoliskojen välillä. NASA kertoo punaisen osan olevan paljon suolaisempi kuin sinisen, vähäsuolaisemman osan.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss073e0865636", "title": "NASA: Bear Lake and Great Salt Lake" }
+        ],
+        "havaintoId": "iss073e0865636"
+      },
+      {
+        "kysymys": "Miten viereinen Bear Lake eroaa siitä?",
+        "vastaus": "Bear Lake on makeavetinen ja keskimäärin noin 63 metriä syvä. Iso Suolajärvi on sitä suurempi mutta keskimäärin vain noin neljä metriä syvä — naapureina ne ovat aivan eri luonteiset järvet.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss073e0865636", "title": "NASA: Bear Lake and Great Salt Lake" }
+        ],
+        "havaintoId": "iss073e0865636"
+      }
+    ]
+  },
+  {
+    "tunnus": "carnegie",
+    "kysymykset": [
+      {
+        "kysymys": "Mitä Carnegiejärven pinnalla näkyy?",
+        "vastaus": "Syyskuun 2024 kuvassa näkyy veden ja mudan sekoitus, ei tasainen järvenselkä. NASA kuvaa Carnegieä ajoittaiseksi järveksi, joten eri sävyiset laikut kertovat juuri tuon kuvaushetken kirjavasta pinnasta.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss071e615200", "title": "NASA: Lake Carnegie in Western Australia" }
+        ],
+        "havaintoId": "iss071e615200"
+      },
+      {
+        "kysymys": "Miksi Carnegiejärvi katoaa välillä?",
+        "vastaus": "Carnegie täyttyy kunnolla vain voimakkaiden sateiden aikana. Kuivina vuosina yksi Länsi-Australian suurimmista järvistä on enimmäkseen mutainen suo — sana “järvi” ei siis lupaa vettä jokaisena päivänä.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss071e615200", "title": "NASA: Lake Carnegie in Western Australia" }
+        ],
+        "havaintoId": "iss071e615200"
+      }
+    ]
+  },
+  {
+    "tunnus": "riftin-jarvet",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi kolme järveä ovat eri värisiä?",
+        "vastaus": "Toukokuun 2024 kuvassa Shala ja Abijatta ovat emäksisiä järviä. NASA yhdistää Langanon ruskean värin runsaaseen rikkiin ja muihin mineraaleihin; pelkästä väristä ei silti pidä päätellä tarkkaa syvyyttä.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss071e132461", "title": "NASA: A Trio of Ethiopian Lakes" }
+        ],
+        "havaintoId": "iss071e132461"
+      },
+      {
+        "kysymys": "Mitkä järvet kuvassa ovat?",
+        "vastaus": "Etiopian hautavajoaman järvet ovat vasemmalta oikealle Shala, Abijatta ja Langano. Kolmikko mahtuu samaan avaruuskuvaan, vaikka jokaisella järvellä on oma vesikemiansa ja ilmeensä.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss071e132461", "title": "NASA: A Trio of Ethiopian Lakes" }
+        ],
+        "havaintoId": "iss071e132461"
+      }
+    ]
+  },
+  {
+    "tunnus": "kanadan-palot",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi savuvanat kulkevat samaan suuntaan?",
+        "vastaus": "Elokuun 2025 kuvassa useat palot lähettävät savua Kanadan keskisten provinssien ylle. Yhtenäinen ilmavirtaus venyttää erilliset savupatsaat samansuuntaisiksi vanoiksi — kuin monta harmaata sulkaa rinnakkain.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss073e0420617", "title": "NASA: Wildfires burn throughout Canada's central provinces" }
+        ],
+        "havaintoId": "iss073e0420617"
+      },
+      {
+        "kysymys": "Kuinka kauas palojen savu kulkeutui?",
+        "vastaus": "NASA raportoi savun ajautuneen Yhdysvaltojen Suurten järvien alueelle ja koillisosaan asti, missä se heikensi ilmanlaatua. Kuvan pitkät vanat eivät siis jääneet vain palopaikkojen ylle.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss073e0420617", "title": "NASA: Wildfires burn throughout Canada's central provinces" }
+        ],
+        "havaintoId": "iss073e0420617"
+      }
+    ]
+  },
+  {
+    "tunnus": "mount-hood",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä työntää paksun savun vuoren viereen?",
+        "vastaus": "Heinäkuun 2026 kuvassa savu nousee Grasshopper-metsäpalosta, ei Mount Hoodin kraatterista. Luminen vuori näkyy kuvan vasemmassa yläosassa, joten vierekkäisyys voi ensi silmäyksellä narrata.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss075e0001471", "title": "NASA: Grasshopper wildfire near Mount Hood" }
+        ],
+        "havaintoId": "iss075e0001471"
+      },
+      {
+        "kysymys": "Onko Mount Hood itse tulivuori?",
+        "vastaus": "On: USGS luokittelee Mount Hoodin aktiiviseksi Kaskadien tulivuoreksi ja Oregonin korkeimmaksi huipuksi. Se sijaitsee noin 80 kilometriä Portlandin metropolialueesta itään.",
+        "lahteet": [
+          { "url": "https://www.usgs.gov/volcanoes/mount-hood/science/geology-and-history-summary-mount-hood", "title": "USGS: Geology and History Summary for Mount Hood" }
+        ],
+        "havaintoId": "iss075e0001471"
+      }
+    ]
+  },
+  {
+    "tunnus": "nasser",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi järven ranta haarautuu kuin puu?",
+        "vastaus": "Lokakuun 2025 kuvassa Nasserjärven vesi täyttää Niilin vanhan laakson ja sen sivulaaksot. Siksi tekojärven reuna haarautuu aavikkoon lukuisina pitkinä lahtina — kartta näyttää melkein suonistolta.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss073e0879542", "title": "NASA: Lake Nasser, created by the Aswan High Dam" }
+        ],
+        "havaintoId": "iss073e0879542"
+      },
+      {
+        "kysymys": "Miksi Nasserjärvi rakennettiin?",
+        "vastaus": "Nasserjärvi syntyi Assuanin korkean padon taakse Etelä-Egyptiin. Se varastoi Ylä-Niilin vettä ja säännöstelee virtausta Ala-Niilille; järvi jatkuu myös pohjoisen Sudanin puolelle.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss073e0879542", "title": "NASA: Lake Nasser, created by the Aswan High Dam" }
+        ],
+        "havaintoId": "iss073e0879542"
+      }
+    ]
+  },
+  {
+    "tunnus": "kasteluympyrat",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi pellot ovat täydellisiä ympyröitä?",
+        "vastaus": "Huhtikuun 1997 kuvassa kasteluvarsi pyörii kaivon ympärillä ja levittää vettä tasaiselle säteelle. Siksi vihreä kasvusto piirtyy aavikkoon ympyräksi; putki toimii kuin valtava kellonviisari.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/sts083-747-033", "title": "NASA: Center Pivot Irrigation in Saudi Arabia" }
+        ],
+        "havaintoId": "sts083-747-033"
+      },
+      {
+        "kysymys": "Mistä aavikkopellot saavat vetensä?",
+        "vastaus": "Vettä pumpataan jopa noin 900 metrin syvyydestä fossiilisista pohjavesivarastoista. NASA muistuttaa, että vesi kertyi kosteampina jääkausijaksoina eikä uusiudu nykyilmastossa samaa tahtia kuin sitä käytetään.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/sts083-747-033", "title": "NASA: Center Pivot Irrigation in Saudi Arabia" }
+        ],
+        "havaintoId": "sts083-747-033"
+      }
+    ]
+  },
+  {
+    "tunnus": "khufrah",
+    "kysymykset": [
+      {
+        "kysymys": "Mitä vihreät kiekot Saharassa ovat?",
+        "vastaus": "Vuoden 2004 kuvassa kiekot ovat noin kilometrin levyisiä peltoja, joita kastellaan keskeltä pyörivällä putkivarrella. Tummilla pelloilla kasvoi esimerkiksi vehnää tai sinimailasta; vaalea pelto saattoi olla eri työvaiheessa.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss010e05266", "title": "NASA: Al Khufrah Oasis" }
+        ],
+        "havaintoId": "iss010e05266"
+      },
+      {
+        "kysymys": "Mikä Al Khufrahin keidas on?",
+        "vastaus": "Al Khufrah sijaitsee Kaakkois-Libyassa lähellä Egyptin rajaa ja kuuluu Libyan suurimpiin maataloushankkeisiin. Keskipistekastelun ympyrät tekevät siitä myös helposti tunnistettavan maamerkin avaruudesta.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss010e05266", "title": "NASA: Al Khufrah Oasis" }
+        ],
+        "havaintoId": "iss010e05266"
+      }
+    ]
+  },
+  {
+    "tunnus": "lake-powell",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Powelljärvi on niin mutkikas?",
+        "vastaus": "Vuoden 2001 kuvassa vesi seuraa syvälle uurtunutta Coloradon jokilaaksoa ja sen sivuhaaroja. Tekojärvi ei siis täytä pyöreää allasta, vaan vanhojen kanjonien mutkat — ilmasta se näyttää siniseltä oksistolta.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/STS100-716-176", "title": "NASA: Lake Powell during STS-100" }
+        ],
+        "havaintoId": "STS100-716-176"
+      },
+      {
+        "kysymys": "Miten Powelljärvi sai alkunsa?",
+        "vastaus": "Glen Canyonin pato varastoi Ylä-Coloradon vettä ja synnytti Powelljärven. Pato on Pohjois-Arizonassa, kun taas suuri osa kuvassa näkyvästä tekojärvestä ja sen Escalante- ja San Juan -sivuhaaroista on Utahissa.",
+        "lahteet": [
+          { "url": "https://home.nps.gov/glca/learn/nature/hydrologicactivity.htm", "title": "National Park Service: Hydrologic Activity at Glen Canyon" },
+          { "url": "https://images.nasa.gov/details/STS100-716-176", "title": "NASA: Lake Powell during STS-100" }
+        ],
+        "havaintoId": "STS100-716-176"
+      }
+    ]
+  },
+  {
+    "tunnus": "issaouane",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi dyynit kulkevat moneen suuntaan?",
+        "vastaus": "Vuoden 2006 kuvassa vanhojen megadyynien päällä on pienempiä, eri suuntiin kaartuvia harjanteita. Eri kokoiset dyynit reagoivat eri aikojen ja paikallisten korkeuserojen ohjaamiin tuuliin — siinä on monta rytmiä päällekkäin.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss013e65526", "title": "NASA: Issaouane Dune Sea, Eastern Algeria" }
+        ],
+        "havaintoId": "iss013e65526"
+      },
+      {
+        "kysymys": "Kuinka Issaouanen hiekkameri syntyi?",
+        "vastaus": "Kun Sahara kuivui voimakkaasti noin 2,5 miljoonaa vuotta sitten, pienenevät joet jättivät hiekkakuormansa sisämaahan. Tuuli kasasi aineksen vähitellen suuriksi dyyniketjuiksi, joita pienemmät dyynit yhä muokkaavat.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss013e65526", "title": "NASA: Issaouane Dune Sea, Eastern Algeria" }
+        ],
+        "havaintoId": "iss013e65526"
+      }
+    ]
+  },
+  {
+    "tunnus": "white-sands",
+    "kysymykset": [
+      {
+        "kysymys": "Onko White Sandsin valkea aines hiekkaa?",
+        "vastaus": "On, mutta se on mineraaliltaan kipsihiekkaa eikä tavallista kvartsihiekkaa. Hiekka tarkoittaa raekokoa: NPS kertoo White Sandsin dyynien olevan noin 98-prosenttisesti kipsihiekkaa — oikeaa hiekkaa siis.",
+        "lahteet": [
+          { "url": "https://www.nps.gov/whsa/learn/sand.htm", "title": "National Park Service: Sand at White Sands" },
+          { "url": "https://images.nasa.gov/details/sts060-83-016", "title": "NASA: White Sands as seen from STS-60" }
+        ],
+        "havaintoId": "sts060-83-016"
+      },
+      {
+        "kysymys": "Miksi kipsihiekka säilyy juuri täällä?",
+        "vastaus": "Tularosan allas on kuin malja ilman laskuaukkoa: vesi tuo vuorilta liuennutta kipsiä, mutta ei vie sitä mereen. Haihtuminen jättää seleniittikiteitä, jotka vesi ja tuuli jauhavat hiekan kokoisiksi rakeiksi.",
+        "lahteet": [
+          { "url": "https://www.nps.gov/whsa/learn/geology-of-white-sands.htm", "title": "National Park Service: Geology of White Sands" }
+        ],
+        "havaintoId": "sts060-83-016"
+      }
+    ]
+  },
+  {
+    "tunnus": "merijaa",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi jää piirtää pyörteitä mereen?",
+        "vastaus": "Huhtikuun 2024 kuvassa merijää kelluu valkoisina kiehkuroina Newfoundlandin edustalla. Veden liike hajottaa ja kiertää jääkenttää, joten astronautti Mike Barratt näki pinnalla melkein siveltimenvetoja.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss071e046021", "title": "NASA: Sea ice swirls in the North Atlantic Ocean" }
+        ],
+        "havaintoId": "iss071e046021"
+      },
+      {
+        "kysymys": "Onko merijää sama asia kuin jäävuori?",
+        "vastaus": "Ei. Merijää syntyy, kasvaa ja sulaa suolaisessa merivedessä, kun taas jäävuori on maalla syntyneestä jäätiköstä tai jäähyllystä irronnut kappale. Tässä NASA tunnistaa valkoiset kuviot merijääksi.",
+        "lahteet": [
+          { "url": "https://nsidc.org/learn/parts-cryosphere/sea-ice/science-sea-ice", "title": "NSIDC: Science of Sea Ice" },
+          { "url": "https://images.nasa.gov/details/iss071e046021", "title": "NASA: Sea ice swirls in the North Atlantic Ocean" }
+        ],
+        "havaintoId": "iss071e046021"
+      }
+    ]
+  },
+  {
+    "tunnus": "suez",
+    "kysymykset": [
+      {
+        "kysymys": "Mitä suora vesiviiva aavikolla on?",
+        "vastaus": "Marraskuun 2023 kuvassa näkyvät Suezin kanavan eteläosa ja oikealla Suezinlahti. Kanava on suolainen laivaväylä Välimeren ja Punaisenmeren välillä; sen vierellä näkyvä vihreys ei saa vetensä suoraan tästä merikanavasta.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss070e034694", "title": "NASA: Southern portion of the Suez Canal" },
+          { "url": "https://www.esa.int/Applications/Observing_the_Earth/Earth_from_Space_Suez_Canal", "title": "ESA: Earth from Space — Suez Canal" }
+        ],
+        "havaintoId": "iss070e034694"
+      },
+      {
+        "kysymys": "Mistä kanavanvarren viljely saa makeaa vettä?",
+        "vastaus": "Viljelyä palvelee erillinen makean veden kastelujärjestelmä, muun muassa Niilin vettä tuova Ismailian–Suezin kanavaverkko. Suezin laivakanavan vesi on merivettä, joten sitä ei pidä sekoittaa tähän kasteluveteen.",
+        "lahteet": [
+          { "url": "https://sis.gov.eg/en/media-center/news/irrigation-minister-full-study-of-suez-canal-vital-to-ensure-meeting-water-needs/", "title": "Egypt State Information Service: Suez irrigation canal and water needs" },
+          { "url": "https://www.esa.int/Applications/Observing_the_Earth/Earth_from_Space_Suez_Canal", "title": "ESA: Earth from Space — Suez Canal" }
+        ],
+        "havaintoId": "iss070e034694"
+      }
+    ]
+  },
+  {
+    "tunnus": "tiran",
+    "kysymykset": [
+      {
+        "kysymys": "Mikä hopeinen hohde vedessä on?",
+        "vastaus": "Kesäkuun 2013 kuvassa hohde on auringonvälkettä: valo heijastuu veden pinnasta kohti avaruusasemaa. Se voi tuoda näkyviin aaltoja ja virtauksia, mutta kirkkaus ei tarkoita vaaleaa pohjaa.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss036e010628", "title": "NASA: Strait of Tiran, Red Sea and Gulf of Aqaba" }
+        ],
+        "havaintoId": "iss036e010628"
+      },
+      {
+        "kysymys": "Miksi Tiranin salmi on strateginen?",
+        "vastaus": "Noin kuusi kilometriä leveä salmi yhdistää Akabanlahden Punaiseenmereen ja sisältää suurille laivoille kaksi kulkukelpoista väylää. Siksi sen hallinta vaikutti esimerkiksi Suezin kriisiin 1956 ja kuuden päivän sotaan 1967.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss036e010628", "title": "NASA: Strait of Tiran, Red Sea and Gulf of Aqaba" }
+        ],
+        "havaintoId": "iss036e010628"
+      }
+    ]
+  },
+  {
+    "tunnus": "tunis",
+    "kysymykset": [
+      {
+        "kysymys": "Mitä pimeät aukot Tunisin valoissa ovat?",
+        "vastaus": "Toukokuun 2025 yökuvassa Tunis sijoittuu kahden tumman vesialueen väliin: Tunisjärvi on kaupungin koillispuolella ja kausittainen Sebkhet Sejoumi lounaassa. Valot piirtävät niiden reunat näkyviin.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss073e0078538", "title": "NASA: The city lights of Tunis" }
+        ],
+        "havaintoId": "iss073e0078538"
+      },
+      {
+        "kysymys": "Missä Tunis sijaitsee?",
+        "vastaus": "Tunis on Tunisian pääkaupunki Välimeren puolella Tunislahden äärellä. Se on Tunisjärven ja kausittaisen suolatasangon välissä; valojen eri sävyistä ei kuitenkaan voi päätellä kaupunginosien ikää.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss073e0078538", "title": "NASA: The city lights of Tunis" }
+        ],
+        "havaintoId": "iss073e0078538"
+      }
+    ]
+  },
+  {
+    "tunnus": "kairo-yolla",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Kairon valot ovat kahden värisiä?",
+        "vastaus": "Tammikuun 2026 kuvassa keskustan uudemmat led-valot hohtavat valkoisina, kun monilla esikaupunkialueilla käytetään yhä lämpimän meripihkan sävyisiä suurpainenatriumlamppuja. Väri kertoo lampusta, ei alueen iästä.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss074e0043697", "title": "NASA: Cairo metropolitan area at night" }
+        ],
+        "havaintoId": "iss074e0043697"
+      },
+      {
+        "kysymys": "Miten Niili jakaa Kairon?",
+        "vastaus": "Kairon metropolialue levittäytyy Niilin molemmille puolille aivan Niilin suiston eteläreunalla. Tammikuun 2026 yökuvassa tumma jokinauha halkoo kaupunkivalojen verkkoa ja auttaa hahmottamaan kaupungin muodon.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss074e0043697", "title": "NASA: Cairo metropolitan area at night" }
+        ],
+        "havaintoId": "iss074e0043697"
+      }
+    ]
+  },
+  {
+    "tunnus": "bingham",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi kaivoksen seinät ovat raidalliset?",
+        "vastaus": "Vuoden 2007 kuvassa raidat ovat 16–25 metriä korkeita louhintapenkereitä eli terasseja. Ne antavat koneille pääsyn kallioon ja vakauttavat avolouhoksen jyrkkiä seiniä; leveä tumma kierre on ajotie.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss015e29867", "title": "NASA: Bingham Canyon Mine, Utah" }
+        ],
+        "havaintoId": "iss015e29867"
+      },
+      {
+        "kysymys": "Mitä Binghamin kaivoksesta louhitaan?",
+        "vastaus": "Kuparia. Malmi syntyi, kun maan sisällä jäähtyvän magman kuumat nesteet kerryttivät kuparimineraaleja ympäröivään kallioon. NASA kuvaa Bingham Canyonia yhdeksi maailman suurimmista avolouhoksista.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss015e29867", "title": "NASA: Bingham Canyon Mine, Utah" }
+        ],
+        "havaintoId": "iss015e29867"
+      }
+    ]
+  },
+  {
+    "tunnus": "faiyum",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi Faiyum näyttää lehdeltä aavikossa?",
+        "vastaus": "Lokakuun 2019 kuvassa vihreä Faiyumin keidas työntyy Niililtä länteen kuin lehti varresta. Muoto syntyy viljellyn keidasalueen ja ympäröivän vaalean aavikon voimakkaasta rajasta.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss061e004613", "title": "NASA: Faiyum Oasis" }
+        ],
+        "havaintoId": "iss061e004613"
+      },
+      {
+        "kysymys": "Missä Faiyumin keidas sijaitsee?",
+        "vastaus": "Faiyum levittäytyy Niilin länsipuolelle ja Kairon eteläpuolelle Egyptissä. Samassa kuvassa Niilin vehreä suisto avautuu pohjoiseen kohti Välimerta — hyvä suunnistuskuva myös korkealla lentävälle linnulle.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss061e004613", "title": "NASA: Faiyum Oasis" }
+        ],
+        "havaintoId": "iss061e004613"
+      }
+    ]
+  },
+  {
+    "tunnus": "ulawun",
+    "kysymykset": [
+      {
+        "kysymys": "Miten erotan tuhkapilven tavallisista pilvistä?",
+        "vastaus": "Marraskuun 2012 kuvassa valkea höyry- ja tuhkapilvi alkaa suoraan Ulawunin huippukraatterista ja venyy luoteeseen. Läheisen Bamusvuoren yllä olevat valkoiset kumpupilvet eivät NASA:n mukaan ole vulkaanisia.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss034e005496", "title": "NASA: Eruption at Ulawun volcano" }
+        ],
+        "havaintoId": "iss034e005496"
+      },
+      {
+        "kysymys": "Millainen tulivuori Ulawun on?",
+        "vastaus": "Ulawun kohoaa Uuden-Britannian saarella Papua-Uudessa-Guineassa 2 334 metriin ja on saaren korkein tulivuori. NASA luonnehtii sitä yhdeksi alueen aktiivisimmista, ja toimintaa tunnetaan ainakin vuodesta 1700.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss034e005496", "title": "NASA: Eruption at Ulawun volcano" }
+        ],
+        "havaintoId": "iss034e005496"
+      }
+    ]
+  },
+  {
+    "tunnus": "jaavuori",
+    "kysymykset": [
+      {
+        "kysymys": "Miksi jäävuori on litteä kuin pöytä?",
+        "vastaus": "Vuoden 1991 kuvassa tasakantinen jäävuori on murtunut Etelämantereen mannerjäätiköstä. Sen pinta oli jo ennen irtoamista laaja ja tasainen, joten merelle lähtenyt kappale säilyttää pöytämäisen muodon.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/sts048-73-000q", "title": "NASA: Large Tabular Iceberg, South Atlantic Ocean" }
+        ],
+        "havaintoId": "sts048-73-000q"
+      },
+      {
+        "kysymys": "Kuinka suuri tämä pöytäjäävuori oli?",
+        "vastaus": "NASA arvioi jäävuoren kooksi noin 35 kertaa 69 kilometriä. Tuuli, merivirrat ja vuorovesi kuljettivat sitä hitaasti pohjoiseen ja itään Etelä-Atlantilla — aikamoinen jäälaiva ilman kapteenia.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/sts048-73-000q", "title": "NASA: Large Tabular Iceberg, South Atlantic Ocean" }
+        ],
+        "havaintoId": "sts048-73-000q"
+      }
+    ]
+  },
+  {
+    "tunnus": "heard",
+    "kysymykset": [
+      {
+        "kysymys": "Mitä jäätiköiden keskeltä kohoaa?",
+        "vastaus": "Helmikuun 2009 kuvassa Mawson Peak kohoaa Big Ben -tulivuoren sortumakalderan laidalla. Huipun varjo osoittaa kohti puolikuun muotoista kalderan reunaa, ja Gotley- sekä Lied-jäätiköt peittävät rinteitä.",
+        "lahteet": [
+          { "url": "https://images.nasa.gov/details/iss018e038182", "title": "NASA: Mawson Peak, Heard Island" }
+        ],
+        "havaintoId": "iss018e038182"
+      },
+      {
+        "kysymys": "Miksi Heardin saari on erityinen?",
+        "vastaus": "Heard on syrjäinen subantarktinen tulivuorisaari eteläisellä Intian valtamerellä ja kuuluu UNESCOn maailmanperintöön. Sen lähes koskematon luonto sekä aktiiviset tulivuoret ja nopeasti muuttuvat jäätiköt ovat arvokkaita tutkimukselle.",
+        "lahteet": [
+          { "url": "https://whc.unesco.org/en/list/577", "title": "UNESCO World Heritage Centre: Heard and McDonald Islands" },
+          { "url": "https://images.nasa.gov/details/iss018e038182", "title": "NASA: Mawson Peak, Heard Island" }
+        ],
+        "havaintoId": "iss018e038182"
+      }
+    ]
+  }
+]
