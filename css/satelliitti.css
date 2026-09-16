@@ -1,17 +1,32 @@
 /*
- * SATELLIITTILINSSI — hohtavat havaintopisteet pallolla, linssin oma
- * yläpalkki ja havaintokortin galleria.
+ * SATELLIITTILINSSI — havaintopisteet pallolla, linssin oma yläpalkki
+ * ja havaintokortin galleria.
  *
  * Tyylitiedosto ladataan ajossa (js/linssit/satelliitti.js
  * lataaSatelliittiTyyli), kuten muillakin kelluvilla pinnoilla.
  *
- * HEHKU ILMAN PULSSIA (omistajan tilaus 12.9.2026: *"Uudet kohteet
- * näkyisivät hohtavina vihreinä pisteinä pallolla"* — ja linssin
- * vaatimus, ettei hehku sykkisi jatkuvasti). Sykkivä elementti pakottaa
- * pallon piirtymään uudelleen joka kehyksellä (js/linssit/kerros.js
- * haivyta: 15 fps vastaan 60 fps), joten tässä on kolme PAIKALLAAN
- * pysyvää kerrosta — sädekehä, rengas ja ydin — ja liike on vain
- * kertaluonteinen ilmestyminen. Liikkeenvähennys nollaa senkin.
+ * PELKKÄ VIHREÄ PISTE (omistaja 16.9.2026, sanatarkasti: *"Muutamilla
+ * nuo hehkuvat pisteet pelkeiksi vihreäksi pisteeksi ilman ympyrää ja
+ * pisteen ympärillä."*).
+ *
+ * Aiemmin merkki oli kolme kerrosta: 46 px:n sädekehä, 18 px:n
+ * hehkuva rengas ja 6 px:n valkoinen ydin. Avaruusnäkymässä pisteitä
+ * on kerralla yli kolmekymmentä koko pallon alalla, ja kolme kerrosta
+ * teki niistä rypäleitä — kaksi lähekkäistä kohdetta sulautui yhdeksi
+ * hehkuvaksi läiskäksi. Nyt merkki on YKSI tasainen vihreä piste (7
+ * px, sama sävy #5dffa8) ilman rengasta ja ilman `box-shadow`-hohtoa.
+ *
+ * OSUMA-ALUE EI PIENENTYNYT. Napautus lasketaan pallon pinnasta
+ * (js/pallolauta/lauta.js lahinLinssimerkki, 44 px:n säde) eikä
+ * elementistä, ja merkin oma `pointer-events` on yhä `none`. Pisteen
+ * rinnalla on silti LÄPINÄKYVÄ osuma-ala (.satelliitti-osuma, 36 px),
+ * jotta merkin ruutuala pysyy sormen kokoisena myös silmämääräisesti
+ * ja vartio voi mitata sen (tools/savukkeet/savuke-astro-pallo.mjs).
+ *
+ * EI JATKUVAA LIIKETTÄ. Sykkivä elementti pakottaisi pallon
+ * piirtymään uudelleen joka kehyksellä (js/linssit/kerros.js haivyta:
+ * 15 fps vastaan 60 fps), joten liike on vain kertaluonteinen
+ * ilmestyminen. Liikkeenvähennys nollaa senkin.
  */
 
 .satelliitti-piste {
@@ -23,11 +38,14 @@
      pallolaudan merkeillä. */
   pointer-events: none;
   --satelliitti-vihrea: #5dffa8;
-  --satelliitti-tumma: rgba(12, 40, 26, 0.75);
+  /* Pisteen halkaisija: 7 px on pieni mutta erottuu meren sinisestä
+     myös avausnäkymässä, jossa pallo on 330 px leveä. */
+  --satelliitti-pisteen-koko: 7px;
+  /* Läpinäkyvä osuma-ala sormen mitassa (ks. tiedoston alku). */
+  --satelliitti-osuman-koko: 36px;
 }
 
-.satelliitti-hehku,
-.satelliitti-rengas,
+.satelliitti-osuma,
 .satelliitti-ydin {
   position: absolute;
   left: 50%;
@@ -36,35 +54,31 @@
   border-radius: 50%;
 }
 
-/* Sädekehä: pehmeä, matala peittävyys — erottuu kartasta mutta ei peitä. */
-.satelliitti-hehku {
-  width: 46px;
-  height: 46px;
-  background: radial-gradient(circle,
-    rgba(93, 255, 168, 0.42) 0%,
-    rgba(93, 255, 168, 0.18) 42%,
-    rgba(93, 255, 168, 0) 72%);
+/*
+ * OSUMA-ALA ON LÄPINÄKYVÄ eikä piirrä mitään: ei taustaa, ei reunaa,
+ * ei varjoa. Se on merkin ruutuala, ei sen ulkoasu.
+ */
+.satelliitti-osuma {
+  width: var(--satelliitti-osuman-koko);
+  height: var(--satelliitti-osuman-koko);
+  background: transparent;
 }
 
-.satelliitti-rengas {
-  width: 18px;
-  height: 18px;
-  border: 2px solid var(--satelliitti-vihrea);
-  box-shadow: 0 0 8px rgba(93, 255, 168, 0.85), inset 0 0 4px rgba(93, 255, 168, 0.6);
-  background: rgba(10, 34, 22, 0.35);
-}
-
+/*
+ * PELKKÄ PISTE. Ei rengasta, ei `box-shadow`-hohtoa — omistajan
+ * tilaus 16.9.2026. Väri on sama vihreä kuin ennen.
+ */
 .satelliitti-ydin {
-  width: 6px;
-  height: 6px;
-  background: #eafff3;
-  box-shadow: 0 0 6px rgba(93, 255, 168, 0.95);
+  width: var(--satelliitti-pisteen-koko);
+  height: var(--satelliitti-pisteen-koko);
+  background: var(--satelliitti-vihrea);
 }
 
 .satelliitti-nimi {
   position: absolute;
   left: 50%;
-  top: 16px;
+  /* Rengas (18 px) on poissa, joten nimi nousee lähemmäs pistettä. */
+  top: 11px;
   transform: translateX(-50%);
   white-space: nowrap;
   font-family: var(--font-type, system-ui), system-ui, sans-serif;
@@ -87,8 +101,8 @@
  * (js/linssit/satelliitti-avaruus.js kirjoittaa luokan).
  *
  * OPACITY EIKÄ DISPLAY: lappu pysyy asettelussa, joten sytyttäminen ei
- * siirrä mitään, ja häivytys on mahdollinen. Piste itse (hehku, rengas,
- * ydin) näkyy koko ajan — vain nimi tulee myöhemmin.
+ * siirrä mitään, ja häivytys on mahdollinen. Piste itse näkyy koko
+ * ajan — vain nimi tulee myöhemmin.
  */
 /*
  * PIILOSSA ILMAN EHTOA — EI ENÄÄ `body.satelliitti-avaruus` EDELLÄ.

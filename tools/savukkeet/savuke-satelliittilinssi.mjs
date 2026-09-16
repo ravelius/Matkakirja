@@ -223,6 +223,30 @@ const PELITILA = () => {
 /** Kameran tila: ele kuvan päällä ei saa liikuttaa palloa. */
 const KAMERA = () => JSON.stringify(window.matkakirja.ui.pallolauta.kamera.kameranTila() ?? null);
 
+/*
+ * KAMERA ON "SAMA", KUN SE EI OLE HYPÄNNYT.
+ *
+ * Linssi pyörittää palloa hitaasti (0,16 °/s, js/linssit/
+ * satelliitti-avaruus.js PYORIMISTA_ASTETTA_S) siihen asti, kunnes
+ * pelaaja tarttuu palloon — omistajan tilaus 16.9.2026. Siksi kahden
+ * mittauksen välillä on AINA pientä ajautumaa, eikä merkkijonojen
+ * vertailu enää kelpaa: 0,16 °/s on laudan yksiköissä noin 5 yksikköä
+ * sekunnissa, kun sukellus tai kohteen avaus siirtäisi kameraa
+ * satoja tai tuhansia. Raja on siis 60 yksikköä ja 2 % näkyvästä
+ * leveydestä — yli sen on hyppy, alle sen on se pyöriminen, jota
+ * tilattiin.
+ */
+const KAMERAN_AJAUTUMA_YKS = 60;
+function kameraLahella(a, b) {
+  const x = JSON.parse(a ?? 'null');
+  const y = JSON.parse(b ?? 'null');
+  if (!x || !y) return a === b;
+  const leveysEro = Math.abs((y.leveys ?? 0) - (x.leveys ?? 0));
+  return Math.abs((y.x ?? 0) - (x.x ?? 0)) <= KAMERAN_AJAUTUMA_YKS
+    && Math.abs((y.y ?? 0) - (x.y ?? 0)) <= KAMERAN_AJAUTUMA_YKS
+    && leveysEro <= (x.leveys ?? 1) * 0.02;
+}
+
 /** Merkin ruutupaikka kohteen tunnuksella (pallon oma projektio). */
 const RUUTUPAIKKA = (tunnus) => {
   const { ui } = window.matkakirja;
@@ -415,30 +439,45 @@ async function ajaNakyma(nakymanNimi) {
     await new Promise((r) => setTimeout(r, 1200));
   });
   await s.waitForTimeout(1500);
+  /*
+   * PELKKÄ VIHREÄ PISTE (omistaja 16.9.2026, sanatarkasti: *"Muutamilla
+   * nuo hehkuvat pisteet pelkeiksi vihreäksi pisteeksi ilman ympyrää ja
+   * pisteen ympärillä."*). Mitataan MAALATUSTA tuloksesta: pisteen
+   * halkaisija, sen tausta, `box-shadow` ja reunaväri — ja että
+   * sädekehää ja rengasta ei ole enää olemassa lainkaan.
+   */
   const hehku = await s.evaluate(() => {
     const merkit = [...document.querySelectorAll('.satelliitti-piste')];
     const edessa = merkit.filter((el) => !el.classList.contains('pallolauta-takana'));
     const yksi = edessa[0];
-    const rengas = yksi?.querySelector('.satelliitti-rengas');
-    const hehkuEl = yksi?.querySelector('.satelliitti-hehku');
+    const ydin = yksi?.querySelector('.satelliitti-ydin');
+    const osuma = yksi?.querySelector('.satelliitti-osuma');
     const nimi = yksi?.querySelector('.satelliitti-nimi');
-    const t = rengas ? getComputedStyle(rengas) : null;
-    const h = hehkuEl ? getComputedStyle(hehkuEl) : null;
+    const t = ydin ? getComputedStyle(ydin) : null;
+    const o = osuma ? getComputedStyle(osuma) : null;
     return {
       yhteensa: merkit.length,
       edessa: edessa.length,
       takana: merkit.length - edessa.length,
-      reuna: t?.borderTopColor ?? null,
+      pisteenLeveys: t ? +parseFloat(t.width).toFixed(1) : null,
+      tausta: t?.backgroundColor ?? null,
       varjo: t?.boxShadow ?? null,
-      hehkunLeveys: h ? Math.round(parseFloat(h.width)) : null,
+      reuna: t?.borderTopColor ?? null,
+      reunanLeveys: t ? +parseFloat(t.borderTopWidth).toFixed(1) : null,
+      osumanLeveys: o ? +parseFloat(o.width).toFixed(1) : null,
+      osumanTausta: o?.backgroundColor ?? null,
+      renkaita: document.querySelectorAll('.satelliitti-rengas, .satelliitti-hehku').length,
       nimi: nimi?.textContent ?? null,
       animaatio: yksi ? getComputedStyle(yksi).animationIterationCount : null,
       osumat: yksi ? getComputedStyle(yksi).pointerEvents : null,
     };
   });
-  vaadi(nimessa('hohtava vihreä piste: sädekehä, hehkuva rengas, nimi — eikä loputonta pulssia'),
-    hehku.edessa > 0 && hehku.takana > 0 && /rgb\(93, 255, 168\)/.test(hehku.reuna ?? '')
-      && /rgba?\(93, 255, 168/.test(hehku.varjo ?? '') && hehku.hehkunLeveys >= 40
+  vaadi(nimessa('pelkkä vihreä piste: ei rengasta, ei hohtoa — nimi ja osuma-ala ennallaan'),
+    hehku.edessa > 0 && hehku.takana > 0
+      && hehku.pisteenLeveys > 0 && hehku.pisteenLeveys <= 9
+      && /rgb\(93, 255, 168\)/.test(hehku.tausta ?? '')
+      && hehku.varjo === 'none' && hehku.reunanLeveys === 0
+      && hehku.renkaita === 0 && hehku.osumanLeveys >= 32
       && Boolean(hehku.nimi) && hehku.animaatio === '1' && hehku.osumat === 'none',
     JSON.stringify(hehku));
   await kaappaa('pisteet');
@@ -541,7 +580,8 @@ async function ajaNakyma(nakymanNimi) {
     const jalkeenPinnat = await pelinPinnat();
     // eslint-disable-next-line no-await-in-loop
     const jalkeenKamera = await s.evaluate(KAMERA);
-    if (jalkeenPinnat.length > ennenPinnat.length || jalkeenKamera !== ennenKamera) {
+    if (jalkeenPinnat.length > ennenPinnat.length
+      || !kameraLahella(ennenKamera, jalkeenKamera)) {
       avautui += 1;
       avautuneet.push(`${kohta.laji}: ${jalkeenPinnat.join(',') || 'kamera liikkui'}`);
     }
@@ -824,8 +864,13 @@ async function ajaNakyma(nakymanNimi) {
    */
   vaadi(nimessa('nipistys zoomaa kuvaa EIKÄ pallon kamera liiku'),
     zoomTulos.skaala > 1.02 && zoomTulos.skaala >= Math.min(1.6, zoomTulos.katto) - 0.02
-      && kameraJalkeen === kameraEnnen && zoomTulos.zoomLuokka,
-    JSON.stringify({ ...zoomTulos, kameraSama: kameraJalkeen === kameraEnnen }));
+      && kameraLahella(kameraEnnen, kameraJalkeen) && zoomTulos.zoomLuokka,
+    JSON.stringify({
+      ...zoomTulos,
+      kameraSama: kameraLahella(kameraEnnen, kameraJalkeen),
+      ennen: kameraEnnen,
+      jalkeen: kameraJalkeen,
+    }));
   vaadi(nimessa('zoomin katto on kuvan oma tarkkuus — ei pikselipuuroa'),
     zoomTulos.skaala <= Math.max(1, zoomTulos.katto) + 0.01,
     JSON.stringify(zoomTulos));

@@ -326,6 +326,8 @@ const SHELL = [
   './js/linssit/satelliitti-avaruus.js',
   './css/satelliitti.css',
   './js/linssit/topografia.js',
+  './js/linssit/topografia-tarkennus.js',
+  './js/linssit/reliefikuva.js',
   './js/linssit/vertailu.js',
   './js/linssit/maatiedot.js',
   './js/linssit/vesistot.js',
