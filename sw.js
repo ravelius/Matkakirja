@@ -210,6 +210,12 @@ const SHELL = [
   // tuo tämän, joten se seuraa samaa polkua offline-käyttöön.
   './js/pergamentti.js',
   './js/pallo.js',
+  // Avausketjun vaiheloki (?pallodiag=1) ja näkyvä virheilmoitus
+  // (16.9.2026, Raamattu ASTRONAUTIN KAMERA LISÄYS 11 kohta 34):
+  // js/pallo.js ja js/ui.js tuovat molemmat staattisesti, joten ne
+  // kuuluvat ytimeen — ilman niitä peli ei käynnisty offline.
+  './js/pallodiag.js',
+  './js/linssivirhe.js',
   // Laattakerroksen puhtaat apurit (erä E0, 6.9.2026): js/pallo.js tuo
   // ne staattisesti, joten ne kulkevat samaa polkua offline-käyttöön.
   './js/pallolaatat.js',
