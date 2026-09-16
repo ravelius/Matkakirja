@@ -13,7 +13,9 @@
  * päivän JATKO 3: *"Zoomaa maapallo hitaammin näkymään. Aloita
  * nykyisestä hetkestä mutta zoomaus voi valmistua viisi sekuntia
  * myöhemmin. … Pienen tauon jälkeen kartta voisi hyvin hitaasti alkaa
- * zoomata jo kohti Marokkoa ja alkaa kiihtyä…"*
+ * zoomata jo kohti Marokkoa ja alkaa kiihtyä…"* — ja saman päivän
+ * päätös kortilla: *"Zoomin jatko 2–3 s, ei 5 s"* (viisi sekuntia
+ * kutisti Marokon ajon 8,9 s → 2,7 s).
  *
  * MIKSI OMA SAVUKE. savuke-ihmisen-kehys.mjs mittaa kehyksen paluun
  * avaruusvaiheessa (0–20 s). Tässä katsotaan koko esityksen mittaa:
@@ -45,9 +47,11 @@
  *      omistaja näki (kuvissa laatikko vei ~45 %).
  *   3b. VASTAKOE: koko kappale yhtenä laatikkona (vanha käytös) on
  *      selvästi korkeampi — pisin kappale ylittää rajan.
- *   4. ZOOMI KESTÄÄ VIISI SEKUNTIA PIDEMPÄÄN. Esityksen omista
- *      mittareista luettu `avauksenVaiheet` kertoo `zoomKesto`n
- *      olevan vähintään vanha (`zoomPerus`) + 4 000 ms.
+ *   4. ZOOMI KESTÄÄ PIDEMPÄÄN. Esityksen omista mittareista luettu
+ *      `avauksenVaiheet` kertoo `zoomKesto`n olevan vanha
+ *      (`zoomPerus`) + ZOOMIN_JATKO_MS (2 500 ms, omistajan päätös
+ *      16.9.2026: *"Zoomin jatko 2–3 s, ei 5 s"*), sallittu heitto
+ *      1 ms — luku tulee samasta puhtaasta funktiosta.
  *   5. KAMERAN KÄYRÄ (vain 390 px, ks. KAMERASARJA_LEVEYDET). Zoomin
  *      aikasarjassa korkeus laskee monotonisesti eikä siinä ole
  *      tasannetta; tasanne on vain zoomin jälkeisessä tauossa, jonka
@@ -121,7 +125,7 @@ const vaadi = (nimi, ok, lisa = '') => {
 
 /* Kaanoni ja jakofunktio suoraan lähteestä: savuke mittaa sitä, mitä peli näyttää. */
 const { IHMISEN_MATKA_KERTOMUS } = await import(join(JUURI, 'js/linssit/ihmisen-matka-kertomus.js'));
-const { jaaOsiin, OSAN_MERKIT } = await import(join(JUURI, 'js/linssit/ihmisen-matka-esitys.js'));
+const { jaaOsiin, OSAN_MERKIT, ZOOMIN_JATKO_MS } = await import(join(JUURI, 'js/linssit/ihmisen-matka-esitys.js'));
 const KAIKKI_OSAT = IHMISEN_MATKA_KERTOMUS.flatMap((j) => jaaOsiin(j.teksti)
   .map((o, i) => ({ jakso: j.id, osa: i, teksti: o.teksti })));
 const SIMPUKKA = /simpukanku|okraa punaiseksi|helmiksi/i;
@@ -343,8 +347,9 @@ async function mittaa(leveys, korkeus) {
 
   /* --- 4–6. KAMERA: zoomin kesto, tasainen lasku, saapumishetki --- */
   const vaiheet = kamerasarja.map((r) => r.vaiheet).find(Boolean) ?? null;
-  vaadi(`${leveys}px: zoomi kestää vähintään neljä sekuntia entistä pidempään`,
-    Boolean(vaiheet) && vaiheet.zoomKesto >= vaiheet.zoomPerus + 4000,
+  vaadi(`${leveys}px: zoomi kestää ${ZOOMIN_JATKO_MS} ms entistä pidempään`,
+    Boolean(vaiheet) && Math.abs(vaiheet.zoomKesto - (vaiheet.zoomPerus + ZOOMIN_JATKO_MS)) < 1
+      && ZOOMIN_JATKO_MS >= 2000 && ZOOMIN_JATKO_MS <= 3000,
     JSON.stringify(vaiheet));
 
   /*

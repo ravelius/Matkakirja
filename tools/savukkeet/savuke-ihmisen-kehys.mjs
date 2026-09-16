@@ -399,7 +399,7 @@ async function mittaa(leveys, korkeus) {
   /*
    * SAMA FEIDAUS MITATAAN PISTE PISTEELTÄ, EI YLITYSHETKISTÄ (16.9.2026).
    * Ennen tässä verrattiin sitä hetkeä, jolloin kumpikin ylittää 0,95.
-   * Kun zoomi venyi viidellä sekunnilla (Raamattu JATKO 3), valkeneminen
+   * Kun zoomi venyi (Raamattu JATKO 3, ZOOMIN_JATKO_MS), valkeneminen
    * siirtyi kohtaan, jossa kontin näytteenottoväli on jo 1,2 s: mitattuna
    * kehys luki 0,948 ja kartta 1,000 SAMASSA näytteessä, ja ylityshetket
    * erosivat tasan yhden näytteen verran (961 ms) — vaikka käyrät

@@ -96,9 +96,9 @@
  *      sekuntia aiemmaksi."* (aiempi klo 23.35 linjaus oli 1,2 s). Jos
  *      jakso loppuu ennen sitä, päätepiste jää jakson loppuun.
  *      JATKO 3 (omistaja 16.9.2026): zoomi LÄHTEE yhä tästä hetkestä,
- *      mutta kestää ZOOMIN_JATKO_MS (5 s) pidempään — sana "Afrikasta"
- *      ehtii kuulua kesken zoomin, ja pallo on perillä vasta viisi
- *      sekuntia myöhemmin.
+ *      mutta kestää ZOOMIN_JATKO_MS (2,5 s) pidempään — sana
+ *      "Afrikasta" ehtii kuulua kesken zoomin, ja pallo on perillä
+ *      vasta sen jälkeen.
  *   4. KAMERA KIIHTYY MAROKKOON. Zoomin päätyttyä kamera jää hetkeksi
  *      paikalleen (MAROKON_TAUKO_MS) ja lähtee sitten HYVIN HITAASTI
  *      kohti ensimmäistä kohdetta (Jebel Irhoud), kiihtyy ja jarruttaa
@@ -321,18 +321,26 @@ export const TAHTIEN_KERROIN = AVARUUDEN_KORKEUS / 5;
 export const AVARUUDEN_MS = 7000;
 export const AVARUUDEN_MIN_MS = 1200;
 /**
- * MAAPALLO ZOOMAUTUU VIISI SEKUNTIA HITAAMMIN (Raamattu "IHMISEN MATKA
- * -LINSSI … JATKO 3", omistaja 16.9.2026, sanatarkasti: *"Zoomaa
- * maapallo hitaammin näkymään. Aloita nykyisestä hetkestä mutta zoomaus
- * voi valmistua viisi sekuntia myöhemmin. Ei haittaa vaikka sana
- * Afrikka tulee jo ennen zoomin loppua."*).
+ * MAAPALLO ZOOMAUTUU HITAAMMIN (Raamattu "IHMISEN MATKA -LINSSI …
+ * JATKO 3", omistaja 16.9.2026, sanatarkasti: *"Zoomaa maapallo
+ * hitaammin näkymään. Aloita nykyisestä hetkestä mutta zoomaus voi
+ * valmistua viisi sekuntia myöhemmin. Ei haittaa vaikka sana Afrikka
+ * tulee jo ennen zoomin loppua."*).
  *
  * ZOOMI LÄHTEE SAMASTA HETKESTÄ KUIN ENNEN (`zoomAlku` ei liiku) ja
- * kestää tämän verran pidempään, joten se PÄÄTTYY viisi sekuntia sanan
+ * kestää tämän verran pidempään, joten se PÄÄTTYY tämän verran sanan
  * jälkeisen entisen päätepisteen (`afrikka`) jälkeen. Sanan "Afrikasta"
  * hetki ja koko luennan ajoitus ovat ennallaan.
+ *
+ * KAKSI JA PUOLI SEKUNTIA, EI VIITTÄ (omistajan päätös kortilla
+ * 16.9.2026: *"Zoomin jatko 2–3 s, ei 5 s"*). Ensimmäinen toteutus oli
+ * viisi sekuntia, ja se söi Marokon ajosta liikaa: ajon PÄÄTEPISTE on
+ * kiinni luennassa (`kohteeseenAsti`), joten jokainen zoomiin lisätty
+ * sekunti lyhentää ajoa yhtä paljon. Mitattuna varakestoilla ajo oli
+ * 8,9 s → 2,7 s, mikä teki loppuosasta nopeamman kuin ennen. Tällä
+ * arvolla ajolle jää noin 5 s eikä saapumishetki liiku.
  */
-export const ZOOMIN_JATKO_MS = 5000;
+export const ZOOMIN_JATKO_MS = 2500;
 /** Zoomin enimmäiskesto jatkon kanssa (katto kaynnistaAvaruusajolle). */
 export const AVARUUDEN_KATTO_MS = AVARUUDEN_MS + ZOOMIN_JATKO_MS;
 /**
@@ -1485,9 +1493,9 @@ export function luoEsitys({ ajo }) {
   }
 
   /**
-   * ZOOMI LÄHTEE ENTISESTÄ HETKESTÄ JA PÄÄTTYY VIISI SEKUNTIA MYÖHEMMIN
-   * (Raamattu ALKUANIMAATIO + AFRIKKA 0,7 S SANAN JALKEEN; JATKO 3,
-   * omistaja 16.9.2026). Lähtöhetki on yhä `zoomAlku`, mutta kesto on
+   * ZOOMI LÄHTEE ENTISESTÄ HETKESTÄ JA PÄÄTTYY MYÖHEMMIN (Raamattu
+   * ALKUANIMAATIO + AFRIKKA 0,7 S SANAN JALKEEN; JATKO 3, omistaja
+   * 16.9.2026). Lähtöhetki on yhä `zoomAlku`, mutta kesto on
    * peruskesto + ZOOMIN_JATKO_MS: sana "Afrikasta" ehtii kuulua kesken
    * zoomin, aivan kuten omistaja pyysi. Kutsutaan kehyssilmukasta
    * hetkellä `zoomAlku` — tai viimeistään 'valot'-jakson alkaessa, jos
@@ -2221,7 +2229,7 @@ export function luoEsitys({ ajo }) {
        * vaikka lähtö tulisi kehyksen myöhässä.
        */
       if (tila.avausOdottaa && tila.kulunut >= ajat.zoomAlku) {
-        // Perille viisi sekuntia entistä myöhemmin (ZOOMIN_JATKO_MS).
+        // Perille ZOOMIN_JATKO_MS entistä myöhemmin.
         kaynnistaAvaruusajo(ajat.zoomLoppu - tila.kulunut);
       }
     }

@@ -405,13 +405,19 @@ test('avauksen vaiheet lasketaan luennan aikaleimoista', () => {
   assert.equal(v.feidi, Math.min(TAHTIEN_FEIDI_MS, (v.afrikka - v.musta) * FEIDIN_OSUUS));
   assert.equal(v.piste, v.musta + v.feidi);
   /*
-   * ZOOMI LÄHTEE ENTISESTÄ HETKESTÄ, MUTTA PÄÄTTYY VIISI SEKUNTIA
-   * MYÖHEMMIN (Raamattu JATKO 3, omistaja 16.9.2026: *"Aloita
-   * nykyisestä hetkestä mutta zoomaus voi valmistua viisi sekuntia
-   * myöhemmin."*). `zoomPerus` on entinen mitta ja määrää lähtöhetken;
-   * todellinen kesto on peruskesto + ZOOMIN_JATKO_MS.
+   * ZOOMI LÄHTEE ENTISESTÄ HETKESTÄ, MUTTA PÄÄTTYY MYÖHEMMIN (Raamattu
+   * JATKO 3, omistaja 16.9.2026: *"Aloita nykyisestä hetkestä mutta
+   * zoomaus voi valmistua viisi sekuntia myöhemmin."*). `zoomPerus` on
+   * entinen mitta ja määrää lähtöhetken; todellinen kesto on
+   * peruskesto + ZOOMIN_JATKO_MS.
+   *
+   * JATKO ON 2,5 s, EI 5 s (omistajan päätös kortilla 16.9.2026:
+   * *"Zoomin jatko 2–3 s, ei 5 s"*): jokainen zoomiin lisätty sekunti
+   * lyhentää Marokon ajoa yhtä paljon, koska ajon päätepiste on kiinni
+   * luennassa. Viidellä sekunnilla ajo kutistui 8,9 s → 2,7 s.
    */
-  assert.equal(ZOOMIN_JATKO_MS, 5000);
+  assert.ok(ZOOMIN_JATKO_MS >= 2000 && ZOOMIN_JATKO_MS <= 3000, `${ZOOMIN_JATKO_MS} ms`);
+  assert.equal(ZOOMIN_JATKO_MS, 2500);
   assert.equal(v.zoomAlku + v.zoomPerus, v.afrikka, 'zoomin lähtöhetki siirtyi');
   assert.equal(v.zoomKesto, v.zoomPerus + ZOOMIN_JATKO_MS);
   assert.equal(v.zoomLoppu, v.zoomAlku + v.zoomKesto);
@@ -460,7 +466,7 @@ test('kaanonin avaus: musta, piste ja zoomi osuvat oikeisiin lauseisiin', () => 
   const sanaHetki = sananHetki(avaus.teksti, AVAUKSEN_SANA, kesto);
   assert.equal(v.afrikka, Math.min(sanaHetki + AFRIKAN_VIIVE_MS, kesto));
   // Peruskesto on entisellään (lähtöhetki ei siirry), ja jatko venyttää
-  // zoomin päättymistä tasan viidellä sekunnilla (JATKO 3).
+  // zoomin päättymistä tasan ZOOMIN_JATKO_MS:llä (JATKO 3).
   assert.ok(v.zoomPerus >= AVARUUDEN_MIN_MS && v.zoomPerus < 4000, `${Math.round(v.zoomPerus)} ms`);
   assert.equal(Math.round(v.zoomAlku + v.zoomPerus), Math.round(v.afrikka));
   assert.equal(Math.round(v.zoomLoppu), Math.round(v.afrikka + ZOOMIN_JATKO_MS));

@@ -17,6 +17,14 @@ myöhemmin. Ei haittaa vaikka sana Afrikka tulee jo ennen zoomin loppua.
 Pienen tauon jälkee kartta voisi hyvin hitaasti alkaa zoomata jo kohti
 Marokkoa ja alkaa kiihtyä siitä kohdasta mistä zoomaus nyt alkaa."*
 
+**Päivitys 16.9.2026, omistajan päätös kortilla:** *"Zoomin jatko 2–3 s,
+ei 5 s"*. Ensimmäinen toteutus venytti zoomia viisi sekuntia, ja se söi
+Marokon ajosta liikaa (8,9 s → 2,7 s). `ZOOMIN_JATKO_MS` on nyt
+**2 500 ms**, jolloin Marokon ajolle jää **5,2 s** eikä saapumishetki
+liiku. Luvut tässä raportissa ovat päivitetyt. Samalla hyväksyttiin se,
+että pulun välihuomiot jäävät kesken kaaren pois — pulu puhuu vasta
+lopussa.
+
 **Lyhyesti.** Pulun juurisyy oli yksi rivi: sisääntulo ajastettiin
 jokaisen alalaitaan laskeutuvan jakson alusta, eli pulu käveli ruudulle
 jo ensimmäisen kohteen kohdalla ja seisoi tekstilaatikon kulmassa koko
@@ -25,10 +33,10 @@ poissa tekstistä ja luennasta — **äänite on siksi vanhentunut ja
 uusittava** (avain alla, kohta 6). Tekstitys jaetaan enintään kolmen
 virkkeen ja 240 merkin osiin, jotka vaihtuvat virkerajalla luennan
 tahdissa; mitattu korkein laatikko 390 px:llä on **139 px eli 17 %
-kartasta** (ennen 210 px, 25 %). Maapallon zoomi kestää **2 329 → 7 329
-ms (+5 000 ms)**, sen jälkeen on **1,2 s tauko**, ja Marokon ajo saa
-hitaan esivaiheen. Marokon **saapumishetki ei siirry** — mutta ajo
-lyhenee, ja siitä on alla oma huomio omistajalle (kohta 5).
+kartasta** (ennen 210 px, 25 %). Maapallon zoomi kestää **2 329 → 4 829
+ms (+2 500 ms)**, sen jälkeen on **1,2 s tauko**, ja Marokon ajo saa
+hitaan esivaiheen. Marokon **saapumishetki ei siirry**, ja ajolle jää
+**5,2 s** entisen 8,9 s:n sijaan.
 
 ---
 
@@ -199,13 +207,17 @@ noin 27 %:a. Fonttikokoon ei koskettu.
 | Kenttä | Merkitys |
 |---|---|
 | `zoomPerus` | **entinen** kesto — määrää yhä LÄHTÖHETKEN |
-| `zoomKesto` | `zoomPerus + ZOOMIN_JATKO_MS` (5 000 ms) |
+| `zoomKesto` | `zoomPerus + ZOOMIN_JATKO_MS` (**2 500 ms**) |
 | `zoomLoppu` | `zoomAlku + zoomKesto` |
 
 Lähtöhetki `zoomAlku = afrikka − zoomPerus` on siis **bitilleen sama
 kuin ennen** (*"Aloita nykyisestä hetkestä"*), ja sana "Afrikasta"
 kuuluu kesken zoomin, kuten omistaja hyväksyi. Kehyssilmukka käynnistää
 ajon kestolla `ajat.zoomLoppu − tila.kulunut`.
+
+`ZOOMIN_JATKO_MS` on 2 500 ms eikä 5 000 ms, koska Marokon ajon
+päätepiste on kiinni luennassa: jokainen zoomiin lisätty sekunti
+lyhentää ajoa yhtä paljon (ks. mallitaulukko alla).
 
 Zoomin perille tullessa (`sytytaValot`) kamera **jää paikalleen**
 `MAROKON_TAUKO_MS = 1 200 ms`. Tauko joustaa: jos Marokon ajolle ei
@@ -254,64 +266,59 @@ joten luvut ovat suuntaa-antavia — käyrän MUOTO on se, mitä katsotaan.
  36996  alt   0.143  lat 33.74  lng −1.33   jebel-irhoud
 ```
 
-**JÄLKEEN (haara)**
+**JÄLKEEN (haara, `ZOOMIN_JATKO_MS = 2 500`)**
 
 ```
- 10775  alt 300.000  lat  1.00  lng 17.00   avaus
- 12089  alt 276.642  lat  1.00  lng 17.10   avaus      ← zoomi lähtee (sama hetki)
- 13414  alt 159.128  lat  1.02  lng 17.77   avaus
- 14712  alt  62.998  lat  1.04  lng 18.90   avaus
- 17284  alt   9.865  lat  1.09  lng 21.15   avaus      ← "Afrikasta" kuuluu tässä
- 20096  alt   3.561  lat  1.11  lng 22.39   afrikka    ← zoomi yhä kesken
- 22356  alt   1.173  lat  1.14  lng 23.74   afrikka   TAUKO
- 23778  alt   0.143  lat  1.14  lng 23.74   afrikka   ajo 3253 ms
- 25023  alt   0.151  lat  1.90  lng 23.16   afrikka    ← esivaihe: 2 % matkasta
- 26042  alt   0.281  lat 10.53  lng 16.52   afrikka
- 27725  alt   1.492  lat 33.74  lng −1.33   afrikka
- 28575  alt   0.143  lat 33.74  lng −1.33   afrikka   ← Marokossa
- 37879  alt   0.143  lat 33.74  lng −1.33   jebel-irhoud
+ 11673  alt 300.000  lat  1.00  lng 17.00   avaus
+ 13947  alt  91.243  lat  1.03  lng 18.45   avaus      ← zoomi lähtee (sama hetki)
+ 15137  alt  27.394  lat  1.06  lng 19.91   avaus
+ 17823  alt   1.971  lat  1.13  lng 23.11   avaus      ← "Afrikasta" kuuluu tässä
+ 18977  alt   1.173  lat  1.14  lng 23.74   avaus      ← zoomi yhä kesken
+ 20478  alt   0.143  lat  1.14  lng 23.74   afrikka   TAUKO
+ 21446  alt   0.143  lat  1.14  lng 23.74   afrikka   ajo 5687 ms
+ 21854  alt   0.143  lat  1.14  lng 23.74   afrikka
+ 22714  alt   0.144  lat  1.21  lng 23.69   afrikka    ← esivaihe: 0,2 % matkasta
+ 23404  alt   0.148  lat  1.64  lng 23.36   afrikka
+ 24121  alt   0.165  lat  3.12  lng 22.22   afrikka
+ 24861  alt   0.211  lat  6.53  lng 19.60   afrikka
+ 25706  alt   0.390  lat 15.07  lng 13.03   afrikka
+ 26403  alt   0.851  lat 25.95  lng  4.67   afrikka
+ 27254  alt   1.492  lat 33.74  lng −1.33   afrikka
+ 28070  alt   0.143  lat 33.74  lng −1.33   afrikka   ← Marokossa
+ 38315  alt   0.143  lat 33.74  lng −1.33   jebel-irhoud
 ```
 
-Kaksi asiaa näkyy suoraan: zoomi käyttää **kolme näytettä enemmän**
-laskuun (300 → 0,14 kestää 12,1 s → 22,4 s eli noin viisi sekuntia
-pidempään myös kontin venytetyllä kellolla), ja tauko on oma
-näytteensä. Korkeuden nousu 0,14 → 1,49 Marokon ajon puolivälissä on
-pallolaudan oma kaari pintaa pitkin — se on samalla tavalla ENNEN-
-sarjassa (0,14 → 1,33), ei uusi ilmiö.
+Kolme asiaa näkyy suoraan. Zoomi lähtee samasta kohdasta, mutta sana
+"Afrikasta" kuuluu nyt lukemalla 1,97 eikä perillä — pallo on yhä
+matkalla, kuten omistaja hyväksyi. Tauko on oma näytteensä. Marokon ajo
+saa **yhdeksän näytettä** (ENNEN-sarjassa kahdeksan), ja sen
+ensimmäinen kolmannes kulkee 0,2 % matkasta: kamera ryömii ensin ja
+kiihtyy vasta sitten. Korkeuden nousu 0,14 → 1,49 ajon puolivälissä on
+pallolaudan oma kaari pintaa pitkin — se on samalla tavalla
+ENNEN-sarjassa (0,14 → 1,33), ei uusi ilmiö.
 
 ### Mallin tarkat luvut (varakesto, ilman äänitettä)
 
-| | ENNEN | JÄLKEEN |
-|---|---|---|
-| `zoomAlku` | 5 014 ms | **5 014 ms (sama)** |
-| zoomin kesto | 2 329 ms | **7 329 ms (+5 000)** |
-| zoomi perillä | 7 343 ms | **12 343 ms** |
-| tauko | — | **1 200 ms** |
-| Marokon ajo | 7 343 → 16 215 ms = **8 872 ms** | 13 543 → 16 215 ms = **2 672 ms** |
-| Marokon **saapuminen** | 16 215 ms | **16 215 ms (sama)** |
+| | ENNEN | 5 s:n kokeilu | **JÄLKEEN (2,5 s)** |
+|---|---|---|---|
+| `zoomAlku` | 5 014 ms | 5 014 ms | **5 014 ms (sama)** |
+| zoomin kesto | 2 329 ms | 7 329 ms | **4 829 ms (+2 500)** |
+| zoomi perillä | 7 343 ms | 12 343 ms | **9 843 ms** |
+| tauko | — | 1 200 ms | **1 200 ms** |
+| Marokon ajo | 7 343 → 16 215 ms = **8 872 ms** | = 2 672 ms | 11 043 → 16 215 ms = **5 172 ms** |
+| Marokon **saapuminen** | 16 215 ms | 16 215 ms | **16 215 ms (sama)** |
 
-### Huomio omistajalle — tässä on valinta
+### Miksi 2,5 s eikä 5 s
 
 Marokon ajon **päätepiste** on kiinni luennassa (`kohteeseenAsti`:
 kamera on perillä silloin, kun `jebel-irhoud`-jakso alkaa). Siksi
-saapumishetki ei siirry — mutta zoomin viisi lisäsekuntia ja 1,2 s
-tauko **lyhentävät ajoa** yhtä paljon: mallin luvuilla 8,9 s → 2,7 s.
-Käyrä on nyt hitaampi alussa, mutta koko matka tehdään lyhyemmässä
-ajassa, joten loppuosa on nopeampi kuin ennen.
-
-Toteutin sen näin, koska toimeksianto sanoi *"Marokon saapumisaika
-±0,5 s ennallaan"* ja *"ei kertomuksen/luennan ajoituksen muutosta"*.
-**Jos omistaja haluaa Marokon ajonkin pysyvän rauhallisena**, valinta on
-jompikumpi:
-
-1. Marokon ajo saa valua seuraavan jakson päälle (saapuminen siirtyy
-   noin 6 s, kertoja jatkaa kuten nyt) — yksi rivi: `kohteeseenAsti()`
-   korvataan kiinteällä vähimmäiskestolla; **tai**
-2. zoomin jatko lyhennetään 5 s → 2–3 s, jolloin Marokon ajolle jää
-   5–6 s.
-
-En tehnyt kumpaakaan omin päin: molemmat ovat linjauksia, eivät
-toteutusvalintoja.
+saapumishetki ei siirry — mutta jokainen zoomiin lisätty sekunti
+**lyhentää ajoa yhtä paljon**. Viiden sekunnin kokeilussa ajo kutistui
+8,9 s → 2,7 s, jolloin käyrän loppuosa oli nopeampi kuin ennen, vaikka
+alku oli hitaampi. Raportoin sen omistajalle kysymyksenä, ja päätös
+tuli kortilla: *"Zoomin jatko 2–3 s, ei 5 s"*. Arvolla 2 500 ms zoomi
+on selvästi hitaampi kuin ennen JA Marokon ajolle jää 5,2 s — vain noin
+kolme sekuntia entistä vähemmän.
 
 ---
 
@@ -377,7 +384,8 @@ esityksen aikana (nappi, paneeli, pluskupla, kasvokangas + body-luokka
 `pointer-events: none`, ja **vastakokeena** sama nappi ilman
 piiloluokkaa on `visible`; simpukkavirke ei ole DOMissa missään
 näytteessä; jokainen 35 osasta mahtuu 30 %:iin kartasta; **vastakoe**
-koko kappaleella yhtenä laatikkona; zoomin kesto ≥ vanha + 4 s; zoomin
+koko kappaleella yhtenä laatikkona; zoomin kesto = vanha +
+ZOOMIN_JATKO_MS (2 500 ms, ± 1 ms — sama puhdas funktio); zoomin
 korkeus laskee monotonisesti eikä siinä ole tasannetta; tauko on oma
 näytteensä; Marokon esivaihe kulkee 2 % matkasta ensimmäisellä
 kolmanneksella muttei peruuta; kamera on Marokossa viimeistään kun
@@ -394,8 +402,9 @@ laatikoiden korkeudet. Rajaus on savukkeen otsikossa ja koodissa
 ### Yksi muutos vanhaan savukkeeseen, ja miksi
 
 `savuke-ihmisen-kehys.mjs`-väite 2 vertasi ENNEN sitä hetkeä, jolloin
-kehys ja kartta ylittävät peittävyyden 0,95. Kun zoomi venyi viidellä
-sekunnilla, valkeneminen siirtyi kohtaan, jossa kontin näytteenottoväli
+kehys ja kartta ylittävät peittävyyden 0,95. Kun zoomi venyi (mitattu
+viiden sekunnin kokeilussa), valkeneminen siirtyi kohtaan, jossa kontin
+näytteenottoväli
 on jo 1,2 s: mitattuna kehys luki **0,948** ja kartta **1,000 samassa
 näytteessä**, ja ylityshetket erosivat tasan yhden näytteen verran
 (961 ms) — vaikka käyrät kulkivat päällekkäin. Vertailu oli siis
