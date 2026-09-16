@@ -592,8 +592,14 @@ const mittaa = (sivu) => sivu.evaluate(() => {
 const rajausNyt = (sivu) => sivu.evaluate(() => {
   const l = window.matkakirja.ui.pallolauta;
   const kotelo = l.kotelo.getBoundingClientRect();
-  const datum = l.pallo.htmlElementsData().find((d) => d.laji === 'maapaneeli') ?? null;
-  const bb = datum?.laatikko ?? null;
+  /*
+   * ERÄ 19: MAAN LAATIKKO EI OLE ENÄÄ MERKKIKERROKSEN DATUM
+   * (js/pallolauta/maapaneeli.js MAAPANEELIN KERROS — PÄÄTÖKSET 28: kortti
+   * on kiinteä nurkkasäiliö `.maapaneeli-nurkka`, ei kameran sijoittama
+   * datum). Maan laatikko kulkee silti mukana `mitat().laatikko`-kentässä
+   * juuri tätä savuketta varten — sieltä se luetaan nyt.
+   */
+  const bb = l.maapaneeli?.mitat?.()?.laatikko ?? null;
   if (!bb || !l.asteet) return null;
   let x0 = Infinity; let x1 = -Infinity; let y0 = Infinity; let y1 = -Infinity;
   const N = 40;
@@ -714,8 +720,8 @@ const suhdeNyt = (sivu) => sivu.evaluate(() => {
  */
 const panoroiRajalle = (sivu, suunta) => sivu.evaluate((s) => {
   const l = window.matkakirja.ui.pallolauta;
-  const datum = l.pallo.htmlElementsData().find((d) => d.laji === 'maapaneeli') ?? null;
-  const bb = datum?.laatikko;
+  // ERÄ 19: maan laatikko luetaan mitat().laatikko:sta, ei enää datumista (ks. rajausNyt).
+  const bb = l.maapaneeli?.mitat?.()?.laatikko;
   if (!bb) return null;
   const raja = l.kamera.panoraja(bb);
   const kohde = s < 0 ? raja?.lngMin : raja?.lngMax;
@@ -1416,13 +1422,16 @@ let seitseman = null;
       await sivu.waitForTimeout(700); // eslint-disable-line no-await-in-loop
       const r2 = await rajausNyt(sivu); // eslint-disable-line no-await-in-loop
       const kohta = suunta < 0 ? r2?.bretagne : r2?.elsass;
-      const ruudulla = Boolean(kohta && kohta.x >= 0 && kohta.x <= r2.kotelo.w
+      // r2 (siis myös r2.kotelo/r2.maa) voi olla null (ks. rajausNyt) — ei saa kaataa savuketta.
+      const ruudulla = Boolean(kohta && r2 && kohta.x >= 0 && kohta.x <= r2.kotelo.w
         && kohta.y >= 0 && kohta.y <= r2.kotelo.h);
       // Laatikon reuna EI saa tulla ruudun sisään sillä laidalla, jota kohti panoroitiin.
-      const reunaUlkona = suunta < 0 ? (r2?.maa.x0 ?? 1) <= 1 : (r2?.maa.x1 ?? -1) >= r2.kotelo.w - 1;
+      const reunaUlkona = r2
+        ? (suunta < 0 ? r2.maa.x0 <= 1 : r2.maa.x1 >= r2.kotelo.w - 1)
+        : false;
       osat.push({ suunta: suunta < 0 ? 'länsi' : 'itä', kohde: p(pt?.kohde, 4),
         elava: pt?.raja?.elava ?? false, ruudulla, reunaUlkona,
-        reunaX: p(suunta < 0 ? r2?.maa.x0 : r2?.maa.x1 - r2.kotelo.w, 1),
+        reunaX: p(suunta < 0 ? r2?.maa.x0 : r2 ? r2.maa.x1 - r2.kotelo.w : null, 1),
         kohtaX: p(kohta?.x, 1) });
       tieto(`390 px · panorointi ${suunta < 0 ? 'länteen' : 'itään'}`,
         `keskipiste ${p(pt?.kohde, 3)}°, ${suunta < 0 ? 'Bretagne' : 'Elsass'} ruudulla `
