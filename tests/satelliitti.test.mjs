@@ -69,11 +69,36 @@ test('linssisopimuksen pakolliset kentät ovat paikallaan', () => {
 
 /* ═══════════════════ 2. hohtavat vihreät pisteet ════════════════ */
 
-test('piste on vihreä hehku, rengas ja ydin — eikä jatkuvaa pulssia', () => {
-  for (const luokka of ['satelliitti-hehku', 'satelliitti-rengas', 'satelliitti-ydin', 'satelliitti-nimi']) {
+test('piste on PELKKÄ vihreä piste — ei rengasta, ei hohtoa, ei pulssia', () => {
+  /*
+   * OMISTAJA 16.9.2026, sanatarkasti: *"Muutamilla nuo hehkuvat
+   * pisteet pelkeiksi vihreäksi pisteeksi ilman ympyrää ja pisteen
+   * ympärillä."* Sädekehä ja rengas ovat poissa sekä tyylistä että
+   * merkin elementistä; jäljellä on läpinäkyvä osuma-ala ja piste.
+   */
+  for (const luokka of ['satelliitti-osuma', 'satelliitti-ydin', 'satelliitti-nimi']) {
     assert.ok(tyyli.includes(`.${luokka}`), `${luokka} puuttuu tyylistä`);
   }
-  // Vihreä sävy on sama kaikissa kolmessa kerroksessa.
+  for (const poistunut of ['satelliitti-hehku', 'satelliitti-rengas']) {
+    assert.ok(!tyyli.includes(`.${poistunut}`), `${poistunut} on yhä tyylissä`);
+    assert.ok(!lahde.includes(poistunut), `${poistunut} on yhä merkin elementissä`);
+  }
+  // Pisteen omat säännöt: ei reunaviivaa eikä varjoa missään niistä.
+  // (border-radius on muoto eikä reuna, joten se on sallittu.)
+  const lohkot = [...tyyli.matchAll(/\.satelliitti-ydin[^{]*\{([^}]*)\}/g)].map((m) => m[1]);
+  assert.ok(lohkot.length >= 1, 'pisteen sääntöä ei löytynyt');
+  for (const lohko of lohkot) {
+    assert.ok(!/border(?!-radius)|box-shadow/.test(lohko),
+      `pisteessä on yhä reuna tai varjo: ${lohko}`);
+  }
+  assert.ok(lohkot.some((l) => /background: var\(--satelliitti-vihrea\)/.test(l)),
+    'piste ei ota väriään --satelliitti-vihreasta');
+  // Piste on pieni (≤ 9 px) ja osuma-ala sormen kokoinen (≥ 32 px).
+  const koko = /--satelliitti-pisteen-koko:\s*(\d+)px/.exec(tyyli);
+  const osuma = /--satelliitti-osuman-koko:\s*(\d+)px/.exec(tyyli);
+  assert.ok(koko && Number(koko[1]) <= 9, `pisteen koko ${koko?.[1]}`);
+  assert.ok(osuma && Number(osuma[1]) >= 32, `osuma-alan koko ${osuma?.[1]}`);
+  // Vihreä sävy on sama kuin ennen.
   assert.match(tyyli, /--satelliitti-vihrea:\s*#5dffa8/);
   // Jatkuva pulssi kieltää pallolta 60 fps:n (js/linssit/kerros.js haivyta):
   // yksikään animaatio ei saa toistua loputtomiin.
