@@ -405,6 +405,64 @@ export function lataaSatelliittiTyyli(doc = typeof document === 'undefined' ? nu
   return { kriittinen: true, linkki: osoite };
 }
 
+/*
+ * ── LINSSIN OMA IKONI YHTENÄ MERKKIJONONA ────────────────────────
+ *
+ * Kamera ja sen alla Maan kaari, samalla tavalla piirretty kuin
+ * sisarlinsseillä: pelkkiä <path>- ja <circle>-elementtejä ilman omaa
+ * väriä tai viivapaksuutta — ne tulevat kääre-SVG:n tyylistä
+ * (js/ui.js paivitaLinssiNappi, js/mapart.js drawTokenIcon,
+ * css/satelliitti.css .satelliittipalkki-ikoni).
+ *
+ * YKSI LÄHDE KOLMELLE PAIKALLE (omistaja 16.9.2026: *"sen vasemmalle
+ * puolelle voisi tulla linssin ikoni"* — sama kuvake kuin
+ * matkalaukussa): LINSSI.ikoni, linssinapin kuvake ja tämän linssin
+ * yläpalkki lukevat kaikki tätä vakiota, joten ne eivät voi erkaantua.
+ */
+export const LINSSIN_IKONI = '<rect x="4.4" y="9.6" width="12.2" height="9.4" rx="2.2"/>'
+  + '<rect x="8.6" y="6.6" width="4.6" height="3.4" rx="1.1"/>'
+  + '<circle cx="10.5" cy="14.3" r="2.7"/>'
+  + '<path d="M2 21c3.6-3.4 16.4-3.4 20 0"/>';
+
+/*
+ * ── LINSSIN ÄÄNIASETUS (omistaja 16.9.2026: *"laita siihen äänet
+ * päälle ja pois nappi"* ja *"Generoi tälle linssille oma taustaääni,
+ * mikä saisi olla avaruusaiheinen"*) ──────────────────────────────
+ *
+ * LINSSILLÄ EI VIELÄ OLE OMAA ÄÄNTÄ: avaruusaiheinen taustaääni on
+ * tilattu Codexilta samassa viestissä, eikä tässä ole soitinta, jota
+ * kytkin voisi vaientaa. Kytkin ei silti ole koriste — se KIRJOITTAA
+ * VALINNAN, ja tuleva ääni lukee sen käynnistyessään (linssiAaniPaalla)
+ * juuri niin kuin musiikki lukee omansa (js/musiikkivalitsin.js
+ * musiikkiPaalla).
+ *
+ * ASETUS ASUU SAMASSA PAIKASSA KUIN PELIN MUUT ÄÄNIASETUKSET:
+ * localStorage, oma avain, oletus PÄÄLLÄ, ja luku on aina try/catchin
+ * takana (yksityinen selaustila heittää). Sama kaava kuin
+ * 'matkakirja-musiikki'.
+ */
+export const LINSSIN_AANI_AVAIN = 'matkakirja-linssiaani';
+
+/** Soiko linssin oma taustaääni (oletus päällä)? */
+export function linssiAaniPaalla() {
+  try {
+    return globalThis.localStorage?.getItem(LINSSIN_AANI_AVAIN) !== 'off';
+  } catch {
+    return true;
+  }
+}
+
+/** Linssin äänet päälle tai pois; valinta on pysyvä. Palauttaa uuden tilan. */
+export function asetaLinssiAani(paalla) {
+  const uusi = Boolean(paalla);
+  try {
+    globalThis.localStorage?.setItem(LINSSIN_AANI_AVAIN, uusi ? 'on' : 'off');
+  } catch {
+    /* tallennus ei ole välttämätöntä — valinta elää istunnon ajan */
+  }
+  return uusi;
+}
+
 /** Ulkoinen linkki, joka ei vie pelaajaa pois pelistä. */
 function ulkolinkki(teksti, osoite) {
   const a = html('a', 'satelliitti-linkki', teksti);
@@ -514,35 +572,25 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
   };
 
   /*
-   * KULMANAPIT JA PIKKUKUVAT KUVAN SISÄLLE, EI LAVAN KULMAAN (omistaja
-   * 15.9.2026, jälkikaappaus astronautin-kamera-1400-20260915.jpg:stä:
-   * *"✕/i-napit ja pienoiskuvat ovat nyt kuvan ULKOPUOLELLA mustalla
-   * marginaalilla ... sijoita ne kuvan todellisen piirtoalueen
-   * sisäpuolelle"*).
+   * ── KAIKKI PINNAT KIINNITETÄÄN RUUTUUN, EI KUVAELEMENTTIIN ───────
    *
-   * `.satelliitti-kuva` säilyttää oman kuvasuhteensa (max-width/height:
-   * 100%, ei object-fitiä) ja on keskitetty lavan sisällä — muun
-   * muotoisella kuvalla (esim. leveä 4:3 kapealla puhelimella) syntyy
-   * musta marginaali sivuille TAI ylä-/alapuolelle. `right/top: 10px`
-   * mitattuna LAVASTA osui siis marginaaliin, ei kuvaan.
+   * OMISTAJA 16.9.2026 (iPad-kuva Istanbulista, sanatarkasti): *"Tai
+   * mikäli kuva ei kata koko aluetta, niin pidä silti selite ihan
+   * vasemmassa yläreunassa"* ja *"jos kuva ei ulotu alareunaan asti,
+   * niin ne miniatyyrikuvat saisivat silti olla aina siellä
+   * vasemmassa alareunassa kelluvina"*.
    *
-   * MITTA LUETAAN KUVAN OMASTA RECTISTÄ. Ero lavan ja kuvan reunojen
-   * välillä (symmetrinen, koska kuva on keskitetty flex-boxilla)
-   * kirjoitetaan CSS-muuttujiin `.satelliitti-katselu`-elementtiin,
-   * josta ne perivät kulma, nauha ja popup (css/satelliitti.css).
-   * Mittaus EI saa osua zoomin transformin aikaan — siksi tätä
-   * kutsutaan vain kuvan latautuessa ja ikkunan koon muuttuessa, ei
-   * jokaisella piirrolla.
+   * TÄMÄ KUMOAA 15.9.2026 TEHDYN MITTAUKSEN. Silloin ✕ ja pienoiskuvat
+   * asemoitiin KUVAN todellisen piirtoalueen reunaan (CSS-muuttujat
+   * `--satelliitti-kuva-marginaali-x/-y`, laskettu joka latauksella),
+   * jottei mikään kelluisi mustassa marginaalissa. Nyt omistaja pyytää
+   * päinvastaista: pinnat ovat AINA ruudun kulmissa, olipa kuva minkä
+   * muotoinen tahansa — silloin niiden paikka ei hypi otoksesta
+   * toiseen eikä laitteesta toiseen. Mittausta ei siis enää tarvita,
+   * ja koko marginaalimuuttujien koneisto on poistettu; CSS lukee
+   * pelkän kiinteän 12 px:n sisennyksen `.satelliitti-katselu`-
+   * elementistä, joka itse alkaa yläpalkin mitatusta alareunasta.
    */
-  const asemoiKulmat = () => {
-    const lr = lava.getBoundingClientRect();
-    const ir = kuva.getBoundingClientRect();
-    if (!(lr.width > 0) || !(ir.width > 0)) return;
-    const marginaaliX = Math.max(0, (lr.width - ir.width) / 2);
-    const marginaaliY = Math.max(0, (lr.height - ir.height) / 2);
-    katselu.style.setProperty('--satelliitti-kuva-marginaali-x', `${marginaaliX}px`);
-    katselu.style.setProperty('--satelliitti-kuva-marginaali-y', `${marginaaliY}px`);
-  };
 
   const havainnot = kohde.havainnot ?? [];
   let indeksi = oletusIndeksi(kohde);
@@ -556,20 +604,6 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
   kuva.draggable = false;
   lava.appendChild(kuva);
 
-  /*
-   * ── NIMI JA PÄIVÄ ASUVAT YLÄPALKISSA, EI KUVAN PÄÄLLÄ ────────────
-   *
-   * Kuva vaihtuu tässä (kuva.src) ja yläpalkin pilleri kirjoitetaan
-   * uudestaan joka vaihdossa (nayta) — sama muotoilija kuin info-
-   * popupin "Kuvausaika" (aikateksti), aikaa ei keksitä.
-   */
-
-  /*
-   * ---- kulma: pelkkä ✕ kuvan oikeassa yläkulmassa ------------------
-   * i-nappi asuu YLÄPALKISSA (`palkki.infoNappi`, pillerin oikealla
-   * puolella) toisen täsmennyksen jälkeen — tämä havaintokortti kytkee
-   * vain sen klikkauksen ja piilotuksen (alla), ei luo omaa nappia.
-   */
   const nappi = (luokka, teksti, otsikko) => {
     const b = html('button', luokka, teksti);
     b.type = 'button';
@@ -577,43 +611,103 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
     b.setAttribute('aria-label', otsikko);
     return b;
   };
+
+  /*
+   * ── SELITE KUVAN PÄÄLLÄ RUUDUN VASEMMASSA YLÄKULMASSA ────────────
+   *
+   * OMISTAJA 16.9.2026, sanatarkasti: *"Otetaan I-nappi pois ja näytä
+   * suoraan kohteen nimi ja selite vasemmassa yläreunassa kuvan
+   * päällä. ... Mutta jätä lisätiedot, elikkä aineisto, kuvausaika,
+   * paikka ja niin edelleen pois. Mutta siinä selitteen oikeassa
+   * alareunassa saisi olla pieni väkänen alaspäin, mitä painamalla
+   * nämä lisätiedot vielä tulisi näkyviin. Ja jos selitetekstiä
+   * itsessään painaa, niin silloin se seliteteksti kelautuu ylös ja
+   * näkyville jää vain otsikkorivi."*
+   *
+   * KOLME KERROSTA YHDESSÄ LAATIKOSSA, JOTTA NE EIVÄT VOI ERKAANTUA:
+   *
+   *   • OTSIKKORIVI (kohde — seutu) jää aina näkyviin. Se on myös
+   *     kelautuneen selitteen kahva: uusi napautus avaa tekstin.
+   *   • RUNKO (seliteteksti + väkänen + lisätiedot) on se osa, joka
+   *     kelautuu ylös. Korkeussiirtymä on 250 ms `max-height`illä, ja
+   *     runko on `overflow: hidden` — teksti katoaa laatikon sisään
+   *     eikä ruudun yli.
+   *   • LISÄTIEDOT (aineisto, kuvausaika, paikka, kuvaustapa,
+   *     kuvatunnus, lisenssi, lähde, kuvakirjasto) ovat oletuksena
+   *     `hidden` ja aukeavat VAIN väkäsestä — ne ovat lähdeketju,
+   *     eivät se mitä kuvassa näkyy.
+   *
+   * VÄKÄNEN JA TEKSTI EIVÄT SEKOITU: väkäsen `click` pysäyttää
+   * kuplinnan (`stopPropagation`), joten lisätietojen avaaminen ei
+   * kelaa selitettä kiinni. Molemmat ovat oikeita <button>-elementtejä
+   * vasta siltä osin kuin ne ovat toimintoja — koko laatikko on
+   * `role="button"`-kytkin, ja näppäimistö saa saman toiminnon
+   * Enterillä ja välilyönnillä.
+   */
+  const selite = html('div', 'satelliitti-selite');
+  const seliteOtsikko = html('div', 'satelliitti-selite-otsikko', kohde.nimi);
+  seliteOtsikko.appendChild(html('span', 'satelliitti-seutu', ` — ${kohde.seutu}`));
+  const seliteRunko = html('div', 'satelliitti-selite-runko');
+  const seliteTeksti = html('div', 'satelliitti-selite-teksti');
+  const lisatiedot = html('div', 'satelliitti-lisatiedot');
+  lisatiedot.hidden = true;
+  const vakanen = nappi('satelliitti-vakanen', '⌄', 'Näytä lisätiedot');
+  vakanen.setAttribute('aria-expanded', 'false');
+  const vakasenRivi = html('div', 'satelliitti-vakasen-rivi');
+  vakasenRivi.appendChild(vakanen);
+  seliteRunko.append(seliteTeksti, vakasenRivi, lisatiedot);
+  selite.append(seliteOtsikko, seliteRunko);
+  selite.setAttribute('role', 'button');
+  selite.tabIndex = 0;
+  selite.setAttribute('aria-label', `${kohde.nimi}: avaa tai kelaa selite`);
+
+  /** Selite auki/kiinni — vain otsikkorivi jää (korkeussiirtymä CSS:ssä). */
+  const kelaaSelite = () => {
+    const kiinni = selite.classList.toggle('satelliitti-selite-kiinni');
+    selite.setAttribute('aria-expanded', kiinni ? 'false' : 'true');
+  };
+  selite.setAttribute('aria-expanded', 'true');
+  selite.addEventListener('click', (e) => { e.stopPropagation(); kelaaSelite(); });
+  selite.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    e.preventDefault();
+    e.stopPropagation();
+    kelaaSelite();
+  });
+
+  /*
+   * ---- ✕ ruudun oikeassa yläkulmassa, HARMAANA (omistaja 16.9.2026:
+   * *"siirrä kuvan päällä oleva X niin oikeaan yläreunaan heti palkin
+   * alapuolelle, mutta ota siitä väri pois ja muuta ... ympyrän
+   * muotoiseksi ja sen keskelle laita X, mutta nämä saisivat olla
+   * harmaalla"*). Vihreä oli linssin oma tehosteväri; harmaa nappi ei
+   * kilpaile valokuvan kanssa. Väri on CSS:ssä puhtaan harmaa
+   * (r = g = b), ja savuke mittaa sen laskettuna arvona.
+   */
   const sulku = nappi('satelliitti-sulku', '×', 'Sulje havainto');
   const kulma = html('div', 'satelliitti-kulma');
   kulma.append(sulku);
-  const infoNappi = palkki?.infoNappi ?? null;
 
-  /* ---- pikkukuvat hyvin pieninä kuvan vasemmassa alakulmassa ------- */
+  /* ---- pikkukuvat kelluvat aina RUUDUN vasemmassa alakulmassa ------ */
   const nauha = html('div', 'satelliitti-nauha');
-  katselu.append(lava, kulma, nauha);
+  katselu.append(lava, selite, kulma, nauha);
   document.body.appendChild(katselu);
-  // Julistettu TÄSSÄ (ei vasta "sulkeminen"-lohkossa), koska
-  // paivitaAsemointi (alla) lukee sitä myös ENSIMMÄISELLÄ, synkronisella
-  // kutsulla — let-muuttuja ei saa olla vielä alustamatta silloin.
-  let popup = null;
-  /** Molemmat mittaukset yhdellä kutsulla: palkin alareuna JA kuvan oma alue. */
-  const paivitaAsemointi = () => {
-    asemoiYlareuna();
-    asemoiKulmat();
-    // Popup seuraa i-nappia (yläpalkissa) — jos se on auki resize/
-    // kääntökohdassa, se pysyy napin kohdalla (asemoiPopup on määritelty
-    // vasta myöhemmin tässä funktiossa, mutta tähän mennessä popup on
-    // aina null ensimmäisellä, synkronisella kutsulla).
-    if (popup) asemoiPopup();
-  };
+  /*
+   * ASEMOINTI ON YKSI MITTA: mistä kortti alkaa (yläpalkin mitattu
+   * alareuna). Kaikki muu on CSS:n kiinteitä kulmia, joten kuvan koon
+   * muuttuminen ei enää vaadi omaa mittausta (ks. yllä).
+   */
+  const paivitaAsemointi = () => { asemoiYlareuna(); };
   paivitaAsemointi();
   const kokovahti = typeof ResizeObserver === 'function' && palkki?.el
     ? new ResizeObserver(paivitaAsemointi) : null;
   kokovahti?.observe(palkki.el);
-  // Lavan oma koko (esim. puhelimen kääntö ilman erillistä orientationchange-
-  // tapahtumaa selaimissa, joissa se ei laukea) vaikuttaa kuvan marginaaliin.
-  const lavavahti = typeof ResizeObserver === 'function' ? new ResizeObserver(asemoiKulmat) : null;
-  lavavahti?.observe(lava);
   window.addEventListener('resize', paivitaAsemointi);
   window.addEventListener('orientationchange', paivitaAsemointi);
 
   /* ---- sulkeminen -------------------------------------------------- */
   const nappain = (e) => {
-    if (e.key === 'Escape') { if (popup) { suljePopup(); return; } sulje(); return; }
+    if (e.key === 'Escape') { sulje(); return; }
     if (e.key === 'ArrowRight') nayta(indeksi + 1);
     if (e.key === 'ArrowLeft') nayta(indeksi - 1);
   };
@@ -621,71 +715,34 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
     if (!katselu.isConnected) return;
     katselu.remove();
     kokovahti?.disconnect?.();
-    lavavahti?.disconnect?.();
     window.removeEventListener('resize', paivitaAsemointi);
     window.removeEventListener('orientationchange', paivitaAsemointi);
     document.removeEventListener('keydown', nappain);
-    // i-nappi on palkin OMA, pysyvä elementti — sen kuuntelija
-    // irrotetaan tässä, jotta seuraava havaintokortti ei kasaa niitä
-    // päällekkäin (palkki elää linssin koko avoinnaolon ajan).
-    infoNappi?.removeEventListener('click', infoNapinKlikkaus);
-    infoNappi?.setAttribute('aria-expanded', 'false');
     palkki?.nimeaKohde?.(null);
     onSuljettu?.();
   }
   katselu.satelliittiSulje = sulje;
   sulku.addEventListener('click', (e) => { e.stopPropagation(); sulje(); });
   document.addEventListener('keydown', nappain);
-  // Pilleri kirjoitetaan ekan kerran nayta():ssa (kutsutaan lopussa),
-  // jossa nimi ja päivä ovat aina yhdessä samasta lähteestä.
 
-  /* ---- info-popup: kaikki tekstitieto yhden napin takana ----------- */
-  function suljePopup() {
-    popup?.remove();
-    popup = null;
-    infoNappi?.setAttribute('aria-expanded', 'false');
-  }
   /*
-   * POPUP YLÄPALKIN i-NAPIN KOHDALLE (omistaja 15.9.2026: *"lisätietokentta
-   * avautuu yläpalkin alta i-napin kohdalta"*). i-napin x-paikka
-   * yläpalkissa vaihtelee kohteen nimen pituuden mukaan, joten se
-   * mitataan joka avauksella eikä kiinnitetä CSS:ään.
+   * ---- lisätiedot väkäsen takana, selitteen alla samassa laatikossa
+   *
+   * SAMAT RIVIT KUIN ENTISESSÄ i-NAPIN POPUPISSA, samassa
+   * järjestyksessä ja samoista lähteistä — vain paikka vaihtui
+   * (omistaja 16.9.2026). Lähdeketju ei siis katkennut: aineisto,
+   * kuvausaika, paikka, kuvaustapa, kuvatunnus, lisenssi, NASAn
+   * kuvasivu ja kuvakirjasto ovat yhä yhden napautuksen päässä.
    */
-  function asemoiPopup() {
-    if (!popup) return;
-    const napinRect = infoNappi?.getBoundingClientRect?.();
-    const katseluRect = katselu.getBoundingClientRect();
-    if (!napinRect || !(katseluRect.width > 0)) return;
-    const leveys = popup.offsetWidth || 380;
-    const vasenRajattu = Math.max(8, Math.min(
-      napinRect.left - katseluRect.left, katseluRect.width - leveys - 8,
-    ));
-    popup.style.left = `${Math.round(vasenRajattu)}px`;
-    popup.style.top = '8px';
-  }
   const teeRivi = (nimi, arvo) => {
     if (!arvo) return null;
     const d = html('div');
     d.append(html('b', null, `${nimi}: `), typeof arvo === 'string' ? document.createTextNode(arvo) : arvo);
     return d;
   };
-  const avaaPopup = () => {
-    if (popup) { suljePopup(); return; }
+  const latoLisatiedot = () => {
     const h = havainnot[indeksi] ?? {};
-    popup = html('div', 'satelliitti-popup');
-    popup.setAttribute('role', 'dialog');
-    popup.setAttribute('aria-label', `${kohde.nimi}: havainnon tiedot`);
-    const otsikko = html('div', 'satelliitti-popup-otsikko', kohde.nimi);
-    otsikko.appendChild(html('span', 'satelliitti-seutu', ` — ${kohde.seutu}`));
-    const kiinni = nappi('satelliitti-popup-sulku', '×', 'Sulje tiedot');
-    kiinni.addEventListener('click', suljePopup);
-    popup.append(otsikko, kiinni);
-    /*
-     * KUVATEKSTI ENSIN. Se on ainoa teksti, jonka pelaaja lukee, ja
-     * sen tehtävä on kertoa mitä kuvassa näkyy — loput rivit ovat
-     * lähdetietoa, joka kuuluu sen alle eikä sen eteen.
-     */
-    popup.appendChild(html('div', 'satelliitti-popup-selite', h.teksti ?? kohde.selite));
+    lisatiedot.replaceChildren();
     for (const rivi of [
       teeRivi('Aineisto', `${SATELLIITTI_LAHDE.aineisto}, ${SATELLIITTI_LAHDE.tekija}`),
       teeRivi('Kuvausaika', aikateksti(h.aika)),
@@ -696,13 +753,23 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
       teeRivi('Lisenssi', `${SATELLIITTI_LAHDE.lisenssi} (${SATELLIITTI_LAHDE.tekija})`),
       h.sivu ? teeRivi('Lähde', ulkolinkki('NASAn kuvasivu', h.sivu)) : null,
       teeRivi('Kuvakirjasto', ulkolinkki('NASA Image and Video Library', SATELLIITTI_LAHDE.osoite)),
-    ]) if (rivi) popup.appendChild(rivi);
-    katselu.appendChild(popup);
-    asemoiPopup();
-    infoNappi?.setAttribute('aria-expanded', 'true');
+    ]) if (rivi) lisatiedot.appendChild(rivi);
   };
-  const infoNapinKlikkaus = (e) => { e.stopPropagation(); avaaPopup(); };
-  infoNappi?.addEventListener('click', infoNapinKlikkaus);
+  vakanen.addEventListener('click', (e) => {
+    /*
+     * VÄKÄNEN EI KELAA SELITETTÄ. Napautus kuplisi selitteeseen, jonka
+     * oma kuuntelija kelaisi tekstin ylös samalla painalluksella —
+     * lisätiedot olisivat auki piilossa olevan tekstin alla.
+     */
+    e.stopPropagation();
+    const auki = lisatiedot.hidden;
+    if (auki) latoLisatiedot();
+    lisatiedot.hidden = !auki;
+    vakanen.setAttribute('aria-expanded', auki ? 'true' : 'false');
+    vakanen.classList.toggle('satelliitti-vakanen-auki', auki);
+    vakanen.title = auki ? 'Piilota lisätiedot' : 'Näytä lisätiedot';
+    vakanen.setAttribute('aria-label', vakanen.title);
+  });
 
   /*
    * VERTAA-TOIMINTO ON POISTETTU (omistaja 15.9.2026, kysymyskortilla:
@@ -887,19 +954,19 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
     // ZOOM NOLLAUTUU OTOSTA VAIHDETTAESSA (omistajan vaatimus).
     if (vaihtui) nollaaZoom();
     /*
-     * NIMI JA PÄIVÄ YLÄPALKIN PILLERIIN, EI KUVAN PÄÄLLE (omistaja
-     * 15.9.2026). Sama muotoilija kuin info-popupin "Kuvausaika" —
-     * kelloa ei keksitä, esim. "Etna · 30.10.2002".
+     * SELITE KUVAN PÄÄLLÄ, EI YLÄPALKIN PILLERISSÄ (omistaja
+     * 16.9.2026). Otsikkorivi on kohde ja seutu; selitetekstinä on
+     * OTOKSEN oma kuvateksti, joten se vaihtuu pikkukuvaa
+     * napautettaessa. Yläpalkille kerrotaan vain, että kuva on auki
+     * (NASA-rivi väistyy) — nimeä ja päivää ei enää kirjoiteta sinne.
      */
+    seliteTeksti.textContent = h.teksti ?? kohde.selite;
+    if (!lisatiedot.hidden) latoLisatiedot();
     palkki?.nimeaKohde?.(`${kohde.nimi} · ${aikateksti(h.aika)}`);
     latoNauha();
-    if (popup) { suljePopup(); avaaPopup(); }
   }
   kuva.addEventListener('error', () => katselu.classList.add('satelliitti-kuvatta'), { once: true });
-  // Otokset ovat eri kuvasuhteissa: marginaali mitataan uudestaan joka
-  // latauksella, jotta kulmanapit pysyvät KUVAN reunassa myös
-  // otosta vaihdettaessa (ks. asemoiKulmat).
-  kuva.addEventListener('load', () => { piirra(); asemoiKulmat(); });
+  kuva.addEventListener('load', () => { piirra(); });
   nayta(indeksi);
   kuva.src = havainnot[indeksi].kuva;
   kuva.alt = kuvatiedot(kohde, havainnot[indeksi]).lyhyt;
@@ -909,20 +976,21 @@ function avaaHavaintokortti({ kohde, palkki, onSuljettu }) {
 
 /**
  * Linssin oma yläpalkki Matkakirjan palkin TILALLE (ks. tiedoston
- * alku). Palauttaa { el, nimeaKohde, pura }.
+ * alku). Palauttaa { el, hampurilainen, valikko, nimeaKohde, pura }.
  *
  * EI VETOLAATIKKOA (omistaja 12.9.2026, sanatarkasti: *"Ota yläpalkin
- * vetolaatikko pois"*). Palkissa on linssin nimi, auki olevan kohteen
- * nimi ja Sulje linssi — ei mitään muuta. Kohteet etsitään
+ * vetolaatikko pois"*). Palkissa on linssin ikoni ja kaksirivinen nimi,
+ * NASA-rivi ja hampurilainen — ei mitään muuta. Kohteet etsitään
  * palloa pyörittämällä, mikä on omistajan valinta; tilalle EI lisätä
- * hakua eikä luetteloa.
+ * hakua eikä luetteloa. Hampurilaisen valikossa on täsmälleen kaksi
+ * kohtaa (äänet, poistu), ei kohdeluetteloa.
  *
- * KOHTEEN NIMI VAIN TÄNNE (omistaja 12.9.2026: *"Kohteen nimi vain
- * yläpalkkiin"*): havaintoikkuna kirjoittaa nimen `nimeaKohde`-kutsulla
- * ja pyyhkii sen sulkeutuessaan. Nimikenttä on palkissa AINA (tyhjänä
- * kin), jotta palkin mitattu korkeus ei muutu nimen ilmestyessä —
- * korkeus on sidottu Matkakirjan oman palkin mittaan, ja kartta
- * hyppäisi jos se eläisi.
+ * KOHTEEN NIMI EI OLE ENÄÄ PALKISSA (omistaja 16.9.2026): nimi ja
+ * selite lukevat kuvan päällä ruudun vasemmassa yläkulmassa, ja
+ * nimi/päivä-pilleri sekä i-nappi on poistettu kokonaan. `nimeaKohde`
+ * jäi kertomaan palkille vain sen, onko kuva auki — NASA-rivi väistyy
+ * kuvan ajaksi ja palaa kun kuva suljetaan. Palkin korkeus tulee yhä
+ * muuttujasta --aikajana-palkki-korkeus, joten kartta ei hyppää.
  */
 export function rakennaPalkki({ ui, kohteet, onSulje, doc = document }) {
   const palkki = doc.createElement('div');
@@ -930,73 +998,147 @@ export function rakennaPalkki({ ui, kohteet, onSulje, doc = document }) {
   palkki.setAttribute('role', 'group');
   palkki.setAttribute('aria-label', 'Astronautin kamera');
 
+  /*
+   * ── TUNNUS: LINSSIN IKONI JA KAKSIRIVINEN NIMI ───────────────────
+   *
+   * OMISTAJA 16.9.2026, sanatarkasti: *"Astronautin kameratekstin
+   * voisi rivittää kahdelle riville ja sen vasemmalle puolelle voisi
+   * tulla linssin ikoni. Ja tasaa astronautin kamera vasempaan reunaan
+   * niin, että ne lähtevät linssin ikonin oikealta puolelta."*
+   *
+   * IKONI ON SAMA PIIRROS KUIN MATKALAUKUSSA (LINSSIN_IKONI, ks.
+   * tiedoston loppu): kamera ja sen alla Maan kaari. Toisintoa ei
+   * piirretä — matkalaukun kuvake, yläpalkin nappi (js/ui.js
+   * paivitaLinssiNappi) ja tämä palkki lukevat kaikki samaa
+   * merkkijonoa, joten ne eivät voi erkaantua toisistaan.
+   *
+   * KAKSI RIVIÄ KAHTENA ELEMENTTINÄ, ei <br>-merkkinä: rivit ovat
+   * silloin tyylitettävissä (kirjainväli, rivinkorkeus) eikä palkin
+   * korkeus riipu fontista — korkeus tulee yhä muuttujasta
+   * --aikajana-palkki-korkeus.
+   */
+  const tunnus = doc.createElement('div');
+  tunnus.className = 'satelliittipalkki-tunnus';
+
+  const ikoni = doc.createElementNS
+    ? doc.createElementNS('http://www.w3.org/2000/svg', 'svg')
+    : doc.createElement('svg');
+  ikoni.setAttribute('class', 'satelliittipalkki-ikoni');
+  ikoni.setAttribute('viewBox', '0 0 24 24');
+  ikoni.setAttribute('aria-hidden', 'true');
+  ikoni.setAttribute('focusable', 'false');
+  ikoni.innerHTML = LINSSIN_IKONI;
+
   const nimi = doc.createElement('span');
   nimi.className = 'satelliittipalkki-nimi';
-  nimi.textContent = 'Astronautin kamera';
+  const rivi1 = doc.createElement('span');
+  rivi1.className = 'satelliittipalkki-rivi';
+  rivi1.textContent = 'ASTRONAUTIN';
+  const rivi2 = doc.createElement('span');
+  rivi2.className = 'satelliittipalkki-rivi';
+  rivi2.textContent = 'KAMERA';
+  nimi.append(rivi1, rivi2);
+  tunnus.append(ikoni, nimi);
 
   /*
-   * KOHTEEN NIMI JA PÄIVÄ OMASSA PILLERISSÄ NASA-RIVIN TILALLA
-   * (omistaja 15.9.2026 klo 11.45 UTC, työpöytäkuva Etnasta: *"kohteen
-   * nimi ja paiva omassa pienessa tummapohjaisessa pillerissa
-   * NASA-rivin tilalla kun kuva on auki"*). Tyhjä, kun ikkunaa ei ole
-   * auki — pilleritausta tulee vain :not(:empty)-säännöstä
-   * (css/satelliitti.css), joten tyhjä kenttä ei näy laatikkona.
+   * NIMI/PÄIVÄ-PILLERI JA i-NAPPI ON POISTETTU (omistaja 16.9.2026:
+   * *"nyt astronautin kameran oikealla puolella olevan [pillerin] voi
+   * myös ottaa pois kokonaan näkyvistä"* ja *"Otetaan I-nappi pois"*).
+   * Kohteen nimi ja selite lukevat nyt kuvan päällä ruudun vasemmassa
+   * yläkulmassa (avaaHavaintokortti), ja lisätiedot ovat selitteen
+   * väkäsen takana — palkkiin ei jää kumpaakaan.
    */
-  const kohdenimi = doc.createElement('span');
-  kohdenimi.className = 'satelliittipalkki-kohde';
-  kohdenimi.setAttribute('aria-live', 'polite');
-  kohdenimi.textContent = '';
-
-  /*
-   * i-NAPPI HETI PILLERIN OIKEALLA PUOLELLA (omistaja 15.9.2026,
-   * TÄSMENNYS: *"siirrä 'i' pillerin oikealle puolelle"*). Nappi asui
-   * ensin kuvan oikeassa yläkulmassa ✕:n alla; toinen kaappaus siirsi
-   * sen tähän. Klikkauksen käsittelijän kytkee avaaHavaintokortti
-   * (havainnon tiedot riippuvat auki olevasta kohteesta, ei palkista
-   * itsestään) — tämä on vain paikka ja ulkoasu. Piilossa, kun kuvaa
-   * ei ole auki (sama ehto kuin pillerillä).
-   */
-  const infoNappi = doc.createElement('button');
-  infoNappi.type = 'button';
-  infoNappi.className = 'satelliittipalkki-info';
-  infoNappi.textContent = 'i';
-  infoNappi.title = 'Havainnon tiedot';
-  infoNappi.setAttribute('aria-label', 'Havainnon tiedot');
-  infoNappi.hidden = true;
 
   /*
    * OHJETEKSTI KERTOO LÄHTEEN, EI KÄYTTÖÄ (omistaja 15.9.2026,
    * työpöytäkuva linssistä: *"ota pois tuon 'Napauta hohtavaa vihreää
    * pistettä' -teksti. Ja sen tilalla voisi lukea jotain NASAsta ...
-   * lyhyesti"*). Vanha rivi opasti napautukseen, jonka pelaaja oppii
-   * ensimmäisellä kokeilulla; tilalla on lyhyt totuudenmukainen rivi
-   * kuvien alkuperästä. Sanamuoto ei väitä ISS:ää: aineisto
-   * (SATELLIITTI_LAHDE, satelliitti-data.js) tulee NASAn koko
-   * kuvakirjastosta (images.nasa.gov), eivät kaikki kuvat ole
-   * varmasti avaruusasemalta, vaikka moni onkin.
+   * lyhyesti"*). Rivi NÄKYY KARTALLA ILMAN KUVAA ja väistyy kuvan
+   * ajaksi (nimeaKohde) — omistajan 16.9.2026 pyyntö koski pilleriä,
+   * ei tätä riviä.
    */
   const ohje = doc.createElement('span');
   ohje.className = 'satelliittipalkki-ohje';
   ohje.textContent = 'Astronauttien ottamia valokuvia · NASA';
 
   /*
-   * "SULJE LINSSI" -NAPPI ON PELKKÄ X (omistaja 15.9.2026, sama kuva:
-   * *"tuosta voisi muuttaa suljelinssi-napin pelkaksi X:ksi"*). Muilla
-   * linsseillä (js/pallo.js .pallo-sulje, js/pallolauta/linssikartta.js
-   * .linssikartta-sulje) sulkunappi on jo pelkkä ×-merkki aria-labelin
-   * kanssa — tämä nappi oli poikkeus täydellä lukutekstillä. aria-label
-   * ja title kantavat edelleen saman lauseen kuin ennen, jotta
-   * ruudunlukija ja hiiren vihje kertovat täyden merkityksen.
+   * ── HAMPURILAINEN X:N TILALLE (omistaja 16.9.2026, sanatarkasti:
+   * *"Muuta oikean yläreunan X-merkki hampurilaiseksi ja laita siihen
+   * äänet päälle ja pois nappi sekä poistu linssistä kohta."*)
+   *
+   * Valikossa on TÄSMÄLLEEN KAKSI KOHTAA, eikä siitä tule vetolaatikon
+   * paluuta (omistaja 12.9.2026: *"Ota yläpalkin vetolaatikko pois"*)
+   * — kohteita ei luetella, ne etsitään yhä palloa pyörittämällä.
+   *
+   *   • ÄÄNET PÄÄLLE/POIS kytkee LINSSIN oman äänen. Linssillä ei ole
+   *     vielä omaa taustaääntä (avaruusaiheinen ambienssi on tilattu
+   *     Codexilta samalla viestillä), joten kytkin tallentaa nyt
+   *     valinnan ja tuleva ääni lukee sen käynnistyessään — asetus
+   *     asuu samassa paikassa kuin pelin muut ääniasetukset
+   *     (localStorage, ks. linssiAaniPaalla).
+   *   • POISTU LINSSISTÄ tekee saman kuin entinen ✕ (onSulje).
    */
-  const sulje = doc.createElement('button');
-  sulje.type = 'button';
-  sulje.className = 'satelliittipalkki-sulje';
-  sulje.textContent = '×';
-  sulje.setAttribute('aria-label', 'Sulje linssi');
-  sulje.title = 'Sulje linssi ja palaa peliin';
-  sulje.addEventListener('click', () => onSulje?.());
+  const valikkokehys = doc.createElement('div');
+  valikkokehys.className = 'satelliittipalkki-valikkokehys';
 
-  palkki.append(nimi, kohdenimi, infoNappi, ohje, sulje);
+  const hampurilainen = doc.createElement('button');
+  hampurilainen.type = 'button';
+  hampurilainen.className = 'satelliittipalkki-hampurilainen';
+  hampurilainen.setAttribute('aria-label', 'Linssin valikko');
+  hampurilainen.title = 'Linssin valikko';
+  hampurilainen.setAttribute('aria-haspopup', 'menu');
+  hampurilainen.setAttribute('aria-expanded', 'false');
+  for (let i = 0; i < 3; i += 1) {
+    const viiva = doc.createElement('span');
+    viiva.className = 'satelliittipalkki-viiva';
+    hampurilainen.appendChild(viiva);
+  }
+
+  const valikko = doc.createElement('div');
+  valikko.className = 'satelliittipalkki-valikko';
+  valikko.setAttribute('role', 'menu');
+  valikko.hidden = true;
+
+  const aaniNappi = doc.createElement('button');
+  aaniNappi.type = 'button';
+  aaniNappi.className = 'satelliittipalkki-kohta satelliittipalkki-aani';
+  aaniNappi.setAttribute('role', 'menuitem');
+  const piirraAani = () => {
+    const paalla = linssiAaniPaalla();
+    aaniNappi.textContent = paalla ? 'Äänet pois' : 'Äänet päällä';
+    aaniNappi.title = paalla ? 'Vaienna linssin äänet' : 'Palauta linssin äänet';
+    aaniNappi.setAttribute('aria-pressed', paalla ? 'true' : 'false');
+  };
+  piirraAani();
+  aaniNappi.addEventListener('click', () => {
+    asetaLinssiAani(!linssiAaniPaalla());
+    piirraAani();
+  });
+
+  const poistuNappi = doc.createElement('button');
+  poistuNappi.type = 'button';
+  poistuNappi.className = 'satelliittipalkki-kohta satelliittipalkki-poistu';
+  poistuNappi.setAttribute('role', 'menuitem');
+  poistuNappi.textContent = 'Poistu linssistä';
+  poistuNappi.title = 'Sulje linssi ja palaa peliin';
+  poistuNappi.addEventListener('click', () => onSulje?.());
+
+  valikko.append(aaniNappi, poistuNappi);
+  valikkokehys.append(hampurilainen, valikko);
+
+  const naytaValikko = (auki) => {
+    valikko.hidden = !auki;
+    hampurilainen.setAttribute('aria-expanded', auki ? 'true' : 'false');
+  };
+  hampurilainen.addEventListener('click', (e) => {
+    e.stopPropagation?.();
+    naytaValikko(Boolean(valikko.hidden));
+  });
+  /* Napautus muualle sulkee valikon — sama tapa kuin pelin muissa valikoissa. */
+  const ulkoNapautus = () => naytaValikko(false);
+  doc.addEventListener?.('click', ulkoNapautus);
+
+  palkki.append(tunnus, ohje, valikkokehys);
 
   /*
    * YLÄPALKIN KORKEUS MITATAAN ENNEN PIILOTUSTA — sama kaava kuin
@@ -1013,22 +1155,20 @@ export function rakennaPalkki({ ui, kohteet, onSulje, doc = document }) {
 
   return {
     el: palkki,
-    kohdenimi,
-    /** i-nappi (havaintokortti kytkee klikkauksen ja piilotuksen tähän). */
-    infoNappi,
+    /** Hampurilainen ja sen valikko (savukkeet ja vartijat). */
+    hampurilainen,
+    valikko,
     /*
-     * Kohteen nimi (+ päivä) palkkiin (tai null pois). Korkeus ei
-     * muutu. NASA-rivi (ohje) näkyy VAIN kun pilleri on tyhjä — kuva
-     * auki -tilassa pilleri korvaa sen, kartalla ilman kuvaa NASA-rivi
-     * palaa (ks. tiedoston yllä oleva kommentti). i-nappi näkyy ja
-     * piilee SAMALLA ehdolla kuin pilleri.
+     * Kuva auki / kiinni. Kohteen nimeä ei enää kirjoiteta palkkiin
+     * (se lukee kuvan päällä olevassa selitteessä) — tämä kutsu vain
+     * väistättää NASA-rivin kuvan ajaksi ja palauttaa sen, kun kuva
+     * suljetaan. Nimi säilyy, koska havaintokortti kutsuu sitä.
      */
     nimeaKohde: (teksti) => {
-      kohdenimi.textContent = teksti ?? '';
       ohje.hidden = Boolean(teksti);
-      infoNappi.hidden = !teksti;
     },
     pura: () => {
+      doc.removeEventListener?.('click', ulkoNapautus);
       palkki.remove();
       doc.body.classList.remove('aikajana-palkki-auki', 'aikajana-paalla');
       doc.body.style.removeProperty('--aikajana-palkki-korkeus');
@@ -1175,10 +1315,7 @@ export const LINSSI = {
    *      viewBoxilla, samoilla icon-linssi-*-luokilla (väri, viiva)
    *      kuin muillakin varasoluilla (icon-aarre, icon-linssi-lasi).
    */
-  ikoni: '<rect x="4.4" y="9.6" width="12.2" height="9.4" rx="2.2"/>'
-    + '<rect x="8.6" y="6.6" width="4.6" height="3.4" rx="1.1"/>'
-    + '<circle cx="10.5" cy="14.3" r="2.7"/>'
-    + '<path d="M2 21c3.6-3.4 16.4-3.4 20 0"/>',
+  ikoni: LINSSIN_IKONI,
   valokuva: false,
   laudat: ['*'],
   lahde: {
