@@ -637,8 +637,16 @@ test('napojen häivytys tehdään alfaliu\'ulla eikä 33 Mt:n taulukolla', () =>
    * näytönohjaimella — ja `destination-in` palauttaa alfan täsmälleen,
    * koska `multiply` täyttäisi läpinäkyvät navat harmaalla.
    */
-  assert.ok(!/getImageData\(0, 0, leveys, korkeus\)/.test(lahde),
-    'reliefi luetaan yhä pikseleinä');
+  /*
+   * PÄIVITETTY 16.9.2026 (musta pallo): pikselisilmukka on olemassa,
+   * mutta vain kylläisyyden varareittinä vanhalle Safarille JA vain
+   * PIKSELISATURAATION_KATON alittavalle kankaalle. 4k ja 8k eivät
+   * mahdu siihen, joten 33 Mt:n taulukkoa ei synny.
+   */
+  assert.match(lahde, /PIKSELISATURAATION_KATTO = 2048 \* 1024/);
+  assert.match(lahde,
+    /leveys \* korkeus <= PIKSELISATURAATION_KATTO[\s\S]{0,160}getImageData\(0, 0, leveys, korkeus\)/,
+    'pikselisilmukka ilman kokokattoa');
   assert.match(lahde, /globalCompositeOperation = 'multiply'/);
   assert.match(lahde, /globalCompositeOperation = 'destination-in'/);
   assert.match(lahde, /globalCompositeOperation = 'destination-out'/);
@@ -939,8 +947,14 @@ test('kytkin vaihtaa kuvan mutta EI tarkkuuden valintaa', () => {
 
 test('napajäätä ei häivytetä päälle, kun jää tulee kuvasta', () => {
   const lahde = readFileSync(new URL('../js/linssit/satelliitti-avaruus.js', import.meta.url), 'utf8');
-  // Häivytys on yhä olemassa vanhalle kuvalle, mutta se on ehdollinen.
-  assert.match(lahde, /if \(!kokoPallo\) napaLiuku\(actx, leveys, korkeus\);/);
+  /*
+   * Häivytys on yhä olemassa vanhalle kuvalle, mutta se on nyt kokonaan
+   * toisessa haarassa: koko pallon kuva ladotaan yhdelle kankaalle
+   * ilman apukangasta, alfan palautusta ja napaliukua (16.9.2026,
+   * musta pallo). napaLiuku kutsutaan vain `else`-haarassa.
+   */
+  assert.match(lahde, /if \(kokoPallo\) \{[\s\S]{0,900}\} else \{[\s\S]{0,900}napaLiuku\(actx, leveys, korkeus\);/);
+  assert.ok(!/^\s*napaLiuku\(ctx, /m.test(lahde), 'napaliuku koko pallon haarassa');
 });
 
 test('työkalun jäävari on SAMA kuin linssin generoidun Maan jää', () => {
@@ -970,4 +984,212 @@ test('jään sekoitus: päiväntasaajalla ei jäätä, navalla lähes pelkkää'
   }
   // Sama molemmilla pallonpuoliskoilla.
   assert.equal(jaapaino(-72, 800), jaapaino(72, 800));
+});
+
+/* ═══════ MUSTA PALLO iPHONESSA (v1924) — LADONNAN KESTÄVYYS ═══════ */
+
+test('ladontakangas valitaan ruudusta: puhelin 2048, leveä ruutu täysi koko', async () => {
+  const { valitseLadonta, LADONNAN_KATTO_PUHELIN } = await import('../js/linssit/reliefikuva.js');
+  // Puhelin (390 CSS) → 4k-lähde puolitetaan kerran.
+  const puhelin = valitseLadonta({ leveys: 4096, korkeus: 2048, ruudunLeveys: 390 });
+  assert.deepEqual(
+    { leveys: puhelin.leveys, korkeus: puhelin.korkeus }, { leveys: 2048, korkeus: 1024 },
+  );
+  assert.equal(puhelin.pienennetty, true);
+  assert.equal(puhelin.katto, LADONNAN_KATTO_PUHELIN);
+  // Suhde pysyy 2:1, tai tasavälinen maasto venyisi.
+  assert.equal(puhelin.leveys / puhelin.korkeus, 2);
+  // Leveä ruutu saa lähdekuvan omassa koossaan — terävyys ei katoa.
+  const tyopoyta = valitseLadonta({ leveys: 8192, korkeus: 4096, ruudunLeveys: 1400 });
+  assert.deepEqual(
+    { leveys: tyopoyta.leveys, korkeus: tyopoyta.korkeus }, { leveys: 8192, korkeus: 4096 },
+  );
+  assert.equal(tyopoyta.pienennetty, false);
+  // Ilman ruudun leveyttä oletus on varovainen (puhelinkatto).
+  assert.equal(valitseLadonta({ leveys: 4096, korkeus: 2048 }).leveys, 2048);
+  // Nimenomainen katto voittaa ruudun: puolituksin, ei vapaalla kertoimella.
+  assert.equal(valitseLadonta({ leveys: 8192, korkeus: 4096, katto: 1024 }).leveys, 1024);
+  assert.equal(valitseLadonta({ leveys: 8192, korkeus: 4096, katto: 1024 }).korkeus, 512);
+});
+
+test('tyhjä kangas tunnistetaan, eikä tunnistus estä kun sitä ei voi tehdä', async () => {
+  const { tyhjaKangas, TYHJYYDEN_KYNNYS } = await import('../js/linssit/satelliitti-avaruus.js');
+  assert.equal(TYHJYYDEN_KYNNYS, 12);
+  const kangas = (r, g, b, a) => ({ getImageData: () => ({ data: [r, g, b, a] }) });
+  // Juuri tämä on iOS Safarin oire: kangas on läpinäkyvä, ei poikkeusta.
+  assert.equal(tyhjaKangas(kangas(0, 0, 0, 0), 64, 32), true);
+  // Musta mutta läpinäkymätön on yhtä musta ruudulla.
+  assert.equal(tyhjaKangas(kangas(0, 0, 0, 255), 64, 32), true);
+  // Syvä meri (9, 32, 72) riittää: se on kuvan tummin oikea väri.
+  assert.equal(tyhjaKangas(kangas(9, 32, 72, 255), 64, 32), false);
+  // Ei getImageDataa tai se heittää (likainen kangas) → ei estetä.
+  assert.equal(tyhjaKangas({}, 64, 32), false);
+  assert.equal(tyhjaKangas({ getImageData() { throw new Error('tainted'); } }, 64, 32), false);
+});
+
+test('kylläisyyden pikselivarareitti pienelle kankaalle, sekoitus suurelle', async () => {
+  const { kyllaisyysAlas, PIKSELISATURAATION_KATTO } = await import('../js/linssit/satelliitti-avaruus.js');
+  const teePikseli = () => {
+    const data = { data: new Uint8ClampedArray([200, 40, 40, 255]) };
+    return {
+      globalAlpha: 1,
+      globalCompositeOperation: 'source-over',
+      fillStyle: '',
+      get filter() { return 'none'; },
+      set filter(_) { /* ei tue: Safari 16 ja vanhemmat */ },
+      drawImage: () => {},
+      fillRect: () => {},
+      getImageData: () => data,
+      putImageData: () => {},
+      data,
+    };
+  };
+  const pieni = teePikseli();
+  assert.equal(kyllaisyysAlas(pieni, {}, 4, 2), 'pikselit');
+  // Punainen vaimeni kohti harmaata mutta ei muuttunut harmaaksi.
+  assert.ok(pieni.data.data[0] < 200 && pieni.data.data[0] > 140, `R ${pieni.data.data[0]}`);
+  assert.ok(pieni.data.data[1] > 40, `G ${pieni.data.data[1]}`);
+  // Liian iso kangas ei mene pikselisilmukkaan vaikka getImageData olisi.
+  const iso = teePikseli();
+  assert.equal(kyllaisyysAlas(iso, {}, 4096, 2048), 'sekoitus');
+  assert.ok(PIKSELISATURAATION_KATTO < 4096 * 2048);
+  /*
+   * VANHA VIKA: jos `saturation` ei ollut tuettu, gCO jäi
+   * `source-over`iksi ja harmaa täyttö levisi koko kankaalle. Arvo
+   * luetaan nyt takaisin — tuntematon tila päättää yrityksen.
+   */
+  let taytetty = false;
+  const eiSekoitusta = {
+    globalAlpha: 1,
+    fillStyle: '',
+    get filter() { return 'none'; },
+    set filter(_) { /* ei tue */ },
+    get globalCompositeOperation() { return 'source-over'; },
+    set globalCompositeOperation(_) { /* ei tue mitään sekoitusta */ },
+    drawImage: () => {},
+    fillRect: () => { taytetty = true; },
+  };
+  assert.equal(kyllaisyysAlas(eiSekoitusta, {}, 4096, 2048), 'ei');
+  assert.equal(taytetty, false, 'harmaa levisi koko kankaalle');
+});
+
+test('reliefiTekstuuri: aikakatko ja tyhjä kangas päättyvät nulliin', async () => {
+  const { reliefiTekstuuri, RELIEFIN_AIKAKATKO_MS } = await import('../js/linssit/satelliitti-avaruus.js');
+  assert.equal(RELIEFIN_AIKAKATKO_MS, 8000);
+
+  /** Kangasmokki, joka jäljittelee iOS Safaria annetulla pikselikatolla. */
+  const teeDoc = (kattoPx, kirjaa = []) => ({
+    createElement: () => {
+      const k = {
+        width: 0,
+        height: 0,
+        toBlob: (cb) => cb({ size: 1234 }),
+        toDataURL: () => 'data:image/png;base64,xx',
+        getContext: () => ({
+          globalAlpha: 1,
+          globalCompositeOperation: 'source-over',
+          fillStyle: '',
+          get filter() { return 'none'; },
+          set filter(_) { /* Safari 16: ei suodatinta */ },
+          drawImage: () => {},
+          fillRect: () => {},
+          createLinearGradient: () => ({ addColorStop: () => {} }),
+          putImageData: () => {},
+          // TYHJÄ KANGAS ILMAN POIKKEUSTA, juuri kuten iOS Safarissa.
+          getImageData: (x, y, w, h) => {
+            if (k.width * k.height > kattoPx) return { data: [0, 0, 0, 0] };
+            return { data: new Uint8ClampedArray(4 * w * h).fill(200) };
+          },
+        }),
+      };
+      kirjaa.push(k);
+      return k;
+    },
+  });
+  const teeIkkuna = (doc) => {
+    const ikkuna = {
+      ImageData: class { constructor(data, leveys, korkeus) { Object.assign(this, { data, leveys, korkeus }); } },
+      URL: { createObjectURL: () => 'blob:testi' },
+      setTimeout: (fn, ms) => setTimeout(fn, ms),
+      clearTimeout: (id) => clearTimeout(id),
+      document: doc,
+      Image: class {
+        constructor() { this.kuuntelijat = {}; }
+        addEventListener(nimi, fn) { this.kuuntelijat[nimi] = fn; }
+        set src(_) { setTimeout(() => this.kuuntelijat.load?.(), 0); }
+      },
+    };
+    return ikkuna;
+  };
+
+  // 1. Kangas mahtuu → osoite syntyy.
+  const doc1 = teeDoc(4096 * 2048);
+  assert.equal(
+    await reliefiTekstuuri({ ruudunLeveys: 390 }, doc1, teeIkkuna(doc1)), 'blob:testi',
+  );
+
+  // 2. Safarin katto 2048 × 1024 -kankaan alle: jokainen yritys tyhjä →
+  //    null, eli generoitu vyöhykepallo jää pinnalle mustan sijasta.
+  const doc2 = teeDoc(256);
+  assert.equal(await reliefiTekstuuri({ ruudunLeveys: 390 }, doc2, teeIkkuna(doc2)), null);
+
+  // 3. Kuva ei lataudu eikä heitä virhettä: aikakatko ratkaisee.
+  const doc3 = teeDoc(4096 * 2048);
+  const ikkuna3 = teeIkkuna(doc3);
+  ikkuna3.Image = class {
+    constructor() { this.kuuntelijat = {}; }
+    addEventListener(nimi, fn) { this.kuuntelijat[nimi] = fn; }
+    set src(_) { /* hiljaisuus: ei loadia eikä erroria */ }
+  };
+  assert.equal(await reliefiTekstuuri({ ruudunLeveys: 390, aikakatko: 30 }, doc3, ikkuna3), null);
+});
+
+test('reliefiTekstuuri kokoaa koko pallon kuvan YHDELLE kankaalle', async () => {
+  const { reliefiTekstuuri } = await import('../js/linssit/satelliitti-avaruus.js');
+  /*
+   * MUISTIHUIPPU ON SE, JOKA MUSTASI PALLON. Koko pallon kuvassa ei ole
+   * läpinäkyviä pikseleitä, joten apukangasta ei tarvita — ladonnassa
+   * saa olla vain tuloskangas ja pieni 1024 × 512 -pohja.
+   */
+  const kankaat = [];
+  const doc = {
+    createElement: () => {
+      const k = {
+        width: 0,
+        height: 0,
+        toBlob: (cb) => cb({ size: 9 }),
+        toDataURL: () => 'data:,',
+        getContext: () => ({
+          globalAlpha: 1,
+          globalCompositeOperation: 'source-over',
+          fillStyle: '',
+          filter: 'none',
+          drawImage: () => {},
+          fillRect: () => {},
+          createLinearGradient: () => ({ addColorStop: () => {} }),
+          putImageData: () => {},
+          getImageData: (x, y, w, h) => ({ data: new Uint8ClampedArray(4 * w * h).fill(180) }),
+        }),
+      };
+      kankaat.push(k);
+      return k;
+    },
+  };
+  const ikkuna = {
+    ImageData: class { constructor(d, l, k) { Object.assign(this, { d, l, k }); } },
+    URL: { createObjectURL: () => 'blob:yksi' },
+    setTimeout: (fn, ms) => setTimeout(fn, ms),
+    clearTimeout: (id) => clearTimeout(id),
+    document: doc,
+    Image: class {
+      constructor() { this.k = {}; }
+      addEventListener(n, fn) { this.k[n] = fn; }
+      set src(_) { setTimeout(() => this.k.load?.(), 0); }
+    },
+  };
+  assert.equal(await reliefiTekstuuri({ ruudunLeveys: 390, kokoPallo: true }, doc, ikkuna), 'blob:yksi');
+  // koe + tuloskangas + pohja = 3; neljäs olisi vanha apukangas.
+  assert.equal(kankaat.length, 3, `kankaita ${kankaat.length}`);
+  // Jokainen kangas on vapautettu (mitta 1 × 1) ladonnan jälkeen.
+  for (const k of kankaat) assert.equal(k.width, 1, 'kangas jäi muistiin');
 });

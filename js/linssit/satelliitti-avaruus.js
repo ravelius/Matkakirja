@@ -134,7 +134,10 @@ import {
   RELIEFI_KOKO_PALLO,
   RELIEFIN_KOKO_4K,
   RELIEFIN_KOKO_8K,
+  LADONNAN_KATTO_PUHELIN,
+  LADONNAN_RAJA_CSS,
   valitseReliefi,
+  valitseLadonta,
 } from './reliefikuva.js';
 
 /* ═════════════════ 1. AVAUSNÄKYMÄN KORKEUS ══════════════════════ */
@@ -689,7 +692,10 @@ export {
   RELIEFI_KOKO_PALLO,
   RELIEFIN_KOKO_4K,
   RELIEFIN_KOKO_8K,
+  LADONNAN_KATTO_PUHELIN,
+  LADONNAN_RAJA_CSS,
   valitseReliefi,
+  valitseLadonta,
 };
 
 /*
@@ -801,28 +807,138 @@ function napaLiuku(ctx, leveys, korkeus) {
   ctx.globalCompositeOperation = 'source-over';
 }
 
+/* ═══════════ 2b-diag. PALLODIAG: KETJU NÄKYVIIN PUHELIMELLA ═════ */
+
+/*
+ * MUSTA PALLO EI KERRO ITSESTÄÄN MITÄÄN. Kun tekstuuriketju epäonnistuu
+ * iOS Safarissa, se epäonnistuu HILJAA: kangas jää tyhjäksi, toBlob
+ * onnistuu, osoite syntyy — eikä yksikään virhehaara laukea. Omistaja
+ * ei voi avata puhelimesta konsolia, joten ketju kirjoittaa itsestään
+ * lokia, jonka saa näkyviin osoiteriviltä: `?pallodiag=1`.
+ *
+ * Loki kerätään AINA (muutama kymmenen riviä, ei mittaustaakkaa);
+ * lippu ratkaisee vain sen, tulostetaanko se konsoliin ja ruudulle.
+ * Savuke ja tila() lukevat saman taulukon.
+ */
+const DIAGIN_RIVIT = 60;
+const diaginLoki = [];
+
+/** Onko `?pallodiag=1` osoiterivillä? */
+export function pallodiagPaalla(ikkuna = globalThis) {
+  try {
+    return /[?&]pallodiag=1(?:&|$)/.test(String(ikkuna?.location?.search ?? ''));
+  } catch { return false; }
+}
+
+/** Kerätty loki kopiona (savuke ja tila lukevat tämän). */
+export function pallodiagLoki() { return diaginLoki.slice(); }
+
+function diagRuudulle(rivi, ikkuna) {
+  const doc = ikkuna?.document;
+  if (!doc?.createElement) return;
+  try {
+    let laatikko = doc.getElementById?.('pallodiag');
+    if (!laatikko) {
+      laatikko = doc.createElement('div');
+      laatikko.id = 'pallodiag';
+      laatikko.setAttribute('style', [
+        'position:fixed', 'left:4px', 'bottom:4px', 'z-index:2147483647',
+        'max-width:calc(100vw - 8px)', 'max-height:38vh', 'overflow:auto',
+        'font:11px/1.35 ui-monospace,monospace', 'color:#cfe',
+        'background:rgba(0,0,0,.72)', 'padding:4px 6px', 'border-radius:6px',
+        'pointer-events:none', 'white-space:pre-wrap',
+      ].join(';'));
+      doc.body?.appendChild?.(laatikko);
+    }
+    laatikko.textContent = `${laatikko.textContent}${rivi}\n`.split('\n').slice(-DIAGIN_RIVIT).join('\n');
+  } catch { /* ruutuloki on lisä, ei ehto */ }
+}
+
+/** Yksi vaihe lokiin (ja lipun ollessa päällä konsoliin ja ruudulle). */
+export function pallodiag(vaihe, tiedot = {}, ikkuna = globalThis) {
+  const rivi = { vaihe, ...tiedot };
+  diaginLoki.push(rivi);
+  if (diaginLoki.length > DIAGIN_RIVIT) diaginLoki.shift();
+  if (!pallodiagPaalla(ikkuna)) return rivi;
+  const teksti = `${vaihe} ${Object.entries(tiedot).map(([k, v]) => `${k}=${v}`).join(' ')}`;
+  try { ikkuna?.console?.log?.(`[pallodiag] ${teksti}`); } catch { /* ei konsolia */ }
+  diagRuudulle(teksti, ikkuna);
+  return rivi;
+}
+
+const diagNyt = (ikkuna) => {
+  try {
+    const t = ikkuna?.performance?.now?.();
+    if (Number.isFinite(t)) return t;
+  } catch { /* ei performancea */ }
+  return Date.now();
+};
+
+/**
+ * Kangas pois muistista. iOS Safari ei vapauta kankaan taustapuskuria
+ * roskienkeruun tahdissa; nollamitta vapauttaa sen heti. Tämä on ainoa
+ * keino pitää ketjun huippukulutus yhdessä kankaassa.
+ */
+function vapautaKangas(kangas) {
+  try { kangas.width = 1; kangas.height = 1; } catch { /* ei kangas */ }
+}
+
 /**
  * Reliefi kankaalle kylläisyys laskettuna (RELIEFIN_SATURAATIO).
- * Palauttaa käytetyn tavan: `suodatin`, `sekoitus` tai `ei` (kumpikaan
- * ei ollut käytettävissä) — vartio lukee sen mittarista.
+ * Palauttaa käytetyn tavan: `suodatin`, `pikselit`, `sekoitus` tai
+ * `ei` (mikään ei ollut käytettävissä) — vartio lukee sen mittarista.
+ *
+ * KOLME TAPAA, KOSKA SAFARI. `ctx.filter` tuli WebKitiin vasta Safari
+ * 17:ssä, ja sitä vanhemmat iOS-versiot ovat yhä käytössä. Ennen tätä
+ * korjausta varareittinä oli pelkkä `saturation`-sekoitus, joka
+ * KIRJOITTI HARMAAN KOKO KANKAALLE, jos sekään ei ollut tuettu:
+ * `globalCompositeOperation` ei heitä virhettä tuntemattomasta
+ * arvosta, vaan jättää edellisen (`source-over`) voimaan. Siksi arvo
+ * luetaan nyt takaisin ennen täyttöä.
+ *
+ * Pikselisilmukka on tarkin mutta vaatii muistia leveys × korkeus × 4,
+ * joten se sallitaan vain pienelle kankaalle. Puhelimen ladontakangas
+ * (2048 × 1024 = 8 Mt) mahtuu siihen; 4k ja 8k eivät.
  */
+export const PIKSELISATURAATION_KATTO = 2048 * 1024;
+
 export function kyllaisyysAlas(ctx, kuva, leveys, korkeus, kerroin = RELIEFIN_SATURAATIO) {
   const arvo = `saturate(${kerroin})`;
-  let tapa = 'ei';
+  let suodatin = false;
   try {
     ctx.filter = arvo;
-    if (ctx.filter === arvo || ctx.filter === `saturate(${kerroin * 100}%)`) tapa = 'suodatin';
-  } catch { tapa = 'ei'; }
+    if (ctx.filter === arvo || ctx.filter === `saturate(${kerroin * 100}%)`) suodatin = true;
+  } catch { suodatin = false; }
   ctx.drawImage(kuva, 0, 0, leveys, korkeus);
   try { ctx.filter = 'none'; } catch { /* suodatinta ei ollut */ }
-  if (tapa === 'suodatin') return tapa;
+  if (suodatin) return 'suodatin';
+  /* 2. PIKSELITASO — tarkka, mutta vain pienelle kankaalle. */
+  if (leveys * korkeus <= PIKSELISATURAATION_KATTO
+    && typeof ctx.getImageData === 'function' && typeof ctx.putImageData === 'function') {
+    try {
+      const data = ctx.getImageData(0, 0, leveys, korkeus);
+      const d = data.data;
+      for (let i = 0; i < d.length; i += 4) {
+        const l = 0.2126 * d[i] + 0.7152 * d[i + 1] + 0.0722 * d[i + 2];
+        d[i] = l + (d[i] - l) * kerroin;
+        d[i + 1] = l + (d[i + 1] - l) * kerroin;
+        d[i + 2] = l + (d[i + 2] - l) * kerroin;
+      }
+      ctx.putImageData(data, 0, 0);
+      return 'pikselit';
+    } catch { /* likainen kangas tai muisti lopussa → sekoitus */ }
+  }
   /*
-   * VARAREITTI: harmaa täyttö sekoitustilassa `saturation` vie
+   * 3. VARAREITTI: harmaa täyttö sekoitustilassa `saturation` vie
    * kylläisyyttä alfan verran. `destination-in` palauttaa alfan
    * täsmälleen (sama syy kuin valoLiuussa: navat ovat läpinäkyvät).
    */
   try {
     ctx.globalCompositeOperation = 'saturation';
+    if (ctx.globalCompositeOperation !== 'saturation') {
+      ctx.globalCompositeOperation = 'source-over';
+      return 'ei';
+    }
     ctx.globalAlpha = Math.max(0, Math.min(1, 1 - kerroin));
     ctx.fillStyle = '#808080';
     ctx.fillRect(0, 0, leveys, korkeus);
@@ -830,24 +946,156 @@ export function kyllaisyysAlas(ctx, kuva, leveys, korkeus, kerroin = RELIEFIN_SA
     ctx.globalCompositeOperation = 'destination-in';
     ctx.drawImage(kuva, 0, 0, leveys, korkeus);
     ctx.globalCompositeOperation = 'source-over';
-    tapa = 'sekoitus';
+    return 'sekoitus';
   } catch {
     ctx.globalAlpha = 1;
     ctx.globalCompositeOperation = 'source-over';
   }
-  return tapa;
+  return 'ei';
+}
+
+/*
+ * ── TYHJÄN KANKAAN TUNNISTUS ─────────────────────────────────────
+ *
+ * TÄMÄ ON KOKO KORJAUKSEN YDIN. iOS Safari ei kerro kankaan rajojen
+ * ylityksestä poikkeuksella — se antaa kankaan, joka on kokonaan
+ * läpinäkyvä. Sellainen menee toBlobin läpi, syntyy blob-osoite, ja
+ * three.js piirtää läpinäkyvän tekstuurin MUSTANA. Ketju "onnistuu"
+ * alusta loppuun ja pallo on musta.
+ *
+ * Siksi ladonta tarkistetaan pikseleistä ennen kuin tuloksesta tehdään
+ * osoite: kymmenen näytettä eri puolilta karttaa, ja kirkkaimman on
+ * ylitettävä kynnys. Näytteet ovat maalla ja merellä sekaisin mutta
+ * eivät navoilla — Etelämanner on valkoinen ja kelpaisi tyhjällekin
+ * kankaalle huonosti, Jäämeri taas on kuvan kirkkain kohta.
+ *
+ * JOS TARKISTUSTA EI VOI TEHDÄ (ei getImageDataa, likainen kangas),
+ * ladonta hyväksytään. Vartija ei saa olla tiukempi kuin sen tieto.
+ */
+export const TYHJYYDEN_KYNNYS = 12;
+const TYHJYYSNAYTTEET = [
+  [0.12, 0.35], [0.28, 0.30], [0.30, 0.62], [0.46, 0.45], [0.52, 0.28],
+  [0.58, 0.52], [0.70, 0.38], [0.78, 0.60], [0.86, 0.32], [0.50, 0.50],
+];
+
+/** Onko ladottu kangas tyhjä (kaikki näytteet kynnystä tummempia)? */
+export function tyhjaKangas(ctx, leveys, korkeus, kynnys = TYHJYYDEN_KYNNYS) {
+  if (typeof ctx?.getImageData !== 'function') return false;
+  try {
+    let paras = 0;
+    for (const [fx, fy] of TYHJYYSNAYTTEET) {
+      const x = Math.min(leveys - 1, Math.max(0, Math.round(fx * leveys)));
+      const y = Math.min(korkeus - 1, Math.max(0, Math.round(fy * korkeus)));
+      const d = ctx.getImageData(x, y, 1, 1).data;
+      const kirkkaus = Math.max(d[0], d[1], d[2]) * (d[3] / 255);
+      if (kirkkaus > paras) paras = kirkkaus;
+    }
+    return paras < kynnys;
+  } catch {
+    return false;
+  }
 }
 
 /**
+ * YKSI LADONTAYRITYS annetuilla kankaan mitoilla. Palauttaa kankaan ja
+ * käytetyn kylläisyystavan tai nullin (kangas jäi tyhjäksi tai heitti).
+ * Kaikki apukankaat vapautetaan ennen paluuta.
+ */
+function ladoKerran({
+  doc, ikkuna, kuva, leveys, korkeus, kokoPallo,
+}) {
+  let kangas = null;
+  let apu = null;
+  try {
+    kangas = doc.createElement('canvas');
+    const ctx = kangas.getContext?.('2d');
+    if (!ctx) return null;
+    kangas.width = leveys;
+    kangas.height = korkeus;
+    /*
+     * 1. GENEROITU MAA POHJALLE omassa pienessä koossaan (1024 × 512).
+     * Koko pallon kuva peittää sen kokonaan; se on vakuutus sen varalta,
+     * että kuvan purku epäonnistuu kesken piirron.
+     */
+    let pohja = null;
+    try {
+      const perus = maapallonVarit({});
+      pohja = doc.createElement('canvas');
+      pohja.width = perus.leveys;
+      pohja.height = perus.korkeus;
+      pohja.getContext('2d').putImageData(
+        new ikkuna.ImageData(perus.data, perus.leveys, perus.korkeus), 0, 0,
+      );
+      ctx.drawImage(pohja, 0, 0, leveys, korkeus);
+    } catch { /* pohja on vakuutus, ei ehto */ } finally {
+      if (pohja) vapautaKangas(pohja);
+    }
+    let tapa = 'ei';
+    if (kokoPallo) {
+      /*
+       * YKSI KANGAS, EI KAHTA. Koko pallon kuvassa ei ole yhtään
+       * läpinäkyvää pikseliä (navat ovat siinä mukana), joten alfan
+       * palautusta ei tarvita eikä apukangasta sen kanssa. Ketjun
+       * huippukulutus puolittuu — ja juuri se huippu oli se, joka
+       * ylitti iOS Safarin rajan ja teki kankaasta tyhjän.
+       */
+      tapa = kyllaisyysAlas(ctx, kuva, leveys, korkeus);
+      valoLiuku(ctx, leveys, korkeus);
+    } else {
+      apu = doc.createElement('canvas');
+      apu.width = leveys;
+      apu.height = korkeus;
+      const actx = apu.getContext?.('2d');
+      if (!actx) return null;
+      tapa = kyllaisyysAlas(actx, kuva, leveys, korkeus);
+      valoLiuku(actx, leveys, korkeus);
+      // Alfa takaisin täsmälleen: multiply täytti navat harmaalla.
+      actx.globalCompositeOperation = 'destination-in';
+      actx.drawImage(kuva, 0, 0, leveys, korkeus);
+      actx.globalCompositeOperation = 'source-over';
+      napaLiuku(actx, leveys, korkeus);
+      ctx.drawImage(apu, 0, 0);
+      vapautaKangas(apu);
+      apu = null;
+    }
+    if (tyhjaKangas(ctx, leveys, korkeus)) {
+      vapautaKangas(kangas);
+      return null;
+    }
+    return { kangas, tapa };
+  } catch {
+    if (apu) vapautaKangas(apu);
+    if (kangas) vapautaKangas(kangas);
+    return null;
+  }
+}
+
+/** Ketjun aikakatko: tämän jälkeen generoitu Maa jää pinnalle. */
+export const RELIEFIN_AIKAKATKO_MS = 8000;
+/** Pienin ladontakangas, jota enää yritetään. */
+export const LADONNAN_POHJA = 512;
+
+/**
  * RELIEFI GENEROIDUN MAAN PÄÄLLE. Palauttaa lupauksen osoitteesta
- * (blob- tai data-URL) tai nullista (lataus ei onnistunut, canvasia ei
- * ole). Osoite vapautetaan linssin purkaessa (vapautaReliefi).
+ * (blob- tai data-URL) tai nullista (lataus ei onnistunut, kangas jäi
+ * tyhjäksi, aika loppui, canvasia ei ole). Osoite vapautetaan linssin
+ * purkaessa (vapautaReliefi).
  *
  * `kokoPallo` kertoo, kattaako kuva navat: silloin napoja ei häivytetä
- * eikä generoitua napajäätä maalata päälle (ks. napaLiuku).
+ * eikä generoitua napajäätä maalata päälle (ks. napaLiuku), ja koko
+ * ladonta mahtuu yhdelle kankaalle.
+ *
+ * `ruudunLeveys` on RUUDUN CSS-leveys (ei tekstuurin): se valitsee
+ * ladontakankaan koon (valitseLadonta). Ilman sitä oletus on
+ * puhelinkatto — varovaisempi arvaus on oikea arvaus, kun kyse on
+ * mustasta pallosta.
+ *
+ * LUPAUS EI JÄÄ AUKI. Jos kuva ei lataudu eikä heitä virhettä
+ * (Safarissa tavallista, kun yhteys katkeaa kesken), aikakatko
+ * ratkaisee sen nullina ja generoitu vyöhykepallo jää pinnalle.
  *
  * @param {{ leveys?: number, korkeus?: number, osoite?: string,
- *   kokoPallo?: boolean }} asetukset
+ *   kokoPallo?: boolean, ruudunLeveys?: number, aikakatko?: number }} asetukset
  */
 export function reliefiTekstuuri(asetukset = {}, doc = globalThis.document, ikkuna = globalThis) {
   /*
@@ -855,86 +1103,101 @@ export function reliefiTekstuuri(asetukset = {}, doc = globalThis.document, ikku
    * ilman ruudun mittoja antaa 4k-haaran — ja koko pallon kytkimen
    * ollessa päällä sen koko pallon version. Näin oletusosoite ja
    * oletuslippu eivät voi olla eri kuvista.
-   *
-   * ASETUKSIA EI ANNETA valitseReliefille: sen `leveys` on RUUDUN
-   * leveys, tämän `leveys` on TEKSTUURIN leveys. Sekaannus valitsisi
-   * 8k:n aina, koska tekstuuri on aina yli tuhat pikseliä leveä.
    */
   const oletus = valitseReliefi({});
   const {
     leveys = oletus.leveys, korkeus = oletus.korkeus, osoite = oletus.osoite,
-    kokoPallo = oletus.kokoPallo,
+    kokoPallo = oletus.kokoPallo, ruudunLeveys = 0,
+    aikakatko = RELIEFIN_AIKAKATKO_MS,
   } = asetukset;
-  const kangas = doc?.createElement?.('canvas');
-  const ctx = kangas?.getContext?.('2d');
-  if (!ctx || !ikkuna?.Image) return Promise.resolve(null);
-  kangas.width = leveys;
-  kangas.height = korkeus;
-  /*
-   * 1. GENEROITU MAA POHJALLE. Se lasketaan omassa pienessä koossaan
-   * (1024 × 512) ja venytetään: pohja näkyy vain navoilla, joilla se on
-   * sileä jääliuku — venytys ei vie siitä mitään, ja täysikokoisena se
-   * olisi 8,4 miljoonaa pikseliä kohinafunktioita.
-   *
-   * KOKO PALLON KUVA PEITTÄÄ POHJAN KOKONAAN, eikä pohjaa silti
-   * jätetä pois: se maksaa puoli miljoonaa pikseliä kerran linssin
-   * avauksessa ja on vakuutus sen varalta, että kuvan purku epäonnistuu
-   * kesken piirron. Näkyviin se ei silloinkaan jää.
-   */
-  const perus = maapallonVarit({});
-  const pohja = doc.createElement('canvas');
-  pohja.width = perus.leveys;
-  pohja.height = perus.korkeus;
-  pohja.getContext('2d').putImageData(
-    new ikkuna.ImageData(perus.data, perus.leveys, perus.korkeus), 0, 0,
-  );
-  ctx.drawImage(pohja, 0, 0, leveys, korkeus);
+  if (!doc?.createElement || !ikkuna?.Image) return Promise.resolve(null);
+  const koe = doc.createElement('canvas');
+  if (!koe?.getContext?.('2d')) return Promise.resolve(null);
+  vapautaKangas(koe);
+  const ensi = valitseLadonta({ leveys, korkeus, ruudunLeveys });
+  const alku = diagNyt(ikkuna);
+  pallodiag('alku', {
+    lahde: `${leveys}x${korkeus}`, kangas: `${ensi.leveys}x${ensi.korkeus}`,
+    ruutu: ruudunLeveys, kokoPallo: kokoPallo ? 1 : 0,
+  }, ikkuna);
+
   return new Promise((valmis) => {
+    let ratkaistu = false;
+    let kello = 0;
+    const paata = (url, syy) => {
+      if (ratkaistu) return;
+      ratkaistu = true;
+      if (kello) { try { ikkuna.clearTimeout?.(kello); } catch { /* ei kelloa */ } }
+      pallodiag('valmis', {
+        syy, osoite: url ? url.slice(0, 12) : 'ei', ms: Math.round(diagNyt(ikkuna) - alku),
+      }, ikkuna);
+      valmis(url ?? null);
+    };
+    try {
+      kello = ikkuna.setTimeout?.(() => paata(null, 'aikakatko'), aikakatko) ?? 0;
+    } catch { kello = 0; }
+
+    /* Valmis kangas osoitteeksi ja heti pois muistista. */
+    const ulos = (kangas) => {
+      const lopeta = (url, syy) => { vapautaKangas(kangas); paata(url, syy); };
+      try {
+        if (typeof kangas.toBlob === 'function' && ikkuna.URL?.createObjectURL) {
+          const t0 = diagNyt(ikkuna);
+          kangas.toBlob((blob) => {
+            if (!blob) {
+              pallodiag('blob-tyhja', {}, ikkuna);
+              try { lopeta(kangas.toDataURL('image/png'), 'dataurl'); } catch { lopeta(null, 'blob-ei'); }
+              return;
+            }
+            pallodiag('blob', { kt: Math.round(blob.size / 1024), ms: Math.round(diagNyt(ikkuna) - t0) }, ikkuna);
+            let url = null;
+            try { url = ikkuna.URL.createObjectURL(blob); } catch { url = null; }
+            lopeta(url, url ? 'blob' : 'blob-osoite-ei');
+          }, 'image/png');
+          return;
+        }
+        lopeta(kangas.toDataURL('image/png'), 'dataurl');
+      } catch {
+        lopeta(null, 'pakkaus-heitti');
+      }
+    };
+
     const kuva = new ikkuna.Image();
     kuva.decoding = 'async';
     // Kuva on samasta alkuperästä (repo), mutta crossOrigin pitää
     // canvasin puhtaana myös silloin kun peli on avattu toiselta
     // isännältä — likainen canvas ei anna toDataURLia lainkaan.
     kuva.crossOrigin = 'anonymous';
-    kuva.addEventListener('error', () => valmis(null), { once: true });
+    kuva.addEventListener('error', () => paata(null, 'lataus-ei'), { once: true });
     kuva.addEventListener('load', () => {
-      try {
-        /* 2. reliefi omalle kankaalleen, valo ja navat liu'uilla */
-        const apu = doc.createElement('canvas');
-        apu.width = leveys;
-        apu.height = korkeus;
-        const actx = apu.getContext('2d');
-        kyllaisyysAlas(actx, kuva, leveys, korkeus);
-        valoLiuku(actx, leveys, korkeus);
-        // Alfa takaisin täsmälleen: multiply täytti navat harmaalla.
-        actx.globalCompositeOperation = 'destination-in';
-        actx.drawImage(kuva, 0, 0, leveys, korkeus);
-        actx.globalCompositeOperation = 'source-over';
-        /*
-         * NAPOJA EI HÄIVYTETÄ EIKÄ NAPAJÄÄTÄ MAALATA, kun kuva kattaa
-         * koko pallon: jää on jo kuvassa oikean muotoisena, ja
-         * häivytys söisi Etelämantereen rantaviivan pois.
-         */
-        if (!kokoPallo) napaLiuku(actx, leveys, korkeus);
-        /* 3. päälle — läpinäkyvät navat jättävät generoidun Maan näkyviin */
-        ctx.drawImage(apu, 0, 0);
-        /*
-         * BLOB EIKÄ BASE64. 4096 × 2048 -PNG on base64-merkkijonona
-         * kymmeniä megatavuja, ja se kulkisi JS-muistin kautta;
-         * blob-osoite on muutama kymmenen merkkiä. toDataURL jää
-         * varareitiksi vanhoille selaimille.
-         */
-        if (typeof kangas.toBlob === 'function' && ikkuna.URL?.createObjectURL) {
-          kangas.toBlob((blob) => {
-            if (!blob) { valmis(kangas.toDataURL('image/png')); return; }
-            valmis(ikkuna.URL.createObjectURL(blob));
-          }, 'image/png');
-          return;
-        }
-        valmis(kangas.toDataURL('image/png'));
-      } catch {
-        valmis(null);
+      pallodiag('kuva', {
+        px: `${kuva.naturalWidth ?? '?'}x${kuva.naturalHeight ?? '?'}`,
+        ms: Math.round(diagNyt(ikkuna) - alku),
+      }, ikkuna);
+      /*
+       * LADONTA JA TARVITTAESSA PUOLITUS. Ensimmäinen koko on ruudun
+       * mukaan valittu; jos kangas jää siitä huolimatta tyhjäksi
+       * (laitteessa oli jo muuta kuormaa), pienempi yleensä mahtuu.
+       * Kolme yritystä riittää: 8192 → 4096 → 2048.
+       */
+      let mitat = { leveys: ensi.leveys, korkeus: ensi.korkeus };
+      for (let n = 0; n < 3 && !ratkaistu; n += 1) {
+        const t0 = diagNyt(ikkuna);
+        const tulos = ladoKerran({
+          doc, ikkuna, kuva, leveys: mitat.leveys, korkeus: mitat.korkeus, kokoPallo,
+        });
+        pallodiag('ladonta', {
+          koko: `${mitat.leveys}x${mitat.korkeus}`, ok: tulos ? 1 : 0,
+          tapa: tulos?.tapa ?? '-', ms: Math.round(diagNyt(ikkuna) - t0),
+        }, ikkuna);
+        if (tulos) { ulos(tulos.kangas); return; }
+        if (mitat.leveys <= LADONNAN_POHJA) break;
+        mitat = {
+          leveys: Math.round(mitat.leveys / 2),
+          korkeus: Math.max(1, Math.round(mitat.korkeus / 2)),
+        };
       }
+      paata(null, 'kangas-tyhja');
     }, { once: true });
     kuva.src = osoite;
   });
@@ -1471,11 +1734,22 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     }
     reliefinUrl = null;
   };
+  /*
+   * VARAPOLKU ON JO PINNALLA. Generoitu vyöhykepallo asetettiin yllä
+   * heti, ennen kuin reliefiä edes pyydettiin, eikä sitä oteta pois
+   * jos reliefi ei valmistu: `reliefiTekstuuri` palaa silloin nullina
+   * (aikakatko 8 s, tyhjä kangas, latausvirhe) ja tämä haara ei tee
+   * mitään. MUSTA PALLO EI OLE MAHDOLLINEN NÄIN KAUAN kuin generoitu
+   * tekstuuri syntyi — ja sen ainoa kangas on 1024 × 512.
+   *
+   * `ruudunLeveys` valitsee ladontakankaan koon (valitseLadonta).
+   */
   reliefiTekstuuri({
     leveys: reliefinValinta.leveys,
     korkeus: reliefinValinta.korkeus,
     osoite: reliefinValinta.osoite,
     kokoPallo: reliefinValinta.kokoPallo,
+    ruudunLeveys: ikkuna.innerWidth ?? 0,
   }, ikkuna.document, ikkuna)
     .then((url) => {
       reliefinKesto = Date.now() - reliefiAlkoi;
@@ -1773,6 +2047,9 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       reliefinTarkkuus: reliefinValinta.tunnus,
       reliefinOsoite: reliefinValinta.osoite,
       reliefinKestoMs: reliefinKesto,
+      /* Musta pallo näkyy tässä: pinnalla ei ole osoitetta lainkaan. */
+      pinnanOsoite: String(pallo.globeImageUrl?.() ?? '').slice(0, 24),
+      diag: pallodiagLoki(),
       kalvo: kalvo?.tila?.() ?? null,
     }),
     /** Vartion kytkin: reunavarjo pois/päälle samaan näkymään. */

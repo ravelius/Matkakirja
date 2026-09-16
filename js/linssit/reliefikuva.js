@@ -171,3 +171,69 @@ export function valitseReliefi({
     kokoPallo: false,
   };
 }
+
+/*
+ * ── LADONTAKANGAS ON ERI ASIA KUIN LÄHDEKUVA (16.9.2026) ──────────
+ *
+ * Musta pallo iPhonessa (v1924, docs/raportit/viesti-fable-pallo-
+ * musta-20260916.md) ei johtunut kuvasta vaan KANKAASTA. iOS Safari
+ * ei heitä poikkeusta, kun kangas ylittää sen rajat: se antaa kankaan,
+ * joka on TYHJÄ. Tyhjä kangas menee toBlobin läpi ongelmitta, ja
+ * tuloksena on läpinäkyvä PNG — jonka three.js piirtää mustana.
+ * Ketjun jokainen askel "onnistui", eikä yksikään virhehaara lauennut.
+ *
+ * Kaksi rajaa, molemmat mitattuja WebKitin lähteestä:
+ *   1. YKSI KANGAS saa olla enintään 16 777 216 pikseliä (4096 × 4096).
+ *      8192 × 4096 on 33,5 Mpx eli TÄSMÄLLEEN kaksi kertaa liikaa:
+ *      8k-ladonta ei voi onnistua yhdelläkään iOS-laitteella, ja iPad
+ *      vaakatasossa valitsee juuri 8k:n.
+ *   2. KANKAIDEN YHTEISMÄÄRÄ on välilehteä kohti muutama sata
+ *      megatavua. 4096 × 2048 on 33,5 Mt per kangas; vanha ketju piti
+ *      niitä kahta yhtä aikaa plus puretun WebP:n plus PNG-pakkauksen.
+ *
+ * SIKSI LADONTAKANGAS VALITAAN RUUDUSTA EIKÄ KUVASTA. Lähdekuva
+ * ladataan aina täytenä (selain purkaa sen kerran ja vapauttaa heti),
+ * mutta se piirretään kankaalle, joka mahtuu laitteeseen. Puhelimella
+ * 2048 × 1024 riittää: avaruusnäkymässä palloa näkyy vain puolikas,
+ * joten 390 CSS-pikselin pallo (1 170 laitepikseliä kolminkertaisella
+ * pikselisuhteella) saa noin 1 024 pikseliä tekstuuria näkyvälle
+ * puoliskolleen. Hieman pehmeämpi kuin 4k — mutta ei musta.
+ *
+ * LEVEÄ RUUTU EI MENETÄ MITÄÄN: siellä katto on lähdekuvan oma koko.
+ * Jos ladonta silti epäonnistuu (iPad), reliefiTekstuuri huomaa tyhjän
+ * kankaan ja yrittää uudestaan puolikkaalla — ks. sen `tyhjaKangas`.
+ */
+
+/** Ladontakankaan katto puhelimella (CSS-leveys alle LADONNAN_RAJA_CSS). */
+export const LADONNAN_KATTO_PUHELIN = 2048;
+/** Kynnys, jonka yli ruutu saa ladota lähdekuvan täydessä koossa. */
+export const LADONNAN_RAJA_CSS = RELIEFIN_8K_RAJA_CSS;
+
+/**
+ * Ladontakankaan mitat. Puhdas funktio (tests/pallolinssit.test.mjs).
+ *
+ * @param {{ leveys?: number, korkeus?: number, ruudunLeveys?: number,
+ *   katto?: number }} asetukset lähdekuvan mitat ja ruudun CSS-leveys
+ * @returns {{ leveys: number, korkeus: number, katto: number,
+ *   pienennetty: boolean }}
+ */
+export function valitseLadonta({
+  leveys = RELIEFIN_LEVEYS, korkeus = RELIEFIN_KORKEUS, ruudunLeveys = 0, katto = 0,
+} = {}) {
+  const L = Math.max(1, Math.round(Number(leveys) || RELIEFIN_LEVEYS));
+  const K = Math.max(1, Math.round(Number(korkeus) || RELIEFIN_KORKEUS));
+  const ruutu = Number(ruudunLeveys) || 0;
+  const raja = Number(katto) > 0
+    ? Math.round(Number(katto))
+    : (ruutu >= LADONNAN_RAJA_CSS ? L : LADONNAN_KATTO_PUHELIN);
+  if (L <= raja) return { leveys: L, korkeus: K, katto: raja, pienennetty: false };
+  /*
+   * PUOLITUKSIN, EI VAPAALLA KERTOIMELLA. Tasavälisen kuvan leveyden
+   * ja korkeuden suhteen on pysyttävä täsmälleen 2:1, tai maasto
+   * venyy; puolitus säilyttää sen aina ja on selaimen halvin skaalaus.
+   */
+  let l = L;
+  let k = K;
+  while (l > raja && l > 1) { l = Math.round(l / 2); k = Math.max(1, Math.round(k / 2)); }
+  return { leveys: l, korkeus: k, katto: raja, pienennetty: true };
+}

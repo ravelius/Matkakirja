@@ -34,6 +34,11 @@
  *      yhä klikattavissa.
  *   7. RELIEFIN TARKKUUS: leveä ruutu saa 8k-kuvan, puhelin 4k:n, ja
  *      latauksen kesto kirjataan.
+ *   8. PALLO EI OLE MUSTA (v1924, iPhone). Pinnalla on osoite kahdeksan
+ *      sekunnin sisällä JA pallon keskipiste on kirkkaampi kuin 20.
+ *      Vartio ajetaan lisäksi SAFARIN RAJOILLA: `ctx.filter` pois
+ *      käytöstä ja kankaan katto 2048 × 1024 — silloin varapolun on
+ *      kannettava, eikä mustaa palloa saa syntyä.
  *
  * VERKKO: ämpäri (laatat, Globe.gl, reliefi) Noden fetchin kautta, muu
  * katki. Ympäristömuuttuja NAKYMAT rajaa ajettavat näytöt
@@ -421,6 +426,38 @@ async function avaaLinssiEleella(s, odota = 4500) {
   }));
 }
 
+/*
+ * ── SAFARIN RAJAT SELAIMEEN (väite 8) ─────────────────────────────
+ *
+ * Kontissa on vain Chromium, joten iOS Safarin kaksi kohtalokasta
+ * ominaisuutta pannaan päälle käsin ennen yhtään sivuskriptiä:
+ *
+ *   1. `ctx.filter` ei ole olemassa (Safari 16 ja vanhemmat).
+ *   2. Kangas, joka ylittää katon, on TYHJÄ ilman poikkeusta — juuri
+ *      tämä hiljainen epäonnistuminen teki pallosta mustan.
+ *
+ * Jäljitelmä on karkea mutta osuu siihen, mikä merkitsee: ketju ei saa
+ * jäädä mustaan, vaan sen on pudottava generoituun vyöhykepalloon tai
+ * pienempään kankaaseen.
+ */
+const SAFARI_JARJESTELY = (kattoPx) => `(() => {
+  const P = CanvasRenderingContext2D.prototype;
+  try { Object.defineProperty(P, 'filter', { get: () => 'none', set: () => {}, configurable: true }); } catch (e) {}
+  const alku = P.getImageData;
+  P.getImageData = function (x, y, w, h) {
+    const c = this.canvas;
+    if (c && c.width * c.height > ${kattoPx}) {
+      return new ImageData(new Uint8ClampedArray(4 * Math.max(1, w) * Math.max(1, h)), Math.max(1, w), Math.max(1, h));
+    }
+    return alku.call(this, x, y, w, h);
+  };
+})()`;
+
+/** Pallon keskipisteen kirkkaus kuvakaappauksesta. */
+function keskipisteenKirkkaus(kuva, { keskiX, keskiY, dpr }) {
+  return kirkkaus(kuva, keskiX * dpr, keskiY * dpr, 6);
+}
+
 async function ajaNakyma(nimi) {
   const virheet = [];
   const konteksti = await selain.newContext({
@@ -752,7 +789,8 @@ async function ajaNakyma(nimi) {
     const m = await import('/js/linssit/satelliitti-avaruus.js');
     const aja = async (leveys, korkeus, osoite) => {
       const t0 = performance.now();
-      const url = await m.reliefiTekstuuri({ leveys, korkeus, osoite });
+      // ruudunLeveys mukaan, tai ladonta putoaisi aina puhelinkattoon.
+      const url = await m.reliefiTekstuuri({ leveys, korkeus, osoite, ruudunLeveys: innerWidth });
       const kesto = Math.round(performance.now() - t0);
       if (url?.startsWith('blob:')) URL.revokeObjectURL(url);
       return { kesto, onnistui: Boolean(url) };
@@ -771,6 +809,25 @@ async function ajaNakyma(nimi) {
   vaadi(t('molemmat reliefitarkkuudet latautuvat samalla ketjulla'),
     Boolean(ketju?.nelja?.onnistui && ketju?.kasi?.onnistui),
     JSON.stringify(ketju));
+
+  /* ---- 8. PALLO EI OLE MUSTA ---------------------------------------- */
+  /*
+   * KAKSI MITTARIA, KOSKA YKSI EI RIITÄ. Osoite pinnalla kertoo, että
+   * ketju päätyi johonkin; pikseli kertoo, ettei se johonkin ollut
+   * tyhjä kangas. v1924:ssä ensimmäinen olisi ollut vihreä ja toinen
+   * punainen — juuri siksi vika ei näkynyt missään mittarissa.
+   */
+  vaadi(t('pallon pinnalla on osoite (ei mustaa)'),
+    Boolean(linssi.avaruus?.pinnanOsoite) && linssi.avaruus.pinnanOsoite !== 'null',
+    `pinnanOsoite "${linssi.avaruus?.pinnanOsoite}", reliefi ${linssi.avaruus?.reliefi},`
+    + ` kesto ${linssi.avaruus?.reliefinKestoMs} ms`);
+  vaadi(t('reliefi ehti pinnalle kahdeksassa sekunnissa'),
+    linssi.avaruus?.reliefinKestoMs > 0 && linssi.avaruus.reliefinKestoMs <= 8000,
+    `${linssi.avaruus?.reliefinKestoMs} ms`);
+  const keskiKuva = decodePng(await s.screenshot({ type: 'png', timeout: 120000 }));
+  const keskiKirkkaus = keskipisteenKirkkaus(keskiKuva, { keskiX, keskiY, dpr });
+  vaadi(t('pallon keskipiste ei ole musta'), keskiKirkkaus > 20,
+    `kirkkaus ${keskiKirkkaus.toFixed(1)} (kynnys 20)`);
 
   /* ---- kuva raporttiin ---------------------------------------------- */
   if (ULOS) {
@@ -827,6 +884,54 @@ async function ajaNakyma(nimi) {
     Boolean(h1) && Boolean(h2) && liike < 0.5,
     `${JSON.stringify(h1)} → ${JSON.stringify(h2)}, ${liike.toFixed(2)} px`);
   await hidas.close();
+
+  /* ---- 8b. SAFARIN RAJAT: varapolun on kannettava ------------------- */
+  /*
+   * Sama linssi, mutta selain teeskentelee iOS Safaria: ei
+   * `ctx.filter`ia, ja yli 2048 × 1024 -kankaat ovat tyhjiä. Ennen
+   * korjausta tämä tuotti täsmälleen omistajan kuvan — musta pallo,
+   * vihreät pisteet ja ISS päällä. Nyt ketju joko ladotaan pienemmälle
+   * kankaalle tai jätetään generoituun vyöhykepalloon; kumpikin on
+   * väriä, eikä kumpikaan ole musta.
+   */
+  const safari = await selain.newContext({
+    ...NAKYMAT[nimi], serviceWorkers: 'block', reducedMotion: 'no-preference',
+  });
+  const f = await safari.newPage();
+  const safariVirheet = [];
+  f.on('pageerror', (e) => safariVirheet.push(String(e)));
+  await f.addInitScript(SAFARI_JARJESTELY(2048 * 1024));
+  await f.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());
+  await f.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {
+    const v = await ulkohaku(route.request().url());
+    if (!v) { route.abort(); return; }
+    route.fulfill({
+      status: 200, contentType: v.tyyppi ?? 'application/octet-stream', body: v.body,
+      headers: { 'access-control-allow-origin': '*' },
+    });
+  });
+  await avaaPeli(f);
+  await avaaLinssiEleella(f, 4500);
+  await rauhoitu(f);
+  const safariTila = await f.evaluate(MITAT);
+  const safariKuva = decodePng(await f.screenshot({ type: 'png', timeout: 120000 }));
+  const safariKirkkaus = keskipisteenKirkkaus(safariKuva, { keskiX, keskiY, dpr });
+  vaadi(t('SAFARIN RAJOILLA: pallon pinnalla on yhä osoite'),
+    Boolean(safariTila.avaruus?.pinnanOsoite) && safariTila.avaruus.pinnanOsoite !== 'null',
+    `pinnanOsoite "${safariTila.avaruus?.pinnanOsoite}", reliefi ${safariTila.avaruus?.reliefi}`);
+  vaadi(t('SAFARIN RAJOILLA: pallo ei ole musta'), safariKirkkaus > 20,
+    `kirkkaus ${safariKirkkaus.toFixed(1)} (kynnys 20), reliefi `
+    + `${safariTila.avaruus?.reliefi}, kesto ${safariTila.avaruus?.reliefinKestoMs} ms`);
+  vaadi(t('SAFARIN RAJOILLA: ei sivuvirheitä'), safariVirheet.length === 0,
+    safariVirheet.slice(0, 2).join(' | '));
+  console.log(`    SAFARI-DIAG ${JSON.stringify(safariTila.avaruus?.diag ?? [])}`);
+  if (ULOS) {
+    await f.screenshot({
+      path: join(ULOS, `astro-pallo-safari-${NAKYMAT[nimi].viewport.width}-20260916.jpg`),
+      type: 'jpeg', quality: 78, timeout: 120000,
+    }).catch(() => {});
+  }
+  await safari.close();
 }
 
 for (const nimi of Object.keys(NAKYMAT)) {
