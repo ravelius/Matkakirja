@@ -7891,7 +7891,13 @@ export const RAAMATTU = {
           + 'etaisyys ylos ja alas) kumoutuu. Mitataan 390 ja 1400 px: '
           + 'paneeli vasemmassa alakulmassa, valikon rivit tiiviit, Liiku '
           + 'keskella alhaalla, ei paallekkaisyytta pulun tai lapun '
-          + 'kanssa. Tila: tyo Opus-agentilla.',
+          + 'kanssa. TARKENNUS (omistaja 15.9.2026 klo 21.10 UTC, '
+          + 'kysymyskortti kuvan perusteella: 10 %:n paneelin teksti oli '
+          + 'lukukelvoton, nimi 6,7 px): valinta "Alkuperainen luettava '
+          + 'koko" - maan nimi 14-16 px, lukurivit n. 8 px, paneeli n. '
+          + '22 % ruudun korkeudesta; PAATOKSET 7:n <=10 %-mitoitus '
+          + 'kumoutuu taman paneelin osalta. Liiku ei saa osua paneeliin '
+          + '390 px:lla. Tila: tyo Opus-agentilla.',
         'KARTTAUUDISTUKSEN PAATOKSET 26: NOSTOPOPUPIN AIKANA MATKAKIRJA JA '
           + 'LIIKU PIILOON (omistaja 15.9.2026 klo 19.30 UTC, iPhone-kuva '
           + 'Psiloritis-noston popupista, jonka paalla nakyvat saapumiskortin '
