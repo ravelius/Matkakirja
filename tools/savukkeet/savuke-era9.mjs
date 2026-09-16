@@ -98,11 +98,24 @@ const palvelin = http.createServer((req, res) => {
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   let runko = readFileSync(polku);
   if (eranKolmenMitat && polkuOsa.endsWith('/js/pallolauta/maapaneeli.js')) {
+    /*
+     * ERÄ 19 (Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 28): paneelin koko
+     * ei tule enää maan laatikosta vaan RUUDUSTA (`nurkanSkaala`),
+     * joten erän 3 laatikko-osuudet eivät enää kasvata korttia — ja
+     * ilman tätä muutosta vastakoe menisi läpi eikä mittaisi mitään.
+     * Nyt kumotaan NURKAN katot: kortti saa 90 % ruudun korkeudesta.
+     */
     runko = Buffer.from(runko.toString('utf8')
       .replace(/MAAPANEELIN_LEVEYS_PX = \d+/, 'MAAPANEELIN_LEVEYS_PX = 300')
       .replace(/MAAPANEELIN_KORKEUS_PX = \d+/, 'MAAPANEELIN_KORKEUS_PX = 96')
       .replace(/MAAPANEELIN_LEVEYS_OSUUS = [\d.]+/, 'MAAPANEELIN_LEVEYS_OSUUS = 1')
-      .replace(/MAAPANEELIN_KORKEUS_OSUUS = [\d.]+/, 'MAAPANEELIN_KORKEUS_OSUUS = 0.35'));
+      .replace(/MAAPANEELIN_KORKEUS_OSUUS = [\d.]+/, 'MAAPANEELIN_KORKEUS_OSUUS = 0.35')
+      .replace(/MAAPANEELIN_NURKKA_KORKEUS_OSUUS = [\d.]+/,
+        'MAAPANEELIN_NURKKA_KORKEUS_OSUUS = 0.9')
+      .replace(/MAAPANEELIN_NURKKA_LEVEYS_OSUUS = [\d.]+/,
+        'MAAPANEELIN_NURKKA_LEVEYS_OSUUS = 0.9')
+      .replace(/MAAPANEELIN_NURKKA_SKAALA_MAX = [\d.]+/,
+        'MAAPANEELIN_NURKKA_SKAALA_MAX = 9'));
   }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
   res.end(runko);
@@ -210,7 +223,9 @@ async function avaaPeli({ leveys, korkeus }) {
 const mittaaPaneeli = (sivu) => sivu.evaluate(() => {
   const l = window.matkakirja.ui.pallolauta;
   const kortti = document.querySelector('.maapaneeli-kortti');
-  const datum = l.pallo.htmlElementsData().find((d) => d.laji === 'maapaneeli') ?? null;
+  // ERÄ 19: paneeli ei ole enää merkkikerroksen datum (PÄÄTÖKSET 28),
+  // joten mitat luetaan kerroksen omasta mittarista.
+  const datum = l.maapaneeli?.mitat?.() ?? null;
   const r = kortti?.getBoundingClientRect() ?? null;
   const kotelo = l.kotelo.getBoundingClientRect();
   const sisus = document.querySelector('.maapaneeli-sisus');
@@ -218,7 +233,6 @@ const mittaaPaneeli = (sivu) => sivu.evaluate(() => {
     onKortti: Boolean(kortti),
     kortti: r ? { x0: r.left, y0: r.top, x1: r.right, y1: r.bottom, w: r.width, h: r.height } : null,
     kotelo: { x0: kotelo.left, y0: kotelo.top, x1: kotelo.right, y1: kotelo.bottom },
-    laatikko: datum?.laatikko ?? null,
     skaala: datum?.skaala ?? null,
     korkeus: l.pallo.pointOfView()?.altitude ?? null,
     // Sisältö ei saa jäädä kortin alle leikkautuneeksi.
@@ -239,8 +253,8 @@ const mittaaPaneeli = (sivu) => sivu.evaluate(() => {
  */
 const mittaaKamera = (sivu) => sivu.evaluate(() => {
   const l = window.matkakirja.ui.pallolauta;
-  const datum = l.pallo.htmlElementsData().find((d) => d.laji === 'maapaneeli') ?? null;
-  const b = datum?.laatikko ?? null;
+  // ERÄ 19: maan laatikko luetaan kerroksen mittarista, ei datumista.
+  const b = l.maapaneeli?.mitat?.()?.laatikko ?? null;
   const tila = l.kamera.kameranTila();
   let rajat = null;
   if (b) {
@@ -385,8 +399,8 @@ for (const ruutu of RUUDUT) {
   // eslint-disable-next-line no-await-in-loop
   await sivu.evaluate(() => {
     const l = window.matkakirja.ui.pallolauta;
-    l.kamera.ajaKamera({ bbox: l.pallo.htmlElementsData()
-      .find((d) => d.laji === 'maapaneeli')?.laatikko, marginaali: 0.05 }, { kesto: 0 });
+    l.kamera.ajaKamera({ bbox: l.maapaneeli?.mitat?.()?.laatikko, marginaali: 0.05 },
+      { kesto: 0 });
   });
   // eslint-disable-next-line no-await-in-loop
   await sivu.waitForTimeout(900);
