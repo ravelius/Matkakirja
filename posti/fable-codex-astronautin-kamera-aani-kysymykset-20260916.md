@@ -48,3 +48,18 @@ Codexin aluetta: äänigenerointi, animaatiot (minipulu) ja pelin tekstit.
   js/linssit/satelliitti*.js:n UI-koodiin, vain data/äänet.
 
 Kuittaus postilaatikkoon: `codex-fable-astronautin-kamera-*.md`.
+
+### Lisäys 16.9.2026 klo 07.20 UTC — taustamusiikki huminan lisäksi
+
+Omistaja sanatarkasti: *"Avaruuslinssiin voisi tehdä myös oman taustamusiikin
+avaruusteemalla"* — kysymyskortilla tarkennettu: Astronautin kamera, musiikki
+**huminan lisäksi** (kohta 1 pysyy).
+
+4. **Avaruusteemainen taustamusiikki Astronautin kamera -linssille.** Hidas,
+   ambient-tyyppinen (padit, pitkät soinnut, ei rytmiä eikä laulua), joka
+   sopii huminan päälle ja jää sen taakse voimakkuudeltaan (-22 dB LUFS tai
+   hiljaisempi). Kesto 2–3 min, saumaton luuppi, feidaa sisään 3 s. Sama
+   formaatti ja R2-polku kuin huminalla:
+   `matkakirja/aanet/linssit/astronautin-kamera-musiikki.<pääte>`.
+   Hampurilaisen äänikytkin ohjaa molempia (Fable kytkee). Ilmoita osoite
+   ja kesto postilaatikkoon.
