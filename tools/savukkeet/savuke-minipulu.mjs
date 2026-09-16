@@ -28,7 +28,7 @@ try {
       const vb = svg.viewBox.baseVal;
       return {
         box: box.toJSON(), paintedHeight: ink.height * box.height / vb.height,
-        noOverlap: ['.satelliitti-ala', '.satelliitti-nauha', '.satelliitti-sulku'].every(s => !intersects(rect(s))),
+        noOverlap: ['.satelliitti-ala', '.satelliitti-nauha', '.satelliitti-sulku', '.satelliitti-linssisulku'].every(s => !intersects(rect(s))),
         inside: box.left >= 0 && box.top >= 0 && box.right <= innerWidth && box.bottom <= innerHeight,
         pointerEvents: getComputedStyle(el).pointerEvents,
         hitPassesThrough: !el.contains(document.elementFromPoint(box.x + box.width / 2, box.y + box.height / 2)),

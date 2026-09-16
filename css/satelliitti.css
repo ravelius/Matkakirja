@@ -283,71 +283,45 @@ body.aikajana-palkki-auki .topbar {
   --satelliitti-oikea: calc(12px + env(safe-area-inset-right, 0px));
 }
 
-.satelliitti-valikkokehys {
+/*
+ * ── PALLONÄKYMÄN OIKEASSA YLÄKULMASSA ON HARMAA ✕ ────────────────
+ *
+ * OMISTAJA 16.9.2026 (Raamattu LISÄYS 8, sanatarkasti): *"Poista
+ * hampurilainen myös maapallonäkymästä ja vaihda sen tilalle x joka
+ * sulkee linssin."*
+ *
+ * HAMPURILAINEN JA SEN VALIKKO OVAT POISSA KOKONAAN: kolme viivaa,
+ * pudotusvalikko, äänikytkin ja "Poistu linssistä" -rivi eivät ole
+ * enää olemassa. Tilalla on YKSI nappi, joka käyttää täsmälleen samaa
+ * `.satelliitti-sulku`-ulkoasua kuin valokuvan sulkeva ✕ — sama koko,
+ * sama pyöreys, sama puhtaan harmaa väri. Kaksi eri näköistä
+ * sulkumerkkiä samassa linssissä olisi juuri se lisäkuorma, jonka
+ * omistaja käski poistaa.
+ */
+.satelliitti-linssikehys {
   position: fixed;
   top: var(--satelliitti-yla);
   right: var(--satelliitti-oikea);
   z-index: 49;
+  display: flex;
   font-family: var(--font-luku, system-ui), system-ui, sans-serif;
   color: #dff6e8;
 }
 
-.satelliitti-hampurilainen {
-  width: var(--satelliitti-nappi);
-  height: var(--satelliitti-nappi);
-  min-width: 0;
-  min-height: 0;
-  aspect-ratio: 1;
-  padding: 0;
-  border-radius: 8px;
-  border: 1px solid rgba(93, 255, 168, 0.45);
-  background: rgba(6, 13, 10, 0.72);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3px;
-  cursor: pointer;
-}
-.satelliitti-hampurilainen:hover { background: rgba(93, 255, 168, 0.22); }
-
-.satelliitti-viiva {
-  display: block;
-  width: 1.05rem;
-  height: 2px;
-  border-radius: 2px;
-  background: #eafff3;
-}
-
-/* Valikko aukeaa napin ALLE ilman mittausta (kehys on sen ankkuri). */
-.satelliitti-valikko {
-  position: absolute;
-  top: calc(100% + 6px);
-  right: 0;
-  z-index: 50;
-  min-width: 11rem;
-  display: flex;
-  flex-direction: column;
-  padding: 4px;
-  border-radius: 10px;
-  border: 1px solid rgba(93, 255, 168, 0.4);
-  background: rgba(9, 20, 15, 0.97);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.7);
-}
-.satelliitti-valikko[hidden] { display: none; }
-
-.satelliitti-kohta {
-  padding: 0.5rem 0.7rem;
-  border: 0;
-  border-radius: 6px;
-  background: transparent;
-  color: #eafff3;
-  font: inherit;
-  font-size: 0.85rem;
-  text-align: left;
-  cursor: pointer;
-}
-.satelliitti-kohta:hover { background: rgba(93, 255, 168, 0.18); }
+/*
+ * ── LINSSIN ✕ POIS, KUN KUVA ON ISONA RUUDULLA ───────────────────
+ *
+ * OMISTAJA 16.9.2026 (Raamattu LISÄYS 6, sanatarkasti): *"Poista
+ * hampurilainen näkyvistä kun kuva isona ruudulla. Silloin näkyy vain
+ * x. Eli linssistä pääsee pois vain päänäkymästä."*
+ *
+ * `display: none` eikä `visibility: hidden`: näkymätön nappi ottaisi
+ * yhä napautuksia vastaan valokuvan päällä, ja juuri se olisi se
+ * ulospääsy, jota omistaja ei halua kuvanäkymään. Luokka elää
+ * havaintokortin mukana (js/linssit/satelliitti.js KUVA_AUKI_LUOKKA),
+ * joten linssin ✕ palaa itsestään pallonäkymään.
+ */
+body.satelliitti-kuva-auki .satelliitti-linssikehys { display: none; }
 
 @media (max-width: 620px) {
   :root { --satelliitti-nappi: 2.4rem; }
@@ -370,7 +344,7 @@ body.aikajana-palkki-auki .topbar {
   /*
    * KUVA SAA KOKO RUUDUN (omistaja 16.9.2026, LISÄYS 3): linssin
    * yläpalkki on poistettu, joten kortin ei tarvitse enää jättää sille
-   * tilaa. Kelluva hampurilainen (z-index 49) ja kuvan omat pinnat
+   * tilaa. Kelluva linssikehys (z-index 49) ja kuvan omat pinnat
    * piirtyvät tämän päälle.
    */
   top: 0;
@@ -447,15 +421,41 @@ body.aikajana-palkki-auki .topbar {
  */
 .satelliitti-selite {
   position: absolute;
-  left: calc(12px + env(safe-area-inset-left, 0px));
+  /*
+   * ── VASEN SISENNYS ON 12 px, EI 12 px + TURVA-ALUE (omistaja
+   * 16.9.2026, Raamattu LISÄYS 7: *"se saisi olla myös vaaka ruudulla
+   * vasemmassa reunassa (nyt irti reunasta liikaa)"*) ──────────────
+   *
+   * MITATTU SYY: sisennys oli `calc(12px + env(safe-area-inset-left))`,
+   * eli turva-alue LISÄTTIIN aina 12 px:n päälle. Pystyssä
+   * `safe-area-inset-left` on 0, joten vika ei näkynyt siellä
+   * lainkaan; vaaka-asennossa lovellisen puhelimen vasen turva-alue on
+   * kymmeniä pikseleitä ja Safari kasvattaa sitä vielä täysruudun
+   * työkalupalkin alla — omistajan kuvassa laatikko oli noin 170 px
+   * irti reunasta. Selite ei ole ruudun reunaan asti ulottuva palkki
+   * vaan pieni laatikko, joten turva-alue ei kuulu sen päälle
+   * lisättäväksi vaan sen KATOKSI:
+   *
+   *   max(12px, env(...))  =  12 px, kun turva-aluetta ei ole
+   *                           (pysty, työpöytä, vaaka ilman lovea),
+   *                           ja täsmälleen turva-alue silloin kun se
+   *                           on suurempi — laatikko ei siis koskaan
+   *                           jää lovi- tai kulmamaskin alle eikä
+   *                           karkaa reunasta.
+   *
+   * KUVAN LETTERBOX EI SIIRRÄ TÄTÄ: `.satelliitti-katselu` on
+   * `position: fixed; inset: 0`, joten sisennys lasketaan RUUDUSTA
+   * eikä kuvan piirtoalueesta (sama sääntö kuin ✕:llä ja
+   * pienoiskuvilla, omistaja 16.9.2026).
+   */
+  left: max(12px, env(safe-area-inset-left, 0px));
   top: var(--satelliitti-yla);
   z-index: 5;
   box-sizing: border-box;
   /*
-   * LEVEYS JÄTTÄÄ TILAA OIKEAN YLÄKULMAN KAHDELLE NAPILLE (✕ ja
-   * hampurilainen), jotka ovat samalla rivillä selitteen kanssa —
-   * työpöydällä 46 % ei yllä lähellekään niitä, kapealla ruudulla
-   * vähennys on pakko laskea.
+   * LEVEYS JÄTTÄÄ TILAA OIKEAN YLÄKULMAN ✕:LLE, joka on samalla
+   * rivillä selitteen kanssa — työpöydällä 46 % ei yllä lähellekään
+   * sitä, kapealla ruudulla vähennys on pakko laskea.
    */
   max-width: min(46%, 560px);
   padding: 8px 10px 6px;
@@ -498,6 +498,49 @@ body.aikajana-palkki-auki .topbar {
   max-height: 0;
   opacity: 0;
   margin-top: 0;
+}
+
+/*
+ * ── KELATTU SELITE: YKSI RIVI, HIMMEÄ JA LÄPIKUULTAVA ────────────
+ *
+ * OMISTAJA 16.9.2026 (Raamattu LISÄYS 6): *"Pienennetty inforuutu
+ * pitää mahtua aina yhdelle riville"* — ja LISÄYS 7: *"Pienennetty
+ * inforuutu saisi olla himmennetty ja läpinäkyvämpi."*
+ *
+ * LEVEYS SAA KASVAA ✕:ÄÄN ASTI. Avatun selitteen 46 %:n katto on
+ * siellä, jottei pitkä leipäteksti peittäisi puolta valokuvasta;
+ * kelatulla rivillä sitä ongelmaa ei ole, ja juuri lisätila on se,
+ * joka pitää nimen yhdellä rivillä. Laskenta pysähtyy ✕:n vasempaan
+ * reunaan (--satelliitti-oikea + kaksi nappia + 10 px:n väli) ja
+ * jättää siihen vielä 8 px ilmaa.
+ *
+ * FONTTIKOKO KUTISTUU JS:SSÄ (16 → 11 px, js/linssit/satelliitti.js
+ * sovitaOtsikko) ja vasta sen jälkeen teksti lyhennetään ellipsillä.
+ * `white-space: nowrap` on se, joka tekee rivityksen mahdottomaksi —
+ * ilman sitä kutistus vain sallisi useamman rivin.
+ */
+.satelliitti-selite.satelliitti-selite-kiinni {
+  max-width: calc(100% - max(12px, env(safe-area-inset-left, 0px))
+    - var(--satelliitti-oikea) - var(--satelliitti-nappi) - 14px);
+  /*
+   * LEVEYS ON SISÄLLÖN, KATTO RUUDUN. Kiinteä leveys venyttäisi
+   * laatikon ✕:ään asti myös lyhyellä nimellä — ruma ja turha. Kun
+   * vain katto on annettu, laatikko kutistuu tekstinsä kokoiseksi ja
+   * kasvaa tarvittaessa ✕:ään asti; vasta siellä `scrollWidth`
+   * ylittää `clientWidth`in ja fonttikoko alkaa pienentyä.
+   */
+  width: auto;
+  padding: 5px 10px;
+  background: rgba(6, 13, 10, 0.25);
+  border-color: rgba(93, 255, 168, 0.12);
+  box-shadow: none;
+}
+
+.satelliitti-selite.satelliitti-selite-kiinni .satelliitti-selite-otsikko {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0.7;
 }
 
 .satelliitti-selite-teksti { margin: 0; }
@@ -555,15 +598,16 @@ body.aikajana-palkki-auki .topbar {
 .satelliitti-linkki { color: var(--satelliitti-vihrea, #5dffa8); }
 
 /*
- * KAPEALLA RUUDULLA selite ei saa mennä ✕:n eikä hampurilaisen alle:
- * leveys on koko ruutu miinus omat marginaalit JA kahden napin rivi
- * (2 × nappi + välit). Mitattu 390 × 844: selite 268 px, ✕ ja
- * hampurilainen alkavat 296 px:stä.
+ * KAPEALLA RUUDULLA selite ei saa mennä ✕:n alle: leveys on koko ruutu
+ * miinus omat marginaalit JA yksi nappi väleineen. Hampurilainen
+ * poistui 16.9.2026 (LISÄYS 8), joten vähennys puolittui ja selite saa
+ * lisää tilaa nimelleen.
  */
 @media (max-width: 620px) {
   .satelliitti-selite {
     max-width: none;
-    width: calc(100% - 24px - 2 * var(--satelliitti-nappi) - 26px);
+    /* Oikeassa yläkulmassa on enää YKSI nappi (LISÄYS 8), ei kahta. */
+    width: calc(100% - 24px - var(--satelliitti-nappi) - 16px);
   }
 }
 
@@ -595,7 +639,14 @@ body.aikajana-palkki-auki .topbar {
  */
 .satelliitti-kulma {
   position: absolute;
-  right: calc(var(--satelliitti-oikea) + var(--satelliitti-nappi) + 10px);
+  /*
+   * RUUDUN OIKEA YLÄKULMA (LISÄYS 8). Aiemmin ✕ väisti vasemmalle,
+   * koska hampurilainen istui kulmassa ja sen valikko aukesi alle.
+   * Hampurilaista ei ole enää olemassa, joten kuvan sulkeva ✕ saa
+   * kulman itselleen — ja pallonäkymän linssi-✕ on täsmälleen samassa
+   * kohdassa, joten merkki ei hyppää näkymästä toiseen.
+   */
+  right: var(--satelliitti-oikea);
   top: var(--satelliitti-yla);
   z-index: 6;
   display: flex;
@@ -603,7 +654,8 @@ body.aikajana-palkki-auki .topbar {
   gap: 8px;
 }
 
-.satelliitti-sulku {
+.satelliitti-sulku,
+.satelliitti-linssisulku {
   flex: 0 0 auto;
   width: var(--satelliitti-nappi, 2.1rem);
   height: var(--satelliitti-nappi, 2.1rem);
@@ -624,7 +676,8 @@ body.aikajana-palkki-auki .topbar {
   font-size: 1.3rem;
 }
 
-.satelliitti-sulku:hover { background: rgba(170, 170, 170, 0.55); }
+.satelliitti-sulku:hover,
+.satelliitti-linssisulku:hover { background: rgba(170, 170, 170, 0.55); }
 
 /*
  * PIENOISKUVAT KELLUVAT AINA RUUDUN VASEMMASSA ALAKULMASSA (omistaja
@@ -672,6 +725,160 @@ body.aikajana-palkki-auki .topbar {
 }
 
 .satelliitti-pikku img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/*
+ * ═══ MINIPULU RUUDUN OIKEASSA ALAKULMASSA ════════════════════════
+ *
+ * OMISTAJA 16.9.2026: *"minipulu ... saisi olla oikeassa alareunassa
+ * näkyvillä, ja jokaiseen kohteeseen voisi generoida kaksi valmista
+ * kysymystä"* (Raamattu, kohdat 9 ja 10).
+ *
+ * SAMA ANKKUROINTISÄÄNTÖ KUIN MUILLA PINNOILLA: kulma on RUUDUN eikä
+ * kuvan — pinnat eivät hypi otoksesta tai laitteesta toiseen. Vasen
+ * alakulma on pienoiskuvien (`.satelliitti-nauha`, enintään puolet
+ * leveydestä), oikea tämän, joten ne eivät voi leikata toisiaan.
+ *
+ * TÄMÄ EI OLE PELIN PULU. Linssi piilottaa pelin oman pulun ja sen
+ * kuplapinon (`body.aikajana-pulu-piilossa`, ks. tiedoston alku).
+ * Minipulu on oma hahmonsa (js/minipulu.js) omalla luokallaan, joten
+ * piilotussäännöt eivät osu siihen — ja alla oleva sääntö sanoo sen
+ * ääneen, jottei myöhempi laveampi piilotus vahingossa vie sitä
+ * mukanaan.
+ */
+.satelliitti-pulukulma {
+  position: absolute;
+  right: 12px;
+  bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  max-width: min(360px, calc(100% - 24px));
+  pointer-events: none;
+}
+
+.satelliitti-pulukulma > * { pointer-events: auto; }
+
+body.aikajana-pulu-piilossa .satelliitti-pulukulma,
+body.aikajana-pulu-piilossa .satelliitti-pulukulma .minipulu {
+  visibility: visible;
+}
+
+.satelliitti-pulunappi {
+  align-self: flex-end;
+  width: auto;
+  min-width: 0;
+  min-height: 0;
+  padding: 4px;
+  border: 1px solid rgba(93, 255, 168, 0.35);
+  border-radius: 999px;
+  background: rgba(6, 13, 10, 0.78);
+  line-height: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.satelliitti-pulunappi:hover { border-color: var(--satelliitti-vihrea, #5dffa8); }
+.satelliitti-pulunappi[disabled] { cursor: default; opacity: 0.6; }
+
+/*
+ * KYSYMYSKORTTI TUMMALLE POHJALLE. Sama paperiton, läpikuultava
+ * tummuus kuin selitteellä — valokuva on sisältö, kortti sen päällä
+ * oleva pinta. Korkeus on rajattu, jottei pitkä vastaus työnnä korttia
+ * ruudun yli: vastaus vierii kortin sisällä.
+ */
+.satelliitti-pulukortti {
+  width: min(320px, calc(100vw - 24px));
+  max-height: min(52vh, 420px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 10px 12px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(93, 255, 168, 0.28);
+  background: rgba(4, 12, 9, 0.9);
+  color: #dff6e8;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
+}
+
+.satelliitti-pulukortti[hidden] { display: none; }
+
+.satelliitti-pulu-ylarivi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.satelliitti-pulu-otsikko {
+  font-weight: 600;
+  color: var(--satelliitti-vihrea, #5dffa8);
+  font-size: 0.85rem;
+}
+
+.satelliitti-pulu-sulku {
+  flex: 0 0 auto;
+  width: 1.6rem;
+  height: 1.6rem;
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 1;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid rgb(170, 170, 170);
+  background: rgba(130, 130, 130, 0.42);
+  color: rgb(224, 224, 224);
+  font: inherit;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.satelliitti-pulu-kysymykset {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.satelliitti-pulu-kysymys {
+  text-align: left;
+  min-height: 0;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(93, 255, 168, 0.3);
+  background: rgba(10, 24, 18, 0.85);
+  color: #eafff3;
+  font: inherit;
+  cursor: pointer;
+}
+
+.satelliitti-pulu-kysymys:hover { background: rgba(93, 255, 168, 0.16); }
+
+.satelliitti-pulu-kysymys.valittu {
+  border-color: var(--satelliitti-vihrea, #5dffa8);
+  background: rgba(93, 255, 168, 0.18);
+}
+
+/* Vastaus on pulun kupla: pyöristetty, oikealta lähtevä kärki alhaalla. */
+.satelliitti-pulu-vastaus {
+  margin-top: 9px;
+  padding: 9px 11px;
+  border-radius: 12px 12px 12px 4px;
+  background: rgba(233, 246, 240, 0.94);
+  color: #10251c;
+  font-size: 0.88rem;
+}
+
+.satelliitti-pulu-vastaus[hidden] { display: none; }
+
+@media (max-width: 620px), (max-height: 500px) {
+  .satelliitti-pulukortti { width: min(280px, calc(100vw - 24px)); font-size: 0.85rem; }
+}
 
 /*
  * ═══ VAAKANÄKYMÄ (omistaja 12.9.2026: "Korjaa vaaka näkymä"; UUSITTU

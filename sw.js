@@ -325,6 +325,7 @@ const SHELL = [
   './js/linssit/satelliitti.js',
   './js/linssit/satelliitti-data.js',
   './js/linssit/astronaut-kysymykset.js',
+  './js/linssit/satelliitti-aani.js',
   './js/linssit/satelliitti-avaruus.js',
   './css/satelliitti.css',
   './js/linssit/topografia.js',
