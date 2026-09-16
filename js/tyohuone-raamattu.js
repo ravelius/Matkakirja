@@ -7885,8 +7885,16 @@ export const RAAMATTU = {
           + '(omistaja 16.9.2026 klo 18.40 UTC, sanatarkasti: "Infon '
           + 'otsikkorivi voisi olla vihrealla") selitteen otsikkorivi '
           + '(kohteen nimi) on linssin vihrealla (#5dffa8-savy, sama kuin '
-          + 'kohdepisteissa ja Kysy pululta -otsikossa), maa-osa himmeampi. '
-          + 'Tila: tyo Opus-agentilla.',
+          + 'kohdepisteissa ja Kysy pululta -otsikossa), maa-osa himmeampi; '
+          + '32) (omistaja 16.9.2026 klo 18.45 UTC, sanatarkasti: "Tai '
+          + 'ensimmaisella kerralla info ruutu voisi aueta ja pienentya '
+          + 'itsestaan heti takaisin, niin pelaajalle tulisi vinkki etta '
+          + 'tekstia on enemman") VINKKIAVAUS: kun kuva avataan ENSIMMAISEN '
+          + 'kerran istunnossa (tai kohde ensimmaisen kerran), selite '
+          + 'avautuu itsestaan, pysyy auki n. 1,5 s ja kelautuu takaisin '
+          + 'pienennetyksi; sen jalkeen selite avautuu kelattuna (kohta 30). '
+          + 'Kohdekohtainen muisti sessionStoragessa; reduced-motion: ei '
+          + 'vinkkiavausta. Tila: tyo Opus-agentilla.',
         'IHMISEN MATKA -LINSSI: RINTAMAN VALKKYMINEN, MUSTA ALKU, LIIKU '
           + 'POIS; ASTRONAUTTILINSSILLE OMA KUVAKE (omistaja 15.9.2026 klo '
           + '12.00 UTC, tyopoytakuva 248 000 v. sitten, sanatarkasti: "Kun '
