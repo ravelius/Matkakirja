@@ -245,6 +245,9 @@ const SHELL = [
   './js/pallolauta/siirto.js',
   './js/pallolauta/sovittelu.js',
   './css/aikajana.css',
+  // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
+  // suoraan, joten se kuuluu kuoreen kuten css/styles.css.
+  './css/linssikehys.css',
   // Etusivun esirenderöity pallo (pallolauta vaihe 5a, 5.9.2026):
   // tuodaan dynaamisesti kuten pallo.js, mutta kuuluu SHELLiin
   // offline-käyttöä varten. Ei niputeta yhden tiedoston versioon

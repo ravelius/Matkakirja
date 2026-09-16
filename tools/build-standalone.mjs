@@ -996,6 +996,9 @@ const STYLES = [
   // Sähkepinta on osa peruspeliä (js/ui.js ja js/main.js tuovat
   // js/sahke.js:n), eikä css/styles.css sisällä yhtään sahke-sääntöä.
   'css/sahke.css',
+  // Linssien yhteinen kehysliuku (16.9.2026): index.html lataa tämän
+  // omalla <link>-elementillään, joka ei päädy yhden tiedoston versioon.
+  'css/linssikehys.css',
 ];
 
 const css = STYLES.map((file) => read(file)).join('\n\n');
