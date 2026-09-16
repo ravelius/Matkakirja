@@ -737,7 +737,9 @@ test('reliefin 8k-kuva tulee vain leveälle ruudulle, puhelin saa 4k:n', async (
   const m = await import('../js/linssit/satelliitti-avaruus.js');
   assert.equal(m.RELIEFIN_8K_LEVEYS, 8192);
   assert.equal(m.RELIEFIN_8K_KORKEUS, 4096);
-  const puhelin = m.valitseReliefi({ leveys: 390, dpr: 3 });
+  // Vanhan (ei-koko-pallon) kuvaparin osoitteet: kokoPallo eksplisiittisesti
+  // pois, koska RELIEFI_KOKO_PALLO on nyt oletuksena päällä.
+  const puhelin = m.valitseReliefi({ leveys: 390, dpr: 3, kokoPallo: false });
   assert.equal(puhelin.tunnus, '4k');
   assert.equal(puhelin.osoite, m.RELIEFIN_OSOITE);
   // Leveä puhelin kolminkertaisella pikselisuhteella on yhä puhelin.
@@ -883,17 +885,21 @@ test('liikkeenvähennys: ei pyörimistä ja zoom suoraan loppuasentoon', () => {
  * *"Kyllä, koko pallo 1′-datasta."*
  */
 
-test('koko pallon reliefi on VALMIS mutta EI vielä kytketty', () => {
-  // Kytkin käännetään vasta kun Mac-ajo on tehty ja osoitteet
-  // tarkistettu. Tämä testi on se vartija: jos kytkin kääntyy vahingossa
-  // tässä PR:ssä, ajoa ei ole vielä tehty eikä kuvaa ole olemassa.
-  assert.equal(RELIEFI_KOKO_PALLO, false);
-  // Sama ruutu, kytkin pois: vanha kuva molemmilla tarkkuuksilla.
+test('koko pallon reliefi on KYTKETTY (Mac-ajo 20260916)', () => {
+  // Mac-ajo (tunniste 20260916) on valmis, osoitteet tarkistettu
+  // HEAD:illä ja kytkin käännetty todeksi 16.9.2026
+  // (docs/raportit/viesti-fable-pallo-navat-20260916.md).
+  assert.equal(RELIEFI_KOKO_PALLO, true);
+  // Oletus (ei ruudun mittoja) valitsee koko pallon 4k-kuvan: kytkin
+  // vaikuttaa myös ilman selitystä annettua kokoPallo-lippua.
   const nyt = valitseReliefi();
-  assert.equal(nyt.osoite, RELIEFIN_OSOITE);
+  assert.equal(nyt.osoite, RELIEFIN_KOKO_4K.osoite);
   assert.equal(nyt.leveys, RELIEFIN_LEVEYS);
   assert.equal(nyt.korkeus, RELIEFIN_KORKEUS);
-  assert.equal(nyt.kokoPallo, false);
+  assert.equal(nyt.kokoPallo, true);
+  // Tunniste näkyy molemmissa osoitteissa.
+  assert.match(RELIEFIN_KOKO_8K.osoite, /topografia-pallo-koko-8k-20260916\.webp$/);
+  assert.match(RELIEFIN_KOKO_4K.osoite, /topografia-pallo-koko-4k-20260916\.webp$/);
 });
 
 test('kytkin vaihtaa kuvan mutta EI tarkkuuden valintaa', () => {
@@ -912,9 +918,10 @@ test('kytkin vaihtaa kuvan mutta EI tarkkuuden valintaa', () => {
   assert.equal(tyopoyta.korkeus, 4096);
   assert.equal(tyopoyta.kokoPallo, true);
   // Tarkkuuden valinta on SAMA kummallakin kuvaparilla: vain osoite
-  // vaihtuu, ei mitat.
+  // vaihtuu, ei mitat. Vanha kuvapari haetaan EKSPLISIITTISESTI
+  // kokoPallo: false -lipulla, koska oletus on nyt kytketty.
   for (const ruutu of [{ leveys: 390, dpr: 3 }, { leveys: 1440, dpr: 2 }]) {
-    const vanha = valitseReliefi(ruutu);
+    const vanha = valitseReliefi({ ...ruutu, kokoPallo: false });
     const uusi = valitseReliefi({ ...ruutu, kokoPallo: true });
     assert.equal(uusi.tunnus, vanha.tunnus);
     assert.equal(uusi.leveys, vanha.leveys);

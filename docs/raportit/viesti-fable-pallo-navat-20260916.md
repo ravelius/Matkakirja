@@ -213,3 +213,60 @@ lasku (`RELIEFIN_SATURAATIO`) toimivat ennallaan molemmilla kuvilla.
 
 Ei versionostoa: peliin ei tullut käytössä olevaa muutosta, vain työkalu
 ja työnkulku. Versio nostetaan kytkentä-PR:ssä.
+
+## Kytketty 16.9.
+
+Sonnet-agentti, kytkentähaara `claude/bold-ride-vow4ki-pallo-navat-kytkin`.
+Mac-ajo (tunniste `20260916`) tarkistettiin ja kytkin käännettiin todeksi.
+
+**Osoitteet ja koot (HEAD 200, tarkistettu uudelleen tästä haarasta):**
+
+| Tiedosto | Mitat | Tavuja |
+| --- | --- | --- |
+| `topografia-pallo-koko-8k-20260916.webp` | 8192 × 4096 | 2 872 604 |
+| `topografia-pallo-koko-4k-20260916.webp` | 4096 × 2048 | 770 066 |
+
+**Muutokset:**
+
+- `js/linssit/reliefikuva.js`: `RELIEFI_KOKO_PALLO = true`. Osoitteet
+  (`RELIEFIN_KOKO_8K`/`RELIEFIN_KOKO_4K`) olivat jo oikeat (tunniste
+  20260916) — ainoa koodimuutos on kytkin ja kommenttien päivitys.
+  Molemmat pallolinssit (Astronautin kamera
+  `js/linssit/satelliitti-avaruus.js` ja topografialinssin `pohjakuva()`
+  `js/linssit/topografia.js`) lukevat valinnan `valitseReliefi`:stä
+  oletuksena, joten ne eivät tarvinneet omaa muutosta.
+- `tests/satelliitti-avaruus.test.mjs`: testi *"koko pallon reliefi on
+  VALMIS mutta EI vielä kytketty"* korvattu testillä *"koko pallon
+  reliefi on KYTKETTY (Mac-ajo 20260916)"* (`RELIEFI_KOKO_PALLO ===
+  true`, oletusvalinta osoittaa koko pallon 4k-kuvaan). Kaksi muuta
+  testiä, jotka nojasivat vanhaan oletukseen (`kokoPallo` pois päältä),
+  päivitetty pyytämään se eksplisiittisesti (`kokoPallo: false`), koska
+  oletus on nyt kytketty.
+- `tests/pallolinssit.test.mjs`: pohjakuvan valintatesti tarkistaa nyt,
+  että oletusosoite on koko pallon 8k-kuva ja että vanha kuvapari on
+  yhä valittavissa eksplisiittisellä `kokoPallo: false`.
+
+**Yksikkötestit:** `NODE_USE_ENV_PROXY=1 node --test
+tests/satelliitti*.test.mjs tests/pallolinssit.test.mjs
+tests/rules.test.mjs tests/dokumentit.test.mjs tests/sw.test.mjs` — 473
+testiä, 473 läpi. `node --check` puhtaana muutetuille tiedostoille.
+
+**Savukkeet (yksi kerrallaan, oikea R2-verkko, ei paikallista
+kopiota — HEAD ja lataus onnistuivat kontin proxyn kautta suoraan):**
+
+| Savuke | Näkymä | Tulos |
+| --- | --- | --- |
+| `savuke-astro-pallo.mjs` | työpöytä (1400×900) | 31/31, `reliefinOsoite` = koko pallon 8k-osoite |
+| `savuke-astro-pallo.mjs` | puhelin (390×844) | 31/31, `reliefinOsoite` = koko pallon 4k-osoite |
+| `savuke-topografialinssi.mjs` | 390 px ja 1400 px | 28/28 |
+| `savuke-satelliittilinssi.mjs` | työpöytä (1400×900) | 33/34 ensimmäisellä ajolla (satunnainen "pallon takapuolen merkki ei ota napautusta" — napautus osui vahingossa toiseen merkkiin), **34/34 uusintaajossa** — ei liity tämän kytkennän muutoksiin |
+
+Kuvakaappaus Astronautin kameran pallosta, kamera pyöritetty `lat -70`:
+`docs/raportit/kuvat/pallo-navat-etelamanner-1400-20260916.jpg`
+(1400 px, 84,4 kt, ≤ 200 kt). Etelämanner näkyy selvällä rantaviivalla
+eikä valkoisena läpinäkyvänä reikänä — kytkin toimii kuten
+suunniteltiin.
+
+Ei muutoksia `sw.js`:ään: se ei nimeä reliefikuvien osoitteita
+kiinteästi (esilataus/reititys on yleistä URL-kuviota vasten), ja
+`tests/sw.test.mjs` on vihreä ennallaan.
