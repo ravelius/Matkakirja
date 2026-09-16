@@ -162,6 +162,64 @@ korjaamattoman.
 `docs/raportit/kuvat/nappula-liike-390-20260916.jpg` — liikkeen
 puoliväli 390 px:n ruudulla: pelinappula näkyvissä kartalla matkalla.
 
+## Selvitys: savuke-maailma-ei-kermaa 5/6 julkaisuhaarassa EI ole tästä erästä
+
+Julkaisuhaarassa (v1919-kooste) `savuke-maailma-ei-kermaa.mjs` antaa 5/6:
+väite V1 kaatuu, koska näytepisteet *Itävalta/Steiermark* ja *Romania
+(Szatmár)* palauttavat `undefined`. Epäily kohdistui tämän erän
+kerma-kytkimeen (`asetaTasoituksenLiike`, avain K→L). **Mitattu: ei ole
+sen syytä.**
+
+| ajo | commit | tulos | Steiermark | Szatmár |
+| --- | --- | --- | --- | --- |
+| tämä haara | 32ce03af (pohja v1917) | **6/6** | A 244,5 → B 225,6 (−18,8) | A 245,0 → B 225,6 (−19,4) |
+| origin/main | 9acbd95f (**v1918**, #2538) | **5/6** | `undefined` | `undefined` |
+
+Sama savuke, sama kone, peräkkäin. Tämä haara läpäisee V1:n
+täydellisesti — kerma pois liikkeessä ja maailmanäkymän kermattomuus
+(PAATOKSET 23) toimivat siis yhdessä. Punainen on **v1918:ssa**, joka on
+tullut mainiin tämän haaran haarautumisen jälkeen.
+
+**Miksi `undefined`.** Savukkeen mittaus antaa pisteelle `lum`-arvon vain
+kun piste on ruudulla (`ruudulla: true`); `undefined` tarkoittaa siis
+ruudun ULKOPUOLELLA — ei mustaa, ei puuttuvaa laattaa. Molemmat pisteet
+ovat näytejoukon uloimmat (läntisin ja koillisin), ja ne putoavat pois
+KUMMASTAKIN ajosta (A ja B), joten kyse on rajauksesta eikä kermasta.
+
+**Mitattu syy: saapumisrajaus on v1918:ssa tiukempi.** Savukkeen oma
+mittauskamera raportoi näkyvän alueen:
+
+| | näkymä (lautayksikköä) | laattoja |
+| --- | --- | --- |
+| v1917-pohja (tämä haara) | 179 × 107 @ (6394, 1483) | 18 |
+| v1918 (origin/main) | **163 × 97** @ (6402, 1488) | 15 |
+
+Näkymä kapenee noin 9 % molempiin suuntiin ja siirtyy — juuri sen
+verran, että uloimmat näytepisteet jäävät ulos. v1918 (#2538, "maainfo
+alakulmaan") siirsi maapaneelin nurkkaan ja kirjoitti
+`js/pallolauta/maapaneeli.js`:n uusiksi; saapumislaatikko laajennetaan
+paneelilla (`saapumislaatikko` → `paneelinLaatikko`), joten paneelin
+muutos muuttaa juuri tätä rajausta. Savukkeen näytepisteet on valittu
+sen oman kommentin mukaan vanhasta, väljemmästä rajauksesta (lon
+15,4…23,6 / lat 44,8…48,4).
+
+**Kerma itse on kunnossa kummassakin**: ruudulla olevat ulkopisteet
+tummuvat samoin (Apuseni −56,1 vs −56,9; Banat −13,8 vs −13,9; Slavonia
+−13,0 vs −12,7) ja V2–V5 ovat vihreitä molemmissa ajoissa.
+
+**Miksi tämä erä ei voi vaikuttaa siihen.** `variLiike` on epätosi aina
+kun matka ei ole käynnissä, eikä savuke aja yhtään siirtoa. Silloin
+jokainen muutettu lauseke supistuu vanhaksi merkki merkiltä:
+`variMaailma || false ? renkaat : null` on entinen `renkaat`,
+`kermatta === variMaailma`, `tila === variMaailma ? 'M' : 'K'` ja
+`avain` on sama merkkijono. Myös savukkeen vastakoe osuu yhä kohteeseen:
+se korvaa `asetaTasoituksenMaailma`-funktion, johon tämä erä ei koske.
+
+**Korjaus kuuluu v1918:n tekijälle**, ja se on jompikumpi: joko
+saapumisrajaus palautetaan väljäksi, tai savukkeen näytepisteet
+päivitetään uuteen rajaukseen (silloin kommentti pisteiden valinnasta on
+päivitettävä samalla). Tähän haaraan ei tehty muutosta.
+
 ## Mitä EI tehty
 
 - Ei versionostoa, ei PR:ää, ei Raamatun muokkausta (Fablen kynä).
