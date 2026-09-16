@@ -27,7 +27,7 @@ test('import branch never receives a generation API key and requires one final',
   assert.match(script, /ASTRONAUT_FINAL_COUNT !== '1'/);
   assert.match(script, /not overwriting/);
   assert.doesNotMatch(script, /process\.env\.ELEVEN_API_KEY|api\.elevenlabs\.io/);
-  const workflow = readFileSync(new URL('../.github/workflows/generoi-tehosteet.yml', import.meta.url), 'utf8');
+  const workflow = readFileSync(new URL('../tools/astronaut/generoi-tehosteet.yml.proposed', import.meta.url), 'utf8');
   assert.match(workflow, /generoi:\s+if: inputs\.laji == 'kohahdus'/);
   const importJob = workflow.slice(workflow.indexOf('\n  astronautin-kamera-tuonti:'));
   assert.doesNotMatch(importJob, /ELEVEN_API_KEY|generoi-tehosteet\.mjs/);
