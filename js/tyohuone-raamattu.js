@@ -7852,7 +7852,17 @@ export const RAAMATTU = {
           + 'aanikytkin poistuu: humina ja musiikki seuraavat pelin yleista '
           + 'musiikki-/aaniasetusta (hammasratas, matkakirja-musiikki), ei '
           + 'erillista linssiasetusta. Kumoaa kohdat 4 (hampurilaisen '
-          + 'valikko) ja 16:n hampurilaisen. Tila: tyo Opus-agentilla.',
+          + 'valikko) ja 16:n hampurilaisen. LISAYS 9 (omistaja 16.9.2026 klo '
+          + '16.25 UTC, kuunneltuaan, sanatarkasti: "Jata musiikki pois. '
+          + 'Pidetaan pelkka humina. Se musiikki oli vahan outo. Ja saisiko '
+          + 'pulun ymparilta tuon ympyran pois?"): 27) MUSIIKKI POIS - '
+          + 'Astronautin kamerassa soi vain yksi yhteinen humina; '
+          + 'musiikkikerros kytketaan pois (ASTRONAUTIN_MUSIIKKI_KAYTOSSA = '
+          + 'false), tiedosto jaa R2:een; kumoaa kohdat 14 ja 17 musiikin '
+          + 'osalta; Codexille tieto, ei uusia musiikkiajoja; 28) minipulun '
+          + 'ympyrapohja (tumma pyorea tausta/reunus) POIS - pulu seisoo '
+          + 'suoraan kuvan paalla ilman ympyraa; osuma-alue sailyy. Tila: '
+          + 'tyo Opus-agentilla, v1924.',
         'IHMISEN MATKA -LINSSI: RINTAMAN VALKKYMINEN, MUSTA ALKU, LIIKU '
           + 'POIS; ASTRONAUTTILINSSILLE OMA KUVAKE (omistaja 15.9.2026 klo '
           + '12.00 UTC, tyopoytakuva 248 000 v. sitten, sanatarkasti: "Kun '
