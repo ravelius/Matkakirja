@@ -299,6 +299,7 @@ const odota = (ms) => new Promise((r) => { setTimeout(r, ms); });
 const {
   fokusvirtaPulunKuvat, naytaLuentakuva, naytaPulunKuvapakka,
   piilotaLuentakuva, pienennaLuentakuva, suljeSuurennos,
+  LUENTAKUVAPAKKA_KARTALLA,
 } = await import('../js/fokusvirta.js');
 const { fokusvirtaKaupungille } = await import('../js/packs/fokusvirrat.js');
 const { julisteUrl } = await import('../js/media.js');
@@ -424,6 +425,41 @@ function nakyvaLappu(ui) {
   };
 }
 
+/*
+ * ══ PAKKAVARTIOT KYTKIMEN MUKAAN (omistaja 16.9.2026 klo 16.05 UTC,
+ * Raamattu KARTTAUUDISTUKSEN PAATOKSET 31 kohta 1, sanatarkasti:
+ * *"Piilotetaan nuo kuvat kartalta toistaiseksi. Täytyy miettiä niille
+ * joku parempi paikka."*) ═════════════════════════════════════════
+ *
+ * Kartalle jäävä PIENI kuvapakka on TOISTAISEKSI KUMOTTU
+ * (js/fokusvirta.js LUENTAKUVAPAKKA_KARTALLA = false). Tämä tiedosto
+ * mittaa juuri sitä pakkaa, joten sen vartiot eivät voi olla voimassa
+ * sellaisinaan — mutta niitä EI POISTETA eikä ohiteta: jokainen niistä
+ * kääntyy kytkimen mukaan, ja kytkimen ollessa pois väite on se, minkä
+ * omistaja tilasi — pakkaa ei nosteta kartalle lainkaan. Kun kuville
+ * löytyy parempi paikka ja kytkin kääntyy takaisin, alkuperäiset
+ * väitteet ovat tässä sanasta sanaan tallella ilman uudelleenkirjoitusta.
+ *
+ * Sama kuvio kuin tests/luentakuvasarja.test.mjs:n vaadiPakkaKartalla
+ * ja tests/luentakuva.test.mjs:n vaadiPienennysPiilottaa.
+ *
+ * HUOM: pulun ISO sarja (naytaLuentakuvasarja) ei ole kumottu — se on
+ * hetki, ei kartalle jäävä tavara — ja sen vartiot ovat omassa
+ * tiedostossaan.
+ *
+ * @param {object} ui    koe-ui
+ * @param {object} city  kaupunki, jolle pakkaa yritettiin nostaa
+ * @param {string} viesti vartion oma viesti
+ */
+function vaadiPakkaKumottu(ui, city, viesti) {
+  const kumottu = `KUMOTTU (LUENTAKUVAPAKKA_KARTALLA=false): ${viesti}`;
+  assert.equal(naytaPulunKuvapakka(ui, city), false, `${kumottu} — pakka nousi silti`);
+  assert.equal(asiakirja.querySelectorAll('.pulucam-pakka').length, 0,
+    `${kumottu} — pakan kuori rakennettiin`);
+  assert.equal(pakanKortit().length, 0, `${kumottu} — kortteja jäi kartalle`);
+  assert.ok(!ui.pulucamPakka, `${kumottu} — pakka jäi muistiin`);
+}
+
 /* ---------------------------------------------------------------- */
 /* 1. Kentän luku: 1–5 kuvaa, osoitteeton karsiutuu                  */
 /* ---------------------------------------------------------------- */
@@ -499,6 +535,12 @@ test('luentakuva yksin ei nosta pakkaa — kuvat kuuluvat kommenttiin', () => {
     assert.equal(asiakirja.querySelectorAll('.pulucam-pakka').length, 0);
     assert.ok(!ui.pulucamPakka);
 
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'kommentin hetki ei nosta pakkaa kartalle');
+      piilotaLuentakuva(ui, { heti: true });
+      return;
+    }
+
     // Vasta kommentin hetki nostaa pakan (fokusvirtaSaapumiskupla → nayta).
     assert.equal(naytaPulunKuvapakka(ui, KOEKAUPUNKI), true);
     assert.equal(asiakirja.querySelectorAll('.pulucam-pakka').length, 1);
@@ -527,6 +569,11 @@ test('viisi kuvaa pulpahtaa yksitellen, kukin omaan kulmaansa ja paikkaansa', as
   await pakinKanssa({ luentakuva: POHJAKUVA, kuvat: VIISI_KUVAA }, async () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'kuvat eivät pulpahda kartalle');
+      piilotaLuentakuva(ui, { heti: true });
+      return;
+    }
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
 
     // Ensimmäinen nousee heti, seuraavat vasta viiveellä.
@@ -584,12 +631,23 @@ test('ilman omistajan valitsemaa tarraa pulun kuvat näkyvät puhtaina', () => {
     // kuvassa on yksi sinetti (PNG, jossa PuluCam-teksti on mukana) eikä
     // HTML-tekstiä.
     assert.match(PULU_CAM_TARRA_OSOITE, /pulu-cam-leima-musteensininen-v1\.png$/);
+    assert.ok(puluCamMerkki(), 'osoitteella merkki syntyy');
+    assert.equal(puluCamMerkki({ osoite: null }), null, 'ilman osoitetta merkkiä ei synny');
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      /*
+       * KUMOTTU KYTKIMELLÄ: sinetin ja lapun paikat ovat KORTIN asia,
+       * ja kortteja ei nosteta kartalle. Sinetin osoite ja merkin
+       * rakentuminen (yllä) ovat kytkimestä riippumattomia, joten ne
+       * mitataan yhä.
+       */
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'kortteja ei ole, joten sinettejäkään ei ole');
+      piilotaLuentakuva(ui, { heti: true });
+      return;
+    }
     const kortti = pakanKortit()[0];
     const nappi = kortti.querySelector('.pulucam-kuva');
     assert.equal(kortti.querySelectorAll('.pulucam-merkki').length, 1);
     assert.equal(kortti.querySelectorAll('.pulucam-teksti').length, 0);
-    assert.ok(puluCamMerkki(), 'osoitteella merkki syntyy');
-    assert.equal(puluCamMerkki({ osoite: null }), null, 'ilman osoitetta merkkiä ei synny');
     // KUVAN PÄÄLLÄ EI OLE TEKSTIÄ: kortin oma kuvateksti on lappuna
     // kuvan ALLA (omistaja 10.9.2026 klo 23.37), ei kuvan päällä.
     assert.equal(nappi.textContent, '', 'kuvan päälle jäi tekstiä');
@@ -671,6 +729,11 @@ test('päällimmäisen kortin napautus avaa karusellin JUURI SIITÄ kuvasta', as
   await pakinKanssa({ luentakuva: POHJAKUVA, kuvat: VIISI_KUVAA }, async () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'kartalla ei ole pakkaa, jota napauttaa');
+      piilotaLuentakuva(ui, { heti: true });
+      return;
+    }
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
     await odota(pulucamViive(4) + 120);
 
@@ -727,6 +790,11 @@ test('alemman kortin napautus nostaa sen päälle — karuselli ei aukea', async
   await pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, async () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'alempaa korttia ei ole nostettavaksi');
+      piilotaLuentakuva(ui, { heti: true });
+      return;
+    }
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
     await odota(pulucamViive(2) + 120);
 
@@ -784,6 +852,18 @@ test('isoisän kuva on pakassa yksi kortti: napautus nostaa, toinen avaa', () =>
   pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      /*
+       * KUMOTTU KYTKIMELLÄ: isoisän kuvan kaksivaiheinen napautus on
+       * PAKAN sääntö (nosto ensin, karuselli vasta päällimmäisenä).
+       * Ilman pakkaa isoisän kuva on yksinään kartalla, ja se vartio
+       * on omanaan testissä "ilman pulun kuvia suurennos on täsmälleen
+       * ennallaan".
+       */
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'isoisän kuva ei ole pakassa, koska pakkaa ei ole');
+      piilotaLuentakuva(ui, { heti: true });
+      return;
+    }
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
 
     const pohjakortti = ui.luentakuva.querySelector('.fokusvirta-kuva');
@@ -869,6 +949,11 @@ test('pulun kortin lyhyt kuvateksti on kiinni kortin omassa alalaidassa', async 
   await pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, async () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'kortin lappua ei ole ilman korttia');
+      piilotaLuentakuva(ui, { heti: true });
+      return;
+    }
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
     await odota(pulucamViive(2) + 120);
 
@@ -936,6 +1021,20 @@ test('lyhyt kuvateksti kertoo päällimmäisestä kuvasta, ei alle jääneestä'
      * 10.9.2026 klo 23.37): isoisän kappale jää paikalleen mutta
      * piiloon, ja näkyvä lappu on sen kortin lappu, joka on päällä.
      */
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      /*
+       * KUMOTTU KYTKIMELLÄ: ilman pakkaa kartalla luettava lyhyt teksti
+       * on isoisän oma kappale — juuri se, mikä yllä jo mitattiin — eikä
+       * päällimmäistä korttia ole seurattavaksi.
+       */
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'päällimmäistä korttia ei ole');
+      assert.equal(nakyvaLappu(ui).maara, 1, 'isoisän oma lappu jää kartalle yksin');
+      assert.equal(nakyvaLappu(ui).pohjasta, true);
+      assert.equal(selite(), POHJAKUVA.lyhyt);
+      assert.equal(ui.luentakuva.querySelectorAll('.havainnekuva-linkki').length, 0);
+      piilotaLuentakuva(ui, { heti: true });
+      return;
+    }
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
     assert.equal(nakyvaLappu(ui).maara, 1);
     assert.equal(nakyvaLappu(ui).teksti, PULUN_KUVAT[0].lyhyt);
@@ -966,6 +1065,17 @@ test('albumin lyhyessä kuvatekstissä EI ole havainnekuvalinkkiä, lähdetiedot
   pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      /*
+       * KUMOTTU KYTKIMELLÄ: albumi on PAKAN karuselli, ja pakkaa ei
+       * nosteta kartalle. Itse sääntö — havainnekuvalinkki kuuluu vain
+       * PITKÄÄN kuvatekstiin — on vartioitu erikseen testissä
+       * "havainnekuvalinkki rakennetaan yhä pitkään kuvatekstiin".
+       */
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'albumia ei avata pakasta, jota ei ole');
+      piilotaLuentakuva(ui, { heti: true });
+      return;
+    }
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
     /*
      * Karuselli avautuu PÄÄLLIMMÄISESTÄ kuvasta (omistaja 10.9.2026),
@@ -1054,6 +1164,11 @@ test('pakka asuu luentakuvan paneelissa — raahaus siirtää koko pakkaa', () =
   pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'paneelissa ei asu pakkaa');
+      piilotaLuentakuva(ui, { heti: true });
+      return;
+    }
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
 
     const paneeli = ui.luentakuva;
@@ -1109,6 +1224,16 @@ test('raahaus siirtää koko pakkaa eikä sen päätteeksi avaudu karuselli', ()
   pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, () => {
     const ui = kartallinenUi();
     naytaLuentakuva(ui, KOEKAUPUNKI_KARTALLA);
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      /*
+       * KUMOTTU KYTKIMELLÄ: raahaus on PANEELIN ele, ja se on vartioitu
+       * omanaan tests/luentakuva.test.mjs:ssä. Tämä vartio koski sitä,
+       * että pakka kulkee paneelin mukana — pakkaa ei ole.
+       */
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI_KARTALLA, 'raahattavaa pakkaa ei ole');
+      piilotaLuentakuva(ui, { heti: true });
+      return;
+    }
     naytaPulunKuvapakka(ui, KOEKAUPUNKI_KARTALLA);
 
     const naytto = ui.luentakuvaAnkkuri;
@@ -1146,6 +1271,21 @@ test('kartan liike pienentää luentakuvan ja pakan yhdessä', () => {
   pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      /*
+       * KUMOTTU KYTKIMELLÄ: pienennys on nyt PIILOTUS (js/fokusvirta.js
+       * pienennaLuentakuva), joten kartalle ei jää kuvaa eikä pakkaa,
+       * joita pienentää yhdessä. Piilotuksen oma vartio on
+       * tests/luentakuva.test.mjs:ssä.
+       */
+      const paneeli = ui.luentakuva;
+      assert.equal(pienennaLuentakuva(ui), true, 'pienennys ei tehnyt mitään');
+      assert.equal(ui.luentakuva, null, 'KUMOTTU: pienennys jätti kuvan kartalle');
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'pakka ei nouse piilotetun kuvan tilalle');
+      // Häivytyskello veisi solmun 400 ms:n päästä; testit jakavat asiakirjan.
+      paneeli.remove();
+      return;
+    }
     // Luennan loppu on ehtinyt kutistaa kuvan ennen kommenttia…
     pienennaLuentakuva(ui);
     assert.ok(ui.luentakuva.classList.contains('pieni'));
@@ -1174,6 +1314,19 @@ test('kaupungista lähtö poistaa pakan ja sen pulpahdusajastimet', async () => 
   await pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, async () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      /*
+       * KUMOTTU KYTKIMELLÄ: pulpahdusajastimia ei synny, koska pakkaa
+       * ei rakenneta. Vartion loppuvaatimus — mikään ei herää lähdön
+       * jälkeen — mitataan silti, koska juuri se on sen ydin.
+       */
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'pakkaa ei ole, joten ajastimiakaan ei ole');
+      piilotaLuentakuva(ui, { heti: true });
+      await odota(pulucamViive(2) + 120);
+      assert.equal(asiakirja.querySelectorAll('.pulucam-kuva').length, 0,
+        'jokin ajastin nosti kuvan lähdön jälkeen');
+      return;
+    }
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
     assert.equal(pakanKortit().length, 1);
 
@@ -1194,6 +1347,13 @@ test('uusi pakka korvaa vanhan — kahta pakkaa ei jää päällekkäin', () => 
   pakinKanssa({ luentakuva: POHJAKUVA, kuvat: PULUN_KUVAT }, () => {
     const ui = tekoUi();
     naytaLuentakuva(ui, KOEKAUPUNKI);
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      // KUMOTTU KYTKIMELLÄ: toistokaan ei saa rakentaa yhtäkään pakkaa.
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'ensimmäinen nosto');
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'toinen nosto');
+      piilotaLuentakuva(ui, { heti: true });
+      return;
+    }
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
     naytaPulunKuvapakka(ui, KOEKAUPUNKI);
     assert.equal(asiakirja.querySelectorAll('.pulucam-pakka').length, 1);
@@ -1211,6 +1371,18 @@ test('ilman luentakuvaa pakka nousee samaan paikkaan ilman pohjakuvaa', () => {
     // Luentakuvaa ei ole: luennan aikana kartalle ei nouse mitään.
     assert.equal(naytaLuentakuva(ui, KOEKAUPUNKI), false);
     assert.equal(asiakirja.querySelectorAll('.fokusvirta-luentakuva').length, 0);
+
+    if (!LUENTAKUVAPAKKA_KARTALLA) {
+      /*
+       * KUMOTTU KYTKIMELLÄ: pohjaton pakka on nimenomaan kartalle jäävä
+       * pakka ilman isoisän kuvaa — sitäkään ei rakenneta, joten kartta
+       * jää täysin tyhjäksi.
+       */
+      vaadiPakkaKumottu(ui, KOEKAUPUNKI, 'pohjatonta pakkaa ei nosteta');
+      assert.equal(ui.luentakuva, null, 'KUMOTTU: pohjaton paneeli rakennettiin silti');
+      assert.equal(asiakirja.querySelectorAll('.fokusvirta-luentakuva').length, 0);
+      return;
+    }
 
     // Kommentti nostaa pakan omaan pohjattomaan paneeliinsa.
     assert.equal(naytaPulunKuvapakka(ui, KOEKAUPUNKI), true);

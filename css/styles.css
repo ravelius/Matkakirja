@@ -11865,6 +11865,56 @@ body.linssi-topografia .fokuszoom {
 }
 
 /*
+ * PULUN PLUSKUPLA JA LUENTAKUVAPAKKA — VIKA 16.9.2026 klo 15.30.
+ *
+ * OMISTAJA (sanatarkasti): *"lisäksi näytölle jää ilmeisesti kuvia sekä
+ * ainakin pulun mini puhekupla jossa plus merkki"*.
+ *
+ * MITATTU (Chromium 390 × 844 dpr 2, Ateena, isoisän luenta käynnissä,
+ * linssi auki): kartan päälle jäi kaksi asiaa, joita ei ollut
+ * yhdelläkään listalla.
+ *
+ *   button.pollo-kuplapalautus           44 × 44 px  (1 936 px²)
+ *   div.fokusvirta-luentakuva.pieni      62 × 52 px  (3 231 px²)
+ *     └ .pulucam-pakka + .pulucam-kortti + kaksi <img>
+ *
+ * 1. PLUSKUPLA on juuri se "mini puhekupla jossa plus merkki".
+ *    Puhelimella pulun repliikit imeytyvät siihen heti syntyessään
+ *    (js/pollo.js lisaaPinoon, tämän tiedoston kohta 26917), joten se
+ *    on pystyruudulla lähes aina ruudulla — ja se on `position: fixed`
+ *    body:n lapsi, jota mikään linssiportti ei koskenut. TÄMÄ ON MYÖS
+ *    SYY, MIKSI 1400 PIKSELIN SAVUKE EI NÄHNYT SITÄ: leveällä ruudulla
+ *    kuplat jäävät pinoon eikä pluskuplaa synny, ja savuke ajoi pelin
+ *    toimintavaiheessa ilman luentaa, jolloin kuplia ei ollut
+ *    lainkaan.
+ *
+ * 2. LUENTAKUVAPAKKA on isoisän luentakuva ja pulun PuluCam-kortti,
+ *    jotka nousevat kaupungin kohdalle kartalle luentasarjan lopuksi
+ *    (js/fokusvirta.js naytaPulunKuvapakka). Ne ovat ne "kuvat".
+ *    Saapumisen ISO valokuva (.fokusvirta-isokuva) oli jo listalla,
+ *    mutta pieni pakka on eri elementti eikä tule sen mukana.
+ *
+ * `visibility` eikä `display`: pakka on ankkuroitu kartalle ja sen
+ * paikka lasketaan kameran mukaan (js/fokusvirta.js mitoitaLuentakuva).
+ * `display: none` veisi siltä mitat, ja linssin sulkeuduttua kuva
+ * ilmestyisi hetkeksi väärään kohtaan ennen kuin ankkuri ehtii laskea
+ * paikan uudelleen. `pointer-events` erikseen, ettei piiloon jäänyt
+ * kuva ole napautettavissa linssin päältä.
+ */
+body.linssi-topografia .pollo-kuplapalautus,
+body.linssi-topografia .pollo-kuplapino,
+body.linssi-topografia .pollo-kuplapino-kehys,
+body.linssi-topografia .pollo-paneeli,
+body.linssi-topografia .fokusvirta-luentakuva,
+body.linssi-topografia .fokusvirta-luentakuva-ankkuri,
+body.linssi-topografia .fokusvirta-kupla,
+body.linssi-topografia .fokusvirta-kortti,
+body.linssi-topografia .fokusvirta-huudahdus {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*
  * KEKSINNÖT-LINSSI (omistaja 3.9.2026): matkakirja häviää näkyvistä ja
  * oikean yläkulman karttaselite poistuu, jotta linssin ilmiökuva pääsee
  * ylemmäs (css/aikajana.css .aikajana-ilmio). js/aikajana.js lisää ja

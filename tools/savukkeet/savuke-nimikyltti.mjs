@@ -50,7 +50,9 @@ import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { MAAILMANKARTTA } from '../../js/packs/maailmankartta.js';
 import { NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
-import { PAAKARTAN_MERKKIKATTO, merkkiPortti } from '../../js/pallolauta/nostot.js';
+import {
+  NOSTON_MITAN_KATTO, NOSTON_NIMIO_KATTO_PX, PAAKARTAN_MERKKIKATTO, merkkiPortti,
+} from '../../js/pallolauta/nostot.js';
 import { RYHMITYKSEN_ETAISYYS_PX, ryhmitaNostot } from '../../js/pallolauta/aihemerkit.js';
 import { paakartanNostot } from '../tarkista-nostopaikat.mjs';
 
@@ -483,8 +485,21 @@ for (const ruutu of RUUDUT) {
    * 6. KARTTANOSTON KYLTTI SKAALAUTUU SAMALLA KERTOIMELLA. Noston
    * merkin mitta jaettuna kaupungin kyltin koolla on sama luku joka
    * zoomilla — eli molemmat seuraavat samaa karttakerrointa.
+   *
+   * KATON ALAPUOLELTA (16.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET
+   * 31 kohta 2). Noston nimiöllä on nyt RUUTUPIKSELIKATTO
+   * (js/pallolauta/nostot.js NOSTON_MITAN_KATTO): katon yläpuolella se
+   * EI enää seuraa kerrointa, ja juuri se on korjaus eikä vika.
+   * Suhdemittaus ajetaan siksi niillä zoomtasoilla, joilla katto ei
+   * pure — sarjan 0,35 on katon takana (mitattu: mitta 2,269 → 1,4545)
+   * — ja katto itse mitataan omana vartionaan 6b. Sama koskee
+   * kaupunkimerkkiä, jonka katto puree jo 0,72:ssa; kaupungin
+   * NIMIKYLTTIIN (`kyltti`) katto ei koske lainkaan, joten se on yhä
+   * puhdas kartan mitta ja kelpaa vertailuksi.
    */
-  const parit6 = zoomit.filter((z) => z.kyltti > 0 && z.nostonMitta > 0);
+  const KATON_VARA = 1e-3;
+  const parit6 = zoomit.filter((z) => z.kyltti > 0 && z.nostonMitta > 0
+    && z.nostonMitta < NOSTON_MITAN_KATTO - KATON_VARA);
   const suhteet6 = parit6.map((z) => z.nostonMitta / z.kyltti);
   const keski6 = suhteet6.reduce((a, b) => a + b, 0) / (suhteet6.length || 1);
   const ero6 = suhteet6.length >= 2
@@ -492,8 +507,24 @@ for (const ruutu of RUUDUT) {
   tieto(`${ruutu.nimi} · noston mitta zoomeittain`,
     zoomit.map((z) => `${p(z.nostonMitta, 4)}`).join(' | '));
   vaadi(`6. ${ruutu.nimi}: karttanoston kyltti seuraa samaa kerrointa `
-    + `(${parit6.length} tasoa, ±3 %)`,
-    ero6 <= 0.03, `hajonta ${p(100 * ero6, 2)} %`);
+    + `katon alapuolella (${parit6.length} tasoa, ±3 %)`,
+    parit6.length >= 2 && ero6 <= 0.03,
+    `hajonta ${p(100 * ero6, 2)} %, tasoja ${parit6.length}`);
+  /*
+   * 6b. KATTO PUREE SISIMMÄLLÄ ZOOMILLA (PAATOKSET 31 kohta 2:
+   * *"nimiö ei kasva yli n. 16 px ruudulla"*). Sarjan viimeinen taso
+   * on lähizoomin puolella, ja siellä noston mitan on oltava
+   * TÄSMÄLLEEN katossa — ei sen alla (katto ei purisi) eikä yli.
+   * Syvemmän zoomin koko mittaus on omassa savukkeessaan
+   * (tools/savukkeet/savuke-pariisi-lahizoom.mjs).
+   */
+  const sisinTaso = zoomit[zoomit.length - 1];
+  const sisinNimio = sisinTaso.nostonMitta * NOSTOSYM_NIMIO_KOKO;
+  tieto(`${ruutu.nimi} · noston nimiö sisimmällä mitatulla zoomilla`,
+    `${p(sisinNimio)} px (katto ${p(NOSTON_NIMIO_KATTO_PX)} px)`);
+  vaadi(`6b. ${ruutu.nimi}: noston nimiö ei ylitä ${NOSTON_NIMIO_KATTO_PX} px:n kattoa`,
+    sisinNimio > 0 && sisinNimio <= NOSTON_NIMIO_KATTO_PX + 0.1,
+    `${p(sisinNimio)} px`);
 
   /*
    * 8. KOHDEMAAN MERKIT ILMAN KATTOA JA KAUPUNGIN ISOMPI NIMIÖ
@@ -528,9 +559,24 @@ for (const ruutu of RUUDUT) {
    * viuhkana näkyviin nimien kanssa"*).
    *
    * Mitat ovat samasta sarjasta kuin muutkin: saapuminen on kerroin 1
-   * ja yksi zoomporras sisään on kerroin 0,5 — sarjan 0,6 on jo
-   * lähizoomin puolella (LAHIZOOMIN_OSUUS_ULOIMMASTA 0,7), joten
-   * siellä ryhmiä ei saa olla yhtään.
+   * ja sarjan viimeinen taso (0,35) on syvällä lähizoomin puolella.
+   *
+   * VARTIO 9e ON KUMOTTU 16.9.2026 (Raamattu KARTTAUUDISTUKSEN
+   * PAATOKSET 31). Se vaati, ettei lähizoomilla ole yhtään
+   * aihemerkkiä — ja juuri se sääntö piilotti Pariisin nostot: portti
+   * hajotti rykelmän jo osuudella 0,7, vaikka sen lyhin keskinäinen
+   * ruutuväli on sisimmälläkin zoomilla 39,2 px eli alle sormen
+   * 44 px:n. Ryhmitys noudattaa nyt PAATOKSET 27 kohtaa 3
+   * sellaisenaan (pelkkä limitys).
+   *
+   * UUTTA VÄITETTÄ EI VOI TEHDÄ TÄSSÄ, ja se on syytä sanoa ääneen:
+   * tämän savukkeen zoomisarja katsoo SAAPUMISNÄKYMÄN KESKIPISTETTÄ
+   * (`alkuPov`), ei Pariisia, joten tasolla 0,35 Pariisin rykelmä on
+   * ruudun ulkopuolella eikä aihemerkkien määrä kerro säännöstä
+   * mitään suuntaan tai toiseen (mitattu 16.9.2026: 0 merkkiä).
+   * Lähizoomin ryhmitys mitataan siellä, missä kamera on Pariisin
+   * päällä: tools/savukkeet/savuke-pariisi-lahizoom.mjs vartiot 3, 3b
+   * ja 3c. Tässä luku jää INFO-riviksi.
    */
   const sisalla = zoomit[zoomit.length - 1];
   tieto(`${ruutu.nimi} · aihemerkit`,
@@ -553,8 +599,10 @@ for (const ruutu of RUUDUT) {
       : 'viuhkaa ei avattu');
   vaadi(`9d. ${ruutu.nimi}: viuhka sulkeutuu`,
     Boolean(saapuen.viuhka?.sulkeutui), 'jäi auki');
-  vaadi(`9e. ${ruutu.nimi}: yhden zoomportaan sisällä aihemerkkejä ei ole`,
-    sisalla.aihemerkkeja === 0, `${sisalla.aihemerkkeja} merkkiä`);
+  tieto(`${ruutu.nimi} · 9e KUMOTTU (PAATOKSET 31)`,
+    `aihemerkkejä sarjan sisimmällä tasolla ${sisalla.aihemerkkeja} — `
+    + 'kamera katsoo saapumisen keskipistettä, ei Pariisia; lähizoomin '
+    + 'ryhmityksen mittaa savuke-pariisi-lahizoom');
   /*
    * 9f. VASTAKOE ILMAN SELAINTA: sama ryhmitys, mutta merkit
    * kaukana toisistaan eivätkä nimiöt koske — yksikään ryhmä ei saa
