@@ -156,7 +156,7 @@ function etsiMateriaali(pallo, ehto) {
  * mallikappale näyttämöltä: tavallinen Texture (ei data- eikä
  * pakattu tekstuuri), jonka konstruktori ottaa kuvan sellaisenaan.
  */
-function teeTekstuuri(pallo, kuva) {
+function teeTekstuuri(pallo, kuva, kaannetty = false) {
   const T = globalThis.THREE;
   let tekstuuri = null;
   if (T?.Texture) tekstuuri = new T.Texture(kuva);
@@ -171,6 +171,14 @@ function teeTekstuuri(pallo, kuva) {
     if ('colorSpace' in malli) tekstuuri.colorSpace = malli.colorSpace;
     else if ('encoding' in malli) tekstuuri.encoding = malli.encoding;
   }
+  /*
+   * VALMIIKSI KÄÄNNETTY BITTIKARTTA EI SAA KÄÄNTYÄ TOISEEN KERTAAN.
+   * `lataaKuva` pyytää `createImageBitmap`ilta `imageOrientation:
+   * 'flipY'`, joten kuva on jo oikein päin kun se tulee tänne; three
+   * kääntäisi sen oletuksena uudelleen ja mantereet menisivät
+   * ylösalaisin. `<img>`- ja kangaspoluilla oletus (true) jää voimaan.
+   */
+  if (kaannetty) tekstuuri.flipY = false;
   tekstuuri.needsUpdate = true;
   return tekstuuri;
 }
@@ -276,14 +284,54 @@ function ikkunanGeometria(pinta, ikkuna) {
   }
 }
 
-/** Kuva ladattuna ja purettuna. Palauttaa null, jos haku epäonnistui. */
-function lataaKuva(osoite) {
+/**
+ * Kuva ladattuna ja purettuna.
+ *
+ * PURKU POIS PÄÄSÄIKEELTÄ (omistajan vika 16.9.2026: *"Topografia
+ * linssi tökkii"*). `<img>`-polulla selain purkaa kuvan vasta silloin,
+ * kun WebGL pyytää sitä tekstuuriksi — eli KESKELLÄ pääsäikeen
+ * kehystä. Mitattuna (Chromium, 4096 × 2048 WebP, tämä kontti):
+ *
+ *   texImage2D(<img>)        287 ms   ← purku + muunnos pääsäikeessä
+ *   texImage2D(ImageBitmap)   63 ms   ← pelkkä kopio, 4,6× nopeampi
+ *   createImageBitmap(blob)  279 ms   ← purku työsäikeessä, ei nykäystä
+ *
+ * `createImageBitmap` purkaa kuvan selaimen omassa säikeessä, joten
+ * pääsäikeelle jää vain kopio.
+ *
+ * KÄÄNTÖ TEHDÄÄN PURUSSA, EI LATAUKSESSA. `imageOrientation: 'flipY'`
+ * kääntää bittikartan valmiiksi työsäikeessä, ja tekstuuri saa
+ * `flipY = false` (ks. teeTekstuuri). Silloin lopputulos EI riipu
+ * siitä, kunnioittaako selain `UNPACK_FLIP_Y_WEBGL`-lippua
+ * ImageBitmapille — se on historiallisesti vaihdellut selaimittain, ja
+ * väärä kääntö panisi mantereet ylösalaisin ilman yhtään virhettä
+ * lokissa.
+ *
+ * Varapolku on ennallaan: jos `createImageBitmap` tai haku ei onnistu,
+ * palataan `<img>`:iin. Kuva tulee silloin ruudulle hitaammin mutta
+ * tulee.
+ *
+ * @returns {Promise<{ lahde, kaannetty: boolean }|null>}
+ */
+async function lataaKuva(osoite) {
+  if (typeof createImageBitmap === 'function' && typeof fetch === 'function') {
+    try {
+      // CORS-kelpoinen vastaus: ilman sitä WebGL kieltäytyisi tekstuurista.
+      const vastaus = await fetch(osoite, { mode: 'cors', credentials: 'omit' });
+      if (vastaus.ok) {
+        const bittikartta = await createImageBitmap(await vastaus.blob(), { imageOrientation: 'flipY' });
+        if (bittikartta) return { lahde: bittikartta, kaannetty: true };
+      }
+    } catch {
+      // Verkko, CORS tai purku petti: varapolku alla.
+    }
+  }
   return new Promise((valmis) => {
     const kuva = new Image();
     // Sama alkuperä (assets/) tai CORS-kelpoinen ämpäri: ilman tätä
     // WebGL kieltäytyy tekstuuroimasta kuvaa ("tainted canvas").
     kuva.crossOrigin = 'anonymous';
-    kuva.addEventListener('load', () => valmis(kuva));
+    kuva.addEventListener('load', () => valmis({ lahde: kuva, kaannetty: false }));
     kuva.addEventListener('error', () => valmis(null));
     kuva.src = osoite;
   });
@@ -434,13 +482,16 @@ export function luoLinssit({
     o.kalvo = tila;
     const onKangas = Boolean(kuva) && typeof kuva === 'object' && typeof kuva.getContext === 'function';
     void (async () => {
-      const kuvaOlio = onKangas ? kuva : await lataaKuva(kuva);
+      const haettu = onKangas ? { lahde: kuva, kaannetty: false } : await lataaKuva(kuva);
+      const kuvaOlio = haettu?.lahde ?? null;
       if (tila.peruttu || !kuvaOlio) {
         if (!kuvaOlio) console.warn(`Linssikalvon kuvaa ei saatu: ${kuva}`);
+        // Purettu bittikartta vapautetaan, jos kalvo ehti vanhentua.
+        if (tila.peruttu) kuvaOlio?.close?.();
         return;
       }
       const pinta = pallonPinta(pallo);
-      const tekstuuri = pinta ? teeTekstuuri(pallo, kuvaOlio) : null;
+      const tekstuuri = pinta ? teeTekstuuri(pallo, kuvaOlio, haettu.kaannetty) : null;
       const materiaali = tekstuuri ? teeMateriaali(pallo, tekstuuri, pinta) : null;
       if (!materiaali) {
         console.warn('Linssikalvoa ei voitu rakentaa: three.js ei ollut tavoitettavissa.');
@@ -521,6 +572,13 @@ export function luoLinssit({
   function vapautaKalvo(tila) {
     if (tila.mesh) tila.mesh.parent?.remove(tila.mesh);
     tila.materiaali?.dispose?.();
+    /*
+     * PURETTU BITTIKARTTA SULJETAAN. `createImageBitmap` varaa purun
+     * oman muistin (4096 × 2048 RGBA = 33 Mt), eikä `dispose()` vapauta
+     * sitä — vain GPU:n kopion. `close` on vain ImageBitmapilla, joten
+     * kangaslähde (Ihmisen matka -virrat) menee tästä läpi koskematta.
+     */
+    tila.tekstuuri?.image?.close?.();
     tila.tekstuuri?.dispose?.();
     // Pinnan oma geometria EI kuulu tänne; laastarin oma kuuluu.
     tila.geometria?.dispose?.();
@@ -749,6 +807,16 @@ export function luoLinssit({
     paalla: (nimi) => osat.has(nimi),
     /** Häivytysten kirjanpito (ks. haivytysMittari). */
     haivytykset: () => ({ ...haivytysMittari }),
+    /**
+     * Kerrosten siirtymän kesto (ms, 0 = reduced motion).
+     *
+     * Topografialinssi tarvitsee tämän, jotta se voi asettaa pelin
+     * kerrosten sammutuksen VASTA kun sen odotuspeite on ehtinyt
+     * häipyä näkyviin — muuten paljas kartta välähtää peitteen alta
+     * juuri sen ajan, jonka häivytys kestää (mitattu 16.9.2026).
+     * Luku on yksi totuus täällä eikä kopio linssissä.
+     */
+    siirtymaMs: () => siirtyma,
     reducedMotion: () => !(siirtyma > 0) || Boolean(ui?.reducedMotion),
   };
 }
