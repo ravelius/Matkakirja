@@ -564,15 +564,18 @@ const mittaa = (sivu) => sivu.evaluate(() => {
   const kotelo = l.kotelo.getBoundingClientRect();
   const sisus = document.querySelector('.maapaneeli-sisus');
   const mitat = l.maapaneeli?.mitat?.() ?? null;
-  const datum = l.pallo.htmlElementsData().find((d) => d.laji === 'maapaneeli') ?? null;
+  /*
+   * ERÄ 19: mittakaava ja maan laatikko luetaan kerroksen omasta
+   * mittarista, ei merkkikerroksen datumista (ks. rajausNyt) — datumia
+   * ei ole enää olemassa.
+   */
   return {
     alt: pov.altitude,
     maxAlt: ohj.maxDistance / sade - 1,
     minAlt: ohj.minDistance / sade - 1,
-    skaala: datum?.skaala ?? null,
+    skaala: mitat?.skaala ?? null,
     // ERÄ 16: sovitetaanko TÄMÄN maan saapumisnäkymä korkeuteen?
-    // Sama ehto, jolla maapaneeli valitsee ankkurinsa.
-    kapea: datum?.laatikko ? Boolean(l.kamera.korkeuteenSovitettu?.(datum.laatikko)) : null,
+    kapea: mitat?.laatikko ? Boolean(l.kamera.korkeuteenSovitettu?.(mitat.laatikko)) : null,
     mitat,
     kortti: r ? { x0: r.left - kotelo.left, y0: r.top - kotelo.top, x1: r.right - kotelo.left, y1: r.bottom - kotelo.top, w: r.width, h: r.height } : null,
     kotelo: { w: kotelo.width, h: kotelo.height, x0: kotelo.left, y0: kotelo.top },
@@ -685,7 +688,12 @@ const suhdeNyt = (sivu) => sivu.evaluate(() => {
   const l = window.matkakirja.ui.pallolauta;
   const mitat = l.maapaneeli?.mitat?.();
   const kortti = document.querySelector('.maapaneeli-kortti');
-  if (!mitat || !kortti) return null;
+  /*
+   * ERÄ 19: paneelilla ei ole enää lat/lng-ankkuria (se on ruudun
+   * kaluste, ei kartan datum), joten tätä mittaa ei ole olemassa —
+   * väite 3 on KUMOTTU ja tämä palauttaa null kaatumatta.
+   */
+  if (!mitat || !kortti || !Number.isFinite(mitat.lat) || !Number.isFinite(mitat.lng)) return null;
   /*
    * Paneelin OMA lautaleveys ruutupikseleinä: puolet leveydestä
    * ankkurin kummallekin puolelle samalla leveyspiirillä. Lauta on
@@ -698,9 +706,9 @@ const suhdeNyt = (sivu) => sivu.evaluate(() => {
   const b = l.pallo.getScreenCoords(mitat.lat, mitat.lng + askel, 0);
   const r = kortti.getBoundingClientRect();
   // Maan laatikon ruutuleveys (tehtävänannon vertailumitta).
-  const datum = l.pallo.htmlElementsData().find((d) => d.laji === 'maapaneeli') ?? null;
+  // ERÄ 19: laatikko ja skaala mittarista, ei datumista (ks. rajausNyt).
   let laatikko = null;
-  const bb = datum?.laatikko;
+  const bb = mitat?.laatikko;
   if (bb && l.asteet) {
     const v = l.asteet({ x: bb.x, y: bb.y + bb.h / 2 });
     const o = l.asteet({ x: bb.x + bb.w, y: bb.y + bb.h / 2 });
@@ -711,7 +719,7 @@ const suhdeNyt = (sivu) => sivu.evaluate(() => {
     }
   }
   return { kortti: r.width, lauta: Math.abs(b.x - a.x), laatikko,
-    alt: l.pallo.pointOfView().altitude, skaala: datum?.skaala ?? null };
+    alt: l.pallo.pointOfView().altitude, skaala: mitat?.skaala ?? null };
 });
 
 /**
@@ -1062,6 +1070,20 @@ const rullaa = async (sivu, x, y, pykalia = 6) => {
   await sivu.waitForTimeout(800);
   const jalkeen = await sivu.evaluate(() => window.matkakirja.ui.pallolauta.pallo.pointOfView().altitude);
   return { ennen, jalkeen, muutos: ennen - jalkeen };
+};
+
+/**
+ * Kamera takaisin saapumisnäkymään mittausten väliin (erä 19b).
+ * Ilman tätä toinen rulla lähtisi eri korkeudelta kuin ensimmäinen,
+ * eikä muutoksia voisi verrata.
+ */
+const palautaNakyma = async (sivu) => {
+  // Sivu voi olla jo suljettu (ajon aikakatko): mittaus ei saa kaataa savuketta.
+  await sivu.evaluate(async () => {
+    const l = window.matkakirja.ui.pallolauta;
+    await l.saavu?.({ kesto: 0 });
+  }).catch(() => {});
+  await sivu.waitForTimeout(1200).catch(() => {});
 };
 
 /** Raahaus pisteestä (x, y) — paljonko kartan keskipiste siirtyy? */
@@ -1535,44 +1557,57 @@ for (const ruutu of RUUDUT) {
       await sivu.waitForTimeout(300);
     }
     /*
-     * RULLA ENNEN RAAHAUSTA, JOTTA VERTAILU ON REILU. Kartan puolen
-     * mitta otetaan tuoreesta sivusta saapumisnäkymässä, joten myös
-     * paneelin puolen on lähdettävä saapumisnäkymästä — raahaus ennen
-     * rullaa siirsi keskipistettä ja mitattu suhde oli 0,93 eikä 1,00.
+     * VERTAILU ON SAMA PISTE ILMAN PANEELIA (korjaus 16.9.2026, erä
+     * 19b).
+     *
+     * ENNEN: paneelin päältä rullattiin sen omassa kohdassa ja
+     * vertailu otettiin TOISESTA sivusta RUUDUN KESKELTÄ. Se toimi
+     * niin kauan kuin paneeli oli kartalla lähellä keskustaa (ero
+     * mitattu 7 %), mutta erä 19 siirsi paneelin ruudun VASEMPAAN
+     * ALAKULMAAN — ja Globe.gl zoomaa OSOITTIMEN KOHTAA kohti, joten
+     * sama pykälämäärä nurkassa ja keskellä antaa eri korkeusmuutoksen
+     * ihan geometrian takia. Julkaisuajossa suhde oli 0,837 eikä
+     * paneelissa ollut mitään vikaa.
+     *
+     * NYT: molemmat mitat otetaan SAMASTA RUUTUPISTEESTÄ samalla
+     * sivulla, ja ainoa ero on, onko paneeli siinä vai ei — juuri se,
+     * mitä PÄÄTÖKSET 21 väittää. Kamera palautetaan saapumisnäkymään
+     * mittausten väliin, jotta lähtökorkeus on sama.
      */
     const paneeli = await rullaa(sivu, px, py);
-    // Kortti on kartan mitta: zoomin jälkeen se on toisessa kohdassa.
-    const m3 = await mittaa(sivu);
-    const veto = m3.kortti
-      ? await raahaa(sivu, Math.round(m3.kotelo.x0 + (m3.kortti.x0 + m3.kortti.x1) / 2),
-        Math.round(m3.kotelo.y0 + (m3.kortti.y0 + m3.kortti.y1) / 2))
-      : { dLng: 0, dLat: 0, valinta: '' };
-    // Vertailu kartan päältä: sama pykälämäärä tyhjän meren kohdalla.
-    const { ctx: ctx2, sivu: sivu2, auki: auki2 } = await avaaPeli({ ...ruutu, save: tallenneGRC });
-    const m2 = auki2 ? await mittaa(sivu2) : null;
-    const kartta = auki2
-      ? await rullaa(sivu2, Math.round(m2.kotelo.x0 + m2.kotelo.w / 2),
-        Math.round(m2.kotelo.y0 + m2.kotelo.h / 2))
-      : null;
-    await ctx2.close();
+    await palautaNakyma(sivu);
+    await sivu.evaluate(() => {
+      const sailio = document.querySelector('.maapaneeli-nurkka');
+      if (sailio) sailio.style.setProperty('display', 'none', 'important');
+    });
+    const kartta = await rullaa(sivu, px, py);
+    await sivu.evaluate(() => {
+      document.querySelector('.maapaneeli-nurkka')?.style.removeProperty('display');
+    });
+    await palautaNakyma(sivu);
+    /*
+     * RAAHAUS SAMASTA PISTEESTÄ. Kortti on erästä 19 alkaen ruudun
+     * kaluste eikä kartan mitta, joten se on samassa kohdassa myös
+     * zoomin jälkeen — vetopiste on siis sama px, py.
+     */
+    const veto = await raahaa(sivu, px, py);
     const suhde = kartta && kartta.muutos > 0 ? paneeli.muutos / kartta.muutos : null;
     kymmenen = {
       paneeli: p(paneeli.muutos, 5), kartta: p(kartta?.muutos, 5), suhde: p(suhde, 3),
       dLng: p(veto.dLng, 3), valinta: veto.valinta, plusToimii,
       /*
-       * VARA 10 %, MITATTU 0,93. Sama pykälämäärä samasta
-       * saapumiskorkeudesta EI anna tasan samaa muutosta: kirjasto
-       * zoomaa osoittimen kohtaa kohti, ja paneeli on ruudun laidassa
-       * kun vertailupiste on keskellä — ero on mitattu 7 % ja se on
-       * geometriaa, ei vikaa. Vara ei silti höllennä väitettä:
-       * vastakokeessa J suhde on 0 (paneeli syö rullan kokonaan).
+       * VARA 10 %. Kun molemmat mitat otetaan SAMASTA ruutupisteestä
+       * samalta sivulta (ks. yllä), suhteen pitäisi olla 1,00 —
+       * vara kattaa vain tweenin ja pyöristyksen heilahtelun. Vara ei
+       * höllennä väitettä: vastakokeessa J suhde on 0, koska paneeli
+       * syö rullan kokonaan.
        */
       ok: Boolean(kartta && kartta.muutos > 1e-4 && suhde !== null && Math.abs(suhde - 1) <= 0.10
         && veto.dLng > 0.03 && veto.valinta === '' && plusToimii),
     };
     tieto('1400 px · zoomi ja raahaus paneelin päältä',
-      `ctrl-rulla paneelin päällä muutti korkeutta ${p(paneeli.muutos, 5)}, kartan päällä `
-      + `${p(kartta?.muutos, 5)} (suhde ${p(suhde, 3)}, vara 10 %), raahaus paneelin päältä `
+      `ctrl-rulla paneelin päällä muutti korkeutta ${p(paneeli.muutos, 5)}, SAMASTA pisteestä `
+      + `ilman paneelia ${p(kartta?.muutos, 5)} (suhde ${p(suhde, 3)}, vara 10 %), raahaus paneelin päältä `
       + `panoroi ${p(veto.dLng, 3)}°, tekstivalinta "${veto.valinta}", plus-nappi avasi valikon `
       + `${plusToimii}`);
   }

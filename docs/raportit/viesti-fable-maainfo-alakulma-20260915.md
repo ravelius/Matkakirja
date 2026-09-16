@@ -394,3 +394,91 @@ jatkopäätös 15.9.2026 illalta (kysymyskortti):
 
 Mitattu 16.9.2026: 390 px kortti 226 × 178 px (21,1 %), 1400 px kortti
 251 × 198 px (22,0 %); Liiku 203 px / 16 px ruudun alareunasta.
+
+---
+
+## 9. Erä 19c (16.9.2026): julkaisuajon punaiset — mikä oli vika, mikä mittausvika
+
+Julkaisuagentin ajossa (kuormitettu kontti, 20–60 chromiumia) neljä
+vartiota oli punaisena. Kolme niistä oli MITTAUSVIKAA, yksi oli
+paneelin oikea herkkyys. Kaikki on korjattu; molemmat savukkeet ovat
+nyt **15/15 vihreitä** samassa kuormassa (34–47 chromiumia).
+
+### A. OIKEA VIKA: paneeli oli ankkuroitu karttaruutuun, ei ruutuun
+
+`savuke-maapaneeli` väite 2 ("paneeli ei liiku zoomatessa") oli 390
+px:llä punainen. Zoomi ei liikuttanut korttia — mutta kortti oli
+`position: absolute` KARTTARUUDUN (`.pallo-kotelo`) sisällä, ja
+karttaruutu on flex-lapsi, jonka mitattu korkeus elää saapumisen
+aikana ja alapalkin mukana. Kortti riippui sen alareunasta, joten se
+liikkui ruudulla aina kun kotelo eli.
+
+Korjaus: `position: fixed` eli RUUDUN suhteen, kuten omistaja sanoi
+("kiinteä ruudun vasen alakulma"). Marginaali on nyt sama kuin
+Liiku-sanalla ja karttaselitteellä (`var(--gap) + 0,4rem + 1px` +
+turva-alueet). Mitattu: **390 px vasen 14,6 px / ala 14,6 px**,
+**1400 px 17,0 / 17,0 px**, ja kortti on kahdella zoomilla ±0 px.
+Samalla valikon ruudulla-pysymisen rajat luetaan ruudusta eikä
+karttaruudusta (`sovitaValikko`).
+
+### B. MITTAUSVIKA: Liiku oli luennan ajan `display: none`
+
+Väite 6 ja vastakoe F saivat Liiku-napin laatikoksi pelkkiä nollia.
+Syy: saapuminen käynnistää isoisän luennan, ja luennan ajaksi nappi on
+`display: none` (oikea sääntö, oma vartionsa savuke-iphone-tekstit:
+"luennan aikana Liiku on display:none, ei pelkkä opacity"). Kevyessä
+kontissa luenta ehti loppua ennen mittausta, kuormitetussa ei.
+
+Korjaus savukkeessa: luenta vaiennetaan (`asetaLuentaKytkin(false)`)
+ja luennan piilotus neutralisoidaan mittauksen ajaksi tyylillä, ja
+nolla-kokoinen nappi raportoidaan nyt `liiku: null`ina eikä väitteen
+kaatumisena.
+
+### C. MITTAUSVIKA: saapumisen kuvakortti peitti plus-napin
+
+1400 px:llä `page.click('.maapaneeli-lisaa')` jäi odottamaan osumaa 30
+sekuntia ja kaatoi koko savukkeen: `.fokusvirta-isokuva` (saapumisen
+iso valokuva) peittää paneelin yläkulman. Korjaus: sama tyyli piilottaa
+myös saapumisen kuvakortin mittauksen ajaksi.
+
+### D. MITTAUSVIKA: era12:n vartio 10 vertasi kahta eri ruutupistettä
+
+`savuke-era12` vartio 10 ("rulla ja raahaus paneelin päältä menevät
+kartalle", PÄÄTÖKSET 21) antoi suhteen **0,837**. Vertailu otettiin
+TOISESTA sivusta RUUDUN KESKELTÄ, kun paneelin mitta otettiin sen
+omasta kohdasta. Se kelpasi niin kauan kuin paneeli oli kartalla
+lähellä keskustaa (ero mitattu 7 %), mutta erä 19 siirsi paneelin
+ruudun vasempaan alakulmaan — ja Globe.gl zoomaa OSOITTIMEN KOHTAA
+kohti, joten sama pykälämäärä nurkassa ja keskellä antaa eri
+korkeusmuutoksen puhtaasti geometrian takia.
+
+Korjaus: molemmat mitat otetaan nyt SAMASTA ruutupisteestä samalla
+sivulla, ja ainoa ero on, onko paneeli siinä vai ei (säiliö
+`display: none` vertailun ajaksi, kamera palautetaan saapumisnäkymään
+mittausten väliin). Mitattu **suhde 1,000**; raahaus paneelin päältä
+panoroi 0,906°, tekstivalinta tyhjä, plus-nappi avaa valikon.
+Vastakoe J (eleiden pysäytys takaisin) on yhä punainen, kuten pitää.
+
+### E. Vartion 1 toleranssi oli jo oikea
+
+390 px:n osuus **0,2113** on kaavan oikea tulos: siellä sitova raja on
+LEVEYS (0,58 × 390 / 104 = 2,175), ei korkeus (0,22 × 844 / 82 =
+2,264). Haarukka 20…24 % on siis oikea eikä höllennys; peruste on nyt
+kirjoitettu vartion viereen. 1400 px:llä korkeusraja sitoo ja osuus on
+22,0 %.
+
+### Muuta samalla
+
+- Cherry-pick `9b2b89b4` (julkaisuhaarasta): era12 lukee maan laatikon
+  `l.maapaneeli.mitat().laatikko`:sta eikä kadonneesta datumista.
+- era12:n `mittaa` ja `suhdeNyt` lukevat skaalan samasta mittarista;
+  `suhdeNyt` palauttaa null, kun paneelilla ei ole lat/lng-ankkuria
+  (KUMOTTU väite 3) eikä kaadu.
+- Savukkeeseen lisätty `odotaAsettunut`: mittaus odottaa, että kortin
+  ruutulaatikko on kaksi kertaa peräkkäin sama (± 0,5 px).
+- `palautaNakyma` on null-turvallinen, jotta ajon aikakatko ei kaada
+  savuketta virheeseen.
+
+**Ajot 16.9.2026, 34–47 chromiumia rinnakkain:**
+`savuke-maapaneeli` 15/15, `savuke-era12` 15/15,
+`tests/maakartuutsi` + `tests/rules` 347/347.

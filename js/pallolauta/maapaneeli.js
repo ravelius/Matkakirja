@@ -1078,8 +1078,16 @@ function sovitaValikko(kortti) {
   if (!rivit.length) return;
   valikko.style.setProperty('--valikko-siirto', '0px');
 
-  const kotelo = kortti.closest('.pallo-kotelo')?.getBoundingClientRect();
-  if (!kotelo) return;
+  /*
+   * RAJAT OVAT RUUDUN RAJAT (erä 19b). Kortti on `position: fixed` eli
+   * ruudun vasemmassa alakulmassa, joten myös valikon on pysyttävä
+   * RUUDUN sisällä — karttaruudun laatikko eli saapumisen aikana eikä
+   * kelpaa rajaksi.
+   */
+  const leveys = globalThis.innerWidth || 0;
+  const korkeus = globalThis.innerHeight || 0;
+  if (!(leveys > 0) || !(korkeus > 0)) return;
+  const kotelo = { top: 0, left: 0, right: leveys, bottom: korkeus };
   const kr = kortti.getBoundingClientRect();
   const skaala = kortti.offsetWidth > 0 ? kr.width / kortti.offsetWidth : 1;
   if (!(skaala > 0)) return;
