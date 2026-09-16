@@ -7694,8 +7694,14 @@ export const RAAMATTU = {
           + 'vaikka nakyma on yha tumma. Linjaus: kehys (ylapalkki, '
           + 'reunaviiva, valikkonappi, aikajanan alapalkki) pysyy poissa '
           + 'KOKO avaruusvaiheen ajan ja palaa vasta kun kartta valkenee '
-          + 'nakyviin - samassa feidauksessa kuin kartta. Tila: tyo '
-          + 'Opus-agentilla.',
+          + 'nakyviin - samassa feidauksessa kuin kartta. TARKENNUS '
+          + '(omistaja 16.9.2026 klo 04.40 UTC, kysymyskortti): puhelimella '
+          + 'EI ulospaasya linssista avaruusvaiheen (19-25 s) aikana - '
+          + 'valikkonappia ei tuoda esiin kesken; Esc toimii '
+          + 'nappaimistolla. Juurisyy mitattu: piilotus oli sidottu '
+          + 'esitys-musta-luokkaan, joka elaa vain ensimmaisen virkkeen; '
+          + 'nyt oma esitys-avaruus-luokka koko vaiheen ajan. Tila: valmis '
+          + 'haarassa, julkaistaan seuraavassa versiossa.',
         'MATKALAUKKU ON FOGGIN MATTOLAUKKU (omistaja 15.9.2026 klo 12.10 '
           + 'UTC; kysymys sanatarkasti: "matkalaukusta: pitaisiko se olla '
           + 'oikeasti matka-arkku? oliko tuohon aikaan viela edes '
@@ -7862,8 +7868,13 @@ export const RAAMATTU = {
           + 'yksittaiset nostot (Mont-Saint-Michel, Millaun silta...) '
           + 'nakyvat nimioin heti; 5) kaupunkien nimiot 11,5 px pysyvat. '
           + 'Mitataan: Pariisin saapumisnakymassa limittyvia nimioita 0, '
-          + 'viuhka mahtuu ruudulle 390 ja 1400 px. Tila: tyo '
-          + 'Opus-agentilla #2533:n paalle.',
+          + 'viuhka mahtuu ruudulle 390 ja 1400 px. TARKENNUS (omistaja '
+          + '16.9.2026 klo 04.40 UTC, kysymyskortti kuvien perusteella): '
+          + 'julkaistaan, ja lisataan saanto 6) MAASTOKOHDE (Mont-Saint-'
+          + 'Michel, Millaun silta, Etna, vuoret, saaret...) ei sulaudu '
+          + 'lehtinostoon vaan nakyy aina omalla nimiollaan, vaikka '
+          + 'samaa aihetta oleva nosto olisi lahella. Tila: PR #2537 + '
+          + 'maastokohdesaanto Sonnet-agentilla.',
         'KARTTAUUDISTUKSEN PAATOKSET 28: MAAINFO TAKAISIN RUUDUN VASEMPAAN '
           + 'ALAKULMAAN, VALIKKO KASVAA YLOS KAHDESSA SARAKKEESSA, LIIKU '
           + 'TEKSTINA ALAS KESKELLE (omistaja 15.9.2026 klo 20.45 UTC, '
