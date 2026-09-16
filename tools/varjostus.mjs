@@ -158,6 +158,22 @@ export const OLETUKSET = {
    * ovat joka tapauksessa sama maasto moneen kertaan mitattuna.
    */
   napaRaja: 84,
+  /*
+   * RUUDUKON ALIMMAN RIVIN LEVEYSASTE.
+   *
+   * Koko maailman ruudukossa rivi 0 on etelänapa, ja siksi oletus on
+   * −90. Lisätty 16.9.2026, kun tools/tee-pallotopografia-koko.mjs
+   * alkoi varjostaa maailman KAISTALEINA: 1′:n ruudukko on 467 Mt,
+   * eikä sitä oteta muistiin kerralla. Kaistale on oma pieni
+   * ruudukkonsa, jonka rivi 0 on jossain muualla kuin navalla —
+   * ilman tätä lukua kaistaleen leveyspiirit olisivat väärät, ja
+   * niistä laskettu ruudun itä-länsi-leveys (cos lat) myös. Virhe
+   * ei näkyisi muuna kuin siinä, että varjostus voimistuu
+   * kaistaleiden reunoilla portaittain.
+   *
+   * KOKO MAAILMAN AJOT EIVÄT MUUTU: oletus on sama −90 kuin ennen.
+   */
+  lat0: -90,
 };
 
 /**
@@ -203,7 +219,7 @@ export function varjosta(ruudukko, asetukset = {}) {
   const kosiniPohja = Math.cos(a.napaRaja * RAD);
 
   for (let y = 0; y < korkeus; y++) {
-    const lat = -90 + y * ruutu;
+    const lat = a.lat0 + y * ruutu;
     const dxM = ruutu * ASTE_M * Math.max(Math.abs(Math.cos(lat * RAD)), kosiniPohja);
 
     /*

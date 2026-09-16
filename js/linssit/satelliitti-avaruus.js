@@ -131,6 +131,9 @@ import {
   RELIEFIN_8K_RAJA_CSS,
   RELIEFIN_8K_RAJA_LAITEPX,
   RELIEFIN_8K_KAYTOSSA,
+  RELIEFI_KOKO_PALLO,
+  RELIEFIN_KOKO_4K,
+  RELIEFIN_KOKO_8K,
   valitseReliefi,
 } from './reliefikuva.js';
 
@@ -683,6 +686,9 @@ export {
   RELIEFIN_8K_RAJA_CSS,
   RELIEFIN_8K_RAJA_LAITEPX,
   RELIEFIN_8K_KAYTOSSA,
+  RELIEFI_KOKO_PALLO,
+  RELIEFIN_KOKO_4K,
+  RELIEFIN_KOKO_8K,
   valitseReliefi,
 };
 
@@ -837,11 +843,28 @@ export function kyllaisyysAlas(ctx, kuva, leveys, korkeus, kerroin = RELIEFIN_SA
  * (blob- tai data-URL) tai nullista (lataus ei onnistunut, canvasia ei
  * ole). Osoite vapautetaan linssin purkaessa (vapautaReliefi).
  *
- * @param {{ leveys?: number, korkeus?: number, osoite?: string }} asetukset
+ * `kokoPallo` kertoo, kattaako kuva navat: silloin napoja ei häivytetä
+ * eikä generoitua napajäätä maalata päälle (ks. napaLiuku).
+ *
+ * @param {{ leveys?: number, korkeus?: number, osoite?: string,
+ *   kokoPallo?: boolean }} asetukset
  */
-export function reliefiTekstuuri({
-  leveys = RELIEFIN_LEVEYS, korkeus = RELIEFIN_KORKEUS, osoite = RELIEFIN_OSOITE,
-} = {}, doc = globalThis.document, ikkuna = globalThis) {
+export function reliefiTekstuuri(asetukset = {}, doc = globalThis.document, ikkuna = globalThis) {
+  /*
+   * OLETUKSET TULEVAT VALINNASTA, EIVÄT VAKIOISTA. valitseReliefi({})
+   * ilman ruudun mittoja antaa 4k-haaran — ja koko pallon kytkimen
+   * ollessa päällä sen koko pallon version. Näin oletusosoite ja
+   * oletuslippu eivät voi olla eri kuvista.
+   *
+   * ASETUKSIA EI ANNETA valitseReliefille: sen `leveys` on RUUDUN
+   * leveys, tämän `leveys` on TEKSTUURIN leveys. Sekaannus valitsisi
+   * 8k:n aina, koska tekstuuri on aina yli tuhat pikseliä leveä.
+   */
+  const oletus = valitseReliefi({});
+  const {
+    leveys = oletus.leveys, korkeus = oletus.korkeus, osoite = oletus.osoite,
+    kokoPallo = oletus.kokoPallo,
+  } = asetukset;
   const kangas = doc?.createElement?.('canvas');
   const ctx = kangas?.getContext?.('2d');
   if (!ctx || !ikkuna?.Image) return Promise.resolve(null);
@@ -852,6 +875,11 @@ export function reliefiTekstuuri({
    * (1024 × 512) ja venytetään: pohja näkyy vain navoilla, joilla se on
    * sileä jääliuku — venytys ei vie siitä mitään, ja täysikokoisena se
    * olisi 8,4 miljoonaa pikseliä kohinafunktioita.
+   *
+   * KOKO PALLON KUVA PEITTÄÄ POHJAN KOKONAAN, eikä pohjaa silti
+   * jätetä pois: se maksaa puoli miljoonaa pikseliä kerran linssin
+   * avauksessa ja on vakuutus sen varalta, että kuvan purku epäonnistuu
+   * kesken piirron. Näkyviin se ei silloinkaan jää.
    */
   const perus = maapallonVarit({});
   const pohja = doc.createElement('canvas');
@@ -882,7 +910,12 @@ export function reliefiTekstuuri({
         actx.globalCompositeOperation = 'destination-in';
         actx.drawImage(kuva, 0, 0, leveys, korkeus);
         actx.globalCompositeOperation = 'source-over';
-        napaLiuku(actx, leveys, korkeus);
+        /*
+         * NAPOJA EI HÄIVYTETÄ EIKÄ NAPAJÄÄTÄ MAALATA, kun kuva kattaa
+         * koko pallon: jää on jo kuvassa oikean muotoisena, ja
+         * häivytys söisi Etelämantereen rantaviivan pois.
+         */
+        if (!kokoPallo) napaLiuku(actx, leveys, korkeus);
         /* 3. päälle — läpinäkyvät navat jättävät generoidun Maan näkyviin */
         ctx.drawImage(apu, 0, 0);
         /*
@@ -1442,6 +1475,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     leveys: reliefinValinta.leveys,
     korkeus: reliefinValinta.korkeus,
     osoite: reliefinValinta.osoite,
+    kokoPallo: reliefinValinta.kokoPallo,
   }, ikkuna.document, ikkuna)
     .then((url) => {
       reliefinKesto = Date.now() - reliefiAlkoi;

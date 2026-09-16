@@ -356,5 +356,29 @@ tee-reliefikartta.mjs` kirjoittaa `js/packs/linssi-topografia-kuva.js`:n
 ajon aikana runnerin työkansiossa, mutta se jää sinne eikä koske
 git-tilaa. Koodimuutos on aina erillinen, käsin tarkistettu commit.
 
+## LISÄYS 16.9.2026: koko pallon reliefi, navat mukaan
+
+Omistaja kysyi 16.9.2026: *"onhan tarkemmassa topografia ajossa myos
+pohjois ja etelanavat mukana, etta ei tule tyhjia kohtia niihin?"* — ei
+ollut. Tämän ohjeen kaksi kuvaa kulkevat laudan Millerin kautta, joka
+ulottuu vain 76 °N…58 °S, joten navat jäävät läpinäkyviksi ja peli
+maalaa niihin generoidun napajään.
+
+Siksi työnkulkuun tuli KOLMAS kuvapari ja uusi työkalu
+`tools/tee-pallotopografia-koko.mjs`, joka lukee 1′-ruudukon suoraan ja
+maalaa tasavälisen kuvan navasta napaan:
+
+- uusi syöte **`koko_pallo` (oletus false)**, lisäksi `koko_leveys`
+  (8192) ja `koko_lohko` (512),
+- uusi askel *"Koko pallon reliefi (navat mukaan)"* ja oma vientiaskel
+  `matkakirja/linssit/topografia-pallo-koko-8k-<tunniste>.webp` ja
+  `…-koko-4k-<tunniste>.webp`,
+- tunnisteen laskenta siirtyi ENNEN renderöintiä, koska uusi työkalu
+  kirjoittaa tunnisteen jo tiedostonimeen.
+
+Tämän ohjeen kohdat 1–9 pätevät edelleen sellaisenaan vanhalle
+kuvaparille. Uuden parin käyttö, mittaukset ja kytkentäohje ovat
+omassa raportissaan: **`docs/raportit/viesti-fable-pallo-navat-20260916.md`**.
+
 — Sonnet-agentti (session
 https://claude.ai/code/session_01TehnTdSkC74DnzEqcXkynA)
