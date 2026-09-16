@@ -57,6 +57,21 @@ on:
         required: false
         type: string
         default: ''
+      koko_pallo:
+        description: 'Renderöi myös KOKO pallon reliefi navat mukaan (tee-pallotopografia-koko.mjs)'
+        required: false
+        type: boolean
+        default: false
+      koko_leveys:
+        description: 'Koko pallon reliefin leveys pikseleinä (korkeus on puolet)'
+        required: false
+        type: string
+        default: '8192'
+      koko_lohko:
+        description: 'Koko pallon reliefin kaistaleen korkeus kohderiveinä (muistinsäästö)'
+        required: false
+        type: string
+        default: '512'
       kuiva:
         description: 'Vain renderöinti ja luvut, ei vientiä R2:een'
         required: false
@@ -106,6 +121,17 @@ jobs:
       - name: Mac-ajokoneen valmistelu
         run: tools/mac-ajovalmis.sh --sharp
 
+      # Tunniste ratkaistaan ENNEN renderöintiä eikä sen jälkeen: koko
+      # pallon työkalu kirjoittaa tunnisteen jo TIEDOSTONIMEEN, ja kaksi
+      # erikseen laskettua "tämä päivä" voisi mennä eri puolelle
+      # keskiyötä. Yksi luku, yksi paikka.
+      - name: Tunniste
+        run: |
+          set -euo pipefail
+          TUNNISTE="${{ inputs.tunniste }}"
+          [ -n "$TUNNISTE" ] || TUNNISTE="$(date -u +%Y%m%d)"
+          echo "TUNNISTE=$TUNNISTE" >> "$GITHUB_ENV"
+
       # tools/tee-reliefikartta.mjs pakkaa lopputuloksen WebPiksi Pythonin
       # Pillow'lla (Node ei osaa kirjoittaa WebPiä) — ks. raportin kohta 5.
       #
@@ -146,11 +172,39 @@ jobs:
             --laatu "${{ inputs.pallo_laatu }}" \
             ${{ inputs.kuiva == true && '--kuiva' || '' }}
 
+      # KOKO PALLON RELIEFI — NAVAT MUKAAN (omistaja 16.9.2026: "onhan
+      # tarkemmassa topografia ajossa myos pohjois ja etelanavat mukana").
+      # Tämä EI käy laudan Millerin kautta vaan lukee 1'-ruudukon suoraan
+      # ja maalaa tasavälisen kuvan navasta napaan. Ulos tulee kaksi
+      # tiedostoa kansioon pallo-topografia-ulos/ (.gitignore).
+      #
+      # MUISTI: työkalu käsittelee maailman kaistaleina (--lohko), joten
+      # 467 Mt:n ruudukko ei ole koskaan kokonaan muistissa. Jos Macilla
+      # on niukasti muistia, pienennä lohkoa.
+      - name: Koko pallon reliefi (navat mukaan)
+        if: ${{ inputs.koko_pallo == true }}
+        env:
+          NODE_USE_ENV_PROXY: '1'
+        run: |
+          set -euo pipefail
+          node tools/tee-pallotopografia-koko.mjs \
+            --kaariminuutit "${{ inputs.kaariminuutit }}" \
+            --leveys "${{ inputs.koko_leveys }}" \
+            --lohko "${{ inputs.koko_lohko }}" \
+            --laatu "${{ inputs.pallo_laatu }}" \
+            --tunniste "$TUNNISTE" \
+            ${{ inputs.kuiva == true && '--kuiva' || '' }}
+
       - name: Luvut (koko, mitat, sha256)
         if: ${{ inputs.kuiva != true }}
         run: |
           set -euo pipefail
-          for f in assets/linssit/topografia.webp assets/linssit/topografia-pallo.webp; do
+          TIEDOSTOT="assets/linssit/topografia.webp assets/linssit/topografia-pallo.webp"
+          if [ "${{ inputs.koko_pallo }}" = "true" ]; then
+            TIEDOSTOT="$TIEDOSTOT pallo-topografia-ulos/topografia-pallo-koko-${TUNNISTE}.webp"
+            TIEDOSTOT="$TIEDOSTOT pallo-topografia-ulos/topografia-pallo-koko-4k-${TUNNISTE}.webp"
+          fi
+          for f in $TIEDOSTOT; do
             [ -f "$f" ] || { echo "::error::$f puuttuu — renderöinti ei kirjoittanut tiedostoa"; exit 1; }
             KT=$(( $(stat -f%z "$f") / 1024 ))
             MITAT=$(python3 -c "from PIL import Image; im = Image.open('$f'); print(f'{im.width}x{im.height}')")
@@ -158,14 +212,6 @@ jobs:
             echo "$f: ${KT} kt, ${MITAT}, sha256 ${SHA}"
             echo "${f}|${KT}|${MITAT}|${SHA}" >> luvut.txt
           done
-
-      - name: Tunniste
-        if: ${{ inputs.kuiva != true }}
-        run: |
-          set -euo pipefail
-          TUNNISTE="${{ inputs.tunniste }}"
-          [ -n "$TUNNISTE" ] || TUNNISTE="$(date -u +%Y%m%d)"
-          echo "TUNNISTE=$TUNNISTE" >> "$GITHUB_ENV"
 
       - name: Vienti R2:een
         if: ${{ inputs.kuiva != true }}
@@ -185,11 +231,33 @@ jobs:
             --content-type image/webp \
             --cache-control "public, max-age=31536000, immutable"
 
+      # Koko pallon kuvat menevät SAMAAN polkuun matkakirja/linssit/ kuin
+      # muutkin linssikuvat, ja samalla ikuisella välimuistiohjeella:
+      # tiedostonimessä on tunniste, joten sisältö ei koskaan muutu
+      # saman osoitteen takana.
+      - name: Vienti R2:een (koko pallo)
+        if: ${{ inputs.kuiva != true && inputs.koko_pallo == true }}
+        run: |
+          set -euo pipefail
+          PAATE="https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com"
+
+          for nimi in "topografia-pallo-koko-${TUNNISTE}" "topografia-pallo-koko-4k-${TUNNISTE}"; do
+            aws s3 cp "pallo-topografia-ulos/${nimi}.webp" \
+              "s3://${R2_BUCKET}/matkakirja/linssit/${nimi}.webp" \
+              --endpoint-url "$PAATE" \
+              --content-type image/webp \
+              --cache-control "public, max-age=31536000, immutable"
+          done
+
       - name: Varmista julkinen saatavuus
         if: ${{ inputs.kuiva != true }}
         run: |
           set -euo pipefail
-          for nimi in "topografia-${TUNNISTE}" "topografia-pallo-${TUNNISTE}"; do
+          NIMET="topografia-${TUNNISTE} topografia-pallo-${TUNNISTE}"
+          if [ "${{ inputs.koko_pallo }}" = "true" ]; then
+            NIMET="$NIMET topografia-pallo-koko-${TUNNISTE} topografia-pallo-koko-4k-${TUNNISTE}"
+          fi
+          for nimi in $NIMET; do
             OSOITE="https://media.matkakirja.app/matkakirja/linssit/${nimi}.webp"
             KOODI=$(curl -s -o /dev/null -w '%{http_code}' --head "$OSOITE")
             if [ "$KOODI" != "200" ]; then
@@ -208,7 +276,9 @@ jobs:
             echo "Parametrit: kaariminuutit=${{ inputs.kaariminuutit }}, "\
               "leveys=${{ inputs.leveys }}, katto=${{ inputs.katto }} kt, "\
               "pallo_leveys=${{ inputs.pallo_leveys }}, "\
-              "pallo_laatu=${{ inputs.pallo_laatu }}, kuiva=${{ inputs.kuiva }}"
+              "pallo_laatu=${{ inputs.pallo_laatu }}, kuiva=${{ inputs.kuiva }}, "\
+              "koko_pallo=${{ inputs.koko_pallo }}, "\
+              "koko_leveys=${{ inputs.koko_leveys }}, koko_lohko=${{ inputs.koko_lohko }}"
             echo
             if [ "${{ inputs.kuiva }}" = "true" ]; then
               echo "Kuiva ajo — ei vientiä R2:een."
@@ -226,6 +296,10 @@ jobs:
               echo "Osoitteet:"
               echo "- https://media.matkakirja.app/matkakirja/linssit/topografia-${TUNNISTE:-?}.webp"
               echo "- https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-${TUNNISTE:-?}.webp"
+              if [ "${{ inputs.koko_pallo }}" = "true" ]; then
+                echo "- https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-${TUNNISTE:-?}.webp"
+                echo "- https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-4k-${TUNNISTE:-?}.webp"
+              fi
             fi
           } >> "$GITHUB_STEP_SUMMARY"
           exit 0

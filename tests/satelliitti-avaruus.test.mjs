@@ -40,7 +40,12 @@ import {
   ZOOMIN_KAUIN, ZOOMIN_LAHIN, ZOOMIN_POHJA, reliefinAlfa, valokerroin, liuunPysakit,
   avaaAvaruusnakyma, avausKorkeus, halkaisijaRuudulla, maapallonVarit, nimetNakyvat,
   pilvipaino, vyohykeVari, zoomirajat,
+  JAAN_VARI, RELIEFI_KOKO_PALLO, RELIEFIN_KOKO, RELIEFIN_KOKO_4K, RELIEFIN_LEVEYS,
+  RELIEFIN_KORKEUS, RELIEFIN_OSOITE, valitseReliefi,
 } from '../js/linssit/satelliitti-avaruus.js';
+import {
+  JAAN_VARI as JAAN_VARI_TYOKALU, JAA, jaapaino,
+} from '../tools/reliefivarit.mjs';
 import { PULUN_PIILO_LUOKKA, piilotaPulu } from '../js/linssit/satelliitti.js';
 import { PALLO_FOV, PALLO_KORKEUS_MAX } from '../js/pallolauta/kamera.js';
 
@@ -631,4 +636,80 @@ test('reliefiTekstuuri palaa nullina ilman canvasia eikä kaadu', async () => {
   const { reliefiTekstuuri } = await import('../js/linssit/satelliitti-avaruus.js');
   assert.equal(await reliefiTekstuuri({}, null, {}), null);
   assert.equal(await reliefiTekstuuri({}, { createElement: () => ({}) }, {}), null);
+});
+
+/* ══ 11. koko pallon reliefi: navat mukaan (omistaja 16.9.2026) ═════ */
+
+/*
+ * Sanatarkasti: *"onhan tarkemmassa topografia ajossa myos pohjois ja
+ * etelanavat mukana, etta ei tule tyhjia kohtia niihin?"* — ja päätös:
+ * *"Kyllä, koko pallo 1′-datasta."*
+ */
+
+test('koko pallon reliefi on VALMIS mutta EI vielä kytketty', () => {
+  // Kytkin käännetään vasta kun Mac-ajo on tehty ja osoitteet
+  // tarkistettu. Tämä testi on se vartija: jos kytkin kääntyy vahingossa
+  // tässä PR:ssä, ajoa ei ole vielä tehty eikä kuvaa ole olemassa.
+  assert.equal(RELIEFI_KOKO_PALLO, false);
+  const nyt = valitseReliefi();
+  assert.equal(nyt.osoite, RELIEFIN_OSOITE);
+  assert.equal(nyt.leveys, RELIEFIN_LEVEYS);
+  assert.equal(nyt.korkeus, RELIEFIN_KORKEUS);
+  assert.equal(nyt.kokoPallo, false);
+});
+
+test('kytkin vaihtaa kuvan ja peli lataa oletuksena 4k-version', () => {
+  const koko = valitseReliefi({ kokoPallo: true });
+  assert.equal(koko.osoite, RELIEFIN_KOKO_4K.osoite);
+  assert.equal(koko.leveys, 4096);
+  assert.equal(koko.korkeus, 2048);
+  assert.equal(koko.kokoPallo, true);
+  // Iso versio on olemassa, muttei oletus: 8192 × 4096 on kankaana
+  // 134 Mt RGBA:na eikä puhelin sitä kestä.
+  const tarkka = valitseReliefi({ kokoPallo: true, tarkka: true });
+  assert.equal(tarkka.osoite, RELIEFIN_KOKO.osoite);
+  assert.equal(tarkka.leveys, 8192);
+  assert.equal(tarkka.korkeus, 4096);
+  // Molemmat osoitteet ovat samassa ämpärikansiossa kuin muut
+  // linssikuvat, ja molemmissa on tunniste (ikuinen välimuisti).
+  for (const k of [RELIEFIN_KOKO, RELIEFIN_KOKO_4K]) {
+    assert.match(k.osoite, /^https:\/\/media\.matkakirja\.app\/matkakirja\/linssit\//);
+    assert.match(k.osoite, /topografia-pallo-koko(-4k)?-\d{8}\.webp$/);
+  }
+  assert.notEqual(RELIEFIN_KOKO.osoite, RELIEFIN_KOKO_4K.osoite);
+});
+
+test('napajäätä ei häivytetä päälle, kun jää tulee kuvasta', () => {
+  const lahde = readFileSync(new URL('../js/linssit/satelliitti-avaruus.js', import.meta.url), 'utf8');
+  // Häivytys on yhä olemassa vanhalle kuvalle, mutta se on ehdollinen.
+  assert.match(lahde, /if \(!kokoPallo\) napaLiuku\(actx, leveys, korkeus\);/);
+});
+
+test('työkalun jäävari on SAMA kuin linssin generoidun Maan jää', () => {
+  // Reliefi piirtyy generoidun Maan päälle. Jos sävyt eroaisivat, raja
+  // näkyisi juuri siellä missä kuva vaihtuu.
+  assert.deepEqual(JAAN_VARI_TYOKALU, JAAN_VARI);
+});
+
+test('jään sekoitus: päiväntasaajalla ei jäätä, navalla lähes pelkkää', () => {
+  assert.equal(jaapaino(0, 1000), 0);
+  assert.equal(jaapaino(0, -4000), 0);
+  // Mannerjää alkaa ennen merijäätä: Grönlannin ja Etelämantereen
+  // jäätiköt ulottuvat etelämmäs kuin kiinteä merijää.
+  assert.ok(jaapaino(64, 1500) > jaapaino(64, -1500), 'merijää alkaa liian aikaisin');
+  // Etelämanner on jäätä, Jäämeri vain osittain — muuten rantaviiva
+  // katoaisi, ja juuri se on tämän kuvan tarkoitus.
+  assert.ok(Math.abs(jaapaino(-80, 2500) - JAA.maaKatto) < 1e-9);
+  assert.ok(Math.abs(jaapaino(89, -4000) - JAA.meriKatto) < 1e-9);
+  assert.ok(JAA.meriKatto < JAA.maaKatto, 'merijää ei saa peittää yhtä täysin kuin mannerjää');
+  // Liuku eikä kytkin: terävä raja piirtäisi navan ympäri renkaan.
+  let edellinen = 0;
+  for (let lat = 55; lat <= 90; lat += 1) {
+    const nyt = jaapaino(lat, 1000);
+    assert.ok(nyt >= edellinen - 1e-12, `jään osuus laski ${lat}°:ssa`);
+    assert.ok(nyt - edellinen < 0.25, `jään osuus hyppää ${lat}°:ssa`);
+    edellinen = nyt;
+  }
+  // Sama molemmilla pallonpuoliskoilla.
+  assert.equal(jaapaino(-72, 800), jaapaino(72, 800));
 });

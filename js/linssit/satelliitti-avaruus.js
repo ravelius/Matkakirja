@@ -550,6 +550,79 @@ export function maapallonTekstuuri(asetukset = {}, doc = globalThis.document) {
 /** Reliefikuvan osoite (js/packs/linssi-topografia-kuva.js). */
 export const RELIEFIN_OSOITE = 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-20260915.webp';
 
+/* ── KOKO PALLON RELIEFI: NAVAT MUKAAN (omistaja 16.9.2026) ─────────
+ *
+ * Sanatarkasti: *"onhan tarkemmassa topografia ajossa myos pohjois ja
+ * etelanavat mukana, etta ei tule tyhjia kohtia niihin?"* — vastaus oli
+ * ei, ja päätös oli *"Kyllä, koko pallo 1′-datasta."* (Raamattu,
+ * ASTRONAUTIN KAMERA, LISÄYS 5.)
+ *
+ * Yllä oleva RELIEFIN_OSOITE on laudan Millerin kautta kulkenut kuva:
+ * se kattaa vain 76 °N…58 °S, ja navat ovat siinä läpinäkyviä.
+ * tools/tee-pallotopografia-koko.mjs maalaa saman maailman SUORAAN
+ * 1′-korkeusruudukosta navasta napaan — Etelämanner ja Jäämeri mukaan
+ * lukien, ilman yhtään läpinäkyvää pikseliä.
+ *
+ * KYTKIN ON POIS PÄÄLTÄ, JA SE ON TARKOITUS. Kuvat syntyvät omistajan
+ * Macilla (.github/workflows/renderoi-reliefi-macilla.yml, syöte
+ * koko_pallo), ja ennen sitä osoitteiden takana ei ole mitään. Tämä
+ * tiedosto on siis VALMIS mutta EI KÄYTÖSSÄ: kun ajo on tehty,
+ * tunniste tarkistetaan, RELIEFI_KOKO_PALLO käännetään todeksi ja
+ * muutos julkaistaan omana pienenä PR:nään.
+ *
+ * KUN KOKO PALLON KUVA ON KÄYTÖSSÄ, NAPAJÄÄTÄ EI MAALATA. Jää tulee
+ * kuvasta (tools/reliefivarit.mjs, jaapaino: korkeus + leveysaste →
+ * jäävari), ja generoidun napajään sekoittaminen sen päälle peittäisi
+ * juuri sen rantaviivan, jonka takia koko kuva tehtiin. Sama koskee
+ * napojen häivytystä: reliefi ei lopu 76°:seen, joten sitä ei häivytetä.
+ */
+
+/** Onko koko pallon reliefi (navat mukaan) käytössä? Ks. yllä. */
+export const RELIEFI_KOKO_PALLO = false;
+
+/*
+ * Koko pallon kuvat. Tunniste on Mac-ajon syöte; nämä osoitteet
+ * tarkistetaan ja päivitetään kytkentä-PR:ssä.
+ */
+export const RELIEFIN_KOKO = {
+  osoite: 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-20260916.webp',
+  leveys: 8192,
+  korkeus: 4096,
+};
+/*
+ * PELI LATAA OLETUKSENA 4K-VERSION. 8192 × 4096 on kankaana 134 Mt
+ * RGBA:na, eikä puhelin sitä kestä; 4096 riittää lähimmässäkin
+ * zoomissa (ks. RELIEFIN_LEVEYS). Iso jää työpöydän varaan, jos
+ * zoomia joskus jatketaan.
+ */
+export const RELIEFIN_KOKO_4K = {
+  osoite: 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-4k-20260916.webp',
+  leveys: 4096,
+  korkeus: 2048,
+};
+
+/**
+ * Kumpi reliefi ladataan — puhdas funktio, jotta testi näkee saman
+ * valinnan kuin selain.
+ *
+ * @param {{ kokoPallo?: boolean, tarkka?: boolean }} asetukset
+ * @returns {{ osoite: string, leveys: number, korkeus: number, kokoPallo: boolean }}
+ */
+export function valitseReliefi({ kokoPallo = RELIEFI_KOKO_PALLO, tarkka = false } = {}) {
+  if (!kokoPallo) {
+    return {
+      osoite: RELIEFIN_OSOITE,
+      leveys: RELIEFIN_LEVEYS,
+      korkeus: RELIEFIN_KORKEUS,
+      kokoPallo: false,
+    };
+  }
+  const k = tarkka ? RELIEFIN_KOKO : RELIEFIN_KOKO_4K;
+  return {
+    osoite: k.osoite, leveys: k.leveys, korkeus: k.korkeus, kokoPallo: true,
+  };
+}
+
 /**
  * Yhdistetyn tekstuurin mitat — LÄHDEKUVAN OMA TARKKUUS.
  *
@@ -662,9 +735,17 @@ function napaLiuku(ctx, leveys, korkeus) {
  *
  * @param {{ leveys?: number, korkeus?: number, osoite?: string }} asetukset
  */
-export function reliefiTekstuuri({
-  leveys = RELIEFIN_LEVEYS, korkeus = RELIEFIN_KORKEUS, osoite = RELIEFIN_OSOITE,
-} = {}, doc = globalThis.document, ikkuna = globalThis) {
+export function reliefiTekstuuri(asetukset = {}, doc = globalThis.document, ikkuna = globalThis) {
+  /*
+   * Valinta ensin, sitten mahdolliset syrjäytykset. Näin kutsuja saa
+   * yhä antaa oman osoitteen ja mitat (testit tekevät niin), mutta
+   * oletus tulee yhdestä paikasta — valitseReliefi().
+   */
+  const valinta = valitseReliefi(asetukset);
+  const {
+    leveys = valinta.leveys, korkeus = valinta.korkeus, osoite = valinta.osoite,
+  } = asetukset;
+  const kokoPallo = valinta.kokoPallo;
   const kangas = doc?.createElement?.('canvas');
   const ctx = kangas?.getContext?.('2d');
   if (!ctx || !ikkuna?.Image) return Promise.resolve(null);
@@ -675,6 +756,11 @@ export function reliefiTekstuuri({
    * (1024 × 512) ja venytetään: pohja näkyy vain navoilla, joilla se on
    * sileä jääliuku — venytys ei vie siitä mitään, ja täysikokoisena se
    * olisi 8,4 miljoonaa pikseliä kohinafunktioita.
+   *
+   * KOKO PALLON KUVA PEITTÄÄ POHJAN KOKONAAN, eikä pohjaa silti
+   * jätetä pois: se maksaa puoli miljoonaa pikseliä kerran linssin
+   * avauksessa ja on vakuutus sen varalta, että kuvan purku epäonnistuu
+   * kesken piirron. Näkyviin se ei silloinkaan jää.
    */
   const perus = maapallonVarit({});
   const pohja = doc.createElement('canvas');
@@ -705,7 +791,12 @@ export function reliefiTekstuuri({
         actx.globalCompositeOperation = 'destination-in';
         actx.drawImage(kuva, 0, 0, leveys, korkeus);
         actx.globalCompositeOperation = 'source-over';
-        napaLiuku(actx, leveys, korkeus);
+        /*
+         * NAPOJA EI HÄIVYTETÄ EIKÄ NAPAJÄÄTÄ MAALATA, kun kuva kattaa
+         * koko pallon: jää on jo kuvassa oikean muotoisena, ja
+         * häivytys söisi Etelämantereen rantaviivan pois.
+         */
+        if (!kokoPallo) napaLiuku(actx, leveys, korkeus);
         /* 3. päälle — läpinäkyvät navat jättävät generoidun Maan näkyviin */
         ctx.drawImage(apu, 0, 0);
         /*
