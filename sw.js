@@ -403,6 +403,7 @@ const SHELL = [
   './js/packs/kohtaamiset.js',
   './js/packs/fokusvirrat.js',
   './js/packs/iskulauseet.js',
+  './js/packs/saapumispuheet.js',
   './js/packs/fokuskohteet-grc.js',
   './js/packs/fokusvirta-ateena.js',
   './js/packs/fokuskohteet-bgr.js',
