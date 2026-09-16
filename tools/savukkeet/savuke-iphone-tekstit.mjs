@@ -94,8 +94,9 @@ const palvelin = http.createServer((req, res) => {
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   if (vastakoe === 'LIIKU_INSET0' && polkuOsa.endsWith('/css/styles.css')) {
     const runko = readFileSync(polku, 'utf8').replace(
-      /\.toimintorivi\.rivi-yksi \.monitoimi-nappi \{\s*position: fixed;\s*left: calc\([^;]+\);\s*bottom: calc\([^;]+\);\s*\}/,
-      '.toimintorivi.rivi-yksi .monitoimi-nappi { position: fixed; left: 0px; bottom: 0px; }',
+      /\.toimintorivi\.rivi-yksi \.monitoimi-nappi \{\s*position: fixed;\s*left: 50%;[\s\S]*?\n\}/,
+      '.toimintorivi.rivi-yksi .monitoimi-nappi { position: fixed; left: 0px; right: auto;'
+      + ' transform: none; bottom: 0px; }',
     );
     res.writeHead(200, { 'content-type': 'text/css' });
     res.end(runko);
@@ -319,12 +320,24 @@ const mittaa = () => {
       const e = document.querySelector('.pollo-kuplapino-kehys');
       return e ? getComputedStyle(e).display : 'ei-elementtia';
     })(),
+    /*
+     * ERÄ 19 (Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 28 kohta 3):
+     * mitataan napin KESKIPISTE ruudun keskilinjaan, taustan alpha,
+     * reunus ja sanan oma laatikko + peittävyys. Vanhat mitat (44 × 44
+     * neliö vasemmassa alanurkassa, symboli näkyvissä) ovat
+     * kumoutuneet — vasen alanurkka on nyt maainfon.
+     */
     liiku: nappi ? {
       laatikko: nb,
       display: tyyli.display,
       tausta: tyyli.backgroundImage === 'none' ? tyyli.backgroundColor : tyyli.backgroundImage,
+      reunus: tyyli.borderTopWidth,
+      varjo: tyyli.boxShadow,
       sana: getComputedStyle(nappi.querySelector('.icon-label')).display,
       ikoni: getComputedStyle(nappi.querySelector('.viiva-ikoni')).display,
+      sananPeitto: Number(getComputedStyle(nappi.querySelector('.icon-label')).opacity),
+      sananLaatikko: laatikko('.monitoimi-nappi .icon-label'),
+      keskipoikkeama: nr ? Math.abs((nr.x + nr.width / 2) - window.innerWidth / 2) : null,
     } : null,
     liikuOsuuPuluun: osuu,
     marginaalit,
@@ -351,27 +364,29 @@ const mittaa = () => {
     perus.kuvaNakyy === true && perus.kuvatekstiNakyy === true);
   vaadi('puhelin pysty: pulun kuplapino on piilossa',
     perus.kuplapino === 'none' || perus.kuplapino === 'ei-elementtia', perus.kuplapino);
-  vaadi('puhelin pysty: Liiku on 44 × 44 neliö vasemmassa alanurkassa',
-    perus.liiku?.laatikko?.w === 44 && perus.liiku.laatikko.h === 44
-    && perus.liiku.laatikko.x < 40
-    && perus.liiku.laatikko.y > perus.ikkuna.h * 0.7, JSON.stringify(perus.liiku?.laatikko));
-  vaadi('puhelin pysty: nappi ei ole kullattu — ei liukuväriä',
-    !String(perus.liiku?.tausta).includes('gradient'), String(perus.liiku?.tausta));
-  vaadi('puhelin pysty: symboli näkyy, sana on piilossa',
-    perus.liiku?.ikoni !== 'none' && perus.liiku?.sana === 'none', JSON.stringify(perus.liiku));
-  vaadi('puhelin pysty: Liiku ei osu pulun nappiin', perus.liikuOsuuPuluun === false);
   /*
-   * LIIKU-SYMBOLIN PAIKKA (omistaja 15.9.2026): marginaali kartan
-   * vasempaan ja alareunaan yhtä suuri, ja sama kuin karttaselitteen
-   * marginaali kartan ylä- ja oikeaan reunaan (±1 px).
+   * ERÄ 19: LIIKU ON KUULTAVA SANA RUUDUN ALAREUNAN KESKELLÄ
+   * (Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 28 kohta 3). Neljä
+   * vartiota, jotka KORVAAVAT erän 18 neliövartiot ja
+   * LIIKU-SYMBOLIN PAIKKA -marginaalivartiot (ne on kumottu).
    */
-  vaadi('puhelin pysty: Liikun marginaali vasemmalle ja alas yhtä suuri (±1 px)',
-    Math.abs(perus.marginaalit?.liikuVasen - perus.marginaalit?.liikuAlas) <= 1,
-    JSON.stringify(perus.marginaalit));
-  vaadi('puhelin pysty: Liikun marginaali sama kuin karttaselitteellä (±1 px)',
-    Math.abs(perus.marginaalit?.liikuVasen - perus.marginaalit?.seliteOikea) <= 1
-    && Math.abs(perus.marginaalit?.liikuAlas - perus.marginaalit?.seliteYlos) <= 1,
-    JSON.stringify(perus.marginaalit));
+  vaadi('puhelin pysty: Liiku on ruudun alareunan KESKELLÄ (±8 px)',
+    perus.liiku?.keskipoikkeama != null && perus.liiku.keskipoikkeama <= 8
+    && perus.liiku.laatikko.y > perus.ikkuna.h * 0.85,
+    JSON.stringify({ poikkeama: perus.liiku?.keskipoikkeama, laatikko: perus.liiku?.laatikko }));
+  vaadi('puhelin pysty: napin tausta on täysin läpinäkyvä, ei reunusta eikä varjoa',
+    /rgba\([^)]*,\s*0\)/.test(String(perus.liiku?.tausta))
+    && perus.liiku?.reunus === '0px' && perus.liiku?.varjo === 'none',
+    JSON.stringify({ tausta: perus.liiku?.tausta, reunus: perus.liiku?.reunus, varjo: perus.liiku?.varjo }));
+  vaadi('puhelin pysty: symboli on piilossa ja sana "Liiku" näkyy kuultavana (0,5…0,8)',
+    perus.liiku?.ikoni === 'none' && perus.liiku?.sana !== 'none'
+    && perus.liiku?.sananLaatikko?.w > 4 && perus.liiku?.sananLaatikko?.h > 4
+    && perus.liiku.sananPeitto >= 0.5 && perus.liiku.sananPeitto <= 0.8,
+    JSON.stringify(perus.liiku));
+  vaadi('puhelin pysty: osuma-ala on vähintään 32 × 32 px',
+    perus.liiku?.laatikko?.w >= 32 && perus.liiku?.laatikko?.h >= 32,
+    JSON.stringify(perus.liiku?.laatikko));
+  vaadi('puhelin pysty: Liiku ei osu pulun nappiin', perus.liikuOsuuPuluun === false);
   vaadi('puhelin pysty: huntua ei ole ennen luentaa (vastakoe)',
     perus.huntu?.content === 'none', JSON.stringify(perus.huntu));
 
@@ -425,15 +440,20 @@ const mittaa = () => {
   await sivu.evaluate(() => window.matkakirja.ui.laajennaLiiku());
   await sivu.waitForTimeout(500);
   const laaja = await sivu.evaluate(mittaa);
-  vaadi('aarteen löytyessä nappi laajenee ja sana tulee näkyviin',
-    laaja.liiku.laatikko.w > 60 && laaja.liiku.sana !== 'none', JSON.stringify(laaja.liiku));
-  vaadi('laajennettuna symboli jää vasempaan reunaan (nappi kasvaa oikealle)',
-    laaja.liiku.laatikko.x === perus.liiku.laatikko.x,
-    `${laaja.liiku.laatikko.x} vs ${perus.liiku.laatikko.x}`);
+  /*
+   * ERÄ 19: AARTEEN LÖYTYESSÄ SANA KIRKASTUU, EI LAAJENE. Nappi on jo
+   * sana, joten huomio tehdään peittävyydellä — vanha "neliö laajenee
+   * tekstinapiksi" -vartio on kumoutunut.
+   */
+  vaadi('aarteen löytyessä sana kirkastuu täyteen peittävyyteen',
+    laaja.liiku.sananPeitto > perus.liiku.sananPeitto && laaja.liiku.sananPeitto >= 0.95,
+    JSON.stringify({ laaja: laaja.liiku.sananPeitto, perus: perus.liiku.sananPeitto }));
+  vaadi('kirkastuessakin nappi pysyy ruudun keskilinjalla (±8 px)',
+    laaja.liiku.keskipoikkeama <= 8, String(laaja.liiku.keskipoikkeama));
   await sivu.waitForTimeout(LIIKU_LAAJENNUS_MS);
   const kutistunut = await sivu.evaluate(mittaa);
-  vaadi('nappi kutistuu takaisin neliöksi laajennusajan jälkeen (vastakoe)',
-    kutistunut.liiku.laatikko.w === 44 && kutistunut.liiku.sana === 'none',
+  vaadi('sana palaa kuultavaksi laajennusajan jälkeen (vastakoe)',
+    kutistunut.liiku.sananPeitto <= 0.8 && kutistunut.liiku.sana !== 'none',
     JSON.stringify(kutistunut.liiku));
 
   /* MYKISTETTY ÄÄNI: kukaan ei ole äänessä, joten nappi näkyy heti. */
@@ -451,9 +471,12 @@ const mittaa = () => {
 }
 
 /*
- * VASTAKOE LIIKU_INSET0: Liikun left/bottom pakotetaan nollaan, jolloin
- * marginaali ei täsmää karttaselitteen kanssa — edellisen lohkon
- * marginaalivartion ON KAADUTTAVA.
+ * VASTAKOE LIIKU_INSET0 (erä 19): Liikun `left`/`bottom` pakotetaan
+ * nollaan, jolloin nappi liimautuu takaisin ruudun vasempaan
+ * alanurkkaan — siis sinne, missä se oli ennen PÄÄTÖKSET 28:aa ja
+ * missä maainfo nyt on. EDELLISEN LOHKON KESKITYSVARTION ON
+ * KAADUTTAVA: jos se menisi läpi ilman keskitystä, se ei mittaisi
+ * mitään.
  */
 {
   vastakoe = 'LIIKU_INSET0';
@@ -462,18 +485,9 @@ const mittaa = () => {
   });
   const m = await sivu.evaluate(mittaa);
   vastakoe = null;
-  /*
-   * Nolla-inset siirtää Liikun karttapaneelin OMAAN nurkkaan (jonka
-   * omat reunat ovat map-panen sisällä 1 px:n reunaviivan verran) —
-   * marginaali karttaselitteen kanssa vertailtuna on siis NEGATIIVINEN
-   * (nappi lähempänä reunaa kuin reunaviiva itse), kun karttaselitteen
-   * omat marginaalit pysyvät ennallaan (+7,4 px). Ero on reilusti yli
-   * 1 px:n rajan.
-   */
-  const eroaSeliteesta = Math.abs(m.marginaalit?.liikuVasen - m.marginaalit?.seliteOikea) > 1
-    || Math.abs(m.marginaalit?.liikuAlas - m.marginaalit?.seliteYlos) > 1;
-  vaadi('vastakoe LIIKU_INSET0: marginaalivartion ON KAADUTTAVA (nappi liimautuu nurkkaan)',
-    eroaSeliteesta, JSON.stringify(m.marginaalit));
+  vaadi('vastakoe LIIKU_INSET0: keskitysvartion ON KAADUTTAVA (nappi nurkassa)',
+    !(m.liiku?.keskipoikkeama <= 8),
+    JSON.stringify({ poikkeama: m.liiku?.keskipoikkeama, laatikko: m.liiku?.laatikko }));
   await konteksti.close();
 }
 
@@ -487,9 +501,9 @@ const mittaa = () => {
     m.factPieni === true && m.factTekstiNakyy === false, JSON.stringify(m.factPieni));
   vaadi('puhelin vaaka: kuva ja kuvateksti näkyvät',
     m.kuvaNakyy === true && m.kuvatekstiNakyy === true);
-  vaadi('puhelin vaaka: Liiku on 44 × 44 neliö vasemmassa alanurkassa',
-    m.liiku?.laatikko?.w === 44 && m.liiku.laatikko.h === 44 && m.liiku.laatikko.x < 40
-    && m.liiku.laatikko.y > m.ikkuna.h * 0.7, JSON.stringify(m.liiku?.laatikko));
+  vaadi('puhelin vaaka: Liiku on ruudun alareunan keskellä (±8 px), sana näkyy',
+    m.liiku?.keskipoikkeama <= 8 && m.liiku.laatikko.y > m.ikkuna.h * 0.7
+    && m.liiku.sana !== 'none', JSON.stringify(m.liiku?.laatikko));
   vaadi('puhelin vaaka: Liiku ei osu pulun nappiin', m.liikuOsuuPuluun === false);
   await konteksti.close();
 }
@@ -502,8 +516,9 @@ const mittaa = () => {
     m.factPieni === false && m.factTekstiNakyy === true, JSON.stringify(m));
   vaadi('työpöytä (vastakoe): pulun kuplapinoa ei ole piilotettu',
     m.kuplapino !== 'none', m.kuplapino);
-  vaadi('työpöytä: Liiku on sama neliö vasemmassa alanurkassa',
-    m.liiku?.laatikko?.w === 44 && m.liiku.laatikko.x < 40);
+  vaadi('työpöytä: Liiku on sama kuultava sana ruudun alareunan keskellä (±8 px)',
+    m.liiku?.keskipoikkeama <= 8 && m.liiku.sana !== 'none'
+    && m.liiku.sananPeitto <= 0.8, JSON.stringify(m.liiku));
 
   /*
    * LUENNAN AIKANA TYÖPÖYTÄKIN PIILOTTAA TEKSTIT (omistaja 15.9.2026,
