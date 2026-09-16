@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1922, teksti: 'Maainfo 27.8. tyyliin ilman laatikkoa, valtiomuodot 1873' },
   { v: 1921, teksti: 'Astronautin kamera, topografialinssi, lento, maainfo' },
   { v: 1920, teksti: 'Aihemerkit, kohdemaan merkit, Horation saapumisäänet' },
   { v: 1919, teksti: 'Nappula kulkee pisteet, pulun kuvien huntu, kehys liukuu' },

@@ -46,6 +46,40 @@
  * Pallo tarvitsee Globe.gl:n ämpäristä. Jos ämpäri ei vastaa, savuke
  * ohitetaan (sama sääntö kuin muilla pallosavukkeilla).
  */
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KOKO SAVUKE KUMOUTUI ERÄSSÄ 20 (16.9.2026)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Raamattu, KARTTAUUDISTUKSEN PÄÄTÖKSET 28 TARKENNUS 2 (omistaja
+ * 16.9.2026 klo 10.45 UTC, iPad-kuva 27.8.2026 Kreikasta,
+ * sanatarkasti): *"se maainfon vanha versio oli sellainen missa ei ole
+ * tuota valkoista taustaa"*.
+ *
+ * Tämä savuke vartioi KOLMEA asiaa, jotka kaikki ovat maapaneelin
+ * LAATIKON ominaisuuksia: neljäsosaan kutistettu kortti, sen VAALEA
+ * POHJA ja sen käsinpiirretty KAKSOISVIIVAKEHYS. Laatikko poistettiin
+ * kokonaan — kalusteessa ei ole enää pohjaa, kehystä eikä kiinteää
+ * kokoa — joten yksikään väite ei mittaa enää mitään olemassa olevaa.
+ *
+ * SAVUKETTA EI POISTETA, koska se kertoo mitä omistaja pyysi 14.9. ja
+ * mitä 16.9. Tilalla ovat tools/savukkeet/savuke-maapaneeli.mjs:n
+ * väitteet 1–4 (levossa vain nimi ja alarivi, EI taustaa, otsikot
+ * pelkkänä tekstinä) ja niiden vastakoe E (laatikko takaisin).
+ *
+ * js/kasinpiirto.js `kasikehys` jää paikalleen: se on oma yksikkönsä,
+ * ja sen deterministisyyden vartioi tests/-puoli.
+ */
+console.log('KUMOTTU  1. maapaneeli neljäsosaan — PÄÄTÖKSET 28 TARKENNUS 2 (erä 20)');
+console.log('KUMOTTU  2. kortin vaalea pohja — laatikko poistettu kokonaan');
+console.log('KUMOTTU  3. käsinpiirretty kaksoisviivakehys — kehys poistettu');
+console.log('KUMOTTU  4. kehyksen determinismi — kehystä ei ole');
+console.log('KUMOTTU  5. sisältö mahtuu korttiin — korttia ei ole');
+console.log('\nTilalla: tools/savukkeet/savuke-maapaneeli.mjs (väitteet 1-4, vastakoe E)');
+console.log('\n0/0 vartiota läpi (savuke kumoutunut)');
+process.exit(0);
+
+/* eslint-disable no-unreachable */
 import http from 'node:http';
 import { existsSync, mkdirSync, readFileSync } from 'node:fs';
 import { extname, join } from 'node:path';

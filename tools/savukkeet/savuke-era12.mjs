@@ -888,13 +888,19 @@ const tekstiKoot = (sivu, nimioKoko) => sivu.evaluate((koko) => {
  *      koska ne eivät vaakasuunnassa osu päällekkäin.
  */
 const valikonMitat = async (sivu) => {
-  await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
+  await sivu.evaluate(() => { document.querySelector('.maapaneeli-avain')?.click(); });
   await sivu.waitForTimeout(600);
   const ulos = await sivu.evaluate(() => {
     const kortti = document.querySelector('.maapaneeli-kortti');
     const valikko = document.querySelector('.maapaneeli-valikko');
-    const plus = document.querySelector('.maapaneeli-lisaa');
-    if (!kortti || !valikko || valikko.hidden) return { auki: false };
+    /*
+     * ERÄ 20: PLUS-NAPPIA EI OLE (PÄÄTÖKSET 28 TARKENNUS 2). Kaluste
+     * avataan maan nimestä, joten plussan paikan sijaan käytetään
+     * AVAIMEN laatikkoa — tämän funktion väitteet (7, 7b) ovat
+     * KUMOTTUJA, ja mitta jää raportoitavaksi tiedoksi.
+     */
+    const plus = document.querySelector('.maapaneeli-avain');
+    if (!kortti || !valikko || valikko.hidden || !plus) return { auki: false };
     const r = valikko.getBoundingClientRect();
     const k = kortti.getBoundingClientRect();
     const pr = plus.getBoundingClientRect();
@@ -966,7 +972,7 @@ const valikonMitat = async (sivu) => {
       plusYlaero: r.top - pr.top,
     };
   });
-  await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
+  await sivu.evaluate(() => { document.querySelector('.maapaneeli-avain')?.click(); });
   await sivu.waitForTimeout(300);
   return ulos;
 };
@@ -1360,7 +1366,7 @@ for (const ruutu of RUUDUT) {
    * (ks. valikonMitat-funktion selitys).
    */
   await zoomaa(sivu, 1);
-  await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
+  await sivu.evaluate(() => { document.querySelector('.maapaneeli-avain')?.click(); });
   await sivu.waitForTimeout(600);
   const valikkoZoomit = [];
   for (const osuus of ZOOMITASOT) {
@@ -1384,7 +1390,7 @@ for (const ruutu of RUUDUT) {
     });
     valikkoZoomit.push({ osuus, ...vz, ok: rivivaliKelpaa(vz) });
   }
-  await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
+  await sivu.evaluate(() => { document.querySelector('.maapaneeli-avain')?.click(); });
   await sivu.waitForTimeout(300);
   await zoomaa(sivu, 1);
   valikkoZoomiTulokset.push({ ruutu: ruutu.nimi, zoomit: valikkoZoomit,
@@ -1548,10 +1554,10 @@ for (const ruutu of RUUDUT) {
     });
     await sivu.waitForTimeout(400);
     await sivu.screenshot({ path: join(KUVAKANSIO, `paneeli-grc-${ruutu.nimi}.png`) });
-    await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
+    await sivu.evaluate(() => { document.querySelector('.maapaneeli-avain')?.click(); });
     await sivu.waitForTimeout(700);
     await sivu.screenshot({ path: join(KUVAKANSIO, `lisaa-valikko-${ruutu.nimi}.png`) });
-    await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
+    await sivu.evaluate(() => { document.querySelector('.maapaneeli-avain')?.click(); });
     await sivu.waitForTimeout(300);
   }
 
@@ -1560,15 +1566,17 @@ for (const ruutu of RUUDUT) {
     const px = Math.round(m.kotelo.x0 + (m.kortti.x0 + m.kortti.x1) / 2);
     const py = Math.round(m.kotelo.y0 + (m.kortti.y0 + m.kortti.y1) / 2);
     /*
-     * PLUS-NAPPI MITATAAN ENSIN. Kortti on kartan mitta, joten zoomaus
-     * kasvattaa sen ja vie napin toiseen kohtaan ruutua — napin
-     * osumatesti kuuluu siksi saapumisnäkymään, ennen rullaa.
+     * NIMEN NAPAUTUS MITATAAN ENSIN (erä 20, PÄÄTÖKSET 28 TARKENNUS 2:
+     * plus-nappi on poistettu, ja kalusteen avaa maan NIMI).
+     *
      * Napautus tehdään OIKEALLA HIIRELLÄ ruudun koordinaatteihin (ei
-     * `el.click()`), koska juuri osumatestaus on se, mitä erä 18
-     * muutti.
+     * `el.click()`), koska juuri osumatestaus on se, mitä erä 18 ja
+     * erä 20 muuttivat: kaluste on `pointer-events: none`, ja napautus
+     * poimitaan dokumentin kaappausvaiheessa (js/pallolauta/
+     * maapaneeli.js NAPAUTUS ON OSUMATESTI).
      */
     const nappi = await sivu.evaluate(() => {
-      const b = document.querySelector('.maapaneeli-lisaa');
+      const b = document.querySelector('.maapaneeli-avain');
       const r = b?.getBoundingClientRect();
       return r && r.width > 0 ? { x: r.left + r.width / 2, y: r.top + r.height / 2 } : null;
     });
@@ -1635,8 +1643,8 @@ for (const ruutu of RUUDUT) {
     tieto('1400 px · zoomi ja raahaus paneelin päältä',
       `ctrl-rulla paneelin päällä muutti korkeutta ${p(paneeli.muutos, 5)}, SAMASTA pisteestä `
       + `ilman paneelia ${p(kartta?.muutos, 5)} (suhde ${p(suhde, 3)}, vara 10 %), raahaus paneelin päältä `
-      + `panoroi ${p(veto.dLng, 3)}°, tekstivalinta "${veto.valinta}", plus-nappi avasi valikon `
-      + `${plusToimii}`);
+      + `panoroi ${p(veto.dLng, 3)}°, tekstivalinta "${veto.valinta}", nimen napautus avasi `
+      + `otsikot ${plusToimii}`);
   }
 
   kreikanVirheet = kreikanVirheet.concat(virheet);
@@ -1648,7 +1656,7 @@ kumottu('9. Kreikan maapaneeli: Joonianmeri (leveä) ja Aigeianmeri (kapea) — 
   + 'ruudulla, ilman päällekkäisyyksiä, nostojen vasemmalla puolella',
   kreikkaTulokset.length === RUUDUT.length && kreikkaTulokset.every((t) => t.ok),
   JSON.stringify(kreikkaTulokset));
-vaadi('10. rulla ja raahaus paneelin päältä menevät kartalle, plus-nappi toimii yhä',
+vaadi('10. rulla ja raahaus kalusteen päältä menevät kartalle, nimen napautus avaa yhä',
   Boolean(kymmenen?.ok), JSON.stringify(kymmenen));
 
 /*
@@ -1819,7 +1827,7 @@ vastakoe = 'K';
   let vz = null;
   if (auki) {
     await zoomaa(sivu, 1);
-    await sivu.evaluate(() => { document.querySelector('.maapaneeli-lisaa')?.click(); });
+    await sivu.evaluate(() => { document.querySelector('.maapaneeli-avain')?.click(); });
     await sivu.waitForTimeout(600);
     await zoomaa(sivu, 0.25);
     await sivu.waitForTimeout(200);
