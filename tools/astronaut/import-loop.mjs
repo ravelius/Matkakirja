@@ -34,6 +34,7 @@ await mkdir(directory, { recursive: true });
 await writeFile(resolve(directory, 'source-downloads.json'), JSON.stringify(source));
 execFileSync(process.execPath, [resolve(root, 'tools/astronaut/build-loop.mjs')], { cwd: root, stdio: 'inherit' });
 const manifest = JSON.parse(await readFile(resolve(directory, 'manifest.json'), 'utf8'));
+if (expected.review.ownerApproval && manifest.output.sha256 !== expected.review.ownerApproval.sha256) throw Error('Re-encoded output differs from owner-approved MP3; use exactTransfer instead');
 const files = [
   ...manifest.rawSources.map(row => ({ file: row.file, key: archive + row.file, sha256: row.sha256, type: 'audio/mpeg' })),
   { file: manifest.output.file, key: archive + manifest.output.sha256 + '.mp3', sha256: manifest.output.sha256, type: 'audio/mpeg' },

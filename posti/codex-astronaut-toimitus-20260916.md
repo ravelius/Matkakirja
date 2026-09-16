@@ -36,20 +36,28 @@ gain-feidi käynnistyksessä, kohteen/kuvan vaihto ei nollaa soitinta,
 äänikytkin ja linssistä poistuminen vaimentavat/pysäyttävät sen. Dekoodattu
 AudioBuffer-luuppi välttää MP3-elementin mahdollisen kierrostauon.
 
-### Valtuutettu työnkulun päivitys tarvitaan ennen vientiä
+### Työnkulku ja hyväksytyn tiedoston siirto
 
-GitHub OAuth -yhteydeltä puuttuu workflow-tiedostojen muokkausoikeus.
-Koodipush toimii. Aktiivisten `.github/workflows/`-tiedostojen lopullinen
-diff main-pohjaan on tyhjä; lupaa ei kierretä. Valmis ehdotus on
-`tools/astronaut/generoi-tehosteet.yml.proposed`, nykyisen
-`generoi-tehosteet.yml`:n päälle lisätty erillinen **tuonti**, ei generointi.
+Fable pushasi valtuutetun työnkulun commitilla `c9ec93eb`. Codexin
+OAuth-oikeuksia ei muutettu. Haaralle kohdistettu dispatch toimii ilman
+työnkulun yhdistämistä mainiin. Tuontijob ei saa ElevenLabs-avainta.
 
-Fable tarkistaa ja pushää työnkulun valtuutetusti, kertoo refin/headin.
-Codex syöttää sitten tuontiajolle jo maksettujen lähteiden väliaikaiset
-osoitteet. Osoitteita ei ole repossa. Tuonti vaatii `maara=1`, tarkistaa
-lähdetiivisteet, säilyttää raakaversiot ja versionoidun MP3:n, hylkää eri
-sisältöjen ylikirjoittamisen, tarkistaa R2-tavut, MIME:n, CORSin sekä
-Safari-toiston byte-range-vastauksen. Se ei saa ElevenLabs-avainta.
+Ensimmäinen tuonti `35072337161` toi oikeat raakaversiot, mutta Linuxin
+ffprobe sisällytti kestoarvioon MP3-kehysten täytteen. Automaattinen
+luupin keskitys vaihtui 0,250 sekunnista 0,270 sekuntiin. Siksi tästä
+ajosta syntynyttä MP3:aa ei kuitattu hyväksytyksi eikä pelikytkentään.
+Sen versio ja manifesti säilytetään jäljitettävyyttä varten.
+
+`tools/astronaut/exact-transfer.mjs` siirtää hyväksytyn MP3:n sellaisenaan.
+Saman tuontijobin `exactTransfer.prepare` antaa vain tämän SHA-avaimen
+PUT-siirtoon 15 minuutin luvan, joka on sidottu tavumäärään ja SHA-256:een.
+Siirtolupa salataan paikallisen kertakäyttöavaimen julkiselle osalle;
+API-avaimet eivät poistu Actionsista eikä selväkielinen siirtolupa mene
+lokiin tai repoon. Paikallinen asiakas lataa hyväksytyt tavut suoraan R2:een.
+`exactTransfer.finalize` tarkistaa ne, säilyttää aiemman manifestin ja
+siirtää pelialiaksen hyväksyttyyn MP3:aan. Se ei saa vaihtaa tuntematonta
+aiempaa tiedostoa. Julkinen SHA, MIME, CORS ja byte-range varmennetaan.
+Vanha uudelleenkoodauspolku pysähtyy jatkossa, jos hyväksytty SHA muuttuu.
 
 Lisäpostin musiikkitoive on luettu. Omistajalta kysytty erikseen, tarkoittaako
 ”yksi” yhteistä huminaa ja yhteistä musiikkia vai pelkkää huminaa.
