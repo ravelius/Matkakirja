@@ -444,7 +444,15 @@ test('pohjakuva valitaan ruudun mukaan, ja laastarin kynnys seuraa sitä', async
   // Satelliittilinssi vie samat nimet ulos: yksi totuus, kaksi ovea.
   const S = await import('../js/linssit/satelliitti-avaruus.js');
   assert.equal(S.RELIEFIN_OSOITE_8K, R.RELIEFIN_OSOITE_8K);
-  assert.equal(S.valitseReliefi({ leveys: 1400, dpr: 1 }).osoite, R.RELIEFIN_OSOITE_8K);
+  // RELIEFI_KOKO_PALLO on kytketty (16.9.2026): oletusosoite on nyt
+  // koko pallon 8k-kuva, ei vanha laudan reunaan rajattu kuva.
+  assert.equal(R.RELIEFI_KOKO_PALLO, true);
+  assert.equal(S.valitseReliefi({ leveys: 1400, dpr: 1 }).osoite, R.RELIEFIN_KOKO_8K.osoite);
+  assert.equal(
+    S.valitseReliefi({ leveys: 1400, dpr: 1, kokoPallo: false }).osoite,
+    R.RELIEFIN_OSOITE_8K,
+    'vanha kuvapari on yhä valittavissa eksplisiittisesti',
+  );
 
   /*
    * LAASTARIN KYNNYS ON POHJAN OMA TIHEYS × 1,4. 4k-pohjalla laastari
