@@ -272,6 +272,27 @@ const SAUMA = 'Even and unchanging from beginning to end: no intro, no build, '
  * siirtymäryhmä kuuluu "kaikki"-valintaan (ks. valitseLajit).
  */
 export const LAJIT = {
+  // Owner confirmed 16.9.: ONE music loop in addition to the approved hum.
+  // Separate player: Fable owns the lens integration, not siirtymamusiikki.js.
+  'astronautin-kamera': {
+    ryhma: 'erillinen-linssi',
+    tiedosto: 'astronautin-kamera-musiikki.mp3',
+    ampariKansio: 'matkakirja/aanet/linssit',
+    kuvaus: 'Yksi yhteinen, hidas avaruusambient huminan alle',
+    looppi: 150,
+    risti: 4,
+    lahdeMs: 170000,
+    kestoMin: 120,
+    kestoMax: 180,
+    prompt: 'Extremely quiet space ambient background for viewing Earth from orbit. '
+      + 'Soft weightless synthesizer pads and long warm sustained chords, very slow '
+      + 'harmonic movement, an open sense of wonder and calm. No beat, no pulse, '
+      + 'no rhythm, no percussion, no arpeggios, no lead melody, no dramatic swell, '
+      + 'no vocals, no choir, no speech. No radio, beeps, engines or other sound '
+      + 'effects: a separate space station hum plays above this music. Soft rounded '
+      + 'tones, no piercing highs or heavy sub-bass. Unobtrusive enough for reading '
+      + 'and quiet spoken dialogue. ' + SAUMA,
+  },
   jalan: {
     ryhma: 'siirtyma',
     tiedosto: 'siirtyma-jalan.mp3',
@@ -704,7 +725,7 @@ function tarkista(kohde, raita) {
 }
 
 /** Vie valmis raita ämpärin aanet/-kansioon (sama komento kuin muissakin ääniajoissa). */
-function vieAmpariin(kohde, nimi) {
+function vieAmpariin(kohde, nimi, kansio = AMPARIN_KANSIO) {
   const tili = process.env.R2_ACCOUNT_ID;
   const ampari = process.env.R2_BUCKET;
   const avain = process.env.AWS_ACCESS_KEY_ID ?? process.env.R2_ACCESS_KEY_ID;
@@ -717,7 +738,7 @@ function vieAmpariin(kohde, nimi) {
   if (!onOlemassa('aws')) throw new Error('aws-cli puuttuu — vienti tarvitsee sen.');
 
   aja('aws', [
-    's3', 'cp', kohde, `s3://${ampari}/${AMPARIN_KANSIO}/${nimi}`,
+    's3', 'cp', kohde, `s3://${ampari}/${kansio}/${nimi}`,
     '--endpoint-url', `https://${tili}.r2.cloudflarestorage.com`,
     '--no-progress',
     '--content-type', 'audio/mpeg',
@@ -726,8 +747,8 @@ function vieAmpariin(kohde, nimi) {
 }
 
 /** HEAD julkiseen osoitteeseen: näkyykö raita oikeasti ämpäristä. */
-function tarkistaJulkinen(nimi) {
-  const url = `${julkinenJuuri()}${AMPARIN_KANSIO}/${nimi}`;
+function tarkistaJulkinen(nimi, kansio = AMPARIN_KANSIO) {
+  const url = `${julkinenJuuri()}${kansio}/${nimi}`;
   if (!onOlemassa('curl')) return { url, koodi: null, pituus: null };
   const { loki } = aja('curl', ['-sS', '-I', '--max-time', '30', url], { salliVirhe: true });
   const koodi = loki.match(/HTTP\/[\d.]+ (\d{3})/)?.[1] ?? null;
@@ -810,7 +831,7 @@ async function main() {
       const raita = { ...LAJIT[nimi], tiedosto: raidanTiedosto(LAJIT[nimi], liput.moottori) };
       const kohde = join(kohdekansio, raita.tiedosto);
       const lahde = join(raakakansio, `raaka-${raita.tiedosto}`);
-      console.log(`\n── ${nimi} → ${AMPARIN_KANSIO}/${raita.tiedosto} (${raita.kuvaus})`);
+      console.log(`\n── ${nimi} → ${raita.ampariKansio ?? AMPARIN_KANSIO}/${raita.tiedosto} (${raita.kuvaus})`);
       console.log(`   looppi ${raita.looppi} s, sauma ${raita.risti} s, `
         + `lähde ${(lahdeMs(raita) / 1000).toFixed(0)} s, `
         + `kesto ${kestoRajat(raita).min}–${kestoRajat(raita).max} s, `
@@ -820,6 +841,19 @@ async function main() {
       if (liput.kuiva) {
         syntetisoiLahde(lahde, lahdeMs(raita) / 1000);
       } else {
+        if (nimi === 'astronautin-kamera') {
+          // Do not duplicate a paid call after an interrupted run or replace
+          // delivered music implicitly. Existing raw can be processed for free.
+          for (const key of [
+            `${raita.ampariKansio}/${raita.tiedosto}`,
+            `${raakaKansioAmpari}/raaka-${raita.tiedosto}`,
+          ]) {
+            const response = await fetch(`${julkinenJuuri()}${key}`, { method: 'HEAD', signal: AbortSignal.timeout(30000) });
+            if (response.status !== 404) throw new Error(response.ok
+              ? `Astronautin musiikki tai sen raaka on jo tallessa: ${key}. Ei uutta maksullista kutsua.`
+              : `Musiikin olemassaoloa ei voitu tarkistaa (HTTP ${response.status}). Ei maksullista kutsua.`);
+          }
+        }
         // eslint-disable-next-line no-await-in-loop
         const tavut = liput.moottori === 'lyria'
           // Siirtymä- ja linssiraidat ovat kaikki looppeja, joten sauma
@@ -864,7 +898,7 @@ async function main() {
 
     if (!liput.kuiva && liput.vienti) {
       for (const { raita } of valmiit) {
-        vieAmpariin(join(kohdekansio, raita.tiedosto), raita.tiedosto);
+        vieAmpariin(join(kohdekansio, raita.tiedosto), raita.tiedosto, raita.ampariKansio);
       }
       if (raakatiedot.size) {
         const kelvanneet = new Set(valmiit.map(({ raita }) => raita.tiedosto));
@@ -872,13 +906,13 @@ async function main() {
           putki: 'siirtymamusiikki',
           batchId: era,
           sourceCommit,
-          resepti: { lajit, moottori: liput.moottori, malli: MALLI, muoto: MUOTO },
+          resepti: { lajit, moottori: liput.moottori, malli: liput.moottori === 'lyria' ? LYRIA_MALLI : MALLI, muoto: MUOTO },
           rivit: [...raakatiedot.entries()].map(([tiedosto, raaka]) => {
             const kelpasi = kelvanneet.has(tiedosto);
             const polku = join(kohdekansio, tiedosto);
             return {
               fileName: tiedosto,
-              outputPath: `${AMPARIN_KANSIO}/${tiedosto}`,
+              outputPath: `${valmiit.find(({raita})=>raita.tiedosto===tiedosto)?.raita.ampariKansio ?? AMPARIN_KANSIO}/${tiedosto}`,
               status: kelpasi ? 'generated' : 'validation-failed',
               rawArtifact: raaka,
               finalArtifact: kelpasi
@@ -905,7 +939,7 @@ async function main() {
   } else {
     console.log('Julkiset osoitteet:');
     for (const { raita } of valmiit) {
-      const { url, koodi, pituus } = tarkistaJulkinen(raita.tiedosto);
+      const { url, koodi, pituus } = tarkistaJulkinen(raita.tiedosto, raita.ampariKansio);
       const kunnossa = koodi === '200';
       if (!kunnossa) virheita += 1;
       console.log(`  ${url} → HTTP ${koodi ?? '?'}`

@@ -201,7 +201,7 @@ test('työkalu kirjoittaa tasan ne tiedostot, jotka peli hakee', () => {
   // Lajin nimessä saa olla väliviiva (linssi-ihmisen-matka-lyria.mp3).
   const pelinNimet = [...PELI.matchAll(/aanet\/((?:siirtyma|linssi)-[a-z-]+-lyria\.mp3)/g)].map((m) => m[1]);
   assert.equal(pelinNimet.length, 5, 'peli hakee viisi raitaa ämpärin aanet/-kansiosta');
-  const tyokalunNimet = Object.values(LAJIT).map((r) => raidanTiedosto(r, tulkitseArgumentit(['--laji', 'kaikki']).moottori));
+  const tyokalunNimet = Object.values(LAJIT).filter(r=>r.ryhma!=='erillinen-linssi').map((r) => raidanTiedosto(r, tulkitseArgumentit(['--laji', 'kaikki']).moottori));
   assert.deepEqual([...tyokalunNimet].sort(), [...pelinNimet].sort());
   // Siirtymälajit ovat työkalun siirtymäryhmä, samassa järjestyksessä.
   const lajit = PELI.match(/export const SIIRTYMALAJIT = \[([^\]]+)\]/)[1]
@@ -211,7 +211,7 @@ test('työkalu kirjoittaa tasan ne tiedostot, jotka peli hakee', () => {
   assert.match(PELI, /export const MUSIIKKILAJIT = Object\.keys\(RAIDAT\)/);
   // Väliviivallinen laji on lainausmerkeissä ('ihmisen-matka': { … }).
   const pelinLajit = [...PELI.matchAll(/^ {2}'?([a-z-]+)'?: \{$/gm)].map((m) => m[1]);
-  assert.deepEqual(pelinLajit.filter((n) => Object.hasOwn(LAJIT, n)), Object.keys(LAJIT));
+  assert.deepEqual(pelinLajit.filter((n) => Object.hasOwn(LAJIT, n)), Object.keys(LAJIT).filter(n=>LAJIT[n].ryhma!=='erillinen-linssi'));
 });
 
 test('linssiraita on pitkä looppi ja siirtymäraidat lyhyitä', () => {
@@ -253,6 +253,7 @@ test('jokainen looppi mahtuu lajinsa kestorajoihin ja lähteen sisään', () => 
 
 test('promptit ovat instrumentaaleja ja kieltävät elektroniikan', () => {
   for (const [nimi, raita] of Object.entries(LAJIT)) {
+    if (raita.ryhma === 'erillinen-linssi') continue;
     assert.match(raita.prompt, /No modern synths/, `${nimi}: tyyli puuttuu`);
     assert.match(raita.prompt, /no vocals/, `${nimi}: laulukielto puuttuu`);
     assert.match(raita.prompt, /repeat forever/, `${nimi}: saumaohje puuttuu`);
