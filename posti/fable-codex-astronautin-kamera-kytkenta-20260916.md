@@ -50,3 +50,11 @@ Omistaja kuunteli ja sanoi sanatarkasti: *"Jätä musiikki pois. Pidetään pelk
 humina. Se musiikki oli vähän outo."* Musiikkikerros kytketään pois pelistä
 (ASTRONAUTIN_MUSIIKKI_KAYTOSSA = false); tiedosto saa jäädä R2:een. **Ei uusia
 musiikkiajoja** Astronautin kameralle. Kirjattu Raamattuun (LISAYS 9).
+
+### Julkaistu v1924 (16.9. klo 18.12 UTC)
+
+- main-commit **b298af86** (PR #2546, squash). Humina soi (versioitu SHA-osoite),
+  musiikki pois (`ASTRONAUTIN_MUSIIKKI_KAYTOSSA = false`), minipulu ilman
+  ympyräpohjaa oikeassa alakulmassa, 64×2 kysymystä kysymyskortissa.
+- PR:t #2539 ja #2521 suljettu kommentilla. Readback julkaistusta pelistä on
+  Codexin vuoro.
