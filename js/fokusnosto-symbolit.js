@@ -1600,6 +1600,79 @@ const NOSTOSYM_KUVAT = Object.fromEntries(
  */
 export const NOSTOSYM_NIMIO_KOKO = 11;
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * NIMIÖN RUUTUPIKSELIKATTO — YKSI KATTO KAIKILLE KARTAN MERKEILLE
+ * (omistaja 16.9.2026 klo 16.05 UTC, Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 31 kohta 2 ja TARKENNUS 1 kohta 3)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Kartan merkki skaalautuu zoomatessa kuin painettu kartta (PAATOKSET
+ * 2), ja nimiö skaalautuu samassa rasterissa mukana (ks. alempana
+ * piirraNostosymKartalle). Ilman kattoa nimiön RUUTUKOKO kasvaa
+ * rajatta: mitattu 390 × 844 dpr 2, Pariisin sisin sallittu zoomi
+ * (osuus 0,341 uloimmasta), noston nimiö 25 px ja leveimmillään
+ * 239 px 373 px:n kotelossa — juuri se, minkä omistaja näki
+ * *"jattimaisina ja sumeina"* nimiöinä.
+ *
+ * KATTO ASUU TÄSSÄ, KOSKA MERKKEJÄ PIIRTÄÄ USEAMPI MODUULI. Nimiön
+ * kirjasinkoko ruudulla on `mitta × NOSTOSYM_NIMIO_KOKO`, joten katto
+ * kuuluu samaan tiedostoon kuin kirjasinkoko: silloin jokainen merkin
+ * piirtäjä — karttanostot ja aihemerkit (js/pallolauta/nostot.js) sekä
+ * turisti-infon kyltti (js/kaupunkinosto.js) — saa saman katon
+ * TUOMALLA sen, ei toistamalla lukua. Mitattu 16.9.2026: kyltillä oli
+ * oma kattonsa (mitta 3 eli nimiö 33 px), ja se kasvoi Pariisin
+ * lähizoomissa 27,8 px ruudun oikean laidan yli. Sama vika, eri luku.
+ *
+ * KATTO ON MERKIN MITASSA, EI KAMERAN KERTOIMESSA: merkeillä on eri
+ * peruskoot (nosto 8,5 px, kaupunkimerkki ja turisti-info 11,5 px),
+ * joten yksi kerroinkatto antaisi niille eri ruutukoon. Kun katko
+ * tehdään siihen lukuun, joka ruudulla oikeasti mitataan, jokainen
+ * merkki pysähtyy TÄSMÄLLEEN samaan pikselimäärään — kukin omalla
+ * zoomillaan.
+ */
+/** Nimiön suurin kirjasinkoko ruudulla (px), ks. yllä. */
+export const NOSTOSYM_NIMIO_KATTO_PX = 16;
+/** Merkin mitan katto: nimiö ei kasva yli NOSTOSYM_NIMIO_KATTO_PX:n. */
+export const NOSTOSYM_MITAN_KATTO = NOSTOSYM_NIMIO_KATTO_PX / NOSTOSYM_NIMIO_KOKO;
+/*
+ * KATON VASTAKOE YHDELLÄ LIPULLA: `?nimiokatto=0` sammuttaa katon,
+ * jolloin merkit kasvavat kuten ennen PAATOKSET 31:tä. Savuke mittaa
+ * saman näkymän molemmin päin ja näkee, mitä katto oikeasti tekee —
+ * sama tapa kuin `?aihemerkit=0` (js/pallolauta/nostot.js) ja
+ * `?vektorit=0`.
+ *
+ * LIPPU MUISTETAAN HAKUMERKKIJONOA KOHTI, koska tämä luetaan jokaiselle
+ * merkille jokaisessa ladonnassa: URLSearchParams uudelleen joka
+ * merkille olisi turhaa työtä piirtosilmukassa. Muisti tyhjenee itse,
+ * kun osoite muuttuu (myös `history.replaceState`illa), joten savuke voi
+ * kääntää lipun kesken ajon ilman sivun uudelleenlatausta.
+ */
+let kattoMuisti = { haku: null, arvo: true };
+function nimiokattoKaytossa() {
+  let haku = '';
+  try { haku = globalThis.location?.search ?? ''; } catch { return true; }
+  if (kattoMuisti.haku !== haku) {
+    let arvo = true;
+    try {
+      arvo = !/^(0|ei|off)$/.test(new URLSearchParams(haku).get('nimiokatto') ?? '');
+    } catch { arvo = true; }
+    kattoMuisti = { haku, arvo };
+  }
+  return kattoMuisti.arvo;
+}
+/**
+ * Merkin mitta katkaistuna ruutupikselikattoon. Yksi funktio, jotta
+ * sääntö luetaan yhdestä paikasta: kutsuja laskee mittansa omalla
+ * kaavallaan ja päästää sen tästä läpi.
+ *
+ * @param {number} mitta merkin mitta (1 = nimiö NOSTOSYM_NIMIO_KOKO px)
+ * @returns {number} sama mitta, enintään NOSTOSYM_MITAN_KATTO
+ */
+export function nostosymKatettuMitta(mitta) {
+  return nimiokattoKaytossa() ? Math.min(NOSTOSYM_MITAN_KATTO, mitta) : mitta;
+}
+
 /**
  * NIMIÖN ASUT — samat kaksi kuin lehteen poltetuilla nimillä.
  *

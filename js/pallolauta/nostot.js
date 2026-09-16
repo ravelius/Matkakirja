@@ -51,7 +51,8 @@ import { avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
 import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenAsteet } from '../fokuspiste.js';
 import { fokusvirtaAarrepisteOhje, fokusvirtaKohtaamispiste } from '../fokusvirta.js';
 import {
-  NOSTOSYM_MINI_RUUTU, NOSTOSYM_NIMIO_KOKO, nostosymAsetaPorras, nostosymNimioAsemointi,
+  NOSTOSYM_MINI_RUUTU, NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KATTO_PX, NOSTOSYM_NIMIO_KOKO,
+  nostosymAsetaPorras, nostosymKatettuMitta, nostosymNimioAsemointi,
   nostosymNimioMitta, nostosymPaakategoria, nostosymVirkistaRasterit, piirraNostosymKartalle,
 } from '../fokusnosto-symbolit.js';
 import { KARTTANIMI_KOOT } from '../karttanimet.js';
@@ -416,10 +417,19 @@ let nostonKarttakerroin = 1;
  * merkkien väli kasvaa, joten limitys purkautuu itsestään — ja
  * ryhmitys voi vihdoin noudattaa PAATOKSET 27 kohtaa 3 sellaisenaan.
  */
+/*
+ * KATTO ON YHTEINEN, EI TÄMÄN KERROKSEN OMA (PAATOKSET 31 TARKENNUS 1
+ * kohta 3, 16.9.2026). Luku ja katkofunktio asuvat siellä, missä nimiön
+ * kirjasinkokokin (js/fokusnosto-symbolit.js NOSTOSYM_NIMIO_KATTO_PX),
+ * jotta turisti-infon kyltti (js/kaupunkinosto.js) saa TÄSMÄLLEEN saman
+ * katon tuomalla sen. Nämä kaksi nimeä jäävät tähän kerroksen omalla
+ * sanastollaan — savukkeet ja aihemerkit lukevat niitä — mutta ne ovat
+ * nyt saman luvun kaksi nimeä eivätkä kaksi lukua.
+ */
 /** Nimiön suurin kirjasinkoko ruudulla (px), ks. yllä. */
-export const NOSTON_NIMIO_KATTO_PX = 16;
+export const NOSTON_NIMIO_KATTO_PX = NOSTOSYM_NIMIO_KATTO_PX;
 /** Merkin mitan katto: nimiö ei kasva yli NOSTON_NIMIO_KATTO_PX:n. */
-export const NOSTON_MITAN_KATTO = NOSTON_NIMIO_KATTO_PX / NOSTOSYM_NIMIO_KOKO;
+export const NOSTON_MITAN_KATTO = NOSTOSYM_MITAN_KATTO;
 /**
  * Noston mitta juuri nyt: ruutuvakio × kartan kerroin × merkin oma
  * kerroin, katkaistuna nimiön ruutupikselikattoon (ks. yllä).
@@ -427,7 +437,7 @@ export const NOSTON_MITAN_KATTO = NOSTON_NIMIO_KATTO_PX / NOSTOSYM_NIMIO_KOKO;
  * @param {number} [omaKerroin] merkin oma kerroin (merkinKerroin)
  */
 export function nostonMitta(omaKerroin = 1) {
-  return Math.min(NOSTON_MITAN_KATTO, NOSTON_MITTA * nostonKarttakerroin * omaKerroin);
+  return nostosymKatettuMitta(NOSTON_MITTA * nostonKarttakerroin * omaKerroin);
 }
 
 /**
