@@ -101,7 +101,15 @@ await new Promise((r) => palvelin.listen(PORTTI, r));
 
 const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
 const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({
+  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+  /*
+   * Ilman tätä Chromium ei päästä isoisän luentaa soimaan ilman elettä,
+   * eikä luennan tila (pulun pluskupla, luentakuvapakka) synny lainkaan
+   * — ja juuri se tila on omistajan vika 16.9.2026 klo 15.30.
+   */
+  args: ['--autoplay-policy=no-user-gesture-required'],
+});
 
 /** Omistajan kaksi ruutua: pystypuhelin ja työpöytä. */
 const RUUDUT = [
@@ -600,6 +608,455 @@ for (const ruutu of RUUDUT) {
     + `pelin elementtejä ${Object.values(v.lahi.elementit ?? {}).reduce((a, b) => a + b, 0)} `
     + JSON.stringify(v.lahi.elementit));
 }
+
+/* ══════════════════════════════════════════════════════════════════════
+ * AVAUSMITTAUS — 390 px, ISOISÄN LUENTA KÄYNNISSÄ
+ * ══════════════════════════════════════════════════════════════════════
+ *
+ * OMISTAJAN VIKA 16.9.2026 klo 15.30 (sanatarkasti): *"Topografia linssi
+ * tökkii (vaalea kartta piirtyy ilmeisesti ensin ja sitten Topografia
+ * sen päälle) lisäksi näytölle jää ilmeisesti kuvia sekä ainakin pulun
+ * mini puhekupla jossa plus merkki"*.
+ *
+ * MIKSI YLLÄ OLEVA AJO EI NÄHNYT MITÄÄN NÄISTÄ. `ajaRuutu` pakottaa
+ * pelin toimintavaiheeseen Pariisiin ja avaa linssin siitä: silloin
+ * isoisän luentaa ei ole, saapumiskuvaa ei ole, pulu ei ole puhunut
+ * eikä luentakuvapakkaa ole nostettu kartalle. Omistaja pelaa peliä,
+ * eli hän avaa linssin JUURI SILLOIN kun kaikki nuo ovat ruudulla.
+ * Tämä ajo tekee sen: oikea tallenne Ateenaan, saapumiskortti auki,
+ * luenta soimassa — ja mittaa AVAUKSEN, ei vain lopputilaa.
+ *
+ * KOLME MITTAA, KAIKKI KONEELTA:
+ *
+ *   a) KIRKKAUS kompositorin kehyksistä (Page.startScreencast).
+ *      Screencast on tässä ainoa kelpo tapa: pääsäie on avauksen
+ *      aikana varattu, ja `Page.captureScreenshot` jonottaa sen
+ *      taakse — mitattuna kaappausväli venyi 2,4 sekuntiin, eli
+ *      mittari olisi mitannut itseään.
+ *   b) PALJAAN KARTAN NÄYTTEET sivun omasta kehyssilmukasta: onko
+ *      hetkeäkään, jolloin pelin kerrokset on jo riisuttu mutta
+ *      kartan päällä ei ole peitettä eikä reliefiä.
+ *   c) JÄÄNTEET kartan päällä (> 400 px²), nimilistan sijaan koko
+ *      puusta — nimilista löytää vain sen, mitä osataan odottaa.
+ */
+
+const AVAUSRUUTU = { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 };
+const AVAUSKAUPUNKI = 'ateena';
+/**
+ * Näiden alla asuu sovelluksen oma kehys (yläpalkki, sivupalkki) ja
+ * linssin omat kerrokset. Kaikki muu kartan päällä on jäänne.
+ */
+const SALLITUT_PESAT = '.rail, header, .topbar, .linssi-selite, .linssivalitsin, .pallolauta-kalvo';
+/** Kartan ja pallon omat kuoret: kontteja, eivät sisältöä. */
+const KUORET = '.app, .stage, .map-pane, .scene-container, .kartta-kuori, #board, '
+  + '.pallo-kuori, .pallo-kotelo, .maapaneeli-nurkka';
+
+/** Kartan päälle jääneet, linssiin kuulumattomat elementit. */
+const JAANTEET = `() => {
+  const kartta = document.querySelector('.map-pane');
+  const karttaAla = kartta ? (() => { const r = kartta.getBoundingClientRect(); return r.width * r.height; })() : 0;
+  const tulos = [];
+  for (const el of document.body.querySelectorAll('*')) {
+    if (['SCRIPT', 'STYLE', 'DEFS', 'TITLE', 'LINK', 'META', 'CANVAS'].includes(el.tagName)) continue;
+    if (el.closest(${JSON.stringify(SALLITUT_PESAT)})) continue;
+    if (el.matches(${JSON.stringify(KUORET)})) continue;
+    const r = el.getBoundingClientRect();
+    const ala = r.width * r.height;
+    if (ala <= 400) continue;
+    // Kartan kokoiset kuoret eivät ole sisältöä (nimettömät väli-divit).
+    if (karttaAla && ala >= karttaAla * 0.85) continue;
+    if (r.right <= 0 || r.bottom <= 0 || r.left >= innerWidth || r.top >= innerHeight) continue;
+    let piilossa = false;
+    for (let p = el; p; p = p.parentElement) {
+      const s = getComputedStyle(p);
+      if (s.display === 'none' || s.visibility === 'hidden' || Number(s.opacity) < 0.05) { piilossa = true; break; }
+    }
+    if (piilossa) continue;
+    tulos.push({
+      valitsin: el.tagName.toLowerCase() + (el.id ? '#' + el.id : '')
+        + (el.getAttribute('class') ? '.' + el.getAttribute('class').split(/\\s+/).slice(0, 3).join('.') : ''),
+      ala: Math.round(ala),
+    });
+  }
+  return tulos.sort((a, b) => b.ala - a.ala);
+}`;
+
+/** Yksi avausmittaus. `peite = false` on vastakoe (`?topopeite=0`). */
+async function ajaAvaus({ peite = true } = {}) {
+  const virheet = [];
+  const konteksti = await selain.newContext({ ...AVAUSRUUTU, serviceWorkers: 'block' });
+  const { Game } = await import('../../js/game.js');
+  const { packById } = await import('../../js/pack.js');
+  const peli = new Game({
+    players: [{ name: 'Fogg', color: '#c9a227', start: AVAUSKAUPUNKI }],
+    pack: packById('maailmankartta'),
+    seed: 5,
+  });
+  peli.phase = 'action';
+  await konteksti.addInitScript((data) => {
+    try {
+      localStorage.setItem('matkakirja-save-v1', data);
+      localStorage.setItem('matkakirja-livia-avaus', '1');
+      localStorage.setItem('matkakirja-livia-paljastus', '1');
+    } catch { /* yksityinen tila */ }
+  }, JSON.stringify(peli.toJSON()));
+  const sivu = await konteksti.newPage();
+  sivu.on('pageerror', (e) => virheet.push(String(e)));
+  await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
+  await sivu.route(/media\.matkakirja\.app|r2\.dev/, async (route) => {
+    const vastaus = await ampariHaku(route.request().url());
+    if (!vastaus) { route.fulfill({ status: 404, body: '' }); return; }
+    route.fulfill({
+      status: 200, contentType: vastaus.tyyppi ?? 'application/octet-stream', body: vastaus.body,
+      headers: { 'access-control-allow-origin': '*' },
+    });
+  });
+  const cdp = await konteksti.newCDPSession(sivu);
+
+  await sivu.goto(
+    `http://127.0.0.1:${PORTTI}/index.html?lauta=pallo${peite ? '' : '&topopeite=0'}`,
+    { waitUntil: 'domcontentloaded' },
+  );
+  await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 })
+    .catch(() => null);
+  await sivu.waitForTimeout(4000);
+  await sivu.evaluate((id) => {
+    const { ui, game } = window.matkakirja;
+    game.player.pos = { type: 'city', city: id };
+    game.world.visited.add(id);
+    game.arrivalFact = { packId: game.pack.id, cityId: id };
+    ui.render();
+  }, AVAUSKAUPUNKI);
+  // Luenta soimaan: vasta silloin ruudulla on se tila, jonka omistaja näki.
+  const luentaSoi = await sivu.waitForFunction(`(() => {
+    const a = window.matkakirja?.ui?.diaryVoice;
+    return Boolean(a) && !a.paused && a.currentTime > 0;
+  })()`, null, { timeout: 90000 }).then(() => true).catch(() => false);
+  /*
+   * PULUN PLUSKUPLA JA LUENTAKUVAPAKKA PELIN OMILLA FUNKTIOILLA.
+   *
+   * Molemmat syntyvät pelatessa itsestään, mutta vasta isojen
+   * luentakuvien sarjan LOPUKSI (js/fokusvirta.js naytaPulunKuvapakka)
+   * ja pulun ensimmäisestä repliikistä — kuormitetussa kontissa se on
+   * minuutteja. Savuke kutsuu siksi samoja funktioita suoraan: syntyvät
+   * elementit ovat pelin omia, eikä vartija odota kelloa.
+   *
+   * Pystyruudulla uusi puhekupla imeytyy heti pluskuplaan
+   * (js/pollo.js lisaaPinoon, css/styles.css kohta 26917) — juuri se
+   * *"pulun mini puhekupla jossa plus merkki"*, jonka omistaja näki.
+   */
+  const nakyvissa = (valitsin) => sivu.evaluate((s) => {
+    const el = document.querySelector(s);
+    if (!el) return false;
+    const r = el.getBoundingClientRect();
+    const st = getComputedStyle(el);
+    return r.width > 4 && r.height > 4 && st.display !== 'none'
+      && st.visibility !== 'hidden' && Number(st.opacity) > 0.02;
+  }, valitsin);
+  const pakota = () => sivu.evaluate(async (id) => {
+    const { ui } = window.matkakirja;
+    const P = await import('/js/pollo.js');
+    P.polloSaapumiskupla('Kurr! Ateenassa tuulee lämpimästi.');
+    const F = await import('/js/fokusvirta.js');
+    const kaupunki = ui.game.pack.cities.find((c) => c.id === id);
+    if (kaupunki) F.naytaPulunKuvapakka(ui, kaupunki, { heti: true });
+  }, AVAUSKAUPUNKI).catch(() => null);
+  /*
+   * ISO LUENTAKUVASARJA ELÄÄ TAUSTALLA ja voi korvata juuri nostetun
+   * pakan seuraavalla kuvallaan, joten pakotus toistetaan kunnes
+   * molemmat ovat ruudulla (tai yritykset loppuvat). Mitattuna yksi
+   * kutsu riitti kevyellä kuormalla mutta ei aina raskaalla.
+   */
+  for (let yritys = 0; yritys < 5; yritys += 1) {
+    await pakota();
+    await sivu.waitForTimeout(2500);
+    if (await nakyvissa('.pollo-kuplapalautus') && await nakyvissa('.fokusvirta-luentakuva')) break;
+  }
+
+  const ennenJaanteet = await sivu.evaluate(`(${JAANTEET})()`);
+
+  /* --- mittarit sivun sisään: kehyskohtainen näyte + longtask ------- */
+  await sivu.evaluate(() => {
+    window.__topo = { alku: performance.timeOrigin, pitkat: [], naytteet: [], kaynnissa: true };
+    try {
+      new PerformanceObserver((l) => {
+        for (const e of l.getEntries()) {
+          window.__topo.pitkat.push({ alku: +e.startTime.toFixed(1), kesto: +e.duration.toFixed(1) });
+        }
+      }).observe({ entryTypes: ['longtask'] });
+    } catch { /* ei tuettu */ }
+    const askel = () => {
+      if (!window.__topo.kaynnissa) return;
+      const ui = window.matkakirja?.ui;
+      let t = null;
+      try { t = ui?.pallolinssi?.kahva?.tila?.() ?? null; } catch { t = null; }
+      window.__topo.naytteet.push({
+        t: +performance.now().toFixed(1),
+        portti: document.body.classList.contains('aikajana-paalla'),
+        peitto: t?.perusPeitto ?? null,
+        tavoite: t?.perusTavoite ?? null,
+        peite: t?.peite ?? null,
+      });
+      requestAnimationFrame(askel);
+    };
+    requestAnimationFrame(askel);
+  });
+
+  /* --- kompositorin kehykset (ks. a) yllä) -------------------------- */
+  const kehykset = [];
+  cdp.on('Page.screencastFrame', async (f) => {
+    kehykset.push({ ts: f.metadata.timestamp * 1000, data: f.data });
+    try { await cdp.send('Page.screencastFrameAck', { sessionId: f.sessionId }); } catch { /* ohi */ }
+  });
+  await cdp.send('Page.startScreencast', {
+    format: 'png',
+    everyNthFrame: 1,
+    maxWidth: Math.round(AVAUSRUUTU.viewport.width / 2),
+    maxHeight: Math.round(AVAUSRUUTU.viewport.height / 2),
+  });
+  await sivu.waitForTimeout(2500);
+
+  const t0 = await sivu.evaluate(async () => {
+    const { ui } = window.matkakirja;
+    ui.busy = false;
+    if (!ui.game.player.linssit.includes('topografia')) ui.game.player.linssit.push('topografia');
+    await ui.lataaLinssit?.();
+    const t = performance.now();
+    ui.valitseLinssi('topografia');
+    return +t.toFixed(1);
+  });
+  // Reliefi perille asti; kuormitetussa kontissa se vie kymmeniä sekunteja.
+  await sivu.waitForFunction(() => {
+    const t = window.matkakirja?.ui?.pallolinssi?.kahva?.tila?.();
+    return Boolean(t) && (t.perusPeitto ?? 0) >= (t.perusTavoite ?? 0.72) * 0.98;
+  }, null, { timeout: 120000 }).catch(() => null);
+  await sivu.waitForTimeout(1200);
+  await cdp.send('Page.stopScreencast').catch(() => {});
+
+  const data = await sivu.evaluate(() => {
+    window.__topo.kaynnissa = false;
+    return { alku: window.__topo.alku, pitkat: window.__topo.pitkat, naytteet: window.__topo.naytteet };
+  });
+  const jalkeenJaanteet = await sivu.evaluate(`(${JAANTEET})()`);
+  const tila = await sivu.evaluate(`(${TILA})()`);
+  const kuva = Buffer.from(
+    (await cdp.send('Page.captureScreenshot', { format: 'png' })).data, 'base64',
+  );
+  writeFileSync(join(ULOS, `topografialinssi-390-luenta${peite ? '' : '-vastakoe'}.png`), kuva);
+
+  /* --- GPU-latauksen mekanismi: ImageBitmap vs <img> ---------------- */
+  const purku = peite ? await sivu.evaluate(async () => {
+    const { valitseReliefi } = await import('/js/linssit/reliefikuva.js');
+    // Sama valinta kuin linssillä: puhelimella 4k, leveällä ruudulla 8k.
+    const osoite = valitseReliefi({ leveys: innerWidth, dpr: devicePixelRatio }).osoite;
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.src = osoite;
+    await new Promise((r) => { img.onload = r; img.onerror = r; });
+    const bm = await createImageBitmap(await (await fetch(osoite)).blob(), { imageOrientation: 'flipY' });
+    const vie = (lahde) => {
+      const cv = document.createElement('canvas'); cv.width = 32; cv.height = 32;
+      const gl = cv.getContext('webgl2') || cv.getContext('webgl');
+      if (!gl) return null;
+      const tex = gl.createTexture();
+      gl.bindTexture(gl.TEXTURE_2D, tex);
+      const t = performance.now();
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, lahde);
+      gl.finish();
+      const ms = Math.round(performance.now() - t);
+      gl.deleteTexture(tex);
+      return ms;
+    };
+    const tulos = { img: vie(img), bitmap: vie(bm), koko: `${bm.width}x${bm.height}` };
+    bm.close();
+    return tulos;
+  }) : null;
+  /* --- onko linssin OMA tekstuuri bittikartta ja oikein päin? ------- */
+  const tekstuuri = await sivu.evaluate(async () => {
+    /*
+     * LINSSIN OMA KALVO TUNNISTETAAN SYVYYSSIIRROSTA. Näyttämöllä on
+     * monta 4096 pikselin tekstuuria (pallon oma pinta, laatat), ja
+     * ensimmäinen osuma olisi niistä väärä — mitattuna juuri niin kävi.
+     * `KALVON_SYVYYSSIIRTO` on vain linssikalvoilla.
+     */
+    const { KALVON_SYVYYSSIIRTO } = await import('/js/pallolauta/linssit.js');
+    const pallo = window.matkakirja?.ui?.pallolauta?.pallo;
+    const nayttamo = pallo?.scene?.();
+    let osuma = null;
+    nayttamo?.traverse?.((o) => {
+      if (osuma) return;
+      const m = Array.isArray(o.material) ? o.material[0] : o.material;
+      if (!m || m.polygonOffsetUnits !== KALVON_SYVYYSSIIRTO) return;
+      const t = m.map ?? m.emissiveMap;
+      const kuva = t?.image;
+      // Koko pallon kalvo, ei tarkennuslaastarin kangas (pieni canvas).
+      if (!kuva || (kuva.width !== 4096 && kuva.width !== 8192)) return;
+      osuma = {
+        laji: typeof ImageBitmap !== 'undefined' && kuva instanceof ImageBitmap
+          ? 'ImageBitmap' : (kuva.tagName ?? 'muu'),
+        flipY: t.flipY,
+        leveys: kuva.width,
+      };
+    });
+    return osuma;
+  });
+
+  await konteksti.close();
+
+  /* --- kehysten kirkkaus: ruudun keskipiste ------------------------- */
+  const keskikirkkaus = (buf) => {
+    const { w, h, d } = pngRGBA(buf);
+    const x0 = Math.round(w * 0.42); const x1 = Math.round(w * 0.58);
+    const y0 = Math.round(h * 0.46); const y1 = Math.round(h * 0.54);
+    let s = 0; let n = 0;
+    for (let y = y0; y < y1; y += 1) {
+      for (let x = x0; x < x1; x += 1) {
+        const i = (y * w + x) * 4;
+        s += 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2];
+        n += 1;
+      }
+    }
+    return n ? s / n : 0;
+  };
+  const rivit = kehykset.map((k) => ({
+    t: k.ts - data.alku - t0,
+    kirkkaus: keskikirkkaus(Buffer.from(k.data, 'base64')),
+  })).sort((a, b) => a.t - b.t);
+
+  /*
+   * IKKUNA ON AVAUS: linssin valinnasta siihen hetkeen, jolloin reliefi
+   * on perillä. Sen jälkeen ruutu on linssin oma eikä siirtymää enää
+   * ole.
+   */
+  const valmis = data.naytteet.find((s) => (s.peitto ?? 0) >= (s.tavoite ?? 0.72) * 0.98);
+  const loppu = valmis ? valmis.t - t0 : Infinity;
+  const ennenRivit = rivit.filter((x) => x.t < 0);
+  const avausRivit = rivit.filter((x) => x.t >= 0 && x.t <= loppu);
+  const ennenKirkkaus = ennenRivit.length
+    ? ennenRivit.reduce((a, b) => a + b.kirkkaus, 0) / ennenRivit.length : 0;
+
+  /* Paljaan kartan näytteet: portti auki, ei peitettä eikä reliefiä. */
+  const avausNaytteet = data.naytteet.filter((s) => s.t >= t0 && s.t - t0 <= loppu);
+  const paljaat = avausNaytteet.filter(
+    (s) => s.portti === true && (s.peitto ?? 0) < 0.05 && s.peite !== true,
+  );
+
+  const pitkat = data.pitkat.map((l) => ({ dt: l.alku - t0, kesto: l.kesto }));
+  const lepo = pitkat.filter((l) => l.dt < 0).map((l) => l.kesto);
+  const avaus = pitkat.filter((l) => l.dt >= 0 && l.dt <= loppu).map((l) => l.kesto);
+
+  return {
+    luentaSoi,
+    ennenJaanteet,
+    jalkeenJaanteet,
+    tila,
+    purku,
+    tekstuuri,
+    virheet,
+    ennenKirkkaus,
+    avausKehykset: avausRivit.length,
+    avausHuippu: avausRivit.length ? Math.max(...avausRivit.map((x) => x.kirkkaus)) : 0,
+    avausNaytteita: avausNaytteet.length,
+    paljaita: paljaat.length,
+    avausMs: Number.isFinite(loppu) ? Math.round(loppu) : null,
+    lepoPisin: lepo.length ? Math.max(...lepo) : 0,
+    avausPisin: avaus.length ? Math.max(...avaus) : 0,
+  };
+}
+
+const a = await ajaAvaus();
+const nimiA = '390 px, luenta';
+
+vaadi(`${nimiA}: omistajan tila toistui (luenta, saapumiskuva, pluskupla, kuvapakka)`,
+  a.luentaSoi
+    && a.ennenJaanteet.some((x) => x.valitsin.includes('pollo-kuplapalautus'))
+    && a.ennenJaanteet.some((x) => x.valitsin.includes('fokusvirta-luentakuva')),
+  `luenta ${a.luentaSoi}, pluskupla `
+  + `${a.ennenJaanteet.some((x) => x.valitsin.includes('pollo-kuplapalautus'))}, kuvapakka `
+  + `${a.ennenJaanteet.some((x) => x.valitsin.includes('fokusvirta-luentakuva'))}; `
+  + `ennen linssiä ruudulla ${JSON.stringify(a.ennenJaanteet.slice(0, 6))}`);
+
+/*
+ * (a) EI VAALEAA VÄLIVAIHETTA. Omistajan sanat: *"vaalea kartta piirtyy
+ * ilmeisesti ensin ja sitten Topografia sen päälle"*. Ruudun
+ * keskipisteen kirkkaus ei saa avauksen aikana nousta yli sen, mitä se
+ * oli ENNEN linssiä — ei kymmentäkään prosenttia. Näytteitä on
+ * kompositorin kehyksistä, ja niitä vaaditaan vähintään 20, jottei
+ * väite mene läpi tyhjällä otoksella.
+ */
+vaadi(`${nimiA}: avauksen aikana ruutu ei ole kertaakaan ennen-linssiä-tasoa vaaleampi`,
+  a.avausKehykset >= 20 && a.avausHuippu <= a.ennenKirkkaus * 1.1,
+  `kehyksiä ${a.avausKehykset}, huippu ${a.avausHuippu.toFixed(1)}, `
+  + `ennen linssiä ${a.ennenKirkkaus.toFixed(1)} (raja ${(a.ennenKirkkaus * 1.1).toFixed(1)})`);
+
+/*
+ * (b) KARTTA EI OLE HETKEÄKÄÄN PALJAANA. Tämä on se väite, joka
+ * erottaa korjatun avauksen rikkinäisestä: kirkkausväite yksin ei
+ * riitä, koska paljas pelikartta EI OLE saapumiskuvaa vaaleampi
+ * (mitattu 16.9.2026: keskipiste 96,9 → 68,7 → 91,5). Portin
+ * asettaminen riisuu kartan; jos samalla hetkellä ei ole peitettä eikä
+ * reliefiä, pelaaja katsoo paljasta karttaa.
+ */
+vaadi(`${nimiA}: paljaan kartan näytteitä avauksen aikana 0`,
+  a.avausNaytteita >= 5 && a.paljaita === 0,
+  `paljaita ${a.paljaita} / ${a.avausNaytteita} näytettä, avaus ${a.avausMs} ms`);
+
+/* (c) JÄÄNTEET: pluskupla ja luentakuvapakka. */
+vaadi(`${nimiA}: linssin aikana kartan päällä ei ole yhtään jäännettä (> 400 px²)`,
+  a.jalkeenJaanteet.length === 0,
+  JSON.stringify(a.jalkeenJaanteet.slice(0, 8)));
+
+/*
+ * (d) PITKÄT TEHTÄVÄT. Ehdoton 150 ms:n raja EI OLE TÄSSÄ KONTISSA
+ * MITATTAVISSA: ohjelmistorenderöity pallo tuottaa lepotilassakin
+ * 0,5–1,3 sekunnin tehtäviä (mitattu 16.9.2026 samassa kontissa:
+ * mediaani 568 ms ja maksimi 652 ms kevyellä kuormalla, 1 316 ms
+ * silloin kun rinnalla ajoi toinen työsessio — ilman mitään linssiä).
+ * Sitä taustaa vasten 150 ms:n väite kertoisi kontin kuormasta eikä
+ * linssistä.
+ *
+ * Vartija mittaa siksi sen, mikä on mitattavissa: avaus ei saa
+ * KOLMINKERTAISTAA sivun OMAA lepotason pisintä tehtävää. Raja on
+ * väljä tarkoituksella — se on romahdusvartija (esimerkiksi
+ * synkroninen purku, joka veisi kymmenen sekuntia), ei hienosäätö.
+ * Varsinainen mitta korjaukselle on alla mekanismiväitteessä:
+ * ImageBitmapin vienti näytönohjaimelle vs. <img>:n (mitattu 63 ms vs
+ * 287 ms eli 4,6×).
+ */
+vaadi(`${nimiA}: avaus ei kolminkertaista sivun omaa pisintä tehtävää`,
+  a.lepoPisin > 0 && a.avausPisin <= a.lepoPisin * 3,
+  `lepo ${a.lepoPisin} ms, avaus ${a.avausPisin} ms (raja ${(a.lepoPisin * 3).toFixed(0)} ms)`);
+
+/*
+ * (e) MEKANISMI. Purku siirrettiin työsäikeeseen (createImageBitmap) ja
+ * valmiiksi käännettynä, jotta pääsäikeelle jää pelkkä kopio. Väite
+ * mittaa sekä hinnan (texImage2D) että sen, että linssin OMA tekstuuri
+ * todella on bittikartta eikä <img> — ja että kääntö on tehty purussa
+ * (flipY false), jolloin mantereet eivät voi mennä ylösalaisin sen
+ * mukaan, miten selain kohtelee UNPACK_FLIP_Y_WEBGL-lippua.
+ */
+vaadi(`${nimiA}: ImageBitmapin vienti näytönohjaimelle on alle puolet <img>:n hinnasta`,
+  Boolean(a.purku) && a.purku.img > 0 && a.purku.bitmap <= a.purku.img * 0.5,
+  JSON.stringify(a.purku));
+vaadi(`${nimiA}: linssin pohjatekstuuri on valmiiksi käännetty ImageBitmap`,
+  a.tekstuuri?.laji === 'ImageBitmap' && a.tekstuuri?.flipY === false,
+  JSON.stringify(a.tekstuuri));
+
+vaadi(`${nimiA}: ei sivuvirheitä`, a.virheet.length === 0, a.virheet.slice(0, 3).join(' | '));
+
+/*
+ * VASTAKOE: `?topopeite=0` ottaa odotuspeitteen pois, jolloin portti
+ * menee päälle heti kuten ennen korjausta. Silloin paljaan kartan
+ * näytteitä ON — ja juuri se todistaa, että väite (b) mittaa oikeaa
+ * asiaa eikä kerro vain siitä, että jokin on tummaa.
+ */
+const b = await ajaAvaus({ peite: false });
+vaadi(`${nimiA}: vastakoe — ilman odotuspeitettä kartta on paljaana`,
+  b.paljaita > 0,
+  `paljaita ${b.paljaita} / ${b.avausNaytteita} näytettä, avaus ${b.avausMs} ms`);
+vaadi(`${nimiA}: vastakoe — jäänteiden piilotus ei riipu peitteestä`,
+  b.jalkeenJaanteet.length === 0,
+  JSON.stringify(b.jalkeenJaanteet.slice(0, 8)));
 
 await selain.close();
 palvelin.close();

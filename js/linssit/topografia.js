@@ -178,6 +178,84 @@ function pohjakuva(kotelo, ikkuna = (typeof window === 'undefined' ? null : wind
  */
 const LINSSIPORTTI = 'aikajana-paalla';
 
+/*
+ * ────────────────────────────────────────────────────────────────────
+ * ODOTUSPEITE — LINSSI AVAUTUU YHDELLÄ SIIRTYMÄLLÄ
+ * ────────────────────────────────────────────────────────────────────
+ *
+ * OMISTAJAN VIKA 16.9.2026 (sanatarkasti): *"Topografia linssi tökkii
+ * (vaalea kartta piirtyy ilmeisesti ensin ja sitten Topografia sen
+ * päälle)"*.
+ *
+ * MITATTU (Chromium, 390 × 844 dpr 2, Ateena, isoisän luenta käynnissä,
+ * screencast kompositorilta eli pääsäikeen jumin ohi):
+ *
+ *   t =    0 ms  linssi valitaan; portti päälle → pelin kerrokset,
+ *                saapumiskuva, nimikyltit ja tasoituskerma katoavat
+ *   t ≈ 1,7 s    RUUDULLA ON PALJAS VAALEA PELIKARTTA (kirkkaus
+ *                putoaa 96,9 → 68,7, koska saapumiskuva lähti)
+ *   t ≈ 2,5 s    pohjakuva ladattu; 1,3 sekunnin PITKÄ TEHTÄVÄ (purku
+ *                ja tekstuurin vienti pääsäikeessä)
+ *   t ≈ 3,8 s    kalvon häivytys valmis, reliefi vihdoin ruudulla
+ *
+ * Eli pelaaja näki KOLME näkymää peräkkäin: pelinsä, paljaan kartan ja
+ * vasta sitten linssin. Juuri tuo keskimmäinen on omistajan "vaalea
+ * kartta", ja se kesti mitattuna noin kaksi sekuntia.
+ *
+ * KORJAUS: kotelon päälle nousee tumma peite samassa kehyksessä, jossa
+ * portti asetetaan, ja se otetaan pois vasta kun reliefi on OIKEASTI
+ * ruudulla (kalvon peittävyys materiaalista luettuna). Pelaaja näkee
+ * siis: peli → tumma lasi → maasto. Paljasta karttaa ei ole missään
+ * välissä, ja napautus saa heti vastauksen — mikä on puhelimella
+ * tärkeää, koska lataus kestää sekunteja.
+ *
+ * Sävy on linssiperheen oma tumma seepia (sama kuin ruutukalvon
+ * oletus, tummempana): 0,96 peittävyydellä alla olevasta kartasta jää
+ * näkyviin neljä prosenttia eli ei mitään.
+ */
+const ODOTUSPEITE = 'rgba(20, 16, 10, 0.96)';
+/** Odotuspeitteen oma osa linssimoottorissa (ei sama kuin kalvon). */
+const PEITTEEN_OSA = 'topografia-peite';
+/**
+ * Kuinka usein katsotaan, onko reliefi jo ruudulla (ms). Peite on
+ * kompositorissa eikä maksa mitään; kysely on kevyt lukema kalvon
+ * materiaalista.
+ */
+const PEITTEEN_KYSELY_MS = 90;
+/**
+ * Peitteen ehdoton katto (ms). Jos kuvaa ei kuulu — verkko poikki,
+ * ämpäri alhaalla, three tavoittamattomissa — peite on otettava pois
+ * joka tapauksessa. Tumman ruudun taakse ei saa jäädä jumiin, ja
+ * silloin pelaaja näkee sen minkä ennenkin: oman karttansa.
+ */
+const PEITTEEN_KATTO_MS = 15000;
+/**
+ * Kuinka paljon portin asetusta viivytetään peitteen siirtymän yli
+ * (ms). Kaksi kehystä 60 Hz:llä riittää kattamaan sen, että
+ * `kalvoRuudulle` asettaa peittävyyden vasta seuraavassa kehyksessä.
+ */
+const PORTIN_MARGINAALI_MS = 40;
+
+/**
+ * Onko odotuspeite päällä? `?topopeite=0` ottaa sen pois — sama
+ * kehittäjän vipu kuin tarkennuslaastarilla (`?tarkennus=0`).
+ *
+ * Vipu on VARTIJAN VASTAKOETTA VARTEN: ilman peitettä savukkeen on
+ * nähtävä juuri se paljas vaalea välivaihe, jonka omistaja raportoi,
+ * ja peitteen kanssa nolla sellaista näytettä. Ilman vastakoetta
+ * väite kertoisi vain, että jokin on tummaa.
+ */
+export function odotuspeitePaalla(ikkuna = globalThis) {
+  try {
+    const param = new URLSearchParams(ikkuna.location?.search ?? '').get('topopeite');
+    if (param === '0') return false;
+    if (param === '1') return true;
+  } catch {
+    /* ei osoitetta (testiajo) */
+  }
+  return true;
+}
+
 /** Kameran paluuajo linssin sulkeutuessa (ms); reduced motion → 0. */
 const PALUUAJON_MS = 900;
 
@@ -403,10 +481,58 @@ export const LINSSI = {
      * mitä lähizoomissa täydennetään laastarilla.
      */
     const pohja = pohjakuva(lauta.kotelo ?? null);
+
+    /*
+     * ────────────────────────────────────────────────────────────────
+     * 1 a. ODOTUSPEITE ENSIN — ei paljasta karttaa välissä
+     * ────────────────────────────────────────────────────────────────
+     * Peite nousee ENNEN kalvoa ja ennen porttia, jotta sama kehys, joka
+     * riisuu pelin kerrokset, myös peittää kartan. Ks. ODOTUSPEITE
+     * yllä: mittaus, juurisyy ja miksi tumma eikä vaalea.
+     */
+    const peiteKaytossa = odotuspeitePaalla();
+    let peite = peiteKaytossa
+      ? lauta.linssit.kalvoRuudulle(PEITTEEN_OSA, { vari: ODOTUSPEITE })
+      : null;
+    const peiteAlkoi = (typeof performance === 'undefined' ? Date : performance).now();
+    /** Mitattu: montako millisekuntia peite oli ruudulla (savuke). */
+    let peiteKesti = null;
+    let peitteenKello = 0;
+    const poistaPeite = () => {
+      if (!peite) return;
+      peite = null;
+      peiteKesti = Math.round((typeof performance === 'undefined' ? Date : performance).now() - peiteAlkoi);
+      clearTimeout(peitteenKello);
+      peitteenKello = 0;
+      lauta.linssit.pura?.(PEITTEEN_OSA);
+    };
+
     const perus = lauta.linssit.kalvo('topografia', {
       kuva: pohja.osoite,
       peittavyys: PEITTAVYYS,
     });
+
+    /*
+     * PEITE POIS VASTA KUN RELIEFI ON RUUDULLA — ei kun kuva on
+     * ladattu. Ero on olennainen: kalvon materiaali syntyy ennen kuin
+     * yhtäkään kehystä on piirretty sillä, ja juuri se ensimmäinen
+     * piirto on se pitkä tehtävä, jonka aikana mikään ei liiku. Siksi
+     * mitataan MATERIAALIN todellinen peittävyys (`nakyvyys`), ei
+     * `ladattu`-lippua: kun se on tavoitteessaan, reliefi on oikeasti
+     * näkyvissä ja peitteen häivytys paljastaa valmiin näkymän.
+     */
+    const katsoPeitetta = () => {
+      peitteenKello = 0;
+      if (suljettu || !peite) return;
+      const nyt = (typeof performance === 'undefined' ? Date : performance).now();
+      const nakyvyys = perus?.nakyvyys?.() ?? 0;
+      if (nakyvyys >= PEITTAVYYS * 0.98 || nyt - peiteAlkoi >= PEITTEEN_KATTO_MS) {
+        poistaPeite();
+        return;
+      }
+      peitteenKello = setTimeout(katsoPeitetta, PEITTEEN_KYSELY_MS);
+    };
+    if (peite) peitteenKello = setTimeout(katsoPeitetta, PEITTEEN_KYSELY_MS);
 
     /*
      * ────────────────────────────────────────────────────────────────
@@ -469,9 +595,35 @@ export const LINSSI = {
      * 13 nostoa, kaupunkipiste, pulu, saapumislappu, Liiku ja 2110
      * janan korostuskehä.
      */
+    /*
+     * PORTTI ODOTTAA PEITETTÄ (vika 16.9.2026 klo 15.30). Portti riisuu
+     * kartan yhdessä kehyksessä, mutta odotuspeite on CSS-siirtymä ja
+     * lähtee nollasta — mitattuna paljas vaalea kartta välähti
+     * peitteen alta juuri sen ajan, jonka häivytys kesti (kirkkaus
+     * 100,9 → 68,7 → 4,4 kolmen kymmenesosasekunnin aikana). Portti
+     * asetetaan siksi vasta kun peite on perillä, ja kesto kysytään
+     * moottorilta (`siirtymaMs`) eikä kopioida tänne. Ilman peitettä
+     * (`?topopeite=0`, vartijan vastakoe) portti menee heti kuten
+     * ennen — juuri siksi vastakoe näkee sen välivaiheen.
+     */
     const runko = typeof document === 'undefined' ? null : document.body;
     const luokkaOli = Boolean(runko?.classList?.contains(LINSSIPORTTI));
-    if (!luokkaOli) runko?.classList?.add(LINSSIPORTTI);
+    let porttiAsetettu = false;
+    let portinKello = 0;
+    const asetaPortti = () => {
+      portinKello = 0;
+      if (suljettu || porttiAsetettu) return;
+      porttiAsetettu = true;
+      if (!luokkaOli) runko?.classList?.add(LINSSIPORTTI);
+    };
+    if (peite) {
+      // Yksi kehys peittävyyden asettamiseen (kalvoRuudulle tekee sen
+      // rAF:ssa) + siirtymän kesto + pieni marginaali.
+      const kesto = Number(lauta.linssit.siirtymaMs?.() ?? 0);
+      portinKello = setTimeout(asetaPortti, Math.max(0, kesto) + PORTIN_MARGINAALI_MS);
+    } else {
+      asetaPortti();
+    }
 
     /*
      * ────────────────────────────────────────────────────────────────
@@ -513,11 +665,21 @@ export const LINSSI = {
     return {
       pura: () => {
         suljettu = true;
+        clearTimeout(peitteenKello);
+        peitteenKello = 0;
+        // Peite pois ennen muita: se on kartan päällä, ja sen alle ei
+        // saa jäädä sulkeutuvaa linssiä.
+        poistaPeite();
+        clearTimeout(portinKello);
+        portinKello = 0;
         kokovahti?.disconnect?.();
         tarkennus?.pura?.();
         tarkennus = null;
         perus?.pura?.();
-        if (!luokkaOli) runko?.classList?.remove(LINSSIPORTTI);
+        // Porttia ei poisteta, jos sitä ei ehditty asettaa (linssi
+        // suljettiin peitteen aikana) — muuten vietäisiin luokka
+        // joltain toiselta linssiltä.
+        if (porttiAsetettu && !luokkaOli) runko?.classList?.remove(LINSSIPORTTI);
         lauta.zoomirajat?.(null);
         if (kameraTalteen) {
           lauta.kamera?.pysaytaKameraAjo?.();
@@ -538,6 +700,17 @@ export const LINSSI = {
         perusPeitto: perus?.nakyvyys?.() ?? null,
         perusTavoite: perus?.tavoite?.() ?? null,
         perusLadattu: perus?.ladattu?.() ?? false,
+        /*
+         * ODOTUSPEITE savukkeelle. `peite` = onko peite juuri nyt
+         * ruudulla, `peiteKaytossa` = onko vipu päällä (vastakoe
+         * `?topopeite=0`), `peiteMs` = kuinka kauan se oli ruudulla eli
+         * kuinka pitkä se välivaihe olisi ollut paljaana karttana.
+         */
+        peite: Boolean(peite),
+        peiteKaytossa,
+        peiteMs: peiteKesti,
+        /** Onko linssien yhteinen portti jo asetettu (ks. kohta 3). */
+        portti: porttiAsetettu,
         haivytykset: lauta.linssit?.haivytykset?.() ?? null,
         /** Kumpi pohjakuva tälle ruudulle valittiin ('8k' vai '4k'). */
         pohja: pohja.tunnus,
