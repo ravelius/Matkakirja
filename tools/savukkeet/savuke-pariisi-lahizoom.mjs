@@ -2124,18 +2124,36 @@ for (const ruutu of RUUDUT) {
         + `(leveys ${p(t.x1 - t.x0)} px, kotelo ${p(m.koti.w)} × ${p(m.koti.h)} px), `
         + `saapuessa nimiö ${p(tSaapuen ? tSaapuen.mitta * NOSTOSYM_NIMIO_KOKO : 0)} px`
       : 'ei kyltillä kartalla');
-  vaadi(`7. ${ruutu.nimi}: turisti-infon nimiö ≤ ${NIMION_KATTO_PX} px lähizoomissa`,
-    Boolean(t) && t.nakyy && turistiNimio > 0
-      && turistiNimio <= NIMION_KATTO_PX + KATON_VARA_PX,
-    t ? `${p(turistiNimio)} px (mitta ${p(t.mitta, 4)})` : 'kylttiä ei ollut kartalla');
+  /*
+   * ══ 7, 7b, 7c JA 7e OVAT VANHENTUNEITA VARTIOINA (INFO) ═════════
+   *
+   * TURISTI-INFON KYLTTIÄ EI OLE KARTALLA. PAATOKSET 34 kohta 8 siirsi
+   * turisti-infon kaupunkiliuskan riviksi *"Turistiopas"*, ja kyltin
+   * piirto on sammutettu koodissa asti: js/pallolauta/lauta.js
+   * `KYLTTI_KARTALLA = false`, jolloin `paivitaTuristiInfo` palauttaa
+   * tyhjän eikä kyltillä ole varausta lainkaan. Neljä vartiota väittää
+   * kyltistä jotain (nimiön koko, mahtuminen koteloon, napautus,
+   * laatikon vapaus), joten ne ovat punaisia MOLEMMILLA ruuduilla joka
+   * ajossa eivätkä ole enää häilyviä — ne mittaavat poistunutta
+   * käyttöliittymää.
+   *
+   * INFOKSI EIKÄ POISTOON: luku on yhä hyödyllinen, jos kyltti joskus
+   * palaa kartalle (lippu on yhä koodissa), ja poistettu vartio ei
+   * kertoisi mitään, jos kyltti palaisi rikkinäisenä. Väitteen samasta
+   * asiasta esittää nyt liuskan vartio 8e (yläryhmässä on Turistiopas-
+   * rivi). `sarjat.jsonia` EI muutettu — se on Fablen päätös.
+   */
+  tieto(`${ruutu.nimi} · 7 (INFO, vanhentunut): turisti-infon nimiö ≤ ${NIMION_KATTO_PX} px`,
+    t
+      ? `${p(turistiNimio)} px (mitta ${p(t.mitta, 4)}) — katto ${NIMION_KATTO_PX} px`
+      : 'kylttiä ei ole kartalla (KYLTTI_KARTALLA = false, PAATOKSET 34 kohta 8)');
   const tYli = t
     ? (t.x0 < 0 || t.y0 < 0 || t.x1 > m.koti.w || t.y1 > m.koti.h) : true;
-  vaadi(`7b. ${ruutu.nimi}: turisti-infon kyltti mahtuu kokonaan koteloon`,
-    Boolean(t) && !tYli,
-    t
+  tieto(`${ruutu.nimi} · 7b (INFO, vanhentunut): kyltti mahtuu koteloon`,
+    `${Boolean(t) && !tYli ? 'mahtuu · ' : ''}${t
       ? `laatikko ${p(t.x0)},${p(t.y0)} → ${p(t.x1)},${p(t.y1)}, `
         + `kotelo ${p(m.koti.w)} × ${p(m.koti.h)} px`
-      : 'kylttiä ei ollut kartalla');
+      : 'kylttiä ei ole kartalla (KYLTTI_KARTALLA = false)'}`);
   /*
    * 7c. KYLTIN NAPAUTUS AVAA TURISTI-INFON — NYT VARTIO (omistaja
    * 17.9.2026 klo 03.30 UTC, Raamattu KARTTAUUDISTUKSEN PAATOKSET 31
@@ -2164,13 +2182,12 @@ for (const ruutu of RUUDUT) {
           ? `avasi oppaan (${opasAuki})`
           : `EI avannut opasta — auki sen sijaan: ${opasSijaan ?? 'ei mitään'}`))
       : 'kylttiä ei ollut kartalla');
-  vaadi(`7c. ${ruutu.nimi}: napautus kyltin päälle avaa turisti-infon`,
-    Boolean(tPiste) && !opasEste && Boolean(opasAuki),
-    tPiste
+  tieto(`${ruutu.nimi} · 7c (INFO, vanhentunut): napautus kyltin päälle avaa oppaan`,
+    `${Boolean(tPiste) && !opasEste && Boolean(opasAuki) ? 'avasi · ' : ''}${tPiste
       ? (opasEste
         ? `merkki on peitossa: ${opasEste}`
         : `auki sen sijaan: ${opasSijaan ?? 'ei mitään'}`)
-      : 'kylttiä ei ollut kartalla');
+      : 'kylttiä ei ole kartalla (KYLTTI_KARTALLA = false)'}`);
   tieto(`${ruutu.nimi} · kyltin napautus pelkkä osumasääntö pois (?kylttiosuma=0)`,
     tPiste && !opasEste
       ? (vainOsumaOpas
@@ -2225,15 +2242,14 @@ for (const ruutu of RUUDUT) {
         + (lappujaPaalla.length ? ` — ${lappujaPaalla.map((r) => r.nimi).join(', ')}` : '')
         + (merkkejaPaalla.length ? ` — ${merkkejaPaalla.map((r) => r.id).join(', ')}` : '')
       : 'ei varausta');
-  vaadi(`7e. ${ruutu.nimi}: kyltin laatikko on vapaa (ei nimeä, lappua eikä merkkiä)`,
-    Boolean(varaus) && varaus.x1 - varaus.x0 > 2
+  tieto(`${ruutu.nimi} · 7e (INFO, vanhentunut): kyltin laatikko on vapaa`,
+    `${Boolean(varaus) && varaus.x1 - varaus.x0 > 2
       && nimiaPaalla.length === 0 && lappujaPaalla.length === 0
-      && merkkejaPaalla.length === 0,
-    varaus
+      && merkkejaPaalla.length === 0 ? 'vapaa · ' : ''}${varaus
       ? `varaus ${p(varaus.x1 - varaus.x0)} × ${p(varaus.y1 - varaus.y0)} px, `
         + `nimiä ${nimiaPaalla.length}, lappuja ${lappujaPaalla.length}, `
         + `merkkejä ${merkkejaPaalla.length}`
-      : 'kyltillä ei ollut varausta lainkaan');
+      : 'kyltillä ei ole varausta (KYLTTI_KARTALLA = false)'}`);
   /*
    * ── 7f. KYLTIN KERROIN ON SAMA KUIN MUILLA MERKEILLÄ (omistaja
    *    17.9.2026, PAATOKSET 31 TARKENNUS 2 kohta 5) ──────────────────

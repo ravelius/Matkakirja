@@ -38,12 +38,14 @@
 
 import {
   KOVAN_ESTEEN_PAINO,
+  VIUHKAN_ALAS_ALKU_PX, VIUHKAN_REUNAVARA_PX, VIUHKAN_RIVI_PX, VIUHKAN_VALI_PX,
   aiheenNimi, aihemerkinLaatikko, aihemerkkiElementti, aihenostonNimio, alasMahtuvatRivit,
   asetteleAihemerkki, kohdanLaatikko, piirraViuhka, ryhmitaNostot, viuhkanAsemat,
   viuhkanNimioLeveys,
 } from './aihemerkit.js';
 import {
-  kelattuLiuska, kelauksenAskel, liuskanRivit, nostonOmaPaikka, onKaupunginSisainen,
+  kelattuLiuska, kelauksenAskel, liuskanRivit, liuskanSuurinRivimaara, nostonOmaPaikka,
+  onKaupunginSisainen,
 } from './kaupunkiliuska.js';
 import { FOKUS_POHJAT } from '../packs/fokus-grc.js';
 import { MAASTOKOHTEET_ARK } from '../packs/maastokohteet-ark.js';
@@ -1893,6 +1895,31 @@ export function luoNostot({
     }
     laudanAnkkurit = laudanRivit;
     const kaupunkirivit = [...omatKaupunkirivit, ...laudanRivit];
+    /*
+     * ══ JÄSENYYS LUETAAN KOKO DATASTA, EI RUUDUSTA ═════════════════
+     * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34 kohta 4; Fablen
+     * tarkistus 18.9.2026: liuskassa oli 390 px:llä 16 nostoa ja
+     * 1400 px:llä 10.)
+     *
+     * MITATTU JUURISYY: `elavatKaikki` on `nakyvat`-lista, ja
+     * `nakyvat` syntyy suodattamalla `ruudulla(lat, lng)` — joka
+     * palauttaa nullin, kun piste on pallon takana TAI ruudun
+     * ulkopuolella (js/pallolauta/lauta.js `ruudulla`). Pariisin
+     * nostot ovat ankkurilevityksen jäljiltä 33-74 km päässä
+     * kaupungista (PAATOKSET 32, erä 5), joten osa niistä jäi
+     * leveällä ruudulla kuvan ulkopuolelle ja katosi liuskasta.
+     * Ruutu ei ole jäsenyyden mitta: päätös sanoo *"noston OMA
+     * paikka"*, ja se on datan tieto.
+     *
+     * Lähde on siis `keraa`n rivit SELLAISENAAN — samat rivit, joista
+     * `nakyvat` suodatetaan. Liuskan rivi ei tarvitse ruutupistettä:
+     * se piirtyy kaupunkimerkin omaan elementtiin (ks. KAUPUNKILIUSKAN
+     * RIVIT), ja vain kaupungin oman rivin `p` on ripustuspiste.
+     * Kartan siivous (`sisaisetAvaimet`) kohdistuu yhä ruudulla
+     * oleviin riveihin, joten kartalta ei voi pudota mitään, mitä
+     * liuska ei näytä.
+     */
+    const liuskanLahde = rivit.filter((r) => !r.poltettu);
     sisaisetKaupungeittain = new Map();
     const sisaisetAvaimet = new Set();
     for (const city of kaupunkirivit) {
@@ -1904,7 +1931,7 @@ export function luoNostot({
        * pisteestä noston omaan datapaikkaan, ei ladottuun.
        */
       const keskus = nostonOmaPaikka(city) ?? city;
-      const omat = elavatKaikki.filter((r) => r.perhe === 'nosto' && !r.kaupunki
+      const omat = liuskanLahde.filter((r) => r.perhe === 'nosto' && !r.kaupunki
         && !r.vainNimi && typeof r.avaa === 'function'
         && onKaupunginSisainen(r, keskus));
       if (!omat.length) continue;
@@ -2668,6 +2695,36 @@ export function luoNostot({
     /** Auki olevan kategorian aihe tai null (haitari, kohta 8). */
     liuskanKategoria: () => liuska?.avattuKategoria ?? null,
     suljeLiuska,
+    /**
+     * PALJONKO TILAA SUURIN LIUSKA VAATII MERKIN ALAPUOLELLA (px).
+     *
+     * PAATOKSET 34 kohta 10 (*"kartta voisi ajaa itsensa sellaiseen
+     * paikkaan missa nostot mahtuvat aukeamaan hyvin"*): lauta ajaa
+     * kameran ENNEN avausta, joten sen on tiedettävä etukäteen, kuinka
+     * korkea lista voi olla. Mitta on SUURIN kategoria avattuna, ei
+     * kiinni oleva lista — muuten kamera joutuisi ajamaan uudestaan
+     * haitaria avattaessa ja ajo sulkisi juuri avatun liuskan
+     * (VIUHKAN_LEPO_PX).
+     *
+     * Paluuarvo on `{ rivit, px }`; `px` on VIUHKAN_ALAS_ALKU_PX +
+     * rivivälit + viimeisen rivin puolikas + reunavara, eli täsmälleen
+     * se, mitä `alasMahtuvatRivit` mittaa toisesta päästä.
+     */
+    liuskanTilantarve: (valinnat = {}) => {
+      const avain = valinnat.avain
+        ?? laudanAvain({ id: valinnat.id, nimi: valinnat.nimi });
+      let omat = sisaisetKaupungeittain.get(avain) ?? null;
+      if (!omat && valinnat.nimi) {
+        const rivi = kaupunkirivitNyt.find((o) => o.nimi === valinnat.nimi);
+        omat = rivi ? (sisaisetKaupungeittain.get(rivi.avain) ?? []) : [];
+      }
+      const n = liuskanSuurinRivimaara({ nostot: omat ?? [], liiku: Boolean(valinnat.liiku) });
+      return {
+        rivit: n,
+        px: VIUHKAN_ALAS_ALKU_PX + Math.max(0, n - 1) * VIUHKAN_VALI_PX
+          + VIUHKAN_RIVI_PX + VIUHKAN_REUNAVARA_PX,
+      };
+    },
     /**
      * AVAA LIUSKAN kaupunkimerkistä ruutupisteen perusteella: lauta
      * tuntee kaupungin asteet, kerros tuntee rivit. Palauttaa epätosi,

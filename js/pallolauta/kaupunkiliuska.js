@@ -208,6 +208,24 @@ export function liuskanRivit({
   return rivit;
 }
 
+/**
+ * SUURIMMAN LIUSKAN RIVIMÄÄRÄ (PAATOKSET 34 kohta 10: *"kartta voisi
+ * ajaa itsensa sellaiseen paikkaan missa nostot mahtuvat aukeamaan
+ * hyvin"*).
+ *
+ * Kamera-ajo mitoitetaan sen mukaan, mikä liuska VOI olla — eli
+ * yläryhmä + mahdollinen Liiku-rivi + kaikki kategoriarivit + SUURIN
+ * kategoria avattuna. Pienemmät kategoriat mahtuvat silloin
+ * itsestään, eikä kamera liiku uudestaan haitaria avattaessa (ajo
+ * sulkisi juuri avatun liuskan, ks. VIUHKAN_LEPO_PX).
+ */
+export function liuskanSuurinRivimaara({ nostot = [], liiku = false, nahtavyyksia = true, opas = true } = {}) {
+  const kat = kategoriat(nostot);
+  let suurin = 0;
+  for (const k of kat) suurin = Math.max(suurin, k.maara);
+  return 1 + (nahtavyyksia ? 1 : 0) + (opas ? 1 : 0) + (liiku ? 1 : 0) + kat.length + suurin;
+}
+
 /** Montako yläryhmän riviä listassa on (savukkeiden vartio, kohta 8). */
 export function ylaryhmanMaara(rivit) {
   return (rivit ?? []).filter((r) => r.laji === 'lehti' || r.laji === 'nahtavyydet'
