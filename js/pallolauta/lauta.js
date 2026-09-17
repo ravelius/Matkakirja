@@ -1828,6 +1828,21 @@ export async function avaaPallolauta(ui) {
      * pikseleinä.
      */
     esteet: () => merkit.laatikot('peli'),
+    /*
+     * LAUDAN KAUPUNGIT NOSTOKERROKSELLE (Raamattu, PAATOKSET 34 TILA:
+     * *"liuska ripustetaan LAUDAN OMAAN KAUPUNKIMERKKIIN ... liuskalle
+     * luodaan ankkuri kaupungin koordinaatteihin nostokerrokseen"*).
+     *
+     * Nostokerros ei tunne laudan kaupunkeja — sen omat `kaupunki`-
+     * rivit ovat sisaltopakettien nakyvia kaupunkeja (Lille). Pariisi
+     * on laudan kaupunki, ja juuri siksi era 3:n mittaus loysi liuskan
+     * ripustuvan tyhjaan. Tasta kerros saa kaupungin pisteen: se
+     * laskee kaupungin sisaiset nostot (kohta 3) ja ripustaa liuskan.
+     */
+    laudanKaupungit: () => kaupungit.map((k) => ({
+      // Pallon kaupungin nimikentta on `n` (js/pallo.js pallonKaupungit).
+      id: k.id, nimi: k.n, lat: k.lat, lng: k.lon,
+    })),
     ankkuri,
     /*
      * VIUHKA ON UUSIA CSS2D-ELEMENTTEJÄ, JA NE SYNTYVÄT VASTA TOISESSA
@@ -2270,8 +2285,11 @@ export async function avaaPallolauta(ui) {
           && nostot.avaaLiuskaKaupungista?.(k.lat, k.lon, {
             liiku: Boolean(siirto),
             // Nimi erottaa laudan kaupungin nostokerroksen naapurista
-            // (ks. RIVIN ON OLTAVA SAMA KAUPUNKI, nostot.js).
+            // (ks. KAKSI LAHDETTA, YKSI POLKU, nostot.js); tunnus on
+            // ankkuririvin avain, joten sen on oltava sama kuin
+            // `laudanKaupungit`in antama.
             nimi: city.name,
+            id: city.id,
           });
         if (avautui) {
           // Liuskan yläryhmä koskee SITÄ kaupunkia, jonka merkistä se

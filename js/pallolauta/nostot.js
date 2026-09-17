@@ -899,6 +899,18 @@ export function asetteleNosto(el, d) {
   const dy = d.dy ?? 0;
   const mitta = d.mitta ?? nostonMitta();
   g.style.transform = `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${mitta.toFixed(4)})`;
+  /*
+   * LIUSKAN ANKKURI EI PIIRRA MERKKIA (PAATOKSET 34, kerrosraja).
+   * Kaupungin oma merkki ja nimi tulevat laudalta; ankkuri on pelkka
+   * ripustuspiste liuskalle, joten toinen symboli samaan pisteeseen
+   * olisi sama kaupunki kahdesti.
+   */
+  if (d.ankkuri) {
+    if (g.dataset.resepti !== 'ankkuri') { g.dataset.resepti = 'ankkuri'; g.replaceChildren(); }
+    el.dataset.nimio = '';
+    el.classList.add('pallolauta-nosto-ankkuri');
+    return;
+  }
   const nimio = d.nimioNakyy && d.nimi ? d.nimi : '';
   const puoli = d.puoli ?? 'oikea';
   const resepti = `${d.kategoria ?? ''}|${d.symLaji ?? ''}|${puoli}|${nimio}`;
@@ -1059,6 +1071,13 @@ export function napanostonRivi(ui, kohde, { avain }) {
  * `nostot`), `onPoltettu(tunnus, tiiviste)` pallon laattaluettelon
  * vastaus.
  */
+/**
+ * LAUDAN KAUPUNGIN ANKKURIRIVIN AVAIN nostokerroksessa (PAATOKSET 34).
+ * Etuliite erottaa sen sisaltopakettien omista riveista, joiden avain
+ * tulee kohteen tunnuksesta — sama kaupunki ei voi saada kahta riviä.
+ */
+const laudanAvain = (k) => `lauta:${k?.id ?? k?.nimi ?? k?.name ?? ''}`;
+
 export function luoNostot({
   ui, merkit, asteet, ruudulla, onPoltettu = pallonNostoOnPoltettu,
   /*
@@ -1077,6 +1096,25 @@ export function luoNostot({
    * kaupunkien nimet tulevat sovittelusta (viimeisimmatNimet).
    */
   esteet = null,
+  /*
+   * LAUDAN OMAT KAUPUNGIT (PAATOKSET 34, Fablen paatos kerrosrajasta
+   * 17.9.2026: *"liuska ripustetaan LAUDAN OMAAN KAUPUNKIMERKKIIN"*).
+   *
+   * MITATTU SYY (era 3, savuke-pariisi-lahizoom 8c, kaappaus
+   * pariisi-liuska-auki-390.png): nostokerroksen `kaupunki`-rivit
+   * syntyvat sisaltopakettien nakyvista kaupungeista (Lille,
+   * js/packs/nakyvat-kaupungit-fra.js). Pelaajan napauttama Pariisi on
+   * LAUDAN kaupunki, eika sella ole riviä tassa kerroksessa lainkaan —
+   * joten liuskalla ei ollut mihin ripustua eika kaupungin sisaisia
+   * nostoja pudottanut kartalta mikaan.
+   *
+   * Lauta antaa siis kaupunkinsa tanne: `() => [{ id, nimi, lat, lng }]`.
+   * Ne eivat ole merkkeja (lauta piirtaa oman kaupunkimerkkinsa ja
+   * nimensa) vaan ANKKUREITA: kategorioiden laskenta (kohta 3) kayttaa
+   * niita joka ladonnassa, ja liuskan auetessa yksi niista saa oman
+   * CSS2D-elementin, johon liuska piirtyy.
+   */
+  laudanKaupungit = null,
 }) {
   let osumat = []; // ruudulla olevat, napautettavat merkit
   let laatikot = [];
@@ -1132,6 +1170,13 @@ export function luoNostot({
    */
   let liuska = null;
   let liuskanKohdat = [];
+  /*
+   * VIIMEISIMMAN LADONNAN KAUPUNKIRIVIT (nostokerroksen omat, esim.
+   * Lille). `avaaLiuskaKaupungista` etsii niistä ensin: pakkojen
+   * nakyva kaupunki kayttaa OMAA riviaan, ja vain sen puuttuessa
+   * luodaan ankkuri (sama polku, kaksi lahdetta).
+   */
+  let kaupunkirivitNyt = [];
   /*
    * KAUPUNGIN SISÄISET NOSTOT ladonnasta: avain = kaupunkirivin avain.
    * Sama lista pudottaa merkit kartalta (PAATOKSET 34 kohta 3) ja
@@ -1741,7 +1786,44 @@ export function luoNostot({
      * SAMA LISTA TÄYTTÄÄ LIUSKAN. Jos suodatus ja liuska laskettaisiin
      * erikseen, kartalta voisi kadota nosto, jota mikään lista ei avaa.
      */
-    const kaupunkirivit = elavatKaikki.filter((r) => r.kaupunki);
+    const omatKaupunkirivit = elavatKaikki.filter((r) => r.kaupunki);
+    kaupunkirivitNyt = omatKaupunkirivit;
+    /*
+     * ══ LAUDAN KAUPUNKI ON MYOS KAUPUNKI (Fablen paatos kerrosrajasta,
+     * PAATOKSET 34 TILA) ═══════════════════════════════════════════
+     *
+     * Ankkuririvi on kaupungin koordinaateissa, sillä ei ole musteta
+     * eikä osumaa (`vainNimi`), ja se on olemassa jokaisessa
+     * ladonnassa — muuten kaupungin sisaiset nostot jaisivat kartalle
+     * aina kun liuska on kiinni, ja vartio 8a mittaa nimenomaan
+     * suljettua karttaa. Nimi erottaa sen pakkojen omasta rivistä:
+     * jos nostokerroksessa jo ON tämän kaupungin rivi (Lille), lauta
+     * ei tuo omaansa, jottei sama kaupunki olisi kahdesti.
+     */
+    const laudanRivit = [];
+    for (const k of (laudanKaupungit?.() ?? [])) {
+      const nimi = k?.nimi ?? k?.name ?? '';
+      if (!Number.isFinite(k?.lat) || !Number.isFinite(k?.lng)) continue;
+      if (omatKaupunkirivit.some((r) => r.nimi === nimi)) continue;
+      const p = ruudulla(k.lat, k.lng);
+      if (!p) continue;
+      laudanRivit.push({
+        avain: laudanAvain(k),
+        id: k.id,
+        perhe: 'nosto',
+        ankkuri: true,
+        kaupunki: true,
+        vainNimi: true,
+        poltettu: false,
+        nimi,
+        nimioNakyy: false,
+        lat: k.lat,
+        lng: k.lng,
+        p,
+        etaisyys: keskipiste ? Math.hypot(p.x - keskipiste.x, p.y - keskipiste.y) : 0,
+      });
+    }
+    const kaupunkirivit = [...omatKaupunkirivit, ...laudanRivit];
     sisaisetKaupungeittain = new Map();
     const sisaisetAvaimet = new Set();
     for (const city of kaupunkirivit) {
@@ -1934,8 +2016,17 @@ export function luoNostot({
      * ruutupisteestä (avaaLiuska ajetaan ladonnan jälkeen), joten
      * testi ei laukea heti auettuaan (PAATOKSET 34 kohta 1).
      */
+    /*
+     * ANKKURIRIVI MUKAAN VASTA KUN LIUSKA ON AUKI: se on ainoa, joka
+     * maksaa CSS2D-merkin. Kiinni ollessaan laudan kaupunki elaa vain
+     * `sisaisetKaupungeittain`-laskennassa (kartan siivous, kohta 3).
+     */
+    const ankkuriRivit = liuska
+      ? laudanRivit.filter((r) => r.avain === liuska.avain)
+      : [];
+    const elavatJaAnkkurit = [...elavat, ...ankkuriRivit];
     if (liuska) {
-      const rivi = elavat.find((r) => r.avain === liuska.avain);
+      const rivi = elavatJaAnkkurit.find((r) => r.avain === liuska.avain);
       const siirtyi = rivi
         ? Math.hypot(rivi.p.x - liuska.p.x, rivi.p.y - liuska.p.y) > VIUHKAN_LEPO_PX
         : true;
@@ -1945,7 +2036,13 @@ export function luoNostot({
     }
     const piirrettavat = [...elavat.filter((r) => !ryhmassa.has(r.avain)), ...aiherivit]
       .sort(jarjestys);
-    const naytetaan = piirrettavat.slice(0, Math.max(0, katto));
+    /*
+     * ANKKURI EI KILPAILE DOM-KATOSTA. Se lisataan katon JALKEEN:
+     * ilman sita liuska voisi jaada auki ilman elementtia, jolloin
+     * napautus avaisi sen ja mitaan ei nakyisi (juuri se vika, jonka
+     * era 3 mittasi).
+     */
+    const naytetaan = [...piirrettavat.slice(0, Math.max(0, katto)), ...ankkuriRivit];
     datumit = naytetaan.map((r) => (r.perhe === 'aihemerkki' ? {
       avain: r.avain,
       mitta: mittaNyt,
@@ -1974,6 +2071,9 @@ export function luoNostot({
       asettele: asetteleAihemerkki,
     } : {
       avain: r.avain,
+      // Liuskan ankkuri on nakymaton: sillä ei ole symbolia eika
+      // nimioa, vain `.pallolauta-viuhka`-ryhma liuskaa varten.
+      ankkuri: Boolean(r.ankkuri),
       // Kaupunki on isompi kuin nosto (merkinKerroin) — mutta nimiön
       // ruutupikselikatto katkaisee molemmat samaan 16 px:iin
       // (ks. NIMIÖLLÄ ON RUUTUPIKSELIKATTO).
@@ -2211,6 +2311,9 @@ export function luoNostot({
     naytetaan.forEach((r, i) => {
       const d = datumit[i];
       if (r.perhe === 'piste') return;
+      // Ankkurilla ei ole musteta, joten sillä ei ole myoskaan
+      // osumapintaa eika nimiladonnan varausta.
+      if (r.ankkuri) { r.datum = d; return; }
       // Aihenostolla on nyt nimiö (PAATOKSET 27 TARKENNUS 2 kohta 8),
       // joten sen osumapinta on lautanen JA nimiö — sama kaava kuin
       // nostolla (js/pallolauta/aihemerkit.js aihemerkinLaatikko).
@@ -2278,7 +2381,7 @@ export function luoNostot({
         kylki, dx, dy, nimio,
       }));
     naytetaan.forEach((r, i) => {
-      if (r.perhe === 'piste') return;
+      if (r.perhe === 'piste' || r.ankkuri) return;
       ikonit.push({ r, datum: datumit[i] });
       if (r.nimioNakyy && r.nimi) {
         lappuja.push({ r, datum: datumit[i], laatikko: lapunLaatikko(r, datumit[i]) });
@@ -2423,27 +2526,31 @@ export function luoNostot({
     avaaLiuskaKaupungista: (lat, lng, valinnat = {}) => {
       const p = ruudulla(lat, lng);
       if (!p) return false;
+      /*
+       * KAKSI LAHDETTA, YKSI POLKU (Fablen paatos kerrosrajasta,
+       * PAATOKSET 34 TILA).
+       *
+       * 1) PAKKOJEN NAKYVA KAUPUNKI (Lille) kayttaa OMAA riviaan
+       *    nostokerroksessa. Rivin on oltava sama kaupunki eika vain
+       *    lahin: 60 px:n sade poimi Pariisin kohdalla Lillen rivin ja
+       *    liuska olisi avannut vaaran kaupungin sisallon (mitattu
+       *    18.9.2026, savuke-pariisi-lahizoom 8c).
+       * 2) LAUDAN OMA KAUPUNKI (Pariisi) ei ole nostokerroksen kohde
+       *    lainkaan, joten sille luodaan ANKKURI kaupungin
+       *    koordinaatteihin (liuskanAnkkuri → laudanRivit → naytetaan).
+       *    Ankkuri saa oman CSS2D-elementin seuraavassa ladonnassa,
+       *    jonka `avaaLiuska` pyytaa.
+       */
       let paras = null;
       let parasMatka = Infinity;
-      for (const o of osumat) {
-        if (!o.kaupunki || !o.p) continue;
-        /*
-         * RIVIN ON OLTAVA SAMA KAUPUNKI, EI VAIN LÄHIN (mitattu
-         * 18.9.2026, savuke-pariisi-lahizoom 8c, kaappaus
-         * pariisi-liuska-auki-390.png): 60 px:n säde poimi Pariisin
-         * kohdalla LILLEN rivin, jolloin liuska olisi avannut väärän
-         * kaupungin sisällön. Nostokerroksen `kaupunki`-rivit ovat
-         * näkyviä kaupunkeja (js/packs/nakyvat-kaupungit-fra.js), eivät
-         * laudan kaupunkeja, joten pelkkä etäisyys ei kerro kummasta
-         * on kyse. Nimi tulee laudalta (js/pallolauta/lauta.js
-         * napautaKaupunki); ilman nimeä vanha säde jää voimaan.
-         */
+      for (const o of kaupunkirivitNyt) {
+        if (!o.p) continue;
         if (valinnat.nimi && o.nimi && o.nimi !== valinnat.nimi) continue;
         const matka = Math.hypot(o.p.x - p.x, o.p.y - p.y);
         if (matka < parasMatka) { parasMatka = matka; paras = o; }
       }
-      if (!paras || parasMatka > 60) return false;
-      return avaaLiuska(paras, valinnat);
+      if (paras && parasMatka <= 60) return avaaLiuska(paras, valinnat);
+      return avaaLiuska({ avain: laudanAvain({ id: valinnat.id, nimi: valinnat.nimi }), p }, valinnat);
     },
     /**
      * OSUIKO NAPAUTUS LIUSKAN RIVIIN. Kategoriarivi vaihtaa haitarin
