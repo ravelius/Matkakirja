@@ -2749,7 +2749,11 @@ export async function avaaPallolauta(ui) {
   document.addEventListener('pointerdown', korttivahti, true);
 
   /** Napautus pallon pintaan: kohde ennen muita (kohde on kehotus toimia). */
+  let viimeinenNapautus = null;
   const napautaPintaan = (lat, lng) => {
+    // Mittauskirjaus (ks. lauta.viimeinenNapautus): asteet sellaisina
+    // kuin kirjasto ne antoi, ja se kohde, jonka sääntö niistä valitsi.
+    viimeinenNapautus = { lat, lng, hetki: Date.now() };
     /*
      * VALIKON SULKU EI AVAA MITÄÄN (omistaja 7.9.2026): kysytään ENNEN
      * osumatestiä. Vartija (js/ui-apurit.js asennaValikonSulkuvartija)
@@ -4039,6 +4043,40 @@ export async function avaaPallolauta(ui) {
      * oppaan (kyltinLaatikot, PAATOKSET 31 TARKENNUS 2 kohdat 4 ja 6).
      */
     turistiLaatikot: () => kyltinLaatikot(),
+    /**
+     * NAPAUTUKSEN RATKAISU JA PORTIT YHDELLÄ LUENNALLA (savukkeet ja
+     * vartijat, 17.9.2026). Savuke ei voi päätellä lokista, veikö
+     * napautuksen osumasääntö, auki jäänyt viuhka vai sulkeva
+     * napautus: kaikki kolme näyttävät samalta (*"ei mitään"*). Tämä
+     * palauttaa SAMOISTA lähteistä kuin `napautaPintaan` sen, minkä
+     * kohteen sääntö valitsisi juuri nyt, ja ne portit, jotka voivat
+     * niellä napautuksen ennen sääntöä. Pelkkä luenta — ei avaa
+     * mitään eikä muuta tilaa.
+     */
+    napautusselitys: (lat, lng) => {
+      const kuvaa = (v) => (v
+        ? `${v.laji}${v.o?.avain ? `:${v.o.avain}` : ''}${v.k?.id ? `:${v.k.id}` : ''}`
+        : null);
+      return {
+        voittaja: kuvaa(lahinMerkki(lat, lng)),
+        muste: kuvaa(musteeseenOsunut(lat, lng)),
+        kyltinMusteella: Boolean(kyltinMusteella(lat, lng)),
+        viuhkaAuki: nostot?.viuhkaAuki?.() ?? null,
+        linssi: linssiPaalla(),
+        lento: Boolean(lento),
+        korttiOliAuki,
+        kortteja: document.querySelectorAll(KORTTIVALITSIN).length,
+        korkeus: pallo.pointOfView()?.altitude ?? null,
+      };
+    },
+    /**
+     * VIIMEKSI PINNALLE TULLUT NAPAUTUS (savukkeet ja vartijat):
+     * asteet, jotka kirjasto antoi, ja se kohde, jonka sääntö niistä
+     * valitsi. Savuke napauttaa pikseleitä, ja juuri pikselin ja
+     * asteen välinen muunnos on se kohta, jossa mittaus ja peli
+     * voivat erota — tämä on ainoa paikka, josta sen näkee.
+     */
+    viimeinenNapautus: () => viimeinenNapautus,
     /**
      * Kyltin PIIRRETTY laatikko (savukkeet ja vartijat): se, jota
      * osumatesti käyttää, kun merkkikerroksen tween on kesken.

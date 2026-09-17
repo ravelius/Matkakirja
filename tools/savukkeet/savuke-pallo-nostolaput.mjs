@@ -487,6 +487,20 @@ if (auki) {
         if (kohde.laji === 'ulottumaton') ulottumattomia += 1;
       }
       // eslint-disable-next-line no-await-in-loop
+      /*
+       * SORMI LIIKKUU ENNEN KUIN SE PAINAA (17.9.2026, Mac).
+       * MITATTU (tools/savukkeet/savuke-pariisi-lahizoom.mjs): kun
+       * siirto ja painallus tulevat samassa kehyksessä, globe.gl
+       * antaa pelille VIIMEKSI säteitetyn pisteen eli EDELLISEN
+       * napautuksen kohdan — Transfăgărășanin napautus avasi
+       * Strousbergin, koska Strousberg oli edellinen kohde. Oikea
+       * sormi liikkuu ensin ja painaa vasta sitten.
+       */
+      await sivu.mouse.move(kohde.x, kohde.y);
+      await sivu.evaluate(() => new Promise((ok) => {
+        requestAnimationFrame(() => requestAnimationFrame(ok));
+      }));
+      await sivu.waitForTimeout(120);
       await sivu.mouse.click(kohde.x, kohde.y);
       // eslint-disable-next-line no-await-in-loop
       await sivu.waitForTimeout(500);
