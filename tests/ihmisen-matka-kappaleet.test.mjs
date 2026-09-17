@@ -137,8 +137,8 @@ test('osien hetket seuraavat luentaa — aikaleimat voittavat arvion', () => {
   const leimat = { lauseet: [0, 900, 1800, 2700, 3600, 4500] };
   assert.deepEqual(osienHetket(osat, 6000, leimat), [0, 1800, 3600]);
 
-  // 2. VÄÄRÄ MÄÄRÄ LEIMOJA ei kelpaa (teksti on muuttunut äänitteen
-  //    jälkeen, ks. ihmisen-matka-kertomus.js aanitePaivitettava).
+  // 2. VÄÄRÄ MÄÄRÄ LEIMOJA ei kelpaa (kaanonin teksti on muuttunut
+  //    äänitteen jälkeen).
   const vaarat = { lauseet: [0, 900, 1800, 2700, 3600, 4500, 5400] };
   const arvio = osienHetket(osat, 6000, vaarat);
   assert.equal(arvio[0], 0);
