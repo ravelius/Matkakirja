@@ -489,10 +489,40 @@ export function luoNimet({
       n.vali = lukko.vali;
       n.r = r ?? n.r;
     };
+    const leikkaa = (a, b) => a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0;
+    /*
+     * ── PELINAPPULA ON KOVA ESTE MYÖS KAUPUNGIN OMALLE NIMELLE ─────
+     * (omistaja 17.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 32
+     * kohta 5 ja TARKENNUS 2: *"yksikään nimiö ei saa olla toisen
+     * nimiön, merkin, kaupungin nimen tai pelinappulan päällä millään
+     * zoomilla"*; ankkurierän mittaus PR #2565 jätti PARIISI-nimen
+     * nappulan päälle saapumisessa ja välizoomissa.)
+     *
+     * JUURISYY EI OLLUT LADONNASSA VAAN LUKOSSA. `ladoRuutunimet` saa
+     * pelimerkit `pinot`-listassa ja VARAA ne ennen ensimmäistäkään
+     * nimeä, joten tuore sijoitus väistää nappulan oikein. Lukko (ks.
+     * ZOOMI EI SAA VAIHTAA KYLTIN PUOLTA) palautti nimen kuitenkin
+     * vanhaan paikkaansa PELKÄN RUUTUEHDON (`mahtuu`) nojalla — ja kun
+     * pelaaja saapuu kaupunkiin, nappula ilmestyy nimen alle sen
+     * jälkeen, kun lukko on jo otettu. Nimi jäi siis lukkonsa vuoksi
+     * nappulan päälle, vaikka ladonta oli juuri siirtänyt sen pois.
+     *
+     * Ehto on sama kuin pudonneen nimen paluulla kymmenen riviä
+     * alempana (`[...varaukset, ...pinot]`), mutta VAIN pelimerkeille:
+     * muu muste (nostot, turisti-info) on jo tämän ajon varauksissa,
+     * ja jos lukko purkautuisi niistäkin, kyltti vaihtaisi puolta joka
+     * kerta kun nosto liukuu sen viereen — juuri se, minkä PAATOKSET
+     * 24 kieltää. Lukon purkautuessa nimi ladotaan kerran uudelleen ja
+     * lukitaan uuteen paikkaansa (lukot rakennetaan tämän ajon
+     * lopullisista sijoituksista).
+     */
+    const pinoLaatikot = pinot.filter((r) => Number.isFinite(r?.x0) && Number.isFinite(r?.y0)
+      && Number.isFinite(r?.x1) && Number.isFinite(r?.y1) && r.x1 > r.x0 && r.y1 > r.y0);
     for (const n of ladottu.nimiot) {
       const e = paikat.get(n.c);
       const r = lukonLaatikko(n.c.id, e);
       if (!r || !mahtuu(r)) continue;
+      if (pinoLaatikot.some((v) => leikkaa(v, r))) continue;
       asetaLukko(n, skaalattuLukko(lukitut.get(n.c.id)), r);
     }
     /*
@@ -505,7 +535,6 @@ export function luoNimet({
      * ruutuun eikä osu yhteenkään tämän ajon nimilaatikkoon. Muuten
      * lukko vapautuu ja nimi ladotaan taas kerran.
      */
-    const leikkaa = (a, b) => a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0;
     {
       const jo = new Set(ladottu.nimiot.map((n) => n.c.id));
       for (const e of ehdokkaat) {

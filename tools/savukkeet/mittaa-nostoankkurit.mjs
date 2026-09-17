@@ -204,8 +204,28 @@ async function lue(sivu) {
       mitta: Number(/scale\(([\d.]+)\)/.exec(kylttiG.style.transform ?? '')?.[1] ?? NaN),
       ...(kylttiR?.width > 0 ? rect(kylttiG) : {}),
     } : null;
+    /*
+     * NOSTOPALLOJEN HALKAISIJA RUUDULLA (PAATOKSET 33 kohta 3).
+     * Luetaan piirretystä ympyrästä eikä vakiosta: aihenoston lautanen
+     * on <circle class="pallolauta-aihemerkki-lautanen"> ja sen
+     * ruutuhalkaisija on 2 × r × merkin mitta. Poltetun pisteen mitta
+     * on sama kaava NOSTOSYM_PISTE_R:llä — se on laatassa, joten sitä
+     * ei voi lukea DOMista, mutta elävä ja poltettu piirretään samasta
+     * kirjastosta samalla mitalla, joten lukujen on oltava samat.
+     */
+    const pallot = [...document.querySelectorAll('.pallolauta-aihemerkki')].map((el) => {
+      const kehys = el.querySelector('.pallolauta-aihemerkki-lautanen');
+      const r = kehys?.getBoundingClientRect();
+      return {
+        nimi: el.dataset.nimio || el.dataset.aihemerkki || 'aihenosto',
+        halkaisija: r?.width > 0 ? r.width : null,
+      };
+    }).filter((x) => x.halkaisija);
+    /* Listan alle piilotettu muste (PAATOKSET 32 kohta 5). */
+    const piilotetut = l.nostot.viuhkanPiilotetut?.() ?? [];
     return {
-      merkit, laatikot, nimet, nappula, kyltti, osuus: l.uloimmanOsuus?.() ?? null,
+      merkit, laatikot, nimet, nappula, kyltti, pallot, piilotetut,
+      osuus: l.uloimmanOsuus?.() ?? null,
     };
   });
 }
@@ -330,6 +350,39 @@ for (const l of lukemat) {
   vaadi(`5 ${l.nimi}: nappulan laatikon päällä ei yhtään nimiötä eikä merkkiä`,
     l.nappula.length > 0 && paalla.length === 0,
     l.nappula.length ? `${paalla.length} päällä` : 'nappulaa ei löytynyt ruudulta');
+}
+
+/* ── 6) KAIKKI NOSTOPISTEET POLTETUN MERKIN KOKOA ────────────────── */
+/*
+ * PAATOKSET 33 kohta 3 (omistaja 17.9.2026 klo 21.40: *"kaikki
+ * nostopisteet pitää olla yhtä pieniä, kuin mitä kartalle poltetut
+ * merkit ovat. Viimeisimmässä kaappauksessa pisteet olivat vielä liian
+ * isoja."*). Poltetun pisteen halkaisija ruudulla on
+ * 2 × NOSTOSYM_PISTE_R × NOSTON_MITTA; aihenoston lautanen luetaan
+ * ruudulta ja sen on osuttava siihen ±0,5 px.
+ */
+const POLTETUN_HALKAISIJA = 2 * 3.4 * NOSTON_MITTA;
+for (const l of lukemat) {
+  const isot = (l.pallot ?? []).filter((x) => Math.abs(x.halkaisija - POLTETUN_HALKAISIJA) > 0.5);
+  tieto(`${l.nimi} nostopallon halkaisija`,
+    `${[...new Set((l.pallot ?? []).map((x) => p(x.halkaisija, 2)))].join(', ')} px `
+    + `(poltettu ${p(POLTETUN_HALKAISIJA, 2)} px, palloja ${(l.pallot ?? []).length})`);
+  vaadi(`6 ${l.nimi}: nostopallon halkaisija = poltetun halkaisija ±0,5 px`,
+    (l.pallot ?? []).length > 0 && isot.length === 0,
+    `poikkeavia ${isot.length}`);
+}
+
+/* ── 7) LISTAN ALLE PIILOTETTU MUSTE KIRJATAAN ───────────────────── */
+/*
+ * PAATOKSET 32 kohta 5 (Fablen erä 3): lista ei jää toisen tekstin
+ * päälle; ahtaassa paikassa listan alle jäävät nostonimiöt piilotetaan
+ * listan ajaksi. Tässä mitassa lista ei ole auki, joten luvun on
+ * oltava 0 — vartio pitää huolen, ettei piilotus jää päälle.
+ */
+for (const l of lukemat) {
+  const n = (l.piilotetut ?? []).length;
+  tieto(`${l.nimi} listan alle piilotettuja`, `${n}`);
+  vaadi(`7 ${l.nimi}: lista kiinni → piilotettuja 0`, n === 0, `${n} piilossa`);
 }
 
 await ctx.close();

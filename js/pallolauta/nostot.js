@@ -37,6 +37,7 @@
  */
 
 import {
+  KOVAN_ESTEEN_PAINO,
   aiheenNimi, aihemerkinLaatikko, aihemerkkiElementti, aihenostonNimio, asetteleAihemerkki,
   kohdanLaatikko, ryhmitaNostot, viuhkanAsemat, viuhkanNimioLeveys,
 } from './aihemerkit.js';
@@ -845,6 +846,9 @@ export function asetteleNosto(el, d) {
   }
   el.dataset.nimio = nimio;
   el.classList.toggle('lunastettu', Boolean(d.lunastettu));
+  // Listan alle jäänyt merkki piiloutuu listan ajaksi (ks. LISTA EI
+  // KOSKAAN TOISEN TEKSTIN PÄÄLLE); seuraava ladonta palauttaa sen.
+  el.classList.toggle('pallolauta-nosto-piilossa', Boolean(d.piiloListanAlla));
   // Kaupunkimerkki on isompi (ks. KAUPUNKIMERKIN NIMIÖ ON ISOMPI KUIN
   // NOSTON). Luokka on savukkeiden ja CSS:n kahva: ilman sitä
   // mittaava savuke poimisi DOM-järjestyksen ensimmäisen merkin eikä
@@ -1057,6 +1061,12 @@ export function luoNostot({
   let ryhmitetytIdt = new Set();
   // Auki olevan viuhkan kohdat ruutulaatikkoineen (osumatesti lukee).
   let viuhkanKohdat = [];
+  /*
+   * Listan alle piilotettu muste: { avain, osa } (ks. LISTA EI KOSKAAN
+   * TOISEN TEKSTIN PÄÄLLE). Vain mittausta ja vartioita varten —
+   * piilotus itse elää datumeissa ja purkautuu seuraavassa ladonnassa.
+   */
+  let piilotetutListanAlta = [];
   /*
    * VIIMEISIN NIMILADONTA. Kaupunkien nimilaatikot tulevat laudalta
    * vasta `sovittele`ssa, eli ladonnan JÄLKEEN; lista tarvitsee ne
@@ -1852,6 +1862,7 @@ export function luoNostot({
      * Sama lista jää osumatestin käyttöön (viuhkanKohdat).
      */
     viuhkanKohdat = [];
+    piilotetutListanAlta = [];
     if (viuhka) {
       const rivi = naytetaan.find((r) => r.avain === viuhka.avain);
       if (!rivi) viuhka = null;
@@ -1859,21 +1870,91 @@ export function luoNostot({
         const leveydet = rivi.jasenet.map((m) => viuhkanNimioLeveys(
           m.nimi ? nostosymNimioMitta(m.nimi, m.symLaji).leveys : 0, mittaNyt,
         ));
+        /*
+         * ══ LISTA EI KOSKAAN TOISEN TEKSTIN PÄÄLLE ════════════════
+         * (omistaja 17.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 32
+         * kohta 5: *"Yksikään teksti ei saa mennä toisen päälle."*)
+         *
+         * MITATTU VIKA (viuhkalistan erä, PR #2566, kaappaus 390 px):
+         * listan rivit ladottiin *Kyyhkyposti…*- ja *Tuileriain
+         * rauniot…* -nimiöiden päälle. Juurisyitä oli kaksi: muiden
+         * nostojen NIMIÖT eivät olleet esteitä lainkaan (`laatikot` on
+         * ikonien ja poltetun musteen joukko, ilman elävien nimiöitä),
+         * ja este oli pelkkä SAKKO — ahtaassa paikassa pienin sakko on
+         * silti päällekkäisyys.
+         *
+         * KAKSI ESTELUOKKAA. Kaupungin nimi ja pelinappula ovat
+         * KOVIA: niitä ei voi piilottaa, joten lista väistää niitä
+         * (KOVAN_ESTEEN_PAINO). Muiden nostojen nimiöt ja merkit ovat
+         * yhtä lailla esteitä, mutta jos lista ei mahdu ruudulle
+         * limittymättä, ne PIILOTETAAN listan ajaksi ja palautetaan
+         * sulkiessa — sillä lista on se, jota juuri luetaan. Nimiö
+         * piiloutuu ensin ja merkki vain, jos lista peittää senkin.
+         */
+        const kovat = [...viimeisimmatNimet, ...(esteet?.() ?? [])]
+          .filter(Boolean)
+          .map((e) => ({ ...e, paino: KOVAN_ESTEEN_PAINO }));
+        /*
+         * Muiden nostojen muste TÄMÄN ladonnan asennoissa: ikonin ruutu
+         * ja nimiöllinen laatikko erikseen, jotta piilotus osaa ottaa
+         * ensin nimiön ja vasta sitten merkin. Rivin OMA kylki (r.puoli)
+         * kelpaa: sovittelu ajetaan vasta ladonnan jälkeen, ja sen
+         * siirto on muutama pikseli.
+         */
+        const nostomuste = [];
+        naytetaan.forEach((r2, i2) => {
+          if (r2 === rivi || r2.perhe === 'piste' || !r2.p) return;
+          const datum2 = datumit[i2];
+          if (!datum2) return;
+          const laatikko = (nimio) => (r2.perhe === 'aihemerkki'
+            ? aihemerkinLaatikko(r2.p, datum2, { dx: 0, dy: 0, kylki: r2.puoli ?? 'oikea', nimio })
+            : nostonLaatikko(r2.p, r2, { dx: 0, dy: 0, kylki: r2.puoli ?? 'oikea', nimio }));
+          const merkki = laatikko(false);
+          nostomuste.push({ ...merkki, avain: r2.avain, osa: 'merkki' });
+          if (r2.nimioNakyy && r2.nimi) {
+            nostomuste.push({ ...laatikko(true), avain: r2.avain, osa: 'nimio' });
+          }
+        });
+        const listanEsteet = [...kovat, ...nostomuste, ...laatikot];
         const {
           puoli, asemat, leveys: listaLeveys, pohja,
         } = viuhkanAsemat({
           p: rivi.p,
           ruutu: ruutu?.() ?? { leveys: 1400, korkeus: 900 },
           leveydet,
-          /*
-           * Kaupunkien nimet (edellinen sovittelu), pelimerkit ja
-           * kartan muu nostomuste — lista etsii tyhjimmän kohdan
-           * merkin vierestä (PAATOKSET 32 kohta 3: lista ei saa
-           * peittää kaupungin nimeä eikä pelinappulaa, ja *"visuaalinen
-           * selkeys on tarkeampi kuin oikea sijoittelu"*).
-           */
-          esteet: [...viimeisimmatNimet, ...(esteet?.() ?? []), ...laatikot],
+          esteet: listanEsteet,
         });
+        /*
+         * PIILOTUS: LISTAN ALLE EI JÄÄ TEKSTIÄ. Lista on nyt siinä
+         * asennossa, jossa se peittää vähiten — ja jos se yhä osuu
+         * toisen noston nimiöön tai merkkiin, se muste väistyy
+         * PIILOUTUMALLA listan ajaksi. Piilotus kirjoitetaan datumiin
+         * ennen `merkit.aseta`a, joten se näkyy samalla kehyksellä kuin
+         * lista; kun lista sulkeutuu, seuraava ladonta rakentaa datumit
+         * taas rivin omista kentistä eikä piilotusta ole (palautus on
+         * siis paluu normaaliin, ei erillinen tila).
+         */
+        const listanLaatikot = asemat.map((a) => {
+          const l = kohdanLaatikko(a.dx, a.dy, listaLeveys, puoli);
+          return {
+            x0: rivi.p.x + l.x0,
+            y0: rivi.p.y + l.y0,
+            x1: rivi.p.x + l.x1,
+            y1: rivi.p.y + l.y1,
+          };
+        });
+        const osuuListaan = (e) => listanLaatikot.some((l) => l.x0 < e.x1 && e.x0 < l.x1
+          && l.y0 < e.y1 && e.y0 < l.y1);
+        piilotetutListanAlta = [];
+        for (const e of nostomuste) {
+          if (!osuuListaan(e)) continue;
+          const i2 = naytetaan.findIndex((r2) => r2.avain === e.avain);
+          const datum2 = i2 >= 0 ? datumit[i2] : null;
+          if (!datum2) continue;
+          if (e.osa === 'merkki') datum2.piiloListanAlla = true;
+          else datum2.nimioNakyy = false;
+          piilotetutListanAlta.push({ avain: e.avain, osa: e.osa });
+        }
         // Listan rivit ovat samanlevyisiä: yksi leveys piirtoon,
         // osumapintaan ja mittaukseen.
         viuhkanKohdat = rivi.jasenet.map((m, i) => ({
@@ -2121,6 +2202,8 @@ export function luoNostot({
     paivitaValot,
     /** Auki olevan viuhkan aihemerkin avain tai null (PAATOKSET 27). */
     viuhkaAuki: () => viuhka?.avain ?? null,
+    /** Listan alle piilotettu muste (savukkeiden vartio, ks. LISTA EI…). */
+    viuhkanPiilotetut: () => piilotetutListanAlta.map((e) => ({ ...e })),
     /** Sulkee viuhkan (kartan napautus, js/pallolauta/lauta.js). */
     suljeViuhka,
     /**

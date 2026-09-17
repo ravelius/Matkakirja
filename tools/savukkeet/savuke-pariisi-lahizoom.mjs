@@ -1417,6 +1417,20 @@ for (const ruutu of RUUDUT) {
         rivit: l.nostot?.viuhkanOsumalaatikot?.() ?? [],
         nimet: [...document.querySelectorAll('.pallolauta-nimi')].map(laatikko),
         nappulat: [...document.querySelectorAll('.pallolauta-nappula')].map(laatikko),
+        /*
+         * MUIDEN NOSTOJEN NIMIÖT JA MERKIT (PAATOKSET 32 kohta 5,
+         * Fablen erä 3): listan alle ei saa jäädä toisen noston
+         * tekstiä. Näkyvä muste luetaan DOMista, joten listan ajaksi
+         * PIILOTETUT (visibility: hidden) eivät ole tässä joukossa —
+         * juuri se on korjauksen väite, ja piilotettujen määrä
+         * kirjataan erikseen.
+         */
+        nostot: [...document.querySelectorAll('.pallolauta-nosto')]
+          .filter((el) => !el.classList.contains('pallolauta-nosto-piilossa')
+            && !el.classList.contains('pallolauta-aihemerkki')
+            && el.getBoundingClientRect().width > 0)
+          .map((el) => ({ nimi: el.dataset.nimio || el.dataset.nosto || 'nosto', ...laatikko(el) })),
+        piilotetut: l.nostot?.viuhkanPiilotetut?.() ?? [],
       };
     });
     await kaappaa(sivu, `pariisi-viuhkalista-${ruutu.w}.png`);
@@ -1437,6 +1451,11 @@ for (const ruutu of RUUDUT) {
       for (const nappula of listaMitta.nappulat) {
         if (limittyy(rivi, nappula)) musteenPaalla.push(`${rivi.nimi} × nappula`);
       }
+      // Muiden nostojen nimiöt ja merkit: limitys on virhe, koska
+      // listan alle jäänyt muste on piilotettu (ks. yllä).
+      for (const nosto of listaMitta.nostot) {
+        if (limittyy(rivi, nosto)) musteenPaalla.push(`${rivi.nimi} × ${nosto.nimi}`);
+      }
     }
     const reunanYli = listaMitta.rivit.filter((b) => b.x0 < 0 || b.y0 < 0
       || b.x1 > listaMitta.ruutu.leveys || b.y1 > listaMitta.ruutu.korkeus)
@@ -1446,11 +1465,14 @@ for (const ruutu of RUUDUT) {
       rivitKeskenaan,
       musteenPaalla,
       reunanYli,
+      piilotetut: listaMitta.piilotetut ?? [],
     };
     tieto(`${ruutu.nimi} · viuhkalista`, `rivejä ${listaTulos.rivit}`
       + `, limityksiä ${rivitKeskenaan.length}`
       + `, musteen päällä ${musteenPaalla.length}`
-      + `, reunan yli ${reunanYli.length}`);
+      + `, reunan yli ${reunanYli.length}`
+      + `, listan alle piilotettuja ${listaTulos.piilotetut.length}`
+      + `${listaTulos.piilotetut.length ? ` (${listaTulos.piilotetut.map((x) => `${x.avain}/${x.osa}`).slice(0, 6).join('; ')})` : ''}`);
     let viuhkaKortti = null;
     if (kohdat.length) {
       await napauta(sivu, kohdat[0].x, kohdat[0].y);
@@ -1567,6 +1589,7 @@ for (const ruutu of RUUDUT) {
         + `, rivi rivin päällä: ${viuhkaTulos.lista.rivitKeskenaan.join(', ') || 'ei'}`
         + `, musteen päällä: ${viuhkaTulos.lista.musteenPaalla.join(', ') || 'ei'}`
         + `, reunan yli: ${viuhkaTulos.lista.reunanYli.join(', ') || 'ei'}`
+        + `, listan alle piilotettuja: ${viuhkaTulos.lista.piilotetut?.length ?? 0}`
       : 'listaa ei mitattu (ks. vartio 4b)');
 
   /*

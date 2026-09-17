@@ -92,11 +92,11 @@
  */
 
 import {
-  NOSTOSYM_MINI_RUUTU,
+  NOSTOSYM_MINI_RUUTU, NOSTOSYM_PISTE_R,
   nostosymLyhennaNimio, nostosymNimioAsemointi, nostosymNimioMitta,
-  piirraNostosymMini, piirraNostosymNimio,
+  piirraNostosymNimio,
 } from '../fokusnosto-symbolit.js';
-import { KARTTAVALO_AIHEET, karttavaloKarkisymboli, karttavaloVari } from '../karttavalot.js';
+import { KARTTAVALO_AIHEET, karttavaloVari } from '../karttavalot.js';
 
 const SVG = 'http://www.w3.org/2000/svg';
 
@@ -232,6 +232,14 @@ export const VIUHKAN_SADE_PX = 26;
 export const VIUHKAN_REUNAVARA_PX = 10;
 /** Pehmeän pohjan levein vyö rivilaatikoiden ympärillä (px). */
 export const VIUHKAN_POHJAN_VARA_PX = 10;
+
+/**
+ * Kovan esteen paino listan sakossa: kaupungin nimi ja pelinappula
+ * (ks. ESTEELLÄ ON PAINO). Luku on niin suuri, että yhden kovan
+ * esteen neliöpikseli painaa enemmän kuin koko listan alle jäävä
+ * nostonimiö — piilotettava este väistyy aina ennen piilottamatonta.
+ */
+export const KOVAN_ESTEEN_PAINO = 50;
 /** Pohjan vyöt uloimmasta sisimpään: [vara px, peitto]. */
 export const VIUHKAN_POHJAN_VYOT = [
   [VIUHKAN_POHJAN_VARA_PX, 0.14],
@@ -290,7 +298,17 @@ function paallekkaisyys(a, b) {
  * @param {object} p  merkin ruutupiste { x, y } kotelon pikseleinä
  * @param {object} ruutu  kotelon koko { leveys, korkeus }
  * @param {Array<number>} leveydet  kohtien nimiöleveydet ruudulla (px)
+ * ESTEELLÄ ON PAINO. Kaupungin nimi ja pelinappula ovat KOVIA
+ * esteitä (`paino` KOVAN_ESTEEN_PAINO): niitä ei piiloteta, joten
+ * listan on väistettävä niitä. Muiden nostojen nimiöt ja merkit ovat
+ * yhtä lailla esteitä, mutta ne VOI piilottaa listan ajaksi, joten
+ * niiden paino on 1 — ahtaassa paikassa lista valitsee siis mieluummin
+ * asennon, jossa sen alle jää nostonimiöitä kuin asennon, jossa se
+ * peittää kaupungin nimen tai nappulan (js/pallolauta/nostot.js
+ * LISTA EI KOSKAAN TOISEN TEKSTIN PÄÄLLE).
+ *
  * @param {Array<object>} [esteet]  ruutulaatikot, joita lista väistää
+ *   (`paino` valinnainen; oletus 1)
  * @returns {{puoli: string, leveys: number, asemat: Array<{dx, dy}>,
  *   pohja: ?{x0, y0, x1, y1}}}
  */
@@ -339,7 +357,7 @@ export function viuhkanAsemat({
         const ruudulla = {
           x0: p.x + l.x0, x1: p.x + l.x1, y0: p.y + l.y0, y1: p.y + l.y1,
         };
-        for (const e of esteet ?? []) sakko += paallekkaisyys(ruudulla, e);
+        for (const e of esteet ?? []) sakko += paallekkaisyys(ruudulla, e) * (e.paino ?? 1);
       }
       if (!paras || sakko < paras.sakko - 0.001) {
         paras = {
@@ -382,11 +400,33 @@ export function listanPohja(asemat, leveys, puoli) {
  *
  * Lautasen säde oli 9,2 yksikköä, kun noston oma ruutu on
  * NOSTOSYM_MINI_RUUTU 7,4 — aihenosto piirtyi 1,24-kertaisena ja
- * varasi saman verran enemmän tilaa ladonnassa. Säde on nyt sama luku
- * kuin nostolla, yhtenä mittana eikä kopiona.
+ * varasi saman verran enemmän tilaa ladonnassa.
+ *
+ * ── MITTA ON POLTETTU PISTE, EI MERKIN RUUTU (omistaja 17.9.2026 klo
+ * 21.40, Raamattu KARTTAUUDISTUKSEN PAATOKSET 33 kohta 3: *"kaikki
+ * nostopisteet pitää olla yhtä pieniä, kuin mitä kartalle poltetut
+ * merkit ovat. Viimeisimmässä kaappauksessa pisteet olivat vielä
+ * liian isoja."*) ──────────────────────────────────────────────────
+ *
+ * MERKIN RUUTU EI OLE MERKIN MUSTE. NOSTOSYM_MINI_RUUTU 7,4 on se
+ * LAATIKKO, jonka sisään merkki piirretään (hitunen musteen
+ * ympärillä), ja siksi 7,4:n säteinen lautanen oli ruudulla
+ * 2 × 7,4 × 0,773 ≈ 11,4 px, kun laattaan poltettu piste on
+ * 2 × NOSTOSYM_PISTE_R × 0,773 ≈ 5,3 px — yli kaksinkertainen, juuri
+ * se mikä omistajan kaappauksessa näkyi. Ensimmäinen erä siis pienensi
+ * lautasen merkin ruudun kokoiseksi; nyt se on POLTETUN PISTEEN
+ * kokoinen, eli täsmälleen sama muste kuin *Chartresin.*-pisteessä.
+ *
+ * SYMBOLI JÄÄ POIS LAUTASEN SISÄLTÄ. Viivamerkki on piirretty
+ * ±6,5 yksikön alueelle, eikä se mahdu 3,4:n säteiseen pisteeseen
+ * millään kutistuksella luettavana — ja poltetussa kartassa piste on
+ * muutenkin pelkkä värillinen kiekko mustereunassa. Omistajan sääntö
+ * sallii tämän sanatarkasti (*"symboli pallon sisällä saa pienentyä
+ * tai jäädä pois"*, Fablen erä 3); aiheen kertoo nimiö, joka pysyy
+ * poltetun nimiön kokoisena (8,5 px).
  */
 /** Aihemerkin värilautasen säde merkin omissa yksiköissä. */
-export const AIHEMERKIN_R = NOSTOSYM_MINI_RUUTU;
+export const AIHEMERKIN_R = NOSTOSYM_PISTE_R;
 
 /*
  * ══ AIHENOSTON NIMIÖ: TÄRKEIMMÄN NOSTON NIMI JA KOLME PISTETTÄ ════
@@ -484,6 +524,9 @@ export function asetteleAihemerkki(kuori, d) {
   const dy = d.dy ?? 0;
   g.style.transform = `translate(${dx.toFixed(2)}px, ${dy.toFixed(2)}px) scale(${mitta.toFixed(4)})`;
   kuori.classList.toggle('pallolauta-aihemerkki-auki', Boolean(d.avattu));
+  // Listan alle jäänyt merkki piiloutuu listan ajaksi (js/pallolauta/
+  // nostot.js LISTA EI KOSKAAN TOISEN TEKSTIN PÄÄLLE).
+  kuori.classList.toggle('pallolauta-nosto-piilossa', Boolean(d.piiloListanAlla));
   const nimio = d.nimioNakyy && d.nimi ? d.nimi : '';
   kuori.dataset.nimio = nimio;
   kuori.setAttribute('aria-label', `${d.aiheNimi ?? ''}: ${d.nimi ?? ''} (${d.maara ?? 0})`);
@@ -521,8 +564,9 @@ export function asetteleAihemerkki(kuori, d) {
   el('circle', {
     class: 'pallolauta-aihemerkki-keha', r: AIHEMERKIN_R, cx: 0, cy: 0,
   }, g);
-  const sym = el('g', { class: 'pallolauta-aihemerkki-sym' }, g);
-  piirraNostosymMini(sym, karttavaloKarkisymboli(d.kategoria ?? d.aihe) ?? 'historia', d.symLaji ?? null);
+  // Lautasen sisään ei piirretä symbolia: piste on poltetun musteen
+  // kokoinen (ks. MITTA ON POLTETTU PISTE), eikä viivamerkki mahdu
+  // siihen luettavana. Aiheen kertoo nimiö ja lautasen väri.
   // Nimiö on jo ladottu mittaansa (aihenostonNimio), joten kartan 18
   // merkin sääntö ei saa koskea siihen: Infinity = älä lyhennä.
   if (nimio) piirraNostosymNimio(g, nimio, d.symLaji ?? null, d.puoli ?? 'oikea', Infinity);

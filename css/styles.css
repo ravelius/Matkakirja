@@ -25950,6 +25950,15 @@ svg.rough-annotation { pointer-events: none; }
 .pallolauta-piste svg { display: block; overflow: visible; }
 .pallolauta-nimi-siirto { transition: transform 250ms ease-in-out; }
 
+/*
+ * LISTAN ALLE JÄÄNYT MUSTE PIILOUTUU LISTAN AJAKSI (Raamattu,
+ * KARTTAUUDISTUKSEN PAATOKSET 32 kohta 5; js/pallolauta/nostot.js
+ * LISTA EI KOSKAAN TOISEN TEKSTIN PÄÄLLE). `visibility` eikä
+ * `display`, jotta merkin paikka ja CSS2D-asemointi pysyvät
+ * koskemattomina — piiloutuminen on vain listan kestoinen.
+ */
+.pallolauta-nosto-piilossa { visibility: hidden; }
+
 /* ===========================================================================
    AIHEMERKKI JA VIUHKA (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 27;
    js/pallolauta/aihemerkit.js)
