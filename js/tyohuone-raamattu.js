@@ -8472,7 +8472,7 @@ export const RAAMATTU = {
           + 'omin sanoin "Levita merkit laajemmalle alueelle" - ankkurit '
           + 'levitetaan kaupungin ymparille niin laajalle kuin tarvitaan, jotta '
           + 'kaikki nimiot nakyvat limittymatta. TARKENNUS 2 (omistaja 17.9.2026 '
-          + 'klo 21.20 Suomen aikaa, kortit ankkurieran kaappauksista PR #2565): '
+          + 'klo 21.10 Suomen aikaa, kortit ankkurieran kaappauksista PR #2565): '
           + 'turisti-infon kyltti on SAMAA KOKOA kuin nostot (poltetun kartan '
           + 'mitta, kumoaa PAATOKSET 31 TARKENNUS 2 kohdan 5 mitan 11,5/16 px); '
           + 'saapumisnakymassa (koko maa) Pariisin nostot saavat olla pelkkia '
