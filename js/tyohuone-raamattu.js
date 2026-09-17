@@ -4504,7 +4504,17 @@ export const RAAMATTU = {
           + 'uusista), savukkeet-mac-job palautetaan pull_request-'
           + 'laukaisuun saman repon PR:ille ja ubuntu-matriisi jaa fork-'
           + 'PR:ille ja workflow_dispatchille. Tunnetut Mac-punaiset ovat '
-          + 'velkaa: korjataan omina erina kun aikaa on.',
+          + 'velkaa: korjataan omina erina kun aikaa on. Tila: TOTEUTUNUT '
+          + '17.9.2026 klo 19.15 Suomen aikaa (v1933 mainissa, PR #2564): '
+          + 'kolme eraa korjasivat pariisi-lahizoom 74/74, nostolaput 7/8, '
+          + 'ihmisen-esitys 13/13 (Playwright-klikin siirto ja painallus eri '
+          + 'kehyksiin; savuke odottaa pelin tilaa) ja pelin: kohdepisteen '
+          + 'napautus osuu merkkiin tyopoydalla (lauta.js varapolku); '
+          + 'kuormahailyt (ihmisen-esitys 4, satelliittilinssi 2) ovat '
+          + 'sarjat.jsonin tunnetutPunaisetMac-listoissa, jotka vain Mac-'
+          + 'polku lukee (ubuntu vartioi yha). Ensimmainen Mac-PR-ajo: '
+          + '775/804, 0 uutta punaista, n. 7 min. Mac on PR-portti; ubuntu-'
+          + 'matriisi vain fork-PR:ille.',
         'IHMISEN MATKA: KELLO EI KULJE TAAKSEPAIN, PAITSI AIKAHYPYSSA (omistaja '
           + '7.9.2026 ilta klo 21.50 Suomen aikaa, sanatarkasti: "Ja tarinan '
           + 'jarjestys pitaa muuttaa. Outoa etta kello menee taaksepain etela '
