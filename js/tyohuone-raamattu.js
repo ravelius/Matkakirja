@@ -8497,7 +8497,15 @@ export const RAAMATTU = {
           + 'isoja); 4) sama malli monistetaan myohemmin muihin maihin. '
           + 'Mitataan: Ranskan nostojen jakauma (ei rykelmaa Pariisin '
           + 'ymparilla), pallon halkaisija = poltetun merkin halkaisija. Tila: '
-          + 'kirjattu, Fable vahvistaa maaran kortilla.',
+          + 'kirjattu. TARKENNUS (omistaja 17.9.2026 klo 21.50 Suomen aikaa, '
+          + 'kortit): ensimmainen kierros NOIN 40 nostoa Ranskassa nykyiset '
+          + 'mukaan lukien (Alpit, Pyreneet, Loiren linnat, Bretagne, '
+          + 'Normandia, Provence, Bordeaux, Lyon, Marseille, Korsika); Fable '
+          + 'valitsee kohteet ja kirjoittaa otsikot kaanonin ja vuoden 1873 '
+          + 'nakokulman mukaan, Opus-era lisaa pisteet ja otsikko-pop-upit '
+          + '(koordinaatit Wikipediasta, ei arvattuja), sisaltotekstit '
+          + 'Codexilta myohemmin. Tila: tyo Opus-agentilla (Fablen kohdelista '
+          + 'tehtavanannossa ja raportissa).',
         'KARTTAUUDISTUKSEN PAATOKSET 32: NOSTOT EIVAT LIIKU ZOOMATESSA, '
           + 'VIUHKA SIISTIKSI LISTAKSI, KAIKKI NOSTOT POLTETUN KARTAN KOKOA, '
           + 'EI TEKSTIA TOISEN PAALLE (omistaja 17.9.2026 klo 20.35 Suomen '
