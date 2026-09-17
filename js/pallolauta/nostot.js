@@ -1836,7 +1836,16 @@ export function luoNostot({
       if (omatKaupunkirivit.some((r) => r.nimi === nimi)) continue;
       const p = ruudulla(k.lat, k.lng);
       if (!p) continue;
-      const ankkuroidut = elavatKaikki.filter((r) => r.perhe === 'nosto' && !r.kaupunki
+      /*
+       * KESKUS EI SAA RIIPPUA RUUDUSTA (mitattu 18.9.2026: 390 px
+       * antoi keskuksen, jossa sisäisiä oli 2, ja 1400 px keskuksen,
+       * jossa niitä oli 0 — leveämpi ruutu tuo lisää nostoja, ja
+       * mediaani liikkui niiden mukana). Lähde on siksi `rivit`, koko
+       * ladonnan lista, eikä ruudulla olevat: jäsenyys on sama
+       * kaikilla zoomeilla ja kaikilla ruuduilla, kuten PAATOKSET 34
+       * kohta 4 vaatii.
+       */
+      const ankkuroidut = rivit.filter((r) => r.perhe === 'nosto' && !r.kaupunki
         && r.kaupunkiAvain === k.id
         && Number.isFinite(r.lat) && Number.isFinite(r.lng));
       const keskus = ankkuroidut.length
