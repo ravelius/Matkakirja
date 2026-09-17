@@ -4483,7 +4483,17 @@ export const RAAMATTU = {
           + 'pariisi, pallo-nostolaput 6, ihmisen-kehys TRANSFORM-liuku, '
           + 'astro-pallo "pyoriminen loppuu" (vedon liuku ei sammu 4 s:ssa '
           + 'Macin kehysluvulla) ja kohdepiste klikattavissa, '
-          + 'satelliittilinssin kuormahailynta.',
+          + 'satelliittilinssin kuormahailynta. TILA 3 (omistaja 17.9.2026 klo '
+          + '18.15 Suomen aikaa, kysymys sanatarkasti "Miten tassa voi menna '
+          + 'nain pitkaan?" - Fablen vastaus: kaksi tuntia, yli puolet Actions-'
+          + 'odotusta, ja Mac-kalibrointi ei suppene; kortti "Jatka '
+          + 'kalibrointia"): v1932 mainissa (nostolapun tasapelimitta oma '
+          + 'muste, PR #2559), PR #2560 (astro-pallon liuku tilapohjaisesti, '
+          + 'kehyksen TRANSFORM-mittaus). Mainin dispatch-ajo Macilla '
+          + '(35237332631): 764/804, 12 uutta punaista (pariisi-lahizoom '
+          + 'napautusosumat 4/4b/7c, pallo-nostolaput 6, ym.). Kalibrointi '
+          + 'jatkuu Opus-erina, enintaan kolme rinnakkain, erilliset '
+          + 'savukkeet per era.',
         'IHMISEN MATKA: KELLO EI KULJE TAAKSEPAIN, PAITSI AIKAHYPYSSA (omistaja '
           + '7.9.2026 ilta klo 21.50 Suomen aikaa, sanatarkasti: "Ja tarinan '
           + 'jarjestys pitaa muuttaa. Outoa etta kello menee taaksepain etela '
