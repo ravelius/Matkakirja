@@ -998,8 +998,11 @@ test('jään sekoitus: päiväntasaajalla ei jäätä, navalla lähes pelkkää'
 
 /* ═══════ MUSTA PALLO iPHONESSA (v1924) — LADONNAN KESTÄVYYS ═══════ */
 
-test('ladontakangas valitaan ruudusta: puhelin 2048, leveä ruutu täysi koko', async () => {
-  const { valitseLadonta, LADONNAN_KATTO_PUHELIN } = await import('../js/linssit/reliefikuva.js');
+test('ladontakangas valitaan ruudusta, eikä koskaan yli 16 megapikselin', async () => {
+  const {
+    valitseLadonta, LADONNAN_KATTO_PUHELIN, LADONNAN_KATTO, LADONNAN_KATTO_WEBKIT,
+    LADONNAN_PIKSELIKATTO,
+  } = await import('../js/linssit/reliefikuva.js');
   // Puhelin (390 CSS) → 4k-lähde puolitetaan kerran.
   const puhelin = valitseLadonta({ leveys: 4096, korkeus: 2048, ruudunLeveys: 390 });
   assert.deepEqual(
@@ -1009,32 +1012,101 @@ test('ladontakangas valitaan ruudusta: puhelin 2048, leveä ruutu täysi koko', 
   assert.equal(puhelin.katto, LADONNAN_KATTO_PUHELIN);
   // Suhde pysyy 2:1, tai tasavälinen maasto venyisi.
   assert.equal(puhelin.leveys / puhelin.korkeus, 2);
-  // Leveä ruutu saa lähdekuvan omassa koossaan — terävyys ei katoa.
-  const tyopoyta = valitseLadonta({ leveys: 8192, korkeus: 4096, ruudunLeveys: 1400 });
+  /*
+   * LISÄYS 13 kohta 37: leveä ruutu EI enää saa lähdekuvan omaa kokoa.
+   * 8192 × 4096 = 33,5 Mpx on kaksi kertaa iOS:n kangaskatto, 48 Mt:n
+   * PNG ja 134 Mt:n tekstuuri — musta pallo macOS-WebAppissa.
+   */
+  const tyopoyta = valitseLadonta({ leveys: 8192, korkeus: 4096, ruudunLeveys: 2539 });
   assert.deepEqual(
-    { leveys: tyopoyta.leveys, korkeus: tyopoyta.korkeus }, { leveys: 8192, korkeus: 4096 },
+    { leveys: tyopoyta.leveys, korkeus: tyopoyta.korkeus }, { leveys: 4096, korkeus: 2048 },
   );
-  assert.equal(tyopoyta.pienennetty, false);
+  assert.equal(tyopoyta.pienennetty, true);
+  assert.equal(tyopoyta.katto, LADONNAN_KATTO);
+  assert.ok(tyopoyta.leveys * tyopoyta.korkeus <= LADONNAN_PIKSELIKATTO);
+  // WebKitillä katto on sama tai tiukempi — ei koskaan löysempi.
+  const webkit = valitseLadonta({
+    leveys: 8192, korkeus: 4096, ruudunLeveys: 2539, webkit: true,
+  });
+  assert.ok(webkit.leveys <= LADONNAN_KATTO_WEBKIT);
+  assert.ok(webkit.leveys <= tyopoyta.leveys);
   // Ilman ruudun leveyttä oletus on varovainen (puhelinkatto).
   assert.equal(valitseLadonta({ leveys: 4096, korkeus: 2048 }).leveys, 2048);
   // Nimenomainen katto voittaa ruudun: puolituksin, ei vapaalla kertoimella.
   assert.equal(valitseLadonta({ leveys: 8192, korkeus: 4096, katto: 1024 }).leveys, 1024);
   assert.equal(valitseLadonta({ leveys: 8192, korkeus: 4096, katto: 1024 }).korkeus, 512);
+  // Eikä edes nimenomainen katto voi ylittää pikselikattoa.
+  const liikaa = valitseLadonta({ leveys: 16384, korkeus: 8192, katto: 16384 });
+  assert.ok(liikaa.leveys * liikaa.korkeus <= LADONNAN_PIKSELIKATTO, `${liikaa.leveys}x${liikaa.korkeus}`);
+});
+
+test('webkitSelain tunnistaa Safarin ja WebAppin muttei Chromea', async () => {
+  const { webkitSelain } = await import('../js/linssit/reliefikuva.js');
+  const SAFARI = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15'
+    + ' (KHTML, like Gecko) Version/17.6 Safari/605.1.15';
+  const CHROME = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+    + ' (KHTML, like Gecko) Chrome/129.0.0.0 Safari/537.36';
+  const IPHONE = 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_6 like Mac OS X) AppleWebKit/605.1.15'
+    + ' (KHTML, like Gecko) Version/17.6 Mobile/15E148 Safari/604.1';
+  assert.equal(webkitSelain({ userAgent: SAFARI }), true);
+  assert.equal(webkitSelain({ userAgent: IPHONE }), true);
+  assert.equal(webkitSelain({ userAgent: CHROME }), false);
+  // Asennettu WebApp kertoo itsensä myös standalone-lipulla.
+  assert.equal(webkitSelain({ userAgent: CHROME, standalone: true }), true);
+  // Tuntematon tai puuttuva navigator ei saa kaataa eikä arvata.
+  assert.equal(webkitSelain(null), false);
+  assert.equal(webkitSelain({}), false);
 });
 
 test('tyhjä kangas tunnistetaan, eikä tunnistus estä kun sitä ei voi tehdä', async () => {
-  const { tyhjaKangas, TYHJYYDEN_KYNNYS } = await import('../js/linssit/satelliitti-avaruus.js');
+  const {
+    tyhjaKangas, TYHJYYDEN_KYNNYS, TUMMUUDEN_KYNNYS, VAIHTELUN_KYNNYS,
+  } = await import('../js/linssit/satelliitti-avaruus.js');
   assert.equal(TYHJYYDEN_KYNNYS, 12);
-  const kangas = (r, g, b, a) => ({ getImageData: () => ({ data: [r, g, b, a] }) });
+  /*
+   * NÄYTTEET VAIHTELEVAT, KUTEN OIKEA RELIEFI: syvä meri ja vaalea
+   * manner. Yksivärinen kangas kelpasi ennen — se päästi mustan pallon
+   * läpi macOS-WebAppissa (LISÄYS 13 kohta 37).
+   */
+  const vaihteleva = (tumma, vaalea) => {
+    let vuoro = 0;
+    return {
+      getImageData: () => {
+        vuoro += 1;
+        return { data: vuoro % 2 ? tumma : vaalea };
+      },
+    };
+  };
+  const yksivarinen = (r, g, b, a) => ({ getImageData: () => ({ data: [r, g, b, a] }) });
   // Juuri tämä on iOS Safarin oire: kangas on läpinäkyvä, ei poikkeusta.
-  assert.equal(tyhjaKangas(kangas(0, 0, 0, 0), 64, 32), true);
+  assert.equal(tyhjaKangas(yksivarinen(0, 0, 0, 0), 64, 32), true);
   // Musta mutta läpinäkymätön on yhtä musta ruudulla.
-  assert.equal(tyhjaKangas(kangas(0, 0, 0, 255), 64, 32), true);
-  // Syvä meri (9, 32, 72) riittää: se on kuvan tummin oikea väri.
-  assert.equal(tyhjaKangas(kangas(9, 32, 72, 255), 64, 32), false);
+  assert.equal(tyhjaKangas(yksivarinen(0, 0, 0, 255), 64, 32), true);
+  // Syvä meri ja manner: tämä on oikea reliefi ja se kelpaa.
+  assert.equal(tyhjaKangas(vaihteleva([9, 32, 72, 255], [180, 170, 120, 255]), 64, 32), false);
+  // UUSI: yksivärinen pinta hylätään, vaikka se olisi kirkas.
+  assert.equal(tyhjaKangas(yksivarinen(180, 170, 120, 255), 64, 32), true);
+  // UUSI: lähes musta hylätään, vaikka yksi näyte ylittäisi kynnyksen.
+  assert.ok(TUMMUUDEN_KYNNYS > TYHJYYDEN_KYNNYS);
+  assert.equal(tyhjaKangas(vaihteleva([0, 0, 0, 255], [14, 14, 14, 255]), 64, 32), true);
+  assert.ok(VAIHTELUN_KYNNYS > 0);
   // Ei getImageDataa tai se heittää (likainen kangas) → ei estetä.
   assert.equal(tyhjaKangas({}, 64, 32), false);
   assert.equal(tyhjaKangas({ getImageData() { throw new Error('tainted'); } }, 64, 32), false);
+});
+
+test('tyhjyysnäytteet ulottuvat reunoihin asti (lähde)', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const lahde = await readFile(new URL('../js/linssit/satelliitti-avaruus.js', import.meta.url), 'utf8');
+  const lohko = lahde.match(/const TYHJYYSNAYTTEET = \[([\s\S]*?)\];/)?.[1] ?? '';
+  const luvut = [...lohko.matchAll(/\[([\d.]+), ([\d.]+)\]/g)]
+    .map(([, x, y]) => [Number(x), Number(y)]);
+  assert.ok(luvut.length >= 16, `näytteitä ${luvut.length}`);
+  // Reunanäyte kummallakin akselilla, molemmista päistä.
+  assert.ok(luvut.some(([x]) => x <= 0.05), 'vasen reuna');
+  assert.ok(luvut.some(([x]) => x >= 0.95), 'oikea reuna');
+  assert.ok(luvut.some(([, y]) => y <= 0.05), 'yläreuna');
+  assert.ok(luvut.some(([, y]) => y >= 0.95), 'alareuna');
 });
 
 test('kylläisyyden pikselivarareitti pienelle kankaalle, sekoitus suurelle', async () => {
@@ -1105,10 +1177,16 @@ test('reliefiTekstuuri: aikakatko ja tyhjä kangas päättyvät nulliin', async 
           fillRect: () => {},
           createLinearGradient: () => ({ addColorStop: () => {} }),
           putImageData: () => {},
-          // TYHJÄ KANGAS ILMAN POIKKEUSTA, juuri kuten iOS Safarissa.
+          /*
+           * TYHJÄ KANGAS ILMAN POIKKEUSTA, juuri kuten iOS Safarissa.
+           * Mahtuva kangas antaa VAIHTELEVIA arvoja (meri ja manner) —
+           * yksivärinen pinta hylätään nykyään omana vikanaan.
+           */
           getImageData: (x, y, w, h) => {
             if (k.width * k.height > kattoPx) return { data: [0, 0, 0, 0] };
-            return { data: new Uint8ClampedArray(4 * w * h).fill(200) };
+            k.nayte = (k.nayte ?? 0) + 1;
+            const arvo = k.nayte % 2 ? 40 : 200;
+            return { data: new Uint8ClampedArray(4 * w * h).fill(arvo) };
           },
         }),
       };
@@ -1178,7 +1256,10 @@ test('reliefiTekstuuri kokoaa koko pallon kuvan YHDELLE kankaalle', async () => 
           fillRect: () => {},
           createLinearGradient: () => ({ addColorStop: () => {} }),
           putImageData: () => {},
-          getImageData: (x, y, w, h) => ({ data: new Uint8ClampedArray(4 * w * h).fill(180) }),
+          getImageData: (x, y, w, h) => {
+            k.nayte = (k.nayte ?? 0) + 1;
+            return { data: new Uint8ClampedArray(4 * w * h).fill(k.nayte % 2 ? 40 : 180) };
+          },
         }),
       };
       kankaat.push(k);
@@ -1230,11 +1311,183 @@ test('avauksenPuute nimeää sen, mikä näkymästä puuttuu', () => {
   assert.equal(avauksenPuute({ ...taysi, kotelo: { leveys: 390, korkeus: 0 } }), 'kotelo');
   assert.equal(avauksenPuute({ ...taysi, pinnanOsoite: '' }), 'pinta');
   assert.equal(avauksenPuute({ ...taysi, pisteita: 0 }), 'pisteet');
+  /*
+   * LISÄYS 13 kohta 36: yksikään kehys ei piirtynyt. Se on SYY, jonka
+   * seurauksia puuttuva pinta ja puuttuvat pisteet ovat — siksi se
+   * nimetään ennen niitä. `null` tarkoittaa "ei mitattavissa".
+   */
+  assert.equal(avauksenPuute({ ...taysi, kehyksia: 0 }), 'kehykset');
+  assert.equal(avauksenPuute({ ...taysi, kehyksia: 0, pisteita: 0 }), 'kehykset');
+  assert.equal(avauksenPuute({ ...taysi, kehyksia: 3 }), null);
+  assert.equal(avauksenPuute({ ...taysi, kehyksia: null }), null);
+  /*
+   * LISÄYS 13 kohta 37: osoite paikallaan ja 64 pistettä ruudulla,
+   * mutta piirtopuskurista luettu pallon keskusta on musta.
+   */
+  assert.equal(avauksenPuute({ ...taysi, pinnanKirkkaus: 2 }), 'pinta-musta');
+  assert.equal(avauksenPuute({ ...taysi, pinnanKirkkaus: 64 }), null);
+  assert.equal(avauksenPuute({ ...taysi, pinnanKirkkaus: null }), null);
+  // Kehykset selittävät mustankin pinnan: ne tulevat ensin.
+  assert.equal(avauksenPuute({ ...taysi, kehyksia: 0, pinnanKirkkaus: 2 }), 'kehykset');
   // Jokaiselle puutteelle on pelaajan kielinen lause, ei koodinimeä.
-  for (const nimi of ['avaruusnakyma', 'webgl-konteksti', 'kangas', 'kotelo', 'pinta', 'pisteet', 'kirjasto']) {
+  for (const nimi of ['avaruusnakyma', 'webgl-konteksti', 'kangas', 'kotelo', 'kehykset',
+    'pinta', 'pinta-musta', 'pisteet', 'kirjasto']) {
     assert.equal(typeof PUUTTEEN_SELITE[nimi], 'string', `selite puuttuu: ${nimi}`);
     assert.ok(PUUTTEEN_SELITE[nimi].length > 8, `selite on liian lyhyt: ${nimi}`);
+    // Lause, ei koodinimi: iso alkukirjain ja piste lopussa.
+    assert.match(PUUTTEEN_SELITE[nimi], /^[A-ZÄÖÅ].*\.$/, `selite ei ole lause: ${nimi}`);
   }
+});
+
+/* ═══ KEHYSVAHTI JA PINNAN MITTAUS (LISÄYS 13, kohdat 36 ja 37) ═══ */
+
+test('pinnanKirkkaus piirtää kehyksen ja lukee pallon keskustan', async () => {
+  const { pinnanKirkkaus, PINNAN_MUSTAN_KYNNYS } = await import('../js/linssit/satelliitti-avaruus.js');
+  const teePallo = (vari, { piirtoja = { n: 0 } } = {}) => {
+    const gl = {
+      RGBA: 1, UNSIGNED_BYTE: 2,
+      isContextLost: () => false,
+      readPixels: (x, y, w, h, f, t, ulos) => {
+        ulos[0] = vari[0]; ulos[1] = vari[1]; ulos[2] = vari[2]; ulos[3] = 255;
+      },
+    };
+    return {
+      renderer: () => ({
+        getContext: () => gl,
+        domElement: { width: 400, height: 300 },
+        render: () => { piirtoja.n += 1; },
+      }),
+      scene: () => ({}),
+      camera: () => ({}),
+      piirtoja,
+    };
+  };
+  const piirtoja = { n: 0 };
+  const varillinen = teePallo([30, 90, 140], { piirtoja });
+  assert.equal(pinnanKirkkaus(varillinen), 140);
+  // Mittaus PIIRTÄÄ: ilman omaa kehystä puskuri olisi jo vaihdettu.
+  assert.ok(piirtoja.n > 0, 'mittaus ei piirtänyt kehystä');
+  const musta = teePallo([0, 0, 0]);
+  assert.ok(pinnanKirkkaus(musta) < PINNAN_MUSTAN_KYNNYS);
+  // Mittaamattomissa oleva tilanne on null eikä nolla — ei puute.
+  assert.equal(pinnanKirkkaus(null), null);
+  assert.equal(pinnanKirkkaus({ renderer: () => ({}) }), null);
+  const hukassa = teePallo([30, 90, 140]);
+  hukassa.renderer().getContext().isContextLost = () => true;
+  assert.equal(pinnanKirkkaus({
+    ...hukassa,
+    renderer: () => ({
+      getContext: () => ({ readPixels: () => {}, isContextLost: () => true }),
+      domElement: { width: 400, height: 300 },
+      render: () => {},
+    }),
+  }), null);
+});
+
+test('musta pinta korjataan ensin materiaalin värillä', async () => {
+  const { valkaiseMateriaali } = await import('../js/linssit/satelliitti-avaruus.js');
+  /*
+   * MITATTU (Mac-sessio 17.9.2026, oikea WebKit ja Chromium): globe.gl
+   * asettaa `material.color = new Color(0)` aina kun globeImageUrl on
+   * null, ja tekstuurin saavuttua `color = null`. Mustaa EI saa pois
+   * `color.set()`illä eikä `needsUpdate`illa — materiaalille on
+   * annettava UUSI Color-olio.
+   */
+  class Vari {
+    constructor(hex) { this.hex = hex; }
+
+    getHex() { return this.hex; }
+
+    setHex(h) { this.hex = h; return this; }
+  }
+  // 1. Väri on null (kirjasto nollasi sen tekstuurin saavuttua).
+  const nollattu = { color: null, specular: new Vari(0x111111), needsUpdate: false };
+  assert.equal(valkaiseMateriaali(nollattu), true);
+  assert.equal(nollattu.color.getHex(), 0xffffff, 'väri ei vaihtunut valkoiseksi');
+  assert.equal(nollattu.needsUpdate, true);
+  // 2. Väri on musta (kirjasto maalasi sen null-osoitteella).
+  const musta = { color: new Vari(0), specular: new Vari(0x111111), needsUpdate: false };
+  assert.equal(valkaiseMateriaali(musta), true);
+  assert.equal(musta.color.getHex(), 0xffffff);
+  // 3. Lähtöväri palautetaan pyydettäessä (purku).
+  const palautus = { color: null, specular: new Vari(0x111111), needsUpdate: false };
+  valkaiseMateriaali(palautus, 0x336699);
+  assert.equal(palautus.color.getHex(), 0x336699);
+  // 4. Ei materiaalia tai ei Color-luokkaa → ei kaadu, palauttaa false.
+  assert.equal(valkaiseMateriaali(null), false);
+  assert.equal(valkaiseMateriaali({ color: null, specular: null }), false);
+});
+
+test('linssi valkaisee materiaalin sekä avatessa että sulkiessa (lähde)', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const lahde = await readFile(new URL('../js/linssit/satelliitti-avaruus.js', import.meta.url), 'utf8');
+  /*
+   * SULKU ON SE, JOKA MUSTAA PALLON: `globeImageUrl(null)` panee
+   * globe.gl:n maalaamaan materiaalin mustaksi, ja musta jää
+   * odottamaan SEURAAVAA avausta. Väri on siis pakotettava heti
+   * saman kutsun perään — ja varmuudeksi myös avauksessa.
+   *
+   * EI lähtöarvoon (Macin huomio 7.2, 17.9.2026): `varinLahto` on jo
+   * 0/musta laattatilassa, koska globe.gl alustaa värin mustaksi, joten
+   * lähtöarvon palautus jättäisi pallon mustaksi. Sulku kutsuu siis
+   * ilman lähtöarvoa (oletushex = valkoinen).
+   */
+  const sulku = lahde.indexOf('pallo.globeImageUrl(lahto.kuvaUrl ?? null)');
+  assert.ok(sulku > 0, 'sulun globeImageUrl-kutsua ei löytynyt');
+  const sulunJalkeen = lahde.slice(sulku, sulku + 700);
+  assert.match(sulunJalkeen, /valkaiseMateriaali\(materiaali\);/,
+    'sulku ei pakota materiaalin väriä valkoiseksi');
+  // Avauksessa väri pakotetaan ENNEN oman tekstuurin asetusta.
+  const avaus = lahde.indexOf('valkaiseMateriaali(materiaali);');
+  assert.ok(avaus > 0 && avaus < sulku, 'avaus ei valkaise materiaalia');
+  /*
+   * VARAPOLKU ON KAKSIVAIHEINEN, ja järjestys on mitattu: ensin VÄRI
+   * (Mac-sessio: globe.gl maalasi materiaalin mustaksi), vasta sitten
+   * tekstuurin vaihto (pallo-musta-erä: ladontakangas jäi tyhjäksi).
+   * Väri ei auta tyhjään tekstuuriin eikä tekstuuri mustaan väriin.
+   */
+  assert.match(lahde, /askel: 1, toimenpide: valkaistiin \? 'vari-valkoiseksi'/);
+  assert.match(lahde, /askel: 2, toimenpide: 'vyohykepallo'/);
+  const askel1 = lahde.indexOf("askel: 1, toimenpide");
+  const askel2 = lahde.indexOf("askel: 2, toimenpide");
+  assert.ok(askel1 > 0 && askel2 > askel1, 'väri ei tule ennen tekstuurin vaihtoa');
+});
+
+test('kehysvahti pakottaa piirron, kun kehyslaskuri ei etene', async () => {
+  const { varmistaKehykset, KEHYSVAHDIN_VALI_MS } = await import('../js/linssit/satelliitti-avaruus.js');
+  const kutsut = [];
+  let kehyksia = 0;
+  const pallo = {
+    renderer: () => ({ info: { render: { frame: kehyksia } } }),
+    pauseAnimation: () => kutsut.push('pause'),
+    resumeAnimation: () => { kutsut.push('resume'); kehyksia += 1; },
+  };
+  const kellot = [];
+  const ikkuna = {
+    document: { visibilityState: 'visible' },
+    setInterval: (fn) => { kellot.push(fn); return kellot.length; },
+    clearInterval: (id) => { kellot[id - 1] = null; },
+  };
+  const vahti = varmistaKehykset(pallo, { heraa: () => kutsut.push('heraa') }, ikkuna);
+  assert.equal(vahti.tila().kehyksia, 0, 'alussa kehyksiä ei ole');
+  // Laskuri ei etene → vahti pakottaa piirron PARINA (pause + resume).
+  kellot[0]();
+  assert.deepEqual(kutsut.slice(0, 3), ['pause', 'resume', 'heraa']);
+  assert.ok(vahti.tila().kehyksia > 0, 'pakotettu kehys ei näkynyt laskurissa');
+  // Kun laskuri etenee itsestään, ei pakoteta enää.
+  const ennen = kutsut.length;
+  kehyksia += 5;
+  kellot[0]();
+  assert.equal(kutsut.length, ennen, 'vahti pakotti turhaan');
+  // Taustalla (piilotettu sivu) ei pakoteta lainkaan.
+  ikkuna.document.visibilityState = 'hidden';
+  const ennenPiilossa = kutsut.length;
+  kellot[0]();
+  assert.equal(kutsut.length, ennenPiilossa, 'piilossa ei saa pakottaa');
+  // Purku ottaa kellon pois.
+  vahti.pura();
+  assert.equal(kellot[0], null);
+  assert.ok(KEHYSVAHDIN_VALI_MS > 0 && KEHYSVAHDIN_VALI_MS <= 1000);
 });
 
 test('linssin jokainen avausvaihe ajetaan vartijan läpi', () => {

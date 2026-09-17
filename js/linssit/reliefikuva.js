@@ -209,23 +209,91 @@ export const LADONNAN_KATTO_PUHELIN = 2048;
 /** Kynnys, jonka yli ruutu saa ladota lähdekuvan täydessä koossa. */
 export const LADONNAN_RAJA_CSS = RELIEFIN_8K_RAJA_CSS;
 
+/*
+ * ── LEVEÄ RUUTU EI OLE LUPA 33 MEGAPIKSELIIN (17.9.2026) ──────────
+ *
+ * MUSTA PALLO ASENNETUSSA macOS-WEBAPPISSA (Raamattu, ASTRONAUTIN
+ * KAMERA LISÄYS 13 kohta 37; Codexin uusintatesti v1926, kotelo
+ * 2539 × 1321 CSS, dpr 1): pallo ja 64 kohdepistettä näkyivät, mutta
+ * karttatekstuuri oli KOKONAAN MUSTA — ja vartija sanoi `puute=ei`.
+ *
+ * Ketju oli mitattuna (Chromium, sama 2539 px:n kotelo, 17.9.2026):
+ *   valitseReliefi → 8k (CSS-leveys ≥ 1024)
+ *   valitseLadonta → 8192 × 4096 = 33,5 Mpx, koska leveä ruutu sai
+ *                    ladota lähdekuvan OMASSA koossaan
+ *   → PNG-blob 49 686 kt (48,5 Mt) → purettu tekstuuri 134 Mt GPU:lle.
+ *
+ * Kolme rajaa, joista jokainen kaataa ketjun HILJAA WebKitissä:
+ *   1. iOS:n kangaskatto on 4096 × 4096 = 16,7 Mpx (WebKit
+ *      HTMLCanvasElement maxCanvasArea); yli menevä kangas ei heitä
+ *      poikkeusta vaan jää tyhjäksi.
+ *   2. 48 megatavun PNG:n purku ei mahdu jokaisen WebKit-prosessin
+ *      muistiin — <img> jää lataamatta, eikä three.js saa siitä tietoa.
+ *   3. 134 Mt:n tekstuurin lataus GPU:lle voi epäonnistua ilman
+ *      poikkeusta; silloin näytteenotto antaa MUSTAA.
+ *
+ * Yhtäkään näistä ei voi mitata luotettavasti etukäteen, joten katto
+ * on sama kaikkialla: 4096 × 2048 (8,4 Mpx, PNG noin 12 Mt, tekstuuri
+ * 33,5 Mt). Se on kuvan oma 4k-tarkkuus eikä näy pallolla, koska
+ * avaruusnäkymässä palloa näkyy vain puolikas. LADONNAN_PIKSELIKATTO
+ * on lisäksi ehdoton yläraja sille, mitä `katto`-parametrillakaan voi
+ * pyytää — WebKitin oma raja, ei mielipide.
+ *
+ * KATON NOSTAMINEN VAATII MITATUN TUEN, ei arviota ruudun leveydestä.
+ */
+/** Ladontakankaan katto KAIKILLA laitteilla (ks. yllä). */
+export const LADONNAN_KATTO = 4096;
+/** Ehdoton pikselikatto: WebKitin kangasraja 4096 × 4096. */
+export const LADONNAN_PIKSELIKATTO = 16 * 1024 * 1024;
+/** WebKit-katto: Safari ja asennetut WebAppit eivät saa enempää. */
+export const LADONNAN_KATTO_WEBKIT = 4096;
+
+/**
+ * Onko selain WebKit (Safari, iOS-selaimet, asennettu WebApp)?
+ * Puhdas funktio (tests/satelliitti-avaruus.test.mjs).
+ *
+ * Tunnistus on tarkoituksella VAROVAINEN: Chrome ja Edge kantavat
+ * merkkijonoa "Safari" omassa UA:ssaan, joten pelkkä "Safari" ei
+ * kelpaa. Oikea kysymys on "onko tämä WebKit ILMAN Chromium-moottoria".
+ */
+export function webkitSelain(nav = globalThis.navigator) {
+  try {
+    if (nav?.standalone === true) return true;
+    const ua = String(nav?.userAgent ?? '');
+    if (!ua) return false;
+    if (/Chrome|Chromium|CriOS|Edg\/|EdgiOS|OPR\//.test(ua)) return false;
+    return /Safari|AppleWebKit|iPhone|iPad|iPod/.test(ua);
+  } catch { return false; }
+}
+
 /**
  * Ladontakankaan mitat. Puhdas funktio (tests/pallolinssit.test.mjs).
  *
  * @param {{ leveys?: number, korkeus?: number, ruudunLeveys?: number,
- *   katto?: number }} asetukset lähdekuvan mitat ja ruudun CSS-leveys
+ *   katto?: number, webkit?: boolean }} asetukset lähdekuvan mitat,
+ *   ruudun CSS-leveys ja selainperhe
  * @returns {{ leveys: number, korkeus: number, katto: number,
  *   pienennetty: boolean }}
  */
 export function valitseLadonta({
   leveys = RELIEFIN_LEVEYS, korkeus = RELIEFIN_KORKEUS, ruudunLeveys = 0, katto = 0,
+  webkit = false,
 } = {}) {
   const L = Math.max(1, Math.round(Number(leveys) || RELIEFIN_LEVEYS));
   const K = Math.max(1, Math.round(Number(korkeus) || RELIEFIN_KORKEUS));
   const ruutu = Number(ruudunLeveys) || 0;
-  const raja = Number(katto) > 0
+  const pyydetty = Number(katto) > 0
     ? Math.round(Number(katto))
-    : (ruutu >= LADONNAN_RAJA_CSS ? L : LADONNAN_KATTO_PUHELIN);
+    : (ruutu >= LADONNAN_RAJA_CSS ? LADONNAN_KATTO : LADONNAN_KATTO_PUHELIN);
+  /*
+   * KOLME KATTOA, PIENIN VOITTAA: pyydetty, WebKitin oma ja ehdoton
+   * pikselikatto. Viimeinen lasketaan kuvasuhteesta (2:1), jottei
+   * kutsuja voi pyytää kangasta, joka ei voi mahtua.
+   */
+  const pikselikatto = Math.floor(Math.sqrt(LADONNAN_PIKSELIKATTO * 2));
+  const raja = Math.max(1, Math.min(
+    pyydetty, pikselikatto, webkit ? LADONNAN_KATTO_WEBKIT : Infinity,
+  ));
   if (L <= raja) return { leveys: L, korkeus: K, katto: raja, pienennetty: false };
   /*
    * PUOLITUKSIN, EI VAPAALLA KERTOIMELLA. Tasavälisen kuvan leveyden
