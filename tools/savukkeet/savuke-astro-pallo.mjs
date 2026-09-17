@@ -62,6 +62,12 @@
  *      pinnasta tulee musta. Mittauksen on nähtävä se PIIRTOPUSKURISTA
  *      ja vaihdettava generoitu vyöhykepallo tilalle.
  *  10d. PISTEET DOMISSA AJOISSA JA PYSYVÄT PINNAN VAIHDON YLI.
+ *  11. KOLME AVAUSTA PERÄKKÄIN (Raamattu LISÄYS 13 kohta 37
+ *      TARKENNUS, Mac-session mittaus oikealla WebKitillä): musta
+ *      pallo EI tule kankaasta vaan siitä, että linssin sulku asettaa
+ *      `globeImageUrl(null)` → globe.gl maalaa materiaalin mustaksi ja
+ *      SEURAAVA avaus perii sen. Yksi avaus ei voi nähdä vikaa; kolme
+ *      näkee. Chromium toisti mustan 16/16 ilman korjausta.
  *
  * VERKKO: ämpäri (laatat, Globe.gl, reliefi) Noden fetchin kautta, muu
  * katki. Ympäristömuuttuja NAKYMAT rajaa ajettavat näytöt
@@ -1403,6 +1409,85 @@ async function ajaMustaPinta() {
 }
 
 /*
+ * ── 11. KOLME AVAUSTA PERÄKKÄIN (LISÄYS 13 kohta 37 TARKENNUS) ────
+ *
+ * TÄMÄ ON KOHDAN 37 OIKEA KOE, ja se on vasta Mac-session mittauksen
+ * jälkeen mahdollista kirjoittaa oikein (docs/raportit/viesti-fable-
+ * webkit-toisto-20260917.md luku 4). Musta pallo EI synny kankaasta
+ * vaan siitä, että linssin SULKU asettaa `globeImageUrl(null)`, jolloin
+ * globe.gl maalaa materiaalin mustaksi — ja seuraava avaus perii sen.
+ *
+ * Yksi avaus ei siis voi nähdä vikaa lainkaan: se syntyy vasta
+ * TOISESTA. Chromium headless toisti mustan 16/16 kertaa, joten tämä
+ * väite on punainen ilman korjausta — se on oma vastakokeensa.
+ *
+ * Mitataan kolme avausta: joka kerta pallon keskipisteen kirkkaus
+ * kuvakaappauksesta JA piirtopuskurista.
+ */
+async function ajaKolmeAvausta() {
+  const { konteksti, s } = await macIkkuna([WEBKIT_LIPUT]);
+  const virheet = [];
+  s.on('pageerror', (e) => virheet.push(String(e)));
+  await avaaPeli(s);
+  const kierrokset = [];
+  for (let n = 0; n < 3; n += 1) {
+    if (n > 0) {
+      // Linssi auki uudestaan pelaajan omilla eleillä.
+      // eslint-disable-next-line no-await-in-loop
+      await avaaLinssiEleella(s, 4500);
+    } else {
+      // eslint-disable-next-line no-await-in-loop
+      await avaaLinssiEleella(s, 4500);
+    }
+    // eslint-disable-next-line no-await-in-loop
+    await rauhoitu(s);
+    // eslint-disable-next-line no-await-in-loop
+    await s.waitForTimeout(2500);
+    // eslint-disable-next-line no-await-in-loop
+    const kuvasta = await macKirkkaus(s);
+    // eslint-disable-next-line no-await-in-loop
+    const puskurista = await s.evaluate(async () => {
+      const m = await import('/js/linssit/satelliitti-avaruus.js');
+      return m.pinnanKirkkaus(window.matkakirja?.ui?.pallonInstanssi);
+    }).catch(() => null);
+    // eslint-disable-next-line no-await-in-loop
+    const vari = await s.evaluate(() => {
+      const mat = window.matkakirja?.ui?.pallonInstanssi?.globeMaterial?.();
+      return mat?.color ? mat.color.getHexString() : 'null';
+    }).catch(() => '?');
+    kierrokset.push({
+      avaus: n + 1, kuvasta: +kuvasta.toFixed(1), puskurista, vari,
+    });
+    if (ULOS) {
+      // eslint-disable-next-line no-await-in-loop
+      await s.screenshot({
+        path: join(ULOS, `astro-webkit2-avaus-${n + 1}-20260917.jpg`),
+        type: 'jpeg', quality: 70, timeout: 120000,
+      }).catch(() => {});
+    }
+    // Linssi kiinni pelaajan omalla ✕:llä — juuri se asettaa null-osoitteen.
+    // eslint-disable-next-line no-await-in-loop
+    await s.evaluate(() => window.matkakirja.ui.valitseLinssi(null));
+    // eslint-disable-next-line no-await-in-loop
+    await s.waitForTimeout(2500);
+  }
+  const mustia = kierrokset.filter((k) => k.kuvasta <= 20);
+  vaadi('KOLME AVAUSTA: pallon pinta on värillinen JOKA kerralla',
+    mustia.length === 0,
+    JSON.stringify(kierrokset));
+  vaadi('KOLME AVAUSTA: piirtopuskuri näkee saman värin kuin ruutu',
+    kierrokset.every((k) => k.puskurista === null || k.puskurista > 12),
+    JSON.stringify(kierrokset.map((k) => k.puskurista)));
+  vaadi('KOLME AVAUSTA: materiaalin väri ei ole musta avausten välissä',
+    kierrokset.every((k) => k.vari !== '000000'),
+    JSON.stringify(kierrokset.map((k) => k.vari)));
+  vaadi('KOLME AVAUSTA: ei sivuvirheitä', virheet.length === 0,
+    virheet.slice(0, 2).join(' | '));
+  console.log(`    AVAUKSET ${JSON.stringify(kierrokset)}`);
+  await konteksti.close();
+}
+
+/*
  * VÄITE 10d + VASTAKOE: ehjässä Mac-ajossa pisteet ovat DOMissa
  * budjetin sisällä, ne PYSYVÄT pinnan vaihdon yli, mustaa pintaa ei
  * havaita eikä kehyksiä tarvitse pakottaa. Ilman tätä vastakoetta
@@ -1494,6 +1579,8 @@ if (!VALITUT.length || VALITUT.includes('tyopoyta') || VALITUT.includes('vartija
   await ajaSafarinRajatMacissa();
   await ajaKehyksetPoikki();
   await ajaMustaPinta();
+  /* Kohdan 37 oikea koe: musta syntyy vasta TOISESTA avauksesta. */
+  await ajaKolmeAvausta();
 }
 
 await selain.close();

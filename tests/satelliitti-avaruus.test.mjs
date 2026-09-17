@@ -1384,6 +1384,70 @@ test('pinnanKirkkaus piirtää kehyksen ja lukee pallon keskustan', async () => 
   }), null);
 });
 
+test('musta pinta korjataan ensin materiaalin värillä', async () => {
+  const { valkaiseMateriaali } = await import('../js/linssit/satelliitti-avaruus.js');
+  /*
+   * MITATTU (Mac-sessio 17.9.2026, oikea WebKit ja Chromium): globe.gl
+   * asettaa `material.color = new Color(0)` aina kun globeImageUrl on
+   * null, ja tekstuurin saavuttua `color = null`. Mustaa EI saa pois
+   * `color.set()`illä eikä `needsUpdate`illa — materiaalille on
+   * annettava UUSI Color-olio.
+   */
+  class Vari {
+    constructor(hex) { this.hex = hex; }
+
+    getHex() { return this.hex; }
+
+    setHex(h) { this.hex = h; return this; }
+  }
+  // 1. Väri on null (kirjasto nollasi sen tekstuurin saavuttua).
+  const nollattu = { color: null, specular: new Vari(0x111111), needsUpdate: false };
+  assert.equal(valkaiseMateriaali(nollattu), true);
+  assert.equal(nollattu.color.getHex(), 0xffffff, 'väri ei vaihtunut valkoiseksi');
+  assert.equal(nollattu.needsUpdate, true);
+  // 2. Väri on musta (kirjasto maalasi sen null-osoitteella).
+  const musta = { color: new Vari(0), specular: new Vari(0x111111), needsUpdate: false };
+  assert.equal(valkaiseMateriaali(musta), true);
+  assert.equal(musta.color.getHex(), 0xffffff);
+  // 3. Lähtöväri palautetaan pyydettäessä (purku).
+  const palautus = { color: null, specular: new Vari(0x111111), needsUpdate: false };
+  valkaiseMateriaali(palautus, 0x336699);
+  assert.equal(palautus.color.getHex(), 0x336699);
+  // 4. Ei materiaalia tai ei Color-luokkaa → ei kaadu, palauttaa false.
+  assert.equal(valkaiseMateriaali(null), false);
+  assert.equal(valkaiseMateriaali({ color: null, specular: null }), false);
+});
+
+test('linssi valkaisee materiaalin sekä avatessa että sulkiessa (lähde)', async () => {
+  const { readFile } = await import('node:fs/promises');
+  const lahde = await readFile(new URL('../js/linssit/satelliitti-avaruus.js', import.meta.url), 'utf8');
+  /*
+   * SULKU ON SE, JOKA MUSTAA PALLON: `globeImageUrl(null)` panee
+   * globe.gl:n maalaamaan materiaalin mustaksi, ja musta jää
+   * odottamaan SEURAAVAA avausta. Väri on siis palautettava heti
+   * saman kutsun perään — ja varmuudeksi myös avauksessa.
+   */
+  const sulku = lahde.indexOf('pallo.globeImageUrl(lahto.kuvaUrl ?? null)');
+  assert.ok(sulku > 0, 'sulun globeImageUrl-kutsua ei löytynyt');
+  const sulunJalkeen = lahde.slice(sulku, sulku + 700);
+  assert.match(sulunJalkeen, /valkaiseMateriaali\(materiaali, varinLahto\)/,
+    'sulku ei palauta materiaalin väriä');
+  // Avauksessa väri pakotetaan ENNEN oman tekstuurin asetusta.
+  const avaus = lahde.indexOf('valkaiseMateriaali(materiaali);');
+  assert.ok(avaus > 0 && avaus < sulku, 'avaus ei valkaise materiaalia');
+  /*
+   * VARAPOLKU ON KAKSIVAIHEINEN, ja järjestys on mitattu: ensin VÄRI
+   * (Mac-sessio: globe.gl maalasi materiaalin mustaksi), vasta sitten
+   * tekstuurin vaihto (pallo-musta-erä: ladontakangas jäi tyhjäksi).
+   * Väri ei auta tyhjään tekstuuriin eikä tekstuuri mustaan väriin.
+   */
+  assert.match(lahde, /askel: 1, toimenpide: valkaistiin \? 'vari-valkoiseksi'/);
+  assert.match(lahde, /askel: 2, toimenpide: 'vyohykepallo'/);
+  const askel1 = lahde.indexOf("askel: 1, toimenpide");
+  const askel2 = lahde.indexOf("askel: 2, toimenpide");
+  assert.ok(askel1 > 0 && askel2 > askel1, 'väri ei tule ennen tekstuurin vaihtoa');
+});
+
 test('kehysvahti pakottaa piirron, kun kehyslaskuri ei etene', async () => {
   const { varmistaKehykset, KEHYSVAHDIN_VALI_MS } = await import('../js/linssit/satelliitti-avaruus.js');
   const kutsut = [];

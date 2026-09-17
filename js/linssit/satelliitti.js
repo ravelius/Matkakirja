@@ -1630,11 +1630,34 @@ function avaa(lauta, tila, ui) {
     }
     try { return avaruus.puute?.(pisteitaRuudulla()) ?? null; } catch { return 'avaruusnakyma'; }
   };
+  /*
+   * ── PISTEMITTARI WebAppia VARTEN (LISÄYS 13 kohta 36) ───────────
+   *
+   * Kohta 36 (ruskea ruutu, `pisteita=0`) EI toistunut oikealla
+   * WebKitillä eikä Chromiumilla (Mac-sessio 17.9.2026, 0/61 avausta),
+   * joten sen polkua ei voitu mitata täällä. Jos se toistuu Codexin
+   * asennetussa WebAppissa, seuraava kysymys on, mikä kolmesta
+   * puuttuu: kohteita (linssin data), merkkikerros (CSS2D-elementit
+   * lainkaan DOMissa) vai vain tämän linssin pisteet. Kolme lukua
+   * samalla rivillä vastaa siihen ilman konsolia.
+   *
+   * `.pallolauta-merkki` on KAIKKIEN laudan CSS2D-merkkien luokka
+   * (nappula, kaupungit, nimet): jos se on nolla, kerrosta ei ole
+   * lainkaan — jos se on iso mutta `.satelliitti-piste` nolla, kerros
+   * on mutta linssin lista ei päätynyt siihen.
+   */
+  const merkkejaRuudulla = () => {
+    try { return document.querySelectorAll('.pallolauta-merkki').length; } catch { return 0; }
+  };
   const tarkistaNakyma = (viimeinen) => {
     const puute = nykyinenPuute();
     pallodiag('vartija', {
       puute: puute ?? 'ei', pisteita: pisteitaRuudulla(),
       vaiheet: kaatuneetVaiheet.length,
+    });
+    pallodiag('pistemittari', {
+      kohteita: kohteet.length, domissa: pisteitaRuudulla(),
+      kerros: merkkejaRuudulla(),
     });
     if (!puute) {
       // Näkymä valmistui (mahdollisesti myöhässä): ilmoitus pois.

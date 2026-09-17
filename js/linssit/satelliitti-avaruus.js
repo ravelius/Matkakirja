@@ -1722,6 +1722,46 @@ export function pinnanKirkkaus(pallo, ikkuna = globalThis) {
   } catch { return null; }
 }
 
+/*
+ * ── MATERIAALIN VÄRI VALKOISEKSI (LISÄYS 13 kohta 37 TARKENNUS) ────
+ *
+ * Globe.gl maalaa pohjapallon materiaalin MUSTAKSI aina, kun
+ * `globeImageUrl` asetetaan nulliksi (kirjaston oma rivi:
+ * `!n.color && (n.color = new Color(0))`). Musta jää materiaaliin, ja
+ * kun tekstuuri myöhemmin saapuu, kirjasto asettaa `color = null` —
+ * jolloin three.js EI ENÄÄ kirjoita `diffuse`-uniformia. Mustaa ei siis
+ * saa pois `color.set()`illä (null-oliolla ei ole settiä) eikä
+ * `needsUpdate`illa: materiaalille on annettava UUSI Color-olio.
+ *
+ * MITATTU (Mac-sessio 17.9.2026, oikea WebKit ja Chromium): `color.set`
+ * ei auta, uusi `Color('#ffffff')` palauttaa pinnan (kirkkaus 65–68).
+ *
+ * Palauttaa `true`, jos väri kirjoitettiin.
+ */
+export function valkaiseMateriaali(materiaali, hex = 0xffffff) {
+  try {
+    if (!materiaali) return false;
+    /*
+     * COLOR-LUOKKA ILMAN GLOBAALIA THREE:Ä. `globalThis.THREE` on
+     * olemassa vain jos joku muu on ladannut kirjaston; pohjapallon
+     * `specular` on Color-olio, joten sen konstruktori kelpaa.
+     */
+    const Vari = globalThis.THREE?.Color ?? materiaali.specular?.constructor;
+    if (typeof Vari !== 'function') {
+      // Viimeinen oljenkorsi: jos väri on olemassa, se voidaan asettaa.
+      if (materiaali.color?.setHex) {
+        materiaali.color.setHex(hex ?? 0xffffff);
+        materiaali.needsUpdate = true;
+        return true;
+      }
+      return false;
+    }
+    materiaali.color = new Vari(hex ?? 0xffffff);
+    materiaali.needsUpdate = true;
+    return true;
+  } catch { return false; }
+}
+
 /** Piirrettyjen kehysten laskuri (three: renderer.info.render.frame). */
 export function piirrettyjaKehyksia(pallo) {
   try {
@@ -2084,6 +2124,36 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     materiaali.shininess = 0;
     materiaali.needsUpdate = true;
   }
+  /*
+   * ── MUSTA PINTA ON KIRJASTON VÄRI, EI TEKSTUURI ─────────────────
+   *
+   * MITATTU OIKEALLA WebKitillä JA CHROMIUMILLA (Mac-sessio 17.9.2026,
+   * docs/raportit/viesti-fable-webkit-toisto-20260917.md luku 4;
+   * Raamattu LISÄYS 13 kohta 37 TARKENNUS). Globe.gl 2.46.2:n oma rivi:
+   *
+   *   globeImageUrl
+   *     ? TextureLoader.load(url, t => { n.map = t; n.color = null; ... })
+   *     : !n.color && (n.color = new Color(0))
+   *
+   * Eli KUN OSOITE ON NULL, kirjasto maalaa materiaalin MUSTAKSI. Juuri
+   * niin linssin sulku tekee: `globeImageUrl(lahto.kuvaUrl ?? null)`, ja
+   * pelin lähtöarvo on null, koska peli piirtää laattamoottorilla.
+   * Musta ei näy heti (laatat peittävät pallon), mutta SEURAAVASSA
+   * avauksessa pallo tulee näkyviin HETI ja tekstuuri vasta
+   * asynkronisesti: jos yksikin kehys ehtii väliin, sävyttimen
+   * `diffuse`-uniformi saa mustan — ja kun tekstuuri saapuu, kirjasto
+   * asettaa `color = null`, jolloin three.js ei enää kirjoita uniformia.
+   * Lopputulos on musta × tekstuuri = MUSTA PALLO, vaikka kartta, valot
+   * ja kangas ovat kunnossa.
+   *
+   * Siksi väri pakotetaan valkoiseksi ENNEN oman tekstuurin asetusta —
+   * ja purussa uudestaan, jotta seuraava avaus ei peri mustaa.
+   *
+   * COLOR-LUOKKA ILMAN GLOBAALIA THREE:Ä: `specular` on Color-olio,
+   * joten sen konstruktori on sama luokka (mitattu Mac-sessiossa).
+   */
+  const varinLahto = materiaali?.color?.getHex?.() ?? null;
+  valkaiseMateriaali(materiaali);
   pallo.backgroundColor?.(AVARUUDEN_TAUSTA);
   pallo.atmosphereColor?.(ILMAKEHAN_VARI);
   pallo.atmosphereAltitude?.(ILMAKEHAN_KORKEUS);
@@ -2098,23 +2168,54 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   let viimeisinKirkkaus = null;
   let pinnanKello = 0;
   let varapolullaKaytiin = false;
+  let varinValkaisuTehty = false;
   const mittaaPinta = () => {
     const kirkkaus = pinnanKirkkaus(pallo, ikkuna);
     viimeisinKirkkaus = kirkkaus;
     pallodiag('pinta-mittaus', {
       kirkkaus: kirkkaus ?? '?', reliefi: reliefiPaalla ? 1 : 0,
-      varapolku: varapolullaKaytiin ? 1 : 0,
+      varapolku: varapolullaKaytiin ? 2 : (varinValkaisuTehty ? 1 : 0),
     }, ikkuna);
     if (kirkkaus === null || kirkkaus >= PINNAN_MUSTAN_KYNNYS) return kirkkaus;
-    if (!reliefiPaalla || varapolullaKaytiin || purettu || !tekstuuri) return kirkkaus;
-    /* MUSTA PINTA: reliefi pois ja generoitu vyöhykepallo tilalle. */
+    if (purettu) return kirkkaus;
+    /*
+     * ── VARAPOLKU KAHDESSA ASKELEESSA ───────────────────────────
+     *
+     * Mustalla pinnalla on KAKSI mahdollista syytä, ja ne vaativat eri
+     * lääkkeen. Kumpikin on mitattu:
+     *
+     *   1. MATERIAALIN VÄRI (Mac-sessio 17.9.2026, oikea WebKit ja
+     *      Chromium): globe.gl maalasi materiaalin mustaksi, kun
+     *      `globeImageUrl` oli null. Tekstuuri on kunnossa — vain väri
+     *      kertoo sen nollaksi. Lääke: UUSI valkoinen Color.
+     *   2. TYHJÄ TEKSTUURI (pallo-musta-erä 16.9.2026, iOS Safari):
+     *      ladontakangas jäi läpinäkyväksi, ja läpinäkyvä tekstuuri
+     *      piirtyy mustana. Väri ei auta lainkaan — pinnalle on
+     *      vaihdettava toinen kuva.
+     *
+     * Siksi askel 1 on väri ja askel 2 generoitu vyöhykepallo. Kumpikin
+     * todistaa itsensä uudella mittauksella; jos kumpikaan ei auta,
+     * `avauksenPuute` kertoo pelaajalle `pinta-musta`.
+     */
+    if (!varinValkaisuTehty) {
+      varinValkaisuTehty = true;
+      const valkaistiin = valkaiseMateriaali(materiaali);
+      lauta?.heraa?.();
+      pallodiag('pinta-musta', {
+        askel: 1, toimenpide: valkaistiin ? 'vari-valkoiseksi' : 'ei-onnistunut', kirkkaus,
+      }, ikkuna);
+      ajastaPinnanTarkistus();
+      return kirkkaus;
+    }
+    if (varapolullaKaytiin || !reliefiPaalla || !tekstuuri) return kirkkaus;
+    /* Väri ei auttanut: tekstuuri itse on tyhjä. Generoitu Maa tilalle. */
     varapolullaKaytiin = true;
     reliefiPaalla = false;
     pallo.globeImageUrl(tekstuuri);
+    valkaiseMateriaali(materiaali);
     lauta?.heraa?.();
     vapautaReliefi();
-    pallodiag('pinta-musta', { toimenpide: 'varapolku', kirkkaus }, ikkuna);
-    /* Uusi mittaus, kun varapolun tekstuuri on ehtinyt GPU:lle. */
+    pallodiag('pinta-musta', { askel: 2, toimenpide: 'vyohykepallo', kirkkaus }, ikkuna);
     ajastaPinnanTarkistus();
     return kirkkaus;
   };
@@ -2444,7 +2545,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
        * on musta, pelaajan on saatava siitä lause eikä musta pallo.
        */
       kehyksia: kehysvahti.tila().kehyksia,
-      pinnanKirkkaus: reliefiPaalla || varapolullaKaytiin ? viimeisinKirkkaus : null,
+      pinnanKirkkaus: reliefiPaalla || varapolullaKaytiin || varinValkaisuTehty
+        ? viimeisinKirkkaus : null,
     }),
     /** Pinnan mittaus pyynnöstä (savuke ja vartija). */
     mittaaPinta,
@@ -2488,6 +2590,14 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
          */
         pallo.globeTileEngineUrl(lahto.laattaUrl ?? null);
         pallo.globeImageUrl(lahto.kuvaUrl ?? null);
+        /*
+         * JUURI TÄSSÄ SYNTYI MUSTA PALLO (ks. valkaiseMateriaali).
+         * `globeImageUrl(null)` panee kirjaston maalaamaan materiaalin
+         * mustaksi, ja se musta jäi odottamaan seuraavaa avausta.
+         * Väri palautetaan lähtöarvoonsa — tai valkoiseksi, jos
+         * lähtöarvoa ei ollut (kirjasto oli jo nollannut sen).
+         */
+        valkaiseMateriaali(materiaali, varinLahto);
       }
       // Reliefin blob-osoite pois vasta kun pinta on jo vaihdettu.
       vapautaReliefi();
