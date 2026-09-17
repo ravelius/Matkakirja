@@ -131,12 +131,14 @@
  *   7f. KYLTIN KERROIN ON SAMA KUIN MUILLA MERKEILLÄ (kohta 5): nimiö
  *       on saapuessa KYLTIN_SAAPUMISNIMIO_PX (11,5 px) ja lähizoomissa
  *       katossa (16 px) — sama luku molemmilla ruuduilla.
- *   7g. VASTAKOE: erän säännöt pois (`?kylttiosuma=0&kylttilaatikko=0`,
- *       js/pallolauta/lauta.js pallonSaantoKaytossa) — sama napautus ei
- *       enää avaa turisti-infoa.
- *   7h. VASTAKOE: pelkkä varaus pois (`?kylttilaatikko=0`) — kyltin
- *       varaus kutistuu 1 × 1 px:n pisteeksi ja ladonta latoo lapun
- *       kyltin piirroksen päälle.
+ *   7g. VASTAKOE: erän säännöt pois (`?kylttiosuma=0&kylttilaatikko=0&
+ *       kylttisiirto=0`, js/pallolauta/lauta.js pallonSaantoKaytossa) —
+ *       sama napautus ei enää avaa turisti-infoa.
+ *   7h. VASTAKOE: samat liput pois — kyltin varaus kutistuu 1 × 1 px:n
+ *       pisteeksi ja ladonta latoo lapun kyltin piirroksen päälle.
+ *   7i. VASTAKOE: kyltti ei siirry (`?kylttisiirto=0`, PAATOKSET 31
+ *       TARKENNUS 3) — kyltti jää ensimmäiseen asentoonsa, ja
+ *       INFO-rivi kertoo, mitä se maksaa (aihenoston nimiö katoaa).
  *
  * ÄMPÄRI KULKEE NODEN KAUTTA (CLAUDE.md: NODE_USE_ENV_PROXY=1).
  * Ilman ämpäriä pallon kirjastoa ei saa, ja savuke OHITETAAN.
@@ -918,9 +920,28 @@ for (const ruutu of RUUDUT) {
       return d?.open
         ? (auki?.kohde?.nimi ?? auki?.kohde?.otsikko ?? 'opas auki') : null;
     });
-    // Mikä muu kortti vei napautuksen? Ilman tätä punainen rivi ei
-    // kerro, oliko kyse osumasäännöstä vai kuolleesta merkistä.
-    const sijaan = opas ? null : await avoinNosto(sivu);
+    /*
+     * MIKÄ MUU VEI NAPAUTUKSEN? Ilman tätä punainen rivi ei kerro,
+     * oliko kyse osumasäännöstä vai kuolleesta merkistä. Kysytään
+     * LAAJASTI: kortin lisäksi auki olevat dialogit, aihemerkin viuhka
+     * ja kaupungin oma etusivu — ne eivät ole `.fokuskohde-popup`-
+     * luokkaisia korttteja, joten pelkkä korttihaku kertoisi
+     * *"ei mitään"* silloinkin, kun napautus meni jonnekin.
+     */
+    const sijaan = opas ? null : await sivu.evaluate(async (sel) => {
+      const ui2 = window.matkakirja.ui;
+      const el = document.querySelector(sel);
+      const dialogit = [...document.querySelectorAll('dialog[open]')]
+        .map((d) => d.id || d.className).filter(Boolean);
+      const osat = [];
+      if (ui2.fokuskohdeAuki?.id) osat.push(`nosto:${ui2.fokuskohdeAuki.id}`);
+      if (el) osat.push(`kortti:${String(el.className?.baseVal ?? el.className ?? el.tagName)}`);
+      if (ui2.pallolauta.nostot?.viuhkaAuki?.()) osat.push(`viuhka:${ui2.pallolauta.nostot.viuhkaAuki()}`);
+      if (document.querySelector('.kaupunkipopup-tiivis')) osat.push('kaupungin etusivu');
+      if (ui2.kaupunkipopupAuki) osat.push('kaupunkipopup');
+      if (dialogit.length) osat.push(`dialogit: ${dialogit.join(', ')}`);
+      return osat.join(' | ') || null;
+    }, KORTIT);
     // Opas on modaali arkki: se on suljettava ennen seuraavia
     // napautuksia, tai se peittäisi kartan (savukkeen siivous).
     await sivu.keyboard.press('Escape');
@@ -941,6 +962,47 @@ for (const ruutu of RUUDUT) {
     window.matkakirja.ui.pallolauta.ladoHeti?.();
   }, [nimi, arvo]);
   if (tPiste) {
+    /*
+     * MIKÄ ELEMENTTI ANKKURISSA ON? `peitossa` päästää läpi kartan omat
+     * merkit (ne ovat pointer-events: none), mutta jos jokin niistä ei
+     * ole, napautus ei koskaan pääse kankaalle — ja silloin punainen
+     * 7c ei kerro osumasäännöstä mitään. Rivi on INFO.
+     */
+    const ankkurinElementti = await sivu.evaluate(([x, y]) => {
+      const e = document.elementFromPoint(x, y);
+      if (!e) return 'ei elementtiä';
+      const tyyli = getComputedStyle(e);
+      return `${e.tagName}.${e.className?.baseVal ?? e.className ?? ''}`.slice(0, 60)
+        + ` (pointer-events: ${tyyli.pointerEvents})`;
+    }, [tPiste.x, tPiste.y]);
+    tieto(`${ruutu.nimi} · kyltin ankkurissa oleva elementti`, ankkurinElementti);
+    const ankkurinNaapurit = await sivu.evaluate(([x, y]) => {
+      const l = window.matkakirja.ui.pallolauta;
+      const koti = l.kotelo.getBoundingClientRect();
+      const kx = x - koti.left;
+      const ky = y - koti.top;
+      const et = (r) => Math.hypot(
+        Math.max(r.x0 - kx, 0, kx - r.x1), Math.max(r.y0 - ky, 0, ky - r.y1),
+      );
+      const rivit = l.nostot.osumaLaatikot()
+        .map((r) => ({ id: r.id, perhe: r.perhe, d: et(r) }))
+        .sort((a, b) => a.d - b.d).slice(0, 4);
+      const oma = (l.turistiLaatikot?.() ?? [])[0] ?? null;
+      return {
+        rivit,
+        kyltti: oma ? { d: et(oma), x0: oma.x0, y0: oma.y0, x1: oma.x1, y1: oma.y1 } : null,
+        kohta: { x: kx, y: ky },
+      };
+    }, [tPiste.x, tPiste.y]);
+    tieto(`${ruutu.nimi} · ankkurin lähimmät osumalaatikot`,
+      ankkurinNaapurit.rivit.map((r) => `${r.id}[${r.perhe}] ${r.d.toFixed(1)} px`).join(', '));
+    tieto(`${ruutu.nimi} · napautuspiste vs. kyltin osumalaatikko`,
+      ankkurinNaapurit.kyltti
+        ? `piste ${ankkurinNaapurit.kohta.x.toFixed(1)},${ankkurinNaapurit.kohta.y.toFixed(1)} · `
+          + `laatikko ${ankkurinNaapurit.kyltti.x0.toFixed(1)},${ankkurinNaapurit.kyltti.y0.toFixed(1)} → `
+          + `${ankkurinNaapurit.kyltti.x1.toFixed(1)},${ankkurinNaapurit.kyltti.y1.toFixed(1)} · `
+          + `etäisyys ${ankkurinNaapurit.kyltti.d.toFixed(1)} px`
+        : 'ei laatikkoa');
     opasEste = await peitossa(sivu, tPiste.x, tPiste.y);
     if (!opasEste) {
       const tulos = await napautaKylttia();
@@ -968,12 +1030,14 @@ for (const ruutu of RUUDUT) {
        * tilan, jossa omistaja vian näki.
        */
       await lippuun('kylttilaatikko', '0');
+      await lippuun('kylttisiirto', '0');
       await sivu.waitForTimeout(900);
       const vastakoe = await napautaKylttia();
       ilmanSaantoaOpas = vastakoe.opas;
       ilmanSaantoa = vastakoe.sijaan;
       await lippuun('kylttiosuma', null);
       await lippuun('kylttilaatikko', null);
+      await lippuun('kylttisiirto', null);
       await sivu.waitForTimeout(900);
     }
   }
@@ -1166,7 +1230,7 @@ for (const ruutu of RUUDUT) {
         : `auki sen sijaan: ${vainOsuma ?? 'ei mitään'}`)
       : 'ei mitattu');
   tieto(`${ruutu.nimi} · kyltin napautus erän säännöt pois `
-    + '(?kylttiosuma=0&kylttilaatikko=0)',
+    + '(?kylttiosuma=0&kylttilaatikko=0&kylttisiirto=0)',
     tPiste && !opasEste
       ? (ilmanSaantoaOpas
         ? `avasi oppaan (${ilmanSaantoaOpas})`
@@ -1195,20 +1259,32 @@ for (const ruutu of RUUDUT) {
     && a2.x0 < b2.x1 && b2.x0 < a2.x1 && a2.y0 < b2.y1 && b2.y0 < a2.y1;
   const nimiaPaalla = varaus ? m.nimet.filter((r) => limittyyLaatikko(varaus, r)) : [];
   const lappujaPaalla = varaus ? m.laput.filter((r) => limittyyLaatikko(varaus, r)) : [];
+  /*
+   * MERKIT MITATAAN OSUMALAATIKOISTA, EI DATAN PISTEISTÄ. Sovittelu
+   * siirtää myös IKONIA (`dx`, `dy`), joten merkin datapiste ei kerro,
+   * missä sen muste ruudulla on — mitattu 17.9.2026, työpöytä 1400 px:
+   * *Kyyhkyposti…* -aihemerkin datapiste oli kaukana kyltistä, mutta
+   * sen siirretty ikoni kyltin ankkurin päällä.
+   */
+  const merkkejaPaalla = varaus ? m.laatikot.filter((r) => limittyyLaatikko(varaus, r)) : [];
   tieto(`${ruutu.nimi} · kyltin varaus ladonnassa`,
     varaus
       ? `${p(varaus.x0)},${p(varaus.y0)} → ${p(varaus.x1)},${p(varaus.y1)} `
         + `(${p(varaus.x1 - varaus.x0)} × ${p(varaus.y1 - varaus.y0)} px), `
         + `nimiä päällä ${nimiaPaalla.length}/${m.nimet.length}, `
-        + `lappuja päällä ${lappujaPaalla.length}/${m.laput.length}`
+        + `lappuja päällä ${lappujaPaalla.length}/${m.laput.length}, `
+        + `osumalaatikoita päällä ${merkkejaPaalla.length}/${m.laatikot.length}`
         + (lappujaPaalla.length ? ` — ${lappujaPaalla.map((r) => r.nimi).join(', ')}` : '')
+        + (merkkejaPaalla.length ? ` — ${merkkejaPaalla.map((r) => r.id).join(', ')}` : '')
       : 'ei varausta');
-  vaadi(`7e. ${ruutu.nimi}: yksikään nimi tai lappu ei lado kyltin laatikon päälle`,
+  vaadi(`7e. ${ruutu.nimi}: kyltin laatikko on vapaa (ei nimeä, lappua eikä merkkiä)`,
     Boolean(varaus) && varaus.x1 - varaus.x0 > 2
-      && nimiaPaalla.length === 0 && lappujaPaalla.length === 0,
+      && nimiaPaalla.length === 0 && lappujaPaalla.length === 0
+      && merkkejaPaalla.length === 0,
     varaus
       ? `varaus ${p(varaus.x1 - varaus.x0)} × ${p(varaus.y1 - varaus.y0)} px, `
-        + `nimiä ${nimiaPaalla.length}, lappuja ${lappujaPaalla.length}`
+        + `nimiä ${nimiaPaalla.length}, lappuja ${lappujaPaalla.length}, `
+        + `merkkejä ${merkkejaPaalla.length}`
       : 'kyltillä ei ollut varausta lainkaan');
   /*
    * ── 7f. KYLTIN KERROIN ON SAMA KUIN MUILLA MERKEILLÄ (omistaja
@@ -1280,13 +1356,15 @@ for (const ruutu of RUUDUT) {
    * laskettu: varaus kutistuu, ja ladonta latoo kyltin päälle.
    */
   await lippuun('kylttilaatikko', '0');
+  await lippuun('kylttisiirto', '0');
   await sivu.waitForTimeout(900);
   const pisteVaraus = await mittaa(sivu);
   const pv = pisteVaraus.turistiVaraus;
   const pisteNimia = pv ? pisteVaraus.nimet.filter((r) => limittyyLaatikko(pv, r)) : [];
   const pistePaalla = pv
     ? pisteVaraus.laput.filter((r) => limittyyLaatikko(pisteVaraus.turisti, r)) : [];
-  tieto(`${ruutu.nimi} · kyltin varaus ilman sääntöä (?kylttilaatikko=0)`,
+  tieto(`${ruutu.nimi} · kyltin varaus ilman sääntöjä `
+    + '(?kylttilaatikko=0&kylttisiirto=0)',
     pv
       ? `${p(pv.x1 - pv.x0)} × ${p(pv.y1 - pv.y0)} px (korjattuna `
         + `${varaus ? `${p(varaus.x1 - varaus.x0)} × ${p(varaus.y1 - varaus.y0)}` : '—'} px), `
@@ -1294,7 +1372,7 @@ for (const ruutu of RUUDUT) {
         + `lappuja kyltin piirroksen päällä ${pistePaalla.length}`
         + (pistePaalla.length ? ` — ${pistePaalla.map((r) => r.nimi).join(', ')}` : '')
       : 'ei varausta');
-  vaadi(`7h. VASTAKOE ${ruutu.nimi}: ilman sääntöä kyltin varaus on piste `
+  vaadi(`7h. VASTAKOE ${ruutu.nimi}: ilman erän sääntöjä kyltin varaus on piste `
     + 'ja ladonta latoo sen päälle',
     Boolean(pv) && pv.x1 - pv.x0 <= 2 && pistePaalla.length > 0,
     pv
@@ -1302,6 +1380,44 @@ for (const ruutu of RUUDUT) {
         + `lappuja kyltin päällä ${pistePaalla.length}`
       : 'kyltillä ei ollut varausta lainkaan');
   await lippuun('kylttilaatikko', null);
+  await sivu.waitForTimeout(900);
+  /*
+   * 7i. VASTAKOE: KYLTTI EI SIIRRY (`?kylttisiirto=0`, PAATOKSET 31
+   * TARKENNUS 3). Varaus on oikean kokoinen, mutta kyltti jää
+   * ensimmäiseen asentoonsa — ja silloin *Impressionistit…* -aihemerkki
+   * on kyltin laatikon sisällä eikä sen nimiölle löydy vapaata asentoa
+   * yhdeltäkään kyljeltä. Väite on siis se sama, jonka vartio 3e4
+   * mittaa: ilman siirtoa aihenoston nimiö katoaa.
+   */
+  const ilmanSiirtoa = await mittaa(sivu);
+  const isVaraus = ilmanSiirtoa.turistiVaraus;
+  const isMerkit = isVaraus
+    ? ilmanSiirtoa.laatikot.filter((r) => limittyyLaatikko(isVaraus, r)) : [];
+  const isPiilossa = ilmanSiirtoa.aihemerkit.filter((a) => a.nimi && !a.nimioNakyy);
+  tieto(`${ruutu.nimi} · kyltti ilman siirtoa (?kylttisiirto=0)`,
+    isVaraus
+      ? `varaus ${p(isVaraus.x0)},${p(isVaraus.y0)} → ${p(isVaraus.x1)},${p(isVaraus.y1)}, `
+        + `osumalaatikoita päällä ${isMerkit.length}`
+        + (isMerkit.length ? ` (${isMerkit.map((r) => r.id).join(', ')})` : '')
+        + `, aihenoston nimiö piilossa ${isPiilossa.length}`
+      : 'ei varausta');
+  /*
+   * VASTAKOE MITTAA SIIRRON, EI SEN SEURAUSTA. Seuraus (aihenoston
+   * nimiö katoaa) on ladonnan tila, joka ehtii vakiintua savukkeen
+   * loppupuolella eri tavalla eri ruuduilla — mitattu 17.9.2026:
+   * työpöydällä nimiö on piilossa, puhelimella ei enää tässä kohtaa
+   * ajoa. Siirto itse on deterministinen: ilman sääntöä kyltti jää
+   * ensimmäiseen asentoonsa (TURISTI_INFO_RUUTUSIIRTO), säännön kanssa
+   * se on muualla. Seuraus jää INFO-riville yllä.
+   */
+  const siirtyi = Boolean(varaus) && Boolean(isVaraus)
+    && (Math.abs(varaus.x0 - isVaraus.x0) > 2 || Math.abs(varaus.y0 - isVaraus.y0) > 2);
+  vaadi(`7i. VASTAKOE ${ruutu.nimi}: ilman sääntöä kyltti jää oletuspaikkaansa`,
+    siirtyi,
+    isVaraus && varaus
+      ? `säännön kanssa ${p(varaus.x0)},${p(varaus.y0)}, ilman ${p(isVaraus.x0)},${p(isVaraus.y0)}`
+      : 'varaus puuttui');
+  await lippuun('kylttisiirto', null);
   await sivu.waitForTimeout(900);
 
   await kaappaa(sivu, `pariisi-lahizoom-${ruutu.w}.png`);

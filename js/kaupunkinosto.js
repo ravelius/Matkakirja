@@ -126,6 +126,53 @@ export const TURISTI_INFO_SIIRTO = Object.freeze({ lon: 1.5, lat: -0.75 });
  */
 export const TURISTI_INFO_RUUTUSIIRTO = Object.freeze({ dx: 36, dy: 16 });
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KYLTTI SIIRTYY SIVUUN, EI NIMIÖ (omistaja 17.9.2026 klo 06.35 UTC,
+ * Raamattu KARTTAUUDISTUKSEN PAATOKSET 31 TARKENNUS 3, kortti
+ * *"Kyltti siirtyy sivuun"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MITATTU VIKA (17.9.2026, Pariisin lähizoomi, molemmat ruudut): kun
+ * kyltin varaus tuli ladontaan oikean kokoisena (TARKENNUS 2 kohta 6),
+ * *Impressionistit…* -aihemerkki jäi kyltin laatikon SISÄÄN, eikä sen
+ * nimiölle löytynyt vapaata asentoa yhdeltäkään neljästä kyljestä —
+ * sovittelun viimeinen keino oli nimiön piilotus. Omistajan päätös:
+ * siirtyvä osapuoli on KYLTTI, ei nimiö.
+ *
+ * ASENNOT OVAT RUUTUSIIRTOJA, JÄRJESTYS ON ETUSIJA. Ensimmäinen on
+ * TURISTI_INFO_RUUTUSIIRTO eli se 39 px:n paikka, joka mitattiin
+ * hyväksi erässä 4 — kyltti ei siis liiku, ellei ole pakko. Sen jälkeen
+ * kokeillaan sama (oikea) kylki ylhäältä ja kauempaa, ja vasta sitten
+ * kaupungin vasen puoli: kaupungin NIMIKYLTTI on PAATOKSET 24:n mukaan
+ * oletuksena merkin VASEMMALLA puolella, joten vasen puoli on ahtaampi.
+ * MITATTU 17.9.2026: kun vasen puoli oli järjestyksessä toisena,
+ * työpöydän 1400 px:n näkymässä kyltti meni *PARIISI*-nimen päälle
+ * (savuke-pariisi-lahizoom 7e, 1 nimi varauksen päällä). `vasen` kertoo, että ankkuri on siirrettävä
+ * laatikon leveyden verran vasemmalle: nimiö piirtyy aina merkin
+ * OIKEALLE puolelle (asetteleTuristiInfo, kylki 'oikea'), joten
+ * pelkkä negatiivinen dx jättäisi nimiön kaupungin päälle.
+ *
+ * Etäisyydet on pidetty pieninä tarkoituksella: kyltin on oltava yhä
+ * kaupungin VIERESSÄ (tools/savukkeet/savuke-kaupunkietusivu.mjs
+ * TURISTI_INFO_ETAISYYS_MAX = 48 px saapumisnäkymässä), ja ladonta
+ * pääsee kauemmas vain silloin, kun lähempänä ei ole tilaa.
+ */
+export const TURISTI_INFON_ASENNOT = Object.freeze([
+  Object.freeze({ dx: 36, dy: 16 }),
+  Object.freeze({ dx: 36, dy: -16 }),
+  Object.freeze({ dx: 36, dy: 44 }),
+  Object.freeze({ dx: 36, dy: -44 }),
+  Object.freeze({ dx: 36, dy: 76 }),
+  Object.freeze({ dx: 36, dy: -76 }),
+  Object.freeze({ dx: -36, dy: 16, vasen: true }),
+  Object.freeze({ dx: -36, dy: -16, vasen: true }),
+  Object.freeze({ dx: -36, dy: 44, vasen: true }),
+  Object.freeze({ dx: -36, dy: -44, vasen: true }),
+  Object.freeze({ dx: -36, dy: 76, vasen: true }),
+  Object.freeze({ dx: -36, dy: -76, vasen: true }),
+]);
+
 /**
  * Turisti-infon paikka asteina, kun halutaan KIINTEÄ RUUTUSIIRTO.
  *

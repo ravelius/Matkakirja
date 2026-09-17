@@ -242,9 +242,33 @@ test('turisti-infon kyltti on sovittelun este ja sen varaus on koko kyltti', () 
   // 4. Sama laatikko palvelee sekä ladontaa että osumatestiä.
   assert.match(lauta, /return kyltinLaatikot\(\);/);
   assert.match(lauta,
-    /if \(!kyltinLaatikot\(\)\.some\(\(r\) => laatikonEtaisyys\(kohta, r\) <= 0\)\) return null;/);
+    /if \(!kyltinLaatikot\(\)\.some\(\(r\) => laatikonEtaisyys\(kohta, r\) <= KYLTIN_MUSTEEN_VARA_PX\)\) \{/);
   // 5. Vastakoe palauttaa 1 x 1 px:n pisteen (merkin svg:n oma mitta).
   assert.match(lauta, /if \(!pallonSaantoKaytossa\('kylttilaatikko'\)\) \{/);
+});
+
+/*
+ * KYLTTI SIIRTYY SIVUUN, EI NIMIÖ (omistaja 17.9.2026, Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 31 TARKENNUS 3).
+ */
+test('turisti-infon kyltti valitsee vapaan asennon ennen nimiladontaa', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  const kaupunkinosto = lue('../js/kaupunkinosto.js');
+  // 1. Asennot ovat lista, jonka ensimmäinen on entinen paikka.
+  assert.match(kaupunkinosto, /export const TURISTI_INFON_ASENNOT = Object\.freeze\(\[/);
+  assert.match(kaupunkinosto, /Object\.freeze\(\{ dx: 36, dy: 16 \}\),/);
+  // 2. Este on vain se, mikä EI riipu kyltistä (kiinteä muste, kaupungin piste).
+  assert.match(lauta, /const paivitaTuristiInfo = \(kiinteaMuste = \[\]\) => \{/);
+  assert.match(lauta, /const infoTulos = paivitaTuristiInfo\(nostoTulos\.laatikot\);/);
+  // 3. Edellinen asento kokeillaan ensin (ei heilu ladonnasta toiseen).
+  assert.match(lauta, /const jarjestys = \[asennot\[kyltinAsento\] \?\? asennot\[0\], \.\.\.asennot\];/);
+  assert.match(lauta, /kyltinAsento = Math\.max\(0, asennot\.indexOf\(asento\)\);/);
+  // 4. Kyltti valitaan ENNEN nimiladontaa, joka väistää sitä.
+  const kyltti = lauta.indexOf('const infoTulos = paivitaTuristiInfo(');
+  const nimet = lauta.indexOf('const nimiTulos = nimet.lado(');
+  assert.ok(kyltti > 0 && nimet > kyltti, 'kyltin asento ennen nimiladontaa');
+  // 5. Vastakoe: siirto pois.
+  assert.match(lauta, /pallonSaantoKaytossa\('kylttisiirto'\)\n?\s*\? TURISTI_INFON_ASENNOT : TURISTI_INFON_ASENNOT\.slice\(0, 1\)/);
 });
 
 test('siirto animoidaan ja reduced motion poistaa siirtymän', () => {
