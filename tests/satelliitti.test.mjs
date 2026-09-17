@@ -756,9 +756,22 @@ test('LINSSIN AIKANA VAIN HAVAINTOPISTE ON NAPAUTETTAVA — yksi portti laudassa
 
   // 1. Pinnan napautus: linssin aikana vain linssimerkki, sitten return.
   const portti = lauta.match(
-    /if \(linssiPaalla\(\)\) \{\s*const merkki = lahinLinssimerkki\(lat, lng\);[\s\S]{0,200}?\n {4}\}/,
+    /if \(linssiPaalla\(\)\) \{[\s\S]{0,200}?const merkki = lahinLinssimerkki\(lat, lng\)(?: \?\? linssimerkkiRuudulta\(\))?;[\s\S]{0,200}?\n {4}\}/,
   );
   assert.ok(portti, 'napautaPintaan ei sulje muita polkuja linssin ajaksi');
+  /*
+   * VARAPOLKU EI LÖYSÄÄ PORTTIA (Mac 17.9.2026): sormen omasta
+   * ruutupisteestä laskettu osuma katsoo vain linssin napautettavia
+   * merkkejä pallon etupuolelta ja saman 44 px:n säteen sisältä —
+   * ei kaupunkeja, nostoja eikä pallon takapuolta.
+   */
+  const varapolku = lauta.match(/const linssimerkkiRuudulta = \(\) => \{[\s\S]*?\n {2}\};/);
+  if (varapolku) {
+    assert.match(varapolku[0], /merkit\.napautettavat\(\)/);
+    assert.match(varapolku[0], /edessa\(d\.lat, d\.lng\)/);
+    assert.match(varapolku[0], /NAPAUTUKSEN_SADE_PX/);
+    assert.match(varapolku[0], /tuoreNapautuskohta\(\)/);
+  }
   assert.match(portti[0], /if \(merkki\) \{ heraa\(\); merkki\.napautus\(merkki\); \}/);
   assert.match(portti[0], /return;/);
 

@@ -74,7 +74,8 @@ import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const PORTTI = 8747;
+/* Portti ympäristöstä: rinnakkaisajo tarvitsee oman (vrt. savuke-topografialinssi). */
+const PORTTI = Number(process.env.PORTTI ?? 8747);
 const ULOS = process.env.KAAPPAUKSET ?? '/tmp/matkakirja-kaappaukset';
 mkdirSync(ULOS, { recursive: true });
 
@@ -211,12 +212,27 @@ const heti = (vaihe) => Boolean(vaihe) && vaihe !== 'pimea';
 
 /* ---------------------------------------------------------- peli auki */
 
+/*
+ * KÄYNNISTYS ODOTTAA PELIN OMAA TILAA, EI SEINÄKELLOA (17.9.2026,
+ * RINNAKKAISKUORMA). Mainin Mac-ajossa (Actions 35237332631,
+ * SAVUKE_RINNAKKAIN=6) tämä savuke antoi 8/13 vaikka yksin ajettuna se
+ * on vihreä: viisi punaista olivat kaikki avausjakson kameramittoja
+ * (korkeus 0,179 odotetun 300 sijaan). Kiinteät `waitForTimeout`-odotukset
+ * ovat SEINÄKELLOA — kuorman alla peli ei ehtinyt niiden sisällä yhtä
+ * pitkälle, ja Käynnistä-nappia painettiin ennen kuin pallon instanssi
+ * oli pystyssä. Silloin `avaaKaukaisuus` palaa hiljaa epätotena eikä
+ * kameraa koskaan viedä avaruuteen (js/linssit/ihmisen-matka-esitys.js).
+ * Jokainen odotus on nyt EHTO pelin omasta tilasta.
+ */
 await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo`, { waitUntil: 'load' });
-await s.waitForTimeout(2500);
+const odotaEhto = (fn, ms = 60000) => s.waitForFunction(fn, null, { timeout: ms })
+  .then(() => true).catch(() => false);
+await odotaEhto(() => [...document.querySelectorAll('button')]
+  .some((b) => /aloita seikkailu/i.test(b.textContent)));
 await s.evaluate(() => {
   [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
 });
-await s.waitForTimeout(2500);
+await odotaEhto(() => Boolean(window.matkakirja?.game?.pack?.cities?.length && window.matkakirja?.ui));
 await s.evaluate(() => {
   const { game, ui } = window.matkakirja;
   if (game.phase === 'pickstart') game.actionPickStart(game.pack.cities.find((c) => c.links?.length).id, 0);
@@ -225,10 +241,19 @@ await s.evaluate(() => {
   game.phase = 'action';
   ui.render();
 });
-await s.waitForTimeout(1200);
-const pallo = await s.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 45000 })
-  .then(() => true).catch(() => false);
-await s.waitForTimeout(1500);
+const pallo = await odotaEhto(() => Boolean(window.matkakirja?.ui?.pallolauta), 45000);
+/*
+ * PALLON INSTANSSI ON AVAUKSEN EHTO. Esityksen `avaaKaukaisuus` tarvitsee
+ * kolme asiaa: `ui.pallonInstanssi.pointOfView`, laudan `zoomirajat` ja
+ * OrbitControlsin. Ilman niitä avaus alkaa mustasta mutta kamera jää
+ * pelaajan maan korkeudelle — juuri se, mitä kuormassa mitattiin.
+ */
+const palloValmis = await odotaEhto(() => {
+  const { ui } = window.matkakirja ?? {};
+  const p = ui?.pallonInstanssi;
+  return Boolean(p?.pointOfView && Number.isFinite(p.pointOfView()?.altitude)
+    && p.controls?.() && ui?.pallolauta?.zoomirajat);
+}, 45000);
 
 /* ---------------------------------------------------- 1. linssi laukusta */
 
@@ -382,15 +407,16 @@ await s.evaluate(() => {
  * ehdon täyttyessä esitys pysäytetään samassa silmukassa, jolloin
  * mittaus ja kuva ovat siitä hetkestä. `jatkaEsitys()` päästää menemään.
  */
-async function odotaJaPysayta(kentta, op, arvo, kierroksia = 900) {
-  return s.evaluate(async ([k, o, a, n]) => {
+async function odotaJaPysayta(kentta, op, arvo, kierroksia = 900, lisaehdot = []) {
+  return s.evaluate(async ([k, o, a, n, lisat]) => {
     const { ui } = window.matkakirja;
-    const tayttyy = (t) => {
-      const v = t?.[k];
-      if (o === '>=') return typeof v === 'number' && v >= a;
-      if (o === '<=') return typeof v === 'number' && v <= a;
-      return v === a;
+    const yksi = (t, kk, oo, aa) => {
+      const v = t?.[kk];
+      if (oo === '>=') return typeof v === 'number' && v >= aa;
+      if (oo === '<=') return typeof v === 'number' && v <= aa;
+      return v === aa;
     };
+    const tayttyy = (t) => yksi(t, k, o, a) && lisat.every(([kk, oo, aa]) => yksi(t, kk, oo, aa));
     for (let i = 0; i < n; i += 1) {
       const t = ui.aikajana?.esitys?.tila?.();
       if (!t || t.paattynyt) break;
@@ -401,7 +427,7 @@ async function odotaJaPysayta(kentta, op, arvo, kierroksia = 900) {
       await new Promise((r) => setTimeout(r, 60));
     }
     return { osui: false, ...(ui.aikajana?.esitys?.tila?.() ?? {}) };
-  }, [kentta, op, arvo, kierroksia]);
+  }, [kentta, op, arvo, kierroksia, lisaehdot]);
 }
 const jatkaEsitys = () => s.evaluate(() => window.matkakirja.ui.aikajana?.esitys?.jatka());
 
@@ -442,15 +468,45 @@ const mittaaPinnat = () => s.evaluate(() => {
   };
 });
 
-await s.evaluate(() => document.querySelector('.aikajana-avaus-nappi')?.click());
+/** Käynnistyksen todisteet väitteen lisätietoihin (kuorman juurisyy). */
+const kaynnystysLisa = (k, hetki) => ({
+  korkeusEnnen: k.ennen, korkeusHeti: k.heti, mustaOsui: hetki.osui === true,
+});
+
 /*
- * MITTA HETI, KUVA VASTA SEN JÄLKEEN. Musta pysyy nyt koko ENSIMMÄISEN
- * VIRKKEEN ajan (omistaja 9.9.2026, ALKUANIMAATIO), mutta kuvakaappaus
- * pakottaa kehyksen, joka kontissa kestää sekunnin — mittaus otetaan
- * siksi ensin.
+ * KÄYNNISTYS JA AVARUUDEN KORKEUS SAMASSA VUOROSSA (17.9.2026).
+ * `avaaKaukaisuus` ajetaan synkronisesti napin käsittelijässä
+ * (aloita → avaruusavaus), joten kameran korkeus luetaan HETI klikin
+ * jälkeen samassa `evaluate`-kutsussa: jos avaus ei saanut palloa,
+ * lukema on pelaajan maan korkeus eikä 300, ja se näkyy väitteen
+ * lisätiedoissa ilman seinäkellon arvailua.
  */
-await s.waitForTimeout(200);
-const musta = await mittaaPinnat();
+const kaynnistys = await s.evaluate(() => {
+  const { ui } = window.matkakirja;
+  const korkeus = () => {
+    const a = ui.pallonInstanssi?.pointOfView?.()?.altitude;
+    return Number.isFinite(a) ? Math.round(a * 1000) / 1000 : null;
+  };
+  const ennen = korkeus();
+  document.querySelector('.aikajana-avaus-nappi')?.click();
+  const t = ui.aikajana?.esitys?.tila?.() ?? {};
+  return { ennen, heti: korkeus(), mustaPaalla: t.mustaPaalla ?? null, jakso: t.jakso ?? null };
+});
+/*
+ * MITTA ESITYKSEN OMASTA TILASTA, EI MILLISEKUNNEISTA. Ennen tässä
+ * odotettiin 200 ms seinäkelloa; kuormassa (12 savuketta rinnakkain)
+ * se osui väärään vaiheeseen. Nyt esitys pysäytetään siihen hetkeen,
+ * jossa se itse sanoo mustan olevan päällä — kuva ja mittaus ovat
+ * samasta hetkestä riippumatta siitä, kuinka hidas kone on.
+ */
+/*
+ * LISÄEHTO kulunut >= 0 (Fable 17.9.2026): PR #2561:n ubuntu-ajossa
+ * musta oli päällä jo ENNEN esityksen käynnistymistä (kulunut -77 ms,
+ * tähtien peitto vielä 1 edellisestä tilasta), ja Linux-kontti ehti
+ * pysäyttää siihen. Mitataan vasta kun esityksen oma kello on lähtenyt.
+ */
+const mustaHetki = await odotaJaPysayta('mustaPaalla', '===', true, 300, [['kulunut', '>=', 0]]);
+const musta = { ...(await mittaaPinnat()), ...kaynnystysLisa(kaynnistys, mustaHetki) };
 await s.screenshot({ path: kuva('0-musta') });
 /*
  * PALLO ON PISTE. Kamera on korkeudella 300 (AVARUUDEN_KORKEUS),
@@ -460,14 +516,15 @@ await s.screenshot({ path: kuva('0-musta') });
  *
  * LUOKKA `musta` ON NYT MYÖS VÄITE: se poistetaan vasta kun kertoja on
  * lukenut ensimmäisen virkkeen loppuun (avauksenVaiheet.musta), joten
- * 200 ms:n kohdalla sen on oltava vielä paikallaan.
+ * mustan hetkellä sen on oltava paikallaan.
  */
 vaadi('MUSTA ALKU: ensimmäinen virke luetaan kokonaan mustalle ruudulle',
-  musta.peiteOn && musta.peite > 0.9 && musta.musta === true
+  palloValmis && musta.mustaOsui && musta.peiteOn && musta.peite > 0.9 && musta.musta === true
     && (musta.tahtienPeitto === null || musta.tahtienPeitto < 0.1)
-    && musta.korkeus > 25 && musta.avausOdottaa === true
+    && musta.korkeus > 25 && musta.korkeusHeti > 25 && musta.avausOdottaa === true
     && musta.jakso === 'avaus',
   JSON.stringify(musta));
+await jatkaEsitys();
 
 /* ------------------------------------------------------ tähdet esiin */
 
@@ -625,21 +682,32 @@ await s.screenshot({ path: kuva('3-tauko-avauksessa') });
 const jatkui = await s.evaluate(async () => {
   const { ui } = window.matkakirja;
   const ennen = ui.aikajana.esitys.tila();
+  const korkeusEnnen = Math.round((ui.pallonInstanssi?.pointOfView?.()?.altitude ?? 0) * 100) / 100;
   ui.aikajana.esitys.jatka();
   /*
-   * JATKON TODISTE MITATAAN VÄLJÄSTI: silmukka on
-   * requestAnimationFramessa, ja kontin ohjelmisto-WebGL piirtää pallon
-   * noin kehyksen sekunnissa.
+   * JATKON TODISTE ODOTTAA MUUTOSTA, EI KELLOA (17.9.2026, kuorma).
+   * Silmukka on requestAnimationFramessa, ja rinnakkaisajossa (12
+   * savuketta) kehysväli venyy — kiinteä 3 s ei riitä. Odotetaan siis
+   * sitä, mitä väite mittaa: luenta etenee JA zoomi laskee. Katto on
+   * 20 s, jotta jumi näkyy punaisena eikä ripusta ajoa.
    */
-  await new Promise((r) => setTimeout(r, 3000));
-  const t = ui.aikajana.esitys.tila();
+  const alkoi = performance.now();
+  let t = ui.aikajana.esitys.tila();
+  let korkeusNyt = korkeusEnnen;
+  while (performance.now() - alkoi < 20000) {
+    t = ui.aikajana.esitys.tila();
+    korkeusNyt = Math.round((ui.pallonInstanssi?.pointOfView?.()?.altitude ?? 0) * 100) / 100;
+    if ((t.kulunut > ennen.kulunut || t.jakso !== ennen.jakso) && korkeusNyt < korkeusEnnen) break;
+    // eslint-disable-next-line no-await-in-loop
+    await new Promise((r) => setTimeout(r, 100));
+  }
   return {
     ennen: ennen.kulunut,
     jalkeen: t.kulunut,
     jakso: t.jakso,
     ennenJakso: ennen.jakso,
     kaynnissa: t.kaynnissa,
-    korkeus: Math.round((ui.pallonInstanssi?.pointOfView?.()?.altitude ?? 0) * 100) / 100,
+    korkeus: korkeusNyt,
   };
 });
 vaadi('TAUKO: lauseet, kello JA zoomi pysähtyvät samasta kohdasta',
