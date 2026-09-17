@@ -2731,6 +2731,45 @@ export async function avaaPallolauta(ui) {
     return nyt - napautuskohta.hetki <= NAPAUTUSKOHDAN_IKA_MS ? napautuskohta : null;
   };
   /**
+   * LINSSIMERKKI SORMEN OMASTA RUUTUPISTEESTÄ (Mac 17.9.2026,
+   * Actions 35237332631, savuke-astro-pallo "kohdepiste on yhä
+   * klikattavissa": piste 82 px pallon keskiöstä, päällimmäisenä
+   * CANVAS, eikä mitään auennut).
+   *
+   * Osuma on tähän asti laskettu YKSINOMAAN kirjaston antamasta
+   * lat/lng-parista: säde osuu pallon pintaan, pinnan piste
+   * projisoidaan takaisin ruudulle (`lahin` → `getScreenCoords`) ja
+   * sitä verrataan merkin ruutupisteeseen. Kierros kulkee siis
+   * ruutu → 3D → ruutu, ja se on herkkä kaikelle, mikä muuttuu
+   * kierroksen aikana: kamera liikkuu vielä avausliu'un jälkeen,
+   * ja Macin kehysluvulla säteenjäljityksen kamera ja projisoinnin
+   * kamera ovat eri kehyksestä. Työpöydällä pallo on iso (809 px),
+   * joten sama kulmapoikkeama on moninkertainen pikseleinä —
+   * puhelimella (pallo 374 px) ero jäi 44 px:n sisään ja katselu
+   * aukesi, työpöydällä ei.
+   *
+   * PELAAJA NAPAUTTAA NÄKEMÄÄNSÄ PISTETTÄ, joten osumaa mitataan nyt
+   * myös suoraan siitä pikselistä, jota sormi kosketti: merkin
+   * ruutupiste vs. napautuskohta, sama 44 px:n säde. Sääntö ei
+   * löysää mitään muuta — pallon takapuolen merkit on karsittu
+   * `edessa`llä kuten ennen, ja lat/lng-polku kysytään ensin.
+   */
+  const linssimerkkiRuudulta = () => {
+    const kohta = tuoreNapautuskohta();
+    if (!kohta) return null;
+    let paras = null;
+    let parasMatka = NAPAUTUKSEN_SADE_PX;
+    for (const d of merkit.napautettavat()) {
+      if (!edessa(d.lat, d.lng)) continue;
+      const p = pallo.getScreenCoords(d.lat, d.lng, 0);
+      if (!p) continue;
+      const matka = Math.hypot(p.x - kohta.x, p.y - kohta.y);
+      if (matka < parasMatka) { parasMatka = matka; paras = d; }
+    }
+    return paras;
+  };
+
+  /**
    * Osuiko tämä napautus auki olevan viuhkan kohtaan? Kysytään
    * KAIKISSA napautuspoluissa (pinta ja pisteet), koska viuhkan kohta
    * voi olla minkä tahansa kerroksen päällä.
@@ -2773,7 +2812,9 @@ export async function avaaPallolauta(ui) {
      * kohtaamispiste, nimimuste) suljetaan siis tässä yhdessä kohdassa.
      */
     if (linssiPaalla()) {
-      const merkki = lahinLinssimerkki(lat, lng);
+      // Sormen oma ruutupiste on varapolku, kun ruutu → 3D → ruutu
+      // -kierros heittää (ks. LINSSIMERKKI SORMEN OMASTA RUUTUPISTEESTÄ).
+      const merkki = lahinLinssimerkki(lat, lng) ?? linssimerkkiRuudulta();
       if (merkki) { heraa(); merkki.napautus(merkki); }
       return;
     }
