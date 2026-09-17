@@ -575,9 +575,23 @@ async function ajaNakyma(nimi) {
     + ` (tilaus 0,16; kirjaston autoRotateSpeed ${loppu.pyorimisenNopeus})`);
   /*
    * PELAAJAN OTE PYSÄYTTÄÄ. Veto pallon yli: sormi alas, liike, ylös —
-   * sama ele, jolla pelaaja kääntää palloa. Liu'un annetaan ensin
-   * sammua (js/pallo.js vauhti), ja vasta sen jälkeen mitataan, ettei
-   * kulma enää muutu kahdessa sekunnissa.
+   * sama ele, jolla pelaaja kääntää palloa.
+   *
+   * LIUKU ODOTETAAN TILASTA, EI KELLOSTA (Mac 17.9.2026). Vedon jälkeen
+   * pallo jatkaa liukua (js/pallo.js `vauhti`). Vaimennus on jo
+   * AIKASIDONNAINEN — `Math.exp(-VAUHTI_KITKA * dt)`, dt millisekunteina
+   * — joten kehysluku ei muuta liu'un kestoa, EIKÄ PELIKOODIIN
+   * KOSKETA. Liu'un PITUUS riippuu silti alkunopeudesta, ja se taas
+   * syntyy vedon näytevälistä: Playwrightin `mouse.move` lähtee Macilla
+   * peräkkäisinä millisekunteina (`dt = Math.max(1, …)`), jolloin
+   * asteet/ms on moninkertainen kontin hitaaseen vetoon verrattuna.
+   * Ero kynnykseen (0,0006 °/ms) on logaritminen: kymmenkertainen
+   * alkunopeus = noin 820 ms lisää liukua. Kiinteä 2 s ei siis riitä
+   * Macilla, ja mittari luki liu'un loppuhäntää (0,088–0,161° / 2 s).
+   *
+   * Nyt odotetaan PALLON LEPOA: `vauhti.raf` on nolla (liuku ei ole
+   * kesken) JA kulma on pysynyt 300 ms:n ikkunassa hitaampana kuin
+   * väitteen oma raja. Sama ehto pätee 60 ja 120 hertsillä.
    */
   const keskiX = Math.round(NAKYMAT[nimi].viewport.width / 2);
   const keskiY = Math.round(NAKYMAT[nimi].viewport.height / 2);
@@ -585,7 +599,38 @@ async function ajaNakyma(nimi) {
   await s.mouse.down();
   for (let i = 1; i <= 5; i += 1) await s.mouse.move(keskiX - i * 8, keskiY);
   await s.mouse.up();
-  await s.waitForTimeout(2000);
+  const lepo = await s.evaluate(async (katto) => {
+    const pov = () => window.matkakirja.ui.pallonInstanssi.pointOfView();
+    const ero = (a, b) => { let d = b - a; while (d > 180) d -= 360; while (d < -180) d += 360; return d; };
+    const alku = performance.now();
+    let kehyksia = 0;
+    let viiteAika = alku;
+    let viiteLng = pov().lng;
+    let liukuLoppui = null;
+    let rauhoittui = null;
+    while (performance.now() - alku < katto) {
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((r) => requestAnimationFrame(r));
+      kehyksia += 1;
+      const nyt = performance.now();
+      const liukuu = Boolean(window.matkakirja.ui.pallonVauhti?.raf);
+      if (!liukuu && liukuLoppui === null) liukuLoppui = Math.round(nyt - alku);
+      if (liukuu) { viiteAika = nyt; viiteLng = pov().lng; continue; }
+      if (nyt - viiteAika < 300) continue;
+      // Raja = väitteen oma raja (0,05° / 2 s) tälle ikkunalle.
+      const raja = 0.05 * ((nyt - viiteAika) / 2000);
+      if (Math.abs(ero(viiteLng, pov().lng)) <= raja) { rauhoittui = Math.round(nyt - alku); break; }
+      viiteAika = nyt; viiteLng = pov().lng;
+    }
+    const kesto = performance.now() - alku;
+    return {
+      liukuLoppui,
+      rauhoittui,
+      odotettuMs: Math.round(kesto),
+      kehyksia,
+      kehysluku: Math.round((1000 * kehyksia) / Math.max(1, kesto)),
+    };
+  }, 20000);
   const b1 = await lng();
   await s.waitForTimeout(2000);
   const b2 = await lng();
@@ -594,8 +639,10 @@ async function ajaNakyma(nimi) {
     () => window.matkakirja.ui.pallolinssi.kahva.avaruus.tila().pyorii,
   );
   vaadi(t('pyöriminen loppuu, kun pelaaja tarttuu palloon'),
-    pyoriiEnaa === false && jaljella < 0.05,
-    `pyörii ${pyoriiEnaa}, kulma ${b1.toFixed(3)}° → ${b2.toFixed(3)}° (${jaljella.toFixed(3)}°)`);
+    pyoriiEnaa === false && jaljella < 0.05 && lepo.rauhoittui !== null,
+    `pyörii ${pyoriiEnaa}, kulma ${b1.toFixed(3)}° → ${b2.toFixed(3)}° (${jaljella.toFixed(3)}°),`
+    + ` liuku loppui ${lepo.liukuLoppui} ms, lepo ${lepo.rauhoittui} ms`
+    + ` (odotettu ${lepo.odotettuMs} ms, ${lepo.kehysluku} fps)`);
   vaadi(t('VASTAKOE: sama mittari näki liikkeen ennen tarttumista'),
     Math.abs(kulma(a1, a2)) > jaljella * 4 && Math.abs(kulma(a1, a2)) > 0.2,
     `ennen ${Math.abs(kulma(a1, a2)).toFixed(3)}°, jälkeen ${jaljella.toFixed(3)}° (2 s)`);
@@ -892,9 +939,41 @@ async function ajaNakyma(nimi) {
   const piste = await vakaaPiste();
   const auki0 = await s.evaluate(AUKI);
   let auki1 = [];
+  let osuma = null;
   if (piste) {
+    /*
+     * NAPAUTUS ODOTTAA TILAA, EI KELLOA (Actions 35228371442, Mac,
+     * kuusi savuketta rinnakkain). Väite mittaa sen, että kalvo on
+     * merkkikerroksen ALLA ja `pointer-events: none` — napautus menee
+     * siis kalvon läpi pisteeseen ja avaa katselun. Kuormassa 2 500
+     * ms:n kiinteä odotus loppui ennen kuin katselu ehti DOMiin, ja
+     * väite luki `jälkeen []` vaikka mekanismi oli kunnossa.
+     *
+     * Kaksi tilaehtoa kiinteän odotuksen tilalle:
+     *  1. ENNEN napautusta: `elementFromPoint` pisteessä on merkki
+     *     (tai sen lapsi), ei kalvo — eli osumapinta on pystyssä.
+     *     Tämä on juuri se, mitä väite väittää, ja se kirjataan.
+     *  2. NAPAUTUKSEN JÄLKEEN: odotetaan katselun ilmestymistä
+     *     (enintään 30 s), ei kelloa. Kuormitettu kone saa aikansa,
+     *     nopea jatkaa heti.
+     */
+    osuma = await s.evaluate(({ x, y }) => {
+      const el = document.elementFromPoint(x, y);
+      const merkki = el?.closest?.('.satelliitti-piste') ?? null;
+      const kalvo = document.querySelector('.astro-kalvo, .satelliitti-kalvo');
+      return {
+        paalla: el ? (el.className || el.tagName) : null,
+        merkissa: Boolean(merkki),
+        kalvonTapahtumat: kalvo ? getComputedStyle(kalvo).pointerEvents : null,
+      };
+    }, piste);
     await s.mouse.click(piste.x, piste.y);
-    await s.waitForTimeout(2500);
+    await s.waitForFunction(
+      (ennen) => [...document.querySelectorAll(
+        '.satelliitti-katselu, .satelliitti-kortti, .satelliitti-popup, .linssikartta-kortti, dialog[open]',
+      )].length > ennen,
+      auki0.length, { timeout: 30000 },
+    ).catch(() => {});
     auki1 = await s.evaluate(AUKI);
     // LISÄYS 8: `.satelliitti-sulku` osuu vain KUVAN sulkuun; linssin
     // oma ✕ on `.satelliitti-linssisulku` eikä sitä saa napauttaa tässä.
@@ -903,7 +982,8 @@ async function ajaNakyma(nimi) {
     await s.waitForTimeout(1000);
   }
   vaadi(t('kohdepiste on yhä klikattavissa'), auki1.length > auki0.length,
-    `piste ${JSON.stringify(piste)}, ennen [${auki0}], jälkeen [${auki1}]`);
+    `piste ${JSON.stringify(piste)}, osuma ${JSON.stringify(osuma)},`
+    + ` ennen [${auki0}], jälkeen [${auki1}]`);
 
   /* ---- 7. reliefin tarkkuus ----------------------------------------- */
   const odotettu = NAKYMAT[nimi].viewport.width >= 1024 ? '8k' : '4k';
