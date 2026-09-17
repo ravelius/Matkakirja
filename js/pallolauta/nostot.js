@@ -686,6 +686,62 @@ export function lahizoomiAuki(uloinOsuus) {
   return uloinOsuus > 0 && uloinOsuus <= LAHIZOOMIN_OSUUS_ULOIMMASTA;
 }
 
+/*
+ * ══ AIHENOSTON NIMIÖ VAIN LÄHIZOOMISSA ════════════════════════════
+ *
+ * OMISTAJA 17.9.2026 klo 04.15 UTC (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 27 TARKENNUS 4 kohta 10, kortti *"Nimiö vain
+ * lähizoomissa"*): aihenoston NIMIÖ näkyy VAIN lähizoomissa — *"sama
+ * kynnys kuin nostojen nimiöiden esiintulolla kaupunkia
+ * lähestyttäessä"* — ja koko maan näkymässä aihenosto on pelkkä
+ * symboli.
+ *
+ * KYNNYS ON SAMA FUNKTIO, EI SAMA LUKU. Se kynnys, jolla kaupungin
+ * nostot (ja siten niiden nimiöt) tulevat esiin lähestyttäessä, on
+ * `lahizoomiAuki` — LAHIZOOMIN_OSUUS_ULOIMMASTA 0,7, sama portti,
+ * joka päästää kohdekartan nostot (`lahi: true`, karsiKaupunkikartan-
+ * Nostot) pääkartalle. Tämä funktio KUTSUU sitä sen sijaan, että
+ * toistaisi luvun: jos kynnystä joskus siirretään, aihenoston nimiö
+ * siirtyy mukana eikä jää jälkeen omaan vakioonsa.
+ *
+ * MIKSI (mitattu, docs/raportit/viesti-fable-julkaisu-v1927-
+ * 20260917.md luku 5.1): v1927:ssä aihenostot latoivat nimiönsä myös
+ * koko Ranskan saapumisnäkymään — noin kahdeksan pitkää nimiötä
+ * lisää 390 px:n ruudulle — ja savuke-nimikyltin vartio 9b
+ * (limittyviä nimiöpareja enintään 4) nousi puhelimella 5 → 8.
+ * Vastakoe `?aihekaupunki=0` osoitti, ettei syy ollut kaupungin
+ * aina-yhdistys (ilman sitä pareja oli 9), vaan nimiö itse.
+ *
+ * LAATIKKO SEURAA LIPPUA. Kun nimiö ei näy, `aihemerkinLaatikko`
+ * antaa pelkän värilautasen (d.nimioNakyy on false), ja rivi jää pois
+ * sovittelun `lappuja`-listalta — muuten saapumisnäkymän sovittelu
+ * varaisi tilaa nimiölle, jota ei piirretä.
+ */
+/**
+ * Näkyykö aihenoston nimiö tällä zoomilla (PAATOKSET 27 TARKENNUS 4
+ * kohta 10). Puhdas funktio: sama osuus antaa aina saman vastauksen.
+ *
+ * @param {number} uloinOsuus  kameran korkeus / uloin sallittu korkeus
+ * @returns {boolean} true vain lähizoomissa (osuus <= kynnys)
+ */
+export function aihenostonNimioNakyy(uloinOsuus) {
+  return lahizoomiAuki(uloinOsuus);
+}
+
+/**
+ * NIMIÖKYNNYKSEN VASTAKOE: `?aihenimiokynnys=0` poistaa kynnyksen,
+ * jolloin aihenoston nimiö näkyy kaikilla zoomeilla kuten v1927:ssä.
+ * Lippu luetaan JOKA LADONNASSA osoitteesta, joten savuke voi kääntää
+ * sen päälle ja pois ilman uutta sivunlatausta — sama tapa kuin
+ * `?aihemerkit=0` ja `?aihekaupunki=0`.
+ */
+export function aihenimionKynnysSallittu() {
+  try {
+    const arvo = new URLSearchParams(globalThis.location?.search ?? '').get('aihenimiokynnys');
+    return !/^(0|ei|off)$/.test(arvo ?? '');
+  } catch { return true; }
+}
+
 /**
  * PÄÄKARTAN MERKKIPORTTI. Lähizoomilla kaikki; uloimmalla enintään
  * PAAKARTAN_MERKKIKATTO tärkeintä, ja `lahi`-merkit eivät lainkaan.
@@ -1411,6 +1467,14 @@ export function luoNostot({
      * Jäsenten järjestys on samalla VIUHKAN järjestys, joten kaari
      * alkaa siitä nostosta, jonka nimi on pallon kyljessä.
      */
+    /*
+     * NIMIÖ VAIN LÄHIZOOMISSA (PAATOKSET 27 TARKENNUS 4 kohta 10; ks.
+     * AIHENOSTON NIMIÖ VAIN LÄHIZOOMISSA yllä). Luku on koko ladonnan
+     * yhteinen, koska kynnys on kameran eikä merkin ominaisuus.
+     */
+    const aihenimioLahella = aihenimionKynnysSallittu()
+      ? aihenostonNimioNakyy(uloinOsuus)
+      : true;
     const aiherivit = ryhmat.map((kasaRaaka) => {
       const kasa = [...kasaRaaka].sort((a, b) => (a.ladontaNro ?? 0) - (b.ladontaNro ?? 0));
       const lat = kasa.reduce((a, r) => a + r.lat, 0) / kasa.length;
@@ -1436,7 +1500,7 @@ export function luoNostot({
         puoli: tarkein.puoli ?? 'oikea',
         maara: kasa.length,
         jasenet: kasa,
-        nimioNakyy: Boolean(nimio),
+        nimioNakyy: Boolean(nimio) && aihenimioLahella,
         poltettu: false,
         avaa: null,
       };

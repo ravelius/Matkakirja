@@ -53,6 +53,10 @@
  *  11. Linssin merkit eivät kuluta pelivuoroa.
  *  12. Sulje linssi palauttaa yläpalkin, pelitilan ja tallennuksen
  *      täsmälleen; merkit ja palkki poistuvat. Ei sivuvirheitä.
+ *      "Täsmälleen" mitataan LINSSIÄ EDELTÄVÄSTÄ tilasta: matalalla
+ *      ruudulla pelin oma palkki on jo valmiiksi ylös liu'utettuna
+ *      väkäsnapin taakse, eikä sen kuulu olla näkyvissä sen paremmin
+ *      ennen linssiä kuin sen jälkeenkään.
  *
  * Sama ajo tehdään työpöydällä, iPadilla (834 × 1194) ja puhelimella
  * (390 × 844): omistaja arvioi palkin ja havaintoikkunan jokaisesta, ja
@@ -295,9 +299,32 @@ async function ajaNakyma(nakymanNimi) {
   vaadi(nimessa('pallolauta avautuu'), pallo, 'ui.pallolauta ei syntynyt');
 
   const ennen = await s.evaluate(PELITILA);
-  // Matkakirjan oman palkin korkeus ENNEN linssiä: linssin palkin on
-  // oltava sama, eikä kohteen nimi saa sitä muuttaa.
-  const topbarEnnen = await s.evaluate(() => document.querySelector('.topbar')?.getBoundingClientRect().height ?? 0);
+  /*
+   * MATKAKIRJAN OMAN PALKIN TILA ENNEN LINSSIÄ. Linssin palkin on
+   * oltava sama korkeus, eikä kohteen nimi saa sitä muuttaa — ja
+   * väitteessä 12 linssin sulkeminen palauttaa TÄSMÄLLEEN tämän
+   * tilan.
+   *
+   * NÄKYVYYS LUETAAN MUKAAN, koska "palautettu palkki" ei ole kaikissa
+   * näkymissä sama asia: matalalla ruudulla (@media max-height: 520px,
+   * omistajan tilaus 13.9.2026) pelin oma yläpalkki on LÄHTÖKOHTAISESTI
+   * liu'utettu ylös ja `visibility: hidden`, ja sen tilalla on kartan
+   * oikean yläkulman väkäsnappi. Vakioksi kirjoitettu 'visible' mittasi
+   * siis vaakanäkymissä pelin perusasettelua eikä linssin palautusta
+   * (mitattu 17.9.2026: 844 × 390 ja 740 × 360 punaisia, arvo ennen
+   * linssiä ja sen jälkeen identtinen hidden / 61,375 px).
+   */
+  const palkkiEnnen = await s.evaluate(() => {
+    const topbar = document.querySelector('.topbar');
+    const nappi = document.querySelector('.ylapalkki-nappi');
+    return {
+      korkeus: topbar?.getBoundingClientRect().height ?? 0,
+      nakyvyys: topbar ? getComputedStyle(topbar).visibility : null,
+      // Matalan ruudun väkäsnappi, josta palkki tuodaan esiin.
+      nappiNakyy: nappi ? getComputedStyle(nappi).display !== 'none' : false,
+    };
+  });
+  const topbarEnnen = palkkiEnnen.korkeus;
 
   /*
    * --- 0. OMA KUVAKE MATKALAUKUN LINSSIVALIKOSSA (omistaja 15.9.2026:
@@ -1123,6 +1150,12 @@ async function ajaNakyma(nakymanNimi) {
       bodyLuokat: ['aikajana-palkki-auki', 'aikajana-paalla'].filter((l) => document.body.classList.contains(l)),
       topbarNakyvyys: topbar ? getComputedStyle(topbar).visibility : null,
       topbarKorkeus: topbar?.getBoundingClientRect().height ?? null,
+      // Matalan ruudun väkäsnappi: reitti palkkiin, kun palkki on
+      // lähtökohtaisesti liu'utettu ylös (@media max-height: 520px).
+      ylapalkkiNappiNakyy: (() => {
+        const n = document.querySelector('.ylapalkki-nappi');
+        return n ? getComputedStyle(n).display !== 'none' : false;
+      })(),
       lautaNakyy: window.matkakirja.ui.pallolauta?.paalla?.() === true,
       liikuNakyy: (() => {
         const n = document.querySelector('.toimintorivi .monitoimi-nappi');
@@ -1141,13 +1174,24 @@ async function ajaNakyma(nakymanNimi) {
       })(),
     };
   });
+  /*
+   * PALKKI PALAA SIIHEN, MISTÄ SE LÄHTI. Vertailukohta on mitattu
+   * ennen linssiä (palkkiEnnen) eikä kirjoitettu vakioksi: työpöydällä
+   * ja pystypuhelimessa se on näkyvä 61 px:n palkki, matalalla ruudulla
+   * ylös liu'utettu ja `visibility: hidden` — silloin reitti palkkiin
+   * on kartan väkäsnappi, ja senkin on oltava takaisin paikallaan.
+   */
+  const palkkiPalasi = jalkeen.topbarNakyvyys === palkkiEnnen.nakyvyys
+    && Math.abs(jalkeen.topbarKorkeus - palkkiEnnen.korkeus) <= 0.5
+    && jalkeen.topbarKorkeus > 20
+    && jalkeen.ylapalkkiNappiNakyy === palkkiEnnen.nappiNakyy;
   vaadi(nimessa('Sulje linssi palauttaa yläpalkin, pelitilan ja tallennuksen täsmälleen'),
     jalkeen.pallolinssi === null && jalkeen.palkkeja === 0 && jalkeen.valikkoja === 0
       && jalkeen.merkkeja === 0
       && jalkeen.ikkunoita === 0 && jalkeen.bodyLuokat.length === 0
-      && jalkeen.topbarNakyvyys === 'visible' && jalkeen.topbarKorkeus > 20
+      && palkkiPalasi
       && jalkeen.lautaNakyy && jalkeen.tila === ennen,
-    JSON.stringify(jalkeen));
+    JSON.stringify({ ...jalkeen, palkkiEnnen }));
   vaadi(nimessa('Liiku-nappi palaa näkyviin, kun linssi suljetaan'),
     jalkeen.liikuNakyy === true, JSON.stringify(jalkeen));
   await kaappaa('suljettu');
