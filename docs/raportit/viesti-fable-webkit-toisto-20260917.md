@@ -219,3 +219,114 @@ korjauksen samalla skriptillä (`SELAIMET=webkit,chromium`, 3 avausta).
 Kesto: noin 85 min (lukeminen 10, skripti ja CORS-selvitys 20, ajot
 5 × 6–7 min, erittely 15, raportti 10). Skripti ja kuvat haarassa
 `claude/bold-ride-vow4ki-webkit-toisto`.
+
+## 7. Todennus (webkit2 1477626d)
+
+17.9.2026 klo 13.07–13.36. Worktree `../wt-webkit2-todennus` (detached,
+`origin/claude/bold-ride-vow4ki-astro-webkit2` = 1477626d, pohja v1929),
+sama skripti `tools/savukkeet/savuke-astro-webkit.mjs` kuin luvuissa
+2–4, laajennettuna lukemaan korjaushaaran uudet lokirivit
+(`pinta-mittaus`, `pinta-musta`, `kehykset`, `pistemittari`,
+`pisteet-uusinta`) ja materiaalin värin ennen avausta ja sulun jälkeen.
+Sama matriisi: webkit + chromium × 2539×1321 dpr 1 + 390×844 dpr 3 ×
+3 avausta peräkkäin. Yksi ajo (6 min), ei uusintoja.
+
+### 7.1 Matriisi — 0 mustaa avausta 12:sta
+
+| Selain | Kotelo | Avaus | Pisteitä | Puute | Kirkkaus kuvasta 5 s / 15 s | `pinta-mittaus` (puskurista) | Ladonta | Reliefi | `kehykset` piirtoja / pakotettu | `pistemittari` |
+|---|---|---|---|---|---|---|---|---|---|---|
+| webkit | 2539×1321 | 1 | 64 | ei | 90 / 97 | 159 | 4096×2048 ok | 8k 692 ms | 1000 / **0** | 64/64, kerros 76–77 |
+| webkit | 2539×1321 | 2 | 64 | ei | 93 / 97 | 160 | 4096×2048 ok | 8k 556 ms | 2148 / **0** | 64/64 |
+| webkit | 2539×1321 | 3 | 64 | ei | 90 / 97 | 160 | 4096×2048 ok | 8k 564 ms | 3299 / **0** | 64/64 |
+| webkit | 390×844 | 1 | 64 | ei | 91 / 100 | 161 | 2048×1024 ok | 4k 293 ms | 1010 / **0** | 64/64, kerros 71 |
+| webkit | 390×844 | 2 | 64 | ei | 94 / 104 | 161 | 2048×1024 ok | 4k 223 ms | 2188 / **0** | 64/64 |
+| webkit | 390×844 | 3 | 64 | ei | 91 / 99 | 161 | 2048×1024 ok | 4k 211 ms | 3362 / **0** | 64/64 |
+| chromium | 2539×1321 | 1 | 64 | ei | 90 / 103 | 161 | 4096×2048 ok | 8k 1900 ms | 451 / **0** | 64/64, kerros 76–77 |
+| chromium | 2539×1321 | 2 | 64 | ei | 90 / 102 | 158 | 4096×2048 ok | 8k 1698 ms | 1052 / **0** | 64/64 |
+| chromium | 2539×1321 | 3 | 64 | ei | 90 / 104 | 158 | 4096×2048 ok | 8k 1712 ms | 1658 / **0** | 64/64 |
+| chromium | 390×844 | 1 | 64 | ei | 90 / 100 | 153 | 2048×1024 ok | 4k 1339 ms | 548 / **0** | 64/64, kerros 71 |
+| chromium | 390×844 | 2 | 64 | ei | 90 / 100 | 150 | 2048×1024 ok | 4k 1363 ms | 1257 / **0** | 64/64 |
+| chromium | 390×844 | 3 | 64 | ei | 90 / 101 | 150 | 2048×1024 ok | 4k 1394 ms | 1929 / **0** | 64/64 |
+
+Vastakoe on luku 3: v1929-pohjalla sama ajo antoi WebKit 5/30 ja
+Chromium 16/16 mustaa uudelleenavausta; Chromiumin avaus 2 oli musta
+joka ajossa. Nyt 0/12, ja `pinta-mittaus` lukee piirtopuskurista
+150–161 jokaisessa avauksessa (musta = 0).
+
+Muut havainnot samasta ajosta:
+
+- **`pinta-musta`-riviä ei tullut kertaakaan** — korjaus estää mustan
+  jo ennen vartijaa, varapolkua ei tarvittu (`varapolku=0`).
+- **`kehykset pakotettu=0` kaikissa 12 avauksessa**: sekä WebKit että
+  Chromium antoivat kehykset itse (WebKit n. 1000 piirtoa per 12 s eli
+  ~80/s; Chromium 450–600 eli ~40–50/s). Kehysvahti ei joutunut
+  pakottamaan mitään; `pisteet-uusinta`-riviä ei tullut.
+- **Ladontakatto toimii**: 2539-kotelossa `alku lahde=8192x4096
+  kangas=4096x2048 … webkit=1` (WebKit) ja sama 4096×2048 Chromiumissa;
+  8k-reliefin kesto putosi 1,3–1,4 s → 0,56–0,69 s WebKitissä.
+- `pistemittari kohteita=64 domissa=64 kerros=71–77` joka avauksessa —
+  kohdan 36 mittari on paikallaan ja näyttää ehjän tilan.
+- Ei sivuvirheitä kummassakaan selaimessa.
+
+### 7.2 Materiaalin väri — tarkennus korjaukseen
+
+Mitattu molemmilla pohjilla (Chromium 390×844): **materiaalin väri on
+`000000` jo ENNEN ensimmäistä avausta** tuoreella sivulla — globe.gl:n
+alustus laattamoottoritilassa (`globeImageUrl` tyhjä → `Color(0)`)
+tekee sen, ei vasta linssin sulku. v1929:ssä ensimmäinen avaus toimii
+silti (uniformi syntyy vasta ensimmäisessä piirrossa), toinen mustuu.
+
+Korjaushaarassa suojaava rivi on **avauksen** `valkaiseMateriaali(materiaali)`
+(satelliitti-avaruus.js 2156): väri on avauksen jälkeen `null`
+(kirjaston tekstuuripolku) ja pinta ehjä 12/12. Sulun
+`valkaiseMateriaali(materiaali, varinLahto)` palauttaa lähtöarvon —
+joka on mitatusti `0` eli musta (`varinLahto = getHex()` → 0, ja
+`0 ?? 0xffffff` on 0). Mitattu sulun jälkeen 0 / 50 / 200 / 1000 /
+2500 ms: `000000`. Tämä on harmiton, koska avaus valkaisee aina
+uudestaan, mutta koodin kommentti ("tai valkoiseksi, jos lähtöarvoa ei
+ollut") ei vastaa mitattua: lähtöarvo on olemassa ja se on musta. Jos
+sulun halutaan jättävän materiaalin turvalliseen tilaan (esim. pelin
+oman pallon tulevaa `globeImageUrl`-käyttöä varten), sulkuun kuuluu
+`valkaiseMateriaali(materiaali)` ilman lähtöarvoa. Ei este julkaisulle.
+
+### 7.3 savuke-astro-pallo (NAKYMAT=tyopoyta, Chromium 151, Mac)
+
+Korjaushaara: **62/63 läpi**, kaikki pilvisession uudet väitteet
+vihreitä — SAFARIN RAJAT (2539×1321: ladonta 4096×2048, pinta
+värillinen 88, vartija ei puutetta, 64 pistettä), KEHYKSET POIKKI
+(kehysvahti pakotti 20 kehystä, pisteet DOMiin, ei ilmoitusta), MUSTA
+PINTA (mittaus näkee 0 puskurista, varapolku `vari-valkoiseksi`
+palauttaa 100, ruudulla 62,7), KOLME AVAUSTA (kuvasta 86,6 / puskurista
+162 joka kerralla, väri avausten välissä `null`), VASTAKOKEET
+(pisteet 654 ms / 5 kehystä aktivoinnista, `pakotettuja=0`, WebKit-liput
+tunnistetaan).
+
+Ainoa punainen: **`kohdepiste on yhä klikattavissa (tyopoyta)`** —
+`ennen [], jälkeen []`, sama tulos kahdella ajolla (13.19 ja 13.25).
+Vastakoe v1929-pohjalla (13.32): **sama väite punainen samalla tavalla
+(40/41 läpi)**. Vika on siis Mac-Chromium-ympäristön ja tämän vanhan
+väitteen välinen (hiiren napautus hitaasti pyörivään pisteeseen
+`s.mouse.click` + 2,5 s), ei korjaushaaran regressio; Actionsin
+savukematriisissa väite on vihreä. Kirjaan, en korjaa.
+
+### 7.4 Johtopäätös: **julkaisukelpoinen**
+
+- Kohta 37 (musta pinta): korjattu — 0/12 mustaa oikealla WebKitillä
+  ja Chromiumilla, vastakoe 5/30 ja 16/16 samalla skriptillä ilman
+  korjausta. Vartija (`pinta-mittaus` puskurista) mittaa oikeaa asiaa.
+- Kohta 36 (pisteitä 0): ei toistu edelleenkään; `pistemittari`- ja
+  `kehykset`-rivit ovat paikallaan Codexin WebApp-uusintatestiä varten.
+- Kehysvahti ei laukea normaalissa WebKitissä (`pakotettu=0`), joten
+  se ei aiheuta ylimääräistä piirtoa terveellä laitteella.
+- Avoin pieni asia 7.2 (sulun väri) on kosmeettinen; Fable päättää,
+  otetaanko se samaan versioon.
+
+Kuvat: `astro-webkit-webkit-webapp-3-20260917-webkit2.jpg`,
+`astro-webkit-webkit-iphone-2-20260917-webkit2.jpg`,
+`astro-webkit-chromium-webapp-2-20260917-webkit2.jpg`,
+`astro-webkit-chromium-iphone-2-20260917-webkit2.jpg` (ne avaukset, jotka
+v1929:ssä olivat mustia — nyt maasto näkyy, loki `pinta-mittaus
+kirkkaus=150–161`); mittaukset `astro-webkit-mittaus-20260917-webkit2.json`.
+
+Kesto tehtävä 2: noin 30 min (matriisi 6 min, väriprobet 3 min,
+savuke-astro-pallo 2 × 6 min + vastakoe 4 min, raportti 5 min).
