@@ -614,6 +614,23 @@ export const MERKKIEN_SIIRTYMA_MS = 250;
  * PISTEJOUKON UUDELLEENKIRJOITUS EI SAA ANIMOIDA PAIKKOJA).
  */
 export const PISTEIDEN_SIIRTYMA_MS = 0;
+/*
+ * KAUPUNKILIUSKAN KAMERA-AJON VARAT (PAATOKSET 34 kohta 10).
+ * `LIUSKAN_YLAVARA_PX` on ilma, joka jätetään kaupunkimerkin ja
+ * ylälaidan kalusteen väliin; `YLAKALUSTEEN_RAJA` rajaa "ylälaidan
+ * kalusteiksi" ne, jotka ovat ruudun ylimmässä kolmanneksessa (pöllö
+ * ja toimintorivi ovat alalaidassa eivätkä rajoita nousua).
+ */
+const LIUSKAN_YLAVARA_PX = 18;
+const YLAKALUSTEEN_RAJA = 1 / 3;
+/*
+ * MISSÄ KAUPUNKIMERKKI ON RUUDULLA, KUN LIUSKA AUKEAA (PAATOKSET 34
+ * kohta 12: *"kartta voisi liikkua automaattisesti niin että oikealle
+ * puolelle tulis lisää tilaa"*). Osuus ruudun leveydestä: kolmannes
+ * jättää liuskalle kaksi kolmannesta oikealle ja pitää merkin silti
+ * selvästi kuvassa.
+ */
+const LIUSKAN_MERKIN_OSUUS_X = 1 / 3;
 /** Napautuksen osuma ruudulla: lähin kaupunki tai kohde tämän säteen sisällä (px). */
 export const NAPAUTUKSEN_SADE_PX = 44;
 
@@ -1808,6 +1825,67 @@ export async function avaaPallolauta(ui) {
   const nimet = luoNimet({
     ui, merkit, asteet: pallonAsteet, ruudulla, kotelo, pack,
   });
+  /*
+   * ══ RUUDUN KALUSTEET OVAT LISTAN KOVIA ESTEITÄ ══════════════════
+   * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34 kohta 5 ja PAATOKSET 32
+   * kohta 5; Fablen tarkistus 18.9.2026 kaappauksesta
+   * `pariisi-liuska-kategoria-390.png`: avattu Skandaalit-kategoria
+   * peitti PULUN ja kartan alalaidan Liiku-tekstin.)
+   *
+   * Kaupunkiliuska on kartan päällä kelluva lista, ja kartan päällä
+   * kelluu muutakin: pöllö/pulu nappeineen ja kuplineen, paikkarivin
+   * kartuutsi (*"Pariisi, lokakuussa 1873"*), yläpalkki ja alalaidan
+   * toimintorivin napit (Liiku, kirjanmerkki). Yksikään niistä ei ole
+   * piilotettavissa liuskan ajaksi — ne ovat pelin omaa käyttöliittymää
+   * — joten ne ovat KOVIA esteitä samalla painolla kuin kaupungin nimi
+   * ja pelinappula (js/pallolauta/nostot.js `kovat`).
+   *
+   * LISTA ON VALITSIMIA EIKÄ MITTOJA, ja mitat luetaan ajossa
+   * (getBoundingClientRect) — sama ratkaisu ja sama perustelu kuin
+   * js/ui.js SOVITUKSEN_KALUSTEET ja js/fokusmitat.js KALUSTEET.
+   * Kovakoodattu luku olisi väärin jo seuraavalla ruutukoolla.
+   */
+  const LIUSKAN_KALUSTEET = [
+    '.topbar',
+    '.fact-card',
+    '.fokus-kartuutsi',
+    '.fokus-jana',
+    // Napit eikä koko rivi: rivi on ruudun levyinen mutta läpinäkyvä
+    // (sama valinta kuin SOVITUKSEN_KALUSTEET-listalla).
+    '.toimintorivi button',
+    '.pollo-nappi',
+    '.pollo-kuplapino-kehys',
+    '.pollo-paneeli',
+  ];
+  /**
+   * Kalusteiden ruutulaatikot KOTELON pikseleinä (sama koordinaatisto
+   * kuin `merkit.laatikot('peli')`). Näkymätön tai nollakokoinen
+   * kaluste jätetään pois: piilossa oleva pöllöpaneeli ei varaa tilaa.
+   */
+  const ruudunKalusteet = () => {
+    const laatikot = [];
+    let r;
+    try { r = kotelo.getBoundingClientRect(); } catch { return laatikot; }
+    for (const valitsin of LIUSKAN_KALUSTEET) {
+      let solmut;
+      try { solmut = document.querySelectorAll(valitsin); } catch { continue; }
+      for (const el of solmut) {
+        if (!el || el.hidden) continue;
+        const k = el.getBoundingClientRect();
+        if (!(k.width > 0) || !(k.height > 0)) continue;
+        const x0 = k.left - r.left;
+        const y0 = k.top - r.top;
+        const x1 = k.right - r.left;
+        const y1 = k.bottom - r.top;
+        // Kotelon ULKOPUOLELLA oleva kaluste (ylapalkki) ei ole este.
+        if (x1 <= 0 || y1 <= 0 || x0 >= r.width || y0 >= r.height) continue;
+        laatikot.push({
+          x0, y0, x1, y1,
+        });
+      }
+    }
+    return laatikot;
+  };
   const nostot = luoNostot({
     ui,
     merkit,
@@ -1827,7 +1905,22 @@ export async function avaaPallolauta(ui) {
      * kuin nimiladonnan `pinot`-varaus — nappula ja kohteet kotelon
      * pikseleinä.
      */
-    esteet: () => merkit.laatikot('peli'),
+    esteet: () => [...merkit.laatikot('peli'), ...ruudunKalusteet()],
+    /*
+     * LAUDAN KAUPUNGIT NOSTOKERROKSELLE (Raamattu, PAATOKSET 34 TILA:
+     * *"liuska ripustetaan LAUDAN OMAAN KAUPUNKIMERKKIIN ... liuskalle
+     * luodaan ankkuri kaupungin koordinaatteihin nostokerrokseen"*).
+     *
+     * Nostokerros ei tunne laudan kaupunkeja — sen omat `kaupunki`-
+     * rivit ovat sisaltopakettien nakyvia kaupunkeja (Lille). Pariisi
+     * on laudan kaupunki, ja juuri siksi era 3:n mittaus loysi liuskan
+     * ripustuvan tyhjaan. Tasta kerros saa kaupungin pisteen: se
+     * laskee kaupungin sisaiset nostot (kohta 3) ja ripustaa liuskan.
+     */
+    laudanKaupungit: () => kaupungit.map((k) => ({
+      // Pallon kaupungin nimikentta on `n` (js/pallo.js pallonKaupungit).
+      id: k.id, nimi: k.n, lat: k.lat, lng: k.lon,
+    })),
     ankkuri,
     /*
      * VIUHKA ON UUSIA CSS2D-ELEMENTTEJÄ, JA NE SYNTYVÄT VASTA TOISESSA
@@ -2170,6 +2263,17 @@ export async function avaaPallolauta(ui) {
    * (doKehittajaSiirto). Muu kaupunki: kamera sukeltaa sen ylle, jotta
    * pelaaja voi katsoa laattoja. Lehti ei odota kameraa.
    */
+  /**
+   * SEN KAUPUNGIN TIEDOT, JONKA LIUSKA ON AUKI (PAATOKSET 34 kohta 1:
+   * liuska aukeaa jokaisesta kaupungista). Yläryhmän rivit avaavat
+   * juuri tämän kaupungin lehden, nähtävyydet ja oppaan — pelaajan
+   * oma kaupunki (`game.cityOf`) olisi väärä vastaus heti, kun liuska
+   * avattiin naapurista.
+   */
+  let liuskanKaupunki = null;
+  /** Liuskan "Liiku tänne" -rivin siirtovalinta tai null. */
+  let liuskanSiirto = null;
+
   const napautaKaupunki = (k) => {
     if (ui.dead || ui.busy || !k) return false;
     /*
@@ -2220,36 +2324,144 @@ export async function avaaPallolauta(ui) {
       ui.doKehittajaSiirto(city);
       return true;
     }
-    void kamera.ajaKamera({ x: city.x, y: city.y, leveys: kamera.kameranTila()?.leveys }, {});
-    if (oma && oma.id === city.id) {
+    {
       /*
-       * KAUPUNGIN NAPAUTUS AVAA ISON POP-UPIN (karttauudistus erä 4;
-       * omistaja 13.9.2026: *"Kaupunkia klikkaamalla pelaajalle avautuu
-       * isossa pop up ikkunassa Kaupunkilehden herokuvat ja
-       * esittelyteksti sekä nähtävyyskartta"*).
+       * ══ KAUPUNKIMERKKI AVAA LIUSKAN (Raamattu, KARTTAUUDISTUKSEN
+       * PAATOKSET 34 kohdat 1 ja 10) ═══════════════════════════════
        *
-       * ANKKURI ON MERKIN RUUTUPISTE, ei ruudun keskus (suunnitelman luku
-       * 3.3): kortti aukeaa sen kaupungin viereen, jota napautettiin, ja
-       * seuraa pistettään, kun pallo pysähtyy (ladoLevossa).
+       * JOKAINEN KAUPUNKI, EI VAIN PELAAJAN OMA (kohta 1). Muiden
+       * kaupunkien merkki avasi ennen suoraan siirron; se teko ei
+       * kadonnut vaan siirtyi liuskan riviksi "Liiku tänne"
+       * (js/pallolauta/kaupunkiliuska.js LIIKU_NIMIO), joka on
+       * olemassa vain silloin kun siirto on oikeasti tarjolla.
        *
-       * KORTTI ON TIIVISTETTY ETUSIVU (PAATOKSET 10, omistaja 14.9.2026):
-       * herokuvat → kohdekartta → leipätekstin ensimmäinen kappale →
-       * "Lue loppuun". Ei matkailuliitettä, ei alaosan navigointia, ei
-       * ennen/nyt-paria. Vanha `avaaKaupunkipopup` ja koko kaupunkilehti
-       * jäävät koskemattomina koodiin; lehti avataan fokusvirrasta.
+       * KAMERA AJAA ENSIN, LIUSKA AUKEAA VASTA SEN JÄLKEEN (kohta 10,
+       * omistaja: *"kartta voisi ajaa itsensa sellaiseen paikkaan
+       * missa nostot mahtuvat aukeamaan hyvin"*). Järjestys on pakko:
+       * liuskan lepotesti (js/pallolauta/nostot.js VIUHKAN_LEPO_PX)
+       * sulkisi ajon aikana avatun liuskan heti, koska merkin
+       * ruutupiste liikkuu ajon verran.
+       *
+       * AJO ON SAMA SUKELLUS KUIN ENNENKIN, ei omaa zoomia: kaupunki
+       * siirtyy ruudun keskeltä sille laidalle, josta liuskalle jää
+       * tilaa toiselle puolelle (viuhkanAsemat valitsee puolen kartan
+       * keskeltä poispäin). Zoomi jätetään koskematta, koska sukellus
+       * jo tuo kaupungin lähelle; jos sakko jää nollaa suuremmaksi,
+       * asemahaku siirtää listaa pystysuunnassa.
        */
-      if (Number.isFinite(k.lat) && Number.isFinite(k.lon)) {
-        avaaTiivisKaupunkietusivu(ui, city, { ankkuri: ankkuri(k.lat, k.lon) });
-      } else {
-        avaaTiivisKaupunkietusivu(ui, city);
-      }
+      const siirto = (game.phase === 'move' && !game.player?.isBot)
+        ? (game.moveOptions?.().find((opt) => opt.city?.id === city.id) ?? null)
+        : null;
+      void (async () => {
+        /*
+         * ══ KAMERA AJAA SEN VERRAN, ETTÄ SUURIN LIUSKA MAHTUU ══════
+         * (PAATOKSET 34 kohta 10, omistaja: *"kartta voisi ajaa
+         * itsensa sellaiseen paikkaan missa nostot mahtuvat aukeamaan
+         * hyvin"*; Fablen tarkistus 18.9.2026: avattu Skandaalit-
+         * kategoria peitti pulun ja alalaidan Liiku-tekstin.)
+         *
+         * ERÄ 6 JÄTTI AJON KOSKEMATTA ja kutisti rivivälin. Se ei
+         * riitä: kutistus loppuu tiheimpään väliin, ja sen jälkeen
+         * ainoa jäljellä oleva keino on kelaus — jonka päätös sanoo
+         * olevan VIIMEINEN. Oikea järjestys on siis päinvastainen:
+         * kamera nostaa merkkiä ruudulla ENNEN avausta, ja kelaus jää
+         * vasta sen varalle, ettei ruutu riitä sittenkään.
+         *
+         * MITTA TULEE KERROKSELTA (`liuskanTilantarve`): suurin
+         * kategoria avattuna, ei kiinni oleva lista — muuten kamera
+         * joutuisi ajamaan uudestaan haitaria avattaessa, ja ajo
+         * sulkisi juuri avatun liuskan (VIUHKAN_LEPO_PX).
+         *
+         * SIIRTO ON PYSTYSIIRTO LAUDAN YKSIKÖISSÄ: kameran keskipiste
+         * viedään kaupungin ALAPUOLELLE, jolloin kaupunki nousee
+         * ruudulla saman verran. Muunnos on kameran oma mittakaava
+         * (`kameranTila().skaala` = px / laudan yksikkö). Zoomiin ei
+         * kosketa (sukellus tuo kaupungin jo lähelle), ja ylärajana on
+         * kotelon yläkalusteiden alareuna — kaupunki ei saa nousta
+         * paikkarivin tai yläpalkin taakse.
+         */
+        const tila = kamera.kameranTila();
+        let maaliX = city.x;
+        let maaliY = city.y;
+        try {
+          const tarve = nostot.liuskanTilantarve?.({
+            id: city.id, nimi: city.name, liiku: Boolean(siirto),
+          });
+          const korkeus = kotelo.clientHeight || 0;
+          const leveysPx = kotelo.clientWidth || 0;
+          if (tarve?.korkeus > 0 && tila?.skaala > 0 && korkeus > 0 && leveysPx > 0) {
+            /*
+             * PYSTYSUUNTA: keskitetty lista mahtuu ylälaidan
+             * kalusteiden (yläpalkki, paikkarivi) ja alalaidan
+             * kalusteiden (pulu, toimintorivin Liiku ja kirjanmerkki)
+             * VÄLIIN. Merkki on listan keskipiste, joten se viedään
+             * vapaan kaistan keskelle — ja jos kaista on listaa
+             * suurempi, merkki saa jäädä siihen, missä se jo on.
+             */
+            const kalusteet = ruudunKalusteet();
+            const ylaRaja = Math.max(
+              LIUSKAN_YLAVARA_PX,
+              ...kalusteet.filter((k) => k.y0 < korkeus * YLAKALUSTEEN_RAJA)
+                .map((k) => k.y1 + LIUSKAN_YLAVARA_PX),
+            );
+            const alaRaja = Math.min(
+              korkeus - LIUSKAN_YLAVARA_PX,
+              ...kalusteet.filter((k) => k.y1 > korkeus * (1 - YLAKALUSTEEN_RAJA))
+                .map((k) => k.y0 - LIUSKAN_YLAVARA_PX),
+            );
+            const puolikas = tarve.korkeus / 2;
+            const kaista = alaRaja - ylaRaja;
+            const haluttuY = kaista >= tarve.korkeus
+              ? Math.min(Math.max(korkeus / 2, ylaRaja + puolikas), alaRaja - puolikas)
+              : (ylaRaja + alaRaja) / 2;
+            const nosto = (korkeus / 2) - haluttuY;
+            if (Math.abs(nosto) > 1) maaliY = city.y + nosto / tila.skaala;
+            /*
+             * VAAKASUUNTA: *"oikealle puolelle tulis lisää tilaa"*.
+             * Merkki viedään keskilinjan VASEMMALLE puolelle, jolloin
+             * `viuhkanAsemat` valitsee listan puolen itsestään
+             * (oletuspuoli on kartan keskeltä poispäin) ja liuskalle
+             * jää leveyttä oikealle. Osuus on ruudun leveydestä, joten
+             * sama sääntö pätee puhelimella ja työpöydällä.
+             */
+            const haluttuX = leveysPx * LIUSKAN_MERKIN_OSUUS_X;
+            const sivuun = (leveysPx / 2) - haluttuX;
+            if (sivuun > 1) maaliX = city.x + sivuun / tila.skaala;
+          }
+        } catch { /* ilman mittaa ajo on entinen keskitys */ }
+        await kamera.ajaKamera(
+          { x: maaliX, y: maaliY, leveys: kamera.kameranTila()?.leveys }, {},
+        );
+        // Ladonta ajon jälkeen: liuska ripustetaan merkin UUTEEN
+        // ruutupisteeseen, jolloin lepotesti vertaa oikeaan lukuun.
+        ladoLevossa?.();
+        const avautui = Number.isFinite(k.lat) && Number.isFinite(k.lon)
+          && nostot.avaaLiuskaKaupungista?.(k.lat, k.lon, {
+            liiku: Boolean(siirto),
+            // Nimi erottaa laudan kaupungin nostokerroksen naapurista
+            // (ks. KAKSI LAHDETTA, YKSI POLKU, nostot.js); tunnus on
+            // ankkuririvin avain, joten sen on oltava sama kuin
+            // `laudanKaupungit`in antama.
+            nimi: city.name,
+            id: city.id,
+          });
+        if (avautui) {
+          // Liuskan yläryhmä koskee SITÄ kaupunkia, jonka merkistä se
+          // aukesi — ei pelaajan omaa (ks. napautaPintaan).
+          liuskanKaupunki = city;
+          liuskanSiirto = siirto;
+        } else if (siirto) {
+          // Varapolku: kaupunkirivi ei ole ruudulla (pallon takana),
+          // jolloin siirto tehdään suoraan kuten ennen liuskaa.
+          ui.doMove(siirto.key);
+        } else if (oma && oma.id === city.id) {
+          // Sama varapolku omalle kaupungille: vanha tiivis etusivu.
+          avaaTiivisKaupunkietusivu(ui, city);
+        }
+        heraa();
+      })();
       return true;
     }
-    if (game.phase === 'move' && !game.player?.isBot) {
-      const kohde = game.moveOptions?.().find((opt) => opt.city?.id === city.id);
-      if (kohde) { ui.doMove(kohde.key); return true; }
-    }
-    return true;
   };
 
   /**
@@ -2866,6 +3078,46 @@ export async function avaaPallolauta(ui) {
      * toisen aihemerkin viuhkan keskellä linssiä. Sama piilotettu
      * osumalaatikko, joka kaatoi v1789:n ja v1794:n.
      */
+    /*
+     * AUKI OLEVA KAUPUNKILIUSKA (PAATOKSET 34 kohta 1): rivi ensin,
+     * muuten kartan napautus sulkee liuskan. Yläryhmän rivit avaavat
+     * kaupunkilehden, nähtävyydet ja oppaan — ne ovat laudan asioita,
+     * joten kerros palauttaa vain rivin lajin.
+     */
+    if (nostot.liuskaAuki?.()) {
+      const kohta = tuoreNapautuskohta()
+        ?? (Number.isFinite(lat) ? pallo.getScreenCoords(lat, lng, 0) : null);
+      const osui = kohta ? nostot.napautaLiuskasta(kohta) : null;
+      if (osui) {
+        heraa();
+        const city = liuskanKaupunki ?? ui.game.cityOf?.();
+        if (osui.laji === 'liiku') {
+          const avain = liuskanSiirto?.key;
+          liuskanKaupunki = null;
+          liuskanSiirto = null;
+          if (avain) ui.doMove(avain);
+          return;
+        }
+        if (city && osui.laji === 'lehti') ui.avaaTutkinta?.(city);
+        else if (city && osui.laji === 'nahtavyydet') {
+          /*
+           * "Nähtävyydet" on ENTINEN kaupunkipopupin kohdekartta
+           * (PAATOKSET 34 kohta 8, nimi js/nahtavyydet.js). Tässä
+           * erässä se avataan tiiviinä etusivuna, jossa kohdekartta
+           * on — oma pelkkä karttakortti on seuraavan erän työ, ja
+           * puolivalmis oma kortti veisi kohteet kokonaan pois.
+           */
+          avaaTiivisKaupunkietusivu(ui, city);
+        }
+        else if (city && osui.laji === 'opas') avaaTuristiOpas(ui, city);
+        return;
+      }
+      heraa();
+      nostot.suljeLiuska();
+      liuskanKaupunki = null;
+      liuskanSiirto = null;
+      return;
+    }
     if (nostot.viuhkaAuki()) {
       // Viuhkan oma kohta ensin: se on ruutulaatikko, ei pallon piste.
       if (viuhkanNapautus(lat, lng)) return;
@@ -3212,6 +3464,13 @@ export async function avaaPallolauta(ui) {
 
   /* ---- turisti-info kaupungin vieressä (erä 4) ---------------------- */
   /**
+   * ONKO TURISTI-INFON KYLTTI KARTALLA. Epätosi PAATOKSET 34 kohdasta 8
+   * alkaen: opas on kaupunkiliuskan rivi. Vakio on nimetty eikä
+   * poistettu, jotta sammutuksen syy näkyy siinä kohdassa, jossa
+   * kyltti ennen syntyi.
+   */
+  const KYLTTI_KARTALLA = false;
+  /**
    * TURISTI-INFON MERKKI (omistaja 13.9.2026: *"Kaupungin viereen
    * kartalle tulee oma 'turisti info' merkki ja teksti ja sitä
    * klikkaamalla avautuu pelkkä nykyisen lehden tursti ja matkustusopas
@@ -3285,6 +3544,21 @@ export async function avaaPallolauta(ui) {
    */
   const paivitaTuristiInfo = (kiinteaMuste = [], omaMuste = []) => {
     const tyhjaa = () => { merkit.aseta('turistiinfo', []); return []; };
+    /*
+     * ══ KYLTTI EI OLE ENÄÄ KARTALLA (Raamattu, KARTTAUUDISTUKSEN
+     * PAATOKSET 34 kohta 8) ════════════════════════════════════════
+     *
+     * Opas avataan kaupunkiliuskan "Turistiopas"-riviltä
+     * (js/pallolauta/kaupunkiliuska.js TURISTIOPPAAN_NIMIO), joten
+     * kartalla kyltti olisi sama asia kahdesti — ja juuri se kilpaili
+     * sormesta kaupungin ja nostojen kanssa (ks. lahinMerkki).
+     *
+     * ASENTOKONE JÄTETÄÄN PAIKALLEEN mutta sammutetaan tähän yhteen
+     * porttiin: sen mitattu asentojärjestys (KYLTIN_LADONTA,
+     * js/kaupunkinosto.js) on kallis tieto, ja koneen purku koskisi
+     * osumakilpailua, jota tämä erä ei mittaa. Purku on oma eränsä.
+     */
+    if (!KYLTTI_KARTALLA) return tyhjaa();
     if (linssiPaalla() || lento || aloitusNakyvat()) return tyhjaa();
     const city = ui.game.cityOf?.();
     if (!city || !kaupunginMatkailijalle(city.id)) return tyhjaa();

@@ -653,6 +653,39 @@ function kohdeKaupunkikartanNostot() {
   return kohdeKarttalinkit;
 }
 
+/*
+ * NOSTON OMA DATAPAIKKA KAUPUNKIKARTALTA (PAATOKSET 34 kohta 4).
+ *
+ * Kartalle LADOTTU piste ei ole noston paikka: kaupungin rykelmä
+ * ladotaan 0–8 laudan yksikön päähän kaupungista (ks. KAUPUNKIKATON
+ * SÄDE yllä), ja pallon ankkurilevitys (PAATOKSET 32) siirtää merkkiä
+ * vielä lisää — Pariisissa yhteensä 20–47 km. Päätöksen raja on
+ * kuitenkin *"noston OMA paikka"*, ja se on kirjoitettu tähän:
+ * kaupunkilehden kohdekartan piste kantaa noston oikeat asteet ja
+ * `nosto`-linkin siihen nostoon, jota se esittää.
+ *
+ * Sama taulu kuin `kohdeKaupunkikartanNostot`, mutta asteineen —
+ * kaksi lukua samasta rivistä, ei uutta lähdettä.
+ */
+let kohdeKarttapaikat = null;
+
+/** Nostotunnus → { kaupunki, lat, lng } kaupunkilehden kohdekartalta. */
+export function kohdekartanNostopaikat() {
+  if (kohdeKarttapaikat) return kohdeKarttapaikat;
+  kohdeKarttapaikat = new Map();
+  for (const [kaupunki, kartta] of Object.entries(KAUPUNKIKARTAT)) {
+    for (const piste of kartta.kohteet ?? []) {
+      if (!piste.nosto) continue;
+      if (!Number.isFinite(piste.lat) || !Number.isFinite(piste.lon)) continue;
+      const tunnukset = Array.isArray(piste.nosto) ? piste.nosto : [piste.nosto];
+      for (const tunnus of tunnukset) {
+        kohdeKarttapaikat.set(tunnus, { kaupunki, lat: piste.lat, lng: piste.lon });
+      }
+    }
+  }
+  return kohdeKarttapaikat;
+}
+
 /**
  * POIS PÄÄKARTALTA NE, JOILLA ON PAIKKA KAUPUNKILEHDEN KARTALLA.
  *

@@ -250,7 +250,11 @@ const SHELL = [
   // Saman aiheen nostot yhdeksi merkiksi ja viuhka napautuksesta
   // (PAATOKSET 27): nostot.js:n oma alimoduuli, samaa polkua kuin muu
   // pallolauta eikä yhden tiedoston niputuksessa.
+  './js/kaupunkiliuska-nimiot.js',
   './js/pallolauta/aihemerkit.js',
+  // Kaupunkiliuskan malli (PAATOKSET 34): kaupungin sisäisyyden raja ja
+  // liuskan rivit; js/nahtavyydet.js lukee siitä myös otsikkonimen.
+  './js/pallolauta/kaupunkiliuska.js',
   // Nostojen kiinteät kartta-ankkurit ja levitys (PAATOKSET 32).
   './js/pallolauta/nostoankkurit.js',
   './js/pallolauta/nostot.js',
