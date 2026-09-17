@@ -1565,13 +1565,8 @@ for (const ruutu of RUUDUT) {
    * -korttina (`.fokusnosto-kerros`), jolla ei ole `fokuskohdeAuki`-
    * tunnusta lainkaan (ks. avoinNosto).
    */
-  vaadi(`4b. ${ruutu.nimi}: aihemerkin viuhka avautuu ja sen kohta avaa kortin`,
-    Boolean(viuhkaTulos) && viuhkaTulos.kohdat.length === viuhkaTulos.ryhma.maara
-      && Boolean(viuhkaTulos.kortti),
-    viuhkaTulos
-      ? `kohtia ${viuhkaTulos.kohdat.length} / ${viuhkaTulos.ryhma.maara}, `
-        + `kortti ${viuhkaTulos.kortti ?? '-'} (kohta ${viuhkaTulos.kohdat[0]?.id ?? '-'})`
-      : 'aihemerkkejä ei ollut (ks. vartio 3b)');
+  tieto(`4b. ${ruutu.nimi}: VANHENTUNUT VARTIO`,
+    'aihemerkit poistuivat kaupungin sisalta — korvaaja on liuskan vartio 8 (PAATOKSET 34; sarjat.json ennallaan)');
 
   /*
    * 4c. VIUHKA ON SIISTI LISTA (PAATOKSET 32 kohta 3, omistaja
@@ -1591,6 +1586,208 @@ for (const ruutu of RUUDUT) {
         + `, reunan yli: ${viuhkaTulos.lista.reunanYli.join(', ') || 'ei'}`
         + `, listan alle piilotettuja: ${viuhkaTulos.lista.piilotetut?.length ?? 0}`
       : 'listaa ei mitattu (ks. vartio 4b)');
+
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * 8. KAUPUNKILIUSKA (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34)
+   * ══════════════════════════════════════════════════════════════
+   *
+   * Korvaa vartiot 4b ja 7d/7f/7g/7h/7i, jotka lukitsivat poistuneen
+   * käyttöliittymän (aihemerkit kaupungin sisällä, turisti-infon
+   * kyltti kartalla). Väitteet ovat päätöksen omat:
+   *   8a. kaupungin sisäisiä nostomerkkejä kartalla 0 — kolmella
+   *       zoomilla, koska raja on maantieteellinen eikä ruudun (k. 4);
+   *   8b. Versailles, Chartres ja Chambord OVAT kartalla (k. 4);
+   *   8c. kaupunkimerkin napautus ajaa kameran < 600 ms ja avaa
+   *       liuskan (k. 1 ja 10);
+   *   8d. liuska on kokonaan ruudussa eikä kaupungin nimen tai
+   *       pelinappulan päällä (k. 10);
+   *   8e. yläryhmä on 3 riviä (k. 8);
+   *   8f. kategorioita ≥ 2 ja lukumäärien summa = sisäisten nostojen
+   *       määrä (k. 5-7) — sama luku kuin 8a:n suodatus pudotti;
+   *   8g. kategorian avaus näyttää kohteet, toisen avaus sulkee
+   *       edellisen (haitari, k. 8);
+   *   8h. kohteen napautus avaa kortin ja liuska sulkeutuu (k. 1).
+   */
+  const kaupunginSisaiset = () => sivu.evaluate(async () => {
+    const k = await import('/js/pallolauta/kaupunkiliuska.js');
+    const n = window.matkakirja.ui.pallolauta.nostot;
+    const osumat = n.osumat?.() ?? [];
+    const city = osumat.find((o) => o.kaupunki);
+    if (!city) return null;
+    const nakyvat = new Set([...document.querySelectorAll('.pallolauta-nosto')]
+      .filter((el) => el.getBoundingClientRect().width > 0
+        && getComputedStyle(el).visibility !== 'hidden')
+      .map((el) => el.dataset.nosto));
+    const sisalla = (o) => k.onKaupunginSisainen(
+      { lat: o.lat, lng: o.lng }, { lat: city.lat, lng: city.lng },
+    );
+    return {
+      kaupunki: city.id,
+      kartalla: osumat.filter((o) => !o.kaupunki && nakyvat.has(o.id) && sisalla(o))
+        .map((o) => o.id),
+      kaikki: osumat.filter((o) => !o.kaupunki && sisalla(o)).length,
+    };
+  });
+
+  /* 8a. Kolme zoomia: lähizoomi ja kaksi uloimpaa porrasta. */
+  const sisaisetZoomeilla = [];
+  for (const porras of [LAHIZOOMIN_TAVOITE, 0.5, 0.7]) {
+    /* eslint-disable no-await-in-loop */
+    await zoomaaPariisiin(sivu, [porras]);
+    await sivu.waitForTimeout(900);
+    const tulos = await kaupunginSisaiset();
+    /* eslint-enable no-await-in-loop */
+    sisaisetZoomeilla.push({ porras, tulos });
+    tieto(`${ruutu.nimi} · liuska zoom ${porras}`,
+      tulos ? `sisäisiä kartalla ${tulos.kartalla.length} (kaikkiaan ${tulos.kaikki})`
+        : 'kaupunkiriviä ei ollut');
+  }
+  vaadi(`8a. ${ruutu.nimi}: kaupungin sisäisiä nostomerkkejä kartalla 0 (3 zoomia)`,
+    sisaisetZoomeilla.every((z) => z.tulos && z.tulos.kartalla.length === 0),
+    sisaisetZoomeilla.map((z) => `${z.porras}: ${z.tulos?.kartalla.join(', ') ?? '—'}`).join(' | '));
+  // Takaisin lähizoomiin: loput vartiot mittaavat sen näkymän.
+  await zoomaaPariisiin(sivu, ZOOMIPORTAAT);
+  await sivu.waitForTimeout(900);
+
+  /* 8b. Ankkuroidut mutta ULKOPUOLISET kohteet pysyvät kartalla. */
+  const ulkonaTeksti = await sivu.evaluate(
+    () => [...document.querySelectorAll('.pallolauta-nosto')]
+      .filter((el) => el.getBoundingClientRect().width > 0)
+      .map((el) => `${el.dataset.nimio ?? ''} ${el.dataset.nosto ?? ''}`).join(' | '),
+  );
+  const LAHIKOHTEET = ['Versailles', 'Chartres', 'Chambord'];
+  const loytyi = LAHIKOHTEET.filter((nimi) => new RegExp(nimi, 'iu').test(ulkonaTeksti));
+  vaadi(`8b. ${ruutu.nimi}: Versailles, Chartres ja Chambord ovat kartalla`,
+    loytyi.length === LAHIKOHTEET.length,
+    `löytyi ${loytyi.join(', ') || 'ei yhtään'}`);
+
+  /* 8c-8h: liuska auki kaupunkimerkin napautuksesta. */
+  await suljeKortti(sivu);
+  await sivu.waitForTimeout(300);
+  const liuskanKaupunkiId = await sivu.evaluate(
+    () => (window.matkakirja.ui.pallolauta.nostot.osumat?.() ?? [])
+      .find((o) => o.kaupunki)?.id ?? null,
+  );
+  const kPiste = liuskanKaupunkiId
+    ? await odotaAsettunut(sivu, () => merkinPiste(sivu, liuskanKaupunkiId)) : null;
+  let liuskaTulos = null;
+  if (kPiste) {
+    const alku = Date.now();
+    await napauta(sivu, nurkka.x + kPiste.x, nurkka.y + kPiste.y);
+    let kesto = null;
+    for (let i = 0; i < 40; i += 1) {
+      /* eslint-disable no-await-in-loop */
+      const auki = await sivu.evaluate(
+        () => window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null,
+      );
+      if (auki) { kesto = Date.now() - alku; break; }
+      await sivu.waitForTimeout(50);
+      /* eslint-enable no-await-in-loop */
+    }
+    await sivu.waitForTimeout(400);
+    const mitta = await sivu.evaluate(() => {
+      const l = window.matkakirja.ui.pallolauta;
+      const r = l.pallo.renderer().domElement.getBoundingClientRect();
+      const laatikko = (el) => {
+        const b = el.getBoundingClientRect();
+        return {
+          x0: b.left - r.left, y0: b.top - r.top, x1: b.right - r.left, y1: b.bottom - r.top,
+        };
+      };
+      return {
+        ruutu: { leveys: r.width, korkeus: r.height },
+        rivit: l.nostot.liuskanRivit?.() ?? [],
+        nimet: [...document.querySelectorAll('.pallolauta-nimi')].map(laatikko),
+        nappulat: [...document.querySelectorAll('.pallolauta-nappula')].map(laatikko),
+      };
+    });
+    liuskaTulos = { kesto, mitta };
+  }
+  await kaappaa(sivu, `pariisi-liuska-auki-${ruutu.w}.png`);
+  const lRivit = liuskaTulos?.mitta?.rivit ?? [];
+  tieto(`${ruutu.nimi} · liuska`,
+    lRivit.length
+      ? `${lRivit.length} riviä: ${lRivit.map((r) => r.nimi).join(' / ')} `
+        + `(ajo ${liuskaTulos.kesto} ms)`
+      : 'liuska ei auennut');
+  vaadi(`8c. ${ruutu.nimi}: kaupunkimerkin napautus ajaa kameran < 600 ms ja avaa liuskan`,
+    Boolean(lRivit.length) && Number.isFinite(liuskaTulos?.kesto) && liuskaTulos.kesto < 600,
+    `ajo ${liuskaTulos?.kesto ?? '—'} ms, rivejä ${lRivit.length}`);
+  const liuskaYli = lRivit.filter((b) => b.x0 < 0 || b.y0 < 0
+    || b.x1 > (liuskaTulos?.mitta.ruutu.leveys ?? 0)
+    || b.y1 > (liuskaTulos?.mitta.ruutu.korkeus ?? 0)).map((b) => b.nimi);
+  const liuskaPaalla = [];
+  for (const r of lRivit) {
+    for (const nimi of liuskaTulos.mitta.nimet) {
+      if (limittyy(r, nimi)) liuskaPaalla.push(`${r.nimi} × kaupungin nimi`);
+    }
+    for (const nappula of liuskaTulos.mitta.nappulat) {
+      if (limittyy(r, nappula)) liuskaPaalla.push(`${r.nimi} × nappula`);
+    }
+  }
+  vaadi(`8d. ${ruutu.nimi}: liuska on kokonaan ruudussa eikä nimen tai nappulan päällä`,
+    Boolean(lRivit.length) && liuskaYli.length === 0 && liuskaPaalla.length === 0,
+    `reunan yli: ${liuskaYli.join(', ') || 'ei'}, `
+    + `musteen päällä: ${liuskaPaalla.join(', ') || 'ei'}`);
+  const ylaryhma = lRivit.filter((r) => ['lehti', 'nahtavyydet', 'opas'].includes(r.laji));
+  vaadi(`8e. ${ruutu.nimi}: liuskan yläryhmä on 3 riviä`,
+    ylaryhma.length === 3,
+    `rivejä ${ylaryhma.length}: ${ylaryhma.map((r) => r.nimi).join(', ') || '—'}`);
+  const katRivit = lRivit.filter((r) => r.laji === 'kategoria');
+  const summa = katRivit.reduce((a, r) => a + (r.maara ?? 0), 0);
+  const sisaisia = sisaisetZoomeilla[0]?.tulos?.kaikki ?? -1;
+  vaadi(`8f. ${ruutu.nimi}: kategorioita ≥ 2 ja summa = kaupungin sisäisten nostojen määrä`,
+    katRivit.length >= 2 && summa === sisaisia,
+    `kategorioita ${katRivit.length}, summa ${summa}, sisäisiä ${sisaisia}`);
+
+  /* 8g. Haitari: ensimmäisen avaus näyttää kohteet, toisen sulkee sen. */
+  const napautaLiuskanRivi = async (rivi) => {
+    if (!rivi) return null;
+    await napauta(sivu, nurkka.x + (rivi.x0 + rivi.x1) / 2, nurkka.y + (rivi.y0 + rivi.y1) / 2);
+    await sivu.waitForTimeout(500);
+    return sivu.evaluate(() => ({
+      kategoria: window.matkakirja.ui.pallolauta.nostot.liuskanKategoria?.() ?? null,
+      rivit: window.matkakirja.ui.pallolauta.nostot.liuskanRivit?.() ?? [],
+    }));
+  };
+  const auki1 = await napautaLiuskanRivi(katRivit[0]);
+  const kohteita1 = (auki1?.rivit ?? []).filter((r) => r.laji === 'kohde');
+  const toinenKat = (auki1?.rivit ?? []).filter((r) => r.laji === 'kategoria')[1];
+  const auki2 = await napautaLiuskanRivi(toinenKat);
+  const kohteita2 = (auki2?.rivit ?? []).filter((r) => r.laji === 'kohde');
+  await kaappaa(sivu, `pariisi-liuska-kategoria-${ruutu.w}.png`);
+  tieto(`${ruutu.nimi} · liuskan haitari`,
+    `1. avaus ${auki1?.kategoria ?? '—'} → kohteita ${kohteita1.length}; `
+    + `2. avaus ${auki2?.kategoria ?? '—'} → kohteita ${kohteita2.length}`);
+  vaadi(`8g. ${ruutu.nimi}: kategorian avaus näyttää kohteet, toisen avaus sulkee edellisen`,
+    kohteita1.length === (katRivit[0]?.maara ?? -1)
+      && Boolean(auki2?.kategoria) && auki2.kategoria !== auki1?.kategoria
+      && kohteita2.length === (toinenKat?.maara ?? -1)
+      && kohteita2.every((r) => r.aihe === auki2.kategoria),
+    `1: ${kohteita1.length}/${katRivit[0]?.maara ?? '—'}, `
+    + `2: ${kohteita2.length}/${toinenKat?.maara ?? '—'}`);
+
+  /* 8h. Kohteen napautus avaa kortin, ja liuska sulkeutuu sen mukana. */
+  const liuskanKohde = kohteita2[0] ?? kohteita1[0] ?? null;
+  let liuskanKortti = null;
+  if (liuskanKohde) {
+    await napauta(sivu,
+      nurkka.x + (liuskanKohde.x0 + liuskanKohde.x1) / 2,
+      nurkka.y + (liuskanKohde.y0 + liuskanKohde.y1) / 2);
+    await sivu.waitForTimeout(800);
+    liuskanKortti = await avoinNosto(sivu);
+  }
+  const liuskaKiinni = await sivu.evaluate(
+    () => (window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null) === null,
+  );
+  vaadi(`8h. ${ruutu.nimi}: liuskan kohde avaa kortin ja liuska sulkeutuu`,
+    Boolean(liuskanKohde) && Boolean(liuskanKortti) && liuskaKiinni,
+    `kohde ${liuskanKohde?.nimi ?? '—'}, kortti ${liuskanKortti ?? '-'}, `
+    + `liuska kiinni: ${liuskaKiinni}`);
+  await suljeKortti(sivu);
+  await sivu.waitForTimeout(400);
+
 
   /*
    * ══════════════════════════════════════════════════════════════
@@ -1683,9 +1880,8 @@ for (const ruutu of RUUDUT) {
         ? `avasi oppaan (${ilmanSaantoaOpas})`
         : `auki sen sijaan: ${ilmanSaantoa ?? 'ei mitään'}`)
       : 'ei mitattu');
-  vaadi(`7g. VASTAKOE ${ruutu.nimi}: ilman erän sääntöjä sama napautus EI avaa turisti-infoa`,
-    Boolean(tPiste) && !opasEste && !ilmanSaantoaOpas,
-    `ilman sääntöjä aukesi: ${ilmanSaantoaOpas ?? ilmanSaantoa ?? 'ei mitään'}`);
+  tieto(`7g. ${ruutu.nimi}: VANHENTUNUT VARTIO`,
+    'turisti-infon kyltti ei ole enaa kartalla (PAATOKSET 34; sarjat.json ennallaan)');
   /*
    * ── 7e. KYLTIN LAATIKKO ON VAPAA (omistaja 17.9.2026, PAATOKSET 31
    *    TARKENNUS 2 kohta 6) ───────────────────────────────────────────
@@ -1748,11 +1944,8 @@ for (const ruutu of RUUDUT) {
    * lukua, sama kummallakin ruudulla — juuri se, mitä kortti pyysi.
    */
   const saapumisenNimio = tSaapuen ? tSaapuen.mitta * NOSTOSYM_NIMIO_KOKO : 0;
-  vaadi(`7f. ${ruutu.nimi}: kyltti skaalautuu kuin muut merkit `
-    + `(saapuessa ${KYLTIN_SAAPUMISNIMIO_PX} px, lähizoomissa ${NIMION_KATTO_PX} px)`,
-    Math.abs(saapumisenNimio - KYLTIN_SAAPUMISNIMIO_PX) <= KATON_VARA_PX
-      && Math.abs(turistiNimio - NIMION_KATTO_PX) <= KATON_VARA_PX,
-    `saapuessa ${p(saapumisenNimio)} px, lähizoomissa ${p(turistiNimio)} px`);
+  tieto(`7f. ${ruutu.nimi}: VANHENTUNUT VARTIO`,
+    'turisti-infon kyltti ei ole enaa kartalla (PAATOKSET 34; sarjat.json ennallaan)');
 
   /*
    * 7d. VASTAKOE: KATTO POIS KESKEN AJON (`?nimiokatto=0`,
@@ -1783,10 +1976,8 @@ for (const ruutu of RUUDUT) {
       ? `nimiö ${p(turistiIlmanKattoa)} px, leveys ${p(tIlman.x1 - tIlman.x0)} px, `
         + `laidan yli ${tIlmanYli ? 'kyllä' : 'ei'}`
       : 'kylttiä ei ollut kartalla');
-  vaadi(`7d. VASTAKOE ${ruutu.nimi}: ilman kattoa turisti-infon nimiö olisi `
-    + `> ${TURISTIN_VASTAKOKEEN_RAJA_PX} px`,
-    turistiIlmanKattoa > TURISTIN_VASTAKOKEEN_RAJA_PX,
-    `${p(turistiIlmanKattoa)} px — kamera ei ilmeisesti zoomannut (kerroin ${p(kerroin, 3)})`);
+  tieto(`7d. ${ruutu.nimi}: VANHENTUNUT VARTIO`,
+    'turisti-infon kyltti ei ole enaa kartalla (PAATOKSET 34; sarjat.json ennallaan)');
   // Lippu pois: kuva ja mahdolliset myöhemmät mittaukset ovat korjatusta
   // laudasta, eivät vastakokeesta.
   await sivu.evaluate(() => {
@@ -1820,13 +2011,8 @@ for (const ruutu of RUUDUT) {
         + `lappuja kyltin piirroksen päällä ${pistePaalla.length}`
         + (pistePaalla.length ? ` — ${pistePaalla.map((r) => r.nimi).join(', ')}` : '')
       : 'ei varausta');
-  vaadi(`7h. VASTAKOE ${ruutu.nimi}: ilman erän sääntöjä kyltin varaus on piste `
-    + 'ja ladonta latoo sen päälle',
-    Boolean(pv) && pv.x1 - pv.x0 <= 2 && pistePaalla.length > 0,
-    pv
-      ? `varaus ${p(pv.x1 - pv.x0)} × ${p(pv.y1 - pv.y0)} px, `
-        + `lappuja kyltin päällä ${pistePaalla.length}`
-      : 'kyltillä ei ollut varausta lainkaan');
+  tieto(`7h. ${ruutu.nimi}: VANHENTUNUT VARTIO`,
+    'turisti-infon kyltti ei ole enaa kartalla (PAATOKSET 34; sarjat.json ennallaan)');
   await lippuun('kylttilaatikko', null);
   await sivu.waitForTimeout(900);
   /*
@@ -1860,11 +2046,8 @@ for (const ruutu of RUUDUT) {
    */
   const siirtyi = Boolean(varaus) && Boolean(isVaraus)
     && (Math.abs(varaus.x0 - isVaraus.x0) > 2 || Math.abs(varaus.y0 - isVaraus.y0) > 2);
-  vaadi(`7i. VASTAKOE ${ruutu.nimi}: ilman sääntöä kyltti jää oletuspaikkaansa`,
-    siirtyi,
-    isVaraus && varaus
-      ? `säännön kanssa ${p(varaus.x0)},${p(varaus.y0)}, ilman ${p(isVaraus.x0)},${p(isVaraus.y0)}`
-      : 'varaus puuttui');
+  tieto(`7i. ${ruutu.nimi}: VANHENTUNUT VARTIO`,
+    'turisti-infon kyltti ei ole enaa kartalla (PAATOKSET 34; sarjat.json ennallaan)');
   await lippuun('kylttisiirto', null);
   await sivu.waitForTimeout(900);
 
