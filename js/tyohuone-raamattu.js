@@ -4403,7 +4403,16 @@ export const RAAMATTU = {
           + 'paastiin ja loput uudeksi eraksi; 10) yksi omistajan paatos = '
           + 'yksi era = yksi PR, ei niputusta; seuraava julkaisu-PR '
           + 'valmistellaan heti edellisen haaran paalle odottamatta mergea. '
-          + 'Tila: voimassa.',
+          + 'Tila: voimassa. TARKENNUS 5 (omistaja 17.9.2026 klo 15.25 Suomen '
+          + 'aikaa, sanatarkasti: "Tee automaattisesti, kun molemmat versiot '
+          + 'ovat mainissa."): 11) FABLE SIIRTYY MAC STUDIOLLE: kun v1930 ja '
+          + 'v1931 ovat mainissa, pilvi-Fable kirjoittaa luovutusraportin '
+          + '(docs/raportit/viesti-fable-luovutus-<pvm>.md) ja omistaja '
+          + 'kaynnistaa uuden Fable-session Macilla Remote Controlilla '
+          + '(claude --model claude-fable-5-1); agentit ajavat silloin '
+          + 'Macilla (nopeat savukkeet, WebKit), rinnakkain enintaan kolme; '
+          + 'ohjaus kannykalla sailyy; Actions-savukkeet PR:ssa sailyvat '
+          + 'porttina. Tila: odottaa v1930/v1931-mergea.',
           + 'savukkeet.yml + tools/savukkeet/sarjat.json, 12 savuketta '
           + 'rinnakkain 12 min, portti kaataa jobin vain UUSISTA punaisista, '
           + 'tunnetut punaiset sarjat.jsonissa perusteluineen; ajaa joka '
