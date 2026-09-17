@@ -259,8 +259,25 @@ async function haePala({ lon0, lat0, lon1, lat1 }) {
   if (lat.length > 1 && lat[lat.length - 1] < lat[0]) {
     throw new Error('lat on laskeva — NCSS:n ruudukon suunta muuttui');
   }
+  /*
+   * PITUUSASTE NORMALISOIDAAN −180…180:een.
+   *
+   * Mitattu 18.9.2026: NCSS palautti laatasta N45E015 pyydetylle
+   * ikkunalle 15…17 °E pituusasteet 375…377. Se on sama meridiaani
+   * (375 − 360 = 15), mutta hilaindeksinä se on maailman toisella
+   * puolella — ja ainoa oire oli 86 918 sarakkeen levyinen liimattu
+   * ruudukko ja 154 Mt muistia yhdestä 512 px:n laatasta. Yksi
+   * vähennyslasku tässä, eikä kutsujan tarvitse tietää asiasta.
+   */
+  const lonN = new Float64Array(lon.length);
+  for (let i = 0; i < lon.length; i++) {
+    let v = lon[i];
+    while (v > 180) v -= 360;
+    while (v < -180) v += 360;
+    lonN[i] = v;
+  }
   return {
-    z, lat, lon, leveys: lon.length, korkeus: lat.length,
+    z, lat, lon: lonN, leveys: lon.length, korkeus: lat.length,
   };
 }
 
@@ -280,22 +297,69 @@ const hilaY = (lat) => Math.round((lat + 90) * 240 - 0.5);
 export async function haeIkkuna({
   lon0, lat0, lon1, lat1,
 }) {
+  /*
+   * Väli paloiksi 15°:n rajoilla — mutta EI HIUSOHUIKSI PALOIKSI.
+   *
+   * Kun laatta sattuu ylittämään lähdelaatan rajan aivan reunastaan,
+   * naiivi jako tekee palan, joka on kapeampi kuin yksi solu. NCSS
+   * vastaa sellaiseen pyyntöön palauttamalla KOKO tiedoston leveyden:
+   * mitattu 86 918 solua pyydetyn 518:n sijaan, eli 154 Mt muistia
+   * yhdestä 512 px:n laatasta. Siksi liian ohut pala levennetään
+   * neljään soluun POISPÄIN rajasta — omalle lähdelaatalleen, jossa
+   * se on jo — ja päällekkäisyys naapuripalan kanssa on harmitonta,
+   * koska liimaus kirjoittaa samat arvot samoihin hilaruutuihin.
+   */
+  const VAHIN = 4 / 240;
   const rajat = (a, b) => {
-    const ulos = [a];
-    for (let v = Math.floor(a / 15) * 15 + 15; v < b; v += 15) ulos.push(v);
-    ulos.push(b);
+    const reunat = [a];
+    for (let v = Math.floor(a / 15) * 15 + 15; v < b; v += 15) reunat.push(v);
+    reunat.push(b);
+    const ulos = [];
+    for (let i = 0; i < reunat.length - 1; i++) {
+      let p0 = reunat[i]; let p1 = reunat[i + 1];
+      if (p1 - p0 < VAHIN) {
+        // Ohut pala rajautuu aina 15°:n rajaan; levennetään siitä poispäin.
+        if (Math.abs(p1 / 15 - Math.round(p1 / 15)) < 1e-9) p0 = p1 - VAHIN;
+        else p1 = p0 + VAHIN;
+      }
+      ulos.push([p0, p1]);
+    }
     return ulos;
   };
   const lonR = rajat(lon0, lon1);
   const latR = rajat(lat0, lat1);
 
   const palat = [];
-  for (let j = 0; j < latR.length - 1; j++) {
-    for (let i = 0; i < lonR.length - 1; i++) {
+  for (const [la0, la1] of latR) {
+    for (const [lo0, lo1] of lonR) {
       // eslint-disable-next-line no-await-in-loop
-      palat.push(await haePala({
-        lon0: lonR[i], lat0: latR[j], lon1: lonR[i + 1], lat1: latR[j + 1],
-      }));
+      const pala = await haePala({
+        lon0: lo0, lat0: la0, lon1: lo1, lat1: la1,
+      });
+      /*
+       * Varmistus: NCSS on palauttanut joskus koko tiedoston leveyden
+       * pyydetyn ikkunan sijaan. Se ei saa jäädä huomaamatta — muuten
+       * virhe näkyy vain muistinkulutuksena eikä koskaan kuvassa.
+       */
+      const odotettu = Math.ceil((lo1 - lo0) * 240) + 4;
+      if (pala.leveys > odotettu) {
+        throw new Error(`NCSS palautti ${pala.leveys} saraketta, odotettiin `
+          + `korkeintaan ${odotettu} (ikkuna ${lo0}…${lo1})`);
+      }
+      /*
+       * … eikä pelkkä leveys riitä. Mitattu 18.9.2026: kun ikkuna osuu
+       * lähdelaatan reunaan, NCSS voi palauttaa OIKEAN LEVYISEN mutta
+       * VÄÄRÄSSÄ PAIKASSA olevan palan (lon alkaa −180:stä). Ilman
+       * tätä tarkistusta pala liimautuu hilassa maailman toiselle
+       * puolelle, ja ainoa oire on 86 918 sarakkeen levyinen ruudukko.
+       */
+      if (pala.lon[0] < lo0 - 1 || pala.lon[pala.leveys - 1] > lo1 + 1
+        || pala.lat[0] < la0 - 1 || pala.lat[pala.korkeus - 1] > la1 + 1) {
+        throw new Error(`NCSS palautti palan väärästä paikasta: `
+          + `lon ${pala.lon[0].toFixed(3)}…${pala.lon[pala.leveys - 1].toFixed(3)}, `
+          + `pyydettiin ${lo0.toFixed(3)}…${lo1.toFixed(3)}`);
+      }
+      palat.push(pala);
     }
   }
 
