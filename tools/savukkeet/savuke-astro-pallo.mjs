@@ -47,6 +47,21 @@
  *   9b. LINSSIN OMA VARTIJA: lauta rakentuu, mutta pallon pinta jää
  *      saamatta (generoitu tekstuuri kaatuu, reliefikuva ei saavu).
  *      Vartijan on nimettävä puute (`pinta`) ja näytettävä se pelaajalle.
+ *  10. SAFARIN RAJAT MAC-KOTELOSSA (Raamattu LISÄYS 13 kohta 37).
+ *      2 539 × 1 321 CSS, dpr 1, WebKit-liput: ladontakangas on
+ *      ENINTÄÄN 4096 × 2048 ja pallon pinta on VÄRILLINEN. Ennen
+ *      korjausta ladonta oli 8192 × 4096 = 33,5 Mpx, blob 48,5 Mt ja
+ *      pinta musta.
+ *  10b. KOHDEPISTEET RUUDULLE ILMAN KEHYKSIÄ (LISÄYS 13 kohta 36).
+ *      Kun requestAnimationFrame lakkaa kutsumasta takaisin linssin
+ *      avautuessa, syntyy TÄSMÄLLEEN Codexin kuva: ruskea tyhjä ruutu,
+ *      `vartija puute=pisteet pisteita=0`. Kehysvahdin on pakotettava
+ *      piirto ajastimesta, jolloin pallo ja 64 pistettä tulevat silti.
+ *  10c. MUSTA PINTA HUOMATAAN JA KORJATAAN. Kun kangas valehtelee
+ *      (drawImage ei piirrä, getImageData antaa uskottavia pikseleitä),
+ *      pinnasta tulee musta. Mittauksen on nähtävä se PIIRTOPUSKURISTA
+ *      ja vaihdettava generoitu vyöhykepallo tilalle.
+ *  10d. PISTEET DOMISSA AJOISSA JA PYSYVÄT PINNAN VAIHDON YLI.
  *
  * VERKKO: ämpäri (laatat, Globe.gl, reliefi) Noden fetchin kautta, muu
  * katki. Ympäristömuuttuja NAKYMAT rajaa ajettavat näytöt
@@ -405,7 +420,7 @@ async function avaaPeli(s) {
  * tarkoitus: silloin pelaaja ei pääse linssiin lainkaan, eikä muilla
  * väitteillä ole väliä.
  */
-async function avaaLinssiEleella(s, odota = 4500) {
+async function avaaLinssiEleella(s, odota = 4500, ennenAktivointia = null) {
   /*
    * NAPAUTUS ELI EI MITÄÄN MUUTA. Kontin ohjelmisto-WebGL piirtää
    * puhelinmitalla (dpr 2) pari kehystä sekunnissa, ja Playwrightin
@@ -426,6 +441,8 @@ async function avaaLinssiEleella(s, odota = 4500) {
   const aktivoi = s.locator('.linssi-aktivoi');
   await aktivoi.waitFor({ timeout: 15000 });
   await aktivoi.scrollIntoViewIfNeeded();
+  // Mittauskello juuri ennen aktivointia (LISÄYS 13 kohta 36).
+  if (ennenAktivointia) await s.evaluate(ennenAktivointia);
   await aktivoi.click({ timeout: 20000 })
     .catch(() => s.evaluate(() => document.querySelector('.linssi-aktivoi')?.click()));
   await s.waitForTimeout(odota);
@@ -1102,6 +1119,351 @@ async function ajaVastakoeIlmanEstoa() {
   await konteksti.close();
 }
 
+/*
+ * ── 10. SAFARIN RAJAT MAC-KOTELOSSA (LISÄYS 13, kohdat 36 ja 37) ──
+ *
+ * Kontissa ei ole WebKitiä (vain /opt/pw-browsers/chromium, eikä
+ * `playwright install` ole sallittu), joten Safarin kolme kohtalokasta
+ * piirrettä pannaan päälle käsin ENNEN yhtään sivuskriptiä:
+ *
+ *   1. `navigator.standalone` — asennettu WebApp tunnistaa itsensä,
+ *   2. kangaskatto: yli katon menevä kangas EI HEITÄ vaan jää tyhjäksi,
+ *   3. valinnaisesti: kangas VALEHTELEE (drawImage ei piirrä, mutta
+ *      getImageData antaa uskottavia pikseleitä) — juuri se päästi
+ *      mustan pallon vartijan läpi.
+ *
+ * Kotelo on omistajan oma mitta: 2 539 × 1 321 CSS, dpr 1.
+ */
+const MAC_WEBAPP = { viewport: { width: 2539, height: 1321 }, deviceScaleFactor: 1 };
+
+const WEBKIT_LIPUT = `(() => {
+  try { Object.defineProperty(navigator, 'standalone', { get: () => true, configurable: true }); } catch (e) {}
+})()`;
+
+/** Kangaskatto ilman poikkeusta (iOS: 4096 × 4096 = 16,7 Mpx). */
+const KANGASKATTO = (px) => `(() => {
+  const P = CanvasRenderingContext2D.prototype;
+  const alku = P.getImageData;
+  P.getImageData = function (x, y, w, h) {
+    const c = this.canvas;
+    if (c && c.width * c.height > ${px}) {
+      return new ImageData(new Uint8ClampedArray(4 * Math.max(1, w) * Math.max(1, h)), Math.max(1, w), Math.max(1, h));
+    }
+    return alku.call(this, x, y, w, h);
+  };
+})()`;
+
+/**
+ * KANGAS VALEHTELEE: drawImage ja fillRect eivät piirrä mitään, mutta
+ * getImageData antaa vaihtelevia, uskottavia pikseleitä. Kangastason
+ * tarkistus ei voi nähdä tätä — vain piirtopuskurista luettu pikseli voi.
+ */
+const VALEHTELEVA_KANGAS = (px) => `(() => {
+  const P = CanvasRenderingContext2D.prototype;
+  const iso = (c) => c && c.width * c.height > ${px};
+  const piirto = P.drawImage;
+  P.drawImage = function (...a) { if (iso(this.canvas)) return undefined; return piirto.apply(this, a); };
+  const tayta = P.fillRect;
+  P.fillRect = function (...a) { if (iso(this.canvas)) return undefined; return tayta.apply(this, a); };
+  const luku = P.getImageData;
+  P.getImageData = function (x, y, w, h) {
+    if (iso(this.canvas)) {
+      const W = Math.max(1, w); const H = Math.max(1, h);
+      const d = new Uint8ClampedArray(4 * W * H);
+      const v = 40 + ((Math.round(x) * 37 + Math.round(y) * 11) % 180);
+      for (let i = 0; i < d.length; i += 4) { d[i] = v; d[i + 1] = v; d[i + 2] = 60 + (v % 90); d[i + 3] = 255; }
+      return new ImageData(d, W, H);
+    }
+    return luku.call(this, x, y, w, h);
+  };
+})()`;
+
+/** rAF ei kutsu takaisin sen jälkeen, kun lippu käännetään. */
+const RAF_KATKAISIN = `(() => {
+  window.__rafKuollut = false;
+  const alku = window.requestAnimationFrame.bind(window);
+  window.requestAnimationFrame = (fn) => (window.__rafKuollut ? 0 : alku(fn));
+})()`;
+
+/*
+ * ── PISTEKELLO: MILLOIN KOHDEPISTEET TULEVAT DOMIIN ──────────────
+ *
+ * Kohdemerkit ovat CSS2D-elementtejä: ne päätyvät DOMiin vasta kun
+ * CSS2DRenderer PIIRTÄÄ (LISÄYS 13 kohta 36). Vika oli, etteivät ne
+ * tulleet KOSKAAN — eivät se, että ne tulivat hitaasti.
+ *
+ * KUMPIKAAN MITTA EI OLE LAITTEESTA RIIPPUMATON, ja se on sanottava
+ * suoraan. Seinäkello venyy kontissa (SwiftShader piirtää 2 539 ×
+ * 1 321 -kotelossa 2–3 kehystä sekunnissa, ja koko linssin asennus
+ * venyy sen mukana: MITATTU 11,2 s). Kehysluku taas venyy NOPEALLA
+ * laitteella (60 kehystä sekunnissa polttaa 60 kehystä samassa
+ * sekunnissa, jonka kontti kuluttaa kahteen). Molemmat luetaan ja
+ * TULOSTETAAN, mutta kontin väite on se, joka kontissa on tosi:
+ * pisteet ovat DOMissa ennen vartijan aikakatkoa eikä vartija näe
+ * puutetta. Omistajan 2,5 sekunnin vaatimus tarkistetaan Macilla
+ * (raportin Mac-ajo-ohje) — ei arvattuna kontin kellosta.
+ */
+const PISTEKELLO = `(() => {
+  window.__pisteAika = null;
+  window.__pisteKehys = null;
+  window.__aktivointi = null;
+  window.__aktivointiKehys = null;
+  const kehys = () => {
+    try { return window.matkakirja?.ui?.pallonInstanssi?.renderer?.()?.info?.render?.frame ?? null; }
+    catch (e) { return null; }
+  };
+  window.__kehysnyt = kehys;
+  const katso = () => {
+    if (window.__pisteAika === null && document.querySelector('.satelliitti-piste')) {
+      window.__pisteAika = performance.now();
+      window.__pisteKehys = kehys();
+    }
+  };
+  addEventListener('DOMContentLoaded', () => {
+    new MutationObserver(katso).observe(document.body, { childList: true, subtree: true });
+  });
+})()`;
+
+/** Kontin budjetti: pisteet DOMissa ennen vartijan aikakatkoa. */
+const PISTEIDEN_BUDJETTI_MS = 12000;
+/** Macilla odotettu aika (Mac-ajo-ohje, ei kontin väite). */
+const PISTEIDEN_TAVOITE_MAC_MS = 2500;
+
+async function macIkkuna(init = []) {
+  const konteksti = await selain.newContext({
+    ...MAC_WEBAPP, serviceWorkers: 'block', reducedMotion: 'no-preference',
+  });
+  const s = await konteksti.newPage();
+  for (const skripti of init) await s.addInitScript(skripti);
+  await s.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());
+  await s.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {
+    const v = await ulkohaku(route.request().url());
+    if (!v) { route.abort(); return; }
+    route.fulfill({
+      status: 200, contentType: v.tyyppi ?? 'application/octet-stream', body: v.body,
+      headers: { 'access-control-allow-origin': '*' },
+    });
+  });
+  return { konteksti, s };
+}
+
+/** Vaihelokin rivit sivulta (diag kerätään aina, lipusta riippumatta). */
+const LOKI = async (s) => s.evaluate(async () => {
+  const m = await import('/js/pallodiag.js');
+  return m.pallodiagLoki().map((r) => {
+    const { vaihe, ...t } = r;
+    const osat = Object.entries(t).map(([k, v]) => `${k}=${v}`).join(' ');
+    return osat ? `${vaihe} ${osat}` : String(vaihe);
+  });
+});
+
+/** Pallon keskipisteen kirkkaus kaappauksesta Mac-kotelossa. */
+async function macKirkkaus(s) {
+  const kuva = decodePng(await s.screenshot({ type: 'png', timeout: 120000 }));
+  const kotelo = await s.evaluate(() => {
+    const el = document.querySelector('.pallo-kotelo, .pallo-kuori');
+    const r = el.getBoundingClientRect();
+    return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+  });
+  return kirkkaus(kuva, kotelo.x, kotelo.y, 6);
+}
+
+/*
+ * VÄITE 10: Safarin rajoilla Mac-kotelossa ladonta ei saa olla yli
+ * 4096 × 2048 eikä pinta saa olla musta.
+ */
+async function ajaSafarinRajatMacissa() {
+  const { konteksti, s } = await macIkkuna([WEBKIT_LIPUT, KANGASKATTO(16777216), PISTEKELLO]);
+  const virheet = [];
+  s.on('pageerror', (e) => virheet.push(String(e)));
+  await avaaPeli(s);
+  await avaaLinssiEleella(s, 4500, () => { window.__aktivointi = performance.now(); });
+  await rauhoitu(s);
+  const loki = await LOKI(s);
+  const ladonnat = loki.filter((r) => r.startsWith('ladonta '))
+    .map((r) => r.match(/koko=(\d+)x(\d+)/)?.slice(1, 3).map(Number) ?? [0, 0]);
+  const suurin = ladonnat.reduce((a, [l]) => Math.max(a, l), 0);
+  vaadi('SAFARIN RAJAT (2539×1321): ladontakangas on enintään 4096 × 2048',
+    suurin > 0 && suurin <= 4096,
+    `ladonnat ${JSON.stringify(ladonnat)}, webkit-rivi "${loki.find((r) => r.startsWith('alku ')) ?? '-'}"`);
+  const kirkkausNyt = await macKirkkaus(s);
+  vaadi('SAFARIN RAJAT (2539×1321): pallon pinta on värillinen', kirkkausNyt > 20,
+    `kirkkaus ${kirkkausNyt.toFixed(1)} (kynnys 20)`);
+  const tila = await s.evaluate(() => {
+    const kahva = window.matkakirja?.ui?.pallolinssi?.kahva ?? null;
+    return {
+      puute: kahva?.puute ? String(kahva.puute() ?? 'ei') : 'ei-kahvaa',
+      pisteita: document.querySelectorAll('.satelliitti-piste').length,
+      pisteAika: window.__pisteAika,
+      aktivointi: window.__aktivointi,
+      kehykset: kahva?.avaruus?.tila?.()?.kehykset ?? null,
+      pinnanKirkkaus: kahva?.avaruus?.tila?.()?.pinnanKirkkaus ?? null,
+    };
+  });
+  vaadi('SAFARIN RAJAT: vartija ei näe puutetta ja pisteitä on 64',
+    tila.puute === 'ei' && tila.pisteita === 64,
+    `puute ${tila.puute}, pisteitä ${tila.pisteita}, pinnan kirkkaus ${tila.pinnanKirkkaus}`);
+  vaadi('SAFARIN RAJAT: ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 2).join(' | '));
+  if (ULOS) {
+    await s.screenshot({
+      path: join(ULOS, 'astro-webkit2-safarin-rajat-20260917.jpg'),
+      type: 'jpeg', quality: 70, timeout: 120000,
+    }).catch(() => {});
+  }
+  console.log(`    DIAG ${JSON.stringify(loki.slice(-8))}`);
+  await konteksti.close();
+}
+
+/*
+ * VÄITE 10b: KEHYKSIÄ EI TULE. Tämä on kohdan 36 koe: ilman kehyksiä
+ * pallon pintaa ei piirretä eikä CSS2DRenderer lisää kohdemerkkejä
+ * DOMiin — mutta ajastimet toimivat, joten kehysvahti voi pakottaa
+ * piirron. Ennen korjausta tulos oli ruskea tyhjä ruutu ja
+ * `vartija puute=pisteet pisteita=0`.
+ */
+async function ajaKehyksetPoikki() {
+  const { konteksti, s } = await macIkkuna([WEBKIT_LIPUT, RAF_KATKAISIN, PISTEKELLO]);
+  const virheet = [];
+  s.on('pageerror', (e) => virheet.push(String(e)));
+  await avaaPeli(s);
+  // Kehykset poikki VASTA tässä: pelin oma käynnistys tarvitsee ne.
+  await avaaLinssiEleella(s, 4500, () => {
+    window.__rafKuollut = true;
+    window.__aktivointi = performance.now();
+  });
+  await s.waitForTimeout(14000);
+  const tila = await s.evaluate(() => {
+    const kahva = window.matkakirja?.ui?.pallolinssi?.kahva ?? null;
+    return {
+      puute: kahva?.puute ? String(kahva.puute() ?? 'ei') : 'ei-kahvaa',
+      pisteita: document.querySelectorAll('.satelliitti-piste').length,
+      kehykset: kahva?.avaruus?.tila?.()?.kehykset ?? null,
+      ilmoitus: Boolean(document.getElementById('linssivirhe')),
+    };
+  });
+  vaadi('KEHYKSET POIKKI: kohdepisteet tulevat silti DOMiin',
+    tila.pisteita === 64,
+    `pisteitä ${tila.pisteita}, puute ${tila.puute}, kehykset ${JSON.stringify(tila.kehykset)}`);
+  vaadi('KEHYKSET POIKKI: kehysvahti pakotti piirron',
+    Number(tila.kehykset?.pakotettuja) > 0 && Number(tila.kehykset?.kehyksia) > 0,
+    JSON.stringify(tila.kehykset));
+  vaadi('KEHYKSET POIKKI: pelaajalle ei jää virheilmoitusta',
+    !tila.ilmoitus && tila.puute === 'ei', `ilmoitus ${tila.ilmoitus}, puute ${tila.puute}`);
+  vaadi('KEHYKSET POIKKI: ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 2).join(' | '));
+  const loki = await LOKI(s);
+  console.log(`    DIAG ${JSON.stringify(loki.slice(-6))}`);
+  if (ULOS) {
+    await s.screenshot({
+      path: join(ULOS, 'astro-webkit2-kehykset-poikki-20260917.jpg'),
+      type: 'jpeg', quality: 70, timeout: 120000,
+    }).catch(() => {});
+  }
+  await konteksti.close();
+}
+
+/*
+ * VÄITE 10c: MUSTA PINTA. Kangas valehtelee, joten kangastason
+ * tarkistus ei voi nähdä mitään — vain piirtopuskurista luettu pikseli
+ * voi. Vartijan on nimettävä `pinta-musta` ja varapolun palautettava
+ * generoitu vyöhykepallo, jotta pelaaja näkee värillisen Maan.
+ */
+async function ajaMustaPinta() {
+  const { konteksti, s } = await macIkkuna([WEBKIT_LIPUT, VALEHTELEVA_KANGAS(4000000)]);
+  const virheet = [];
+  s.on('pageerror', (e) => virheet.push(String(e)));
+  await avaaPeli(s);
+  await avaaLinssiEleella(s, 4500);
+  await rauhoitu(s);
+  await s.waitForTimeout(4000);
+  const loki = await LOKI(s);
+  const musta = loki.find((r) => r.startsWith('pinta-musta'));
+  const mittaukset = loki.filter((r) => r.startsWith('pinta-mittaus'))
+    .map((r) => Number(r.match(/kirkkaus=(-?\d+)/)?.[1] ?? NaN));
+  vaadi('MUSTA PINTA: mittaus näkee mustan piirtopuskurista',
+    Boolean(musta) && mittaukset.some((k) => k === 0 || k < 12),
+    `pinta-musta "${musta ?? '-'}", mittaukset ${JSON.stringify(mittaukset)}`);
+  vaadi('MUSTA PINTA: varapolku palauttaa värillisen pinnan',
+    mittaukset.length >= 2 && mittaukset[mittaukset.length - 1] > 20,
+    `mittaukset ${JSON.stringify(mittaukset)}`);
+  const kirkkausNyt = await macKirkkaus(s);
+  vaadi('MUSTA PINTA: pallo ei ole ruudulla musta', kirkkausNyt > 20,
+    `kirkkaus ${kirkkausNyt.toFixed(1)} (kynnys 20)`);
+  vaadi('MUSTA PINTA: ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 2).join(' | '));
+  if (ULOS) {
+    await s.screenshot({
+      path: join(ULOS, 'astro-webkit2-musta-pinta-20260917.jpg'),
+      type: 'jpeg', quality: 70, timeout: 120000,
+    }).catch(() => {});
+  }
+  await konteksti.close();
+}
+
+/*
+ * VÄITE 10d + VASTAKOE: ehjässä Mac-ajossa pisteet ovat DOMissa
+ * budjetin sisällä, ne PYSYVÄT pinnan vaihdon yli, mustaa pintaa ei
+ * havaita eikä kehyksiä tarvitse pakottaa. Ilman tätä vastakoetta
+ * yksikään yllä olevista mittareista ei voisi mennä punaiseksi.
+ */
+async function ajaMacVastakoe() {
+  const { konteksti, s } = await macIkkuna([WEBKIT_LIPUT, PISTEKELLO]);
+  const virheet = [];
+  s.on('pageerror', (e) => virheet.push(String(e)));
+  await avaaPeli(s);
+  await avaaLinssiEleella(s, 3000, () => {
+    window.__aktivointi = performance.now();
+    window.__aktivointiKehys = window.__kehysnyt?.() ?? null;
+  });
+  const ennenVaihtoa = await s.evaluate(() => ({
+    pisteita: document.querySelectorAll('.satelliitti-piste').length,
+    pisteAika: window.__pisteAika,
+    pisteKehys: window.__pisteKehys,
+    aktivointi: window.__aktivointi,
+    aktivointiKehys: window.__aktivointiKehys,
+    reliefi: window.matkakirja?.ui?.pallolinssi?.kahva?.avaruus?.tila?.()?.reliefi ?? null,
+  }));
+  // Pinnan vaihto (reliefi) ja sen mittaus odotetaan loppuun asti.
+  await s.waitForFunction(
+    () => window.matkakirja?.ui?.pallolinssi?.kahva?.avaruus?.tila?.()?.reliefi === true,
+    null, { timeout: 60000 },
+  ).catch(() => {});
+  await s.waitForTimeout(3000);
+  const jalkeen = await s.evaluate(() => {
+    const kahva = window.matkakirja?.ui?.pallolinssi?.kahva ?? null;
+    const tila = kahva?.avaruus?.tila?.() ?? null;
+    return {
+      pisteita: document.querySelectorAll('.satelliitti-piste').length,
+      puute: kahva?.puute ? String(kahva.puute() ?? 'ei') : 'ei-kahvaa',
+      reliefi: tila?.reliefi ?? null,
+      kehykset: tila?.kehykset ?? null,
+      pinnanKirkkaus: tila?.pinnanKirkkaus ?? null,
+      varapolku: tila?.pinnanVarapolku ?? null,
+      webkit: tila?.ladonnanWebkit ?? null,
+    };
+  });
+  const viive = ennenVaihtoa.pisteAika != null && ennenVaihtoa.aktivointi != null
+    ? Math.round(ennenVaihtoa.pisteAika - ennenVaihtoa.aktivointi) : -1;
+  const kehysviive = ennenVaihtoa.pisteKehys != null && ennenVaihtoa.aktivointiKehys != null
+    ? ennenVaihtoa.pisteKehys - ennenVaihtoa.aktivointiKehys : -1;
+  vaadi('VASTAKOE: kohdepisteet ovat DOMissa ennen vartijan aikakatkoa',
+    viive >= 0 && viive <= PISTEIDEN_BUDJETTI_MS && kehysviive >= 0,
+    `${viive} ms / ${kehysviive} kehystä aktivoinnista (kontin katto`
+    + ` ${PISTEIDEN_BUDJETTI_MS} ms; Macin tavoite ${PISTEIDEN_TAVOITE_MAC_MS} ms`
+    + ` tarkistetaan Mac-ajossa), pisteitä ${ennenVaihtoa.pisteita}`);
+  vaadi('VASTAKOE: pisteet pysyvät pinnan vaihdon yli',
+    jalkeen.pisteita === 64 && jalkeen.reliefi === true,
+    `ennen ${ennenVaihtoa.pisteita}, jälkeen ${jalkeen.pisteita}, reliefi ${jalkeen.reliefi}`);
+  vaadi('VASTAKOE: ehjässä ajossa ei mustaa pintaa eikä varapolkua',
+    jalkeen.varapolku === false && Number(jalkeen.pinnanKirkkaus) > 20 && jalkeen.puute === 'ei',
+    `kirkkaus ${jalkeen.pinnanKirkkaus}, varapolku ${jalkeen.varapolku}, puute ${jalkeen.puute}`);
+  vaadi('VASTAKOE: kehyksiä ei tarvitse pakottaa, kun laite antaa niitä',
+    Number(jalkeen.kehykset?.kehyksia) > 0 && Number(jalkeen.kehykset?.pakotettuja) === 0,
+    JSON.stringify(jalkeen.kehykset));
+  vaadi('VASTAKOE: WebKit-liput tunnistetaan', jalkeen.webkit === true,
+    `ladonnanWebkit ${jalkeen.webkit}`);
+  vaadi('VASTAKOE: ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 2).join(' | '));
+  await konteksti.close();
+}
+
 for (const nimi of Object.keys(NAKYMAT)) {
   if (VALITUT.length && !VALITUT.includes(nimi)) continue;
   await ajaNakyma(nimi);
@@ -1116,6 +1478,11 @@ if (!VALITUT.length || VALITUT.includes('tyopoyta') || VALITUT.includes('vartija
   await ajaVastakoeIlmanEstoa();
   await ajaKirjastoEstetty();
   await ajaPintaEstetty();
+  /* LISÄYS 13, kohdat 36 ja 37: Mac-WebAppin kotelo ja Safarin rajat. */
+  await ajaMacVastakoe();
+  await ajaSafarinRajatMacissa();
+  await ajaKehyksetPoikki();
+  await ajaMustaPinta();
 }
 
 await selain.close();
