@@ -1759,6 +1759,9 @@ export function pinnanKirkkaus(pallo, ikkuna = globalThis) {
  */
 export const PALLON_SAVY = 0xbfbfbf;
 
+/** Sävyvahdin kello: kuinka usein sävy tarkistetaan (ks. sävyvahti). */
+export const SAVYN_TARKISTUS_MS = 400;
+
 export function valkaiseMateriaali(materiaali, hex = 0xffffff) {
   try {
     if (!materiaali) return false;
@@ -2175,6 +2178,33 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
    */
   const varinLahto = materiaali?.color?.getHex?.() ?? null;
   valkaiseMateriaali(materiaali, PALLON_SAVY);
+  /*
+   * ── SÄVYVAHTI: KIRJASTO NOLLAA VÄRIN, KUN TEKSTUURI SAAPUU ───────
+   *
+   * MITATTU 17.9.2026 (savuke-astro-pallo, työpöytä ja puhelin): avaus
+   * kirjoittaa sävyn heti, mutta kun reliefi latautuu, globe.gl
+   * käsittelee `globeImageUrl`in uudestaan ja pinta palaa TÄYTEEN
+   * kirkkauteen (mitattu 167 = sama kuin valkoisella; sävyllä 124).
+   * Yksi kirjoitus avauksessa ei siis riitä, koska tekstuuri saapuu
+   * asynkronisesti vasta sen jälkeen.
+   *
+   * Vahti kirjoittaa sävyn takaisin aina, kun väri on nollattu tai
+   * vaihtunut. Se ei piirrä mitään eikä pyöri kehystahdissa: 400 ms:n
+   * kello ja kirjoitus VAIN kun arvo on väärä (laskuri kertoo, montako
+   * kertaa). Sama vahti hoitaa myös varapolun jälkeisen tilanteen,
+   * jossa pinnalle vaihdetaan toinen kuva.
+   */
+  let savyKirjoituksia = 0;
+  const savyta = () => {
+    if (purettu || !materiaali) return;
+    const nyt = materiaali.color?.getHex?.() ?? null;
+    if (nyt === PALLON_SAVY) return;
+    if (valkaiseMateriaali(materiaali, PALLON_SAVY)) {
+      savyKirjoituksia += 1;
+      lauta?.heraa?.();
+    }
+  };
+  const savyKello = ikkuna.setInterval?.(savyta, SAVYN_TARKISTUS_MS) ?? 0;
   pallo.backgroundColor?.(AVARUUDEN_TAUSTA);
   pallo.atmosphereColor?.(ILMAKEHAN_VARI);
   pallo.atmosphereAltitude?.(ILMAKEHAN_KORKEUS);
@@ -2557,6 +2587,9 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       kehykset: kehysvahti.tila(),
       pinnanKirkkaus: viimeisinKirkkaus,
       pinnanVarapolku: varapolullaKaytiin,
+      /* LISÄYS 15 kohta 43: sävyvahdin kirjoitukset ja voimassa oleva sävy. */
+      pallonSavy: `#${PALLON_SAVY.toString(16)}`,
+      savyKirjoituksia,
       ladonnanWebkit: webkitSelain(ikkuna?.navigator),
     }),
     /*
@@ -2602,6 +2635,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
         ohjaimet.autoRotateSpeed = pyorimisenLahto.nopeus;
       }
       kokovahti?.disconnect?.();
+      if (savyKello) { try { ikkuna.clearInterval?.(savyKello); } catch { /* ei kelloa */ } }
       kehysvahti.pura();
       if (pinnanKello) { try { ikkuna.clearTimeout?.(pinnanKello); } catch { /* ei kelloa */ } }
       pinnanKello = 0;

@@ -1121,7 +1121,25 @@ async function ajaNakyma(nimi) {
     + `${halkaisijaKaukaa} px → ${halkaisijaLahelta} px`);
 
   /* 41: keskusta kirkkaampi kuin reuna (pikseleistä). */
-  const pisteLahelta = await vakaaPiste();
+  /*
+   * PISTE OTETAAN RUUDUN SISÄLTÄ. `vakaaPiste` etsii pallon keskustaa
+   * lähimmän merkin, ja lähikuvassa se voi olla ruudun ULKOPUOLELLA
+   * (mitattu: x = −35) — silloin kaappauksen rajaus lipsuu reunaan eikä
+   * mittaa pistettä lainkaan. Tässä vaaditaan 24 px marginaali.
+   */
+  const pisteLahelta = await s.evaluate(() => {
+    const reuna = 24;
+    const keski = { x: innerWidth / 2, y: innerHeight / 2 };
+    return [...document.querySelectorAll('.satelliitti-piste')]
+      .filter((e) => !e.closest('.pallolauta-takana'))
+      .map((e) => (e.querySelector('.satelliitti-ydin') ?? e).getBoundingClientRect())
+      .filter((b) => b.width > 0)
+      .map((b) => ({ x: b.left + b.width / 2, y: b.top + b.height / 2 }))
+      .filter((p) => p.x > reuna && p.y > reuna
+        && p.x < innerWidth - reuna && p.y < innerHeight - reuna)
+      .map((p) => ({ ...p, etaisyys: Math.hypot(p.x - keski.x, p.y - keski.y) }))
+      .sort((a, b) => a.etaisyys - b.etaisyys)[0] ?? null;
+  });
   let hehku = null;
   if (pisteLahelta) {
     const reuna = 9;
