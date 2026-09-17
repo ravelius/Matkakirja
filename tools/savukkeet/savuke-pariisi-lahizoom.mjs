@@ -76,6 +76,16 @@
  *   3e4. NIMIÖ MYÖS NÄKYY LÄHIZOOMISSA: sovittelun viimeinen keino on
  *       lapun piilotus, eikä yhdenkään Pariisin aihenoston nimiö saa
  *       joutua sinne siinä näkymässä, josta päätös tehtiin.
+ *   3i. NIMIÖ VAIN LÄHIZOOMISSA (PAATOKSET 27 TARKENNUS 4 kohta 10,
+ *       omistaja 17.9.2026 klo 04.15 UTC, kortti *"Nimiö vain
+ *       lähizoomissa"*): koko maan SAAPUMISNÄKYMÄSSÄ yhdelläkään
+ *       aihenostolla ei ole nimiötä — se on pelkkä symboli — ja
+ *       LÄHIZOOMISSA nimiö on jokaisella, kuten ennen. Mitataan
+ *       kahdesta lähteestä: kerroksen `nimioNakyy` ja elementin oma
+ *       `data-nimio` (aihenimioitaDom).
+ *   3i2. VASTAKOE `?aihenimiokynnys=0`: kun kynnys otetaan pois,
+ *       nimiöt palaavat saapumisnäkymään (v1927:n tila) — vartio 3i
+ *       mittaa siis kynnystä eikä sitä, ettei nimiöitä ole lainkaan.
  *   3h. AIHENOSTOT EIVÄT PEITÄ TOISIAAN LÄHIZOOMISSA enempää kuin
  *       AIHENOSTOJEN_LIMITYSKATTO sallii — ryhmitys ei saa vain
  *       siirtää rykelmän ongelmaa merkkitasolle. Saapumisnäkymän luvut
@@ -477,6 +487,15 @@ const mittaa = (sivu) => sivu.evaluate(async () => {
     })),
     // Lukumäärää ei saa olla pallossa (kohta 8: *"ei lukumaaraa palloon"*).
     lukupalloja: document.querySelectorAll('.pallolauta-aihemerkki-luku').length,
+    /*
+     * AIHENOSTON NIMIÖ RUUDULLA (PAATOKSET 27 TARKENNUS 4 kohta 10).
+     * Datan `nimioNakyy` kertoo päätöksen, tämä kertoo mitä pelaaja
+     * NÄKEE: asetteleAihemerkki kirjoittaa näkyvän nimiön elementin
+     * `data-nimio`-määreeseen ja tyhjän merkkijonon, kun nimiötä ei
+     * piirretä. Kaksi mittaria, jottei vartio nojaa pelkkään lippuun.
+     */
+    aihenimioitaDom: [...document.querySelectorAll('.pallolauta-aihemerkki')]
+      .filter((el) => (el.dataset.nimio ?? '') !== '').length,
     osumat: (n?.osumat?.() ?? []).map((o) => ({
       id: o.id,
       perhe: o.perhe,
@@ -597,6 +616,46 @@ for (const ruutu of RUUDUT) {
   vaadi(`1c. ${ruutu.nimi}: kaupunkimerkin nimiö on saapuessa ≥ ${SAAPUMISEN_VAHIN_PX} px`,
     saapuvaNimio >= SAAPUMISEN_VAHIN_PX,
     `${p(saapuvaNimio)} px (kaupunkimerkkejä ${saapuvaKaupunki.length})`);
+
+  /*
+   * --- 3i2. VASTAKOE: NIMIÖKYNNYS POIS SAMASTA SAAPUMISNÄKYMÄSTÄ ---
+   *
+   * `?aihenimiokynnys=0` (js/pallolauta/nostot.js
+   * aihenimionKynnysSallittu) palauttaa v1927:n tilan, jossa nimiö
+   * näkyi kaikilla zoomeilla. Lippu luetaan joka ladonnassa
+   * osoitteesta, joten sivua ei ladata uudelleen eikä kameraa
+   * siirretä — mitattava näkymä on sama kuin vartiossa 3i.
+   */
+  await sivu.evaluate(() => {
+    const u = new URL(window.location.href);
+    u.searchParams.set('aihenimiokynnys', '0');
+    window.history.replaceState({}, '', u.toString());
+    window.matkakirja.ui.pallolauta.ladoHeti?.();
+  });
+  await sivu.waitForTimeout(900);
+  const ilmanKynnysta = await mittaa(sivu);
+  await sivu.evaluate(() => {
+    const u = new URL(window.location.href);
+    u.searchParams.delete('aihenimiokynnys');
+    window.history.replaceState({}, '', u.toString());
+    window.matkakirja.ui.pallolauta.ladoHeti?.();
+  });
+  await sivu.waitForTimeout(900);
+  const kynnysTakaisin = await mittaa(sivu);
+  const ilmanNimioita = ilmanKynnysta.aihemerkit.filter((a) => a.nimioNakyy).length;
+  tieto(`${ruutu.nimi} · vastakoe ilman nimiökynnystä (saapuen)`,
+    `nimiöllisiä aihenostoja ${ilmanNimioita}/${ilmanKynnysta.aihemerkit.length}, `
+    + `DOM ${ilmanKynnysta.aihenimioitaDom}; kynnyksen kanssa `
+    + `${kynnysTakaisin.aihemerkit.filter((a) => a.nimioNakyy).length}/`
+    + `${kynnysTakaisin.aihemerkit.length}, DOM ${kynnysTakaisin.aihenimioitaDom}`);
+  vaadi(`3i2. VASTAKOE ${ruutu.nimi}: ilman kynnystä nimiöt palaavat saapumisnäkymään`,
+    ilmanKynnysta.aihemerkit.length > 0
+      && ilmanNimioita === ilmanKynnysta.aihemerkit.length
+      && ilmanKynnysta.aihenimioitaDom === ilmanKynnysta.aihemerkit.length
+      && kynnysTakaisin.aihenimioitaDom === 0,
+    `ilman kynnystä ${ilmanNimioita}/${ilmanKynnysta.aihemerkit.length} `
+    + `(DOM ${ilmanKynnysta.aihenimioitaDom}), kynnyksen kanssa DOM `
+    + `${kynnysTakaisin.aihenimioitaDom}`);
 
   /* --- 5. PAKKA EI OLE KARTALLA (PAATOKSET 31 kohta 1) --- */
   vaadi(`5. ${ruutu.nimi}: luentakuvapakkaa ei ole kartalla saapumisen jälkeen`,
@@ -746,6 +805,33 @@ for (const ruutu of RUUDUT) {
     if (nakyma === 'lähizoom') {
       vaadi(`3e4. ${ruutu.nimi} (${nakyma}): yhdenkään aihenoston nimiö ei ole piilossa`,
         piilossa.length === 0, `${piilossa.length} piilossa`);
+    }
+    /*
+     * 3i. NIMIÖ VAIN LÄHIZOOMISSA (PAATOKSET 27 TARKENNUS 4 kohta 10).
+     * Saapumisnäkymässä nolla, lähizoomissa jokaisella — ja luku
+     * luetaan KAHDESTA lähteestä: kerroksen oma lippu (`nimioNakyy`,
+     * jota myös sovittelu lukee) ja se, mitä elementtiin oikeasti
+     * piirrettiin (`data-nimio`). Jos ne eroavat, vika on siinä
+     * välissä eikä kynnyksessä, ja se on syytä nähdä.
+     *
+     * DOM-luku koskee KOKO ruutua, kerroksen luku Pariisin nostoja,
+     * joten lähizoomissa verrataan DOMia kaikkiin aihemerkkeihin ja
+     * saapumisnäkymässä molempien on oltava nolla.
+     */
+    const nimiollisia = nostot.filter((a) => a.nimioNakyy).length;
+    tieto(`${ruutu.nimi} · ${nakyma} · aihenoston nimiö näkyy`,
+      `kerros ${nimiollisia}/${nostot.length}, DOM ${mit.aihenimioitaDom} `
+      + `(aihemerkkejä kartalla ${mit.aihemerkit.length})`);
+    if (nakyma === 'saapuen') {
+      vaadi(`3i. ${ruutu.nimi} (${nakyma}): aihenostojen nimiöitä 0 — pelkkä symboli`,
+        nimiollisia === 0 && mit.aihenimioitaDom === 0,
+        `kerros ${nimiollisia}, DOM ${mit.aihenimioitaDom}`);
+    } else {
+      vaadi(`3i. ${ruutu.nimi} (${nakyma}): jokaisella aihenostolla on nimiö näkyvissä`,
+        nostot.length > 0 && nimiollisia === nostot.length
+          && mit.aihenimioitaDom === mit.aihemerkit.length,
+        `kerros ${nimiollisia}/${nostot.length}, DOM ${mit.aihenimioitaDom}/`
+        + `${mit.aihemerkit.length}`);
     }
     vaadi(`3e2. ${ruutu.nimi} (${nakyma}): pallossa ei ole lukumäärää`,
       mit.lukupalloja === 0, `${mit.lukupalloja} lukua kartalla`);
