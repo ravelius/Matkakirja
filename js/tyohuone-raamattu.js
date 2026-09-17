@@ -8047,7 +8047,7 @@ export const RAAMATTU = {
           + 'haarassa simpukka-palautus (18980997; kaikki jaksot merkilleen '
           + 'samat kuin ennen poistoa, manifestin 50 sanaa ja 6 lauseleimaa '
           + 'tasmaavat, pulun repliikki null ja Livian linssilahteissa '
-          + 'varattu paikka, 826/826 + savuke 38/38), julkaistaan v1928. '
+          + 'varattu paikka, 826/826 + savuke 38/38), JULKAISTU v1928. '
           + 'TARKENNUS 2 (omistaja 16.9.2026 klo '
           + '18.50 UTC, iPhone-kuva v1924: 300 000 v. sitten, kartta '
           + 'zoomattuna Guineanlahdelle liian lahelle, sanatarkasti: "Uusi '
