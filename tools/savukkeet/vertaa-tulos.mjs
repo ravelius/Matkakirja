@@ -2,24 +2,41 @@
 // vertaa FAIL-rivejä tunnettuun listaan. Käytetään
 // .github/workflows/savukkeet.yml:n savuke-jobissa.
 //
-//   node tools/savukkeet/vertaa-tulos.mjs <loki> <tiedosto> <tunnetutPunaisetJSON> <tunnetutPunaisetMaara>
+//   node tools/savukkeet/vertaa-tulos.mjs <loki> <tiedosto> <tunnetutPunaisetJSON> <tunnetutPunaisetMaara> [savukeExit]
 //
 // <tunnetutPunaisetJSON> on JSON-taulukko regex-lähdemerkkijonoja
 // (testataan jokaista FAIL-riviä vasten, ei ankkuroida automaattisesti
 // — käytä ^ tarvittaessa, ks. sarjat.json). <tunnetutPunaisetMaara> on
 // "null" tai luku (lukumääräpohjainen vertailu, kun tarkkaa listaa ei
-// ole — ks. savuke-kaupunkipopup sarjat.jsonissa).
+// ole — ks. savuke-kaupunkipopup sarjat.jsonissa). [savukeExit] on
+// savukkeen oma poistumiskoodi (valinnainen) — käytetään VAIN
+// KAATUMISVAHDIN laukaisuun (ks. alla), ei muuhun.
 //
 // Tulostaa ihmisluettavan FAIL-listan [tunnettu]/[UUSI]-merkinnöin,
 // ::warning::-rivin jokaisesta UUDESTA punaisesta (tai
 // lukumäärän kasvusta), ja VIIMEISENÄ RIVINÄ tiiviin JSON-yhteenvedon
-// { lapi, yhteensa, uusiaPunaisia } — työnkulku poimii tämän rivin.
+// { lapi, yhteensa, uusiaPunaisia } — työnkulku poimii tämän rivin JA
+// käyttää uusiaPunaisia-lukua jobin läpi/ei-läpi-päätökseen (ei
+// savukkeen omaa poistumiskoodia — se on 1 sekä tunnetuista että
+// uusista punaisista, joten se ei yksin kelpaa portiksi; ks.
+// .github/workflows/savukkeet.yml "Tarkista tulos" -askel).
+//
+// KAATUMISVAHTI: jos savuke kaatuu POIKKEUKSEEN ennen kuin yksikään
+// vaadi()-rivi ehtii tulostua (esim. import-virhe, selaimen
+// käynnistys epäonnistuu), lokissa ei ole yhtään FAIL-riviä eikä
+// tunnettu-vertailu löydä mitään uutta — jolloin uusiaPunaisia jäisi
+// virheellisesti nollaan, vaikka savuke ei ajanut yhtään väitettä.
+// Siksi: jos savukeExit on annettu ja on != 0 JA lokissa ei ole
+// YHTÄÄN OK- eikä FAIL-riviä, se lasketaan aina yhdeksi UUDEKSI
+// punaiseksi ("savuke kaatui poikkeukseen") riippumatta tunnetuista
+// listoista — tunnettu punainen tunnetaan aina vaadi()-rivin
+// tekstistä, ei koskaan kaatumisesta.
 
 import { readFileSync } from 'node:fs';
 
-const [, , lokiPolku, tiedosto, tunnetutJson, maaraStr] = process.argv;
+const [, , lokiPolku, tiedosto, tunnetutJson, maaraStr, savukeExitStr] = process.argv;
 if (!lokiPolku || !tiedosto) {
-  console.error('Käyttö: node tools/savukkeet/vertaa-tulos.mjs <loki> <tiedosto> <tunnetutPunaisetJSON> <tunnetutPunaisetMaara>');
+  console.error('Käyttö: node tools/savukkeet/vertaa-tulos.mjs <loki> <tiedosto> <tunnetutPunaisetJSON> <tunnetutPunaisetMaara> [savukeExit]');
   process.exit(1);
 }
 
@@ -33,6 +50,17 @@ const failRivit = rivit
 
 const lapi = okMaara;
 const yhteensa = okMaara + failRivit.length;
+
+const savukeExit = savukeExitStr !== undefined && savukeExitStr !== '' ? Number(savukeExitStr) : null;
+const kaatui = savukeExit !== null && savukeExit !== 0 && okMaara === 0 && failRivit.length === 0;
+if (kaatui) {
+  const loppu = loki.trim().split('\n').slice(-15).join('\n');
+  console.log(`  [KAATUMINEN] savuke päättyi koodilla ${savukeExit} eikä tulostanut yhtään OK/FAIL-riviä — lokin häntä:\n${loppu}`);
+  console.log(`::error::savuke ${tiedosto}: kaatui poikkeukseen (koodi ${savukeExit}) ennen yhtään väitettä — ei tunnettu punainen`);
+  console.log(`\n0/0 läpi (savuke ${tiedosto}, KAATUI)`);
+  console.log(JSON.stringify({ lapi: 0, yhteensa: 0, uusiaPunaisia: 1 }));
+  process.exit(0);
+}
 
 let tunnetut = [];
 try {
