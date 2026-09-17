@@ -372,6 +372,9 @@ function tallenne(kaupunki) {
   return JSON.stringify(peli.toJSON());
 }
 
+/** CPU:n hidastuskerroin (`SAVUKE_HIDASTUS`), 1 = ei hidastusta. */
+const HIDASTUS = Number(process.env.SAVUKE_HIDASTUS ?? 1) || 1;
+
 const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
 
 async function avaaSivu(ruutu, { ryhmitys = true } = {}) {
@@ -388,6 +391,23 @@ async function avaaSivu(ruutu, { ryhmitys = true } = {}) {
     } catch { /* yksityinen tila */ }
   }, tallenne('pariisi'));
   const sivu = await ctx.newPage();
+  /*
+   * HIDAS KONE VASTAKOKEENA (`SAVUKE_HIDASTUS=<kerroin>`).
+   *
+   * GitHub Actionsin ajo 35201833942 antoi 72/74 samalla koodilla, joka
+   * on tässä koneessa 74/74: vartiot 7c ja 7e kaatuivat, koska kyltin
+   * asento riippui siitä, montako ladontakierrosta kone oli ehtinyt
+   * ajaa. Vika ei näy nopealla koneella lainkaan, joten savukkeeseen
+   * tarvitaan tapa hidastaa se esiin. CDP:n `Emulation.setCPUThrottlingRate`
+   * hidastaa JavaScriptin suorituksen annetulla kertoimella — sama
+   * ilmiö kuin hitaammalla ajurilla, ilman että savukkeen väitteitä
+   * löysätään. Oletuksena pois päältä, jotta tavallinen ajo pysyy
+   * nopeana.
+   */
+  if (HIDASTUS > 1) {
+    const cdp = await ctx.newCDPSession(sivu);
+    await cdp.send('Emulation.setCPUThrottlingRate', { rate: HIDASTUS });
+  }
   await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
   await sivu.route(/wikimedia\.org/, (r) => r.abort());
   await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
@@ -434,6 +454,68 @@ async function zoomaaPariisiin(sivu, portaat) {
     }
     return l.pallo.pointOfView().altitude;
   }, portaat);
+}
+
+/*
+ * KYLTIN ASENNON ON ANNETTAVA ASETTUA ENNEN MITTAUSTA (mitattu
+ * 17.9.2026, GitHub Actions 35201833942 ja paikallinen vastakoe
+ * `SAVUKE_HIDASTUS=4`).
+ *
+ * Kyltin asento valitaan ladonnassa (js/pallolauta/lauta.js
+ * paivitaTuristiInfo), ja zoomin jälkeen ensimmäinen ladonta voi olla
+ * hitaalla koneella yhä matkalla, kun savuke jo mittaa. MITATTU: sormen
+ * piste luettiin kyltin VANHASTA paikasta ja kyltti oli jo uudessa —
+ * 17,2 px (390 px) ja 183,8 px (1400 px) erossa, ja napautus meni
+ * naapurin viuhkaan. Vika oli mittauksen ajoituksessa, ei säännössä:
+ * savuke ei saa mitata liikkuvaa kohdetta.
+ *
+ * ODOTUS KATSOO PIIRROSTA, EI PELKKÄÄ KAAVAA. Ladonnan laatikko
+ * (`turistiLaatikot`) lasketaan kamerasta ja on paikallaan heti, kun
+ * kamera pysähtyy — mutta merkkikerroksen ELEMENTTI tweenaa uuteen
+ * paikkaansa (htmlTransitionDuration) ja jokainen uusi ladonta aloittaa
+ * tweenin alusta. MITATTU 17.9.2026 `SAVUKE_HIDASTUS=4`, työpöytä
+ * 1400 px: kun odotus katsoi vain kaavaa, kyltin elementti liikkui yhä
+ * 195 px kahden peräkkäisen mittauksen välissä, sormen piste luettiin
+ * vanhasta paikasta ja napautus meni *Kyyhkyposti…*-viuhkaan (7c
+ * punainen, etäisyys 179,6 px). Siksi odotetaan MOLEMPIA: kaavan
+ * laatikkoa ja piirrettyä laatikkoa.
+ *
+ * MYÖS NIMILADONNAN ON OLTAVA VALMIS. Kyltti valitaan ladonnassa ENNEN
+ * nimiä, ja nimet väistävät sitä samassa kierroksessa — mutta hitaalla
+ * koneella mittaus ehti niiden väliin: MITATTU 17.9.2026
+ * `SAVUKE_HIDASTUS=4`, työpöytä 1400 px: kyltin laatikko oli jo
+ * paikallaan (714,444 → 812,465, sama kuin nopealla koneella), mutta
+ * vartio 7e luki nimiä 1 — kaupungin nimi oli vielä edellisen kierroksen
+ * paikassa. Siksi vakiintumiseen luetaan myös nimien laatikot.
+ *
+ * Odotus on tilan VAKIINTUMINEN, ei kello: laatikoita luetaan, kunnes
+ * kaksi peräkkäistä lukemaa ovat samat. Odotus katsoo PAIKKOJA, ei
+ * väitteitä — yksikään vartio ei löysty siitä, että ladonnan annetaan
+ * ensin valmistua.
+ */
+async function odotaKyltinAsento(sivu, { yrityksia = 40, valiMs = 250 } = {}) {
+  let edellinen = null;
+  for (let i = 0; i < yrityksia; i += 1) {
+    // eslint-disable-next-line no-await-in-loop
+    const nyt = await sivu.evaluate(() => {
+      const l = window.matkakirja.ui.pallolauta;
+      const teksti = (r) => (r
+        ? `${Math.round(r.x0)},${Math.round(r.y0)},${Math.round(r.x1)},${Math.round(r.y1)}`
+        : '');
+      const kaava = teksti((l.turistiLaatikot?.() ?? [])[0] ?? null);
+      const piirretty = teksti((l.turistiPiirretty?.() ?? [])[0] ?? null);
+      const nimet = (l.nimet?.laatikot?.() ?? []).map(teksti).join(';');
+      return kaava
+        ? { kyltti: `${piirretty || 'ei piirrosta'} (kaava ${kaava})`, nimet }
+        : null;
+    });
+    const avain = nyt ? `${nyt.kyltti}|${nyt.nimet}` : '';
+    if (avain && avain === edellinen) return nyt.kyltti;
+    edellinen = avain;
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.waitForTimeout(valiMs);
+  }
+  return edellinen ? edellinen.split('|')[0] : '';
 }
 
 /** Yksi mittaus nykyisestä näkymästä. */
@@ -700,6 +782,7 @@ for (const ruutu of RUUDUT) {
 
   /* --- sisimpään zoomiin --- */
   const alt = await zoomaaPariisiin(sivu, ZOOMIPORTAAT);
+  const asettuiKohtaan = await odotaKyltinAsento(sivu);
   const m = await mittaa(sivu);
   const nurkka = await kankaanNurkka(sivu);
   const kerroin = m.vertailuskaala > 0 ? m.karttaskaala / m.vertailuskaala : 0;
@@ -983,6 +1066,7 @@ for (const ruutu of RUUDUT) {
    * sormi hakee symbolin eikä nimiön ulkopäätä — sama sääntö kuin
    * vartiossa 4.
    */
+  await odotaKyltinAsento(sivu);
   const tPiste = await sivu.evaluate(() => {
     const el = document.querySelector('.pallolauta-turisti-info');
     if (!el) return null;
@@ -1038,6 +1122,19 @@ for (const ruutu of RUUDUT) {
     });
     await sivu.waitForTimeout(300);
     await suljeKortti(sivu);
+    /*
+     * VIUHKA EI OLE KORTTI, JOTEN SE ON SULJETTAVA ERIKSEEN. Kyltin
+     * vastakokeet (`?kylttiosuma=0`) avaavat naapurin aihemerkin
+     * viuhkan, ja auki jäänyt viuhka on kartan oma tila: sen aikana
+     * kartan napautus SULKEE viuhkan eikä avaa mitään. MITATTU
+     * 17.9.2026: ilman tätä siivousta vartio 4b mittasi
+     * *"kohtia 0 / 5"*, koska sen napautus vain sulki edellisen
+     * viuhkan.
+     */
+    await sivu.evaluate(() => {
+      window.matkakirja.ui.pallolauta.nostot?.suljeViuhka?.();
+    });
+    await sivu.waitForTimeout(250);
     return { opas, sijaan };
   };
   /** Vastakokeen lippu päälle tai pois KESKEN AJON (ks. 7d:n perustelu). */
@@ -1074,12 +1171,27 @@ for (const ruutu of RUUDUT) {
         .map((r) => ({ id: r.id, perhe: r.perhe, d: et(r) }))
         .sort((a, b) => a.d - b.d).slice(0, 4);
       const oma = (l.turistiLaatikot?.() ?? [])[0] ?? null;
+      const piirretty = (l.turistiPiirretty?.() ?? [])[0] ?? null;
+      const elementit = [...document.querySelectorAll('.pallolauta-turisti-info')].map((e) => {
+        const b = e.getBoundingClientRect();
+        return `${e.className} @ ${(b.left + b.right) / 2 - koti.left}`
+          + `,${(b.top + b.bottom) / 2 - koti.top}`;
+      });
       return {
+        piirretty,
+        elementit,
         rivit,
         kyltti: oma ? { d: et(oma), x0: oma.x0, y0: oma.y0, x1: oma.x1, y1: oma.y1 } : null,
         kohta: { x: kx, y: ky },
       };
     }, [tPiste.x, tPiste.y]);
+    tieto(`${ruutu.nimi} · kyltin elementit DOMissa`,
+      ankkurinNaapurit.elementit.join(' | ') || 'ei yhtään');
+    tieto(`${ruutu.nimi} · osumatestin piirretty laatikko`,
+      ankkurinNaapurit.piirretty
+        ? `${ankkurinNaapurit.piirretty.x0.toFixed(1)},${ankkurinNaapurit.piirretty.y0.toFixed(1)} → `
+          + `${ankkurinNaapurit.piirretty.x1.toFixed(1)},${ankkurinNaapurit.piirretty.y1.toFixed(1)}`
+        : 'EI SAATAVILLA (osumatesti käyttää kaavaa)');
     tieto(`${ruutu.nimi} · ankkurin lähimmät osumalaatikot`,
       ankkurinNaapurit.rivit.map((r) => `${r.id}[${r.perhe}] ${r.d.toFixed(1)} px`).join(', '));
     tieto(`${ruutu.nimi} · napautuspiste vs. kyltin osumalaatikko`,
@@ -1340,6 +1452,7 @@ for (const ruutu of RUUDUT) {
    * tarkennus) — vartio ei siis vaadi nimeä paikalleen vaan kyltin
    * vapaaksi. Vastakoe on 7h: `?kylttilaatikko=0` palauttaa pisteen.
    */
+  tieto(`${ruutu.nimi} · kyltin asento vakiintui`, asettuiKohtaan || 'ei kylttiä');
   const varaus = m.turistiVaraus;
   const limittyyLaatikko = (a2, b2) => Boolean(a2) && Boolean(b2)
     && a2.x0 < b2.x1 && b2.x0 < a2.x1 && a2.y0 < b2.y1 && b2.y0 < a2.y1;

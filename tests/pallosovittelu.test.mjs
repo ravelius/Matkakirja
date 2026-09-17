@@ -239,10 +239,17 @@ test('turisti-infon kyltti on sovittelun este ja sen varaus on koko kyltti', () 
   assert.match(lauta, /return \[nostonLaatikko\(p, KYLTIN_LADONTA\)\];/);
   assert.match(lauta, /const KYLTIN_LADONTA = \{\n {4}kaupunki: true,/);
   assert.match(lauta, /nimi: TURISTI_INFO_NIMIO,/);
-  // 4. Sama laatikko palvelee sekä ladontaa että osumatestiä.
+  /*
+   * 4. KAKSI LAATIKKOA, KUMPIKIN OMAAN TEHTÄVÄÄNSÄ. Ladonta ja
+   *    sovittelu käyttävät KAAVAA (sama luku joka koneella, ei odota
+   *    rasteria), osumatesti PIIRRETTYÄ laatikkoa (sormi osuu siihen,
+   *    mikä ruudulla on, myös kesken merkkikerroksen tweenin). Levossa
+   *    ne ovat sama laatikko.
+   */
   assert.match(lauta, /return kyltinLaatikot\(\);/);
-  assert.match(lauta,
-    /if \(!kyltinLaatikot\(\)\.some\(\(r\) => laatikonEtaisyys\(kohta, r\) <= KYLTIN_MUSTEEN_VARA_PX\)\) \{/);
+  assert.match(lauta, /turistiLaatikot: \(\) => kyltinLaatikot\(\),/);
+  assert.match(lauta, /const laatikot = kyltinPiirretty\(d\) \?\? kyltinLaatikot\(\);/);
+  assert.match(lauta, /turistiPiirretty: \(\) => kyltinPiirretty\(/);
   // 5. Vastakoe palauttaa 1 x 1 px:n pisteen (merkin svg:n oma mitta).
   assert.match(lauta, /if \(!pallonSaantoKaytossa\('kylttilaatikko'\)\) \{/);
 });
@@ -253,16 +260,50 @@ test('turisti-infon kyltti on sovittelun este ja sen varaus on koko kyltti', () 
  */
 test('turisti-infon kyltti valitsee vapaan asennon ennen nimiladontaa', () => {
   const lauta = lue('../js/pallolauta/lauta.js');
+  const nostot = lue('../js/pallolauta/nostot.js');
   const kaupunkinosto = lue('../js/kaupunkinosto.js');
-  // 1. Asennot ovat lista, jonka ensimmäinen on entinen paikka.
+  // 1. Asennot ovat kiinteä, järjestetty lista — sama joka koneella.
   assert.match(kaupunkinosto, /export const TURISTI_INFON_ASENNOT = Object\.freeze\(\[/);
   assert.match(kaupunkinosto, /Object\.freeze\(\{ dx: 36, dy: 16 \}\),/);
-  // 2. Este on vain se, mikä EI riipu kyltistä (kiinteä muste, kaupungin piste).
-  assert.match(lauta, /const paivitaTuristiInfo = \(kiinteaMuste = \[\]\) => \{/);
-  assert.match(lauta, /const infoTulos = paivitaTuristiInfo\(nostoTulos\.laatikot\);/);
-  // 3. Edellinen asento kokeillaan ensin (ei heilu ladonnasta toiseen).
-  assert.match(lauta, /const jarjestys = \[asennot\[kyltinAsento\] \?\? asennot\[0\], \.\.\.asennot\];/);
-  assert.match(lauta, /kyltinAsento = Math\.max\(0, asennot\.indexOf\(asento\)\);/);
+  /*
+   * 2. ASENTO ON KAMERAN JA DATAN FUNKTIO, EI LADONTAHISTORIAN
+   *    (mitattu 17.9.2026: GitHub Actionsin ajo 35201833942 antoi
+   *    savuke-pariisi-lahizoomista 72/74 samalla koodilla, joka on
+   *    nopealla koneella 74/74). `nostot.laatikot()` lasketaan datumin
+   *    dx/dy:llä eli EDELLISEN sovittelun tuloksella, joten esteistö
+   *    riippui siitä, montako ladontakierrosta kone oli ehtinyt ajaa.
+   *    Esteenä ovat nyt merkkien ikonit OMISSA paikoissaan, ja ankkuri
+   *    mitataan koko musteesta nimiöineen — molemmat luetaan RIVILTÄ,
+   *    koska sovittelu kirjoittaa tuloksensa DATUMIIN.
+   */
+  assert.match(lauta, /const paivitaTuristiInfo = \(kiinteaMuste = \[\], omaMuste = \[\]\) => \{/);
+  assert.match(lauta,
+    /const infoTulos = paivitaTuristiInfo\(nostot\.omatIkonilaatikot\(\), nostot\.omaMuste\(\)\);/);
+  assert.match(nostot, /omatIkonilaatikot: \(\) => omatLaatikot\(\),/);
+  assert.match(nostot, /omaMuste: \(\) => omatLaatikot\(\{ nimiot: true \}\),/);
+  assert.match(nostot, /omatLaatikot = \(\{ nimiot = false \} = \{\}\) => \[/);
+  assert.match(nostot, /kylki: r\.puoli \?\? 'oikea',/);
+  assert.match(nostot, /nimio: nimiot \? Boolean\(r\.nimioNakyy && r\.nimi\) : false,/);
+  // 2b. Kyltin ANKKURI ei jää noston musteen alle (nimiö mukaan luettuna).
+  assert.match(lauta, /if \(omaMuste\.some\(\(e\) => piste\.x >= e\.x0 && piste\.x <= e\.x1/);
+  /*
+   * 2c. KYLTIN LAATIKKO EI VÄISTÄ NIMIÖITÄ EIKÄ SORMEN MITTAA. Kokeiltu
+   *     17.9.2026: kun esteinä oli koko muste nimiöineen ja vielä
+   *     LAPUN_KOSKETUSVARA_PX väljästi, Pariisissa kaikki oikean puolen
+   *     asennot menivät tukkoon, kyltti siirtyi vasemmalle ja vei tilan
+   *     aihenoston nimiöltä (savuke-pariisi-lahizoom 70/74, vartiot 3e4
+   *     ja 3i punaisina). Napautuksen työnjako hoidetaan siksi
+   *     osumatestissä, ei esteistöä paisuttamalla.
+   */
+  assert.match(lauta,
+    /const esteet = kaupunginPiste \? \[\.\.\.kiinteaMuste, kaupunginPiste\] : \[\.\.\.kiinteaMuste\];/);
+  /*
+   * 3. EI MUISTIA. Kun syötteessä ei ole takaisinkytkentää, sama kamera
+   *    antaa saman asennon joka kierroksella — edellisen asennon muisti
+   *    vain lukitsisi hitaan koneen ensimmäisen, väärän valinnan.
+   */
+  assert.ok(!/kyltinAsento/.test(lauta), 'kyltin asennolla ei ole muistia');
+  assert.match(lauta, /for \(const asento of asennot\) \{/);
   // 4. Kyltti valitaan ENNEN nimiladontaa, joka väistää sitä.
   const kyltti = lauta.indexOf('const infoTulos = paivitaTuristiInfo(');
   const nimet = lauta.indexOf('const nimiTulos = nimet.lado(');

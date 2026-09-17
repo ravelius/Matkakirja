@@ -248,6 +248,89 @@ se joskus palaa: kyltin ankkurissa oleva elementti ja sen
 `pointer-events`, ankkurin lähimmät osumalaatikot etäisyyksineen, ja
 napautuspisteen etäisyys kyltin omaan osumalaatikkoon (nyt 0,0 px).
 
+## 7b. Actions-ajoituskorjaus — sama koodi, hitaampi kone, 72/74
+
+GitHub Actionsin ajo **35201833942** (job 105138302912) antoi
+`savuke-pariisi-lahizoom`ista **72/74**, kun sama koodi oli tässä
+koneessa 74/74. Punaiset olivat
+
+* **7c. puhelin** — *"napautus kyltin päälle avaa turisti-infon — auki
+  sen sijaan: viuhka:aihemerkki:nosto:syvennys-pariisi-impressionistit"*
+* **7e. tyopoyta** — *"kyltin laatikko on vapaa — nimiä 1"*
+
+Vika ei siis ollut säännössä vaan siinä, mitä ja milloin mitataan.
+Ajoitusvika ei näy nopealla koneella lainkaan, joten savukkeeseen tehtiin
+ensin tapa hidastaa se esiin: **`SAVUKE_HIDASTUS=<kerroin>`** kytkee
+CDP:n `Emulation.setCPUThrottlingRate`-hidastuksen (oletuksena pois,
+tavallinen ajo pysyy nopeana). Kertoimella 4 punaiset toistuivat tässä
+koneessa — ja vasta sitten niitä korjattiin.
+
+**Neljä juurisyytä, kaikki mitattuja:**
+
+1. **Osumatesti mittasi laskettua laatikkoa, pelaaja näki tweenin.**
+   Merkkikerros tweenaa elementin uuteen paikkaan
+   (`htmlTransitionDuration`), joten hitaalla koneella kyltin PIIRROS on
+   napautushetkellä eri paikassa kuin kaava. Nyt osumatesti lukee
+   **piirretyn** laatikon (`kyltinPiirretty`, siirtoryhmän
+   `getBoundingClientRect`) ja palaa kaavaan vain, jos elementtiä ei ole;
+   ladonta ja sovittelu käyttävät edelleen KAAVAA, joka ei odota
+   rasteria. Mitattu levossa: kaava ja piirros eroavat **≤ 1 px**
+   (390 px: piirros 212,421 → 309,442, kaava 212,421 → 309,443).
+2. **Kyltin asento riippui ladontahistoriasta.** `nostot.laatikot()`
+   lasketaan datumin `dx`/`dy`:llä eli EDELLISEN sovittelun tuloksella,
+   joten asento riippui siitä, montako ladontakierrosta kone oli ehtinyt
+   ajaa — ja asennon MUISTI (`kyltinAsento`) lukitsi hitaan koneen
+   ensimmäisen, väärän valinnan. Nyt esteinä ovat merkkien laatikot
+   **omissa paikoissaan** (`nostot.omatIkonilaatikot`, ankkurin este
+   `nostot.omaMuste` nimiöineen) ja muisti on poistettu: asento on
+   kameran ja datan funktio, ei ladontahistorian. Asetukset luetaan
+   RIVILTÄ eikä datumilta, koska sovittelu kirjoittaa tuloksensa
+   datumiin.
+3. **Savuke mittasi liikkuvaa kohdetta.** Odotus katsoi vain kaavan
+   laatikkoa, joka on paikallaan heti kameran pysähdyttyä. Mitattu
+   hidastettuna 1400 px: kyltin elementti liikkui **195 px** kahden
+   peräkkäisen mittauksen välissä, sormen piste luettiin vanhasta
+   paikasta ja napautus meni *Kyyhkyposti…*-viuhkaan (etäisyys
+   napautuspisteestä kyltin laatikkoon **179,6 px**). `odotaKyltinAsento`
+   odottaa nyt kaavan, PIIRROKSEN ja NIMILADONNAN vakiintumista (kaksi
+   samaa peräkkäistä lukemaa) — paikkoja, ei väitteitä. Sama odotus
+   korjasi 7e:n: hitaalla koneella kaupungin nimi oli vielä edellisen
+   kierroksen paikassa, vaikka kyltti oli jo omassaan.
+4. **Kyltin 4 px:n vara valtasi noston osumapinnan.** Löytyi tämän työn
+   aikana: `savuke-pallo-nostolaput` putosi 8/8:sta **6/8:aan**.
+   Mitattu Bukarestissa: kyltti asettui laatikkoon 214,396 → 283,411 ja
+   Strousbergin lapun sormi kohtaan 250,395 — **1 px** kyltin
+   laatikosta, **8 px** lapun musteesta. Kyltti vei napautuksen,
+   matkustusopas jäi auki ja nielaisi loputkin napautukset (kaikki rivit
+   *"ei mitään"*). `KYLTIN_MUSTEEN_VARA_PX` on pyöristysvaraa eikä
+   kyltin alaa, joten kyltin OMALLA musteella (etäisyys 0) kyltti voittaa
+   kuten ennen, mutta pelkän varan varassa se väistää nostoa, jonka
+   osumapinnalla sormi on.
+
+**Kokeiltu ja hylätty, koska mitattiin kalliiksi:** esteistön
+laajentaminen koko musteeseen nimiöineen ja vielä sormen mitan
+(`LAPUN_KOSKETUSVARA_PX`) verran väljästi. Pariisissa kaikki kuusi oikean
+puolen asentoa menivät silloin tukkoon, kyltti siirtyi kaupungin
+vasemmalle puolelle ja vei tilan aihenoston nimiöltä: savuke **70/74**,
+vartiot 3e4 ja 3i punaisina (4/5 nimiötä). Napautuksen työnjako kuuluu
+siis osumatestiin, ei esteistön paisuttamiseen.
+
+**Mitatut luvut hidastettuna (`SAVUKE_HIDASTUS=4`):**
+
+| mitta | ENNEN | JÄLKEEN |
+|---|---|---|
+| `savuke-pariisi-lahizoom`, hidastettu ×4 | 72/74 (Actions) → **73/74** tässä koneessa | **74/74** |
+| napautuspiste → kyltin osumalaatikko, 390 px | 17,2 px | **0,0 px** |
+| napautuspiste → kyltin osumalaatikko, 1400 px | 183,8 px / 179,6 px | **0,0 px** |
+| kyltin napautus, 1400 px | avasi viuhkan (*Kyyhkyposti…*) | **avasi oppaan (Matkailijan Pariisi)** |
+| kyltin elementin liike kahden mittauksen välissä | 195 px | **0 px (vakiintunut)** |
+| 7e: nimiä kyltin varauksen päällä, 1400 px | 1 | **0 / 1** |
+| `savuke-pallo-nostolaput` | 6/8 (työn aikainen regressio) | **8/8** |
+
+`savuke-pallo-nostolaput` sai lisäksi diagnostiikkarivin: kun napautus ei
+avaa mitään, rivi kertoo sormen pisteen, auki olevat dialogit, auki
+olevan viuhkan ja kyltin laatikon — juuri ne, joilla juurisyy 4 löytyi.
+
 ## 8. Ajot
 
 Kaikki 17.9.2026, tässä haarassa, etualalla yksi kerrallaan.
@@ -274,6 +357,8 @@ Kaikki 17.9.2026, tässä haarassa, etualalla yksi kerrallaan.
 | `tests/osumareititys.test.mjs` | kaksi uutta testiä: säännön kaksi mittaa `musteenVoittaja`lla laskettuna ja sääntöjen järjestys lähteessä |
 | `tests/pallosovittelu.test.mjs` | kyltti sovittelun esteenä, varaus kaavasta, vastakokeen lippu; uusi testi asennon valinnasta ja ladonnan järjestyksestä |
 | `tools/savukkeet/savuke-pariisi-lahizoom.mjs` | 7c vartioksi, uudet 7e, 7f, 7g, 7h ja 7i; ladonnan laatikkojoukot ja kolme napautusdiagnostiikkariviä mittaukseen |
+| `tools/savukkeet/savuke-pariisi-lahizoom.mjs` *(7b)* | `SAVUKE_HIDASTUS`-hidastus (CDP), `odotaKyltinAsento` (kaava + piirros + nimiladonta), INFO-rivit piirretystä laatikosta ja vakiintuneesta asennosta, viuhkan sulku vastakokeiden jälkeen |
+| `tools/savukkeet/savuke-pallo-nostolaput.mjs` *(7b)* | diagnostiikkarivi: mikä vei napautuksen (sormen piste, dialogit, viuhka, kyltin laatikko) |
 | `tools/savukkeet/savuke-kaupunkipopup.mjs` | kerroinvartio kaksiosaisesta yksiosaiseksi + uusi saapumismittavartio |
 | `tools/savukkeet/README.md` | savukkeen vartiorivit ja tunnettu punainen |
 | `docs/raportit/viesti-fable-turisti-osuma-20260917.md` | tämä |

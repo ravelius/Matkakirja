@@ -980,6 +980,26 @@ export function luoNostot({
   };
   let laskeLaatikot = () => { laatikot = []; };
   /*
+   * MERKKIEN MUSTE OMISSA PAIKOISSAAN — ILMAN SOVITTELUN SIIRTOJA
+   * (omistaja 17.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 31
+   * TARKENNUS 3; vika mitattu GitHub Actionsin ajossa 35201833942).
+   *
+   * `laatikot` (kiinteä muste) lasketaan datumin `dx`/`dy`:llä, eli
+   * EDELLISEN ladonnan sovittelun tuloksella. Se on oikein nimiladonnan
+   * varauksille — ne kuvaavat sitä, mikä ruudulla on — mutta se on
+   * VÄÄRÄ lähde turisti-infon kyltin asennon valinnalle: silloin
+   * asento riippuu siitä, kuinka monta ladontakierrosta kone on ehtinyt
+   * ajaa, ja hidas kone päätyy eri asentoon kuin nopea. Nämä laatikot
+   * ovat merkin OMASSA paikassa, joten ne riippuvat vain kamerasta ja
+   * datasta — sama kone tai toinen, sama tulos.
+   *
+   * KAKSI LUKEMAA SAMASTA KAAVASTA: `{ nimiot: false }` on pelkkä
+   * symbolin ruutu (kyltin LAATIKKO ei saa mennä sen päälle) ja
+   * `{ nimiot: true }` koko muste nimiöineen (kyltin ANKKURI ei saa
+   * jäädä sen alle) — ks. js/pallolauta/lauta.js paivitaTuristiInfo.
+   */
+  let omatLaatikot = () => [];
+  /*
    * AUKI OLEVA VIUHKA: { avain, p, uloinOsuus } tai null. Viuhka
    * sulkeutuu kartan napautuksesta (js/pallolauta/lauta.js
    * napautaPintaan), zoomista ja panoroinnista (paivita vertaa
@@ -1730,6 +1750,27 @@ export function luoNostot({
         ...nakyvat.filter((r) => r.poltettu).map((r) => nostonLaatikko(r.p, r)),
       ];
     };
+    /*
+     * ASENTO LUETAAN RIVILTÄ, EI DATUMILTA. Sovittelu kirjoittaa
+     * tuloksensa DATUMIIN (`datum.puoli`, `datum.nimioNakyy`,
+     * `datum.dx/dy`), ja juuri se on se ladontahistoria, jota kyltin
+     * asento ei saa nähdä. Rivi (`r`) rakennetaan joka ladonnassa
+     * datasta, joten sen kylki ja nimiö ovat merkin OMAT.
+     */
+    omatLaatikot = ({ nimiot = false } = {}) => [
+      ...ikonit.map(({ r, datum }) => {
+        const asetus = {
+          dx: 0,
+          dy: 0,
+          kylki: r.puoli ?? 'oikea',
+          nimio: nimiot ? Boolean(r.nimioNakyy && r.nimi) : false,
+        };
+        return r.perhe === 'aihemerkki'
+          ? aihemerkinLaatikko(r.p, datum, asetus)
+          : nostonLaatikko(r.p, r, asetus);
+      }),
+      ...nakyvat.filter((r) => r.poltettu).map((r) => nostonLaatikko(r.p, r)),
+    ];
     laskeLaatikot();
     sovittelu = {
       siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0, lappuja: lappuja.length,
@@ -1900,6 +1941,18 @@ export function luoNostot({
     portti: () => (portti ? { ...portti, uloinOsuus: viimeisinUloinOsuus } : null),
     /** Kiinteän musteen laatikot nimiladonnan varauksiksi (ks. paivita). */
     laatikot: () => laatikot,
+    /**
+     * Ikonien laatikot MERKKIEN OMISSA paikoissa, ilman sovittelun
+     * siirtoja (ks. omatLaatikot yllä). Turisti-infon kyltin asento
+     * luetaan näistä, jotta se ei riipu ladontakierrosten määrästä
+     * eikä koneen nopeudesta.
+     */
+    omatIkonilaatikot: () => omatLaatikot(),
+    /**
+     * Sama omissa paikoissaan, mutta NIMIÖINEEN: koko muste, jonka
+     * päälle kyltin ankkuri ei saa jäädä (ks. paivitaTuristiInfo).
+     */
+    omaMuste: () => omatLaatikot({ nimiot: true }),
     /**
      * Kohdemerkkien portin luku juuri nyt (ks. lehdenOsuus): sama maa,
      * sama lehti ja sama jakolasku kuin merkkien keräyksessä. Laudan

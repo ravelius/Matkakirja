@@ -274,10 +274,34 @@ test('lahinMerkki kysyy kyltin mustetta ennen vanhaa turisti-info-sääntöä', 
   assert.match(lauta,
     /const musteeseenOsunut = \(lat, lng, vara = LAPUN_KOSKETUSVARA_PX\) => \{/);
   assert.match(lauta, /return musteenVoittaja\(kohta, ehdokkaat, vara\);/);
-  // Kyltin oma muste mitataan sen PIIRRETYSTÄ laatikosta, vain pinnan
-  // kautta kulkevan napautuspisteen heiton verran armollisemmin.
+  /*
+   * KYLTIN OMA MUSTE MITATAAN SIITÄ, MINKÄ PELAAJA NÄKEE. Merkkikerros
+   * tweenaa kyltin uuteen paikkaan, ja hitaalla koneella tween on
+   * napautushetkellä yhä kesken (mitattu 17.9.2026, GitHub Actions
+   * 35201833942: napautuspiste oli 183,8 px:n päässä LASKETUSTA
+   * laatikosta, ja napautus avasi naapurin viuhkan). Osumatesti lukee
+   * siis ensin PIIRRETYN laatikon ja palaa kaavaan vain, jos elementtiä
+   * ei vielä ole.
+   */
+  assert.match(lauta, /const laatikot = kyltinPiirretty\(d\) \?\? kyltinLaatikot\(\);/);
   assert.match(lauta,
-    /if \(!kyltinLaatikot\(\)\.some\(\(r\) => laatikonEtaisyys\(kohta, r\) <= KYLTIN_MUSTEEN_VARA_PX\)\) \{/);
+    /const etaisyys = Math\.min\(\.\.\.laatikot\.map\(\(r\) => laatikonEtaisyys\(kohta, r\)\)\);/);
+  assert.match(lauta, /if \(!\(etaisyys <= KYLTIN_MUSTEEN_VARA_PX\)\) return null;/);
+  /*
+   * VARA ON PYÖRISTYSVARAA, EI VALTAUSTA. Kyltin OMALLA musteella
+   * (etäisyys 0) kyltti voittaa kuten ennen — se on omistajan
+   * Chambord-päätös — mutta pelkän varan varassa se väistää nostoa,
+   * jonka osumapinnalla sormi on. MITATTU 17.9.2026
+   * (savuke-pallo-nostolaput, Bukarest): ilman tätä kyltti nappasi
+   * nimilapun napautuksen yhden pikselin päästä laatikkonsa ulkopuolelta
+   * ja jätti matkustusoppaan auki — vartiot 6 ja 7 putosivat 8/8:sta
+   * 6/8:aan.
+   */
+  assert.match(lauta,
+    /if \(etaisyys > 0 && musteeseenOsunut\(lat, lng\)\?\.laji === 'nosto'\) return null;/);
+  // Piirretty laatikko luetaan siirtoryhmästä — samasta, jota tween liikuttaa.
+  assert.match(lauta,
+    /d\?\.el\?\.querySelector\?\.\('\.pallolauta-turisti-info-siirto'\)/);
   assert.ok(KYLTIN_MUSTEEN_VARA_PX > 0 && KYLTIN_MUSTEEN_VARA_PX < LAPUN_KOSKETUSVARA_PX / 2,
     'kyltin vara on selvästi noston kosketusvaraa pienempi');
   const uusi = lauta.indexOf("const kyltti = kyltinMusteella(lat, lng);");
