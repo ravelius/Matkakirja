@@ -24,25 +24,47 @@ kirjoita `import ... from '../../node_modules/...'`.
 
 ## Actions-ajo
 
-`.github/workflows/savukkeet.yml` ajaa savukkeet rinnakkain
-matriisina Actionsissa (omistaja 17.9.2026): `pull_request`-laukaisu
-ajaa julkaisusarjan jokaiselle PR:lle (tulos näkyy PR:ssä kuten
-Testit), ja `workflow_dispatch` antaa valita sarjan (`julkaisu`,
-`kaikki` tai pilkuerotellun tiedostolistan) ja haaran. Sarjan
-NAKYMAT/KOOT/VAIN_AVAUS-muuttujat ja tunnetut punaiset asuvat YHDESSÄ
-paikassa, `tools/savukkeet/sarjat.json`:ssa, jota lukee
-`tools/savukkeet/rakenna-matriisi.mjs` (rakentaa matriisin JSONin) ja
-`tools/savukkeet/vertaa-tulos.mjs` (vertaa ajon FAIL-rivejä tunnettuun
-listaan, huomauttaa `::warning::` uusista punaisista). Kuvakaappaukset
-ja tuloslataus artifaktoituvat per savuke, ja yhteenveto-job kirjoittaa
-taulukon ajon yhteenvetoon (Summary-välilehti). Neljä savuketta
-(`savuke-pariisi-lahizoom`, `savuke-pallo-nostolaput`,
-`savuke-nimikyltti`, `savuke-kaupunkipopup`) hakevat Chromiumin
-kiinteästä `/opt/pw-browsers/chromium`-polusta eivätkä lue
-`CHROMIUM`-muuttujaa — työnkulku jäljittelee tämän polun Actions-
-ajurilla asentamisen jälkeen (symlink), savukkeiden omaa koodia ei
-muutettu. Aja paikallisesti sama matriisi: `node
-tools/savukkeet/rakenna-matriisi.mjs julkaisu`.
+`.github/workflows/savukkeet.yml` ajaa savukkeet KAHTA REITTIÄ
+(omistaja 17.9.2026, Raamattu: AGENTIT ... TARKENNUS 6):
+
+1. **Mac Studion self-hosted-runner (pääreitti)** — job `savukkeet-mac`
+   ajaa koko sarjan YHDESSÄ jobissa `node
+   tools/savukkeet/aja-sarja.mjs <sarja> <tuloskansio>` -komennolla.
+   Skripti lukee saman matriisin kuin Actions (`rakennaMatriisi()`
+   `rakenna-matriisi.mjs`:stä) ja käynnistää savukkeet rinnakkain
+   lapsiprosesseina (`SAVUKE_RINNAKKAIN`, oletus 6; aikakatto
+   `SAVUKE_AIKAKATTO_MS`, oletus 10 min/savuke). Se kirjoittaa per
+   savuke `savuke-<nimi>.log` ja `tulos-<nimi>.json`, ajaa
+   `vertaa-tulos.mjs`:n, tulostaa `kirjoita-yhteenveto.mjs`:n taulukon
+   ja palauttaa 1 vain UUSISTA punaisista. Koneella on node ja
+   Playwrightin selain valmiina (`CHROMIUM`, `PLAYWRIGHT_JS`
+   työnkulun env:ssä) — ei setup-nodea, ei npm ci:tä, ei
+   selainasennusta. Julkaisusarja ajaa ~6 min seinäkelloa.
+2. **Ubuntu-matriisi (vain fork-PR:t)** — vanhat jobit
+   `lista`/`savuke`/`yhteenveto` ajavat 12 rinnakkaista GitHub-jobia
+   ja asentavat itse noden + selaimen. Self-hosted-kone ei saa ajaa
+   fork-PR:iä (repo on julkinen), joten fork saa tämän reitin.
+
+`pull_request`-laukaisu on rajattu PELIKOODIN poluille (`index.html`,
+`sw.js`, `js/**`, `css/**`, `tools/savukkeet/**`, työnkulku itse) —
+dokumentti- tai raporttimuutos ei käynnistä savukkeita.
+`workflow_dispatch` antaa valita sarjan (`julkaisu`, `kaikki` tai
+pilkuerotellun tiedostolistan) ja haaran.
+
+Sarjan NAKYMAT/KOOT/VAIN_AVAUS-muuttujat ja tunnetut punaiset asuvat
+YHDESSÄ paikassa, `tools/savukkeet/sarjat.json`:ssa, jota lukee
+`tools/savukkeet/rakenna-matriisi.mjs` (matriisi sekä CLI:nä että
+funktiona) ja `tools/savukkeet/vertaa-tulos.mjs` (vertaa FAIL-rivejä
+tunnettuun listaan, `::warning::` uusista punaisista).
+
+Portit: useimmat savukkeet kuuntelevat `listen(0)`:lla, osalla on
+kiinteä portti. `aja-sarja.mjs` antaa jokaiselle savukkeelle oman
+`PORTTI`-arvon (8800 + indeksi) ja varoittaa, jos kaksi sarjan
+savuketta jakaisi kiinteän portin ilman `PORTTI`-tukea.
+
+Aja paikallisesti koko sarja:
+`SAVUKE_RINNAKKAIN=6 node tools/savukkeet/aja-sarja.mjs julkaisu /tmp/savukkeet`
+(tai pelkkä matriisi: `node tools/savukkeet/rakenna-matriisi.mjs julkaisu`).
 
 ## Ohituksessa: vanha kartta pois käytöstä (7.9.2026)
 
