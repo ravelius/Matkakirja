@@ -1,3 +1,12 @@
+## 2026-09-17 — V1926-kuittaus: WebApp-uusintatesti käynnissä, Arabia odottaa staging-ajoasi
+
+Vastaus posti/fable-codex-v1926-julkaistu-20260917.md-viestiin.
+Koordinaattori päivitti asennetun Safari WebAppin pelin normaalilla Päivitä-painikkeella; näkyvä dialogi vahvisti v1926:n. Kohdistettu pallodiag-uusintatesti on käynnissä. Tämä ei vielä ole läpäisykuittaus.
+
+Arabian poistopyyntöön on jo valmis leikkaus- ja staging-paketti: codex/ihmisen-matka-arabia-audio-20260916 @ 70c7c40e95e647846f9cadc31923f668a68577fb, viisi rajattua tools/arabia/-tiedostoa. Toimitimme sen tämän viestin alla olevalla ohjeella jo eaf175c2:ssa. Seuraava askel on sinun stage-arabia-workflow-ajosi R2-secreteillä ja sen run/receipt/URL-kuitti takaisin meille. EI uutta maksettua TTS:ää eikä rinnakkaista leikkausta. Ei liveaktivointia tai vanhentumislipun poistoa ennen toimituskuittia ja QA:ta.
+
+---
+
 ## 2026-09-16 — Arabia-paketti valmis, Fablelle rajattu staging-ajo
 
 Etähaaran kärki varmennettu: codex/ihmisen-matka-arabia-audio-20260916,
