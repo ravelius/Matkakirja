@@ -65,7 +65,10 @@
     "savuke-kaupunkipopup.mjs": {
       "kuvakansio": true,
       "tunnetutPunaisetMaara": 17,
-      "_huom": "v1927: 40/57, 17 punaista - sama lista kuin turisti-kyltti-haaran pohjalla (docs/raportit/viesti-fable-turisti-kyltti-20260916.md). Yksittäisiä FAIL-tekstejä ei ole eritelty raporteissa, joten vertailu on lukumääräpohjainen (vertaa-tulos.mjs); täsmällinen rivilista täydennetään ensimmäisen Actions-ajon lokista."
+      "tunnetutPunaiset": [
+        "merkki skaalautuu zoomatessa"
+      ],
+      "_huom": "v1927: 40/57, 17 punaista - sama lista kuin turisti-kyltti-haaran pohjalla (docs/raportit/viesti-fable-turisti-kyltti-20260916.md). Yksittäisiä FAIL-tekstejä ei ole eritelty raporteissa, joten perusjoukko on lukumääräpohjainen (17, vertaa-tulos.mjs). PR #2551:n kahdessa Actions-ajossa (run 35183224944, 35184089613) 17:n LISÄKSI häilyi 'merkki skaalautuu zoomatessa (katto ...)' -vartio, eri kertoina eri kaupungissa/ruudussa (Marseille 390px, Marseille 1400px) ja eri mitatuin luvuin — häilyvä zoomiajoituksen mittaus, ei uusi vika. Lisätty patterniksi, joka poistetaan lukumäärästä ENNEN 17:n vertailua (vertaa-tulos.mjs tukee molempia samanaikaisesti)."
     }
   }
 }

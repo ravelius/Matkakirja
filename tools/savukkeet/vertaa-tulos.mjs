@@ -70,36 +70,49 @@ try {
 }
 const maara = maaraStr && maaraStr !== 'null' && maaraStr !== '' ? Number(maaraStr) : null;
 
+const tasmaaTunnettuun = (rivi) => tunnetut.some((p) => {
+  try {
+    return new RegExp(p).test(rivi);
+  } catch {
+    return rivi.includes(p);
+  }
+});
+
+// Kaksivaiheinen: ensin PATTERNIT (aina tunnettuja, riippumatta
+// näkymästä tai mitatusta luvusta — esim. savuke-kaupunkipopupin
+// häilyvä zoomivartio, joka osuu eri kertoina eri kaupunkiin/ruutuun),
+// sitten JÄLJELLE JÄÄVILLE lukumääräkatto, jos annettu (esim.
+// savuke-kaupunkipopupin 17 "vanhaa" tuntematonta yksittäin, joita ei
+// ole eritelty tekstinä — ks. sarjat.json). Näin patternit ja
+// lukumäärä voivat olla käytössä SAMANAIKAISESTI.
+const patternTunnetut = [];
+const patternUudet = [];
+for (const rivi of failRivit) {
+  if (tasmaaTunnettuun(rivi)) patternTunnetut.push(rivi);
+  else patternUudet.push(rivi);
+}
+
 let uudet = [];
 if (tunnetut.length) {
-  uudet = failRivit.filter((rivi) => !tunnetut.some((p) => {
-    try {
-      return new RegExp(p).test(rivi);
-    } catch {
-      return rivi.includes(p);
-    }
-  }));
-  for (const rivi of failRivit) {
-    const tunnettu = tunnetut.some((p) => {
-      try {
-        return new RegExp(p).test(rivi);
-      } catch {
-        return rivi.includes(p);
-      }
-    });
-    console.log(`  ${tunnettu ? '[tunnettu]' : '[UUSI]    '} ${rivi}`);
+  const merkki = (rivi) => {
+    if (tasmaaTunnettuun(rivi)) return '[tunnettu]';
+    return maara !== null ? '[?]       ' : '[UUSI]    ';
+  };
+  for (const rivi of failRivit) console.log(`  ${merkki(rivi)} ${rivi}`);
+}
+if (maara !== null) {
+  if (!tunnetut.length) for (const rivi of failRivit) console.log(`  [?] ${rivi}`);
+  if (patternUudet.length > maara) {
+    const kasvu = patternUudet.length - maara;
+    uudet = patternUudet.slice(maara);
+    console.log(`::warning::savuke ${tiedosto}: FAIL-määrä (patterneilla selittämättömät) kasvoi tunnetusta ${maara}:sta ${patternUudet.length}:aan (+${kasvu}) — tarkista lista, sarjat.json:n lukumäärä ei enää täsmää`);
+  } else if (patternUudet.length < maara) {
+    console.log(`INFO  savuke ${tiedosto}: FAIL-määrä (patterneilla selittämättömät) laski tunnetusta ${maara}:sta ${patternUudet.length}:aan — sarjat.json voi olla päivityksen tarpeessa`);
   }
+} else if (tunnetut.length) {
+  uudet = patternUudet;
   for (const rivi of uudet) {
     console.log(`::warning::savuke ${tiedosto}: uusi punainen — ${rivi}`);
-  }
-} else if (maara !== null) {
-  for (const rivi of failRivit) console.log(`  [?] ${rivi}`);
-  if (failRivit.length > maara) {
-    const kasvu = failRivit.length - maara;
-    uudet = failRivit.slice(maara);
-    console.log(`::warning::savuke ${tiedosto}: FAIL-määrä kasvoi tunnetusta ${maara}:sta ${failRivit.length}:aan (+${kasvu}) — tarkista lista, sarjat.json:n lukumäärä ei enää täsmää`);
-  } else if (failRivit.length < maara) {
-    console.log(`INFO  savuke ${tiedosto}: FAIL-määrä laski tunnetusta ${maara}:sta ${failRivit.length}:aan — sarjat.json voi olla päivityksen tarpeessa`);
   }
 } else {
   for (const rivi of failRivit) console.log(`  [ei tunnettuja punaisia] ${rivi}`);
