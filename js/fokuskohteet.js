@@ -126,6 +126,7 @@ import { FOKUSKOHTEET_DEU } from './packs/fokuskohteet-deu.js';
 import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
 import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
 import { NAKYVAT_KAUPUNGIT_FRA } from './packs/nakyvat-kaupungit-fra.js';
+import { HAHMOTELMA_FRA } from './packs/hahmotelma-fra.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -312,6 +313,17 @@ for (const [iso, kohteet] of Object.entries(MAASTOKOHTEET)) {
  * on tämän tiedoston oma taulu.
  */
 KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...NAKYVAT_KAUPUNGIT_FRA];
+
+/*
+ * RANSKAN HAHMOTELMAPISTEET (omistaja, KARTTAUUDISTUKSEN PAATOKSET 33:
+ * *"nostoja siis saisi mielellaan olla ympari Ranskaa … Voi aluksi
+ * vaikka vain hahmotella ne pisteet ja lisata pelkat pisteet kartalle
+ * ja tehda niille vain otsikko pop-upit."*). Rivit ovat tavallisia
+ * kartan kohteita — pelkkä otsikko ja alaotsikko, ei sisältöä — ja ne
+ * ovat kaikki aidosti kaupungin ulkopuolella (PAATOKSET 34 kohta 4).
+ * Liitos on tässä samasta syystä kuin kahdella edellisellä.
+ */
+KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...HAHMOTELMA_FRA];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
