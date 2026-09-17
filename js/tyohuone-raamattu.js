@@ -4505,7 +4505,7 @@ export const RAAMATTU = {
           + 'laukaisuun saman repon PR:ille ja ubuntu-matriisi jaa fork-'
           + 'PR:ille ja workflow_dispatchille. Tunnetut Mac-punaiset ovat '
           + 'velkaa: korjataan omina erina kun aikaa on. Tila: TOTEUTUNUT '
-          + '17.9.2026 klo 19.15 Suomen aikaa (v1933 mainissa, PR #2564): '
+          + '17.9.2026 klo 19.10 Suomen aikaa (v1933 mainissa, PR #2564): '
           + 'kolme eraa korjasivat pariisi-lahizoom 74/74, nostolaput 7/8, '
           + 'ihmisen-esitys 13/13 (Playwright-klikin siirto ja painallus eri '
           + 'kehyksiin; savuke odottaa pelin tilaa) ja pelin: kohdepisteen '
