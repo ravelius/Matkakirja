@@ -31,6 +31,7 @@ const {
   kuvatiedot, oletusIndeksi, paikkateksti, paivateksti, parasHavainto,
   rakennaLinssikehys,
 } = await import('../js/linssit/satelliitti.js');
+const LINSSIMODUULI = await import('../js/linssit/satelliitti.js');
 const { SATELLIITTI_KOHTEET, SATELLIITTI_LAHDE } = await import('../js/linssit/satelliitti-data.js');
 const tyokalu = await import('../tools/hae-satelliittihavainnot.mjs');
 
@@ -1224,4 +1225,32 @@ test('selitteen otsikkorivi on linssin vihreä, maa-osa harmaa', () => {
   assert.match(tyyli, /\.satelliitti-selite\.satelliitti-selite-kiinni \.satelliitti-selite-otsikko \{[\s\S]*opacity: 0\.7/);
   assert.ok(!/\.satelliitti-selite\.satelliitti-selite-kiinni \.satelliitti-selite-otsikko \{[^}]*color:/.test(tyyli),
     'kelattu otsikko saa oman värinsä ja menettäisi vihreän');
+});
+
+/* ═══ KOHDEPISTEET RUUDULLE ASTI (Raamattu, LISÄYS 13 kohta 36) ═══ */
+
+test('kohdepisteet asetetaan uudestaan, kunnes ne näkyvät DOMissa', () => {
+  const {
+    PISTEIDEN_UUSINTAVALI_MS, PISTEIDEN_UUSINTOJA,
+  } = LINSSIMODUULI;
+  /*
+   * Asennetussa macOS-WebAppissa `vaihe nimi=pisteet ok=1 ms=1` oli
+   * vihreä samalla kun ruudulla oli nolla pistettä: kutsu todistaa vain,
+   * että lista meni kirjastolle. Uusinta on ajastimella EIKÄ
+   * kehyspyynnöllä — kehykset olivat juuri se, mikä puuttui.
+   */
+  assert.ok(PISTEIDEN_UUSINTAVALI_MS > 0 && PISTEIDEN_UUSINTAVALI_MS <= 1000);
+  assert.ok(PISTEIDEN_UUSINTOJA >= 3);
+  // Uusinta loppuu ennen vartijan varhaista tarkistusta tai sen aikoihin.
+  assert.ok(
+    PISTEIDEN_UUSINTAVALI_MS * PISTEIDEN_UUSINTOJA <= LINSSIMODUULI.VARTIJAN_AIKAKATKO_MS,
+    'uusinta kestäisi yli vartijan aikakatkon',
+  );
+  assert.match(lahde, /const asetaPisteet = \(\) => lauta\?\.linssit\?\.merkit\?\./);
+  assert.match(lahde, /vaihe\('pisteet', asetaPisteet\)/);
+  assert.match(lahde, /setInterval\(\(\) => \{[\s\S]*?asetaPisteet\(\)/);
+  // Kehykset pakotetaan samalla: data yksin ei riitä ilman piirtoa.
+  assert.match(lahde, /avaruus\?\.pakotaKehys\?\.\(\)/);
+  // Kello siivotaan purkaessa, eikä se jää kuluttamaan taustalla.
+  assert.match(lahde, /pura: \(\) => \{[\s\S]*?lopetaPisteUusinta\(\)/);
 });
