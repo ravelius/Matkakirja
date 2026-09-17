@@ -50,6 +50,42 @@
  *       sisimmälläkin zoomilla 39,2 px eli alle sormen 44 px:n
  *       (mitattu 16.9.2026) — aihemerkkejä on siis oltava vähintään
  *       AIHEMERKKEJA_VAHINTAAN.
+ *   3d. AIHENOSTOJA ON TÄSMÄLLEEN NIIN MONTA KUIN PARIISISSA ON
+ *       AIHEITA, JOILLA ON ≥ 2 NOSTOA (PAATOKSET 27 TARKENNUS 2
+ *       kohta 7, omistaja 16.9.2026 klo 19.00 UTC: saman kaupungin
+ *       saman aiheen nostot yhdistetään AINA *"zoomista riippumatta -
+ *       ei vain limityksen perusteella"*). Odotus lasketaan RUUDULLA
+ *       olevista Pariisin nostoista eikä kirjoiteta vakioksi: joukko
+ *       riippuu siitä, mitkä nostot ovat poltettuja. Mitataan sekä
+ *       saapumisnäkymässä että lähizoomissa — sääntö ei saa riippua
+ *       zoomista.
+ *   3e. JOKAISELLA AIHENOSTOLLA ON NIMIÖ MUOTOA "Nimi…" (kohta 8:
+ *       *"tarkeimman noston nimella ja laittaa loppuun vain kolme
+ *       pistetta"*), ja nimiön runko on ryhmän ensimmäisen jäsenen
+ *       nimen alkuosa. Tärkein on paketin ensimmäinen LADONNASSA
+ *       (js/pallolauta/nostot.js `ladontaNro`), ei ruudulla, joten
+ *       nimi on sama saapumisnäkymässä ja lähizoomissa. Lukumäärää ei
+ *       ole (3e2: `.pallolauta-aihemerkki-luku` on 0 kappaletta).
+ *   3e3. OMISTAJAN OMA ESIMERKKI: Pariisin skandaalirykelmän
+ *       aihenoston nimiö on *"Mona Lisan varkaus…"* — sanatarkasti se
+ *       nimi, jonka omistaja kirjoitti tarkennukseen.
+ *   3f. YKSINÄINEN SAMAN AIHEEN NOSTO PYSYY OMANA NOSTONAAN ja
+ *       MAASTOKOHDE EI YHDISTY (kohdat 9 ja 6): yhdenkään aihenoston
+ *       jäsenenä ei ole maastokohdetta, ja aihe, jolla on Pariisissa
+ *       vain yksi nosto, ei saa aihenostoa.
+ *   3e4. NIMIÖ MYÖS NÄKYY LÄHIZOOMISSA: sovittelun viimeinen keino on
+ *       lapun piilotus, eikä yhdenkään Pariisin aihenoston nimiö saa
+ *       joutua sinne siinä näkymässä, josta päätös tehtiin.
+ *   3h. AIHENOSTOT EIVÄT PEITÄ TOISIAAN LÄHIZOOMISSA enempää kuin
+ *       AIHENOSTOJEN_LIMITYSKATTO sallii — ryhmitys ei saa vain
+ *       siirtää rykelmän ongelmaa merkkitasolle. Saapumisnäkymän luvut
+ *       ovat INFOna (koko Ranska 390 px:ssä).
+ *   3g. VASTAKOE `?aihekaupunki=0`: kun kaupungin AINA-yhdistys
+ *       otetaan pois, aihenostojen määrä EI enää vastaa aiheiden
+ *       määrää — lähizoomissa rykelmä hajoaa ja luku on liian pieni.
+ *       Lippu käännetään ilman uutta sivunlatausta
+ *       (history.replaceState + uusi ladonta), joten vastakoe mittaa
+ *       täsmälleen samaa näkymää kuin vartio 3d.
  *   3c. VASTAKOE `?aihemerkit=0`: ilman ryhmitystä rykelmän nimiöt
  *       menevät SAAPUMISNÄKYMÄSSÄ toistensa päälle (PAATOKSET 27:n
  *       oma limitysmittari; lähizoomin luvut INFOna, koska siellä
@@ -164,6 +200,62 @@ const PARIISIN_NOSTOT = [
  * väite on "rykelmä ryhmittyy yhä", ei tarkka lukumäärä.
  */
 const AIHEMERKKEJA_VAHINTAAN = 2;
+/** Kaupunki, jonka rykelmää mitataan (js/fokuskohteet.js nostonKaupunkiAvain). */
+const KAUPUNKI = 'pariisi';
+/** Kolme pistettä on yksi merkki (js/pallolauta/aihemerkit.js). */
+const ELLIPSI = '…';
+/** Omistajan sanatarkas esimerkki aihenoston nimiöstä (kohta 8). */
+const OMISTAJAN_ESIMERKKI = 'Mona Lisan varkaus';
+/*
+ * AIHENOSTOJEN LIMITYSKATTO. Aihenoston nimi on tärkeämpi kuin
+ * täydellinen ladonta (js/pallolauta/sovittelu.js AIHENOSTON NIMI EI
+ * KATOA NAAPURIN TAKIA): kun kaksi aihenostoa syntyy muutaman
+ * kymmenen pikselin päähän toisistaan ja molempien nimiö on toista
+ * sataa pikseliä pitkä, sovittelu valitsee mieluummin naapurin
+ * viereen ladotun nimen kuin nimettömän pallon. Katto on siksi
+ * MITATTU eikä nolla — luku on kirjattu raporttiin, ja sen KASVU on
+ * regressio.
+ */
+const AIHENOSTOJEN_LIMITYSKATTO = 1;
+
+/**
+ * AIHENOSTOJEN ODOTUS LASKETAAN NÄKYMÄSTÄ, EI VAKIOSTA (vartio 3d).
+ *
+ * PAATOKSET 27 TARKENNUS 2 kohta 7: kaupungin rykelmässä saman aiheen
+ * nostot yhdistetään AINA. Odotus on siis *"aiheiden määrä, joilla on
+ * Pariisissa vähintään kaksi ryhmittyvää nostoa"* — ja ryhmittyviä
+ * ovat elävät kohdenostot, joilla on aihe eivätkä ne ole kaupunkeja,
+ * nimikylttejä tai maastokohteita (kohta 6).
+ *
+ * Ehdokkaat kootaan kahdesta paikasta, koska ryhmään sulautunut nosto
+ * EI ole osumalistalla: yksin jääneet luetaan `osumat`ista ja
+ * ryhmittyneet aihemerkkien jäsentiedoista.
+ *
+ * @returns {{ehdokkaat:Array, aiheet:Map<string,number>, odotus:number}}
+ */
+function rykelmanAiheet(mit) {
+  const kelpaa = (r) => r.aihe && !r.poltettu && !r.maasto && !r.kaupunki
+    && r.kaupunkiAvain === KAUPUNKI;
+  const ehdokkaat = [
+    ...mit.osumat.filter((o) => o.perhe === 'nosto' && kelpaa(o)),
+    ...mit.aihemerkit.flatMap((a) => a.jasentiedot.filter((j) => kelpaa(j))),
+  ];
+  const aiheet = new Map();
+  for (const r of ehdokkaat) aiheet.set(r.aihe, (aiheet.get(r.aihe) ?? 0) + 1);
+  let odotus = 0;
+  for (const m of aiheet.values()) if (m >= 2) odotus += 1;
+  return { ehdokkaat, aiheet, odotus };
+}
+
+/** Pariisin aihenostot (muut kaupungit eivät kuulu tähän vartioon). */
+const pariisinAihenostot = (mit) => mit.aihemerkit
+  .filter((a) => a.jasentiedot.some((j) => j.kaupunkiAvain === KAUPUNKI));
+
+/** Kartan lyhennys ei katkaise kesken sanan: runko on nimen alkuosa. */
+const siisti = (t) => String(t ?? '').trim().replace(/\s+/gu, ' ');
+
+/** Leikkaavatko kaksi ruutulaatikkoa? */
+const limittyy = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
 /** Montako nostoa avataan aidolla napautuksella (vartio 4). */
 const NAPAUTUKSIA = 3;
 /** Rasterin oletusporras (js/fokusnosto-symbolit.js NOSTOSYM_PORTAAT[0]). */
@@ -317,10 +409,31 @@ const mittaa = (sivu) => sivu.evaluate(async () => {
     porras: sym.nostosymPorrasNyt(),
     merkit,
     aihemerkit: (n?.aihemerkit?.() ?? []).map((a) => ({
-      id: a.id, aihe: a.aihe, maara: a.maara, jasenet: a.jasenet.map((j) => j.id), x: a.x, y: a.y,
+      id: a.id,
+      aihe: a.aihe,
+      // Nimiö ja kaupunki: PAATOKSET 27 TARKENNUS 2 kohdat 7 ja 8.
+      nimi: a.nimi ?? '',
+      nimioNakyy: Boolean(a.nimioNakyy),
+      kaupunkiAvain: a.kaupunkiAvain ?? null,
+      maara: a.maara,
+      jasenet: a.jasenet.map((j) => j.id),
+      jasentiedot: a.jasenet.map((j) => ({
+        id: j.id, nimi: j.nimi ?? '', aihe: j.aihe ?? null, kaupunkiAvain: j.kaupunkiAvain ?? null, maasto: Boolean(j.maasto),
+      })),
+      x: a.x,
+      y: a.y,
     })),
+    // Lukumäärää ei saa olla pallossa (kohta 8: *"ei lukumaaraa palloon"*).
+    lukupalloja: document.querySelectorAll('.pallolauta-aihemerkki-luku').length,
     osumat: (n?.osumat?.() ?? []).map((o) => ({
-      id: o.id, perhe: o.perhe, poltettu: Boolean(o.poltettu),
+      id: o.id,
+      perhe: o.perhe,
+      poltettu: Boolean(o.poltettu),
+      nimi: o.nimi ?? '',
+      aihe: o.aihe ?? null,
+      kaupunkiAvain: o.kaupunkiAvain ?? null,
+      maasto: Boolean(o.maasto),
+      kaupunki: Boolean(o.kaupunki),
     })),
     laatikot: (n?.osumaLaatikot?.() ?? []).map((r) => ({
       id: r.id, x0: r.x0, y0: r.y0, x1: r.x1, y1: r.y1,
@@ -537,6 +650,127 @@ for (const ruutu of RUUDUT) {
     + `(≥ ${AIHEMERKKEJA_VAHINTAAN} aihemerkkiä)`,
     m.aihemerkit.length >= AIHEMERKKEJA_VAHINTAAN, `${m.aihemerkit.length} aihemerkkiä`);
 
+  /*
+   * 3d–3f. AIHENOSTOT (PAATOKSET 27 TARKENNUS 2, omistaja 16.9.2026
+   * klo 19.00 UTC). Sama mittaus molemmista näkymistä: sääntö 7 on
+   * *"zoomista riippumatta"*, joten saapumisnäkymän ja lähizoomin on
+   * annettava sama vastaus.
+   */
+  for (const [nakyma, mit] of [['saapuen', saapuen], ['lähizoom', m]]) {
+    const { aiheet, odotus } = rykelmanAiheet(mit);
+    const nostot = pariisinAihenostot(mit);
+    tieto(`${ruutu.nimi} · ${nakyma} · Pariisin aiheet`,
+      [...aiheet.entries()].map(([a, k]) => `${a}=${k}`).join(', ') || 'ei yhtään');
+    tieto(`${ruutu.nimi} · ${nakyma} · aihenostot`,
+      nostot.map((a) => `${a.aihe}:"${a.nimi}"(${a.maara})`).join(', ') || 'ei yhtään');
+    vaadi(`3d. ${ruutu.nimi} (${nakyma}): aihenostoja = aiheita joilla ≥ 2 nostoa`,
+      nostot.length === odotus,
+      `aihenostoja ${nostot.length}, aiheita joilla ≥ 2 nostoa ${odotus}`);
+
+    // 3e. NIMIÖ = tärkeimmän noston nimi + kolme pistettä, ei lukua.
+    const nimiovirheet = nostot.filter((a) => {
+      if (!a.nimi.endsWith(ELLIPSI)) return true;
+      const runko = a.nimi.slice(0, -ELLIPSI.length);
+      if (!runko || runko.endsWith('.')) return true;
+      return !siisti(a.jasentiedot[0]?.nimi).startsWith(runko);
+    });
+    vaadi(`3e. ${ruutu.nimi} (${nakyma}): jokaisella aihenostolla on nimiö "Nimi${ELLIPSI}"`,
+      nostot.length > 0 && nimiovirheet.length === 0,
+      nostot.length
+        ? nimiovirheet.map((a) => `${a.id}="${a.nimi}"`).join(', ')
+        : 'aihenostoja ei ollut lainkaan');
+    /*
+     * NIMIÖ MYÖS NÄKYY — MITATTUNA SIINÄ NÄKYMÄSSÄ, JOSTA PÄÄTÖS
+     * TEHTIIN. Sovittelun viimeinen keino on yhä lapun piilotus
+     * (js/pallolauta/sovittelu.js kohta 3), ja SAAPUMISNÄKYMÄSSÄ koko
+     * Ranska on 390 px:n levyisenä niin täynnä, että osa aihenostoista
+     * joutuu sinne asti. Omistajan kuva ja PAATOKSET 27 TARKENNUS 2:n
+     * oma mittausohje (*"Mitataan Pariisi 390 px"*) koskevat
+     * LÄHIZOOMIA, joten vartio on siellä ja saapumisnäkymä on INFO.
+     */
+    const piilossa = nostot.filter((a) => !a.nimioNakyy);
+    tieto(`${ruutu.nimi} · ${nakyma} · aihenoston nimiö piilotettu sovittelussa`,
+      piilossa.length ? piilossa.map((a) => a.id).join(', ') : 'ei yhtään');
+    if (nakyma === 'lähizoom') {
+      vaadi(`3e4. ${ruutu.nimi} (${nakyma}): yhdenkään aihenoston nimiö ei ole piilossa`,
+        piilossa.length === 0, `${piilossa.length} piilossa`);
+    }
+    vaadi(`3e2. ${ruutu.nimi} (${nakyma}): pallossa ei ole lukumäärää`,
+      mit.lukupalloja === 0, `${mit.lukupalloja} lukua kartalla`);
+
+    // 3e3. Omistajan oma esimerkki (kohta 8).
+    const skandaalit = nostot.find((a) => a.aihe === 'skandaalit');
+    vaadi(`3e3. ${ruutu.nimi} (${nakyma}): skandaalirykelmän nimiö on `
+      + `"${OMISTAJAN_ESIMERKKI}${ELLIPSI}"`,
+      skandaalit?.nimi === `${OMISTAJAN_ESIMERKKI}${ELLIPSI}`,
+      `nimiö "${skandaalit?.nimi ?? '-'}"`);
+
+    /*
+     * 3h. AIHENOSTOT EIVÄT PEITÄ TOISIAAN. Rykelmä korvautuu viidellä
+     * merkillä, jotka kaikki ovat saman kaupungin päällä — jos niiden
+     * nimiöt limittyisivät keskenään, ryhmitys olisi vain siirtänyt
+     * ongelman. Laatikot ovat samasta kaavasta kuin sormi
+     * (osumaLaatikot → aihemerkinLaatikko).
+     */
+    const aihelaatikot = mit.laatikot.filter((r) => String(r.id).startsWith('aihemerkki:'));
+    let aiheparit = 0;
+    for (let i = 0; i < aihelaatikot.length; i += 1) {
+      for (let j = i + 1; j < aihelaatikot.length; j += 1) {
+        if (limittyy(aihelaatikot[i], aihelaatikot[j])) aiheparit += 1;
+      }
+    }
+    tieto(`${ruutu.nimi} · ${nakyma} · aihenostojen limittyvät parit`,
+      `${aiheparit} paria ${aihelaatikot.length}:stä`);
+    // Sama rajaus kuin 3e4: vartio on lähizoomissa, saapuminen INFO.
+    if (nakyma === 'lähizoom') {
+      vaadi(`3h. ${ruutu.nimi} (${nakyma}): aihenostojen limittyviä pareja `
+        + `≤ ${AIHENOSTOJEN_LIMITYSKATTO}`,
+        aiheparit <= AIHENOSTOJEN_LIMITYSKATTO,
+        `${aiheparit} limittyvää paria ${aihelaatikot.length}:stä`);
+    }
+
+    // 3f. maastokohde ei yhdisty, yksinäinen aihe ei saa aihenostoa.
+    const maastoJasenet = nostot.flatMap((a) => a.jasentiedot.filter((j) => j.maasto));
+    const yksinaiset = [...aiheet.entries()].filter(([, k]) => k < 2).map(([a]) => a);
+    const vaaraYksin = nostot.filter((a) => yksinaiset.includes(a.aihe));
+    vaadi(`3f. ${ruutu.nimi} (${nakyma}): maastokohde ei yhdisty, yksinäinen nosto pysyy omanaan`,
+      maastoJasenet.length === 0 && vaaraYksin.length === 0,
+      `maastojäseniä ${maastoJasenet.length}, yksinäisiä aihenostoja ${vaaraYksin.length}`);
+  }
+
+  /*
+   * 3g. VASTAKOE: KAUPUNGIN AINA-YHDISTYS POIS SAMASTA NÄKYMÄSTÄ.
+   * Lippu luetaan joka ladonnassa osoitteesta (js/pallolauta/nostot.js
+   * kaupunkiYhdistysSallittu), joten sivua ei tarvitse ladata uudelleen
+   * eikä kameraa siirtää — mitattava näkymä on sama kuin vartiossa 3d.
+   */
+  const odotusLahella = rykelmanAiheet(m).odotus;
+  const aihenostojaLahella = pariisinAihenostot(m).length;
+  await sivu.evaluate(() => {
+    const u = new URL(window.location.href);
+    u.searchParams.set('aihekaupunki', '0');
+    window.history.replaceState({}, '', u.toString());
+    window.matkakirja.ui.pallolauta.ladoHeti?.();
+  });
+  await sivu.waitForTimeout(900);
+  const ilmanKaupunkia = await mittaa(sivu);
+  const ilmanKaupunkiaMaara = pariisinAihenostot(ilmanKaupunkia).length;
+  await sivu.evaluate(() => {
+    const u = new URL(window.location.href);
+    u.searchParams.delete('aihekaupunki');
+    window.history.replaceState({}, '', u.toString());
+    window.matkakirja.ui.pallolauta.ladoHeti?.();
+  });
+  await sivu.waitForTimeout(900);
+  tieto(`${ruutu.nimi} · vastakoe ilman kaupungin aina-yhdistystä`,
+    `aihenostoja ${ilmanKaupunkiaMaara} (säännön kanssa ${aihenostojaLahella}, `
+    + `odotus ${odotusLahella})`);
+  vaadi(`3g. VASTAKOE ${ruutu.nimi}: ilman kaupungin aina-yhdistystä `
+    + 'aihenostojen määrä on väärä',
+    ilmanKaupunkiaMaara !== odotusLahella && aihenostojaLahella === odotusLahella,
+    `ilman sääntöä ${ilmanKaupunkiaMaara}, säännön kanssa ${aihenostojaLahella}, `
+    + `odotus ${odotusLahella}`);
+
   /* --- 6. TERÄVYYS: PORRAS RIITTÄÄ MERKIN NÄKYVÄÄN TARPEESEEN --- */
   const suurinMitta = Math.max(...m.merkit.map((x) => x.mitta), 0);
   const tarve = suurinMitta * Math.min(m.tiheys, 3);
@@ -681,7 +915,6 @@ for (const ruutu of RUUDUT) {
    *      ryhmityksellä on oikeasti tehtävä.
    * Lähizoomin luvut jäävät INFO-riveiksi.
    */
-  const limittyy = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
   const limitysparit = (mit) => {
     const laatikot = rykelmanLaatikot(mit);
     let parit = 0;
