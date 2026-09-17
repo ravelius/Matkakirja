@@ -128,8 +128,16 @@ lukitsevat poistuvan käyttöliittymän, eivät vikaa:
 4. **`?kaupunkiliuska=0`-vastakoetta ei ole**, koska päälle kytkettyä
    toimintoa ei ole. Se kuuluu seuraavaan erään.
 
+## 5b. Testit
+
+`node --test tests/*.test.mjs`: **3596 testiä, 0 punaista** (3583
+vihreää, 13 ohitettua). Ensimmäisellä ajolla punaisena oli *"kaikki
+js-moduulit ovat SHELLissä"* — uusi moduuli puuttui `sw.js`:n
+SHELL-listalta (offline-kuori). Lisätty; vartio on vihreä.
+
 ## 6. Muutetut tiedostot
 
 `js/pallolauta/kaupunkiliuska.js` (uusi), `js/nahtavyydet.js`
-(otsikon nimi), `tests/kaupunkiliuska.test.mjs` (uusi),
+(otsikon nimi), `sw.js` (uusi moduuli SHELLiin),
+`tests/kaupunkiliuska.test.mjs` (uusi),
 `docs/raportit/viesti-fable-kaupunkiliuska-20260917.md` (tämä).
