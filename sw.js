@@ -251,6 +251,8 @@ const SHELL = [
   // (PAATOKSET 27): nostot.js:n oma alimoduuli, samaa polkua kuin muu
   // pallolauta eikä yhden tiedoston niputuksessa.
   './js/pallolauta/aihemerkit.js',
+  // Nostojen kiinteät kartta-ankkurit ja levitys (PAATOKSET 32).
+  './js/pallolauta/nostoankkurit.js',
   './js/pallolauta/nostot.js',
   './js/pallolauta/reitit.js',
   './js/pallolauta/siirto.js',

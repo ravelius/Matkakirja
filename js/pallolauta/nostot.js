@@ -37,6 +37,7 @@
  */
 
 import {
+  KOVAN_ESTEEN_PAINO,
   aiheenNimi, aihemerkinLaatikko, aihemerkkiElementti, aihenostonNimio, asetteleAihemerkki,
   kohdanLaatikko, ryhmitaNostot, viuhkanAsemat, viuhkanNimioLeveys,
 } from './aihemerkit.js';
@@ -58,6 +59,9 @@ import {
 import { KARTTANIMI_KOOT } from '../karttanimet.js';
 import { karttavaloVari, karttavalotLue } from '../karttavalot.js';
 import { nostoladontaTiiviste } from '../nostoladonta.js';
+import {
+  luoAnkkurivarasto, levitaMerkit, nostoankkuritSallittu, pikseleistaAsteiksi, yksiKokoSallittu,
+} from './nostoankkurit.js';
 import { pallonNostoOnPoltettu } from '../pallo.js';
 import { PALLOLAUDAN_LEVEYS } from './kamera.js';
 import { nimenKarttakerroin } from './nimet.js';
@@ -842,6 +846,9 @@ export function asetteleNosto(el, d) {
   }
   el.dataset.nimio = nimio;
   el.classList.toggle('lunastettu', Boolean(d.lunastettu));
+  // Listan alle jäänyt merkki piiloutuu listan ajaksi (ks. LISTA EI
+  // KOSKAAN TOISEN TEKSTIN PÄÄLLE); seuraava ladonta palauttaa sen.
+  el.classList.toggle('pallolauta-nosto-piilossa', Boolean(d.piiloListanAlla));
   // Kaupunkimerkki on isompi (ks. KAUPUNKIMERKIN NIMIÖ ON ISOMPI KUIN
   // NOSTON). Luokka on savukkeiden ja CSS:n kahva: ilman sitä
   // mittaava savuke poimisi DOM-järjestyksen ensimmäisen merkin eikä
@@ -1000,6 +1007,13 @@ export function luoNostot({
    * sulkeutuu — kerros ei omista kameraa eikä ladonnan tahtia.
    */
   ruutu = null, ankkuri = null, ladoUudelleen = null,
+  /*
+   * LISTA VÄISTÄÄ PELIMERKIT (PAATOKSET 32 kohta 3: lista ei saa
+   * peittää *"kaupungin nimea eika pelinappulaa"*). `esteet` antaa
+   * pelimerkkien ruutulaatikot (nappula, kohteet) kotelon pikseleinä;
+   * kaupunkien nimet tulevat sovittelusta (viimeisimmatNimet).
+   */
+  esteet = null,
 }) {
   let osumat = []; // ruudulla olevat, napautettavat merkit
   let laatikot = [];
@@ -1047,6 +1061,20 @@ export function luoNostot({
   let ryhmitetytIdt = new Set();
   // Auki olevan viuhkan kohdat ruutulaatikkoineen (osumatesti lukee).
   let viuhkanKohdat = [];
+  /*
+   * Listan alle piilotettu muste: { avain, osa } (ks. LISTA EI KOSKAAN
+   * TOISEN TEKSTIN PÄÄLLE). Vain mittausta ja vartioita varten —
+   * piilotus itse elää datumeissa ja purkautuu seuraavassa ladonnassa.
+   */
+  let piilotetutListanAlta = [];
+  /*
+   * VIIMEISIN NIMILADONTA. Kaupunkien nimilaatikot tulevat laudalta
+   * vasta `sovittele`ssa, eli ladonnan JÄLKEEN; lista tarvitsee ne
+   * ladonnassa. Edellisen kierroksen laatikot kelpaavat: viuhka
+   * avataan aina ladonnan jälkeen (avaaViuhka → ladoUudelleen), ja
+   * nimet eivät liiku levossa.
+   */
+  let viimeisimmatNimet = [];
   const varit = new Map();
 
   /** Aiheen väri CSS-muuttujasta pistekerroksen väriksi (rgba). */
@@ -1389,6 +1417,147 @@ export function luoNostot({
     nostosymVirkistaRasterit(juuri);
   };
 
+  /*
+   * ══ KIINTEÄT KARTTA-ANKKURIT (PAATOKSET 32 kohdat 1, 2, 5) ══════
+   * Perustelu ja algoritmi: js/pallolauta/nostoankkurit.js.
+   */
+  const ankkurivarasto = luoAnkkurivarasto();
+  /** Ankkurointi on päällä, kun lippu sallii ja kamera on mitattavissa. */
+  const ankkurointiPaalla = (uloinOsuus) => nostoankkuritSallittu() && uloinOsuus > 0;
+  /**
+   * Valitsee jokaiselle elävälle nostolle ja aihenostolle kartta-ankkurin
+   * KERRAN (kaupungin saapumisnäkymän mitoilla) ja pitää sen: zoomi vain
+   * skaalaa ruutupaikan. Kirjoittaa rivin `lat`/`lng`/`p` ankkuriin.
+   *
+   * VARAUS ON AINA NIMIÖLLINEN, vaikka nimiö olisi juuri nyt piilossa
+   * (aihenoston nimiö näkyy vain lähizoomissa, PAATOKSET 27 TARKENNUS
+   * 4): muuten ankkurit riippuisivat zoomista juuri sen kentän kautta,
+   * jonka takia ne laskettiin.
+   */
+  const ankkuroi = (piirrettavat, nakyvat, uloinOsuus, esteet, mitta) => {
+    if (!ankkurointiPaalla(uloinOsuus)) return;
+    const kehys = (p) => ({ x: p.x * uloinOsuus, y: p.y * uloinOsuus });
+    const liikkuvat = piirrettavat.filter((r) => r.p
+      && (r.perhe === 'nosto' || r.perhe === 'aihemerkki') && !r.kaupunki && !r.poltettu);
+    if (!liikkuvat.length) return;
+    const ruutuNyt = ruutu?.() ?? { leveys: 0, korkeus: 0 };
+    const tunnus = ankkurivarasto.tunnus(null, ruutuNyt);
+    /*
+     * VAIN UUDET LADOTAAN. Jo ankkuroitu nosto pysyy paikallaan — se
+     * on koko sääntö (PAATOKSET 32 kohta 1) — ja uudet väistävät sitä
+     * kiinteänä esteenä. Näin kameran pudottamien merkkien paluu ei
+     * lado koko kaupunkia uudelleen.
+     */
+    const laatikkoKehyksessa = (r) => (r.perhe === 'aihemerkki'
+      ? aihemerkinLaatikko(kehys(r.p), { ...r, mitta }, {
+        kylki: r.puoli ?? 'oikea', nimio: Boolean(r.nimi),
+      })
+      : nostonLaatikko(kehys(r.p), r, { kylki: r.puoli ?? 'oikea', nimio: Boolean(r.nimi) }));
+    /*
+     * KIINTEÄT ESTEET SAAPUMISKEHYKSESSÄ (ks. alempana `kiinteat`).
+     * Ruutuvakio este (pelinappula) skaalataan PAIKASTA, ei koosta.
+     */
+    const esteetKehyksessa = (esteet ?? []).map((e) => {
+      const kx = ((e.x0 + e.x1) / 2) * uloinOsuus;
+      const ky = ((e.y0 + e.y1) / 2) * uloinOsuus;
+      const puoliW = (e.x1 - e.x0) / 2;
+      const puoliH = (e.y1 - e.y0) / 2;
+      return {
+        x0: kx - puoliW, y0: ky - puoliH, x1: kx + puoliW, y1: ky + puoliH,
+      };
+    });
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * ANKKURI EI SAA JÄÄDÄ KIINTEÄN ESTEEN ALLE (omistaja 17.9.2026
+     * illalla, Raamattu KARTTAUUDISTUKSEN PAATOKSET 32 TARKENNUS 2
+     * kohta b)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * MITATTU VIKA (Pariisi 390 px, kolme zoomia, 17.9.2026 illalla):
+     * nimiö *"Tuileriain rauniot…"* makasi pelinappulan päällä KAIKILLA
+     * kolmella zoomilla, vaikka nappula on annettu levitykselle
+     * kiinteänä esteenä. Syy ei ole levityksessä vaan AJOITUKSESSA:
+     * ankkuri valitaan KERRAN ja pidetään (kohta 1), ja pelinappula on
+     * merkkikerroksen oma elementti, joka syntyy globe.gl:n omalla
+     * kellolla (`tyonna` → kirjaston seuraava kehys). Jos ensimmäinen
+     * ladonta ehti ennen nappulan elementtiä, `esteet` oli tyhjä, ja
+     * ankkuri lukittui nappulan alle pysyvästi.
+     *
+     * KORJAUS ON ITSEKORJAAVA EIKÄ UUSI AJOITUSOLETUS: ankkuri, joka
+     * on kiinteän esteen alla, katsotaan uudelleen ladottavaksi. Se ei
+     * riko kohtaa 1 (*"sama nosto samassa lat/lng-pisteessä kaikilla
+     * zoomeilla"*), koska tarkistus tehdään SAAPUMISKEHYKSESSÄ eikä
+     * nykyisellä zoomilla: kehys on ahtain mahdollinen näkymä, joten
+     * kerran siitä irronnut ankkuri on vapaa joka zoomilla eikä ehto
+     * enää laukea. Levitys työntää koko siirron liikkuvalle, joten
+     * pako on muutaman kymmenen pikselin mittainen ja hyvin
+     * ANKKURIN_SIIRTOKATTO_PX:n sisällä.
+     */
+    const esteenAlla = (r) => {
+      if (!esteetKehyksessa.length) return false;
+      const a = ankkurivarasto.lue(r.avain);
+      if (!a) return false;
+      const p = ruudulla(a.lat, a.lng);
+      if (!p) return false;
+      const laatikko = laatikkoKehyksessa({ ...r, p });
+      return esteetKehyksessa.some((e) => laatikko.x0 < e.x1 && e.x0 < laatikko.x1
+        && laatikko.y0 < e.y1 && e.y0 < laatikko.y1);
+    };
+    const uudetRivit = liikkuvat.filter((r) => !ankkurivarasto.lue(r.avain) || esteenAlla(r));
+    if (uudetRivit.length) {
+      const levitettavat = uudetRivit.map((r) => ({
+        avain: r.avain, ...kehys(r.p), laatikko: laatikkoKehyksessa(r),
+      }));
+      // Kiinteä muste ei väisty: poltettu laatta, kaupunkimerkit ja
+      // laudan antamat esteet (pelinappula).
+      const ladotaan = new Set(uudetRivit.map((r) => r.avain));
+      /*
+       * JO ANKKUROITU ON ESTE OMASSA ANKKURISSAAN, EI DATAPISTEESSÄÄN
+       * (korjattu 17.9.2026 illalla). Laatikko laskettiin ennen raa'asta
+       * `r.p`:stä, joten levitys väisti paikkaa, jossa merkkiä ei enää
+       * ollut. Uudelleen ladottava rivi ei myöskään saa olla oma
+       * esteensä — muuten se ei pääsisi mihinkään.
+       */
+      const ankkurinKehys = (r) => {
+        const a = ankkurivarasto.lue(r.avain);
+        const p = a ? ruudulla(a.lat, a.lng) : null;
+        return p ? laatikkoKehyksessa({ ...r, p }) : null;
+      };
+      const kiinteat = [
+        ...liikkuvat.filter((r) => !ladotaan.has(r.avain) && ankkurivarasto.lue(r.avain))
+          .map(ankkurinKehys).filter(Boolean),
+        ...piirrettavat.filter((r) => r.p && r.kaupunki)
+          .map((r) => nostonLaatikko(kehys(r.p), r, { nimio: Boolean(r.nimi) })),
+        ...nakyvat.filter((r) => r.p && r.poltettu && r.perhe !== 'piste')
+          .map((r) => nostonLaatikko(kehys(r.p), r, { nimio: Boolean(r.nimi) })),
+        // Ruutuvakio este (pelinappula) kehyksessä, ks. esteetKehyksessa.
+        ...esteetKehyksessa,
+      ];
+      const siirrot = levitaMerkit(levitettavat, kiinteat);
+      const uudet = new Map();
+      for (const r of uudetRivit) {
+        const siirto = siirrot.get(r.avain);
+        const oma = { lat: r.lat, lng: r.lng };
+        if (!siirto || (!siirto.dx && !siirto.dy)) { uudet.set(r.avain, oma); continue; }
+        // Kehyksen px → nykyiset px → asteet merkin omassa ympäristössä.
+        const asteiksi = pikseleistaAsteiksi(ruudulla, r.lat, r.lng);
+        uudet.set(r.avain, asteiksi
+          ? asteiksi({ dx: siirto.dx / uloinOsuus, dy: siirto.dy / uloinOsuus })
+          : oma);
+      }
+      ankkurivarasto.aseta(tunnus, uudet);
+    }
+    for (const r of liikkuvat) {
+      const ankkuri = ankkurivarasto.lue(r.avain);
+      if (!ankkuri) continue;
+      const p = ruudulla(ankkuri.lat, ankkuri.lng);
+      if (!p) continue;
+      r.lat = ankkuri.lat;
+      r.lng = ankkuri.lng;
+      r.p = p;
+    }
+  };
+
   /**
    * Päivittää kerroksen: kutsutaan levossa (js/pallolauta/lauta.js).
    * Palauttaa elävien laatikot nimiladonnan varauksiksi ja määrän.
@@ -1396,10 +1565,33 @@ export function luoNostot({
   const paivita = ({
     nakyva, katto = NOSTOJEN_KATTO, keskipiste = null, uloinOsuus = 0,
     karttaskaala = 0, vertailuskaala = 0,
+    /*
+     * KIINTEÄT ESTEET LEVITYKSELLE (PAATOKSET 32 kohta 5): pelinappula
+     * ja muu muste, joka ei ole tämän kerroksen omaa eikä voi väistää.
+     * Lauta antaa ne ruutulaatikkoina (js/pallolauta/lauta.js
+     * ladoLevossa) — kerros ei tunne pelinappulaa itse.
+     */
+    esteet = [],
   } = {}) => {
     // Kyltti karttaan (ks. KARTTANOSTON KYLTTI ON KARTAN MITTA):
     // sama kerroin kuin kaupunkien nimikylteillä, laudan mittakaavasta.
-    nostonKarttakerroin = nimenKarttakerroin(karttaskaala, vertailuskaala || undefined);
+    /*
+     * YKSI KOKO — KAIKKI NOSTOT POLTETUN KARTAN KOKOA (omistaja
+     * 17.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 32 kohta 4:
+     * *"Kaikki nostoPallot ja tekstit saisi olla saman kokoisia kuin
+     * poltetussa kartassa"*). Poltettu muste on laatassa kiinteänä
+     * ruutumittana (nimiö 8,5 px), joten ainoa tapa olla sen kokoinen
+     * on olla RUUTUVAKIO: kartan kerroin (PAATOKSET 14) on 1.
+     *
+     * Tämä kumoaa PAATOKSET 14:n kasvun ja tekee samalla PAATOKSET
+     * 31:n 16 px:n katon tarpeettomaksi käytännössä (mitta jää katon
+     * alle joka zoomilla) — katto jää kuitenkin paikalleen, koska se
+     * on oma päätöksensä ja suojaa myös vastakokeen `?nostokoko=0`
+     * vanhaa polkua.
+     */
+    nostonKarttakerroin = yksiKokoSallittu()
+      ? 1
+      : nimenKarttakerroin(karttaskaala, vertailuskaala || undefined);
     viimeisinUloinOsuus = uloinOsuus;
     const rivit = keraa(nakyva, uloinOsuus);
     const nakyvat = [];
@@ -1489,9 +1681,28 @@ export function luoNostot({
     // kaupunkijäsenyys pois, jolloin jäljelle jää pelkkä mitta.
     const ryhmitettavat = kaupunkiYhdistysSallittu()
       ? ehdokkaat : ehdokkaat.map((r) => ({ ...r, kaupunkiAvain: null }));
-    const { ryhmat } = ryhmitysPaalla
-      ? ryhmitaNostot(ryhmitettavat, (r) => nostonLaatikko(r.p, r))
+    /*
+     * RYHMITYS SAAPUMISKEHYKSESSÄ (PAATOKSET 32 kohta 1; perustelu
+     * js/pallolauta/nostoankkurit.js SAAPUMISKEHYS). Ryhmityksen
+     * kynnykset ovat ruutupikseleitä (limitys ja 44 px), joten
+     * kaupungin ulkopuoliset rykelmät hajosivat ja syntyivät
+     * uudelleen zoomatessa — ja aihemerkin keskipiste hyppäsi mukana.
+     * Kun pisteet skaalataan uloimman zoomin kehykseen, kynnys mittaa
+     * merkkien MAANTIETEELLISTÄ etäisyyttä ja jäsenyys on sama
+     * kaikilla zoomeilla. Kaupungin oma jäsenyys (PAATOKSET 27
+     * TARKENNUS 2 kohta 7) oli jo zoomista riippumaton.
+     */
+    const saapumiskehys = ankkurointiPaalla(uloinOsuus)
+      ? (p) => ({ x: p.x * uloinOsuus, y: p.y * uloinOsuus })
+      : (p) => p;
+    const ryhmitysRivit = ankkurointiPaalla(uloinOsuus)
+      ? ryhmitettavat.map((r) => ({ ...r, p: saapumiskehys(r.p) }))
+      : ryhmitettavat;
+    const alkuperaiset = new Map(ryhmitettavat.map((r) => [r.avain, r]));
+    const { ryhmat: ryhmatRaaka } = ryhmitysPaalla
+      ? ryhmitaNostot(ryhmitysRivit, (r) => nostonLaatikko(r.p, r))
       : { ryhmat: [] };
+    const ryhmat = ryhmatRaaka.map((kasa) => kasa.map((r) => alkuperaiset.get(r.avain) ?? r));
     const ryhmassa = new Set();
     ryhmitetytIdt = new Set();
     for (const kasa of ryhmat) {
@@ -1569,6 +1780,13 @@ export function luoNostot({
      * ja viuhka on mennyttä. Sama sulku hoitaa myös sen, että ryhmä
      * itse katosi (zoomi sisään hajotti sen).
      */
+    /*
+     * ANKKURIT ENNEN VIUHKAN LEPOTESTIÄ: testi vertaa merkin
+     * ruutupistettä avaushetkeen, ja ankkuroimaton piste eroaisi
+     * ankkuroidusta aina — viuhka sulkeutuisi heti auettuaan.
+     */
+    ankkuroi([...elavat.filter((r) => !ryhmassa.has(r.avain)), ...aiherivit],
+      nakyvat, uloinOsuus, esteet, mittaNyt);
     if (viuhka) {
       const rivi = aiherivit.find((r) => r.avain === viuhka.avain);
       const siirtyi = rivi
@@ -1644,6 +1862,7 @@ export function luoNostot({
      * Sama lista jää osumatestin käyttöön (viuhkanKohdat).
      */
     viuhkanKohdat = [];
+    piilotetutListanAlta = [];
     if (viuhka) {
       const rivi = naytetaan.find((r) => r.avain === viuhka.avain);
       if (!rivi) viuhka = null;
@@ -1651,13 +1870,95 @@ export function luoNostot({
         const leveydet = rivi.jasenet.map((m) => viuhkanNimioLeveys(
           m.nimi ? nostosymNimioMitta(m.nimi, m.symLaji).leveys : 0, mittaNyt,
         ));
-        const { puoli, asemat } = viuhkanAsemat({
+        /*
+         * ══ LISTA EI KOSKAAN TOISEN TEKSTIN PÄÄLLE ════════════════
+         * (omistaja 17.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 32
+         * kohta 5: *"Yksikään teksti ei saa mennä toisen päälle."*)
+         *
+         * MITATTU VIKA (viuhkalistan erä, PR #2566, kaappaus 390 px):
+         * listan rivit ladottiin *Kyyhkyposti…*- ja *Tuileriain
+         * rauniot…* -nimiöiden päälle. Juurisyitä oli kaksi: muiden
+         * nostojen NIMIÖT eivät olleet esteitä lainkaan (`laatikot` on
+         * ikonien ja poltetun musteen joukko, ilman elävien nimiöitä),
+         * ja este oli pelkkä SAKKO — ahtaassa paikassa pienin sakko on
+         * silti päällekkäisyys.
+         *
+         * KAKSI ESTELUOKKAA. Kaupungin nimi ja pelinappula ovat
+         * KOVIA: niitä ei voi piilottaa, joten lista väistää niitä
+         * (KOVAN_ESTEEN_PAINO). Muiden nostojen nimiöt ja merkit ovat
+         * yhtä lailla esteitä, mutta jos lista ei mahdu ruudulle
+         * limittymättä, ne PIILOTETAAN listan ajaksi ja palautetaan
+         * sulkiessa — sillä lista on se, jota juuri luetaan. Nimiö
+         * piiloutuu ensin ja merkki vain, jos lista peittää senkin.
+         */
+        const kovat = [...viimeisimmatNimet, ...(esteet?.() ?? [])]
+          .filter(Boolean)
+          .map((e) => ({ ...e, paino: KOVAN_ESTEEN_PAINO }));
+        /*
+         * Muiden nostojen muste TÄMÄN ladonnan asennoissa: ikonin ruutu
+         * ja nimiöllinen laatikko erikseen, jotta piilotus osaa ottaa
+         * ensin nimiön ja vasta sitten merkin. Rivin OMA kylki (r.puoli)
+         * kelpaa: sovittelu ajetaan vasta ladonnan jälkeen, ja sen
+         * siirto on muutama pikseli.
+         */
+        const nostomuste = [];
+        naytetaan.forEach((r2, i2) => {
+          if (r2 === rivi || r2.perhe === 'piste' || !r2.p) return;
+          const datum2 = datumit[i2];
+          if (!datum2) return;
+          const laatikko = (nimio) => (r2.perhe === 'aihemerkki'
+            ? aihemerkinLaatikko(r2.p, datum2, { dx: 0, dy: 0, kylki: r2.puoli ?? 'oikea', nimio })
+            : nostonLaatikko(r2.p, r2, { dx: 0, dy: 0, kylki: r2.puoli ?? 'oikea', nimio }));
+          const merkki = laatikko(false);
+          nostomuste.push({ ...merkki, avain: r2.avain, osa: 'merkki' });
+          if (r2.nimioNakyy && r2.nimi) {
+            nostomuste.push({ ...laatikko(true), avain: r2.avain, osa: 'nimio' });
+          }
+        });
+        const listanEsteet = [...kovat, ...nostomuste, ...laatikot];
+        const {
+          puoli, asemat, leveys: listaLeveys, pohja,
+        } = viuhkanAsemat({
           p: rivi.p,
           ruutu: ruutu?.() ?? { leveys: 1400, korkeus: 900 },
           leveydet,
+          esteet: listanEsteet,
         });
+        /*
+         * PIILOTUS: LISTAN ALLE EI JÄÄ TEKSTIÄ. Lista on nyt siinä
+         * asennossa, jossa se peittää vähiten — ja jos se yhä osuu
+         * toisen noston nimiöön tai merkkiin, se muste väistyy
+         * PIILOUTUMALLA listan ajaksi. Piilotus kirjoitetaan datumiin
+         * ennen `merkit.aseta`a, joten se näkyy samalla kehyksellä kuin
+         * lista; kun lista sulkeutuu, seuraava ladonta rakentaa datumit
+         * taas rivin omista kentistä eikä piilotusta ole (palautus on
+         * siis paluu normaaliin, ei erillinen tila).
+         */
+        const listanLaatikot = asemat.map((a) => {
+          const l = kohdanLaatikko(a.dx, a.dy, listaLeveys, puoli);
+          return {
+            x0: rivi.p.x + l.x0,
+            y0: rivi.p.y + l.y0,
+            x1: rivi.p.x + l.x1,
+            y1: rivi.p.y + l.y1,
+          };
+        });
+        const osuuListaan = (e) => listanLaatikot.some((l) => l.x0 < e.x1 && e.x0 < l.x1
+          && l.y0 < e.y1 && e.y0 < l.y1);
+        piilotetutListanAlta = [];
+        for (const e of nostomuste) {
+          if (!osuuListaan(e)) continue;
+          const i2 = naytetaan.findIndex((r2) => r2.avain === e.avain);
+          const datum2 = i2 >= 0 ? datumit[i2] : null;
+          if (!datum2) continue;
+          if (e.osa === 'merkki') datum2.piiloListanAlla = true;
+          else datum2.nimioNakyy = false;
+          piilotetutListanAlta.push({ avain: e.avain, osa: e.osa });
+        }
+        // Listan rivit ovat samanlevyisiä: yksi leveys piirtoon,
+        // osumapintaan ja mittaukseen.
         viuhkanKohdat = rivi.jasenet.map((m, i) => ({
-          m, rivi, asema: asemat[i], leveys: leveydet[i], puoli,
+          m, rivi, asema: asemat[i], leveys: listaLeveys, puoli,
         }));
         // Kohdat ovat aihemerkin oman datumin kenttä, eivät omia
         // merkkejään (ks. js/pallolauta/aihemerkit.js VIUHKA PIIRTYY
@@ -1670,10 +1971,12 @@ export function luoNostot({
             dx: asemat[i].dx,
             dy: asemat[i].dy,
             puoli,
-            leveys: leveydet[i],
+            leveys: listaLeveys,
             mitta: mittaNyt,
             piirra: (g, kylki) => piirraNostosymKartalle(g, m.kategoria, m.nimi, m.symLaji, kylki),
           }));
+          // Listan kehyksetön pohja (yksi laatikko kaikkien rivien alle).
+          datum.viuhkaPohja = pohja;
         }
       }
     }
@@ -1849,6 +2152,7 @@ export function luoNostot({
    * vuoksi — sovittelulle kaikki esteet ovat samaa laatikkojoukkoa.
    */
   const sovittele = ({ nimet = [], kiinteat = [] } = {}) => {
+    viimeisimmatNimet = nimet ?? [];
     if (!lappuja.length) return sovittelu;
     const tulos = sovitteleLaput({
       laput: lappuja.map(({ r, datum, laatikko }) => ({
@@ -1898,6 +2202,8 @@ export function luoNostot({
     paivitaValot,
     /** Auki olevan viuhkan aihemerkin avain tai null (PAATOKSET 27). */
     viuhkaAuki: () => viuhka?.avain ?? null,
+    /** Listan alle piilotettu muste (savukkeiden vartio, ks. LISTA EI…). */
+    viuhkanPiilotetut: () => piilotetutListanAlta.map((e) => ({ ...e })),
     /** Sulkee viuhkan (kartan napautus, js/pallolauta/lauta.js). */
     suljeViuhka,
     /**

@@ -113,7 +113,7 @@ import {
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
 import { luoNimet, nimibudjetti } from './nimet.js';
 import {
-  KAUPUNKIMERKIN_KERROIN, KOHDEMERKIN_RUUTU_PX, NOSTOJEN_KATTO, VALON_KORKEUS, VALON_SADE,
+  KOHDEMERKIN_RUUTU_PX, NOSTOJEN_KATTO, VALON_KORKEUS, VALON_SADE,
   luoNostot, nostonLaatikko, nostonMitta,
 } from './nostot.js';
 import {
@@ -1821,6 +1821,13 @@ export async function avaaPallolauta(ui) {
      * pyytää uuden ladonnan — kerros ei omista kameraa eikä tahtia.
      */
     ruutu: () => ({ leveys: kotelo.clientWidth, korkeus: kotelo.clientHeight }),
+    /*
+     * PELIMERKIT OVAT LISTAN ESTEITÄ (PAATOKSET 32 kohta 3: lista ei
+     * saa peittää *"kaupungin nimea eika pelinappulaa"*). Sama luku
+     * kuin nimiladonnan `pinot`-varaus — nappula ja kohteet kotelon
+     * pikseleinä.
+     */
+    esteet: () => merkit.laatikot('peli'),
     ankkuri,
     /*
      * VIUHKA ON UUSIA CSS2D-ELEMENTTEJÄ, JA NE SYNTYVÄT VASTA TOISESSA
@@ -2426,9 +2433,31 @@ export async function avaaPallolauta(ui) {
     }];
   };
 
-  /** Kyltin ladontatietue: sama muoto kuin kaupunkimerkin nostolla. */
+  /*
+   * Kyltin ladontatietue: sama muoto kuin nostolla.
+   *
+   * ══════════════════════════════════════════════════════════════════
+   * KYLTTI ON SAMAA KOKOA KUIN NOSTOT (omistaja 17.9.2026 illalla,
+   * Raamattu KARTTAUUDISTUKSEN PAATOKSET 32 TARKENNUS 2 kohta a)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * `kaupunki: true` tarkoitti täällä VAIN yhtä asiaa: `merkinKerroin`
+   * (js/pallolauta/nostot.js) antoi kyltille kaupunkimerkin oman
+   * KAUPUNKIMERKIN_KERROIN-kertoimen eli 11,5 px:n nimiön, kun nostolla
+   * on 8,5 px. Omistajan uusi mitta on POLTETUN KARTAN mitta samalla
+   * pallolla ja samalla nimiöllä kuin nostoilla, joten kerroin on 1 ja
+   * kenttä on `false`. Se ei ole tässä tietueessa muussa käytössä: koko
+   * tietue menee vain `nostonLaatikko`lle (varaus ladonnassa, kohta 6,
+   * ja siirtyminen sivuun, kohta 7), joka lukee siitä `kaupunki`n
+   * ainoastaan mitan kautta. Kumoaa PAATOKSET 31 TARKENNUS 2 kohdan 5
+   * 11,5/16 px:n mitan.
+   *
+   * MITTA ON YKSI LUKU KAHDESSA PAIKASSA: sama kerroin menee myös
+   * datumin `mitta`-kenttään (paivitaTuristiInfo, `nostonMitta()`),
+   * jotta piirto ja laatikko ovat samaa mieltä.
+   */
   const KYLTIN_LADONTA = {
-    kaupunki: true,
+    kaupunki: false,
     poltettu: false,
     nimi: TURISTI_INFO_NIMIO,
     symLaji: null,
@@ -3393,7 +3422,14 @@ export async function avaaPallolauta(ui) {
       nimi: city.name,
       lat: paikka.lat,
       lng: paikka.lon,
-      mitta: nostonMitta(KAUPUNKIMERKIN_KERROIN),
+      /*
+       * SAMA MITTA KUIN NOSTOILLA (PAATOKSET 32 TARKENNUS 2 kohta a;
+       * ks. KYLTIN_LADONTA). `nostonMitta()` ilman omaa kerrointa =
+       * poltetun kartan mitta (nostonKarttakerroin 1 → 0,773) kaikilla
+       * zoomeilla; ENNEN tässä oli KAUPUNKIMERKIN_KERROIN eli 11,5 px
+       * ja lähizoomissa katon 16 px.
+       */
+      mitta: nostonMitta(),
       elementti: turistiInfoElementti,
       asettele: asetteleTuristiInfo,
 
@@ -3463,6 +3499,14 @@ export async function avaaPallolauta(ui) {
       vertailuskaala: saapumisenSkaala(),
       // Avauslennolla ei yhtään nostoa: lento on kartan niukin hetki.
       katto: lento ? 0 : Math.min(NOSTOJEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia)),
+      /*
+       * PELINAPPULA ON KIINTEÄ ESTE (Raamattu KARTTAUUDISTUKSEN
+       * PAATOKSET 32 kohta 5: nimiö ei saa olla *"kaupungin nimen tai
+       * pelinappulan päällä"*). Nappula on pelin merkki eikä tämän
+       * kerroksen, joten laatikot annetaan sille kerrokselta, joka ne
+       * omistaa — sama lista kuin nimiladonnan `pinot`.
+       */
+      esteet: merkit.laatikot('peli'),
     });
     // Niukka nimijoukko: avauslennolla kaksi päätä, lähtövalinnassa
     // Lontoo (aalto 3A) — muulloin koko lauta budjetilla.
@@ -3513,7 +3557,30 @@ export async function avaaPallolauta(ui) {
      * on kartan kaluste kaupungin vieressä — joten nostojen laput
      * väistävät sitä samalla säännöllä kuin kaupunkien nimiä.
      */
-    const sovittelu = nostot.sovittele({ nimet: nimet.laatikot(), kiinteat: infoTulos });
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * PELINAPPULA ON ESTE MYÖS SOVITTELUSSA (omistaja 17.9.2026
+     * illalla, Raamattu KARTTAUUDISTUKSEN PAATOKSET 32 TARKENNUS 2
+     * kohta b: lähizoomin kaappauksessa nimiö *"Tuileriain rauniot…"*
+     * jäi pelinappulan alle)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * JUURISYY EI OLLUT NAPPULAN LAATIKKO VAAN SE, ETTÄ SOVITTELU EI
+     * NÄHNYT SITÄ. Nappula on ollut kiinteä este ankkuroinnissa
+     * (nostot.paivita `esteet`, PAATOKSET 32 kohta 5), mutta ANKKUROINTI
+     * AJETAAN KERRAN ja sovittelu joka levossa: `sovitteleLaput`
+     * (js/pallolauta/sovittelu.js) siirtää nimiötä ruutupikseleinä ja
+     * vaihtaa sen kylkeä sen mukaan, mitä juuri sillä zoomilla on
+     * tiellä, ja sen esteistössä oli vain kaupunkien nimet ja kyltti.
+     * Merkki pysyi siis ankkurissaan nappulan vieressä, mutta nimiö
+     * käännettiin lähizoomissa nappulan puolelle — täsmälleen se, mitä
+     * omistaja näki. Nappula tulee nyt samalta kerrokselta ja samana
+     * listana kuin nimiladonnan `pinot`.
+     */
+    const sovittelu = nostot.sovittele({
+      nimet: nimet.laatikot(),
+      kiinteat: [...infoTulos, ...merkit.laatikot('peli')],
+    });
     paivitaPisteet();
     // Ladonta ajetaan levossa, siirtymän jo mentyä: viimeinen sana
     // kaupunkipisteen koosta on tässä (ks. tahdistaPisteidenKoko).
