@@ -1434,12 +1434,31 @@ test('linssi valkaisee materiaalin sekä avatessa että sulkiessa (lähde)', asy
    */
   const sulku = lahde.indexOf('pallo.globeImageUrl(lahto.kuvaUrl ?? null)');
   assert.ok(sulku > 0, 'sulun globeImageUrl-kutsua ei löytynyt');
+  /*
+   * LUKKO PÄIVITETTY 17.9.2026 (LISÄYS 15 kohta 43, omistaja:
+   * *"Maapallo voisi olla myös hieman tummempi kautta altaan"*). Väri
+   * kirjoitetaan yhä samoissa kohdissa ja samasta syystä (musta ei saa
+   * jäädä odottamaan seuraavaa avausta), mutta sävy on nyt PALLON_SAVY
+   * eikä valkoinen — ja SAMA sävy sekä avauksessa että sulussa, jotta
+   * seuraava avaus alkaa täsmälleen siitä, mihin edellinen jäi.
+   */
   const sulunJalkeen = lahde.slice(sulku, sulku + 700);
-  assert.match(sulunJalkeen, /valkaiseMateriaali\(materiaali\);/,
-    'sulku ei pakota materiaalin väriä valkoiseksi');
+  assert.match(sulunJalkeen, /valkaiseMateriaali\(materiaali, PALLON_SAVY\);/,
+    'sulku ei kirjoita materiaalin väriä (musta jäisi odottamaan)');
   // Avauksessa väri pakotetaan ENNEN oman tekstuurin asetusta.
-  const avaus = lahde.indexOf('valkaiseMateriaali(materiaali);');
-  assert.ok(avaus > 0 && avaus < sulku, 'avaus ei valkaise materiaalia');
+  const avaus = lahde.indexOf('valkaiseMateriaali(materiaali, PALLON_SAVY);');
+  assert.ok(avaus > 0 && avaus < sulku, 'avaus ei kirjoita materiaalin väriä');
+  /*
+   * SÄVY ON TUMMEMPI KUIN VALKOINEN MUTTA KAUKANA MUSTASTA: pinta-musta
+   * -vartija (PINNAN_MUSTAN_KYNNYS) ei saa muuttua punaiseksi tummennuksen
+   * takia, ja tummennus koskee KOKO palloa (yksi kerroin diffuse-uniformiin).
+   */
+  const { PALLON_SAVY, PINNAN_MUSTAN_KYNNYS } = await import('../js/linssit/satelliitti-avaruus.js');
+  assert.ok(PALLON_SAVY < 0xffffff, 'sävy ei ole valkoista tummempi');
+  const harmaa = PALLON_SAVY & 0xff;
+  assert.equal(PALLON_SAVY, harmaa * 0x010101, 'sävy ei ole neutraali harmaa (sävyisi pallon)');
+  assert.ok(harmaa >= 0xa0 && harmaa <= 0xd8, `sävy ${harmaa} ei ole hillityn tummennuksen haarukassa`);
+  assert.ok(harmaa > PINNAN_MUSTAN_KYNNYS * 4, 'sävy on liian lähellä mustan kynnystä');
   /*
    * VARAPOLKU ON KAKSIVAIHEINEN, ja järjestys on mitattu: ensin VÄRI
    * (Mac-sessio: globe.gl maalasi materiaalin mustaksi), vasta sitten

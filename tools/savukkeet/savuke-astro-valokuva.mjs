@@ -864,9 +864,15 @@ async function ajaNakyma(nakymanNimi) {
       && kortti.ruudulla && !kortti.peittaaX,
     JSON.stringify(kortti));
 
-  /* --- ehdotus vastaa ESIKIRJOITETUSTI, ilman verkkokutsua ---------- */
+  /* --- ehdotus menee SAMAAN MALLIREITTIIN kuin vapaa kysymys ---------
+   * (omistaja 17.9.2026, Raamattu ASTRONAUTIN KAMERA LISAYS 14: vain
+   * kysymykset ovat valmiita, vastaus haetaan kuten muualla pelissä). */
   await s.evaluate(() => document.querySelector('.satelliitti-pulu-kysymys').click());
-  await s.waitForTimeout(400);
+  const ehdotusMallilta = await s.waitForFunction(
+    (odotettu) => [...document.querySelectorAll('.satelliitti-pulu-vastaus')]
+      .some((v) => v.textContent.includes(odotettu)),
+    MALLIVASTAUS, { timeout: 20000 },
+  ).then(() => true).catch(() => false);
   const vastaus = await s.evaluate(() => {
     const kuplat = [...document.querySelectorAll('.satelliitti-pulu-vastaus')];
     const v = kuplat[kuplat.length - 1];
@@ -874,13 +880,14 @@ async function ajaNakyma(nakymanNimi) {
       nakyy: Boolean(v) && v.getBoundingClientRect().height > 0,
       teksti: v?.textContent ?? '',
       omia: document.querySelectorAll('.satelliitti-pulu-oma').length,
+      valittu: document.querySelectorAll('.satelliitti-pulu-kysymys.valittu').length,
     };
   });
-  vaadi(nimessa('ehdotuksen napautus vastaa esikirjoitetusti ilman verkkokutsua'),
-    vastaus.nakyy && vastaus.teksti.length > 20 && vastaus.omia === 1
-      && laskuri.kutsut - kutsutEnnen === 0,
+  vaadi(nimessa('ehdotuksen napautus kysyy mallilta (yksi kutsu) ja vastaus tulee kuplaan'),
+    ehdotusMallilta && vastaus.nakyy && vastaus.omia === 1 && vastaus.valittu === 1
+      && laskuri.kutsut - kutsutEnnen === 1,
     JSON.stringify({ kutsuja: laskuri.kutsut - kutsutEnnen, omia: vastaus.omia,
-      teksti: vastaus.teksti.slice(0, 60) }));
+      mallilta: ehdotusMallilta, teksti: vastaus.teksti.slice(0, 60) }));
   await kaappaa('chatti-ehdotus');
 
   /* --- vapaa kysymys menee SAMAA REITTIÄ kuin kartan pulu ----------- */
@@ -918,7 +925,7 @@ async function ajaNakyma(nakymanNimi) {
   });
   vaadi(nimessa('vapaa kysymys menee pulun omaa chattireittiä ja vastaus näkyy kuplana'),
     mallivastausNakyi && vapaa.nakyy && vapaa.teksti.includes(MALLIVASTAUS)
-      && laskuri.kutsut - kutsutEnnen === 1
+      && laskuri.kutsut - kutsutEnnen === 2 // ehdotus + vapaa, molemmat mallilta
       && vapaa.omat.length === 2 && /vaalea rengas/.test(vapaa.omat[1] ?? '')
       && vapaa.kentta === '',
     JSON.stringify({ kutsuja: laskuri.kutsut - kutsutEnnen, omat: vapaa.omat,

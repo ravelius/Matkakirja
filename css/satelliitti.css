@@ -13,8 +13,27 @@
  * hehkuva rengas ja 6 px:n valkoinen ydin. Avaruusnäkymässä pisteitä
  * on kerralla yli kolmekymmentä koko pallon alalla, ja kolme kerrosta
  * teki niistä rypäleitä — kaksi lähekkäistä kohdetta sulautui yhdeksi
- * hehkuvaksi läiskäksi. Nyt merkki on YKSI tasainen vihreä piste (7
- * px, sama sävy #5dffa8) ilman rengasta ja ilman `box-shadow`-hohtoa.
+ * hehkuvaksi läiskäksi. Merkki on siksi yhä YKSI elementti ilman
+ * rengasta ja ilman `box-shadow`-hohtoa.
+ *
+ * LOISTAVA PISTE, EI TASAINEN KIEKKO (omistaja 17.9.2026, Raamattu
+ * ASTRONAUTIN KAMERA LISÄYS 15 kohdat 41–42, sanatarkasti:
+ * *"Viimeiseksi vihreät pisteet saisivat olla loistavia, eli keskusta
+ * kirkkaampi ja se tummuisi reunoilla. Ja pisteiden ei tarvitse näkyä
+ * noin selvästi suurella zoomilla. Ne voisivat olla periaatteessa
+ * vakiokokoiset, eli ne näkyisivät vasta kun zoomataan lähemmäksi."*).
+ *
+ * Piste on nyt YKSI radial-gradient: keskusta lähes valkoinen
+ * (#eafff3), sitten pelin vihreä #5dffa8, ja reuna häipyy läpinäkyväksi
+ * — ei reunaviivaa, ei toista kerrosta. Yksi elementti pitää rypäleet
+ * poissa: hehku on gradientin sisällä eikä `box-shadow`ina, joten kaksi
+ * lähekkäistä kohdetta ei sulaudu läiskäksi.
+ *
+ * VAKIOKOKO ON RAKENTEESSA. Merkki on CSS2D-elementti
+ * (js/pallolauta/merkit.js: *"KOKO ON RUUTUVAKIO"*), joten se ei
+ * skaalaudu pallon mukana: 8 px on 8 px sekä avauskorkeudella että
+ * lähikuvassa. Juuri siksi piste on kaukaa huomaamaton täplä ja erottuu
+ * vasta, kun pallo on lähellä. Kokoa EI saa sitoa kameran korkeuteen.
  *
  * OSUMA-ALUE EI PIENENTYNYT. Napautus lasketaan pallon pinnasta
  * (js/pallolauta/lauta.js lahinLinssimerkki, 44 px:n säde) eikä
@@ -38,9 +57,12 @@
      pallolaudan merkeillä. */
   pointer-events: none;
   --satelliitti-vihrea: #5dffa8;
-  /* Pisteen halkaisija: 7 px on pieni mutta erottuu meren sinisestä
-     myös avausnäkymässä, jossa pallo on 330 px leveä. */
-  --satelliitti-pisteen-koko: 7px;
+  /* Ytimen valo: vihreään taittuva lähes valkoinen (LISÄYS 15 kohta 41). */
+  --satelliitti-ydinvalo: #eafff3;
+  /* Pisteen halkaisija ruutupikseleinä, sama kaikilla zoomeilla: 8 px
+     riittää hehkulle (uloin neljännes on liukua) ja on avauksessa,
+     jossa pallo on 330 px leveä, vain pieni täplä. */
+  --satelliitti-pisteen-koko: 8px;
   /* Läpinäkyvä osuma-ala sormen mitassa (ks. tiedoston alku). */
   --satelliitti-osuman-koko: 36px;
 }
@@ -65,13 +87,21 @@
 }
 
 /*
- * PELKKÄ PISTE. Ei rengasta, ei `box-shadow`-hohtoa — omistajan
- * tilaus 16.9.2026. Väri on sama vihreä kuin ennen.
+ * HEHKUVA PISTE YHTENÄ ELEMENTTINÄ. Ei rengasta, ei reunaviivaa, ei
+ * `box-shadow`-hohtoa (omistajan tilaus 16.9.2026) — hehku on
+ * gradientissa: kirkas ydin, vihreä kehä ja häipyvä reuna (LISÄYS 15
+ * kohta 41). Sävyt: keskusta #eafff3, kehä #5dffa8, reuna läpinäkyvä.
  */
 .satelliitti-ydin {
   width: var(--satelliitti-pisteen-koko);
   height: var(--satelliitti-pisteen-koko);
-  background: var(--satelliitti-vihrea);
+  background: radial-gradient(
+    circle closest-side,
+    var(--satelliitti-ydinvalo) 0%,
+    var(--satelliitti-vihrea) 42%,
+    rgba(93, 255, 168, 0.55) 68%,
+    rgba(93, 255, 168, 0) 100%
+  );
 }
 
 .satelliitti-nimi {

@@ -107,7 +107,13 @@ const palvelin = createServer((req, res) => {
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
   res.end(readFileSync(polku));
 });
-await new Promise((r) => palvelin.listen(8754, r));
+/*
+ * PORTTI YMPÄRISTÖSTÄ: rinnakkaiset sessiot ajavat savukkeita samaan
+ * aikaan, ja kiinteä portti kaatoi ajon EADDRINUSEen. Oletus on sama
+ * kuin ennen, joten vanhat komennot toimivat muuttumatta.
+ */
+const PORTTI = Number(process.env.PORTTI) || 8754;
+await new Promise((r) => palvelin.listen(PORTTI, r));
 
 /*
  * Playwright kahdesta paikasta (README: älä kirjoita kiinteää
@@ -272,6 +278,8 @@ const MITAT = () => {
   const piste = {
     halkaisija: yt ? +parseFloat(yt.width).toFixed(1) : null,
     tausta: yt?.backgroundColor ?? null,
+    /* LISÄYS 15 kohta 41: hehku on liu'ussa, joten taustakuva kuuluu mittaan. */
+    taustakuva: (yt?.backgroundImage ?? '').slice(0, 160),
     varjo: yt?.boxShadow ?? null,
     reunanLeveys: yt ? +parseFloat(yt.borderTopWidth).toFixed(1) : null,
     reunanVari: yt?.borderTopColor ?? null,
@@ -374,7 +382,7 @@ const PELITILA = () => {
 };
 
 async function avaaPeli(s) {
-  await s.goto('http://127.0.0.1:8754/index.html?lauta=pallo', { waitUntil: 'load' });
+  await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo`, { waitUntil: 'load' });
   await s.waitForTimeout(2500);
   await s.evaluate(() => {
     [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
@@ -851,14 +859,23 @@ async function ajaNakyma(nimi) {
     `${linssi.pisteitaNakyvissa}/${linssi.pisteita} näkyvissä, varjon puolella `
     + `${linssi.pisteitaVarjonPuolella}`);
   /*
-   * PELKKÄ VIHREÄ PISTE. Väite luetaan maalatusta tuloksesta eikä
-   * tyylitiedostosta: pisteen halkaisija ≤ 9 px, tausta se sama
-   * vihreä, `box-shadow` none, reunan leveys 0 — eikä sädekehää tai
-   * rengasta ole enää olemassa.
+   * YKSI HEHKUVA VIHREÄ PISTE. Väite luetaan maalatusta tuloksesta eikä
+   * tyylitiedostosta: halkaisija ≤ 9 px, `box-shadow` none, reunan
+   * leveys 0 — eikä sädekehää tai rengasta ole enää olemassa.
+   *
+   * ODOTUSARVO PÄIVITETTY 17.9.2026 (LISÄYS 15 kohta 41): vihreä ei ole
+   * enää `background-color` vaan radial-gradient, jonka keskusta on
+   * kirkas ja reuna häipyy. Väri etsitään siis taustakuvasta, ja
+   * tasainen taustaväri on nyt nimenomaan VÄÄRIN (se olisi se tasainen
+   * kiekko, josta omistaja halusi eroon). Hehkun oikeansuuntaisuus
+   * mitataan erikseen pikseleistä (väite 41).
    */
-  vaadi(t('kohdepiste on pelkkä vihreä piste ilman rengasta ja hohtoa'),
+  vaadi(t('kohdepiste on yksi hehkuva vihreä piste ilman rengasta ja hohtoa'),
     linssi.piste?.halkaisija > 0 && linssi.piste.halkaisija <= 9
-      && /rgb\(93, 255, 168\)/.test(linssi.piste.tausta ?? '')
+      && /radial-gradient/.test(linssi.piste.taustakuva ?? '')
+      && /rgb\(93, 255, 168\)/.test(linssi.piste.taustakuva ?? '')
+      && /rgba\(93, 255, 168, 0\)/.test(linssi.piste.taustakuva ?? '')
+      && /rgba\(0, 0, 0, 0\)|transparent/.test(linssi.piste.tausta ?? '')
       && linssi.piste.varjo === 'none' && linssi.piste.merkinVarjo === 'none'
       && linssi.piste.reunanLeveys === 0 && linssi.piste.renkaita === 0
       && (linssi.piste.suodatin === 'none' || !linssi.piste.suodatin),
@@ -984,6 +1001,245 @@ async function ajaNakyma(nimi) {
   vaadi(t('kohdepiste on yhä klikattavissa'), auki1.length > auki0.length,
     `piste ${JSON.stringify(piste)}, osuma ${JSON.stringify(osuma)},`
     + ` ennen [${auki0}], jälkeen [${auki1}]`);
+
+  /* ---- 6b. LISÄYS 15: neliöt, tähdet, hehku, vakiokoko, sävy -------- */
+  /*
+   * Raamattu ASTRONAUTIN KAMERA LISÄYS 15 (omistaja 17.9.2026, kohdat
+   * 39–43). Viisi väitettä, jokainen omasta mekanismistaan:
+   *
+   *  39+44 NELIÖT JA PÖLY: kaikki kolme kerrosta (pöly mukaan lukien)
+   *     on pyöristetty sävyttimessä — PointsMaterial ilman tekstuuria
+   *     piirtäisi neliöitä — ja pölyn koko ruudulla pysyy katossa,
+   *     korkeintaan tähti × 1,5.
+   *  40 TÄHDET JA PÖLY PAIKALLAAN: otos kattaa kaikki kerrokset;
+   *     hiukkasen ruutupaikka ei liiku 5 s:ssa ilman
+   *     kosketusta, mutta liikkuu, kun palloa vedetään. Mittaus tehdään
+   *     VASTA pyörimisen pysäyttävän vedon jälkeen (ks. väite 2), joten
+   *     kirjaston autoRotate ei ole mukana luvussa.
+   *  41 HEHKU: pisteen keskipiste on kirkkaampi kuin sen reuna.
+   *  42 VAKIOKOKO: halkaisija ruudulla on sama kahdella zoomilla.
+   *  43 SÄVY: pinnan kirkkaus laskee valkoiseen verrattuna, mutta pysyy
+   *     kaukana pinta-musta-vartijan kynnyksestä.
+   */
+  const TAHTIOTOS = () => {
+    const pallo = window.matkakirja.ui.pallonInstanssi;
+    const kamera = pallo.camera?.();
+    const kangas = pallo.renderer?.()?.domElement;
+    if (!kamera || !kangas) return null;
+    /*
+     * KAIKKI HIUKKASKERROKSET, EI VAIN ENSIMMÄINEN (LISÄYS 15 kohta
+     * 44): pöly on oma kerroksensa, ja juuri sen liike oli omistajan
+     * huomio — otos, joka lukisi vain tähdet, olisi sokea pölylle.
+     */
+    const kerrokset = [];
+    pallo.scene?.()?.traverse?.((o) => {
+      if (o?.__globeObjType === 'particles' && o.geometry?.attributes?.position) kerrokset.push(o);
+    });
+    if (!kerrokset.length) return null;
+    /* 4×4-kertolasku ilman THREE:ä (kirjasto ei vie luokkia ulos). */
+    const kerro = (m, v) => {
+      const e = m?.elements;
+      if (!e) return v;
+      return [
+        e[0] * v[0] + e[4] * v[1] + e[8] * v[2] + e[12] * v[3],
+        e[1] * v[0] + e[5] * v[1] + e[9] * v[2] + e[13] * v[3],
+        e[2] * v[0] + e[6] * v[1] + e[10] * v[2] + e[14] * v[3],
+        e[3] * v[0] + e[7] * v[1] + e[11] * v[2] + e[15] * v[3],
+      ];
+    };
+    kamera.updateMatrixWorld?.();
+    const ulos = [];
+    for (const olio of kerrokset) {
+      olio.updateMatrixWorld?.();
+      const pos = olio.geometry.attributes.position;
+      for (const i of [0, 7, 23, 61]) {
+        if (i >= pos.count) continue;
+        let v = [pos.getX(i), pos.getY(i), pos.getZ(i), 1];
+        v = kerro(olio.matrixWorld, v);
+        v = kerro(kamera.matrixWorldInverse, v);
+        v = kerro(kamera.projectionMatrix, v);
+        if (!v[3]) continue;
+        ulos.push({
+          x: +(((v[0] / v[3]) * 0.5 + 0.5) * kangas.clientWidth).toFixed(2),
+          y: +((0.5 - (v[1] / v[3]) * 0.5) * kangas.clientHeight).toFixed(2),
+        });
+      }
+    }
+    return ulos;
+  };
+  const tahtitila = await s.evaluate(() => {
+    const tila = window.matkakirja.ui.pallolinssi.kahva.avaruus.tila();
+    const pallo = window.matkakirja.ui.pallonInstanssi;
+    let kerroksia = 0;
+    let nelioita = 0;
+    pallo.scene?.()?.traverse?.((o) => {
+      if (o?.__globeObjType !== 'particles') return;
+      kerroksia += 1;
+      // Neliö = Points-olio, jolla ei ole tekstuuria eikä pyöristystä.
+      if (!o.material?.map && !o.material?.__tahtiPyoristetty) nelioita += 1;
+    });
+    return { tahdet: tila.tahdet, kerroksia, nelioita };
+  });
+  vaadi(t('39+44: neliöitä ei ole — pöly mukana mutta pyöristettynä'),
+    tahtitila.nelioita === 0 && tahtitila.kerroksia === 3
+      && tahtitila.tahdet?.polya === 1
+      && tahtitila.tahdet?.ajautuvia === 0
+      && tahtitila.tahdet?.pyoreita === tahtitila.tahdet?.kerroksia
+      && tahtitila.tahdet?.kaannettyja === tahtitila.tahdet?.kerroksia,
+    `kerroksia ${tahtitila.kerroksia}, pölyjä ${tahtitila.tahdet?.polya}, `
+    + `neliöitä ${tahtitila.nelioita}, pyöreitä ${tahtitila.tahdet?.pyoreita}`);
+  /*
+   * 44 KOKO: yksikään hiukkanen ei saa olla ruudulla tähteä
+   * suurempi kuin kertoimella 1,5. Luku lasketaan samalla kaavalla
+   * kuin three.js:n sävytin (tahdet.js kokoRuudulla) ja katto on jo
+   * mukana, joten mittaus vastaa sitä mitä silmä näkee.
+   */
+  const koot = tahtitila.tahdet?.koot ?? [];
+  const polynKoko = Math.max(0, ...koot.filter((k) => k.tunnus === 'poly').map((k) => k.suurinPx));
+  const tahdenKoko = Math.max(0, ...koot.filter((k) => k.tunnus !== 'poly').map((k) => k.suurinPx));
+  vaadi(t('44: pölyhiukkanen korkeintaan tähti × 1,5 ruudulla'),
+    koot.length === 3 && polynKoko > 0 && tahdenKoko > 0
+      && polynKoko <= tahdenKoko * 1.5,
+    `pöly ${polynKoko} px (rajaamatta `
+    + `${koot.find((k) => k.tunnus === 'poly')?.rajaamatonPx}), tähti ${tahdenKoko} px`);
+  const tahti0 = await s.evaluate(TAHTIOTOS);
+  await s.waitForTimeout(5000);
+  const tahti1 = await s.evaluate(TAHTIOTOS);
+  const ero = (a, b) => ((a?.length && b?.length)
+    ? Math.max(...a.map((p, i) => (b[i] ? Math.hypot(b[i].x - p.x, b[i].y - p.y) : 0))) : NaN);
+  const levossa = ero(tahti0, tahti1);
+  const kx = Math.round(NAKYMAT[nimi].viewport.width / 2);
+  const ky = Math.round(NAKYMAT[nimi].viewport.height / 2);
+  await s.mouse.move(kx, ky);
+  await s.mouse.down();
+  for (let i = 1; i <= 6; i += 1) {
+    // eslint-disable-next-line no-await-in-loop
+    await s.mouse.move(kx - i * 10, ky);
+  }
+  await s.mouse.up();
+  await s.waitForTimeout(600);
+  const tahti2 = await s.evaluate(TAHTIOTOS);
+  const vedossa = ero(tahti1, tahti2);
+  vaadi(t('40+44: tähdet ja pöly paikallaan 5 s, liikkuvat vedossa'),
+    Number.isFinite(levossa) && levossa < 0.5 && vedossa > 2,
+    `levossa ${levossa.toFixed(2)} px / 5 s, vedossa ${vedossa.toFixed(2)} px`);
+  await rauhoitu(s);
+
+  /* 42: halkaisija ruudulla kahdella zoomilla. */
+  const YDIN = () => {
+    const y = [...document.querySelectorAll('.satelliitti-piste')]
+      .filter((e) => !e.closest('.pallolauta-takana'))
+      .map((e) => e.querySelector('.satelliitti-ydin'))
+      .find((e) => e && e.getBoundingClientRect().width > 0);
+    const b = y?.getBoundingClientRect();
+    return b ? +b.width.toFixed(2) : null;
+  };
+  const korkeusNyt = await s.evaluate(() => window.matkakirja.ui.pallonInstanssi.pointOfView().altitude);
+  const halkaisijaKaukaa = await s.evaluate(YDIN);
+  await s.evaluate((alt) => {
+    const { ui } = window.matkakirja;
+    const pov = ui.pallonInstanssi.pointOfView();
+    ui.pallonInstanssi.pointOfView({ ...pov, altitude: alt }, 0);
+    ui.pallolauta.heraa();
+  }, Math.max(0.12, korkeusNyt * 0.35));
+  await s.waitForTimeout(1200);
+  const halkaisijaLahelta = await s.evaluate(YDIN);
+  vaadi(t('42: pisteen halkaisija on sama kahdella zoomilla'),
+    halkaisijaKaukaa !== null && halkaisijaLahelta === halkaisijaKaukaa
+      && halkaisijaKaukaa >= 6 && halkaisijaKaukaa <= 9,
+    `korkeus ${korkeusNyt.toFixed(2)} → ${(korkeusNyt * 0.35).toFixed(2)}: `
+    + `${halkaisijaKaukaa} px → ${halkaisijaLahelta} px`);
+
+  /* 41: keskusta kirkkaampi kuin reuna (pikseleistä). */
+  /*
+   * PISTE OTETAAN RUUDUN SISÄLTÄ. `vakaaPiste` etsii pallon keskustaa
+   * lähimmän merkin, ja lähikuvassa se voi olla ruudun ULKOPUOLELLA
+   * (mitattu: x = −35) — silloin kaappauksen rajaus lipsuu reunaan eikä
+   * mittaa pistettä lainkaan. Tässä vaaditaan 24 px marginaali.
+   */
+  const pisteLahelta = await s.evaluate(() => {
+    const reuna = 24;
+    const keski = { x: innerWidth / 2, y: innerHeight / 2 };
+    return [...document.querySelectorAll('.satelliitti-piste')]
+      .filter((e) => !e.closest('.pallolauta-takana'))
+      .map((e) => (e.querySelector('.satelliitti-ydin') ?? e).getBoundingClientRect())
+      .filter((b) => b.width > 0)
+      .map((b) => ({ x: b.left + b.width / 2, y: b.top + b.height / 2 }))
+      .filter((p) => p.x > reuna && p.y > reuna
+        && p.x < innerWidth - reuna && p.y < innerHeight - reuna)
+      .map((p) => ({ ...p, etaisyys: Math.hypot(p.x - keski.x, p.y - keski.y) }))
+      .sort((a, b) => a.etaisyys - b.etaisyys)[0] ?? null;
+  });
+  let hehku = null;
+  if (pisteLahelta) {
+    const reuna = 9;
+    const puskuri = await s.screenshot({
+      clip: {
+        x: Math.max(0, pisteLahelta.x - reuna),
+        y: Math.max(0, pisteLahelta.y - reuna),
+        width: reuna * 2,
+        height: reuna * 2,
+      },
+    });
+    const kuva = decodePng(puskuri);
+    const kx2 = kuva.width / 2;
+    const ky2 = kuva.height / 2;
+    const sadePx = 3.4 * dpr;
+    const reunat = [0, 90, 180, 270].map((k) => kirkkaus(
+      kuva, kx2 + Math.cos((k * Math.PI) / 180) * sadePx,
+      ky2 + Math.sin((k * Math.PI) / 180) * sadePx, 0,
+    ));
+    hehku = {
+      keskusta: +kirkkaus(kuva, kx2, ky2, 0).toFixed(1),
+      reuna: +(reunat.reduce((a, b) => a + b, 0) / reunat.length).toFixed(1),
+      reunat: reunat.map((v) => +v.toFixed(1)),
+    };
+  }
+  vaadi(t('41: pisteen keskusta on kirkkaampi kuin reuna'),
+    Boolean(hehku) && hehku.keskusta > hehku.reuna + 5,
+    `${JSON.stringify(hehku)} (piste ${JSON.stringify(pisteLahelta)})`);
+  await s.evaluate((alt) => {
+    const { ui } = window.matkakirja;
+    const pov = ui.pallonInstanssi.pointOfView();
+    ui.pallonInstanssi.pointOfView({ ...pov, altitude: alt }, 0);
+    ui.pallolauta.heraa();
+  }, korkeusNyt);
+  await s.waitForTimeout(1000);
+
+  /* 43: pinnan sävy — ennen (valkoinen) ja jälkeen (PALLON_SAVY). */
+  /*
+   * VÄRI ON NULL, KUN TEKSTUURI ON SAAPUNUT (LISÄYS 13 kohta 37:
+   * globe.gl nollaa `material.color`in tekstuurin latatessa, jolloin
+   * three.js ei enää kirjoita `diffuse`-uniformia — VIIMEKSI kirjoitettu
+   * sävy jää voimaan). Siksi tässä ei lueta `color.getHex()`iä eikä
+   * kutsuta `setHex`iä: kumpikaan ei kerro eikä muuta mitään. Ennen/
+   * jälkeen mitataan samalla tempulla kuin linssi tekee — UUSI Color
+   * (`specular`in konstruktori) ensin valkoisena ja sitten takaisin
+   * linssin sävyyn — ja pinta luetaan piirtopuskurista joka kerta.
+   */
+  const savy = await s.evaluate((hexSavy) => {
+    const kahva = window.matkakirja.ui.pallolinssi.kahva.avaruus;
+    const materiaali = window.matkakirja.ui.pallonInstanssi.globeMaterial?.();
+    const Vari = materiaali?.specular?.constructor;
+    const aseta = (hex) => {
+      if (typeof Vari !== 'function') return false;
+      materiaali.color = new Vari(hex);
+      materiaali.needsUpdate = true;
+      return true;
+    };
+    const jalkeen = kahva.mittaaPinta();
+    const valkeni = aseta(0xffffff);
+    const ennen = kahva.mittaaPinta();
+    const palasi = aseta(hexSavy);
+    const palautettu = kahva.mittaaPinta();
+    return { ennen, jalkeen, palautettu, valkeni, palasi };
+  }, 0xbfbfbf);
+  vaadi(t('43: pinta tummeni kauttaaltaan mutta ei mustunut'),
+    savy.valkeni && savy.palasi && savy.jalkeen > 20 && savy.ennen > savy.jalkeen
+      && savy.jalkeen < savy.ennen * 0.95 && savy.palautettu > 20
+      && Math.abs(savy.palautettu - savy.jalkeen) <= Math.max(6, savy.jalkeen * 0.1),
+    `valkoisella ${savy.ennen} → linssin sävyllä ${savy.jalkeen} `
+    + `(sama sävy uudestaan ${savy.palautettu}, mustan kynnys 12)`);
 
   /* ---- 7. reliefin tarkkuus ----------------------------------------- */
   const odotettu = NAKYMAT[nimi].viewport.width >= 1024 ? '8k' : '4k';
