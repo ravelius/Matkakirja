@@ -34,10 +34,24 @@
  *      yhä klikattavissa.
  *   7. RELIEFIN TARKKUUS: leveä ruutu saa 8k-kuvan, puhelin 4k:n, ja
  *      latauksen kesto kirjataan.
+ *   8. PALLO EI OLE MUSTA (v1924, iPhone). Pinnalla on osoite kahdeksan
+ *      sekunnin sisällä JA pallon keskipiste on kirkkaampi kuin 20.
+ *      Vartio ajetaan lisäksi SAFARIN RAJOILLA: `ctx.filter` pois
+ *      käytöstä ja kankaan katto 2048 × 1024 — silloin varapolun on
+ *      kannettava, eikä mustaa palloa saa syntyä.
+ *   9. TYHJÄ NÄKYMÄ EI JÄÄ TYHJÄKSI (WebKit-vika 16.9.2026, Raamattu
+ *      ASTRONAUTIN KAMERA LISÄYS 11 kohta 34). Kun Globe.gl:n lataus
+ *      estetään, pelaaja saa aikakatkon jälkeen NÄKYVÄN ilmoituksen ja
+ *      napin ulos — ei tummaa pohjaa ja pelkkää ✕:ää. VASTAKOE: ehjässä
+ *      ajossa samaa ilmoitusta ei ole ruudulla ja `puute()` on null.
+ *   9b. LINSSIN OMA VARTIJA: lauta rakentuu, mutta pallon pinta jää
+ *      saamatta (generoitu tekstuuri kaatuu, reliefikuva ei saavu).
+ *      Vartijan on nimettävä puute (`pinta`) ja näytettävä se pelaajalle.
  *
  * VERKKO: ämpäri (laatat, Globe.gl, reliefi) Noden fetchin kautta, muu
  * katki. Ympäristömuuttuja NAKYMAT rajaa ajettavat näytöt
- * (esim. NAKYMAT=tyopoyta).
+ * (esim. NAKYMAT=tyopoyta). Väite 9 ei ole näyttökoko vaan vartija:
+ * se ajetaan oletuksena kerran, ja `NAKYMAT=vartija` ajaa vain sen.
  */
 import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -421,6 +435,38 @@ async function avaaLinssiEleella(s, odota = 4500) {
   }));
 }
 
+/*
+ * ── SAFARIN RAJAT SELAIMEEN (väite 8) ─────────────────────────────
+ *
+ * Kontissa on vain Chromium, joten iOS Safarin kaksi kohtalokasta
+ * ominaisuutta pannaan päälle käsin ennen yhtään sivuskriptiä:
+ *
+ *   1. `ctx.filter` ei ole olemassa (Safari 16 ja vanhemmat).
+ *   2. Kangas, joka ylittää katon, on TYHJÄ ilman poikkeusta — juuri
+ *      tämä hiljainen epäonnistuminen teki pallosta mustan.
+ *
+ * Jäljitelmä on karkea mutta osuu siihen, mikä merkitsee: ketju ei saa
+ * jäädä mustaan, vaan sen on pudottava generoituun vyöhykepalloon tai
+ * pienempään kankaaseen.
+ */
+const SAFARI_JARJESTELY = (kattoPx) => `(() => {
+  const P = CanvasRenderingContext2D.prototype;
+  try { Object.defineProperty(P, 'filter', { get: () => 'none', set: () => {}, configurable: true }); } catch (e) {}
+  const alku = P.getImageData;
+  P.getImageData = function (x, y, w, h) {
+    const c = this.canvas;
+    if (c && c.width * c.height > ${kattoPx}) {
+      return new ImageData(new Uint8ClampedArray(4 * Math.max(1, w) * Math.max(1, h)), Math.max(1, w), Math.max(1, h));
+    }
+    return alku.call(this, x, y, w, h);
+  };
+})()`;
+
+/** Pallon keskipisteen kirkkaus kuvakaappauksesta. */
+function keskipisteenKirkkaus(kuva, { keskiX, keskiY, dpr }) {
+  return kirkkaus(kuva, keskiX * dpr, keskiY * dpr, 6);
+}
+
 async function ajaNakyma(nimi) {
   const virheet = [];
   const konteksti = await selain.newContext({
@@ -752,7 +798,8 @@ async function ajaNakyma(nimi) {
     const m = await import('/js/linssit/satelliitti-avaruus.js');
     const aja = async (leveys, korkeus, osoite) => {
       const t0 = performance.now();
-      const url = await m.reliefiTekstuuri({ leveys, korkeus, osoite });
+      // ruudunLeveys mukaan, tai ladonta putoaisi aina puhelinkattoon.
+      const url = await m.reliefiTekstuuri({ leveys, korkeus, osoite, ruudunLeveys: innerWidth });
       const kesto = Math.round(performance.now() - t0);
       if (url?.startsWith('blob:')) URL.revokeObjectURL(url);
       return { kesto, onnistui: Boolean(url) };
@@ -771,6 +818,25 @@ async function ajaNakyma(nimi) {
   vaadi(t('molemmat reliefitarkkuudet latautuvat samalla ketjulla'),
     Boolean(ketju?.nelja?.onnistui && ketju?.kasi?.onnistui),
     JSON.stringify(ketju));
+
+  /* ---- 8. PALLO EI OLE MUSTA ---------------------------------------- */
+  /*
+   * KAKSI MITTARIA, KOSKA YKSI EI RIITÄ. Osoite pinnalla kertoo, että
+   * ketju päätyi johonkin; pikseli kertoo, ettei se johonkin ollut
+   * tyhjä kangas. v1924:ssä ensimmäinen olisi ollut vihreä ja toinen
+   * punainen — juuri siksi vika ei näkynyt missään mittarissa.
+   */
+  vaadi(t('pallon pinnalla on osoite (ei mustaa)'),
+    Boolean(linssi.avaruus?.pinnanOsoite) && linssi.avaruus.pinnanOsoite !== 'null',
+    `pinnanOsoite "${linssi.avaruus?.pinnanOsoite}", reliefi ${linssi.avaruus?.reliefi},`
+    + ` kesto ${linssi.avaruus?.reliefinKestoMs} ms`);
+  vaadi(t('reliefi ehti pinnalle kahdeksassa sekunnissa'),
+    linssi.avaruus?.reliefinKestoMs > 0 && linssi.avaruus.reliefinKestoMs <= 8000,
+    `${linssi.avaruus?.reliefinKestoMs} ms`);
+  const keskiKuva = decodePng(await s.screenshot({ type: 'png', timeout: 120000 }));
+  const keskiKirkkaus = keskipisteenKirkkaus(keskiKuva, { keskiX, keskiY, dpr });
+  vaadi(t('pallon keskipiste ei ole musta'), keskiKirkkaus > 20,
+    `kirkkaus ${keskiKirkkaus.toFixed(1)} (kynnys 20)`);
 
   /* ---- kuva raporttiin ---------------------------------------------- */
   if (ULOS) {
@@ -827,11 +893,229 @@ async function ajaNakyma(nimi) {
     Boolean(h1) && Boolean(h2) && liike < 0.5,
     `${JSON.stringify(h1)} → ${JSON.stringify(h2)}, ${liike.toFixed(2)} px`);
   await hidas.close();
+
+  /* ---- 8b. SAFARIN RAJAT: varapolun on kannettava ------------------- */
+  /*
+   * Sama linssi, mutta selain teeskentelee iOS Safaria: ei
+   * `ctx.filter`ia, ja yli 2048 × 1024 -kankaat ovat tyhjiä. Ennen
+   * korjausta tämä tuotti täsmälleen omistajan kuvan — musta pallo,
+   * vihreät pisteet ja ISS päällä. Nyt ketju joko ladotaan pienemmälle
+   * kankaalle tai jätetään generoituun vyöhykepalloon; kumpikin on
+   * väriä, eikä kumpikaan ole musta.
+   */
+  const safari = await selain.newContext({
+    ...NAKYMAT[nimi], serviceWorkers: 'block', reducedMotion: 'no-preference',
+  });
+  const f = await safari.newPage();
+  const safariVirheet = [];
+  f.on('pageerror', (e) => safariVirheet.push(String(e)));
+  await f.addInitScript(SAFARI_JARJESTELY(2048 * 1024));
+  await f.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());
+  await f.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {
+    const v = await ulkohaku(route.request().url());
+    if (!v) { route.abort(); return; }
+    route.fulfill({
+      status: 200, contentType: v.tyyppi ?? 'application/octet-stream', body: v.body,
+      headers: { 'access-control-allow-origin': '*' },
+    });
+  });
+  await avaaPeli(f);
+  await avaaLinssiEleella(f, 4500);
+  await rauhoitu(f);
+  const safariTila = await f.evaluate(MITAT);
+  const safariKuva = decodePng(await f.screenshot({ type: 'png', timeout: 120000 }));
+  const safariKirkkaus = keskipisteenKirkkaus(safariKuva, { keskiX, keskiY, dpr });
+  vaadi(t('SAFARIN RAJOILLA: pallon pinnalla on yhä osoite'),
+    Boolean(safariTila.avaruus?.pinnanOsoite) && safariTila.avaruus.pinnanOsoite !== 'null',
+    `pinnanOsoite "${safariTila.avaruus?.pinnanOsoite}", reliefi ${safariTila.avaruus?.reliefi}`);
+  vaadi(t('SAFARIN RAJOILLA: pallo ei ole musta'), safariKirkkaus > 20,
+    `kirkkaus ${safariKirkkaus.toFixed(1)} (kynnys 20), reliefi `
+    + `${safariTila.avaruus?.reliefi}, kesto ${safariTila.avaruus?.reliefinKestoMs} ms`);
+  vaadi(t('SAFARIN RAJOILLA: ei sivuvirheitä'), safariVirheet.length === 0,
+    safariVirheet.slice(0, 2).join(' | '));
+  console.log(`    SAFARI-DIAG ${JSON.stringify(safariTila.avaruus?.diag ?? [])}`);
+  if (ULOS) {
+    await f.screenshot({
+      path: join(ULOS, `astro-pallo-safari-${NAKYMAT[nimi].viewport.width}-20260916.jpg`),
+      type: 'jpeg', quality: 78, timeout: 120000,
+    }).catch(() => {});
+  }
+  await safari.close();
+}
+
+/*
+ * ── 9. TYHJÄ NÄKYMÄ EI JÄÄ TYHJÄKSI (WebKit-vika 16.9.2026) ───────
+ *
+ * OMISTAJAN VIKA (Raamattu, ASTRONAUTIN KAMERA LISÄYS 11 kohta 34;
+ * Codexin live-QA asennetusta macOS Safari -sovelluksesta): laukku →
+ * Astronautin kamera → Aktivoi jätti ruudulle tumman pohjan ja ✕:n.
+ * Maapalloa, pisteitä eikä ILMOITUSTA ei tullut.
+ *
+ * VÄITE: kun Globe.gl:n lataus estetään — sama lopputulos kuin
+ * WebKitissä, jossa lataus jää roikkumaan — pelaaja saa aikakatkon
+ * jälkeen NÄKYVÄN ilmoituksen ja napin ulos, ei tyhjää ruutua.
+ *
+ * VASTAKOE: ilman estoa samaa ilmoitusta EI ole ruudulla. Ilman
+ * vastakoetta mittari näyttäisi vihreää myös silloin, kun ilmoitus
+ * jäisi päälle aina.
+ */
+async function ajaKirjastoEstetty() {
+  const konteksti = await selain.newContext({
+    ...NAKYMAT.tyopoyta, serviceWorkers: 'block', reducedMotion: 'no-preference',
+  });
+  const e = await konteksti.newPage();
+  const virheet = [];
+  e.on('pageerror', (x) => virheet.push(String(x)));
+  await e.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());
+  await e.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {
+    const url = route.request().url();
+    // TÄMÄ ON KOE: kirjasto ei koskaan saavu.
+    if (/globe\.gl/.test(url)) { route.abort(); return; }
+    const v = await ulkohaku(url);
+    if (!v) { route.abort(); return; }
+    route.fulfill({
+      status: 200, contentType: v.tyyppi ?? 'application/octet-stream', body: v.body,
+      headers: { 'access-control-allow-origin': '*' },
+    });
+  });
+  await avaaPeli(e);
+  await avaaLinssiEleella(e, 1000);
+  // Vartijan aikakatko on 12 s; odotetaan se ja vähän päälle.
+  await e.waitForTimeout(16000);
+  const tila = await e.evaluate(() => {
+    const el = document.getElementById('linssivirhe');
+    const t = el ? getComputedStyle(el) : null;
+    const laatikko = el?.getBoundingClientRect?.() ?? null;
+    return {
+      ilmoitus: Boolean(el),
+      teksti: el ? el.textContent.slice(0, 120) : '',
+      nakyy: Boolean(t && t.display !== 'none' && t.visibility !== 'hidden'
+        && Number(t.opacity) > 0.05 && laatikko.width > 0 && laatikko.height > 0),
+      nappeja: el ? el.querySelectorAll('button').length : 0,
+      pallolauta: Boolean(window.matkakirja?.ui?.pallolauta),
+    };
+  });
+  vaadi('kirjasto estetty: pelaaja saa näkyvän ilmoituksen, ei tyhjää ruutua',
+    tila.ilmoitus && tila.nakyy && tila.nappeja >= 1,
+    `ilmoitus ${tila.ilmoitus}, näkyy ${tila.nakyy}, nappeja ${tila.nappeja},`
+    + ` lauta ${tila.pallolauta}, teksti "${tila.teksti}"`);
+  vaadi('kirjasto estetty: sivu ei kaadu', virheet.length === 0,
+    virheet.slice(0, 2).join(' | '));
+  if (ULOS) {
+    await e.screenshot({
+      path: join(ULOS, 'astro-pallo-kirjasto-estetty-20260916.jpg'),
+      type: 'jpeg', quality: 78, timeout: 120000,
+    }).catch(() => {});
+  }
+  await konteksti.close();
+}
+
+/*
+ * VÄITE 9b: LINSSIN OMA VARTIJA. Lauta rakentuu normaalisti, mutta
+ * pallon PINTA jää saamatta (generoitu tekstuuri kaatuu, reliefikuva
+ * ei saavu). Silloin linssi avautuu mutta näyttää väärää — juuri se
+ * tila, jota mikään mittari ei ennen huomannut. Vartijan on kerrottava
+ * se pelaajalle, ei jätettävä ruutua arvailun varaan.
+ */
+async function ajaPintaEstetty() {
+  const konteksti = await selain.newContext({
+    ...NAKYMAT.tyopoyta, serviceWorkers: 'block', reducedMotion: 'no-preference',
+  });
+  const e = await konteksti.newPage();
+  await e.addInitScript(`(() => {
+    const C = window.ImageData;
+    window.ImageData = function () { throw new Error('koe: ImageData'); };
+    void C;
+  })()`);
+  await e.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());
+  await e.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {
+    const url = route.request().url();
+    // Reliefikuva ei saavu: pinnalle ei jää yhtään osoitetta.
+    if (/topografia-pallo/.test(url)) { route.abort(); return; }
+    const v = await ulkohaku(url);
+    if (!v) { route.abort(); return; }
+    route.fulfill({
+      status: 200, contentType: v.tyyppi ?? 'application/octet-stream', body: v.body,
+      headers: { 'access-control-allow-origin': '*' },
+    });
+  });
+  await avaaPeli(e);
+  await avaaLinssiEleella(e, 1000);
+  await e.waitForTimeout(18000);
+  const tila = await e.evaluate(() => {
+    const kahva = window.matkakirja?.ui?.pallolinssi?.kahva ?? null;
+    const el = document.getElementById('linssivirhe');
+    const laatikko = el?.getBoundingClientRect?.() ?? null;
+    return {
+      ilmoitus: Boolean(el),
+      nakyy: Boolean(laatikko && laatikko.width > 0 && laatikko.height > 0),
+      teksti: el ? el.textContent.slice(0, 120) : '',
+      puute: kahva?.puute ? String(kahva.puute() ?? 'ei') : 'ei-kahvaa',
+      lauta: Boolean(window.matkakirja?.ui?.pallolauta),
+    };
+  });
+  vaadi('pinta estetty: linssin oma vartija ilmoittaa keskeneräisestä näkymästä',
+    tila.lauta && tila.puute === 'pinta' && tila.ilmoitus && tila.nakyy,
+    `lauta ${tila.lauta}, puute ${tila.puute}, ilmoitus ${tila.ilmoitus},`
+    + ` näkyy ${tila.nakyy}, teksti "${tila.teksti}"`);
+  if (ULOS) {
+    await e.screenshot({
+      path: join(ULOS, 'astro-pallo-pinta-estetty-20260916.jpg'),
+      type: 'jpeg', quality: 78, timeout: 120000,
+    }).catch(() => {});
+  }
+  await konteksti.close();
+}
+
+/** VASTAKOE: tavallisessa ajossa ilmoitusta ei ole ruudulla. */
+async function ajaVastakoeIlmanEstoa() {
+  const konteksti = await selain.newContext({
+    ...NAKYMAT.tyopoyta, serviceWorkers: 'block', reducedMotion: 'no-preference',
+  });
+  const e = await konteksti.newPage();
+  await e.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (r) => r.abort());
+  await e.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {
+    const v = await ulkohaku(route.request().url());
+    if (!v) { route.abort(); return; }
+    route.fulfill({
+      status: 200, contentType: v.tyyppi ?? 'application/octet-stream', body: v.body,
+      headers: { 'access-control-allow-origin': '*' },
+    });
+  });
+  await avaaPeli(e);
+  await avaaLinssiEleella(e, 1000);
+  await e.waitForTimeout(16000);
+  const tila = await e.evaluate(() => {
+    const kahva = window.matkakirja?.ui?.pallolinssi?.kahva ?? null;
+    return {
+      ilmoitus: Boolean(document.getElementById('linssivirhe')),
+      kahva: Boolean(kahva?.puute),
+      /* null = ei puutetta; merkkijono kertoo, mikä jäi kesken. */
+      puute: kahva?.puute ? String(kahva.puute() ?? 'ei') : 'ei-kahvaa',
+      pisteita: document.querySelectorAll('.satelliitti-piste').length,
+    };
+  });
+  vaadi('VASTAKOE: ehjässä ajossa ilmoitusta ei näytetä',
+    !tila.ilmoitus && tila.kahva && tila.puute === 'ei' && tila.pisteita > 0,
+    `ilmoitus ${tila.ilmoitus}, kahva ${tila.kahva}, puute ${tila.puute},`
+    + ` pisteitä ${tila.pisteita}`);
+  await konteksti.close();
 }
 
 for (const nimi of Object.keys(NAKYMAT)) {
   if (VALITUT.length && !VALITUT.includes(nimi)) continue;
   await ajaNakyma(nimi);
+}
+
+/*
+ * Väite 9 ei ole näyttökoko vaan vartija, joten se ajetaan oletuksena
+ * kerran. `NAKYMAT=vartija` ajaa VAIN sen (nopea uusinta ilman kahta
+ * täyttä näyttöajoa); `NAKYMAT=puhelin` jättää sen pois.
+ */
+if (!VALITUT.length || VALITUT.includes('tyopoyta') || VALITUT.includes('vartija')) {
+  await ajaVastakoeIlmanEstoa();
+  await ajaKirjastoEstetty();
+  await ajaPintaEstetty();
 }
 
 await selain.close();

@@ -480,11 +480,20 @@ body.satelliitti-kuva-auki .satelliitti-linssikehys { display: none; }
   cursor: pointer;
 }
 
+/*
+ * OTSIKKORIVI ON LINSSIN VIHREÄ (omistaja 16.9.2026, sanatarkasti:
+ * *"Infon otsikkorivi voisi olla vihreällä"*). Sama sävy kuin
+ * pallon kohdepisteillä ja "Kysy pululta:"-otsikolla, jotta linssin
+ * oma väri toistuu joka pinnalla. Maa-osa (`.satelliitti-seutu`) jää
+ * himmeäksi harmaaksi: se on tarkenne, ei otsikko. Kelatussa tilassa
+ * himmennys tehdään `opacity`illa, joka säilyttää sävyn — vihreä
+ * himmenee samassa suhteessa kuin muu selite eikä muutu harmaaksi.
+ */
 .satelliitti-selite-otsikko {
   font-family: var(--font-type, system-ui), system-ui, sans-serif;
   font-size: 1rem;
   line-height: 1.2;
-  color: #eafff3;
+  color: var(--satelliitti-vihrea, #5dffa8);
 }
 
 /*
@@ -603,7 +612,7 @@ body.satelliitti-kuva-auki .satelliitti-linssikehys { display: none; }
 .satelliitti-lisatiedot div { margin-top: 3px; }
 .satelliitti-lisatiedot b { color: #eafff3; font-weight: 600; }
 
-.satelliitti-seutu { color: rgba(223, 246, 232, 0.7); font-size: 0.85rem; }
+.satelliitti-seutu { color: rgba(214, 214, 214, 0.72); font-size: 0.85rem; }
 .satelliitti-linkki { color: var(--satelliitti-vihrea, #5dffa8); }
 
 /*
@@ -820,6 +829,44 @@ body.aikajana-pulu-piilossa .satelliitti-pulukulma .minipulu {
 .satelliitti-pulunappi[disabled] { cursor: default; opacity: 0.6; }
 
 /*
+ * HOVER/ACTIVE/FOCUS EIVÄT SAA TUODA TAUSTALAATIKKOA TAKAISIN
+ * (Codexin live-QA Mac Chromella v1924: nappi 70×84 px, levossa
+ * läpinäkyvä, vaihtui osoitettaessa ruskeaksi rgb(67, 51, 31)).
+ *
+ * JUURISYY MITATTU: tiedoston alun yleissääntö
+ * `button:hover:not(:disabled) { background: #43331f; }`
+ * (css/styles.css, tarkkuus 0,2,1 — elementti + kaksi pseudoluokkaa)
+ * voittaa `.satelliitti-pulunappi`-luokan levon säännön (tarkkuus
+ * 0,1,0), koska `:hover`-osoitin ei poista luokkasääntöä käytöstä,
+ * vain häviää tarkkuudessa. `.satelliitti-pulunappi:hover` yllä
+ * asettaa vain suotimen (filter), ei taustaa, joten mikään tässä
+ * tiedostossa ei ennen tätä sääntöä voittanut yleissääntöä.
+ *
+ * SAMA RATKAISU KUIN MUUALLA TIEDOSTOSSA (css/styles.css rivit ~21493,
+ * ~23847 ja ~26857): tarkkuus nostetaan toistamalla elementti +
+ * luokka + tila, jolloin tulos on 0,3,1 ja voittaa yleissäännön
+ * järjestyksestä riippumatta.
+ */
+button.satelliitti-pulunappi:hover:not(:disabled),
+button.satelliitti-pulunappi:active:not(:disabled),
+button.satelliitti-pulunappi:focus:not(:disabled),
+button.satelliitti-pulunappi:focus-visible {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+/*
+ * Näppäimistökohdistus säilyy silti näkyvänä — vain ilman taustaa.
+ * Vihreä on linssin oma sävy (--satelliitti-vihrea, sama kuin
+ * "Kysy pululta:" -otsikolla ja kohdepisteillä).
+ */
+button.satelliitti-pulunappi:focus-visible {
+  outline: 2px solid var(--satelliitti-vihrea, #5dffa8);
+  outline-offset: 2px;
+}
+
+/*
  * KYSYMYSKORTTI TUMMALLE POHJALLE. Sama paperiton, läpikuultava
  * tummuus kuin selitteellä — valokuva on sisältö, kortti sen päällä
  * oleva pinta. Korkeus on rajattu, jottei pitkä vastaus työnnä korttia
@@ -828,6 +875,15 @@ body.aikajana-pulu-piilossa .satelliitti-pulukulma .minipulu {
 .satelliitti-pulukortti {
   width: min(320px, calc(100vw - 24px));
   max-height: min(52vh, 420px);
+  /*
+   * KORTTI ON PYSTYSARAKE, JOTTA KYSYMYSKENTTÄ PYSYY POHJALLA
+   * (omistaja 16.9.2026, chatti minipululle). Virta on ainoa joustava
+   * osa: se kutistuu ja vierii, otsikkorivi, ehdotukset ja syöterivi
+   * eivät — matalalla vaakaruudulla juuri kenttä olisi se, joka
+   * valuisi kortin ulkopuolelle.
+   */
+  display: flex;
+  flex-direction: column;
   overflow-y: auto;
   box-sizing: border-box;
   padding: 10px 12px 12px;
@@ -843,6 +899,7 @@ body.aikajana-pulu-piilossa .satelliitti-pulukulma .minipulu {
 .satelliitti-pulukortti[hidden] { display: none; }
 
 .satelliitti-pulu-ylarivi {
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -876,6 +933,7 @@ body.aikajana-pulu-piilossa .satelliitti-pulukulma .minipulu {
 }
 
 .satelliitti-pulu-kysymykset {
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -901,9 +959,44 @@ body.aikajana-pulu-piilossa .satelliitti-pulukulma .minipulu {
   background: rgba(93, 255, 168, 0.18);
 }
 
+/*
+ * ── CHATIN VIRTA: PELAAJAN KYSYMYKSET JA PULUN KUPLAT ────────────
+ *
+ * OMISTAJA 16.9.2026 (Raamattu LISÄYS 10, kohta 29): chatin pitää
+ * toimia normaalisti, vaikka pulu on pieni. Virta vierii ITSE — kortti
+ * ei saa kasvaa ruudun yli, ja kysymyskenttä pysyy aina näkyvissä
+ * kortin pohjalla.
+ */
+.satelliitti-pulu-virta {
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 9px;
+  max-height: min(34vh, 260px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.satelliitti-pulu-virta:empty { display: none; }
+
+/* Pelaajan oma kysymys: tumma, oikeaan reunaan tasattu rivi. */
+.satelliitti-pulu-oma {
+  align-self: flex-end;
+  max-width: 88%;
+  padding: 6px 10px;
+  border-radius: 12px 12px 4px 12px;
+  border: 1px solid rgba(93, 255, 168, 0.22);
+  background: rgba(10, 24, 18, 0.9);
+  color: #eafff3;
+  font-size: 0.85rem;
+}
+
 /* Vastaus on pulun kupla: pyöristetty, oikealta lähtevä kärki alhaalla. */
 .satelliitti-pulu-vastaus {
-  margin-top: 9px;
+  align-self: flex-start;
+  max-width: 96%;
   padding: 9px 11px;
   border-radius: 12px 12px 12px 4px;
   background: rgba(233, 246, 240, 0.94);
@@ -913,8 +1006,64 @@ body.aikajana-pulu-piilossa .satelliitti-pulukulma .minipulu {
 
 .satelliitti-pulu-vastaus[hidden] { display: none; }
 
+/* Odotusrivi: sama kupla himmeänä, kunnes ensimmäinen pala saapuu. */
+.satelliitti-pulu-odottaa { opacity: 0.6; }
+
+/*
+ * ── VAPAA KYSYMYSKENTTÄ ──────────────────────────────────────────
+ *
+ * Sama toiminto kuin kartan chatin syöterivillä, tummalle pohjalle
+ * sovitettuna. Fonttikoko on 16 px, koska iOS Safari zoomaa sivun
+ * automaattisesti, jos kenttä on sitä pienempi — juuri se rikkoisi
+ * valokuvanäkymän asettelun.
+ */
+.satelliitti-pulu-syote {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 9px;
+}
+
+.satelliitti-pulu-kentta {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(93, 255, 168, 0.3);
+  background: rgba(10, 24, 18, 0.85);
+  color: #eafff3;
+  font: inherit;
+  font-size: 16px;
+}
+
+.satelliitti-pulu-kentta::placeholder { color: rgba(223, 246, 232, 0.45); }
+
+.satelliitti-pulu-laheta {
+  flex: 0 0 auto;
+  width: 2rem;
+  height: 2rem;
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: 1;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(93, 255, 168, 0.45);
+  background: rgba(93, 255, 168, 0.18);
+  color: #eafff3;
+  font: inherit;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.satelliitti-pulu-laheta[disabled] { cursor: default; opacity: 0.5; }
+
 @media (max-width: 620px), (max-height: 500px) {
   .satelliitti-pulukortti { width: min(280px, calc(100vw - 24px)); font-size: 0.85rem; }
+  .satelliitti-pulu-virta { max-height: min(30vh, 180px); }
 }
 
 /*

@@ -2442,8 +2442,18 @@
  * Sisääntulon kävelyele (walkBack) alkaa vasta luokan poistuttua, joten
  * se näkyy kokonaan.
  */
+/*
+ * PLUSKUPLA KUULUU SAMAAN NIPPUUN (omistaja 16.9.2026, puhelimella).
+ * `.pollo-kuplapalautus` on `position: fixed` -nappi BODYN suorana
+ * lapsena (js/pollo.js), ei pulun napin tai paneelin sisällä — se jäi
+ * siksi näkyviin kelluvana plussana, vaikka pulu itse oli piilossa
+ * koko Ihmisen matka -esityksen ajan. Sama `visibility: hidden` kuin
+ * muillakin: piilotus ei saa nojata peittävyyteen, koska pulun omat
+ * moduulit lukevat juuri näkyvyyttä.
+ */
 body.aikajana-pulu-piilossa .pollo-nappi,
 body.aikajana-pulu-piilossa .pollo-paneeli,
+body.aikajana-pulu-piilossa .pollo-kuplapalautus,
 body.aikajana-pulu-piilossa .livia-kasvot-pinta {
   visibility: hidden;
   pointer-events: none;

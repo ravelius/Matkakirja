@@ -95,17 +95,38 @@
  *      23.00, sanatarkasti): *"Siirrä Afrikan ilmestymistä puoli
  *      sekuntia aiemmaksi."* (aiempi klo 23.35 linjaus oli 1,2 s). Jos
  *      jakso loppuu ennen sitä, päätepiste jää jakson loppuun.
- *   4. KAMERA KIIHTYY MAROKKOON. Samalla hetkellä (zoomin päätyttyä,
- *      ei siis enää sanan kohdalla) kamera lähtee
- *      hitaasti kohti ensimmäistä kohdetta (Jebel Irhoud), kiihtyy ja
- *      jarruttaa juuri ennen perille tuloa (marokonPehmennys). Ajon
- *      kesto luetaan luennasta: perillä ollaan kun 'jebel-irhoud'-
- *      jakson aikaleima alkaa.
- *   5. LAUSEET KESKELLÄ. Avaus- ja afrikka-jaksojen teksti ladotaan
- *      lause kerrallaan RUUDUN KESKELLE (.aikajana-kertomusteksti
- *      .keskella): lause tulee omalla vuorollaan, häipyy ennen
- *      seuraavaa, ja koko rivi laskeutuu pehmeästi alalaitaan vasta kun
- *      ensimmäinen kohde ('jebel-irhoud') alkaa.
+ *      JATKO 3 TARKENNUS 2 (omistaja 16.9.2026 klo 18.50): zoomi LÄHTEE
+ *      yhä tästä hetkestä, mutta kestää ZOOMIN_JATKO_MS (5 s)
+ *      pidempään — sana "Afrikasta" ehtii kuulua kesken zoomin, ja
+ *      pallo on perillä vasta sen jälkeen.
+ *   4. KAMERA KIIHTYY MAROKKOON. Zoomin päätyttyä kamera jää hetkeksi
+ *      paikalleen (MAROKON_TAUKO_MS) ja lähtee sitten HYVIN HITAASTI
+ *      kohti ensimmäistä kohdetta (Jebel Irhoud), kiihtyy ja jarruttaa
+ *      juuri ennen perille tuloa (marokonKaari = marokonPehmennys
+ *      hitaalla esivaiheella). AJO PITÄÄ ENTISEN PITUUTENSA ja
+ *      saapuminen siirtyy: ajo alkaa vasta zoomin (ja tauon) jälkeen ja
+ *      kestää `kohteeseenAsti() + ZOOMIN_JATKO_MS`, joten kamera on
+ *      perillä vasta 'jebel-irhoud'-jakson alettua — Marokon teksti saa
+ *      alkaa ennen kuin kamera on maalissa (omistajan lupa).
+ *   4b. KOKO AFRIKKA RUUTUUN, EI MAAN ZOOMIKATTOA (JATKO 3 TARKENNUS 2
+ *      kohta 3, iPhone-kuva v1924: kartta oli zoomattu Guineanlahdelle).
+ *      Avauksen rajaus ajetaan lipulla `kokonaan: true` (koko laatikko
+ *      molempiin suuntiin, keskipiste laatikon oma) ja linssi pitää
+ *      zoomikaton omissa käsissään laudan `zoomirajat`-syrjäytyksellä
+ *      koko esityksen ajan — ks. avaaKaukaisuus/palautaKaukaisuus.
+ *   5. LAUSEET KESKELLÄ, KAPPALEET OSISSA. Avaus- ja afrikka-jaksojen
+ *      teksti ladotaan lause kerrallaan RUUDUN KESKELLE
+ *      (.aikajana-kertomusteksti .keskella): lause tulee omalla
+ *      vuorollaan, häipyy ennen seuraavaa, ja koko rivi laskeutuu
+ *      pehmeästi alalaitaan vasta kun ensimmäinen kohde
+ *      ('jebel-irhoud') alkaa. Alalaidassa kappale näytetään OSISSA
+ *      (jaaOsiin: enintään kolme virkettä ja 240 merkkiä kerrallaan),
+ *      jotta laatikko ei peitä karttaa — osa vaihtuu virkerajalla
+ *      luennan tahdissa (osienHetket).
+ *   6. PULU ON POISSA KOKO ESITYKSEN AJAN ja kävelee ruudulle vasta,
+ *      kun esitys päättyy (paata → ajastaPulunSisaantulo). Raamattu
+ *      JATKO 2, omistaja 16.9.2026: *"Pulu näkyviin vasta kun linssin
+ *      animaatio on ohi."*
  *
  * AIKALEIMAKOUKKU. Ajoitus on ARVIO niin kauan kuin luenta on pelkkä
  * ääniraita: lauseen ja sanan alkuhetki on sen merkkiosuus koko
@@ -192,6 +213,7 @@ import { LIVIAN_VALIHUOMION_VAIMENNUS, soitaLivianLinssiAani } from '../liviapuh
 import { polloLinssikupla } from '../pollo.js';
 import { karkiHetkella } from '../aikajana-vanat.js';
 import { luoTahtitaivas } from '../pallolauta/tahdet.js';
+import { PALLO_KORKEUS_MAX } from '../pallolauta/kamera.js';
 import { kulmaEro } from './ihmisen-matka-kortti.js';
 import { rajauksenLeveys, vananRajaus } from './ihmisen-matka-tutkimus.js';
 import { ilmoitaLivianTunne } from '../livia-tilanteet.js';
@@ -307,6 +329,38 @@ export const TAHTIEN_KERROIN = AVARUUDEN_KORKEUS / 5;
 export const AVARUUDEN_MS = 7000;
 export const AVARUUDEN_MIN_MS = 1200;
 /**
+ * MAAPALLO ZOOMAUTUU HITAAMMIN (Raamattu "IHMISEN MATKA -LINSSI …
+ * JATKO 3", omistaja 16.9.2026, sanatarkasti: *"Zoomaa maapallo
+ * hitaammin näkymään. Aloita nykyisestä hetkestä mutta zoomaus voi
+ * valmistua viisi sekuntia myöhemmin. Ei haittaa vaikka sana Afrikka
+ * tulee jo ennen zoomin loppua."*).
+ *
+ * ZOOMI LÄHTEE SAMASTA HETKESTÄ KUIN ENNEN (`zoomAlku` ei liiku) ja
+ * kestää tämän verran pidempään, joten se PÄÄTTYY tämän verran sanan
+ * jälkeisen entisen päätepisteen (`afrikka`) jälkeen. Sanan "Afrikasta"
+ * hetki ja koko luennan ajoitus ovat ennallaan.
+ *
+ * VIISI SEKUNTIA, JA MAROKON AJO SIIRTYY (omistaja 16.9.2026 klo 18.50
+ * UTC, iPhone-kuva v1924, Raamattu JATKO 3 TARKENNUS 2, sanatarkasti:
+ * *"Tee vain se 5sek hitaampi sisaan zoomaus, ja aloita siten vasta
+ * liikuttamaan kohti Marokkoa. Ei haittaa, vaikka Marokon teksti alkaa
+ * tulla ennen kuin kartta on zoomautunut sinne asti."*). Tämä KUMOAA
+ * saman päivän klo 17.15 tarkennuksen (2,5 s).
+ *
+ * MIKSI 2,5 s EI RIITTÄNYT. Ensimmäinen viiden sekunnin toteutus söi
+ * Marokon ajon (8,9 s → 2,7 s), koska ajon PÄÄTEPISTE oli kiinni
+ * luennassa: jokainen zoomiin lisätty sekunti lyhensi ajoa yhtä paljon,
+ * ja siksi jatko kutistettiin 2,5 sekuntiin. Omistaja katsoi tuloksen
+ * ja piti avauszoomia yhä kiireisenä. NYT SAAPUMINEN SAA SIIRTYÄ: ajo
+ * pitää entisen pituutensa (`aloitaKohdeajo` lisää tämän verran
+ * takaisin), kertomus ja luenta etenevät ennallaan, ja Marokon teksti
+ * saa alkaa ennen kuin kamera on perillä — juuri niin kuin omistaja
+ * kirjoitti.
+ */
+export const ZOOMIN_JATKO_MS = 5000;
+/** Zoomin enimmäiskesto jatkon kanssa (katto kaynnistaAvaruusajolle). */
+export const AVARUUDEN_KATTO_MS = AVARUUDEN_MS + ZOOMIN_JATKO_MS;
+/**
  * AFRIKKA TÄYTTÄÄ RUUDUN 0,7 S SANAN JÄLKEEN (Raamattu "IHMISEN MATKA:
  * AFRIKKA 0,7 S SANAN JALKEEN…", omistaja 10.9.2026 klo 23.00
  * sanatarkasti: *"Siirrä Afrikan ilmestymistä puoli sekuntia
@@ -340,16 +394,34 @@ export const LAUSEEN_HAIVE_MS = 340;
 /** Tekstirivin lasku keskeltä alalaitaan (css .aikajana-kertomusteksti). */
 export const TEKSTIN_LASKU_MS = 900;
 /**
- * PULU PIILOSSA KUNNES TEKSTI ON ALHAALLA — JA KÄVELEE SITTEN OIKEALTA
- * SISÄÄN (Raamattu "IHMISEN MATKA: AFRIKKA 0,7 S SANAN JALKEEN, PULU
- * PIILOSSA KUNNES TEKSTI ON ALHAALLA JA KAVELEE SITTEN OIKEALTA
- * SISAAN…", omistaja 10.9.2026 klo 23.00, sanatarkasti: *"Pulun
+ * LAATIKKO ENINTÄÄN KOLME VIRKETTÄ JA 240 MERKKIÄ (Raamattu "IHMISEN
+ * MATKA -LINSSI … JATKO 2", omistaja 16.9.2026 klo 15.40 UTC,
+ * sanatarkasti: *"Tee tekstityksestä lyhyempiä kappaleita, että ei mene
+ * niin paljon kartan päälle."*).
+ *
+ * MITTA TULEE RUUDUSTA. Puhelimella (390 × 844) laatikko on 358 px
+ * leveä ja rivi noin 46 merkkiä: 240 merkkiä on kuusi riviä eli noin
+ * 165 px — vajaat 20 % kartan korkeudesta, kun kaanonin pisin kappale
+ * (`arabia`, 373 merkkiä) vei yhtenä laatikkona lähes puolet. Kolmen
+ * virkkeen katto pitää huolen siitä, ettei laatikko kasva korkeaksi
+ * silloinkaan, kun virkkeet ovat lyhyitä. Mitataan
+ * tools/savukkeet/savuke-ihmisen-kappaleet.mjs (390 ja 1400).
+ */
+export const OSAN_MERKIT = 240;
+export const OSAN_VIRKKEET = 3;
+/**
+ * PULU KÄVELEE RUUDULLE VASTA ESITYKSEN JÄLKEEN (Raamattu "IHMISEN
+ * MATKA -LINSSI … JATKO 2", omistaja 16.9.2026 klo 15.40 UTC,
+ * sanatarkasti: *"Ota pulu pois näkyvistä … Pulu näkyviin vasta kun
+ * linssin animaatio on ohi."*).
+ *
+ * Tämä on se hengähdys, joka jää esityksen päättymisen ja pulun
+ * sisääntulon väliin. AIEMPI LINJAUS (10.9.2026 klo 23.00: *"pulun
  * pitäisi olla piilossa kunnes tekstit siirtyvät alareunaan ja siitä
  * parin sekunnin päästä pulu voisi kävellä kartalla oikeasta reunasta
- * sisään."*).
- *
- * Odotus alkaa siitä, kun tekstirivin lasku (TEKSTIN_LASKU_MS) on
- * valmis — ei jakson alusta.
+ * sisään"*) käytti samaa lukua jakson alusta; omistaja katsoi
+ * lopputuloksen puhelimella ja vei pulun pois koko esityksen ajaksi.
+ * Kävelyele ja sen suunta ovat ennallaan.
  */
 export const PULUN_SISAANTULO_MS = 2000;
 /**
@@ -364,13 +436,30 @@ export const PULUN_SISAANTULO_MS = 2000;
  */
 export const PULUN_SISAANTULOELE = 'walkBack';
 /**
- * Piiloluokka bodylle. CSS (css/aikajana.css) piilottaa sekä napin,
- * paneelin ETTÄ kasvokankaan `visibility: hidden` -säännöllä: peittävyys
- * ei riittäisi, koska kasvot piirtyvät napin ULKOPUOLELLA omalle
- * kankaalleen (.livia-kasvot-pinta on bodyn lapsi). `visibility` on myös
- * se, jonka livia-eleet itse lukee näkyvyystestissään, joten piilossa
- * oleva pulu ei elehdi eikä puhu kankaalle.
+ * SISÄÄNTULOELEEN KESTO (js/livia-svg.js `walkBack`, 2,2 s). Käytetään
+ * vain siihen, että viimeisen jakson välihuomio odottaa pulun perille
+ * tuloa: kupla osoittaa pulun viereen, eikä se saa leijua tyhjässä
+ * kesken kävelyn.
  */
+export const PULUN_ELEEN_MS = 2200;
+/**
+ * Piiloluokka bodylle. CSS (css/aikajana.css) piilottaa NELJÄ asiaa
+ * `visibility: hidden` -säännöllä — napin, paneelin, PLUSKUPLAN ja
+ * kasvokankaan. Peittävyys ei riittäisi, koska kasvot piirtyvät napin
+ * ULKOPUOLELLA omalle kankaalleen (.livia-kasvot-pinta on bodyn lapsi),
+ * ja `visibility` on myös se, jonka livia-eleet itse lukee
+ * näkyvyystestissään: piilossa oleva pulu ei elehdi eikä puhu.
+ *
+ * PLUSKUPLA on `.pollo-kuplapalautus` (js/pollo.js): `position: fixed`
+ * -nappi bodyn suorana lapsena, joka jää ruudulle, kun pelaaja on
+ * sulkenut puhekuplan. Omistaja näki sen puhelimella kellumassa kesken
+ * Ihmisen matka -esityksen (16.9.2026) — se puuttui listalta, koska se
+ * ei ole napin eikä paneelin sisällä. Nimi luetellaan tässä, jotta
+ * tests/ihmisen-matka-esitys.test.mjs voi vartioida listan.
+ */
+export const PULUN_PIILO_OSAT = [
+  '.pollo-nappi', '.pollo-paneeli', '.pollo-kuplapalautus', '.livia-kasvot-pinta',
+];
 export const PULUN_PIILO_LUOKKA = 'aikajana-pulu-piilossa';
 /**
  * SANA, JOSTA ZOOMI LÄHTEE. Alkuosa riittää: kaanonissa lukee
@@ -410,6 +499,28 @@ export const KAMERAN_OSUUS = 0.85;
  */
 export const MAROKON_JARRU = 0.8;
 export const MAROKON_POHJA_MS = 1600;
+/**
+ * PIENI TAUKO ZOOMIN JÄLKEEN (Raamattu JATKO 3, omistaja 16.9.2026:
+ * *"Pienen tauon jälkeen kartta voisi hyvin hitaasti alkaa zoomata jo
+ * kohti Marokkoa…"*). Kamera jää hetkeksi paikalleen, kun Afrikka on
+ * täyttänyt ruudun, ennen kuin matka kohti ensimmäistä kohdetta alkaa.
+ *
+ * TAUKO JOUSTAA. Marokon ajolle on jäätävä vähintään MAROKON_POHJA_MS,
+ * koska ajon PÄÄTEPISTE on kiinni luennassa (kohteeseenAsti): jos
+ * jäljellä oleva aika ei riitä, tauko lyhenee ensin — ja vasta sitten
+ * ajo jää jakson omaksi ajoksi.
+ */
+export const MAROKON_TAUKO_MS = 1200;
+/**
+ * HIDAS ESIVAIHE (Raamattu JATKO 3: *"kartta voisi hyvin hitaasti alkaa
+ * zoomata … ja alkaa kiihtyä"*). Aikaikkunan venytys: ajon käyrä on
+ * `marokonPehmennys(x ** MAROKON_ESIVAIHE)`, eli sama kiihtyvä kaari
+ * kuin ennen, mutta sen alkuun tulee vielä loivempi lähtö. Yksi
+ * aikamuunnos EIKÄ kahta peräkkäistä käyrää: nopeus pysyy jatkuvana
+ * (ei nykäystä siinä kohdassa, jossa kiihdytys alkaa) ja matka on yhä
+ * tasan yksi, jarrutus lopussa ennallaan.
+ */
+export const MAROKON_ESIVAIHE = 1.35;
 /** Kuvan häivytys (css .aikajana-kertomuskuva). */
 export const KUVAN_POISTUMA_MS = 420;
 /** Loppunäkymän varmistava liuku, jos viimeinen ajo jäi kesken (ks. paata). */
@@ -637,6 +748,104 @@ export function jaaLauseiksi(teksti) {
 }
 
 /**
+ * KAPPALE LYHYIKSI OSIKSI (Raamattu "IHMISEN MATKA -LINSSI: … JATKO 2",
+ * omistaja 16.9.2026 klo 15.40 UTC, sanatarkasti: *"Tee tekstityksestä
+ * lyhyempiä kappaleita, että ei mene niin paljon kartan päälle."*).
+ *
+ * PUHDAS FUNKTIO (tests/ihmisen-matka-kappaleet.test.mjs). Osa on
+ * peräkkäisiä KOKONAISIA virkkeitä: virkettä ei katkaista koskaan, eikä
+ * tekstiä muuteta — vain jaetaan. Osa katkaistaan, kun seuraava virke
+ * veisi sen yli rajojen (`virkkeita` tai `merkkeja`); yksin liian pitkä
+ * virke jää omaksi osakseen sellaisenaan, koska katkaisu kesken virkkeen
+ * olisi pahempi kuin korkea laatikko.
+ *
+ * Kentät ovat samaa kieltä kuin jaaLauseiksi + `lause`, joka on osan
+ * ENSIMMÄISEN virkkeen järjestysluku kappaleessa. Juuri sitä lukua
+ * luennan aikaleimat (`aikaleimat.lauseet`) indeksoivat, joten osa voi
+ * vaihtua äänen tahdissa virkerajalla (osienHetket).
+ *
+ * @param {string} teksti kaanonin `teksti`
+ * @param {{merkkeja?:number, virkkeita?:number}} [rajat]
+ * @returns {Array<{teksti:string, alku:number, lause:number, virkkeita:number}>}
+ */
+export function jaaOsiin(teksti, { merkkeja = OSAN_MERKIT, virkkeita = OSAN_VIRKKEET } = {}) {
+  const lauseet = jaaLauseiksi(teksti);
+  if (!lauseet.length) return [];
+  const merkkiRaja = Math.max(1, Number(merkkeja) || 0);
+  const virkeRaja = Math.max(1, Math.floor(Number(virkkeita) || 0));
+  const viimeinen = lauseet[lauseet.length - 1];
+  const merkkeja0 = viimeinen.alku + viimeinen.teksti.length;
+  /*
+   * OSAT TASAPITKIKSI, EI AHNEESTI. Pelkkä ahne täyttö jätti hännäksi
+   * yhden lyhyen virkkeen (mitattuna 234 + 35 merkkiä), ja se välähti
+   * ruudulla parin sekunnin ajan omana laatikkonaan. Siksi lasketaan
+   * ensin, montako osaa kappale VÄHINTÄÄN tarvitsee, ja täytetään niitä
+   * kohti tasajakoa: hyppy uuteen osaan tehdään silloin, kun seuraava
+   * virke veisi kauemmas tavoitemitasta kuin tähän pysähtyminen.
+   */
+  const osia = Math.max(
+    Math.ceil(merkkeja0 / merkkiRaja),
+    Math.ceil(lauseet.length / virkeRaja),
+    1,
+  );
+  const tavoite = merkkeja0 / osia;
+  const ulos = [];
+  let nyt = null;
+  lauseet.forEach((lause, i) => {
+    // Osan mitta VÄLILYÖNTEINEEN: juuri se merkkijono, joka laatikkoon tulee.
+    const pituus = nyt ? nyt.teksti.length : 0;
+    const kasvu = pituus + 1 + lause.teksti.length;
+    const mahtuu = nyt
+      && nyt.virkkeita < virkeRaja
+      && kasvu <= merkkiRaja
+      // Lähemmäs tavoitetta: muuten osa katkaistaan tähän.
+      && Math.abs(kasvu - tavoite) < Math.abs(pituus - tavoite);
+    if (!mahtuu) {
+      nyt = { teksti: lause.teksti, alku: lause.alku, lause: i, virkkeita: 1 };
+      ulos.push(nyt);
+      return;
+    }
+    nyt.teksti = `${nyt.teksti} ${lause.teksti}`;
+    nyt.virkkeita += 1;
+  });
+  return ulos;
+}
+
+/**
+ * Osien alkuhetket jakson luennassa (ms jakson alusta).
+ *
+ * PUHDAS FUNKTIO (tests). Sama laskutapa kuin lauseidenHetket — ja sama
+ * koukku: jos `aikaleimat.lauseet` on olemassa ja siinä on yhtä monta
+ * lukua kuin kappaleessa on virkkeitä, osan hetki on sen ENSIMMÄISEN
+ * virkkeen leima. Silloin laatikko vaihtuu tarkasti sillä hetkellä, kun
+ * kertoja aloittaa osan ensimmäisen virkkeen.
+ *
+ * MÄÄRÄN ERO ON TURVAPORTTI: jos kaanonin teksti on muuttunut äänitteen
+ * jälkeen (js/linssit/ihmisen-matka-kertomus.js `aanitePaivitettava`),
+ * leimoja on eri määrä kuin virkkeitä eikä niihin luoteta — hetket
+ * lasketaan merkkiosuuksista, jolloin laatikot jakautuvat tasaisesti
+ * jakson kestolle.
+ *
+ * @param {Array<{alku:number, teksti:string, lause?:number, virkkeita?:number}>} osat
+ * @param {number} kesto jakson luennan kesto (ms)
+ * @param {{lauseet?: Array<number>}} [aikaleimat] kaanonin aikaleimat
+ * @returns {Array<number>} alkuhetket ms
+ */
+export function osienHetket(osat, kesto, aikaleimat = null) {
+  const n = osat?.length ?? 0;
+  if (!n) return [];
+  const leimat = aikaleimat?.lauseet;
+  const virkkeita = osat.reduce((summa, o) => summa + (Number(o?.virkkeita) || 1), 0);
+  if (Array.isArray(leimat) && leimat.length === virkkeita && leimat.every((v) => Number.isFinite(v))) {
+    return osat.map((o, i) => Math.max(0, Number(leimat[Number.isFinite(o?.lause) ? o.lause : i]) || 0));
+  }
+  const viimeinen = osat[n - 1];
+  const merkkeja = Math.max(1, viimeinen.alku + viimeinen.teksti.length);
+  const kaikki = Math.max(0, Number(kesto) || 0);
+  return osat.map((o) => (kaikki * o.alku) / merkkeja);
+}
+
+/**
  * Lauseiden alkuhetket jakson luennassa (ms jakson alusta).
  *
  * PUHDAS FUNKTIO (tests). ARVIO on merkkiosuus: lause alkaa siinä
@@ -767,13 +976,26 @@ export function avauksenVaiheet({ lauseet = [], sana = null, kesto = 0 } = {}) {
   const tilaa = Math.max(0, afrikka - musta);
   const feidi = Math.max(0, Math.min(TAHTIEN_FEIDI_MS, tilaa * FEIDIN_OSUUS));
   const piste = musta + feidi;
-  const zoomKesto = Math.max(AVARUUDEN_MIN_MS, Math.min(AVARUUDEN_MS, afrikka - piste));
+  /*
+   * PERUSKESTO on entinen mitta: pisteen ja Afrikka-hetken väli. Se
+   * määrää yhä LÄHTÖHETKEN, jotta zoomi alkaa täsmälleen samasta
+   * kohdasta kuin ennen (omistaja: *"Aloita nykyisestä hetkestä"*).
+   * Todellinen kesto on peruskesto + ZOOMIN_JATKO_MS, eli zoomi
+   * päättyy viisi sekuntia myöhemmin kuin ennen.
+   */
+  const zoomPerus = Math.max(AVARUUDEN_MIN_MS, Math.min(AVARUUDEN_MS, afrikka - piste));
+  const zoomAlku = Math.max(musta, afrikka - zoomPerus);
+  const zoomKesto = zoomPerus + ZOOMIN_JATKO_MS;
   return {
     musta,
     feidi,
     piste,
-    zoomAlku: Math.max(musta, afrikka - zoomKesto),
+    zoomAlku,
+    /** Entinen kesto ilman jatkoa (vertailuluku savukkeelle ja testeille). */
+    zoomPerus,
     zoomKesto,
+    /** Hetki, jolla zoomi on perillä ja kartta valkenee. */
+    zoomLoppu: zoomAlku + zoomKesto,
     afrikka,
   };
 }
@@ -804,6 +1026,29 @@ export function marokonPehmennys(t, jarru = MAROKON_JARRU) {
   if (x <= j) return a * x ** 3;
   const u = (x - j) / d;
   return a * (j ** 3) + 3 * a * (j ** 2) * d * (u - (u * u) / 2);
+}
+
+/**
+ * MAROKON AJO HITAALLA ESIVAIHEELLA (Raamattu JATKO 3). PUHDAS FUNKTIO.
+ *
+ * Sama kaari kuin marokonPehmennys, mutta ajan kautta venytettynä:
+ * `marokonPehmennys(x ** esivaihe)`. Kun `esivaihe` > 1, ajon alkupää
+ * kuluu hitaammin ja kamera ryömii ensimmäisen kolmanneksen ajasta
+ * lähes paikallaan — sitten vauhti kasvaa kiihtyvästi ja jarrutus
+ * tapahtuu ennallaan juuri ennen perille tuloa.
+ *
+ * Ominaisuudet, joiden varassa kuva pysyy sileänä: `f(0) = 0`,
+ * `f(1) = 1`, aidosti kasvava, ja nopeus on nolla molemmissa päissä
+ * (ei nytkähdystä lähdössä eikä pysähdyksessä).
+ *
+ * @param {number} t 0…1
+ * @param {{esivaihe?:number, jarru?:number}} [asetukset]
+ * @returns {number} kuljettu osuus 0…1
+ */
+export function marokonKaari(t, { esivaihe = MAROKON_ESIVAIHE, jarru = MAROKON_JARRU } = {}) {
+  const x = Math.max(0, Math.min(1, Number(t) || 0));
+  const p = Math.max(1, Number(esivaihe) || 1);
+  return marokonPehmennys(x ** p, jarru);
 }
 
 /**
@@ -950,6 +1195,8 @@ export function luoEsitys({ ajo }) {
     kohdeajo: false,
     /** Sen ajon kesto (savukkeen mittari). */
     kohdeajonKesto: null,
+    /** Saapumisen siirtymä 'jebel-irhoud'-jakson alusta (mittari). */
+    kohdeajonMyohassa: null,
     /**
      * MISTÄ KOHTAA LUENTAA ZOOMI LÄHTI (savukkeen mittari). Kontissa
      * kehystahti on noin kehys sekunnissa, eikä mittaava savuke ehdi
@@ -960,6 +1207,14 @@ export function luoEsitys({ ajo }) {
     zoomLahti: null,
     /** Valot odottavat zoomin perilletuloa (ks. sytytaValot). */
     valotOdottaa: false,
+    /*
+     * PIENI TAUKO ZOOMIN JA MAROKON AJON VÄLISSÄ (MAROKON_TAUKO_MS).
+     * performance.now()-lukema, jolloin ajo saa lähteä, tai null.
+     * Seinäkello kelpaa tähän: tauko on lyhyt, ja jos pelaaja pysäyttää
+     * esityksen juuri siinä, ajo lähtee jatkosta heti oikean mittaisena
+     * (kohteeseenAsti lasketaan lähtöhetkellä).
+     */
+    kohdeajonTauko: null,
     /** Avausjaksot ohi: teksti on alalaidassa eikä keskellä (yksisuuntainen). */
     avausOhi: false,
     /** Avausjakson lauseet (jaaLauseiksi) ja ruudulla oleva lause. */
@@ -1049,11 +1304,33 @@ export function luoEsitys({ ajo }) {
 
   const kamera = () => (ajo.pallolla ? ajo.kamera() : null);
 
+  /**
+   * NIMETTY ALUE RUUTUUN KOKONAAN (Raamattu JATKO 3 TARKENNUS 2 kohta 3,
+   * omistaja 16.9.2026 klo 18.50 UTC, iPhone-kuva v1924: *"Zoomaan
+   * jostain syysta nain lahelle"* — kartta oli zoomattu Guineanlahdelle).
+   *
+   * JUURISYY MITATTU (390 × 844, dpr 2, pelaaja Ateenassa): ilman
+   * `kokonaan`-lippua bbox-rajaus kulkee laudan SAAPUMISSÄÄNNÖN kautta
+   * (js/pallolauta/kamera.js korkeuteenSovitus, PÄÄTÖKSET 17). Se on
+   * tehty maan laatikolle kapealla ruudulla: kuva sovitetaan vain
+   * KORKEUTEEN ja X-keskipisteeksi otetaan PELAAJAN KAUPUNGIN
+   * pituusaste. Afrikan laatikolla (lat −35…37, lon −18…52) se antoi
+   * korkeuden 1,1734 ja keskipisteen lon 23,74 (Ateena) laatikon oman
+   * 17:n sijaan — Afrikan itä- ja länsikärki jäivät ruudun ulkopuolelle.
+   * Omistajan pelissä pelaaja oli muualla, ja sama sääntö vei kuvan
+   * Guineanlahdelle. `kokonaan: true` on sama lippu, jolla lennon rajaus
+   * kiersi säännön v1921:ssä: koko laatikko ruutuun MOLEMPIIN suuntiin,
+   * keskipiste laatikon oma. Mitattuna korkeus 2,5 ja kaikki neljä
+   * Afrikan kärkeä ruudulla.
+   */
   const ajaAlueeseen = (tunnus, kesto) => {
     const k = kamera();
     if (!k?.ajaKamera) return Promise.resolve(false);
     const bbox = alueenLaatikko(tunnus);
-    return k.ajaKamera({ bbox, marginaali: 0.04 }, { kesto: reduced ? 0 : kesto });
+    return k.ajaKamera(
+      { bbox, marginaali: 0.04, kokonaan: true },
+      { kesto: reduced ? 0 : kesto },
+    );
   };
 
   const kuvasuhde = () => {
@@ -1123,25 +1400,70 @@ export function luoEsitys({ ajo }) {
    * tähdet paikallaan ilman ajautumista.
    */
   /**
-   * Ohjaimen etäisyyskatto hetkeksi auki, jotta pallo mahtuu kauas.
-   * Palautetaan aina (palautaKaukaisuus): ilman sitä pelaaja voisi
-   * nipistää itsensä avaruuteen kesken kertomuksen.
+   * ZOOMIKATTO ON LINSSIN OMA KOKO ESITYKSEN AJAN (Raamattu JATKO 3
+   * TARKENNUS 2 kohta 3, omistaja 16.9.2026: *"Zoomaan jostain syysta
+   * nain lahelle"*).
+   *
+   * JUURISYY MITATTU (390 × 844, dpr 2, pelaaja Ateenassa,
+   * tools/savukkeet/savuke-ihmisen-kappaleet.mjs väite 4b): avaus
+   * kirjoitti ENNEN suoraan `OrbitControls.maxDistance`iin ja palautti
+   * sen `tila.kattoEnnen`-lukemaan valojen syttyessä. Se lukema on
+   * PELAAJAN MAAN uloszoomausesto (js/pallolauta/lauta.js
+   * maanZoomiraja) — Ateenassa korkeus 0,1431. Aikasarjassa kamera oli
+   * juuri saapunut Afrikan rajaukseen korkeudelle 1,1734, ja samalla
+   * kehyksellä, jolla katto palasi 300 → 0,1431, OrbitControls puristi
+   * kameran 1,1734 → 0,1431: maanosa vaihtui yhdessä silmänräpäyksessä
+   * Kreikan kokoiseksi lähikuvaksi siihen pituusasteeseen, johon zoomi
+   * sattui päättymään (omistajan pelissä Guineanlahti).
+   *
+   * KORJAUS: katto kulkee laudan oman syrjäytyksen kautta
+   * (`lauta.zoomirajat`), jota myös satelliitti- ja topografialinssi
+   * käyttävät. Silloin katto EI myöskään palaa maan estoon kesken
+   * esityksen, kun kotelon koko muuttuu (kehyksen paluu → kokovahti →
+   * tahdistaZoomirajat). Esityksen ajan katto on koko pallon katto
+   * (PALLO_KORKEUS_MAX), avaruusvaiheessa AVARUUDEN_KORKEUS, ja laudan
+   * omat rajat palaavat vasta kun linssi suljetaan (`pura`).
    */
+  const asetaKatto = (korkeus) => {
+    const lauta = ajo.lauta ?? ajo.ui?.pallolauta ?? null;
+    if (!lauta?.zoomirajat) return false;
+    lauta.zoomirajat(korkeus === null ? null : { max: korkeus });
+    return true;
+  };
+
   const avaaKaukaisuus = (keski) => {
     const pallo = ajo.ui?.pallonInstanssi ?? null;
-    const ohjaimet = pallo?.controls?.();
-    if (!pallo?.pointOfView || !ohjaimet) return false;
-    const sade = pallo.getGlobeRadius?.() ?? 100;
-    tila.kattoEnnen = ohjaimet.maxDistance;
-    ohjaimet.maxDistance = sade * (1 + AVARUUDEN_KORKEUS);
+    if (!pallo?.pointOfView) return false;
+    tila.kattoEnnen = AVARUUDEN_KORKEUS;
+    /*
+     * KATTO ENSIN, VASTA SITTEN KAMERA: OrbitControls puristaa kameran
+     * kattoon heti, joten korkeus 300 ei mahtuisi laudan omaan kattoon.
+     */
+    if (!asetaKatto(AVARUUDEN_KORKEUS)) {
+      const ohjaimet = pallo.controls?.();
+      if (!ohjaimet) return false;
+      const sade = pallo.getGlobeRadius?.() ?? 100;
+      ohjaimet.maxDistance = sade * (1 + AVARUUDEN_KORKEUS);
+    }
     pallo.pointOfView({ ...keski, altitude: AVARUUDEN_KORKEUS }, 0);
     return true;
   };
 
+  /**
+   * AVARUUDEN KATTO POIS, ESITYKSEN KATTO TILALLE. Ei siis paluuta
+   * pelaajan maan estoon: se palautetaan vasta linssin purussa
+   * (`vapautaZoomikatto`).
+   */
   const palautaKaukaisuus = () => {
-    const ohjaimet = ajo.ui?.pallonInstanssi?.controls?.();
-    if (ohjaimet && tila.kattoEnnen != null) ohjaimet.maxDistance = tila.kattoEnnen;
+    if (tila.kattoEnnen == null) return;
     tila.kattoEnnen = null;
+    asetaKatto(PALLO_KORKEUS_MAX);
+  };
+
+  /** Laudan omat zoomirajat takaisin (linssi kiinni). */
+  const vapautaZoomikatto = () => {
+    tila.kattoEnnen = null;
+    asetaKatto(null);
   };
 
   /**
@@ -1184,7 +1506,10 @@ export function luoEsitys({ ajo }) {
     tila.mustaPaalla = true;
     if (!k?.ajaKamera) return false;
     if (reduced) {
-      // Ei liikettä: pallo on heti Afrikassa, tähdet näkyvissä.
+      // Ei liikettä: pallo on heti Afrikassa, tähdet näkyvissä. Katto on
+      // silti linssin oma, tai laudan maakohtainen esto puristaisi koko
+      // maanosan lähikuvaksi (ks. palautaKaukaisuus).
+      asetaKatto(PALLO_KORKEUS_MAX);
       nostaMusta(0);
       kaynnistaAvaruusajo();
       return true;
@@ -1257,11 +1582,13 @@ export function luoEsitys({ ajo }) {
   }
 
   /**
-   * ZOOMI PÄÄTTYY 0,7 SEKUNTIA SANAN "AFRIKASTA" JÄLKEEN (Raamattu
-   * ALKUANIMAATIO + AFRIKKA 0,7 S SANAN JALKEEN, omistaja 10.9.2026
-   * klo 23.00). Kutsutaan kehyssilmukasta hetkellä
-   * `zoomAlku` = päätepiste − zoomin kesto — tai viimeistään
-   * 'valot'-jakson alkaessa, jos luenta ehti loppua ennen sitä.
+   * ZOOMI LÄHTEE ENTISESTÄ HETKESTÄ JA PÄÄTTYY MYÖHEMMIN (Raamattu
+   * ALKUANIMAATIO + AFRIKKA 0,7 S SANAN JALKEEN; JATKO 3, omistaja
+   * 16.9.2026). Lähtöhetki on yhä `zoomAlku`, mutta kesto on
+   * peruskesto + ZOOMIN_JATKO_MS: sana "Afrikasta" ehtii kuulua kesken
+   * zoomin, aivan kuten omistaja pyysi. Kutsutaan kehyssilmukasta
+   * hetkellä `zoomAlku` — tai viimeistään 'valot'-jakson alkaessa, jos
+   * luenta ehti loppua ennen sitä.
    *
    * @param {number} [kesto] zoomin kesto (avauksenVaiheet.zoomKesto)
    */
@@ -1270,7 +1597,7 @@ export function luoEsitys({ ajo }) {
     tila.avausOdottaa = false;
     tila.avaruusKesto = Math.max(
       AVARUUDEN_MIN_MS,
-      Math.min(AVARUUDEN_MS, Number(kesto) || AVARUUDEN_MS),
+      Math.min(AVARUUDEN_KATTO_MS, Number(kesto) || AVARUUDEN_KATTO_MS),
     );
     tila.zoomLahti = {
       jakso: kertomus[tila.i]?.id ?? null,
@@ -1494,8 +1821,14 @@ export function luoEsitys({ ajo }) {
     }
   };
 
-  /** Avausjakson lauseiden alkuhetket nykyisellä luennan kestolla. */
-  const lauseHetket = () => lauseidenHetket(
+  /**
+   * NÄKYVIEN OSIEN ALKUHETKET nykyisellä luennan kestolla. Avauksessa
+   * osa on yksi virke (lause kerrallaan keskelle), muualla enintään
+   * OSAN_VIRKKEET virkettä ja OSAN_MERKIT merkkiä — kummassakin
+   * tapauksessa hetket tulevat samasta funktiosta, joten avauksen
+   * koreografia (avauksenVaiheet) lukee yhä virkkeiden hetkiä.
+   */
+  const lauseHetket = () => osienHetket(
     tila.lauseet, Math.max(1, tila.luenta), kertomus[tila.i]?.aikaleimat,
   );
 
@@ -1511,22 +1844,19 @@ export function luoEsitys({ ajo }) {
   const paivitaTeksti = () => {
     const jakso = kertomus[tila.i];
     if (!jakso) return;
-    if (tila.lauseet.length) {
-      const ajat = lauseHetket();
-      let i = 0;
-      while (i + 1 < ajat.length && tila.kulunut >= ajat[i + 1]) i += 1;
-      tila.lauseIndeksi = i;
-      const seuraava = ajat[i + 1];
-      // Lause häipyy hetkeä ennen seuraavan alkua: vaihto tapahtuu
-      // pimeässä eikä tekstiä vaihdeta lukijan silmien alla.
-      const haipyy = Number.isFinite(seuraava) && tila.kulunut >= seuraava - LAUSEEN_HAIVE_MS;
-      asetaTeksti(tila.lauseet[i]?.teksti ?? '', tila.kulunut >= ajat[i] && !haipyy);
-      return;
-    }
     // Rivi laskeutuu keskeltä alas: vanha lause on jo häipynyt, ja uusi
     // teksti tulee näkyviin vasta kun rivi on melkein perillä.
     if (tila.kulunut < tila.tekstiViive) { asetaTeksti(tila.tekstiNyt, false); return; }
-    asetaTeksti(jakso.teksti ?? '', Boolean(jakso.teksti));
+    if (!tila.lauseet.length) { asetaTeksti(jakso.teksti ?? '', Boolean(jakso.teksti)); return; }
+    const ajat = lauseHetket();
+    let i = 0;
+    while (i + 1 < ajat.length && tila.kulunut >= ajat[i + 1]) i += 1;
+    tila.lauseIndeksi = i;
+    const seuraava = ajat[i + 1];
+    // Osa häipyy hetkeä ennen seuraavan alkua: vaihto tapahtuu
+    // pimeässä eikä tekstiä vaihdeta lukijan silmien alla.
+    const haipyy = Number.isFinite(seuraava) && tila.kulunut >= seuraava - LAUSEEN_HAIVE_MS;
+    asetaTeksti(tila.lauseet[i]?.teksti ?? '', tila.kulunut >= ajat[i] && !haipyy);
   };
 
   /* ------------------------------------------------------------ luenta */
@@ -1579,15 +1909,16 @@ export function luoEsitys({ ajo }) {
   /* ------------------------------------------------------------- pulu */
 
   /**
-   * PULU PIILOON KOKO LINSSIN AVAUKSEN AJAKSI (Raamattu PULU PIILOSSA
-   * KUNNES TEKSTI ON ALHAALLA JA KAVELEE SITTEN OIKEALTA SISAAN,
-   * omistaja 10.9.2026 klo 23.00).
+   * PULU PIILOON KOKO ESITYKSEN AJAKSI (Raamattu "IHMISEN MATKA
+   * -LINSSI … JATKO 2", omistaja 16.9.2026 klo 15.40 UTC).
    *
    * Piilotus tehdään heti ohjaajan syntyessä eli LINSSIÄ AVATTAESSA,
    * ei vasta Käynnistä-napista: näin pulu ei näy hetkeäkään
    * aloituskortin ja mustan ruudun välissä. Luokka on bodyssa, koska
    * kasvokangas (.livia-kasvot-pinta) ei ole linssin juuressa vaan
-   * bodyn lapsi.
+   * bodyn lapsi. Piilo purkautuu VAIN kahdesta paikasta: esityksen
+   * luonnollisesta lopusta (paata) ja linssin sulkemisesta (pura) —
+   * tauko ei tuo pulua ruudulle, koska tauko ei päätä esitystä.
    */
   const piilotaPulu = () => {
     if (tila.puluPiilossa) return false;
@@ -1619,17 +1950,19 @@ export function luoEsitys({ ajo }) {
   };
 
   /**
-   * SISÄÄNTULON AJASTUS: tekstin lasku ensin, sitten PULUN_SISAANTULO_MS.
-   * Kutsutaan siitä jaksosta, jonka alkaessa kertojan rivi laskeutuu
-   * ruudun keskeltä alalaitaan (aloitaJakso) — `lasku` on sen liu'un
-   * kesto, jotta odotus alkaa vasta tekstin ollessa perillä.
+   * SISÄÄNTULON AJASTUS: `lasku` ensin, sitten PULUN_SISAANTULO_MS.
+   * Kutsutaan ESITYKSEN LOPUSTA (paata): pulu hengähtää hetken ja
+   * kävelee sitten oikeasta reunasta paikalleen. `jalkeen` ajetaan, kun
+   * kävelyele on perillä — siihen jää viimeisen jakson välihuomio,
+   * jota piilossa oleva pulu ei voinut sanoa.
    */
-  const ajastaPulunSisaantulo = (lasku = 0) => {
+  const ajastaPulunSisaantulo = (lasku = 0, { jalkeen = null } = {}) => {
     if (!tila.puluPiilossa || tila.puluAjastin) return false;
-    if (reduced) { naytaPulu({ ele: false }); return true; }
+    if (reduced) { naytaPulu({ ele: false }); jalkeen?.(); return true; }
     tila.puluAjastin = setTimeout(() => {
       tila.puluAjastin = 0;
       naytaPulu({ ele: true });
+      if (jalkeen) setTimeout(() => { if (!tila.purettu) jalkeen(); }, PULUN_ELEEN_MS);
     }, Math.max(0, lasku) + PULUN_SISAANTULO_MS);
     return true;
   };
@@ -1717,8 +2050,16 @@ export function luoEsitys({ ajo }) {
      * pehmeästi alalaitaan (TEKSTIN_LASKU_MS) ja uusi kappale tulee
      * näkyviin vasta laskun loppupuolella — ei räpsähdystä.
      */
-    tila.lauseet = onAvausjakso(jakso) ? jaaLauseiksi(jakso.teksti) : [];
-    const keskella = tila.lauseet.length > 0;
+    /*
+     * OSIIN AINA (Raamattu JATKO 2: lyhyemmät kappaleet). Avauksessa osa
+     * on YKSI virke keskellä ruutua; muualla osa on enintään kolme
+     * virkettä ja 240 merkkiä, ja laatikko vaihtuu virkerajalla luennan
+     * tahdissa (osienHetket). Tekstiä ei muuteta — vain jaetaan.
+     */
+    const keskella = onAvausjakso(jakso);
+    tila.lauseet = keskella
+      ? jaaOsiin(jakso.teksti, { virkkeita: 1, merkkeja: 1 })
+      : jaaOsiin(jakso.teksti);
     tila.tekstiViive = !keskella && tekstirivi.classList.contains('keskella') && !reduced
       ? Math.round(TEKSTIN_LASKU_MS * 0.55)
       : 0;
@@ -1726,13 +2067,18 @@ export function luoEsitys({ ajo }) {
     tekstirivi.classList.toggle('esilla', Boolean(jakso.teksti));
     paivitaTeksti();
     /*
-     * PULU KÄVELEE SISÄÄN VASTA KUN TEKSTI ON ALHAALLA (Raamattu PULU
-     * PIILOSSA KUNNES TEKSTI ON ALHAALLA JA KAVELEE SITTEN OIKEALTA
-     * SISAAN): odotus alkaa siitä hetkestä, kun rivin lasku on ohi.
-     * Jos teksti ei laskeudu (jakso alkoi jo alhaalta, esim. aikaselaimen
-     * hyppy), odotus alkaa heti.
+     * PULU EI TULE SISÄÄN KESKEN ESITYKSEN (Raamattu "IHMISEN MATKA
+     * -LINSSI … JATKO 2", omistaja 16.9.2026 klo 15.40 UTC,
+     * sanatarkasti: *"Ota pulu pois näkyvistä … Pulu näkyviin vasta kun
+     * linssin animaatio on ohi."*).
+     *
+     * JUURISYY oli tässä: sisääntulo ajastettiin jokaisen alalaitaan
+     * laskeutuvan jakson alusta, eli pulu käveli ruudulle jo
+     * ensimmäisen kohteen kohdalla ja seisoi tekstilaatikon kulmassa
+     * koko loppuesityksen. Ajastus on siirretty kokonaan esityksen
+     * loppuun (paata → ajastaPulunSisaantulo); tauko ei tuo pulua,
+     * koska tauko ei päätä esitystä.
      */
-    if (!keskella) ajastaPulunSisaantulo(tila.tekstiViive ? TEKSTIN_LASKU_MS : 0);
 
     if (jakso.vaihe === 'valot') tila.valotOdottaa = true;
     // Kelaus lähtee nykyisestä lukemasta; keskeltä jatkettaessa
@@ -1827,8 +2173,26 @@ export function luoEsitys({ ajo }) {
    */
   function sytytaValot() {
     tila.valotOdottaa = false;
-    // Pallo on perillä: kamera saa heti lähteä kohti Marokkoa.
-    aloitaKohdeajo();
+    /*
+     * PALLO ON PERILLÄ — JA KAMERA JÄÄ HETKEKSI PAIKALLEEN (Raamattu
+     * JATKO 3, omistaja 16.9.2026: *"Pienen tauon jälkeen kartta voisi
+     * hyvin hitaasti alkaa zoomata jo kohti Marokkoa."*). Lähtö
+     * tarkistetaan kehyssilmukasta, jotta tauko ei vie omaa ajastinta
+     * eikä jää roikkumaan linssin sulkeutuessa.
+     */
+    /*
+     * TAUKO ON TÄYSIMITTAINEN (JATKO 3 TARKENNUS 2). Ennen tauko
+     * joustui, koska se söi Marokon ajosta: ajon päätepiste oli kiinni
+     * luennassa. Nyt ajo pitää entisen pituutensa (aloitaKohdeajo),
+     * joten tauolle ei tarvitse tinkiä — vain ajokelvoton loppupää
+     * (jakso lähes ohi) lyhentää sitä.
+     */
+    const jaljella = kohteeseenAsti();
+    const vara = Number.isFinite(jaljella)
+      ? Math.max(0, jaljella + ZOOMIN_JATKO_MS - MAROKON_POHJA_MS)
+      : MAROKON_TAUKO_MS;
+    tila.kohdeajonTauko = performance.now()
+      + (reduced ? 0 : Math.min(MAROKON_TAUKO_MS, vara));
     /*
      * KEHYS PALAA VASTA KARTAN KANSSA (omistaja 15.9.2026 klo 19.05,
      * iPhone-kuva avaruusvaiheesta "He vain lähtivät.", sanatarkasti:
@@ -1887,13 +2251,37 @@ export function luoEsitys({ ajo }) {
     if (reduced || tila.kohdeajo || tila.avausOhi || tila.paattynyt) return false;
     const kohde = ensimmainenKohde?.kohde;
     if (!kohde) return false;
-    const kesto = kohteeseenAsti();
+    /*
+     * AJO PITÄÄ ENTISEN PITUUTENSA, SAAPUMINEN SIIRTYY (Raamattu JATKO 3
+     * TARKENNUS 2, omistaja 16.9.2026 klo 18.50 UTC: *"aloita siten
+     * vasta liikuttamaan kohti Marokkoa. Ei haittaa, vaikka Marokon
+     * teksti alkaa tulla ennen kuin kartta on zoomautunut sinne
+     * asti."*).
+     *
+     * `kohteeseenAsti` on aika TÄSTÄ hetkestä 'jebel-irhoud'-jakson
+     * alkuun, ja koska zoomi päättyy nyt ZOOMIN_JATKO_MS entistä
+     * myöhemmin, se on täsmälleen sen verran lyhyempi kuin ennen. Ajon
+     * ENTINEN pituus saadaan siis takaisin lisäämällä jatko: kamera on
+     * perillä ZOOMIN_JATKO_MS jakson alun JÄLKEEN, eli Marokon teksti
+     * ehtii alkaa ennen kuin kamera on maalissa. Kertomuksen ja luennan
+     * ajoitus ei muutu — vain kamera tulee perässä.
+     */
+    const jaljella = kohteeseenAsti();
+    const kesto = Number.isFinite(jaljella) ? jaljella + ZOOMIN_JATKO_MS : NaN;
     if (!Number.isFinite(kesto) || kesto < MAROKON_POHJA_MS) return false;
     const tahti = jaksonTahti(kertomus, kertomus.indexOf(ensimmainenKohde));
     tila.kohdeajo = true;
     tila.kohdeajonKesto = Math.round(kesto);
+    /*
+     * PALJONKO SAAPUMINEN MYÖHÄSTYY JAKSON ALUSTA (mittari savukkeelle).
+     * Ajon päätepiste oli ennen tasan 'jebel-irhoud'-jakson alku; nyt
+     * ajo kestää jatkon verran pidempään, joten tämä luku on
+     * ZOOMIN_JATKO_MS. Mitattavissa myös mykistetyllä pelillä, jossa
+     * seinäkello ja äänite eivät kulje samaa tahtia.
+     */
+    tila.kohdeajonMyohassa = Math.round(kesto - jaljella);
     ajaKohteeseen(kohde, kesto, {
-      alku: tahti.alku, loppu: tahti.loppu, pehmennys: marokonPehmennys,
+      alku: tahti.alku, loppu: tahti.loppu, pehmennys: marokonKaari,
     });
     return true;
   }
@@ -1955,7 +2343,8 @@ export function luoEsitys({ ajo }) {
        * vaikka lähtö tulisi kehyksen myöhässä.
        */
       if (tila.avausOdottaa && tila.kulunut >= ajat.zoomAlku) {
-        kaynnistaAvaruusajo(ajat.afrikka - tila.kulunut);
+        // Perille ZOOMIN_JATKO_MS entistä myöhemmin.
+        kaynnistaAvaruusajo(ajat.zoomLoppu - tila.kulunut);
       }
     }
     /*
@@ -1972,6 +2361,11 @@ export function luoEsitys({ ajo }) {
     }
     // Valot syttyvät sillä hetkellä, kun pallo on perillä ruudun täydeltä.
     if (tila.valotOdottaa && avaruuttaJaljella() <= 0) sytytaValot();
+    // Tauon jälkeen kamera lähtee hyvin hitaasti kohti Marokkoa.
+    if (tila.kohdeajonTauko !== null && nyt >= tila.kohdeajonTauko) {
+      tila.kohdeajonTauko = null;
+      aloitaKohdeajo();
+    }
     tila.viimeKehys = nyt;
     paivitaTeksti();
     paivitaKello();
@@ -2074,6 +2468,22 @@ export function luoEsitys({ ajo }) {
       ajo.taukoNappi.textContent = 'Loppu';
       ajo.taukoNappi.disabled = true;
     }
+    /*
+     * PULU RUUDULLE VASTA TÄSSÄ (Raamattu JATKO 2: *"Pulu näkyviin vasta
+     * kun linssin animaatio on ohi."*). Sama kävelyele oikeasta
+     * reunasta kuin ennen, sama PULUN_SISAANTULO_MS:n hengähdys — vain
+     * paikka on eri: esityksen luonnollinen loppu, ei sen alku.
+     */
+    ajastaPulunSisaantulo(0, {
+      /*
+       * VIIMEINEN VÄLIHUOMIO SANOTAAN VASTA PERILLÄ. Kaanonin viimeisen
+       * jakson `pulu` on luovutus tutkimusvaiheeseen (*"Kartta on
+       * sinun…"*); silmukka yritti sanoa sen jo jakson lopussa, mutta
+       * piilossa oleva pulu ei puhu (sanoPulu). Nyt se tulee samasta
+       * paikasta kuin ennenkin — pulun vierestä, kun pulu on ruudulla.
+       */
+      jalkeen: () => { tila.puluSanottu = false; sanoPulu(viimeinen ?? {}); },
+    });
     tila.koukkuKutsuttu = true;
     // Koukku viimeisenä: tutkimusvaihe on toisen moduulin työtä, ja se
     // saa ottaa ruudun haltuunsa vasta kun esitys on siivonnut jälkensä.
@@ -2161,9 +2571,12 @@ export function luoEsitys({ ajo }) {
    */
   function jatkaMuistista(muisti) {
     tila.muistista = true;
-    // Ei avausta eikä sisääntuloa: pelaaja on ollut jo matkalla, ja pulu
-    // palaa ruudulle sellaisenaan.
-    naytaPulu({ ele: false });
+    /*
+     * EI AVAUSTA EIKÄ SISÄÄNTULOA. Pulu pysyy piilossa myös muistista
+     * jatkettaessa: sääntö on esityksen mittainen, ei avauksen (Raamattu
+     * JATKO 2). Tutkimusvaiheeseen jatkava muisti päätyy alla `paata`an,
+     * joka tuo pulun ruudulle; kesken kaaren jatkava odottaa loppuun.
+     */
     // Ei mustaa, ei tähtiä, ei keskitettyjä lauseita: avaus on ohi.
     tila.avausOhi = true;
     tila.tahtiEsiin = 1;
@@ -2291,10 +2704,13 @@ export function luoEsitys({ ajo }) {
       tila.tahdet?.pura();
       tila.tahdet = null;
       clearTimeout(tila.kattoAjastin);
+      tila.kohdeajonTauko = null;
       // Linssin sulkeminen palauttaa pulun normaalisti näkyviin — ilman
       // kävelyelettä, joka kuuluu vain esityksen sisääntuloon.
       naytaPulu({ ele: false });
-      palautaKaukaisuus();
+      // Linssi kiinni: laudan omat zoomirajat (pelaajan maan
+      // uloszoomausesto) takaisin voimaan.
+      vapautaZoomikatto();
       peite.remove();
       tekstirivi.remove();
       ajo.juuri?.classList.remove('esitys-pimea', 'esitys-avaruus', 'esitys-kaynnissa', 'esitys-musta');
@@ -2384,9 +2800,13 @@ export function luoEsitys({ ajo }) {
       /** Aikaselaimen veto kesken (kertoja vaiti, kello sormen alla). */
       selaus: Boolean(tila.selaus),
       selauksia: tila.selauksia,
-      /** Pulu piilossa (avaus) ja onko se jo kävellyt sisään. */
+      /** Pulu piilossa (koko esitys) ja onko se jo kävellyt sisään. */
       puluPiilossa: tila.puluPiilossa,
       puluTullut: tila.puluTullut,
+      /** Marokon ajo odottaa pientä taukoa zoomin jälkeen (JATKO 3). */
+      kohdeajoOdottaa: tila.kohdeajonTauko !== null,
+      /** Saapumisen siirtymä jakson alusta (= ZOOMIN_JATKO_MS). */
+      kohdeajonMyohassa: tila.kohdeajonMyohassa ?? null,
     }),
   };
 }
