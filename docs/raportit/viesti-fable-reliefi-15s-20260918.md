@@ -170,3 +170,166 @@ ajosta kahden rajalaatan osalta; muut 34 ovat oikein.
 
 Tulokset (webp-laatat + `reliefipyramidi.json`) jäivät scratchpadiin
 `…/scratchpad/reliefi15/alpit/`; repoon ei committoitu binaareja.
+
+---
+
+# Erä 2: luotettava haku, jatko ja alemmat tasot
+
+Opus-agentti 18.9.2026 klo 01.37–02.20, sama haara. Erä 1:n koko
+maailman z7-ajo kaatui 55 laatan jälkeen NOAA:n aikakatkoon
+(`TypeError: fetch failed … ETIMEDOUT`). Tämä erä teki ajosta
+sellaisen, että se kestää sen — eikä aloita alusta.
+
+## 1. Haku kestää NOAA:n huonon hetken
+
+`noudaNcss` sai kolme asiaa:
+
+- **Aikakatko 60 s** (ennen 600 s). Mitattu vaste on 1,3–2,9 s, joten
+  60 s on jo viisikymmenkertainen vara; vanha kymmenen minuuttia
+  tarkoitti, että jumittunut yhteys söi kymmenen minuuttia ennen kuin
+  kukaan huomasi mitään.
+- **Viisi yritystä, eksponentiaalinen odotus** 2 → 4 → 8 → 16 s
+  (katto 30 s). Uusinta tulostuu lokiin, joten NOAA:n huono hetki
+  näkyy ajossa mutta ei kaada sitä.
+- **Rinnakkaisuus `--rinnakkain N` (oletus 3)**: laatat ajetaan
+  työjonona, N tekijää. Kolme on tarkoituksella pieni — aika on lähes
+  kokonaan NOAA:n vasteaikaa, joten kolme kolminkertaistaa läpimenon,
+  mutta kymmenen ei kymmenkertaista sitä vaan tuottaa juuri niitä
+  aikakatkoja, joilta tässä yritetään välttyä.
+
+**Yksi laatta ei enää kaada ajoa.** Virhe kirjataan, ajo jatkuu, ja
+lopussa tulostuu yhteenveto kaatuneista laatoista (`process.exitCode`
+= 2, jotta kutsuja huomaa). Sama komento `--jatka` hakee vain ne.
+
+## 2. `--jatka`
+
+Ohittaa laatan, jos **webp on jo kansiossa** TAI se on kirjattu
+manifestiin **avomereksi**. Jälkimmäinen on jatkon toinen puolikas:
+avomerilaatasta ei synny tiedostoa, ja ilman muistiinpanoa jatkoajo
+hakisi jokaisen valtameren laatan uudestaan vain todetakseen sen taas
+mereksi — koko maailmassa niitä on tuhansia eli useampi tunti turhaa
+hakua. Manifestiin (`reliefipyramidi.json`) tuli siksi tasoittain
+`meriLaatat: ["sarake/rivi", …]`, ja manifesti päivittyy **lisäten**:
+tasot, joihin ajo ei koskenut, säilyvät. Jokaisen tason kohdalle
+kirjataan myös levyn totuus (`laattojaLevylla`, `tavuaLevylla`), joka
+luetaan kansiosta eikä laskureista.
+
+`--pakota-laatat z7/89/35,z7/89/39` ajaa nimetyt laatat vaikka
+`--jatka` ohittaisi ne (ja poistaa ne merikirjauksesta).
+
+## 3. Alemmat tasot alinäytteistämällä
+
+`--tasot 0-7`: **z7 haetaan NOAA:lta, z6…z0 tehdään z7:stä** neljä
+pikseliä yhdeksi. Ajojärjestys pakotetaan (7, sitten 6, 5, …, 0)
+riippumatta siitä, missä järjestyksessä numerot kirjoitettiin.
+
+- Keskiarvo lasketaan itse (`puolita`) eikä jätetä sharpin
+  resize-ytimen varaan: kahden suhteen pienennöksessä ei ole mitään
+  valittavaa, ja lanczos teroittaisi rannikot yhdellä tasolla eri
+  tavalla kuin edellisellä. sharp hoitaa vain webp:n purun ja pakkauksen.
+- **Puuttuva (avomeri-)lapsi = meriväri**, joka on LUT:n arvo
+  −4000 metrissä eli täsmälleen se sävy, jonka poltettu avomerilaatta
+  olisi saanut. Jos kaikki neljä lasta ovat merta, vanhempikin on merta
+  eikä sitä polteta — se kirjataan manifestiin.
+- **Vajaa z7 ei estä alinäytteistystä.** Vanhemmiksi tulevat ne, joilla
+  on levyllä edes yksi lapsi; puuttuvat lapset lasketaan ja tulostuvat
+  (`12 lasta puuttui (vajaa z7)`).
+
+## 4. Koeajo: Alpit uudestaan
+
+```
+NODE_USE_ENV_PROXY=1 node tools/tee-reliefipyramidi.mjs \
+  --jatka --tasot 5-7 --rinnakkain 3 --alue 5,40,15,48 \
+  --pakota-laatat z7/89/35,z7/89/39 --ulos <scratch>/reliefi15/alpit
+```
+
+- z7: **34 laattaa 36:sta ohitettiin valmiina**, 2 pakotettua ajettiin.
+- z6: **12 laattaa** syntyi (0,66 Mt), z5: **6 laattaa** (0,18 Mt) —
+  ei yhtään hakua.
+- Manifesti päivittyi lisäten: z5, z6 ja z7 kaikki mukana.
+- Ei virheitä.
+
+Koelaatan z6/44/17 yläpuolisko on merivärinen, koska koealue loppuu
+48 °N:ään eikä sen pohjoispuolisia z7-lapsia ole haettu. Koko maailman
+ajossa ne ovat olemassa; tämä on juuri se vajaan tason käytös, joka
+haluttiin.
+
+## 5. Erä 1:n rajalaatat — ja niistä paljastunut uusi vika
+
+Pakotetut z7/89/35 ja z7/89/39 ovat nyt oikein (silmällä tarkistettu:
+Itävallan Alpit jokilaaksoineen ja Kroatian rannikko mannerjalustoineen,
+ei tasaista vihreää). **Mutta katsominen paljasti uuden vian, joka ei
+liittynyt erä 1:n pituusastebugiin:** laatan halki kulki tummanvihreä
+pystyviiva 15 °E:n kohdalla.
+
+Mittaus: liimatussa ruudukossa **yksi ainoa sarake** — 15 °E:n
+itäpuolinen ensimmäinen solu — luki **145 m**, kun sen naapurit lukivat
+859 ja 869. Syy on lähteessä: NOAA:n 15°-laatan oma pituusakseli on
+tallennettu 360° siirrettynä (E015 on 375…390), ja tiedoston
+ensimmäinen sarake palautuu tässä kääntymisessä vääränä. Sitä saraketta
+ei voi hakea naapurilaatasta, koska naapurin aineisto loppuu
+meridiaaniin.
+
+Korjaus: **rajasolu ei ole lähde vaan naapuriensa keskiarvo.** Hinta on
+yksi 15″:n sarake (n. 460 m) joka 15. asteella; virhe on korkeintaan
+rinteen kaarevuus 460 metrin matkalla. Sama tehdään leveyspiirin
+rajalla, jottei sama rakenne yllätä toisessa suunnassa.
+
+Mitattu vaikutus laatassa z7/89/35: pahimman sarakkeen naapurierotus
+putosi **295 → 83**, kun laatan oma keskiarvo on 45 — eli sauma katosi
+tavalliseen maastoon. **Tämä vika oli koko maailmassa jokaisen 15°:n
+meridiaanin kohdalla**, eli erä 1:n 55 laattaa ja Alppikokeen laatat
+kannattaa polttaa uusiksi (jatkoajo tekee sen vain, jos ne poistaa
+ensin — ks. alla).
+
+## 6. Komento, jolla koko maailman ajo jatkuu
+
+```
+NODE_USE_ENV_PROXY=1 node tools/tee-reliefipyramidi.mjs \
+  --jatka --tasot 0-7 --rinnakkain 3 \
+  --alue -180,-58,180,76 \
+  --ulos <scratch>/reliefi15/maailma
+```
+
+Ajon voi keskeyttää milloin tahansa ja käynnistää samalla komennolla
+uudestaan: valmiit laatat ja kirjatut avomerilaatat ohitetaan.
+
+**Huom. saumakorjaus.** Kansiossa olevat 55 laattaa on poltettu ennen
+kohdan 5 korjausta. Jos niissä on 15°:n meridiaani (osalla on), ne
+jäävät `--jatka`-ajossa ennalleen. Puhtain on poistaa `maailma/z7`
+kokonaan ennen käynnistystä — levyvälimuisti (`$TMPDIR/matkakirja-
+reliefi15`) säilyy, joten uusiksi polttaminen ei hae niitä NOAA:lta
+vaan lukee levyltä, eli se maksaa sekunteja.
+
+**Arvioitu kesto.** Alue kattaa z7:llä **12 859 laattaa** (koko arkki
+17 407). Jokainen vaatii yhden haun, myös avomerilaatta — meri
+todetaan vasta aineistosta. Mitattu haku 1,3–2,9 s + käsittely
+50–80 ms; kolmella rinnakkaisella **noin 0,75 s/laatta** eli
+
+- **z7 ≈ 2,5–3,5 tuntia**
+- z6…z0 (4 439 laattaa) alinäytteistyksenä **noin 4 minuuttia**, ei
+  yhtään hakua
+- **yhteensä noin 3 tuntia**, NOAA:n vasteajan mukaan
+
+Rinnakkaisuutta voi nostaa (`--rinnakkain 5`) jos NOAA kestää; yli
+viiden ei kannata mennä, koska aikakatkot alkavat syödä hyödyn.
+
+**Muisti ja levy.**
+
+- Node: kolme tekijää × (ikkuna 0,86 Mt Float32 + RGB 0,64 Mt + webp)
+  ≈ **alle 100 Mt RSS**. Alinäytteistyksen huippu on yksi
+  1024 × 1024 × 3 = **3 Mt** puskuri kerrallaan.
+- Tulos levylle: z7 arviolta **4 500–6 000 maalaattaa ≈ 260–360 Mt**,
+  kaikki tasot yhteensä **noin 350–480 Mt**.
+- **Levyvälimuisti `$TMPDIR/matkakirja-reliefi15` kasvaa noin
+  2,2 Gt:iin** (mitattu 174 kt/ikkuna × 12 859). Se on välimuisti, ei
+  tulos — sen voi poistaa ajon jälkeen, mutta ennen uudelleenpolttoa
+  kannattaa säilyttää.
+
+## Mitä yhä on auki
+
+- Laattoja ei ole viety R2:een (agentti ei vie; vientikomento erä 1:n
+  osiossa).
+- Linssiä ei ole kytketty pyramidiin — ehdotus on erä 1:n osiossa
+  "Miten linssi kytketään", eikä `js/linssit/`-koodiin ole koskettu.
+- Testiä ei vieläkään ole; työkalu ei muuta pelikoodia.

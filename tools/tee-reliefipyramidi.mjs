@@ -2,8 +2,15 @@
  * 15 KAARISEKUNNIN RELIEFI PÄÄKARTAN LAATTAPYRAMIDIIN.
  *
  *   NODE_USE_ENV_PROXY=1 node tools/tee-reliefipyramidi.mjs \
- *       [--alue 5,40,15,48] [--tasot 5-7] [--ulos <kansio>] \
+ *       [--alue 5,40,15,48] [--tasot 0-7] [--ulos <kansio>] \
+ *       [--rinnakkain 3] [--jatka] [--pakota-laatat z7/89/35,z7/89/39] \
  *       [--katto-kt 120] [--kuiva]
+ *
+ * --jatka        ohittaa laatat, jotka ovat jo levyllä tai kirjattu
+ *                manifestiin avomereksi; manifesti päivittyy lisäten.
+ * --rinnakkain   montako laattaa haetaan yhtä aikaa (oletus 3).
+ * --pakota-laatat  nimetyt laatat ajetaan vaikka --jatka ohittaisi ne.
+ * --tasot 0-7    z7 haetaan NOAA:lta, z6…z0 alinäytteistetään z7:stä.
  *
  * === MIKSI PYRAMIDI EIKÄ OMA LAATTAJAKO =============================
  *
@@ -83,7 +90,7 @@
  */
 import { spawnSync } from 'node:child_process';
 import {
-  existsSync, mkdirSync, readFileSync, writeFileSync, statSync,
+  existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync, statSync,
 } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, dirname, resolve } from 'node:path';
@@ -92,7 +99,7 @@ import { gzipSync, gunzipSync } from 'node:zlib';
 
 import { lueNetCDF } from './hae-korkeusruudukko.mjs';
 import { varjosta, tasainenVarjo, AURINKO } from './varjostus.mjs';
-import { LUT, LUT_POHJA, LUT_YLA, KALVO } from './reliefivarit.mjs';
+import { LUT, LUT_POHJA, LUT_YLA, KALVO, lutKohta } from './reliefivarit.mjs';
 import { sovitaMaailma, miller } from './vanha-maailma.mjs';
 
 const TAMA = fileURLToPath(import.meta.url);
@@ -219,14 +226,54 @@ export function lahdeLaatta(lon, lat) {
     + `${ew}${String(Math.abs(lon0)).padStart(3, '0')}`;
 }
 
+/*
+ * HAUN SITKEYS. Mitattu 18.9.2026: koko maailman z7-ajo kaatui 55
+ * laatan jälkeen `TypeError: fetch failed / ETIMEDOUT`. Yksi NOAA:n
+ * tavoittamaton hetki ei saa kaataa tuntien ajoa.
+ *
+ * Aikakatko on 60 s EIKÄ kymmentä minuuttia: mitattu vaste on
+ * 1,3–2,6 s, joten 60 s on jo viisikymmenkertainen vara. Vanha 600 s
+ * tarkoitti, että jumittunut yhteys söi kymmenen minuuttia ennen kuin
+ * kukaan huomasi mitään — nyt sama tilanne maksaa minuutin ja johtaa
+ * uusintaan.
+ */
+export const HAKU = {
+  aikakatkoMs: 60_000,
+  yrityksia: 5,
+  odotusMinMs: 2_000,
+  odotusMaxMs: 30_000,
+};
+
+const nuku = (ms) => new Promise((valmis) => { setTimeout(valmis, ms); });
+
 async function noudaNcss(url) {
-  const v = await fetch(url, { signal: AbortSignal.timeout(600000) });
-  if (!v.ok) throw new Error(`${v.status} ${v.statusText} — ${url}`);
-  const buf = Buffer.from(await v.arrayBuffer());
-  if (buf.length < 8 || buf.toString('latin1', 0, 3) !== 'CDF') {
-    throw new Error('NCSS ei palauttanut klassista netCDF:ää — muuttuiko palvelu?');
+  let viimeinen;
+  for (let yritys = 1; yritys <= HAKU.yrityksia; yritys++) {
+    try {
+      // eslint-disable-next-line no-await-in-loop
+      const v = await fetch(url, { signal: AbortSignal.timeout(HAKU.aikakatkoMs) });
+      if (!v.ok) throw new Error(`${v.status} ${v.statusText} — ${url}`);
+      // eslint-disable-next-line no-await-in-loop
+      const buf = Buffer.from(await v.arrayBuffer());
+      if (buf.length < 8 || buf.toString('latin1', 0, 3) !== 'CDF') {
+        throw new Error('NCSS ei palauttanut klassista netCDF:ää — muuttuiko palvelu?');
+      }
+      return buf;
+    } catch (e) {
+      viimeinen = e;
+      if (yritys === HAKU.yrityksia) break;
+      /* Eksponentiaalinen odotus: 2, 4, 8, 16 s (katto 30 s). */
+      const odotus = Math.min(
+        HAKU.odotusMaxMs,
+        HAKU.odotusMinMs * 2 ** (yritys - 1),
+      );
+      console.log(`    NCSS-haku ${yritys}/${HAKU.yrityksia} kaatui `
+        + `(${e?.message ?? e?.name ?? e}) — uusinta ${odotus / 1000} s kuluttua`);
+      // eslint-disable-next-line no-await-in-loop
+      await nuku(odotus);
+    }
   }
-  return buf;
+  throw viimeinen;
 }
 
 /** Yhden lähdelaatan sisällä oleva ikkuna. */
@@ -382,6 +429,46 @@ export async function haeIkkuna({
     }
   }
 
+  /*
+   * SAUMASARAKE PAIKATAAN.
+   *
+   * Mitattu 18.9.2026 laatasta z7/89/35 (Itävalta, 15 °E): liimatussa
+   * ruudukossa yksi ainoa sarake — 15 °E:n itäpuolinen ensimmäinen
+   * solu — luki 145 m, kun sen naapurit lukivat 859 ja 869. Kuvassa se
+   * oli tummanvihreä pystyviiva laatan halki, ja se olisi ollut siellä
+   * JOKAISEN 15°:n meridiaanin kohdalla koko maailmassa.
+   *
+   * Syy on lähteessä: NOAA:n 15°-laatan oma pituusakseli on tallennettu
+   * 360° siirrettynä (E015 on 375…390), ja tiedoston ensimmäinen sarake
+   * palautuu tässä kääntymisessä vääränä. Sitä saraketta ei voi hakea
+   * naapurilaatasta — naapurin aineisto loppuu meridiaaniin.
+   *
+   * Siksi rajasolu EI OLE LÄHDE vaan naapuriensa keskiarvo. Hinta on
+   * yksi 15″:n sarake (n. 460 m) joka 15. asteella; virhe on korkeintaan
+   * rinteen kaarevuus 460 metrin matkalla, eli näkymätön. Sama tehdään
+   * leveyspiirin rajalla, jottei sama rakenne yllätä toisessa suunnassa.
+   */
+  const paikkaaSarake = (x) => {
+    if (x < 1 || x > leveys - 2) return;
+    for (let y = 0; y < korkeus; y++) {
+      const o = y * leveys + x;
+      z[o] = (z[o - 1] + z[o + 1]) / 2;
+    }
+  };
+  const paikkaaRivi = (y) => {
+    if (y < 1 || y > korkeus - 2) return;
+    for (let x = 0; x < leveys; x++) {
+      const o = y * leveys + x;
+      z[o] = (z[o - leveys] + z[o + leveys]) / 2;
+    }
+  };
+  for (let v = Math.ceil(lon0 / 15) * 15; v < lon1; v += 15) {
+    paikkaaSarake(hilaX(v + 0.5 / 240) - x0);
+  }
+  for (let v = Math.ceil(lat0 / 15) * 15; v < lat1; v += 15) {
+    paikkaaRivi(hilaY(v + 0.5 / 240) - y0);
+  }
+
   return {
     z,
     leveys,
@@ -479,6 +566,168 @@ export function pelkkaaMerta(ruudukko, raja = -200) {
   return true;
 }
 
+/*
+ * Puuttuvan (avomeri-)lapsen väri alinäytteistyksessä.
+ *
+ * Avomerilaattaa ei polteta lainkaan, joten alemman tason laatta, jonka
+ * naapurissa on merta, tarvitsee jotain sen tilalle. Väri on LUT:n arvo
+ * −4000 metrissä eli valtamerten pohjan yleiskorkeus, varjostamattomana
+ * — täsmälleen se sävy, jonka poltettu avomerilaatta olisi saanut.
+ * Mannerjalustan vaaleampi kaistale ei katoa, koska rannikkolaatat
+ * eivät ole avomerta: niissä on maata ja ne poltetaan.
+ */
+export const MERIVARI = [LUT[lutKohta(-4000)], LUT[lutKohta(-4000) + 1], LUT[lutKohta(-4000) + 2]];
+
+/* ------------------------------------------------ alinäytteistys */
+
+/**
+ * Neljä pikseliä yhdeksi — täsmällinen laatikkosuodatin.
+ *
+ * Reliefi on KENTTÄ, ja kentän oikea pienennös on sen keskiarvo (sama
+ * minkä 1′:n reliefikuvakin tekee). Keskiarvo lasketaan tässä itse
+ * eikä jätetä sharpin resize-ytimen varaan: kahden suhteen pienennös
+ * on niin yksinkertainen, ettei siinä ole mitään valittavaa, ja
+ * lanczos teroittaisi rannikot tasolla eri tavalla kuin edellisellä.
+ */
+export function puolita(iso, leveys, korkeus, uLeveys, uKorkeus) {
+  const ulos = new Uint8ClampedArray(uLeveys * uKorkeus * 3);
+  for (let y = 0; y < uKorkeus; y++) {
+    const y0 = y * 2; const y1 = Math.min(korkeus - 1, y0 + 1);
+    for (let x = 0; x < uLeveys; x++) {
+      const x0 = x * 2; const x1 = Math.min(leveys - 1, x0 + 1);
+      const a = (y0 * leveys + x0) * 3; const b = (y0 * leveys + x1) * 3;
+      const c = (y1 * leveys + x0) * 3; const d = (y1 * leveys + x1) * 3;
+      const o = (y * uLeveys + x) * 3;
+      for (let k = 0; k < 3; k++) {
+        ulos[o + k] = Math.round((iso[a + k] + iso[b + k] + iso[c + k] + iso[d + k]) / 4);
+      }
+    }
+  }
+  return ulos;
+}
+
+/** Laattapolku pyramidissa. */
+export const laatanPolku = (ulos, z, sarake, rivi) => join(ulos, `z${z}`, String(sarake), `${rivi}.webp`);
+/** Laatan avain lokissa, manifestissa ja --pakota-laatat-lipussa. */
+export const laatanAvain = (z, sarake, rivi) => `z${z}/${sarake}/${rivi}`;
+
+/** Levyllä olevat laatat yhdellä tasolla joukkona "sarake/rivi". */
+export function levynLaatat(ulos, z) {
+  const joukko = new Set();
+  const juuri = join(ulos, `z${z}`);
+  if (!existsSync(juuri)) return joukko;
+  for (const sarake of readdirSync(juuri)) {
+    if (!/^\d+$/.test(sarake)) continue;
+    for (const tiedosto of readdirSync(join(juuri, sarake))) {
+      const m = /^(\d+)\.webp$/.exec(tiedosto);
+      if (m) joukko.add(`${sarake}/${m[1]}`);
+    }
+  }
+  return joukko;
+}
+
+/**
+ * Yksi taso alinäytteistettynä seuraavaa syvemmästä. EI HAE MITÄÄN.
+ *
+ * Vanhemmaksi tulevat ne laatat, joilla on levyllä edes yksi lapsi;
+ * puuttuvat lapset ovat avomerta ja saavat merivärin. Jos kaikki neljä
+ * lasta ovat avomerta, vanhempikin on avomerta eikä sitä polteta —
+ * se kirjataan manifestiin, jottei sitä yritetä uudestaan.
+ *
+ * Vajaa syvempi taso ei estä alinäytteistystä: mitä levyllä on, siitä
+ * tehdään vanhemmat, ja puuttuvat lapset kirjataan yhteenvetoon.
+ */
+export async function alinaytteistaTaso(z, ulos, meriJoukko, kattoTavua) {
+  const mitat = tasonMitat(z);
+  const lapsiMitat = tasonMitat(z + 1);
+  const lapsetLevylla = levynLaatat(ulos, z + 1);
+  const lapsetMerta = meriJoukko.get(z + 1) ?? new Set();
+
+  const vanhemmat = new Map();
+  const merkitse = (avain, oliLevylla) => {
+    const [s, r] = avain.split('/').map(Number);
+    const k = `${Math.floor(s / 2)}/${Math.floor(r / 2)}`;
+    const tieto = vanhemmat.get(k) ?? { lapsia: 0, levylla: 0 };
+    tieto.lapsia++;
+    if (oliLevylla) tieto.levylla++;
+    vanhemmat.set(k, tieto);
+  };
+  for (const avain of lapsetLevylla) merkitse(avain, true);
+  for (const avain of lapsetMerta) if (!lapsetLevylla.has(avain)) merkitse(avain, false);
+
+  const { default: sharp } = await import('sharp');
+  const tiedot = {
+    z,
+    leveys: mitat.leveys,
+    korkeus: mitat.korkeus,
+    sarakkeita: mitat.sarakkeita,
+    riveja: mitat.riveja,
+    poltettu: 0,
+    meri: 0,
+    tavua: 0,
+    puuttuviaLapsia: 0,
+    alinaytteistetty: true,
+  };
+  const meri = [];
+  const virheet = [];
+  const avaimet = [...vanhemmat.keys()].sort();
+
+  for (const avain of avaimet) {
+    const [sarake, rivi] = avain.split('/').map(Number);
+    if (vanhemmat.get(avain).levylla === 0) {
+      tiedot.meri++;
+      meri.push(avain);
+      continue;
+    }
+    const bbox = laatanBbox(mitat, sarake, rivi);
+    const isoL = bbox.pw * 2; const isoK = bbox.ph * 2;
+    const iso = new Uint8ClampedArray(isoL * isoK * 3);
+    for (let i = 0; i < iso.length; i += 3) {
+      iso[i] = MERIVARI[0]; iso[i + 1] = MERIVARI[1]; iso[i + 2] = MERIVARI[2];
+    }
+    let puuttui = 0;
+    for (let dy = 0; dy < 2; dy++) {
+      for (let dx = 0; dx < 2; dx++) {
+        const ls = sarake * 2 + dx; const lr = rivi * 2 + dy;
+        if (ls >= lapsiMitat.sarakkeita || lr >= lapsiMitat.riveja) continue;
+        const polku = laatanPolku(ulos, z + 1, ls, lr);
+        if (!existsSync(polku)) {
+          if (!lapsetMerta.has(`${ls}/${lr}`)) puuttui++;
+          continue;
+        }
+        try {
+          /* eslint-disable no-await-in-loop */
+          const { data, info } = await sharp(readFileSync(polku))
+            .removeAlpha().raw().toBuffer({ resolveWithObject: true });
+          /* eslint-enable no-await-in-loop */
+          for (let y = 0; y < info.height; y++) {
+            const ky = dy * LAATTA + y;
+            if (ky >= isoK) break;
+            const lahde = y * info.width * 3;
+            const kohde = (ky * isoL + dx * LAATTA) * 3;
+            const n = Math.min(info.width, isoL - dx * LAATTA) * 3;
+            for (let i = 0; i < n; i++) iso[kohde + i] = data[lahde + i];
+          }
+        } catch (e) {
+          virheet.push({ laatta: laatanAvain(z + 1, ls, lr), viesti: `lapsen luku: ${e?.message ?? e}` });
+        }
+      }
+    }
+    tiedot.puuttuviaLapsia += puuttui;
+
+    const kuva = puolita(iso, isoL, isoK, bbox.pw, bbox.ph);
+    const kohde = laatanPolku(ulos, z, sarake, rivi);
+    // eslint-disable-next-line no-await-in-loop
+    const { laatu, tavua } = await pakkaaWebp(kuva, bbox.pw, bbox.ph, kohde, kattoTavua);
+    tiedot.poltettu++;
+    tiedot.tavua += tavua;
+    console.log(`  ${laatanAvain(z, sarake, rivi)}  ${bbox.pw} x ${bbox.ph} px, laatu ${laatu}, `
+      + `${(tavua / 1024).toFixed(0)} kt  (alinäytteistetty${puuttui ? `, ${puuttui} lasta puuttui` : ''})`);
+  }
+
+  return { tiedot, meri, virheet };
+}
+
 /* ----------------------------------------------------------- pakkaus */
 
 async function pakkaaWebp(kuva, leveys, korkeus, kohde, kattoTavua) {
@@ -524,15 +773,91 @@ export function laatatAlueelle(mitat, alue) {
   return ulos;
 }
 
+/**
+ * Työjono: sama lista, N tekijää, ei odottavia aukkoja.
+ *
+ * Rinnakkaisuus on tässä PIENI (oletus 3) tarkoituksella. Aika on
+ * lähes kokonaan NOAA:n vasteaikaa, joten kolme tekijää kolminkertaistaa
+ * läpimenon — mutta kymmenen ei kymmenkertaista sitä, vaan alkaa
+ * näyttää palvelimen päässä ryöstöltä ja tuottaa juuri niitä
+ * aikakatkoja, joilta tässä yritetään välttyä.
+ */
+export async function tyojono(lista, rinnakkain, tyo) {
+  let seuraava = 0;
+  const tekijat = [];
+  for (let i = 0; i < Math.max(1, rinnakkain); i++) {
+    tekijat.push((async () => {
+      for (;;) {
+        const k = seuraava;
+        seuraava += 1;
+        if (k >= lista.length) return;
+        // eslint-disable-next-line no-await-in-loop
+        await tyo(lista[k], k);
+      }
+    })());
+  }
+  await Promise.all(tekijat);
+}
+
+/** Aiempi manifesti, jos sellainen on. */
+function lueLuettelo(ulos) {
+  const polku = join(ulos, 'reliefipyramidi.json');
+  if (!existsSync(polku)) return null;
+  try {
+    return JSON.parse(readFileSync(polku, 'utf8'));
+  } catch (e) {
+    console.log(`  (vanhaa luetteloa ei voitu lukea: ${e.message} — aloitetaan tyhjästä)`);
+    return null;
+  }
+}
+
+/**
+ * Manifestiin kirjatut avomerilaatat tasoittain.
+ *
+ * TÄMÄ ON JATKON TOINEN PUOLIKAS. Levyllä oleva webp kertoo, mikä on
+ * jo poltettu — mutta avomerilaatasta ei synny tiedostoa, ja ilman
+ * muistiinpanoa jatkoajo hakisi jokaisen valtameren laatan uudestaan
+ * NOAA:lta vain todetakseen sen taas mereksi. Koko maailmassa niitä
+ * on yksitoista tuhatta, eli useampi tunti pelkkää turhaa hakua.
+ */
+function meriJoukot(luettelo) {
+  const kartta = new Map();
+  for (const taso of luettelo?.tasot ?? []) {
+    kartta.set(taso.z, new Set(taso.meriLaatat ?? []));
+  }
+  return kartta;
+}
+
+/** Levyn totuus: paljonko yhdellä tasolla on laattoja ja tavuja. */
+function tasonTotuus(ulos, z) {
+  let laattoja = 0; let tavua = 0;
+  const juuri = join(ulos, `z${z}`);
+  if (!existsSync(juuri)) return { laattoja, tavua };
+  for (const sarake of readdirSync(juuri)) {
+    if (!/^\d+$/.test(sarake)) continue;
+    for (const tiedosto of readdirSync(join(juuri, sarake))) {
+      if (!/^\d+\.webp$/.test(tiedosto)) continue;
+      laattoja += 1;
+      tavua += statSync(join(juuri, sarake, tiedosto)).size;
+    }
+  }
+  return { laattoja, tavua };
+}
+
 async function main() {
   const kuiva = argv.includes('--kuiva');
+  const jatka = argv.includes('--jatka');
   const kattoKt = Number(lippu('--katto-kt', 120));
+  const rinnakkain = Math.max(1, Number(lippu('--rinnakkain', 3)));
   const ulos = lippu('--ulos', join(VALIMUISTI, 'pyramidi'));
   const alue = String(lippu('--alue', '5,40,15,48')).split(',').map(Number);
   if (alue.length !== 4 || alue.some(Number.isNaN)) throw new Error('--alue lon0,lat0,lon1,lat1');
   const tasoVali = String(lippu('--tasot', '7')).split('-').map(Number);
   const tasot = [];
   for (let z = tasoVali[0]; z <= (tasoVali[1] ?? tasoVali[0]); z++) tasot.push(z);
+  const pakotetut = new Set(
+    String(lippu('--pakota-laatat', '')).split(',').map((s) => s.trim()).filter(Boolean),
+  );
 
   mkdirSync(VALIMUISTI, { recursive: true });
 
@@ -540,6 +865,17 @@ async function main() {
   console.log(`       ${LAHDE.lisenssi}, doi:${LAHDE.doi}, ${LAHDE.palvelu}`);
   console.log(`arkki: x ${ARKKI.x} y ${ARKKI.y.toFixed(2)} `
     + `w ${ARKKI.w} h ${ARKKI.h.toFixed(2)} (sama kuin pääkartan pyramidilla)`);
+  console.log(`ajo:   tasot ${tasot.join(',')}, rinnakkain ${rinnakkain}`
+    + `${jatka ? ', JATKO (valmiit ohitetaan)' : ''}`
+    + `${pakotetut.size ? `, pakotettuja laattoja ${pakotetut.size}` : ''}`);
+
+  const vanha = lueLuettelo(ulos);
+  const meri = meriJoukot(vanha);
+  for (const avain of pakotetut) {
+    const [zs, sarake, rivi] = avain.split('/');
+    const z = Number(String(zs).replace('z', ''));
+    meri.get(z)?.delete(`${sarake}/${rivi}`);
+  }
 
   const luettelo = {
     tunnus: 'reliefipyramidi',
@@ -551,14 +887,40 @@ async function main() {
     aurinko: AURINKO,
     tasot: [],
   };
+  /* Tasot, joihin tämä ajo ei koskenut, säilyvät manifestissa. */
+  const tasotKartta = new Map();
+  for (const taso of vanha?.tasot ?? []) tasotKartta.set(taso.z, taso);
 
-  for (const z of tasot) {
+  const virheet = [];
+
+  /*
+   * JÄRJESTYS ON PAKOTETTU. Syvin taso (z7) tulee lähdeaineistosta ja
+   * kaikki sitä karkeammat SIITÄ — joten z7 on ajettava ensin ja loput
+   * ylhäältä alas (z6, z5, …), muuten alinäytteistys etsisi lapsia,
+   * joita ei vielä ole. Käyttäjän antama --tasot 0-7 tarkoittaa siis
+   * ajojärjestystä 7, 6, 5, …, 0 riippumatta siitä, missä järjestyksessä
+   * numerot kirjoitettiin.
+   */
+  const haettavat = tasot.filter((z) => z >= SYVIN_VIITE).sort((a, b) => a - b);
+  const johdetut = tasot.filter((z) => z < SYVIN_VIITE).sort((a, b) => b - a);
+
+  for (const z of haettavat) {
     const mitat = tasonMitat(z);
-    const lista = laatatAlueelle(mitat, alue);
+    const kaikki = laatatAlueelle(mitat, alue);
+    const levylla = jatka ? levynLaatat(ulos, z) : new Set();
+    const tasonMeri = meri.get(z) ?? new Set();
+    const lista = kaikki.filter(({ sarake, rivi }) => {
+      const avain = `${sarake}/${rivi}`;
+      if (pakotetut.has(laatanAvain(z, sarake, rivi))) return true;
+      if (!jatka) return true;
+      return !levylla.has(avain) && !tasonMeri.has(avain);
+    });
+    const ohitettu = kaikki.length - lista.length;
     console.log(`\nz${z}  ${mitat.leveys} x ${mitat.korkeus} px  `
       + `${(mitat.leveys / 360).toFixed(1)} px/aste  `
       + `${mitat.sarakkeita} x ${mitat.riveja} = ${mitat.sarakkeita * mitat.riveja} laattaa `
-      + `koko maailmassa, ${lista.length} alueella`);
+      + `koko maailmassa, ${kaikki.length} alueella`
+      + `${ohitettu ? `, ${ohitettu} valmiina — ${lista.length} ajetaan` : ''}`);
 
     const tasonTiedot = {
       z,
@@ -569,60 +931,130 @@ async function main() {
       poltettu: 0,
       meri: 0,
       tavua: 0,
+      ohitettu,
+      virheita: 0,
     };
     const alkoi = Date.now();
+    let valmiita = 0;
 
-    for (const { sarake, rivi, bbox } of lista) {
-      const t0 = Date.now();
-      const r = REUNUS * RUUTU_15S;
-      const ruudukko = await haeIkkuna({
-        lon0: lautaLon(bbox.x) - r,
-        lat0: lautaLat(bbox.y + bbox.h) - r,
-        lon1: lautaLon(bbox.x + bbox.w) + r,
-        lat1: lautaLat(bbox.y) + r,
-      });
-      const tHaku = Date.now() - t0;
+    await tyojono(lista, rinnakkain, async ({ sarake, rivi, bbox }) => {
+      const avain = laatanAvain(z, sarake, rivi);
+      valmiita += 1;
+      const numero = `[${valmiita}/${lista.length}]`;
+      try {
+        const t0 = Date.now();
+        const r = REUNUS * RUUTU_15S;
+        const ruudukko = await haeIkkuna({
+          lon0: lautaLon(bbox.x) - r,
+          lat0: lautaLat(bbox.y + bbox.h) - r,
+          lon1: lautaLon(bbox.x + bbox.w) + r,
+          lat1: lautaLat(bbox.y) + r,
+        });
+        const tHaku = Date.now() - t0;
 
-      if (pelkkaaMerta(ruudukko)) {
-        tasonTiedot.meri++;
-        console.log(`  z${z}/${sarake}/${rivi}  avomeri — ohitettu (haku ${tHaku} ms)`);
-        continue;
+        if (pelkkaaMerta(ruudukko)) {
+          tasonTiedot.meri += 1;
+          tasonMeri.add(`${sarake}/${rivi}`);
+          console.log(`  ${numero} ${avain}  avomeri — ohitettu (haku ${tHaku} ms)`);
+          return;
+        }
+
+        const t1 = Date.now();
+        const rgb = varjostaJaVarita(ruudukko);
+        const kuva = laatanPikselit(rgb, ruudukko, bbox);
+        const tVari = Date.now() - t1;
+
+        if (kuiva) {
+          console.log(`  ${numero} ${avain}  ${bbox.pw} x ${bbox.ph} px (kuiva)`);
+          return;
+        }
+        const t2 = Date.now();
+        const kohde = laatanPolku(ulos, z, sarake, rivi);
+        const { laatu, tavua } = await pakkaaWebp(kuva, bbox.pw, bbox.ph, kohde, kattoKt * 1024);
+        tasonTiedot.poltettu += 1;
+        tasonTiedot.tavua += tavua;
+        tasonMeri.delete(`${sarake}/${rivi}`);
+        console.log(`  ${numero} ${avain}  ${bbox.pw} x ${bbox.ph} px, laatu ${laatu}, `
+          + `${(tavua / 1024).toFixed(0)} kt  (ruudukko ${ruudukko.leveys}x${ruudukko.korkeus}, `
+          + `haku ${tHaku} ms, väri ${tVari} ms, pakkaus ${Date.now() - t2} ms)`);
+      } catch (e) {
+        /*
+         * YKSI LAATTA EI KAADA AJOA. Koko maailman ajo on tuhansia
+         * hakuja; jos yksikin niistä saa kaataa kaiken, ajo ei
+         * koskaan pääse loppuun. Virhe kirjataan, ajo jatkuu, ja
+         * lopun yhteenveto kertoo mitä jäi — sama --jatka hakee ne
+         * seuraavalla kierroksella.
+         */
+        tasonTiedot.virheita += 1;
+        virheet.push({ laatta: avain, viesti: e?.message ?? String(e) });
+        console.log(`  ${numero} ${avain}  VIRHE: ${e?.message ?? e} — jatketaan`);
       }
-
-      const t1 = Date.now();
-      const rgb = varjostaJaVarita(ruudukko);
-      const kuva = laatanPikselit(rgb, ruudukko, bbox);
-      const tVari = Date.now() - t1;
-
-      if (kuiva) {
-        console.log(`  z${z}/${sarake}/${rivi}  ${bbox.pw} x ${bbox.ph} px (kuiva)`);
-        continue;
-      }
-      const t2 = Date.now();
-      const kohde = join(ulos, `z${z}`, String(sarake), `${rivi}.webp`);
-      const { laatu, tavua } = await pakkaaWebp(kuva, bbox.pw, bbox.ph, kohde, kattoKt * 1024);
-      tasonTiedot.poltettu++;
-      tasonTiedot.tavua += tavua;
-      console.log(`  z${z}/${sarake}/${rivi}  ${bbox.pw} x ${bbox.ph} px, laatu ${laatu}, `
-        + `${(tavua / 1024).toFixed(0)} kt  (ruudukko ${ruudukko.leveys}x${ruudukko.korkeus}, `
-        + `haku ${tHaku} ms, väri ${tVari} ms, pakkaus ${Date.now() - t2} ms)`);
-    }
+    });
 
     tasonTiedot.sekuntia = (Date.now() - alkoi) / 1000;
-    luettelo.tasot.push(tasonTiedot);
+    tasonTiedot.meriLaatat = [...tasonMeri].sort();
+    tasonTiedot.meri = tasonTiedot.meriLaatat.length;
+    if (!kuiva) {
+      const totuus = tasonTotuus(ulos, z);
+      tasonTiedot.laattojaLevylla = totuus.laattoja;
+      tasonTiedot.tavuaLevylla = totuus.tavua;
+    }
+    tasotKartta.set(z, tasonTiedot);
     if (tasonTiedot.poltettu) {
-      console.log(`  z${z} yhteensä: ${tasonTiedot.poltettu} laattaa, `
+      console.log(`  z${z} tässä ajossa: ${tasonTiedot.poltettu} laattaa, `
         + `${(tasonTiedot.tavua / 1024 / 1024).toFixed(2)} Mt, `
         + `${(tasonTiedot.tavua / tasonTiedot.poltettu / 1024).toFixed(0)} kt/laatta, `
-        + `${(tasonTiedot.sekuntia / tasonTiedot.poltettu).toFixed(2)} s/laatta`);
+        + `${(tasonTiedot.sekuntia / tasonTiedot.poltettu).toFixed(2)} s/laatta `
+        + `(${rinnakkain} rinnakkain)`);
     }
   }
 
+  for (const z of johdetut) {
+    if (kuiva) {
+      console.log(`\nz${z}  alinäytteistys ohitettu (--kuiva)`);
+      continue;
+    }
+    console.log(`\nz${z}  alinäytteistys z${z + 1}:stä (ei hakuja)`);
+    const alkoi = Date.now();
+    const tulos = await alinaytteistaTaso(z, ulos, meri, kattoKt * 1024);
+    tulos.tiedot.sekuntia = (Date.now() - alkoi) / 1000;
+    tulos.tiedot.meriLaatat = tulos.meri.sort();
+    meri.set(z, new Set(tulos.meri));
+    const totuus = tasonTotuus(ulos, z);
+    tulos.tiedot.laattojaLevylla = totuus.laattoja;
+    tulos.tiedot.tavuaLevylla = totuus.tavua;
+    tasotKartta.set(z, tulos.tiedot);
+    virheet.push(...tulos.virheet);
+    console.log(`  z${z} yhteensä: ${tulos.tiedot.poltettu} laattaa, `
+      + `${(tulos.tiedot.tavua / 1024 / 1024).toFixed(2)} Mt, `
+      + `${tulos.tiedot.meri} avomerta`
+      + `${tulos.tiedot.puuttuviaLapsia
+        ? `, ${tulos.tiedot.puuttuviaLapsia} lasta puuttui (vajaa z${z + 1})` : ''}`
+      + `, ${tulos.tiedot.sekuntia.toFixed(1)} s`);
+  }
+
   if (!kuiva) {
+    luettelo.tasot = [...tasotKartta.values()].sort((a, b) => a.z - b.z);
     mkdirSync(ulos, { recursive: true });
     const polku = join(ulos, 'reliefipyramidi.json');
     writeFileSync(polku, `${JSON.stringify(luettelo, null, 2)}\n`, 'utf8');
     console.log(`\nluettelo: ${polku}`);
+    for (const taso of luettelo.tasot) {
+      console.log(`  z${taso.z}: ${taso.laattojaLevylla ?? 0} laattaa levyllä, `
+        + `${((taso.tavuaLevylla ?? 0) / 1024 / 1024).toFixed(1)} Mt, `
+        + `${taso.meri ?? 0} avomerta kirjattu`);
+    }
+  }
+
+  if (virheet.length) {
+    console.log(`\nVIRHEITÄ ${virheet.length} — nämä laatat jäivät tekemättä:`);
+    for (const v of virheet.slice(0, 40)) console.log(`  ${v.laatta}: ${v.viesti}`);
+    if (virheet.length > 40) console.log(`  … ja ${virheet.length - 40} muuta`);
+    console.log('Aja sama komento uudestaan --jatka: valmiit ohitetaan, '
+      + 'vain nämä haetaan.');
+    process.exitCode = 2;
+  } else {
+    console.log('\nEi virheitä.');
   }
 }
 
