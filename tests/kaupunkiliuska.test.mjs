@@ -5,9 +5,12 @@ import test from 'node:test';
 
 import {
   KAUPUNGIN_SADE_KM, NAHTAVYYDET_NIMIO, TURISTIOPPAAN_NIMIO, etaisyysKm,
-  kategoriat, kaupunginNostot, liuskanRivit, nostonOmaPaikka, onKaupunginSisainen,
-  ylaryhmanMaara,
+  kategoriat, kaupunginNostot, kelattuLiuska, kelauksenAskel, liuskanRivit, nostonOmaPaikka,
+  onKaupunginSisainen, ylaryhmanMaara,
 } from '../js/pallolauta/kaupunkiliuska.js';
+import {
+  KOVAN_ESTEEN_PAINO, VIUHKAN_RIVI_PX, alasMahtuvatRivit, kohdanLaatikko, viuhkanAsemat,
+} from '../js/pallolauta/aihemerkit.js';
 import { laudaltaAsteiksi } from '../js/fokusmitat.js';
 import { PALLO_LAUTA } from '../js/pallo.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
@@ -155,4 +158,95 @@ test('nostoton kaupunki näyttää vain yläryhmän (kohta 9)', () => {
 test('puuttuva opas tai kohdekartta jättää rivinsä pois', () => {
   const rivit = liuskanRivit({ kaupunki: PARIISI, nostot: [], nahtavyyksia: false, opas: false });
   assert.deepEqual(rivit.map((r) => r.laji), ['lehti']);
+});
+
+/*
+ * ══ AVATTU LISTA ESTEIDEN ULKOPUOLELLA (Fablen tarkistus 18.9.2026) ══
+ *
+ * Kaappaus pariisi-liuska-kategoria-390.png: avattu kategoria kasvoi
+ * ylöspäin PARIISI-nimen päälle. Asento lasketaan nyt avatun listan
+ * korkeudella ja lista kasvaa merkistä ALASPÄIN; kaupungin nimi ja
+ * nappula ovat kovia esteitä myös avattuna (PAATOKSET 32 kohta 5).
+ */
+const PUHELIN = { leveys: 390, korkeus: 844 };
+/** Kaupungin nimen laatikko merkin yläpuolella (kuten laudalla). */
+const nimenLaatikko = (p) => ({
+  x0: p.x - 40, x1: p.x + 40, y0: p.y - 34, y1: p.y - 8, paino: KOVAN_ESTEEN_PAINO,
+});
+/** Listan rivilaatikot ruudulla. */
+const laatikot = (p, tulos) => tulos.asemat.map((a) => {
+  const l = kohdanLaatikko(a.dx, a.dy, tulos.leveys, tulos.puoli);
+  return {
+    x0: p.x + l.x0, x1: p.x + l.x1, y0: p.y + l.y0, y1: p.y + l.y1,
+  };
+});
+const limittyy = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
+
+test('avattu liuska kasvaa alaspäin eikä kaupungin nimen päälle', () => {
+  const p = { x: 195, y: 400 };
+  const leveydet = new Array(14).fill(120);
+  const este = nimenLaatikko(p);
+  const alas = viuhkanAsemat({
+    p, ruutu: PUHELIN, leveydet, esteet: [este], kasvu: 'alas',
+  });
+  assert.equal(alas.kovaSakko, 0, 'alaspäin kasvava lista löytää vapaan asennon');
+  const ruudulla = laatikot(p, alas);
+  assert.ok(ruudulla.every((l) => !limittyy(l, este)), 'yksikään rivi ei ole nimen päällä');
+  assert.ok(ruudulla.every((l) => l.y0 >= p.y), 'lista on merkin alapuolella');
+  assert.ok(ruudulla.every((l) => l.y1 <= PUHELIN.korkeus), 'lista pysyy ruudussa');
+  // Keskitetty kasvu (viuhkan oletus) olisi noussut nimen päälle.
+  const keskitetty = viuhkanAsemat({ p, ruutu: PUHELIN, leveydet, esteet: [este] });
+  assert.ok(laatikot(p, keskitetty).some((l) => l.y0 < p.y - 40),
+    'vertailukohta: keskitetty lista nousee merkin yläpuolelle');
+});
+
+test('alasMahtuvatRivit kertoo ikkunan koon merkin alapuolella', () => {
+  const ylhaalla = alasMahtuvatRivit({ p: { x: 195, y: 100 }, ruutu: PUHELIN });
+  const alhaalla = alasMahtuvatRivit({ p: { x: 195, y: 700 }, ruutu: PUHELIN });
+  assert.ok(ylhaalla > alhaalla);
+  assert.ok(alhaalla >= 1 && alhaalla <= 5, `alhaalla ${alhaalla}`);
+  // Ruudun alalaidassa ei ole tilaa yhdellekään riville.
+  assert.equal(alasMahtuvatRivit({ p: { x: 195, y: 840 }, ruutu: PUHELIN }), 0);
+  // Ikkuna päättyy ruudun alalaitaan: viimeinen rivi mahtuu vielä.
+  const y = 400;
+  const viimeinen = y + VIUHKAN_RIVI_PX + 6
+    + (alasMahtuvatRivit({ p: { x: 195, y }, ruutu: PUHELIN }) - 1) * 30;
+  assert.ok(viimeinen + VIUHKAN_RIVI_PX <= PUHELIN.korkeus);
+});
+
+test('liuska kelaa sisäisesti, kun ruutu ei riitä', () => {
+  const rivit = Array.from({ length: 20 }, (_, i) => ({
+    laji: 'kohde', nimi: `kohde ${i}`, avain: `kohde:${i}`, sisennys: 1,
+  }));
+  const ikkuna = kelattuLiuska(rivit, { enintaan: 8, kelaus: 0 });
+  assert.equal(ikkuna.kelattu, true);
+  assert.equal(ikkuna.rivit.length, 8, 'ikkuna ei ylitä ruudun rajaa');
+  assert.equal(ikkuna.rivit.at(-1).laji, 'kelaus', 'alas kelaus tarjolla');
+  assert.ok(ikkuna.rivit.every((r) => r.laji !== 'kelaus' || r.suunta === 1));
+  // Kelattu ikkuna keskellä listaa: kelausrivit molemmin puolin.
+  const keskella = kelattuLiuska(rivit, { enintaan: 8, kelaus: 6 });
+  assert.equal(keskella.rivit.length, 8);
+  assert.equal(keskella.rivit[0].laji, 'kelaus');
+  assert.equal(keskella.rivit.at(-1).laji, 'kelaus');
+  assert.equal(keskella.rivit.filter((r) => r.laji === 'kohde').length, 6);
+  // Lyhyt lista ei kelaa lainkaan.
+  const lyhyt = kelattuLiuska(rivit.slice(0, 5), { enintaan: 8 });
+  assert.equal(lyhyt.kelattu, false);
+  assert.equal(lyhyt.rivit.length, 5);
+});
+
+test('kelauksen askel pysyy listan sisällä', () => {
+  const alas = kelauksenAskel({
+    kelaus: 0, suunta: 1, enintaan: 8, maara: 20,
+  });
+  assert.equal(alas, 6);
+  assert.equal(kelauksenAskel({
+    kelaus: 6, suunta: -1, enintaan: 8, maara: 20,
+  }), 0);
+  assert.equal(kelauksenAskel({
+    kelaus: 18, suunta: 1, enintaan: 8, maara: 20,
+  }), 19);
+  assert.equal(kelauksenAskel({
+    kelaus: 0, suunta: -1, enintaan: 8, maara: 20,
+  }), 0);
 });

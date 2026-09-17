@@ -228,6 +228,12 @@ export const VIUHKAN_RIVI_PX = 13;
 export const VIUHKAN_VALI_PX = 30;
 /** Listan etäisyys merkin pisteestä sivusuunnassa (px). */
 export const VIUHKAN_SADE_PX = 26;
+/**
+ * Alaspäin kasvavan listan ylimmän rivin keskikohta merkin pisteestä
+ * (px). VIUHKAN_RIVI_PX + rako, jotta ylimmän rivin laatikko alkaa
+ * vasta merkin alapuolelta eikä merkin päältä.
+ */
+export const VIUHKAN_ALAS_ALKU_PX = VIUHKAN_RIVI_PX + 6;
 /** Reunavara: näin lähelle ruudun laitaa lista saa yltää (px). */
 export const VIUHKAN_REUNAVARA_PX = 10;
 /** Pehmeän pohjan levein vyö rivilaatikoiden ympärillä (px). */
@@ -313,12 +319,12 @@ function paallekkaisyys(a, b) {
  *   pohja: ?{x0, y0, x1, y1}}}
  */
 export function viuhkanAsemat({
-  p, ruutu, leveydet, esteet = [],
+  p, ruutu, leveydet, esteet = [], kasvu = 'keskitetty',
 }) {
   const n = leveydet.length;
   if (!n) {
     return {
-      puoli: 'oikea', leveys: 0, asemat: [], pohja: null,
+      puoli: 'oikea', leveys: 0, asemat: [], pohja: null, kovaSakko: 0,
     };
   }
   const leveys = Math.max(0, ...leveydet);
@@ -332,7 +338,21 @@ export function viuhkanAsemat({
   const korkeus = (n - 1) * vali;
   const puolet = p.x <= ruutu.leveys / 2 ? ['oikea', 'vasen'] : ['vasen', 'oikea'];
   const askel = Math.round(vali);
-  const siirrot = [0, -askel, askel, -2 * askel, 2 * askel, -3 * askel, 3 * askel];
+  /*
+   * KASVUSUUNTA. Viuhka on merkin ympärillä keskitetty, mutta
+   * KAUPUNKILIUSKA KASVAA ALASPÄIN (Fablen tarkistus 18.9.2026:
+   * avattu kategoria kasvoi ylöspäin PARIISI-nimen päälle). Alaspäin
+   * kasvava lista alkaa merkin alapuolelta, ja vasta jos se ei mahdu
+   * tai osuu kovaan esteeseen, kokeillaan ylempiä asentoja — asennot
+   * ovat siis samat, vain järjestys ja lähtökohta vaihtuvat. Koska
+   * tasapelin ratkaisee järjestys (ensimmäinen voittaa), alaspäin
+   * kasvava lista valitsee aina alimman vapaan asennon.
+   */
+  const perus = kasvu === 'alas' ? VIUHKAN_ALAS_ALKU_PX : -korkeus / 2;
+  const siirrot = kasvu === 'alas'
+    ? [0, askel, -askel, 2 * askel, -2 * askel, 3 * askel, -3 * askel,
+      -korkeus / 2 - VIUHKAN_ALAS_ALKU_PX]
+    : [0, -askel, askel, -2 * askel, 2 * askel, -3 * askel, 3 * askel];
   let paras = null;
   for (const puoli of puolet) {
     for (const siirto of siirrot) {
@@ -343,7 +363,7 @@ export function viuhkanAsemat({
       if (p.x + rivi.x0 < vara) dx += vara - (p.x + rivi.x0);
       else if (p.x + rivi.x1 > ruutu.leveys - vara) dx += (ruutu.leveys - vara) - (p.x + rivi.x1);
       // Pystykiinnitys: ylin ja alin rivi ruudun sisään.
-      let ylin = -korkeus / 2 + siirto;
+      let ylin = perus + siirto;
       const yYla = p.y + ylin - VIUHKAN_RIVI_PX;
       const yAla = p.y + ylin + korkeus + VIUHKAN_RIVI_PX;
       if (yYla < vara) ylin += vara - yYla;
@@ -351,17 +371,28 @@ export function viuhkanAsemat({
       const asemat = [];
       for (let i = 0; i < n; i += 1) asemat.push({ dx, dy: ylin + i * vali });
       let sakko = 0;
+      // KOVA SAKKO ERIKSEEN: ruudun reuna ja kovat esteet (kaupungin
+      // nimi, pelinappula). Kutsuja tarvitsee sen tietääkseen, onko
+      // asento oikeasti vapaa — pehmeä muste saa jäädä alle, kova ei
+      // (js/pallolauta/nostot.js, liuskan kelaus).
+      let kova = 0;
       for (const a of asemat) {
         const l = kohdanLaatikko(a.dx, a.dy, leveys, puoli);
-        sakko += 1000 * yliReunan(l, p, ruutu, vara);
+        const yli = 1000 * yliReunan(l, p, ruutu, vara);
+        sakko += yli;
+        kova += yli;
         const ruudulla = {
           x0: p.x + l.x0, x1: p.x + l.x1, y0: p.y + l.y0, y1: p.y + l.y1,
         };
-        for (const e of esteet ?? []) sakko += paallekkaisyys(ruudulla, e) * (e.paino ?? 1);
+        for (const e of esteet ?? []) {
+          const osuma = paallekkaisyys(ruudulla, e) * (e.paino ?? 1);
+          sakko += osuma;
+          if ((e.paino ?? 1) >= KOVAN_ESTEEN_PAINO) kova += osuma;
+        }
       }
       if (!paras || sakko < paras.sakko - 0.001) {
         paras = {
-          sakko, puoli, leveys, asemat,
+          sakko, kova, puoli, leveys, asemat,
         };
       }
       if (paras.sakko === 0) break;
@@ -373,7 +404,23 @@ export function viuhkanAsemat({
     leveys: paras.leveys,
     asemat: paras.asemat,
     pohja: listanPohja(paras.asemat, paras.leveys, paras.puoli),
+    kovaSakko: paras.kova,
   };
+}
+
+/**
+ * MONTAKO RIVIÄ MAHTUU MERKIN ALAPUOLELLE (kasvu 'alas').
+ *
+ * Kaupunkiliuska ei saa ylittää kovia esteitä, joten kun avattu
+ * kategoria ei mahdu ruudun alalaitaan asti, lista KELAA sisäisesti
+ * sen sijaan että se venyisi kaupungin nimen päälle (PAATOKSET 34
+ * kohta 5). Tämä on se katto, jonka mukaan rivit rajataan.
+ */
+export function alasMahtuvatRivit({ p, ruutu, vara = VIUHKAN_REUNAVARA_PX }) {
+  const ylin = (p?.y ?? 0) + VIUHKAN_ALAS_ALKU_PX;
+  const tilaa = ((ruutu?.korkeus ?? 0) - vara - VIUHKAN_RIVI_PX) - ylin;
+  if (!(tilaa >= 0)) return 0;
+  return Math.floor(tilaa / VIUHKAN_VALI_PX) + 1;
 }
 
 /** Listan pehmeän pohjan laatikko merkin omissa ruutupikseleissä. */

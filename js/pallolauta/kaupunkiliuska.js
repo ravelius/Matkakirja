@@ -213,3 +213,68 @@ export function ylaryhmanMaara(rivit) {
   return (rivit ?? []).filter((r) => r.laji === 'lehti' || r.laji === 'nahtavyydet'
     || r.laji === 'opas').length;
 }
+
+/** Kelausrivien nimiöt (ylös ja alas). */
+export const KELAUS_YLOS_NIMIO = '▲ edelliset';
+export const KELAUS_ALAS_NIMIO = '▼ lisää';
+
+/**
+ * LIUSKA KELAA SISÄISESTI, KUN RUUTU EI RIITÄ (PAATOKSET 32 kohta 5:
+ * *"yksikään nimiö ei saa olla toisen nimiön, merkin, kaupungin nimen
+ * tai pelinappulan päällä"*).
+ *
+ * Avattu kategoria voi olla pidempi kuin merkin alapuolelle jäävä
+ * tila. Silloin liuska EI saa venyä ylöspäin kaupungin nimen päälle
+ * eikä ruudun yli: se näyttää IKKUNAN riveistä ja tarjoaa kelausrivit.
+ * Kelausrivi vie itse yhden rivin, joten ikkuna on sen verran pienempi
+ * — laskenta on tässä mallissa, jotta se voidaan mitata ilman selainta.
+ *
+ * @param {Array<object>} rivit  koko lista (liuskanRivit)
+ * @param {number} enintaan  montako riviä ruudulle mahtuu
+ * @param {number} kelaus  ensimmäisen näytettävän rivin indeksi
+ * @returns {{rivit: Array<object>, kelaus: number, kelattu: boolean}}
+ */
+export function kelattuLiuska(rivit = [], { enintaan = Infinity, kelaus = 0 } = {}) {
+  const n = rivit.length;
+  if (!Number.isFinite(enintaan) || enintaan >= n) {
+    return { rivit, kelaus: 0, kelattu: false };
+  }
+  /*
+   * Alle kolmen rivin ikkunaan ei mahdu sisältöä kelausrivien lisäksi;
+   * silloin näytetään se, mikä mahtuu, ilman kelausta (ruutu on niin
+   * pieni, ettei liuska ole enää lista).
+   */
+  if (enintaan < 3) {
+    return { rivit: rivit.slice(0, Math.max(0, enintaan)), kelaus: 0, kelattu: false };
+  }
+  const alku = Math.max(0, Math.min(Math.round(kelaus) || 0, n - 1));
+  const ylos = alku > 0;
+  // Ikkunaan mahtuu `enintaan` riviä, joista kelausrivit vievät omansa.
+  let tilaa = enintaan - (ylos ? 1 : 0);
+  let loppu = Math.min(n, alku + tilaa);
+  if (loppu < n) { tilaa -= 1; loppu = Math.min(n, alku + tilaa); }
+  const ikkuna = [];
+  if (ylos) {
+    ikkuna.push({
+      laji: 'kelaus', suunta: -1, nimi: KELAUS_YLOS_NIMIO, avain: 'kelaus:ylos', sisennys: 0,
+    });
+  }
+  for (let i = alku; i < loppu; i += 1) ikkuna.push(rivit[i]);
+  if (loppu < n) {
+    ikkuna.push({
+      laji: 'kelaus', suunta: 1, nimi: KELAUS_ALAS_NIMIO, avain: 'kelaus:alas', sisennys: 0,
+    });
+  }
+  return { rivit: ikkuna, kelaus: alku, kelattu: true };
+}
+
+/**
+ * Kelauksen uusi alkuindeksi, kun kelausriviä napautetaan. Askel on
+ * ikkuna miinus kaksi riviä, jotta liittymäkohta näkyy molemmin puolin.
+ */
+export function kelauksenAskel({
+  kelaus = 0, suunta = 1, enintaan = 0, maara = 0,
+} = {}) {
+  const askel = Math.max(1, enintaan - 2);
+  return Math.max(0, Math.min(Math.max(0, maara - 1), (Math.round(kelaus) || 0) + suunta * askel));
+}

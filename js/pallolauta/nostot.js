@@ -38,10 +38,13 @@
 
 import {
   KOVAN_ESTEEN_PAINO,
-  aiheenNimi, aihemerkinLaatikko, aihemerkkiElementti, aihenostonNimio, asetteleAihemerkki,
-  kohdanLaatikko, piirraViuhka, ryhmitaNostot, viuhkanAsemat, viuhkanNimioLeveys,
+  aiheenNimi, aihemerkinLaatikko, aihemerkkiElementti, aihenostonNimio, alasMahtuvatRivit,
+  asetteleAihemerkki, kohdanLaatikko, piirraViuhka, ryhmitaNostot, viuhkanAsemat,
+  viuhkanNimioLeveys,
 } from './aihemerkit.js';
-import { liuskanRivit, nostonOmaPaikka, onKaupunginSisainen } from './kaupunkiliuska.js';
+import {
+  kelattuLiuska, kelauksenAskel, liuskanRivit, nostonOmaPaikka, onKaupunginSisainen,
+} from './kaupunkiliuska.js';
 import { FOKUS_POHJAT } from '../packs/fokus-grc.js';
 import { MAASTOKOHTEET_ARK } from '../packs/maastokohteet-ark.js';
 import { MAASTOKOHTEET_ATA } from '../packs/maastokohteet-ata.js';
@@ -1542,6 +1545,10 @@ export function luoNostot({
       p: { x: rivi.p.x, y: rivi.p.y },
       uloinOsuus: viimeisinUloinOsuus,
       avattuKategoria: null,
+      // Sisäisen kelauksen tila (PAATOKSET 34 kohta 5, ks. paivita).
+      kelaus: 0,
+      kelausIkkuna: 0,
+      kelausRiveja: 0,
       // Siirtymisrivi on olemassa vain, kun lauta tarjosi siirron
       // (js/pallolauta/lauta.js napautaKaupunki) — ks. LIIKU_NIMIO.
       liiku,
@@ -2323,6 +2330,24 @@ export function luoNostot({
      * (viuhkanAsemat): kovat esteet = kaupungin nimi ja pelinappula,
      * pehmeät = muiden nostojen muste. Rivit piirtyvät kaupunkimerkin
      * omaan elementtiin (asetteleNosto), eivät omiksi merkeikseen.
+     *
+     * AVATTU LISTA LASKETAAN AVATUN LISTAN KORKEUDELLA (Fablen
+     * tarkistus 18.9.2026, kaappaus pariisi-liuska-kategoria-390.png:
+     * *"kun kategoria avataan, liuska kasvaa ylöspäin ja peittää
+     * PARIISI-kaupunginnimen"*). Kolme sääntöä, samassa järjestyksessä
+     * kuin ne ratkaistaan:
+     *
+     * 1. LISTA KASVAA ALASPÄIN merkistä (`kasvu: 'alas'`), joten
+     *    kaupungin nimi ja nappula jäävät sen yläpuolelle. Asennot ovat
+     *    samat kuin viuhkalla, vain järjestys vaihtuu: alin vapaa
+     *    asento voittaa.
+     * 2. JOS ALAS EI MAHDU, sama haku kokeilee sivua ja ylempiä
+     *    asentoja — kova este painaa 50-kertaisesti, joten se väistyy
+     *    ennen pehmeää mustetta.
+     * 3. JOS RUUTU EI RIITÄ (pitkä kategoria 390 px:llä), lista ei
+     *    veny esteiden yli vaan KELAA sisäisesti: ikkuna on merkin
+     *    alapuolelle mahtuvat rivit (alasMahtuvatRivit) ja kelausrivit
+     *    vievät ikkunasta omansa (kelattuLiuska).
      */
     liuskanKohdat = [];
     if (liuska) {
@@ -2330,27 +2355,48 @@ export function luoNostot({
       if (!rivi) liuska = null;
       else {
         const omat = sisaisetKaupungeittain.get(rivi.avain) ?? [];
-        const rivit = liuskanRivit({
+        const ruutuNyt = ruutu?.() ?? { leveys: 1400, korkeus: 900 };
+        const kaikkiRivit = liuskanRivit({
           kaupunki: rivi,
           nostot: omat,
           avattuKategoria: liuska.avattuKategoria,
           liiku: Boolean(liuska.liiku),
         });
-        const leveydet = rivit.map((r2) => viuhkanNimioLeveys(
-          r2.nimi ? nostosymNimioMitta(r2.nimi, null, Infinity).leveys : 0, mittaNyt,
-        ) + r2.sisennys * LIUSKAN_SISENNYS_PX);
         // Sama varjostus kuin viuhkalla (ks. ESTEET ON TÄSSÄ LISTA).
         const kovat = [...viimeisimmatNimet, ...(Array.isArray(esteet) ? esteet : [])]
           .filter(Boolean)
           .map((e) => ({ ...e, paino: KOVAN_ESTEEN_PAINO }));
+        const listanEsteet = [...kovat, ...laatikot];
+        const laske = (lista) => {
+          const leveydet = lista.map((r2) => viuhkanNimioLeveys(
+            r2.nimi ? nostosymNimioMitta(r2.nimi, null, Infinity).leveys : 0, mittaNyt,
+          ) + r2.sisennys * LIUSKAN_SISENNYS_PX);
+          return viuhkanAsemat({
+            p: rivi.p, ruutu: ruutuNyt, leveydet, esteet: listanEsteet, kasvu: 'alas',
+          });
+        };
+        const mahtuu = alasMahtuvatRivit({ p: rivi.p, ruutu: ruutuNyt });
+        let rivit = kaikkiRivit;
+        let asemointi = laske(rivit);
+        // Kelaus vasta kun vapaata asentoa EI löytynyt (kovaSakko > 0):
+        // väljällä ruudulla lista on kokonaisena, kuten ennenkin.
+        if (asemointi.kovaSakko > 0 && kaikkiRivit.length > mahtuu) {
+          const kelattu = kelattuLiuska(kaikkiRivit, {
+            enintaan: mahtuu, kelaus: liuska.kelaus ?? 0,
+          });
+          liuska.kelaus = kelattu.kelaus;
+          liuska.kelausIkkuna = mahtuu;
+          liuska.kelausRiveja = kaikkiRivit.length;
+          rivit = kelattu.rivit;
+          asemointi = laske(rivit);
+        } else {
+          liuska.kelaus = 0;
+          liuska.kelausIkkuna = 0;
+          liuska.kelausRiveja = kaikkiRivit.length;
+        }
         const {
           puoli, asemat, leveys: listaLeveys, pohja,
-        } = viuhkanAsemat({
-          p: rivi.p,
-          ruutu: ruutu?.() ?? { leveys: 1400, korkeus: 900 },
-          leveydet,
-          esteet: [...kovat, ...laatikot],
-        });
+        } = asemointi;
         liuskanKohdat = rivit.map((r2, i) => ({
           r: r2, rivi, asema: asemat[i], leveys: listaLeveys, puoli,
         }));
@@ -2673,8 +2719,22 @@ export function luoNostot({
         if (kohta.x < l.x0 || kohta.x > l.x1 || kohta.y < l.y0 || kohta.y > l.y1) continue;
         if (k.r.laji === 'kategoria') {
           liuska.avattuKategoria = liuska.avattuKategoria === k.r.aihe ? null : k.r.aihe;
+          // Uusi kategoria alkaa aina alusta: kelaus on ikkunan tila,
+          // ei kategorian ominaisuus.
+          liuska.kelaus = 0;
           ladoUudelleen?.();
           return { laji: 'kategoria', aihe: k.r.aihe };
+        }
+        // Kelausrivi siirtää ikkunaa; liuska pysyy auki (kohta 5).
+        if (k.r.laji === 'kelaus') {
+          liuska.kelaus = kelauksenAskel({
+            kelaus: liuska.kelaus ?? 0,
+            suunta: k.r.suunta,
+            enintaan: liuska.kelausIkkuna ?? 0,
+            maara: liuska.kelausRiveja ?? 0,
+          });
+          ladoUudelleen?.();
+          return { laji: 'kelaus', suunta: k.r.suunta };
         }
         if (k.r.laji === 'kohde') {
           if (ui.dead || ui.busy || typeof k.r.nosto?.avaa !== 'function') return null;
@@ -2700,6 +2760,7 @@ export function luoNostot({
       const l = p ? kohdanLaatikko(p.x + k.asema.dx, p.y + k.asema.dy, k.leveys, k.puoli) : null;
       return {
         laji: k.r.laji,
+        avain: k.r.avain ?? null,
         nimi: k.r.nimi,
         aihe: k.r.aihe ?? null,
         maara: k.r.maara ?? null,
