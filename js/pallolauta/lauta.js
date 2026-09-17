@@ -1907,6 +1907,15 @@ export async function avaaPallolauta(ui) {
      */
     esteet: () => [...merkit.laatikot('peli'), ...ruudunKalusteet()],
     /*
+     * KAUPUNKIEN NIMILAATIKOT LIUSKAN LADONTAAN (Fablen tarkistus
+     * 18.9.2026: avattu kategoria ladottiin kartalle piirretyn
+     * "PARIISI"-nimen päälle). Nimi ei ole `esteet`-listalla, koska
+     * SE listaa käyttää myös ANKKUROINTI (nostot.js `esteetKehyksessa`)
+     * ja koko nimijoukon vieminen sinne siirtäisi merkkejä — tämä on
+     * oma lukufunktionsa vain listan ladontaa varten.
+     */
+    nimienLaatikot: () => nimet.laatikot(),
+    /*
      * LAUDAN KAUPUNGIT NOSTOKERROKSELLE (Raamattu, PAATOKSET 34 TILA:
      * *"liuska ripustetaan LAUDAN OMAAN KAUPUNKIMERKKIIN ... liuskalle
      * luodaan ankkuri kaupungin koordinaatteihin nostokerrokseen"*).

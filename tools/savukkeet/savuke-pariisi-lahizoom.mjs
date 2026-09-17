@@ -1464,7 +1464,7 @@ for (const ruutu of RUUDUT) {
       return {
         ruutu: { leveys: r.width, korkeus: r.height },
         rivit: l.nostot?.viuhkanOsumalaatikot?.() ?? [],
-        nimet: [...document.querySelectorAll('.pallolauta-nimi')].map(laatikko),
+        nimet: [...document.querySelectorAll('.pallolauta-nimi .karttanimi')].map(laatikko),
         nappulat: [...document.querySelectorAll('.pallolauta-nappula')].map(laatikko),
         /*
          * MUIDEN NOSTOJEN NIMIÖT JA MERKIT (PAATOKSET 32 kohta 5,
@@ -1851,7 +1851,7 @@ for (const ruutu of RUUDUT) {
       return {
         ruutu: { leveys: r.width, korkeus: r.height },
         rivit: l.nostot.liuskanRivit?.() ?? [],
-        nimet: [...document.querySelectorAll('.pallolauta-nimi')].map(laatikko),
+        nimet: [...document.querySelectorAll('.pallolauta-nimi .karttanimi')].map(laatikko),
         nappulat: [...document.querySelectorAll('.pallolauta-nappula')].map(laatikko),
       };
     });
@@ -1953,7 +1953,7 @@ for (const ruutu of RUUDUT) {
     return {
       ruutu: { leveys: r.width, korkeus: r.height },
       rivit: l.nostot.liuskanRivit?.() ?? [],
-      nimet: [...document.querySelectorAll('.pallolauta-nimi')].map(laatikko),
+      nimet: [...document.querySelectorAll('.pallolauta-nimi .karttanimi')].map(laatikko),
       nappulat: [...document.querySelectorAll('.pallolauta-nappula')].map(laatikko),
       // Liuskan ripustusmerkki: kaupunkimerkin oma CSS2D-elementti saa
       // luokan `pallolauta-liuska-auki` (js/pallolauta/nostot.js).
