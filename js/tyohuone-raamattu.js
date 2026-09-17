@@ -8193,7 +8193,7 @@ export const RAAMATTU = {
           + 'vartija pysyy vihreana. Tila: TOTEUTETTU haarassa avaruus-hehku '
           + '(PR #2570; neliot olivat tahtitaivaan polykerros ilman tekstuuria, '
           + 'kerros poistettiin linssista; savuke 112/112; pinta 123 -> 91). '
-          + 'TARKENNUS (omistaja 17.9.2026 klo 22.40 Suomen aikaa, sanatarkasti: '
+          + 'TARKENNUS (omistaja 17.9.2026 klo 22.30 Suomen aikaa, sanatarkasti: '
           + '"Polykerros kuulostaa kivalta jos sen saa toimimaan niin lisaa '
           + 'takaisin"): 44) POLYKERROS TAKAISIN linssiin, mutta toimivana: '
           + 'hiukkaset pyoreina (sama pyoristava savytin kuin tahdilla), pienina '
