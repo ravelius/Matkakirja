@@ -127,12 +127,42 @@ odotuksen tilan odottamisella.
 
 | Savuke | Ennen | Jälkeen |
 | --- | --- | --- |
-| topografialinssi | 36/38 | **38/38** |
-| ihmisen-kehys | 9/11 | 10/11 |
-| satelliittilinssi | 187/192 | ks. alla |
-| pariisi-lahizoom | 72/74 | ks. alla |
-| nimikyltti | 58/63 | 58/63 |
+| topografialinssi | 36/38 | **38/38** (0 punaista) |
+| satelliittilinssi | 187/192 | **191/192** (vain tunnettu punainen) |
+| ihmisen-kehys | 9/11 | 10/11 (kaksi kohdepunaista vihreäksi, yksi uusi — ks. alla) |
+| pariisi-lahizoom | 72/74 | 72/74 (työpöytä vihreä, puhelin häilyy — ks. alla) |
+| nimikyltti | 58/63 | 58/63 (sama kahdessa ajossa, täsmälleen samat luvut) |
 | pallo-nostolaput | 6/8 | 6/8 (savuke ennallaan) |
+
+### ihmisen-kehys: yksi vartio kääntyi punaiseksi
+
+`390px: kehyksen paluu on TRANSFORM-liuku molemmille palkeille` on nyt
+punainen (`kaynnissa: []`) kolmessa ajossa kolmesta. Syy on
+näytteenottoikkunan pidennys: ENNEN korjausta pääsilmukka katkesi
+kellosta kesken avausta, ja tämä "oma kierros" ajettiin sen tähden
+tilassa, jossa ohjaajan oma liuku oli yhä käynnissä. Nyt silmukka
+odottaa avauksen loppuun, ohjaaja on purkanut `kehys-liukuu`-luokan, ja
+kierroksen synteettinen uudelleenaseistus ei enää tuota
+`getAnimations()`-siirtymäolioita macOS-Chromessa. Kokeilin korjata
+odottamalla tilaa (yksi rAF → enintään 60 rAF, kunnes molemmat palkit
+ovat saaneet transform-siirtymänsä) — ei auttanut, joten kyse ei ole
+ajoituksesta vaan siitä, millä ehdolla siirtymä ylipäätään syntyy.
+Muutos jätettiin sisään (tilan odotus on joka tapauksessa oikea tapa),
+ja vartio jää punaiseksi: sen korjaus on oma erä, jossa kierros
+aseistetaan samasta tilasta kuin ohjaaja sen tekee. Vastakoe
+(`ilman siirtymää transform-liukua ei synny`) on yhä vihreä.
+
+### pariisi-lahizoom: työpöytä vihreä, puhelin häilyy
+
+Kohdevartiot `4. tyopoyta` ja `4b. tyopoyta` ovat molemmissa ajoissa
+VIHREITÄ (ennen: molemmat punaisia, kaikki ehdokkaat *peitossa*).
+Puhelimella tulos häilyy ajosta toiseen ilman yhteyttä tähän
+muutokseen: ajossa 1 punaisena `4b. puhelin` ja `7c. puhelin`
+(kyltin napautus ei avannut turisti-infoa lainkaan), ajossa 2 lisäksi
+`4. puhelin`. `7c` tapahtuu koodissa ENNEN tämän erän siivousta, eli
+puhelimen kylttinapautus itsessään on Macilla epävakaa — sama
+juurisyykategoria kuin nimikyltin ja pallo-nostolappujen punaiset
+(ladonta/osumapinta Macin kirjasinmitoilla). Kirjattu, ei korjattu.
 
 ## Pelin puoli: mitä jää punaiseksi ja miksi
 
@@ -145,6 +175,8 @@ tavalla kuin Linux-kontissa**:
    samoin luvuin.
 2. `pallo-nostolaput 6` — napautus lapun musteeseen avaa naapurin
    noston.
+3. `pariisi-lahizoom 7c/4/4b puhelin` — kyltin ja nostojen napautus
+   puhelinmitassa osuu tai ei osu ajosta riippuen.
 
 Nämä eivät ole savukkeen mittausvirheitä vaan pelin käytöstä siinä
 ympäristössä, jossa omistaja pelaa (Mac). Pelikoodiin (js/, css/) ei

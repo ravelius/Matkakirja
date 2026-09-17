@@ -470,8 +470,22 @@ async function mittaa(leveys, korkeus) {
     const piilossa = mittaa();
     document.body.style.setProperty('--kehys-liuku', liukuKesto);
     document.body.classList.remove('kehys-piilossa');
-    await new Promise((r) => requestAnimationFrame(r));
-    const kaynnissa = siirtymat();
+    /*
+     * SIIRTYMÄOLIOT SYNTYVÄT VASTA TYYLIN LASKENNAN JÄLKEEN. Yksi
+     * requestAnimationFrame riitti kontissa, mutta Macilla
+     * `getAnimations()` palautti silloin vielä tyhjän listan
+     * (mitattu 17.9.2026: kaynnissa []). Odotetaan TILAA: kaksi
+     * kehystä ja sen jälkeen niin kauan, kunnes kumpikin palkki on
+     * saanut siirtymänsä — katto 60 kehystä, jolloin väite kaatuu
+     * aidosti jos siirtymää ei koskaan tule.
+     */
+    let kaynnissa = [];
+    for (let i = 0; i < 60; i += 1) {
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((r) => requestAnimationFrame(r));
+      kaynnissa = siirtymat();
+      if (kaynnissa.filter((a) => a.ominaisuus === 'transform').length >= 2) break;
+    }
     /* Kesken jäänyt hidastus katkaistaan: nollan mittainen kierros vie
        kehyksen lähtöön ja takaisin paikalleen ilman liukua. */
     document.body.style.setProperty('--kehys-liuku', '0ms');
