@@ -71,7 +71,7 @@ import { NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-s
 import { KAUPUNKIMERKIN_NIMIO_PX } from '../../js/pallolauta/nostot.js';
 
 const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
@@ -141,7 +141,7 @@ const odotettuEsittely = (nimi) => (ARTIKKELIT[nimi]?.intro ?? '')
 /** Kansiosasto lehtidatasta — vartio 9 tarvitsee tietää, mitä poistetaan. */
 const kansiOsasto = (id) => (KULTTUURI_KATEGORIAT[id] ?? []).find((k) => k.id === 'kaupunki');
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
 
 /* ---------------------------------------------------------------- ajo */
 

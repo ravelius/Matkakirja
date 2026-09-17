@@ -168,7 +168,7 @@ import {
 } from '../../js/pallolauta/nostot.js';
 
 const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
@@ -375,7 +375,7 @@ function tallenne(kaupunki) {
 /** CPU:n hidastuskerroin (`SAVUKE_HIDASTUS`), 1 = ei hidastusta. */
 const HIDASTUS = Number(process.env.SAVUKE_HIDASTUS ?? 1) || 1;
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
 
 async function avaaSivu(ruutu, { ryhmitys = true } = {}) {
   const ctx = await selain.newContext({
