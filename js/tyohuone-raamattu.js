@@ -8408,8 +8408,9 @@ export const RAAMATTU = {
           + 'vasenta, edellinen asento kokeillaan ensin; Pariisissa dx 36 dy '
           + '44, Impressionistit nakyy, napautus avaa oppaan molemmilla '
           + 'ruuduilla; savuke 68/68, nostolaput 8/8, kaupunkipopup ja '
-          + 'kaupunkietusivu samat vanhat punaiset kuin pohjalla). '
-          + 'Julkaistaan v1930.',
+          + 'kaupunkietusivu samat vanhat punaiset kuin pohjalla; Actions-'
+          + 'ajoituskorjaus 9bd88d2a: osumatesti piirretysta laatikosta, '
+          + 'asento kameran ja datan funktio). JULKAISTU v1930.',
         'KARTTAUUDISTUKSEN PAATOKSET 30: LENTO RAJATAAN LAHTO- JA '
           + 'PAATEPISTEEN MUKAAN, PUNAINEN VIIVA PIIRTYY, PULU POIS (omistaja '
           + '16.9.2026 klo 06.40 UTC, sanatarkasti: "Muunutin myos, etta '
