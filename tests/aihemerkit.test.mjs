@@ -26,6 +26,12 @@
  *      ja vastakoe: ilman kaupunkiavainta samat nostot jäävät erilleen.
  *   6. NIMIÖ ON *"tärkeimmän noston nimi + kolme pistettä"* (kohta 8),
  *      ja aihenoston laatikko kattaa sen (sovittelu ja osumapinta).
+ *   7. NIMIÖ NÄKYY VAIN LÄHIZOOMISSA (TARKENNUS 4 kohta 10, omistaja
+ *      17.9.2026 klo 04.15 UTC): kynnys on SAMA kuin nostojen
+ *      nimiöiden esiintulolla kaupunkia lähestyttäessä
+ *      (js/pallolauta/nostot.js lahizoomiAuki), ja kun nimiö ei näy,
+ *      laatikko on pelkkä lautanen — sovittelu ei varaa tilaa
+ *      tekstille, jota ei piirretä.
  */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -34,6 +40,15 @@ import {
   AIHENOSTON_ELLIPSI, RYHMITYKSEN_ETAISYYS_PX, VIUHKAN_RIVI_PX, aihemerkinLaatikko,
   aihenostonNimio, kohdanLaatikko, ryhmitaNostot, viuhkanAsemat,
 } from '../js/pallolauta/aihemerkit.js';
+/*
+ * KYNNYS ASUU NOSTOKERROKSESSA, koska se on SAMA kynnys kuin
+ * nostojen nimiöiden esiintulolla (lahizoomiAuki) — aihemerkit.js ei
+ * saa tuoda nostot.js:ää (nostot.js tuo aihemerkit.js:n, ja kehä
+ * kaatuisi). Testi tuo molemmat ja mittaa, että ne ovat sama portti.
+ */
+import {
+  LAHIZOOMIN_OSUUS_ULOIMMASTA, aihenostonNimioNakyy, lahizoomiAuki,
+} from '../js/pallolauta/nostot.js';
 
 /** Merkki ruutupisteessä; nimiölaatikko on kaista merkin oikealla. */
 const merkki = (avain, aihe, x, y, leveys = 40) => ({
@@ -285,4 +300,52 @@ test('viuhka kääntyy ruudun keskeltä poispäin', () => {
   const leveydet = [80, 80];
   assert.equal(viuhkanAsemat({ p: { x: 60, y: 400 }, ruutu, leveydet }).puoli, 'oikea');
   assert.equal(viuhkanAsemat({ p: { x: 330, y: 400 }, ruutu, leveydet }).puoli, 'vasen');
+});
+
+/*
+ * ══ NIMIÖ VAIN LÄHIZOOMISSA (TARKENNUS 4 kohta 10) ════════════════
+ *
+ * Omistaja 17.9.2026 klo 04.15 UTC, kortti *"Nimiö vain
+ * lähizoomissa"*: aihenoston nimiö näkyy VAIN lähizoomissa *"sama
+ * kynnys kuin nostojen nimiöiden esiintulolla kaupunkia
+ * lähestyttäessä"*, ja koko maan näkymässä aihenosto on pelkkä
+ * symboli.
+ */
+test('aihenoston nimiö näkyy vain, kun osuus alittaa lähizoomin kynnyksen', () => {
+  // Koko maan saapumisnäkymä on osuus 1,0 (Ranska 390 px, mitattu).
+  assert.equal(aihenostonNimioNakyy(1), false, 'saapumisnäkymässä ei nimiötä');
+  assert.equal(aihenostonNimioNakyy(0.9), false);
+  assert.equal(aihenostonNimioNakyy(LAHIZOOMIN_OSUUS_ULOIMMASTA + 1e-9), false,
+    'kynnyksen yläpuolella ei nimiötä');
+  // Kynnys itse kuuluu lähizoomiin, kuten lahizoomiAuki (<=).
+  assert.equal(aihenostonNimioNakyy(LAHIZOOMIN_OSUUS_ULOIMMASTA), true);
+  // Pariisin sisin zoomi puhelimella on 0,341 uloimmasta (mitattu).
+  assert.equal(aihenostonNimioNakyy(0.341), true, 'lähizoomissa nimiö näkyy');
+});
+
+test('tuntematon osuus (0) ei näytä nimiötä — sama varovaisuus kuin portilla', () => {
+  assert.equal(aihenostonNimioNakyy(0), false);
+  assert.equal(aihenostonNimioNakyy(-1), false);
+});
+
+test('kynnys on SAMA kuin nostojen nimiöiden esiintulolla (lahizoomiAuki)', () => {
+  for (const osuus of [0, 0.2, 0.341, 0.5, 0.699, 0.7, 0.701, 0.9, 1, 1.4]) {
+    assert.equal(aihenostonNimioNakyy(osuus), lahizoomiAuki(osuus),
+      `osuus ${osuus}: aihenoston nimiö ja lähizoomiportti eri mieltä`);
+  }
+});
+
+test('ilman nimiötä laatikko on pelkkä lautanen — sovittelu ei varaa turhaa tilaa', () => {
+  const nimi = `Mona Lisan varkaus${AIHENOSTON_ELLIPSI}`;
+  const p = { x: 200, y: 200 };
+  // Sama merkki, sama nimi: eroa on vain kynnyksen antama lippu.
+  const lahella = aihemerkinLaatikko(p, {
+    mitta: 1, nimi, symLaji: null, nimioNakyy: true, puoli: 'oikea',
+  });
+  const kaukana = aihemerkinLaatikko(p, {
+    mitta: 1, nimi, symLaji: null, nimioNakyy: false, puoli: 'oikea',
+  });
+  assert.ok(kaukana.x1 < lahella.x1, 'saapumisnäkymässä laatikko on kapeampi');
+  assert.equal(kaukana.x1 - kaukana.x0, kaukana.y1 - kaukana.y0,
+    'ilman nimiötä laatikko on lautasen neliö');
 });
