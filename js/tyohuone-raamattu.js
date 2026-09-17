@@ -4378,8 +4378,11 @@ export const RAAMATTU = {
           + '(self-hosted runner, aina paalla) on kaytettavissa savukkeisiin '
           + 'ja erityisesti WebKit-savukkeisiin (Playwright webkit Macilla) - '
           + 'Astronautin kameran Safari-viat todennetaan jatkossa silla. '
-          + 'Tila: tyo Sonnet-agentilla (4), kaytannossa heti (5), (6) '
-          + 'seuraava era.',
+          + 'Tila: (4) TEHTY PR #2551 (f46192be): .github/workflows/'
+          + 'savukkeet.yml + tools/savukkeet/sarjat.json, 12 savuketta '
+          + 'rinnakkain 12 min, portti kaataa jobin vain UUSISTA punaisista, '
+          + 'tunnetut punaiset sarjat.jsonissa perusteluineen; ajaa joka '
+          + 'PR:lle; (5) kaytossa; (6) seuraava era.',
         'IHMISEN MATKA: KELLO EI KULJE TAAKSEPAIN, PAITSI AIKAHYPYSSA (omistaja '
           + '7.9.2026 ilta klo 21.50 Suomen aikaa, sanatarkasti: "Ja tarinan '
           + 'jarjestys pitaa muuttaa. Outoa etta kello menee taaksepain etela '
