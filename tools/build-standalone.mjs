@@ -934,6 +934,16 @@ const MODULES = [
    * lehti avataan kehittäjätilassa.
    */
   'js/kohtaamistesti.js',
+  /*
+   * Pallolinssien vaiheloki ja pelaajan virheilmoitus ennen ui.js:ää
+   * (16.9.2026, WebApp-tyhjä): js/ui.js tuo `naytaLinssivirhe`n
+   * STAATTISESTI, ja js/linssivirhe.js tuo vuorostaan pallodiagin.
+   * Kumpikaan ei laske mitään ennen kuin linssi avataan, joten
+   * järjestyksellä on väliä vain tässä suhteessa. (js/pallo.js ei ole
+   * niputuksessa — se ladataan dynaamisesti.)
+   */
+  'js/pallodiag.js',
+  'js/linssivirhe.js',
   'js/ui.js',
 
   'js/muutokset.js',

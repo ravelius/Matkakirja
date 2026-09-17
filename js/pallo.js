@@ -40,6 +40,7 @@
  */
 
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
+import { diagNyt, pallodiag } from './pallodiag.js';
 import {
   haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
 } from './laattapyramidi.js';
@@ -617,19 +618,104 @@ export function sukelluskohta(lat, lon) {
   return p && Number.isFinite(p.x) && Number.isFinite(p.y) ? { x: p.x, y: p.y } : null;
 }
 
+/*
+ * ── KIRJASTON LATAUS EI SAA JÄÄDÄ ROIKKUMAAN (16.9.2026) ──────────
+ *
+ * MITATTU VIKA (Raamattu, ASTRONAUTIN KAMERA LISÄYS 11 kohta 34):
+ * asennetussa macOS Safari -sovelluksessa Astronautin kameran näkymä
+ * jäi tyhjäksi, eikä konsolissa näkynyt mitään. `<script>`-lataus on
+ * juuri se kohta, joka voi WebKitissä jäädä KESKEN ILMAN VIRHETTÄ:
+ * `error`-tapahtuma tulee vasta kun yhteys katkeaa, ja
+ * palvelutyöntekijän välimuistista tuleva vastaus voi jäädä
+ * ratkeamatta (opaakki vastaus, vanhentunut kori, keskeytynyt
+ * päivitys v1910 → v1924). Silloin `lataaPallokirjasto` ei koskaan
+ * palaa, koko lauta jää rakentamatta, eikä yksikään virhehaara
+ * laukea — ruudulle jää pelin oma tumma pohja.
+ *
+ * KAKSI SÄÄNTÖÄ:
+ *   1. JOKAISELLA ODOTUKSELLA ON AIKAKATKO. Jos `load` ei tule
+ *      PALLOKIRJASTON_AIKAKATKO_MS:ään, yritys hylätään nimetyllä
+ *      syyllä ja muisti nollataan, jotta uusi yritys on mahdollinen.
+ *   2. TOINEN YRITYS MENEE VÄLIMUISTIN OHI. Osoitteeseen lisätään
+ *      kertaluonteinen kyselyparametri: palvelutyöntekijän
+ *      VENDORCACHE hakee korista TÄSMÄLLEEN osoitteella
+ *      (`kori.match(url)`), joten uusi osoite ei voi osua vanhaan
+ *      kappaleeseen vaan menee verkkoon.
+ */
+/** Kuinka kauan yhtä kirjastolatausta odotetaan (ms). */
+export const PALLOKIRJASTON_AIKAKATKO_MS = 12000;
+/** Montako yritystä tehdään ennen kuin virhe palaa kutsujalle. */
+export const PALLOKIRJASTON_YRITYKSET = 2;
+
+/**
+ * Kirjaston osoite yrityskerralla. Ensimmäinen on puhdas (välimuisti
+ * saa palvella), seuraavat kiertävät välimuistin. Puhdas funktio
+ * (tests/pallo.test.mjs).
+ */
+export function pallokirjastonOsoite(yritys = 0, leima = 0) {
+  if (!(Number(yritys) > 0)) return PALLO_KIRJASTO;
+  const erotin = PALLO_KIRJASTO.includes('?') ? '&' : '?';
+  return `${PALLO_KIRJASTO}${erotin}uusi=${yritys}-${leima || Date.now()}`;
+}
+
 let kirjastoLupaus = null;
-/** Lataa Globe.gl kerran; toinen avaus käyttää samaa globaalia. */
-export function lataaPallokirjasto(doc = document) {
-  if (globalThis.Globe) return Promise.resolve(globalThis.Globe);
-  if (kirjastoLupaus) return kirjastoLupaus;
-  kirjastoLupaus = new Promise((ok, ei) => {
+
+/** Yksi latausyritys: `<script>` sivulle, aikakatko ja siivous. */
+function yritaPallokirjasto(doc, osoite, aikakatko, ikkuna) {
+  return new Promise((ok, ei) => {
     const s = doc.createElement('script');
-    s.src = PALLO_KIRJASTO;
+    let kello = 0;
+    let ratkaistu = false;
+    const paata = (virhe) => {
+      if (ratkaistu) return;
+      ratkaistu = true;
+      if (kello) { try { ikkuna.clearTimeout?.(kello); } catch { /* ei kelloa */ } }
+      if (virhe) ei(virhe);
+      else ok(globalThis.Globe);
+    };
+    s.src = osoite;
     s.async = true;
-    s.addEventListener('load', () => (globalThis.Globe ? ok(globalThis.Globe) : ei(new Error('Globe puuttuu'))));
-    s.addEventListener('error', () => { kirjastoLupaus = null; ei(new Error('kirjasto ei latautunut')); });
+    s.addEventListener('load', () => paata(globalThis.Globe ? null : new Error('Globe puuttuu')));
+    s.addEventListener('error', () => paata(new Error('kirjasto ei latautunut')));
+    try {
+      kello = ikkuna.setTimeout?.(() => paata(new Error('kirjaston aikakatko')), aikakatko) ?? 0;
+    } catch { kello = 0; }
     doc.head.appendChild(s);
   });
+}
+
+/**
+ * Lataa Globe.gl kerran; toinen avaus käyttää samaa globaalia.
+ * Aikakatko ja välimuistin ohittava uusinta: ks. yllä.
+ */
+export function lataaPallokirjasto(doc = document, ikkuna = globalThis) {
+  if (globalThis.Globe) return Promise.resolve(globalThis.Globe);
+  if (kirjastoLupaus) return kirjastoLupaus;
+  kirjastoLupaus = (async () => {
+    let viimeisin = null;
+    for (let yritys = 0; yritys < PALLOKIRJASTON_YRITYKSET; yritys += 1) {
+      const osoite = pallokirjastonOsoite(yritys);
+      const alku = diagNyt(ikkuna);
+      pallodiag('kirjasto-haku', { yritys, ohi: yritys > 0 ? 1 : 0 }, ikkuna);
+      try {
+        /* Yritykset ovat peräkkäisiä: toinen vasta jos ensimmäinen petti. */
+        const Globe = await yritaPallokirjasto(
+          doc, osoite, PALLOKIRJASTON_AIKAKATKO_MS, ikkuna,
+        );
+        pallodiag('kirjasto', { yritys, ok: 1, ms: Math.round(diagNyt(ikkuna) - alku) }, ikkuna);
+        return Globe;
+      } catch (syy) {
+        viimeisin = syy;
+        pallodiag('kirjasto', {
+          yritys, ok: 0, syy: String(syy?.message ?? syy).slice(0, 40),
+          ms: Math.round(diagNyt(ikkuna) - alku),
+        }, ikkuna);
+      }
+    }
+    // Muisti nollataan, jotta seuraava avaus saa yrittää uudestaan.
+    kirjastoLupaus = null;
+    throw viimeisin ?? new Error('kirjasto ei latautunut');
+  })();
   return kirjastoLupaus;
 }
 

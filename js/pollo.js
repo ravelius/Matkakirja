@@ -6238,6 +6238,72 @@ export class Pollo {
     }
   }
 
+  /**
+   * SAMA REITTI, TOINEN NÄYTTÄMÖ (omistaja 16.9.2026, Raamattu
+   * LISÄYS 10: *"Pulun chatti pitäisi toimia normaalisti vaikka itse
+   * pulu olisi pienemmän kokoinen."*).
+   *
+   * Linssi piilottaa pelin pulun paneelin ja kuplapinon kokonaan
+   * (`body.aikajana-pulu-piilossa`, js/linssit/satelliitti.js
+   * KRIITTINEN_TYYLI), joten `kysy` kirjoittaisi vastauksen pintaan,
+   * jota kukaan ei näe. Tämä on sama kysymysreitti ilman paneelia:
+   * SAMA palvelin, SAMA konteksti, SAMA historia, SAMA kehyslaji ja
+   * SAMA striimi — vain kupla on kutsujan, ei paneelin.
+   *
+   * RAJOITUKSET OVAT SAMAT: kesken oleva vastaus estää uuden (yksi
+   * pyyntö kerrallaan, `kesken`), palvelimen puuttuminen estää kaiken,
+   * ja onnistunut kierros menee historiaan ja laitteen lokiin samoilla
+   * ehdoilla kuin paneelissakin (ei varatekstiä, ei katkennutta).
+   *
+   * @param {string} raakaKysymys pelaajan kysymys.
+   * @param {{onPala?: (teksti: string) => void}} asetukset striimin
+   *   palat sellaisenaan kutsujan kuplaan.
+   * @returns {Promise<string>} valmis vastaus ilman käsitemerkintöjä.
+   */
+  async kysyUlkoisesti(raakaKysymys, { onPala = null } = {}) {
+    const kysymys = String(raakaKysymys ?? '').trim();
+    if (!kysymys) throw new Error('tyhja');
+    if (this.kesken) throw new Error('kesken');
+    if (!this.palvelin) throw new Error('ei-palvelinta');
+    this.asetaKesken(true);
+    const runko = {
+      tehtava: 'vastaus',
+      kysymys,
+      konteksti: this.konteksti(kysymys),
+      historia: this.historia.slice(-HISTORIAN_KATTO),
+      kehys: kehysLaji(kysymys, false),
+    };
+    try {
+      let tulos = null;
+      if (polloStriimiTuettu()) {
+        tulos = await this.pyydaStriimi(runko, (kertynyt) => {
+          // Naputus alkaa ensimmäisestä palasta, kuten paneelissakin.
+          this.aloitaNaputus();
+          onPala?.(poistaKasiteMerkinnat(kertynyt));
+        });
+      } else {
+        const data = await this.pyyda(runko);
+        tulos = {
+          vastaus: String(data?.vastaus ?? ''), katkesi: false, syy: data?.syy ?? null,
+        };
+      }
+      this.lopetaNaputus();
+      const puhdas = poistaKasiteMerkinnat(String(tulos?.vastaus ?? '').trim());
+      if (puhdas && !tulos?.syy && !tulos?.katkesi) {
+        this.historia.push({ rooli: 'kayttaja', teksti: kysymys });
+        this.historia.push({ rooli: 'pollo', teksti: puhdas });
+        this.historia = this.historia.slice(-HISTORIAN_KATTO);
+        kirjaaLivianLokiin('kayttaja', kysymys);
+        kirjaaLivianLokiin('pollo', puhdas);
+      }
+      return puhdas || VASTAUS_EI_TULLUT;
+    } finally {
+      // Vikaverkko: mikään polku ei jätä naputusta soimaan eikä lukkoa päälle.
+      this.lopetaNaputus();
+      this.asetaKesken(false);
+    }
+  }
+
   /* --- sanelu ------------------------------------------------------ */
 
   /** Mikrofonin napautus: aloita tai lopeta. */
@@ -6802,6 +6868,33 @@ export function polloKysy(kysymys) {
   // muissakin kuorikutsuissa (js/natiivi.js nielaise).
   Promise.resolve(pollo.kysy(teksti)).catch(() => {});
   return true;
+}
+
+/**
+ * VAPAA KYSYMYS LINSSIN OMAAN KUPLAAN (omistaja 16.9.2026, Raamattu
+ * LISÄYS 10, kohta 29).
+ *
+ * `polloKysy` avaa pelin pulupaneelin — linssissä se on piilotettu,
+ * joten vastaus katoaisi näkymättömiin. Tämä vie kysymyksen SAMAA
+ * reittiä (Pollo.kysyUlkoisesti) ja antaa vastauksen kutsujalle, joka
+ * piirtää sen omaan kuplaansa (esim. minipulun chatti).
+ *
+ * VIRHE ON LUPAUKSEN HYLKÄYS, EI EPÄTOSI: kutsuja näyttää pelaajalle
+ * saman siistin rivin kuin paneelikin ja jatkaa. Syyt sanoina:
+ * 'ei-pulua' (peliä ei ole), 'ei-loydetty' (pulua ei ole löydetty
+ * aarteena), 'kesken' (edellinen vastaus kesken).
+ *
+ * @param {string} kysymys valmis kysymys sellaisenaan.
+ * @param {{onPala?: (teksti: string) => void}} asetukset striimin palat.
+ * @returns {Promise<string>} valmis vastausteksti.
+ */
+export function polloUlkoinenKysymys(kysymys, asetukset = {}) {
+  const pollo = nykyinenPollo;
+  if (!pollo) return Promise.reject(new Error('ei-pulua'));
+  // Pulu on aarre: ennen löytöä sitä ei ole olemassa (sama portti kuin polloKysyssä).
+  if (!pollo.nakyyko()) return Promise.reject(new Error('ei-loydetty'));
+  if (pollo.kesken) return Promise.reject(new Error('kesken'));
+  return pollo.kysyUlkoisesti(kysymys, asetukset);
 }
 
 /**

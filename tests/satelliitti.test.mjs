@@ -994,7 +994,13 @@ test('kaksi kerrosta, omat sisääntulofeidit ja yksi soitin koko linssille', as
   assert.match(ASTRONAUTIN_MUSIIKKI, /astronautin-kamera-musiikki-lyria\.mp3$/);
   // Kohteen tai kuvan vaihto ei kutsu soitinta lainkaan: avaus on
   // linssin avauksessa, purku sen purussa — ei havaintokortissa.
-  assert.match(lahde, /linssiAani = avaaAstronautinAani\(\);/);
+  /*
+   * VAIHEVARTIJA VÄLISSÄ (16.9.2026, WebKit-haara): soitin avataan yhä
+   * TÄSMÄLLEEN kerran ja linssin avauksessa, mutta kutsu kulkee
+   * `vaihe`-kääreen läpi, jotta äänen kaatuminen ei enää vie
+   * kohdepisteitä mukanaan (Raamattu LISÄYS 11 kohta 34).
+   */
+  assert.match(lahde, /linssiAani = vaihe\('linssiaani', \(\) => avaaAstronautinAani\(\)\);/);
   assert.equal((lahde.match(/avaaAstronautinAani\(/g) ?? []).length, 1,
     'soitin käynnistetään useammasta kuin yhdestä paikasta');
 });
@@ -1062,24 +1068,58 @@ test('minipulu kelluu valokuvan oikeassa alakulmassa eikä piilotu pulun kanssa'
   assert.match(lahde, /minipulu\?\.tuhoa\?\.\(\)/);
 });
 
-test('minipulun napautus avaa kortin, jossa kohteen kaksi valmista kysymystä', async () => {
+test('minipulun napautus avaa pulun NORMAALIN chatin ehdotuksineen', async () => {
   const { ASTRONAUTIN_KYSYMYKSET, haeAstronautinKysymykset, haeAstronautinVastaus } = await import('../js/linssit/astronaut-kysymykset.js');
   // Jokaiselle linssin kohteelle on kaksi kysymystä ja niille vastaukset.
   for (const kohde of SATELLIITTI_KOHTEET) {
     assert.equal(haeAstronautinKysymykset(kohde.tunnus).length, 2, kohde.tunnus);
   }
   assert.equal(Object.keys(ASTRONAUTIN_KYSYMYKSET).length, 64);
-  // Vastaus tulee aineistosta, EI mallilta: pulun chattireittiä ei
-  // kutsuta lainkaan (js/pollo.js polloKysy maksaisi mallikutsun).
+  /*
+   * OMISTAJA 16.9.2026 klo 18.35 UTC (Raamattu LISÄYS 10, kohta 29):
+   * *"Pulun chatti pitäisi toimia normaalisti vaikka itse pulu olisi
+   * pienemmän kokoinen."* Kaksi reittiä, ja ero on tarkoituksellinen:
+   * EHDOTUSPILLERIN vastaus on esikirjoitettu aineisto (ei mallikutsua),
+   * VAPAA kysymys menee pelin omaa chattireittiä mallille.
+   */
   assert.match(lahde, /haeAstronautinVastaus\(kohde\.tunnus, kysymys\)/);
-  assert.ok(!/polloKysy\(/.test(lahde), 'linssi kysyy yhä mallilta');
+  assert.match(lahde, /lisaaKupla\('pulu', tieto\?\.vastaus/);
   // Teksti ladotaan tekstisolmuna, ei innerHTML:nä.
-  assert.match(lahde, /document\.createTextNode\(tieto\?\.vastaus/);
+  assert.match(lahde, /kupla\.replaceChildren\(document\.createTextNode\(String\(teksti/);
+  // Vapaa kenttä + lähetysnappi, ja kysymys menee SAMAA reittiä kuin kartalla.
+  assert.match(lahde, /html\('input', 'satelliitti-pulu-kentta'\)/);
+  assert.match(lahde, /polloUlkoinenKysymys\(teksti, \{/);
+  assert.match(lahde, /pulunSyote\.addEventListener\('submit'/);
+  // Striimin palat kirjoittuvat samaan kuplaan, ja hahmo reagoi.
+  assert.match(lahde, /onPala: \(kertynyt\) => \{/);
+  assert.match(lahde, /minipulu\?\.reagoi\?\.\(\)/);
+  // Yksi pyyntö kerrallaan: lähetysnappi on lukossa vastauksen ajan.
+  assert.match(lahde, /pulunLaheta\.disabled = true;/);
   const kysymys = haeAstronautinKysymykset('etna')[0];
   assert.ok(haeAstronautinVastaus('etna', kysymys).vastaus.length > 0);
   // Kortti sulkeutuu X:stä ja kohteen vaihdosta (koko näkymä puretaan).
   assert.match(lahde, /pulunSulku\.addEventListener\('click'/);
   assert.match(tyyli, /\.satelliitti-pulukortti\[hidden\] \{ display: none; \}/);
+  // Chatti on tummalla pohjalla ja kentän fontti 16 px (iOS ei zoomaa).
+  assert.match(tyyli, /\.satelliitti-pulu-kentta \{[\s\S]*font-size: 16px/);
+});
+
+test('pulun chattireitti on pelin oma: sama palvelin, konteksti ja historia', () => {
+  /*
+   * VASTAKOE MALLIKUTSULLE. `kysyUlkoisesti` ei saa olla oma pikku
+   * kopionsa chatista: kysymys menee samaan `pyydaStriimi`/`pyyda`
+   * -putkeen, samaan `konteksti`in ja samaan historiaan kuin
+   * paneelinkin kysymys — vain kupla on kutsujan.
+   */
+  const pollo = lue('../js/pollo.js');
+  assert.match(pollo, /export function polloUlkoinenKysymys\(/);
+  assert.match(pollo, /async kysyUlkoisesti\(raakaKysymys/);
+  assert.match(pollo, /kysyUlkoisesti[\s\S]{0,2600}this\.pyydaStriimi\(runko/);
+  assert.match(pollo, /kysyUlkoisesti[\s\S]{0,2200}konteksti: this\.konteksti\(kysymys\)/);
+  assert.match(pollo, /kysyUlkoisesti[\s\S]{0,2200}historia: this\.historia\.slice\(-HISTORIAN_KATTO\)/);
+  // Samat portit kuin polloKysyssä: pulu pitää olla löydetty, yksi pyyntö kerrallaan.
+  assert.match(pollo, /polloUlkoinenKysymys[\s\S]{0,600}pollo\.nakyyko\(\)/);
+  assert.match(pollo, /polloUlkoinenKysymys[\s\S]{0,600}pollo\.kesken/);
 });
 
 test('kelattu selite mahtuu yhdelle riville ja on himmeämpi kuin avattu', () => {
@@ -1102,5 +1142,42 @@ test('kelattu selite mahtuu yhdelle riville ja on himmeämpi kuin avattu', () =>
   assert.match(lahde, /kelaaKuvasta\(\);\n    sormet\.set/);
   assert.match(lahde, /kelaaKuvasta\(\);\n    zoomaa\(skaala/);
   // Kuva ei koskaan AVAA selitettä: avaus tulee otsikkorivin napautuksesta.
-  assert.match(lahde, /const kelaaKuvasta = \(\) => \{\n    if \(selite\.classList\.contains\('satelliitti-selite-kiinni'\)\) return;/);
+  assert.match(lahde, /const kelaaKuvasta = \(\) => \{\n    lopetaVinkki\(\);\n    if \(selite\.classList\.contains\('satelliitti-selite-kiinni'\)\) return;/);
+});
+
+test('selite avautuu pienennettynä ja vinkkaa kerran kohdetta kohti', () => {
+  /*
+   * OMISTAJA 16.9.2026 klo 18.35 UTC (Raamattu LISÄYS 10, kohta 30):
+   * *"inforuutu voisi avautua pienennettynä, eli käyttäjän pitäisi
+   * klikata sitä nähdäkseen sisällön"* — ja saman päivän tarkennus:
+   * *"ensimmäisellä kerralla info ruutu voisi aueta ja pienentyä
+   * itsestään heti takaisin, niin pelaajalle tulisi vinkki että
+   * tekstiä on enemmän."*
+   */
+  // Lähtötila on KELATTU, ei avattu.
+  assert.match(lahde, /asetaSelite\(true\);\n  const liikePois =/);
+  // Vinkki on kohdekohtainen ja istuntokohtainen.
+  assert.match(lahde, /const VINKIN_AVAIN = `matkakirja-astro-vinkki-\$\{kohde\.tunnus\}`;/);
+  assert.match(lahde, /const VINKIN_KESTO_MS = 1500;/);
+  assert.match(lahde, /globalThis\.sessionStorage\?\.getItem\(VINKIN_AVAIN\) === '1'/);
+  assert.match(lahde, /globalThis\.sessionStorage\?\.setItem\(VINKIN_AVAIN, '1'\)/);
+  // Liikkeenvähennys: ei vinkkiavausta lainkaan.
+  assert.match(lahde, /if \(!vinkkiNahty && !liikePois\) \{/);
+  // Pelaajan ele voittaa vinkin ja JÄTTÄÄ selitteen auki.
+  assert.match(lahde, /if \(lopetaVinkki\(\)\) \{ asetaSelite\(false\); return; \}/);
+  // Ajastin ei jää elämään suljetun näkymän yli.
+  assert.match(lahde, /minipulu = null;\n    \/\* Vinkkiajastin ei saa herätä suljetun näkymän päälle\. \*\/\n    lopetaVinkki\(\);/);
+});
+
+test('selitteen otsikkorivi on linssin vihreä, maa-osa harmaa', () => {
+  // OMISTAJA 16.9.2026, sanatarkasti: *"Infon otsikkorivi voisi olla vihreällä"*.
+  assert.match(tyyli, /\.satelliitti-selite-otsikko \{[\s\S]*color: var\(--satelliitti-vihrea, #5dffa8\)/);
+  assert.match(tyyli, /\.satelliitti-seutu \{ color: rgba\(214, 214, 214, 0\.72\)/);
+  /*
+   * Kelatun tilan himmennys on `opacity`, ei oma värinsä: sävy säilyy,
+   * joten vihreä himmenee samassa suhteessa kuin muu selite.
+   */
+  assert.match(tyyli, /\.satelliitti-selite\.satelliitti-selite-kiinni \.satelliitti-selite-otsikko \{[\s\S]*opacity: 0\.7/);
+  assert.ok(!/\.satelliitti-selite\.satelliitti-selite-kiinni \.satelliitti-selite-otsikko \{[^}]*color:/.test(tyyli),
+    'kelattu otsikko saa oman värinsä ja menettäisi vihreän');
 });
