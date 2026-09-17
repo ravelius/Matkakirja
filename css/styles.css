@@ -25958,8 +25958,12 @@ svg.rough-annotation { pointer-events: none; }
    aiheen nostot yhdeksi ilman selitettyä. Klikattaessa vaihtoehdot
    tulevat viuhkana näkyviin nimien kanssa"*.
 
-   AIHEMERKKI on aiheen väripallo, ryhmän kärkisymboli ja pieni
-   lukumäärä — ei nimiötä. Väri tulee kärkisymbolin omasta
+   AIHEMERKKI (aihenosto) on aiheen väripallo, ryhmän kärkisymboli ja
+   NIMIÖ *"tärkeimmän noston nimi + kolme pistettä"* (PAATOKSET 27
+   TARKENNUS 2 kohta 8, omistaja 16.9.2026; lukumäärä poistettiin
+   samassa kohdassa). Nimiö on samaa mustetta ja samaa luokkaa
+   (.nostosym-nimio) kuin nostojen omat nimiöt, ja se siirtyy
+   sovittelun mukana kuten nostojen laput. Väri tulee kärkisymbolin omasta
    mustemuuttujasta (--sym-*), samasta lähteestä kuin lisää-valikon
    pallot (js/karttaselite.js), joten valikko ja kartta ovat samaa
    sävyä.
@@ -25986,14 +25990,8 @@ svg.rough-annotation { pointer-events: none; }
   opacity: 0.85;
 }
 .pallolauta-aihemerkki-sym { transform: scale(0.62); }
-.pallolauta-aihemerkki-luku {
-  fill: var(--sym-muste, #4b3a1c);
-  font-family: var(--font-atlas, Georgia, serif);
-  paint-order: stroke;
-  stroke: var(--paper, #efdcb4);
-  stroke-width: 2.2;
-  stroke-linejoin: round;
-}
+/* Sovittelun siirto liukuu kuten nostoilla (.pallolauta-nosto-siirto). */
+.pallolauta-aihemerkki-siirto { transition: transform 200ms ease-in-out; }
 .pallolauta-aihemerkki-auki .pallolauta-aihemerkki-keha { stroke-width: 1.8; }
 
 .pallolauta-viuhka {
@@ -26559,6 +26557,7 @@ body.maatiedot-tila .pallolauta-nappula { display: none; }
   .pallolauta-merkki { transition: none; animation: none; }
   .pallolauta-nimi-siirto,
   .pallolauta-nosto-siirto { transition: none; }
+  .pallolauta-aihemerkki-siirto { transition: none; }
   /* Turisti-infon merkki on oma luokkansa (ks. sen sääntö ylempänä);
      pari yllä on tests/pallosovittelu.test.mjs:n vartioima sanatarkasti. */
   .pallolauta-turisti-info-siirto { transition: none; }
