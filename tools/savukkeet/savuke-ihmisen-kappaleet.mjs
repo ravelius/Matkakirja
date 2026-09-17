@@ -61,7 +61,7 @@
  *      selvästi korkeampi — pisin kappale ylittää rajan.
  *   4. ZOOMI KESTÄÄ PIDEMPÄÄN. Esityksen omista mittareista luettu
  *      `avauksenVaiheet` kertoo `zoomKesto`n olevan vanha
- *      (`zoomPerus`) + ZOOMIN_JATKO_MS (5 000 ms, TARKENNUS 2),
+ *      (`zoomPerus`) + ZOOMIN_JATKO_MS (4 000 ms, JATKO 4; ennen 5 000),
  *      sallittu heitto 1 ms — luku tulee samasta puhtaasta funktiosta.
  *   4b. KOKO AFRIKKA RUUDULLA AVAUKSEN LOPUSSA (TARKENNUS 2 kohta 3).
  *      Esitys pysäytetään sillä silmänräpäyksellä, jolla zoomi on
@@ -438,7 +438,8 @@ async function mittaa(leveys, korkeus) {
   const vaiheet = kamerasarja.map((r) => r.vaiheet).find(Boolean) ?? null;
   vaadi(`${leveys}px: zoomi kestää ${ZOOMIN_JATKO_MS} ms entistä pidempään`,
     Boolean(vaiheet) && Math.abs(vaiheet.zoomKesto - (vaiheet.zoomPerus + ZOOMIN_JATKO_MS)) < 1
-      && ZOOMIN_JATKO_MS === 5000,
+      // JATKO 4 kohta 2 (omistaja 18.9.2026): jatko lyheni 5 s → 4 s.
+      && ZOOMIN_JATKO_MS === 4000,
     JSON.stringify(vaiheet));
 
   /*

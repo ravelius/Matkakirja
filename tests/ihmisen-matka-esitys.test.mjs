@@ -852,7 +852,7 @@ test('esityksen pinnat ovat olemassa: pimeä, teksti, kuva ja koukku', () => {
   assert.ok(KUVAN_OSUUS >= 0.6 && KUVAN_OSUUS <= 0.7, `kuvan osuus ${KUVAN_OSUUS}`);
   assert.match(CSS, /\.aikajana-kertomuskuva \{/);
   // Reunan alfa-liuku on MASKI eikä suodatin (iOS: filter ei piirry).
-  assert.match(CSS, /\.aikajana-kertomuskuva img \{[\s\S]{0,400}mask-image: radial-gradient\([\s\S]{0,200}transparent 96%\)/);
+  assert.match(CSS, /\.aikajana-kertomuskuva img \{[\s\S]{0,900}mask-image: radial-gradient\(ellipse 52% 52%[\s\S]{0,200}transparent 94%\)/);
   assert.ok(!/\.aikajana-kertomuskuva[\s\S]{0,400}filter:/.test(CSS), 'kuvassa ei saa olla suodatinta');
   // Kehys, pergamenttitausta ja varjo ovat poissa: reuna häviää karttaan.
   assert.ok(!/\.aikajana-kertomuskuva \{[^}]*background:/.test(CSS), 'kuvalla ei saa olla kehystaustaa');

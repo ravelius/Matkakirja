@@ -2422,13 +2422,18 @@
   height: 100%;
   object-fit: cover;
   /*
-   * REUNAN ALFA-LIUKU. Soikea maski vie kuvan läpinäkyväksi ennen
-   * reunaa joka suuntaan, joten suorakaiteen kulmia ei näy: keskusta on
-   * täysi (#000 = näkyy), ja alfa laskee portaittain nollaan 96 %:n
-   * kohdalla. Sama kaava kuin `.aikajana-luentakuva`-maskissa.
+   * REUNAN ALFA-LIUKU. Soikea maski vie kuvan läpinäkyväksi ENNEN
+   * reunaa joka suuntaan, joten suorakaiteen reunoja tai kulmia ei näy.
+   *
+   * SÄTEET OVAT ALLE PUOLET LAATIKOSTA. `ellipse 52% 52%` tarkoittaa
+   * CSS:ssä 52 % laatikon LEVEYDESTÄ ja KORKEUDESTA — ei puolikkaasta —
+   * ja liuku päättyy 94 %:n kohdalla eli 48,9 %:ssa. Alfa on siis nolla
+   * jo ennen reunaa (50 %). Mitattu 18.9.2026: säteillä 62 % liuku
+   * loppui vasta 12 % laatikon ulkopuolella, ja kuvan vasen ja yläreuna
+   * näkyivät kaappauksessa suorana viivana.
    */
-  -webkit-mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 0%, #000 38%, rgba(0, 0, 0, 0.72) 62%, rgba(0, 0, 0, 0.22) 82%, transparent 96%);
-  mask-image: radial-gradient(ellipse 62% 62% at 50% 50%, #000 0%, #000 38%, rgba(0, 0, 0, 0.72) 62%, rgba(0, 0, 0, 0.22) 82%, transparent 96%);
+  -webkit-mask-image: radial-gradient(ellipse 52% 52% at 50% 50%, #000 0%, #000 34%, rgba(0, 0, 0, 0.72) 58%, rgba(0, 0, 0, 0.2) 78%, transparent 94%);
+  mask-image: radial-gradient(ellipse 52% 52% at 50% 50%, #000 0%, #000 34%, rgba(0, 0, 0, 0.72) 58%, rgba(0, 0, 0, 0.2) 78%, transparent 94%);
 }
 .aikajana-kertomuskuva.esilla {
   transform: translate(-50%, calc(-100% - 1.1rem)) scale(1);
