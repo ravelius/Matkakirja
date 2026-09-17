@@ -1,0 +1,70 @@
+{
+  "_kommentti": "Yksi paikka savukesarjoille (.github/workflows/savukkeet.yml luku, tools/savukkeet/rakenna-matriisi.mjs jäsennys). 'julkaisu' listaa julkaisuraporttien savukkeet järjestyksessä (docs/raportit/viesti-fable-julkaisu-v1925..v1927); 'asetukset' antaa jokaiselle tiedostolle sen ympäristömuuttujat, mahdollisen kuvakansio-argumentin ja tunnetut punaiset (vertaillaan tools/savukkeet/vertaa-tulos.mjs:llä FAIL-riveihin — uusi täsmäämätön FAIL nostaa ::warning::-huomautuksen, ei kaada julkaisusarjan porttia niiltä tiedostoilta joilla salliEpaonnistua on tosi). Lähteet: docs/raportit/viesti-fable-julkaisu-v1925-20260916.md, -v1926-20260916.md, -v1927-20260917.md ja kunkin savukkeen oma alkukommentti (process.env-lukukohdat tarkistettu tekstistä, ei arvattu).",
+  "julkaisu": [
+    "savuke-astro-pallo.mjs",
+    "savuke-astro-valokuva.mjs",
+    "savuke-astro-aani.mjs",
+    "savuke-satelliittilinssi.mjs",
+    "savuke-ihmisen-kappaleet.mjs",
+    "savuke-ihmisen-kehys.mjs",
+    "savuke-ihmisen-esitys.mjs",
+    "savuke-topografialinssi.mjs",
+    "savuke-pariisi-lahizoom.mjs",
+    "savuke-pallo-nostolaput.mjs",
+    "savuke-nimikyltti.mjs",
+    "savuke-kaupunkipopup.mjs"
+  ],
+  "asetukset": {
+    "savuke-astro-pallo.mjs": {
+      "env": { "NAKYMAT": "tyopoyta,puhelin" },
+      "tunnetutPunaiset": [
+        "varjon puoli tummuu reunan tuntumassa",
+        "valon puoli kirkastuu reunan tuntumassa"
+      ],
+      "_huom": "Yksi näistä on häilyvä pyöriva-pallo -vartio (v1926/v1927 'astro-pallo varjo') — kumpi vaihtelee ajosta toiseen, siksi molemmat listattu."
+    },
+    "savuke-satelliittilinssi.mjs": {
+      "tunnetutPunaiset": [
+        "pallon takapuolen merkki ei ota napautusta"
+      ],
+      "_huom": "Häilyvä (v1926/v1927): pallo pyörii mittauksen ja napautuksen välissä."
+    },
+    "savuke-ihmisen-kappaleet.mjs": {
+      "env": { "KOOT": "390,1400" },
+      "tunnetutPunaiset": [
+        "saapuminen siirtyy tasan ZOOMIN_JATKO_MS",
+        "avauksen loppuasennossa koko Afrikka on ruudulla"
+      ],
+      "_huom": "Kuormitetun kontin näytteenoton jitteriä (v1926/v1927), ei regressio — ks. v1927 luku 5.3."
+    },
+    "savuke-ihmisen-kehys.mjs": {
+      "env": { "KOOT": "390" },
+      "_huom": "KOOT=390 kiertää tunnetun punaisen (1400 px kahden ruudun ajossa, v1926/v1927): kahden ruutukoon ajo SAMASSA prosessissa tuottaa liian vähän näytteitä feidausvartiolle. Vain 390 ajetaan Actionsissa."
+    },
+    "savuke-ihmisen-esitys.mjs": {
+      "env": { "VAIN_AVAUS": "1" },
+      "_huom": "Koko esitys kestää kontissa 10-20 min; avausosa riittää julkaisuportiksi (v1925-v1927)."
+    },
+    "savuke-pariisi-lahizoom.mjs": {
+      "kuvakansio": true
+    },
+    "savuke-pallo-nostolaput.mjs": {
+      "kuvakansio": true
+    },
+    "savuke-nimikyltti.mjs": {
+      "kuvakansio": true,
+      "tunnetutPunaiset": [
+        "^4\\. ",
+        "^7a\\. ",
+        "^7b\\. ",
+        "^9b\\. "
+      ],
+      "_huom": "Sama nelikko v1925:sta v1927:ään (mainin oma, ei tämän haaran aiheuttama). Vartio 9b:n FAIL-rivien MÄÄRÄ on kasvanut aihenostojen nimiöiden myötä (v1927 luku 5.1) mutta itse vartio pysyy tunnettuna punaisena."
+    },
+    "savuke-kaupunkipopup.mjs": {
+      "kuvakansio": true,
+      "tunnetutPunaisetMaara": 17,
+      "_huom": "v1927: 40/57, 17 punaista - sama lista kuin turisti-kyltti-haaran pohjalla (docs/raportit/viesti-fable-turisti-kyltti-20260916.md). Yksittäisiä FAIL-tekstejä ei ole eritelty raporteissa, joten vertailu on lukumääräpohjainen (vertaa-tulos.mjs); täsmällinen rivilista täydennetään ensimmäisen Actions-ajon lokista."
+    }
+  }
+}

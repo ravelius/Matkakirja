@@ -22,6 +22,28 @@ kiinteästä `../../node_modules`-polusta, ja koska repossa ei ole
 savuketta kirjoittaessa kopioi tuontilohko olemassa olevasta — älä
 kirjoita `import ... from '../../node_modules/...'`.
 
+## Actions-ajo
+
+`.github/workflows/savukkeet.yml` ajaa savukkeet rinnakkain
+matriisina Actionsissa (omistaja 17.9.2026): `pull_request`-laukaisu
+ajaa julkaisusarjan jokaiselle PR:lle (tulos näkyy PR:ssä kuten
+Testit), ja `workflow_dispatch` antaa valita sarjan (`julkaisu`,
+`kaikki` tai pilkuerotellun tiedostolistan) ja haaran. Sarjan
+NAKYMAT/KOOT/VAIN_AVAUS-muuttujat ja tunnetut punaiset asuvat YHDESSÄ
+paikassa, `tools/savukkeet/sarjat.json`:ssa, jota lukee
+`tools/savukkeet/rakenna-matriisi.mjs` (rakentaa matriisin JSONin) ja
+`tools/savukkeet/vertaa-tulos.mjs` (vertaa ajon FAIL-rivejä tunnettuun
+listaan, huomauttaa `::warning::` uusista punaisista). Kuvakaappaukset
+ja tuloslataus artifaktoituvat per savuke, ja yhteenveto-job kirjoittaa
+taulukon ajon yhteenvetoon (Summary-välilehti). Neljä savuketta
+(`savuke-pariisi-lahizoom`, `savuke-pallo-nostolaput`,
+`savuke-nimikyltti`, `savuke-kaupunkipopup`) hakevat Chromiumin
+kiinteästä `/opt/pw-browsers/chromium`-polusta eivätkä lue
+`CHROMIUM`-muuttujaa — työnkulku jäljittelee tämän polun Actions-
+ajurilla asentamisen jälkeen (symlink), savukkeiden omaa koodia ei
+muutettu. Aja paikallisesti sama matriisi: `node
+tools/savukkeet/rakenna-matriisi.mjs julkaisu`.
+
 ## Ohituksessa: vanha kartta pois käytöstä (7.9.2026)
 
 Omistaja 7.9.2026 aamu, sanatarkasti: *"Voisiko vanhan kartan ottaa
