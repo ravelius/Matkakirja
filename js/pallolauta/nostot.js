@@ -1103,6 +1103,13 @@ export function luoNostot({
    */
   esteet = null,
   /*
+   * KAUPUNKIEN NIMILAATIKOT TUOREINA (Fablen tarkistus 18.9.2026).
+   * Lukufunktio nimikerrokseen (js/pallolauta/nimet.js `laatikot`):
+   * sovittelun jättämä `viimeisimmatNimet` on ladonnan verran vanha,
+   * ks. KAUPUNGIN NIMI LUETAAN TUOREENA liuskan ladonnassa.
+   */
+  nimienLaatikot = null,
+  /*
    * LAUDAN OMAT KAUPUNGIT (PAATOKSET 34, Fablen paatos kerrosrajasta
    * 17.9.2026: *"liuska ripustetaan LAUDAN OMAAN KAUPUNKIMERKKIIN"*).
    *
@@ -2397,11 +2404,46 @@ export function luoNostot({
           avattuKategoria: liuska.avattuKategoria,
           liiku: Boolean(liuska.liiku),
         });
+        /*
+         * KAUPUNGIN NIMI LUETAAN TUOREENA (Fablen tarkistus 18.9.2026).
+         * `viimeisimmatNimet` on sovittelun jättämä jälki, ja sovittelu
+         * ajetaan VASTA `paivita`n jälkeen (js/pallolauta/lauta.js
+         * ladoLevossa) — liuskan ladonta näki siis edellisen ladonnan
+         * laatikot. Kamera-ajo (kohta 10) siirtää karttaa juuri ennen
+         * avausta, joten yhden ladonnan vanha laatikko on väärässä
+         * paikassa täsmälleen silloin kun sitä eniten tarvitaan.
+         * `nimienLaatikot` on laudan antama lukufunktio samaan
+         * kerrokseen (js/pallolauta/nimet.js `laatikot`).
+         */
+        const nimiLaatikot = (() => {
+          const tuoreet = nimienLaatikot?.() ?? null;
+          return Array.isArray(tuoreet) && tuoreet.length ? tuoreet : viimeisimmatNimet;
+        })();
         // Sama varjostus kuin viuhkalla (ks. ESTEET ON TÄSSÄ LISTA).
-        const kovat = [...viimeisimmatNimet, ...(Array.isArray(esteet) ? esteet : [])]
+        const kovat = [...nimiLaatikot, ...(Array.isArray(esteet) ? esteet : [])]
           .filter(Boolean)
           .map((e) => ({ ...e, paino: KOVAN_ESTEEN_PAINO }));
         const listanEsteet = [...kovat, ...laatikot];
+        /*
+         * VAAKAPAKO: ehdokkaat ovat etäisyyksiä merkistä kovien
+         * esteiden ULKOREUNAAN sillä puolella, jolle lista kasvaa.
+         * Nolla on aina ensin (vapaa paikka voittaa), ja listan oma
+         * reunakiinnitys leikkaa liian suuret pois — ehdokas, joka ei
+         * mahdu ruudulle, päätyy samaan asentoon kuin pienempi eikä
+         * voi siksi voittaa sitä (tasapelin ratkaisee järjestys).
+         */
+        const vaakaEhdokkaat = [0];
+        for (const e of kovat) {
+          if (!Number.isFinite(e?.x0) || !Number.isFinite(e?.x1)) continue;
+          if (!Number.isFinite(e?.y0) || !Number.isFinite(e?.y1)) continue;
+          for (const reuna of [e.x1 - rivi.p.x, rivi.p.x - e.x0]) {
+            const d = Math.round(reuna + VIUHKAN_REUNAVARA_PX);
+            if (d > 0 && d < ruutuNyt.leveys && !vaakaEhdokkaat.includes(d)) {
+              vaakaEhdokkaat.push(d);
+            }
+          }
+        }
+        vaakaEhdokkaat.sort((a, b) => a - b);
         const laske = (lista) => {
           const leveydet = lista.map((r2) => viuhkanNimioLeveys(
             r2.nimi ? nostosymNimioMitta(r2.nimi, null, Infinity).leveys : 0, mittaNyt,
@@ -2412,6 +2454,7 @@ export function luoNostot({
             leveydet,
             esteet: listanEsteet,
             kasvu: 'keskitetty',
+            vaakaEhdokkaat,
             /*
              * `kovaEnsin` EI OLE PÄÄLLÄ — mitattu 18.9.2026. Kokeilin
              * ratkaista puolen pelkällä kovalla sakolla, jotta runsas

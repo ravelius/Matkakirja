@@ -351,6 +351,7 @@ function paallekkaisyys(a, b) {
  */
 export function viuhkanAsemat({
   p, ruutu, leveydet, esteet = [], kasvu = 'keskitetty', kovaEnsin = false,
+  vaakaEhdokkaat = [0],
 }) {
   const n = leveydet.length;
   if (!n) {
@@ -403,9 +404,33 @@ export function viuhkanAsemat({
       -korkeus / 2 - VIUHKAN_ALAS_ALKU_PX]
     : [0, -askel, askel, -2 * askel, 2 * askel, -3 * askel, 3 * askel];
   let paras = null;
+  /*
+   * VAAKAPAKO KOVAN ESTEEN OHI (Fablen tarkistus 18.9.2026, kaappaus
+   * pariisi-liuska-kategoria-390.png: avattu kategoria ladottiin
+   * kartalle piirretyn "PARIISI"-nimen päälle).
+   *
+   * JUURISYY: vaakasuunnassa haku EI HAKENUT MITÄÄN. `dx0` oli vakio
+   * VIUHKAN_SADE_PX, ja ainoa vaakasiirto oli kiinnitys ruudun reunaan
+   * — este saattoi siis olla listan alla ilman että yksikään
+   * kokeiltava asento olisi ollut sen ohi. Pystysiirtoja kokeiltiin
+   * seitsemän, vaakasiirtoja yksi. Kaupungin nimi on kaupunkimerkin
+   * OMALLA kohdalla ja kaupunkiliuska ripustetaan samaan merkkiin,
+   * joten pystysiirto ei voi auttaa: nimi on aina listan rivien
+   * korkeudella. Kameran ajokaan ei auta, koska nimi seuraa kaupunkia.
+   *
+   * Ehdokkaat ovat kutsujan (js/pallolauta/nostot.js) laskemia
+   * ETÄISYYKSIÄ KOVIEN ESTEIDEN ULKOREUNAAN, ja 0 on aina ensin:
+   * tasapelin ratkaisee järjestys, joten vapaassa paikassa lista
+   * pysyy merkin kyljessä kuten ennen. Viuhka ei anna ehdokkaita
+   * (oletus [0]), joten sen ladonta on ennallaan.
+   */
+  const asennot = [];
+  for (const vaaka of (vaakaEhdokkaat.length ? vaakaEhdokkaat : [0])) {
+    for (const siirto of siirrot) asennot.push({ vaaka: Math.max(0, vaaka), siirto });
+  }
   for (const puoli of puolet) {
-    for (const siirto of siirrot) {
-      const dx0 = (puoli === 'vasen' ? -1 : 1) * VIUHKAN_SADE_PX;
+    for (const { vaaka, siirto } of asennot) {
+      const dx0 = (puoli === 'vasen' ? -1 : 1) * (VIUHKAN_SADE_PX + vaaka);
       // Vaakakiinnitys: koko lista siirtyy yhtenä, rivit pysyvät suorassa.
       const rivi = kohdanLaatikko(dx0, 0, leveys, puoli);
       let dx = dx0;
