@@ -8360,7 +8360,13 @@ export const RAAMATTU = {
           + 'kaikki nimet nakyvat ja kyltti pysyy vapaana. Mitataan Pariisi '
           + '390 ja 1400: Impressionistit-nimio nakyy, kyltin laatikko vapaa, '
           + 'kyltti ruudussa ja klikattava; savuke-pariisi-lahizoom 3e4 '
-          + 'vihrea. Tila: tyo Opus-agentilla.',
+          + 'vihrea. Tila: TOTEUTETTU haarassa turisti-osuma (bc5afc45; '
+          + 'kyltille 10 asentoa TURISTI_INFON_ASENNOT, oikea kylki ennen '
+          + 'vasenta, edellinen asento kokeillaan ensin; Pariisissa dx 36 dy '
+          + '44, Impressionistit nakyy, napautus avaa oppaan molemmilla '
+          + 'ruuduilla; savuke 68/68, nostolaput 8/8, kaupunkipopup ja '
+          + 'kaupunkietusivu samat vanhat punaiset kuin pohjalla). '
+          + 'Julkaistaan v1930.',
         'KARTTAUUDISTUKSEN PAATOKSET 30: LENTO RAJATAAN LAHTO- JA '
           + 'PAATEPISTEEN MUKAAN, PUNAINEN VIIVA PIIRTYY, PULU POIS (omistaja '
           + '16.9.2026 klo 06.40 UTC, sanatarkasti: "Muunutin myos, etta '
