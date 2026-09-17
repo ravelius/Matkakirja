@@ -279,7 +279,10 @@ tehtävää ja kuluttamaan turhaan. Säännöt kaikille:
    "# pass"- ja "# fail" -rivit, älä katkaistua häntää;
    `node tools/tarkista-kaksoisavaimet.mjs`;
    `node tools/build-standalone.mjs`. PR:n Testit-tarkistuksen on
-   oltava vihreä ennen mergeä (.github/workflows/testit.yml).
+   oltava vihreä ennen mergeä (.github/workflows/testit.yml). Savukkeet
+   ajetaan PR:n Savukkeet-työnkulussa (.github/workflows/savukkeet.yml,
+   julkaisusarja, tools/savukkeet/sarjat.json); julkaisuagentti ajaa
+   paikallisesti vain diffiä koskevat savukkeet.
 4. Pelkkä docs-muutos EI nosta versiota (välimuistia ei rasiteta).
 5. **js/main.js EI ole generoitu tiedosto.** Versiokonfliktissa
    siitä otetaan omasta haarasta VAIN APP_VERSION-rivi — muu sisältö

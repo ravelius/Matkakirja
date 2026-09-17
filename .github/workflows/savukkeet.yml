@@ -1,0 +1,214 @@
+# Savukkeet Actions-matriisina (omistaja 17.9.2026, AGENTIT VAIN OPUS
+# JA SONNET -tehtävä, TARKENNUS 2 kohta 4: "Joo tehdään kumpikin" —
+# sekä workflow_dispatch että pull_request).
+#
+# pull_request-laukaisu ajaa "julkaisu"-sarjan jokaiselle PR:lle, jotta
+# savukkeiden tulos näkyy PR:ssä samaan tapaan kuin testit.yml (ilman
+# tätä savukkeet ajetaan vain paikallisesti julkaisuajon yhteydessä,
+# eivätkä koneellisesti ennen mergeä). workflow_dispatch antaa ajaa
+# minkä tahansa sarjan (koko listan tools/savukkeet/sarjat.json:sta,
+# kaikki savuke-*.mjs:t tai pilkuerotellun listan) mistä tahansa
+# haarasta.
+#
+# Ei secretejä: savukkeet eivät niitä tarvitse (vrt. savuke-pollo.yml,
+# joka TARVITSEE secretit ja ajaa siksi vain workflow_dispatchilla).
+# Ei self-hosted-konetta pull_requestilla (repo on julkinen).
+#
+# Yksi paikka sarjojen määrittelylle: tools/savukkeet/sarjat.json
+# (NAKYMAT/KOOT/VAIN_AVAUS ja tunnetut punaiset), luetaan
+# tools/savukkeet/rakenna-matriisi.mjs:llä sekä tässä "lista"-jobissa
+# että paikallisesti julkaisuajon yhteydessä.
+
+name: Savukkeet
+
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      sarja:
+        description: >-
+          julkaisu = julkaisusarja (tools/savukkeet/sarjat.json);
+          kaikki = kaikki tools/savukkeet/savuke-*.mjs;
+          tai pilkuilla eroteltu tiedostonimilista
+        required: false
+        default: julkaisu
+      ref:
+        description: 'Haara/tagi/commit ajettavaksi (oletus: haara josta työnkulku käynnistettiin)'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+# Peruu saman haaran/PR:n vanhan, yhä käynnissä olevan ajon uuden
+# pushin tullessa (omistaja/Fable 17.9.2026, PR #2551:n korjaussilmukka)
+# — muuten peräkkäiset korjauspushit kilpailisivat samoista Actions-
+# runnereista ja vanhentuneen ajon tulos voisi sekoittua tuoreeseen.
+concurrency:
+  group: savukkeet-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lista:
+    runs-on: ubuntu-latest
+    outputs:
+      matriisi: ${{ steps.matriisi.outputs.matriisi }}
+      ref: ${{ steps.ref.outputs.ref }}
+    steps:
+      - name: Selvitä sarja ja ref
+        id: ref
+        run: |
+          SARJA="${{ github.event.inputs.sarja }}"
+          REF="${{ github.event.inputs.ref }}"
+          echo "sarja=${SARJA:-julkaisu}" >> "$GITHUB_OUTPUT"
+          echo "ref=${REF:-${{ github.ref }}}" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.ref.outputs.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Rakenna matriisi
+        id: matriisi
+        run: |
+          JSON=$(node tools/savukkeet/rakenna-matriisi.mjs "${{ steps.ref.outputs.sarja }}")
+          echo "Sarja: ${{ steps.ref.outputs.sarja }}"
+          echo "$JSON" | node -e "const m=JSON.parse(require('fs').readFileSync(0,'utf8')); console.log(m.length + ' savuketta: ' + m.map(x=>x.tiedosto).join(', '));"
+          echo "matriisi=$JSON" >> "$GITHUB_OUTPUT"
+
+  savuke:
+    needs: lista
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    # Varmuuskerros tunnetuille punaisille (tehtävänannon kirjain):
+    # varsinainen läpi/ei-läpi-päätös tehdään "Tarkista tulos"
+    # -askeleessa uusien punaisten määrän perusteella (ks. sen
+    # kommentti), joten tämä laukeaa enää lähinnä, jos vertailuaskel
+    # itse jää kokonaan ajamatta (esim. edeltävän askeleen kaatuminen
+    # ennen "if: always()" -askeleita).
+    continue-on-error: ${{ matrix.salliEpaonnistua }}
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        include: ${{ fromJSON(needs.lista.outputs.matriisi) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.lista.outputs.ref }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Asenna selain
+        run: |
+          npm ci --no-audit --no-fund
+          npx playwright install --with-deps chromium
+          CHROM=$(find ~/.cache/ms-playwright -name chrome -path '*chrome-linux*' -type f | head -1)
+          echo "CHROMIUM=$CHROM" >> "$GITHUB_ENV"
+          echo "PLAYWRIGHT_JS=$PWD/node_modules/playwright/index.js" >> "$GITHUB_ENV"
+          # Neljä savuketta (pariisi-lahizoom, pallo-nostolaput,
+          # nimikyltti, kaupunkipopup) hakevat Chromiumin kiinteästä
+          # /opt/pw-browsers/chromium-polusta (konttiympäristön vakio)
+          # eivätkä lue CHROMIUM-muuttujaa — savukkeiden omaa koodia ei
+          # muuteta tätä varten, vaan jäljitellään sama polku täällä.
+          sudo mkdir -p /opt/pw-browsers
+          sudo ln -sf "$CHROM" /opt/pw-browsers/chromium
+      - name: Aja savuke ${{ matrix.tiedosto }}
+        id: aja
+        # HUOM (korjattu 17.9.2026, ks. commit-viesti): tämä askel EI
+        # koskaan itse kaada jobia — savukkeen oma poistumiskoodi on 1
+        # sekä TUNNETUISTA että UUSISTA punaisista, joten se ei yksin
+        # kelpaa portiksi. "Tarkista tulos" päättää läpi/ei-läpi sen
+        # perusteella, ONKO UUSIA punaisia (vertaa-tulos.mjs), ei
+        # sillä onko punaisia ylipäätään. Näin tunnetun punaisen
+        # savuke näyttää vihreää eikä peitä samalla ajolla syntyvää
+        # AITOA uutta punaista muiden tunnettujen joukkoon (havaittu
+        # PR #2551:n ensimmäisessä ajossa: savuke-satelliittilinssi
+        # sisälsi kaksi uutta punaista "Sulje linssi..."-väitteessä,
+        # mutta job näytti läpi pelkän continue-on-error:in takia,
+        # koska savukkeella oli MYÖS tunnettu punainen).
+        run: |
+          set -o pipefail
+          KAAPPAUS="/tmp/matkakirja-kaappaukset/${{ matrix.nimiTunniste }}"
+          mkdir -p "$KAAPPAUS"
+          export KAAPPAUKSET="$KAAPPAUS"
+          while IFS='=' read -r K V; do
+            [ -z "$K" ] && continue
+            export "$K=$V"
+            echo "  env $K=$V"
+          done < <(node -e 'const e=JSON.parse(process.argv[1]); for (const [k,v] of Object.entries(e)) console.log(k+"="+v);' '${{ toJSON(matrix.env) }}')
+          ALKU=$(date +%s)
+          set +e
+          if [ "${{ matrix.kuvakansio }}" = "true" ]; then
+            node "tools/savukkeet/${{ matrix.tiedosto }}" "$KAAPPAUS" 2>&1 | tee savuke.log
+          else
+            node "tools/savukkeet/${{ matrix.tiedosto }}" 2>&1 | tee savuke.log
+          fi
+          SAVUKE_EXIT=$?
+          set -e
+          LOPPU=$(date +%s)
+          echo "kesto=$((LOPPU - ALKU))" >> "$GITHUB_OUTPUT"
+          echo "savuke_exit=$SAVUKE_EXIT" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Tarkista tulos
+        id: tarkista
+        if: always()
+        # Tämä askel on jobin AITO läpi/ei-läpi-portti (ks. yllä oleva
+        # HUOM): epäonnistuu VAIN, jos vertaa-tulos.mjs löytää uusia
+        # punaisia (tuntematon FAIL tai savukkeen kaatuminen ennen
+        # yhtään väitettä) — ei tunnetuista punaisista.
+        run: |
+          if [ ! -f savuke.log ]; then
+            echo "::error::savuke ${{ matrix.tiedosto }}: savuke.log puuttuu — Asenna selain -askel epäonnistui todennäköisesti ennen savukkeen käynnistystä"
+            echo 'json={"lapi":0,"yhteensa":0,"uusiaPunaisia":1}' >> "$GITHUB_OUTPUT"
+            exit 1
+          fi
+          TULOSTE=$(node tools/savukkeet/vertaa-tulos.mjs savuke.log '${{ matrix.tiedosto }}' '${{ toJSON(matrix.tunnetutPunaiset) }}' '${{ matrix.tunnetutPunaisetMaara }}' '${{ steps.aja.outputs.savuke_exit }}')
+          echo "$TULOSTE"
+          JSONRIVI=$(echo "$TULOSTE" | tail -1)
+          echo "json=$JSONRIVI" >> "$GITHUB_OUTPUT"
+          UUSIA=$(node -e "console.log(JSON.parse(process.argv[1]).uusiaPunaisia)" "$JSONRIVI")
+          if [ "$UUSIA" -gt 0 ]; then
+            exit 1
+          fi
+          exit 0
+      - name: Tallenna tulos yhteenvetoa varten
+        if: always()
+        run: |
+          mkdir -p /tmp/tulokset
+          cat > "/tmp/tulokset/tulos-${{ matrix.nimiTunniste }}.json" <<EOF
+          {"tiedosto":"${{ matrix.tiedosto }}","kesto":${{ steps.aja.outputs.kesto || 'null' }},"tulosJson":${{ steps.tarkista.outputs.json || 'null' }}}
+          EOF
+      - name: Lataa tulos
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tulos-${{ matrix.nimiTunniste }}
+          path: /tmp/tulokset/
+          retention-days: 1
+          if-no-files-found: warn
+      - name: Lataa kaappaukset
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kaappaukset-${{ matrix.nimiTunniste }}
+          path: /tmp/matkakirja-kaappaukset/${{ matrix.nimiTunniste }}/
+          retention-days: 3
+          if-no-files-found: warn
+
+  yhteenveto:
+    needs: [lista, savuke]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.lista.outputs.ref }}
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: tulos-*
+          path: /tmp/tulokset
+          merge-multiple: true
+        continue-on-error: true
+      - name: Kirjoita yhteenveto
+        run: node tools/savukkeet/kirjoita-yhteenveto.mjs /tmp/tulokset >> "$GITHUB_STEP_SUMMARY"
