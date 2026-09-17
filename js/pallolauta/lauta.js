@@ -1821,6 +1821,13 @@ export async function avaaPallolauta(ui) {
      * pyytää uuden ladonnan — kerros ei omista kameraa eikä tahtia.
      */
     ruutu: () => ({ leveys: kotelo.clientWidth, korkeus: kotelo.clientHeight }),
+    /*
+     * PELIMERKIT OVAT LISTAN ESTEITÄ (PAATOKSET 32 kohta 3: lista ei
+     * saa peittää *"kaupungin nimea eika pelinappulaa"*). Sama luku
+     * kuin nimiladonnan `pinot`-varaus — nappula ja kohteet kotelon
+     * pikseleinä.
+     */
+    esteet: () => merkit.laatikot('peli'),
     ankkuri,
     /*
      * VIUHKA ON UUSIA CSS2D-ELEMENTTEJÄ, JA NE SYNTYVÄT VASTA TOISESSA

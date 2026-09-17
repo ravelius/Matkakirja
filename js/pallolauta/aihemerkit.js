@@ -60,20 +60,32 @@
  * merkit hajoavat omiksi nostoiksi nimiöineen *"kun nostot mahtuvat
  * limittymättä"* — oma mitta, ei kameran kello.
  *
- * ══ VIUHKA ════════════════════════════════════════════════════════
+ * ══ VIUHKA ON LISTA ══════════════════════════════════════════════
  *
- * Viuhkan kohdat ovat SAMAN KERROKSEN CSS2D-merkkejä kuin nostot
- * itse: jokainen kohta on ankkuroitu aihemerkin omaan
- * lat/lng-pisteeseen ja siirretty kaarelle RUUTUPIKSELEINÄ
- * (`transform: translate`). Siksi kaari on aina ruudun mittainen
- * riippumatta siitä, missä päin palloa merkki on, eikä kaaren
- * pisteille tarvitse laskea omia koordinaatteja.
+ * OMISTAJA 17.9.2026 klo 20.35 Suomen aikaa (Raamattu,
+ * KARTTAUUDISTUKSEN PAATOKSET 32 kohta 3, kolme iPhone-kuvaa
+ * Pariisista v1933), sanatarkasti: *"Kun viuhka avautuu, tekstit ovat
+ * liian lahella toisiaan. Viuhkana kohteet voisi avautua yhdeksi
+ * siistiksi listaksi jossa selkea kehykseton pohja (vaalennus tai
+ * tummennus seka pehmennys)."* TARKENNUS (klo 20.45): lista avautuu
+ * *"MERKIN VIERESSA kartalla (tyhjalle puolelle, pehmennetty pohja,
+ * sulkeutuu kartan napautuksesta tai zoomista)"*.
  *
- * KAARI KÄÄNTYY, JOTTA SE MAHTUU (PAATOKSET 27:n mittaus: *"viuhka
- * mahtuu ruudulle 390 ja 1400 px"*). `viuhkanAsemat` hakee kaarelle
- * puolen, kierron ja säteen niin, että jokainen kohta nimineen on
- * ruudulla; haku on pieni ja täysin päätelty (ei satunnaisuutta),
- * joten sama näkymä antaa aina saman viuhkan.
+ * KAARI ON POISSA. Kohdat ovat yhtenä PYSTYLISTANA merkin kyljessä:
+ * sama dx kaikilla riveillä, dy rivi kerrallaan VIUHKAN_VALI_PX:n
+ * välein, ja rivin laatikot ovat samanlevyisiä (listan leveys on
+ * levein nimiö) — siksi lista on suora reunastaan eikä porrasta.
+ *
+ * LISTA PYSYY RUUDUSSA JA VÄISTÄÄ ESTEITÄ. `viuhkanAsemat` valitsee
+ * puolen (kartan tyhjempi laita), kiinnittää listan ruudun sisään ja
+ * kokeilee muutamaa pystysiirtoa; voittaja on se, joka jää vähiten
+ * esteiden (kaupungin nimi, pelinappula) päälle. Haku on täysin
+ * päätelty (ei satunnaisuutta), joten sama näkymä antaa aina saman
+ * listan.
+ *
+ * POHJA ON KEHYKSETÖN. Yksi paperivaalennus koko listan alla, reuna
+ * pehmennetty sisäkkäisillä vyöhykkeillä (ei reunaviivaa, ei
+ * suodatinta — iOS-sääntö kieltää filterin kartan kerroksilta).
  *
  * EI SUODATTIMIA (Raamattu, iOS-sääntö; tests/rules.test.mjs):
  * avausliike on transform ja opacity, ei filter.
@@ -205,16 +217,27 @@ export function ryhmitaNostot(
   return { ryhmat, yksin };
 }
 
-/** Viuhkan kohtien pystyväli ruudulla (px) — nimiörivin korkeus + rako. */
-export const VIUHKAN_VALI_PX = 26;
-/** Viuhkan pienin säde (px): kohta irti aihemerkistä, sormi mahtuu väliin. */
-export const VIUHKAN_SADE_PX = 56;
-/** Viuhkan kaaren aukeama asteina. */
-export const VIUHKAN_KAARI_ASTETTA = 150;
 /** Kohdan nimiörivin puolikorkeus osumapinnassa (px). */
 export const VIUHKAN_RIVI_PX = 13;
-/** Reunavara: näin lähelle ruudun laitaa viuhka saa yltää (px). */
+/**
+ * Listan rivien pystyväli ruudulla (px). PAATOKSET 32 kohta 3: *"rivit
+ * väljästi (riviväli vähintään noston nimiön korkeus)"* — nimiörivin
+ * korkeus on 2 × VIUHKAN_RIVI_PX = 26, joten 30 jättää rakoa.
+ */
+export const VIUHKAN_VALI_PX = 30;
+/** Listan etäisyys merkin pisteestä sivusuunnassa (px). */
+export const VIUHKAN_SADE_PX = 26;
+/** Reunavara: näin lähelle ruudun laitaa lista saa yltää (px). */
 export const VIUHKAN_REUNAVARA_PX = 10;
+/** Pehmeän pohjan levein vyö rivilaatikoiden ympärillä (px). */
+export const VIUHKAN_POHJAN_VARA_PX = 10;
+/** Pohjan vyöt uloimmasta sisimpään: [vara px, peitto]. */
+export const VIUHKAN_POHJAN_VYOT = [
+  [VIUHKAN_POHJAN_VARA_PX, 0.14],
+  [VIUHKAN_POHJAN_VARA_PX * 0.55, 0.34],
+  [VIUHKAN_POHJAN_VARA_PX * 0.2, 0.62],
+  [0, 0.94],
+];
 
 const RAD = Math.PI / 180;
 
@@ -241,62 +264,111 @@ function yliReunan(laatikko, p, ruutu, vara = VIUHKAN_REUNAVARA_PX) {
     + Math.max(0, vara - y0) + Math.max(0, y1 - (ruutu.korkeus - vara));
 }
 
+/** Kahden ruutulaatikon päällekkäisyys pinta-alana (px²). */
+function paallekkaisyys(a, b) {
+  const w = Math.min(a.x1, b.x1) - Math.max(a.x0, b.x0);
+  const h = Math.min(a.y1, b.y1) - Math.max(a.y0, b.y0);
+  return w > 0 && h > 0 ? w * h : 0;
+}
+
 /**
- * VIUHKAN ASEMAT: kohtien siirrot merkin ruutupisteestä.
+ * VIUHKAN ASEMAT: listan rivien siirrot merkin ruutupisteestä.
  *
- * Kohdat ovat kaarella, jonka aukeama on VIUHKAN_KAARI_ASTETTA ja
- * jonka säde venyy niin, että vierekkäisten kohtien väli on vähintään
- * VIUHKAN_VALI_PX — pystysuunnassa siis rivi kerrallaan, ei kasaa.
+ * Rivit ovat allekkain merkin toisessa kyljessä: sama `dx` kaikilla,
+ * `dy` VIUHKAN_VALI_PX:n välein. Leveys on YKSI kaikille riveille
+ * (levein nimiö), jotta lista on suora reunastaan — *"yhtenä siistinä
+ * pystylistana"* (PAATOKSET 32 kohta 3).
  *
- * PUOLI, KIERTO JA SÄDE HAETAAN. Ruudun laita ei ole neuvoteltavissa
- * (puhelimessa 390 px on kapea), joten kolmea muuttujaa kokeillaan
- * pienessä ruudukossa ja voittaja on se, joka jää vähiten reunan yli;
- * tasapelin ratkaisee järjestys, jossa oletukset ovat ensimmäisinä
- * (kartan keskeltä poispäin, suora kaari, laajin säde). Haku on
- * päätelty eikä satunnainen: sama näkymä antaa aina saman viuhkan.
+ * PUOLI JA PYSTYSIIRTO HAETAAN. Oletuspuoli on kartan keskeltä
+ * poispäin (siellä on tyhjempää); lista kiinnitetään aina ruudun
+ * sisään, ja muutamaa pystysiirtoa kokeillaan, jotta lista ei jää
+ * kaupungin nimen tai pelinappulan päälle (`esteet`). Voittaja on
+ * pienimmän sakon asento; tasapelin ratkaisee järjestys, jossa
+ * oletukset ovat ensimmäisinä. Haku on päätelty eikä satunnainen.
  *
  * @param {object} p  merkin ruutupiste { x, y } kotelon pikseleinä
  * @param {object} ruutu  kotelon koko { leveys, korkeus }
  * @param {Array<number>} leveydet  kohtien nimiöleveydet ruudulla (px)
- * @returns {{puoli: string, sade: number, asemat: Array<{dx, dy}>}}
+ * @param {Array<object>} [esteet]  ruutulaatikot, joita lista väistää
+ * @returns {{puoli: string, leveys: number, asemat: Array<{dx, dy}>,
+ *   pohja: ?{x0, y0, x1, y1}}}
  */
-export function viuhkanAsemat({ p, ruutu, leveydet }) {
+export function viuhkanAsemat({
+  p, ruutu, leveydet, esteet = [],
+}) {
   const n = leveydet.length;
-  const kaari = VIUHKAN_KAARI_ASTETTA * RAD;
-  const vahinSade = n > 1
-    ? ((n - 1) * VIUHKAN_VALI_PX) / (2 * Math.sin(kaari / 2))
-    : 0;
-  const perusSade = Math.max(VIUHKAN_SADE_PX, vahinSade);
-  const kulmat = n > 1
-    ? leveydet.map((_, i) => -kaari / 2 + (i * kaari) / (n - 1))
-    : [0];
-  // Oletuspuoli on kartan keskeltä poispäin: siellä on eniten tilaa.
-  const oletus = p.x <= ruutu.leveys / 2 ? 'oikea' : 'vasen';
-  const puolet = [oletus, oletus === 'oikea' ? 'vasen' : 'oikea'];
-  const kierrot = [0, 15, -15, 30, -30, 45, -45, 60, -60];
-  const sateet = [1, 0.88, 0.76];
+  if (!n) {
+    return {
+      puoli: 'oikea', leveys: 0, asemat: [], pohja: null,
+    };
+  }
+  const leveys = Math.max(0, ...leveydet);
+  const vara = VIUHKAN_REUNAVARA_PX;
+  // Rivien pystyväli kutistuu vain, jos lista ei muuten mahdu ruudulle
+  // (puhelimen 390 px:n ruudulla mahtuu yli 20 riviä).
+  const tila = Math.max(0, ruutu.korkeus - 2 * (vara + VIUHKAN_RIVI_PX));
+  const vali = n > 1
+    ? Math.max(2 * VIUHKAN_RIVI_PX, Math.min(VIUHKAN_VALI_PX, tila / (n - 1)))
+    : VIUHKAN_VALI_PX;
+  const korkeus = (n - 1) * vali;
+  const puolet = p.x <= ruutu.leveys / 2 ? ['oikea', 'vasen'] : ['vasen', 'oikea'];
+  const askel = Math.round(vali);
+  const siirrot = [0, -askel, askel, -2 * askel, 2 * askel, -3 * askel, 3 * askel];
   let paras = null;
   for (const puoli of puolet) {
-    for (const kierto of kierrot) {
-      for (const kerroin of sateet) {
-        const sade = Math.max(VIUHKAN_SADE_PX * 0.76, perusSade * kerroin);
-        const asemat = kulmat.map((a) => {
-          const kulma = a + kierto * RAD;
-          return {
-            dx: (puoli === 'vasen' ? -1 : 1) * sade * Math.cos(kulma),
-            dy: sade * Math.sin(kulma),
-          };
-        });
-        let yli = 0;
-        asemat.forEach((s, i) => {
-          yli += yliReunan(kohdanLaatikko(s.dx, s.dy, leveydet[i], puoli), p, ruutu);
-        });
-        if (!paras || yli < paras.yli - 0.001) paras = { yli, puoli, sade, asemat };
-        if (paras.yli === 0) return { puoli: paras.puoli, sade: paras.sade, asemat: paras.asemat };
+    for (const siirto of siirrot) {
+      const dx0 = (puoli === 'vasen' ? -1 : 1) * VIUHKAN_SADE_PX;
+      // Vaakakiinnitys: koko lista siirtyy yhtenä, rivit pysyvät suorassa.
+      const rivi = kohdanLaatikko(dx0, 0, leveys, puoli);
+      let dx = dx0;
+      if (p.x + rivi.x0 < vara) dx += vara - (p.x + rivi.x0);
+      else if (p.x + rivi.x1 > ruutu.leveys - vara) dx += (ruutu.leveys - vara) - (p.x + rivi.x1);
+      // Pystykiinnitys: ylin ja alin rivi ruudun sisään.
+      let ylin = -korkeus / 2 + siirto;
+      const yYla = p.y + ylin - VIUHKAN_RIVI_PX;
+      const yAla = p.y + ylin + korkeus + VIUHKAN_RIVI_PX;
+      if (yYla < vara) ylin += vara - yYla;
+      else if (yAla > ruutu.korkeus - vara) ylin += (ruutu.korkeus - vara) - yAla;
+      const asemat = [];
+      for (let i = 0; i < n; i += 1) asemat.push({ dx, dy: ylin + i * vali });
+      let sakko = 0;
+      for (const a of asemat) {
+        const l = kohdanLaatikko(a.dx, a.dy, leveys, puoli);
+        sakko += 1000 * yliReunan(l, p, ruutu, vara);
+        const ruudulla = {
+          x0: p.x + l.x0, x1: p.x + l.x1, y0: p.y + l.y0, y1: p.y + l.y1,
+        };
+        for (const e of esteet ?? []) sakko += paallekkaisyys(ruudulla, e);
       }
+      if (!paras || sakko < paras.sakko - 0.001) {
+        paras = {
+          sakko, puoli, leveys, asemat,
+        };
+      }
+      if (paras.sakko === 0) break;
     }
+    if (paras.sakko === 0) break;
   }
-  return { puoli: paras.puoli, sade: paras.sade, asemat: paras.asemat };
+  return {
+    puoli: paras.puoli,
+    leveys: paras.leveys,
+    asemat: paras.asemat,
+    pohja: listanPohja(paras.asemat, paras.leveys, paras.puoli),
+  };
+}
+
+/** Listan pehmeän pohjan laatikko merkin omissa ruutupikseleissä. */
+export function listanPohja(asemat, leveys, puoli) {
+  if (!asemat?.length) return null;
+  let x0 = Infinity; let y0 = Infinity; let x1 = -Infinity; let y1 = -Infinity;
+  for (const a of asemat) {
+    const l = kohdanLaatikko(a.dx, a.dy, leveys, puoli);
+    x0 = Math.min(x0, l.x0); y0 = Math.min(y0, l.y0);
+    x1 = Math.max(x1, l.x1); y1 = Math.max(y1, l.y1);
+  }
+  return {
+    x0, y0, x1, y1,
+  };
 }
 
 /* ── AIHEMERKIN PIIRTO ──────────────────────────────────────────── */
@@ -408,8 +480,10 @@ export function asetteleAihemerkki(kuori, d) {
   // piirry uudelleen joka ladonnassa.
   const juuri = kuori.querySelector('.pallolauta-viuhka');
   if (juuri) {
-    const viuhkaResepti = (d.viuhka ?? [])
-      .map((k) => `${k.nimi}@${k.dx.toFixed(1)},${k.dy.toFixed(1)}|${k.puoli}`).join(';');
+    const pohja = d.viuhkaPohja;
+    const viuhkaResepti = `${pohja ? `${pohja.x0.toFixed(1)},${pohja.y0.toFixed(1)},${pohja.x1.toFixed(1)},${pohja.y1.toFixed(1)}` : '-'}#`
+      + (d.viuhka ?? [])
+        .map((k) => `${k.nimi}@${k.dx.toFixed(1)},${k.dy.toFixed(1)}|${k.puoli}|${k.leveys.toFixed(1)}`).join(';');
     if (juuri.dataset.resepti !== viuhkaResepti) {
       juuri.dataset.resepti = viuhkaResepti;
       piirraViuhka(juuri, d);
@@ -502,21 +576,33 @@ export function aihemerkinLaatikko(p, d, {
  */
 function piirraViuhka(juuri, d) {
   juuri.replaceChildren();
-  for (const k of d.viuhka ?? []) {
-    const viiva = el('line', {
-      class: 'pallolauta-viuhka-viiva', x1: 0, y1: 0, x2: k.dx.toFixed(2), y2: k.dy.toFixed(2),
-    }, juuri);
-    viiva.setAttribute('aria-hidden', 'true');
+  const kohdat = d.viuhka ?? [];
+  if (!kohdat.length) return;
+  /*
+   * KEHYKSETÖN POHJA (PAATOKSET 32 kohta 3): *"vaalennus tai tummennus
+   * kartan paalla + pehmennys"*, EI reunaviivaa. Pehmennys on kolme
+   * sisäkkäistä vyöhykettä, joiden peitto kasvaa sisäänpäin — sama
+   * vaikutelma kuin liu'ulla, mutta ilman suodatinta (iOS-sääntö
+   * kieltää filterin kartan kerroksilta, tests/rules.test.mjs).
+   */
+  const pohja = d.viuhkaPohja;
+  if (pohja) {
+    for (const [vara, peitto] of VIUHKAN_POHJAN_VYOT) {
+      const r = el('rect', {
+        class: 'pallolauta-viuhka-pohja',
+        x: (pohja.x0 - vara).toFixed(2),
+        y: (pohja.y0 - vara).toFixed(2),
+        width: (pohja.x1 - pohja.x0 + 2 * vara).toFixed(2),
+        height: (pohja.y1 - pohja.y0 + 2 * vara).toFixed(2),
+        rx: (10 + vara).toFixed(1),
+        'fill-opacity': peitto.toFixed(2),
+      }, juuri);
+      r.setAttribute('aria-hidden', 'true');
+    }
+  }
+  for (const k of kohdat) {
     const kohta = el('g', { class: 'pallolauta-viuhka-kohta' }, juuri);
     kohta.style.transform = `translate(${k.dx.toFixed(2)}px, ${k.dy.toFixed(2)}px)`;
-    const laatikko = kohdanLaatikko(0, 0, k.leveys, k.puoli);
-    el('rect', {
-      class: 'pallolauta-viuhka-osuma',
-      x: laatikko.x0.toFixed(2),
-      y: laatikko.y0.toFixed(2),
-      width: (laatikko.x1 - laatikko.x0).toFixed(2),
-      height: (laatikko.y1 - laatikko.y0).toFixed(2),
-    }, kohta);
     const kuva = el('g', { class: 'pallolauta-viuhka-kuva' }, kohta);
     kuva.style.transform = `scale(${(k.mitta ?? 1).toFixed(4)})`;
     k.piirra?.(kuva, k.puoli);

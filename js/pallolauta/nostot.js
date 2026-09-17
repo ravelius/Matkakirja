@@ -1000,6 +1000,13 @@ export function luoNostot({
    * sulkeutuu — kerros ei omista kameraa eikä ladonnan tahtia.
    */
   ruutu = null, ankkuri = null, ladoUudelleen = null,
+  /*
+   * LISTA VÄISTÄÄ PELIMERKIT (PAATOKSET 32 kohta 3: lista ei saa
+   * peittää *"kaupungin nimea eika pelinappulaa"*). `esteet` antaa
+   * pelimerkkien ruutulaatikot (nappula, kohteet) kotelon pikseleinä;
+   * kaupunkien nimet tulevat sovittelusta (viimeisimmatNimet).
+   */
+  esteet = null,
 }) {
   let osumat = []; // ruudulla olevat, napautettavat merkit
   let laatikot = [];
@@ -1047,6 +1054,14 @@ export function luoNostot({
   let ryhmitetytIdt = new Set();
   // Auki olevan viuhkan kohdat ruutulaatikkoineen (osumatesti lukee).
   let viuhkanKohdat = [];
+  /*
+   * VIIMEISIN NIMILADONTA. Kaupunkien nimilaatikot tulevat laudalta
+   * vasta `sovittele`ssa, eli ladonnan JÄLKEEN; lista tarvitsee ne
+   * ladonnassa. Edellisen kierroksen laatikot kelpaavat: viuhka
+   * avataan aina ladonnan jälkeen (avaaViuhka → ladoUudelleen), ja
+   * nimet eivät liiku levossa.
+   */
+  let viimeisimmatNimet = [];
   const varit = new Map();
 
   /** Aiheen väri CSS-muuttujasta pistekerroksen väriksi (rgba). */
@@ -1651,13 +1666,25 @@ export function luoNostot({
         const leveydet = rivi.jasenet.map((m) => viuhkanNimioLeveys(
           m.nimi ? nostosymNimioMitta(m.nimi, m.symLaji).leveys : 0, mittaNyt,
         ));
-        const { puoli, asemat } = viuhkanAsemat({
+        const {
+          puoli, asemat, leveys: listaLeveys, pohja,
+        } = viuhkanAsemat({
           p: rivi.p,
           ruutu: ruutu?.() ?? { leveys: 1400, korkeus: 900 },
           leveydet,
+          /*
+           * Kaupunkien nimet (edellinen sovittelu), pelimerkit ja
+           * kartan muu nostomuste — lista etsii tyhjimmän kohdan
+           * merkin vierestä (PAATOKSET 32 kohta 3: lista ei saa
+           * peittää kaupungin nimeä eikä pelinappulaa, ja *"visuaalinen
+           * selkeys on tarkeampi kuin oikea sijoittelu"*).
+           */
+          esteet: [...viimeisimmatNimet, ...(esteet?.() ?? []), ...laatikot],
         });
+        // Listan rivit ovat samanlevyisiä: yksi leveys piirtoon,
+        // osumapintaan ja mittaukseen.
         viuhkanKohdat = rivi.jasenet.map((m, i) => ({
-          m, rivi, asema: asemat[i], leveys: leveydet[i], puoli,
+          m, rivi, asema: asemat[i], leveys: listaLeveys, puoli,
         }));
         // Kohdat ovat aihemerkin oman datumin kenttä, eivät omia
         // merkkejään (ks. js/pallolauta/aihemerkit.js VIUHKA PIIRTYY
@@ -1670,10 +1697,12 @@ export function luoNostot({
             dx: asemat[i].dx,
             dy: asemat[i].dy,
             puoli,
-            leveys: leveydet[i],
+            leveys: listaLeveys,
             mitta: mittaNyt,
             piirra: (g, kylki) => piirraNostosymKartalle(g, m.kategoria, m.nimi, m.symLaji, kylki),
           }));
+          // Listan kehyksetön pohja (yksi laatikko kaikkien rivien alle).
+          datum.viuhkaPohja = pohja;
         }
       }
     }
@@ -1849,6 +1878,7 @@ export function luoNostot({
    * vuoksi — sovittelulle kaikki esteet ovat samaa laatikkojoukkoa.
    */
   const sovittele = ({ nimet = [], kiinteat = [] } = {}) => {
+    viimeisimmatNimet = nimet ?? [];
     if (!lappuja.length) return sovittelu;
     const tulos = sovitteleLaput({
       laput: lappuja.map(({ r, datum, laatikko }) => ({
