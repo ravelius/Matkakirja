@@ -8261,7 +8261,15 @@ export const RAAMATTU = {
           + 'paakartalla (15-kaarisekunnin datasta, kohta 48), ja linssi '
           + 'piirtaa laatat kuten paakartta - sama teravyys joka zoomilla, sama '
           + 'muistiprofiili puhelimella. Sama pyramidi kelpaa Astronautin '
-          + 'kameran laastariksi (kohta 47).',
+          + 'kameran laastariksi (kohta 47). TILA (Fable 18.9.2026 klo 01.40 '
+          + 'Suomen aikaa): haara reliefi-15s, tools/tee-reliefipyramidi.mjs '
+          + 'polttaa ETOPO 2022 15" -datan (NOAA NCSS, public domain) '
+          + 'paakartan pyramidiin (512 px laatat, z<taso>/<sarake>/<rivi>.webp); '
+          + 'loyto: syvin taso z7 = 240 px/aste = tasan 15", nykyinen 1-min '
+          + 'data riittaa vain z5:een; koe Alpit 36 laattaa ok (ka. 58 kt); koko '
+          + 'maailman z7 rakentuu Macilla taustalla (arvio ~6 100 maalaattaa, '
+          + '~360 Mt). Seuraava era: z0-z6 alinaytteistys, linssin ja Astronautin '
+          + 'kameran kytkenta pyramidiin, vienti R2:een omistajan avaimella.',
         'IHMISEN MATKA -LINSSI: RINTAMAN VALKKYMINEN, MUSTA ALKU, LIIKU '
           + 'POIS; ASTRONAUTTILINSSILLE OMA KUVAKE (omistaja 15.9.2026 klo '
           + '12.00 UTC, tyopoytakuva 248 000 v. sitten, sanatarkasti: "Kun '
