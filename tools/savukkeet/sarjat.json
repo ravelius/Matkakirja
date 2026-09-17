@@ -58,7 +58,7 @@
       "tunnetutPunaiset": [
         "yksikään kaupunkinimi ei leikkaa liikkumatonta mustetta"
       ],
-      "huomautus": "häilyvä (limityksiä 2 kuormitetussa ajossa 1/4 Actions + 1 paikallinen); turisti-kyltin kierros 2 (haara turisti-osuma) muuttaa kyltin ladontavarausta ja mittaa Bukarestin uudelleen — tarkista lista sen jälkeen."
+      "huomautus": "häilyvä (limityksiä 2 kuormitetussa ajossa 1/4 Actions + 1 paikallinen). Tarkistettu v1930:ssa turisti-osuma-haaran mergen jälkeen (17.9.2026, julkaisuagentti): kaksi paikallista peräkkäistä ajoa, 8/8 ja 7/8 — sama vartio häilyi toisella kerralla (Bukarest, limityksiä 2). Ei siis vielä kaksi peräkkäistä vihreää, jää tunnetuksi punaiseksi."
     },
     "savuke-nimikyltti.mjs": {
       "kuvakansio": true,

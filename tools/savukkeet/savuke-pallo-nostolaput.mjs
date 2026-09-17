@@ -495,9 +495,35 @@ if (auki) {
       const oikein = avattu.length === 1 && avattu[0] === kohde.id;
       if (oikein && kohde.sormella) sormiOsui += 1;
       else if (oikein) lappuOsui += 1;
+      /*
+       * MIKÄ MUU VEI NAPAUTUKSEN? Pelkkä *"ei mitään"* ei kerro,
+       * nielaisiko sen turisti-infon kyltti, aihemerkin viuhka vai
+       * auki jäänyt dialogi — eikä sitä, onko seuraava rivi enää oma
+       * mittauksensa. MITATTU 17.9.2026: kyltti asettui Bukarestissa
+       * nimilapun viereen, sormen poikkeamanapautus avasi
+       * matkustusoppaan, ja auki jäänyt dialogi nielaisi loput
+       * napautukset (vartiot 6 ja 7 punaisina, kaikki rivit
+       * *"ei mitään"*).
+       */
+      // eslint-disable-next-line no-await-in-loop
+      const sijaan = avattu.length ? '' : await sivu.evaluate(([x, y]) => {
+        const l = window.matkakirja.ui.pallolauta;
+        const koti = l.kotelo.getBoundingClientRect();
+        const dialogit = [...document.querySelectorAll('dialog[open]')]
+          .map((d) => d.id || d.className).filter(Boolean);
+        const viuhka = l.nostot?.viuhkaAuki?.() ?? null;
+        const kyltti = (l.turistiLaatikot?.() ?? [])[0] ?? null;
+        return [
+          `sormi ${Math.round(x - koti.left)},${Math.round(y - koti.top)}`,
+          dialogit.length ? `dialogit ${dialogit.join(' ')}` : '',
+          viuhka ? `viuhka ${viuhka}` : '',
+          kyltti ? `kyltti ${Math.round(kyltti.x0)},${Math.round(kyltti.y0)} → `
+            + `${Math.round(kyltti.x1)},${Math.round(kyltti.y1)}` : 'ei kylttiä',
+        ].filter(Boolean).join(' · ');
+      }, [kohde.x, kohde.y]);
       tieto(`  napautus ${nakyma.nimi} (${kohde.laji})`,
         `"${kohde.nimi}"${kohde.poltettu ? ' (poltettu)' : ''}, vanha sääntö: ${kohde.vanha} `
-        + `→ avautui ${avattu.join(', ') || 'ei mitään'}`);
+        + `→ avautui ${avattu.join(', ') || `ei mitään — ${sijaan}`}`);
     }
   }
   vaadi('6. napautus nimilapun tekstiin avaa saman noston (myös kuvakkeen ulottumattomissa)',
