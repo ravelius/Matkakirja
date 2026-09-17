@@ -733,6 +733,93 @@ const peitossa = (sivu, px, py) => sivu.evaluate(([x, y]) => {
 }, [px, py]);
 
 /*
+ * ── NAPAUTUKSEN ESITILA (17.9.2026, Mac-kalibrointi) ──────────────
+ *
+ * MACILLA punaiset rivit olivat kaikki samannäköisiä — *"ei korttia"*,
+ * *"kohtia 0"*, *"ei mitään"* — eikä lokista voinut päätellä, veikö
+ * napautuksen osumasääntö, auki jäänyt viuhka vai laudan sulkeva
+ * napautus. Tämä lukee SAMALLA HETKELLÄ, jona sormi laskeutuu:
+ * kameran korkeuden, ladonnan portit (viuhka, kortti, linssi),
+ * `elementFromPoint`-elementin ja sen, minkä kohteen pelin oma
+ * osumasääntö valitsisi tuosta pikselistä (lauta.napautusselitys*).
+ */
+const esitila = (sivu, px, py, asteet = null) => sivu.evaluate(([x, y, a]) => {
+  const l = window.matkakirja.ui.pallolauta;
+  const e = document.elementFromPoint(x, y);
+  return {
+    selitys: a ? l.napautusselitys?.(a.lat, a.lng) ?? null : null,
+    elementti: e ? `${e.tagName}.${e.className?.baseVal ?? e.className ?? ''}`.slice(0, 40) : null,
+  };
+}, [px, py, asteet]);
+
+/*
+ * ── SORMI LIIKKUU ENNEN KUIN SE PAINAA (17.9.2026, Mac) ───────────
+ *
+ * MITATTU JUURISYY: `mouse.click(x, y)` antoi pelille EDELLISEN
+ * napautuksen asteet — kolme peräkkäistä napautusta kirjautuivat
+ * yhden askeleen jäljessä (braille → 48,2689 tuli vasta
+ * tour-de-francen napautuksesta). Kirjasto (globe.gl) säteittää
+ * osoittimen paikan kehyksessä ja käyttää klikissä VIIMEKSI
+ * säteitettyä osumaa; kun siirto ja painallus tulevat samassa
+ * kehyksessä, klikki lukee vielä edellisen pisteen. Siksi vartio 4
+ * sai *"ei korttia"* ja vartio 4b *"kohtia 0"* — napautukset
+ * osuivat oikeaan pikseliin mutta väärään kohtaan pallolla.
+ *
+ * Oikea sormi ei tee näin: se liikkuu, ja vasta sitten painaa. Tämä
+ * apuri tekee saman — siirto, kaksi kehystä, painallus.
+ */
+async function napauta(sivu, x, y) {
+  await sivu.mouse.move(x, y);
+  await sivu.evaluate(() => new Promise((ok) => {
+    requestAnimationFrame(() => requestAnimationFrame(ok));
+  }));
+  await sivu.waitForTimeout(120);
+  await sivu.mouse.click(x, y);
+}
+
+/** Napautuksen jälkeen: mitkä asteet kirjasto antoi pelille? */
+const jalkitila = (sivu, asteet) => sivu.evaluate((a) => {
+  const v = window.matkakirja.ui.pallolauta.viimeinenNapautus?.();
+  if (!v) return 'ei kirjausta';
+  const dLat = a ? v.lat - a.lat : null;
+  const dLng = a ? v.lng - a.lng : null;
+  return `pelille ${v.lat.toFixed(4)},${v.lng.toFixed(4)}`
+    + (a ? ` (kohde ${a.lat.toFixed(4)},${a.lng.toFixed(4)}, ero ${dLat.toFixed(4)},${dLng.toFixed(4)})` : '');
+}, asteet);
+
+/** Yhden esitilan tiivis rivi lokiin. */
+const esitilaRivi = (t) => (t?.selitys
+  ? `sääntö→${t.selitys.voittaja ?? '-'} (muste ${t.selitys.muste ?? '-'}`
+    + `, kyltinMusteella ${t.selitys.kyltinMusteella ? 'kyllä' : 'ei'}`
+    + `, viuhka ${t.selitys.viuhkaAuki ?? '-'}, kortteja ${t.selitys.kortteja}`
+    + `, korttiOliAuki ${t.selitys.korttiOliAuki}, alt ${t.selitys.korkeus?.toFixed?.(4) ?? '-'})`
+    + `, elementti ${t.elementti ?? '-'}`
+  : `ei selitystä, elementti ${t?.elementti ?? '-'}`);
+
+/*
+ * LADONTA ON ASETTUNUT VASTA, KUN SAMA LAATIKKO TULEE KAHDESTI.
+ * Macin nopeampi veto ehti aiemmin napauttaa kesken kameran ajon:
+ * piste luettiin DOMista eri hetkellä kuin peli laski osuman.
+ * Palauttaa viimeksi luetun pisteen — sen, johon napautus tehdään.
+ */
+async function odotaAsettunut(sivu, lue, kattoMs = 4000) {
+  const t0 = Date.now();
+  let edellinen = null;
+  let nyt = await lue();
+  while (Date.now() - t0 < kattoMs) {
+    if (edellinen && nyt && Math.hypot(nyt.x - edellinen.x, nyt.y - edellinen.y) < 0.6) {
+      return nyt;
+    }
+    edellinen = nyt;
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.waitForTimeout(220);
+    // eslint-disable-next-line no-await-in-loop
+    nyt = await lue();
+  }
+  return nyt;
+}
+
+/*
  * KAAPPAUS EI SAA KAATAA MITTAUSTA. Playwrightin `screenshot` odottaa
  * kirjasinten latautumista, ja pallon oma rAF-silmukka voi pitää sen
  * odotuksen auki yli 30 s:n (mitattu 16.9.2026, 1400 × 900 — sama
@@ -1112,8 +1199,19 @@ for (const ruutu of RUUDUT) {
   let vainOsumaOpas = null;
   /** Yksi napautus kyltin keskelle: mitä aukesi? */
   const napautaKylttia = async () => {
-    await sivu.mouse.click(tPiste.x, tPiste.y);
+    /*
+     * KARTAN TILA PUHTAAKSI ENNEN NAPAUTUSTA, EI VAIN SEN JÄLKEEN
+     * (17.9.2026, Mac). Auki jäänyt viuhka tai kortti nielaisee
+     * napautuksen laudan omissa porteissa (`viuhkaAuki`,
+     * `korttiOliAuki`) — silloin mittaus kertoo *"ei mitään"*
+     * vaikka osumasääntö olisi kunnossa.
+     */
+    await odotaVapaaPiste(sivu, tPiste.x, tPiste.y, 3000);
+    const kEnnen = await esitila(sivu, tPiste.x, tPiste.y);
+    tieto(`${ruutu.nimi} · esitila kyltti`, esitilaRivi(kEnnen));
+    await napauta(sivu, tPiste.x, tPiste.y);
     await sivu.waitForTimeout(900);
+    tieto(`${ruutu.nimi} · kyltin napautus pelille`, await jalkitila(sivu, null));
     const opas = await sivu.evaluate(() => {
       const d = document.getElementById('nahtavyys-dialog');
       const auki = window.matkakirja.ui.lehtitila?.nahtavyysAuki ?? null;
@@ -1283,8 +1381,13 @@ for (const ruutu of RUUDUT) {
       sivu, nurkka.x + suurinRyhma.x, nurkka.y + suurinRyhma.y,
     );
     if (viuhkaEste) tieto(`${ruutu.nimi} · viuhkan piste peitossa`, viuhkaEste);
-    await sivu.mouse.click(nurkka.x + suurinRyhma.x, nurkka.y + suurinRyhma.y);
+    const viuhkaEnnen = await esitila(
+      sivu, nurkka.x + suurinRyhma.x, nurkka.y + suurinRyhma.y,
+    );
+    tieto(`${ruutu.nimi} · esitila viuhka`, esitilaRivi(viuhkaEnnen));
+    await napauta(sivu, nurkka.x + suurinRyhma.x, nurkka.y + suurinRyhma.y);
     await sivu.waitForTimeout(800);
+    tieto(`${ruutu.nimi} · viuhkan napautus pelille`, await jalkitila(sivu, null));
     const kohdat = await sivu.evaluate(() => {
       const l = window.matkakirja.ui.pallolauta;
       const r = l.pallo.renderer().domElement.getBoundingClientRect();
@@ -1294,7 +1397,7 @@ for (const ruutu of RUUDUT) {
     });
     let viuhkaKortti = null;
     if (kohdat.length) {
-      await sivu.mouse.click(kohdat[0].x, kohdat[0].y);
+      await napauta(sivu, kohdat[0].x, kohdat[0].y);
       await sivu.waitForTimeout(900);
       viuhkaKortti = await avoinNosto(sivu);
     }
@@ -1318,21 +1421,34 @@ for (const ruutu of RUUDUT) {
   const esteet = [];
   for (const id of ehdokkaat) {
     if (napautetut.length >= NAPAUTUKSIA) break;
-    const piste = await merkinPiste(sivu, id);
-    if (!piste) continue;
-    const px = nurkka.x + piste.x;
-    const py = nurkka.y + piste.y;
     await suljeKortti(sivu);
     // Sulkeutuva kortti vie oman hetkensä; sen aikana tullut napautus
     // menisi hukkaan eikä kertoisi osumapinnasta mitään.
     await sivu.waitForTimeout(400);
+    /*
+     * PISTE LUETAAN VASTA ASETTUNEESTA LADONNASTA, JA NAPAUTUS
+     * TEHDÄÄN SAMAAN PISTEESEEN (17.9.2026, Mac). Aiemmin piste
+     * luettiin kerran ja napautettiin vasta siivousten jälkeen —
+     * Macilla merkki oli siihen mennessä ehtinyt liikkua.
+     */
+    const piste = await odotaAsettunut(sivu, () => merkinPiste(sivu, id));
+    if (!piste) continue;
+    const px = nurkka.x + piste.x;
+    const py = nurkka.y + piste.y;
     const este = await odotaVapaaPiste(sivu, px, py);
     // Paneelin alle jäävä merkki ohitetaan: sitä ei voi napauttaa
     // sormellakaan, eikä se ole tämän vartion väite. Este kirjataan,
     // jotta "napautettavia vain 0" ei jää arvoitukseksi.
     if (este) { esteet.push(`${id} (${este})`); continue; }
-    await sivu.mouse.click(px, py);
+    const asteet = await sivu.evaluate((t) => {
+      const o = window.matkakirja.ui.pallolauta.nostot.osumat().find((x) => x.id === t);
+      return o ? { lat: o.lat, lng: o.lng } : null;
+    }, id);
+    const ennen = await esitila(sivu, px, py, asteet);
+    tieto(`${ruutu.nimi} · esitila ${id}`, esitilaRivi(ennen));
+    await napauta(sivu, px, py);
     await sivu.waitForTimeout(800);
+    tieto(`${ruutu.nimi} · napautus ${id}`, await jalkitila(sivu, asteet));
     const auki = await avoinNosto(sivu);
     napautetut.push(`${id}→${auki ?? '-'}`);
     /*
