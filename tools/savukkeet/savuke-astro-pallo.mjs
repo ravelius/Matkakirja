@@ -107,7 +107,13 @@ const palvelin = createServer((req, res) => {
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
   res.end(readFileSync(polku));
 });
-await new Promise((r) => palvelin.listen(8754, r));
+/*
+ * PORTTI YMPÄRISTÖSTÄ: rinnakkaiset sessiot ajavat savukkeita samaan
+ * aikaan, ja kiinteä portti kaatoi ajon EADDRINUSEen. Oletus on sama
+ * kuin ennen, joten vanhat komennot toimivat muuttumatta.
+ */
+const PORTTI = Number(process.env.PORTTI) || 8754;
+await new Promise((r) => palvelin.listen(PORTTI, r));
 
 /*
  * Playwright kahdesta paikasta (README: älä kirjoita kiinteää
@@ -376,7 +382,7 @@ const PELITILA = () => {
 };
 
 async function avaaPeli(s) {
-  await s.goto('http://127.0.0.1:8754/index.html?lauta=pallo', { waitUntil: 'load' });
+  await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo`, { waitUntil: 'load' });
   await s.waitForTimeout(2500);
   await s.evaluate(() => {
     [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
@@ -1001,10 +1007,12 @@ async function ajaNakyma(nimi) {
    * Raamattu ASTRONAUTIN KAMERA LISÄYS 15 (omistaja 17.9.2026, kohdat
    * 39–43). Viisi väitettä, jokainen omasta mekanismistaan:
    *
-   *  39 NELIÖT: pölykerrosta ei synny lainkaan, ja jäljellä olevat
-   *     tähtikerrokset on pyöristetty sävyttimessä (PointsMaterial
-   *     ilman tekstuuria piirtää neliöitä).
-   *  40 TÄHDET PAIKALLAAN: tähden ruutupaikka ei liiku 5 s:ssa ilman
+   *  39+44 NELIÖT JA PÖLY: kaikki kolme kerrosta (pöly mukaan lukien)
+   *     on pyöristetty sävyttimessä — PointsMaterial ilman tekstuuria
+   *     piirtäisi neliöitä — ja pölyn koko ruudulla pysyy katossa,
+   *     korkeintaan tähti × 1,5.
+   *  40 TÄHDET JA PÖLY PAIKALLAAN: otos kattaa kaikki kerrokset;
+   *     hiukkasen ruutupaikka ei liiku 5 s:ssa ilman
    *     kosketusta, mutta liikkuu, kun palloa vedetään. Mittaus tehdään
    *     VASTA pyörimisen pysäyttävän vedon jälkeen (ks. väite 2), joten
    *     kirjaston autoRotate ei ole mukana luvussa.
@@ -1018,11 +1026,16 @@ async function ajaNakyma(nimi) {
     const kamera = pallo.camera?.();
     const kangas = pallo.renderer?.()?.domElement;
     if (!kamera || !kangas) return null;
-    let olio = null;
+    /*
+     * KAIKKI HIUKKASKERROKSET, EI VAIN ENSIMMÄINEN (LISÄYS 15 kohta
+     * 44): pöly on oma kerroksensa, ja juuri sen liike oli omistajan
+     * huomio — otos, joka lukisi vain tähdet, olisi sokea pölylle.
+     */
+    const kerrokset = [];
     pallo.scene?.()?.traverse?.((o) => {
-      if (!olio && o?.__globeObjType === 'particles' && o.geometry?.attributes?.position) olio = o;
+      if (o?.__globeObjType === 'particles' && o.geometry?.attributes?.position) kerrokset.push(o);
     });
-    if (!olio) return null;
+    if (!kerrokset.length) return null;
     /* 4×4-kertolasku ilman THREE:ä (kirjasto ei vie luokkia ulos). */
     const kerro = (m, v) => {
       const e = m?.elements;
@@ -1035,20 +1048,22 @@ async function ajaNakyma(nimi) {
       ];
     };
     kamera.updateMatrixWorld?.();
-    olio.updateMatrixWorld?.();
-    const pos = olio.geometry.attributes.position;
     const ulos = [];
-    for (const i of [0, 7, 23, 61]) {
-      if (i >= pos.count) continue;
-      let v = [pos.getX(i), pos.getY(i), pos.getZ(i), 1];
-      v = kerro(olio.matrixWorld, v);
-      v = kerro(kamera.matrixWorldInverse, v);
-      v = kerro(kamera.projectionMatrix, v);
-      if (!v[3]) continue;
-      ulos.push({
-        x: +(((v[0] / v[3]) * 0.5 + 0.5) * kangas.clientWidth).toFixed(2),
-        y: +((0.5 - (v[1] / v[3]) * 0.5) * kangas.clientHeight).toFixed(2),
-      });
+    for (const olio of kerrokset) {
+      olio.updateMatrixWorld?.();
+      const pos = olio.geometry.attributes.position;
+      for (const i of [0, 7, 23, 61]) {
+        if (i >= pos.count) continue;
+        let v = [pos.getX(i), pos.getY(i), pos.getZ(i), 1];
+        v = kerro(olio.matrixWorld, v);
+        v = kerro(kamera.matrixWorldInverse, v);
+        v = kerro(kamera.projectionMatrix, v);
+        if (!v[3]) continue;
+        ulos.push({
+          x: +(((v[0] / v[3]) * 0.5 + 0.5) * kangas.clientWidth).toFixed(2),
+          y: +((0.5 - (v[1] / v[3]) * 0.5) * kangas.clientHeight).toFixed(2),
+        });
+      }
     }
     return ulos;
   };
@@ -1065,13 +1080,28 @@ async function ajaNakyma(nimi) {
     });
     return { tahdet: tila.tahdet, kerroksia, nelioita };
   });
-  vaadi(t('39: neliöitä ei ole — pöly poissa ja tähdet pyöristetty'),
-    tahtitila.nelioita === 0 && tahtitila.kerroksia === 2
+  vaadi(t('39+44: neliöitä ei ole — pöly mukana mutta pyöristettynä'),
+    tahtitila.nelioita === 0 && tahtitila.kerroksia === 3
+      && tahtitila.tahdet?.polya === 1
       && tahtitila.tahdet?.ajautuvia === 0
       && tahtitila.tahdet?.pyoreita === tahtitila.tahdet?.kerroksia
       && tahtitila.tahdet?.kaannettyja === tahtitila.tahdet?.kerroksia,
-    `kerroksia ${tahtitila.kerroksia}, neliöitä ${tahtitila.nelioita}, `
-    + `${JSON.stringify(tahtitila.tahdet)}`);
+    `kerroksia ${tahtitila.kerroksia}, pölyjä ${tahtitila.tahdet?.polya}, `
+    + `neliöitä ${tahtitila.nelioita}, pyöreitä ${tahtitila.tahdet?.pyoreita}`);
+  /*
+   * 44 KOKO: yksikään hiukkanen ei saa olla ruudulla tähteä
+   * suurempi kuin kertoimella 1,5. Luku lasketaan samalla kaavalla
+   * kuin three.js:n sävytin (tahdet.js kokoRuudulla) ja katto on jo
+   * mukana, joten mittaus vastaa sitä mitä silmä näkee.
+   */
+  const koot = tahtitila.tahdet?.koot ?? [];
+  const polynKoko = Math.max(0, ...koot.filter((k) => k.tunnus === 'poly').map((k) => k.suurinPx));
+  const tahdenKoko = Math.max(0, ...koot.filter((k) => k.tunnus !== 'poly').map((k) => k.suurinPx));
+  vaadi(t('44: pölyhiukkanen korkeintaan tähti × 1,5 ruudulla'),
+    koot.length === 3 && polynKoko > 0 && tahdenKoko > 0
+      && polynKoko <= tahdenKoko * 1.5,
+    `pöly ${polynKoko} px (rajaamatta `
+    + `${koot.find((k) => k.tunnus === 'poly')?.rajaamatonPx}), tähti ${tahdenKoko} px`);
   const tahti0 = await s.evaluate(TAHTIOTOS);
   await s.waitForTimeout(5000);
   const tahti1 = await s.evaluate(TAHTIOTOS);
@@ -1090,7 +1120,7 @@ async function ajaNakyma(nimi) {
   await s.waitForTimeout(600);
   const tahti2 = await s.evaluate(TAHTIOTOS);
   const vedossa = ero(tahti1, tahti2);
-  vaadi(t('40: tähdet paikallaan 5 s ilman kosketusta, liikkuvat vedossa'),
+  vaadi(t('40+44: tähdet ja pöly paikallaan 5 s, liikkuvat vedossa'),
     Number.isFinite(levossa) && levossa < 0.5 && vedossa > 2,
     `levossa ${levossa.toFixed(2)} px / 5 s, vedossa ${vedossa.toFixed(2)} px`);
   await rauhoitu(s);

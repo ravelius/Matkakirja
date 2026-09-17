@@ -86,3 +86,79 @@ selvästi tummempi kuin omistajan v1933-kuvassa.
    `box-shadow`issa, jotta lähekkäiset kohteet eivät sulaudu rypäleeksi.
 4. Kirjaston `autoRotate` (linssin oma hidas pyöriminen) jätettiin
    ennalleen: silloin tähdet kääntyvät pallon mukana, kuten omistaja pyysi.
+
+## Pölykerros takaisin
+
+Opus-agentti Fablelle 17.9.2026 klo 23.05 Suomen aikaa. Sama haara
+`claude/bold-ride-vow4ki-avaruus-hehku` (PR #2570 päivittyi pushista),
+päätös **LISÄYS 15 kohta 44** (*"Pölykerros kuulostaa kivalta jos sen
+saa toimimaan niin lisää takaisin"*). **Vaatii versionoston.**
+
+**Kerrosta ei enää poisteta, vaan kolme syytä korjataan yksitellen.**
+Neliöt syntyivät kolmesta asiasta yhtä aikaa: (1) `PointsMaterial`
+ilman tekstuuria piirtää pisteen neliönä, (2) `particlesSizeAttenuation`
+suurentaa lähimmät pisteet rajatta ja pöly on lähin kerros — kun kamera
+zoomaa sen ohi, hiukkanen kasvaa sadoiksi pikseleiksi, ja (3) pöly oli
+ainoa ajautuva kerros, joten ne myös lensivät.
+
+1. **Pyöreys:** sama `pyoristaPiste`-sävytin kuin tähdillä myös pölylle.
+2. **Koko:** uusi `kattoPx` rajaa `gl_PointSize`in samassa sävyttimessä
+   (`min(gl_PointSize, katto)` vertex-puolella, ankkuri
+   `#include <logdepthbuf_vertex>`). Katto tulee vaimennuksen JÄLKEEN,
+   joten syvyysvaikutelma säilyy — kaukainen hiukkanen on pieni — mutta
+   lähikasvu leikkautuu. Katto 2,2 px kerrotaan piirtopuskurin
+   pikselitiheydellä, muuten pöly olisi retinalla kolmanneksen halutusta.
+3. **Ei omaa liikettä:** `ajautuu: false` pölyllekin ja linssi antaa yhä
+   `ajautuma: false` — koko taivas kääntyy vain kameran mukana.
+4. **Peruskoko 0,85** (tähdet 0,9 ja 1,35), joten kaukaa katsottuna pöly
+   on aina hienovaraisin kerros; lähellä katto hoitaa saman.
+
+Ihmisen matka -linssin tähtitaivas on koskematon (`TAHTIKERROKSET`
+ennallaan: pöly 1,3 ja ajautuu).
+
+### Mittaus (Playwright, Chromium, työpöytä 1400×900 + puhelin 390×844)
+
+`savuke-astro-pallo.mjs` **114/114 läpi** (112 → 114: yksi vanha väite
+laajeni, yksi uusi lisättiin).
+
+| Väite | työpöytä | puhelin |
+| --- | --- | --- |
+| 39+44 kerroksia 3, pölyjä 1, ajautuvia 0, pyöreitä 3, neliöitä 0 | OK | OK |
+| 44 pölyhiukkanen ≤ tähti × 1,5 ruudulla | 1,05 px vs. 1,09 px | 0,32 px vs. 0,36 px |
+| 40+44 tähdet ja pöly levossa / vedossa | 0,00 px / 5 s → 16 106 px | 0,00 px / 5 s → 50 038 px |
+
+Vanha vartio *"kerroksia 2, ajautuvia 0"* on nyt *"kerroksia 3, pölyjä 1,
+ajautuvia 0, pyöreitä 3"*. Tähtiotos (siirtymämittaus) luki ennen vain
+ENSIMMÄISEN hiukkasolion; nyt se ottaa näytteet kaikista kolmesta
+kerroksesta, joten juuri pölyn liike on mitattu eikä oletettu.
+
+Kokovartio laskee hiukkasen koon samalla kaavalla kuin three.js:n
+points-sävytin (`tahdet.js` `kokoRuudulla`: `koko · korkeus/2 / syvyys`,
+katto mukana) ja **vain näkymäpyramidin sisällä olevista pisteistä**:
+ensimmäisessä ajossa rajaus puuttui, ja sivusuunnassa olevan pisteen
+syvyys → 0 antoi "tähden kooksi" 31 293 px — haamuluku, joka olisi
+päästänyt vartion läpi aina. Rajattuna luvut ovat 1,05 vs. 1,09 px
+(rajaamaton pölyluku ilman kattoa oli edellisessä ajossa 360 px, mikä
+kertoo katon oikeasti purevan lähizoomissa).
+
+`node --test tests/*.test.mjs`: 3585 väitettä, 0 punaista. Lukkoja ei
+tarvinnut päivittää (`TAHTIKERROKSET` ja sen ajautuva pöly ovat
+ennallaan; lukot koskevat sitä sarjaa).
+
+Sivutuote: savukkeen portti tulee nyt ympäristömuuttujasta `PORTTI`
+(oletus 8754 kuten ennen). Kiinteä portti kaatoi ajon `EADDRINUSE`een,
+koska toinen sessio ajoi savuketta samaan aikaan.
+
+Kaappaus (puhelin 390×844): `/private/tmp/claude-501/-Users-samireivinen-Matkakirja-fable/1de1d7f9-1349-4671-ad36-3323aaf75d0f/scratchpad/kaappaukset-poly/astro-pallo-390-20260916.jpg`
+— pöly on kuvassa hienovaraisena pistepölynä, ei yhtään neliötä eikä
+lentäviä laatikoita. (Kaappaus tulee savukkeen ympäristömuuttujasta
+`KAAPPAUKSET`, ei polkuargumentista.)
+
+### Oletukset (päätetty itse, ei kysytty)
+
+1. Katto 2,2 px (piirtopuskurin pikseleitä) ja peruskoko 0,85 — pöly jää
+   mitatusti tähteä pienemmäksi molemmilla laitteilla.
+2. Syvyysvaikutelma toteutetaan vaimennuksella + katolla, ei
+   `sizeAttenuation: false`:lla: jälkimmäinen olisi litistänyt myös
+   tähdet vakiokokoisiksi ja tehnyt niistä alle pikselin kokoisia.
+3. Pölyn pistemäärä (730) ja korkeus (2,6–3,4 R) ennallaan.

@@ -2295,10 +2295,13 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
 
   /* ---- 2. tähdet ---------------------------------------------------- */
   /*
-   * TÄHDET PAIKALLAAN JA ILMAN PÖLYNELIÖITÄ (LISÄYS 15, kohdat 39–40).
-   * Pölykerros jätetään pois kokonaan (se oli ruudun halki lentävät
-   * vaaleat neliöt) ja ajautuma sammutetaan: taivas kääntyy vain
-   * kameran mukana, kun pelaaja pyörittää palloa.
+   * TÄHDET PAIKALLAAN, PÖLY KESYTETTYNÄ (LISÄYS 15, kohdat 39, 40 ja
+   * 44). Neliöt olivat pölykerros; omistaja halusi sen takaisin, kun
+   * se saadaan toimimaan. `TAHTIKERROKSET_PAIKALLAAN` antaa pölyn
+   * pyöristettynä, tähteä pienempänä ja `kattoPx`-rajalla (ei
+   * lähikasvua), ja `ajautuma: false` sammuttaa kaiken oman liikkeen:
+   * koko taivas pöly mukaan lukien kääntyy vain kameran mukana, kun
+   * pelaaja pyörittää palloa.
    */
   const taivas = luoTahtitaivas(pallo, {
     reducedMotion: reduced,
