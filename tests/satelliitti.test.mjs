@@ -71,12 +71,21 @@ test('linssisopimuksen pakolliset kentät ovat paikallaan', () => {
 
 /* ═══════════════════ 2. hohtavat vihreät pisteet ════════════════ */
 
-test('piste on PELKKÄ vihreä piste — ei rengasta, ei hohtoa, ei pulssia', () => {
+test('piste on YKSI hehkuva vihreä piste — ei rengasta, ei reunaa, ei pulssia', () => {
   /*
    * OMISTAJA 16.9.2026, sanatarkasti: *"Muutamilla nuo hehkuvat
    * pisteet pelkeiksi vihreäksi pisteeksi ilman ympyrää ja pisteen
    * ympärillä."* Sädekehä ja rengas ovat poissa sekä tyylistä että
    * merkin elementistä; jäljellä on läpinäkyvä osuma-ala ja piste.
+   *
+   * LUKKO PÄIVITETTY 17.9.2026 (Raamattu ASTRONAUTIN KAMERA LISÄYS 15
+   * kohta 41, omistaja sanatarkasti: *"vihreät pisteet saisivat olla
+   * loistavia, eli keskusta kirkkaampi ja se tummuisi reunoilla"*).
+   * Aiempi lukko vaati TASAISTA täyttöä (`background: var(--satelliitti-
+   * vihrea)`), ja juuri se on nyt kumottu: täyttö on radial-gradient,
+   * jonka keskusta on kirkas ja reuna häipyy. Kaikki muu pysyy —
+   * YKSI elementti, ei rengasta, ei reunaviivaa, ei `box-shadow`-hohtoa
+   * (ne toivat rypäleet) eikä jatkuvaa pulssia.
    */
   for (const luokka of ['satelliitti-osuma', 'satelliitti-ydin', 'satelliitti-nimi']) {
     assert.ok(tyyli.includes(`.${luokka}`), `${luokka} puuttuu tyylistä`);
@@ -93,9 +102,23 @@ test('piste on PELKKÄ vihreä piste — ei rengasta, ei hohtoa, ei pulssia', ()
     assert.ok(!/border(?!-radius)|box-shadow/.test(lohko),
       `pisteessä on yhä reuna tai varjo: ${lohko}`);
   }
-  assert.ok(lohkot.some((l) => /background: var\(--satelliitti-vihrea\)/.test(l)),
-    'piste ei ota väriään --satelliitti-vihreasta');
-  // Piste on pieni (≤ 9 px) ja osuma-ala sormen kokoinen (≥ 32 px).
+  // Hehku on gradientissa: kirkas ydin keskellä, pelin vihreä kehällä,
+  // reuna läpinäkyvä. Yksikään lohko ei saa olla tasainen täyttö.
+  assert.ok(lohkot.some((l) => /background:\s*radial-gradient/.test(l)),
+    'piste ei ole hehkuva liuku (radial-gradient)');
+  assert.ok(lohkot.some((l) => /var\(--satelliitti-ydinvalo\)[\s\S]*var\(--satelliitti-vihrea\)/.test(l)),
+    'liuku ei kulje kirkkaasta ytimestä pelin vihreään');
+  assert.ok(lohkot.some((l) => /rgba\(93,\s*255,\s*168,\s*0\)\s*100%/.test(l)),
+    'liuku ei häivy läpinäkyväksi reunalla');
+  assert.match(tyyli, /--satelliitti-ydinvalo:\s*#eafff3/);
+  /*
+   * VAKIOKOKO (LISÄYS 15 kohta 42): piste on pieni (≤ 9 px) ja osuma-ala
+   * sormen kokoinen (≥ 32 px). Koko on ruutupikseleissä eikä saa riippua
+   * kameran korkeudesta — CSS2D-merkki ei skaalaudu pallon mukana
+   * (js/pallolauta/merkit.js), joten kokoa ei lasketa missään JS:ssä.
+   */
+  assert.ok(!/--satelliitti-pisteen-koko/.test(lahde),
+    'pisteen kokoa säädetään JS:stä — vakiokoko rikkoutuisi');
   const koko = /--satelliitti-pisteen-koko:\s*(\d+)px/.exec(tyyli);
   const osuma = /--satelliitti-osuman-koko:\s*(\d+)px/.exec(tyyli);
   assert.ok(koko && Number(koko[1]) <= 9, `pisteen koko ${koko?.[1]}`);
@@ -1134,14 +1157,17 @@ test('minipulun napautus avaa pulun NORMAALIN chatin ehdotuksineen', async () =>
   }
   assert.equal(Object.keys(ASTRONAUTIN_KYSYMYKSET).length, 64);
   /*
-   * OMISTAJA 16.9.2026 klo 18.35 UTC (Raamattu LISÄYS 10, kohta 29):
-   * *"Pulun chatti pitäisi toimia normaalisti vaikka itse pulu olisi
-   * pienemmän kokoinen."* Kaksi reittiä, ja ero on tarkoituksellinen:
-   * EHDOTUSPILLERIN vastaus on esikirjoitettu aineisto (ei mallikutsua),
-   * VAPAA kysymys menee pelin omaa chattireittiä mallille.
+   * OMISTAJA 17.9.2026 klo 21.30 Suomen aikaa (Raamattu ASTRONAUTIN KAMERA
+   * LISAYS 14): *"ainoastaan kysymykset ovat etukäteen mietittyjä, mutta
+   * vastaukset haetaan samalla tapaa kuin muissakin pelin kohdissa."*
+   * YKSI reitti: ehdotuspilleri ja vapaa kysymys menevät molemmat
+   * lahetaKysymys-funktioon, joka kutsuu polloUlkoinenKysymys-reittiä.
+   * Esikirjoitettuja vastauksia ei näytetä (haeAstronautinVastaus ei
+   * ole enää satelliitti.js:n käytössä).
    */
-  assert.match(lahde, /haeAstronautinVastaus\(kohde\.tunnus, kysymys\)/);
-  assert.match(lahde, /lisaaKupla\('pulu', tieto\?\.vastaus/);
+  assert.doesNotMatch(lahde, /haeAstronautinVastaus/);
+  assert.match(lahde, /const vastaaKysymykseen = \(kysymys, painike\) => \{[\s\S]*?lahetaKysymys\(kysymys\);/);
+  assert.match(lahde, /lahetaKysymys\(pulunKentta\.value\)/);
   // Teksti ladotaan tekstisolmuna, ei innerHTML:nä.
   assert.match(lahde, /kupla\.replaceChildren\(document\.createTextNode\(String\(teksti/);
   // Vapaa kenttä + lähetysnappi, ja kysymys menee SAMAA reittiä kuin kartalla.

@@ -74,8 +74,12 @@ if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: tr
 /** Lehden sivuja ja nostoja ennen erää — luvut eivät saa laskea. */
 const LEHDEN_SIVUJA = 8;
 const LEHDEN_NOSTOJA = 24;
-/** Ranskan merkit pääkartalla ilman porttia (ks. savuke-merkkirajat). */
-const FRA_MERKKEJA = 62;
+/**
+ * Ranskan merkit pääkartalla ilman porttia (ks. savuke-merkkirajat).
+ * Luku oli 62 ennen hahmotelmaerää; KARTTAUUDISTUKSEN PAATOKSET 33 toi
+ * js/packs/hahmotelma-fra.js:n viisitoista pistettä, joten 62 + 15 = 77.
+ */
+const FRA_MERKKEJA = 77;
 /** Lähizoomilla vähintään näin monta Ranskan omaa merkkiä ruudulla. */
 const LAHI_VAHINTAAN = 40;
 /** Visan palkkio (js/fokusnosto.js NOSTON_VISA_PALKKIO). */
@@ -211,7 +215,11 @@ const tallenne = (aloitus) => {
   return JSON.stringify(peli.toJSON());
 };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch(
+  // Konttiympäristössä selain on /opt/pw-browsers/chromium; Macilla polku
+  // tulee CHROMIUM-ympäristömuuttujasta (CLAUDE.md, Mac Studio -työympäristö).
+  { executablePath: process.env.CHROMIUM || '/opt/pw-browsers/chromium' },
+);
 const virheet = [];
 
 async function avaaPeli(kaupunki, leveys, korkeus) {
@@ -403,6 +411,19 @@ for (const koko of RUUDUT) {
   if (!aukesi) { await ctx.close(); break; }
 
   const saapuminen = await mittaa(sivu, 0);
+  /*
+   * SAAPUMISKUVA KUMMASTAKIN LEVEYDESTÄ (KARTTAUUDISTUKSEN PAATOKSET 33:
+   * hahmotelmakierroksen ainoa kysymys on, näyttääkö koko Ranska
+   * tasapainoiselta). Lähikuva alempana kertoo vain yhdestä nurkasta.
+   */
+  if (KUVAKANSIO) {
+    try {
+      const cdp = await ctx.newCDPSession(sivu);
+      const { data } = await cdp.send('Page.captureScreenshot', { format: 'jpeg', quality: 70 });
+      writeFileSync(join(KUVAKANSIO, `ranska-sisalto-saapuminen-${nimi}.jpg`), Buffer.from(data, 'base64'));
+      await cdp.detach();
+    } catch (e) { console.log(`INFO  ${nimi} saapumiskuva jäi ottamatta: ${e.message}`); }
+  }
   tieto(`${nimi} saapuminen`, `${saapuminen.iso}, leveys ${saapuminen.leveys}, `
     + `portti päästää ${saapuminen.paastetyt}, lähizoomiin ${saapuminen.piiloon}, `
     + `osumia ${saapuminen.omat.length}`);

@@ -94,7 +94,9 @@ const palvelin = createServer((req, res) => {
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
   res.end(readFileSync(polku));
 });
-await new Promise((r) => palvelin.listen(8749, r));
+// PORTTI ympäristöstä (rinnakkaiset ajot Macilla), oletus 8749 ennallaan.
+const PORTTI = Number(process.env.PORTTI) || 8749;
+await new Promise((r) => palvelin.listen(PORTTI, r));
 
 const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
 const chromium = paketti.chromium ?? paketti.default?.chromium;
@@ -149,7 +151,7 @@ async function avaaSivu(nakyma, virheet) {
 }
 
 async function avaaPeli(s) {
-  await s.goto('http://127.0.0.1:8749/index.html?lauta=pallo', { waitUntil: 'load' });
+  await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo`, { waitUntil: 'load' });
   await s.waitForTimeout(2500);
   await s.evaluate(() => {
     [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
@@ -473,11 +475,14 @@ async function ajaNakyma(nakymanNimi) {
   });
   await s.waitForTimeout(1500);
   /*
-   * PELKKÄ VIHREÄ PISTE (omistaja 16.9.2026, sanatarkasti: *"Muutamilla
-   * nuo hehkuvat pisteet pelkeiksi vihreäksi pisteeksi ilman ympyrää ja
-   * pisteen ympärillä."*). Mitataan MAALATUSTA tuloksesta: pisteen
-   * halkaisija, sen tausta, `box-shadow` ja reunaväri — ja että
-   * sädekehää ja rengasta ei ole enää olemassa lainkaan.
+   * HEHKUVA PISTE (omistaja 17.9.2026, Raamattu ASTRONAUTIN KAMERA
+   * LISAYS 15 kohta 41, sanatarkasti: *"vihreät pisteet saisivat olla
+   * loistavia, eli keskusta kirkkaampi ja se tummuisi reunoilla"*; kumoaa
+   * 16.9. "pelkkä vihreä piste" -mitan taustavärin osalta). Mitataan
+   * MAALATUSTA tuloksesta: pisteen halkaisija (vakiokoko, kohta 42),
+   * hehku on radial-gradient-taustakuva (ei tasainen täyttö), ei
+   * `box-shadow`ia eikä reunaviivaa — ja että vanhaa sädekehää ja
+   * rengasta ei ole olemassa lainkaan; nimi ja osuma-ala ennallaan.
    */
   const hehku = await s.evaluate(() => {
     const merkit = [...document.querySelectorAll('.satelliitti-piste')];
@@ -494,6 +499,7 @@ async function ajaNakyma(nakymanNimi) {
       takana: merkit.length - edessa.length,
       pisteenLeveys: t ? +parseFloat(t.width).toFixed(1) : null,
       tausta: t?.backgroundColor ?? null,
+      taustakuva: t?.backgroundImage ?? null,
       varjo: t?.boxShadow ?? null,
       reuna: t?.borderTopColor ?? null,
       reunanLeveys: t ? +parseFloat(t.borderTopWidth).toFixed(1) : null,
@@ -505,10 +511,11 @@ async function ajaNakyma(nakymanNimi) {
       osumat: yksi ? getComputedStyle(yksi).pointerEvents : null,
     };
   });
-  vaadi(nimessa('pelkkä vihreä piste: ei rengasta, ei hohtoa — nimi ja osuma-ala ennallaan'),
+  vaadi(nimessa('hehkuva piste: liuku keskeltä reunoille, ei rengasta eikä varjoa — nimi ja osuma-ala ennallaan'),
     hehku.edessa > 0 && hehku.takana > 0
       && hehku.pisteenLeveys > 0 && hehku.pisteenLeveys <= 9
-      && /rgb\(93, 255, 168\)/.test(hehku.tausta ?? '')
+      && /radial-gradient/.test(hehku.taustakuva ?? '')
+      && /rgb\(93, 255, 168\)/.test(hehku.taustakuva ?? '')
       && hehku.varjo === 'none' && hehku.reunanLeveys === 0
       && hehku.renkaita === 0 && hehku.osumanLeveys >= 32
       && Boolean(hehku.nimi) && hehku.animaatio === '1' && hehku.osumat === 'none',

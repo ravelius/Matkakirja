@@ -174,7 +174,7 @@ import {
 import { naytaLinssivirhe, poistaLinssivirhe } from '../linssivirhe.js';
 import { diagNyt, pallodiag } from '../pallodiag.js';
 import { luoMinipulu } from '../minipulu.js';
-import { haeAstronautinKysymykset, haeAstronautinVastaus } from './astronaut-kysymykset.js';
+import { haeAstronautinKysymykset } from './astronaut-kysymykset.js';
 import { avaaAstronautinAani } from './satelliitti-aani.js';
 
 /*
@@ -961,17 +961,20 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
     return kupla;
   };
 
-  /** Vastaus kuplaan pulun äänellä — esikirjoitettuna, ilman mallikutsua. */
+  /*
+   * EHDOTUS MENEE SAMAAN MALLIREITTIIN KUIN VAPAA KYSYMYS (omistaja
+   * 17.9.2026, Raamattu ASTRONAUTIN KAMERA LISAYS 14: "ainoastaan
+   * kysymykset ovat etukäteen mietittyjä, mutta vastaukset haetaan
+   * samalla tapaa kuin muissakin pelin kohdissa"). Esikirjoitettuja
+   * vastauksia ei enää näytetä. Pilleri merkitään valituksi ja teksti
+   * annetaan lahetaKysymys-funktiolle, joka on määritelty alempana.
+   */
   const vastaaKysymykseen = (kysymys, painike) => {
-    const tieto = haeAstronautinVastaus(kohde.tunnus, kysymys);
     for (const b of pulunRivi.querySelectorAll('button')) {
       b.classList.toggle('valittu', b === painike);
       b.setAttribute('aria-pressed', b === painike ? 'true' : 'false');
     }
-    lisaaKupla('oma', kysymys);
-    lisaaKupla('pulu', tieto?.vastaus ?? 'Tästä kuvasta pulu ei osaa vielä kertoa.');
-    /* Sama pieni päänkääntö kuin kartan pululla: hahmo reagoi. */
-    try { minipulu?.reagoi?.(); } catch { /* liikkeenvähennys tai purettu hahmo */ }
+    lahetaKysymys(kysymys);
   };
 
   for (const kysymys of kysymykset) {
@@ -991,8 +994,8 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
    * epäonnistuminen näkyy yhtenä siistinä rivinä — ei konsolissa.
    */
   let kysymysKesken = false;
-  const lahetaVapaa = async () => {
-    const teksti = String(pulunKentta.value ?? '').replace(/\s+/g, ' ').trim();
+  const lahetaKysymys = async (raaka) => {
+    const teksti = String(raaka ?? '').replace(/\s+/g, ' ').trim();
     if (!teksti || kysymysKesken) return;
     kysymysKesken = true;
     pulunKentta.value = '';
@@ -1030,7 +1033,7 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
       pulunVirta.scrollTop = pulunVirta.scrollHeight;
     }
   };
-  pulunSyote.addEventListener('submit', (e) => { e.preventDefault(); e.stopPropagation(); lahetaVapaa(); });
+  pulunSyote.addEventListener('submit', (e) => { e.preventDefault(); e.stopPropagation(); lahetaKysymys(pulunKentta.value); });
   /* Kuvan eleet (zoom, panorointi, selitteen kelaus) eivät kuulu chattiin. */
   for (const laji of ['click', 'pointerdown', 'wheel', 'keydown']) {
     pulukortti.addEventListener(laji, (e) => e.stopPropagation());
