@@ -10,13 +10,17 @@
 #    self-hosted-runner ajaa yhden jobin kerrallaan, joten GitHubin
 #    matriisi (12 rinnakkaista ubuntu-jobia) ei sovi sille. Koneella on
 #    node ja Playwrightin selain valmiina — ei setup-nodea, ei
-#    npm ci:tä, ei selainasennusta. Ajetaan workflow_dispatchilla ja
-#    OMAN repon PR:illä; fork-PR ei koskaan pääse Macille (repo on
-#    julkinen).
+#    npm ci:tä, ei selainasennusta. KALIBROINTIVAIHE (Fable 17.9.2026
+#    klo 17.40): ensimmäisessä PR-ajossa 12 väitettä oli Macilla
+#    punaisia (macOS-Chromen erot ja rinnakkaiskuorma), joten Mac-reitti
+#    ajetaan TOISTAISEKSI VAIN workflow_dispatchilla — yksi ajo per
+#    korjauserä. Kun koko julkaisusarja on Macilla kerran vihreä, Mac
+#    palautetaan PR-portiksi ja ubuntu-matriisi jää fork-PR:ille. Vain
+#    oman repon koodi ajetaan Macilla (repo on julkinen).
 #
-# 2) lista/savuke/yhteenveto — vanha ubuntu-matriisi, joka jää VAIN
-#    fork-PR:ille (head.repo.full_name != github.repository). Asentaa
-#    itse noden ja selaimen GitHubin koneille.
+# 2) lista/savuke/yhteenveto — ubuntu-matriisi, PR-PORTTI kalibrointi-
+#    vaiheen ajan (kaikki pull_request-ajot). Asentaa itse noden ja
+#    selaimen GitHubin koneille.
 #
 # SAVUKKEITA AJETAAN MAHDOLLISIMMAN VÄHÄN: pull_request-laukaisu on
 # rajattu pelikoodin poluille (index.html, sw.js, js/**, css/**,
@@ -72,10 +76,7 @@ concurrency:
 jobs:
   # PÄÄREITTI: koko sarja yhtenä jobina Mac Studion runnerilla.
   savukkeet-mac:
-    if: >-
-      github.event_name == 'workflow_dispatch' ||
-      (github.event_name == 'pull_request' &&
-       github.event.pull_request.head.repo.full_name == github.repository)
+    if: github.event_name == 'workflow_dispatch'
     runs-on: [self-hosted, macOS, ARM64]
     timeout-minutes: 20
     env:
@@ -115,9 +116,7 @@ jobs:
 
   # FORK-PR:t: vanha ubuntu-matriisi (self-hosted ei fork-PR:ille).
   lista:
-    if: >-
-      github.event_name == 'pull_request' &&
-      github.event.pull_request.head.repo.full_name != github.repository
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     outputs:
       matriisi: ${{ steps.matriisi.outputs.matriisi }}
@@ -146,9 +145,7 @@ jobs:
 
   savuke:
     needs: lista
-    if: >-
-      github.event_name == 'pull_request' &&
-      github.event.pull_request.head.repo.full_name != github.repository
+    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     # Varmuuskerros tunnetuille punaisille (tehtävänannon kirjain):
@@ -269,9 +266,7 @@ jobs:
 
   yhteenveto:
     needs: [lista, savuke]
-    if: >-
-      always() && github.event_name == 'pull_request' &&
-      github.event.pull_request.head.repo.full_name != github.repository
+    if: always() && github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
