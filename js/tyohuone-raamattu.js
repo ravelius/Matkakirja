@@ -8382,11 +8382,13 @@ export const RAAMATTU = {
           + 'mitattu Pariisi 390 px: aiheita >= 2 nostoa = 5, aihenostoja 5, '
           + 'nimiot "Mona Lisan varkaus...", "Tuileriain rauniot...", '
           + '"Impressionistit...", "Kyyhkyposti...", "Tuileries..."; '
-          + 'savuke 50/50, vastakoe ?aihekaupunki=0). AVOIN OMISTAJALLE: '
+          + 'savuke 50/50, vastakoe ?aihekaupunki=0). TARKENNUS 3 (omistaja '
+          + '17.9.2026 klo 00.05 UTC, kortti "Hyvaksy yksi limitys"): '
           + 'lahizoomissa yksi aihenostopari (Kyyhkyposti/Tuileriain '
-          + 'rauniot) limittyy - nollaan paasy vaatisi joko nimen '
-          + 'piilottamisen tai aihenoston siirron pois jasentensa '
-          + 'keskipisteesta. Julkaistaan v1927.',
+          + 'rauniot) saa limittya - aihenosto pysyy jasentensa '
+          + 'keskipisteessa ja nimi nakyy aina; savuke vartioi katon '
+          + 'AIHENOSTOJEN_LIMITYSKATTO = 1, kasvu on regressio. Julkaistaan '
+          + 'v1927.',
         'KARTTAUUDISTUKSEN PAATOKSET 28: MAAINFO TAKAISIN RUUDUN VASEMPAAN '
           + 'ALAKULMAAN, VALIKKO KASVAA YLOS KAHDESSA SARAKKEESSA, LIIKU '
           + 'TEKSTINA ALAS KESKELLE (omistaja 15.9.2026 klo 20.45 UTC, '
