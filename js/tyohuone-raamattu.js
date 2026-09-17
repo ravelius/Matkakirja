@@ -4412,7 +4412,8 @@ export const RAAMATTU = {
           + '(claude --model claude-fable-5-1); agentit ajavat silloin '
           + 'Macilla (nopeat savukkeet, WebKit), rinnakkain enintaan kolme; '
           + 'ohjaus kannykalla sailyy; Actions-savukkeet PR:ssa sailyvat '
-          + 'porttina. Tila: odottaa v1930/v1931-mergea.',
+          + 'porttina. Tila: odottaa v1930/v1931-mergea. TARKENNUS 2:n tila: '
+          + '(4) TEHTY PR #2551 (f46192be): .github/workflows/'
           + 'savukkeet.yml + tools/savukkeet/sarjat.json, 12 savuketta '
           + 'rinnakkain 12 min, portti kaataa jobin vain UUSISTA punaisista, '
           + 'tunnetut punaiset sarjat.jsonissa perusteluineen; ajaa joka '
