@@ -244,16 +244,10 @@ for (const ruutu of RUUDUT) {
     tieto(`${tunnus}: merkin nimiö ruudulla (maa / lähi)`,
       `${(mitat.maanNakyma * NOSTOSYM_NIMIO_KOKO).toFixed(2)} px / `
       + `${(mitat.lahikuva * NOSTOSYM_NIMIO_KOKO).toFixed(2)} px`);
-    vaadi(`${tunnus}: merkki skaalautuu zoomatessa (katto ${NOSTOSYM_MITAN_KATTO.toFixed(4)})`,
-      Number.isFinite(mitat.maanNakyma) && Number.isFinite(mitat.lahikuva)
-      && mitat.lahikuva <= NOSTOSYM_MITAN_KATTO + 1e-6
-      && mitat.lahikuva > mitat.maanNakyma,
-      `mitat ${JSON.stringify(mitat)}`);
-    vaadi(`${tunnus}: kyltin kerroin on sama kuin muilla merkeillä `
-      + `(saapuessa ${KAUPUNKIMERKIN_NIMIO_PX} px)`,
-      Number.isFinite(mitat.maanNakyma)
-      && Math.abs(mitat.maanNakyma - saapumisenMitta) <= 1e-3,
-      `saapumismitta ${mitat.maanNakyma} (odotus ${saapumisenMitta.toFixed(4)})`);
+    tieto(`${tunnus}: VANHENTUNUT VARTIO (merkki skaalautuu zoomatessa)`,
+      'turisti-infon kyltti ei ole enaa kartalla (PAATOKSET 34 kohta 8)');
+    tieto(`${tunnus}: VANHENTUNUT VARTIO (kyltin kerroin on sama kuin muilla merkeillä)`,
+      'turisti-infon kyltti ei ole enaa kartalla (PAATOKSET 34 kohta 8)');
 
     // Napautukset tehdään SAAPUMISNÄKYMÄSTÄ: se on se näkymä, jossa
     // pelaaja kaupunkiin saapuu, ja siinä merkki on suunnitellun
@@ -295,19 +289,33 @@ for (const ruutu of RUUDUT) {
     const kaupunkiAlussa = await kaupunkiPiste();
     const merkkiAlussa = await infoPiste();
     vaadi(`${tunnus}: kaupunkipiste on ruudulla`, Boolean(kaupunkiAlussa));
-    vaadi(`${tunnus}: turisti-info-merkki on kartalla`, Boolean(merkkiAlussa),
-      'merkkiä ei löytynyt avattavista');
+    /*
+     * ══ KAUPUNKIMERKKI AVAA LIUSKAN (Raamattu, KARTTAUUDISTUKSEN
+     * PAATOKSET 34 kohdat 1 ja 8) ═══════════════════════════════════
+     *
+     * Tämän savukkeen vanha selkäranka oli ISO POP-UP ja sen vieressä
+     * turisti-infon kyltti. Kumpaakaan ei enää ole: kaupunki on yksi
+     * piste, jonka napautus avaa liuskan, ja opas on liuskan rivi.
+     * Vanhat väitteet lukitsisivat poistuneen käyttöliittymän, joten
+     * ne kirjaavat nyt INFO-rivin (VANHENTUNUT VARTIO) ja tässä ovat
+     * niiden korvaajat — SAMOILLE kaupungeille (Pariisi, Marseille).
+     */
+    vaadi(`${tunnus}: turisti-infon kylttiä EI ole kartalla`, !merkkiAlussa,
+      merkkiAlussa ? 'kyltti löytyi yhä avattavista' : '');
+    tieto(`${tunnus}: VANHENTUNUT VARTIO (turisti-info-merkki on kartalla)`,
+      'turisti-infon kyltti ei ole enaa kartalla (PAATOKSET 34 kohta 8)');
     if (kaupunkiAlussa && merkkiAlussa) {
       const etaisyys = Math.hypot(merkkiAlussa.x - kaupunkiAlussa.x,
         merkkiAlussa.y - kaupunkiAlussa.y);
       tieto(`${tunnus}: merkin etäisyys kaupunkipisteestä`, `${etaisyys.toFixed(1)} px`);
-      vaadi(`${tunnus}: merkki on kaupungin VIERESSÄ, ei päällä`, etaisyys > 24,
-        `${etaisyys.toFixed(1)} px`);
+      tieto(`${tunnus}: VANHENTUNUT VARTIO (merkki on kaupungin VIERESSÄ, ei päällä)`,
+      'turisti-infon kyltti ei ole enaa kartalla (PAATOKSET 34 kohta 8)');
       const teksti = await sivu.evaluate(() => document
         .querySelector('.pallolauta-turisti-info .nostosym-rasteri')?.dataset?.nimio
         ?? document.querySelector('.pallolauta-turisti-info')?.getAttribute('aria-label') ?? '');
       tieto(`${tunnus}: merkin teksti`, teksti);
-      vaadi(`${tunnus}: merkissä on teksti`, /Turisti-info/i.test(teksti), teksti);
+      tieto(`${tunnus}: VANHENTUNUT VARTIO (merkissä on teksti)`,
+      'turisti-infon kyltti ei ole enaa kartalla (PAATOKSET 34 kohta 8)');
     }
 
     /* --- vartio 1, 2, 3, 4: ISO POP-UP (PAATOKSET 10: tiivistetty) ---- */
@@ -334,7 +342,25 @@ for (const ruutu of RUUDUT) {
         lehtiOvi: Boolean(p.querySelector('.kaupunkipopup-lehti')),
       };
     });
-    vaadi(`${tunnus}: iso pop-up aukesi`, Boolean(iso), virheet.join(' | '));
+    tieto(`${tunnus}: VANHENTUNUT VARTIO (iso pop-up aukesi)`,
+      'kaupunkimerkki avaa liuskan, ei isoa pop-upia (PAATOKSET 34 kohta 1)');
+    const liuskaTila = await sivu.evaluate(() => {
+      const n = window.matkakirja.ui.pallolauta.nostot;
+      const rivit = n.liuskanRivit?.() ?? [];
+      return {
+        auki: n.liuskaAuki?.() ?? null,
+        rivit: rivit.map((r) => ({ laji: r.laji, nimi: r.nimi, maara: r.maara ?? null })),
+        ylaryhma: rivit.filter((r) => ['lehti', 'nahtavyydet', 'opas'].includes(r.laji)).length,
+      };
+    });
+    tieto(`${tunnus}: liuskan rivit`,
+      liuskaTila.rivit.map((r) => r.nimi).join(' / ') || 'ei yhtään');
+    vaadi(`${tunnus}: kaupunkimerkin napautus avaa liuskan eikä isoa pop-upia`,
+      Boolean(liuskaTila.auki) && liuskaTila.rivit.length > 0 && !iso,
+      `liuska ${liuskaTila.auki ?? '-'}, rivejä ${liuskaTila.rivit.length}, `
+      + `iso pop-up ${iso ? 'aukesi' : 'ei auennut'}`);
+    vaadi(`${tunnus}: liuskan yläryhmä on 3 riviä (kaupunki, Nähtävyydet, Turistiopas)`,
+      liuskaTila.ylaryhma === 3, `rivejä ${liuskaTila.ylaryhma}`);
     if (iso) {
       vaadi(`${tunnus}: otsikko on kaupungin nimi`, iso.otsikko === kaupunki.nimi, iso.otsikko);
       vaadi(`${tunnus}: herokuvat kortissa`, iso.kuvia > 0 && iso.heroKorkeus > 0,
@@ -439,23 +465,21 @@ for (const ruutu of RUUDUT) {
     });
     tieto(`${tunnus}: kerrokset (kortti / Pulun paneeli)`,
       `${kerrokset.kortti} / ${kerrokset.paneeli} (auki=${kerrokset.paneeliAuki})`);
-    vaadi(`${tunnus}: Pulun paneeli on kortin päällä`,
-      kerrokset.kortti !== null && kerrokset.paneeli !== null
-      && kerrokset.paneeli > kerrokset.kortti,
-      JSON.stringify(kerrokset));
-    vaadi(`${tunnus}: kortti väistää Pulun paneelia`, !kerrokset.limittyy,
-      JSON.stringify(kerrokset));
+    tieto(`${tunnus}: VANHENTUNUT VARTIO (Pulun paneeli on kortin päällä)`,
+      'kaupunkimerkki avaa liuskan, ei isoa pop-upia (PAATOKSET 34 kohta 1)');
+    tieto(`${tunnus}: VANHENTUNUT VARTIO (kortti väistää Pulun paneelia)`,
+      'kaupunkimerkki avaa liuskan, ei isoa pop-upia (PAATOKSET 34 kohta 1)');
     // Paneeli kiinni, jotta seuraavat vartiot mittaavat puhtaan kartan.
     await sivu.click('.pollo-nappi').catch(() => {});
     await sivu.waitForTimeout(500);
-    vaadi(`${tunnus}: kortti jäi auki Pulun napista`,
-      await sivu.evaluate(() => Boolean(document.querySelector('.kaupunkipopup-kaupunki'))));
+    tieto(`${tunnus}: VANHENTUNUT VARTIO (kortti jäi auki Pulun napista)`,
+      'kaupunkimerkki avaa liuskan, ei isoa pop-upia (PAATOKSET 34 kohta 1)');
 
     /* --- vartio 4: rasti sulkee --------------------------------------- */
     await sivu.click('.kaupunkipopup-sulje').catch(() => {});
     await sivu.waitForTimeout(400);
-    vaadi(`${tunnus}: rasti sulkee ison pop-upin`,
-      await sivu.evaluate(() => !document.querySelector('.kaupunkipopup')));
+    tieto(`${tunnus}: VANHENTUNUT VARTIO (rasti sulkee ison pop-upin)`,
+      'kaupunkimerkki avaa liuskan, ei isoa pop-upia (PAATOKSET 34 kohta 1)');
 
     /* --- vartio 5b: TURISTI-INFON NAPAUTUS ---------------------------- */
     const merkki = await infoPiste();
@@ -473,12 +497,13 @@ for (const ruutu of RUUDUT) {
           kartta: Boolean(p.querySelector('.kaupunkipopup-kartta')),
         };
       });
-      vaadi(`${tunnus}: turisti-info aukesi napautuksesta`, Boolean(info), virheet.join(' | '));
+      tieto(`${tunnus}: VANHENTUNUT VARTIO (turisti-info aukesi napautuksesta)`,
+      'turisti-infon kyltti ei ole enaa kartalla (PAATOKSET 34 kohta 8)');
       if (info) {
-        vaadi(`${tunnus}: kortissa on matkustusopas`, info.opas && info.kappaleita > 0,
-          JSON.stringify(info));
-        vaadi(`${tunnus}: kortissa on PELKKÄ opas`, !info.hero && !info.kartta,
-          JSON.stringify(info));
+        tieto(`${tunnus}: VANHENTUNUT VARTIO (kortissa on matkustusopas)`,
+      'turisti-infon kyltti ei ole enaa kartalla (PAATOKSET 34 kohta 8)');
+        tieto(`${tunnus}: VANHENTUNUT VARTIO (kortissa on PELKKÄ opas)`,
+      'turisti-infon kyltti ei ole enaa kartalla (PAATOKSET 34 kohta 8)');
         if (KUVAKANSIO && ruutu.width === 390) {
           await sivu.screenshot({
             path: join(KUVAKANSIO, `karttauudistus-4-${kaupunki.id}-turisti-info.png`),
@@ -488,8 +513,8 @@ for (const ruutu of RUUDUT) {
       }
       await sivu.keyboard.press('Escape');
       await sivu.waitForTimeout(400);
-      vaadi(`${tunnus}: Escape sulkee turisti-infon`,
-        await sivu.evaluate(() => !document.querySelector('.kaupunkipopup')));
+      tieto(`${tunnus}: VANHENTUNUT VARTIO (Escape sulkee turisti-infon)`,
+      'turisti-infon kyltti ei ole enaa kartalla (PAATOKSET 34 kohta 8)');
     }
 
     /* --- vartio 9: VASTAKOE — ohut lehti ilman herokuvia -------------- */

@@ -1673,16 +1673,28 @@ for (const ruutu of RUUDUT) {
     ? await odotaAsettunut(sivu, () => merkinPiste(sivu, liuskanKaupunkiId)) : null;
   let liuskaTulos = null;
   if (kPiste) {
-    const alku = Date.now();
-    await napauta(sivu, nurkka.x + kPiste.x, nurkka.y + kPiste.y);
+    /*
+     * KAKSI NAPAUTUSYRITYSTÄ, JA SE ON MITATTU SYY. Juuri suljetun
+     * kortin jälkeen pelin oma portti nielaisee seuraavan napautuksen
+     * (js/pallolauta/lauta.js napautaPintaan, `korttiOliAuki`), joten
+     * yksi napautus mittasi tässä savukkeessa nielun eikä liuskaa.
+     * Ensimmäinen yritys ei siis ole vartion väite; VÄITE ON, ETTÄ
+     * LIUSKA AUKEAA JA KAMERA-AJO KESTÄÄ ALLE 600 ms — kesto mitataan
+     * siitä napautuksesta, joka meni läpi.
+     */
     let kesto = null;
-    for (let i = 0; i < 40; i += 1) {
+    let alku = Date.now();
+    for (let yritys = 0; yritys < 2 && kesto === null; yritys += 1) {
       /* eslint-disable no-await-in-loop */
-      const auki = await sivu.evaluate(
-        () => window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null,
-      );
-      if (auki) { kesto = Date.now() - alku; break; }
-      await sivu.waitForTimeout(50);
+      alku = Date.now();
+      await napauta(sivu, nurkka.x + kPiste.x, nurkka.y + kPiste.y);
+      for (let i = 0; i < 40; i += 1) {
+        const auki = await sivu.evaluate(
+          () => window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null,
+        );
+        if (auki) { kesto = Date.now() - alku; break; }
+        await sivu.waitForTimeout(50);
+      }
       /* eslint-enable no-await-in-loop */
     }
     await sivu.waitForTimeout(400);
@@ -1736,10 +1748,6 @@ for (const ruutu of RUUDUT) {
     `rivejä ${ylaryhma.length}: ${ylaryhma.map((r) => r.nimi).join(', ') || '—'}`);
   const katRivit = lRivit.filter((r) => r.laji === 'kategoria');
   const summa = katRivit.reduce((a, r) => a + (r.maara ?? 0), 0);
-  const sisaisia = sisaisetZoomeilla[0]?.tulos?.kaikki ?? -1;
-  vaadi(`8f. ${ruutu.nimi}: kategorioita ≥ 2 ja summa = kaupungin sisäisten nostojen määrä`,
-    katRivit.length >= 2 && summa === sisaisia,
-    `kategorioita ${katRivit.length}, summa ${summa}, sisäisiä ${sisaisia}`);
 
   /* 8g. Haitari: ensimmäisen avaus näyttää kohteet, toisen sulkee sen. */
   const napautaLiuskanRivi = async (rivi) => {
@@ -1768,8 +1776,42 @@ for (const ruutu of RUUDUT) {
     `1: ${kohteita1.length}/${katRivit[0]?.maara ?? '—'}, `
     + `2: ${kohteita2.length}/${toinenKat?.maara ?? '—'}`);
 
+  /*
+   * 8f. LUKUMÄÄRÄT PITÄVÄT PAIKKANSA. Riippumatonta lukua EI saa
+   * `nostot.osumat()`ista: se on kartan lista, josta kaupungin
+   * sisäiset nostot on jo pudotettu (juuri se on 8a:n väite, mitattu
+   * *"kaikkiaan 0"*). Vertailuluku luetaan siksi SISÄLLÖSTÄ: jokainen
+   * kategoria avataan kerran ja sen kohderivit lasketaan. Vartio
+   * kaatuu, jos otsikon luku ja rivien määrä eroavat — se on sama
+   * lupaus kuin "summa = kaupungin sisäisten nostojen määrä", koska
+   * liuska on ainoa paikka, jossa ne nostot ovat.
+   */
+  const kategorioidenSisallot = [];
+  for (const kat of katRivit) {
+    /* eslint-disable no-await-in-loop */
+    const tuoreet = (await sivu.evaluate(
+      () => window.matkakirja.ui.pallolauta.nostot.liuskanRivit?.() ?? [],
+    )).filter((r) => r.laji === 'kategoria');
+    const rivi = tuoreet.find((r) => r.aihe === kat.aihe);
+    const avattu = await napautaLiuskanRivi(rivi);
+    /* eslint-enable no-await-in-loop */
+    const kohteita = (avattu?.rivit ?? []).filter((r) => r.laji === 'kohde'
+      && r.aihe === kat.aihe).length;
+    kategorioidenSisallot.push({ aihe: kat.aihe, otsikko: kat.maara, kohteita });
+  }
+  const sisaltoSumma = kategorioidenSisallot.reduce((a, k) => a + k.kohteita, 0);
+  tieto(`${ruutu.nimi} · liuskan kategoriat`,
+    kategorioidenSisallot.map((k) => `${k.aihe}: ${k.otsikko}/${k.kohteita}`).join(', ') || '—');
+  vaadi(`8f. ${ruutu.nimi}: kategorioita ≥ 2 ja lukumäärien summa = kohteiden määrä`,
+    katRivit.length >= 2 && summa > 0 && summa === sisaltoSumma
+      && kategorioidenSisallot.every((k) => k.otsikko === k.kohteita),
+    `kategorioita ${katRivit.length}, otsikoiden summa ${summa}, kohteita ${sisaltoSumma}`);
+
   /* 8h. Kohteen napautus avaa kortin, ja liuska sulkeutuu sen mukana. */
-  const liuskanKohde = kohteita2[0] ?? kohteita1[0] ?? null;
+  const viimeisimmat = (await sivu.evaluate(
+    () => window.matkakirja.ui.pallolauta.nostot.liuskanRivit?.() ?? [],
+  )).filter((r) => r.laji === 'kohde');
+  const liuskanKohde = viimeisimmat[0] ?? kohteita2[0] ?? kohteita1[0] ?? null;
   let liuskanKortti = null;
   if (liuskanKohde) {
     await napauta(sivu,
