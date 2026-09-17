@@ -8465,8 +8465,14 @@ export const RAAMATTU = {
           + 'Mitataan Pariisi 390 px kolmella zoomilla (saapuminen, '
           + 'valizoomi, lahizoomi): limittyvia laatikkopareja 0, sama nosto '
           + 'samassa kartta-ankkurissa kaikilla zoomeilla, lista mahtuu '
-          + 'ruudulle. Tila: kirjattu, Fable vahvistaa tulkinnan kortilla ennen '
-          + 'Opus-eraa.',
+          + 'ruudulle. TARKENNUS (omistaja 17.9.2026 klo 20.45 Suomen aikaa, '
+          + 'kortit): lista avautuu MERKIN VIERESSA kartalla (tyhjalle puolelle, '
+          + 'pehmennetty pohja, sulkeutuu kartan napautuksesta tai zoomista); '
+          + 'ahtaudessa EI piiloteta nimioita eika niputeta laajemmin, vaan '
+          + 'omin sanoin "Levita merkit laajemmalle alueelle" - ankkurit '
+          + 'levitetaan kaupungin ymparille niin laajalle kuin tarvitaan, jotta '
+          + 'kaikki nimiot nakyvat limittymatta. Tila: tyo Opus-erina '
+          + '(1: ankkurit, koko, levitys; 2: lista).',
         'KARTTAUUDISTUKSEN PAATOKSET 31: LUENTAKUVAT POIS KARTALTA '
           + 'TOISTAISEKSI; VIKA PARIISIN LAHIZOOMISSA (omistaja 16.9.2026 '
           + 'klo 16.05 UTC, iPhone-kuva Pariisista lahizoomilla, '
