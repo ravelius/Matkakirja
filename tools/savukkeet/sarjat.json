@@ -17,12 +17,7 @@
   "asetukset": {
     "savuke-astro-pallo.mjs": {
       "env": { "NAKYMAT": "tyopoyta,puhelin" },
-      "tunnetutPunaiset": [
-        "varjon puoli tummuu reunan tuntumassa",
-        "valon puoli kirkastuu reunan tuntumassa",
-        "varjo ei ulotu puoliväliin asti"
-      ],
-      "huomautus": "Häilyvä pyörivä-pallo -vartio (v1926/v1927 'astro-pallo varjo'). PR #2551:n kahdessa peräkkäisessä Actions-ajossa (run 35182355793 ajoi vihreänä, run 35183224944 kaatui juuri 'varjo ei ulotu puoliväliin asti' -väitteeseen, tyopoyta) — täsmää raporttien kuvaukseen: mittaus vaihtelee ajosta toiseen, koska pallo pyörii mittauksen aikana. Kolme muunnelmaa listattu, koska ei tiedetä etukäteen mikä niistä heittelee seuraavaksi."
+      "huomautus": "Korjattu 17.9.2026, mittaus pysäytetystä tilasta: varjovartiot (\"varjon puoli tummuu\", \"valon puoli kirkastuu\", \"varjo ei ulotu puoliväliin\") ja \"VASTAKOE: kytkin pois palauttaa pikselit\" olivat häilyviä, koska kolmen kuvakaappauksen välissä ruutu eli: ISS-merkki ja ratakaari piirtyvät joka kehyksellä ja kulkevat juuri reunan näytepisteiden yli (Actions 35221065011, PR #2555: päällä 63,5 → pois 83,5 → takaisin 57,9, puhelin). Savuke odottaa nyt pinnan lopulliseksi, pysäyttää pyörimisen, piilottaa .astro-rata ja .astro-iss mittauksen ajaksi ja hyväksyy näytteen vasta kun kaksi peräkkäistä kaappausta ovat samat; uusi vartio \"varjomittaus tehdään pysäytetystä tilasta ja samasta kamera-asennosta\" kirjaa eron. Mac-mittaus 17.9.2026: peräkkäisten näytteiden ero 0 molemmilla näytöillä kahdessa ajossa."
     },
     "savuke-satelliittilinssi.mjs": {
       "tunnetutPunaiset": [
