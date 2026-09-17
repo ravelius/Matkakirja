@@ -955,6 +955,14 @@ async function ajaAvaus({ peite = true } = {}) {
     virheet,
     ennenKirkkaus,
     avausKehykset: avausRivit.length,
+    /*
+     * KATTAVUUS = kuinka suuren osan avausikkunasta kehysnäytteet
+     * peittävät. Kehysten LUKUMÄÄRÄ riippuu koneesta (kontissa
+     * ohjelmisto-WebGL syytää kehyksiä tiheään, Macilla oikea
+     * näytönohjain harvemmin), mutta kattavuus ei.
+     */
+    avausKattavuus: avausRivit.length >= 2 && Number.isFinite(loppu) && loppu > 0
+      ? (avausRivit[avausRivit.length - 1].t - avausRivit[0].t) / loppu : 0,
     avausHuippu: avausRivit.length ? Math.max(...avausRivit.map((x) => x.kirkkaus)) : 0,
     avausNaytteita: avausNaytteet.length,
     paljaita: paljaat.length,
@@ -1003,9 +1011,19 @@ vaadi(`${nimiA}: omistajan tila toistui (luenta, saapumiskuva, pluskupla, kuvapa
  * kompositorin kehyksistä, ja niitä vaaditaan vähintään 20, jottei
  * väite mene läpi tyhjällä otoksella.
  */
+/*
+ * OTOKSEN RIITTÄVYYS MITATAAN KATTAVUUTENA, EI KEHYSTEN MÄÄRÄNÄ
+ * (17.9.2026, Mac). Vaatimus "vähintään 20 kehystä" oli kontin
+ * kehystahdin mitta: Macilla sama 384 ms:n avaus tuotti 10 kehystä ja
+ * väite kaatui, vaikka huippu (91,9) oli täsmälleen ennen-linssiä-
+ * tasolla. Tyhjää otosta vastaan suojaa nyt kaksi ehtoa: vähintään 8
+ * kehystä JA kehysten on peitettävä vähintään 60 % avausikkunasta.
+ * Itse väite (ei vaaleaa välivaihetta) ei löysty lainkaan.
+ */
 vaadi(`${nimiA}: avauksen aikana ruutu ei ole kertaakaan ennen-linssiä-tasoa vaaleampi`,
-  a.avausKehykset >= 20 && a.avausHuippu <= a.ennenKirkkaus * 1.1,
-  `kehyksiä ${a.avausKehykset}, huippu ${a.avausHuippu.toFixed(1)}, `
+  a.avausKehykset >= 8 && a.avausKattavuus >= 0.6 && a.avausHuippu <= a.ennenKirkkaus * 1.1,
+  `kehyksiä ${a.avausKehykset} (kattavuus ${(100 * a.avausKattavuus).toFixed(0)} %), `
+  + `huippu ${a.avausHuippu.toFixed(1)}, `
   + `ennen linssiä ${a.ennenKirkkaus.toFixed(1)} (raja ${(a.ennenKirkkaus * 1.1).toFixed(1)})`);
 
 /*
@@ -1042,9 +1060,20 @@ vaadi(`${nimiA}: linssin aikana kartan päällä ei ole yhtään jäännettä (>
  * ImageBitmapin vienti näytönohjaimelle vs. <img>:n (mitattu 63 ms vs
  * 287 ms eli 4,6×).
  */
+/*
+ * LEPOTASO EI OLE JOKA KONEELLA OLEMASSA (17.9.2026, Mac). Macilla
+ * sivu ei tuottanut lepotilassa YHTÄÄN pitkää tehtävää (lepoPisin 0,
+ * PerformanceObserverin longtask-raja on 50 ms), jolloin ehto
+ * `lepoPisin > 0` kaatoi väitteen — ja raja olisi ollut 0 ms.
+ * Vertailukohta on nyt `max(lepo × 3, 150 ms)`: hitaassa kontissa
+ * mitta on entinen (lepo 650 ms → raja 1 950 ms), nopeassa koneessa
+ * romahdusvartija pitää 150 ms:n rajan, joka on pienin longtaskina
+ * havaittava merkittävä ylitys. Väite säilyy romahdusvartijana.
+ */
+const PITKA_KATTO_MS = Math.max(a.lepoPisin * 3, 150);
 vaadi(`${nimiA}: avaus ei kolminkertaista sivun omaa pisintä tehtävää`,
-  a.lepoPisin > 0 && a.avausPisin <= a.lepoPisin * 3,
-  `lepo ${a.lepoPisin} ms, avaus ${a.avausPisin} ms (raja ${(a.lepoPisin * 3).toFixed(0)} ms)`);
+  a.avausPisin <= PITKA_KATTO_MS,
+  `lepo ${a.lepoPisin} ms, avaus ${a.avausPisin} ms (raja ${PITKA_KATTO_MS.toFixed(0)} ms)`);
 
 /*
  * (e) MEKANISMI. Purku siirrettiin työsäikeeseen (createImageBitmap) ja

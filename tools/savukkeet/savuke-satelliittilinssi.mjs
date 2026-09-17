@@ -693,6 +693,29 @@ async function ajaNakyma(nakymanNimi) {
     }
     return paikka;
   };
+  /*
+   * EDELLISEN VARTION JÄLJET POIS ENNEN MITTAUSTA (17.9.2026, Mac).
+   * Vartio "pallon takapuolen merkki ei ota napautusta" NAPAUTTAA
+   * takapuolen merkkiä; jos se avaa katselun (Macilla avasi, ks.
+   * tunnettu punainen), katselu jäi auki, ja `napautaPistetta`
+   * palaa heti kun `.satelliitti-katselu` on olemassa — jolloin koko
+   * kohta 5 mittasi VÄÄRÄN kohteen kuvaa (mitattu: selitteen otsikko
+   * "Bermuda — Pohjois-Atlantti", kun odotus oli "Saharan silmä", ja
+   * pienoiskuvanauhan mitat 0 × 0). Katselu suljetaan siksi pelin
+   * omalla ✕:llä ja odotetaan TILAA: mittaus alkaa puhtaalta pöydältä
+   * kummassakin ympäristössä.
+   */
+  for (let i = 0; i < 12; i += 1) {
+    // eslint-disable-next-line no-await-in-loop
+    const auki = await s.evaluate(() => Boolean(document.querySelector('.satelliitti-katselu')));
+    if (!auki) break;
+    // eslint-disable-next-line no-await-in-loop
+    await s.evaluate(() => {
+      document.querySelector('.satelliitti-katselu .satelliitti-sulku')?.click();
+    });
+    // eslint-disable-next-line no-await-in-loop
+    await s.waitForTimeout(250);
+  }
   await s.evaluate(async () => {
     const richat = window.__satelliitti.find((k) => k.tunnus === 'richat');
     await window.matkakirja.ui.pallolauta.kamera.ajaKamera(
@@ -1036,7 +1059,16 @@ async function ajaNakyma(nakymanNimi) {
     };
   });
   vaadi(nimessa('selitetekstin napautus kelaa tekstin ylös — vain otsikkorivi jää'),
-    kelaus.kiinni && kelaus.runko <= 1 && kelaus.otsikkoNakyy && ennenKelaus > 10,
+    /*
+     * ENNEN-KELAUSTA-KORKEUDEN RAJA ON 4 PX, EI 10 (17.9.2026, Mac).
+     * Luku on selitetekstin rungon korkeus PYÖRISTETTYNÄ, eli suora
+     * kirjasinmitta: macOS:n omilla kirjasimilla puhelinmitalla se on
+     * tasan 10 px ja `> 10` kaatui, kontissa se oli suurempi. Väite
+     * tarkoittaa "runko oli näkyvissä ennen napautusta ja kutistui
+     * napautuksesta nollaan" — sama 4 px:n raja kuin otsikkorivillä
+     * (`otsikkoNakyy`) sanoo sen ympäristöstä riippumatta.
+     */
+    kelaus.kiinni && kelaus.runko <= 1 && kelaus.otsikkoNakyy && ennenKelaus > 4,
     JSON.stringify({ ...kelaus, ennenKelaus }));
   // Uusi napautus avaa takaisin.
   await s.evaluate(() => document.querySelector('.satelliitti-selite')
