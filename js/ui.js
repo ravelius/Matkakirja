@@ -209,6 +209,7 @@ import {
   fokusvirtaHuudahdus, fokusvirtaUusiKulku, liikuNappiNakyvissa,
   fokusvirtaSaapumiskupla, nollaaFokuskuvat, vaiennaLivianKaupunkipuhe,
   naytaLuentakuvasarja, puraFokusvirtaPaikanvaihdossa,
+  paivitaMatkakirjanPikkukuvat,
 } from './fokusvirta.js';
 /*
  * KAUPUNGIN MINITRAILERI (omistaja 11.9.2026): kolme herokuvaa ja nimi
@@ -13099,6 +13100,13 @@ export class UI {
    */
   uusiFactKey(key) {
     this.factKey = key;
+    /*
+     * EDELLISEN MERKINNAN PIKKUKUVAT POIS (PAATOKSET 35 kohta 4).
+     * Tämä on kortin ainoa yhteinen vaihtokohta, joten rivi siivotaan
+     * tässä ja ladotaan takaisin vain fokusvirran merkinnälle
+     * (renderFact → paivitaMatkakirjanPikkukuvat).
+     */
+    paivitaMatkakirjanPikkukuvat(this, null);
     // Uusi merkintä, uusi teksti: edellisen luenta ei saa jatkua,
     // eikä edellisen merkinnän jatko-osa saa soida uuden alla.
     this.merkintaJatko = null;
@@ -13436,6 +13444,14 @@ export class UI {
          * (asetaMatkakirjanOtsikko).
          */
         this.asetaMatkakirjanOtsikko(merkinta.paikkarivi, virtaKaupunki.name);
+        /*
+         * PIKKUKUVAT MERKINNAN LOPPUUN (omistaja 17.9.2026 klo 22.05,
+         * Raamattu KARTTAUUDISTUKSEN PAATOKSET 35 kohta 4). Rivi
+         * rakennetaan tässä, koska tämä on kortin ainoa kohta, jossa
+         * fokusvirran kaupunki on tiedossa; muilla korttipoluilla rivi
+         * siivotaan uusiFactKeyssä eikä kaupungin kuvia ole.
+         */
+        paivitaMatkakirjanPikkukuvat(this, virtaKaupunki);
         this.factImageTitle = null;
         this.factImage.hidden = true;
         stopDiaryVoice(this);
