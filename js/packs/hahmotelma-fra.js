@@ -4,11 +4,11 @@
  * === OMISTAJAN PÄÄTÖS (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 33) ====
  *
  * Sanatarkasti: *"Miksi Ranskassa kaikki pisteet ovat niin lahella
- * Pariisi … nostoja siis saisi mielellaan olla ympari Ranskaa, vuoret,
+ * Pariisi … nostoja siis saisi mielellaan olla ympäri Ranskaa, vuoret,
  * linnat, alueet, muut merkittavat kohteet. Voi aluksi vaikka vain
  * hahmotella ne pisteet ja lisata pelkat pisteet kartalle ja tehda
- * niille vain otsikko pop-upit. Lisataan sisalto sitten sen jalkeen,
- * kun on saatu oikea maara nostoja kartalle, jotta se nayttaa
+ * niille vain otsikko pop-upit. Lisataan sisalto sitten sen jälkeen,
+ * kun on saatu oikea määrä nostoja kartalle, jotta se nayttaa
  * tasapainoiselta."*
  *
  * TARKENNUS (sama päätös, kortit): ensimmäinen kierros NOIN 40 nostoa
