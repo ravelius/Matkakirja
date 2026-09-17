@@ -723,3 +723,204 @@ vikakorjausten jälkeen.
 `tools/savukkeet/savuke-kaupunkipopup.mjs`, tämä raportti.
 
 **Vaatii versionoston**; `tools/uusi-versio.mjs` on ajamatta (ohje).
+
+---
+
+# Erä 5 (Opus-agentti 18.9.2026 klo 00.10 Suomen aikaa)
+
+**JÄSENYYS ON KORJATTU JA MITATTU.** Liuskassa on nyt Pariisin omat
+nostot — **5 kategoriaa, 16 nostoa** — ja kartalta ovat poistuneet
+kaikki kaupungin sisäiset, myös aihenostot ja fokuskohteet. Versailles,
+Chartres ja Chambord ovat kartalla.
+
+```
+INFO puhelin · liuskan kategoriat: kauppa: 3/3, kulttuuri: 3/3,
+     historia: 3/3, skandaalit: 5/5, ihmeet: 2/2
+OK   8a / 8b / 8c / 8d / 8e / 8f / 8g / 8i
+```
+
+## 1. JUURISYY: mitattiin ladottua paikkaa, ei datapaikkaa
+
+Fablen tarkistus oli oikeassa, ja syitä oli **kolme päällekkäin** —
+kaikki samaa lajia: mitattiin sitä, mihin merkki oli LADOTTU, ei sitä,
+missä nosto datan mukaan on.
+
+1. **Ankkurilevitys (PAATOKSET 32)** kirjoittaa rivin `lat`/`lng`:n
+   päälle sen pisteen, johon merkki mahtui: Pariisissa 33–74 km.
+2. **Kaupungin rykelmän ladonta** (`js/fokuskohteet.js`
+   `KAUPUNKIKATON_SADE = 8` laudan yksikköä ≈ 21 km) siirtää merkin jo
+   ennen palloa. Näiden kahden jälkeen Pariisin omat nostot olivat
+   **20–47 km** kaupungin pisteestä:
+   `Metron sisäänkäynti 20,55 · Tuileriain rauniot 29,54 · Torni
+   romuraudaksi 47,16` — vaikka datassa ne ovat 1,9–4,4 km.
+3. **Erä 4:n mediaani** yritti korjata kohtaa 1 siirtämällä KESKUSTA
+   nostojen mukana. Se oli kiertotie väärälle mitalle: keskus ajautui
+   ladottujen merkkien perässä eikä ollut kaupungin paikka lainkaan.
+
+**Erä 4:n oletus laudan kaupungin pisteestä oli väärä.** Mitattu
+(`tests/kaupunkiliuska.test.mjs`, uusi vartio): laudan Pariisi
+`maailmankartta` 5911,1/1440,1 → **48,8451 N / 2,3330 E**, eli
+**1,9 km** oikeasta Pariisista. 12 km:n säde riittää siitä pisteestä
+hyvin; mediaania ei tarvita eikä saa käyttää.
+
+## 2. Korjaus: kolme kenttää, yksi sääntö
+
+- **`js/pallolauta/nostot.js` `lisaa`** ottaa jokaiselta riviltä
+  alkuperäisen pisteen talteen (`omaLat`/`omaLng`) ENNEN kuin
+  ankkurilevitys kirjoittaa `lat`/`lng`:n päälle.
+- **Kaupunkikartan piste voittaa ladotun.** Jos päätoimittaja on
+  antanut nostolle pisteen kaupunkilehden kohdekartalla
+  (`js/packs/maakartat.js` `KAUPUNKIKARTAT`, kenttä `nosto:`), se ON
+  noston oma paikka. Uusi `kohdekartanNostopaikat()`
+  (`js/fokuskohteet.js`) on sama taulu kuin `kohdeKaupunkikartanNostot`
+  mutta asteineen — ei uutta lähdettä, kaksi lukua samalta riviltä.
+  Tämä on juuri se, minkä päätöksen kohta 4 sanoo *"noston OMA
+  paikka"*, ja pakan oma kommentti sanoo saman: linkki on
+  eksplisiittinen jäsenyys, joka voittaa mitan myös silloin, kun nosto
+  on ladottu kauas kaupungistaan.
+- **`onKaupunginSisainen`** (`js/pallolauta/kaupunkiliuska.js`) lukee
+  jäsenyyden `nostonOmaPaikka`-kentistä ja lisäksi paikkanimestä: jos
+  noston `paikka` on kaupungin nimi, se on sisäinen ilman mittaa.
+  `KAUPUNGIN_SADE_KM = 12` ennallaan.
+- **Keskus on kaupungin oma piste** (`laudanKaupungit`), ei mediaani.
+  Mediaanikone poistettu.
+- **Aihemerkki** (ryhmä) kantaa jäsentensä datapaikkojen keskiarvon,
+  jotta vartio 8a näkee myös ryhmän sisällön.
+
+## 3. Kategoriat — mistä nimet tulevat
+
+Nimet EIVÄT ole liuskan omia: ne ovat **pelin karttaselitteen omat
+aiheet** (`js/karttavalot.js` `KARTTAVALO_AIHEET`, luettu
+`aiheenNimi`illa). Siksi *"Kauppa ja tekniikka"* ja *"Kulttuuri ja
+ruoka"* ovat yhdistelmänimiä: pelin aiheluokitus on yhdistetty jo
+kartalla, ja liuska näyttää saman nimen kuin selite ja väripallo.
+Pidin ne. Pariisin liuska 390 px:llä:
+
+| kategoria | nostoja |
+| --- | --- |
+| Kauppa ja tekniikka | 3 |
+| Kulttuuri ja ruoka | 3 |
+| Historia | 3 |
+| Skandaalit | 5 |
+| Kadonneet ihmeet | 2 |
+| **summa** | **16** |
+
+Otsikoiden summa = kohderivien määrä jokaisessa kategoriassa (8f).
+
+## 4. MITTAUS (390 px, `savuke-pariisi-lahizoom.mjs`)
+
+**28/40 vartiota läpi.** Liuskan vartiot:
+
+| vartio | tulos |
+| --- | --- |
+| 8a sisäisiä nostomerkkejä kartalla 0 (3 zoomia) | **OK** |
+| 8b Versailles, Chartres ja Chambord kartalla | **OK** |
+| 8c napautus ajaa kameran < 600 ms ja avaa liuskan | **OK** |
+| 8d liuska kokonaan ruudussa | **OK** |
+| 8e yläryhmä 3 riviä | **OK** |
+| 8f kategorioita ≥ 2, summa = kohteiden määrä | **OK** |
+| 8g haitari | **OK** |
+| 8i (UUSI) summa ≥ 8 | **OK** (16) |
+| 8h kohteen napautus avaa kortin | **FAIL** — ks. 4b |
+
+Uusi vartio **8i** on juuri se, mitä 8f ei osannut sanoa: 8f oli vihreä
+myös silloin, kun liuskassa oli kaksi nostoa ja loput seisoivat
+kartalla. 8a ja 8f mittaavat nyt noston OMAA datapaikkaa, ja
+diagnoosirivi kertoo, jos datapaikka puuttuu (`EI DATAPAIKKAA`).
+
+### 4b. 8h jäi punaiseksi — auki, ei vanhentunut
+
+`8h. kohde Tuileries, kortti -, liuska kiinni: true`. Liuska
+sulkeutui eli napautus MENI läpi, mutta savuke ei nähnyt korttia.
+Tuileries on erikoistapaus: kohdekartan piste *"Tuileriain rauniot"*
+osoittaa kahteen nostoon (`syvennys-pariisi-tuileriat` ja `tuileries`),
+joten avautuva kortti voi olla syvennys eikä fokuskohteen pop-up —
+`avoinNosto` ei tunnista sitä. **En ehtinyt mitata tätä**; se on
+mittarin epäily, ei todistettu pelin vika, ja se on seuraavan erän
+ensimmäinen työ.
+
+### 4c. Kaappaukset (390 px)
+
+`/private/tmp/claude-501/-Users-samireivinen-Matkakirja-fable/`
+`1de1d7f9-1349-4671-ad36-3323aaf75d0f/scratchpad/kaappaukset5/`
+
+- `pariisi-lahizoom-390.png` — **kartta, liuska kiinni**
+- `pariisi-liuska-auki-390.png` — **liuska auki**: Pariisi /
+  Nähtävyydet / Turistiopas / hiusviiva / Kauppa ja tekniikka (3) /
+  Kulttuuri ja ruoka (3) / Historia (3) / Skandaalit (5) / Kadonneet
+  ihmeet (2). Kartalla näkyvät enää Versaillesin…, Chartresin…,
+  Chambordin linna…, Braillen pisteet, Joseph Meister, Loire ja
+  Kaulanauhajuttu — yksikään ei ole Pariisin sisällä.
+- `pariisi-liuska-kategoria-390.png` — **kategoria auki** (haitari)
+
+Savukkeiden tulosteet: `.../scratchpad/savuke8-390.txt` (28/40, tämä
+erä), `.../scratchpad/savuke6-390.txt` ja `savuke7-390.txt`
+(välimittaukset, joilla juurisyy paikannettiin).
+
+## 5. 1400 px ei ehtinyt — rehellisesti
+
+Aikakatto täyttyi 390 px:n mittauksen ja sen kahden diagnoosiajon
+jälkeen. **1400 px on mittaamatta tässä erässä.** Jäsenyys on
+maantieteellinen eikä riipu ruudusta (8a mittasi saman kolmella
+zoomilla), joten tulos on odotettavasti sama — mutta se on päättely,
+ei mittaus.
+
+## 6. KAULANAUHAJUTTU JÄI KARTALLE — ja miksi se on oikein
+
+Fablen listassa Kaulanauhajuttu oli liuskaan kuuluva. **Datan mukaan se
+ei ole Pariisissa:** `js/packs/skandaalit.js` antaa sille paikan
+*"Versailles'n palatsi"*, 48,8049 N / 2,1204 E = **16,2 km** laudan
+Pariisista, ja pakan oma kommentti sanoo sen suoraan: Versailles on 20
+kilometriä Pariisin keskustasta eikä osu kaupunkilehden kohdekartan
+rajaukseen. Se on `kattoVapaa`, eli nimenomaan *"kaupungin lähialueen
+nosto, jolle kohdekartalla EI ole paikkaa"* — sama luokka kuin
+Wieliczka ja Richmond Park.
+
+Päätöksen kohta 4 sanoo Versaillesin (17 km) jäävän kartalle, joten
+sama sääntö ei voi viedä Versailles'ssa tapahtunutta skandaalia
+liuskaan. **Jätin sen kartalle.** Jos omistaja haluaa sen liuskaan,
+ratkaisu ei ole säteen kasvattaminen (se veisi myös Versaillesin
+palatsin) vaan kohdekartan piste: kun `nosto:`-linkki kirjoitetaan
+Pariisin kaupunkikartalle, nosto siirtyy liuskaan itsestään. **Se on
+sisältöpäätös, ei koodi.**
+
+## 7. Vanhentuneet vartiot (`sarjat.jsonia` EI muutettu)
+
+Kartan siivous tekee vanhentuneiksi lisää aihemerkkivartioita — ne
+lukitsevat kaupungin sisäiset aihemerkit, jotka päätöksen kohta 3
+poisti kartalta. **Fable päättää, mitä `sarjat.jsoniin` kirjataan.**
+
+| vartio | miksi vanhentunut |
+| --- | --- |
+| `3e.`, `3e3.`, `3i.` | aihenostoja ei ole kartalla: Pariisin rykelmä on liuskassa (*"aihenostoja ei ollut lainkaan"*) |
+| `3g.`, `3c.` VASTAKOKEET | mittaavat ryhmityksen eroa rykelmässä, jota ei enää ole kartalla |
+| `7.`, `7b.`, `7c.`, `7e.` | turisti-infon kyltti ei ole kartalla (erä 3, kohta 8) |
+
+## 8. Oletukset (päätin itse, ei AskUserQuestionia)
+
+1. **Kohdekartan piste on noston oma paikka.** Pakan oma kommentti
+   sanoo linkin olevan eksplisiittinen jäsenyys, joka voittaa mitan;
+   käytin sitä myös paikkana, koska se on ainoa paikka datassa, jossa
+   noston oikeat asteet ovat ladonnan ulottumattomissa.
+2. **Kaulanauhajuttu jää kartalle** (osio 6).
+3. **Kategorianimet pidettiin pelin omina** (osio 3) — yhdistelmänimet
+   tulevat karttaselitteestä, eivät liuskasta.
+4. **1400 px mittaamatta** (osio 5).
+5. **`8h` jätettiin punaiseksi** mittaamattomana epäilynä (osio 4b);
+   en muuttanut vartiota arvauksen perusteella.
+
+## 9. Testit
+
+`node --test tests/*.test.mjs`: **3599 testiä, `# pass 3586`,
+`# fail 0`** (13 ohitettua). `tests/kaupunkiliuska.test.mjs` sai kolme
+uutta testiä: datapaikka voittaa levitetyn ankkurin, paikkanimi
+riittää sisäisyyteen, ja laudan Pariisin oma piste kelpaa keskukseksi
+(< 3 km oikeasta Pariisista).
+
+## 10. Muutetut tiedostot (erä 5)
+
+`js/pallolauta/nostot.js`, `js/pallolauta/kaupunkiliuska.js`,
+`js/fokuskohteet.js`, `tools/savukkeet/savuke-pariisi-lahizoom.mjs`,
+`tests/kaupunkiliuska.test.mjs`, tämä raportti.
+
+**Vaatii versionoston**; `tools/uusi-versio.mjs` on ajamatta.

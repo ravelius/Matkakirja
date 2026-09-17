@@ -1700,11 +1700,14 @@ for (const ruutu of RUUDUT) {
         nimi: o.nimi ?? o.id,
         km: k.etaisyysKm(k.nostonOmaPaikka(o) ?? { lat: o.lat, lng: o.lng },
           { lat: city.lat, lng: city.lng }),
+        // Onko datapaikka mukana lainkaan: ilman sita mitta on ladottu.
+        oma: Number.isFinite(o.omaLat),
         ankkuri: o.kaupunkiAvain ?? null,
       }))
       .sort((a, b) => a.km - b.km).slice(0, 8);
     return {
       kaupunki: city.id,
+      keskus: `${city.lat?.toFixed?.(4)}/${city.lng?.toFixed?.(4)}`,
       lahimmat,
       kartalla: osumat.filter((o) => !o.kaupunki && nakyvat.has(o.id) && sisallaKaikki(o))
         .map((o) => o.id),
@@ -1723,8 +1726,9 @@ for (const ruutu of RUUDUT) {
     sisaisetZoomeilla.push({ porras, tulos });
     tieto(`${ruutu.nimi} · liuska zoom ${porras}`,
       tulos ? `sisäisiä kartalla ${tulos.kartalla.length} (kaikkiaan ${tulos.kaikki})`
-        + `, kaupunki ${tulos.kaupunki}, lähimmät: `
-        + tulos.lahimmat.map((l) => `${l.nimi} ${p(l.km)} km/${l.ankkuri ?? '-'}`).join(', ')
+        + `, kaupunki ${tulos.kaupunki} @ ${tulos.keskus}, lähimmät: `
+        + tulos.lahimmat.map((l) => `${l.nimi} ${p(l.km)} km/${l.ankkuri ?? '-'}`
+          + `${l.oma ? '' : ' (EI DATAPAIKKAA)'}`).join(', ')
         : 'kaupunkiriviä ei ollut');
   }
   vaadi(`8a. ${ruutu.nimi}: kaupungin sisäisiä nostomerkkejä kartalla 0 (3 zoomia)`,

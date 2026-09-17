@@ -46,8 +46,9 @@ import { FOKUS_POHJAT } from '../packs/fokus-grc.js';
 import { MAASTOKOHTEET_ARK } from '../packs/maastokohteet-ark.js';
 import { MAASTOKOHTEET_ATA } from '../packs/maastokohteet-ata.js';
 import {
-  LEHDEN_VAHIN_OSUUS, avaaFokuskohde, kohdeMerkinLadonta, kohteidenNykyinenIso, maanKohdemerkit,
-  maanKohdetiedot, naapurienPoltetutMerkit, suljeFokuskohde,
+  LEHDEN_VAHIN_OSUUS, avaaFokuskohde, kohdekartanNostopaikat, kohdeMerkinLadonta,
+  kohteidenNykyinenIso, maanKohdemerkit, maanKohdetiedot, naapurienPoltetutMerkit,
+  suljeFokuskohde,
 } from '../fokuskohteet.js';
 import { avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
 import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenAsteet } from '../fokuspiste.js';
@@ -1255,11 +1256,19 @@ export function luoNostot({
      * OMA paikka"*. Alkuperäinen piste otetaan siksi talteen tässä,
      * ainoassa paikassa, jonka läpi jokainen rivi kulkee.
      */
+    const kohdekarttaPaikat = kohdekartanNostopaikat();
     const lisaa = (rivi) => {
+      /*
+       * KAUPUNKIKARTAN PISTE VOITTAA LADOTUN. Jos päätoimittaja on
+       * antanut nostolle pisteen kaupunkilehden kohdekartalla
+       * (js/packs/maakartat.js KAUPUNKIKARTAT), se ON noston oma
+       * paikka — kartalle ladottu piste on sommittelua.
+       */
+      const oma = kohdekarttaPaikat.get(rivi.id) ?? null;
       rivit.push({
         ...rivi,
-        omaLat: Number.isFinite(rivi.lat) ? rivi.lat : null,
-        omaLng: Number.isFinite(rivi.lng) ? rivi.lng : null,
+        omaLat: oma?.lat ?? (Number.isFinite(rivi.lat) ? rivi.lat : null),
+        omaLng: oma?.lng ?? (Number.isFinite(rivi.lng) ? rivi.lng : null),
         ladontaNro: nro++,
       });
     };
