@@ -50,6 +50,29 @@ export const TAHTIKERROKSET = [
   },
 ];
 
+/*
+ * ── PAIKALLAAN PYSYVÄ TAIVAS ILMAN PÖLYÄ (Raamattu ASTRONAUTIN KAMERA
+ *    LISÄYS 15, kohdat 39 ja 40) ────────────────────────────────────
+ *
+ * OMISTAJA 17.9.2026, sanatarkasti: *"Linssin alussa näytön halki
+ * lentää neliöitä. Ne voisi jättää kokonaan pois. Lisäksi tähdet pitää
+ * pysyä paikallaan, paitsi silloin kun maapalloa pyöritetään."*
+ *
+ * NELIÖT OLIVAT PÖLYKERROS. `poly` on lähin kerros (2,6–3,4
+ * pallonsädettä), ja `particlesSizeAttenuation` suurentaa lähimmät
+ * pisteet — kerroin 1,6:lla ne piirtyivät muutaman pikselin
+ * laatikoina, ja koska kerros oli AINOA ajautuva, ne myös LENSIVÄT
+ * ruudun halki. Astronautin kamera ottaa siksi taivaansa ilman
+ * pölykerrosta: pisteitä ei piiloteta, niitä ei synny.
+ *
+ * IHMISEN MATKA -linssin avaus käyttää yhä koko sarjaa: siellä pöly on
+ * parallaksin väline zoomin aikana (ks. tiedoston alku), eikä omistajan
+ * huomio koskenut sitä.
+ */
+export const TAHTIKERROKSET_PAIKALLAAN = TAHTIKERROKSET
+  .filter((k) => !k.ajautuu)
+  .map((k) => ({ ...k, ajautuu: false }));
+
 /** Pölykerroksen ajautuma: kierrosta sekunnissa (hyvin hidas). */
 export const POLYN_AJAUTUMA_KIERROSTA_S = 0.0016;
 
@@ -117,6 +140,44 @@ export function tahtijoukot(kerrokset = TAHTIKERROKSET, siemen = 20260907, kerro
   }));
 }
 
+/*
+ * ── TÄHTI ON PYÖREÄ, EI NELIÖ (LISÄYS 15 kohta 39) ────────────────
+ *
+ * `THREE.PointsMaterial` ilman `map`-tekstuuria piirtää jokaisen
+ * pisteen NELIÖNÄ: piste on ruudulla neliön kokoinen sirpale, ja koko
+ * sirpale värittyy. Tekstuuria ei voi tehdä ilman `THREE.Texture`-
+ * luokkaa, jota globe.gl ei vie ulos (ks. tiedoston alku) — mutta
+ * sävyttimeen pääsee käsiksi ilman kirjastoa: `onBeforeCompile` saa
+ * valmiin `points`-sävyttimen lähdekoodin, ja siihen voi lisätä
+ * `gl_PointCoord`-etäisyystestin. Kulmat hylätään (`discard`) ja alfa
+ * pehmenee reunaa kohti, joten piste on pyöreä ja keskeltä kirkas.
+ *
+ * Paikkaus on puhdas lisäys kirjaston omaan koodiin: jos ankkuririvi
+ * jonain päivänä katoaa, `korvattu` jää epätodeksi ja tähdet piirtyvät
+ * kuten ennenkin (ei kaatumista). Vartio lukee `tila().pyoreita`.
+ */
+export function pyoristaPiste(materiaali) {
+  try {
+    if (!materiaali || materiaali.__tahtiPyoristetty) return false;
+    const ankkuri = '#include <clipping_planes_fragment>';
+    materiaali.onBeforeCompile = (savytin) => {
+      if (!savytin?.fragmentShader?.includes(ankkuri)) return;
+      savytin.fragmentShader = savytin.fragmentShader.replace(
+        ankkuri,
+        `${ankkuri}
+        vec2 tahtiKeskus = gl_PointCoord - vec2(0.5);
+        float tahtiSade = length(tahtiKeskus);
+        if (tahtiSade > 0.5) discard;
+        diffuseColor.a *= smoothstep(0.5, 0.18, tahtiSade);`,
+      );
+      materiaali.__tahtiKaannetty = true;
+    };
+    materiaali.__tahtiPyoristetty = true;
+    materiaali.needsUpdate = true;
+    return true;
+  } catch { return false; }
+}
+
 /**
  * Tähtitaivas pallon näyttämölle.
  *
@@ -125,9 +186,12 @@ export function tahtijoukot(kerrokset = TAHTIKERROKSET, siemen = 20260907, kerro
  * @returns {{ paivita: (dt: number, peitto: number) => void,
  *   tila: () => object, pura: () => void }|null}
  */
-export function luoTahtitaivas(pallo, { reducedMotion = false, ikkuna = globalThis, kerroin = 1 } = {}) {
+export function luoTahtitaivas(pallo, {
+  reducedMotion = false, ikkuna = globalThis, kerroin = 1,
+  kerrokset = TAHTIKERROKSET, ajautuma = true,
+} = {}) {
   if (!pallo?.particlesData || !pallo.scene) return null;
-  const joukot = tahtijoukot(TAHTIKERROKSET, undefined, kerroin);
+  const joukot = tahtijoukot(kerrokset, undefined, kerroin);
   const sade = pallo.getGlobeRadius?.() ?? 100;
   const mittakaava = sade / 100;
   try {
@@ -152,6 +216,7 @@ export function luoTahtitaivas(pallo, { reducedMotion = false, ikkuna = globalTh
    * välein, kunnes Points-oliot ovat näyttämöllä.
    */
   const oliot = [];
+  let pyoreita = 0;
   let purettu = false;
   const etsi = () => {
     if (purettu || oliot.length) return;
@@ -175,6 +240,7 @@ export function luoTahtitaivas(pallo, { reducedMotion = false, ikkuna = globalTh
         // eivätkä piirry mustina laatikoina toistensa päälle.
         m.blending = 2;
         m.needsUpdate = true;
+        if (pyoristaPiste(m)) pyoreita += 1;
       }
       oliot.push({ olio: o, joukko });
     }
@@ -199,7 +265,13 @@ export function luoTahtitaivas(pallo, { reducedMotion = false, ikkuna = globalTh
       if (purettu) return;
       if (!oliot.length) etsi();
       const p = Math.max(0, Math.min(1, Number(peitto) || 0));
-      if (!reducedMotion && Number.isFinite(dt)) {
+      /*
+       * AJAUTUMA ON KYTKIN (LISÄYS 15 kohta 40). Astronautin kamera
+       * antaa `ajautuma: false`, jolloin taivas ei liiku itsestään
+       * lainkaan — tähdet kääntyvät vain kameran mukana, kun pelaaja
+       * pyörittää palloa.
+       */
+      if (ajautuma && !reducedMotion && Number.isFinite(dt)) {
         kierto += dt * POLYN_AJAUTUMA_KIERROSTA_S * Math.PI * 2;
       }
       for (const { olio, joukko } of oliot) {
@@ -211,6 +283,11 @@ export function luoTahtitaivas(pallo, { reducedMotion = false, ikkuna = globalTh
     /** Mittarit savukkeelle ja testeille. */
     tila: () => ({
       kerroksia: oliot.length,
+      /* Vartioiden luvut (LISÄYS 15): ajautuvia 0 ja pyöreitä = kerroksia. */
+      ajautuvia: oliot.filter(({ joukko }) => joukko.ajautuu).length,
+      ajautuma: Boolean(ajautuma),
+      pyoreita,
+      kaannettyja: oliot.filter(({ olio }) => Boolean(olio?.material?.__tahtiKaannetty)).length,
       pisteita: joukot.reduce((n, j) => n + j.pisteet.length, 0),
       peitto: oliot[0]?.olio?.material?.opacity ?? null,
       kierto,

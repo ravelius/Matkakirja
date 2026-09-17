@@ -117,7 +117,7 @@ import {
 } from '../pallodiag.js';
 import { MAAMASKI } from './ihmisen-matka-maamaski.js';
 import { puraPeitto } from '../aikajana-virrat-laskenta.js';
-import { luoTahtitaivas } from '../pallolauta/tahdet.js';
+import { luoTahtitaivas, TAHTIKERROKSET_PAIKALLAAN } from '../pallolauta/tahdet.js';
 import { kokoPallonKorkeus } from '../pallolauta/kamera.js';
 /*
  * Reliefin vakiot ja valinta ovat omassa moduulissaan (ks. alempana
@@ -1738,6 +1738,27 @@ export function pinnanKirkkaus(pallo, ikkuna = globalThis) {
  *
  * Palauttaa `true`, jos väri kirjoitettiin.
  */
+/*
+ * ── PALLON SÄVY: HIEMAN TUMMEMPI KAUTTAALTAAN (LISÄYS 15 kohta 43) ─
+ *
+ * OMISTAJA 17.9.2026, sanatarkasti: *"Maapallo voisi olla myös hieman
+ * tummempi kautta altaan, jolloin pisteiden hehku näkyisi
+ * mielenkiintoisempana."* — *"Kauttaaltaan piti kirjoittaa."*
+ *
+ * Tummennus tehdään MATERIAALIN VÄRILLÄ eikä tekstuuria muokkaamalla:
+ * `diffuse`-uniformi kertoo koko pinnan samalla kertoimella, joten sävy
+ * laskee tasaisesti kauttaaltaan eikä mihinkään jää valoläikkää. 0,75
+ * (0xbfbfbf) on mitattu määrä: hehkuvat kohdepisteet erottuvat, mutta
+ * pinta pysyy selvästi luettavana — ja kaukana mustan kynnyksestä
+ * (PINNAN_MUSTAN_KYNNYS), jota pinta-musta-vartija valvoo.
+ *
+ * SAMA SÄVY MYÖS SULUSSA. Sulku ei saa jättää materiaalia mustaksi
+ * (LISÄYS 13 kohta 37), joten se kirjoittaa värin aina — nyt tämän
+ * sävyn. Pelilaudalla pohjapallo on laattamoottorin alla, joten arvo
+ * vaikuttaa vain seuraavan avauksen lähtötilaan.
+ */
+export const PALLON_SAVY = 0xbfbfbf;
+
 export function valkaiseMateriaali(materiaali, hex = 0xffffff) {
   try {
     if (!materiaali) return false;
@@ -2153,7 +2174,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
    * joten sen konstruktori on sama luokka (mitattu Mac-sessiossa).
    */
   const varinLahto = materiaali?.color?.getHex?.() ?? null;
-  valkaiseMateriaali(materiaali);
+  valkaiseMateriaali(materiaali, PALLON_SAVY);
   pallo.backgroundColor?.(AVARUUDEN_TAUSTA);
   pallo.atmosphereColor?.(ILMAKEHAN_VARI);
   pallo.atmosphereAltitude?.(ILMAKEHAN_KORKEUS);
@@ -2199,7 +2220,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      */
     if (!varinValkaisuTehty) {
       varinValkaisuTehty = true;
-      const valkaistiin = valkaiseMateriaali(materiaali);
+      const valkaistiin = valkaiseMateriaali(materiaali, PALLON_SAVY);
       lauta?.heraa?.();
       pallodiag('pinta-musta', {
         askel: 1, toimenpide: valkaistiin ? 'vari-valkoiseksi' : 'ei-onnistunut', kirkkaus,
@@ -2212,7 +2233,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     varapolullaKaytiin = true;
     reliefiPaalla = false;
     pallo.globeImageUrl(tekstuuri);
-    valkaiseMateriaali(materiaali);
+    valkaiseMateriaali(materiaali, PALLON_SAVY);
     lauta?.heraa?.();
     vapautaReliefi();
     pallodiag('pinta-musta', { askel: 2, toimenpide: 'vyohykepallo', kirkkaus }, ikkuna);
@@ -2243,8 +2264,18 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   ikkuna.document?.body?.classList?.add?.('satelliitti-avaruus');
 
   /* ---- 2. tähdet ---------------------------------------------------- */
+  /*
+   * TÄHDET PAIKALLAAN JA ILMAN PÖLYNELIÖITÄ (LISÄYS 15, kohdat 39–40).
+   * Pölykerros jätetään pois kokonaan (se oli ruudun halki lentävät
+   * vaaleat neliöt) ja ajautuma sammutetaan: taivas kääntyy vain
+   * kameran mukana, kun pelaaja pyörittää palloa.
+   */
   const taivas = luoTahtitaivas(pallo, {
-    reducedMotion: reduced, ikkuna, kerroin: TAHTIEN_KERROIN,
+    reducedMotion: reduced,
+    ikkuna,
+    kerroin: TAHTIEN_KERROIN,
+    kerrokset: TAHTIKERROKSET_PAIKALLAAN,
+    ajautuma: false,
   });
   taivas?.paivita?.(0, 1);
   /* ---- 2b. ISS, ratakaari ja auringon sivuvalo (luku 2c) ----------- */
@@ -2504,6 +2535,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       rajat,
       tahtia: taivas?.tila?.()?.pisteita ?? 0,
       tahtikerroksia: taivas?.tila?.()?.kerroksia ?? 0,
+      /* LISÄYS 15: ajautuvia 0, pyöreitä = kerroksia, kierto pysyy 0:ssa. */
+      tahdet: taivas?.tila?.() ?? null,
       piilotettuja: pinnat.maara(),
       nimetNakyvissa: nimetPaalla,
       nimienKynnys: +(alt * NIMIEN_KYNNYS).toFixed(3),
@@ -2598,7 +2631,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
          * globe.gl alustaa värin mustaksi) — sulku jättää aina VALKOISEN
          * (oletushex), jotta musta ei jää odottamaan seuraavaa avausta.
          */
-        valkaiseMateriaali(materiaali);
+        valkaiseMateriaali(materiaali, PALLON_SAVY);
       }
       // Reliefin blob-osoite pois vasta kun pinta on jo vaihdettu.
       vapautaReliefi();
