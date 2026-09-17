@@ -8471,8 +8471,16 @@ export const RAAMATTU = {
           + 'ahtaudessa EI piiloteta nimioita eika niputeta laajemmin, vaan '
           + 'omin sanoin "Levita merkit laajemmalle alueelle" - ankkurit '
           + 'levitetaan kaupungin ymparille niin laajalle kuin tarvitaan, jotta '
-          + 'kaikki nimiot nakyvat limittymatta. Tila: tyo Opus-erina '
-          + '(1: ankkurit, koko, levitys; 2: lista).',
+          + 'kaikki nimiot nakyvat limittymatta. TARKENNUS 2 (omistaja 17.9.2026 '
+          + 'klo 21.20 Suomen aikaa, kortit ankkurieran kaappauksista PR #2565): '
+          + 'turisti-infon kyltti on SAMAA KOKOA kuin nostot (poltetun kartan '
+          + 'mitta, kumoaa PAATOKSET 31 TARKENNUS 2 kohdan 5 mitan 11,5/16 px); '
+          + 'saapumisnakymassa (koko maa) Pariisin nostot saavat olla pelkkia '
+          + 'pisteita ilman nimioita, nimiot valizoomista alkaen (PAATOKSET 27 '
+          + 'kohta 10 sailyy). Fablen havainto samasta kaappauksesta: '
+          + 'lahizoomissa Tuileriain rauniot -nimio jai pelinappulan alle - '
+          + 'nappula on este, korjataan ennen julkaisua. Tila: tyo Opus-erina '
+          + '(1: ankkurit, koko, levitys - PR #2565 + paikkaus; 2: lista).',
         'KARTTAUUDISTUKSEN PAATOKSET 31: LUENTAKUVAT POIS KARTALTA '
           + 'TOISTAISEKSI; VIKA PARIISIN LAHIZOOMISSA (omistaja 16.9.2026 '
           + 'klo 16.05 UTC, iPhone-kuva Pariisista lahizoomilla, '
