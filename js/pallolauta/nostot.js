@@ -1423,32 +1423,90 @@ export function luoNostot({
      * kiinteänä esteenä. Näin kameran pudottamien merkkien paluu ei
      * lado koko kaupunkia uudelleen.
      */
-    const uudetRivit = liikkuvat.filter((r) => !ankkurivarasto.lue(r.avain));
+    const laatikkoKehyksessa = (r) => (r.perhe === 'aihemerkki'
+      ? aihemerkinLaatikko(kehys(r.p), { ...r, mitta }, {
+        kylki: r.puoli ?? 'oikea', nimio: Boolean(r.nimi),
+      })
+      : nostonLaatikko(kehys(r.p), r, { kylki: r.puoli ?? 'oikea', nimio: Boolean(r.nimi) }));
+    /*
+     * KIINTEÄT ESTEET SAAPUMISKEHYKSESSÄ (ks. alempana `kiinteat`).
+     * Ruutuvakio este (pelinappula) skaalataan PAIKASTA, ei koosta.
+     */
+    const esteetKehyksessa = (esteet ?? []).map((e) => {
+      const kx = ((e.x0 + e.x1) / 2) * uloinOsuus;
+      const ky = ((e.y0 + e.y1) / 2) * uloinOsuus;
+      const puoliW = (e.x1 - e.x0) / 2;
+      const puoliH = (e.y1 - e.y0) / 2;
+      return {
+        x0: kx - puoliW, y0: ky - puoliH, x1: kx + puoliW, y1: ky + puoliH,
+      };
+    });
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * ANKKURI EI SAA JÄÄDÄ KIINTEÄN ESTEEN ALLE (omistaja 17.9.2026
+     * illalla, Raamattu KARTTAUUDISTUKSEN PAATOKSET 32 TARKENNUS 2
+     * kohta b)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * MITATTU VIKA (Pariisi 390 px, kolme zoomia, 17.9.2026 illalla):
+     * nimiö *"Tuileriain rauniot…"* makasi pelinappulan päällä KAIKILLA
+     * kolmella zoomilla, vaikka nappula on annettu levitykselle
+     * kiinteänä esteenä. Syy ei ole levityksessä vaan AJOITUKSESSA:
+     * ankkuri valitaan KERRAN ja pidetään (kohta 1), ja pelinappula on
+     * merkkikerroksen oma elementti, joka syntyy globe.gl:n omalla
+     * kellolla (`tyonna` → kirjaston seuraava kehys). Jos ensimmäinen
+     * ladonta ehti ennen nappulan elementtiä, `esteet` oli tyhjä, ja
+     * ankkuri lukittui nappulan alle pysyvästi.
+     *
+     * KORJAUS ON ITSEKORJAAVA EIKÄ UUSI AJOITUSOLETUS: ankkuri, joka
+     * on kiinteän esteen alla, katsotaan uudelleen ladottavaksi. Se ei
+     * riko kohtaa 1 (*"sama nosto samassa lat/lng-pisteessä kaikilla
+     * zoomeilla"*), koska tarkistus tehdään SAAPUMISKEHYKSESSÄ eikä
+     * nykyisellä zoomilla: kehys on ahtain mahdollinen näkymä, joten
+     * kerran siitä irronnut ankkuri on vapaa joka zoomilla eikä ehto
+     * enää laukea. Levitys työntää koko siirron liikkuvalle, joten
+     * pako on muutaman kymmenen pikselin mittainen ja hyvin
+     * ANKKURIN_SIIRTOKATTO_PX:n sisällä.
+     */
+    const esteenAlla = (r) => {
+      if (!esteetKehyksessa.length) return false;
+      const a = ankkurivarasto.lue(r.avain);
+      if (!a) return false;
+      const p = ruudulla(a.lat, a.lng);
+      if (!p) return false;
+      const laatikko = laatikkoKehyksessa({ ...r, p });
+      return esteetKehyksessa.some((e) => laatikko.x0 < e.x1 && e.x0 < laatikko.x1
+        && laatikko.y0 < e.y1 && e.y0 < laatikko.y1);
+    };
+    const uudetRivit = liikkuvat.filter((r) => !ankkurivarasto.lue(r.avain) || esteenAlla(r));
     if (uudetRivit.length) {
-      const laatikkoKehyksessa = (r) => (r.perhe === 'aihemerkki'
-        ? aihemerkinLaatikko(kehys(r.p), { ...r, mitta }, {
-          kylki: r.puoli ?? 'oikea', nimio: Boolean(r.nimi),
-        })
-        : nostonLaatikko(kehys(r.p), r, { kylki: r.puoli ?? 'oikea', nimio: Boolean(r.nimi) }));
       const levitettavat = uudetRivit.map((r) => ({
         avain: r.avain, ...kehys(r.p), laatikko: laatikkoKehyksessa(r),
       }));
       // Kiinteä muste ei väisty: poltettu laatta, kaupunkimerkit ja
       // laudan antamat esteet (pelinappula).
+      const ladotaan = new Set(uudetRivit.map((r) => r.avain));
+      /*
+       * JO ANKKUROITU ON ESTE OMASSA ANKKURISSAAN, EI DATAPISTEESSÄÄN
+       * (korjattu 17.9.2026 illalla). Laatikko laskettiin ennen raa'asta
+       * `r.p`:stä, joten levitys väisti paikkaa, jossa merkkiä ei enää
+       * ollut. Uudelleen ladottava rivi ei myöskään saa olla oma
+       * esteensä — muuten se ei pääsisi mihinkään.
+       */
+      const ankkurinKehys = (r) => {
+        const a = ankkurivarasto.lue(r.avain);
+        const p = a ? ruudulla(a.lat, a.lng) : null;
+        return p ? laatikkoKehyksessa({ ...r, p }) : null;
+      };
       const kiinteat = [
-        // Jo ankkuroidut eivät liiku: ne ovat uusille esteitä.
-        ...liikkuvat.filter((r) => ankkurivarasto.lue(r.avain))
-          .map((r) => laatikkoKehyksessa(r)),
+        ...liikkuvat.filter((r) => !ladotaan.has(r.avain) && ankkurivarasto.lue(r.avain))
+          .map(ankkurinKehys).filter(Boolean),
         ...piirrettavat.filter((r) => r.p && r.kaupunki)
           .map((r) => nostonLaatikko(kehys(r.p), r, { nimio: Boolean(r.nimi) })),
         ...nakyvat.filter((r) => r.p && r.poltettu && r.perhe !== 'piste')
           .map((r) => nostonLaatikko(kehys(r.p), r, { nimio: Boolean(r.nimi) })),
-        ...(esteet ?? []).map((e) => ({
-          x0: e.x0 * uloinOsuus,
-          y0: e.y0 * uloinOsuus,
-          x1: e.x1 * uloinOsuus,
-          y1: e.y1 * uloinOsuus,
-        })),
+        // Ruutuvakio este (pelinappula) kehyksessä, ks. esteetKehyksessa.
+        ...esteetKehyksessa,
       ];
       const siirrot = levitaMerkit(levitettavat, kiinteat);
       const uudet = new Map();

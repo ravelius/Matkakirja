@@ -147,3 +147,133 @@ Kaappaukset (`tools/savukkeet/kaappaukset/nostoankkurit/`):
   `js/pallolauta/aihemerkit.js`, `js/pallolauta/lauta.js`, uusi
   `js/pallolauta/nostoankkurit.js`, `sw.js`). `tools/uusi-versio.mjs`
   on tämän erän ohjeen mukaan jätetty ajamatta.
+
+---
+
+## Paikkaus 17.9. ilta
+
+Opus-agentti 17.9.2026 illalla Suomen aikaa, samalle haaralle
+(`claude/bold-ride-vow4ki-nostoankkurit`, PR #2565). Omistajan kaksi
+lisäystä, Raamattu **KARTTAUUDISTUKSEN PAATOKSET 32 TARKENNUS 2**.
+
+### a) Turisti-infon kyltti on samaa kokoa kuin nostot — tehty
+
+Kyltin mitta tuli kahdesta paikasta, molemmissa kaupunkimerkin omalla
+kertoimella (`KAUPUNKIMERKIN_KERROIN`, 11,5 px:n nimiö ja lähizoomissa
+katon 16 px). Molemmat ovat nyt noston mitta eli poltetun kartan mitta:
+
+- `js/pallolauta/lauta.js` `KYLTIN_LADONTA`: `kaupunki: true` →
+  **`false`**. Kenttä ei tarkoittanut tässä tietueessa mitään muuta kuin
+  mittakerrointa (`merkinKerroin`); koko tietue menee vain
+  `nostonLaatikko`lle, joten samalla korjautuvat **kyltin varaus
+  ladonnassa (kohta 6)** ja **siirtyminen sivuun (kohta 7)** — ne
+  lasketaan samasta laatikosta.
+- `js/pallolauta/lauta.js` `paivitaTuristiInfo`: datumin
+  `mitta: nostonMitta(KAUPUNKIMERKIN_KERROIN)` → **`nostonMitta()`**.
+
+Napautus avaa oppaan ennallaan (`avaa`-kenttä, PAATOKSET 31 TARKENNUS 2
+kohta 4) — siihen ei koskettu. Mitattu 0,773 **kaikilla kolmella
+zoomilla**, sama luku kuin poltetulla (vartio 4 vihreä 3/3).
+
+### b) Pelinappula on este — juurisyy löytyi, korjattu kolmessa kohdassa
+
+Nappulan laatikko **ei ollut väärän kokoinen eikä väärässä kehyksessä**
+siinä mielessä, mitä ensin epäiltiin — vika oli, että **kaksi kolmesta
+ladontapolusta ei nähnyt nappulaa lainkaan**:
+
+1. **Sovittelu ei tuntenut nappulaa.** `sovitteleLaput`
+   (`js/pallolauta/sovittelu.js`) vaihtaa nimiön kylkeä ja siirtää sitä
+   ruutupikseleinä *joka levossa ja joka zoomilla*, ja sen esteistössä
+   olivat vain kaupunkien nimet ja turisti-infon kyltti. Merkki pysyi
+   ankkurissaan, mutta **nimiö käännettiin lähizoomissa nappulan
+   puolelle** — täsmälleen omistajan kuva. Korjaus: `ladoLevossa`
+   antaa `kiinteat: [...infoTulos, ...merkit.laatikot('peli')]`, sama
+   lista kuin nimiladonnan `pinot`.
+2. **Ruutuvakio este skaalattiin koosta.** `ankkuroi`
+   (`js/pallolauta/nostot.js`) kertoi esteen kaikki neljä nurkkaa
+   `uloinOsuus`illa. Nappula on kiinteän kokoinen ruutumerkki (32 × 36
+   px, `merkit.js nappulaElementti`), joten lähizoomissa (osuus 0,34)
+   sen este oli saapumiskehyksessä **kolmasosan kokoinen**. Nyt
+   kehykseen siirtyy vain keskipiste ja laatikko säilyttää mittansa.
+3. **Ankkuri saattoi lukittua nappulan alle pysyvästi.** Ankkuri
+   valitaan kerran ja pidetään (kohta 1), ja nappula on
+   merkkikerroksen elementti, joka syntyy globe.gl:n omalla kellolla.
+   Jos ensimmäinen ladonta ehti ennen nappulan elementtiä, `esteet` oli
+   tyhjä ja ankkuri jäi sen alle lopullisesti. Korjaus on itsekorjaava:
+   **kiinteän esteen alle jäänyt ankkuri ladotaan uudelleen**, ja
+   tarkistus tehdään SAAPUMISKEHYKSESSÄ (ahtain mahdollinen näkymä),
+   joten kerran irronnut ankkuri on vapaa joka zoomilla eikä ehto enää
+   laukea. Samalla korjattiin, että jo ankkuroitu merkki on este
+   **omassa ankkurissaan** eikä raa'assa datapisteessään.
+
+Tulos: **yksikään nosto, aihenosto tai niiden nimiö ei ole enää
+nappulan laatikon päällä millään zoomilla.** Ennen korjausta
+*Kyyhkyposti…*, *Impressionistit…* ja *Tuileriain rauniot…* olivat
+nappulan päällä, *Tuileriain rauniot…* kaikilla kolmella zoomilla.
+
+### Mitat (Pariisi 390 × 844, dpr 2, Mac, Chrome for Testing)
+
+`tools/savukkeet/mittaa-nostoankkurit.mjs`, yksi ajo (Fablen ohje: ei
+sarjoja eikä vastakoetta; vastakokeen liput `?nostoankkurit=0` ja
+`?nostokoko=0` ovat yhä koodissa ja ajettavissa käsin). Mittaan
+lisättiin kaksi uutta vartiota (4 ja 5) ja kyltti part 2:n
+laatikkojoukkoon. **8/13**, edellinen tila samalla mitalla oli 7/13.
+
+| vartio | ennen paikkausta | jälkeen |
+| --- | --- | --- |
+| 4 kyltin mitta = poltettu, 3 zoomia | — (11,5/16 px) | **3/3 vihreä, 0,773** |
+| 5 nappulan päällä, saapuminen | 4 (Kyyhkyposti…, Impressionistit…, Tuileriain rauniot…, **PARIISI**) | 1 (**PARIISI**) |
+| 5 nappulan päällä, välizoomi | 2 (Tuileriain rauniot…, PARIISI) | 1 (PARIISI) |
+| 5 nappulan päällä, lähizoomi | 1 (**Tuileriain rauniot…**) | **0 — vihreä** |
+| 2 limittyviä pareja, lähizoomi | 1 | **0 — vihreä** |
+| 2 limittyviä pareja, välizoomi | 2 | 1 (PARIISI × nappula) |
+| 2 limittyviä pareja, saapuminen | 11 | 7 (kaikki Pariisin ulkopuolella) |
+
+Kaappaukset (`tools/savukkeet/kaappaukset/nostoankkurit/`):
+`nostoankkurit-saapuminen.png`, `nostoankkurit-valizoomi.png`,
+**`nostoankkurit-lahizoomi.png`** (omistajan kuvan näkymä — nappula on
+siinä nyt puhdas).
+
+`node --test tests/*.test.mjs`: **3585 testiä, 0 punaista** (3572
+vihreää, 13 ohitettua). Kaksi vartijatestiä
+(`tests/pallosovittelu.test.mjs`) päivitettiin uuteen päätökseen:
+`KYLTIN_LADONTA` `kaupunki: false` ja sovittelun uusi `kiinteat`-lista.
+
+### Mitä jäi punaiseksi ja miksi
+
+1. **PARIISI-nimi on yhä nappulan päällä** (saapuminen ja välizoomi;
+   lähizoomissa nimeä ei ole ruudulla). Tämä ei ole nostokerroksen vaan
+   **nimikerroksen** asia: `js/karttanimet.js ladoRuutunimet` saa
+   nappulan `pinot`-listassa ja varaa sen, mutta pelaajan OMAN
+   kaupungin nimi päätyy silti sen päälle. Jätin sen koskematta, koska
+   omistajan kohta b nimesi nostojen nimiöt ja korjaus osuisi
+   kolmanteen kerrokseen (kaupunkien nimien ladonta) tämän erän
+   aikakaton ulkopuolella. **Suositus:** oma pieni erä
+   `karttanimet.js`:ään, jossa pelaajan kaupungin nimi väistää pinoa
+   samalla säännöllä kuin muutkin.
+2. **Vartio 1 (ankkuri ei liiku) näyttää kaksi liikkunutta merkkiä,
+   suurin ero 0,093°.** Tämä on korjauksen 3 **tarkoitettu** seuraus,
+   ei paluu vanhaan vikaan: merkit, jotka olivat ensimmäisellä
+   ladonnalla nappulan alla, irtoavat sieltä kerran heti kun nappulan
+   elementti on olemassa — ja mitta lukee perustason ENNEN tuota
+   irtoamista. Sen jälkeen ne eivät liiku (välizoomi ja lähizoomi ovat
+   samassa pisteessä, ja vartiot 2 ja 5 ovat lähizoomissa vihreät).
+   Jos Fable haluaa vartion vihreäksi, perustaso pitää lukea vasta
+   toisen ladonnan jälkeen — se on mittarin muutos, ei pelin.
+3. **Saapumisnäkymän 7 paria ovat samat kuin erässä 1** (Marseillen
+   rykelmä, Camarguen poltettu pari, kaksi kaupunginnimiparia) — syy ja
+   jatkoehdotus ovat tämän raportin luvussa 5, eikä niihin koskettu.
+
+### Oletukset (päätin itse, aikakaton alla)
+
+1. **Kaupunkimerkkien 11,5 px säilyy** (PAATOKSET 25 kohta 2).
+   TARKENNUS 2 kohta a puhuu turisti-infon kyltistä, ei kartan
+   hierarkian kaupunkinimistä.
+2. **Vartijatestien päivitys on oikea liike.** Kaksi testiä lukitsi
+   lähdetekstistä juuri ne kaksi kohtaa, jotka omistaja kumosi
+   (`kaupunki: true`, sovittelun vanha `kiinteat`). Päivitin ne uuteen
+   päätökseen perusteluineen sen sijaan, että olisin kiertänyt ne.
+3. **Vastakoetta ei ajettu** (Fablen ohje). Vastakoelohko poistettiin
+   mittarista; liput jäivät koodiin ja erän 1 vastakoekuvat kansioon.
+4. **Versionostoa ei tehty** (`tools/uusi-versio.mjs` ajamatta), kuten
+   erässä 1 — pelikoodi muuttuu, joten nosto tarvitaan julkaisussa.

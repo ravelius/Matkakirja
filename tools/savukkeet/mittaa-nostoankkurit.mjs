@@ -178,11 +178,34 @@ async function lue(sivu) {
     const nimet = [...document.querySelectorAll('.pallolauta-nimi')]
       .filter((el) => el.getBoundingClientRect().width > 0)
       .map((el) => ({ nimi: el.textContent.trim(), ...rect(el) }));
-    const nappula = [...document.querySelectorAll('.pallolauta-nappula, .pallolauta-pelaaja')]
+    /*
+     * NAPPULAN LAATIKKO LUETAAN SVG:STÄ, EI ELEMENTISTÄ. Lepomerkin
+     * oma laatikko on 0 × 0 (css/styles.css
+     * `.pallolauta-nappula:not(.pallolauta-liikkuva)`), jotta CSS2D:n
+     * keskitys ei siirrä sitä, ja koko hahmo on svg:n ylivuotoa —
+     * elementin rect antaa siis nollan ja vanha `width > 0` -suodin
+     * pudotti nappulan mitasta kokonaan. Sama lähde kuin pelillä
+     * itsellään (js/pallolauta/merkit.js `laatikot`).
+     */
+    const nappula = [...document.querySelectorAll('.pallolauta-nappula')]
+      .map((el) => el.querySelector('svg') ?? el)
       .filter((el) => el.getBoundingClientRect().width > 0)
       .map((el) => ({ nimi: 'nappula', ...rect(el) }));
+    /*
+     * KYLTIN MITTA RUUDULTA (PAATOKSET 32 TARKENNUS 2 kohta a): sama
+     * luku, jonka `asetteleTuristiInfo` kirjoittaa siirtoryhmän
+     * transformiin — ei laudan sisäinen kenttä vaan se, mikä ruudulla
+     * oikeasti piirtyy.
+     */
+    const kylttiG = document.querySelector('.pallolauta-turisti-info-siirto');
+    const kylttiR = kylttiG?.getBoundingClientRect();
+    const kyltti = kylttiG ? {
+      nimi: 'Turisti-info',
+      mitta: Number(/scale\(([\d.]+)\)/.exec(kylttiG.style.transform ?? '')?.[1] ?? NaN),
+      ...(kylttiR?.width > 0 ? rect(kylttiG) : {}),
+    } : null;
     return {
-      merkit, laatikot, nimet, nappula, osuus: l.uloimmanOsuus?.() ?? null,
+      merkit, laatikot, nimet, nappula, kyltti, osuus: l.uloimmanOsuus?.() ?? null,
     };
   });
 }
@@ -247,6 +270,9 @@ for (const l of lukemat) {
     ...l.laatikot.map((r) => ({ nimi: r.nimi ?? r.id, poltettu: Boolean(r.poltettu), ...r })),
     ...l.nimet.map((r) => ({ ...r, poltettu: false })),
     ...l.nappula.map((r) => ({ ...r, poltettu: false })),
+    // Kyltti on nyt nostojen kokoinen (kohta 4), joten se mitataan
+    // samassa joukossa kuin muukin muste.
+    ...(l.kyltti?.x1 ? [{ ...l.kyltti, poltettu: false }] : []),
   ];
   const parit = [];
   let laatassa = 0;
@@ -270,38 +296,52 @@ for (const l of lukemat) {
     mitat.length > 0 && poikkeavat.length === 0, `poikkeavia ${poikkeavat.length}`);
 }
 
+/* ── 4) TURISTI-INFON KYLTTI ON SAMAA KOKOA KUIN NOSTOT ──────────── */
+/*
+ * PAATOKSET 32 TARKENNUS 2 kohta a (omistaja 17.9.2026 illalla):
+ * kyltti kutistuu poltetun kartan mittaan — sama pallo ja sama 8,5 px:n
+ * nimiö kuin nostoilla, kaikilla zoomeilla. Kumoaa PAATOKSET 31
+ * TARKENNUS 2 kohdan 5 mitan (11,5 px saapuessa, 16 px lähizoomissa).
+ */
+for (const l of lukemat) {
+  const m = l.kyltti?.mitta;
+  tieto(`${l.nimi} kyltin mitta`, `${p(m, 3)} (poltettu ${p(NOSTON_MITTA, 3)})`);
+  vaadi(`4 ${l.nimi}: kyltin mitta = poltetun kartan mitta`,
+    Number.isFinite(m) && Math.abs(m - NOSTON_MITTA) <= 1e-3,
+    `kyltin mitta ${p(m, 4)}`);
+}
+
+/* ── 5) PELINAPPULA ON ESTE: MIKÄÄN NIMIÖ TAI MERKKI EI OLE SEN PÄÄLLÄ ── */
+/*
+ * PAATOKSET 32 TARKENNUS 2 kohta b. Vartio on erillinen kohdasta 2,
+ * koska nappula putosi ennen mitasta kokonaan (0 × 0 elementti, ks.
+ * `lue`) — nyt se nimetään omaksi väitteekseen, jottei sama vika voi
+ * enää mennä läpi hiljaisena.
+ */
+for (const l of lukemat) {
+  if (!l.nappula.length) tieto(`${l.nimi} nappula`, 'ei nappulaa ruudulla');
+  const paalla = [];
+  for (const n of l.nappula) {
+    for (const r of [...l.laatikot, ...l.nimet, ...(l.kyltti?.x1 ? [l.kyltti] : [])]) {
+      if (limittyy(n, r)) paalla.push(r.nimi ?? r.id);
+    }
+  }
+  tieto(`${l.nimi} nappulan päällä`, `${paalla.length}${paalla.length ? ` (${paalla.slice(0, 6).join('; ')})` : ''}`);
+  vaadi(`5 ${l.nimi}: nappulan laatikon päällä ei yhtään nimiötä eikä merkkiä`,
+    l.nappula.length > 0 && paalla.length === 0,
+    l.nappula.length ? `${paalla.length} päällä` : 'nappulaa ei löytynyt ruudulta');
+}
+
 await ctx.close();
 
-/* ── VASTAKOE: vanha ladonta palauttaa limityksen ─────────────────── */
-const vastakoe = await avaaSivu({ ankkurit: false });
-const vastaParit = [];
-for (const z of ZOOMIT) {
-  // eslint-disable-next-line no-await-in-loop
-  await zoomaa(vastakoe.sivu, z.osuus);
-  // eslint-disable-next-line no-await-in-loop
-  const tila = await lue(vastakoe.sivu);
-  // eslint-disable-next-line no-await-in-loop
-  await kaappaa(vastakoe.sivu, `nostoankkurit-vastakoe-${z.nimi}.png`);
-  const laatikot = [...tila.laatikot, ...tila.nimet, ...tila.nappula];
-  let parit = 0;
-  for (let i = 0; i < laatikot.length; i += 1) {
-    for (let j = i + 1; j < laatikot.length; j += 1) if (limittyy(laatikot[i], laatikot[j])) parit += 1;
-  }
-  vastaParit.push({ nimi: z.nimi, parit, merkit: tila.merkit });
-  tieto(`vastakoe ${z.nimi} limittyviä pareja`, parit);
-}
-const vastaPerus = new Map(vastaParit[0].merkit.filter(elava).map((m) => [m.id, m]));
-let vastaLiikkui = 0;
-for (const l of vastaParit.slice(1)) {
-  for (const m of l.merkit.filter(elava)) {
-    const a = vastaPerus.get(m.id);
-    if (a && Math.hypot(m.lat - a.lat, m.lng - a.lng) > 1e-9) vastaLiikkui += 1;
-  }
-}
-tieto('vastakoe: liikkuneita ankkureita', vastaLiikkui);
-vaadi('V vastakoe ?nostoankkurit=0 näyttää limityksen palaavan',
-  vastaParit.some((v) => v.parit > 0), 'vastakoe ei näyttänyt limitystä');
-await vastakoe.ctx.close();
+/*
+ * VASTAKOETTA EI AJETA TÄSSÄ ERÄSSÄ (Fablen ohje 17.9.2026 illalla:
+ * *"Yksi Playwright-kohdemittaus, ei koko sarjoja, ei vastakoetta
+ * (UI-säätö)"*). Vastakokeen liput ovat yhä koodissa ja ajettavissa
+ * käsin: `?nostoankkurit=0` palauttaa vanhan ladonnan ja
+ * `?nostokoko=0` kartan mukana kasvavan mitan; erän 1 vastakoekuvat
+ * ovat kansiossa `nostoankkurit-vastakoe-*.png`.
+ */
 
 await selain.close();
 palvelin.close();
