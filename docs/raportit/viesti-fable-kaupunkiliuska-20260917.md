@@ -388,6 +388,21 @@ INFO  tyopoyta · liuska zoom 0.34: kaupunkiriviä ei ollut
 **Kaappaus kertoo syyn** (`pariisi-liuska-auki-390.png`): napautuksesta
 aukesi **Lillen nostokortti**, ei Pariisin liuska.
 
+### Varmistus: kolmas ajo, 390 px, vartio korjattuna
+
+Ensimmäinen tulkinta olisi voinut olla vartion oma vika (se otti
+`osumat()`in ENSIMMÄISEN kaupunkirivin). Vartio korjattiin hakemaan
+rivi **pelaajan oman kaupungin nimellä** ja kirjaamaan kaikki rivit.
+Kolmas ajo (`SAVUKE_RUUTU=390`, **28/40**) antoi kiistattoman rivin:
+
+```
+INFO  puhelin · liuskan kaupunkirivi: oma Pariisi, rivejä [Lille], osuma EI RIVIÄ
+```
+
+**Lähizoomissa nostokerroksen ainoa kaupunkirivi on Lille. Pariisilla
+— pelaajan omalla kaupungilla — ei ole riviä lainkaan.** Juurisyy on
+siis mitattu eikä päätelty.
+
 ### Juurisyy (mitattu, ei arvattu)
 
 `js/pallolauta/nostot.js` `avaaLiuskaKaupungista` etsii liuskan
@@ -402,7 +417,8 @@ lähizoomissa ole lainkaan riviä nostokerroksessa:
 
 Seuraus on kaksisuuntainen:
 
-1. **Liuska ei aukea pelaajan omasta kaupungista.** `napautaKaupunki`
+1. **Liuska ei aukea pelaajan omasta kaupungista** (mitattu yllä).
+   `napautaKaupunki`
    ajaa kameran, kutsuu `avaaLiuskaKaupungista(k.lat, k.lon)`, joka ei
    löydä 60 px:n säteeltä yhtään nostokerroksen kaupunkiriviä ja
    palauttaa epätoden → varapolku avaa vanhan tiiviin etusivun.
@@ -463,7 +479,19 @@ Kaappaukset ovat ajokansiossa (ei repossa):
   (kategorian avaus — tyhjät, koska liuska ei auennut)
 - `pariisi-lahizoom-390.png`, `pariisi-lahizoom-1400.png` — kartta ilman
   turisti-infon kylttiä ja ilman kaupungin sisäisiä nostomerkkejä
-- Savukkeen koko tuloste: `.../scratchpad/savuke2.txt`
+- Savukkeen koko tuloste: `.../scratchpad/savuke2.txt` (molemmat ruudut,
+  55/80) ja `.../scratchpad/savuke3.txt` (390 px korjatulla vartiolla,
+  28/40 — tässä on `liuskan kaupunkirivi` -rivi)
+
+## 8b. Seuraavan erän ensimmäinen työ
+
+Juurisyy on nyt mitattu, joten korjaus on yhden päätöksen päässä:
+**annetaanko laudan kaupungille rivi nostokerroksessa (a) vai
+piirretäänkö liuska laudan omaan merkkikerrokseen (b)?** Kun Fable
+valitsee, vartiot 8c–8h ovat valmiina mittaamaan korjauksen —
+`SAVUKE_RUUTU=390` ajaa ne yhdessä ruudussa noin viidessä minuutissa.
+Vartio 8b on samalla korjattava lukemaan nimet `nostot.osumat()`ista
+DOMin nimiöiden sijaan (ks. osio 6).
 
 ## 9. Oletukset (päätin itse, ei AskUserQuestionia)
 
