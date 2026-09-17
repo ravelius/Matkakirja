@@ -34,9 +34,10 @@
       "env": { "KOOT": "390,1400" },
       "tunnetutPunaiset": [
         "saapuminen siirtyy tasan ZOOMIN_JATKO_MS",
-        "avauksen loppuasennossa koko Afrikka on ruudulla"
+        "avauksen loppuasennossa koko Afrikka on ruudulla",
+        "maapallon zoomi laskee tasaisesti"
       ],
-      "huomautus": "Kuormitetun kontin näytteenoton jitteriä (v1926/v1927), ei regressio — ks. v1927 luku 5.3."
+      "huomautus": "Kuormitetun kontin näytteenoton jitteriä (v1926/v1927), ei regressio — ks. v1927 luku 5.3. Kolmas (390px, 'ei nousuja (0 näytettä)'): PR #2553:n Actions-ajossa (run 35188363536, 17.9.2026) 250 ms:n setInterval-näytteenotto ei saanut yhtään näytettä kameran laskuzoomista kontin kuormituksen takia — sama juurisyykategoria kuin ZOOMIN_JATKO_MS ja 'avauksen loppuasento' (tiedoston oma kommentti riveillä 514-520: leveä ruutu vie pääsäikeen niin tiukasti, että näytteenotto venyy). Ei liity v1929:n diffiin (aihenimiö, sulkuvartio, sarjat.json-poisto) — Ihmisen matka -linssin tiedostoja ei koskettu tässä erässä."
     },
     "savuke-ihmisen-kehys.mjs": {
       "env": { "KOOT": "390" },
