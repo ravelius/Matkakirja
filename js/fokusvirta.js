@@ -154,7 +154,7 @@ import {
   livianKuplanAika, livianKuplanAjastin, livianKuplat, pysaytaLivianAani,
   soitaLivianAani, soitaLivianKaupunkiAani,
 } from './liviapuhe.js';
-import { luennanLoppuun } from './luenta.js';
+import { luennanLoppuun, stopDiaryVoice } from './luenta.js';
 import { natiiviVastaus } from './natiivi.js';
 // Sähketehtävän vapaa vastaus lainaa pöllöltä kaksi asiaa: odotusrivin
 // mietintärepliikit ja saman välityspalvelinosoitteen kuin chat.
@@ -3534,7 +3534,17 @@ function isonKuvanRuutu(kuva, pulusta, jarjestys = 0) {
   kotelo.appendChild(img);
   if (pulusta) kotelo.appendChild(puluCamMerkki({ luokka: 'pulucam-merkki-iso' }));
   const teksti = kuvatekstiLyhyt(kuva);
-  if (teksti) kotelo.appendChild(html('figcaption', 'fokusvirta-isokuva-teksti', teksti));
+  if (teksti) {
+    /*
+     * KUVATEKSTI PAPERILLA (omistaja 17.9.2026, PAATOKSET 35 kohta 2).
+     * `figcaption` ON se valkoinen paperi, joka jatkuu kuvan alta;
+     * teksti itse on sen sisällä omana lohkonaan, jotta ladonta
+     * (leveysrajaus, keskitys) ei ole sama asia kuin paperin mitta.
+     */
+    const lappu = html('figcaption', 'fokusvirta-isokuva-teksti');
+    lappu.appendChild(html('span', 'fokusvirta-isokuva-selite', teksti));
+    kotelo.appendChild(lappu);
+  }
   ruutu.appendChild(kotelo);
   return ruutu;
 }
@@ -3564,10 +3574,36 @@ function isokuvanKoti() {
  * vasta kommentista (aloitaPuluCamSarja).
  */
 function avaaIsokuvaPaallys(ui, city, pohjakuva) {
+  /*
+   * OHITETTU LUENTA EI AVAA UUTTA PAALLYSTA (omistaja 17.9.2026 klo
+   * 22.10, PAATOKSET 35 TARKENNUS: *"Ohita PYSAYTTAA luennan - aani ja
+   * kuvat loppuvat heti, kartta nakyy; pulun luentareaktiot eivat enaa
+   * tule."*). Pulun oma sarja alkaa OMASTA kellostaan luennan lopusta,
+   * joten pelkkä nykyisen päällyksen poisto ei riittäisi: se nousisi
+   * sekunteja myöhemmin kartalle. Lippu on kaupungin tunnus, joten
+   * seuraava kaupunki alkaa puhtaalta pöydältä ilman omaa nollausta.
+   */
+  if (ui?.luennanOhitus && ui.luennanOhitus === city?.id) return null;
   lataaTyyli();
   const kehys = html('div', 'fokusvirta-isokuva');
   kehys.setAttribute('role', 'group');
   kehys.setAttribute('aria-label', `${city.name}: matkakirjan kuva`);
+  /*
+   * OHITA-TEKSTI KUVAN JA KUVATEKSTIN ALLA (PAATOKSET 35 kohta 3).
+   * Se asuu PAALLYKSESSA eikä yksittäisessä ruudussa: ruudut
+   * kasaantuvat pakaksi, ja jokaisella kortilla oma Ohita olisi
+   * seitsemän päällekkäistä sanaa.
+   */
+  const ohita = html('button', 'fokusvirta-isokuva-ohita', 'Ohita');
+  ohita.type = 'button';
+  ohita.title = 'Ohita luenta ja palaa kartalle';
+  ohita.addEventListener('click', (tapahtuma) => {
+    // Napautus ei saa kuplia kartalle: kartan liike päättäisi sarjan
+    // omaa polkuaan (kytkeSarjanKartanLiike) ja jättäisi äänen soimaan.
+    tapahtuma?.stopPropagation?.();
+    ohitaSaapumisluenta(ui, city);
+  });
+  kehys.appendChild(ohita);
   isokuvanKoti().appendChild(kehys);
 
   const ajastimet = [];
@@ -4014,6 +4050,132 @@ function kytkeSarjanKartanLiike(ui, tila) {
   };
   document.addEventListener('pointerdown', kasittele);
   tila.irrota = () => document.removeEventListener('pointerdown', kasittele);
+}
+
+/** Pikkukuvan tilattu leveys: rivin kuvat ovat 3,1 rem levaita. */
+const MATKAKIRJAN_PIKKUKUVA_PX = 240;
+
+/**
+ * SAAPUMISMERKINNAN KUVAT YHTENA LISTANA: isoisa ensin, pulu perassa.
+ *
+ * Sama järjestys kuin isossa sarjassa ja karusellissa — yksi järjestys,
+ * ei kahta.
+ *
+ * @returns {Array<object>} 0–7 kuvaa
+ */
+export function matkakirjanPikkukuvat(ui, city) {
+  if (!ui || !city) return [];
+  return [
+    ...fokusvirtaLuentakuvat(ui, city),
+    ...pulunKuvat(fokusvirtaSisalto(ui, city)),
+  ];
+}
+
+/**
+ * PIKKUKUVAT ISOISAN MATKAKIRJAN TEKSTIN LOPPUUN.
+ *
+ * Omistaja 17.9.2026 klo 22.05 (Raamattu KARTTAUUDISTUKSEN PAATOKSET 35
+ * kohta 4), sanatarkasti: *"Isoisan ja pulun kuvat voisi olla pienella
+ * isoisan matkakirjan tekstin lopussa ja ne voisi siella klikata auki
+ * (pikkukuvat eivat nay kun matkakirja on pienennettyna)."*
+ *
+ * KOLME ASIAA, JOTKA EIVAT NAY DIFFISTA:
+ *
+ *  1. RIVI ON KORTIN OMA LAPSI, ei tekstirivin (.fact-teksti-rivi)
+ *     sisus. Kortin kutistuminen lappuun piilottaa kaikki lapsensa
+ *     yhdellä olemassa olevalla säännöllä (`.fact-card.pieni > *`,
+ *     css/styles.css), joten pienennetyn matkakirjan vaatimus täyttyy
+ *     ilman omaa sääntöä. Paikka on silti tekstin JÄLKEEN: rivi
+ *     ladotaan `.fact-teksti-rivin` perään.
+ *  2. NAPAUTUS AVAA SAMAN SUURENNOKSEN kuin kartan luentakuva-nappi
+ *     (avaaSuurennos, lyhytTeksti) — ei toista kuvakatselinta.
+ *  3. KARTALLA OLEVA PAKKA PYSYY POISSA (PAATOKSET 31,
+ *     LUENTAKUVAPAKKA_KARTALLA): tämä rivi on KORTISSA, ei kartalla,
+ *     eikä kytkin koske siihen.
+ *
+ * @param {object} ui
+ * @param {?object} city kaupunki, tai null (rivi pois)
+ * @returns {number} riville ladottujen pikkukuvien määrä
+ */
+export function paivitaMatkakirjanPikkukuvat(ui, city) {
+  if (typeof document === 'undefined') return 0;
+  const kortti = document.querySelector('.fact-card');
+  if (!kortti) return 0;
+  kortti.querySelector('.fact-pikkukuvat')?.remove();
+  const kuvat = matkakirjanPikkukuvat(ui, city);
+  if (!kuvat.length) return 0;
+  lataaTyyli();
+  const puluAlkaa = fokusvirtaLuentakuvat(ui, city).length;
+  const rivi = document.createElement('div');
+  rivi.className = 'fact-pikkukuvat';
+  rivi.setAttribute('role', 'group');
+  rivi.setAttribute('aria-label', 'Merkinnän kuvat');
+  kuvat.forEach((kuva, i) => {
+    const nappi = html('button', 'fact-pikkukuva');
+    nappi.type = 'button';
+    nappi.title = 'Katso kuva suurempana';
+    const img = document.createElement('img');
+    img.alt = kuvatekstiLyhyt(kuva);
+    img.decoding = 'async';
+    img.draggable = false;
+    /*
+     * PUUTTUVA KUVA VIE OMAN NAPPINSA, ei koko riviä: yksi rikkinäinen
+     * osoite ei saa viedä muiden kuvien avausta.
+     */
+    asetaKuva(img, kuvanOsoite(kuva, MATKAKIRJAN_PIKKUKUVA_PX),
+      kuvanVara(kuva, MATKAKIRJAN_PIKKUKUVA_PX), () => nappi.remove());
+    nappi.appendChild(img);
+    nappi.addEventListener('click', (tapahtuma) => {
+      // Kortin napautus kutistaisi kortin lapuksi (js/ui.js): kuvan
+      // avaus ei ole kortin napautus.
+      tapahtuma?.stopPropagation?.();
+      avaaSuurennos(ui, kuvat, i, () => nappi,
+        { lyhytTeksti: true, pulunKuvasta: puluAlkaa });
+    });
+    rivi.appendChild(nappi);
+  });
+  const tekstirivi = kortti.querySelector('.fact-teksti-rivi');
+  if (tekstirivi) tekstirivi.after(rivi);
+  else kortti.appendChild(rivi);
+  return kuvat.length;
+}
+
+/**
+ * OHITA: LUENTA PYSAHTYY, KARTTA NAKYY HETI.
+ *
+ * Omistaja 17.9.2026 klo 22.05 ja 22.10 (Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 35 kohta 3 ja sen TARKENNUS), sanatarkasti: *"pieni 'ohita'
+ * teksti joka hyppaa suoraan isoisan ja pulun tekstien yli ja nayttaa
+ * kartan heti"* ja *"Ohita PYSAYTTAA luennan - aani ja kuvat loppuvat
+ * heti, kartta nakyy; isoisan ja pulun tekstit jaavat luettaviksi
+ * matkakirjaan, pulun luentareaktiot eivat enaa tule."*
+ *
+ * EI UUTTA RINNAKKAISTA TILAA. Pysäytys on luennan oma polku
+ * (js/luenta.js stopDiaryVoice): se purkaa pulun luentareaktiot
+ * (`audio.puraReaktiot`), pysäyttää jokaisen soivan luennan, vapauttaa
+ * puhevuoron ja pysäyttää laitteen lukijan. Kuvat viedään sarjan omalla
+ * siivouksella (piilotaLuentakuvasarja), joka ei jätä kartalle pakkaa —
+ * sama kuin kaupungista lähdettäessä.
+ *
+ * TEKSTIT JAAVAT MATKAKIRJAAN: korttiin ei kosketa lainkaan, joten
+ * merkintä ja sen pikkukuvat pysyvät luettavina.
+ *
+ * @param {object} ui
+ * @param {?object} [city] kaupunki, jonka luenta ohitetaan
+ * @returns {boolean} tehtiinkö ohitus
+ */
+export function ohitaSaapumisluenta(ui, city = null) {
+  if (!ui) return false;
+  const kohde = city ?? ui.game?.cityOf?.() ?? null;
+  if (kohde?.id) ui.luennanOhitus = kohde.id;
+  // Ääni ja pulun luentareaktiot kiinni yhdellä olemassa olevalla polulla.
+  stopDiaryVoice(ui);
+  // Kesken oleva odotus pois: muuten kuva ilmestyisi jälkijunassa.
+  clearTimeout(ui.luentakuvaOdotus);
+  ui.luentakuvaOdotus = null;
+  piilotaLuentakuvasarja(ui);
+  piilotaLuentakuva(ui, { heti: true });
+  return true;
 }
 
 /**
