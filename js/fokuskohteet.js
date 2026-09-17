@@ -758,8 +758,59 @@ function karsiKaupunkikartanNostot(rivit, kaupungit, iso = null) {
  * paikkaa — Wieliczka, Köpenick, Richmond Park, Pariisin
  * kaulanauhajuttu, Vitoša.
  */
-const KAUPUNKIKATON_SADE = 8;
+export const KAUPUNKIKATON_SADE = 8;
 const KAUPUNKINOSTOJEN_KATTO = 3;
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * NOSTON KAUPUNKIJÄSENYYS — "SAMASSA KAUPUNGISSA" YHTENÄ LUKUNA
+ * (omistaja 16.9.2026 klo 19.00 UTC, Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 27 TARKENNUS 2 kohta 7)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistajan sanoin: *"Nuo saman kategorian jutut piti yhdistaa
+ * yhdeksi nostoksi"* — kaupungin rykelmässä saman AIHEEN nostot
+ * yhdistyvät AINA, zoomista riippumatta. Ryhmitys (js/pallolauta/
+ * aihemerkit.js ryhmitaNostot) tarvitsee siksi yhden kentän, joka
+ * vastaa kysymykseen "onko tämä nosto tuon kaupungin nosto".
+ *
+ * KAKSI LÄHDETTÄ, TÄSSÄ JÄRJESTYKSESSÄ — eikä kolmatta:
+ *
+ *   1. KOHDEKARTAN NOSTOLINKKI (kohdeKaupunkikartanNostot) on
+ *      EKSPLISIITTINEN jäsenyys: päätoimittaja on kirjoittanut
+ *      kaupunkikartan pisteelle `nosto: 'tunnus'`, eli sanonut että
+ *      tämä nosto ON tämä kaupunki. Se voittaa mitan aina, myös
+ *      silloin kun nosto on ladottu kauas kaupungistaan.
+ *   2. LÄHIN KAUPUNKI KAUPUNKIKATON SÄTEELLÄ. Sama säde, jolla
+ *      kaupunkiruuhkan karsinta (karsiKaupunkiruuhka) päättää mikä on
+ *      "kaupungin sisällä" — ei uutta mitoitusta tähän: jos kaksi
+ *      lukua eriytyisi, ryhmitys ja karsinta puhuisivat eri
+ *      kaupungista samasta nostosta.
+ *
+ * Paikka on merkin LADOTTU piste (nippu mukaan luettuna), koska se on
+ * se kohta, jonka pelaaja kartalla näkee — ja juuri sitä rykelmää
+ * omistaja katsoi.
+ *
+ * @param {string} id  noston tunnus
+ * @param {number} x  merkin ladottu x laudan yksiköissä
+ * @param {number} y  merkin ladottu y laudan yksiköissä
+ * @param {Array<{id:string,x:number,y:number}>} [kaupungit]  maan kaupungit
+ * @param {?Map<string,string>} [linkit]  nostotunnus → kaupunki
+ * @returns {?string} kaupungin tunnus tai null
+ */
+export function nostonKaupunkiAvain(id, x, y, kaupungit = [], linkit = null) {
+  const taulu = linkit ?? kohdeKaupunkikartanNostot();
+  const linkki = taulu.get(id);
+  if (linkki) return linkki;
+  if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
+  let paras = null;
+  let lyhin = Infinity;
+  for (const c of kaupungit ?? []) {
+    const d = Math.hypot(x - c.x, y - c.y);
+    if (d <= KAUPUNKIKATON_SADE && d < lyhin) { lyhin = d; paras = c.id; }
+  }
+  return paras;
+}
 
 function nostonPrioriteetti(kohde) {
   if (kohde?.ihme) return 0;
@@ -3446,19 +3497,29 @@ export function maanPoltetutMerkit(pack, iso, pohja, onPoltettu = nostoOnPoltett
  * syöte; `symboli` ja `nimio` laatikot laudan yksiköissä.
  *
  * @returns {Array} [{ id, nimi, kohde, poltettu, symboli, laji, puoli,
- *   nimioNakyy, pakotettu, x, y, sade, symboli, nimio }]
+ *   nimioNakyy, pakotettu, kaupunkiAvain, x, y, sade, symboli, nimio }]
  */
 export function maanKohdemerkit(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
   const tynka = poltettuTynka(pack, iso, pohja, onPoltettu);
   if (!tynka) return [];
   const ulos = [];
   const sade = KOHDE_SYMBOLI_R * tynka.__s;
+  // Kaupunkijäsenyys kerran maata kohti (ks. NOSTON KAUPUNKIJÄSENYYS).
+  const linkit = kohdeKaupunkikartanNostot();
+  const kaupungit = tynka.fokuskohdeKaupungit ?? [];
   tynka.fokuskohdeRyhmat.forEach((r, i) => {
     const x = r.nippu?.x ?? r.x + (r.sx ?? 0);
     const y = r.nippu?.y ?? r.y + (r.sy ?? 0);
     const kehys = tynka.fokuskohdeNimioPaatokset?.kehykset?.get(i);
     ulos.push({
       id: r.id,
+      /*
+       * KAUPUNKIJÄSENYYS RIVILLE (PAATOKSET 27 TARKENNUS 2 kohta 7):
+       * saman kaupungin saman aiheen nostot yhdistyvät aihenostoksi
+       * AINA, joten ryhmitys tarvitsee tämän kentän eikä pelkkää
+       * ruutuetäisyyttä (js/pallolauta/aihemerkit.js ryhmitaNostot).
+       */
+      kaupunkiAvain: nostonKaupunkiAvain(r.id, x, y, kaupungit, linkit),
       nimi: r.nimi ?? null,
       kohde: tynka.fokuskohdeTiedot.get(r.id) ?? null,
       poltettu: Boolean(r.poltettu),

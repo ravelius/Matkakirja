@@ -67,6 +67,27 @@
  * ratkaissut lappujen keskinäisen järjestyksen (tools/
  * tarkista-nimiolimitys.mjs vartioi sitä) — muuten sovittelu alkaisi
  * sekoittaa käsin hiottua ladontaa ilman että kukaan on sitä pyytänyt.
+ *
+ * ── AIHENOSTO SOVITELLAAN VIIMEISENÄ JA VÄISTÄÄ KAIKKEA (`este`) ───
+ *
+ * YLLÄ OLEVA PERUSTELU EI KOSKE AIHENOSTOA. Aihenosto (Raamattu,
+ * KARTTAUUDISTUKSEN PAATOKSET 27 TARKENNUS 2; js/pallolauta/
+ * aihemerkit.js) syntyy vasta ajossa: sen paikka on ryhmän jäsenten
+ * keskipiste ja sen nimiö on ryhmän tärkeimmän noston nimi. Kukaan ei
+ * ole latonut sitä käsin, eikä mikään laattaladonta ole ratkaissut sen
+ * suhdetta naapureihinsa — päinvastoin, kaupungin rykelmän aihenostot
+ * syntyvät kaikki saman kaupungin päälle.
+ *
+ * MITATTU (Chromium 390 × 844 dpr 2, Pariisi 16.9.2026): ilman tätä
+ * sääntöä Pariisin viidestä aihenostosta kaksi paria latoi nimiönsä
+ * päällekkäin saapumisnäkymässä ja yksi pari lähizoomissa — ryhmitys
+ * olisi siis vain siirtänyt rykelmän ongelman merkkitasolle.
+ *
+ * SÄÄNTÖ ON SIKSI KAKSIOSAINEN. `este: true` -lappu (1) sovitellaan
+ * VIIMEISENÄ, jotta se näkee kaikkien muiden lopulliset paikat, ja
+ * (2) väistää KAIKKEA jo sijoitettua eikä vain siirtyneitä lappuja.
+ * Käsin ladottujen lappujen käytös ei muutu millään tavalla: ne eivät
+ * väistä aihenostoa eivätkä toisiaan.
  */
 
 /** Nimiön kyljet kokeilujärjestyksessä (js/fokusnosto-symbolit.js). */
@@ -125,9 +146,13 @@ export function lahinEste(r, esteet) {
  * SOVITTELE LAPUT KIINTEIDEN ESTEIDEN YMPÄRILLE.
  *
  * @param {object} p
- * @param {Array} p.laput  [{ avain, kylki, laatikko(kylki, dx, dy, nimio) }]
+ * @param {Array} p.laput  [{ avain, kylki, laatikko(kylki, dx, dy, nimio),
+ *   este }]
  *   `laatikko` palauttaa lapun ruutulaatikon annetussa asennossa tai
- *   null; `nimio` false tarkoittaa pelkkää ikonia.
+ *   null; `nimio` false tarkoittaa pelkkää ikonia. `este: true` on
+ *   lappu, jolla EI ole käsin hiottua ladontaa (ks. AIHENOSTO
+ *   SOVITELLAAN VIIMEISENÄ alla): se sovitellaan viimeisenä ja väistää
+ *   kaikkea jo sijoitettua, ja siitä itsestään tulee este.
  * @param {Array} p.esteet kiinteät ruutulaatikot (kaupunkien nimet)
  * @param {number} [p.siirto] pienen siirron mitta px
  * @param {Array}  [p.kyljet] kokeiltavat kyljet
@@ -149,53 +174,93 @@ export function sovitteleLaput({
   let kokeiltuja = 0;
   const vapaa = (r, muut) => !kiinteat.some((e) => laatikotLimittyvat(r, e))
     && !muut.some((e) => laatikotLimittyvat(r, e));
-  // Ahtain ensin: lähin kiinteää nimeä saa valita ensimmäisenä.
+  /*
+   * Ahtain ensin: lähin kiinteää nimeä saa valita ensimmäisenä.
+   * AIHENOSTOT (`este`) VIIMEISENÄ (ks. lohko yllä): ne väistävät
+   * kaikkea, joten niiden on nähtävä muiden lopulliset paikat.
+   */
   const jono = laput
     .map((l) => ({ l, d: lahinEste(l.laatikko(l.kylki, 0, 0, true), kiinteat) }))
-    .sort((a, b) => a.d - b.d)
+    .sort((a, b) => (Number(Boolean(a.l.este)) - Number(Boolean(b.l.este))) || (a.d - b.d))
     .map((rivi) => rivi.l);
   const siirretyt = []; // väistäneiden lappujen laatikot (uudet esteet)
+  /*
+   * KAIKKIEN jo käsiteltyjen lappujen lopulliset laatikot. Vain
+   * `este`-lappu lukee tätä (ks. AIHENOSTO SOVITELLAAN VIIMEISENÄ) —
+   * käsin ladottu lappu näkee yhä pelkän kiinteän musteen ja
+   * väistäneet naapurinsa, kuten ennen.
+   */
+  const sijoitetut = [];
   for (const l of jono) {
     const oma = l.laatikko(l.kylki, 0, 0, true);
     kokeiltuja += 1;
-    if (!kiinteat.length || !laatikkoKelpaa(oma)
-      || !kiinteat.some((e) => laatikotLimittyvat(oma, e))) {
+    // `este`-lappu katsoo myös jo sijoitettuja lappuja; muille
+    // este on vain kiinteä muste, kuten ennenkin.
+    const muut = l.este ? sijoitetut : [];
+    const omaKelpaa = laatikkoKelpaa(oma);
+    if (!omaKelpaa
+      || ((!kiinteat.length || !kiinteat.some((e) => laatikotLimittyvat(oma, e)))
+        && !muut.some((e) => laatikotLimittyvat(oma, e)))) {
       asennot.set(l.avain, {
         kylki: l.kylki, dx: 0, dy: 0, nimio: true, syy: 'oma',
       });
+      if (omaKelpaa) sijoitetut.push(oma);
       continue;
     }
-    let valittu = null;
-    // 1. vaihtoehtoinen ankkuri: kolme muuta kylkeä ilman siirtoa.
-    for (const k of kyljet) {
-      if (k === l.kylki) continue;
-      const r = l.laatikko(k, 0, 0, true);
-      kokeiltuja += 1;
-      if (laatikkoKelpaa(r) && vapaa(r, siirretyt)) {
-        valittu = { kylki: k, dx: 0, dy: 0, nimio: true, syy: 'kylki', r };
-        break;
+    /** Kokeile kyljet ja siirrot annettuja esteitä vastaan. */
+    const etsi = (vastaan) => {
+      // 1. vaihtoehtoinen ankkuri: kolme muuta kylkeä ilman siirtoa.
+      for (const k of kyljet) {
+        if (k === l.kylki) continue;
+        const r = l.laatikko(k, 0, 0, true);
+        kokeiltuja += 1;
+        if (laatikkoKelpaa(r) && vapaa(r, vastaan)) {
+          return { kylki: k, dx: 0, dy: 0, nimio: true, syy: 'kylki', r };
+        }
       }
-    }
-    // 2. pieni siirto, kylki kerrallaan (oma kylki ensin).
-    if (!valittu) {
+      // 2. pieni siirto, kylki kerrallaan (oma kylki ensin).
       for (const k of [l.kylki, ...kyljet.filter((x) => x !== l.kylki)]) {
         for (const { dx, dy } of sovittelunSiirrot(k, siirto)) {
           const r = l.laatikko(k, dx, dy, true);
           kokeiltuja += 1;
-          if (laatikkoKelpaa(r) && vapaa(r, siirretyt)) {
-            valittu = {
+          if (laatikkoKelpaa(r) && vapaa(r, vastaan)) {
+            return {
               kylki: k, dx, dy, nimio: true, syy: 'siirto', r,
             };
-            break;
           }
         }
-        if (valittu) break;
       }
+      return null;
+    };
+    let valittu = etsi([...siirretyt, ...muut]);
+    /*
+     * AIHENOSTON NIMI EI KATOA NAAPURIN TAKIA (PAATOKSET 27 TARKENNUS
+     * 2 kohta 8: aihenoston nimiö ON se, mitä omistaja tilasi).
+     *
+     * `este` on tiukennus, joka saa siirtää aihenostoa — mutta se ei
+     * saa MAKSAA nimeä. Jos yksikään asento ei ole vapaa toisten
+     * lappujen suhteen, kokeillaan vielä pelkkiä kiinteitä esteitä eli
+     * täsmälleen sitä sääntöä, jolla kartta latoi ennen tätä
+     * tiukennusta: mieluummin naapurin nimen viereen kuin ilman nimeä.
+     * Kaupungin nimi (kiinteä muste) pysyy silti ensisijaisena.
+     *
+     * MITATTU (Pariisi 390 × 844, 16.9.2026): ilman tätä porrasta
+     * *Kyyhkyposti…* menetti nimensä lähizoomissa — juuri se vika,
+     * jonka korjaamiseksi koko tarkennus kirjoitettiin.
+     */
+    if (!valittu && l.este) {
+      const omaVapaa = !kiinteat.some((e) => laatikotLimittyvat(oma, e));
+      valittu = omaVapaa
+        ? { kylki: l.kylki, dx: 0, dy: 0, nimio: true, syy: 'oma', r: oma }
+        : etsi(siirretyt);
     }
     if (valittu) {
-      siirretty += 1;
-      if (valittu.syy === 'kylki') kylkiVaihtui += 1;
-      siirretyt.push(valittu.r);
+      if (valittu.syy !== 'oma') {
+        siirretty += 1;
+        if (valittu.syy === 'kylki') kylkiVaihtui += 1;
+        siirretyt.push(valittu.r);
+      }
+      sijoitetut.push(valittu.r);
       asennot.set(l.avain, {
         kylki: valittu.kylki, dx: valittu.dx, dy: valittu.dy, nimio: true, syy: valittu.syy,
       });
@@ -205,12 +270,17 @@ export function sovitteleLaput({
     // asento, mutta sitä ei voi piilottaa — nosto katoaisi kartalta.
     piilotettu += 1;
     let ikoni = { dx: 0, dy: 0, r: l.laatikko(l.kylki, 0, 0, false) };
-    if (laatikkoKelpaa(ikoni.r) && kiinteat.some((e) => laatikotLimittyvat(ikoni.r, e))) {
+    // `este`-lappu siirtää ikoninsa myös naapurin NIMIÖN alta: sen
+    // paikka on laskettu eikä ladottu (ks. AIHENOSTO SOVITELLAAN
+    // VIIMEISENÄ), joten mikään ei puolusta sitä siellä.
+    const ikoniTiella = (r) => kiinteat.some((e) => laatikotLimittyvat(r, e))
+      || muut.some((e) => laatikotLimittyvat(r, e));
+    if (laatikkoKelpaa(ikoni.r) && ikoniTiella(ikoni.r)) {
       for (const k of kyljet) {
         const s = SOVITTELUN_SUUNNAT[k];
         const r = l.laatikko(l.kylki, s.dx * siirto, s.dy * siirto, false);
         kokeiltuja += 1;
-        if (laatikkoKelpaa(r) && vapaa(r, siirretyt)) {
+        if (laatikkoKelpaa(r) && vapaa(r, [...siirretyt, ...muut])) {
           ikoni = { dx: s.dx * siirto, dy: s.dy * siirto, r };
           break;
         }
@@ -220,6 +290,7 @@ export function sovitteleLaput({
     if (laatikkoKelpaa(ikoni.r) && kiinteat.some((e) => laatikotLimittyvat(ikoni.r, e))) {
       jaljella += 1;
     }
+    if (laatikkoKelpaa(ikoni.r)) sijoitetut.push(ikoni.r);
     asennot.set(l.avain, {
       kylki: l.kylki, dx: ikoni.dx, dy: ikoni.dy, nimio: false, syy: 'piilo',
     });

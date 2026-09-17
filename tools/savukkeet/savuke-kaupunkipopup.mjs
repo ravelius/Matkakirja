@@ -67,6 +67,7 @@ import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { ARTIKKELIT } from '../../js/sisaltotaulut.js';
 import { KULTTUURI_KATEGORIAT } from '../../js/packs/kulttuuri-kategoriat.js';
+import { NOSTOSYM_MITAN_KATTO } from '../../js/fokusnosto-symbolit.js';
 
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -220,10 +221,26 @@ for (const ruutu of RUUDUT) {
     tieto(`${tunnus}: saapumiskorkeus`, mitat.korkeus?.toFixed?.(3) ?? mitat.korkeus);
     tieto(`${tunnus}: merkin mitta (maa / lähi)`,
       `${mitat.maanNakyma} / ${mitat.lahikuva}`);
-    vaadi(`${tunnus}: merkki skaalautuu zoomatessa`,
+    /*
+     * KATTO ON OSA SÄÄNTÖÄ (PAATOKSET 31 TARKENNUS 1 kohta 3,
+     * 16.9.2026). Merkki skaalautuu yhä kuin painettu kartta, mutta
+     * enintään ruutupikselikattoon asti (js/fokusnosto-symbolit.js
+     * NOSTOSYM_MITAN_KATTO): sen yläpuolella se seisoo, jottei kyltti
+     * leikkaudu ruudun laidasta. MITATTU 16.9.2026: puhelimella
+     * (390 × 844) Pariisin ja Marseillen kyltti on jo SAAPUMISNÄKYMÄSSÄ
+     * katossa (1,4545), koska sen vertailuleveys on maan laatikko × 1,15
+     * eikä laitteen oma näkymä — työpöydällä samassa näkymässä mitta on
+     * 0,75. Väite on siis kaksiosainen: mitta ei koskaan ylitä kattoa,
+     * ja se kasvaa lähikuvassa AINA kun katto ei jo pure.
+     */
+    const kattoPurree = mitat.maanNakyma >= NOSTOSYM_MITAN_KATTO - 1e-6;
+    vaadi(`${tunnus}: merkki skaalautuu zoomatessa (katto ${NOSTOSYM_MITAN_KATTO.toFixed(4)})`,
       Number.isFinite(mitat.maanNakyma) && Number.isFinite(mitat.lahikuva)
-      && mitat.lahikuva > mitat.maanNakyma,
-      `mitat ${JSON.stringify(mitat)}`);
+      && mitat.lahikuva <= NOSTOSYM_MITAN_KATTO + 1e-6
+      && (kattoPurree
+        ? mitat.lahikuva === mitat.maanNakyma
+        : mitat.lahikuva > mitat.maanNakyma),
+      `mitat ${JSON.stringify(mitat)}${kattoPurree ? ' (katto puree jo maan näkymässä)' : ''}`);
 
     // Napautukset tehdään SAAPUMISNÄKYMÄSTÄ: se on se näkymä, jossa
     // pelaaja kaupunkiin saapuu, ja siinä merkki on suunnitellun
