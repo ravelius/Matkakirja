@@ -51,7 +51,11 @@
       "huomautus": "Koko esitys kestää kontissa 10-20 min; avausosa riittää julkaisuportiksi (v1925-v1927)."
     },
     "savuke-pariisi-lahizoom.mjs": {
-      "kuvakansio": true
+      "kuvakansio": true,
+      "tunnetutPunaiset": [
+        "7e. tyopoyta: kyltin laatikko on vapaa"
+      ],
+      "huomautus": "häilyvä hitaalla Actions-koneella (17.9.2026: v1930:n ajossa vihreä, v1931:n ajossa punainen samalla koodilla, nimiä 1 kyltin laatikolla = kaupungin nimi edellisen ladontakierroksen paikassa). v1930:n ajoituskorjaus kattoi 7c:n; 7e:n nimiladonnan ajoitus on oma erä (Mac, SAVUKE_HIDASTUS=6). Poista listalta kun erä on mainissa."
     },
     "savuke-pallo-nostolaput.mjs": {
       "kuvakansio": true,
