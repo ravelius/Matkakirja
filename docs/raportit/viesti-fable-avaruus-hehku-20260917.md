@@ -71,8 +71,10 @@ lähdetekstilukkoa päivitetty perusteluineen:
 "kokoa ei lasketa JS:ssä") ja `tests/satelliitti-avaruus.test.mjs`
 (valkoinen → `PALLON_SAVY`, sävyn haarukka ja etäisyys mustan kynnyksestä).
 
-Kaappaukset: `kaappaukset/astro-pallo-390-20260916.jpg` (puhelin, pallo
-pisteineen) savukkeen omasta ajosta.
+Kaappaus (puhelin 390×844, pallo pisteineen, savukkeen oma ajo):
+`/private/tmp/claude-501/-Users-samireivinen-Matkakirja-fable/1de1d7f9-1349-4671-ad36-3323aaf75d0f/scratchpad/kaappaukset/astro-pallo-390-20260916.jpg`
+— kuvassa ei ole yhtään neliötä, pisteet hehkuvat keskeltä ja pinta on
+selvästi tummempi kuin omistajan v1933-kuvassa.
 
 ## Oletukset (päätetty itse, ei kysytty)
 
