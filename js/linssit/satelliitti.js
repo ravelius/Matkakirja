@@ -189,6 +189,24 @@ export const VARTIJAN_AIKAKATKO_MS = 12000;
 export const VARTIJAN_JALKIVALI_MS = 2000;
 export const VARTIJAN_JALKITARKISTUKSET = 15;
 
+/*
+ * ── KOHDEPISTEET RUUDULLE, EI VAIN KIRJASTOLLE (LISÄYS 13 kohta 36) ──
+ *
+ * MITATTU 17.9.2026: `lauta.linssit.merkit(...)` palaa 1 millisekunnissa
+ * ja `vaihe nimi=pisteet ok=1` kirjataan — mutta se todistaa VAIN, että
+ * lista meni kirjastolle. Kohdemerkit ovat CSS2D-elementtejä, jotka
+ * syntyvät Kapsulen 1 ms:n digestissä ja päätyvät DOMiin vasta, kun
+ * CSS2DRenderer PIIRTÄÄ. Asennetussa macOS-WebAppissa piirtoa ei
+ * tullut, ja loki näytti vihreää samalla kun ruutu oli tyhjä.
+ *
+ * Siksi lista asetetaan tarvittaessa uudestaan, kunnes merkit näkyvät
+ * DOMissa: halpa kysely (querySelectorAll) harvalla ajastimella, joka
+ * loppuu itsestään heti kun pisteet ovat ruudulla. Ajastin eikä
+ * kehyspyyntö — juuri kehykset olivat se, mikä puuttui.
+ */
+export const PISTEIDEN_UUSINTAVALI_MS = 300;
+export const PISTEIDEN_UUSINTOJA = 9;
+
 /** Linssiosan nimi laudan linssiapurissa (lauta.linssit.merkit/pura). */
 export const SATELLIITTI_OSA = 'satelliitti';
 
@@ -1541,7 +1559,37 @@ function avaa(lauta, tila, ui) {
     elementti: () => merkkiElementti(kohde),
     napautus: () => avaaKohde(kohde),
   }));
-  vaihe('pisteet', () => lauta?.linssit?.merkit?.(SATELLIITTI_OSA, merkit));
+  const asetaPisteet = () => lauta?.linssit?.merkit?.(SATELLIITTI_OSA, merkit);
+  vaihe('pisteet', asetaPisteet);
+  /*
+   * PISTEET RUUDULLE ASTI (ks. PISTEIDEN_UUSINTAVALI_MS yllä). Vartija
+   * kertoo puutteesta; tämä yrittää korjata sen ennen kuin vartija
+   * ehtii. Kirjaston kehysvahti (js/linssit/satelliitti-avaruus.js
+   * varmistaKehykset) pakottaa piirron, tämä varmistaa datan.
+   */
+  let pisteuusintoja = 0;
+  let pisteKello = 0;
+  const lopetaPisteUusinta = () => {
+    if (!pisteKello) return;
+    try { clearInterval(pisteKello); } catch { /* ei kelloa */ }
+    pisteKello = 0;
+  };
+  try {
+    pisteKello = setInterval(() => {
+      pisteuusintoja += 1;
+      const domissa = pisteitaRuudulla();
+      if (domissa > 0 || pisteuusintoja >= PISTEIDEN_UUSINTOJA) {
+        if (pisteuusintoja > 1 || domissa === 0) {
+          pallodiag('pisteet-uusinta', { domissa, yrityksia: pisteuusintoja });
+        }
+        lopetaPisteUusinta();
+        return;
+      }
+      try { asetaPisteet(); } catch { /* vartija kertoo puutteen */ }
+      try { lauta?.heraa?.(); } catch { /* ei lautaa */ }
+      try { avaruus?.pakotaKehys?.(); } catch { /* ei kahvaa */ }
+    }, PISTEIDEN_UUSINTAVALI_MS);
+  } catch { pisteKello = 0; }
 
   /*
    * ══════════ VARTIJA: TYHJÄ NÄKYMÄ EI JÄÄ TYHJÄKSI ═══════════════
@@ -1582,11 +1630,34 @@ function avaa(lauta, tila, ui) {
     }
     try { return avaruus.puute?.(pisteitaRuudulla()) ?? null; } catch { return 'avaruusnakyma'; }
   };
+  /*
+   * ── PISTEMITTARI WebAppia VARTEN (LISÄYS 13 kohta 36) ───────────
+   *
+   * Kohta 36 (ruskea ruutu, `pisteita=0`) EI toistunut oikealla
+   * WebKitillä eikä Chromiumilla (Mac-sessio 17.9.2026, 0/61 avausta),
+   * joten sen polkua ei voitu mitata täällä. Jos se toistuu Codexin
+   * asennetussa WebAppissa, seuraava kysymys on, mikä kolmesta
+   * puuttuu: kohteita (linssin data), merkkikerros (CSS2D-elementit
+   * lainkaan DOMissa) vai vain tämän linssin pisteet. Kolme lukua
+   * samalla rivillä vastaa siihen ilman konsolia.
+   *
+   * `.pallolauta-merkki` on KAIKKIEN laudan CSS2D-merkkien luokka
+   * (nappula, kaupungit, nimet): jos se on nolla, kerrosta ei ole
+   * lainkaan — jos se on iso mutta `.satelliitti-piste` nolla, kerros
+   * on mutta linssin lista ei päätynyt siihen.
+   */
+  const merkkejaRuudulla = () => {
+    try { return document.querySelectorAll('.pallolauta-merkki').length; } catch { return 0; }
+  };
   const tarkistaNakyma = (viimeinen) => {
     const puute = nykyinenPuute();
     pallodiag('vartija', {
       puute: puute ?? 'ei', pisteita: pisteitaRuudulla(),
       vaiheet: kaatuneetVaiheet.length,
+    });
+    pallodiag('pistemittari', {
+      kohteita: kohteet.length, domissa: pisteitaRuudulla(),
+      kerros: merkkejaRuudulla(),
     });
     if (!puute) {
       // Näkymä valmistui (mahdollisesti myöhässä): ilmoitus pois.
@@ -1663,6 +1734,7 @@ function avaa(lauta, tila, ui) {
       try { clearTimeout(varhainen); } catch { /* ei kelloa */ }
       try { clearTimeout(vartijanKello); } catch { /* ei kelloa */ }
       try { clearInterval(jalkikello); } catch { /* ei kelloa */ }
+      lopetaPisteUusinta();
       virheKahva?.pura?.();
       virheKahva = null;
       poistaLinssivirhe();

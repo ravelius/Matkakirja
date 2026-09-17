@@ -139,6 +139,10 @@ import {
   RELIEFIN_KOKO_8K,
   LADONNAN_KATTO_PUHELIN,
   LADONNAN_RAJA_CSS,
+  LADONNAN_KATTO,
+  LADONNAN_KATTO_WEBKIT,
+  LADONNAN_PIKSELIKATTO,
+  webkitSelain,
   valitseReliefi,
   valitseLadonta,
 } from './reliefikuva.js';
@@ -697,6 +701,10 @@ export {
   RELIEFIN_KOKO_8K,
   LADONNAN_KATTO_PUHELIN,
   LADONNAN_RAJA_CSS,
+  LADONNAN_KATTO,
+  LADONNAN_KATTO_WEBKIT,
+  LADONNAN_PIKSELIKATTO,
+  webkitSelain,
   valitseReliefi,
   valitseLadonta,
 };
@@ -922,24 +930,64 @@ export function kyllaisyysAlas(ctx, kuva, leveys, korkeus, kerroin = RELIEFIN_SA
  * ladonta hyväksytään. Vartija ei saa olla tiukempi kuin sen tieto.
  */
 export const TYHJYYDEN_KYNNYS = 12;
+/*
+ * ── KYNNYS EI RIITÄ YKSIN (17.9.2026, LISÄYS 13 kohta 37) ─────────
+ *
+ * Musta pallo asennetussa macOS-WebAppissa LÄPÄISI tämän tarkistuksen
+ * (`vartija puute=ei`, 64 pistettä, tekstuuri silti musta). Kaksi
+ * aukkoa, molemmat mitattuja:
+ *
+ *   1. NÄYTTEET OLIVAT VAIN KESKELTÄ. Kymmenen pistettä 12–86 %:n
+ *      kaistalla eivät kerro mitään reunoista, ja juuri reunat jäävät
+ *      piirtämättä, kun kangas on osittain rajan yli.
+ *   2. YKSIVÄRISTÄ EI HYLÄTTY. Kynnys katsoo vain KIRKKAINTA näytettä:
+ *      tasainen tummanharmaa tai yksivärinen täyttö menee läpi, vaikka
+ *      oikeassa reliefissä on AINA meren ja maan ero.
+ *
+ * Siksi kolme ehtoa: kirkkain ylittää kynnyksen, keskiarvo ylittää
+ * lähes mustan rajan, JA näytteiden välillä on vaihtelua. Vaihtelu on
+ * se ehto, jota tyhjä tai yksivärinen kangas ei voi täyttää.
+ */
 const TYHJYYSNAYTTEET = [
   [0.12, 0.35], [0.28, 0.30], [0.30, 0.62], [0.46, 0.45], [0.52, 0.28],
   [0.58, 0.52], [0.70, 0.38], [0.78, 0.60], [0.86, 0.32], [0.50, 0.50],
+  /* REUNAT MUKAAN: ylä-, ala-, vasen- ja oikealaita sekä kulmat. */
+  [0.02, 0.5], [0.98, 0.5], [0.5, 0.02], [0.5, 0.98],
+  [0.03, 0.04], [0.97, 0.04], [0.03, 0.96], [0.97, 0.96],
 ];
+/** Lähes musta pinta: näytteiden keskiarvon alaraja. */
+export const TUMMUUDEN_KYNNYS = 18;
+/** Yksivärinen pinta: kirkkaimman ja tummimman näytteen pienin ero. */
+export const VAIHTELUN_KYNNYS = 6;
 
-/** Onko ladottu kangas tyhjä (kaikki näytteet kynnystä tummempia)? */
+/**
+ * Onko ladottu kangas tyhjä, lähes musta tai yksivärinen?
+ *
+ * `false` tarkoittaa "kangas kelpaa" — myös silloin, kun tarkistusta ei
+ * voi tehdä (ei getImageDataa, likainen kangas). Vartija ei saa olla
+ * tiukempi kuin sen tieto.
+ */
 export function tyhjaKangas(ctx, leveys, korkeus, kynnys = TYHJYYDEN_KYNNYS) {
   if (typeof ctx?.getImageData !== 'function') return false;
   try {
     let paras = 0;
+    let pienin = Infinity;
+    let summa = 0;
+    let n = 0;
     for (const [fx, fy] of TYHJYYSNAYTTEET) {
       const x = Math.min(leveys - 1, Math.max(0, Math.round(fx * leveys)));
       const y = Math.min(korkeus - 1, Math.max(0, Math.round(fy * korkeus)));
       const d = ctx.getImageData(x, y, 1, 1).data;
       const kirkkaus = Math.max(d[0], d[1], d[2]) * (d[3] / 255);
       if (kirkkaus > paras) paras = kirkkaus;
+      if (kirkkaus < pienin) pienin = kirkkaus;
+      summa += kirkkaus;
+      n += 1;
     }
-    return paras < kynnys;
+    if (!n) return false;
+    if (paras < kynnys) return true;
+    if (summa / n < TUMMUUDEN_KYNNYS) return true;
+    return paras - pienin < VAIHTELUN_KYNNYS;
   } catch {
     return false;
   }
@@ -1063,11 +1111,19 @@ export function reliefiTekstuuri(asetukset = {}, doc = globalThis.document, ikku
   const koe = doc.createElement('canvas');
   if (!koe?.getContext?.('2d')) return Promise.resolve(null);
   vapautaKangas(koe);
-  const ensi = valitseLadonta({ leveys, korkeus, ruudunLeveys });
+  /*
+   * WEBKIT SAA OMAN KATTONSA (LISÄYS 13 kohta 37). Selainperhe luetaan
+   * tässä eikä valitseLadonnan sisällä, jotta funktio pysyy puhtaana ja
+   * yksikkötesti voi antaa lipun kumpaankin suuntaan.
+   */
+  const webkit = webkitSelain(ikkuna?.navigator);
+  const ensi = valitseLadonta({
+    leveys, korkeus, ruudunLeveys, webkit,
+  });
   const alku = diagNyt(ikkuna);
   pallodiag('alku', {
     lahde: `${leveys}x${korkeus}`, kangas: `${ensi.leveys}x${ensi.korkeus}`,
-    ruutu: ruudunLeveys, kokoPallo: kokoPallo ? 1 : 0,
+    ruutu: ruudunLeveys, kokoPallo: kokoPallo ? 1 : 0, webkit: webkit ? 1 : 0,
   }, ikkuna);
 
   return new Promise((valmis) => {
@@ -1529,13 +1585,26 @@ export const AVARUUDEN_TAUSTA = '#04060e';
  */
 export function avauksenPuute({
   avaruus = false, kotelo = null, kangas = null, pinnanOsoite = '',
-  pisteita = 0, kontekstiHukassa = false,
+  pisteita = 0, kontekstiHukassa = false, kehyksia = null, pinnanKirkkaus = null,
 } = {}) {
   if (!avaruus) return 'avaruusnakyma';
   if (kontekstiHukassa) return 'webgl-konteksti';
   if (!(Number(kangas?.leveys) > 0) || !(Number(kangas?.korkeus) > 0)) return 'kangas';
   if (!(Number(kotelo?.leveys) > 0) || !(Number(kotelo?.korkeus) > 0)) return 'kotelo';
+  /*
+   * KEHYKSET ENNEN PINTAA JA PISTEITÄ (LISÄYS 13 kohta 36). Jos
+   * yhtäkään kehystä ei ole piirretty, PINTA JA PISTEET EIVÄT VOI olla
+   * ruudulla — ja silloin pelaajalle on kerrottava se eikä seurausta.
+   * `null` tarkoittaa "ei mitattavissa" eikä ole puute.
+   */
+  if (kehyksia !== null && !(Number(kehyksia) > 0)) return 'kehykset';
   if (!String(pinnanOsoite ?? '')) return 'pinta';
+  /*
+   * MUSTA PINTA ON OMA PUUTTEENSA (LISÄYS 13 kohta 37). Osoite on
+   * paikallaan ja pisteet ruudulla, mutta piirtopuskurista luettu
+   * pallon keskusta on musta: tekstuuri ei päätynyt GPU:lle.
+   */
+  if (pinnanKirkkaus !== null && Number(pinnanKirkkaus) < PINNAN_MUSTAN_KYNNYS) return 'pinta-musta';
   if (!(Number(pisteita) > 0)) return 'pisteet';
   return null;
 }
@@ -1546,7 +1615,9 @@ export const PUUTTEEN_SELITE = {
   'webgl-konteksti': 'Laitteen 3D-piirto katkesi kesken avauksen.',
   kangas: 'Maapallon piirtopinta jäi tyhjäksi.',
   kotelo: 'Näkymälle ei jäänyt tilaa ruudulla.',
+  kehykset: 'Laite ei piirtänyt näkymästä yhtään kuvaa.',
   pinta: 'Maapallon pintakuva ei latautunut.',
+  'pinta-musta': 'Maapallon pintakuva jäi mustaksi.',
   pisteet: 'Kohdepisteitä ei saatu pallolle.',
   kirjasto: 'Maapallokirjasto ei latautunut.',
 };
@@ -1559,6 +1630,245 @@ export function kontekstiHukassa(pallo) {
     return Boolean(gl.isContextLost());
   } catch { return false; }
 }
+
+/* ═══════════ 2e. MITÄ RUUDULLE OIKEASTI PIIRTYI ════════════════ */
+
+/*
+ * OMISTAJAN VIKA 17.9.2026 (Raamattu, ASTRONAUTIN KAMERA LISÄYS 13
+ * kohta 37): asennetun macOS-WebAppin kolmannella avauksella pallo ja
+ * 64 kohdepistettä näkyivät, mutta karttatekstuuri oli KOKONAAN MUSTA
+ * — ja vartija sanoi `puute=ei`.
+ *
+ * SYY ON MITTARIN LAJI, EI SEN KYNNYS. Vanha vartija luki PINNAN
+ * OSOITTEEN (`globeImageUrl` asetettu?) ja kohdepisteiden määrän
+ * DOMissa. Molemmat kertovat AIKOMUKSESTA. Mustan pallon ketjussa
+ * jokainen aikomus toteutui: kangas ladottiin, blob syntyi, osoite
+ * asetettiin, three sai tekstuurin — ja vasta GPU:lla se jäi
+ * lataamatta. Ainoa mittari, joka näkee sen, lukee PIKSELIT SIITÄ
+ * PUSKURISTA, johon WebGL piirsi.
+ *
+ * MIKSI readPixels EIKÄ KUVAKAAPPAUS. Pelin WebGL-konteksti luodaan
+ * ilman `preserveDrawingBuffer`ia (eikä sitä saa kytkeä päälle: se
+ * maksaa joka kehyksellä), joten piirtopuskuri on luettavissa VAIN
+ * samassa tehtävässä, jossa piirto tehtiin. Siksi tämä funktio piirtää
+ * itse yhden kehyksen ja lukee pikselit heti perään — ei kaappausta,
+ * ei kangaskopiota, ei odotusta.
+ *
+ * NÄYTTEET OVAT PALLON KESKELTÄ. Ilmakehän hohto on reunalla ja tähdet
+ * pallon takana; keskeltä näkyy vain pinta. Ruudukko on 5 × 5 ja
+ * kattaa 30 % pallon säteestä — riittävän laaja, ettei yksi musta
+ * meri tai yksi valkoinen pilvi ratkaise.
+ */
+
+/** Pinta on musta, jos kirkkain näyte alittaa tämän. */
+export const PINNAN_MUSTAN_KYNNYS = 12;
+/** Näyteruudukon leveys (ruutua) ja kattavuus pallon säteestä. */
+export const PINNAN_NAYTERUUTU = 5;
+export const PINNAN_NAYTEOSUUS = 0.3;
+/**
+ * Viive pinnan vaihdosta mittaukseen (ms). Kirjasto lataa kuvan ja vie
+ * sen GPU:lle omassa tahdissaan; mitattu Chromiumissa 8k-blobilla noin
+ * 300 ms, joten 900 ms antaa hitaallekin laitteelle varaa.
+ */
+export const PINNAN_MITTAUKSEN_VIIVE_MS = 900;
+
+/**
+ * Pallon pinnan kirkkain näyte piirtopuskurista (0–255), tai `null`
+ * jos mittausta ei voi tehdä (ei kontekstia, konteksti hukassa, ei
+ * readPixelsia). `null` EI ole puute: vartija ei saa olla tiukempi
+ * kuin sen tieto.
+ */
+export function pinnanKirkkaus(pallo, ikkuna = globalThis) {
+  try {
+    const piirtaja = pallo?.renderer?.();
+    const gl = piirtaja?.getContext?.();
+    const kangas = piirtaja?.domElement;
+    if (!gl?.readPixels || !kangas?.width || !kangas?.height) return null;
+    if (gl.isContextLost?.()) return null;
+    /*
+     * YKSI KEHYS OMIN KÄSIN. Ilman tätä puskuri on jo vaihdettu ja
+     * readPixels palauttaa nollia — eli mittari väittäisi mustaa aina.
+     */
+    const nayttamo = pallo.scene?.();
+    const kamera = pallo.camera?.();
+    if (!nayttamo || !kamera || typeof piirtaja.render !== 'function') return null;
+    piirtaja.render(nayttamo, kamera);
+    /*
+     * PALLON SÄDE RUUDULLA: kirjasto antaa kameran korkeuden säteinä,
+     * ja pallo on kankaan keskellä. Jos sädettä ei saa, otetaan
+     * näytteet kankaan keskeltä kiinteällä osuudella.
+     */
+    const sadePx = Math.max(
+      8, Math.round(Math.min(kangas.width, kangas.height) * 0.25),
+    );
+    const askel = Math.max(
+      1, Math.round((sadePx * 2 * PINNAN_NAYTEOSUUS) / (PINNAN_NAYTERUUTU - 1)),
+    );
+    const keskiX = Math.round(kangas.width / 2);
+    const keskiY = Math.round(kangas.height / 2);
+    const reuna = Math.floor(PINNAN_NAYTERUUTU / 2);
+    const pikseli = new Uint8Array(4);
+    let paras = 0;
+    for (let iy = -reuna; iy <= reuna; iy += 1) {
+      for (let ix = -reuna; ix <= reuna; ix += 1) {
+        const x = Math.min(kangas.width - 1, Math.max(0, keskiX + ix * askel));
+        const y = Math.min(kangas.height - 1, Math.max(0, keskiY + iy * askel));
+        gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, pikseli);
+        const kirkkaus = Math.max(pikseli[0], pikseli[1], pikseli[2]);
+        if (kirkkaus > paras) paras = kirkkaus;
+      }
+    }
+    return paras;
+  } catch { return null; }
+}
+
+/*
+ * ── MATERIAALIN VÄRI VALKOISEKSI (LISÄYS 13 kohta 37 TARKENNUS) ────
+ *
+ * Globe.gl maalaa pohjapallon materiaalin MUSTAKSI aina, kun
+ * `globeImageUrl` asetetaan nulliksi (kirjaston oma rivi:
+ * `!n.color && (n.color = new Color(0))`). Musta jää materiaaliin, ja
+ * kun tekstuuri myöhemmin saapuu, kirjasto asettaa `color = null` —
+ * jolloin three.js EI ENÄÄ kirjoita `diffuse`-uniformia. Mustaa ei siis
+ * saa pois `color.set()`illä (null-oliolla ei ole settiä) eikä
+ * `needsUpdate`illa: materiaalille on annettava UUSI Color-olio.
+ *
+ * MITATTU (Mac-sessio 17.9.2026, oikea WebKit ja Chromium): `color.set`
+ * ei auta, uusi `Color('#ffffff')` palauttaa pinnan (kirkkaus 65–68).
+ *
+ * Palauttaa `true`, jos väri kirjoitettiin.
+ */
+export function valkaiseMateriaali(materiaali, hex = 0xffffff) {
+  try {
+    if (!materiaali) return false;
+    /*
+     * COLOR-LUOKKA ILMAN GLOBAALIA THREE:Ä. `globalThis.THREE` on
+     * olemassa vain jos joku muu on ladannut kirjaston; pohjapallon
+     * `specular` on Color-olio, joten sen konstruktori kelpaa.
+     */
+    const Vari = globalThis.THREE?.Color ?? materiaali.specular?.constructor;
+    if (typeof Vari !== 'function') {
+      // Viimeinen oljenkorsi: jos väri on olemassa, se voidaan asettaa.
+      if (materiaali.color?.setHex) {
+        materiaali.color.setHex(hex ?? 0xffffff);
+        materiaali.needsUpdate = true;
+        return true;
+      }
+      return false;
+    }
+    materiaali.color = new Vari(hex ?? 0xffffff);
+    materiaali.needsUpdate = true;
+    return true;
+  } catch { return false; }
+}
+
+/** Piirrettyjen kehysten laskuri (three: renderer.info.render.frame). */
+export function piirrettyjaKehyksia(pallo) {
+  try {
+    const n = pallo?.renderer?.()?.info?.render?.frame;
+    return Number.isFinite(n) ? n : null;
+  } catch { return null; }
+}
+
+/*
+ * ── KEHYSVAHTI: YKSIKÄÄN KEHYS EI PIIRTYNYT ──────────────────────
+ *
+ * OMISTAJAN VIKA 17.9.2026 (LISÄYS 13 kohta 36): asennetussa macOS-
+ * WebAppissa avauksen JOKAINEN vaihe raportoi `ok=1` (pisteet 1 ms),
+ * pinta, ladonta ja blob valmistuivat — ja silti ruutu jäi ruskeaksi
+ * ja `pisteita=0` kahdesti.
+ *
+ * MITATTU (Chromium, kotelo 2539 × 1321, 17.9.2026): kun
+ * requestAnimationFrame lakkaa kutsumasta takaisin linssin avautuessa,
+ * saadaan TÄSMÄLLEEN tuo loki ja täsmälleen Codexin kuva. Syy on
+ * yhteinen molemmille oireille:
+ *
+ *   • pallon pinta piirtyy WebGL-kankaalle vain render-silmukassa, ja
+ *   • kohdepisteet ovat CSS2D-elementtejä, jotka CSS2DRenderer lisää
+ *     DOMiin VASTA PIIRTÄESSÄÄN.
+ *
+ * `vaihe nimi=pisteet ok=1 ms=1` kertoo siis vain, että lista meni
+ * kirjastolle (Kapsulen digest on 1 ms:n ajastin). DOMiin ne tulevat
+ * vasta kehyksestä. Ilman kehyksiä ei ole palloa eikä pisteitä —
+ * mutta AJASTIMET toimivat, joten vartija ja koko tekstuuriketju
+ * ehtivät raportoida onnistumisensa.
+ *
+ * VAHTI EI VAIN MITTAA VAAN AJAA. Jos kehyslaskuri ei etene, se
+ * pakottaa kirjaston piirtämään yhden kehyksen ajastimesta:
+ * `pauseAnimation()` nollaa kirjaston kehyspyynnön ja
+ * `resumeAnimation()` ajaa piirtosyklin HETI ja pyytää uuden kehyksen.
+ * Näin linssi valmistuu silloinkin, kun laite ei anna kehyksiä.
+ */
+
+/** Kehysvahdin väli ja kesto (ms). */
+export const KEHYSVAHDIN_VALI_MS = 300;
+export const KEHYSVAHDIN_KESTO_MS = 12000;
+
+/**
+ * Kehysvahti pallolle. Palauttaa kahvan, jonka `tila()` kertoo
+ * piirrettyjen ja pakotettujen kehysten määrän ja `pura()` lopettaa.
+ */
+export function varmistaKehykset(pallo, lauta = null, ikkuna = globalThis) {
+  const alku = piirrettyjaKehyksia(pallo);
+  let edellinen = alku;
+  let pakotettuja = 0;
+  let kierroksia = 0;
+  let kello = 0;
+  const pakota = () => {
+    try {
+      /*
+       * PAUSE ENNEN RESUMEA, EI PELKKÄ RESUME: kirjasto ajaa
+       * piirtosyklin vain, jos sen kehyspyyntö on tyhjä, ja `pause`
+       * tyhjentää sen. Ilman paria resume olisi tyhjä kutsu.
+       */
+      pallo?.pauseAnimation?.();
+      pallo?.resumeAnimation?.();
+      pakotettuja += 1;
+    } catch { /* kirjasto ei tue: vartija kertoo puutteen */ }
+    try { lauta?.heraa?.(); } catch { /* ei lautaa */ }
+  };
+  const askel = () => {
+    kierroksia += 1;
+    const nyt = piirrettyjaKehyksia(pallo);
+    /*
+     * TAUSTALLA EI PAKOTETA. Piilotettu sivu ei kuulu pakottaa
+     * piirtämään — se olisi akun tuhlausta eikä korjaisi mitään.
+     */
+    const piilossa = ikkuna?.document?.visibilityState === 'hidden';
+    if (nyt !== null && nyt === edellinen && !piilossa) pakota();
+    edellinen = nyt;
+    if (kierroksia * KEHYSVAHDIN_VALI_MS >= KEHYSVAHDIN_KESTO_MS) {
+      pallodiag('kehykset', {
+        piirtoja: nyt ?? '?', alussa: alku ?? '?', pakotettu: pakotettuja,
+      }, ikkuna);
+      lopeta();
+    }
+  };
+  const lopeta = () => {
+    if (!kello) return;
+    try { ikkuna.clearInterval?.(kello); } catch { /* ei kelloa */ }
+    kello = 0;
+  };
+  try {
+    kello = ikkuna.setInterval?.(askel, KEHYSVAHDIN_VALI_MS) ?? 0;
+  } catch { kello = 0; }
+  return {
+    tila: () => ({
+      piirtoja: piirrettyjaKehyksia(pallo),
+      alussa: alku,
+      pakotettuja,
+      /** Onko yksikään kehys piirtynyt linssin avauksen jälkeen? */
+      kehyksia: (() => {
+        const nyt = piirrettyjaKehyksia(pallo);
+        if (nyt === null || alku === null) return null;
+        return nyt - alku;
+      })(),
+    }),
+    pakota,
+    pura: lopeta,
+  };
+}
+
 
 
 /** Ilmakehän hehku reunalla: astronautin näkemä sininen kaista. */
@@ -1786,6 +2096,16 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       reliefiPaalla = true;
       pallo.globeImageUrl(url);
       lauta?.heraa?.();
+      /*
+       * PINNAN VAIHTO TARKISTETAAN RUUDULTA (LISÄYS 13 kohta 37).
+       * Osoitteen asettaminen ei todista mitään: kuva puretaan ja
+       * ladataan GPU:lle vasta tämän jälkeen, ja juuri siinä musta
+       * pallo syntyi. Mittaus odottaa sen verran, että kirjasto ehtii
+       * ladata tekstuurin, ja jos pinta on musta, GENEROITU
+       * VYÖHYKEPALLO PALAA — se on väriä, ja väri on parempi kuin
+       * oikea maasto, jota ei näy.
+       */
+      ajastaPinnanTarkistus();
     })
     .catch(() => { /* reliefiä ei saatu: generoitu Maa jää */ });
   /*
@@ -1804,9 +2124,116 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     materiaali.shininess = 0;
     materiaali.needsUpdate = true;
   }
+  /*
+   * ── MUSTA PINTA ON KIRJASTON VÄRI, EI TEKSTUURI ─────────────────
+   *
+   * MITATTU OIKEALLA WebKitillä JA CHROMIUMILLA (Mac-sessio 17.9.2026,
+   * docs/raportit/viesti-fable-webkit-toisto-20260917.md luku 4;
+   * Raamattu LISÄYS 13 kohta 37 TARKENNUS). Globe.gl 2.46.2:n oma rivi:
+   *
+   *   globeImageUrl
+   *     ? TextureLoader.load(url, t => { n.map = t; n.color = null; ... })
+   *     : !n.color && (n.color = new Color(0))
+   *
+   * Eli KUN OSOITE ON NULL, kirjasto maalaa materiaalin MUSTAKSI. Juuri
+   * niin linssin sulku tekee: `globeImageUrl(lahto.kuvaUrl ?? null)`, ja
+   * pelin lähtöarvo on null, koska peli piirtää laattamoottorilla.
+   * Musta ei näy heti (laatat peittävät pallon), mutta SEURAAVASSA
+   * avauksessa pallo tulee näkyviin HETI ja tekstuuri vasta
+   * asynkronisesti: jos yksikin kehys ehtii väliin, sävyttimen
+   * `diffuse`-uniformi saa mustan — ja kun tekstuuri saapuu, kirjasto
+   * asettaa `color = null`, jolloin three.js ei enää kirjoita uniformia.
+   * Lopputulos on musta × tekstuuri = MUSTA PALLO, vaikka kartta, valot
+   * ja kangas ovat kunnossa.
+   *
+   * Siksi väri pakotetaan valkoiseksi ENNEN oman tekstuurin asetusta —
+   * ja purussa uudestaan, jotta seuraava avaus ei peri mustaa.
+   *
+   * COLOR-LUOKKA ILMAN GLOBAALIA THREE:Ä: `specular` on Color-olio,
+   * joten sen konstruktori on sama luokka (mitattu Mac-sessiossa).
+   */
+  const varinLahto = materiaali?.color?.getHex?.() ?? null;
+  valkaiseMateriaali(materiaali);
   pallo.backgroundColor?.(AVARUUDEN_TAUSTA);
   pallo.atmosphereColor?.(ILMAKEHAN_VARI);
   pallo.atmosphereAltitude?.(ILMAKEHAN_KORKEUS);
+  /*
+   * ── PINNAN MITTAUS JA VARAPOLKU (LISÄYS 13 kohta 37) ────────────
+   *
+   * `pinnanKirkkaus` piirtää yhden kehyksen ja lukee pallon keskustan
+   * piirtopuskurista. Mittaus tehdään VAIN kun reliefi on juuri
+   * vaihdettu pinnalle — generoitu vyöhykepallo on 1024 × 512 eikä voi
+   * jäädä GPU:lle lataamatta.
+   */
+  let viimeisinKirkkaus = null;
+  let pinnanKello = 0;
+  let varapolullaKaytiin = false;
+  let varinValkaisuTehty = false;
+  const mittaaPinta = () => {
+    const kirkkaus = pinnanKirkkaus(pallo, ikkuna);
+    viimeisinKirkkaus = kirkkaus;
+    pallodiag('pinta-mittaus', {
+      kirkkaus: kirkkaus ?? '?', reliefi: reliefiPaalla ? 1 : 0,
+      varapolku: varapolullaKaytiin ? 2 : (varinValkaisuTehty ? 1 : 0),
+    }, ikkuna);
+    if (kirkkaus === null || kirkkaus >= PINNAN_MUSTAN_KYNNYS) return kirkkaus;
+    if (purettu) return kirkkaus;
+    /*
+     * ── VARAPOLKU KAHDESSA ASKELEESSA ───────────────────────────
+     *
+     * Mustalla pinnalla on KAKSI mahdollista syytä, ja ne vaativat eri
+     * lääkkeen. Kumpikin on mitattu:
+     *
+     *   1. MATERIAALIN VÄRI (Mac-sessio 17.9.2026, oikea WebKit ja
+     *      Chromium): globe.gl maalasi materiaalin mustaksi, kun
+     *      `globeImageUrl` oli null. Tekstuuri on kunnossa — vain väri
+     *      kertoo sen nollaksi. Lääke: UUSI valkoinen Color.
+     *   2. TYHJÄ TEKSTUURI (pallo-musta-erä 16.9.2026, iOS Safari):
+     *      ladontakangas jäi läpinäkyväksi, ja läpinäkyvä tekstuuri
+     *      piirtyy mustana. Väri ei auta lainkaan — pinnalle on
+     *      vaihdettava toinen kuva.
+     *
+     * Siksi askel 1 on väri ja askel 2 generoitu vyöhykepallo. Kumpikin
+     * todistaa itsensä uudella mittauksella; jos kumpikaan ei auta,
+     * `avauksenPuute` kertoo pelaajalle `pinta-musta`.
+     */
+    if (!varinValkaisuTehty) {
+      varinValkaisuTehty = true;
+      const valkaistiin = valkaiseMateriaali(materiaali);
+      lauta?.heraa?.();
+      pallodiag('pinta-musta', {
+        askel: 1, toimenpide: valkaistiin ? 'vari-valkoiseksi' : 'ei-onnistunut', kirkkaus,
+      }, ikkuna);
+      ajastaPinnanTarkistus();
+      return kirkkaus;
+    }
+    if (varapolullaKaytiin || !reliefiPaalla || !tekstuuri) return kirkkaus;
+    /* Väri ei auttanut: tekstuuri itse on tyhjä. Generoitu Maa tilalle. */
+    varapolullaKaytiin = true;
+    reliefiPaalla = false;
+    pallo.globeImageUrl(tekstuuri);
+    valkaiseMateriaali(materiaali);
+    lauta?.heraa?.();
+    vapautaReliefi();
+    pallodiag('pinta-musta', { askel: 2, toimenpide: 'vyohykepallo', kirkkaus }, ikkuna);
+    ajastaPinnanTarkistus();
+    return kirkkaus;
+  };
+  function ajastaPinnanTarkistus() {
+    if (purettu) return;
+    try { ikkuna.clearTimeout?.(pinnanKello); } catch { /* ei kelloa */ }
+    try {
+      pinnanKello = ikkuna.setTimeout?.(() => {
+        pinnanKello = 0;
+        if (!purettu) mittaaPinta();
+      }, PINNAN_MITTAUKSEN_VIIVE_MS) ?? 0;
+    } catch { pinnanKello = 0; }
+  }
+  /*
+   * KEHYSVAHTI PÄÄLLE HETI (LISÄYS 13 kohta 36): ilman kehyksiä ei ole
+   * palloa eikä kohdepisteitä, ja juuri se oli WebAppin vika.
+   */
+  const kehysvahti = varmistaKehykset(pallo, lauta, ikkuna);
   pallodiag('avaruus-pinta', {
     tekstuuri: tekstuuri ? 1 : 0, tarkkuus: reliefinValinta.tunnus,
   }, ikkuna);
@@ -2093,6 +2520,11 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       /* Piirtokangas ja kontekstin kunto: vartija lukee nämä. */
       kangas: kangasMitat(),
       kontekstiHukassa: kontekstiHukassa(pallo),
+      /* Kehysvahti ja pinnan mitattu kirkkaus (LISÄYS 13, 36 ja 37). */
+      kehykset: kehysvahti.tila(),
+      pinnanKirkkaus: viimeisinKirkkaus,
+      pinnanVarapolku: varapolullaKaytiin,
+      ladonnanWebkit: webkitSelain(ikkuna?.navigator),
     }),
     /*
      * ONKO NÄKYMÄ VALMIS? Yksi totuus, jota sekä linssin vartija että
@@ -2107,7 +2539,19 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       pinnanOsoite: String(pallo.globeImageUrl?.() ?? ''),
       pisteita,
       kontekstiHukassa: kontekstiHukassa(pallo),
+      /*
+       * Kehykset ja pinnan todellinen kirkkaus (LISÄYS 13, 36 ja 37).
+       * Mittaus kelpaa myös varapolun jälkeen: jos GENEROITUKIN pinta
+       * on musta, pelaajan on saatava siitä lause eikä musta pallo.
+       */
+      kehyksia: kehysvahti.tila().kehyksia,
+      pinnanKirkkaus: reliefiPaalla || varapolullaKaytiin || varinValkaisuTehty
+        ? viimeisinKirkkaus : null,
     }),
+    /** Pinnan mittaus pyynnöstä (savuke ja vartija). */
+    mittaaPinta,
+    /** Yksi kehys väkisin (linssi kutsuu, kun pisteet eivät näy). */
+    pakotaKehys: () => kehysvahti.pakota(),
     /** Vartion kytkin: reunavarjo pois/päälle samaan näkymään. */
     asetaVarjostus: (paalla) => kalvo?.asetaVarjostus?.(paalla),
     pura() {
@@ -2125,6 +2569,9 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
         ohjaimet.autoRotateSpeed = pyorimisenLahto.nopeus;
       }
       kokovahti?.disconnect?.();
+      kehysvahti.pura();
+      if (pinnanKello) { try { ikkuna.clearTimeout?.(pinnanKello); } catch { /* ei kelloa */ } }
+      pinnanKello = 0;
       if (kehys) ikkuna.cancelAnimationFrame?.(kehys);
       kehys = 0;
       taivas?.pura?.();
@@ -2143,6 +2590,15 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
          */
         pallo.globeTileEngineUrl(lahto.laattaUrl ?? null);
         pallo.globeImageUrl(lahto.kuvaUrl ?? null);
+        /*
+         * JUURI TÄSSÄ SYNTYI MUSTA PALLO (ks. valkaiseMateriaali).
+         * `globeImageUrl(null)` panee kirjaston maalaamaan materiaalin
+         * mustaksi, ja se musta jäi odottamaan seuraavaa avausta.
+         * EI lähtöarvoon (varinLahto on 0/musta jo laattatilassa, koska
+         * globe.gl alustaa värin mustaksi) — sulku jättää aina VALKOISEN
+         * (oletushex), jotta musta ei jää odottamaan seuraavaa avausta.
+         */
+        valkaiseMateriaali(materiaali);
       }
       // Reliefin blob-osoite pois vasta kun pinta on jo vaihdettu.
       vapautaReliefi();
