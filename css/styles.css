@@ -27518,7 +27518,15 @@ body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
  * on pohjan vyöhykkeissä (js/pallolauta/aihemerkit.js), ei filterissä.
  */
 .pallolauta-liuska-auki .pallolauta-viuhka-kohta {
+  /*
+   * RIVIEN 30 ms PORRASTUS (PAATOKSET 34 kohta 8): lista ei ilmesty
+   * yhtenä levynä vaan valuu ylhäältä alas, kuten paperiliuska
+   * käännettäisiin esiin. Järjestysluku tulee piirrosta muuttujana
+   * (js/pallolauta/nostot.js `--liuskan-rivi`), koska SVG-ryhmillä ei
+   * ole :nth-child-lukua, joka kestäisi haitarin avaukset.
+   */
   animation: pallolauta-liuska-saapuu 150ms ease-out both;
+  animation-delay: calc(var(--liuskan-rivi, 0) * 30ms);
 }
 
 .pallolauta-liuska-auki .pallolauta-viuhka-pohja {

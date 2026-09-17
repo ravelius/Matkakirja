@@ -656,9 +656,12 @@ export function piirraViuhka(juuri, d) {
       r.setAttribute('aria-hidden', 'true');
     }
   }
-  for (const k of kohdat) {
+  for (const [nro, k] of kohdat.entries()) {
     const kohta = el('g', { class: 'pallolauta-viuhka-kohta' }, juuri);
     kohta.style.transform = `translate(${k.dx.toFixed(2)}px, ${k.dy.toFixed(2)}px)`;
+    // Rivin järjestysluku porrastusta varten (css/styles.css
+    // pallolauta-liuska-saapuu): 30 ms riviä kohti.
+    kohta.style.setProperty('--liuskan-rivi', String(nro));
     const kuva = el('g', { class: 'pallolauta-viuhka-kuva' }, kohta);
     kuva.style.transform = `scale(${(k.mitta ?? 1).toFixed(4)})`;
     k.piirra?.(kuva, k.puoli);

@@ -2170,6 +2170,17 @@ export async function avaaPallolauta(ui) {
    * (doKehittajaSiirto). Muu kaupunki: kamera sukeltaa sen ylle, jotta
    * pelaaja voi katsoa laattoja. Lehti ei odota kameraa.
    */
+  /**
+   * SEN KAUPUNGIN TIEDOT, JONKA LIUSKA ON AUKI (PAATOKSET 34 kohta 1:
+   * liuska aukeaa jokaisesta kaupungista). Yläryhmän rivit avaavat
+   * juuri tämän kaupungin lehden, nähtävyydet ja oppaan — pelaajan
+   * oma kaupunki (`game.cityOf`) olisi väärä vastaus heti, kun liuska
+   * avattiin naapurista.
+   */
+  let liuskanKaupunki = null;
+  /** Liuskan "Liiku tänne" -rivin siirtovalinta tai null. */
+  let liuskanSiirto = null;
+
   const napautaKaupunki = (k) => {
     if (ui.dead || ui.busy || !k) return false;
     /*
@@ -2220,10 +2231,16 @@ export async function avaaPallolauta(ui) {
       ui.doKehittajaSiirto(city);
       return true;
     }
-    if (oma && oma.id === city.id) {
+    {
       /*
        * ══ KAUPUNKIMERKKI AVAA LIUSKAN (Raamattu, KARTTAUUDISTUKSEN
        * PAATOKSET 34 kohdat 1 ja 10) ═══════════════════════════════
+       *
+       * JOKAINEN KAUPUNKI, EI VAIN PELAAJAN OMA (kohta 1). Muiden
+       * kaupunkien merkki avasi ennen suoraan siirron; se teko ei
+       * kadonnut vaan siirtyi liuskan riviksi "Liiku tänne"
+       * (js/pallolauta/kaupunkiliuska.js LIIKU_NIMIO), joka on
+       * olemassa vain silloin kun siirto on oikeasti tarjolla.
        *
        * KAMERA AJAA ENSIN, LIUSKA AUKEAA VASTA SEN JÄLKEEN (kohta 10,
        * omistaja: *"kartta voisi ajaa itsensa sellaiseen paikkaan
@@ -2239,6 +2256,9 @@ export async function avaaPallolauta(ui) {
        * jo tuo kaupungin lähelle; jos sakko jää nollaa suuremmaksi,
        * asemahaku siirtää listaa pystysuunnassa.
        */
+      const siirto = (game.phase === 'move' && !game.player?.isBot)
+        ? (game.moveOptions?.().find((opt) => opt.city?.id === city.id) ?? null)
+        : null;
       void (async () => {
         await kamera.ajaKamera(
           { x: city.x, y: city.y, leveys: kamera.kameranTila()?.leveys }, {},
@@ -2247,22 +2267,24 @@ export async function avaaPallolauta(ui) {
         // ruutupisteeseen, jolloin lepotesti vertaa oikeaan lukuun.
         ladoLevossa?.();
         const avautui = Number.isFinite(k.lat) && Number.isFinite(k.lon)
-          && nostot.avaaLiuskaKaupungista?.(k.lat, k.lon);
-        if (!avautui) {
-          // Varapolku: jos kaupunkirivi ei ole ruudulla (pallon
-          // takana), vanha tiivis etusivu avaa kaupungin kuten ennen.
+          && nostot.avaaLiuskaKaupungista?.(k.lat, k.lon, { liiku: Boolean(siirto) });
+        if (avautui) {
+          // Liuskan yläryhmä koskee SITÄ kaupunkia, jonka merkistä se
+          // aukesi — ei pelaajan omaa (ks. napautaPintaan).
+          liuskanKaupunki = city;
+          liuskanSiirto = siirto;
+        } else if (siirto) {
+          // Varapolku: kaupunkirivi ei ole ruudulla (pallon takana),
+          // jolloin siirto tehdään suoraan kuten ennen liuskaa.
+          ui.doMove(siirto.key);
+        } else if (oma && oma.id === city.id) {
+          // Sama varapolku omalle kaupungille: vanha tiivis etusivu.
           avaaTiivisKaupunkietusivu(ui, city);
         }
         heraa();
       })();
       return true;
     }
-    void kamera.ajaKamera({ x: city.x, y: city.y, leveys: kamera.kameranTila()?.leveys }, {});
-    if (game.phase === 'move' && !game.player?.isBot) {
-      const kohde = game.moveOptions?.().find((opt) => opt.city?.id === city.id);
-      if (kohde) { ui.doMove(kohde.key); return true; }
-    }
-    return true;
   };
 
   /**
@@ -2891,7 +2913,14 @@ export async function avaaPallolauta(ui) {
       const osui = kohta ? nostot.napautaLiuskasta(kohta) : null;
       if (osui) {
         heraa();
-        const city = ui.game.cityOf?.();
+        const city = liuskanKaupunki ?? ui.game.cityOf?.();
+        if (osui.laji === 'liiku') {
+          const avain = liuskanSiirto?.key;
+          liuskanKaupunki = null;
+          liuskanSiirto = null;
+          if (avain) ui.doMove(avain);
+          return;
+        }
         if (city && osui.laji === 'lehti') ui.avaaTutkinta?.(city);
         else if (city && osui.laji === 'nahtavyydet') {
           /*
@@ -2908,6 +2937,8 @@ export async function avaaPallolauta(ui) {
       }
       heraa();
       nostot.suljeLiuska();
+      liuskanKaupunki = null;
+      liuskanSiirto = null;
       return;
     }
     if (nostot.viuhkaAuki()) {
@@ -3256,6 +3287,13 @@ export async function avaaPallolauta(ui) {
 
   /* ---- turisti-info kaupungin vieressä (erä 4) ---------------------- */
   /**
+   * ONKO TURISTI-INFON KYLTTI KARTALLA. Epätosi PAATOKSET 34 kohdasta 8
+   * alkaen: opas on kaupunkiliuskan rivi. Vakio on nimetty eikä
+   * poistettu, jotta sammutuksen syy näkyy siinä kohdassa, jossa
+   * kyltti ennen syntyi.
+   */
+  const KYLTTI_KARTALLA = false;
+  /**
    * TURISTI-INFON MERKKI (omistaja 13.9.2026: *"Kaupungin viereen
    * kartalle tulee oma 'turisti info' merkki ja teksti ja sitä
    * klikkaamalla avautuu pelkkä nykyisen lehden tursti ja matkustusopas
@@ -3329,6 +3367,21 @@ export async function avaaPallolauta(ui) {
    */
   const paivitaTuristiInfo = (kiinteaMuste = [], omaMuste = []) => {
     const tyhjaa = () => { merkit.aseta('turistiinfo', []); return []; };
+    /*
+     * ══ KYLTTI EI OLE ENÄÄ KARTALLA (Raamattu, KARTTAUUDISTUKSEN
+     * PAATOKSET 34 kohta 8) ════════════════════════════════════════
+     *
+     * Opas avataan kaupunkiliuskan "Turistiopas"-riviltä
+     * (js/pallolauta/kaupunkiliuska.js TURISTIOPPAAN_NIMIO), joten
+     * kartalla kyltti olisi sama asia kahdesti — ja juuri se kilpaili
+     * sormesta kaupungin ja nostojen kanssa (ks. lahinMerkki).
+     *
+     * ASENTOKONE JÄTETÄÄN PAIKALLEEN mutta sammutetaan tähän yhteen
+     * porttiin: sen mitattu asentojärjestys (KYLTIN_LADONTA,
+     * js/kaupunkinosto.js) on kallis tieto, ja koneen purku koskisi
+     * osumakilpailua, jota tämä erä ei mittaa. Purku on oma eränsä.
+     */
+    if (!KYLTTI_KARTALLA) return tyhjaa();
     if (linssiPaalla() || lento || aloitusNakyvat()) return tyhjaa();
     const city = ui.game.cityOf?.();
     if (!city || !kaupunginMatkailijalle(city.id)) return tyhjaa();

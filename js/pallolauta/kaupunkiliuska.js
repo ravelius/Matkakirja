@@ -23,6 +23,15 @@ import { aiheenNimi } from './aihemerkit.js';
 /** Yläryhmän kiinteät nimet (PAATOKSET 34 kohta 8, omistajan sanat). */
 export const NAHTAVYYDET_NIMIO = 'Nähtävyydet';
 export const TURISTIOPPAAN_NIMIO = 'Turistiopas';
+/**
+ * SIIRTYMISRIVI (PAATOKSET 34 kohta 1, *"jokainen kaupunki"*). Liuska
+ * avautuu nyt myös muista kaupungeista kuin pelaajan omasta, ja
+ * silloin kaupunkimerkin napautus ennen KÄYNNISTI siirron. Teko ei saa
+ * kadota, joten se on liuskan rivi yläryhmän jatkona — ei yläryhmän
+ * neljäs rivi (kohta 8 sanoo kolme), vaan oma lajinsa, joka on
+ * olemassa vain silloin kun siirto on tarjolla.
+ */
+export const LIIKU_NIMIO = 'Liiku tänne';
 
 /**
  * KAUPUNGIN SÄDE: näin lähellä kaupungin omaa pistettä oleva nosto on
@@ -115,6 +124,7 @@ export function kategoriat(nostot) {
  */
 export function liuskanRivit({
   kaupunki, nostot = [], avattuKategoria = null, nahtavyyksia = true, opas = true,
+  liiku = false,
 } = {}) {
   const rivit = [];
   const nimi = kaupunki?.nimi ?? kaupunki?.name ?? '';
@@ -131,6 +141,11 @@ export function liuskanRivit({
   if (opas) {
     rivit.push({
       laji: 'opas', nimi: TURISTIOPPAAN_NIMIO, avain: 'ylaryhma:opas', sisennys: 0,
+    });
+  }
+  if (liiku) {
+    rivit.push({
+      laji: 'liiku', nimi: LIIKU_NIMIO, avain: 'ylaryhma:liiku', sisennys: 0,
     });
   }
   let ensimmainen = true;

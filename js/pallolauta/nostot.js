@@ -1453,7 +1453,7 @@ export function luoNostot({
    * Kamera-ajo (kohta 10) tehdään ENNEN tätä kutsua laudalla, jottei
    * ajon oma siirto sulje juuri avattua liuskaa.
    */
-  const avaaLiuska = (rivi) => {
+  const avaaLiuska = (rivi, { liiku = false } = {}) => {
     if (!rivi?.p) return false;
     viuhka = null;
     liuska = {
@@ -1461,6 +1461,9 @@ export function luoNostot({
       p: { x: rivi.p.x, y: rivi.p.y },
       uloinOsuus: viimeisinUloinOsuus,
       avattuKategoria: null,
+      // Siirtymisrivi on olemassa vain, kun lauta tarjosi siirron
+      // (js/pallolauta/lauta.js napautaKaupunki) — ks. LIIKU_NIMIO.
+      liiku,
     };
     ladoUudelleen?.();
     return true;
@@ -2143,6 +2146,7 @@ export function luoNostot({
           kaupunki: rivi,
           nostot: omat,
           avattuKategoria: liuska.avattuKategoria,
+          liiku: Boolean(liuska.liiku),
         });
         const leveydet = rivit.map((r2) => viuhkanNimioLeveys(
           r2.nimi ? nostosymNimioMitta(r2.nimi, null, Infinity).leveys : 0, mittaNyt,
@@ -2416,7 +2420,7 @@ export function luoNostot({
      * jos kaupungilla ei ole riviä ruudulla (silloin lauta avaa
      * vanhan kortin).
      */
-    avaaLiuskaKaupungista: (lat, lng) => {
+    avaaLiuskaKaupungista: (lat, lng, valinnat = {}) => {
       const p = ruudulla(lat, lng);
       if (!p) return false;
       let paras = null;
@@ -2427,7 +2431,7 @@ export function luoNostot({
         if (matka < parasMatka) { parasMatka = matka; paras = o; }
       }
       if (!paras || parasMatka > 60) return false;
-      return avaaLiuska(paras);
+      return avaaLiuska(paras, valinnat);
     },
     /**
      * OSUIKO NAPAUTUS LIUSKAN RIVIIN. Kategoriarivi vaihtaa haitarin
