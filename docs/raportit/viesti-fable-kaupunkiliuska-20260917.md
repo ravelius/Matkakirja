@@ -1404,3 +1404,197 @@ Fable päättää, mitä kirjataan.
 **Vaatii versionoston**; `tools/uusi-versio.mjs` on ajamatta (ohje).
 PR #2569 on suljettu, joten muutokset ovat vain haarassa
 `claude/bold-ride-vow4ki-kaupunkiliuska`.
+
+---
+
+# Erä 8
+
+**Opus-agentti 18.9.2026 klo 02.25 Suomen aikaa.** Haara
+`claude/bold-ride-vow4ki-kaupunkiliuska` (erä 7:n päälle, commit
+75adfb85). **Vaatii versionoston**; `tools/uusi-versio.mjs` on ajamatta
+(ohje). PR:ää ei avattu (AGENTIT TARKENNUS 8).
+
+## 1. MUSTA RASTERIROSKE — EI TOISTUNUT, JA MITTAUS KERTOO MIKSI
+
+**En korjannut tätä, koska en saanut sitä toistumaan enkä halua
+korjata arvaamalla.** Kaikki alla oleva on mitattua.
+
+Rakensin mitan, jota Fable pyysi: mustien pikselien osuus KARTAN
+alueella (kehys, yläpalkki, liuska ja alalaidan RANSKA-nimiö rajattu
+pois; laatikko x 40–330, y 880–1480 kaappauksen 390 px:n mitassa).
+Työkalu on puhdas Node + zlib PNG-purku, ei riippuvuuksia.
+
+| kaappaus | commit / ajo | mustaa kartalla |
+| --- | --- | --- |
+| Fablen `kaappaukset7/pariisi-liuska-kategoria-390.png` | 21bface0, klo 01.38 | **6,014 %** |
+| `kaappaukset6/…` (sama tiedosto, tunti aiemmin) | 441de978, klo 00.39 | **0,000 %** |
+| oma ajo ENNEN korjausta | 75adfb85, klo 02.05 | **0,056 %** |
+| oma ajo KORJAUKSEN jälkeen | tämä erä, klo 02.15 ja 02.20 | **0,056 %** |
+
+Raja *"alle 0,5 %"* siis täyttyy jokaisessa omassa ajossani, ja
+Fablen kaappaus ylittää sen yli kymmenkertaisesti. Vika on tosi,
+mutta se **ei ole toistettava tästä koodista**.
+
+### 1a. Vastakoe kertoo, ettei syy ole commitissa
+
+Ajoin saman komennon HEADista (75adfb85) — se on Fablen kaappausta
+UUDEMPI commit — ja kartta oli puhdas. Sen lisäksi kaikkien olemassa
+olevien kaappauskansioiden mittaus antaa kuvion, joka sulkee pois
+koodisyyn:
+
+- **Ajossa 7 KAIKKI pääsivun kaappaukset ovat likaisia** —
+  `pariisi-lahizoom` 9,90 %, `pariisi-liuska-auki` 9,33 %,
+  `pariisi-viuhkalista` 11,12 %, `pariisi-liuska-kategoria` 9,23 %
+  (koko kuvan alapuoliskosta) — ja roske on kaikissa SAMASSA
+  paikassa.
+- **Saman ajon vastakoesivu `pariisi-lahizoom-ilman-ryhmitysta-390.png`
+  on puhdas** (5,478 %, sama luku kuin puhtaissa ajoissa).
+  Vastakoe on oma `page`-olionsa samassa selaimessa ja samalla
+  koodilla, samalla 390 px:n ruudulla ja samalla syvällä zoomilla.
+- **1400 px on puhdas kaikissa ajoissa** (3,639 % molemmissa).
+- Ajot 1, 4, 5 ja 6 sekä ankkurierän `nostoankkurit-lahizoomi.png`
+  ovat puhtaita; likaisia ovat ajo 7 ja viimeistelyerän
+  `nostot-viimeistely/pariisi-lahizoom-390.png`.
+
+Jos syy olisi piirtokoodissa (NaN-koordinaatti, nostonOsat,
+musteenVoittaja, piilotettujen nimiöiden kerros), vastakoesivun pitäisi
+olla yhtä likainen kuin pääsivun — se ajaa saman ladonnan samassa
+prosessissa. **Se on puhdas.** Roske on siis YHDEN SIVUINSTANSSIN
+tila, joka syntyy kesken ajon ja jää siihen ajon loppuun asti.
+
+### 1b. Mitä roske on
+
+Suurensin roskeen viisinkertaiseksi
+(`kaappaukset7/pariisi-lahizoom-390.png`, pala 300,1000 160×120).
+Kyseessä ovat mustat läiskät, joissa on vaakasuora kampamainen
+viivoitus, ja **joen viiva piirtyy niiden PÄÄLLE puhtaana**. Roske on
+siis kartan pohjarasterissa (maaston varjostuksen tasolla, jokien
+alla), ei DOM- tai SVG-yläkerroksessa eikä liuskan kerroksessa.
+Läiskillä on paikoin suorat pystyreunat — laatan raja.
+
+**Päätelmäni:** kyse on Chromiumin oman rasteroinnin keskeneräisestä
+laatasta syvässä zoomissa (Fablen toinen vaihtoehto, *"rasteriporras
+kesken"*), ei pelin piirtologiikasta. Sen puolesta puhuvat kaikki neljä
+havaintoa: vain yksi sivuinstanssi kerrallaan, vain 390 px (dpr 2),
+vain syvin zoomi, ja roske jäätyy paikalleen lopun ajoa. **En
+kuitenkaan väitä tätä todistetuksi** — todistus vaatisi roskeen
+toistamisen, eikä se toistunut kahdessa ajossa.
+
+### 1c. Mitä tekisin seuraavaksi (en ehtinyt)
+
+Yksi mittauksen kokoinen askel: aja `savuke-pariisi-lahizoom` 390
+px:llä silmukassa 10 kertaa ja mittaa kartan mustaosuus joka kerta.
+Jos roske ilmestyy satunnaisesti, se vahvistaa rasterointiselityksen ja
+mitta kertoo esiintymistiheyden. Mittari on valmis ja se on
+`tools/savukkeet/`-kelpoinen sellaisenaan (30 riviä, ei riippuvuuksia)
+— jätin sen lisäämättä savukkeeseen, koska vartio, joka ei koskaan ole
+punainen omassa ajossani, olisi arvaus.
+
+## 2. LIUSKA EI ENÄÄ LADOTU KAUPUNGIN NIMEN PÄÄLLE — KOLME VIKAA
+
+Tämä korjattiin, ja juurisyitä oli **kolme**, ei yksi.
+
+### 2a. Vaakasuunnassa haku ei hakenut mitään
+
+`viuhkanAsemat` (js/pallolauta/aihemerkit.js) kokeili **seitsemää
+pystysiirtoa mutta vain YHTÄ vaaka-asentoa**: `dx0` oli vakio
+`VIUHKAN_SADE_PX` (26 px), ja ainoa vaakaliike oli kiinnitys ruudun
+reunaan. Este saattoi siis olla listan alla ilman että yhtäkään
+kokeiltavaa asentoa olisi ollut sen ohi.
+
+Pystysiirto ei voi auttaa tässä: **kaupungin nimi on kaupunkimerkin
+omalla kohdalla ja liuska ripustetaan samaan merkkiin**, joten nimi on
+aina listan rivien korkeudella. Kameran ajokaan (kohta 10) ei auta,
+koska nimi seuraa kaupunkia — kartan siirtäminen siirtää molempia.
+Tämä on syy siihen, miksi erä 7:n kamerakorjaus ei riittänyt.
+
+`viuhkanAsemat` saa nyt valinnaisen `vaakaEhdokkaat`-listan. Nolla on
+aina ensin ja tasapelin ratkaisee järjestys, joten **vapaassa paikassa
+ladonta on täsmälleen ennallaan**, ja **viuhka ei anna ehdokkaita
+lainkaan** (oletus `[0]`) — sen ladonta ei muuttunut.
+
+### 2b. Nimi luettiin yhden ladonnan vanhana
+
+Liuskan esteistö sai kaupunkien nimet `viimeisimmatNimet`-jäljestä,
+jonka **sovittelu kirjoittaa vasta `paivita`n JÄLKEEN**
+(js/pallolauta/lauta.js `ladoLevossa`). Kamera-ajo siirtää karttaa juuri
+ennen avausta, joten laatikko oli väärässä paikassa täsmälleen silloin,
+kun sitä eniten tarvitaan. Lauta antaa nyt lukufunktion nimikerrokseen
+(`nimienLaatikot` → js/pallolauta/nimet.js `laatikot`).
+
+Se on **oma listansa eikä `esteet`**, koska `esteet` ohjaa myös
+ankkurointia (`esteetKehyksessa`): koko nimijoukon vieminen sinne
+siirtäisi nostomerkkejä, mikä on eri asia kuin listan ladonta.
+
+### 2c. Vartiot 8d, 8j ja 8k mittasivat väärää laatikkoa
+
+**Tämä on syy siihen, miksi erä 7 raportoi vihreää samalla kun
+kaappaus näyttää liuskan nimen päällä.** Vartiot lukivat
+`.pallolauta-nimi`, joka on CSS2D-kääre; nimen oma mitta syntyy sen
+sisällä olevaan `<text class="karttanimi">`-elementtiin
+`scale()`-muunnoksella (js/pallolauta/nimet.js `asetteleNimi`). Kääreen
+laatikko ei siis sisällä sitä isoa "PARIISI"-tekstiä, jonka omistaja
+näkee. Vartiot lukevat nyt `.pallolauta-nimi .karttanimi`.
+
+Nappula oli jo esteistössä (`merkit.laatikot('peli')`) ja se toimi —
+kaappauksessa lista kaartaa nappulan ohi. Kaulanauhajuttu-nimiö on
+pehmeä este (paino 1, piilotettavissa) kuten muutkin nostonimiöt.
+
+### 2d. Mitattu tulos
+
+`INFO puhelin · liuskan keskitys: merkki x 145,98 (ruutu 374 px),
+liuskan vasen reuna 252,17` — ennen korjausta vasen reuna olisi ollut
+merkki + 26 px eli ~172. **Vaakapako siirsi listaa 80 px oikealle**,
+juuri PARIISI-nimen ulkoreunan ohi. Keskitys säilyi (kohta 12): merkin
+y 387,42, listan keskipiste y 387,42, ero **0,00 px**. Kelausrivejä 0
+— kelaus jäi viimeiseksi keinoksi, kuten ohje vaatii.
+
+## 3. MITTAUKSET
+
+`savuke-pariisi-lahizoom`, yksi ajo kumpaakin ruutua kohti
+korjauksen jälkeen (Mac, Chrome for Testing):
+
+| vartio | 390 px | 1400 px |
+| --- | --- | --- |
+| **8d.** liuska kokonaan ruudussa, ei nimen eikä nappulan päällä | vihreä | vihreä |
+| **8j.** avattu kategoria pysyy ruudussa eikä nimen/nappulan päällä | vihreä | vihreä |
+| **8k.** keskitetty liuska merkin korkeudella, oikealla puolella | vihreä | — (vain 390) |
+| vihreitä yhteensä | 31 | 29 |
+
+`node --test tests/*.test.mjs`: **3606 testiä, `# pass 3593`,
+`# fail 0`** (13 ohitettua). `node tools/build-standalone.mjs` ajettu;
+**dist/ ei ole commitissa**.
+
+Kaappaukset, `tools/savukkeet/kaappaukset/kaupunkiliuska-era8/`:
+
+- `pariisi-liuska-kategoria-390.png` (Skandaalit auki, 13 riviä)
+- `pariisi-liuska-auki-390.png` (liuska kiinni eli pelkät kategoriat)
+- `pariisi-lahizoom-390.png`
+- `pariisi-liuska-kategoria-1400.png`
+- `pariisi-liuska-auki-1400.png`
+
+## 4. Oletukset (päätin itse, ei AskUserQuestionia)
+
+1. **Vaakapako kuuluu ladontaan, ei kameraan.** Ohje antoi kameralle
+   luvan siirtää karttaa enemmän, mutta mittaus osoitti ettei se voi
+   auttaa: nimi seuraa kaupunkia (osio 2a). Kamerakorjaus (kohta 10)
+   jätettiin siksi täsmälleen ennalleen.
+2. **Nimet omana listanaan eikä `esteet`-listalla**, koska `esteet`
+   ohjaa myös ankkurointia (osio 2b).
+3. **Mustan rasteriroskeen korjaus jätettiin tekemättä** (osio 1):
+   se ei toistunut, ja vastakoe osoittaa syyn olevan sivuinstanssissa
+   eikä piirtokoodissa. En muuttanut piirtoa arvauksen perusteella.
+4. **Mustaosuuden mittaria ei lisätty savukkeeseen vartiona**: vartio,
+   joka ei kertaakaan ole punainen omassa ajossani, lukitsisi
+   arvauksen (osio 1c).
+5. **Kaulanauhajuttu jätettiin pehmeäksi esteeksi** (paino 1), kuten
+   muutkin nostonimiöt — kovaksi nostaminen olisi muuttanut erä 7:n
+   päätöstä esteluokista ilman omistajan ohjetta.
+
+## 5. Muutetut tiedostot (erä 8)
+
+`js/pallolauta/aihemerkit.js` (`vaakaEhdokkaat`),
+`js/pallolauta/nostot.js` (tuore nimilista, vaakaehdokkaiden laskenta),
+`js/pallolauta/lauta.js` (`nimienLaatikot`),
+`tools/savukkeet/savuke-pariisi-lahizoom.mjs` (vartiot 8d/8j/8k lukevat
+nimen oikean laatikon), kaappaukset ja tämä raportti.
