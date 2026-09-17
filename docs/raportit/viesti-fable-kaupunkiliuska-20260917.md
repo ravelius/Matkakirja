@@ -639,7 +639,8 @@ Kansio `/private/tmp/claude-501/-Users-samireivinen-Matkakirja-fable/`
 
 Savukkeiden tulosteet: `.../scratchpad/savuke5-390.txt` (35/39),
 `.../scratchpad/savuke5-1400.txt` (34/39),
-`.../scratchpad/savuke-popup4.txt` (kaupunkipopup, 16/25).
+`.../scratchpad/savuke-popup4.txt` (kaupunkipopup ennen korjausta, 16/25),
+`.../scratchpad/savuke-popup5.txt` (kaupunkipopup korjattuna, 22/25).
 
 ## 5. Vartioiden päivitykset (kaikki perusteltuina koodissa)
 
@@ -664,7 +665,7 @@ käyttöliittymää. **Fable päättää, mitä sarjat.jsoniin kirjataan.**
 | `savuke-pariisi-lahizoom.mjs` | `7c.` napautus kyltin päälle avaa turisti-infon | sama; korvaaja on liuskan Turistiopas-rivi |
 | `savuke-pariisi-lahizoom.mjs` | `7e.` kyltin laatikko on vapaa (tunnettu punainen jo `sarjat.jsonissa`) | sama |
 | `savuke-pariisi-lahizoom.mjs` | `8b.` **1400 px:llä** | ks. 6b alla — tämä EI ole vanhentunut vaan yhä korjattavana |
-| `savuke-kaupunkipopup.mjs` | 9 punaista (`tunnetutPunaisetMaara: 17` on eri pelin luku) | ks. 6c alla |
+| `savuke-kaupunkipopup.mjs` | 3 punaista korjauksen jälkeen (`tunnetutPunaisetMaara: 17` on eri pelin luku) | ks. 6c alla |
 
 ### 6b. `8b.` 1400 px:llä — auki jäänyt, EI vanhentunut
 
@@ -675,16 +676,22 @@ nimellä, jolla vartio niitä etsii. **Vartion mitta on siis yhä liian
 karkea**, nyt toisesta syystä kuin erä 3:ssa. Tämä on seuraavan erän
 työ, ja se on mittarin vika — ei pelin.
 
-### 6c. `savuke-kaupunkipopup.mjs` 16/25 — mittari, ei peli
+### 6c. `savuke-kaupunkipopup.mjs`: 16/25 → **22/25**
 
-Savuke ajettiin kerran ohjeen mukaan. Sen liuskavartiot napauttavat
-kaupunkia vielä **erä 3:n vanhalla polulla** (nostokerroksen
-kaupunkirivi), joka ei löydä laudan kaupunkia — sama vika, jonka juuri
-korjasin `savuke-pariisi-lahizoom`iin. Peli toimii: `pariisi-lahizoom`
-avaa liuskan molemmilla ruuduilla samalla napautuksella. **Aikakatto
-täyttyi ennen kuin ehdin siirtää saman korjauksen tähän savukkeeseen ja
-ajaa sen uudestaan** — se on seuraavan erän ensimmäinen työ, ja korjaus
-on mekaaninen (kopioi `kaupunkiTieto`-lohko `savuke-pariisi-lahizoom.mjs`:stä).
+Ensimmäinen ajo antoi 16/25: kaikki liuskavartiot punaisina. Syy EI
+ollut napautuspiste (tämä savuke osui jo valmiiksi laudan omaan
+kaupunkimerkkiin) vaan **kiinteä 900 ms:n odotus yhden napautuksen
+jälkeen**. Sama pelin portti kuin `pariisi-lahizoom` 8c:ssä nielaisee
+juuri suljetun kortin jälkeisen napautuksen (`korttiOliAuki`). Odotus
+on nyt kysely ja napautusyrityksiä kaksi — sama korjaus, sama
+perustelu. Toinen ajo: **22/25**.
+
+Kolme jäljellä olevaa punaista:
+
+| punainen | tila |
+| --- | --- |
+| `vastakoe 1: kuvaton kaupunki avaa pop-upin silti` | **vanhentunut**: vastakoe mittaa ison pop-upin avautumista, eikä sitä pop-upia enää ole (kohta 1) |
+| `Pariisi @ 390 px` (2 vartiota) | **auki jäänyt**, ei vanhentunut. Marseille avaa liuskan 390 px:llä ja Pariisi 1400 px:llä — vain ajon ENSIMMÄINEN mitattu kaupunki jäi ilman liuskaa, eli kyse on ajon alkutilasta (kaksi napautusyritystä ei riittänyt siinä kohdassa). `savuke-pariisi-lahizoom` avaa Pariisin liuskan 390 px:llä luotettavasti (8c vihreä, 206 ms), joten peli toimii; tämä on mittarin herkkyys ja seuraavan erän työ |
 
 ## 7. Testit
 
@@ -712,6 +719,7 @@ vikakorjausten jälkeen.
 ## 9. Muutetut tiedostot (erä 4)
 
 `js/pallolauta/nostot.js`, `js/pallolauta/lauta.js`,
-`tools/savukkeet/savuke-pariisi-lahizoom.mjs`, tämä raportti.
+`tools/savukkeet/savuke-pariisi-lahizoom.mjs`,
+`tools/savukkeet/savuke-kaupunkipopup.mjs`, tämä raportti.
 
 **Vaatii versionoston**; `tools/uusi-versio.mjs` on ajamatta (ohje).

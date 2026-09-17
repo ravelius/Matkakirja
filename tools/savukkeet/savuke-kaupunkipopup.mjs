@@ -320,8 +320,31 @@ for (const ruutu of RUUDUT) {
 
     /* --- vartio 1, 2, 3, 4: ISO POP-UP (PAATOKSET 10: tiivistetty) ---- */
     if (kaupunkiAlussa) {
-      await sivu.mouse.click(kaupunkiAlussa.x, kaupunkiAlussa.y);
-      await sivu.waitForTimeout(900);
+      /*
+       * KAKSI NAPAUTUSYRITYSTA, JA SE ON MITATTU SYY (18.9.2026, era 4;
+       * sama korjaus kuin savuke-pariisi-lahizoom 8c:ssa). Juuri
+       * suljetun kortin jalkeen pelin oma portti nielaisee seuraavan
+       * napautuksen (js/pallolauta/lauta.js napautaPintaan,
+       * `korttiOliAuki`), joten yksi napautus mittasi nielua eika
+       * liuskaa. Vaite on, etta liuska aukeaa — ei se, monennellako
+       * sormella. Odotus on kysely eika kiintea viive: kamera-ajo
+       * (PAATOKSET 34 kohta 10) kestaa noin 200 ms.
+       */
+      for (let yritys = 0; yritys < 2; yritys += 1) {
+        /* eslint-disable no-await-in-loop */
+        await sivu.mouse.click(kaupunkiAlussa.x, kaupunkiAlussa.y);
+        let auki = null;
+        for (let i = 0; i < 20; i += 1) {
+          auki = await sivu.evaluate(
+            () => window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null,
+          );
+          if (auki) break;
+          await sivu.waitForTimeout(50);
+        }
+        /* eslint-enable no-await-in-loop */
+        if (auki) break;
+      }
+      await sivu.waitForTimeout(500);
     }
     const iso = await sivu.evaluate(() => {
       const p = document.querySelector('.kaupunkipopup-kaupunki');
