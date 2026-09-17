@@ -1,5 +1,10 @@
 # Fablen luovutus Mac Studion Fable-sessiolle — 17.9.2026 (Suomen aikaa)
 
+**VASTUU SIIRTYNYT 17.9.2026 klo 15.35 Suomen aikaa.** Omistaja käynnisti uuden Fablen
+Macilla (työpöytäsovellus, paikallinen, toinen tili). Pilvi-Fable purki PR #2555:n
+seurannan ja Routinensa; se ei enää mergeä eikä käynnistä agentteja. PR #2555 (v1931,
+kärki c59d9143) oli luovutushetkellä Actions-ajossa: testit vihreä, savukkeet kesken.
+
 Omistaja päätti 17.9.2026 klo 15.25 (Raamattu, AGENTIT VAIN OPUS JA SONNET,
 TARKENNUS 5 kohta 11): Fable siirtyy pilvestä Mac Studiolle, koska agentit
 ajavat siellä missä Fable ajaa, ja Mac ajaa savukkeet ja WebKit-mittaukset
