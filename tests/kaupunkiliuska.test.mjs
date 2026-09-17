@@ -37,7 +37,7 @@ test('etäisyys tunnetuille pareille on oikeaa suuruusluokkaa', () => {
 });
 
 test('Versailles, Chartres ja Chambord jäävät kaupungin ulkopuolelle', () => {
-  assert.equal(onKaupunginSisainen(nosto('Louvre', 48.8606, 2.3376, 'taide'), PARIISI), true);
+  assert.equal(onKaupunginSisainen(nosto('Louvre', 48.8606, 2.3376, 'kulttuuri'), PARIISI), true);
   assert.equal(onKaupunginSisainen(nosto('Versailles', 48.8049, 2.1204, 'historia'), PARIISI), false);
   assert.equal(onKaupunginSisainen(nosto('Chartres', 48.4469, 1.4874, 'historia'), PARIISI), false);
   assert.equal(onKaupunginSisainen(nosto('Chambord', 47.6161, 1.5169, 'historia'), PARIISI), false);
@@ -104,8 +104,8 @@ test('kaupunkimerkki ja poltettu muste eivät ole kaupungin sisäisiä nostoja',
 
 test('kaupungin nostot suodattuvat ja kategoriat lasketaan', () => {
   const rivit = [
-    nosto('Louvre', 48.8606, 2.3376, 'taide', { ladontaNro: 2 }),
-    nosto('Mona Lisan varkaus', 48.8608, 2.3378, 'taide', { ladontaNro: 1 }),
+    nosto('Louvre', 48.8606, 2.3376, 'kulttuuri', { ladontaNro: 2 }),
+    nosto('Mona Lisan varkaus', 48.8608, 2.3378, 'kulttuuri', { ladontaNro: 1 }),
     nosto('Bastilji', 48.8532, 2.3692, 'historia', { ladontaNro: 3 }),
     nosto('Versailles', 48.8049, 2.1204, 'historia', { ladontaNro: 4 }),
     nosto('Nimikyltti', 48.86, 2.34, 'historia', { vainNimi: true }),
@@ -120,7 +120,7 @@ test('kaupungin nostot suodattuvat ja kategoriat lasketaan', () => {
 
 test('liuskassa on kolme yläryhmän riviä ja kategoriat lukumäärineen', () => {
   const nostot = kaupunginNostot([
-    nosto('Louvre', 48.8606, 2.3376, 'taide'),
+    nosto('Louvre', 48.8606, 2.3376, 'kulttuuri'),
     nosto('Bastilji', 48.8532, 2.3692, 'historia'),
     nosto('Ranskan vallankumous', 48.8534, 2.3688, 'historia'),
   ], PARIISI);
@@ -138,7 +138,7 @@ test('liuskassa on kolme yläryhmän riviä ja kategoriat lukumäärineen', () =
 
 test('haitari avaa vain yhden kategorian kerrallaan', () => {
   const nostot = kaupunginNostot([
-    nosto('Louvre', 48.8606, 2.3376, 'taide'),
+    nosto('Louvre', 48.8606, 2.3376, 'kulttuuri'),
     nosto('Bastilji', 48.8532, 2.3692, 'historia'),
     nosto('Ranskan vallankumous', 48.8534, 2.3688, 'historia'),
   ], PARIISI);
@@ -274,4 +274,38 @@ test('kelauksen askel pysyy listan sisällä', () => {
   assert.equal(kelauksenAskel({
     kelaus: 0, suunta: -1, enintaan: 8, maara: 20,
   }), 0);
+});
+
+/* ── PAATOKSET 34 kohta 11: aiheeton nosto ei katoa ──────────────── */
+
+test('aiheeton ja tuntematon aihe menevät yhteen "Muut"-kategoriaan listan loppuun', () => {
+  const rivit = [
+    nosto('Metro', 48.8566, 2.3522, 'kauppa'),
+    nosto('Ilman aihetta', 48.8570, 2.3500, undefined),
+    nosto('Louvre', 48.8606, 2.3376, 'kulttuuri'),
+    nosto('Tuntematon aihe', 48.8580, 2.3400, 'ei-tallaista-aihetta'),
+    nosto('Tyhja aihe', 48.8590, 2.3450, ''),
+  ];
+  const kat = kategoriat(rivit);
+  // "Muut" on YKSI kasa ja se on listan viimeisenä.
+  assert.equal(kat[kat.length - 1].nimi, 'Muut');
+  assert.equal(kat.filter((k) => k.nimi === 'Muut').length, 1);
+  assert.equal(kat[kat.length - 1].maara, 3);
+  // Summa = nostojen määrä, ja jokainen nosto on TASAN YHDESSÄ kasassa.
+  assert.equal(kat.reduce((s, k) => s + k.maara, 0), rivit.length);
+  const avaimet = kat.flatMap((k) => k.jasenet.map((n) => n.avain));
+  assert.equal(new Set(avaimet).size, rivit.length);
+  // Tunnetut aiheet pysyvät ensiesiintymän järjestyksessä.
+  assert.deepEqual(kat.slice(0, -1).map((k) => k.aihe), ['kauppa', 'kulttuuri']);
+});
+
+test('liuskan rivit avaavat Muut-kategorian haitarin kuten muutkin', () => {
+  const nostot = [
+    nosto('Metro', 48.8566, 2.3522, 'kauppa'),
+    nosto('Ilman aihetta', 48.8570, 2.3500, null),
+  ];
+  const rivit = liuskanRivit({ kaupunki: { nimi: 'Pariisi' }, nostot, avattuKategoria: '' });
+  assert.deepEqual(rivit.filter((r) => r.laji === 'kohde').map((r) => r.nimi), ['Ilman aihetta']);
+  const otsikot = rivit.filter((r) => r.laji === 'kategoria').map((r) => r.nimi);
+  assert.equal(otsikot[otsikot.length - 1], 'Muut (1)');
 });

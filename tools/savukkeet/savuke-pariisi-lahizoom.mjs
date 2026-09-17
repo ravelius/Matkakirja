@@ -1864,8 +1864,26 @@ for (const ruutu of RUUDUT) {
       ? `${lRivit.length} riviä: ${lRivit.map((r) => r.nimi).join(' / ')} `
         + `(ajo ${liuskaTulos.kesto} ms)`
       : 'liuska ei auennut');
-  vaadi(`8c. ${ruutu.nimi}: kaupunkimerkin napautus ajaa kameran < 600 ms ja avaa liuskan`,
-    Boolean(lRivit.length) && Number.isFinite(liuskaTulos?.kesto) && liuskaTulos.kesto < 600,
+  /*
+   * 8c:N KATTO ON KAMERA-AJON OMA KESTO + VARA, EI 600 ms.
+   *
+   * 600 ms oli oikea luku niin kauan kuin avauksen ajo oli KESKITYS
+   * kaupunkiin, joka useimmiten ei liikuttanut mitään — `ajaKamera`
+   * palaa heti, kun matka on alle 0,01° (*"ajo, joka ei liikuta
+   * mitään, on turha"*, js/pallolauta/kamera.js). PAATOKSET 34 kohta
+   * 10 antaa ajolle työn: kamera NOSTAA kaupunkimerkkiä ruudulla niin
+   * paljon, että suurin kategoria mahtuu sen alle. Silloin ajo kestää
+   * oman mittansa (PALLOKAMERAN_AJO_MS = 1400 ms) eikä 600 ms mittaa
+   * enää sitä, mitä vartio väittää.
+   *
+   * VÄITE SÄILYY: napautus ei saa jäädä roikkumaan eikä liuska
+   * avautua kesken ajon. Katto on siksi ajon kesto + 600 ms:n vara
+   * (ladonta ja avaus ajon jälkeen).
+   */
+  const AJON_KATTO_MS = 1400 + 600;
+  vaadi(`8c. ${ruutu.nimi}: kaupunkimerkin napautus ajaa kameran < ${AJON_KATTO_MS} ms ja avaa liuskan`,
+    Boolean(lRivit.length) && Number.isFinite(liuskaTulos?.kesto)
+      && liuskaTulos.kesto < AJON_KATTO_MS,
     `ajo ${liuskaTulos?.kesto ?? '—'} ms, rivejä ${lRivit.length}`);
   const liuskaYli = lRivit.filter((b) => b.x0 < 0 || b.y0 < 0
     || b.x1 > (liuskaTulos?.mitta.ruutu.leveys ?? 0)
@@ -2033,9 +2051,19 @@ for (const ruutu of RUUDUT) {
    * (js/fokuskohteet.js: `kohde.avaa` ohittaa kohteiden tietoruudun),
    * joten vartio mittasi aarrekortin ehtoja eikä liuskan riviä.
    */
-  const eka = (await sivu.evaluate(
+  /*
+   * JA KADONNEET IHMEET OHITETAAN KATEGORIANA, EI RIVINÄ. Erä 6
+   * valitsi "ensimmäisen kategorian", mutta järjestys on ladonnan
+   * järjestys eikä vakio: kun jäsenyys alkoi lukea koko dataa (erä 7),
+   * Pariisin ensimmäinen kategoria vaihtui juuri Kadonneiksi ihmeiksi.
+   * Väite koskee liuskan RIVIÄ, joten mittari valitsee kategorian,
+   * jonka nostot avautuvat kohteiden tietoruutuun — aarrekortin
+   * lunastusehdot ovat sisältökysymys (erä 6, osio 3).
+   */
+  const kategoriarivit = (await sivu.evaluate(
     () => window.matkakirja.ui.pallolauta.nostot.liuskanRivit?.() ?? [],
-  )).filter((r) => r.laji === 'kategoria')[0];
+  )).filter((r) => r.laji === 'kategoria');
+  const eka = kategoriarivit.find((r) => r.aihe !== 'ihmeet') ?? kategoriarivit[0];
   const avattuEka = eka?.aihe !== (await sivu.evaluate(
     () => window.matkakirja.ui.pallolauta.nostot.liuskanKategoria?.() ?? null,
   )) ? await napautaLiuskanRivi(eka) : null;
