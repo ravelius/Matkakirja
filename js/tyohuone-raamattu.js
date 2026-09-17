@@ -7959,7 +7959,12 @@ export const RAAMATTU = {
           + 'mainissa pitkaan. Juurisyy mitataan (mika kolmesta ei palaudu '
           + 'vaakanakymassa: ylapalkki, pelitila vai tallennus; onko syy '
           + 'vaakatilan oma kotelo/ylapalkin piilotus) ja korjataan. Tila: '
-          + 'tyo Opus-agentilla (pilvisessio).',
+          + 'SELVITETTY (a3d51218, pilvisessio 25 min): peli oli oikeassa, '
+          + 'savuke vaarassa - vaakaruudulla ylapalkki on jo ennen linssia '
+          + 'piilossa (13.9.2026 linjaus, vakasnappi), ja purku palauttaa '
+          + 'tasmalleen lahtotilan; vartio vaati vakiota visible. Vartio '
+          + 'vertaa nyt linssia edeltavaan tilaan. Ei pelikoodin muutosta. '
+          + 'Julkaistaan v1929 (sarjat.jsonin tunnettu punainen poistuu).',
         'IHMISEN MATKA -LINSSI: RINTAMAN VALKKYMINEN, MUSTA ALKU, LIIKU '
           + 'POIS; ASTRONAUTTILINSSILLE OMA KUVAKE (omistaja 15.9.2026 klo '
           + '12.00 UTC, tyopoytakuva 248 000 v. sitten, sanatarkasti: "Kun '
@@ -8479,7 +8484,12 @@ export const RAAMATTU = {
           + 'kaupunkia lahestyttaessa); koko maan nakymassa aihenosto on '
           + 'pelkka symboli. Mitataan: saapumisnakyma 390 px limittyvia '
           + 'pareja enintaan 5 (9b vihrea), Pariisin lahizoomissa nimiot '
-          + 'muotoa "Nimi..." ennallaan. Tila: tyo Opus-agentilla.',
+          + 'muotoa "Nimi..." ennallaan. Tila: TOTEUTETTU haarassa aihenimio '
+          + '(b0c8a6b9, oma pilvisessio 32 min): kynnys on sama funktio '
+          + 'lahizoomiAuki (0,7 uloimmasta) kuin nostojen nimioilla; '
+          + 'saapumisnakymassa 0 nimiota / 5 symbolia, lahizoomissa 5 '
+          + 'nimiota; savuke 62/62, vastakoe ?aihenimiokynnys=0. '
+          + 'Julkaistaan v1929.',
         'KARTTAUUDISTUKSEN PAATOKSET 28: MAAINFO TAKAISIN RUUDUN VASEMPAAN '
           + 'ALAKULMAAN, VALIKKO KASVAA YLOS KAHDESSA SARAKKEESSA, LIIKU '
           + 'TEKSTINA ALAS KESKELLE (omistaja 15.9.2026 klo 20.45 UTC, '
