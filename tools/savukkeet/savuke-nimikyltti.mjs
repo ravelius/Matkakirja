@@ -66,8 +66,16 @@ if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: tr
 
 /** Suurin sallittu hajonta kyltin ja kaupungin välisessä erossa (px). */
 const HAJONNAN_RAJA_PX = 1;
-/** Vedot pikseleinä: 200 px itään ja 200 px etelään ilman ruudun laitaa. */
-const VEDOT = [[-100, 0], [200, 0], [0, 200], [0, -200]];
+/*
+ * Vedot pikseleinä. MITTA ON PALLON LIIKE, EI SORMEN: globe.gl jatkaa
+ * vaimennuksella sormen noston jälkeen, ja Macilla 100 px:n veto siirsi
+ * Pariisin pisteen 151 px (172 → 21 px puhelimen 374 px:n kotelossa) eli
+ * ruudun laitaan, missä nimen lukko purkautuu tarkoituksella. Vedot ovat
+ * siksi puolet entisistä: liike kattaa yhä useamman ladonnan
+ * (LADONNAN_TAHTI_MS 200 ms), mutta kaupunki pysyy syvällä ruudulla
+ * kummassakin ympäristössä.
+ */
+const VEDOT = [[-40, 0], [80, 0], [0, 80], [0, -80]];
 /*
  * KYLTIN KOKO SAAPUMISNÄKYMÄSSÄ ENNEN MUUTOSTA (ruutuvakio, mitattu
  * Chromiumilla 14.9.2026 dpr 2, pelaaja Pariisissa). Karttaan sidotun
@@ -744,9 +752,21 @@ for (const ruutu of RUUDUT) {
      * jälkeen mutta eri kohdassa. Jos kyltti katoaa välissä kokonaan,
      * kyseessä on eri vika — sen mittaa vartio 3.
      */
+    /*
+     * VAIN SYVÄLLÄ RUUDULLA OLEVAT MITTAUKSET PARITETAAN (Mac 17.9.2026).
+     * Ruudun reuna purkaa lukon TARKOITUKSELLA (js/pallolauta/nimet.js
+     * RUUDUN REUNA PURKAA LUKON), ja laidalla vaihtunut kylki on siis
+     * pelin oikeaa käytöstä eikä vika. Mitattu: Macilla 100 px:n veto
+     * vei Pariisin pisteen 172 px:stä 21 px:iin (globe.gl:n oma
+     * vaimennus jatkaa liikettä sormen noston jälkeen), jolloin kyltin
+     * laatikko meni ruudun yli, lukko purkautui ja savuke luki siitä
+     * 102 px:n "siirron". `syvalla` on sama ehto, jolla vartio 3 jo
+     * mittaa pudotukset — väite itse ei löysty.
+     */
     const parit = [];
     for (let i = 1; i < sarja.length; i += 1) {
-      if (sarja[i - 1].kyltti && sarja[i].kyltti) {
+      if (sarja[i - 1].kyltti && sarja[i].kyltti
+        && sarja[i - 1].syvalla && sarja[i].syvalla) {
         parit.push({
           dx: Math.abs(sarja[i].dx - sarja[i - 1].dx),
           dy: Math.abs(sarja[i].dy - sarja[i - 1].dy),

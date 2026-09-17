@@ -889,6 +889,41 @@ export function asetteleFokuspiste(el, d) {
  * ruutu ja nimiön kaista kirjaston asemoinnista (nostosymNimioAsemointi)
  * merkin mitassa.
  */
+/**
+ * NOSTON MUSTE OSINA: [ikonin ruutu, nimiön kaista] — sama kaava kuin
+ * `nostonLaatikko`, mutta ILMAN yhteistä kehystä.
+ *
+ * MIKSI (mitattu Macilla 17.9.2026, savuke-pallo-nostolaput/Bukarest):
+ * `nostonLaatikko` on ikonin ja nimiön YHTEINEN kehys, ja kun nimiö on
+ * kyljessä, kehykseen jää tyhjiä kulmia, joissa ei ole yhtään mustetta.
+ * Naapurin nimilappu osuu juuri sellaiseen kulmaan, jolloin molempien
+ * etäisyys kehykseen on 0 ja tasapelin ratkaisi keskipistemitta —
+ * napautus Transfăgărășanin omaan tekstiin avasi Strousbergin noston.
+ * Osalaatikoilla osumatesti tietää, kenen OMALLA musteella sormi on
+ * (Raamattu, PAATOKSET 31 TARKENNUS 2 kohta 4).
+ */
+export function nostonOsat(p, d, {
+  kylki = null, dx = 0, dy = 0, nimio = null,
+} = {}) {
+  const mitta = nostonMitta(merkinKerroin(d));
+  const r = NOSTOSYM_MINI_RUUTU * mitta;
+  const x = p.x + dx;
+  const y = p.y + dy;
+  const ikoni = {
+    x0: x - r, y0: y - r, x1: x + r, y1: y + r,
+  };
+  const nakyy = nimio === null ? Boolean(d.nimioNakyy) : Boolean(nimio);
+  if (!nakyy || !d.nimi) return [ikoni];
+  const { leveys } = nostosymNimioMitta(d.nimi, d.symLaji);
+  const a = nostosymNimioAsemointi(kylki ?? d.puoli ?? 'oikea', leveys);
+  return [ikoni, {
+    x0: x + Math.min(a.x1, a.x2) * mitta,
+    y0: y + Math.min(a.y1, a.y2) * mitta,
+    x1: x + Math.max(a.x1, a.x2) * mitta,
+    y1: y + Math.max(a.y1, a.y2) * mitta,
+  }];
+}
+
 export function nostonLaatikko(p, d, {
   kylki = null, dx = 0, dy = 0, nimio = null,
 } = {}) {
@@ -1692,12 +1727,17 @@ export function luoNostot({
       r.lappu = (p) => nostonLaatikko(p, r, {
         kylki: d.puoli, dx: d.dx, dy: d.dy, nimio: Boolean(d.nimioNakyy && d.nimi),
       });
+      // Osumatestin oma muste ilman yhteistä kehystä (ks. nostonOsat).
+      r.osat = (p) => nostonOsat(p, r, {
+        kylki: d.puoli, dx: d.dx, dy: d.dy, nimio: Boolean(d.nimioNakyy && d.nimi),
+      });
     });
     // Poltetun musteen lappu on paistettu laattaan: lauta ei näe sitä,
     // mutta tuntee sen laatikon samasta kaavasta (ladonta on sama).
     for (const r of nakyvat) {
       if (!r.poltettu || r.perhe === 'piste') continue;
       r.lappu = (p) => nostonLaatikko(p, r, { nimio: Boolean(r.nimioNakyy && r.nimi) });
+      r.osat = (p) => nostonOsat(p, r, { nimio: Boolean(r.nimioNakyy && r.nimi) });
     }
     // Nimikyltti (`vainNimi`) ei ole osuma: sillä ei ole korttia, ja
     // osumalistalla se veisi napautuksen naapurinostolta.
