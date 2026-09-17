@@ -1747,17 +1747,22 @@ export function pinnanKirkkaus(pallo, ikkuna = globalThis) {
  *
  * Tummennus tehdään MATERIAALIN VÄRILLÄ eikä tekstuuria muokkaamalla:
  * `diffuse`-uniformi kertoo koko pinnan samalla kertoimella, joten sävy
- * laskee tasaisesti kauttaaltaan eikä mihinkään jää valoläikkää. 0,75
- * (0xbfbfbf) on mitattu määrä: hehkuvat kohdepisteet erottuvat, mutta
- * pinta pysyy selvästi luettavana — ja kaukana mustan kynnyksestä
- * (PINNAN_MUSTAN_KYNNYS), jota pinta-musta-vartija valvoo.
+ * laskee tasaisesti kauttaaltaan eikä mihinkään jää valoläikkää.
+ *
+ * SÄVY 0,60 (0x999999), LISÄYS 16 kohta 46 (omistaja 18.9.2026,
+ * iPhone-kuva v1934:n lähizoomista: *"Lisäksi kartta voi olla vielä
+ * tummempi."*). Edellinen erä laski sävyn 0,75:een, mutta puhelimen
+ * lähizoomissa pinta oli yhä niin vaalea, ettei pisteiden hehku
+ * erottunut. 0,60 on mitattu määrä: pinta pysyy selvästi luettavana ja
+ * kaukana mustan kynnyksestä (PINNAN_MUSTAN_KYNNYS), jota pinta-musta-
+ * vartija valvoo, mutta sädekehän valaisu näkyy.
  *
  * SAMA SÄVY MYÖS SULUSSA. Sulku ei saa jättää materiaalia mustaksi
  * (LISÄYS 13 kohta 37), joten se kirjoittaa värin aina — nyt tämän
  * sävyn. Pelilaudalla pohjapallo on laattamoottorin alla, joten arvo
  * vaikuttaa vain seuraavan avauksen lähtötilaan.
  */
-export const PALLON_SAVY = 0xbfbfbf;
+export const PALLON_SAVY = 0x999999;
 
 /** Sävyvahdin kello: kuinka usein sävy tarkistetaan (ks. sävyvahti). */
 export const SAVYN_TARKISTUS_MS = 400;

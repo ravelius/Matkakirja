@@ -87,13 +87,47 @@ test('piste on YKSI hehkuva vihreä piste — ei rengasta, ei reunaa, ei pulssia
    * YKSI elementti, ei rengasta, ei reunaviivaa, ei `box-shadow`-hohtoa
    * (ne toivat rypäleet) eikä jatkuvaa pulssia.
    */
-  for (const luokka of ['satelliitti-osuma', 'satelliitti-ydin', 'satelliitti-nimi']) {
+  for (const luokka of ['satelliitti-osuma', 'satelliitti-sadekeha', 'satelliitti-ydin',
+    'satelliitti-nimi']) {
     assert.ok(tyyli.includes(`.${luokka}`), `${luokka} puuttuu tyylistä`);
   }
+  /*
+   * VANHA RENGAS PYSYY POISSA. `satelliitti-hehku` ja
+   * `satelliitti-rengas` olivat kolmikerroksisen merkin kerroksia, ja
+   * juuri ne tekivät lähekkäisistä kohteista rypäleitä.
+   * `satelliitti-sadekeha` (LISÄYS 16 kohta 45) EI ole niiden paluu:
+   * se on yksi matala-alfainen liuku ilman reunaviivaa ja ilman
+   * box-shadow’ta, ja se valaisee karttaa `screen`-sekoituksella.
+   */
   for (const poistunut of ['satelliitti-hehku', 'satelliitti-rengas']) {
     assert.ok(!tyyli.includes(`.${poistunut}`), `${poistunut} on yhä tyylissä`);
     assert.ok(!lahde.includes(poistunut), `${poistunut} on yhä merkin elementissä`);
   }
+  /*
+   * SÄDEKEHÄ VALAISEE (LISÄYS 16 kohta 45): matala alfa, liuku nollaan
+   * reunalla ja `screen`-sekoitus — ei tasaista kiekkoa, ei varjoa.
+   */
+  const kehalohkot = [...tyyli.matchAll(/\.satelliitti-sadekeha[^{]*\{([^}]*)\}/g)]
+    .map((m) => m[1]);
+  const keha = kehalohkot.find((l) => /background:\s*radial-gradient/.test(l));
+  assert.ok(keha, 'sädekehä ei ole radial-gradient');
+  assert.match(keha, /mix-blend-mode:\s*(screen|lighten)/,
+    'sädekehä ei valaise karttaa (sekoitustila puuttuu)');
+  assert.ok(!/box-shadow|border(?!-radius)/.test(keha),
+    `sädekehässä on varjo tai reuna: ${keha}`);
+  const alfat = [...keha.matchAll(/rgba\(93,\s*255,\s*168,\s*([0-9.]+)\)/g)]
+    .map((m) => Number(m[1]));
+  assert.ok(alfat.length >= 3, 'sädekehän liu\'ussa on liian vähän askelmia');
+  assert.ok(Math.max(...alfat) <= 0.35,
+    `sädekehän alfa ${Math.max(...alfat)} on niin korkea, että se peittää kartan`);
+  assert.equal(alfat.at(-1), 0, 'sädekehä ei häivy nollaan reunalla');
+  const kehanKoko = /--satelliitti-hehkun-koko:\s*(\d+)px/.exec(tyyli);
+  assert.ok(kehanKoko && Number(kehanKoko[1]) >= 24 && Number(kehanKoko[1]) <= 32,
+    `sädekehän koko ${kehanKoko?.[1]} ei ole haarukassa 24–32 px`);
+  // Ytimen pitää olla selvästi sädekehää pienempi, tai hehkua ei synny.
+  const ytimenKoko = /--satelliitti-pisteen-koko:\s*(\d+)px/.exec(tyyli);
+  assert.ok(ytimenKoko && Number(ytimenKoko[1]) <= Number(kehanKoko[1]) / 4,
+    `ydin ${ytimenKoko?.[1]} px ei ole sädekehää ${kehanKoko?.[1]} px selvästi pienempi`);
   // Pisteen omat säännöt: ei reunaviivaa eikä varjoa missään niistä.
   // (border-radius on muoto eikä reuna, joten se on sallittu.)
   const lohkot = [...tyyli.matchAll(/\.satelliitti-ydin[^{]*\{([^}]*)\}/g)].map((m) => m[1]);
@@ -122,7 +156,9 @@ test('piste on YKSI hehkuva vihreä piste — ei rengasta, ei reunaa, ei pulssia
   const koko = /--satelliitti-pisteen-koko:\s*(\d+)px/.exec(tyyli);
   const osuma = /--satelliitti-osuman-koko:\s*(\d+)px/.exec(tyyli);
   assert.ok(koko && Number(koko[1]) <= 9, `pisteen koko ${koko?.[1]}`);
-  assert.ok(osuma && Number(osuma[1]) >= 32, `osuma-alan koko ${osuma?.[1]}`);
+  // Osuma-ala nostettiin 44 px:iin (LISÄYS 16 kohta 45): sama mitta kuin
+  // pallon pinnasta laskettu napautussäde (js/pallolauta/lauta.js).
+  assert.ok(osuma && Number(osuma[1]) >= 44, `osuma-alan koko ${osuma?.[1]}`);
   // Vihreä sävy on sama kuin ennen.
   assert.match(tyyli, /--satelliitti-vihrea:\s*#5dffa8/);
   // Jatkuva pulssi kieltää pallolta 60 fps:n (js/linssit/kerros.js haivyta):

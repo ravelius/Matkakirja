@@ -1457,7 +1457,12 @@ test('linssi valkaisee materiaalin sekä avatessa että sulkiessa (lähde)', asy
   assert.ok(PALLON_SAVY < 0xffffff, 'sävy ei ole valkoista tummempi');
   const harmaa = PALLON_SAVY & 0xff;
   assert.equal(PALLON_SAVY, harmaa * 0x010101, 'sävy ei ole neutraali harmaa (sävyisi pallon)');
-  assert.ok(harmaa >= 0xa0 && harmaa <= 0xd8, `sävy ${harmaa} ei ole hillityn tummennuksen haarukassa`);
+  /*
+   * HAARUKKA LASKETTU 18.9.2026 (LISÄYS 16 kohta 46, omistaja: *"Lisäksi
+   * kartta voi olla vielä tummempi."*): alaraja 0x90 päästää sävyn 0,60
+   * läpi mutta pitää pinnan yhä kaukana mustan kynnyksestä.
+   */
+  assert.ok(harmaa >= 0x90 && harmaa <= 0xd8, `sävy ${harmaa} ei ole hillityn tummennuksen haarukassa`);
   assert.ok(harmaa > PINNAN_MUSTAN_KYNNYS * 4, 'sävy on liian lähellä mustan kynnystä');
   /*
    * VARAPOLKU ON KAKSIVAIHEINEN, ja järjestys on mitattu: ensin VÄRI

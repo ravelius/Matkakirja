@@ -509,18 +509,28 @@ function ulkolinkki(teksti, osoite) {
 }
 
 /**
- * Yhden merkin elementti: LÄPINÄKYVÄ osuma-ala, vihreä piste ja nimi.
+ * Yhden merkin elementti: valaiseva sädekehä, LÄPINÄKYVÄ osuma-ala,
+ * hehkuva ydin ja nimi.
  *
  * OMISTAJA 16.9.2026, sanatarkasti: *"Muutamilla nuo hehkuvat pisteet
  * pelkeiksi vihreäksi pisteeksi ilman ympyrää ja pisteen ympärillä."*
- * Sädekehä (46 px) ja hehkuva rengas (18 px) ovat siis poissa; jäljellä
- * on yksi tasainen piste (css/satelliitti.css .satelliitti-ydin).
+ * Vanha kolmikerroksinen merkki (46 px:n sädekehä + 18 px:n hehkuva
+ * RENGAS + ydin) on yhä poissa: rengas teki lähekkäisistä kohteista
+ * rypäleitä.
+ *
+ * SÄDEKEHÄ PALASI TOISENLAISENA (Raamattu ASTRONAUTIN KAMERA LISÄYS 16
+ * kohta 45, omistaja 18.9.2026: *"Piste saisi siis hehkua ja valaista
+ * karttaa ympärillään hieman."*). Uusi `.satelliitti-sadekeha` ei ole
+ * vanha rengas: ei reunaviivaa, ei omaa kiekkoa, vaan matala-alfainen
+ * liuku `screen`-sekoituksella — se kirkastaa karttaa eikä peitä sitä.
+ * Sädekehä on ENSIMMÄISENÄ, jotta terävä ydin jää sen päälle.
  * Osuma-ala ei piirrä mitään — se pitää merkin ruutualan sormen
  * kokoisena, vaikka napautus lasketaankin pallon pinnasta.
  */
 function merkkiElementti(kohde) {
   const el = html('div', 'satelliitti-piste');
   el.append(
+    html('span', 'satelliitti-sadekeha'),
     html('span', 'satelliitti-osuma'),
     html('span', 'satelliitti-ydin'),
     html('span', 'satelliitti-nimi', kohde.nimi),
