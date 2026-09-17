@@ -51,27 +51,38 @@ export const TAHTIKERROKSET = [
 ];
 
 /*
- * ── PAIKALLAAN PYSYVÄ TAIVAS ILMAN PÖLYÄ (Raamattu ASTRONAUTIN KAMERA
- *    LISÄYS 15, kohdat 39 ja 40) ────────────────────────────────────
+ * ── PAIKALLAAN PYSYVÄ TAIVAS JA KESYTETTY PÖLY (Raamattu ASTRONAUTIN
+ *    KAMERA LISÄYS 15, kohdat 39, 40 ja 44) ─────────────────────────
  *
  * OMISTAJA 17.9.2026, sanatarkasti: *"Linssin alussa näytön halki
  * lentää neliöitä. Ne voisi jättää kokonaan pois. Lisäksi tähdet pitää
- * pysyä paikallaan, paitsi silloin kun maapalloa pyöritetään."*
+ * pysyä paikallaan, paitsi silloin kun maapalloa pyöritetään."* ja klo
+ * 22.40: *"Pölykerros kuulostaa kivalta jos sen saa toimimaan niin
+ * lisää takaisin"*.
  *
- * NELIÖT OLIVAT PÖLYKERROS. `poly` on lähin kerros (2,6–3,4
- * pallonsädettä), ja `particlesSizeAttenuation` suurentaa lähimmät
- * pisteet — kerroin 1,6:lla ne piirtyivät muutaman pikselin
- * laatikoina, ja koska kerros oli AINOA ajautuva, ne myös LENSIVÄT
- * ruudun halki. Astronautin kamera ottaa siksi taivaansa ilman
- * pölykerrosta: pisteitä ei piiloteta, niitä ei synny.
+ * NELIÖT OLIVAT PÖLYKERROS — kolmesta syystä yhtä aikaa: (1)
+ * `PointsMaterial` ilman tekstuuria piirtää pisteen NELIÖNÄ, (2)
+ * `particlesSizeAttenuation` suurentaa lähimmät pisteet rajatta, ja
+ * pöly on lähin kerros (2,6–3,4 pallonsädettä), joten kun kamera
+ * zoomaa sen ohi, yksittäinen hiukkanen kasvaa kymmeniksi pikseleiksi,
+ * ja (3) pöly oli ainoa AJAUTUVA kerros, joten ne myös lensivät.
  *
- * IHMISEN MATKA -linssin avaus käyttää yhä koko sarjaa: siellä pöly on
- * parallaksin väline zoomin aikana (ks. tiedoston alku), eikä omistajan
- * huomio koskenut sitä.
+ * KOLME KORJAUSTA, YKSI PER SYY: pyöristävä sävytin (`pyoristaPiste`),
+ * `kattoPx` = sama sävytin rajaa `gl_PointSize`in kattoon, jolloin
+ * etäisyysvaimennus antaa yhä syvyysvaikutelman (kaukana pienempi)
+ * mutta lähelläkään hiukkanen ei kasva tähteä suuremmaksi, ja
+ * `ajautuu: false`, jolloin kerros kääntyy vain kameran mukana.
+ * Peruskoko on tähtiä pienempi (0,85 < 0,9 < 1,35), joten kaukaa
+ * katsottuna pöly on aina hienovaraisin kerros.
+ *
+ * IHMISEN MATKA -linssin avaus käyttää yhä alkuperäistä sarjaa: siellä
+ * pöly ajautuu ja antaa parallaksin zoomin aikana (ks. tiedoston alku),
+ * eikä omistajan huomio koskenut sitä.
  */
 export const TAHTIKERROKSET_PAIKALLAAN = TAHTIKERROKSET
-  .filter((k) => !k.ajautuu)
-  .map((k) => ({ ...k, ajautuu: false }));
+  .map((k) => (k.tunnus === 'poly'
+    ? { ...k, koko: 0.85, ajautuu: false, kattoPx: 2.2 }
+    : { ...k, ajautuu: false }));
 
 /** Pölykerroksen ajautuma: kierrosta sekunnissa (hyvin hidas). */
 export const POLYN_AJAUTUMA_KIERROSTA_S = 0.0016;
@@ -134,6 +145,11 @@ export function tahtijoukot(kerrokset = TAHTIKERROKSET, siemen = 20260907, kerro
     koko: k.koko * k0,
     vari: k.vari,
     ajautuu: Boolean(k.ajautuu),
+    /*
+     * KATTO EI SKAALAUDU KERTOIMELLA: se on ruutupikseleitä, ei
+     * maailman mittoja (LISÄYS 15 kohta 44).
+     */
+    kattoPx: Number.isFinite(k.kattoPx) ? k.kattoPx : 0,
     pisteet: tahtipisteet({
       maara: k.maara, korkeus: [k.korkeus[0] * k0, k.korkeus[1] * k0], siemen: siemen + i * 7919,
     }),
@@ -156,10 +172,12 @@ export function tahtijoukot(kerrokset = TAHTIKERROKSET, siemen = 20260907, kerro
  * jonain päivänä katoaa, `korvattu` jää epätodeksi ja tähdet piirtyvät
  * kuten ennenkin (ei kaatumista). Vartio lukee `tila().pyoreita`.
  */
-export function pyoristaPiste(materiaali) {
+export function pyoristaPiste(materiaali, kattoPx = 0) {
   try {
     if (!materiaali || materiaali.__tahtiPyoristetty) return false;
     const ankkuri = '#include <clipping_planes_fragment>';
+    const kattoAnkkuri = '#include <logdepthbuf_vertex>';
+    const katto = Number.isFinite(kattoPx) && kattoPx > 0 ? kattoPx : 0;
     materiaali.onBeforeCompile = (savytin) => {
       if (!savytin?.fragmentShader?.includes(ankkuri)) return;
       savytin.fragmentShader = savytin.fragmentShader.replace(
@@ -170,6 +188,21 @@ export function pyoristaPiste(materiaali) {
         if (tahtiSade > 0.5) discard;
         diffuseColor.a *= smoothstep(0.5, 0.18, tahtiSade);`,
       );
+      /*
+       * KOKOKATTO (LISÄYS 15 kohta 44). `gl_PointSize` on jo laskettu
+       * etäisyysvaimennuksella, kun sävyttimen kulku saapuu tähän
+       * ankkuriin — katto siis SÄILYTTÄÄ syvyysvaikutelman (kauempana
+       * pienempi) ja leikkaa vain lähikasvun. Luku on piirtopuskurin
+       * pikseleitä, samoin kuin gl_PointSize.
+       */
+      if (katto && savytin.vertexShader?.includes(kattoAnkkuri)) {
+        savytin.vertexShader = savytin.vertexShader.replace(
+          kattoAnkkuri,
+          `gl_PointSize = min(gl_PointSize, ${katto.toFixed(2)});
+        ${kattoAnkkuri}`,
+        );
+        materiaali.__tahtiKatto = katto;
+      }
       materiaali.__tahtiKaannetty = true;
     };
     materiaali.__tahtiPyoristetty = true;
@@ -194,6 +227,9 @@ export function luoTahtitaivas(pallo, {
   const joukot = tahtijoukot(kerrokset, undefined, kerroin);
   const sade = pallo.getGlobeRadius?.() ?? 100;
   const mittakaava = sade / 100;
+  const pikselitiheys = (() => {
+    try { return pallo.renderer?.()?.getPixelRatio?.() || 1; } catch { return 1; }
+  })();
   try {
     pallo
       .particlesData(joukot)
@@ -240,7 +276,13 @@ export function luoTahtitaivas(pallo, {
         // eivätkä piirry mustina laatikoina toistensa päälle.
         m.blending = 2;
         m.needsUpdate = true;
-        if (pyoristaPiste(m)) pyoreita += 1;
+        /*
+         * KATTO PIIRTOPUSKURIN PIKSELEINÄ: `gl_PointSize` on
+         * fyysisiä pikseleitä, ja kirjasto kertoo pistekoon
+         * pikselitiheydellä, joten sama kerroin tarvitaan kattoon —
+         * muuten pöly olisi retinalla kolmanneksen halutusta.
+         */
+        if (pyoristaPiste(m, joukko.kattoPx * pikselitiheys)) pyoreita += 1;
       }
       oliot.push({ olio: o, joukko });
     }
@@ -252,6 +294,69 @@ export function luoTahtitaivas(pallo, {
     if (!oliot.length && (yritys += 1) < 60) ikkuna.setTimeout?.(yrita, 100);
   };
   yrita();
+
+  /*
+   * ── HIUKKASEN KOKO RUUDULLA (LISÄYS 15 kohta 44:n vartio) ────────
+   *
+   * Sama kaava kuin three.js:n points-sävyttimessä: koko kerrotaan
+   * `scale / -mvPosition.z`, missä scale = kankaan korkeus / 2 ja
+   * -mvPosition.z on syvyys kameran akselilla (EI etäisyys, siksi
+   * käänteinen näkymämatriisi eikä Pythagoras). Tulos on CSS-
+   * pikseleitä: kirjaston pikselitiheyskerroin ja katon sama kerroin
+   * kumoavat toisensa, joten luku vertautuu suoraan kohdepisteen
+   * kokoon ruudulla. Lasketaan vain mittaushetkellä.
+   *
+   * VAIN RUUDULLA NÄKYVÄT PISTEET. Sivusuunnassa olevan pisteen
+   * näkymäsyvyys lähestyy nollaa, jolloin kaava antaa kymmeniä
+   * tuhansia pikseleitä — piste on kuitenkin kaukana ruudun ulkopuolella
+   * eikä koskaan piirry. Ilman rajausta vartion "suurin tähti" olisi
+   * juuri tuollainen haamuluku, ja vertailu pölyyn menisi läpi aina.
+   * Siksi piste kelpaa vain, jos se osuu näkymäpyramidiin (|x| ≤ w,
+   * |y| ≤ w projisoinnin jälkeen).
+   */
+  const kokoRuudulla = () => {
+    const kamera = pallo.camera?.();
+    const piirtaja = pallo.renderer?.();
+    const korkeus = piirtaja?.domElement?.clientHeight
+      || piirtaja?.domElement?.height || 0;
+    if (!kamera || !korkeus || !oliot.length) return [];
+    kamera.updateMatrixWorld?.();
+    const e = kamera.matrixWorldInverse?.elements;
+    const pr = kamera.projectionMatrix?.elements;
+    if (!e || !pr) return [];
+    const puoliskoi = korkeus * 0.5;
+    return oliot.map(({ olio, joukko }) => {
+      olio.updateMatrixWorld?.();
+      const m = olio.matrixWorld?.elements;
+      const pos = olio.geometry?.attributes?.position;
+      const koko = (olio.material?.size ?? 0) / pikselitiheys;
+      let suurin = 0;
+      for (let i = 0; pos && i < pos.count; i += 1) {
+        const x0 = pos.getX(i); const y0 = pos.getY(i); const z0 = pos.getZ(i);
+        const x = m ? m[0] * x0 + m[4] * y0 + m[8] * z0 + m[12] : x0;
+        const y = m ? m[1] * x0 + m[5] * y0 + m[9] * z0 + m[13] : y0;
+        const z = m ? m[2] * x0 + m[6] * y0 + m[10] * z0 + m[14] : z0;
+        const nx = e[0] * x + e[4] * y + e[8] * z + e[12];
+        const ny = e[1] * x + e[5] * y + e[9] * z + e[13];
+        const nz = e[2] * x + e[6] * y + e[10] * z + e[14];
+        const syvyys = -nz;
+        if (!(syvyys > 0.001)) continue;
+        const cx = pr[0] * nx + pr[4] * ny + pr[8] * nz + pr[12];
+        const cy = pr[1] * nx + pr[5] * ny + pr[9] * nz + pr[13];
+        const cw = pr[3] * nx + pr[7] * ny + pr[11] * nz + pr[15];
+        if (!(cw > 0) || Math.abs(cx) > cw || Math.abs(cy) > cw) continue;
+        const px = (koko * puoliskoi) / syvyys;
+        if (px > suurin) suurin = px;
+      }
+      const katto = joukko.kattoPx > 0 ? joukko.kattoPx : Infinity;
+      return {
+        tunnus: joukko.tunnus,
+        kattoPx: joukko.kattoPx || 0,
+        suurinPx: +Math.min(suurin, katto).toFixed(2),
+        rajaamatonPx: +suurin.toFixed(2),
+      };
+    });
+  };
 
   let kierto = 0;
   return {
@@ -289,6 +394,9 @@ export function luoTahtitaivas(pallo, {
       pyoreita,
       kaannettyja: oliot.filter(({ olio }) => Boolean(olio?.material?.__tahtiKaannetty)).length,
       pisteita: joukot.reduce((n, j) => n + j.pisteet.length, 0),
+      /* LISÄYS 15 kohta 44: pölykerros mukana ja sen koko ruudulla. */
+      polya: oliot.filter(({ joukko }) => joukko.tunnus === 'poly').length,
+      koot: kokoRuudulla(),
       peitto: oliot[0]?.olio?.material?.opacity ?? null,
       kierto,
     }),
