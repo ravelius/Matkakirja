@@ -38,6 +38,9 @@ import {
   PALLOLAUDAN_LAHIN_LEVEYS, PALLOLAUDAN_SAAPUMISLEVEYS,
   asteetLeveydesta, korkeusLeveydesta, leveysKorkeudesta,
 } from '../js/pallolauta/kamera.js';
+import {
+  LAPUN_KOSKETUSVARA_PX, laatikonEtaisyys, musteenVoittaja,
+} from '../js/pallolauta/lauta.js';
 
 const lue = (polku) => readFileSync(new URL(polku, import.meta.url), 'utf8');
 
@@ -229,6 +232,58 @@ test('lahinMerkki ratkaisee kohtaamispisteen ENNEN kaupunkipisteen omaa mustetta
   assert.ok(infoSaanto > kaupunkiSaanto, 'turisti-infon sääntö on yhä kaupunkisäännön jäljessä');
   // Kaupungin oma myönnytys säilyy: sormi kaupunkipisteen halkaisijan sisällä.
   assert.match(lauta, /if \(voittaja\?\.laji === 'kaupunki' && lahella\(lat, lng, voittaja, pisteenPx \/ 2\)\)/);
+});
+
+/*
+ * KYLTTI VOITTAA KOSKETUSVARAN, NOSTON OMA MUSTE VOITTAA KYLTIN
+ * (omistaja 17.9.2026 klo 03.30 UTC, Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 31 TARKENNUS 2 kohta 4, kortti *"Kyltti voittaa
+ * kosketusvaran"*).
+ *
+ * TÄMÄ TESTI LASKEE SÄÄNNÖN KAHDELLA MITALLA, ei lue vain lähdettä:
+ * sama napautus ajetaan `musteenVoittaja`n läpi kosketusvaralla ja
+ * ilman. Luvut ovat 16.9.2026 Pariisin lähizoomista mitatut — kyltin
+ * piirretty ala 211,8…309,3 × 392,6…413,9 px ja Guimardin metron
+ * merkki 16,4 px kyltin ankkurista.
+ */
+test('kyltin muste voittaa noston kosketusvaran, mutta ei noston omaa mustetta', () => {
+  // Kyltin piirretty ala (js/pallolauta/merkit.js laatikot + turistiInfonPiirros).
+  const kyltti = { x0: 211.8, y0: 392.6, x1: 309.3, y1: 413.9 };
+  // Naapurinoston lappu: sormi EI ole sen musteella, mutta on 16 px:n varan sisällä.
+  const naapuri = { r: { x0: 232, y0: 414, x1: 300, y1: 425 }, voittaja: { laji: 'nosto' } };
+  // Sormi kyltin keskellä.
+  const sormi = { x: (kyltti.x0 + kyltti.x1) / 2, y: (kyltti.y0 + kyltti.y1) / 2 };
+  assert.equal(laatikonEtaisyys(sormi, kyltti), 0, 'sormi on kyltin omalla musteella');
+  const varanSisalla = laatikonEtaisyys(sormi, naapuri.r);
+  assert.ok(varanSisalla > 0 && varanSisalla <= LAPUN_KOSKETUSVARA_PX,
+    `naapuri on pelkän varan päässä (${varanSisalla.toFixed(1)} px)`);
+  // Vanha sääntö: kosketusvaralla naapurinosto vei napautuksen kyltiltä.
+  assert.equal(musteenVoittaja(sormi, [naapuri])?.laji, 'nosto');
+  // Uusi sääntö mittaa saman napautuksen ILMAN varaa: nosto ei voita enää.
+  assert.equal(musteenVoittaja(sormi, [naapuri], 0), null);
+  // Chambord säilyy: kun sormi on noston OMALLA musteella, nosto voittaa myös varatta.
+  const musteella = { x: 266, y: 420 };
+  assert.equal(laatikonEtaisyys(musteella, naapuri.r), 0);
+  assert.equal(musteenVoittaja(musteella, [naapuri], 0)?.laji, 'nosto');
+});
+
+test('lahinMerkki kysyy kyltin mustetta ennen vanhaa turisti-info-sääntöä', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  // Kosketusvara on nyt musteeseenOsunut-funktion parametri (0 = pelkkä muste).
+  assert.match(lauta,
+    /const musteeseenOsunut = \(lat, lng, vara = LAPUN_KOSKETUSVARA_PX\) => \{/);
+  assert.match(lauta, /return musteenVoittaja\(kohta, ehdokkaat, vara\);/);
+  // Kyltin oma muste mitataan sen PIIRRETYSTÄ laatikosta ilman kosketusvaraa.
+  assert.match(lauta,
+    /if \(!kyltinLaatikot\(\)\.some\(\(r\) => laatikonEtaisyys\(kohta, r\) <= 0\)\) return null;/);
+  const uusi = lauta.indexOf("const kyltti = kyltinMusteella(lat, lng);");
+  const vanha = lauta.indexOf("voittaja?.laji === 'turistiinfo' && muste?.laji !== 'nosto'");
+  assert.ok(uusi > 0 && vanha > uusi,
+    'kyltin oman musteen sääntö ratkaistaan ennen vanhaa myönnytystä');
+  // Vastakoe on koodissa, ei vain raportissa.
+  assert.match(lauta, /if \(pallonSaantoKaytossa\('kylttiosuma'\)\) \{/);
+  assert.match(lauta,
+    /if \(kyltti && musteeseenOsunut\(lat, lng, 0\)\?\.laji !== 'nosto'\) return kyltti;/);
 });
 
 test('tasokartan oma sääntö säilyi ennallaan (laudan yksiköt)', () => {

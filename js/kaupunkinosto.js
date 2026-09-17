@@ -49,9 +49,7 @@
  * pop-upin päällä.
  */
 
-import {
-  NOSTOSYM_MITAN_KATTO, nostosymKatettuMitta, piirraNostosymKartalle,
-} from './fokusnosto-symbolit.js';
+import { piirraNostosymKartalle } from './fokusnosto-symbolit.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import {
   avaaTiivisLehtiarkki, kaupunginKansi, latoKaupunginEsittely, latoLehtiKuvat,
@@ -185,62 +183,37 @@ export function turistiInfonAsteet(lat, lon) {
  * tähän.
  */
 export const KAUPUNKIMERKIN_MITTA = 8.5 / 11;
-/** Mittakaavan lattia (suunnitelman luku 3.0, kolmas pala). */
-export const KAUPUNKIMERKIN_MITTA_MIN = 0.75;
 /*
  * ══════════════════════════════════════════════════════════════════
- * KYLTIN KATTO ON SAMA RUUTUPIKSELIKATTO KUIN NOSTOJEN NIMIÖLLÄ
- * (Fable 16.9.2026 klo 20.45 UTC, Raamattu KARTTAUUDISTUKSEN
- * PAATOKSET 31 TARKENNUS 1 kohta 3)
+ * KYLTTI SKAALAUTUU KUTEN MUUTKIN KARTAN MERKIT — SAMA KERROIN, SAMA
+ * KATTO (omistaja 17.9.2026 klo 03.30 UTC, Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 31 TARKENNUS 2 kohta 5, kortti *"Sama kerroin kuin
+ * muilla"*)
  * ══════════════════════════════════════════════════════════════════
  *
- * MITATTU VIKA (Chromium 390 × 844 dpr 2, Ranska-tallenne, pelaaja
- * Pariisissa, sisin sallittu zoomi = osuus 0,341 uloimmasta,
- * 16.9.2026). Kyltin katto oli tämän moduulin OMA luku 3, eli nimiö
- * 3 × NOSTOSYM_NIMIO_KOKO = 33,00 px ruudulla. Nostojen nimiöt oli
- * v1925:ssä katettu 16 px:iin (PAATOKSET 31 kohta 2), mutta katto asui
- * js/pallolauta/nostot.js:ssä eikä koskenut tätä merkkiä lainkaan:
- * kyltti jäi kaksinkertaiseksi ja sen piirretty ala oli 201 px
- * 373,6 px:n kotelossa, 27,8 px oikean laidan yli — omistajan kuvan
- * leikkautunut *"Turisti-in…"*.
+ * MITATTU EPÄSUHTA (16.9.2026, Ranska-tallenne, pelaaja Pariisissa).
+ * Kyltin mitta laskettiin omalla vertailullaan `uloin / näkyvä`, jossa
+ * `uloin` oli MAAN LAATIKKO × 1,15 (uloszoomausraja, PAATOKSET 1),
+ * kun nostot ja kaupunkimerkit käyttävät LAITTEEN OMAA saapumisnäkymää
+ * (js/pallolauta/nostot.js nostonKarttakerroin, PAATOKSET 14). Sama
+ * pelitilanne antoi siksi saapumisnäkymässä puhelimelle 27,18 px:n ja
+ * työpöydälle 8,25 px:n nimiön — 3,3-kertainen ero, ja 16 px:n katon
+ * jälkeen puhelimella kyltti seisoi katossa jo saapuessa.
  *
- * KATTO TUODAAN, EI TOISTETA. Luku ja katkofunktio asuvat siellä,
- * missä nimiön kirjasinkokokin (js/fokusnosto-symbolit.js
- * NOSTOSYM_NIMIO_KATTO_PX, nostosymKatettuMitta) — sama tiedosto,
- * josta tämä moduuli jo tuo merkin piirtäjän. Peruskoko
- * (KAUPUNKIMERKIN_MITTA) on yhä toistettu luku, koska se on
- * js/pallolauta/-puolen vakio eikä tämä moduuli saa ripustaa itseään
- * siihen; katto ei ole.
+ * KORJAUS EI OLE UUSI KAAVA VAAN VANHAN POISTO: mitta tulee nyt
+ * samasta funktiosta kuin kaupunkimerkillä (js/pallolauta/nostot.js
+ * `nostonMitta(KAUPUNKIMERKIN_KERROIN)`, kutsu js/pallolauta/lauta.js
+ * paivitaTuristiInfo), joten kyltti on n. 11,5 px saapuessa ja 16 px
+ * lähizoomissa MOLEMMILLA ruuduilla. Kerroin ja katto asuvat siis
+ * yhdessä paikassa, eikä tässä moduulissa ole enää omaa mittakaavaa —
+ * vain perusmitta varapolulle (`d.mitta` puuttuu vain, jos ladonta ei
+ * ole vielä ehtinyt ajaa).
  *
- * KATTO ON SAMA LUKU MUTTA PURREE ERI ZOOMILLA kuin nostolla, koska
- * kyltin peruskoko on isompi (11,5 px vs. 8,5 px) ja sen kerroin
- * mitataan eri vertailusta (maan laatikko × 1,15, ks.
- * js/pallolauta/lauta.js paivitaTuristiInfo). Juuri sen vuoksi katto
- * kuuluukin merkin MITTAAN eikä kameran kertoimeen: molemmat
- * pysähtyvät samaan ruutupikselimäärään, kumpikin omalla zoomillaan.
+ * MIKSI MITTA TULEE ULKOAPÄIN EIKÄ TUODA TÄNNE: js/pallolauta/ ei ole
+ * yhden tiedoston niputuksessa, eikä tämä moduuli saa ripustaa itseään
+ * siihen (sama syy kuin KAUPUNKIMERKIN_MITTA-vakiolla). Lauta antaa
+ * luvun datumin `mitta`-kentässä.
  */
-export const KAUPUNKIMERKIN_MITTA_MAX = NOSTOSYM_MITAN_KATTO;
-
-/**
- * MERKKI SKAALAUTUU ZOOMATESSA KUIN PAINETTU KARTTA (PAATOKSET 2).
- *
- * Mitta on suhde `uloin / näkyvä`: uloimmalla zoomilla (koko maan
- * laatikko ruudussa) merkki on perusmitassaan, ja lähikuvassa se kasvaa
- * samassa suhteessa kuin kartta sen alla. Katto on pakollinen — ilman
- * sitä nimiö kasvaisi lähikuvassa ruudun kokoiseksi ja nimiladonta
- * (js/pallolauta/sovittelu.js) laskisi ruutupikseleitä, jotka eivät
- * mahdu mihinkään. Lattia pitää merkin luettavana silloinkin, kun
- * kamera on maan laatikkoa kauempana (kehittäjän maailmanäkymä).
- *
- * Tuntematon leveys palauttaa perusmitan: merkki näkyy aina, vaikka
- * maan laatikkoa ei olisi vielä laskettu (saapumisrajaus on asynkroninen).
- * Peruskoko on katon alapuolella (0,77 < 1,45), joten sekään ei karkaa.
- */
-export function kaupunkimerkinMitta(nakyvaLeveys, uloinLeveys) {
-  if (!(nakyvaLeveys > 0) || !(uloinLeveys > 0)) return KAUPUNKIMERKIN_MITTA;
-  const mitta = KAUPUNKIMERKIN_MITTA * (uloinLeveys / nakyvaLeveys);
-  return nostosymKatettuMitta(Math.max(KAUPUNKIMERKIN_MITTA_MIN, mitta));
-}
 
 /* ===================== MITÄ KAUPUNGILLA ON ===================== */
 
