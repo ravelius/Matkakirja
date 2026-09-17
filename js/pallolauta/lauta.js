@@ -759,19 +759,42 @@ export function laatikonEtaisyys(kohta, r) {
 export function musteenVoittaja(kohta, ehdokkaat, vara = LAPUN_KOSKETUSVARA_PX) {
   let paras = null;
   let parasMatka = Infinity;
+  let parasOma = Infinity;
   let parasKeski = Infinity;
   for (const e of ehdokkaat) {
     const r = e?.r;
     if (!r) continue;
     const matka = laatikonEtaisyys(kohta, r);
     if (matka > vara) continue;
+    /*
+     * OMA MUSTE RATKAISEE TASAPELIN (Raamattu, PAATOKSET 31 TARKENNUS 2
+     * kohta 4: nosto vie napautuksen vain jos sormi on sen OMALLA
+     * musteella; mitattu Macilla 17.9.2026, Bukarest).
+     *
+     * `r` on ikonin ja nimiön YHTEINEN kehys, ja kyljessä olevan nimiön
+     * takia kehykseen jää tyhjiä kulmia. Kahden naapurin kehykset
+     * limittyvät juuri siellä: molempien etäisyys oli 0, ja voittajan
+     * ratkaisi keskipistemitta — napautus lapun omaan tekstiin avasi
+     * naapurin noston. `osat` (js/pallolauta/nostot.js nostonOsat) on
+     * sama muste ilman kehystä, joten tasapelissä voittaa se, jonka
+     * PIIRRETTY muste on lähempänä. Kehysmitta `matka` on yhä
+     * ensisijainen, joten osumapinta ei kutistu missään: sääntö muuttuu
+     * vain siellä, missä kaksi kehystä oli ennen tasan.
+     */
+    const osat = typeof e.osat === 'function' ? e.osat() : e.osat;
+    const oma = Array.isArray(osat) && osat.length
+      ? Math.min(...osat.map((o) => laatikonEtaisyys(kohta, o)))
+      : matka;
     const laatikonKeski = Math.hypot((r.x0 + r.x1) / 2 - kohta.x, (r.y0 + r.y1) / 2 - kohta.y);
     const omaPiste = e.keski
       ? Math.hypot(e.keski.x - kohta.x, e.keski.y - kohta.y) : Infinity;
     const keski = Math.min(laatikonKeski, omaPiste);
     if (matka > parasMatka + 1e-6) continue;
-    if (Math.abs(matka - parasMatka) <= 1e-6 && keski >= parasKeski) continue;
+    const tasan = Math.abs(matka - parasMatka) <= 1e-6;
+    if (tasan && oma > parasOma + 1e-6) continue;
+    if (tasan && Math.abs(oma - parasOma) <= 1e-6 && keski >= parasKeski) continue;
     parasMatka = matka;
+    parasOma = oma;
     parasKeski = keski;
     paras = e.voittaja;
   }
@@ -2442,16 +2465,26 @@ export async function avaaPallolauta(ui) {
     if (!kohta) return null;
     const ehdokkaat = [];
     /** Ehdokkaan laatikko juuri nyt: merkin oma ruutupiste + sen muste. */
-    const lisaa = (osuma, laatikko, voittaja) => {
+    const lisaa = (osuma, laatikko, voittaja, osat = null) => {
       if (typeof laatikko !== 'function' || !edessa(osuma.lat, osuma.lng)) return;
       const p = pallo.getScreenCoords(osuma.lat, osuma.lng, 0);
       const r = p ? laatikko(p) : null;
       // `p` on merkin oma ruutupiste: tasapelin mitta (ks. TASAPELIN
-      // MITTA ON MERKIN OMA PISTE TAI SEN MUSTEEN KESKI).
-      if (r) ehdokkaat.push({ r, voittaja, keski: p });
+      // MITTA ON MERKIN OMA PISTE TAI SEN MUSTEEN KESKI); `osat` on sama
+      // muste ilman yhteistä kehystä (ks. OMA MUSTE RATKAISEE TASAPELIN).
+      if (r) {
+        ehdokkaat.push({
+          r,
+          voittaja,
+          keski: p,
+          osat: p && typeof osat === 'function' ? osat(p) : null,
+        });
+      }
     };
     for (const o of nostot.osumat()) {
-      lisaa(o, o.lappu, { laji: 'nosto', lat: o.lat, lng: o.lng, o });
+      lisaa(o, o.lappu, {
+        laji: 'nosto', lat: o.lat, lng: o.lng, o,
+      }, o.osat);
     }
     // Linssin ajaksi nimet ovat piilossa (css/aikajana.css display:none),
     // eikä näkymätön muste ota napautuksia.
