@@ -2736,7 +2736,7 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
 .fokusvirta-isokuva-ohita {
   position: absolute;
   left: 50%;
-  bottom: max(3vh, 14px);
+  bottom: max(9vh, 56px); /* Fable 17.9.2026: irti kartan alalaidan Liiku-tekstista */
   transform: translateX(-50%);
   margin: 0;
   padding: 0.35rem 0.9rem;
