@@ -58,6 +58,9 @@ import {
 import { KARTTANIMI_KOOT } from '../karttanimet.js';
 import { karttavaloVari, karttavalotLue } from '../karttavalot.js';
 import { nostoladontaTiiviste } from '../nostoladonta.js';
+import {
+  luoAnkkurivarasto, levitaMerkit, nostoankkuritSallittu, pikseleistaAsteiksi, yksiKokoSallittu,
+} from './nostoankkurit.js';
 import { pallonNostoOnPoltettu } from '../pallo.js';
 import { PALLOLAUDAN_LEVEYS } from './kamera.js';
 import { nimenKarttakerroin } from './nimet.js';
@@ -1389,6 +1392,89 @@ export function luoNostot({
     nostosymVirkistaRasterit(juuri);
   };
 
+  /*
+   * ══ KIINTEÄT KARTTA-ANKKURIT (PAATOKSET 32 kohdat 1, 2, 5) ══════
+   * Perustelu ja algoritmi: js/pallolauta/nostoankkurit.js.
+   */
+  const ankkurivarasto = luoAnkkurivarasto();
+  /** Ankkurointi on päällä, kun lippu sallii ja kamera on mitattavissa. */
+  const ankkurointiPaalla = (uloinOsuus) => nostoankkuritSallittu() && uloinOsuus > 0;
+  /**
+   * Valitsee jokaiselle elävälle nostolle ja aihenostolle kartta-ankkurin
+   * KERRAN (kaupungin saapumisnäkymän mitoilla) ja pitää sen: zoomi vain
+   * skaalaa ruutupaikan. Kirjoittaa rivin `lat`/`lng`/`p` ankkuriin.
+   *
+   * VARAUS ON AINA NIMIÖLLINEN, vaikka nimiö olisi juuri nyt piilossa
+   * (aihenoston nimiö näkyy vain lähizoomissa, PAATOKSET 27 TARKENNUS
+   * 4): muuten ankkurit riippuisivat zoomista juuri sen kentän kautta,
+   * jonka takia ne laskettiin.
+   */
+  const ankkuroi = (piirrettavat, nakyvat, uloinOsuus, esteet, mitta) => {
+    if (!ankkurointiPaalla(uloinOsuus)) return;
+    const kehys = (p) => ({ x: p.x * uloinOsuus, y: p.y * uloinOsuus });
+    const liikkuvat = piirrettavat.filter((r) => r.p
+      && (r.perhe === 'nosto' || r.perhe === 'aihemerkki') && !r.kaupunki && !r.poltettu);
+    if (!liikkuvat.length) return;
+    const ruutuNyt = ruutu?.() ?? { leveys: 0, korkeus: 0 };
+    const tunnus = ankkurivarasto.tunnus(null, ruutuNyt);
+    /*
+     * VAIN UUDET LADOTAAN. Jo ankkuroitu nosto pysyy paikallaan — se
+     * on koko sääntö (PAATOKSET 32 kohta 1) — ja uudet väistävät sitä
+     * kiinteänä esteenä. Näin kameran pudottamien merkkien paluu ei
+     * lado koko kaupunkia uudelleen.
+     */
+    const uudetRivit = liikkuvat.filter((r) => !ankkurivarasto.lue(r.avain));
+    if (uudetRivit.length) {
+      const laatikkoKehyksessa = (r) => (r.perhe === 'aihemerkki'
+        ? aihemerkinLaatikko(kehys(r.p), { ...r, mitta }, {
+          kylki: r.puoli ?? 'oikea', nimio: Boolean(r.nimi),
+        })
+        : nostonLaatikko(kehys(r.p), r, { kylki: r.puoli ?? 'oikea', nimio: Boolean(r.nimi) }));
+      const levitettavat = uudetRivit.map((r) => ({
+        avain: r.avain, ...kehys(r.p), laatikko: laatikkoKehyksessa(r),
+      }));
+      // Kiinteä muste ei väisty: poltettu laatta, kaupunkimerkit ja
+      // laudan antamat esteet (pelinappula).
+      const kiinteat = [
+        // Jo ankkuroidut eivät liiku: ne ovat uusille esteitä.
+        ...liikkuvat.filter((r) => ankkurivarasto.lue(r.avain))
+          .map((r) => laatikkoKehyksessa(r)),
+        ...piirrettavat.filter((r) => r.p && r.kaupunki)
+          .map((r) => nostonLaatikko(kehys(r.p), r, { nimio: Boolean(r.nimi) })),
+        ...nakyvat.filter((r) => r.p && r.poltettu && r.perhe !== 'piste')
+          .map((r) => nostonLaatikko(kehys(r.p), r, { nimio: Boolean(r.nimi) })),
+        ...(esteet ?? []).map((e) => ({
+          x0: e.x0 * uloinOsuus,
+          y0: e.y0 * uloinOsuus,
+          x1: e.x1 * uloinOsuus,
+          y1: e.y1 * uloinOsuus,
+        })),
+      ];
+      const siirrot = levitaMerkit(levitettavat, kiinteat);
+      const uudet = new Map();
+      for (const r of uudetRivit) {
+        const siirto = siirrot.get(r.avain);
+        const oma = { lat: r.lat, lng: r.lng };
+        if (!siirto || (!siirto.dx && !siirto.dy)) { uudet.set(r.avain, oma); continue; }
+        // Kehyksen px → nykyiset px → asteet merkin omassa ympäristössä.
+        const asteiksi = pikseleistaAsteiksi(ruudulla, r.lat, r.lng);
+        uudet.set(r.avain, asteiksi
+          ? asteiksi({ dx: siirto.dx / uloinOsuus, dy: siirto.dy / uloinOsuus })
+          : oma);
+      }
+      ankkurivarasto.aseta(tunnus, uudet);
+    }
+    for (const r of liikkuvat) {
+      const ankkuri = ankkurivarasto.lue(r.avain);
+      if (!ankkuri) continue;
+      const p = ruudulla(ankkuri.lat, ankkuri.lng);
+      if (!p) continue;
+      r.lat = ankkuri.lat;
+      r.lng = ankkuri.lng;
+      r.p = p;
+    }
+  };
+
   /**
    * Päivittää kerroksen: kutsutaan levossa (js/pallolauta/lauta.js).
    * Palauttaa elävien laatikot nimiladonnan varauksiksi ja määrän.
@@ -1396,10 +1482,33 @@ export function luoNostot({
   const paivita = ({
     nakyva, katto = NOSTOJEN_KATTO, keskipiste = null, uloinOsuus = 0,
     karttaskaala = 0, vertailuskaala = 0,
+    /*
+     * KIINTEÄT ESTEET LEVITYKSELLE (PAATOKSET 32 kohta 5): pelinappula
+     * ja muu muste, joka ei ole tämän kerroksen omaa eikä voi väistää.
+     * Lauta antaa ne ruutulaatikkoina (js/pallolauta/lauta.js
+     * ladoLevossa) — kerros ei tunne pelinappulaa itse.
+     */
+    esteet = [],
   } = {}) => {
     // Kyltti karttaan (ks. KARTTANOSTON KYLTTI ON KARTAN MITTA):
     // sama kerroin kuin kaupunkien nimikylteillä, laudan mittakaavasta.
-    nostonKarttakerroin = nimenKarttakerroin(karttaskaala, vertailuskaala || undefined);
+    /*
+     * YKSI KOKO — KAIKKI NOSTOT POLTETUN KARTAN KOKOA (omistaja
+     * 17.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 32 kohta 4:
+     * *"Kaikki nostoPallot ja tekstit saisi olla saman kokoisia kuin
+     * poltetussa kartassa"*). Poltettu muste on laatassa kiinteänä
+     * ruutumittana (nimiö 8,5 px), joten ainoa tapa olla sen kokoinen
+     * on olla RUUTUVAKIO: kartan kerroin (PAATOKSET 14) on 1.
+     *
+     * Tämä kumoaa PAATOKSET 14:n kasvun ja tekee samalla PAATOKSET
+     * 31:n 16 px:n katon tarpeettomaksi käytännössä (mitta jää katon
+     * alle joka zoomilla) — katto jää kuitenkin paikalleen, koska se
+     * on oma päätöksensä ja suojaa myös vastakokeen `?nostokoko=0`
+     * vanhaa polkua.
+     */
+    nostonKarttakerroin = yksiKokoSallittu()
+      ? 1
+      : nimenKarttakerroin(karttaskaala, vertailuskaala || undefined);
     viimeisinUloinOsuus = uloinOsuus;
     const rivit = keraa(nakyva, uloinOsuus);
     const nakyvat = [];
@@ -1489,9 +1598,28 @@ export function luoNostot({
     // kaupunkijäsenyys pois, jolloin jäljelle jää pelkkä mitta.
     const ryhmitettavat = kaupunkiYhdistysSallittu()
       ? ehdokkaat : ehdokkaat.map((r) => ({ ...r, kaupunkiAvain: null }));
-    const { ryhmat } = ryhmitysPaalla
-      ? ryhmitaNostot(ryhmitettavat, (r) => nostonLaatikko(r.p, r))
+    /*
+     * RYHMITYS SAAPUMISKEHYKSESSÄ (PAATOKSET 32 kohta 1; perustelu
+     * js/pallolauta/nostoankkurit.js SAAPUMISKEHYS). Ryhmityksen
+     * kynnykset ovat ruutupikseleitä (limitys ja 44 px), joten
+     * kaupungin ulkopuoliset rykelmät hajosivat ja syntyivät
+     * uudelleen zoomatessa — ja aihemerkin keskipiste hyppäsi mukana.
+     * Kun pisteet skaalataan uloimman zoomin kehykseen, kynnys mittaa
+     * merkkien MAANTIETEELLISTÄ etäisyyttä ja jäsenyys on sama
+     * kaikilla zoomeilla. Kaupungin oma jäsenyys (PAATOKSET 27
+     * TARKENNUS 2 kohta 7) oli jo zoomista riippumaton.
+     */
+    const saapumiskehys = ankkurointiPaalla(uloinOsuus)
+      ? (p) => ({ x: p.x * uloinOsuus, y: p.y * uloinOsuus })
+      : (p) => p;
+    const ryhmitysRivit = ankkurointiPaalla(uloinOsuus)
+      ? ryhmitettavat.map((r) => ({ ...r, p: saapumiskehys(r.p) }))
+      : ryhmitettavat;
+    const alkuperaiset = new Map(ryhmitettavat.map((r) => [r.avain, r]));
+    const { ryhmat: ryhmatRaaka } = ryhmitysPaalla
+      ? ryhmitaNostot(ryhmitysRivit, (r) => nostonLaatikko(r.p, r))
       : { ryhmat: [] };
+    const ryhmat = ryhmatRaaka.map((kasa) => kasa.map((r) => alkuperaiset.get(r.avain) ?? r));
     const ryhmassa = new Set();
     ryhmitetytIdt = new Set();
     for (const kasa of ryhmat) {
@@ -1569,6 +1697,13 @@ export function luoNostot({
      * ja viuhka on mennyttä. Sama sulku hoitaa myös sen, että ryhmä
      * itse katosi (zoomi sisään hajotti sen).
      */
+    /*
+     * ANKKURIT ENNEN VIUHKAN LEPOTESTIÄ: testi vertaa merkin
+     * ruutupistettä avaushetkeen, ja ankkuroimaton piste eroaisi
+     * ankkuroidusta aina — viuhka sulkeutuisi heti auettuaan.
+     */
+    ankkuroi([...elavat.filter((r) => !ryhmassa.has(r.avain)), ...aiherivit],
+      nakyvat, uloinOsuus, esteet, mittaNyt);
     if (viuhka) {
       const rivi = aiherivit.find((r) => r.avain === viuhka.avain);
       const siirtyi = rivi

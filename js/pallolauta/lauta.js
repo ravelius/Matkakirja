@@ -3463,6 +3463,14 @@ export async function avaaPallolauta(ui) {
       vertailuskaala: saapumisenSkaala(),
       // Avauslennolla ei yhtään nostoa: lento on kartan niukin hetki.
       katto: lento ? 0 : Math.min(NOSTOJEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia)),
+      /*
+       * PELINAPPULA ON KIINTEÄ ESTE (Raamattu KARTTAUUDISTUKSEN
+       * PAATOKSET 32 kohta 5: nimiö ei saa olla *"kaupungin nimen tai
+       * pelinappulan päällä"*). Nappula on pelin merkki eikä tämän
+       * kerroksen, joten laatikot annetaan sille kerrokselta, joka ne
+       * omistaa — sama lista kuin nimiladonnan `pinot`.
+       */
+      esteet: merkit.laatikot('peli'),
     });
     // Niukka nimijoukko: avauslennolla kaksi päätä, lähtövalinnassa
     // Lontoo (aalto 3A) — muulloin koko lauta budjetilla.

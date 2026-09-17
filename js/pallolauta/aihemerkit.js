@@ -80,6 +80,7 @@
  */
 
 import {
+  NOSTOSYM_MINI_RUUTU,
   nostosymLyhennaNimio, nostosymNimioAsemointi, nostosymNimioMitta,
   piirraNostosymMini, piirraNostosymNimio,
 } from '../fokusnosto-symbolit.js';
@@ -301,8 +302,19 @@ export function viuhkanAsemat({ p, ruutu, leveydet }) {
 
 /* ── AIHEMERKIN PIIRTO ──────────────────────────────────────────── */
 
+/*
+ * AIHENOSTO EI OLE ISOMPI KUIN MUUT (omistaja 17.9.2026, Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 32 kohta 4: *"Kaikki nostoPallot ja
+ * tekstit saisi olla saman kokoisia kuin poltetussa kartassa …
+ * aihenosto ei ole isompi"*).
+ *
+ * Lautasen säde oli 9,2 yksikköä, kun noston oma ruutu on
+ * NOSTOSYM_MINI_RUUTU 7,4 — aihenosto piirtyi 1,24-kertaisena ja
+ * varasi saman verran enemmän tilaa ladonnassa. Säde on nyt sama luku
+ * kuin nostolla, yhtenä mittana eikä kopiona.
+ */
 /** Aihemerkin värilautasen säde merkin omissa yksiköissä. */
-export const AIHEMERKIN_R = 9.2;
+export const AIHEMERKIN_R = NOSTOSYM_MINI_RUUTU;
 
 /*
  * ══ AIHENOSTON NIMIÖ: TÄRKEIMMÄN NOSTON NIMI JA KOLME PISTETTÄ ════
