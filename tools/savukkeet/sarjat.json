@@ -19,9 +19,10 @@
       "env": { "NAKYMAT": "tyopoyta,puhelin" },
       "tunnetutPunaiset": [
         "varjon puoli tummuu reunan tuntumassa",
-        "valon puoli kirkastuu reunan tuntumassa"
+        "valon puoli kirkastuu reunan tuntumassa",
+        "varjo ei ulotu puoliväliin asti"
       ],
-      "_huom": "Yksi näistä on häilyvä pyöriva-pallo -vartio (v1926/v1927 'astro-pallo varjo') — kumpi vaihtelee ajosta toiseen, siksi molemmat listattu."
+      "_huom": "Häilyvä pyörivä-pallo -vartio (v1926/v1927 'astro-pallo varjo'). PR #2551:n kahdessa peräkkäisessä Actions-ajossa (run 35182355793 ajoi vihreänä, run 35183224944 kaatui juuri 'varjo ei ulotu puoliväliin asti' -väitteeseen, tyopoyta) — täsmää raporttien kuvaukseen: mittaus vaihtelee ajosta toiseen, koska pallo pyörii mittauksen aikana. Kolme muunnelmaa listattu, koska ei tiedetä etukäteen mikä niistä heittelee seuraavaksi."
     },
     "savuke-satelliittilinssi.mjs": {
       "tunnetutPunaiset": [
