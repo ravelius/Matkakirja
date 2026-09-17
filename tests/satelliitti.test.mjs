@@ -211,6 +211,50 @@ test('yläpalkki poistuu kokonaan — ruudulla on vain kelluva ✕', () => {
     'kelluva ✕ jäi ruudulle');
 });
 
+test('purkuketju ei koske matalan ruudun yläpalkkitilaan', () => {
+  /*
+   * MATALALLA RUUDULLA YLÄPALKKI ON JO VALMIIKSI PIILOSSA (omistaja
+   * 13.9.2026, css/styles.css `@media (max-height: 520px)`): palkki on
+   * liu'utettu ylös ja `visibility: hidden`, ja sen tilalla on kartan
+   * oikean yläkulman väkäsnappi, jonka luokka `ylapalkki-auki` tuo
+   * palkin hetkeksi esiin.
+   *
+   * Linssin purkuketju saa siis poistaa VAIN omat luokkansa. Jos se
+   * koskisi `ylapalkki-auki`-luokkaan tai palkin tyyleihin, vaakaruudun
+   * palkki jäisi linssin jälkeen väärään tilaan — ja päinvastoin: kun
+   * purku pitää näppinsä erossa, vaakanäkymän piilossa oleva palkki on
+   * linssin jälkeen täsmälleen sama kuin ennen linssiä (mitattu
+   * 17.9.2026 selainsavukkeella 844 × 390 ja 740 × 360: hidden ja
+   * 61,375 px sekä ennen että jälkeen).
+   */
+  const doc = teeDoc();
+  // Pelaaja oli vaakaruudulla tuonut palkin esiin väkäsnapista.
+  doc.body.classList.add('ylapalkki-auki', 'pallolauta-paalla');
+  const kehys = rakennaLinssikehys({
+    ui: { mapPane: doc.createElement('div'), valitseLinssi: () => {} },
+    onSulje: () => {},
+    doc,
+  });
+  kehys.pura();
+  assert.ok(doc.body.classList.contains('ylapalkki-auki'),
+    'purku sotki matalan ruudun yläpalkkitilan');
+  assert.ok(doc.body.classList.contains('pallolauta-paalla'),
+    'purku poisti pelin oman lautaluokan');
+  // Purku poistaa VAIN linssin omat luokat — luettelo on yksi rivi
+  // lähteessä, ja sen on pysyttävä juuri noina kolmena.
+  assert.match(lahde,
+    /classList\.remove\('aikajana-palkki-auki', 'aikajana-paalla', KUVA_AUKI_LUOKKA\);/);
+  assert.ok(!lahde.includes('ylapalkki-auki'),
+    'linssi koskee matalan ruudun yläpalkkiluokkaan');
+  // Linssi ei myöskään kirjoita palkin tyyleihin: ainoa tyylikosketus
+  // on oman korkeusmuuttujan siivous.
+  assert.ok(!/\.topbar['"`\s]*\)?\.style/.test(lahde), 'linssi kirjoittaa palkin tyyleihin');
+  // Linssin oma palkkisääntö on sidottu VAIN sen omaan body-luokkaan.
+  assert.match(tyyli, /body\.aikajana-palkki-auki \.topbar \{/);
+  assert.ok(!tyyli.includes('max-height: 520px'),
+    'matalan ruudun palkkisääntö on vuotanut linssin tyyliin');
+});
+
 test('kuvanäkymässä näkyy vain kuvan ✕ — linssin ✕ on piilossa', () => {
   /*
    * OMISTAJA 16.9.2026 (Raamattu LISÄYS 6): *"Poista hampurilainen
