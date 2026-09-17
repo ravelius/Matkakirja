@@ -2594,10 +2594,11 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
          * JUURI TÄSSÄ SYNTYI MUSTA PALLO (ks. valkaiseMateriaali).
          * `globeImageUrl(null)` panee kirjaston maalaamaan materiaalin
          * mustaksi, ja se musta jäi odottamaan seuraavaa avausta.
-         * Väri palautetaan lähtöarvoonsa — tai valkoiseksi, jos
-         * lähtöarvoa ei ollut (kirjasto oli jo nollannut sen).
+         * EI lähtöarvoon (varinLahto on 0/musta jo laattatilassa, koska
+         * globe.gl alustaa värin mustaksi) — sulku jättää aina VALKOISEN
+         * (oletushex), jotta musta ei jää odottamaan seuraavaa avausta.
          */
-        valkaiseMateriaali(materiaali, varinLahto);
+        valkaiseMateriaali(materiaali);
       }
       // Reliefin blob-osoite pois vasta kun pinta on jo vaihdettu.
       vapautaReliefi();

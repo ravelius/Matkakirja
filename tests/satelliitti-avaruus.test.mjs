@@ -1424,14 +1424,19 @@ test('linssi valkaisee materiaalin sekä avatessa että sulkiessa (lähde)', asy
   /*
    * SULKU ON SE, JOKA MUSTAA PALLON: `globeImageUrl(null)` panee
    * globe.gl:n maalaamaan materiaalin mustaksi, ja musta jää
-   * odottamaan SEURAAVAA avausta. Väri on siis palautettava heti
+   * odottamaan SEURAAVAA avausta. Väri on siis pakotettava heti
    * saman kutsun perään — ja varmuudeksi myös avauksessa.
+   *
+   * EI lähtöarvoon (Macin huomio 7.2, 17.9.2026): `varinLahto` on jo
+   * 0/musta laattatilassa, koska globe.gl alustaa värin mustaksi, joten
+   * lähtöarvon palautus jättäisi pallon mustaksi. Sulku kutsuu siis
+   * ilman lähtöarvoa (oletushex = valkoinen).
    */
   const sulku = lahde.indexOf('pallo.globeImageUrl(lahto.kuvaUrl ?? null)');
   assert.ok(sulku > 0, 'sulun globeImageUrl-kutsua ei löytynyt');
   const sulunJalkeen = lahde.slice(sulku, sulku + 700);
-  assert.match(sulunJalkeen, /valkaiseMateriaali\(materiaali, varinLahto\)/,
-    'sulku ei palauta materiaalin väriä');
+  assert.match(sulunJalkeen, /valkaiseMateriaali\(materiaali\);/,
+    'sulku ei pakota materiaalin väriä valkoiseksi');
   // Avauksessa väri pakotetaan ENNEN oman tekstuurin asetusta.
   const avaus = lahde.indexOf('valkaiseMateriaali(materiaali);');
   assert.ok(avaus > 0 && avaus < sulku, 'avaus ei valkaise materiaalia');
