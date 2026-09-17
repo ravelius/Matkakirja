@@ -62,7 +62,15 @@ export function rakennaMatriisi(sarja) {
 
   return tiedostot.map((tiedosto) => {
     const asetus = sarjat.asetukset?.[tiedosto] ?? {};
-    const tunnetutPunaiset = asetus.tunnetutPunaiset ?? [];
+    // tunnetutPunaisetMac (Fable 17.9.2026, Raamattu AGENTIT TARKENNUS 7):
+    // Macin runnerilla rinnakkaiskuormassa häilyvät väitteet, jotka
+    // ubuntu-matriisi vartioi yhä. Yhdistetään listaan vain kun matriisi
+    // rakennetaan macOS:llä (aja-sarja.mjs Mac-runnerilla); Linux-lista-
+    // job ei näe niitä.
+    const tunnetutPunaiset = [
+      ...(asetus.tunnetutPunaiset ?? []),
+      ...(process.platform === 'darwin' ? (asetus.tunnetutPunaisetMac ?? []) : []),
+    ];
     const tunnetutPunaisetMaara = asetus.tunnetutPunaisetMaara ?? null;
     return {
       tiedosto,
