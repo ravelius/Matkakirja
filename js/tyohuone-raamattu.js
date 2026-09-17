@@ -8163,7 +8163,7 @@ export const RAAMATTU = {
           + 'kumoaa LISAYS 10 kohdan 29 tulkinnan "ehdotuspillerin vastaus on '
           + 'esikirjoitettu aineisto". Tila: TOTEUTETTU haarassa astro-chatti-'
           + 'malli (2d391cda; savuke-astro-valokuva 180/180, ehdotus = 1 '
-          + 'mallikutsu), julkaistaan v1934. LISAYS 15 (omistaja 17.9.2026 klo '
+          + 'mallikutsu), JULKAISTU v1934. LISAYS 15 (omistaja 17.9.2026 klo '
           + '21.30-21.35 Suomen aikaa, kaksi iPhone-kuvaa avaruusnakymasta '
           + 'v1933, sanatarkasti: "Linssin alussa nayton halki lentaa '
           + 'nelioita. Ne voisi jattaa kokonaan pois. Lisaksi tahdet pitaa '
@@ -8201,8 +8201,9 @@ export const RAAMATTU = {
           + 'halki - kerros liikkuu vain pallon pyorityksen mukana (kohta 40 '
           + 'koskee myos polya); hienovarainen syvyysvaikutelma sallittu. '
           + 'Mitataan: polykerros olemassa, hiukkaset pyoreita, koko <= tahden '
-          + 'koko x 1,5, siirtyma 0 px 5 s:ssa ilman kosketusta. Tila: tyo '
-          + 'Opus-agentilla avaruus-hehku-haaran paalle.',
+          + 'koko x 1,5, siirtyma 0 px 5 s:ssa ilman kosketusta. Tila: '
+          + 'TOTEUTETTU (poly pyorea, kattokoko, ei ajautumaa; savuke 114/114), '
+          + 'JULKAISTU v1934 (3d243c9b).',
         'IHMISEN MATKA -LINSSI: RINTAMAN VALKKYMINEN, MUSTA ALKU, LIIKU '
           + 'POIS; ASTRONAUTTILINSSILLE OMA KUVAKE (omistaja 15.9.2026 klo '
           + '12.00 UTC, tyopoytakuva 248 000 v. sitten, sanatarkasti: "Kun '
@@ -8515,7 +8516,8 @@ export const RAAMATTU = {
           + 'klo 22.10 Suomen aikaa, kortti): Ohita PYSAYTTAA luennan - aani ja '
           + 'kuvat loppuvat heti, kartta nakyy; isoisan ja pulun tekstit jaavat '
           + 'luettaviksi matkakirjaan, pulun luentareaktiot eivat enaa tule. '
-          + 'Tila: tyo Opus-agentilla.',
+          + 'Tila: TOTEUTETTU (kuva 367 -> 287 px, limitys 13 px, Ohita 2 ms, '
+          + 'pikkukuvat 3/3; mittaa-luentakuvat 16/16), JULKAISTU v1934.',
         'KARTTAUUDISTUKSEN PAATOKSET 34: KAUPUNKI ON YKSI PISTE, LISTA '
           + 'KATEGORIOITTAIN; KAUPUNGIN ULKOPUOLISET NOSTOT JAAVAT KARTALLE '
           + '(omistaja 17.9.2026 klo 21.45 Suomen aikaa, sanatarkasti: '
@@ -8633,8 +8635,10 @@ export const RAAMATTU = {
           + 'valitsee kohteet ja kirjoittaa otsikot kaanonin ja vuoden 1873 '
           + 'nakokulman mukaan, Opus-era lisaa pisteet ja otsikko-pop-upit '
           + '(koordinaatit Wikipediasta, ei arvattuja), sisaltotekstit '
-          + 'Codexilta myohemmin. Tila: tyo Opus-agentilla (Fablen kohdelista '
-          + 'tehtavanannossa ja raportissa).',
+          + 'Codexilta myohemmin. Tila: TOTEUTETTU (js/packs/hahmotelma-fra.js, 15 '
+          + 'pistetta, Ranskassa 43 nostoa kaupunkien ulkopuolella; 5 listan '
+          + 'kohdetta oli jo kartalla, 12 varastossa raportissa), JULKAISTU '
+          + 'v1934.',
         'KARTTAUUDISTUKSEN PAATOKSET 32: NOSTOT EIVAT LIIKU ZOOMATESSA, '
           + 'VIUHKA SIISTIKSI LISTAKSI, KAIKKI NOSTOT POLTETUN KARTAN KOKOA, '
           + 'EI TEKSTIA TOISEN PAALLE (omistaja 17.9.2026 klo 20.35 Suomen '
