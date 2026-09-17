@@ -924,3 +924,206 @@ riittää sisäisyyteen, ja laudan Pariisin oma piste kelpaa keskukseksi
 `tests/kaupunkiliuska.test.mjs`, tämä raportti.
 
 **Vaatii versionoston**; `tools/uusi-versio.mjs` on ajamatta.
+
+---
+
+# Erä 6 (Opus-agentti 18.9.2026 klo 00.50 Suomen aikaa)
+
+**AVATTU LIUSKA ON ESTEIDEN ULKOPUOLELLA, JA 8h ON VIHREÄ.** Fablen
+tarkistus piti paikkansa ja sen syy oli yhdellä rivillä; korjaus on
+mitattu molemmilla ruuduilla, ja kaikki liuskan vartiot (8a–8j) ovat
+vihreitä 390 px:llä.
+
+## 1. JUURISYY: asento laskettiin oikein, mutta väärään suuntaan
+
+Liuskan asento laskettiin JO erä 5:ssä avatun listan korkeudella —
+kategorian avaus ajaa `ladoUudelleen`n, ja `liuskanRivit` palauttaa
+haitarin rivit mukaan lukien. Vika oli suunnassa: asemointi
+(`js/pallolauta/aihemerkit.js viuhkanAsemat`) on VIUHKAN kone, joka
+keskittää listan merkin ympärille (`ylin = -korkeus / 2 + siirto`).
+Kiinni ollessaan 8-rivinen liuska mahtui merkin viereen, mutta 13
+riviä kasvoi puolet ylöspäin — suoraan PARIISI-nimen päälle. Kova este
+painaa 50-kertaisesti, mutta kun YKSIKÄÄN kokeiltu asento ei ole
+vapaa, pienimmän sakon asento voittaa ja se on yhä nimen päällä.
+
+## 2. Korjaus: kolme sääntöä siinä järjestyksessä kuin ne ratkaistaan
+
+1. **Lista kasvaa ALASPÄIN** (`viuhkanAsemat({ kasvu: 'alas' })`).
+   Lähtökohta on `VIUHKAN_ALAS_ALKU_PX` merkin alapuolella, ja
+   pystysiirrot kokeillaan alhaalta ylös — tasapelin ratkaisee
+   järjestys, joten alin vapaa asento voittaa. Viuhkan oma
+   (keskitetty) käytös on ennallaan: valinta on liuskan.
+2. **Riviväli kutistuu ennen kuin lista väistää.** Alaspäin kasvavan
+   listan tila on se, mikä jää MERKIN ALAPUOLELLE, ei koko ruutu.
+   Tämä oli mitattu tarve, ei varmuuden vuoksi: 390 px:llä kotelo on
+   780 px korkea ja Pariisin merkki on kohdassa y 387,5, joten
+   13-rivinen Skandaalit-kategoria jäi **3 px:n päähän** mahtumisesta
+   ja liuska kelasi kaksi nostoa piiloon (mitattu: *"skandaalit: 5/4,
+   ihmeet: 2/0"*). Tiheinkään väli (`VIUHKAN_TIHEIN_VALI_PX` = 26 px)
+   ei päästä rivejä päällekkäin: se on täsmälleen nimiörivin korkeus.
+3. **Vasta sitten kelaus.** `viuhkanAsemat` palauttaa nyt `kovaSakko`n
+   (ruudun reuna + kaupungin nimi + nappula erikseen pehmeästä
+   musteesta). Jos se on nollaa suurempi eikä tiheinkään lista mahdu
+   merkin alapuolelle (`alasMahtuvatRivit`), liuska näyttää IKKUNAN ja
+   kelausrivit (`kelattuLiuska`, `kelauksenAskel`,
+   `js/pallolauta/kaupunkiliuska.js`) sen sijaan että ylittäisi
+   esteet. Kelausrivi on liuskan oma laji, joka siirtää ikkunaa
+   sulkematta liuskaa.
+
+**Kamera-ajoon en koskenut** (kohta 10 sanoo *"saa huomioida"*):
+kutistuva riviväli riitti molemmilla ruuduilla, eikä kameran siirto
+ole ilmainen — se siirtää kaupungin pois ruudun keskeltä ja
+sulkisi väärin ajoitettuna juuri avatun liuskan (lepotesti).
+
+## 3. Vartio 8h: syy EI ollut syvennyskortti vaan Kadonnut ihme
+
+Mittasin, en päätellyt. Uudet diagnoosikentät kertoivat kolme asiaa,
+jotka erä 5:n punainen ei erottanut: rivillä ON avaaja
+(`avattava true`), peli ei ollut varattu (`busy false`), rivin päällä
+ei ollut mitään (`elementFromPoint` → kartta), eikä sivulle ilmestynyt
+YHTÄKÄÄN kerrosta tai dialogia. **Kyse ei siis ollut siitä, ettei
+mittari tunnistanut korttia — korttia ei ollut.**
+
+Syy on kohteessa: 8f:n kategoriakierros päättyy Pariisin VIIMEISEEN
+kategoriaan, joka on *"Kadonneet ihmeet"*, ja sen nostoilla on OMA
+avaaja (`js/fokuskohteet.js` r. 5841: `if (typeof kohde.avaa ===
+'function') { kohde.avaa(ui); return null; }`), joka ohittaa
+kohteiden tietoruudun ja avaa aarrekortin omilla ehdoillaan. Vartio
+mittasi siis aarteen lunastusehtoja eikä liuskan riviä. **Vartio
+valitsee nyt kohteen ENSIMMÄISESTÄ kategoriasta** ja on vihreä
+molemmilla ruuduilla. Lisäksi kortin odotus on kysely eikä kello
+(kiinteä 800 ms oli toinen, pienempi virhelähde).
+
+*Jäljelle jää sisältökysymys, joka ei ole tämän erän työ:* avaako
+Tuileries'n kaltaisen Kadonneen ihmeen rivi liuskasta kortin
+silloinkin, kun aarretta ei voi lunastaa? Se on Fablen päätös, ja
+diagnoosirivit ovat nyt olemassa sen mittaamiseen.
+
+## 4. MITTAUS (yksi ajo kumpaakin ruutua kohti)
+
+| ruutu | tulos | 8a | 8b | 8c | 8d | 8e | 8f | 8g | 8h | 8i | 8j |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 390 px | **30/34** | OK | OK | OK | OK | OK | OK | OK | OK | OK | OK |
+| 1400 px | **29/34** | OK | FAIL | OK | OK | OK | OK | OK | OK | OK | OK |
+
+- **390 px:** avattu Skandaalit-kategoria on **13 riviä, 372 px
+  korkea, 0 kelausriviä** — kaikki 16 Pariisin nostoa ovat
+  luettavissa. Kategoriat: kauppa 3/3, kulttuuri 3/3, historia 3/3,
+  skandaalit 5/5, ihmeet 2/2. Punaisena vain neljä vanhentunutta
+  kylttivartiota (7, 7b, 7c, 7e).
+- **1400 px:** **29/34**, liuskan kaikki vartiot 8a–8j vihreitä paitsi
+  8b (avattu lista 11 riviä, 326 px, 0 kelausriviä). Punaisina neljä
+  kylttivartiota ja 8b.
+  `8b` on yhä punainen — **sama auki jäänyt mittarin vika kuin erässä
+  4** (Versailles ja Chambord ovat kartalla, mutta 1400 px:n
+  ladonnassa `osumat()` ei anna niitä sillä nimellä, jolla vartio
+  etsii). En koskenut siihen tässä erässä.
+
+### 4b. Yksi uusi havainto, jota EN ehtinyt selvittää
+
+1400 px:llä liuskan kategorioiden summa on **10**, 390 px:llä **16**
+(*"kauppa: 2/2, kulttuuri: 3/3, historia: 1/1, skandaalit: 3/3,
+ihmeet: 1/1"*). 8a on molemmilla vihreä ja 8i (≥ 8) menee läpi, joten
+kartalle ei jäänyt kaupungin sisäisiä nostoja — mutta jäsenyyden
+pitäisi olla sama kaikilla ruuduilla (erä 5, kohta 4). Epäilen, että
+liuskan lähde `sisaisetKaupungeittain` kerää vain sen ladonnan rivit,
+jotka 1400 px:n näkymässä olivat mukana. **Tämä on mitattava seuraavan
+erän ensimmäinen työ**, ja sen mittari on olemassa: 8i:n raja nostetaan
+16:een, kun syy on löydetty.
+
+### 4c. Kaappaukset (uusi kansio)
+
+`/private/tmp/claude-501/-Users-samireivinen-Matkakirja-fable/`
+`1de1d7f9-1349-4671-ad36-3323aaf75d0f/scratchpad/kaappaukset6/`
+
+| tiedosto | mitä siinä on |
+| --- | --- |
+| `pariisi-liuska-auki-390.png` | liuska auki (390 px) |
+| `pariisi-liuska-kategoria-390.png` | **kategoria auki, 13 riviä** — lista alkaa nappulan alta ja PARIISI-nimi on vapaana sen yläpuolella |
+| `pariisi-liuska-auki-1400.png` | liuska auki (1400 px) |
+| `pariisi-liuska-kategoria-1400.png` | kategoria auki (1400 px) |
+| `pariisi-lahizoom-390.png`, `pariisi-lahizoom-1400.png` | kartta, liuska kiinni |
+
+Savukkeiden tulosteet: `.../scratchpad/savuke12-390.txt` (30/34),
+`.../scratchpad/savuke12-1400.txt`, `.../scratchpad/savuke-popup6.txt`
+(kaupunkipopup, tämä erä). Välimittaukset `savuke9…savuke11`.
+
+## 5. Vanhentuneet vartiot: mitä tein
+
+Nämä lakkasivat olemasta väitteitä, kun kaupungin sisäiset nostot
+siirtyivät liuskaan. **Muutin ne INFOksi koodissa perusteluineen; en
+poistanut niitä enkä koskenut `sarjat.jsoniin`.**
+
+| vartio | tila nyt | perustelu |
+| --- | --- | --- |
+| `3e.` | INFO | vaati *"jokaisella aihenostolla on nimiö"* — Pariisissa ei ole aihenostoja kartalla. Nimiön MUOTO mitataan yhä tietona, jos aihenosto jossain on |
+| `3e3.` | INFO | omistajan oma esimerkki oli PARIISIN skandaalirykelmä; se on nyt liuskan kategoria *"Skandaalit (5)"* (8f/8i mittaa saman) |
+| `3i.` (lähizoom) | INFO | sama syy. **Saapumisnäkymän haara jää vartioksi**: se mittaa nimiökynnystä, ei kaupungin sisältöä |
+| `3g.` VASTAKOE | INFO | vertaa rykelmän ryhmitystä lipulla ja ilman; molemmat luvut ovat nyt 0, joten ero ei voi syntyä |
+| `3c.` VASTAKOE | INFO | sama: limittyvien nimiöparien ero mitataan rykelmästä, jota ei ole kartalla |
+
+## 6. Vanhentuneet TUNNETUT PUNAISET `sarjat.jsonissa` (EN muuttanut)
+
+Fable päättää, mitä kirjataan. Nämä mittaavat poistunutta
+käyttöliittymää:
+
+| tiedosto | rivi `sarjat.jsonissa` | miksi vanhentunut |
+| --- | --- | --- |
+| `savuke-pariisi-lahizoom.mjs` | `"7e. tyopoyta: kyltin laatikko on vapaa"` | turisti-infon kyltti ei ole kartalla (`KYLTTI_KARTALLA = false`), joten kyltillä ei ole varausta lainkaan — vartio on punainen MOLEMMILLA ruuduilla eikä enää häilyvä. Samasta syystä vanhentuneita ovat myös `7.`, `7b.` ja `7c.`, joita listalla ei ole |
+
+`savuke-kaupunkipopup.mjs`in `tunnetutPunaisetMaara: 17` on eri pelin
+luku (v1927), ja tämän erän ajo on tulosteessa `savuke-popup6.txt`.
+Erä 4:n havainto pätee yhä: vastakoe *"kuvaton kaupunki avaa pop-upin
+silti"* mittaa isoa pop-upia, jota ei enää ole.
+
+### 6b. `savuke-kaupunkipopup.mjs`: **18/25**, seitsemän punaista
+
+Ajettu kerran tässä erässä (`savuke-popup6.txt`). Punaiset:
+
+| punainen | tila |
+| --- | --- |
+| `vastakoe 1: kuvaton kaupunki avaa pop-upin silti` | **vanhentunut** (erä 4): mittaa isoa pop-upia, jota ei ole |
+| `Marseille @ 390 px` (2 vartiota) | **auki** |
+| `Pariisi @ 1400 px` (2 vartiota) | **auki** |
+| `Marseille @ 1400 px` (2 vartiota) | **auki** |
+
+Kaikissa kuudessa auki olevassa lukee sama rivi: *"liuska -, rivejä
+0"* — liuska ei auennut lainkaan, eli kyse EI ole asemoinnista vaan
+avauksesta. **Tämä on huonompi luku kuin erä 4:n 22/25**, jossa
+punaisena oli vain ajon ENSIMMÄINEN kaupunki; nyt ensimmäinen
+(Pariisi 390 px) on vihreä ja kolme seuraavaa punaisia. Sama peli
+avaa liuskan `savuke-pariisi-lahizoomissa` luotettavasti molemmilla
+ruuduilla (8c vihreä, 215 ms), joten epäilen tämän savukkeen omaa
+napautus-/odotusketjua kaupunkien välillä — mutta **en ehtinyt mitata
+sitä, joten se on epäily, ei todistus.** Se on seuraavan erän
+ensimmäinen työ yhdessä 4b:n kanssa.
+
+## 7. Testit
+
+`node --test tests/*.test.mjs`: **3604 testiä, `# pass 3591`,
+`# fail 0`** (13 ohitettua). `tests/kaupunkiliuska.test.mjs` sai viisi
+uutta testiä: alaspäin kasvava lista ei osu kaupungin nimeen (ja
+vertailukohtana keskitetty lista osuu), riviväli kutistuu ahtaassa
+ruudussa ilman että rivit menevät päällekkäin, `alasMahtuvatRivit`
+päättyy ruudun alalaitaan, kelausikkuna varaa kelausriveille tilan, ja
+kelauksen askel pysyy listan sisällä.
+
+## 8. Oletukset (päätin itse, ei AskUserQuestionia)
+
+1. **Kamera-ajo ennallaan** (osio 2): kutistuva riviväli riitti, ja
+   kameran siirto olisi uusi riski juuri avatulle liuskalle.
+2. **Kelausrivit ovat liuskan oma laji** eivätkä nuolinappi: liuska on
+   nimiölista, ja kelaus on sen rivi kuten kategoriakin.
+3. **Vanhentuneet vartiot INFOksi, ei poistoon** — väite katosi, mutta
+   luku on yhä hyödyllinen, jos kartan sisältö joskus palaa.
+4. **8h valitsee kohteen ensimmäisestä kategoriasta** (osio 3);
+   Kadonneen ihmeen oman avaajan ehdot ovat sisältökysymys.
+5. **1400 px:n 8b ja 4b:n jäsenyysero jätettiin auki** ja kirjattiin.
+
+## 9. Muutetut tiedostot (erä 6)
+
+`js/pallolauta/aihemerkit.js`, `js/pallolauta/kaupunkiliuska.js`,
+`js/pallolauta/nostot.js`, `tools/savukkeet/savuke-pariisi-lahizoom.mjs`,
+`tests/kaupunkiliuska.test.mjs`, tämä raportti.
+
+**Vaatii versionoston**; `tools/uusi-versio.mjs` on ajamatta (ohje).
