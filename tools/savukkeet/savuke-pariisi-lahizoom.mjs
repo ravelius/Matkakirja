@@ -110,6 +110,20 @@
  *   6b. VASTAKOE: oletusporras (NOSTOSYM_PORTAAT[0] = 1,5) EI riitä
  *       samaan tarpeeseen — vartio 6 mittaa siis sitä, että pallo
  *       oikeasti tilaa portaan, eikä sitä että tarve on pieni.
+ *   7.  TURISTI-INFON KYLTTI SAA SAMAN KATON (PAATOKSET 31 TARKENNUS
+ *       1 kohta 3). Kyltti on js/kaupunkinosto.js:n oma merkki eikä
+ *       karttanosto, joten vartiot 1 ja 2 eivät sitä mitanneet: sen
+ *       nimiö luetaan omasta elementistään ja sen on oltava enintään
+ *       NIMION_KATTO_PX.
+ *   7b. KYLTTI MAHTUU RUUDULLE. Sen piirretty ala on kokonaan
+ *       kotelossa — juuri se, mikä omistajan kuvassa leikkautui
+ *       oikeasta laidasta (*"Turisti-in…"*).
+ *   7c. (INFO, ei vartio) aito napautus merkin omasta ruutupisteestä:
+ *       avaako se matkailijan oppaan? Rykelmässä ei — ks. rivin oma
+ *       perustelu mittauksineen alempana.
+ *   7d. VASTAKOE: katto pois kesken ajon (`?nimiokatto=0`,
+ *       js/fokusnosto-symbolit.js) — sama näkymä, sama kyltti, ja
+ *       nimiö kasvaa yli TURISTIN_VASTAKOKEEN_RAJA_PX:n.
  *
  * ÄMPÄRI KULKEE NODEN KAUTTA (CLAUDE.md: NODE_USE_ENV_PROXY=1).
  * Ilman ämpäriä pallon kirjastoa ei saa, ja savuke OHITETAAN.
@@ -171,6 +185,16 @@ const KATON_VARA_PX = 0.1;
  * läpi vahingossa, ja se vaatii kameran oikeasti zoomanneen.
  */
 const VASTAKOKEEN_RAJA_PX = 30;
+/**
+ * TURISTI-INFON VASTAKOKEEN RAJA on oma lukunsa, koska kyltin kerroin
+ * mitataan eri vertailusta kuin nostojen (maan laatikko × 1,15, ei
+ * laitteen saapumisnäkymä — js/pallolauta/lauta.js paivitaTuristiInfo).
+ * Mitattu 16.9.2026 sisimmällä zoomilla ilman kattoa: puhelimella
+ * 79,8 px, työpöydällä 22,97 px. Raja on katto × 1,25 = 20 px: se on
+ * molempien alapuolella mutta selvästi katon (16 px) yläpuolella, joten
+ * se ei voi mennä läpi vahingossa eikä kaadu ruudun kuvasuhteesta.
+ */
+const TURISTIN_VASTAKOKEEN_RAJA_PX = NOSTON_NIMIO_KATTO_PX * 1.25;
 /** Kaupunkimerkin nimiö saapumisnäkymässä (PAATOKSET 25 kohta 2). */
 const SAAPUMISEN_VAHIN_PX = 11;
 /**
@@ -408,6 +432,34 @@ const mittaa = (sivu) => sivu.evaluate(async () => {
     tiheys: window.devicePixelRatio || 1,
     porras: sym.nostosymPorrasNyt(),
     merkit,
+    /*
+     * TURISTI-INFON KYLTTI (js/kaupunkinosto.js) ON OMA MITTANSA, EI
+     * NOSTOJEN. Merkki on pallon merkkikerroksen datum, jonka
+     * mittakaava tulee `kaupunkimerkinMitta`sta, joten se luetaan
+     * omasta elementistään (`.pallolauta-turisti-info`) eikä
+     * `.pallolauta-nosto`-listasta, jossa sitä ei ole. Laatikko on
+     * SIIRTORYHMÄN piirretty ala (svg on 1 × 1 px ja `overflow:
+     * visible`), eli täsmälleen se, minkä pelaaja näkee — kotelon
+     * koordinaateissa, kuten nostojen osumalaatikot.
+     */
+    turisti: (() => {
+      const el = document.querySelector('.pallolauta-turisti-info');
+      if (!el) return null;
+      const g = el.querySelector('.pallolauta-turisti-info-siirto');
+      const mitta = g ? Number((g.style.transform.match(/scale\(([\d.]+)\)/u) ?? [])[1] ?? 0) : 0;
+      const r = (g ?? el).getBoundingClientRect();
+      const tyyli = getComputedStyle(el);
+      return {
+        kaupunki: el.dataset.kaupunki ?? '',
+        mitta,
+        x0: r.left - koti.left,
+        y0: r.top - koti.top,
+        x1: r.right - koti.left,
+        y1: r.bottom - koti.top,
+        nakyy: tyyli.display !== 'none' && tyyli.visibility !== 'hidden'
+          && Number(tyyli.opacity) > 0.01,
+      };
+    })(),
     aihemerkit: (n?.aihemerkit?.() ?? []).map((a) => ({
       id: a.id,
       aihe: a.aihe,
@@ -793,7 +845,59 @@ for (const ruutu of RUUDUT) {
   const napautetut = [];
   const virheet = [];
   /*
-   * VIUHKA ENSIN, SITTEN NOSTOT. Aihemerkin napautus on kartan tila
+   * ── 7c. TURISTI-INFON KYLTIN NAPAUTUS MITATAAN ENSIMMÄISENÄ ─────
+   *
+   * SAMASTA SYYSTÄ KUIN VIUHKA: kartan napautustila on puhtaimmillaan
+   * ennen kuin yksikään kortti on ehtinyt avautua ja sulkeutua.
+   * MITATTU 16.9.2026: kun sama napautus tehtiin vasta kolmen
+   * nostokortin jälkeen, se ei avannut mitään — laudan oma
+   * `korttiOliAuki`-lukko (js/pallolauta/lauta.js napautaPintaan:
+   * *"sulkeva napautus ei avaa mitään uutta"*) nielaisi sen. Lukko on
+   * oikein, mutta se on eri asia kuin tämän erän väite.
+   *
+   * Sormen piste on merkin ANKKURI eli sen elementin keskikohta:
+   * elementti on 1 × 1 px:n laatikko ankkurissa (`translate(-50%,
+   * -50%)`) ja nimiö piirtyy siitä oikealle siirtoryhmään, joten
+   * sormi hakee symbolin eikä nimiön ulkopäätä — sama sääntö kuin
+   * vartiossa 4.
+   */
+  const tPiste = await sivu.evaluate(() => {
+    const el = document.querySelector('.pallolauta-turisti-info');
+    if (!el) return null;
+    const r = el.getBoundingClientRect();
+    return { x: (r.left + r.right) / 2, y: (r.top + r.bottom) / 2 };
+  });
+  let opasAuki = null;
+  let opasEste = null;
+  let opasSijaan = null;
+  if (tPiste) {
+    opasEste = await peitossa(sivu, tPiste.x, tPiste.y);
+    if (!opasEste) {
+      await sivu.mouse.click(tPiste.x, tPiste.y);
+      await sivu.waitForTimeout(900);
+      opasAuki = await sivu.evaluate(() => {
+        const d = document.getElementById('nahtavyys-dialog');
+        const auki = window.matkakirja.ui.lehtitila?.nahtavyysAuki ?? null;
+        return d?.open
+          ? (auki?.kohde?.nimi ?? auki?.kohde?.otsikko ?? 'opas auki') : null;
+      });
+      // Mikä muu kortti vei napautuksen? Ilman tätä punainen rivi ei
+      // kerro, oliko kyse osumasäännöstä vai kuolleesta merkistä.
+      if (!opasAuki) opasSijaan = await avoinNosto(sivu);
+      // Opas on modaali arkki: se on suljettava ennen seuraavia
+      // napautuksia, tai se peittäisi kartan (savukkeen siivous).
+      await sivu.keyboard.press('Escape');
+      await sivu.waitForTimeout(500);
+      await sivu.evaluate(() => {
+        const d = document.getElementById('nahtavyys-dialog');
+        if (d?.open) d.close();
+      });
+      await sivu.waitForTimeout(300);
+      await suljeKortti(sivu);
+    }
+  }
+  /*
+   * VIUHKA ENNEN NOSTOJA. Aihemerkin napautus on kartan tila
    * (viuhka aukeaa ja sulkeutuu), ja se on mitattava puhtaasta
    * näkymästä — ennen kuin yksikään kortti on ehtinyt avautua.
    */
@@ -895,6 +999,125 @@ for (const ruutu of RUUDUT) {
       ? `kohtia ${viuhkaTulos.kohdat.length} / ${viuhkaTulos.ryhma.maara}, `
         + `kortti ${viuhkaTulos.kortti ?? '-'} (kohta ${viuhkaTulos.kohdat[0]?.id ?? '-'})`
       : 'aihemerkkejä ei ollut (ks. vartio 3b)');
+
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * 7. TURISTI-INFON KYLTTI (PAATOKSET 31 TARKENNUS 1 kohta 3)
+   * ══════════════════════════════════════════════════════════════
+   *
+   * Fable 16.9.2026 klo 20.45 UTC: kyltti *"kasvaa lähizoomissa
+   * rajatta ja leikkautuu ruudun laidasta — kohdan 2 ruutupikselikatto
+   * ei koske sitä"*. Kyltti on js/kaupunkinosto.js:n oma merkki, ei
+   * karttanosto, joten vartiot 1 ja 2 eivät sitä mitanneet.
+   *
+   * Kolme väitettä, kaikki samasta ruudusta ja samasta zoomista kuin
+   * nostojen omat:
+   *   7.  nimiö ei kasva yli nostojen katon (NIMION_KATTO_PX);
+   *   7b. kyltin piirretty ala mahtuu koteloon — juuri se, mikä
+   *       omistajan kuvassa leikkautui oikeasta laidasta;
+   *   7c. (INFO) napautus merkin omasta ruutupisteestä — avaako se
+   *       matkailijan oppaan (js/kaupunkinosto.js avaaTuristiOpas →
+   *       #nahtavyys-dialog)? Napautus tehdään puhtaasta tilasta ennen
+   *       muita kortteja, ks. sen oma perustelu ylempänä.
+   * Vastakoe on 7d: katto pois kesken ajon (`?nimiokatto=0`).
+   */
+  const t = m.turisti;
+  const turistiNimio = t ? t.mitta * NOSTOSYM_NIMIO_KOKO : 0;
+  const tSaapuen = saapuen.turisti;
+  tieto(`${ruutu.nimi} · turisti-infon kyltti`,
+    t
+      ? `mitta ${p(t.mitta, 4)}, nimiö ${p(turistiNimio)} px, `
+        + `laatikko ${p(t.x0)},${p(t.y0)} → ${p(t.x1)},${p(t.y1)} `
+        + `(leveys ${p(t.x1 - t.x0)} px, kotelo ${p(m.koti.w)} × ${p(m.koti.h)} px), `
+        + `saapuessa nimiö ${p(tSaapuen ? tSaapuen.mitta * NOSTOSYM_NIMIO_KOKO : 0)} px`
+      : 'ei kyltillä kartalla');
+  vaadi(`7. ${ruutu.nimi}: turisti-infon nimiö ≤ ${NIMION_KATTO_PX} px lähizoomissa`,
+    Boolean(t) && t.nakyy && turistiNimio > 0
+      && turistiNimio <= NIMION_KATTO_PX + KATON_VARA_PX,
+    t ? `${p(turistiNimio)} px (mitta ${p(t.mitta, 4)})` : 'kylttiä ei ollut kartalla');
+  const tYli = t
+    ? (t.x0 < 0 || t.y0 < 0 || t.x1 > m.koti.w || t.y1 > m.koti.h) : true;
+  vaadi(`7b. ${ruutu.nimi}: turisti-infon kyltti mahtuu kokonaan koteloon`,
+    Boolean(t) && !tYli,
+    t
+      ? `laatikko ${p(t.x0)},${p(t.y0)} → ${p(t.x1)},${p(t.y1)}, `
+        + `kotelo ${p(m.koti.w)} × ${p(m.koti.h)} px`
+      : 'kylttiä ei ollut kartalla');
+  /*
+   * 7c. ON INFO EIKÄ VARTIO — JA SE ON MITTAUSTULOS, EI LAISKUUTTA.
+   *
+   * MITATTU 16.9.2026 (Pariisin sisin zoomi, molemmat ruudut): sormi
+   * TÄSMÄLLEEN kyltin päällä avaa Guimardin metron, jonka merkki on
+   * 16,4 px päässä. Syy on osumasääntöjen järjestys, ei kyltin koko:
+   * nostojen osumalaatikkoa venytetään joka suuntaan
+   * LAPUN_KOSKETUSVARA_PX:n (16 px) verran (js/pallolauta/lauta.js,
+   * omistajan tilaus 7.9.2026 *"Symboli ottaa klikkauksen mutta teksti
+   * ei"*), ja 14.9.2026:n sääntö antaa noston musteen voittaa
+   * turisti-infon (omistajan Chambord-havainto). Rykelmässä nämä kaksi
+   * omistajan omaa sääntöä osuvat yhteen, ja kyltti jää väliin.
+   *
+   * KOKEILTU JA PERUTTU, mitattuna: (a) kyltin oma muste voittaa, kun
+   * sormi on sen päällä eikä noston musteella, ja (b) kyltin laatikko
+   * sovittelun esteeksi, jolloin nostojen laput väistävät sitä.
+   * Kumpikin korjasi tämän rivin mutta kaatoi
+   * tools/savukkeet/savuke-pallo-nostolaput.mjs:n omistajan omia
+   * vartioita Bukarestissa: (a) vartiot 6 ja 7 (lapun tekstin napautus
+   * 8 px:n sormenpoikkeamalla, VIAT v1680) ja (b) vartion 2
+   * (kaupunkinimi ei leikkaa liikkumatonta mustetta). Osumajärjestys
+   * rykelmässä on siis oma eränsä ja oma päätöksensä, ei tämän katon
+   * sivutuote — luku jää tähän mitattuna, jotta se ei unohdu.
+   */
+  tieto(`${ruutu.nimi} · turisti-infon kyltin napautus`,
+    tPiste
+      ? (opasEste
+        ? `merkki on peitossa: ${opasEste}`
+        : (opasAuki
+          ? `avasi oppaan (${opasAuki})`
+          : `EI avannut opasta — auki sen sijaan: ${opasSijaan ?? 'ei mitään'}`))
+      : 'kylttiä ei ollut kartalla');
+
+  /*
+   * 7d. VASTAKOE: KATTO POIS KESKEN AJON (`?nimiokatto=0`,
+   * js/fokusnosto-symbolit.js). Kyltin kerrointa ei voi laskea
+   * savukkeessa kuten nostojen (vartio 1b): sen vertailuleveys on maan
+   * laatikko × 1,15 eikä laitteen saapumisnäkymä
+   * (js/pallolauta/lauta.js paivitaTuristiInfo), eikä laatikko ole
+   * savukkeen ulottuvilla. Lippu kääntää katon pois SAMASSA näkymässä
+   * — ei sivun uudelleenlatausta, vain uusi ladonta — ja sitten
+   * mitataan sama kyltti uudelleen. Näin vastakoe on aito mittaus
+   * eikä laskutoimitus.
+   */
+  await sivu.evaluate(() => {
+    const u = new URL(window.location.href);
+    u.searchParams.set('nimiokatto', '0');
+    window.history.replaceState(null, '', u.toString());
+    window.matkakirja.ui.pallolauta.ladoHeti?.();
+  });
+  await sivu.waitForTimeout(900);
+  const kattoPois = await mittaa(sivu);
+  const tIlman = kattoPois.turisti;
+  const turistiIlmanKattoa = tIlman ? tIlman.mitta * NOSTOSYM_NIMIO_KOKO : 0;
+  const tIlmanYli = tIlman
+    ? (tIlman.x0 < 0 || tIlman.y0 < 0
+      || tIlman.x1 > kattoPois.koti.w || tIlman.y1 > kattoPois.koti.h) : false;
+  tieto(`${ruutu.nimi} · turisti-info ilman kattoa (?nimiokatto=0)`,
+    tIlman
+      ? `nimiö ${p(turistiIlmanKattoa)} px, leveys ${p(tIlman.x1 - tIlman.x0)} px, `
+        + `laidan yli ${tIlmanYli ? 'kyllä' : 'ei'}`
+      : 'kylttiä ei ollut kartalla');
+  vaadi(`7d. VASTAKOE ${ruutu.nimi}: ilman kattoa turisti-infon nimiö olisi `
+    + `> ${TURISTIN_VASTAKOKEEN_RAJA_PX} px`,
+    turistiIlmanKattoa > TURISTIN_VASTAKOKEEN_RAJA_PX,
+    `${p(turistiIlmanKattoa)} px — kamera ei ilmeisesti zoomannut (kerroin ${p(kerroin, 3)})`);
+  // Lippu pois: kuva ja mahdolliset myöhemmät mittaukset ovat korjatusta
+  // laudasta, eivät vastakokeesta.
+  await sivu.evaluate(() => {
+    const u = new URL(window.location.href);
+    u.searchParams.delete('nimiokatto');
+    window.history.replaceState(null, '', u.toString());
+    window.matkakirja.ui.pallolauta.ladoHeti?.();
+  });
+  await sivu.waitForTimeout(900);
 
   await kaappaa(sivu, `pariisi-lahizoom-${ruutu.w}.png`);
   await ctx.close();
