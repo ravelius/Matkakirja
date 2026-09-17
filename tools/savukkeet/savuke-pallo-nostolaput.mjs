@@ -59,7 +59,7 @@ import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 
 const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
@@ -126,7 +126,7 @@ peli.phase = 'action';
 peli.tokens.delete('bukarest');
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
 const ctx = await selain.newContext({
   viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, serviceWorkers: 'block',
 });

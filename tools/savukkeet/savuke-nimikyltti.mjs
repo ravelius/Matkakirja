@@ -57,7 +57,7 @@ import { RYHMITYKSEN_ETAISYYS_PX, ryhmitaNostot } from '../../js/pallolauta/aihe
 import { paakartanNostot } from '../tarkista-nostopaikat.mjs';
 
 const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
@@ -158,7 +158,7 @@ function tallenne(kaupunki) {
   return JSON.stringify(peli.toJSON());
 }
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
 
 async function avaaSivu(ruutu, kaupunki) {
   const ctx = await selain.newContext({
@@ -261,7 +261,50 @@ async function veda(sivu, dx, dy) {
     await sivu.waitForTimeout(40);
   }
   await sivu.mouse.up();
-  await sivu.waitForTimeout(1200);
+  await odotaLepo(sivu);
+}
+
+/**
+ * VEDON JÄLKEINEN LEPO ODOTETAAN TILASTA, EI KELLOSTA (17.9.2026, Mac).
+ * Kiinteä 1 200 ms riitti kontissa, mutta Macilla pallon oma hidastuva
+ * liike (globe.gl vaimennus) jatkuu sormen noston jälkeen pidempään:
+ * mitattuna puhelimen Pariisi-kyltti luki vedon jälkeen -40,0/62,7 →
+ * 56,8/59,0 → -45,6/54,8 ja jäi sitten paikalleen, eli KESKIMMÄINEN
+ * mittaus otettiin kesken liikkeen ja vartiot 1-2 näkivät 102 px:n
+ * "siirron". Tässä luetaan kameran asento ja kaikkien nimikylttien
+ * ruutupaikat, ja jatketaan vasta kun kolme peräkkäistä lukemaa on
+ * sama (± 0,5 px). Ladonnan tahti on 200 ms, joten 3 × 150 ms kattaa
+ * yhden kokonaisen ladontakierroksen.
+ */
+async function odotaLepo(sivu, { vakaita = 3, valiMs = 150, kattoMs = 8000 } = {}) {
+  const lue = () => sivu.evaluate(() => {
+    const pov = window.matkakirja.ui.pallolauta.pallo.pointOfView();
+    const kyltit = [...document.querySelectorAll('.pallolauta-nimi')]
+      .map((el) => {
+        const r = el.getBoundingClientRect();
+        return [el.dataset.kaupunki ?? '', r.left, r.top];
+      })
+      .sort((a, b) => String(a[0]).localeCompare(String(b[0])));
+    return { pov: [pov.lat, pov.lng, pov.altitude], kyltit };
+  });
+  const sama = (a, b) => Boolean(a) && Boolean(b)
+    && a.kyltit.length === b.kyltit.length
+    && a.pov.every((v, i) => Math.abs(v - b.pov[i]) < 1e-4)
+    && a.kyltit.every((k, i) => k[0] === b.kyltit[i][0]
+      && Math.abs(k[1] - b.kyltit[i][1]) <= 0.5 && Math.abs(k[2] - b.kyltit[i][2]) <= 0.5);
+  const t0 = Date.now();
+  let edellinen = null;
+  let perakkain = 0;
+  while (Date.now() - t0 < kattoMs) {
+    // eslint-disable-next-line no-await-in-loop
+    const nyt = await lue();
+    perakkain = sama(nyt, edellinen) ? perakkain + 1 : 0;
+    edellinen = nyt;
+    if (perakkain >= vakaita - 1) return true;
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.waitForTimeout(valiMs);
+  }
+  return false;
 }
 
 /*

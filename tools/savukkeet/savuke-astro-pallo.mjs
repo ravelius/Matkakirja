@@ -650,13 +650,113 @@ async function ajaNakyma(nimi) {
       .screenshot({ timeout: 120000 });
     return decodePng(puskuri);
   };
-  const paalla = naytteet(await kaappaaKotelo(), keski);
+  /*
+   * ── MITTAUS TEHDÄÄN PYSÄYTETYSTÄ TILASTA (17.9.2026) ─────────────
+   *
+   * Nämä neljä väitettä olivat HÄILYVIÄ (tools/savukkeet/sarjat.json:
+   * "varjon puoli tummuu", "valon puoli kirkastuu", "varjo ei ulotu
+   * puoliväliin"), ja 17.9.2026 (Actions 35221065011, PR #2555 v1931)
+   * samasta juuresta tuli uusi punainen: VASTAKOE mittasi puhelimella
+   * päällä 63,5 → pois 83,5 → takaisin 57,9. Takaisin oli 5,6 yksikköä
+   * eri kuin päällä, vaikka kytkin oli täsmälleen samassa asennossa.
+   *
+   * JUURISYY: kolme kaappausta otetaan noin sekunnin välein, ja
+   * kaappausten VÄLISSÄ RUUTU ELÄÄ, vaikka pallo ei pyöri
+   * (MITAT-rivillä avaruus.pyorii oli false):
+   *   1. ISS ja ratakaari. Kalvon `paivita` juoksee joka kehyksellä
+   *      (`aika = performance.now()/1000`), ratakaari piirretään
+   *      uudelleen SVG-polkuna ja merkki siirtyy. Kaari kulkee juuri
+   *      REUNAN yli — sinne, mistä näytteet luetaan — ja merkillä on
+   *      leveä `box-shadow`. Yksi kirkas viiva 7 × 7 pikselin
+   *      näytteessä siirtää keskiarvoa kymmeniä yksiköitä.
+   *   2. Tähtipölyn ajautuma (tahdet.js `kierto`) ja pinnan viimeinen
+   *      lataus (reliefi 8k/4k) voivat vielä vaihtaa pikselit.
+   *
+   * KORJAUS: ennen ensimmäistä kaappausta odotetaan, että pinta on
+   * lopullinen (reliefin lataus ohi ja `pinnanOsoite` sama viidellä
+   * peräkkäisellä lukemalla), pyöriminen pannaan varmuuden vuoksi pois
+   * ja kalvon LIIKKUVAT osat (.astro-rata ja .astro-iss) piilotetaan
+   * mittauksen ajaksi — varjo ja valoreuna, joita väitteet koskevat,
+   * jäävät paikalleen. Kamera-asento luetaan ennen ja jälkeen: kaikki
+   * kolme kaappausta ovat samasta asennosta. Lisäksi jokainen näyte
+   * otetaan VASTA KUN KAKSI PERÄKKÄISTÄ LUKEMAA OVAT SAMAT — jos ruutu
+   * yhä eläisi, se näkyy omana punaisenaan eikä satunnaisena
+   * häilyvyytenä. Toleranssit pysyvät ennallaan.
+   */
+  await s.waitForFunction(() => {
+    const tila = window.matkakirja.ui.pallolinssi.kahva.avaruus.tila();
+    const nyt = `${tila.pinnanOsoite}|${tila.reliefinTarkkuus}|${tila.reliefi}`;
+    const muisti = window.__astroPinnanVakaus ?? { arvo: null, kerrat: 0 };
+    if (muisti.arvo === nyt) muisti.kerrat += 1;
+    else { muisti.arvo = nyt; muisti.kerrat = 0; }
+    window.__astroPinnanVakaus = muisti;
+    return tila.reliefinKestoMs > 0 && muisti.kerrat >= 5;
+  }, null, { timeout: 90000 }).catch(() => {});
+  const povTeksti = (p) => (p ? `${p.lat.toFixed(3)},${p.lng.toFixed(3)},${p.altitude.toFixed(4)}` : 'null');
+  const jaadytys = await s.evaluate(() => {
+    const { ui } = window.matkakirja;
+    const ohjaimet = ui.pallonInstanssi.controls?.();
+    const pyoriEnnen = ohjaimet ? Boolean(ohjaimet.autoRotate) : null;
+    if (ohjaimet) ohjaimet.autoRotate = false;
+    const tyyli = document.createElement('style');
+    tyyli.id = 'astro-mittauksen-jaadytys';
+    tyyli.textContent = '.astro-rata, .astro-iss { display: none !important; }';
+    document.head.appendChild(tyyli);
+    ui.pallolauta?.heraa?.();
+    const p = ui.pallonInstanssi.pointOfView();
+    return { pyoriEnnen, pov: { lat: p.lat, lng: p.lng, altitude: p.altitude } };
+  });
+  const purajaadytys = () => s.evaluate((pyoriEnnen) => {
+    document.getElementById('astro-mittauksen-jaadytys')?.remove();
+    const ohjaimet = window.matkakirja.ui.pallonInstanssi.controls?.();
+    if (ohjaimet && pyoriEnnen !== null) ohjaimet.autoRotate = pyoriEnnen;
+    window.matkakirja.ui.pallolauta?.heraa?.();
+  }, jaadytys.pyoriEnnen);
+  /** Suurin ero kahden näytteen välillä (kaikki mittauskohdat). */
+  const naytteidenEro = (a, b) => Math.max(...['vasenKa', 'oikeaKa', 'keskustaKa',
+    'puolivaliVasenKa', 'puolivaliOikeaKa'].map((k) => Math.abs(a[k] - b[k])));
+  const VAKAUDEN_RAJA = 0.5;
+  /*
+   * VAKAA NÄYTE: kaappaa, kaappaa uudestaan, ja hyväksy vasta kun
+   * lukemat ovat samat. Jos ruutu ei rauhoitu neljässä yrityksessä,
+   * palautetaan `vakaa: false` — se on oma väitteensä alempana.
+   */
+  const vakaaNayte = async () => {
+    let edellinen = naytteet(await kaappaaKotelo(), keski);
+    let ero = Infinity;
+    for (let i = 0; i < 4; i += 1) {
+      await s.waitForTimeout(250);
+      const nyt = naytteet(await kaappaaKotelo(), keski);
+      ero = naytteidenEro(edellinen, nyt);
+      edellinen = nyt;
+      if (ero <= VAKAUDEN_RAJA) break;
+    }
+    return { ...edellinen, vakaa: ero <= VAKAUDEN_RAJA, ero: +ero.toFixed(2) };
+  };
+  const paalla = await vakaaNayte();
   await s.evaluate(() => window.matkakirja.ui.pallolinssi.kahva.avaruus.asetaVarjostus(false));
   await s.waitForTimeout(600);
-  const pois = naytteet(await kaappaaKotelo(), keski);
+  const pois = await vakaaNayte();
   await s.evaluate(() => window.matkakirja.ui.pallolinssi.kahva.avaruus.asetaVarjostus(true));
   await s.waitForTimeout(600);
-  const takaisin = naytteet(await kaappaaKotelo(), keski);
+  const takaisin = await vakaaNayte();
+  const povLopussa = await s.evaluate(() => {
+    const p = window.matkakirja.ui.pallonInstanssi.pointOfView();
+    return { lat: p.lat, lng: p.lng, altitude: p.altitude };
+  });
+  const kameraLiikkui = Math.abs(povLopussa.lat - jaadytys.pov.lat) > 0.01
+    || Math.abs(povLopussa.lng - jaadytys.pov.lng) > 0.01
+    || Math.abs(povLopussa.altitude - jaadytys.pov.altitude) > 0.001;
+
+  /*
+   * TÄMÄ VÄITE ON MUIDEN KOLMEN EHTO: jos ruutu ei ole pysähtynyt,
+   * varjon mittaus ei mittaa varjoa vaan liikettä.
+   */
+  vaadi(t('varjomittaus tehdään pysäytetystä tilasta ja samasta kamera-asennosta'),
+    paalla.vakaa && pois.vakaa && takaisin.vakaa && !kameraLiikkui,
+    `peräkkäisten näytteiden ero: päällä ${paalla.ero}, pois ${pois.ero},`
+    + ` takaisin ${takaisin.ero} (raja ${VAKAUDEN_RAJA}); kamera`
+    + ` ${povTeksti(jaadytys.pov)} → ${povTeksti(povLopussa)}`);
 
   vaadi(t('varjon puoli tummuu reunan tuntumassa'),
     paalla.vasenKa < pois.vasenKa * 0.92,
@@ -687,7 +787,10 @@ async function ajaNakyma(nimi) {
     + ` (reuna ${pois.vasenKa} → ${paalla.vasenKa}, keskusta ${paalla.keskustaKa})`);
   vaadi(t('VASTAKOE: kytkin pois palauttaa pikselit'),
     Math.abs(takaisin.vasenKa - paalla.vasenKa) < 3 && pois.vasenKa > paalla.vasenKa,
-    `päällä ${paalla.vasenKa}, pois ${pois.vasenKa}, takaisin ${takaisin.vasenKa}`);
+    `päällä ${paalla.vasenKa}, pois ${pois.vasenKa}, takaisin ${takaisin.vasenKa}`
+    + ` (peräkkäisten näytteiden ero ${paalla.ero}/${pois.ero}/${takaisin.ero})`);
+  // Jäädytys puretaan heti: loput väitteet katsovat pelaajan omaa ruutua.
+  await purajaadytys();
 
   /* ---- 5. kylläisyys ------------------------------------------------ */
   const kylla = await s.evaluate(KYLLAISYYS, [linssi.avaruus?.reliefinOsoite, 0.8]);

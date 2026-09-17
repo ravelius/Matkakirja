@@ -294,7 +294,17 @@ async function mittaa(leveys, korkeus) {
   /* --------- 1–2. AIKASARJA: kehys vs. kartta, 250 ms:n välein --------- */
   const sarja = [];
   const t0 = Date.now();
-  for (let n = 0; n < 80; n += 1) {
+  /*
+   * NÄYTTEENOTTOIKKUNA ON TILAN MITTA, EI KELLON (17.9.2026, Mac).
+   * Silmukka katkeaa heti, kun kehys ja kartta ovat perillä; katto on
+   * vain se, ettei savuke jää roikkumaan. Macilla (oikea näytönohjain)
+   * avausluenta kestää pidempään kuin kontissa: 80 näytettä × 250 ms
+   * loppui 19,9 s:n kohdalla juuri kun feidaus alkoi (palkki 0,002),
+   * jolloin sekä `kehys` että `kartta` jäivät nulliksi ja kaksi
+   * väitettä punaiseksi. 200 näytettä = noin 50 s kattoa; nopeassa
+   * ympäristössä silmukka katkeaa kuten ennenkin eikä savuke hidastu.
+   */
+  for (let n = 0; n < 200; n += 1) {
     const naytto = await s.evaluate(() => {
       const juuri = document.querySelector('.aikajana');
       const palkki = juuri?.querySelector('.aikajana-ylarivi');
@@ -460,8 +470,22 @@ async function mittaa(leveys, korkeus) {
     const piilossa = mittaa();
     document.body.style.setProperty('--kehys-liuku', liukuKesto);
     document.body.classList.remove('kehys-piilossa');
-    await new Promise((r) => requestAnimationFrame(r));
-    const kaynnissa = siirtymat();
+    /*
+     * SIIRTYMÄOLIOT SYNTYVÄT VASTA TYYLIN LASKENNAN JÄLKEEN. Yksi
+     * requestAnimationFrame riitti kontissa, mutta Macilla
+     * `getAnimations()` palautti silloin vielä tyhjän listan
+     * (mitattu 17.9.2026: kaynnissa []). Odotetaan TILAA: kaksi
+     * kehystä ja sen jälkeen niin kauan, kunnes kumpikin palkki on
+     * saanut siirtymänsä — katto 60 kehystä, jolloin väite kaatuu
+     * aidosti jos siirtymää ei koskaan tule.
+     */
+    let kaynnissa = [];
+    for (let i = 0; i < 60; i += 1) {
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((r) => requestAnimationFrame(r));
+      kaynnissa = siirtymat();
+      if (kaynnissa.filter((a) => a.ominaisuus === 'transform').length >= 2) break;
+    }
     /* Kesken jäänyt hidastus katkaistaan: nollan mittainen kierros vie
        kehyksen lähtöön ja takaisin paikalleen ilman liukua. */
     document.body.style.setProperty('--kehys-liuku', '0ms');
