@@ -5,7 +5,46 @@ Haara `claude/bold-ride-vow4ki-julkaisu-v1931`, pohja
 #2554 oli vielä auki eikä main sisältänyt v1930:tä). Worktree
 `/home/user/wt-julkaisu2`.
 
-## TÄRKEIN HAVAINTO: versionosto pysäytettynä — main ei vielä sisällä v1930:tä
+## PÄIVITYS: v1930 on nyt mainissa — julkaisu viimeistelty
+
+Ensimmäisellä ajolla `node tools/uusi-versio.mjs` kieltäytyi, koska
+`origin/main` ei vielä sisältänyt v1930:tä (PR #2554 auki) — ks.
+alkuperäinen selitys alla, säilytetty sellaisenaan. Työ pysäytettiin
+tuolloin tehtävänannon mukaisesti ja raportoitiin koordinaattorille.
+
+Koordinaattori vahvisti myöhemmin: **v1930 on nyt mainissa** (squash
+`cff3a4e6`, PR #2554). Jatkoin siitä:
+
+1. `git fetch origin main && git merge origin/main` — kaksi
+   konfliktia, molemmat "samaa sisältöä" -tyyppisiä kuten
+   koordinaattori ennakoi:
+   - `docs/raportit/viesti-fable-webkit-toisto-20260917.md` (add/add):
+     otettu **oman haaran versio** (`git checkout --ours`) — sama
+     webkit-toisto-haaran sisältö, jonka olin jo aiemmin valinnut
+     ensimmäisessä mergessä.
+   - `js/tyohuone-raamattu.js` (content): yksi kohta, jossa oma haara
+     (Fablen tuorein Raamattu-merge, astro-webkit2-todennuksen
+     täydellinen kuvaus "Julkaistaan v1931.") ja mainin squash
+     (vanhempi, lyhyempi Fable-teksti "korjaus pilvisessiossa") olivat
+     ristiriidassa — otettu **oma haara** (Fablen tuorein versio),
+     kuten koordinaattori ohjeisti.
+   - `js/main.js`: EI konfliktia — merge meni läpi automaattisesti,
+     APP_VERSION oli jo `1930` molemmissa (peritty samasta v1930-
+     työstä), ei tarvinnut käsin poimintaa.
+2. `node tools/uusi-versio.mjs "Astronautin kamera: pallo ei enää
+   mustu uudelleenavauksessa"` → **v1931** (`2026-08-09.1931`),
+   `sw.js`, `js/main.js`, `js/muutokset.js` päivitetty.
+3. `node --check js/main.js` → OK.
+4. `node tools/tarkista-niputus.mjs` → 394 moduulia, 4386 julistusta,
+   ei törmäyksiä.
+5. `node tools/build-standalone.mjs` → `dist/matkakirja.html` (32504
+   kt), `dist/matkakirja.partial.html` (32504 kt) — `dist/` ei
+   committoitu (gitignore).
+6. `npm test` EI ajettu uudestaan (koordinaattorin ohje — ajoin jo
+   kertaalleen ennen versionostoa, 3572/0/13, ja CI:n Testit-työnkulku
+   ajaa sen PR:ssä).
+
+## Alkuperäinen selitys (versionoston ensimmäinen, epäonnistunut yritys)
 
 Tehtävänannon kohta 6 ennakoi tämän tarkasti: *"jos työkalu antaa
 v1930, kerro heti raportissa ja pysähdy — silloin main ei vielä
@@ -19,22 +58,15 @@ v1930 on jo paikallisessa lokissa — ajoitko työkalun kahdesti?
 
 Juurisyy: `tools/uusi-versio.mjs` fetchaa `origin/main` ja laskee
 seuraavan numeron **mainin** `sw.js`:n CACHE-numerosta ja
-`js/muutokset.js`:n kärkirivistä. `origin/main`:n CACHE on yhä
-`matkakirja-2026-08-09.1929` (PR #2554 auki, ei mergetty), joten
+`js/muutokset.js`:n kärkirivistä. `origin/main`:n CACHE oli tuolloin
+yhä `matkakirja-2026-08-09.1929` (PR #2554 auki, ei mergetty), joten
 työkalu laski seuraavaksi numeroksi **1930** — mutta tämä haara
-(pohjattu v1930-julkaisuhaarasta) sisältää jo paikallisesti rivin
+(pohjattu v1930-julkaisuhaarasta) sisälsi jo paikallisesti rivin
 `{ v: 1930, ... }` `js/muutokset.js`:ssä, joten työkalun oma
 tuplasuoja kieltäytyi. Työkalussa ei ole logiikkaa hypätä suoraan
 1931:een tässä tilanteessa — se vain vertaa laskettua numeroa
-paikalliseen lokiin ja pysähtyy, jos osuma löytyy.
-
-**Pysäytin tehtävänannon mukaisesti version noston jälkeisen ketjun**
-(build-standalone, PR:n luonti) — mainin CACHE- ja APP_VERSION-numero
-ovat yhä `1929`, eikä `dist/`-tiedostoa rakennettu. Tämä on siis
-odotettu, ei virhe koodissa: **odotamme PR #2554:n (v1930) mergeä
-mainiin**, minkä jälkeen `node tools/uusi-versio.mjs` antaa v1931:n
-tässä samassa haarassa (tai haara nollataan mainiin ja työkalu
-ajetaan uudelleen roolitus.md:n kohdan 6 mukaan).
+paikalliseen lokiin ja pysähtyy, jos osuma löytyy. Odotettiin PR
+#2554:n mergeä mainiin, kuten yllä.
 
 ## 1. Mitä haarassa on (tehty ennen pysäytystä)
 
@@ -96,40 +128,33 @@ vaatimus): **69/69 pass**.
 | `tools/tarkista-niputus.mjs` | 394 moduulia, 4386 julistusta, ei törmäyksiä — sama moduulimäärä kuin v1930:ssä, ei uusia `js/`-moduuleja tässä erässä (vain olemassa olevia tiedostoja muutettu; `js/linssivirhe.js` ja `pallodiag.js` olivat jo v1926:ssa, kuten tehtävänannossa huomautettiin) |
 | `tools/tarkista-savukkeet.mjs` | 1914 ui-viittausta, 409 metodia, 539 kenttää, 31 lehtitilan kenttää (nousu v1930:n 1902:sta johtuu uudesta `savuke-astro-webkit.mjs`:stä) |
 
-## 4. Mitä EI tehty (pysäytyksen vuoksi)
+## 4. Mitä EI tehty
 
-- **Versionostoa ei tehty** — ks. yllä. `sw.js` CACHE ja `js/main.js`
-  APP_VERSION ovat yhä `1929` (perittynä pohjahaarasta, joka itsessään
-  ei ole vielä mainissa).
-- `node tools/build-standalone.mjs` — ei ajettu, koska versio ei ole
-  ajan tasalla eikä `dist/` committoida.
-- Paikallista `savuke-astro-pallo.mjs`-ajoa (kohta 8) ei ajettu —
-  koordinaattorin tarkennus kesken tehtävän (Raamattu TARKENNUS 4,
-  17.9.): julkaisuagentti ei enää aja savukkeita paikallisesti, PR:n
-  Savukkeet-työnkulku hoitaa sen.
-- **PR:ää ei avattu.** Otsikko olisi pitänyt olla
-  `v1931: <muutoslokirivi>`, mutta versionumeroa ei ole vielä
-  valittu — PR:n avaaminen tässä vaiheessa antaisi harhaanjohtavan
-  otsikon ja tyhjän `dist/`-päivityksen. Branch on kuitenkin pushattu
-  (ks. alla), joten työ ei ole kadoksissa.
+- Paikallista `savuke-astro-pallo.mjs`-ajoa (alkuperäisen ohjeen
+  kohta 8) ei ajettu — koordinaattorin tarkennus kesken tehtävän
+  (Raamattu TARKENNUS 4, 17.9.): julkaisuagentti ei enää aja
+  savukkeita paikallisesti, PR:n Savukkeet-työnkulku hoitaa sen.
+- `npm test` ei ajettu uudestaan v1930-mergen ja versionoston
+  jälkeen — koordinaattorin ohje (ajoin jo kertaalleen, 3572/0/13;
+  ainoat muuttuneet tiedostot sen jälkeen olivat `sw.js`,
+  `js/main.js`, `js/muutokset.js` version numeron osalta ja
+  `js/tyohuone-raamattu.js`/raporttitiedosto konfliktinratkaisussa —
+  ei pelilogiikkaa). CI:n Testit-työnkulku ajaa täyden sarjan PR:ssä.
 
-## 5. Seuraava askel (Fablelle / seuraavalle sessiolle)
+## 5. PR
 
-1. Odota PR #2554:n (v1930) mergeä mainiin.
-2. Kun main sisältää v1930:n: `git fetch origin`, tarkista onko tämä
-   haara (`claude/bold-ride-vow4ki-julkaisu-v1931`) yhä ajan tasalla
-   mainista roolitus.md:n kohdan 6 mukaan (nollaus mainiin +
-   force-with-lease jos main on liikkunut enemmän kuin vain v1930:n
-   verran), ja aja `node tools/uusi-versio.mjs "Astronautin kamera:
-   pallo ei enää mustu uudelleenavauksessa"` uudelleen.
-3. Sen jälkeen: `npm test`, `tools/build-standalone.mjs`, commit,
-   push, PR (roolitus.md:n kaava, otsikko `v1931: <muutoslokirivi>`).
+PR avattu `main`-haaraan, ks. loppuraportti koordinaattorille
+PR-numero ja head-SHA.
 
 ## 6. Kesto
 
 Aloitettu n. klo 10.05 UTC. Kolme mergeä valmiit n. klo 10.10.
 Siistintä ja testin korjaus n. klo 10.10–10.18. Versionosto
-pysäytettynä n. klo 10.19. Täysi testisarja + tarkistimet valmiit n.
-klo 12.20 (npm test n. 119 s). Raportti kirjoitettu n. klo 12.25 —
-kokonaiskesto raportin kirjoitushetkeen n. 40 minuuttia (aikakatto
-45 min).
+pysäytettynä (v1930 puuttui mainista) n. klo 10.19. Täysi testisarja
++ tarkistimet valmiit n. klo 12.20 (npm test n. 119 s). Väliraportti
+kirjoitettu n. klo 12.25. Koordinaattori vahvisti v1930:n olevan
+mainissa, jatko: merge origin/main, versionosto v1931:ksi,
+`tarkista-niputus`, `build-standalone`, raportin päivitys, commit,
+push, PR — valmiit n. klo 12.35. Kokonaiskesto n. 50 minuuttia
+(aikakatto 45 min ylittyi hieman koordinaattorin väliintulon takia,
+joka lisäsi toisen merge-ajokierroksen).
