@@ -41,7 +41,7 @@ import {
   aiheenNimi, aihemerkinLaatikko, aihemerkkiElementti, aihenostonNimio, asetteleAihemerkki,
   kohdanLaatikko, piirraViuhka, ryhmitaNostot, viuhkanAsemat, viuhkanNimioLeveys,
 } from './aihemerkit.js';
-import { liuskanRivit, onKaupunginSisainen } from './kaupunkiliuska.js';
+import { liuskanRivit, nostonOmaPaikka, onKaupunginSisainen } from './kaupunkiliuska.js';
 import { FOKUS_POHJAT } from '../packs/fokus-grc.js';
 import { MAASTOKOHTEET_ARK } from '../packs/maastokohteet-ark.js';
 import { MAASTOKOHTEET_ATA } from '../packs/maastokohteet-ata.js';
@@ -1244,7 +1244,25 @@ export function luoNostot({
      * kameran mukana; ruutujärjestys muuttuu joka panoroinnissa.
      */
     let nro = 0;
-    const lisaa = (rivi) => { rivit.push({ ...rivi, ladontaNro: nro++ }); };
+    /*
+     * NOSTON OMA DATAPAIKKA (`omaLat`/`omaLng`, PAATOKSET 34 kohta 4).
+     *
+     * `lat`/`lng` EIVÄT säily: ankkurilevitys (PAATOKSET 32,
+     * js/pallolauta/nostoankkurit.js) kirjoittaa niiden päälle sen
+     * pisteen, johon merkki lopulta ladottiin — Pariisissa 33–74 km
+     * päähän kaupungista (mitattu 18.9.2026, erä 4). Kaupunkijäsenyys
+     * on kuitenkin datan tieto eikä ladonnan: päätös sanoo *"noston
+     * OMA paikka"*. Alkuperäinen piste otetaan siksi talteen tässä,
+     * ainoassa paikassa, jonka läpi jokainen rivi kulkee.
+     */
+    const lisaa = (rivi) => {
+      rivit.push({
+        ...rivi,
+        omaLat: Number.isFinite(rivi.lat) ? rivi.lat : null,
+        omaLng: Number.isFinite(rivi.lng) ? rivi.lng : null,
+        ladontaNro: nro++,
+      });
+    };
     if (!pack || ui.katselu || game.phase === 'pickstart' || ui.aloituslentoKesken) return rivit;
     const liikkuu = ui.movingPlayerId != null;
     const iso = kohteidenNykyinenIso(ui);
@@ -1313,6 +1331,13 @@ export function luoNostot({
            * näkymästä, joten se ei muutu kameran mukana.
            */
           kaupunkiAvain: m.kaupunkiAvain ?? null,
+          /*
+           * PAIKKANIMI DATASTA (PAATOKSET 34 kohta 4, toinen polku):
+           * jos pakka sanoo noston paikaksi kaupungin nimen, nosto on
+           * kaupungin sisällä ilman koordinaattimittaa — arvioitu
+           * koordinaatti ei voi kiistää datan omaa sanaa.
+           */
+          paikkaNimi: typeof kohde.paikka === 'string' ? kohde.paikka : null,
           avaa: kohde.vainNimi
             ? null
             : ((ankkuri) => avaaFokuskohde(ui, kohde, { ankkuri })),
@@ -1803,32 +1828,26 @@ export function luoNostot({
      * ei tuo omaansa, jottei sama kaupunki olisi kahdesti.
      */
     /*
-     * KAUPUNGIN OMA PISTE LUETAAN SEN OMISTA NOSTOISTA, EI LAUDALTA
-     * (mitattu 18.9.2026, savuke-pariisi-lahizoom, 390 px):
+     * KAUPUNGIN KESKUS ON KAUPUNGIN OMA PISTE (Fablen tarkennus
+     * 18.9.2026, PAATOKSET 34 kohta 4).
      *
-     *   Tuileriain rauniot 33,1 km · Mona Lisan varkaus 50,2 km ·
-     *   Kyyhkyposti 54,6 km · Tuileries 73,9 km — kaikki `pariisi`
+     * ERÄ 4 MITTASI VÄÄRÄÄ ASIAA. Se luki jäsenyyden LEVITETYISTÄ
+     * ankkureista (Tuileriain rauniot 33,1 km · Mona Lisan varkaus
+     * 50,2 km · Kyyhkyposti 54,6 km · Tuileries 73,9 km) ja päätteli
+     * niistä, että laudan kaupungin piste on kymmeniä kilometrejä
+     * väärässä paikassa. Se ei ollut: 33–74 km oli ANKKURILEVITYKSEN
+     * (PAATOKSET 32) siirto, ei datan paikka. Korjaus on siksi
+     * kahtaalla: jäsenyys mitataan noston omasta datapaikasta
+     * (`omaLat`/`omaLng`, ks. `lisaa` yllä) ja keskus on kaupungin oma
+     * piste.
      *
-     * Laudan kaupungin asteet tulevat RUUDUKOSTA (js/pallo.js
-     * pallonKaupungit → laudaltaAsteiksi), eli ne ovat pelilaudan
-     * piirrospiste eivätkä kaupungin maantieteellinen paikka. Ero on
-     * kymmeniä kilometrejä, joten 12 km:n säde (PAATOKSET 34 kohta 4)
-     * mitattuna siitä pisteestä ei löytänyt YHTÄÄN kaupungin omaa
-     * nostoa — liuska aukesi tyhjänä.
-     *
-     * Nostot itse tietävät kaupunkinsa (`kaupunkiAvain`,
-     * js/fokuskohteet.js nostonKaupunkiAvain), ja niiden asteet ovat
-     * oikeat. Kaupungin piste on siis niiden MEDIAANI: yksi karkaava
-     * nosto ei siirrä sitä, ja säde mitataan sen jälkeen noston OMASTA
-     * paikasta kuten päätös vaatii (Versailles 17 km jää kartalle).
-     * Ripustuspiste on yhä laudan merkki — vain jäsenyyden keskus on
-     * tämä.
+     * MITATTU 18.9.2026 (tests/kaupunkiliuska.test.mjs · laudan
+     * Pariisi `maailmankartta` 5911,1/1440,1 → 48,845 N / 2,333 E):
+     * ero oikeaan Pariisiin on **1,9 km**, ja kaupungin omat nostot
+     * ovat 0–3 km päässä siitä. Mediaani oli erä 4:n kiertotie
+     * väärälle mitalle; se ajautui nostojen ladottujen paikkojen
+     * mukana eikä ollut kaupungin paikka lainkaan.
      */
-    const mediaani = (luvut) => {
-      const j = [...luvut].sort((a, b) => a - b);
-      const k2 = Math.floor(j.length / 2);
-      return j.length % 2 ? j[k2] : (j[k2 - 1] + j[k2]) / 2;
-    };
     const laudanRivit = [];
     for (const k of (laudanKaupungit?.() ?? [])) {
       const nimi = k?.nimi ?? k?.name ?? '';
@@ -1836,23 +1855,7 @@ export function luoNostot({
       if (omatKaupunkirivit.some((r) => r.nimi === nimi)) continue;
       const p = ruudulla(k.lat, k.lng);
       if (!p) continue;
-      /*
-       * KESKUS EI SAA RIIPPUA RUUDUSTA (mitattu 18.9.2026: 390 px
-       * antoi keskuksen, jossa sisäisiä oli 2, ja 1400 px keskuksen,
-       * jossa niitä oli 0 — leveämpi ruutu tuo lisää nostoja, ja
-       * mediaani liikkui niiden mukana). Lähde on siksi `rivit`, koko
-       * ladonnan lista, eikä ruudulla olevat: jäsenyys on sama
-       * kaikilla zoomeilla ja kaikilla ruuduilla, kuten PAATOKSET 34
-       * kohta 4 vaatii.
-       */
-      const ankkuroidut = rivit.filter((r) => r.perhe === 'nosto' && !r.kaupunki
-        && r.kaupunkiAvain === k.id
-        && Number.isFinite(r.lat) && Number.isFinite(r.lng));
-      const keskus = ankkuroidut.length
-        ? { lat: mediaani(ankkuroidut.map((r) => r.lat)), lng: mediaani(ankkuroidut.map((r) => r.lng)) }
-        : { lat: k.lat, lng: k.lng };
       laudanRivit.push({
-        keskus,
         avain: laudanAvain(k),
         id: k.id,
         perhe: 'nosto',
@@ -1864,6 +1867,10 @@ export function luoNostot({
         nimioNakyy: false,
         lat: k.lat,
         lng: k.lng,
+        // Kaupungin oma piste myös datapaikkana: jäsenyyden keskus
+        // luetaan aina samasta kentästä kuin nostojen paikka.
+        omaLat: k.lat,
+        omaLng: k.lng,
         p,
         etaisyys: keskipiste ? Math.hypot(p.x - keskipiste.x, p.y - keskipiste.y) : 0,
       });
@@ -1873,9 +1880,14 @@ export function luoNostot({
     sisaisetKaupungeittain = new Map();
     const sisaisetAvaimet = new Set();
     for (const city of kaupunkirivit) {
-      // Jäsenyyden keskus: ankkurilla nostojen mediaani, pakkojen
-      // omalla rivillä sen oma paikka (ks. KAUPUNGIN OMA PISTE).
-      const keskus = city.keskus ?? city;
+      /*
+       * Jäsenyyden keskus on kaupungin OMA paikka — laudan kaupungilla
+       * sen ankkuririvin `omaLat`/`omaLng` (kaupunkia ei levitetä,
+       * mutta kenttä on silti oikea lähde) ja pakan näkyvällä
+       * kaupungilla (Lille) sen datapaikka. Säde mitataan tästä
+       * pisteestä noston omaan datapaikkaan, ei ladottuun.
+       */
+      const keskus = nostonOmaPaikka(city) ?? city;
       const omat = elavatKaikki.filter((r) => r.perhe === 'nosto' && !r.kaupunki
         && !r.vainNimi && typeof r.avaa === 'function'
         && onKaupunginSisainen(r, keskus));
@@ -2017,6 +2029,15 @@ export function luoNostot({
         perhe: 'aihemerkki',
         lat,
         lng,
+        /*
+         * RYHMÄN OMA DATAPAIKKA on jäsenten datapaikkojen keskiarvo,
+         * ei ladottujen (PAATOKSET 34 kohta 4). Ryhmä syntyy vasta
+         * kaupungin sisäisten suodatuksen JÄLKEEN, joten tämä ei
+         * ratkaise jäsenyyttä — mutta savukkeen vartio lukee sen, ja
+         * ilman kenttää se putoaisi ladottuun keskiarvoon.
+         */
+        omaLat: kasa.reduce((a, r) => a + (nostonOmaPaikka(r)?.lat ?? r.lat), 0) / kasa.length,
+        omaLng: kasa.reduce((a, r) => a + (nostonOmaPaikka(r)?.lng ?? r.lng), 0) / kasa.length,
         p,
         etaisyys: Math.min(...kasa.map((r) => r.etaisyys)),
         aihe: tarkein.aihe,

@@ -1644,7 +1644,13 @@ for (const ruutu of RUUDUT) {
    *       määrä (k. 5-7) — sama luku kuin 8a:n suodatus pudotti;
    *   8g. kategorian avaus näyttää kohteet, toisen avaus sulkee
    *       edellisen (haitari, k. 8);
-   *   8h. kohteen napautus avaa kortin ja liuska sulkeutuu (k. 1).
+   *   8h. kohteen napautus avaa kortin ja liuska sulkeutuu (k. 1);
+   *   8i. liuskan lukumäärien summa ≥ 8 — Pariisin omat nostot ovat
+   *       liuskassa eivätkä kartalla (era 5).
+   *
+   * 8a JA 8f MITTAAVAT NOSTON OMAA DATAPAIKKAA, eivät ladottua: se on
+   * päätöksen kohta 4 sanatarkasti (*"noston oma paikka"*), ja se on
+   * juuri se, minkä erä 4 mittasi väärin.
    */
   const kaupunginSisaiset = () => sivu.evaluate(async () => {
     const k = await import('/js/pallolauta/kaupunkiliuska.js');
@@ -1660,41 +1666,49 @@ for (const ruutu of RUUDUT) {
     const { ui } = window.matkakirja;
     const oma = ui.game?.cityOf?.() ?? null;
     /*
-     * KESKUS LUETAAN KERROKSELTA, EI LAUDAN PISTEESTA (korjattu
-     * 18.9.2026, era 4). Laudan projisoitu piste on Pariisissa 33-78 km
-     * sivussa kaupungin omista nostoista, joten siita mitattuna 12 km:n
-     * sade ei loytanyt yhtaan sisaista nostoa. Kerros laskee keskuksen
-     * kaupunkiin ankkuroitujen nostojen mediaanina — savukkeen on
-     * mitattava SAMASTA pisteesta, muuten vartio ei mittaa peliä.
+     * KESKUS ON KAUPUNGIN OMA PISTE, JA JASENYYS LUETAAN NOSTON OMASTA
+     * DATAPAIKASTA (Fablen tarkennus 18.9.2026, era 5). Era 4 mittasi
+     * molemmat ladotuista paikoista: nostojen `lat`/`lng` oli
+     * ankkurilevityksen (PAATOKSET 32) siirtama 33-74 km:n paahan, ja
+     * keskus oli niiden mediaani. Silloin liuskassa oli kaksi
+     * kategoriaa ja kaupungin omat nostot jaivat kartalle. Nyt molemmat
+     * luetaan `omaLat`/`omaLng`-kentista, jotka ladonta ottaa talteen.
      */
     const ankkuri = oma
       ? (n.laudanAnkkurit?.() ?? []).find((a) => a.id === oma.id) ?? null
       : null;
     const city = ankkuri
-      ? { id: ankkuri.id, lat: ankkuri.keskus.lat, lng: ankkuri.keskus.lng }
+      ? { id: ankkuri.id, lat: ankkuri.omaLat ?? ankkuri.lat, lng: ankkuri.omaLng ?? ankkuri.lng }
       : osumat.find((o) => o.kaupunki);
     if (!city) return null;
     const nakyvat = new Set([...document.querySelectorAll('.pallolauta-nosto')]
       .filter((el) => el.getBoundingClientRect().width > 0
         && getComputedStyle(el).visibility !== 'hidden')
       .map((el) => el.dataset.nosto));
-    const sisalla = (o) => k.onKaupunginSisainen(
-      { lat: o.lat, lng: o.lng }, { lat: city.lat, lng: city.lng },
-    );
+    const sisalla = (o) => k.onKaupunginSisainen(o, { lat: city.lat, lng: city.lng });
+    /*
+     * JASENET MUKAAN. Aihemerkki on yksi merkki kartalla, mutta se
+     * kantaa monta nostoa (`jasenet`): jos yksikaan niista on kaupungin
+     * sateella, kartalla on kaupungin sisainen nosto.
+     */
+    const osat = (o) => (o.jasenet?.length ? o.jasenet : [o]);
+    const sisallaKaikki = (o) => osat(o).some(sisalla);
     // Diagnoosi: lahimmat nostot kaupungin pisteesta kilometreina.
     const lahimmat = osumat.filter((o) => !o.kaupunki)
+      .flatMap(osat)
       .map((o) => ({
         nimi: o.nimi ?? o.id,
-        km: k.etaisyysKm({ lat: o.lat, lng: o.lng }, { lat: city.lat, lng: city.lng }),
+        km: k.etaisyysKm(k.nostonOmaPaikka(o) ?? { lat: o.lat, lng: o.lng },
+          { lat: city.lat, lng: city.lng }),
         ankkuri: o.kaupunkiAvain ?? null,
       }))
-      .sort((a, b) => a.km - b.km).slice(0, 6);
+      .sort((a, b) => a.km - b.km).slice(0, 8);
     return {
       kaupunki: city.id,
       lahimmat,
-      kartalla: osumat.filter((o) => !o.kaupunki && nakyvat.has(o.id) && sisalla(o))
+      kartalla: osumat.filter((o) => !o.kaupunki && nakyvat.has(o.id) && sisallaKaikki(o))
         .map((o) => o.id),
-      kaikki: osumat.filter((o) => !o.kaupunki && sisalla(o)).length,
+      kaikki: osumat.filter((o) => !o.kaupunki && sisallaKaikki(o)).length,
     };
   });
 
@@ -1909,6 +1923,21 @@ for (const ruutu of RUUDUT) {
     katRivit.length >= 2 && summa > 0 && summa === sisaltoSumma
       && kategorioidenSisallot.every((k) => k.otsikko === k.kohteita),
     `kategorioita ${katRivit.length}, otsikoiden summa ${summa}, kohteita ${sisaltoSumma}`);
+
+  /*
+   * 8i. PARIISIN NOSTOT OVAT OIKEASTI LIUSKASSA (Fablen tarkistus
+   * 18.9.2026, era 5). 8f sanoo vain, etta otsikoiden luvut pitavat
+   * paikkansa — se oli vihrea myos silloin, kun liuskassa oli kaksi
+   * nostoa ja kaupungin loput nostot (Kyyhkyposti, Impressionistit,
+   * Tuileriain rauniot, Mona Lisan varkaus, Tuileries, Paras patonki…)
+   * seisoivat yha kartalla. Tama vartio mittaa MAARAA: Pariisin omia
+   * nostoja on tunnetusti kahdeksan tai enemman, joten summa alle
+   * kahdeksan tarkoittaa, etta jasenyys mittaa taas vaaraa pistetta.
+   */
+  vaadi(`8i. ${ruutu.nimi}: liuskan lukumäärien summa ≥ 8 (Pariisin omat nostot)`,
+    summa >= 8,
+    `summa ${summa}, kategoriat `
+    + `${katRivit.map((r) => `${r.nimi}`).join(', ') || '—'}`);
 
   /* 8h. Kohteen napautus avaa kortin, ja liuska sulkeutuu sen mukana. */
   const viimeisimmat = (await sivu.evaluate(

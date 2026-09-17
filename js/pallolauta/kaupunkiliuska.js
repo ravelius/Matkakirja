@@ -62,18 +62,46 @@ export function etaisyysKm(a, b) {
 }
 
 /**
+ * NOSTON OMA DATAPAIKKA, ei ladottu paikka (PAATOKSET 34 kohta 4).
+ *
+ * Rivin `lat`/`lng` ovat se piste, johon merkki lopulta LADOTTIIN:
+ * ankkurilevitys (PAATOKSET 32) siirtää merkkejä kymmeniä kilometrejä,
+ * jotta ne eivät peitä toisiaan. Jäsenyys ei saa riippua siitä —
+ * *"noston oma paikka"* on datan piste, jonka ladonta ottaa talteen
+ * `omaLat`/`omaLng`-kenttiin (js/pallolauta/nostot.js `lisaa`).
+ * Vanha rivi ilman kenttiä putoaa takaisin `lat`/`lng`:hen.
+ */
+export function nostonOmaPaikka(nosto) {
+  if (!nosto) return null;
+  const lat = Number.isFinite(nosto.omaLat) ? nosto.omaLat : nosto.lat;
+  const lng = Number.isFinite(nosto.omaLng) ? nosto.omaLng : nosto.lng;
+  return Number.isFinite(lat) && Number.isFinite(lng) ? { lat, lng } : null;
+}
+
+/** Nimet vertautuvat löyhästi: iso/pieni kirjain ja reunavälit eivät eroa. */
+const nimiAvain = (s) => String(s ?? '').trim().toLocaleLowerCase('fi');
+
+/**
  * ONKO NOSTO KAUPUNGIN SISÄLLÄ (PAATOKSET 34 kohdat 3-4).
  *
- * Kaksi ehtoa, molemmat vaaditaan: nosto on ankkuroitu tähän
- * kaupunkiin (`kaupunkiAvain`, js/fokuskohteet.js nostonKaupunkiAvain)
- * TAI sen oma paikka on kaupungin säteen sisällä. Ankkurointi yksin ei
- * riitä sisäisyyteen — juuri sen omistaja kielsi: Versailles on
- * ankkuroitu Pariisiin mutta *"aidosti ei ole juuri Pariisissa"*.
+ * Ratkaisee noston OMA paikka, ei ankkurointi eikä ladottu piste:
+ * *"raja: noston oma paikka on kaupungin ulkopuolella (ei pelkkä
+ * kaupunkiin ankkurointi)"*. Versailles on ankkuroitu Pariisiin mutta
+ * on 17 km päässä, joten se jää kartalle.
+ *
+ * TOINEN, DATAN OMA POLKU: jos noston paikkanimi ON kaupungin nimi
+ * (pakkojen `paikka`-kenttä, esim. *"Pariisi"*), nosto on sisäinen
+ * ilman mittausta — silloin data itse sanoo sen olevan kaupungissa
+ * eikä arvioitu koordinaatti voi kiistää sitä.
  */
 export function onKaupunginSisainen(nosto, kaupunki, sadeKm = KAUPUNGIN_SADE_KM) {
   if (!nosto || !kaupunki) return false;
   if (nosto.kaupunki || nosto.poltettu) return false;
-  return etaisyysKm(nosto, kaupunki) <= sadeKm;
+  const kaupunginNimi = nimiAvain(kaupunki.nimi ?? kaupunki.name);
+  if (kaupunginNimi && nimiAvain(nosto.paikkaNimi) === kaupunginNimi) return true;
+  const oma = nostonOmaPaikka(nosto);
+  if (!oma) return false;
+  return etaisyysKm(oma, kaupunki) <= sadeKm;
 }
 
 /** Kaupungin sisäiset nostot annetuista riveistä, ladontajärjestyksessä. */
