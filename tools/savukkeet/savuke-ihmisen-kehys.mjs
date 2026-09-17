@@ -450,42 +450,127 @@ async function mittaa(leveys, korkeus) {
     const odota = (ms) => new Promise((r) => setTimeout(r, ms));
     const mittaa = window.__kehysLiuku.mittaa;
     const palkit = () => [
-      ['ylapalkki', document.querySelector('.aikajana-ylarivi')],
-      ['alapalkki', document.querySelector('.aikaselain')],
+      /*
+       * SAMA VALITSIN KUIN CSS:SSÄ (css/linssikehys.css:
+       * `body.kehys-liukuu .aikajana .aikajana-ylarivi`). Pelkkä
+       * `.aikajana-ylarivi` voi osua linssin juuren ULKOPUOLISEEN
+       * palkkiin, jolla ei ole siirtymäsääntöä lainkaan.
+       */
+      ['ylapalkki', document.querySelector('.aikajana .aikajana-ylarivi')
+        ?? document.querySelector('.aikajana-ylarivi')],
+      ['alapalkki', document.querySelector('.aikajana .aikaselain')
+        ?? document.querySelector('.aikaselain')],
     ];
-    const siirtymat = () => palkit().flatMap(([nimi, el]) => (el?.getAnimations?.() ?? []).map((a) => ({
+    const olio = (nimi, a) => ({
       palkki: nimi,
       ominaisuus: a.transitionProperty ?? null,
       kesto: Number(a.effect?.getComputedTiming?.().duration) || 0,
-    })));
+    });
+    const siirtymat = () => palkit().flatMap(([nimi, el]) => (el?.getAnimations?.() ?? []).map((a) => olio(nimi, a)));
+    const kehysta = () => new Promise((r) => requestAnimationFrame(r));
     /*
      * MEKANISMI AUKI. Ohjaaja purkaa `kehys-liukuu`-luokan, kun paluu on
      * ohi (js/linssit/ihmisen-matka-esitys.js paljastaKehys), joten
      * kierros aseistaa siirtymän uudestaan.
+     *
+     * OHJAAJAN PURKU ODOTETAAN LOPPUUN (juurisyy, Mac 17.9.2026).
+     * `paljastaKehys` purkaa luokan VASTA AJASTIMESTA, noin
+     * KEHYKSEN_LIUKU_MS + feidi + 100 ms paluun alusta (≈ 2,7 s).
+     * Kun näytesarjan katto nostettiin 80 → 200 (PR #2558), tämä
+     * kierros alkaa juuri feidauksen päätyttyä — ajastin oli siis yhä
+     * kesken, ja se poisti `kehys-liukuu`-luokan kesken kierroksen 500
+     * ms:n odotuksen. Silloin siirtymäsääntö (css/linssikehys.css)
+     * lakkasi osumasta ja tilalle jäi aikajanan oma
+     * `transition: opacity var(--avaruuden-feidi)` — mitattu
+     * `saanto: "opacity", kesto: "2.6s"`. Transform-siirtymää ei
+     * synny lainkaan, mistä tyhjä `kaynnissa: []`.
+     *
+     * Siksi odotetaan TILAA: luokka on poissa kolmella peräkkäisellä
+     * kehyksellä, eli ajastin on lauennut, ja vasta sitten aseistetaan.
      */
+    let poissa = 0;
+    for (let i = 0; i < 600 && poissa < 3; i += 1) {
+      // eslint-disable-next-line no-await-in-loop
+      await kehysta();
+      poissa = document.body.classList.contains('kehys-liukuu') ? 0 : poissa + 1;
+    }
     document.body.classList.add('kehys-liukuu');
     document.body.style.setProperty('--kehys-liuku', '0ms');
     document.body.classList.add('kehys-piilossa');
     await odota(500);
     const piilossa = mittaa();
+    /*
+     * SIIRTYMÄ OTETAAN KIINNI SYNTYHETKELLÄ (Mac 17.9.2026, PR #2558).
+     * Kun näytesarjan katto nostettiin 80 → 200, tämä kierros ajetaan
+     * vasta avauksen JÄLKEEN. Silloin `getAnimations()`-kysely rAF:n
+     * perässä ehti Macilla myöhästyä: siirtymä oli jo ohi tai sitä ei
+     * vielä ollut, ja lista luki tyhjää (`kaynnissa: []`).
+     *
+     * `transitionrun` laukeaa SILLÄ hetkellä, kun siirtymä luodaan —
+     * ennen ensimmäistäkään ruudunpäivitystä. Kuuntelijat asetetaan
+     * ENNEN luokan purkua, ja käsittelijä lukee elementin omat
+     * siirtymäoliot juuri silloin. rAF-silmukka jää varalle (ja
+     * kattaa selaimet, jotka eivät lähetä tapahtumaa).
+     */
+    const napatut = [];
+    const kuuntelijat = palkit().map(([nimi, el]) => {
+      if (!el) return null;
+      const kasittelija = (e) => {
+        napatut.push(...(el.getAnimations?.() ?? []).map((a) => olio(nimi, a)));
+        if (!napatut.some((x) => x.palkki === nimi && x.ominaisuus === e.propertyName)) {
+          napatut.push({ palkki: nimi, ominaisuus: e.propertyName, kesto: -1 });
+        }
+      };
+      el.addEventListener('transitionrun', kasittelija);
+      el.addEventListener('transitionstart', kasittelija);
+      return () => {
+        el.removeEventListener('transitionrun', kasittelija);
+        el.removeEventListener('transitionstart', kasittelija);
+      };
+    });
+    const yhdista = (lista) => {
+      const paras = new Map();
+      for (const a of lista) {
+        const avain = `${a.palkki}|${a.ominaisuus}`;
+        if (!paras.has(avain) || paras.get(avain).kesto < a.kesto) paras.set(avain, a);
+      }
+      return [...paras.values()];
+    };
+    /*
+     * VARMISTUS ENNEN LAUKAISUA: siirtymäsääntö on todella voimassa
+     * molemmilla palkeilla. Jos ohjaajan ajastin ehti silti purkaa
+     * luokan, se lisätään takaisin — mittaus ei siis koskaan laukaise
+     * paluuta aseistamattomasta tilasta.
+     */
+    const aseistettu = () => palkit().every(([, el]) => Boolean(el)
+      && getComputedStyle(el).transitionProperty.split(',').some((o) => o.trim() === 'transform'));
+    let aseistuksia = 0;
+    for (let i = 0; i < 60 && !aseistettu(); i += 1) {
+      document.body.classList.add('kehys-liukuu');
+      aseistuksia += 1;
+      // eslint-disable-next-line no-await-in-loop
+      await kehysta();
+    }
+    /* Vasta nyt laukaistaan paluu — kuuntelijat ovat jo paikoillaan. */
     document.body.style.setProperty('--kehys-liuku', liukuKesto);
     document.body.classList.remove('kehys-piilossa');
-    /*
-     * SIIRTYMÄOLIOT SYNTYVÄT VASTA TYYLIN LASKENNAN JÄLKEEN. Yksi
-     * requestAnimationFrame riitti kontissa, mutta Macilla
-     * `getAnimations()` palautti silloin vielä tyhjän listan
-     * (mitattu 17.9.2026: kaynnissa []). Odotetaan TILAA: kaksi
-     * kehystä ja sen jälkeen niin kauan, kunnes kumpikin palkki on
-     * saanut siirtymänsä — katto 60 kehystä, jolloin väite kaatuu
-     * aidosti jos siirtymää ei koskaan tule.
-     */
     let kaynnissa = [];
     for (let i = 0; i < 60; i += 1) {
       // eslint-disable-next-line no-await-in-loop
       await new Promise((r) => requestAnimationFrame(r));
-      kaynnissa = siirtymat();
+      kaynnissa = yhdista([...napatut, ...siirtymat()]);
       if (kaynnissa.filter((a) => a.ominaisuus === 'transform').length >= 2) break;
     }
+    for (const irrota of kuuntelijat) irrota?.();
+    /* Diagnoosi: jos palkkia ei löydy tai sillä ei ole siirtymäsääntöä,
+       se näkyy suoraan väitteen viestissä eikä tyhjänä listana. */
+    const kohteet = palkit().map(([nimi, el]) => ({
+      palkki: nimi,
+      loytyi: Boolean(el),
+      naytto: el ? getComputedStyle(el).display : null,
+      saanto: el ? getComputedStyle(el).transitionProperty : null,
+      kesto: el ? getComputedStyle(el).transitionDuration : null,
+    }));
     /* Kesken jäänyt hidastus katkaistaan: nollan mittainen kierros vie
        kehyksen lähtöön ja takaisin paikalleen ilman liukua. */
     document.body.style.setProperty('--kehys-liuku', '0ms');
@@ -493,7 +578,7 @@ async function mittaa(leveys, korkeus) {
     await odota(100);
     document.body.classList.remove('kehys-piilossa');
     await odota(400);
-    return { piilossa, kaynnissa, lopullinen: mittaa() };
+    return { piilossa, kaynnissa, kohteet, aseistuksia, lopullinen: mittaa() };
   }, kesto);
 
   const liuku = await kierros('10000ms');
