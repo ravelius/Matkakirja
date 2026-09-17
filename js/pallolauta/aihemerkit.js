@@ -630,7 +630,7 @@ export function aihemerkinLaatikko(p, d, {
  * oma napautus vertaa (js/pallolauta/lauta.js napautaPintaan →
  * nostot.napautaViuhkasta) — sama kaava piirtää ja ottaa sormen.
  */
-function piirraViuhka(juuri, d) {
+export function piirraViuhka(juuri, d) {
   juuri.replaceChildren();
   const kohdat = d.viuhka ?? [];
   if (!kohdat.length) return;

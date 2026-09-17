@@ -133,9 +133,14 @@ export function liuskanRivit({
       laji: 'opas', nimi: TURISTIOPPAAN_NIMIO, avain: 'ylaryhma:opas', sisennys: 0,
     });
   }
+  let ensimmainen = true;
   for (const k of kategoriat(nostot)) {
     const auki = avattuKategoria != null && k.aihe === avattuKategoria;
     rivit.push({
+      // Hiusviiva erottaa yläryhmän kategorioista (kohta 8): se on
+      // ensimmäisen kategoriarivin yläpuolella, ei oma rivinsä —
+      // tyhjä rivi söisi liuskan pystytilaa turhaan.
+      hiusviiva: ensimmainen,
       laji: 'kategoria',
       nimi: `${k.nimi} (${k.maara})`,
       aihe: k.aihe,
@@ -144,6 +149,7 @@ export function liuskanRivit({
       avain: `kategoria:${k.aihe}`,
       sisennys: 0,
     });
+    ensimmainen = false;
     if (!auki) continue;
     for (const n of k.jasenet) {
       rivit.push({

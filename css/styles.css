@@ -27504,3 +27504,58 @@ body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
   align-self: center;
 }
 
+
+/*
+ * ══ KAUPUNKILIUSKA (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34) ═══════
+ *
+ * ANIMAATIO ON LIUKU MERKISTÄ, EI HYPPY (kohta 6): liuska feidaa
+ * 150 ms:ssä ja liukuu kaupunkimerkin puolelta paikalleen, rivit
+ * 30 ms:n porrastuksella ylhäältä alas, ja haitarin avaus on 200 ms:n
+ * korkeusliuku. Porrastus on CSS-muuttuja, jonka rivin järjestysluku
+ * antaa (--liuska-rivi), jottei piirto tarvitse omaa kelloaan.
+ *
+ * SUODATINTA EI KÄYTETÄ (iOS-sääntö, tests/rules.test.mjs): pehmennys
+ * on pohjan vyöhykkeissä (js/pallolauta/aihemerkit.js), ei filterissä.
+ */
+.pallolauta-liuska-auki .pallolauta-viuhka-kohta {
+  animation: pallolauta-liuska-saapuu 150ms ease-out both;
+}
+
+.pallolauta-liuska-auki .pallolauta-viuhka-pohja {
+  animation: pallolauta-liuska-pohja 150ms ease-out both;
+}
+
+@keyframes pallolauta-liuska-saapuu {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pallolauta-liuska-pohja {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Haitarin avaus: sisennetty kohderivi kasvaa paikalleen 200 ms:ssä. */
+.pallolauta-liuska-kohde {
+  animation: pallolauta-liuska-haitari 200ms ease-out both;
+  transform-origin: left center;
+}
+
+@keyframes pallolauta-liuska-haitari {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pallolauta-liuska-hiusviiva {
+  stroke: var(--muste, #3a2f24);
+  stroke-width: 0.6;
+  opacity: 0.35;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pallolauta-liuska-auki .pallolauta-viuhka-kohta,
+  .pallolauta-liuska-auki .pallolauta-viuhka-pohja,
+  .pallolauta-liuska-kohde {
+    animation: none;
+  }
+}

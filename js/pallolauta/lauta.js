@@ -2220,31 +2220,44 @@ export async function avaaPallolauta(ui) {
       ui.doKehittajaSiirto(city);
       return true;
     }
-    void kamera.ajaKamera({ x: city.x, y: city.y, leveys: kamera.kameranTila()?.leveys }, {});
     if (oma && oma.id === city.id) {
       /*
-       * KAUPUNGIN NAPAUTUS AVAA ISON POP-UPIN (karttauudistus erä 4;
-       * omistaja 13.9.2026: *"Kaupunkia klikkaamalla pelaajalle avautuu
-       * isossa pop up ikkunassa Kaupunkilehden herokuvat ja
-       * esittelyteksti sekä nähtävyyskartta"*).
+       * ══ KAUPUNKIMERKKI AVAA LIUSKAN (Raamattu, KARTTAUUDISTUKSEN
+       * PAATOKSET 34 kohdat 1 ja 10) ═══════════════════════════════
        *
-       * ANKKURI ON MERKIN RUUTUPISTE, ei ruudun keskus (suunnitelman luku
-       * 3.3): kortti aukeaa sen kaupungin viereen, jota napautettiin, ja
-       * seuraa pistettään, kun pallo pysähtyy (ladoLevossa).
+       * KAMERA AJAA ENSIN, LIUSKA AUKEAA VASTA SEN JÄLKEEN (kohta 10,
+       * omistaja: *"kartta voisi ajaa itsensa sellaiseen paikkaan
+       * missa nostot mahtuvat aukeamaan hyvin"*). Järjestys on pakko:
+       * liuskan lepotesti (js/pallolauta/nostot.js VIUHKAN_LEPO_PX)
+       * sulkisi ajon aikana avatun liuskan heti, koska merkin
+       * ruutupiste liikkuu ajon verran.
        *
-       * KORTTI ON TIIVISTETTY ETUSIVU (PAATOKSET 10, omistaja 14.9.2026):
-       * herokuvat → kohdekartta → leipätekstin ensimmäinen kappale →
-       * "Lue loppuun". Ei matkailuliitettä, ei alaosan navigointia, ei
-       * ennen/nyt-paria. Vanha `avaaKaupunkipopup` ja koko kaupunkilehti
-       * jäävät koskemattomina koodiin; lehti avataan fokusvirrasta.
+       * AJO ON SAMA SUKELLUS KUIN ENNENKIN, ei omaa zoomia: kaupunki
+       * siirtyy ruudun keskeltä sille laidalle, josta liuskalle jää
+       * tilaa toiselle puolelle (viuhkanAsemat valitsee puolen kartan
+       * keskeltä poispäin). Zoomi jätetään koskematta, koska sukellus
+       * jo tuo kaupungin lähelle; jos sakko jää nollaa suuremmaksi,
+       * asemahaku siirtää listaa pystysuunnassa.
        */
-      if (Number.isFinite(k.lat) && Number.isFinite(k.lon)) {
-        avaaTiivisKaupunkietusivu(ui, city, { ankkuri: ankkuri(k.lat, k.lon) });
-      } else {
-        avaaTiivisKaupunkietusivu(ui, city);
-      }
+      void (async () => {
+        await kamera.ajaKamera(
+          { x: city.x, y: city.y, leveys: kamera.kameranTila()?.leveys }, {},
+        );
+        // Ladonta ajon jälkeen: liuska ripustetaan merkin UUTEEN
+        // ruutupisteeseen, jolloin lepotesti vertaa oikeaan lukuun.
+        ladoLevossa?.();
+        const avautui = Number.isFinite(k.lat) && Number.isFinite(k.lon)
+          && nostot.avaaLiuskaKaupungista?.(k.lat, k.lon);
+        if (!avautui) {
+          // Varapolku: jos kaupunkirivi ei ole ruudulla (pallon
+          // takana), vanha tiivis etusivu avaa kaupungin kuten ennen.
+          avaaTiivisKaupunkietusivu(ui, city);
+        }
+        heraa();
+      })();
       return true;
     }
+    void kamera.ajaKamera({ x: city.x, y: city.y, leveys: kamera.kameranTila()?.leveys }, {});
     if (game.phase === 'move' && !game.player?.isBot) {
       const kohde = game.moveOptions?.().find((opt) => opt.city?.id === city.id);
       if (kohde) { ui.doMove(kohde.key); return true; }
@@ -2866,6 +2879,37 @@ export async function avaaPallolauta(ui) {
      * toisen aihemerkin viuhkan keskellä linssiä. Sama piilotettu
      * osumalaatikko, joka kaatoi v1789:n ja v1794:n.
      */
+    /*
+     * AUKI OLEVA KAUPUNKILIUSKA (PAATOKSET 34 kohta 1): rivi ensin,
+     * muuten kartan napautus sulkee liuskan. Yläryhmän rivit avaavat
+     * kaupunkilehden, nähtävyydet ja oppaan — ne ovat laudan asioita,
+     * joten kerros palauttaa vain rivin lajin.
+     */
+    if (nostot.liuskaAuki?.()) {
+      const kohta = tuoreNapautuskohta()
+        ?? (Number.isFinite(lat) ? pallo.getScreenCoords(lat, lng, 0) : null);
+      const osui = kohta ? nostot.napautaLiuskasta(kohta) : null;
+      if (osui) {
+        heraa();
+        const city = ui.game.cityOf?.();
+        if (city && osui.laji === 'lehti') ui.avaaTutkinta?.(city);
+        else if (city && osui.laji === 'nahtavyydet') {
+          /*
+           * "Nähtävyydet" on ENTINEN kaupunkipopupin kohdekartta
+           * (PAATOKSET 34 kohta 8, nimi js/nahtavyydet.js). Tässä
+           * erässä se avataan tiiviinä etusivuna, jossa kohdekartta
+           * on — oma pelkkä karttakortti on seuraavan erän työ, ja
+           * puolivalmis oma kortti veisi kohteet kokonaan pois.
+           */
+          avaaTiivisKaupunkietusivu(ui, city);
+        }
+        else if (city && osui.laji === 'opas') avaaTuristiOpas(ui, city);
+        return;
+      }
+      heraa();
+      nostot.suljeLiuska();
+      return;
+    }
     if (nostot.viuhkaAuki()) {
       // Viuhkan oma kohta ensin: se on ruutulaatikko, ei pallon piste.
       if (viuhkanNapautus(lat, lng)) return;

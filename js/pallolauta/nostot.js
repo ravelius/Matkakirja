@@ -39,8 +39,9 @@
 import {
   KOVAN_ESTEEN_PAINO,
   aiheenNimi, aihemerkinLaatikko, aihemerkkiElementti, aihenostonNimio, asetteleAihemerkki,
-  kohdanLaatikko, ryhmitaNostot, viuhkanAsemat, viuhkanNimioLeveys,
+  kohdanLaatikko, piirraViuhka, ryhmitaNostot, viuhkanAsemat, viuhkanNimioLeveys,
 } from './aihemerkit.js';
+import { liuskanRivit, onKaupunginSisainen } from './kaupunkiliuska.js';
 import { FOKUS_POHJAT } from '../packs/fokus-grc.js';
 import { MAASTOKOHTEET_ARK } from '../packs/maastokohteet-ark.js';
 import { MAASTOKOHTEET_ATA } from '../packs/maastokohteet-ata.js';
@@ -55,6 +56,7 @@ import {
   NOSTOSYM_MINI_RUUTU, NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KATTO_PX, NOSTOSYM_NIMIO_KOKO,
   nostosymAsetaPorras, nostosymKatettuMitta, nostosymNimioAsemointi,
   nostosymNimioMitta, nostosymPaakategoria, nostosymVirkistaRasterit, piirraNostosymKartalle,
+  piirraNostosymNimio,
 } from '../fokusnosto-symbolit.js';
 import { KARTTANIMI_KOOT } from '../karttanimet.js';
 import { karttavaloVari, karttavalotLue } from '../karttavalot.js';
@@ -793,6 +795,44 @@ export const VALON_PEITTO = 0.45;
 
 const SVG = 'http://www.w3.org/2000/svg';
 
+/** Kaupunkiliuskan haitarin sisennys yhtä tasoa kohti (merkin yksiköt). */
+export const LIUSKAN_SISENNYS_PX = 9;
+/** Kategoriarivin väripallon säde (merkin yksiköt). */
+const LIUSKAN_PALLON_R = 2.4;
+
+/**
+ * KAUPUNKILIUSKAN YHDEN RIVIN PIIRTO. Rivi on nimiö kuten viuhkassa;
+ * kategoriarivillä on lisäksi aiheen väripallo (sama muste kuin
+ * karttaselitteessä) ja haitarin kohteet ovat sisennettyjä.
+ * Hiusviiva erottaa yläryhmän kategorioista (PAATOKSET 34 kohta 8).
+ */
+function piirraLiuskanRivi(g, r, kylki, suunta) {
+  const sisennys = suunta * r.sisennys * LIUSKAN_SISENNYS_PX;
+  const sisus = document.createElementNS(SVG, 'g');
+  sisus.setAttribute('class', `pallolauta-liuska-rivi pallolauta-liuska-${r.laji}`);
+  if (sisennys) sisus.style.transform = `translate(${sisennys.toFixed(2)}px, 0px)`;
+  g.appendChild(sisus);
+  if (r.laji === 'kategoria') {
+    const pallo = document.createElementNS(SVG, 'circle');
+    pallo.setAttribute('class', 'pallolauta-liuska-pallo');
+    pallo.setAttribute('r', String(LIUSKAN_PALLON_R));
+    pallo.setAttribute('cx', String(suunta * 7));
+    pallo.setAttribute('cy', '0');
+    pallo.setAttribute('fill', karttavaloVari(r.aihe));
+    sisus.appendChild(pallo);
+  }
+  if (r.hiusviiva) {
+    const viiva = document.createElementNS(SVG, 'line');
+    viiva.setAttribute('class', 'pallolauta-liuska-hiusviiva');
+    viiva.setAttribute('x1', String(suunta * 5));
+    viiva.setAttribute('x2', String(suunta * 60));
+    viiva.setAttribute('y1', '-11');
+    viiva.setAttribute('y2', '-11');
+    sisus.appendChild(viiva);
+  }
+  if (r.nimi) piirraNostosymNimio(sisus, r.nimi, null, kylki, Infinity);
+}
+
 /** Elävän noston elementti: viivamerkki + nimiö samaan pieneen svg:hen. */
 export function nostoElementti(d) {
   const el = document.createElement('div');
@@ -803,6 +843,16 @@ export function nostoElementti(d) {
   svg.setAttribute('width', '1');
   svg.setAttribute('height', '1');
   svg.setAttribute('aria-hidden', 'true');
+  /*
+   * LIUSKA PIIRTYY KAUPUNKIMERKIN OMAAN ELEMENTTIIN, samasta syystä
+   * kuin viuhka aihemerkin omaan (js/pallolauta/aihemerkit.js VIUHKA
+   * PIIRTYY AIHEMERKIN OMAAN ELEMENTTIIN): uusi CSS2D-merkki ei synny
+   * ennen kirjaston seuraavaa kehystä, eikä levossa oleva pallo tuota
+   * sellaista — liuskan olisi odotettava napautuksen jalkeen.
+   */
+  const viuhka = document.createElementNS(SVG, 'g');
+  viuhka.setAttribute('class', 'pallolauta-viuhka');
+  svg.appendChild(viuhka);
   const g = document.createElementNS(SVG, 'g');
   g.setAttribute('class', 'pallolauta-nosto-siirto');
   svg.appendChild(g);
@@ -832,6 +882,19 @@ export function nostoElementti(d) {
 export function asetteleNosto(el, d) {
   const g = el.querySelector('.pallolauta-nosto-siirto');
   if (!g) return;
+  // Liuska on merkin oma sisus (sama resepti kuin aihemerkin viuhkalla).
+  const liuskaJuuri = el.querySelector('.pallolauta-viuhka');
+  if (liuskaJuuri) {
+    const pohja = d.viuhkaPohja;
+    const resepti = `${pohja ? `${pohja.x0.toFixed(1)},${pohja.y0.toFixed(1)},${pohja.x1.toFixed(1)},${pohja.y1.toFixed(1)}` : '-'}#`
+      + (d.viuhka ?? [])
+        .map((k) => `${k.nimi}@${k.dx.toFixed(1)},${k.dy.toFixed(1)}|${k.puoli}|${k.leveys.toFixed(1)}`).join(';');
+    if (liuskaJuuri.dataset.resepti !== resepti) {
+      liuskaJuuri.dataset.resepti = resepti;
+      piirraViuhka(liuskaJuuri, d);
+    }
+    el.classList.toggle('pallolauta-liuska-auki', Boolean((d.viuhka ?? []).length));
+  }
   const dx = d.dx ?? 0;
   const dy = d.dy ?? 0;
   const mitta = d.mitta ?? nostonMitta();
@@ -1061,6 +1124,20 @@ export function luoNostot({
   let ryhmitetytIdt = new Set();
   // Auki olevan viuhkan kohdat ruutulaatikkoineen (osumatesti lukee).
   let viuhkanKohdat = [];
+  /*
+   * AUKI OLEVA KAUPUNKILIUSKA (Raamattu, KARTTAUUDISTUKSEN PAATOKSET
+   * 34): { avain, p, uloinOsuus, avattuKategoria } tai null. Sama
+   * kone kuin viuhkalla — ero on ripustus (kaupunkimerkki) ja rivien
+   * laji (yläryhmä, kategoriat, haitarin kohteet).
+   */
+  let liuska = null;
+  let liuskanKohdat = [];
+  /*
+   * KAUPUNGIN SISÄISET NOSTOT ladonnasta: avain = kaupunkirivin avain.
+   * Sama lista pudottaa merkit kartalta (PAATOKSET 34 kohta 3) ja
+   * täyttää liuskan kategoriat — yksi laskenta, kaksi käyttöä.
+   */
+  let sisaisetKaupungeittain = new Map();
   /*
    * Listan alle piilotettu muste: { avain, osa } (ks. LISTA EI KOSKAAN
    * TOISEN TEKSTIN PÄÄLLE). Vain mittausta ja vartioita varten —
@@ -1370,6 +1447,33 @@ export function luoNostot({
     return true;
   };
 
+  /**
+   * AVAA KAUPUNKILIUSKAN kaupunkimerkistä (PAATOKSET 34 kohta 1).
+   * `p` on merkin ruutupiste avaushetkellä: lepotesti vertaa siihen.
+   * Kamera-ajo (kohta 10) tehdään ENNEN tätä kutsua laudalla, jottei
+   * ajon oma siirto sulje juuri avattua liuskaa.
+   */
+  const avaaLiuska = (rivi) => {
+    if (!rivi?.p) return false;
+    viuhka = null;
+    liuska = {
+      avain: rivi.avain,
+      p: { x: rivi.p.x, y: rivi.p.y },
+      uloinOsuus: viimeisinUloinOsuus,
+      avattuKategoria: null,
+    };
+    ladoUudelleen?.();
+    return true;
+  };
+
+  /** Sulkee liuskan; palauttaa tosi, jos jokin sulkeutui. */
+  const suljeLiuska = () => {
+    if (!liuska) return false;
+    liuska = null;
+    ladoUudelleen?.();
+    return true;
+  };
+
   /*
    * ══════════════════════════════════════════════════════════════════
    * PALLON MERKIT OVAT RASTEREITA — JOTEN PALLON ON MYÖS TILATTAVA
@@ -1620,7 +1724,32 @@ export function luoNostot({
     const jarjestys = (a, b) => ((a.perhe === 'piste') - (b.perhe === 'piste')) * -1
       || (Number(Boolean(b.kaupunki)) - Number(Boolean(a.kaupunki)))
       || (a.etaisyys - b.etaisyys);
-    const elavat = nakyvat.filter((r) => !r.poltettu).sort(jarjestys);
+    const elavatKaikki = nakyvat.filter((r) => !r.poltettu).sort(jarjestys);
+    /*
+     * ══ KAUPUNKI ON YKSI PISTE (PAATOKSET 34 kohdat 2-3) ═══════════
+     *
+     * Kaupungin sisäiset elävät nostot EIVÄT piirry kartalle millään
+     * zoomilla: ne ovat kaupunkiliuskan kategorioissa. Raja on noston
+     * OMA paikka (js/pallolauta/kaupunkiliuska.js onKaupunginSisainen),
+     * joten Versailles, Chartres ja Chambord jäävät kartalle vaikka
+     * ovat ankkuroituja Pariisiin. Mitta on maantieteellinen, joten
+     * jäsenyys on sama kaikilla zoomeilla (vrt. PAATOKSET 32 kohta 1).
+     *
+     * SAMA LISTA TÄYTTÄÄ LIUSKAN. Jos suodatus ja liuska laskettaisiin
+     * erikseen, kartalta voisi kadota nosto, jota mikään lista ei avaa.
+     */
+    const kaupunkirivit = elavatKaikki.filter((r) => r.kaupunki);
+    sisaisetKaupungeittain = new Map();
+    const sisaisetAvaimet = new Set();
+    for (const city of kaupunkirivit) {
+      const omat = elavatKaikki.filter((r) => r.perhe === 'nosto' && !r.kaupunki
+        && !r.vainNimi && typeof r.avaa === 'function'
+        && onKaupunginSisainen(r, city));
+      if (!omat.length) continue;
+      sisaisetKaupungeittain.set(city.avain, omat);
+      for (const r of omat) sisaisetAvaimet.add(r.avain);
+    }
+    const elavat = elavatKaikki.filter((r) => !sisaisetAvaimet.has(r.avain));
     const mittaNyt = nostonMitta();
     /*
      * SAMAN AIHEEN LÄHEKKÄISET NOSTOT YHDEKSI AIHEMERKIKSI (omistaja
@@ -1795,6 +1924,21 @@ export function luoNostot({
       const zoomasi = Math.abs(uloinOsuus - viuhka.uloinOsuus)
         > VIUHKAN_ZOOMIVARA * Math.max(uloinOsuus, viuhka.uloinOsuus, 1e-6);
       if (!rivi || siirtyi || zoomasi) viuhka = null;
+    }
+    /*
+     * LIUSKA SULKEUTUU ZOOMISTA JA PANOROINNISTA samalla lepotestillä
+     * kuin viuhka. Avaushetken `p` on kirjattu ANKKUROIDUSTA
+     * ruutupisteestä (avaaLiuska ajetaan ladonnan jälkeen), joten
+     * testi ei laukea heti auettuaan (PAATOKSET 34 kohta 1).
+     */
+    if (liuska) {
+      const rivi = elavat.find((r) => r.avain === liuska.avain);
+      const siirtyi = rivi
+        ? Math.hypot(rivi.p.x - liuska.p.x, rivi.p.y - liuska.p.y) > VIUHKAN_LEPO_PX
+        : true;
+      const zoomasi = Math.abs(uloinOsuus - liuska.uloinOsuus)
+        > VIUHKAN_ZOOMIVARA * Math.max(uloinOsuus, liuska.uloinOsuus, 1e-6);
+      if (!rivi || siirtyi || zoomasi) liuska = null;
     }
     const piirrettavat = [...elavat.filter((r) => !ryhmassa.has(r.avain)), ...aiherivit]
       .sort(jarjestys);
@@ -1976,6 +2120,60 @@ export function luoNostot({
             piirra: (g, kylki) => piirraNostosymKartalle(g, m.kategoria, m.nimi, m.symLaji, kylki),
           }));
           // Listan kehyksetön pohja (yksi laatikko kaikkien rivien alle).
+          datum.viuhkaPohja = pohja;
+        }
+      }
+    }
+    /*
+     * ══ KAUPUNKILIUSKAN RIVIT (PAATOKSET 34 kohdat 1 ja 5-9) ═══════
+     *
+     * Rakenne tulee mallista (js/pallolauta/kaupunkiliuska.js
+     * liuskanRivit), asemat samasta koneesta kuin viuhkalla
+     * (viuhkanAsemat): kovat esteet = kaupungin nimi ja pelinappula,
+     * pehmeät = muiden nostojen muste. Rivit piirtyvät kaupunkimerkin
+     * omaan elementtiin (asetteleNosto), eivät omiksi merkeikseen.
+     */
+    liuskanKohdat = [];
+    if (liuska) {
+      const rivi = naytetaan.find((r) => r.avain === liuska.avain);
+      if (!rivi) liuska = null;
+      else {
+        const omat = sisaisetKaupungeittain.get(rivi.avain) ?? [];
+        const rivit = liuskanRivit({
+          kaupunki: rivi,
+          nostot: omat,
+          avattuKategoria: liuska.avattuKategoria,
+        });
+        const leveydet = rivit.map((r2) => viuhkanNimioLeveys(
+          r2.nimi ? nostosymNimioMitta(r2.nimi, null, Infinity).leveys : 0, mittaNyt,
+        ) + r2.sisennys * LIUSKAN_SISENNYS_PX);
+        const kovat = [...viimeisimmatNimet, ...(esteet?.() ?? [])]
+          .filter(Boolean)
+          .map((e) => ({ ...e, paino: KOVAN_ESTEEN_PAINO }));
+        const {
+          puoli, asemat, leveys: listaLeveys, pohja,
+        } = viuhkanAsemat({
+          p: rivi.p,
+          ruutu: ruutu?.() ?? { leveys: 1400, korkeus: 900 },
+          leveydet,
+          esteet: [...kovat, ...laatikot],
+        });
+        liuskanKohdat = rivit.map((r2, i) => ({
+          r: r2, rivi, asema: asemat[i], leveys: listaLeveys, puoli,
+        }));
+        const datum = datumit[naytetaan.indexOf(rivi)];
+        if (datum) {
+          const suunta = puoli === 'vasen' ? -1 : 1;
+          datum.viuhka = rivit.map((r2, i) => ({
+            id: r2.avain,
+            nimi: r2.nimi,
+            dx: asemat[i].dx,
+            dy: asemat[i].dy,
+            puoli,
+            leveys: listaLeveys,
+            mitta: mittaNyt,
+            piirra: (g2, kylki) => piirraLiuskanRivi(g2, r2, kylki, suunta),
+          }));
           datum.viuhkaPohja = pohja;
         }
       }
@@ -2206,6 +2404,82 @@ export function luoNostot({
     viuhkanPiilotetut: () => piilotetutListanAlta.map((e) => ({ ...e })),
     /** Sulkee viuhkan (kartan napautus, js/pallolauta/lauta.js). */
     suljeViuhka,
+    /* ── KAUPUNKILIUSKA (PAATOKSET 34) ───────────────────────────── */
+    /** Auki olevan liuskan kaupunkirivin avain tai null. */
+    liuskaAuki: () => liuska?.avain ?? null,
+    /** Auki olevan kategorian aihe tai null (haitari, kohta 8). */
+    liuskanKategoria: () => liuska?.avattuKategoria ?? null,
+    suljeLiuska,
+    /**
+     * AVAA LIUSKAN kaupunkimerkistä ruutupisteen perusteella: lauta
+     * tuntee kaupungin asteet, kerros tuntee rivit. Palauttaa epätosi,
+     * jos kaupungilla ei ole riviä ruudulla (silloin lauta avaa
+     * vanhan kortin).
+     */
+    avaaLiuskaKaupungista: (lat, lng) => {
+      const p = ruudulla(lat, lng);
+      if (!p) return false;
+      let paras = null;
+      let parasMatka = Infinity;
+      for (const o of osumat) {
+        if (!o.kaupunki || !o.p) continue;
+        const matka = Math.hypot(o.p.x - p.x, o.p.y - p.y);
+        if (matka < parasMatka) { parasMatka = matka; paras = o; }
+      }
+      if (!paras || parasMatka > 60) return false;
+      return avaaLiuska(paras);
+    },
+    /**
+     * OSUIKO NAPAUTUS LIUSKAN RIVIIN. Kategoriarivi vaihtaa haitarin
+     * (toisen avaus sulkee edellisen jo rakenteesta), kohderivi avaa
+     * noston kortin samasta paikasta kuin viuhkan kohta, yläryhmän
+     * rivit palauttavat lajinsa laudalle (`{ laji }`), joka omistaa
+     * kaupunkilehden, nähtävyydet ja oppaan.
+     */
+    napautaLiuskasta: (kohta) => {
+      if (!kohta || !liuskanKohdat.length) return null;
+      for (const k of liuskanKohdat) {
+        const p = ruudulla(k.rivi.lat, k.rivi.lng);
+        if (!p) continue;
+        const l = kohdanLaatikko(p.x + k.asema.dx, p.y + k.asema.dy, k.leveys, k.puoli);
+        if (kohta.x < l.x0 || kohta.x > l.x1 || kohta.y < l.y0 || kohta.y > l.y1) continue;
+        if (k.r.laji === 'kategoria') {
+          liuska.avattuKategoria = liuska.avattuKategoria === k.r.aihe ? null : k.r.aihe;
+          ladoUudelleen?.();
+          return { laji: 'kategoria', aihe: k.r.aihe };
+        }
+        if (k.r.laji === 'kohde') {
+          if (ui.dead || ui.busy || typeof k.r.nosto?.avaa !== 'function') return null;
+          const pohja = ankkuri ? ankkuri(k.rivi.lat, k.rivi.lng) : null;
+          const kohdanAnkkuri = pohja ? () => {
+            const a = pohja();
+            return a ? { x: a.x + k.asema.dx, y: a.y + k.asema.dy } : null;
+          } : undefined;
+          liuska = null;
+          k.r.nosto.avaa(kohdanAnkkuri);
+          ladoUudelleen?.();
+          return { laji: 'kohde' };
+        }
+        liuska = null;
+        ladoUudelleen?.();
+        return { laji: k.r.laji };
+      }
+      return null;
+    },
+    /** Liuskan rivit juuri nyt (savukkeet ja vartijat). */
+    liuskanRivit: () => liuskanKohdat.map((k) => {
+      const p = ruudulla(k.rivi.lat, k.rivi.lng);
+      const l = p ? kohdanLaatikko(p.x + k.asema.dx, p.y + k.asema.dy, k.leveys, k.puoli) : null;
+      return {
+        laji: k.r.laji,
+        nimi: k.r.nimi,
+        aihe: k.r.aihe ?? null,
+        maara: k.r.maara ?? null,
+        sisennys: k.r.sisennys,
+        auki: Boolean(k.r.auki),
+        ...(l ?? {}),
+      };
+    }),
     /**
      * OSUIKO NAPAUTUS VIUHKAN KOHTAAN (js/pallolauta/lauta.js
      * napautaPintaan). `kohta` on napautuksen ruutupiste kotelon

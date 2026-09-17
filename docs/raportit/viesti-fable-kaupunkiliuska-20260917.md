@@ -141,3 +141,118 @@ SHELL-listalta (offline-kuori). Lisätty; vartio on vihreä.
 (otsikon nimi), `sw.js` (uusi moduuli SHELLiin),
 `tests/kaupunkiliuska.test.mjs` (uusi),
 `docs/raportit/viesti-fable-kaupunkiliuska-20260917.md` (tämä).
+
+---
+
+# Erä 2 (Opus-agentti 18.9.2026 klo 00.10 Suomen aikaa)
+
+Aikakatto 45 min täyttyi kesken toteutuksen. **Liuska on nyt kytketty
+päälle** (erä 1 ei ollut), mutta **Playwright-mittausta ei ehditty ajaa
+lainkaan** — kaappauksia ei siis ole liitettävänä. Kerron alla tarkasti,
+mikä on todistettu ja mikä ei.
+
+## 1. Mitä tässä erässä tehtiin
+
+### Liuskan piirto ja napautus (kohta 1)
+
+- `js/pallolauta/aihemerkit.js`: `piirraViuhka` viety ulos (`export`),
+  jotta sama listapohja (`.pallolauta-viuhka-pohja`, PR #2566) piirtää
+  myös liuskan.
+- `js/pallolauta/nostot.js`:
+  - `nostoElementti` saa `.pallolauta-viuhka`-ryhmän ja `asetteleNosto`
+    piirtää sen samasta reseptistä kuin aihemerkki — liuska on siis
+    KAUPUNKIMERKIN oma sisus, ei uusi CSS2D-merkki (sama mitattu syy
+    kuin viuhkalla: uutta merkkiä ei synny levossa olevalle pallolle).
+  - Uusi tila `liuska = { avain, p, uloinOsuus, avattuKategoria }` ja
+    `liuskanKohdat`; `avaaLiuska`, `suljeLiuska`, ja API:ssa
+    `liuskaAuki`, `liuskanKategoria`, `avaaLiuskaKaupungista(lat,lng)`,
+    `napautaLiuskasta(kohta)`, `liuskanRivit()` (mittarille).
+  - Asemat tulevat `viuhkanAsemat`ista samoilla estesäännöillä
+    (PR #2568): kaupungin nimi ja pelinappula `KOVAN_ESTEEN_PAINO`.
+  - Lepotesti on viuhkan (`VIUHKAN_LEPO_PX`, `VIUHKAN_ZOOMIVARA`), ja
+    avaus tehdään VASTA kamera-ajon jälkeen, joten se ei sulje liuskaa
+    heti auettuaan.
+  - Rivin piirto `piirraLiuskanRivi`: nimiö, kategoriarivin väripallo
+    (`karttavaloVari`), haitarin sisennys `LIUSKAN_SISENNYS_PX`,
+    hiusviiva ensimmäisen kategoriarivin ylle.
+- `js/pallolauta/kaupunkiliuska.js`: `liuskanRivit` merkitsee
+  ensimmäisen kategoriarivin `hiusviiva: true`.
+
+### Kartan siivous (kohta 2)
+
+`nostot.js` `paivita`ssa lasketaan `sisaisetKaupungeittain`
+(`onKaupunginSisainen`) ja **samasta listasta** sekä pudotetaan merkit
+kartalta että täytetään liuskan kategoriat — yksi laskenta, kaksi
+käyttöä, joten kartalta ei voi kadota nostoa, jota mikään lista ei avaa.
+Suodatus on ENNEN aihenostojen ryhmitystä, joten kaupungin sisäiset
+aihenostot poistuvat kartalta itsestään.
+
+### Kamera ajaa tilaa (kohta 10)
+
+`js/pallolauta/lauta.js` `napautaKaupunki`: oman kaupungin napautus
+odottaa `kamera.ajaKamera`n valmiiksi (sama sukellus kuin ennen,
+< 600 ms), ajaa `ladoLevossa()`n ja avaa liuskan vasta sitten.
+Varapolku: jos kaupunkirivi ei ole ruudulla, vanha tiivis etusivu
+aukeaa kuten ennen.
+
+### Animaatio (kohta 3)
+
+`css/styles.css`: liuska 150 ms feidi, haitarin kohderivi 200 ms
+liuku, `prefers-reduced-motion: reduce` sammuttaa molemmat. **Rivien
+30 ms porrastusta EI ehditty tehdä** (vaatii rivin järjestysluvun
+CSS-muuttujana piirrosta) — se on auki.
+
+## 2. Mitä EI tehty (auki seuraavalle erälle)
+
+1. **Mittaus ja kaappaukset** — ei ajettu lainkaan, ei liitettäviä
+   kuvia. Tämä on erän suurin puute.
+2. **Savukkeet (kohta 5)** — `savuke-pariisi-lahizoom.mjs` 4b ja
+   7d/7f/7g/7h/7i sekä `savuke-kaupunkipopup.mjs` ovat ennallaan.
+   `sarjat.jsonia` ei koskettu (ohjeen mukaan).
+3. **Turisti-info-kyltti on yhä kartalla** (kohta 2:n loppuosa).
+   Liuskan "Turistiopas"-rivi toimii jo, mutta kyltin poisto
+   `lauta.js`n `paivitaTuristiInfo`sta jäi tekemättä — kyltti ei
+   riko mitään, se on vain kahdesti.
+4. **Kaupunkilehden "Kaupunki kartalla" -osio on yhä lehdessä**
+   (kohta 1:n loppu, `js/lehti.js` rivi ~537).
+5. **Rivien porrastusanimaatio** (kohta 3).
+
+## 3. Oletukset (päätin itse, ei AskUserQuestionia)
+
+1. **"Nähtävyydet"-rivi avaa tiiviin kaupunkietusivun** (jossa
+   kohdekartta on) eikä omaa pelkkää karttakorttia. Puolivalmis oma
+   kortti olisi vienyt kohteet kokonaan pois; tämä säilyttää ne.
+2. **Liuska avautuu vain PELAAJAN OMASTA kaupungista**, koska vain
+   siellä vanha pop-up aukesi. Muiden kaupunkien napautus on yhä
+   siirtovalinta.
+3. **Kamera ei zoomaa liuskalle**, vain sukeltaa samalla leveydellä
+   kuin ennen. Sakon nollaaminen zoomilla vaatisi iteroivan haun,
+   jota ei ehditty mitata — `viuhkanAsemat` siirtää listaa pysty- ja
+   vaakasuunnassa, mikä riittää 1400 px:llä varmasti ja 390 px:llä
+   todennäköisesti. **Tämä on mittaamaton.**
+4. **Vanha iso kaupunkipopup-haara poistettiin** `napautaKaupunki`sta
+   (oli tavoittamaton uuden haaran jälkeen); `avaaTiivisKaupunkietusivu`
+   jää varapoluksi ja `js/kaupunkinosto.js` koskematta.
+
+## 4. Testit
+
+`node --test tests/*.test.mjs`: **3596 testiä, 0 punaista**
+(3583 vihreää, 13 ohitettua) — ajettu kahdesti, myös viimeisen
+siivouksen jälkeen.
+
+## 5. Vanhentuneet tunnetut punaiset (sarjat.jsonia EI muutettu)
+
+| vartio | miksi vanhentuu |
+| --- | --- |
+| `savuke-pariisi-lahizoom` 4b | aihemerkit poistuvat kaupungin sisältä; korvaaja on liuskan avaus kaupunkimerkistä |
+| `savuke-pariisi-lahizoom` 7d, 7f, 7g, 7h, 7i | turisti-infon kyltin mitat — kyltti poistuu kartalta (yhä tekemättä, ks. 2.3) |
+| `savuke-kaupunkipopup.mjs` Pariisi/Marseille | kaupunkimerkin napautus avaa liuskan, ei isoa pop-upia |
+| kaupungin sisäisiä nostomerkkejä mittaavat vartiot | merkit eivät enää piirry kartalle millään zoomilla |
+
+## 6. Muutetut tiedostot (erä 2)
+
+`js/pallolauta/nostot.js`, `js/pallolauta/lauta.js`,
+`js/pallolauta/aihemerkit.js`, `js/pallolauta/kaupunkiliuska.js`,
+`css/styles.css`, tämä raportti.
+
+**Vaatii versionoston**; `tools/uusi-versio.mjs` on ajamatta.
