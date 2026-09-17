@@ -7964,7 +7964,7 @@ export const RAAMATTU = {
           + 'piilossa (13.9.2026 linjaus, vakasnappi), ja purku palauttaa '
           + 'tasmalleen lahtotilan; vartio vaati vakiota visible. Vartio '
           + 'vertaa nyt linssia edeltavaan tilaan. Ei pelikoodin muutosta. '
-          + 'Julkaistaan v1929 (sarjat.jsonin tunnettu punainen poistuu).',
+          + 'JULKAISTU v1929 (sarjat.jsonin tunnettu punainen poistettu).',
         'IHMISEN MATKA -LINSSI: RINTAMAN VALKKYMINEN, MUSTA ALKU, LIIKU '
           + 'POIS; ASTRONAUTTILINSSILLE OMA KUVAKE (omistaja 15.9.2026 klo '
           + '12.00 UTC, tyopoytakuva 248 000 v. sitten, sanatarkasti: "Kun '
@@ -8503,7 +8503,7 @@ export const RAAMATTU = {
           + 'lahizoomiAuki (0,7 uloimmasta) kuin nostojen nimioilla; '
           + 'saapumisnakymassa 0 nimiota / 5 symbolia, lahizoomissa 5 '
           + 'nimiota; savuke 62/62, vastakoe ?aihenimiokynnys=0. '
-          + 'Julkaistaan v1929.',
+          + 'JULKAISTU v1929.',
         'KARTTAUUDISTUKSEN PAATOKSET 28: MAAINFO TAKAISIN RUUDUN VASEMPAAN '
           + 'ALAKULMAAN, VALIKKO KASVAA YLOS KAHDESSA SARAKKEESSA, LIIKU '
           + 'TEKSTINA ALAS KESKELLE (omistaja 15.9.2026 klo 20.45 UTC, '
