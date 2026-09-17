@@ -183,7 +183,14 @@ export function nimibudjetti(korkeusAst) {
  */
 export const NIMEN_REUNAVARA_PX = 0;
 /** Kuinka monta pikseliä nimi saa ylittää ruudun reunan ennen pudotusta. */
-export const NIMEN_REUNAN_SIETO_PX = 1;
+export /**
+ * Pelimerkin varauksen lisävara ruutupikseleinä (ks. PELIMERKIN
+ * VARAUS ON PAKSUMPI KUIN SEN KUVA). 4 px kattaa nimen elementin ja
+ * sen kirjasinmitan eron puhelimen 8,5–11,5 px:n kirjasimilla.
+ */
+const PELIMERKIN_VARA_PX = 4;
+
+const NIMEN_REUNAN_SIETO_PX = 1;
 /** Pelaajan oma kaupunki voittaa kaikki muut ehdokkaat. */
 const OMAN_KAUPUNGIN_TARKEYS = 1000;
 
@@ -413,8 +420,34 @@ export function luoNimet({
     ehdokkaat.sort((a, b) => (b.tarkeys - a.tarkeys)
       || ((b.c.aste ?? 0) - (a.c.aste ?? 0))
       || (a.c.nimi < b.c.nimi ? -1 : 1));
+    /*
+     * ── PELIMERKIN VARAUS ON PAKSUMPI KUIN SEN KUVA ────────────────
+     * (PAATOKSET 32 kohta 5; mitattu 17.9.2026 Macilla,
+     * tools/savukkeet/mittaa-nostoankkurit.mjs vartio 5: PARIISI jäi
+     * nappulan päälle saapumisessa ja välizoomissa, vaikka ladonta
+     * varaa nappulan `pinot`-listasta ENNEN ensimmäistäkään nimeä.)
+     *
+     * LADONTA MITTAA TEKSTIN KIRJASINMITOISTA (kork = koko × 1,15,
+     * laatikko −0,62…+0,42 × kork perusviivasta), mutta ruudulla
+     * nimen elementti on sitä KORKEAMPI: rivinkorkeus, ylä- ja
+     * alapidennykset sekä harvennuksen viimeinen väli jäävät mitan
+     * ulkopuolelle. Nimi asettui siis nappulan kylkeen juuri kiinni
+     * (NIMION_RAKO 3 px) ja levisi silti sen päälle.
+     *
+     * Vara annetaan VARAUKSEEN eikä tekstin mittaan, koska tekstin
+     * mitta on sama luku kaikkialla (poltto, laatikko, osumapinta) —
+     * pelimerkki taas on ainoa este, joka ei voi väistää, joten sen
+     * ympärille kuuluu rako.
+     */
+    const pinotVaralla = pinot.filter(Boolean).map((r) => ({
+      ...r,
+      x0: r.x0 - PELIMERKIN_VARA_PX,
+      y0: r.y0 - PELIMERKIN_VARA_PX,
+      x1: r.x1 + PELIMERKIN_VARA_PX,
+      y1: r.y1 + PELIMERKIN_VARA_PX,
+    }));
     const ladottu = ladoRuutunimet(ehdokkaat, {
-      varaukset, pinot, katto, kokoKerroin, pisteSade, ruutu: { w, h },
+      varaukset, pinot: pinotVaralla, katto, kokoKerroin, pisteSade, ruutu: { w, h },
     });
     /*
      * REUNASTA LEIKKAUTUVA NIMI PUDOTETAAN (ks. NIMI EI SAA LEIKKAUTUA
@@ -516,7 +549,7 @@ export function luoNimet({
      * lukitaan uuteen paikkaansa (lukot rakennetaan tämän ajon
      * lopullisista sijoituksista).
      */
-    const pinoLaatikot = pinot.filter((r) => Number.isFinite(r?.x0) && Number.isFinite(r?.y0)
+    const pinoLaatikot = pinotVaralla.filter((r) => Number.isFinite(r?.x0) && Number.isFinite(r?.y0)
       && Number.isFinite(r?.x1) && Number.isFinite(r?.y1) && r.x1 > r.x0 && r.y1 > r.y0);
     for (const n of ladottu.nimiot) {
       const e = paikat.get(n.c);
@@ -547,7 +580,7 @@ export function luoNimet({
         // kartan mukana kuten kaupunkikin, joten tämä ehto ei ailahda
         // panoroitaessa — se vain estää lukitun nimen palaamisen
         // sellaisen päälle, joka on tullut sen paikalle zoomissa.
-        if ([...varaukset, ...pinot].some((v) => leikkaa(v, r))) continue;
+        if ([...varaukset, ...pinotVaralla].some((v) => leikkaa(v, r))) continue;
         /*
          * BUDJETTI EI SAA SYRJÄYTTÄÄ JO LADOTTUA NIMEÄ. Nimibudjetti
          * (ks. NIMIBUDJETTI ZOOMTASON MUKAAN) on puhelimen

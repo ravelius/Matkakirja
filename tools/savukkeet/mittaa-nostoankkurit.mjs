@@ -340,10 +340,24 @@ for (const l of lukemat) {
  */
 for (const l of lukemat) {
   if (!l.nappula.length) tieto(`${l.nimi} nappula`, 'ei nappulaa ruudulla');
+  /*
+   * LÄHDE MUKAAN NIMEEN. Kaupungilla on ruudulla KAKSI laatikkoa,
+   * joilla on sama nimi: nostokerroksen kaupunkimerkki (piste +
+   * nimiö) ja nimikerroksen oma tekstielementti. Ilman lähdettä
+   * punainen vartio ei kerro, kumpi niistä on nappulan päällä — ja
+   * juuri se ratkaisee, onko korjaus ladonnassa (nimi) vai
+   * rakenteessa (merkki seisoo kaupungin pisteessä, jossa nappulakin
+   * seisoo).
+   */
   const paalla = [];
+  const lahteet = [
+    ...l.laatikot.map((r) => ({ ...r, lahde: 'nostokerros' })),
+    ...l.nimet.map((r) => ({ ...r, lahde: 'nimikerros' })),
+    ...(l.kyltti?.x1 ? [{ ...l.kyltti, lahde: 'kyltti' }] : []),
+  ];
   for (const n of l.nappula) {
-    for (const r of [...l.laatikot, ...l.nimet, ...(l.kyltti?.x1 ? [l.kyltti] : [])]) {
-      if (limittyy(n, r)) paalla.push(r.nimi ?? r.id);
+    for (const r of lahteet) {
+      if (limittyy(n, r)) paalla.push(`${r.nimi ?? r.id} [${r.lahde}]`);
     }
   }
   tieto(`${l.nimi} nappulan päällä`, `${paalla.length}${paalla.length ? ` (${paalla.slice(0, 6).join('; ')})` : ''}`);
