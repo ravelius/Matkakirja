@@ -32,7 +32,8 @@ import {
   KERTOMUKSEN_MERKKIA_SEKUNNISSA, kertomuksenLuennat, kertomuksenRunko, kertomuksenVarakesto,
 } from '../js/linssipuhe.js';
 import {
-  LIVIAN_AANILAHTEET, LIVIAN_LINSSILAHTEET, LIVIAN_VALIHUOMION_VAIMENNUS, livianLinssiIndeksi,
+  LIVIAN_AANILAHTEET, LIVIAN_LINSSILAHTEET, LIVIAN_VALIHUOMION_VAIMENNUS, LIVIAN_VARATTU,
+  livianLinssiIndeksi,
 } from '../js/liviapuhe.js';
 import { IHMISEN_MATKA_KERTOMUS } from '../js/linssit/ihmisen-matka-kertomus.js';
 import { IHMISEN_MATKA } from '../js/linssit/ihmisen-matka-data.js';
@@ -708,15 +709,26 @@ test('muistista jatkettaessa avausta ei ole', () => {
 /* ==================== 4. PULUN VÄLIHUOMIOT ==================== */
 
 test('pulun välihuomiot ovat samassa järjestyksessä taulussa ja kaanonissa', () => {
+  const taulussa = LIVIAN_LINSSILAHTEET['ihmisen-matka'];
   const kaanonissa = IHMISEN_MATKA_KERTOMUS.filter((j) => j.pulu).map((j) => j.id);
-  assert.deepEqual(LIVIAN_LINSSILAHTEET['ihmisen-matka'], kaanonissa);
+  /*
+   * VARATTU PAIKKA EI OLE JAKSO (omistaja 17.9.2026 klo 03.40 UTC:
+   * pulun *"Simpukoita. Hyvä alku."* poistettiin kaanonista kokonaan).
+   * Numero 1 jää varatuksi, jottei uudelleennumerointi vaienna kolmea
+   * muuta välihuomiota — ämpärin livia-ihmisen-matka-1.mp3 on yhä se
+   * poistettu repliikki.
+   */
+  assert.equal(taulussa[0], LIVIAN_VARATTU);
+  assert.deepEqual(taulussa.filter((t) => t !== LIVIAN_VARATTU), kaanonissa);
+  assert.ok(!IHMISEN_MATKA_KERTOMUS.some((j) => /Simpukoita/.test(j.pulu ?? '')),
+    'pulun simpukkarepliikki on palannut kaanoniin');
   // 1–3 välihuomiota kertomuksen keskellä + lopun kutsu tutkimusvaiheeseen
   // (Raamattu KAARI HYVAKSYTTY, TUTKIMUSVAIHE, VIISI NAPPIA, kohdat 4–5).
   assert.ok(kaanonissa.length >= 2 && kaanonissa.length <= 4, `${kaanonissa.length} huomiota`);
   assert.equal(kaanonissa.at(-1), 'loppu');
   // Numero on tiedostonimessä: indeksi tulee taulusta eikä kutsupaikasta.
-  assert.equal(livianLinssiIndeksi('ihmisen-matka', kaanonissa[0]), 0);
-  assert.equal(livianLinssiIndeksi('ihmisen-matka', 'loppu'), kaanonissa.length - 1);
+  assert.equal(livianLinssiIndeksi('ihmisen-matka', kaanonissa[0]), 1);
+  assert.equal(livianLinssiIndeksi('ihmisen-matka', 'loppu'), taulussa.length - 1);
   assert.equal(livianLinssiIndeksi('ihmisen-matka', 'avaus'), null);
   assert.equal(livianLinssiIndeksi('ei-linssia', 'loppu'), null);
   // Lähde on nimeämislistalla, joten työkalu löytää tekstit.

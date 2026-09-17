@@ -43,9 +43,16 @@
  *      omistajan puhelimella kellumaan esityksen päälle. Mitataan
  *      `visibility` ja `pointer-events` — ja vastakokeena sama nappi
  *      ilman piiloluokkaa.
- *   2. SIMPUKKAVIRKE EI OLE DOMISSA missään esityksen kohdassa
- *      ('arabia'-jakso mukaan lukien): ei "simpukanku", ei "okraa
- *      punaiseksi".
+ *   2. PULUN SIMPUKKAKOMMENTTI EI OLE DOMISSA missään esityksen
+ *      kohdassa (omistajan KORJAUS 17.9.2026 klo 03.40 UTC: *"Se
+ *      simpukka tarkoitti pulun simpukka kommenttia. Ei kertojan."*).
+ *      Pulun kupla (.aikajana-kertomus-pulu) ei sisällä sanaa
+ *      "Simpukoita" eikä repliikki ole missään DOMissa.
+ *   2b. KERTOJAN SIMPUKKAVIRKE ON RUUDULLA 'arabia'-jaksossa: teksti
+ *      "okraa punaiseksi ... simpukankuoria helmiksi" ladotaan
+ *      laatikkoon kuten ennen v1926:ta. VASTAKOE: v1926:n lyhennetty
+ *      kappale ei sisällä sitä, ja sen virkemäärä (5) ei osu ämpärin
+ *      kuuteen lauseleimaan.
  *   3. LAATIKKO ON MATALA. Jokaisen kaanonin osan teksti ladotaan
  *      oikeaan laatikkoon oikealla ruudulla, ja mitattu korkeus on
  *      enintään 30 % kartan korkeudesta. 390 px on se mitta, jonka
@@ -163,13 +170,17 @@ const AFRIKAN_KARJET = {
 };
 const KAIKKI_OSAT = IHMISEN_MATKA_KERTOMUS.flatMap((j) => jaaOsiin(j.teksti)
   .map((o, i) => ({ jakso: j.id, osa: i, teksti: o.teksti })));
-const SIMPUKKA = /simpukanku|okraa punaiseksi|helmiksi/i;
+/** Kertojan virke, joka PALAUTETTIIN 17.9.2026 (sen pitää näkyä). */
+const KERTOJAN_SIMPUKKA = /simpukanku|okraa punaiseksi|helmiksi/i;
+/** Pulun poistettu repliikki (sitä EI saa näkyä missään). */
+const PULUN_SIMPUKKA = /Simpukoita\. Hyvä alku/;
 /** Ruudut, joilla kameran aikasarja on tarpeeksi tiheä mitattavaksi. */
 const KAMERASARJA_LEVEYDET = [390];
 /*
- * VASTAKOKEEN VERTAILUKOHTA: 'arabia'-kappale SELLAISENA kuin se oli
- * ennen 16.9.2026 — simpukkavirke mukana ja koko kappale yhdessä
- * laatikossa. Juuri tämä näkyi omistajan iPhone-kuvassa.
+ * VASTAKOKEEN VERTAILUKOHTA: 'arabia'-kappale YHDESSÄ LAATIKOSSA, kuten
+ * ennen 16.9.2026. Juuri tämä näkyi omistajan iPhone-kuvassa. Teksti on
+ * sama kuin kaanonissa (kertojan virke palautettiin 17.9.2026), joten
+ * vastakoe mittaa nyt pelkkää kappalejakoa — sitä varten se on.
  */
 const ARABIA_ENNEN = {
   id: 'arabia (ennen 16.9.)',
@@ -275,6 +286,11 @@ const NAYTE = () => {
     // Pulu on NÄKYVISSÄ vain, jos nappi on olemassa eikä ole piilotettu.
     puluNakyy: Boolean(nappi) && nakyy(nappi) === true,
     teksti: laatikko?.textContent ?? '',
+    // Pulun välihuomiokupla (js/linssit/ihmisen-matka-esitys.js luokka)
+    // ja koko sivun teksti: poistettu repliikki ei saa näkyä kummassakaan.
+    puluKuplaTeksti: [...document.querySelectorAll('.aikajana-kertomus-pulu, .pollo-kupla')]
+      .map((el) => el.textContent ?? '').join(' '),
+    sivunTeksti: document.body?.textContent ?? '',
     tekstiNakyy: Boolean(laatikko && Number(getComputedStyle(laatikko).opacity) > 0.05
       && Number(getComputedStyle(rivi).opacity) > 0.05),
     laatikko: laatikonRuutu ? Math.round(laatikonRuutu.height) : 0,
@@ -405,10 +421,18 @@ async function mittaa(leveys, korkeus) {
       && pluskupla.paljaana.nakyvyys === 'visible',
     JSON.stringify(pluskupla));
 
-  /* --- 2. SIMPUKKAVIRKE EI OLE DOMISSA --- */
-  const simpukkaSarjassa = sarja.filter((r) => SIMPUKKA.test(r.teksti));
-  vaadi(`${leveys}px: simpukkavirke ei ole ruudulla missään näytteessä`,
-    simpukkaSarjassa.length === 0, JSON.stringify(simpukkaSarjassa.map((r) => r.teksti)));
+  /* --- 2. PULUN SIMPUKKAKOMMENTTI EI OLE DOMISSA --- */
+  const pulunSimpukka = sarja.filter((r) => PULUN_SIMPUKKA.test(r.puluKuplaTeksti ?? '')
+    || PULUN_SIMPUKKA.test(r.sivunTeksti ?? ''));
+  vaadi(`${leveys}px: pulun repliikki "Simpukoita. Hyvä alku." ei ole DOMissa missään näytteessä`,
+    pulunSimpukka.length === 0,
+    JSON.stringify(pulunSimpukka.map((r) => (r.puluKuplaTeksti || r.sivunTeksti).slice(0, 80))));
+  // VASTAKOE: mitta osuu oikeaan asiaan — sama säännöllinen lauseke
+  // löytää repliikin, jos se kirjoitetaan näytteeseen käsin.
+  const vertailu = `${sarja[0]?.sivunTeksti ?? ''} Simpukoita. Hyvä alku.`;
+  vaadi(`${leveys}px: vastakoe — sama mitta löytää repliikin, kun se lisätään näytteeseen`,
+    PULUN_SIMPUKKA.test(vertailu) && !PULUN_SIMPUKKA.test(sarja[0]?.sivunTeksti ?? ''),
+    `mitta ei erota tiloja (näytteitä ${sarja.length})`);
 
   /* --- 4–6. KAMERA: zoomin kesto, tasainen lasku, saapumishetki --- */
   const vaiheet = kamerasarja.map((r) => r.vaiheet).find(Boolean) ?? null;
@@ -686,8 +710,18 @@ async function mittaa(leveys, korkeus) {
   await s.waitForTimeout(600);
   const arabia = await s.evaluate(NAYTE);
   await s.screenshot({ path: join(ULOS, `savuke-ihmisen-kappaleet-${leveys}.jpg`), type: 'jpeg', quality: 72 });
-  vaadi(`${leveys}px: Arabia-jaksossa laatikko on matala eikä simpukkavirkettä ole`,
-    arabia.jakso === 'arabia' && !SIMPUKKA.test(arabia.teksti)
+  /*
+   * 2b KERTOJAN VIRKE ON RUUDULLA. Arabia-kappale jakautuu kolmeen
+   * laatikkoon, ja simpukkavirke on niistä ENSIMMÄISESSÄ (osa 0), joten
+   * se mitataan kaanonin osista eikä pysäytyshetkeen osuneesta
+   * laatikosta — pysäytys voi osua mihin tahansa kolmesta.
+   */
+  const arabianOsat = KAIKKI_OSAT.filter((o) => o.jakso === 'arabia');
+  vaadi(`${leveys}px: kertojan simpukkavirke on Arabia-jakson tekstissä`,
+    arabianOsat.some((o) => KERTOJAN_SIMPUKKA.test(o.teksti)),
+    JSON.stringify(arabianOsat.map((o) => o.teksti.slice(0, 50))));
+  vaadi(`${leveys}px: Arabia-jaksossa laatikko on matala eikä pulu näy`,
+    arabia.jakso === 'arabia' && !PULUN_SIMPUKKA.test(arabia.sivunTeksti ?? '')
       && arabia.laatikko <= arabia.kartta * 0.3 && arabia.puluNakyy === false,
     JSON.stringify({
       teksti: arabia.teksti.slice(0, 60), laatikko: arabia.laatikko, kartta: arabia.kartta,

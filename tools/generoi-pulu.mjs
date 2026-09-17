@@ -935,13 +935,23 @@ export function linssinRepliikit(linssi) {
   const kertomus = LINSSIEN_KERTOMUKSET[linssi];
   if (!kertomus) return [];
   const taulussa = LIVIAN_LINSSILAHTEET[linssi] ?? [];
+  /*
+   * VARATTU PAIKKA ON TYHJÄ RIVI — sama sääntö kuin kaupungeilla
+   * (17.9.2026: `ranta`-jakson välihuomio poistettiin kaanonista,
+   * mutta numero 1 jää varatuksi). Varattu ei ole jakso, joten sitä ei
+   * verrata kaanoniin eikä sille haeta tekstiä; tyhjä rivi karsiutuu
+   * äänitettävien listalta (js/liviapuhe.js livianAanitykset) mutta
+   * pitää järjestysnumeron.
+   */
+  const jaksot = taulussa.filter((tunnus) => tunnus !== LIVIAN_VARATTU);
   const kaanonissa = kertomus.filter((jakso) => jakso?.pulu).map((jakso) => jakso.id);
-  if (taulussa.join(',') !== kaanonissa.join(',')) {
+  if (jaksot.join(',') !== kaanonissa.join(',')) {
     throw new Error(`${linssi}: js/liviapuhe.js LIVIAN_LINSSILAHTEET lupaa jaksot `
-      + `[${taulussa.join(', ')}], mutta kaanonissa on pulu-kenttä jaksoissa `
+      + `[${jaksot.join(', ')}], mutta kaanonissa on pulu-kenttä jaksoissa `
       + `[${kaanonissa.join(', ')}] — korjaa taulu tai kertomus ennen ajoa.`);
   }
-  return taulussa.map((tunnus) => String(kertomus.find((j) => j.id === tunnus)?.pulu ?? '').trim());
+  return taulussa.map((tunnus) => (tunnus === LIVIAN_VARATTU ? ''
+    : String(kertomus.find((j) => j.id === tunnus)?.pulu ?? '').trim()));
 }
 
 /**

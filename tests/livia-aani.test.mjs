@@ -68,7 +68,7 @@ const KAUPUNKIREPLIIKKEJA = Object.keys(LIVIAN_KAUPUNKILAHTEET)
  * äänite jokaista kaanonin `pulu`-kenttää kohti.
  */
 const LINSSIREPLIIKKEJA = Object.values(LIVIAN_LINSSILAHTEET)
-  .reduce((summa, jaksot) => summa + jaksot.length, 0);
+  .reduce((summa, jaksot) => summa + jaksot.filter((j) => j !== LIVIAN_VARATTU).length, 0);
 
 const lue = (polku) => readFileSync(new URL(polku, import.meta.url), 'utf8');
 
