@@ -2267,7 +2267,12 @@ export async function avaaPallolauta(ui) {
         // ruutupisteeseen, jolloin lepotesti vertaa oikeaan lukuun.
         ladoLevossa?.();
         const avautui = Number.isFinite(k.lat) && Number.isFinite(k.lon)
-          && nostot.avaaLiuskaKaupungista?.(k.lat, k.lon, { liiku: Boolean(siirto) });
+          && nostot.avaaLiuskaKaupungista?.(k.lat, k.lon, {
+            liiku: Boolean(siirto),
+            // Nimi erottaa laudan kaupungin nostokerroksen naapurista
+            // (ks. RIVIN ON OLTAVA SAMA KAUPUNKI, nostot.js).
+            nimi: city.name,
+          });
         if (avautui) {
           // Liuskan yläryhmä koskee SITÄ kaupunkia, jonka merkistä se
           // aukesi — ei pelaajan omaa (ks. napautaPintaan).

@@ -256,3 +256,236 @@ siivouksen jälkeen.
 `css/styles.css`, tämä raportti.
 
 **Vaatii versionoston**; `tools/uusi-versio.mjs` on ajamatta.
+
+---
+
+# Erä 3 (Opus-agentti 18.9.2026 klo 00.40 Suomen aikaa)
+
+Tässä erässä tehtiin kohdat 1 (liuska JOKAISESTA kaupungista), 3
+(rivien porrastus), 8 (turisti-infon kyltti pois) ja 9 (kohdekartta
+pois lehdestä), sekä kohdan 5 mittaus: savukkeiden vartiot kirjoitettiin
+liuskalle ja **ajettiin**. Kahden edellisen erän suurin puute — mittaus
+puuttui kokonaan — on tässä korjattu.
+
+## 1. Mittaus (tehtiin ENSIN, ja se löysi kaksi vikaa)
+
+`tools/savukkeet/savuke-pariisi-lahizoom.mjs` sai vartiot 8a–8h ja
+vanhentuneet 4b, 7d, 7f, 7g, 7h, 7i kirjaavat nyt INFO-rivin
+`VANHENTUNUT VARTIO` perusteluineen (ne lukitsivat poistuneen
+käyttöliittymän, eivät vikaa). **`sarjat.jsonia` EI muutettu.**
+
+| vartio | väite (PAATOKSET 34) |
+| --- | --- |
+| 8a | kaupungin sisäisiä nostomerkkejä kartalla 0 — kolmella zoomilla |
+| 8b | Versailles, Chartres ja Chambord ovat kartalla (k. 4) |
+| 8c | kaupunkimerkin napautus ajaa kameran < 600 ms ja avaa liuskan |
+| 8d | liuska kokonaan ruudussa, ei nimen eikä nappulan päällä (k. 10) |
+| 8e | yläryhmä on 3 riviä (k. 8) |
+| 8f | kategorioita ≥ 2 ja otsikoiden lukumäärien summa = kohderivien määrä |
+| 8g | kategorian avaus näyttää kohteet, toisen avaus sulkee edellisen |
+| 8h | kohteen napautus avaa kortin ja liuska sulkeutuu |
+
+### Ensimmäinen ajo löysi kaksi vikaa — MITTARISSA, ei pelissä
+
+1. **Vertailuluku tuli väärästä paikasta.** 8f vertasi kategorioiden
+   summaa `nostot.osumat()`in sisäisiin nostoihin, ja mittari näytti
+   *"sisäisiä kartalla 0 (kaikkiaan 0)"*. `osumat()` ON kartan lista,
+   josta kaupungin sisäiset nostot on jo pudotettu — eli juuri se, mitä
+   8a väittää. Vertailuluku luetaan nyt SISÄLLÖSTÄ: jokainen kategoria
+   avataan kerran ja sen kohderivit lasketaan, ja vartio kaatuu, jos
+   otsikon luku ja rivien määrä eroavat.
+2. **Yksi napautus mittasi nielua.** 390 px:n ajo kirjasi *"liuska ei
+   auennut"*. Syy on pelin oma portti: juuri suljetun kortin jälkeen
+   seuraava napautus nielaistaan (`js/pallolauta/lauta.js`
+   `napautaPintaan`, `korttiOliAuki`) — sama portti, joka estää kortin
+   sulkemista avaamasta uutta. Se ei ole liuskan vika, joten 8c yrittää
+   napautusta kahdesti ja mittaa keston siitä napautuksesta, joka meni
+   läpi.
+
+Molemmat korjattiin ja sarja ajettiin uudestaan (ohjeen sallima yksi
+uusinta häilyvälle mitalle).
+
+## 2. Liuska JOKAISESTA kaupungista (kohta 1)
+
+Erä 2 oletti *"liuska avautuu vain pelaajan omasta kaupungista"*.
+Päätöksen kohta 1 sanoo jokainen kaupunki, joten oletus purettiin:
+
+- `js/pallolauta/lauta.js` `napautaKaupunki`: sama kamera-ajo ja liuskan
+  avaus AJON JÄLKEEN koskee nyt kaikkia kaupunkeja, ei vain omaa.
+- **Siirtyminen ei kadonnut.** Muiden kaupunkien napautus oli ennen
+  suoraan `ui.doMove`; nyt se on liuskan rivi **"Liiku tänne"**
+  (`js/pallolauta/kaupunkiliuska.js` `LIIKU_NIMIO`) yläryhmän jatkona.
+  Rivi on olemassa VAIN silloin, kun siirto on oikeasti tarjolla
+  (`game.moveOptions`), joten se ei ole yläryhmän neljäs rivi:
+  `ylaryhmanMaara` laskee yhä kolme (kohta 8, vartio 8e).
+- **Yläryhmä koskee SITÄ kaupunkia, jonka merkistä liuska aukesi.**
+  Lauta muistaa sen (`liuskanKaupunki`); ennen rivit käyttivät
+  `game.cityOf()`ia, joka olisi ollut väärä vastaus heti, kun liuska
+  avattiin naapurista.
+- Varapolku säilyy: jos kaupunkirivi ei ole ruudulla (pallon takana),
+  siirto tehdään suoraan ja oma kaupunki avaa vanhan tiiviin etusivun.
+
+## 3. Kartan ja lehden siivous (kohdat 3, 8 ja 9)
+
+- **Turisti-infon kyltti pois kartalta.** `js/pallolauta/lauta.js`
+  `KYLTTI_KARTALLA = false`: opas avataan liuskan Turistiopas-rivistä,
+  joten kartalla kyltti oli sama asia kahdesti — ja juuri se kilpaili
+  sormesta kaupungin ja nostojen kanssa. Asentokone (`KYLTIN_LADONTA`,
+  `js/kaupunkinosto.js`) jätettiin paikalleen sammutettuna: sen mitattu
+  asentojärjestys on kallis tieto, ja koneen purku koskisi
+  osumakilpailua, jota tämä erä ei mittaa. **Purku on oma eränsä.**
+- **"Kaupunki kartalla" pois kaupunkilehdestä.** `js/lehti.js`
+  `KOHDEKARTTA_LEHDESSA = false`. Matkailijalle-osio JÄÄ etusivulle: se
+  ei ole kartta eikä liuskan rivi. `js/lukija.js` ja `js/nahtavyydet.js`
+  eivät tarvinneet muutosta — sisältö elää liuskan Nähtävyydet-rivin
+  takana samana.
+- **Rivien 30 ms porrastus.** `css/styles.css` lukee `animation-delay:
+  calc(var(--liuskan-rivi, 0) * 30ms)`, ja piirto asettaa rivin
+  järjestysluvun (`js/pallolauta/aihemerkit.js` `piirraViuhka`).
+  Järjestysluku tulee piirrosta eikä `:nth-child`istä, koska haitarin
+  avaukset vaihtavat rivien määrää kesken listan.
+  `prefers-reduced-motion: reduce` sammuttaa porrastuksen entiseen
+  tapaan (sama sääntölohko).
+
+## 4. savuke-kaupunkipopup.mjs (kohta 5)
+
+Savukkeen vanha selkäranka oli iso pop-up ja sen vieressä turisti-infon
+kyltti. Kumpaakaan ei enää ole, joten Pariisin ja Marseillen vartiot
+käännettiin liuskaan:
+
+- **uudet vartiot:** turisti-infon kylttiä EI ole kartalla;
+  kaupunkimerkin napautus avaa liuskan eikä isoa pop-upia; liuskan
+  yläryhmä on 3 riviä.
+- **vanhentuneet vartiot kirjaavat INFO-rivin** (`VANHENTUNUT VARTIO`)
+  syineen: kyltin mitat ja olemassaolo, ison pop-upin avautuminen,
+  Pulun paneelin väistö, rasti, turisti-infon napautus kartalta.
+
+## 5. Vanhentuneet tunnetut punaiset (`sarjat.jsonia` EI muutettu)
+
+| tiedosto | tunnettu punainen `sarjat.jsonissa` | miksi vanhentunut |
+| --- | --- | --- |
+| `savuke-pariisi-lahizoom.mjs` | `"7e. tyopoyta: kyltin laatikko on vapaa"` | kyltti ei ole enää kartalla, joten sen laatikkoa ei ole olemassa; 7e mittaa poistunutta merkkiä |
+| `savuke-kaupunkipopup.mjs` | `tunnetutPunaisetMaara: 17` ja `"merkki skaalautuu zoomatessa"` | perusjoukko on ison pop-upin ja kyltin lukumäärä; molemmat poistuivat, joten 17 ei ole enää oikea vertailuluku eikä kyltin zoomimitta ole olemassa |
+
+**Fable päättää, mitä sarjat.jsoniin kirjataan.** Ehdotus: `7e` pois
+`pariisi-lahizoomin` listalta ja `kaupunkipopupin`
+`tunnetutPunaisetMaara` laskettava uudelleen ensimmäisestä vihreästä
+ajosta — vanha 17 on eri pelin luku.
+
+## 6. MITTAUKSEN TULOS: liuska EI aukea — ja syy on mitattu
+
+`savuke-pariisi-lahizoom.mjs`, molemmat ruudut, yksi ajo:
+**55/80 vartiota läpi.** Vartiot 8c–8h ovat PUNAISIA molemmilla
+ruuduilla, samasta syystä: **liuska ei auennut kertaakaan.**
+
+```
+FAIL  8c. puhelin:   ... — ajo — ms, rivejä 0
+FAIL  8e. puhelin:   liuskan yläryhmä on 3 riviä — rivejä 0
+FAIL  8c. tyopoyta:  ... — ajo — ms, rivejä 0
+INFO  tyopoyta · liuska zoom 0.34: kaupunkiriviä ei ollut
+```
+
+**Kaappaus kertoo syyn** (`pariisi-liuska-auki-390.png`): napautuksesta
+aukesi **Lillen nostokortti**, ei Pariisin liuska.
+
+### Juurisyy (mitattu, ei arvattu)
+
+`js/pallolauta/nostot.js` `avaaLiuskaKaupungista` etsii liuskan
+ankkurin **nostokerroksen omista `kaupunki`-riveistä** (`osumat()`,
+`o.kaupunki`). Ne EIVÄT ole pelilaudan kaupunkeja vaan *näkyviä
+kaupunkeja* — sisältörivejä (esim. Lille,
+`js/packs/nakyvat-kaupungit-fra.js`), joilla on oma kortti. Pelaajan
+napauttama Pariisi on **laudan** kaupunki (`js/pallolauta/lauta.js`
+`kaupunkiId`, `lahinMerkki` → `{ laji: 'kaupunki' }`), ja sillä ei
+lähizoomissa ole lainkaan riviä nostokerroksessa:
+`INFO tyopoyta · liuska zoom 0.34: kaupunkiriviä ei ollut`.
+
+Seuraus on kaksisuuntainen:
+
+1. **Liuska ei aukea pelaajan omasta kaupungista.** `napautaKaupunki`
+   ajaa kameran, kutsuu `avaaLiuskaKaupungista(k.lat, k.lon)`, joka ei
+   löydä 60 px:n säteeltä yhtään nostokerroksen kaupunkiriviä ja
+   palauttaa epätoden → varapolku avaa vanhan tiiviin etusivun.
+   Erä 2:n liuska on siis kytketty päälle koodissa mutta **ei pääse
+   ruudulle lainkaan** — juuri tämän mittaus paljasti.
+2. **Väärä merkki vie napautuksen.** 390 px:n ajossa lähin
+   nostokerroksen kaupunkirivi oli Lille, jonka napautus avasi Lillen
+   kortin.
+
+**Tämä on suunnittelutason asia eikä yhden rivin korjaus**, koska
+liuska piirretään NOSTOKERROKSEN merkin omaan elementtiin
+(`asetteleNosto`, `.pallolauta-viuhka`): laudan kaupungilla ei ole
+sellaista elementtiä, johon liuska voisi ripustaa. Vaihtoehdot Fablelle:
+(a) laudan kaupungille annetaan oma rivi nostokerroksessa (silloin
+myös liuska, osumapinta ja lepotesti tulevat ilmaiseksi), tai
+(b) liuska piirretään laudan omaan merkkikerrokseen, jolloin
+`viuhkanAsemat`-kone pitää antaa sen käyttöön erikseen.
+**En valinnut kumpaakaan itse** — se muuttaisi kerrosrajan, ja
+päätös kohta 2 (*"kaupunki on yksi piste"*) koskee juuri sitä rajaa.
+
+**Yhden asian korjasin mittauksen nojalla:** `avaaLiuskaKaupungista`
+otti *lähimmän* kaupunkirivin 60 px:n säteeltä, eli se olisi avannut
+Pariisin kohdalla LILLEN liuskan. Nyt rivin on oltava sama kaupunki
+(nimi tulee laudalta). Se ei saa liuskaa aukeamaan — juurisyy on yhä
+auki — mutta poistaa polun, jossa liuska näyttäisi väärän kaupungin
+sisällön. Testit ajettiin korjauksen jälkeen uudestaan: **0 punaista.**
+
+### Kaksi muuta vartiota vanhentui mittauksessa
+
+- **`4.` (aito napautus avaa noston kortin) on nyt vanhentunut**, ei
+  vika: se napauttaa Pariisin OMIA nostoja (`PARIISIN_NOSTOT`), jotka
+  päätöksen kohta 3 siirsi kartalta liuskaan. `INFO napautukset: ei
+  yhtään` — merkkejä ei ole, koska niiden kuuluukin olla poissa. Sama
+  syy kuin 4b:llä; jätin sen ENNALLEEN, koska korvaaja on 8h eikä
+  vartion kaataminen itsestään ole tämän erän päätös.
+- **`8b.` (Versailles/Chartres/Chambord kartalla) on liian karkea
+  vartio:** se etsii nimiä DOMin nimiöistä, mutta aihenostojen ryhmitys
+  näyttää vain ryhmän ensimmäisen nimen (`Nimi…`). 390 px:llä löytyi
+  Chambord, 1400 px:llä ei yhtään, vaikka kohteet ovat kartalla
+  (`3f.` on vihreä). Vartio on korjattava lukemaan `nostot.osumat()`in
+  nimet, ei DOMin nimiöitä — kirjaan sen auki jääneeksi.
+
+## 7. Testit
+
+`node --test tests/*.test.mjs`: **3596 testiä, `# pass 3583`,
+`# fail 0`** (13 ohitettua). Lähdetekstilukkoja ei tarvinnut päivittää.
+
+## 8. KAAPPAUSPOLUT
+
+Kaappaukset ovat ajokansiossa (ei repossa):
+`/private/tmp/claude-501/-Users-samireivinen-Matkakirja-fable/`
+`1de1d7f9-1349-4671-ad36-3323aaf75d0f/scratchpad/kaappaukset/`
+
+- `pariisi-liuska-auki-390.png` — **tämän erän tärkein kuva**: liuskan
+  sijasta auki on Lillen nostokortti (ks. osio 6)
+- `pariisi-liuska-auki-1400.png`
+- `pariisi-liuska-kategoria-390.png`, `pariisi-liuska-kategoria-1400.png`
+  (kategorian avaus — tyhjät, koska liuska ei auennut)
+- `pariisi-lahizoom-390.png`, `pariisi-lahizoom-1400.png` — kartta ilman
+  turisti-infon kylttiä ja ilman kaupungin sisäisiä nostomerkkejä
+- Savukkeen koko tuloste: `.../scratchpad/savuke2.txt`
+
+## 9. Oletukset (päätin itse, ei AskUserQuestionia)
+
+1. **Kyltin ja kohdekartan sammutus nimetyllä vakiolla** (`KYLTTI_KARTALLA`,
+   `KOHDEKARTTA_LEHDESSA`) eikä koodin poistolla. Poisto koskisi
+   osumakilpailua ja lehden taittoa, joita tämä erä ei mittaa; nimetty
+   vakio näyttää sammutuksen syyn siinä kohdassa, jossa asia syntyi.
+   **Koneiden purku on oma eränsä.**
+2. **"Liiku tänne" ei ole yläryhmän neljäs rivi** vaan oma lajinsa, joka
+   on olemassa vain kun siirto on tarjolla — kohta 8 sanoo kolme riviä,
+   ja vartio 8e mittaa juuri sitä.
+3. **En korjannut juurisyytä** (osio 6), koska korjaus valitsee
+   kerrosrajan päätöksen kohdan 2 kohdalla. Puolivalmis valinta olisi
+   ollut pahempi kuin mitattu tieto siitä, mitä valinta maksaa.
+4. **Vartio 4 jätettiin ennalleen punaisena** (ks. osio 6).
+
+## 10. Muutetut tiedostot (erä 3)
+
+`js/pallolauta/lauta.js`, `js/pallolauta/nostot.js`,
+`js/pallolauta/kaupunkiliuska.js`, `js/pallolauta/aihemerkit.js`,
+`js/lehti.js`, `css/styles.css`,
+`tools/savukkeet/savuke-pariisi-lahizoom.mjs`,
+`tools/savukkeet/savuke-kaupunkipopup.mjs`, tämä raportti.
+
+**Vaatii versionoston**; `tools/uusi-versio.mjs` on ajamatta.

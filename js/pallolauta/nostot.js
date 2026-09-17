@@ -2427,6 +2427,18 @@ export function luoNostot({
       let parasMatka = Infinity;
       for (const o of osumat) {
         if (!o.kaupunki || !o.p) continue;
+        /*
+         * RIVIN ON OLTAVA SAMA KAUPUNKI, EI VAIN LÄHIN (mitattu
+         * 18.9.2026, savuke-pariisi-lahizoom 8c, kaappaus
+         * pariisi-liuska-auki-390.png): 60 px:n säde poimi Pariisin
+         * kohdalla LILLEN rivin, jolloin liuska olisi avannut väärän
+         * kaupungin sisällön. Nostokerroksen `kaupunki`-rivit ovat
+         * näkyviä kaupunkeja (js/packs/nakyvat-kaupungit-fra.js), eivät
+         * laudan kaupunkeja, joten pelkkä etäisyys ei kerro kummasta
+         * on kyse. Nimi tulee laudalta (js/pallolauta/lauta.js
+         * napautaKaupunki); ilman nimeä vanha säde jää voimaan.
+         */
+        if (valinnat.nimi && o.nimi && o.nimi !== valinnat.nimi) continue;
         const matka = Math.hypot(o.p.x - p.x, o.p.y - p.y);
         if (matka < parasMatka) { parasMatka = matka; paras = o; }
       }
