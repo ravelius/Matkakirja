@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1933, teksti: 'Astronautin kamera: kohdepisteen napautus osuu merkkiin' },
   { v: 1932, teksti: 'Nostolapun osuma: tasapeli omalla musteella (Mac-Chrome)' },
   { v: 1931, teksti: 'Astronautin kamera: pallo ei enää mustu uudelleenavauksessa' },
   { v: 1930, teksti: 'Turisti-kyltti: napautus, sama kerroin, siirtyy sivuun' },
