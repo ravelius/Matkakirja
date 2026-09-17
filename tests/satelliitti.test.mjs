@@ -1134,14 +1134,17 @@ test('minipulun napautus avaa pulun NORMAALIN chatin ehdotuksineen', async () =>
   }
   assert.equal(Object.keys(ASTRONAUTIN_KYSYMYKSET).length, 64);
   /*
-   * OMISTAJA 16.9.2026 klo 18.35 UTC (Raamattu LISÄYS 10, kohta 29):
-   * *"Pulun chatti pitäisi toimia normaalisti vaikka itse pulu olisi
-   * pienemmän kokoinen."* Kaksi reittiä, ja ero on tarkoituksellinen:
-   * EHDOTUSPILLERIN vastaus on esikirjoitettu aineisto (ei mallikutsua),
-   * VAPAA kysymys menee pelin omaa chattireittiä mallille.
+   * OMISTAJA 17.9.2026 klo 21.30 Suomen aikaa (Raamattu ASTRONAUTIN KAMERA
+   * LISAYS 14): *"ainoastaan kysymykset ovat etukäteen mietittyjä, mutta
+   * vastaukset haetaan samalla tapaa kuin muissakin pelin kohdissa."*
+   * YKSI reitti: ehdotuspilleri ja vapaa kysymys menevät molemmat
+   * lahetaKysymys-funktioon, joka kutsuu polloUlkoinenKysymys-reittiä.
+   * Esikirjoitettuja vastauksia ei näytetä (haeAstronautinVastaus ei
+   * ole enää satelliitti.js:n käytössä).
    */
-  assert.match(lahde, /haeAstronautinVastaus\(kohde\.tunnus, kysymys\)/);
-  assert.match(lahde, /lisaaKupla\('pulu', tieto\?\.vastaus/);
+  assert.doesNotMatch(lahde, /haeAstronautinVastaus/);
+  assert.match(lahde, /const vastaaKysymykseen = \(kysymys, painike\) => \{[\s\S]*?lahetaKysymys\(kysymys\);/);
+  assert.match(lahde, /lahetaKysymys\(pulunKentta\.value\)/);
   // Teksti ladotaan tekstisolmuna, ei innerHTML:nä.
   assert.match(lahde, /kupla\.replaceChildren\(document\.createTextNode\(String\(teksti/);
   // Vapaa kenttä + lähetysnappi, ja kysymys menee SAMAA reittiä kuin kartalla.
