@@ -8499,8 +8499,11 @@ export const RAAMATTU = {
           + 'kirjataan), paperin ylareuna kuvan alareunan alapuolella '
           + '(limitys > 0 px, ei rakoa), Ohita-teksti nakyy ja vie kartalle '
           + 'alle 1 s:ssa luennan pysahtyessa, pikkukuvat matkakirjan lopussa '
-          + 'auki-tilassa ja poissa pienennettyna. Tila: kirjattu, Fable '
-          + 'vahvistaa tulkinnan; tyo Opus-agentilla.',
+          + 'auki-tilassa ja poissa pienennettyna. TARKENNUS (omistaja 17.9.2026 '
+          + 'klo 22.10 Suomen aikaa, kortti): Ohita PYSAYTTAA luennan - aani ja '
+          + 'kuvat loppuvat heti, kartta nakyy; isoisan ja pulun tekstit jaavat '
+          + 'luettaviksi matkakirjaan, pulun luentareaktiot eivat enaa tule. '
+          + 'Tila: tyo Opus-agentilla.',
         'KARTTAUUDISTUKSEN PAATOKSET 34: KAUPUNKI ON YKSI PISTE, LISTA '
           + 'KATEGORIOITTAIN; KAUPUNGIN ULKOPUOLISET NOSTOT JAAVAT KARTALLE '
           + '(omistaja 17.9.2026 klo 21.45 Suomen aikaa, sanatarkasti: '
