@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1928, teksti: 'Ihmisen matka: kertojan simpukkavirke takaisin, pulun pois' },
   { v: 1927, teksti: 'Pariisin nostot aiheittain nimiöllä, turisti-kyltti kuriin' },
   { v: 1926, teksti: 'Astronautin kamera WebAppissa, Ihmisen matka rauhallisemmin' },
   { v: 1925, teksti: 'Topografialinssi ilman tökkimistä, Pariisin nostot näkyviin' },

@@ -47,7 +47,9 @@
  *      ruudun leveydestä); kohteettomalla jaksolla se on poissa.
  *   6. KELLO: lukema etenee (pienenee) ja AIKAHYPYSSÄ kelaa taaksepäin
  *      14 500 → 50 000.
- *   7. PULU: välihuomiot sanotaan (neljä kuplaa) eikä esitys pysähdy.
+ *   7. PULU: välihuomiot sanotaan (KOLME kuplaa: denisova, beringia,
+ *      loppu) eikä esitys pysähdy. Rannan *"Simpukoita. Hyvä alku."*
+ *      poistettiin kaanonista 17.9.2026 omistajan korjauksella.
  *   7b. AIKASELAIN (7.9.2026): nauha on pimeässä piilossa mutta
  *      rakennettu (yksi viiva per jakso, 21 kpl), ja sen valinta seuraa
  *      esitystä jakso jaksolta viimeiseen asti. Aito veto on savukkeessa

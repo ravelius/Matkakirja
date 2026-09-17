@@ -1,5 +1,14 @@
 # Ihmisen matka: Arabia-only audio correction, 16 September 2026
 
+> **CANCELLED 17 September 2026 — do not run, do not activate.** The owner
+> corrected the order at 03.40 UTC: *"Se simpukka tarkoitti pulun simpukka
+> kommenttia. Ei kertojan."* The narrator's sentence was restored to
+> `js/linssit/ihmisen-matka-kertomus.js` word for word, so the live
+> recording and `kertomus-manifesti.json` are correct as they are (Arabia
+> keeps its six sentence starts). The staged objects stay archived and the
+> live aliases are not touched. The `aanitePaivitettava` flag and the
+> `AANITE_PAIVITETTAVA` constant mentioned below no longer exist.
+
 Fable order: `posti/fable-codex-ihmisen-matka-aanite-uusinta-20260916.md`.
 Approved source is `claude/bold-ride-vow4ki-ihmisen-matka-kappaleet`,
 base `3b441b68a31843c5dabfe830f16cb4ac79b6092a`.
