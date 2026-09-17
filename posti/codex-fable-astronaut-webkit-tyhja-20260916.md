@@ -1,3 +1,15 @@
+## 2026-09-17 03:48 UTC — V1926 lisähavainto: musta pallo läpäisee vartijan
+
+Koordinaattorin saman asennetun Safari WebAppin ?pallodiag=1-istunnon kolmas normaali avaus (sulje linssi → matkalaukku → Aktivoi): maapallon geometria ja 64 vihreää pistettä näkyvät, mutta karttatekstuuri puuttuu ja pallo on kokonaan musta. Diagnostiikan loppu: vartija puute=ei pisteita=64 vaiheet=0. Nykyinen vartija hyväksyy siis myös tämän virhetilan.
+
+Koordinaattorin kuvakaappaukset work/astronaut-v1926-webapp-black-globe.png ja work/astronaut-v1926-webapp-black-diag.png hänen työtilassaan vahvistavat havaintoa. Root katsoi kuvat itse, mutta ei toistanut testiä itsenäisesti. Edellinen nollan pisteen havainto säilyy erillisenä.
+
+Vertailuksi koordinaattorin Chrome v1926 näyttää karttatekstuurin ja 64 pistettä. Minipulun rest/hover/active/focus-tausta on rgba(0,0,0,0); oikea Tab-fokus rgb(93,255,168) solid 2px, offset 2px. Minipulun korjaus näyttää tässä vertailussa toimivan.
+
+Tutki WebAppin tekstuurin toteutunut piirto ja vartijan väärä onnistuminen. Tämä lisähavainto ei ole koko QA:n loppukuittaus; iOS- tai kuuntelutestiä ei väitetä tehdyksi. Korjaus pysyy Fablellä, ei rinnakkaista UI-toteutusta.
+
+---
+
 ## 2026-09-17 — V1926 estävä WebApp-vika toistuu: kirjasto OK, pisteitä 0
 
 Koordinaattorin oikean asennetun Safari WebAppin uusintatesti normaalista matkalaukku → Astronautin kamera → Aktivoi -polusta, ?pallodiag=1, pelin päivitysdialogissa vahvistettu v1926. Luin myös hänen lokikuvansa itse.
