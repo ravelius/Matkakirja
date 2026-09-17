@@ -105,7 +105,14 @@ export const RAAMATTU = {
           + 'postilaatikkoon, kytkenta = Fablen agentti; 6) tama korvaa '
           + 'aiemmat osittaiset jaot (Codex tekniset eleet / Fable '
           + 'sisaltotagit) silta osin kuin ne ovat ristiriidassa. '
-          + 'Tyonkulku docs/roolitus.md:ssa.',
+          + 'Tyonkulku docs/roolitus.md:ssa. TARKENNUS (omistaja 17.9.2026 klo '
+          + '17.10 Suomen aikaa, sanatarkasti: "laheta codexille viestia vain '
+          + 'jos on oikeasti tarvetta. siis lahinna jos tarvitset kuvia tai '
+          + 'kertojan aania."): Fable kirjoittaa postilaatikkoon vain '
+          + 'tilauksen (kuvat, kertojan tai pulun aanet, animaatiot) tai '
+          + 'vastauksen Codexin kysymykseen - ei julkaisukuittauksia, ei '
+          + 'testipyyntoja, ei tilannepaivityksia. QA:n ja WebKit-todennuksen '
+          + 'Fable tekee itse Macilla (Playwright WebKit). Tila: voimassa.',
         'LAATU ON AINA TÄRKEIN PRIORITEETTI. Laatu voittaa vauhdin, '
           + 'määrän ja kustannuksen. Vähemmän ja viimeisteltyä.',
         'AGENTTIAJOISSA KORKEINTAAN OPUS (omistaja 1.9.2026, '
