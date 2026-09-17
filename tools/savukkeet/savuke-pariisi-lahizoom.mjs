@@ -175,10 +175,20 @@ const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] && process.argv[2] !== '-' ? process.argv[2] : null;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
-const RUUDUT = [
+const KAIKKI_RUUDUT = [
   { nimi: 'puhelin', w: 390, h: 844 },
   { nimi: 'tyopoyta', w: 1400, h: 900 },
 ];
+/*
+ * YKSI RUUTU KERRALLAAN (`SAVUKE_RUUTU=390`). Kohdennettu uusinta on
+ * eri asia kuin koko sarja: kun yksi vartio häilyy tai korjataan, sen
+ * ruutu on ajettava uudestaan ilman että toinen ruutu ajetaan turhaan
+ * (44 s saapumista + zoomit kumpaakin kohti). Ilman muuttujaa ajetaan
+ * molemmat, kuten ennenkin.
+ */
+const RUUDUT = process.env.SAVUKE_RUUTU
+  ? KAIKKI_RUUDUT.filter((r) => String(r.w) === String(process.env.SAVUKE_RUUTU))
+  : KAIKKI_RUUDUT;
 /**
  * ZOOMATAAN SAMAAN KARTTAMITTAAN MOLEMMILLA RUUDUILLA, EI SAMAAN
  * MÄÄRÄÄN PORTAITA.
@@ -1665,10 +1675,30 @@ for (const ruutu of RUUDUT) {
   /* 8c-8h: liuska auki kaupunkimerkin napautuksesta. */
   await suljeKortti(sivu);
   await sivu.waitForTimeout(300);
-  const liuskanKaupunkiId = await sivu.evaluate(
-    () => (window.matkakirja.ui.pallolauta.nostot.osumat?.() ?? [])
-      .find((o) => o.kaupunki)?.id ?? null,
-  );
+  /*
+   * PELAAJAN OMA KAUPUNKI, EI LISTAN ENSIMMÄINEN (korjattu 18.9.2026).
+   * Ensimmäinen `kaupunki`-rivi oli Lille — nostokerroksen kaupungit
+   * ovat NÄKYVIÄ kaupunkeja (js/packs/nakyvat-kaupungit-fra.js), eivät
+   * laudan kaupunkeja, joten vartio napautti väärää merkkiä ja avasi
+   * Lillen kortin. Rivi haetaan nyt nimellä pelaajan omasta
+   * kaupungista, ja jos riviä ei ole, se kirjataan sellaisenaan.
+   */
+  const kaupunkiTieto = await sivu.evaluate(() => {
+    const ui = window.matkakirja.ui;
+    const oma = ui.game?.cityOf?.() ?? null;
+    const osumat = ui.pallolauta.nostot.osumat?.() ?? [];
+    const rivit = osumat.filter((o) => o.kaupunki);
+    const rivi = oma ? rivit.find((o) => o.nimi === oma.name) : null;
+    return {
+      oma: oma?.name ?? null,
+      kaupunkirivit: rivit.map((o) => o.nimi ?? o.id),
+      id: rivi?.id ?? null,
+    };
+  });
+  tieto(`${ruutu.nimi} · liuskan kaupunkirivi`,
+    `oma ${kaupunkiTieto.oma ?? '—'}, rivejä [${kaupunkiTieto.kaupunkirivit.join(', ')}], `
+    + `osuma ${kaupunkiTieto.id ?? 'EI RIVIÄ'}`);
+  const liuskanKaupunkiId = kaupunkiTieto.id;
   const kPiste = liuskanKaupunkiId
     ? await odotaAsettunut(sivu, () => merkinPiste(sivu, liuskanKaupunkiId)) : null;
   let liuskaTulos = null;
