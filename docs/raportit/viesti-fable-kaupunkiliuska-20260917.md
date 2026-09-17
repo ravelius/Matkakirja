@@ -86,6 +86,22 @@ yläryhmä 3 riviä myös nostottomalla kaupungilla, haitari avaa yhden.
    kartalla, yläryhmä 3, kategorioita ≥ 2 ja summa = nostojen määrä,
    haitari, liuska ruudun sisällä, kartan napautus sulkee).
 
+## 3b. JÄI AUKI: kohta 10, kamera ajaa liuskalle tilaa
+
+Fablen lisäys kesken erän (PAATOKSET 34 kohta 10, omistaja: *"Kun
+pelaaja painaa pariisia, niin kartta voisi ajaa itsensa sellaiseen
+paikkaan missa nostot mahtuvat aukeamaan hyvin"*) **jäi auki** —
+aikakatto oli jo täynnä, kun se saapui. Se kuuluu samaan erään kuin
+kohdat 1–3 yllä, ja kone on jo olemassa: `viuhkanAsemat` palauttaa
+`sakko`n, joka kertoo, paljonko lista jää ruudun ulkopuolelle ja
+esteiden päälle — kameran tavoiteasento on se, jolla sakko on 0.
+Ajo on `kamera.ajaKamera` (js/pallolauta/lauta.js, sama kuin
+kaupunkia napautettaessa nyt, < 600 ms), zoomia vain jos siirto
+yksin ei riitä, ja liuska avataan ajon päätyttyä (lepotesti sulkisi
+sen muuten heti, ks. `VIUHKAN_LEPO_PX`). Mittaan lisättävät vartiot:
+390 px liuska kokonaan ruudussa ja avattu kategoria ilman sisäistä
+kelausta, kun rivejä ≤ 8.
+
 ## 4. Vanhentuneet savukevartiot (EN muuttanut sarjat.jsonia)
 
 Nämä ovat punaisia tai muuttuvat punaisiksi liuskan myötä — ne
