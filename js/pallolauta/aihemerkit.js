@@ -234,6 +234,14 @@ export const VIUHKAN_SADE_PX = 26;
  * vasta merkin alapuolelta eikä merkin päältä.
  */
 export const VIUHKAN_ALAS_ALKU_PX = VIUHKAN_RIVI_PX + 6;
+/** Tihein sallittu riviväli: täsmälleen nimiörivin korkeus (px). */
+export const VIUHKAN_TIHEIN_VALI_PX = 2 * VIUHKAN_RIVI_PX;
+
+/** Merkin alapuolelle jäävä pystytila ruudun alalaitaan asti (px). */
+function alasTila(p, ruutu, vara = VIUHKAN_REUNAVARA_PX) {
+  return Math.max(0, ((ruutu?.korkeus ?? 0) - vara - VIUHKAN_RIVI_PX)
+    - ((p?.y ?? 0) + VIUHKAN_ALAS_ALKU_PX));
+}
 /** Reunavara: näin lähelle ruudun laitaa lista saa yltää (px). */
 export const VIUHKAN_REUNAVARA_PX = 10;
 /** Pehmeän pohjan levein vyö rivilaatikoiden ympärillä (px). */
@@ -329,11 +337,21 @@ export function viuhkanAsemat({
   }
   const leveys = Math.max(0, ...leveydet);
   const vara = VIUHKAN_REUNAVARA_PX;
-  // Rivien pystyväli kutistuu vain, jos lista ei muuten mahdu ruudulle
-  // (puhelimen 390 px:n ruudulla mahtuu yli 20 riviä).
+  /*
+   * Rivien pystyväli kutistuu vain, jos lista ei muuten mahdu ruudulle
+   * (puhelimen 390 px:n ruudulla mahtuu yli 20 riviä). ALASPÄIN
+   * kasvavalla listalla tila on se, mikä jää MERKIN ALAPUOLELLE: 390
+   * px:llä Pariisin pisin kategoria (13 riviä) jäi 3 px:n päähän
+   * mahtumisesta ja lista olisi muuten joko noussut kaupungin nimen
+   * päälle tai kelannut turhaan (mitattu 18.9.2026). Tiheinkään väli
+   * ei päästä rivejä päällekkäin: se on täsmälleen nimiörivin korkeus.
+   */
   const tila = Math.max(0, ruutu.korkeus - 2 * (vara + VIUHKAN_RIVI_PX));
+  const kaytettava = kasvu === 'alas'
+    ? Math.min(tila, alasTila(p, ruutu, vara))
+    : tila;
   const vali = n > 1
-    ? Math.max(2 * VIUHKAN_RIVI_PX, Math.min(VIUHKAN_VALI_PX, tila / (n - 1)))
+    ? Math.max(VIUHKAN_TIHEIN_VALI_PX, Math.min(VIUHKAN_VALI_PX, kaytettava / (n - 1)))
     : VIUHKAN_VALI_PX;
   const korkeus = (n - 1) * vali;
   const puolet = p.x <= ruutu.leveys / 2 ? ['oikea', 'vasen'] : ['vasen', 'oikea'];
@@ -417,10 +435,11 @@ export function viuhkanAsemat({
  * kohta 5). Tämä on se katto, jonka mukaan rivit rajataan.
  */
 export function alasMahtuvatRivit({ p, ruutu, vara = VIUHKAN_REUNAVARA_PX }) {
-  const ylin = (p?.y ?? 0) + VIUHKAN_ALAS_ALKU_PX;
-  const tilaa = ((ruutu?.korkeus ?? 0) - vara - VIUHKAN_RIVI_PX) - ylin;
-  if (!(tilaa >= 0)) return 0;
-  return Math.floor(tilaa / VIUHKAN_VALI_PX) + 1;
+  const tilaa = alasTila(p, ruutu, vara);
+  if (!(tilaa > 0)) return 0;
+  // Mitta on TIHEIN väli: lista kutistaa rivivälin ennen kuin kelaa,
+  // joten kelaus alkaa vasta kun tiheinkään lista ei mahdu.
+  return Math.floor(tilaa / VIUHKAN_TIHEIN_VALI_PX) + 1;
 }
 
 /** Listan pehmeän pohjan laatikko merkin omissa ruutupikseleissä. */

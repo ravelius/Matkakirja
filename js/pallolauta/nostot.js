@@ -2766,6 +2766,9 @@ export function luoNostot({
         maara: k.r.maara ?? null,
         sisennys: k.r.sisennys,
         auki: Boolean(k.r.auki),
+        // Onko rivillä avaaja (savukkeiden 8h: erottaa "napautus ei
+        // mennyt läpi" ja "nostolla ei ole korttia" toisistaan).
+        avattava: typeof k.r.nosto?.avaa === 'function',
         ...(l ?? {}),
       };
     }),

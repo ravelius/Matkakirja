@@ -1050,11 +1050,19 @@ for (const ruutu of RUUDUT) {
       if (!runko || runko.endsWith('.')) return true;
       return !siisti(a.jasentiedot[0]?.nimi).startsWith(runko);
     });
-    vaadi(`3e. ${ruutu.nimi} (${nakyma}): jokaisella aihenostolla on nimiö "Nimi${ELLIPSI}"`,
-      nostot.length > 0 && nimiovirheet.length === 0,
+    /*
+     * 3e. VANHENTUNUT VARTIONA, SÄILYY TIETONA (PAATOKSET 34 kohta 3,
+     * mitattu 18.9.2026 erässä 5). Vartio vaati, että Pariisissa ON
+     * aihenostoja; kerrosraja siirsi kaupungin sisäiset nostot
+     * liuskaan, joten niitä ei ole kartalla lainkaan ja väite kaatuisi
+     * aina. Nimiön MUOTO on silti mittaamisen arvoinen, jos aihenosto
+     * jossain näkymässä on — siksi tieto, ei poisto. Väitteen
+     * kaupungin sisällöstä esittää nyt 8f/8i.
+     */
+    tieto(`${ruutu.nimi} · ${nakyma} · 3e (INFO, vanhentunut): aihenoston nimiön muoto`,
       nostot.length
-        ? nimiovirheet.map((a) => `${a.id}="${a.nimi}"`).join(', ')
-        : 'aihenostoja ei ollut lainkaan');
+        ? `virheellisiä ${nimiovirheet.length}: ${nimiovirheet.map((a) => `${a.id}="${a.nimi}"`).join(', ') || 'ei yhtään'}`
+        : 'aihenostoja ei ollut lainkaan (kaupungin sisäiset ovat liuskassa)');
     /*
      * NIMIÖ MYÖS NÄKYY — MITATTUNA SIINÄ NÄKYMÄSSÄ, JOSTA PÄÄTÖS
      * TEHTIIN. Sovittelun viimeinen keino on yhä lapun piilotus
@@ -1092,21 +1100,28 @@ for (const ruutu of RUUDUT) {
         nimiollisia === 0 && mit.aihenimioitaDom === 0,
         `kerros ${nimiollisia}, DOM ${mit.aihenimioitaDom}`);
     } else {
-      vaadi(`3i. ${ruutu.nimi} (${nakyma}): jokaisella aihenostolla on nimiö näkyvissä`,
-        nostot.length > 0 && nimiollisia === nostot.length
-          && mit.aihenimioitaDom === mit.aihemerkit.length,
+      /*
+       * 3i (lähizoom). VANHENTUNUT VARTIONA, ks. 3e: väite vaati
+       * Pariisin aihenostoja, jotka kerrosraja siirsi liuskaan.
+       * Saapumisnäkymän haara (nolla nimiötä) on yhä vartio — se
+       * mittaa kynnystä, ei kaupungin sisältöä.
+       */
+      tieto(`${ruutu.nimi} · ${nakyma} · 3i (INFO, vanhentunut): aihenoston nimiö näkyvissä`,
         `kerros ${nimiollisia}/${nostot.length}, DOM ${mit.aihenimioitaDom}/`
         + `${mit.aihemerkit.length}`);
     }
     vaadi(`3e2. ${ruutu.nimi} (${nakyma}): pallossa ei ole lukumäärää`,
       mit.lukupalloja === 0, `${mit.lukupalloja} lukua kartalla`);
 
-    // 3e3. Omistajan oma esimerkki (kohta 8).
+    /*
+     * 3e3. VANHENTUNUT VARTIONA (ks. 3e). Omistajan oma esimerkki oli
+     * PARIISIN skandaalirykelmä, ja juuri se on nyt liuskan kategoria
+     * "Skandaalit (5)" — ei kartan aihemerkki. Sama sisältö mitataan
+     * vartioilla 8f ja 8i.
+     */
     const skandaalit = nostot.find((a) => a.aihe === 'skandaalit');
-    vaadi(`3e3. ${ruutu.nimi} (${nakyma}): skandaalirykelmän nimiö on `
-      + `"${OMISTAJAN_ESIMERKKI}${ELLIPSI}"`,
-      skandaalit?.nimi === `${OMISTAJAN_ESIMERKKI}${ELLIPSI}`,
-      `nimiö "${skandaalit?.nimi ?? '-'}"`);
+    tieto(`${ruutu.nimi} · ${nakyma} · 3e3 (INFO, vanhentunut): skandaalirykelmän nimiö`,
+      `odotus "${OMISTAJAN_ESIMERKKI}${ELLIPSI}", kartalla "${skandaalit?.nimi ?? '-'}"`);
 
     /*
      * 3h. AIHENOSTOT EIVÄT PEITÄ TOISIAAN. Rykelmä korvautuu viidellä
@@ -1168,11 +1183,16 @@ for (const ruutu of RUUDUT) {
   tieto(`${ruutu.nimi} · vastakoe ilman kaupungin aina-yhdistystä`,
     `aihenostoja ${ilmanKaupunkiaMaara} (säännön kanssa ${aihenostojaLahella}, `
     + `odotus ${odotusLahella})`);
-  vaadi(`3g. VASTAKOE ${ruutu.nimi}: ilman kaupungin aina-yhdistystä `
-    + 'aihenostojen määrä on väärä',
-    ilmanKaupunkiaMaara !== odotusLahella && aihenostojaLahella === odotusLahella,
+  /*
+   * 3g. VANHENTUNUT VASTAKOKEENA (PAATOKSET 34 kohta 3). Vastakoe
+   * mittaa EROA kaupungin rykelmän ryhmityksessä, mutta Pariisin
+   * rykelmää ei ole enää kartalla: molemmat luvut ovat nollia, joten
+   * "ero" ei voi syntyä eikä väite kerro säännöstä mitään. Luvut
+   * jäävät tiedoksi (yllä), jotta ero näkyisi, jos rykelmä palaisi.
+   */
+  tieto(`${ruutu.nimi} · 3g (INFO, vanhentunut vastakoe)`,
     `ilman sääntöä ${ilmanKaupunkiaMaara}, säännön kanssa ${aihenostojaLahella}, `
-    + `odotus ${odotusLahella}`);
+    + `odotus ${odotusLahella} — kaupungin rykelmä on liuskassa`);
 
   /* --- 6. TERÄVYYS: PORRAS RIITTÄÄ MERKIN NÄKYVÄÄN TARPEESEEN --- */
   const suurinMitta = Math.max(...m.merkit.map((x) => x.mitta), 0);
@@ -1885,7 +1905,59 @@ for (const ruutu of RUUDUT) {
   const toinenKat = (auki1?.rivit ?? []).filter((r) => r.laji === 'kategoria')[1];
   const auki2 = await napautaLiuskanRivi(toinenKat);
   const kohteita2 = (auki2?.rivit ?? []).filter((r) => r.laji === 'kohde');
+  /*
+   * ══ 8j. AVATTU KATEGORIA EI YLITÄ ESTEITÄ ═══════════════════════
+   *
+   * Fablen tarkistus 18.9.2026 (kaappaus pariisi-liuska-kategoria-390):
+   * *"kun kategoria avataan, liuska kasvaa ylöspäin ja peittää
+   * PARIISI-kaupunginnimen"*. 8d mittaa liuskan KIINNI-tilassa, joten
+   * se oli vihreä vaikka avattu lista nousi nimen päälle. Tämä vartio
+   * mittaa saman väitteen AVATTUNA ja nimenomaan SUURIMMALLA
+   * kategorialla — se on pahin tapaus 390 px:n ruudulla.
+   */
+  const isoinKat = [...katRivit].sort((a, b) => (b.maara ?? 0) - (a.maara ?? 0))[0];
+  const avattavaIso = (auki2?.rivit ?? [])
+    .filter((r) => r.laji === 'kategoria')
+    .find((r) => r.aihe === isoinKat?.aihe);
+  const isoAuki = (avattavaIso && avattavaIso.aihe !== auki2?.kategoria)
+    ? await napautaLiuskanRivi(avattavaIso)
+    : auki2;
   await kaappaa(sivu, `pariisi-liuska-kategoria-${ruutu.w}.png`);
+  const aukiMitta = await sivu.evaluate(() => {
+    const l = window.matkakirja.ui.pallolauta;
+    const r = l.pallo.renderer().domElement.getBoundingClientRect();
+    const laatikko = (el) => {
+      const b = el.getBoundingClientRect();
+      return {
+        x0: b.left - r.left, y0: b.top - r.top, x1: b.right - r.left, y1: b.bottom - r.top,
+      };
+    };
+    return {
+      ruutu: { leveys: r.width, korkeus: r.height },
+      rivit: l.nostot.liuskanRivit?.() ?? [],
+      nimet: [...document.querySelectorAll('.pallolauta-nimi')].map(laatikko),
+      nappulat: [...document.querySelectorAll('.pallolauta-nappula')].map(laatikko),
+    };
+  });
+  const aukiRivit = aukiMitta.rivit ?? [];
+  const aukiYli = aukiRivit.filter((b) => b.x0 < 0 || b.y0 < 0
+    || b.x1 > aukiMitta.ruutu.leveys || b.y1 > aukiMitta.ruutu.korkeus).map((b) => b.nimi);
+  const aukiPaalla = [];
+  for (const r of aukiRivit) {
+    for (const nimi of aukiMitta.nimet) if (limittyy(r, nimi)) aukiPaalla.push(`${r.nimi} × nimi`);
+    for (const nap of aukiMitta.nappulat) if (limittyy(r, nap)) aukiPaalla.push(`${r.nimi} × nappula`);
+  }
+  tieto(`${ruutu.nimi} · avattu liuska`,
+    `${isoAuki?.kategoria ?? '—'} (${isoinKat?.maara ?? '—'} kohdetta), rivejä `
+    + `${aukiRivit.length}, korkeus ${aukiRivit.length
+      ? Math.round(Math.max(...aukiRivit.map((b) => b.y1))
+        - Math.min(...aukiRivit.map((b) => b.y0)))
+      : 0} px, kelausrivejä ${aukiRivit.filter((r) => r.laji === 'kelaus').length}`);
+  vaadi(`8j. ${ruutu.nimi}: avattu kategoria pysyy ruudussa eikä nimen tai nappulan päällä`,
+    aukiRivit.length > 0 && Boolean(isoAuki?.kategoria)
+      && aukiYli.length === 0 && aukiPaalla.length === 0,
+    `kategoria ${isoAuki?.kategoria ?? '—'}, reunan yli: ${aukiYli.join(', ') || 'ei'}, `
+    + `musteen päällä: ${aukiPaalla.join(', ') || 'ei'}`);
   tieto(`${ruutu.nimi} · liuskan haitari`,
     `1. avaus ${auki1?.kategoria ?? '—'} → kohteita ${kohteita1.length}; `
     + `2. avaus ${auki2?.kategoria ?? '—'} → kohteita ${kohteita2.length}`);
@@ -1943,26 +2015,80 @@ for (const ruutu of RUUDUT) {
     `summa ${summa}, kategoriat `
     + `${katRivit.map((r) => `${r.nimi}`).join(', ') || '—'}`);
 
-  /* 8h. Kohteen napautus avaa kortin, ja liuska sulkeutuu sen mukana. */
-  const viimeisimmat = (await sivu.evaluate(
+  /*
+   * ══ 8h. KOHTEEN NAPAUTUS AVAA KORTIN (PAATOKSET 34 kohta 1) ═══════
+   *
+   * ODOTUS ON KYSELY, EI KELLOA. Erä 5:ssä vartio oli punainen
+   * (*"kohde Tuileries, kortti -, liuska kiinni: true"*): liuska
+   * sulkeutui eli napautus MENI läpi, mutta kiinteä 800 ms:n odotus
+   * luki kortin ennen kuin se oli DOMissa. Kortti luetaan siksi
+   * silmukassa, ja jos sitä ei kuulu, tuloste kertoo mitä sivulla on
+   * (`kerrokset`) — niin ero "ei auennut" ja "auennut väärä kortti"
+   * näkyy mittauksesta eikä päättelystä.
+   */
+  /*
+   * KOHDE VALITAAN ENSIMMÄISESTÄ KATEGORIASTA, EI SIITÄ, MIKÄ SATTUI
+   * JÄÄMÄÄN AUKI. 8f:n kierros päättyy viimeiseen kategoriaan, joka
+   * Pariisissa on "Kadonneet ihmeet" — ja sen nostoilla on OMA avaaja
+   * (js/fokuskohteet.js: `kohde.avaa` ohittaa kohteiden tietoruudun),
+   * joten vartio mittasi aarrekortin ehtoja eikä liuskan riviä.
+   */
+  const eka = (await sivu.evaluate(
     () => window.matkakirja.ui.pallolauta.nostot.liuskanRivit?.() ?? [],
-  )).filter((r) => r.laji === 'kohde');
+  )).filter((r) => r.laji === 'kategoria')[0];
+  const avattuEka = eka?.aihe !== (await sivu.evaluate(
+    () => window.matkakirja.ui.pallolauta.nostot.liuskanKategoria?.() ?? null,
+  )) ? await napautaLiuskanRivi(eka) : null;
+  const viimeisimmat = ((avattuEka?.rivit) ?? (await sivu.evaluate(
+    () => window.matkakirja.ui.pallolauta.nostot.liuskanRivit?.() ?? [],
+  ))).filter((r) => r.laji === 'kohde');
   const liuskanKohde = viimeisimmat[0] ?? kohteita2[0] ?? kohteita1[0] ?? null;
   let liuskanKortti = null;
+  /*
+   * PELI EI OTA NAPAUTUSTA VASTAAN KESKEN OMAA TEKOAAN. Kerroksen
+   * portti on `ui.busy` (js/pallolauta/nostot.js napautaLiuskasta), ja
+   * 8f:n kategoriakierros jättää pelin hetkeksi varatuksi: silloin
+   * napautus ei avaa korttia mutta lauta sulkee liuskan, eli mittari
+   * kirjaisi pelin viaksi oman kiireensä. Odotus on siksi kysely.
+   */
+  const tila = await sivu.evaluate(async () => {
+    const { ui } = window.matkakirja;
+    for (let i = 0; i < 30 && (ui.busy || ui.dead); i += 1) {
+      /* eslint-disable-next-line no-await-in-loop, no-promise-executor-return */
+      await new Promise((r) => setTimeout(r, 100));
+    }
+    return { busy: Boolean(ui.busy), dead: Boolean(ui.dead) };
+  });
+  // Onko rivin päällä jotain muuta (esim. kelluva pulunappi)? Tämä on
+  // se ero, jota erän 5 punainen ei osannut kertoa.
+  const kohteenPeite = liuskanKohde
+    ? await peitossa(sivu,
+      nurkka.x + (liuskanKohde.x0 + liuskanKohde.x1) / 2,
+      nurkka.y + (liuskanKohde.y0 + liuskanKohde.y1) / 2)
+    : 'ei kohdetta';
   if (liuskanKohde) {
     await napauta(sivu,
       nurkka.x + (liuskanKohde.x0 + liuskanKohde.x1) / 2,
       nurkka.y + (liuskanKohde.y0 + liuskanKohde.y1) / 2);
-    await sivu.waitForTimeout(800);
-    liuskanKortti = await avoinNosto(sivu);
+    for (let i = 0; i < 24 && !liuskanKortti; i += 1) {
+      /* eslint-disable-next-line no-await-in-loop */
+      liuskanKortti = await avoinNosto(sivu);
+      /* eslint-disable-next-line no-await-in-loop */
+      if (!liuskanKortti) await sivu.waitForTimeout(100);
+    }
   }
+  const kerrokset = await sivu.evaluate(() => [...document.querySelectorAll(
+    '[class*="-kerros"], .fokuskohde-popup, .minipopup, .kaupunkipopup, dialog[open]',
+  )].map((e) => String(e.className?.baseVal ?? e.className ?? e.tagName)).slice(0, 6));
   const liuskaKiinni = await sivu.evaluate(
     () => (window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null) === null,
   );
   vaadi(`8h. ${ruutu.nimi}: liuskan kohde avaa kortin ja liuska sulkeutuu`,
     Boolean(liuskanKohde) && Boolean(liuskanKortti) && liuskaKiinni,
-    `kohde ${liuskanKohde?.nimi ?? '—'}, kortti ${liuskanKortti ?? '-'}, `
-    + `liuska kiinni: ${liuskaKiinni}`);
+    `kohde ${liuskanKohde?.nimi ?? '—'} (avaaja ${liuskanKohde?.avattava}), `
+    + `kortti ${liuskanKortti ?? '-'}, liuska kiinni: ${liuskaKiinni}, `
+    + `busy ${tila.busy}/dead ${tila.dead}, rivin päällä: ${kohteenPeite ?? 'ei mitään'}, `
+    + `sivulla: ${kerrokset.join(' | ') || 'ei kerroksia'}`);
   await suljeKortti(sivu);
   await sivu.waitForTimeout(400);
 
@@ -2271,11 +2397,16 @@ for (const ruutu of RUUDUT) {
     `saapuen limityspareja ${vParitSaapuen} (aihemerkkejä ${vSaapuen.aihemerkit.length}); `
     + `lähizoomissa merkkejä ${v.merkit.length}, limityspareja ${limitysparit(v)}, `
     + `laidan yli ${laidanYli(v).length}`);
-  vaadi(`3c. VASTAKOE ${ruutu.nimi}: ilman ryhmitystä rykelmän nimiöt `
-    + 'limittyvät saapumisnäkymässä',
-    vSaapuen.aihemerkit.length === 0 && vParitSaapuen > paritSaapuen,
+  /*
+   * 3c. VANHENTUNUT VASTAKOKEENA (PAATOKSET 34 kohta 3). Vastakoe
+   * vertaa rykelmän limittyviä nimiöpareja ryhmityksen kanssa ja
+   * ilman, mutta kaupungin sisäiset nostot eivät ole enää kartalla:
+   * rykelmää ei ole kummassakaan ajossa, joten ero on nolla eikä
+   * väite mittaa ryhmitystä. Luvut jäävät tiedoksi.
+   */
+  tieto(`${ruutu.nimi} · 3c (INFO, vanhentunut vastakoe)`,
     `limityspareja ${vParitSaapuen} (ryhmityksen kanssa ${paritSaapuen}), `
-    + `aihemerkkejä ${vSaapuen.aihemerkit.length}`);
+    + `aihemerkkejä ${vSaapuen.aihemerkit.length} — kaupungin rykelmä on liuskassa`);
   await kaappaa(vastakoe.sivu, `pariisi-lahizoom-ilman-ryhmitysta-${ruutu.w}.png`);
   await vastakoe.ctx.close();
 }

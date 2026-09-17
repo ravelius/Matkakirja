@@ -9,7 +9,8 @@ import {
   onKaupunginSisainen, ylaryhmanMaara,
 } from '../js/pallolauta/kaupunkiliuska.js';
 import {
-  KOVAN_ESTEEN_PAINO, VIUHKAN_RIVI_PX, alasMahtuvatRivit, kohdanLaatikko, viuhkanAsemat,
+  KOVAN_ESTEEN_PAINO, VIUHKAN_ALAS_ALKU_PX, VIUHKAN_RIVI_PX, VIUHKAN_TIHEIN_VALI_PX,
+  alasMahtuvatRivit, kohdanLaatikko, viuhkanAsemat,
 } from '../js/pallolauta/aihemerkit.js';
 import { laudaltaAsteiksi } from '../js/fokusmitat.js';
 import { PALLO_LAUTA } from '../js/pallo.js';
@@ -200,17 +201,41 @@ test('avattu liuska kasvaa alaspäin eikä kaupungin nimen päälle', () => {
     'vertailukohta: keskitetty lista nousee merkin yläpuolelle');
 });
 
+test('ahtaassa ruudussa riviväli kutistuu ennen kuin lista nousee esteen päälle', () => {
+  // Mitattu 390 px:llä: kotelo 780 px korkea, Pariisin merkki y 387,5,
+  // pisin kategoria 13 riviä — 30 px:n välillä lista jäi 3 px:ä vajaaksi.
+  const p = { x: 195, y: 387.5 };
+  const ruutu = { leveys: 390, korkeus: 780 };
+  const este = nimenLaatikko(p);
+  const tulos = viuhkanAsemat({
+    p, ruutu, leveydet: new Array(13).fill(120), esteet: [este], kasvu: 'alas',
+  });
+  assert.equal(tulos.kovaSakko, 0);
+  const ruudulla = laatikot(p, tulos);
+  assert.ok(ruudulla.every((l) => l.y0 >= p.y), 'koko lista on merkin alapuolella');
+  assert.ok(ruudulla.every((l) => l.y1 <= ruutu.korkeus), 'lista pysyy ruudussa');
+  // Rivit eivät mene päällekkäin, vaikka väli kutistui.
+  const jarjestetty = [...ruudulla].sort((a, b) => a.y0 - b.y0);
+  for (let i = 1; i < jarjestetty.length; i += 1) {
+    assert.ok(jarjestetty[i].y0 >= jarjestetty[i - 1].y1 - 0.001,
+      `rivit ${i - 1} ja ${i} limittyvät`);
+  }
+  // Kaikki 13 riviä mahtuvat, joten kelaukseen ei tarvitse mennä.
+  assert.ok(alasMahtuvatRivit({ p, ruutu }) >= 13);
+});
+
 test('alasMahtuvatRivit kertoo ikkunan koon merkin alapuolella', () => {
   const ylhaalla = alasMahtuvatRivit({ p: { x: 195, y: 100 }, ruutu: PUHELIN });
   const alhaalla = alasMahtuvatRivit({ p: { x: 195, y: 700 }, ruutu: PUHELIN });
   assert.ok(ylhaalla > alhaalla);
-  assert.ok(alhaalla >= 1 && alhaalla <= 5, `alhaalla ${alhaalla}`);
+  assert.ok(alhaalla >= 1 && alhaalla <= 6, `alhaalla ${alhaalla}`);
   // Ruudun alalaidassa ei ole tilaa yhdellekään riville.
   assert.equal(alasMahtuvatRivit({ p: { x: 195, y: 840 }, ruutu: PUHELIN }), 0);
-  // Ikkuna päättyy ruudun alalaitaan: viimeinen rivi mahtuu vielä.
+  // Ikkuna päättyy ruudun alalaitaan: viimeinen rivi mahtuu vielä
+  // tiheimmällä rivivälillä (lista kutistaa välin ennen kelausta).
   const y = 400;
-  const viimeinen = y + VIUHKAN_RIVI_PX + 6
-    + (alasMahtuvatRivit({ p: { x: 195, y }, ruutu: PUHELIN }) - 1) * 30;
+  const viimeinen = y + VIUHKAN_ALAS_ALKU_PX
+    + (alasMahtuvatRivit({ p: { x: 195, y }, ruutu: PUHELIN }) - 1) * VIUHKAN_TIHEIN_VALI_PX;
   assert.ok(viimeinen + VIUHKAN_RIVI_PX <= PUHELIN.korkeus);
 });
 
