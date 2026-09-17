@@ -16,17 +16,26 @@
   ],
   "asetukset": {
     "savuke-astro-pallo.mjs": {
-      "env": { "NAKYMAT": "tyopoyta,puhelin" },
+      "env": {
+        "NAKYMAT": "tyopoyta,puhelin"
+      },
       "huomautus": "Korjattu 17.9.2026, mittaus pysäytetystä tilasta: varjovartiot (\"varjon puoli tummuu\", \"valon puoli kirkastuu\", \"varjo ei ulotu puoliväliin\") ja \"VASTAKOE: kytkin pois palauttaa pikselit\" olivat häilyviä, koska kolmen kuvakaappauksen välissä ruutu eli: ISS-merkki ja ratakaari piirtyvät joka kehyksellä ja kulkevat juuri reunan näytepisteiden yli (Actions 35221065011, PR #2555: päällä 63,5 → pois 83,5 → takaisin 57,9, puhelin). Savuke odottaa nyt pinnan lopulliseksi, pysäyttää pyörimisen, piilottaa .astro-rata ja .astro-iss mittauksen ajaksi ja hyväksyy näytteen vasta kun kaksi peräkkäistä kaappausta ovat samat; uusi vartio \"varjomittaus tehdään pysäytetystä tilasta ja samasta kamera-asennosta\" kirjaa eron. Mac-mittaus 17.9.2026: peräkkäisten näytteiden ero 0 molemmilla näytöillä kahdessa ajossa."
     },
     "savuke-satelliittilinssi.mjs": {
       "tunnetutPunaiset": [
         "pallon takapuolen merkki ei ota napautusta"
       ],
-      "huomautus": "Häilyvä (v1926/v1927), pallo pyörii mittauksen ja napautuksen välissä. 'Sulje linssi palauttaa yläpalkin, pelitilan ja tallennuksen täsmälleen' (VIKA LISAYS 12) korjattu haarassa astro-sulje-vaaka, mergetty v1929:ään — poistettu listalta. Jos tämä nousee punaiseksi PR:n Savukkeet-ajossa, se on aito löydös."
+      "huomautus": "Häilyvä (v1926/v1927), pallo pyörii mittauksen ja napautuksen välissä. 'Sulje linssi palauttaa yläpalkin, pelitilan ja tallennuksen täsmälleen' (VIKA LISAYS 12) korjattu haarassa astro-sulje-vaaka, mergetty v1929:ään — poistettu listalta. Jos tämä nousee punaiseksi PR:n Savukkeet-ajossa, se on aito löydös.",
+      "tunnetutPunaisetMac": [
+        "kohteen nimi ja selite lukevat kuvan päällä, muuta tekstiä ei ole",
+        "pienoiskuvat kelluvat ruudun vasemmassa alakulmassa"
+      ],
+      "huomautusMac": "Mac-runnerin rinnakkaiskuormassa katselun otsikko/nauha ei ehdi DOMiin mittaushetkellä (tyopoyta; 17.9.2026 run 35242567540); yksin ajettuna vihreä. Ubuntu vartioi."
     },
     "savuke-ihmisen-kappaleet.mjs": {
-      "env": { "KOOT": "390,1400" },
+      "env": {
+        "KOOT": "390,1400"
+      },
       "tunnetutPunaiset": [
         "saapuminen siirtyy tasan ZOOMIN_JATKO_MS",
         "avauksen loppuasennossa koko Afrikka on ruudulla",
@@ -35,15 +44,26 @@
       "huomautus": "Kuormitetun kontin näytteenoton jitteriä (v1926/v1927), ei regressio — ks. v1927 luku 5.3. Kolmas (390px, 'ei nousuja (0 näytettä)'): PR #2553:n Actions-ajossa (run 35188363536, 17.9.2026) 250 ms:n setInterval-näytteenotto ei saanut yhtään näytettä kameran laskuzoomista kontin kuormituksen takia — sama juurisyykategoria kuin ZOOMIN_JATKO_MS ja 'avauksen loppuasento' (tiedoston oma kommentti riveillä 514-520: leveä ruutu vie pääsäikeen niin tiukasti, että näytteenotto venyy). Ei liity v1929:n diffiin (aihenimiö, sulkuvartio, sarjat.json-poisto) — Ihmisen matka -linssin tiedostoja ei koskettu tässä erässä."
     },
     "savuke-ihmisen-kehys.mjs": {
-      "env": { "KOOT": "390" },
+      "env": {
+        "KOOT": "390"
+      },
       "tunnetutPunaiset": [
         "vanhalla käytöksellä kehys näkyy avaruusvaiheessa"
       ],
       "huomautus": "KOOT=390 kiertää tunnetun punaisen (1400 px kahden ruudun ajossa, v1926/v1927): kahden ruutukoon ajo SAMASSA prosessissa tuottaa liian vähän näytteitä feidausvartiolle. Vain 390 ajetaan Actionsissa. Lisäksi vastakokeen raja kalibroitava Actions-ympäristöön (99 vs 100), oma erä — PR #2551:n kolmesta Actions-ajosta kahdessa (35182355793, 35184089613) mitattu TÄSMÄLLEEN sama vanha.kehysmaisia=6147/nolla.kehysmaisia=6048 (erotus 99, raja >100), kolmannessa (35183224944) meni läpi eri luvuin — Fablen päätös lisätä tunnetuksi kunnes raja kalibroidaan."
     },
     "savuke-ihmisen-esitys.mjs": {
-      "env": { "VAIN_AVAUS": "1" },
-      "huomautus": "Koko esitys kestää kontissa 10-20 min; avausosa riittää julkaisuportiksi (v1925-v1927)."
+      "env": {
+        "VAIN_AVAUS": "1"
+      },
+      "huomautus": "Koko esitys kestää kontissa 10-20 min; avausosa riittää julkaisuportiksi (v1925-v1927).",
+      "tunnetutPunaisetMac": [
+        "TÄHDET: pistepilvi feidautuu esiin mustan laskiessa harsoksi",
+        "AFRIKKA-SANA: zoomi lähtee entisestä hetkestä ja jatkuu sanan yli",
+        "TAUKO: lauseet, kello JA zoomi pysähtyvät samasta kohdasta",
+        "ZOOMI: pallo kasvaa pisteestä ja Afrikka pysyy keskellä"
+      ],
+      "huomautusMac": "Mac-runnerin rinnakkaiskuormassa (6 savuketta) kamera ei aina nouse avaruuteen (korkeus 0,417 odotetun 300 sijaan) vaikka yksin ajettuna 13/13 (17.9.2026, run 35242567540). Ubuntu vartioi nämä; oma erä: avaaKaukaisuus kuormassa."
     },
     "savuke-pariisi-lahizoom.mjs": {
       "kuvakansio": true,
