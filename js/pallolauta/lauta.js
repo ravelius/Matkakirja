@@ -100,8 +100,8 @@ import { KARTTANIMI_KOOT } from '../karttanimet.js';
  * hoitaa vain napautuksen, ankkurin ja merkin paikan pallolla.
  */
 import {
-  asemoiKaupunkipopup, asetteleTuristiInfo, avaaTiivisKaupunkietusivu, avaaTuristiOpas,
-  kaupunginMatkailijalle, kaupunkimerkinMitta, suljeKaupunkipopup,
+  TURISTI_INFON_ASENNOT, TURISTI_INFO_NIMIO, asemoiKaupunkipopup, asetteleTuristiInfo,
+  avaaTiivisKaupunkietusivu, avaaTuristiOpas, kaupunginMatkailijalle, suljeKaupunkipopup,
   turistiInfoElementti, turistiInfonAsteet, turistiInfonAsteetRuudulta,
 } from '../kaupunkinosto.js';
 import { NOSTOLADONTA_POLTON_TIHEYS } from '../nostoladonta.js';
@@ -113,11 +113,13 @@ import {
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
 import { luoNimet, nimibudjetti } from './nimet.js';
 import {
-  KOHDEMERKIN_RUUTU_PX, NOSTOJEN_KATTO, VALON_KORKEUS, VALON_SADE, luoNostot,
+  KAUPUNKIMERKIN_KERROIN, KOHDEMERKIN_RUUTU_PX, NOSTOJEN_KATTO, VALON_KORKEUS, VALON_SADE,
+  luoNostot, nostonLaatikko, nostonMitta,
 } from './nostot.js';
 import {
   HELMEN_VARI, REITIN_VARIT, REITTIHELMEN_KORKEUS, REITTIHELMEN_SADE, luoReitit,
 } from './reitit.js';
+import { laatikotLimittyvat } from './sovittelu.js';
 import { luoLinssikartta } from './linssikartta.js';
 import { luoMaapaneeli, paneelinLaatikko } from './maapaneeli.js';
 import { luoLinssit } from './linssit.js';
@@ -661,6 +663,53 @@ export function reititaPallopisteenNapautus({
  * säteenään.
  */
 export const LAPUN_KOSKETUSVARA_PX = 16;
+/**
+ * KYLTIN MUSTEEN OMA VARA (px). Napautuksen ruutupiste kulkee pallon
+ * pinnan kautta (`onGlobeClick` → asteet → `getScreenCoords`), ja
+ * takaisinprojisointi heittää muutaman pikselin. Ilman varaa sormi
+ * aivan kyltin reunalla mitataan kyltin ULKOPUOLELLE — mitattu
+ * 17.9.2026, työpöytä 1400 × 900: napautus kyltin ankkuriin jäi
+ * laatikon ulkopuolelle ja meni 2,1 px:n päässä olevalle aihemerkille.
+ * Vara on TARKOITUKSELLA pieni (4 px, neljäsosa noston
+ * kosketusvarasta), jotta se korjaa vain heiton eikä kasvata kyltin
+ * osumapintaa naapureiden kustannuksella.
+ */
+export const KYLTIN_MUSTEEN_VARA_PX = 4;
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * VASTAKOKEEN LIPUT: `?kylttiosuma=0` ja `?kylttilaatikko=0`
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Sama kuvio kuin `?nimiokatto=0` (js/fokusnosto-symbolit.js),
+ * `?aihemerkit=0` ja `?aihekaupunki=0` (js/pallolauta/nostot.js): lippu
+ * sammuttaa YHDEN säännön, jotta savuke voi mitata saman näkymän
+ * molemmin päin eikä vain väittää, että sääntö on olemassa.
+ *
+ *   `?kylttiosuma=0`    kyltin muste ei voita noston kosketusvaraa
+ *                       (PAATOKSET 31 TARKENNUS 2 kohta 4) — napautus
+ *                       kyltin päältä menee taas naapurinostolle;
+ *   `?kylttilaatikko=0` kyltin varaus ladonnassa on taas 1 × 1 px:n
+ *                       PISTE (kohta 6) — nimet ja laput latovat
+ *                       kyltin päälle.
+ *
+ * Lippu muistetaan hakumerkkijonoa kohti, koska nämä luetaan joka
+ * ladonnassa ja joka napautuksessa; muisti tyhjenee itse osoitteen
+ * muuttuessa (myös `history.replaceState`illa), joten savuke voi
+ * kääntää lipun kesken ajon ilman sivun uudelleenlatausta.
+ */
+const lippuMuisti = new Map();
+export function pallonSaantoKaytossa(nimi) {
+  let haku = '';
+  try { haku = globalThis.location?.search ?? ''; } catch { return true; }
+  const muisti = lippuMuisti.get(nimi);
+  if (muisti?.haku === haku) return muisti.arvo;
+  let arvo = true;
+  try {
+    arvo = !/^(0|ei|off)$/.test(new URLSearchParams(haku).get(nimi) ?? '');
+  } catch { arvo = true; }
+  lippuMuisti.set(nimi, { haku, arvo });
+  return arvo;
+}
 /** Sormen etäisyys ruutulaatikkoon (0, jos sormi on sen sisällä). */
 export function laatikonEtaisyys(kohta, r) {
   return Math.hypot(
@@ -2284,11 +2333,111 @@ export async function avaaPallolauta(ui) {
    * sovittelu pitää kaupungin nimen kiinteänä esteenä, jota lappu
    * väistää (js/pallolauta/sovittelu.js).
    */
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * KYLTIN LAATIKKO LASKETAAN KAAVASTA, EI LUETA RUUDULTA (omistaja
+   * 17.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 31 TARKENNUS 2
+   * kohta 6)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * MITATTU VIKA: `merkit.laatikot('turistiinfo')` mittasi merkin
+   * svg:n, joka on 1 × 1 px — koko piirros elää `overflow: visible`
+   * -siirtoryhmässä (js/kaupunkinosto.js turistiInfoElementti). Varaus
+   * oli siis PISTE, ja nimiladonta ja nostojen sovittelu latoivat
+   * *"Turisti-in…"* ja *"Mona Lisan varkaus…"* päällekkäin, kuten
+   * omistajan kuvassa 16.9.2026.
+   *
+   * MIKSI KAAVA EIKÄ RUUTU. Ensimmäinen korjaus luki ryhmän oman
+   * laatikon DOMista. Se antoi oikean mitan (97,45 × 21,34 px Pariisin
+   * lähizoomissa), mutta MITATTU 17.9.2026: yksi lappu
+   * (*Impressionistit…*) jäi silti kyltin päälle 2,35 px:n kaistalla,
+   * ja täsmälleen sama ladonta uudelleen ajettuna siirsi sen pois.
+   * Syy on piirroksen oma aikataulu: merkin rasteri paistetaan
+   * asynkronisesti (js/fokusnosto-symbolit.js asetaRasteri), joten
+   * ladonnan hetkellä ruudulta luettu ala on edellisen portaan ala.
+   * Kaava ei odota ketään: se on SAMA `nostonLaatikko`, jolla nostojen
+   * omat laatikot lasketaan, samalla mitalla ja samalla nimiöllä kuin
+   * kyltti piirretään — ja juuri siksi nostot lasketaan kaavasta
+   * (ks. js/pallolauta/nostot.js sovittele: *"ei layout-thrashia"*).
+   */
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * OSUMATESTI MITTAA SITÄ, MITÄ PELAAJA NÄKEE — LADONTA SITÄ, MIHIN
+   * KYLTTI ON MENOSSA (mitattu 17.9.2026, GitHub Actions 35201833942 ja
+   * paikallinen vastakoe `SAVUKE_HIDASTUS=4`)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * Merkkikerros TWEENAA elementin uuteen paikkaan, kun datumin asteet
+   * muuttuvat (js/pallolauta/merkit.js htmlTransitionDuration). Zoomin
+   * aikana kyltin asento ehtii vaihtua, ja hitaalla koneella tween on
+   * napautushetkellä yhä kesken: MITATTU napautuspisteen etäisyys
+   * kyltin LASKETTUUN laatikkoon 17,3 px (390 px) ja 183,8 px
+   * (1400 px), kun sormi oli täsmälleen sen kyltin päällä, jonka
+   * pelaaja ruudulla näki. Kyltin napautus avasi silloin naapurin
+   * viuhkan.
+   *
+   * SIKSI KAKSI LAATIKKOA, KUMPIKIN OMAAN TEHTÄVÄÄNSÄ:
+   *   `kyltinLaatikot`  = KAAVA (nostonLaatikko). Ladonnan varaus ja
+   *                       sovittelun este — sen on oltava sama luku
+   *                       joka koneella, eikä se saa odottaa rasteria
+   *                       (ks. KYLTIN LAATIKKO LASKETAAN KAAVASTA).
+   *   `kyltinPiirretty` = RUUTU (siirtoryhmän laatikko). Osumatesti —
+   *                       sormi osuu siihen, mikä ruudulla on, myös
+   *                       kesken tweenin.
+   *
+   * Kun tween on ohi, laatikot ovat sama laatikko; mitattu ero on
+   * 0,0 px levossa.
+   */
+  /** Kyltin PIIRRETTY laatikko kotelon pikseleinä, tai null. */
+  const kyltinPiirretty = (d) => {
+    const g = d?.el?.querySelector?.('.pallolauta-turisti-info-siirto');
+    const koti = kotelo?.getBoundingClientRect?.();
+    if (!g || !koti) return null;
+    const r = g.getBoundingClientRect();
+    if (!(r.width > 0)) return null;
+    return [{
+      x0: r.left - koti.left,
+      y0: r.top - koti.top,
+      x1: r.right - koti.left,
+      y1: r.bottom - koti.top,
+    }];
+  };
+
+  /** Kyltin ladontatietue: sama muoto kuin kaupunkimerkin nostolla. */
+  const KYLTIN_LADONTA = {
+    kaupunki: true,
+    poltettu: false,
+    nimi: TURISTI_INFO_NIMIO,
+    symLaji: null,
+    puoli: 'oikea',
+    nimioNakyy: true,
+  };
+  /**
+   * Kyltin ruutulaatikko kotelon pikseleinä, tai tyhjä lista. Yksi
+   * lähde sekä ladonnan varaukselle että osumatestille (kyltinMusteella)
+   * — kaksi laatikkoa samalle merkille ei voi olla eri mieltä.
+   *
+   * Vastakoe `?kylttilaatikko=0` palauttaa 1 × 1 px:n pisteen eli
+   * täsmälleen sen, mitä merkin svg ruudulla on.
+   */
+  const kyltinLaatikot = () => {
+    const d = merkit.avattavat().find((x) => x.laji === 'turistiinfo');
+    if (!d) return [];
+    const p = pallo.getScreenCoords(d.lat, d.lng, 0);
+    if (!p) return [];
+    if (!pallonSaantoKaytossa('kylttilaatikko')) {
+      return [{
+        x0: p.x - 0.5, y0: p.y - 0.5, x1: p.x + 0.5, y1: p.y + 0.5,
+      }];
+    }
+    return [nostonLaatikko(p, KYLTIN_LADONTA)];
+  };
+
   /**
    * Piirretty muste napautuskohdan alla: noston nimilappu tai kaupungin
    * nimi. Yksi vertailu molemmille (ks. lohko yllä ja musteenVoittaja).
    */
-  const musteeseenOsunut = (lat, lng) => {
+  const musteeseenOsunut = (lat, lng, vara = LAPUN_KOSKETUSVARA_PX) => {
     const kohta = pallo.getScreenCoords(lat, lng, 0);
     if (!kohta) return null;
     const ehdokkaat = [];
@@ -2313,7 +2462,46 @@ export async function avaaPallolauta(ui) {
         lisaa(n, n.laatikko, { laji: 'kaupunki', lat: n.lat, lng: n.lng, k });
       }
     }
-    return musteenVoittaja(kohta, ehdokkaat);
+    return musteenVoittaja(kohta, ehdokkaat, vara);
+  };
+
+  /**
+   * TURISTI-INFON KYLTIN OMA MUSTE napautuskohdan alla, tai null.
+   *
+   * Laatikko on kyltin PIIRRETTY ala (kyltinLaatikot, sama kaava kuin
+   * piirrolla), eli symboli ja nimiö sellaisina kuin pelaaja ne näkee —
+   * ei kosketusvaraa, koska tämä on nimenomaan "sormi kyltin päällä"
+   * -mitta. Kylttejä on kerrallaan yksi (pelaajan oma kaupunki), joten
+   * voittajaa ei tarvitse valita.
+   */
+  const kyltinMusteella = (lat, lng) => {
+    const kohta = pallo.getScreenCoords(lat, lng, 0);
+    if (!kohta) return null;
+    const d = merkit.avattavat().find((x) => x.laji === 'turistiinfo');
+    if (!d) return null;
+    const laatikot = kyltinPiirretty(d) ?? kyltinLaatikot();
+    const etaisyys = Math.min(...laatikot.map((r) => laatikonEtaisyys(kohta, r)));
+    if (!(etaisyys <= KYLTIN_MUSTEEN_VARA_PX)) return null;
+    /*
+     * VARA ON PYÖRISTYSVARAA, EI VALTAUSTA (mitattu 17.9.2026,
+     * savuke-pallo-nostolaput/Bukarest).
+     *
+     * KYLTIN_MUSTEEN_VARA_PX on olemassa vain siksi, että napautuspiste
+     * kulkee pinnan kautta asteiksi ja takaisin; se ei ole kyltin alaa.
+     * Nostojen nimilaput taas ovat ohuita, ja juuri siksi niiden
+     * osumapinta on LAPUN_KOSKETUSVARA_PX leveämpi kuin muste. MITATTU:
+     * kyltti asettui Bukarestissa laatikkoon 214,396 → 283,411 ja
+     * Strousbergin lapun sormi osui kohtaan 250,395 — YHDEN pikselin
+     * päähän kyltistä, kahdeksan lapun musteesta. Kyltti vei
+     * napautuksen, matkustusopas jäi auki ja nielaisi loputkin
+     * napautukset (vartiot 6 ja 7 putosivat 8/8:sta 6/8:aan).
+     *
+     * SIKSI: kyltin OMALLA musteella (etäisyys 0) kyltti voittaa kuten
+     * ennen — se on omistajan Chambord-päätös. Pelkän varan varassa se
+     * väistää nostoa, jonka osumapinnalla sormi on.
+     */
+    if (etaisyys > 0 && musteeseenOsunut(lat, lng)?.laji === 'nosto') return null;
+    return { laji: 'turistiinfo', lat: d.lat, lng: d.lng, d };
   };
 
   /**
@@ -2405,6 +2593,53 @@ export async function avaaPallolauta(ui) {
      * edelle: kaupungin nimimuste (laji `kaupunki`) ei.
      */
     const muste = musteeseenOsunut(lat, lng);
+    /*
+     * KYLTIN MUSTE VOITTAA NOSTON KOSKETUSVARAN, MUTTA NOSTON OMA
+     * MUSTE VOITTAA KYLTIN (omistaja 17.9.2026 klo 03.30 UTC, Raamattu
+     * KARTTAUUDISTUKSEN PAATOKSET 31 TARKENNUS 2 kohta 4, kortti
+     * *"Kyltti voittaa kosketusvaran"*).
+     *
+     * MITATTU VIKA (16.9.2026, Pariisin lähizoomi, molemmat ruudut):
+     * sormi TÄSMÄLLEEN turisti-infon kyltin päällä avasi Guimardin
+     * metron, jonka merkki oli 16,4 px päässä kyltin ankkurista. Kaksi
+     * omistajan omaa sääntöä osuivat yhteen: nostojen osumalaatikkoa
+     * venytetään joka suuntaan LAPUN_KOSKETUSVARA_PX:n (16 px) verran
+     * (7.9.2026, *"Symboli ottaa klikkauksen mutta teksti ei"*), ja
+     * noston muste voittaa turisti-infon (14.9.2026, Chambord).
+     * Yhdessä ne antoivat napautuksen nostolle, joka oli pelkän VARAN
+     * päässä — rykelmässä aina.
+     *
+     * SÄÄNTÖ NYT: sormi kyltin OMALLA musteella (symboli tai nimiö,
+     * ei kosketusvaraa) vie napautuksen kyltille.
+     *
+     * KOSKETUSVARA SÄILYY SIELLÄ, MISSÄ SORMI EI OLE KYLTIN PÄÄLLÄ:
+     * tämä haara ei koske lainkaan napautuksia kyltin ulkopuolella,
+     * joten nostolapun teksti ottaa yhä napautuksen sormen 8 px:n
+     * poikkeamalla (tools/savukkeet/savuke-pallo-nostolaput.mjs
+     * vartiot 6 ja 7). Juuri siihen kaatui 16.9.2026 kokeiltu korjaus,
+     * joka antoi kyltin voittaa AINA kun se oli lähin merkki.
+     *
+     * CHAMBORD-SÄÄNTÖ EI KATOA — SE MUUTTI LADONTAAN. Alkuperäinen
+     * myönnytys (14.9.2026: noston muste voittaa kyltin) on yhä alla
+     * seuraavalla rivillä, ja se ratkaisee kaikki napautukset kyltin
+     * musteen ULKOPUOLELLA. Kyltin musteen PÄÄLLÄ sitä ei enää tarvita,
+     * koska ladonta pitää kyltin laatikon vapaana (TARKENNUS 2 kohta 6
+     * ja TARKENNUS 3): siellä ei kuulu olla noston mustetta.
+     *
+     * MITATTU SYY, MIKSI EHTO POISTETTIIN (17.9.2026, työpöytä 1400 px):
+     * kyltin viereen sovitellun aihemerkin osumalaatikko oli 2,1 px
+     * kyltin ankkurista, ja koska napautuksen ruutupiste heittää
+     * pinnan kautta pari pikseliä, se osui laatikkoon — kyltin
+     * napautus avasi viuhkan. Puhelimella lähin oli 14,0 px eikä
+     * vienyt. Kahden pikselin heitto ei saa ratkaista sitä, minkä
+     * pelaaja näkee sormensa alla.
+     *
+     * Vastakoe: `?kylttiosuma=0` (ks. pallonSaantoKaytossa).
+     */
+    if (pallonSaantoKaytossa('kylttiosuma')) {
+      const kyltti = kyltinMusteella(lat, lng);
+      if (kyltti) return kyltti;
+    }
     if (voittaja?.laji === 'turistiinfo' && muste?.laji !== 'nosto') return voittaja;
     return muste ?? voittaja;
   };
@@ -2877,15 +3112,20 @@ export async function avaaPallolauta(ui) {
    *
    * MERKKI ON KARTTAAN KIINNITETTY (PAATOKSET 2): se on merkkikerroksen
    * datum omissa asteissaan (turistiInfonAsteet) eikä karttaruudun lapsi,
-   * ja sen mittakaava luetaan kameran näkyvästä leveydestä — merkki siis
-   * kasvaa zoomatessa kuin painettu kartta, rajojen sisällä
-   * (js/kaupunkinosto.js kaupunkimerkinMitta).
+   * ja se skaalautuu zoomatessa kuin painettu kartta.
    *
-   * VERTAILULEVEYS ON MAAN LAATIKKO × 1,15 — sama luku, jolla erä 2
-   * rajaa uloszoomauksen (PAATOKSET 1, kohta 2). Laatikko luetaan
-   * saapumisrajauksen omasta muistista (`maalaatikot`), joka on jo
-   * lämmin, koska saapumisajo laski sen. Ilman laatikkoa merkki saa
-   * perusmittansa eikä katoa mihinkään.
+   * MITTA ON SAMA KUIN MUILLA KARTAN MERKEILLÄ (omistaja 17.9.2026 klo
+   * 03.30 UTC, Raamattu KARTTAUUDISTUKSEN PAATOKSET 31 TARKENNUS 2
+   * kohta 5, kortti *"Sama kerroin kuin muilla"*): `nostonMitta`
+   * kaupunkimerkin omalla kertoimella, eli täsmälleen se kaava, jolla
+   * kaupungin nostomerkki piirretään — vertailuna KUNKIN LAITTEEN oma
+   * saapumisnäkymä (PAATOKSET 14) ja kattona yhteinen 16 px.
+   *
+   * ENNEN: vertailuleveys oli MAAN LAATIKKO × 1,15 (uloszoomausraja,
+   * PAATOKSET 1 kohta 2). Se antoi samassa pelitilanteessa puhelimelle
+   * 27,18 px:n ja työpöydälle 8,25 px:n nimiön — pystyssä oleva
+   * puhelinruutu on paljon maan laatikkoa kapeampi, vaakaruutu ei.
+   * Kerroin on siksi poissa täältä ja luku tulee yhdestä paikasta.
    *
    * NAPAUTUS KULKEE `napautettavat()`-POLUSTA (merkit.js): datumilla on
    * `napautus(d)`, ja osuma lasketaan pallon omasta napautuksesta kuten
@@ -2898,8 +3138,45 @@ export async function avaaPallolauta(ui) {
    *
    * @returns {object[]} merkin ruutulaatikot nimiladonnan varauksiksi
    */
-  const TURISTI_INFON_VERTAILUKERROIN = 1.15;
-  const paivitaTuristiInfo = (nakyva) => {
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * KYLTTI SIIRTYY SIVUUN, EI NIMIÖ (omistaja 17.9.2026 klo 06.35 UTC,
+   * Raamattu KARTTAUUDISTUKSEN PAATOKSET 31 TARKENNUS 3, kortti
+   * *"Kyltti siirtyy sivuun"*)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * MITATTU VIKA: kun kyltin varaus tuli ladontaan oikean kokoisena
+   * (TARKENNUS 2 kohta 6), Pariisin lähizoomissa *Impressionistit…*
+   * -aihemerkki jäi kyltin laatikon SISÄÄN. Aihenosto väistää kaikkea
+   * (js/pallolauta/sovittelu.js), mutta sen ikoni oli kyltin sisällä,
+   * joten yksikään neljästä kyljestä eikä yksikään siirto ollut vapaa —
+   * ja sovittelun viimeinen keino on nimiön piilotus. Mitattu
+   * molemmilla ruuduilla, ja savuke-pariisi-lahizoom 3e4 oli punainen.
+   *
+   * SIIRTYVÄ OSAPUOLI ON KYLTTI. Kyltti on kartan kaluste, jonka paikka
+   * on laskettu (TURISTI_INFO_RUUTUSIIRTO) eikä käsin ladottu — siinä
+   * missä noston nimiö on sisältöä. Ladonta kokeilee siksi kyltille
+   * asennot järjestyksessä (js/kaupunkinosto.js TURISTI_INFON_ASENNOT)
+   * ja ottaa ENSIMMÄISEN, jonka laatikko on kokonaan ruudussa eikä
+   * osu liikkumattomaan musteeseen (poltetut nostot, elävien nostojen
+   * ja aihemerkkien ikonit) eikä kaupungin omaan pisteeseen.
+   * Ensimmäinen asento on entinen paikka, joten kyltti ei liiku ellei
+   * ole pakko.
+   *
+   * SITTEN VASTA NIMET JA LAPUT. Järjestys ladoLevossa on tarkoitettu:
+   * nostot → KYLTIN ASENTO → nimiladonta → nostojen sovittelu, joten
+   * nimet ja laput väistävät kylttiä sen LOPULLISESSA paikassa.
+   *
+   * VASTAKOE `?kylttisiirto=0` jättää vain ensimmäisen asennon, jolloin
+   * kyltti ei siirry ja 3e4 on taas punainen.
+   *
+   * @param {object[]} kiinteaMuste merkkien ikonit OMISSA paikoissaan
+   *   (nostot.omatIkonilaatikot) — ei sovittelun siirtämiä laatikoita,
+   *   jotta asento ei riipu ladontahistoriasta
+   * @param {object[]} omaMuste sama NIMIÖINEEN (nostot.omaMuste): koko
+   *   muste, jonka päälle kyltin ankkuri ei saa jäädä
+   */
+  const paivitaTuristiInfo = (kiinteaMuste = [], omaMuste = []) => {
     const tyhjaa = () => { merkit.aseta('turistiinfo', []); return []; };
     if (linssiPaalla() || lento || aloitusNakyvat()) return tyhjaa();
     const city = ui.game.cityOf?.();
@@ -2921,14 +3198,116 @@ export async function avaaPallolauta(ui) {
       dLat: 1,
       dLon: 1,
     } : null;
-    const paikka = oma
+    /*
+     * ASENNON VALINTA. `malli` on kyltin laatikko ankkurin ympärillä
+     * (piste 0, 0), josta saadaan se, kuinka paljon piirros ulottuu
+     * ankkurista oikealle — `vasen`-asento siirtää ankkuria juuri sen
+     * verran, jotta kyltti on KOKONAAN kaupungin vasemmalla puolella.
+     */
+    const malli = nostonLaatikko({ x: 0, y: 0 }, KYLTIN_LADONTA);
+    const kotiW = kotelo.clientWidth;
+    const kotiH = kotelo.clientHeight;
+    const ruudussa = (r) => r.x0 >= 0 && r.y0 >= 0 && r.x1 <= kotiW && r.y1 <= kotiH;
+    const kaupunginPiste = naytteet?.p0 ? (() => {
+      const sade = Math.max(6, piirrettyHalkaisijaPx({ id: city.id }) / 2);
+      return {
+        x0: naytteet.p0.x - sade,
+        y0: naytteet.p0.y - sade,
+        x1: naytteet.p0.x + sade,
+        y1: naytteet.p0.y + sade,
+      };
+    })() : null;
+    /*
+     * ESTEENÄ IKONIT, EI NIMIÖITÄ (mitattu 17.9.2026, Pariisi 390 ja
+     * 1400 px). Kokeiltu myös se, että kyltti väistäisi koko mustetta
+     * nimiöineen ja vielä sormen mitan (LAPUN_KOSKETUSVARA_PX) verran
+     * väljästi: Pariisissa kaikki kuusi oikean puolen asentoa menivät
+     * silloin tukkoon, kyltti siirtyi kaupungin VASEMMALLE puolelle ja
+     * vei tilan, jota aihenoston nimiö tarvitsi — vartiot 3e4 ja 3i
+     * punaisina (4/5 nimiötä, savuke 70/74). Kyltti on kartan kaluste
+     * eikä saa maksaa nimiöitä, joten esteistö pysyy ikoneissa ja
+     * napautuksen työnjako hoidetaan osumatestissä (kyltinMusteella:
+     * *"VARA ON PYÖRISTYSVARAA, EI VALTAUSTA"*).
+     */
+    const esteet = kaupunginPiste ? [...kiinteaMuste, kaupunginPiste] : [...kiinteaMuste];
+    const asennot = pallonSaantoKaytossa('kylttisiirto')
+      ? TURISTI_INFON_ASENNOT : TURISTI_INFON_ASENNOT.slice(0, 1);
+    /*
+     * ASENTO EI SAA RIIPPUA AJOITUKSESTA (mitattu 17.9.2026; GitHub
+     * Actionsin ajo 35201833942 antoi 72/74 samalla koodilla, joka on
+     * paikallisesti 74/74).
+     *
+     * ENSIMMÄINEN VIKA, korjattu 17.9.2026 aamulla: esteinä olivat myös
+     * kaupunkien nimet ja nostojen laput. Ne ladotaan kyltin JÄLKEEN ja
+     * väistävät kylttiä, joten ne riippuvat kyltin paikasta — ja kyltin
+     * paikka niistä. Kierre heilutti kylttiä asennosta toiseen joka
+     * ladonnassa, ja koska merkkikerros tweenaa elementin uuteen
+     * paikkaan (htmlTransitionDuration), kyltin PIIRROS oli mitattuna
+     * 183,8 px:n päässä siitä laatikosta, jolla osumatesti mittaa.
+     * Korjaus oli esteistön rajaus ja edellisen asennon muisti.
+     *
+     * TOINEN VIKA, ja tämän lohkon syy: muisti EI riitä, ja rajattukin
+     * esteistö oli yhä ladonnan tilaa. `nostot.laatikot()` lasketaan
+     * datumin `dx`/`dy`:llä eli EDELLISEN sovittelun tuloksella, joten
+     * kyltin asento riippui siitä, montako ladontakierrosta kone oli
+     * ehtinyt ajaa. Hitaalla Actions-koneella ensimmäinen kierros
+     * valitsi eri asennon kuin nopealla, ja asennon MUISTI lukitsi sen:
+     * mitattu 390 px:llä napautus avasi *Impressionistit…* -viuhkan ja
+     * 1400 px:llä kyltti asettui *PARIISI*-nimen päälle (vartiot 7c ja
+     * 7e punaisina, artefakti kaappaukset-savuke-pariisi-lahizoom).
+     *
+     * NYT ASENTO ON KAMERAN JA DATAN FUNKTIO, EI LADONTAHISTORIAN:
+     * esteinä on merkkien muste OMISSA paikoissaan (nostot.omaMuste —
+     * ilman sovittelun siirtoja) ja kaupungin oma piste. Muistia ei
+     * tarvita, koska syötteessä ei ole takaisinkytkentää: sama kamera
+     * antaa saman asennon joka kierroksella ja joka koneella.
+     */
+    let valittu = null;
+    if (oma && naytteet?.p0) {
+      for (const asento of asennot) {
+        const siirto = asento.vasen
+          ? { dx: asento.dx - malli.x1, dy: asento.dy }
+          : { dx: asento.dx, dy: asento.dy };
+        const kohta = turistiInfonAsteetRuudulta(oma.lat, oma.lon, naytteet, siirto);
+        if (!kohta) continue;
+        const piste = pallo.getScreenCoords(kohta.lat, kohta.lon, 0);
+        if (!piste) continue;
+        const r = nostonLaatikko(piste, KYLTIN_LADONTA);
+        if (!ruudussa(r)) continue;
+        if (esteet.some((e) => laatikotLimittyvat(r, e))) continue;
+        /*
+         * KYLTIN ON PYSYTTÄVÄ KLIKATTAVANA (omistajan sama kortti).
+         * Napautus ratkaistaan järjestyksessä (napautaPintaan): matkan
+         * kohdemerkki ja linssin merkki vievät napautuksen ENNEN
+         * kylttiä, eikä kumpikaan ole kartan mustetta, joten laatikko ei
+         * niitä näe. MITATTU 17.9.2026, työpöytä 1400 px: kun kyltti
+         * siirtyi 28 px alaspäin, sen ankkuri joutui matkan kohdemerkin
+         * napautussäteelle ja kyltin napautus lakkasi avaamasta mitään
+         * (savuke-pariisi-lahizoom 7c punainen). Asento hylätään siis
+         * myös silloin, kun sen ANKKURI ei enää itse voittaisi
+         * napautusta.
+         */
+        if (lahinKohde(kohta.lat, kohta.lon)) continue;
+        if (lahinLinssimerkki(kohta.lat, kohta.lon)) continue;
+        /*
+         * EIKÄ NOSTON OMAN MUSTEEN PÄÄLLE — NIMIÖ MUKAAN LUETTUNA.
+         * Ankkuri musteen päällä tarkoittaisi, että kyltin piirros
+         * lepää noston nimilapulla (PAATOKSET 31 TARKENNUS 2 kohta 4,
+         * Chambord). Este luetaan `nostot.omaMuste()`:sta eli merkkien
+         * OMISTA paikoista, jottei ehto tuo takaisin ladontahistoriaa
+         * (vrt. musteeseenOsunut, joka mittaa sovitellun tuloksen).
+         */
+        if (omaMuste.some((e) => piste.x >= e.x0 && piste.x <= e.x1
+          && piste.y >= e.y0 && piste.y <= e.y1)) continue;
+        valittu = kohta;
+        break;
+      }
+    }
+    const paikka = valittu ?? (oma
       ? (turistiInfonAsteetRuudulta(oma.lat, oma.lon, naytteet)
         ?? turistiInfonAsteet(oma.lat, oma.lon))
-      : null;
+      : null);
     if (!paikka) return tyhjaa();
-    const iso = kohteidenNykyinenIso(ui);
-    const laatikko = iso ? maalaatikot.get(iso) : null;
-    const uloin = laatikko?.w > 0 ? laatikko.w * TURISTI_INFON_VERTAILUKERROIN : 0;
     merkit.aseta('turistiinfo', [{
       avain: `turistiinfo:${city.id}`,
       laji: 'turistiinfo',
@@ -2936,9 +3315,10 @@ export async function avaaPallolauta(ui) {
       nimi: city.name,
       lat: paikka.lat,
       lng: paikka.lon,
-      mitta: kaupunkimerkinMitta(nakyva?.w, uloin),
+      mitta: nostonMitta(KAUPUNKIMERKIN_KERROIN),
       elementti: turistiInfoElementti,
       asettele: asetteleTuristiInfo,
+
       /*
        * AVAAJA ON `avaa`, EI `napautus` — JA SE ON TARKOITUS.
        * `merkit.napautettavat()` kokoaa datumit, joilla on `napautus`, ja
@@ -2961,7 +3341,7 @@ export async function avaaPallolauta(ui) {
         avaaTuristiOpas(ui, city);
       },
     }]);
-    return merkit.laatikot('turistiinfo');
+    return kyltinLaatikot();
   };
 
   /* ---- ladonta levossa ---------------------------------------------- */
@@ -3028,7 +3408,7 @@ export async function avaaPallolauta(ui) {
      * jäisi oman nimensä alle.
      */
     const kaupunginMitat = kohdekaupunki();
-    const infoTulos = paivitaTuristiInfo(nakyva);
+    const infoTulos = paivitaTuristiInfo(nostot.omatIkonilaatikot(), nostot.omaMuste());
     const nimiTulos = nimet.lado({
       varaukset: [...nostoTulos.laatikot, ...infoTulos],
       pinot: merkit.laatikot('peli'),
@@ -3049,7 +3429,13 @@ export async function avaaPallolauta(ui) {
       // OIKEASTI on — sama yksi sääntö kuin piirrolla.
       pisteSade: piirrettyHalkaisijaPx(pelaajanKaupunki() ? { id: pelaajanKaupunki() } : null) / 2,
     });
-    const sovittelu = nostot.sovittele({ nimet: nimet.laatikot() });
+    /*
+     * KYLTTI ON SOVITTELUSSA KIINTEÄ ESTE, KUTEN KAUPUNGIN NIMI
+     * (PAATOKSET 31 TARKENNUS 2 kohta 6). Kyltti ei voi väistää — se
+     * on kartan kaluste kaupungin vieressä — joten nostojen laput
+     * väistävät sitä samalla säännöllä kuin kaupunkien nimiä.
+     */
+    const sovittelu = nostot.sovittele({ nimet: nimet.laatikot(), kiinteat: infoTulos });
     paivitaPisteet();
     // Ladonta ajetaan levossa, siirtymän jo mentyä: viimeinen sana
     // kaupunkipisteen koosta on tässä (ks. tahdistaPisteidenKoko).
@@ -3614,6 +4000,19 @@ export async function avaaPallolauta(ui) {
     },
     /** Ladonta heti ilman lepoviivettä (savukkeet ja vartijat). */
     ladoHeti: () => { clearTimeout(lepoAjastin); return ladoLevossa(); },
+    /**
+     * TURISTI-INFON KYLTIN RUUTULAATIKKO (savukkeet ja vartijat): sama
+     * laatikko, jonka ladonta varaa ja jonka päältä napautus avaa
+     * oppaan (kyltinLaatikot, PAATOKSET 31 TARKENNUS 2 kohdat 4 ja 6).
+     */
+    turistiLaatikot: () => kyltinLaatikot(),
+    /**
+     * Kyltin PIIRRETTY laatikko (savukkeet ja vartijat): se, jota
+     * osumatesti käyttää, kun merkkikerroksen tween on kesken.
+     */
+    turistiPiirretty: () => kyltinPiirretty(
+      merkit.avattavat().find((x) => x.laji === 'turistiinfo'),
+    ),
     /**
      * Lepokerroksen kahva (js/pallo.js luoLepokerros: mittarit, kokoa,
      * piilota) tai null ennen kuin laatunosto on asentunut. Funktio eikä

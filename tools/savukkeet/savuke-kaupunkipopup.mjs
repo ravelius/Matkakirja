@@ -67,7 +67,8 @@ import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { ARTIKKELIT } from '../../js/sisaltotaulut.js';
 import { KULTTUURI_KATEGORIAT } from '../../js/packs/kulttuuri-kategoriat.js';
-import { NOSTOSYM_MITAN_KATTO } from '../../js/fokusnosto-symbolit.js';
+import { NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
+import { KAUPUNKIMERKIN_NIMIO_PX } from '../../js/pallolauta/nostot.js';
 
 const paketti = await import('playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
@@ -222,25 +223,37 @@ for (const ruutu of RUUDUT) {
     tieto(`${tunnus}: merkin mitta (maa / lähi)`,
       `${mitat.maanNakyma} / ${mitat.lahikuva}`);
     /*
-     * KATTO ON OSA SÄÄNTÖÄ (PAATOKSET 31 TARKENNUS 1 kohta 3,
-     * 16.9.2026). Merkki skaalautuu yhä kuin painettu kartta, mutta
-     * enintään ruutupikselikattoon asti (js/fokusnosto-symbolit.js
-     * NOSTOSYM_MITAN_KATTO): sen yläpuolella se seisoo, jottei kyltti
-     * leikkaudu ruudun laidasta. MITATTU 16.9.2026: puhelimella
-     * (390 × 844) Pariisin ja Marseillen kyltti on jo SAAPUMISNÄKYMÄSSÄ
-     * katossa (1,4545), koska sen vertailuleveys on maan laatikko × 1,15
-     * eikä laitteen oma näkymä — työpöydällä samassa näkymässä mitta on
-     * 0,75. Väite on siis kaksiosainen: mitta ei koskaan ylitä kattoa,
-     * ja se kasvaa lähikuvassa AINA kun katto ei jo pure.
+     * SAMA KERROIN KUIN MUILLA MERKEILLÄ, SAMA KATTO (omistaja
+     * 17.9.2026 klo 03.30 UTC, Raamattu KARTTAUUDISTUKSEN PAATOKSET 31
+     * TARKENNUS 2 kohta 5, kortti *"Sama kerroin kuin muilla"*).
+     *
+     * ENNEN: kyltin vertailuleveys oli maan laatikko × 1,15 eikä
+     * laitteen oma saapumisnäkymä, joten sama pelitilanne antoi
+     * puhelimella (390 × 844) jo saapuessa katon 1,4545 ja työpöydällä
+     * lattian 0,75 — mitattu 16.9.2026 Pariisissa ja Marseillessa.
+     * Väitteessä piti siksi olla haara "katto puree jo maan näkymässä".
+     *
+     * NYT mitta tulee samasta funktiosta kuin kaupunkimerkillä
+     * (js/pallolauta/nostot.js nostonMitta(KAUPUNKIMERKIN_KERROIN)), eli
+     * saapumisnäkymässä TÄSMÄLLEEN KAUPUNKIMERKIN_NIMIO_PX (11,5 px)
+     * molemmilla ruuduilla ja lähikuvassa katossa (16 px). Haara on
+     * poissa, koska sen ehto ei voi enää toteutua: saapumismitta on
+     * 1,0455 < 1,4545.
      */
-    const kattoPurree = mitat.maanNakyma >= NOSTOSYM_MITAN_KATTO - 1e-6;
+    const saapumisenMitta = KAUPUNKIMERKIN_NIMIO_PX / NOSTOSYM_NIMIO_KOKO;
+    tieto(`${tunnus}: merkin nimiö ruudulla (maa / lähi)`,
+      `${(mitat.maanNakyma * NOSTOSYM_NIMIO_KOKO).toFixed(2)} px / `
+      + `${(mitat.lahikuva * NOSTOSYM_NIMIO_KOKO).toFixed(2)} px`);
     vaadi(`${tunnus}: merkki skaalautuu zoomatessa (katto ${NOSTOSYM_MITAN_KATTO.toFixed(4)})`,
       Number.isFinite(mitat.maanNakyma) && Number.isFinite(mitat.lahikuva)
       && mitat.lahikuva <= NOSTOSYM_MITAN_KATTO + 1e-6
-      && (kattoPurree
-        ? mitat.lahikuva === mitat.maanNakyma
-        : mitat.lahikuva > mitat.maanNakyma),
-      `mitat ${JSON.stringify(mitat)}${kattoPurree ? ' (katto puree jo maan näkymässä)' : ''}`);
+      && mitat.lahikuva > mitat.maanNakyma,
+      `mitat ${JSON.stringify(mitat)}`);
+    vaadi(`${tunnus}: kyltin kerroin on sama kuin muilla merkeillä `
+      + `(saapuessa ${KAUPUNKIMERKIN_NIMIO_PX} px)`,
+      Number.isFinite(mitat.maanNakyma)
+      && Math.abs(mitat.maanNakyma - saapumisenMitta) <= 1e-3,
+      `saapumismitta ${mitat.maanNakyma} (odotus ${saapumisenMitta.toFixed(4)})`);
 
     // Napautukset tehdään SAAPUMISNÄKYMÄSTÄ: se on se näkymä, jossa
     // pelaaja kaupunkiin saapuu, ja siinä merkki on suunnitellun
