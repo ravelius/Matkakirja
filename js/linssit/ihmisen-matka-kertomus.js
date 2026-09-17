@@ -51,16 +51,6 @@
  *             kupla pieni, ei pysäytä kertomusta), tai null
  *   tunne     Pulun äänetön reaktio `{ tunne, voimakkuus }`. Tekninen
  *             ele ratkaistaan js/livia-tilanteet.js:ssä; tagia ei lueta.
- *   aanitePaivitettava
- *             TOSI, KUN TEKSTI ON MUUTTUNUT ÄÄNITTEEN JÄLKEEN. Kenttä on
- *             MERKINTÄ IHMISELLE (ja raportille): ämpärin luenta on yhä
- *             vanhaa tekstiä. Peli ei tarvitse kenttää mihinkään, koska
- *             esitys huomaa eron itse — aikaleimojen määrä ei enää vastaa
- *             virkkeiden määrää, ja lauseiden sekä kappaleen osien
- *             hetket lasketaan silloin merkkiosuuksista
- *             (ihmisen-matka-esitys.js osienHetket). Kenttä poistetaan
- *             samalla, kun luenta generoidaan uudelleen
- *             (AANITE_PAIVITETTAVA alla).
  *
  * YKSI YHTENÄINEN LUENTA (omistaja 8.9.2026: *"nyt jokainen kohtaus on
  * generoitu erillisenä kohtana, niin kertojan äänensävy hyppii liikaa"*
@@ -75,26 +65,13 @@
  * Tekstiä EI muuteta ilman päätoimittajaa (omistajan hyväksyntä).
  */
 
-/**
- * ÄÄNITE UUSITTAVA (omistaja 16.9.2026 klo 15.40 UTC: simpukkavirke
- * pois). Kertomus on YKSI yhtenäinen äänite, joten yhdenkin virkkeen
- * poisto vanhentaa koko tiedoston ja sen aikaleimat:
- *
- *   ääni      aikajana/ihmisen-matka/puhe/ihmisen-matka-kertomus.mp3
- *   manifesti aikajana/ihmisen-matka/puhe/kertomus-manifesti.json
- *   jakso     ihmisen-matka-kertomus-arabia (jakso kerrallaan -varareitti)
- *
- * Uusinta: `node tools/generoi-linssiluennat.mjs --linssi ihmisen-matka
- * --kertomus --yhtena`. Siihen asti kertoja lukee vanhan virkkeen, mutta
- * ruudun teksti on kaanonin mukainen: jakson virkeajoitus putoaa
- * merkkiosuuksiin (aikaleimoja on yksi liikaa), joten mikään ei jää
- * jumiin eikä hyppää.
+/*
+ * ÄÄNITE ON ENNALLAAN (omistaja 17.9.2026 klo 03.40 UTC: *"Se simpukka
+ * tarkoitti pulun simpukka kommenttia. Ei kertojan."*). Kertojan
+ * simpukkavirke palautettiin arabia-jaksoon sanatarkasti sellaisena
+ * kuin se on ämpärin luennassa, joten aikaleimat täsmäävät eikä
+ * ihmisen-matka-kertomus.mp3:a uusita eikä leikata.
  */
-export const AANITE_PAIVITETTAVA = {
-  aani: 'aikajana/ihmisen-matka/puhe/ihmisen-matka-kertomus.mp3',
-  manifesti: 'aikajana/ihmisen-matka/puhe/kertomus-manifesti.json',
-  jaksot: ['arabia'],
-};
 
 export const IHMISEN_MATKA_KERTOMUS = [
   {
@@ -164,7 +141,16 @@ export const IHMISEN_MATKA_KERTOMUS = [
     luenta: 'Kului pitkä aika, ennen kuin joku käveli etelän rantaan asti. '
       + '[curious] Rannasta löytyi ruokaa, joka ei juokse karkuun: simpukoita. '
       + 'Siitä lähtien meri on ollut ihmiselle tie, ei este.',
-    pulu: 'Simpukoita. Hyvä alku.',
+    /*
+     * PULUN SIMPUKKAKOMMENTTI ON POISTETTU (omistaja 17.9.2026 klo 03.40
+     * UTC, sanatarkasti: *"Se simpukka tarkoitti pulun simpukka
+     * kommenttia. Ei kertojan."*). Repliikki *"Simpukoita. Hyvä alku."*
+     * on pois datasta kokonaan — sitä ei piiloteta esityksen ajaksi
+     * vaan sitä ei ole. Numero 1 jää varatuksi (js/liviapuhe.js
+     * LIVIAN_LINSSILAHTEET), jotta muut välihuomiot pitävät omat
+     * äänitteensä.
+     */
+    pulu: null,
   },
   {
     id: 'levantti', vaihe: 'matka', kohde: 'skhul-qafzeh', alue: null, vuosia: 110000,
@@ -188,38 +174,30 @@ export const IHMISEN_MATKA_KERTOMUS = [
     kohde: 'al-wusta',
     /*
      * BLOMBOS SYTTYY TÄSSÄ HILJAISENA PISTEENÄ (omistaja 8.9.2026:
-     * Etelä-Afrikka vain kerran). Nosto merkitään kartalle tämän jakson
-     * aikana, mutta kamera jää Arabiaan.
+     * Etelä-Afrikka vain kerran). Kertoja mainitsee etelän okran ja
+     * helmet samassa lauseessa, jolla ylitystä odotetaan — nosto
+     * merkitään kartalle silloin, mutta kamera jää Arabiaan.
      *
-     * SIMPUKKAVIRKE POISTETTU (omistaja 16.9.2026 klo 15.40 UTC, kaksi
-     * iPhone-kuvaa, sanatarkasti: *"ota simpukka kommentti pois
-     * kokonaan"*). Virke *"Etelän rannikolla ehdittiin hioa okraa
-     * punaiseksi ja pujotella simpukankuoria helmiksi, ennen kuin ylitys
-     * Arabian niemimaalle onnistui."* on pois sekä tekstistä että
-     * luennasta, ja edeltävä virke jatkuu sujuvasti ylitykseen. Blombos
-     * jää yhä hiljaiseksi pisteeksi — se ei ole koskaan tarvinnut omaa
-     * virkettään.
+     * VIRKE PALAUTETTU omistajan korjauksella 17.9.2026; äänite
+     * ennallaan.
      */
     hiljaiset: ['blombos'],
     alue: null,
     vuosia: 90000,
     maisema: 'ruohikko-jarvi',
     tunne: { tunne: 'hammastys', voimakkuus: 0.5 },
-    teksti: 'Sitten kului taas pitkä aika, ennen kuin ylitys Arabian '
-      + 'niemimaalle onnistui. Silloin Arabia oli vihreä: autiomaan paikalla '
-      + 'oli järviä ja ruohoa. Yhden järven rannalta on löydetty yksi ainoa '
-      + 'sormiluu. Se riittää todisteeksi. Tästä ihmiset lähtivät kohti '
-      + 'Aasiaa, eivätkä enää palanneet.',
-    luenta: 'Sitten kului taas pitkä aika, ennen kuin ylitys Arabian '
-      + 'niemimaalle onnistui. Silloin Arabia oli vihreä: autiomaan paikalla '
-      + 'oli järviä ja ruohoa. Yhden järven rannalta on löydetty yksi ainoa '
-      + 'sormiluu. [pause] Se riittää todisteeksi. Tästä ihmiset lähtivät '
-      + 'kohti Aasiaa, eivätkä enää palanneet.',
-    /*
-     * ÄÄNITE EI VASTAA TEKSTIÄ (ks. AANITE_PAIVITETTAVA yllä). Merkintä
-     * poistetaan, kun Codex on generoinut yhtenäisen luennan uudelleen.
-     */
-    aanitePaivitettava: true,
+    teksti: 'Sitten kului taas pitkä aika. Etelän rannikolla ehdittiin hioa '
+      + 'okraa punaiseksi ja pujotella simpukankuoria helmiksi, ennen kuin '
+      + 'ylitys Arabian niemimaalle onnistui. Silloin Arabia oli vihreä: '
+      + 'autiomaan paikalla oli järviä ja ruohoa. Yhden järven rannalta on '
+      + 'löydetty yksi ainoa sormiluu. Se riittää todisteeksi. Tästä ihmiset '
+      + 'lähtivät kohti Aasiaa, eivätkä enää palanneet.',
+    luenta: 'Sitten kului taas pitkä aika. Etelän rannikolla ehdittiin hioa '
+      + 'okraa punaiseksi ja pujotella simpukankuoria helmiksi, ennen kuin '
+      + 'ylitys Arabian niemimaalle onnistui. Silloin Arabia oli vihreä: '
+      + 'autiomaan paikalla oli järviä ja ruohoa. Yhden järven rannalta on '
+      + 'löydetty yksi ainoa sormiluu. [pause] Se riittää todisteeksi. Tästä '
+      + 'ihmiset lähtivät kohti Aasiaa, eivätkä enää palanneet.',
     pulu: null,
   },
   {

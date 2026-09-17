@@ -25,7 +25,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
-import { AANITE_PAIVITETTAVA, IHMISEN_MATKA_KERTOMUS } from '../js/linssit/ihmisen-matka-kertomus.js';
+import { IHMISEN_MATKA_KERTOMUS } from '../js/linssit/ihmisen-matka-kertomus.js';
 import { IHMISEN_MATKA } from '../js/linssit/ihmisen-matka-data.js';
 import { LINSSI } from '../js/linssit/ihmisen-matka.js';
 import { kertomuksenLuennat } from '../js/linssipuhe.js';
@@ -62,7 +62,7 @@ const HYVAKSYTTY = [
   ['omo', 'Etiopian jokilaaksossa ihmisiä asui sukupolvi sukupolven perään. Kaksisataatuhatta vuotta samassa laaksossa. Meille se on ikuisuus. Heille se oli kotiseutu.'],
   ['ranta', 'Kului pitkä aika, ennen kuin joku käveli etelän rantaan asti. Rannasta löytyi ruokaa, joka ei juokse karkuun: simpukoita. Siitä lähtien meri on ollut ihmiselle tie, ei este.'],
   ['levantti', 'Ensimmäinen retki Afrikan ulkopuolelle ulottui Karmelvuorelle, nykyisen Israelin rannikolle. Siellä asuttiin jonkin aikaa, mutta asutus ei jäänyt pysyväksi. Syytä ei tiedetä. Ehkä ilmasto muuttui kuivemmaksi, ehkä tulijat väistyivät neandertalilaisten tieltä. Luut eivät kerro sitä.'],
-  ['arabia', 'Sitten kului taas pitkä aika, ennen kuin ylitys Arabian niemimaalle onnistui. Silloin Arabia oli vihreä: autiomaan paikalla oli järviä ja ruohoa. Yhden järven rannalta on löydetty yksi ainoa sormiluu. Se riittää todisteeksi. Tästä ihmiset lähtivät kohti Aasiaa, eivätkä enää palanneet.'],
+  ['arabia', 'Sitten kului taas pitkä aika. Etelän rannikolla ehdittiin hioa okraa punaiseksi ja pujotella simpukankuoria helmiksi, ennen kuin ylitys Arabian niemimaalle onnistui. Silloin Arabia oli vihreä: autiomaan paikalla oli järviä ja ruohoa. Yhden järven rannalta on löydetty yksi ainoa sormiluu. Se riittää todisteeksi. Tästä ihmiset lähtivät kohti Aasiaa, eivätkä enää palanneet.'],
   ['intian-rannat', 'Reitti kulki rantoja pitkin itään, sukupolvi kerrallaan. Kukaan ei kiirehtinyt. Sumatran sademetsästä on löydetty kaksi hammasta. Se on vähän, mutta se riittää kertomaan, että ihmisiä oli täällä jo silloin.'],
   ['australia', 'Ja sitten tehtiin jotain, mitä kukaan ei ollut ennen tehnyt: lähdettiin meren yli, vaikka toista rantaa ei näkynyt. Perillä oli Sahul, nykyinen Australia. Se oli ihmisen ensimmäinen merimatka tuntemattomaan, ja se onnistui.'],
   ['denisova', 'Pohjoisessa, Altain vuorilla, on luola, jossa asui kolmenlaisia ihmisiä: denisovalaisia, neandertalilaisia ja heidän yhteisiä lapsiaan. Meidän esi-isiemme esineitä löytyy samasta luolasta melkein heti heidän jälkeensä. Luola on pieni. Kaikki mahtuivat siihen vuorollaan.'],
@@ -114,22 +114,25 @@ test('Blombos on kartalla ja kortissa, muttei kertomuksen pysäkkinä', () => {
   const arabia = IHMISEN_MATKA_KERTOMUS.find((j) => j.id === 'arabia');
   assert.deepEqual(arabia.hiljaiset, ['blombos']);
   /*
-   * SIMPUKKAVIRKE ON POISSA (omistaja 16.9.2026 klo 15.40 UTC, kaksi
-   * iPhone-kuvaa, sanatarkasti: *"ota simpukka kommentti pois
-   * kokonaan"*). Nosto jää silti kartalle hiljaisena pisteenä — se ei
-   * koskaan tarvinnut omaa virkettään. Vartio on molempiin suuntiin:
-   * virke ei saa palata, ja kappale alkaa sujuvasti ylitykseen.
+   * KERTOJAN SIMPUKKAVIRKE ON PAIKALLAAN (omistaja 17.9.2026 klo 03.40
+   * UTC, sanatarkasti: *"Se simpukka tarkoitti pulun simpukka
+   * kommenttia. Ei kertojan."*). v1926 julkaisi sen poistettuna; nyt se
+   * on takaisin sanatarkasti ja samassa muodossa kuin ämpärin
+   * luennassa, joten ÄÄNITETTÄ EI UUSITA eikä jaksossa ole lippua
+   * vanhentuneesta luennasta.
    */
-  assert.ok(!/simpukanku|okraa punaiseksi|helmiksi/.test(arabia.teksti),
-    'simpukkavirke on palannut tekstiin');
-  assert.ok(!/simpukanku|okraa punaiseksi|helmiksi/.test(arabia.luenta),
-    'simpukkavirke on palannut luentaan');
-  assert.match(arabia.teksti, /^Sitten kului taas pitkä aika, ennen kuin ylitys Arabian niemimaalle onnistui\. Silloin Arabia oli vihreä:/);
-  // Äänite on vanhentunut, kunnes Codex generoi yhtenäisen luennan uusiksi.
-  assert.equal(arabia.aanitePaivitettava, true);
-  assert.deepEqual(AANITE_PAIVITETTAVA.jaksot, ['arabia']);
-  assert.equal(AANITE_PAIVITETTAVA.aani,
-    'aikajana/ihmisen-matka/puhe/ihmisen-matka-kertomus.mp3');
+  assert.match(arabia.teksti, /okraa punaiseksi/);
+  assert.match(arabia.luenta, /okraa punaiseksi/);
+  assert.equal(arabia.aanitePaivitettava, undefined);
+  /*
+   * VIRKKEITÄ ON KUUSI — yhtä monta kuin ämpärin manifestissa on tämän
+   * jakson lauseleimoja. Juuri tämä luku ratkaisee, luottaako esitys
+   * aikaleimoihin vai putoaako se merkkiosuuksiin
+   * (ihmisen-matka-esitys.js lauseidenHetket / osienHetket): v1926:n
+   * viisi virkettä oli yksi liian vähän.
+   */
+  assert.equal(
+    jaksonJasennys(arabia.teksti, { alku: 0, loppu: arabia.teksti.length }).lauseet.length, 6);
   // Jokainen hiljainen nosto on löytöpaikka, jolla ei ole omaa jaksoa.
   for (const jakso of IHMISEN_MATKA_KERTOMUS) {
     for (const hiljainen of jakso.hiljaiset ?? []) {

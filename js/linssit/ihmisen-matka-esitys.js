@@ -821,10 +821,9 @@ export function jaaOsiin(teksti, { merkkeja = OSAN_MERKIT, virkkeita = OSAN_VIRK
  * kertoja aloittaa osan ensimmäisen virkkeen.
  *
  * MÄÄRÄN ERO ON TURVAPORTTI: jos kaanonin teksti on muuttunut äänitteen
- * jälkeen (js/linssit/ihmisen-matka-kertomus.js `aanitePaivitettava`),
- * leimoja on eri määrä kuin virkkeitä eikä niihin luoteta — hetket
- * lasketaan merkkiosuuksista, jolloin laatikot jakautuvat tasaisesti
- * jakson kestolle.
+ * jälkeen, leimoja on eri määrä kuin virkkeitä eikä niihin luoteta —
+ * hetket lasketaan merkkiosuuksista, jolloin laatikot jakautuvat
+ * tasaisesti jakson kestolle.
  *
  * @param {Array<{alku:number, teksti:string, lause?:number, virkkeita?:number}>} osat
  * @param {number} kesto jakson luennan kesto (ms)

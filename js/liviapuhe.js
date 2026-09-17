@@ -464,9 +464,18 @@ export function livianKaupunkiKuplia(kaupunkiId, kentta) {
  * TEKSTIT ODOTTAVAT AJOA 7.9.2026: ämpärissä ei ole vielä yhtään
  * `livia-ihmisen-matka-*.mp3`-tiedostoa, joten kupla näkyy ja pulu on
  * hiljaa (LIVIAN_AANITETYT). Se on tila, ei vika.
+ *
+ * NUMERO 1 ON VARATTU (omistaja 17.9.2026 klo 03.40 UTC, sanatarkasti:
+ * *"Se simpukka tarkoitti pulun simpukka kommenttia. Ei kertojan."*).
+ * `ranta`-jakson välihuomio *"Simpukoita. Hyvä alku."* poistettiin
+ * kaanonista kokonaan, mutta sen numeroa ei saa antaa seuraavalle:
+ * ämpärissä oleva `livia-ihmisen-matka-1.mp3` on yhä se poistettu
+ * repliikki, ja uudelleennumerointi vaientaisi kolme muuta välihuomiota
+ * (LIVIAN_AANITETYT vertaa tekstin tiivistettä). Varattu paikka on
+ * sama ratkaisu kuin kaupungeilla — ks. LIVIAN_VARATTU.
  */
 export const LIVIAN_LINSSILAHTEET = {
-  'ihmisen-matka': ['ranta', 'denisova', 'beringia', 'loppu'],
+  'ihmisen-matka': [LIVIAN_VARATTU, 'denisova', 'beringia', 'loppu'],
 };
 
 /**
@@ -732,7 +741,6 @@ export const LIVIAN_AANITETYT = {
   'oslo-3': 'b15f2275',
   'bergen-3': '01049c89',
   'kobenhavn-3': '88635dca',
-  'ihmisen-matka-1': '019b7159',
   'ihmisen-matka-2': '45dafd6e',
   'ihmisen-matka-3': '77366164',
   'ihmisen-matka-4': 'dbfd92fe',
@@ -851,7 +859,6 @@ export const LIVIAN_AANIERAT = {
   'oslo-3': 4,
   'bergen-3': 4,
   'kobenhavn-3': 4,
-  'ihmisen-matka-1': 4,
   'ihmisen-matka-2': 4,
   'ihmisen-matka-3': 4,
   'ihmisen-matka-4': 4,
