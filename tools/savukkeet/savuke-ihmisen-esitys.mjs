@@ -407,15 +407,16 @@ await s.evaluate(() => {
  * ehdon täyttyessä esitys pysäytetään samassa silmukassa, jolloin
  * mittaus ja kuva ovat siitä hetkestä. `jatkaEsitys()` päästää menemään.
  */
-async function odotaJaPysayta(kentta, op, arvo, kierroksia = 900) {
-  return s.evaluate(async ([k, o, a, n]) => {
+async function odotaJaPysayta(kentta, op, arvo, kierroksia = 900, lisaehdot = []) {
+  return s.evaluate(async ([k, o, a, n, lisat]) => {
     const { ui } = window.matkakirja;
-    const tayttyy = (t) => {
-      const v = t?.[k];
-      if (o === '>=') return typeof v === 'number' && v >= a;
-      if (o === '<=') return typeof v === 'number' && v <= a;
-      return v === a;
+    const yksi = (t, kk, oo, aa) => {
+      const v = t?.[kk];
+      if (oo === '>=') return typeof v === 'number' && v >= aa;
+      if (oo === '<=') return typeof v === 'number' && v <= aa;
+      return v === aa;
     };
+    const tayttyy = (t) => yksi(t, k, o, a) && lisat.every(([kk, oo, aa]) => yksi(t, kk, oo, aa));
     for (let i = 0; i < n; i += 1) {
       const t = ui.aikajana?.esitys?.tila?.();
       if (!t || t.paattynyt) break;
@@ -426,7 +427,7 @@ async function odotaJaPysayta(kentta, op, arvo, kierroksia = 900) {
       await new Promise((r) => setTimeout(r, 60));
     }
     return { osui: false, ...(ui.aikajana?.esitys?.tila?.() ?? {}) };
-  }, [kentta, op, arvo, kierroksia]);
+  }, [kentta, op, arvo, kierroksia, lisaehdot]);
 }
 const jatkaEsitys = () => s.evaluate(() => window.matkakirja.ui.aikajana?.esitys?.jatka());
 
@@ -498,7 +499,13 @@ const kaynnistys = await s.evaluate(() => {
  * jossa se itse sanoo mustan olevan päällä — kuva ja mittaus ovat
  * samasta hetkestä riippumatta siitä, kuinka hidas kone on.
  */
-const mustaHetki = await odotaJaPysayta('mustaPaalla', '===', true, 300);
+/*
+ * LISÄEHTO kulunut >= 0 (Fable 17.9.2026): PR #2561:n ubuntu-ajossa
+ * musta oli päällä jo ENNEN esityksen käynnistymistä (kulunut -77 ms,
+ * tähtien peitto vielä 1 edellisestä tilasta), ja Linux-kontti ehti
+ * pysäyttää siihen. Mitataan vasta kun esityksen oma kello on lähtenyt.
+ */
+const mustaHetki = await odotaJaPysayta('mustaPaalla', '===', true, 300, [['kulunut', '>=', 0]]);
 const musta = { ...(await mittaaPinnat()), ...kaynnystysLisa(kaynnistys, mustaHetki) };
 await s.screenshot({ path: kuva('0-musta') });
 /*
