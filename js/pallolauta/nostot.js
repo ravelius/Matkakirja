@@ -1177,6 +1177,8 @@ export function luoNostot({
    * luodaan ankkuri (sama polku, kaksi lahdetta).
    */
   let kaupunkirivitNyt = [];
+  /** Viimeisimman ladonnan laudan kaupunkien ankkuririvit (savukkeet). */
+  let laudanAnkkurit = [];
   /*
    * KAUPUNGIN SISÄISET NOSTOT ladonnasta: avain = kaupunkirivin avain.
    * Sama lista pudottaa merkit kartalta (PAATOKSET 34 kohta 3) ja
@@ -1800,6 +1802,33 @@ export function luoNostot({
      * jos nostokerroksessa jo ON tämän kaupungin rivi (Lille), lauta
      * ei tuo omaansa, jottei sama kaupunki olisi kahdesti.
      */
+    /*
+     * KAUPUNGIN OMA PISTE LUETAAN SEN OMISTA NOSTOISTA, EI LAUDALTA
+     * (mitattu 18.9.2026, savuke-pariisi-lahizoom, 390 px):
+     *
+     *   Tuileriain rauniot 33,1 km · Mona Lisan varkaus 50,2 km ·
+     *   Kyyhkyposti 54,6 km · Tuileries 73,9 km — kaikki `pariisi`
+     *
+     * Laudan kaupungin asteet tulevat RUUDUKOSTA (js/pallo.js
+     * pallonKaupungit → laudaltaAsteiksi), eli ne ovat pelilaudan
+     * piirrospiste eivätkä kaupungin maantieteellinen paikka. Ero on
+     * kymmeniä kilometrejä, joten 12 km:n säde (PAATOKSET 34 kohta 4)
+     * mitattuna siitä pisteestä ei löytänyt YHTÄÄN kaupungin omaa
+     * nostoa — liuska aukesi tyhjänä.
+     *
+     * Nostot itse tietävät kaupunkinsa (`kaupunkiAvain`,
+     * js/fokuskohteet.js nostonKaupunkiAvain), ja niiden asteet ovat
+     * oikeat. Kaupungin piste on siis niiden MEDIAANI: yksi karkaava
+     * nosto ei siirrä sitä, ja säde mitataan sen jälkeen noston OMASTA
+     * paikasta kuten päätös vaatii (Versailles 17 km jää kartalle).
+     * Ripustuspiste on yhä laudan merkki — vain jäsenyyden keskus on
+     * tämä.
+     */
+    const mediaani = (luvut) => {
+      const j = [...luvut].sort((a, b) => a - b);
+      const k2 = Math.floor(j.length / 2);
+      return j.length % 2 ? j[k2] : (j[k2 - 1] + j[k2]) / 2;
+    };
     const laudanRivit = [];
     for (const k of (laudanKaupungit?.() ?? [])) {
       const nimi = k?.nimi ?? k?.name ?? '';
@@ -1807,7 +1836,14 @@ export function luoNostot({
       if (omatKaupunkirivit.some((r) => r.nimi === nimi)) continue;
       const p = ruudulla(k.lat, k.lng);
       if (!p) continue;
+      const ankkuroidut = elavatKaikki.filter((r) => r.perhe === 'nosto' && !r.kaupunki
+        && r.kaupunkiAvain === k.id
+        && Number.isFinite(r.lat) && Number.isFinite(r.lng));
+      const keskus = ankkuroidut.length
+        ? { lat: mediaani(ankkuroidut.map((r) => r.lat)), lng: mediaani(ankkuroidut.map((r) => r.lng)) }
+        : { lat: k.lat, lng: k.lng };
       laudanRivit.push({
+        keskus,
         avain: laudanAvain(k),
         id: k.id,
         perhe: 'nosto',
@@ -1823,13 +1859,17 @@ export function luoNostot({
         etaisyys: keskipiste ? Math.hypot(p.x - keskipiste.x, p.y - keskipiste.y) : 0,
       });
     }
+    laudanAnkkurit = laudanRivit;
     const kaupunkirivit = [...omatKaupunkirivit, ...laudanRivit];
     sisaisetKaupungeittain = new Map();
     const sisaisetAvaimet = new Set();
     for (const city of kaupunkirivit) {
+      // Jäsenyyden keskus: ankkurilla nostojen mediaani, pakkojen
+      // omalla rivillä sen oma paikka (ks. KAUPUNGIN OMA PISTE).
+      const keskus = city.keskus ?? city;
       const omat = elavatKaikki.filter((r) => r.perhe === 'nosto' && !r.kaupunki
         && !r.vainNimi && typeof r.avaa === 'function'
-        && onKaupunginSisainen(r, city));
+        && onKaupunginSisainen(r, keskus));
       if (!omat.length) continue;
       sisaisetKaupungeittain.set(city.avain, omat);
       for (const r of omat) sisaisetAvaimet.add(r.avain);
@@ -2138,7 +2178,16 @@ export function luoNostot({
          * sulkiessa — sillä lista on se, jota juuri luetaan. Nimiö
          * piiloutuu ensin ja merkki vain, jos lista peittää senkin.
          */
-        const kovat = [...viimeisimmatNimet, ...(esteet?.() ?? [])]
+        /*
+         * ESTEET ON TÄSSÄ LISTA, EI FUNKTIO (mitattu 18.9.2026,
+         * savuke-pariisi-lahizoom: `TypeError: esteet is not a
+         * function`). `luoNostot`in valinta `esteet` ON funktio, mutta
+         * `paivita`n oma parametri samannimisenä varjostaa sen ja on
+         * laudan antama LAATIKKOLISTA. Kutsu `esteet?.()` kaatoi siis
+         * koko ladonnan heti, kun lista avautui — ja juuri siksi myös
+         * aihenostojen viuhka oli rikki (Raamattu, PAATOKSET 34 TILA).
+         */
+        const kovat = [...viimeisimmatNimet, ...(Array.isArray(esteet) ? esteet : [])]
           .filter(Boolean)
           .map((e) => ({ ...e, paino: KOVAN_ESTEEN_PAINO }));
         /*
@@ -2251,7 +2300,8 @@ export function luoNostot({
         const leveydet = rivit.map((r2) => viuhkanNimioLeveys(
           r2.nimi ? nostosymNimioMitta(r2.nimi, null, Infinity).leveys : 0, mittaNyt,
         ) + r2.sisennys * LIUSKAN_SISENNYS_PX);
-        const kovat = [...viimeisimmatNimet, ...(esteet?.() ?? [])]
+        // Sama varjostus kuin viuhkalla (ks. ESTEET ON TÄSSÄ LISTA).
+        const kovat = [...viimeisimmatNimet, ...(Array.isArray(esteet) ? esteet : [])]
           .filter(Boolean)
           .map((e) => ({ ...e, paino: KOVAN_ESTEEN_PAINO }));
         const {
@@ -2512,6 +2562,22 @@ export function luoNostot({
     /** Sulkee viuhkan (kartan napautus, js/pallolauta/lauta.js). */
     suljeViuhka,
     /* ── KAUPUNKILIUSKA (PAATOKSET 34) ───────────────────────────── */
+    /**
+     * LAUDAN KAUPUNKIEN ANKKURIT juuri nyt: ripustuspiste (`lat`/`lng`)
+     * ja jäsenyyden keskus (`keskus`) erikseen — savukkeen on mitattava
+     * samasta pisteestä kuin kerros (ks. KAUPUNGIN OMA PISTE).
+     */
+    /** Kaupungin sisaisten nostojen tunnukset (savukkeen vartio 3). */
+    liuskanSisaiset: (avain) => (sisaisetKaupungeittain.get(avain) ?? []).map((r) => r.id),
+    laudanAnkkurit: () => laudanAnkkurit.map((r) => ({
+      avain: r.avain,
+      id: r.id,
+      nimi: r.nimi,
+      lat: r.lat,
+      lng: r.lng,
+      keskus: { ...r.keskus },
+      sisaisia: (sisaisetKaupungeittain.get(r.avain) ?? []).length,
+    })),
     /** Auki olevan liuskan kaupunkirivin avain tai null. */
     liuskaAuki: () => liuska?.avain ?? null,
     /** Auki olevan kategorian aihe tai null (haitari, kohta 8). */

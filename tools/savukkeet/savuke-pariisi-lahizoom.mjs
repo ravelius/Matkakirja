@@ -974,7 +974,25 @@ for (const ruutu of RUUDUT) {
   const osumaIdt = new Set(m.osumat.map((o) => o.id));
   const poltetut = new Set(m.osumat.filter((o) => o.poltettu).map((o) => o.id));
   const ryhmassa = new Set(m.aihemerkit.flatMap((a) => a.jasenet));
-  const kartalla = (id) => ryhmassa.has(id)
+  /*
+   * NELJAS HYVAKSYTTAVA TILA: KAUPUNKILIUSKA (PAATOKSET 34 kohta 3,
+   * mitattu 18.9.2026 era 4). Kaupungin SISAISET nostot eivat enaa ole
+   * kartalla millaan zoomilla — ne ovat liuskan kategorioissa, ja
+   * niiden KUULUU olla poissa. 390 px:lla nama olivat
+   * nosto-guimardin-metro ja nosto-pariisin-patonki. Vartio ei siis
+   * vanhennu: se mittaa yha, ettei yksikaan nosto KATOA, mutta tuntee
+   * liuskan paikkana siina missa aihemerkin ja poltetun musteen.
+   * Lista luetaan kerrokselta, ei kovakoodattuna.
+   */
+  const liuskassa = new Set(await sivu.evaluate(() => {
+    const { ui } = window.matkakirja;
+    const n = ui.pallolauta.nostot;
+    const oma = ui.game?.cityOf?.() ?? null;
+    const a = oma ? (n.laudanAnkkurit?.() ?? []).find((x) => x.id === oma.id) : null;
+    if (!a || !n.liuskanSisaiset) return [];
+    return n.liuskanSisaiset(a.avain);
+  }));
+  const kartalla = (id) => ryhmassa.has(id) || liuskassa.has(id)
     || (osumaIdt.has(id) && (domIdt.has(id) || poltetut.has(id)));
   const kateissa = PARIISIN_NOSTOT.filter((id) => !kartalla(id));
   const poltettujaRykelmassa = PARIISIN_NOSTOT.filter((id) => poltetut.has(id));
@@ -994,6 +1012,7 @@ for (const ruutu of RUUDUT) {
    * olevan jossakin kolmesta hyväksyttävästä tilasta.
    */
   const tilaRivi = (id) => {
+    if (liuskassa.has(id)) return 'kaupunkiliuskassa';
     if (ryhmassa.has(id)) return 'aihemerkissä';
     if (domIdt.has(id)) return 'oma merkki';
     if (poltetut.has(id)) return 'poltettu';
@@ -1562,10 +1581,18 @@ for (const ruutu of RUUDUT) {
   if (esteet.length) {
     tieto(`${ruutu.nimi} · peitossa (ohitettu)`, esteet.join(', '));
   }
-  vaadi(`4. ${ruutu.nimi}: aito napautus avaa noston kortin `
-    + `(${NAPAUTUKSIA} nostoa, osuma 44 px:n säteeltä)`,
-    napautetut.length === NAPAUTUKSIA && virheet.length === 0,
-    virheet.length ? virheet.join(', ') : `napautettavia vain ${napautetut.length}`);
+  /*
+   * 4. VANHENTUNUT VARTIO (mitattu 18.9.2026, era 3). Vartio napauttaa
+   * PARIISIN OMIA nostoja (PARIISIN_NOSTOT), ja PAATOKSET 34 kohta 3
+   * siirsi ne kartalta liuskaan: merkkeja ei ole, koska niiden KUULUU
+   * olla poissa (`INFO napautukset: ei yhtaan`). Korvaaja on 8h
+   * (kohteen napautus liuskasta avaa kortin). sarjat.json ennallaan —
+   * Fable paattaa, mita sinne kirjataan.
+   */
+  tieto(`4. ${ruutu.nimi}: VANHENTUNUT VARTIO`,
+    `kaupungin sisaiset nostot ovat liuskassa, ei kartalla (PAATOKSET 34 k. 3); `
+    + `napautettavia ${napautetut.length}`
+    + (virheet.length ? `, ${virheet.join(', ')}` : ''));
 
   /*
    * 4b. AIHEMERKIN VIUHKA AVAA KORTIN. Viuhkan kohtia on oltava
@@ -1623,7 +1650,29 @@ for (const ruutu of RUUDUT) {
     const k = await import('/js/pallolauta/kaupunkiliuska.js');
     const n = window.matkakirja.ui.pallolauta.nostot;
     const osumat = n.osumat?.() ?? [];
-    const city = osumat.find((o) => o.kaupunki);
+    /*
+     * KAUPUNKI ON PELAAJAN OMA LAUDAN KAUPUNKI, EI OSUMALISTAN
+     * ENSIMMAINEN (korjattu 18.9.2026, era 4). Osumalistan ensimmainen
+     * `kaupunki`-rivi oli LILLE, joten vartio mittasi Lillen ymparia ja
+     * vastasi *"sisaisia kartalla 0 (kaikkiaan 0)"* myos silloin, kun
+     * Pariisin omat nostot olivat kartalla. Vaite koskee Pariisia.
+     */
+    const { ui } = window.matkakirja;
+    const oma = ui.game?.cityOf?.() ?? null;
+    /*
+     * KESKUS LUETAAN KERROKSELTA, EI LAUDAN PISTEESTA (korjattu
+     * 18.9.2026, era 4). Laudan projisoitu piste on Pariisissa 33-78 km
+     * sivussa kaupungin omista nostoista, joten siita mitattuna 12 km:n
+     * sade ei loytanyt yhtaan sisaista nostoa. Kerros laskee keskuksen
+     * kaupunkiin ankkuroitujen nostojen mediaanina — savukkeen on
+     * mitattava SAMASTA pisteesta, muuten vartio ei mittaa peliä.
+     */
+    const ankkuri = oma
+      ? (n.laudanAnkkurit?.() ?? []).find((a) => a.id === oma.id) ?? null
+      : null;
+    const city = ankkuri
+      ? { id: ankkuri.id, lat: ankkuri.keskus.lat, lng: ankkuri.keskus.lng }
+      : osumat.find((o) => o.kaupunki);
     if (!city) return null;
     const nakyvat = new Set([...document.querySelectorAll('.pallolauta-nosto')]
       .filter((el) => el.getBoundingClientRect().width > 0
@@ -1632,8 +1681,17 @@ for (const ruutu of RUUDUT) {
     const sisalla = (o) => k.onKaupunginSisainen(
       { lat: o.lat, lng: o.lng }, { lat: city.lat, lng: city.lng },
     );
+    // Diagnoosi: lahimmat nostot kaupungin pisteesta kilometreina.
+    const lahimmat = osumat.filter((o) => !o.kaupunki)
+      .map((o) => ({
+        nimi: o.nimi ?? o.id,
+        km: k.etaisyysKm({ lat: o.lat, lng: o.lng }, { lat: city.lat, lng: city.lng }),
+        ankkuri: o.kaupunkiAvain ?? null,
+      }))
+      .sort((a, b) => a.km - b.km).slice(0, 6);
     return {
       kaupunki: city.id,
+      lahimmat,
       kartalla: osumat.filter((o) => !o.kaupunki && nakyvat.has(o.id) && sisalla(o))
         .map((o) => o.id),
       kaikki: osumat.filter((o) => !o.kaupunki && sisalla(o)).length,
@@ -1651,6 +1709,8 @@ for (const ruutu of RUUDUT) {
     sisaisetZoomeilla.push({ porras, tulos });
     tieto(`${ruutu.nimi} · liuska zoom ${porras}`,
       tulos ? `sisäisiä kartalla ${tulos.kartalla.length} (kaikkiaan ${tulos.kaikki})`
+        + `, kaupunki ${tulos.kaupunki}, lähimmät: `
+        + tulos.lahimmat.map((l) => `${l.nimi} ${p(l.km)} km/${l.ankkuri ?? '-'}`).join(', ')
         : 'kaupunkiriviä ei ollut');
   }
   vaadi(`8a. ${ruutu.nimi}: kaupungin sisäisiä nostomerkkejä kartalla 0 (3 zoomia)`,
@@ -1660,11 +1720,20 @@ for (const ruutu of RUUDUT) {
   await zoomaaPariisiin(sivu, ZOOMIPORTAAT);
   await sivu.waitForTimeout(900);
 
-  /* 8b. Ankkuroidut mutta ULKOPUOLISET kohteet pysyvät kartalla. */
+  /*
+   * 8b. Ankkuroidut mutta ULKOPUOLISET kohteet pysyvat kartalla.
+   *
+   * NIMET LUETAAN `nostot.osumat()`ISTA, EI DOMIN NIMIOISTA (korjattu
+   * 18.9.2026, era 3:n mittaus): aihenostojen ryhmitys nayttaa vain
+   * ryhman ensimmaisen nimen (`Nimi…`), joten DOM-nimio kertoi 1400
+   * px:lla *"ei yhtaan"* vaikka kohteet olivat kartalla (vartio 3f oli
+   * samaan aikaan vihrea). Osumalista on se, mika kartalla oikeasti on
+   * — myos ryhman sisalla.
+   */
   const ulkonaTeksti = await sivu.evaluate(
-    () => [...document.querySelectorAll('.pallolauta-nosto')]
-      .filter((el) => el.getBoundingClientRect().width > 0)
-      .map((el) => `${el.dataset.nimio ?? ''} ${el.dataset.nosto ?? ''}`).join(' | '),
+    () => (window.matkakirja.ui.pallolauta.nostot.osumat?.() ?? [])
+      .flatMap((o) => [o.nimi ?? '', o.id ?? '', ...(o.jasenet ?? []).map((j) => j.nimi ?? '')])
+      .join(' | '),
   );
   const LAHIKOHTEET = ['Versailles', 'Chartres', 'Chambord'];
   const loytyi = LAHIKOHTEET.filter((nimi) => new RegExp(nimi, 'iu').test(ulkonaTeksti));
@@ -1676,31 +1745,35 @@ for (const ruutu of RUUDUT) {
   await suljeKortti(sivu);
   await sivu.waitForTimeout(300);
   /*
-   * PELAAJAN OMA KAUPUNKI, EI LISTAN ENSIMMÄINEN (korjattu 18.9.2026).
-   * Ensimmäinen `kaupunki`-rivi oli Lille — nostokerroksen kaupungit
-   * ovat NÄKYVIÄ kaupunkeja (js/packs/nakyvat-kaupungit-fra.js), eivät
-   * laudan kaupunkeja, joten vartio napautti väärää merkkiä ja avasi
-   * Lillen kortin. Rivi haetaan nyt nimellä pelaajan omasta
-   * kaupungista, ja jos riviä ei ole, se kirjataan sellaisenaan.
+   * NAPAUTUS OSUU LAUDAN OMAAN KAUPUNKIMERKKIIN (Fablen paatos
+   * kerrosrajasta, PAATOKSET 34 TILA; korjattu 18.9.2026, era 4).
+   *
+   * MITATTU SYY: nostokerroksen `kaupunki`-rivit ovat sisaltopakettien
+   * NAKYVIA kaupunkeja (Lille, js/packs/nakyvat-kaupungit-fra.js).
+   * Pelaajan Pariisi on LAUDAN kaupunki, jolla ei ole riviä siina
+   * kerroksessa — era 3 napautti siksi Lillea ja mittasi Lillen
+   * kortin. Piste luetaan nyt laudan kaupungista
+   * (`pallolauta.kaupunki(id)` → `pallo.getScreenCoords`), eli
+   * TASMALLEEN siita merkista, jota pelaajan sormi koskettaa.
    */
   const kaupunkiTieto = await sivu.evaluate(() => {
-    const ui = window.matkakirja.ui;
+    const { ui } = window.matkakirja;
+    const l = ui.pallolauta;
     const oma = ui.game?.cityOf?.() ?? null;
-    const osumat = ui.pallolauta.nostot.osumat?.() ?? [];
-    const rivit = osumat.filter((o) => o.kaupunki);
-    const rivi = oma ? rivit.find((o) => o.nimi === oma.name) : null;
+    const k = oma ? (l.kaupunki?.(oma.id) ?? null) : null;
+    const p = k ? l.pallo.getScreenCoords(k.lat, k.lon, 0) : null;
+    const rivit = (l.nostot.osumat?.() ?? []).filter((o) => o.kaupunki);
     return {
       oma: oma?.name ?? null,
       kaupunkirivit: rivit.map((o) => o.nimi ?? o.id),
-      id: rivi?.id ?? null,
+      piste: p ? { x: p.x, y: p.y } : null,
     };
   });
-  tieto(`${ruutu.nimi} · liuskan kaupunkirivi`,
-    `oma ${kaupunkiTieto.oma ?? '—'}, rivejä [${kaupunkiTieto.kaupunkirivit.join(', ')}], `
-    + `osuma ${kaupunkiTieto.id ?? 'EI RIVIÄ'}`);
-  const liuskanKaupunkiId = kaupunkiTieto.id;
-  const kPiste = liuskanKaupunkiId
-    ? await odotaAsettunut(sivu, () => merkinPiste(sivu, liuskanKaupunkiId)) : null;
+  tieto(`${ruutu.nimi} · liuskan kaupunkimerkki`,
+    `oma ${kaupunkiTieto.oma ?? '—'}, laudan merkki `
+    + `${kaupunkiTieto.piste ? `${p(kaupunkiTieto.piste.x)},${p(kaupunkiTieto.piste.y)}` : 'EI RUUDULLA'}`
+    + `, nostokerroksen kaupunkirivit [${kaupunkiTieto.kaupunkirivit.join(', ')}]`);
+  const kPiste = kaupunkiTieto.piste;
   let liuskaTulos = null;
   if (kPiste) {
     /*
