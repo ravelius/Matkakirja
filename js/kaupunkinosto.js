@@ -49,9 +49,7 @@
  * pop-upin päällä.
  */
 
-import {
-  NOSTOSYM_MITAN_KATTO, nostosymKatettuMitta, piirraNostosymKartalle,
-} from './fokusnosto-symbolit.js';
+import { piirraNostosymKartalle } from './fokusnosto-symbolit.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import {
   avaaTiivisLehtiarkki, kaupunginKansi, latoKaupunginEsittely, latoLehtiKuvat,
@@ -128,6 +126,53 @@ export const TURISTI_INFO_SIIRTO = Object.freeze({ lon: 1.5, lat: -0.75 });
  */
 export const TURISTI_INFO_RUUTUSIIRTO = Object.freeze({ dx: 36, dy: 16 });
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * KYLTTI SIIRTYY SIVUUN, EI NIMIÖ (omistaja 17.9.2026 klo 06.35 UTC,
+ * Raamattu KARTTAUUDISTUKSEN PAATOKSET 31 TARKENNUS 3, kortti
+ * *"Kyltti siirtyy sivuun"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MITATTU VIKA (17.9.2026, Pariisin lähizoomi, molemmat ruudut): kun
+ * kyltin varaus tuli ladontaan oikean kokoisena (TARKENNUS 2 kohta 6),
+ * *Impressionistit…* -aihemerkki jäi kyltin laatikon SISÄÄN, eikä sen
+ * nimiölle löytynyt vapaata asentoa yhdeltäkään neljästä kyljestä —
+ * sovittelun viimeinen keino oli nimiön piilotus. Omistajan päätös:
+ * siirtyvä osapuoli on KYLTTI, ei nimiö.
+ *
+ * ASENNOT OVAT RUUTUSIIRTOJA, JÄRJESTYS ON ETUSIJA. Ensimmäinen on
+ * TURISTI_INFO_RUUTUSIIRTO eli se 39 px:n paikka, joka mitattiin
+ * hyväksi erässä 4 — kyltti ei siis liiku, ellei ole pakko. Sen jälkeen
+ * kokeillaan sama (oikea) kylki ylhäältä ja kauempaa, ja vasta sitten
+ * kaupungin vasen puoli: kaupungin NIMIKYLTTI on PAATOKSET 24:n mukaan
+ * oletuksena merkin VASEMMALLA puolella, joten vasen puoli on ahtaampi.
+ * MITATTU 17.9.2026: kun vasen puoli oli järjestyksessä toisena,
+ * työpöydän 1400 px:n näkymässä kyltti meni *PARIISI*-nimen päälle
+ * (savuke-pariisi-lahizoom 7e, 1 nimi varauksen päällä). `vasen` kertoo, että ankkuri on siirrettävä
+ * laatikon leveyden verran vasemmalle: nimiö piirtyy aina merkin
+ * OIKEALLE puolelle (asetteleTuristiInfo, kylki 'oikea'), joten
+ * pelkkä negatiivinen dx jättäisi nimiön kaupungin päälle.
+ *
+ * Etäisyydet on pidetty pieninä tarkoituksella: kyltin on oltava yhä
+ * kaupungin VIERESSÄ (tools/savukkeet/savuke-kaupunkietusivu.mjs
+ * TURISTI_INFO_ETAISYYS_MAX = 48 px saapumisnäkymässä), ja ladonta
+ * pääsee kauemmas vain silloin, kun lähempänä ei ole tilaa.
+ */
+export const TURISTI_INFON_ASENNOT = Object.freeze([
+  Object.freeze({ dx: 36, dy: 16 }),
+  Object.freeze({ dx: 36, dy: -16 }),
+  Object.freeze({ dx: 36, dy: 44 }),
+  Object.freeze({ dx: 36, dy: -44 }),
+  Object.freeze({ dx: 36, dy: 76 }),
+  Object.freeze({ dx: 36, dy: -76 }),
+  Object.freeze({ dx: -36, dy: 16, vasen: true }),
+  Object.freeze({ dx: -36, dy: -16, vasen: true }),
+  Object.freeze({ dx: -36, dy: 44, vasen: true }),
+  Object.freeze({ dx: -36, dy: -44, vasen: true }),
+  Object.freeze({ dx: -36, dy: 76, vasen: true }),
+  Object.freeze({ dx: -36, dy: -76, vasen: true }),
+]);
+
 /**
  * Turisti-infon paikka asteina, kun halutaan KIINTEÄ RUUTUSIIRTO.
  *
@@ -185,62 +230,37 @@ export function turistiInfonAsteet(lat, lon) {
  * tähän.
  */
 export const KAUPUNKIMERKIN_MITTA = 8.5 / 11;
-/** Mittakaavan lattia (suunnitelman luku 3.0, kolmas pala). */
-export const KAUPUNKIMERKIN_MITTA_MIN = 0.75;
 /*
  * ══════════════════════════════════════════════════════════════════
- * KYLTIN KATTO ON SAMA RUUTUPIKSELIKATTO KUIN NOSTOJEN NIMIÖLLÄ
- * (Fable 16.9.2026 klo 20.45 UTC, Raamattu KARTTAUUDISTUKSEN
- * PAATOKSET 31 TARKENNUS 1 kohta 3)
+ * KYLTTI SKAALAUTUU KUTEN MUUTKIN KARTAN MERKIT — SAMA KERROIN, SAMA
+ * KATTO (omistaja 17.9.2026 klo 03.30 UTC, Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 31 TARKENNUS 2 kohta 5, kortti *"Sama kerroin kuin
+ * muilla"*)
  * ══════════════════════════════════════════════════════════════════
  *
- * MITATTU VIKA (Chromium 390 × 844 dpr 2, Ranska-tallenne, pelaaja
- * Pariisissa, sisin sallittu zoomi = osuus 0,341 uloimmasta,
- * 16.9.2026). Kyltin katto oli tämän moduulin OMA luku 3, eli nimiö
- * 3 × NOSTOSYM_NIMIO_KOKO = 33,00 px ruudulla. Nostojen nimiöt oli
- * v1925:ssä katettu 16 px:iin (PAATOKSET 31 kohta 2), mutta katto asui
- * js/pallolauta/nostot.js:ssä eikä koskenut tätä merkkiä lainkaan:
- * kyltti jäi kaksinkertaiseksi ja sen piirretty ala oli 201 px
- * 373,6 px:n kotelossa, 27,8 px oikean laidan yli — omistajan kuvan
- * leikkautunut *"Turisti-in…"*.
+ * MITATTU EPÄSUHTA (16.9.2026, Ranska-tallenne, pelaaja Pariisissa).
+ * Kyltin mitta laskettiin omalla vertailullaan `uloin / näkyvä`, jossa
+ * `uloin` oli MAAN LAATIKKO × 1,15 (uloszoomausraja, PAATOKSET 1),
+ * kun nostot ja kaupunkimerkit käyttävät LAITTEEN OMAA saapumisnäkymää
+ * (js/pallolauta/nostot.js nostonKarttakerroin, PAATOKSET 14). Sama
+ * pelitilanne antoi siksi saapumisnäkymässä puhelimelle 27,18 px:n ja
+ * työpöydälle 8,25 px:n nimiön — 3,3-kertainen ero, ja 16 px:n katon
+ * jälkeen puhelimella kyltti seisoi katossa jo saapuessa.
  *
- * KATTO TUODAAN, EI TOISTETA. Luku ja katkofunktio asuvat siellä,
- * missä nimiön kirjasinkokokin (js/fokusnosto-symbolit.js
- * NOSTOSYM_NIMIO_KATTO_PX, nostosymKatettuMitta) — sama tiedosto,
- * josta tämä moduuli jo tuo merkin piirtäjän. Peruskoko
- * (KAUPUNKIMERKIN_MITTA) on yhä toistettu luku, koska se on
- * js/pallolauta/-puolen vakio eikä tämä moduuli saa ripustaa itseään
- * siihen; katto ei ole.
+ * KORJAUS EI OLE UUSI KAAVA VAAN VANHAN POISTO: mitta tulee nyt
+ * samasta funktiosta kuin kaupunkimerkillä (js/pallolauta/nostot.js
+ * `nostonMitta(KAUPUNKIMERKIN_KERROIN)`, kutsu js/pallolauta/lauta.js
+ * paivitaTuristiInfo), joten kyltti on n. 11,5 px saapuessa ja 16 px
+ * lähizoomissa MOLEMMILLA ruuduilla. Kerroin ja katto asuvat siis
+ * yhdessä paikassa, eikä tässä moduulissa ole enää omaa mittakaavaa —
+ * vain perusmitta varapolulle (`d.mitta` puuttuu vain, jos ladonta ei
+ * ole vielä ehtinyt ajaa).
  *
- * KATTO ON SAMA LUKU MUTTA PURREE ERI ZOOMILLA kuin nostolla, koska
- * kyltin peruskoko on isompi (11,5 px vs. 8,5 px) ja sen kerroin
- * mitataan eri vertailusta (maan laatikko × 1,15, ks.
- * js/pallolauta/lauta.js paivitaTuristiInfo). Juuri sen vuoksi katto
- * kuuluukin merkin MITTAAN eikä kameran kertoimeen: molemmat
- * pysähtyvät samaan ruutupikselimäärään, kumpikin omalla zoomillaan.
+ * MIKSI MITTA TULEE ULKOAPÄIN EIKÄ TUODA TÄNNE: js/pallolauta/ ei ole
+ * yhden tiedoston niputuksessa, eikä tämä moduuli saa ripustaa itseään
+ * siihen (sama syy kuin KAUPUNKIMERKIN_MITTA-vakiolla). Lauta antaa
+ * luvun datumin `mitta`-kentässä.
  */
-export const KAUPUNKIMERKIN_MITTA_MAX = NOSTOSYM_MITAN_KATTO;
-
-/**
- * MERKKI SKAALAUTUU ZOOMATESSA KUIN PAINETTU KARTTA (PAATOKSET 2).
- *
- * Mitta on suhde `uloin / näkyvä`: uloimmalla zoomilla (koko maan
- * laatikko ruudussa) merkki on perusmitassaan, ja lähikuvassa se kasvaa
- * samassa suhteessa kuin kartta sen alla. Katto on pakollinen — ilman
- * sitä nimiö kasvaisi lähikuvassa ruudun kokoiseksi ja nimiladonta
- * (js/pallolauta/sovittelu.js) laskisi ruutupikseleitä, jotka eivät
- * mahdu mihinkään. Lattia pitää merkin luettavana silloinkin, kun
- * kamera on maan laatikkoa kauempana (kehittäjän maailmanäkymä).
- *
- * Tuntematon leveys palauttaa perusmitan: merkki näkyy aina, vaikka
- * maan laatikkoa ei olisi vielä laskettu (saapumisrajaus on asynkroninen).
- * Peruskoko on katon alapuolella (0,77 < 1,45), joten sekään ei karkaa.
- */
-export function kaupunkimerkinMitta(nakyvaLeveys, uloinLeveys) {
-  if (!(nakyvaLeveys > 0) || !(uloinLeveys > 0)) return KAUPUNKIMERKIN_MITTA;
-  const mitta = KAUPUNKIMERKIN_MITTA * (uloinLeveys / nakyvaLeveys);
-  return nostosymKatettuMitta(Math.max(KAUPUNKIMERKIN_MITTA_MIN, mitta));
-}
 
 /* ===================== MITÄ KAUPUNGILLA ON ===================== */
 

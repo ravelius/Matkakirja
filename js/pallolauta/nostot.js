@@ -1760,8 +1760,14 @@ export function luoNostot({
    * (js/pallolauta/nimet.js laatikot). Mitat lasketaan kaavasta
    * (nostonLaatikko) eikä ruudulta, joten sovittelu ei koske DOMiin
    * ennen kuin jokin lappu oikeasti liikkuu — ei layout-thrashia.
+   *
+   * `kiinteat` on muu liikkumaton muste, jota lappu ei saa peittää:
+   * tällä hetkellä turisti-infon kyltti (js/pallolauta/lauta.js
+   * ladoLevossa, Raamattu KARTTAUUDISTUKSEN PAATOKSET 31 TARKENNUS 2
+   * kohta 6). Se on eri lista kuin `nimet` vain kutsujan selkeyden
+   * vuoksi — sovittelulle kaikki esteet ovat samaa laatikkojoukkoa.
    */
-  const sovittele = ({ nimet = [] } = {}) => {
+  const sovittele = ({ nimet = [], kiinteat = [] } = {}) => {
     if (!lappuja.length) return sovittelu;
     const tulos = sovitteleLaput({
       laput: lappuja.map(({ r, datum, laatikko }) => ({
@@ -1778,7 +1784,7 @@ export function luoNostot({
          */
         este: r.perhe === 'aihemerkki',
       })),
-      esteet: nimet,
+      esteet: kiinteat.length ? [...nimet, ...kiinteat] : nimet,
     });
     let muuttui = false;
     for (const { r, datum } of lappuja) {

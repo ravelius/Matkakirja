@@ -205,7 +205,8 @@ test('lauta sovittelee nimien JÄLKEEN, ja nimi väistää vain liikkumatonta mu
   const sovitteluKohta = lauta.indexOf('nostot.sovittele(');
   assert.ok(nimiKohta > 0 && sovitteluKohta > nimiKohta,
     'sovittelu on ladottava nimien jälkeen — muuten nimi ei ole kiinteä');
-  assert.match(lauta, /nostot\.sovittele\(\{ nimet: nimet\.laatikot\(\) \}\)/);
+  assert.match(lauta,
+    /nostot\.sovittele\(\{ nimet: nimet\.laatikot\(\), kiinteat: infoTulos \}\)/);
   const nostot = lue('../js/pallolauta/nostot.js');
   // Elävän noston LAPPU ei ole nimen varaus, ikoni on.
   assert.match(nostot, /nostonLaatikko\(r\.p, r, \{\s*dx: datum\.dx, dy: datum\.dy, nimio: false,\s*\}\)/);
@@ -216,6 +217,58 @@ test('lauta sovittelee nimien JÄLKEEN, ja nimi väistää vain liikkumatonta mu
   assert.ok(!/^import .*sovittelu\.js/m.test(nimet), 'nimikerros ei saa tuoda sovittelua');
   // Uusi moduuli on SHELLissä (offline).
   assert.match(lue('../sw.js'), /'\.\/js\/pallolauta\/sovittelu\.js'/);
+});
+
+/*
+ * TURISTI-INFON KYLTTI ON SOVITTELUSSA KIINTEÄ ESTE (omistaja
+ * 17.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 31 TARKENNUS 2
+ * kohta 6). Kyltti ei voi väistää, joten nostojen laput väistävät
+ * sitä samalla säännöllä kuin kaupunkien nimiä — ja sen laatikko on
+ * kyltin PIIRRETTY ala eikä 1 × 1 px:n piste.
+ */
+test('turisti-infon kyltti on sovittelun este ja sen varaus on koko kyltti', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  const nostot = lue('../js/pallolauta/nostot.js');
+  // 1. Kerros ottaa muunkin liikkumattoman musteen kuin nimet.
+  assert.match(nostot, /const sovittele = \(\{ nimet = \[\], kiinteat = \[\] \} = \{\}\) => \{/);
+  assert.match(nostot, /esteet: kiinteat\.length \? \[\.\.\.nimet, \.\.\.kiinteat\] : nimet,/);
+  // 2. Lauta antaa kyltin laatikot sekä nimiladonnalle että sovittelulle.
+  assert.match(lauta, /varaukset: \[\.\.\.nostoTulos\.laatikot, \.\.\.infoTulos\]/);
+  // 3. Varaus lasketaan SAMASTA kaavasta kuin nostojen omat laatikot —
+  //    ei lueta ruudulta, koska merkin rasteri valmistuu omalla ajallaan.
+  assert.match(lauta, /return \[nostonLaatikko\(p, KYLTIN_LADONTA\)\];/);
+  assert.match(lauta, /const KYLTIN_LADONTA = \{\n {4}kaupunki: true,/);
+  assert.match(lauta, /nimi: TURISTI_INFO_NIMIO,/);
+  // 4. Sama laatikko palvelee sekä ladontaa että osumatestiä.
+  assert.match(lauta, /return kyltinLaatikot\(\);/);
+  assert.match(lauta,
+    /if \(!kyltinLaatikot\(\)\.some\(\(r\) => laatikonEtaisyys\(kohta, r\) <= KYLTIN_MUSTEEN_VARA_PX\)\) \{/);
+  // 5. Vastakoe palauttaa 1 x 1 px:n pisteen (merkin svg:n oma mitta).
+  assert.match(lauta, /if \(!pallonSaantoKaytossa\('kylttilaatikko'\)\) \{/);
+});
+
+/*
+ * KYLTTI SIIRTYY SIVUUN, EI NIMIÖ (omistaja 17.9.2026, Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 31 TARKENNUS 3).
+ */
+test('turisti-infon kyltti valitsee vapaan asennon ennen nimiladontaa', () => {
+  const lauta = lue('../js/pallolauta/lauta.js');
+  const kaupunkinosto = lue('../js/kaupunkinosto.js');
+  // 1. Asennot ovat lista, jonka ensimmäinen on entinen paikka.
+  assert.match(kaupunkinosto, /export const TURISTI_INFON_ASENNOT = Object\.freeze\(\[/);
+  assert.match(kaupunkinosto, /Object\.freeze\(\{ dx: 36, dy: 16 \}\),/);
+  // 2. Este on vain se, mikä EI riipu kyltistä (kiinteä muste, kaupungin piste).
+  assert.match(lauta, /const paivitaTuristiInfo = \(kiinteaMuste = \[\]\) => \{/);
+  assert.match(lauta, /const infoTulos = paivitaTuristiInfo\(nostoTulos\.laatikot\);/);
+  // 3. Edellinen asento kokeillaan ensin (ei heilu ladonnasta toiseen).
+  assert.match(lauta, /const jarjestys = \[asennot\[kyltinAsento\] \?\? asennot\[0\], \.\.\.asennot\];/);
+  assert.match(lauta, /kyltinAsento = Math\.max\(0, asennot\.indexOf\(asento\)\);/);
+  // 4. Kyltti valitaan ENNEN nimiladontaa, joka väistää sitä.
+  const kyltti = lauta.indexOf('const infoTulos = paivitaTuristiInfo(');
+  const nimet = lauta.indexOf('const nimiTulos = nimet.lado(');
+  assert.ok(kyltti > 0 && nimet > kyltti, 'kyltin asento ennen nimiladontaa');
+  // 5. Vastakoe: siirto pois.
+  assert.match(lauta, /pallonSaantoKaytossa\('kylttisiirto'\)\n?\s*\? TURISTI_INFON_ASENNOT : TURISTI_INFON_ASENNOT\.slice\(0, 1\)/);
 });
 
 test('siirto animoidaan ja reduced motion poistaa siirtymän', () => {
