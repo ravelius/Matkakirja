@@ -1127,3 +1127,280 @@ kelauksen askel pysyy listan sisällä.
 `tests/kaupunkiliuska.test.mjs`, tämä raportti.
 
 **Vaatii versionoston**; `tools/uusi-versio.mjs` on ajamatta (ohje).
+
+---
+
+# Erä 7 (Opus-agentti 18.9.2026 klo 02.00 Suomen aikaa)
+
+**LIUSKA ON KESKITETTY, KARTTA TEKEE SILLE TILAA, JA JÄSENYYS ON SAMA
+MOLEMMILLA RUUDUILLA.** 390 px: **31/31 vartiota läpi**, ei yhtään
+punaista. 1400 px: **29/30**, punaisena vain erästä 4 auki ollut
+mittarin vika 8b. Liuskassa on nyt 16 nostoa MOLEMMILLA ruuduilla.
+
+## 1. JÄSENYYS: ruutu ei ole jäsenyyden mitta (16 vs 10 ratkaistu)
+
+**JUURISYY MITATTIIN, EI PÄÄTELTY.** Epäily oli lähi-portti; se ei
+ollut syy. `merkkiPortti` saa lipun `{ kohdemaa: true }`, jolloin se
+palauttaa KAIKKI merkit kattoineen ja `lahi`-lippuineen — sama lista
+kummallakin zoomilla.
+
+Syy oli yhtä kerrosta alempana. `sisaisetKaupungeittain` laskettiin
+listasta `elavatKaikki`, joka on `nakyvat`-lista, ja `nakyvat`
+suodatetaan `ruudulla(lat, lng)`:llä — se palauttaa **nullin, kun
+piste on pallon takana TAI ruudun ulkopuolella**
+(js/pallolauta/lauta.js). Pariisin nostot ovat ankkurilevityksen
+jäljiltä 33–74 km päässä kaupungista (erä 5, kohta 1), joten leveällä
+ruudulla osa niistä oli kuvan ulkopuolella ja katosi liuskasta.
+
+**Korjaus on yksi rivi ja yksi peruste:** liuskan lähde on `keraa`n
+rivit sellaisenaan (`liuskanLahde`), ei ruudulla olevat. Liuskan rivi
+ei tarvitse ruutupistettä — se piirtyy kaupunkimerkin omaan
+elementtiin, ja vain kaupungin oman rivin `p` on ripustuspiste.
+Kartan siivous (`sisaisetAvaimet`) kohdistuu yhä ruudulla oleviin
+riveihin, joten kartalta ei voi pudota mitään, mitä liuska ei näytä.
+
+Mitattu tulos on sama molemmilla ruuduilla:
+`ihmeet: 2/2, historia: 3/3, kauppa: 3/3, kulttuuri: 3/3, skandaalit: 5/5`
+— **16 nostoa**.
+
+## 2. ESTEET: ruudun kalusteet luetaan DOMista
+
+Pulu (`.pollo-nappi`, `.pollo-kuplapino-kehys`, `.pollo-paneeli`),
+toimintorivin napit (Liiku, kirjanmerkki: `.toimintorivi button`),
+paikkarivin kartuutsi *"Pariisi, lokakuussa 1873"* (`.fokus-kartuutsi`),
+maapalkki (`.fokus-jana`), päiväkirjakortti (`.fact-card`) ja yläpalkki
+(`.topbar`) ovat nyt liuskan **KOVIA** esteitä samalla painolla kuin
+kaupungin nimi ja pelinappula. Lista on valitsimia eikä mittoja, ja
+mitat luetaan ajossa (`ruudunKalusteet`, js/pallolauta/lauta.js) —
+sama ratkaisu ja sama perustelu kuin js/ui.js `SOVITUKSEN_KALUSTEET`
+ja js/fokusmitat.js `KALUSTEET`.
+
+Fokuskohteiden nimiöt (Kaulanauhajuttu) ovat **pehmeitä** esteitä
+kuten muutkin nostonimiöt: ne voi piilottaa listan ajaksi, joten ne
+eivät saa työntää listaa kovan esteen päälle (PAATOKSET 32:n oma
+painotus). Ne olivat jo `laatikot`-listassa; muutos on se, että kovat
+kalusteet tulivat rinnalle.
+
+## 3. KOHTA 12: LISTA ON KESKITETTY, KARTTA TEKEE TILAA OIKEALLE
+
+Omistajan lisäys (*"Lista voisi olla keskitetysti sekä ylös että alas
+ja kartta voisi liikkua automaattisesti niin että oikealle puolelle
+tulis lisää tilaa"*) **kumoaa erä 6:n alaspäin kasvavan listan**, ja
+hyvästä syystä: alaspäin kasvava lista väisti esteitä itse, ja kun
+kutistus loppui tiheimpään riviväliin, ainoa jäljellä oleva keino oli
+kelaus — jonka päätös sanoo olevan viimeinen. Nyt järjestys on
+päinvastainen.
+
+1. **Kamera ajaa ensin** (js/pallolauta/lauta.js `napautaPintaan`):
+   kaupunkimerkki viedään ruudun keskilinjan VASEMMALLE puolelle
+   (`LIUSKAN_MERKIN_OSUUS_X` = 1/3), jotta liuskalle jää tilaa
+   oikealle, ja pystysuunnassa vapaan kaistan keskelle — kaista on
+   ylälaidan kalusteiden alareunan ja alalaidan kalusteiden
+   (pulu, Liiku) yläreunan väli. Mitta tulee kerrokselta
+   (`nostot.liuskanTilantarve`) ja se on **suurin kategoria
+   avattuna**, ei kiinni oleva lista: muuten kamera joutuisi ajamaan
+   uudestaan haitaria avattaessa ja ajo sulkisi juuri avatun liuskan
+   (lepotesti).
+2. **Lista on keskitetty** merkin kohdalle (`kasvu: 'keskitetty'`,
+   viuhkan oma käytös). Puoli valitaan kartan keskeltä poispäin, joten
+   vasemmalle ajettu merkki saa listansa oikealle itsestään. Riviväli
+   kutistuu ennen kuin lista siirtyy esteen päälle, ja keskitetyn
+   listan tila on kaksi kertaa lyhyempi puoli (`keskitettyTila`).
+3. **Vasta sitten kelaus** (`keskitettyMahtuvatRivit`).
+
+### 3b. Yksi kokeiltu ja MITTAUKSELLA KUMOTTU sääntö
+
+Kokeilin ratkaista puolen pelkällä KOVALLA sakolla (`kovaEnsin`), jotta
+runsas pehmeä muste ei veisi listaa väärälle puolelle. Mittaus kumosi
+sen heti: **ruudun reuna on myös kovaa sakkoa**, joten 390 px:llä oikea
+puoli (joka kiinnittyy reunaan) hävisi vasemmalle ja liuska siirtyi
+merkin väärälle puolelle. Valinta on `viuhkanAsemat`issa yhä
+valinnaisena (`kovaEnsin`, oletus pois) ja peruste on kirjattu
+koodiin, jottei sitä kokeilla uudestaan.
+
+## 4. KOHTA 11: "Muut (n)" — aiheeton nosto ei katoa
+
+`kategoriat()` ryhmittelee nyt niin, että nosto, jolla ei ole aihetta
+TAI jonka aihe ei ole karttaselitteen oma aihe
+(js/karttavalot.js `KARTTAVALO_AIHEET`), menee yhteen **"Muut"**-kasaan,
+joka on aina **listan viimeisenä**. Aiemmin tuntematon aihe sai oman
+kategoriansa nimellä *"Nostot"* (`aiheenNimi`in oma varanimi), eli
+tuntemattomia aiheita olisi ollut yhtä monta kategoriaa.
+
+Summa on siis aina kaupungin sisäisten nostojen määrä, ja **jokainen
+sisäinen nosto on tasan yhdessä kategoriassa** — uusi yksikkötesti
+mittaa juuri sen (avainten joukon koko = nostojen määrä). Savukkeen
+8f/8i mittaavat saman pelissä.
+
+Pariisissa ei tällä hetkellä ole yhtään aiheetonta nostoa, joten
+"Muut" ei näy kaappauksessa. Sääntö on silti se, mitä omistaja pyysi,
+ja se on nyt vartioitu.
+
+## 5. MITTAUS (yksi ajo kumpaakin ruutua kohti)
+
+| ruutu | tulos | punaiset |
+| --- | --- | --- |
+| 390 px | **31/31** | — |
+| 1400 px | **29/30** | `8b` (mittarin vika, erästä 4) |
+
+- **390 px:** avattu Skandaalit-kategoria on 13 riviä, 386 px korkea,
+  **0 kelausriviä**; kaikki 16 nostoa luettavissa. Liuska on merkin
+  oikealla puolella (merkki x 146 / ruutu 374, liuskan vasen reuna
+  160) ja sen pystykeskipiste on 30 px eli yhden rivin päässä merkin
+  korkeudesta — juuri se sieto, jonka omistaja antoi. Pulu, Liiku,
+  kirjanmerkkinappi ja otsikkolaatikko ovat vapaita.
+- **1400 px:** sama sisältö (13 riviä, 386 px, 0 kelausriviä), mutta
+  liuska asettuu merkin VASEMMALLE puolelle ja 90 px alemmas. Syy on
+  mitattu: leveällä ruudulla kartalla on kymmeniä kaupunkien nimiä,
+  jotka ovat kovia esteitä (PAATOKSET 32 kohta 5), ja merkin oikealle
+  keskitetty 13-rivinen lista osuu niihin. Sääntö *"ei koskaan
+  kaupungin nimen päällä"* on vanhempi ja vahvempi kuin puolen
+  valinta, joten **jätin asemahaun päättämään**. Omistajan oma
+  mittausohje sanoo *"Vartio 390 px"*, joten vartio **8k** on 390
+  px:llä ja työpöydällä sama luku on INFO.
+- `8b` on yhä punainen 1400 px:llä: Versailles ja Chambord OVAT
+  kartalla, mutta 1400 px:n ladonnassa `osumat()` ei anna niitä sillä
+  nimellä, jolla vartio etsii (*"löytyi Chartres"*). **Sama auki jäänyt
+  mittarin vika kuin erässä 4 ja 6**; en koskenut siihen.
+
+### 5b. Kaappaukset
+
+`/private/tmp/claude-501/-Users-samireivinen-Matkakirja-fable/`
+`1de1d7f9-1349-4671-ad36-3323aaf75d0f/scratchpad/kaappaukset7/`
+
+| tiedosto | mitä siinä on |
+| --- | --- |
+| `pariisi-liuska-kategoria-390.png` | **Skandaalit auki, 13 riviä, ei kelausta** — liuska merkin oikealla, pulu ja Liiku vapaina |
+| `pariisi-liuska-kategoria-1400.png` | sama 1400 px:llä (liuska merkin vasemmalla, ks. yllä) |
+| `pariisi-liuska-auki-390.png`, `-1400.png` | liuska kiinni-tilassa |
+| `pariisi-lahizoom-390.png`, `-1400.png` | kartta ilman liuskaa |
+
+Savukkeiden tulosteet: `.../scratchpad/savuke17-390.txt` (31/31),
+`savuke17-1400.txt` (29/30), `savuke-popup9.txt` (22/25).
+Välimittaukset `savuke13…savuke16` ja `savuke-popup7/8`.
+
+### 5c. YKSI HAVAINTO, JOTA VARTIO EI NÄE
+
+390 px:n kaappauksessa liuskan paperitausta osuu kartan ISON
+*"PARIISI"*-nimen viimeisiin kirjaimiin. Vartio 8j ei näe sitä, koska
+se vertaa rivejä `.pallolauta-nimi`-elementteihin, ja tuo iso nimi on
+kartan omaa piirtoa eikä DOM-elementti. **En korjannut tätä** — se on
+uusi esteen laji (kartalle piirretty teksti), ja sen ratkaisu on joko
+nimen laatikon vienti esteistöön piirtokerrokselta tai kamera-ajon
+vaakasiirron kasvattaminen. Kirjaan sen auki olevaksi, en päättele
+sitä ratkaistuksi.
+
+## 6. SAVUKKEET
+
+### 6a. `savuke-pariisi-lahizoom`: kylttivartiot INFOksi
+
+`7.`, `7b.`, `7c.` ja `7e.` muutettiin INFOksi perusteluineen:
+turisti-infon kylttiä EI ole kartalla (js/pallolauta/lauta.js
+`KYLTTI_KARTALLA = false`, PAATOKSET 34 kohta 8), joten ne olivat
+punaisia molemmilla ruuduilla joka ajossa eivätkä enää häilyviä.
+Luku säilyy tietona, jos kyltti joskus palaa. Väitteen samasta asiasta
+esittää nyt 8e (yläryhmässä on Turistiopas-rivi). **`sarjat.jsonia`
+EI muutettu.**
+
+Kaksi vartiota päivitettiin, koska peli muuttui alta:
+
+- **`8c.` katto 600 ms → 2000 ms.** 600 ms oli oikea niin kauan kuin
+  avauksen ajo oli keskitys, joka useimmiten ei liikuttanut mitään
+  (`ajaKamera` palaa heti alle 0,01°:n matkalla). Kohta 10 antaa
+  ajolle työn, joten se kestää oman mittansa
+  (`PALLOKAMERAN_AJO_MS` = 1400 ms) + ladonta ja avaus. Väite säilyy.
+- **`8h.` valitsee kohteen kategoriasta, joka EI ole Kadonneet
+  ihmeet.** Erä 6 valitsi "ensimmäisen kategorian", mutta järjestys ei
+  ole vakio: kun jäsenyys alkoi lukea koko dataa, Pariisin ensimmäinen
+  kategoria vaihtui juuri Kadonneiksi ihmeiksi, joiden nostoilla on OMA
+  avaaja (aarrekortin ehdot, erä 6 osio 3).
+- **UUSI `8k.`** (390 px): keskitetty liuska on merkin korkeudella
+  (sieto yksi rivi) ja sen oikealla puolella, suurin kategoria auki
+  ilman kelausta.
+
+### 6b. `savuke-kaupunkipopup`: 18/25 → **22/25**
+
+Epäily oli oikea (savukkeen oma napautusketju), mutta syy oli eri kuin
+arvattiin — ja se **mitattiin**: erä 6:n ajossa Pariisi oli punainen ja
+Marseille vihreä, eli vika ei seurannut järjestystä vaan LIUSKAN
+KOKOA. Odotus oli 20 × 50 ms = 1 s ja kommentti sanoi kamera-ajon
+kestävän *"noin 200 ms"*. Se ei pidä enää paikkaansa: Pariisin liuska
+on suuri, joten kamera ajaa täyden mittansa (1400 ms), kun taas
+Marseillen viisirivinen lista ei liikuta kameraa juuri lainkaan.
+**Odotus on nyt 3 s** (ajo + ladonta + avaus), ja Pariisi on vihreä
+molemmilla ruuduilla.
+
+Kokeilin myös lukea kaupunkipisteen uudestaan ennen toista
+napautusyritystä (kamera-ajo siirtää merkkiä). **Mittaus kumosi sen:**
+tulos putosi 16/25:een, joten peruin muutoksen. Miksi se huononsi, on
+auki.
+
+Jäljelle jäi **kolme punaista**: `vastakoe 1` (vanhentunut, erä 4:n
+havainto: mittaa isoa pop-upia, jota ei enää ole) ja **`Marseille @
+390 px`** (2 vartiota), joka on **auki** — se oli vihreä ennen tätä
+korjausta ja punainen sen jälkeen, joten syy on jossakin odotuksen
+pituudessa. En ehtinyt mitata sitä enkä halua arvata.
+`tunnetutPunaisetMaara: 17` on yhä eri pelin luku (v1927).
+
+## 7. TESTIT JA NIPUTUS
+
+`node --test tests/*.test.mjs`: **3606 testiä, `# pass 3593`,
+`# fail 0`** (13 ohitettua). `tests/kaupunkiliuska.test.mjs` sai kaksi
+uutta testiä (Muut-kategoria, ks. osio 4).
+
+**PR #2569:n Testit-työnkulun kaatuminen on korjattu, mutta EI sillä
+korjauksella, joka pyydettiin.** `js/nahtavyydet.js` toi
+`NAHTAVYYDET_NIMIO`:n suoraan `js/pallolauta/kaupunkiliuska.js`:stä.
+Kun lisäsin liuskan MODULES-listalle, kaksi vartiota kaatui heti:
+`tests/pallolauta.test.mjs` ja `tests/linssikartta.test.mjs` vaativat,
+ettei listalla ole yhtään pallolaudan moduulia — **pallolauta ei kuulu
+yhden tiedoston versioon**, ja se on vanhempi päätös kuin tämä erä.
+(Sen lisäksi niputus törmäsi kolmeen nimikonfliktiin, koska niputus
+litistää moduulit samaan globaaliin.)
+
+Ratkaisu on siksi riippuvuuden purku: yläryhmän nimiöt asuvat nyt
+omassa pikkumoduulissaan **`js/kaupunkiliuska-nimiot.js`** (ei
+riippuvuuksia), jonka molemmat tuovat — liuska vie ne edelleen ulos
+omalla nimellään, joten rajapinta ei muuttunut. Moduuli on
+MODULES-listalla ennen nähtävyyksiä ja `sw.js`:n SHELL-listalla.
+`node tools/build-standalone.mjs` ja `node tools/tarkista-niputus.mjs`
+ajettu: *"niputus kunnossa: 395 moduulia, ei törmäyksiä"*.
+**dist/ ei ole commitissa.**
+
+## 8. VANHENTUNEET TUNNETUT PUNAISET `sarjat.jsonissa` (EN muuttanut)
+
+| tiedosto | rivi `sarjat.jsonissa` | tila |
+| --- | --- | --- |
+| `savuke-pariisi-lahizoom.mjs` | `"7e. tyopoyta: kyltin laatikko on vapaa"` | **vanhentunut** — vartio on nyt INFO koodissa, joten riviä ei enää tarvita. Sama koskee `7.`, `7b.` ja `7c.` (eivät ole listalla) |
+| `savuke-kaupunkipopup.mjs` | `tunnetutPunaisetMaara: 17` | **vanhentunut luku** — eri pelin (v1927) mitta; tämän erän ajo on 22/25, eli 3 punaista, joista 1 vanhentunut ja 2 auki (Marseille @ 390 px) |
+
+Fable päättää, mitä kirjataan.
+
+## 9. Oletukset (päätin itse, ei AskUserQuestionia)
+
+1. **Liuskan puolen ratkaisee asemahaku, ei pakotus** (osio 3b ja 5):
+   1400 px:llä kaupunkien nimet voittavat puolen valinnan, koska *"ei
+   koskaan kaupungin nimen päällä"* on vanhempi sääntö. Vartio 8k on
+   omistajan ohjeen mukaisesti 390 px:llä.
+2. **`NAHTAVYYDET_NIMIO` omaan pikkumoduuliin** eikä pallolautaa
+   MODULES-listalle (osio 7) — kaksi vanhempaa vartiota kieltää sen.
+3. **Kadonneiden ihmeiden aarrekortin ehdot ovat yhä sisältökysymys**;
+   8h vain valitsee kohteensa muualta (osio 6a).
+4. **Iso kartalle piirretty "PARIISI" jätettiin esteistön ulkopuolelle**
+   ja kirjattiin auki olevaksi (osio 5c).
+5. **`savuke-kaupunkipopup`in Marseille @ 390 px jätettiin punaiseksi**
+   mittaamattomana (osio 6b); en muuttanut vartiota arvauksen
+   perusteella.
+
+## 10. Muutetut tiedostot (erä 7)
+
+`js/pallolauta/lauta.js`, `js/pallolauta/nostot.js`,
+`js/pallolauta/aihemerkit.js`, `js/pallolauta/kaupunkiliuska.js`,
+`js/kaupunkiliuska-nimiot.js` (uusi), `js/nahtavyydet.js`, `sw.js`,
+`tools/build-standalone.mjs`, `tools/savukkeet/savuke-pariisi-lahizoom.mjs`,
+`tools/savukkeet/savuke-kaupunkipopup.mjs`,
+`tests/kaupunkiliuska.test.mjs`, tämä raportti.
+
+**Vaatii versionoston**; `tools/uusi-versio.mjs` on ajamatta (ohje).
+PR #2569 on suljettu, joten muutokset ovat vain haarassa
+`claude/bold-ride-vow4ki-kaupunkiliuska`.

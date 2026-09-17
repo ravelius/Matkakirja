@@ -40,8 +40,8 @@ import {
   KOVAN_ESTEEN_PAINO,
   VIUHKAN_ALAS_ALKU_PX, VIUHKAN_REUNAVARA_PX, VIUHKAN_RIVI_PX, VIUHKAN_VALI_PX,
   aiheenNimi, aihemerkinLaatikko, aihemerkkiElementti, aihenostonNimio, alasMahtuvatRivit,
-  asetteleAihemerkki, kohdanLaatikko, piirraViuhka, ryhmitaNostot, viuhkanAsemat,
-  viuhkanNimioLeveys,
+  asetteleAihemerkki, keskitettyMahtuvatRivit, kohdanLaatikko, piirraViuhka, ryhmitaNostot,
+  viuhkanAsemat, viuhkanNimioLeveys,
 } from './aihemerkit.js';
 import {
   kelattuLiuska, kelauksenAskel, liuskanRivit, liuskanSuurinRivimaara, nostonOmaPaikka,
@@ -2358,23 +2358,31 @@ export function luoNostot({
      * pehmeät = muiden nostojen muste. Rivit piirtyvät kaupunkimerkin
      * omaan elementtiin (asetteleNosto), eivät omiksi merkeikseen.
      *
-     * AVATTU LISTA LASKETAAN AVATUN LISTAN KORKEUDELLA (Fablen
-     * tarkistus 18.9.2026, kaappaus pariisi-liuska-kategoria-390.png:
-     * *"kun kategoria avataan, liuska kasvaa ylöspäin ja peittää
-     * PARIISI-kaupunginnimen"*). Kolme sääntöä, samassa järjestyksessä
-     * kuin ne ratkaistaan:
+     * LISTA ON KESKITETTY, JA KARTTA TEKEE SILLE TILAA (PAATOKSET 34
+     * kohta 12, omistaja sanatarkasti: *"Lista voisi olla
+     * keskitetysti sekä ylös että alas ja kartta voisi liikkua
+     * automaattisesti niin että oikealle puolelle tulis lisää
+     * tilaa"*). Tämä KUMOAA erä 6:n alaspäin kasvavan listan: siellä
+     * lista väisti esteitä itse, tässä kartta ajetaan asentoon, jossa
+     * esteitä ei ole. Kolme sääntöä siinä järjestyksessä kuin ne
+     * ratkaistaan:
      *
-     * 1. LISTA KASVAA ALASPÄIN merkistä (`kasvu: 'alas'`), joten
-     *    kaupungin nimi ja nappula jäävät sen yläpuolelle. Asennot ovat
-     *    samat kuin viuhkalla, vain järjestys vaihtuu: alin vapaa
-     *    asento voittaa.
-     * 2. JOS ALAS EI MAHDU, sama haku kokeilee sivua ja ylempiä
-     *    asentoja — kova este painaa 50-kertaisesti, joten se väistyy
-     *    ennen pehmeää mustetta.
-     * 3. JOS RUUTU EI RIITÄ (pitkä kategoria 390 px:llä), lista ei
-     *    veny esteiden yli vaan KELAA sisäisesti: ikkuna on merkin
-     *    alapuolelle mahtuvat rivit (alasMahtuvatRivit) ja kelausrivit
-     *    vievät ikkunasta omansa (kelattuLiuska).
+     * 1. KAMERA AJAA ENSIN (js/pallolauta/lauta.js napautaPintaan,
+     *    `liuskanTilantarve`): kaupunkimerkki viedään ruudun
+     *    keskilinjan VASEMMALLE puolelle, jotta liuskalle jää tilaa
+     *    oikealle, ja pystysuunnassa asentoon, jossa keskitetty lista
+     *    mahtuu ylälaidan kalusteiden ja pulun väliin.
+     * 2. LISTA ON KESKITETTY merkin kohdalle (`kasvu: 'keskitetty'`,
+     *    viuhkan oma käytös): se kasvaa yhtä paljon ylös ja alas.
+     *    Puoli valitaan kartan keskeltä poispäin, joten vasemmalle
+     *    ajettu merkki saa listansa oikealle itsestään. Kovat esteet
+     *    (kaupungin nimi, nappula, pulu, Liiku, paikkarivi) painavat
+     *    50-kertaisesti, joten ne väistyvät ennen pehmeää mustetta, ja
+     *    riviväli kutistuu ennen kuin lista siirtyy niiden päälle.
+     * 3. VASTA SITTEN KELAUS: jos tiheinkään keskitetty lista ei mahdu
+     *    (keskitettyMahtuvatRivit), liuska näyttää ikkunan ja
+     *    kelausrivit (kelattuLiuska) sen sijaan että ylittäisi
+     *    esteet.
      */
     liuskanKohdat = [];
     if (liuska) {
@@ -2399,10 +2407,24 @@ export function luoNostot({
             r2.nimi ? nostosymNimioMitta(r2.nimi, null, Infinity).leveys : 0, mittaNyt,
           ) + r2.sisennys * LIUSKAN_SISENNYS_PX);
           return viuhkanAsemat({
-            p: rivi.p, ruutu: ruutuNyt, leveydet, esteet: listanEsteet, kasvu: 'alas',
+            p: rivi.p,
+            ruutu: ruutuNyt,
+            leveydet,
+            esteet: listanEsteet,
+            kasvu: 'keskitetty',
+            /*
+             * `kovaEnsin` EI OLE PÄÄLLÄ — mitattu 18.9.2026. Kokeilin
+             * ratkaista puolen pelkällä kovalla sakolla, jotta runsas
+             * pehmeä muste ei veisi listaa väärälle puolelle. Mittaus
+             * kumosi sen: ruudun reuna on myös kovaa sakkoa, joten 390
+             * px:llä oikea puoli (joka kiinnittyy reunaan) hävisi
+             * vasemmalle ja liuska siirtyi merkin väärälle puolelle.
+             * Yhteenlaskettu sakko on siis oikea mitta; puolen
+             * ratkaisee kamera-ajo (PAATOKSET 34 kohta 12).
+             */
           });
         };
-        const mahtuu = alasMahtuvatRivit({ p: rivi.p, ruutu: ruutuNyt });
+        const mahtuu = keskitettyMahtuvatRivit({ p: rivi.p, ruutu: ruutuNyt });
         let rivit = kaikkiRivit;
         let asemointi = laske(rivit);
         // Kelaus vasta kun vapaata asentoa EI löytynyt (kovaSakko > 0):
@@ -2721,8 +2743,13 @@ export function luoNostot({
       const n = liuskanSuurinRivimaara({ nostot: omat ?? [], liiku: Boolean(valinnat.liiku) });
       return {
         rivit: n,
+        // Alaspäin kasvavan listan tarve (jää mittariksi).
         px: VIUHKAN_ALAS_ALKU_PX + Math.max(0, n - 1) * VIUHKAN_VALI_PX
           + VIUHKAN_RIVI_PX + VIUHKAN_REUNAVARA_PX,
+        // KESKITETYN listan koko korkeus (PAATOKSET 34 kohta 12):
+        // rivivälit + ylimmän ja alimman rivin puolikkaat + reunavara.
+        korkeus: Math.max(0, n - 1) * VIUHKAN_VALI_PX
+          + 2 * (VIUHKAN_RIVI_PX + VIUHKAN_REUNAVARA_PX),
       };
     },
     /**

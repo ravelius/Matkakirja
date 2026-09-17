@@ -623,6 +623,14 @@ export const PISTEIDEN_SIIRTYMA_MS = 0;
  */
 const LIUSKAN_YLAVARA_PX = 18;
 const YLAKALUSTEEN_RAJA = 1 / 3;
+/*
+ * MISSÄ KAUPUNKIMERKKI ON RUUDULLA, KUN LIUSKA AUKEAA (PAATOKSET 34
+ * kohta 12: *"kartta voisi liikkua automaattisesti niin että oikealle
+ * puolelle tulis lisää tilaa"*). Osuus ruudun leveydestä: kolmannes
+ * jättää liuskalle kaksi kolmannesta oikealle ja pitää merkin silti
+ * selvästi kuvassa.
+ */
+const LIUSKAN_MERKIN_OSUUS_X = 1 / 3;
 /** Napautuksen osuma ruudulla: lähin kaupunki tai kohde tämän säteen sisällä (px). */
 export const NAPAUTUKSEN_SADE_PX = 44;
 
@@ -2373,28 +2381,56 @@ export async function avaaPallolauta(ui) {
          * paikkarivin tai yläpalkin taakse.
          */
         const tila = kamera.kameranTila();
+        let maaliX = city.x;
         let maaliY = city.y;
         try {
           const tarve = nostot.liuskanTilantarve?.({
             id: city.id, nimi: city.name, liiku: Boolean(siirto),
           });
           const korkeus = kotelo.clientHeight || 0;
-          if (tarve?.px > 0 && tila?.skaala > 0 && korkeus > 0) {
-            // Ylälaidan kalusteet (yläpalkki, paikkarivi) — merkki ei
-            // nouse niiden taakse; ilman kalusteita pelkkä reunavara.
-            const kalusteet = ruudunKalusteet()
-              .filter((k) => k.y0 < korkeus * YLAKALUSTEEN_RAJA);
+          const leveysPx = kotelo.clientWidth || 0;
+          if (tarve?.korkeus > 0 && tila?.skaala > 0 && korkeus > 0 && leveysPx > 0) {
+            /*
+             * PYSTYSUUNTA: keskitetty lista mahtuu ylälaidan
+             * kalusteiden (yläpalkki, paikkarivi) ja alalaidan
+             * kalusteiden (pulu, toimintorivin Liiku ja kirjanmerkki)
+             * VÄLIIN. Merkki on listan keskipiste, joten se viedään
+             * vapaan kaistan keskelle — ja jos kaista on listaa
+             * suurempi, merkki saa jäädä siihen, missä se jo on.
+             */
+            const kalusteet = ruudunKalusteet();
             const ylaRaja = Math.max(
               LIUSKAN_YLAVARA_PX,
-              ...kalusteet.map((k) => k.y1 + LIUSKAN_YLAVARA_PX),
+              ...kalusteet.filter((k) => k.y0 < korkeus * YLAKALUSTEEN_RAJA)
+                .map((k) => k.y1 + LIUSKAN_YLAVARA_PX),
             );
-            const haluttuY = Math.max(ylaRaja, korkeus - tarve.px);
-            const nosto = Math.max(0, (korkeus / 2) - haluttuY);
-            if (nosto > 1) maaliY = city.y + nosto / tila.skaala;
+            const alaRaja = Math.min(
+              korkeus - LIUSKAN_YLAVARA_PX,
+              ...kalusteet.filter((k) => k.y1 > korkeus * (1 - YLAKALUSTEEN_RAJA))
+                .map((k) => k.y0 - LIUSKAN_YLAVARA_PX),
+            );
+            const puolikas = tarve.korkeus / 2;
+            const kaista = alaRaja - ylaRaja;
+            const haluttuY = kaista >= tarve.korkeus
+              ? Math.min(Math.max(korkeus / 2, ylaRaja + puolikas), alaRaja - puolikas)
+              : (ylaRaja + alaRaja) / 2;
+            const nosto = (korkeus / 2) - haluttuY;
+            if (Math.abs(nosto) > 1) maaliY = city.y + nosto / tila.skaala;
+            /*
+             * VAAKASUUNTA: *"oikealle puolelle tulis lisää tilaa"*.
+             * Merkki viedään keskilinjan VASEMMALLE puolelle, jolloin
+             * `viuhkanAsemat` valitsee listan puolen itsestään
+             * (oletuspuoli on kartan keskeltä poispäin) ja liuskalle
+             * jää leveyttä oikealle. Osuus on ruudun leveydestä, joten
+             * sama sääntö pätee puhelimella ja työpöydällä.
+             */
+            const haluttuX = leveysPx * LIUSKAN_MERKIN_OSUUS_X;
+            const sivuun = (leveysPx / 2) - haluttuX;
+            if (sivuun > 1) maaliX = city.x + sivuun / tila.skaala;
           }
         } catch { /* ilman mittaa ajo on entinen keskitys */ }
         await kamera.ajaKamera(
-          { x: city.x, y: maaliY, leveys: kamera.kameranTila()?.leveys }, {},
+          { x: maaliX, y: maaliY, leveys: kamera.kameranTila()?.leveys }, {},
         );
         // Ladonta ajon jälkeen: liuska ripustetaan merkin UUTEEN
         // ruutupisteeseen, jolloin lepotesti vertaa oikeaan lukuun.

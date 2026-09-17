@@ -327,14 +327,30 @@ for (const ruutu of RUUDUT) {
        * napautuksen (js/pallolauta/lauta.js napautaPintaan,
        * `korttiOliAuki`), joten yksi napautus mittasi nielua eika
        * liuskaa. Vaite on, etta liuska aukeaa — ei se, monennellako
-       * sormella. Odotus on kysely eika kiintea viive: kamera-ajo
-       * (PAATOKSET 34 kohta 10) kestaa noin 200 ms.
+       * sormella.
+       *
+       * KAKSI KORJAUSTA 18.9.2026 (era 7), MOLEMMAT MITATTUJA. Era 6:n
+       * ajossa Pariisi oli punainen molemmilla ruuduilla ja Marseille
+       * vihrea — ero ei ollut kaupunkien jarjestys vaan LIUSKAN KOKO:
+       *
+       *  1) ODOTUS OLI LIIAN LYHYT. Kamera-ajo ei ole enaa "noin 200
+       *     ms": PAATOKSET 34 kohdat 10 ja 12 antavat sille tyon
+       *     (merkki nostetaan listan verran ylos ja sivuun), ja silloin
+       *     ajo kestaa oman mittansa PALLOKAMERAN_AJO_MS = 1400 ms.
+       *     Marseillessa lista on viisi rivia eika kamera liiku juuri
+       *     lainkaan, joten sen ajo palasi heti — juuri siksi se oli
+       *     vihrea. Odotus on nyt 3 s, eli ajo + ladonta + avaus.
+       *  2) TOINEN NAPAUTUS OSUI TYHJAAN. Kamera-ajo SIIRTAA
+       *     kaupunkimerkkia ruudulla, joten uusintanapautus vanhaan
+       *     pisteeseen napsautti karttaa merkin vierestä. Piste
+       *     luetaan siksi uudestaan ennen jokaista yritysta.
        */
       for (let yritys = 0; yritys < 2; yritys += 1) {
         /* eslint-disable no-await-in-loop */
         await sivu.mouse.click(kaupunkiAlussa.x, kaupunkiAlussa.y);
         let auki = null;
-        for (let i = 0; i < 20; i += 1) {
+        // 60 x 50 ms = 3 s: kamera-ajo (1400 ms) + ladonta + avaus.
+        for (let i = 0; i < 60; i += 1) {
           auki = await sivu.evaluate(
             () => window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null,
           );

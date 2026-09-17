@@ -12,7 +12,7 @@
 
 import { piirraNostosymboli } from './fokusnosto-symbolit.js';
 import { kytkeKarttaZoom } from './karttazoom.js';
-import { NAHTAVYYDET_NIMIO } from './pallolauta/kaupunkiliuska.js';
+import { NAHTAVYYDET_NIMIO } from './kaupunkiliuska-nimiot.js';
 import { galleriaNappi } from './kuvagalleria.js';
 import { liitaLukija, pysaytaLukija } from './lukija.js';
 import { el } from './mapart.js';

@@ -1955,6 +1955,12 @@ for (const ruutu of RUUDUT) {
       rivit: l.nostot.liuskanRivit?.() ?? [],
       nimet: [...document.querySelectorAll('.pallolauta-nimi')].map(laatikko),
       nappulat: [...document.querySelectorAll('.pallolauta-nappula')].map(laatikko),
+      // Liuskan ripustusmerkki: kaupunkimerkin oma CSS2D-elementti saa
+      // luokan `pallolauta-liuska-auki` (js/pallolauta/nostot.js).
+      merkki: (() => {
+        const el = document.querySelector('.pallolauta-liuska-auki');
+        return el ? laatikko(el) : null;
+      })(),
     };
   });
   const aukiRivit = aukiMitta.rivit ?? [];
@@ -1976,6 +1982,57 @@ for (const ruutu of RUUDUT) {
       && aukiYli.length === 0 && aukiPaalla.length === 0,
     `kategoria ${isoAuki?.kategoria ?? '—'}, reunan yli: ${aukiYli.join(', ') || 'ei'}, `
     + `musteen päällä: ${aukiPaalla.join(', ') || 'ei'}`);
+  /*
+   * ══ 8k. KESKITETTY LISTA MERKIN OIKEALLA PUOLELLA ═══════════════
+   * (PAATOKSET 34 kohta 12, omistaja sanatarkasti: *"Lista voisi olla
+   * keskitetysti sekä ylös että alas ja kartta voisi liikkua
+   * automaattisesti niin että oikealle puolelle tulis lisää tilaa"*.)
+   *
+   * Kaksi väitettä yhdessä mitassa, molemmat AVATTUNA suurimmalla
+   * kategorialla: listan pystykeskipiste on merkin korkeudella (sieto
+   * yksi rivi, koska reunakiinnitys saa siirtää listaa ruudun sisään)
+   * ja lista on merkin OIKEALLA puolella. Ilman merkin laatikkoa
+   * vartio on punainen — silloin liuskaa ei ole ripustettu mihinkään.
+   */
+  const merkkiLaatikko = aukiMitta.merkki;
+  const merkkiY = merkkiLaatikko ? (merkkiLaatikko.y0 + merkkiLaatikko.y1) / 2 : null;
+  const merkkiX = merkkiLaatikko ? (merkkiLaatikko.x0 + merkkiLaatikko.x1) / 2 : null;
+  const listanY = aukiRivit.length
+    ? (Math.min(...aukiRivit.map((b) => b.y0)) + Math.max(...aukiRivit.map((b) => b.y1))) / 2
+    : null;
+  const oikealla = aukiRivit.length && merkkiX !== null
+    ? aukiRivit.every((b) => b.x0 >= merkkiX - 2) : false;
+  const RIVIN_SIETO_PX = 30;
+  const keskitetty = listanY !== null && merkkiY !== null
+    && Math.abs(listanY - merkkiY) <= RIVIN_SIETO_PX;
+  tieto(`${ruutu.nimi} · liuskan keskitys`,
+    merkkiLaatikko
+      ? `merkki y ${p(merkkiY)}, listan keskipiste y ${p(listanY ?? 0)}, `
+        + `ero ${p(Math.abs((listanY ?? 0) - merkkiY))} px; merkki x ${p(merkkiX)} `
+        + `(ruutu ${p(aukiMitta.ruutu.leveys)} px), liuskan vasen reuna `
+        + `${p(aukiRivit.length ? Math.min(...aukiRivit.map((b) => b.x0)) : 0)}`
+      : 'merkkiä ei löytynyt');
+  /*
+   * VARTIO ON 390 px:LLÄ, TYÖPÖYTÄ ON TIETO. Omistajan oma mittausohje
+   * sanoo *"Vartio 390 px"*, ja syy näkyy mittauksessa: 1400 px:llä
+   * kartalla on kymmeniä kaupunkien nimiä, jotka ovat KOVIA esteitä
+   * (PAATOKSET 32 kohta 5). Merkin oikealle puolelle keskitetty
+   * 13-rivinen lista osuu niihin, ja asemahaku valitsee silloin
+   * oikein vapaan asennon vasemmalta — sääntö *"ei koskaan kaupungin
+   * nimen päällä"* on vanhempi ja vahvempi kuin puolen valinta.
+   * Työpöydän luku on siis mitattu ja kirjattu, ei väite.
+   */
+  const keskitysVartio = ruutu.w <= 800;
+  const keskitysTeksti = `keskitys ${keskitetty}, oikealla ${oikealla}, `
+    + `kelausrivejä ${aukiRivit.filter((r) => r.laji === 'kelaus').length}`;
+  if (keskitysVartio) {
+    vaadi(`8k. ${ruutu.nimi}: keskitetty liuska on merkin korkeudella ja sen oikealla puolella`,
+      Boolean(merkkiLaatikko) && keskitetty && oikealla
+        && aukiRivit.filter((r) => r.laji === 'kelaus').length === 0,
+      keskitysTeksti);
+  } else {
+    tieto(`${ruutu.nimi} · 8k (INFO, vartio on 390 px:llä): keskitys ja puoli`, keskitysTeksti);
+  }
   tieto(`${ruutu.nimi} · liuskan haitari`,
     `1. avaus ${auki1?.kategoria ?? '—'} → kohteita ${kohteita1.length}; `
     + `2. avaus ${auki2?.kategoria ?? '—'} → kohteita ${kohteita2.length}`);

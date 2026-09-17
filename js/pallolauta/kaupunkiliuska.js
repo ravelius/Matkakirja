@@ -19,14 +19,20 @@
  */
 
 import { aiheenNimi } from './aihemerkit.js';
+import { NAHTAVYYDET_NIMIO, TURISTIOPPAAN_NIMIO } from '../kaupunkiliuska-nimiot.js';
 import { KARTTAVALO_AIHEET } from '../karttavalot.js';
 
 /** Onko aihe karttaselitteen oma aihe (ks. MUUT_AIHE). */
 const tunnettuAihe = (aihe) => KARTTAVALO_AIHEET.some((r) => r.aihe === aihe);
 
-/** Yläryhmän kiinteät nimet (PAATOKSET 34 kohta 8, omistajan sanat). */
-export const NAHTAVYYDET_NIMIO = 'Nähtävyydet';
-export const TURISTIOPPAAN_NIMIO = 'Turistiopas';
+/*
+ * Yläryhmän kiinteät nimet (PAATOKSET 34 kohta 8, omistajan sanat)
+ * asuvat omassa pikkumoduulissaan, koska myös kohdekartan otsikko
+ * (js/nahtavyydet.js) sanoo saman sanan — eikä nähtävyydet saa tuoda
+ * pallolautaa yhden tiedoston versioon. Uudelleenvienti pitää liuskan
+ * oman rajapinnan ennallaan.
+ */
+export { NAHTAVYYDET_NIMIO, TURISTIOPPAAN_NIMIO } from '../kaupunkiliuska-nimiot.js';
 /**
  * SIIRTYMISRIVI (PAATOKSET 34 kohta 1, *"jokainen kaupunki"*). Liuska
  * avautuu nyt myös muista kaupungeista kuin pelaajan omasta, ja

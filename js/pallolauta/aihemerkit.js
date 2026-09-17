@@ -238,6 +238,29 @@ export const VIUHKAN_ALAS_ALKU_PX = VIUHKAN_RIVI_PX + 6;
 export const VIUHKAN_TIHEIN_VALI_PX = 2 * VIUHKAN_RIVI_PX;
 
 /** Merkin alapuolelle jäävä pystytila ruudun alalaitaan asti (px). */
+/**
+ * KESKITETYN LISTAN KÄYTETTÄVISSÄ OLEVA KORKEUS (PAATOKSET 34 kohta
+ * 12). Lista kasvaa yhtä paljon ylös ja alas, joten sen korkeus on
+ * kaksi kertaa se puoli, joka on lyhyempi.
+ */
+function keskitettyTila(p, ruutu, vara = VIUHKAN_REUNAVARA_PX) {
+  const y = p?.y ?? 0;
+  const yla = Math.max(0, y - (vara + VIUHKAN_RIVI_PX));
+  const ala = Math.max(0, ((ruutu?.korkeus ?? 0) - vara - VIUHKAN_RIVI_PX) - y);
+  return 2 * Math.min(yla, ala);
+}
+
+/**
+ * MONTAKO RIVIÄ MAHTUU KESKITETTYNÄ MERKIN KOHDALLE (PAATOKSET 34
+ * kohta 12). Mitta on TIHEIN väli, kuten alaspäin kasvavalla listalla:
+ * kelaus alkaa vasta kun tiheinkään keskitetty lista ei mahdu.
+ */
+export function keskitettyMahtuvatRivit({ p, ruutu, vara = VIUHKAN_REUNAVARA_PX }) {
+  const tilaa = keskitettyTila(p, ruutu, vara);
+  if (!(tilaa > 0)) return 0;
+  return Math.floor(tilaa / VIUHKAN_TIHEIN_VALI_PX) + 1;
+}
+
 function alasTila(p, ruutu, vara = VIUHKAN_REUNAVARA_PX) {
   return Math.max(0, ((ruutu?.korkeus ?? 0) - vara - VIUHKAN_RIVI_PX)
     - ((p?.y ?? 0) + VIUHKAN_ALAS_ALKU_PX));
@@ -327,7 +350,7 @@ function paallekkaisyys(a, b) {
  *   pohja: ?{x0, y0, x1, y1}}}
  */
 export function viuhkanAsemat({
-  p, ruutu, leveydet, esteet = [], kasvu = 'keskitetty',
+  p, ruutu, leveydet, esteet = [], kasvu = 'keskitetty', kovaEnsin = false,
 }) {
   const n = leveydet.length;
   if (!n) {
@@ -347,9 +370,17 @@ export function viuhkanAsemat({
    * ei päästä rivejä päällekkäin: se on täsmälleen nimiörivin korkeus.
    */
   const tila = Math.max(0, ruutu.korkeus - 2 * (vara + VIUHKAN_RIVI_PX));
+  /*
+   * KESKITETTY LISTA (kasvu 'keskitetty', PAATOKSET 34 kohta 12,
+   * omistaja: *"Lista voisi olla keskitetysti seka ylos etta alas"*):
+   * tila on se, mikä jää merkin molemmin puolin SYMMETRISESTI, eli
+   * kaksi kertaa lyhyempi puoli. Näin riviväli kutistuu silloin ja
+   * vain silloin, kun keskitetty lista ei muuten mahdu — kelaus jää
+   * yhä viimeiseksi keinoksi.
+   */
   const kaytettava = kasvu === 'alas'
     ? Math.min(tila, alasTila(p, ruutu, vara))
-    : tila;
+    : Math.min(tila, keskitettyTila(p, ruutu, vara));
   const vali = n > 1
     ? Math.max(VIUHKAN_TIHEIN_VALI_PX, Math.min(VIUHKAN_VALI_PX, kaytettava / (n - 1)))
     : VIUHKAN_VALI_PX;
@@ -408,7 +439,23 @@ export function viuhkanAsemat({
           if ((e.paino ?? 1) >= KOVAN_ESTEEN_PAINO) kova += osuma;
         }
       }
-      if (!paras || sakko < paras.sakko - 0.001) {
+      /*
+       * KOVA SAKKO RATKAISEE ENSIN (`kovaEnsin`, PAATOKSET 34 kohta
+       * 12). Kaupunkiliuskan puoli EI saa ratketa pehmeästä musteesta:
+       * muiden nostojen nimiöt piilotetaan listan ajaksi joka
+       * tapauksessa (ks. LISTA EI KOSKAAN TOISEN TEKSTIN PÄÄLLE),
+       * joten leveällä ruudulla runsas muste oikealla olisi vienyt
+       * listan väärälle puolelle — mitattu 18.9.2026 1400 px:llä,
+       * jossa lista asettui merkin VASEMMALLE puolelle vaikka
+       * omistajan sääntö sanoo oikealle. Viuhkan oma valinta (yksi
+       * yhteenlaskettu sakko) on ennallaan.
+       */
+      const parempi = paras === null
+        || (kovaEnsin
+          ? (kova < paras.kova - 0.001
+            || (Math.abs(kova - paras.kova) <= 0.001 && sakko < paras.sakko - 0.001))
+          : sakko < paras.sakko - 0.001);
+      if (parempi) {
         paras = {
           sakko, kova, puoli, leveys, asemat,
         };
