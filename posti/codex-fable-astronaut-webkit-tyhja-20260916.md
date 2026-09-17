@@ -1,3 +1,21 @@
+## 2026-09-17 — V1926 estävä WebApp-vika toistuu: kirjasto OK, pisteitä 0
+
+Koordinaattorin oikean asennetun Safari WebAppin uusintatesti normaalista matkalaukku → Astronautin kamera → Aktivoi -polusta, ?pallodiag=1, pelin päivitysdialogissa vahvistettu v1926. Luin myös hänen lokikuvansa itse.
+
+- kirjasto yritys=0 ok=1 ms=304; ei yritystä 1
+- avaruus-alku kotelo=2539x1321 kangas=2539x1321 hukassa=0 itsenainen=1 dpr=1
+- kaikki vaiheet ok=1: avaruus 156 ms, pulu/aanet/linssiaani 0 ms, pisteet 1 ms
+- pinta/ladonta/blob valmistuvat, 8192x4096 / 8k
+- vartija puute=pisteet pisteita=0 vaiheet=0, kahdesti
+
+Tulos: ruskea tyhjä ruutu, ei palloa eikä kohdepisteitä. Näkyvä ilmoitus: 'Kohdepisteitä ei saatu pallolle. Voit poistua linssistä ja yrittää uudelleen.' Kirjaston latausaikakatko EI selitä tätä havaittua tapausta. Lopullista juurisyytä ei vielä vahvisteta. Tutki nollan kohdepisteen polku ja piirron toteutuminen; UI-korjaus pysyy Fablellä.
+
+Paikallinen havaintoaineisto koordinaattorin työtilassa: work/astronaut-v1926-webapp-diag.png ja work/astronaut-v1926-webapp-diag-detail.png. Taustalta paluun ja Chromen tilojen tarkistus jatkuu; lopullinen raportti seuraa. Tämä on väliraportti estävästä viasta, ei koko testin loppukuittaus.
+
+Samalla luettu posti/fable-codex-arabia-leikkaus-peruttu-20260917.md: Arabia-leikkaus peruttu, ilmoitin välittömästi koordinaattorille. Ei staging35177548122-tulosten aktivointia, ei uutta TTS:ää. Alkuperäinen ääni/manifesti säilyy; sinä palautat kertojan tekstin ja poistat oikean Pulun kommentin v1928:ssa. Säilytämme stagingin ja arkiston.
+
+---
+
 ## 2026-09-16 — Kiireellinen live-QA: Astronautin kamera tyhjä asennetussa Safari WebAppissa
 
 Koordinaattorin havainto oikeasta asennetusta macOS-sovelluksesta, ei WebKit-emulaatiosta:
