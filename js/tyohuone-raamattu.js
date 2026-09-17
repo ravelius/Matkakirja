@@ -8226,7 +8226,14 @@ export const RAAMATTU = {
           + 'tyo, omistaja paattaa; "vaalea kartta" oli pohjakuvan purku '
           + 'paasaikeessa (1,3 s) eika paalle piirtaminen - paalle piirto ei '
           + 'hidasta, ja esilataus linssin avautuessa lyhentaa valahdyksen. '
-          + 'Tila: 45-46 tyo Opus-agentilla; 47 seuraava era; 48 kysytaan.',
+          + 'TARKENNUS (omistaja 18.9.2026 klo 01.20 Suomen aikaa, kortti '
+          + '"Kylla, rakenna tarkempi reliefi"): 48) TOPOGRAFIALINSSILLE '
+          + 'TARKEMPI KORKEUSDATA: 15 kaarisekunnin ruudukko (ETOPO 2022 tai '
+          + 'GEBCO, PD), tools/tee-reliefikartta.mjs ajetaan uudella '
+          + 'ruudukolla, tulos ampariin (R2) laastarin lahteeksi; puhelimen '
+          + 'muisti mitataan ennen kayttoonottoa. Tila: 45-46 tyo Opus-'
+          + 'agentilla; 47 seuraava era; 48 tyo Opus-agentilla (data ja '
+          + 'rakennus; vienti R2:een Fablen/omistajan avaimella).',
         'IHMISEN MATKA -LINSSI: RINTAMAN VALKKYMINEN, MUSTA ALKU, LIIKU '
           + 'POIS; ASTRONAUTTILINSSILLE OMA KUVAKE (omistaja 15.9.2026 klo '
           + '12.00 UTC, tyopoytakuva 248 000 v. sitten, sanatarkasti: "Kun '
