@@ -4355,7 +4355,16 @@ export const RAAMATTU = {
           + 'Kumoaa roolituksen 26.8.2026 poikkeuksen "Fable-mallia saa kayttaa '
           + 'agenttina vain todella vaikeaan pulmaan". Kaksi 7.9. illalla '
           + 'kaynnistettya Fable-agenttia (linssinakyma, vanat) pysaytettiin ja '
-          + 'tyo jatkettiin Opuksella niiden valitallennuksista.',
+          + 'tyo jatkettiin Opuksella niiden valitallennuksista. TARKENNUS '
+          + '(omistaja 17.9.2026 klo 04.05 UTC, Fablen ehdotukseen agenttien '
+          + 'kestosta - mitatut kestot 60-90 min per Opus-era - sanatarkasti: '
+          + '"Kokeillaan sita"): 1) rinnakkain enintaan KAKSI Chromium-'
+          + 'savukkeita ajavaa agenttia samassa kontissa (porttikilpailu ja '
+          + 'kuorma tekivat vartioista hailyvia); 2) julkaisuagentti ajaa '
+          + 'taysina vain diffia koskevat savukkeet, muut yhdella '
+          + 'ruutukoolla; 3) vastakoe ei ole pakollinen pienissa CSS- ja '
+          + 'tekstimuutoksissa - juurisyytyossa se sailyy. Kokeilu; '
+          + 'kestot mitataan uudelleen.',
         'IHMISEN MATKA: KELLO EI KULJE TAAKSEPAIN, PAITSI AIKAHYPYSSA (omistaja '
           + '7.9.2026 ilta klo 21.50 Suomen aikaa, sanatarkasti: "Ja tarinan '
           + 'jarjestys pitaa muuttaa. Outoa etta kello menee taaksepain etela '
