@@ -1,0 +1,36 @@
+# Copy to .github/workflows/stage-arabia.yml after reviewing this bounded edit.
+# Does NOT overwrite live aliases/manifest, clear stale flags, or invoke ElevenLabs.
+name: Stage Arabia narration correction
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: generoi-linssiluennat-ihmisen-matka
+  cancel-in-progress: false
+jobs:
+  stage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: auto
+      AWS_REQUEST_CHECKSUM_CALCULATION: when_required
+      AWS_RESPONSE_CHECKSUM_VALIDATION: when_supported
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: sudo apt-get update -qq && sudo apt-get install -y --no-install-recommends ffmpeg
+      - run: node --test tools/arabia/trim-narration.test.mjs
+      - run: node tools/arabia/trim-narration.mjs --stage
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: arabia-correction-receipts
+          path: media/arabia-simpukkalause-pois-20260916/*.json
+          retention-days: 30
