@@ -8529,9 +8529,12 @@ export const RAAMATTU = {
           + '"Kaupunki kartalla", nimi vaihtuu kaikkialla), "Turistiopas" '
           + '(entinen Turisti-info; erillinen kyltti poistuu kartalta); sen '
           + 'alla nostokategoriat lukumaarineen; haitariliuska Fablen '
-          + 'ehdotuksen mukaan. Tila: kirjattu; "Pariisi"-rivin sisalto '
-          + 'vahvistetaan kortilla; toteutus Opus-erana nostot-viimeistely-'
-          + 'eran paalle.',
+          + 'ehdotuksen mukaan. 9) (omistaja 17.9.2026 klo 22.05 Suomen aikaa, '
+          + 'kortin oma vastaus sanatarkasti: "Kaupunkilehti ilman kaupunki '
+          + 'kartalla osioita koska sille tulee nyt oma osio") "Pariisi"-rivi '
+          + 'avaa kaupunkilehden, josta Kaupunki kartalla -osio on poistettu; '
+          + 'se sisalto on liuskan Nahtavyydet-rivin takana. Tila: kirjattu; '
+          + 'toteutus Opus-erana nostot-viimeistely-eran paalle.',
         'KARTTAUUDISTUKSEN PAATOKSET 33: NOSTOT YMPARI RANSKAA, ENSIN PISTEET '
           + 'JA OTSIKOT, KAIKKI POLTETUN MERKIN KOKOA (omistaja 17.9.2026 klo '
           + '21.40 Suomen aikaa, ankkurieran kaappauksista, sanatarkasti: '
