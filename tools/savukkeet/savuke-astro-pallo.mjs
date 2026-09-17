@@ -1224,9 +1224,13 @@ const PISTEKELLO = `(() => {
   });
 })()`;
 
-/** Kontin budjetti: pisteet DOMissa ennen vartijan aikakatkoa. */
-const PISTEIDEN_BUDJETTI_MS = 12000;
-/** Macilla odotettu aika (Mac-ajo-ohje, ei kontin väite). */
+/**
+ * Macilla odotettu aika (Mac-ajo-ohje, EI kontin väite). Kontissa sama
+ * luku on 11–13 s eikä se kerro korjauksesta mitään: se on kontin
+ * SwiftShaderin ja matkalaukun sulkeutumisanimaation summa, ja se
+ * heiluu ajojen välillä yli sekunnin. Mitattu ja tulostettu — ei
+ * väitteen kynnyksenä.
+ */
 const PISTEIDEN_TAVOITE_MAC_MS = 2500;
 
 async function macIkkuna(init = []) {
@@ -1419,6 +1423,7 @@ async function ajaMacVastakoe() {
     pisteKehys: window.__pisteKehys,
     aktivointi: window.__aktivointi,
     aktivointiKehys: window.__aktivointiKehys,
+    ilmoitus: Boolean(document.getElementById('linssivirhe')),
     reliefi: window.matkakirja?.ui?.pallolinssi?.kahva?.avaruus?.tila?.()?.reliefi ?? null,
   }));
   // Pinnan vaihto (reliefi) ja sen mittaus odotetaan loppuun asti.
@@ -1444,11 +1449,17 @@ async function ajaMacVastakoe() {
     ? Math.round(ennenVaihtoa.pisteAika - ennenVaihtoa.aktivointi) : -1;
   const kehysviive = ennenVaihtoa.pisteKehys != null && ennenVaihtoa.aktivointiKehys != null
     ? ennenVaihtoa.pisteKehys - ennenVaihtoa.aktivointiKehys : -1;
-  vaadi('VASTAKOE: kohdepisteet ovat DOMissa ennen vartijan aikakatkoa',
-    viive >= 0 && viive <= PISTEIDEN_BUDJETTI_MS && kehysviive >= 0,
-    `${viive} ms / ${kehysviive} kehystä aktivoinnista (kontin katto`
-    + ` ${PISTEIDEN_BUDJETTI_MS} ms; Macin tavoite ${PISTEIDEN_TAVOITE_MAC_MS} ms`
-    + ` tarkistetaan Mac-ajossa), pisteitä ${ennenVaihtoa.pisteita}`);
+  /*
+   * VÄITE ON SE, MIKÄ VIKA OLI: pisteet päätyvät DOMiin eikä pelaajalle
+   * jää ilmoitusta. Aika ja kehykset tulostetaan Mac-vertailua varten,
+   * mutta ne eivät ole kynnys (ks. PISTEIDEN_TAVOITE_MAC_MS).
+   */
+  vaadi('VASTAKOE: kohdepisteet päätyvät DOMiin eikä pelaajalle jää ilmoitusta',
+    ennenVaihtoa.pisteAika !== null && ennenVaihtoa.pisteita === 64
+      && !ennenVaihtoa.ilmoitus,
+    `${viive} ms / ${kehysviive} kehystä aktivoinnista (Macin tavoite`
+    + ` ${PISTEIDEN_TAVOITE_MAC_MS} ms tarkistetaan Mac-ajossa),`
+    + ` pisteitä ${ennenVaihtoa.pisteita}, ilmoitus ${ennenVaihtoa.ilmoitus}`);
   vaadi('VASTAKOE: pisteet pysyvät pinnan vaihdon yli',
     jalkeen.pisteita === 64 && jalkeen.reliefi === true,
     `ennen ${ennenVaihtoa.pisteita}, jälkeen ${jalkeen.pisteita}, reliefi ${jalkeen.reliefi}`);
