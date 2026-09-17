@@ -428,6 +428,13 @@ Seuraus on kaksisuuntainen:
    nostokerroksen kaupunkirivi oli Lille, jonka napautus avasi Lillen
    kortin.
 
+Ja rivi ei "katoa lähizoomissa" vaan **sitä ei ole koskaan ollut**:
+nostokerroksen kaupunkirivit syntyvät `kohde.tyyppi === 'kaupunki'`
+-kohteista (`js/pallolauta/nostot.js` rivi 1257), ja sellaisia ovat vain
+sisältöpakettien näkyvät kaupungit (`grep -rn "tyyppi: 'kaupunki'" js`
+→ `js/packs/maastokohteet-*.js`). Laudan omat kaupungit eivät ole
+kohteita lainkaan.
+
 **Tämä on suunnittelutason asia eikä yhden rivin korjaus**, koska
 liuska piirretään NOSTOKERROKSEN merkin omaan elementtiin
 (`asetteleNosto`, `.pallolauta-viuhka`): laudan kaupungilla ei ole
