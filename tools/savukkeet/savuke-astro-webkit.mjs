@@ -206,8 +206,13 @@ async function suljeLinssi(s) {
   } else {
     await s.evaluate(() => window.matkakirja?.ui?.valitseLinssi?.(null));
   }
-  await s.waitForFunction(() => !window.matkakirja?.ui?.linssiValittu, null, { timeout: 15000 }).catch(() => {});
-  await s.waitForTimeout(2500);
+  const varit = await s.evaluate(async () => {
+    const lue = () => { const m = window.matkakirja?.ui?.pallolauta?.pallo?.globeMaterial?.(); return m ? (m.color ? m.color.getHexString() : 'null') : '-'; };
+    const ulos = [`0:${lue()}`];
+    for (const ms of [50, 200, 1000, 2500]) { await new Promise((r) => setTimeout(r, ms)); ulos.push(`+${ms}:${lue()}`); }
+    return ulos.join(' ');
+  });
+  console.log(`    VÄRI SULUN JÄLKEEN ${varit}`);
   return s.evaluate(() => {
     const pallo = window.matkakirja?.ui?.pallolauta?.pallo;
     const m = pallo?.globeMaterial?.();
@@ -265,6 +270,8 @@ const kentta = (rivi, nimi) => (rivi ?? '').match(new RegExp(`(?:^|\\s)${nimi}=(
 async function mittaaAvaus(s, { selain, kotelo, kerta, dpr, leveys, korkeus }) {
   const diagAlku = await s.evaluate(DIAG_PITUUS);
   const tEle = Date.now();
+  const variEnnen = await s.evaluate(() => { const m = window.matkakirja?.ui?.pallolauta?.pallo?.globeMaterial?.(); return m ? (m.color ? m.color.getHexString() : 'null') : '-'; });
+  console.log(`    VÄRI ENNEN AVAUSTA ${variEnnen}`);
   await avaaLinssiEleella(s);
   /*
    * KELLO ALKAA AKTIVOI-NAPAUTUKSESTA. Playwrightin omat napautukset
@@ -432,6 +439,14 @@ async function mittaaAvaus(s, { selain, kotelo, kerta, dpr, leveys, korkeus }) {
   const avaruusAlku = poimi(diag, 'avaruus-alku ').at(-1);
   const kirjasto = poimi(diag, 'kirjasto ').at(-1) ?? poimi(kokoLoki, 'kirjasto ').at(-1);
   const vaiheetKaatui = poimi(diag, 'vaihe ').filter((r) => kentta(r, 'ok') === '0');
+  /* Korjaushaaran (astro-webkit2) uudet rivit; puuttuvat v1929:ssä. */
+  const uudet = {
+    pintaMittaus: poimi(diag, 'pinta-mittaus ').map((r) => r.replace('pinta-mittaus ', '')),
+    pintaMusta: poimi(diag, 'pinta-musta ').map((r) => r.replace('pinta-musta ', '')),
+    kehykset: poimi(diag, 'kehykset ').map((r) => r.replace('kehykset ', '')),
+    pistemittari: poimi(diag, 'pistemittari ').map((r) => r.replace('pistemittari ', '')),
+    pisteetUusinta: poimi(diag, 'pisteet-uusinta ').map((r) => r.replace('pisteet-uusinta ', '')),
+  };
   const tulos = {
     selain, kotelo, kerta,
     kirjasto: kirjasto ?? '(ei riviä)',
@@ -441,6 +456,7 @@ async function mittaaAvaus(s, { selain, kotelo, kerta, dpr, leveys, korkeus }) {
     ladontaRivit: ladonta.map((r) => `${kentta(r, 'koko')} ok=${kentta(r, 'ok')} tapa=${kentta(r, 'tapa')}`),
     valmis: valmis ? `${kentta(valmis, 'syy')} ${kentta(valmis, 'ms')} ms` : '(ei valmis-riviä)',
     vaiheetKaatui,
+    ...uudet,
     vartijat: vartijat.map((r) => `${kentta(r, 'puute')}/${kentta(r, 'pisteita')}`),
     puuteLopussa: tila.puute,
     pisteitaLopussa: tila.pisteita,
@@ -498,6 +514,8 @@ async function ajaSelain(nimi) {
         + ` kirkkaus 5 s ${t.kirkkaus5?.keski} / 15 s ${t.kirkkaus15?.keski} (max ${t.kirkkaus15?.max}),`
         + ` pinta "${t.pinnanOsoite}", kangas ${JSON.stringify(t.kangas)}, kirkkaussarja ${JSON.stringify(t.kirkkausSarja)},`
         + ` kartta ${JSON.stringify(t.kartta)}`);
+      console.log(`    UUDET RIVIT pinta-mittaus [${t.pintaMittaus.join('; ')}] pinta-musta [${t.pintaMusta.join('; ')}]`
+        + ` kehykset [${t.kehykset.join('; ')}] pistemittari [${t.pistemittari.join('; ')}] pisteet-uusinta [${t.pisteetUusinta.join('; ')}]`);
       for (const r of t.diag) console.log(`      ${r}`);
       if (kerta > 1) {
         const eka = tulokset.find((x) => x.selain === nimi && x.kotelo === kotelo && x.kerta === 1)?.kartta?.ominaisuudet ?? {};
@@ -533,11 +551,11 @@ if (ULOS) {
 }
 
 /* Taulukko raporttia varten. */
-console.log('\n| selain | kotelo | avaus | pisteitä (ensin s) | puute | kirkkaus 5 s / 15 s | ladonta | reliefi | valmis |');
-console.log('|---|---|---|---|---|---|---|---|---|');
+console.log('\n| selain | kotelo | avaus | pisteitä (ensin s) | puute | kirkkaus 5 s / 15 s | ladonta | reliefi | valmis | pinta-mittaus | kehykset |');
+console.log('|---|---|---|---|---|---|---|---|---|---|---|');
 for (const t of kaikki) {
   console.log(`| ${t.selain} | ${t.kotelo} | ${t.kerta} | ${t.pisteitaLopussa} (${t.pisteitaEnsinHetki ?? '–'})`
     + ` | ${t.puuteLopussa} | ${t.kirkkaus5?.keski} / ${t.kirkkaus15?.keski} | ${t.ladontaKangas || '–'}`
-    + ` | ${t.reliefinTarkkuus ?? '–'} ${t.reliefinKestoMs ?? ''} ms | ${t.valmis} |`);
+    + ` | ${t.reliefinTarkkuus ?? '–'} ${t.reliefinKestoMs ?? ''} ms | ${t.valmis} | ${t.pintaMittaus.join('; ') || '–'} | ${t.kehykset.join('; ') || '–'} |`);
 }
 process.exit(0);
