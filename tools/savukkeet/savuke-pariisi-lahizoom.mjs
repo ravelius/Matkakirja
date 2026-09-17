@@ -672,6 +672,36 @@ async function suljeKortti(sivu) {
 }
 
 /*
+ * KARTAN PÄÄLTÄ POIS KAIKKI, JA ODOTA TILAA — EI KELLOA (17.9.2026).
+ * Kyltin vastakokeet avaavat nähtävyysarkin (`#nahtavyys-dialog`), ja
+ * Macilla arkki oli yhä auki, kun vartiot 4 ja 4b mittasivat: kaikki
+ * kolme napautusehdokasta kirjattiin *"peitossa"*
+ * (`IMG.nahtavyys-kuva`, `P.nahtavyys-kappale`) ja viuhkan napautus
+ * osui arkkiin, jolloin kohtia oli 0 / 5. Kiinteä odotus ei auta:
+ * arkin sulkeminen on animaatio. Tämä sulkee kortit, dialogit ja
+ * viuhkan niin monta kierrosta, että annettu piste on vapaa — tai
+ * palauttaa esteen nimen, jolloin kutsuja ohittaa kohteen kuten ennen.
+ */
+async function odotaVapaaPiste(sivu, px, py, kattoMs = 6000) {
+  const t0 = Date.now();
+  let este = await peitossa(sivu, px, py);
+  while (este && Date.now() - t0 < kattoMs) {
+    // eslint-disable-next-line no-await-in-loop
+    await suljeKortti(sivu);
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.evaluate(() => {
+      for (const d of document.querySelectorAll('dialog[open]')) d.close();
+      window.matkakirja.ui.pallolauta.nostot?.suljeViuhka?.();
+    });
+    // eslint-disable-next-line no-await-in-loop
+    await sivu.waitForTimeout(250);
+    // eslint-disable-next-line no-await-in-loop
+    este = await peitossa(sivu, px, py);
+  }
+  return este;
+}
+
+/*
  * MERKIN RUUTUPISTE SIVUN KOORDINAATEISSA. Kerroksen omat luvut
  * (`osumaLaatikot`, `aihemerkit`) ovat KANKAAN koordinaatteja
  * (`getScreenCoords`), joten sivun piste saadaan lisäämällä kankaan
@@ -1247,6 +1277,12 @@ for (const ruutu of RUUDUT) {
   let viuhkaTulos = null;
   if (m.aihemerkit.length) {
     const suurinRyhma = [...m.aihemerkit].sort((a, b) => b.maara - a.maara)[0];
+    // Puhdas näkymä: kyltin vastakokeiden jäljiltä auki jäänyt
+    // nähtävyysarkki nielaisisi tämän napautuksen (ks. odotaVapaaPiste).
+    const viuhkaEste = await odotaVapaaPiste(
+      sivu, nurkka.x + suurinRyhma.x, nurkka.y + suurinRyhma.y,
+    );
+    if (viuhkaEste) tieto(`${ruutu.nimi} · viuhkan piste peitossa`, viuhkaEste);
     await sivu.mouse.click(nurkka.x + suurinRyhma.x, nurkka.y + suurinRyhma.y);
     await sivu.waitForTimeout(800);
     const kohdat = await sivu.evaluate(() => {
@@ -1290,7 +1326,7 @@ for (const ruutu of RUUDUT) {
     // Sulkeutuva kortti vie oman hetkensä; sen aikana tullut napautus
     // menisi hukkaan eikä kertoisi osumapinnasta mitään.
     await sivu.waitForTimeout(400);
-    const este = await peitossa(sivu, px, py);
+    const este = await odotaVapaaPiste(sivu, px, py);
     // Paneelin alle jäävä merkki ohitetaan: sitä ei voi napauttaa
     // sormellakaan, eikä se ole tämän vartion väite. Este kirjataan,
     // jotta "napautettavia vain 0" ei jää arvoitukseksi.
