@@ -229,8 +229,20 @@ const LAUTA = 'maailmankartta';
  */
 export const IHMISEN_MATKA_KUVAT_ESITYKSESSA = true;
 
-/** Kuvan leveys osuutena ruudun leveydestä (omistajan mitta: "pienenä"). */
-export const KUVAN_OSUUS = 0.22;
+/**
+ * KUVAN LEVEYS osuutena ruudun leveydestä (Raamattu JATKO 4 kohta 1,
+ * omistaja 18.9.2026 klo 01.15 Suomen aikaa, iPhone-kuva v1934 Omon
+ * laaksosta, sanatarkasti: *"Kuvat pitäisi tulla isompana ja reunat
+ * häivytettyinä ruudulle."*).
+ *
+ * ENTINEN MITTA OLI 0,22 (*"pienenä"*, 7.9.2026) ja kuvalla oli
+ * valkoinen pergamenttikehys. Nyt kuva on 0,66 eli kaksi kolmasosaa
+ * ruudun leveydestä, kehyksetön ja reunoiltaan karttaan häivytetty
+ * (css .aikajana-kertomuskuva, mask-image — EI filteriä, ks. css:n
+ * iOS-muistio). Paikka on kohdepisteen YLÄPUOLELLA: iso kuva ei saa
+ * peittää pistettä, josta kertoja puhuu, eikä alalaidan tekstilaatikkoa.
+ */
+export const KUVAN_OSUUS = 0.66;
 
 /**
  * KAMERAN LÄHIKUVA JAKSOLLA. Väljempi kuin pysäkkiajon 560
@@ -356,8 +368,16 @@ export const AVARUUDEN_MIN_MS = 1200;
  * takaisin), kertomus ja luenta etenevät ennallaan, ja Marokon teksti
  * saa alkaa ennen kuin kamera on perillä — juuri niin kuin omistaja
  * kirjoitti.
+ *
+ * SEKUNTI TAKAISIN (Raamattu JATKO 4 kohta 2, omistaja 18.9.2026 klo
+ * 01.15 Suomen aikaa, iPhone-kuva v1934, sanatarkasti: *"Alku zoomi
+ * voisi olla noin sekunnin nopeampi"*). Jatko on nyt 4 s entisen 5 s
+ * sijaan: zoomi alkaa yhä samasta hetkestä ja päättyy sekunnin
+ * aiemmin. Marokon ajo alkaa yhä VASTA zoomin päätyttyä (TARKENNUS 2)
+ * ja pitää entisen pituutensa, joten kertomus ja luenta eivät muutu —
+ * vain odotus lyhenee sekunnilla.
  */
-export const ZOOMIN_JATKO_MS = 5000;
+export const ZOOMIN_JATKO_MS = 4000;
 /** Zoomin enimmäiskesto jatkon kanssa (katto kaynnistaAvaruusajolle). */
 export const AVARUUDEN_KATTO_MS = AVARUUDEN_MS + ZOOMIN_JATKO_MS;
 /**
@@ -1135,6 +1155,12 @@ export function luoEsitys({ ajo }) {
     puluHetki: 0,
     /** Kelauksen lähtölukema aikahypyssä (null = ei kelausta). */
     kelauksenAlku: null,
+    /**
+     * Odottaako rivi laskua alalaitaan avauksen VIIMEISEN lauseen
+     * kohdalla (Raamattu JATKO 4 kohta 3). Asetetaan jakson alussa,
+     * nollataan laskun hetkellä.
+     */
+    avausLasku: false,
     puluSanottu: false,
     kaynnissa: false,
     tauolla: false,
@@ -1855,6 +1881,19 @@ export function luoEsitys({ ajo }) {
     // Osa häipyy hetkeä ennen seuraavan alkua: vaihto tapahtuu
     // pimeässä eikä tekstiä vaihdeta lukijan silmien alla.
     const haipyy = Number.isFinite(seuraava) && tila.kulunut >= seuraava - LAUSEEN_HAIVE_MS;
+    /*
+     * RIVI LASKEUTUU YHTÄ LAUSETTA AIEMMIN (Raamattu JATKO 4 kohta 3).
+     * Lasku alkaa toiseksi viimeisen lauseen häipyessä — tai heti, jos
+     * mittaus osuu suoraan viimeiseen lauseeseen — joten viimeinen
+     * avauslause tulee näkyviin vasta alalaidassa, ei enää keskellä.
+     * Yksisuuntainen: alas laskettu rivi ei nouse takaisin kesken
+     * jakson.
+     */
+    const viimeinen = tila.lauseet.length - 1;
+    if (tila.avausLasku && (i >= viimeinen || (i === viimeinen - 1 && haipyy))) {
+      tila.avausLasku = false;
+      tekstirivi.classList.remove('keskella');
+    }
     asetaTeksti(tila.lauseet[i]?.teksti ?? '', tila.kulunut >= ajat[i] && !haipyy);
   };
 
@@ -2063,6 +2102,19 @@ export function luoEsitys({ ajo }) {
       ? Math.round(TEKSTIN_LASKU_MS * 0.55)
       : 0;
     tekstirivi.classList.toggle('keskella', keskella);
+    /*
+     * VIIMEINEN AVAUSLAUSE ON JO ALAREUNASSA (Raamattu JATKO 4 kohta 3,
+     * omistaja 18.9.2026 klo 01.15 Suomen aikaa, sanatarkasti:
+     * *"viimeinen keskitetty teksti voisi olla jo sijoitettu
+     * alareunaan"*). Rivi laskeutuu siis YHTÄ LAUSETTA AIEMMIN kuin
+     * ennen: ei enää ensimmäisen kohteen alkaessa vaan avausjaksojen
+     * VIIMEISEN lauseen kohdalla — lasku alkaa jo toiseksi viimeisen
+     * lauseen häipyessä (paivitaTeksti), jolloin viimeinen lause tulee
+     * näkyviin vasta alalaidassa. Lippu on tosi vain avauksen
+     * VIIMEISELLÄ jaksolla, jottei rivi tipahda alas jo ensimmäisen
+     * ('pimea') jakson lopussa.
+     */
+    tila.avausLasku = keskella && !onAvausjakso(kertomus[i + 1]);
     tekstirivi.classList.toggle('esilla', Boolean(jakso.teksti));
     paivitaTeksti();
     /*
@@ -2147,7 +2199,24 @@ export function luoEsitys({ ajo }) {
        * 'afrikka'-jakson aluerajaus saa nykäistä sitä takaisin koko
        * maanosaan kesken ajon.
        */
-      if (jakso.alue && !tila.kohdeajo) ajaAlueeseen(jakso.alue, alueenKesto);
+      /*
+       * EIKÄ AVAUSZOOMIA SAA AJAA UUDESTAAN (Raamattu JATKO 4 kohta 4,
+       * omistaja 18.9.2026: *"Zoomissa on pieni nykäisy lopussa ennen
+       * siirtymistä kohti Marokkoa joka olisi hyvä saada pois."*).
+       *
+       * JUURISYY MITATTU (kameran korkeuden aikasarja 16 ms välein,
+       * tools/savukkeet/savuke-ihmisen-kappaleet.mjs): 'afrikka'-jakso
+       * alkaa KESKEN avauszoomin ja ajoi tähän asti SAMAN Afrikan
+       * rajauksen uudestaan jäljellä olevalla ajalla. Laudan ajo
+       * (js/pallolauta/kamera.js ajaKamera) aloittaa aina nykyisestä
+       * näkymästä ja käyrän ALUSTA, eli nopeus putosi nollaan ja nousi
+       * uudestaan — juuri se nykäisy, jonka omistaja näki. Ajo on jo
+       * matkalla samaan maaliin samalla kellolla, joten uusi käsky ei
+       * tuo mitään: se ohitetaan, ja korkeus jatkuu C1-pehmeästi
+       * zoomista taukoon ja tauosta Marokon ajoon.
+       */
+      const zoomiKesken = jakso.vaihe === 'valot' && avaruuttaJaljella() > 0;
+      if (jakso.alue && !tila.kohdeajo && !zoomiKesken) ajaAlueeseen(jakso.alue, alueenKesto);
     }
     // Aikaselaimen valittu viiva seuraa esitystä (Raamattu LINSSIEN
     // AIKASELAIN ALAREUNAAN: "vuosiluku … voisi toistua pienellä sen
