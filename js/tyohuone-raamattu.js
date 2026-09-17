@@ -8603,7 +8603,13 @@ export const RAAMATTU = {
           + 'kaupungit (Lille) kayttavat samaa polkua. Julkaisu: v1934 ilman '
           + 'ankkuri-/lista-/liuskaeria (aihenostojen viuhka on #2568:ssa '
           + 'rikki ja liuska korvaa sen), v1935 kun liuska aukeaa. Era 4 '
-          + 'kaynnissa.',
+          + 'kaynnissa. 11) (omistaja 18.9.2026 klo 00.50 Suomen aikaa, '
+          + 'sanatarkasti: "Eiko niille ole kategoriaa joilla ei viela ole?"): '
+          + 'nosto, jolla ei ole aihetta tai jonka aihe ei vastaa mitaan '
+          + 'kategoriaa, ei saa kadota liuskasta - se menee kategoriaan '
+          + '"Muut (n)" listan loppuun; kategorioiden summa on aina kaupungin '
+          + 'sisaisten nostojen maara. Mitataan: jokainen sisainen nosto '
+          + 'esiintyy tasan yhdessa kategoriassa.',
         'KARTTAUUDISTUKSEN PAATOKSET 33: NOSTOT YMPARI RANSKAA, ENSIN PISTEET '
           + 'JA OTSIKOT, KAIKKI POLTETUN MERKIN KOKOA (omistaja 17.9.2026 klo '
           + '21.40 Suomen aikaa, ankkurieran kaappauksista, sanatarkasti: '
