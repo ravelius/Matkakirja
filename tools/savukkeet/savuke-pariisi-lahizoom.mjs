@@ -1373,6 +1373,7 @@ for (const ruutu of RUUDUT) {
    * näkymästä — ennen kuin yksikään kortti on ehtinyt avautua.
    */
   let viuhkaTulos = null;
+  let listaTulos = null;
   if (m.aihemerkit.length) {
     const suurinRyhma = [...m.aihemerkit].sort((a, b) => b.maara - a.maara)[0];
     // Puhdas näkymä: kyltin vastakokeiden jäljiltä auki jäänyt
@@ -1395,6 +1396,61 @@ for (const ruutu of RUUDUT) {
         id: b.id, x: (b.x0 + b.x1) / 2 + r.left, y: (b.y0 + b.y1) / 2 + r.top,
       }));
     });
+    /*
+     * LISTA ON MITATTAVA AUKI (PAATOKSET 32 kohta 3): rivien laatikot
+     * eivät saa limittyä keskenään eivätkä kaupungin nimen tai
+     * pelinappulan kanssa, ja listan on mahduttava ruudulle. Luvut
+     * ovat kotelon pikseleitä: rivit samasta kaavasta, jolla sormi
+     * mittaa (viuhkanOsumalaatikot), nimi ja nappula DOMista.
+     */
+    const listaMitta = await sivu.evaluate(() => {
+      const l = window.matkakirja.ui.pallolauta;
+      const r = l.pallo.renderer().domElement.getBoundingClientRect();
+      const laatikko = (el) => {
+        const b = el.getBoundingClientRect();
+        return {
+          x0: b.left - r.left, y0: b.top - r.top, x1: b.right - r.left, y1: b.bottom - r.top,
+        };
+      };
+      return {
+        ruutu: { leveys: r.width, korkeus: r.height },
+        rivit: l.nostot?.viuhkanOsumalaatikot?.() ?? [],
+        nimet: [...document.querySelectorAll('.pallolauta-nimi')].map(laatikko),
+        nappulat: [...document.querySelectorAll('.pallolauta-nappula')].map(laatikko),
+      };
+    });
+    await kaappaa(sivu, `pariisi-viuhkalista-${ruutu.w}.png`);
+    const limittyy = (a, b) => a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
+    const rivitKeskenaan = [];
+    for (let i = 0; i < listaMitta.rivit.length; i += 1) {
+      for (let j = i + 1; j < listaMitta.rivit.length; j += 1) {
+        if (limittyy(listaMitta.rivit[i], listaMitta.rivit[j])) {
+          rivitKeskenaan.push(`${listaMitta.rivit[i].nimi} × ${listaMitta.rivit[j].nimi}`);
+        }
+      }
+    }
+    const musteenPaalla = [];
+    for (const rivi of listaMitta.rivit) {
+      for (const nimi of listaMitta.nimet) {
+        if (limittyy(rivi, nimi)) musteenPaalla.push(`${rivi.nimi} × kaupungin nimi`);
+      }
+      for (const nappula of listaMitta.nappulat) {
+        if (limittyy(rivi, nappula)) musteenPaalla.push(`${rivi.nimi} × nappula`);
+      }
+    }
+    const reunanYli = listaMitta.rivit.filter((b) => b.x0 < 0 || b.y0 < 0
+      || b.x1 > listaMitta.ruutu.leveys || b.y1 > listaMitta.ruutu.korkeus)
+      .map((b) => b.nimi);
+    listaTulos = {
+      rivit: listaMitta.rivit.length,
+      rivitKeskenaan,
+      musteenPaalla,
+      reunanYli,
+    };
+    tieto(`${ruutu.nimi} · viuhkalista`, `rivejä ${listaTulos.rivit}`
+      + `, limityksiä ${rivitKeskenaan.length}`
+      + `, musteen päällä ${musteenPaalla.length}`
+      + `, reunan yli ${reunanYli.length}`);
     let viuhkaKortti = null;
     if (kohdat.length) {
       await napauta(sivu, kohdat[0].x, kohdat[0].y);
@@ -1415,7 +1471,7 @@ for (const ruutu of RUUDUT) {
       l.ladoHeti?.();
     });
     await sivu.waitForTimeout(500);
-    viuhkaTulos = { ryhma: suurinRyhma, kohdat, kortti: viuhkaKortti };
+    viuhkaTulos = { ryhma: suurinRyhma, kohdat, kortti: viuhkaKortti, lista: listaTulos };
   }
 
   const esteet = [];
@@ -1494,6 +1550,24 @@ for (const ruutu of RUUDUT) {
       ? `kohtia ${viuhkaTulos.kohdat.length} / ${viuhkaTulos.ryhma.maara}, `
         + `kortti ${viuhkaTulos.kortti ?? '-'} (kohta ${viuhkaTulos.kohdat[0]?.id ?? '-'})`
       : 'aihemerkkejä ei ollut (ks. vartio 3b)');
+
+  /*
+   * 4c. VIUHKA ON SIISTI LISTA (PAATOKSET 32 kohta 3, omistaja
+   * 17.9.2026 klo 20.35): rivit ovat *"yhtena siistina pystylistana"*
+   * merkin vieressä — yksikään rivi ei limity toisen rivin,
+   * kaupungin nimen eikä pelinappulan kanssa, ja koko lista on
+   * ruudun sisällä. Rivin napautus avaa kortin (vartio 4b).
+   */
+  vaadi(`4c. ${ruutu.nimi}: viuhkalista ei limity eikä valu ruudun yli`,
+    Boolean(viuhkaTulos?.lista) && viuhkaTulos.lista.rivitKeskenaan.length === 0
+      && viuhkaTulos.lista.musteenPaalla.length === 0
+      && viuhkaTulos.lista.reunanYli.length === 0,
+    viuhkaTulos?.lista
+      ? `rivejä ${viuhkaTulos.lista.rivit}`
+        + `, rivi rivin päällä: ${viuhkaTulos.lista.rivitKeskenaan.join(', ') || 'ei'}`
+        + `, musteen päällä: ${viuhkaTulos.lista.musteenPaalla.join(', ') || 'ei'}`
+        + `, reunan yli: ${viuhkaTulos.lista.reunanYli.join(', ') || 'ei'}`
+      : 'listaa ei mitattu (ks. vartio 4b)');
 
   /*
    * ══════════════════════════════════════════════════════════════
