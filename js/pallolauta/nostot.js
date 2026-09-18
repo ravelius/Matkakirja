@@ -1193,6 +1193,16 @@ export function luoNostot({
   /** Viimeisimman ladonnan laudan kaupunkien ankkuririvit (savukkeet). */
   let laudanAnkkurit = [];
   /*
+   * VIIMEISIMMAN LADONNAN KOKO RIVISTO (savukkeen juurisyymittari).
+   * `osumat` on ruudulla olevien lista, joten siitä ei voi lukea, onko
+   * nosto pudotettu kartalta vai vain kuvan ulkopuolella — juuri se
+   * ero oli vartio 8b:n juurisyy (18.9.2026). Tämä on `keraa`n tuotos
+   * sellaisenaan: sama lähde, josta liuskan jäsenyys lasketaan.
+   */
+  let rivitNyt = [];
+  /** Liuskaan siirrettyjen avaimet viimeisimmästä ladonnasta. */
+  let liuskaanSiirretyt = new Set();
+  /*
    * KAUPUNGIN SISÄISET NOSTOT ladonnasta: avain = kaupunkirivin avain.
    * Sama lista pudottaa merkit kartalta (PAATOKSET 34 kohta 3) ja
    * täyttää liuskan kategoriat — yksi laskenta, kaksi käyttöä.
@@ -1798,6 +1808,7 @@ export function luoNostot({
       : nimenKarttakerroin(karttaskaala, vertailuskaala || undefined);
     viimeisinUloinOsuus = uloinOsuus;
     const rivit = keraa(nakyva, uloinOsuus);
+    rivitNyt = rivit;
     const nakyvat = [];
     for (const r of rivit) {
       const p = ruudulla(r.lat, r.lng);
@@ -1945,6 +1956,7 @@ export function luoNostot({
       sisaisetKaupungeittain.set(city.avain, omat);
       for (const r of omat) sisaisetAvaimet.add(r.avain);
     }
+    liuskaanSiirretyt = sisaisetAvaimet;
     const elavat = elavatKaikki.filter((r) => !sisaisetAvaimet.has(r.avain));
     const mittaNyt = nostonMitta();
     /*
@@ -2744,6 +2756,35 @@ export function luoNostot({
      * ja jäsenyyden keskus (`keskus`) erikseen — savukkeen on mitattava
      * samasta pisteestä kuin kerros (ks. KAUPUNGIN OMA PISTE).
      */
+    /**
+     * KOKO RIVISTO VIIMEISIMMASTA LADONNASTA (savukkeen vartio 8b).
+     * Kartalta pudottaminen ja kuvan ulkopuolelle jääminen ovat eri
+     * asioita, ja vain tämä lista erottaa ne: `ruudulla` kertoo, onko
+     * merkillä ruutupiste juuri nyt, ja `omaLat`/`omaLng` sen
+     * datapaikan, josta kaupunkijäsenyys mitataan.
+     */
+    kartanRivit: () => rivitNyt.map((r) => ({
+      avain: r.avain,
+      id: r.id,
+      nimi: r.nimi ?? '',
+      perhe: r.perhe,
+      lat: r.lat,
+      lng: r.lng,
+      omaLat: r.omaLat,
+      omaLng: r.omaLng,
+      paikkaNimi: r.paikkaNimi ?? null,
+      kaupunki: Boolean(r.kaupunki),
+      vainNimi: Boolean(r.vainNimi),
+      poltettu: Boolean(r.poltettu),
+      ruudulla: Boolean(ruudulla(r.lat, r.lng)),
+      /*
+       * KARTALTA PUDOTTAMINEN ON TÄMÄ LIPPU, EI `ruudulla` (PAATOKSET
+       * 34 kohta 4). Kaupungin sisäinen nosto siirtyy liuskaan eikä
+       * piirry kartalle millään zoomilla; ruudun laita on kameran asia
+       * ja vaihtuu ruutukoon mukana.
+       */
+      liuskassa: liuskaanSiirretyt.has(r.avain),
+    })),
     /** Kaupungin sisaisten nostojen tunnukset (savukkeen vartio 3). */
     liuskanSisaiset: (avain) => (sisaisetKaupungeittain.get(avain) ?? []).map((r) => r.id),
     laudanAnkkurit: () => laudanAnkkurit.map((r) => ({

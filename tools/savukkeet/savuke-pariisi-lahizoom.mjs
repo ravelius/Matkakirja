@@ -1742,6 +1742,34 @@ for (const ruutu of RUUDUT) {
         .map((o) => o.nimi ?? o.id ?? ''),
       // Liuskaan siirretyt eli kaupungin sisäiset (tunnukset).
       sisaisetIdt: ankkuri ? (n.liuskanSisaiset?.(ankkuri.avain) ?? []) : [],
+      /*
+       * JUURISYYRIVI (era 18.9.2026): kolmen ulkopuolisen kohteen tila
+       * kerroksen OMASTA rivistosta, ei ruudusta. `osumat` ei erota
+       * kolmea eri asiaa toisistaan — nosto voi puuttua DATASTA, olla
+       * pudotettu liuskaan (kaupungin sisainen), jaada DOM-katon alle
+       * tai olla vain kuvan ulkopuolella. Ilman tata erottelua vartio
+       * 8b kertoi vain *"ei loytynyt"*.
+       */
+      kohteet: ['Versailles', 'Chartres', 'Chambord'].map((nimi) => {
+        const re = new RegExp(nimi, 'iu');
+        const r = (n.kartanRivit?.() ?? []).find((x) => re.test(x.nimi ?? ''));
+        if (!r) return { nimi, tila: 'ei rivistossa' };
+        const keskus = { lat: city.lat, lng: city.lng };
+        const omaP = k.nostonOmaPaikka(r) ?? null;
+        return {
+          nimi,
+          id: r.id,
+          sisainen: k.onKaupunginSisainen(r, keskus),
+          km: omaP ? k.etaisyysKm(omaP, keskus) : null,
+          oma: omaP ? `${omaP.lat?.toFixed?.(3)}/${omaP.lng?.toFixed?.(3)}` : '-',
+          ankkuri: `${r.lat?.toFixed?.(3)}/${r.lng?.toFixed?.(3)}`,
+          ruudulla: r.ruudulla,
+          // KARTALLA = kerroksen rivistossa eika liuskaan siirretty.
+          kartalla: !r.liuskassa,
+          osumissa: osumat.some((o) => o.id === r.id
+            || (o.jasenet ?? []).some((j) => j.id === r.id)),
+        };
+      }),
     };
   });
 
@@ -1807,16 +1835,53 @@ for (const ruutu of RUUDUT) {
     ...(lahiTulos?.sisaisetIdt ?? []),
   ]);
   const LAHIKOHTEET = ['Versailles', 'Chartres', 'Chambord'];
+  /*
+   * RUUTU EI OLE KARTALLA OLON MITTA — EIKÄ ZOOMSARJA SITÄ KORJAA
+   * (juurisyy mitattu 18.9.2026, tämä erä).
+   *
+   * MITTAUS 1400 px:llä (kaikki neljä zoomia, luvut samat joka
+   * kerralla): Versailles `omaLat/omaLng` 49,797/2,052 → 107,8 km
+   * Pariisista, `ruudulla ei`, `osumissa ei`; Chambord 47,616/1,517 →
+   * 149,4 km, `ruudulla ei`; Chartres 48,448/1,487 → 76,2 km,
+   * `ruudulla kyllä`. Yksikään kolmesta EI ollut kaupungin sisäinen
+   * (`sisainen` epätosi joka zoomilla), eli mitään ei ollut pudotettu
+   * kartalta — ne olivat kuvan ulkopuolella. 390 px:n pystyruudulla
+   * sama sarja osuu niiden päälle, 1400 × 900:lla ei. Zoomsarjasta
+   * lukeminen (erä 3:n korjaus) siirsi siis vain rajaa, ei mittaa.
+   *
+   * VÄITE MITATAAN SIKSI KERROKSEN OMASTA RIVISTOSTA. PAATOKSET 34
+   * kohta 4 sanoo, että kaupungin sisäiset siirtyvät liuskaan ja
+   * ulkopuoliset jäävät kartalle — se on jäsenyys, ei kameran rajaus.
+   * `kartanRivit()` antaa `keraa`n rivit ja lipun `liuskassa`, joten
+   * "kartalla" on täsmälleen "rivistossa eikä liuskaan siirretty".
+   * Luku on sama joka ruudulla ja joka zoomilla.
+   */
+  const kohteetZoomeittain = [...sisaisetZoomeilla, { porras: 'lahi', tulos: lahiTulos }];
+  const puuttuu = [];
+  for (const nimi of LAHIKOHTEET) {
+    for (const z of kohteetZoomeittain) {
+      const c = (z.tulos?.kohteet ?? []).find((x) => x.nimi === nimi);
+      if (!c || c.tila || !c.kartalla) puuttuu.push(`${nimi}@${z.porras}`);
+    }
+  }
+  for (const z of kohteetZoomeittain) {
+    tieto(`${ruutu.nimi} · ulkopuoliset zoom ${z.porras}`,
+      (z.tulos?.kohteet ?? []).map((c) => `${c.nimi}: ${c.tila ?? ''}`
+        + (c.tila ? '' : `${c.sisainen ? 'SISÄINEN' : 'ulkopuolinen'} ${p(c.km ?? 0)} km`
+          + `, oma ${c.oma}, ankkuri ${c.ankkuri}`
+          + `, kartalla ${c.kartalla ? 'kyllä' : 'EI'}`
+          + `, ruudulla ${c.ruudulla ? 'kyllä' : 'ei'}`
+          + `, osumissa ${c.osumissa ? 'kyllä' : 'ei'}`)).join(' | ') || '—');
+  }
   const loytyi = LAHIKOHTEET.filter((nimi) => new RegExp(nimi, 'iu').test(kartanNimet));
   tieto(`${ruutu.nimi} · ulkopuoliset kohteet`,
-    `kartalla ${loytyi.join(', ') || 'ei yhtään'}`
-    + `, kartan nimiä ${kartanNimet.split(' | ').filter(Boolean).length} `
+    `kartalla (rivisto) ${LAHIKOHTEET.filter((nimi) => !puuttuu.some((x) => x.startsWith(nimi))).join(', ') || 'ei yhtään'}`
+    + `, ruudulla jollakin zoomilla ${loytyi.join(', ') || 'ei yhtään'}`
+    + `, kartan nimiä ruudulla ${kartanNimet.split(' | ').filter(Boolean).length} `
     + `(3 zoomia + lähizoomi), liuskaan siirrettyjä ${sisaisetIdt.size}`);
-  vaadi(`8b. ${ruutu.nimi}: Versailles, Chartres ja Chambord ovat kartalla`,
-    loytyi.length === LAHIKOHTEET.length,
-    `löytyi ${loytyi.join(', ') || 'ei yhtään'} — kartalla oli koko sarjassa `
-    + `vain ${kartanNimet.split(' | ').filter(Boolean).length} nostoa `
-    + `ja liuskaan siirrettiin ${sisaisetIdt.size}`);
+  vaadi(`8b. ${ruutu.nimi}: Versailles, Chartres ja Chambord ovat kartalla (3 zoomia + lähizoomi)`,
+    puuttuu.length === 0,
+    `liuskaan siirrettyjä ${sisaisetIdt.size}; kartalta puuttui ${puuttuu.join(', ')}`);
 
   /* 8c-8h: liuska auki kaupunkimerkin napautuksesta. */
   await suljeKortti(sivu);
