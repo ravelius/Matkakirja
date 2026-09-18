@@ -138,7 +138,16 @@ noiden kahden näkymän väitteet nojaavat laskureihin ja pyyntöihin.
 Kaappaukset: `tools/savukkeet/kaappaukset/reliefi-meret/reliefi-meret-
 {valimeri,napa,siperia}.png` (Chromium) ja `-webkit`-päätteiset.
 
-WEBKIT: KESKEN_TAI_TULOS
+**WebKit 390 × 844: EI TULOSTA — ajo ei valmistunut aikakaton sisällä.**
+Ensimmäinen yritys kaatui navigoinnin 30 sekunnin aikakattoon
+(`page.goto ... waiting until "load"`); odotus vaihdettiin
+`domcontentloaded`iin ja pelin omaan tilaan, minkä jälkeen toinen ajo jäi
+pyörimään yli kymmeneksi minuutiksi ilman yhtään tulostetta eikä
+kaappauksia syntynyt. Ajo keskeytettiin erän aikakaton takia, eikä
+`-webkit`-kaappauksia ole. Sama savuke ajaa WebKitiä muissa vaiheissaan,
+joten ongelma on todennäköisesti tämän vaiheen odotusketjussa (ämpärin
+route-välitys + kolme näkymää) eikä korjauksessa. **Tämä jää auki: WebKit-
+mittaus on ajettava ennen julkaisua.**
 
 Ennen-kuvia ei kaapattu: korjaus oli jo tehty, kun mittari syntyi, ja
 ennen-tila on omistajan neljä iPhone-kuvaa (v1945). Laskurit kertovat
