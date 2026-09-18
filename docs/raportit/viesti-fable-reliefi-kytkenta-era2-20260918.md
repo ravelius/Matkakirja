@@ -423,3 +423,172 @@ ajettu ennen pushia. Laattoja ei committoitu.
 Koskematta: Raamattu, `sarjat.json`, pohjapyramidi, `js/pallolauta/nostot*.js`,
 kaupunkiliuska, fokusvirta, Astronautin kamera. Versionostoa ei tehty
 (tehtävänannon mukaan); kytkin on yhä oletuksena pois.
+
+---
+
+# Erä 4 — avausketju, oletuskytkin ja yksi mitattu yllätys
+
+Opus-agentti 18.9.2026 klo 10.09–10.54 (Suomen aikaa), haara
+`claude/bold-ride-vow4ki-reliefi-kytkenta`. Mac Studio, Playwright
+(Chromium 1234), ruutu 390 × 844 dpr 2, Alppien lähizoomi
+(45,8 °N / 6,9 °E, korkeus 0,06). Laatat levyltä route-välityksellä
+ämpärin omaan polkuun. Versionostoa EI tehty (tehtävänannon mukaan);
+muutos vaatii sen, koska kytkin on nyt oletuksena päällä.
+
+## 1. TÄRKEIN LÖYTÖ: "kirkkausvälähdys" ei ole vika — se on reliefi
+
+Erän 3 taulukon kohta g nimesi avauksen jälkeisen kirkkauden 101,9
+välähdykseksi ja asettuneen 69:n oikeaksi näkymäksi. **Se luenta on
+päinvastoin.** Kaappasin tällä erällä sen kirkkaimman kehyksen kuvaksi
+(`reliefi-chromium-paalla-valahdys.png`, savukkeeseen lisätty
+puskurointi), ja kuvassa on **terävä, oikein värittynyt z7-reliefi**:
+Alppien harjanteet erottuvat yksittäin, Genevenjärvi ja Thunin järvi
+ovat terävärantaisia, nimiöt ovat paikoillaan.
+
+Vertailukohta on saman ajon asettunut kuva
+(`reliefi-chromium-paalla-alpit.png`): **sumea ja tummunut** versio
+samasta maastosta, jossa harjanteet ovat puuroa. Kirkkaus 69 on siis
+sen sumean kuvan luku, 101,9 terävän.
+
+Ketju mitattuna (kirkkaussarja, 60–100 ms välein):
+
+| t | ruudulla |
+| --- | --- |
+| 0–620 ms | pelin seepiakartta (L ≈ 83) |
+| 815–1113 ms | tumma odotuspeite (L 18,4 → 15,2) |
+| **1408–2132 ms** | **terävä reliefi (L 101,9)** |
+| 2381 ms → | sumea ja tummunut reliefi (L 69) |
+
+Eli **reliefi on ruudulla 1,4 sekunnissa ja oikein**, ja noin sekuntia
+myöhemmin jokin korvaa sen karkeammalla ja tummemmalla. Erän 3 mitta
+"a) ensimmäinen reliefikehys" etsii ensimmäistä kehystä, joka on jo
+ASETTUNEEN värissä — se mittaa siis sen hetken, jolloin kuva
+huononee, ei sitä, jolloin reliefi tulee. Luku 2 381 ms on tästä
+syystä harhaanjohtava eikä sitä pidä lukea latausviiveenä.
+
+**En löytänyt vielä syytä sille, mikä kuvan korvaa,** enkä arvaa sitä
+tähän. Kolme mitattua vihjettä seuraavalle erälle:
+
+1. Laattakerroksen omat mittarit ovat koko ajan kunnossa ja pysyvät
+   niinä: `tila nakyy, taso 7, laattoja 12, valmiita 12`. Kerros ei
+   siis vaihda tasoa eikä pudota laattoja — **korvaaja on kerroksen
+   ulkopuolella**.
+2. Ajoitus osuu lepokerroksen kokoamisviiveeseen
+   (`LEPOKERROS_LEPOVIIVE_MS` 400 ms kameran pysähtymisestä,
+   js/pallolaatat.js) — yksi kangas, joka kootaan levossa.
+3. Seepiapyyntöjä on 0, joten korvaaja ei ole pohjakartta vaan jokin,
+   joka on jo muistissa.
+
+## 2. Avausketju: yksi kuva pois, peitteen mitta korjattu
+
+**`lataa()` ei enää tuo yhtä kuvaa pyramiditilassa.** `sytytaLinssi`
+(js/ui.js) odottaa `linssi.lataa()`:n valmiiksi ENNEN kuin `pallolle()`
+pääsee ajoon — ja juuri `pallolle()` nostaa odotuspeitteen ja herättää
+laattakerroksen. Kaikki, mitä `lataa()`ssa tehdään, on siis suoraan
+pois pelaajan ruudulta: hän katsoo peittämätöntä pelikarttaa niin
+kauan. Pyramiditilassa kalvoa eikä laastaria ole, joten kuvaa ei
+lueta — moduulin tuonti oli pelkkää odotusta.
+
+**Odotuspeitteen mitta oli rikki, ja se on nyt korjattu.** Vanha ehto
+`nakyviaTaysin >= nakyvia` on tosi myös kesken kokoamista, kun näkyviä
+laattoja on hetkellisesti yksi: yksi valmis yhdestä on sata prosenttia,
+vaikka ruutu on tyhjä. Uusi ehto vaatii viisi asiaa yhtä aikaa: kerros
+ajossa (`tila === 'nakyy'`), näkyviä laattoja > 0, jokainen scenessä,
+jokaisen häive perillä, eikä mitään latautumassa tai jonossa.
+
+Savuke lukee nyt peitteen kyselylokia (`tila().peiteLoki`), joten
+peitteen väistyminen on mitattu eikä pääteltu:
+
+```
+ 91 ms  nakyy/z7  n12 s0  t0  l3 j0   ← 12 laattaa tiedossa, 3 latautuu
+181 ms  nakyy/z7  n12 s6  t0  l0 j0
+272 ms  nakyy/z7  n12 s12 t0  l0 j0   ← kaikki scenessä
+638 ms  nakyy/z7  n12 s12 t12 l0 j0   ← häive perillä → peite pois
+```
+
+**Peite on ruudulla 638 ms** ja väistyy vasta täydestä ikkunasta.
+Reliefi on siis kankaalla 272 ms:ssä `pallolle()`:n alusta — tavoite
+"< 300 ms laattojen saapuessa" täyttyy laattakerroksen osalta. Mitä
+ruudulla näkyy ennen sitä, on tumma peite, ei vaalea kartta.
+
+**Mitä EI saatu alle 300 ms:n:** linssin valinnasta `pallolle()`:n
+alkuun kuluu yhä noin 700 ms (kirkkaussarjassa peite ilmestyy vasta
+815 ms:ssä). Se aika on `js/ui.js`:n `sytytaLinssi`-ketjussa —
+`lataaLinssit`, `sammutaPallolinssi`, `merkitseLuokat` — eikä tämän
+linssin sisällä. Sitä ei mitattu erittelemällä, joten en väitä, mikä
+siitä on mitäkin.
+
+## 3. Kytkin on nyt oletus
+
+`?reliefipyramidi=0` on varapolku (vanha yksi kuva ja laastari),
+kaikki muu on laatasto. Perustelu: laatat ovat ämpärissä
+(`media.matkakirja.app/matkakirja/reliefipyramidi/20260918/`), ja erän
+3 mittaus totesi laataston valmiiksi kohdissa b–f. Testi
+`tests/reliefipyramidi.test.mjs` vartioi kumpaakin suuntaa.
+
+**Syvin zoomi ei ole tyhjä.** Mitattu tässä erässä samalla näkymällä
+(korkeus 0,06, jossa pohja valitsisi z8): laattakerros osuu z7:ään ja
+kokoaa 12 laattaa 12:sta, eikä yhtään `virhe`-tilaa synny. Reliefi siis
+skaalataan, ja se on se sumeus, jonka näkee lähimmässä zoomissa —
+mutta se on 240 px/aste eli kahdeksankertainen vanhaan yhteen kuvaan.
+
+## 4. Mittaustaulukko (Chromium, kytkin päällä, kaksi ajoa)
+
+| | mitattu | tavoite |
+| --- | --- | --- |
+| peite ruudulla | 638 / 642 ms | — |
+| reliefi kankaalla `pallolle()`:sta | **272 ms** | < 300 ms ✓ |
+| ensimmäinen reliefikehys ruudulla (kirkkaussarja) | **1 408 ms** | < 300 ms ✗ (n. 700 ms on linssiketjua ennen `pallolle()`:a) |
+| seepiapohjan laattapyyntöjä | **0** | 0 ✓ |
+| reliefilaattoja näkyvälle ikkunalle | **12** | ≤ 12 ✓ |
+| gradienttienergia (asettunut) | 2,50 | > 1,77 (pois) ✓ |
+| fps 3 s panoroinnissa | **77,1 / 81,2** | ≥ 50 ✓ |
+| meri: reikiä laikussa | **0 / 1 296** | 0 ✓ |
+| kirkkaus asettunut / kirkkain | 69 / 101,9 | ks. kohta 1 |
+
+WebKit-ajoa ei ehditty aikakaton sisään; erän 3 WebKit-luvut ovat yhä
+voimassa siltä osin, mitä tämän erän muutokset eivät koske.
+
+## 5. Nimiöt: mitattu, ei korjattu
+
+Kaappaus `reliefi-chromium-paalla-valahdys.png` näyttää ne, joista
+Fable kirjoitti: La Chaux-de-Fonds, Bern 1905, Chillon, Aletsch ja
+muut. Ne ovat **harmaata tekstiä ilman reunusta tai pohjaa** vaaleaa
+maastoa vasten — maasto on juuri siinä kohdassa vaaleanvihreää
+(182, 195, 117) ja teksti tummanruskeaa (82, 71, 54). Mitattu kontrasti
+tekstilaikun tummimman ja vaaleimman viidenneksen välillä on **4,78**,
+eli rajalla — ja silmällä katsoen luettavuus on huonompi kuin luku
+antaa ymmärtää, koska maasto vaihtelee kirjaimen sisällä.
+
+**Korjausta en tehnyt.** Syy on kohta 1: en tiedä vielä, kumpaa kuvaa
+vasten nimiön pitää olla luettava — terävää vaaleaa (101,9) vai sumeaa
+tummaa (69). Ne ovat eri suuntiin meneviä korjauksia: vaaleaa maastoa
+vasten nimiö tarvitsee tumman pohjan, tummaa vasten vaalean. Tehdään
+se, kun kohdan 1 korvaaja on löydetty ja tiedetään, kumpi jää.
+
+Mitattava kohta on valmis: `/tmp`-riippumaton kontrastimitta on
+savukkeen `vari`/`gradientti`-funktioiden rinnalla helppo lisätä, ja
+nimiön paikat saa `pallo.getScreenCoords`illa kuten merilaikku.
+
+## 6. Astronautin kamera: ei koodia, suunnitelma tarkentuu
+
+`js/linssit/satelliitti-avaruus.js` on koskematon. Erän 3 suunnitelma
+(kohta 4) pätee, ja siihen tulee tämän erän jälkeen yksi tarkennus:
+kameran kytkin ei voi olla topografialinssin `linssiAuki`-lippu vaan
+laskuri tai oma lippu — ja **kohta 1 on ratkaistava ensin**, koska
+sama korvaaja iskisi kameran laastariin samalla tavalla.
+
+Mitattavat kohdat kameralle, kun se tehdään: laattoja näkyvälle
+ikkunalle ≤ 12, 4k/8k-pohjakuva jää alle eikä sitä ladata kahdesti,
+fps ≥ 50 pyörityksessä, ja pohjakuvan ja laataston sauma
+(gradienttienergia laatan reunalla vs. keskellä).
+
+## 7. Testit ja mitä EI koskettu
+
+`node --test tests/*.test.mjs` vihreä (3 604 läpi, 0 kaatunutta,
+13 ohitettua). `node tools/build-standalone.mjs` ajettu ennen kumpaakin
+pushia. Kaksi testiä käännettiin uuden oletuksen mukaisiksi.
+
+Koskematta: Raamattu, `sarjat.json`, pohjapyramidi,
+`js/pallolauta/nostot*.js`, kaupunkiliuska, fokusvirta,
+`js/pallolaatat.js`:n kerma-osiot, Astronautin kamera.

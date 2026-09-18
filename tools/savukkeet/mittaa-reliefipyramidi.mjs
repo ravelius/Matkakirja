@@ -261,7 +261,12 @@ async function ajaKerta(kytkin) {
 
   const kuvaa = async () => decodePng(await sivu.screenshot({ type: 'png' }));
 
-  const osoite = `http://127.0.0.1:${PORTTI}/index.html?lauta=pallo${kytkin ? '&reliefipyramidi=1' : ''}`;
+  /*
+   * KYTKIN ON 18.9.2026 ALKAEN OLETUKSENA PÄÄLLÄ (erä 4), joten
+   * vastakoe on se, joka tarvitsee parametrin: `?reliefipyramidi=0`
+   * palauttaa vanhan yhden kuvan polun.
+   */
+  const osoite = `http://127.0.0.1:${PORTTI}/index.html?lauta=pallo${kytkin ? '' : '&reliefipyramidi=0'}`;
   await sivu.goto(osoite, { waitUntil: 'load' });
   await sivu.waitForTimeout(2500);
   await sivu.evaluate(() => {
@@ -304,13 +309,26 @@ async function ajaKerta(kytkin) {
     ui.valitseLinssi('topografia');
   });
   const sarja = [];
+  /*
+   * KIRKKAIN KEHYS TALTEEN KUVANA. Luku yksin ei kerro, MIKÄ välähtää;
+   * kuva kertoo. Puskuri pidetään kädessä, jotta kaappausta ei tarvitse
+   * ottaa toista kertaa (näkymä on silloin jo asettunut).
+   */
+  let kirkkainPuskuri = null;
+  let kirkkainL = -1;
   while (Date.now() - t0 < 8000) {
     const ms = Date.now() - t0;
+    let puskuri = null;
     let kuva = null;
-    try { kuva = await kuvaa(); } catch { /* kaappaus kesken piirron */ }
-    if (kuva) sarja.push({ ms, ...vari(kuva) });
+    try { puskuri = await sivu.screenshot({ type: 'png' }); kuva = decodePng(puskuri); } catch { /* kaappaus kesken piirron */ }
+    if (kuva) {
+      const v = vari(kuva);
+      sarja.push({ ms, ...v });
+      if (ms > 400 && v.L > kirkkainL) { kirkkainL = v.L; kirkkainPuskuri = puskuri; }
+    }
     await sivu.waitForTimeout(60);
   }
+  if (kirkkainPuskuri) writeFileSync(join(ULOS, `reliefi-${SELAIN}-${nimi}-valahdys.png`), kirkkainPuskuri);
 
   /* ---- asettunut näkymä ------------------------------------------- */
   await sivu.waitForTimeout(4000);
@@ -410,6 +428,9 @@ async function ajaKerta(kytkin) {
     asettunutL: +asettunutVari.L.toFixed(1),
     valahdysL: +valahdys.toFixed(1),
     reliefipyramidiLipussa: linssitila?.reliefipyramidi ?? null,
+    /* Peitteen kyselyloki: mistä laattakerroksen tilasta peite väistyi. */
+    peiteMs: linssitila?.peiteMs ?? null,
+    peiteLoki: linssitila?.peiteLoki ?? null,
     kerrostila,
     virheet: virheet.slice(0, 5),
     sarja: sarja.map((s) => ({ ms: s.ms, L: +s.L.toFixed(1) })),
@@ -430,7 +451,10 @@ for (const kytkin of VALITUT) {
   console.log(`  e) fps 3 s panoroinnissa  ${t.fps}`);
   console.log(`  f) meri yhtenäinen  reikiä ${t.meri.reikia}/${t.meri.n}, hajonta ${t.meri.hajonta}, keski ${t.meri.keski} (ero MERIVARIin ${t.meri.eroMerivarista})`);
   console.log(`  g) kirkkaus: pohja ${t.pohjaL}, asettunut ${t.asettunutL}, max avauksen jälkeen ${t.valahdysL}`);
-  console.log(`  linssin tila.reliefipyramidi = ${t.reliefipyramidiLipussa}`);
+  console.log(`  linssin tila.reliefipyramidi = ${t.reliefipyramidiLipussa}, peite ruudulla ${t.peiteMs} ms`);
+  if (t.peiteLoki?.length) {
+    console.log(`  peitteen loki: ${t.peiteLoki.map((r) => `${r.ms}:${r.tila}/z${r.taso} n${r.nakyvia} s${r.scenessa} t${r.taysin} l${r.ladattavia} j${r.jonossa}`).join(' | ')}`);
+  }
   console.log(`  laattakerros: ${JSON.stringify(t.kerrostila)}`);
   if (t.virheet.length) console.log(`  sivuvirheet: ${t.virheet.join(' | ')}`);
 }

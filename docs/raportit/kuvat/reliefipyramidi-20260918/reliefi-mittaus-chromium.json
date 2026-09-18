@@ -1,290 +1,225 @@
 [
  {
-  "nimi": "pois",
-  "selain": "chromium",
-  "ensimmainenMs": 2496,
-  "seepiapyyntoja": 35,
-  "reliefipyyntoja": 0,
-  "teravyys": 1.77,
-  "fps": 77.5,
-  "meri": {
-   "n": 1296,
-   "osuus": 0,
-   "maxEro": 66.1,
-   "keski": [
-    79,
-    92,
-    103
-   ]
-  },
-  "pohjaL": 95.7,
-  "asettunutL": 86,
-  "valahdysL": 138.8,
-  "reliefipyramidiLipussa": false,
-  "kerrostila": {
-   "tila": "nakyy",
-   "syy": "",
-   "taso": 8,
-   "laattoja": 35,
-   "valmiita": 35,
-   "pyyntoja": 534,
-   "lukossa": false
-  },
-  "virheet": [],
-  "sarja": [
-   {
-    "ms": 1,
-    "L": 94.8
-   },
-   {
-    "ms": 396,
-    "L": 80.8
-   },
-   {
-    "ms": 787,
-    "L": 19
-   },
-   {
-    "ms": 1073,
-    "L": 19.6
-   },
-   {
-    "ms": 1343,
-    "L": 138.8
-   },
-   {
-    "ms": 1743,
-    "L": 131.4
-   },
-   {
-    "ms": 2114,
-    "L": 131.4
-   },
-   {
-    "ms": 2496,
-    "L": 86
-   },
-   {
-    "ms": 2836,
-    "L": 86
-   },
-   {
-    "ms": 3146,
-    "L": 86
-   },
-   {
-    "ms": 3446,
-    "L": 86
-   },
-   {
-    "ms": 3727,
-    "L": 86
-   },
-   {
-    "ms": 4016,
-    "L": 86
-   },
-   {
-    "ms": 4325,
-    "L": 86
-   },
-   {
-    "ms": 4622,
-    "L": 86
-   },
-   {
-    "ms": 4922,
-    "L": 86
-   },
-   {
-    "ms": 5213,
-    "L": 86
-   },
-   {
-    "ms": 5517,
-    "L": 86
-   },
-   {
-    "ms": 5828,
-    "L": 86
-   },
-   {
-    "ms": 6145,
-    "L": 86
-   },
-   {
-    "ms": 6433,
-    "L": 86
-   },
-   {
-    "ms": 6715,
-    "L": 86
-   },
-   {
-    "ms": 7015,
-    "L": 86
-   },
-   {
-    "ms": 7308,
-    "L": 86
-   },
-   {
-    "ms": 7600,
-    "L": 86
-   },
-   {
-    "ms": 7899,
-    "L": 86
-   }
-  ]
- },
- {
   "nimi": "paalla",
   "selain": "chromium",
-  "ensimmainenMs": 2714,
+  "ensimmainenMs": 2680,
   "seepiapyyntoja": 0,
   "reliefipyyntoja": 12,
   "teravyys": 2.5,
-  "fps": 77.3,
+  "fps": 81.2,
   "meri": {
    "n": 1296,
-   "osuus": 0,
-   "maxEro": 52.6,
+   "hajonta": 18.1,
+   "reikia": 0,
    "keski": [
     59,
     80,
     101
-   ]
+   ],
+   "eroMerivarista": 49.3
   },
   "pohjaL": 95.7,
   "asettunutL": 69,
   "valahdysL": 101.9,
   "reliefipyramidiLipussa": true,
+  "peiteMs": 638,
+  "peiteLoki": [
+   {
+    "ms": 91,
+    "tila": "nakyy",
+    "taso": 7,
+    "nakyvia": 12,
+    "scenessa": 0,
+    "taysin": 0,
+    "ladattavia": 3,
+    "jonossa": 0
+   },
+   {
+    "ms": 181,
+    "tila": "nakyy",
+    "taso": 7,
+    "nakyvia": 12,
+    "scenessa": 6,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 272,
+    "tila": "nakyy",
+    "taso": 7,
+    "nakyvia": 12,
+    "scenessa": 12,
+    "taysin": 0,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 364,
+    "tila": "nakyy",
+    "taso": 7,
+    "nakyvia": 12,
+    "scenessa": 12,
+    "taysin": 1,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 455,
+    "tila": "nakyy",
+    "taso": 7,
+    "nakyvia": 12,
+    "scenessa": 12,
+    "taysin": 1,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 547,
+    "tila": "nakyy",
+    "taso": 7,
+    "nakyvia": 12,
+    "scenessa": 12,
+    "taysin": 11,
+    "ladattavia": 0,
+    "jonossa": 0
+   },
+   {
+    "ms": 638,
+    "tila": "nakyy",
+    "taso": 7,
+    "nakyvia": 12,
+    "scenessa": 12,
+    "taysin": 12,
+    "ladattavia": 0,
+    "jonossa": 0
+   }
+  ],
   "kerrostila": {
    "tila": "nakyy",
    "syy": "",
    "taso": 7,
    "laattoja": 12,
    "valmiita": 12,
-   "pyyntoja": 556,
+   "pyyntoja": 499,
    "lukossa": false
   },
   "virheet": [],
   "sarja": [
    {
-    "ms": 1,
-    "L": 93.3
+    "ms": 7,
+    "L": 92.4
    },
    {
-    "ms": 216,
-    "L": 82.8
-   },
-   {
-    "ms": 417,
+    "ms": 218,
     "L": 82.7
    },
    {
-    "ms": 614,
+    "ms": 434,
     "L": 82.7
    },
    {
-    "ms": 815,
-    "L": 87.6
+    "ms": 641,
+    "L": 78.7
    },
    {
-    "ms": 1107,
-    "L": 37.1
+    "ms": 865,
+    "L": 28.3
    },
    {
-    "ms": 1417,
+    "ms": 1164,
     "L": 15.2
    },
    {
-    "ms": 1733,
+    "ms": 1462,
     "L": 101.9
    },
    {
-    "ms": 1970,
+    "ms": 1705,
     "L": 101.9
    },
    {
-    "ms": 2223,
+    "ms": 1945,
     "L": 101.9
    },
    {
-    "ms": 2467,
+    "ms": 2193,
     "L": 101.9
    },
    {
-    "ms": 2714,
+    "ms": 2444,
+    "L": 101.9
+   },
+   {
+    "ms": 2680,
     "L": 69
    },
    {
-    "ms": 3023,
+    "ms": 2981,
     "L": 69
    },
    {
-    "ms": 3327,
+    "ms": 3277,
     "L": 69
    },
    {
-    "ms": 3635,
+    "ms": 3578,
     "L": 69
    },
    {
-    "ms": 3948,
+    "ms": 3887,
     "L": 69
    },
    {
-    "ms": 4251,
+    "ms": 4182,
     "L": 69
    },
    {
-    "ms": 4559,
+    "ms": 4473,
     "L": 69
    },
    {
-    "ms": 4855,
+    "ms": 4773,
     "L": 69
    },
    {
-    "ms": 5149,
+    "ms": 5068,
     "L": 69
    },
    {
-    "ms": 5455,
+    "ms": 5370,
     "L": 69
    },
    {
-    "ms": 5759,
+    "ms": 5679,
     "L": 69
    },
    {
-    "ms": 6041,
+    "ms": 5976,
     "L": 69
    },
    {
-    "ms": 6336,
+    "ms": 6273,
     "L": 69
    },
    {
-    "ms": 6633,
+    "ms": 6572,
     "L": 69
    },
    {
-    "ms": 6935,
+    "ms": 6870,
     "L": 69
    },
    {
-    "ms": 7241,
+    "ms": 7178,
     "L": 69
    },
    {
-    "ms": 7544,
+    "ms": 7473,
     "L": 69
    },
    {
-    "ms": 7831,
+    "ms": 7769,
     "L": 69
    }
   ]
