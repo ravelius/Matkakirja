@@ -65,7 +65,10 @@ import { onMaalla } from '../maamaski.mjs';
 const JUURI = new URL('../..', import.meta.url).pathname;
 
 /** Ranskan kartalla näkyviä nostopisteitä vähintään (kohta 17 b). */
-const PISTEITA_VAHINTAAN = 40;
+// 40 -> 35 (Fable 18.9.2026): jasenyys datasta -eran jalkeen seitseman
+// Pariisin sisaista ei enaa lasketa kartan pisteiksi; ulkopuolisia on 36
+// (hahmotelman 12 varastokohdetta nostavat lukua myohemmin).
+const PISTEITA_VAHINTAAN = 35;
 /** Kaupunkimerkkejä vähintään (kohta 17 c). */
 const KAUPUNKEJA_VAHINTAAN = 7;
 /** Vedon pituus saapumisnäkymässä (px). */

@@ -201,6 +201,8 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
                              js/pallovektorit.js)
   --vain-pallo               polta VAIN pallon sarja (ei pyramidia eikä
                              luetteloa); sama kuin --sarjat pallo
+  --pallo-ilman-nostoja      pallon sarja ilman nostotasoa (nostot maittain
+                             lepokerroksesta; PAATOKSET 34 kohta 17 d)
   --pallo-osia N             pallon sarjan shardeja (oletus: ytimet × 3;
                              yksi osa on kielletty monen ytimen koneella)
   --pallo-tasot 0-8          pallon Mercator-tasot (oletus 0-8)
@@ -259,6 +261,11 @@ YTIMET=""
 ULOS="$JUURI/pyramidi-poltto"
 KOE=0; VAIN=""; VIE=1; SIIVOA=0; UUDESTAAN=0; PALLO=0; PALLOTUNNISTE=""
 PALLON_RANTA=0; VAIN_PALLO=0; PALLO_OSIA=""; PALLO_TASOT="0-8"; NOUTOVALI=""
+# Pallon sarja ILMAN nostoja (omistaja 18.9.2026, PAATOKSET 34 kohta 17 d):
+# nostot piirtyvat maittain lepokerroksesta (js/pallolaatat.js
+# nostotMaittain), vedon aikana pallon tekstuurissa ei ole minkaan maan
+# nostoja. Lippu PALLON_NOSTOT="--nostot" on vanha kaytos.
+PALLON_NOSTOT="--nostot"
 # YKSI AJO ILMAN VÄLITILAA (omistaja 18.9.2026, ks. polta_nostot_ja_pallo).
 YKSI_AJO=0; PALLO_LUETTELO=""; PALLON_LAHDE=""; EI_LAHDETTA=0
 # Ylikirjoitussuoja pallon sarjalle (ks. polta_pallo).
@@ -299,6 +306,7 @@ while [ $# -gt 0 ]; do
     --pallon-ranta) PALLON_RANTA=1; shift ;;
     --vain-pallo) VAIN_PALLO=1; PALLO=1; shift ;;
     --pallo-osia) PALLO_OSIA="$2"; shift 2 ;;
+    --pallo-ilman-nostoja) PALLON_NOSTOT=""; shift ;;
     --pallo-tasot) PALLO_TASOT="$2"; shift 2 ;;
     --nostot-ja-pallo) YKSI_AJO=1; shift ;;
     --pallon-lahde) PALLON_LAHDE="$2"; shift 2 ;;
@@ -1201,7 +1209,7 @@ pallon_yritys () {
   local koodi=0
   # shellcheck disable=SC2086
   (cd "$JUURI" && node tools/tee-pallolaatat.mjs \
-      --min "$PALLO_MIN" --max "$PALLO_MAX" --nostot $rantalippu \
+      --min "$PALLO_MIN" --max "$PALLO_MAX" $PALLON_NOSTOT $rantalippu \
       --tunniste "$PALLOTUNNISTE" --osa "$i/$PALLO_OSIA" \
       $( [ -n "$PALLO_LUETTELO" ] && echo --luettelo "$PALLO_LUETTELO" ) \
       $( [ -n "$PALLON_LAHDE" ] && echo --lahde "$PALLON_LAHDE" ) \
@@ -1303,7 +1311,7 @@ polta_pallo () {
   mkdir -p "$luettelokansio"
   # shellcheck disable=SC2086
   (cd "$JUURI" && node tools/tee-pallolaatat.mjs --vain-luettelo \
-    --min "$PALLO_MIN" --max "$PALLO_MAX" --nostot $rantalippu \
+    --min "$PALLO_MIN" --max "$PALLO_MAX" $PALLON_NOSTOT $rantalippu \
     $( [ -n "$PALLO_LUETTELO" ] && echo --luettelo "$PALLO_LUETTELO" ) \
     --tunniste "$PALLOTUNNISTE" --ulos "$luettelokansio")
   local kansio

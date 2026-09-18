@@ -2024,10 +2024,21 @@ function variMaanSuoja(iso, L) {
  * @returns {{kerma: string, peitto: number, suoja: object, maailma: boolean,
  *   renkaat: Array|null, avain: string}|null}
  */
+/** Kerman peiton lattia (ks. pyramidinTasoitus). */
+export const KERMAN_PEITTO_VAHINTAAN = 0.95;
+
 export function pyramidinTasoitus() {
   const vt = varitasonKirjaus();
   if (!vt?.tasoitus || !(vt.laatikko?.w > 0) || !(vt.laatikko?.h > 0)) return null;
-  const peitto = Number.isFinite(vt.peitto) ? vt.peitto : 0;
+  /*
+   * KERMA PEITTÄÄ MYÖS MUSTEEN (omistaja 18.9.2026, Raamattu PAATOKSET 34
+   * kohta 17 d: "huntukerros ylimpänä peittäisi karttanostot itsestään"):
+   * luettelon peitto 0,85 päästi naapurin poltetun nostomusteen läpi
+   * (Gotthard kontrasti 14,8, raportti viesti-fable-kerma-reuna-20260918).
+   * Lattia 0,95 peittää musteen ja reliefin samalla siveltimellä ilman
+   * lisäkuormaa; kohdemaan sisus palautetaan renkaista ennallaan.
+   */
+  const peitto = Math.max(KERMAN_PEITTO_VAHINTAAN, Number.isFinite(vt.peitto) ? vt.peitto : 0);
   if (!(peitto > 0)) return null;
   if (variSuojaIso !== variMaaNyt) {
     const L = vt.laatikko;
