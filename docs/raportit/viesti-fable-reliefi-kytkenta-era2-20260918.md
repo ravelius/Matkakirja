@@ -466,18 +466,54 @@ ASETTUNEEN värissä — se mittaa siis sen hetken, jolloin kuva
 huononee, ei sitä, jolloin reliefi tulee. Luku 2 381 ms on tästä
 syystä harhaanjohtava eikä sitä pidä lukea latausviiveenä.
 
-**En löytänyt vielä syytä sille, mikä kuvan korvaa,** enkä arvaa sitä
-tähän. Kolme mitattua vihjettä seuraavalle erälle:
+### Mikä kuvan korvaa: EI laatasto eikä pallo, vaan koko karttaruutu
 
-1. Laattakerroksen omat mittarit ovat koko ajan kunnossa ja pysyvät
-   niinä: `tila nakyy, taso 7, laattoja 12, valmiita 12`. Kerros ei
-   siis vaihda tasoa eikä pudota laattoja — **korvaaja on kerroksen
-   ulkopuolella**.
-2. Ajoitus osuu lepokerroksen kokoamisviiveeseen
-   (`LEPOKERROS_LEPOVIIVE_MS` 400 ms kameran pysähtymisestä,
-   js/pallolaatat.js) — yksi kangas, joka kootaan levossa.
-3. Seepiapyyntöjä on 0, joten korvaaja ei ole pohjakartta vaan jokin,
-   joka on jo muistissa.
+Ajoin kertaluontoisen koettimen, joka nauhoitti selaimesta 100 ms:n
+välein laattakerroksen mittarit, pallon sceneverkot ja kotelon kalvot
+koko avauksen yli. **Mikään niistä ei muutu sillä hetkellä, jolloin
+kuva huononee**, eikä sen jälkeen:
+
+```
+2603 ms … 6001 ms   nakyy/z7  laattoja 12  nakyvia 12  scenessa 12
+                     purettuja 225  meshit 59  kalvoja 0
+```
+
+Kerros ei siis vaihda tasoa, pudota laattoja eikä kokoa uudestaan,
+eikä kotelon päälle nouse yhtään kalvoa. **Korvaaja on laattakoneen
+ulkopuolella.**
+
+Sitten mittasin saman asian kuvista, ja se rajaa vian tarkasti. Otin
+molemmista kaappauksista SAMAN suorakaiteen — linssin oman
+"TOPOGRAFIALINSSI"-nimiölaatan, joka on DOM-elementti eikä pallon
+pintaa lainkaan:
+
+| | tummin 5 % | vaalein 5 % | kontrasti |
+| --- | --- | --- | --- |
+| terävä kehys (1,4–2,1 s) | (47, 38, 20) | **(217, 161, 59)** | 6,47 |
+| asettunut kehys (2,4 s →) | (50, 39, 22) | **(86, 65, 29)** | 1,51 |
+
+Nimiölaatan kultateksti on siis terävässä kehyksessä kirkasta kultaa ja
+asettuneessa lähes mustaa. **Pallo ei voi tummentaa DOM-elementtiä.**
+Jokin tummentaa koko karttaruudun sisällön noin sekunti linssin
+avauksen jälkeen — ja samalla se sumentaa sen, mikä selittää myös
+maaston puuroutumisen. Yläpalkki (MATKAKIRJA, £300, Päivä 1) on
+kummassakin kuvassa muuttumaton, joten vaikutus rajoittuu
+karttakoteloon.
+
+**Mitä en ehtinyt:** en löytänyt sitä tummentavaa asiaa. Se ei ole
+`.pallolauta-kalvo` (koetin laski ne, 0 kpl), eikä se ole
+odotuspeite (se on mitattu pois 638 ms:ssä). Seuraavan erän kannattaa
+etsiä karttakotelon päälle tulevaa suodinta tai peitettä — `filter`,
+`backdrop-filter` tai pseudoelementti — joka reagoi luokkiin
+`aikajana-paalla`, `linssi-paalla` tai `linssi-topografia`, ja
+tarkistaa myös, tuleeko rakeisuus (`.grain`, kertolaskusekoitus)
+takaisin päälle sen jälkeen kun `linssi-valokuva` on ensin ottanut sen
+pois. Koetin on kertakäyttöinen eikä sitä committoitu; sen runko on
+tämän raportin kohdan 4 savukkeessa.
+
+Tämä on **vanha vika, ei tämän erän tuoma** — sama tummuminen on erän
+3 kirkkaussarjassa (1 733 → 2 496 ms arvo 101,9, sitten 86) myös
+kytkin POIS, eli se koskee yhtä lailla nykyistä yhden kuvan linssiä.
 
 ## 2. Avausketju: yksi kuva pois, peitteen mitta korjattu
 
@@ -560,11 +596,13 @@ tekstilaikun tummimman ja vaaleimman viidenneksen välillä on **4,78**,
 eli rajalla — ja silmällä katsoen luettavuus on huonompi kuin luku
 antaa ymmärtää, koska maasto vaihtelee kirjaimen sisällä.
 
-**Korjausta en tehnyt.** Syy on kohta 1: en tiedä vielä, kumpaa kuvaa
-vasten nimiön pitää olla luettava — terävää vaaleaa (101,9) vai sumeaa
-tummaa (69). Ne ovat eri suuntiin meneviä korjauksia: vaaleaa maastoa
-vasten nimiö tarvitsee tumman pohjan, tummaa vasten vaalean. Tehdään
-se, kun kohdan 1 korvaaja on löydetty ja tiedetään, kumpi jää.
+**Korjausta en tehnyt, ja syy on kohta 1.** Nimiöiden luettavuus
+mitataan taustaa vasten, ja tausta on tällä hetkellä kaksi eri asiaa
+sekunnin välein: terävä vaalea maasto (nimiö tarvitsisi tumman pohjan)
+ja sumea tumma maasto (nimiö tarvitsisi vaalean). Kohdan 1 tummennin
+on löydettävä ensin — muuten korjaus tehdään väärää taustaa vasten ja
+joudutaan tekemään toiseen kertaan. Sama koskee nimiölaattaa: sen
+kontrasti romahtaa 6,47:stä 1,51:een ilman että nimiöön kosketaan.
 
 Mitattava kohta on valmis: `/tmp`-riippumaton kontrastimitta on
 savukkeen `vari`/`gradientti`-funktioiden rinnalla helppo lisätä, ja
