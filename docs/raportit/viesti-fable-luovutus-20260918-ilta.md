@@ -20,7 +20,7 @@ LISAYS 16.
 | v1944 | #2586 | maailmatilan loitonnus (k19), pluskupla pois + "Näytä puhekuplat" (k20), nähtävyyskartalle vain rakennukset, 19 kohdetta liuskaan, kokoruutu korjattu, selitteet ja +/- pois (k18) |
 
 Työkalu-PR:t: #2579 (CI-portti: rivit jaettu, Mac 8 rinnakkain), #2580 (poltto ilman
-välitilaa), #2583 (Testit Macille), #2587 (CI kierros 2 — ks. alla).
+välitilaa), #2583 (Testit Macille), #2587 (CI kierros 2: 12 rinnakkain, mediaani, kevyt checkout).
 
 ## Ämpärin tila (media.matkakirja.app)
 
@@ -41,7 +41,7 @@ välitilaa), #2583 (Testit Macille), #2587 (CI kierros 2 — ks. alla).
 
 - Testit: runner SamiMacStudio2-testit (label testit), REITTI=mac testit.yml:ssä.
 - Savukkeet: runner SamiMacStudio2 (label savukkeet), 23 riviä, SAVUKE_RINNAKKAIN 12
-  (#2587), seinäkello ~4,5 min. Tunnetut Mac-punaiset sarjat.jsonissa (kuormahäilyt).
+  (#2587 mainissa): jobi 4 min 50 s, sarjan seinäkello 264 s, checkout 7 s. Testit 1,5 min. Tunnetut Mac-punaiset sarjat.jsonissa (kuormahäilyt).
 - Sääntö (Raamattu 37 tark.): pallolaatat.js:n ja kerman muutokset mitataan myös WebKitillä
   (savuke-kerma-reuna.mjs --webkit).
 
@@ -55,7 +55,8 @@ välitilaa), #2583 (Testit Macille), #2587 (CI kierros 2 — ks. alla).
 5. Reliefi: WebKit-luvut, nimiön kontrasti 4,5:1, linssiketju ~700 ms, Astronautin kameran
    laastari pyramidista (LISAYS 16 k47).
 6. Nostolaput-savukkeen Helsinki/Istanbul-näkymät lapputtomia.
-7. Testit-jobin checkout (36 s) — #2587 kevensi (sparse ilman docs/), mittaus PR-ajosta.
+7. Portin seuraava säästö: rivit yhä 90–172 s 12 rinnakkain; SwiftShader A/B (kohta 8) tai
+   rinnakkaisuuden ja rivijaon hienosäätö.
 8. SwiftShader (SAVUKE_CHROMIUM_LIPUT) A/B mittaamatta; ei käytössä.
 9. Avaimet: FREESOUND_API_KEY ja EUROPEANA_API tyhjät ~/.zshrc:ssä; muut 10 täytetty.
 
