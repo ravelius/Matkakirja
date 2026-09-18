@@ -90,7 +90,7 @@
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
 import {
-  ASTRONAUTIN_SUODATIN,
+  ASTRONAUTIN_SAVY, ASTRONAUTIN_SUODATIN, astronautinValoliuunPysakit,
   haeReliefinLuettelo, merkitseLinssiketju, reliefiAstronautilla, reliefiKaytossa,
   reliefinLaattaUrl, reliefinSyvinTaso, reliefinTaso, reliefinVersio,
   reliefipyramidiPaalla,
@@ -2799,6 +2799,31 @@ export function pyramidinReliefiAstronautilla() {
  */
 export function pyramidinReliefinSuodatin() {
   return reliefiAstronautilla() ? ASTRONAUTIN_SUODATIN : null;
+}
+
+/**
+ * Astronautin laastarin valoliu'un pysäkit laatan kankaalle tai tyhjä
+ * taulukko (ei astronauttitila, tai rivin leveysastetta ei saada).
+ *
+ * Sama ovi kuin kylläisyyssuodattimella: pallo ei tuo
+ * js/reliefipyramidi.js:ää itse. Perustelu ja kaava ovat siellä
+ * (VALON VASTAKAAVA MYÖS LAASTARILLE).
+ *
+ * @param {number} korkeus      kankaan korkeus pikseleinä
+ * @param {function} latRivilla kankaan y (px) → leveysaste
+ */
+export function pyramidinReliefinValoliuku(korkeus, latRivilla) {
+  if (!reliefiAstronautilla()) return [];
+  return astronautinValoliuunPysakit(korkeus, latRivilla);
+}
+
+/**
+ * Laastarin materiaalin sävy (0x999999) tai null. Sama tummennus kuin
+ * linssin omalla pallolla (`PALLON_SAVY`); ilman sitä laastari on
+ * 1,68-kertaisesti kirkkaampi kuin pohja samassa kohdassa.
+ */
+export function pyramidinReliefinSavy() {
+  return reliefiAstronautilla() ? ASTRONAUTIN_SAVY : null;
 }
 
 /**

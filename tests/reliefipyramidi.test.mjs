@@ -15,10 +15,12 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 import {
-  MERIVARI, VERSIO_VARALLA, asetaReliefiLinssi, meripeitonBitit, nollaaReliefi,
+  ASTRONAUTIN_SAVY, MERIVARI, VERSIO_VARALLA, asetaReliefiLinssi, astronautinValokerroin,
+  astronautinValoliuunPysakit, meripeitonBitit, nollaaReliefi,
   reliefiKaytossa, reliefinJuuri, reliefinLaattaUrl, reliefinSyvinTaso, reliefinTaso,
   reliefinVersio, reliefipyramidiPaalla,
 } from '../js/reliefipyramidi.js';
+import { PALLON_SAVY, valokerroin } from '../js/linssit/satelliitti-avaruus.js';
 
 const juuri = dirname(fileURLToPath(import.meta.url));
 const lue = (polku) => readFileSync(join(juuri, polku), 'utf8');
@@ -172,4 +174,69 @@ test('reliefin syvin taso on laattakoneen katto, ja kytkin herättää kerroksen
   assert.match(laatat, /kerrokset\.reliefi !== reliefiEdellinen/, 'lipun vaihto mitätöi laatat');
   const linssi = lue('../js/linssit/topografia.js');
   assert.match(linssi, /lauta\.lepokerros\?\.\(\)\?\.kokoa\?\.\(\)/, 'kerros herätetään');
+});
+
+/*
+ * VALON VASTAKAAVA LAASTARILLE (PAATOKSET 41 kohta 4).
+ *
+ * Vika 18.9.2026: laastari oli 41,6°:ssa 1,40-kertaisesti kirkkaampi
+ * kuin pallon 4k-pohja samassa kohdassa, koska pohjatekstuuriin oli
+ * poltettu pallon valon käänteisluku mutta laattojen kankaalle ei.
+ * Sama luku on nyt kahdessa moduulissa (linssi ei tuo laattakonetta
+ * eikä laattakone linssiä) — ja juuri sitä tämä testi vartioi: jos
+ * toista muutetaan ilman toista, raja palaa ruudulle eikä mikään
+ * muu kerro siitä.
+ */
+test('astronautin valokerroin on sama luku kuin linssin oma', () => {
+  for (const lat of [-58, -30, 0, 15, 41.6, 60, 76, 90]) {
+    assert.equal(astronautinValokerroin(lat), valokerroin(lat), `leveysaste ${lat}`);
+  }
+  assert.equal(astronautinValokerroin(0), 1, 'päiväntasaajalla ei vaimennusta');
+  assert.equal(astronautinValokerroin(-45), 1, 'etelässä valo ei osu: ei vaimennusta');
+  assert.ok(Math.abs(astronautinValokerroin(90) - 1 / 1.6) < 1e-12, 'navalla 1/1,6');
+  assert.equal(astronautinValokerroin(NaN), 1, 'tuntematon rivi ei tummu');
+});
+
+test('valoliu\'un pysäkit seuraavat kankaan rivin leveysastetta', () => {
+  // Kangas 100 px, ylärivi 50°N ja alarivi 40°N (pohjoinen ylhäällä).
+  const lat = (y) => 50 - (y / 100) * 10;
+  const pysakit = astronautinValoliuunPysakit(100, lat, 4);
+  assert.equal(pysakit.length, 5);
+  assert.deepEqual(pysakit.map((p) => p.t), [0, 0.25, 0.5, 0.75, 1]);
+  assert.equal(pysakit[0].lat, 50);
+  assert.equal(pysakit[4].lat, 40);
+  // Pohjoisempi rivi on TUMMEMPI: valo kertoo sen kirkkaammaksi.
+  assert.ok(pysakit[0].arvo < pysakit[4].arvo, 'liuku tummenee pohjoiseen');
+  for (const p of pysakit) assert.equal(p.arvo, astronautinValokerroin(p.lat));
+  // Arkin ulkopuoli: ei liukua lainkaan, ei rikkinäistä laattaa.
+  assert.deepEqual(astronautinValoliuunPysakit(100, () => NaN, 4), []);
+  assert.deepEqual(astronautinValoliuunPysakit(0, lat, 4), []);
+  assert.deepEqual(astronautinValoliuunPysakit(100, null, 4), []);
+});
+
+test('laastarin kangas maalaa liu\'un ja laattapyramidi avaa oven', () => {
+  const laatat = lue('../js/pallolaatat.js');
+  assert.match(laatat, /maalaaAstronautinValoliuku/, 'liuku maalataan kankaalle');
+  assert.match(laatat, /globalCompositeOperation = 'multiply'/, 'kertova sekoitus');
+  assert.match(laatat, /pyramidinReliefinValoliuku\(kartta\.korkeus/, 'pysäkit laattakoneelta');
+  const pyramidi = lue('../js/laattapyramidi.js');
+  assert.match(pyramidi, /export function pyramidinReliefinValoliuku/, 'ovi on olemassa');
+  assert.match(pyramidi, /if \(!reliefiAstronautilla\(\)\) return \[\];/, 'vain astronautin ikkunassa');
+});
+
+/*
+ * PALLON SÄVY MYÖS LAASTARILLE. Mitattu 18.9.2026: valon vastakaavan
+ * korjauksen JÄLKEEN laastari oli yhä 1,68-kertaisesti kirkkaampi kuin
+ * pohja — 1 / 0,60, eli täsmälleen se tummennus, jonka omistaja tilasi
+ * pallon materiaaliin (LISÄYS 15 kohta 43, LISÄYS 16 kohta 46).
+ * Laattojen materiaali ei käy linssin kautta, joten sävy on annettava
+ * sille erikseen; testi vartioi, että luku on sama kummassakin.
+ */
+test('laastarin sävy on pallon sävy', () => {
+  assert.equal(ASTRONAUTIN_SAVY, PALLON_SAVY);
+  const laatat = lue('../js/pallolaatat.js');
+  assert.match(laatat, /pyramidinReliefinSavy\(\)/, 'sävy kysytään laattakoneelta');
+  assert.match(laatat, /\.\.\.\(savy === null \? \{\} : \{ color: savy \}\)/, 'sävy materiaalin väriksi');
+  const pyramidi = lue('../js/laattapyramidi.js');
+  assert.match(pyramidi, /export function pyramidinReliefinSavy/, 'ovi on olemassa');
 });

@@ -127,6 +127,119 @@ let linssiTila = null;
 export const ASTRONAUTIN_SUODATIN = 'saturate(0.8)';
 
 /*
+ * ══════════════════════════════════════════════════════════════════
+ * VALON VASTAKAAVA MYÖS LAASTARILLE (PAATOKSET 41 kohta 4)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * VIKA (Fablen luenta kaappauksista 18.9.2026): laastarin alue oli
+ * *kirkas päivänvalo* siinä missä 4k-pohja oli astronautin hämärä
+ * ("Italian saapas yöllä"), ja laastarin reunalla oli kirkkausraja.
+ *
+ * JUURISYY EI OLE KYLLÄISYYS VAAN VALO. Pallon valot ovat pelin omat:
+ * AmbientLight π ja DirectionalLight 0,6 π SUORAAN POHJOISNAVAN
+ * YLÄPUOLELTA (js/pallo.js). Pinnan kirkkaus on siis
+ *
+ *     tekstuuri × (1 + 0,6 · max(0, sin(leveysaste))),
+ *
+ * eli 41,6°:ssa 1,40-kertainen ja navalla 1,60-kertainen. Linssin oma
+ * 4k-pohjatekstuuri EI ole valaistuksen armoilla: siihen poltetaan
+ * valon KÄÄNTEISLUKU rivi riviltä ennen käyttöä
+ * (js/linssit/satelliitti-avaruus.js `valoLiuku`, `VALON_KOMPENSAATIO`),
+ * joten ruudulla näkyy täsmälleen se sävy, joka tekstuuriin on
+ * kirjoitettu.
+ *
+ * Laastarin laatat ovat SAMA reliefi ja SAMA materiaali
+ * (MeshLambertMaterial, samat valot) — mutta niille ei poltettu
+ * käänteislukua. Ne saivat siis valon kertoimen ILMAN vastakaavaa ja
+ * olivat 41,6°:ssa 1,40-kertaisesti kirkkaammat kuin pohja samassa
+ * kohdassa. Kylläisyyskerroin 0,8 EI ole kirkkaus eikä korjaa tätä:
+ * se vie värikylläisyyttä, ei valoa.
+ *
+ * EIKÄ TÄMÄ OLE YÖ. Astronautin kamerassa ei ole terminaattoria:
+ * "yö" kaappauksessa on juuri tämä valon vastakaava (41,6°:ssa 0,72)
+ * ja sen päällä kalvon reunavarjo. Kun laastari saa saman
+ * vastakaavan, se on yhtä hämärä kuin pohja — eikä rajaa ole.
+ *
+ * KORJAUS: sama käänteisluku laastarin kankaalle. Se on RIVIKOHTAINEN
+ * (riippuu vain leveysasteesta), joten se maalataan yhtenä
+ * pystyliukuna `multiply`-sekoituksella — ei pikselisilmukkana.
+ * Laatan kangas on tässä vaiheessa läpinäkymätön (meriväri on
+ * maalattu taustaksi ennen laattaa), joten alfaa ei tarvitse palauttaa
+ * erikseen kuten pallotekstuurin liu'ussa.
+ *
+ * LUKU ON SAMA KAHDESSA PAIKASSA (kuten MERIVARI): linssi ei tuo
+ * laattakonetta eikä laattakone linssiä. Testi vartioi, että
+ * `astronautinValokerroin` ja linssin `valokerroin` antavat saman
+ * luvun.
+ */
+/*
+ * ── TOINEN PUOLI SAMAA VIKAA: PALLON SÄVY (LISÄYS 15 kohta 43,
+ *    LISÄYS 16 kohta 46) ─────────────────────────────────────────
+ *
+ * MITATTU 18.9.2026 (Chromium 390 × 844, Italia, korkeus 0,14): kun
+ * valon vastakaava oli korjattu, laastari oli yhä 1,68-kertaisesti
+ * kirkkaampi kuin pohja. Luku on 1 / 0,60.
+ *
+ * Omistaja tilasi pallon *"hieman tummemmaksi kauttaaltaan"*, ja se
+ * tehtiin MATERIAALIN VÄRILLÄ eikä tekstuuria muokkaamalla
+ * (js/linssit/satelliitti-avaruus.js `PALLON_SAVY` = 0x999999 eli
+ * 0,60): diffuse-uniformi kertoo koko pinnan samalla kertoimella.
+ * Laastarin laatoilla on OMA materiaalinsa, joka syntyy laattakoneessa
+ * eikä käy linssin kautta — se jäi valkoiseksi (1,00).
+ *
+ * Sävy annetaan siksi laatan materiaalille samana lukuna. Se on sama
+ * mekanismi kuin pohjalla, ei pikselityötä: jos omistaja muuttaa sävyä,
+ * muuttuu yksi vakio ja molemmat seuraavat.
+ */
+/** Laastarin materiaalin sävy (sama kuin linssin PALLON_SAVY). */
+export const ASTRONAUTIN_SAVY = 0x999999;
+
+/** Pallon suunnatun valon voimakkuus (sama kuin VALON_KOMPENSAATIO). */
+export const ASTRONAUTIN_VALON_KOMPENSAATIO = 0.6;
+
+/**
+ * Valon kertoimen käänteisluku leveysasteella (1 = ei vaimennusta,
+ * 0,625 pohjoisnavalla). Puhdas funktio.
+ */
+export function astronautinValokerroin(lat) {
+  const l = Number(lat);
+  if (!Number.isFinite(l)) return 1;
+  return 1 / (1 + ASTRONAUTIN_VALON_KOMPENSAATIO * Math.max(0, Math.sin((l * Math.PI) / 180)));
+}
+
+/**
+ * Pystyliu'un pysäkit laatan kankaalle: `t` on 0 kankaan yläreunassa ja
+ * 1 alareunassa, `arvo` on sen rivin valokerroin.
+ *
+ * Kangas on laudan Millerin projektiossa, joten leveysaste EI ole
+ * lineaarinen kankaan y:ssä — rivin leveysaste kysytään siksi
+ * kutsujalta (`latRivilla`), joka tuntee arkin ja tason. Pysäkkejä on
+ * oletuksena 32 eli tiheämmin kuin yksikään laatta tarvitsee: valon
+ * käyrä on loiva, ja liuku on näytönohjaimen työtä.
+ *
+ * Palauttaa tyhjän taulukon, jos yhdenkin rivin leveysaste puuttuu
+ * (arkin ulkopuoli) — silloin liukua ei maalata lainkaan, eikä laatta
+ * voi mennä rikki mittauksen takia.
+ *
+ * @param {number} korkeus      kankaan korkeus pikseleinä
+ * @param {function} latRivilla kankaan y (px) → leveysaste
+ * @param {number} maara        liu'un välien määrä
+ */
+export function astronautinValoliuunPysakit(korkeus, latRivilla, maara = 32) {
+  const H = Number(korkeus);
+  if (!(H > 0) || typeof latRivilla !== 'function') return [];
+  const n = Math.max(1, Math.round(maara));
+  const ulos = [];
+  for (let i = 0; i <= n; i += 1) {
+    const t = i / n;
+    const lat = latRivilla(t * H);
+    if (!Number.isFinite(lat)) return [];
+    ulos.push({ t, lat, arvo: astronautinValokerroin(lat) });
+  }
+  return ulos;
+}
+
+/*
  * ASTRONAUTIN LAASTARIN SYVIN TASO.
  *
  * Reliefipyramidi on poltettu z7:ään (240 px/aste). Astronautin
