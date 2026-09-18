@@ -627,6 +627,25 @@ export const LINSSI = {
       && !(m.ladattavia > 0)
       && !(m.jonossa > 0);
 
+    /*
+     * KERROS EI TULE — PEITE POIS HETI, EI 15 SEKUNNIN PÄÄSTÄ.
+     *
+     * Mitattu 18.9.2026 WebKitillä (390 × 844, Alpit): laattakerros jäi
+     * tilaan `purettu`, syy *"pallon sarja ja pyramidi eri versiota"*,
+     * eikä yhtäkään laattaa haettu. Ehto `reliefiRuudulla` ei silloin
+     * täyty koskaan, ja peite jäi ruudulle ehdottomaan kattoonsa asti:
+     * **mitattu 15 042 ms tummaa ruutua**. Se on huonompi kuin se, mitä
+     * peite estää — pelaaja ei näe mitään eikä tiedä miksi.
+     *
+     * Kerroksen oma kirjanpito kertoo tämän suoraan: `purettu` tai
+     * `syy` tarkoittaa, ettei kerros ole ajossa eikä tule olemaan.
+     * Silloin peite otetaan pois heti, ja pelaaja näkee sen minkä
+     * ennenkin — oman karttansa. Sama periaate kuin
+     * `PEITTEEN_KATTO_MS`:llä, vain mitattuna eikä ajastettuna.
+     */
+    const kerrosLuovutti = (m) => Boolean(m)
+      && (m.tila === 'purettu' || Boolean(m.syy));
+
     const katsoPeitetta = () => {
       peitteenKello = 0;
       if (suljettu || !peite) return;
@@ -662,7 +681,9 @@ export const LINSSI = {
           jonossa: kerrosmitat.jonossa,
         });
       }
-      if (nakyvyys >= PEITTAVYYS * 0.98 || nyt - peiteAlkoi >= PEITTEEN_KATTO_MS) {
+      if (nakyvyys >= PEITTAVYYS * 0.98
+        || (pyramidiPaalla && kerrosLuovutti(kerrosmitat))
+        || nyt - peiteAlkoi >= PEITTEEN_KATTO_MS) {
         poistaPeite();
         return;
       }

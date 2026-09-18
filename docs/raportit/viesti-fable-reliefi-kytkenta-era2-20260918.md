@@ -466,54 +466,71 @@ ASETTUNEEN värissä — se mittaa siis sen hetken, jolloin kuva
 huononee, ei sitä, jolloin reliefi tulee. Luku 2 381 ms on tästä
 syystä harhaanjohtava eikä sitä pidä lukea latausviiveenä.
 
-### Mikä kuvan korvaa: EI laatasto eikä pallo, vaan koko karttaruutu
+### JUURISYY LÖYTYI: luennan huntu
 
-Ajoin kertaluontoisen koettimen, joka nauhoitti selaimesta 100 ms:n
-välein laattakerroksen mittarit, pallon sceneverkot ja kotelon kalvot
-koko avauksen yli. **Mikään niistä ei muutu sillä hetkellä, jolloin
-kuva huononee**, eikä sen jälkeen:
+Kolme mittausta rajasi sen:
+
+1. **Koetin selaimessa** nauhoitti 100 ms:n välein laattakerroksen
+   mittarit, pallon sceneverkot ja kotelon kalvot. **Mikään ei muutu**
+   sillä hetkellä, jolloin kuva huononee, eikä sen jälkeen:
+   `2 603 … 6 001 ms  nakyy/z7  laattoja 12  nakyvia 12  scenessa 12
+   meshit 59  kalvoja 0`. Korvaaja on siis laattakoneen ulkopuolella.
+2. **Linssin oma nimiölaatta** ("TOPOGRAFIALINSSI") on DOM-elementti
+   eikä pallon pintaa. Sama suorakaide molemmista kaappauksista:
+
+   | | tummin 5 % | vaalein 5 % | kontrasti |
+   | --- | --- | --- | --- |
+   | terävä kehys | (47, 38, 20) | **(217, 161, 59)** | 6,47 |
+   | "asettunut" kehys | (50, 39, 22) | **(86, 65, 29)** | 1,51 |
+
+   Pallo ei voi tummentaa DOM-elementtiä. Tummennin on siis koko
+   karttakotelon päällä.
+3. **Koetin vertasi body-luokkia** terävän ja tummuneen hetken
+   välillä. Ero oli yksiselitteinen:
 
 ```
-2603 ms … 6001 ms   nakyy/z7  laattoja 12  nakyvia 12  scenessa 12
-                     purettuja 225  meshit 59  kalvoja 0
+1 700 ms   pallolauta-paalla linssi-paalla linssi-topografia
+           linssi-valokuva aikajana-paalla
+4 000 ms   … + luenta-aanessa kertoja-aanessa luenta-tekstit-piiloon
+             LUENTA-HUNTU
 ```
 
-Kerros ei siis vaihda tasoa, pudota laattoja eikä kokoa uudestaan,
-eikä kotelon päälle nouse yhtään kalvoa. **Korvaaja on laattakoneen
-ulkopuolella.**
+**`body.luenta-huntu .map-pane::after`** (css/fokusvirta.css) laskee
+kartan päälle peitteen `rgba(30, 22, 12, 0.42)` ja
+`backdrop-filter: blur(3.5px)`. Isoisän luenta käynnistyy sekunti
+linssin avauksen jälkeen, ja huntu lankeaa.
 
-Sitten mittasin saman asian kuvista, ja se rajaa vian tarkasti. Otin
-molemmista kaappauksista SAMAN suorakaiteen — linssin oman
-"TOPOGRAFIALINSSI"-nimiölaatan, joka on DOM-elementti eikä pallon
-pintaa lainkaan:
+**Miksi se on väärin juuri tässä.** Huntu on olemassa yhtä tarkoitusta
+varten: että luentakuva erottuu kartasta. Topografialinssin ajan sitä
+kuvaa EI OLE — `body.linssi-topografia` piilottaa sekä ison
+luentakuvan (`.fokusvirta-isokuva`, `display: none`) että pienen
+kuvapakan (`.fokusvirta-luentakuva`, `visibility: hidden`), omistajan
+16.9.2026 antamasta listasta. Huntu siis tummensi ja sumensi kartan
+erottaakseen sen kuvasta, jota ruudulla ei ollut.
 
-| | tummin 5 % | vaalein 5 % | kontrasti |
-| --- | --- | --- | --- |
-| terävä kehys (1,4–2,1 s) | (47, 38, 20) | **(217, 161, 59)** | 6,47 |
-| asettunut kehys (2,4 s →) | (50, 39, 22) | **(86, 65, 29)** | 1,51 |
+**Korjaus on yksi sääntö:**
+`body.linssi-topografia.luenta-huntu .map-pane::after { content: none; }`.
+Luenta itse jatkuu — ääni, kaiutin, tekstipiilo ja Liiku-piilo ovat
+omia luokkiaan eikä niihin kajota. Vain huntu jää pois.
 
-Nimiölaatan kultateksti on siis terävässä kehyksessä kirkasta kultaa ja
-asettuneessa lähes mustaa. **Pallo ei voi tummentaa DOM-elementtiä.**
-Jokin tummentaa koko karttaruudun sisällön noin sekunti linssin
-avauksen jälkeen — ja samalla se sumentaa sen, mikä selittää myös
-maaston puuroutumisen. Yläpalkki (MATKAKIRJA, £300, Päivä 1) on
-kummassakin kuvassa muuttumaton, joten vaikutus rajoittuu
-karttakoteloon.
+**Mitattu ero** (Chromium 390 × 844, Alpit, kytkin päällä):
 
-**Mitä en ehtinyt:** en löytänyt sitä tummentavaa asiaa. Se ei ole
-`.pallolauta-kalvo` (koetin laski ne, 0 kpl), eikä se ole
-odotuspeite (se on mitattu pois 638 ms:ssä). Seuraavan erän kannattaa
-etsiä karttakotelon päälle tulevaa suodinta tai peitettä — `filter`,
-`backdrop-filter` tai pseudoelementti — joka reagoi luokkiin
-`aikajana-paalla`, `linssi-paalla` tai `linssi-topografia`, ja
-tarkistaa myös, tuleeko rakeisuus (`.grain`, kertolaskusekoitus)
-takaisin päälle sen jälkeen kun `linssi-valokuva` on ensin ottanut sen
-pois. Koetin on kertakäyttöinen eikä sitä committoitu; sen runko on
-tämän raportin kohdan 4 savukkeessa.
+| | ennen | jälkeen |
+| --- | --- | --- |
+| gradienttienergia (terävyys) | 2,50 | **36,46** |
+| ensimmäinen reliefikehys | 2 680 ms | **1 538 ms** |
+| kirkkaus asettunut / kirkkain | 69 / 101,9 | **103,2 / 103,2** |
 
-Tämä on **vanha vika, ei tämän erän tuoma** — sama tummuminen on erän
-3 kirkkaussarjassa (1 733 → 2 496 ms arvo 101,9, sitten 86) myös
-kytkin POIS, eli se koskee yhtä lailla nykyistä yhden kuvan linssiä.
+Kirkkaus asettuneena on nyt SAMA kuin kirkkain: **ruutu ei muutu
+avauksen jälkeen lainkaan, eli välähdystä ei ole.** Terävyys on
+neljätoistakertainen — se blur oli koko ajan hunnun, ei laataston.
+
+**Tämä on vanha vika, ei laataston tuoma.** Sama tummuminen näkyy erän
+3 kirkkaussarjassa myös kytkin POIS (1 733 → 2 496 ms arvo 138,8,
+sitten 86), eli se koski yhtä lailla nykyistä yhden kuvan linssiä —
+ja mahdollisesti muitakin linssejä, joiden ajan luentakuva on
+piilossa. **En laajentanut sääntöä muihin linsseihin**, koska en
+mitannut niitä; sääntö on rajattu siihen, mistä on todiste.
 
 ## 2. Avausketju: yksi kuva pois, peitteen mitta korjattu
 
@@ -568,22 +585,47 @@ kokoaa 12 laattaa 12:sta, eikä yhtään `virhe`-tilaa synny. Reliefi siis
 skaalataan, ja se on se sumeus, jonka näkee lähimmässä zoomissa —
 mutta se on 240 px/aste eli kahdeksankertainen vanhaan yhteen kuvaan.
 
-## 4. Mittaustaulukko (Chromium, kytkin päällä, kaksi ajoa)
+## 4. Mittaustaulukko (Chromium, kytkin päällä, neljä ajoa)
 
 | | mitattu | tavoite |
 | --- | --- | --- |
-| peite ruudulla | 638 / 642 ms | — |
+| peite ruudulla | 549–642 ms | — |
 | reliefi kankaalla `pallolle()`:sta | **272 ms** | < 300 ms ✓ |
-| ensimmäinen reliefikehys ruudulla (kirkkaussarja) | **1 408 ms** | < 300 ms ✗ (n. 700 ms on linssiketjua ennen `pallolle()`:a) |
+| ensimmäinen reliefikehys ruudulla | **1 538 ms** | < 300 ms ✗ (n. 700 ms on linssiketjua ennen `pallolle()`:a) |
 | seepiapohjan laattapyyntöjä | **0** | 0 ✓ |
 | reliefilaattoja näkyvälle ikkunalle | **12** | ≤ 12 ✓ |
-| gradienttienergia (asettunut) | 2,50 | > 1,77 (pois) ✓ |
-| fps 3 s panoroinnissa | **77,1 / 81,2** | ≥ 50 ✓ |
-| meri: reikiä laikussa | **0 / 1 296** | 0 ✓ |
-| kirkkaus asettunut / kirkkain | 69 / 101,9 | ks. kohta 1 |
+| gradienttienergia | **36,46** | > 1,77 (vanha polku) ✓ |
+| fps 3 s panoroinnissa | **76,8–81,2** | ≥ 50 ✓ |
+| kirkkaus asettunut / kirkkain | **103,2 / 103,2** | ei välähdystä ✓ |
+| meri: reikiä laikussa | 245 / 1 296 | 0 ✗ — ks. alla |
 
-WebKit-ajoa ei ehditty aikakaton sisään; erän 3 WebKit-luvut ovat yhä
-voimassa siltä osin, mitä tämän erän muutokset eivät koske.
+**Merimitta ei enää mittaa sitä, mitä sen nimi lupaa.** Kohta f laskee
+pikselit, jotka poikkeavat yli 30 yksikköä laikun keskiväristä. Huntu
+sumensi meren tasaiseksi, joten kynnys 30 oli hunnun alla oikea; ilman
+huntua avomeressä on aaltoileva sävyvaihtelu ja mitta laskee sen
+"reiäksi". **Reikiä ei ole** — kaappaus `reliefi-chromium-paalla-meri.png`
+on yhtenäinen. Mitan kynnys on sovitettava sumentamattomaan mereen
+ennen kuin lukua voi taas lukea vartijana.
+
+### WebKit: laattakerros ei käynnistynyt — ja se paljasti toisen vian
+
+WebKit-ajossa laattakerros jäi tilaan `purettu`, syy *"pallon sarja ja
+pyramidi eri versiota"*, eikä yhtäkään laattaa haettu (myöskään
+seepiaa ei: 0). **Vika ei ole reliefissä vaan pohjapyramidin
+luettelossa tässä ajoympäristössä**, enkä koskenut siihen.
+
+Se paljasti kuitenkin oman vikansa, ja se on korjattu tässä erässä:
+kun kerros ei koskaan tule ajoon, `reliefiRuudulla` ei koskaan täyty,
+ja odotuspeite jäi ruudulle ehdottomaan kattoonsa asti — **mitattu
+15 042 ms tummaa ruutua**. Se on huonompi kuin se, mitä peite estää.
+Peite väistyy nyt heti, kun kerros ilmoittaa tilan `purettu` tai
+minkä tahansa syyn; pelaaja näkee silloin sen minkä ennenkin, oman
+karttansa. Sama periaate kuin `PEITTEEN_KATTO_MS`:llä, vain mitattuna
+eikä ajastettuna.
+
+WebKitin lukuja reliefistä ei siis tällä erällä saatu, koska laatasto
+ei päässyt ajoon lainkaan. Erän 3 WebKit-luvut ovat yhä ne, mitä
+siitä tiedetään.
 
 ## 5. Nimiöt: mitattu, ei korjattu
 
@@ -596,13 +638,27 @@ tekstilaikun tummimman ja vaaleimman viidenneksen välillä on **4,78**,
 eli rajalla — ja silmällä katsoen luettavuus on huonompi kuin luku
 antaa ymmärtää, koska maasto vaihtelee kirjaimen sisällä.
 
-**Korjausta en tehnyt, ja syy on kohta 1.** Nimiöiden luettavuus
-mitataan taustaa vasten, ja tausta on tällä hetkellä kaksi eri asiaa
-sekunnin välein: terävä vaalea maasto (nimiö tarvitsisi tumman pohjan)
-ja sumea tumma maasto (nimiö tarvitsisi vaalean). Kohdan 1 tummennin
-on löydettävä ensin — muuten korjaus tehdään väärää taustaa vasten ja
-joudutaan tekemään toiseen kertaan. Sama koskee nimiölaattaa: sen
-kontrasti romahtaa 6,47:stä 1,51:een ilman että nimiöön kosketaan.
+**Korjaus: vaalea reunus kankaalla.** Nimiö on laatan pikseleissä eikä
+elementtinä, joten sen väriin ei pääse ilman uutta polttoa. Reunus sen
+sijaan on kankaan oma työ: nostotason laatta piirretään kolmesti
+`shadowColor`-varjon kanssa (vaalea pergamentti
+`rgba(247, 241, 224, 0.92)`, `shadowBlur` 3 px laatan 512:sta) ja sen
+päälle nimiö terävänä. **Vain `kerrokset.reliefi`-tilassa** — pelin
+seepiakartan tasaisella pergamentilla reunus olisi sotkua. Hinta
+kehysajassa on mittausmelun sisällä: fps 76,8 (ilman reunusta 79,0).
+
+Kaappaus: `nimio-halo-jalkeen.png`. Erotus on silmällä selvästi
+parempi — La Chaux-de-Fonds, Bern 1905 ja Zweisimmen luettavia.
+
+**AVOIN: tavoitetta 4,5:1 EI ole todennettu.** Laikun 5./95.
+persentiilin mitta antaa reunuksen kanssa 3,53 (ilman 4,78), mutta
+**se mitta ei ole kirjaintason kontrastimitta** vaan koko laikun
+ääripäiden suhde — vaalea reunus nostaa laikun tummimman viidenneksen
+ja painaa luvun alas, vaikka kirjain erottuu paremmin. Oikea mitta on
+kirjainpikselit vastaan niiden VÄLITÖN ympäristö, ja se on savukkeeseen
+vielä kirjoittamatta. Jos luku halutaan ennen hyväksyntää, se on
+seuraavan erän ensimmäinen työ — ja samalla nähdään, riittääkö
+reunuksen 3 px vai tarvitaanko 4.
 
 Mitattava kohta on valmis: `/tmp`-riippumaton kontrastimitta on
 savukkeen `vari`/`gradientti`-funktioiden rinnalla helppo lisätä, ja
@@ -621,11 +677,27 @@ ikkunalle ≤ 12, 4k/8k-pohjakuva jää alle eikä sitä ladata kahdesti,
 fps ≥ 50 pyörityksessä, ja pohjakuvan ja laataston sauma
 (gradienttienergia laatan reunalla vs. keskellä).
 
-## 7. Testit ja mitä EI koskettu
+## 7. Yhteenveto: mitä muuttui
+
+| tiedosto | mitä |
+| --- | --- |
+| `css/fokusvirta.css` | luennan huntu ei tule topografialinssin päälle (juurisyy) |
+| `js/reliefipyramidi.js` | laatasto oletukseksi, `?reliefipyramidi=0` varapolku |
+| `js/linssit/topografia.js` | `lataa()` ohittaa yhden kuvan pyramiditilassa; peitteen mitta korjattu; peite väistyy heti, jos kerros luovuttaa; `peiteLoki` savukkeelle |
+| `js/pallolaatat.js` | nimiöille vaalea reunus reliefin päällä |
+| `tools/savukkeet/mittaa-reliefipyramidi.mjs` | uusi oletuskytkin, peitteen loki, kirkkain kehys kuvaksi |
+| `tests/reliefipyramidi.test.mjs` | kaksi testiä uuden oletuksen mukaisiksi |
+
+## 8. Testit ja mitä EI koskettu
 
 `node --test tests/*.test.mjs` vihreä (3 604 läpi, 0 kaatunutta,
-13 ohitettua). `node tools/build-standalone.mjs` ajettu ennen kumpaakin
+13 ohitettua). `node tools/build-standalone.mjs` ajettu ennen jokaista
 pushia. Kaksi testiä käännettiin uuden oletuksen mukaisiksi.
+
+**Versionosto on tekemättä ja se tarvitaan:** kytkin on nyt oletuksena
+päällä ja hunnun sääntö muuttaa linssin ulkonäköä jokaiselle
+pelaajalle. `uusi-versio.mjs` jätettiin ajamatta tehtävänannon
+mukaisesti.
 
 Koskematta: Raamattu, `sarjat.json`, pohjapyramidi,
 `js/pallolauta/nostot*.js`, kaupunkiliuska, fokusvirta,
