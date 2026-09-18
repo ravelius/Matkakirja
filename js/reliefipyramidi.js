@@ -277,3 +277,50 @@ export function nollaaReliefi(uusiLuettelo = null) {
   haku = null;
   linssiAuki = false;
 }
+
+/*
+ * ══════════════════════════════════════════════════════════════════════
+ * LINSSIKETJUN LOKI — MISSÄ AVAUKSEN SEKUNTI KULUU
+ * ══════════════════════════════════════════════════════════════════════
+ *
+ * Omistajan vika 18.9.2026: topografialinssin avauksesta kuluu lähes
+ * sekunti ennen kuin reliefi on ruudulla. Avaus kulkee KOLMEN
+ * MODUULIN läpi — js/ui.js `sytytaLinssi`, js/linssit/topografia.js
+ * `pallolle` ja js/pallolaatat.js laattakerros — eikä yksikään niistä
+ * näe muiden osuutta. Yhteinen loki on siksi ainoa tapa sanoa, MIKÄ
+ * vaihe maksaa: ilman sitä optimointi olisi arvausta.
+ *
+ * Loki asuu TÄSSÄ moduulissa, koska se on ainoa, jonka kaikki kolme jo
+ * tuovat (ui.js tuo sen tätä varten). Muistia se ei kuluta: yksi
+ * taulukko avausta kohti, ja seuraava avaus nollaa sen.
+ *
+ * MITTARI EI OLE VAIN SAVUKKEELLE. Sama loki on kentällä `window.
+ * matkakirja.ui.linssiketju()` eli se on luettavissa myös oikean
+ * puhelimen etätarkastuksessa ilman erillistä ajoa.
+ */
+let ketjuAlku = 0;
+let ketjuLoki = [];
+
+const ketjunKello = () => (typeof performance === 'undefined' ? Date.now() : performance.now());
+
+/** Aloittaa uuden ketjun (linssin valinta). Nollaa edellisen. */
+export function aloitaLinssiketju() {
+  ketjuAlku = ketjunKello();
+  ketjuLoki = [];
+}
+
+/**
+ * Merkitsee vaiheen. `kerran` (oletus tosi) jättää toistot pois: laattoja
+ * on kymmeniä, mutta kiinnostava on ENSIMMÄINEN — se on se, joka vie
+ * tumman peitteen pois ja jonka pelaaja näkee.
+ */
+export function merkitseLinssiketju(vaihe, kerran = true) {
+  if (!ketjuAlku) return;
+  if (kerran && ketjuLoki.some((r) => r.vaihe === vaihe)) return;
+  ketjuLoki.push({ vaihe, ms: Math.round(ketjunKello() - ketjuAlku) });
+}
+
+/** Ketjun loki taulukkona (kopio). Tyhjä, jos avausta ei ole ollut. */
+export function linssiketjunLoki() {
+  return ketjuLoki.slice();
+}

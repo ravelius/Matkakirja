@@ -100,16 +100,52 @@ const palvelin = createServer((req, res) => {
 await new Promise((r) => palvelin.listen(PORTTI, r));
 
 const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
-const chromium = paketti.chromium ?? paketti.default?.chromium;
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
-  /*
-   * Ilman tätä Chromium ei päästä isoisän luentaa soimaan ilman elettä,
-   * eikä luennan tila (pulun pluskupla, luentakuvapakka) synny lainkaan
-   * — ja juuri se tila on omistajan vika 16.9.2026 klo 15.30.
-   */
-  args: ['--autoplay-policy=no-user-gesture-required'],
-});
+/*
+ * ══════════════════════════════════════════════════════════════════════
+ * SELAINMOOTTORI ON LIPULLA (18.9.2026, erä "reliefin velat")
+ * ══════════════════════════════════════════════════════════════════════
+ *
+ * Sama syy kuin kermalla (tools/savukkeet/savuke-kerma-reuna.mjs):
+ * v1942:n kerma oli Chromiumilla oikein mutta omistajan iPhonella
+ * (WebKit) rikki, ja vika oli OffscreenCanvasin erossa. Reliefilaatasto
+ * kulkee saman kankaan ja saman `createImageBitmap`-polun läpi, joten
+ * vain Chromiumilla vartioitu laatasto ei ole vartioitu laatasto.
+ *
+ * `--webkit` ajaa saman rungon WebKitillä. Kaksi asiaa eroaa, ja
+ * molemmat ovat moottorin omia eivätkä pelin:
+ *
+ *   1. CDP:tä EI OLE. Kaappaus ja kompositorin kehyssarja
+ *      (Page.startScreencast) ovat Chromiumin protokollaa. WebKitillä
+ *      kaapataan Playwrightin omalla `page.screenshot`illa, ja
+ *      avauksen kirkkaussarja otetaan pienestä ruudun keskiöstä
+ *      tiheään — se on hitaampi mutta mittaa samaa asiaa.
+ *   2. `performance.memory` on Chromiumin oma. WebKitillä JS-muisti
+ *      jää nulliksi, ja se KIRJATAAN nullina eikä arvata.
+ */
+const MOOTTORI = process.argv.includes('--webkit') ? 'webkit' : 'chromium';
+const chromium = paketti[MOOTTORI] ?? paketti.default?.[MOOTTORI];
+if (!chromium) throw new Error(`selainmoottoria ${MOOTTORI} ei ole Playwrightissa`);
+const selain = await (MOOTTORI === 'webkit'
+  ? chromium.launch(process.env.WEBKIT ? { executablePath: process.env.WEBKIT } : {})
+  : chromium.launch({
+    executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+    /*
+     * Ilman tätä Chromium ei päästä isoisän luentaa soimaan ilman elettä,
+     * eikä luennan tila (pulun pluskupla, luentakuvapakka) synny lainkaan
+     * — ja juuri se tila on omistajan vika 16.9.2026 klo 15.30.
+     */
+    args: ['--autoplay-policy=no-user-gesture-required'],
+  }));
+
+/*
+ * AJON RAJAUS YMPÄRISTÖMUUTTUJALLA. `VAIHE=avaus` ajaa vain
+ * avausmittauksen (390 px, luenta) ja `VAIHE=ruudut` vain kahden ruudun
+ * tarkkuusajot. Oletus on koko savuke. Rajaus on mittausta varten:
+ * avauksen ajoitusta hiotaan yhtä lukua vastaan, eikä neljää raskasta
+ * istuntoa kannata ajaa jokaisen säädön perään — vartijana savuke
+ * ajetaan aina kokonaan (sarjat.json ei anna muuttujaa).
+ */
+const VAIHE = process.env.VAIHE ?? 'kaikki';
 
 /** Omistajan kaksi ruutua: pystypuhelin ja työpöytä. */
 const RUUDUT = [
@@ -321,10 +357,14 @@ async function ajaRuutu(ruutu, { pyramidi = true } = {}) {
     });
   });
   sivu.on('pageerror', (e) => virheet.push(String(e)));
-  const cdp = await konteksti.newCDPSession(sivu);
-  const kuvaa = async () => Buffer.from(
-    (await cdp.send('Page.captureScreenshot', { format: 'png' })).data, 'base64',
-  );
+  /*
+   * KAAPPAUS MOOTTORIN MUKAAN: Chromiumilla CDP (ei jonota sivun
+   * omaa työtä), WebKitillä Playwrightin oma kaappaus.
+   */
+  const cdp = MOOTTORI === 'webkit' ? null : await konteksti.newCDPSession(sivu);
+  const kuvaa = async () => (cdp
+    ? Buffer.from((await cdp.send('Page.captureScreenshot', { format: 'png' })).data, 'base64')
+    : sivu.screenshot({ type: 'png' }));
   const lue = () => sivu.evaluate(`(${TILA})()`);
 
   const osoite = `http://127.0.0.1:${PORTTI}/index.html?lauta=pallo${pyramidi ? '' : '&reliefipyramidi=0'}`;
@@ -558,7 +598,7 @@ async function ajaRuutu(ruutu, { pyramidi = true } = {}) {
 
 /* ═══════════════════════════════ ajo ═══════════════════════════════ */
 
-for (const ruutu of RUUDUT) {
+for (const ruutu of (VAIHE === 'avaus' ? [] : RUUDUT)) {
   const r = await ajaRuutu(ruutu);
   const nimi = `${ruutu.nimi} px`;
 
@@ -760,6 +800,198 @@ for (const ruutu of RUUDUT) {
  *      puusta — nimilista löytää vain sen, mitä osataan odottaa.
  */
 
+/*
+ * ──────────────────────────────────────────────────────────────────────
+ * MUISTI: GPU-TEKSTUURIT JA JS-KASA
+ * ──────────────────────────────────────────────────────────────────────
+ * `kaytetytTavut` on laattakerroksen oma kirjanpito (js/pallolaatat.js):
+ * jokaisen laatan kankaan pikselit kerrottuna mipmapin lisällä. Se on
+ * ainoa luku, jonka SELAIN antaa tekstuurimuistista — WebGL:ssä ei ole
+ * kyselyä käytetylle muistille, ja `renderer.info.memory` kertoo vain
+ * kappalemäärät. `performance.memory` on Chromiumin oma; WebKitillä se
+ * jää nulliksi eikä arvata.
+ */
+const MUISTI = `() => {
+  const ui = window.matkakirja?.ui;
+  let kerros = null;
+  try { kerros = ui?.pallolauta?.lepokerros?.()?.mittarit?.() ?? null; } catch { kerros = null; }
+  let info = null;
+  try {
+    const r = ui?.pallolauta?.pallo?.renderer?.();
+    info = r?.info?.memory ? { tekstuureja: r.info.memory.textures, geometrioita: r.info.memory.geometries } : null;
+  } catch { info = null; }
+  const m = performance.memory ?? null;
+  return {
+    laattojenTavut: kerros?.kaytetytTavut ?? null,
+    laattoja: kerros?.laattoja ?? null,
+    valmiita: kerros?.valmiita ?? null,
+    kolmiInfo: info,
+    jsKasaMt: m ? Math.round(m.usedJSHeapSize / 1048576) : null,
+  };
+}`;
+
+/*
+ * ──────────────────────────────────────────────────────────────────────
+ * NIMIÖN VAALEAN REUNUKSEN KONTRASTI (WCAG 2.1, 1.4.3)
+ * ──────────────────────────────────────────────────────────────────────
+ *
+ * MIKÄ MITATAAN. Nostotason nimiöt on poltettu laattoihin SEEPIAA
+ * varten (tummaa harmaata tasaisen vaalealle pergamentille). Reliefin
+ * päällä tausta vaihtelee kirjaimen sisällä, ja v1939 lisäsi siksi
+ * vaalean reunuksen (js/pallolaatat.js NIMION_HALO). Reunus on hyvä
+ * vain, jos se todella kantaa: tekstin ja sen VÄLITTÖMÄN taustan
+ * suhteen on oltava >= 4,5:1 sekä tummimmalla että vaaleimmalla
+ * reliefialueella.
+ *
+ * MIKSI LAATOISTA EIKÄ RUUDUSTA. Ruudulta nimiön löytäminen vaatisi
+ * arvatun paikan, ja pallon pinnalla teksti on kalteva ja
+ * interpoloitu — mitta kertoisi näytönohjaimen suodatuksesta.
+ * Laatta on se pikselijoukko, jonka peli itse kokoaa, ja tässä se
+ * kootaan PELIN OMILLA VAKIOILLA (NIMION_HALO, -PX, -VETOJA tuodaan
+ * js/pallolaatat.js:stä) ja pelin omilla osoitteilla
+ * (pyramidinKerrostasot, pyramidinLaattaUrl) — ei kopioituja lukuja.
+ *
+ * TUMMIN JA VAALEIN ALUE. Sama laatta sisältää molemmat: jokaisen
+ * kirjaimen ympäriltä katsotaan reliefin oma kirkkaus, ja mustepikselit
+ * lajitellaan sen mukaan kolmannekseen (tummin / vaalein). Kontrasti
+ * lasketaan kirjaimen tummimmasta ytimestä sen ympärillä olevaan
+ * VAALEIMPAAN taustaan 3 pikselin säteellä — eli juuri siihen
+ * reunukseen, jota vasten kirjain luetaan.
+ */
+const KONTRASTI = `async () => {
+  const { pyramidinKerrostasot, pyramidinLaattaUrl, pyramidinLaattaOlemassa } =
+    await import('/js/laattapyramidi.js');
+  const { NIMION_HALO, NIMION_HALO_PX, NIMION_HALO_VETOJA } =
+    await import('/js/pallolaatat.js');
+
+  const lum = (r, g, b) => {
+    const f = (v) => { const c = v / 255; return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; };
+    return 0.2126 * f(r) + 0.7152 * f(g) + 0.0722 * f(b);
+  };
+  const suhde = (a, b) => (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
+
+  /* Etsitään taso, jolla on SEKÄ reliefi ETTÄ nostotaso. */
+  let taso = null;
+  for (const z of [7, 6, 5, 4]) {
+    const kerrokset = pyramidinKerrostasot(z) ?? [];
+    const reliefi = kerrokset.find((k) => k.reliefi);
+    const nosto = kerrokset.find((k) => k.nosto);
+    if (reliefi && nosto) { taso = { z, reliefi, nosto }; break; }
+  }
+  if (!taso) return { virhe: 'ei tasoa, jolla olisi sekä reliefi että nosto' };
+
+  /* Laatat, joilla on poltettu nimiö: laataston oma bittikartta kertoo. */
+  const osumat = [];
+  for (let sarake = 0; sarake < taso.nosto.sarakkeita && osumat.length < 8; sarake += 1) {
+    for (let rivi = 0; rivi < taso.nosto.riveja && osumat.length < 8; rivi += 1) {
+      if (!pyramidinLaattaOlemassa(taso.nosto, sarake, rivi)) continue;
+      if (!pyramidinLaattaOlemassa(taso.reliefi, sarake, rivi)) continue;
+      osumat.push({ sarake, rivi });
+    }
+  }
+  if (!osumat.length) return { virhe: 'nostotasolla ei laattaa reliefin päällä' };
+
+  /* Sama kangas kuin pelillä, mutta varareitillä: WebKitin
+   * OffscreenCanvas-tuki on ollut se, mikä kerman v1943:ssa rikkoi. */
+  const kangas = (L, K) => {
+    try { return new OffscreenCanvas(L, K); } catch { /* ei tukea */ }
+    const cv = document.createElement('canvas'); cv.width = L; cv.height = K; return cv;
+  };
+  const kuvaksi = async (url) => {
+    const v = await fetch(url);
+    if (!v.ok) return null;
+    return createImageBitmap(await v.blob());
+  };
+
+  const tulokset = [];
+  for (const { sarake, rivi } of osumat) {
+    const nostoKuva = await kuvaksi(pyramidinLaattaUrl(taso.nosto, sarake, rivi)).catch(() => null);
+    const reliefiKuva = await kuvaksi(pyramidinLaattaUrl(taso.reliefi, sarake, rivi)).catch(() => null);
+    if (!nostoKuva || !reliefiKuva) continue;
+    const L = nostoKuva.width; const K = nostoKuva.height;
+
+    /* a) pelkkä reliefi — taustan oma kirkkaus */
+    const cvR = kangas(L, K); const cR = cvR.getContext('2d');
+    cR.drawImage(reliefiKuva, 0, 0, L, K);
+    const relief = cR.getImageData(0, 0, L, K).data;
+
+    /* b) pelin oma kompositio: reliefi + kolme halovetoa + nimiö */
+    const cv = kangas(L, K); const ctx = cv.getContext('2d');
+    ctx.drawImage(reliefiKuva, 0, 0, L, K);
+    ctx.save();
+    ctx.shadowColor = NIMION_HALO;
+    ctx.shadowBlur = NIMION_HALO_PX;
+    for (let veto = 0; veto < NIMION_HALO_VETOJA; veto += 1) ctx.drawImage(nostoKuva, 0, 0, L, K);
+    ctx.restore();
+    ctx.drawImage(nostoKuva, 0, 0, L, K);
+    const yhdessa = ctx.getImageData(0, 0, L, K).data;
+
+    /* c) nimiön oma alfa: mikä on mustetta */
+    const cvN = kangas(L, K); const cN = cvN.getContext('2d');
+    cN.drawImage(nostoKuva, 0, 0, L, K);
+    const nosto = cN.getImageData(0, 0, L, K).data;
+
+    const S = 3;
+    for (let y = S; y < K - S; y += 1) {
+      for (let x = S; x < L - S; x += 1) {
+        const i = (y * L + x) * 4;
+        /* MUSTE ON KIRJAIMEN RUNKO, EI SEN REUNAPIKSELI. Puoliksi
+         * peittävä reunapikseli on jo sekoitus mustetta ja reunusta;
+         * jos se laskettaisiin tekstiksi, mitta kertoisi ladonnan
+         * pehmennyksestä eikä luettavuudesta. Vaatimus on siksi vahva
+         * peittävyys nostotason omassa kuvassa (alfa >= 200) ja tumma
+         * muste sen omassa värissä — viivamerkit ovat samaa mustetta
+         * eikä niitä tarvitse erottaa, sillä reunus koskee molempia.
+         *
+         * RAJA EI OLE TÄYSI PEITTÄVYYS (kokeiltu 18.9.2026): alfa >= 250
+         * jätti koko z7-otokseen VIIDEN pikselin joukon, koska poltettu
+         * kursiivi on siellä hiusviivaa eikä yksikään veto yllä täyteen
+         * alfaan. Viisi pikseliä ei ole mitta. */
+        if (nosto[i + 3] < 200) continue;
+        if (lum(nosto[i], nosto[i + 1], nosto[i + 2]) > 0.25) continue;
+        const tekstiL = lum(yhdessa[i], yhdessa[i + 1], yhdessa[i + 2]);
+        if (tekstiL > 0.25) continue;
+        /* Ympäristön vaalein: se on se reunus, jota vasten luetaan. */
+        let paras = -1;
+        for (let dy = -S; dy <= S; dy += 1) {
+          for (let dx = -S; dx <= S; dx += 1) {
+            const j = ((y + dy) * L + (x + dx)) * 4;
+            if (nosto[j + 3] >= 230) continue;
+            const l2 = lum(yhdessa[j], yhdessa[j + 1], yhdessa[j + 2]);
+            if (l2 > paras) paras = l2;
+          }
+        }
+        if (paras < 0) continue;
+        tulokset.push({
+          suhde: suhde(tekstiL, paras),
+          reliefiL: lum(relief[i], relief[i + 1], relief[i + 2]),
+        });
+      }
+    }
+    nostoKuva.close?.(); reliefiKuva.close?.();
+  }
+  if (!tulokset.length) return { virhe: 'mustepikseleitä ei löytynyt', taso: taso.z };
+
+  tulokset.sort((a, b) => a.reliefiL - b.reliefiL);
+  const kolmannes = Math.max(1, Math.floor(tulokset.length / 3));
+  const tummin = tulokset.slice(0, kolmannes);
+  const vaalein = tulokset.slice(-kolmannes);
+  const pienin = (lista) => lista.reduce((a, b) => Math.min(a, b.suhde), Infinity);
+  const mediaani = (lista) => {
+    const v = lista.map((x) => x.suhde).sort((a, b) => a - b);
+    return v[Math.floor(v.length / 2)];
+  };
+  const pyorista = (v) => Math.round(v * 100) / 100;
+  return {
+    taso: taso.z,
+    laattoja: osumat.length,
+    pikseleita: tulokset.length,
+    tummin: { pienin: pyorista(pienin(tummin)), mediaani: pyorista(mediaani(tummin)) },
+    vaalein: { pienin: pyorista(pienin(vaalein)), mediaani: pyorista(mediaani(vaalein)) },
+    kaikkiPienin: pyorista(pienin(tulokset)),
+  };
+}`;
+
 const AVAUSRUUTU = { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 };
 const AVAUSKAUPUNKI = 'ateena';
 /**
@@ -831,7 +1063,7 @@ async function ajaAvaus({ peite = true } = {}) {
       headers: { 'access-control-allow-origin': '*' },
     });
   });
-  const cdp = await konteksti.newCDPSession(sivu);
+  const cdp = MOOTTORI === 'webkit' ? null : await konteksti.newCDPSession(sivu);
 
   await sivu.goto(
     `http://127.0.0.1:${PORTTI}/index.html?lauta=pallo${peite ? '' : '&topopeite=0'}`,
@@ -936,17 +1168,47 @@ async function ajaAvaus({ peite = true } = {}) {
 
   /* --- kompositorin kehykset (ks. a) yllä) -------------------------- */
   const kehykset = [];
-  cdp.on('Page.screencastFrame', async (f) => {
-    kehykset.push({ ts: f.metadata.timestamp * 1000, data: f.data });
-    try { await cdp.send('Page.screencastFrameAck', { sessionId: f.sessionId }); } catch { /* ohi */ }
-  });
-  await cdp.send('Page.startScreencast', {
-    format: 'png',
-    everyNthFrame: 1,
-    maxWidth: Math.round(AVAUSRUUTU.viewport.width / 2),
-    maxHeight: Math.round(AVAUSRUUTU.viewport.height / 2),
-  });
+  let kaappausKay = true;
+  if (cdp) {
+    cdp.on('Page.screencastFrame', async (f) => {
+      kehykset.push({ ts: f.metadata.timestamp * 1000, data: f.data });
+      try { await cdp.send('Page.screencastFrameAck', { sessionId: f.sessionId }); } catch { /* ohi */ }
+    });
+    await cdp.send('Page.startScreencast', {
+      format: 'png',
+      everyNthFrame: 1,
+      maxWidth: Math.round(AVAUSRUUTU.viewport.width / 2),
+      maxHeight: Math.round(AVAUSRUUTU.viewport.height / 2),
+    });
+  }
+  /*
+   * WEBKITIN KEHYSSARJA: pieni keskiö tiheään. Screencastia ei ole,
+   * ja koko ruudun kaappaus kestäisi enemmän kuin mitattava ikkuna.
+   * Rajaus on sama ala, josta kirkkaus lasketaan Chromiumillakin
+   * (`keskikirkkaus` ottaa ruudun keskeltä 16 % × 8 %), joten luvut
+   * ovat vertailukelpoisia — ja koska kellonaika luetaan sivun omasta
+   * `performance.now()`:sta, kaappauksen oma viive ei siirry mittaan.
+   */
+  const webkitSilmukka = cdp ? null : (async () => {
+    const klippi = {
+      x: Math.round(AVAUSRUUTU.viewport.width * 0.36),
+      y: Math.round(AVAUSRUUTU.viewport.height * 0.42),
+      width: Math.round(AVAUSRUUTU.viewport.width * 0.28),
+      height: Math.round(AVAUSRUUTU.viewport.height * 0.16),
+    };
+    while (kaappausKay) {
+      try {
+        const [data, nyt] = await Promise.all([
+          sivu.screenshot({ type: 'png', clip: klippi }),
+          sivu.evaluate(() => performance.timeOrigin + performance.now()),
+        ]);
+        kehykset.push({ ts: nyt, data: data.toString('base64'), koko: true });
+      } catch { break; }
+    }
+  })();
   await sivu.waitForTimeout(2500);
+
+  const muistiEnnen = await sivu.evaluate(`(${MUISTI})()`);
 
   const t0 = await sivu.evaluate(async () => {
     const { ui } = window.matkakirja;
@@ -974,7 +1236,9 @@ async function ajaAvaus({ peite = true } = {}) {
    * on otettava SAMASTA kehyssarjasta, ei toisesta kuvasta.
    */
   await sivu.waitForTimeout(2500);
-  await cdp.send('Page.stopScreencast').catch(() => {});
+  kaappausKay = false;
+  if (cdp) await cdp.send('Page.stopScreencast').catch(() => {});
+  else await webkitSilmukka;
 
   const data = await sivu.evaluate(() => {
     window.__topo.kaynnissa = false;
@@ -982,9 +1246,9 @@ async function ajaAvaus({ peite = true } = {}) {
   });
   const jalkeenJaanteet = await sivu.evaluate(`(${JAANTEET})()`);
   const tila = await sivu.evaluate(`(${TILA})()`);
-  const kuva = Buffer.from(
-    (await cdp.send('Page.captureScreenshot', { format: 'png' })).data, 'base64',
-  );
+  const kuva = cdp
+    ? Buffer.from((await cdp.send('Page.captureScreenshot', { format: 'png' })).data, 'base64')
+    : await sivu.screenshot({ type: 'png' });
   writeFileSync(join(ULOS, `topografialinssi-390-luenta${peite ? '' : '-vastakoe'}.png`), kuva);
 
   /* --- GPU-latauksen mekanismi: ImageBitmap vs <img> ---------------- */
@@ -1043,6 +1307,23 @@ async function ajaAvaus({ peite = true } = {}) {
     });
     return osuma;
   });
+
+  /* --- LINSSIKETJUN VAIHEET (erä "reliefin velat", kohta 3) --------- */
+  /*
+   * Avaus kulkee kolmen moduulin läpi (js/ui.js, js/linssit/topografia.js,
+   * js/pallolaatat.js), ja loki on niiden yhteinen — ks.
+   * js/reliefipyramidi.js LINSSIKETJUN LOKI. Tästä nähdään, kuinka moni
+   * millisekunti on odotusta ja kuinka moni verkkoa.
+   */
+  const ketju = await sivu.evaluate(() => {
+    try { return window.matkakirja?.ui?.linssiketju?.() ?? []; } catch { return []; }
+  });
+
+  /* --- MUISTI AVAUKSEN JÄLKEEN ------------------------------------- */
+  const muistiJalkeen = await sivu.evaluate(`(${MUISTI})()`);
+
+  /* --- NIMIÖN REUNUKSEN KONTRASTI (kohta 2) ------------------------ */
+  const kontrasti = await sivu.evaluate(`(${KONTRASTI})()`).catch((e) => ({ virhe: String(e) }));
 
   await konteksti.close();
 
@@ -1125,6 +1406,10 @@ async function ajaAvaus({ peite = true } = {}) {
   const avaus = pitkat.filter((l) => l.dt >= 0 && l.dt <= loppu).map((l) => l.kesto);
 
   return {
+    ketju,
+    kontrasti,
+    muistiEnnen,
+    muistiJalkeen,
     luentaSoi,
     ennenJaanteet,
     jalkeenJaanteet,
@@ -1355,6 +1640,67 @@ vaadi(`${nimiA}: ei sivuvirheitä`, a.virheet.length === 0, a.virheet.slice(0, 3
  * näytteitä ON — ja juuri se todistaa, että väite (b) mittaa oikeaa
  * asiaa eikä kerro vain siitä, että jokin on tummaa.
  */
+/*
+ * ══════════════════════════════════════════════════════════════════════
+ * LINSSIKETJU: NAPAUTUKSESTA ENSIMMÄISEEN RELIEFIKEHYKSEEN
+ * ══════════════════════════════════════════════════════════════════════
+ *
+ * Omistajan vika 18.9.2026: avauksesta kuluu lähes sekunti ennen kuin
+ * reliefi on ruudulla. Loki on pelin oma (js/reliefipyramidi.js), ja
+ * kello käynnistyy NAPAUTUKSESTA (js/ui.js valitseLinssi) eikä siitä,
+ * milloin `sytytaLinssi` pääsee ajoon — pelaajan odotus alkaa napista.
+ *
+ * KATTO ON 400 ms CHROMIUMILLA. WebKit ajaa saman rungon
+ * ohjelmallisella kaappauksella ja hitaammalla kankaalla, ja sen luku
+ * KIRJATAAN mutta ei kaada vartijaa: moottorien ero ei ole pelin vika,
+ * ja WebKitin oma vaatimus (Raamattu LISAYS 16 kohta 49) on se, että
+ * ensimmäinen reliefilaatta on ruudulla eikä seepiaa haeta.
+ */
+const ketjuRivi = (loki) => loki.map((r) => `${r.vaihe} ${r.ms}`).join(' → ');
+console.log(`\n  linssiketju (${MOOTTORI}): ${ketjuRivi(a.ketju) || '—'}`);
+console.log(`  muisti ennen:   ${JSON.stringify(a.muistiEnnen)}`);
+console.log(`  muisti jälkeen: ${JSON.stringify(a.muistiJalkeen)}`);
+console.log(`  nimiön kontrasti: ${JSON.stringify(a.kontrasti)}`);
+
+const ruudulla = a.ketju.find((r) => r.vaihe === 'laatta-ruudulla')?.ms ?? null;
+const KETJUN_KATTO_MS = 400;
+vaadi(`${nimiA}: napautuksesta ensimmäiseen reliefikehykseen alle ${KETJUN_KATTO_MS} ms`,
+  MOOTTORI === 'webkit' ? ruudulla !== null : (ruudulla !== null && ruudulla < KETJUN_KATTO_MS),
+  `${ruudulla ?? '—'} ms — ${ketjuRivi(a.ketju)}`);
+
+/*
+ * ══════════════════════════════════════════════════════════════════════
+ * NIMIÖN VAALEA REUNUS KANTAA (WCAG 1.4.3, 4,5:1)
+ * ══════════════════════════════════════════════════════════════════════
+ *
+ * Reunus (js/pallolaatat.js NIMION_HALO) lisättiin v1939:ssä, koska
+ * seepiaa varten poltettu nimiö hukkui vaihtelevaan reliefiin. Vartija
+ * mittaa, ONKO siitä apua: tekstin ja sen välittömän taustan suhde
+ * sekä tummimmalla että vaaleimmalla reliefialueella. Mitta on pelin
+ * omista laatoista ja pelin omilla vakioilla — ks. KONTRASTI yllä.
+ */
+const KONTRASTIN_KATTO = 4.5;
+/*
+ * MITTA ON MEDIAANI EIKÄ PIENIN, ja syy on mitattu (18.9.2026,
+ * Chromium ja WebKit, 2 620 / 2 617 mustepikseliä): pienin arvo on
+ * molemmilla moottoreilla 1,04 eikä se tule nimiöstä lainkaan vaan
+ * VIIVAMERKKIEN umpinaisista sisuksista. Sama muste latoo nostotasolle
+ * sekä kirjaimet että pienen vuori- ja tassumerkin, ja paksun merkin
+ * sisällä lähin ei-mustepikseli on itsekin mustetta — reunus ei voi
+ * eikä sen pidä loistaa merkin sisään. WCAG 1.4.3 koskee TEKSTIÄ, ja
+ * mediaani on se luku, joka kertoo kirjaimen ja sen reunuksen
+ * suhteesta. `pienin` jää lokiin, jotta poikkeama näkyy.
+ */
+console.log(`  kontrastin mediaani: tummin ${a.kontrasti?.tummin?.mediaani}, `
+  + `vaalein ${a.kontrasti?.vaalein?.mediaani} (pienin ${a.kontrasti?.kaikkiPienin}, `
+  + `otos ${a.kontrasti?.pikseleita} pikseliä)`);
+vaadi(`${nimiA}: nimiön kontrasti reunusta vasten >= ${KONTRASTIN_KATTO}:1 tummimmalla reliefillä`,
+  (a.kontrasti?.tummin?.mediaani ?? 0) >= KONTRASTIN_KATTO,
+  JSON.stringify(a.kontrasti));
+vaadi(`${nimiA}: nimiön kontrasti reunusta vasten >= ${KONTRASTIN_KATTO}:1 vaaleimmalla reliefillä`,
+  (a.kontrasti?.vaalein?.mediaani ?? 0) >= KONTRASTIN_KATTO,
+  JSON.stringify(a.kontrasti));
+
 const b = await ajaAvaus({ peite: false });
 vaadi(`${nimiA}: vastakoe — ilman odotuspeitettä kartta on paljaana`,
   b.paljaita > 0,
