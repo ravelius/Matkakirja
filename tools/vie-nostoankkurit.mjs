@@ -49,6 +49,19 @@ const valitsin = (nimi, oletus) => {
 const KAUPUNKI = valitsin('kaupunki', 'pariisi');
 const ISO = valitsin('iso', 'FRA').toUpperCase();
 const KUIVA = argv.includes('--kuiva');
+/*
+ * YHDISTÄ (`--yhdista`): vienti näkee vain ne nostot, jotka KAMERA
+ * näyttää (`ruudulla` on nullina pallon takana ja ruudun ulkopuolella,
+ * js/pallolauta/lauta.js), joten yhdestä kaupungista ajettu taulu jää
+ * vajaaksi — 18.9.2026 Pariisista puuttui neljä poltettavaa Ranskan
+ * nostoa (biskajanlahti, carnacin-kivirivit, chambord, montblanc).
+ * Vienti ajetaan siksi jokaisesta maan fokuskaupungista ja tulokset
+ * yhdistetään: tällä lipulla uudet rivit LISÄTÄÄN tauluun eivätkä
+ * korvaa sitä. Ensin ajettu kaupunki voittaa, jotta taulu ei muutu
+ * ajojärjestyksestä — sama nosto on eri kaupungin saapumiskehyksessä
+ * eri levityksessä, ja poltettu piste on laatassa yhdessä paikassa.
+ */
+const YHDISTA = argv.includes('--yhdista');
 /** Puhelimen saapumiskehys — ks. PÄÄTÖS yllä. */
 const RUUTU = { w: Number(valitsin('leveys', 390)), h: Number(valitsin('korkeus', 844)) };
 
@@ -101,9 +114,16 @@ function tallenne(kaupunki) {
   return JSON.stringify(peli.toJSON());
 }
 
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
-});
+/*
+ * SELAIN: kontissa /opt/pw-browsers/chromium, Macilla Playwrightin oma
+ * lataus (~/Library/Caches/ms-playwright/...). Polkua ei kovakoodata
+ * kumpaankaan: jos ympäristömuuttujaa ei ole eikä konttipolkua, tässä
+ * kysytään sitä kirjastolta itseltään.
+ */
+const konttiSelain = '/opt/pw-browsers/chromium';
+const selainPolku = process.env.CHROMIUM
+  ?? (existsSync(konttiSelain) ? konttiSelain : chromium.executablePath());
+const selain = await chromium.launch({ executablePath: selainPolku });
 
 /**
  * Avaa pelin annetussa ruudussa, ajaa saapumisen loppuun ja lukee
@@ -247,8 +267,21 @@ if (KUIVA) process.exit(0);
 
 const polku = join(JUURI, 'js', 'packs', `nostoankkurit-${ISO.toLowerCase()}.js`);
 const vanha = readFileSync(polku, 'utf8');
-const rivit = vietavat
-  .map((r) => `  '${r.avain}': { lat: ${r.lat.toFixed(6)}, lng: ${r.lng.toFixed(6)} },`)
+const taulu = new Map();
+if (YHDISTA) {
+  const { [`NOSTOANKKURIT_${ISO}`]: entinen } = await import(`${polku}?t=${Date.now()}`);
+  for (const [avain, a] of Object.entries(entinen ?? {})) taulu.set(avain, a);
+}
+let uusia = 0;
+for (const r of vietavat) {
+  if (taulu.has(r.avain)) continue;
+  taulu.set(r.avain, { lat: Number(r.lat.toFixed(6)), lng: Number(r.lng.toFixed(6)) });
+  uusia += 1;
+}
+console.log(`taulussa ${taulu.size} ankkuria (${uusia} uutta tästä ajosta)`);
+const rivit = [...taulu.entries()]
+  .sort((a, b) => a[0].localeCompare(b[0]))
+  .map(([avain, a]) => `  '${avain}': { lat: ${a.lat.toFixed(6)}, lng: ${a.lng.toFixed(6)} },`)
   .join('\n');
 const paiva = new Date().toISOString().slice(0, 10);
 const uusi = vanha

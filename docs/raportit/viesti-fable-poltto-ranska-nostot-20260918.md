@@ -280,3 +280,165 @@ pallon sarja ja `js/pallo.js` osoittavat samaan nostoversioon.
    paikallisesti → luvun 6 komennot.
 4. **Päätös kaupungin sisäisistä** (4.2) on sisältöpäätös, ei
    tekninen: poltettu muste on pysyvää, joten en tehnyt sitä itse.
+
+---
+
+# Erä 2 — polttoketju lukee lukitun ankkurin (18.9.2026 klo 10.15)
+
+Opus-agentti, sama haara. Aikakatto 45 min. Actions-työnkulkua **ei**
+käynnistetty, ämpäriin **ei** viety, PR:ää **ei** avattu.
+
+## E2.1 Ankkurit: Marseille mukaan, 36 ankkuria
+
+`tools/vie-nostoankkurit.mjs` sai lipun **`--yhdista`**: uudet rivit
+lisätään tauluun eivätkä korvaa sitä, ja ensin ajettu kaupunki voittaa
+(muuten taulu muuttuisi ajojärjestyksestä). Ajo Marseillesta (390 ×
+844) toi **kolme uutta ankkuria**: `hahmotelma-ajaccio`,
+`hahmotelma-verdon` ja **`montblanc`** — viimeinen on yksi luvun 4.3
+neljästä puuttujasta. Taulussa on nyt **36 ankkuria**.
+
+Työkalu ei enää kovakoodaa konttiselainta: ilman `CHROMIUM`-muuttujaa
+ja ilman `/opt/pw-browsers/chromium`-polkua se kysyy polun
+Playwrightilta (Macilla `chrome-mac-arm64/Google Chrome for Testing`).
+
+**Ranskan fokuskaupunkeja on laudalla kaksi** — Pariisi ja Marseille
+(Cayenne ja Nouméa ovat Ranskan tunnuksella mutta lehden ikkunan
+`-5,41,10,52` ulkopuolella, eivätkä voi tuoda Ranskan ankkureita).
+`nakyva-kaupunki-*`-rivit **eivät ole laudan kaupunkeja** eikä niihin
+voi saapua, joten vientiä ei voi ajaa niistä. Kumpikin ajo on siis
+tehty, ja **kolme nostoa jäi silti ilman ankkuria**:
+`biskajanlahti`, `carnacin-kivirivit`, `chambord`. Syy ei ole kamera
+(Chambord on keskellä Pariisin saapumisnäkymää): ne eivät ole
+`osumat()`-listalla omina riveinään, vaan mitä ilmeisimmin
+aihenoston (PAATOKSET 27) jäseninä — aihemerkki on listalla yhtenä
+rivinä, jäsenet eivät. **Tätä ei ehditty varmistaa mittaamalla**, ja se
+on erän 3 ensimmäinen työ.
+
+## E2.2 Polttoketju (tools/fokuskartta/nostot.mjs)
+
+Kolme muutosta, kaikki `nostoladontaMerkit`-funktiossa:
+
+1. **Lukittu ankkuri on merkin paikka.** `x`/`y` ja
+   `ankkuriX`/`ankkuriY` tulevat taulusta `asteetLaudalle`-muunnoksella.
+2. **Siirtoviivaa ei polteta** lukitulle nostolle (`viiva: null`) —
+   Fablen rajaus kohta b. Luvun 4.1 varoitus on siis ratkaistu
+   poistamalla viiva, ei siirtämällä sen päätä.
+3. **Taulullisen maan merkki ilman ankkuria ei pala lainkaan.**
+   Uusi `onLukittuMaa(iso)` (js/pallolauta/nostoankkurit.js,
+   `LUKITUT_MAAT = ['FRA']`) rajaa säännön niihin maihin, joilla taulu
+   on; muut maat palavat kuten ennen. Ilman tätä ankkuriton Ranskan
+   merkki jäisi laatassa siihen, minne vanha levitys sen jätti.
+
+**TIIVISTE LASKETAAN ENNEN SIIRTOA, ladonnan pisteestä.** Tämä on erän
+tärkein yksityiskohta: tiiviste on merkin TUNNISTE, jolla peli päättää
+onko merkki laatassa (js/fokuskohteet.js `kohteenNostotiiviste` →
+js/pallo.js `pallonNostoOnPoltettu`), ja pelin puoli laskee sen omasta
+ladonnastaan. Jos poltettu tiiviste laskettaisiin siirretystä
+pisteestä, se ei täsmäisi pelin laskemaan ja merkki piirtyisi elävänä
+musteen päälle — **kaksoiskuva jokaisesta lukitusta nostosta**.
+Ladonta on kummallakin puolella sama, joten ladonnan pisteestä
+laskettu tiiviste täsmää ja merkki vaikenee oikein.
+
+**Kaupungin sisäiset pois poltosta** (PAATOKSET 34, rajaus kohta a):
+suodatus käyttää pelin omaa `onKaupunginSisainen`-funktiota
+(js/pallolauta/kaupunkiliuska.js) eikä tools-puolen kopiota; noston
+laudan piste käännetään asteiksi `laudaltaAsteiksi`-funktiolla.
+`nakyva-kaupunki-*` ja `elaintaky-*` palavat kuten ennen (rajaus
+kohta a) — edellinen ON kaupungin piste, jälkimmäinen ei kulje
+kohdekerroksen läpi lainkaan.
+
+## E2.3 Mitta ilman selainta (18.9.2026)
+
+`keraaNostot(pack)` vs. ankkuritaulu, `asteetLaudalle` — pelkkää dataa:
+
+| | ennen erää 2 | erän 2 jälkeen |
+| --- | ---: | ---: |
+| Ranskan poltettavia | 20 | **17** |
+| niistä lukitussa ankkurissa (ero 0,00) | 5 / 12 | **9 / 9** |
+| väärässä paikassa (ero > 0) | 3 | **0** |
+| ilman ankkuria poltettavana | 4 | **0** |
+| kaupunkipisteitä + eläintäky (palavat kuten ennen) | 8 | 8 |
+
+**Kaikki lukitut Ranskan merkit osuvat ankkuriin, ero 0,00 laudan
+yksikköä.** Ennen erää suurimmat erot olivat Avignon 3,10 ja
+Mont-Saint-Michel 2,74 yksikköä (~6-7 px).
+
+**Koko maailman tilasto samasta ajosta:** 1857 merkkiä 112 maasta,
+poltetaan **1612** · 82 monen maan merkkiä eläväksi · 109 eläintäkyä ·
+88 merkkiä merkkiportin taakse · **32 kaupungin sisäistä eläväksi** ·
+**3 ilman lukittua ankkuria eläväksi**.
+
+**VAROITUS FABLELLE — kaupungin sisäisten suodatus on GLOBAALI.**
+PAATOKSET 34 on pelin sääntö kaikille maille, ja elävä kerros ajaa sen
+jo nyt globaalisti, joten suodatus on tässä sama. Seuraus on kuitenkin
+polttotavan valinnassa: **jos ajetaan Ranskan paikkaus**
+(`tasot=paikkaus` + `alue`), luettelosta putoaa 32 sisäistä nostoa koko
+maailmasta, mutta laattoja maalataan uudelleen vain Ranskasta — muiden
+maiden 32 - (Ranskan osuus) sisäistä jäisi vanhaan laattaan musteena,
+jota kerros ei piilota (polttovelkaa). **Koko maailman nostotason
+uusinta (`tasot=vain-nostotaso`) ei jätä tätä velkaa.** Suositus:
+`vain-nostotaso`.
+
+## E2.4 Mitä EI ehditty (erä 3)
+
+Aikakatto täyttyi ennen näitä; **laattoja ei ajettu eikä pelin puolta
+mitattu Playwrightilla**:
+
+1. **Koepoltto paikallisesti** (luvun 6 komento, `--tasot 5-7`) ja
+   kahden laatan Read-tarkistus.
+2. **Pelin puoli:** mitä manifestiin/luetteloon kirjoitetaan uudella
+   nostoversiolla, ettei nostotaso sammu (`js/pallolaatat.js`
+   `lepokerroksenKerrokset` -versiovahti, `js/pallo.js` sarja).
+   Selvitys on erän 1 luvussa 5 kohdassa 2; **muutosta ei tehty.**
+3. **Kolmen ankkurittoman noston** (biskajanlahti, carnacin-kivirivit,
+   chambord) juurisyy — epäilys: aihenoston jäseniä.
+4. **Playwright-mitta** 390 px Pariisin lähizoomista ja Ranskan
+   saapumisesta paikallisilla koelaatoilla (route-välitys).
+
+## E2.5 Komennot (ÄLÄ aja ennen erän 3 laattakoetta)
+
+Paikallinen koepoltto (liput luvusta 6, tarkistettu):
+
+```
+node tools/generoi-laattapyramidi.mjs <koekansio>/poltto-ranska \
+  --nostotaso --nostoversio 2026-09-18-fra \
+  --paikkaus 2026-09-08a-nostot \
+  --alue -5,41,10,52 --tasot 5-7
+```
+
+Actions-työnkulku — **koko maailman nostotaso**, ks. E2.3:n varoitus:
+
+```
+gh workflow run generoi-pyramidi.yml \
+  -f tasot=vain-nostotaso \
+  -f versio=2026-09-07a \
+  -f nostoversio=2026-09-18-fra \
+  -f vie_luettelo=false
+```
+
+Ranskan rajattu paikkaus (jos Fable valitsee sen velasta huolimatta):
+
+```
+gh workflow run generoi-pyramidi.yml \
+  -f tasot=paikkaus \
+  -f versio=2026-09-07a \
+  -f nostoversio=2026-09-18-fra \
+  -f lahdeversio=2026-09-08a-nostot \
+  -f alue=-5,41,10,52 \
+  -f vie_luettelo=false
+```
+
+**Manifestin päivitysaskel** (vasta kun laatat ovat ämpärissä ja
+koepoltto hyväksytty):
+
+1. Aja luettelojobi tai sama työnkulku lipulla `-f vie_luettelo=true`
+   — se kirjoittaa `pyramidi.json`:iin kentän `nostotaso` (`versio:
+   '2026-09-18-fra'` ja `nostot: { tunnus → tiiviste }`).
+2. Aja `tools/tee-pallolaatat.mjs --nostot` pallon Mercator-sarjalle
+   samasta nostoversiosta — pallo lukee OMAN luettelonsa
+   `nostotaso.nostot`-kenttää (js/pallo.js `pallonNostoOnPoltettu`),
+   ei pyramidin.
+3. Osoita `js/pallo.js`:n sarja uuteen versioon **samassa julkaisussa**:
+   `js/pallolaatat.js lepokerroksenKerrokset` sammuttaa koko
+   laattakerroksen, jos pallon sarja ja nostoversio eivät täsmää.
+   Tämä on versionosto, eikä sitä tehty tässä erässä.

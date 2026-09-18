@@ -136,6 +136,19 @@ export function lukittuAnkkuri(avain) {
 /** Lukittujen ankkureiden määrä (mittarit ja testit). */
 export function lukittujaAnkkureita() { return LUKITUT_ANKKURIT.size; }
 
+/*
+ * MILLÄ MAALLA ON LUKITTU TAULU (18.9.2026, polttoketjun ehto).
+ *
+ * Polttoketju (tools/fokuskartta/nostot.mjs) tarvitsee tämän, koska
+ * sääntö on maakohtainen: maassa, jolla EI ole taulua, poltto toimii
+ * kuten ennen, ja maassa, jolla taulu ON, poltettu piste luetaan
+ * taulusta. Taulullisen maan merkki ILMAN ankkuria ei siis pala
+ * lainkaan — muuten sen muste jäisi laatassa siihen, minne vanha
+ * levitys sen jätti, eikä elävä nimiö osuisi siihen.
+ */
+export const LUKITUT_MAAT = Object.freeze(['FRA']);
+export function onLukittuMaa(iso) { return LUKITUT_MAAT.includes(String(iso ?? '').toUpperCase()); }
+
 const limittyy = (a, b, vara) => a.x0 - vara < b.x1 && b.x0 - vara < a.x1
   && a.y0 - vara < b.y1 && b.y0 - vara < a.y1;
 
