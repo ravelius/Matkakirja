@@ -19,7 +19,8 @@
     "savuke-topografialinssi.mjs",
     "savuke-pallo-nostolaput.mjs",
     "savuke-nimikyltti.mjs",
-    "savuke-kerma-reuna.mjs"
+    "savuke-kerma-reuna.mjs",
+    "savuke-ranskan-nostot-lukossa.mjs"
   ],
   "asetukset": {
     "savuke-ihmisen-kappaleet.mjs": {
