@@ -4530,7 +4530,16 @@ export const RAAMATTU = {
           + 'sarjat.jsonin tunnetutPunaisetMac-listoissa, jotka vain Mac-'
           + 'polku lukee (ubuntu vartioi yha). Ensimmainen Mac-PR-ajo: '
           + '775/804, 0 uutta punaista, n. 7 min. Mac on PR-portti; ubuntu-'
-          + 'matriisi vain fork-PR:ille.',
+          + 'matriisi vain fork-PR:ille. TARKENNUS 9 (omistaja 18.9.2026 klo '
+          + '13.30 Suomen aikaa, sanatarkasti: "voisiko tuonkin github osuuden '
+          + 'siirtaa macille ja nopeuttaisiko se?"; mitattu: Testit ubuntulla 2 '
+          + 'min 10 s (testit 105 s), Savukkeet Macilla 11 min 20 s, jonka '
+          + 'seinakello on kahden pisimman savukkeen mitta - astro-pallo 464 s '
+          + 'ja pariisi-lahizoom 440 s; kortti "Molemmat"): 17) TESTIT MACIN '
+          + 'RUNNERILLE (testit.yml runs-on self-hosted, ubuntu varalla fork-'
+          + 'PR:ille) ja 18) KAKSI PISINTA SAVUKETTA JAETAAN PUOLIKSI '
+          + 'nakymittain omiksi matriisiriveikseen (sarjat.json), tavoite '
+          + 'portin seinakello n. 6 min. Tila: tyo Opus-agentilla.',
         'MAC STUDIO: UUDEN SESSION ALOITUS ILMAN OMISTAJAN OHJETTA, JA MISSA '
           + 'AVAIMET OVAT (omistaja 18.9.2026 klo 09.50 Suomen aikaa, '
           + 'sanatarkasti: "Kirjaa raamattuun selkeasti ylos etta uudet sessiot '
