@@ -3,6 +3,14 @@
  *
  *   NODE_USE_ENV_PROXY=1 node tools/savukkeet/savuke-satelliittilinssi.mjs
  *
+ * NÄKYMÄRAJAUS: ympäristömuuttuja NAKYMAT (pilkuilla eroteltu lista
+ * NAKYMAT-olion avaimista, esim. `NAKYMAT=tyopoyta,ipad,ipadvaaka`).
+ * Ilman muuttujaa ajetaan kaikki kuusi näkymää. Julkaisusarja jakaa
+ * tämän savukkeen kahdeksi rinnakkaiseksi riviksi tällä muuttujalla
+ * (tools/savukkeet/sarjat.json, `#isot` ja `#pienet`) — omistaja
+ * 18.9.2026, Raamattu AGENTIT ... TARKENNUS 9/10: PR-portin seinäkello
+ * on niin pitkä kuin sarjan pisin savuke.
+ *
  * Yksikkötestit näkevät aineiston ja puhtaat funktiot; ne eivät näe,
  * hohtaako piste pallolla, vaihtuuko YLÄPALKKI kokonaan, avautuuko
  * havaintokuva lähes koko ruudun kokoisena ja pysyykö PELITILA
@@ -1239,7 +1247,17 @@ async function ajaNakyma(nakymanNimi) {
   await konteksti.close();
 }
 
-for (const nakyma of (process.env.NAKYMAT ? process.env.NAKYMAT.split(',') : ['tyopoyta', 'ipad', 'puhelin', 'puhelinvaaka', 'ipadvaaka', 'pienivaaka'])) {
+const AJETTAVAT = (process.env.NAKYMAT
+  ? process.env.NAKYMAT.split(',').map((n) => n.trim()).filter(Boolean)
+  : ['tyopoyta', 'ipad', 'puhelin', 'puhelinvaaka', 'ipadvaaka', 'pienivaaka']);
+const tuntemattomat = AJETTAVAT.filter((n) => !NAKYMAT[n]);
+if (tuntemattomat.length) {
+  // Kirjoitusvirhe NAKYMAT-muuttujassa ei saa hiljaa ajaa nollaa näkymää
+  // (jako kahdeksi riviksi, 18.9.2026): FAIL-rivi näkyy vertaa-tulos.mjs:lle.
+  console.log(`FAIL  tuntematon näkymä NAKYMAT-muuttujassa: ${tuntemattomat.join(', ')}`);
+  process.exit(1);
+}
+for (const nakyma of AJETTAVAT) {
   // eslint-disable-next-line no-await-in-loop
   await ajaNakyma(nakyma);
 }
