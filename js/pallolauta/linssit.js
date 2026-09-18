@@ -565,6 +565,24 @@ export function luoLinssit({
        */
       tavoite: () => (tila.peruttu ? 0 : tila.peittavyys),
       ladattu: () => Boolean(tila.materiaali),
+      /*
+       * KUORI HETKEKSI POIS PIIRROSTA — PURKAMATTA JA HÄIVYTTÄMÄTTÄ.
+       *
+       * Tämä EI ole pelaajan näkymää varten (siihen on `peitto` ja
+       * `peittavyys`, jotka häivyttävät pehmeästi), vaan MITTAUSTA
+       * varten: astronautin kameran pinnan mittaus piirtää itse yhden
+       * kehyksen ja lukee pikselit piirtopuskurista, eikä se saa nähdä
+       * pilvikuorta pinnan asemesta (js/linssit/satelliitti-avaruus.js
+       * `pinnanKirkkaus`). `visible` ei koske materiaalin peittävyyteen
+       * eikä häivytykseen, joten arvo palautuu ennalleen sellaisenaan.
+       *
+       * Palauttaa `true`, jos kuori oli olemassa ja tila kirjoitettiin.
+       */
+      piilota: (kylla = true) => {
+        if (tila.peruttu || !tila.mesh) return false;
+        tila.mesh.visible = !kylla;
+        return true;
+      },
       peittavyys: (arvo) => {
         if (tila.peruttu) return;
         tila.peittavyys = Math.max(0, Math.min(1, arvo));

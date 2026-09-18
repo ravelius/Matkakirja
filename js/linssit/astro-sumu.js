@@ -486,6 +486,8 @@ export function luoAstroSumu({
   let sumunPeittoNyt = 0;
   let pilvienPeittoNyt = 0;
   let pilvienKulma = 0;
+  /* Onko kuori juuri nyt viety pois piirrosta (ks. piilotaPilvet). */
+  let pilvetPiilossa = false;
   let edellinenMs = 0;
   let kehyksia = 0;
 
@@ -537,12 +539,39 @@ export function luoAstroSumu({
 
   return {
     paivita,
+    /*
+     * ── PILVIKUORI POIS PINNAN MITTAUKSEN AJAKSI ────────────────────
+     *
+     * VIKA 19.9.2026 (PR #2590 Savukkeet, savuke-astro-pallo):
+     * pilvikerroksen tultua (peitto kaukaa 0,9) pinnan mustuutta
+     * vartioiva mittaus (`pinnanKirkkaus`) näki PILVET eikä pintaa —
+     * `MUSTA PINTA` -vartio luki 186, vaikka pinta oli täysin musta, ja
+     * sävyvartio 43 luki 216 valkoisen 222 sijaan. Mittaus lukee
+     * pikselit pallon keskeltä, ja pilvikuori on TÄSMÄLLEEN siinä
+     * välissä.
+     *
+     * Vika on mittarin näkökentässä, ei pilvissä: pelaajan on nähtävä
+     * pilvet, mutta mustan pallon juurisyy (globe.gl `Color(0)`, ks.
+     * satelliitti-avaruus.js) on PINNASSA niiden alla. Siksi kuori
+     * viedään pois VAIN siltä yhdeltä kehykseltä, jonka mittaus itse
+     * piirtää — `visible`-lippu, ei häivytystä eikä peittoa, joten
+     * ruudulle jäävä näkymä ei muutu.
+     *
+     * Palauttaa `true`, jos kuori oli olemassa ja lippu kirjoitettiin.
+     */
+    piilotaPilvet(kylla = true) {
+      if (purettu) return false;
+      const ok = Boolean(pilvet?.piilota?.(kylla));
+      if (ok) pilvetPiilossa = Boolean(kylla);
+      return ok;
+    },
     /** Mitatut luvut savukkeelle ja vartijoille. */
     tila: () => ({
       sumu: +sumunPeittoNyt.toFixed(3),
       pilvet: +pilvienPeittoNyt.toFixed(3),
       pilvienNakyvyys: pilvet?.nakyvyys?.() ?? null,
       pilvetLadattu: Boolean(pilvet?.ladattu?.()),
+      pilvetPiilossa,
       pilvienKulmaAstetta: +((pilvienKulma * 180) / Math.PI).toFixed(3),
       kerroksia: kalvot.length,
       kangas: Boolean(sumuOsoite),
