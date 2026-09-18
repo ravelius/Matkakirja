@@ -861,8 +861,19 @@ const MUISTI = `() => {
 const KONTRASTI = `async () => {
   const { pyramidinKerrostasot, pyramidinLaattaUrl, pyramidinLaattaOlemassa } =
     await import('/js/laattapyramidi.js');
-  const { NIMION_HALO, NIMION_HALO_PX, NIMION_HALO_VETOJA } =
+  const { NIMION_HALO, NIMION_HALO_PX, NIMION_HALO_VETOJA, NIMION_MUSTE } =
     await import('/js/pallolaatat.js');
+
+  /*
+   * LADONNAN VERTAILUASETUS: v1945:n mitattu tila (poltettu muste
+   * sellaisenaan, pergamenttireunus 0,92-erän jälkeen täytenä, neljä
+   * vetoa). Luvut ovat tässä TARKOITUKSELLA jäätyneinä eivätkä pelin
+   * vakioista: mitta kysyy "muuttuiko ladonta siitä, mikä se oli", ja
+   * se kysymys katoaisi, jos vertailu seuraisi samaa vakiota, jota
+   * ollaan säätämässä. Kontrastiluvut tulevat pelin omista vakioista
+   * kuten ennenkin — vertailua käytetään vain laatikkoon ja peittoon.
+   */
+  const VERTAILU = { muste: null, halo: 'rgb(247, 241, 224)', vetoja: 4 };
 
   const lum = (r, g, b) => {
     const f = (v) => { const c = v / 255; return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; };
@@ -904,6 +915,8 @@ const KONTRASTI = `async () => {
   };
 
   const tulokset = [];
+  const vertailut = [];
+  const ladonta = [];
   for (const { sarake, rivi } of osumat) {
     const nostoKuva = await kuvaksi(pyramidinLaattaUrl(taso.nosto, sarake, rivi)).catch(() => null);
     const reliefiKuva = await kuvaksi(pyramidinLaattaUrl(taso.reliefi, sarake, rivi)).catch(() => null);
@@ -915,21 +928,92 @@ const KONTRASTI = `async () => {
     cR.drawImage(reliefiKuva, 0, 0, L, K);
     const relief = cR.getImageData(0, 0, L, K).data;
 
-    /* b) pelin oma kompositio: reliefi + kolme halovetoa + nimiö */
-    const cv = kangas(L, K); const ctx = cv.getContext('2d');
-    ctx.drawImage(reliefiKuva, 0, 0, L, K);
-    ctx.save();
-    ctx.shadowColor = NIMION_HALO;
-    ctx.shadowBlur = NIMION_HALO_PX;
-    for (let veto = 0; veto < NIMION_HALO_VETOJA; veto += 1) ctx.drawImage(nostoKuva, 0, 0, L, K);
-    ctx.restore();
-    ctx.drawImage(nostoKuva, 0, 0, L, K);
-    const yhdessa = ctx.getImageData(0, 0, L, K).data;
+    /* b) pelin oma kompositio: reliefi + halovedot + nimiö linssin
+     *    musteessa (js/pallolaatat.js nimioLinssinMusteella — sama
+     *    source-in-veto, jotta ALFA ja siis ladonta säilyvät). */
+    const kokoa = (muste, halo, vetoja) => {
+      let nimioKuva = nostoKuva;
+      if (muste) {
+        const cvM = kangas(L, K); const cM = cvM.getContext('2d');
+        cM.drawImage(nostoKuva, 0, 0, L, K);
+        cM.globalCompositeOperation = 'source-in';
+        cM.fillStyle = muste;
+        cM.fillRect(0, 0, L, K);
+        cM.globalCompositeOperation = 'source-over';
+        nimioKuva = cvM;
+      }
+      const cv = kangas(L, K); const ctx = cv.getContext('2d');
+      ctx.drawImage(reliefiKuva, 0, 0, L, K);
+      ctx.save();
+      ctx.shadowColor = halo;
+      ctx.shadowBlur = NIMION_HALO_PX;
+      for (let veto = 0; veto < vetoja; veto += 1) ctx.drawImage(nimioKuva, 0, 0, L, K);
+      ctx.restore();
+      ctx.drawImage(nimioKuva, 0, 0, L, K);
+      return ctx.getImageData(0, 0, L, K).data;
+    };
+    const yhdessa = kokoa(NIMION_MUSTE, NIMION_HALO, NIMION_HALO_VETOJA);
+    const vertailu = kokoa(VERTAILU.muste, VERTAILU.halo, VERTAILU.vetoja);
 
     /* c) nimiön oma alfa: mikä on mustetta */
     const cvN = kangas(L, K); const cN = cvN.getContext('2d');
     cN.drawImage(nostoKuva, 0, 0, L, K);
     const nosto = cN.getImageData(0, 0, L, K).data;
+
+    /*
+     * LADONTA EI SAA MUUTTUA (Fablen ehto: leveys/korkeus enintään
+     * +1 px). Mitta on SAMASTA AJOSTA: sama laatta kootaan kahdesti,
+     * kerran nykyisillä vakioilla ja kerran vertailuasetuksella
+     * (VERTAILU), ja verrataan sitä laatikkoa, jonka silmä näkee
+     * kirjaimena.
+     *
+     * NÄENNÄINEN KIRJAIN, EI KOKO LAATTA. Luminanssi < 0,25 yksinään
+     * poimii reliefin omat varjorotkot (mitattu 18.9.2026: laatikko
+     * kasvoi 484 px eli koko laatan levyiseksi, eikä luku kertonut
+     * nimiöstä mitään). Maski on siksi nostotason oma alfa > 0 — se
+     * pikselijoukko, jossa poltettua mustetta ylipäätään on — ja sen
+     * sisältä ne pikselit, jotka kompositiossa lukevat tummana.
+     * Laatikko voi siis kasvaa vain, jos kirjaimen PEHMENNETTY reuna
+     * muuttuu umpinaiseksi, ja juuri se olisi lihomista.
+     *
+     * PEITTO on se osa laatasta, jossa reliefi ei enää näy sellaisenaan
+     * (ero > 2/255 jollakin kanavalla), mustepikseliä kohti. Reunuksen
+     * leveneminen näkyy tässä suhdelukuna eikä silmämääränä.
+     */
+    const laatikko = (data) => {
+      let x0 = L; let x1 = -1; let y0 = K; let y1 = -1;
+      for (let y = 0; y < K; y += 1) {
+        for (let x = 0; x < L; x += 1) {
+          const i = (y * L + x) * 4;
+          if (nosto[i + 3] === 0) continue;
+          if (lum(data[i], data[i + 1], data[i + 2]) >= 0.25) continue;
+          if (x < x0) x0 = x; if (x > x1) x1 = x;
+          if (y < y0) y0 = y; if (y > y1) y1 = y;
+        }
+      }
+      return x1 < 0 ? null : { leveys: x1 - x0 + 1, korkeus: y1 - y0 + 1 };
+    };
+    const peittoala = (data) => {
+      let n = 0;
+      for (let i = 0; i < data.length; i += 4) {
+        if (Math.abs(data[i] - relief[i]) > 2 || Math.abs(data[i + 1] - relief[i + 1]) > 2
+          || Math.abs(data[i + 2] - relief[i + 2]) > 2) n += 1;
+      }
+      return n;
+    };
+    let musteita = 0;
+    for (let i = 3; i < nosto.length; i += 4) if (nosto[i] >= 200) musteita += 1;
+    const nyt = laatikko(yhdessa);
+    const ennen = laatikko(vertailu);
+    if (musteita && nyt && ennen) {
+      ladonta.push({
+        leveysKasvu: nyt.leveys - ennen.leveys,
+        korkeusKasvu: nyt.korkeus - ennen.korkeus,
+        peittoSuhde: peittoala(yhdessa) / musteita,
+        peittoEnnen: peittoala(vertailu) / musteita,
+        musteita,
+      });
+    }
 
     const S = 3;
     for (let y = S; y < K - S; y += 1) {
@@ -949,46 +1033,70 @@ const KONTRASTI = `async () => {
          * alfaan. Viisi pikseliä ei ole mitta. */
         if (nosto[i + 3] < 200) continue;
         if (lum(nosto[i], nosto[i + 1], nosto[i + 2]) > 0.25) continue;
-        const tekstiL = lum(yhdessa[i], yhdessa[i + 1], yhdessa[i + 2]);
-        if (tekstiL > 0.25) continue;
-        /* Ympäristön vaalein: se on se reunus, jota vasten luetaan. */
-        let paras = -1;
-        for (let dy = -S; dy <= S; dy += 1) {
-          for (let dx = -S; dx <= S; dx += 1) {
-            const j = ((y + dy) * L + (x + dx)) * 4;
-            if (nosto[j + 3] >= 230) continue;
-            const l2 = lum(yhdessa[j], yhdessa[j + 1], yhdessa[j + 2]);
-            if (l2 > paras) paras = l2;
+        const reliefiL = lum(relief[i], relief[i + 1], relief[i + 2]);
+        /*
+         * SAMA MITTA MOLEMMILLE KOMPOSITIOILLE. Vertailu (v1945) kulkee
+         * tässä rinnalla, jotta muutoksen suuruus luetaan SAMASTA
+         * ajosta ja samasta laattajoukosta: erään 4 luku 4,19 mitattiin
+         * eri istunnossa, ja otoskin oli eri (2 620 vs. 3 7xx px), joten
+         * kahden ajon vertailu olisi kahden mitan vertailu.
+         */
+        for (const [data, lista] of [[yhdessa, tulokset], [vertailu, vertailut]]) {
+          const tekstiL = lum(data[i], data[i + 1], data[i + 2]);
+          if (tekstiL > 0.25) continue;
+          /* Ympäristön vaalein: se on se reunus, jota vasten luetaan. */
+          let paras = -1;
+          for (let dy = -S; dy <= S; dy += 1) {
+            for (let dx = -S; dx <= S; dx += 1) {
+              const j = ((y + dy) * L + (x + dx)) * 4;
+              if (nosto[j + 3] >= 230) continue;
+              const l2 = lum(data[j], data[j + 1], data[j + 2]);
+              if (l2 > paras) paras = l2;
+            }
           }
+          if (paras < 0) continue;
+          lista.push({ suhde: suhde(tekstiL, paras), reliefiL });
         }
-        if (paras < 0) continue;
-        tulokset.push({
-          suhde: suhde(tekstiL, paras),
-          reliefiL: lum(relief[i], relief[i + 1], relief[i + 2]),
-        });
       }
     }
     nostoKuva.close?.(); reliefiKuva.close?.();
   }
   if (!tulokset.length) return { virhe: 'mustepikseleitä ei löytynyt', taso: taso.z };
 
-  tulokset.sort((a, b) => a.reliefiL - b.reliefiL);
-  const kolmannes = Math.max(1, Math.floor(tulokset.length / 3));
-  const tummin = tulokset.slice(0, kolmannes);
-  const vaalein = tulokset.slice(-kolmannes);
   const pienin = (lista) => lista.reduce((a, b) => Math.min(a, b.suhde), Infinity);
   const mediaani = (lista) => {
     const v = lista.map((x) => x.suhde).sort((a, b) => a - b);
     return v[Math.floor(v.length / 2)];
   };
   const pyorista = (v) => Math.round(v * 100) / 100;
+  const kolmanneksiin = (lista) => {
+    lista.sort((a, b) => a.reliefiL - b.reliefiL);
+    const k = Math.max(1, Math.floor(lista.length / 3));
+    const t = lista.slice(0, k); const v = lista.slice(-k);
+    return {
+      pikseleita: lista.length,
+      tummin: { pienin: pyorista(pienin(t)), mediaani: pyorista(mediaani(t)) },
+      vaalein: { pienin: pyorista(pienin(v)), mediaani: pyorista(mediaani(v)) },
+      kaikkiPienin: pyorista(pienin(lista)),
+    };
+  };
+  const nykyinen = kolmanneksiin(tulokset);
+  const enintaan = (kentta) => ladonta.reduce((a2, b2) => Math.max(a2, b2[kentta]), -Infinity);
   return {
     taso: taso.z,
     laattoja: osumat.length,
-    pikseleita: tulokset.length,
-    tummin: { pienin: pyorista(pienin(tummin)), mediaani: pyorista(mediaani(tummin)) },
-    vaalein: { pienin: pyorista(pienin(vaalein)), mediaani: pyorista(mediaani(vaalein)) },
-    kaikkiPienin: pyorista(pienin(tulokset)),
+    pikseleita: nykyinen.pikseleita,
+    vertailu: vertailut.length ? kolmanneksiin(vertailut) : null,
+    ladonta: ladonta.length ? {
+      leveysKasvu: enintaan('leveysKasvu'),
+      korkeusKasvu: enintaan('korkeusKasvu'),
+      peittoSuhde: pyorista(ladonta.reduce((a2, b2) => a2 + b2.peittoSuhde, 0) / ladonta.length),
+      peittoEnnen: pyorista(ladonta.reduce((a2, b2) => a2 + b2.peittoEnnen, 0) / ladonta.length),
+      musteita: ladonta.reduce((a2, b2) => a2 + b2.musteita, 0),
+    } : null,
+    tummin: nykyinen.tummin,
+    vaalein: nykyinen.vaalein,
+    kaikkiPienin: nykyinen.kaikkiPienin,
   };
 }`;
 
@@ -1694,6 +1802,19 @@ const KONTRASTIN_KATTO = 4.5;
 console.log(`  kontrastin mediaani: tummin ${a.kontrasti?.tummin?.mediaani}, `
   + `vaalein ${a.kontrasti?.vaalein?.mediaani} (pienin ${a.kontrasti?.kaikkiPienin}, `
   + `otos ${a.kontrasti?.pikseleita} pikseliä)`);
+console.log(`  vertailu (v1945: poltettu muste, pergamenttireunus × 4): `
+  + `tummin ${a.kontrasti?.vertailu?.tummin?.mediaani}, `
+  + `vaalein ${a.kontrasti?.vertailu?.vaalein?.mediaani} `
+  + `(otos ${a.kontrasti?.vertailu?.pikseleita} pikseliä)`);
+/*
+ * LADONTA INFONA, EI VARTIONA. Luku on tarkistus sille, ettei reunusta
+ * tai mustetta säädettäessä kirjain lihone: tumman laatikon kasvu
+ * poltetun musteen laatikkoon nähden (px) ja se osuus laatasta, jossa
+ * reliefi ei näy sellaisenaan (peittoa mustepikseliä kohti).
+ */
+console.log(`  ladonta vs. v1945: leveys ${a.kontrasti?.ladonta?.leveysKasvu} px, `
+  + `korkeus ${a.kontrasti?.ladonta?.korkeusKasvu} px; peitto ${a.kontrasti?.ladonta?.peittoSuhde}× muste (ennen `
+  + `${a.kontrasti?.ladonta?.peittoEnnen}×, ${a.kontrasti?.ladonta?.musteita} mustepikseliä)`);
 vaadi(`${nimiA}: nimiön kontrasti reunusta vasten >= ${KONTRASTIN_KATTO}:1 tummimmalla reliefillä`,
   (a.kontrasti?.tummin?.mediaani ?? 0) >= KONTRASTIN_KATTO,
   JSON.stringify(a.kontrasti));
