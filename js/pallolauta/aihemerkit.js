@@ -324,6 +324,19 @@ export const VIUHKAN_POHJAN_MARGINAALI = 0.8;
 const RAD = Math.PI / 180;
 
 /**
+ * LISTAN RIVILAATIKON SISAREUNA merkin pisteesta (px, ks.
+ * kohdanLaatikko).
+ *
+ * Rivin laatikko EI ala merkin sadetta (`VIUHKAN_SADE_PX`) vaan
+ * kurottaa 12 px merkkia KOHTI, jotta sormi osuu riviin myos sen
+ * sisareunalta. Luku on nimetty siksi, etta vaakapaon ehdokkaat
+ * (js/pallolauta/nostot.js) osaavat mitata etaisyyden listan
+ * VASEMMASTA REUNASTA eivatka merkin pisteesta — ero on
+ * `VIUHKAN_SADE_PX - VIUHKAN_LAATIKON_SISA_PX` = 14 px.
+ */
+export const VIUHKAN_LAATIKON_SISA_PX = 12;
+
+/**
  * Yhden kohdan laatikko ruudulla, kun se on kohdassa (dx, dy).
  *
  * RIVIN PUOLIKORKEUS ON PARAMETRI (kaupunkiliuska, PAATOKSET 34 kohta
@@ -334,7 +347,7 @@ const RAD = Math.PI / 180;
  * oman ladonnan ennallaan.
  */
 export function kohdanLaatikko(dx, dy, leveys, puoli, riviPx = VIUHKAN_RIVI_PX) {
-  const sisa = 12;
+  const sisa = VIUHKAN_LAATIKON_SISA_PX;
   const ulko = 16 + leveys;
   return puoli === 'vasen'
     ? {
