@@ -525,23 +525,81 @@ export const HAHMOTELMA_FRA = [
     id: 'hahmotelma-reims',
     nimi: 'Reims',
     tyyppi: 'historia',
-    hahmotelma: true,
     lahi: true,
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-reims-76ae34f7.jpg',
+      lyhyt: 'Reimsin tuomiokirkko ja sen viereinen Tau\'n palatsi idästä kuvattuina.',
+      selite: 'Reimsin tuomiokirkko ja sen viereinen Tau\'n palatsi idästä kuvattuina; molemmat kuuluvat samaan maailmanperintökohteeseen.',
+      lahde: 'Valokuva: DXR, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'DXR',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Palais_du_Tau_and_Cathédrale_Notre-Dame_de_Reims,_East_View_20140306.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-reims-dcec114e.jpg',
+        lyhyt: 'Kabinettivalokuva Reimsin kattojen yllä kohoavasta tuomiokirkosta.',
+        selite: 'Kabinettivalokuva Reimsistä: tuomiokirkko kohoaa kaupungin kattojen yllä. Kuva on otettu vuosien 1870 ja 1900 välillä.',
+        lahde: 'Valokuva: Rijksmuseum, Wikimedia Commons (CC0).',
+        tekija: 'Rijksmuseum',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gezicht_op_Reims_met_de_Kathedraal_La_Cathédrale_(titel_op_object)_Reims_(serietitel_op_object),_RP-F-F19894.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+    ],
+    kysymykset: [
+      'Miksi kuninkaat kruunattiin juuri Reimsissä?',
+      'Mikä oli se pyhä ampulla?',
+    ],
     nappi: 'Kuninkaiden kruunauskirkko ja samppanjakellarit',
     // 4,0347 E / 49,2628 N — en-Wikipedia "Reims"
     laudat: {
       maailmankartta: { x: 5967.8, y: 1422.1 },
       europe: { x: 288.7, y: 598 },
     },
-    teksti: runko('Kuninkaiden kruunauskirkko ja samppanjakellarit'),
-    lahde: koordinaatinLahde('Reims'),
+    teksti: 'Reims on Marnen departementin suurin kaupunki ja Ranskan kahdenneksitoista '
+      + 'suurin; se sijaitsee 129 kilometriä Pariisista koilliseen Vesle-joen varrella. '
+      + 'Gallialaisten perustamasta paikasta kasvoi Rooman valtakunnan aikana merkittävä '
+      + 'kaupunki, ja myöhemmin siitä tuli Ranskan kuninkaiden perinteinen kruunauspaikka. '
+      + 'Kuninkaan voitelu tehtiin Reimsin tuomiokirkossa, jossa säilytettiin pyhää '
+      + 'ampullia, ja siksi kaupunkia kutsutaan ranskaksi nimellä la cité des sacres. '
+      + 'Tuomiokirkko, sen viereinen Tau\'n palatsi ja Saint-Remin luostari liitettiin '
+      + 'yhdessä Unescon maailmanperintöluetteloon vuonna 1991. Reims on myös Champagnen '
+      + 'viinialueen pohjoislaidalla ja kytkeytyy samppanjan tuotantoon ja vientiin.',
+    lahde: 'en-Wikipedia "Reims", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-vezelay',
     nimi: 'Vézelay',
     tyyppi: 'historia',
-    hahmotelma: true,
     lahi: true,
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-vezelay-63dd721d.jpg',
+      lyhyt: 'Sainte-Marie-Madeleinen basilika Vézelayn kylän kukkulan laella.',
+      selite: 'Sainte-Marie-Madeleinen basilika kohoaa Vézelayn kylän talojen yllä kukkulan laella Burgundissa.',
+      lahde: 'Valokuva: Nikater, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Nikater',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Basilika_Ste_Madeleine_in_Vezelay01.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-vezelay-b1378444.jpg',
+        lyhyt: 'Basilikan keskiportaali ja sen veistetty timpanoni 1800-luvun valokuvassa.',
+        selite: 'Luostarikirkon keskiportaali veistettyine timpanoneineen ja kapiteeleineen. Albumiinivedos vuosilta 1860–1879.',
+        lahde: 'Valokuva: Rijksmuseum, Wikimedia Commons (CC0).',
+        tekija: 'Rijksmuseum',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gezicht_op_het_portaal_van_de_kathedraal_van_Vezelay_Vezeley._Abbey_Church._20._Portal_Centre_Doorway_(titel_op_object),_RP-F-00-5420.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+    ],
+    kysymykset: [
+      'Miksi pyhiinvaeltajat kerääntyivät juuri tänne?',
+      'Mitä portaalin kiviveistokset esittävät?',
+    ],
     nappi: 'Pyhiinvaelluksen lähtökirkko kukkulalla',
     // 3,74861111 E / 47,46638889 N — en-Wikipedia "Vézelay Abbey"
     // (kylän oma artikkeli antaa 3,7467 / 47,4667; piste on luostarin)
@@ -549,68 +607,201 @@ export const HAHMOTELMA_FRA = [
       maailmankartta: { x: 5958.3, y: 1498.8 },
       europe: { x: 283.2, y: 645.2 },
     },
-    teksti: runko('Pyhiinvaelluksen lähtökirkko kukkulalla'),
-    lahde: koordinaatinLahde('Vézelay Abbey'),
+    teksti: 'Vézelayn luostari on benediktiini- ja cluniacensiluostari Vézelayn kylässä '
+      + 'Yonnen departementissa Itä-Keski-Ranskassa. Se rakennettiin vuosina 1120–1150. '
+      + 'Luostarikirkko, nykyinen Sainte-Marie-Madeleinen basilika, on veistettyine '
+      + 'kapiteeleineen ja portaaleineen yksi burgundilaisen romaanisen taiteen ja '
+      + 'arkkitehtuurin mestariteoksista. Hugenotit ryöstivät rakennuksen vuonna 1569, '
+      + 'sitä laiminlyötiin 1600- ja 1700-luvuilla ja se vaurioitui vielä Ranskan '
+      + 'vallankumouksen aikana. Kirkko ja Vézelayn kukkula otettiin Unescon '
+      + 'maailmanperintöluetteloon vuonna 1979.',
+    lahde: 'en-Wikipedia "Vézelay Abbey", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-beaune',
     nimi: 'Beaunen Hôtel-Dieu',
     tyyppi: 'kulttuuri',
-    hahmotelma: true,
     lahi: true,
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-beaune-8f26f045.jpg',
+      lyhyt: 'Hôtel-Dieun lasitetut kattotiilet kuvioivat sisäpihan katon.',
+      selite: 'Hôtel-Dieun sisäpihan katto: lasitetut tiilet ladottu monivärisiksi kuvioiksi, alla kattoikkunat ja puinen parveke.',
+      lahde: 'Valokuva: Benjamin Smith, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Benjamin Smith',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Beaune_-_Hôtel-Dieu_-_Cour_-_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-beaune-c5856d54.jpg',
+        lyhyt: 'Hôtel-Dieun sisäpiha ja hoitosisaria 1800-luvun lopun valokuvassa.',
+        selite: 'Hôtel-Dieun sisäpiha hoitosisarineen. Albumiinivedos noin vuosilta 1875–1900, jolloin talo oli yhä sairaalana.',
+        lahde: 'Valokuva: Rijksmuseum, Wikimedia Commons (CC0).',
+        tekija: 'Rijksmuseum',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Binnenplaats_van_het_Hospices_de_Beaune_met_nonnen_Hopital_á_Beaune._(titel_op_object),_RP-F-00-4073.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+    ],
+    kysymykset: [
+      'Kuka maksoi köyhien sairaalan?',
+      'Miten talo elättää itsensä nykyään?',
+    ],
     nappi: 'Sairaala, jonka katto hohtaa väreissä',
     // 4,83666667 E / 47,02194444 N — en-Wikipedia "Hospices de Beaune"
     laudat: {
       maailmankartta: { x: 5994.6, y: 1517.6 },
       europe: { x: 304.1, y: 656.9 },
     },
-    teksti: runko('Sairaala, jonka katto hohtaa väreissä'),
-    lahde: koordinaatinLahde('Hospices de Beaune'),
+    teksti: 'Hospices de Beaune eli Hôtel-Dieu de Beaune on entinen hyväntekeväisyyden '
+      + 'varassa toiminut vaivaistalo Beaunen kaupungissa. Sen perusti vuonna 1443 '
+      + 'Burgundin kansleri Nicolas Rolin köyhien sairaalaksi. Alkuperäinen '
+      + 'sairaalarakennus Hôtel-Dieu on yksi 1400-luvun burgundilaisen arkkitehtuurin '
+      + 'hienoimmista esimerkeistä ja toimii nykyään museona; potilaita hoidetaan '
+      + 'uudemmissa sairaalarakennuksissa. Talon nimissä järjestetään joka marraskuu '
+      + 'merkittävä hyväntekeväisyysviinihuutokauppa.',
+    lahde: 'en-Wikipedia "Hospices de Beaune", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-ajaccio',
     nimi: 'Ajaccio',
     tyyppi: 'historia',
-    hahmotelma: true,
     lahi: true,
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-ajaccio-40da9824.jpg',
+      lyhyt: 'Kalastusveneitä Ajaccion Tino Rossin satamassa.',
+      selite: 'Kalastusveneitä Ajaccion Tino Rossin satamassa Korsikan länsirannikolla.',
+      lahde: 'Valokuva: Jean-Pol GRANDMONT, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Jean-Pol GRANDMONT',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ajaccio_Port_JPG2.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-ajaccio-e41d8022.jpg',
+        lyhyt: 'Napoleonin syntymätalo Ajacciossa 1800-luvun lopun valokuvassa.',
+        selite: 'Maison Bonaparte, talo jossa Napoleon syntyi. Albumiinivedos noin vuosilta 1886–1896.',
+        lahde: 'Valokuva: Rijksmuseum, Wikimedia Commons (CC0).',
+        tekija: 'Rijksmuseum',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Napoleon_Bonaparte%27s_geboortehuis_in_Ajaccio_Huis_waarin_Napoleon_geboren_werd,_Ajaccio_(titel_op_object),_RP-F-2007-359-63.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+    ],
+    kysymykset: [
+      'Kuka hallitsi Korsikaa ennen ranskalaisia?',
+      'Kuinka kaukana manner-Ranska on täältä?',
+    ],
     nappi: 'Napoleonin syntymäkaupunki',
     // 8,7369 E / 41,9267 N — en-Wikipedia "Ajaccio"
     laudat: {
       maailmankartta: { x: 6124.6, y: 1726.5 },
       europe: { x: 378.9, y: 790.9 },
     },
-    teksti: runko('Napoleonin syntymäkaupunki'),
-    lahde: koordinaatinLahde('Ajaccio'),
+    teksti: 'Ajaccio on Korsikan pääkaupunki ja saaren suurin kaupunki. Se on '
+      + 'Corse-du-Sudin departementin prefektuuri ja sijaitsee saaren länsirannikolla, '
+      + '390 kilometriä Marseillesta kaakkoon. Kaupunki taantui keskiajalla, mutta alkoi '
+      + 'kukoistaa uudelleen sen jälkeen, kun genovalaiset rakensivat vuonna 1492 '
+      + 'sitadellin vanhan asutuksen eteläpuolelle. Vuonna 1755 julistettiin Korsikan '
+      + 'tasavalta, mutta genovalaiset pitivät Ajaccion ja muutaman muun linnoituksen '
+      + 'hallussaan siihen asti, kunnes ranskalaiset ottivat saaren haltuunsa. '
+      + 'Ajaccion tunnetuin asukas on Napoleon Bonaparte, joka syntyi kaupungissa '
+      + 'vuonna 1769; hänen sukutalonsa Maison Bonaparte on nykyään museo.',
+    lahde: 'en-Wikipedia "Ajaccio", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-bonifacio',
     nimi: 'Bonifacio',
     tyyppi: 'merenkulku',
-    hahmotelma: true,
     lahi: true,
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-bonifacio-e6bfcc16.jpg',
+      lyhyt: 'Bonifacion yläkaupunki kalkkikivijyrkänteen reunalla mereltä katsottuna.',
+      selite: 'Bonifacion yläkaupunki seisoo kalkki- ja hiekkakiviylängöllä jyrkän merikallion päällä; kallioon on hakattu Aragonian kuninkaan portaat.',
+      lahde: 'Valokuva: Isiwal, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Isiwal',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Corsica_Bonifacio_Ville_haute.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-bonifacio-b2afc271.jpg',
+        lyhyt: 'Bonifacion kalliot ja kaupunki varhaisessa valokuvassa.',
+        selite: 'Bonifacion kerroksiset kalkkikivikalliot ja niiden päällä häämöttävä kaupunki. Valokuva noin vuosilta 1905–1910 erään ranskalaisen harrastajakuvaajan albumista.',
+        lahde: 'Valokuva: Rijksmuseum, Wikimedia Commons (CC0).',
+        tekija: 'Rijksmuseum',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gezicht_op_de_kliffen_bij_Bonifacio_op_Corsica,_RP-F-F01162-EE.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+    ],
+    kysymykset: [
+      'Mikä salmi erottaa Korsikan Sardiniasta?',
+      'Miksi kaupunki rakennettiin kallion päälle?',
+    ],
     nappi: 'Kaupunki kalkkikiven reunalla',
     // 9,156876 E / 41,386814 N — en-Wikipedia "Bonifacio, Corse-du-Sud"
     laudat: {
       maailmankartta: { x: 6138.6, y: 1748 },
       europe: { x: 387, y: 805.1 },
     },
-    teksti: runko('Kaupunki kalkkikiven reunalla'),
-    lahde: koordinaatinLahde('Bonifacio, Corse-du-Sud'),
+    teksti: 'Bonifacio on kaupunki Korsikan saaren eteläosassa, Corse-du-Sudin '
+      + 'departementissa. Kaupunki ja sitä suojaava linnoitus on rakennettu korkealle '
+      + 'kalkkikivitörmälle, joka antaa suojan myös kaupungin luonnonsatamalle. '
+      + 'Bonifacio sijaitsee strategisesti hyvällä paikalla, ja sieltä pystyttiin '
+      + 'valvomaan sotilaallisesti tärkeitä laivareittejä. Kaupungin mukaan on nimetty '
+      + 'Korsikan ja Sardinian erottava Bonifacionsalmi.',
+    lahde: 'fi-Wikipedia "Bonifacio", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-place-stanislas',
     nimi: 'Nancy, Place Stanislas',
     tyyppi: 'kulttuuri',
-    hahmotelma: true,
     lahi: true,
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-place-stanislas-5fc36b97.jpg',
+      lyhyt: 'Jean Lamourin kullatut takorautaportit Place Stanislas -aukion kulmassa.',
+      selite: 'Kullatut takorautaportit ja niiden lyhdyt avautuvat Place Stanislas -aukiolle Nancyssä.',
+      lahde: 'Valokuva: Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Krzysztof Golik',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Grids_of_Place_Stanislas_in_Nancy.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-place-stanislas-272c4be2.jpg',
+        lyhyt: 'Place Stanislas porttien välistä nähtynä 1800-luvun lopun valokuvassa.',
+        selite: 'Kabinettivalokuva Place Stanislas -aukiosta porttien välistä: taustalla kaupungintalo ja Stanislauksen patsas. Kuva on otettu vuosien 1870 ja 1900 välillä.',
+        lahde: 'Valokuva: Rijksmuseum, Wikimedia Commons (CC0).',
+        tekija: 'Rijksmuseum',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gezicht_op_La_Place_Stanislas_te_Nancy_La_Place_Stanislas_(titel_op_object)_Nancy_(serietitel_op_object),_RP-F-F19859.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+    ],
+    kysymykset: [
+      'Kuka oli Stanislaus, jonka mukaan aukio on nimetty?',
+      'Miksi aukio näyttää yhdestä puusta veistetyltä?',
+    ],
     nappi: 'Kuninkaan aukio kullatuin portein',
     // 6,18305556 E / 48,69361111 N — en-Wikipedia "Place Stanislas"
     laudat: {
       maailmankartta: { x: 6039.4, y: 1446.6 },
       europe: { x: 329.9, y: 613 },
     },
-    teksti: runko('Kuninkaan aukio kullatuin portein'),
-    lahde: koordinaatinLahde('Place Stanislas'),
+    teksti: 'Place Stanislas on suuri kävelyaukio Nancyn kaupungissa Lorrainen '
+      + 'historiallisella alueella. Se rakennettiin vuosina 1752–1756 Stanislaus I:n '
+      + 'käskystä; hän oli Puolan entinen kuningas ja Liettuan suuriruhtinas ja '
+      + 'sittemmin Lorrainen herttua. Aukio on yksi vanhimmista esimerkeistä '
+      + 'arkkitehtuuriltaan yhtenäisestä monumentaalisesta julkisesta aukiosta ja '
+      + 'erinomainen näyte 1700-luvun kaupunkirakentamisesta. Vuodesta 1983 aukio '
+      + 'yhdessä akselinsa jatkeiden Place de la Carrièren ja Place d\'Alliancen kanssa '
+      + 'on ollut Unescon maailmanperintökohde.',
+    lahde: 'en-Wikipedia "Place Stanislas", johdanto-osa (tarkistettu 18.9.2026).',
   },
   /* ================= VARASTON KAKSITOISTA (18.9.2026) ==============
    *
@@ -635,46 +826,138 @@ export const HAHMOTELMA_FRA = [
     id: 'hahmotelma-mont-ventoux',
     nimi: 'Mont Ventoux',
     tyyppi: 'vuori',
-    hahmotelma: true,
     lahi: true,
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-mont-ventoux-ad5bff71.jpg',
+      lyhyt: 'Mont Ventoux\'n paljas kalkkikivihuippu ja sen torni.',
+      selite: 'Mont Ventoux\'n huippu: valkoinen kalkkikivirinne ilman puustoa, laella tutkatorni ja huipulle kiemurteleva maantie.',
+      lahde: 'Valokuva: BlueBreezeWiki, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'BlueBreezeWiki',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:140608_Mont-Ventoux-04.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-mont-ventoux-43491989.jpg',
+        lyhyt: 'Huipun observatorio 1900-luvun alun postikortissa.',
+        selite: 'Mont Ventoux\'n observatorio huipulla. Postikortin oma teksti ilmoittaa korkeudeksi 1 908 metriä; kuva on 1900-luvun alusta.',
+        lahde: 'Valokuva: tuntematon kuvaaja, Wikimedia Commons (public domain).',
+        tekija: 'tuntematon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:01_Mont_Ventoux_Observatoire_alt_1908m.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Template:PD-old',
+      },
+    ],
+    kysymykset: [
+      'Miksi huippu on puuton ja valkoinen?',
+      'Kuinka kovaa siellä tuulee?',
+    ],
     nappi: 'Provencen tuulinen huippu, 1 910 m',
     // 5,27888889 E / 44,17444444 N — en-Wikipedia "Mont Ventoux"
     laudat: {
       maailmankartta: { x: 6009.3, y: 1635.7 },
       europe: { x: 312.6, y: 731.8 },
     },
-    teksti: runko('Provencen tuulinen huippu, 1 910 m'),
-    lahde: koordinaatinLahde('Mont Ventoux', '18.9.2026'),
+    teksti: 'Mont Ventoux on vuori Provencessa Etelä-Ranskassa, noin 20 kilometriä '
+      + 'Carpentras\'sta koilliseen Vauclusen departementissa. Pohjoisessa vuori rajautuu '
+      + 'Drômen departementtiin. Se kohoaa 1 910 metriin ja on alueensa korkein vuori; '
+      + 'lisänimiä ovat "Provencen peto", "Provencen jättiläinen" ja "Kalju vuori". '
+      + 'Tunnetuksi vuori on tullut Ranskan ympäriajon etappina, ja vuonna 2009 siellä '
+      + 'ratkaistiin kilpailun ensimmäinen toiseksi viimeisen päivän vuoristomaali.',
+    lahde: 'en-Wikipedia "Mont Ventoux", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-puy-de-sancy',
     nimi: 'Puy de Sancy',
     tyyppi: 'vuori',
-    hahmotelma: true,
     lahi: true,
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-puy-de-sancy-755bbff9.jpg',
+      lyhyt: 'Puy de Sancyn huippu ja Aiguilles du Diable -kalliot.',
+      selite: 'Puy de Sancyn huippu ja sen vasemmalla puolella kohoavat Aiguilles du Diable -kalliot; portaita nousevat vaeltajat kertovat mittakaavan.',
+      lahde: 'Valokuva: Marie-Lan Nguyen, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Marie-Lan Nguyen',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Puy_de_Sancy_2016-08-23_n18.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-puy-de-sancy-c17a5081.jpg',
+        lyhyt: 'Luminen Puy de Sancy Mont-Doren hiihtokeskuksesta katsottuna.',
+        selite: 'Lumen peittämä Puy de Sancy Mont-Doren hiihtokeskuksen rinteiltä kuvattuna.',
+        lahde: 'Valokuva: Pymouss, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Pymouss',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mont-Dore_station_-_puy_de_Sancy_20220309-01.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+      },
+    ],
+    kysymykset: [
+      'Milloin tämä tulivuori purkautui viimeksi?',
+      'Mikä Massif Central oikein on?',
+    ],
     nappi: 'Massif Centralin korkein huippu',
     // 2,81416667 E / 45,52833333 N — en-Wikipedia "Puy de Sancy"
     laudat: {
       maailmankartta: { x: 5927.1, y: 1580 },
       europe: { x: 265.2, y: 696.2 },
     },
-    teksti: runko('Massif Centralin korkein huippu'),
-    lahde: koordinaatinLahde('Puy de Sancy', '18.9.2026'),
+    teksti: 'Puy de Sancy on Ranskan keskiylängön eli Massif Centralin korkein vuori, ja '
+      + 'sen huippu on 1 886 metrin korkeudessa. Vuori sijaitsee Puy-de-Dômen '
+      + 'departementissa Etelä-Keski-Ranskassa. Se on osa vanhaa kerrostulivuorta, joka '
+      + 'on purkautunut viimeksi yli 220 000 vuotta sitten. Pohjoisia ja eteläisiä '
+      + 'rinteitä käytetään nykyään lasketteluun, ja rinteille on asennettu muutama '
+      + 'hiihtohissi.',
+    lahde: 'fi-Wikipedia "Puy de Sancy", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-amboise',
     nimi: 'Amboisen linna',
     tyyppi: 'kulttuuri',
-    hahmotelma: true,
     lahi: true,
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-amboise-2f0daf4b.jpg',
+      lyhyt: 'Amboisen linna muureineen alhaalta Loiren puolelta kuvattuna.',
+      selite: 'Amboisen linna kohoaa muurineen ja torneineen Loiren rannan yläpuolelle.',
+      lahde: 'Valokuva: Martin Falbisoner, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Martin Falbisoner',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Château_d%27Amboise_from_below.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-amboise-0f8d3316.jpg',
+        lyhyt: 'Linna ja kaupunki joen takaa 1800-luvun valokuvassa.',
+        selite: 'Amboisen linna, Minimes-torni ja kaupungin talot Loiren takaa kuvattuina. Albumiinivedos vuosilta 1860–1880.',
+        lahde: 'Valokuva: Rijksmuseum, Wikimedia Commons (CC0).',
+        tekija: 'Rijksmuseum',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Het_kasteel_van_Amboise_218_Château_d%27Amboise_-_Vue_d%27Ensemble_(titel_op_object),_RP-F-00-202.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+    ],
+    kysymykset: [
+      'Miten kuningas Kaarle VIII kuoli täällä?',
+      'Miksi linnasta purettiin suurin osa?',
+    ],
     nappi: 'Kuninkaiden linna Loiren yllä',
     // 0,98603 E / 47,41368 N — en-Wikipedia "Château d'Amboise"
     laudat: {
       maailmankartta: { x: 5866.2, y: 1501.1 },
       europe: { x: 230.1, y: 646.6 },
     },
-    teksti: runko('Kuninkaiden linna Loiren yllä'),
-    lahde: koordinaatinLahde("Château d'Amboise", '18.9.2026'),
+    teksti: 'Amboisen linna on linna Amboisen kaupungissa Indre-et-Loiren departementissa '
+      + 'Loiren laaksossa. Kruunu takavarikoi sen 1400-luvulla, minkä jälkeen siitä tuli '
+      + 'suosittu kuninkaallinen asuinpaikka ja se rakennettiin laajasti uudelleen. '
+      + 'Kuningas Kaarle VIII kuoli linnassa vuonna 1498 lyötyään päänsä oven kamanaan. '
+      + 'Linna rappeutui 1500-luvun jälkipuoliskolta alkaen ja suurin osa sen sisemmistä '
+      + 'rakennuksista purettiin myöhemmin, mutta osa säilyi ja on sittemmin kunnostettu '
+      + 'yhdessä ulomman torni- ja muurikehän kanssa. Ranskan kulttuuriministeriö on '
+      + 'luokitellut linnan historialliseksi monumentiksi vuodesta 1840.',
+    lahde: 'en-Wikipedia "Château d\'Amboise", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-nimesin-areena',
