@@ -187,6 +187,16 @@ ei siirtänyt. Kolme ei osu. Saapumisnäkymässä mitattu mittakaava on
 korjaus on testattavissa **ilman selainta ja ilman laattoja**: sama
 vertailu, vaatimuksena 0,00.
 
+**Varoitus korjaajalle — siirtoviiva seuraa merkkiä.** `keraaNostot`
+polttaa merkin lisäksi sen **siirtoviivan**, jonka päät laskee
+`js/fokusniput.js nippuViivanJana` kasauspassin tuloksesta
+(`r.nippu`). Jos merkin `x`/`y` vaihdetaan lukittuun ankkuriin mutta
+viiva jätetään ennalleen, viiva osoittaa paikkaan, jossa merkkiä ei
+ole — ja se on laatassa pysyvästi. Viivan pää on siirrettävä samalla,
+tai lukitulta nostolta on jätettävä viiva polttamatta. **Tätä ei ole
+tässä erässä ratkaistu, ja se on syy, miksi korjausta ei tehty
+kiireessä.**
+
 ### 4.2 Polttoketju ei tunne PAATOKSET 34:ää
 
 Poltettavien 20:n joukossa on **7 `nakyva-kaupunki-*`-merkkiä**
@@ -264,3 +274,9 @@ pallon sarja ja `js/pallo.js` osoittavat samaan nostoversioon.
    `--leveys 1400 --korkeus 900`.
 2. **Kumpi polttotapa** (koko maailman nostotaso vai Ranskan paikkaus).
 3. **Luvun 4 korjaukset omana eränään** ennen mitään laattojen ajoa.
+   Järjestys: 4.3 (vienti kaikista Ranskan kaupungeista) → 4.2
+   (PAATOKSET 34: kaupungin sisäiset pois poltosta) → 4.1 (lukittu
+   ankkuri polttoketjuun, siirtoviiva mukana) → laattojen koepoltto
+   paikallisesti → luvun 6 komennot.
+4. **Päätös kaupungin sisäisistä** (4.2) on sisältöpäätös, ei
+   tekninen: poltettu muste on pysyvää, joten en tehnyt sitä itse.
