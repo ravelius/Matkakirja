@@ -38,10 +38,24 @@
  *      TAVOITEkorkeudessa ±5 %. Tämä on koko koreografian sääntö
  *      lukuna: ennen korjausta ennakon `await` ratkesi yhdessä
  *      millisekunnissa, ja zoomaus tapahtui vasta saaton aikana.
+ *   8. SAATTO LIIKKUU NAPPULAN SUUNTAAN (Raamattu, KARTTAUUDISTUKSEN
+ *      PAATOKSET 43 kohta 11; omistaja 18.9.2026 iPad/iPhone: *"Kun
+ *      nappula liikkuu liftauksen aikana, kartta panoroi vaaraan
+ *      suuntaan."*). Saaton ajalta poimitaan näyte 100 ms:n välein, ja
+ *      jokaisen näytevälin KAMERAN liikevektorin ja NAPPULAN
+ *      liikevektorin pistetulon on oltava > 0 — molemmat laudan
+ *      yksiköissä, nappulan paikka luettuna kameran keskipisteestä ja
+ *      ruutupoikkeamasta samalla mittakaavalla. Ennen korjausta
+ *      pistetulo oli 0/28 kummallakin ruudulla: saatto ajoi
+ *      määränpään SAAPUMISASENTOON, jonka itäsiirto (0,08 × näkyvä
+ *      kaari) oli 1400 px:llä +1,49° eli ISOMPI kuin koko matkan
+ *      pituusaste-ero −2,38°, joten kamera panoroi itään nappulan
+ *      kulkiessa länteen.
  *
  * Kaappaukset kansioon tools/savukkeet/kaappaukset/siirtozoomi/:
- * ennakko-390.png (ennakkozoomin lopussa, nappula vielä paikallaan) ja
- * saatto-390.png / saatto-1400.png (saaton keskeltä).
+ * ennakko-390.png (ennakkozoomin lopussa, nappula vielä paikallaan),
+ * saatto-390.png / saatto-1400.png (saaton keskeltä) ja
+ * saatto-suunta-390.png (vartion 8 hetki, saaton keskeltä 390 px).
  *
  * Aja: NODE_USE_ENV_PROXY=1 PORTTI=8826 \
  *      node tools/savukkeet/savuke-siirtozoomi.mjs
@@ -91,6 +105,8 @@ const ENNAKON_SIETO = 0.05;
  * ero on pikselin murto-osia, ei koreografiaa.
  */
 const ASKELEN_SIETO = 0.99;
+/** Vartion 8 näyteväli millisekunteina (suunnan pistetulo). */
+const SUUNNAN_NAYTEVALI_MS = 100;
 
 let lapi = 0;
 let kaikki = 0;
@@ -201,7 +217,7 @@ async function mittaa(ruutu) {
   await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 });
   await sivu.waitForTimeout(6000);
 
-  const mitta = await sivu.evaluate(async ({ silma, keskialue }) => {
+  const mitta = await sivu.evaluate(async ({ silma, keskialue, suunnanNaytevali }) => {
     const { ui, game: g } = window.matkakirja;
     const { findMoves, pixelOf } = await import('./js/rules.js');
     clearTimeout(ui.automaattiheittoAjastin);
@@ -259,6 +275,11 @@ async function mittaa(ruutu) {
         nappula: Boolean(nappula),
         leveys: t?.leveys ?? null,
         korkeus: t?.korkeus ?? null,
+        // Kameran keskipiste laudan yksiköissä + mittakaava: vartio 8
+        // lukee näistä sekä kameran että nappulan liikevektorin.
+        camX: t?.x ?? null,
+        camY: t?.y ?? null,
+        skaala: t?.skaala ?? null,
         px: laatikko && laatikko.width
           ? (laatikko.left + laatikko.width / 2 - koteloLaatikko.left) : null,
         py: laatikko && laatikko.height
@@ -301,6 +322,41 @@ async function mittaa(ruutu) {
       || s.py > koteloLaatikko.height * (1 - raja));
 
     /*
+     * VARTIO 8: LIIKKUUKO SAATTO NAPPULAN SUUNTAAN (PAATOKSET 43 kohta
+     * 11)?
+     *
+     * Molemmat vektorit luetaan LAUDAN yksiköissä, jotta vertailu on
+     * yhdessä koordinaatistossa: kameran keskipiste tulee suoraan
+     * `kameranTila`sta, ja nappulan paikka on sama keskipiste plus sen
+     * ruutupoikkeama jaettuna saman näytteen mittakaavalla. Näyte
+     * poimitaan 100 ms:n välein — kehysväli olisi niin lyhyt, että
+     * pyöristys ratkaisisi etumerkin.
+     */
+    const suunnanNaytteet = [];
+    let seuraava = saatonAlku ?? 0;
+    for (const s of saatonNaytteet) {
+      if (s.camX === null || !(s.skaala > 0) || s.t < seuraava) continue;
+      suunnanNaytteet.push(s);
+      seuraava = s.t + suunnanNaytevali;
+    }
+    const laudalla = (s) => ({
+      x: s.camX + (s.px - koteloLaatikko.width / 2) / s.skaala,
+      y: s.camY + (s.py - koteloLaatikko.height / 2) / s.skaala,
+    });
+    const pistetulot = [];
+    for (let i = 1; i < suunnanNaytteet.length; i += 1) {
+      const a = suunnanNaytteet[i - 1];
+      const b = suunnanNaytteet[i];
+      const na = laudalla(a);
+      const nb = laudalla(b);
+      pistetulot.push({
+        t: Math.round(b.t),
+        d: (b.camX - a.camX) * (nb.x - na.x) + (b.camY - a.camY) * (nb.y - na.y),
+      });
+    }
+    const negatiiviset = pistetulot.filter((p) => !(p.d > 0));
+
+    /*
      * VARTIO 7: onko ennakkozoomi VALMIS sillä kehyksellä, jolla nappula
      * irtoaa laudalta? Tavoitekorkeus lasketaan kameran omalla kaavalla
      * ennakkoajon pyytämästä leveydestä — sama muunnos, jonka
@@ -341,6 +397,9 @@ async function mittaa(ruutu) {
       ennakonKesto: ennakko?.kesto ?? null,
       saatonKesto: saatto?.kesto ?? null,
       naytteita: saatonNaytteet.length,
+      suunnanNaytteita: pistetulot.length,
+      suunnanNegatiiviset: negatiiviset.length,
+      suunnanEsimerkki: negatiiviset.slice(0, 3).map((p) => ({ t: p.t, d: +p.d.toFixed(3) })),
       ulkona: ulkona.length,
       ulkonaEsimerkki: ulkona.slice(0, 3).map((s) => ({
         t: Math.round(s.t), x: Math.round(s.px), y: Math.round(s.py),
@@ -354,7 +413,7 @@ async function mittaa(ruutu) {
         saapuminen: Boolean(a.kohde?.saapuminen),
       })),
     };
-  }, { silma: SILMA, keskialue: KESKIALUE });
+  }, { silma: SILMA, keskialue: KESKIALUE, suunnanNaytevali: SUUNNAN_NAYTEVALI_MS });
 
   return { ctx, sivu, mitta, virheet };
 }
@@ -496,11 +555,33 @@ for (const ruutu of RUUDUT.filter((r) => !VAIN || r.nimi === VAIN)) {
       lahdonHetki: mitta.lahdonHetki,
     }));
 
+  /*
+   * 8. SAATTO LIIKKUU NAPPULAN SUUNTAAN. Kaksi ehtoa yhdessä, koska
+   * kumpikaan ei yksin ole omistajan näkemä asia: pistetulo kertoo
+   * SUUNNAN (kartta ei saa panoroida nappulaa vastaan) ja vartion 4
+   * keskialue kertoo, ettei nappula silti karkaa reunaan.
+   */
+  tieto(`${ruutu.nimi} saaton suunta`, `pistetulo > 0 ${mitta.suunnanNaytteita - mitta.suunnanNegatiiviset}/${mitta.suunnanNaytteita} näytevälissä (${SUUNNAN_NAYTEVALI_MS} ms)`);
+  vaadi(`8 ${ruutu.nimi}: saatto liikkuu nappulan suuntaan (pistetulo > 0 ${mitta.suunnanNaytteita - mitta.suunnanNegatiiviset}/${mitta.suunnanNaytteita}, nappula keskialueella ${mitta.naytteita - mitta.ulkona}/${mitta.naytteita})`,
+    mitta.suunnanNaytteita >= 10 && mitta.suunnanNegatiiviset === 0
+    && mitta.naytteita >= 10 && mitta.ulkona === 0,
+    JSON.stringify({
+      naytteita: mitta.suunnanNaytteita,
+      negatiiviset: mitta.suunnanNegatiiviset,
+      esimerkki: mitta.suunnanEsimerkki,
+      keskialueUlkona: mitta.ulkona,
+    }));
+
   // Ennakkozoomin loppu (nappula vielä paikallaan) vain puhelinruudulla:
   // sama kuva kahdesta ruutukoosta ei kerro mitään lisää.
   if (ruutu.nimi === '390') {
     await kaappaaEnnakko(sivu, 'ennakko-390');
     tieto(`${ruutu.nimi} kaappaus (ennakko)`, join(KAAPPAUKSET, 'ennakko-390.png'));
+    // Vartion 8 oma kuva: saaton keskeltä, nappula matkalla — tästä
+    // omistaja näkee kerralla, kulkeeko kartta nappulan mukana.
+    await kaappaaSaatto(sivu, 'saatto-suunta-390');
+    tieto(`${ruutu.nimi} kaappaus (saaton suunta)`, join(KAAPPAUKSET, 'saatto-suunta-390.png'));
+    await odotaSiirronLoppu(sivu);
   }
   await kaappaaSaatto(sivu, `saatto-${ruutu.nimi}`);
   tieto(`${ruutu.nimi} kaappaus`, join(KAAPPAUKSET, `saatto-${ruutu.nimi}.png`));

@@ -136,9 +136,22 @@ test('ennakkozoomi ajaa kertoimeen ja odottaa perilletuloa', () => {
 });
 
 test('saattoajo ei enää zoomaa itse eikä palaa perillä', () => {
-  const saatto = UI.match(/ {2}aloitaSaattavaKamera\(path, kesto\) \{[\s\S]*?\n {2}\}\n/)[0];
+  const saatto = UI.match(/ {2}aloitaSaattavaKamera\(path, kesto, from = null\) \{[\s\S]*?\n {2}\}\n/)[0];
   assert.doesNotMatch(saatto, /kerroin/,
     'saatto muuttaa yhä mittakaavaa — zoomi kuuluu ennakkoon');
+  /*
+   * SAATTO LIUKUU NAPPULAN MUKANA (Raamattu, KARTTAUUDISTUKSEN
+   * PAATOKSET 43 kohta 11): askelmittakaavan maali on nappulan
+   * SIIRTYMÄ kameran nykyisestä keskipisteestä, ei määränpään
+   * saapumisasento — se ajoi 1400 px:llä kameraa itään nappulan
+   * kulkiessa länteen (mittaus 18.9.2026, savuke-siirtozoomi vartio 8).
+   */
+  assert.match(saatto, /x: kohta\.x - lahto\.x, y: kohta\.y - lahto\.y/,
+    'saaton maali ei ole enää nappulan siirtymä');
+  assert.match(saatto, /x: nyt\.x \+ siirtyma\.x, y: nyt\.y \+ siirtyma\.y/,
+    'siirtymää ei lisätä kameran nykyiseen keskipisteeseen');
+  assert.match(UI, /this\.aloitaSaattavaKamera\(path, siirtoajonKesto\(nappulanKesto\), from\)/,
+    'saatto ei saa enää lähtöpaikkaa, joten siirtymää ei voi laskea');
   // Vain KUTSU ja METODI, ei maininta: poiston perustelu elää yhä
   // kommenteissa, ja se on tarkoitus.
   assert.doesNotMatch(UI, /this\.puraSaattavaKamera\(|async puraSaattavaKamera\(/,
