@@ -85,9 +85,47 @@
  * ehdokas uudella kertoimella on täsmälleen vanha sijoitus kerrottuna
  * kertoimien suhteella. Lukkoa ei siis tarvitse purkaa: se kerrotaan
  * suhteella, jolloin KYLKI JA SUUNTA PYSYVÄT ja vain koko muuttuu —
- * juuri se, mitä omistaja pyytää (*"koko voi muuttua"*). Lukko
- * purkautuu yhä samoista syistä kuin ennenkin: nimi katoaa näkyvistä,
- * tai ruudun reuna ei anna sille tilaa.
+ * juuri se, mitä omistaja pyytää (*"koko voi muuttua"*).
+ *
+ * ══════════════════════════════════════════════════════════════════
+ * LUKKO EI PURKAUDU VEDOSSA EIKÄ ZOOMISSA — EI MISTÄÄN SYYSTÄ
+ * (omistaja 18.9.2026 klo 06.58 Suomen aikaa, Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 34 kohta 13 b, iPhone-kuva v1935:
+ * *"Saisiko Pariisin ison nimitekstin pysymaan paikallaan vaikka
+ * zoomaa tai panoroi."*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * KAKSI SÄÄNTÖÄ ON KUMOTTU tässä erässä, molemmat nimeltä:
+ *
+ *   1. *RUUDUN REUNA PURKAA LUKON* (14.9.2026). Lukittu nimi jätettiin
+ *      lukkonsa ulkopuolelle heti, kun sen laatikko ei mahtunut
+ *      ruutuun, ja ladonta valitsi sille uuden kyljen. JUURI SE on se,
+ *      minkä pelaaja näkee panoroidessa: PARIISI on saapumisessa
+ *      nimen oikealla kyljellä, ja kun vedossa kaupunki lähestyy
+ *      ruudun laitaa, kyltti loikkaa toiselle puolelle. Omistajan
+ *      päätös on nyt sanatarkasti *"ruudun reuna ei pura lukkoa (nimi
+ *      saa leikkautua)"* — leikkautuva nimi on pienempi paha kuin
+ *      hyppäävä. Sääntö on rajattu itsestään: piste itse on oltava
+ *      ruudulla (NIMEN_REUNAVARA_PX 0), joten nimi ei voi leikkautua
+ *      enempää kuin oman mittansa verran, ja kun kaupunki poistuu
+ *      ruudulta, nimi putoaa ladonnasta ja lukko vapautuu.
+ *
+ *   2. *PELIMERKKI PURKAA LUKON KERRAN KUTAKIN KOKOONPANOA KOHDEN*
+ *      (18.9.2026 aamuyöllä, edellinen erä). Se oli jo kavennettu
+ *      levon ladontoihin ja yhteen kertaan merkkien kokoonpanoa
+ *      kohden, mutta lukon sai yhä purkaa kesken pelin — ja purku
+ *      ratkaistiin leikkaustestillä, jonka kaksi puolta luetaan eri
+ *      kehyksestä (ks. mittaus alla). Omistaja: *"pelimerkki ei pura
+ *      lukkoa"*. Nappula on nyt este VAIN ladonnalle, joka synnyttää
+ *      lukon: `ladoRuutunimet` varaa pelimerkit ennen ensimmäistäkään
+ *      nimeä, joten jokainen TUORE sijoitus väistää nappulan oikein.
+ *      Lukittua nimeä ei enää koetella sitä vastaan.
+ *
+ * Lukko purkautuu siis enää yhdestä syystä: nimi putoaa ladonnasta
+ * (kaupunki katoaa ruudulta, budjetti tai tuore ladonta ei anna sille
+ * paikkaa). Paluu on silloin uusi saapuminen, ja paikka lasketaan taas
+ * kerran — juuri kuten päätöksen lause *"lukitaan kerran saapumisessa"*
+ * sanoo.
  *
  * PUOLI VALITAAN KERRAN KAUPUNGILLE. Lukko on kaupungin oma, ja
  * ensimmäinen laskenta ratkaisee puolen — lukko vain kantaa sen
@@ -364,10 +402,6 @@ export function luoNimet({
    * (elävät nostot), `pinot` pelimerkkien laatikot (nappula, kohteet),
    * kumpikin kotelon pikseleinä; `katto` on tämän ladonnan nimibudjetti.
    *
-   * `levossa` kertoo, ajetaanko tämä ladonta liikkeen jälkeen levossa
-   * (true) vai kesken liikkeen (false). Vain levon ladonta saa purkaa
-   * nimen lukon pelimerkin takia — ks. NAPPULA RATKAISTAAN LEVOSSA.
-   *
    * `vain` rajaa ehdokkaat annettuihin kaupunkeihin. Sitä käyttää
    * AVAUSLENTO (js/pallolauta/avaus.js): omistaja 3.9.2026 sanatarkasti
    * *"muiden kaupunkien kuin lontoon ja kohdekaupungin nimiä ei
@@ -385,7 +419,7 @@ export function luoNimet({
   const lado = ({
     varaukset = [], pinot = [], katto = NIMIEN_KATTO, vain = null,
     kokoKerroin: kaupunginKerroin = 1, pisteSade = 0,
-    karttaskaala = 0, vertailuskaala = 0, levossa = true, pinojenAvain = '',
+    karttaskaala = 0, vertailuskaala = 0,
   } = {}) => {
     // Kyltti on kartan mitta, ei ruudun (ks. NIMIKYLTIT KARTTAAN).
     const kokoKerroin = kaupunginKerroin
@@ -466,12 +500,8 @@ export function luoNimet({
      * KAUPUNGISSA): reunasääntö mittaa sen laatikon, joka oikeasti
      * piirtyy, joten lukitun nimen on oltava paikallaan jo tässä.
      *
-     * RUUDUN REUNA PURKAA LUKON. Jos lukittu kylki työntäisi nimen
-     * ruudun ulkopuolelle, nimi PUTOAISI kokonaan — sivuttain vaihtuva
-     * kyltti on pienempi paha kuin katoava. Reunalla siis vaihdetaan
-     * kylkeä kuten ennenkin (mitattu 14.9.2026: ilman tätä Pariisi
-     * katosi kesken vedon, kun sen laatikko osui ruudun laitaan), ja
-     * uusi sijoitus lukitaan tilalle.
+     * RUUDUN REUNA EI ENÄÄ PURA LUKKOA (kumottu 18.9.2026, ks. LUKKO EI
+     * PURKAUDU VEDOSSA EIKÄ ZOOMISSA): lukittu nimi saa leikkautua.
      */
     const paikat = new Map(ehdokkaat.map((e) => [e.c, e]));
     const nakyvat = new Set(ehdokkaat.map((e) => e.c.id));
@@ -502,8 +532,6 @@ export function luoNimet({
         vali: Number.isFinite(lukko.vali) ? lukko.vali * s : lukko.vali,
         kerroin: kokoKerroin,
         sade: pisteSade,
-        // Zoomi ja panorointi eivät ratkaise pelimerkin väistöä uudestaan.
-        pinoAvain: lukko.pinoAvain ?? null,
         rs,
       };
     };
@@ -529,81 +557,45 @@ export function luoNimet({
     };
     const leikkaa = (a, b) => a.x0 < b.x1 && a.x1 > b.x0 && a.y0 < b.y1 && a.y1 > b.y0;
     /*
-     * ── PELINAPPULA ON KOVA ESTE MYÖS KAUPUNGIN OMALLE NIMELLE ─────
+     * ── PELINAPPULA ON ESTE VAIN TUOREELLE LADONNALLE ──────────────
      * (omistaja 17.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 32
      * kohta 5 ja TARKENNUS 2: *"yksikään nimiö ei saa olla toisen
      * nimiön, merkin, kaupungin nimen tai pelinappulan päällä millään
-     * zoomilla"*; ankkurierän mittaus PR #2565 jätti PARIISI-nimen
-     * nappulan päälle saapumisessa ja välizoomissa.)
+     * zoomilla"*; tarkennettu 18.9.2026, PAATOKSET 34 kohta 13 b:
+     * *"pelimerkki ei pura lukkoa"*.)
      *
-     * JUURISYY EI OLLUT LADONNASSA VAAN LUKOSSA. `ladoRuutunimet` saa
+     * VÄISTÖ ON LADONNASSA, EI LUKOSSA. `ladoRuutunimet` saa
      * pelimerkit `pinot`-listassa ja VARAA ne ennen ensimmäistäkään
-     * nimeä, joten tuore sijoitus väistää nappulan oikein. Lukko (ks.
-     * ZOOMI EI SAA VAIHTAA KYLTIN PUOLTA) palautti nimen kuitenkin
-     * vanhaan paikkaansa PELKÄN RUUTUEHDON (`mahtuu`) nojalla — ja kun
-     * pelaaja saapuu kaupunkiin, nappula ilmestyy nimen alle sen
-     * jälkeen, kun lukko on jo otettu. Nimi jäi siis lukkonsa vuoksi
-     * nappulan päälle, vaikka ladonta oli juuri siirtänyt sen pois.
+     * nimeä, joten jokainen TUORE sijoitus väistää nappulan oikein —
+     * ja koska lukko syntyy aina tuoreesta sijoituksesta, myös lukittu
+     * paikka on nappulan väistänyt paikka.
      *
-     * Ehto on sama kuin pudonneen nimen paluulla kymmenen riviä
-     * alempana (`[...varaukset, ...pinot]`), mutta VAIN pelimerkeille:
-     * muu muste (nostot, turisti-info) on jo tämän ajon varauksissa,
-     * ja jos lukko purkautuisi niistäkin, kyltti vaihtaisi puolta joka
-     * kerta kun nosto liukuu sen viereen — juuri se, minkä PAATOKSET
-     * 24 kieltää. Lukon purkautuessa nimi ladotaan kerran uudelleen ja
-     * lukitaan uuteen paikkaansa (lukot rakennetaan tämän ajon
-     * lopullisista sijoituksista).
+     * MIKSI LUKKOA EI SAA KOETELLA NAPPULAA VASTAAN (mitattu Mac,
+     * puhelin 390 × 844, Pariisi, veto −40 px; docs/raportit/
+     * viesti-fable-nimikyltti-veto-20260918.md). Leikkaustestin kaksi
+     * puolta luetaan eri kehyksestä: lukon laatikko lasketaan TÄMÄN
+     * kehyksen kamerasta (`e.x`, getScreenCoords) ja nappulan laatikko
+     * EDELLISEN kehyksen DOM-paikasta (CSS2D). Vedossa ero on liikkeen
+     * verran (4,7 px / 40 ms), ja koska saapumisen sijoitus on
+     * nappulan kyljessä kiinni (NIMION_RAKO 3 px + PELIMERKIN_VARA_PX
+     * 4 px), se riittää kääntämään testin — mittauksessa `pino` oli
+     * levossa ja askelilla 1–3 false, askelella 4 true, ja juuri
+     * silloin kyltti vaihtoi kyljen (−40,0 → +21,5 → +62,4 px eli
+     * 102,4 px vedon yli). Testi on siis veitsenterällä kumpaan
+     * suuntaan tahansa; ainoa vakaa vastaus on olla kysymättä.
      *
-     * ══════════════════════════════════════════════════════════════
-     * NAPPULA RATKAISTAAN LEVOSSA, EI KESKEN VEDON (18.9.2026)
-     * ══════════════════════════════════════════════════════════════
-     *
-     * Yllä oleva purku oli voimassa myös niillä ladonnoilla, jotka
-     * ajetaan LIIKKEEN AIKANA (js/pallolauta/lauta.js LADONTA KULKEE
-     * MUKANA, enintään kerran 200 ms:ssä) — ja juuri siellä se rikkoi
-     * PAATOKSET 32 kohdat 1 ja 5: kyltti hyppäsi vedon yli.
-     *
-     * MITATTU JUURISYY (Mac, puhelin 390 × 844, Pariisi, veto −40 px;
-     * ks. docs/raportit/viesti-fable-nimikyltti-veto-20260918.md).
-     * Nappula on kartalla kiinni kuten kaupunkikin: sen laatikon
-     * keskipiste pysyi koko vedon ajan 8,2 / 42,8 px:n päässä
-     * kaupungin pisteestä. Leikkaustesti EI silti ole vakaa, koska sen
-     * kaksi puolta luetaan eri hetkestä: lukon laatikko lasketaan
-     * TÄMÄN kehyksen kamerasta (`e.x`, getScreenCoords) ja nappulan
-     * laatikko EDELLISEN kehyksen DOM-paikasta (CSS2D). Vedossa ero on
-     * liikkeen verran (mitattu 4,7 px / 40 ms), ja koska saapumisen
-     * sijoitus on nappulan kyljessä kiinni (NIMION_RAKO 3 px +
-     * PELIMERKIN_VARA_PX 4 px), se riittää kääntämään testin.
-     * Mittaus: `pino` oli levossa ja askelilla 1–3 false, askelella 4
-     * true — ja samalla askelella kyltti vaihtoi kyljen (ank end →
-     * start, ero kaupungista −40,0 → +21,5 px ja vedon loppuun
-     * mennessä +62,4 px eli 102,4 px). Sen jälkeen `pino` oli taas
-     * false ja kyltti pysyi liikkumatta.
-     *
-     * Purku on siis VAIN LEVON ladonnoissa (`levossa`) ja VAIN KERRAN
-     * KUTAKIN PELIMERKKIEN KOKOONPANOA KOHDEN (`pinojenAvain`, ks.
-     * js/pallolauta/merkit.js `avain`): avain kertoo, mitkä merkit
-     * ovat kartalla ja missä KARTAN pisteessä, joten se ei muutu
-     * panoroitaessa eikä zoomatessa — vain nappulan ilmestyessä,
-     * kadotessa tai siirtyessä. Kun lukko on kerran ratkaistu tälle
-     * avaimelle, sitä ei enää koetella: pelkkä `levossa` ei riittänyt,
-     * koska savuke mittaa juuri levossa ja vedon perälauta-ladonta
-     * käänsi saman veitsenterällä olevan testin (mitattu tässä erässä:
-     * kyltti hyppäsi yhä 102,4 / 110,1 px vedon yli).
-     *
-     * Liikkeen aikana lukko pitää aina. Ruudun reuna purkaa lukon yhä
-     * (`mahtuu`), koska siellä vaihtoehto on katoava nimi.
+     * KUMOTTU: purku levon ladonnoissa kerran kutakin merkkien
+     * kokoonpanoa kohden (`pinojenAvain`, edellinen erä 18.9.2026
+     * aamuyöllä). Sen mukana poistuivat `lado`n parametrit `levossa` ja
+     * `pinojenAvain` sekä lukon kenttä `pinoAvain`.
      */
-    const pinoLaatikot = pinotVaralla.filter((r) => Number.isFinite(r?.x0) && Number.isFinite(r?.y0)
-      && Number.isFinite(r?.x1) && Number.isFinite(r?.y1) && r.x1 > r.x0 && r.y1 > r.y0);
     for (const n of ladottu.nimiot) {
       const e = paikat.get(n.c);
       const r = lukonLaatikko(n.c.id, e);
-      if (!r || !mahtuu(r)) continue;
       const lukko = skaalattuLukko(lukitut.get(n.c.id));
-      const ratkaistu = lukko?.pinoAvain === pinojenAvain;
-      if (levossa && !ratkaistu && pinoLaatikot.some((v) => leikkaa(v, r))) continue;
+      if (!r || !lukko) continue;
       asetaLukko(n, lukko, r);
+      n.lukittu = true;
     }
     /*
      * LUKITTU NIMI EI PUTOA KESKEN VEDON. Ladonta pudottaa nimen, jos
@@ -621,7 +613,9 @@ export function luoNimet({
         if (jo.has(e.c.id)) continue;
         const lukko = skaalattuLukko(lukitut.get(e.c.id));
         const r = lukonLaatikko(e.c.id, e);
-        if (!lukko || !r || !mahtuu(r)) continue;
+        // Reuna ei estä paluuta (ks. LUKKO EI PURKAUDU VEDOSSA EIKÄ
+        // ZOOMISSA kohta 1): lukittu nimi saa leikkautua.
+        if (!lukko || !r) continue;
         if (ladottu.nimiot.some((n) => n.r && leikkaa(n.r, r))) continue;
         // Muu muste (nostojen ikonit, turisti-info, pelimerkit) liikkuu
         // kartan mukana kuten kaupunkikin, joten tämä ehto ei ailahda
@@ -643,14 +637,22 @@ export function luoNimet({
           ladottu.nimiot.splice(ladottu.nimiot.indexOf(irti), 1);
           ladottu.pudotettu += 1;
         }
-        const n = { c: e.c, r };
+        const n = { c: e.c, r, lukittu: true };
         asetaLukko(n, lukko, r);
         ladottu.nimiot.push(n);
         ladottu.pudotettu = Math.max(0, ladottu.pudotettu - 1);
       }
     }
+    /*
+     * REUNAPUDOTUS KOSKEE VAIN LUKITSEMATONTA NIMEÄ. Tuore nimi, joka
+     * ei mahdu ruutuun, on katkaistu teksti tyhjästä — se pudotetaan
+     * kuten ennenkin (ks. NIMI EI SAA LEIKKAUTUA RUUDUN REUNASTA).
+     * LUKITTU nimi sen sijaan JÄÄ ja saa leikkautua: se on omistajan
+     * oma valinta (PAATOKSET 34 kohta 13 b), ja juuri tämä pudotus oli
+     * se, joka pakotti vedossa uuden ladonnan ja kyljen vaihdon.
+     */
     const reunalta = ladottu.nimiot.length;
-    ladottu.nimiot = ladottu.nimiot.filter((n) => mahtuu(n.r));
+    ladottu.nimiot = ladottu.nimiot.filter((n) => n.lukittu || mahtuu(n.r));
     ladottu.pudotettu += reunalta - ladottu.nimiot.length;
     const lukot = new Map();
     const datumit = ladottu.nimiot.map((n) => {
@@ -680,14 +682,6 @@ export function luoNimet({
         vali: n.vali,
         kerroin: kokoKerroin,
         sade: pisteSade,
-        /*
-         * MILLE PELIMERKKIEN KOKOONPANOLLE VÄISTÖ ON RATKAISTU (ks.
-         * NAPPULA RATKAISTAAN LEVOSSA). Levon ladonta merkitsee lukon
-         * ratkaistuksi tälle kokoonpanolle; liikkeen ladonta kantaa
-         * vain edellisen merkinnän eteenpäin, koska se ei saa
-         * ratkaista väistöä.
-         */
-        pinoAvain: levossa ? pinojenAvain : (lukitut.get(n.c.id)?.pinoAvain ?? null),
         rs: suhde,
       });
       return {
