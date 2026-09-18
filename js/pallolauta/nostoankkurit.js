@@ -79,10 +79,16 @@ export function nostoankkuritSallittu() {
 }
 
 /**
- * YHDEN KOON VASTAKOE: `?nostokoko=0` palauttaa kartan mukana kasvavan
- * mitan (PAATOKSET 14), jolloin lähizoomin jättinimiöt palaavat.
+ * KARTAN MITAN VASTAKOE: `?nostokoko=0` palauttaa ruutuvakion (kerroin
+ * 1), jolloin nostot ovat saman kokoisia joka zoomilla.
+ *
+ * VIPU KÄÄNNETTIIN 18.9.2026 (Fablen päätös, Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 34 kohta 15 TILA): elävä nosto skaalautuu kartan mukana
+ * kuten laattaan poltettu muste, joten kartan mitta on NORMAALI polku
+ * ja yksi koko on vastakoe. Ennen tätä lippu oli toisin päin
+ * (`yksiKokoSallittu`, PAATOKSET 32 kohta 4).
  */
-export function yksiKokoSallittu() {
+export function kartanMittaSallittu() {
   try {
     const arvo = new URLSearchParams(globalThis.location?.search ?? '').get('nostokoko');
     return !/^(0|ei|off)$/.test(arvo ?? '');

@@ -120,3 +120,99 @@ Päätös on sinun, en koskenut kumpaankaan Raamatun kohtaan:
 - `css/styles.css` — `.pallolauta-viuhka-mittaus`
 - `tests/pallolauta.test.mjs` — vartio `korkeusMin`in uuteen muotoon
 - `tools/savukkeet/mittaa-liuskan-pohja.mjs` — uusi kohdemittari (10 vartiota)
+
+## Skaalaus
+
+18.9.2026 klo 10.45 Suomen aikaa · Opus-agentti · sama haara
+`claude/bold-ride-vow4ki-liuska-pohja`
+
+Fablen päätös yllä olevaan ristiriitaan: **vaihtoehto 2, kerroin-1-lukko
+puretaan** (Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 15 TILA).
+Elävä nosto — pallo JA nimiö — skaalautuu kartan mukana kuten laattaan
+poltettu muste: saapumisnäkymässä poltetun merkin koko, lähemmäs
+zoomattaessa isompana, kunnes nimiö osuu 16 px:n ruutukattoon
+(PAATOKSET 31), jolloin molemmat seisovat.
+
+**Vipu käännettiin, uutta mekanismia ei tullut.**
+`js/pallolauta/nostot.js` `nostonKarttakerroin` on nyt
+`nimenKarttakerroin(karttaskaala, vertailuskaala)` eli PAATOKSET 14:n
+kerroin, ja vastakoe `?nostokoko=0` palauttaa ruutuvakion. Lipun
+funktio nimettiin sen mukaan: `yksiKokoSallittu` → `kartanMittaSallittu`
+(`js/pallolauta/nostoankkurit.js`). Pallo ja nimiö ovat samassa
+rasterissa, joten pallo kasvaa täsmälleen siihen asti, kun nimiö osuu
+kattoon — *"pallo noudattaa samaa kattoa suhteessa"*. Kaupunkimerkit ja
+turisti-infon kyltti lukevat saman `nostonMitta`n
+(`js/kaupunkinosto.js`), joten ne seuraavat samaa kaavaa ilman omaa
+koodia.
+
+**Ankkurit ja ryhmitys mittaavat nyt saapumisen mitalla.** Tämä oli
+ainoa kohta, jota vivun kääntö ei olisi hoitanut itsestään: ankkurit ja
+ryhmitys lasketaan KERRAN saapumiskehyksessä (`p × uloinOsuus`,
+PAATOKSET 32 kohdat 1–2), mutta laatikon koko tuli `nostonMitta`sta eli
+NYKYISESTÄ zoomista. Ruutuvakiolla se oli sama luku; kartan mitalla se
+olisi ollut sitä isompi, mitä syvemmällä kamera sattui olemaan
+ankkurointihetkellä — sama ladonta olisi antanut eri tuloksen eri
+hetkellä. Nyt kehyksessä ladottaessa laatikko lasketaan
+`saapumisMitta(d)`:llä (uusi vienti, kerroin 1). Kehykseen palautettuna
+nykyinen mitta on katon alapuolella täsmälleen saapumisen mitta ja
+katon yläpuolella sitä PIENEMPI, joten **katto tekee lähizoomista
+väljemmän, ei ahtaamman** — kasvu ei voi synnyttää uutta limitystä.
+
+### Mittaus (Chromium 390 × 844, dpr 2, Ranska-tallenne, Pariisi)
+
+`tools/savukkeet/mittaa-liuskan-pohja.mjs` — **13/13 vartiota läpi**
+(kaksi uutta vartiota tälle päätökselle):
+
+| Väite | Mitattu |
+| --- | --- |
+| 34k15 saapumisnäkymä = poltettu muste | nimiö **8,50 px**, pallo **5,25 px** (22 merkkiä) |
+| 34k15 nosto kasvaa kartan mukana | saapuen 8,50 px → syvin zoomi **16,00 px** |
+| 34k15 syvimmässä zoomissa nimiö katossa | **16,00 px** = katto; pallo 9,89 px samassa suhteessa |
+| 15c syvin zoomi (ennallaan) | 40,00 lautayksikköä, syvennys 1,50 × |
+| 15a–15b, 14v (ennallaan) | pohjan peitto 0,824 · kontrasti 7,23:1 · marginaalit ±0,8 px · liuskan alla 0 |
+
+`tools/savukkeet/mittaa-nostoankkurit.mjs` (Pariisi 390 px, kolme
+zoomia), **10/19 vartiota läpi**. Mitan vartiot 3, 4 ja 6 lukitsivat
+ruutuvakion (PAATOKSET 32 kohta 4 ja 33 kohta 3), joten ne
+päivitettiin uuteen sääntöön: odotettu mitta on
+`min(NOSTON_MITTA / zoomin osuus, katto)`. Vartiot 3 ja 6 ovat sen
+jälkeen vihreitä kaikilla kolmella zoomilla:
+
+| Zoomi | noston mitta (odotus) | pallon halkaisija (odotus) | limittyviä pareja |
+| --- | --- | --- | --- |
+| saapuminen (1,00) | 0,773 (0,773 = poltettu) | 5,25 px (5,25) | 3 |
+| välizoomi (0,60) | 1,285 (1,288) | 8,74 px (8,76) | 1 |
+| lähizoomi (0,34) | **1,455 (1,455 = katto)** | 9,89 px (9,89) | 1 |
+
+Ankkurivartio 1 (*sama nosto samassa lat/lng-pisteessä kaikilla
+zoomeilla*) on vihreä — kasvu ei liikuttanut ankkureita.
+
+**Limityksistä, rehellisesti: lähizoomissa jää yksi pari, eikä se tule
+kasvusta.** Pari on `Pariisi × nappula` — kaupungin NIMIKERROKSEN
+teksti ja pelinappula samassa karttapisteessä, koska pelaaja seisoo
+Pariisissa. Sama pari on ruudulla myös saapumisnäkymässä, jossa tämän
+erän muutos on todistettavasti tyhjä (mitta 0,773 = entinen ruutuvakio
+ja ankkurit lasketaan samassa kehyksessä samoilla laatikoilla), joten
+pari on tätä erää vanhempi. Saapumisen kaksi muuta paria ovat
+poltettua mustetta (`Camarguen hevoset × Camarguenvarsa` on laatan oma
+pari, jota ei voi siirtää ilman uutta polttoa; `Cosquerin luola ×
+Pétanque`). **Kasvu ei lisännyt limityksiä yhtään: 3 → 1 → 1
+sisäänpäin zoomatessa.** Vartiot 2, 4 ja 5 ovat siis punaisia samoista
+syistä kuin ennen tätä erää (vartio 4:n kyltti ei ollut ruudulla
+lainkaan, mitta `—`); ne kuuluvat nappulan ja nimikerroksen omaan
+erään, en koskenut niihin tässä aikakatossa.
+
+`node --test tests/*.test.mjs`: **3595 läpi, 0 kaatunutta, 13
+ohitettua** — yhtään lukkoa ei tarvinnut päivittää.
+`node tools/build-standalone.mjs` ajettu ennen pushia.
+
+Kaappaus 390 px syvin zoomi Pariisi (uusi, kasvaneilla merkeillä):
+`docs/raportit/kuvat/liuska-pohja-20260918/liuska-pohja-jalkeen-syvin-390.png`
+(ja saapumisnäkymä `…-saapuen-390.png`).
+
+### Kosketut tiedostot (tämä osio)
+
+- `js/pallolauta/nostoankkurit.js` — `yksiKokoSallittu` → `kartanMittaSallittu`, vivun suunta
+- `js/pallolauta/nostot.js` — `nostonKarttakerroin` kartan mitaksi, `saapumisMitta`, ankkuroinnin ja ryhmityksen laatikot kehyksen mitalla
+- `tools/savukkeet/mittaa-liuskan-pohja.mjs` — saapumisnäkymän mittaus ja kaksi uutta vartiota
+- `tools/savukkeet/mittaa-nostoankkurit.mjs` — mitan vartiot 3/4/6 uuteen sääntöön, `?nostokoko=0`:n uusi merkitys

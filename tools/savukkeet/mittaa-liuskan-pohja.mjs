@@ -337,6 +337,9 @@ const zoomi = await sivu.evaluate(async () => {
       karttaskaala: l.nakyvaAlue?.()?.skaala ?? null,
     };
   };
+  // Saapumisnäkymä ensin: siitä luetaan poltetun merkin koko
+  // (PAATOKSET 34 kohta 15 TILA), johon kasvua verrataan.
+  const saapuen = await mittaa(pov.altitude);
   const a = await mittaa(ennen);
   const b = await mittaa(jalkeen);
   const ohj = l.pallo.controls?.();
@@ -344,12 +347,29 @@ const zoomi = await sivu.evaluate(async () => {
   return {
     syvennys,
     kuvasuhde,
+    saapuen,
     ennen: a,
     jalkeen: b,
     minDistanceKorkeus: ohj ? (ohj.minDistance / sade) - 1 : null,
     katto: n.NOSTON_NIMIO_KATTO_PX,
   };
 });
+/*
+ * PAATOKSET 34 kohta 15 TILA: elävä nosto on saapuessa TÄSMÄLLEEN
+ * poltetun merkin kokoinen (nimiö 8,5 px, pallo 5,25 px = nimiö ×
+ * 5,25/8,5, koska merkki ja nimiö ovat samassa rasterissa) ja kasvaa
+ * kartan mukana kattoon asti.
+ */
+const POLTETTU_NIMIO_PX = 8.5;
+const PALLON_OSUUS = 5.25 / 8.5;
+const pallo = (nimioPx) => (Number.isFinite(nimioPx) ? nimioPx * PALLON_OSUUS : NaN);
+tieto('saapumisnäkymä', `korkeus ${p(zoomi.saapuen.korkeus, 5)}`
+  + ` · nimiö ${p(zoomi.saapuen.nimioPx)} px · pallo ${p(pallo(zoomi.saapuen.nimioPx))} px`
+  + ` (${zoomi.saapuen.merkkeja} merkkiä)`);
+vaadi('34k15. saapumisnäkymässä nimiö 8,5 px ja pallo 5,25 px (poltettu muste)',
+  Number.isFinite(zoomi.saapuen.nimioPx)
+    && Math.abs(zoomi.saapuen.nimioPx - POLTETTU_NIMIO_PX) < 0.6,
+  `nimiö ${p(zoomi.saapuen.nimioPx)} px (tavoite ${POLTETTU_NIMIO_PX})`);
 tieto('syvin zoomi ennen', `korkeus ${p(zoomi.ennen.korkeus, 5)} · leveys ${p(zoomi.ennen.leveysYks)} lautayks.`
   + ` · skaala ${p(zoomi.ennen.karttaskaala, 3)} · nimiö ${p(zoomi.ennen.nimioPx)} px`
   + ` · merkin leveys ${p(zoomi.ennen.merkinLeveysPx)} px (${zoomi.ennen.merkkeja} merkkiä)`);
@@ -368,6 +388,14 @@ vaadi('15c. laudan zoomiraja (minDistance) seuraa syvennystä',
 vaadi('15c. nimiön 16 px:n ruutukatto pitää syvimmässä zoomissa (PAATOKSET 31)',
   !Number.isFinite(zoomi.jalkeen.nimioPx) || zoomi.jalkeen.nimioPx <= zoomi.katto + 0.01,
   `${p(zoomi.jalkeen.nimioPx)} px > ${zoomi.katto} px`);
+vaadi('34k15. nosto kasvaa kartan mukana saapumisesta syvimpään zoomiin',
+  Number.isFinite(zoomi.jalkeen.nimioPx)
+    && zoomi.jalkeen.nimioPx > zoomi.saapuen.nimioPx + 1,
+  `saapuen ${p(zoomi.saapuen.nimioPx)} px → syvin ${p(zoomi.jalkeen.nimioPx)} px`);
+vaadi('34k15. syvimmässä zoomissa nimiö seisoo katossa (16 px), pallo samassa suhteessa',
+  Number.isFinite(zoomi.jalkeen.nimioPx)
+    && Math.abs(zoomi.jalkeen.nimioPx - zoomi.katto) < 0.05,
+  `nimiö ${p(zoomi.jalkeen.nimioPx)} px · pallo ${p(pallo(zoomi.jalkeen.nimioPx))} px`);
 await kaappaa(`liuska-pohja-jalkeen-syvin-${LEVEYS}.png`);
 
 console.log(`\n${lapi}/${kaikki} vartiota läpi`);
