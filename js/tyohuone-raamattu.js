@@ -4722,6 +4722,7 @@ export const RAAMATTU = {
           + 'SAMIREIVINEN_DRIVE_API; R2_* johdetaan AWS_*/AMPARI/PAATE-riveista. '
           + 'Fable tarkisti nimet ja pituudet arvoja nakematta. TYHJANA yha '
           + 'FREESOUND_API_KEY ja EUROPEANA_API (taytetaan kun aanihaku tai '
+          + 'kuvahaku tarvitsee). Actionsin secretit jaavat ennalleen. '
           + 'C) AANILAITE JA SAVUKKEET (Fable 19.9.2026 klo 02.30 Suomen aikaa): '
           + 'Macin OLETUSAANILAITE vaikuttaa Chromiumin Web Audioon: kun oletus '
           + 'oli sammutettu Scarlett Solo USB, new AudioContext() kesti 20 s ja '
@@ -4733,8 +4734,7 @@ export const RAAMATTU = {
           + 'aanivartiot kaatuvat kaikki kerralla, tarkista ensin oletuslaite '
           + '(system_profiler SPAudioDataType, "Default Output Device") ennen '
           + 'koodin epailya; omistaja saa vaihtaa Scarlettin takaisin, kun se on '
-          + 'paalla - runnerille riittaa mika tahansa aktiivinen laite. '
-          + 'kuvahaku tarvitsee). Actionsin secretit jaavat ennalleen.',
+          + 'paalla - runnerille riittaa mika tahansa aktiivinen laite.',
         'IHMISEN MATKA: KELLO EI KULJE TAAKSEPAIN, PAITSI AIKAHYPYSSA (omistaja '
           + '7.9.2026 ilta klo 21.50 Suomen aikaa, sanatarkasti: "Ja tarinan '
           + 'jarjestys pitaa muuttaa. Outoa etta kello menee taaksepain etela '
