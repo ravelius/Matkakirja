@@ -670,6 +670,26 @@ export const LAATTAKERROS_VARA_AST = 0.5;
 /** …ja vähintään tämä osuus laatikon suuremmasta sivusta (liikkeen vara). */
 export const LAATTAKERROS_VARA_OSUUS = 0.03;
 /*
+ * MERET NÄKYVIIN ON KOKEILU KYTKIMEN TAKANA (`?meretNakyviin=1`).
+ *
+ * Omistaja 18.9.2026 (PAATOKSET 37 kohta 2): *"Ainakin haluaisin
+ * kokeilla ja nahda sen"*. Maamaski maksaa yhden pikselipassin laattaa
+ * kohti (ks. maalaaKermaMaamaskilla), ja sen rannikkolaatu on
+ * nähtävä ruudulla ennen kuin siitä tulee oletus — siksi tämä on
+ * lippu eikä vaihdos. Oletus on POIS, kunnes omistaja on nähnyt
+ * kuvaparin; kytkimen poistaminen on yhden rivin muutos tähän.
+ *
+ * LIPPU LUETAAN KERRAN MODUULIN LATAUTUESSA: laattoja rakennetaan
+ * sadoittain, eikä jokainen niistä saa jäsentää osoiteriviä uudestaan.
+ */
+export const MERET_NAKYVIIN = (() => {
+  try {
+    const arvo = new URLSearchParams(globalThis.location?.search ?? '').get('meretNakyviin');
+    return arvo !== null && !/^(0|ei|off)$/.test(arvo);
+  }
+  catch { return false; }
+})();
+/*
  * NOPEA EDESTAKAINEN PANOROINTI (omistajan palaute v1649, iPad,
  * sanatarkasti): *"Ainoastaan jos todella nopeasti panoroi edestakaisin
  * päästämättä sormea irti niin kartta putoaa joiltain osin hetkeksi
@@ -1014,8 +1034,83 @@ export function maalaaMaailmanVari(ctx, {
   return true;
 }
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * MAAMASKI PIKSELISTÄ: MERET JÄÄVÄT ALKUPERÄISIKSI
+ * (omistaja 18.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 37 kohta 2)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Sanatarkasti: *"meret saisi olla silla Alkuperaisella
+ * korkeuserokartalla ja varilla … vain maiden kartoista otettaisiin
+ * korkeuserot pois nakyvista mutta ei merista seka kohdemaasta."*
+ *
+ * MASKI LUETAAN POHJALAATAN PIKSELISTÄ, EI AINEISTOSTA. Merimaski on
+ * generaattorin rakennusaikainen tieto (tools/generoi-laattapyramidi.mjs
+ * merenAlalla): pelillä ei ole sitä, eikä sitä saa hakea kesken
+ * panoroinnin — se olisi juuri se odotus, jonka kohta 1 kieltää.
+ * Pohjalaatta on kuitenkin jo kankaalla, ja SIINÄ maa ja meri ovat eri
+ * sävyjä samasta moottorista, joten maski on luettavissa pikselistä.
+ *
+ * EROTIN ON PUNAISEN JA SINISEN ERO (R − B), EI KIRKKAUS. Kirkkaus ei
+ * erota matalaa merta alangosta — molemmat ovat vaaleaa paperia.
+ * Sävykylläisyys erottaa: tools/fokuskartta/piirto.js ASTEIKKO on
+ * lämmin seepia (R − B on merenpinnan tasolla 48, 500 m:ssä 80,
+ * 1400 m:ssä 98), kun taas SYVYYS on *"viileää paperia"* (R − B
+ * ankkureissa 32 → 10) ja se sekoitetaan paperiin puolella peitolla
+ * (maailmapiirto.js MEREN_PEITTO 0,5), jolloin meren R − B on
+ * 38 (ranta) … 27 (syvin valtameri).
+ *
+ * MAASTON RAE EI HÄIRITSE. Maapikselin kohina (`pigmentti`, `lai`)
+ * lisätään maailmapiirto.js:ssä KAIKKIIN KOLMEEN KANAVAAN samana
+ * lukuna, joten se katoaa erotuksesta kokonaan. Varjostus taas
+ * KASVATTAA eroa (sininen vaimennetaan erikseen kertoimella
+ * 1 − varjo · 0,3), joten vuoren varjopuoli ei luiskahda mereksi.
+ *
+ * RAJA ON PEHMEÄ, EI KYNNYS. Kova kynnys piirtäisi rannikolle
+ * sahalaidan juuri siihen paikkaan, jossa webp:n väripakkaus on
+ * sumeimmillaan. Siksi kerman peitto on `smoothstep` välillä
+ * MERI_ERO … MAA_ERO: syvä meri jää koskematta, sisämaa saa täyden
+ * peiton, ja ranta liukuu näiden välillä laatan omalla sumeudella.
+ */
+const TASOITUS_MERI_ERO = 36;
+const TASOITUS_MAA_ERO = 52;
+
+/**
+ * Kerma laatan kankaalle suojan ULKOPUOLELLE niin, että meri jää
+ * pohjan omaan syvyysväriin. Yksi pikselipassi laattaa kohti.
+ *
+ * @returns {boolean} maalattiinko
+ */
+function maalaaKermaMaamaskilla(ctx, {
+  W, H, x0, y0, x1, y1, kerma, peitto,
+}) {
+  let data = null;
+  try { data = ctx.getImageData(0, 0, W, H); } catch { return false; }
+  const d = data.data;
+  const [kr, kg, kb] = kerma;
+  const vali = TASOITUS_MAA_ERO - TASOITUS_MERI_ERO;
+  const suoja = x1 > x0 && y1 > y0;
+  for (let y = 0; y < H; y += 1) {
+    const rivilla = suoja && y >= y0 && y < y1;
+    for (let x = 0; x < W; x += 1) {
+      if (rivilla && x >= x0 && x < x1) { x = x1 - 1; continue; }
+      const i = (y * W + x) * 4;
+      const ero = d[i] - d[i + 2];
+      if (ero <= TASOITUS_MERI_ERO) continue;
+      let t = ero >= TASOITUS_MAA_ERO ? 1 : (ero - TASOITUS_MERI_ERO) / vali;
+      t = t * t * (3 - 2 * t);
+      const a = peitto * t;
+      d[i] += (kr - d[i]) * a;
+      d[i + 1] += (kg - d[i + 1]) * a;
+      d[i + 2] += (kb - d[i + 2]) * a;
+    }
+  }
+  ctx.putImageData(data, 0, 0);
+  return true;
+}
+
 export function maalaaTasoitus(ctx, {
-  tasoitus, kartta, ppu, arkki, kuva = null,
+  tasoitus, kartta, ppu, arkki, kuva = null, maamaski = false,
 }) {
   if (!ctx || !tasoitus?.suoja || !arkki || !(ppu > 0)) return false;
   if (!(kartta?.leveys > 0) || !(kartta.korkeus > 0)) return false;
@@ -1028,12 +1123,20 @@ export function maalaaTasoitus(ctx, {
   const x1 = raja(x0, W, Math.round((s.x + s.w - arkki.x) * ppu - kartta.kansX0));
   const y1 = raja(y0, H, Math.round((s.y + s.h - arkki.y) * ppu - kartta.kansY0));
   const [r, g, b] = [1, 3, 5].map((i) => parseInt(tasoitus.kerma.slice(i, i + 2), 16));
-  ctx.fillStyle = `rgba(${r},${g},${b},${tasoitus.peitto})`;
-  if (!(x1 > x0) || !(y1 > y0)) { ctx.fillRect(0, 0, W, H); return true; }
-  if (y0 > 0) ctx.fillRect(0, 0, W, y0);
-  if (y1 < H) ctx.fillRect(0, y1, W, H - y1);
-  if (x0 > 0) ctx.fillRect(0, y0, x0, y1 - y0);
-  if (x1 < W) ctx.fillRect(x1, y0, W - x1, y1 - y0);
+  if (maamaski) {
+    maalaaKermaMaamaskilla(ctx, {
+      W, H, x0, y0, x1, y1, kerma: [r, g, b], peitto: tasoitus.peitto,
+    });
+    if (!(x1 > x0) || !(y1 > y0)) return true;
+  }
+  else {
+    ctx.fillStyle = `rgba(${r},${g},${b},${tasoitus.peitto})`;
+    if (!(x1 > x0) || !(y1 > y0)) { ctx.fillRect(0, 0, W, H); return true; }
+    if (y0 > 0) ctx.fillRect(0, 0, W, y0);
+    if (y1 < H) ctx.fillRect(0, y1, W, H - y1);
+    if (x0 > 0) ctx.fillRect(0, y0, x0, y1 - y0);
+    if (x1 < W) ctx.fillRect(x1, y0, W - x1, y1 - y0);
+  }
   if (kuva) {
     // Laatan kuva venytetään kankaalle (reunalaatta on vajaa), joten
     // lähdesuorakaide on sama osuus kuvasta kuin kohde kankaasta.
@@ -1499,6 +1602,60 @@ export function luoLaattakerros({
      * pyramidinTasoitus.
      */
     const tasoitus = kerrokset.vari ? pyramidinTasoitus() : null;
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * KERMA EI ODOTA VÄRILAATTAA (omistaja 18.9.2026, Raamattu
+     * KARTTAUUDISTUKSEN PAATOKSET 37 kohta 1)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * Sanatarkasti: *"peli valkkyy panoroitaessa, eli etta poistettu
+     * korkeusero kartta tulee nakyviin aina vasta pienella viiveella"*.
+     *
+     * JUURISYY ON VÄRITASON TASOVÄLI, EI VERKON VIIVE. Kohdemaan
+     * väritaso on ajettu vain tasoille z4…z8 (ämpärin pyramidi.json,
+     * `varitasot.<ISO>.tasot`), ja `pyramidinKerrostasot(z)` lisää
+     * `vari`-kerroksen VAIN niille tasoille. Tasoilla z0…z3 silmukka ei
+     * siis koskaan päätynyt tähän haaraan, eikä `maalaaTasoitus`
+     * maalannut mitään: karkea laatta oli koko maailman topografia
+     * ILMAN KERMAA. Panoroitaessa uusi ala tulee ensin näkyviin
+     * karkeana tasona ja tarkentuu vasta z4+:n saapuessa — juuri siinä
+     * hetkessä reliefi välähtää ja katoaa.
+     *
+     * KORJAUS ON, ETTÄ KERMA EI RIIPU VÄRILAATASTA LAINKAAN. Suoja ja
+     * renkaat tietää `pyramidinTasoitus()` ilman yhtään laattaa, joten
+     * peitto maalataan SAMASSA VAIHEESSA kuin pohja piirretään — myös
+     * tasolla, jolla väritasoa ei ole olemassa (`variTasolla` epätosi).
+     * Värilaatta täydentää saapuessaan vain suojan sisäosan.
+     *
+     * JÄRJESTYS SÄILYY: kerma menee pohjan päälle mutta rannan,
+     * viivan ja noston alle, kuten väritasokin (pyramidinKerrostasot).
+     */
+    const variTasolla = kerrostasot.some((k) => k?.vari);
+    const piirraKerma = (kuva) => {
+      if (tasoitus.maailma) {
+        maalaaMaailmanVari(ctx, {
+          tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki, kuva,
+        });
+        return;
+      }
+      const tyhjaKerma = kertomuslukko && tasoituksenUlkopuolella({
+        tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki,
+      });
+      if (tyhjaKerma) {
+        if (!t.kermatta) mittarit.kermattomia += 1;
+        t.kermatta = true;
+        return;
+      }
+      if (!tasoitus.suoja?.tarkka) return;
+      maalaaTasoitus(ctx, {
+        tasoitus,
+        kartta,
+        ppu: tasoOlio.pikseliaPerYksikko,
+        arkki: pyramidi.arkki,
+        kuva,
+        maamaski: MERET_NAKYVIIN,
+      });
+    };
     for (let i = 0; i < kuvat.length; i += 1) {
       const kuva = kuvat[i];
       if (tasoitus && kerrostasot[i]?.vari) {
@@ -1544,31 +1701,18 @@ export function luoLaattakerros({
          * (aineisto vielä haussa) värilaatta jätetään kokonaan pois,
          * jolloin kartta on se pohjakartta, joka se muutenkin on.
          */
-        if (tasoitus.maailma) {
-          maalaaMaailmanVari(ctx, {
-            tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki, kuva,
-          });
-          kuva?.close?.();
-          continue;
-        }
-        const tyhjaKerma = kertomuslukko && tasoituksenUlkopuolella({
-          tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki,
-        });
-        if (tyhjaKerma) {
-          if (!t.kermatta) mittarit.kermattomia += 1;
-          t.kermatta = true;
-        }
-        else if (tasoitus.suoja?.tarkka) {
-          maalaaTasoitus(ctx, {
-            tasoitus, kartta, ppu: tasoOlio.pikseliaPerYksikko, arkki: pyramidi.arkki, kuva,
-          });
-        }
+        piirraKerma(kuva);
         kuva?.close?.();
         continue;
       }
       if (!kuva) continue;
       ctx.drawImage(kuva, 0, 0, kartta.leveys, kartta.korkeus);
       kuva.close?.();
+      /*
+       * POHJA ON JUURI PIIRRETTY: kerma tähän, jos tällä tasolla ei ole
+       * väritasoa lainkaan (z0…z3). Sama kehys, ei odotusta.
+       */
+      if (tasoitus && !variTasolla && i === 0) piirraKerma(null);
     }
     // Verkko: laatan oma lat/lon-suorakaide, UV laatan omalla kankaalla.
     const alue = laatanAlue(tasoOlio, t.sarake, t.rivi);
