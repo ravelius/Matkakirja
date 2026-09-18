@@ -18,7 +18,8 @@
     "savuke-ihmisen-esitys.mjs",
     "savuke-topografialinssi.mjs",
     "savuke-pallo-nostolaput.mjs",
-    "savuke-nimikyltti.mjs"
+    "savuke-nimikyltti.mjs",
+    "savuke-kerma-reuna.mjs"
   ],
   "asetukset": {
     "savuke-ihmisen-kappaleet.mjs": {
