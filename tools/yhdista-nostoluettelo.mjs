@@ -105,7 +105,9 @@ uusi.patina = vanha.patina ?? uusi.patina ?? null;
  * jotain, mitä tämä ajo ei polttanut — ja peli näkisi kerroksen
  * katoavan ilman virhettä.
  */
-const sallitut = new Set(['nostotaso', 'erat']);
+// `nostotasot`: maittainen nostotaso (PAATOKSET 34 kohta 17 d, tools/kokoa-
+// nostotasot.mjs) on nostoajon oma tuote, joten sen saa muuttaa.
+const sallitut = new Set(['nostotaso', 'nostotasot', 'erat']);
 const muuttuneet = [...new Set([...Object.keys(uusi), ...Object.keys(vanha)])]
   .filter((k) => JSON.stringify(uusi[k]) !== JSON.stringify(vanha[k]));
 const luvattomat = muuttuneet.filter((k) => !sallitut.has(k));
