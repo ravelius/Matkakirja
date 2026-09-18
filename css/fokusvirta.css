@@ -2775,6 +2775,36 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
 
 .fokusvirta-isokuva-ohita:hover { color: rgba(33, 29, 24, 1); }
 
+/*
+ * OHITA ON OMA KELLUVA SOLMUNSA (omistaja 18.9.2026 klo 22.50,
+ * PAATOKSET 43 kohta 10, sanatarkasti: *"Ohita nappi ei saisi havita
+ * vaikka pelaaja painaa jostain muualta ennen kuin kumpikin luenta on
+ * loppu."*).
+ *
+ * SAMA KOHTA RUUDULLA, ERI VANHEMPI. Vanha sääntö oli `position:
+ * absolute` + `bottom` KOKO RUUDUN kokoisessa päällyksessä
+ * (.fokusvirta-isokuva: fixed, inset 0), joten sama luku
+ * `position: fixed`-solmussa osuu pikselilleen samaan paikkaan. Nappi
+ * ei siis liikahda, kun kuvat lentävät sen ylitse matkakirjalappuun
+ * (PAATOKSET 38) — pelaajan sormen alta ei katoa eikä siirry mitään.
+ *
+ * Z-INDEX ON SAMA 3 kuin päällyksellä: kartan päällä, matkakirjakortin
+ * (.rail, 4) alla. Nappi on päällyksen sisar samassa kodissa (.stage),
+ * joten sama luku pitää sen samassa kerroksessa kuin ennen.
+ *
+ * HÄIVYTYS ON NAPIN OMA. Ennen se peri päällyksen opacity-siirtymän
+ * (700 ms); nyt sama kesto on tässä, jotta sana ei ilmesty eikä katoa
+ * napsahtaen.
+ */
+.fokusvirta-ohitanappi {
+  position: fixed;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 700ms ease;
+}
+
+.fokusvirta-ohitanappi.nakyy { opacity: 1; }
+
 /* PULU-CAM-sinetti isossa kuvassa: sama merkki kuin pakan korteissa,
    oikeassa yläkulmassa, mitta ruudun mukaan. */
 .pulucam-merkki.pulucam-merkki-iso {
@@ -2788,7 +2818,9 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
    liikettä ei ole muutenkaan, joten vain kestot jäävät. */
 @media (prefers-reduced-motion: reduce) {
   .fokusvirta-isokuva,
-  .fokusvirta-isokuva-ruutu { transition-duration: 500ms; }
+  .fokusvirta-isokuva-ruutu,
+  /* Ohita on oma solmunsa (PAATOKSET 43 kohta 10): sama sääntö. */
+  .fokusvirta-ohitanappi { transition-duration: 500ms; }
 }
 
 /*
