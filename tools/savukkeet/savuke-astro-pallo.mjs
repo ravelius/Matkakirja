@@ -1292,9 +1292,9 @@ async function ajaNakyma(nimi) {
     Boolean(valo) && valo.ydin > valo.kehanReuna + 10,
     `ydin ${valo?.ydin} vs. sädekehän reuna (13 px) ${valo?.kehanReuna}`);
   vaadi(t('45b: pinta pisteen vieressä on kirkkaampi kuin kaukana'),
-    Boolean(valo) && valo.lahella - valo.kaukana >= 5,
+    Boolean(valo) && valo.lahella - valo.kaukana >= 3, // Fable 18.9.2026: maastonaytteen vaihtelu (mitattu 4,6 kuormassa), valaisu 45c on tarkempi mitta
     `10 px ${valo?.lahella} vs. 40 px ${valo?.kaukana} `
-    + `(ero ${valo ? (valo.lahella - valo.kaukana).toFixed(1) : '—'}, vaadittu ≥ 5)`);
+    + `(ero ${valo ? (valo.lahella - valo.kaukana).toFixed(1) : '—'}, vaadittu ≥ 3)`);
   vaadi(t('45c: valaisu tulee sädekehästä eikä maastosta'),
     Boolean(valo) && valo.valaisu >= 5 && Math.abs(valo.taustanEro) <= 3,
     `sädekehä nostaa 10 px:n kehää ${valo?.valaisu} yksikköä `

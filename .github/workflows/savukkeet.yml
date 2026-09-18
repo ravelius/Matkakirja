@@ -84,7 +84,7 @@ jobs:
       # Koneen omat polut (ei asennuksia työnkulussa).
       CHROMIUM: /Users/samireivinen/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing
       PLAYWRIGHT_JS: /Users/samireivinen/Matkakirja-fable/node_modules/playwright/index.js
-      SAVUKE_RINNAKKAIN: '6'
+      SAVUKE_RINNAKKAIN: '4'
       TULOKSET: /tmp/matkakirja-savukkeet/${{ github.run_id }}
     steps:
       - uses: actions/checkout@v4
