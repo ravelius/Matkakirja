@@ -71,7 +71,7 @@ jobs:
           LAHDEREPO: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
           OMAREPO: ${{ github.repository }}
         run: |
-          REITTI=ubuntu   # KYTKIN: ubuntu | mac  (ks. tiedoston alku)
+          REITTI=mac   # KYTKIN: ubuntu | mac  (ks. tiedoston alku; Mac 18.9.2026 klo 15.05, runner SamiMacStudio2-testit online)
           if [ "$REITTI" = "mac" ] && [ "$LAHDEREPO" = "$OMAREPO" ]; then
             echo 'ajaja=["self-hosted","macOS","ARM64","testit"]' >> "$GITHUB_OUTPUT"
             echo 'nimi=Mac Studio (self-hosted, label testit)' >> "$GITHUB_OUTPUT"

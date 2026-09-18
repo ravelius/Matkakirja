@@ -78,7 +78,10 @@ jobs:
       github.event_name == 'workflow_dispatch' ||
       (github.event_name == 'pull_request' &&
        github.event.pull_request.head.repo.full_name == github.repository)
-    runs-on: [self-hosted, macOS, ARM64]
+    # Label savukkeet on vain SamiMacStudio2:lla (18.9.2026): testit-runner
+    # (SamiMacStudio2-testit) ei saa poimia savukkeita, jotta kaksi
+    # Chromium-sarjaa ei aja samalla koneella yhtä aikaa.
+    runs-on: [self-hosted, macOS, ARM64, savukkeet]
     timeout-minutes: 20
     env:
       # Koneen omat polut (ei asennuksia työnkulussa).
