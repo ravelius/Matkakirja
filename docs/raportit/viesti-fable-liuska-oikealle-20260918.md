@@ -85,7 +85,38 @@ väistyvät kuten ennen (lukkosääntöihin, kohta 13, ei koskettu).
 
 ## 4. Mittaus
 
-MITTAUSTULOKSET
+`tools/savukkeet/savuke-pariisi-lahizoom.mjs`, Chromium 1234, dpr 2.
+**Uudet vartiot mittaavat SAAPUMISNÄKYMÄSTÄ** (koko Ranska) — siitä
+näkymästä, josta omistajan kuva otettiin; vanhat 8c–8n mittaavat yhä
+lähizoomia.
+
+| vartio | väite | 390 × 844 | 1400 × 900 |
+|---|---|---|---|
+| 8o | aika napautuksesta kameran ensimmäiseen liikkeeseen < 100 ms | **23,4 ms** | **61,3 ms** |
+| 8p | liuskan jokaisen rivin vasen reuna merkin oikealla puolella | 9 riviä, 0 vasemmalla | 9 riviä, 0 vasemmalla |
+| 8p2 | sama Skandaalit (5) avattuna | 14 riviä, 0 vasemmalla | 14 riviä, 0 vasemmalla |
+| 8q | iso nimi piilossa auki, näkyvissä sulun jälkeen | läpi | läpi |
+
+Liike mitataan pallon omasta katsepisteestä (`pointOfView`) rAF-näytteinä,
+nollaus pointerdownista — ei kamera-ajon lipusta, koska väite on että KUVA
+liikkuu. Näytteen tarkkuus on noin 16 ms, eli 23 ms on ensimmäinen tai
+toinen kehys napautuksen jälkeen.
+
+Muut luvut samalta ajolta (lähizoomi, ennallaan): liuskan keskitys 390 px
+merkki y 386,97 / listan keskipiste ero **0,00 px**, merkki x 125,5 (ruutu
+374 px), liuskan vasen reuna 139,5; kamera-ajo + avaus 652 ms (390) ja 635
+ms (1400) — siitä 420 ms on ajo, loput ladonta ja avaus.
+
+**Koko savuke: 390 px 41/41, 1400 px 40/40 vartiota läpi** (1400 px:llä 8k
+on INFO, kuten ennenkin). `node --test tests/*.test.mjs`: 3595 läpi, 0
+kaatunutta, 13 ohitettua.
+
+Kaappaukset (390 px, saapumisnäkymä):
+
+- `docs/raportit/kuvat/liuska-oikealle-20260918/pariisi-saapuen-liuska-390.png`
+  — liuska auki merkin oikealla puolella, PARIISI-nimi poissa.
+- `docs/raportit/kuvat/liuska-oikealle-20260918/pariisi-saapuen-kategoria-390.png`
+  — Skandaalit (5) auki, lista yhä kokonaan merkin oikealla puolella.
 
 ## 5. Mitä EI tehty
 
