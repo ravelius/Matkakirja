@@ -997,8 +997,8 @@ export function asetteleNosto(el, d) {
       + (d.viuhka ?? [])
         .map((k) => `${k.nimi}@${k.dx.toFixed(1)},${k.dy.toFixed(1)}|${k.puoli}|${k.leveys.toFixed(1)}`).join(';');
     if (liuskaJuuri.dataset.resepti !== resepti) {
-      liuskaJuuri.dataset.resepti = resepti;
-      piirraViuhka(liuskaJuuri, d);
+      // Ks. asetteleAihemerkki: resepti jää vain mitatusta pohjasta.
+      liuskaJuuri.dataset.resepti = piirraViuhka(liuskaJuuri, d) ? resepti : '';
     }
     el.classList.toggle('pallolauta-liuska-auki', Boolean((d.viuhka ?? []).length));
   }
@@ -2571,7 +2571,35 @@ export function luoNostot({
           .filter(Boolean)
           .filter((e) => !(piiloNimi && e.id === piiloNimi))
           .map((e) => ({ ...e, paino: KOVAN_ESTEEN_PAINO }));
-        const listanEsteet = [...kovat, ...laatikot];
+        /*
+         * MUIDEN NOSTOJEN MUSTE ON PEHMEÄ ESTE MYÖS LIUSKALLE
+         * (PAATOKSET 34 kohta 14:n velka, omistajan iPhone-kuva v1937:
+         * *"liuskan alle jaava toisen noston nimio (Reims) kuultaa
+         * lapi saapumisnakymassa"*).
+         *
+         * JUURISYY: viuhkan haara keräsi `nostomuste`n ja piilotti sen
+         * listan alta, mutta kaupunkiliuskan haara ei kerännyt sitä
+         * lainkaan — sen esteinä olivat vain kovat (kaupungin nimi,
+         * nappula) ja laudan omat laatikot. Kun pohjasta tuli vielä
+         * läpikuultava (kohta 15 a), alle jäänyt nimiö näkyi läpi.
+         * Sama keruu ja sama piilotus kuin viuhkalla, samasta syystä:
+         * lista on se, jota juuri luetaan.
+         */
+        const nostomuste = [];
+        naytetaan.forEach((r2, i2) => {
+          if (r2 === rivi || r2.perhe === 'piste' || !r2.p) return;
+          const datum2 = datumit[i2];
+          if (!datum2) return;
+          const laatikko = (nimio) => (r2.perhe === 'aihemerkki'
+            ? aihemerkinLaatikko(r2.p, datum2, { dx: 0, dy: 0, kylki: r2.puoli ?? 'oikea', nimio })
+            : nostonLaatikko(r2.p, r2, { dx: 0, dy: 0, kylki: r2.puoli ?? 'oikea', nimio }));
+          const merkki = laatikko(false);
+          nostomuste.push({ ...merkki, avain: r2.avain, osa: 'merkki' });
+          if (r2.nimioNakyy && r2.nimi) {
+            nostomuste.push({ ...laatikko(true), avain: r2.avain, osa: 'nimio' });
+          }
+        });
+        const listanEsteet = [...kovat, ...nostomuste, ...laatikot];
         /*
          * VAAKAPAKO: ehdokkaat ovat etäisyyksiä merkistä kovien
          * esteiden ULKOREUNAAN sillä puolella, jolle lista kasvaa.
@@ -2756,6 +2784,33 @@ export function luoNostot({
         const {
           puoli, asemat, leveys: listaLeveys, pohja,
         } = asemointi;
+        /*
+         * PIILOTUS: LIUSKAN ALLE EI JÄÄ TEKSTIÄ (kohta 14:n velka;
+         * sama sääntö kuin viuhkalla, ks. LISTA EI KOSKAAN TOISEN
+         * TEKSTIN PÄÄLLE). Liuskan rivilaatikko on rivin OMA
+         * (`riviPx`), eli sama mitta jolla lista ladottiin.
+         */
+        const liuskanLaatikot = asemat.map((a) => {
+          const l = kohdanLaatikko(a.dx, a.dy, listaLeveys, puoli, riviPx);
+          return {
+            x0: rivi.p.x + l.x0,
+            y0: rivi.p.y + l.y0,
+            x1: rivi.p.x + l.x1,
+            y1: rivi.p.y + l.y1,
+          };
+        });
+        const osuuLiuskaan = (e) => liuskanLaatikot.some((l) => l.x0 < e.x1 && e.x0 < l.x1
+          && l.y0 < e.y1 && e.y0 < l.y1);
+        piilotetutListanAlta = [];
+        for (const e of nostomuste) {
+          if (!osuuLiuskaan(e)) continue;
+          const i2 = naytetaan.findIndex((r2) => r2.avain === e.avain);
+          const datum2 = i2 >= 0 ? datumit[i2] : null;
+          if (!datum2) continue;
+          if (e.osa === 'merkki') datum2.piiloListanAlla = true;
+          else datum2.nimioNakyy = false;
+          piilotetutListanAlta.push({ avain: e.avain, osa: e.osa });
+        }
         liuskanKohdat = rivit.map((k, i) => ({
           r: k.r,
           teksti: k.teksti,
