@@ -11865,7 +11865,7 @@ body.linssi-topografia .fokuszoom {
 }
 
 /*
- * PULUN PLUSKUPLA JA LUENTAKUVAPAKKA — VIKA 16.9.2026 klo 15.30.
+ * PULUN KUPLAT JA LUENTAKUVAPAKKA — VIKA 16.9.2026 klo 15.30.
  *
  * OMISTAJA (sanatarkasti): *"lisäksi näytölle jää ilmeisesti kuvia sekä
  * ainakin pulun mini puhekupla jossa plus merkki"*.
@@ -11878,15 +11878,13 @@ body.linssi-topografia .fokuszoom {
  *   div.fokusvirta-luentakuva.pieni      62 × 52 px  (3 231 px²)
  *     └ .pulucam-pakka + .pulucam-kortti + kaksi <img>
  *
- * 1. PLUSKUPLA on juuri se "mini puhekupla jossa plus merkki".
- *    Puhelimella pulun repliikit imeytyvät siihen heti syntyessään
- *    (js/pollo.js lisaaPinoon, tämän tiedoston kohta 26917), joten se
- *    on pystyruudulla lähes aina ruudulla — ja se on `position: fixed`
- *    body:n lapsi, jota mikään linssiportti ei koskenut. TÄMÄ ON MYÖS
- *    SYY, MIKSI 1400 PIKSELIN SAVUKE EI NÄHNYT SITÄ: leveällä ruudulla
- *    kuplat jäävät pinoon eikä pluskuplaa synny, ja savuke ajoi pelin
- *    toimintavaiheessa ilman luentaa, jolloin kuplia ei ollut
- *    lainkaan.
+ * 1. PLUSKUPLA oli juuri se "mini puhekupla jossa plus merkki" — ja se
+ *    on POISTETTU KOKONAAN v1944:ssä (Raamattu, PAATOKSET 34 kohta 20):
+ *    js/pollo.js ei enää luo `.pollo-kuplapalautus`-elementtiä, vaan
+ *    kuplat palautetaan chatin ylärivin `.pollo-naytakuplat`
+ *    -painikkeesta. Se elää `.pollo-paneeli`n sisällä, joka on tällä
+ *    listalla, joten pluskuplan oma rivi on tarpeeton. Kuplapino ja sen
+ *    kehys jäävät listalle: ne ovat yhä omia elementtejään.
  *
  * 2. LUENTAKUVAPAKKA on isoisän luentakuva ja pulun PuluCam-kortti,
  *    jotka nousevat kaupungin kohdalle kartalle luentasarjan lopuksi
@@ -11901,7 +11899,6 @@ body.linssi-topografia .fokuszoom {
  * paikan uudelleen. `pointer-events` erikseen, ettei piiloon jäänyt
  * kuva ole napautettavissa linssin päältä.
  */
-body.linssi-topografia .pollo-kuplapalautus,
 body.linssi-topografia .pollo-kuplapino,
 body.linssi-topografia .pollo-kuplapino-kehys,
 body.linssi-topografia .pollo-paneeli,
@@ -21051,61 +21048,15 @@ body.lento-kesken .pollo-nappi.pollo-ilmestyy {
 /*
  * SULKURUKSI POISTETTU (omistaja 13.9.2026: *"Ota pulun puhekuplista
  * sulkemis ruksi pois. Ja muuta toiminto niin että Puhekuplat voi
- * sulkea napauttamalla niitä."*). Kupla itse on sulkunappi, ja
- * HUOM 18.9.2026 (omistajan kohta 20 a): pluskuplaa EI ENÄÄ PIIRRETÄ
- * — js/pollo.js ei luo elementtiä lainkaan, joten alla olevat säännöt
- * eivät osu mihinkään. Ne on jätetty paikalleen vain, jotta pulun
- * piilotuslistat (js/ui.js PULUN_PIILO_OSAT) pysyvät ehjinä; paluureitti
- * kupliin on nyt chatin ylärivin .pollo-naytakuplat.
+ * sulkea napauttamalla niitä."*). Kupla itse on sulkunappi.
  *
- * sulkeminen imee kuplat pluskuplaan (.pollo-kuplapalautus), joka jää
- * ruudulle avaamista varten.
+ * PALUUREITTI ON CHATIN YLÄRIVISSÄ, EI KARTALLA (v1944, Raamattu
+ * PAATOKSET 34 kohta 20): suljetut kuplat jäävät js/pollo.js:n muistiin
+ * ja palautetaan `.pollo-naytakuplat`-painikkeesta. Tässä oli
+ * 13.–18.9.2026 PLUSKUPLA (`.pollo-kuplapalautus`) — oma `position:
+ * fixed` -nappinsa kartan päällä; sen elementtiä ei enää luoda, joten
+ * sen säännöt on poistettu kuolleena koodina.
  */
-
-/* Viimeksi piiloutuneen puhekuplan palautus, erillään chatinapista. */
-.pollo-kuplapalautus {
-  position: fixed;
-  z-index: 42;
-  display: grid;
-  place-items: center;
-  width: 44px;
-  height: 44px;
-  min-height: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: #46331f;
-  font: 700 1rem/1 serif;
-  cursor: pointer;
-}
-.pollo-kuplapalautus::before {
-  content: '';
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 1.45rem;
-  height: 1.3rem;
-  border: 1px solid rgba(122, 85, 20, 0.42);
-  border-radius: 0.75rem 0.75rem 0.3rem 0.75rem;
-  background: rgba(245, 240, 226, 0.96);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.22);
-}
-.pollo-kuplapalautus { text-shadow: 0 0 0 #46331f; }
-.pollo-kuplapalautus { justify-items: end; align-items: end; padding: 0 0.42rem 0.17rem 0; }
-.pollo-kuplapalautus { isolation: isolate; }
-.pollo-kuplapalautus::before { z-index: -1; }
-.pollo-kuplapalautus[hidden] { display: none; }
-/* Yleinen button:hover on tätä valitsinta vahvempi. Osuma-alue pysyy
-   läpinäkyvänä; vain ::before piirtää varsinaisen minikuplan. */
-button.pollo-kuplapalautus,
-button.pollo-kuplapalautus:hover:not(:disabled),
-button.pollo-kuplapalautus:active:not(:disabled) {
-  border-color: transparent;
-  background: transparent;
-  box-shadow: none;
-}
-.pollo-kuplapalautus:hover::before,
-.pollo-kuplapalautus:focus-visible::before { background: #fffaf0; }
 
 /* Pieni kärki alaspäin kohti pöllönappia. */
 .pollo-vihje::after {
@@ -27105,15 +27056,19 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px;
  * pieni puhekupla jossa plus merkki. Siitä tulee teksti näkyviin."*
  *
  * PIILOTUS SIIRTYI CSS:STÄ PELIN OMAAN MEKANISMIIN (js/pollo.js
- * lisaaPinoon): puhelimella uusi puhekupla imeytyy heti pluskuplaan
- * (.pollo-kuplapalautus), jonka napautus palauttaa sen tekstinä ja
- * josta se sulkeutuu takaisin kuten ennenkin. Kartta ja isoisän kuva
- * jäävät siis yhtä vapaiksi kuin v1891:ssä, mutta teksti on yhden
- * napautuksen päässä.
+ * lisaaPinoon): puhelimella uusi puhekupla imeytyy heti pulun muistiin,
+ * josta se palautuu tekstinä ja sulkeutuu takaisin kuten ennenkin.
+ * Kartta ja isoisän kuva jäävät siis yhtä vapaiksi kuin v1891:ssä,
+ * mutta teksti on yhden napautuksen päässä.
+ *
+ * PALUUNAPPI ON CHATIN YLÄRIVISSÄ (v1944, Raamattu PAATOKSET 34 kohta
+ * 20). Ennen se oli kartalla kelluva PLUSKUPLA
+ * (`.pollo-kuplapalautus`); nyt muistin avaa `.pollo-naytakuplat`,
+ * joka näkyy vain kun kuplia on jäänyt näyttämättä.
  *
  * TÄNNE EI SAA PALAUTTAA `.pollo-kuplapino-kehys { display: none }`:
- * se piilottaisi myös pelaajan itse avaaman kuplan, ja pluskuplan
- * napautuksesta ei seuraisi mitään näkyvää.
+ * se piilottaisi myös pelaajan itse avaaman kuplan, eikä palautuksesta
+ * seuraisi mitään näkyvää.
  *
  * .pollo-vihje-yksin on eri asia: se on pinon ULKOPUOLINEN yksittäinen
  * kupla, jota pluskuplan muisti ei hallitse, joten se on puhelimella

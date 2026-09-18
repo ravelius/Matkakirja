@@ -3433,7 +3433,7 @@ export class Pollo {
     }
     this.kuplanAani();
     /*
-     * PUHELIMELLA KUPLA IMEYTYY HETI PLUSKUPLAAN (omistajan päätös
+     * PUHELIMELLA KUPLA IMEYTYY HETI PULUN MUISTIIN (omistajan päätös
      * 14.9.2026, sanatarkasti: *"Pululla on se pieni puhekupla jossa
      * plus merkki. Siitä tulee teksti näkyviin."*).
      *
@@ -3441,11 +3441,17 @@ export class Pollo {
      * kuplat peittivät kartan ja isoisän kuvan. Silloin äänettömällä
      * puhelimella repliikki jäi kokonaan saamatta — se oli raportin
      * avoin kysymys. Omistajan vastaus on pelin OMA mekanismi: kuplien
-     * sulkeminen jättää jäljelle pienen pluskuplan
-     * (.pollo-kuplapalautus, 13.9.2026), jonka napautus palauttaa
-     * viimeisimmän repliikin. Puhelimella kupla siis vain aloittaa
-     * suljettuna: teksti ei peitä mitään, mutta se on yhden napautuksen
-     * päässä ja sulkeutuu takaisin samalla tavalla kuin ennenkin.
+     * sulkeminen jättää viimeisimmän repliikin muistiin, josta se
+     * palautuu yhdellä napautuksella. Puhelimella kupla siis vain
+     * aloittaa suljettuna: teksti ei peitä mitään, mutta se on yhden
+     * napautuksen päässä ja sulkeutuu takaisin samalla tavalla kuin
+     * ennenkin.
+     *
+     * MISTÄ TEKSTI PALAUTUU (v1944, Raamattu PAATOKSET 34 kohta 20).
+     * Muistin avaa chatin ylärivin "Näytä puhekuplat"
+     * (.pollo-naytakuplat, rakenna). Aiemmin 13.–18.9.2026 kartalle jäi
+     * kelluva PLUSKUPLA (.pollo-kuplapalautus); sitä ei enää luoda, ja
+     * sen CSS on poistettu kuolleena koodina.
      *
      * MIKSI TÄSSÄ KOHDASSA, EI AJASTIMESSA. Kutsu on synkroninen ja
      * lisäyksen viimeinen askel, joten selain ei ehdi piirtää kuplaa
@@ -3454,7 +3460,7 @@ export class Pollo {
      *
      * PALAUTUS EI SAA IMEYTYÄ TAKAISIN. palautaViimeisinKupla kutsuu
      * tätä samaa metodia; ilman lippua kupla katoaisi saman tien
-     * takaisin pluskuplaan eikä napautus näyttäisi mitään.
+     * takaisin muistiin eikä napautus näyttäisi mitään.
      */
     /*
      * SAMA MEKANISMI MYÖS LUENNAN AIKANA, KAIKILLA LAITTEILLA

@@ -1155,16 +1155,18 @@ test('minipulu kelluu valokuvan oikeassa alakulmassa eikä piilotu pulun kanssa'
   assert.match(tyyli, /\.satelliitti-pulukulma \{[\s\S]*position: absolute;[\s\S]*right: 12px;[\s\S]*bottom: calc\(12px \+ env\(safe-area-inset-bottom, 0px\)\)/);
   assert.match(tyyli, /body\.aikajana-pulu-piilossa \.satelliitti-pulukulma,[\s\S]*visibility: visible/);
   /*
-   * PULUN PLUSKUPLA KUULUU PIILOTETTAVIIN (omistajan havainto
-   * 16.9.2026, puhelin): `.pollo-kuplapalautus` on oma `position: fixed`
-   * -nappinsa suoraan bodyssa, ei kuplapinon sisällä, joten pinon
-   * piilotus ei osunut siihen ja se jäi valokuvan päälle. Sääntö on
-   * sekä tyylitiedostossa että kriittisessä varatyylissä — ja
-   * tests/satelliitti-avaruus.test.mjs vartioi, että ne ovat sanatarkka
-   * osajoukko toisistaan.
+   * KUPLAPINO KUULUU PIILOTETTAVIIN (omistajan havainto 16.9.2026,
+   * puhelin). Pinon KEHYS on oma elementtinsä, joten pulun napin ja
+   * paneelin piilotus ei osunut siihen ja kesken jäänyt kuplasarja jäi
+   * valokuvan päälle. Sääntö on sekä tyylitiedostossa että
+   * kriittisessä varatyylissä.
+   *
+   * PLUSKUPLA (.pollo-kuplapalautus) oli tässä listassa 16.–18.9.2026;
+   * v1944 poisti elementin kokonaan (Raamattu, PAATOKSET 34 kohta 20),
+   * joten sitä ei enää piiloteta eikä vartioida.
    */
-  assert.match(tyyli, /body\.aikajana-pulu-piilossa \.pollo-kuplapalautus \{[\s\S]{0,80}visibility: hidden/);
-  assert.match(lahde, /body\.aikajana-pulu-piilossa \.pollo-kuplapalautus,/);
+  assert.match(tyyli, /body\.aikajana-pulu-piilossa \.pollo-kuplapino-kehys \{[\s\S]{0,80}visibility: hidden/);
+  assert.match(lahde, /body\.aikajana-pulu-piilossa \.pollo-kuplapino-kehys,/);
   /*
    * EI YMPYRÄÄ PULUN YMPÄRILLÄ (omistaja 16.9.2026: *"saisiko pulun
    * ympäriltä tuon ympyrän pois?"*). Tausta on läpinäkyvä, reunaa ja

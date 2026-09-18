@@ -38,11 +38,12 @@
  *      mitattavissa näkyvänä.
  *   1c. VASTAKOE: kun piiloluokka otetaan käsin pois kesken esityksen,
  *      pulu on heti näkyvissä — eli mitta osoittaa oikeaa asiaa.
- *   1d. PLUSKUPLA (.pollo-kuplapalautus) on samassa nipussa: se on
- *      `position: fixed` -nappi BODYN suorana lapsena, ja se jäi
- *      omistajan puhelimella kellumaan esityksen päälle. Mitataan
- *      `visibility` ja `pointer-events` — ja vastakokeena sama nappi
- *      ilman piiloluokkaa.
+ *   1d. POISTETTU v1944:ssä: pluskupla (.pollo-kuplapalautus) oli
+ *      `position: fixed` -nappi BODYN suorana lapsena ja jäi omistajan
+ *      puhelimella kellumaan esityksen päälle. Elementtiä ei enää
+ *      luoda (Raamattu, PAATOKSET 34 kohta 20); paluureitti kupliin on
+ *      chatin ylärivin painike paneelin sisällä, ja vartio 1 mittaa jo
+ *      paneelin piilotuksen.
  *   2. PULUN SIMPUKKAKOMMENTTI EI OLE DOMISSA missään esityksen
  *      kohdassa (omistajan KORJAUS 17.9.2026 klo 03.40 UTC: *"Se
  *      simpukka tarkoitti pulun simpukka kommenttia. Ei kertojan."*).
@@ -264,8 +265,6 @@ const NAYTE = () => {
   const nappi = document.querySelector('.pollo-nappi');
   const paneeli = document.querySelector('.pollo-paneeli');
   const kasvot = document.querySelector('.livia-kasvot-pinta');
-  // Pluskupla: position:fixed -nappi bodyn suorana lapsena (js/pollo.js).
-  const kupla = document.querySelector('.pollo-kuplapalautus');
   const laatikko = juuri?.querySelector('.aikajana-kertomusteksti-sisus');
   const rivi = juuri?.querySelector('.aikajana-kertomusteksti');
   const nakyy = (el) => (el ? getComputedStyle(el).visibility !== 'hidden' : null);
@@ -282,7 +281,6 @@ const NAYTE = () => {
     puluNappi: nakyy(nappi),
     puluPaneeli: nakyy(paneeli),
     puluKasvot: nakyy(kasvot),
-    puluKupla: kupla ? nakyy(kupla) : null,
     // Pulu on NÄKYVISSÄ vain, jos nappi on olemassa eikä ole piilotettu.
     puluNakyy: Boolean(nappi) && nakyy(nappi) === true,
     teksti: laatikko?.textContent ?? '',
@@ -384,42 +382,21 @@ async function mittaa(leveys, korkeus) {
 
   const esityksessa = sarja.filter((r) => !r.paattynyt);
   const vuotaa = esityksessa.filter((r) => r.puluNakyy || !r.piiloluokka
-    || r.puluPiilossa !== true || r.puluKupla === true);
+    || r.puluPiilossa !== true);
   vaadi(`${leveys}px: pulu ei näy kertaakaan esityksen aikana (${esityksessa.length} näytettä)`,
     esityksessa.length >= 5 && vuotaa.length === 0,
     JSON.stringify({ naytteita: esityksessa.length, vuotoja: vuotaa.length, vuoto: vuotaa.slice(0, 2) }));
 
   /*
-   * 1d. PLUSKUPLA ON SAMASSA NIPUSSA (omistaja 16.9.2026, puhelimella).
-   * `.pollo-kuplapalautus` syntyy js/pollo.js:ssä vasta, kun pelaaja on
-   * sulkenut puhekuplan — savuke ei voi luottaa siihen, että niin on
-   * käynyt, joten jos nappia ei ole, tehdään koekappale samalla
-   * luokalla. Juuri sitä CSS-sääntö katsoo. Vastakoe samassa mitassa:
-   * ilman piiloluokkaa sama nappi on näkyvissä.
+   * 1d. PLUSKUPLAVARTIO POISTETTU (v1944, Raamattu PAATOKSET 34 kohta
+   * 20). Tässä mitattiin 16.–18.9.2026, että `.pollo-kuplapalautus` on
+   * piilossa esityksen ajan — ja koska nappi syntyi vasta suljetusta
+   * kuplasta, savuke joutui tekemään koekappaleen käsin. Elementtiä ei
+   * enää luoda missään: kuplat palautetaan chatin ylärivin
+   * `.pollo-naytakuplat`-painikkeesta `.pollo-paneeli`n sisällä, ja
+   * paneelin piilotusta vartioi jo vartio 1. Koekappaleen mittaaminen
+   * olisi siis vain oman elementin mittaamista.
    */
-  const pluskupla = await s.evaluate(() => {
-    const oma = document.querySelector('.pollo-kuplapalautus');
-    const el = oma ?? document.createElement('button');
-    if (!oma) {
-      el.className = 'pollo-kuplapalautus';
-      el.textContent = '+';
-      document.body.appendChild(el);
-    }
-    const lue = () => {
-      const t = getComputedStyle(el);
-      return { nakyvyys: t.visibility, osoitin: t.pointerEvents };
-    };
-    const piilossa = lue();
-    document.body.classList.remove('aikajana-pulu-piilossa');
-    const paljaana = lue();
-    document.body.classList.add('aikajana-pulu-piilossa');
-    if (!oma) el.remove();
-    return { oliValmiina: Boolean(oma), piilossa, paljaana };
-  });
-  vaadi(`${leveys}px: pulun pluskupla on piilossa esityksen aikana (ja näkyy ilman luokkaa)`,
-    pluskupla.piilossa.nakyvyys === 'hidden' && pluskupla.piilossa.osoitin === 'none'
-      && pluskupla.paljaana.nakyvyys === 'visible',
-    JSON.stringify(pluskupla));
 
   /* --- 2. PULUN SIMPUKKAKOMMENTTI EI OLE DOMISSA --- */
   const pulunSimpukka = sarja.filter((r) => PULUN_SIMPUKKA.test(r.puluKuplaTeksti ?? '')

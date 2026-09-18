@@ -241,16 +241,17 @@ body.aikajana-pulu-piilossa .livia-kasvot-pinta {
  * päälle.
  */
 /*
- * PLUSKUPLA KUULUU SAMAAN JOUKKOON (omistajan havainto 16.9.2026,
- * puhelin). Kun luenta tai linssi imee pulun repliikit pinoon, niiden
- * tilalle jää PLUSKUPLA (js/pollo.js `.pollo-kuplapalautus`) — oma
- * `position: fixed` -nappinsa SUORAAN bodyssa, ei pinon sisällä. Se ei
- * siis kadonnut pinon mukana, vaan jäi kellumaan valokuvan päälle
- * ruudun alalaitaan. Mitattu 390 px:llä.
+ * PLUSKUPLALLA OLI TÄSSÄ OMA RIVINSÄ 16.–18.9.2026 (omistajan havainto
+ * puhelimella): `.pollo-kuplapalautus` oli `position: fixed` -nappi
+ * SUORAAN bodyssa, ei pinon sisällä, joten se ei kadonnut pinon mukana
+ * vaan jäi kellumaan valokuvan päälle. v1944 poisti elementin kokonaan
+ * (Raamattu, PAATOKSET 34 kohta 20): kuplat palautetaan nyt chatin
+ * ylärivin `.pollo-naytakuplat`-painikkeesta, joka on `.pollo-paneeli`n
+ * sisällä. Rivi on siksi poistettu tästä ja js/linssit/satelliitti.js:n
+ * KRIITTINEN_TYYLI:stä (osajoukkovartio: tests/satelliitti-avaruus).
  */
 body.aikajana-pulu-piilossa .pollo-kuplapino,
-body.aikajana-pulu-piilossa .pollo-kuplapino-kehys,
-body.aikajana-pulu-piilossa .pollo-kuplapalautus {
+body.aikajana-pulu-piilossa .pollo-kuplapino-kehys {
   visibility: hidden;
   pointer-events: none;
 }
