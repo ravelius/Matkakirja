@@ -1548,6 +1548,9 @@ EOF
   # 2. LUETTELO PAIKALLISESTI, EI VIENTIÄ.
   echo luettelo > "$ULOS/lokit/vaihe.txt"
   kokoa_luettelo
+  # Maittaiset nostotasot shardeista luetteloon (luettelojobi ei tunne maita).
+  node "$JUURI/tools/kokoa-nostotasot.mjs" --ulos "$ULOS" \
+    --luettelo "$ULOS/luettelo/pyramidi.json" || return 1
   tarkista_eheys "$ULOS/lokit/shardit.txt" --luettelo "$ULOS/luettelo/pyramidi.json" \
     || return 1
   # Nostotasoajo tuntee vain nostotason; muut kentät kannetaan ämpärin
