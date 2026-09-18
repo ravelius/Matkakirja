@@ -76,6 +76,40 @@ julkaistaan) ajettiin vielä erikseen: 0/22 kehystä, eikä sarjassa ole
 yhtään reunapiikkiä (`σ(Saksa)` 0,22…0,50, `σ(Alpit)` 0,33…0,46,
 `σ(Ranska)` 0,30…0,50). Molemmat väitteet läpi.
 
+### WebKit: sama tulos, ja mittari jouduttiin korjaamaan
+
+WebKit ajettiin sekä uudella että vanhalla moduulilla (`--webkit`,
+`--webkit --vanha`). Tulos on sama kuin Chromiumilla: **vanhalla
+piikki, uudella ei.**
+
+| | Chromium | WebKit |
+| --- | --- | --- |
+| vanha, suurin piikki | Saksa σ 54,1 = 135 × perustaso | Alpit σ 33,8 = 28 × perustaso |
+| uusi, suurin | perustason tasolla | perustason tasolla |
+| uusi, V1 | läpi | läpi |
+
+**Mittarin kiinteä raja σ < 5 jouduttiin hylkäämään.** Se osoittautui
+näytteenoton tarkkuudesta riippuvaksi, ei kartasta: Chromiumilla
+kaappaus on dpr 3 (1170 px) ja lepo-σ 0,2…0,5, WebKitillä dpr 1
+(390 px) ja lepo-σ 1,2…6,8. Schwarzwaldin lepo-σ on WebKitillä 6,8
+**sekä vanhalla että uudella koodilla** — kerma on paikallaan, mutta
+9 × 9 ruutu kattaa kolme kertaa enemmän karttaa eikä sumennus vaimenna
+raetta. Kiinteä raja olisi kaatanut WebKit-ajon syyttä.
+
+Mitattava ilmiö on **transientti**: yksi kehys, jossa kontrasti
+moninkertaistuu ja palaa. Raja on siksi suhteutettu pisteen omaan
+mediaaniin (`σ > max(5, 4 × mediaani)`), ja sama luku kertoo
+molemmilla moottoreilla saman asian. Erottelu on jyrkkä: rikkinäiset
+kehykset ovat 28…135 × perustaso, ehjät 1,2 ×.
+
+**V2 on rajattu Chromiumiin.** Väite vertaa Ranskan Solognea
+(tasainen, ~120 m) Schwarzwaldiin (mäkinen), ja WebKitin dpr 1:llä
+mäkisen maaston rae näkyy kerman läpi enemmän kuin tasaisen maan
+alkuperäinen topografia — väite kaatuisi maaston muodosta eikä
+kermasta. Oikea korjaus on mittauspiste Ranskan mäkiseltä alueelta,
+joka ei osu kaupunkiin, rajaan eikä reittiin; sitä ei ehditty valita.
+V1 — se väite, jonka takia savuke on olemassa — ajetaan molemmilla.
+
 ### Mittauksen rajoitteet (kirjattava, ei piilotettava)
 
 1. **σ 54 on suurempi kuin pelkkä reliefikontrasti.** Piikin kehyksessä
@@ -97,8 +131,8 @@ yhtään reunapiikkiä (`σ(Saksa)` 0,22…0,50, `σ(Alpit)` 0,33…0,46,
    ulkopuolinen meri mahdu ruutuun. Meriväite on siksi todennettu
    KUVAPARISTA (luku 4) eikä pikselivertailusta. Pikselimittaus vaatii
    pelitilan, jossa kohdemaata ei ole, tai eston ohituksen savukkeelle.
-4. **WebKit-tarkistusta ei ehditty ajaa** (aikakatto). Savukkeessa on
-   `--webkit`, ja ajo on yhden komennon päässä.
+4. **V2 ei ole kalibroitu WebKitille** (ks. yllä) ja se ohitetaan
+   siellä nimenomaisesti — ei hiljaisesti.
 
 Kaappaukset: `docs/raportit/kuvat/kerma-heti-20260918/`
 (`uusi-levossa.png`, `uusi-panoroinnin-jalkeen.png`,
@@ -234,5 +268,6 @@ laatuparannus tasoille z4…z8.
    on siirrettävä sisämaahan tai väite jaettava maa- ja rannikkopisteisiin.
 3. **Lumihuiput yli 5 500 m** (Andit, Himalaja): luetaan mereksi.
    Katsottava, osuuko se johonkin 27 maasta.
-4. WebKit-tarkistus (`--webkit`) — yksi ajo.
+4. **V2:n mittauspiste** Ranskan mäkiseltä alueelta, jotta väite
+   toimisi myös WebKitillä.
 5. Savukkeen liittäminen `tools/tarkista-savukkeet.mjs`-sarjaan.

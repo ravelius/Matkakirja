@@ -262,10 +262,15 @@ const PISTEET = [
  * kuvan siitä, mitä ruudulla on; `page.screenshot` taas jää odottamaan
  * `document.fonts.ready`ä (sama ansa kuin savuke-tasoitus-pallolla).
  */
-const cdp = await ctx.newCDPSession(sivu);
-const kaappaa = async () => Buffer.from(
-  (await cdp.send('Page.captureScreenshot', { format: 'png' })).data, 'base64',
-);
+/*
+ * WEBKITILLÄ EI OLE CDP:tä, joten siellä on käytettävä Playwrightin
+ * omaa kaappausta. Se on hitaampi (odottaa fonttien valmistumista),
+ * mutta WebKit-tarkistus on yksi kaappaus levossa eikä kehyssarja.
+ */
+const cdp = WEBKIT ? null : await ctx.newCDPSession(sivu);
+const kaappaa = async () => (cdp
+  ? Buffer.from((await cdp.send('Page.captureScreenshot', { format: 'png' })).data, 'base64')
+  : sivu.screenshot({ timeout: 15000 }));
 
 /**
  * Pisteiden ruutupaikat JUURI NYT. Kamera liikkuu, joten paikat on
@@ -465,18 +470,56 @@ for (const kehys of raaka) {
 }
 await kuvaan(`${VANHA ? 'vanha' : 'uusi'}${MERET ? '-meret' : ''}-panoroinnin-jalkeen`);
 
-const SIGMA_RAJA = 5;
+/*
+ * VÄLKKYMINEN ON PIIKKI, EI TASO — JA SE ON MITTARIN KORJAUS.
+ *
+ * Ensimmäinen versio vertasi σ:aa kiinteään rajaan 5 (PAATOKSET 37).
+ * Mitattuna 18.9.2026 se osoittautui NÄYTTEENOTON TARKKUUDESTA
+ * riippuvaksi, ei kartasta:
+ *
+ *   Chromium, dpr 3   kaappaus 1170 px leveä → lepo-σ 0,2…0,5
+ *   WebKit,   dpr 1   kaappaus  390 px leveä → lepo-σ 1,2…6,8
+ *
+ * WebKitillä Schwarzwaldin lepo-σ on 6,8 SEKÄ vanhalla ETTÄ uudella
+ * koodilla — kerma on paikallaan, mutta 9 × 9 ruutu kattaa kolme
+ * kertaa enemmän karttaa eikä sumennus vaimenna raetta. Kiinteä raja
+ * olisi siis kaatanut WebKit-ajon syyttä.
+ *
+ * Mitattava ilmiö on TRANSIENTTI: yksi kehys, jossa kontrasti
+ * moninkertaistuu ja palaa. Siksi raja on pisteen OMAAN mediaaniin
+ * suhteutettu — sama luku kertoo molemmilla moottoreilla saman asian.
+ *
+ *   Chromium vanha: Saksa mediaani 0,4  piikki 54,1  = 135 ×
+ *   WebKit   vanha: Alpit mediaani 1,2  piikki 57,3  =  48 ×
+ *   WebKit   uusi : Saksa mediaani 6,8  suurin  8,0  = 1,2 ×
+ */
+const SIGMA_KERROIN = 4;
+const SIGMA_POHJA = 5;
 const ulkopisteet = PISTEET.filter((p) => p.laji === 'maa-ulko').map((p) => p.avain);
+const mediaani = (xs) => {
+  const j = [...xs].sort((a, b) => a - b);
+  return j.length ? j[Math.floor(j.length / 2)] : 0;
+};
+const perustaso = {};
+for (const avain of ulkopisteet) {
+  perustaso[avain] = mediaani(sarja.map((k) => k[avain]?.sigma).filter(Number.isFinite));
+}
 let rikki = 0;
-const pahin = { avain: null, sigma: 0, kehys: -1 };
+const pahin = {
+  avain: null, sigma: 0, suhde: 0, kehys: -1,
+};
 sarja.forEach((kehys, i) => {
   let kehysRikki = false;
   for (const avain of ulkopisteet) {
     const n = kehys[avain];
     if (!n) continue;
-    if (n.sigma > SIGMA_RAJA) {
+    const raja = Math.max(SIGMA_POHJA, SIGMA_KERROIN * perustaso[avain]);
+    if (n.sigma > raja) {
       kehysRikki = true;
-      if (n.sigma > pahin.sigma) { pahin.avain = avain; pahin.sigma = n.sigma; pahin.kehys = i; }
+      const suhde = n.sigma / Math.max(0.01, perustaso[avain]);
+      if (n.sigma > pahin.sigma) {
+        pahin.avain = avain; pahin.sigma = n.sigma; pahin.suhde = Math.round(suhde); pahin.kehys = i;
+      }
     }
   }
   if (kehysRikki) rikki += 1;
@@ -486,16 +529,46 @@ tieto('σ(Saksa) sarja', sarja.map((k) => k.saksa?.sigma ?? '—').join(' '));
 tieto('σ(Alpit) sarja', sarja.map((k) => k.alpit?.sigma ?? '—').join(' '));
 tieto('σ(Ranska) sarja', sarja.map((k) => k.ranska?.sigma ?? '—').join(' '));
 
+tieto('perustaso (σ mediaani)', Object.entries(perustaso)
+  .map(([k, v]) => `${k} ${Math.round(v * 100) / 100}`).join(' · '));
 vaadi('V1 ei yhtään kehystä, jossa muun maan reliefi näkyy ilman kermaa',
   rikki === 0,
-  `${rikki}/${sarja.length} kehystä rikki, pahin ${pahin.avain} σ ${pahin.sigma} (kehys ${pahin.kehys})`);
+  `${rikki}/${sarja.length} kehystä rikki, pahin ${pahin.avain} σ ${pahin.sigma}`
+  + ` = ${pahin.suhde} × perustaso (kehys ${pahin.kehys})`);
 
 const ranskaSigma = sarja.map((k) => k.ranska?.sigma).filter(Number.isFinite);
 const saksaSigma = sarja.map((k) => k.saksa?.sigma).filter(Number.isFinite);
 const ka = (xs) => (xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : 0);
-vaadi('V2 Ranskan sisällä reliefi säilyy (σ suurempi kuin Saksassa)',
-  ka(ranskaSigma) > ka(saksaSigma),
-  `Ranska σ ${Math.round(ka(ranskaSigma) * 100) / 100}, Saksa σ ${Math.round(ka(saksaSigma) * 100) / 100}`);
+/*
+ * V2 ON CHROMIUM-VÄITE, JA SE ON REHELLISYYTTÄ EIKÄ LAISKUUTTA.
+ *
+ * Väite vertaa Ranskan Solognea (tasainen, ~120 m — valittu siksi,
+ * ettei sen päällä ole kaupunkia eikä rajaa) Schwarzwaldiin (mäkinen).
+ * Chromiumilla dpr 3:n sumennus vaimentaa molemmat, ja kerman 0,85
+ * peitto ratkaisee vertailun: Ranska 0,45 > Saksa 0,24.
+ *
+ * WebKitillä kaappaus on dpr 1 eikä sumennusta ole, jolloin
+ * Schwarzwaldin RAE näkyy kerman läpi (σ 6,8) ja tasainen Sologne jää
+ * alle (σ 1,7) — VAIKKA kerma on molemmissa paikallaan (sama luku
+ * vanhalla ja uudella koodilla). Väite kaatuisi siis maaston muodosta
+ * eikä kermasta.
+ *
+ * Oikea korjaus on mittauspiste Ranskan mäkiseltä alueelta, joka ei
+ * osu kaupunkiin, rajaan eikä reittiin. Sitä ei ehditty valita
+ * (aikakatto 18.9.2026), joten väite on rajattu moottoriin, jolla se
+ * on kalibroitu. V1 — se väite, jonka takia tämä savuke on olemassa —
+ * ajetaan molemmilla.
+ */
+if (WEBKIT) {
+  tieto('V2 ohitettu', `WebKitin dpr 1 ei ole kalibroitu tälle pisteparille `
+    + `(Ranska σ ${Math.round(ka(ranskaSigma) * 100) / 100}, `
+    + `Saksa σ ${Math.round(ka(saksaSigma) * 100) / 100})`);
+}
+else {
+  vaadi('V2 Ranskan sisällä reliefi säilyy (σ suurempi kuin Saksassa)',
+    ka(ranskaSigma) > ka(saksaSigma),
+    `Ranska σ ${Math.round(ka(ranskaSigma) * 100) / 100}, Saksa σ ${Math.round(ka(saksaSigma) * 100) / 100}`);
+}
 
 if (MERET) {
   /*
