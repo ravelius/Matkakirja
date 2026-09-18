@@ -1379,6 +1379,7 @@ polta_pallo () {
     --ulos "$ULOS" \
     $( [ -n "$PALLO_LUETTELO" ] && echo --pallo-luettelo "$PALLO_LUETTELO" ) \
     $( [ -n "$PALLON_LAHDE" ] && echo --pallon-lahde "$PALLON_LAHDE" ) \
+    $( [ -z "$PALLON_NOSTOT" ] && echo --pallo-ilman-nostoja ) \
     $( [ "$VIE" -eq 1 ] || echo --ei-vie ) \
     $( [ "$SIIVOA" -eq 1 ] && echo --siivoa ) \
     < "$lista" || virhe=1
