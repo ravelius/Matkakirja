@@ -8654,8 +8654,10 @@ export const RAAMATTU = {
           + 'kaikki saapumisen aanet ja kuvat. Mitataan 390 px: kuvatekstin '
           + 'paperin alueella ei varjoa (pikselit paperin variset kuvan '
           + 'alareunan alla), Ohita -> kaikki audio-elementit paused/ended 1 s:n '
-          + 'sisalla ja 10 s myohemmin yhtaan uutta ei soi. Tila: tyo Opus-'
-          + 'agentilla.',
+          + 'sisalla ja 10 s myohemmin yhtaan uutta ei soi. Tila: TOTEUTETTU '
+          + '(varjo koko kortille; Ohita nostaa lipun ennen pysaytysta ja '
+          + 'vaientaa pulun kaupunkipuheen ja ajastimet; mittaa-luentakuvat '
+          + '27/27), JULKAISTU v1936.',
         'KARTTAUUDISTUKSEN PAATOKSET 34: KAUPUNKI ON YKSI PISTE, LISTA '
           + 'KATEGORIOITTAIN; KAUPUNGIN ULKOPUOLISET NOSTOT JAAVAT KARTALLE '
           + '(omistaja 17.9.2026 klo 21.45 Suomen aikaa, sanatarkasti: '
@@ -8784,7 +8786,11 @@ export const RAAMATTU = {
           + 'nimion ruutukoko +-1 px; PARIISI-nimen ja jokaisen noston nimion '
           + 'ruutuvektori merkista (dx, dy) sama ennen ja jalkeen vedon (+-1 '
           + 'px) ja skaalautuu zoomissa lineaarisesti ilman kylkivaihtoa. '
-          + 'Tila: tyo Opus-agentilla.',
+          + 'Tila: TOTEUTETTU (liuskan rivi = poltetun koko, katto 18 px, ei '
+          + 'katkaisua; RUUDUN REUNA PURKAA LUKON ja pelimerkin purku kumottu; '
+          + 'sovittelu vain kun joukko/ruutukoko muuttuu; nimikyltti 7a/7b '
+          + 'vihreat kaikilla kaupungeilla; nostolaput-vartio 5 vanhentunut), '
+          + 'JULKAISTU v1936 18.9.2026 klo 08.50 Suomen aikaa.',
         'KARTTAUUDISTUKSEN PAATOKSET 33: NOSTOT YMPARI RANSKAA, ENSIN PISTEET '
           + 'JA OTSIKOT, KAIKKI POLTETUN MERKIN KOKOA (omistaja 17.9.2026 klo '
           + '21.40 Suomen aikaa, ankkurieran kaappauksista, sanatarkasti: '
