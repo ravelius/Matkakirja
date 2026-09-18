@@ -22569,9 +22569,10 @@ export class UI {
    * mikä ei ole tilaus (tilaus on panorointi). (3) Siirron on oltava
    * ruudulla tuntuva (SAATON_VAHIN_PX), muuten kartta vain värähtäisi.
    *
-   * KOHDE ON MATKAN PÄÄTEPISTE eikä kaupungin muotolaatikko: kerrointa
-   * ei anneta, joten kamera pitää nykyisen mittakaavansa ja pelkkä
-   * keskipiste siirtyy. MITTAKAAVAN ON ASETTANUT ENNAKKOZOOMI, joka
+   * KOHDE ON NAPPULAN SIIRTYMÄ (askelmittakaavalla) tai matkan
+   * päätepiste — ei kaupungin muotolaatikko: kerrointa ei anneta, joten
+   * kamera pitää nykyisen mittakaavansa ja pelkkä keskipiste siirtyy.
+   * MITTAKAAVAN ON ASETTANUT ENNAKKOZOOMI, joka
    * ajettiin juuri ennen tätä — saatto ei enää zoomaa itse, koska
    * kaksi mittakaavaa samassa ajossa on täsmälleen se sekamelska,
    * jonka omistaja pyysi purkamaan. Näin myös nappulan
@@ -22581,8 +22582,12 @@ export class UI {
    * Lupausta ei odoteta: ajo saa jäädä pyörimään saapumisen yli, ja
    * ele saa keskeyttää sen milloin tahansa. Perillä kamera JÄÄ SIIHEN
    * (ks. osion johdanto: paluuajo poistettiin 1.9.2026).
+   *
+   * `from` on nappulan LÄHTÖPAIKKA: askelmittakaavan saatto liukuu
+   * nappulan mukana eikä määränpään asentoon (ks. SAATTO LIUKUU
+   * NAPPULAN MUKANA alla). Ilman sitä käytös on entinen.
    */
-  aloitaSaattavaKamera(path, kesto) {
+  aloitaSaattavaKamera(path, kesto, from = null) {
     if (this.reducedMotion || this.dead) return;
     const kartta = this.kamera();
     if (!kartta?.ajaKamera) return;
@@ -22618,20 +22623,77 @@ export class UI {
     const skaala = tavoiteLeveys > 0 && nyt.leveys > 0
       ? nyt.skaala * (nyt.leveys / tavoiteLeveys)
       : nyt.skaala;
-    const matka = Math.hypot(kohta.x - nyt.x, kohta.y - nyt.y) * skaala;
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * SAATTO LIUKUU NAPPULAN MUKANA (Raamattu, KARTTAUUDISTUKSEN
+     * PAATOKSET 43 kohta 11)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * Omistaja 18.9.2026 (iPad/iPhone, v1946), sanatarkasti: *"Kun
+     * nappula liikkuu liftauksen aikana, kartta panoroi vaaraan
+     * suuntaan."*
+     *
+     * JUURISYY ON MITATTU EIKÄ ARVATTU (savuke-siirtozoomin pohjalta,
+     * Marseille → Nevers, land, silmä 3):
+     *
+     *   Saatto ajoi määränpään SAAPUMISASENTOON, ja se asento on
+     *   kaupungin POHJOIS- JA ITÄPUOLELLA — poikkeama on
+     *   { x: −0,08, y: +0,28 } NÄKYMÄSTÄ (js/saapumisasento.js
+     *   saapumisenPallonKohta), eli se kasvaa näkyvän kaaren mukana.
+     *   Työpöytäruudulla (1400 × 900, näkyvä leveys 396 lautayksikköä
+     *   = 11,88°) itäsiirto oli +1,49°, kun koko matkan pituusaste-
+     *   ero on vain −2,38°: kameran kohde jäi LÄHTÖPISTEEN ITÄPUOLELLE
+     *   (lng 4,4535 → 4,4700), vaikka nappula kulki länteen. Mitattu
+     *   kameran liikevektori oli siis pituusasteella VASTAKKAINEN
+     *   nappulan liikkeelle — juuri se, minkä omistaja näki.
+     *   Puhelimella (390 × 844) sama poikkeama oli +0,67° itään ja
+     *   +3,07° pohjoiseen: kamera liikkui länteen vain kolmanneksen
+     *   nappulan matkasta ja ohitti määränpään 1,3-kertaisesti
+     *   pohjoisessa, joten nappula valui ruudulla 80 px vasemmalle ja
+     *   90 px alas.
+     *
+     * KORJAUS ON PUHDAS SIIRTYMÄ: kamera ajaa siitä, missä se on, sen
+     * verran ja siihen suuntaan kuin NAPPULA kulkee (määränpää −
+     * lähtöpaikka). Silloin kameran liikevektori on määritelmän
+     * mukaan nappulan liikkeen suuntainen, ja nappula pysyy koko
+     * matkan siinä kohdassa ruutua, johon ennakkozoomi sen jätti.
+     * Kesto, käyrä ja mittakaava ovat ennallaan — muuttuu vain MAALI.
+     *
+     * SAAPUMISASENTO EI KATOA. Maitse ja bussilla kaupunkiin päättyvä
+     * matka ajaa perillä `palaaMaanRajaukseen` → `lauta.saavu`, ja
+     * SE asettaa kaupungin alimpaan kolmannekseen (js/pallolauta/
+     * kamera.js saavu, `saapuminen: true`). Kun saatto teki saman
+     * asennon jo matkan aikana, asento tehtiin kahdesti — ja
+     * ensimmäinen kerta maksoi koko panoroinnin suunnan.
+     *
+     * LAIVA JA TUNTEMATON KULKUTAPA ENNALLAAN. Niillä ennakkozoomi
+     * rajaa KOKO MATKAN (MATKARAJAUKSEN_MARGINAALI sea 0,5,
+     * PAATOKSET 40: *"LAIVA PITÄÄ MATKARAJAUKSENSA"*), jolloin kamera
+     * ei ole nappulan päällä vaan matkan keskellä eikä puhdas siirtymä
+     * osuisi mihinkään. Ehto on sama `tavoiteLeveys`, joka erottaa
+     * askelmittakaavan muista jo kynnyksessä.
+     */
+    const lahto = from ? pixelOf(this.game.board, from) : null;
+    const siirtyma = tavoiteLeveys > 0 && Number.isFinite(lahto?.x)
+      ? { x: kohta.x - lahto.x, y: kohta.y - lahto.y }
+      : null;
+    const matka = siirtyma
+      ? Math.hypot(siirtyma.x, siirtyma.y) * skaala
+      : Math.hypot(kohta.x - nyt.x, kohta.y - nyt.y) * skaala;
     // Kynnys ruudun leveydestä, pohja absoluuttinen (ks. SAATON_VAHIN_PX).
     const kynnys = Math.max(SAATON_VAHIN_PX,
       (this.mapPane?.clientWidth ?? 0) * SAATON_VAHIN_OSUUS);
     if (!(matka > kynnys)) return;
     /*
-     * SAATTO PÄÄTTYY SAAPUMISASENTOON (omistaja 9.9.2026, Raamattu
-     * SAAPUMISESSA KAMERA ASETTUU NIIN, ETTA KAUPUNKI ON ALIMMASSA
-     * KOLMANNEKSESSA): määränpää ei jää ruudun keskelle vaan alimpaan
-     * kolmannekseen, jolloin luentakuvalle jää tila sen yläpuolelle.
-     * Kävelymatkalla tämä ON saapumisajo — paluuajo poistettiin
-     * 1.9.2026, joten kamera jää tähän asentoon. Siirto lasketaan
-     * laudan kamerassa (`saapuminen`), joten kaava on sama molemmilla
-     * laudoilla eikä ui.js tunne lautaa.
+     * SAATTO PÄÄTTYY SAAPUMISASENTOON — VAIN SILLOIN KUN SE ON MATKAN
+     * VIIMEINEN AJO (omistaja 9.9.2026, Raamattu SAAPUMISESSA KAMERA
+     * ASETTUU NIIN, ETTA KAUPUNKI ON ALIMMASSA KOLMANNEKSESSA).
+     * Askelmittakaavan saatto EI enää tee sitä: sen maali on nappulan
+     * siirtymä (yllä), ja asennon tekee perillä `palaaMaanRajaukseen`.
+     * Muilla (laiva, tuntematon kulkutapa) tämä on yhä se ajo, johon
+     * kamera jää, joten `saapuminen` säilyy. Siirto lasketaan laudan
+     * kamerassa, joten kaava on sama molemmilla laudoilla eikä ui.js
+     * tunne lautaa.
      */
     /*
      * SAATTO PITÄÄ ENNAKKOZOOMIN MITTAKAAVAN — NYT KIRJATTUNA, EI
@@ -22649,12 +22711,19 @@ export class UI {
      * Ilman lukua (laiva, tuntematon kulkutapa) käytös on entinen:
      * pelkkä keskipiste siirtyy.
      */
-    void kartta.ajaKamera(
-      tavoiteLeveys > 0
-        ? { x: kohta.x, y: kohta.y, leveys: tavoiteLeveys, saapuminen: true }
-        : { x: kohta.x, y: kohta.y, saapuminen: true },
-      { kesto, pehmennys: SAATON_PEHMENNYS },
-    );
+    let kamerankohde;
+    if (siirtyma) {
+      kamerankohde = {
+        x: nyt.x + siirtyma.x, y: nyt.y + siirtyma.y, leveys: tavoiteLeveys,
+      };
+    } else if (tavoiteLeveys > 0) {
+      kamerankohde = {
+        x: kohta.x, y: kohta.y, leveys: tavoiteLeveys, saapuminen: true,
+      };
+    } else {
+      kamerankohde = { x: kohta.x, y: kohta.y, saapuminen: true };
+    }
+    void kartta.ajaKamera(kamerankohde, { kesto, pehmennys: SAATON_PEHMENNYS });
   }
 
   /**
@@ -22974,7 +23043,7 @@ export class UI {
       const kyydissa = kyyti && !this.reducedMotion && typeof kuljettaja.aja === 'function';
       const nappulanKesto = path.length * stepMs
         + (kyydissa ? 0 : Math.max(0, path.length - 1) * HYPYN_TAUKO_MS);
-      this.aloitaSaattavaKamera(path, siirtoajonKesto(nappulanKesto));
+      this.aloitaSaattavaKamera(path, siirtoajonKesto(nappulanKesto), from);
       /*
        * YHDEN ASKELEEN MATKA JÄÄ ILMAN OMAA ÄÄNTÄ. Maisema nousee
        * kuuluviin 900 ms:ssa, ja viimeinen askel vaihtaa sen jo
