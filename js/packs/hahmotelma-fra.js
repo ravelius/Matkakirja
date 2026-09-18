@@ -87,40 +87,135 @@ const koordinaatinLahde = (artikkeli, haettu = '17.9.2026') => `en-Wikipedia "${
 export const HAHMOTELMA_FRA = [
   {
     id: 'hahmotelma-pic-du-midi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-pic-du-midi-vuori-85944887.jpg',
+      lyhyt: 'Observatorion kupolit Pic du Midin huipulla pilvien yläpuolella.',
+      selite: 'Pic du Midin laki: observatorion kupolit ja terassit kiinni kalliossa, pilvet ja Pyreneiden harjat alapuolella.',
+      lahde: 'Valokuva: Benh LIEU SONG, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Benh LIEU SONG',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pic_du_Midi_de_Bigorre.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-pic-du-midi-1878-5dd1557d.jpg',
+        lyhyt: 'Kaiverrus observatorion peruskiven laskemisesta huipulla vuonna 1878.',
+        selite: 'Kaiverrus vuodelta 1878: Ramond-seuran väki laskee Pic du Midin observatorion peruskiveä vuoren laella.',
+        lahde: 'Kuva: tekijä tuntematon, Wikimedia Commons (public domain).',
+        tekija: 'Tekijä tuntematon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pic_du_Midi_de_Bigorre_observatory_1879.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-pic-du-midi-observatorio-f3812f4d.jpg',
+        lyhyt: 'Observatorion kaukoputkikupoli lähikuvassa vuoren laella.',
+        selite: 'Pic du Midin observatorion kaukoputkikupoli betonitornin päällä, taustalla Pyreneiden harjanteita.',
+        lahde: 'Valokuva: Le Commissaire, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Le Commissaire',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Observatoire_du_Pic_du_Midi.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+      },
+    ],
     nimi: 'Pic du Midi de Bigorre',
     tyyppi: 'vuori',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Miksi tähtitorni rakennettiin juuri tälle huipulle?',
+      'Mitä huipulla mitataan säästä?',
+    ],
     nappi: 'Pyreneiden huippu, jonne rakennetaan observatoriota',
     // 0,14277778 E / 42,93638889 N — en-Wikipedia "Pic du Midi de Bigorre"
     laudat: {
       maailmankartta: { x: 5838.1, y: 1685.9 },
       europe: { x: 213.9, y: 764.4 },
     },
-    teksti: runko('Pyreneiden huippu, jonne rakennetaan observatoriota'),
-    lahde: koordinaatinLahde('Pic du Midi de Bigorre'),
+    teksti: 'Pic du Midi de Bigorre eli lyhyesti Pic du Midi on 2 877 metriä korkea vuori '
+      + 'Ranskan Pyreneillä Hautes-Pyrénées\'n departementissa. Sen huipulla on Pic du Midin '
+      + 'observatorio, jossa tehdään sekä tähtitieteellisiä että säähavaintoja. Samalla '
+      + 'huipulla seisoo myös televiestintämasto.',
+    lahde: 'en-Wikipedia "Pic du Midi de Bigorre" ja fr-Wikipedia "Pic du Midi de Bigorre", '
+      + 'johdanto-osat (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-lourdes',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-lourdes-luola-875fe06a.jpg',
+      lyhyt: 'Massabiellen luola Lourdesissa, jonne pyhiinvaeltajat kokoontuvat.',
+      selite: 'Massabiellen luola Lourdesissa: kallioseinämä, jonka koloon on asetettu Neitsyt Marian patsas.',
+      lahde: 'Valokuva: Emmanuel Brunner (Manu25), Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Emmanuel Brunner (Manu25)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Grotte_Massabielle.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-lourdes-kaiverrus-aa3a306c.jpg',
+        lyhyt: '1800-luvun kaiverrus Lourdesin luolasta joen rannalla.',
+        selite: 'Charles Mercereaun kaiverrus Lourdesin luolasta: kallio, joki ja yksinäinen kulkija rantakivillä.',
+        lahde: 'Kuva: Charles Mercereau (1822–1864), Wikimedia Commons (public domain).',
+        tekija: 'Charles Mercereau',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Grotte_miraculeuse_%C3%A0_Lourdes_Charles_Mercereau.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Lourdes',
     tyyppi: 'historia',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Kuka Bernadette Soubirous oli?',
+      'Miten pienestä kaupungista tuli pyhiinvaelluskohde?',
+    ],
     nappi: 'Luola, jonne pyhiinvaeltajat virtaavat',
     // -0,04694444 E / 43,09416667 N — en-Wikipedia "Lourdes"
     laudat: {
       maailmankartta: { x: 5831.8, y: 1679.6 },
       europe: { x: 210.3, y: 760.2 },
     },
-    teksti: runko('Luola, jonne pyhiinvaeltajat virtaavat'),
-    lahde: koordinaatinLahde('Lourdes'),
+    teksti: 'Lourdes on markkinakaupunki Pyreneillä Hautes-Pyrénées\'n departementissa '
+      + 'Lounais-Ranskassa. Ennen 1800-luvun puoliväliä se tunnettiin lähinnä keskellä '
+      + 'kaupunkia kohoavasta kalliolinnastaan. Vuonna 1858 talonpoikaistyttö Bernadette '
+      + 'Soubirous kertoi Marian ilmestyksistä, ja kaupungista ja sen Lourdesin Neitsyt '
+      + 'Marian pyhäköstä tuli pian yksi maailman tärkeimmistä pyhiinvaelluskohteista. '
+      + 'Kaupungin keskusta on noin 410 metrin korkeudella merenpinnasta.',
+    lahde: 'en-Wikipedia "Lourdes" ja fi-Wikipedia "Lourdes", johdanto-osat '
+      + '(tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-canigou',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-canigou-garces-0788be3c.jpg',
+      lyhyt: 'Lumipeitteinen Canigón massiivi Pic de Garcesilta katsottuna.',
+      selite: 'Canigón massiivi talvella Pic de Garcesilta Céretin yläpuolelta: lumihuiput kohoavat metsäisten laaksojen takaa.',
+      lahde: 'Valokuva: Fabricio Cardenas, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Fabricio Cardenas',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:20210111_-_Canigou_depuis_Pic_de_Garces.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-canigou-huippu-03b4c489.jpg',
+        lyhyt: 'Canigón huippu ja kivinen harjanne, jota pitkin nousu käy.',
+        selite: 'Canigón huippu kesällä: kivinen harjanne, jota pitkin kulkijat nousevat laelle.',
+        lahde: 'Valokuva: Jordi Gili, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Jordi Gili',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pic_del_Canig%C3%B3_05.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+      },
+    ],
     nimi: 'Canigou',
     tyyppi: 'vuori',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Miksi vuorta luultiin Pyreneiden korkeimmaksi?',
+      'Mitä vuori merkitsee katalaaneille?',
+    ],
     nappi: 'Katalonian pyhä vuori',
     // 2,45666667 E / 42,51888889 N — en-Wikipedia "Canigó"
     // (haku "Canigou" ohjautuu tähän artikkeliin)
@@ -128,98 +223,303 @@ export const HAHMOTELMA_FRA = [
       maailmankartta: { x: 5915.2, y: 1702.8 },
       europe: { x: 258.4, y: 775.4 },
     },
-    teksti: runko('Katalonian pyhä vuori'),
-    lahde: koordinaatinLahde('Canigó'),
+    teksti: 'Canigó eli ranskaksi Canigou on 2 784 metriä korkea vuori Etelä-Ranskan '
+      + 'Pyreneillä, alle 50 kilometrin päässä merestä. Jyrkkien rinteidensä ja '
+      + 'rannikonläheisen sijaintinsa takia sitä pidettiin 1700-luvulle asti Pyreneiden '
+      + 'korkeimpana vuorena. Vuori on Pohjois-Kataloniassa ja näkyy Etelä-Kataloniaan asti, '
+      + 'ja katalaaneille sillä on historiallinen vertauskuvallinen merkitys.',
+    lahde: 'en-Wikipedia "Canigó", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-verdon',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-verdon-sainte-croix-aa347532.jpg',
+      lyhyt: 'Verdonin kanjonin suu ja turkoosi vesi Sainte-Croix-järven puolelta.',
+      selite: 'Verdonin kanjonin suu Galetas\'n sillalta nähtynä: turkoosi vesi virtaa kalkkikiviseinien välistä Sainte-Croix-järveen.',
+      lahde: 'Valokuva: Benh LIEU SONG, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Benh LIEU SONG',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gorges_Verdon_Barrage_Sainte_Croix.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-verdon-trescaire-57009376.jpg',
+        lyhyt: 'Kanjonin seinämät Trescairen näköalapaikalta katsottuna.',
+        selite: 'Verdonin kanjoni Trescairen näköalapaikalta: satojen metrien kalkkikiviseinämät laskeutuvat joen uomaan.',
+        lahde: 'Valokuva: Benh LIEU SONG, Wikimedia Commons (CC BY 2.5).',
+        tekija: 'Benh LIEU SONG',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Verdon_Trescaire.jpg',
+        lisenssi: 'CC BY 2.5',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5/',
+      },
+    ],
     nimi: 'Gorges du Verdon',
     tyyppi: 'joki',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Miten joki jaksoi leikata näin syvän rotkon?',
+      'Mistä veden turkoosi väri tulee?',
+    ],
     nappi: 'Euroopan syvin kanjoni',
     // 6,36388889 E / 43,73777778 N — en-Wikipedia "Verdon Gorge"
     laudat: {
       maailmankartta: { x: 6045.5, y: 1653.5 },
       europe: { x: 333.4, y: 743.3 },
     },
-    teksti: runko('Euroopan syvin kanjoni'),
-    lahde: koordinaatinLahde('Verdon Gorge'),
+    teksti: 'Gorges du Verdon on jokikanjoni Provence-Alpes-Côte d\'Azurin alueella '
+      + 'Kaakkois-Ranskassa. Se on noin 25 kilometriä pitkä ja enimmillään 700 metriä syvä. '
+      + 'Rotkon on uurtanut Verdon-joki, joka on saanut nimensä turkoosinvihreästä '
+      + 'väristään. Castellanen ja Moustiers-Sainte-Marien välillä joki on leikannut '
+      + 'kalkkikivimassiiviin 700 metrin syvyisen uran, ja kanjonin päässä se laskee '
+      + 'tekojärveen Lac de Sainte-Croixiin.',
+    lahde: 'en-Wikipedia "Verdon Gorge", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-chenonceau',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-chenonceau-ita-a3123d4b.jpg',
+      lyhyt: 'Chenonceaun linnan galleria kaartuu holvikaarilla Cher-joen yli.',
+      selite: 'Chenonceaun linna idästä: gallerian siipi lepää holvikaarilla keskellä Cher-jokea.',
+      lahde: 'Valokuva: Gzen92, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Gzen92',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chenonceau_-_est_(Chenonceaux)_(1).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-chenonceau-mieusement-b900bba0.jpg',
+        lyhyt: '1800-luvun valokuva Chenonceaun linnasta jokitorneineen.',
+        selite: 'Séraphin-Médéric Mieusement\'n 1800-luvun valokuva Chenonceausta: linnan torninkulmat ja sillan kaaret joen päällä.',
+        lahde: 'Valokuva: Séraphin-Médéric Mieusement, Wikimedia Commons (CC0).',
+        tekija: 'Séraphin-Médéric Mieusement',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Chateau_de_Chenonceaux,_by_S%C3%A9raphin-M%C3%A9d%C3%A9ric_Mieusement_(Getty_107GGH).jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+    ],
     nimi: 'Chenonceau',
     tyyppi: 'kulttuuri',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Miksi linna rakennettiin joen päälle?',
+      'Kuka suunnitteli sillan päällä olevan gallerian?',
+    ],
     nappi: 'Linna, joka seisoo joen päällä',
     // 1,0704 E / 47,3247 N — en-Wikipedia "Château de Chenonceau"
     laudat: {
       maailmankartta: { x: 5869, y: 1504.8 },
       europe: { x: 231.8, y: 649 },
     },
-    teksti: runko('Linna, joka seisoo joen päällä'),
-    lahde: koordinaatinLahde('Château de Chenonceau'),
+    teksti: 'Château de Chenonceau on linna, joka kaartuu Cher-joen yli lähellä '
+      + 'Chenonceaux\'n kylää Indre-et-Loiren departementissa. Se on Loiren laakson '
+      + 'tunnetuimpia linnoja. Chenonceaun kartano mainitaan kirjallisessa lähteessä '
+      + 'ensimmäisen kerran 1000-luvulla, ja nykyinen linna rakennettiin vuosina 1514–1522 '
+      + 'vanhan myllyn perustuksille. Joen ylittävä silta rakennettiin vuosina 1556–1559 '
+      + 'renessanssiarkkitehti Philibert de l\'Ormen piirustusten mukaan ja sillan päällä '
+      + 'oleva galleria vuosina 1570–1576 Jean Bullantin suunnitelmista.',
+    lahde: 'en-Wikipedia "Château de Chenonceau", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-saint-malo',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-saint-malo-muurit-dad8f358.jpg',
+      lyhyt: 'Saint-Malon muurinpäällinen kävelytie ja linnan päätorni.',
+      selite: 'Saint-Malon kaupunginmuurin päällä kulkeva kävelytie; taustalla linnan pyöreä torni ja päätorni.',
+      lahde: 'Valokuva: Pierre André Leclercq, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Pierre André Leclercq',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Saint-Malo_les_remparts_de_la_cit%C3%A9_(25).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-saint-malo-photochrom-eb927847.jpg',
+        lyhyt: '1800-luvun lopun värivalokuva Saint-Malosta merelle päin.',
+        selite: 'Photochrom-värivalokuva 1800-luvun lopulta: muurikaupunki ja sen aallonmurtajat nousevat matalana kaistaleena merestä.',
+        lahde: 'Valokuva: Photochrom Print Collection, Wikimedia Commons (public domain).',
+        tekija: 'Photochrom Print Collection (Library of Congress)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:General_view_from_the_fort,_St._Malo,_France-LCCN2001698701.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Saint-Malo',
     tyyppi: 'merenkulku',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Keitä Saint-Malon kaapparit olivat?',
+      'Miksi vanhakaupunki rakennettiin muurien sisään?',
+    ],
     nappi: 'Merirosvojen muurikaupunki',
     // -2,0261 E / 48,6494 N — en-Wikipedia "Saint-Malo"
     laudat: {
       maailmankartta: { x: 5765.8, y: 1448.5 },
       europe: { x: 172.3, y: 614.1 },
     },
-    teksti: runko('Merirosvojen muurikaupunki'),
-    lahde: koordinaatinLahde('Saint-Malo'),
+    teksti: 'Saint-Malo on historiallinen satamakunta Ille-et-Vilainen departementissa '
+      + 'Bretagnessa. Muurien ympäröimä vanhakaupunki rakennettiin kalliolle graniittisaarelle, '
+      + 'jonka yhdisti mantereeseen vain kapea hiekkakannas ja vuoroveden paljastama '
+      + 'liejupohja. Kannakselle tehtiin kivetty tie jo vuonna 1509, ja sitä levennettiin ja '
+      + 'korotettiin vuosisatojen kuluessa, erityisesti 1800-luvulla. Kanaalin rannalla '
+      + 'sijaitsevalla kaupungilla on pitkä kaapparihistoria: vaurautta kertyi sekä '
+      + 'lähivesien kiristyksestä että merentakaisista retkistä.',
+    lahde: 'en-Wikipedia "Saint-Malo" ja fi-Wikipedia "Saint-Malo", johdanto-osat '
+      + '(tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-pointe-du-raz',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-pointe-du-raz-vieille-0d90a4d0.jpg',
+      lyhyt: 'Pointe du Raz, La Vieillen majakka ja Seinin saari taustalla.',
+      selite: 'Pointe du Raz vasemmalla, edessä La Vieillen majakka ja Platen tunnusmerkki, horisontissa Seinin saari.',
+      lahde: 'Valokuva: Foudebassans, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Foudebassans',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pointe_du_Raz,_La_Vieille,_Sein.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-pointe-du-raz-photochrom-6e2d59b2.jpg',
+        lyhyt: '1800-luvun lopun värivalokuva niemen kallioista ja majakasta.',
+        selite: 'Photochrom-värivalokuva 1800-luvun lopulta: Pointe du Raz\'n graniittikalliot laskeutuvat mereen, majakka siintää kaukana.',
+        lahde: 'Valokuva: Photochrom Print Collection, Wikimedia Commons (public domain).',
+        tekija: 'Photochrom Print Collection (Library of Congress)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pointe_du_Raz,_Douarnenez,_France-LCCN2001698116.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Pointe du Raz',
     tyyppi: 'meri',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Miksi Raz de Sein on merenkulkijalle vaarallinen?',
+      'Mikä majakka näkyy kärjestä merelle?',
+    ],
     nappi: 'Bretagnen läntisin kärki',
     // -4,74111111 E / 48,04027778 N — en-Wikipedia "Pointe du Raz"
     laudat: {
       maailmankartta: { x: 5675.3, y: 1474.5 },
       europe: { x: 120.2, y: 630.1 },
     },
-    teksti: runko('Bretagnen läntisin kärki'),
-    lahde: koordinaatinLahde('Pointe du Raz'),
+    teksti: 'Pointe du Raz on kallioinen niemenkärki, joka työntyy Atlanttiin Länsi-Bretagnessa. '
+      + 'Se on Plogoffin kunnan läntisin kohta Finistèressä ja kohoaa keulan tavoin noin 72 '
+      + 'metriä Raz de Sein -salmen yläpuolelle. Nimi tulee juuri tuosta salmesta, joka '
+      + 'erottaa niemen Seinin saaresta ja on vaarallista vettä; sana raz on lainattu '
+      + 'normannista ja tarkoittaa voimakasta virtaa. Niemeltä erottuu selvästi La Vieillen '
+      + 'majakka. Manner-Ranskan läntisin kohta on kuitenkin hieman pohjoisempana oleva '
+      + 'Pointe de Corsen.',
+    lahde: 'en-Wikipedia "Pointe du Raz" ja fr-Wikipedia "Pointe du Raz", johdanto-osat '
+      + '(tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-etretat',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-etretat-aiguille-a0e9982a.jpg',
+      lyhyt: 'Étretat\'n kiviportti ja sen takana kohoava Aiguille-neula.',
+      selite: 'Étretat\'n Porte d\'Aval -kiviportti ja sen takana merestä nouseva Aiguille-kallioneula.',
+      lahde: 'Valokuva: Yeuzio, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Yeuzio',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:L%27Arche_et_lAiguille_creuse_%C3%A0_Etretat.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-etretat-monet-91236112.jpg',
+        lyhyt: 'Claude Monet maalasi Étretat\'n kiviportin vuonna 1864.',
+        selite: 'Claude Monet\'n maalaus "Étretat, porte et falaise d\'Aval" vuodelta 1864: kiviportti, kallio ja ranta.',
+        lahde: 'Kuva: Claude Monet, Wikimedia Commons (public domain).',
+        tekija: 'Claude Monet',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C3%89tretat,_porte_et_falaise_d%27Aval_(1864)_Claude_Monet_(W_22b).jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Étretat',
     tyyppi: 'meri',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Miksi maalarit tulivat juuri Étretat\'hen?',
+      'Miten kiviportit syntyivät kallioon?',
+    ],
     nappi: 'Liitukalliot ja kiviportit',
     // 0,21 E / 49,71 N — en-Wikipedia "Étretat"
     laudat: {
       maailmankartta: { x: 5840.3, y: 1402.8 },
       europe: { x: 215.2, y: 586.2 },
     },
-    teksti: runko('Liitukalliot ja kiviportit'),
-    lahde: koordinaatinLahde('Étretat'),
+    teksti: 'Étretat on kunta Seine-Maritimen departementissa Normandiassa '
+      + 'Luoteis-Ranskassa, noin 32 kilometriä Le Havresta koilliseen Pays de Caux\'n '
+      + 'rannikolla. Vaatimattomasta kalastajakylästä tuli 1800-luvulla muodikas '
+      + 'kylpyläpaikka ja porvariston kesänviettopaikka. Paikka veti puoleensa taiteilijoita: '
+      + 'siellä viihtyivät muun muassa Flaubert ja Maupassant, ja Courbet, Boudin ja Monet '
+      + 'maalasivat sen rantoja. Yli 90 metriä korkeat liitukalliot, kolme kiviporttia ja '
+      + 'harmaat kivirannat tekivät Étretat\'sta yhden Ranskan tunnetuimmista '
+      + 'rannikkomaisemista.',
+    lahde: 'en-Wikipedia "Étretat" ja fr-Wikipedia "Étretat", johdanto-osat '
+      + '(tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-amiens',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-amiens-lansijulkisivu-f1ce66d9.jpg',
+      lyhyt: 'Amiensin tuomiokirkon länsijulkisivu portaaleineen ja ruusuikkunoineen.',
+      selite: 'Amiensin Notre-Damen länsijulkisivu: kolme veistoksin koristeltua portaalia, kuningasgalleria ja ruusuikkuna.',
+      lahde: 'Valokuva: Chabe01, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Chabe01',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fa%C3%A7ade_Ouest_Cath%C3%A9drale_Notre_Dame_-_Amiens_(FR80)_-_2021-05-30_-_1.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-amiens-photochrom-7a3a4117.jpg',
+        lyhyt: '1800-luvun lopun värivalokuva tuomiokirkon kuorista.',
+        selite: 'Photochrom-värivalokuva 1800-luvun lopulta: Amiensin kuoriaitaus, korkeat holvit ja ruusuikkuna.',
+        lahde: 'Valokuva: Photochrom Print Collection, Wikimedia Commons (public domain).',
+        tekija: 'Photochrom Print Collection (Library of Congress)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Cathedral_choir,_Amiens,_France-LCCN2001697552.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-amiens-julkisivu-6ed2cc6f.jpg',
+        lyhyt: 'Enkelipatsas ja kiviverkko tuomiokirkon julkisivun yksityiskohdassa.',
+        selite: 'Amiensin tuomiokirkon julkisivun yksityiskohta: torvea soittava enkeli pylväiden ja kivisen verkkokoristelun keskellä.',
+        lahde: 'Valokuva: CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'CEphoto, Uwe Aranas',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Amiens_France_Cath%C3%A9drale-Notre-Dame-d-Amiens-02.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+      },
+    ],
     nimi: 'Amiensin tuomiokirkko',
     tyyppi: 'kulttuuri',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Miten katedraali valmistui näin nopeasti?',
+      'Mitä länsijulkisivun kuvanveisto esittää?',
+    ],
     nappi: 'Ranskan suurin goottilainen kirkko',
     // 2,30222222 E / 49,895 N — en-Wikipedia "Amiens Cathedral"
     laudat: {
       maailmankartta: { x: 5910.1, y: 1394.7 },
       europe: { x: 255.4, y: 581.4 },
     },
-    teksti: runko('Ranskan suurin goottilainen kirkko'),
-    lahde: koordinaatinLahde('Amiens Cathedral'),
+    teksti: 'Amiensin Notre-Dame on katolinen tuomiokirkko, joka seisoo loivalla harjanteella '
+      + 'Somme-joen yllä Amiensissa noin 120 kilometriä Pariisista pohjoiseen. Se '
+      + 'rakennettiin lähes kokonaan vuosien 1220 ja noin 1270 välillä, goottilaiseksi '
+      + 'katedraaliksi hyvin lyhyessä ajassa, ja siksi sen tyyli on poikkeuksellisen '
+      + 'yhtenäinen. Tilavuudeltaan 200 000 kuutiometriä se on Ranskan suurin katedraali, yli '
+      + 'kaksi kertaa Pariisin Notre-Damen kokoinen. Kirkko on ollut Unescon '
+      + 'maailmanperintökohde vuodesta 1981, ja se tunnetaan erityisesti 1200-luvun alun '
+      + 'goottilaisesta kuvanveistosta länsijulkisivullaan ja eteläisen ristivarren '
+      + 'portaalissa.',
+    lahde: 'en-Wikipedia "Amiens Cathedral", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-reims',
