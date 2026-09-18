@@ -160,7 +160,8 @@ ohje () {
   cat <<'OHJE'
 Käyttö: tools/polta-paikallisesti.sh [valitsimet]
 
-  --sarjat z8|kaikki|z0-z7   mitkä shardit ajetaan (oletus z8)
+  --sarjat z8|kaikki|z0-z7|nostot   mitkä shardit ajetaan (oletus z8)
+                             nostot  = vain nostotaso z5-z8 uuteen versioon
                              z8      = pohja z8 + viivataso z8 + nostotaso z8
                                        OLEMASSA OLEVIIN versiopolkuihin
                              z0-z7   = työnkulun oma jako (uusi versio)
@@ -218,6 +219,15 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
                              (oletus GITHUB_RUN_ID tai aikaleima)
   --raporttivali S           edistymisraportin väli sekunteina
                              (oletus 300; 0 = ei raporttia)
+  --nostot-ja-pallo          YKSI AJO: nostotaso + pallon sarja + luettelo
+                             VASTA lopuksi (ei välitilaa; vaatii uuden
+                             --nostoversio ja --pallotunniste)
+  --pallon-lahde <kansio>    pallon shardit lukevat lähdelaatat tästä
+                             kansiosta (rakenne = julisteet/pyramidi/…)
+  --pallo-luettelo <polku>   pallon shardit lukevat luettelon tästä
+                             tiedostosta ämpärin sijaan
+  --ei-pallon-lahdetta       älä kokoa paikallista lähdekansiota
+                             (--nostot-ja-pallo noutaa lähteet verkosta)
   --lista                    tulosta shardit ja lopeta
 
 Avaimet ympäristöstä (EI argumentteina):
@@ -249,6 +259,8 @@ YTIMET=""
 ULOS="$JUURI/pyramidi-poltto"
 KOE=0; VAIN=""; VIE=1; SIIVOA=0; UUDESTAAN=0; PALLO=0; PALLOTUNNISTE=""
 PALLON_RANTA=0; VAIN_PALLO=0; PALLO_OSIA=""; PALLO_TASOT="0-8"; NOUTOVALI=""
+# YKSI AJO ILMAN VÄLITILAA (omistaja 18.9.2026, ks. polta_nostot_ja_pallo).
+YKSI_AJO=0; PALLO_LUETTELO=""; PALLON_LAHDE=""; EI_LAHDETTA=0
 # Ylikirjoitussuoja pallon sarjalle (ks. polta_pallo).
 KORVAA=0
 # Yhteysaikakatkaisu jokaiselle aws-kutsulle: jumittunut yhteys kaatuu
@@ -288,6 +300,10 @@ while [ $# -gt 0 ]; do
     --vain-pallo) VAIN_PALLO=1; PALLO=1; shift ;;
     --pallo-osia) PALLO_OSIA="$2"; shift 2 ;;
     --pallo-tasot) PALLO_TASOT="$2"; shift 2 ;;
+    --nostot-ja-pallo) YKSI_AJO=1; shift ;;
+    --pallon-lahde) PALLON_LAHDE="$2"; shift 2 ;;
+    --pallo-luettelo) PALLO_LUETTELO="$2"; shift 2 ;;
+    --ei-pallon-lahdetta) EI_LAHDETTA=1; shift ;;
     --korvaa) KORVAA=1; shift ;;
     --noutovali) NOUTOVALI="$2"; shift 2 ;;
     --ei-luetteloa) LUETTELO=0; shift ;;
@@ -319,6 +335,8 @@ esac
 # `--sarjat pallo` on työnkulun tie samaan kuin --vain-pallo: pyramidi on
 # jo ämpärissä ja vain pallon Mercator-sarja poltetaan uudestaan.
 if [ "$SARJAT" = "pallo" ]; then VAIN_PALLO=1; PALLO=1; fi
+# YKSI AJO: shardilista on nostotason oma (ks. polta_nostot_ja_pallo).
+if [ "$YKSI_AJO" -eq 1 ]; then SARJAT=nostot; PALLO=1; fi
 
 PALLO_MIN="${PALLO_TASOT%%-*}"; PALLO_MAX="${PALLO_TASOT##*-}"
 for luku in "$PALLO_MIN" "$PALLO_MAX"; do
@@ -578,6 +596,15 @@ shardit () {
       if [ "$VIIVAVERSIO" != "${A_VIIVAVERSIO:-$VIIVAVERSIO}" ]; then
         echo "viiva-z0-z7|--tasot 0-7 $viivaarg"
       fi
+      ;;
+  esac
+  # PELKKÄ NOSTOTASO (--sarjat nostot / --nostot-ja-pallo): sama jako kuin
+  # täyden polton nostoshardeilla, mutta ilman pohjaa ja viivoja. Uusi
+  # nostoversio polttaa koko kerroksen z5-z8 (ks. yllä).
+  case "$SARJAT" in
+    nostot)
+      echo "nosto-z5-z7|--tasot 5-7 $nostoarg"
+      echo "nosto-z8|--tasoja 9 --tasot 8 $nostoarg"
       ;;
   esac
   case "$SARJAT" in
@@ -972,7 +999,7 @@ kokoa_luettelo () {
   local kansio="$ULOS/luettelo"
   local tasot="0-7" tasoja=""
   case "$SARJAT" in
-    z8|kaikki) tasot="0-8"; tasoja="--tasoja 9" ;;
+    z8|kaikki|nostot) tasot="0-8"; tasoja="--tasoja 9" ;;
   esac
   local lisa=""
   [ "$PIIRIT" = "ei" ] && lisa="--eipiirit"
@@ -1077,7 +1104,9 @@ tarkista_eheys () {
 }
 
 vie_luettelo () {
-  aws s3 cp "$ULOS/luettelo/pyramidi.json" \
+  # Vietävä tiedosto voi olla myös yhdistetty luettelo (--nostot-ja-pallo).
+  local polku="${1:-$ULOS/luettelo/pyramidi.json}"
+  aws s3 cp "$polku" \
     "s3://$AMPARI/julisteet/pyramidi/pyramidi.json" \
     --endpoint-url "$PAATE" \
     --content-type application/json \
@@ -1141,6 +1170,8 @@ pallon_yritys () {
   (cd "$JUURI" && node tools/tee-pallolaatat.mjs \
       --min "$PALLO_MIN" --max "$PALLO_MAX" --nostot $rantalippu \
       --tunniste "$PALLOTUNNISTE" --osa "$i/$PALLO_OSIA" \
+      $( [ -n "$PALLO_LUETTELO" ] && echo --luettelo "$PALLO_LUETTELO" ) \
+      $( [ -n "$PALLON_LAHDE" ] && echo --lahde "$PALLON_LAHDE" ) \
       --noutovali "$vali" --ulos "$kansio") >"$loki" 2>&1 || koodi=$?
   kill "$vahti" 2>/dev/null || true
   wait "$vahti" 2>/dev/null || true
@@ -1240,6 +1271,7 @@ polta_pallo () {
   # shellcheck disable=SC2086
   (cd "$JUURI" && node tools/tee-pallolaatat.mjs --vain-luettelo \
     --min "$PALLO_MIN" --max "$PALLO_MAX" --nostot $rantalippu \
+    $( [ -n "$PALLO_LUETTELO" ] && echo --luettelo "$PALLO_LUETTELO" ) \
     --tunniste "$PALLOTUNNISTE" --ulos "$luettelokansio")
   local kansio
   kansio="$(cat "$luettelokansio/kansio.txt")"
@@ -1296,12 +1328,16 @@ polta_pallo () {
   echo "· pallon sarja $kansio (tasot ${PALLO_MIN}–${PALLO_MAX})"
   echo "· pallon shardeja ajossa $maara / $PALLO_OSIA (rinnakkain $rinnakkain,"
   echo "  noutovali $NOUTOVALI ms, ranta ${rantalippu:-mukaan})"
+  [ -n "$PALLON_LAHDE" ] && echo "  lähteet levyltä: $PALLON_LAHDE (ei verkkonoutoja)"
+  [ -n "$PALLO_LUETTELO" ] && echo "  luettelo: $PALLO_LUETTELO (ei viety ämpäriin)"
   local alkoi virhe=0
   alkoi="$(date +%s)"
   xargs -P "$rinnakkain" -I{} "$ITSE" --lapsi --vain {} \
     --pallotunniste "$PALLOTUNNISTE" --pallo-osia "$PALLO_OSIA" \
     --pallo-tasot "$PALLO_MIN-$PALLO_MAX" --noutovali "$NOUTOVALI" \
     --ulos "$ULOS" \
+    $( [ -n "$PALLO_LUETTELO" ] && echo --pallo-luettelo "$PALLO_LUETTELO" ) \
+    $( [ -n "$PALLON_LAHDE" ] && echo --pallon-lahde "$PALLON_LAHDE" ) \
     $( [ "$VIE" -eq 1 ] || echo --ei-vie ) \
     $( [ "$SIIVOA" -eq 1 ] && echo --siivoa ) \
     < "$lista" || virhe=1
@@ -1330,6 +1366,171 @@ polta_pallo () {
   fi
   echo "  MUISTA: js/pallo.js PALLO_LAATTAVERSIO ja PALLO_LAATTATUNNISTE"
   echo "  osoittamaan tähän kansioon, jos ne eivät jo osoita."
+}
+
+
+# ------------------------------------------- paikallinen lähdekansio
+#
+# LÄHDELAATAT LEVYLLE KERRAN, EI 87 381 KERTAA VERKOSTA.
+#
+# Mitattu 18.9.2026: pallon 16 shardia kestivät 20 minuuttia ja CPU jäi
+# alle 20 %:n — aika kului lähdelaattojen HTTP-noutoon ämpäristä 240 ms:n
+# noutovälillä. Pohja- ja viivataso EIVÄT muutu tässä ajossa, joten ne
+# synkronoidaan kerran s3-komennolla (kymmeniä rinnakkaisia pyyntöjä,
+# aws_viritys) ja nostotaso otetaan suoraan juuri poltettujen shardien
+# työkansioista. Sen jälkeen tee-pallolaatat lukee jokaisen lähdelaatan
+# levyltä (--lahde) eikä noutoväli merkitse mitään.
+#
+# Tulos on kansio, jonka rakenne on sama kuin ämpärin
+# `julisteet/pyramidi/` alla: <versio>/z<z>, <viivaversio>/viivat/z<z>,
+# <nostoversio>/nostot/z<z>.
+kokoa_lahde () {
+  local lahde="$ULOS/lahde"
+  vaadi_avaimet
+  # Pallon taso Z lukee pyramidin tasoa z = max(0, Z-1) (tee-pallolaatat
+  # lahdetaso), joten tarvittava kaista on yksi tasoa kapeampi.
+  local zmin=$(( PALLO_MIN > 0 ? PALLO_MIN - 1 : 0 ))
+  local zmax=$(( PALLO_MAX > 0 ? PALLO_MAX - 1 : 0 ))
+  local z
+  echo "· lähdelaatat levylle: $lahde (pyramidin tasot z${zmin}–z${zmax})"
+  local alkoi
+  alkoi="$(date +%s)"
+  z="$zmin"
+  while [ "$z" -le "$zmax" ]; do
+    mkdir -p "$lahde/$VERSIO/z$z"
+    aws s3 sync "s3://$AMPARI/julisteet/pyramidi/$VERSIO/z$z/" "$lahde/$VERSIO/z$z/" \
+      --endpoint-url "$PAATE" --exclude '*' --include '*.webp' \
+      --cli-connect-timeout "$AWS_YHTEYSAIKA" --no-progress >/dev/null
+    if [ -n "$VIIVAVERSIO" ]; then
+      mkdir -p "$lahde/$VIIVAVERSIO/viivat/z$z"
+      aws s3 sync "s3://$AMPARI/julisteet/pyramidi/$VIIVAVERSIO/viivat/z$z/" \
+        "$lahde/$VIIVAVERSIO/viivat/z$z/" \
+        --endpoint-url "$PAATE" --exclude '*' --include '*.webp' \
+        --cli-connect-timeout "$AWS_YHTEYSAIKA" --no-progress >/dev/null
+    fi
+    # RANTATASO vain jos se tulee sarjaan (oletuksena pallolla on vektori).
+    if [ -n "$RANTAVERSIO" ] && [ "$PALLON_RANTA" -eq 1 ]; then
+      mkdir -p "$lahde/$RANTAVERSIO/ranta/z$z"
+      aws s3 sync "s3://$AMPARI/julisteet/pyramidi/$RANTAVERSIO/ranta/z$z/" \
+        "$lahde/$RANTAVERSIO/ranta/z$z/" \
+        --endpoint-url "$PAATE" --exclude '*' --include '*.webp' \
+        --cli-connect-timeout "$AWS_YHTEYSAIKA" --no-progress >/dev/null
+    fi
+    z=$((z + 1))
+  done
+  # NOSTOTASO EI TULE ÄMPÄRISTÄ vaan juuri poltetuista shardeista: se on
+  # tämän ajon uusi kerros, ja levyllä se on jo valmiina.
+  local d zn
+  for d in "$ULOS"/nosto-*/nostot/z*; do
+    [ -d "$d" ] || continue
+    zn="$(basename "$d")"
+    mkdir -p "$lahde/$NOSTOVERSIO/nostot"
+    rm -rf "${lahde:?}/$NOSTOVERSIO/nostot/$zn"
+    cp -R "$d" "$lahde/$NOSTOVERSIO/nostot/$zn"
+  done
+  local kesto n
+  kesto=$(( $(date +%s) - alkoi ))
+  n="$(find "$lahde" -name '*.webp' | wc -l | tr -d ' ')"
+  echo "· lähdekansio valmis: $n laattaa, ${kesto} s"
+  PALLON_LAHDE="$lahde"
+}
+
+# ----------------------------------- yksi ajo: nostotaso + pallo + luettelo
+#
+# POLTTO ILMAN VÄLITILAA (omistaja 18.9.2026, Raamattu AGENTIT TARKENNUS 10
+# kohta 20). 18.9.2026 nostotaso ja pallon Mercator-sarja poltettiin
+# erikseen, ja ämpärin luettelo (julisteet/pyramidi/pyramidi.json) vietiin
+# ENNEN pallon sarjaa. Pelin lepokerros vaatii, että pallon laatat.json:in
+# `nostot` on sama kuin luettelon nostotaso.versio (js/pallolaatat.js
+# lepokerroksenKerrokset), joten pallo oli pelaajille sumea 1 h 15 min.
+#
+# Tässä tilassa järjestys on:
+#   1. nostotason shardit uuteen versiopolkuun ja vienti ämpäriin
+#      (uusi polku, jota kukaan ei vielä lue — näkymätön pelille),
+#   2. yhdistetty luettelo PAIKALLISESTI (yhdista-nostoluettelo.mjs),
+#      ei vientiä,
+#   3. pallon shardit, jotka lukevat luettelon levyltä (--luettelo) ja
+#      lähdelaatat levyltä (--lahde); pallon laatat.json viedään vasta
+#      kun kaikki osat ovat ämpärissä (polta_pallo vaihe 3),
+#   4. VASTA NYT luettelo ämpäriin.
+#
+# Ämpärin tila on siis joka hetki ehjä: vanha luettelo + vanha pallo, tai
+# uusi luettelo + uusi pallo. Väliaikaa ei ole.
+polta_nostot_ja_pallo () {
+  [ -n "$PALLOTUNNISTE" ] || {
+    echo "VIRHE: --nostot-ja-pallo vaatii --pallotunniste <kirjain>." >&2; exit 2; }
+  [ "$NOSTOVERSIO" != "${A_NOSTOVERSIO:-}" ] || {
+    echo "VIRHE: --nostot-ja-pallo vaatii UUDEN --nostoversio <v>. Ämpärissä on" >&2
+    echo "$A_NOSTOVERSIO, ja nostolaatat ovat ikuisessa välimuistissa." >&2
+    exit 2; }
+  if [ "$SIIVOA" -eq 1 ]; then
+    echo "::warning::--siivoa ohitetaan: nostolaattoja tarvitaan pallon lähteenä"
+    SIIVOA=0
+  fi
+
+  # 1. NOSTOTASON SHARDIT.
+  local lista="$ULOS/lokit/ajossa.txt"
+  shardit | awk -F'|' '{ print $1 }' > "$ULOS/lokit/shardit.txt"
+  echo pyramidi > "$ULOS/lokit/vaihe.txt"
+  : > "$lista"
+  local nimi
+  while IFS='|' read -r nimi _; do
+    [ -n "$nimi" ] || continue
+    if [ "$UUDESTAAN" -eq 0 ] && [ -f "$ULOS/lokit/$nimi.valmis" ]; then
+      echo "· ohitetaan valmis shardi $nimi"
+      continue
+    fi
+    echo "$nimi" >> "$lista"
+  done <<EOF
+$(shardit)
+EOF
+  local maara alkoi virhe=0
+  maara="$(wc -l < "$lista" | tr -d ' ')"
+  echo "· nostotason shardeja ajossa $maara (rinnakkain $YTIMET)"
+  alkoi="$(date +%s)"
+  xargs -P "$YTIMET" -I{} "$ITSE" --lapsi --vain {} \
+    --sarjat nostot --versio "$VERSIO" --viivaversio "$VIIVAVERSIO" \
+    --nostoversio "$NOSTOVERSIO" --rantaversio "$RANTAVERSIO" \
+    --laatu "$LAATU" --patina "$PATINA" \
+    --piirit "$PIIRIT" --korkeus "$KORKEUS" --ulos "$ULOS" \
+    $( [ "$VIE" -eq 1 ] || echo --ei-vie ) \
+    < "$lista" || virhe=1
+  echo "· nostotaso: $(( $(date +%s) - alkoi )) s"
+  if [ "$virhe" -ne 0 ]; then
+    echo "VIRHE: nostotason shardi kaatui — luetteloa EI viety, ämpäri ennallaan." >&2
+    while read -r nimi; do
+      [ -f "$ULOS/lokit/$nimi.valmis" ] || echo "  $nimi (loki $(kesken_loki "$nimi"))" >&2
+    done < "$lista"
+    return 1
+  fi
+
+  # 2. LUETTELO PAIKALLISESTI, EI VIENTIÄ.
+  echo luettelo > "$ULOS/lokit/vaihe.txt"
+  kokoa_luettelo
+  tarkista_eheys "$ULOS/lokit/shardit.txt" --luettelo "$ULOS/luettelo/pyramidi.json" \
+    || return 1
+  # Nostotasoajo tuntee vain nostotason; muut kentät kannetaan ämpärin
+  # luettelosta (tools/yhdista-nostoluettelo.mjs).
+  node "$JUURI/tools/yhdista-nostoluettelo.mjs" \
+    --ampari "$ULOS/ampari-luettelo.json" \
+    --poltto "$ULOS/luettelo/pyramidi.json" \
+    --ulos "$ULOS/luettelo/pyramidi-yhdistetty.json"
+  PALLO_LUETTELO="$ULOS/luettelo/pyramidi-yhdistetty.json"
+
+  # 3. LÄHDELAATAT LEVYLLE JA PALLON SARJA.
+  if [ "$EI_LAHDETTA" -eq 0 ]; then kokoa_lahde; fi
+  polta_pallo || return 1
+
+  # 4. LUETTELO VASTA NYT (pallon laatat.json on jo ämpärissä).
+  if [ "$VIE" -eq 1 ]; then
+    vie_luettelo "$PALLO_LUETTELO"
+    echo "· yhdistetty luettelo viety VIIMEISENÄ: nostotaso $NOSTOVERSIO"
+  else
+    echo "· (--ei-vie: luetteloa ei viety; se on $PALLO_LUETTELO)"
+  fi
+  echo ""
+  echo "  MUISTA: js/pallo.js PALLO_LAATTATUNNISTE = '$PALLOTUNNISTE' ja"
+  echo "  versio julkaistava (docs/roolitus.md Julkaisusäännöt)."
 }
 
 # ============================================================ pääohjelma
@@ -1468,6 +1669,13 @@ fi
 # kaatui kesken tai kun sen piirto muuttuu (uusi --pallotunniste).
 if [ "$VAIN_PALLO" -eq 1 ]; then
   polta_pallo
+  echo "Valmis."
+  exit 0
+fi
+
+# --------------------------------- yksi ajo: nostotaso + pallo + luettelo
+if [ "$YKSI_AJO" -eq 1 ]; then
+  polta_nostot_ja_pallo
   echo "Valmis."
   exit 0
 fi
