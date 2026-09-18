@@ -924,6 +924,23 @@ const LIUSKAN_LAATIKON_VARA_PX = 28;
 export const LIUSKAN_SISENNYS_PX = 9;
 /** Kategoriarivin väripallon säde (merkin yksiköt). */
 const LIUSKAN_PALLON_R = 2.4;
+/**
+ * VÄRIPALLON JA TEKSTIN VÄLI (PAATOKSET 34 kohta 16 b, omistajan
+ * iPhone-kuva v1939: *"varipisteet ovat liian lahella tekstia
+ * viuhkassa"*). Päätös sanoo *"n. 0,5 x fontti"*; mitta on hitusen
+ * suurempi, jotta vaatimus *">= 0,5 x fontti"* pitää myös silloin,
+ * kun kirjaimen oma sivuvara on nolla.
+ */
+const LIUSKAN_PALLON_VALI = 0.6 * NOSTOSYM_NIMIO_KOKO;
+/**
+ * Väripallon keskipiste (merkin yksiköt). Teksti alkaa nimiön omasta
+ * asemoinnista (`nostosymNimioAsemointi`), joten pallo lasketaan
+ * siitä eikä vakiosta: kun nimiön asemointi muuttuu, väli seuraa.
+ * Ennen pallo oli kiinteästi 7:ssä, eli sen reuna (9,4) oli tekstin
+ * alun (8,9) PÄÄLLÄ — juuri se, minkä omistaja kuvasta näki.
+ */
+const LIUSKAN_PALLON_X = nostosymNimioAsemointi('oikea', 0).x
+  - LIUSKAN_PALLON_VALI - LIUSKAN_PALLON_R;
 
 /**
  * KAUPUNKILIUSKAN YHDEN RIVIN PIIRTO. Rivi on nimiö kuten viuhkassa;
@@ -961,7 +978,7 @@ function piirraLiuskanRivi(g, r, kylki, suunta, teksti = null, { leveysYksikkoin
     const pallo = document.createElementNS(SVG, 'circle');
     pallo.setAttribute('class', 'pallolauta-liuska-pallo');
     pallo.setAttribute('r', String(LIUSKAN_PALLON_R));
-    pallo.setAttribute('cx', String(suunta * 7));
+    pallo.setAttribute('cx', (suunta * LIUSKAN_PALLON_X).toFixed(2));
     pallo.setAttribute('cy', '0');
     pallo.setAttribute('fill', karttavaloVari(r.aihe));
     sisus.appendChild(pallo);
@@ -1061,6 +1078,15 @@ export function asetteleNosto(el, d) {
   // Listan alle jäänyt merkki piiloutuu listan ajaksi (ks. LISTA EI
   // KOSKAAN TOISEN TEKSTIN PÄÄLLE); seuraava ladonta palauttaa sen.
   el.classList.toggle('pallolauta-nosto-piilossa', Boolean(d.piiloListanAlla));
+  /*
+   * LIUSKAN OMA KAUPUNKIMERKKI PIILOON LIUSKAN AJAKSI (PAATOKSET 34
+   * kohta 16 a). Piilotus on OMA luokkansa eikä `piiloListanAlla`,
+   * koska liuska piirtyy juuri tämän elementin sisälle: koko
+   * elementin piilotus veisi liuskan mukanaan. Lippu kirjoitetaan
+   * joka ladonnassa (ks. PIILOTUS PURKAUTUU VAIN, JOS SE KIRJOITETAAN
+   * AUKI), joten merkki palaa sulun jälkeen itsestään.
+   */
+  el.classList.toggle('pallolauta-liuska-merkki-piilossa', Boolean(d.piiloLiuskanAlla));
   // Kaupunkimerkki on isompi (ks. KAUPUNKIMERKIN NIMIÖ ON ISOMPI KUIN
   // NOSTON). Luokka on savukkeiden ja CSS:n kahva: ilman sitä
   // mittaava savuke poimisi DOM-järjestyksen ensimmäisen merkin eikä
@@ -2454,7 +2480,7 @@ export function luoNostot({
      * lähizoomissa 390 px, "kateissa 1"). Nollataan tässä, ja liuskan
      * piilotus alempana kirjoittaa tarvittaessa uudestaan.
      */
-    for (const d of datumit) d.piiloListanAlla = false;
+    for (const d of datumit) { d.piiloListanAlla = false; d.piiloLiuskanAlla = false; }
     /*
      * VIUHKAN KAARI LASKETAAN TÄSSÄ, koska vain ladonta tietää merkin
      * ruutupisteen ja ruudun koon. Kohdat eivät ole omia merkkejään
@@ -2961,6 +2987,16 @@ export function luoNostot({
             ),
           }));
           datum.viuhkaPohja = pohja;
+          /*
+           * KAUPUNGIN OMA MERKKI EI KUULLA POHJAN LÄPI (PAATOKSET 34
+           * kohta 16 a). Merkki jää liuskan alle eikä ole `nostomuste`ssa
+           * (sen keruu ohittaa liuskan oman rivin), joten sitä ei
+           * piilottanut mikään — ja läpikuultava pohja (kohta 15 a)
+           * päästi pisteen näkyviin. Laudan oman kaupungin piste on
+           * pallon omassa kerroksessa, ja sen piilottaa lauta samalla
+           * tunnuksella (js/pallolauta/lauta.js paivitaPisteet).
+           */
+          datum.piiloLiuskanAlla = true;
         }
       }
     }

@@ -1092,7 +1092,25 @@ for (const ruutu of RUUDUT) {
       await napauta(sivu,
         saapumisNurkka.x + (suurinKat.x0 + suurinKat.x1) / 2,
         saapumisNurkka.y + (suurinKat.y0 + suurinKat.y1) / 2);
+      /*
+       * KATEGORIA ON TÄYDESSÄ KOOSSAAN HETI (PAATOKSET 34 kohta 16 c,
+       * vartio 8t2). Mitta luetaan napautuksen JÄLKEISESSÄ kehyksessä
+       * ja uudelleen levon jälkeen: jos jokin liuku olisi jäljellä,
+       * ensimmäinen laatikko olisi pienempi kuin jälkimmäinen.
+       */
+      const heti = await sivu.evaluate(() => new Promise((valmis) => {
+        requestAnimationFrame(() => {
+          const g = document.querySelector('.pallolauta-nosto.pallolauta-liuska-auki .pallolauta-viuhka-rivit');
+          const b = g?.getBoundingClientRect();
+          valmis(b ? { leveys: b.width, korkeus: b.height } : null);
+        });
+      }));
       await sivu.waitForTimeout(500);
+      const vakaa = await sivu.evaluate(() => {
+        const g = document.querySelector('.pallolauta-nosto.pallolauta-liuska-auki .pallolauta-viuhka-rivit');
+        const b = g?.getBoundingClientRect();
+        return b ? { leveys: b.width, korkeus: b.height } : null;
+      });
       const avattu = await sivu.evaluate(() => {
         const l = window.matkakirja.ui.pallolauta;
         const { ui } = window.matkakirja;
@@ -1112,11 +1130,96 @@ for (const ruutu of RUUDUT) {
       vaadi(`8p2. ${ruutu.nimi}: avattu kategoria pysyy merkin oikealla puolella (saapumisnäkymä)`,
         aRivit.length > 0 && aVasen.length === 0,
         `${aVasen.map((r) => r.nimi || r.laji).join(', ') || 'ei yhtään'}`);
+      /*
+       * ══ 8r-8t. LIUSKAN VIIMEISTELY (PAATOKSET 34 kohta 16 a-c) ════
+       *
+       * Omistajan iPhone-kuva v1939:stä, sanatarkasti: *"piste nakyy
+       * liikaa taustan lapi. varipisteet ovat liian lahella tekstia
+       * viuhkassa. animaatio nayttaa nyt huonolta, ota se pois."*
+       *
+       *   8r. kaupungin piste ei ole pallon pistekerroksessa liuskan
+       *       ollessa auki ja palaa sinne sulun jälkeen (a). MITTA ON
+       *       KERROKSEN DATA, EI RUUDUN PIKSELI: pallon kangas on
+       *       WebGL:ää, jota ei voi lukea takaisin ilman
+       *       preserveDrawingBufferia — ja piirtoon menevä joukko on
+       *       täsmälleen se, mikä pisteen näyttää tai jättää pois.
+       *   8s. kategoriarivin väripallon ja tekstin väli >= 0,5 ×
+       *       kirjasin, ruutupikseleinä mitattuna (b).
+       *   8t. liuskan elementeillä ei ole siirtymää eikä animaatiota,
+       *       ja 8t2: lista on täydessä koossaan jo avausta
+       *       seuraavassa kehyksessä (c).
+       */
+      const viimeistely = await sivu.evaluate(() => {
+        const l = window.matkakirja.ui.pallolauta;
+        const { ui } = window.matkakirja;
+        const oma = ui.game?.cityOf?.() ?? null;
+        const pisteita = l.pallo.pointsData()
+          .filter((d) => oma && d.id === oma.id && d.laji !== 'helmi' && d.laji !== 'valo').length;
+        const sain = (el) => {
+          const s = getComputedStyle(el);
+          return { animaatio: s.animationName, siirtyma: s.transitionDuration };
+        };
+        const juuri = document.querySelector('.pallolauta-nosto.pallolauta-liuska-auki .pallolauta-viuhka');
+        const elementit = juuri ? [juuri, ...juuri.querySelectorAll('*')] : [];
+        const liikkuvat = elementit
+          .map((el) => ({ luokka: el.getAttribute('class') || el.tagName, ...sain(el) }))
+          .filter((x) => x.animaatio !== 'none'
+            || !/^0s(,\s*0s)*$/u.test(x.siirtyma));
+        // Väripallon ja tekstin väli jokaisella kategoriarivillä.
+        const valit = [...document.querySelectorAll('.pallolauta-liuska-kategoria')]
+          .map((g) => {
+            const pallo = g.querySelector('.pallolauta-liuska-pallo');
+            const teksti = g.querySelector('text');
+            if (!pallo || !teksti) return null;
+            const a = pallo.getBoundingClientRect();
+            const b = teksti.getBoundingClientRect();
+            const fontti = parseFloat(getComputedStyle(teksti).fontSize) || 0;
+            return {
+              nimi: teksti.textContent,
+              vali: Math.max(b.left - a.right, a.left - b.right),
+              fontti,
+            };
+          })
+          .filter(Boolean);
+        return { pisteita, liikkuvat, valit, elementteja: elementit.length };
+      });
+      tieto(`${ruutu.nimi} · liuskan viimeistely`,
+        `kaupungin pisteitä ${viimeistely.pisteita}, liuskan elementtejä `
+        + `${viimeistely.elementteja} (liikkuvia ${viimeistely.liikkuvat.length}), `
+        + `kategoriarivejä ${viimeistely.valit.length}, tiukin pallon väli `
+        + `${p(Math.min(...viimeistely.valit.map((v) => v.vali)))} px `
+        + `(vaatimus ${p(0.5 * (viimeistely.valit[0]?.fontti ?? 0))} px)`);
+      vaadi(`8r. ${ruutu.nimi}: kaupungin piste ei ole kartalla liuskan ollessa auki`,
+        viimeistely.pisteita === 0,
+        `pisteitä ${viimeistely.pisteita}`);
+      const liianLahella = viimeistely.valit.filter((v) => !(v.vali >= 0.5 * v.fontti));
+      vaadi(`8s. ${ruutu.nimi}: väripallon ja tekstin väli >= 0,5 × kirjasin`,
+        viimeistely.valit.length > 0 && liianLahella.length === 0,
+        `rivejä ${viimeistely.valit.length}, tiukimmat `
+        + `${viimeistely.valit.slice(0, 3).map((v) => `${v.nimi} ${p(v.vali)}/${p(0.5 * v.fontti)} px`).join(', ') || '—'}`);
+      vaadi(`8t. ${ruutu.nimi}: liuskan elementeillä ei ole animaatiota eikä siirtymää`,
+        viimeistely.elementteja > 0 && viimeistely.liikkuvat.length === 0,
+        `${viimeistely.liikkuvat.slice(0, 3).map((x) => `${x.luokka}: ${x.animaatio} / ${x.siirtyma}`).join('; ') || 'ei yhtään'}`);
+      vaadi(`8t2. ${ruutu.nimi}: avattu kategoria on täydessä koossaan heti`,
+        Boolean(heti) && Boolean(vakaa)
+          && Math.abs(heti.leveys - vakaa.leveys) <= 1
+          && Math.abs(heti.korkeus - vakaa.korkeus) <= 1,
+        `heti ${heti ? `${p(heti.leveys)}×${p(heti.korkeus)}` : '—'}, `
+        + `levossa ${vakaa ? `${p(vakaa.leveys)}×${p(vakaa.korkeus)}` : '—'}`);
     }
     /* Liuska kiinni: nimi palaa. */
     await sivu.evaluate(() => window.matkakirja.ui.pallolauta.nostot.suljeLiuska?.());
     await sivu.waitForTimeout(600);
     const nimiSulun = await nimiNakyy();
+    /* Piste palaa sulun jälkeen (kohta 16 a: *"ja palautetaan sulkiessa"*). */
+    const pisteitaSulun = await sivu.evaluate(() => {
+      const l = window.matkakirja.ui.pallolauta;
+      const oma = window.matkakirja.ui.game?.cityOf?.() ?? null;
+      return l.pallo.pointsData()
+        .filter((d) => oma && d.id === oma.id && d.laji !== 'helmi' && d.laji !== 'valo').length;
+    });
+    vaadi(`8r2. ${ruutu.nimi}: kaupungin piste palaa kartalle liuskan sulun jälkeen`,
+      pisteitaSulun > 0, `pisteitä ${pisteitaSulun}`);
     vaadi(`8q. ${ruutu.nimi}: kaupungin iso nimi piilossa liuskan ajan, näkyvissä sulun jälkeen`,
       nimiEnnen && !nimiAuki && nimiSulun,
       `ennen ${nimiEnnen ? 'näkyy' : 'piilossa'}, auki `

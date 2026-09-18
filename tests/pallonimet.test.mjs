@@ -111,7 +111,14 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
   assert.match(lauta, /if \(lento\) return lento\.nimet\.has\(k\.id\);/);
   assert.match(lauta, /const valinta = aloitusNakyvat\(\);\n\s+if \(valinta\) return valinta\.has\(k\.id\);/);
   assert.match(lauta, /return nimet\.nimetty\(k\.id\)\n\s+\|\| ui\.game\.cityOf\?\.\(\)\?\.id === k\.id\n\s+\|\| Boolean\(ui\.maailmanakyma\?\.\(\)\);/);
-  assert.match(lauta, /const nakyvat = kaupungit\.filter\(pisteNakyy\);/);
+  /*
+   * KAUPUNGIN PISTE PIILOON LIUSKAN AJAKSI (Raamattu, KARTTAUUDISTUKSEN
+   * PAATOKSET 34 kohta 16 a, omistajan iPhone-kuva v1939: *"piste nakyy
+   * liikaa taustan lapi"*). Sääntö on pistekerroksen suodatin, ja se on
+   * sama tunnus, jolla kaupungin iso nimi piilotetaan (kohta 14 c).
+   */
+  assert.match(lauta, /const piiloKaupunki = nostot\.liuskanKaupunkiId\?\.\(\) \?\? null;/);
+  assert.match(lauta, /const nakyvat = kaupungit\.filter\(\(k\) => pisteNakyy\(k\) && k\.id !== piiloKaupunki\);/);
   assert.match(lauta, /pallo\.pointsData\(\[\.\.\.valot, \.\.\.nakyvat, \.\.\.helmet\]\);/);
   // Napautus kilpailee vain näkyvistä merkeistä (fokusniput sääntö 9).
   assert.match(lauta, /if \(pisteNakyy\(k\)\) ehdokkaat\.push\(\{ laji: 'kaupunki'/);
