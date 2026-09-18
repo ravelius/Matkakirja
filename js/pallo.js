@@ -152,7 +152,7 @@ export const PALLO_LAATTAVERSIO = '2026-09-07a';
  * pyramidin `nostotaso.versio` eivät täsmää — koko laattakerros
  * sammuu): (1) nostotason laatat ja pyramidi.json ämpäriin, (2) pallon
  * sarja poltettuna kansioon 2026-09-07a-nostot-i, (3) tämä tunniste.
- * Tunniste i (18.9.2026 ilta): nostotaso maittain 2026-09-19-maittain,
+ * Tunniste i (18.9.2026 ilta): nostotaso maittain 2026-09-19-maittain (v1945: 2026-09-18c-maittain, poltto kohdemaan säännöllä),
  * pallon sarja ILMAN nostoja (nostot maittain lepokerroksesta, PAATOKSET 34
  * kohta 17 d), ankkurit lukittu 50 nostolle.
  * Tunniste h (18.9.2026 iltapäivä): nostotaso 2026-09-19-nostot, jossa

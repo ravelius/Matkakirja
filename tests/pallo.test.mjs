@@ -129,7 +129,7 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   // Kirjasto on laattamoottorin tuova 2.46 tai uudempi.
   const versio = PALLO_KIRJASTO.match(/globe\.gl-(\d+)\.(\d+)\.\d+\.min\.js$/);
   assert.ok(versio && (Number(versio[1]) > 2 || Number(versio[2]) >= 46), PALLO_KIRJASTO);
-  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-i`, 'kansio i: sama pohja ja viivataso kuin h, pallon sarja ILMAN nostoja (ei -nostot-osaa), nostotaso maittain 2026-09-19-maittain (Mac 18.9.2026)');
+  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-i`, 'kansio i: sama pohja ja viivataso kuin h, pallon sarja ILMAN nostoja (ei -nostot-osaa), nostotaso maittain 2026-09-18c-maittain (Mac 18.9.2026, poltto kohdemaan saannolla)');
   assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, false, 'i')}`);
   assert.equal(pallonLaatta(3, 5, 4), `${PALLO_LAATAT}4/3/5.jpg`);
   assert.equal(PALLO_LAATTATASO_MAX, 8, 'taso 8 kaytossa 5.9.2026');
