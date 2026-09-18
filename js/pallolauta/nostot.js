@@ -2444,6 +2444,18 @@ export function luoNostot({
       asettele: r.perhe === 'piste' ? asetteleFokuspiste : asetteleNosto,
     }));
     /*
+     * PIILOTUS PURKAUTUU VAIN, JOS SE KIRJOITETAAN AUKI (Fable
+     * 18.9.2026, 8k-erän jatko). merkit.aseta yhdistää uuden datumin
+     * VANHAAN samalla avaimella (`Object.assign(d, tiedot)`), joten
+     * kenttä, jota uusi datum ei mainitse, jää vanhasta voimaan.
+     * `piiloListanAlla` kirjoitettiin vain todeksi liuskan/viuhkan
+     * ajaksi, ja sulun jälkeinen ladonta ei maininnut sitä lainkaan —
+     * merkki jäi piiloon (mitattu: nosto-maalehti-pasteur-meister
+     * lähizoomissa 390 px, "kateissa 1"). Nollataan tässä, ja liuskan
+     * piilotus alempana kirjoittaa tarvittaessa uudestaan.
+     */
+    for (const d of datumit) d.piiloListanAlla = false;
+    /*
      * VIUHKAN KAARI LASKETAAN TÄSSÄ, koska vain ladonta tietää merkin
      * ruutupisteen ja ruudun koon. Kohdat eivät ole omia merkkejään
      * vaan aihemerkin oman datumin kenttä, jonka merkin `asettele`
