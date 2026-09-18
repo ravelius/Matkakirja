@@ -12,7 +12,8 @@ kuormahäilyn aidoista yhteisvaikutuksista.
 Ympäristö: Mac Studio, node 22, Chromium 1234. Rinnalla kulki
 omistajan reliefipyramidin poltto (kohtalainen kuorma). Kestot:
 kohdevalinta 109 s, kerma-reuna 62 s, pallo-nostolaput 44 s,
-astro-aani (puhelin) 31 s, kaupunkipopup-390 186 s, kerma-reuna --vanha 63 s.
+astro-aani (puhelin) 31 s, kaupunkipopup-390 186 s, kerma-reuna --vanha 63 s,
+topografialinssi VAIHE=avaus 516 s, pariisi-lahizoom 390-liuska 159 s.
 
 ---
 
@@ -22,13 +23,13 @@ astro-aani (puhelin) 31 s, kaupunkipopup-390 186 s, kerma-reuna --vanha 63 s.
 | --- | --- | --- | --- | --- |
 | kohdevalinta | 10/14 | **14/14** | savuke mittasi vanhaa maailmaa (PAATOKSET 43 kohta 8) | KORJATTU |
 | topografialinssi (Ohita jäänteenä) | punainen | — | Ohita on kohdan 10 mukaan kelluva nappi luennan elinkaarella | KORJATTU (poikkeuslista) |
-| topografialinssi (luenta false, välähdys, 600 s) | punainen | **toistuu bitilleen yksin** | savuke odottaa äänen kelloa, jota tämä Chromium ei etene | VELKA, ks. kohta 2 |
+| topografialinssi (luenta false, välähdys, 600 s) | punainen | **11/13, toistuu yksin (516 s)** | savuke odottaa äänen kelloa, jota tämä Chromium ei etene | VELKA, ks. kohta 2 |
 | astro-aani, puhelin `soi:false` | punainen | **soi: true, 84 s silmukka** | otos loppui 10 s:iin ennen kuin linssi heräsi kuormassa | KORJATTU (otos soittimen mukaan) |
 | astro-aani, `taso 0` (molemmat ruudut) | punainen | punainen, `ctxAika 0` | AudioContext on **suspended** tässä Chromiumissa | VELKA, ks. kohta 3 |
 | kerma-reuna V4 | 14/16 | **14/16, samat luvut** | EI kuormaa eikä v1947: `--vanha` antaa bitilleen saman | VELKA (mittausraja), ks. kohta 4 |
 | pallo-nostolaput 6–7 | 6/7 | **4/6, sama napautus ohi** | EI kuormaa; deterministinen | VELKA, ks. kohta 5 |
 | kaupunkipopup-390 | 6 punaista | punainen samoin | sama juurisyy kuin kohdevalinnassa: kohta 8 | VELKA, ks. kohta 5 |
-| pariisi-lahizoom 8c 20 s | punainen | (ajo kesken aikakatossa) | — | ks. kohta 5 |
+| pariisi-lahizoom 8c 20 s | punainen | **16/17, ajo 20 641 ms** | EI kuormaa — liuska aukeaa, kamera-ajo kestää 20 s | AITO VIKA PELISSÄ, ks. kohta 5 c |
 
 ---
 
@@ -85,6 +86,8 @@ juuri sitä käytöstä, jonka omistaja kielsi. **Ohita lisättiin
 vaan luennan ohjain, ja sillä on oma vartionsa
 `savuke-luentakuvat.mjs`:ssä (77/77 v1947:ssä). Väite *"linssin omat
 kerrokset peittävät kartan"* pysyy muuten sanasta sanaan ennallaan.
+**Varmistettu ajolla:** jäännevartio on korjauksen jälkeen vihreä
+(`VAIHE=avaus` yksin, 11/13 — jäljelle jäävät kaksi ovat alla).
 
 **Kolme muuta punaista** (`omistajan tila toistui — luenta false`,
 välähdys, 600 s aikakatto) ovat samasta ketjusta, ja `VAIHE=avaus`
@@ -213,9 +216,25 @@ on muussa maassa eikä siirtovaihe ole päällä. **Savuke on korjattava
 samalla reseptillä kuin kohdevalinta** (napauta kohdemaan kaupunkia tai
 aseta pelaaja Ranskaan) — oma eränsä, ei ehtinyt tähän aikakattoon.
 
-**c) pariisi-lahizoom 8c (20 666 ms):** ajo jäi tämän erän aikakaton
-ulkopuolelle. Odotusarvo on kuormahäily (kamerakello); jatko: aja
-`SAVUKE_RUUTU=390 SAVUKE_LOHKOT=liuska` yksin.
+**c) pariisi-lahizoom 8c: EI kuormahäilyä — mitattu yksin, 159 s.**
+16/17, ja ainoa punainen on sama kuin CI:ssä käytännössä kellon
+tarkkuudella:
+
+```
+FAIL  8c. puhelin: kaupunkimerkin napautus ajaa kameran < 2000 ms ja
+      avaa liuskan — ajo 20641 ms, rivejä 10   (CI: 20666 ms)
+```
+
+Huomaa **rivejä 10**: liuska AUKEAA oikein: vika on yksin
+kamera-ajossa, joka kestää 20,6 s vaaditun 2 s sijaan. Ero CI:n ja
+paikallisen välillä on 25 ms eli mittauskohinaa — kuorma ei selitä
+kahdenkymmenen sekunnin ajoa. **Tämä on aito v1947:n punainen ja
+tämän listan ainoa, jossa vika näyttää olevan PELISSÄ eikä
+mittarissa.** Epäillyt: kohdevalinnan uusi yksi `valitseSiirto`
+kolmelle polulle (PAATOKSET 42) ja saaton suunnan uusi maali
+(kohta 11) — molemmat koskevat juuri kaupunkimerkin napautuksen
+kamerapolkua. Oma eränsä; ei kuulu tämän erän rajaukseen
+(Kustannuskuri kohta 1 ja 4).
 
 ---
 

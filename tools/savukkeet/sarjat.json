@@ -70,10 +70,7 @@
     },
     "savuke-pallo-nostolaput.mjs": {
       "kuvakansio": true,
-      "tunnetutPunaiset": [
-        "yksikään kaupunkinimi ei leikkaa liikkumatonta mustetta"
-      ],
-      "huomautus": "häilyvä (limityksiä 2 kuormitetussa ajossa 1/4 Actions + 1 paikallinen). Tarkistettu v1930:ssa turisti-osuma-haaran mergen jälkeen (17.9.2026, julkaisuagentti): kaksi paikallista peräkkäistä ajoa, 8/8 ja 7/8 — sama vartio häilyi toisella kerralla (Bukarest, limityksiä 2). Ei siis vielä kaksi peräkkäistä vihreää, jää tunnetuksi punaiseksi."
+      "huomautus": "TUNNETTU PUNAINEN POISTETTU 19.9.2026 (kaksi perakkaista vihreaa, Raamattu TARKENNUS 11 kohta 24 b). Velka oli \"yksikaan kaupunkinimi ei leikkaa liikkumatonta mustetta\" (hailyi Bukarestissa, limityksia 2). Vihrea sekä v1947:n paikallisessa yksinajossa (docs/raportit/viesti-fable-savukkeet-v1947-20260919.md kohta 5 a) että 19.9.2026 Mac-ajossa 6/6, 47 s. VARTIOT 6-7 KORJATTIIN 19.9.2026 (docs/raportit/viesti-fable-savukkeet-kohta8-20260919.md): syy ei ollut PAATOKSET 43 kohta 8 vaan paivakirjakortti (.fact-card) kartan nurkassa - se tayttyy juuri avatun noston tekstilla ja peittaa Bukarestin vasemman ylakulman, jossa Sighișoaran lappu on. Savuke ei enaa napauta kalusteen alle jaanytta lappua vaan kirjaa sen INFO-rivilla. Jos 6-7 nousee punaiseksi, kyse on osumapinnasta eika kalusteesta - loki kertoo paallimmaisen elementin ja sen, tuliko napautus pallon pinnalle asti."
     },
     "savuke-nimikyltti.mjs": {
       "kuvakansio": true,
@@ -141,7 +138,7 @@
       "tunnetutPunaiset": [
         "merkki skaalautuu zoomatessa"
       ],
-      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Puhelinruutu; vartion 9 vastakö (\"vastakö 1: kuvaton kaupunki avaa pop-upin silti\") on savukkeessa rajattu 390 px:iin, joten se kuuluu tähän puolikkaaseen. LUKUMÄÄRÄ KALIBROITU UUDELLEEN 18.9.2026: vanha 17 oli v1927:n ajalta, jolloin savukkeessa oli 57 väitettä; PAATOKSET 34 muutti suuren osan vartioista INFO-riveiksi ja savukkeessa on nyt 13 väitettä per ruutu. Mac-mittaus 18.9.2026: 93 s, 10/13, punaiset \"Marseille @ 390 px: kaupunkimerkin napautus avaa liuskan eikä isoa pop-upia\", \"Marseille @ 390 px: liuskan yläryhmä on 3 riviä\" ja \"vastakö 1: kuvaton kaupunki avaa pop-upin silti\" = 3. v1927: 40/57, 17 punaista - sama lista kuin turisti-kyltti-haaran pohjalla (docs/raportit/viesti-fable-turisti-kyltti-20260916.md). Yksittäisiä FAIL-tekstejä ei ole eritelty raporteissa, joten perusjoukko on lukumääräpohjainen (17, vertaa-tulos.mjs). PR #2551:n kahdessa Actions-ajossa (run 35183224944, 35184089613) 17:n LISÄKSI häilyi 'merkki skaalautuu zoomatessa (katto ...)' -vartio, eri kertoina eri kaupungissa/ruudussa (Marseille 390px, Marseille 1400px) ja eri mitatuin luvuin — häilyvä zoomiajoituksen mittaus, ei uusi vika. Lisätty patterniksi, joka poistetaan lukumäärästä ENNEN 17:n vertailua (vertaa-tulos.mjs tukee molempia samanaikaisesti)."
+      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Puhelinruutu; vartion 9 vastakö (\"vastakö 1: kuvaton kaupunki avaa pop-upin silti\") on savukkeessa rajattu 390 px:iin, joten se kuuluu tähän puolikkaaseen. LUKUMÄÄRÄ KALIBROITU UUDELLEEN 18.9.2026: vanha 17 oli v1927:n ajalta, jolloin savukkeessa oli 57 väitettä; PAATOKSET 34 muutti suuren osan vartioista INFO-riveiksi ja savukkeessa on nyt 13 väitettä per ruutu. Mac-mittaus 18.9.2026: 93 s, 10/13, punaiset \"Marseille @ 390 px: kaupunkimerkin napautus avaa liuskan eikä isoa pop-upia\", \"Marseille @ 390 px: liuskan yläryhmä on 3 riviä\" ja \"vastakö 1: kuvaton kaupunki avaa pop-upin silti\" = 3. v1927: 40/57, 17 punaista - sama lista kuin turisti-kyltti-haaran pohjalla (docs/raportit/viesti-fable-turisti-kyltti-20260916.md). Yksittäisiä FAIL-tekstejä ei ole eritelty raporteissa, joten perusjoukko on lukumääräpohjainen (17, vertaa-tulos.mjs). PR #2551:n kahdessa Actions-ajossa (run 35183224944, 35184089613) 17:n LISÄKSI häilyi 'merkki skaalautuu zoomatessa (katto ...)' -vartio, eri kertoina eri kaupungissa/ruudussa (Marseille 390px, Marseille 1400px) ja eri mitatuin luvuin — häilyvä zoomiajoituksen mittaus, ei uusi vika. Lisätty patterniksi, joka poistetaan lukumäärästä ENNEN 17:n vertailua (vertaa-tulos.mjs tukee molempia samanaikaisesti). MAC-MITTAUS 19.9.2026 (docs/raportit/viesti-fable-savukkeet-kohta8-20260919.md): 232 s, 42/45, punaiset tasmalleen nama kolme. Pariisin ketju (\"Nahtavyydet-rivi avaa nahtavyysnakyman\" + nelja kokoruutuvartiota), joka oli punainen ajossa 35394384489, oli SAVUKKEEN vika eika PAATOKSET 43 kohta 8: rivin napautus meni auki jaaneeseen nakymaan tai kartan kalusteeseen. Vartiomaara nousi 27:sta 45:een, koska ketju ei enaa katkea alkuunsa. Marseillen kaksi punaista olivat ajossa 35394384489 vihreita ja tassa taas punaisia - hailyvia, joten ne jaavat listalle."
     },
     "savuke-kaupunkipopup.mjs#1400": {
       "env": {
@@ -229,6 +226,12 @@
     },
     "savuke-astro-sumu.mjs": {
       "huomautus": "PAATOKSET 43 kohta 7 (18.9.2026): pilvikerros + avaruussumu; 8/8. Lisatty julkaisusarjaan v1947."
+    },
+    "savuke-kerma-reuna.mjs": {
+      "tunnetutPunaiset": [
+        "V4 meri laatikon sisällä on pohjan meren väri"
+      ],
+      "huomautus": "TUNNETTU PUNAINEN 19.9.2026 (v1947): V4 kanavaero 6-7 vs raja 5 tyopoydalla ja puhelimella; vertailuajo --vanha (origin/main-moduulit) antaa bitilleen samat luvut, joten ei v1947:n vika - mittauspari (Kanaali 49,9 N vs Pohjanmeri 53,2 N) on eri leveysasteilla ja pallon suunnattu valo tekee kertoimen. Velka: pari samalle leveysasteelle tai raja 8. Ks. docs/raportit/viesti-fable-savukkeet-v1947-20260919.md."
     }
   }
 }
