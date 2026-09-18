@@ -69,7 +69,15 @@ import { packById } from '../../js/pack.js';
 
 const paketti = await import(process.env.PLAYWRIGHT_JS ?? 'playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
-const chromium = paketti.chromium ?? paketti.default?.chromium;
+/*
+ * SELAINMOOTTORI ON LIPULLA (hotfix 18.9.2026). Sama savuke ajetaan
+ * sekä Chromiumilla että WebKitillä, koska v1942:n kerma oli
+ * Chromiumilla oikein mutta omistajan iPhonella (Safari/WebKit) rikki:
+ * kohdemaan sisus merenvärinen, kerma vaakaraitoina. Vain Chromiumilla
+ * vartioitu kerma ei siis ole vartioitu kerma.
+ */
+const MOOTTORI = process.argv.includes('--webkit') ? 'webkit' : 'chromium';
+const chromium = paketti[MOOTTORI] ?? paketti.default?.[MOOTTORI];
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const argv = process.argv.slice(2);
@@ -206,10 +214,12 @@ const peli = new Game({
 peli.phase = 'action';
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({
-  executablePath: process.env.CHROMIUM || undefined,
-  args: ['--disable-dev-shm-usage'],
-});
+const selain = await (MOOTTORI === 'webkit'
+  ? chromium.launch()
+  : chromium.launch({
+    executablePath: process.env.CHROMIUM || undefined,
+    args: ['--disable-dev-shm-usage'],
+  }));
 
 const RUUDUT = [
   { nimi: 'tyopoyta', leveys: 1400, korkeus: 900, dpr: 2 },
@@ -225,11 +235,12 @@ const kuvaan = async (sivu, nimi) => {
 };
 
 for (const ruutu of RUUDUT) {
-  console.log(`\n=== ${ruutu.nimi} ${ruutu.leveys} × ${ruutu.korkeus} (dpr ${ruutu.dpr}) ===`);
+  console.log(`\n=== ${MOOTTORI} ${ruutu.nimi} ${ruutu.leveys} × ${ruutu.korkeus} (dpr ${ruutu.dpr}) ===`);
   const ctx = await selain.newContext({
     viewport: { width: ruutu.leveys, height: ruutu.korkeus },
     hasTouch: ruutu.leveys < 768,
-    isMobile: ruutu.leveys < 768,
+    // isMobile ei ole WebKitissä tuettu (Playwright heittää).
+    ...(MOOTTORI === 'webkit' ? {} : { isMobile: ruutu.leveys < 768 }),
     deviceScaleFactor: ruutu.dpr,
     serviceWorkers: 'block',
   });
@@ -305,7 +316,11 @@ for (const ruutu of RUUDUT) {
    * KUVAKAAPPAUS CDP:LLÄ, EI KANKAALTA: WebGL-kangas luodaan ilman
    * `preserveDrawingBuffer`ia (savuke-kerma-hetin oppi).
    */
-  const cdp = await ctx.newCDPSession(sivu);
+  /* CDP on Chromiumin oma; WebKitillä sama kuva tulee sivun kaappauksena. */
+  const cdp = MOOTTORI === 'webkit' ? null : await ctx.newCDPSession(sivu);
+  const kaappaa = async () => (cdp
+    ? Buffer.from((await cdp.send('Page.captureScreenshot', { format: 'png' })).data, 'base64')
+    : sivu.screenshot());
   const n = {};
   for (const kamera of KAMERAT) {
     /* eslint-disable no-await-in-loop */
@@ -327,7 +342,7 @@ for (const ruutu of RUUDUT) {
     vaadi(`${ruutu.nimi}/${kamera.nimi}: väritaso on Ranskan eikä kerros sammunut`,
       lepo?.variMaa === 'FRA' && !lepo?.syy, `variMaa ${lepo?.variMaa}, syy "${lepo?.syy}"`);
 
-    const png = Buffer.from((await cdp.send('Page.captureScreenshot', { format: 'png' })).data, 'base64');
+    const png = await kaappaa();
     const paikat = await sivu.evaluate((ps) => {
       const pallo = window.matkakirja.ui.pallolauta.pallo;
       const kangas = document.querySelector('.pallolauta canvas') ?? document.querySelector('canvas');
@@ -388,7 +403,7 @@ for (const ruutu of RUUDUT) {
     });
     Object.assign(n, otos);
     tieto(`${ruutu.nimi}/${kamera.nimi}: pisteet`, JSON.stringify(otos));
-    const polku = await kuvaan(sivu, `${VANHA ? 'vanha' : 'uusi'}-${ruutu.nimi}-${kamera.nimi}`);
+    const polku = await kuvaan(sivu, `${MOOTTORI}-${VANHA ? 'vanha' : 'uusi'}-${ruutu.nimi}-${kamera.nimi}`);
     tieto(`${ruutu.nimi}/${kamera.nimi}: kuva`, polku ?? '(ei tallennettu)');
     /* eslint-enable no-await-in-loop */
   }
