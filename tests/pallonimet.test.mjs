@@ -127,7 +127,14 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
   assert.match(lauta, /export const LADONNAN_LEPOVIIVE_MS = LAATU_LEPOVIIVE_MS;/);
   assert.match(lauta, /ohjaimet\.addEventListener\('change', pyydaLadonta\);/);
   assert.match(lauta, /const \{ heti, viiveMs \} = ladonnanAjoitus\(nyt - ladottuHetki\);/);
-  assert.match(lauta, /if \(heti\) ladoLevossa\(\);/);
+  /*
+   * Liikkeen ladonta on merkitty omaksi ajokseen (18.9.2026): nimen
+   * lukko saa purkautua pelimerkin takia vain levossa
+   * (js/pallolauta/nimet.js NAPPULA RATKAISTAAN LEVOSSA, EI KESKEN
+   * VEDON), joten tämä yksi kutsu kantaa `liikkeenLadonta`-lipun.
+   */
+  assert.match(lauta, /liikkeenLadonta = true;\n\s+try \{ ladoLevossa\(\); \} finally \{ liikkeenLadonta = false; \}/);
+  assert.match(lauta, /levossa: !liikkeenLadonta,/);
   assert.match(lauta, /lepoAjastin = setTimeout\(ladoLevossa, viiveMs\);/);
   // Nostot ensin, nimikatto laskee kun nostoja on; kokonaiskatto 60.
   assert.equal(HTML_MERKKIEN_KATTO, 60);

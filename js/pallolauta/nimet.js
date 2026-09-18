@@ -182,15 +182,14 @@ export function nimibudjetti(korkeusAst) {
  * kyljelle, joten pelkkä pisteen sijainti ei kerro, mahtuuko teksti.
  */
 export const NIMEN_REUNAVARA_PX = 0;
-/** Kuinka monta pikseliä nimi saa ylittää ruudun reunan ennen pudotusta. */
-export /**
+/**
  * Pelimerkin varauksen lisävara ruutupikseleinä (ks. PELIMERKIN
  * VARAUS ON PAKSUMPI KUIN SEN KUVA). 4 px kattaa nimen elementin ja
  * sen kirjasinmitan eron puhelimen 8,5–11,5 px:n kirjasimilla.
  */
 const PELIMERKIN_VARA_PX = 4;
-
-const NIMEN_REUNAN_SIETO_PX = 1;
+/** Kuinka monta pikseliä nimi saa ylittää ruudun reunan ennen pudotusta. */
+export const NIMEN_REUNAN_SIETO_PX = 1;
 /** Pelaajan oma kaupunki voittaa kaikki muut ehdokkaat. */
 const OMAN_KAUPUNGIN_TARKEYS = 1000;
 
@@ -365,6 +364,10 @@ export function luoNimet({
    * (elävät nostot), `pinot` pelimerkkien laatikot (nappula, kohteet),
    * kumpikin kotelon pikseleinä; `katto` on tämän ladonnan nimibudjetti.
    *
+   * `levossa` kertoo, ajetaanko tämä ladonta liikkeen jälkeen levossa
+   * (true) vai kesken liikkeen (false). Vain levon ladonta saa purkaa
+   * nimen lukon pelimerkin takia — ks. NAPPULA RATKAISTAAN LEVOSSA.
+   *
    * `vain` rajaa ehdokkaat annettuihin kaupunkeihin. Sitä käyttää
    * AVAUSLENTO (js/pallolauta/avaus.js): omistaja 3.9.2026 sanatarkasti
    * *"muiden kaupunkien kuin lontoon ja kohdekaupungin nimiä ei
@@ -382,7 +385,7 @@ export function luoNimet({
   const lado = ({
     varaukset = [], pinot = [], katto = NIMIEN_KATTO, vain = null,
     kokoKerroin: kaupunginKerroin = 1, pisteSade = 0,
-    karttaskaala = 0, vertailuskaala = 0,
+    karttaskaala = 0, vertailuskaala = 0, levossa = true, pinojenAvain = '',
   } = {}) => {
     // Kyltti on kartan mitta, ei ruudun (ks. NIMIKYLTIT KARTTAAN).
     const kokoKerroin = kaupunginKerroin
@@ -499,6 +502,8 @@ export function luoNimet({
         vali: Number.isFinite(lukko.vali) ? lukko.vali * s : lukko.vali,
         kerroin: kokoKerroin,
         sade: pisteSade,
+        // Zoomi ja panorointi eivät ratkaise pelimerkin väistöä uudestaan.
+        pinoAvain: lukko.pinoAvain ?? null,
         rs,
       };
     };
@@ -548,6 +553,46 @@ export function luoNimet({
      * 24 kieltää. Lukon purkautuessa nimi ladotaan kerran uudelleen ja
      * lukitaan uuteen paikkaansa (lukot rakennetaan tämän ajon
      * lopullisista sijoituksista).
+     *
+     * ══════════════════════════════════════════════════════════════
+     * NAPPULA RATKAISTAAN LEVOSSA, EI KESKEN VEDON (18.9.2026)
+     * ══════════════════════════════════════════════════════════════
+     *
+     * Yllä oleva purku oli voimassa myös niillä ladonnoilla, jotka
+     * ajetaan LIIKKEEN AIKANA (js/pallolauta/lauta.js LADONTA KULKEE
+     * MUKANA, enintään kerran 200 ms:ssä) — ja juuri siellä se rikkoi
+     * PAATOKSET 32 kohdat 1 ja 5: kyltti hyppäsi vedon yli.
+     *
+     * MITATTU JUURISYY (Mac, puhelin 390 × 844, Pariisi, veto −40 px;
+     * ks. docs/raportit/viesti-fable-nimikyltti-veto-20260918.md).
+     * Nappula on kartalla kiinni kuten kaupunkikin: sen laatikon
+     * keskipiste pysyi koko vedon ajan 8,2 / 42,8 px:n päässä
+     * kaupungin pisteestä. Leikkaustesti EI silti ole vakaa, koska sen
+     * kaksi puolta luetaan eri hetkestä: lukon laatikko lasketaan
+     * TÄMÄN kehyksen kamerasta (`e.x`, getScreenCoords) ja nappulan
+     * laatikko EDELLISEN kehyksen DOM-paikasta (CSS2D). Vedossa ero on
+     * liikkeen verran (mitattu 4,7 px / 40 ms), ja koska saapumisen
+     * sijoitus on nappulan kyljessä kiinni (NIMION_RAKO 3 px +
+     * PELIMERKIN_VARA_PX 4 px), se riittää kääntämään testin.
+     * Mittaus: `pino` oli levossa ja askelilla 1–3 false, askelella 4
+     * true — ja samalla askelella kyltti vaihtoi kyljen (ank end →
+     * start, ero kaupungista −40,0 → +21,5 px ja vedon loppuun
+     * mennessä +62,4 px eli 102,4 px). Sen jälkeen `pino` oli taas
+     * false ja kyltti pysyi liikkumatta.
+     *
+     * Purku on siis VAIN LEVON ladonnoissa (`levossa`) ja VAIN KERRAN
+     * KUTAKIN PELIMERKKIEN KOKOONPANOA KOHDEN (`pinojenAvain`, ks.
+     * js/pallolauta/merkit.js `avain`): avain kertoo, mitkä merkit
+     * ovat kartalla ja missä KARTAN pisteessä, joten se ei muutu
+     * panoroitaessa eikä zoomatessa — vain nappulan ilmestyessä,
+     * kadotessa tai siirtyessä. Kun lukko on kerran ratkaistu tälle
+     * avaimelle, sitä ei enää koetella: pelkkä `levossa` ei riittänyt,
+     * koska savuke mittaa juuri levossa ja vedon perälauta-ladonta
+     * käänsi saman veitsenterällä olevan testin (mitattu tässä erässä:
+     * kyltti hyppäsi yhä 102,4 / 110,1 px vedon yli).
+     *
+     * Liikkeen aikana lukko pitää aina. Ruudun reuna purkaa lukon yhä
+     * (`mahtuu`), koska siellä vaihtoehto on katoava nimi.
      */
     const pinoLaatikot = pinotVaralla.filter((r) => Number.isFinite(r?.x0) && Number.isFinite(r?.y0)
       && Number.isFinite(r?.x1) && Number.isFinite(r?.y1) && r.x1 > r.x0 && r.y1 > r.y0);
@@ -555,8 +600,10 @@ export function luoNimet({
       const e = paikat.get(n.c);
       const r = lukonLaatikko(n.c.id, e);
       if (!r || !mahtuu(r)) continue;
-      if (pinoLaatikot.some((v) => leikkaa(v, r))) continue;
-      asetaLukko(n, skaalattuLukko(lukitut.get(n.c.id)), r);
+      const lukko = skaalattuLukko(lukitut.get(n.c.id));
+      const ratkaistu = lukko?.pinoAvain === pinojenAvain;
+      if (levossa && !ratkaistu && pinoLaatikot.some((v) => leikkaa(v, r))) continue;
+      asetaLukko(n, lukko, r);
     }
     /*
      * LUKITTU NIMI EI PUTOA KESKEN VEDON. Ladonta pudottaa nimen, jos
@@ -633,6 +680,14 @@ export function luoNimet({
         vali: n.vali,
         kerroin: kokoKerroin,
         sade: pisteSade,
+        /*
+         * MILLE PELIMERKKIEN KOKOONPANOLLE VÄISTÖ ON RATKAISTU (ks.
+         * NAPPULA RATKAISTAAN LEVOSSA). Levon ladonta merkitsee lukon
+         * ratkaistuksi tälle kokoonpanolle; liikkeen ladonta kantaa
+         * vain edellisen merkinnän eteenpäin, koska se ei saa
+         * ratkaista väistöä.
+         */
+        pinoAvain: levossa ? pinojenAvain : (lukitut.get(n.c.id)?.pinoAvain ?? null),
         rs: suhde,
       });
       return {

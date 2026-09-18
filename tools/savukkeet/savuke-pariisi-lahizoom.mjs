@@ -1654,7 +1654,9 @@ for (const ruutu of RUUDUT) {
    * kyltti kartalla). Väitteet ovat päätöksen omat:
    *   8a. kaupungin sisäisiä nostomerkkejä kartalla 0 — kolmella
    *       zoomilla, koska raja on maantieteellinen eikä ruudun (k. 4);
-   *   8b. Versailles, Chartres ja Chambord OVAT kartalla (k. 4);
+   *   8b. Versailles, Chartres ja Chambord OVAT kartalla (k. 4) —
+   *       mitattuna koko zoomsarjasta, koska ruudun ulkopuolelle
+   *       jäänyt kohde ei ole pudotettu kartalta (ks. vartio 8b);
    *   8c. kaupunkimerkin napautus ajaa kameran < 600 ms ja avaa
    *       liuskan (k. 1 ja 10);
    *   8d. liuska on kokonaan ruudussa eikä kaupungin nimen tai
@@ -1732,6 +1734,14 @@ for (const ruutu of RUUDUT) {
       kartalla: osumat.filter((o) => !o.kaupunki && nakyvat.has(o.id) && sisallaKaikki(o))
         .map((o) => o.id),
       kaikki: osumat.filter((o) => !o.kaupunki && sisallaKaikki(o)).length,
+      /*
+       * KARTAN NIMET TÄLLÄ ZOOMILLA (vartio 8b). Aihemerkin jäsenet
+       * mukaan: ryhmä on yksi merkki mutta kantaa monta nostoa.
+       */
+      kartanNimet: osumat.filter((o) => !o.kaupunki).flatMap(osat)
+        .map((o) => o.nimi ?? o.id ?? ''),
+      // Liuskaan siirretyt eli kaupungin sisäiset (tunnukset).
+      sisaisetIdt: ankkuri ? (n.liuskanSisaiset?.(ankkuri.avain) ?? []) : [],
     };
   });
 
@@ -1768,16 +1778,45 @@ for (const ruutu of RUUDUT) {
    * samaan aikaan vihrea). Osumalista on se, mika kartalla oikeasti on
    * — myos ryhman sisalla.
    */
-  const ulkonaTeksti = await sivu.evaluate(
-    () => (window.matkakirja.ui.pallolauta.nostot.osumat?.() ?? [])
-      .flatMap((o) => [o.nimi ?? '', o.id ?? '', ...(o.jasenet ?? []).map((j) => j.nimi ?? '')])
-      .join(' | '),
-  );
+  /*
+   * RUUTU EI OLE KARTALLA OLON MITTA (korjattu 18.9.2026, tämä erä).
+   * `osumat()` on ruudulla olevien merkkien lista (`ruudulla(lat,
+   * lng)` suodattaa pallon takaiset JA ruudun ulkopuoliset, ks.
+   * js/pallolauta/nostot.js JÄSENYYS LUETAAN KOKO DATASTA, EI
+   * RUUDUSTA). Chambord on Pariisista 140 km ja Chartres 90 km, joten
+   * sisimmällä zoomilla ne ovat kuvan ulkopuolella — se ei tarkoita,
+   * että ne olisi PUDOTETTU kartalta, ja juuri pudottamisen (kohta 4:
+   * kaupungin sisäiset liuskaan, ulkopuoliset kartalle) tämä vartio
+   * mittaa. Mac 18.9.2026 luki 1400 px:llä *"löytyi Chartres"*,
+   * vaikka mikään ei ollut pudonnut.
+   *
+   * VÄITE MITATAAN SIKSI KOKO SARJASTA: nimen on oltava kartalla
+   * jollakin savukkeen jo käymällä zoomilla (lähizoomi + 0,5 + 0,7,
+   * sama sarja kuin 8a). Luku tulee kerrokselta itseltään
+   * (`osumat()`, aihemerkin jäsenet mukaan), ei DOM-nimiöistä.
+   * Liuskaan siirretyt (kaupungin sisäiset) ovat INFO-rivillä
+   * tunnuksina — sama joukko, jonka 8a mittaa nollaksi kartalta.
+   */
+  const lahiTulos = await kaupunginSisaiset();
+  const kartanNimet = [
+    ...sisaisetZoomeilla.flatMap((z) => z.tulos?.kartanNimet ?? []),
+    ...(lahiTulos?.kartanNimet ?? []),
+  ].join(' | ');
+  const sisaisetIdt = new Set([
+    ...sisaisetZoomeilla.flatMap((z) => z.tulos?.sisaisetIdt ?? []),
+    ...(lahiTulos?.sisaisetIdt ?? []),
+  ]);
   const LAHIKOHTEET = ['Versailles', 'Chartres', 'Chambord'];
-  const loytyi = LAHIKOHTEET.filter((nimi) => new RegExp(nimi, 'iu').test(ulkonaTeksti));
+  const loytyi = LAHIKOHTEET.filter((nimi) => new RegExp(nimi, 'iu').test(kartanNimet));
+  tieto(`${ruutu.nimi} · ulkopuoliset kohteet`,
+    `kartalla ${loytyi.join(', ') || 'ei yhtään'}`
+    + `, kartan nimiä ${kartanNimet.split(' | ').filter(Boolean).length} `
+    + `(3 zoomia + lähizoomi), liuskaan siirrettyjä ${sisaisetIdt.size}`);
   vaadi(`8b. ${ruutu.nimi}: Versailles, Chartres ja Chambord ovat kartalla`,
     loytyi.length === LAHIKOHTEET.length,
-    `löytyi ${loytyi.join(', ') || 'ei yhtään'}`);
+    `löytyi ${loytyi.join(', ') || 'ei yhtään'} — kartalla oli koko sarjassa `
+    + `vain ${kartanNimet.split(' | ').filter(Boolean).length} nostoa `
+    + `ja liuskaan siirrettiin ${sisaisetIdt.size}`);
 
   /* 8c-8h: liuska auki kaupunkimerkin napautuksesta. */
   await suljeKortti(sivu);

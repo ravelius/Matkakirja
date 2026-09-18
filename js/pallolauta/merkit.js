@@ -434,6 +434,18 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
     /** Tahdista HTML-merkkien etu/taka-tila nykyisestä renderkamerasta. */
     tahdistaNakyvyys,
     laatikot,
+    /**
+     * OSAN KARTTA-AVAIN: mitkä merkit ovat kartalla ja missä KARTAN
+     * pisteessä. Panorointi ja zoomi eivät muuta tätä lukua — vain
+     * merkin ilmestyminen, katoaminen tai siirtyminen. Nimiladonta
+     * päättää tästä, onko pelimerkin väistö jo ratkaistu tälle
+     * kokoonpanolle (js/pallolauta/nimet.js NAPPULA RATKAISTAAN
+     * LEVOSSA, EI KESKEN VEDON).
+     */
+    avain: (osa) => (osat.get(osa) ?? [])
+      .filter((d) => !d.poistuu)
+      .map((d) => `${d.avain}@${d.lat?.toFixed?.(4) ?? '-'},${d.lng?.toFixed?.(4) ?? '-'}`)
+      .join(';'),
     maara: (osa) => (osat.get(osa) ?? []).length,
     /** Näkyvät kohteet osumatestiä varten ({ key, lat, lng, city }). */
     kohteet: () => kohteet,
