@@ -91,7 +91,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - name: Reitti
-        run: echo "Ajokone: ${{ needs.reitti.outputs.nimi }}"
+        run: 'echo "Ajokone: ${{ needs.reitti.outputs.nimi }}"'
       - uses: actions/checkout@v4
       # Macilla node on koneella valmiina (Homebrew, node@22) — vain
       # GitHubin omalle koneelle asennetaan node erikseen.
