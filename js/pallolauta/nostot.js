@@ -38,7 +38,8 @@
 
 import {
   KOVAN_ESTEEN_PAINO,
-  VIUHKAN_ALAS_ALKU_PX, VIUHKAN_REUNAVARA_PX, VIUHKAN_RIVI_PX, VIUHKAN_VALI_PX,
+  VIUHKAN_ALAS_ALKU_PX, VIUHKAN_REUNAVARA_PX, VIUHKAN_RIVI_PX, VIUHKAN_SADE_PX,
+  VIUHKAN_TIHEIN_VALI_PX, VIUHKAN_VALI_PX,
   aiheenNimi, aihemerkinLaatikko, aihemerkkiElementti, aihenostonNimio, alasMahtuvatRivit,
   asetteleAihemerkki, keskitettyMahtuvatRivit, kohdanLaatikko, piirraViuhka, ryhmitaNostot,
   viuhkanAsemat, viuhkanNimioLeveys,
@@ -801,6 +802,59 @@ export const VALON_PEITTO = 0.45;
 
 const SVG = 'http://www.w3.org/2000/svg';
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LIUSKAN TEKSTIKOKO = KARTTAAN POLTETUN TEKSTIN RUUTUKOKO (omistaja
+ * 18.9.2026 klo 06.58 Suomen aikaa, Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 34 kohta 13 a, iPhone-kuva v1935:n liuskasta:
+ * *"Teksteja ei nae puhelimella. Kaikki pitaisi olla samalla koolla
+ * kuin karttaan poltetut tekstit."*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MITATTU VIKA (Chromium 390 × 844 dpr 2, Pariisi, lähizoomi 0,34
+ * uloimmasta; tools/savukkeet/savuke-pariisi-lahizoom.mjs vartio 8l):
+ *
+ *   kartan kerroin (nimenKarttakerroin)            2,937
+ *   POLTETTU nimiö ruudulla (8,5 px × kerroin)    24,96 px
+ *   PARIISI-nimi ruudulla (13,5 px × kerroin)     39,65 px
+ *   liuskan rivi ruudulla (NOSTON_MITTA × 11)      8,50 px
+ *
+ * Poltettu muste on KARTAN mitta: se on laatassa kiinni ja kasvaa
+ * ruudulla sitä mukaa kuin kartta suurenee allansa. Elävä nosto sen
+ * sijaan on ruutuvakio (PAATOKSET 32 kohta 4, *"yksi koko"*), ja
+ * liuska peri sen — 8,5 px on lähizoomissa alle kolmasosa siitä,
+ * mitä sen vieressä oleva poltettu nimiö on. Juuri sen omistaja näki.
+ *
+ * SÄÄNTÖ ON SIKSI SAMA FUNKTIO KUIN POLTETULLA MUSTEELLA, EI UUSI
+ * LUKU: liuskan rivin mitta on NOSTON_MITTA × `nimenKarttakerroin`
+ * (js/pallolauta/nimet.js), täsmälleen se kerroin, jolla kaupunkien
+ * nimikyltit ja laattojen muste seuraavat karttaa. Kartan omat merkit
+ * pysyvät yhtenä kokona kuten ennen — muutos koskee VAIN liuskaa,
+ * joka ei ole kartan merkki vaan sen päälle avautuva lista.
+ *
+ * KATTO ON RIVIVÄLI, EI PAATOKSET 31:n 16 px. Rivit ovat
+ * VIUHKAN_TIHEIN_VALI_PX:n (26 px) päässä toisistaan, joten sitä
+ * isompi kirjasin menisi naapurirtivin päälle — ja päätöksen lause
+ * *"rivivali vastaavasti"* on juuri se, mikä tässä on katto. 16 px:n
+ * nimiökatto on kartan merkkien katto (ne ovat kartan päällä, missä
+ * *"jattimaiset ja sumeat"* nimiöt peittivät kartan); liuskan rivi on
+ * listan sisällä eikä peitä mitään muuta kuin oman pohjansa.
+ */
+/** Liuskan rivin mitan katto: kirjasin ei kasva yli rivivälin. */
+export const LIUSKAN_MITAN_KATTO = VIUHKAN_TIHEIN_VALI_PX / NOSTOSYM_NIMIO_KOKO;
+/** Kartan kerroin liuskalle (ks. yllä); `paivita` asettaa sen. */
+let liuskanKarttakerroin = 1;
+/**
+ * Liuskan rivin mitta juuri nyt: poltetun kartan tekstin ruutukoko,
+ * lattiana kartan oma yksi koko ja kattona rivivälin mitta.
+ */
+export function liuskanMitta() {
+  return Math.min(LIUSKAN_MITAN_KATTO, NOSTON_MITTA * Math.max(1, liuskanKarttakerroin));
+}
+/** Liuskan rivin lyhin sallittu katkaisu merkkeinä (kolme pistettä päälle). */
+export const LIUSKAN_VAHIN_MERKKIA = 8;
+/** Liuskan rivin katkaisumerkki (sama kuin kartan nimiöillä). */
+const LIUSKAN_ELLIPSI = '…';
 /** Kaupunkiliuskan haitarin sisennys yhtä tasoa kohti (merkin yksiköt). */
 export const LIUSKAN_SISENNYS_PX = 9;
 /** Kategoriarivin väripallon säde (merkin yksiköt). */
@@ -812,7 +866,7 @@ const LIUSKAN_PALLON_R = 2.4;
  * karttaselitteessä) ja haitarin kohteet ovat sisennettyjä.
  * Hiusviiva erottaa yläryhmän kategorioista (PAATOKSET 34 kohta 8).
  */
-function piirraLiuskanRivi(g, r, kylki, suunta) {
+function piirraLiuskanRivi(g, r, kylki, suunta, teksti = null) {
   const sisennys = suunta * r.sisennys * LIUSKAN_SISENNYS_PX;
   const sisus = document.createElementNS(SVG, 'g');
   sisus.setAttribute('class', `pallolauta-liuska-rivi pallolauta-liuska-${r.laji}`);
@@ -836,7 +890,8 @@ function piirraLiuskanRivi(g, r, kylki, suunta) {
     viiva.setAttribute('y2', '-11');
     sisus.appendChild(viiva);
   }
-  if (r.nimi) piirraNostosymNimio(sisus, r.nimi, null, kylki, Infinity);
+  const nimi = teksti ?? r.nimi;
+  if (nimi) piirraNostosymNimio(sisus, nimi, null, kylki, Infinity);
 }
 
 /** Elävän noston elementti: viivamerkki + nimiö samaan pieneen svg:hen. */
@@ -1140,6 +1195,18 @@ export function luoNostot({
   let viimeisinUloinOsuus = 0;
   let sovittelu = {
     siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0, lappuja: 0,
+  };
+  /*
+   * MILLE LAPPUJOUKOLLE JA RUUDULLE SOVITTELU ON RATKAISTU (ks.
+   * NIMIÖN KYLKI LUKITAAN, KUN ANKKURI VALITAAN `sovittele`n yllä).
+   * Tyhjä = ei ratkaistu, jolloin seuraava sovittelu ajetaan.
+   */
+  let sovittelunAvain = '';
+  /** Lukitut asennot avaimittain: avain → { kylki, dx, dy, nimio }. */
+  let sovitellutAsennot = new Map();
+  /** Viimeisin oikeasti ajettu sovittelu (ohitettu ajo palauttaa tämän). */
+  let viimeisinSovittelu = {
+    siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0,
   };
   let laskeLaatikot = () => { laatikot = []; };
   /*
@@ -1806,6 +1873,9 @@ export function luoNostot({
     nostonKarttakerroin = yksiKokoSallittu()
       ? 1
       : nimenKarttakerroin(karttaskaala, vertailuskaala || undefined);
+    // Liuska seuraa karttaa myös silloin, kun kartan merkit eivät
+    // (ks. LIUSKAN TEKSTIKOKO = KARTTAAN POLTETUN TEKSTIN RUUTUKOKO).
+    liuskanKarttakerroin = nimenKarttakerroin(karttaskaala, vertailuskaala || undefined);
     viimeisinUloinOsuus = uloinOsuus;
     const rivit = keraa(nakyva, uloinOsuus);
     rivitNyt = rivit;
@@ -2456,10 +2526,61 @@ export function luoNostot({
           }
         }
         vaakaEhdokkaat.sort((a, b) => a - b);
+        /*
+         * LIUSKAN RIVI ON POLTETUN TEKSTIN KOKOA (ks. LIUSKAN
+         * TEKSTIKOKO = KARTTAAN POLTETUN TEKSTIN RUUTUKOKO). Sama
+         * mitta menee leveyslaskentaan, asemointiin ja piirtoon —
+         * yksi luku, ei kopiota.
+         */
+        const liuskaMitta = liuskanMitta();
+        /*
+         * RIVI EI SAA VENYÄ RUUDUN YLI. Kun kirjasin on kolminkertainen
+         * entiseen nähden, pisin nimi (esim. *Kyyhkyposti piiritetystä
+         * Pariisista*) on puhelimella leveämpi kuin koko ruutu, ja
+         * liuska kiinnittyisi laitaan ja leikkautuisi. Rivi katkaistaan
+         * siksi siihen merkkimäärään, joka mahtuu — sama kolme pistettä
+         * kuin kartan nimiöillä (nostosymNimioTeksti), ei uusi keino.
+         */
+        /*
+         * TILA ON SE, MIKÄ JÄÄ MERKIN OIKEALLE PUOLELLE. Liuska kuuluu
+         * merkin oikealle puolelle ja keskitettynä sen korkeudelle
+         * (PAATOKSET 34 kohta 12), ja kamera-ajo siirtää kartan niin,
+         * että tilaa on. Jos rivit saisivat olla koko ruudun levyisiä,
+         * ne eivät mahtuisi sinne isommalla kirjasimella ja liuska
+         * loikkaisi merkin vasemmalle puolelle — mitattu 390 px:llä
+         * tässä erässä: merkki x 146, rivin leveys 246 px, vartiot 8j
+         * ja 8k punaisina. Lattia on puolet ruudusta, jottei kapea
+         * reuna kutista rivejä lukukelvottomiksi.
+         */
+        const rivinTila = Math.max(ruutuNyt.leveys / 2,
+          ruutuNyt.leveys - rivi.p.x - VIUHKAN_REUNAVARA_PX - VIUHKAN_SADE_PX);
+        const rivinLeveys = (teksti) => (teksti
+          ? viuhkanNimioLeveys(nostosymNimioMitta(teksti, null, Infinity).leveys, liuskaMitta)
+          : 0);
+        /*
+         * LUKUMÄÄRÄ SULUISSA EI SAA KATKETA. Kategoriarivi on
+         * *"Historia (3)"* (PAATOKSET 34 kohta 5), ja tavallinen
+         * katkaisu syö rivin lopusta — mitattu 390 px:llä tässä
+         * erässä: *"Kadonneet ihmeet."*, *"Kauppa."*, *"Kulttuuri."*
+         * menettivät lukunsa. Häntä irrotetaan siksi ensin, nimi
+         * lyhenee sen edestä, ja häntä liitetään takaisin.
+         */
+        const rivinTeksti = (nimi, sisennys) => {
+          if (!nimi) return '';
+          const tila = Math.max(0, rivinTila - sisennys * LIUSKAN_SISENNYS_PX * liuskaMitta);
+          if (rivinLeveys(nimi) <= tila) return nimi;
+          const hanta = (nimi.match(/\s*\(\d+\)$/u) ?? [''])[0];
+          const runko = hanta ? nimi.slice(0, nimi.length - hanta.length) : nimi;
+          const merkit = [...runko];
+          for (let n = merkit.length - 1; n >= LIUSKAN_VAHIN_MERKKIA; n -= 1) {
+            const t = `${merkit.slice(0, n).join('').trimEnd()}${LIUSKAN_ELLIPSI}${hanta}`;
+            if (rivinLeveys(t) <= tila) return t;
+          }
+          return `${merkit.slice(0, LIUSKAN_VAHIN_MERKKIA).join('')}${LIUSKAN_ELLIPSI}${hanta}`;
+        };
         const laske = (lista) => {
-          const leveydet = lista.map((r2) => viuhkanNimioLeveys(
-            r2.nimi ? nostosymNimioMitta(r2.nimi, null, Infinity).leveys : 0, mittaNyt,
-          ) + r2.sisennys * LIUSKAN_SISENNYS_PX);
+          const leveydet = lista.map((r2) => rivinLeveys(rivinTeksti(r2.nimi, r2.sisennys))
+            + r2.sisennys * LIUSKAN_SISENNYS_PX * liuskaMitta);
           return viuhkanAsemat({
             p: rivi.p,
             ruutu: ruutuNyt,
@@ -2514,8 +2635,10 @@ export function luoNostot({
             dy: asemat[i].dy,
             puoli,
             leveys: listaLeveys,
-            mitta: mittaNyt,
-            piirra: (g2, kylki) => piirraLiuskanRivi(g2, r2, kylki, suunta),
+            mitta: liuskaMitta,
+            piirra: (g2, kylki) => piirraLiuskanRivi(
+              g2, r2, kylki, suunta, rivinTeksti(r2.nimi, r2.sisennys),
+            ),
           }));
           datum.viuhkaPohja = pohja;
         }
@@ -2626,6 +2749,24 @@ export function luoNostot({
         lappuja.push({ r, datum: datumit[i], laatikko: lapunLaatikko(r, datumit[i]) });
       }
     });
+    /*
+     * EDELLINEN SOVITTELU KANNETAAN ETEENPÄIN (ks. NIMIÖN KYLKI
+     * LUKITAAN, KUN ANKKURI VALITAAN `sovittele`n yllä). Datumit
+     * rakennetaan joka ladonnassa datasta, joten ilman tätä nimiön
+     * kylki putoaisi takaisin merkin omaan kylkeen joka ladonnalla ja
+     * sovittelun olisi pakko ratkaista se uudestaan — juuri se, minkä
+     * kohta 13 c kieltää. Asento luetaan lukosta jo TÄSSÄ, jotta myös
+     * nimiladonnan varaukset ja osumapinnat kuvaavat sitä, mikä
+     * ruudulla on.
+     */
+    for (const d of datumit) {
+      const a = sovitellutAsennot.get(d.avain);
+      if (!a) continue;
+      d.puoli = a.kylki;
+      d.dx = a.dx;
+      d.dy = a.dy;
+      if (d.nimi) d.nimioNakyy = d.nimioNakyy && a.nimio;
+    }
     const ikonilaatikko = ({ r, datum }) => (r.perhe === 'aihemerkki'
       ? aihemerkinLaatikko(r.p, datum, { dx: datum.dx, dy: datum.dy, nimio: false })
       : nostonLaatikko(r.p, r, {
@@ -2694,10 +2835,61 @@ export function luoNostot({
    * ladoLevossa, Raamattu KARTTAUUDISTUKSEN PAATOKSET 31 TARKENNUS 2
    * kohta 6). Se on eri lista kuin `nimet` vain kutsujan selkeyden
    * vuoksi — sovittelulle kaikki esteet ovat samaa laatikkojoukkoa.
+   *
+   * ══════════════════════════════════════════════════════════════════
+   * NIMIÖN KYLKI LUKITAAN, KUN ANKKURI VALITAAN (omistaja 18.9.2026 klo
+   * 06.58 Suomen aikaa, Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta
+   * 13 c: *"Samoin kaikki nostot pitaisi pysya paikallaan."*)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * JUURISYY: SOVITTELU AJETTIIN JOKA LADONNASSA. `ladoLevossa`
+   * (js/pallolauta/lauta.js) kutsuu tätä jokaisella ladonnalla — myös
+   * niillä viidellä sekunnissa, jotka ajetaan kesken vedon (LADONTA
+   * KULKEE MUKANA) — ja `sovitteleLaput` ratkaisee kyljen ja siirron
+   * uudestaan sitä vasten, mitä juuri sillä hetkellä on ruudulla
+   * tiellä. Kaupungin nimi, pelinappula ja naapurilaput liikkuvat
+   * ruudulla vedossa ja kasvavat zoomissa, joten sama nimiö vaihtoi
+   * kylkeä kesken vedon — sama ilmiö kuin kaupunkien nimillä ennen
+   * niiden lukkoa (js/pallolauta/nimet.js NIMIKYLTTI ON KIINNI
+   * KAUPUNGISSA), vain toisessa kerroksessa.
+   *
+   * LÄÄKE ON SAMA KUIN NIMILLÄ: ratkaise kerran, kanna eteenpäin.
+   * Sovittelu ajetaan vain, kun SE, MITÄ SOVITELLAAN, muuttuu — eli
+   * kun lappujoukko (nostot ja niiden nimiöiden näkyvyys) tai ruudun
+   * koko vaihtuu. Veto ja zoomi eivät kumpaakaan muuta, joten nimiön
+   * kylki ja siirto pysyvät ja koko ruutuvektori merkistä nimiöön on
+   * sama pikselilleen (zoomissa kerrottuna merkin mitalla).
+   *
+   * MIKSI RUUDUN KOKO ON MUKANA AVAIMESSA: kääntö tai ikkunan koon
+   * muutos vaihtaa sen, mitä laidalle mahtuu, ja silloin ladonta ON
+   * uusi — sama raja kuin ankkurivaraston tunnuksella
+   * (js/pallolauta/nostoankkurit.js `tunnus`).
    */
   const sovittele = ({ nimet = [], kiinteat = [] } = {}) => {
     viimeisimmatNimet = nimet ?? [];
-    if (!lappuja.length) return sovittelu;
+    if (!lappuja.length) {
+      sovittelunAvain = '';
+      sovitellutAsennot = new Map();
+      return sovittelu;
+    }
+    const ruutuNyt = ruutu?.() ?? { leveys: 0, korkeus: 0 };
+    /*
+     * AVAIN LUETAAN RIVILTÄ, EI DATUMISTA. Sovittelu kirjoittaa
+     * tuloksensa datumiin (`nimioNakyy` piilotuksessa), ja jos avain
+     * lukisi sen, jokainen piilotus muuttaisi avainta ja pakottaisi
+     * uuden sovittelun — sama ansa kuin `omatLaatikot`issa (ks. ASENTO
+     * LUETAAN RIVILTÄ, EI DATUMILTA). Rivi rakennetaan datasta.
+     */
+    const avain = `${Math.round(ruutuNyt.leveys)}x${Math.round(ruutuNyt.korkeus)}#`
+      + lappuja.map(({ r, datum }) => `${datum.avain}:${r.nimioNakyy && r.nimi ? 1 : 0}`
+        + `:${r.perhe === 'aihemerkki' ? 'a' : 'n'}`).join(';');
+    // Sama lappujoukko samalla ruudulla: kylki on jo ratkaistu (ks.
+    // NIMIÖN KYLKI LUKITAAN). Veto ja zoomi eivät koeta sitä uudestaan.
+    if (avain === sovittelunAvain) {
+      sovittelu = { ...viimeisinSovittelu, lappuja: lappuja.length };
+      return sovittelu;
+    }
+    sovittelunAvain = avain;
     const tulos = sovitteleLaput({
       laput: lappuja.map(({ r, datum, laatikko }) => ({
         avain: datum.avain,
@@ -2730,13 +2922,16 @@ export function luoNostot({
     // Siirtynyt ikoni on myös siirtynyt varaus (js/pallolauta/lauta.js
     // lukee laatikot myös sovittelun jälkeen).
     if (muuttui) { laskeLaatikot(); merkit.aseta('nostot', datumit); }
-    sovittelu = {
+    // Lukko talteen: seuraavat ladonnat kantavat tämän eteenpäin
+    // (ks. EDELLINEN SOVITTELU KANNETAAN ETEENPÄIN).
+    sovitellutAsennot = new Map(tulos.asennot);
+    viimeisinSovittelu = {
       siirretty: tulos.siirretty,
       kylkiVaihtui: tulos.kylkiVaihtui,
       piilotettu: tulos.piilotettu,
       jaljella: tulos.jaljella,
-      lappuja: lappuja.length,
     };
+    sovittelu = { ...viimeisinSovittelu, lappuja: lappuja.length };
     return sovittelu;
   };
 

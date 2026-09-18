@@ -329,6 +329,12 @@ const NAPAUTUKSIA = 3;
 const OLETUSPORRAS = 1.5;
 /** Osumasäde ruudulla (js/pallolauta/lauta.js NAPAUTUKSEN_SADE_PX). */
 const NAPAUTUKSEN_SADE_PX = 44;
+/** Liuskan rivin sallittu ero poltetun nimiön ruutukokoon (k. 13 a). */
+const LIUSKAN_KOON_SIETO_PX = 1;
+/** Ruutuvektorin sallittu heitto vedon yli (k. 13 b ja c). */
+const PAIKALLAAN_SIETO_PX = 1;
+/** Vedon pituus 8m:ssä (px, molempiin suuntiin). */
+const VEDON_PITUUS_PX = 60;
 
 let lapi = 0;
 let kaikki = 0;
@@ -718,6 +724,36 @@ async function odotaVapaaPiste(sivu, px, py, kattoMs = 6000) {
  * nurkka — ei kotelon, joka on eri elementti ja voi olla eri kohdassa.
  * Sama kaava kuin tools/savukkeet/savuke-ranska-sisalto.mjs `tuore`.
  */
+/**
+ * AITO VETO KANKAALLA (vartio 8m). Sama resepti kuin
+ * tools/savukkeet/savuke-nimikyltti.mjs:n `veda`: sormi alas, kahdeksan
+ * askelta 40 ms:n välein (kattaa useamman ladonnan, LADONNAN_TAHTI_MS
+ * 200 ms), sormi ylös ja lepo. Kirjaston oma pointermove-ketju, ei
+ * kameran suora asetus — muuten veto ei ajaisi liikkeen ladontoja,
+ * joissa vika on.
+ */
+async function veda(sivu, dx, dy) {
+  const laatikko = await sivu.evaluate(() => {
+    const k = document.querySelector('.pallolauta-kotelo canvas') ?? document.querySelector('canvas');
+    const r = k.getBoundingClientRect();
+    return {
+      x: r.left, y: r.top, w: r.width, h: r.height,
+    };
+  });
+  const x0 = laatikko.x + laatikko.w / 2;
+  const y0 = laatikko.y + laatikko.h / 2;
+  await sivu.mouse.move(x0, y0);
+  await sivu.mouse.down();
+  for (let i = 1; i <= 8; i += 1) {
+    /* eslint-disable no-await-in-loop */
+    await sivu.mouse.move(x0 + (dx * i) / 8, y0 + (dy * i) / 8);
+    await sivu.waitForTimeout(40);
+    /* eslint-enable no-await-in-loop */
+  }
+  await sivu.mouse.up();
+  await odotaKyltinAsento(sivu);
+}
+
 const kankaanNurkka = (sivu) => sivu.evaluate(() => {
   const r = window.matkakirja.ui.pallolauta.pallo.renderer().domElement
     .getBoundingClientRect();
@@ -2195,6 +2231,74 @@ for (const ruutu of RUUDUT) {
     + `${katRivit.map((r) => `${r.nimi}`).join(', ') || '—'}`);
 
   /*
+   * ══════════════════════════════════════════════════════════════
+   * 8l. LIUSKAN TEKSTIKOKO = POLTETUN KARTAN TEKSTIN RUUTUKOKO
+   * (Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 13 a, omistaja
+   * 18.9.2026: *"Teksteja ei nae puhelimella. Kaikki pitaisi olla
+   * samalla koolla kuin karttaan poltetut tekstit."*)
+   * ══════════════════════════════════════════════════════════════
+   *
+   * POLTETTUA TEKSTIÄ EI VOI LUKEA DOMISTA — se on laatan rasterissa.
+   * Sen RUUTUKOKO on silti tiedossa yhdellä kaavalla: poltettu nimiö
+   * on kartan omaa mittaa KARTTANIMI_KOOT.kohde (8,5 px laudan
+   * paperissa), ja kartta on ruudulla `nimenKarttakerroin`-kertaisena
+   * (js/pallolauta/nimet.js) — sama kerroin, jolla kaupunkien
+   * nimikyltit seuraavat karttaa. Vartio lukee kertoimen kerrokselta
+   * itseltään ja liuskan rivin koon DOMista (rivin oma svg-teksti ×
+   * ryhmän scale), eli kaksi riippumatonta lukua.
+   *
+   * MITATTU ENNEN KORJAUSTA (390 × 844 dpr 2, lähizoomi 0,34):
+   * kerroin 2,937 → poltettu 24,96 px, liuskan rivi 8,50 px.
+   */
+  const liuskanKoot = await sivu.evaluate(async () => {
+    const nim = await import('/js/pallolauta/nimet.js');
+    const kn = await import('/js/karttanimet.js');
+    const l = window.matkakirja.ui.pallolauta;
+    const skaala = l.kamera?.nakyvaAlue?.()?.skaala ?? 0;
+    const vertailu = l.saapumisenSkaala?.() ?? 0;
+    const kerroin = nim.nimenKarttakerroin(skaala, vertailu || undefined);
+    const rivit = [...document.querySelectorAll('.pallolauta-liuska-auki .pallolauta-viuhka-kuva')]
+      .map((kuva) => {
+        const mitta = Number((kuva.style.transform.match(/scale\(([\d.]+)\)/u) ?? [])[1] ?? 0);
+        const t = kuva.querySelector('text');
+        const koko = t ? Number(getComputedStyle(t).fontSize.replace('px', '')) : 0;
+        return {
+          teksti: t?.textContent ?? '',
+          laji: kuva.querySelector('.pallolauta-liuska-rivi')?.getAttribute('class') ?? '',
+          ruutuPx: koko * mitta,
+          leveys: kuva.getBoundingClientRect().width,
+        };
+      })
+      .filter((r) => r.ruutuPx > 0);
+    return {
+      kerroin,
+      poltettuPx: kn.KARTTANIMI_KOOT.kohde * kerroin,
+      rivit,
+      koteloLeveys: (document.querySelector('.pallo-kotelo') ?? document.body).clientWidth,
+    };
+  });
+  const rivienKoot = liuskanKoot.rivit.map((r) => r.ruutuPx);
+  const suurinEro = rivienKoot.length
+    ? Math.max(...rivienKoot.map((k) => Math.abs(k - liuskanKoot.poltettuPx)))
+    : Infinity;
+  const levein = liuskanKoot.rivit.length
+    ? Math.max(...liuskanKoot.rivit.map((r) => r.leveys))
+    : 0;
+  tieto(`${ruutu.nimi} · 8l liuskan rivit`,
+    `kerroin ${p(liuskanKoot.kerroin, 3)}, poltettu ${p(liuskanKoot.poltettuPx)} px, `
+    + `rivejä ${rivienKoot.length}, koot ${rivienKoot.map((k) => p(k, 1)).join('/') || '—'}, `
+    + `levein rivi ${p(levein)} / kotelo ${liuskanKoot.koteloLeveys} px`);
+  vaadi(`8l. ${ruutu.nimi}: liuskan rivin fonttikoko = poltetun nimiön ruutukoko ±1 px`,
+    rivienKoot.length > 0 && suurinEro <= LIUSKAN_KOON_SIETO_PX,
+    `suurin ero ${p(suurinEro)} px (poltettu ${p(liuskanKoot.poltettuPx)} px)`);
+  // Leveä rivi työntäisi liuskan ruudun laidan yli (ks. RIVI EI SAA
+  // VENYÄ RUUDUN YLI): katkaisu on osa kohtaa 13 a eikä oma päätös.
+  vaadi(`8l2. ${ruutu.nimi}: levein liuskan rivi mahtuu kotelon leveyteen`,
+    levein > 0 && levein <= liuskanKoot.koteloLeveys,
+    `levein ${p(levein)} px, kotelo ${liuskanKoot.koteloLeveys} px`);
+  await kaappaa(sivu, `liuska-auki-${ruutu.w}.png`);
+
+  /*
    * ══ 8h. KOHTEEN NAPAUTUS AVAA KORTIN (PAATOKSET 34 kohta 1) ═══════
    *
    * ODOTUS ON KYSELY, EI KELLOA. Erä 5:ssä vartio oli punainen
@@ -2280,6 +2384,122 @@ for (const ruutu of RUUDUT) {
     + `sivulla: ${kerrokset.join(' | ') || 'ei kerroksia'}`);
   await suljeKortti(sivu);
   await sivu.waitForTimeout(400);
+
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * 8m. KAIKKI PYSYY PAIKALLAAN VEDOSSA JA ZOOMISSA (Raamattu
+   * KARTTAUUDISTUKSEN PAATOKSET 34 kohta 13 b ja c, omistaja
+   * 18.9.2026: *"Saisiko Pariisin ison nimitekstin pysymaan
+   * paikallaan vaikka zoomaa tai panoroi. Samoin kaikki nostot
+   * pitaisi pysya paikallaan."*)
+   * ══════════════════════════════════════════════════════════════
+   *
+   * MITTA ON RUUTUVEKTORI MERKISTÄ NIMIÖÖN (dx, dy), ei nimiön
+   * ruutupaikka: merkki itse liikkuu vedossa kartan mukana, ja juuri
+   * sen liikkeen erottaminen nimiön OMASTA liikkeestä on koko väite.
+   * Sama mitta kahdelle kerrokselle: kaupungin nimi
+   * (`.pallolauta-nimi`, ankkurina kaupungin oma ruutupiste) ja
+   * jokainen elävä nosto (`.pallolauta-nosto`, ankkurina merkin
+   * ruutupiste). Vektori luetaan ennen vetoa, −60 px:n vedon jälkeen
+   * ja +60 px:n paluuvedon jälkeen.
+   *
+   * ZOOMISSA vektori SKAALAUTUU (kyltti on kartan mitta, PAATOKSET
+   * 14), joten väite ei ole sama luku vaan SAMA SUUNTA: etumerkki ei
+   * saa vaihtua eikä kylki kääntyä. Se on täsmälleen se, mitä
+   * omistaja näkee "hyppynä".
+   */
+  /*
+   * ANKKURI LUETAAN KERROKSELTA, EI DOMISTA. Elementin oma laatikko
+   * (`getBoundingClientRect`) kattaa nimiön, joten se liikkuu nimiön
+   * mukana eikä kelpaa vertailupisteeksi — mitattu tässä erässä:
+   * ensimmäinen mittari antoi 41,96 px:n "siirron" vain siksi, että
+   * se vertasi nimiötä itseensä. Ankkuri on merkin KARTTAPISTE
+   * ruudulla (`pallolauta.ruudulla`), sama luku, jolla ladonta ja
+   * osumatesti mittaavat.
+   */
+  const vektorit = () => sivu.evaluate(() => {
+    const l = window.matkakirja.ui.pallolauta;
+    const koti = (document.querySelector('.pallo-kotelo') ?? document.body).getBoundingClientRect();
+    const ulos = [];
+    const lisaa = (avain, lat, lng, el) => {
+      const pp = l.ruudulla?.(lat, lng);
+      const t = el?.querySelector('text');
+      if (!pp || !t) return;
+      const r = t.getBoundingClientRect();
+      if (!(r.width > 0)) return;
+      ulos.push({
+        avain,
+        dx: (r.left + r.width / 2) - koti.left - pp.x,
+        dy: (r.top + r.height / 2) - koti.top - pp.y,
+      });
+    };
+    for (const o of l.nostot.osumat?.() ?? []) {
+      const el = [...document.querySelectorAll('.pallolauta-nosto')]
+        .find((e) => e.dataset.nosto === o.id);
+      if (el) lisaa(`nosto:${o.id}`, o.lat, o.lng, el);
+    }
+    const kaupungit = window.matkakirja.ui.game?.pack?.cities ?? [];
+    for (const el of document.querySelectorAll('.pallolauta-nimi')) {
+      const c = kaupungit.find((x) => x.id === el.dataset.kaupunki);
+      if (!c) continue;
+      const a = l.asteet({ x: c.x, y: c.y });
+      lisaa(`nimi:${c.id}`, a.lat, a.lon, el);
+    }
+    return ulos;
+  });
+  const vertaa = (ennen, jalkeen) => {
+    const kartta = new Map(jalkeen.map((v) => [v.avain, v]));
+    let pahin = { avain: '—', ero: 0 };
+    let yhteisia = 0;
+    for (const v of ennen) {
+      const u = kartta.get(v.avain);
+      if (!u) continue;
+      yhteisia += 1;
+      const ero = Math.max(Math.abs(u.dx - v.dx), Math.abs(u.dy - v.dy));
+      if (ero > pahin.ero) pahin = { avain: v.avain, ero };
+    }
+    return { ...pahin, yhteisia };
+  };
+  const ennenVetoa = await vektorit();
+  await veda(sivu, -VEDON_PITUUS_PX, 0);
+  const vedossa = await vektorit();
+  await veda(sivu, VEDON_PITUUS_PX, 0);
+  const vedonJalkeen = await vektorit();
+  const veto1 = vertaa(ennenVetoa, vedossa);
+  const veto2 = vertaa(ennenVetoa, vedonJalkeen);
+  tieto(`${ruutu.nimi} · 8m veto`,
+    `−${VEDON_PITUUS_PX} px: pahin ${veto1.avain} ${p(veto1.ero)} px (${veto1.yhteisia} merkkiä); `
+    + `+${VEDON_PITUUS_PX} px: pahin ${veto2.avain} ${p(veto2.ero)} px`);
+  vaadi(`8m. ${ruutu.nimi}: ruutuvektori merkistä nimiöön on sama vedon yli (±1 px)`,
+    veto1.yhteisia > 0 && veto1.ero <= PAIKALLAAN_SIETO_PX
+      && veto2.ero <= PAIKALLAAN_SIETO_PX,
+    `−60 px ${p(veto1.ero)} (${veto1.avain}), +60 px ${p(veto2.ero)} (${veto2.avain})`);
+
+  /*
+   * 8n. ZOOMI SKAALAA, EI KÄÄNNÄ. Vektorin ETUMERKKI kertoo kyljen:
+   * jos se vaihtuu, nimiö loikkasi merkin toiselle puolelle — juuri
+   * se hyppy, jonka omistaja näkee. Suuruus saa kasvaa vapaasti.
+   */
+  await zoomaaPariisiin(sivu, [0.5]);
+  await odotaKyltinAsento(sivu);
+  const zoomissa = await vektorit();
+  const zoomKartta = new Map(zoomissa.map((v) => [v.avain, v]));
+  const kaantyneet = ennenVetoa.filter((v) => {
+    const u = zoomKartta.get(v.avain);
+    if (!u) return false;
+    const kaantyi = (a, b) => Math.abs(a) > 0.5 && Math.abs(b) > 0.5 && Math.sign(a) !== Math.sign(b);
+    return kaantyi(v.dx, u.dx) || kaantyi(v.dy, u.dy);
+  });
+  tieto(`${ruutu.nimi} · 8n zoomi`,
+    `vertailtavia ${zoomissa.length}, kylkeä vaihtoi ${kaantyneet.length}: `
+    + `${kaantyneet.map((v) => v.avain).slice(0, 5).join(', ') || '—'}`);
+  vaadi(`8n. ${ruutu.nimi}: zoomi ei vaihda nimiön kylkeä (etumerkki säilyy)`,
+    zoomissa.length > 0 && kaantyneet.length === 0,
+    `kylkeä vaihtoi ${kaantyneet.length}`);
+  // Takaisin mitattuun lähizoomiin, jotta myöhemmät vartiot mittaavat
+  // samaa näkymää kuin ennen tätä lohkoa.
+  await zoomaaPariisiin(sivu, [LAHIZOOMIN_TAVOITE]);
+  await odotaKyltinAsento(sivu);
 
 
   /*
