@@ -18,7 +18,9 @@
     "savuke-ihmisen-esitys.mjs",
     "savuke-topografialinssi.mjs",
     "savuke-pallo-nostolaput.mjs",
-    "savuke-nimikyltti.mjs"
+    "savuke-nimikyltti.mjs",
+    "savuke-kerma-reuna.mjs",
+    "savuke-ranskan-nostot-lukossa.mjs"
   ],
   "asetukset": {
     "savuke-ihmisen-kappaleet.mjs": {
@@ -66,12 +68,9 @@
     "savuke-nimikyltti.mjs": {
       "kuvakansio": true,
       "tunnetutPunaiset": [
-        "^4\\. ",
-        "^7a\\. ",
-        "^7b\\. ",
-        "^9b\\. "
+        "^4\\. "
       ],
-      "huomautus": "Sama nelikko v1925:sta v1927:ään (mainin oma, ei tämän haaran aiheuttama). Vartio 9b:n FAIL-rivien MÄÄRÄ on kasvanut aihenostojen nimiöiden myötä (v1927 luku 5.1) mutta itse vartio pysyy tunnettuna punaisena."
+      "huomautus": "18.9.2026 (v1942): 7a, 7b ja 9b vihreitä aihemerkkivartioiden päivityksen jälkeen, listalta pois; 4 jää (Raamattu PAATOKSET 34 kohta 13: vartiot 4 ja 6 vanhentuneet). Aiemmin: sama nelikko v1925:sta v1927:ään (mainin oma, ei tämän haaran aiheuttama). Vartio 9b:n FAIL-rivien MÄÄRÄ on kasvanut aihenostojen nimiöiden myötä (v1927 luku 5.1) mutta itse vartio pysyy tunnettuna punaisena."
     },
     "savuke-astro-valokuva.mjs": {
       "tunnetutPunaisetMac": [
@@ -131,10 +130,8 @@
         "SAVUKE_RUUTU": "1400"
       },
       "kuvakansio": true,
-      "tunnetutPunaiset": [
-        "7e. tyopoyta: kyltin laatikko on vapaa"
-      ],
-      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Työpöytäruutu; tunnettu punainen \"7e. tyopoyta: kyltin laatikko on vapaa\" ajetaan vain täällä. häilyvä hitaalla Actions-koneella (17.9.2026: v1930:n ajossa vihreä, v1931:n ajossa punainen samalla koodilla, nimiä 1 kyltin laatikolla = kaupungin nimi edellisen ladontakierroksen paikassa). v1930:n ajoituskorjaus kattoi 7c:n; 7e:n nimiladonnan ajoitus on oma erä (Mac, SAVUKE_HIDASTUS=6). Poista listalta kun erä on mainissa."
+      "tunnetutPunaiset": [],
+      "huomautus": "18.9.2026 (v1942): 7e on INFO-rivi kyltin poistuttua, tunnettu punainen poistettu listalta. Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Työpöytäruutu. häilyvä hitaalla Actions-koneella (17.9.2026: v1930:n ajossa vihreä, v1931:n ajossa punainen samalla koodilla, nimiä 1 kyltin laatikolla = kaupungin nimi edellisen ladontakierroksen paikassa). v1930:n ajoituskorjaus kattoi 7c:n; 7e:n nimiladonnan ajoitus on oma erä (Mac, SAVUKE_HIDASTUS=6). Poista listalta kun erä on mainissa."
     },
     "savuke-kaupunkipopup.mjs#390": {
       "env": {
@@ -169,6 +166,12 @@
         "NAKYMAT": "vartija-b"
       },
       "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Väitteen 9 vastakoelohkon TOINEN puolisko: Safarin rajat, kehykset poikki, musta pinta, kolme avausta peräkkäin. Ks. #vartija-a."
+    },
+    "savuke-topografialinssi.mjs": {
+      "tunnetutPunaisetMac": [
+        "avauksessa ei ole välähdystä suhteessa linssin lopputilaan"
+      ],
+      "huomautusMac": "Mac 8 rinnakkain (v1942-ajot 18.9.2026, 2/4 punainen): 1 s avausikkunan 'paluu alas' 19,4 (raja 15) kuormassa, yksin ajettuna 4,0 ja maksimi = lopputila; kehysten pudotus on runnerin kuorma, ei pelin valahdys. Poista listalta, kun vartio mittaa mediaania tai kun rinnakkaisuus jaetaan."
     }
   }
 }

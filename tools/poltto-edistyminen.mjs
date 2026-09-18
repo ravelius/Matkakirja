@@ -282,6 +282,21 @@ export function odotetutPyramidista(luettelo) {
       ulos.set(`${kerros} z${z}`, bittienMaara(kartta));
     }
   }
+  /*
+   * MAITTAINEN NOSTOTASO (PAATOKSET 34 kohta 17 d, tools/kokoa-
+   * nostotasot.mjs): laatat poltetaan maittain, joten rajalaatta on
+   * useassa maassa ja poltettujen summa on maittaisten bittikarttojen
+   * SUMMA, ei yhteisen laataston ykkosbittien maara.
+   */
+  if (luettelo.nostotasot && typeof luettelo.nostotasot === 'object') {
+    const summat = new Map();
+    for (const k of Object.values(luettelo.nostotasot)) {
+      for (const [z, kartta] of Object.entries(k?.laatastot ?? {})) {
+        summat.set(z, (summat.get(z) ?? 0) + bittienMaara(kartta));
+      }
+    }
+    for (const [z, n] of summat) ulos.set(`nostot z${z}`, n);
+  }
   return ulos;
 }
 

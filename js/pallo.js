@@ -42,7 +42,8 @@
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 import { diagNyt, pallodiag } from './pallodiag.js';
 import {
-  haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
+  haePyramidinLuettelo, nostotasonPoltetut, pyramidinKerrostasot, pyramidinLaattaOlemassa,
+  pyramidinLaattaUrl,
 } from './laattapyramidi.js';
 import {
   KOSKETUKSEN_VAPAUTUS, laattakerrosPaalla, laatuAinaPaalla, nollaaKosketusOhjaimet,
@@ -150,7 +151,10 @@ export const PALLO_LAATTAVERSIO = '2026-09-07a';
  * lepokerroksenKerrokset palauttaa null, jos pallon sarjan `nostot` ja
  * pyramidin `nostotaso.versio` eivät täsmää — koko laattakerros
  * sammuu): (1) nostotason laatat ja pyramidi.json ämpäriin, (2) pallon
- * sarja poltettuna kansioon 2026-09-07a-nostot-h, (3) tämä tunniste.
+ * sarja poltettuna kansioon 2026-09-07a-nostot-i, (3) tämä tunniste.
+ * Tunniste i (18.9.2026 ilta): nostotaso maittain 2026-09-19-maittain,
+ * pallon sarja ILMAN nostoja (nostot maittain lepokerroksesta, PAATOKSET 34
+ * kohta 17 d), ankkurit lukittu 50 nostolle.
  * Tunniste h (18.9.2026 iltapäivä): nostotaso 2026-09-19-nostot, jossa
  * kaupunkipisteitä (nakyva-kaupunki-*) ei enää polteta laattaan (Raamattu
  * PAATOKSET 33 TARKENNUS 2 rajaus a) — poltettu yhdellä ajolla ilman
@@ -158,8 +162,14 @@ export const PALLO_LAATTAVERSIO = '2026-09-07a';
  * Ks. docs/raportit/viesti-fable-poltto-ranska-nostot-20260918.md
  * ("Erä 3"), jossa on vientikomennot ja tarkistuslista.
  */
-export const PALLO_LAATTATUNNISTE = 'h';
-export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}-nostot-${PALLO_LAATTATUNNISTE}`;
+export const PALLO_LAATTATUNNISTE = 'i';
+/*
+ * Sarja i on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
+ * kansiossa ei ole '-nostot'-osaa): nostot tulevat maittain lepokerroksesta
+ * (js/pallolaatat.js nostotMaittain). Sama tieto sw.js LAATTAKANSIO.
+ */
+export const PALLO_SARJASSA_NOSTOT = false;
+export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}${PALLO_SARJASSA_NOSTOT ? '-nostot' : ''}-${PALLO_LAATTATUNNISTE}`;
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
 /** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */
 export const PALLO_LAATTATASO_MAX = 8;
@@ -461,8 +471,28 @@ export function webglTuettu(doc = document) {
  * ajetaan tyngästä (maanKohdemerkit), joten tiiviste on annettavissa;
  * pelkkä tunnus riittää päätökseen "laatoissa vai ei".
  */
+/*
+ * NELJÄS LÄHDE: MAAKOHTAINEN NOSTOTASO (18.9.2026, Raamattu
+ * PAATOKSET 34 kohta 17 d). Kun pallon sarja ajetaan ILMAN
+ * `--nostot`-lippua, sen laatat.json ei kanna nostotasoa lainkaan
+ * (`nostot: null`) ja lepokerros latoo kohdemaan nostolaatat
+ * PYRAMIDISTA (js/pallolaatat.js nostotMaittain). Poltettu muste on
+ * silloin ruudulla, mutta se on pyramidin luettelossa — ja jos tämä
+ * funktio katsoisi vain pallon omaa luetteloa, peli ei tietäisi
+ * mistään poltosta ja piirtäisi jokaisen noston ELÄVÄNÄ mustetta
+ * vasten. MITATTU HINTA (v1942, Ranska): eläviä merkkejä kilpaili
+ * CSS2D-katosta (NOSTOJEN_KATTO 40) niin monta, että saapumisnäkymän
+ * nostopisteitä jäi 34 (390 px) ja 31 (1400 px) — aiemman 43:n
+ * sijaan. Katon yli jääneet eivät olleet DOMissa eivätkä
+ * osumalistalla: pelaajalle ne olivat kadonneet.
+ *
+ * JÄRJESTYS ON PALLON OMA ENSIN. Jos pallon sarjaan ON poltettu
+ * nostot, ne ovat laattojen kankaassa koko maailmasta, eikä
+ * pyramidin maakohtainen taulu saa muuttaa sitä päätöstä — sama
+ * järjestys kuin kerrosportissa (js/pallolaatat.js: `!nostot`).
+ */
 export function pallonNostoOnPoltettu(tunnus, tiiviste = null) {
-  const nostot = laattaluettelo?.nostotaso?.nostot;
+  const nostot = laattaluettelo?.nostotaso?.nostot ?? nostotasonPoltetut();
   if (!nostot || !tunnus) return false;
   const poltettu = nostot[tunnus];
   if (!poltettu) return false;
@@ -471,8 +501,8 @@ export function pallonNostoOnPoltettu(tunnus, tiiviste = null) {
 
 /** Onko pallon laatoissa lainkaan nostotasoa? */
 export function pallonLaatoissaOnNostoja() {
-  return Boolean(laattaluettelo?.nostotaso?.nostot
-    && Object.keys(laattaluettelo.nostotaso.nostot).length);
+  const nostot = laattaluettelo?.nostotaso?.nostot ?? nostotasonPoltetut();
+  return Boolean(nostot && Object.keys(nostot).length);
 }
 /** Sukelluksen näkyvä leveys laudan yksikköinä (maan kokoinen ikkuna). */
 export const PALLO_SUKELLUSLEVEYS = 620;

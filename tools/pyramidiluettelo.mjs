@@ -62,6 +62,8 @@ export function yhdistaLuettelo(uusi, vanha, ehdot = {}) {
     return {
       ...vanha,
       varitasot: { ...(vanha.varitasot ?? {}), ...(uusi.varitasot ?? {}) },
+      // `...vanha` kantaa `nostotasot`-taulun eteenpäin: väriajo ei
+      // polta yhtään nostolaattaa eikä sillä ole siitä sanottavaa.
       erat: [...(vanha.erat ?? []), eraKirjaus],
     };
   }
@@ -94,6 +96,17 @@ export function yhdistaLuettelo(uusi, vanha, ehdot = {}) {
    */
   luettelo.varitasot = (luettelo.varitasot || vanha.varitasot)
     ? { ...(vanha.varitasot ?? {}), ...(luettelo.varitasot ?? {}) } : null;
+  /*
+   * NOSTOTASOT YHDISTETÄÄN MAITTAIN, TÄSMÄLLEEN SAMASTA SYYSTÄ
+   * (18.9.2026, Raamattu PAATOKSET 34 kohta 17 d). Nostotaso ajetaan
+   * maa kerrallaan (`--nostotaso --nostomaa <ISO>`), ja ilman
+   * yhdistämistä jokainen ajo pyyhkisi edellisen maan laataston
+   * luettelosta. Ämpärissä laatat olisivat tallella, mutta peli ei
+   * osaisi pyytää niitä — juuri se vika, joka väritasolla mitattiin
+   * 13.9.2026.
+   */
+  luettelo.nostotasot = (luettelo.nostotasot || vanha.nostotasot)
+    ? { ...(vanha.nostotasot ?? {}), ...(luettelo.nostotasot ?? {}) } : null;
   /*
    * MERISÄVY JA PYRAMIDIN ALA OVAT POHJA-AJON TIETOJA. Merkkitaso
    * ei karsi umpimerta eikä piirrä pohjaa, joten sen oma arvo on

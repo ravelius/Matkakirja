@@ -201,6 +201,8 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
                              js/pallovektorit.js)
   --vain-pallo               polta VAIN pallon sarja (ei pyramidia eikä
                              luetteloa); sama kuin --sarjat pallo
+  --pallo-ilman-nostoja      pallon sarja ilman nostotasoa (nostot maittain
+                             lepokerroksesta; PAATOKSET 34 kohta 17 d)
   --pallo-osia N             pallon sarjan shardeja (oletus: ytimet × 3;
                              yksi osa on kielletty monen ytimen koneella)
   --pallo-tasot 0-8          pallon Mercator-tasot (oletus 0-8)
@@ -259,6 +261,11 @@ YTIMET=""
 ULOS="$JUURI/pyramidi-poltto"
 KOE=0; VAIN=""; VIE=1; SIIVOA=0; UUDESTAAN=0; PALLO=0; PALLOTUNNISTE=""
 PALLON_RANTA=0; VAIN_PALLO=0; PALLO_OSIA=""; PALLO_TASOT="0-8"; NOUTOVALI=""
+# Pallon sarja ILMAN nostoja (omistaja 18.9.2026, PAATOKSET 34 kohta 17 d):
+# nostot piirtyvat maittain lepokerroksesta (js/pallolaatat.js
+# nostotMaittain), vedon aikana pallon tekstuurissa ei ole minkaan maan
+# nostoja. Lippu PALLON_NOSTOT="--nostot" on vanha kaytos.
+PALLON_NOSTOT="--nostot"
 # YKSI AJO ILMAN VÄLITILAA (omistaja 18.9.2026, ks. polta_nostot_ja_pallo).
 YKSI_AJO=0; PALLO_LUETTELO=""; PALLON_LAHDE=""; EI_LAHDETTA=0
 # Ylikirjoitussuoja pallon sarjalle (ks. polta_pallo).
@@ -299,6 +306,7 @@ while [ $# -gt 0 ]; do
     --pallon-ranta) PALLON_RANTA=1; shift ;;
     --vain-pallo) VAIN_PALLO=1; PALLO=1; shift ;;
     --pallo-osia) PALLO_OSIA="$2"; shift 2 ;;
+    --pallo-ilman-nostoja) PALLON_NOSTOT=""; shift ;;
     --pallo-tasot) PALLO_TASOT="$2"; shift 2 ;;
     --nostot-ja-pallo) YKSI_AJO=1; shift ;;
     --pallon-lahde) PALLON_LAHDE="$2"; shift 2 ;;
@@ -565,6 +573,36 @@ lue_ampari () {
 Z8_SARAKKEITA=338
 Z8_KAISTA=4
 
+# NOSTOTASON SHARDIT MAITTAIN (18.9.2026, Raamattu PAATOKSET 34
+# kohta 17 d: "muiden maiden nostot piiloon").
+#
+# Nostotaso ei ole enää yksi maailmanlaajuinen laatasto vaan
+# maakohtainen (<nostoversio>/nostot/<ISO>/z...), koska naapurimaan
+# laattaan poltettu muste kuulsi kerman läpi eikä kerros voi piilottaa
+# poltettua. Maalista tulee SAMASTA funktiosta, josta merkitkin
+# (tools/nostomaat.mjs -> tools/fokuskartta/nostot.mjs keraaNostot) —
+# käsin kirjoitettu lista ehtisi eriytyä, ja listalta pudonneen maan
+# nostot jäisivät polttamatta.
+#
+# Yksi maa on pieni ajo (kymmeniä laattoja), ja shardit menevät
+# rinnakkain ytimille kuten ennenkin.
+NOSTOMAAT_VALIMUISTI=""
+nostomaat () {
+  if [ -z "$NOSTOMAAT_VALIMUISTI" ]; then
+    NOSTOMAAT_VALIMUISTI="$(node "$JUURI/tools/nostomaat.mjs" --rivi)"
+  fi
+  echo "$NOSTOMAAT_VALIMUISTI"
+}
+
+# Emittoi nostoshardit yhdelle tasovälille kaikille maille.
+# $1 = shardin nimen etuliite, $2 = tasoargumentit, $3 = nostoarg
+nostoshardit () {
+  local etuliite="$1" tasot="$2" nostoarg="$3" iso
+  for iso in $(nostomaat); do
+    echo "$etuliite-$iso|$tasot $nostoarg --nostomaa $iso"
+  done
+}
+
 shardit () {
   local nostoarg="--nostotaso --nostoversio $NOSTOVERSIO"
   local viivaarg="--viivataso --viivaversio $VIIVAVERSIO"
@@ -591,7 +629,7 @@ shardit () {
   case "$SARJAT" in
     z8)
       if [ "$NOSTOVERSIO" != "${A_NOSTOVERSIO:-$NOSTOVERSIO}" ]; then
-        echo "nosto-z5-z7|--tasot 5-7 $nostoarg"
+        nostoshardit "nosto-z5-z7" "--tasot 5-7" "$nostoarg"
       fi
       if [ "$VIIVAVERSIO" != "${A_VIIVAVERSIO:-$VIIVAVERSIO}" ]; then
         echo "viiva-z0-z7|--tasot 0-7 $viivaarg"
@@ -603,8 +641,8 @@ shardit () {
   # nostoversio polttaa koko kerroksen z5-z8 (ks. yllä).
   case "$SARJAT" in
     nostot)
-      echo "nosto-z5-z7|--tasot 5-7 $nostoarg"
-      echo "nosto-z8|--tasoja 9 --tasot 8 $nostoarg"
+      nostoshardit "nosto-z5-z7" "--tasot 5-7" "$nostoarg"
+      nostoshardit "nosto-z8" "--tasoja 9 --tasot 8" "$nostoarg"
       ;;
   esac
   case "$SARJAT" in
@@ -615,7 +653,7 @@ shardit () {
       echo "z7c|--tasot 7 --sarakkeet 88-131 --kaariminuutit $KORKEUS$pohjaarg"
       echo "z7d|--tasot 7 --sarakkeet 132-168 --kaariminuutit $KORKEUS$pohjaarg"
       echo "viiva-z0-z7|--tasot 0-7 $viivaarg"
-      echo "nosto-z5-z7|--tasot 5-7 $nostoarg"
+      nostoshardit "nosto-z5-z7" "--tasot 5-7" "$nostoarg"
       [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && echo "ranta-z0-z7|--tasot 0-7 $rantaarg"
       ;;
   esac
@@ -639,7 +677,7 @@ shardit () {
         printf 'viiva-z8-%02d|--tasoja 9 --tasot 8 --sarakkeet %s-%s %s\n' "$n" "$a" "$b" "$viivaarg"
         a=$((b + 1)); n=$((n + 1))
       done
-      echo "nosto-z8|--tasoja 9 --tasot 8 $nostoarg"
+      nostoshardit "nosto-z8" "--tasoja 9 --tasot 8" "$nostoarg"
       if [ "$ILMAN_RANTAVIIVAA" -eq 1 ]; then
         a=0; n=1
         while [ "$a" -lt "$Z8_SARAKKEITA" ]; do
@@ -726,10 +764,13 @@ kirjaa_laskut () {
   local polku="$ULOS/lokit/$nimi.laskut"
   local d kerros z n
   : > "$polku.tmp"
-  for d in "$kansio"/z* "$kansio"/nostot/z* "$kansio"/viivat/z* "$kansio"/ranta/z*; do
+  # Nostotaso on maakohtainen: sen tasokansiot ovat nostot/<ISO>/z*.
+  for d in "$kansio"/z* "$kansio"/nostot/z* "$kansio"/nostot/*/z* \
+           "$kansio"/viivat/z* "$kansio"/ranta/z*; do
     [ -d "$d" ] || continue
     z="$(basename "$d")"; z="${z#z}"
     kerros="$(basename "$(dirname "$d")")"
+    case "$d" in *"/nostot/"*) kerros=nostot ;; esac
     case "$kerros" in nostot|viivat|ranta) ;; *) kerros=pohja ;; esac
     n="$(find "$d" -name "$pate" | wc -l | tr -d ' ')"
     printf '%s %s %s\n' "$kerros" "$z" "$n" >> "$polku.tmp"
@@ -1168,7 +1209,7 @@ pallon_yritys () {
   local koodi=0
   # shellcheck disable=SC2086
   (cd "$JUURI" && node tools/tee-pallolaatat.mjs \
-      --min "$PALLO_MIN" --max "$PALLO_MAX" --nostot $rantalippu \
+      --min "$PALLO_MIN" --max "$PALLO_MAX" $PALLON_NOSTOT $rantalippu \
       --tunniste "$PALLOTUNNISTE" --osa "$i/$PALLO_OSIA" \
       $( [ -n "$PALLO_LUETTELO" ] && echo --luettelo "$PALLO_LUETTELO" ) \
       $( [ -n "$PALLON_LAHDE" ] && echo --lahde "$PALLON_LAHDE" ) \
@@ -1270,7 +1311,7 @@ polta_pallo () {
   mkdir -p "$luettelokansio"
   # shellcheck disable=SC2086
   (cd "$JUURI" && node tools/tee-pallolaatat.mjs --vain-luettelo \
-    --min "$PALLO_MIN" --max "$PALLO_MAX" --nostot $rantalippu \
+    --min "$PALLO_MIN" --max "$PALLO_MAX" $PALLON_NOSTOT $rantalippu \
     $( [ -n "$PALLO_LUETTELO" ] && echo --luettelo "$PALLO_LUETTELO" ) \
     --tunniste "$PALLOTUNNISTE" --ulos "$luettelokansio")
   local kansio
@@ -1338,6 +1379,7 @@ polta_pallo () {
     --ulos "$ULOS" \
     $( [ -n "$PALLO_LUETTELO" ] && echo --pallo-luettelo "$PALLO_LUETTELO" ) \
     $( [ -n "$PALLON_LAHDE" ] && echo --pallon-lahde "$PALLON_LAHDE" ) \
+    $( [ -z "$PALLON_NOSTOT" ] && echo --pallo-ilman-nostoja ) \
     $( [ "$VIE" -eq 1 ] || echo --ei-vie ) \
     $( [ "$SIIVOA" -eq 1 ] && echo --siivoa ) \
     < "$lista" || virhe=1
@@ -1507,6 +1549,9 @@ EOF
   # 2. LUETTELO PAIKALLISESTI, EI VIENTIÄ.
   echo luettelo > "$ULOS/lokit/vaihe.txt"
   kokoa_luettelo
+  # Maittaiset nostotasot shardeista luetteloon (luettelojobi ei tunne maita).
+  node "$JUURI/tools/kokoa-nostotasot.mjs" --ulos "$ULOS" \
+    --luettelo "$ULOS/luettelo/pyramidi.json" || return 1
   tarkista_eheys "$ULOS/lokit/shardit.txt" --luettelo "$ULOS/luettelo/pyramidi.json" \
     || return 1
   # Nostotasoajo tuntee vain nostotason; muut kentät kannetaan ämpärin

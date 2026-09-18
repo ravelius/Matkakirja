@@ -2694,6 +2694,12 @@ export function lehdenMaanNimi(ui, city) {
 export const LEHTIARKIN_TUNNUS = 'tiivis-lehtiarkki';
 /** Kehyksen oma luokka savukkeille ja tyyleille. */
 export const LEHTIARKIN_LUOKKA = 'tiivis-lehtiarkki';
+/**
+ * Kevyen yläosan otsikon luokka (kohta 17 e). Nimiön oma sääntö antaa
+ * lehden ison antiikvan; tämä luokka on se paikka, jossa kevyt näkymä
+ * saa pienemmän mittansa — yksi arvo, ei kopioitua tyyliä.
+ */
+export const KEVYEN_OTSIKON_LUOKKA = 'tiivis-lehtiarkki-otsikko';
 
 /** Onko tiivis lehtiarkki auki? */
 export function tiivisLehtiarkkiAuki() {
@@ -2713,8 +2719,16 @@ export function suljeTiivisLehtiarkki() {
  * `lato(ui, palsta, city)` täyttää lehden palstan — kaikki sisältö
  * tulee kutsujalta, joten tämä funktio ei tiedä eikä päätä mitään
  * sisällöstä. Palauttaa dialogin.
+ *
+ * NELJÄS PARAMETRI ON LISÄYS, EI MUUTOS (omistajan päätös 18.9.2026
+ * klo 15.20, Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 17 e).
+ * Ilman `asetukset.otsikko`a masto ladotaan rivilleen entisellään.
+ * Otsikon kanssa masto JÄÄ KOKONAAN POIS — ei kickeriä, ei kaupungin
+ * isoa nimeä, ei päiväysriviä viivoineen — ja tilalle tulee YKSI rivi:
+ * annettu otsikko samassa `h2.lehti-nimio`ssa, jotta sulkunappi istuu
+ * samassa kulmassa samalla säännöllä eikä yhtään tyyliarvoa kopioida.
  */
-export function avaaTiivisLehtiarkki(ui, city, lato) {
+export function avaaTiivisLehtiarkki(ui, city, lato, asetukset = {}) {
   if (typeof document === 'undefined' || !city) return null;
   sfx.play('paper');
   let dialogi = document.getElementById(LEHTIARKIN_TUNNUS);
@@ -2776,15 +2790,23 @@ export function avaaTiivisLehtiarkki(ui, city, lato) {
    * matkapäivän numero pelistä. Liitelinkkiä (.maa-linkki) EI ole: se on
    * alaosan navigointia, jonka omistaja rajasi pois erässä 10.
    */
-  palsta.appendChild(html('p', 'lehti-ylarivi', LEHDEN_NIMIO));
-  const nimio = html('h2', 'lehti-nimio', city.name ?? '');
-  nimio.appendChild(sulje);
-  palsta.appendChild(nimio);
-  const pvm = html('p', 'lehti-alarivi');
-  const maanNimi = lehdenMaanNimi(ui, city);
-  if (maanNimi) pvm.appendChild(html('span', 'pvm-maa', `${maanNimi} · `));
-  pvm.appendChild(document.createTextNode(`${ui.game?.dayCount?.() ?? 1}. matkapäivä`));
-  palsta.appendChild(pvm);
+  const omaOtsikko = typeof asetukset?.otsikko === 'string' ? asetukset.otsikko : null;
+  if (omaOtsikko) {
+    // KEVYT YLÄOSA (kohta 17 e): vain otsikko ja sulkunappi.
+    const nimio = html('h2', `lehti-nimio ${KEVYEN_OTSIKON_LUOKKA}`, omaOtsikko);
+    nimio.appendChild(sulje);
+    palsta.appendChild(nimio);
+  } else {
+    palsta.appendChild(html('p', 'lehti-ylarivi', LEHDEN_NIMIO));
+    const nimio = html('h2', 'lehti-nimio', city.name ?? '');
+    nimio.appendChild(sulje);
+    palsta.appendChild(nimio);
+    const pvm = html('p', 'lehti-alarivi');
+    const maanNimi = lehdenMaanNimi(ui, city);
+    if (maanNimi) pvm.appendChild(html('span', 'pvm-maa', `${maanNimi} · `));
+    pvm.appendChild(document.createTextNode(`${ui.game?.dayCount?.() ?? 1}. matkapäivä`));
+    palsta.appendChild(pvm);
+  }
   lato(ui, palsta, city);
   if (!dialogi.open) dialogi.showModal();
   /*
