@@ -80,6 +80,30 @@ import { sovitteleLaput } from './sovittelu.js';
 /** Eläviä nostoja pallolla enintään kerrallaan (karttapallo.md luku 6). */
 export const NOSTOJEN_KATTO = 40;
 /*
+ * ══ KATTO EI SAA PUDOTTAA KOHDEMAAN PISTETTÄ (Raamattu,
+ * KARTTAUUDISTUKSEN PAATOKSET 34 kohta 21) ════════════════════════
+ *
+ * NOSTOJEN_KATTO 40 on CSS2D-BUDJETTI: jokainen elävä merkki on
+ * elementti, jolla on symboli, nimiö, osuma-ala ja sovittelun siirto.
+ * Mitattu 18.9.2026 tällä haaralla (Ranskan saapumisnäkymä): DOM oli
+ * TÄSMÄLLEEN 40 sekä 2000 × 1300 että 1400 × 900 -ruudulla, eli katto
+ * oli kiinni ja karsi eläviä nostoja — ja kun rinnakkainen erä toi
+ * Ranskaan 12 lisänostoa, ne putosivat suoraan tähän kattoon
+ * (puuttuvia 16).
+ *
+ * OMISTAJAN SÄÄNTÖ EROTTAA PISTEEN JA NIMIÖN: *"ainakin pisteet
+ * pitaisi nakya"*. Piste on halpa — ilman nimiötä merkki on yksi
+ * pieni symboli eikä vaadi sovittelua eikä nimibudjettia — joten
+ * katon yli menevät KOHDEMAAN rivit piirtyvät silti, mutta PELKKINÄ
+ * PISTEINÄ. Nimiöiden määrää rajaa yhä `katto` entisellään, eli
+ * ruudun tekstimäärä ei kasva tästä yhtään.
+ *
+ * TÄMÄ KATTO ON SILTI OLEMASSA: kohdemaan merkkejä on kourallinen yli
+ * sadan vain, jos pakka kasvaa moninkertaiseksi, ja silloinkin raja
+ * on selkeä eikä hiljainen.
+ */
+export const PISTEIDEN_KATTO = 120;
+/*
  * MAASTOKOHDE EI SULAUDU AIHEMERKKIIN (omistaja 16.9.2026, jatkoa
  * PAATOKSET 27 kohtaan 4 — perustelut js/pallolauta/aihemerkit.js
  * ryhmitaNostot-funktion alkukommentissa). Kenttä on jo TUNNISTETTAVA
@@ -1494,9 +1518,43 @@ export function luoNostot({
     const liikkuu = ui.movingPlayerId != null;
     const iso = kohteidenNykyinenIso(ui);
     const pohja = iso ? FOKUS_POHJAT[iso] : null;
-    const lehtiNakyy = lehdenOsuus(pohja, nakyva, pack.id) >= LEHDEN_VAHIN_OSUUS;
+    const osuusNyt = lehdenOsuus(pohja, nakyva, pack.id);
+    const lehtiNakyy = osuusNyt >= LEHDEN_VAHIN_OSUUS;
+    /*
+     * ══ PISTEET NÄKYVÄT AINA KOHDEMAASSA (omistaja 18.9.2026 klo
+     * 19.08, Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 21,
+     * puhelintestin v1944 löydös 1) ═══════════════════════════════
+     *
+     * SANATARKASTI: *"kohteet eivat nay tassa zoom tasolla. ainakin
+     * pisteet pitaisi nakya nostoista ja kaupungeista"*.
+     *
+     * MITATTU JUURISYY (Chromium, Ranskan saapumisnäkymä, tämä haara
+     * ennen korjausta): kerros on KOKONAAN kiinni, kun maan lehti ei
+     * täytä puolta näkymän leveydestä (LEHDEN_VAHIN_OSUUS = 0,5).
+     * Portti on kirjoitettu MERKEILLE — nimiöineen, osuma-aloineen —
+     * ja sen perustelu (js/fokuskohteet.js MERKIT SYTTYVÄT VASTA KUN
+     * LEHTI ON LÄHIKUVASSA) on 44 pikselin osuma-alojen kasautuminen
+     * yleiskuvassa. PISTE EI OLE OSUMA-ALA: se on kartan muste, ja
+     * omistajan sääntö sanoo sen näkyvän aina, kun kohdemaa on
+     * ruudulla. Mitattu: yksi loitonnusele saapumisnäkymästä pudotti
+     * 390 px:llä pisteet 34 → 14 ja kaupungit 5 → 1.
+     *
+     * RAJA ON KOHDEMAAN OMA ZOOMILUKKO. `uloinOsuus > 0` tarkoittaa,
+     * että maan laatikko on voimassa (js/pallolauta/lauta.js
+     * uloimmanOsuus, maanZoomiraja) — siis pelin normaali näkymä,
+     * jossa kamera ei voi paeta maasta. Kehittäjän maailmanappi ja
+     * linssi vapauttavat zoomin, jolloin `uloinOsuus` on 0 ja vanha
+     * portti on yhä voimassa: koko maailman yleiskuvaan ei sada maan
+     * pisteitä yhdeksi läiskäksi.
+     *
+     * NIMIÖT EIVÄT TULE MUKANA. Tämän portin alapuolella rivit ovat
+     * PELKKIÄ PISTEITÄ (`nimioNakyy: false`) — nimiöt palaavat vasta
+     * kun lehti on lähikuvassa kuten ennenkin, eli PAATOKSET 32
+     * TARKENNUS 2:n välizoomi säilyy sellaisenaan.
+     */
+    const pisteetVain = !lehtiNakyy && osuusNyt > 0 && uloinOsuus > 0;
     portti = null;
-    if (lehtiNakyy && !liikkuu) {
+    if ((lehtiNakyy || pisteetVain) && !liikkuu) {
       const tiedot = maanKohdetiedot(ui, iso);
       /*
        * MERKKIRAJA JA LÄHIZOOMIPORTTI (ks. PÄÄKARTAN MERKKIRAJA yllä).
@@ -1538,7 +1596,9 @@ export function luoNostot({
           omaLat: oma ? oma.lat : null,
           omaLng: oma ? oma.lon : null,
           nimi: m.nimi ?? '',
-          nimioNakyy: m.nimioNakyy,
+          // Lehden portin alapuolella rivi on pelkkä piste (ks.
+          // PISTEET NÄKYVÄT AINA KOHDEMAASSA).
+          nimioNakyy: m.nimioNakyy && !pisteetVain,
           kategoria: m.kategoria,
           symLaji: m.laji,
           puoli: m.puoli ?? 'oikea',
@@ -2031,7 +2091,8 @@ export function luoNostot({
    * Palauttaa elävien laatikot nimiladonnan varauksiksi ja määrän.
    */
   const paivita = ({
-    nakyva, katto = NOSTOJEN_KATTO, keskipiste = null, uloinOsuus = 0,
+    nakyva, katto = NOSTOJEN_KATTO, pisteKatto = PISTEIDEN_KATTO,
+    keskipiste = null, uloinOsuus = 0,
     karttaskaala = 0, vertailuskaala = 0,
     /*
      * KIINTEÄT ESTEET LEVITYKSELLE (PAATOKSET 32 kohta 5): pelinappula
@@ -2524,7 +2585,17 @@ export function luoNostot({
      * napautus avaisi sen ja mitaan ei nakyisi (juuri se vika, jonka
      * era 3 mittasi).
      */
-    const naytetaan = [...piirrettavat.slice(0, Math.max(0, katto)), ...ankkuriRivit];
+    /*
+     * KATON YLI MENEVÄT OVAT PELKKIÄ PISTEITÄ (ks. KATTO EI SAA
+     * PUDOTTAA KOHDEMAAN PISTETTÄ). Nimiöllisiä on yhä enintään
+     * `katto`; loput piirtyvät nimiöttöminä `pisteKatto`on asti.
+     * Poltettu rivi ei tarvitse tätä — sen muste on laatassa.
+     */
+    const nimiollisetRivit = piirrettavat.slice(0, Math.max(0, katto));
+    const pisteRivit = piirrettavat
+      .slice(Math.max(0, katto), Math.max(0, pisteKatto))
+      .map((r) => ({ ...r, nimioNakyy: false, vainPiste: true }));
+    const naytetaan = [...nimiollisetRivit, ...pisteRivit, ...ankkuriRivit];
     datumit = naytetaan.map((r) => (r.perhe === 'aihemerkki' ? {
       avain: r.avain,
       mitta: mittaNyt,
@@ -3294,7 +3365,22 @@ export function luoNostot({
     // muuten samalla ladonnalla, joka sen avasi.
     if (auki?.ankkuri && !osumat.some((o) => o.id === auki.id)
       && !ryhmitetytIdt.has(auki.id)) suljeFokuskohde(ui);
-    return { maara: naytetaan.length, laatikot, osumia: osumat.length };
+    /*
+     * `nimiollisia` ON NIMIBUDJETIN LUKU, EI `maara` (PAATOKSET 34
+     * kohta 21). Lauta vähentää nostojen määrän kaupunkien
+     * nimibudjetista (js/pallolauta/lauta.js HTML_MERKKIEN_KATTO -
+     * pelia - nostoTulos.maara). Jos nimiöttömät pisteet laskettaisiin
+     * mukaan, kohdemaan pisteiden esiin päästäminen VEISI kaupunkien
+     * nimet — juuri päinvastoin kuin omistaja pyysi. Piste ei kilpaile
+     * nimen kanssa tekstitilasta, joten se ei kilpaile budjetistakaan;
+     * ladonta väistää sen silti, koska sen laatikko on `laatikot`issa.
+     */
+    return {
+      maara: naytetaan.length,
+      nimiollisia: nimiollisetRivit.length + ankkuriRivit.length,
+      laatikot,
+      osumia: osumat.length,
+    };
   };
 
   /**

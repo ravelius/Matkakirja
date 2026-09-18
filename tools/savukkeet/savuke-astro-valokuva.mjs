@@ -787,37 +787,15 @@ async function ajaNakyma(nakymanNimi) {
   await s.mouse.move(0, 0).catch(() => {});
 
   /*
-   * PULUN PLUSKUPLA EI SAA JÄÄDÄ VALOKUVAN PÄÄLLE (omistajan havainto
-   * 16.9.2026, puhelin). Kun pulun repliikit imetään pinoon, tilalle jää
-   * `button.pollo-kuplapalautus` — oma `position: fixed` -nappinsa
-   * SUORAAN bodyssa, ei kuplapinon sisällä, joten pinon piilotus ei
-   * osunut siihen.
-   *
-   * ELEMENTTI LUODAAN TÄSSÄ KÄSIN, koska linssin aikana pulu ei saa
-   * puhua eikä pinoa voi täyttää oikeaa reittiä (puheenvuorot menevät
-   * jonoon, js/pollo.js linssiAlkoi). Mitattava asia on SÄÄNTÖ: osuuko
-   * `body.aikajana-pulu-piilossa` tähän luokkaan. Elementti on
-   * sanatarkasti sama kuin js/pollo.js:n luoma, ja se poistetaan heti
-   * mittauksen jälkeen.
+   * PLUSKUPLAVARTIO POISTETTU (v1944, Raamattu PAATOKSET 34 kohta 20).
+   * Tässä mitattiin 16.–18.9.2026, ettei `.pollo-kuplapalautus` jää
+   * valokuvan päälle linssin ajaksi: se oli `position: fixed` -nappi
+   * SUORAAN bodyssa, ja savuke joutui luomaan koekappaleen käsin.
+   * Elementtiä ei enää luoda missään (js/pollo.js), ja paluureitti
+   * kupliin on chatin ylärivin `.pollo-naytakuplat` `.pollo-paneeli`n
+   * sisällä — paneelin piilotusta vartioi jo yllä oleva mittaus. Vartio
+   * mittasi siis vain omaa koekappalettaan, joten se on poistettu.
    */
-  const pluskupla = await s.evaluate(() => {
-    const nappi = document.createElement('button');
-    nappi.className = 'pollo-kuplapalautus';
-    nappi.textContent = '+';
-    document.body.appendChild(nappi);
-    const t = getComputedStyle(nappi);
-    const tulos = {
-      nakyvyys: t.visibility,
-      osumat: t.pointerEvents,
-      luokka: document.body.classList.contains('aikajana-pulu-piilossa'),
-    };
-    nappi.remove();
-    return tulos;
-  });
-  vaadi(nimessa('pulun pluskupla on piilossa linssin ajan'),
-    pluskupla.luokka === true && pluskupla.nakyvyys === 'hidden'
-      && pluskupla.osumat === 'none',
-    JSON.stringify(pluskupla));
   /*
    * VASTAKOE: pelin ISO pulu on yhä piilossa (`aikajana-pulu-piilossa`),
    * eli minipulun näkyvyys ei tullut purkamalla linssin piilotusta.

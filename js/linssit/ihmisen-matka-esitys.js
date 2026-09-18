@@ -463,22 +463,23 @@ export const PULUN_SISAANTULOELE = 'walkBack';
  */
 export const PULUN_ELEEN_MS = 2200;
 /**
- * Piiloluokka bodylle. CSS (css/aikajana.css) piilottaa NELJÄ asiaa
- * `visibility: hidden` -säännöllä — napin, paneelin, PLUSKUPLAN ja
- * kasvokankaan. Peittävyys ei riittäisi, koska kasvot piirtyvät napin
+ * Piiloluokka bodylle. CSS (css/aikajana.css) piilottaa KOLME asiaa
+ * `visibility: hidden` -säännöllä — napin, paneelin ja kasvokankaan.
+ * Peittävyys ei riittäisi, koska kasvot piirtyvät napin
  * ULKOPUOLELLA omalle kankaalleen (.livia-kasvot-pinta on bodyn lapsi),
  * ja `visibility` on myös se, jonka livia-eleet itse lukee
  * näkyvyystestissään: piilossa oleva pulu ei elehdi eikä puhu.
  *
- * PLUSKUPLA on `.pollo-kuplapalautus` (js/pollo.js): `position: fixed`
- * -nappi bodyn suorana lapsena, joka jää ruudulle, kun pelaaja on
- * sulkenut puhekuplan. Omistaja näki sen puhelimella kellumassa kesken
- * Ihmisen matka -esityksen (16.9.2026) — se puuttui listalta, koska se
- * ei ole napin eikä paneelin sisällä. Nimi luetellaan tässä, jotta
- * tests/ihmisen-matka-esitys.test.mjs voi vartioida listan.
+ * PLUSKUPLA POISTUI LISTALTA v1944:n jälkeen (Raamattu, PAATOKSET 34
+ * kohta 20): `.pollo-kuplapalautus` oli `position: fixed` -nappi bodyn
+ * suorana lapsena ja tarvitsi siksi oman rivinsä. Sitä ei enää luoda
+ * lainkaan — paluureitti kupliin on chatin ylärivin
+ * `.pollo-naytakuplat`, joka elää `.pollo-paneeli`n sisällä ja piiloutuu
+ * siis paneelin mukana. Lista luetellaan tässä, jotta
+ * tests/ihmisen-matka-esitys.test.mjs voi vartioida sen.
  */
 export const PULUN_PIILO_OSAT = [
-  '.pollo-nappi', '.pollo-paneeli', '.pollo-kuplapalautus', '.livia-kasvot-pinta',
+  '.pollo-nappi', '.pollo-paneeli', '.livia-kasvot-pinta',
 ];
 export const PULUN_PIILO_LUOKKA = 'aikajana-pulu-piilossa';
 /**

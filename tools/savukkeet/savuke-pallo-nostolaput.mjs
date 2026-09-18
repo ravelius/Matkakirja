@@ -15,8 +15,10 @@
  * ── VARTIOT ───────────────────────────────────────────────────────
  *
  *   1. LAPPU EI OLE NIMEN PÄÄLLÄ. Yksikään elävän noston nimilappu ei
- *      leikkaa yhdenkään kaupunkinimen laatikkoa neljässä tiheässä
- *      paikassa (Bukarest, Ateena, Helsinki, Istanbul).
+ *      leikkaa yhdenkään kaupunkinimen laatikkoa kahdessa tiheässä
+ *      KOHDEMAAN paikassa (Bukarest, Transilvania). Kohdemaa on tässä
+ *      Romania, ja v1942:sta alkaen nostoja on vain kohdemaassa —
+ *      muualta mitattu näkymä ei väitä mitään (ks. NAKYMAT).
  *   2. NIMI EI OLE LIIKKUMATTOMAN MUSTEEN PÄÄLLÄ. Poltettu nosto ja
  *      elävän noston ikoni eivät voi väistää, joten ne ovat nimen
  *      varauksia — yksikään nimi ei leikkaa niitä.
@@ -37,7 +39,8 @@
  *
  *   4. LAPPU LIUKUU, EI HYPPÄÄ. Sovittelun siirto kirjoitetaan
  *      `.pallolauta-nosto-siirto`-ryhmän CSS-muunnokseen, ja ryhmällä
- *      on 200 ms:n transform-siirtymä.
+ *      on 200 ms:n transform-siirtymä. ON INFO 18.9.2026 (perustelu
+ *      vartion kohdalla: kohdemaassa ei ole enää elävää lappua).
  *
  *   RAPORTIN TIETOJA: kuinka moni lappu vaihtoi kyljen, kuinka moni
  *   siirtyi ja kuinka moni jäi ilman nimeä kussakin näkymässä.
@@ -66,12 +69,27 @@ const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
-/** Näkymät: omistajan Bukarest ja kolme muuta tiheää paikkaa. */
+/*
+ * Näkymät: omistajan Bukarest ja kaupunkien välinen Transilvania.
+ *
+ * NÄKYMÄN ON OLTAVA KOHDEMAASSA (18.9.2026, velka 6). Tässä savukkeessa
+ * tallenne on Fogg Bukarestissa, joten kohdemaa on ROMANIA — ja v1942:sta
+ * alkaen nostot ovat vain kohdemaan omia (`nostotasot[ISO]`, Raamattu
+ * PAATOKSET 34 kohta 17 b–d; js/laattapyramidi.js nostotasonPoltetut).
+ * Listalla oli siihen asti kolme kohdemaan ULKOPUOLISTA paikkaa —
+ * Ateena, Helsinki ja Istanbul — ja niistä mitattiin 18.9.2026 nolla
+ * lappua ja nolla poltettua mustetta (docs/raportit/viesti-fable-
+ * nostolaput-67-20260918.md). Väitteet 1–2 olivat niissä siis tyhjiä:
+ * "yksikään lappu ei leikkaa nimeä" on tosi ilman lappuja. Ne on
+ * poistettu ja tilalle otettu Transilvania, joka on samassa
+ * kohdemaassa ja jossa poltettua mustetta on ruudulla (Bran,
+ * Sighișoara, Peleș, Transfăgărășan) — sama näkymä, jota vartiot 6–7 jo
+ * käyttävät. EI UUSIA VÄITTEITÄ: vartiot ovat samat, vain näkymät
+ * osuvat nyt paikkaan, jossa on mitattavaa.
+ */
 const NAKYMAT = [
   { nimi: 'Bukarest', lat: 44.43, lng: 26.10 },
-  { nimi: 'Ateena', lat: 37.98, lng: 23.73 },
-  { nimi: 'Helsinki', lat: 60.17, lng: 24.94 },
-  { nimi: 'Istanbul', lat: 41.01, lng: 28.98 },
+  { nimi: 'Transilvania', lat: 45.52, lng: 25.37 },
 ];
 /** Korkeudet, joilla jokainen näkymä mitataan (lähikuva ja maan mitta). */
 const KORKEUDET = [0.05, 0.12];
@@ -257,6 +275,7 @@ if (auki) {
   }, { lat: nakyma.lat, lng: nakyma.lng, alt: korkeus });
 
   let lappuNimiYht = 0;
+  let lappujaYht = 0;
   let nimiKiinteaYht = 0;
   let nimettomia = 0;
   let tasmaa = true;
@@ -269,6 +288,7 @@ if (auki) {
       // eslint-disable-next-line no-await-in-loop
       const m = await mittaa(nakyma, korkeus);
       lappuNimiYht += m.lappuNimi.length;
+      lappujaYht += m.lappuja;
       nimiKiinteaYht += m.nimiKiintea.length;
       if (!(m.nimia > 0)) nimettomia += 1;
       if (!m.elementitTasmaa) tasmaa = false;
@@ -293,14 +313,62 @@ if (auki) {
       }
     }
   }
+  /*
+   * VARTIO 1 ON TYHJÄ POLTETUSSA MAAILMASSA (mitattu 18.9.2026, velka
+   * Fablelle): kohdemaassa ROU ei ole yhtään elävää lappua, joten
+   * "yksikään lappu ei leikkaa nimeä" on tosi ilman lappuja. Väite on
+   * yhä oikein eikä sitä muuteta tässä erässä, mutta lappujen määrä
+   * tulostetaan viereen, jotta tyhjä otos näkyy lukijalle. Sama
+   * sääntö poltetulle musteelle on vartio 2, joka EI ole tyhjä.
+   */
   vaadi('1. yksikään nostolappu ei leikkaa kaupungin nimen laatikkoa',
     lappuNimiYht === 0, `limityksiä ${lappuNimiYht}`);
+  tieto('1 · otoksen koko', `eläviä lappuja yhteensä ${lappujaYht} `
+    + `(0 = väite on tosi ilman mitattavaa, velka Fablelle)`);
   vaadi('2. yksikään kaupunkinimi ei leikkaa liikkumatonta mustetta (poltettu nosto, elävän ikoni)',
     nimiKiinteaYht === 0, `limityksiä ${nimiKiinteaYht}`);
   vaadi('3. jokaisessa näkymässä on nimiä (väistön hinta ei ole mykkä kartta)',
     nimettomia === 0, `nimettömiä näkymiä ${nimettomia}`);
-  vaadi('4. sovittelun asento on myös elementissä (muunnos ja kylki) ja lappu liukuu 200 ms',
-    tasmaa && siirtyma === '0.2s', `tasmaa=${tasmaa} siirtyma=${siirtyma}`);
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * 4. ON INFO 18.9.2026 (poltto kohdemaan säännöllä; Raamattu
+   *    KARTTAUUDISTUKSEN PAATOKSET 34 kohta 17 d ja AGENTIT
+   *    TARKENNUS 10 kohta 21: savuke päivitetään samassa erässä kuin
+   *    käytös muuttuu, ja kohta 21 hyväksyy poltetun otoksen)
+   * ══════════════════════════════════════════════════════════════
+   *
+   * MITATTU TILA (18.9.2026, 390 × 844 dpr 2, tämä savukkeen oma
+   * tallenne — Fogg Bukarestissa, kohdemaa ROU — molemmat näkymät
+   * molemmilla korkeuksilla):
+   *
+   *   Bukarest 0,05: nimiä 1, lappuja 0, kiinteää mustetta 4
+   *   Bukarest 0,12: nimiä 1, lappuja 0, kiinteää mustetta 10
+   *   Transilvania 0,05: nimiä 1, lappuja 0, kiinteää mustetta 8
+   *   Transilvania 0,12: nimiä 1, lappuja 0, kiinteää mustetta 13
+   *   `.pallolauta-nosto-siirto`-elementtejä: 0 kaikissa neljässä
+   *
+   * Romanian kaikki kartan nostot ovat kohdemaan säännöllä poltettuja
+   * (docs/raportit/viesti-fable-poltto-kohdemaa-20260918.md), ja
+   * kaupungin sisäiset elävät ovat liuskassa eivätkä piirry kartalle
+   * millään zoomilla (PAATOKSET 34 kohdat 2–3). Kohdemaassa ei siis
+   * ole yhtään elävää lappua, jonka LIUKUA mitata: `siirtyma` oli
+   * `null` (ei elementtiä, josta lukea `transitionDuration`) ja
+   * `tasmaa` oli tosi tyhjästä silmukasta. Väite meni siis punaiseksi
+   * mittaamatta mitään — ja vihreäksi se olisi mennyt yhtä tyhjänä.
+   *
+   * ELÄVÄ LAPPU ON VAIN RANSKASSA (lisäkaupunkien pisteet,
+   * js/packs/nakyvat-kaupungit-fra.js), eikä tämän savukkeen näkymää
+   * voi siirtää sinne: kohdemaa seuraa PELAAJAA (js/fokuskohteet.js
+   * kohteidenNykyinenIso), ei kameraa, joten Ranskan merkit eivät
+   * herää Bukarestin tallenteella. Sovittelun asennon ja 200 ms:n
+   * liu'un vartiointi kuuluu siksi savukkeeseen, joka ajaa Ranskan
+   * tallenteella — ei tähän. Luku jää INFOksi, jotta se ei katoa
+   * näkyvistä, ja palaa vartioksi jos kohdemaahan tulee eläviä
+   * lappuja takaisin.
+   */
+  tieto('4. sovittelun asento elementissä ja lapun 200 ms:n liuku (INFO: kohdemaassa '
+    + 'ei ole yhtään elävää lappua, ks. yllä)',
+    `tasmaa=${tasmaa} siirtyma=${siirtyma} — eläviä siirtoryhmiä ${siirtyma === null ? 0 : '≥1'}`);
   /*
    * 5. VANHENTUNUT (Fable 18.9.2026, Raamattu PAATOKSET 34 kohta 13 c):
    *    sovittelu ajetaan vain kun lappujoukko tai ruutukoko muuttuu —
@@ -329,8 +397,8 @@ if (auki) {
    *    meni.
    *
    *    KOLME LAPPUA KUSTAKIN NÄKYMÄSTÄ:
-   *      a) omistajan nimeämä lappu (Bukarest "Strousberg", Helsinki
-   *         "Kirjasota", Istanbul "Mustameri") tekstin keskeltä;
+   *      a) omistajan nimeämä lappu (Bukarest "Strousberg",
+   *         Transilvania "Bran") tekstin keskeltä;
    *      b) ensimmäinen ELÄVÄ lappu (polttamaton nosto, jolla on oma
    *         CSS2D-elementti) — poltettu ja elävä muste kulkevat eri
    *         polkua, ja molempien on otettava napautus;
@@ -363,8 +431,15 @@ if (auki) {
      * nostotasossa 2026-09-18-nostot poltettuja.
      */
     { nimi: 'Transilvania', lat: 45.52, lng: 25.37, etsi: 'bran' },
-    { nimi: 'Helsinki', lat: 60.17, lng: 24.94, etsi: 'kirjasota' },
-    { nimi: 'Istanbul', lat: 41.01, lng: 28.98, etsi: 'mustameri' },
+    /*
+     * HELSINKI JA ISTANBUL POISTETTU (18.9.2026, velka 6). Hakusanat
+     * "kirjasota" ja "mustameri" osoittivat Suomen ja Turkin nostoihin,
+     * joita ei enää ole ruudulla: nostot tulevat vain kohdemaasta
+     * (tässä Romania), ja 18.9.2026 mitattuna molemmista näkymistä tuli
+     * otos 0 lappua — vartiot 6–7 saivat aineistonsa jo silloin
+     * kokonaan Romaniasta. Kaksi tyhjää näkymää maksoi neljä
+     * kamera-ajoa eikä väittänyt mitään.
+     */
   ];
   /** Sormen poikkeama tekstin keskiviivasta kohtisuoraan ulos (px). */
   const KOSKETUSPOIKKEAMA_PX = 8;

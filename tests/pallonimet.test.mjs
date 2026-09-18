@@ -156,7 +156,14 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
    * yhä sen yläraja. Budjettikäyrän vartija on alempana tässä
    * tiedostossa.
    */
-  assert.match(lauta, /Math\.min\(nimibudjetti\(korkeusAst\),\n\s*Math\.max\(0, HTML_MERKKIEN_KATTO - pelia - nostoTulos\.maara\)\)/);
+  /*
+   * BUDJETISTA VÄHENNETÄÄN NIMIÖLLISET, EI PISTEITÄ (Raamattu,
+   * KARTTAUUDISTUKSEN PAATOKSET 34 kohta 21). Kohdemaan katon yli
+   * menevät nostot piirtyvät nimiöttöminä pisteinä, eivätkä ne saa
+   * syödä kaupunkien nimibudjettia — muuten pisteiden esiin
+   * päästäminen veisi nimet.
+   */
+  assert.match(lauta, /Math\.min\(nimibudjetti\(korkeusAst\),\n\s*Math\.max\(0, HTML_MERKKIEN_KATTO - pelia\n\s*- \(nostoTulos\.nimiollisia \?\? nostoTulos\.maara\)\)\)/);
   // Avauslento rajaa ehdokkaat kahteen nimeen ja lähtövalinta LONTOOSEEN
   // (nimet.js `vain`, aalto 3A). Valittavan kaupungin nimi tulee sen
   // omasta kohdemerkistä, joten karttanimi jää siltä pois — muuten

@@ -1820,10 +1820,45 @@ if [ "$LUETTELO" -eq 1 ]; then
   if [ "$SARJAT" = "z8" ] && [ "$PAKOTA_LUETTELO" -eq 0 ]; then
     vertaa_luettelo
   fi
+  # MAITTAISET NOSTOTASOT SHARDEISTA LUETTELOON — ENNEN EHEYTTÄ.
+  #
+  # Luettelojobi (--vain-luettelo) ei tunne maita, joten sen
+  # `nostotasot` on null; maakohtaiset kirjaukset ovat shardien omissa
+  # pyramidi.json-tiedostoissa. Polku --nostot-ja-pallo teki tämän jo
+  # (ks. nostot_ja_pallo), mutta tämä yleinen polku EI — ja silloin
+  # eheystarkistus laskee rajalaattojen summan yhtä bittikarttaa
+  # vasten: mitattu 18.9.2026 *"poltettu 425, luettelo lupaa 251"*.
+  # Sama kokoaminen tähän, samaan kohtaan ennen tarkistusta.
+  if grep -q '^nosto-' "$ULOS/lokit/shardit.txt" 2>/dev/null; then
+    node "$JUURI/tools/kokoa-nostotasot.mjs" --ulos "$ULOS" \
+      --luettelo "$ULOS/luettelo/pyramidi.json" || exit 1
+  fi
   # EHEYS ENNEN VIENTIÄ: luettelo lupaa laatat, joten se viedään vasta
   # kun laatat on laskettu ja luvut täsmäävät.
   tarkista_eheys "$ULOS/lokit/shardit.txt" --luettelo "$ULOS/luettelo/pyramidi.json"
-  [ "$VIE" -eq 1 ] && vie_luettelo
+  # NOSTOTASOAJO TUNTEE VAIN NOSTOTASON (Fable 18.9.2026 klo 20.00):
+  # `--sarjat nostot` vei ämpäriin luettelon, jonka `varitasot` oli
+  # null ja `erat` puuttui — kerma katosi pelaajilta puoleksi tunniksi
+  # (savuke-kerma-reuna 10/16, PR #2588). Polku --nostot-ja-pallo kantoi
+  # muut kentät ämpärin luettelosta (yhdista-nostoluettelo.mjs); sama
+  # tähän. Vientiä EI tehdä luettelosta, jonka väritasot puuttuvat
+  # vaikka ämpärissä ne ovat (vahti työkalun sisällä).
+  LUETTELO_VIETAVA="$ULOS/luettelo/pyramidi.json"
+  if [ "$SARJAT" = "nostot" ] && [ -s "$ULOS/ampari-luettelo.json" ]; then
+    node "$JUURI/tools/yhdista-nostoluettelo.mjs" \
+      --ampari "$ULOS/ampari-luettelo.json" \
+      --poltto "$ULOS/luettelo/pyramidi.json" \
+      --ulos "$ULOS/luettelo/pyramidi-yhdistetty.json" || exit 1
+    LUETTELO_VIETAVA="$ULOS/luettelo/pyramidi-yhdistetty.json"
+  fi
+  node -e '
+    const fs = require("fs");
+    const [uusi, vanha] = process.argv.slice(1).map((p) => fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, "utf8")) : null);
+    if (!uusi) process.exit(0);
+    const vm = Object.keys(vanha?.varitasot ?? {}).length, um = Object.keys(uusi.varitasot ?? {}).length;
+    if (vm > 0 && um === 0) { console.error(`VIRHE: luettelon varitasot puuttuvat (ampäri ${vm} maata) — ei vientiä`); process.exit(1); }
+  ' "$LUETTELO_VIETAVA" "$ULOS/ampari-luettelo.json" || exit 1
+  [ "$VIE" -eq 1 ] && vie_luettelo "$LUETTELO_VIETAVA"
 fi
 
 if [ "$PALLO" -eq 1 ]; then polta_pallo; fi

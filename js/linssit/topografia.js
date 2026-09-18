@@ -44,7 +44,9 @@ import { el } from '../mapart.js';
 import { kokoPallonKorkeus } from '../pallolauta/kamera.js';
 import { luoTarkennus } from './topografia-tarkennus.js';
 import { valitseReliefi } from './reliefikuva.js';
-import { asetaReliefiLinssi, reliefiKaytossa, reliefipyramidiPaalla } from '../reliefipyramidi.js';
+import {
+  asetaReliefiLinssi, reliefiKaytossa, reliefipyramidiPaalla, merkitseLinssiketju,
+} from '../reliefipyramidi.js';
 
 /*
  * PEITTÄVYYS.
@@ -518,7 +520,9 @@ export const LINSSI = {
      * harventamaton päivitys (js/pallolaatat.js), ja se on tässä sama
      * yksi kutsu kuin sulkeutumisessa.
      */
+    merkitseLinssiketju('kokoa-ennen');
     lauta.lepokerros?.()?.kokoa?.();
+    merkitseLinssiketju('kokoa');
 
     /*
      * ────────────────────────────────────────────────────────────────
@@ -543,6 +547,7 @@ export const LINSSI = {
     let peite = peiteKaytossa
       ? lauta.linssit.kalvoRuudulle(PEITTEEN_OSA, { vari: ODOTUSPEITE })
       : null;
+    merkitseLinssiketju('peite');
     const peiteAlkoi = (typeof performance === 'undefined' ? Date : performance).now();
     /** Mitattu: montako millisekuntia peite oli ruudulla (savuke). */
     let peiteKesti = null;

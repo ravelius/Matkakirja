@@ -90,7 +90,7 @@
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
 import {
-  haeReliefinLuettelo, reliefiKaytossa, reliefinLaattaUrl,
+  haeReliefinLuettelo, merkitseLinssiketju, reliefiKaytossa, reliefinLaattaUrl,
   reliefinSyvinTaso, reliefinTaso, reliefinVersio, reliefipyramidiPaalla,
 } from './reliefipyramidi.js';
 import { NOSTOLADONTA_SAANTO } from './nostoladonta.js';
@@ -2777,4 +2777,14 @@ export function pyramidinReliefiKaytossa() {
  */
 export function pyramidinReliefinSyvinTaso() {
   return reliefinSyvinTaso();
+}
+
+/*
+ * LINSSIKETJUN MERKKI SAMAN OVEN KAUTTA. Pallon lepokerros ei tuo
+ * js/reliefipyramidi.js:ää itse (ks. yllä, tests/pallolepokerros.test.mjs
+ * vartioi tuontilistaa), joten avauksen vaihemerkinnät kulkevat tästä
+ * kuten luettelo ja osoitteetkin.
+ */
+export function pyramidinLinssiketju(vaihe) {
+  merkitseLinssiketju(vaihe);
 }

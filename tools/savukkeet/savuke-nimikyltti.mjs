@@ -404,6 +404,39 @@ for (const ruutu of RUUDUT) {
       const nostonMitta = nosto
         ? Number((nosto.style.transform.match(/scale\(([\d.]+)\)/u) ?? [])[1] ?? 0) : 0;
       /*
+       * ELÄVÄ MERKKI YLIPÄÄTÄÄN (18.9.2026, poltto kohdemaan
+       * säännöllä; Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 17 d
+       * ja docs/raportit/viesti-fable-poltto-kohdemaa-20260918.md).
+       * Ranskan kartalla ELÄVIÄ merkkejä ovat enää kaupunkipisteet:
+       * kaikki muut kaupungin ulkopuoliset nostot ovat poltettua
+       * mustetta, ja kaupungin sisäiset ovat liuskassa eivätkä piirry
+       * kartalle millään zoomilla. `nostonMitta` on siksi 0 joka
+       * zoomilla — vartio 6b mittaa sen sijaan SUURIMMAN elävän
+       * merkin mitan, olipa se kaupunkipiste tai nosto. Katto on
+       * sama kummallekin (js/fokusnosto-symbolit.js KATTO ON MERKIN
+       * MITASSA, EI KAMERAN KERTOIMESSA), joten väite ei muutu.
+       */
+      const elavatMerkit = [...document.querySelectorAll('.pallolauta-nosto-siirto')]
+        .map((g) => Number((g.style.transform.match(/scale\(([\d.]+)\)/u) ?? [])[1] ?? 0))
+        .filter((v) => v > 0);
+      const elavaMitta = elavatMerkit.length ? Math.max(...elavatMerkit) : 0;
+      /*
+       * POLTETUN NIMIÖN RUUTUKOKO (vartio 8c). Poltettua tekstiä ei
+       * voi lukea DOMista — se on laatan rasterissa. Sen ruutukoko on
+       * silti tiedossa samalla kaavalla, jota
+       * tools/savukkeet/savuke-pariisi-lahizoom.mjs vartio 8l käyttää:
+       * kartan oma mitta KARTTANIMI_KOOT.kohde (8,5 px laudan
+       * paperissa) kertaa `nimenKarttakerroin` (js/pallolauta/nimet.js)
+       * eli sama kerroin, jolla kaupunkien nimikyltit seuraavat
+       * karttaa. Kerroin luetaan kerrokselta itseltään.
+       */
+      const nim = await import('/js/pallolauta/nimet.js');
+      const kn = await import('/js/karttanimet.js');
+      const skaalaNyt = l.kamera.nakyvaAlue()?.skaala ?? 0;
+      const vertailuNyt = l.saapumisenSkaala?.() ?? 0;
+      const nimenKerroin = nim.nimenKarttakerroin(skaalaNyt, vertailuNyt || undefined);
+      const poltetunNimioPx = kn.KARTTANIMI_KOOT.kohde * nimenKerroin;
+      /*
        * AIHEMERKIT JA VIUHKA (vartio 9, Raamattu KARTTAUUDISTUKSEN
        * PAATOKSET 27). Ryhmien määrä luetaan kerrokselta, limitys
        * samoista nimiölaatikoista kuin sovittelu käytti, ja viuhka
@@ -479,6 +512,10 @@ for (const ruutu of RUUDUT) {
         // uloimmalla sallitulla zoomilla tasan 1 joka ruudulla.
         vertailuskaala: l.saapumisenSkaala?.() ?? 0,
         nostonMitta,
+        elavaMitta,
+        elavia: elavatMerkit.length,
+        nimenKerroin,
+        poltetunNimioPx,
         /*
          * KOHDEMAAN MERKIT JA KAUPUNGIN NIMIÖ (vartio 8, Raamattu
          * KARTTAUUDISTUKSEN PAATOKSET 25). Portin luvut tulevat
@@ -587,13 +624,31 @@ for (const ruutu of RUUDUT) {
    * Syvemmän zoomin koko mittaus on omassa savukkeessaan
    * (tools/savukkeet/savuke-pariisi-lahizoom.mjs).
    */
-  const sisinTaso = zoomit[zoomit.length - 1];
-  const sisinNimio = sisinTaso.nostonMitta * NOSTOSYM_NIMIO_KOKO;
-  tieto(`${ruutu.nimi} · noston nimiö sisimmällä mitatulla zoomilla`,
-    `${p(sisinNimio)} px (katto ${p(NOSTON_NIMIO_KATTO_PX)} px)`);
+  /*
+   * MITTA KOHDISTETTIIN ELÄVÄÄN MERKKIIN 18.9.2026 (poltto kohdemaan
+   * säännöllä, Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 17 d ja
+   * AGENTIT TARKENNUS 10 kohta 21: savuke päivitetään samassa erässä
+   * kuin käytös muuttuu). Ennen: `zoomit.at(-1).nostonMitta` — sarjan
+   * SISIN taso ja VAIN ei-kaupunkinosto. Poltetussa maailmassa
+   * kumpikin ehto on tyhjä: Ranskan ainoat elävät kartan merkit ovat
+   * kaupunkipisteitä, ja 390 px:llä sisimmillä zoomeilla (0,6 ja 0,35)
+   * niistäkään ei ole yhtään ruudulla — mitattu 0,00 px, eli savuke
+   * mittasi tyhjää eikä kattoa. Nyt taso valitaan siitä päästä, jossa
+   * elävä merkki OIKEASTI on, ja väite on entinen: nimiö ei ylitä
+   * 16 px:n kattoa. Ehtoon on lisätty se, mitä vanhan vartion
+   * kommentti jo sanoi (*"mitan on oltava TÄSMÄLLEEN katossa"*) —
+   * muuten pelkkä saapumisnäkymän 11,5 px läpäisisi vartion
+   * mittaamatta kattoa lainkaan.
+   */
+  const elavatTasot = zoomit.filter((z) => z.elavaMitta > 0);
+  const sisinTaso = elavatTasot.at(-1) ?? null;
+  const sisinNimio = (sisinTaso?.elavaMitta ?? 0) * NOSTOSYM_NIMIO_KOKO;
+  tieto(`${ruutu.nimi} · elävän merkin nimiö sisimmällä zoomilla, jolla merkkejä on`,
+    `${p(sisinNimio)} px (katto ${p(NOSTON_NIMIO_KATTO_PX)} px), `
+    + `eläviä merkkejä zoomeittain ${zoomit.map((z) => z.elavia).join('/')}`);
   vaadi(`6b. ${ruutu.nimi}: noston nimiö ei ylitä ${NOSTON_NIMIO_KATTO_PX} px:n kattoa`,
-    sisinNimio > 0 && sisinNimio <= NOSTON_NIMIO_KATTO_PX + 0.1,
-    `${p(sisinNimio)} px`);
+    sisinNimio > 0 && Math.abs(sisinNimio - NOSTON_NIMIO_KATTO_PX) <= 0.1,
+    `${p(sisinNimio)} px, eläviä merkkejä ${sisinTaso?.elavia ?? 0}`);
 
   /*
    * 8. KOHDEMAAN MERKIT ILMAN KATTOA JA KAUPUNGIN ISOMPI NIMIÖ
@@ -615,7 +670,26 @@ for (const ruutu of RUUDUT) {
   vaadi(`8b. ${ruutu.nimi}: lisäkaupungin nimiö on saapumiszoomilla 11–12 px`,
     saapuen.kaupunkeja > 0 && kaupunginNimio >= 11 && kaupunginNimio <= 12,
     `${p(kaupunginNimio, 2)} px, kaupunkimerkkejä ${saapuen.kaupunkeja}`);
-  const nostonNimio = saapuen.nostonMitta * NOSTOSYM_NIMIO_KOKO;
+  /*
+   * NOSTON NIMIÖ ON SAAPUMISNÄKYMÄSSÄ POLTETTUA MUSTETTA (18.9.2026).
+   * Kohdemaan säännöllä poltettuna Ranskan kaikki kaupungin
+   * ulkopuoliset nostot ovat laatassa, joten saapumisnäkymässä ei ole
+   * yhtään ELÄVÄÄ noston nimiötä mitattavaksi — vanha mitta luki
+   * 0,00 px eikä vertaillut mitään. Poltetun nimiön ruutukoko on silti
+   * mitattavissa: se on kartan oma mitta KARTTANIMI_KOOT.kohde
+   * (8,5 px) kertaa kerroksen oma `nimenKarttakerroin` (sama kaava
+   * kuin savuke-pariisi-lahizoom.mjs vartiossa 8l). Kaupungin mitta
+   * luetaan yhä DOMista. Väite on entinen ja juuri se, mitä PAATOKSET
+   * 25 kohta 3 sanoo — ja se pätee molemmin päin: elävä kaupunkimerkki
+   * on 1,35-kertainen, eikä poltettua mustetta voi suurentaa
+   * jälkikäteen (js/pallolauta/nostot.js VAIN ELÄVÄ MERKKI).
+   */
+  const nostonNimio = saapuen.nostonMitta > 0
+    ? saapuen.nostonMitta * NOSTOSYM_NIMIO_KOKO
+    : saapuen.poltetunNimioPx;
+  tieto(`${ruutu.nimi} · saapumisnäkymän noston nimiö`,
+    `${p(nostonNimio, 2)} px (${saapuen.nostonMitta > 0 ? 'elävä merkki' : 'poltettu muste'}, `
+    + `kartan kerroin ${p(saapuen.nimenKerroin, 3)}), kaupunki ${p(kaupunginNimio, 2)} px`);
   vaadi(`8c. ${ruutu.nimi}: noston nimiö on pienempi kuin kaupungin `
     + '(PAATOKSET 25 kohta 3)',
     nostonNimio > 0 && nostonNimio < kaupunginNimio,

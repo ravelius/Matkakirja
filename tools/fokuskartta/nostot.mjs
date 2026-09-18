@@ -99,6 +99,35 @@
  * lähizoomilla ja piilottaa uloimmalla — sama lopputulos ruudulla,
  * nolla polttovelkaa eikä yhtään kaksoiskuvaa.
  *
+ * === MERKKIPORTTI AJETAAN KOHDEMAAN ASETUKSELLA (18.9.2026) ========
+ *
+ * MITATTU VIKA (Fable 18.9.2026 klo 19.30). Yllä oleva kutsu ajoi
+ * portin asetuksella `kohdemaa: false`, eli katolla 21 ja `lahi`-lippu
+ * voimassa — ja se oli oikein NIIN KAUAN kuin nostotaso oli yksi
+ * maailmanlaajuinen laatasto, jossa jokainen maa on "joku muu maa".
+ * PAATOKSET 34 kohta 17 d teki nostotasosta MAAKOHTAISEN
+ * (`--nostomaa <ISO>` → `nostotasot[ISO]`, peli lataa vain kohdemaan
+ * laataston), ja silloin oletus kääntyi päinvastoin: jokaisen maan
+ * laatasto on aina kohdemaan laatasto, koska sitä ei ladata muulloin.
+ *
+ * Vanha oletus jätti Ranskasta poltettavaksi 13 merkkiä 89:stä: katto
+ * 21 ja `lahi: true` pitivät ~47 kaupungin ulkopuolista nostoa —
+ * hahmotelman 27 uutta kohdetta mukaan lukien — elävinä, ja pallon
+ * elävien CSS2D-katto (js/pallolauta/nostot.js NOSTOJEN_KATTO 40)
+ * pudotti niistä osan kokonaan ruudulta.
+ *
+ * SÄÄNTÖ ON PELIN OMA, EI KOPIO: elävä kerros ajaa portin
+ * `{ kohdemaa: true }` -asetuksella (js/pallolauta/nostot.js `keraa`,
+ * "KOHDEMAA-LIPPU"), koska se kerää merkit vain korostetusta maasta.
+ * Maakohtainen poltto on saman päätöksen toinen pää, joten se ajaa
+ * saman funktion samalla asetuksella. Katto ja `lahi` jäävät voimaan
+ * VAIN maailmanlaajuisessa ajossa (ilman `--nostomaa`), jossa naapurin
+ * muste on samassa kuvassa.
+ *
+ * MIKÄ EI MUUTU: kaupunkipisteet (`nakyva-kaupunki-*`), kaupungin
+ * sisäiset nostot (PAATOKSET 33 TARKENNUS 2, FABLEN RAJAUS a),
+ * täkyehto ja lukitun maan ankkuriehto pitävät entisellään — ne ovat
+ * eri sääntöjä eri syistä, eikä portin asetus koske niitä.
  */
 import {
   KOHDE_SYMBOLI_SKAALA, eritteleKohdeRyhmat, kohdeKarttarivit, kohdeMerkinLadonta,
@@ -231,10 +260,13 @@ function maanTakyt(pack, iso, kaupungit) {
  *   skandaalit). TÄKYNOSTOT EIVÄT KUULU TÄNNE — ks. tiedoston alku.
  * @param {boolean} estetty  jos tosi, maan yksikään merkki ei ole
  *   poltettava (maan täkyjoukko ei ole vakaa — ks. tiedoston alku)
+ * @param {boolean} maittain  MAAKOHTAINEN LAATASTO (ks. MERKKIPORTTI
+ *   AJETAAN KOHDEMAAN ASETUKSELLA): portti saa `kohdemaa: true`, koska
+ *   tämän maan laatasto on aina kohdemaan laatasto.
  * @returns {{ s:number, merkit:Array }} merkit laudan koordinaateissa
  */
 function nostoladontaMerkit({
-  pack, iso, pohja, lisat = [], estetty = false,
+  pack, iso, pohja, lisat = [], estetty = false, maittain = false,
 }) {
   const rajaus = pohja?.rajaus;
   const bbox = pohja?.bbox;
@@ -307,8 +339,14 @@ function nostoladontaMerkit({
    * Portti ei siirrä eikä poista mitään ladonnasta — se päättää vain,
    * mikä rivi on `poltettava`. Piiloon jäävät merkit hoitaa elävä
    * kerros omalla portillaan.
+   *
+   * `kohdemaa`-LIPPU: ks. MERKKIPORTTI AJETAAN KOHDEMAAN ASETUKSELLA
+   * tiedoston alussa. Maakohtaisessa ajossa lippu on tosi, koska peli
+   * lataa tämän laataston VAIN silloin, kun tämä maa on kohdemaa.
    */
-  const portti = merkkiPortti(ui.fokuskohdeRyhmat, false, (r) => r.kohde ?? null);
+  const portti = merkkiPortti(
+    ui.fokuskohdeRyhmat, false, (r) => r.kohde ?? null, { kohdemaa: maittain },
+  );
   const paastetyt = new Set(portti.merkit.map((r) => r.id));
   /*
    * SIIRTOVIIVAT KASAUSPASSIN OMASTA PALUUARVOSTA (1.9.2026 ilta,
@@ -476,9 +514,18 @@ function nostoladontaMerkit({
  * KOKO MAAILMAN POLTETTAVAT NOSTOT.
  *
  * @param {object} pack  laudan paketti (js/packs/maailmankartta.js)
+ * @param {{maittain?: boolean}} [asetukset]  `maittain: true` =
+ *   maakohtainen laatasto (`--nostomaa <ISO>`): merkkiportti ajetaan
+ *   kohdemaan asetuksella ja sama tunnus saa palaa jokaisen maan omaan
+ *   laatastoon (ks. MERKKIPORTTI AJETAAN KOHDEMAAN ASETUKSELLA ja
+ *   SAMA TUNNUS KAHDESSA MAASSA alempana).
  * @returns {{
  *   merkit: Array,     kaikki merkit (myös poltettava:false)
- *   luettelo: object,  tunnus -> tiiviste, VAIN poltetut
+ *   luettelo: object,  tunnus -> tiiviste, VAIN poltetut. MAAKOHTAISESSA
+ *     ajossa tämä on yhteenveto koko maailmasta eikä kelpaa laataston
+ *     luetteloksi: sama tunnus voi olla usean maan ladonnasta. Ajon oma
+ *     taulu rakennetaan maan merkeistä (tools/generoi-laattapyramidi.mjs
+ *     `poltettuLuettelo`).
  *   tilasto: object
  * }}
  *
@@ -564,7 +611,7 @@ function keraaElaintakyt(pack) {
   return merkit;
 }
 
-export function keraaNostot(pack) {
+export function keraaNostot(pack, { maittain = false } = {}) {
   /*
    * LISÄLÄHTEET REKISTERIIN, KUTEN PELISSÄ (js/main.js): naapurimaan
    * ladonta (js/fokuskohteet.js maanUlkoisetEsteet → ladoMaanTynka)
@@ -618,7 +665,7 @@ export function keraaNostot(pack) {
     const {
       s, merkit: maanMerkit, porttiPiiloon, sisaisia, kaupunkipisteita, ilmanAnkkuria,
     } = nostoladontaMerkit({
-      pack, iso, pohja, lisat, estetty: !takyt.vakaa,
+      pack, iso, pohja, lisat, estetty: !takyt.vakaa, maittain,
     });
     if (!maanMerkit.length) continue;
     tilasto.maita += 1;
@@ -666,13 +713,32 @@ export function keraaNostot(pack) {
    * eikä lista maastokohteista: sama sääntö kattaa myös kahden maan
    * saman tunnuksen (Kreikan ja Kyproksen `olympos` ovat eri vuoret
    * samalla tunnuksella) ilman että sitä pitää erikseen tietää.
+   *
+   * ── MAAKOHTAISESSA AJOSSA SYY POISTUU (18.9.2026) ───────────────
+   *
+   * Sääntö syntyi siitä, että laatasto oli koko maailman yhteinen:
+   * *"laatta ei tiedä maasta mitään, ja sama merkki olisi poltettuna
+   * kuudessa paikassa."* Maakohtaisessa laatastossa
+   * (`--nostomaa <ISO>`, PAATOKSET 34 kohta 17 d) laatastot eivät enää
+   * sekoitu: Välimeri palaa Ranskan laatastoon Ranskan mittatikulla ja
+   * Tunisian laatastoon Tunisian, ja peli lataa vain kohdemaan
+   * laataston. Myös TIIVISTELUETTELO on maakohtainen
+   * (`nostotasot[ISO].nostot`, js/laattapyramidi.js nostotasonKirjaus),
+   * joten kohdemaan tiiviste vastaa juuri sitä ladontaa, jolla merkki
+   * poltettiin — eikä naapurin eri paikkaan ladottu kopio pääse
+   * vaientamaan sitä.
+   *
+   * SAMAN MAAN SISÄLLÄ SÄÄNTÖ PYSYY: yksi tunnus voi olla luettelossa
+   * vain kerran, joten kahdesti latoutunut tunnus jää eläväksi myös
+   * maakohtaisessa ajossa. Siksi avain on maittain `ISO|tunnus`.
    */
   const kertoja = new Map();
+  const avain = (m) => (maittain ? `${m.iso ?? ''}|${m.tunnus}` : m.tunnus);
   for (const merkki of merkit) {
-    kertoja.set(merkki.tunnus, (kertoja.get(merkki.tunnus) ?? 0) + 1);
+    kertoja.set(avain(merkki), (kertoja.get(avain(merkki)) ?? 0) + 1);
   }
   for (const merkki of merkit) {
-    if (merkki.poltettava && kertoja.get(merkki.tunnus) > 1) {
+    if (merkki.poltettava && kertoja.get(avain(merkki)) > 1) {
       merkki.poltettava = false;
       tilasto.monimaisia += 1;
     }

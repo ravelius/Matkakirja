@@ -43,6 +43,13 @@
  *       pisteenä.
  *   6.  KAUPUNKIMERKKEJÄ ≥ KAUPUNKEJA_VAHINTAAN nimineen
  *       (PAATOKSET 34 kohta 17 c).
+ *   7.  LOITONNUS EI VIE PISTEITÄ (PAATOKSET 34 kohta 21). Aito
+ *       zoomiele (ctrl+wheel, ks. ZOOMIELE ON CTRL+WHEEL alempana)
+ *       saapumisnäkymästä ulospäin: nostopisteitä ja kaupunkimerkkejä
+ *       on jälkeenpäin sama määrä ±LEPOTILAN_SIETO eikä alle
+ *       vartion 5 ja 6 rajojen (7, 7c), eikä ele panoroi (7a).
+ *   7d. SAMA EDESTAKAISIN: zoomi sisään ja takaisin ulos lukkoa
+ *       vasten palauttaa saman pistejoukon.
  *
  * ÄMPÄRI KULKEE NODEN KAUTTA (CLAUDE.md: NODE_USE_ENV_PROXY=1).
  * Ilman ämpäriä selainvartiot OHITETAAN, Node-vartiot ajetaan.
@@ -64,17 +71,46 @@ import { onMaalla } from '../maamaski.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 
-/** Ranskan kartalla näkyviä nostopisteitä vähintään (kohta 17 b). */
-// 40 -> 35 (Fable 18.9.2026): jasenyys datasta -eran jalkeen seitseman
-// Pariisin sisaista ei enaa lasketa kartan pisteiksi; ulkopuolisia on 36
-// (hahmotelman 12 varastokohdetta nostavat lukua myohemmin).
-const PISTEITA_VAHINTAAN = 35;
+/*
+ * PISTEET NAKYVAT AINA KOHDEMAASSA (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 34 kohta 21, omistajan puhelintesti v1944): kohdemaan
+ * nostojen ja nakyvien kaupunkien PISTEET piirtyvat saapumisnakymassa
+ * ja siita ulospain jokaisella zoomitasolla, jolla kohdemaa on
+ * ruudulla. Luvut ovat omistajan antamat; 390 px:n pienempi luku on
+ * PAATOKSET 17:n korkeuteen sovitus (maan ita- ja lansireuna jaavat
+ * ruudun ulkopuolelle), ei tingitty tavoite.
+ *
+ * Historia: 40 -> 35 (jasenyys datasta) -> 40 (hahmotelman 12
+ * varastokohdetta: datassa ulkopuolisia 60, mutta NOSTOJEN_KATTO 40
+ * syrjaytti uudet) -> kohta 21 nosti pisteiden katon 120:een, joten
+ * v1945:sta alkaen raja saa nousta, kun poltto kohdemaan saannolla on
+ * ampärissä (docs/raportit/viesti-fable-hahmotelma-12-20260918.md,
+ * viesti-fable-pisteet-aina-20260918.md).
+ */
+/** Ranskan kartalla näkyviä nostopisteitä vähintään (kohta 17 b, 21). */
+const PISTEITA_VAHINTAAN = 40;
+/** Sama luku 390 px:n pystyruudulla (PAATOKSET 17 rajaa reunat). */
+const PISTEITA_VAHINTAAN_390 = 36;
 /** Kaupunkimerkkejä vähintään (kohta 17 c). */
 const KAUPUNKEJA_VAHINTAAN = 7;
+/** Sama luku 390 px:n pystyruudulla (kohta 21). */
+const KAUPUNKEJA_VAHINTAAN_390 = 5;
 /** Vedon pituus saapumisnäkymässä (px). */
 const VEDON_PITUUS_PX = 200;
 /** Ruutuvektorin sallittu heitto vedon yli (px). */
 const PAIKALLAAN_SIETO_PX = 1;
+/**
+ * Paljonko lepotilan pistemäärä saa muuttua eleen yli (kohta 21:
+ * *"pisteiden joukko lepotilassa ennen ja jälkeen eleen on sama"*).
+ * Yksi kappale on ryhmittelyn rajatapaus (aihemerkki syntyy tai
+ * hajoaa), ei pisteiden katoaminen.
+ */
+const LEPOTILAN_SIETO = 1;
+/**
+ * Kuinka paljon kameran keskipiste saa siirtyä ZOOMIeleessä (astetta).
+ * Zoomi ei panoroi lainkaan; luku on pelkkä liukulukuvara.
+ */
+const PANOROINNIN_SIETO_ASTETTA = 0.05;
 
 let lapi = 0;
 let kaikki = 0;
@@ -307,8 +343,85 @@ async function veda(sivu, dx) {
   });
 }
 
+/*
+ * ══ ZOOMIELE ON CTRL+WHEEL, EI PALJAS WHEEL ══════════════════════════
+ *
+ * MITATTU JUURISYY vartion 7 vanhaan punaiseen (18.9.2026, tämä haara,
+ * 1400 × 900): PALJAS WHEEL EI OLE ZOOMI VAAN PANOROINTI. Omistajan
+ * päätös 5.9.2026 (*"kahdella sormella"*) on toteutettu js/pallo.js:n
+ * kotelon wheel-kuuntelijassa kaappausvaiheessa:
+ *
+ *     wheel ilman näppäintä  → PANOROINTI (rullanAskel → dLat/dLng)
+ *     wheel + cmd tai ctrl   → zoom, OrbitControls kuten ennen
+ *
+ * Kosketuslaitteella sama työnjako: kaksi sormea panoroi, NIPISTYS
+ * menee kirjastolle (dolly) — ja macOS lähettää nipistyksen juuri
+ * ctrl+wheelinä. Vanha `loitonna` rullasi ilman näppäintä, joten se
+ * PANOROI Ranskan puoliksi ulos ruudulta eikä loitontanut lainkaan:
+ *
+ *   ele                       lat            korkeus        pisteet
+ *   saapuminen                46,350448…     0,204933526…   57
+ *   ctrl+wheel (aito zoom)    46,350448…     0,204933526…   57
+ *   paljas wheel              40,632944…     0,204933526…   34
+ *
+ * Kameran korkeus ei muuttunut kummassakaan (uloszoomaus on lukittu
+ * maan laatikkoon, PAATOKSET 17 — saapuminen ON uloin sallittu näkymä),
+ * mutta paljas wheel vei kameran 5,7° etelään. Pudonneet pisteet olivat
+ * siis ruudun ULKOPUOLELLA, eivät kerroksen pudottamia. Vartio mittasi
+ * panorointia ja väitti sitä loitonnukseksi.
+ */
+/** Kartan keskipiste ruudulla (eleiden kohdistus). */
+const kankaanKeskus = (sivu) => sivu.evaluate(() => {
+  const k = document.querySelector('.pallolauta-kotelo canvas') ?? document.querySelector('canvas');
+  const r = k.getBoundingClientRect();
+  return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+});
+
+/** Kameran lepotila: paikka, korkeus ja osuus uloimmasta sallitusta. */
+const kameranTila = (sivu) => sivu.evaluate(() => {
+  const { ui } = window.matkakirja;
+  const g = ui.pallo?.pallo ?? ui.pallolauta?.pallo ?? null;
+  const pov = g?.pointOfView?.() ?? null;
+  return {
+    lat: pov?.lat ?? null,
+    lng: pov?.lng ?? null,
+    korkeus: pov?.altitude ?? null,
+    uloinOsuus: ui.pallolauta?.nostot?.portti?.()?.uloinOsuus ?? null,
+  };
+});
+
+/**
+ * AITO ZOOMIELE kartan keskellä: `suunta` 1 = ulos, -1 = sisään.
+ * Ctrl pidetään pohjassa, jolloin js/pallo.js päästää tapahtuman
+ * OrbitControlsille (ks. lohko yllä). Kamera ei välttämättä liiku,
+ * jos maan zoomilukko on jo kiinni — juuri sitä vartio 7 mittaa.
+ */
+async function zoomaa(sivu, suunta = 1, askelia = 6) {
+  const keskus = await kankaanKeskus(sivu);
+  await sivu.mouse.move(keskus.x, keskus.y);
+  await sivu.keyboard.down('Control');
+  for (let i = 0; i < askelia; i += 1) {
+    /* eslint-disable no-await-in-loop */
+    await sivu.mouse.wheel(0, 240 * suunta);
+    await sivu.waitForTimeout(250);
+    /* eslint-enable no-await-in-loop */
+  }
+  await sivu.keyboard.up('Control');
+  await sivu.waitForTimeout(1200);
+  await sivu.evaluate(async () => {
+    window.matkakirja.ui.pallolauta.ladoHeti?.();
+    await new Promise((v) => setTimeout(v, 600));
+  });
+}
+
 const VAIN = Number(process.env.SAVUKE_RUUTU ?? 0) || 0;
-const RUUDUT = [{ w: 390, h: 844 }, { w: 1400, h: 900 }]
+/*
+ * 2000 x 1300 ON OMISTAJAN OMA RUUTU (puhelintesti 18.9.2026,
+ * PAATOKSET 34 kohta 21): juuri silla leveydella han naki Ranskan
+ * saapumisnakyman ilman nostopisteita. Ilman tata rivia mittasarja ei
+ * kayttanyt ollenkaan sita ruutua, josta loydos tuli.
+ */
+const RUUDUT = [{ w: 390, h: 844 }, { w: 1400, h: 900 }, { w: 2000, h: 1300 }]
   .filter((r) => !VAIN || r.w === VAIN);
 
 for (const ruutu of RUUDUT) {
@@ -344,8 +457,9 @@ for (const ruutu of RUUDUT) {
   const puuttuvat = [...ODOTETUT].filter((id) => !nakyvatTunnukset.has(id));
   tieto(`${ruutu.w}px puuttuvia Ranskan nostoja (ei riviä eikä aihemerkin jäsenenä)`,
     `${puuttuvat.length}${puuttuvat.length ? `: ${puuttuvat.join(', ')}` : ''}`);
-  vaadi(`5. ${ruutu.w}px saapumisnäkymässä Ranskan nostopisteitä >= ${PISTEITA_VAHINTAAN}`,
-    pisteet.length >= PISTEITA_VAHINTAAN,
+  const pisteRaja = ruutu.w < 1000 ? PISTEITA_VAHINTAAN_390 : PISTEITA_VAHINTAAN;
+  vaadi(`5. ${ruutu.w}px saapumisnäkymässä Ranskan nostopisteitä >= ${pisteRaja}`,
+    pisteet.length >= pisteRaja,
     `pisteitä ${pisteet.length}; puuttuvia ${puuttuvat.length}: ${puuttuvat.slice(0, 20).join(', ')}`);
   /*
    * KAUPUNKIMERKIT MITATAAN LEVEÄLLÄ RUUDULLA, PUHELIMELLA INFONA.
@@ -360,13 +474,75 @@ for (const ruutu of RUUDUT) {
    * kirjattu Fablelle (docs/raportit/viesti-fable-nostot-lukko-k17-
    * 20260918.md).
    */
-  if (ruutu.w >= 1000) {
-    vaadi(`6. ${ruutu.w}px kaupunkimerkkejä nimineen >= ${KAUPUNKEJA_VAHINTAAN}`,
-      kaupungit.length >= KAUPUNKEJA_VAHINTAAN, `kaupunkeja ${kaupungit.length}`);
-  } else {
-    tieto(`6. ${ruutu.w}px kaupunkimerkkejä (korkeuteen sovitettu saapuminen, PÄÄTÖKSET 17)`,
-      kaupungit.length);
-  }
+  /*
+   * 390 px:n luku on nyt VARTIO eikä pelkkä INFO (PAATOKSET 34 kohta
+   * 21: *"390 px: >= 36 ja >= 5"*). Korkeuteen sovitus jättää itä- ja
+   * länsireunan ruudun ulkopuolelle, joten raja on viisi eikä
+   * seitsemän — mutta se on raja, ei tyhjä kohta.
+   */
+  const kaupunkiRaja = ruutu.w < 1000 ? KAUPUNKEJA_VAHINTAAN_390 : KAUPUNKEJA_VAHINTAAN;
+  vaadi(`6. ${ruutu.w}px kaupunkimerkkejä nimineen >= ${kaupunkiRaja}`,
+    kaupungit.length >= kaupunkiRaja, `kaupunkeja ${kaupungit.length}`);
+
+  /*
+   * ── VARTIO 7: LOITONNUS EI VIE PISTEITÄ ──────────────────────────
+   *
+   * PAATOKSET 34 kohta 21 sanoo pisteiden näkyvän saapumisnäkymässä
+   * *"ja siita ulospain jokaisella zoomitasolla, jolla kohdemaa on
+   * ruudulla"*. Uloszoomaus on lukittu maan laatikkoon (PAATOKSET 17),
+   * ja saapuminen ON uloin sallittu näkymä — mitattu `uloinOsuus` 1 —
+   * joten aito loitonnusele ei yleensä liikuta kameraa lainkaan. Juuri
+   * siksi tämä vartio on tarpeen: ele laukaisee silti UUDEN LADONNAN,
+   * ja lepotilan pistejoukon on oltava sen jälkeen sama.
+   *
+   * MITTA ON KAKSIOSAINEN: absoluuttinen raja (sama kuin vartiossa 5)
+   * ja ero lepotilaan ennen elettä (enintään LEPOTILAN_SIETO). Pelkkä
+   * absoluuttinen raja ei huomaisi hiipumista, joka pysyy rajan
+   * yläpuolella; pelkkä ero ei huomaisi sitä, että molemmat lepotilat
+   * ovat liian niukkoja.
+   *
+   * NIMIÖT SAAVAT VÄHETÄ, PISTEET JA KAUPUNGIT EIVÄT.
+   *
+   * ELE ON CTRL+WHEEL. Paljas wheel on tässä pelissä PANOROINTI
+   * (ks. ZOOMIELE ON CTRL+WHEEL yllä) — sillä mitattu punainen
+   * 18.9.2026 oli mittarin oma vika, ei kerroksen.
+   */
+  const kameraEnnen = await kameranTila(sivu);
+  await zoomaa(sivu, 1);
+  const ulompana = await lueTila(sivu);
+  const kameraUlompana = await kameranTila(sivu);
+  const ulomPisteet = ulompana.rivit.filter((r) => r.avain && !r.avain.startsWith('piste:')
+    && !r.kaupunki && (r.perhe === 'nosto' || r.perhe === 'aihemerkki'));
+  const ulomKaupungit = ulompana.rivit.filter((r) => r.kaupunki && r.nimi);
+  tieto(`${ruutu.w}px kameran korkeus ennen loitonnusta`, `${kameraEnnen.korkeus} `
+    + `(osuus uloimmasta ${kameraEnnen.uloinOsuus})`);
+  tieto(`${ruutu.w}px kameran korkeus loitonnuksen jälkeen`, `${kameraUlompana.korkeus} `
+    + `(osuus uloimmasta ${kameraUlompana.uloinOsuus})`);
+  tieto(`${ruutu.w}px kaupunkipisteitä ennen/jälkeen loitonnuksen`,
+    `${kaupungit.length} -> ${ulomKaupungit.length}`);
+  tieto(`${ruutu.w}px nostopisteitä ennen/jälkeen loitonnuksen`,
+    `${pisteet.length} -> ${ulomPisteet.length}`);
+  /*
+   * ELE EI SAA PANOROIDA. Ilman tätä mittaa vartio 7 voisi jälleen
+   * mitata panorointia ja kutsua sitä loitonnukseksi (juuri se vika,
+   * joka teki siitä punaisen 18.9.2026).
+   */
+  const panoiEleessa = Math.max(
+    Math.abs((kameraUlompana.lat ?? 0) - (kameraEnnen.lat ?? 0)),
+    Math.abs((kameraUlompana.lng ?? 0) - (kameraEnnen.lng ?? 0)),
+  );
+  vaadi(`7a. ${ruutu.w}px loitonnusele zoomaa eikä panoroi`,
+    panoiEleessa < PANOROINNIN_SIETO_ASTETTA,
+    `kameran keskipiste siirtyi ${panoiEleessa.toFixed(4)}° (lat `
+    + `${kameraEnnen.lat} -> ${kameraUlompana.lat})`);
+  vaadi(`7. ${ruutu.w}px yhtä porrasta loitompana nostopisteitä >= ${pisteRaja}`,
+    ulomPisteet.length >= pisteRaja
+      && Math.abs(ulomPisteet.length - pisteet.length) <= LEPOTILAN_SIETO,
+    `pisteitä ${ulomPisteet.length} (saapumisnäkymässä ${pisteet.length})`);
+  vaadi(`7c. ${ruutu.w}px yhtä porrasta loitompana kaupunkimerkkejä >= ${kaupunkiRaja}`,
+    ulomKaupungit.length >= kaupunkiRaja
+      && Math.abs(ulomKaupungit.length - kaupungit.length) <= LEPOTILAN_SIETO,
+    `kaupunkeja ${ulomKaupungit.length} (saapumisnäkymässä ${kaupungit.length})`);
 
   await veda(sivu, VEDON_PITUUS_PX);
   const jalkeen = await lueTila(sivu);
@@ -394,6 +570,44 @@ for (const ruutu of RUUDUT) {
   vaadi(`4b. ${ruutu.w}px nimiön ruutuvektori merkistä sama vedon jälkeen`,
     vektoriHeitot.length === 0,
     `heittoja ${vektoriHeitot.length}: ${vektoriHeitot.slice(0, 8).join(' | ')}`);
+
+  /*
+   * ── VARTIO 7d: ZOOMI SISÄÄN JA TAKAISIN ULOS ─────────────────────
+   *
+   * Vartio 7 mittaa eleen, jossa maan zoomilukko pitää kameran
+   * paikallaan. Kohta 21 lupaa pisteet *"jokaisella zoomitasolla"*,
+   * joten kamera on myös AIDOSTI liikutettava: zoomataan sisään
+   * (lehti nousee lähikuvaan, nimiöt syttyvät) ja sieltä takaisin
+   * ulos lukkoa vasten. Lepotilan pistejoukon on oltava lopussa sama
+   * kuin ennen matkaa — jos ladonta menettäisi pisteitä joka
+   * zoomiportaalla, se näkyisi juuri tässä.
+   *
+   * INFO-rivi sisimmästä korkeudesta todistaa, että kamera todella
+   * liikkui: ilman sitä vartio voisi mennä läpi liikkumatta.
+   *
+   * MITTA ON VAIN EROTUS, EI VARTION 5 ABSOLUUTTINEN RAJA. Tämä
+   * vartio ajetaan vartion 4 vedon JÄLKEEN, ja 200 px:n veto on
+   * 390 px:n ruudulla yli puolet leveydestä: osa Ranskasta on
+   * silloin ruudun ulkopuolella aivan oikein (mitattu 18.9.2026:
+   * 390 px lepotila vedon jälkeen 28 pistettä, zoomimatkan jälkeen
+   * 28). Absoluuttinen raja mitataan saapumisnäkymästä vartioissa
+   * 5 ja 7; tässä kysytään, säilyykö joukko zoomimatkan yli.
+   */
+  const lepoEnnen = await lueTila(sivu);
+  const lepoPisteet = lepoEnnen.rivit.filter((r) => r.avain && !r.avain.startsWith('piste:')
+    && !r.kaupunki && (r.perhe === 'nosto' || r.perhe === 'aihemerkki'));
+  await zoomaa(sivu, -1, 3);
+  const sisalla = await kameranTila(sivu);
+  await zoomaa(sivu, 1, 8);
+  const takaisin = await lueTila(sivu);
+  const takaisinKamera = await kameranTila(sivu);
+  const takaisinPisteet = takaisin.rivit.filter((r) => r.avain && !r.avain.startsWith('piste:')
+    && !r.kaupunki && (r.perhe === 'nosto' || r.perhe === 'aihemerkki'));
+  tieto(`${ruutu.w}px zoomimatkan korkeudet (ulko -> sisä -> ulko)`,
+    `${kameraUlompana.korkeus} -> ${sisalla.korkeus} -> ${takaisinKamera.korkeus}`);
+  vaadi(`7d. ${ruutu.w}px zoomi sisään ja takaisin ulos palauttaa pisteet`,
+    Math.abs(takaisinPisteet.length - lepoPisteet.length) <= LEPOTILAN_SIETO,
+    `pisteitä ${takaisinPisteet.length} (ennen zoomimatkaa ${lepoPisteet.length})`);
   await ctx.close();
   /* eslint-enable no-await-in-loop */
 }

@@ -1064,7 +1064,16 @@ if (!pack?.map?.width) throw new Error('Laudan mittoja ei löytynyt.');
  * skaalaa sen laatan tarkkuuteen. Sama joukko piirtyy jokaiseen
  * lohkoon, joka sen alueen kattaa.
  */
-const nostot = keraaNostot(pack);
+/*
+ * MERKKIPORTTI KOHDEMAAN ASETUKSELLA, KUN LAATASTO ON MAAKOHTAINEN
+ * (ks. tools/fokuskartta/nostot.mjs "MERKKIPORTTI AJETAAN KOHDEMAAN
+ * ASETUKSELLA"). `--nostomaa <ISO>` ajaa yhden maan laataston, jonka
+ * peli lataa VAIN silloin kun se maa on kohdemaa — joten portin on
+ * saatava sama `kohdemaa: true` kuin elävällä kerroksella. Ilman
+ * `--nostomaa` ajo on entinen maailmanlaajuinen, ja katto 21 sekä
+ * `lahi`-lippu pysyvät voimassa.
+ */
+const nostot = keraaNostot(pack, { maittain: Boolean(NOSTO_MAA) });
 console.log(nostojenYhteenveto(nostot.tilasto));
 for (const rivi of nostot.tilasto.estot) console.log(`    esto ${rivi}`);
 
