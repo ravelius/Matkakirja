@@ -25,7 +25,8 @@
     "savuke-luentakuvat.mjs",
     "savuke-kerma-reuna.mjs",
     "savuke-ranskan-nostot-lukossa.mjs",
-    "savuke-maailmatila-zoomi.mjs"
+    "savuke-maailmatila-zoomi.mjs",
+    "savuke-reittihelmet.mjs"
   ],
   "asetukset": {
     "savuke-ihmisen-kappaleet.mjs": {
@@ -206,6 +207,10 @@
         "NAKYMAT": "vartija-c"
       },
       "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. Vaitteen 9 vastakoelohkon KOLMAS puolisko: pinta estetty ja Mac-kotelon vastakoe. Lohko jaettiin kahdesta kolmeen 18.9.2026, koska #vartija-a mitattiin 168 s:ksi (yli kahden minuutin tavoitteen) ja #vartija-b 128 s:ksi. Ks. #vartija-a."
+    },
+    "savuke-reittihelmet.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Valipisteet paatepisteen kokoisina ilman punaista (Raamattu KARTTAUUDISTUKSEN PAATOKSET 39). Ajaa Marseillen siirtovaiheen 390 x 844 ja 1400 x 900, kaksi zoomia (0,35 ja 0,15): helmen ulkohalkaisija = reitin varren kohdemerkin ympyra (15 px) +- 1 px, ei punaista helmessa, punainen rengas yha paatepisteessa, fps >= 50. Kaappaukset ennen/jalkeen tools/savukkeet/kaappaukset/reittihelmet."
     }
   }
 }

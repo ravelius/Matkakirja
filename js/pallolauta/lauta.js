@@ -119,7 +119,8 @@ import {
   luoNostot, nostonLaatikko, nostonMitta,
 } from './nostot.js';
 import {
-  HELMEN_VARI, REITIN_VARIT, REITTIHELMEN_KORKEUS, REITTIHELMEN_SADE, luoReitit,
+  HELMEN_REUNAN_VARI, HELMEN_VARI, REITIN_VARIT, REITTIHELMEN_HALKAISIJA_PX,
+  REITTIHELMEN_KORKEUS, REITTIHELMEN_REUNAN_KORKEUS, REITTIHELMEN_TAYTE_PX, luoReitit,
 } from './reitit.js';
 import { laatikotLimittyvat } from './sovittelu.js';
 import { luoLinssikartta } from './linssikartta.js';
@@ -3284,6 +3285,16 @@ export async function avaaPallolauta(ui) {
   /** YHDEN pisteen säde: perusmitta kartan mittakaavassa. */
   const pisteenSade = (d) => sadeRuudulta(piirrettyHalkaisijaPx(d));
   /*
+   * ASKELHELMI ON RUUDUN VAKIO (Raamattu PAATOKSET 39, ks.
+   * js/pallolauta/reitit.js VÄLIPISTE ON PÄÄTEPISTEEN KOKOINEN
+   * YMPYRÄ): halkaisija luetaan suoraan ruutupikseleistä eikä kartan
+   * mittakaavasta (kartanMittakaavanHalkaisija), koska päätepiste,
+   * johon se mitataan, on DOM-merkki kiinteässä ruutumitassa. Sama
+   * mitta joka zoomilla.
+   */
+  const helmenHalkaisijaPx = (d) => (d.reuna
+    ? REITTIHELMEN_HALKAISIJA_PX : REITTIHELMEN_TAYTE_PX);
+  /*
    * ══════════════════════════════════════════════════════════════════
    * PISTEIDEN PAIKKA TULEE PIIRROSTA, EI TAPAHTUMASTA (omistajan
    * vikailmoitus 12.9.2026, sanatarkasti: *"kaupunkien ja kohteiden
@@ -3382,13 +3393,25 @@ export async function avaaPallolauta(ui) {
     siirtymaAsti = (globalThis.performance?.now?.() ?? Date.now()) + PISTEIDEN_SIIRTYMA_MS + 50;
     const skaala = asetettuLinssi ? 0 : sade * PISTEEN_SKAALA;
     const kohdeSkaala = asetettuLinssi ? 0 : kohdeSade * PISTEEN_SKAALA;
+    /*
+     * HELMEN KAKSI RUUTUVAKIOTA (PAATOKSET 39): pergamentti ja sen
+     * tumma reunus. Ne luetaan samasta sadeRuudulta-kaavasta kuin
+     * kaupunkipiste, mutta ILMAN kartan mittakaavaa — muuten helmi
+     * karkaisi päätepisteen kiinteästä ruutumitasta heti, kun zoomi
+     * muuttuu. Linssi ei sammuta helmeä skaalalla: silloin koko
+     * reittikerros on jo tyhjä (paivita → valinta).
+     */
+    const helmiSkaala = sadeRuudulta(REITTIHELMEN_TAYTE_PX) * PISTEEN_SKAALA;
+    const helmiReunaSkaala = sadeRuudulta(REITTIHELMEN_HALKAISIJA_PX) * PISTEEN_SKAALA;
     for (const d of pallo.pointsData()) {
       const o = d.__threeObjPoint;
       if (!o) continue;
-      // Koko on kaupunkipisteen asia: helmellä ja valolla on omansa.
-      if (d.laji === 'helmi' || d.laji === 'valo') continue;
+      // Koko on kaupunkipisteen asia: valolla on omansa.
+      if (d.laji === 'valo') continue;
       // Sama sääntö kuin pointRadius-luennassa, yhdestä paikasta.
-      const s = d.id && oma && d.id === oma ? kohdeSkaala : skaala;
+      let s;
+      if (d.laji === 'helmi') s = d.reuna ? helmiReunaSkaala : helmiSkaala;
+      else s = d.id && oma && d.id === oma ? kohdeSkaala : skaala;
       o.scale.x = s;
       o.scale.y = s;
     }
@@ -3408,12 +3431,12 @@ export async function avaaPallolauta(ui) {
     .pointsData([])
     .pointLat('lat').pointLng('lon')
     .pointColor((d) => {
-      if (d.laji === 'helmi') return HELMEN_VARI;
+      if (d.laji === 'helmi') return d.reuna ? HELMEN_REUNAN_VARI : HELMEN_VARI;
       if (d.laji === 'valo') return d.vari;
       return kaupunkipisteenVari(d);
     })
     .pointAltitude((d) => {
-      if (d.laji === 'helmi') return REITTIHELMEN_KORKEUS;
+      if (d.laji === 'helmi') return (d.reuna ? REITTIHELMEN_REUNAN_KORKEUS : REITTIHELMEN_KORKEUS);
       if (d.laji === 'valo') return VALON_KORKEUS;
       return 0.003;
     })
@@ -3421,7 +3444,7 @@ export async function avaaPallolauta(ui) {
       // Lieriö levyksi tässä luennassa (PISTE ON LEVY): olio on jo
       // sidottu datumiin, ja luenta osuu täsmälleen olion päivitykseen.
       litistaja.litista(d);
-      if (d.laji === 'helmi') return REITTIHELMEN_SADE;
+      if (d.laji === 'helmi') return sadeRuudulta(helmenHalkaisijaPx(d));
       if (d.laji === 'valo') return VALON_SADE;
       // Kaupunkipiste on ruudun vakio: säde luetaan kameran korkeudesta
       // (tahdistaPisteidenKoko pitää sen samana zoomin muuttuessa) ja
