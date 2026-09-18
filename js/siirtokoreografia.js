@@ -314,6 +314,63 @@ export const SAATON_PEHMENNYS = (t) => siirtoajonPehmennys(t);
  */
 export const SIIRTOZOOMIN_LAHENNYS = 2.0;
 /*
+ * ══════════════════════════════════════════════════════════════════
+ * ZOOMIN MITTA ON ASKEL, EI KERROIN (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 40)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistaja 18.9.2026 klo 20.50 Suomen aikaa (puhelintestin v1944
+ * löydös 4, kuva Marseillen siirtovaiheesta), sanatarkasti: *"kartan
+ * pitaisi zoomautua lahemmas pelinappulaa kun se liftaa pisteiden
+ * valilla."*
+ *
+ * MIKSI KERROIN EI RIITÄ. `SIIRTOZOOMIN_LAHENNYS` on suhteellinen: se
+ * kertoo, kuinka paljon lähemmäs SIITÄ näkymästä, jossa kamera
+ * sattuu olemaan. Se ei tiedä mitään siitä, kuinka pitkä yksi askel
+ * on — ja juuri askel on se, minkä pelaaja katsoo. Kun matka rajataan
+ * kokonaisuudessaan (matkarajaus), kuuden askeleen siirto mahtuu
+ * ruutuun kuutena kuudesosana, ja jokainen hyppy on ruudulla
+ * kymmenesosa ruutua. Sama zoomi on lyhyellä matkalla liian lähellä ja
+ * pitkällä liian kaukana, koska mitta on väärä.
+ *
+ * MITTA ON ASKEL JA RUUDUN LYHYEMPI SIVU. Tavoite on, että yksi askel
+ * (piste → piste) on vähintään neljännes ruudun lyhyemmästä sivusta:
+ * puhelimen pystyruudulla se on leveys, työpöydän vaakaruudulla
+ * korkeus, eli se sivu, jonka yli liike ehtii lukea liikkeeksi
+ * kummassakin asennossa. Neljännes on mitattu eikä arvattu: sitä
+ * pienemmällä osuudella hyppy jää omistajan kuvan mittaiseksi
+ * nyökkäykseksi, ja sitä isommalla kolmen askeleen matka ei enää mahdu
+ * ruutuun lainkaan (nappula karkaisi keskialueelta saaton aikana).
+ *
+ * KATTOA EI OLE TÄSSÄ. Funktio kertoo vain, mitä askel VAATII; kuinka
+ * lähelle laite antaa mennä, on kameran oma asia (pallolla
+ * korkeusMin(), PAATOKSET 34 kohta 15 c: puhelin 40, muut 60
+ * lautayksikköä). Näin sama kaava kelpaa kummallekin laudalle eikä
+ * koreografia tunne laitetta.
+ */
+/** Askelen vähimmäisosuus ruudun lyhyemmästä sivusta. */
+export const ASKELEN_VAHIN_OSUUS = 0.25;
+
+/**
+ * Näkyvä leveys (laudan yksikköä RUUDUN LEVEYDELLÄ), jolla yhden
+ * askeleen pituus `askelYks` on ruudulla vähintään `osuus` ruudun
+ * lyhyemmästä sivusta. Null, jos mitat puuttuvat.
+ *
+ * Puhdas funktio ja oma nimensä samasta syystä kuin jalkamatkanAskel:
+ * tämä on se yksi paikka, jossa siirtozoomin syvyys lasketaan, ja
+ * tests/siirtokoreografia.test.mjs vartioi sitä lukuina.
+ *
+ * @param {number} askelYks askelen pituus laudan yksikköinä
+ * @param {number} leveysPx karttaruudun leveys (css-pikseliä)
+ * @param {number} korkeusPx karttaruudun korkeus (css-pikseliä)
+ */
+export function askelenSiirtoleveys(askelYks, leveysPx, korkeusPx, osuus = ASKELEN_VAHIN_OSUUS) {
+  if (!(askelYks > 0) || !(leveysPx > 0) || !(korkeusPx > 0) || !(osuus > 0)) return null;
+  const lyhyempi = Math.min(leveysPx, korkeusPx);
+  // Vaadittu mittakaava (px / lautayksikkö) → näkyvä leveys ruudun leveydellä.
+  return (leveysPx * askelYks) / (osuus * lyhyempi);
+}
+/*
  * Ennakkozoomin kesto ja sen jälkeinen hengähdys.
  *
  * 760 ms on lyhyempi kuin kartan muut ajot (kartta.js AJO_MS 2000,

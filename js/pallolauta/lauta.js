@@ -4219,6 +4219,27 @@ export async function avaaPallolauta(ui) {
     if (asetaVaritasonMaa(korostusIso) || (korostusIso && !maanLaatikko)) {
       if (!korostusIso) {
         maanLaatikko = null;
+        /*
+         * KATON MUISTI NOLLATAAN MYÖS TÄSSÄ (Raamattu, KARTTAUUDISTUKSEN
+         * PAATOKSET 40; sama syy kuin maailmatilassa yllä).
+         *
+         * MITATTU JUURISYY (390 × 844, Marseille → Lyon, 18.9.2026):
+         * siirron ensimmäinen teko on `matkanKerma(true)` → `paivita`,
+         * ja siinä korostusmaa katoaa (nappula lähtee kaupungista
+         * reitille), joten maan uloszoomauskatto häviää. Silloin
+         * `tahdistaZoomirajat` näki katon nousevan ja `kattoPuristus`
+         * PALAUTTI kameran siihen korkeuteen, jossa se oli ENNEN
+         * saapumista: yhdellä kehyksellä 0,205 → 2,500 eli maan
+         * näkymästä koko pallolle. Ennakkozoomi lähti siitä alas, mutta
+         * nappula ehti liikkeelle ensin, ja yksi askel oli ruudulla 10
+         * px — juuri se, minkä omistaja näki (*"kartan pitaisi zoomautua
+         * lahemmas pelinappulaa kun se liftaa pisteiden valilla"*).
+         *
+         * Katon nousu on tässä TAHALLINEN (matka on määritelmän mukaan
+         * maan ikkunaa isompi), eikä se ole pelaajan oman zoomin
+         * vapautus — joten muistia ei ole mitään palautettavaa.
+         */
+        kattoPuristus = null;
         tahdistaZoomirajat();
       } else {
         // Sama laatikko kuin `saavu`lla: paneelilla laajennettu.

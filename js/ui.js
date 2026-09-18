@@ -5,8 +5,8 @@ import {
   ENNAKKOZOOMIN_MS, ENNAKON_ASKELIA, ENNAKON_HENGAHDYS_MS, HYPYN_TAUKO_MS,
   NAPPULAN_LAHDON_VIIVE_MS, SAATON_PEHMENNYS, SAATON_VAHIN_OSUUS, SAATON_VAHIN_PX,
   MATKARAJAUKSEN_MARGINAALI, MATKARAJAUKSEN_PALUU_MS, MATKARAJAUKSEN_VAHIN_YKS,
-  SIIRTOZOOMIN_LAHENNYS, STEP_MS, autokyydinAskel, autokyydinVaihe, hypynHuippu, hypynVaihe,
-  matkanVaihe, siirtoajonKesto,
+  SIIRTOZOOMIN_LAHENNYS, STEP_MS, askelenSiirtoleveys, autokyydinAskel, autokyydinVaihe,
+  hypynHuippu, hypynVaihe, matkanVaihe, siirtoajonKesto,
 } from './siirtokoreografia.js';
 import {
   chooseDuelAnswer,
@@ -22340,13 +22340,54 @@ export class UI {
      * ILMAN KULKUTAPAA KAIKKI ON ENNALLAAN: avauslento, mannerlento ja
      * muut kutsujat saavat entisen lähennyksen (SIIRTOZOOMIN_LAHENNYS).
      */
-    const rajaus = this.matkarajaus(tapa, from, path);
-    if (rajaus) {
+    /*
+     * ASKEL RATKAISEE SYVYYDEN (Raamattu, KARTTAUUDISTUKSEN PAATOKSET
+     * 40; omistaja 18.9.2026: *"kartan pitaisi zoomautua lahemmas
+     * pelinappulaa kun se liftaa pisteiden valilla."*).
+     *
+     * Hyppyjen kulkutavoilla (liftaus, bussi) tavoite EI ole enää koko
+     * matkan laatikko eikä kiinteä kerroin nykyiseen zoomiin, vaan se
+     * näkyvä leveys, jolla YKSI ASKEL on ruudulla vähintään
+     * ASKELEN_VAHIN_OSUUS ruudun lyhyemmästä sivusta
+     * (askelenSiirtoleveys). Koko matkan laatikko teki päinvastaista
+     * kuin tilaus: mitä pidempi heitto, sitä kauempana kamera — ja
+     * kuutosella askel oli ruudulla kymmenesosa ruutua.
+     *
+     * KATTOA EI TARVITSE KIRJOITTAA TÄHÄN: kamera ei päästä pyydettyä
+     * leveyttä laitteen syvimmän sallitun zoomin alle (pallolla
+     * korkeusMin(), PAATOKSET 34 kohta 15 c: puhelin 40, muut 60
+     * lautayksikköä), eikä rajaus mene lähemmäs kuin askel vaatii.
+     *
+     * LAIVA PITÄÄ MATKARAJAUKSENSA: sen kaari on pallolla pitkä, ja
+     * rajaus on siellä kaaren mitta eikä askelen (MATKARAJAUKSEN_
+     * MARGINAALI sea 0,5). Ilman kulkutapaa kaikki on ennallaan.
+     */
+    const askelleveys = MATKARAJAUKSEN_MARGINAALI[tapa] && tapa !== 'sea'
+      ? this.askelenNakymaleveys(from, path)
+      : null;
+    const rajaus = askelleveys ? null : this.matkarajaus(tapa, from, path);
+    const kohti = pixelOf(board, suunta);
+    const kohta = { x: (lahto.x + kohti.x) / 2, y: (lahto.y + kohti.y) / 2 };
+    if (askelleveys) {
+      /*
+       * EI KOSKAAN ULOS PELAAJAN OMASTA LÄHIKUVASTA (sama sopimus kuin
+       * kartta.siirtoZoomiKerroin): jos näkymä on jo lähempänä kuin
+       * askel vaatii, siirto pitää sen — tavoite on VÄHIMMÄISmitta
+       * askeleelle, ei kiinteä mittakaava.
+       */
+      const nyt = kartta.kameranTila?.()?.leveys;
+      this.siirtozoominLeveys = nyt > 0 ? Math.min(nyt, askelleveys) : askelleveys;
+      // Uloszoomauksen esto pois matkan ajaksi kuten matkarajauksella:
+      // askelen leveys voi olla maan ikkunaa isompi pitkällä askeleella.
+      this.matkaZoomivapaus(true);
+      await kartta.ajaKamera(
+        { x: kohta.x, y: kohta.y, leveys: this.siirtozoominLeveys },
+        { kesto: ENNAKKOZOOMIN_MS, sovita: true },
+      );
+    } else if (rajaus) {
       this.matkaZoomivapaus(true);
       await kartta.ajaKamera(rajaus, { kesto: ENNAKKOZOOMIN_MS, sovita: true });
     } else {
-      const kohti = pixelOf(board, suunta);
-      const kohta = { x: (lahto.x + kohti.x) / 2, y: (lahto.y + kohti.y) / 2 };
       const kerroin = kartta.siirtoZoomiKerroin(SIIRTOZOOMIN_LAHENNYS);
       // Kesto liikkeen mukaan (kartta.js sovitaAjonKesto): iso zoomi
       // yleiskuvasta saa aikaa, pieni ele pysyy 760 ms:ssa.
@@ -22368,6 +22409,34 @@ export class UI {
    * kameran lähemmäs kuin pelin oma siirtonäkymä koskaan, eli
    * päinvastaiseen suuntaan kuin tilaus.
    */
+  /**
+   * Näkyvä leveys (laudan yksikköä), jolla yksi askel on ruudulla
+   * vähintään ASKELEN_VAHIN_OSUUS ruudun lyhyemmästä sivusta
+   * (js/siirtokoreografia.js askelenSiirtoleveys, PAATOKSET 40).
+   *
+   * ASKEL ON MEDIAANI EIKÄ KESKIARVO. Reitin askelvälit ovat
+   * pääsääntöisesti yhtä pitkiä (js/rules.js jakaa kaaren tasan), mutta
+   * viimeinen askel kaupunkiin voi olla murto-osa muista; keskiarvo
+   * vetäisi tavoitteen silloin liian lähelle, mediaani ei.
+   *
+   * Null, kun mitta puuttuu (ruutua ei ole tai reitti on tyhjä) —
+   * silloin kutsuja pitää entisen rajauksensa.
+   */
+  askelenNakymaleveys(from, path) {
+    const board = this.game.board;
+    const pisteet = [from, ...(path ?? [])]
+      .map((p) => pixelOf(board, p))
+      .filter((p) => Number.isFinite(p?.x) && Number.isFinite(p?.y));
+    if (pisteet.length < 2) return null;
+    const valit = [];
+    for (let i = 1; i < pisteet.length; i += 1) {
+      valit.push(Math.hypot(pisteet[i].x - pisteet[i - 1].x, pisteet[i].y - pisteet[i - 1].y));
+    }
+    valit.sort((a, b) => a - b);
+    const askel = valit[Math.floor(valit.length / 2)];
+    return askelenSiirtoleveys(askel, this.mapPane?.clientWidth, this.mapPane?.clientHeight);
+  }
+
   matkarajaus(tapa, from, path) {
     const marginaali = MATKARAJAUKSEN_MARGINAALI[tapa];
     if (!(marginaali > 0)) return null;
@@ -22489,8 +22558,27 @@ export class UI {
      * laudan kamerassa (`saapuminen`), joten kaava on sama molemmilla
      * laudoilla eikä ui.js tunne lautaa.
      */
+    /*
+     * SAATTO PITÄÄ ENNAKKOZOOMIN MITTAKAAVAN — NYT KIRJATTUNA, EI
+     * PERITTYNÄ (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 40 kohta 2).
+     *
+     * Ennen tässä ei annettu leveyttä lainkaan: kamera piti sen
+     * mittakaavan, jonka ennakkozoomi sattui jättämään. Se on sama
+     * asia VAIN jos ennakkozoomi ehti perille — ja mitattuna
+     * (18.9.2026, 390 × 844) se ei aina ehdi: ajo voi pysähtyä heti,
+     * jolloin saatto peri lähtönäkymän ja askel jäi ruudulla
+     * kymmenesosaan ruutua. Yksi ja sama luku (`siirtozoominLeveys`)
+     * molemmissa ajoissa on täsmälleen se "sama mittakaava", jonka
+     * päätös pyytää — se ei ole toinen zoomi vaan ensimmäisen jatke.
+     *
+     * Ilman lukua (laiva, tuntematon kulkutapa) käytös on entinen:
+     * pelkkä keskipiste siirtyy.
+     */
+    const leveys = this.siirtozoominLeveys;
     void kartta.ajaKamera(
-      { x: kohta.x, y: kohta.y, saapuminen: true },
+      leveys > 0
+        ? { x: kohta.x, y: kohta.y, leveys, saapuminen: true }
+        : { x: kohta.x, y: kohta.y, saapuminen: true },
       { kesto, pehmennys: SAATON_PEHMENNYS },
     );
   }
@@ -22728,6 +22816,13 @@ export class UI {
      * zoomauksen ajaksi. Nyt zoomin ajan ruudulla on tavallinen
      * nappula, joka skaalautuu kartan mukana kuten aina.
      */
+    /*
+     * Ennakkozoomin tavoiteleveys on VOIMASSA VAIN TÄMÄN MATKAN AJAN
+     * (PAATOKSET 40): se lasketaan tämän heiton askeleesta, ja saatto
+     * lukee sen. Nollaus tässä, jottei edellisen heiton luku pääse
+     * saatolle silloin kun ennakko ei aja (liikeherkkyys, laiva).
+     */
+    this.siirtozoominLeveys = null;
     if (saatto) await this.ennakoiSiirtoZoomi(from, path, tapa);
     // Peli kuoli kesken ennakkozoomin: musiikki ei saa jäädä soimaan
     // (loppusammutus alempana jää tekemättä, koska tästä poistutaan).
