@@ -98,17 +98,35 @@ const MAASTOTYYPIT = new Set(['vuori', 'meri', 'joki', 'saari', 'jarvi']);
 function onMaastokohde(kohde) {
   return Boolean(kohde) && (MAASTOTYYPIT.has(kohde.tyyppi) || kohde.maasto === true);
 }
-/**
- * AIHEMERKKIEN VASTAKOE YHDELLÄ LIPULLA: `?aihemerkit=0` sammuttaa
- * ryhmityksen, jolloin kartta latoo nostot kuten ennen PAATOKSET
- * 27:ää. Savuke mittaa molemmat samalla ajolla ja näkee, mitä ryhmitys
- * oikeasti maksaa ja tuottaa — sama tapa kuin `?vektorit=0`.
+/*
+ * ══ AIHEMERKKI EI ENÄÄ NIPUTA KARTAN NOSTOJA (Raamattu,
+ * KARTTAUUDISTUKSEN PAATOKSET 34 kohta 17 b) ══════════════════════
+ *
+ * VIPU KÄÄNNETTIIN 18.9.2026. Ryhmitys (PAATOKSET 27) syntyi, kun
+ * KAUPUNGIN nostot olivat kartalla rykelmänä. PAATOKSET 34 kohta 3 vei
+ * ne liuskaan, joten kartalle jäi vain kaupunkien ULKOPUOLISIA
+ * nostoja — ja niistä omistaja sanoo (18.9.2026 klo 15.20):
+ * *"eikö ranskassa pitäisi näkyä paljon enemmän kohteita?"*
+ *
+ * MITATTU (v1941, Ranskan saapumisnäkymä): 390 px kolme aihemerkkiä
+ * söi kymmenen nostoa kolmeksi pisteeksi, 1400 px yhdeksän kolmeksi.
+ * Ryhmitys oli siis se, mikä piilotti pisteet.
+ *
+ * SE MYÖS SIIRSI NIITÄ. Ryhmän jäsen ei saa ankkuria (`ankkuroi` saa
+ * vain ryhmittymättömät ja aiherivit), joten kun veto pudotti yhden
+ * jäsenen ruudulta ja ryhmä hajosi, loput hyppäsivät lukittuihin
+ * ankkureihinsa — mitattu *Pasteur ja Meister* 0,18° yhdellä 200 px:n
+ * vedolla. PAATOKSET 32 kohta 1 kieltää juuri tämän.
+ *
+ * LIPPU ON YHÄ OLEMASSA VASTAKOKEENA, mutta toisin päin: `?aihemerkit=1`
+ * palauttaa ryhmityksen, jolloin savuke näkee, että pisteiden määrä on
+ * ryhmityksen eikä datan ansiota.
  */
 export function ryhmitysSallittu() {
   try {
     const arvo = new URLSearchParams(globalThis.location?.search ?? '').get('aihemerkit');
-    return !/^(0|ei|off)$/.test(arvo ?? '');
-  } catch { return true; }
+    return /^(1|kylla|on)$/.test(arvo ?? '');
+  } catch { return false; }
 }
 /**
  * KAUPUNGIN AINA-YHDISTYKSEN VASTAKOE: `?aihekaupunki=0` jättää
