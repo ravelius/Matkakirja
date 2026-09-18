@@ -92,7 +92,7 @@
  */
 
 import {
-  NOSTOSYM_MINI_RUUTU, NOSTOSYM_PISTE_R,
+  NOSTOSYM_MINI_RUUTU, NOSTOSYM_NIMIO_KOKO, NOSTOSYM_PISTE_R,
   nostosymLyhennaNimio, nostosymNimioAsemointi, nostosymNimioMitta,
   piirraNostosymNimio,
 } from '../fokusnosto-symbolit.js';
@@ -280,13 +280,46 @@ export const VIUHKAN_POHJAN_VARA_PX = 10;
  * nostonimiö — piilotettava este väistyy aina ennen piilottamatonta.
  */
 export const KOVAN_ESTEEN_PAINO = 50;
+/*
+ * POHJA ON LÄPIKUULTAVA (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34
+ * kohta 15 a; omistaja 18.9.2026: *"Tuo viuhkan tausta saisi olla
+ * lapikuultava"*).
+ *
+ * VYÖT LADOTAAN PÄÄLLEKKÄIN, joten näkyvä peitto on niiden YHTEIS-
+ * peitto: 1 − Π(1 − peitto). Vanhat luvut (0,14 / 0,34 / 0,62 / 0,94)
+ * antoivat keskellä 0,987 — pohja oli käytännössä umpinainen paperi,
+ * ja juuri sen omistaja näki. Nyt sisimmän vyön kohdalla yhteispeitto
+ * on 0,82 (VIUHKAN_POHJAN_PEITTO), eli kartta kuultaa himmeänä läpi ja
+ * muste pysyy luettavana (kontrastimittaus, savuke-pariisi-lahizoom).
+ *
+ * PEHMENNYS SÄILYY: vyöt ovat yhä sisäkkäisiä ja peitto kasvaa
+ * sisäänpäin, eikä suodatinta (backdrop-filter) tule — iOS-sääntö
+ * kieltää sen kartan kerroksilta (tests/rules.test.mjs).
+ */
+/** Pohjan yhteispeitto sisimmän vyön kohdalla (mitattu alfa). */
+export const VIUHKAN_POHJAN_PEITTO = 0.82;
 /** Pohjan vyöt uloimmasta sisimpään: [vara px, peitto]. */
 export const VIUHKAN_POHJAN_VYOT = [
-  [VIUHKAN_POHJAN_VARA_PX, 0.14],
-  [VIUHKAN_POHJAN_VARA_PX * 0.55, 0.34],
-  [VIUHKAN_POHJAN_VARA_PX * 0.2, 0.62],
-  [0, 0.94],
+  [VIUHKAN_POHJAN_VARA_PX, 0.11],
+  [VIUHKAN_POHJAN_VARA_PX * 0.55, 0.24],
+  [VIUHKAN_POHJAN_VARA_PX * 0.2, 0.38],
+  [0, 0.58],
 ];
+/**
+ * POHJAN MARGINAALI: sama joka puolelle, 0,8 × kirjasin (PAATOKSET 34
+ * kohta 15 b; omistaja: *"tausta hieman paremmin kohdistettu jotta
+ * joka puolelle jaisi saman verran ja sopiva maara marginaalia"*).
+ *
+ * MIKSI MUSTEESTA EIKÄ LADONNAN LAATIKOSTA. Ladonnan rivilaatikko
+ * (kohdanLaatikko) on TÖRMÄYSlaatikko: se on merkin puolella 12 px ja
+ * ulkona 16 px + nimiön leveys, eli kiinteitä pikseleitä kirjasimen
+ * ympärillä. Kun liuskan kirjasin kasvaa kartan mukana (kohta 13 a),
+ * nuo kiinteät luvut eivät kasva sen mukana: 18 px:n rivillä pohjan
+ * vasen marginaal oli 19,5 px ja oikea 1,4 px. Siksi pohja lasketaan
+ * nyt rivien TODELLISESTA laatikosta (getBBox, symbolipallot ja
+ * hiusviiva mukaan) ja marginaali on yksi luku joka puolella.
+ */
+export const VIUHKAN_POHJAN_MARGINAALI = 0.8;
 
 const RAD = Math.PI / 180;
 
@@ -714,8 +747,10 @@ export function asetteleAihemerkki(kuori, d) {
       + (d.viuhka ?? [])
         .map((k) => `${k.nimi}@${k.dx.toFixed(1)},${k.dy.toFixed(1)}|${k.puoli}|${k.leveys.toFixed(1)}`).join(';');
     if (juuri.dataset.resepti !== viuhkaResepti) {
-      juuri.dataset.resepti = viuhkaResepti;
-      piirraViuhka(juuri, d);
+      // Resepti tallentuu VAIN jos pohja saatiin mitattua (elementti
+      // oli piirtopuussa); muuten seuraava ladonta piirtää uudelleen,
+      // eikä varapolun laatikko jää pysyväksi (PAATOKSET 34 kohta 15 b).
+      juuri.dataset.resepti = piirraViuhka(juuri, d) ? viuhkaResepti : '';
     }
   }
   const resepti = `${d.aihe ?? ''}|${d.maara ?? 0}|${d.avattu ? 1 : 0}`
@@ -807,31 +842,16 @@ export function aihemerkinLaatikko(p, d, {
 export function piirraViuhka(juuri, d) {
   juuri.replaceChildren();
   const kohdat = d.viuhka ?? [];
-  if (!kohdat.length) return;
+  if (!kohdat.length) return true;
   /*
-   * KEHYKSETÖN POHJA (PAATOKSET 32 kohta 3): *"vaalennus tai tummennus
-   * kartan paalla + pehmennys"*, EI reunaviivaa. Pehmennys on kolme
-   * sisäkkäistä vyöhykettä, joiden peitto kasvaa sisäänpäin — sama
-   * vaikutelma kuin liu'ulla, mutta ilman suodatinta (iOS-sääntö
-   * kieltää filterin kartan kerroksilta, tests/rules.test.mjs).
+   * RIVIT ENSIN, POHJA VASTA NIIDEN MITASTA (PAATOKSET 34 kohta 15 b).
+   * Rivit latautuvat omaan ryhmäänsä, jonka laatikko mitataan, ja
+   * pohja työnnetään sen ETEEN (insertBefore), jotta piirtojärjestys
+   * on yhä pohja → rivit.
    */
-  const pohja = d.viuhkaPohja;
-  if (pohja) {
-    for (const [vara, peitto] of VIUHKAN_POHJAN_VYOT) {
-      const r = el('rect', {
-        class: 'pallolauta-viuhka-pohja',
-        x: (pohja.x0 - vara).toFixed(2),
-        y: (pohja.y0 - vara).toFixed(2),
-        width: (pohja.x1 - pohja.x0 + 2 * vara).toFixed(2),
-        height: (pohja.y1 - pohja.y0 + 2 * vara).toFixed(2),
-        rx: (10 + vara).toFixed(1),
-        'fill-opacity': peitto.toFixed(2),
-      }, juuri);
-      r.setAttribute('aria-hidden', 'true');
-    }
-  }
+  const rivit = el('g', { class: 'pallolauta-viuhka-rivit' }, juuri);
   for (const [nro, k] of kohdat.entries()) {
-    const kohta = el('g', { class: 'pallolauta-viuhka-kohta' }, juuri);
+    const kohta = el('g', { class: 'pallolauta-viuhka-kohta' }, rivit);
     kohta.style.transform = `translate(${k.dx.toFixed(2)}px, ${k.dy.toFixed(2)}px)`;
     // Rivin järjestysluku porrastusta varten (css/styles.css
     // pallolauta-liuska-saapuu): 30 ms riviä kohti.
@@ -839,6 +859,62 @@ export function piirraViuhka(juuri, d) {
     const kuva = el('g', { class: 'pallolauta-viuhka-kuva' }, kohta);
     kuva.style.transform = `scale(${(k.mitta ?? 1).toFixed(4)})`;
     k.piirra?.(kuva, k.puoli);
+  }
+  /*
+   * KEHYKSETÖN POHJA (PAATOKSET 32 kohta 3): *"vaalennus tai tummennus
+   * kartan paalla + pehmennys"*, EI reunaviivaa. Pehmennys on kolme
+   * sisäkkäistä vyöhykettä, joiden peitto kasvaa sisäänpäin — sama
+   * vaikutelma kuin liu'ulla, mutta ilman suodatinta (iOS-sääntö
+   * kieltää filterin kartan kerroksilta, tests/rules.test.mjs).
+   */
+  const muste = musteenLaatikko(rivit);
+  const pohja = muste ?? d.viuhkaPohja;
+  if (pohja) {
+    const fontti = NOSTOSYM_NIMIO_KOKO * (kohdat[0]?.mitta ?? 1);
+    // Marginaali vain mitatun musteen ympärille; ladonnan laatikko on
+    // varapolku, ja siinä vara on jo mukana (kohdanLaatikko).
+    const m = muste ? VIUHKAN_POHJAN_MARGINAALI * fontti : 0;
+    for (const [vara, peitto] of VIUHKAN_POHJAN_VYOT) {
+      const v = vara + m;
+      const r = el('rect', {
+        class: 'pallolauta-viuhka-pohja',
+        x: (pohja.x0 - v).toFixed(2),
+        y: (pohja.y0 - v).toFixed(2),
+        width: (pohja.x1 - pohja.x0 + 2 * v).toFixed(2),
+        height: (pohja.y1 - pohja.y0 + 2 * v).toFixed(2),
+        rx: (10 + vara).toFixed(1),
+        'fill-opacity': peitto.toFixed(2),
+      });
+      r.setAttribute('aria-hidden', 'true');
+      juuri.insertBefore(r, rivit);
+    }
+  }
+  return Boolean(muste);
+}
+
+/**
+ * RIVIEN TODELLINEN LAATIKKO merkin omissa ruutupikseleissä, tai null
+ * jos selain ei sitä anna (elementti ei ole vielä piirtopuussa).
+ *
+ * MITTAUS EI SAA NÄHDÄ ANIMAATIOTA. Liuskan rivit saapuvat
+ * porrastetusti ja haitarin kohderivi alkaa `translateY(-6px)`:stä
+ * (css/styles.css pallolauta-liuska-haitari) — mittaushetkellä se
+ * siirto olisi laatikossa mukana ja pohja jäisi 6 px vinoon. Luokka
+ * sammuttaa animaatiot mittauksen ajaksi (`animation: none !important`)
+ * ja poistuu heti perään, joten rivit saapuvat kuten ennenkin.
+ */
+function musteenLaatikko(rivit) {
+  try {
+    rivit.classList.add('pallolauta-viuhka-mittaus');
+    const b = rivit.getBBox();
+    rivit.classList.remove('pallolauta-viuhka-mittaus');
+    if (!b || !(b.width > 0) || !(b.height > 0)) return null;
+    return {
+      x0: b.x, y0: b.y, x1: b.x + b.width, y1: b.y + b.height,
+    };
+  } catch {
+    rivit.classList.remove('pallolauta-viuhka-mittaus');
+    return null;
   }
 }
 
