@@ -13450,6 +13450,51 @@ button.lukija-nappi.lukee,
 .tiivis-lehtiarkki .lehti-leipa > p[hidden] { display: none; }
 .tiivis-lehtiarkki .tiivis-kartta { margin-bottom: 0.7rem; }
 
+/*
+ * ── NÄHTÄVYYSARKIN KEVYT YLÄOSA JA SISÄLLÖN MITTAINEN PAPERI ────────
+ * (omistajan päätös 18.9.2026 klo 15.20, Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 34 kohta 17 e.)
+ *
+ * 1) YLÄOSA. Masto jää pois JS:ssä (js/lehti.js avaaTiivisLehtiarkki,
+ *    asetukset.otsikko), joten tässä ei piiloteta mitään — jäljelle
+ *    jäävä otsikko vain saa oman mittansa: lehden nimiö on kaupungin
+ *    nimi isolla antiikvalla (clamp 1,9–2,8rem), ja "Nähtävyydet" on
+ *    näkymän nimi eikä kaupungin. Yksi arvo, ei kopioitua tyyliä.
+ *
+ * 2) ARKKI LOPPUU TEKSTIIN. Omistaja mittasi työpöydällä ~300 px
+ *    tyhjää paperia tekstin alla: arkki on LEHDEN mitta (koko
+ *    turvallinen ruutu), ja nähtävyysnäkymä on kortti. Sama keino kuin
+ *    lehdettömällä kaupunkikortilla (`.dialog.arkki:not(.lehti)`
+ *    "LYHYT KORTTI ON LYHYT"): dialogi jää ruudun korkuiseksi
+ *    kehykseksi ja keskittää sisällön mittaisen kortin, katto 100 %
+ *    venytetystä dialogista pitää pitkänkin sisällön ruudulla.
+ *    Valitsimessa on `.nahtavyysnakyma`, joten kaupunkilehti ja muut
+ *    tiiviit näkymät eivät muutu.
+ */
+.tiivis-lehtiarkki .lehti-nimio.tiivis-lehtiarkki-otsikko {
+  font-size: clamp(1.2rem, 4.5vw, 1.6rem);
+}
+
+.dialog.arkki.nahtavyysnakyma[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog.arkki.nahtavyysnakyma .dialog-card {
+  height: auto;
+  max-height: 100%;
+  /* Alareunan varaus on lehden sivunumeron paikka (puhelimessa
+     2,6rem); tässä näkymässä sivunumeroa ei ole, joten paperi päättyy
+     tekstin alle kapeaan reunukseen. Mitattu 18.9.2026 (Pariisi
+     390 px): reunus + kappaleen alamarginaali oli 26 px eli yksi
+     tekstirivi (25 px) ja yksi pikseli — marginaali on siksi nollattu
+     tässä näkymässä, jolloin raoksi jää pelkkä reunus. */
+  padding-bottom: calc(0.6rem + env(safe-area-inset-bottom, 0px));
+}
+
+.dialog.arkki.nahtavyysnakyma .nahtavyysnakyma-teksti { margin-bottom: 0; }
+
 .lehti-hampurilainen[hidden] { display: none; }
 
 .lehti-hampurilainen svg { display: block; }
