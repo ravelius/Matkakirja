@@ -8388,7 +8388,16 @@ export const RAAMATTU = {
           + 'jo tyonkulku. Eli ajetaan macilla" - avain ei ole repossa vaan '
           + 'Macin ymparistossa; Fable vei pyramidin ampariin polkuun '
           + 'matkakirja/reliefipyramidi/20260918/ (laatat immutable, manifesti '
-          + 'max-age 300).',
+          + 'max-age 300). TILA 3: JULKAISTU v1939 18.9.2026 klo 13.25 Suomen '
+          + 'aikaa (PR #2578): reliefipyramidi topografialinssin OLETUS '
+          + '(?reliefipyramidi=0 varalla), pohjaa ei ladota linssin alle (kohta '
+          + '49), luennan huntu -vika korjattu (tummensi linssin), nimioille '
+          + 'vaalea reunus; savuke-topografialinssi pyramiditietoinen (ensimmainen '
+          + 'reliefilaatta ~100 ms avauksesta, seepiapohjan pyyntoja 0, avauksen '
+          + 'maksimikirkkaus 114,0 = lopputila 113,9 eli ei valahdysta). AVOINNA '
+          + 'omiksi eriksi: WebKit-luvut, nimion kontrastimitta 4,5:1, '
+          + 'linssiketjun ~700 ms (js/ui.js sytytaLinssi), Astronautin kameran '
+          + 'laastari pyramidista (kohta 47).',
         'IHMISEN MATKA -LINSSI: RINTAMAN VALKKYMINEN, MUSTA ALKU, LIIKU '
           + 'POIS; ASTRONAUTTILINSSILLE OMA KUVAKE (omistaja 15.9.2026 klo '
           + '12.00 UTC, tyopoytakuva 248 000 v. sitten, sanatarkasti: "Kun '
