@@ -68,14 +68,45 @@ export const MATKAREITIN_VARJON_PAKSUUS_PX = 4;
 /** Katkoviivan jakso asteina (viiva + väli); tasokartalla 8 px. */
 export const MATKAREITIN_KATKO_AST = 0.16;
 /*
- * Askelhelmen säde (Globe.gl pointRadius-yksikköä). Helmi on yhä
- * KARTTAVAKIO: se merkitsee reitin askelta maastossa, ja reitti itse
- * on kartan mitta. Kaupunkipiste sen sijaan on ruudun vakio
- * (js/pallolauta/lauta.js KAUPUNKIPISTEEN_HALKAISIJA_PX).
+ * ══════════════════════════════════════════════════════════════════
+ * VÄLIPISTE ON PÄÄTEPISTEEN KOKOINEN YMPYRÄ ILMAN PUNAISTA (Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 39, omistaja 18.9.2026 klo 20.40,
+ * sanatarkasti: *"valipisteet saisi nakya isommalla. saman kokoinen
+ * ympyra kuin paatepiste, mutta ilman punaista korostusta"*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * ENNEN: helmi oli KARTTAVAKIO, säde 0,014 pallon yksikköä. Mitattuna
+ * omalla kaavallaan (js/pallolauta/lauta.js kaupunkipisteenSade,
+ * käänteisenä) se on 390 × 844:n ruudulla noin 1,2 px vertailu-
+ * korkeudella 0,37 ja noin 4 px lähimmässäkin siirtonäkymässä — juuri
+ * ne *"pienet valkoiset tapit"*, jotka omistaja näki Marseillen
+ * kuvasta. Päätepiste (nopanheiton kohdemerkki reitin varrella,
+ * js/pallolauta/merkit.js KOHDEMERKIN_PISTE_PX) on sen rinnalla
+ * 15 px:n ympyrä joka zoomilla.
+ *
+ * NYT: helmi on RUUDUN VAKIO ja täsmälleen sen päätepisteen kokoinen,
+ * joka on samaa lajia kuin se itse — reitin varrella oleva askelpiste
+ * (.target-piste.far, 15 px). Kun helmi on valittavissa, se saa
+ * päälleen punaisen katkorenkaan; kun ei ole, se on sama ympyrä ilman
+ * korostusta. Punainen jää siis yksin valinnan merkiksi.
+ *
+ * REUNUS KAHDELLA SISÄKKÄISELLÄ PISTEELLÄ. Globe.gl:n pisteellä on
+ * yksi materiaali eikä lainkaan viivaa, joten tumma reunus tehdään
+ * alemmalla, hitusen suuremmalla levyllä (`reuna: true`) ja
+ * pergamentti sen päällä. Levyt ovat katsesäteellä (lauta.js LEVY
+ * KATSESÄTEELLE), joten alempi korkeus tarkoittaa myös kauempana
+ * kamerasta — reunus jää varmasti pergamentin taakse.
  */
-export const REITTIHELMEN_SADE = 0.014;
+/** Askelhelmen ULKOhalkaisija ruutupikseleinä (= KOHDEMERKIN_PISTE_PX). */
+export const REITTIHELMEN_HALKAISIJA_PX = 15;
+/** Tumman reunuksen paksuus ruutupikseleinä (= .target-piste.far viiva). */
+export const REITTIHELMEN_REUNA_PX = 2.2;
+/** Pergamenttitäytteen halkaisija: ulkomitta miinus reunus molemmin puolin. */
+export const REITTIHELMEN_TAYTE_PX = REITTIHELMEN_HALKAISIJA_PX - 2 * REITTIHELMEN_REUNA_PX;
 /** Helmen korkeus: kaupunkipisteiden (0,003) alla, viivan (0,002) päällä. */
 export const REITTIHELMEN_KORKEUS = 0.0025;
+/** Reunuslevy hitusen pergamentin alla — yhä reitin viivan päällä. */
+export const REITTIHELMEN_REUNAN_KORKEUS = 0.0024;
 export const REITIN_KORKEUS = 0.002;
 export const REITIN_VARJON_KORKEUS = 0.0018;
 /**
@@ -138,6 +169,13 @@ export const REITIN_VARIT = {
   avauslennonJalki: 'rgba(194, 69, 47, 0.92)',
 };
 export const HELMEN_VARI = 'rgba(250, 243, 226, 0.9)';
+/*
+ * HELMEN TUMMA REUNUS. Sama muste kuin maareitin viivalla
+ * (REITIN_VARIT.maa) mutta täytenä, jotta ympyrän raja lukeutuu sekä
+ * vaalealta mereltä että tummalta maastolta. EI punaista: punainen
+ * (--mark) on varattu valittavalle päätepisteelle (PAATOKSET 39).
+ */
+export const HELMEN_REUNAN_VARI = 'rgba(74, 58, 36, 0.88)';
 
 const RAD = Math.PI / 180;
 
@@ -206,6 +244,14 @@ export function luoReitit({ pallo, ui, siirtyma, asteet, siirtymat = null }) {
   const osat = new Map(); // osan nimi → datumit
   let edellinenAvain = null;
   let helmet = [];
+  /*
+   * PISTEKERROKSELLE MENEVÄ LISTA: reunuslevyt ensin, pergamentit
+   * perässä (ks. VÄLIPISTE ON PÄÄTEPISTEEN KOKOINEN). `helmet` on yhä
+   * pelkkä pergamenttilista, koska se on helmen PAIKKA — juuri se,
+   * mitä `helmet()` lukijoilleen lupaa (tools/savukkeet/
+   * savuke-pallo-reitit.mjs vartio 2).
+   */
+  let helmipisteet = [];
 
   pallo
     .pathsData([])
@@ -299,10 +345,22 @@ export function luoReitit({ pallo, ui, siirtyma, asteet, siirtymat = null }) {
      */
     const askelia = Math.max(1, Math.round(reitti.steps ?? 1));
     const helmia = [];
+    const reunoja = [];
     for (let i = 1; i < askelia; i += 1) {
       const kohta = pointAlong(poly, i / askelia);
       const a = asteet(kohta);
-      if (a) helmia.push({ laji: 'helmi', id: `${reitti.id}#${i}`, lat: a.lat, lon: a.lon });
+      if (!a) continue;
+      /*
+       * KAKSI LEVYÄ SAMASSA PISTEESSÄ (ks. VÄLIPISTE ON PÄÄTEPISTEEN
+       * KOKOINEN): tumma reunus alla, pergamentti päällä. Molemmat ovat
+       * lajia `helmi`, jotta kaikki muu (napautus pintaan, piilotus,
+       * laskurit) kohtelee niitä yhtenä merkkinä; `reuna` erottaa vain
+       * värin, korkeuden ja halkaisijan.
+       */
+      reunoja.push({
+        laji: 'helmi', reuna: true, id: `${reitti.id}#${i}r`, lat: a.lat, lon: a.lon,
+      });
+      helmia.push({ laji: 'helmi', id: `${reitti.id}#${i}`, lat: a.lat, lon: a.lon });
     }
     const katko = pituusAst > 0 ? Math.min(0.5, (MATKAREITIN_KATKO_AST / 2) / pituusAst) : 0.5;
     /*
@@ -316,6 +374,7 @@ export function luoReitit({ pallo, ui, siirtyma, asteet, siirtymat = null }) {
       pisteet,
       pituusAst,
       helmet: helmia,
+      reunat: reunoja,
       varjo: {
         avain: `${reitti.id}#varjo`,
         pisteet: varjonPisteet,
@@ -356,18 +415,20 @@ export function luoReitit({ pallo, ui, siirtyma, asteet, siirtymat = null }) {
 
   /**
    * Piirtää valinnan (ui.matkareittienValinta) pallolle. Palauttaa
-   * askelhelmet, jotka lauta.js liittää pistekerrokseen.
+   * askelhelmien LEVYT (reunus + pergamentti), jotka lauta.js liittää
+   * pistekerrokseen.
    */
   const paivita = ({
     reittiTunnukset = [], lennot = [], lentoLahto = null, avain = '', kaarenVari = null,
   }) => {
     const elava = ui.lentoKaari?.b ?? null;
     const tunniste = `${avain}|${elava ?? ''}`;
-    if (tunniste === edellinenAvain) return helmet;
+    if (tunniste === edellinenAvain) return helmipisteet;
     edellinenAvain = tunniste;
     const { board } = ui.game;
     const polut = [];
     helmet = [];
+    const reunat = [];
     if (avain) {
       for (const eid of reittiTunnukset) {
         const reitti = board.edgeById.get(eid);
@@ -376,6 +437,7 @@ export function luoReitit({ pallo, ui, siirtyma, asteet, siirtymat = null }) {
         // Varjo ensin: se on musteviivan alla sekä listassa että pinnalla.
         polut.push(m.varjo, m.datum);
         helmet.push(...m.helmet);
+        reunat.push(...m.reunat);
       }
     }
     const kaaret = [];
@@ -388,7 +450,8 @@ export function luoReitit({ pallo, ui, siirtyma, asteet, siirtymat = null }) {
     }
     aseta('peli', polut);
     pallo.arcsData(kaaret);
-    return helmet;
+    helmipisteet = [...reunat, ...helmet];
+    return helmipisteet;
   };
 
   /** Koko viivakerros kirjastolle: osat järjestyksessä. */
