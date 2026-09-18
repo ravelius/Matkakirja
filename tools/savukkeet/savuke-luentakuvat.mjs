@@ -30,10 +30,20 @@
  *   6. PIKKUKUVAT MATKAKIRJAN LOPUSSA: auki-tilassa kuvien maara,
  *      pienennetyssa kortissa 0 nakyvaa.
  *   7. PIKKUKUVAN NAPAUTUS AVAA SUURENNOKSEN.
+ *   9.  LAPPU JAA LAPUKSI LUENNAN JALKEEN MOLEMMILLA RUUDUILLA
+ *      (PAATOKSET 38 kohta 1, 390 x 844 JA 1400 x 900): kortti
+ *      avataan ensin, luenta kutistaa sen lapuksi, ja luennan
+ *      paatyttya .fact-card.pieni on YHA paalla. Napautus avaa.
+ *  10.  KUVAT LENTAVAT LAPUN YLAREUNAAN (PAATOKSET 38 kohta 2): sarjan
+ *      loppu (paataLuentakuvasarja) synnyttaa .fokusvirta-lento-kuvat,
+ *      joiden laatikkoa naytteistetaan kehyksittain. Loppupiste lapun
+ *      ylareunan +-8 px, loppukoko <= pikkukuvan koko (3,1 rem).
+ *  11.  LAPPU EI LIIKAHDA EIKA VAIHDA LUOKKAA lennon aikana.
+ *  12.  OHITA LAUKAISEE SAMAN LENNON.
  *
  * Aja:
  *   PLAYWRIGHT_JS=... CHROMIUM="..." PORTTI=8911 \
- *   node tools/savukkeet/mittaa-luentakuvat.mjs [kuvakansio]
+ *   node tools/savukkeet/savuke-luentakuvat.mjs [kuvakansio]
  */
 import http from 'node:http';
 import zlib from 'node:zlib';
@@ -688,8 +698,257 @@ if (KUVAKANSIO) {
   await sivu.screenshot({ path: join(KUVAKANSIO, 'ohita-kartta-nakyy.png') });
 }
 
-vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 await ctx.close();
+
+/* ====================================================================
+ * 9–12: PAATOKSET 38 — TEKSTIT PIILOSSA, KUVAT LENTAVAT LAPPUUN.
+ *
+ * OMA KONTEKSTINSA JA OMA RUUTUNSA. Yllä oleva ajo on käyttänyt Ohitan
+ * ja jättänyt `ui.luennanOhitus`-lipun pystyyn (uusi päällys ei enää
+ * nouse), joten nämä väitteet eivät voi jatkaa samalla sivulla. Sama
+ * mittaus ajetaan MOLEMMILLA ruuduilla, koska kohta 1 on nimenomaan
+ * "kaikilla laitteilla" — työpöytä oli se, joka avasi kortin itsestään.
+ *
+ * LUENTA ON OIKEA PUHEENVUORO, EI LIPPU. Vahti (js/ui.js
+ * kaynnistaLuentavahti) lukee `soivaPuhuja()`-kyselyä, joten mittari
+ * merkitsee sijaisäänen puhujaksi luennan omalla rajapinnalla
+ * (merkitsePuhuja / vapautaPuhuja). Niin mitattava polku on se sama,
+ * jota pelaajan ääni kulkee — ei mittarin oma oikopolku.
+ */
+const PIKKUKUVA_REM = 3.1;
+
+async function mittaaPaatokset38(ruutu, lappuNimi, kuvia = false) {
+  const konteksti = await selain.newContext({ viewport: ruutu, serviceWorkers: 'block' });
+  await konteksti.addInitScript((data) => {
+    try {
+      localStorage.setItem('matkakirja-save-v1', data);
+      localStorage.setItem('matkakirja-livia-avaus', '1');
+      localStorage.setItem('matkakirja-livia-paljastus', '1');
+    } catch { /* yksityinen tila */ }
+  }, tallenne);
+  const s = await konteksti.newPage();
+  s.on('pageerror', (e) => virheet.push(`${lappuNimi}: ${String(e.message ?? e)}`));
+  await s.route('**samireivinen.workers.dev/**', (r) => r.abort());
+  await s.route(/wikimedia\.org|media\.matkakirja\.app|r2\.dev\//, (route) => {
+    const url = route.request().url();
+    const aani = /\.mp3(\?|$)/.test(url);
+    route.fulfill({
+      status: 200,
+      contentType: aani ? 'audio/mpeg' : 'image/png',
+      body: aani ? VARAAANI : VARAKUVA,
+      headers: { 'access-control-allow-origin': '*' },
+    });
+  });
+  await s.goto(osoite, { waitUntil: 'domcontentloaded', timeout: 60000 });
+  await s.waitForFunction(() => Boolean(window.matkakirja?.ui), null, { timeout: 60000 });
+  await s.waitForTimeout(3000);
+
+  /* Saapuminen Pariisiin, kortti AUKI ja luenta käyntiin. */
+  await s.evaluate(async (id) => {
+    const { ui, game } = window.matkakirja;
+    game.player.pos = { type: 'city', city: id };
+    game.world.visited.add(id);
+    game.arrivalFact = { packId: game.pack.id, cityId: id };
+    ui.render();
+    // Pelaaja on kortin auki: vain silloin luennan loppu voisi sen
+    // sulkea tai jättää auki — kutistettu lappu ei mittaisi mitään.
+    ui.asetaPaivakirjanKoko(false);
+    const l = await import('/js/luenta.js');
+    const aani = {
+      paused: false, ended: false, error: null, currentTime: 1, duration: 30,
+      addEventListener() {}, removeEventListener() {}, removeAttribute() {},
+      pause() { this.paused = true; },
+    };
+    window.__savukeAani = aani;
+    ui.luennat ??= new Set();
+    ui.luennat.add(aani);
+    ui.diaryVoice = aani;
+    l.merkitsePuhuja(ui, aani, l.PUHUJA_KERTOJA);
+  }, KAUPUNKI);
+  // Vahdin kysely on 200 ms: tässä ajassa lappu on kutistunut.
+  await s.waitForTimeout(700);
+  const luennanAikana = await s.evaluate(
+    () => document.querySelector('.fact-card')?.classList?.contains('pieni') === true,
+  );
+  vaadi(`${lappuNimi}: luenta kutistaa kortin lapuksi`, luennanAikana);
+
+  /* Isoisän sarja ruudulle ja toinen kortti pakkaan (porrastus). */
+  await s.evaluate(async () => {
+    const { ui, game } = window.matkakirja;
+    const m = await import('/js/fokusvirta.js');
+    m.naytaLuentakuvasarja(ui, game.cityOf());
+  });
+  await s.waitForSelector('.fokusvirta-isokuva-ruutu', { timeout: 30000 });
+  await s.waitForFunction(
+    () => document.querySelectorAll('.fokusvirta-isokuva-ruutu').length >= 2,
+    null, { timeout: 20000 },
+  ).catch(() => console.log(`HUOM  ${lappuNimi}: toinen kortti ei ehtinyt pakkaan`));
+
+  /*
+   * LENTO KÄYNTIIN JA NÄYTTEET KEHYKSITTÄIN. Laukaisu ja näytteenotto
+   * ovat sivun puolella (requestAnimationFrame), jotta Nodesta voidaan
+   * samaan aikaan ottaa kaappauksia kesken lennon.
+   */
+  await s.evaluate(async (rem) => {
+    const { ui } = window.matkakirja;
+    const m = await import('/js/fokusvirta.js');
+    const kortti = document.querySelector('.fact-card');
+    const laatikko = (el) => {
+      const r = el.getBoundingClientRect();
+      return {
+        x: Math.round(r.x * 10) / 10,
+        y: Math.round(r.y * 10) / 10,
+        w: Math.round(r.width * 10) / 10,
+        h: Math.round(r.height * 10) / 10,
+      };
+    };
+    const juuri = Number.parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+    const tulos = {
+      pikkukuvaPx: rem * juuri,
+      lappuEnnen: laatikko(kortti),
+      luokatEnnen: kortti.className,
+      naytteet: [],
+      lappuNaytteet: [],
+      lentoja: 0,
+      valmis: false,
+    };
+    window.__lento = tulos;
+    m.paataLuentakuvasarja(ui);
+    const lennot = [...document.querySelectorAll('.fokusvirta-lento')];
+    tulos.lentoja = lennot.length;
+    const eka = lennot[0] ?? null;
+    const alku = performance.now();
+    const askel = () => {
+      if (eka?.isConnected) {
+        tulos.naytteet.push({ t: Math.round(performance.now() - alku), ...laatikko(eka) });
+      }
+      tulos.lappuNaytteet.push({ ...laatikko(kortti), luokat: kortti.className });
+      if (performance.now() - alku < 900) requestAnimationFrame(askel);
+      else tulos.valmis = true;
+    };
+    requestAnimationFrame(askel);
+  }, PIKKUKUVA_REM);
+  if (kuvia && KUVAKANSIO) {
+    for (const [i, odota] of [120, 180, 200].entries()) {
+      // eslint-disable-next-line no-await-in-loop
+      await s.waitForTimeout(odota);
+      // eslint-disable-next-line no-await-in-loop
+      await s.screenshot({ path: join(KUVAKANSIO, `kuvat-lentavat-${i + 1}.png`) });
+    }
+  }
+  await s.waitForTimeout(1200);
+  const lento = await s.evaluate(() => window.__lento);
+  const viimeinen = lento.naytteet.at(-1) ?? null;
+  const ensimmainen = lento.naytteet[0] ?? null;
+  const maaliY = lento.lappuEnnen.y;
+  const maaliX = lento.lappuEnnen.x + lento.lappuEnnen.w / 2;
+  tieto(`${lappuNimi} lentoja`, lento.lentoja);
+  tieto(`${lappuNimi} näytteitä`, lento.naytteet.length);
+  tieto(`${lappuNimi} lento alku`, JSON.stringify(ensimmainen));
+  tieto(`${lappuNimi} lento loppu`, JSON.stringify(viimeinen));
+  tieto(`${lappuNimi} lapun yläreuna`, `${maaliY} (keskilinja ${Math.round(maaliX)})`);
+  tieto(`${lappuNimi} pikkukuva px`, Math.round(lento.pikkukuvaPx));
+  vaadi(`${lappuNimi}: kuvat lähtevät lentoon sarjan lopussa`, lento.lentoja > 0,
+    `lentoja ${lento.lentoja}`);
+  vaadi(`${lappuNimi}: laatikkoa mitattiin vähintään kolmessa kehyksessä`,
+    lento.naytteet.length >= 3, `näytteitä ${lento.naytteet.length}`);
+  const matkaAlussa = ensimmainen
+    ? Math.hypot(ensimmainen.x + ensimmainen.w / 2 - maaliX, ensimmainen.y - maaliY) : null;
+  const matkaLopussa = viimeinen
+    ? Math.hypot(viimeinen.x + viimeinen.w / 2 - maaliX, viimeinen.y - maaliY) : null;
+  tieto(`${lappuNimi} etäisyys maaliin`,
+    `${Math.round(matkaAlussa)} → ${Math.round(matkaLopussa)} px`);
+  vaadi(`${lappuNimi}: laatikko liikkuu kohti lapun yläreunaa`,
+    matkaAlussa !== null && matkaLopussa !== null && matkaLopussa < matkaAlussa,
+    `${matkaAlussa} → ${matkaLopussa}`);
+  vaadi(`${lappuNimi}: loppupiste on lapun yläreunassa (±8 px)`,
+    viimeinen !== null && Math.abs(viimeinen.y - maaliY) <= 8,
+    `y ${viimeinen?.y} vs ${maaliY}`);
+  vaadi(`${lappuNimi}: loppupiste on lapun keskilinjalla (±8 px)`,
+    viimeinen !== null && Math.abs(viimeinen.x + viimeinen.w / 2 - maaliX) <= 8,
+    `x ${viimeinen?.x} + ${viimeinen?.w} vs ${maaliX}`);
+  vaadi(`${lappuNimi}: loppukoko on enintään pikkukuvan kokoinen`,
+    viimeinen !== null && viimeinen.w <= lento.pikkukuvaPx + 1,
+    `${viimeinen?.w} vs ${Math.round(lento.pikkukuvaPx)}`);
+  const lappuLiikkui = lento.lappuNaytteet.some((n) => n.x !== lento.lappuEnnen.x
+    || n.y !== lento.lappuEnnen.y || n.w !== lento.lappuEnnen.w || n.h !== lento.lappuEnnen.h);
+  const luokatVaihtui = lento.lappuNaytteet.some((n) => n.luokat !== lento.luokatEnnen);
+  tieto(`${lappuNimi} lapun näytteitä`, lento.lappuNaytteet.length);
+  vaadi(`${lappuNimi}: lappu ei liikahda lennon aikana`, !lappuLiikkui,
+    JSON.stringify(lento.lappuNaytteet.find((n) => n.x !== lento.lappuEnnen.x) ?? {}));
+  vaadi(`${lappuNimi}: lapun luokkalista ei muutu lennon aikana`, !luokatVaihtui,
+    lento.luokatEnnen);
+  vaadi(`${lappuNimi}: lappu on yhä pienennettynä lennon jälkeen`,
+    lento.luokatEnnen.includes('pieni'), lento.luokatEnnen);
+
+  /* 9: luennan loppu ei avaa korttia — napautus avaa. */
+  await s.evaluate(async () => {
+    const { ui } = window.matkakirja;
+    const l = await import('/js/luenta.js');
+    const aani = window.__savukeAani;
+    aani.paused = true;
+    aani.ended = true;
+    l.vapautaPuhuja(ui, aani);
+    ui.diaryVoice = null;
+  });
+  // Vahdin välirauha on 1300 ms (LUENNAN_VALIRAUHA_MS) + kyselyn väli.
+  await s.waitForTimeout(2200);
+  const luennanJalkeen = await s.evaluate(() => {
+    const kortti = document.querySelector('.fact-card');
+    return {
+      pieni: kortti?.classList?.contains('pieni') === true,
+      luokat: kortti?.className ?? '',
+    };
+  });
+  tieto(`${lappuNimi} kortti luennan jälkeen`, JSON.stringify(luennanJalkeen));
+  vaadi(`${lappuNimi}: luennan loppu EI avaa korttia (lappu jää lapuksi)`,
+    luennanJalkeen.pieni, luennanJalkeen.luokat);
+  if (kuvia && KUVAKANSIO) {
+    await s.screenshot({ path: join(KUVAKANSIO, 'lappu-jaa-lapuksi.png') });
+  }
+  await s.evaluate(() => document.querySelector('.fact-card')?.click());
+  await s.waitForTimeout(500);
+  const napautuksenJalkeen = await s.evaluate(
+    () => document.querySelector('.fact-card')?.classList?.contains('pieni') === true,
+  );
+  vaadi(`${lappuNimi}: napautus avaa kortin`, napautuksenJalkeen === false);
+
+  /* 12: Ohita laukaisee saman lennon. */
+  const ohitus = await s.evaluate(async () => {
+    const { ui, game } = window.matkakirja;
+    const m = await import('/js/fokusvirta.js');
+    const l = await import('/js/luenta.js');
+    const aani = {
+      paused: false, ended: false, error: null, currentTime: 1, duration: 30,
+      addEventListener() {}, removeEventListener() {}, removeAttribute() {},
+      pause() { this.paused = true; },
+    };
+    ui.luennat ??= new Set();
+    ui.luennat.add(aani);
+    ui.diaryVoice = aani;
+    ui.luennanOhitus = null;
+    l.merkitsePuhuja(ui, aani, l.PUHUJA_KERTOJA);
+    m.naytaLuentakuvasarja(ui, game.cityOf());
+    return true;
+  });
+  await s.waitForSelector('.fokusvirta-isokuva-ruutu', { timeout: 30000 });
+  await s.waitForTimeout(600);
+  await s.evaluate(() => document.querySelector('.fokusvirta-isokuva-ohita')?.click());
+  await s.waitForTimeout(80);
+  const ohitanLento = await s.evaluate(() => ({
+    lentoja: document.querySelectorAll('.fokusvirta-lento').length,
+    isoja: document.querySelectorAll('.fokusvirta-isokuva-ruutu').length,
+  }));
+  tieto(`${lappuNimi} Ohita → lento`, `${JSON.stringify(ohitanLento)} (viritys ${ohitus})`);
+  vaadi(`${lappuNimi}: Ohita laukaisee saman lennon`, ohitanLento.lentoja > 0,
+    JSON.stringify(ohitanLento));
+  await konteksti.close();
+}
+
+await mittaaPaatokset38(RUUTU, '390 px', true);
+await mittaaPaatokset38({ width: 1400, height: 900 }, '1400 px');
+
+vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 await selain.close();
 palvelin.close();
 console.log(`\n${lapi}/${kaikki} vartiota läpi`);

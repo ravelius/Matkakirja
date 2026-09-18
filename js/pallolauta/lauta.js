@@ -119,7 +119,8 @@ import {
   luoNostot, nostonLaatikko, nostonMitta,
 } from './nostot.js';
 import {
-  HELMEN_VARI, REITIN_VARIT, REITTIHELMEN_KORKEUS, REITTIHELMEN_SADE, luoReitit,
+  HELMEN_REUNAN_VARI, HELMEN_VARI, REITIN_VARIT, REITTIHELMEN_HALKAISIJA_PX,
+  REITTIHELMEN_KORKEUS, REITTIHELMEN_REUNAN_KORKEUS, REITTIHELMEN_TAYTE_PX, luoReitit,
 } from './reitit.js';
 import { laatikotLimittyvat } from './sovittelu.js';
 import { luoLinssikartta } from './linssikartta.js';
@@ -3284,6 +3285,16 @@ export async function avaaPallolauta(ui) {
   /** YHDEN pisteen säde: perusmitta kartan mittakaavassa. */
   const pisteenSade = (d) => sadeRuudulta(piirrettyHalkaisijaPx(d));
   /*
+   * ASKELHELMI ON RUUDUN VAKIO (Raamattu PAATOKSET 39, ks.
+   * js/pallolauta/reitit.js VÄLIPISTE ON PÄÄTEPISTEEN KOKOINEN
+   * YMPYRÄ): halkaisija luetaan suoraan ruutupikseleistä eikä kartan
+   * mittakaavasta (kartanMittakaavanHalkaisija), koska päätepiste,
+   * johon se mitataan, on DOM-merkki kiinteässä ruutumitassa. Sama
+   * mitta joka zoomilla.
+   */
+  const helmenHalkaisijaPx = (d) => (d.reuna
+    ? REITTIHELMEN_HALKAISIJA_PX : REITTIHELMEN_TAYTE_PX);
+  /*
    * ══════════════════════════════════════════════════════════════════
    * PISTEIDEN PAIKKA TULEE PIIRROSTA, EI TAPAHTUMASTA (omistajan
    * vikailmoitus 12.9.2026, sanatarkasti: *"kaupunkien ja kohteiden
@@ -3382,13 +3393,25 @@ export async function avaaPallolauta(ui) {
     siirtymaAsti = (globalThis.performance?.now?.() ?? Date.now()) + PISTEIDEN_SIIRTYMA_MS + 50;
     const skaala = asetettuLinssi ? 0 : sade * PISTEEN_SKAALA;
     const kohdeSkaala = asetettuLinssi ? 0 : kohdeSade * PISTEEN_SKAALA;
+    /*
+     * HELMEN KAKSI RUUTUVAKIOTA (PAATOKSET 39): pergamentti ja sen
+     * tumma reunus. Ne luetaan samasta sadeRuudulta-kaavasta kuin
+     * kaupunkipiste, mutta ILMAN kartan mittakaavaa — muuten helmi
+     * karkaisi päätepisteen kiinteästä ruutumitasta heti, kun zoomi
+     * muuttuu. Linssi ei sammuta helmeä skaalalla: silloin koko
+     * reittikerros on jo tyhjä (paivita → valinta).
+     */
+    const helmiSkaala = sadeRuudulta(REITTIHELMEN_TAYTE_PX) * PISTEEN_SKAALA;
+    const helmiReunaSkaala = sadeRuudulta(REITTIHELMEN_HALKAISIJA_PX) * PISTEEN_SKAALA;
     for (const d of pallo.pointsData()) {
       const o = d.__threeObjPoint;
       if (!o) continue;
-      // Koko on kaupunkipisteen asia: helmellä ja valolla on omansa.
-      if (d.laji === 'helmi' || d.laji === 'valo') continue;
+      // Koko on kaupunkipisteen asia: valolla on omansa.
+      if (d.laji === 'valo') continue;
       // Sama sääntö kuin pointRadius-luennassa, yhdestä paikasta.
-      const s = d.id && oma && d.id === oma ? kohdeSkaala : skaala;
+      let s;
+      if (d.laji === 'helmi') s = d.reuna ? helmiReunaSkaala : helmiSkaala;
+      else s = d.id && oma && d.id === oma ? kohdeSkaala : skaala;
       o.scale.x = s;
       o.scale.y = s;
     }
@@ -3408,12 +3431,12 @@ export async function avaaPallolauta(ui) {
     .pointsData([])
     .pointLat('lat').pointLng('lon')
     .pointColor((d) => {
-      if (d.laji === 'helmi') return HELMEN_VARI;
+      if (d.laji === 'helmi') return d.reuna ? HELMEN_REUNAN_VARI : HELMEN_VARI;
       if (d.laji === 'valo') return d.vari;
       return kaupunkipisteenVari(d);
     })
     .pointAltitude((d) => {
-      if (d.laji === 'helmi') return REITTIHELMEN_KORKEUS;
+      if (d.laji === 'helmi') return (d.reuna ? REITTIHELMEN_REUNAN_KORKEUS : REITTIHELMEN_KORKEUS);
       if (d.laji === 'valo') return VALON_KORKEUS;
       return 0.003;
     })
@@ -3421,7 +3444,7 @@ export async function avaaPallolauta(ui) {
       // Lieriö levyksi tässä luennassa (PISTE ON LEVY): olio on jo
       // sidottu datumiin, ja luenta osuu täsmälleen olion päivitykseen.
       litistaja.litista(d);
-      if (d.laji === 'helmi') return REITTIHELMEN_SADE;
+      if (d.laji === 'helmi') return sadeRuudulta(helmenHalkaisijaPx(d));
       if (d.laji === 'valo') return VALON_SADE;
       // Kaupunkipiste on ruudun vakio: säde luetaan kameran korkeudesta
       // (tahdistaPisteidenKoko pitää sen samana zoomin muuttuessa) ja
@@ -4125,7 +4148,28 @@ export async function avaaPallolauta(ui) {
       for (const k of kaupungit) k.kayty = kaydyt.has(k.id);
     }
     helmet = reitit.paivita(valinta);
-    merkit.paivita({ nappula: liikkuu || lento || linssiPaalla() ? null : kohta, kohteet });
+    /*
+     * ENNAKKOZOOMIN AJAN NAPPULA ON LÄHTÖRUUDUSSAAN (Raamattu,
+     * KARTTAUUDISTUKSEN PAATOKSET 40).
+     *
+     * `ui.run` ajaa `game.actionMove`n ENNEN animaatiota, joten
+     * `player.pos` on jo määränpää, mutta nappulaa ei ole vielä
+     * poimittu laudalta (`movingPlayerId` nousee vasta ennakkozoomin
+     * jälkeen, jotta ruudulla on zoomin ajan tavallinen nappula).
+     * Ilman tätä se tavallinen nappula seisoisi VÄÄRÄSSÄ PÄÄSSÄ koko
+     * ennakkozoomin ajan ja hyppäisi sitten takaisin lähtöön, kun
+     * liikkuva kopio syntyy. Ennen 18.9.2026 vika välähti vain
+     * hengähdyksen ajan, koska ennakkozoomin ajo keskeytyi heti;
+     * kun zoomi ajetaan loppuun, väärä paikka näkyisi sekunnin.
+     *
+     * `ui.siirtoKaynnissa` on siirron LÄHTÖpaikka (js/ui.js
+     * animatePawnSisalla), joten sama lippu kertoo sekä "älä sukella
+     * teleportin perään" että "piirrä nappula tähän".
+     */
+    const nappulanKohta = !liikkuu && ui.siirtoKaynnissa
+      ? (pallonKohta(ui.siirtoKaynnissa) ?? kohta)
+      : kohta;
+    merkit.paivita({ nappula: liikkuu || lento || linssiPaalla() ? null : nappulanKohta, kohteet });
     paivitaPisteet();
     pyydaLadonta();
     /*
@@ -4219,6 +4263,27 @@ export async function avaaPallolauta(ui) {
     if (asetaVaritasonMaa(korostusIso) || (korostusIso && !maanLaatikko)) {
       if (!korostusIso) {
         maanLaatikko = null;
+        /*
+         * KATON MUISTI NOLLATAAN MYÖS TÄSSÄ (Raamattu, KARTTAUUDISTUKSEN
+         * PAATOKSET 40; sama syy kuin maailmatilassa yllä).
+         *
+         * MITATTU JUURISYY (390 × 844, Marseille → Lyon, 18.9.2026):
+         * siirron ensimmäinen teko on `matkanKerma(true)` → `paivita`,
+         * ja siinä korostusmaa katoaa (nappula lähtee kaupungista
+         * reitille), joten maan uloszoomauskatto häviää. Silloin
+         * `tahdistaZoomirajat` näki katon nousevan ja `kattoPuristus`
+         * PALAUTTI kameran siihen korkeuteen, jossa se oli ENNEN
+         * saapumista: yhdellä kehyksellä 0,205 → 2,500 eli maan
+         * näkymästä koko pallolle. Ennakkozoomi lähti siitä alas, mutta
+         * nappula ehti liikkeelle ensin, ja yksi askel oli ruudulla 10
+         * px — juuri se, minkä omistaja näki (*"kartan pitaisi zoomautua
+         * lahemmas pelinappulaa kun se liftaa pisteiden valilla"*).
+         *
+         * Katon nousu on tässä TAHALLINEN (matka on määritelmän mukaan
+         * maan ikkunaa isompi), eikä se ole pelaajan oman zoomin
+         * vapautus — joten muistia ei ole mitään palautettavaa.
+         */
+        kattoPuristus = null;
         tahdistaZoomirajat();
       } else {
         // Sama laatikko kuin `saavu`lla: paneelilla laajennettu.
@@ -4257,8 +4322,33 @@ export async function avaaPallolauta(ui) {
      * ennen `actionFly`ta ja nollaa vasta kun nappula on maassa. Perillä
      * kuljettajan `laske()` merkitsee paikan (merkitseNappulanPaikka) ja
      * ajaa saapumisrajauksen itse, joten mitään ei jää ajamatta.
+     *
+     * EIKÄ MAA- JA MERIMATKALLA (`ui.siirtoKaynnissa`, Raamattu
+     * KARTTAUUDISTUKSEN PAATOKSET 40; mitattu pinotiedolla 18.9.2026,
+     * 1400 × 900, Marseille → Lyon).
+     *
+     * SAMA ANSA KUIN LENNOSSA, YKSI AUKKO MYÖHEMMIN. `ui.run` ajaa
+     * `game.actionMove`n ENNEN animaatiota, joten pelaajan paikka on jo
+     * määränpää, ja `ui.movingPlayerId` asetetaan vasta ennakkozoomin
+     * JÄLKEEN (niin että nappula näkyy laudalla zoomin ajan). Siinä
+     * välissä siirron ensimmäinen teko `matkanKermattomuus(true)` →
+     * `paivita()` luki paikanvaihdon teleportiksi ja käynnisti tästä
+     * `saavu()`n. `saavu` on asynkroninen (se odottaa
+     * saapumislaatikkoa), joten sen oma `ajaKamera` osui ennakkozoomin
+     * päälle vasta muutama millisekunti myöhemmin:
+     *
+     *   t =  9 ms  ennakkozoomi   ajaKamera(leveys 396, kesto 1054)
+     *   t = 10 ms  saavu → kotiin ajaKamera(leveys 240, saapuminen)
+     *              → pysaytaKameraAjo() → ennakon lupaus = false
+     *
+     * Ennakkozoomin `await` ratkesi siis 1 ms:ssä, ja koreografian
+     * sääntö *"kartta saisi zoomautua lähemmäksi ensin ja sitten vasta
+     * pelaaja alkaisi liikkua"* jäi kokonaan toteutumatta. Ohjelmallinen
+     * tilanvaihdos EI ole pelaajan ele, joten se ei saa keskeyttää
+     * ennakkoa — lippu on päällä koko koreografian ajan ja perillä
+     * kuljettajan `laske()` merkitsee paikan kuten lennossakin.
      */
-    if (!liikkuu && !lento && !ui.lentoKaari && pos) {
+    if (!liikkuu && !lento && !ui.lentoKaari && !ui.siirtoKaynnissa && pos) {
       if (nappulanPaikka !== null && nappulanPaikka !== posAvain) {
         void saavu({ kesto: PALLOKAMERAN_AJO_MS });
       }

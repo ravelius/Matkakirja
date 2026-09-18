@@ -29,6 +29,23 @@
  * TAULUN PÄIVITYS: aja `node tools/vie-nostoankkurit.mjs` (Playwright,
  * 390 px) ja polta laatat samasta taulusta — kaksi lukua, yksi lähde.
  * Käsin ei muokata.
+ *
+ * MIKSI `nosto-maalehti-cinematographe` EI OLE TAULUSSA (tarkistettu
+ * 18.9.2026, docs/raportit/viesti-fable-poltto-kohdemaa-20260918.md
+ * avoin 1). Se on Ranskan ainoa nosto, jolta lukittu ankkuri puuttuu, ja
+ * SE ON OIKEIN: noston oma paikka on **Lyon** (js/packs/maalehtinostot-
+ * fra.js `paikka.nimi: 'Lyon'`, 45,7675 N / 4,835 E), ja Lyon on kartan
+ * kaupunkipiste `nakyva-kaupunki-lyon` (45,773 N / 4,829 E, 0,6 km
+ * päässä). `onKaupunginSisainen` sanoo sen sisäiseksi KAHTA tietä —
+ * datan oma polku (paikkanimi = kaupungin nimi) ja säde — joten peli ei
+ * piirrä sitä kartalle millään zoomilla (PAATOKSET 34 kohdat 2-3,
+ * js/pallolauta/nostot.js `sisaisetAvaimet`); se avautuu Lyonin
+ * kaupunkiliuskasta ja Lyonin kaupunkikortin nostolohkosta
+ * (`NAKYVAT_KAUPUNGIT_FRA` kenttä `korttiNosto`). Lukittu ankkuri
+ * polttaisi siis mustetta paikkaan, johon elävä kerros ei piirrä
+ * merkkiä — kaupunki lakkaisi olemasta yksi piste. Vartio on
+ * `tools/lukitse-nostoankkurit-maalle.mjs`, joka rajaa saman ehdon ja
+ * jättää rivin lisäämättä (kuiva-ajo 18.9.2026: 62 ankkuria, 0 uutta).
  */
 
 /** Nostokerroksen rivin avain → kartta-ankkuri (asteina). */

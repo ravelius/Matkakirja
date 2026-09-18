@@ -22,9 +22,12 @@
     "savuke-ihmisen-esitys.mjs",
     "savuke-pallo-nostolaput.mjs",
     "savuke-nimikyltti.mjs",
+    "savuke-luentakuvat.mjs",
     "savuke-kerma-reuna.mjs",
     "savuke-ranskan-nostot-lukossa.mjs",
-    "savuke-maailmatila-zoomi.mjs"
+    "savuke-maailmatila-zoomi.mjs",
+    "savuke-reittihelmet.mjs",
+    "savuke-siirtozoomi.mjs"
   ],
   "asetukset": {
     "savuke-ihmisen-kappaleet.mjs": {
@@ -158,10 +161,7 @@
     },
     "savuke-topografialinssi.mjs": {
       "huomautusMac": "TUNNETTU MAC-PUNAINEN POISTETTU 18.9.2026 (Raamattu TARKENNUS 11 kohta 24 b). Vartio 'avauksessa ei ole valahdysta suhteessa linssin lopputilaan' hailyi kuormassa (paluu alas 19,4 vs raja 15; yksin ajettuna 4,0). Savuke ottaa nyt kolme naytetta JA KAYTTAA MEDIAANIA, mutta vain jos ensimmainen nayte on punainen - vihrea kertakaynti riittaa, koska kuormahaily tekee mittauksesta punaisen eika vihreaa. Rajat (8 kehysta, 60 %, VALAHDYSVARA 15) ovat ennallaan. Jos tama nousee punaiseksi, se on kolmen nayteen mediaani eika yksi pudonnut kehys.",
-      "tunnetutPunaiset": [
-        "nimiön kontrasti reunusta vasten >= 4.5:1 tummimmalla reliefillä"
-      ],
-      "huomautus": "TUNNETTU PUNAINEN 18.9.2026 (v1945, reliefivelat-era, docs/raportit/viesti-fable-reliefi-velat-20260918.md): uusi kontrastimitta (z7, pelin laatat, mediaani) antaa tummimmalla reliefilla 4,19 ja vaaleimmalla 4,74 taydella reunuksella x 4 vetoa (ennen 3,62/4,41). Velka: leveampi reunus tai nostotason musteen uusintapoltto linssille - Fablen valinta, oma era. Vartio jaa mittaamaan; poistetaan listalta kun >= 4,5."
+      "huomautus": "TUNNETTU PUNAINEN POISTETTU 18.9.2026 (era 'nimion kontrasti', docs/raportit/viesti-fable-nimion-kontrasti-20260918.md). Velka oli: taysi pergamenttireunus x 4 vetoa antoi tummimmalla reliefilla 4,19 ja vaaleimmalla 4,74. Korjaus on kaksipuolinen eika leveampi reunus: reunus (252,249,242) ja nimion muste linssin ajaksi (43,29,16, js/pallolaatat.js NIMION_MUSTE, source-in eli alfa ja siis ladonta ennallaan). Mitattu Chromiumilla 10,30/11,58 ja WebKitilla 10,29/11,63, kun sama savuke kokoaa samasta laatasta myos v1945:n asetuksen vertailuksi (4,23/4,26 ja 4,73/4,75). Jos tama nousee punaiseksi, kyse on oikeasta muutoksesta nimiossa tai reliefissa."
     },
     "savuke-pariisi-lahizoom.mjs#390-perus": {
       "env": {
@@ -199,11 +199,23 @@
       "kuvakansio": true,
       "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. LIUSKA-LOHKO: kaupunkiliuskan vartiot 8a-8n. Lohko siirrettiin savukkeessa omaan silmukkaansa MUUTTAMATTA yhtaan vaitetta; se avaa oman sivun ja oman zoomin (oma 44 s saapuminen on jaon hinta). Ruutu 1400 px. Tunnettuja punaisia ei ole: 18.9.2026 mitattu 390 px:lla 17/17 vihreaa yksin ajettuna."
     },
+    "savuke-luentakuvat.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Luentakuvien savuke (PAATOKSET 35 + TARKENNUS 2 ja PAATOKSET 38). Nimetty 18.9.2026 mittaa-luentakuvat.mjs -> savuke-luentakuvat.mjs, koska rakenna-matriisi.mjs hyvaksyy julkaisusarjaan vain savuke-*.mjs -tiedostoja. Ajaa Pariisin saapumisen 390 x 844 (paavartiot, kaappaukset) ja PAATOKSET 38:n vartiot MOLEMMILLA ruuduilla (390 ja 1400), koska saanto \"tekstit piilossa\" on nimenomaan kaikille laitteille."
+    },
     "savuke-astro-pallo.mjs#vartija-c": {
       "env": {
         "NAKYMAT": "vartija-c"
       },
       "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. Vaitteen 9 vastakoelohkon KOLMAS puolisko: pinta estetty ja Mac-kotelon vastakoe. Lohko jaettiin kahdesta kolmeen 18.9.2026, koska #vartija-a mitattiin 168 s:ksi (yli kahden minuutin tavoitteen) ja #vartija-b 128 s:ksi. Ks. #vartija-a."
+    },
+    "savuke-reittihelmet.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Valipisteet paatepisteen kokoisina ilman punaista (Raamattu KARTTAUUDISTUKSEN PAATOKSET 39). Ajaa Marseillen siirtovaiheen 390 x 844 ja 1400 x 900, kaksi zoomia (0,35 ja 0,15): helmen ulkohalkaisija = reitin varren kohdemerkin ympyra (15 px) +- 1 px, ei punaista helmessa, punainen rengas yha paatepisteessa, fps >= 50. Kaappaukset ennen/jalkeen tools/savukkeet/kaappaukset/reittihelmet."
+    },
+    "savuke-siirtozoomi.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Siirtozoomi (Raamattu KARTTAUUDISTUKSEN PAATOKSET 40). Seitseman vartiota per ruutu (390 x 844 ja 1400 x 900, dpr 2, Marseillen maasiirto silmaluvulla 3): 1 siirto ei vie kauemmas kuin lahtonakyma, 2 askel ruudulla >= 25 % lyhyemmasta sivusta, 3 katto pitaa (40 / 60 lautayksikkoa), 4 nappula keskimmaisella 60 %:lla koko saaton ajan, 5 saaton kesto +-10 % siirtoajonKesto(n) antamasta, 6 ei sivuvirheita, 7 ENNAKKOZOOMI VALMIS ENNEN NAPPULAN LAHTOA (kameran korkeus tavoitteessa +-5 % silla kehyksella, jolla nappula irtoaa laudalta; PAATOKSET 40 kohta 1, lisatty 18.9.2026). EI JAETTU RIVIKSI: Mac-mittaus 18.9.2026 molemmat ruudut samassa prosessissa 44 s, siis selvasti alle kahden minuutin tavoitteen (TARKENNUS 11 kohta 24). SAVUKE_RUUTU=390|1400 rajaa yhteen ruutuun, jos rivi joskus pitaa jakaa. Mac-mittaus 18.9.2026: 14/14 vihreaa, ei tunnettuja punaisia. Vartio 2 osuu tyopoytaruudulla TASMALLEEN 25 %:n rajalle (askelenSiirtoleveys tahtaa siihen), joten savukkeessa on ASKELEN_SIETO 0,99 pyoristysvarana. Kaappaukset ennakko-390.png (ennakkozoomin lopussa, nappula viela paikallaan), saatto-390.png ja saatto-1400.png."
     }
   }
 }

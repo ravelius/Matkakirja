@@ -3256,7 +3256,16 @@ export function pienennaLuentakuva(ui) {
   if (!LUENTAKUVAPAKKA_KARTALLA) {
     clearTimeout(ui.luentakuvaAjastin);
     ui.luentakuvaAjastin = null;
-    piilotaLuentakuva(ui);
+    /*
+     * ANKKUROITU KUVA LENTÄÄ SAMAA TIETÄ (PAATOKSET 38 kohta 2). Tämä
+     * on ankkuroidun paneelin poistumishetki — luennan loppu
+     * (pienennaLuennanJalkeen) ja kartan liike (kytkeLuentakuvanPienennys)
+     * — eli täsmälleen se sama tapahtuma, jossa iso keskisarja lentää.
+     * Lento vie kuvan, joten paneeli puretaan heti eikä häivytyksellä.
+     */
+    const lentoja = lennataKuvatMatkakirjaan(ui,
+      [...paneeli.querySelectorAll('.fokusvirta-kuva')]);
+    piilotaLuentakuva(ui, { heti: Boolean(lentoja) });
     return true;
   }
   /*
@@ -4189,6 +4198,21 @@ export function ohitaSaapumisluenta(ui, city = null) {
    */
   if (kohde?.id) ui.luennanOhitus = kohde.id;
   /*
+   * OHITA LAUKAISEE SAMAN LENNON (PAATOKSET 38 kohta 2: *"sarjan loppu,
+   * Ohita, kartan liike"*).
+   *
+   * LENTO ON ENNEN VAIENNUSTA, EI SEN JÄLKEEN. `vaiennaLivianKaupunkipuhe`
+   * on kaupungista lähdön tie, ja se vie luentakuvan mukanaan
+   * (piilotaLuentakuva → piilotaLuentakuvasarja) — sen jälkeen ei ole
+   * enää mitään, mistä lento lähtisi. Mitattu 18.9.2026: siivouksen
+   * perässä lentoja 0. Kuvat luetaan siis tässä, ruudulta, ja
+   * siivous purkaa jo tyhjän päällyksen.
+   */
+  lennataKuvatMatkakirjaan(ui, [
+    ...(ui.luentakuvasarja?.kehys?.querySelectorAll?.('.fokusvirta-isokuva-ruutu') ?? []),
+    ...(ui.luentakuva?.querySelectorAll?.('.fokusvirta-kuva') ?? []),
+  ]);
+  /*
    * PULUN PUHEENVUORO KIINNI SAMALLA (omistaja 18.9.2026, PAATOKSET 35
    * TARKENNUS 2 kohta 6: *"Ohita ei lopeta pulun luentaa"*).
    *
@@ -4232,6 +4256,143 @@ export function luentaOhitettu(ui, city = null) {
   return Boolean(tunnus && ui?.luennanOhitus === tunnus);
 }
 
+/* ========== KUVAT LENTÄVÄT PIENENNETTYYN MATKAKIRJAAN ==============
+ *
+ * Omistaja 18.9.2026 klo 20.10 (Raamattu KARTTAUUDISTUKSEN PAATOKSET
+ * 38 kohta 2), sanatarkasti: *"kun kuvat siirtyvat matkakirjaan, niin
+ * se pitaisi vain nakya animaationa, missa kuvat lentavat matkakirjan
+ * ylareunaan, mutta matkakirja itse pysyy pienennettyna."*
+ *
+ * KOLME ASIAA, JOTKA EIVÄT NÄY DIFFISTÄ:
+ *
+ *  1. LENTO EI KOSKE MATKAKIRJAAN. Lappu (.fact-card.pieni) luetaan
+ *     vain maalin laskemiseksi (getBoundingClientRect) — kokoa,
+ *     luokkaa eikä avaustilaa ei muuteta. Jos pelaaja on avannut
+ *     kortin itse, kuva lentää auki olevan kortin yläreunaan
+ *     sellaisenaan: avaaminen ja sulkeminen ovat pelaajan omia
+ *     tekoja (PAATOKSET 38 kohta 1).
+ *
+ *  2. KLOONI OMASSA KERROKSESSAAN, EI ALKUPERÄINEN KUVA. Isot kuvat
+ *     asuvat `.stage`-päällyksessä, joka puretaan samalla hetkellä
+ *     (paataLuentakuvasarja) — animoitava elementti katoaisi kesken
+ *     lennon. Klooni on kevyt `img` omassa kiinteässä kerroksessaan,
+ *     joten päällyksen purku ja lento eivät kilpaile keskenään. Siksi
+ *     päällys myös poistetaan HETI, kun lento lähti: muuten sama kuva
+ *     sekä häipyisi paikalleen että lentäisi.
+ *
+ *  3. SAMA FLIP KUIN SUURENNOKSELLA (avaaSuurennos → ankkuriMuunnos):
+ *     lähtölaatikko luetaan ruudulta, maali lasketaan lapusta, ja
+ *     matka tehdään yhdellä `transform`-siirtymällä samalla
+ *     pehmennyksellä (SUURENNOS_PEHMENNYS). Toista animaatiokonetta ei
+ *     synny.
+ */
+
+/** Yhden kuvan lento: omistajan mitta on "animaatio", n. 0,6 s. */
+const KUVALENNON_MS = 600;
+
+/** Kuvat lähtevät vuorotellen: seuraava tämän verran myöhemmin. */
+const KUVALENNON_PORRAS_MS = 120;
+
+/** Häipymä perillä: kuva sulaa lapun yläreunaan eikä jää siihen. */
+const KUVALENNON_HAIVE_MS = 220;
+
+/**
+ * Pikkukuvan leveys pikseleinä (css .fact-pikkukuva: 3,1 rem). Mitta
+ * luetaan juuren fonttikoosta, jotta selaimen oma tekstikoko ei jätä
+ * lennon maalia eri kokoon kuin kortin pikkukuvarivi.
+ */
+function matkakirjanPikkukuvanLeveys() {
+  const juuri = globalThis.document?.documentElement;
+  const koko = Number.parseFloat(
+    globalThis.getComputedStyle?.(juuri)?.fontSize ?? '',
+  );
+  return 3.1 * (Number.isFinite(koko) && koko > 0 ? koko : 16);
+}
+
+/** Lentävien kuvien oma kerros (kiinteä, ei ota napautuksia). */
+function lentokerros() {
+  const olemassa = document.querySelector('.fokusvirta-lentokerros');
+  if (olemassa) return olemassa;
+  const kerros = html('div', 'fokusvirta-lentokerros');
+  kerros.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(kerros);
+  return kerros;
+}
+
+/**
+ * KUVAT LENTÄVÄT MATKAKIRJALAPUN YLÄREUNAAN.
+ *
+ * @param {object} ui
+ * @param {Array<Element>} elementit lähtevät kuvat siinä järjestyksessä,
+ *   jossa ne lentävät (ensimmäinen ensin, muut porrastettuna)
+ * @returns {number} montako kuvaa lähti lentoon
+ */
+export function lennataKuvatMatkakirjaan(ui, elementit = []) {
+  if (typeof document === 'undefined' || ui?.dead) return 0;
+  /*
+   * VÄHEMMÄN LIIKETTÄ: EI LENTOA (omistajan päätös, PAATOKSET 38).
+   * Kutsuja saa nollan ja häivyttää kuvan paikalleen entiseen tapaan.
+   */
+  if (liikeVahennetty()) return 0;
+  const lahteet = [...elementit].filter((e) => typeof e?.getBoundingClientRect === 'function');
+  if (!lahteet.length) return 0;
+  // Maali luetaan lapusta LENNON ALUSSA. Jos lappua ei ole DOMissa tai
+  // se on piilossa, lentoa ei ole — kuva häipyy paikalleen.
+  const maali = document.querySelector('.fact-card')?.getBoundingClientRect?.();
+  if (!maali?.width || !maali?.height) return 0;
+  const leveys = matkakirjanPikkukuvanLeveys();
+  const kerros = lentokerros();
+  let lentoja = 0;
+  for (const lahde of lahteet) {
+    const kuva = lahde.querySelector?.('img') ?? lahde;
+    const alkuun = kuva.getBoundingClientRect();
+    if (!alkuun.width || !alkuun.height) continue;
+    const osoite = kuva.currentSrc || kuva.src || '';
+    if (!osoite) continue;
+    const klooni = html('div', 'fokusvirta-lento');
+    const img = document.createElement('img');
+    img.src = osoite;
+    img.alt = '';
+    img.decoding = 'async';
+    img.draggable = false;
+    klooni.appendChild(img);
+    klooni.style.left = `${alkuun.left.toFixed(1)}px`;
+    klooni.style.top = `${alkuun.top.toFixed(1)}px`;
+    klooni.style.width = `${alkuun.width.toFixed(1)}px`;
+    klooni.style.height = `${alkuun.height.toFixed(1)}px`;
+    /*
+     * KUTISTUS PIKKUKUVAN KOKOON, EI KOSKAAN KASVATUS: lähtölaatikko on
+     * aina isompi kuin kortin pikkukuva, mutta pulun pieni kortti voi
+     * kapeimmalla ruudulla olla jo valmiiksi sitä pienempi.
+     */
+    const skaala = Math.min(1, leveys / alkuun.width);
+    // Lapun YLÄREUNAN KESKELLE: kuvan vasen reuna keskitetään lapun
+    // keskilinjaan ja yläreuna lapun yläreunaan.
+    const dx = maali.left + maali.width / 2 - (alkuun.width * skaala) / 2 - alkuun.left;
+    const dy = maali.top - alkuun.top;
+    const viive = lentoja * KUVALENNON_PORRAS_MS;
+    klooni.style.transition = `transform ${KUVALENNON_MS}ms ${SUURENNOS_PEHMENNYS} ${viive}ms, `
+      + `opacity ${KUVALENNON_HAIVE_MS}ms linear ${viive + KUVALENNON_MS - KUVALENNON_HAIVE_MS}ms`;
+    kerros.appendChild(klooni);
+    // Lähtöasento selaimen tietoon ennen maalia, tai siirtymää ei synny.
+    void klooni.offsetWidth;
+    const lennata = () => {
+      if (!klooni.isConnected) return;
+      klooni.style.transform = `translate(${dx.toFixed(1)}px, ${dy.toFixed(1)}px) `
+        + `scale(${skaala.toFixed(4)})`;
+      klooni.style.opacity = '0';
+    };
+    globalThis.requestAnimationFrame?.(lennata);
+    setTimeout(lennata, 32);
+    setTimeout(() => {
+      klooni.remove();
+      if (!kerros.childElementCount) kerros.remove();
+    }, viive + KUVALENNON_MS + 120);
+    lentoja += 1;
+  }
+  return lentoja;
+}
+
 /**
  * SARJA POIS ILMAN PAKKAA — kaupungista lähtö, laudan vaihto, uusi
  * luenta. Tämä on siivous, ei päätös: kartalle ei jää mitään.
@@ -4266,8 +4427,17 @@ export function paataLuentakuvasarja(ui, { heti = false } = {}) {
   ui.luentakuvasarja = null;
   for (const t of tila.ajastimet) clearTimeout(t);
   tila.irrota?.();
+  /*
+   * KUVAT LENTÄVÄT MATKAKIRJAAN (PAATOKSET 38 kohta 2). Tämä on sarjan
+   * loppu KAIKILLA sen kelloilla: isoisän ja pulun luennan päättyminen
+   * (ISON_KUVAN_LOPPU_MS) sekä kartan liike (heti). Jos lento lähti,
+   * päällys puretaan heti — häivytys paikalleen näyttäisi muuten saman
+   * kuvan kahtena.
+   */
+  const lentoja = lennataKuvatMatkakirjaan(ui,
+    [...kehys.querySelectorAll('.fokusvirta-isokuva-ruutu')]);
   const poista = () => kehys.remove();
-  if (heti || liikeVahennetty()) poista();
+  if (heti || liikeVahennetty() || lentoja) poista();
   else {
     kehys.classList.remove('nakyy');
     setTimeout(poista, ISON_KUVAN_POISTUMA_MS);

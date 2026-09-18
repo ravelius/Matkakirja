@@ -856,6 +856,9 @@ for (const ruutu of RUUDUT) {
               vw: Math.round(window.visualViewport?.width || window.innerWidth),
               vh: Math.round(window.visualViewport?.height || window.innerHeight),
               kortinLeveys: Math.round(kortti.getBoundingClientRect().width),
+              // Kohta 18 g: arkin kartalta poistetut +/- -painikkeet eivät
+              // saa palata kokoruudussa (js/nahtavyydet.js zoomiNapit).
+              zoomiNappeja: kortti.querySelectorAll('.kartta-zoomi-nappi').length,
               lavanKorkeus: Math.round(lr.height),
               lavanLeveys: Math.round(lr.width),
               kehyksenKorkeus: Math.round(kr.height),
@@ -869,6 +872,18 @@ for (const ruutu of RUUDUT) {
           vaadi(`${tunnus}: kokoruutu avautuu leveyteen sovitettuna (>= 97 % leveydestä)`,
             Boolean(avaus) && avaus.kortinLeveys >= avaus.vw * 0.97,
             `kortti ${avaus?.kortinLeveys ?? '-'} px / ruutu ${avaus?.vw ?? '-'} px`);
+          /*
+           * PLUS JA MIINUS POIS MYÖS KOKORUUDUSTA (kohta 18 g). v1944
+           * otti napit nähtävyysarkin kartalta, mutta kokoruutu rakensi
+           * omansa ehdoitta — sama päätös oli siis voimassa vain siihen
+           * asti, kunnes pelaaja levitti kartan. Väite mittaa sen, mitä
+           * ruudulla on: suurennoksessa ei ole yhtään zoomipainiketta,
+           * ja alla olevat väitteet todistavat, että nipistys, raahaus
+           * ja napautus toimivat silti.
+           */
+          vaadi(`${tunnus}: +/− -painikkeita kokoruudussa 0`,
+            Boolean(avaus) && avaus.zoomiNappeja === 0,
+            `zoomipainikkeita ${avaus?.zoomiNappeja ?? '-'}`);
           if (avaus) {
             /*
              * NIPISTYS KAHDEN SORMEN KOSKETUSTAPAHTUMINA. Playwrightilla

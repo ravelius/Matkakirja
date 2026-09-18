@@ -746,9 +746,15 @@ test('rulla: kaappausvaiheessa, cmd/ctrl zoomaa, muuten panorointi ja pehmeä li
   }
   // Kamera-ajon keskeytys kuuntelee wheeliä samassa vaiheessa, muuten
   // stopPropagation veisi tapahtuman siltä (kuplinta ei enää tule).
+  // Syy on 'ele' (PAATOKSET 40): pelaajan rulla voittaa ajon, mutta
+  // ohjelmallinen tilanvaihdos ei saa käydä eleestä.
   assert.match(
     lue('../js/pallolauta/kamera.js'),
-    /addEventListener\('wheel', \(\) => pysaytaKameraAjo\(\), \{ passive: true, capture: true \}\)/,
+    /addEventListener\('wheel', \(\) => pysaytaKameraAjo\('ele'\), \{ passive: true, capture: true \}\)/,
+  );
+  assert.match(
+    lue('../js/pallolauta/kamera.js'),
+    /addEventListener\('pointerdown', \(\) => pysaytaKameraAjo\('ele'\)\)/,
   );
   // Nukkuva render-silmukka herää myös rullasta.
   assert.match(

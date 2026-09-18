@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1946, teksti: 'Tekstit piilossa, kuvat lentävät, välipisteet, siirtozoomi' },
   { v: 1945, teksti: 'Pisteet aina kohdemaassa, poltto kohdemaan säännöllä' },
   { v: 1944, teksti: 'Maailmatilan zoomi, Nayta puhekuplat, nahtavyyskartta' },
   { v: 1943, teksti: 'Hotfix: kerma WebKitissa (kohdemaa jai kerman alle)' },

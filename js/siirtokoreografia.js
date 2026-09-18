@@ -314,6 +314,63 @@ export const SAATON_PEHMENNYS = (t) => siirtoajonPehmennys(t);
  */
 export const SIIRTOZOOMIN_LAHENNYS = 2.0;
 /*
+ * ══════════════════════════════════════════════════════════════════
+ * ZOOMIN MITTA ON ASKEL, EI KERROIN (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 40)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistaja 18.9.2026 klo 20.50 Suomen aikaa (puhelintestin v1944
+ * löydös 4, kuva Marseillen siirtovaiheesta), sanatarkasti: *"kartan
+ * pitaisi zoomautua lahemmas pelinappulaa kun se liftaa pisteiden
+ * valilla."*
+ *
+ * MIKSI KERROIN EI RIITÄ. `SIIRTOZOOMIN_LAHENNYS` on suhteellinen: se
+ * kertoo, kuinka paljon lähemmäs SIITÄ näkymästä, jossa kamera
+ * sattuu olemaan. Se ei tiedä mitään siitä, kuinka pitkä yksi askel
+ * on — ja juuri askel on se, minkä pelaaja katsoo. Kun matka rajataan
+ * kokonaisuudessaan (matkarajaus), kuuden askeleen siirto mahtuu
+ * ruutuun kuutena kuudesosana, ja jokainen hyppy on ruudulla
+ * kymmenesosa ruutua. Sama zoomi on lyhyellä matkalla liian lähellä ja
+ * pitkällä liian kaukana, koska mitta on väärä.
+ *
+ * MITTA ON ASKEL JA RUUDUN LYHYEMPI SIVU. Tavoite on, että yksi askel
+ * (piste → piste) on vähintään neljännes ruudun lyhyemmästä sivusta:
+ * puhelimen pystyruudulla se on leveys, työpöydän vaakaruudulla
+ * korkeus, eli se sivu, jonka yli liike ehtii lukea liikkeeksi
+ * kummassakin asennossa. Neljännes on mitattu eikä arvattu: sitä
+ * pienemmällä osuudella hyppy jää omistajan kuvan mittaiseksi
+ * nyökkäykseksi, ja sitä isommalla kolmen askeleen matka ei enää mahdu
+ * ruutuun lainkaan (nappula karkaisi keskialueelta saaton aikana).
+ *
+ * KATTOA EI OLE TÄSSÄ. Funktio kertoo vain, mitä askel VAATII; kuinka
+ * lähelle laite antaa mennä, on kameran oma asia (pallolla
+ * korkeusMin(), PAATOKSET 34 kohta 15 c: puhelin 40, muut 60
+ * lautayksikköä). Näin sama kaava kelpaa kummallekin laudalle eikä
+ * koreografia tunne laitetta.
+ */
+/** Askelen vähimmäisosuus ruudun lyhyemmästä sivusta. */
+export const ASKELEN_VAHIN_OSUUS = 0.25;
+
+/**
+ * Näkyvä leveys (laudan yksikköä RUUDUN LEVEYDELLÄ), jolla yhden
+ * askeleen pituus `askelYks` on ruudulla vähintään `osuus` ruudun
+ * lyhyemmästä sivusta. Null, jos mitat puuttuvat.
+ *
+ * Puhdas funktio ja oma nimensä samasta syystä kuin jalkamatkanAskel:
+ * tämä on se yksi paikka, jossa siirtozoomin syvyys lasketaan, ja
+ * tests/siirtokoreografia.test.mjs vartioi sitä lukuina.
+ *
+ * @param {number} askelYks askelen pituus laudan yksikköinä
+ * @param {number} leveysPx karttaruudun leveys (css-pikseliä)
+ * @param {number} korkeusPx karttaruudun korkeus (css-pikseliä)
+ */
+export function askelenSiirtoleveys(askelYks, leveysPx, korkeusPx, osuus = ASKELEN_VAHIN_OSUUS) {
+  if (!(askelYks > 0) || !(leveysPx > 0) || !(korkeusPx > 0) || !(osuus > 0)) return null;
+  const lyhyempi = Math.min(leveysPx, korkeusPx);
+  // Vaadittu mittakaava (px / lautayksikkö) → näkyvä leveys ruudun leveydellä.
+  return (leveysPx * askelYks) / (osuus * lyhyempi);
+}
+/*
  * Ennakkozoomin kesto ja sen jälkeinen hengähdys.
  *
  * 760 ms on lyhyempi kuin kartan muut ajot (kartta.js AJO_MS 2000,
@@ -324,6 +381,25 @@ export const SIIRTOZOOMIN_LAHENNYS = 2.0;
  */
 export const ENNAKKOZOOMIN_MS = 760;
 export const ENNAKON_HENGAHDYS_MS = 120;
+/*
+ * MONTAKO KERTAA ENNAKKOZOOMI JATKETAAN, JOS OHJELMA KESKEYTTI SEN
+ * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 40).
+ *
+ * `ajaKamera` palauttaa `false` sekä pelaajan eleestä että siitä, että
+ * jokin muu ohjelman osa käynnisti oman ajonsa päälle. ELE VOITTAA on
+ * pelin sääntö ja pysyy: eleestä luovutaan heti ja nappula lähtee siitä
+ * näkymästä, jonka pelaaja valitsi. OHJELMALLINEN tilanvaihdos ei ole
+ * ele, ja se katkaisi koreografian ensimmäisellä millisekunnilla
+ * (mitattu 18.9.2026, ks. js/pallolauta/lauta.js teleporttivahti).
+ * Juurisyy on korjattu, ja tämä on sen varmistin: ennakko jatketaan
+ * JÄLJELLÄ OLEVALLA ajalla, ei uudella kestolla, joten koko vaihe
+ * pysyy ENNAKKOZOOMIN_MS:n mittaisena eikä kerrannu.
+ *
+ * Kaksi jatkoa riittää ja on ehdoton yläraja: kolmas ohjelmallinen
+ * keskeytys 760 ms:n sisällä tarkoittaisi, että kartalla tapahtuu jotain
+ * muuta tärkeämpää — silloin koreografia väistää.
+ */
+export const ENNAKON_JATKOT = 2;
 /*
  * Montako reitin ensimmäistä askelta ennakkozoomi ottaa rajaukseensa
  * nappulan lisäksi. Kaksi askelta kertoo katsojalle SUUNNAN — mihin

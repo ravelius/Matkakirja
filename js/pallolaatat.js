@@ -827,8 +827,19 @@ export const LAATTAKERROS_SYVYYSSIIRTO = -8;
  * tulee kirjaimen viereen. Sävy pysyy pergamenttina, mutta veto on nyt
  * täysi ja vetoja on neljä — mitä lähempänä kirjainta, sitä vankempi
  * reunus, ja ulompana se yhä liukuu maastoon eikä ole laatikko.
+ *
+ * SÄVY KIRISTETTIIN VIELÄ (18.9.2026, erä "nimiön kontrasti"): pergamentti
+ * (247, 241, 224) → (252, 249, 242). Se on viisi luminanssiprosenttia
+ * vaaleampi mutta yhä lämmin eikä valkoinen, joten lumirajan päällä
+ * reunuksella on yhä oma sävynsä. Kaksi muuta kokeiltua tietä mitattiin
+ * samalla (ks. docs/raportit/viesti-fable-nimion-kontrasti-20260918.md):
+ * VIIDES VETO yksin (poltettu muste, vanha sävy) nosti tummimman
+ * kolmanneksen 4,23 → 4,61 eli vain 0,11 rajan yli, ja viides veto
+ * yhdessä musteen kanssa antoi 11,32 — sen verran enemmän kuin
+ * pelkkä muste (10,30), ettei ylimääräinen koko laatan veto maksa
+ * itseään takaisin. Vetoja on siis yhä NELJÄ.
  */
-export const NIMION_HALO = 'rgb(247, 241, 224)';
+export const NIMION_HALO = 'rgb(252, 249, 242)';
 /** Reunuksen leveys laatan omissa pikseleissä (laatta on 512 px). */
 export const NIMION_HALO_PX = 3;
 /**
@@ -836,6 +847,70 @@ export const NIMION_HALO_PX = 3;
  * tummimman rinteen päällä (ks. mittaus yllä).
  */
 export const NIMION_HALO_VETOJA = 4;
+/*
+ * NIMIÖN MUSTE LINSSIN AJAKSI (18.9.2026, erä "nimiön kontrasti").
+ *
+ * MIKSI MUSTEESEEN KOSKETAAN VASTA NYT. Neljä täyttä halovetoa nosti
+ * mitatun suhteen 3,62 → 4,19 (tummin reliefikolmannes, mediaani), ja
+ * 4,5:1 jäi silti saavuttamatta. Musteen kanssa sama mitta on 10,30
+ * (tummin) ja 11,58 (vaalein), ja LADONTA ON PIKSELILLEEN ENNALLAAN:
+ * savuke kokoaa saman laatan myös v1945:n asetuksella ja vertaa
+ * laatikoita — leveys 0 px, korkeus 0 px, reliefin peitto 10,11×
+ * mustepikseli molemmilla. Loput ei tule reunuksesta: reunus on
+ * jo lähes pergamentin vaaleus, ja se, mitä kirjaimen VIERESTÄ mitataan,
+ * on aina reunuksen ja rinteen sekoitus. Suhteen toinen puoli on
+ * teksti, ja se on seepiakarttaa varten poltettua HAALEAA harmaata
+ * (mitattu 82, 71, 54) — vaalealla pergamentilla oikea sävy, mutta
+ * reliefin päällä se antaa pois sen kontrastin, jonka reunus juuri
+ * hankki.
+ *
+ * MUSTE VÄRITETÄÄN UUDELLEEN LINSSILLE, EI POLTETA UUDELLEEN. Nimiö on
+ * laatan pikseleissä, mutta sen ALFA on se, mikä kantaa ladonnan: kun
+ * laatta maalataan `source-in`-vedolla yhdellä tummalla sävyllä, jokainen
+ * pikseli säilyttää oman peittävyytensä ja siis oman muotonsa — kirjaimen
+ * leveys, korkeus ja pehmennys ovat pikselilleen samat kuin poltossa.
+ * Vain sävy vaihtuu. Uusintapoltto (raportin suositus) olisi yhä oikea
+ * korjaus KARTAN OMAAN musteeseen; tämä on linssin oma sävy eikä koske
+ * seepiakarttaa.
+ *
+ * `null` = muste sellaisena kuin se on poltettu (vertailuasetus).
+ */
+export const NIMION_MUSTE = 'rgb(43, 29, 16)';
+
+/*
+ * Linssin nimiölaatta uudessa musteessa. Kangas varataan kerran ja
+ * kierrätetään: laatta on aina saman kokoinen (512 px), ja väritys on
+ * kolme vetoa samalle pinnalle — ei uutta pikselijoukkoa per laatta.
+ * Kutsu tulee VAIN linssin haarasta (kerrokset.reliefi), eikä
+ * seepiakartan nimiöihin siis kosketa täältä lainkaan.
+ *
+ * Varareitti on paluu ALKUPERÄISEEN kuvaan: jos kangasta tai
+ * 2d-piirtopintaa ei jostain syystä saa (yksityinen tila, muisti),
+ * nimiö piirtyy sellaisena kuin se on poltettu — reunus kantaa yhä.
+ */
+let nimionKangas = null;
+function nimioLinssinMusteella(kuva, leveys, korkeus) {
+  if (!NIMION_MUSTE) return kuva;
+  try {
+    if (!nimionKangas || nimionKangas.width !== leveys || nimionKangas.height !== korkeus) {
+      nimionKangas = typeof OffscreenCanvas === 'function'
+        ? new OffscreenCanvas(leveys, korkeus)
+        : Object.assign(document.createElement('canvas'), { width: leveys, height: korkeus });
+    }
+    const c = nimionKangas.getContext('2d');
+    if (!c) return kuva;
+    c.globalCompositeOperation = 'source-over';
+    c.clearRect(0, 0, leveys, korkeus);
+    c.drawImage(kuva, 0, 0, leveys, korkeus);
+    c.globalCompositeOperation = 'source-in';
+    c.fillStyle = NIMION_MUSTE;
+    c.fillRect(0, 0, leveys, korkeus);
+    c.globalCompositeOperation = 'source-over';
+    return nimionKangas;
+  } catch {
+    return kuva;
+  }
+}
 
 /** renderOrder = tämä + z: karkeat tasot ensin, kaikki läpinäkyvien alkuun. */
 export const LAATTAKERROS_RENDER_ORDER_POHJA = -10;
@@ -2075,20 +2150,27 @@ export function luoLaattakerros({
        * varjolla — yksi veto jää ohueksi, kolme tekee yhtenäisen
        * reunuksen — ja sen päälle nimiö itse terävänä.
        *
+       * MUSTE TUMMENNETAAN SAMASSA HAARASSA (ks. NIMION_MUSTE): reunus
+       * yksin jäi mitattuna 4,19:ään, ja suhteen toinen puoli on teksti.
+       * Sävy vaihtuu, muoto ei — `source-in` pitää jokaisen pikselin
+       * oman peittävyyden.
+       *
        * VAIN RELIEFIN AIKANA (`kerrokset.reliefi`): pelin omalla
        * seepiakartalla tausta on tasainen pergamentti, jossa reunus
        * olisi pelkkää sotkua, eikä sinne kosketa.
        */
+      let nimio = kuva;
       if (kerrokset.reliefi && kerrostasot[i]?.nosto) {
+        nimio = nimioLinssinMusteella(kuva, kartta.leveys, kartta.korkeus);
         ctx.save();
         ctx.shadowColor = NIMION_HALO;
         ctx.shadowBlur = NIMION_HALO_PX;
         for (let veto = 0; veto < NIMION_HALO_VETOJA; veto += 1) {
-          ctx.drawImage(kuva, 0, 0, kartta.leveys, kartta.korkeus);
+          ctx.drawImage(nimio, 0, 0, kartta.leveys, kartta.korkeus);
         }
         ctx.restore();
       }
-      ctx.drawImage(kuva, 0, 0, kartta.leveys, kartta.korkeus);
+      ctx.drawImage(nimio, 0, 0, kartta.leveys, kartta.korkeus);
       kuva.close?.();
       /*
        * POHJA ON JUURI PIIRRETTY: kerma tähän, jos tällä tasolla ei ole
