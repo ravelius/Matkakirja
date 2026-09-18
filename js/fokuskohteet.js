@@ -161,6 +161,7 @@ import { laatoissaOnNostoja, nostoOnPoltettu } from './laattapyramidi.js';
 import { elaintakyKarttarivit } from './elaintaky-rivit.js';
 import {
   NOSTOLADONTA_S, nostoladontaKattoPorras, nostoladontaSkaala, nostoladontaTiiviste,
+  onKaupunkipiste,
 } from './nostoladonta.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
@@ -2219,8 +2220,15 @@ export function eritteleKohdeRyhmat(ui, s) {
  * ja seuraava poltto korjaa sen.
  */
 
-/** Onko merkki poltettu laattaan? Yksi vastaus, kaksi kysyjää. */
+/**
+ * Onko merkki poltettu laattaan? Yksi vastaus, kaksi kysyjää.
+ *
+ * KAUPUNKIPISTE EI KOSKAAN (js/nostoladonta.js onKaupunkipiste):
+ * kaupungin nimiö on 11,5 px ja merkin napautus avaa liuskan, eikä
+ * kumpikaan ole mahdollista laattaan paistetulle musteelle.
+ */
 function kohdeOnPoltettu(ui, r) {
+  if (onKaupunkipiste(r.id)) return false;
   return nostoOnPoltettu(r.id, kohteenNostotiiviste(ui, r));
 }
 
@@ -3497,7 +3505,10 @@ function poltettuTynka(pack, iso, pohja, onPoltettu = nostoOnPoltettu) {
   // Lippu kirjoitetaan joka kutsulla: luettelo voi saapua verkosta
   // kesken istunnon, ja testi antaa oman luettelonsa.
   for (const r of tynka.fokuskohdeRyhmat) {
-    r.poltettu = onPoltettu(r.id, kohteenNostotiiviste(tynka, r));
+    // Kaupunkipiste ei koskaan (ks. kohdeOnPoltettu ja
+    // js/nostoladonta.js onKaupunkipiste) — sama vastaus molemmille
+    // lukijoille, myös pallolaudan omalle luettelolle.
+    r.poltettu = !onKaupunkipiste(r.id) && onPoltettu(r.id, kohteenNostotiiviste(tynka, r));
   }
   return tynka;
 }

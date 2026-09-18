@@ -396,9 +396,46 @@ export function laattojenVenytys({
   return laitepikselit / (asteet * Math.max(1e-6, pxAste));
 }
 
-/** Lähin sallittu näkyvä leveys (lautayksikköä). */
-export function lahinLeveys({ lahin = PALLOLAUDAN_LAHIN_LEVEYS } = {}) {
-  return lahin;
+/*
+ * PUHELIN PÄÄSEE YHDEN PORTAAN SYVEMMÄLLE (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 34 kohta 15 c; omistaja 18.9.2026: *"voisiko iPhonen antaa
+ * zoomata karttaa hieman lahemmas. Ei tarvitse kuitenkaan tehda
+ * tarkempaa karttaa, voi nakya hieman epateravana, mutta silloin
+ * nostot nakyisivat hieman isommalla jos on huono nako."*).
+ *
+ * MIKSI VAIN PUHELIN. Lähin leveys on v1649:stä lähtien VAKIO
+ * (PALLOLAUDAN_LAHIN_LEVEYS 60), jotta sama ele vie joka laitteella
+ * yhtä syvälle. Se on yhä oletus; puhelin saa siitä poikkeuksen, koska
+ * kartan muste on siellä fyysisesti pienintä: 390 css-pikselin ruutu
+ * näyttää samat 60 lautayksikköä kolmasosan siitä leveydestä, jolla
+ * työpöytä ne näyttää. Ehto on kapea ruutu JA tarkka näyttö (dpr ≥ 2),
+ * eli juuri se laite, jossa laatan venytys on pienin (laattojenVenytys
+ * 390 × 3 = 1,35 → syvennyksen jälkeen 0,90) — maasto pehmenee vain
+ * hitusen, ja rantaviiva ja rajat ovat vektoria (ks. yllä).
+ *
+ * YKSI PORRAS on nipistyksen oma kerroin 1,5: 60 → 40 lautayksikköä.
+ */
+/** Puhelimen lähizoomin syvennys: yksi porras (kerroin). */
+export const PUHELIMEN_LAHIZOOMIN_KERROIN = 1.5;
+/** Kapean ruudun raja (css-pikseliä), jota pidetään puhelimena. */
+export const PUHELIMEN_RUUTU_PX = 480;
+
+/**
+ * Laitteen syvennyskerroin lähimpään zoomiin: puhelimella 1,5, muuten
+ * 1. Puhdas funktio, jotta vartiot mittaavat sen ilman selainta.
+ */
+export function lahizoominSyvennys({ leveysPx = 0, dpr = 1 } = {}) {
+  const kapea = Number(leveysPx) > 0 && Number(leveysPx) <= PUHELIMEN_RUUTU_PX;
+  const tarkka = Number(dpr) >= 2;
+  return kapea && tarkka ? PUHELIMEN_LAHIZOOMIN_KERROIN : 1;
+}
+
+/**
+ * Lähin sallittu näkyvä leveys (lautayksikköä). `syvennys` on laitteen
+ * oma kerroin (lahizoominSyvennys); oletus 1 pitää rajan ennallaan.
+ */
+export function lahinLeveys({ lahin = PALLOLAUDAN_LAHIN_LEVEYS, syvennys = 1 } = {}) {
+  return lahin / Math.max(1, Number(syvennys) || 1);
 }
 
 /** Lähin sallittu korkeus (altitude) lähimmästä leveydestä. */
@@ -455,7 +492,13 @@ export function luoPallokamera({
    * kerran: kotelon KUVASUHDE vaihtuu kääntyvällä ruudulla, ja sama
    * lautayksikkömäärä ruudun leveydellä on silloin eri korkeus.
    */
-  const korkeusMin = () => lahinKorkeus({ laudanLeveys, kuvasuhde: kuvasuhde() });
+  const korkeusMin = () => lahinKorkeus({
+    laudanLeveys,
+    kuvasuhde: kuvasuhde(),
+    // Puhelin pääsee yhden portaan syvemmälle (kohta 15 c); luku
+    // luetaan kutsuttaessa, koska ruutu voi vaihtaa kokoa.
+    syvennys: lahizoominSyvennys({ leveysPx: ruudunLeveys(), dpr }),
+  });
   /** Näkyvä leveys → korkeus laitteen tarkkuusrajalla. */
   const korkeus = (leveysYks) => korkeusLeveydesta(leveysYks, {
     laudanLeveys, kuvasuhde: kuvasuhde(), min: korkeusMin(),

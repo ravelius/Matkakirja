@@ -91,11 +91,33 @@ const MIME = {
 };
 
 const VALIMUISTI = new Map();
+/**
+ * YKSI EPÄONNISTUNUT HAKU EI SAA MYRKYTTÄÄ KOKO AJOA (Mac 18.9.2026).
+ *
+ * Vanha versio pani VÄLIMUISTIIN myös epäonnistuneen haun, joten yksi
+ * ohimenevä verkkopätkä esti saman osoitteen KAIKISSA myöhemmissä
+ * konteksteissa — ja Macilla juuri `laatat.json` jäi näin saamatta,
+ * jolloin peli putosi varatekstuuriin ja väite 9b meni punaiseksi
+ * ympäristön takia (ks. docs/raportit/viesti-fable-astro-pinta-
+ * vartija-20260918.md). Nyt haku yritetään kolmesti ja VAIN onnistunut
+ * vastaus jää muistiin.
+ */
+const ULKOHAUN_YRITYKSET = 3;
 async function ulkohaku(url) {
   if (VALIMUISTI.has(url)) return VALIMUISTI.get(url);
-  const lupaus = fetch(url).then(async (v) => (v.ok
-    ? { body: Buffer.from(await v.arrayBuffer()), tyyppi: v.headers.get('content-type') }
-    : null)).catch(() => null);
+  const lupaus = (async () => {
+    for (let yritys = 0; yritys < ULKOHAUN_YRITYKSET; yritys += 1) {
+      const v = await fetch(url).then(async (r) => (r.ok
+        ? { body: Buffer.from(await r.arrayBuffer()), tyyppi: r.headers.get('content-type') }
+        : null)).catch(() => null);
+      if (v) return v;
+      await new Promise((r) => { setTimeout(r, 250 * (yritys + 1)); });
+    }
+    return null;
+  })().then((v) => {
+    if (!v) VALIMUISTI.delete(url);
+    return v;
+  });
   VALIMUISTI.set(url, lupaus);
   return lupaus;
 }
@@ -1581,7 +1603,25 @@ async function ajaKirjastoEstetty() {
  * ei saavu). Silloin linssi avautuu mutta näyttää väärää — juuri se
  * tila, jota mikään mittari ei ennen huomannut. Vartijan on kerrottava
  * se pelaajalle, ei jätettävä ruutua arvailun varaan.
+ *
+ * ── ESITIETO: PELIN OMA PINTA ON LAATTAMOOTTORILLA (Mac 18.9.2026) ──
+ *
+ * MITATTU (kaksi koeajoa, docs/raportit/viesti-fable-astro-pinta-
+ * vartija-20260918.md): tämä koe mittaa VAIN silloin oikeaa asiaa, kun
+ * pallo piirtää laatoilla eikä varatekstuurilla. js/pallo.js
+ * `rakennaPallo` asettaa `globeImageUrl(PALLO_TEKSTUURI)`, jos
+ * laattaluetteloa (laatat.json) ei saada — ja SILLOIN pallon pinnalla
+ * ON osoite jo ennen linssiä, joten vartija sanoo aivan oikein
+ * `puute=ei`. Macilla luettelo jäi satunnaisesti saamatta (ulkohaun
+ * myrkytetty välimuisti), ja väite meni punaiseksi ympäristön eikä
+ * pelin takia. Kaksi korjausta: luettelo tarjoillaan aina (varaluettelo
+ * alla, jos ämpäri ei vastaa) ja esitieto mitataan omana väitteenään.
  */
+/** Varaluettelo, jos ämpäri ei vastaa: riittää laattamoottorin päälle. */
+const VARALUETTELO = JSON.stringify({
+  versio: '2026-09-07a', tasot: { min: 0, max: 8 }, laatta: 256, muoto: 'jpg',
+});
+
 async function ajaPintaEstetty() {
   const konteksti = await selain.newContext({
     ...NAKYMAT.tyopoyta, serviceWorkers: 'block', reducedMotion: 'no-preference',
@@ -1597,6 +1637,20 @@ async function ajaPintaEstetty() {
     const url = route.request().url();
     // Reliefikuva ei saavu: pinnalle ei jää yhtään osoitetta.
     if (/topografia-pallo/.test(url)) { route.abort(); return; }
+    /*
+     * LAATTALUETTELO TARJOILLAAN AINA (ks. esitieto yllä). Ilman sitä
+     * peli putoaisi varatekstuuriin, jolloin pallolla olisi pinta jo
+     * ennen linssiä eikä koe mittaisi mitään.
+     */
+    if (/laatat\.json/.test(url)) {
+      const luettelo = await ulkohaku(url);
+      route.fulfill({
+        status: 200, contentType: 'application/json',
+        body: luettelo ? luettelo.body : Buffer.from(VARALUETTELO),
+        headers: { 'access-control-allow-origin': '*' },
+      });
+      return;
+    }
     const v = await ulkohaku(url);
     if (!v) { route.abort(); return; }
     route.fulfill({
@@ -1605,6 +1659,21 @@ async function ajaPintaEstetty() {
     });
   });
   await avaaPeli(e);
+  /*
+   * ESITIETO ENNEN LINSSIÄ: pelin oma pallo piirtää laatoilla, eikä
+   * sen pinnalla ole vielä osoitetta. Jos tämä on punainen, väite 9b:n
+   * punainen EI kerro vartijasta mitään (ks. esitieto yllä).
+   */
+  const ennen = await e.evaluate(() => {
+    const pallo = window.matkakirja?.ui?.pallolauta?.pallo ?? null;
+    return {
+      pinnanOsoite: String(pallo?.globeImageUrl?.() ?? ''),
+      laattamoottori: Boolean(pallo?.globeTileEngineUrl?.()),
+    };
+  });
+  vaadi('pinta estetty: ESITIETO — pelin pallo on laattamoottorilla, pinta tyhjä',
+    ennen.laattamoottori && !ennen.pinnanOsoite,
+    `laattamoottori ${ennen.laattamoottori}, pinnanOsoite "${ennen.pinnanOsoite.slice(0, 60)}"`);
   await avaaLinssiEleella(e, 1000);
   await e.waitForTimeout(18000);
   const tila = await e.evaluate(() => {
@@ -1617,12 +1686,17 @@ async function ajaPintaEstetty() {
       teksti: el ? el.textContent.slice(0, 120) : '',
       puute: kahva?.puute ? String(kahva.puute() ?? 'ei') : 'ei-kahvaa',
       lauta: Boolean(window.matkakirja?.ui?.pallolauta),
+      /* Punaisen syy näkyviin heti: mistä osoite pinnalle tuli. */
+      pinnanOsoite: String(
+        window.matkakirja?.ui?.pallolauta?.pallo?.globeImageUrl?.() ?? '',
+      ).slice(0, 60),
     };
   });
   vaadi('pinta estetty: linssin oma vartija ilmoittaa keskeneräisestä näkymästä',
     tila.lauta && tila.puute === 'pinta' && tila.ilmoitus && tila.nakyy,
     `lauta ${tila.lauta}, puute ${tila.puute}, ilmoitus ${tila.ilmoitus},`
-    + ` näkyy ${tila.nakyy}, teksti "${tila.teksti}"`);
+    + ` näkyy ${tila.nakyy}, pinnanOsoite "${tila.pinnanOsoite}",`
+    + ` teksti "${tila.teksti}"`);
   if (ULOS) {
     await e.screenshot({
       path: join(ULOS, 'astro-pallo-pinta-estetty-20260916.jpg'),

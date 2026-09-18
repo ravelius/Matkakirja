@@ -648,6 +648,13 @@ const mittaa = (sivu) => sivu.evaluate(async () => {
       id: r.id, x0: r.x0, y0: r.y0, x1: r.x1, y1: r.y1,
     })),
     /*
+     * LISTAN ALLE PIILOTETTU MUSTE (kohta 14:n velka, nostot.js
+     * PIILOTUS: LIUSKAN ALLE EI JÄÄ TEKSTIÄ): { avain: 'nosto:<id>',
+     * osa: 'merkki' | 'nimio' }. Vartio 3 tuntee tämän viidentenä
+     * hyväksyttävänä tilana.
+     */
+    listanAlla: (n?.viuhkanPiilotetut?.() ?? []).map((e) => ({ avain: e.avain, osa: e.osa })),
+    /*
      * LADONNAN KOLME LAATIKKOJOUKKOA SAMASSA AVARUUDESSA (kotelon
      * pikselit): kaupunkien nimet, nostojen NÄKYVÄT laput ja
      * turisti-infon kyltin VARAUS. Vartio 7e vertaa näitä keskenään —
@@ -1205,7 +1212,19 @@ for (const ruutu of RUUDUT) {
     if (!a || !n.liuskanSisaiset) return [];
     return n.liuskanSisaiset(a.avain);
   }));
-  const kartalla = (id) => ryhmassa.has(id) || liuskassa.has(id)
+  /*
+   * VIIDES HYVAKSYTTAVA TILA: LISTAN ALLA (Fable 18.9.2026, 8k-erän
+   * löydös). Kun kaupunkiliuska on auki, sen alle jäävä merkki
+   * piilotetaan tarkoituksella (PAATOKSET 34 kohta 14:n velka: liuskan
+   * alle ei jää toisen noston mustetta) ja palaa, kun liuska sulkeutuu.
+   * Ennen 8k-korjausta liuska oli 78 px väärässä paikassa, joten tämä
+   * tila ei koskaan osunut Pariisin rykelmään — nyt osuu
+   * (nosto-maalehti-pasteur-meister 390 px). Lista luetaan
+   * kerrokselta (viuhkanPiilotetut), ei kovakoodattuna.
+   */
+  const listanAlla = new Set((m.listanAlla ?? [])
+    .filter((e) => e.osa === 'merkki').map((e) => e.avain.replace(/^nosto:/u, '')));
+  const kartalla = (id) => ryhmassa.has(id) || liuskassa.has(id) || listanAlla.has(id)
     || (osumaIdt.has(id) && (domIdt.has(id) || poltetut.has(id)));
   const kateissa = PARIISIN_NOSTOT.filter((id) => !kartalla(id));
   const poltettujaRykelmassa = PARIISIN_NOSTOT.filter((id) => poltetut.has(id));
@@ -1226,6 +1245,7 @@ for (const ruutu of RUUDUT) {
    */
   const tilaRivi = (id) => {
     if (liuskassa.has(id)) return 'kaupunkiliuskassa';
+    if (listanAlla.has(id)) return 'listan alla';
     if (ryhmassa.has(id)) return 'aihemerkissä';
     if (domIdt.has(id)) return 'oma merkki';
     if (poltetut.has(id)) return 'poltettu';

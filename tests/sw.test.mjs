@@ -262,6 +262,10 @@ const NIPUTTAMATTOMAT = new Set([
   // ainoa tuoja on js/pallolauta/nostot.js, ja pallolauta on
   // niputuksen ulkopuolella. SHELLissä paketti on.
   'js/packs/maastokohteet-ark.js',
+  // Ranskan nostojen lukitut ankkurit: ainoa tuoja on
+  // js/pallolauta/nostoankkurit.js, ja pallolauta on niputuksen
+  // ulkopuolella (sama peruste kuin yllä). SHELLissä paketti on.
+  'js/packs/nostoankkurit-fra.js',
   // Koelaudat poistettiin pelin rekisteristä (js/pack.js) — tiedostot
   // jäävät repoon mahdollista myöhempää käyttöä varten.
   'js/packs/istanbul-questions.js',

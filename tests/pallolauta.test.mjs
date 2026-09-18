@@ -169,7 +169,10 @@ test('kuvasuhde: pyydetty leveys on ruudun LEVEYS, ei korkeus', () => {
   // leveys ja laattojen tarkkuusraja.
   const kamera = lue('../js/pallolauta/kamera.js');
   assert.match(kamera, /const kuvasuhde = \(\) => ruudunLeveys\(\) \/ ruudunKorkeus\(\);/);
-  assert.match(kamera, /const korkeusMin = \(\) => lahinKorkeus\(\{ laudanLeveys, kuvasuhde: kuvasuhde\(\) \}\);/);
+  // Lähin korkeus lukee kuvasuhteen JA laitteen syvennyksen kutsuttaessa
+  // (PAATOKSET 34 kohta 15 c: puhelin pääsee portaan syvemmälle).
+  assert.match(kamera, /const korkeusMin = \(\) => lahinKorkeus\(\{\n\s*laudanLeveys,\n\s*kuvasuhde: kuvasuhde\(\),/);
+  assert.match(kamera, /syvennys: lahizoominSyvennys\(\{ leveysPx: ruudunLeveys\(\), dpr \}\),/);
   assert.match(kamera, /const korkeus = \(leveysYks\) => korkeusLeveydesta\(leveysYks, \{\n\s*laudanLeveys, kuvasuhde: kuvasuhde\(\), min: korkeusMin\(\),\n\s*\}\);/);
   assert.match(kamera, /const leveys = \(korkeusArvo\) => leveysKorkeudesta\(korkeusArvo, \{ laudanLeveys, kuvasuhde: kuvasuhde\(\) \}\);/);
   // Bbox mahtuu molempiin suuntiin: korkeusehto muutetaan leveydeksi.

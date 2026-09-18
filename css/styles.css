@@ -26027,6 +26027,19 @@ svg.rough-annotation { pointer-events: none; }
   stroke: none;
   pointer-events: none;
 }
+
+/*
+ * POHJAN MITTAUS EI SAA NÄHDÄ ANIMAATIOTA (PAATOKSET 34 kohta 15 b).
+ * Pohja lasketaan rivien todellisesta laatikosta (js/pallolauta/
+ * aihemerkit.js musteenLaatikko), ja mittaushetkellä rivien
+ * saapumis- ja haitarianimaatiot olisivat alkuarvossaan — haitarin
+ * kohderivi 6 px ylempänä. Luokka on päällä vain mittauksen ajan.
+ */
+.pallolauta-viuhka-mittaus,
+.pallolauta-viuhka-mittaus * {
+  animation: none !important;
+  transition: none !important;
+}
 @media (prefers-reduced-motion: reduce) {
   .pallolauta-viuhka { animation: none; }
 }
