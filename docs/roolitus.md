@@ -117,7 +117,7 @@ Fablella, tekstit Codexilla; Opus-kuvaputki jatkaa erillisenä.
 | Tarinakaanon (tarina.md, Isoisän raamattu, Fogg-suku, Grimshaw) | – | kirjoittaa, hyväksyy ristiriidat |
 | Pelin tekstit (kaupunki- ja pulutekstit, luennat, selitteet) | kirjoittaa kaanonin mukaan | kytkee peliin |
 | Äänigenerointi (työkulut, ElevenLabs, R2, kuitit, ääniviat) | kokonaan | – |
-| Animaatiot ja hahmot (pulu, minipulu, eleet) | kokonaan | kytkee linsseihin/näkymiin |
+| Animaatiot ja hahmot (pulu, minipulu, eleet) | kuvat ja äänet tilauksesta | KOODI kokonaan (omistaja 18.9.2026: "muokkaa sinä vain suoraan kaikki koodi puluun liittyen", Raamattu PAATOKSET 34 kohta 20 TARKENNUS) |
 | Generoidut kuvat | tekee | kytkee |
 | Commons-kuvat (kuvaputki, 1800 px, manifestit) | – | Opus-kuvaputki, Fable ohjaa |
 | Karttauudistus, UI, linssit, portit, työkalut, julkaisut, Raamattu | – | kokonaan |

@@ -9295,7 +9295,16 @@ export const RAAMATTU = {
           + 'tekstisession omistama tiedosto - kupla- ja chat-UI on pelin UI:ta, '
           + 'joten Fable tekee sen; muutos rajataan kuplien nayttoon, ei '
           + 'pulun tekstiin, eleisiin eika mallikutsuihin; Codexille '
-          + 'kuittaus postilaatikkoon).',
+          + 'kuittaus postilaatikkoon). TARKENNUS (omistaja 18.9.2026 klo 18.15 '
+          + 'Suomen aikaa, sanatarkasti: "Ala pyyda Codexilta turhaan mitaan, '
+          + 'muokkaa sina vain suoraan kaikki koodi puluun liittyen."): PULUN '
+          + 'KOODI ON FABLEN: Fable ja sen agentit muokkaavat suoraan kaikkea '
+          + 'puluun liittyvaa koodia (js/pollo.js, js/livia-*.js, pulun CSS, '
+          + 'eleet, chat) ilman kuittausta tai lupaa Codexilta; roolituksen '
+          + '15.9. taulukon rivi "Animaatiot ja hahmot - kokonaan Codex" ja '
+          + '11.9. tiedosto-omistajuus (tekstisessio: js/livia-*.js, js/pollo.js, '
+          + 'pulun CSS) kumoutuvat KOODIN osalta. Codexille viestitaan edelleen '
+          + 'vain kuva- tai aanitilauksesta. Tila: voimassa heti.',
         'KARTTAUUDISTUKSEN PAATOKSET 33: NOSTOT YMPARI RANSKAA, ENSIN PISTEET '
           + 'JA OTSIKOT, KAIKKI POLTETUN MERKIN KOKOA (omistaja 17.9.2026 klo '
           + '21.40 Suomen aikaa, ankkurieran kaappauksista, sanatarkasti: '
