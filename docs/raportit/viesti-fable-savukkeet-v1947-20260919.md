@@ -22,6 +22,7 @@ astro-aani (puhelin) 31 s, kaupunkipopup-390 186 s, kerma-reuna --vanha 63 s.
 | --- | --- | --- | --- | --- |
 | kohdevalinta | 10/14 | **14/14** | savuke mittasi vanhaa maailmaa (PAATOKSET 43 kohta 8) | KORJATTU |
 | topografialinssi (Ohita jäänteenä) | punainen | — | Ohita on kohdan 10 mukaan kelluva nappi luennan elinkaarella | KORJATTU (poikkeuslista) |
+| topografialinssi (luenta false, välähdys, 600 s) | punainen | **toistuu bitilleen yksin** | savuke odottaa äänen kelloa, jota tämä Chromium ei etene | VELKA, ks. kohta 2 |
 | astro-aani, puhelin `soi:false` | punainen | **soi: true, 84 s silmukka** | otos loppui 10 s:iin ennen kuin linssi heräsi kuormassa | KORJATTU (otos soittimen mukaan) |
 | astro-aani, `taso 0` (molemmat ruudut) | punainen | punainen, `ctxAika 0` | AudioContext on **suspended** tässä Chromiumissa | VELKA, ks. kohta 3 |
 | kerma-reuna V4 | 14/16 | **14/16, samat luvut** | EI kuormaa eikä v1947: `--vanha` antaa bitilleen saman | VELKA (mittausraja), ks. kohta 4 |
@@ -86,15 +87,36 @@ vaan luennan ohjain, ja sillä on oma vartionsa
 kerrokset peittävät kartan"* pysyy muuten sanasta sanaan ennallaan.
 
 **Kolme muuta punaista** (`omistajan tila toistui — luenta false`,
-välähdys, 600 s aikakatto) ovat samasta ketjusta: luenta ei
-käynnistynyt 90 s:n odotuksessa, jolloin savuke jäi pakottamaan
-kuvapakkaa viisi kierrosta ja koko ajo katkesi aikakattoon — ja
-välähdysmittaus otti silloin kolme näytettä mediaania varten, mikä
-kolminkertaisti kustannuksen. `VAIHE=avaus` -vertailuajo yksin oli
-tämän erän aikakaton ulkopuolella (jäi kesken); **hypoteesi on
-kuorma eikä kohdan 10 muutos**, koska Ohita-nappi oli ainoa kohdan 10
-jälki jäänneluettelossa eikä `fokusvirta.js` koske `diaryVoice`en.
-Jatko: aja `VAIHE=avaus` yksin ja katso, tuleeko `luenta true`.
+välähdys, 600 s aikakatto) ovat samasta ketjusta, ja `VAIHE=avaus`
+**yksin ajettuna toistaa ne bitilleen** — kyse EI ole kuormasta:
+
+```
+FAIL  390 px, luenta: omistajan tila toistui — luenta false, kuvapakka false
+INFO  390 px, luenta: avauksen maksimikirkkaus 171.3, vakiintunut 134.6,
+      suurin paluu ylhäältä alas 150.8, seepia ennen linssiä 171.3
+```
+
+Luvut ovat samat kuin CI:ssä (171,3 / 134,6 / 150,8), ja
+**jäänneluettelo ennen linssiä on sekin sama**. Ketju on:
+`luentaSoi` odottaa `diaryVoice`ilta `!paused && currentTime > 0`
+90 sekuntia, se ei tule, savuke pakottaa kuvapakkaa viisi kierrosta,
+ja koko ajo venyy 600 s:n aikakattoon — ja välähdysmittaus ottaa
+silloin vielä kolme näytettä mediaania varten. Avauksen maksimikirkkaus
+171,3 on TÄSMÄLLEEN sama kuin *"seepia ennen linssiä"*, eli mitattu
+"välähdys" on paljas seepiakartta: peite ei ole paikallaan, koska
+mitattava tila (luenta käynnissä, kuvapakka kartalla) ei koskaan
+syntynyt. **Välähdysvartio ei siis mittaa linssiä vaan omaa
+lähtötilaansa.**
+
+**Juurisyy on sama kuin kohdassa 3 b:** tämä Chromium ei toista ääntä
+(astro-aanessa `ctxAika 0`, tässä `diaryVoice.currentTime` ei etene),
+ja kaksi savuketta odottaa AIDON ÄÄNEN etenemistä porttinaan. Kohdan 10
+muutos (`fokusvirta.js`) ei koske `diaryVoice`a, ja Ohita-nappi oli sen
+ainoa jälki jäänneluettelossa. **Ehdotus Fablelle:** `luentaSoi`-portti
+luetaan pelin omasta luennan tilasta eikä äänielementin kellosta, tai
+savuke ajetaan äänilipuilla (`--autoplay-policy=no-user-gesture-required`,
+kuten astro-aani tekee — topografialinssi ei tee). Tämä on oma eränsä
+(Kustannuskuri kohta 1 ja 4).
 
 ## 3. savuke-astro-aani (15/24) — puhelin oli kuormaa, `taso` on velka
 
