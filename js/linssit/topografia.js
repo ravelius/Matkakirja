@@ -44,6 +44,7 @@ import { el } from '../mapart.js';
 import { kokoPallonKorkeus } from '../pallolauta/kamera.js';
 import { luoTarkennus } from './topografia-tarkennus.js';
 import { valitseReliefi } from './reliefikuva.js';
+import { asetaReliefiLinssi, reliefiKaytossa, reliefipyramidiPaalla } from '../reliefipyramidi.js';
 
 /*
  * PEITTÄVYYS.
@@ -424,6 +425,23 @@ export const LINSSI = {
      */
     const pallolla = typeof document !== 'undefined'
       && Boolean(document.body?.classList?.contains('pallolauta-paalla'));
+    /*
+     * PYRAMIDITILASSA YHTÄ KUVAA EI TARVITA LAINKAAN — eikä sitä siis
+     * saa ladata (erä 4, 18.9.2026).
+     *
+     * `sytytaLinssi` (js/ui.js) ODOTTAA tämän valmiiksi ENNEN kuin
+     * `pallolle()` pääsee ajoon — ja juuri `pallolle()` on se, joka
+     * nostaa odotuspeitteen ja herättää laattakerroksen. Kaikki, mitä
+     * tässä tehdään, on siis suoraan pois pelaajan ruudulta: hän
+     * katsoo peittämätöntä pelikarttaa niin kauan kuin tämä kestää.
+     * Mitattu erässä 3: linssin valinnasta kului 1,1 sekuntia ennen
+     * kuin peite edes ilmestyi.
+     *
+     * Pyramiditilassa kalvoa eikä tarkennuslaastaria ole (ks.
+     * `pallolle`), joten `kuvatiedot` jää lukematta — moduulin tuonti
+     * olisi pelkkää odotusta.
+     */
+    if (pallolla && reliefipyramidiPaalla()) return;
     await lataaReliefi({ esilataus: !pallolla });
   },
 
@@ -472,6 +490,37 @@ export const LINSSI = {
     let suljettu = false;
 
     /*
+     * RELIEFIPYRAMIDI PÄÄLLE TÄMÄN LINSSIN AJAKSI (kytkin
+     * `?reliefipyramidi=1`, oletus pois).
+     *
+     * Lippu kertoo laattakoneelle (js/laattapyramidi.js
+     * pyramidinKerrostasot, js/pallolaatat.js lepokerroksenKerrokset),
+     * että reliefilaatasto saa piirtyä pohjan päälle. SE ON TÄMÄN
+     * LINSSIN TILA EIKÄ PELIN: seepiakartta pysyy seepiana, kun linssi
+     * on kiinni. `pura` laskee lipun.
+     *
+     * Kytkimen ollessa pois tämä ei tee mitään: kerrostasoja ei ole,
+     * eikä yksikään pyyntö lähde. Linssi on silloin täsmälleen se,
+     * mikä se oli ennen tätä erää — yksi kuva ja laastari.
+     */
+    asetaReliefiLinssi(true);
+    const pyramidiPaalla = reliefiKaytossa();
+    /*
+     * LIPUN NOSTO EI YKSIN RIITÄ — KERROS ON HERÄTETTÄVÄ.
+     *
+     * Mitattu 18.9.2026 (tools/savukkeet/mittaa-reliefipyramidi.mjs,
+     * Chromium 390 × 844, Alppien lähizoomi): linssin avauksesta kului
+     * 15,7 sekuntia ensimmäiseen reliefilaattapyyntöön, ja sekin lähti
+     * vasta kun kamera liikkui. Laattakerros päivittyy piirtokoukusta
+     * (js/pallo.js kytkePallonKehys), ja paikallaan olevassa
+     * näkymässä koukku ei tuo mitään uutta: lippu oli pystyssä, mutta
+     * kerros ei katsonut sitä. `kokoa()` on kerroksen oma
+     * harventamaton päivitys (js/pallolaatat.js), ja se on tässä sama
+     * yksi kutsu kuin sulkeutumisessa.
+     */
+    lauta.lepokerros?.()?.kokoa?.();
+
+    /*
      * ────────────────────────────────────────────────────────────────
      * 1. KOKO PALLON KALVO — yleiskuva
      * ────────────────────────────────────────────────────────────────
@@ -507,7 +556,22 @@ export const LINSSI = {
       lauta.linssit.pura?.(PEITTEEN_OSA);
     };
 
-    const perus = lauta.linssit.kalvo('topografia', {
+    /*
+     * KOKO PALLON KALVO JÄÄ POIS, KUN RELIEFIPYRAMIDI ON PÄÄLLÄ.
+     *
+     * Omistajan lisäys 18.9.2026 (Raamattu LISAYS 16 kohta 49):
+     * linssi ilman pohjakarttaa, paikanpitäjänä pyramidin ylätaso.
+     * Kalvo on 0,72-peittävä kuva SAMASTA reliefistä 30 px/asteen
+     * tiheydellä; laataston päällä se hukuttaisi juuri sen tarkkuuden,
+     * jota varten laatasto poltettiin. Mitattu 18.9.2026 ennen tätä
+     * riviä: gradienttienergia Alpeilla kytkin päällä 1,71 ja pois
+     * 1,77 — eli laatasto EI näkynyt lainkaan kalvon alta.
+     *
+     * Paikanpitäjä ei ole kalvo vaan laattakoneen oma karkea kerros:
+     * saman pyramidin ylemmän tason laatta skaalattuna, kuten
+     * pääkartallakin.
+     */
+    const perus = pyramidiPaalla ? null : lauta.linssit.kalvo('topografia', {
       kuva: pohja.osoite,
       peittavyys: PEITTAVYYS,
     });
@@ -521,12 +585,105 @@ export const LINSSI = {
      * `ladattu`-lippua: kun se on tavoitteessaan, reliefi on oikeasti
      * näkyvissä ja peitteen häivytys paljastaa valmiin näkymän.
      */
+    /**
+     * Laattakerroksen tila jokaisella kyselyllä. Ilman tätä avausketjun
+     * mittaus kertoo vain, MILLOIN peite lähti — ei sitä, minkä
+     * perusteella. Lokin lukee savuke (`tila().peiteLoki`).
+     */
+    const peitteenLoki = [];
+
+    /*
+     * ONKO RELIEFI OIKEASTI RUUDULLA? — kolme ehtoa, ei yhtä.
+     *
+     * ERÄN 3 VIKA (mitattu 18.9.2026, Chromium 390 × 844, Alpit):
+     * kirkkaussarja luki avauksen jälkeen 1,7–2,5 sekunnin ajan arvoa
+     * 101,9, kun seepiapohja on 95,7 ja asettunut reliefi 69. Peite oli
+     * siis jo pois, mutta reliefiä ei vielä ollut — ruudulla oli pallon
+     * oma vaalea pinta. Juuri sen välähdyksen omistaja kielsi.
+     *
+     * Syy oli mitta: `nakyviaTaysin >= nakyvia` on TOSI myös silloin,
+     * kun kerros on kesken kokoamista ja näkyviä laattoja on tilapäisesti
+     * yksi — yksi valmis laatta yhdestä on sata prosenttia, vaikka ruutu
+     * on tyhjä. Mitta ei myöskään nähnyt jonoa: laatat, jotka ovat vielä
+     * latautumassa, eivät ole `nakyvia`-joukossa lainkaan.
+     *
+     * Nyt vaaditaan kaikki kolme:
+     *   1. kerros on ajossa ja sillä on näkyvä ikkuna (`tila === 'nakyy'`),
+     *   2. näkyvän ikkunan JOKAINEN laatta on scenessä ja häive perillä,
+     *   3. mitään ei ole enää latautumassa eikä jonossa — eli kerros on
+     *      kertaalleen valmis eikä vain hetkellisesti tasoissa.
+     *
+     * Ehto 3 on se, joka erottaa valmiin näkymän kesken olevasta, ja
+     * myös se, joka päästää KARKEAN TASON läpi: paikanpitäjä on
+     * laattakoneen oma ylemmän tason laatta, ja kun se on kankaalla eikä
+     * jonossa ole mitään, ruutu on peitetty — silloin peite saa väistyä,
+     * vaikka tarkempi taso tulisi vasta perässä.
+     */
+    const reliefiRuudulla = (m) => Boolean(m)
+      && m.tila === 'nakyy'
+      && m.nakyvia > 0
+      && m.nakyviaScenessa >= m.nakyvia
+      && m.nakyviaTaysin >= m.nakyvia
+      && !(m.ladattavia > 0)
+      && !(m.jonossa > 0);
+
+    /*
+     * KERROS EI TULE — PEITE POIS HETI, EI 15 SEKUNNIN PÄÄSTÄ.
+     *
+     * Mitattu 18.9.2026 WebKitillä (390 × 844, Alpit): laattakerros jäi
+     * tilaan `purettu`, syy *"pallon sarja ja pyramidi eri versiota"*,
+     * eikä yhtäkään laattaa haettu. Ehto `reliefiRuudulla` ei silloin
+     * täyty koskaan, ja peite jäi ruudulle ehdottomaan kattoonsa asti:
+     * **mitattu 15 042 ms tummaa ruutua**. Se on huonompi kuin se, mitä
+     * peite estää — pelaaja ei näe mitään eikä tiedä miksi.
+     *
+     * Kerroksen oma kirjanpito kertoo tämän suoraan: `purettu` tai
+     * `syy` tarkoittaa, ettei kerros ole ajossa eikä tule olemaan.
+     * Silloin peite otetaan pois heti, ja pelaaja näkee sen minkä
+     * ennenkin — oman karttansa. Sama periaate kuin
+     * `PEITTEEN_KATTO_MS`:llä, vain mitattuna eikä ajastettuna.
+     */
+    const kerrosLuovutti = (m) => Boolean(m)
+      && (m.tila === 'purettu' || Boolean(m.syy));
+
     const katsoPeitetta = () => {
       peitteenKello = 0;
       if (suljettu || !peite) return;
       const nyt = (typeof performance === 'undefined' ? Date : performance).now();
-      const nakyvyys = perus?.nakyvyys?.() ?? 0;
-      if (nakyvyys >= PEITTAVYYS * 0.98 || nyt - peiteAlkoi >= PEITTEEN_KATTO_MS) {
+      /*
+       * KAKSI MITTAA, SAMA KYSYMYS: onko reliefi ruudulla? Yhden kuvan
+       * maailmassa se on kalvon materiaalin todellinen peittävyys;
+       * laatastossa kalvoa ei ole, joten mitta on laattakerroksen oma
+       * kirjanpito: näkyvän ikkunan KAIKKI laatat scenessä ja häive
+       * perillä (js/pallolaatat.js `nakyvia`, `nakyviaTaysin`).
+       *
+       * YKSI LAATTA EI RIITÄ, ja se on mitattu 18.9.2026
+       * (tools/savukkeet/mittaa-reliefipyramidi.mjs, Chromium
+       * 390 × 844): kun peite väistyi ensimmäisestä valmiista
+       * laatasta, pallon oma vaalea pinta VÄLÄHTI häivytyksen ajan —
+       * kirkkaus 101,9 sekunnin ajan, kun seepiapohja on 95,7 ja
+       * asettunut reliefi 69. Juuri sen välähdyksen omistaja kielsi.
+       */
+      const kerrosmitat = pyramidiPaalla
+        ? (lauta.lepokerros?.()?.mittarit?.() ?? null) : null;
+      const nakyvyys = pyramidiPaalla
+        ? (reliefiRuudulla(kerrosmitat) ? PEITTAVYYS : 0)
+        : (perus?.nakyvyys?.() ?? 0);
+      if (kerrosmitat) {
+        peitteenLoki.push({
+          ms: Math.round(nyt - peiteAlkoi),
+          tila: kerrosmitat.tila,
+          taso: kerrosmitat.taso,
+          nakyvia: kerrosmitat.nakyvia,
+          scenessa: kerrosmitat.nakyviaScenessa,
+          taysin: kerrosmitat.nakyviaTaysin,
+          ladattavia: kerrosmitat.ladattavia,
+          jonossa: kerrosmitat.jonossa,
+        });
+      }
+      if (nakyvyys >= PEITTAVYYS * 0.98
+        || (pyramidiPaalla && kerrosLuovutti(kerrosmitat))
+        || nyt - peiteAlkoi >= PEITTEEN_KATTO_MS) {
         poistaPeite();
         return;
       }
@@ -547,7 +704,13 @@ export const LINSSI = {
      * kahta kalvoa lasketa päällekkäin.
      */
     let tarkennus = null;
-    void (async () => {
+    /*
+     * LAASTARIKAAN EI OLE TARPEEN PYRAMIDIN AIKANA: se on sama
+     * 10 800 pikselin kuva ikkuna kerrallaan (30 px/aste), ja laatasto
+     * antaa samalle ikkunalle 240 px/astetta. Kaksi lähdettä
+     * päällekkäin olisi vain kalvo lisää — ks. kalvon perustelu yllä.
+     */
+    if (!pyramidiPaalla) void (async () => {
       const tiedot = await lataaReliefi({ esilataus: false }).catch(() => null);
       if (!tiedot || suljettu) return;
       tarkennus = luoTarkennus({
@@ -665,6 +828,10 @@ export const LINSSI = {
     return {
       pura: () => {
         suljettu = true;
+        asetaReliefiLinssi(false);
+        // Sama herätys kuin avatessa: seepiapohja takaisin heti eikä
+        // vasta kun pelaaja liikuttaa karttaa.
+        if (pyramidiPaalla) lauta.lepokerros?.()?.kokoa?.();
         clearTimeout(peitteenKello);
         peitteenKello = 0;
         // Peite pois ennen muita: se on kartan päällä, ja sen alle ei
@@ -716,6 +883,10 @@ export const LINSSI = {
         pohja: pohja.tunnus,
         pohjanTiheys: +(pohja.leveys / 360).toFixed(2),
         tarkennus: tarkennus?.tila?.() ?? null,
+        /** Onko reliefipyramidi tämän linssin ajan päällä (savuke). */
+        reliefipyramidi: pyramidiPaalla,
+        /** Laattakerroksen tila peitteen jokaisella kyselyllä (savuke). */
+        peiteLoki: peitteenLoki.slice(0, 80),
       }),
     };
   },
