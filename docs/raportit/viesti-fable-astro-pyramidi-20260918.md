@@ -77,7 +77,10 @@ Chromium 1234, laatat ämpäristä Noden välityksellä.
 | valittu taso | (kerros suljettu) | z5, 20/20 laattaa valmiina |
 | materiaalin väri sulun jälkeen | 999999 | **999999** (ei mustaa) |
 
-**Terävyys 3,7-kertaistui** (19,55 / 5,34 = 3,66). Raamatun väite on
+**Terävyys 3,7-kertaistui** (19,55 / 5,34 = 3,66). Luku toistui
+vastakokeessa (toinen istunto, sama näkymä): **19,53**, fps 87,3,
+ensimmäinen reliefilaatta 33 ms, seepiapyyntöjä 0, taso z5, 20/20
+laattaa valmiina — eli mitta ei ole yhden ajon sattumaa. Raamatun väite on
 "≥ topografialinssin sama näkymä × 0,9"; sitä vertailua EI ajettu
 (ks. kohta 5), mutta laastari lukee TÄSMÄLLEEN samat laatat samalta
 tasolta samalla koneella kuin topografialinssi, joten ero voi tulla
@@ -117,7 +120,12 @@ mitat ovat lukuina, koska kynnykset kannattaa lukita vasta kun sama
 ajo on nähty myös WebKitillä (ks. kohta 5).
 
 Chromium iPhone, yksi avaus, molemmat polut: **ei sivuvirheitä, ei
-linssivirhe-ilmoitusta, pisteitä 64/64, vartija `puute=ei`.**
+linssivirhe-ilmoitusta, pisteitä 64/64, vartija `puute=ei`.** WebKitillä
+savuke ei saanut peliä auki lainkaan (ks. kohta 5.1).
+
+Savukkeen `goto`-korjauksen jälkeen ajettiin Chromiumilla vastakoe, jotta
+harness jää varmasti toimivaksi: luvut yllä, `VÄRI SULUN JÄLKEEN
+999999` kaikilla näytteillä, ei sivuvirheitä.
 
 `node --test tests/*.test.mjs`: **# pass 3641 / # fail 0** (13 skipped)
 — kaksi lähdevartiota päivitettiin tuoreeseen muotoon
@@ -151,13 +159,29 @@ tullut — `js/reliefipyramidi.js` oli jo MODULESissa.
 
 ## 5. MITÄ JÄI
 
-1. **WebKit-luvut.** Chromiumin ajo on yllä; WebKit-ajo (sama kaava,
-   `SELAIMET=webkit`) käynnistyi vasta aikakaton jälkeen eikä sen
-   tulos ehtinyt tähän raporttiin. Ajo on yhden komennon päässä:
-   `PORTTI=8831 SELAIMET=webkit KOTELOT=iphone AVAUKSIA=1
-   LISAPARAMIT="&reliefipyramidi=0"` ja sama ilman lippua. **WebKitissä
-   ei ole `performance.memory`a**, joten muistiluku jää sielläkin
-   nulliksi (sama rajoite kuin reliefi-veloissa).
+1. **WebKit-luvut puuttuvat — WebKit ei saanut peliä auki lainkaan.**
+   Kaksi ajoa (`SELAIMET=webkit KOTELOT=iphone`, WebKit 26.5 Mac
+   Studiolla) päättyi ennen linssin avausta, eikä kummastakaan saatu
+   yhtään laastarin lukua:
+
+   * ajo 1: `page.goto` aikakatkaisi Playwrightin 30 s:n oletukseen;
+   * ajo 2 (katko nostettu 60 s:iin): `load` ei lauennut 60 s:ssä
+     sielläkään, ja kun savuke navigoi varareitille, **WebKit sulki
+     sivun kokonaan** (`Target page, context or browser has been
+     closed`). Varareitti muutettiin tämän jälkeen sellaiseksi, ettei
+     se navigoi uudestaan vaan jatkaa siitä, mikä on — toinen `goto`
+     samaan osoitteeseen purkaa WebGL-kontekstin kesken alustuksen.
+
+   **Vika ei ole tämän erän koodissa** vaan mittausympäristössä: peli ei
+   ehdi `load`-tapahtumaan WebKitissä tällä koneella, eikä laastarin
+   koodia päästy edes ajamaan. Tämä on sama oire, joka
+   reliefi-veloissa (18.9.) kierrettiin `savuke-topografialinssi.mjs`:n
+   omalla `--webkit`-polulla — se ajo MENI läpi, joten kierto on
+   olemassa ja se kannattaa kopioida tähän savukkeeseen omana
+   eränään. Huomaa myös, että **WebKitissä ei ole
+   `performance.memory`a**, joten muistiluku jää sielläkin nulliksi.
+   Raamatun väite "muisti/fps rajoissa WebKitillä" on siis yhä
+   mittaamatta.
 2. **Vertailu topografialinssiin (Raamatun väite × 0,9).** Vaatii
    saman näkymän ajamisen kummallakin linssillä samassa istunnossa;
    se on oma pieni eränsä `savuke-topografialinssi.mjs`:n ja tämän
@@ -175,11 +199,13 @@ tullut — `js/reliefipyramidi.js` oli jo MODULESissa.
 
 ## 6. VIEREISET HAVAINNOT (EI KORJATTU)
 
-1. `savuke-astro-webkit.mjs` **kaatuu toisen kotelon `goto`-aikakatkoon**
-   (30 s), kun ajossa on useampi kuin yksi kotelo: ensimmäinen kotelo
-   menee läpi, toisen kontekstin sivunlataus ei ehdi. Kiertotie on
-   `KOTELOT=iphone`. Yksi `{ timeout: 60000 }` `avaaPeli`n `goto`ssa
-   luultavasti riittäisi.
+1. `savuke-astro-webkit.mjs` **kaatui `goto`-aikakatkoon** (Playwrightin
+   30 s:n oletus) sekä WebKitin ensimmäisellä latauksella että
+   Chromiumin toisella kotelolla. Juurisyy on savukkeen oman otsikon
+   mukainen: estetyt ulkoverkon pyynnöt jäävät WebKitissä vireille, eikä
+   `load` laukea siinä ajassa, vaikka sivu toimii. **KORJATTU TÄSSÄ
+   erässä** (60 s + varareitti `domcontentloaded`; oikea vartija on joka
+   tapauksessa sen jälkeen tuleva `waitForFunction(pallolauta)`).
 2. `avaaLinssiEleella` maksoi mittauksessa **22 s** (Playwrightin omat
    napautukset raskaalla WebGL-sivulla). Se ei ole linssin aikaa, ja
    savuke kirjaa sen erikseen (`eleMs`) — mutta se tekee koko ajosta
