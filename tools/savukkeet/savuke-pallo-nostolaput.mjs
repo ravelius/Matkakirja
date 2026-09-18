@@ -616,10 +616,19 @@ if (auki) {
    *    vartio ei saa vanhentua hiljaa vihreänä.
    */
   const poltettuaOtoksessa = sormiPoltettuja >= 1;
+  /*
+   * ELÄVÄÄ MUSTETTA EI ENÄÄ VAADITA (Fable 18.9.2026, v1942): nostotaso
+   * 2026-09-19-maittain polttaa kaikki kaupungin ulkopuoliset nostot
+   * lukituista ankkureista (PAATOKSET 33 TARKENNUS 2, 34 kohta 17 a-b), joten
+   * Romanian otoksessa on 0 elävää lappua. Vartio vaatii vähintään yhden
+   * lajin (elävä tai poltettu) ja kaikkien poikkeamanapautusten osuvan;
+   * kumpi laji puuttui, kirjataan tekstiin.
+   */
   vaadi('7. lapun teksti ottaa napautuksen myös sormen poikkeamalla '
     + `(${KOSKETUSPOIKKEAMA_PX} px musteen ulkopuolelta), `
-    + (poltettuaOtoksessa ? 'elävällä ja poltetulla musteella' : 'elävällä musteella'),
-    sormiKokeita >= 3 && sormiElavia >= 1 && sormiOsui === sormiKokeita,
+    + (poltettuaOtoksessa && sormiElavia >= 1 ? 'elävällä ja poltetulla musteella'
+      : poltettuaOtoksessa ? 'poltetulla musteella (eläviä ei otoksessa)' : 'elävällä musteella'),
+    sormiKokeita >= 3 && (sormiElavia >= 1 || sormiPoltettuja >= 1) && sormiOsui === sormiKokeita,
     `poikkeamanapautuksia ${sormiKokeita} (eläviä ${sormiElavia}, poltettuja `
     + `${sormiPoltettuja}), oikein ${sormiOsui}`);
   if (!poltettuaOtoksessa) {
