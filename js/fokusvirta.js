@@ -1004,6 +1004,7 @@ export function fokusvirtaHuudahdus(ui, city) {
   const merkinta = fokusvirtaSisalto(ui, city)?.matkakirja?.teksti ?? '';
   const kaynnista = (jaljella = HUUDAHDUKSEN_LYKKAYSKATTO_MS) => {
     if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return;
+    if (luentaOhitettu(ui, city)) return;
     if (ui.luennanLykkays && jaljella > 0) {
       clearTimeout(ui.huudahdusLykkaysAjastin);
       ui.huudahdusLykkaysAjastin = setTimeout(
@@ -1054,6 +1055,8 @@ function ajastaHuudahdus(ui, city, huudahdus, merkinta) {
   const osuus = paikka / teksti.length;
   const nayta = () => {
     if (ui.dead || ui.game?.cityOf?.()?.id !== city.id) return;
+    // Ohitettu luenta ei saa välihuutoa: sen kello käy luennan ajassa.
+    if (luentaOhitettu(ui, city)) return;
     if (!naytaPolloKupla(ui, kupla, { luokka: 'fokusvirta-huudahdus' })) return;
     soitaLivianKaupunkiAani(ui, city.id, 'huudahdus', {
       teksti: kupla,
@@ -1186,7 +1189,7 @@ export function fokusvirtaSaapumiskupla(ui, city) {
    * sarja ei jostain syystä koskaan ala (esim. katselutila).
    */
   const odotaPaljastus = (jatka, jaljella = SAAPUMISKUPLAN_PALJASTUSKATTO_MS) => {
-    if (ui.dead) return;
+    if (ui.dead || luentaOhitettu(ui, city)) return;
     /*
      * LINSSI PYSÄYTTÄÄ KELLON (omistajan tilaus 4.9.2026: linssin
      * aikana kaikki muu on kiinni). Paljastussarja odottaa linssin
@@ -1203,9 +1206,11 @@ export function fokusvirtaSaapumiskupla(ui, city) {
     );
   };
   const nayta = () => {
+    // Ohitettu luenta ei avaa pulun puheenvuoroa (ohitaSaapumisluenta).
+    if (luentaOhitettu(ui, city)) return;
     clearTimeout(ui.saapumiskuplaAjastin);
     ui.saapumiskuplaAjastin = setTimeout(() => odotaPaljastus(() => {
-      if (ui.dead) return;
+      if (ui.dead || luentaOhitettu(ui, city)) return;
       // Pelaaja on voinut lähteä kaupungista tai aloittaa uuden pelin
       // luennan aikana: puheenvuoro kuuluu vain tähän kaupunkiin.
       if (ui.game?.cityOf?.()?.id !== city.id) return;
@@ -1280,9 +1285,15 @@ export function fokusvirtaSaapumiskupla(ui, city) {
    * jää roikkumaan, jos luenta ei koskaan lähde.
    */
   const kommenttiLuennanJalkeen = (jaljella = SAAPUMISKUPLAN_LUENTAKATTO_MS) => {
+    if (luentaOhitettu(ui, city)) return;
     const luenta = luennanLoppuun(ui);
     if (luenta) {
-      void luenta.then(() => { if (!ui.dead) nayta(); });
+      /*
+       * LUPAUS TAYTTYY MYOS OHITUKSESTA: `stopDiaryVoice` nollaa
+       * luennan, ja odotus lukee sen "luenta loppui" -merkiksi. Ohitus
+       * ei ole loppu vaan keskeytys, joten kommentti jää tulematta.
+       */
+      void luenta.then(() => { if (!ui.dead && !luentaOhitettu(ui, city)) nayta(); });
       return;
     }
     if (ui.luennanLykkays && jaljella > 0 && !ui.dead) {
@@ -2333,6 +2344,8 @@ function avaaLuentakuvanKaruselli(ui, city, kuva, nappi) {
  */
 export function naytaPulunKuvapakka(ui, city, { heti = false } = {}) {
   if (typeof document === 'undefined' || !ui || !city) return false;
+  // Ohitettu luenta ei nosta pulun kuvia — ei isoina eikä pakkana.
+  if (luentaOhitettu(ui, city)) return false;
   /*
    * ISO KESKISARJA OMISTAA PAKAN NOSTON (omistaja 11.9.2026, Raamattu
    * SAAPUMISEN UUSI JARJESTYS…). Kuvat käydään ensin läpi isoina keskellä
@@ -3583,7 +3596,7 @@ function avaaIsokuvaPaallys(ui, city, pohjakuva) {
    * sekunteja myöhemmin kartalle. Lippu on kaupungin tunnus, joten
    * seuraava kaupunki alkaa puhtaalta pöydältä ilman omaa nollausta.
    */
-  if (ui?.luennanOhitus && ui.luennanOhitus === city?.id) return null;
+  if (luentaOhitettu(ui, city)) return null;
   lataaTyyli();
   const kehys = html('div', 'fokusvirta-isokuva');
   kehys.setAttribute('role', 'group');
@@ -4167,7 +4180,30 @@ export function paivitaMatkakirjanPikkukuvat(ui, city) {
 export function ohitaSaapumisluenta(ui, city = null) {
   if (!ui) return false;
   const kohde = city ?? ui.game?.cityOf?.() ?? null;
+  /*
+   * LIPPU ENSIN, PYSAYTYS VASTA SEN JALKEEN. `stopDiaryVoice` nollaa
+   * `ui.diaryVoicen`, ja juuri se laukaisee pulun kommentin oman
+   * odotuksen (luennanLoppuun → nayta) — lipun on oltava pystyssä
+   * ennen sitä, tai kommentti lähtisi matkaan pysäytyksen omasta
+   * kädestä.
+   */
   if (kohde?.id) ui.luennanOhitus = kohde.id;
+  /*
+   * PULUN PUHEENVUORO KIINNI SAMALLA (omistaja 18.9.2026, PAATOKSET 35
+   * TARKENNUS 2 kohta 6: *"Ohita ei lopeta pulun luentaa"*).
+   *
+   * Ohita pysäytti vain isoisän luennan (stopDiaryVoice). Pulun oma
+   * kommentti ei ole luenta vaan puheenvuoro, joka odottaa luennan
+   * LOPPUA (fokusvirtaSaapumiskupla → kommenttiLuennanJalkeen): kun
+   * Ohita lopetti isoisän, odotus täyttyi ja pulu alkoi puhua noin
+   * sekunnin päästä — juuri se ääni, joka jäi soimaan. Sama piti
+   * välihuudosta, jonka oma ajastin kävi yhä.
+   *
+   * Tämä on kaupungista lähdön oma polku (vaiennaLivianKaupunkipuhe):
+   * se tyhjentää kaikki pulun kaupunkiajastimet ja pysäyttää soivan
+   * repliikin. Uutta rinnakkaista pysäytystä ei siis synny.
+   */
+  vaiennaLivianKaupunkipuhe(ui);
   // Ääni ja pulun luentareaktiot kiinni yhdellä olemassa olevalla polulla.
   stopDiaryVoice(ui);
   // Kesken oleva odotus pois: muuten kuva ilmestyisi jälkijunassa.
@@ -4176,6 +4212,24 @@ export function ohitaSaapumisluenta(ui, city = null) {
   piilotaLuentakuvasarja(ui);
   piilotaLuentakuva(ui, { heti: true });
   return true;
+}
+
+/**
+ * ONKO TAMAN KAUPUNGIN SAAPUMISLUENTA OHITETTU?
+ *
+ * Yksi lippu (`ui.luennanOhitus`, kaupungin tunnus) ja yksi kysely.
+ * Ajastimien tyhjennys ei yksin riitä, koska osa saapumisen ketjusta
+ * roikkuu LUPAUKSESSA (luennanLoppuun): se täyttyy vasta pysäytyksen
+ * jälkeen ja asettaa uuden ajastimen tyhjennetyn tilalle. Siksi jokainen
+ * ketjun askel kysyy tästä ennen kuin jatkaa.
+ *
+ * @param {object} ui
+ * @param {?object} city
+ * @returns {boolean}
+ */
+export function luentaOhitettu(ui, city = null) {
+  const tunnus = city?.id ?? ui?.game?.cityOf?.()?.id ?? null;
+  return Boolean(tunnus && ui?.luennanOhitus === tunnus);
 }
 
 /**

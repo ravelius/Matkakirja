@@ -2609,6 +2609,21 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
   transition: opacity 260ms ease;
 }
 
+/*
+ * VARJO ON KOKO KORTIN, EI KUVAN (omistaja 18.9.2026, PAATOKSET 35
+ * TARKENNUS 2 kohta 5: kuvan varjo lankesi kuvatekstin paperille ja
+ * jatti sen ylalaitaan tumman kaistan).
+ *
+ * Kuva ja paperi ovat YKSI laatikko: varjo maalataan koteloon, jonka
+ * rajat ovat kuvan ylareuna ja paperin alareuna. Ulkovarjo ei maalaudu
+ * oman laatikkonsa sisalle, joten paperille ei voi langeta mitaan —
+ * eika korjaus ole pehmuste, peitto tai varjon siirto sivuun, vaan se,
+ * etta valokuva ja siihen liimattu arkki heittavat yhden varjon, kuten
+ * yksi esine heittaa.
+ *
+ * Pyoristys on sama kuin osilla (kuva 3px ylakulmat, paperi 3px
+ * alakulmat), jotta varjon reuna seuraa kortin omaa muotoa.
+ */
 .fokusvirta-isokuva-kotelo {
   position: relative;
   margin: 0;
@@ -2616,6 +2631,8 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
   flex-direction: column;
   align-items: center;
   max-width: 72vw;
+  border-radius: 3px;
+  box-shadow: 0 10px 26px rgba(20, 14, 6, 0.45);
 }
 
 /* KUVA NIIN ISONA KUIN MAHTUU, KUVASUHDE SÄILYEN.
@@ -2628,9 +2645,11 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
  * valokuvan oma paperireuna — ohut vaalea kehys ja pehmeä varjo, sama
  * kieli kuin kartan pikkupakalla.
  *
- * VARJO EI OLE SUODATIN. `box-shadow` maalataan kuvan laatikosta, ei
+ * VARJO EI OLE SUODATIN. `box-shadow` maalataan laatikosta, ei
  * `filter: drop-shadow`illa — iOS-sääntö (tests/rules.test.mjs) koskee
- * suodattimia, eikä varjo ole animaatiossa.
+ * suodattimia, eikä varjo ole animaatiossa. Varjo asuu KOTELOSSA
+ * (kuva + paperi yhtenä laatikkona), ei kuvassa: kuvan oma varjo
+ * lankesi kuvatekstin paperille (PAATOKSET 35 TARKENNUS 2 kohta 5).
  */
 .fokusvirta-isokuva-kuva {
   width: auto;
@@ -2650,7 +2669,6 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
   box-sizing: border-box;
   border: 6px solid #f7f1e2;
   border-bottom: 0;
-  box-shadow: 0 10px 26px rgba(20, 14, 6, 0.45);
   /* Kuva on paperin PAALLA: paperin ylareuna limittyy kuvan taakse. */
   position: relative;
   z-index: 1;
@@ -2703,7 +2721,6 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
   padding: calc(0.5rem + var(--isokuva-paperin-limitys)) 0.75rem 0.65rem;
   background: #f7f1e2;
   border-radius: 0 0 3px 3px;
-  box-shadow: 0 10px 26px rgba(20, 14, 6, 0.45);
   font-family: var(--font-luku);
   font-size: 0.95rem;
   color: rgba(33, 29, 24, 0.92);
