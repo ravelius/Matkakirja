@@ -20,6 +20,9 @@ const MODULES = [
   'js/packs/saapumispuheet.js',
   'js/media.js',
   'js/kuvatekstit.js',
+  // Lauseraja (PAATOKSET 34 kohta 16): puhdas tekstiapuri ilman tuonteja,
+  // jonka nähtävyysnäkymä (js/kaupunkinosto.js) tuo — siksi ennen sitä.
+  'js/lauseraja.js',
   'js/galleria.js',
   // Ilmepaketti tuo vain median (peilin juuri); ui, fokusvirta,
   // karttaselite ja main tuovat sen.
