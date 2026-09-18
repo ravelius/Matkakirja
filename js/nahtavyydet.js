@@ -848,7 +848,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
     if (Math.hypot(e.clientX - alku.x, e.clientY - alku.y) > 6) return;
     if (e.target.closest?.('button, a')) return;
     if (kehys.classList.contains('zoomattu')) return;
-    avaaKarttaSuurennos(ui, kehys, kartta, { avaajat });
+    avaaKarttaSuurennos(ui, kehys, kartta, { avaajat, zoomiNapit });
   });
   kehys.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') { tyhjennaValinta(); return; }
@@ -858,7 +858,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
     if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
     e.preventDefault();
     if (ui.lehtitila.kulttuuriKuvaEl) ui.suljeKulttuuriKuva();
-    else avaaKarttaSuurennos(ui, kehys, kartta, { avaajat });
+    else avaaKarttaSuurennos(ui, kehys, kartta, { avaajat, zoomiNapit });
   });
   hajautaPiirrospisteet(kotelo, piirrosPisteet, ydin);
   /*
@@ -937,7 +937,7 @@ export function piirraKaupunkiKartta(ui, kohde, {
     kokoruutu.type = 'button';
     kokoruutu.setAttribute('aria-label', 'Avaa kartta kokoruudulle');
     kokoruutu.title = 'Avaa kartta kokoruudulle';
-    kokoruutu.addEventListener('click', () => avaaKarttaSuurennos(ui, kehys, kartta, { avaajat }));
+    kokoruutu.addEventListener('click', () => avaaKarttaSuurennos(ui, kehys, kartta, { avaajat, zoomiNapit }));
   }
   /*
    * Zoomin ohjaus on kytketty vasta lohkon lopussa (kytkeKarttaZoom
@@ -1162,6 +1162,19 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
   const mitat = asetukset.mitat ?? kehys.getBoundingClientRect();
   if (!(mitat.width > 0) || !(mitat.height > 0)) return;
   const avaajat = asetukset.avaajat ?? null;
+  /*
+   * PLUS JA MIINUS POIS MYÖS KOKORUUDUSTA (PAATOKSET 34 kohta 18 g,
+   * omistaja 18.9.2026: *"plus- ja miinuspainikkeet POISTETAAN
+   * kartasta"*). v1944 otti napit nähtävyysarkin kartalta
+   * (`zoomiNapit: false`), mutta kokoruutu rakensi omat nappinsa
+   * ehdoitta, joten ne palasivat heti kartan levittyä. Lippu kulkee
+   * nyt avaajan mukana samalla ehdolla: arkin kartta antaa epätoden ja
+   * kokoruutu jää ilman nappeja (nipistys, rulla, tuplanapautus ja
+   * panorointi toimivat ennallaan, ks. kytkeKarttaZoom). Lehden ja
+   * pop-upin kartat sekä maalehden korkokartta eivät anna lippua
+   * lainkaan, joten niiden kokoruutu pitää nappinsa.
+   */
+  const zoomiNapit = asetukset.zoomiNapit !== false;
   const ydin = ydinAla(kartta);
   ui.suljeKulttuuriKuva();
   const kortti = html('div', 'postikortti kulttuuri-suurennos kartta-suurennos');
@@ -1418,14 +1431,15 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
     zoomiRyhma.appendChild(nappi);
     return nappi;
   };
-  const isoNapit = {
+  const isoNapit = zoomiNapit ? {
     loitonna: isoZoomiNappi('−', 'Loitonna karttaa'),
     lahenna: isoZoomiNappi('+', 'Lähennä karttaa'),
-  };
-  tyokalut.appendChild(zoomiRyhma);
+  } : {};
+  if (zoomiNapit) tyokalut.appendChild(zoomiRyhma);
   // Ilman lavaa ei ole mitään zoomattavaa (vanha kartta ilman
   // kartta-lava-koteloa) — silloin ei myöskään näytetä säätimiä.
-  if (lava) kortti.appendChild(tyokalut);
+  // Tyhjää työkaluriviä ei liitetä lainkaan (kohta 18 g).
+  if (lava && zoomiNapit) kortti.appendChild(tyokalut);
   sulku.addEventListener('click', (e) => {
     e.stopPropagation();
     ui.suljeKulttuuriKuva();
