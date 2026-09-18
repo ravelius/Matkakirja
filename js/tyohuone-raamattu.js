@@ -4581,7 +4581,7 @@ export const RAAMATTU = {
           + 'PR:t, workflow run). Saanto: jos tehtava tarvitsee avainta jota '
           + 'Macilla ei ole (ElevenLabs, OpenAI, Google...), ajetaan vastaava '
           + 'Actions-tyonkulku; avaimia ei kopioida Macille eika pyydeta '
-          + 'omistajalta. KUMOTTU osin heti (omistaja 18.9.2026 klo 10.00 Suomen '
+          + 'omistajalta. KUMOTTU osin heti (omistaja 18.9.2026 klo 09.55 Suomen '
           + 'aikaa, sanatarkasti: "Muuten hyva, mutta ei koskaan ajeta '
           + 'Githubissa mitaan minka voisi ajaa nopeammin Macilla, vaan '
           + 'selvitetaan sitten minun kanssa, mista avain loytyy, mutta ensin '
