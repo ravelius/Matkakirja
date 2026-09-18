@@ -21,6 +21,11 @@
  *      joten jokaisen poltetun merkin paikka ja tiiviste ovat samat
  *      kuin ennen porttia (Raamattu: yksi ladonta, yksi lähde).
  *
+ * NELJÄ VÄITETTÄ KOSKEVAT MAAILMANLAAJUISTA AJOA (ilman `--nostomaa`).
+ * Kun nostotaso poltetaan MAITTAIN (Raamattu PAATOKSET 34 kohta 17 d),
+ * sääntö on toinen — portti ajetaan kohdemaan asetuksella — ja sillä on
+ * omat väitteensä tiedoston lopussa ("maakohtaisessa ajossa…").
+ *
  * Testi ei käytä selainta, verkkoa eikä laattoja: ladonta on puhdas
  * funktio laudan datasta.
  */
@@ -213,6 +218,86 @@ test('kaupunkimerkin nimiö on isompi kuin noston — ja vain elävänä', () =>
   assert.equal(merkinKerroin({ kaupunki: true, poltettu: true }), 1);
   assert.equal(merkinKerroin({}), 1);
   assert.equal(merkinKerroin(null), 1);
+});
+
+/*
+ * MAAKOHTAINEN LAATASTO: PORTTI AJETAAN KOHDEMAAN ASETUKSELLA
+ * (Fablen mittaus 18.9.2026 klo 19.30, Raamattu PAATOKSET 34 kohta
+ * 17 d). Yllä olevat väitteet mittaavat MAAILMANLAAJUISTA ajoa, jossa
+ * naapurin muste on samassa kuvassa ja katto 21 on yhä oikein. Kun
+ * nostotaso poltetaan maittain (`--nostomaa <ISO>`), peli lataa
+ * laataston VAIN kohdemaalle — ja silloin polttoketjun on ajettava
+ * sama portti samalla `{ kohdemaa: true }` -asetuksella kuin elävä
+ * kerros (js/pallolauta/nostot.js `keraa`, "KOHDEMAA-LIPPU").
+ *
+ * VANHA TILA, MITATTU: Ranskasta paloi 12 nostomerkkiä 89:stä, koska
+ * katto 21 ja `lahi: true` pitivät maastokohteet ja hahmotelman 27
+ * uutta kohdetta elävinä — ja pallon elävien katto (NOSTOJEN_KATTO 40)
+ * pudotti niistä osan kokonaan ruudulta.
+ */
+const maakohtainen = keraaNostot(pack, { maittain: true });
+
+test('maakohtaisessa ajossa katto ei pidätä mitään', () => {
+  /*
+   * VÄITE ON PORTIN PÄÄTÖS, EI LUKU: maakohtaisessa ajossa portti ei
+   * saa jättää yhtäkään merkkiä piiloon, koska katto ja `lahi` eivät
+   * koske kohdemaata. `porttiPiiloon` on polttoketjun oma kirjanpito.
+   */
+  assert.equal(maakohtainen.tilasto.porttiPiiloon, 0,
+    `maakohtainen ajo piilotti ${maakohtainen.tilasto.porttiPiiloon} merkkiä portin taakse`);
+  assert.deepEqual(maakohtainen.tilasto.porttiMaat, []);
+  // Vastakoe: maailmanlaajuinen ajo pidättää yhä (sama aineisto).
+  assert.ok(tilasto.porttiPiiloon > 0,
+    'maailmanlaajuinen ajo ei pidättänyt mitään — väite ei mittaa eroa');
+});
+
+test('maakohtaisessa ajossa Ranskan kaupungin ulkopuoliset palavat', () => {
+  /*
+   * ELÄVÄKSI SAA JÄÄDÄ VAIN KOLMESTA SYYSTÄ (PAATOKSET 33 TARKENNUS 2
+   * FABLEN RAJAUS a ja b): kaupunkipiste, kaupungin sisäinen nosto tai
+   * lukitun maan puuttuva ankkuri. Portti ei ole enää syy.
+   */
+  const fra = maakohtainen.merkit.filter((m) => m.iso === 'FRA' && m.perhe === 'nosto');
+  const palaa = fra.filter((m) => m.poltettava);
+  assert.ok(fra.length >= 89, `FRA merkkejä ${fra.length} (odotettu ≥ 89)`);
+  assert.ok(palaa.length >= 55,
+    `FRA palaa ${palaa.length} / ${fra.length} (odotettu ≥ 55; vanha sääntö antoi 12)`);
+  /*
+   * HAHMOTELMAN KOHTEET OVAT SE, MITÄ OMISTAJA EI NÄHNYT: 12 uutta
+   * varastokohdetta ja niiden ankkurit tulivat laudalle v1945:ssä,
+   * eivätkä palaneet kertaakaan vanhalla säännöllä.
+   */
+  const hahmotelmia = palaa.filter((m) => m.tunnus.startsWith('hahmotelma-')).length;
+  assert.ok(hahmotelmia >= 25,
+    `hahmotelman kohteita palaa ${hahmotelmia} (odotettu ≥ 25)`);
+  /*
+   * MONEN MAAN MERKKI PALAA MAAKOHTAISEEN LAATASTOON. Laatastot eivät
+   * enää sekoitu, ja tiivisteluettelo on maakohtainen, joten Välimeri
+   * ja Biskajanlahti palavat Ranskan omalla mittatikulla.
+   */
+  for (const tunnus of ['valimeri', 'biskajanlahti', 'montblanc']) {
+    assert.ok(palaa.some((m) => m.tunnus === tunnus), `${tunnus} ei pala Ranskaan`);
+  }
+  assert.equal(maakohtainen.tilasto.monimaisia, 0,
+    'maakohtaisessa ajossa monen maan merkkiä ei jätetä eläväksi');
+  // Vastakoe: maailmanlaajuisessa ajossa sama merkki jää eläväksi.
+  assert.ok(tilasto.monimaisia > 0, 'maailmanlaajuinen ajo ei karsinut monimaisia');
+});
+
+test('kaupunkipiste ja kaupungin sisäinen jäävät eläviksi myös maittain', () => {
+  const fra = maakohtainen.merkit.filter((m) => m.iso === 'FRA' && m.perhe === 'nosto');
+  const elava = new Set(fra.filter((m) => !m.poltettava).map((m) => m.tunnus));
+  for (const tunnus of ['nakyva-kaupunki-lyon', 'nakyva-kaupunki-strasbourg']) {
+    assert.ok(elava.has(tunnus), `${tunnus} palaa, vaikka kaupunkipiste jää eläväksi`);
+  }
+  // Pariisin sisäiset (PAATOKSET 34 kohdat 2-3): liuskan kategorioissa.
+  for (const tunnus of ['bastilji', 'tuileries', 'nosto-pariisin-patonki']) {
+    assert.ok(elava.has(tunnus), `${tunnus} palaa, vaikka on Pariisin sisäinen`);
+  }
+  assert.ok(maakohtainen.tilasto.kaupunkipisteita >= 7,
+    `kaupunkipisteitä eläväksi ${maakohtainen.tilasto.kaupunkipisteita}`);
+  assert.ok(maakohtainen.tilasto.sisaisia >= 32,
+    `kaupungin sisäisiä eläväksi ${maakohtainen.tilasto.sisaisia}`);
 });
 
 test('portti ei siirrä ladontaa: poltetun merkin tiiviste on luettelossa', () => {

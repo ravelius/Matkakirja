@@ -31,7 +31,16 @@ const moduuli = await import(join(JUURI, 'js', 'packs', 'maailmankartta.js'));
 const pack = moduuli.MAAILMANKARTTA;
 if (!pack?.map?.width) throw new Error('Laudan mittoja ei löytynyt.');
 
-const { merkit } = keraaNostot(pack);
+/*
+ * MAITTAIN, KUTEN AJOKIN. Shardit ajetaan aina `--nostomaa <ISO>`
+ * -lipulla, ja silloin merkkiportti ajetaan kohdemaan asetuksella
+ * (tools/fokuskartta/nostot.mjs "MERKKIPORTTI AJETAAN KOHDEMAAN
+ * ASETUKSELLA"). Ilman lippua tämä lista laskisi poltettavat vanhalla
+ * katolla 21, ja listalta voisi pudota maa, jolla on poltettavaa vasta
+ * kohdemaan asetuksella — juuri se eriytyminen, jota tämä tiedosto
+ * estää.
+ */
+const { merkit } = keraaNostot(pack, { maittain: true });
 /* Vain poltettavat: estetyn maan merkit piirtyvät elävinä, eikä
  * sellaiselle maalle ole mitään poltettavaa (ks. TÄKYN EHTO). */
 const maat = new Map();

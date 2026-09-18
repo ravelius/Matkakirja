@@ -1820,6 +1820,19 @@ if [ "$LUETTELO" -eq 1 ]; then
   if [ "$SARJAT" = "z8" ] && [ "$PAKOTA_LUETTELO" -eq 0 ]; then
     vertaa_luettelo
   fi
+  # MAITTAISET NOSTOTASOT SHARDEISTA LUETTELOON — ENNEN EHEYTTÄ.
+  #
+  # Luettelojobi (--vain-luettelo) ei tunne maita, joten sen
+  # `nostotasot` on null; maakohtaiset kirjaukset ovat shardien omissa
+  # pyramidi.json-tiedostoissa. Polku --nostot-ja-pallo teki tämän jo
+  # (ks. nostot_ja_pallo), mutta tämä yleinen polku EI — ja silloin
+  # eheystarkistus laskee rajalaattojen summan yhtä bittikarttaa
+  # vasten: mitattu 18.9.2026 *"poltettu 425, luettelo lupaa 251"*.
+  # Sama kokoaminen tähän, samaan kohtaan ennen tarkistusta.
+  if grep -q '^nosto-' "$ULOS/lokit/shardit.txt" 2>/dev/null; then
+    node "$JUURI/tools/kokoa-nostotasot.mjs" --ulos "$ULOS" \
+      --luettelo "$ULOS/luettelo/pyramidi.json" || exit 1
+  fi
   # EHEYS ENNEN VIENTIÄ: luettelo lupaa laatat, joten se viedään vasta
   # kun laatat on laskettu ja luvut täsmäävät.
   tarkista_eheys "$ULOS/lokit/shardit.txt" --luettelo "$ULOS/luettelo/pyramidi.json"
