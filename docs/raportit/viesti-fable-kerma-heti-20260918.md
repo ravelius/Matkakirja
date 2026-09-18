@@ -180,6 +180,12 @@ Sama näkymä, sama kamera, sama panorointi, vain lippu vaihtuu
 | maski POIS | `kuvat/kerma-heti-20260918/uusi-panoroinnin-jalkeen.png` |
 | maski PÄÄLLÄ | `kuvat/kerma-heti-20260918/uusi-meret-panoroinnin-jalkeen.png` |
 
+Kuvien nimistä: `uusi-*.png` on kaapattu Chromiumilla ENNEN oletuksen
+kääntöä, eli maski pois; `uusi-meret-*.png` on sama näkymä lipulla.
+Oletuksen käännyttyä sama ajo tuottaa nyt `uusi-meret-*`-kuvan
+näköisen ruudun ilman lippua. Kuvat on jätetty alkuperäisillä nimillä,
+koska raportti viittaa niihin kuvaparina.
+
 Ilman maskia Välimeri, Tyrrhenanmeri ja Adrianmeri ovat **samaa kermaa
 kuin Italia** — koko ruutu on yhtä vaaleaa, ja meri erottuu vain
 rantaviivasta. Maskin kanssa meret ovat pohjan omaa syvyysharmaata ja
