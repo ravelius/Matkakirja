@@ -115,7 +115,7 @@ import {
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
 import { luoNimet, nimibudjetti } from './nimet.js';
 import {
-  KOHDEMERKIN_RUUTU_PX, NOSTOJEN_KATTO, VALON_KORKEUS, VALON_SADE,
+  KOHDEMERKIN_RUUTU_PX, NOSTOJEN_KATTO, PISTEIDEN_KATTO, VALON_KORKEUS, VALON_SADE,
   luoNostot, nostonLaatikko, nostonMitta,
 } from './nostot.js';
 import {
@@ -3850,6 +3850,15 @@ export async function avaaPallolauta(ui) {
       // Avauslennolla ei yhtään nostoa: lento on kartan niukin hetki.
       katto: lento ? 0 : Math.min(NOSTOJEN_KATTO, Math.max(0, HTML_MERKKIEN_KATTO - pelia)),
       /*
+       * PISTEIDEN OMA KATTO (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34
+       * kohta 21; perustelu js/pallolauta/nostot.js KATTO EI SAA
+       * PUDOTTAA KOHDEMAAN PISTETTÄ). Nimiöllisiä rajaa yhä `katto`
+       * eli CSS2D-budjetti; sen yli menevät kohdemaan rivit piirtyvät
+       * PELKKINÄ PISTEINÄ, koska piste ei ole osuma-ala eikä teksti.
+       * Avauslennolla kartta on niukin, joten silloin ei näitäkään.
+       */
+      pisteKatto: lento ? 0 : PISTEIDEN_KATTO,
+      /*
        * PELINAPPULA ON KIINTEÄ ESTE (Raamattu KARTTAUUDISTUKSEN
        * PAATOKSET 32 kohta 5: nimiö ei saa olla *"kaupungin nimen tai
        * pelinappulan päällä"*). Nappula on pelin merkki eikä tämän
@@ -3870,8 +3879,11 @@ export async function avaaPallolauta(ui) {
     const korkeusAst = nakyva?.h > 0 ? (nakyva.h * 360) / PALLOLAUDAN_LEVEYS : Infinity;
     const katto = vain
       ? vain.size
+      // Nimibudjetista vähennetään NIMIÖLLISET nostot, ei nimiöttömiä
+      // pisteitä (ks. nostot.js `nimiollisia`, PAATOKSET 34 kohta 21).
       : Math.min(nimibudjetti(korkeusAst),
-        Math.max(0, HTML_MERKKIEN_KATTO - pelia - nostoTulos.maara));
+        Math.max(0, HTML_MERKKIEN_KATTO - pelia
+          - (nostoTulos.nimiollisia ?? nostoTulos.maara)));
     /*
      * KOHDEKAUPUNGIN LATTIA LADONTAAN (omistaja 8.9.2026): nimen koko
      * ja pisteen säde tulevat samasta laskusta kuin itse piste
