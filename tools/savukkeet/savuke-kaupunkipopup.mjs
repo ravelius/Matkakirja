@@ -493,15 +493,52 @@ for (const ruutu of RUUDUT) {
        * yrityksellä, ja liuska avataan tarvittaessa uudestaan. Väite on,
        * että RIVI AVAA OMAN NÄKYMÄNSÄ — ei se, monennellako sormella.
        */
+      /**
+       * Mikä on napautuspisteen päällimmäisenä juuri nyt, jos se ei ole
+       * pallon oma kangas? Palauttaa null, kun kartta on paljaana.
+       *
+       * SORMI EI YLLÄ KALUSTEEN LÄPI (mitattu 19.9.2026, Mac Studio;
+       * docs/raportit/viesti-fable-savukkeet-kohta8-20260919.md).
+       * Kartan päällä on pelin omia kalusteita — päiväkirjakortti
+       * (`.fact-card`, js/kartta.js placeFactCard) ja juuri suljetun
+       * kortin kuori, joka rakentuu asynkronisesti ja voi palata
+       * DOMiin sulun jälkeen. Kumpikin nielaisee napautuksen ENNEN
+       * palloa, jolloin `viimeinenNapautus` ei muutu lainkaan eikä
+       * mitään avaudu. Sama juurisyy kaatoi savuke-pallo-nostolaput
+       * vartiot 6–7 samassa erässä.
+       */
+      const esteRivilla = (piste) => sivu.evaluate(async ([x, y]) => {
+        const kuvaa = (el) => (el
+          ? `${el.tagName}.${(typeof el.className === 'string' ? el.className : el.className?.baseVal) || ''}`.trim()
+          : 'ei mitään');
+        const paljas = (el) => Boolean(el) && (el.tagName === 'CANVAS'
+          || el.classList?.contains('pallolauta-kotelo'));
+        let el = document.elementFromPoint(x, y);
+        for (let i = 0; i < 15 && !paljas(el); i += 1) {
+          // eslint-disable-next-line no-await-in-loop
+          await new Promise((ok) => setTimeout(ok, 100));
+          el = document.elementFromPoint(x, y);
+        }
+        return paljas(el) ? null : kuvaa(el);
+      }, [piste.x, piste.y]);
       const napautaRivi = async (laji, luokka) => {
         for (let yritys = 0; yritys < 3; yritys += 1) {
           /* eslint-disable no-await-in-loop */
+          // Edellisen rivin näkymä auki jääneenä nielaisee napautuksen
+          // (dialogi on kartan päällä) — se suljetaan ennen yritystä.
+          await suljeArkki();
+          await sivu.waitForTimeout(200);
           const auki = await sivu.evaluate(
             () => window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null,
           );
           if (!auki && !(await avaaLiuska())) return false;
           const piste = await rivinPiste(laji);
           if (!piste) return false;
+          const este = await esteRivilla(piste);
+          if (este) {
+            tieto(`${tunnus}: rivin "${laji}" napautuspisteen päällä`,
+              `${este} (yritys ${yritys + 1}) — napautus tehdään silti`);
+          }
           await sivu.mouse.click(piste.x, piste.y);
           for (let i = 0; i < 30; i += 1) {
             const nakyma = await sivu.evaluate((c) => {
@@ -511,6 +548,27 @@ for (const ruutu of RUUDUT) {
             if (nakyma) return true;
             await sivu.waitForTimeout(50);
           }
+          /*
+           * MIKSI YRITYS EI AVANNUT MITÄÄN? Pelkkä punainen väite ei
+           * kerro, nielikö napautuksen kaluste, sulkeutuiko liuska vai
+           * antoiko osumasääntö pisteen jollekin muulle. Laudan oma
+           * `napautusselitys` lukee saman säännön kuin napautaPintaan,
+           * ja `viimeinenNapautus` kertoo, tuliko napautus edes pallon
+           * pinnalle asti.
+           */
+          const jalki = await sivu.evaluate(() => {
+            const l = window.matkakirja.ui.pallolauta;
+            const d = document.getElementById('tiivis-lehtiarkki');
+            const vn = l.viimeinenNapautus?.() ?? null;
+            return {
+              liuska: l.nostot.liuskaAuki?.() ?? null,
+              arkki: d ? { auki: d.open, luokat: d.className } : null,
+              napautus: vn ? { lat: vn.lat, lng: vn.lng, ika: Date.now() - vn.hetki } : null,
+              selitys: vn && Number.isFinite(vn.lat) ? l.napautusselitys(vn.lat, vn.lng) : null,
+            };
+          });
+          tieto(`${tunnus}: rivin "${laji}" napautus ei avannut näkymää (yritys ${yritys + 1})`,
+            JSON.stringify(jalki));
           /* eslint-enable no-await-in-loop */
         }
         return false;
