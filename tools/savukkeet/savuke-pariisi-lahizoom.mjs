@@ -341,6 +341,15 @@ const LIUSKAN_KIRJASIN_LATTIA_PX = 13;
 const LIUSKAN_KIRJASIN_KATTO_PX = 18;
 /** Ruutuvektorin sallittu heitto vedon yli (k. 13 b ja c). */
 const PAIKALLAAN_SIETO_PX = 1;
+/**
+ * Kamera lähtee heti (PAATOKSET 34 kohta 14 a): katto sille ajalle,
+ * joka saa kulua napautuksesta pallon katsepisteen ensimmäiseen
+ * muutokseen. Mitta on karkeampi kuin luku (rAF-näyte ~16 ms), mutta
+ * 100 ms erottaa selvästi uuden ajon (liike ensimmäisillä kehyksillä)
+ * vanhasta (1400 ms:n trapetsi, jossa liike alkoi näkyä vasta
+ * kolmannen kymmenyksen jälkeen).
+ */
+const LIIKKEEN_KATTO_MS = 100;
 /** Vedon pituus 8m:ssä (px, molempiin suuntiin). */
 const VEDON_PITUUS_PX = 60;
 
@@ -950,6 +959,166 @@ for (const ruutu of RUUDUT) {
   vaadi(`5. ${ruutu.nimi}: luentakuvapakkaa ei ole kartalla saapumisen jälkeen`,
     saapuen.pakka === 0 && saapuen.pulucamKortteja === 0,
     `paneeleja ${saapuen.pakka}, PuluCam-kortteja ${saapuen.pulucamKortteja}`);
+
+  /*
+   * ══ 8o-8q. LIUSKA SAAPUMISNÄKYMÄSTÄ (Raamattu, KARTTAUUDISTUKSEN
+   * PAATOKSET 34 kohta 14) ═══════════════════════════════════════════
+   *
+   * OMISTAJAN KUVA v1936 OTETTIIN SAAPUMISNÄKYMÄSTÄ (koko Ranska), ei
+   * lähizoomista: liuska aukesi merkin VASEMMALLE puolelle nappulan
+   * päälle, ja kamera lähti liikkeelle vasta tauon jälkeen. Vartiot
+   * 8c-8n mittaavat lähizoomia, joten kohdan 14 kolme väitettä
+   * mitataan tässä, siitä näkymästä, josta vika nähtiin:
+   *
+   *   8o. aika napautuksesta KAMERAN ENSIMMÄISEEN LIIKKEESEEN < 100 ms
+   *       (a: *"Kartta pitaisi siirtya heti napautuksen jalkeen"*);
+   *   8p. liuskan jokaisen rivin VASEN reuna on merkin oikealla
+   *       puolella (b: *"teksti mahtuisi Pariisin oikealle puolelle"*);
+   *   8q. kaupungin iso nimi on piilossa liuskan ollessa auki ja
+   *       näkyvissä sulun jälkeen (c).
+   *
+   * LIIKE MITATAAN PALLON OMASTA KATSEPISTEESTÄ (`pointOfView`), ei
+   * kamera-ajon lipusta: väite on, että KUVA liikkuu, ja ajo voi olla
+   * käynnissä ilman että silmä näkee mitään (juuri se oli vika —
+   * trapetsin kiihdytysramppi söi ensimmäiset sadat millisekunnit).
+   * Mittari nollataan pointerdownista, eli samasta hetkestä, jolla
+   * omistajan sormi koskettaa ruutua.
+   */
+  const saapumisNurkka = await kankaanNurkka(sivu);
+  const saapuvaPiste = await sivu.evaluate(() => {
+    const { ui } = window.matkakirja;
+    const l = ui.pallolauta;
+    const oma = ui.game?.cityOf?.() ?? null;
+    const k = oma ? (l.kaupunki?.(oma.id) ?? null) : null;
+    const pp = k ? l.pallo.getScreenCoords(k.lat, k.lon, 0) : null;
+    return pp ? { x: pp.x, y: pp.y, id: oma.id, nimi: oma.name } : null;
+  });
+  if (saapuvaPiste) {
+    await sivu.evaluate(() => {
+      const l = window.matkakirja.ui.pallolauta;
+      const pallo = l.pallo;
+      const mittari = {
+        alku: null, liike: null, pov: null,
+      };
+      window.__liuskaMittari = mittari;
+      const erilainen = (a, b) => Math.abs(a.lat - b.lat) > 1e-6
+        || Math.abs(a.lng - b.lng) > 1e-6
+        || Math.abs(a.altitude - b.altitude) > 1e-7;
+      const seuraa = () => {
+        if (mittari.alku !== null && mittari.liike === null && mittari.pov) {
+          if (erilainen(pallo.pointOfView(), mittari.pov)) {
+            mittari.liike = performance.now() - mittari.alku;
+          }
+        }
+        requestAnimationFrame(seuraa);
+      };
+      requestAnimationFrame(seuraa);
+      document.addEventListener('pointerdown', () => {
+        mittari.alku = performance.now();
+        mittari.liike = null;
+        mittari.pov = pallo.pointOfView();
+      }, true);
+    });
+    const nimiNakyy = () => sivu.evaluate((id) => Boolean(
+      document.querySelector(`.pallolauta-nimi[data-kaupunki="${id}"]`),
+    ), saapuvaPiste.id);
+    const nimiEnnen = await nimiNakyy();
+    /*
+     * KAKSI YRITYSTÄ, SAMA SYY KUIN 8c:SSÄ: juuri suljetun kortin
+     * jälkeen pelin oma portti nielaisee seuraavan napautuksen.
+     */
+    let saapuenAuki = null;
+    for (let yritys = 0; yritys < 2 && !saapuenAuki; yritys += 1) {
+      /* eslint-disable no-await-in-loop */
+      await napauta(sivu, saapumisNurkka.x + saapuvaPiste.x, saapumisNurkka.y + saapuvaPiste.y);
+      for (let i = 0; i < 40; i += 1) {
+        saapuenAuki = await sivu.evaluate(
+          () => window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null,
+        );
+        if (saapuenAuki) break;
+        await sivu.waitForTimeout(50);
+      }
+      /* eslint-enable no-await-in-loop */
+    }
+    await sivu.waitForTimeout(400);
+    const saapuenTila = await sivu.evaluate(() => {
+      const { ui } = window.matkakirja;
+      const l = ui.pallolauta;
+      const oma = ui.game?.cityOf?.() ?? null;
+      const k = oma ? (l.kaupunki?.(oma.id) ?? null) : null;
+      const pp = k ? l.pallo.getScreenCoords(k.lat, k.lon, 0) : null;
+      const r = l.pallo.renderer().domElement.getBoundingClientRect();
+      return {
+        liike: window.__liuskaMittari?.liike ?? null,
+        merkki: pp ? { x: pp.x, y: pp.y } : null,
+        rivit: l.nostot.liuskanRivit?.() ?? [],
+        ruutu: { leveys: r.width, korkeus: r.height },
+        nappulat: [...document.querySelectorAll('.pallolauta-nappula')].map((el) => {
+          const b = el.getBoundingClientRect();
+          return {
+            x0: b.left - r.left, y0: b.top - r.top, x1: b.right - r.left, y1: b.bottom - r.top,
+          };
+        }),
+      };
+    });
+    const nimiAuki = await nimiNakyy();
+    await kaappaa(sivu, `pariisi-saapuen-liuska-${ruutu.w}.png`);
+    const sRivit = saapuenTila.rivit ?? [];
+    tieto(`${ruutu.nimi} · saapumisnäkymän liuska`,
+      `${sRivit.length} riviä, merkki `
+      + `${saapuenTila.merkki ? `${p(saapuenTila.merkki.x)},${p(saapuenTila.merkki.y)}` : '—'}`
+      + ` / ruutu ${p(saapuenTila.ruutu.leveys)}, liike `
+      + `${saapuenTila.liike === null ? '—' : p(saapuenTila.liike)} ms, `
+      + `nimi ennen ${nimiEnnen ? 'näkyy' : 'piilossa'}, auki ${nimiAuki ? 'näkyy' : 'piilossa'}`);
+    vaadi(`8o. ${ruutu.nimi}: kamera liikkuu < ${LIIKKEEN_KATTO_MS} ms napautuksesta (saapumisnäkymä)`,
+      Number.isFinite(saapuenTila.liike) && saapuenTila.liike < LIIKKEEN_KATTO_MS,
+      `${saapuenTila.liike === null ? 'ei liikettä' : `${p(saapuenTila.liike)} ms`}`);
+    const vasemmalla = sRivit.filter((r) => !(r.x0 > (saapuenTila.merkki?.x ?? Infinity)));
+    vaadi(`8p. ${ruutu.nimi}: liuskan vasen reuna on merkin oikealla puolella (saapumisnäkymä)`,
+      sRivit.length > 0 && vasemmalla.length === 0,
+      `rivejä ${sRivit.length}, merkin vasemmalla puolella `
+      + `${vasemmalla.map((r) => r.nimi || r.laji).join(', ') || 'ei yhtään'}`);
+    /* Suurin kategoria auki: sama väite avatulla listalla. */
+    const kategoriat = sRivit.filter((r) => r.laji === 'kategoria');
+    const suurinKat = kategoriat.slice().sort((a, b) => (b.maara ?? 0) - (a.maara ?? 0))[0] ?? null;
+    if (suurinKat && Number.isFinite(suurinKat.x0)) {
+      await napauta(sivu,
+        saapumisNurkka.x + (suurinKat.x0 + suurinKat.x1) / 2,
+        saapumisNurkka.y + (suurinKat.y0 + suurinKat.y1) / 2);
+      await sivu.waitForTimeout(500);
+      const avattu = await sivu.evaluate(() => {
+        const l = window.matkakirja.ui.pallolauta;
+        const { ui } = window.matkakirja;
+        const oma = ui.game?.cityOf?.() ?? null;
+        const k = oma ? (l.kaupunki?.(oma.id) ?? null) : null;
+        const pp = k ? l.pallo.getScreenCoords(k.lat, k.lon, 0) : null;
+        return {
+          rivit: l.nostot.liuskanRivit?.() ?? [],
+          merkki: pp ? { x: pp.x, y: pp.y } : null,
+        };
+      });
+      await kaappaa(sivu, `pariisi-saapuen-kategoria-${ruutu.w}.png`);
+      const aRivit = avattu.rivit ?? [];
+      const aVasen = aRivit.filter((r) => !(r.x0 > (avattu.merkki?.x ?? Infinity)));
+      tieto(`${ruutu.nimi} · saapumisnäkymä, ${suurinKat.nimi} auki`,
+        `${aRivit.length} riviä, merkin vasemmalla ${aVasen.length}`);
+      vaadi(`8p2. ${ruutu.nimi}: avattu kategoria pysyy merkin oikealla puolella (saapumisnäkymä)`,
+        aRivit.length > 0 && aVasen.length === 0,
+        `${aVasen.map((r) => r.nimi || r.laji).join(', ') || 'ei yhtään'}`);
+    }
+    /* Liuska kiinni: nimi palaa. */
+    await sivu.evaluate(() => window.matkakirja.ui.pallolauta.nostot.suljeLiuska?.());
+    await sivu.waitForTimeout(600);
+    const nimiSulun = await nimiNakyy();
+    vaadi(`8q. ${ruutu.nimi}: kaupungin iso nimi piilossa liuskan ajan, näkyvissä sulun jälkeen`,
+      nimiEnnen && !nimiAuki && nimiSulun,
+      `ennen ${nimiEnnen ? 'näkyy' : 'piilossa'}, auki `
+      + `${nimiAuki ? 'NÄKYY' : 'piilossa'}, sulun jälkeen `
+      + `${nimiSulun ? 'näkyy' : 'PIILOSSA'}`);
+    await sivu.waitForTimeout(200);
+  } else {
+    tieto(`${ruutu.nimi} · saapumisnäkymän liuska`, 'kaupunkimerkki ei ollut ruudulla');
+  }
 
   /* --- sisimpään zoomiin --- */
   const alt = await zoomaaPariisiin(sivu, ZOOMIPORTAAT);
