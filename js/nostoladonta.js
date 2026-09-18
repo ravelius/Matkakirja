@@ -732,6 +732,48 @@ export function nostoladontaKattoSuhde(porras, ruutuPx) {
  */
 export const NOSTOLADONTA_SAANTO = 'v11-limitys';
 
+/*
+ * ══ KAUPUNKIPISTE EI OLE LAATTAMUSTETTA (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 25 kohdat 2-3, PAATOKSET 27 kohta 5, PAATOKSET 34
+ * kohdat 1-2) ══════════════════════════════════════════════════════
+ *
+ * Kaupunki on kartalla YKSI PISTE, jolla on kaupungin nimi ja jonka
+ * NAPAUTUS avaa kaupungin liuskan (PAATOKSET 34 kohta 1-2). Sen nimiö
+ * on omistajan oma mitta: *"Isommaksi, n. 11-12 px"* (PAATOKSET 25
+ * kohta 2), *"kaupunkien nimiot 11,5 px pysyvat"* (PAATOKSET 27
+ * kohta 5) ja *"nostojen nimiot pienemmalla kuin kaupunkien"*
+ * (PAATOKSET 25 kohta 3).
+ *
+ * POLTETTU MUSTE EI VOI OLLA KUMPAAKAAN. Laattaan paistettu merkki ei
+ * saa elävää solmua (js/pallolauta/nostot.js: DOMiin ladotaan vain
+ * polttamattomat rivit), joten poltetulla kaupungilla ei ole 11,5 px:n
+ * nimiötä eikä napautuspintaa liuskalle — ja polttoketju piirtää
+ * nimiön noston omalla 8,5 px:n mitalla, koska kaupunkikerroin koskee
+ * VAIN ELÄVÄÄ MERKKIÄ (js/pallolauta/nostot.js, KAUPUNKIMERKIN NIMIÖ
+ * ON ISOMPI KUIN NOSTON: *"Poltettua mustetta ei voi suurentaa
+ * jälkikäteen"*). Kaupunkipisteen polttaminen rikkoisi siis kolme
+ * omistajan päätöstä kerralla, ja juuri niin kävi 18.9.2026, kun
+ * nostotaso 2026-09-18-nostot toi `nakyva-kaupunki-*`-tunnukset
+ * luetteloon: Ranskan seitsemän lisäkaupunkia katosivat kartalta
+ * kokonaan (savuke-nimikyltti 8b/8c, savuke-pariisi-lahizoom 1c,
+ * kaupunkimerkkejä 0).
+ *
+ * SÄÄNTÖ ON YKSI KAPPALE, KAKSI KYSYJÄÄ — sama tae kuin tiivisteellä
+ * tässä tiedostossa: peli (js/fokuskohteet.js) päättää tällä, ettei
+ * kaupunki koskaan ole poltettu, ja polttoketju
+ * (tools/fokuskartta/nostot.mjs) päättää tällä, ettei sitä polteta.
+ * Kaksi kopiota ajautuisi eri vastauksiin.
+ *
+ * LUETTELO SAA SILTI SANOA MITÄ TAHANSA: 18.9.2026 viety nostotaso
+ * listaa kaupunkipisteet, joten niiden muste on laatassa siihen asti,
+ * kunnes nostotaso poltetaan uudelleen tämän säännön kanssa. Peli
+ * piirtää ne siihen saakka elävinä musteen päälle — sama tila kuin
+ * millä tahansa vanhentuneella tiivisteellä (ks. kohdeOnPoltettu),
+ * ja kaupungin nimi ja napautus ovat sillä välin oikein.
+ */
+/** Onko tunnus kartan kaupunkipiste (`nakyva-kaupunki-*`)? */
+export const onKaupunkipiste = (tunnus) => String(tunnus ?? '').startsWith('nakyva-kaupunki-');
+
 export function nostoladontaTiiviste(merkki) {
   const osat = [
     NOSTOLADONTA_SAANTO,

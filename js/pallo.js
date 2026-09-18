@@ -139,7 +139,22 @@ export const PALLO_LAATTAVERSIO = '2026-09-07a';
  * kaupungin nostot. Pyramidi on samoilla versioilla, joten versiovahti
  * päästää lepokerroksen piirtämään; e-sarjalla se ei enää päässyt.
  */
-export const PALLO_LAATTATUNNISTE = 'f';
+/*
+ * TUNNISTE g, versio 2026-09-07a (18.9.2026, Macin nostopoltto): sama
+ * pohja ja sama viivataso kuin f, mutta NOSTOTASO 2026-09-18-nostot —
+ * lukitut nostoankkurit (PAATOKSET 33 TARKENNUS 2) poltettuna ja
+ * kaupungin sisäiset nostot pois laatasta (PAATOKSET 34). Uusi
+ * nostoversio on uusi kansio, koska laatat ovat vuoden välimuistissa.
+ *
+ * KOLME ASIAA SAMASSA JULKAISUSSA (js/pallolaatat.js
+ * lepokerroksenKerrokset palauttaa null, jos pallon sarjan `nostot` ja
+ * pyramidin `nostotaso.versio` eivät täsmää — koko laattakerros
+ * sammuu): (1) nostotason laatat ja pyramidi.json ämpäriin, (2) pallon
+ * sarja poltettuna kansioon 2026-09-07a-nostot-g, (3) tämä tunniste.
+ * Ks. docs/raportit/viesti-fable-poltto-ranska-nostot-20260918.md
+ * ("Erä 3"), jossa on vientikomennot ja tarkistuslista.
+ */
+export const PALLO_LAATTATUNNISTE = 'g';
 export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}-nostot-${PALLO_LAATTATUNNISTE}`;
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
 /** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */

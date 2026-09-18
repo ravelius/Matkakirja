@@ -106,7 +106,7 @@ import {
 } from '../../js/fokuskohteet.js';
 import { nippuViivanJana, niputaFokusmerkit } from '../../js/fokusniput.js';
 import {
-  NOSTOLADONTA_S, nostoladontaSkaala, nostoladontaTiiviste,
+  NOSTOLADONTA_S, nostoladontaSkaala, nostoladontaTiiviste, onKaupunkipiste,
 } from '../../js/nostoladonta.js';
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
 import { kytkeFokusnosto, nostoKarttarivit, nostoKaupunginPooli } from '../../js/fokusnosto.js';
@@ -115,6 +115,69 @@ import { hetkiKarttarivit, kytkeHistorianHetket } from '../../js/historian-hetke
 import { kytkeSkandaalit, skandaaliKarttarivit } from '../../js/skandaalit.js';
 import { kytkeSyvennys, syvennysKarttarivit } from '../../js/syvennys.js';
 import { PAAKARTAN_MERKKIKATTO, merkkiPortti } from '../../js/pallolauta/nostot.js';
+import { lukittuAnkkuri, onLukittuMaa } from '../../js/pallolauta/nostoankkurit.js';
+import { onKaupunginSisainen } from '../../js/pallolauta/kaupunkiliuska.js';
+import { laudaltaAsteiksi } from '../../js/fokusmitat.js';
+import { asteetLaudalle } from '../../js/pulu-paikka.js';
+
+/*
+ * ══ LUKITTU ANKKURI ON POLTETUN MERKIN PAIKKA ══════════════════════
+ * (Raamattu KARTTAUUDISTUKSEN PAATOKSET 33 TARKENNUS 2, Fablen rajaus
+ * 18.9.2026; mitattu docs/raportit/viesti-fable-poltto-ranska-nostot-
+ * 20260918.md luku 4.1.)
+ *
+ * Ladonnan antama piste on RUUDUSTA RIIPPUMATON, mutta pelin elävä
+ * kerros ei enää käytä sitä: PAATOKSET 32:n ankkurointi levittää
+ * merkit saapumiskehyksessä, jonka mitat tulevat ruutukoosta, ja
+ * lukittu taulu (js/packs/nostoankkurit-fra.js) on se yksi piste,
+ * jonka peli lukee KAIKILLA ruuduilla. Poltettu muste on laatassa
+ * yhdessä paikassa, joten sen on oltava juuri se piste — muuten elävä
+ * nimiö ja osumapinta karkaavat musteesta (mitattu ero Avignonissa
+ * 3,10 ja Mont-Saint-Michelissä 2,74 laudan yksikköä eli ~6-7 px).
+ *
+ * KOLME SEURAUSTA, JOTKA OVAT TÄSSÄ TIEDOSTOSSA:
+ *
+ *   1. Merkin `x`/`y` (ja `ankkuriX`/`ankkuriY`) tulevat taulusta
+ *      `asteetLaudalle`-muunnoksella, ei ladonnasta.
+ *   2. SIIRTOVIIVAA EI POLTETA. Fablen rajaus kohta b sanatarkasti:
+ *      siirtoviivaa ei polteta eikä piirretä — lukittu ankkuri ON
+ *      noston paikka, joten viivalla ei ole mitään, mistä lähteä.
+ *      Ilman tätä viiva osoittaisi laatassa pysyvästi paikkaan, jossa
+ *      merkkiä ei ole.
+ *   3. Taulullisen maan merkki ILMAN ankkuria ei pala lainkaan (ks.
+ *      onLukittuMaa): elävä kerros hoitaa sen kokonaan, kuten
+ *      merkkiportin hylkäämän merkin.
+ *
+ * TIIVISTE LASKETAAN ENNEN SIIRTOA, LADONNAN PISTEESTÄ. Tiiviste on
+ * merkin TUNNISTE, jolla peli päättää, onko merkki laatassa
+ * (js/fokuskohteet.js kohteenNostotiiviste → js/pallo.js
+ * pallonNostoOnPoltettu), ja pelin puoli laskee sen omasta
+ * ladonnastaan. Jos poltettu tiiviste laskettaisiin siirretystä
+ * pisteestä, se ei täsmäisi pelin laskemaan — merkki piirtyisi
+ * elävänä musteen päälle (kaksoiskuva). Ladonta on kummallakin
+ * puolella sama, joten ladonnan pisteestä laskettu tiiviste täsmää.
+ */
+
+/*
+ * KAUPUNGIN SISÄISET EIVÄT POLTA PISTETTÄ (PAATOKSET 34, Fablen
+ * rajaus kohta a). Sääntö on pelin oma — `onKaupunginSisainen`
+ * js/pallolauta/kaupunkiliuska.js — eikä tänne kirjoitettu kopio:
+ * kaksi sääntöä ajautuisi eri vastauksiin. Se tarvitsee noston OMAN
+ * paikan asteina, ja polttoketjussa piste on laudan yksiköissä, joten
+ * se käännetään takaisin (js/fokusmitat.js laudaltaAsteiksi).
+ *
+ * KAUPUNKIPISTE EI PALA LAINKAAN (18.9.2026, korjaus). Fablen rajaus
+ * kohta a sanoo kaupunkipisteistä *"kuten ennen"*, ja tämä ketju luki
+ * sen *"palaa kuten muutkin"*: 18.9.2026 vietyyn nostotasoon
+ * (2026-09-18-nostot) paloi seitsemän `nakyva-kaupunki-*`-pistettä,
+ * joita 8.9. luettelossa ei ollut lainkaan — ja Ranskan lisäkaupungit
+ * katosivat kartalta, koska poltetulla merkillä ei ole elävää solmua.
+ * KUTEN ENNEN tarkoittaa siis eläviä: kaupungin nimiö on 11,5 px ja
+ * merkin napautus avaa liuskan, eikä laattamuste ole kumpaakaan.
+ * Sääntö on pelin oma (js/nostoladonta.js `onKaupunkipiste`) ja sen
+ * perustelu Raamatusta on siellä; eläintäky ei kulje kohdekerroksen
+ * läpi lainkaan, joten sitä tämä ei koske.
+ */
 
 /**
  * Maan kaupungit laudan paketista.
@@ -255,7 +318,31 @@ function nostoladontaMerkit({
    * poltettu viiva alkaisi eri kohdasta kuin elävä.
    */
   const viivaTunnuksittain = new Map((viivat ?? []).map((v) => [v.id, v]));
+  const lukittuMaa = onLukittuMaa(iso);
+  /*
+   * KAUPUNGIN SISÄISET POIS ENNEN MERKKIEN KOKOAMISTA. Keskus on
+   * laudan kaupungin oma piste asteina, ja jäsenyys mitataan noston
+   * omasta datapaikasta — sama funktio ja sama säde kuin pelissä.
+   */
+  const kaupunkienAsteet = kaupungit
+    .map((k) => laudaltaAsteiksi(pack.id, k.x, k.y))
+    .filter((k) => k && Number.isFinite(k.lat));
+  const sisainen = (r) => {
+    const oma = laudaltaAsteiksi(pack.id, r.x, r.y);
+    if (!oma) return false;
+    const nosto = {
+      paikkaNimi: typeof r.kohde?.paikka === 'string' ? r.kohde.paikka : null,
+      lat: oma.lat,
+      lng: oma.lon ?? oma.lng,
+    };
+    return kaupunkienAsteet.some((k) => onKaupunginSisainen(
+      nosto, { nimi: k.nimi, lat: k.lat, lng: k.lon ?? k.lng },
+    ));
+  };
   const merkit = [];
+  let sisaisia = 0;
+  let kaupunkipisteita = 0;
+  let ilmanAnkkuria = 0;
   for (const r of ui.fokuskohdeRyhmat) {
     const viiva = viivaTunnuksittain.get(r.id) ?? null;
     const merkki = {
@@ -342,10 +429,47 @@ function nostoladontaMerkit({
        */
       poltettava: !estetty && paastetyt.has(r.id),
     };
+    /*
+     * TIIVISTE LADONNAN PISTEESTÄ (ks. lohko tiedoston alussa): sama
+     * luku kuin pelin `kohteenNostotiiviste`, joten merkki tunnistetaan
+     * poltetuksi eikä piirry musteen päälle.
+     */
     merkki.tiiviste = nostoladontaTiiviste(merkki);
+    // Kaupunkipiste jää eläväksi (ks. KAUPUNKIPISTE EI PALA LAINKAAN).
+    if (merkki.poltettava && onKaupunkipiste(r.id)) {
+      merkki.poltettava = false;
+      kaupunkipisteita += 1;
+    }
+    if (merkki.poltettava && sisainen(r)) {
+      merkki.poltettava = false;
+      sisaisia += 1;
+    }
+    if (merkki.poltettava && lukittuMaa) {
+      const a = lukittuAnkkuri(`nosto:${r.id}`);
+      const p = a ? asteetLaudalle(pack.id, a.lat, a.lng) : null;
+      if (p) {
+        merkki.x = p.x;
+        merkki.y = p.y;
+        merkki.ankkuriX = p.x;
+        merkki.ankkuriY = p.y;
+        // Fablen rajaus kohta b: siirtoviivaa ei polteta lukitulle.
+        merkki.viiva = null;
+        merkki.lukittuAnkkuri = { lat: a.lat, lng: a.lng };
+      } else {
+        merkki.poltettava = false;
+        ilmanAnkkuria += 1;
+      }
+    }
     merkit.push(merkki);
   }
-  return { s, merkit, porttiPiiloon: merkit.length - paastetyt.size };
+  return {
+    s,
+    merkit,
+    porttiPiiloon: merkit.length - paastetyt.size,
+    sisaisia,
+    kaupunkipisteita,
+    ilmanAnkkuria,
+  };
 }
 
 /**
@@ -465,6 +589,10 @@ export function keraaNostot(pack) {
     // Merkkiportin uloimmalla zoomilla karsimat merkit (ks. MERKKIPORTTI).
     porttiPiiloon: 0,
     porttiMaat: [],
+    // Kaupungin sisäiset (PAATOKSET 34) ja lukitun maan ankkurittomat.
+    sisaisia: 0,
+    kaupunkipisteita: 0,
+    ilmanAnkkuria: 0,
     estot: [],
   };
   for (const [iso, pohja] of Object.entries(FOKUS_POHJAT)) {
@@ -487,7 +615,9 @@ export function keraaNostot(pack) {
       ...hetkiKarttarivit(iso, pack.id).map(({ kohde, paikka }) => ({ kohde, paikka })),
       ...takyt.rivit.map(({ kohde, paikka }) => ({ kohde, paikka })),
     ];
-    const { s, merkit: maanMerkit, porttiPiiloon } = nostoladontaMerkit({
+    const {
+      s, merkit: maanMerkit, porttiPiiloon, sisaisia, kaupunkipisteita, ilmanAnkkuria,
+    } = nostoladontaMerkit({
       pack, iso, pohja, lisat, estetty: !takyt.vakaa,
     });
     if (!maanMerkit.length) continue;
@@ -497,6 +627,9 @@ export function keraaNostot(pack) {
       tilasto.porttiMaat.push(`${iso}: ${maanMerkit.length} merkkiä, `
         + `${porttiPiiloon} yli katon ${PAAKARTAN_MERKKIKATTO}`);
     }
+    tilasto.sisaisia += sisaisia ?? 0;
+    tilasto.kaupunkipisteita += kaupunkipisteita ?? 0;
+    tilasto.ilmanAnkkuria += ilmanAnkkuria ?? 0;
     if (!takyt.vakaa) {
       tilasto.maitaEstetty += 1;
       tilasto.estot.push(`${iso}: ${takyt.syy}`);
@@ -560,5 +693,10 @@ export function nostojenYhteenveto(tilasto) {
     + (tilasto.elaimia ? ` · ${tilasto.elaimia} eläintäkyä` : '')
     + (tilasto.porttiPiiloon
       ? ` · ${tilasto.porttiPiiloon} merkkiä merkkiportin taakse (katto ${PAAKARTAN_MERKKIKATTO})`
-      : '');
+      : '')
+    + (tilasto.sisaisia ? ` · ${tilasto.sisaisia} kaupungin sisäistä eläväksi` : '')
+    + (tilasto.kaupunkipisteita
+      ? ` · ${tilasto.kaupunkipisteita} kaupunkipistettä eläväksi` : '')
+    + (tilasto.ilmanAnkkuria
+      ? ` · ${tilasto.ilmanAnkkuria} ilman lukittua ankkuria eläväksi` : '');
 }

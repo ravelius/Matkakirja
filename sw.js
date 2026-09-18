@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1937';
+const CACHE = 'matkakirja-2026-08-09.1938';
 const SHELL = [
   './',
   './index.html',
@@ -397,6 +397,7 @@ const SHELL = [
   './js/packs/maa-kategoriat.js',
   './js/packs/maalehtinostot-fra.js',
   './js/packs/nakyvat-kaupungit-fra.js',
+  './js/packs/nostoankkurit-fra.js',
   './js/packs/hahmotelma-fra.js',
   './js/packs/maakartat.js',
   './js/packs/nahtavyysjutut.js',
@@ -1843,7 +1844,7 @@ const LAATTAPOLKU = '/julisteet/pallo/laatat/';
  * on tahallinen: palvelutyöntekijä ei voi tuoda ES-moduulia, ja
  * tests/sw.test.mjs vartioi, että luvut ovat samat.
  */
-const LAATTAKANSIO = '2026-09-07a-nostot-f';
+const LAATTAKANSIO = '2026-09-07a-nostot-g';
 /** Varakansio syvimmälle tasolle (js/pallo.js PALLO_LAATAT_SYVA), kunnes nostosarja kattaa sen. */
 const LAATTAKANSIO_SYVA = '2026-09-07a';
 const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA];

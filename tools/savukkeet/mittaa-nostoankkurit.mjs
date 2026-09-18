@@ -1,6 +1,7 @@
 /*
- * MITTA: NOSTOT EIVÄT LIIKU ZOOMATESSA, YKSI KOKO, EI PÄÄLLEKKÄISYYTTÄ
- * (Raamattu KARTTAUUDISTUKSEN PAATOKSET 32 kohdat 1, 2, 4 ja 5).
+ * MITTA: NOSTOT EIVÄT LIIKU ZOOMATESSA, SKAALAUTUVAT KARTAN MUKANA,
+ * EIVÄT LIMITY (Raamattu KARTTAUUDISTUKSEN PAATOKSET 32 kohdat 1, 2 ja
+ * 5 sekä 34 kohta 15 TILA).
  *
  * Kohdemitta, ei savukesarja: Pariisi 390 px kolmella zoomilla
  * (saapuminen, välizoomi, lähizoomi). Kolme väitettä:
@@ -10,8 +11,10 @@
  *   2) EI PÄÄLLEKKÄISYYTTÄ: nostojen ja aihenostojen osumalaatikot
  *      (symboli + nimiö), kaupunkien nimikyltit ja pelinappula eivät
  *      limity millään zoomilla.
- *   3) YKSI KOKO: jokaisen elävän noston ja aihenoston mitta on sama
- *      kuin poltetun kartan noston (NOSTON_MITTA).
+ *   3) KARTAN MITTA: elävä nosto on saapumisnäkymässä poltetun merkin
+ *      kokoinen (NOSTON_MITTA) ja kasvaa kartan mukana 16 px:n
+ *      nimiökattoon asti — sama muste, sama laatta (PAATOKSET 34
+ *      kohta 15 TILA; kerroin-1-lukko purettiin 18.9.2026).
  *
  * VASTAKOE: `?nostoankkurit=0` palauttaa vanhan ladonnan ja limityksen.
  *
@@ -24,7 +27,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
-import { NOSTON_MITTA } from '../../js/pallolauta/nostot.js';
+import { NOSTON_MITTA, NOSTON_MITAN_KATTO } from '../../js/pallolauta/nostot.js';
 
 const paketti = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
@@ -123,7 +126,9 @@ async function avaaSivu({ ankkurit = true } = {}) {
       headers: { 'access-control-allow-origin': '*' },
     });
   });
-  const lippu = ankkurit ? '' : '&nostoankkurit=0&nostokoko=0';
+  // Kartan mitta on 18.9.2026 alkaen normaali polku (PAATOKSET 34
+  // kohta 15 TILA), joten "ennen" tarvitsee vain ankkurilipun.
+  const lippu = ankkurit ? '' : '&nostoankkurit=0';
   await sivu.goto(`${osoite}?lauta=pallo${lippu}`, { waitUntil: 'domcontentloaded', timeout: 60000 });
   await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 90000 });
   // Saapuminen ajetaan loppuun: isoisän kuvasarja ja pulu kulkevat ruudun
@@ -248,7 +253,9 @@ for (const z of ZOOMIT) {
   const tila = await lue(sivu);
   // eslint-disable-next-line no-await-in-loop
   const kuva = await kaappaa(sivu, `nostoankkurit-${z.nimi}.png`);
-  lukemat.push({ ...z, ...tila, kuva });
+  // `tila.osuus` on kameran osuus ULOIMMASTA zoomista; mitan odotus
+  // lasketaan SAAPUMISNÄKYMÄN osuudesta, joka on tämän silmukan oma.
+  lukemat.push({ ...z, ...tila, zoomiOsuus: z.osuus, kuva });
   tieto(`${z.nimi} merkkejä`, `${tila.merkit.length} (laatikoita ${tila.laatikot.length}, nimiä ${tila.nimet.length})`);
   if (kuva) tieto(`${z.nimi} kaappaus`, kuva);
 }
@@ -307,12 +314,24 @@ for (const l of lukemat) {
   vaadi(`2 ${l.nimi}: limittyviä laatikkopareja 0`, parit.length === 0, `${parit.length} paria`);
 }
 
-/* ── 3) YKSI KOKO ────────────────────────────────────────────────── */
+/* ── 3) KARTAN MITTA, KATTO PYSÄYTTÄÄ ────────────────────────────── */
+/*
+ * PAATOKSET 34 kohta 15 TILA (Fablen päätös 18.9.2026): elävä nosto on
+ * saapumisnäkymässä TÄSMÄLLEEN poltetun merkin kokoinen ja kasvaa
+ * kartan mukana kuten laattaan poltettu muste, kunnes nimiö osuu
+ * 16 px:n kattoon (NOSTON_MITAN_KATTO). Odotettu mitta on siis
+ * `min(NOSTON_MITTA / osuus, katto)`, koska zoomin osuus on
+ * saapumisnäkymän osuus näkyvästä leveydestä.
+ */
+const odotettuMitta = (osuus) => Math.min(NOSTON_MITTA / osuus, NOSTON_MITAN_KATTO);
 for (const l of lukemat) {
   const mitat = l.merkit.filter((m) => nosto(m) && Number.isFinite(m.mitta)).map((m) => m.mitta);
-  const poikkeavat = mitat.filter((m) => Math.abs(m - NOSTON_MITTA) > 1e-6);
-  tieto(`${l.nimi} mitat`, `${[...new Set(mitat.map((m) => p(m, 3)))].join(', ')} (poltettu ${p(NOSTON_MITTA, 3)})`);
-  vaadi(`3 ${l.nimi}: kaikki nostot poltetun kartan kokoa`,
+  const odotus = odotettuMitta(l.zoomiOsuus);
+  // Kameran osuus on asetettu korkeudesta, joten sallitaan 2 %.
+  const poikkeavat = mitat.filter((m) => Math.abs(m - odotus) > 0.02 * odotus);
+  tieto(`${l.nimi} mitat`, `${[...new Set(mitat.map((m) => p(m, 3)))].join(', ')} `
+    + `(odotus ${p(odotus, 3)}, poltettu ${p(NOSTON_MITTA, 3)}, katto ${p(NOSTON_MITAN_KATTO, 3)})`);
+  vaadi(`3 ${l.nimi}: nostot kartan mitassa (katto ${p(NOSTON_MITAN_KATTO, 3)})`,
     mitat.length > 0 && poikkeavat.length === 0, `poikkeavia ${poikkeavat.length}`);
 }
 
@@ -325,9 +344,12 @@ for (const l of lukemat) {
  */
 for (const l of lukemat) {
   const m = l.kyltti?.mitta;
-  tieto(`${l.nimi} kyltin mitta`, `${p(m, 3)} (poltettu ${p(NOSTON_MITTA, 3)})`);
-  vaadi(`4 ${l.nimi}: kyltin mitta = poltetun kartan mitta`,
-    Number.isFinite(m) && Math.abs(m - NOSTON_MITTA) <= 1e-3,
+  // Kyltti lukee saman `nostonMitta`n kuin nostot, joten se seuraa
+  // karttaa samalla kaavalla (PAATOKSET 34 kohta 15 TILA).
+  const odotus = odotettuMitta(l.zoomiOsuus);
+  tieto(`${l.nimi} kyltin mitta`, `${p(m, 3)} (odotus ${p(odotus, 3)})`);
+  vaadi(`4 ${l.nimi}: kyltin mitta = nostojen mitta samalla zoomilla`,
+    Number.isFinite(m) && Math.abs(m - odotus) <= 0.02 * odotus,
     `kyltin mitta ${p(m, 4)}`);
 }
 
@@ -376,12 +398,20 @@ for (const l of lukemat) {
  * ruudulta ja sen on osuttava siihen ±0,5 px.
  */
 const POLTETUN_HALKAISIJA = 2 * 3.4 * NOSTON_MITTA;
+/*
+ * PALLO SEURAA SAMAA KAAVAA KUIN NIMIÖ (PAATOKSET 34 kohta 15 TILA):
+ * merkki ja nimiö ovat samassa rasterissa, joten pallon halkaisija on
+ * poltetun halkaisija × (mitta / NOSTON_MITTA) — saapuessa 5,25 px ja
+ * katossa 5,25 × 16/8,5 = 9,88 px.
+ */
 for (const l of lukemat) {
-  const isot = (l.pallot ?? []).filter((x) => Math.abs(x.halkaisija - POLTETUN_HALKAISIJA) > 0.5);
+  const odotus = POLTETUN_HALKAISIJA * (odotettuMitta(l.zoomiOsuus) / NOSTON_MITTA);
+  const isot = (l.pallot ?? []).filter((x) => Math.abs(x.halkaisija - odotus) > 0.5);
   tieto(`${l.nimi} nostopallon halkaisija`,
     `${[...new Set((l.pallot ?? []).map((x) => p(x.halkaisija, 2)))].join(', ')} px `
-    + `(poltettu ${p(POLTETUN_HALKAISIJA, 2)} px, palloja ${(l.pallot ?? []).length})`);
-  vaadi(`6 ${l.nimi}: nostopallon halkaisija = poltetun halkaisija ±0,5 px`,
+    + `(odotus ${p(odotus, 2)} px, poltettu ${p(POLTETUN_HALKAISIJA, 2)} px, `
+    + `palloja ${(l.pallot ?? []).length})`);
+  vaadi(`6 ${l.nimi}: nostopallon halkaisija = kartan mitta ±0,5 px`,
     (l.pallot ?? []).length > 0 && isot.length === 0,
     `poikkeavia ${isot.length}`);
 }
@@ -406,7 +436,8 @@ await ctx.close();
  * *"Yksi Playwright-kohdemittaus, ei koko sarjoja, ei vastakoetta
  * (UI-säätö)"*). Vastakokeen liput ovat yhä koodissa ja ajettavissa
  * käsin: `?nostoankkurit=0` palauttaa vanhan ladonnan ja
- * `?nostokoko=0` kartan mukana kasvavan mitan; erän 1 vastakoekuvat
+ * `?nostokoko=0` ruutuvakion mitan (vipu käännettiin 18.9.2026,
+ * PAATOKSET 34 kohta 15 TILA); erän 1 vastakoekuvat
  * ovat kansiossa `nostoankkurit-vastakoe-*.png`.
  */
 
