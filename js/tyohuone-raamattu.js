@@ -4563,7 +4563,14 @@ export const RAAMATTU = {
           + 'RINNAKKAIN Macilla (aiemmin kolme; CPU-kaytto oli 18.9. alle 20 %, '
           + 'Chromium-savukkeita ajavia yha enintaan kaksi yhta aikaa -> '
           + 'kohdemittaukset porrastetaan). Tila: 19 samassa ci-portti-erassa, '
-          + '20 oma Opus-era, 21-22 voimassa heti.',
+          + '20 oma Opus-era, 21-22 voimassa heti. LISAYS (omistaja 18.9.2026 '
+          + 'klo 13.45 Suomen aikaa, sanatarkasti: "kakkos vaihtoehtoa ei ollut '
+          + 'nakyvissa. mika se oli? tee se myos"): 23) LIMITTAISET JULKAISUT - '
+          + 'kohta 10 vahvistetaan: seuraavan julkaisun haara ja PR tehdaan '
+          + 'HETI edellisen julkaisuhaaran paalle odottamatta sen mergea, ja '
+          + 'agenttien erat annetaan sen paalle; Fable ei odota porttia '
+          + 'joutilaana (18.9. v1939 aloitettiin vasta v1938:n mergen jalkeen, '
+          + 'n. 40 min hukkaa). Tila: voimassa heti.',
         'MAC STUDIO: UUDEN SESSION ALOITUS ILMAN OMISTAJAN OHJETTA, JA MISSA '
           + 'AVAIMET OVAT (omistaja 18.9.2026 klo 09.50 Suomen aikaa, '
           + 'sanatarkasti: "Kirjaa raamattuun selkeasti ylos etta uudet sessiot '
