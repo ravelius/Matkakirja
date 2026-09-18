@@ -55,7 +55,10 @@ import {
   avaaTiivisLehtiarkki, kaupunginKansi, latoKaupunginEsittely, latoLehtiKuvat,
   suljeTiivisLehtiarkki,
 } from './lehti.js';
-import { avaaNahtavyys, piirraKaupunkiKartta, piirraMatkailijalle } from './nahtavyydet.js';
+import { ensimmainenLause } from './lauseraja.js';
+import {
+  avaaNahtavyys, kaupunginNahtavyysteksti, piirraKaupunkiKartta, piirraMatkailijalle,
+} from './nahtavyydet.js';
 import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { sfx } from './sound.js';
 import { taytaLahderivi } from './tekijakortti.js';
@@ -809,12 +812,134 @@ export function avaaTiivisKaupunkietusivu(ui, city, { ankkuri = null } = {}) {
   suljeKaupunkipopup(ui);
   const arkki = avaaTiivisLehtiarkki(ui, city, latoTiivisEtusivu);
   arkki?.classList.add(TIIVIS_LUOKKA);
+  // Kehys on YKSI elementti koko pelin ajaksi (js/lehti.js
+  // LEHTIARKIN_TUNNUS), joten edellisen näkymän tunnusluokka on
+  // poistettava — muuten savuke näkisi kaksi näkymää yhdessä kortissa.
+  arkki?.classList.remove(KAUPUNKIESITTELY_LUOKKA, NAHTAVYYSNAKYMA_LUOKKA);
   return arkki;
 }
 
 /** Sulkee tiivistetyn etusivun (savukkeet ja kutsujat). */
 export function suljeTiivisKaupunkietusivu() {
   suljeTiivisLehtiarkki();
+}
+
+/* ===== LIUSKAN KAKSI YLÄRIVIÄ (PAATOKSET 34 kohta 16) ===== */
+
+/**
+ * OMISTAJAN PÄÄTÖS 18.9.2026 klo 14.05 (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 34 kohta 16, kohdat d ja e): kaupunkiliuskan kaksi ylintä
+ * riviä avaavat nyt kumpikin OMAN KEVYEN NÄKYMÄNSÄ eivätkä koko lehteä:
+ *
+ *   d) "PARIISI" (kaupungin oma rivi) → herokuva, kaksi pikkukuvaa
+ *      (vanha ja uusi) ja leipäteksti. EI kaupunkilehteä eikä sen
+ *      osioita, EI kohdekarttaa.
+ *   e) "NÄHTÄVYYDET" → kohdekartta ja sen alla nähtävyysteksti, josta
+ *      näkyy ensimmäinen lause ja "Lue lisää" -nappi. EI kartan alaista
+ *      kohdeluetteloa — kohteet avataan kartalta napauttamalla.
+ *
+ * KUMPIKAAN EI OLE UUTTA SISÄLTÖÄ EIKÄ UUSI PIIRTÄJÄ. Molemmat latovat
+ * samoilla funktioilla samaa dataa kuin lehti (latoLehtiKuvat,
+ * latoKaupunginEsittely, piirraKaupunkiKartta) ja avautuvat samaan
+ * kehykseen kuin tiivis etusivu (avaaTiivisLehtiarkki, "ison pop-upin
+ * kehys kelpaa") — vain valinta on eri. Vanha `latoTiivisEtusivu` jää
+ * koskemattomana paikalleen, koska kaupunkimerkin oma napautuspolku
+ * (js/pallolauta/lauta.js) käyttää sitä yhä.
+ */
+
+/** Kaupungin esittelynäkymän tunnusluokka (savuke ja tyylit). */
+export const KAUPUNKIESITTELY_LUOKKA = 'kaupunkiesittely-nakyma';
+/** Nähtävyysnäkymän tunnusluokka. */
+export const NAHTAVYYSNAKYMA_LUOKKA = 'nahtavyysnakyma';
+/** "Lue lisää" -napin teksti ja luokka (lehden oma nappityyli). */
+export const LUE_LISAA_TEKSTI = 'Lue lisää';
+export const LUE_LISAA_LUOKKA = 'nahtavyysnakyma-lisaa';
+/** Nähtävyystekstin kappale — yksi elementti, joka KASVAA napista. */
+export const NAHTAVYYSTEKSTIN_LUOKKA = 'nahtavyysnakyma-teksti';
+
+/**
+ * d) KAUPUNGIN ESITTELYNÄKYMÄ: herokuva, kaksi pikkukuvaa, leipäteksti.
+ *
+ * Kuvat tulevat kannen omista kentistä samalla piirtäjällä kuin
+ * lehdessä. Pikkurivi on TASAN KAKSI KUVAA: kun kannella on
+ * ennenNyt-pari, `latoLehtiKuvat` latoo juuri sen (vasemmalle vanha,
+ * oikealle uusi) — ja ilman paria sama funktio latoo kansikuvista kaksi.
+ * Kohdekartta ei kuulu tähän näkymään lainkaan (se on "Nähtävyydet").
+ */
+export function latoKaupunkiesittely(ui, sisalto, city) {
+  const kansi = kaupunginKansi(city.id);
+  const paakuva = html('div', 'lehti-paakuva');
+  const kuvarivi = html('div', 'lehti-kuvarivi');
+  sisalto.appendChild(paakuva);
+  sisalto.appendChild(kuvarivi);
+  latoLehtiKuvat(ui, {
+    paakuva,
+    kuvarivi,
+    kuvat: kansi?.kansikuvat,
+    avauskuvat: kansi?.avauskuvat ?? null,
+    // VANHA JA UUSI (kohta 16 d): kannen ennenNyt-pari on juuri se pari,
+    // jonka omistaja nimesi — tiivis etusivu jättää sen lukematta, tämä
+    // näkymä lukee sen.
+    ennenNyt: kansi?.ennenNyt ?? null,
+  });
+  const lohko = latoKaupunginEsittely(sisalto, city);
+  // Lehden leipätekstin säännöt (css/styles.css .dialog.lehti .lehti-leipa).
+  lohko.classList.add('lehti-leipa');
+}
+
+/**
+ * e) NÄHTÄVYYSNÄKYMÄ: kartta ja sen alla nähtävyysteksti.
+ *
+ * KOLME RAJAUSTA piirraKaupunkiKartan lipuilla, kaikki omistajan
+ * luettelosta: saateteksti ei tule kartan yläpuolelle (se ladotaan
+ * kartan ALLE ensimmäinen lause edellä), kohdeluettelo jää pois
+ * kokonaan, eikä kuvagallerian nappi kuulu tähän näkymään.
+ *
+ * LOPPUTEKSTI ON DOMISSA VASTA NAPISTA, MUTTA SAMASSA KAPPALEESSA:
+ * omistaja sanoi *"napautus tuo loput tekstistä samaan kappaleeseen
+ * ensimmäisen lauseen jatkoksi (ei uutta näkymää, ei kelaa pois)"*.
+ * Siksi teksti on YKSI <p>, jonka sisältöä nappi jatkaa — ei toista
+ * kappaletta eikä piilotettua lohkoa, jolloin lukija jatkaa samasta
+ * kohdasta eikä näkymä hyppää.
+ */
+export function latoNahtavyysnakyma(ui, sisalto, city) {
+  const kartta = html('div', 'tiivis-kartta');
+  sisalto.appendChild(kartta);
+  piirraKaupunkiKartta(ui, kartta, {
+    cityId: city.id, esittely: false, selitelista: false, kuvagalleria: false,
+  });
+  if (!kartta.childElementCount) kartta.hidden = true;
+  const koko = kaupunginNahtavyysteksti(city.id);
+  if (!koko) return;
+  const { ensimmainen, loput } = ensimmainenLause(koko);
+  const kappale = html('p', `kaupunkikartta-esittely ${NAHTAVYYSTEKSTIN_LUOKKA}`, ensimmainen);
+  sisalto.appendChild(kappale);
+  if (!loput) return;
+  const nappi = html('button', `wiki-btn ${LUE_LISAA_LUOKKA}`, LUE_LISAA_TEKSTI);
+  nappi.type = 'button';
+  nappi.addEventListener('click', () => {
+    kappale.appendChild(document.createTextNode(` ${loput}`));
+    nappi.remove();
+  });
+  sisalto.appendChild(nappi);
+}
+
+/** Avaa kaupungin esittelynäkymän (liuskan kaupunkirivi). */
+export function avaaKaupunkiesittely(ui, city) {
+  suljeKaupunkipopup(ui);
+  const arkki = avaaTiivisLehtiarkki(ui, city, latoKaupunkiesittely);
+  arkki?.classList.add(KAUPUNKIESITTELY_LUOKKA);
+  arkki?.classList.remove(NAHTAVYYSNAKYMA_LUOKKA, TIIVIS_LUOKKA);
+  return arkki;
+}
+
+/** Avaa nähtävyysnäkymän (liuskan "Nähtävyydet"-rivi). */
+export function avaaNahtavyysnakyma(ui, city) {
+  suljeKaupunkipopup(ui);
+  const arkki = avaaTiivisLehtiarkki(ui, city, latoNahtavyysnakyma);
+  arkki?.classList.add(NAHTAVYYSNAKYMA_LUOKKA);
+  arkki?.classList.remove(KAUPUNKIESITTELY_LUOKKA, TIIVIS_LUOKKA);
+  return arkki;
 }
 
 /* ========== LISÄKAUPUNGIN KAUPUNKIKORTTI (PAATOKSET 16) ========== */
