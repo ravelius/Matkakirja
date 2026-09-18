@@ -64,11 +64,29 @@ import { onMaalla } from '../maamaski.mjs';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 
-/** Ranskan kartalla näkyviä nostopisteitä vähintään (kohta 17 b). */
-// 40 -> 35 (Fable 18.9.2026): jasenyys datasta -eran jalkeen seitseman
-// Pariisin sisaista ei enaa lasketa kartan pisteiksi; ulkopuolisia on 36
-// (hahmotelman 12 varastokohdetta nostavat lukua myohemmin).
-const PISTEITA_VAHINTAAN = 35;
+/*
+ * Ranskan kartalla näkyviä nostopisteitä vähintään (kohta 17 b).
+ *
+ * 40 -> 35 (Fable 18.9.2026): jasenyys datasta -eran jalkeen seitseman
+ * Pariisin sisaista ei enaa lasketa kartan pisteiksi; ulkopuolisia on 36
+ * (hahmotelman 12 varastokohdetta nostavat lukua myohemmin).
+ *
+ * 35 -> 40 (Opus-erä 18.9.2026, hahmotelman 12 varastokohdetta):
+ * datassa Ranskan kaupungin ulkopuolisia nostoja on nyt 60 (oli 48).
+ * MITATTU saapumisnäkymässä tämän erän jälkeen: 390 px 43 pistettä,
+ * 1400 px 44. Raja on mitatun pohjan (43) alapuolella kolmen pisteen
+ * marginaalilla, jotta vartio ei häily ruutujen välillä.
+ *
+ * MIKSI RAJA EI OLE 50, VAIKKA DATASSA ON 60. Elävien nostojen määrän
+ * kattaa `NOSTOJEN_KATTO = 40` (js/pallolauta/nostot.js, karttapallo.md
+ * luku 6): pallolla piirtyy enintään 40 elävää merkkiä kerrallaan.
+ * Mittaus ennen/jälkeen 1400 px:llä: DOM-merkkejä 40 -> 40 ja
+ * nostopisteitä 44 -> 44, mutta "puuttuvia" 4 -> 16 — uudet kaksitoista
+ * eivät siis lisää pisteitä vaan syrjäyttävät yhtä monta vanhaa. Katon
+ * nosto on koko pallon linjaus eikä tämän erän päätettävissä; kirjattu
+ * Fablelle (docs/raportit/viesti-fable-hahmotelma-12-20260918.md).
+ */
+const PISTEITA_VAHINTAAN = 40;
 /** Kaupunkimerkkejä vähintään (kohta 17 c). */
 const KAUPUNKEJA_VAHINTAAN = 7;
 /** Vedon pituus saapumisnäkymässä (px). */
