@@ -9111,8 +9111,16 @@ export const RAAMATTU = {
           + 'leipateksti, ei lehden osioita; Nahtavyydet-rivi: kartta + 1 '
           + 'lause + Lue lisaa, napautus tuo loput samaan kappaleeseen, '
           + 'kohdeluetteloa 0 rivia kartan alla, kartan kohteen napautus avaa '
-          + 'kohteen. Tila: kirjattu; tyo kahtena Opus-erana (a-c liuska, d-e '
-          + 'rivien sisallot).',
+          + 'kohteen. Tila: TOTEUTETTU, JULKAISTU v1940 18.9.2026 klo 14.25 '
+          + 'Suomen aikaa (PR #2581). Loydos a): Pariisin piste ei ollut '
+          + 'nostokerroksen merkki vaan pallon oma pointsData-kerros liuskan '
+          + 'alla - pistekerros pudottaa avoimen liuskan kaupungin; b) pallon '
+          + 'cx nimion asemoinnista; c) animaatiot ja porrastus pois (67 '
+          + 'elementtia, liikkuvia 0); d) kevyt esittelyarkki (hero, 2 '
+          + 'ennenNyt-pikkukuvaa, leipateksti 1069 merkkia); e) nahtavyysteksti '
+          + '= KAUPUNKIKARTAT[city].esittely, lauseraja js/lauseraja.js '
+          + '(lyhenteet eivat katkaise), Lue lisaa 23 -> 549 merkkia samaan '
+          + 'kappaleeseen, kohdeluettelo 0. Odottaa omistajan puhelintestia.',
         'KARTTAUUDISTUKSEN PAATOKSET 33: NOSTOT YMPARI RANSKAA, ENSIN PISTEET '
           + 'JA OTSIKOT, KAIKKI POLTETUN MERKIN KOKOA (omistaja 17.9.2026 klo '
           + '21.40 Suomen aikaa, ankkurieran kaappauksista, sanatarkasti: '
