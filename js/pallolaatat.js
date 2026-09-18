@@ -28,6 +28,7 @@
  */
 import {
   haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
+  pyramidinReliefiKaytossa, pyramidinReliefinSyvinTaso,
   pyramidinTasoitus, pyramidinVaritasonMaa,
 } from './laattapyramidi.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
@@ -428,8 +429,31 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null)
    * (js/laattapyramidi.js pyramidiViivaKerros) — siellä rajat eivät ole
    * vektorina. Tämä portti on pallon oma.
    */
+  /*
+   * RELIEFITASO ON VÄRITASON LAJIA EIKÄ KOKO KERROKSEN EHTO: se on
+   * topografialinssin laatasto pohjan päällä, ja sen puuttuminen
+   * tekee kartasta sen, mikä se oli ennen — ei väärää karttaa.
+   * Siksi tämä on BOOLEAN eikä `return null`, ja siksi se ei vertaa
+   * versiota pallon sarjaan: reliefillä on oma luettelo ja oma
+   * versionsa, eikä pallon laatat.json tiedä siitä mitään.
+   *
+   * Kytkin (`?reliefipyramidi=1`) on portin ainoa ehto pelin
+   * puolella; ilman sitä `pyramidinKerrostasot` ei palauta
+   * reliefitasoa lainkaan, joten tämä lippu jää vaikutuksetta.
+   */
+  /*
+   * POHJA POIS, KUN RELIEFI ON PÄÄLLÄ (omistajan lisäys 18.9.2026):
+   * reliefi ei ole seepiakartan päällä vaan sen TILALLA, joten
+   * pohjalaattoja ei haeta lainkaan linssin ajan.
+   */
+  const reliefi = pyramidinReliefiKaytossa();
   return {
-    pohja: true, ranta: Boolean(ranta), viiva: false, nosto: Boolean(nostot), vari,
+    pohja: !reliefi,
+    ranta: Boolean(ranta),
+    viiva: false,
+    nosto: Boolean(nostot),
+    vari: vari && !reliefi,
+    reliefi,
   };
 }
 
@@ -768,6 +792,19 @@ export const LAATTAKERROS_SILMAT_MIN = 16;
 export const LAATTAKERROS_SILMAT_MAX = 160;
 /** polygonOffsetUnits: syvyyspuskurin askelta kameraa kohti (negatiivinen). */
 export const LAATTAKERROS_SYVYYSSIIRTO = -8;
+/*
+ * NIMIÖN VAALEA REUNUS RELIEFIN PÄÄLLÄ (ks. käyttökohta alempana).
+ * Sävy on linssiperheen oma vaalea pergamentti eikä puhdas valkoinen:
+ * valkoinen reunus kirkkaan lumirajan päällä olisi näkymätön, ja
+ * maastossa se näyttäisi liidulta. Peittävyys 0,92, jotta reunus on
+ * vankka mutta ei laatikko kirjaimen ympärillä.
+ */
+const NIMION_HALO = 'rgba(247, 241, 224, 0.92)';
+/** Reunuksen leveys laatan omissa pikseleissä (laatta on 512 px). */
+const NIMION_HALO_PX = 3;
+/** Vetoja saman varjon kanssa: yksi jää ohueksi, kolme kantaa. */
+const NIMION_HALO_VETOJA = 3;
+
 /** renderOrder = tämä + z: karkeat tasot ensin, kaikki läpinäkyvien alkuun. */
 export const LAATTAKERROS_RENDER_ORDER_POHJA = -10;
 /** Onko kerros oletuksena päällä (?laattakerros=0 sammuttaa). */
@@ -1318,6 +1355,24 @@ export function luoLaattakerros({
    */
   let variMaaEdellinen = null;
   /*
+   * RELIEFILINSSI AUKEAA KESKEN AJON — JA SE ON MAANVAIHDON LAJI.
+   *
+   * Mitattu 18.9.2026 (tools/savukkeet/mittaa-reliefipyramidi.mjs,
+   * Chromium 390 × 844, Alppien lähizoomi): linssin avauksesta kului
+   * 15,7 SEKUNTIA ensimmäiseen reliefilaattapyyntöön, ja sekin lähti
+   * vasta kun kamera liikkui. Syy: kerrostasot luetaan vasta laatan
+   * VALMISTELUSSA (`lataa`), ja näkyvän ikkunan laatat olivat jo
+   * tilassa `valmis` seepiakankaineen. Päivitys käyttää valmiin
+   * laatan uudelleen, joten kytkin ei näkynyt ruudulla lainkaan
+   * ennen panorointia.
+   *
+   * Reliefi on samalla tavalla KANKAASSA kuin väri: vanha laatta ei
+   * ole vanhentunut kuva vaan väärä kuva. Mitätöinti on siksi sama
+   * kuin maanvaihdossa alla — eikä se ole raskas, koska lippu
+   * kääntyy vain linssin avautuessa ja sulkeutuessa.
+   */
+  let reliefiEdellinen = null;
+  /*
    * TASOITUKSEN SUOJA TARKENTUU KESKEN AJON. Maapolygonit ovat laiskat,
    * ja ennen niitä suoja on koko laatikko (js/laattapyramidi.js
    * pyramidinTasoitus). Kun tarkka suoja saapuu, jo kootut kankaat on
@@ -1557,7 +1612,9 @@ export function luoLaattakerros({
         if (k.viiva) return kerrokset.viiva;
         if (k.ranta) return kerrokset.ranta;
         if (k.vari) return kerrokset.vari;
-        return true;
+        if (k.reliefi) return kerrokset.reliefi;
+        // Pohja: reliefilinssin ajan `kerrokset.pohja` on epätosi.
+        return kerrokset.pohja !== false;
       });
     if (!kerrostasot.length) { t.tila = 'virhe'; return; }
     const katkaisin = ikkuna.AbortController ? new ikkuna.AbortController() : null;
@@ -1569,7 +1626,20 @@ export function luoLaattakerros({
     t.varillinen = kerrostasot.some((k, i) => k.vari && kuvat[i]);
     t.katkaisin = null;
     if (purettu || !laatat.has(t.avain)) { for (const k of kuvat) k?.close?.(); return; }
-    if (!kuvat.some(Boolean)) { t.tila = 'virhe'; return; }
+    /*
+     * AVOMERI EI OLE VIRHE, KUN POHJAA EI OLE ALLA.
+     *
+     * Omistajan lisäys 18.9.2026 (Raamattu LISAYS 16 kohta 49):
+     * reliefilinssin alle EI ladota seepiapohjaa. Reliefilaatasto on
+     * HARVA — avomerestä ei polteta laattaa lainkaan (6 228 laattaa
+     * 6 631:stä z7:llä on merta) — joten ilman tätä jokainen
+     * merilaatta olisi `virhe` ja meri jäisi reikinä. Tasolla on
+     * `taustavari`, ja se maalataan kankaalle: sama väri, jonka
+     * polttotyökalu antaisi merelle (tools/tee-reliefipyramidi.mjs
+     * MERIVARI), joten saumaa laatan ja aukon välillä ei näy.
+     */
+    const tausta = kerrostasot.find((k) => k.taustavari)?.taustavari ?? null;
+    if (!kuvat.some(Boolean) && !tausta) { t.tila = 'virhe'; return; }
     /*
      * KANGAS ON MITATUSTI NOPEAMPI TEKSTUURILÄHDE KUIN BITTIKARTTA
      * (kokeiltu ja hylätty 7.9.2026). Kokeilussa yhden kerroksen laatta
@@ -1607,6 +1677,10 @@ export function luoLaattakerros({
      * kartalla nähtävissä. Perustelu: js/laattapyramidi.js
      * pyramidinTasoitus.
      */
+    if (tausta) {
+      ctx.fillStyle = tausta;
+      ctx.fillRect(0, 0, kartta.leveys, kartta.korkeus);
+    }
     const tasoitus = kerrokset.vari ? pyramidinTasoitus() : null;
     /*
      * ══════════════════════════════════════════════════════════════
@@ -1712,6 +1786,38 @@ export function luoLaattakerros({
         continue;
       }
       if (!kuva) continue;
+      /*
+       * NIMIÖT LUETTAVIKSI RELIEFIN PÄÄLLÄ (Fablen kohta 3, 18.9.2026).
+       *
+       * Nostotason nimiöt — La Chaux-de-Fonds, Bern 1905, Chillon,
+       * Aletsch — on poltettu laattoihin SEEPIAKARTTAA varten: tummaa
+       * harmaata tasaisen vaalealle pergamentille. Reliefin päällä
+       * tausta ei ole tasainen vaan Alppien vaaleanvihreää ja ruskeaa
+       * rinnettä, joka vaihtelee kirjaimen sisällä, ja teksti hukkuu
+       * siihen. Mitattu 18.9.2026 (Chromium 390 × 844, Alpit,
+       * "Bern 1905"): maasto (182, 195, 117), teksti (82, 71, 54).
+       *
+       * HALO EIKÄ VÄRINVAIHTO. Nimiö on laatan pikseleissä eikä
+       * elementtinä, joten sen väriin ei pääse käsiksi ilman uutta
+       * polttoa. Vaalea reunus sen sijaan on kankaan oma työ: se
+       * erottaa tumman kirjaimen vaihtelevasta taustasta, ja se on
+       * kartografian tavallinen keino juuri tähän. Kolme vetoa yhdellä
+       * varjolla — yksi veto jää ohueksi, kolme tekee yhtenäisen
+       * reunuksen — ja sen päälle nimiö itse terävänä.
+       *
+       * VAIN RELIEFIN AIKANA (`kerrokset.reliefi`): pelin omalla
+       * seepiakartalla tausta on tasainen pergamentti, jossa reunus
+       * olisi pelkkää sotkua, eikä sinne kosketa.
+       */
+      if (kerrokset.reliefi && kerrostasot[i]?.nosto) {
+        ctx.save();
+        ctx.shadowColor = NIMION_HALO;
+        ctx.shadowBlur = NIMION_HALO_PX;
+        for (let veto = 0; veto < NIMION_HALO_VETOJA; veto += 1) {
+          ctx.drawImage(kuva, 0, 0, kartta.leveys, kartta.korkeus);
+        }
+        ctx.restore();
+      }
       ctx.drawImage(kuva, 0, 0, kartta.leveys, kartta.korkeus);
       kuva.close?.();
       /*
@@ -1974,9 +2080,11 @@ export function luoLaattakerros({
      * ei asenna purettua laattaa takaisin.
      */
     const tasoitusAvain = kerrokset.vari ? (pyramidinTasoitus()?.avain ?? '') : '';
-    if (variMaa !== variMaaEdellinen || tasoitusAvain !== tasoitusAvainEdellinen) {
+    if (variMaa !== variMaaEdellinen || tasoitusAvain !== tasoitusAvainEdellinen
+      || kerrokset.reliefi !== reliefiEdellinen) {
       variMaaEdellinen = variMaa;
       tasoitusAvainEdellinen = tasoitusAvain;
+      reliefiEdellinen = kerrokset.reliefi;
       mittarit.variMaa = kerrokset.vari ? variMaa : null;
       mittarit.varimitatointeja += 1;
       sukupolvi += 1;
@@ -2028,6 +2136,20 @@ export function luoLaattakerros({
     let valittu = kertomuslukko && Number.isFinite(kertomustaso)
       ? (tasoZ(kertomustaso) ?? laattakerroksenTaso(pyramidi.tasot, tarvePxAste, taso))
       : laattakerroksenTaso(pyramidi.tasot, tarvePxAste, taso);
+    /*
+     * RELIEFIN KATTO. Taso valitaan POHJAN luettelosta, jossa on z8;
+     * reliefi on poltettu z7:ään asti. Mitattu 18.9.2026
+     * (tools/savukkeet/mittaa-reliefipyramidi.mjs, Alppien lähizoomi):
+     * ilman kattoa kerros valitsi z8:n, `pyramidinKerrostasot` ei
+     * löytänyt sille reliefitasoa, pohja oli portista kiinni — ja
+     * jokainen laatta jäi tilaan `virhe`. Ruutu oli musta eikä yhtään
+     * laattapyyntöä lähtenyt. Katto on reliefin oma syvin taso; sitä
+     * karkeampi valinta on yhä tarkempi kuin yhden kuvan 30 px/aste.
+     */
+    const reliefinKatto = kerrokset.reliefi ? pyramidinReliefinSyvinTaso() : null;
+    while (valittu && Number.isFinite(reliefinKatto) && valittu.z > reliefinKatto) {
+      valittu = tasoZ(valittu.z - 1);
+    }
     let kartta = null;
     let nakyvatLaatat = null;
     while (valittu) {
