@@ -150,7 +150,10 @@ export const PALLO_LAATTAVERSIO = '2026-09-07a';
  * lepokerroksenKerrokset palauttaa null, jos pallon sarjan `nostot` ja
  * pyramidin `nostotaso.versio` eivät täsmää — koko laattakerros
  * sammuu): (1) nostotason laatat ja pyramidi.json ämpäriin, (2) pallon
- * sarja poltettuna kansioon 2026-09-07a-nostot-h, (3) tämä tunniste.
+ * sarja poltettuna kansioon 2026-09-07a-nostot-i, (3) tämä tunniste.
+ * Tunniste i (18.9.2026 ilta): nostotaso maittain 2026-09-19-maittain,
+ * pallon sarja ILMAN nostoja (nostot maittain lepokerroksesta, PAATOKSET 34
+ * kohta 17 d), ankkurit lukittu 50 nostolle.
  * Tunniste h (18.9.2026 iltapäivä): nostotaso 2026-09-19-nostot, jossa
  * kaupunkipisteitä (nakyva-kaupunki-*) ei enää polteta laattaan (Raamattu
  * PAATOKSET 33 TARKENNUS 2 rajaus a) — poltettu yhdellä ajolla ilman
@@ -158,7 +161,7 @@ export const PALLO_LAATTAVERSIO = '2026-09-07a';
  * Ks. docs/raportit/viesti-fable-poltto-ranska-nostot-20260918.md
  * ("Erä 3"), jossa on vientikomennot ja tarkistuslista.
  */
-export const PALLO_LAATTATUNNISTE = 'h';
+export const PALLO_LAATTATUNNISTE = 'i';
 export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}-nostot-${PALLO_LAATTATUNNISTE}`;
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
 /** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */
