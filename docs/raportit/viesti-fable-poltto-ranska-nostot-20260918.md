@@ -90,6 +90,10 @@ Avain on nostokerroksen rivin avain (`nosto:<id>`).
 
 - `js/pallolauta/nostoankkurit.js`: `lukittuAnkkuri(avain)`,
   `lukittujaAnkkureita()`, vastakoe `?lukitutankkurit=0`.
+- `tests/nostoankkurit-lukitut.test.mjs`: taulu on dataa, jota peli
+  uskoo suoraan, joten sen kelpoisuus vartioidaan (avaimen muoto,
+  koordinaatti Ranskan laatikossa, `lukittuAnkkuri` lukee taulun
+  sellaisenaan, tuntematon avain ei saa ankkuria).
 - `js/pallolauta/nostot.js` `ankkuroi`: lukitut ankkurit asetetaan
   varastoon sellaisenaan ennen levitystä, eikä niitä anneta
   levitykselle. Levitys väistää niitä silti, koska varastoon asetettu
@@ -139,6 +143,25 @@ Korjaus on yhden kohdan asia: kun merkillä on lukittu ankkuri,
 `x`/`y` (ja `ankkuriX`/`ankkuriY`) tulevat siitä eikä ladonnasta.
 Ilman tätä poltettu piste on siinä, missä vanha ladonta sen jätti —
 eli **eri paikassa kuin elävä nimiö**, ja koko erän hyöty menetetään.
+
+**Mitattu ero (18.9.2026, `keraaNostot` vs. ankkuritaulu,
+`asteetLaudalle` — pelkkää dataa, ei selainta).** Niistä 8:sta, joilla
+on sekä poltto että ankkuri:
+
+| tunnus | ero (laudan yksikköä) |
+| --- | ---: |
+| avignonin-paavinpalatsi | **3,10** |
+| mont-saint-michel | **2,74** |
+| loire | 0,81 |
+| viisi muuta (carcassonne, chartres, lascaux, pont-du-gard, vignemale) | 0,00 |
+
+Viisi kahdeksasta osuu jo nyt täsmälleen — ne ovat ne, joita levitys
+ei siirtänyt. Kolme ei osu. Saapumisnäkymässä mitattu mittakaava on
+~2,1 px/yksikkö (PAATOKSET 32 -erän mitta), joten pahin ero on
+**noin 6–7 px** eli moninkertaisesti yli vaaditun 2 px:n.
+`asteetLaudalle(pack, lat, lng)` toimii sellaisenaan Nodessa, joten
+korjaus on testattavissa **ilman selainta ja ilman laattoja**: sama
+vertailu, vaatimuksena 0,00.
 
 ### 4.2 Polttoketju ei tunne PAATOKSET 34:ää
 

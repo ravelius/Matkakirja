@@ -1847,15 +1847,16 @@ export function luoNostot({
      * Levitys väistää niitä silti, koska varastoon asetettu ankkuri
      * on `kiinteat`-listan "jo ankkuroitu" -haara.
      */
-    const lukitut = new Map();
-    if (lukitutAnkkuritSallittu()) {
+    const lukitusPaalla = lukitutAnkkuritSallittu();
+    if (lukitusPaalla) {
+      const lukitut = new Map();
       for (const r of liikkuvat) {
         const a = lukittuAnkkuri(r.avain);
         if (a && !ankkurivarasto.lue(r.avain)) lukitut.set(r.avain, a);
       }
       if (lukitut.size) ankkurivarasto.aseta(tunnus, lukitut);
     }
-    const onLukittu = (r) => lukitutAnkkuritSallittu() && Boolean(lukittuAnkkuri(r.avain));
+    const onLukittu = (r) => lukitusPaalla && Boolean(lukittuAnkkuri(r.avain));
     const uudetRivit = liikkuvat.filter((r) => !onLukittu(r)
       && (!ankkurivarasto.lue(r.avain) || esteenAlla(r)));
     if (uudetRivit.length) {
