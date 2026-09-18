@@ -2551,9 +2551,18 @@ export function luoNostot({
          * tässä erässä: merkki x 146, rivin leveys 246 px, vartiot 8j
          * ja 8k punaisina. Lattia on puolet ruudusta, jottei kapea
          * reuna kutista rivejä lukukelvottomiksi.
+         *
+         * SÄDE KAHDESTI: ensimmäinen on listan oma etäisyys merkistä
+         * (VIUHKAN_SADE_PX), toinen on PELINAPPULAN vara. Nappula
+         * seisoo pelaajan kaupungin merkin kyljessä ja on kova este,
+         * joka ei voi väistää; jos rivit vievät koko oikean laidan,
+         * listalle ei jää yhtään vapaata asentoa sen vierestä —
+         * mitattu 390 px:llä: levein rivi 201 px, ja avattu kategoria
+         * jäi nappulan päälle (vartio 8j, ensin *Vrain-Lucas*, sitten
+         * *Kulttuuri ja ruoka (3)*).
          */
         const rivinTila = Math.max(ruutuNyt.leveys / 2,
-          ruutuNyt.leveys - rivi.p.x - VIUHKAN_REUNAVARA_PX - VIUHKAN_SADE_PX);
+          ruutuNyt.leveys - rivi.p.x - VIUHKAN_REUNAVARA_PX - 2 * VIUHKAN_SADE_PX);
         const rivinLeveys = (teksti) => (teksti
           ? viuhkanNimioLeveys(nostosymNimioMitta(teksti, null, Infinity).leveys, liuskaMitta)
           : 0);

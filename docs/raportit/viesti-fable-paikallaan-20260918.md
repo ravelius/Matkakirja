@@ -51,7 +51,13 @@ lista. Kaksi rajaa:
   nimi oli 246 px (ruutu 374 px) ja liuska loikkasi merkin VASEMMALLE
   puolelle — mitattu: vartiot 8j ja 8k punaisina. Rivin tila on nyt se,
   mikä jää merkin OIKEALLE puolelle kamera-ajon jälkeen (PAATOKSET 34
-  kohta 12), lattiana puoli ruutua. Levein rivi 196,9 px, 8j ja 8k vihreitä.
+  kohta 12) miinus **pelinappulan vara**, lattiana puoli ruutua. Nappula
+  seisoo pelaajan kaupungin merkin kyljessä ja on kova este, joka ei voi
+  väistää: kun rivit veivät koko oikean laidan (levein 201 px), listalle ei
+  jäänyt vapaata asentoa sen vierestä ja avattu kategoria jäi nappulan
+  päälle (vartio 8j, ensin *Vrain-Lucas*, korjauskierroksen jälkeen
+  *Kulttuuri ja ruoka (3)*). Säde kahdesti — listan oma etäisyys merkistä
+  ja nappulan vara. Levein rivi 196,3 px, 8j ja 8k vihreitä.
 - **Lukumäärä suluissa ei katkea.** Ensimmäinen katkaisu söi rivin lopusta
   ja *"Kadonneet ihmeet."*, *"Kauppa."*, *"Kulttuuri."* menettivät lukunsa
   (PAATOKSET 34 kohta 5). Häntä `(n)` irrotetaan nyt ensin, nimi lyhenee
@@ -141,7 +147,7 @@ Uudet vartiot:
 | vartio | väite | tulos |
 |---|---|---|
 | 8l | liuskan rivin fonttikoko = poltetun nimiön ruutukoko ±1 px | OK (25,0 vs. 24,96 px) |
-| 8l2 | levein liuskan rivi mahtuu kotelon leveyteen | OK (196,9 / 374 px) |
+| 8l2 | levein liuskan rivi mahtuu kotelon leveyteen | OK (196,3 / 374 px) |
 | 8m | ruutuvektori merkistä nimiöön sama vedon (−60, +60 px) yli ±1 px | OK (0,00 px) |
 | 8n | zoomi ei vaihda nimiön kylkeä (etumerkki säilyy) | OK (0 kääntyi) |
 
