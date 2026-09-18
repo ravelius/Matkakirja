@@ -3595,6 +3595,21 @@ export function maanKohdemerkit(pack, iso, pohja, onPoltettu = nostoOnPoltettu) 
       puoli: tynka.fokuskohdeNimioPaatokset?.puolet?.get(r.id) ?? null,
       x,
       y,
+      /*
+       * MERKIN OMA DATAPISTE (PAATOKSET 34 kohta 4, velka *"jäsenyyden
+       * koordinaatti luetaan ladotusta pisteestä kasauspassin
+       * jälkeen"*).
+       *
+       * `x`/`y` yllä ovat LADOTTU piste: erottelupassin siirto
+       * (`sx`/`sy`) ja kasauspassin nippu (`nippu`) ovat mukana, ja ne
+       * vievät merkin kymmeniä kilometrejä (Pariisin nostot 33–74 km,
+       * lukittu ankkuri jopa 108 km). Kaupunkijäsenyys on datan tieto
+       * eikä ladonnan, joten alkuperäinen piste kulkee rivillä omana
+       * kenttänään: `r.x`/`r.y` ovat ryhmän paikka ennen kumpaakaan
+       * passia.
+       */
+      omaX: r.x,
+      omaY: r.y,
       sade,
       symboli: {
         x0: x - sade, y0: y - sade, x1: x + sade, y1: y + sade,

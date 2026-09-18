@@ -314,7 +314,12 @@ test('kytkennät: sama lepo kokoaa, liike piilottaa heti, osoitteet tasokartan m
   assert.ok(liike, 'piilotus tapahtuu heti liikkeestä, ennen LAATU_LIIKEVIIVE_MS-viivettä');
   assert.match(pallo, /lepokerros\?\.pura\(\);\n\s*if \(kerros\) \{ kerros\.pura\(\); lepokerrokset\.delete\(pallo\); \}\n\s*moottori\.updatePov = alkuperainen;/);
   // Osoitteet ja luettelo VAIN tasokartan moduulista — ei omaa kaavaa.
-  assert.match(pallo, /import \{\n\s*haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,\n\} from '\.\/laattapyramidi\.js';/);
+  // 18.9.2026: samasta tuonnista tulee myös maakohtaisen nostotason
+  // poltettu-taulu (nostotasonPoltetut, js/pallo.js
+  // pallonNostoOnPoltettu) — silti YKSI tuonti tasokartan moduulista.
+  assert.match(pallo, /import \{[^}]*haePyramidinLuettelo[^}]*pyramidinKerrostasot[^}]*pyramidinLaattaOlemassa[^}]*pyramidinLaattaUrl[^}]*\} from '\.\/laattapyramidi\.js';/);
+  assert.match(pallo, /import \{[^}]*nostotasonPoltetut[^}]*\} from '\.\/laattapyramidi\.js';/,
+    'maakohtainen poltettu-taulu luetaan tasokartan moduulista');
   assert.ok(!/julisteet\/pyramidi/.test(pallo), 'pallo.js ei rakenna pyramidin polkua itse');
   const pyramidi = lue('../js/laattapyramidi.js');
   for (const vienti of ['haePyramidinLuettelo', 'pyramidinKerrostasot', 'pyramidinLaattaUrl', 'pyramidinLaattaOlemassa']) {

@@ -69,6 +69,7 @@ import { ARTIKKELIT } from '../../js/sisaltotaulut.js';
 import { KULTTUURI_KATEGORIAT } from '../../js/packs/kulttuuri-kategoriat.js';
 import { NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
 import { KAUPUNKIMERKIN_NIMIO_PX } from '../../js/pallolauta/nostot.js';
+import { KAUPUNKIKARTAT } from '../../js/packs/maakartat.js';
 
 const paketti = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
@@ -153,6 +154,14 @@ if (kirjasto?.status !== 200) {
 const odotettuEsittely = (nimi) => (ARTIKKELIT[nimi]?.intro ?? '')
   .split('\n\n').map((k) => k.trim()).filter(Boolean).join('')
   .replaceAll('**', '');
+
+/*
+ * ODOTETTU NÄHTÄVYYSTEKSTI suoraan kohdekarttadatasta (sama kenttä kuin
+ * js/nahtavyydet.js kaupunginNahtavyysteksti lukee). Kohta 17 e: lyhyt
+ * teksti näkyy KOKONAAN, joten vartio vertaa merkkimäärää dataan eikä
+ * oletukseen.
+ */
+const odotettuNahtavyysteksti = (KAUPUNKIKARTAT.pariisi?.esittely ?? '').trim();
 
 /** Kansiosasto lehtidatasta — vartio 9 tarvitsee tietää, mitä poistetaan. */
 const kansiOsasto = (id) => (KULTTUURI_KATEGORIAT[id] ?? []).find((k) => k.id === 'kaupunki');
@@ -557,6 +566,13 @@ for (const ruutu of RUUDUT) {
           if (!d?.open) return null;
           const palsta = d.querySelector('.arrival-palsta');
           const teksti = palsta.querySelector('.nahtavyysnakyma-teksti');
+          const kortti = d.querySelector('.dialog-card');
+          const tr = teksti?.getBoundingClientRect();
+          const kr = kortti?.getBoundingClientRect();
+          const rivi = teksti
+            ? parseFloat(getComputedStyle(teksti).lineHeight) || 0
+            : 0;
+          const otsikko = palsta.querySelector('.lehti-nimio');
           return {
             nahtavyysNakyma: d.classList.contains('nahtavyysnakyma'),
             kartta: palsta.querySelectorAll('.kartta-kehys').length,
@@ -565,9 +581,17 @@ for (const ruutu of RUUDUT) {
             pituus: (teksti?.textContent ?? '').trim().length,
             kappaleita: palsta.querySelectorAll('.nahtavyysnakyma-teksti').length,
             nappi: palsta.querySelectorAll('.nahtavyysnakyma-lisaa').length,
-            loppuMerkkeja: [...(teksti?.textContent ?? '')]
-              .filter((c) => c === '.' || c === '!' || c === '?').length,
             herokuvia: palsta.querySelectorAll('.lehti-paakuva img').length,
+            /* Kohta 17 e: lehtimäinen yläosa pois. Masto on kicker-rivi
+               (.lehti-ylarivi) ja päiväysrivi viivoineen (.lehti-alarivi);
+               jäljellä on yksi otsikko, jossa lukee "Nähtävyydet". */
+            mastonRiveja: palsta.querySelectorAll('.lehti-ylarivi, .lehti-alarivi').length,
+            otsikoita: palsta.querySelectorAll('.lehti-nimio').length,
+            otsikko: (otsikko?.textContent ?? '').replace('✕', '').trim(),
+            /* Kohta 17 e: arkki loppuu tekstiin. */
+            tekstinAla: tr ? Math.round(tr.bottom) : 0,
+            kortinAla: kr ? Math.round(kr.bottom) : 0,
+            rivinKorkeus: Math.round(rivi),
           };
         });
         vaadi(`${tunnus}: Nähtävyydet-rivi avaa nähtävyysnäkymän`,
@@ -579,46 +603,51 @@ for (const ruutu of RUUDUT) {
             `kehyksiä ${ennen.kartta}, kohteita ${ennen.kohteita}`);
           vaadi(`${tunnus}: kartan alla EI ole kohdeluetteloa`, ennen.luettelo === 0,
             `rivejä ${ennen.luettelo}`);
-          vaadi(`${tunnus}: teksti on yksi kappale ja yksi lause`,
-            ennen.kappaleita === 1 && ennen.pituus > 0 && ennen.loppuMerkkeja === 1,
+          /*
+           * KOHTA 17 e (omistaja 18.9.2026 klo 15.20). Kolme väitettä
+           * kääntyi päinvastoin kuin kohdassa 16 e: lehtimäinen yläosa
+           * pois, lyhyt teksti kokonaan ilman nappia, arkki loppuu
+           * tekstiin. Vanhat väitteet olivat oikeat omalla
+           * päätöksellään ja ovat nyt vanhentuneet.
+           */
+          vaadi(`${tunnus}: näkymässä EI ole lehden mastoa`, ennen.mastonRiveja === 0,
+            `mastorivejä ${ennen.mastonRiveja}`);
+          vaadi(`${tunnus}: ylhäällä on vain "Nähtävyydet"-otsikko`,
+            ennen.otsikoita === 1 && ennen.otsikko === 'Nähtävyydet',
+            `otsikoita ${ennen.otsikoita}, teksti "${ennen.otsikko}"`);
+          vaadi(`${tunnus}: teksti on yksi kappale ja KOKO esittely`,
+            ennen.kappaleita === 1 && ennen.pituus === odotettuNahtavyysteksti.length,
             `kappaleita ${ennen.kappaleita}, merkkejä ${ennen.pituus}, `
-            + `lauseenloppuja ${ennen.loppuMerkkeja}`);
-          vaadi(`${tunnus}: tekstin perässä on "Lue lisää" -nappi`, ennen.nappi === 1,
-            `nappeja ${ennen.nappi}`);
+            + `datassa ${odotettuNahtavyysteksti.length}`);
+          vaadi(`${tunnus}: lyhyessä tekstissä EI ole "Lue lisää" -nappia`,
+            ennen.nappi === 0, `nappeja ${ennen.nappi}`);
           vaadi(`${tunnus}: näkymässä EI ole herokuvia`, ennen.herokuvia === 0,
             `kuvia ${ennen.herokuvia}`);
+          /*
+           * ARKKI LOPPUU TEKSTIIN. Sallittu rako on yksi tekstirivi:
+           * paperin reunus tekstin alla on lukemista, tyhjä alaosa ei.
+           */
+          vaadi(`${tunnus}: arkin alareuna on tekstin alareunassa (≤ 1 rivi)`,
+            ennen.kortinAla > 0
+              && ennen.kortinAla - ennen.tekstinAla <= ennen.rivinKorkeus,
+            `kortti ${ennen.kortinAla}, teksti ${ennen.tekstinAla}, `
+            + `rivi ${ennen.rivinKorkeus}`);
         }
         if (KUVAKANSIO && ruutu.width === 390) {
           await sivu.screenshot({
             path: join(KUVAKANSIO, 'liuska-k16-pariisi-nahtavyydet.png'), scale: 'css',
           });
         }
-        // "Lue lisää": loput tulevat SAMAAN kappaleeseen (sama elementti).
-        const jalkeen = await sivu.evaluate(() => {
-          const palsta = document.getElementById('tiivis-lehtiarkki')
-            ?.querySelector('.arrival-palsta');
-          const sama = palsta?.querySelector('.nahtavyysnakyma-teksti');
-          palsta?.querySelector('.nahtavyysnakyma-lisaa')?.click();
-          const uusi = palsta?.querySelector('.nahtavyysnakyma-teksti');
-          return {
-            pituus: (uusi?.textContent ?? '').trim().length,
-            samaElementti: sama === uusi,
-            kappaleita: palsta?.querySelectorAll('.nahtavyysnakyma-teksti').length ?? 0,
-            nappi: palsta?.querySelectorAll('.nahtavyysnakyma-lisaa').length ?? 0,
-            arkkiAuki: Boolean(document.getElementById('tiivis-lehtiarkki')?.open),
-          };
-        });
-        tieto(`${tunnus}: Lue lisää -napin jälkeen`, JSON.stringify(jalkeen));
-        if (ennen) {
-          vaadi(`${tunnus}: napautus tuo loput samaan kappaleeseen`,
-            jalkeen.samaElementti && jalkeen.kappaleita === 1
-            && jalkeen.pituus > ennen.pituus,
-            `${ennen.pituus} → ${jalkeen.pituus} merkkiä, sama elementti `
-            + `${jalkeen.samaElementti}, kappaleita ${jalkeen.kappaleita}`);
-        }
-        vaadi(`${tunnus}: nappi katoaa eikä näkymä vaihdu`,
-          jalkeen.nappi === 0 && jalkeen.arkkiAuki,
-          `nappeja ${jalkeen.nappi}, arkki auki ${jalkeen.arkkiAuki}`);
+        /*
+         * "LUE LISÄÄ" -VARTIO ON VANHENTUNUT PARIISIN KOHDALLA (kohta
+         * 17 e): Pariisin nähtävyysteksti on lyhyempi kuin katkaisuraja
+         * (900 merkkiä), joten nappia ei ole eikä sitä voi painaa.
+         * Nappi itse ja js/lauseraja.js jäävät käyttöön pidemmille
+         * teksteille — se on mitattu tässä datan puolelta, koska pelissä
+         * ei tällä hetkellä ole 900 merkkiä pidempää nähtävyystekstiä.
+         */
+        tieto(`${tunnus}: nähtävyystekstin pituus datassa`,
+          `${odotettuNahtavyysteksti.length} merkkiä (raja 900)`);
         // Kartan kohteen napautus avaa kohteen (kohta 16 e viimeinen lause).
         const kohde = await sivu.evaluate(() => {
           const piste = document.getElementById('tiivis-lehtiarkki')

@@ -98,7 +98,7 @@ import { laudanProjektio, SYVYYS } from './fokuskartta/piirto.js';
 import { RANTATYYLI } from './fokuskartta/maailmapiirto.js';
 import { nostosymPolttoLaatikko } from '../js/fokusnosto-symbolit.js';
 import { NOSTOLADONTA_SAANTO } from '../js/nostoladonta.js';
-import { varitasonKansio } from '../js/laattapyramidi.js';
+import { nostotasonKansio, varitasonKansio } from '../js/laattapyramidi.js';
 
 const TAALLA = dirname(fileURLToPath(import.meta.url));
 const JUURI = join(TAALLA, '..');
@@ -301,7 +301,8 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--tasoja 8|9] '
     + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
-    + '[--nostotaso --nostoversio <v>] [--viivataso --viivaversio <v> [--eipiirit]] '
+    + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>]] '
+    + '[--viivataso --viivaversio <v> [--eipiirit]] '
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
     + '[--vari <ISO> --variversio <v> [--aluevesi <yksikköä>] '
     + '[--paletti murrettu|taysvari|tasoitus] [--vesi <0..1>] [--feidaus <0..1>] '
@@ -415,6 +416,38 @@ const VERSIO = valitsin('versio', new Date().toISOString().slice(0, 10));
  */
 const NOSTOTASO = lippu('nostotaso');
 const NOSTOVERSIO = valitsin('nostoversio', VERSIO);
+/*
+ * === NOSTOTASO MAITTAIN (18.9.2026) ================================
+ *
+ * Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 17 d, omistaja:
+ * *"muiden maiden nostot piiloon"*. Elävä kerros osasi jo vaieta
+ * naapureista (js/pallolauta/nostot.js NAYTA_VAIN_KOHDEMAAN_NOSTOT),
+ * mutta MAAILMANLAAJUISESSA laatastossa naapurin nimiö on poltettu
+ * samaan kuvaan kuin kohdemaan, ja poltettua ei voi piilottaa: se
+ * kuulsi 0,85-kerman läpi (Gotthard-nimiön kontrasti 14,8 / 13,9,
+ * tavoite < 10), ja kerman nosto latistaisi koko kartan.
+ *
+ * `--nostomaa <ISO>` ajaa siis YHDEN MAAN nostot omaan laatastoonsa
+ * polkuun `<nostoversio>/nostot/<ISO>/z…`, ja peli hakee vain
+ * kohdemaan laataston (js/laattapyramidi.js nostotasonKirjaus).
+ * Rakenne on TÄSMÄLLEEN väritason rakenne (`--vari <ISO>` →
+ * `varitasot[ISO]`), ja se valittiin maskin sijasta, koska se on
+ * kevyempi molemmissa päissä: maski vaatisi TOISEN alfalaataston joka
+ * maalle (yhtä monta laattaa kuin muste) ja kompositoinnin selaimessa,
+ * kun taas maittainen laatasto kasvattaa laattamäärää vain rajalle
+ * osuvien laattojen verran — ja peli lataa vain yhden maan laatat
+ * koko maailman sijaan.
+ *
+ * ILMAN `--nostomaa`-valitsinta ajo on entinen maailmanlaajuinen ajo
+ * (`nostotaso`-kenttä). Mitään ei siis rikota kesken siirtymän.
+ */
+const NOSTO_MAA = (valitsin('nostomaa', null) ?? '').toUpperCase() || null;
+/** Nostotason kirjauksen polkukentät; sama olio kuin `nostotasot[ISO]`. */
+const NOSTO_POLKUKIRJAUS = NOSTO_MAA
+  ? { versio: NOSTOVERSIO, maa: NOSTO_MAA } : null;
+/** Laattojen alikansio ajokansiossa (ilman versiota). */
+const NOSTO_KANSIO = NOSTO_MAA
+  ? nostotasonKansio(NOSTO_POLKUKIRJAUS, { versio: false }) : 'nostot';
 /*
  * PAIKKAUS (`--paikkaus <lähdeversio>`) — RAJATUN ALUEEN KORJAUS.
  *
@@ -1035,6 +1068,36 @@ const nostot = keraaNostot(pack);
 console.log(nostojenYhteenveto(nostot.tilasto));
 for (const rivi of nostot.tilasto.estot) console.log(`    esto ${rivi}`);
 
+/*
+ * MAAKOHTAISEN AJON MERKIT — YKSI SUODATIN, KOLME KÄYTTÄJÄÄ.
+ *
+ * Ladonta lasketaan aina KOKO MAAILMASTA (keraaNostot): naapurimaan
+ * ladonta on osa tämän maan väistöä (tools/fokuskartta/nostot.mjs
+ * maanUlkoisetEsteet), joten suodatus ei saa tapahtua ennen ladontaa
+ * vaan vasta sen jälkeen. Muuten Ranskan merkit asettuisivat eri
+ * paikkaan maakohtaisessa ajossa kuin maailmanlaajuisessa — ja
+ * Raamatun ehto on sanatarkka: yksi ladonta, yksi lähde.
+ *
+ * Sama joukko menee kolmeen paikkaan, eikä kahta eriytyvää kopiota
+ * synny: mustelaatikot (nostoLaatikot → peite → työlista ja
+ * bittikartta), piirtosivun `nostot.json` ja luettelon
+ * tunnus→tiiviste-taulu.
+ */
+const poltettavatMerkit = nostot.merkit
+  .filter((m) => m.poltettava && (!NOSTO_MAA || m.iso === NOSTO_MAA));
+/** Tämän ajon tunnus→tiiviste-taulu (maakohtaisessa ajossa maan omat). */
+const poltettuLuettelo = NOSTO_MAA
+  ? Object.fromEntries(poltettavatMerkit.map((m) => [m.tunnus, m.tiiviste]))
+  : nostot.luettelo;
+if (NOSTOTASO && NOSTO_MAA) {
+  console.log(`  nostotaso       ${NOSTO_MAA}: ${poltettavatMerkit.length} poltettavaa `
+    + `merkkia (koko maailmassa ${nostot.merkit.filter((m) => m.poltettava).length})`);
+  if (!poltettavatMerkit.length) {
+    console.error(`--nostomaa ${NOSTO_MAA}: maalla ei ole yhtaan poltettavaa nostoa.`);
+    process.exit(1);
+  }
+}
+
 const { projektio } = LAUTA;
 const kaava = laudanProjektio(projektio);
 
@@ -1393,7 +1456,7 @@ function alueella(mitat, sarake, rivi) {
 const NOSTO_MARGINAALI_PX = 12;
 
 /** Poltettavien nostojen mustelaatikot laudan yksiköissä (kerran). */
-const nostoLaatikot = nostot.merkit.filter((m) => m.poltettava).map((m) => {
+const nostoLaatikot = poltettavatMerkit.map((m) => {
   const lk = nostosymPolttoLaatikko(m);
   let x1 = m.x + lk.x1 * m.porras;
   let x2 = m.x + lk.x2 * m.porras;
@@ -1919,6 +1982,7 @@ if (lippu('vain-lista')) {
     muoto: MUOTO,
     laatta: LAATTA,
     nostotaso: NOSTOTASO || undefined,
+    nostomaa: NOSTO_MAA || undefined,
     rantataso: RANTATASO || undefined,
     alue: ALUE,
     tasot: TASOT,
@@ -2434,7 +2498,7 @@ writeFileSync(join(tyokansio, 'ranta.json'),
  * tiloissa, ja ero on datassa.
  */
 writeFileSync(join(tyokansio, 'nostot.json'),
-  JSON.stringify(NOSTOTASO ? nostot.merkit.filter((m) => m.poltettava) : []));
+  JSON.stringify(NOSTOTASO ? poltettavatMerkit : []));
 /*
  * VÄRILEIKKURI OMANA TIEDOSTONAAN eikä lohkon asetuksissa: Ranskan
  * aluevesirenkaissa on 6 323 pistettä, ja lohkoja on kymmeniä. Sama
@@ -2928,7 +2992,15 @@ const palvelin = createServer((req, res) => {
 await new Promise((ok) => palvelin.listen(0, '127.0.0.1', ok));
 const osoite = `http://127.0.0.1:${palvelin.address().port}/`;
 
+/*
+ * PLAYWRIGHT WORKTREESTÄ (Mac Studio 18.9.2026). Agentin worktreessä ei
+ * ole node_modulesia, ja kontin varapolku (/opt/node22/…) ei ole
+ * Macilla — ilman `PLAYWRIGHT_JS`-ympäristömuuttujaa koepolttoa ei voi
+ * ajaa työpuussa lainkaan. Järjestys on sama kuin ennen: paketti
+ * ensin, varapolut vasta sen puuttuessa.
+ */
 const paketti = await import('playwright')
+  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'))
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 const selain = await chromium.launch({
@@ -3180,7 +3252,8 @@ for (const { mitat, bx, by } of lohkot.values()) {
     // Läpinäkyvien tasojen laatat omiin alipolkuihinsa pohjan
     // rinnalle: <versio>/nostot/z… ja <viivaversio>/viivat/z…
     let kansio = join(kohdekansio, `z${mitat.z}`, String(sarake));
-    if (NOSTOTASO) kansio = join(kohdekansio, 'nostot', `z${mitat.z}`, String(sarake));
+    // Nostotaso: maakohtaisessa ajossa `nostot/<ISO>/z…` (NOSTO_KANSIO).
+    if (NOSTOTASO) kansio = join(kohdekansio, ...NOSTO_KANSIO.split('/'), `z${mitat.z}`, String(sarake));
     if (VIIVATASO) kansio = join(kohdekansio, 'viivat', `z${mitat.z}`, String(sarake));
     if (RANTATASO) kansio = join(kohdekansio, 'ranta', `z${mitat.z}`, String(sarake));
     // Väritaso: `vari/<ISO>/z…` (ks. MAA ON LAATAN POLUSSA).
@@ -3317,6 +3390,16 @@ function teeLuettelo() {
    * piirtää kaikki nostot elävinä.
    */
   nostotaso: (() => {
+    /*
+     * MAAKOHTAISESSA AJOSSA TÄTÄ KENTTÄÄ EI SYNNY (18.9.2026).
+     * Maailmanlaajuista laatastoa ei ole, ja jos kenttä silti
+     * kirjoitettaisiin, se lupaisi pelille laattoja polusta
+     * `<versio>/nostot/z…` — sieltä ei tule kuin 404. Uusi peli lukee
+     * `nostotasot`-taulun (alla), vanha peli ei löydä kumpaakaan ja
+     * piirtää jokaisen noston elävänä; se on oikein, koska
+     * pohjalaatoissa ei ole nostoja.
+     */
+    if (NOSTO_MAA) return null;
     const omat = tasot.filter((m) => m.z >= NOSTO_ALIN);
     if (!omat.length) return null;
     const laatastot = {};
@@ -3335,7 +3418,7 @@ function teeLuettelo() {
        */
       saanto: NOSTOLADONTA_SAANTO,
       tasot: omat.map((m) => m.z),
-      nostot: nostot.luettelo,
+      nostot: poltettuLuettelo,
       laatastot,
     };
   })(),
@@ -3455,6 +3538,45 @@ function teeLuettelo() {
    * MUIDEN MAIDEN AJOT KANNETAAN ETEENPÄIN (ks. LUETTELO TÄYDENTYY):
    * yhden maan ajo täydentää taulua eikä korvaa sitä.
    */
+  /*
+   * NOSTOTASOT — MAAKOHTAISET NOSTOLAATASTOT (18.9.2026,
+   * Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 17 d).
+   *
+   * TAULU EIKÄ YKSI OLIO, samasta syystä kuin `varitasot`: jokainen
+   * maa ajetaan omana ajonaan, ja ilman taulua Belgian ajo pyyhkisi
+   * Ranskan laatastot luettelosta (laatat jäisivät ämpäriin, mutta
+   * peli ei löytäisi niitä). Yhdistäminen tehdään avaimittain
+   * tools/pyramidiluettelo.mjs:ssä.
+   *
+   * KENTÄT OVAT PELIN AINOA TIETO SIITÄ, KENELLE MUSTE KUULUU.
+   * `maa` on ISO A3 ja se on myös LAATAN POLUSSA
+   * (js/laattapyramidi.js nostotasonKansio) — kaksi maata ei voi
+   * kirjoittaa samaan ämpärin avaimeen. `nostot` on TÄMÄN MAAN
+   * tunnus→tiiviste-taulu: peli saa vaieta vain niistä merkeistä,
+   * jotka ovat sen hakemassa laatastossa.
+   *
+   * `saanto` on sama piirtosäännön tunnus kuin maailmanlaajuisella
+   * tasolla (js/nostoladonta.js NOSTOLADONTA_SAANTO): kun sääntö
+   * vaihtuu, peli piilottaa koko tason eikä vanha muste jää elävän
+   * merkin alle kaksoiskuvaksi.
+   */
+  nostotasot: (() => {
+    if (!(NOSTOTASO && NOSTO_MAA)) return null;
+    const omat = tasot.filter((m) => m.z >= NOSTO_ALIN);
+    if (!omat.length) return null;
+    const laatastot = {};
+    for (const m of omat) laatastot[m.z] = nostotasoBase64(m, nostotasonPeite(m));
+    return {
+      [NOSTO_MAA]: {
+        versio: NOSTOVERSIO,
+        maa: NOSTO_MAA,
+        saanto: NOSTOLADONTA_SAANTO,
+        tasot: omat.map((m) => m.z),
+        nostot: poltettuLuettelo,
+        laatastot,
+      },
+    };
+  })(),
   varitasot: (() => {
     if (!VARITASO || !tasot.length) return null;
     const laatastot = {};

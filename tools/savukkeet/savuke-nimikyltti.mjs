@@ -652,22 +652,37 @@ for (const ruutu of RUUDUT) {
     `saapuen ${saapuen.aihemerkkeja} merkkiä / ${saapuen.aiheryhmissa} nostoa, `
     + `limityspareja ${saapuen.limitysPareja} (${saapuen.lappuja} nimiötä); `
     + `lähizoomilla ${sisalla.aihemerkkeja}`);
-  vaadi(`9a. ${ruutu.nimi}: saapumisnäkymässä syntyy aihemerkkejä (Pariisin rykelmä)`,
-    saapuen.aihemerkkeja >= 1 && saapuen.aiheryhmissa >= 2,
+  /*
+   * 9a. KÄÄNNETTY 18.9.2026 (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34
+   * kohta 3 ja kohta 17 b). Vartio vaati ENNEN, että saapumisnäkymässä
+   * syntyy aihemerkkejä (Pariisin rykelmä). Ryhmitys aihemerkeiksi on
+   * otettu pois kartalta (js/pallolauta/nostot.js `ryhmitysSallittu`):
+   * kaupungin sisäiset nostot ovat kaupunkiliuskassa ja ulkopuoliset
+   * omina pisteinään. Väite on sama mittaus vastakkaiseen suuntaan —
+   * ryhmityksen paluu kartalle olisi juuri se virhe, jonka päätös
+   * kielsi. Ryhmitysalgoritmi itse mitataan yhä vartiolla 9f (puhdas
+   * kutsu ilman selainta) ja lipun `?aihemerkit=1` vastakokeen esittää
+   * tools/savukkeet/savuke-pariisi-lahizoom.mjs vartio 3i2.
+   */
+  vaadi(`9a. ${ruutu.nimi}: aihemerkkejä 0 kartalla — sisäiset liuskassa`,
+    saapuen.aihemerkkeja === 0 && saapuen.aiheryhmissa === 0,
     `${saapuen.aihemerkkeja} merkkiä, ${saapuen.aiheryhmissa} nostoa`);
   vaadi(`9b. ${ruutu.nimi}: limittyviä nimiöpareja enintään ${LIMITYSPARIEN_KATTO}`,
     saapuen.limitysPareja <= LIMITYSPARIEN_KATTO, `${saapuen.limitysPareja} paria`);
-  vaadi('9c. ' + `${ruutu.nimi}: viuhka avautuu ja jokainen kohta mahtuu ruudulle`,
-    Boolean(saapuen.viuhka) && saapuen.viuhka.auki
-      && saapuen.viuhka.kohtia === saapuen.viuhka.jasenia
-      && saapuen.viuhka.ruudulla === saapuen.viuhka.kohtia
-      && saapuen.viuhka.kohtia_dom === saapuen.viuhka.kohtia,
-    saapuen.viuhka
-      ? `kohtia ${saapuen.viuhka.kohtia}/${saapuen.viuhka.jasenia}, ruudulla `
-        + `${saapuen.viuhka.ruudulla}, DOMissa ${saapuen.viuhka.kohtia_dom}`
-      : 'viuhkaa ei avattu');
-  vaadi(`9d. ${ruutu.nimi}: viuhka sulkeutuu`,
-    Boolean(saapuen.viuhka?.sulkeutui), 'jäi auki');
+  /*
+   * 9c ja 9d VANHENTUNEET VARTIOINA 18.9.2026 (PAATOKSET 34 kohta 3 ja
+   * kohta 17 b). Ne mittasivat aihemerkin viuhkan avautumista,
+   * ladontaa ja sulkeutumista; aihemerkkejä ei ole enää kartalla, joten
+   * viuhkaa ei voi avata ja väitteet kaatuisivat aina. Vastakoetta
+   * `?aihemerkit=1` ei oteta tähän: se vaatisi koko zoomisarjan
+   * uudelleenajon napautuksineen käyttöliittymään, jota pelaaja ei enää
+   * näe. Saman asian — kaupungin nostolista aukeaa, latoutuu siististi
+   * ruudun sisään ja sulkeutuu — mittaavat nyt kaupunkiliuskan vartiot
+   * tools/savukkeet/savuke-pariisi-lahizoom.mjs 8c–8i.
+   */
+  tieto(`9c/9d. ${ruutu.nimi}: VANHENTUNEET VARTIOT`,
+    'viuhkaa ei ole kartalla (aihemerkit pois) — korvaajat ovat '
+    + `kaupunkiliuskan vartiot 8c–8i; viuhkamittaus ${saapuen.viuhka ? 'tehtiin' : 'ei tehty'}`);
   tieto(`${ruutu.nimi} · 9e KUMOTTU (PAATOKSET 31)`,
     `aihemerkkejä sarjan sisimmällä tasolla ${sisalla.aihemerkkeja} — `
     + 'kamera katsoo saapumisen keskipistettä, ei Pariisia; lähizoomin '

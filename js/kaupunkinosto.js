@@ -856,6 +856,14 @@ export const LUE_LISAA_TEKSTI = 'Lue lisää';
 export const LUE_LISAA_LUOKKA = 'nahtavyysnakyma-lisaa';
 /** Nähtävyystekstin kappale — yksi elementti, joka KASVAA napista. */
 export const NAHTAVYYSTEKSTIN_LUOKKA = 'nahtavyysnakyma-teksti';
+/**
+ * Merkkimäärä, jota lyhyempi nähtävyysteksti ladotaan KOKONAAN ilman
+ * "Lue lisää" -nappia (omistajan päätös 18.9.2026 klo 15.20, kohta
+ * 17 e alakohta 2: *"raja: alle 900 merkkiä"*).
+ */
+export const NAHTAVYYSTEKSTIN_KATKAISURAJA = 900;
+/** Nähtävyysnäkymän kevyen yläosan otsikko (kohta 17 e alakohta 1). */
+export const NAHTAVYYSNAKYMAN_OTSIKKO = 'Nähtävyydet';
 
 /**
  * d) KAUPUNGIN ESITTELYNÄKYMÄ: herokuva, kaksi pikkukuvaa, leipäteksti.
@@ -895,6 +903,11 @@ export function latoKaupunkiesittely(ui, sisalto, city) {
  * kartan ALLE ensimmäinen lause edellä), kohdeluettelo jää pois
  * kokonaan, eikä kuvagallerian nappi kuulu tähän näkymään.
  *
+ * KEVENNYS 18.9.2026 klo 15.20 (kohta 17 e): näkymän yläosassa ei ole
+ * enää lehden mastoa (avaaTiivisLehtiarkki saa otsikon), lyhyt teksti
+ * ladotaan kokonaan ilman nappia (NAHTAVYYSTEKSTIN_KATKAISURAJA), ja
+ * arkki on sisältönsä mittainen (css/styles.css .nahtavyysnakyma).
+ *
  * LOPPUTEKSTI ON DOMISSA VASTA NAPISTA, MUTTA SAMASSA KAPPALEESSA:
  * omistaja sanoi *"napautus tuo loput tekstistä samaan kappaleeseen
  * ensimmäisen lauseen jatkoksi (ei uutta näkymää, ei kelaa pois)"*.
@@ -911,6 +924,19 @@ export function latoNahtavyysnakyma(ui, sisalto, city) {
   if (!kartta.childElementCount) kartta.hidden = true;
   const koko = kaupunginNahtavyysteksti(city.id);
   if (!koko) return;
+  /*
+   * LYHYT TEKSTI NÄYTETÄÄN KOKONAAN (omistajan päätös 18.9.2026 klo
+   * 15.20, kohta 17 e alakohta 2). Raja on merkkimäärä eikä lauseiden
+   * määrä, koska kyse on siitä, paljonko paperia teksti vie: alle
+   * NAHTAVYYSTEKSTIN_KATKAISURAJA merkin teksti mahtuu arkille
+   * kerralla, eikä "Lue lisää" tekisi muuta kuin veisi yhden
+   * napautuksen. Pidempi teksti pitää kohdan 16 e napin ennallaan
+   * (ensimmainenLause, js/lauseraja.js).
+   */
+  if (koko.length < NAHTAVYYSTEKSTIN_KATKAISURAJA) {
+    sisalto.appendChild(html('p', `kaupunkikartta-esittely ${NAHTAVYYSTEKSTIN_LUOKKA}`, koko));
+    return;
+  }
   const { ensimmainen, loput } = ensimmainenLause(koko);
   const kappale = html('p', `kaupunkikartta-esittely ${NAHTAVYYSTEKSTIN_LUOKKA}`, ensimmainen);
   sisalto.appendChild(kappale);
@@ -936,7 +962,8 @@ export function avaaKaupunkiesittely(ui, city) {
 /** Avaa nähtävyysnäkymän (liuskan "Nähtävyydet"-rivi). */
 export function avaaNahtavyysnakyma(ui, city) {
   suljeKaupunkipopup(ui);
-  const arkki = avaaTiivisLehtiarkki(ui, city, latoNahtavyysnakyma);
+  const arkki = avaaTiivisLehtiarkki(ui, city, latoNahtavyysnakyma,
+    { otsikko: NAHTAVYYSNAKYMAN_OTSIKKO });
   arkki?.classList.add(NAHTAVYYSNAKYMA_LUOKKA);
   arkki?.classList.remove(KAUPUNKIESITTELY_LUOKKA, TIIVIS_LUOKKA);
   return arkki;

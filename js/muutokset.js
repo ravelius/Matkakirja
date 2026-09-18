@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1942, teksti: 'Kerma, nostot lukossa, nostotaso maittain, Nahtavyydet-arkki' },
   { v: 1941, teksti: 'Pallon sarja h: kaupunkipisteet pois nostotasosta' },
   { v: 1940, teksti: 'Liuska ilman animaatiota; Pariisi- ja Nahtavyydet-rivit' },
   { v: 1939, teksti: 'Topografialinssi piirtaa reliefipyramidista (15 kaarisek.)' },
