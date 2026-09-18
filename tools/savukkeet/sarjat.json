@@ -166,6 +166,12 @@
         "NAKYMAT": "vartija-b"
       },
       "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Väitteen 9 vastakoelohkon TOINEN puolisko: Safarin rajat, kehykset poikki, musta pinta, kolme avausta peräkkäin. Ks. #vartija-a."
+    },
+    "savuke-topografialinssi.mjs": {
+      "tunnetutPunaisetMac": [
+        "avauksessa ei ole välähdystä suhteessa linssin lopputilaan"
+      ],
+      "huomautusMac": "Mac 8 rinnakkain (v1942-ajot 18.9.2026, 2/4 punainen): 1 s avausikkunan 'paluu alas' 19,4 (raja 15) kuormassa, yksin ajettuna 4,0 ja maksimi = lopputila; kehysten pudotus on runnerin kuorma, ei pelin valahdys. Poista listalta, kun vartio mittaa mediaania tai kun rinnakkaisuus jaetaan."
     }
   }
 }
