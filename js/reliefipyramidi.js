@@ -570,7 +570,7 @@ export function asetaReliefiLinssi(paalla, tila = 'topografia') {
   if (uusi === linssiAuki && uusiTila === linssiTila) return;
   linssiAuki = uusi;
   linssiTila = uusiTila;
-  for (const kuuntelija of kuuntelijat) {
+  for (const kuuntelija of reliefiLinssinKuuntelijat) {
     try { kuuntelija(linssiAuki); } catch { /* yksi kuuntelija ei kaada linssiä */ }
   }
 }
@@ -598,7 +598,7 @@ export function reliefiAstronautilla(ikkuna = globalThis) {
  * saa tuntea palloa — siksi tieto kulkee tämän moduulin kautta, joka
  * on molempien yhteinen.
  */
-const kuuntelijat = new Set();
+const reliefiLinssinKuuntelijat = new Set();
 
 /**
  * Ilmoita, kun topografialinssi avataan tai suljetaan.
@@ -606,8 +606,8 @@ const kuuntelijat = new Set();
  */
 export function kuunteleReliefiLinssi(kuuntelija) {
   if (typeof kuuntelija !== 'function') return () => {};
-  kuuntelijat.add(kuuntelija);
-  return () => kuuntelijat.delete(kuuntelija);
+  reliefiLinssinKuuntelijat.add(kuuntelija);
+  return () => reliefiLinssinKuuntelijat.delete(kuuntelija);
 }
 
 /**
