@@ -18,13 +18,18 @@
  *
  * === MITÄ TÄMÄ TIEDOSTO ON JA MITÄ SE EI OLE =======================
  *
- * Jokaisella rivillä on VAIN otsikko (`nimi`) ja yhden rivin alaotsikko
- * (`nappi`). Kortin leipätekstinä on sama alaotsikko ja rivi "Sisältö
- * tulossa." — ei tyhjää tekstiä, ei keksittyjä faktoja. EI KUVIA, EI
- * VISOJA, EI PULU-KYSYMYKSIÄ: ne kuuluvat toiseen erään, kun määrä ja
- * sijoittelu on hyväksytty. Lippu `hahmotelma: true` merkitsee rivin,
- * jonka sisältö on vielä kirjoittamatta, jotta seuraava erä löytää ne
- * yhdellä haulla.
+ * ENSIMMÄINEN KIERROS (17.9.2026) toi vain otsikot (`nimi`) ja yhden
+ * rivin alaotsikot (`nappi`, vuoden 1873 näkökulma). TOINEN KIERROS
+ * (18.–19.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 44, omistaja:
+ * *"Ranskan tyhjin nostoihin voisi tehdä sisällöt … commonsista voisi
+ * etsiä vähintään kaksi kuvaa joka juttuun"*) toi jokaiselle kohteelle
+ * saman sisällön kuin maastokohteilla (js/packs/maastokohteet-fra.js):
+ * `teksti` 3–5 virkettä Wikipedian johdannosta lähderivillä, kaksi
+ * pulun kysymystä ja vähintään kaksi Commons-kuvaa (`kuva` + `kuvat`,
+ * vain PD / CC0 / CC BY / CC BY-SA, tekijä ja lisenssi kirjattuna).
+ * Generoidut havainnekuvat täydennetään myöhemmin. Lippu
+ * `hahmotelma: true` merkitsisi rivin, jonka sisältö on vielä
+ * kirjoittamatta — 19.9.2026 niitä ei ole.
  *
  * === MIKSI TÄMÄ REITTI (KOHDE_MAAT) ================================
  *
