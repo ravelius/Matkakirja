@@ -106,6 +106,7 @@ import {
 } from '../kaupunkinosto.js';
 import { NOSTOLADONTA_POLTON_TIHEYS } from '../nostoladonta.js';
 import {
+  LIUSKAN_AJO_MS, LIUSKAN_PEHMENNYS,
   PALLOKAMERAN_AJO_MS, PALLOLAUDAN_LEVEYS, PALLO_FOV, PALLO_KORKEUS_MAX,
   PALLON_SALLITTU_VENYTYS, ULOSZOOMAUKSEN_KERROIN, laattojenVenytys, leveysKorkeudesta,
   luoPallokamera,
@@ -2444,8 +2445,16 @@ export async function avaaPallolauta(ui) {
             if (sivuun > 1) maaliX = city.x + sivuun / tila.skaala;
           }
         } catch { /* ilman mittaa ajo on entinen keskitys */ }
+        /*
+         * AJO LÄHTEE HETI JA ON LYHYT (PAATOKSET 34 kohta 14 a).
+         * Oletusajo on 1400 ms trapetsilla, jonka kiihdytysramppi
+         * söi ensimmäisen sekunnin kymmenyksen liikkeestä — omistaja
+         * luki sen taukona. Luvut ja perustelu: js/pallolauta/kamera.js
+         * LIUSKAN AVAUSAJO LÄHTEE HETI.
+         */
         await kamera.ajaKamera(
-          { x: maaliX, y: maaliY, leveys: kamera.kameranTila()?.leveys }, {},
+          { x: maaliX, y: maaliY, leveys: kamera.kameranTila()?.leveys },
+          { kesto: LIUSKAN_AJO_MS, pehmennys: LIUSKAN_PEHMENNYS },
         );
         // Ladonta ajon jälkeen: liuska ripustetaan merkin UUTEEN
         // ruutupisteeseen, jolloin lepotesti vertaa oikeaan lukuun.
@@ -3839,6 +3848,13 @@ export async function avaaPallolauta(ui) {
       // Ladonta varaa pelaajan pisteelle sen tilan, joka sillä ruudulla
       // OIKEASTI on — sama yksi sääntö kuin piirrolla.
       pisteSade: piirrettyHalkaisijaPx(pelaajanKaupunki() ? { id: pelaajanKaupunki() } : null) / 2,
+      /*
+       * KAUPUNGIN ISO NIMI PIILOON LIUSKAN AJAKSI (PAATOKSET 34 kohta
+       * 14 c). Tunnus tulee nostokerrokselta, joka tietää, minkä
+       * kaupungin liuska on auki — lauta ei pidä siitä omaa kirjaa,
+       * koska liuska voi sulkeutua myös kerroksen omasta napautuksesta.
+       */
+      piilota: nostot.liuskanKaupunkiId?.() ?? null,
     });
     /*
      * KYLTTI ON SOVITTELUSSA KIINTEÄ ESTE, KUTEN KAUPUNGIN NIMI

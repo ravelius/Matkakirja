@@ -420,6 +420,27 @@ export function luoNimet({
     varaukset = [], pinot = [], katto = NIMIEN_KATTO, vain = null,
     kokoKerroin: kaupunginKerroin = 1, pisteSade = 0,
     karttaskaala = 0, vertailuskaala = 0,
+    /*
+     * ══ NIMI PIILOON LIUSKAN AJAKSI (Raamattu, KARTTAUUDISTUKSEN
+     * PAATOKSET 34 kohta 14 c; omistaja 18.9.2026: *"Pariisin
+     * nimikyltinhan voi vaikka ottaa pois nakyvista silloin, kun
+     * viuhka aukeaa."*) ═══════════════════════════════════════════
+     *
+     * PIILOTUS ON LADONNAN VIIMEINEN VAIHE, EI EHDOKKAIDEN KARSINTA.
+     * Nimi latoo kuten ennenkin — se saa paikkansa, ja sen LUKKO
+     * (PAATOKSET 34 kohta 13 b: kylki ja asento lukitaan kerran
+     * saapumisessa) syntyy ja säilyy samalla säännöllä kuin muutenkin.
+     * Pois jää vain se, mikä on tämän päätöksen asia: elementti
+     * (näkyvä muste), este (`laatikot`) ja osumapinta. Kun liuska
+     * sulkeutuu, nimi palaa TÄSMÄLLEEN samaan asentoon, koska lukko
+     * ei käynyt missään.
+     *
+     * `nimetyt` EI KUTISTU: se kertoo, millä kaupungilla on nimi, ja
+     * siitä riippuu kartan PISTE (js/pallolauta/lauta.js pisteNakyy).
+     * Piilotettu nimi ei saa viedä pistettä — piste on se merkki,
+     * johon liuska on ripustettu.
+     */
+    piilota = null,
   } = {}) => {
     // Kyltti on kartan mitta, ei ruudun (ks. NIMIKYLTIT KARTTAAN).
     const kokoKerroin = kaupunginKerroin
@@ -726,13 +747,26 @@ export function luoNimet({
     }
     lukitut = lukot;
     nimetyt = new Set(datumit.map((d) => d.id));
-    laatikot = datumit.map((d) => d.laatikko).filter(Boolean);
-    osumat = datumit.filter((d) => typeof d.osuma === 'function')
+    // Piilotettu nimi jää pois musteesta, esteistä ja osumista — ks.
+    // NIMI PIILOON LIUSKAN AJAKSI.
+    const piilossa = piilota
+      ? new Set(Array.isArray(piilota) ? piilota : [piilota])
+      : null;
+    const nakyvatNimet = piilossa?.size
+      ? datumit.filter((d) => !piilossa.has(d.id))
+      : datumit;
+    // Laatikko kantaa tunnuksensa, jotta lukija (kaupunkiliuskan
+    // ladonta) voi jättää oman kaupunkinsa nimen huomiotta.
+    laatikot = nakyvatNimet
+      .map((d) => (d.laatikko ? { ...d.laatikko, id: d.id } : null)).filter(Boolean);
+    osumat = nakyvatNimet.filter((d) => typeof d.osuma === 'function')
       .map((d) => ({
         id: d.id, lat: d.lat, lng: d.lng, laatikko: d.osuma,
       }));
-    merkit.aseta('nimet', datumit);
-    tulos = { nimia: datumit.length, pudotettu: ladottu.pudotettu, ehdokkaita: ehdokkaat.length };
+    merkit.aseta('nimet', nakyvatNimet);
+    tulos = {
+      nimia: nakyvatNimet.length, pudotettu: ladottu.pudotettu, ehdokkaita: ehdokkaat.length,
+    };
     return tulos;
   };
 

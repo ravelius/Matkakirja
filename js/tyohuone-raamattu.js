@@ -8860,8 +8860,11 @@ export const RAAMATTU = {
           + 'd) nappula ja pulu pysyvat kovina esteina. Mitataan 390 px '
           + 'saapumisnakymasta: aika napautuksesta kameran liikkeen alkuun < '
           + '100 ms, liuskan vasen reuna > merkin oikea reuna, nimi piilossa '
-          + 'auki-tilassa ja nakyvissa sulun jalkeen. Tila: tyo Opus-'
-          + 'agentilla.',
+          + 'auki-tilassa ja nakyvissa sulun jalkeen. Tila: TOTEUTETTU (liike '
+          + '23 ms napautuksesta, oma 420 ms ajo; liuska aina oikealla; nimi '
+          + 'piiloon ja takaisin samaan asentoon), JULKAISTU v1937 18.9.2026 '
+          + 'klo 09.40 Suomen aikaa. Velkaa: liuskan alle jaava toisen noston '
+          + 'nimio (Reims) kuultaa lapi saapumisnakymassa - piilotetaan.',
         'KARTTAUUDISTUKSEN PAATOKSET 33: NOSTOT YMPARI RANSKAA, ENSIN PISTEET '
           + 'JA OTSIKOT, KAIKKI POLTETUN MERKIN KOKOA (omistaja 17.9.2026 klo '
           + '21.40 Suomen aikaa, ankkurieran kaappauksista, sanatarkasti: '

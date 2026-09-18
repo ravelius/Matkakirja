@@ -230,6 +230,30 @@ export const PANOROINNIN_KERROIN = 1.3;
 export const PALLOLAUDAN_SIIRTOLEVEYS = 120;
 /** Sukellus kaupunkiin: sama kesto kuin valikkopallon sukelluksella. */
 export const PALLOKAMERAN_AJO_MS = 1400;
+/*
+ * ══ LIUSKAN AVAUSAJO LÄHTEE HETI (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 34 kohta 14 a; omistaja 18.9.2026 iPhone-kuvasta v1936:
+ * *"Kartta pitaisi siirtya heti napautuksen jalkeen. Nyt siina on
+ * turhan pitka tauko ennen kuin liike tapahtuu."*)
+ * ═══════════════════════════════════════════════════════════════════
+ *
+ * MITATTU SYY EI OLLUT VIIVE VAAN KÄYRÄ. Napautuksen ja `ajaKamera`n
+ * välissä ei ole odotusta (js/pallolauta/lauta.js napautaKaupunki ajaa
+ * saman kehyksen sisällä), mutta ajo kesti PALLOKAMERAN_AJO_MS = 1400
+ * ms trapetsilla, jonka kiihdytysramppi on 30 % kestosta: sadassa
+ * millisekunnissa oli kuljettu 0,5 % matkasta eli noin pikseli. Silmä
+ * lukee sen taukona, ei liikkeenä.
+ *
+ * KAKSI LUKUA, SAMA PÄÄTÖS. Kesto on 420 ms (kohta 10 vaatii alle 600
+ * ms, ja liuska avautuu vasta ajon jälkeen), ja ramppi on 0,12 — sama
+ * trapetsi kuin muissa ajoissa, mutta niin lyhyellä kiihdytyksellä,
+ * että sadan millisekunnin kohdalla on kuljettu jo viidennes matkasta.
+ * Muut ajot (saapuminen, siirto) EIVÄT muutu: tämä on vain liuskan
+ * avauksen oma ajo.
+ */
+export const LIUSKAN_AJO_MS = 420;
+export const LIUSKAN_AJON_RAMPPI = 0.12;
+export const LIUSKAN_PEHMENNYS = (t) => siirtoajonPehmennys(t, LIUSKAN_AJON_RAMPPI);
 
 /** Lautayksiköt asteiksi pituuspiirin suunnassa. */
 export function asteetLeveydesta(leveysYks, laudanLeveys = PALLOLAUDAN_LEVEYS) {
