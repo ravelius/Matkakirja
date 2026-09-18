@@ -27,7 +27,8 @@
     "savuke-ranskan-nostot-lukossa.mjs",
     "savuke-maailmatila-zoomi.mjs",
     "savuke-reittihelmet.mjs",
-    "savuke-siirtozoomi.mjs"
+    "savuke-siirtozoomi.mjs",
+    "savuke-kohdevalinta.mjs"
   ],
   "asetukset": {
     "savuke-ihmisen-kappaleet.mjs": {
@@ -216,6 +217,9 @@
     "savuke-siirtozoomi.mjs": {
       "kuvakansio": true,
       "huomautus": "Siirtozoomi (Raamattu KARTTAUUDISTUKSEN PAATOKSET 40). Seitseman vartiota per ruutu (390 x 844 ja 1400 x 900, dpr 2, Marseillen maasiirto silmaluvulla 3): 1 siirto ei vie kauemmas kuin lahtonakyma, 2 askel ruudulla >= 25 % lyhyemmasta sivusta, 3 katto pitaa (40 / 60 lautayksikkoa), 4 nappula keskimmaisella 60 %:lla koko saaton ajan, 5 saaton kesto +-10 % siirtoajonKesto(n) antamasta, 6 ei sivuvirheita, 7 ENNAKKOZOOMI VALMIS ENNEN NAPPULAN LAHTOA (kameran korkeus tavoitteessa +-5 % silla kehyksella, jolla nappula irtoaa laudalta; PAATOKSET 40 kohta 1, lisatty 18.9.2026). EI JAETTU RIVIKSI: Mac-mittaus 18.9.2026 molemmat ruudut samassa prosessissa 44 s, siis selvasti alle kahden minuutin tavoitteen (TARKENNUS 11 kohta 24). SAVUKE_RUUTU=390|1400 rajaa yhteen ruutuun, jos rivi joskus pitaa jakaa. Mac-mittaus 18.9.2026: 14/14 vihreaa, ei tunnettuja punaisia. Vartio 2 osuu tyopoytaruudulla TASMALLEEN 25 %:n rajalle (askelenSiirtoleveys tahtaa siihen), joten savukkeessa on ASKELEN_SIETO 0,99 pyoristysvarana. Kaappaukset ennakko-390.png (ennakkozoomin lopussa, nappula viela paikallaan), saatto-390.png ja saatto-1400.png."
+    },
+    "savuke-kohdevalinta.mjs": {
+      "huomautus": "PAATOKSET 42 (18.9.2026): nopanheiton kohteen napautus valitsee siirron, liuska muille; 14/14 Fablen mergessa. Lisatty julkaisusarjaan v1947."
     }
   }
 }
