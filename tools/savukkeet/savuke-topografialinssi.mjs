@@ -1389,8 +1389,23 @@ const AVAUSKAUPUNKI = 'ateena';
 /**
  * Näiden alla asuu sovelluksen oma kehys (yläpalkki, sivupalkki) ja
  * linssin omat kerrokset. Kaikki muu kartan päällä on jäänne.
+ *
+ * OHITA-NAPPI ON POIKKEUS, EIKÄ JÄÄNNE (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 43 kohta 10, omistaja 18.9.2026: *"Ohita nappi ei saisi
+ * havita vaikka pelaaja painaa jostain muualta ennen kuin kumpikin
+ * luenta on loppu."*). Ohita on v1947:stä lähtien oma kelluva nappi
+ * (js/fokusvirta.js, `.fokusvirta-ohitanappi`), jonka elinkaari on
+ * LUENNAN elinkaari: se poistuu vasta, kun molemmat luennat ovat
+ * päättyneet, Ohitaa on painettu tai kaupungista lähdetään. Linssin
+ * avaus keskellä luentaa EI siis saa viedä sitä — päinvastoin, jos
+ * linssi söisi Ohitan, tämä savuke olisi mittaamassa juuri sitä
+ * käytöstä, jonka omistaja kielsi. Tämän savukkeen väite on *"linssin
+ * omat kerrokset peittävät kartan, eikä alta jää pelin kalusteita
+ * näkyviin"*; Ohita ei ole kartan kaluste vaan luennan ohjain, ja
+ * sillä on oma vartionsa savuke-luentakuvat.mjs:ssä.
  */
-const SALLITUT_PESAT = '.rail, header, .topbar, .linssi-selite, .linssivalitsin, .pallolauta-kalvo';
+const SALLITUT_PESAT = '.rail, header, .topbar, .linssi-selite, .linssivalitsin, '
+  + '.pallolauta-kalvo, .fokusvirta-ohitanappi';
 /** Kartan ja pallon omat kuoret: kontteja, eivät sisältöä. */
 const KUORET = '.app, .stage, .map-pane, .scene-container, .kartta-kuori, #board, '
   + '.pallo-kuori, .pallo-kotelo, .maapaneeli-nurkka';

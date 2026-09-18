@@ -380,7 +380,30 @@ async function ajaNakyma(nakymanNimi) {
     // Linssi käyntiin ILMAN odotusta: näytteenotto alkaa samasta hetkestä.
     ui.valitseLinssi('satelliitti');
     const naytteet = [];
-    for (let i = 0; i < 200; i += 1) {
+    /*
+     * OTOS LOPPUU SOITTIMEN MUKAAN, EI KELLON (19.9.2026, Mac).
+     *
+     * Kiinteä 200 × 50 ms = 10 s riitti niin kauan kuin linssi heräsi
+     * heti. v1947 lisäsi astronautin kameraan pilvikuoren ja
+     * avaruussumun (PAATOKSET 43 kohta 7) sekä reliefipyramidin
+     * laastarin (kohta 4), ja kun Savukkeet-ajo kulki rinnan raskaan
+     * paikallisen poltton kanssa, linssin alustus ei ehtinyt 10
+     * sekunnissa: puhelinnäkymä kirjasi `soi:false, lahde null` eli
+     * MITTASI TYHJÄÄ. Yksin ajettuna sama mittaus antaa soivan,
+     * silmukoidun 84 s:n soittimen (mitattu 19.9.2026: ensimmäinen
+     * soiva näyte 400 ms:n kohdalla) — vika oli otoksen pituudessa,
+     * ei pelissä eikä äänessä.
+     *
+     * Otos jatkuu siksi, kunnes soitin on soinut 2,5 s (feidi on 2 s,
+     * joten loppupää on varmasti tavoitteessa) tai 40 s on kulunut.
+     * Nopea kone ei maksa tästä mitään: ilman kuormaa otos päättyy
+     * samaan ~3 sekuntiin kuin ennenkin oli sen alkupää.
+     */
+    const OTOKSEN_KATTO = 800;
+    const SOINUT_NAYTTEITA = 50;
+    let soineita = 0;
+    for (let i = 0; i < OTOKSEN_KATTO; i += 1) {
+      if (soineita >= SOINUT_NAYTTEITA) break;
       const t = m.astronautinAaniTila();
       naytteet.push({
         // NIMELLINEN ja TODELLINEN aika erikseen: kontin ohjelmisto-WebGL
@@ -393,6 +416,7 @@ async function ajaNakyma(nakymanNimi) {
         tavoite: t?.kerrokset?.humina?.tavoite ?? 0,
         looppi: Boolean(t?.kerrokset?.humina?.looppi),
       });
+      if (t?.kerrokset?.humina?.soi) soineita += 1;
       await new Promise((r) => setTimeout(r, 50));
     }
     const moduuli = await import('/js/linssit/satelliitti-data.js');
