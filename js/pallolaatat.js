@@ -28,7 +28,8 @@
  */
 import {
   haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
-  pyramidinLinssiketju, pyramidinReliefiKaytossa, pyramidinReliefinSyvinTaso,
+  pyramidinLinssiketju, pyramidinReliefiAstronautilla, pyramidinReliefiKaytossa,
+  pyramidinReliefinSuodatin, pyramidinReliefinSyvinTaso,
   pyramidinTasoitus, pyramidinVaritasonMaa,
 } from './laattapyramidi.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
@@ -466,13 +467,30 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null)
    * pohjalaattoja ei haeta lainkaan linssin ajan.
    */
   const reliefi = pyramidinReliefiKaytossa();
+  /*
+   * ASTRONAUTIN KAMERA: PELKKÄ MAASTO (PAATOKSET 41 kohta 4).
+   *
+   * Astronautin ikkunasta ei näy pelin mustetta — ei rantaviivaa, ei
+   * reittiä, ei poltettuja nimiöitä. Portit suljetaan tässä, jotta
+   * `pyramidinKerrostasot`in astronauttihaara ja tämä suodatin sanovat
+   * saman asian kahdesti: laatta on se, mitä laatastossa on, eikä
+   * yhtään ylimääräistä hakua lähde.
+   */
+  const astronautti = reliefi && pyramidinReliefiAstronautilla();
   return {
     pohja: !reliefi,
-    ranta: Boolean(ranta),
+    ranta: Boolean(ranta) && !astronautti,
     viiva: false,
-    nosto: Boolean(nostot) || nostotMaittain,
+    nosto: (Boolean(nostot) || nostotMaittain) && !astronautti,
     vari: vari && !reliefi,
     reliefi,
+    astronautti,
+    /*
+     * KANKAAN SUODATIN (kylläisyys alas) tai null. Astronautin
+     * pallotekstuuri on ladottu kertoimella 0,8, ja ilman samaa
+     * kerrointa laastarin reunalla näkyisi sävyraja.
+     */
+    suodatin: astronautti ? pyramidinReliefinSuodatin() : null,
   };
 }
 
@@ -2022,6 +2040,29 @@ export function luoLaattakerros({
      * kartalla nähtävissä. Perustelu: js/laattapyramidi.js
      * pyramidinTasoitus.
      */
+    /*
+     * KYLLÄISYYS ALAS ASTRONAUTIN LAASTARILLA (PAATOKSET 41 kohta 4).
+     *
+     * Astronautin pallotekstuuri ladotaan kertoimella 0,8
+     * (js/linssit/satelliitti-avaruus.js kyllaisyysAlas), koska
+     * hypsometrinen asteikko on kartan asteikko eikä astronautin
+     * ikkunan. Laastari on SAMA reliefi, joten ilman samaa kerrointa
+     * laastarin reunalla olisi sävyraja. Suodatin pannaan päälle
+     * ennen taustaa, jotta myös avomeren sävy on sama kuin pohjalla.
+     *
+     * VARAREITTI ON PELKKÄ EI-MITÄÄN: jos kankaan `filter` ei kelpaa
+     * (vanha WebKit, OffscreenCanvas ilman suodatinta), asetus heittää
+     * tai jää lukematta, ja laastari on täydellä kylläisyydellä —
+     * terävyys, muisti ja saumat ovat ennallaan, vain sävy on aavistuksen
+     * kirkkaampi. Se on parempi kuin laatta, jota ei piirretä.
+     */
+    let suodatinPaalla = false;
+    if (kerrokset.suodatin) {
+      try {
+        ctx.filter = kerrokset.suodatin;
+        suodatinPaalla = ctx.filter !== 'none';
+      } catch { suodatinPaalla = false; }
+    }
     if (tausta) {
       ctx.fillStyle = tausta;
       ctx.fillRect(0, 0, kartta.leveys, kartta.korkeus);
@@ -2178,6 +2219,8 @@ export function luoLaattakerros({
        */
       if (tasoitus && !variTasolla && i === 0) piirraKerma(null);
     }
+    // Suodatin pois heti piirron jälkeen: kangas jää tekstuurin lähteeksi.
+    if (suodatinPaalla) { try { ctx.filter = 'none'; } catch { /* ei suodatinta */ } }
     // Verkko: laatan oma lat/lon-suorakaide, UV laatan omalla kankaalla.
     const alue = laatanAlue(tasoOlio, t.sarake, t.rivi);
     if (!Number.isFinite(alue.lat0) || !Number.isFinite(alue.lat1) || !(alue.lat1 > alue.lat0)) {

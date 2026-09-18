@@ -104,6 +104,88 @@ let haku = null;
  */
 let linssiAuki = false;
 
+/*
+ * KUMPI LINSSI PIIRTÄÄ? (PAATOKSET 41 kohta 4, LISAYS 16 kohta 47.)
+ *
+ * Sama laatasto palvelee kahta linssiä, mutta ne haluavat siitä eri
+ * asiat. Topografialinssi on KARTTA: reliefin päälle kuuluvat rannat,
+ * reitit ja poltetut nimiöt. Astronautin kamera on IKKUNA AVARUUTEEN:
+ * siellä ei ole pelin mustetta lainkaan, vaan pallo, jonka pinta on
+ * maasto ja jonka päällä ovat linssin omat kerrokset (ISS, varjo,
+ * kohdepisteet). Sama laattakone kelpaa molemmille — vain kerroslista
+ * ja sävy eroavat, ja tämä lippu kertoo kumpi on kyseessä.
+ *
+ * YKSI LAATTAKONE, EI KOPIOTA: ilman tätä Astronautin kameralle olisi
+ * pitänyt kirjoittaa oma laatasto, ja kaksi laattakonetta samasta
+ * pyramidista olisi kaksi kertaa muistia ja kaksi paikkaa korjata.
+ */
+let linssiTila = null;
+
+/** Astronautin kameran kerroin kylläisyydelle (sama kuin linssin oma
+ * RELIEFIN_SATURAATIO js/linssit/satelliitti-avaruus.js:ssä): astronautin
+ * ikkunassa värit ovat vaimeampia kuin kartan asteikossa. */
+export const ASTRONAUTIN_SUODATIN = 'saturate(0.8)';
+
+/*
+ * ASTRONAUTIN LAASTARIN SYVIN TASO.
+ *
+ * Reliefipyramidi on poltettu z7:ään (240 px/aste). Astronautin
+ * kamerassa laastari on pallon pinnalla eikä tasokartalla, ja jokainen
+ * laatta on oma tekstuurinsa; jos muisti ylittää karttapallo.md luvun 6
+ * rajan puhelimella, katto lasketaan tästä yhdellä luvulla eikä
+ * laattakoneeseen kosketa. `null` = ei omaa kattoa (pyramidin oma
+ * syvin taso).
+ */
+export const ASTRONAUTIN_SYVIN_Z = null;
+
+/*
+ * MILLOIN LAASTARI KANNATTAA (LISAYS 16 kohta 47).
+ *
+ * Astronautin kameran pallolla on 4k-tekstuuri (11,4 px/aste
+ * puhelimella, 8k eli 22,8 leveällä ruudulla). Kaukaa katsottuna se on
+ * ruudun tarvetta tarkempi eikä laatoista olisi hyötyä — päinvastoin,
+ * ne peittäisivät avausnäkymän sinisen pallon omilla laatoillaan ja
+ * maksaisivat muistia siitä hyvästä. Laastari on siis päällä vain
+ * siellä, missä ruutu pyytää enemmän kuin pohja antaa. Sama kynnysajatus
+ * kuin topografialinssin tarkennuslaastarissa (`perusTiheys`,
+ * js/linssit/topografia-tarkennus.js).
+ *
+ * KAAVA. globe.gl:n kamera on säteellä R(1 + korkeus) ja fov on
+ * pystysuunnan 50 astetta, joten alapisteessä yksi ruutupikseli kattaa
+ * 2·korkeus·R·tan(25°)/H metriä pintaa; asteina se on
+ * 53,43·korkeus/H. Ruudun tarve pikseleinä astetta kohti on siis
+ * H/(53,43·korkeus), ja laastari kannattaa, kun se ylittää pohjan
+ * oman tiheyden.
+ */
+export const NAKOKENTAN_KERROIN = 53.43;
+
+/**
+ * Ruudun tarve (laitepikseleitä astetta kohti) kameran korkeudesta.
+ *
+ * @param {number} piirtokorkeus  piirtopuskurin korkeus pikseleinä
+ * @param {number} korkeus        kameran korkeus pallon säteinä
+ */
+export function ruudunTarvePxAste(piirtokorkeus, korkeus) {
+  if (!(piirtokorkeus > 0) || !(korkeus > 0)) return 0;
+  return piirtokorkeus / (NAKOKENTAN_KERROIN * korkeus);
+}
+
+/**
+ * Kannattaako laastari tällä korkeudella?
+ *
+ * Hystereesi (oletus 1,15) estää sen, että laastari syttyisi ja
+ * sammuisi joka kehyksellä juuri kynnyksen kohdalla: päälle vaaditaan
+ * enemmän kuin pois.
+ */
+export function astronautinLaastariKannattaa(
+  piirtokorkeus, korkeus, perusTiheysPxAste, paallaNyt = false, hystereesi = 1.15,
+) {
+  if (!(perusTiheysPxAste > 0)) return false;
+  const tarve = ruudunTarvePxAste(piirtokorkeus, korkeus);
+  if (!(tarve > 0)) return false;
+  return paallaNyt ? tarve >= perusTiheysPxAste : tarve >= perusTiheysPxAste * hystereesi;
+}
+
 /**
  * Onko reliefipyramidi päällä tässä istunnossa?
  *
@@ -220,7 +302,17 @@ export function reliefinTasot() {
 export function reliefinSyvinTaso() {
   const tasot = reliefinTasot();
   if (!tasot?.length) return null;
-  return tasot.reduce((a, t) => Math.max(a, t.z), 0);
+  const syvin = tasot.reduce((a, t) => Math.max(a, t.z), 0);
+  /*
+   * Astronautin kameralla oma katto, jos sellainen on asetettu (ks.
+   * ASTRONAUTIN_SYVIN_Z): laastari on pallon pinnalla ja jokainen
+   * laatta oma tekstuurinsa, joten muistikatto on eri kuin
+   * tasokartalla.
+   */
+  if (linssiTila === 'astronautti' && Number.isFinite(ASTRONAUTIN_SYVIN_Z)) {
+    return Math.min(syvin, ASTRONAUTIN_SYVIN_Z);
+  }
+  return syvin;
 }
 
 /** Tason z reliefikerros tai null. */
@@ -259,8 +351,19 @@ export async function haeReliefinLuettelo(ikkuna = globalThis) {
  * Topografialinssi avattiin tai suljettiin. Kutsutaan linssin
  * elinkaaresta; laattakone lukee tuloksen `reliefiKaytossa`:sta.
  */
-export function asetaReliefiLinssi(paalla) {
+export function asetaReliefiLinssi(paalla, tila = 'topografia') {
   linssiAuki = Boolean(paalla);
+  linssiTila = linssiAuki ? tila : null;
+}
+
+/** Kumpi linssi laatastoa piirtää: 'topografia', 'astronautti' tai null. */
+export function reliefinLinssitila() {
+  return linssiAuki ? linssiTila : null;
+}
+
+/** Piirtääkö Astronautin kamera laatastoa juuri nyt? */
+export function reliefiAstronautilla(ikkuna = globalThis) {
+  return reliefiKaytossa(ikkuna) && linssiTila === 'astronautti';
 }
 
 /**
@@ -276,6 +379,7 @@ export function nollaaReliefi(uusiLuettelo = null) {
   reliefiLuettelo = uusiLuettelo;
   haku = null;
   linssiAuki = false;
+  linssiTila = null;
 }
 
 /*
