@@ -134,8 +134,10 @@ test('reliefi korvaa pohjan eikä peitä sitä', () => {
   const laatat = lue('../js/pallolaatat.js');
   assert.match(laatat, /pohja: !reliefi,/);
   assert.match(laatat, /vari: vari && !reliefi,/);
-  // Avomeri maalataan taustavärillä eikä merkitä virheeksi.
-  assert.match(laatat, /if \(!kuvat\.some\(Boolean\) && !tausta\)/);
+  // Avomeri maalataan taustavärillä eikä merkitä virheeksi; puuttuvan
+  // laatan paikanpitäjä on karkeampi reliefilaatta (PAATOKSET 41).
+  assert.match(laatat, /if \(!kuvat\.some\(Boolean\) && !tausta && !vara\)/);
+  assert.match(laatat, /varaKartta = reliefinVaraLahde\(t\.z, t\.sarake, t\.rivi, laattaKoko\(\)\);/);
 });
 
 /*

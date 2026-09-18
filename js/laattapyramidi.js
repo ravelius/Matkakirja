@@ -90,8 +90,9 @@
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
 import {
-  haeReliefinLuettelo, merkitseLinssiketju, reliefiKaytossa, reliefinLaattaUrl,
-  reliefinSyvinTaso, reliefinTaso, reliefinVersio, reliefipyramidiPaalla,
+  JAARAJA_LAT, haeReliefinLuettelo, merkitseLinssiketju, reliefiKaytossa, reliefinLaattaUrl,
+  reliefinSyvinTaso, reliefinTaso, reliefinTaustavari, reliefinVaraLahde, reliefinVersio,
+  reliefipyramidiPaalla,
 } from './reliefipyramidi.js';
 import { NOSTOLADONTA_SAANTO } from './nostoladonta.js';
 import {
@@ -2788,3 +2789,27 @@ export function pyramidinReliefinSyvinTaso() {
 export function pyramidinLinssiketju(vaihe) {
   merkitseLinssiketju(vaihe);
 }
+
+/*
+ * PUUTTUVAN RELIEFILAATAN PAIKANPITÄJÄ SAMAN OVEN KAUTTA
+ * (PAATOKSET 41 kohdat 1–3). Pallon lepokerros ei tuo
+ * js/reliefipyramidi.js:ää itse, joten karkean varalaatan haku, sen
+ * tason luenta ja aukon tasainen väri kulkevat tästä kuten luettelo ja
+ * osoitteetkin.
+ */
+export function pyramidinReliefinVaraLahde(z, sarake, rivi, laatta) {
+  return reliefinVaraLahde(z, sarake, rivi, laatta);
+}
+
+/** Reliefin taso z laattakoneen muodossa (varalaatan osoitetta varten). */
+export function pyramidinReliefinTaso(z) {
+  return reliefinTaso(z);
+}
+
+/** Aukon tasainen väri leveysasteen mukaan (meri tai napajää). */
+export function pyramidinReliefinTaustavari(lat) {
+  return reliefinTaustavari(lat);
+}
+
+/** Leveysaste, jonka eteläpuolella aukko on jäätä eikä merta. */
+export const PYRAMIDIN_JAARAJA_LAT = JAARAJA_LAT;
