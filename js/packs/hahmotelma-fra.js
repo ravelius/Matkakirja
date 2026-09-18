@@ -378,70 +378,207 @@ export const HAHMOTELMA_FRA = [
   },
   {
     id: 'hahmotelma-nimesin-areena',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-nimesin-areena-1de0f981.jpg',
+      lyhyt: 'Areenan kaarijulkisivu illan valossa.',
+      selite: 'Nîmesin areenan kaksikerroksinen kaarijulkisivu ja sen edustan aukio illan valaistuksessa.',
+      lahde: 'Valokuva: Greg68m, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Greg68m',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Amphith%C3%A9atre_de_N%C3%AEmes.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-nimesin-areena-3ea76153.jpg',
+      lyhyt: 'Areena vanhassa photochrom-värivedoksessa.',
+      selite: 'Areenan ulkokehä ja mukulakivinen aukio Library of Congressin photochrom-kokoelman värivedoksessa.',
+      lahde: 'Valokuva: Photochrom Print Collection (Library of Congress), Wikimedia Commons (public domain).',
+      tekija: 'Photochrom Print Collection (Library of Congress)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_arena%2C_exterior%2C_N%C3%AEmes%2C_France-LCCN2001698489.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    }],
     nimi: 'Nîmesin areena',
     tyyppi: 'historia',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Kuinka moni katsoja tänne mahtui?',
+      'Miksi juuri tämä amfiteatteri säilyi näin ehjänä?',
+    ],
     nappi: 'Roomalainen amfiteatteri yhä pystyssä',
     // 4,36 E / 43,835 N — en-Wikipedia "Arena of Nîmes"
     laudat: {
       maailmankartta: { x: 5978.7, y: 1649.5 },
       europe: { x: 294.9, y: 740.7 },
     },
-    teksti: runko('Roomalainen amfiteatteri yhä pystyssä'),
-    lahde: koordinaatinLahde('Arena of Nîmes', '18.9.2026'),
+    teksti: 'Nîmesin areena on roomalainen amfiteatteri Etelä-Ranskassa. Se rakennettiin noin '
+      + 'vuonna 100 jaa., vain parikymmentä vuotta Rooman Colosseumin jälkeen, ja se on yksi '
+      + 'maailman parhaiten säilyneistä roomalaisista amfiteattereista. Rakennus on 133 metriä '
+      + 'pitkä ja 101 metriä leveä, ja itse areena mittaa 68 × 38 metriä; ulkojulkisivu kohoaa '
+      + '21 metriin, ja siinä on kaksi kerrosta ja yhteensä 60 kaariaukkoa. Roomalaisaikaan '
+      + 'katsomoon mahtui 24 000 katsojaa 34 penkkiriville, jotka oli jaettu neljään erilliseen '
+      + 'lohkoon.',
+    lahde: 'en-Wikipedia "Arena of Nîmes", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-rouen',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-rouen-670ab4d8.jpg',
+      lyhyt: 'Tuomiokirkon kolme tornia ja valurautainen torninhuippu.',
+      selite: 'Rouenin tuomiokirkon kolme eri tyylistä tornia ja niiden välissä kohoava valurautainen torninhuippu, kuvattuna Gros Horloge -tornista.',
+      lahde: 'Valokuva: DXR, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'DXR',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rouen_Cathedral_as_seen_from_Gros_Horloge_140215_4.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-rouen-296fbe0d.jpg',
+      lyhyt: 'Claude Monet\'n maalaus kirkon länsijulkisivusta auringonvalossa.',
+      selite: 'Claude Monet maalasi tuomiokirkon länsijulkisivun kymmeniä kertoja eri valossa; tässä työssä julkisivu hehkuu auringossa.',
+      lahde: 'Maalaus: Claude Monet, Wikimedia Commons (public domain).',
+      tekija: 'Claude Monet',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Claude_Monet_-_Rouen_Cathedral%2C_West_Facade%2C_Sunlight.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    }],
     nimi: 'Rouenin tuomiokirkko',
     tyyppi: 'kulttuuri',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Miksi kolme tornia ovat kaikki erinäköisiä?',
+      'Kauanko kirkko ehti olla maailman korkein rakennus?',
+    ],
     nappi: 'Normandian goottilainen katedraali',
     // 1,095 E / 49,4402 N — en-Wikipedia "Rouen Cathedral"
     laudat: {
       maailmankartta: { x: 5869.8, y: 1414.5 },
       europe: { x: 232.2, y: 593.3 },
     },
-    teksti: runko('Normandian goottilainen katedraali'),
-    lahde: koordinaatinLahde('Rouen Cathedral', '18.9.2026'),
+    teksti: 'Rouenin tuomiokirkko on Normandian arkkipiispan istuinkirkko. Sitä rakennettiin ja '
+      + 'rakennettiin uudelleen yli kahdeksansadan vuoden ajan, joten siinä on piirteitä '
+      + 'varhaisgotiikasta myöhäiseen liekkigotiikkaan ja renessanssiin — kolme tornia ovat '
+      + 'kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude '
+      + 'Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.',
+    lahde: 'en-Wikipedia "Rouen Cathedral", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-rocamadour',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-rocamadour-a508d570.jpg',
+      lyhyt: 'Kylän talot ja kirkot kiinni kalkkikiviseinämässä.',
+      selite: 'Rocamadourin talot, pyhäköt ja piispanpalatsi nousevat portaittain kiinni kalkkikiviseinämään.',
+      lahde: 'Valokuva: Einaz80, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Einaz80',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rocamadour_(2024).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-rocamadour-8183aad8.jpg',
+      lyhyt: 'Pyhiinvaeltajien portaat lokakuussa 1900.',
+      selite: 'Kävijöitä laskeutumassa pyhäköille johtavia portaita Rocamadourissa lokakuussa 1900, Eugène Trutat\'n lasilevykuvassa.',
+      lahde: 'Valokuva: Eugène Trutat (1840–1910), Gallica / Wikimedia Commons (public domain).',
+      tekija: 'Eugène Trutat',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Escalier_avec_des_gens_qui_descendent%2C_Rocamadour%2C_octobre_1900_-_btv1b10578985x.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    }],
     nimi: 'Rocamadour',
     tyyppi: 'historia',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Kuka kiipesi näitä portaita polvillaan?',
+      'Mistä pieni vuohenjuusto sai nimensä?',
+    ],
     nappi: 'Pyhiinvaelluskylä kallioseinämässä',
     // 1,6186 E / 44,8003 N — en-Wikipedia "Rocamadour"
     laudat: {
       maailmankartta: { x: 5887.3, y: 1610 },
       europe: { x: 242.3, y: 715.4 },
     },
-    teksti: runko('Pyhiinvaelluskylä kallioseinämässä'),
-    lahde: koordinaatinLahde('Rocamadour', '18.9.2026'),
+    teksti: 'Rocamadour on kylä Lotin departementissa Lounais-Ranskassa, entisessä Quercyn '
+      + 'maakunnassa. Se on rakennettu kallioseinämään, joka kohoaa 150 metriä Alzoun kapean '
+      + 'laakson yläpuolelle; Alzou on Dordognen sivujoki. Kylän Neitsyt Marian pyhäkkö on '
+      + 'vetänyt pyhiinvaeltajia 1100-luvun taitteesta alkaen, ja kävijöiden joukossa on ollut '
+      + 'kuninkaita, piispoja ja aatelisia — monumentaalista portaikkoa pyhäköille noustiin '
+      + 'polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai '
+      + 'AOC-suojauksen vuonna 1996.',
+    lahde: 'en- ja fr-Wikipedia "Rocamadour", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-saint-emilion',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-saint-emilion-bec0079a.jpg',
+      lyhyt: 'Kaupungin tori ja tiilikattoinen keskusta yksikivisen kirkon tornista.',
+      selite: 'Saint-Émilionin mukulakivinen tori ja tiilikattoinen keskusta yksikivisen kirkon kellotornista kuvattuna; taustalla viinikukkuloita.',
+      lahde: 'Valokuva: JLPC, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'JLPC',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Saint-Emilion_33_Place_2013.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-saint-emilion-04355517.jpg',
+      lyhyt: 'Kallioon louhitun kirkon portaali vanhassa valokuvassa.',
+      selite: 'Kallioon louhitun yksikivisen kirkon veistoksinen portaali Jean-Auguste Brutailsin varhaisessa valokuvassa.',
+      lahde: 'Valokuva: Jean-Auguste Brutails, Université Bordeaux Montaigne / Wikimedia Commons (public domain).',
+      tekija: 'Jean-Auguste Brutails',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C3%89glise_monolithe_de_Saint-%C3%89milion_-_J-A_Brutails_-_Universit%C3%A9_Bordeaux_Montaigne_-_2520.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    }],
     nimi: 'Saint-Émilion',
     tyyppi: 'ruoka',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Miten kokonainen kirkko louhitaan kallion sisään?',
+      'Mikä tekee näistä kukkuloista niin hyviä viinille?',
+    ],
     nappi: 'Viinikylä ja kallioon hakattu kirkko',
     // -0,1547 E / 44,8936 N — en-Wikipedia "Saint-Émilion"
     laudat: {
       maailmankartta: { x: 5828.2, y: 1606.2 },
       europe: { x: 208.2, y: 712.9 },
     },
-    teksti: runko('Viinikylä ja kallioon hakattu kirkko'),
-    lahde: koordinaatinLahde('Saint-Émilion', '18.9.2026'),
+    teksti: 'Saint-Émilion on keskiaikainen pikkukaupunki Gironden departementissa '
+      + 'Lounais-Ranskassa, viinikukkuloiden keskellä Libournais\'n sydämessä. Se seisoo '
+      + 'kalkkikivikummulla Bordeaux\'n, Saintongen ja Périgord\'n risteyskohdassa, ja '
+      + 'asukkaita on vain noin 1 600. Kallioon louhittu yksikivinen kirkko, kollegiaattikirkko, '
+      + 'arkkipiispojen palatsi ja linnoituksen jäänteet reunustavat jyrkkiä ja kapeita kujia. '
+      + 'Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna '
+      + '1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.',
+    lahde: 'en- ja fr-Wikipedia "Saint-Émilion", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-cognac',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-cognac-1090d2ed.jpg',
+      lyhyt: 'Cognacin vanha keskusta ja Charentejoki ilmasta.',
+      selite: 'Ilmakuva Cognacin historiallisesta keskustasta; Charentejoki kaartaa vasemmalla, ja Pont Neufin jatkeella näkyy kaupungin linna.',
+      lahde: 'Valokuva: Jacques Dassié, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Jacques Dassié',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cognac_Centre_historique.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-cognac-300a0fa2.jpg',
+      lyhyt: 'Vanha charentelainen tislauspannu.',
+      selite: 'Vanha kuparinen tislauspannu, joka oli vuoteen 1979 asti käytössä viinitilalla Cherves-Richemontissa Cognacin lähellä.',
+      lahde: 'Valokuva: Sémhur, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Sémhur',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Old_Cognac_Pot_Still_-_20091205.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }],
     nimi: 'Cognac',
     tyyppi: 'ruoka',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Miksi juoma sai nimensä juuri tästä kaupungista?',
+      'Mihin kuparipannua tarvitaan?',
+    ],
     nappi: 'Charenten kaupunki, joka antoi nimen polttoviinille',
     // -0,33 E / 45,7 N — en-Wikipedia "Cognac, France"
     // (haku "Cognac, Charente" ohjautuu tähän artikkeliin)
@@ -449,38 +586,97 @@ export const HAHMOTELMA_FRA = [
       maailmankartta: { x: 5822.3, y: 1572.8 },
       europe: { x: 204.9, y: 691.7 },
     },
-    teksti: runko('Charenten kaupunki, joka antoi nimen polttoviinille'),
-    lahde: koordinaatinLahde('Cognac, France', '18.9.2026'),
+    teksti: 'Cognac on kaupunki Charenten departementissa Lounais-Ranskassa ja departementin '
+      + 'alaprefektuuri. Se sijaitsee Charentejoen varrella Angoulêmen ja Saintesin välissä ja '
+      + 'on Angoulêmen jälkeen departementin toiseksi suurin taajama. Kaupungin mukaan nimensä '
+      + 'saanut konjakki valmistetaan sen ympäristössä. Vuodesta 2012 Cognac on kantanut '
+      + 'kulttuuriministeriön myöntämää Ville d\'art et d\'histoire -nimitystä.',
+    lahde: 'fi-Wikipedia "Cognac" ja fr-Wikipedia "Cognac (Charente)", johdanto-osat '
+      + '(tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-vichy',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-vichy-281159da.jpg',
+      lyhyt: 'Lähdepuiston puinen myymäläkioski plataanien katveessa.',
+      selite: 'Vaaleanvihreä puinen myymäläkioski Vichyn lähdepuiston pohjoispäässä, plataanien katveessa.',
+      lahde: 'Valokuva: Romainbehar, Wikimedia Commons (CC0).',
+      tekija: 'Romainbehar',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vichy_-_Parc_des_Sources%2C_kiosques_boutiques.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-vichy-1f180188.jpg',
+      lyhyt: 'Vichyn kylpylälaitokset vuoden 1862 puupiirroksessa.',
+      selite: 'Vichyn kylpylälaitokset, puistokäytävät ja vaunut vuoden 1862 kuvateoksen puupiirroksessa, jonka otsikkona on "Eaux thermales de Vichy".',
+      lahde: 'Kuva: Charles-Émile Jacque (1813–1894), Gallica / Wikimedia Commons (public domain).',
+      tekija: 'Charles-Émile Jacque',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vichy_(Allier)_-_btv1b10571602q.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    }],
     nimi: 'Vichy',
     tyyppi: 'historia',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Mitä kylpylävieraat oikein tekivät täällä?',
+      'Miksi juuri tämä kaupunki jäi historiaan sodan takia?',
+    ],
     nappi: 'Kylpyläkaupunki kivennäislähteiden äärellä',
     // 3,4267 E / 46,1278 N — en-Wikipedia "Vichy"
     laudat: {
       maailmankartta: { x: 5947.6, y: 1555 },
       europe: { x: 277, y: 680.4 },
     },
-    teksti: runko('Kylpyläkaupunki kivennäislähteiden äärellä'),
-    lahde: koordinaatinLahde('Vichy', '18.9.2026'),
+    teksti: 'Vichy on noin 25 000 asukkaan kaupunki Allier\'n departementissa Keski-Ranskassa, '
+      + 'Allierjoen rannalla. Sen kivennäislähteet tunnettiin jo antiikin aikana, ja '
+      + 'kylpyläkaupunkina se kasvoi voimakkaasti 1800-luvulla; vuonna 1825 luotu Vichyn '
+      + 'pastilli on samalta ajalta. Toisessa maailmansodassa Vichy oli vuosina 1940–1944 '
+      + 'Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen '
+      + 'kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.',
+    lahde: 'en- ja fr-Wikipedia "Vichy", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-biarritz',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-biarritz-8dae8abd.jpg',
+      lyhyt: 'Neitsyenkallio ja sille johtava rautasilta.',
+      selite: 'Biarritzin Neitsyenkallio, sen huipulla oleva patsas ja kalliolle johtava rautasilta Atlantin aallokossa.',
+      lahde: 'Valokuva: Vorlod, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Vorlod',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rocher_de_la_Vierge_-_Biarritz.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-biarritz-07f842f6.jpg',
+      lyhyt: 'Ranta ja kylpylähotellit vanhassa photochrom-värivedoksessa.',
+      selite: 'Biarritzin pitkä hiekkaranta, rantabulevardi ja kylpylähotellit Library of Congressin photochrom-kokoelman värivedoksessa.',
+      lahde: 'Valokuva: Photochrom Print Collection (Library of Congress), Wikimedia Commons (public domain).',
+      tekija: 'Photochrom Print Collection (Library of Congress)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:General_view%2C_Biarritz%2C_Pyrenees%2C_France-LCCN2001698617.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    }],
     nimi: 'Biarritz',
     tyyppi: 'meri',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Miten kalastajakylästä tuli muotikylpylä?',
+      'Kuinka lähellä Espanjan raja oikeastaan on?',
+    ],
     nappi: 'Merikylpylä Biskajanlahden rannalla',
     // -1,56 E / 43,48 N — en-Wikipedia "Biarritz"
     laudat: {
       maailmankartta: { x: 5781.3, y: 1663.9 },
       europe: { x: 181.2, y: 750.1 },
     },
-    teksti: runko('Merikylpylä Biskajanlahden rannalla'),
-    lahde: koordinaatinLahde('Biarritz', '18.9.2026'),
+    teksti: 'Biarritz on kaupunki Atlantin rannalla Biskajanlahden pohjukassa. Se kuuluu '
+      + 'Pyrénées-Atlantiques\'n departementtiin Ranskan Baskimaassa, ja Espanjan rajalle on '
+      + 'sieltä 35 kilometriä. Kaupunki on ylellinen merenrantakohde. Se tunnetaan Hôtel du '
+      + 'Palais\'sta, rantakadun kasinoista ja surffauskulttuuristaan.',
+    lahde: 'en-Wikipedia "Biarritz", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     /*
@@ -494,32 +690,90 @@ export const HAHMOTELMA_FRA = [
      * ei jää alle.
      */
     id: 'hahmotelma-canal-du-midi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-canal-du-midi-3083a5ce.jpg',
+      lyhyt: 'Kanavan vedenjakaja Seuil de Naurouzessa.',
+      selite: 'Seuil de Naurouzen vedenjakaja: vasemmalla tasankorigolin suu, takana Canal du Midi vanhojen puiden katveessa.',
+      lahde: 'Valokuva: Lucas Destrem, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Lucas Destrem',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Partage_des_eaux%2C_Naurouze_(1).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-canal-du-midi-f9be05ec.jpg',
+      lyhyt: 'Fonseranes\'n sulkuporras proomun keulasta nähtynä.',
+      selite: 'Fonseranes\'n sulkuporras Béziers\'n luona proomun keulasta nähtynä; sulut otettiin käyttöön vuonna 1697.',
+      lahde: 'Valokuva: Martinvl, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Martinvl',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:FonseranesLocks.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }],
     nimi: 'Canal du Midi',
     tyyppi: 'tekniikka',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Mistä kanavan huipulle saadaan vettä?',
+      'Kuinka kauan kaivamiseen meni?',
+    ],
     nappi: 'Kanava, joka yhdistää kaksi merta',
     // 1,81862 E / 43,35071 N — en-Wikipedia "Seuil de Naurouze"
     laudat: {
       maailmankartta: { x: 5894, y: 1669.2 },
       europe: { x: 246.1, y: 753.5 },
     },
-    teksti: runko('Kanava, joka yhdistää kaksi merta'),
-    lahde: koordinaatinLahde('Seuil de Naurouze', '18.9.2026'),
+    teksti: 'Canal du Midi on 240 kilometriä pitkä kanava Etelä-Ranskassa. Se yhdistää Garonnen '
+      + 'Välimeren rannalla olevaan Thaun laguuniin, ja yhdessä 193 kilometrin pituisen '
+      + 'Garonnen sivukanavan kanssa se muodostaa Canal des Deux Mers\'n eli väylän Atlantilta '
+      + 'Välimerelle. Työt aloitettiin Jean-Baptiste Colbertin kuninkaallisella määräyksellä '
+      + 'lokakuussa 1666, ja Pierre-Paul Riquet\'n johdolla kanava valmistui vuonna 1681 Ludvig '
+      + 'XIV:n hallituskaudella. Vaikein tehtävä oli johtaa vettä Montagne Noiren vuorilta '
+      + 'Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon '
+      + 'maailmanperintöluetteloon vuonna 1996.',
+    lahde: 'en-Wikipedia "Canal du Midi", johdanto-osa (tarkistettu 18.9.2026).',
   },
   {
     id: 'hahmotelma-le-puy-en-velay',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-le-puy-en-velay-192360d4.jpg',
+      lyhyt: 'Saint-Michel d\'Aiguilhen kappeli tulivuorenneulan huipulla.',
+      selite: 'Saint-Michel d\'Aiguilhen kappeli seisoo tulivuorenneulan huipulla Le Puy-en-Velayssa; kappeli pystytettiin 1000-luvulla.',
+      lahde: 'Valokuva: W. Bulach, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'W. Bulach',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:00_1108_Le_Puy-en-Velay_-_Frankreich.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-le-puy-en-velay-9f6da30e.jpg',
+      lyhyt: 'Tuomiokirkon julkisivu ja porrasrinne 1800-luvun lopun kabinettikuvassa.',
+      selite: 'Tuomiokirkon vuoroin vaaleista ja tummista kivistä ladottu julkisivu ja sille nouseva porrasrinne valokuvaaja A. Georgesin kabinettikuvassa vuosilta 1870–1900.',
+      lahde: 'Valokuva: A. Georges, Rijksmuseumin kokoelma, Wikimedia Commons (CC0).',
+      tekija: 'A. Georges (Rijksmuseum)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kathedraal_Notre-Dame-de-l\'Annonciation_te_Le_Puy-en-Velay_Le_Puy_(titel_op_object)%2C_RP-F-F19876.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    }],
     nimi: 'Le Puy-en-Velay',
     tyyppi: 'historia',
-    hahmotelma: true,
     lahi: true,
+    kysymykset: [
+      'Miten kappeli saatiin tuon neulan päälle?',
+      'Minne pyhiinvaeltajat lähtevät täältä?',
+    ],
     nappi: 'Kaupunki tulivuorenneulojen keskellä',
     // 3,88472222 E / 45,04444444 N — en-Wikipedia "Le Puy-en-Velay"
     laudat: {
       maailmankartta: { x: 5962.8, y: 1599.9 },
       europe: { x: 285.8, y: 708.9 },
     },
-    teksti: runko('Kaupunki tulivuorenneulojen keskellä'),
-    lahde: koordinaatinLahde('Le Puy-en-Velay', '18.9.2026'),
+    teksti: 'Le Puy-en-Velay on Haute-Loiren departementin pääkaupunki Auvergne-Rhône-Alpesin '
+      + 'alueella Etelä-Keski-Ranskassa. Kaupunki on Velayn historiallinen keskus Massif '
+      + 'Centralin kaakkoisosassa, ja siinä asui 18 540 ihmistä vuonna 2023. Se tunnetaan '
+      + 'tuomiokirkostaan, pitsinnypläyksestään ja vihreistä linsseistään. Kaupungista alkaa '
+      + 'Via Podiensis eli Chemin du Puy, yksi neljästä ranskalaisesta Santiago de Compostelan '
+      + 'pyhiinvaellusreitistä.',
+    lahde: 'en- ja fr-Wikipedia "Le Puy-en-Velay", johdanto-osa (tarkistettu 18.9.2026).',
   },
 ];
