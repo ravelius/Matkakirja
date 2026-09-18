@@ -256,6 +256,20 @@ const vietavat = luettu.rivit
   .sort((a, b) => a.avain.localeCompare(b.avain));
 
 console.log(`osumia yhteensä: ${luettu.rivit.length}, vietäviä: ${vietavat.length}`);
+/*
+ * ERITTELY (`--erittely`): kaikki kerroksen rivit, myös aihemerkit ja
+ * kaupunkirivit. Tarpeen kun jokin nosto EI saa ankkuria: 18.9.2026
+ * kolme Ranskan poltettavaa (biskajanlahti, carnacin-kivirivit,
+ * chambord) puuttui listalta, ja kysymys on, ovatko ne aihenoston
+ * jäseniä vai kameran ulkopuolella. Vientiin tämä ei vaikuta.
+ */
+if (argv.includes('--erittely')) {
+  for (const r of luettu.rivit) {
+    console.log(`  RIVI ${r.avain ?? '-'} | ${r.nimi ?? ''} | kaupunki=${r.kaupunki}`
+      + ` | ${Number.isFinite(r.lat) ? r.lat.toFixed(3) : '-'},`
+      + `${Number.isFinite(r.lng) ? r.lng.toFixed(3) : '-'}`);
+  }
+}
 for (const r of vietavat) {
   console.log(`  ${r.avain}  ${r.lat.toFixed(6)}, ${r.lng.toFixed(6)}  ${r.nimi ?? ''}`);
 }

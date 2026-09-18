@@ -307,12 +307,25 @@ Playwrightilta (Macilla `chrome-mac-arm64/Google Chrome for Testing`).
 `nakyva-kaupunki-*`-rivit **eivät ole laudan kaupunkeja** eikä niihin
 voi saapua, joten vientiä ei voi ajaa niistä. Kumpikin ajo on siis
 tehty, ja **kolme nostoa jäi silti ilman ankkuria**:
-`biskajanlahti`, `carnacin-kivirivit`, `chambord`. Syy ei ole kamera
-(Chambord on keskellä Pariisin saapumisnäkymää): ne eivät ole
-`osumat()`-listalla omina riveinään, vaan mitä ilmeisimmin
-aihenoston (PAATOKSET 27) jäseninä — aihemerkki on listalla yhtenä
-rivinä, jäsenet eivät. **Tätä ei ehditty varmistaa mittaamalla**, ja se
-on erän 3 ensimmäinen työ.
+`biskajanlahti`, `carnacin-kivirivit`, `chambord`.
+
+**JUURISYY MITATTU** (uusi lippu `--erittely` tulostaa kerroksen
+kaikki rivit, myös aihemerkit). Pariisin saapumisnäkymässä on **42
+riviä**, ja niiden joukossa on kolme aihemerkkiä — yksi niistä on
+sanatarkasti:
+
+```
+RIVI aihemerkki:nosto:chambord | Chambordin linna… | 47.572,1.213
+```
+
+Syy ei siis ole kamera, vaan **aihenosto (PAATOKSET 27)**: nämä kolme
+ovat aihemerkin sisällä, ja aihemerkki on listalla YHTENÄ rivinä —
+jäsenet eivät ole omina riveinään. Aihenostoa taas **ei saa lukita**
+(erän 1 päätös 3: sen jäsenyys on kaupungin nostojoukon funktio ja se
+syntyy vasta ryhmityksessä). **Nämä kolme jäävät siis eläviksi
+tarkoituksella, eivätkä polta laattaan mitään** — väärää mustetta ei
+synny. Jos Fable haluaa ne laattaan, ratkaisu on aihenoston purku tai
+jäsenen oma vienti, ja se on sisältöpäätös.
 
 ## E2.2 Polttoketju (tools/fokuskartta/nostot.mjs)
 
