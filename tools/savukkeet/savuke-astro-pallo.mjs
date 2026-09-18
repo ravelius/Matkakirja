@@ -74,10 +74,10 @@
  * (esim. NAKYMAT=tyopoyta). Väite 9 ei ole näyttökoko vaan vartija:
  * se ajetaan oletuksena kerran, `NAKYMAT=vartija` ajaa vain sen ja
  * `NAKYMAT=tyopoyta,ei-vartija` jättää sen pois. Vartijalohko jakautuu
- * vielä kahtia (`vartija-a`, `vartija-b`). Julkaisusarja ajaa tämän
+ * vielä kolmeen (`vartija-a`, `vartija-b`, `vartija-c`). Julkaisusarja ajaa tämän
  * savukkeen NELJÄNÄ rinnakkaisena rivinä näillä muuttujilla
  * (tools/savukkeet/sarjat.json: `#puhelin`, `#tyopoyta`, `#vartija-a`,
- * `#vartija-b`).
+ * `#vartija-b`, `#vartija-c`).
  */
 import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -2212,9 +2212,19 @@ for (const nimi of Object.keys(NAKYMAT)) {
  */
 const vartijaKaikki = !VARTIJA_POIS
   && (!VALITUT.length || VALITUT.includes('tyopoyta') || VALITUT.includes('vartija'));
+/*
+ * KOLMAS PUOLISKO `vartija-c` (omistaja 18.9.2026, Raamattu TARKENNUS
+ * 11 kohta 24 a): Mac-mittaus 18.9.2026 antoi `vartija-a`:lle 168 s ja
+ * `vartija-b`:lle 128 s, eli a oli yli kahden minuutin tavoitteen.
+ * Neljän kokeen lohko jaettiin kahtia kokeiden RAJALTA — yhtään
+ * väitettä ei muutettu eikä poistettu, ja `NAKYMAT=vartija` ajaa yhä
+ * kaikki kuusi.
+ */
 if (vartijaKaikki || VALITUT.includes('vartija-a')) {
   await ajaVastakoeIlmanEstoa();
   await ajaKirjastoEstetty();
+}
+if (vartijaKaikki || VALITUT.includes('vartija-c')) {
   await ajaPintaEstetty();
   /* LISÄYS 13, kohdat 36 ja 37: Mac-WebAppin kotelo ja Safarin rajat. */
   await ajaMacVastakoe();

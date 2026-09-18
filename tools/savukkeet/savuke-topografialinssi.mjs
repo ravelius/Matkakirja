@@ -1212,14 +1212,64 @@ console.log(`INFO  ${nimiA}: avauksen maksimikirkkaus ${a.avausHuippu.toFixed(1)
   + `vakiintunut (2 s jälkeen, ${a.vakiintuneita} kehystä) ${a.vakiintunut.toFixed(1)}, `
   + `suurin paluu ylhäältä alas ${a.suurinPudotus.toFixed(1)}, `
   + `seepia ennen linssiä ${a.ennenKirkkaus.toFixed(1)}`);
+/*
+ * ── MEDIAANI KOLMESTA NÄYTTEESTÄ KUORMASSA ──────────────────────────
+ *
+ * Omistaja 18.9.2026 (Raamattu: AGENTIT VAIN OPUS JA SONNET,
+ * TARKENNUS 11 kohta 24 b). Tämä vartio oli `sarjat.json`:n
+ * `tunnetutPunaisetMac`-listalla: kun Mac-runnerilla ajettiin kahdeksan
+ * savuketta rinnakkain, avausikkunan "paluu alas" oli 19,4 (raja 15),
+ * kun sama mittaus YKSIN ajettuna antoi 4,0 ja maksimi oli täsmälleen
+ * lopputila. Vika ei ole pelissä vaan mittauksessa: kuormassa kehyksiä
+ * putoaa, ja yksittäinen pudonnut kehys näyttää kirkkauden "paluulta".
+ *
+ * KERTAMITTAUS EI OLE SE, MITÄ VARTIO VÄITTÄÄ. Väite on *"avauksessa
+ * ei ole välähdystä"* — ominaisuus avauksesta, ei yhdestä otoksesta.
+ * Siksi otoksia otetaan kuormassa kolme ja VERTAILULUKUINA käytetään
+ * niiden MEDIAANIA: yksittäinen kehysromahdus ei enää päätä tulosta,
+ * mutta aito välähdys näkyy kaikissa kolmessa eikä mediaani pelasta
+ * sitä.
+ *
+ * KOLMEA EI OTETA TURHAAN: jos ensimmäinen näyte on vihreä, se
+ * riittää. Kuormahäily tekee mittauksesta PUNAISEN, ei vihreää, joten
+ * vihreä kertakäynti ei voi olla häilyn tulosta. Näin vartio maksaa
+ * kaksi lisäavausta vain silloin, kun se muuten olisi ollut punainen.
+ * Vartion tiukkuus ei löysty: rajat (8 kehystä, 60 %, VALAHDYSVARA)
+ * ovat samat kuin ennen.
+ */
+const valahdysLapi = (x) => x.avausKehykset >= 8 && x.avausKattavuus >= 0.6
+  && x.vakiintuneita > 0
+  && x.avausHuippu <= x.vakiintunut + VALAHDYSVARA
+  && x.suurinPudotus <= VALAHDYSVARA;
+const mediaani = (luvut) => [...luvut].sort((x, y) => x - y)[Math.floor(luvut.length / 2)];
+const valahdysNaytteet = [a];
+while (valahdysNaytteet.length < 3 && !valahdysLapi(valahdysNaytteet[valahdysNaytteet.length - 1])) {
+  console.log(`INFO  ${nimiA}: välähdysnäyte ${valahdysNaytteet.length} punainen `
+    + `(paluu alas ${valahdysNaytteet[valahdysNaytteet.length - 1].suurinPudotus.toFixed(1)}) `
+    + '— otetaan lisänäyte mediaania varten');
+  // eslint-disable-next-line no-await-in-loop
+  valahdysNaytteet.push(await ajaAvaus());
+}
+const v = valahdysNaytteet.length === 1 ? a : {
+  avausKehykset: mediaani(valahdysNaytteet.map((x) => x.avausKehykset)),
+  avausKattavuus: mediaani(valahdysNaytteet.map((x) => x.avausKattavuus)),
+  vakiintuneita: mediaani(valahdysNaytteet.map((x) => x.vakiintuneita)),
+  avausHuippu: mediaani(valahdysNaytteet.map((x) => x.avausHuippu)),
+  vakiintunut: mediaani(valahdysNaytteet.map((x) => x.vakiintunut)),
+  suurinPudotus: mediaani(valahdysNaytteet.map((x) => x.suurinPudotus)),
+};
+if (valahdysNaytteet.length > 1) {
+  console.log(`INFO  ${nimiA}: välähdysnäytteitä ${valahdysNaytteet.length}, `
+    + `paluu alas ${valahdysNaytteet.map((x) => x.suurinPudotus.toFixed(1)).join(' / ')} `
+    + `→ mediaani ${v.suurinPudotus.toFixed(1)}`);
+}
 vaadi(`${nimiA}: avauksessa ei ole välähdystä suhteessa linssin lopputilaan`,
-  a.avausKehykset >= 8 && a.avausKattavuus >= 0.6 && a.vakiintuneita > 0
-    && a.avausHuippu <= a.vakiintunut + VALAHDYSVARA
-    && a.suurinPudotus <= VALAHDYSVARA,
-  `kehyksiä ${a.avausKehykset} (kattavuus ${(100 * a.avausKattavuus).toFixed(0)} %), `
-  + `maksimi ${a.avausHuippu.toFixed(1)} vs vakiintunut ${a.vakiintunut.toFixed(1)} `
-  + `(raja ${(a.vakiintunut + VALAHDYSVARA).toFixed(1)}), `
-  + `paluu alas ${a.suurinPudotus.toFixed(1)} (raja ${VALAHDYSVARA})`);
+  valahdysLapi(v),
+  `kehyksiä ${v.avausKehykset} (kattavuus ${(100 * v.avausKattavuus).toFixed(0)} %), `
+  + `maksimi ${v.avausHuippu.toFixed(1)} vs vakiintunut ${v.vakiintunut.toFixed(1)} `
+  + `(raja ${(v.vakiintunut + VALAHDYSVARA).toFixed(1)}), `
+  + `paluu alas ${v.suurinPudotus.toFixed(1)} (raja ${VALAHDYSVARA})`
+  + `${valahdysNaytteet.length > 1 ? `, mediaani ${valahdysNaytteet.length} näytteestä` : ''}`);
 
 /*
  * (b) KARTTA EI OLE HETKEÄKÄÄN PALJAANA. Tämä on se väite, joka

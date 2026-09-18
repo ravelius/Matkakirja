@@ -1,22 +1,25 @@
 {
-  "_kommentti": "Yksi paikka savukesarjoille (.github/workflows/savukkeet.yml luku, tools/savukkeet/rakenna-matriisi.mjs jäsennys). 'julkaisu' listaa julkaisuraporttien savukkeet järjestyksessä (docs/raportit/viesti-fable-julkaisu-v1925..v1927); 'asetukset' antaa jokaiselle tiedostolle sen ympäristömuuttujat, mahdollisen kuvakansio-argumentin ja tunnetut punaiset (vertaillaan tools/savukkeet/vertaa-tulos.mjs:llä FAIL-riveihin — uusi täsmäämätön FAIL nostaa ::warning::-huomautuksen, ei kaada julkaisusarjan porttia niiltä tiedostoilta joilla salliEpaonnistua on tosi). Lähteet: docs/raportit/viesti-fable-julkaisu-v1925-20260916.md, -v1926-20260916.md, -v1927-20260917.md ja kunkin savukkeen oma alkukommentti (process.env-lukukohdat tarkistettu tekstistä, ei arvattu). JAETUT RIVIT (18.9.2026): 'julkaisu'-listan ja 'asetukset'-avaimen muoto 'savuke-x.mjs#osa' ajaa SAMAN savukkeen useana rinnakkaisena rivinä; '#':n jälkeinen osa on vain rivin nimilappu (kaappaus-, loki- ja artefaktipolku), ja rajaus tulee rivin omasta env-lohkosta. Lista on PITUUSJÄRJESTYKSESSÄ: aja-sarja.mjs antaa rivit työntekijöille tässä järjestyksessä, joten pisin rivi ei saa alkaa vasta lopussa.",
+  "_kommentti": "Yksi paikka savukesarjoille (.github/workflows/savukkeet.yml luku, tools/savukkeet/rakenna-matriisi.mjs jäsennys). 'julkaisu' listaa julkaisuraporttien savukkeet järjestyksessä (docs/raportit/viesti-fable-julkaisu-v1925..v1927); 'asetukset' antaa jokaiselle tiedostolle sen ympäristömuuttujat, mahdollisen kuvakansio-argumentin ja tunnetut punaiset (vertaillaan tools/savukkeet/vertaa-tulos.mjs:llä FAIL-riveihin — uusi täsmäämätön FAIL nostaa ::warning::-huomautuksen, ei kaada julkaisusarjan porttia niiltä tiedostoilta joilla salliEpaonnistua on tosi). Lähteet: docs/raportit/viesti-fable-julkaisu-v1925-20260916.md, -v1926-20260916.md, -v1927-20260917.md ja kunkin savukkeen oma alkukommentti (process.env-lukukohdat tarkistettu tekstistä, ei arvattu). JAETUT RIVIT (18.9.2026): 'julkaisu'-listan ja 'asetukset'-avaimen muoto 'savuke-x.mjs#osa' ajaa SAMAN savukkeen useana rinnakkaisena rivinä; '#':n jälkeinen osa on vain rivin nimilappu (kaappaus-, loki- ja artefaktipolku), ja rajaus tulee rivin omasta env-lohkosta. Lista on PITUUSJÄRJESTYKSESSÄ: aja-sarja.mjs antaa rivit työntekijöille tässä järjestyksessä, joten pisin rivi ei saa alkaa vasta lopussa. KIERROS 2 (18.9.2026, Raamattu TARKENNUS 11 kohta 24): rivit jaettiin niin, etta jokainen jaa alle kahden minuutin. pariisi-lahizoom jaettiin ruudun LISAKSI vartiolohkoittain (SAVUKE_LOHKOT=perus|liuska|vastakoe) ja astro-pallon vartijalohko kolmeen (vartija-a/b/c). Rivikohtaiset Chromium-liput: env-avain SAVUKE_CHROMIUM_LIPUT (esim. \"--use-gl=angle --use-angle=swiftshader\") ajaa sen rivin WebGL:n CPU:lla, ks. tools/savukkeet/chromium-liput.mjs.",
   "julkaisu": [
-    "savuke-pariisi-lahizoom.mjs#390",
-    "savuke-pariisi-lahizoom.mjs#1400",
-    "savuke-astro-pallo.mjs#vartija-a",
+    "savuke-pariisi-lahizoom.mjs#390-perus",
+    "savuke-pariisi-lahizoom.mjs#1400-perus",
+    "savuke-pariisi-lahizoom.mjs#390-liuska",
+    "savuke-pariisi-lahizoom.mjs#1400-liuska",
+    "savuke-topografialinssi.mjs",
     "savuke-astro-pallo.mjs#vartija-b",
     "savuke-satelliittilinssi.mjs#isot",
+    "savuke-astro-pallo.mjs#vartija-a",
+    "savuke-astro-pallo.mjs#vartija-c",
     "savuke-satelliittilinssi.mjs#pienet",
-    "savuke-astro-pallo.mjs#tyopoyta",
-    "savuke-astro-pallo.mjs#puhelin",
     "savuke-kaupunkipopup.mjs#390",
     "savuke-kaupunkipopup.mjs#1400",
+    "savuke-astro-pallo.mjs#tyopoyta",
+    "savuke-astro-pallo.mjs#puhelin",
     "savuke-astro-valokuva.mjs",
     "savuke-astro-aani.mjs",
     "savuke-ihmisen-kappaleet.mjs",
     "savuke-ihmisen-kehys.mjs",
     "savuke-ihmisen-esitys.mjs",
-    "savuke-topografialinssi.mjs",
     "savuke-pallo-nostolaput.mjs",
     "savuke-nimikyltti.mjs",
     "savuke-kerma-reuna.mjs",
@@ -118,21 +121,6 @@
       ],
       "huomautus": "Mac 8 rinnakkain (v1940-ajo 35338031662, 18.9.2026): sama kuormahäily 'uusi napautus avaa selitteen takaisin' nousi nyt puhelimella (yksin vihreä, ks. #isot ja astro-valokuva) — kirjattu tunnetuksi Mac-punaiseksi tällekin puolikkaalle. Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Pienet näytöt. Vain \"pallon takapuolen merkki ei ota napautusta\" (näkymä kirjaamatta, ks. #isot)."
     },
-    "savuke-pariisi-lahizoom.mjs#390": {
-      "env": {
-        "SAVUKE_RUUTU": "390"
-      },
-      "kuvakansio": true,
-      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Puhelinruutu. Mac-mittaus 18.9.2026: 220 s, kaikki vihreä (oli yhtenä rivinä 440 s). Tunnettu punainen \"7e. tyopoyta: ...\" on määritelmän mukaan työpöytäruudulla, joten sitä EI ole täällä."
-    },
-    "savuke-pariisi-lahizoom.mjs#1400": {
-      "env": {
-        "SAVUKE_RUUTU": "1400"
-      },
-      "kuvakansio": true,
-      "tunnetutPunaiset": [],
-      "huomautus": "18.9.2026 (v1942): 7e on INFO-rivi kyltin poistuttua, tunnettu punainen poistettu listalta. Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Työpöytäruutu. häilyvä hitaalla Actions-koneella (17.9.2026: v1930:n ajossa vihreä, v1931:n ajossa punainen samalla koodilla, nimiä 1 kyltin laatikolla = kaupungin nimi edellisen ladontakierroksen paikassa). v1930:n ajoituskorjaus kattoi 7c:n; 7e:n nimiladonnan ajoitus on oma erä (Mac, SAVUKE_HIDASTUS=6). Poista listalta kun erä on mainissa."
-    },
     "savuke-kaupunkipopup.mjs#390": {
       "env": {
         "SAVUKE_RUUTU": "390"
@@ -159,19 +147,54 @@
       "env": {
         "NAKYMAT": "vartija-a"
       },
-      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Väitteen 9 vastakoelohkon ENSIMMÄINEN puolisko: vastakoe ilman estoa, kirjasto estetty, pinta estetty, Mac-kotelon vastakoe. Lohko EI ole näyttökoko vaan vartija, ja se on tämän savukkeen pisin osa: koko lohko mitattiin Macilla 18.9.2026 294 s (27/27 läpi, neljän savukkeen rinnakkaiskuormassa), joten se jaettiin vielä kahtia."
+      "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. Vaitteen 9 vastakoelohkon ENSIMMAINEN puolisko: vastakoe ilman estoa ja kirjasto estetty. 18.9.2026 rivi mitattiin 168 s:ksi, kun siina oli viela kaksi koetta lisaa (pinta estetty, Mac-kotelo); ne siirrettiin uudelle riville #vartija-c. Koko lohko yhtena rivina oli 294 s. NAKYMAT=vartija ajaa yha kaikki kuusi koetta."
     },
     "savuke-astro-pallo.mjs#vartija-b": {
       "env": {
         "NAKYMAT": "vartija-b"
       },
-      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Väitteen 9 vastakoelohkon TOINEN puolisko: Safarin rajat, kehykset poikki, musta pinta, kolme avausta peräkkäin. Ks. #vartija-a."
+      "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. Vaitteen 9 vastakoelohkon TOINEN puolisko: Safarin rajat, kehykset poikki, musta pinta, kolme avausta perakkain. Mac-mittaus 18.9.2026: 128 s. Ks. #vartija-a."
     },
     "savuke-topografialinssi.mjs": {
-      "tunnetutPunaisetMac": [
-        "avauksessa ei ole välähdystä suhteessa linssin lopputilaan"
-      ],
-      "huomautusMac": "Mac 8 rinnakkain (v1942-ajot 18.9.2026, 2/4 punainen): 1 s avausikkunan 'paluu alas' 19,4 (raja 15) kuormassa, yksin ajettuna 4,0 ja maksimi = lopputila; kehysten pudotus on runnerin kuorma, ei pelin valahdys. Poista listalta, kun vartio mittaa mediaania tai kun rinnakkaisuus jaetaan."
+      "huomautusMac": "TUNNETTU MAC-PUNAINEN POISTETTU 18.9.2026 (Raamattu TARKENNUS 11 kohta 24 b). Vartio 'avauksessa ei ole valahdysta suhteessa linssin lopputilaan' hailyi kuormassa (paluu alas 19,4 vs raja 15; yksin ajettuna 4,0). Savuke ottaa nyt kolme naytetta JA KAYTTAA MEDIAANIA, mutta vain jos ensimmainen nayte on punainen - vihrea kertakaynti riittaa, koska kuormahaily tekee mittauksesta punaisen eika vihreaa. Rajat (8 kehysta, 60 %, VALAHDYSVARA 15) ovat ennallaan. Jos tama nousee punaiseksi, se on kolmen nayteen mediaani eika yksi pudonnut kehys."
+    },
+    "savuke-pariisi-lahizoom.mjs#390-perus": {
+      "env": {
+        "SAVUKE_RUUTU": "390",
+        "SAVUKE_LOHKOT": "perus"
+      },
+      "kuvakansio": true,
+      "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. PERUS-LOHKO: vartiot 1c, 3i2, 5, 8o-8q (saapumisnakyma), 1, 1b, 2, 3, 3b, 3d-3f, 6, 6b seka napautus-/viuhkalohkon ja turisti-infon INFO-rivit. Ruutu 390 px; ruuduittain jaettuna rivi oli 18.9.2026 220 s eli sarjan pisin, siita lohkojako (savuke-pariisi-lahizoom.mjs SAVUKE_LOHKOT). VASTAKOE-LOHKO EI OLE TALLA RIVILLA: 3c ja 3g ovat PAATOKSET 34:n jalkeen vanhentuneita vastakokeita (INFO, ei vartiota) ja avaavat oman sivun, joka odottaa oman 44 s saapumisen. Paikallisesti ne ajetaan yha oletuksena - ilman SAVUKE_LOHKOT-muuttujaa savuke ajaa kaikki kolme lohkoa kuten ennenkin."
+    },
+    "savuke-pariisi-lahizoom.mjs#390-liuska": {
+      "env": {
+        "SAVUKE_RUUTU": "390",
+        "SAVUKE_LOHKOT": "liuska"
+      },
+      "kuvakansio": true,
+      "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. LIUSKA-LOHKO: kaupunkiliuskan vartiot 8a-8n. Lohko siirrettiin savukkeessa omaan silmukkaansa MUUTTAMATTA yhtaan vaitetta; se avaa oman sivun ja oman zoomin (oma 44 s saapuminen on jaon hinta). Ruutu 390 px. Tunnettuja punaisia ei ole: 18.9.2026 mitattu 390 px:lla 17/17 vihreaa yksin ajettuna."
+    },
+    "savuke-pariisi-lahizoom.mjs#1400-perus": {
+      "env": {
+        "SAVUKE_RUUTU": "1400",
+        "SAVUKE_LOHKOT": "perus"
+      },
+      "kuvakansio": true,
+      "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. PERUS-LOHKO: vartiot 1c, 3i2, 5, 8o-8q (saapumisnakyma), 1, 1b, 2, 3, 3b, 3d-3f, 6, 6b seka napautus-/viuhkalohkon ja turisti-infon INFO-rivit. Ruutu 1400 px; ruuduittain jaettuna rivi oli 18.9.2026 224 s eli sarjan pisin, siita lohkojako (savuke-pariisi-lahizoom.mjs SAVUKE_LOHKOT). VASTAKOE-LOHKO EI OLE TALLA RIVILLA: 3c ja 3g ovat PAATOKSET 34:n jalkeen vanhentuneita vastakokeita (INFO, ei vartiota) ja avaavat oman sivun, joka odottaa oman 44 s saapumisen. Paikallisesti ne ajetaan yha oletuksena - ilman SAVUKE_LOHKOT-muuttujaa savuke ajaa kaikki kolme lohkoa kuten ennenkin."
+    },
+    "savuke-pariisi-lahizoom.mjs#1400-liuska": {
+      "env": {
+        "SAVUKE_RUUTU": "1400",
+        "SAVUKE_LOHKOT": "liuska"
+      },
+      "kuvakansio": true,
+      "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. LIUSKA-LOHKO: kaupunkiliuskan vartiot 8a-8n. Lohko siirrettiin savukkeessa omaan silmukkaansa MUUTTAMATTA yhtaan vaitetta; se avaa oman sivun ja oman zoomin (oma 44 s saapuminen on jaon hinta). Ruutu 1400 px. Tunnettuja punaisia ei ole: 18.9.2026 mitattu 390 px:lla 17/17 vihreaa yksin ajettuna."
+    },
+    "savuke-astro-pallo.mjs#vartija-c": {
+      "env": {
+        "NAKYMAT": "vartija-c"
+      },
+      "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. Vaitteen 9 vastakoelohkon KOLMAS puolisko: pinta estetty ja Mac-kotelon vastakoe. Lohko jaettiin kahdesta kolmeen 18.9.2026, koska #vartija-a mitattiin 168 s:ksi (yli kahden minuutin tavoitteen) ja #vartija-b 128 s:ksi. Ks. #vartija-a."
     }
   }
 }

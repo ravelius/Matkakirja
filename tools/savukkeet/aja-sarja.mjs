@@ -16,6 +16,10 @@
 //   SAVUKE_RINNAKKAIN  montako savuketta yhtä aikaa (oletus 6)
 //   SAVUKE_AIKAKATTO_MS  per savuke, oletus 600000 (10 min)
 //   CHROMIUM, PLAYWRIGHT_JS  periytyvät lapsille sellaisenaan
+//   SAVUKE_CHROMIUM_LIPUT  (rivikohtainen, sarjat.jsonin env-lohko)
+//                       lisäargumentit Chromiumille, esim.
+//                       "--use-gl=angle --use-angle=swiftshader" —
+//                       ks. tools/savukkeet/chromium-liput.mjs
 //
 // Tuloskansioon syntyy per savuke:
 //   savuke-<nimiTunniste>.log   ajoloki (stdout+stderr)
@@ -39,7 +43,7 @@
 import { spawn } from 'node:child_process';
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { rakennaMatriisi } from './rakenna-matriisi.mjs';
 
 const TASSA = dirname(fileURLToPath(import.meta.url));
@@ -101,6 +105,19 @@ function ajaYksi(rivi, indeksi) {
       ...rivi.env,
       KAAPPAUKSET: kaappaus,
     };
+
+    /*
+     * RIVIKOHTAISET CHROMIUM-LIPUT (omistaja 18.9.2026, Raamattu
+     * TARKENNUS 11 kohta 24 d). Jos rivillä on SAVUKE_CHROMIUM_LIPUT,
+     * lapsi käynnistetään `--import`illa, joka kääriä Playwrightin
+     * `chromium.launch`in ja lisää liput args-listaan — savukkeiden
+     * omaa koodia ei tarvitse muuttaa (ks. chromium-liput.mjs).
+     * NODE_OPTIONS säilytetään, jos se on jo asetettu.
+     */
+    if (ymparisto.SAVUKE_CHROMIUM_LIPUT) {
+      const shim = pathToFileURL(join(TASSA, 'chromium-liput.mjs')).href;
+      ymparisto.NODE_OPTIONS = `${process.env.NODE_OPTIONS ?? ''} --import ${shim}`.trim();
+    }
 
     const argumentit = [join(TASSA, rivi.tiedosto)];
     if (rivi.kuvakansio) argumentit.push(kaappaus);
