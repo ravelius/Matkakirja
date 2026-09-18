@@ -410,7 +410,6 @@ body.aikajana-pulu-piilossa .pollo-nappi,
 body.aikajana-pulu-piilossa .pollo-paneeli,
 body.aikajana-pulu-piilossa .pollo-kuplapino,
 body.aikajana-pulu-piilossa .pollo-kuplapino-kehys,
-body.aikajana-pulu-piilossa .pollo-kuplapalautus,
 body.aikajana-pulu-piilossa .livia-kasvot-pinta {
   visibility: hidden;
   pointer-events: none;

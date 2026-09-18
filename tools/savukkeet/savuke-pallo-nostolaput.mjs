@@ -15,8 +15,10 @@
  * ── VARTIOT ───────────────────────────────────────────────────────
  *
  *   1. LAPPU EI OLE NIMEN PÄÄLLÄ. Yksikään elävän noston nimilappu ei
- *      leikkaa yhdenkään kaupunkinimen laatikkoa neljässä tiheässä
- *      paikassa (Bukarest, Ateena, Helsinki, Istanbul).
+ *      leikkaa yhdenkään kaupunkinimen laatikkoa kahdessa tiheässä
+ *      KOHDEMAAN paikassa (Bukarest, Transilvania). Kohdemaa on tässä
+ *      Romania, ja v1942:sta alkaen nostoja on vain kohdemaassa —
+ *      muualta mitattu näkymä ei väitä mitään (ks. NAKYMAT).
  *   2. NIMI EI OLE LIIKKUMATTOMAN MUSTEEN PÄÄLLÄ. Poltettu nosto ja
  *      elävän noston ikoni eivät voi väistää, joten ne ovat nimen
  *      varauksia — yksikään nimi ei leikkaa niitä.
@@ -66,12 +68,27 @@ const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
 if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 
-/** Näkymät: omistajan Bukarest ja kolme muuta tiheää paikkaa. */
+/*
+ * Näkymät: omistajan Bukarest ja kaupunkien välinen Transilvania.
+ *
+ * NÄKYMÄN ON OLTAVA KOHDEMAASSA (18.9.2026, velka 6). Tässä savukkeessa
+ * tallenne on Fogg Bukarestissa, joten kohdemaa on ROMANIA — ja v1942:sta
+ * alkaen nostot ovat vain kohdemaan omia (`nostotasot[ISO]`, Raamattu
+ * PAATOKSET 34 kohta 17 b–d; js/laattapyramidi.js nostotasonPoltetut).
+ * Listalla oli siihen asti kolme kohdemaan ULKOPUOLISTA paikkaa —
+ * Ateena, Helsinki ja Istanbul — ja niistä mitattiin 18.9.2026 nolla
+ * lappua ja nolla poltettua mustetta (docs/raportit/viesti-fable-
+ * nostolaput-67-20260918.md). Väitteet 1–2 olivat niissä siis tyhjiä:
+ * "yksikään lappu ei leikkaa nimeä" on tosi ilman lappuja. Ne on
+ * poistettu ja tilalle otettu Transilvania, joka on samassa
+ * kohdemaassa ja jossa poltettua mustetta on ruudulla (Bran,
+ * Sighișoara, Peleș, Transfăgărășan) — sama näkymä, jota vartiot 6–7 jo
+ * käyttävät. EI UUSIA VÄITTEITÄ: vartiot ovat samat, vain näkymät
+ * osuvat nyt paikkaan, jossa on mitattavaa.
+ */
 const NAKYMAT = [
   { nimi: 'Bukarest', lat: 44.43, lng: 26.10 },
-  { nimi: 'Ateena', lat: 37.98, lng: 23.73 },
-  { nimi: 'Helsinki', lat: 60.17, lng: 24.94 },
-  { nimi: 'Istanbul', lat: 41.01, lng: 28.98 },
+  { nimi: 'Transilvania', lat: 45.52, lng: 25.37 },
 ];
 /** Korkeudet, joilla jokainen näkymä mitataan (lähikuva ja maan mitta). */
 const KORKEUDET = [0.05, 0.12];
@@ -329,8 +346,8 @@ if (auki) {
    *    meni.
    *
    *    KOLME LAPPUA KUSTAKIN NÄKYMÄSTÄ:
-   *      a) omistajan nimeämä lappu (Bukarest "Strousberg", Helsinki
-   *         "Kirjasota", Istanbul "Mustameri") tekstin keskeltä;
+   *      a) omistajan nimeämä lappu (Bukarest "Strousberg",
+   *         Transilvania "Bran") tekstin keskeltä;
    *      b) ensimmäinen ELÄVÄ lappu (polttamaton nosto, jolla on oma
    *         CSS2D-elementti) — poltettu ja elävä muste kulkevat eri
    *         polkua, ja molempien on otettava napautus;
@@ -363,8 +380,15 @@ if (auki) {
      * nostotasossa 2026-09-18-nostot poltettuja.
      */
     { nimi: 'Transilvania', lat: 45.52, lng: 25.37, etsi: 'bran' },
-    { nimi: 'Helsinki', lat: 60.17, lng: 24.94, etsi: 'kirjasota' },
-    { nimi: 'Istanbul', lat: 41.01, lng: 28.98, etsi: 'mustameri' },
+    /*
+     * HELSINKI JA ISTANBUL POISTETTU (18.9.2026, velka 6). Hakusanat
+     * "kirjasota" ja "mustameri" osoittivat Suomen ja Turkin nostoihin,
+     * joita ei enää ole ruudulla: nostot tulevat vain kohdemaasta
+     * (tässä Romania), ja 18.9.2026 mitattuna molemmista näkymistä tuli
+     * otos 0 lappua — vartiot 6–7 saivat aineistonsa jo silloin
+     * kokonaan Romaniasta. Kaksi tyhjää näkymää maksoi neljä
+     * kamera-ajoa eikä väittänyt mitään.
+     */
   ];
   /** Sormen poikkeama tekstin keskiviivasta kohtisuoraan ulos (px). */
   const KOSKETUSPOIKKEAMA_PX = 8;

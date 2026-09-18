@@ -319,19 +319,23 @@ test('pulu on piilossa koko esityksen ajan ja kävelee sisään vasta lopussa', 
   assert.equal(PULUN_PIILO_LUOKKA, 'aikajana-pulu-piilossa');
 
   /*
-   * 2. CSS piilottaa NELJÄ asiaa — napin, paneelin, PLUSKUPLAN ja
-   *    kasvokankaan — ja nimenomaan visibilityllä, jonka livia-eleiden
-   *    näkyvyystesti lukee. Pluskupla (.pollo-kuplapalautus) on
-   *    `position: fixed` -nappi bodyn suorana lapsena (js/pollo.js): se
-   *    puuttui listalta ja jäi omistajan puhelimella kellumaan kesken
-   *    esityksen (16.9.2026).
+   * 2. CSS piilottaa KOLME asiaa — napin, paneelin ja kasvokankaan —
+   *    ja nimenomaan visibilityllä, jonka livia-eleiden näkyvyystesti
+   *    lukee. PLUSKUPLA (.pollo-kuplapalautus) oli listalla neljäntenä
+   *    16.–18.9.2026, koska se oli `position: fixed` -nappi bodyn
+   *    suorana lapsena ja jäi omistajan puhelimella kellumaan kesken
+   *    esityksen. v1944 poisti elementin kokonaan (Raamattu, PAATOKSET
+   *    34 kohta 20): kuplat palautetaan chatin ylärivin
+   *    `.pollo-naytakuplat`-painikkeesta, joka on `.pollo-paneeli`n
+   *    sisällä ja piiloutuu siis paneelin mukana.
    */
   const saanto = new RegExp(
     PULUN_PIILO_OSAT.map((osa) => `body\\.${PULUN_PIILO_LUOKKA} \\${osa}`).join(',\\s*')
     + ' \\{[^}]*visibility: hidden;[^}]*pointer-events: none;',
   );
-  assert.match(CSS, saanto, 'css ei piilota kaikkia neljää visibilityllä');
-  assert.ok(PULUN_PIILO_OSAT.includes('.pollo-kuplapalautus'), 'pluskupla puuttuu listalta');
+  assert.match(CSS, saanto, 'css ei piilota kaikkia kolmea visibilityllä');
+  assert.ok(!PULUN_PIILO_OSAT.includes('.pollo-kuplapalautus'),
+    'pluskuplaa ei enää ole (v1944) — kuollut valitsin palasi listalle');
 
   /*
    * 3. SISÄÄNTULO VASTA ESITYKSEN JÄLKEEN (Raamattu "IHMISEN MATKA
