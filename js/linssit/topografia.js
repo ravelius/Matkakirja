@@ -520,9 +520,37 @@ export const LINSSI = {
      * harventamaton päivitys (js/pallolaatat.js), ja se on tässä sama
      * yksi kutsu kuin sulkeutumisessa.
      */
-    merkitseLinssiketju('kokoa-ennen');
-    lauta.lepokerros?.()?.kokoa?.();
-    merkitseLinssiketju('kokoa');
+    /*
+     * HERÄTYS VASTA KUN PEITE ON RUUDULLA (mitattu 19.9.2026).
+     *
+     * `kokoa()` käynnistää koko näkyvän ikkunan laattatyön: haut,
+     * purut ja tekstuurien viennit. Se on pääsäikeen työtä, ja niin
+     * kauan kuin se käy, selain ei tuota yhtään kompositorin kehystä.
+     * Mitattuna 390 × 844 (avauksen kehyssarja, luenta päällä):
+     * linssin valinnasta kului **254 ms ilman yhtäkään uutta kehystä**,
+     * eli ruudulla seisoi pelaajan oma edellinen näkymä — vaikka peite
+     * oli DOMissa jo 5 ms:n kohdalla. Napautus näytti siis jäävän
+     * vastaamatta, ja kun kuva vihdoin vaihtui, se vaihtui kerralla
+     * mustaksi. Juuri tuo on ODOTUSPEITE-osion lupaus *"tumma peite
+     * samassa kehyksessä, jossa portti asetetaan"* — rikkoutuneena.
+     *
+     * Herätys siirretään siksi peitteen JÄLKEEN ja kahden kehyksen
+     * päähän: ensimmäinen kehys maalaa peitteen, toinen varmistaa,
+     * että se on kompositorissa. Vasta sitten pääsäie saa jäätyä
+     * laattatyöhön. Hinta on mitattu ja pieni: ensimmäinen
+     * reliefikehys 62 ms → noin 90 ms (vartijan raja 400 ms).
+     *
+     * `kokoaHerate` puretaan sulkiessa: linssi voidaan sulkea ennen
+     * kuin kaksi kehystä on kulunut.
+     */
+    let kokoaHerate = 0;
+    const heraytaLepokerros = () => {
+      kokoaHerate = 0;
+      if (suljettu) return;
+      merkitseLinssiketju('kokoa-ennen');
+      lauta.lepokerros?.()?.kokoa?.();
+      merkitseLinssiketju('kokoa');
+    };
 
     /*
      * ────────────────────────────────────────────────────────────────
@@ -548,6 +576,19 @@ export const LINSSI = {
       ? lauta.linssit.kalvoRuudulle(PEITTEEN_OSA, { vari: ODOTUSPEITE })
       : null;
     merkitseLinssiketju('peite');
+    /*
+     * Peite on nyt DOMissa (peittävyys nousee seuraavassa kehyksessä,
+     * ks. kalvoRuudulle). Laattatyö saa alkaa vasta sitä seuraavassa
+     * kehyksessä; ilman peitettä (vastakoe `?topopeite=0`) heti, jotta
+     * vastakoe mittaa vain peitteen eikä tätä ajoitusta.
+     */
+    if (peite && typeof requestAnimationFrame === 'function') {
+      kokoaHerate = requestAnimationFrame(() => {
+        kokoaHerate = requestAnimationFrame(heraytaLepokerros);
+      });
+    } else {
+      heraytaLepokerros();
+    }
     const peiteAlkoi = (typeof performance === 'undefined' ? Date : performance).now();
     /** Mitattu: montako millisekuntia peite oli ruudulla (savuke). */
     let peiteKesti = null;
@@ -686,8 +727,13 @@ export const LINSSI = {
           jonossa: kerrosmitat.jonossa,
         });
       }
+      /*
+       * `kokoaHerate` = herätys on vielä kahden kehyksen jonossa.
+       * Silloin kerros EI ole luovuttanut vaan odottaa vuoroaan, eikä
+       * peite saa väistyä sen perusteella.
+       */
       if (nakyvyys >= PEITTAVYYS * 0.98
-        || (pyramidiPaalla && kerrosLuovutti(kerrosmitat))
+        || (pyramidiPaalla && !kokoaHerate && kerrosLuovutti(kerrosmitat))
         || nyt - peiteAlkoi >= PEITTEEN_KATTO_MS) {
         poistaPeite();
         return;
@@ -839,6 +885,10 @@ export const LINSSI = {
         if (pyramidiPaalla) lauta.lepokerros?.()?.kokoa?.();
         clearTimeout(peitteenKello);
         peitteenKello = 0;
+        if (kokoaHerate && typeof cancelAnimationFrame === 'function') {
+          cancelAnimationFrame(kokoaHerate);
+        }
+        kokoaHerate = 0;
         // Peite pois ennen muita: se on kartan päällä, ja sen alle ei
         // saa jäädä sulkeutuvaa linssiä.
         poistaPeite();
