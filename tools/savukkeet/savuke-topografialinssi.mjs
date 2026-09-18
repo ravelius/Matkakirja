@@ -966,7 +966,12 @@ async function ajaAvaus({ peite = true } = {}) {
     }
     return (t.perusPeitto ?? 0) >= (t.perusTavoite ?? 0.72) * 0.98;
   }, null, { timeout: 120000 }).catch(() => null);
-  await sivu.waitForTimeout(1200);
+  /*
+   * KAAPPAUS JATKUU VAKIINTUNEESEEN TILAAN ASTI (2,5 s). Välähdys on
+   * vika vain suhteessa siihen, mihin ruutu asettuu — ja se vertailuluku
+   * on otettava SAMASTA kehyssarjasta, ei toisesta kuvasta.
+   */
+  await sivu.waitForTimeout(2500);
   await cdp.send('Page.stopScreencast').catch(() => {});
 
   const data = await sivu.evaluate(() => {
@@ -1082,6 +1087,24 @@ async function ajaAvaus({ peite = true } = {}) {
   const avausRivit = rivit.filter((x) => x.t >= 0 && x.t <= loppu);
   const ennenKirkkaus = ennenRivit.length
     ? ennenRivit.reduce((a, b) => a + b.kirkkaus, 0) / ennenRivit.length : 0;
+  /*
+   * VAKIINTUNUT TILA = kehykset 2 sekuntia avauksen jälkeen. Tämä on se
+   * luku, jota vasten välähdys mitataan (ks. väite alla).
+   */
+  const vakiintuneet = rivit.filter((x) => x.t >= 2000);
+  const vakiintunut = vakiintuneet.length
+    ? vakiintuneet.reduce((a, b) => a + b.kirkkaus, 0) / vakiintuneet.length : 0;
+  /*
+   * PALUU YLHÄÄLTÄ ALAS: suurin pudotus siihenastisesta huipusta
+   * avausikkunan sisällä. Juuri se on "vaalea kartta ensin ja
+   * topografia sen päälle" — kirkkaus käy ylhäällä ja tulee alas.
+   */
+  let huippuToistaiseksi = -Infinity;
+  let suurinPudotus = 0;
+  for (const x of rivit.filter((y) => y.t >= 0 && y.t <= loppu)) {
+    huippuToistaiseksi = Math.max(huippuToistaiseksi, x.kirkkaus);
+    suurinPudotus = Math.max(suurinPudotus, huippuToistaiseksi - x.kirkkaus);
+  }
 
   /* Paljaan kartan näytteet: portti auki, ei peitettä eikä reliefiä. */
   const avausNaytteet = data.naytteet.filter((s) => s.t >= t0 && s.t - t0 <= loppu);
@@ -1118,6 +1141,9 @@ async function ajaAvaus({ peite = true } = {}) {
     avausKattavuus: avausRivit.length >= 2 && Number.isFinite(loppu) && loppu > 0
       ? (avausRivit[avausRivit.length - 1].t - avausRivit[0].t) / loppu : 0,
     avausHuippu: avausRivit.length ? Math.max(...avausRivit.map((x) => x.kirkkaus)) : 0,
+    vakiintunut,
+    vakiintuneita: vakiintuneet.length,
+    suurinPudotus,
     avausNaytteita: avausNaytteet.length,
     paljaita: paljaat.length,
     avausMs: Number.isFinite(loppu) ? Math.round(loppu) : null,
@@ -1159,26 +1185,41 @@ vaadi(`${nimiA}: omistajan tila toistui (luenta, saapumiskuva, pluskupla, kuvapa
 
 /*
  * (a) EI VAALEAA VÄLIVAIHETTA. Omistajan sanat: *"vaalea kartta piirtyy
- * ilmeisesti ensin ja sitten Topografia sen päälle"*. Ruudun
- * keskipisteen kirkkaus ei saa avauksen aikana nousta yli sen, mitä se
- * oli ENNEN linssiä — ei kymmentäkään prosenttia. Näytteitä on
- * kompositorin kehyksistä, ja niitä vaaditaan vähintään 20, jottei
- * väite mene läpi tyhjällä otoksella.
- */
-/*
+ * ilmeisesti ensin ja sitten Topografia sen päälle"*.
+ *
+ * VERTAILULUKU ON LOPPUTILA, EI SEEPIA (Fablen linjaus 18.9.2026, erän
+ * 2 raportti "TÄRKEIN LÖYTÖ"). Pyramiditilassa itse reliefi on
+ * seepiakarttaa vaaleampi — vakiintunut ruutu on noin 115, seepia noin
+ * 61 — joten vanha ehto "ei saa olla seepiaa vaaleampi" olisi
+ * vaatimus siitä, ettei reliefi piirry lainkaan. Välähdys on vika vain
+ * suhteessa siihen, mihin ruutu asettuu:
+ *
+ *   1) avausikkunan MAKSIMI on yli 15 yksikköä vakiintunutta
+ *      kirkkaampi (piikki, joka ei jää), tai
+ *   2) ikkunassa on PALUU YLHÄÄLTÄ ALAS yli 15 yksikköä (kirkkaus käy
+ *      ensin vaaleassa ja putoaa sitten) — juuri se, mitä omistaja
+ *      kuvasi.
+ *
  * OTOKSEN RIITTÄVYYS MITATAAN KATTAVUUTENA, EI KEHYSTEN MÄÄRÄNÄ
  * (17.9.2026, Mac). Vaatimus "vähintään 20 kehystä" oli kontin
  * kehystahdin mitta: Macilla sama 384 ms:n avaus tuotti 10 kehystä ja
- * väite kaatui, vaikka huippu (91,9) oli täsmälleen ennen-linssiä-
- * tasolla. Tyhjää otosta vastaan suojaa nyt kaksi ehtoa: vähintään 8
- * kehystä JA kehysten on peitettävä vähintään 60 % avausikkunasta.
- * Itse väite (ei vaaleaa välivaihetta) ei löysty lainkaan.
+ * väite kaatui, vaikka huippu oli täsmälleen odotetulla tasolla.
+ * Tyhjää otosta vastaan suojaa nyt kaksi ehtoa: vähintään 8 kehystä JA
+ * kehysten on peitettävä vähintään 60 % avausikkunasta.
  */
-vaadi(`${nimiA}: avauksen aikana ruutu ei ole kertaakaan ennen-linssiä-tasoa vaaleampi`,
-  a.avausKehykset >= 8 && a.avausKattavuus >= 0.6 && a.avausHuippu <= a.ennenKirkkaus * 1.1,
+const VALAHDYSVARA = 15;
+console.log(`INFO  ${nimiA}: avauksen maksimikirkkaus ${a.avausHuippu.toFixed(1)}, `
+  + `vakiintunut (2 s jälkeen, ${a.vakiintuneita} kehystä) ${a.vakiintunut.toFixed(1)}, `
+  + `suurin paluu ylhäältä alas ${a.suurinPudotus.toFixed(1)}, `
+  + `seepia ennen linssiä ${a.ennenKirkkaus.toFixed(1)}`);
+vaadi(`${nimiA}: avauksessa ei ole välähdystä suhteessa linssin lopputilaan`,
+  a.avausKehykset >= 8 && a.avausKattavuus >= 0.6 && a.vakiintuneita > 0
+    && a.avausHuippu <= a.vakiintunut + VALAHDYSVARA
+    && a.suurinPudotus <= VALAHDYSVARA,
   `kehyksiä ${a.avausKehykset} (kattavuus ${(100 * a.avausKattavuus).toFixed(0)} %), `
-  + `huippu ${a.avausHuippu.toFixed(1)}, `
-  + `ennen linssiä ${a.ennenKirkkaus.toFixed(1)} (raja ${(a.ennenKirkkaus * 1.1).toFixed(1)})`);
+  + `maksimi ${a.avausHuippu.toFixed(1)} vs vakiintunut ${a.vakiintunut.toFixed(1)} `
+  + `(raja ${(a.vakiintunut + VALAHDYSVARA).toFixed(1)}), `
+  + `paluu alas ${a.suurinPudotus.toFixed(1)} (raja ${VALAHDYSVARA})`);
 
 /*
  * (b) KARTTA EI OLE HETKEÄKÄÄN PALJAANA. Tämä on se väite, joka

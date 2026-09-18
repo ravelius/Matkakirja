@@ -42,7 +42,9 @@ ensimmäiseen valmiiseen laattaan kuluu nyt noin 100 ms.
    myös `valmiita === 0`. Kalvotekstuuriväite on käännetty
    pyramiditilassa muotoon "pyramidin alla ei ole linssin omaa
    kalvotekstuuria".
-6. Kaksi mittausikkunan korjausta: laattapyyntöjä lasketaan vain
+6. Kirkkausväite vertaa avausta linssin lopputilaan eikä seepiaan
+   (ks. oma lukunsa alla).
+7. Kaksi mittausikkunan korjausta: laattapyyntöjä lasketaan vain
    linssin avauksen ja sulkemisen väliltä (ennen laskuri näki myös
    sulkemisen jälkeisen seepiapaluun, 94 pyyntöä), ja avausikkuna on
    vähintään 1 s (pyramidissa reliefi on perillä ~100 ms:ssa, jolloin
@@ -52,33 +54,45 @@ ensimmäiseen valmiiseen laattaan kuluu nyt noin 100 ms.
 
 | | ennen | jälkeen |
 |---|---|---|
-| savuke-topografialinssi.mjs | **AIKAKATTO 600 s**, 16/29 | **2 min 22 s**, 43/44 |
+| savuke-topografialinssi.mjs | **AIKAKATTO 600 s**, 16/29 | **2 min 25 s**, 44/44 |
 
 `node --test tests/*.test.mjs`: `# pass 3613`, `# fail 0`.
 `node tools/tarkista-savukkeet.mjs`: kunnossa.
 
-## Jäljelle jäävä punainen — TÄMÄ ON PELIN HAVAINTO, EI SAVUKKEEN
+## Kirkkausväite mittaa nyt lopputilaa, ei seepiaa (jatkoerä)
+
+Ensimmäisessä erässä jäi punaiseksi väite *"avauksen aikana ruutu ei ole
+kertaakaan ennen-linssiä-tasoa vaaleampi"* (huippu 114,9 vs seepia
+61,2). Erän 2 raportti
+(`docs/raportit/viesti-fable-reliefi-kytkenta-era2-20260918.md`,
+"TÄRKEIN LÖYTÖ") oli jo todennut, ettei tämä ole välähdys vaan itse
+reliefi: pyramiditilassa lopputila on noin 115 eli seepiaa vaaleampi.
+Vanha ehto olisi siis vaatinut, ettei reliefi piirry lainkaan.
+
+Väite mittaa nyt 1 s:n avausikkunan kehysten **maksimikirkkautta**
+suhteessa **vakiintuneeseen tilaan** (kehykset 2 s avauksen jälkeen,
+samasta kaappaussarjasta — kaappausta jatkettiin 1,2 s:sta 2,5 s:iin).
+Punainen tulee vain, jos maksimi > vakiintunut + 15 (piikki, joka ei
+jää) tai jos ikkunassa on paluu ylhäältä alas > 15 (kirkkaus käy ensin
+vaaleassa ja putoaa sitten). Molemmat luvut tulostetaan INFO-rivillä.
+
+Mitattu 18.9.2026 (Mac Studio, Chromium, 390 × 844):
 
 ```
-FAIL  390 px, luenta: avauksen aikana ruutu ei ole kertaakaan
-      ennen-linssiä-tasoa vaaleampi — kehyksiä 57 (kattavuus 99 %),
-      huippu 114,9, ennen linssiä 61,2 (raja 67,3)
+INFO  390 px, luenta: avauksen maksimikirkkaus 114,0,
+      vakiintunut (2 s jälkeen, 45 kehystä) 113,9,
+      suurin paluu ylhäältä alas 4,0, seepia ennen linssiä 61,2
+OK    390 px, luenta: avauksessa ei ole välähdystä suhteessa linssin lopputilaan
 ```
 
-Kun avausikkuna on korjattu mittaamaan oikeaa sekuntia (ennen se oli
-yhden kehyksen mittainen eli sokea), kompositorin kehyksistä näkyy
-avauksen aikana kirkkauspiikki 114,9 — lähes kaksinkertainen
-seepiakartan 61,2:een nähden. Tämä on nimenomaan se ilmiö, jonka
-omistaja kuvasi 16.9.2026: *"vaalea kartta piirtyy ilmeisesti ensin ja
-sitten Topografia sen päälle"*. Vanhassa maailmassa väite oli vihreä,
-joten piikki on tullut pyramidikytkennän mukana — ehdokkaita ovat
-odotuspeitteen sävy ja pallon oma pinta ennen ensimmäistä
-reliefilaattaa. En korjannut tätä: erän rajaus oli savukkeen
-aikakatko, ja tämä on pelin puolella oma eränsä (mittari on nyt
-olemassa ja se kertoo heti, kun piikki on poissa).
+Maksimi 114,0 on käytännössä sama kuin vakiintunut 113,9 ja paluu alas
+4,0 on kohinaa: **avauksessa ei ole vaaleaa välivaihetta**. Aiempi
+punainen oli vertailuluvun vika, ei pelin.
 
 ## Muut havainnot
 
+- Erän ainoa punainen (kirkkauspiikki) osoittautui vertailuluvun
+  viaksi ja on korjattu; pelin puolella ei jäänyt avointa vikaa.
 - Vanha `?tarkennus=0`-vastakoe poistui: pyramidin kanssa laastaria ei
   ole, ja ilman pyramidia laastarin tila mitataan samassa ajossa
   `tarkennus`-kentästä. Väitemäärä 29 → 44 (uudet pyramidiväitteet
