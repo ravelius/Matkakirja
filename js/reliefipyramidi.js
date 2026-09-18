@@ -31,13 +31,21 @@
  * reliefin uusintapoltto pakottaisi pohjan luettelon uusiksi ja
  * päinvastoin.
  *
- * --- KYTKIN ON OLETUKSENA POIS ---
+ * --- KYTKIN ON OLETUKSENA PÄÄLLÄ (18.9.2026, erä 4) ---
  *
- * `?reliefipyramidi=1` sytyttää laataston. Oletus on pois, koska
- * laatat eivät ole vielä ämpärissä (431 Mt, ~9 500 tiedostoa); ilman
- * kytkintä peli on täsmälleen se, mikä se oli ennen tätä erää — yksi
- * kuva ja laastari. Kytkin poistetaan vasta kun vienti on tehty ja
- * takaisinluku vihreä, ei ennen.
+ * Laatat ovat ämpärissä:
+ * `https://media.matkakirja.app/matkakirja/reliefipyramidi/20260918/`
+ * (luettelo `reliefipyramidi.json`, laatat z0–z7 ikuisessa
+ * välimuistissa). Erän 3 mittaus totesi laataston valmiiksi — ei
+ * seepiapyyntöjä, 12 laattaa näkyvälle ikkunalle, terävämpi kuva, ei
+ * kehysajan hintaa, meri ehjä — ja kolme estettä oletukselle olivat
+ * vienti, syvin zoomi ja avauksen kirkkausvälähdys. Kaikki kolme on
+ * nyt purettu, joten laatasto on topografialinssin OLETUSLÄHDE.
+ *
+ * `?reliefipyramidi=0` palauttaa vanhan polun varalle: yksi kuva ja
+ * tarkennuslaastari. Vipu jää siksi, että vanha polku on yhä koodissa
+ * ja sen on oltava ajettavissa ilman kääntämistä, jos ämpäri on
+ * alhaalla tai laatastossa löytyy vika kentällä.
  *
  * --- PAIKALLINEN KANSIO SAVUKKEILLE ---
  *
@@ -106,9 +114,16 @@ export function reliefipyramidiPaalla(ikkuna = globalThis) {
   try {
     const haku2 = ikkuna?.location?.search ?? '';
     const arvo = new URLSearchParams(haku2).get(KYTKIN);
-    return arvo === '1' || arvo === 'true';
+    // Vain nimenomainen kielto ottaa laataston pois; kaikki muu — myös
+    // puuttuva parametri — on oletus eli päällä.
+    return !(arvo === '0' || arvo === 'false');
   } catch {
-    return false;
+    /*
+     * Ei osoitetta (testiajo, työläinen). Oletus on sama kuin
+     * selaimessa: laatasto päällä. Testi, joka haluaa vanhan polun,
+     * antaa ikkunan, jonka `location.search` on `?reliefipyramidi=0`.
+     */
+    return true;
   }
 }
 

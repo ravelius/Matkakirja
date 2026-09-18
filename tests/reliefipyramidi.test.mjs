@@ -1,10 +1,11 @@
 /*
  * RELIEFIPYRAMIDIN LAATASTO — kytkin, osoitteet ja meripeitto.
  *
- * Nämä testit vartioivat sitä, mitä ei voi nähdä kuvasta: että kytkin
- * on oletuksena POIS (peli on täsmälleen entisensä, kunnes laatat ovat
- * ämpärissä), että laatan osoite osoittaa oikeaan polkuun ja että
- * avomeren aukot luetaan laattakartaksi eikä 404:n arvoisiksi hauiksi.
+ * Nämä testit vartioivat sitä, mitä ei voi nähdä kuvasta: että laatasto
+ * on oletuksena PÄÄLLÄ (18.9.2026, erä 4 — laatat ovat ämpärissä) ja
+ * että `?reliefipyramidi=0` palauttaa vanhan yhden kuvan polun, että
+ * laatan osoite osoittaa oikeaan polkuun ja että avomeren aukot luetaan
+ * laattakartaksi eikä 404:n arvoisiksi hauiksi.
  */
 
 import test from 'node:test';
@@ -27,20 +28,24 @@ const ikkuna = (haku, kansio) => ({
   ...(kansio ? { RELIEFIPYRAMIDI_KANSIO: kansio } : {}),
 });
 
-test('kytkin on oletuksena pois', () => {
-  assert.equal(reliefipyramidiPaalla(ikkuna('')), false);
-  assert.equal(reliefipyramidiPaalla(ikkuna('?linssi=topografia')), false);
-  assert.equal(reliefipyramidiPaalla(ikkuna('?reliefipyramidi=0')), false);
+test('laatasto on oletuksena päällä, ?reliefipyramidi=0 ottaa sen pois', () => {
+  assert.equal(reliefipyramidiPaalla(ikkuna('')), true);
+  assert.equal(reliefipyramidiPaalla(ikkuna('?linssi=topografia')), true);
   assert.equal(reliefipyramidiPaalla(ikkuna('?reliefipyramidi=1')), true);
+  assert.equal(reliefipyramidiPaalla(ikkuna('?reliefipyramidi=0')), false);
+  assert.equal(reliefipyramidiPaalla(ikkuna('?reliefipyramidi=false')), false);
 });
 
 test('kytkin yksin ei riitä: linssin on oltava auki', () => {
   nollaaReliefi();
   const paalla = ikkuna('?reliefipyramidi=1');
+  const pois = ikkuna('?reliefipyramidi=0');
   assert.equal(reliefiKaytossa(paalla), false, 'linssi kiinni');
+  assert.equal(reliefiKaytossa(ikkuna('')), false, 'linssi kiinni, oletuskytkin');
   asetaReliefiLinssi(true);
   assert.equal(reliefiKaytossa(paalla), true, 'linssi auki ja kytkin päällä');
-  assert.equal(reliefiKaytossa(ikkuna('')), false, 'linssi auki mutta kytkin pois');
+  assert.equal(reliefiKaytossa(ikkuna('')), true, 'linssi auki, kytkin oletuksena');
+  assert.equal(reliefiKaytossa(pois), false, 'linssi auki mutta kytkin kielletty');
   asetaReliefiLinssi(false);
   assert.equal(reliefiKaytossa(paalla), false, 'linssi suljettu');
   nollaaReliefi();
