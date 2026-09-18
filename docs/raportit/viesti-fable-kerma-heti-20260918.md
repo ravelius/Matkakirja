@@ -71,6 +71,11 @@ Piikki osuu molemmilla pisteillä täsmälleen siihen kehykseen, jossa uusi
 ala tulee ruudulle (Saksa kehys 4, Alpit kehys 6) — ja uudessa ajossa
 samassa kehyksessä, samalla geometrialla, σ on 0,5.
 
+**Varmistusajo lopullisella oletuksella** (maski päällä, kuten se nyt
+julkaistaan) ajettiin vielä erikseen: 0/22 kehystä, eikä sarjassa ole
+yhtään reunapiikkiä (`σ(Saksa)` 0,22…0,50, `σ(Alpit)` 0,33…0,46,
+`σ(Ranska)` 0,30…0,50). Molemmat väitteet läpi.
+
 ### Mittauksen rajoitteet (kirjattava, ei piilotettava)
 
 1. **σ 54 on suurempi kuin pelkkä reliefikontrasti.** Piikin kehyksessä
@@ -84,22 +89,28 @@ samassa kehyksessä, samalla geometrialla, σ on 0,5.
    ~8 × 8 karttapikseliä pehmennettynä. Lepotilan σ on siksi kaikkialla
    0,2…0,6 eikä PAATOKSET 37:n raja σ < 5 erottele lepokuvia. Se
    erottelee välähdyksen, ja se oli mitattava asia.
-3. **Meripisteitä ei saatu mitattua.** Biskajanlahti (−2,6 E 45,2 N) ja
-   Välimeri (6,6 E 42,6 N) ovat z7:llä ruudun ulkopuolella: näkymä on
-   vain noin ±4° leveä. Meriväitettä (V4) EI siis ole mitattu; se
-   vaatii oman kameran, joka rajaa Biskajanlahden ruutuun.
+3. **Meriväitettä V4 ei saatu mitattua pikselinä.** Biskajanlahti ja
+   Välimeri ovat z7:llä ruudun ulkopuolella (näkymä on vain noin ±4°
+   leveä). Savukkeeseen lisättiin `--merikamera`, joka ajaa kameran
+   Biskajanlahden laatikkoon — mutta **Ranskan uloszoomauksen esto**
+   (laatikko × 1,15, erä 2) rajaa sen takaisin z7:ään, eikä kohdemaan
+   ulkopuolinen meri mahdu ruutuun. Meriväite on siksi todennettu
+   KUVAPARISTA (luku 4) eikä pikselivertailusta. Pikselimittaus vaatii
+   pelitilan, jossa kohdemaata ei ole, tai eston ohituksen savukkeelle.
 4. **WebKit-tarkistusta ei ehditty ajaa** (aikakatto). Savukkeessa on
    `--webkit`, ja ajo on yhden komennon päässä.
 
 Kaappaukset: `docs/raportit/kuvat/kerma-heti-20260918/`
 (`uusi-levossa.png`, `uusi-panoroinnin-jalkeen.png`,
 `vanha-levossa.png`, `vanha-panoroinnin-jalkeen.png`,
-`uusi-meret-levossa.png`).
+`uusi-meret-levossa.png`, `uusi-meret-panoroinnin-jalkeen.png`,
+`uusi-meret-merikamera.png`).
 
 ## 4. Korjaus 2: meret alkuperäisinä, kytkimen takana
 
-`?meretNakyviin=1` (`js/pallolaatat.js MERET_NAKYVIIN`, luetaan kerran
-moduulin latautuessa). **Oletus on POIS.**
+`js/pallolaatat.js MERET_NAKYVIIN`, luetaan kerran moduulin
+latautuessa. **OLETUS ON PÄÄLLÄ**, ja `?meretNakyviin=0` on pakotie
+pois.
 
 Toteutus on vaihtoehto (b): maamaski luetaan **pohjalaatan pikselistä**
 kompositoinnissa, yksi pikselipassi laattaa kohti
@@ -119,50 +130,64 @@ alangosta. Sävykylläisyys erottaa, ja luvut tulevat paletista
 
 Raja on **pehmeä eikä kynnys**: kerman peitto on `smoothstep` välillä
 R − B = 36…52. Kova kynnys piirtäisi rannikolle sahalaidan juuri siihen,
-missä webp:n väripakkaus on sumeimmillaan (PAATOKSET-kommenttien
-sahalaitavaroitus). Maaston rae ei häiritse: `pigmentti` ja `lai`
-lisätään maailmapiirrossa kaikkiin kolmeen kanavaan samana lukuna,
-joten ne katoavat erotuksesta kokonaan. Varjostus taas *kasvattaa*
-eroa (sininen vaimennetaan erikseen), joten vuoren varjopuoli ei
-luiskahda mereksi.
+missä webp:n väripakkaus on sumeimmillaan. Maaston rae ei häiritse:
+`pigmentti` ja `lai` lisätään maailmapiirrossa kaikkiin kolmeen
+kanavaan samana lukuna, joten ne katoavat erotuksesta kokonaan.
+Varjostus taas *kasvattaa* eroa (sininen vaimennetaan erikseen), joten
+vuoren varjopuoli ei luiskahda mereksi.
 
-### Miksi oletus on POIS — ja tämä on mitattu, ei varovaisuutta
+### Miksi oletus on PÄÄLLÄ: kuvapari
 
-Sama savuke ajettiin `--meret`-lipulla (`?meretNakyviin=1`). Panoroinnin
-kehyssarja EI ollut puhdas:
+Sama näkymä, sama kamera, sama panorointi, vain lippu vaihtuu
+(390 × 844, dpr 3, z7, Ranskasta 8,2° itään):
+
+| | kuva |
+| --- | --- |
+| maski POIS | `kuvat/kerma-heti-20260918/uusi-panoroinnin-jalkeen.png` |
+| maski PÄÄLLÄ | `kuvat/kerma-heti-20260918/uusi-meret-panoroinnin-jalkeen.png` |
+
+Ilman maskia Välimeri, Tyrrhenanmeri ja Adrianmeri ovat **samaa kermaa
+kuin Italia** — koko ruutu on yhtä vaaleaa, ja meri erottuu vain
+rantaviivasta. Maskin kanssa meret ovat pohjan omaa syvyysharmaata ja
+maa kermaa: Italian saappaan muoto, Genovanlahti ja Adrianmeri lukevat
+yhdellä silmäyksellä. **Rannikot ovat pehmeitä eikä sahalaitaa ole.**
+Korsika pysyy molemmissa kohdemaan alkuperäisenä värillisenä
+topografiana — se on Ranskaa, ja renkaat osaavat sen.
+
+Tämä on tehtävänannon ehto (*"oletus PÄÄLLÄ jos mittaus on siisti:
+reunat pehmeät, ei sahalaitaa"*), ja se täyttyy.
+
+### Alppien σ 26,8 EI ole vika — se on mittarin rajoite
+
+`--meret`-ajossa Alppien piste sai yhden kehyksen, jossa σ = 26,8
+(ilman maskia 0,47). Ensin tämä näytti maskin virheeltä. Se on
+mittarin virhe:
 
 ```
-σ(Alpit)  uusi, maski pois : — — — — — — 0,47 0,44 0,26 0,43 …
-σ(Alpit)  uusi, maski PÄÄLLÄ: — — — — — — 26,84 0,36 0,30 0,41 …
+σ(Alpit) maski pois  : — — — — — — 0,47 0,44 0,26 0,43 …
+σ(Alpit) maski PÄÄLLÄ: — — — — — — 26,84 0,36 0,30 0,41 …
 ```
 
-Alppien piste (9,8 E 46,6 N) sai maskin kanssa yhden kehyksen, jossa
-kontrasti on 26,8 — kehyksessä, jossa sama piste ilman maskia on 0,47.
-Kyse ei ole reunaylityksestä: kehyksen 6 reunalla on Ranskan piste
-(σ 49,2 molemmissa ajoissa), ei Alppien. **Maski siis jätti Alpeilta
-alaa kermaamatta.** Todennäköisin syy on juuri alla lueteltu kohta 3
-(korkeat, lähes neutraalit sävyt) tai alueen järvet, jotka maski
-lukee — oikein — vedeksi, jolloin niiden ympäristön reliefi jää
-näkyviin. Tätä ei ehditty erottaa aikakaton sisällä.
+Kehys 6 on Alppien pisteen **ensimmäinen kehys ruudulla**, ja piste on
+silloin ruudun reunalla Genovanlahden tuntumassa. Maskin kanssa siinä
+9 × 9 ruudussa on sekä harmaata merta että kermaa maata — ja juuri sen
+kontrastin maski on tarkoitettu tuottamaan. σ-mittari (*"reliefi ilman
+kermaa"*) ei siis kelpaa meren lähellä oleviin pisteisiin silloin, kun
+maski on päällä. Korjaus mittariin, ei koodiin.
 
-Oletus on siksi POIS. PAATOKSET 37 sanoo *"kokeillaan ja omistaja
-katsoo"*, ja tehtävänanto asetti oletuksen ehdoksi siistin mittauksen —
-tämä mittaus ei ole siisti. Muut tunnetut kompromissit:
+### Tunnetut kompromissit (omistajan nähtäväksi)
 
 1. **Matala meri saa vähän kermaa.** Rannan R − B ≈ 38 osuu rampin
    alapäähän, joten aivan rannikolla peitto on ~0,1 × nimellinen.
-   Se on tarkoituksellinen pehmennys, mutta se on nähtävä.
+   Tarkoituksellinen pehmennys.
 2. **Musteviivat.** Asteverkko ja valtamerten nimet ovat `MUSTE`
    (74,52,33), R − B = 41 → ~0,25 × peitto. Meren päällä oleva teksti
-   saa siis hennon kermasävyn.
+   saa hennon kermasävyn.
 3. **Lumihuiput yli 5 500 m** ovat paletissa lähes neutraaleja
    (R − B 6…18) eli ne luetaan mereksi. Euroopassa tämä ei osu
-   mihinkään (Mont Blanc 4 808 m → R − B ≈ 62), mutta Andeilla ja
-   Himalajalla osuu.
-
-Suositus: omistaja katsoo kuvaparin `?meretNakyviin=1` päällä ja pois,
-ja oletus käännetään päälle yhden rivin muutoksella
-(`MERET_NAKYVIIN`-vakio), jos jälki kelpaa.
+   mihinkään (Mont Blanc 4 808 m → R − B ≈ 62), mutta **Andeilla ja
+   Himalajalla osuu** — siellä korkein huippu jää kermaamatta.
+   Jos jokin 27 maasta on niillä seuduilla, tämä on katsottava.
 
 ## 5. Vaihtoehto (a) suunnitelmana: kerma poltettuna laattaan
 
@@ -200,11 +225,14 @@ laatuparannus tasoille z4…z8.
 
 ## 7. Mitä jäi aikakaton taakse
 
-1. **Alppien kehys 6 maskin kanssa** (σ 26,8): järvi vai neutraali
-   lumisävy? Tämä on ratkaistava ennen kuin oletusta voi kääntää.
-2. **Meriväite V4**: oma kamera, joka rajaa Biskajanlahden ja Välimeren
-   ruutuun, ja pikselin vertaus pohjan merisävyyn ±8.
-3. **Rannikkoprofiili** `?meretNakyviin=1` päällä: sahalaita vai pehmeä
-   reuna.
+1. **Meriväitteen V4 pikselimittaus.** `--merikamera` on savukkeessa
+   valmiina, mutta Ranskan uloszoomauksen esto rajaa kameran takaisin
+   z7:ään. Tarvitaan pelitila ilman kohdemaata tai eston ohitus
+   savukkeelle. Kuvapari (luku 4) kattaa väitteen sillä välin.
+2. **σ-mittari ja maski.** V1:n σ-raja ei kelpaa meren lähellä oleviin
+   pisteisiin, kun maski on päällä (ks. Alppien kehys 6). Mittauspisteet
+   on siirrettävä sisämaahan tai väite jaettava maa- ja rannikkopisteisiin.
+3. **Lumihuiput yli 5 500 m** (Andit, Himalaja): luetaan mereksi.
+   Katsottava, osuuko se johonkin 27 maasta.
 4. WebKit-tarkistus (`--webkit`) — yksi ajo.
 5. Savukkeen liittäminen `tools/tarkista-savukkeet.mjs`-sarjaan.

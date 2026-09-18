@@ -670,14 +670,20 @@ export const LAATTAKERROS_VARA_AST = 0.5;
 /** …ja vähintään tämä osuus laatikon suuremmasta sivusta (liikkeen vara). */
 export const LAATTAKERROS_VARA_OSUUS = 0.03;
 /*
- * MERET NÄKYVIIN ON KOKEILU KYTKIMEN TAKANA (`?meretNakyviin=1`).
+ * MERET NÄKYVIIN ON OLETUS, JA KYTKIN ON PAKOTIE (`?meretNakyviin=0`).
  *
  * Omistaja 18.9.2026 (PAATOKSET 37 kohta 2): *"Ainakin haluaisin
- * kokeilla ja nahda sen"*. Maamaski maksaa yhden pikselipassin laattaa
- * kohti (ks. maalaaKermaMaamaskilla), ja sen rannikkolaatu on
- * nähtävä ruudulla ennen kuin siitä tulee oletus — siksi tämä on
- * lippu eikä vaihdos. Oletus on POIS, kunnes omistaja on nähnyt
- * kuvaparin; kytkimen poistaminen on yhden rivin muutos tähän.
+ * kokeilla ja nahda sen, jos se ei ole iso tyo ottaa kayttoon."*
+ *
+ * OLETUS ON PÄÄLLÄ, KOSKA MITTAUS ON SIISTI. Kuvapari
+ * docs/raportit/kuvat/kerma-heti-20260918/uusi-panoroinnin-jalkeen.png
+ * (maski pois) ja uusi-meret-panoroinnin-jalkeen.png (maski päällä),
+ * 390 × 844 dpr 3, z7 Ranskasta itään: ilman maskia Välimeri,
+ * Tyrrhenanmeri ja Adrianmeri ovat samaa kermaa kuin Italia, maskin
+ * kanssa ne ovat pohjan omaa syvyysharmaata ja maa on kermaa.
+ * Rannikot ovat pehmeitä eikä sahalaitaa ole — ramppi on pehmeä
+ * (ks. maalaaKermaMaamaskilla) ja Korsika pysyy kohdemaana
+ * alkuperäisenä.
  *
  * LIPPU LUETAAN KERRAN MODUULIN LATAUTUESSA: laattoja rakennetaan
  * sadoittain, eikä jokainen niistä saa jäsentää osoiteriviä uudestaan.
@@ -685,9 +691,9 @@ export const LAATTAKERROS_VARA_OSUUS = 0.03;
 export const MERET_NAKYVIIN = (() => {
   try {
     const arvo = new URLSearchParams(globalThis.location?.search ?? '').get('meretNakyviin');
-    return arvo !== null && !/^(0|ei|off)$/.test(arvo);
+    return arvo === null || !/^(0|ei|off)$/.test(arvo);
   }
-  catch { return false; }
+  catch { return true; }
 })();
 /*
  * NOPEA EDESTAKAINEN PANOROINTI (omistajan palaute v1649, iPad,

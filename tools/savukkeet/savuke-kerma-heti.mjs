@@ -63,6 +63,7 @@ const KUVAT = valitsin('kuvat', '');
 const MERET = argv.includes('--meret');
 const VANHA = argv.includes('--vanha');
 const WEBKIT = argv.includes('--webkit');
+const MERIKAMERA = argv.includes('--merikamera');
 
 /*
  * VERTAILUAJON VANHA MODUULI TULEE GITISTÄ, EI KOPIONA. Savukkeen oma
@@ -192,11 +193,59 @@ await sivu.addStyleTag({
 });
 
 /*
+ * LAUDAN PROJEKTIO ON LUKITTU (leveys 12000, lon0 −175, pohjoinen 76;
+ * tools/generoi-laattapyramidi.mjs LAUTA). Kaava on tässä auki eikä
+ * tuotuna: savuke ei saa tuoda pelin karttamoduuleja Node-puolelle —
+ * sivu tuo ne itse. Sama ratkaisu kuin savuke-tasoitus-pallolla.
+ */
+const RAD = Math.PI / 180;
+const SKAALA = 12000 / (2 * Math.PI);
+const millerY = (lat) => -1.25 * Math.log(Math.tan(Math.PI / 4 + 0.4 * lat * RAD));
+const Y0 = millerY(76);
+const lautaX = (lon) => ((((lon + 175) * RAD) % (2 * Math.PI)) + 2 * Math.PI)
+  % (2 * Math.PI) * SKAALA;
+const lautaY = (lat) => (millerY(lat) - Y0) * SKAALA;
+const laatikkoAsteista = (k) => {
+  const x0 = lautaX(k.lon0);
+  const x1 = lautaX(k.lon1);
+  const y0 = lautaY(k.lat1);
+  const y1 = lautaY(k.lat0);
+  return { x: x0, y: y0, w: x1 - x0, h: y1 - y0 };
+};
+
+/*
+ * MERIKAMERA (`--merikamera`): Biskajanlahti ja Bretagnen rannikko
+ * ruutuun. Panorointiajon z7-näkymä on vain noin ±4° leveä, eivätkä
+ * meripisteet mahdu siihen lainkaan — ensimmäinen ajo 18.9.2026 kaatui
+ * juuri siihen ("piste ruudun ulkopuolella"). Meriväite on siis
+ * mitattava omasta kamerasta.
+ */
+const MERIKAMERAN_LAATIKKO = {
+  lon0: -6.5, lat0: 43.2, lon1: 1.0, lat1: 48.8,
+};
+
+/*
  * MITTAUSPISTEET. Jokainen on valittu niin, ettei sen päällä ole
  * kaupunkia, reittiä eikä nostoa, ja niin että siinä on reliefiä
  * mitattavaksi — tasaisella alangolla σ olisi lähtökohtaisesti nolla
  * eikä sen kutistumista voisi nähdä.
  */
+/*
+ * MERIKAMERAN PISTEET. `sisameri` on Ranskan suojan SISÄLLÄ oleva meri
+ * (Biskajanlahden pohjukka Arcachonin edustalla) ja se on VIITE: siellä
+ * kermaa ei ole kummassakaan tilassa, joten se kertoo pohjan oman
+ * merisävyn tässä näkymässä. `galicia` ja `bretagne` ovat kontrolli:
+ * kohdemaan ulkopuolista MAATA, jonka on erotuttava merestä — ilman
+ * niitä väite menisi läpi myös silloin, jos maski lukisi kaiken mereksi.
+ */
+const MERIPISTEET = [
+  { avain: 'sisameri', lon: -1.5, lat: 44.6, laji: 'meri-kohde' },
+  { avain: 'biskaja', lon: -4.5, lat: 45.5, laji: 'meri' },
+  { avain: 'kanaali', lon: -4.0, lat: 48.6, laji: 'meri' },
+  { avain: 'galicia', lon: -7.5, lat: 43.0, laji: 'maa-ulko' },
+  { avain: 'kantabria', lon: -4.0, lat: 43.0, laji: 'maa-ulko' },
+];
+
 const PISTEET = [
   { avain: 'saksa', lon: 8.5, lat: 47.8, laji: 'maa-ulko' },
   { avain: 'alpit', lon: 9.8, lat: 46.6, laji: 'maa-ulko' },
@@ -312,6 +361,56 @@ const kuvaan = async (nimi) => {
   writeFileSync(polku, await sivu.screenshot());
   return polku;
 };
+
+if (MERIKAMERA) {
+  /*
+   * KAMERA ENSIN, SITTEN LEPO UUDESTAAN: uusi näkymä hakee uudet
+   * laatat, ja kesken häivytyksen mitattu pikseli on kahden kartan
+   * sekoitus (savuke-tasoitus-pallon erän 1c löydös).
+   */
+  await sivu.evaluate(async (b) => {
+    await window.matkakirja.ui.pallolauta.kamera.ajaKamera({ bbox: b }, { kesto: 0, pakota: true });
+  }, laatikkoAsteista(MERIKAMERAN_LAATIKKO));
+  await sivu.waitForTimeout(2500);
+  const m2 = await odotaLepo();
+  tieto('merikamera levossa', `z${m2?.taso} · laattoja ${m2?.laattoja}`
+    + ` · valmiita ${m2?.valmiita} · värillisiä ${m2?.varillisia}`);
+  const nimi = `${VANHA ? 'vanha' : 'uusi'}${MERET ? '-meret' : ''}-merikamera`;
+  const polku = await kuvaan(nimi);
+  const n = await naytteet(MERIPISTEET);
+  tieto('merikamera pisteet', JSON.stringify(n));
+  /*
+   * MEREN ODOTUSARVO EI OLE SAVUKKEESEEN KIRJOITETTU LUKU vaan
+   * KOHDEMAAN SISÄPUOLINEN meri: Ranskan suojan sisällä kermaa ei ole
+   * kummassakaan tilassa, joten sama laatta kertoo itse, mikä pohjan
+   * merisävy tässä näkymässä on. Vertailu on siis laatan omaa sävyä
+   * vastaan eikä paletista pääteltyä.
+   */
+  const viite = n.sisameri;
+  if (!viite) vaadi('V4 viitepiste (kohdemaan sisäinen meri) on ruudulla', false, 'ei ruudulla');
+  else {
+    tieto('pohjan merisävy (viite)', `rgb ${viite.rgb.join(',')}`);
+    for (const avain of ['biskaja', 'kanaali']) {
+      const p = n[avain];
+      if (!p) { vaadi(`V4 ${avain} on ruudulla`, false, 'piste ruudun ulkopuolella'); continue; }
+      const ero = Math.max(...p.rgb.map((v, i) => Math.abs(v - viite.rgb[i])));
+      vaadi(`V4 ${avain} on pohjan merisävy ±8 (ei kermaa)`, ero <= 8,
+        `rgb ${p.rgb.join(',')} vs viite ${viite.rgb.join(',')} — suurin kanavaero ${ero}`);
+    }
+    for (const avain of ['galicia', 'kantabria']) {
+      const p = n[avain];
+      if (!p) { vaadi(`V4 ${avain} on ruudulla`, false, 'piste ruudun ulkopuolella'); continue; }
+      const ero = Math.max(...p.rgb.map((v, i) => Math.abs(v - viite.rgb[i])));
+      vaadi(`V4 ${avain} (kohdemaan ulkopuolinen MAA) EI ole merisävyä`, ero > 8,
+        `rgb ${p.rgb.join(',')} on merisävyn sisällä — maamaski luki maan mereksi`);
+    }
+  }
+  tieto('merikameran kuva', polku ?? '(ei tallennettu)');
+  console.log(`\n${lapi}/${kaikki} väitettä läpi`);
+  await selain.close();
+  palvelin.close();
+  process.exit(lapi === kaikki ? 0 : 1);
+}
 
 const ennen = await naytteet(PISTEET);
 tieto('levossa', JSON.stringify(ennen));
