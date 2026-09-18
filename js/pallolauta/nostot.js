@@ -38,7 +38,7 @@
 
 import {
   KOVAN_ESTEEN_PAINO,
-  VIUHKAN_ALAS_ALKU_PX, VIUHKAN_REUNAVARA_PX, VIUHKAN_SADE_PX,
+  VIUHKAN_ALAS_ALKU_PX, VIUHKAN_LAATIKON_SISA_PX, VIUHKAN_REUNAVARA_PX, VIUHKAN_SADE_PX,
   aiheenNimi, aihemerkinLaatikko, aihemerkkiElementti, aihenostonNimio, alasMahtuvatRivit,
   asetteleAihemerkki, keskitettyMahtuvatRivit, kohdanLaatikko, piirraViuhka, ryhmitaNostot,
   viuhkanAsemat, viuhkanNimioLeveys,
@@ -2702,7 +2702,23 @@ export function luoNostot({
           // hae asentoa merkin vasemmalta, joten esteen VASEN reuna
           // (`rivi.p.x - e.x0`) ei ole ehdokas — se vei listan
           // nappulan päälle omistajan kuvassa v1936.
-          const d = Math.round((e.x1 - rivi.p.x) + VIUHKAN_REUNAVARA_PX);
+          /*
+           * ETAISYYS MITATAAN LISTAN VASEMMASTA REUNASTA, EI MERKIN
+           * PISTEESTA (juurisyy savukkeen vartioon 8k, mitattu
+           * 18.9.2026). Rivin laatikko alkaa `VIUHKAN_SADE_PX -
+           * VIUHKAN_LAATIKON_SISA_PX` = 14 px merkin oikealta puolelta
+           * (aihemerkit.js kohdanLaatikko), joten merkin pisteesta
+           * laskettu ehdokas oli 14 px liian suuri. Pelinappula
+           * seisoo pelaajan kaupungin merkin kyljessa ja ulottuu
+           * 15,8 px merkin oikealle puolelle: oikea pako on 12 px,
+           * mutta ylisuuri 26 px:n ehdokas vei listan ruudun oikean
+           * laidan yli 390 px:n ruudulla. Silloin YKSIKAAN vaaka-
+           * ehdokas ei ollut vapaa, ja lista valui kolme rivia alas
+           * (`ero 78.00 px`) kuroakseen nappulan paallekkaisyytta —
+           * eli rikkoi kohdan 12 keskityksen 2 px:n takia.
+           */
+          const listanVasen = rivi.p.x + VIUHKAN_SADE_PX - VIUHKAN_LAATIKON_SISA_PX;
+          const d = Math.round((e.x1 + VIUHKAN_REUNAVARA_PX) - listanVasen);
           if (d > 0 && d < ruutuNyt.leveys && !vaakaEhdokkaat.includes(d)) {
             vaakaEhdokkaat.push(d);
           }
@@ -2826,6 +2842,15 @@ export function luoNostot({
             vaakaEhdokkaat,
             // Puoli on päätös, ei hakutulos (kohta 14 b).
             vainOikea: true,
+            /*
+             * KESKITYS ON MYÖS PÄÄTÖS (kohta 12). Pehmeä muste siirsi
+             * avatun liuskan kolme riviä merkin alapuolelle (savuke
+             * 8k, 390 px: *"ero 78.00 px"*), vaikka juuri se muste
+             * piilotetaan listan alta. Lista siirtyy pystysuunnassa
+             * enää kovan esteen tai ruudun reunan takia; ks.
+             * js/pallolauta/aihemerkit.js `pysyKeskella`.
+             */
+            pysyKeskella: true,
             valiPx,
             tiheinPx,
             riviPx,
