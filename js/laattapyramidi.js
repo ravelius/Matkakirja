@@ -376,15 +376,86 @@ export function laatoissaOnNimet() {
  * @param {string} tiiviste  merkin nykyinen sisältötiiviste
  */
 export function nostoOnPoltettu(tunnus, tiiviste) {
-  const nostot = luettelo?.nostotaso?.nostot ?? luettelo?.nostot;
+  const nostot = poltetutNostot();
   if (!nostot || !tunnus || !tiiviste) return false;
   return nostot[tunnus] === tiiviste;
 }
 
 /** Onko luettelossa lainkaan poltettuja nostoja? */
 export function laatoissaOnNostoja() {
-  const nostot = luettelo?.nostotaso?.nostot ?? luettelo?.nostot;
+  const nostot = poltetutNostot();
   return Boolean(nostot && Object.keys(nostot).length);
+}
+
+/*
+ * === KOLMAS MALLI: NOSTOTASO MAITTAIN (18.9.2026) ==================
+ *
+ * Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 17 d: *"muiden maiden
+ * nostot piiloon"*. Elävä kerros osasi jo vaieta naapureista
+ * (js/pallolauta/nostot.js NAYTA_VAIN_KOHDEMAAN_NOSTOT), mutta
+ * MAAILMANLAAJUISESSA nostolaatastossa naapurin muste on poltettu
+ * samaan kuvaan kuin kohdemaan — eikä kerros voi piilottaa sitä.
+ * Mitattu 18.9.2026 (kerma 0,85 päällä): Gotthard-nimiön kontrasti
+ * 14,8 / 13,9, tavoite < 10.
+ *
+ * KORJAUS ON SAMA KUIN VÄRITASOLLA: taso on maakohtainen. Luettelon
+ * `nostotasot[ISO]` kertoo, kenen laatat ämpärissä ovat, laatan osoite
+ * kantaa ISO-koodin (`<versio>/nostot/<ISO>/z…`, nostotasonKansio), ja
+ * peli hakee VAIN kohdemaan laataston. Kohdemaa on sama yksi luku kuin
+ * väritasolla (`variMaaNyt`) — kaksi päättelyä ehtisi olla eri mieltä,
+ * ja silloin kartalla olisi Ranskan nostot Belgian kohdalla.
+ *
+ * TIIVISTELUETTELO SEURAA LAATASTOA. Kun taso on maakohtainen, vain
+ * kohdemaan merkit ovat laatoissa, joten vain niistä saa vaieta.
+ * Naapurin merkin tiiviste ei ole taulussa lainkaan → se piirtyisi
+ * elävänä, ja elävä kerros piilottaa sen omalla säännöllään.
+ *
+ * VANHA LUETTELO (maailmanlaajuinen `nostotaso`) toimii ennallaan:
+ * taulua ei ole, ja funktiot putoavat vanhaan haaraan. Vanha peli
+ * uuden luettelon kanssa ei tunne `nostotasot`-taulua eikä löydä
+ * `nostotaso`-oliota → se piirtää jokaisen noston elävänä, mikä on
+ * oikein, koska pohjalaatoissa ei ole nostoja.
+ */
+
+/** Kohdemaan nostotason kirjaus (`nostotasot[ISO]`) tai null. */
+function nostotasonKirjaus() {
+  if (!luettelo?.nostotasot) return null;
+  if (!variMaaNyt) return null;
+  return luettelo.nostotasot[variMaaNyt] ?? null;
+}
+
+/** Tunnus→tiiviste-taulu, josta elävä kerros saa vaieta. */
+function poltetutNostot() {
+  if (luettelo?.nostotasot) return nostotasonKirjaus()?.nostot ?? null;
+  return luettelo?.nostotaso?.nostot ?? luettelo?.nostot;
+}
+
+/**
+ * Nostotason laattojen kansio (ilman `z/sarake/rivi`-osaa).
+ *
+ * TÄMÄ ON POLUN AINOA KAAVA — sekä peli (laattaUrl) että generaattori
+ * (tools/generoi-laattapyramidi.mjs) lukevat sen tästä, kuten
+ * väritasolla (varitasonKansio). Kaksi kopiota ehtisi eriytyä, ja
+ * lopputulos olisi 404 tai pahempi: oikean näköinen mutta väärän maan
+ * laatta.
+ *
+ * @param {object|null} kirjaus `pyramidi.nostotasot[ISO]` tai null.
+ * @param {{versio?: boolean}} [asetukset] `versio: false` jättää
+ *   version pois — generaattori kirjoittaa laatat ajokansioon, jonka
+ *   alle versio tulee vasta ämpärissä.
+ */
+export function nostotasonKansio(kirjaus, asetukset = {}) {
+  if (!kirjaus) return '';
+  const osat = [];
+  if (asetukset.versio !== false) osat.push(kirjaus.versio ?? '');
+  osat.push('nostot');
+  if (kirjaus.maa) osat.push(kirjaus.maa);
+  return osat.join('/');
+}
+
+/** Yhden nostotason laatan polku ämpärissä (ilman ämpärin etuliitettä). */
+export function nostotasonLaattapolku(kirjaus, z, sarake, rivi, muoto = 'webp', asetukset = {}) {
+  return `${nostotasonKansio(kirjaus, asetukset)}/z${z}/${sarake}/${rivi}.${muoto}`;
 }
 
 /*
@@ -622,7 +693,16 @@ export function pyramidinMittarit() {
  * tuplanäkymänä 2.9.2026.
  */
 const tasonVersio = (taso) => {
-  if (taso.nosto) return luettelo?.nostotaso?.versio ?? '';
+  /*
+   * NOSTOTASOLLA AVAIN ON KOKO POLKU, kun taso on maakohtainen —
+   * samasta syystä kuin väritasolla alla: kahdella maalla voi olla
+   * sama `versio`, ja pelkkä versio antaisi Ranskan ja Belgian
+   * nostolaatalle saman avaimen samassa ruudussa.
+   */
+  if (taso.nosto) {
+    const nk = nostotasonKirjaus();
+    return nk ? nostotasonKansio(nk) : (luettelo?.nostotaso?.versio ?? '');
+  }
   if (taso.viiva) return luettelo?.viivataso?.versio ?? '';
   if (taso.ranta) return luettelo?.rantataso?.versio ?? '';
   if (taso.reliefi) return reliefinVersio();
@@ -733,6 +813,15 @@ function laattaUrl(taso, sarake, rivi) {
   // <nostoversio>/nostot/z…. Oma versio on koko mallin päähyöty —
   // nostojen uusintapoltto ei koske pohjan ikuista välimuistia.
   if (taso.nosto) {
+    // MAAKOHTAINEN LAATASTO: ISO on polussa (nostotasonKansio), joten
+    // kohdemaan laatta ei voi olla naapurin laatta. Vanhalla
+    // maailmanlaajuisella luettelolla polku on täsmälleen entinen.
+    const nk = nostotasonKirjaus();
+    if (nk) {
+      return pyramidiUrl(nostotasonLaattapolku(
+        nk, taso.z, sarake, rivi, luettelo.muoto ?? 'webp',
+      ));
+    }
     return pyramidiUrl(`${luettelo.nostotaso.versio}/nostot/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
@@ -1596,7 +1685,15 @@ function paivitaKerros(tila, taso, laatta, arkki, alue, nakyva, kiire) {
  * mukanaan, ja laattaOlemassa lukisi väärää laatastoa.
  */
 function nostotasonTasot() {
-  const nt = luettelo?.nostotaso;
+  /*
+   * MAAKOHTAINEN TAULU VOITTAA (18.9.2026, ks. KOLMAS MALLI yllä).
+   * Kun luettelossa on `nostotasot`, maailmanlaajuista laatastoa ei
+   * ole olemassa: kerros rakennetaan VAIN kohdemaan kirjauksesta, ja
+   * ilman kohdemaata (maailmanäkymä, matka) kerrosta ei ole
+   * lainkaan — sama sääntö kuin väritasolla.
+   */
+  const maittain = Boolean(luettelo?.nostotasot);
+  const nt = maittain ? nostotasonKirjaus() : luettelo?.nostotaso;
   if (!nt?.tasot?.length || !nt.laatastot) return null;
   /*
    * VANHALLA SÄÄNNÖLLÄ PIIRRETTY TASO PIILOTETAAN KOKONAAN (1.9.2026,
@@ -1616,6 +1713,8 @@ function nostotasonTasot() {
    * ajo kirjoittaa uuden tunnuksen ja taso palaa käyttöön.
    */
   if (nt.saanto !== NOSTOLADONTA_SAANTO) return null;
+  // Maakohtainen tasolista on maakohtainen myös muistissa: maan
+  // vaihtuessa se on laskettava uudestaan (asetaVaritasonMaa).
   if (!luettelo.__nostoTasot) {
     luettelo.__nostoTasot = luettelo.tasot
       .filter((t) => nt.tasot.includes(t.z) && nt.laatastot[t.z])
@@ -1690,7 +1789,10 @@ export function asetaVaritasonMaa(iso) {
   if (uusi === variMaaNyt) return false;
   variMaaNyt = uusi;
   // Johdettu tasolista on maakohtainen: se on laskettava uudestaan.
-  if (luettelo) luettelo.__variTasot = null;
+  // NOSTOTASO ON SAMAN LUVUN VARASSA (18.9.2026): sen laatasto,
+  // versio ja osoite tulevat kohdemaan kirjauksesta, joten sekin
+  // johdettu lista mitätöidään tässä yhdessä paikassa.
+  if (luettelo) { luettelo.__variTasot = null; luettelo.__nostoTasot = null; }
   return true;
 }
 
