@@ -808,6 +808,254 @@ for (const ruutu of RUUDUT) {
             path: join(KUVAKANSIO, 'liuska-k16-pariisi-nahtavyydet.png'), scale: 'css',
           });
         }
+
+        /* --- vartio 13: KOKORUUTU ZOOMAA YLA- JA ALAOSAN TAYTEEN ----
+         *
+         * PAATOKSET 34 kohta 18 h (omistaja 18.9.2026, sanatarkasti):
+         * *"Ylä ja alaosa täyttyy kun käyttäjä zoomaa sisään"*.
+         *
+         * Kohdekartta on vaakakuva, joten kokoruutu avautuu LEVEYTEEN
+         * sovitettuna ja pystyruudulla kartan ylle ja alle jää mustaa —
+         * se on kuvasuhteen laki eikä mitoituksen puute (vartio 12).
+         * Lupaus on, että ZOOMATESSA se musta täyttyy: kartta saa
+         * kasvaa yli kehyksen, kehys yli kuvasuhteen ja molemmat ruudun
+         * korkeuteen asti.
+         *
+         * NELJÄ VÄITETTÄ SAMASTA AVATUSTA KARTASTA: avaus on leveyteen
+         * sovitettu, nipistys sisään täyttää korkeuden, zoomattuna
+         * raahaus panoroi ja kohteen napautus avaa yhä kohteen. Kolme
+         * viimeistä kuuluvat yhteen: jos zoom ottaisi eleet itselleen,
+         * napautus kuolisi — juuri se on mitattava samasta tilasta.
+         *
+         * ELE ON AITO NIPISTYS, EI NAPPI. js/karttazoom.js lukee
+         * nipistyksen KOSKETUSTAPAHTUMISTA (iOS peruu osoitintapahtumat
+         * kesken eleen), ja juuri se reitti on omistajan iPhonella
+         * käytössä — kokoruudun kloonilla ei ole enää +/- -painikkeita
+         * (kohta 18 g), joten nappireitti ei todistaisi mitään.
+         */
+        if (ruutu.width === 390) {
+          const avaus = await sivu.evaluate(async () => {
+            const d = document.getElementById('tiivis-lehtiarkki');
+            const nappi = d?.querySelector('.kartta-kokoruutu-nappi');
+            if (!nappi) return null;
+            nappi.click();
+            let lava = null;
+            for (let i = 0; i < 20; i += 1) {
+              /* eslint-disable no-await-in-loop */
+              await new Promise((r) => { setTimeout(r, 100); });
+              lava = document.querySelector('.kartta-suurennos .kartta-lava');
+              if (lava && lava.getBoundingClientRect().height > 0) break;
+              /* eslint-enable no-await-in-loop */
+            }
+            if (!lava) return null;
+            const kortti = document.querySelector('.kartta-suurennos');
+            const kehys = kortti.querySelector('.kartta-kehys');
+            const lr = lava.getBoundingClientRect();
+            const kr = kehys.getBoundingClientRect();
+            return {
+              vw: Math.round(window.visualViewport?.width || window.innerWidth),
+              vh: Math.round(window.visualViewport?.height || window.innerHeight),
+              kortinLeveys: Math.round(kortti.getBoundingClientRect().width),
+              lavanKorkeus: Math.round(lr.height),
+              lavanLeveys: Math.round(lr.width),
+              kehyksenKorkeus: Math.round(kr.height),
+              keski: {
+                x: Math.round(kr.left + kr.width / 2),
+                y: Math.round(kr.top + kr.height / 2),
+              },
+            };
+          });
+          tieto(`${tunnus}: kokoruudun avaus`, JSON.stringify(avaus));
+          vaadi(`${tunnus}: kokoruutu avautuu leveyteen sovitettuna (>= 97 % leveydestä)`,
+            Boolean(avaus) && avaus.kortinLeveys >= avaus.vw * 0.97,
+            `kortti ${avaus?.kortinLeveys ?? '-'} px / ruutu ${avaus?.vw ?? '-'} px`);
+          if (avaus) {
+            /*
+             * NIPISTYS KAHDEN SORMEN KOSKETUSTAPAHTUMINA. Playwrightilla
+             * ei ole nipistyselettä, mutta widget lukee tasan nämä
+             * tapahtumat (touchstart/touchmove/touchend, touches-lista),
+             * joten synteettinen ele kulkee samaa koodipolkua kuin sormi.
+             * Loppuetäisyys on kuusinkertainen: kerroin puskee widgetin
+             * omaan kattoon, joka kokoruudulla lasketaan ruudusta
+             * (js/nahtavyydet.js: ruudunKatto).
+             */
+            const zoomattu = await sivu.evaluate(async (keski) => {
+              const kehys = document.querySelector('.kartta-suurennos .kartta-kehys');
+              const lava = document.querySelector('.kartta-suurennos .kartta-lava');
+              if (!kehys || !lava || typeof TouchEvent !== 'function') return null;
+              const tee = (pp) => pp.map((pi, i) => new Touch({
+                identifier: i, target: kehys, clientX: pi.x, clientY: pi.y,
+              }));
+              const laukaise = (tyyppi, pisteet, muuttuneet = pisteet) => {
+                kehys.dispatchEvent(new TouchEvent(tyyppi, {
+                  touches: tee(pisteet),
+                  targetTouches: tee(pisteet),
+                  changedTouches: tee(muuttuneet),
+                  bubbles: true,
+                  cancelable: true,
+                }));
+              };
+              const parit = (puolikas) => [
+                { x: keski.x - puolikas, y: keski.y },
+                { x: keski.x + puolikas, y: keski.y },
+              ];
+              laukaise('touchstart', parit(30));
+              for (const puolikas of [60, 100, 140, 180]) {
+                /* eslint-disable no-await-in-loop */
+                laukaise('touchmove', parit(puolikas));
+                await new Promise((r) => { setTimeout(r, 60); });
+                /* eslint-enable no-await-in-loop */
+              }
+              laukaise('touchend', [], parit(180));
+              await new Promise((r) => { setTimeout(r, 400); });
+              const korkeus = window.visualViewport?.height || window.innerHeight;
+              const lr = lava.getBoundingClientRect();
+              const kr = kehys.getBoundingClientRect();
+              const m = new DOMMatrixReadOnly(getComputedStyle(lava).transform);
+              return {
+                kerroin: Number(m.a.toFixed(3)),
+                lavanKorkeus: Math.round(lr.height),
+                lavanYla: Math.round(lr.top),
+                lavanVasen: Math.round(lr.left),
+                kehyksenKorkeus: Math.round(kr.height),
+                osuus: Math.round((lr.height / korkeus) * 100),
+                kehyksenOsuus: Math.round((kr.height / korkeus) * 100),
+              };
+            }, avaus.keski);
+            tieto(`${tunnus}: kokoruutu nipistyksen jälkeen`, JSON.stringify(zoomattu));
+            vaadi(`${tunnus}: nipistys sisään täyttää ruudun korkeuden (lava >= 95 %)`,
+              Boolean(zoomattu) && zoomattu.lavanKorkeus >= avaus.vh * 0.95,
+              `lava ${zoomattu?.lavanKorkeus ?? '-'} px / ruutu ${avaus.vh} px `
+              + `(${zoomattu?.osuus ?? '-'} %), kerroin ${zoomattu?.kerroin ?? '-'}`);
+            vaadi(`${tunnus}: zoomattu kehys peittää ruudun ylä- ja alaosan (>= 95 %)`,
+              Boolean(zoomattu) && zoomattu.kehyksenKorkeus >= avaus.vh * 0.95,
+              `kehys ${zoomattu?.kehyksenKorkeus ?? '-'} px / ruutu ${avaus.vh} px `
+              + `(${zoomattu?.kehyksenOsuus ?? '-'} %)`);
+            /*
+             * PANOROINTI VAAKAAN. Pystysuunnassa liikkumavara on
+             * tarkoituksella nolla juuri katossa: kehys kasvatetaan
+             * tasan niin korkeaksi kuin zoomattua karttaa riittää
+             * (js/nahtavyydet.js: levita), joten kartta on pystyssä
+             * täsmälleen ikkunan mittainen. Leveyssuunnassa karttaa on
+             * moninkertaisesti yli, ja siellä raahauksen on liikuttava.
+             */
+            /*
+             * OTE KARTASTA, EI KOHTEESTA. js/karttazoom.js ei aloita
+             * panorointia kohteen napista (`e.target.closest('button')`):
+             * raahaus kaappaa osoittimen, eikä kaapatun osoittimen
+             * napsautus enää osu nappiin, jolloin kohteen avaaminen
+             * kuolisi. Zoomattuna piirrokset ovat isoja, ja kehyksen
+             * keskipiste osui mitattuna suoraan yhteen niistä — ote
+             * haetaan siksi ruudulta: lähin piste keskestä, jossa
+             * päällimmäisenä on kartta eikä nappi.
+             */
+            const otePiste = await sivu.evaluate(() => {
+              const kehys = document.querySelector('.kartta-suurennos .kartta-kehys');
+              const kr = kehys?.getBoundingClientRect();
+              if (!kr) return null;
+              const kx = kr.left + kr.width / 2;
+              const ky = kr.top + kr.height / 2;
+              for (let sade = 0; sade <= 160; sade += 20) {
+                for (const suunta of [[0, 1], [0, -1], [1, 0], [-1, 0], [1, 1], [-1, -1]]) {
+                  const x = Math.round(kx + suunta[0] * sade);
+                  const y = Math.round(ky + suunta[1] * sade);
+                  if (x < kr.left + 30 || x > kr.right - 30) continue;
+                  if (y < kr.top + 30 || y > kr.bottom - 30) continue;
+                  const el = document.elementFromPoint(x, y);
+                  if (el && !el.closest('button, a') && kehys.contains(el)) return { x, y };
+                }
+              }
+              return null;
+            });
+            tieto(`${tunnus}: kokoruudun oteperä`, JSON.stringify(otePiste));
+            const ote = otePiste ?? avaus.keski;
+            await sivu.mouse.move(ote.x, ote.y);
+            await sivu.mouse.down();
+            await sivu.mouse.move(ote.x - 120, ote.y, { steps: 8 });
+            await sivu.mouse.up();
+            await sivu.waitForTimeout(500);
+            const panoroitu = await sivu.evaluate(() => {
+              const lava = document.querySelector('.kartta-suurennos .kartta-lava');
+              const r = lava?.getBoundingClientRect();
+              return r ? { vasen: Math.round(r.left), yla: Math.round(r.top) } : null;
+            });
+            tieto(`${tunnus}: kokoruutu panoroinnin jälkeen`, JSON.stringify(panoroitu));
+            vaadi(`${tunnus}: zoomattuna raahaus panoroi lavaa`,
+              Boolean(panoroitu) && Boolean(zoomattu)
+                && Math.abs(panoroitu.vasen - zoomattu.lavanVasen) > 40,
+              `vasen ${zoomattu?.lavanVasen ?? '-'} -> ${panoroitu?.vasen ?? '-'} px`);
+            /*
+             * KOHTEEN NAPAUTUS ZOOMATTUNA. Kohde valitaan ruudulta
+             * mitatusti (näkyvissä oleva täplä lähinnä kehyksen keskeä),
+             * ja napautus on aito hiiren napautus siihen pisteeseen —
+             * ei avaajan kutsu. Piirroskohde suurenee ensin, ja vasta
+             * suurennoksen napautus avaa jutun (kaksivaiheisuus, ks.
+             * js/nahtavyydet.js).
+             */
+            const kohdePiste = await sivu.evaluate(() => {
+              const kehys = document.querySelector('.kartta-suurennos .kartta-kehys');
+              const kr = kehys?.getBoundingClientRect();
+              if (!kr) return null;
+              const kx = kr.left + kr.width / 2;
+              const ky = kr.top + kr.height / 2;
+              const ehdokkaat = [...kehys.querySelectorAll('.maakartta-piste')]
+                .map((el) => {
+                  const r = el.getBoundingClientRect();
+                  return { x: r.left + r.width / 2, y: r.top + r.height / 2, r };
+                })
+                .filter((pi) => pi.r.width > 0 && pi.x > kr.left + 8 && pi.x < kr.right - 8
+                  && pi.y > kr.top + 8 && pi.y < kr.bottom - 8)
+                .sort((a, b) => Math.hypot(a.x - kx, a.y - ky) - Math.hypot(b.x - kx, b.y - ky));
+              const p = ehdokkaat[0];
+              return p ? { x: Math.round(p.x), y: Math.round(p.y) } : null;
+            });
+            let kohdeAuki = false;
+            let valintaTuli = false;
+            if (kohdePiste) {
+              await sivu.mouse.click(kohdePiste.x, kohdePiste.y);
+              await sivu.waitForTimeout(500);
+              const valinta = await sivu.evaluate(() => {
+                const v = document.querySelector('.kartta-suurennos .kartta-kohdevalinta');
+                const r = v?.getBoundingClientRect();
+                return r
+                  ? { x: Math.round(r.left + r.width / 2), y: Math.round(r.top + r.height / 2) }
+                  : null;
+              });
+              valintaTuli = Boolean(valinta);
+              if (valinta) {
+                await sivu.mouse.click(valinta.x, valinta.y);
+                await sivu.waitForTimeout(600);
+              }
+              kohdeAuki = await sivu.evaluate(() => [...document.querySelectorAll('dialog[open]')]
+                .some((d) => d.id !== 'tiivis-lehtiarkki' && d.id !== 'arrival-dialog'));
+            }
+            tieto(`${tunnus}: kokoruudun kohde zoomattuna`,
+              JSON.stringify({ kohdePiste, valintaTuli, kohdeAuki }));
+            vaadi(`${tunnus}: kohteen napautus toimii zoomattuna kokoruudulla`,
+              Boolean(kohdePiste) && kohdeAuki,
+              `piste ${JSON.stringify(kohdePiste)}, suurennos ${valintaTuli}`);
+          }
+          /*
+           * TILA TAKAISIN: kokoruutu ja mahdollinen kohteen arkki
+           * suljetaan ja nähtävyysnäkymä avataan uudelleen — seuraavat
+           * vartiot lukevat arkin karttaa, eikä tämä erä saa jättää
+           * niiden alle omaa ikkunaansa.
+           */
+          await sivu.evaluate(() => {
+            window.matkakirja.ui.suljeKulttuuriKuva?.();
+            // Kohteen oma arkki jää auki kokoruudun päälle (avaaKohde), eikä
+            // se ole kulttuurikuva: se suljetaan nimeltä riippumatta, jotta
+            // seuraavat vartiot eivät napauta sen läpi.
+            for (const d of document.querySelectorAll('dialog[open]')) {
+              if (d.id !== 'arrival-dialog') d.close();
+            }
+          });
+          await sivu.waitForTimeout(250);
+          await suljeArkki();
+          await sivu.waitForTimeout(300);
+          await napautaRivi('nahtavyydet', 'nahtavyysnakyma');
+          await sivu.waitForTimeout(400);
+        }
         /*
          * "LUE LISÄÄ" -VARTIO ON VANHENTUNUT PARIISIN KOHDALLA (kohta
          * 17 e): Pariisin nähtävyysteksti on lyhyempi kuin katkaisuraja
