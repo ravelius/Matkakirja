@@ -1,28 +1,31 @@
 /*
- * Savuke: PUHEKUPLAT SULKEUTUVAT NAPAUTUKSESTA JA IMEYTYVÄT PLUSKUPLAAN.
+ * Savuke: PUHEKUPLAT SULKEUTUVAT NAPAUTUKSESTA.
  *
  * OMISTAJAN TILAUS 13.9.2026, sanatarkasti: *"Ota pulun puhekuplista
  * sulkemis ruksi pois. Ja muuta toiminto niin että Puhekuplat voi
- * sulkea napauttamalla niitä. Saisiko sulkemisen animoitua niin että
- * kuplat ihan kuin imeytyisivät pienen puhekuplan sisälle joka jää
- * jäljelle sulkeutumisen jälkeen ja jossa on se pieni + symboli
- * uudelleen avausta varten."*
+ * sulkea napauttamalla niitä."*
+ *
+ * PLUSKUPLA POISTETTIIN 18.9.2026 (omistaja, Raamattu "KARTTAUUDISTUKSEN
+ * PAATOKSET 34" kohta 20 a): imeytymisen kohdetta ei enää piirretä,
+ * joten kuplat vain sulkeutuvat paikallaan. Paluureitti repliikkeihin
+ * on chatin ylärivin "Näytä puhekuplat" — sen oma mittari on
+ * tools/savukkeet/savuke-nayta-puhekuplat.mjs.
  *
  * MITÄ TÄMÄ MITTAA, jota yksikkötesti ei näe: oikean selaimen
- * transitionin. Kuplan TODELLISEN muunnoksen kesken lennon (siirtyykö
- * se pluskuplaa kohti ja kutistuuko), pluskuplan näkyvyyden lennon
- * jälkeen, sen ettei ruksia enää ole, ja sen että palautettu kupla on
- * oikeasti näkyvä eikä imeytymisen jäljiltä läpinäkyvä tynkä.
+ * sulkemisliikkeen. Kuplan TODELLISEN häipymisen napautuksen jälkeen,
+ * sen ettei ruksia eikä pluskuplaa enää ole, ja sen ettei napautus
+ * avaa chattia.
  *
  * VASTAKOE kuuluu ajoon.
  *
- *   node tools/savukkeet/savuke-kuplan-imu.mjs
+ *   PLAYWRIGHT_JS=<polku> CHROMIUM=<polku> \
+ *     node tools/savukkeet/savuke-kuplan-imu.mjs
  */
 import http from 'node:http';
 import { readFileSync, existsSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
-const paketti = await import('playwright')
+const paketti = await import(process.env.PLAYWRIGHT_JS ?? 'playwright')
   .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
@@ -49,8 +52,16 @@ const vaadi = (nimi, ehto, lisa = '') => {
   if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
 };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
-const ctx = await selain.newContext({ viewport: { width: 390, height: 844 }, serviceWorkers: 'block' });
+const selain = await chromium.launch({ executablePath: process.env.CHROMIUM || '/opt/pw-browsers/chromium' });
+/*
+ * TYÖPÖYDÄN RUUTU, EI PUHELIMEN. Puhelimella (ja kertojan luennan
+ * aikana) pulun kupla ALOITTAA suljettuna — js/ui-apurit.js
+ * tekstitPiilossa → js/pollo.js imePuhelimenKuplaan — joten 390 px:n
+ * ruudulla pinoon ei jää kuplaa, jota napauttaa. Mitattava asia on
+ * napautuksen sulkumekaniikka, joten se mitataan siellä missä kupla
+ * jää ruudulle. Puhelimen oma sopimus: savuke-nayta-puhekuplat.mjs.
+ */
+const ctx = await selain.newContext({ viewport: { width: 1400, height: 900 }, serviceWorkers: 'block' });
 const sivu = await ctx.newPage();
 const virheet = [];
 sivu.on('pageerror', (e) => virheet.push(String(e)));
@@ -91,7 +102,7 @@ const luotu = await sivu.evaluate(async () => {
 vaadi('puhekuplia saatiin pinoon', (luotu.kuplia ?? 0) > 0, JSON.stringify(luotu));
 vaadi('sulkuruksia ei ole enää lainkaan', luotu.ruksi === 0, JSON.stringify(luotu));
 
-/* Napautus kuplaan: mitataan muunnos kesken lennon. */
+/* Napautus kuplaan: mitataan häipyminen kesken sulkemisen. */
 const lento = await sivu.evaluate(async () => {
   const kupla = document.querySelector('.pollo-kuplapino .pollo-vihje[data-laji="puhe"]');
   if (!kupla) return { virhe: 'kuplaa ei ole' };
@@ -102,78 +113,57 @@ const lento = await sivu.evaluate(async () => {
   }));
   tapahtuma('pointerdown');
   tapahtuma('pointerup');
-  // Kesken lennon: transition on käynnissä 320 ms, mitataan puolivälissä.
-  await new Promise((r) => setTimeout(r, 140));
+  // Kesken sulkemisen: siirtymä on käynnissä, mitataan puolivälissä.
+  await new Promise((r) => setTimeout(r, 80));
   const tyyli = getComputedStyle(kupla);
-  const palautus = document.querySelector('.pollo-kuplapalautus');
-  const pRect = palautus?.getBoundingClientRect() ?? null;
-  const kRect = kupla.getBoundingClientRect();
   return {
-    muunnos: tyyli.transform,
     lapinakyvyys: Number(tyyli.opacity),
-    palautusNakyy: Boolean(palautus && !palautus.hidden),
-    palautusMerkki: palautus?.textContent ?? '',
-    // Etäisyys pluskuplaan ennen ja kesken lennon: sen pitää pienentyä.
-    etaisyysEnnen: pRect ? Math.hypot(
-      (ennen.left + ennen.width / 2) - (pRect.left + pRect.width / 2),
-      (ennen.top + ennen.height / 2) - (pRect.top + pRect.height / 2),
-    ) : null,
-    etaisyysNyt: pRect ? Math.hypot(
-      (kRect.left + kRect.width / 2) - (pRect.left + pRect.width / 2),
-      (kRect.top + kRect.height / 2) - (pRect.top + pRect.height / 2),
-    ) : null,
+    // Kohta 20 a: pluskuplaa ei saa olla DOMissa missään vaiheessa.
+    pluskuplia: document.querySelectorAll('.pollo-kuplapalautus').length,
   };
 });
 
-vaadi('napautus käynnisti muunnoksen', lento.muunnos && lento.muunnos !== 'none',
-  JSON.stringify(lento.muunnos));
-vaadi('kupla kutistuu lennon aikana',
-  /matrix\(([\d.]+)/.test(lento.muunnos) && Number(/matrix\(([\d.]+)/.exec(lento.muunnos)[1]) < 0.95,
-  JSON.stringify(lento.muunnos));
-vaadi('kupla häipyy lennon aikana', lento.lapinakyvyys < 0.95, String(lento.lapinakyvyys));
-vaadi('kupla liikkuu pluskuplaa kohti',
-  lento.etaisyysNyt !== null && lento.etaisyysNyt < lento.etaisyysEnnen,
-  JSON.stringify({ ennen: lento.etaisyysEnnen, nyt: lento.etaisyysNyt }));
-vaadi('pluskupla on näkyvissä lennon aikana', lento.palautusNakyy, JSON.stringify(lento));
-vaadi('pluskuplassa on + merkki', (lento.palautusMerkki ?? '').trim() === '+',
-  JSON.stringify(lento.palautusMerkki));
+vaadi('kupla häipyy sulkemisen aikana', lento.lapinakyvyys < 0.95,
+  JSON.stringify(lento));
+vaadi('pluskuplaa ei synny sulkemisesta', lento.pluskuplia === 0,
+  JSON.stringify(lento));
 
-/* Lennon jälkeen: kuplat poissa, pluskupla jäi. */
+/* Sulkemisen jälkeen: kuplat poissa, chatti kiinni, ei pluskuplaa. */
 await sivu.waitForTimeout(700);
 const jalkeen = await sivu.evaluate(() => ({
   kuplia: document.querySelectorAll('.pollo-kuplapino .pollo-vihje[data-laji="puhe"]').length,
-  palautusNakyy: (() => {
-    const p = document.querySelector('.pollo-kuplapalautus');
-    return Boolean(p && !p.hidden && p.getBoundingClientRect().width > 0);
-  })(),
-  chatAuki: Boolean(document.querySelector('.pollo-chat:not([hidden])')),
+  pluskuplia: document.querySelectorAll('.pollo-kuplapalautus').length,
+  chatAuki: Boolean(document.querySelector('.pollo-paneeli:not([hidden])')),
 }));
-vaadi('kuplat katosivat lennon jälkeen', jalkeen.kuplia === 0, JSON.stringify(jalkeen));
-vaadi('pluskupla jäi ruudulle', jalkeen.palautusNakyy, JSON.stringify(jalkeen));
+vaadi('kuplat katosivat sulkemisen jälkeen', jalkeen.kuplia === 0, JSON.stringify(jalkeen));
+vaadi('pluskuplaa ei jäänyt ruudulle', jalkeen.pluskuplia === 0, JSON.stringify(jalkeen));
 vaadi('napautus EI avannut chattia', !jalkeen.chatAuki, JSON.stringify(jalkeen));
 
 /*
- * PLUSKUPLA EI SAA KADOTA ITSESTÄÄN. Napautus voi osua kesken osiin
- * jaettua puheenvuoroa; jos sitä ei katkaista, loput osat saapuvat
- * sekunnin päästä, avaavat pinon uudelleen ja syövät juuri syntyneen
- * pluskuplan. Mitattu ennen korjausta: pluskupla katosi 400 ms:n
- * jälkeen itsestään.
+ * MUISTI JÄÄ, VAIKKA KUPLA KATOAA. Sulku katkaisee kesken olevan
+ * puheenvuoron (peruPuheenvuoro); ilman sitä loput osat saapuisivat
+ * sekunnin päästä ja avaisivat pinon uudelleen. Muistin varassa on
+ * chatin ylärivin nappi, joten se mitataan tässä suoraan.
  */
-const pysyy = await sivu.evaluate(async () => {
-  const nayta = () => {
-    const el = document.querySelector('.pollo-kuplapalautus');
-    return Boolean(el && !el.hidden && el.getBoundingClientRect().width > 0);
-  };
-  const a = nayta();
+const muisti = await sivu.evaluate(async () => {
+  const pollo = window.matkakirjaPollo ?? window.matkakirja?.ui?.pollo;
+  const lue = () => Boolean(pollo?.viimeisinPiilotettuKupla);
+  const heti = lue();
   await new Promise((r) => setTimeout(r, 1800));
-  return { heti: a, myohemmin: nayta() };
+  return {
+    heti,
+    myohemmin: lue(),
+    kuplia: document.querySelectorAll('.pollo-kuplapino .pollo-vihje[data-laji="puhe"]').length,
+  };
 });
-vaadi('pluskupla ei katoa itsestään sulkemisen jälkeen',
-  pysyy.heti && pysyy.myohemmin, JSON.stringify(pysyy));
+vaadi('viimeisin repliikki jää muistiin palautusta varten',
+  muisti.heti && muisti.myohemmin, JSON.stringify(muisti));
+vaadi('kuplat eivät palaa itsestään', muisti.kuplia === 0, JSON.stringify(muisti));
 
-/* Pluskuplasta takaisin: palautetun kuplan pitää olla oikeasti näkyvä. */
+/* Palautus pelin omalla polulla: kuplan pitää olla oikeasti näkyvä. */
 const palautettu = await sivu.evaluate(async () => {
-  document.querySelector('.pollo-kuplapalautus')?.click();
+  const pollo = window.matkakirjaPollo ?? window.matkakirja?.ui?.pollo;
+  pollo?.naytaPuhekuplatUudelleen();
   await new Promise((r) => setTimeout(r, 500));
   const kupla = document.querySelector('.pollo-kuplapino .pollo-vihje[data-laji="puhe"]');
   if (!kupla) return { on: false };
@@ -184,8 +174,8 @@ const palautettu = await sivu.evaluate(async () => {
     leveys: r.width, korkeus: r.height, osoitin: t.pointerEvents,
   };
 });
-vaadi('pluskupla palauttaa kuplan', palautettu.on, JSON.stringify(palautettu));
-vaadi('palautettu kupla on näkyvä eikä imeytymisen tynkä',
+vaadi('palautus tuo kuplan takaisin', palautettu.on, JSON.stringify(palautettu));
+vaadi('palautettu kupla on näkyvä eikä sulkemisen tynkä',
   palautettu.on && palautettu.lapinakyvyys > 0.9 && palautettu.leveys > 40
     && palautettu.korkeus > 10 && palautettu.osoitin !== 'none',
   JSON.stringify(palautettu));

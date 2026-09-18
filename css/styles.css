@@ -21021,6 +21021,12 @@ body.lento-kesken .pollo-nappi.pollo-ilmestyy {
  * SULKURUKSI POISTETTU (omistaja 13.9.2026: *"Ota pulun puhekuplista
  * sulkemis ruksi pois. Ja muuta toiminto niin että Puhekuplat voi
  * sulkea napauttamalla niitä."*). Kupla itse on sulkunappi, ja
+ * HUOM 18.9.2026 (omistajan kohta 20 a): pluskuplaa EI ENÄÄ PIIRRETÄ
+ * — js/pollo.js ei luo elementtiä lainkaan, joten alla olevat säännöt
+ * eivät osu mihinkään. Ne on jätetty paikalleen vain, jotta pulun
+ * piilotuslistat (js/ui.js PULUN_PIILO_OSAT) pysyvät ehjinä; paluureitti
+ * kupliin on nyt chatin ylärivin .pollo-naytakuplat.
+ *
  * sulkeminen imee kuplat pluskuplaan (.pollo-kuplapalautus), joka jää
  * ruudulle avaamista varten.
  */
@@ -21863,8 +21869,42 @@ a.pollo-tekstilinkki {
 .pollo-ylarivi {
   display: flex;
   justify-content: flex-end;
+  gap: 0.4rem;
   padding: 0.4rem 0.55rem 0;
 }
+
+/*
+ * "NÄYTÄ PUHEKUPLAT" — CHATIN PALUUREITTI OHI MENNEISIIN REPLIIKKEIHIN
+ * (omistaja 18.9.2026, Raamattu "KARTTAUUDISTUKSEN PAATOKSET 34"
+ * kohta 20 b).
+ *
+ * Sama pikkupilleri kuin .pollo-ehdota — rivi on paljasta paperia,
+ * eikä toinen nappi saa muuttaa sen luonnetta. Nappi PIILOTETAAN
+ * kokonaan, kun näytettävää ei ole (kohta 20 c): himmeä disabled-nappi
+ * jäisi lupaamaan jotain, mitä ei ole.
+ */
+button.pollo-naytakuplat {
+  padding: 0.12rem 0.55rem;
+  min-height: 0;
+  border: 1px solid var(--pollo-viiva);
+  border-radius: 999px;
+  background: var(--pollo-paperi-2);
+  color: var(--pollo-korostus);
+  font-family: inherit;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+button.pollo-naytakuplat:hover,
+button.pollo-naytakuplat:focus-visible,
+body[data-mode] .actions .pollo-paneeli button.pollo-naytakuplat:hover {
+  border-color: var(--pollo-korostus);
+  background: rgba(122, 85, 20, 0.16);
+  color: var(--pollo-muste);
+}
+
+.pollo-naytakuplat[hidden] { display: none; }
 
 button.pollo-ehdota {
   padding: 0.12rem 0.55rem;
