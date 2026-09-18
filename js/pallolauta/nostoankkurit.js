@@ -53,6 +53,8 @@
  * jotta levitys mittaa sitä, mikä ruudulla on.
  */
 
+import { NOSTOANKKURIT_FRA } from '../packs/nostoankkurit-fra.js';
+
 /** Pienin tyhjä väli kahden laatikon välissä saapumiskehyksessä (px). */
 export const ANKKURIN_VALJYYS_PX = 7;
 /**
@@ -94,6 +96,64 @@ export function kartanMittaSallittu() {
     return !/^(0|ei|off)$/.test(arvo ?? '');
   } catch { return true; }
 }
+
+/*
+ * ══ LUKITUT ANKKURIT: POLTETTU PISTE ON YKSI, RUUTUJA ON MONTA ═════
+ * (PAATOKSET 33 TARKENNUS 2 kohta 5.)
+ *
+ * Levitys tehdään saapumiskehyksessä, jonka mitat tulevat RUUTUKOOSTA
+ * (`ankkurivarasto.tunnus` on juuri ruutukoko). 390 px puhelin ja
+ * 1400 px työpöytä saavat siis eri ankkurin. Se on aivan oikein niin
+ * kauan kuin merkki on elävä — mutta laattaan poltettu piste voi olla
+ * vain YHDESSÄ paikassa, ja jos elävä nimiö/osuma laskettaisiin
+ * kummallakin ruudulla erikseen, ne osuisivat poltetun päälle vain
+ * sillä ruudulla, jolla poltto ajettiin.
+ *
+ * Siksi poltettavan maan ankkurit ovat DATAA (js/packs/nostoankkurit-
+ * <iso>.js, viety puhelimen kehyksessä `tools/vie-nostoankkurit.mjs`:llä).
+ * Lukittu ankkuri OHITTAA levityksen kokonaan — ei laskentaa, ei
+ * esteen-alla-uudelleenladontaa — jolloin nimiö ja osumapinta ovat
+ * poltetun pisteen kohdalla joka ruudulla ja joka zoomilla.
+ */
+const LUKITUT_ANKKURIT = new Map(Object.entries(NOSTOANKKURIT_FRA));
+
+/**
+ * VASTAKOE: `?lukitutankkurit=0` palauttaa lasketun levityksen myös
+ * poltetuille maille, jolloin ero poltettuun musteeseen palaa
+ * näkyviin (sama tapa kuin `?nostoankkurit=0`).
+ */
+export function lukitutAnkkuritSallittu() {
+  try {
+    const arvo = new URLSearchParams(globalThis.location?.search ?? '').get('lukitutankkurit');
+    return !/^(0|ei|off)$/.test(arvo ?? '');
+  } catch { return true; }
+}
+
+/**
+ * Nostorivin lukittu kartta-ankkuri tai null.
+ * @param {string} avain nostokerroksen rivin avain (`nosto:<id>` …)
+ */
+export function lukittuAnkkuri(avain) {
+  if (!avain || !LUKITUT_ANKKURIT.size) return null;
+  const a = LUKITUT_ANKKURIT.get(avain);
+  return (a && Number.isFinite(a.lat) && Number.isFinite(a.lng)) ? { lat: a.lat, lng: a.lng } : null;
+}
+
+/** Lukittujen ankkureiden määrä (mittarit ja testit). */
+export function lukittujaAnkkureita() { return LUKITUT_ANKKURIT.size; }
+
+/*
+ * MILLÄ MAALLA ON LUKITTU TAULU (18.9.2026, polttoketjun ehto).
+ *
+ * Polttoketju (tools/fokuskartta/nostot.mjs) tarvitsee tämän, koska
+ * sääntö on maakohtainen: maassa, jolla EI ole taulua, poltto toimii
+ * kuten ennen, ja maassa, jolla taulu ON, poltettu piste luetaan
+ * taulusta. Taulullisen maan merkki ILMAN ankkuria ei siis pala
+ * lainkaan — muuten sen muste jäisi laatassa siihen, minne vanha
+ * levitys sen jätti, eikä elävä nimiö osuisi siihen.
+ */
+export const LUKITUT_MAAT = Object.freeze(['FRA']);
+export function onLukittuMaa(iso) { return LUKITUT_MAAT.includes(String(iso ?? '').toUpperCase()); }
 
 const limittyy = (a, b, vara) => a.x0 - vara < b.x1 && b.x0 - vara < a.x1
   && a.y0 - vara < b.y1 && b.y0 - vara < a.y1;

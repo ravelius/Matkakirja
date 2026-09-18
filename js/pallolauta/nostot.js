@@ -68,7 +68,8 @@ import { KARTTANIMI_KOOT } from '../karttanimet.js';
 import { karttavaloVari, karttavalotLue } from '../karttavalot.js';
 import { nostoladontaTiiviste } from '../nostoladonta.js';
 import {
-  kartanMittaSallittu, luoAnkkurivarasto, levitaMerkit, nostoankkuritSallittu, pikseleistaAsteiksi,
+  kartanMittaSallittu, luoAnkkurivarasto, levitaMerkit, lukittuAnkkuri, lukitutAnkkuritSallittu,
+  nostoankkuritSallittu, pikseleistaAsteiksi,
 } from './nostoankkurit.js';
 import { pallonNostoOnPoltettu } from '../pallo.js';
 import { PALLOLAUDAN_LEVEYS } from './kamera.js';
@@ -1872,7 +1873,34 @@ export function luoNostot({
       return esteetKehyksessa.some((e) => laatikko.x0 < e.x1 && e.x0 < laatikko.x1
         && laatikko.y0 < e.y1 && e.y0 < laatikko.y1);
     };
-    const uudetRivit = liikkuvat.filter((r) => !ankkurivarasto.lue(r.avain) || esteenAlla(r));
+    /*
+     * ══════════════════════════════════════════════════════════════
+     * LUKITTU ANKKURI VOITTAA LEVITYKSEN (PAATOKSET 33 TARKENNUS 2
+     * kohta 5; perustelu js/pallolauta/nostoankkurit.js LUKITUT
+     * ANKKURIT).
+     * ══════════════════════════════════════════════════════════════
+     *
+     * Poltettu piste on laatassa yhdessä paikassa, mutta levityksen
+     * kehys on ruutukoon kokoinen — 390 px ja 1400 px antaisivat eri
+     * ankkurin, ja elävä nimiö/osuma karkaisi poltetusta musteesta
+     * toisella ruudulla. Poltetun maan ankkurit luetaan siksi
+     * datasta: ne asetetaan varastoon SELLAISENAAN, eikä niitä
+     * anneta levitykselle eikä `esteenAlla`-uudelleenladonnalle.
+     * Levitys väistää niitä silti, koska varastoon asetettu ankkuri
+     * on `kiinteat`-listan "jo ankkuroitu" -haara.
+     */
+    const lukitusPaalla = lukitutAnkkuritSallittu();
+    if (lukitusPaalla) {
+      const lukitut = new Map();
+      for (const r of liikkuvat) {
+        const a = lukittuAnkkuri(r.avain);
+        if (a && !ankkurivarasto.lue(r.avain)) lukitut.set(r.avain, a);
+      }
+      if (lukitut.size) ankkurivarasto.aseta(tunnus, lukitut);
+    }
+    const onLukittu = (r) => lukitusPaalla && Boolean(lukittuAnkkuri(r.avain));
+    const uudetRivit = liikkuvat.filter((r) => !onLukittu(r)
+      && (!ankkurivarasto.lue(r.avain) || esteenAlla(r)));
     if (uudetRivit.length) {
       const levitettavat = uudetRivit.map((r) => ({
         avain: r.avain, ...kehys(r.p), laatikko: laatikkoKehyksessa(r),
