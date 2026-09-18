@@ -312,7 +312,8 @@ test('kytkennät: sama lepo kokoaa, liike piilottaa heti, osoitteet tasokartan m
   assert.ok(!/void lepokerros\.kokoa\(\)/.test(pallo), 'kokoaminen ei lähde laatutason 260 ms:n levosta suoraan');
   const liike = pallo.match(/edellinen\.distanceToSquared\(paikka\) > 1e-10\) \{[\s\S]*?lepokerros\?\.piilota\(\);[\s\S]*?if \(lepo && nyt - liikeAlku >= LAATU_LIIKEVIIVE_MS\)/);
   assert.ok(liike, 'piilotus tapahtuu heti liikkeestä, ennen LAATU_LIIKEVIIVE_MS-viivettä');
-  assert.match(pallo, /lepokerros\?\.pura\(\);\n\s*if \(kerros\) \{ kerros\.pura\(\); lepokerrokset\.delete\(pallo\); \}\n\s*moottori\.updatePov = alkuperainen;/);
+  // Merkkikerroksen KOE puretaan samassa kutsussa (PAATOKSET 36 kohta 5).
+  assert.match(pallo, /lepokerros\?\.pura\(\);\n(?:\s*merkkikerrosOlio\?\.pura\(\);\n)?\s*if \(kerros\) \{ kerros\.pura\(\); lepokerrokset\.delete\(pallo\); \}\n\s*moottori\.updatePov = alkuperainen;/);
   // Osoitteet ja luettelo VAIN tasokartan moduulista — ei omaa kaavaa.
   assert.match(pallo, /import \{\n\s*haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,\n\} from '\.\/laattapyramidi\.js';/);
   assert.ok(!/julisteet\/pyramidi/.test(pallo), 'pallo.js ei rakenna pyramidin polkua itse');

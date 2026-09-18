@@ -748,6 +748,17 @@ export const LAATTAKERROS_RENDER_ORDER_POHJA = -10;
 export const LAATTAKERROS_OLETUS = true;
 /** Laatan sivu pikseleinä, kun pyramidin luettelo ei kerro muuta. */
 export const LAATTAKERROS_LAATTA = 512;
+/*
+ * KOE (PAATOKSET 36 kohta 5): merkkikerroksen oma säde ja piirtojärjestys.
+ * Korotus on pieni mutta EI nolla: samalla säteellä kaksi pintaa
+ * välkkyisivät (z-fighting) syvyyssiirrosta huolimatta, koska laatan
+ * verkko on jännitetty ja painuma on kymmenesosapikselejä. 1,0015 on
+ * pallon säteellä 100 yksikköä 0,15 yksikköä eli alle puoli metriä
+ * maanpinnan mittakaavassa — silmälle sama pinta.
+ */
+export const MERKKIKERROS_KOROTUS = 1.0015;
+/** Merkkipinta piirtyy KAIKKIEN pohjalaattojen jälkeen (renderOrder). */
+export const MERKKIKERROS_RENDER_ORDER_LISA = 40;
 
 /**
  * Tason valinta hystereesillä. `nykyinen` on nykyinen taso (olio tai z)
@@ -1131,6 +1142,16 @@ export function laattakerroksenLRU(tietueet, katto = LAATTAKERROS_LAATTAKATTO_MU
 export function luoLaattakerros({
   pallo, kotelo, ikkuna, renderer,
   kolmiulotteinen, pallonSarja = () => null, lauta = 'maailmankartta', naparaja = 90,
+  /*
+   * KOE (PAATOKSET 36 kohta 5, ?merkkikerros=1). Kun tosi, tämä ilmentymä
+   * EI ole kartta vaan pelkkä MERKKIPINTA: kerrostasoista poimitaan vain
+   * nosto- ja viivataso (läpinäkyvät alfa-webpit), laatta jätetään
+   * kokonaan tekemättä jos kumpaakaan ei ole, ja verkko nousee
+   * MERKKIKERROS_KOROTUS-säteelle oman piirtojärjestyksensä kanssa.
+   * Pohjan ilmentymä jää kokeessa ennalleen (merkit siis kahtena) —
+   * mitattava asia on TOISEN PINNAN KUSTANNUS, ei ulkoasu.
+   */
+  merkkikerros = false,
 }) {
   const doc = kotelo?.ownerDocument ?? ikkuna?.document ?? null;
   const aika = () => ikkuna.performance?.now?.() ?? Date.now();
@@ -1444,6 +1465,8 @@ export function luoLaattakerros({
      */
     const kerrostasot = (pyramidinKerrostasot(t.z) ?? [])
       .filter((k) => {
+        // KOE: merkkipinta ottaa VAIN merkit, ei pohjaa, väriä eikä rantaa.
+        if (merkkikerros) return (k.nosto && kerrokset.nosto) || (k.viiva && kerrokset.viiva);
         if (k.nosto) return kerrokset.nosto;
         if (k.viiva) return kerrokset.viiva;
         if (k.ranta) return kerrokset.ranta;
@@ -1578,7 +1601,8 @@ export function luoLaattakerros({
     }
     const nx = laattakerroksenSilmat(alue.lon1 - alue.lon0);
     const ny = laattakerroksenSilmat(alue.lat1 - alue.lat0);
-    const sade = pallo.getGlobeRadius() * LEPOKERROS_KOROTUS;
+    const sade = pallo.getGlobeRadius()
+      * (merkkikerros ? MERKKIKERROS_KOROTUS : LEPOKERROS_KOROTUS);
     const puskurit = lepokerroksenVerkko({ alue, kartta, sade, nx, ny });
     const geometria = new luokat.BufferGeometry();
     geometria.setAttribute('position', new luokat.BufferAttribute(puskurit.paikat, 3));
@@ -1603,7 +1627,8 @@ export function luoLaattakerros({
       polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: LAATTAKERROS_SYVYYSSIIRTO,
     });
     const verkko = new luokat.Mesh(geometria, materiaali);
-    verkko.renderOrder = LAATTAKERROS_RENDER_ORDER_POHJA + t.z;
+    verkko.renderOrder = LAATTAKERROS_RENDER_ORDER_POHJA + t.z
+      + (merkkikerros ? MERKKIKERROS_RENDER_ORDER_LISA : 0);
     // Kerros ei ota napautuksia: pelin merkit ja onGlobeClick kuten ennen.
     verkko.raycast = () => {};
     verkko.userData.laattakerros = { z: t.z, sarake: t.sarake, rivi: t.rivi };

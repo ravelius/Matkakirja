@@ -2604,6 +2604,42 @@ export function asetaLaattakerros(paalla, win = globalThis) {
 }
 
 /*
+ * KOE: MERKIT OMANA LÄPINÄKYVÄNÄ PINTANA (?merkkikerros=1).
+ *
+ * Raamattu, KARTTAUUDISTUKSEN PAATOKSET 36 kohta 5 vaatii MITTAUKSEN
+ * ennen käyttöönottoa: paljonko toinen tekstuurikerros pallolla maksaa
+ * muistissa ja kehysnopeudessa. Kytkin on OLETUKSENA POIS eikä sitä
+ * muisteta laitteelle — se on pelkkä mittarin kahva
+ * (docs/raportit/viesti-fable-merkkikerros-20260918.md). Päällä
+ * ollessaan peli piirtää nosto- ja viivatason laatat TOISEEN KERTAAN
+ * omalle pinnalleen pohjan päälle; kaksoismerkintä ei haittaa mittausta,
+ * koska mitattava asia on KUSTANNUS eikä ulkoasu.
+ */
+export function merkkikerrosPaalla(win = globalThis) {
+  try {
+    const arvo = new URLSearchParams(win.location?.search ?? '').get('merkkikerros');
+    if (arvo === null) return false;
+    return !(arvo === '0' || arvo === 'ei' || arvo === 'pois');
+  } catch {
+    return false;
+  }
+}
+
+/*
+ * Onko koe MITTAUKSESSA? Kahva (globalThis.__merkkikerrosKoe) syntyy vain
+ * kun osoitteessa on `merkkikerros`-parametri — myös arvolla 0, koska
+ * vertailuajo tarvitsee samat mittarit. Tavallisessa pelissä parametria
+ * ei ole eikä globaalia synny.
+ */
+export function merkkikerrosMitataan(win = globalThis) {
+  try {
+    return new URLSearchParams(win.location?.search ?? '').has('merkkikerros');
+  } catch {
+    return false;
+  }
+}
+
+/*
  * PALLON VEKTORIVIIVAT — sama kehittäjän vipu (vika v1649). Lukija asuu
  * js/pallovektorit.js:ssä (pallovektoritPaalla), joka on laiskasti
  * ladattava moduuli; ratasvalikko on tässä nipussa eikä voi tuoda sitä,

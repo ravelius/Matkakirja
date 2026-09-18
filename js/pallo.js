@@ -45,7 +45,8 @@ import {
   haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
 } from './laattapyramidi.js';
 import {
-  KOSKETUKSEN_VAPAUTUS, laattakerrosPaalla, laatuAinaPaalla, nollaaKosketusOhjaimet,
+  KOSKETUKSEN_VAPAUTUS, laattakerrosPaalla, laatuAinaPaalla, merkkikerrosMitataan,
+  merkkikerrosPaalla, nollaaKosketusOhjaimet,
 } from './ui-apurit.js';
 /*
  * Laattakerros ja sen puhtaat apurit (erät E0 ja E1, suunnitelma
@@ -1146,6 +1147,40 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
   }) : null;
   if (kerros) lepokerrokset.set(pallo, kerros);
   /*
+   * KOE: TOINEN PINTA MERKEILLE (?merkkikerros=1, PAATOKSET 36 kohta 5).
+   * Oletuksena pois; päällä ollessaan tämä on TÄYSIN ERILLINEN
+   * laattakerroksen ilmentymä, joka lataa vain nosto- ja viivatason
+   * laatat ja piirtää ne omalle säteelleen pohjan päälle. Mittari lukee
+   * molempien mittarit (ks. raportti); kerros puretaan samassa
+   * purkukutsussa kuin pohja.
+   */
+  const merkkiKoe = kerros && merkkikerrosPaalla(ikkuna);
+  const merkkikerrosOlio = merkkiKoe ? luoLaattakerros({
+    pallo, kotelo, ikkuna, renderer,
+    kolmiulotteinen, pallonSarja: () => laattaluettelo,
+    lauta: PALLO_LAUTA, naparaja: NAPAKANNEN_LEVEYS, merkkikerros: true,
+  }) : null;
+  /*
+   * MITTARIN KAHVA. Syntyy vain kun osoitteessa on merkkikerros-parametri
+   * (myös =0), koska vertailuajo tarvitsee samat luvut. Kahva antaa
+   * kolmen kirjaston oman tekstuurikirjanpidon (renderer.info.memory)
+   * sekä kummankin laattakerroksen mittarit — ei WebGL-kutsuja, joten
+   * lukeminen ei häiritse kehystä.
+   */
+  if (merkkikerrosMitataan(ikkuna)) {
+    ikkuna.__merkkikerrosKoe = {
+      paalla: Boolean(merkkikerrosOlio),
+      muisti: () => ({
+        tekstuureja: renderer?.info?.memory?.textures ?? -1,
+        geometrioita: renderer?.info?.memory?.geometries ?? -1,
+        piirtokutsuja: renderer?.info?.render?.calls ?? -1,
+        kolmioita: renderer?.info?.render?.triangles ?? -1,
+      }),
+      pohja: () => kerros?.mittarit?.() ?? null,
+      merkit: () => merkkikerrosOlio?.mittarit?.() ?? null,
+    };
+  }
+  /*
    * POHJA VAPAUTETAAN, JOS KERROS EI PIIRRÄ (omistajan kuvakaappaus
    * v1650, iPad, Ateenan lähikuva: *"pohjalaatta on tällä zoomilla
    * selvästi sumea"*, laattojen väliset sävyerot ruutuina, ei yhtään
@@ -1179,6 +1214,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     ? kytkePallonKehys(pallo, kotelo, (kehys) => {
       if (!kerrosKaytossa) return;
       kerros.paivita(kehys, true);
+      merkkikerrosOlio?.paivita(kehys, true);
       vapautaPohja();
     }, ikkuna)
     : () => {};
@@ -1254,6 +1290,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     if (kerros.tila() === 'nakyy' || !POHJAN_VAPAUTUS_SYYT.has(kerros.syy())) return;
     kerrosKaytossa = false;
     kerros.pura();
+    merkkikerrosOlio?.pura();
     // KAHVA JÄÄ PAIKALLEEN (lepokerrokset): savukkeet ja mittarit lukevat
     // siitä yhä kerroksen omat pyramidipyynnöt ja syyn — puretun
     // kerroksen mittarit kertovat tilan 'purettu'. Kartta poistetaan
@@ -1421,6 +1458,7 @@ function kytkeLaatunosto(moottori, pallo, kotelo, ikkuna) {
     ikkuna.clearTimeout(lepoAjastin);
     for (const t of ajastimet) ikkuna.clearTimeout(t);
     lepokerros?.pura();
+    merkkikerrosOlio?.pura();
     if (kerros) { kerros.pura(); lepokerrokset.delete(pallo); }
     moottori.updatePov = alkuperainen;
   };

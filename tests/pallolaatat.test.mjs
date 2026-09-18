@@ -295,7 +295,13 @@ test('pohja vapautetaan omaan syvimpään tasoonsa, jos kerros ei piirrä', () =
   assert.match(pallo, /pallo\.globeTileEngineMaxLevel\(syvin\);/);
   // v1645:n laatutilat palaavat: asetaTila kulkee läpi vasta kun kerros on pois.
   assert.match(pallo, /if \(kerrosKaytossa\) return;/);
-  assert.match(pallo, /if \(!kerrosKaytossa\) return;\n\s*kerros\.paivita\(kehys, true\);\n\s*vapautaPohja\(\);/,
+  /*
+   * Merkkikerroksen KOE (?merkkikerros=1, Raamattu PAATOKSET 36 kohta 5)
+   * päivittyy samasta koukusta ja samasta kehyksestä; ilman kytkintä
+   * rivi on `undefined?.paivita` eli ei mitään. Koe on valinnainen osa
+   * tätä lauseketta, jotta vartija pitää järjestyksen ennallaan.
+   */
+  assert.match(pallo, /if \(!kerrosKaytossa\) return;\n\s*kerros\.paivita\(kehys, true\);\n(?:\s*merkkikerrosOlio\?\.paivita\(kehys, true\);\n)?\s*vapautaPohja\(\);/,
     'vapautus ajetaan piirtokoukusta, samasta kehyksestä kuin päivitys');
 });
 
@@ -432,7 +438,7 @@ test('kytkentä: pohja naulataan tasoon 5 vain kerroksen ollessa päällä', () 
    * piirrä (ks. testi "pohja vapautetaan…").
    */
   assert.ok(!/kerros\.paivita\(kam, true\)/.test(pallo), 'kerros ei saa päivittyä updatePovista');
-  assert.match(pallo, /const kehyspurku = kerros\n\s*\? kytkePallonKehys\(pallo, kotelo, \(kehys\) => \{\n\s*if \(!kerrosKaytossa\) return;\n\s*kerros\.paivita\(kehys, true\);\n\s*vapautaPohja\(\);\n\s*\}, ikkuna\)\n\s*: \(\) => \{\};/);
+  assert.match(pallo, /const kehyspurku = kerros\n\s*\? kytkePallonKehys\(pallo, kotelo, \(kehys\) => \{\n\s*if \(!kerrosKaytossa\) return;\n\s*kerros\.paivita\(kehys, true\);\n(?:\s*merkkikerrosOlio\?\.paivita\(kehys, true\);\n)?\s*vapautaPohja\(\);\n\s*\}, ikkuna\)\n\s*: \(\) => \{\};/);
   assert.match(pallo, /if \(kerrosKaytossa\) \{\n\s*kerros\.paivita\(pallonKehysmitat\(pallo, kotelo, kamera, ikkuna\), false\);\n\s*vapautaPohja\(\);\n\s*\} else lepokerros\?\.levossa\(\);/);
   assert.match(pallo, /laatuKuuntelijat\.delete\(pakotus\);\n\s*kehyspurku\(\);/, 'koukku puretaan');
   // Kahva on sama accessorille ja savukkeille; purku purkaa kerroksen.
@@ -445,11 +451,18 @@ test('kerros: laatan materiaali, verkko ja osoitteet ovat suunnitelman mukaiset'
   const laatat = lue('../js/pallolaatat.js');
   // Materiaali ja syvyysjärjestys kuten lepokerroksella (ks. PIIRTOJÄRJESTYS).
   assert.match(laatat, /map: tekstuuri, transparent: true, opacity: 0, depthWrite: true,\n\s*polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: LAATTAKERROS_SYVYYSSIIRTO,/);
-  assert.match(laatat, /verkko\.renderOrder = LAATTAKERROS_RENDER_ORDER_POHJA \+ t\.z;/);
+  /*
+   * Piirtojärjestys on karkea taso ensin. Merkkikerroksen KOE
+   * (?merkkikerros=1, Raamattu PAATOKSET 36 kohta 5) lisää siihen oman
+   * vakionsa, jotta merkkipinta piirtyy kaikkien pohjalaattojen
+   * jälkeen; ilman kytkintä lisä on 0 eli järjestys on ennallaan.
+   */
+  assert.match(laatat, /verkko\.renderOrder = LAATTAKERROS_RENDER_ORDER_POHJA \+ t\.z\n\s*\+ \(merkkikerros \? MERKKIKERROS_RENDER_ORDER_LISA : 0\);/);
   assert.match(laatat, /verkko\.raycast = \(\) => \{\};/, 'kerros ei ota napautuksia');
   assert.match(laatat, /verkko\.userData\.laattakerros = \{ z: t\.z, sarake: t\.sarake, rivi: t\.rivi \};/);
   // Kerros on täsmälleen pinnan säteellä: ei suurennosta, ei hyppyä.
-  assert.match(laatat, /pallo\.getGlobeRadius\(\) \* LEPOKERROS_KOROTUS/);
+  // Pohjakerros on täsmälleen pinnan säteellä; vain KOE nostaa pintaa.
+  assert.match(laatat, /pallo\.getGlobeRadius\(\)\n\s*\* \(merkkikerros \? MERKKIKERROS_KOROTUS : LEPOKERROS_KOROTUS\);/);
   /*
    * Kuvat bittikarttana, vara Image + decode; kangas OffscreenCanvas jos on.
    * BITTIKARTAN ASETUKSET (kehystahti 7.9.2026): premultiplyAlpha 'none'
