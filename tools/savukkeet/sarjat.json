@@ -226,6 +226,12 @@
     },
     "savuke-astro-sumu.mjs": {
       "huomautus": "PAATOKSET 43 kohta 7 (18.9.2026): pilvikerros + avaruussumu; 8/8. Lisatty julkaisusarjaan v1947."
+    },
+    "savuke-kerma-reuna.mjs": {
+      "tunnetutPunaiset": [
+        "V4 meri laatikon sisällä on pohjan meren väri"
+      ],
+      "huomautus": "TUNNETTU PUNAINEN 19.9.2026 (v1947): V4 kanavaero 6-7 vs raja 5 tyopoydalla ja puhelimella; vertailuajo --vanha (origin/main-moduulit) antaa bitilleen samat luvut, joten ei v1947:n vika - mittauspari (Kanaali 49,9 N vs Pohjanmeri 53,2 N) on eri leveysasteilla ja pallon suunnattu valo tekee kertoimen. Velka: pari samalle leveysasteelle tai raja 8. Ks. docs/raportit/viesti-fable-savukkeet-v1947-20260919.md."
     }
   }
 }
