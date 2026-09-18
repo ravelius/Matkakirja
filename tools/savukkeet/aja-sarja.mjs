@@ -70,12 +70,13 @@ for (const rivi of matriisi) {
     const portti = osuma[1];
     if (portti === '0') continue;
     if (!kiinteat.has(portti)) kiinteat.set(portti, []);
-    kiinteat.get(portti).push(rivi.nimiTunniste);
+    // Tiedostonimi (ei nimiTunniste): jaetulla rivillä ne eroavat.
+    if (!kiinteat.get(portti).includes(rivi.tiedosto)) kiinteat.get(portti).push(rivi.tiedosto);
   }
 }
 for (const [portti, nimet] of kiinteat) {
-  const ilmanPorttiMuuttujaa = nimet.filter((n) => {
-    const lahde = readFileSync(join(TASSA, `${n}.mjs`), 'utf8');
+  const ilmanPorttiMuuttujaa = nimet.filter((t) => {
+    const lahde = readFileSync(join(TASSA, t), 'utf8');
     return !/process\.env\.PORTTI/.test(lahde);
   });
   if (ilmanPorttiMuuttujaa.length > 1) {
@@ -172,7 +173,9 @@ async function tyontekija() {
     const { tuloste, tulosJson } = await vertaa(ajo);
     writeFileSync(
       join(tuloskansio, `tulos-${rivi.nimiTunniste}.json`),
-      JSON.stringify({ tiedosto: rivi.tiedosto, kesto: ajo.kesto, tulosJson }),
+      // `nimi` on jaetulla rivillä "savuke-x.mjs#osa" — yhteenvedon
+      // taulukossa puolikkaat on erotettava toisistaan.
+      JSON.stringify({ tiedosto: rivi.nimi ?? rivi.tiedosto, kesto: ajo.kesto, tulosJson }),
     );
     const merkki = tulosJson.uusiaPunaisia > 0 ? 'UUSI PUNAINEN' : (tulosJson.lapi === tulosJson.yhteensa ? 'OK' : 'tunnettu punainen');
     console.log(`[${String(valmiit.length + 1).padStart(2, ' ')}/${matriisi.length}] ${rivi.nimiTunniste}: ${tulosJson.lapi}/${tulosJson.yhteensa} ${merkki}, ${ajo.kesto} s${ajo.katkaistu ? ' (AIKAKATTO)' : ''}`);

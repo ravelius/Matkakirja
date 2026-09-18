@@ -84,7 +84,10 @@ jobs:
       # Koneen omat polut (ei asennuksia työnkulussa).
       CHROMIUM: /Users/samireivinen/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing
       PLAYWRIGHT_JS: /Users/samireivinen/Matkakirja-fable/node_modules/playwright/index.js
-      SAVUKE_RINNAKKAIN: '4'
+      # 8 rinnakkain (Fable 18.9.2026, Raamattu TARKENNUS 9): 18 riviä,
+      # yhteensä ~2 050 s; neljällä seinäkello oli 9 min 40 s, kahdeksalla
+      # tavoite alle 6 min. Mac Studio: 16 ydintä, 64 Gt.
+      SAVUKE_RINNAKKAIN: '8'
       TULOKSET: /tmp/matkakirja-savukkeet/${{ github.run_id }}
     steps:
       - uses: actions/checkout@v4
@@ -186,7 +189,7 @@ jobs:
           # muuteta tätä varten, vaan jäljitellään sama polku täällä.
           sudo mkdir -p /opt/pw-browsers
           sudo ln -sf "$CHROM" /opt/pw-browsers/chromium
-      - name: Aja savuke ${{ matrix.tiedosto }}
+      - name: Aja savuke ${{ matrix.nimi }}
         id: aja
         # HUOM (korjattu 17.9.2026, ks. commit-viesti): tämä askel EI
         # koskaan itse kaada jobia — savukkeen oma poistumiskoodi on 1
@@ -250,7 +253,7 @@ jobs:
         run: |
           mkdir -p /tmp/tulokset
           cat > "/tmp/tulokset/tulos-${{ matrix.nimiTunniste }}.json" <<EOF
-          {"tiedosto":"${{ matrix.tiedosto }}","kesto":${{ steps.aja.outputs.kesto || 'null' }},"tulosJson":${{ steps.tarkista.outputs.json || 'null' }}}
+          {"tiedosto":"${{ matrix.nimi }}","kesto":${{ steps.aja.outputs.kesto || 'null' }},"tulosJson":${{ steps.tarkista.outputs.json || 'null' }}}
           EOF
       - name: Lataa tulos
         if: always()
