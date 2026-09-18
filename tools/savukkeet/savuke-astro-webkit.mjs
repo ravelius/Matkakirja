@@ -151,7 +151,30 @@ function pallonKirkkaus(kuva, { leveys, korkeus, dpr }) {
 }
 
 async function avaaPeli(s) {
-  await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo&pallodiag=1${LISAPARAMIT}`, { waitUntil: 'load' });
+  /*
+   * SIVUN LATAUS: 60 s JA VARAREITTI (mitattu 18.9.2026).
+   *
+   * WebKit jäi jokaisella ajolla Playwrightin 30 s:n oletukseen ennen
+   * kuin peli oli edes auki. Syy on tämän savukkeen oman otsikon
+   * mukainen: estetyt ulkoverkon pyynnöt jäävät WebKitissä vireille
+   * pitkäksi aikaa, eikä `load` laukea siinä ajassa, vaikka sivu on
+   * ruudulla ja toimii. Kello nostetaan samaan 60 s:iin kuin
+   * kaappauksilla, ja jos sekään ei riitä, `domcontentloaded` kelpaa:
+   * sen jälkeen tuleva `waitForFunction(pallolauta)` on se oikea
+   * vartija sille, onko peli pystyssä.
+   */
+  const osoite = `http://127.0.0.1:${PORTTI}/index.html?lauta=pallo&pallodiag=1${LISAPARAMIT}`;
+  await s.goto(osoite, { waitUntil: 'load', timeout: 60000 })
+    .catch((e) => {
+      /*
+       * EI UUTTA NAVIGOINTIA: sivu on jo ladattu ja ajossa, ja toinen
+       * `goto` samaan osoitteeseen purkaisi WebGL-kontekstin kesken
+       * alustuksen (mitattu 18.9.2026: WebKit sulki sivun kokonaan).
+       * Jatketaan siitä, mikä on — `waitForFunction(pallolauta)` alla
+       * on se vartija, joka kertoo, onko peli oikeasti pystyssä.
+       */
+      console.log(`    (load ei lauennut: ${e.message.split('\n')[0]} — jatketaan silti)`);
+    });
   await s.waitForTimeout(2500);
   await s.evaluate(() => {
     [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
