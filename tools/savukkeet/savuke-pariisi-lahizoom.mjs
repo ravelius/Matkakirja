@@ -49,7 +49,7 @@
  *       pois (js/pallolauta/nostot.js `ryhmitysSallittu`): kaupungin
  *       sisäiset nostot ovat kaupunkiliuskassa ja ulkopuoliset omina
  *       pisteinään, joten lähizoomissa on tasan 0 aihemerkkiä.
- *       Vastakokeen `?aihemerkit=1` esittää vartio 3i2.
+ *       Saman väitteen saapumisnäkymässä mittaa vartio 3i2.
  *   3d. AIHENOSTOJA ON TÄSMÄLLEEN NIIN MONTA KUIN PARIISISSA ON
  *       AIHEITA, JOILLA ON ≥ 2 NOSTOA (PAATOKSET 27 TARKENNUS 2
  *       kohta 7, omistaja 16.9.2026 klo 19.00 UTC: saman kaupungin
@@ -83,16 +83,14 @@
  *       LÄHIZOOMISSA nimiö on jokaisella, kuten ennen. Mitataan
  *       kahdesta lähteestä: kerroksen `nimioNakyy` ja elementin oma
  *       `data-nimio` (aihenimioitaDom).
- *   3i2. VASTAKOE `?aihemerkit=1` + `?aihenimiokynnys=0` (PÄIVITETTY
- *       18.9.2026): aihemerkkejä ei enää ole oletustilassa, joten
- *       nimiökynnystä ei voi mitata siellä. Vastakoe kääntää ENSIN
- *       ryhmityksen takaisin päälle (`?aihemerkit=1`) — silloin
- *       aihemerkkejä syntyy ja niiden nimiöt ovat saapumisnäkymässä
- *       kynnyksen takia piilossa — ja sitten myös kynnyksen pois,
- *       jolloin nimiöt palaavat (v1927:n tila). Näin vartio 3i mittaa
- *       yhä kynnystä eikä sitä, ettei aihemerkkejä ole lainkaan.
- *       Molemmat liput luetaan joka ladonnassa osoitteesta, joten
- *       vastakoe on yksi replaceState + ladonta, ei uusi sivunlataus.
+ *   3i2. AIHEMERKKEJÄ EI OLE OLETUKSENA (PAATOKSET 34 kohta 17;
+ *       VASTAKOE POISTETTU 18.9.2026). Vartio oli vastakoe, joka
+ *       käänsi ryhmityksen takaisin päälle (`?aihemerkit=1`) ja vaati,
+ *       että ryhmiä syntyy. Kohdemaan säännöllä poltettuna Ranskan
+ *       aihemerkkien jäsenet ovat laatassa, joten ryhmitettävää ei ole
+ *       eikä lippu palauta mitään — perustelu vartion kohdalla.
+ *       Jäljelle jäi itse sääntö: saapumisnäkymässä aihemerkkejä on 0
+ *       eikä yhtään ryhmän nimiötä ole DOMissa.
  *   3h. AIHENOSTOT EIVÄT PEITÄ TOISIAAN LÄHIZOOMISSA enempää kuin
  *       AIHENOSTOJEN_LIMITYSKATTO sallii — ryhmitys ei saa vain
  *       siirtää rykelmän ongelmaa merkkitasolle. Saapumisnäkymän luvut
@@ -979,62 +977,40 @@ for (const ruutu of RUUDUT) {
     `${p(saapuvaNimio)} px (kaupunkimerkkejä ${saapuvaKaupunki.length})`);
 
   /*
-   * --- 3i2. VASTAKOE: RYHMITYS TAKAISIN, SITTEN NIMIÖKYNNYS POIS ---
+   * --- 3i2. AIHEMERKKEJÄ EI OLE OLETUKSENA ------------------------
    *
-   * PÄIVITETTY 18.9.2026 (PAATOKSET 34 kohta 3 ja kohta 17 b).
-   * Vastakoe mittasi ENNEN pelkkää `?aihenimiokynnys=0`-lippua
-   * oletusnäkymässä; nyt oletusnäkymässä ei ole yhtään aihemerkkiä
-   * (`ryhmitysSallittu` on käännetty), joten kynnystä ei voi siellä
-   * mitata ja väite kaatuisi aina. Vastakoe kääntää siksi ENSIN
-   * ryhmityksen takaisin (`?aihemerkit=1`) ja mittaa, että kynnys
-   * pitää nimiöt piilossa — ja sitten lisäksi `?aihenimiokynnys=0`,
-   * jolloin nimiöt palaavat (v1927:n tila). Molemmat liput luetaan
-   * joka ladonnassa osoitteesta, joten sivua ei ladata uudelleen eikä
-   * kameraa siirretä: mitattava näkymä on sama kuin vartiossa 3i.
-   * Lopuksi molemmat liput poistetaan, jotta savukkeen loput vartiot
-   * mittaavat oletustilaa.
+   * VASTAKOE POISTETTU 18.9.2026 (poltto kohdemaan säännöllä;
+   * Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 17 ja AGENTIT
+   * TARKENNUS 10 kohta 21: savuke päivitetään samassa erässä kuin
+   * käytös muuttuu, ja kohta 21 hyväksyy poltetun otoksen).
+   *
+   * MIKÄ VANHENTUI: vastakoe käänsi ryhmityksen takaisin päälle
+   * (`?aihemerkit=1`) ja vaati, että ryhmiä SYNTYY — ensin kynnyksen
+   * kanssa ilman nimiöitä, sitten `?aihenimiokynnys=0`:lla nimiöiden
+   * kanssa. Ryhmitys tarvitsee kuitenkin ELÄVIÄ jäseniä: se latoo
+   * saman aiheen nostot yhdeksi merkiksi (js/pallolauta/aihemerkit.js
+   * ryhmitaNostot). Kohdemaan säännöllä poltettuna Ranskan
+   * aihemerkkien jäsenet — Biskajanlahti, Carnac, Chambord ja muut
+   * kaupungin ulkopuoliset — ovat laatassa
+   * (docs/raportit/viesti-fable-poltto-kohdemaa-20260918.md), joten
+   * `?aihemerkit=1` ei voi ryhmittää mitään ja vastakoe mittasi
+   * `aihemerkkejä 0`. Punainen ei kertonut ryhmityksestä mitään —
+   * se kertoi, ettei ryhmitettävää ole.
+   *
+   * MIKÄ JÄI: itse SÄÄNTÖ, joka on PAATOKSET 34 kohta 17 — kartalla
+   * ei ole aihemerkkejä oletuksena, ei ryhmää eikä ryhmän nimiötä.
+   * Se mitataan samasta saapumisnäkymästä kuin ennenkin, eikä siihen
+   * tarvita lippuja: näkymä on pelin oma oletustila. Ryhmityksen
+   * lippupolkua (`?aihemerkit=1`) ei enää käännetä lainkaan, joten
+   * savuke ei myöskään kuluta kolmea ylimääräistä ladontaa.
    */
-  const aiheLiput = async (arvot) => {
-    await sivu.evaluate((lista) => {
-      const u = new URL(window.location.href);
-      for (const [avain, arvo] of lista) {
-        if (arvo === null) u.searchParams.delete(avain);
-        else u.searchParams.set(avain, arvo);
-      }
-      window.history.replaceState({}, '', u.toString());
-      window.matkakirja.ui.pallolauta.ladoHeti?.();
-    }, arvot);
-    await sivu.waitForTimeout(900);
-    return mittaa(sivu);
-  };
-  // 1) ryhmitys päälle, kynnys voimassa → aihemerkkejä on, nimiöitä ei
-  const kynnysVoimassa = await aiheLiput([['aihemerkit', '1'], ['aihenimiokynnys', null]]);
-  // 2) ryhmitys päälle, kynnys pois → nimiöt palaavat
-  const ilmanKynnysta = await aiheLiput([['aihemerkit', '1'], ['aihenimiokynnys', '0']]);
-  // 3) oletustila takaisin: ei ryhmitystä, kynnys voimassa
-  const oletusTakaisin = await aiheLiput([['aihemerkit', null], ['aihenimiokynnys', null]]);
-  const ilmanNimioita = ilmanKynnysta.aihemerkit.filter((a) => a.nimioNakyy).length;
-  tieto(`${ruutu.nimi} · vastakoe ?aihemerkit=1 (saapuen)`,
-    `kynnys voimassa: aihemerkkejä ${kynnysVoimassa.aihemerkit.length}, `
-    + `nimiöllisiä ${kynnysVoimassa.aihemerkit.filter((a) => a.nimioNakyy).length}, `
-    + `DOM ${kynnysVoimassa.aihenimioitaDom}; kynnys pois: `
-    + `nimiöllisiä ${ilmanNimioita}/${ilmanKynnysta.aihemerkit.length}, `
-    + `DOM ${ilmanKynnysta.aihenimioitaDom}; oletus takaisin: `
-    + `aihemerkkejä ${oletusTakaisin.aihemerkit.length}, `
-    + `DOM ${oletusTakaisin.aihenimioitaDom}`);
-  vaadi(`3i2. VASTAKOE ${ruutu.nimi}: ?aihemerkit=1 palauttaa ryhmityksen, `
-    + 'kynnys pitää nimiöt piilossa ja ilman kynnystä ne palaavat',
-    kynnysVoimassa.aihemerkit.length > 0
-      && kynnysVoimassa.aihenimioitaDom === 0
-      && ilmanKynnysta.aihemerkit.length > 0
-      && ilmanNimioita === ilmanKynnysta.aihemerkit.length
-      && ilmanKynnysta.aihenimioitaDom === ilmanKynnysta.aihemerkit.length
-      && oletusTakaisin.aihemerkit.length === 0,
-    `kynnyksen kanssa aihemerkkejä ${kynnysVoimassa.aihemerkit.length} `
-    + `(DOM ${kynnysVoimassa.aihenimioitaDom}), ilman kynnystä `
-    + `${ilmanNimioita}/${ilmanKynnysta.aihemerkit.length} `
-    + `(DOM ${ilmanKynnysta.aihenimioitaDom}), oletuksena aihemerkkejä `
-    + `${oletusTakaisin.aihemerkit.length}`);
+  tieto(`${ruutu.nimi} · aihemerkit oletusnäkymässä`,
+    `aihemerkkejä ${saapuen.aihemerkit.length}, `
+    + `nimiöllisiä ${saapuen.aihemerkit.filter((a) => a.nimioNakyy).length}, `
+    + `DOM-nimiöitä ${saapuen.aihenimioitaDom}`);
+  vaadi(`3i2. ${ruutu.nimi}: aihemerkkejä 0 oletuksena (PAATOKSET 34 kohta 17)`,
+    saapuen.aihemerkit.length === 0 && saapuen.aihenimioitaDom === 0,
+    `aihemerkkejä ${saapuen.aihemerkit.length}, DOM-nimiöitä ${saapuen.aihenimioitaDom}`);
 
   /* --- 5. PAKKA EI OLE KARTALLA (PAATOKSET 31 kohta 1) --- */
   vaadi(`5. ${ruutu.nimi}: luentakuvapakkaa ei ole kartalla saapumisen jälkeen`,
@@ -1441,8 +1417,8 @@ for (const ruutu of RUUDUT) {
    * kaupungin ULKOPUOLISET omina pisteinään, joten aihemerkkejä ei ole
    * oletustilassa yhtään. Väite on siis sama mittaus vastakkaiseen
    * suuntaan — ja se on yhä arvokas, koska ryhmityksen paluu kartalle
-   * olisi juuri se virhe, jota päätös kielsi. Vastakokeen (`?aihemerkit=1`
-   * palauttaa ryhmityksen) esittää vartio 3i2 saapumisnäkymässä.
+   * olisi juuri se virhe, jota päätös kielsi. Saman väitteen
+   * saapumisnäkymässä mittaa vartio 3i2.
    */
   vaadi(`3b. ${ruutu.nimi}: aihemerkkejä 0 kartalla — sisäiset liuskassa`,
     m.aihemerkit.length === 0,
