@@ -84,10 +84,19 @@ const KAUPUNGIT = [
   { id: 'marseille', nimi: 'Marseille', lat: 43.3, lng: 5.37 },
 ];
 /** Kaksi ruutua: puhelin ja työpöytä (valmis-kriteeri). */
-const RUUDUT = [
+const KAIKKI_RUUDUT = [
   { nimi: '390 px', width: 390, height: 844, dpr: 2 },
   { nimi: '1400 px', width: 1400, height: 900, dpr: 1 },
 ];
+/*
+ * YKSI RUUTU KERRALLAAN (`SAVUKE_RUUTU=390`), sama kytkin kuin
+ * savuke-pariisi-lahizoomissa: kohdennettu uusinta mittaa sen ruudun,
+ * jota erä koskee, eikä maksa toisen ruudun ajoa.
+ */
+const RUUDUT = process.env.SAVUKE_RUUTU
+  ? KAIKKI_RUUDUT.filter((r) => String(r.width) === String(process.env.SAVUKE_RUUTU))
+  : KAIKKI_RUUDUT;
+if (!RUUDUT.length) throw new Error(`Tuntematon SAVUKE_RUUTU: ${process.env.SAVUKE_RUUTU}`);
 
 const TYYPIT = {
   '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
@@ -400,6 +409,240 @@ for (const ruutu of RUUDUT) {
       + `iso pop-up ${iso ? 'aukesi' : 'ei auennut'}`);
     vaadi(`${tunnus}: liuskan yläryhmä on 3 riviä (kaupunki, Nähtävyydet, Turistiopas)`,
       liuskaTila.ylaryhma === 3, `rivejä ${liuskaTila.ylaryhma}`);
+
+    /* ══ VARTIOT 10-11: LIUSKAN KAKSI YLÄRIVIÄ (PAATOKSET 34 kohta 16) ══
+     *
+     * Omistaja 18.9.2026 klo 14.05, sanatarkasti kohdista d ja e:
+     * kaupungin oma rivi avaa *"VAIN: herokuva, kaksi pikkukuvaa (vanha
+     * ja uusi) ja leipäteksti"*, ja "Nähtävyydet" avaa *"VAIN:
+     * nähtävyyskartta ja sen alla nähtävyysteksti, josta näkyy
+     * ENSIMMÄINEN LAUSE ja sen perässä 'Lue lisää' -nappi"*.
+     *
+     * NAPAUTUS ON AITO: rivin laatikko luetaan liuskan omasta mallista
+     * (nostot.liuskanRivit palauttaa ruutulaatikon kotelon pikseleinä),
+     * ja sormi osuu sen keskelle. Savuke ei kutsu avaajia suoraan.
+     */
+    if (kaupunki.id === 'pariisi') {
+      /** Liuskan rivin keskipiste sivun koordinaateissa. */
+      const rivinPiste = (laji) => sivu.evaluate((haettu) => {
+        const l = window.matkakirja.ui.pallolauta;
+        const r = (l.nostot.liuskanRivit?.() ?? []).find((x) => x.laji === haettu);
+        if (!r || !Number.isFinite(r.x0)) return null;
+        const koti = l.kotelo.getBoundingClientRect();
+        return {
+          x: koti.left + (r.x0 + r.x1) / 2,
+          y: koti.top + (r.y0 + r.y1) / 2,
+          nimi: r.nimi,
+        };
+      }, laji);
+      /** Liuska uudelleen auki (rivin napautus sulkee sen). */
+      const avaaLiuska = async () => {
+        for (let yritys = 0; yritys < 3; yritys += 1) {
+          /* eslint-disable no-await-in-loop */
+          const piste = await kaupunkiPiste();
+          if (!piste) return false;
+          await sivu.mouse.click(piste.x, piste.y);
+          for (let i = 0; i < 60; i += 1) {
+            const auki = await sivu.evaluate(
+              () => window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null,
+            );
+            if (auki) return true;
+            await sivu.waitForTimeout(50);
+          }
+          /* eslint-enable no-await-in-loop */
+        }
+        return false;
+      };
+      const suljeArkki = () => sivu.evaluate(() => {
+        document.getElementById('tiivis-lehtiarkki')?.close();
+      });
+      /*
+       * RIVIN NAPAUTUS YRITETÄÄN UUDESTAAN, SAMASTA MITATUSTA SYYSTÄ
+       * kuin kaupunkimerkin napautus ylempänä: kamera-ajo siirtää
+       * liuskaa ruudulla, ja juuri suljetun kortin jälkeen peli nielaisee
+       * yhden napautuksen. Rivin piste luetaan siksi uudelleen joka
+       * yrityksellä, ja liuska avataan tarvittaessa uudestaan. Väite on,
+       * että RIVI AVAA OMAN NÄKYMÄNSÄ — ei se, monennellako sormella.
+       */
+      const napautaRivi = async (laji, luokka) => {
+        for (let yritys = 0; yritys < 3; yritys += 1) {
+          /* eslint-disable no-await-in-loop */
+          const auki = await sivu.evaluate(
+            () => window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null,
+          );
+          if (!auki && !(await avaaLiuska())) return false;
+          const piste = await rivinPiste(laji);
+          if (!piste) return false;
+          await sivu.mouse.click(piste.x, piste.y);
+          for (let i = 0; i < 30; i += 1) {
+            const nakyma = await sivu.evaluate((c) => {
+              const d = document.getElementById('tiivis-lehtiarkki');
+              return Boolean(d?.open && d.classList.contains(c));
+            }, luokka);
+            if (nakyma) return true;
+            await sivu.waitForTimeout(50);
+          }
+          /* eslint-enable no-await-in-loop */
+        }
+        return false;
+      };
+
+      /*
+       * LIUSKA AUKI ENNEN RIVIN NAPAUTUSTA. Ylempi avaus on oma
+       * vartionsa (ja sillä on oma kahden yrityksen historiansa), mutta
+       * NÄMÄ vartiot mittaavat rivien tekoja eivätkä avausta — jos
+       * liuska ei ole auki, se avataan tässä uudestaan.
+       */
+      if (!liuskaTila.auki) await avaaLiuska();
+      /* --- vartio 10: "PARIISI"-rivi (kohta 16 d) ------------------- */
+      const lehtiRivi = await rivinPiste('lehti');
+      vaadi(`${tunnus}: liuskan kaupunkirivi on ruudulla`, Boolean(lehtiRivi),
+        lehtiRivi ? '' : 'riviä ei löytynyt liuskan mallista');
+      if (lehtiRivi) {
+        await napautaRivi('lehti', 'kaupunkiesittely-nakyma');
+        const nakyma = await sivu.evaluate(() => {
+          const d = document.getElementById('tiivis-lehtiarkki');
+          if (!d?.open) return null;
+          const palsta = d.querySelector('.arrival-palsta');
+          return {
+            esittelyNakyma: d.classList.contains('kaupunkiesittely-nakyma'),
+            herokuvia: palsta.querySelectorAll('.lehti-paakuva img').length,
+            pikkukuvia: palsta.querySelectorAll('.lehti-kuvarivi img').length,
+            leipa: (palsta.querySelector('.arrival-intro')?.textContent ?? '').trim().length,
+            kartta: palsta.querySelectorAll('.kaupunkikartta, .tiivis-kartta').length,
+            matkailijalle: palsta.querySelectorAll('.matkailijalle').length,
+            lehtiAuki: Boolean(document.getElementById('arrival-dialog')?.open),
+          };
+        });
+        vaadi(`${tunnus}: Pariisi-rivi avaa kaupungin esittelynäkymän`,
+          Boolean(nakyma?.esittelyNakyma), JSON.stringify(nakyma));
+        if (nakyma) {
+          tieto(`${tunnus}: esittelynäkymä`, JSON.stringify(nakyma));
+          vaadi(`${tunnus}: näkymässä on 1 herokuva`, nakyma.herokuvia === 1,
+            `herokuvia ${nakyma.herokuvia}`);
+          vaadi(`${tunnus}: näkymässä on 2 pikkukuvaa (vanha ja uusi)`,
+            nakyma.pikkukuvia === 2, `pikkukuvia ${nakyma.pikkukuvia}`);
+          vaadi(`${tunnus}: näkymässä on leipäteksti`, nakyma.leipa > 0,
+            `${nakyma.leipa} merkkiä`);
+          vaadi(`${tunnus}: EI kaupunkilehteä eikä sen osioita`,
+            !nakyma.lehtiAuki && nakyma.kartta === 0 && nakyma.matkailijalle === 0,
+            `lehti ${nakyma.lehtiAuki}, karttoja ${nakyma.kartta}, `
+            + `matkailijalle ${nakyma.matkailijalle}`);
+        }
+        if (KUVAKANSIO && ruutu.width === 390) {
+          await sivu.screenshot({
+            path: join(KUVAKANSIO, 'liuska-k16-pariisi-esittely.png'), scale: 'css',
+          });
+        }
+        await suljeArkki();
+        await sivu.waitForTimeout(300);
+      }
+
+      /* --- vartio 11: "NÄHTÄVYYDET"-rivi (kohta 16 e) --------------- */
+      const uudelleen = await avaaLiuska();
+      vaadi(`${tunnus}: liuska aukeaa uudelleen näkymän sulkemisen jälkeen`, uudelleen);
+      const nahtRivi = uudelleen ? await rivinPiste('nahtavyydet') : null;
+      if (nahtRivi) {
+        await napautaRivi('nahtavyydet', 'nahtavyysnakyma');
+        await sivu.waitForTimeout(400);
+        const ennen = await sivu.evaluate(() => {
+          const d = document.getElementById('tiivis-lehtiarkki');
+          if (!d?.open) return null;
+          const palsta = d.querySelector('.arrival-palsta');
+          const teksti = palsta.querySelector('.nahtavyysnakyma-teksti');
+          return {
+            nahtavyysNakyma: d.classList.contains('nahtavyysnakyma'),
+            kartta: palsta.querySelectorAll('.kartta-kehys').length,
+            kohteita: palsta.querySelectorAll('.maakartta-piste').length,
+            luettelo: palsta.querySelectorAll('.kartta-selite').length,
+            pituus: (teksti?.textContent ?? '').trim().length,
+            kappaleita: palsta.querySelectorAll('.nahtavyysnakyma-teksti').length,
+            nappi: palsta.querySelectorAll('.nahtavyysnakyma-lisaa').length,
+            loppuMerkkeja: [...(teksti?.textContent ?? '')]
+              .filter((c) => c === '.' || c === '!' || c === '?').length,
+            herokuvia: palsta.querySelectorAll('.lehti-paakuva img').length,
+          };
+        });
+        vaadi(`${tunnus}: Nähtävyydet-rivi avaa nähtävyysnäkymän`,
+          Boolean(ennen?.nahtavyysNakyma), JSON.stringify(ennen));
+        if (ennen) {
+          tieto(`${tunnus}: nähtävyysnäkymä`, JSON.stringify(ennen));
+          vaadi(`${tunnus}: näkymässä on nähtävyyskartta kohteineen`,
+            ennen.kartta === 1 && ennen.kohteita > 0,
+            `kehyksiä ${ennen.kartta}, kohteita ${ennen.kohteita}`);
+          vaadi(`${tunnus}: kartan alla EI ole kohdeluetteloa`, ennen.luettelo === 0,
+            `rivejä ${ennen.luettelo}`);
+          vaadi(`${tunnus}: teksti on yksi kappale ja yksi lause`,
+            ennen.kappaleita === 1 && ennen.pituus > 0 && ennen.loppuMerkkeja === 1,
+            `kappaleita ${ennen.kappaleita}, merkkejä ${ennen.pituus}, `
+            + `lauseenloppuja ${ennen.loppuMerkkeja}`);
+          vaadi(`${tunnus}: tekstin perässä on "Lue lisää" -nappi`, ennen.nappi === 1,
+            `nappeja ${ennen.nappi}`);
+          vaadi(`${tunnus}: näkymässä EI ole herokuvia`, ennen.herokuvia === 0,
+            `kuvia ${ennen.herokuvia}`);
+        }
+        if (KUVAKANSIO && ruutu.width === 390) {
+          await sivu.screenshot({
+            path: join(KUVAKANSIO, 'liuska-k16-pariisi-nahtavyydet.png'), scale: 'css',
+          });
+        }
+        // "Lue lisää": loput tulevat SAMAAN kappaleeseen (sama elementti).
+        const jalkeen = await sivu.evaluate(() => {
+          const palsta = document.getElementById('tiivis-lehtiarkki')
+            ?.querySelector('.arrival-palsta');
+          const sama = palsta?.querySelector('.nahtavyysnakyma-teksti');
+          palsta?.querySelector('.nahtavyysnakyma-lisaa')?.click();
+          const uusi = palsta?.querySelector('.nahtavyysnakyma-teksti');
+          return {
+            pituus: (uusi?.textContent ?? '').trim().length,
+            samaElementti: sama === uusi,
+            kappaleita: palsta?.querySelectorAll('.nahtavyysnakyma-teksti').length ?? 0,
+            nappi: palsta?.querySelectorAll('.nahtavyysnakyma-lisaa').length ?? 0,
+            arkkiAuki: Boolean(document.getElementById('tiivis-lehtiarkki')?.open),
+          };
+        });
+        tieto(`${tunnus}: Lue lisää -napin jälkeen`, JSON.stringify(jalkeen));
+        if (ennen) {
+          vaadi(`${tunnus}: napautus tuo loput samaan kappaleeseen`,
+            jalkeen.samaElementti && jalkeen.kappaleita === 1
+            && jalkeen.pituus > ennen.pituus,
+            `${ennen.pituus} → ${jalkeen.pituus} merkkiä, sama elementti `
+            + `${jalkeen.samaElementti}, kappaleita ${jalkeen.kappaleita}`);
+        }
+        vaadi(`${tunnus}: nappi katoaa eikä näkymä vaihdu`,
+          jalkeen.nappi === 0 && jalkeen.arkkiAuki,
+          `nappeja ${jalkeen.nappi}, arkki auki ${jalkeen.arkkiAuki}`);
+        // Kartan kohteen napautus avaa kohteen (kohta 16 e viimeinen lause).
+        const kohde = await sivu.evaluate(() => {
+          const piste = document.getElementById('tiivis-lehtiarkki')
+            ?.querySelector('.maakartta-piste.kaupunki-kohde');
+          if (!piste) return null;
+          const r = piste.getBoundingClientRect();
+          return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+        });
+        if (kohde) {
+          // Piirroskohde suurenee ensin ja avaa jutun toisesta napautuksesta
+          // (js/nahtavyydet.js: "NAPAUTUS SUURENTAA, KYLTTI AVAA JUTUN").
+          await sivu.mouse.click(kohde.x, kohde.y);
+          await sivu.waitForTimeout(400);
+          const kohdePiste = await sivu.evaluate(() => {
+            const piste = document.getElementById('tiivis-lehtiarkki')
+              ?.querySelector('.maakartta-piste.kaupunki-kohde');
+            const r = piste?.getBoundingClientRect();
+            return r ? { x: r.left + r.width / 2, y: r.top + r.height / 2 } : null;
+          });
+          if (kohdePiste) await sivu.mouse.click(kohdePiste.x, kohdePiste.y);
+          await sivu.waitForTimeout(600);
+          const auki = await sivu.evaluate(() => [...document.querySelectorAll('dialog[open]')]
+            .some((d) => d.id !== 'tiivis-lehtiarkki' && d.id !== 'arrival-dialog'));
+          vaadi(`${tunnus}: kartan kohteen napautus avaa kohteen`, auki,
+            'kohteen arkki ei auennut');
+        }
+        await suljeArkki();
+        await sivu.waitForTimeout(300);
+        await avaaLiuska();
+      }
+    }
     if (iso) {
       vaadi(`${tunnus}: otsikko on kaupungin nimi`, iso.otsikko === kaupunki.nimi, iso.otsikko);
       vaadi(`${tunnus}: herokuvat kortissa`, iso.kuvia > 0 && iso.heroKorkeus > 0,
