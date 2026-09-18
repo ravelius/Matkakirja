@@ -4148,7 +4148,28 @@ export async function avaaPallolauta(ui) {
       for (const k of kaupungit) k.kayty = kaydyt.has(k.id);
     }
     helmet = reitit.paivita(valinta);
-    merkit.paivita({ nappula: liikkuu || lento || linssiPaalla() ? null : kohta, kohteet });
+    /*
+     * ENNAKKOZOOMIN AJAN NAPPULA ON LÄHTÖRUUDUSSAAN (Raamattu,
+     * KARTTAUUDISTUKSEN PAATOKSET 40).
+     *
+     * `ui.run` ajaa `game.actionMove`n ENNEN animaatiota, joten
+     * `player.pos` on jo määränpää, mutta nappulaa ei ole vielä
+     * poimittu laudalta (`movingPlayerId` nousee vasta ennakkozoomin
+     * jälkeen, jotta ruudulla on zoomin ajan tavallinen nappula).
+     * Ilman tätä se tavallinen nappula seisoisi VÄÄRÄSSÄ PÄÄSSÄ koko
+     * ennakkozoomin ajan ja hyppäisi sitten takaisin lähtöön, kun
+     * liikkuva kopio syntyy. Ennen 18.9.2026 vika välähti vain
+     * hengähdyksen ajan, koska ennakkozoomin ajo keskeytyi heti;
+     * kun zoomi ajetaan loppuun, väärä paikka näkyisi sekunnin.
+     *
+     * `ui.siirtoKaynnissa` on siirron LÄHTÖpaikka (js/ui.js
+     * animatePawnSisalla), joten sama lippu kertoo sekä "älä sukella
+     * teleportin perään" että "piirrä nappula tähän".
+     */
+    const nappulanKohta = !liikkuu && ui.siirtoKaynnissa
+      ? (pallonKohta(ui.siirtoKaynnissa) ?? kohta)
+      : kohta;
+    merkit.paivita({ nappula: liikkuu || lento || linssiPaalla() ? null : nappulanKohta, kohteet });
     paivitaPisteet();
     pyydaLadonta();
     /*
@@ -4301,8 +4322,33 @@ export async function avaaPallolauta(ui) {
      * ennen `actionFly`ta ja nollaa vasta kun nappula on maassa. Perillä
      * kuljettajan `laske()` merkitsee paikan (merkitseNappulanPaikka) ja
      * ajaa saapumisrajauksen itse, joten mitään ei jää ajamatta.
+     *
+     * EIKÄ MAA- JA MERIMATKALLA (`ui.siirtoKaynnissa`, Raamattu
+     * KARTTAUUDISTUKSEN PAATOKSET 40; mitattu pinotiedolla 18.9.2026,
+     * 1400 × 900, Marseille → Lyon).
+     *
+     * SAMA ANSA KUIN LENNOSSA, YKSI AUKKO MYÖHEMMIN. `ui.run` ajaa
+     * `game.actionMove`n ENNEN animaatiota, joten pelaajan paikka on jo
+     * määränpää, ja `ui.movingPlayerId` asetetaan vasta ennakkozoomin
+     * JÄLKEEN (niin että nappula näkyy laudalla zoomin ajan). Siinä
+     * välissä siirron ensimmäinen teko `matkanKermattomuus(true)` →
+     * `paivita()` luki paikanvaihdon teleportiksi ja käynnisti tästä
+     * `saavu()`n. `saavu` on asynkroninen (se odottaa
+     * saapumislaatikkoa), joten sen oma `ajaKamera` osui ennakkozoomin
+     * päälle vasta muutama millisekunti myöhemmin:
+     *
+     *   t =  9 ms  ennakkozoomi   ajaKamera(leveys 396, kesto 1054)
+     *   t = 10 ms  saavu → kotiin ajaKamera(leveys 240, saapuminen)
+     *              → pysaytaKameraAjo() → ennakon lupaus = false
+     *
+     * Ennakkozoomin `await` ratkesi siis 1 ms:ssä, ja koreografian
+     * sääntö *"kartta saisi zoomautua lähemmäksi ensin ja sitten vasta
+     * pelaaja alkaisi liikkua"* jäi kokonaan toteutumatta. Ohjelmallinen
+     * tilanvaihdos EI ole pelaajan ele, joten se ei saa keskeyttää
+     * ennakkoa — lippu on päällä koko koreografian ajan ja perillä
+     * kuljettajan `laske()` merkitsee paikan kuten lennossakin.
      */
-    if (!liikkuu && !lento && !ui.lentoKaari && pos) {
+    if (!liikkuu && !lento && !ui.lentoKaari && !ui.siirtoKaynnissa && pos) {
       if (nappulanPaikka !== null && nappulanPaikka !== posAvain) {
         void saavu({ kesto: PALLOKAMERAN_AJO_MS });
       }

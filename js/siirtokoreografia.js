@@ -382,6 +382,25 @@ export function askelenSiirtoleveys(askelYks, leveysPx, korkeusPx, osuus = ASKEL
 export const ENNAKKOZOOMIN_MS = 760;
 export const ENNAKON_HENGAHDYS_MS = 120;
 /*
+ * MONTAKO KERTAA ENNAKKOZOOMI JATKETAAN, JOS OHJELMA KESKEYTTI SEN
+ * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 40).
+ *
+ * `ajaKamera` palauttaa `false` sekä pelaajan eleestä että siitä, että
+ * jokin muu ohjelman osa käynnisti oman ajonsa päälle. ELE VOITTAA on
+ * pelin sääntö ja pysyy: eleestä luovutaan heti ja nappula lähtee siitä
+ * näkymästä, jonka pelaaja valitsi. OHJELMALLINEN tilanvaihdos ei ole
+ * ele, ja se katkaisi koreografian ensimmäisellä millisekunnilla
+ * (mitattu 18.9.2026, ks. js/pallolauta/lauta.js teleporttivahti).
+ * Juurisyy on korjattu, ja tämä on sen varmistin: ennakko jatketaan
+ * JÄLJELLÄ OLEVALLA ajalla, ei uudella kestolla, joten koko vaihe
+ * pysyy ENNAKKOZOOMIN_MS:n mittaisena eikä kerrannu.
+ *
+ * Kaksi jatkoa riittää ja on ehdoton yläraja: kolmas ohjelmallinen
+ * keskeytys 760 ms:n sisällä tarkoittaisi, että kartalla tapahtuu jotain
+ * muuta tärkeämpää — silloin koreografia väistää.
+ */
+export const ENNAKON_JATKOT = 2;
+/*
  * Montako reitin ensimmäistä askelta ennakkozoomi ottaa rajaukseensa
  * nappulan lisäksi. Kaksi askelta kertoo katsojalle SUUNNAN — mihin
  * päin nappula on lähdössä — mutta ei vielä vedä kameraa määränpäähän,
