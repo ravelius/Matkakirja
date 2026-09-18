@@ -326,21 +326,45 @@ async function haePala({ lon0, lat0, lon1, lat1 }) {
     throw new Error('lat on laskeva — NCSS:n ruudukon suunta muuttui');
   }
   /*
-   * PITUUSASTE NORMALISOIDAAN −180…180:een.
+   * PITUUSASTE NORMALISOIDAAN −180…180:een — KOKO PALA KERRALLA,
+   * EI ALKIO KERRALLAAN.
    *
-   * Mitattu 18.9.2026: NCSS palautti laatasta N45E015 pyydetylle
-   * ikkunalle 15…17 °E pituusasteet 375…377. Se on sama meridiaani
-   * (375 − 360 = 15), mutta hilaindeksinä se on maailman toisella
-   * puolella — ja ainoa oire oli 86 918 sarakkeen levyinen liimattu
-   * ruudukko ja 154 Mt muistia yhdestä 512 px:n laatasta. Yksi
-   * vähennyslasku tässä, eikä kutsujan tarvitse tietää asiasta.
+   * Mitattu 18.9.2026: NCSS palauttaa joskus saman meridiaanin eri
+   * kierroksella. Laatasta N45E015 pyydetylle ikkunalle 15…17 °E se
+   * antoi pituusasteet 375…377, ja laatasta W180 pyydetylle ikkunalle
+   * −180…−178,725 se antoi 180…181,279.
+   *
+   * Alkiokohtainen normalisointi korjasi ensimmäisen tapauksen mutta
+   * RIKKOI toisen: 180 ei ole `> 180`, joten se jäi paikalleen, kun
+   * heti sen jälkeinen 180,004 hyppasi arvoon −179,996. Taulukko
+   * lakkasi olemasta kasvava, `lon[0]` luki 180 ja `lon[leveys−1]`
+   * luki −178,72 — eli kumpikin pää näytti uskottavalta erikseen ja
+   * molemmat vahdit päästivät palan läpi. Liimaus luki vain `lon[0]`:n
+   * ja sijoitti palan hilassa 86 400 saraketta väärään kohtaan; ainoa
+   * oire oli 86 917 sarakkeen levyinen ruudukko ja lopulta tyhjä
+   * laatta. Sarake 166 (päivämääräraja) puuttui tästä syystä.
+   *
+   * Yksi pala ei koskaan ylitä päivämäärärajaa — `kaarra` katkaisee
+   * välin ±180:ssa ja `rajat` 15°:n rajoilla — joten koko pala saa
+   * saman kierroksen: siirto valitaan ENSIMMÄISESTÄ alkiosta ja
+   * vähennetään kaikista. Puoliavoin väli [−180, 180) kuvaa 180:n
+   * arvoon −180, jolloin W180-laatan pala osuu hilan alkuun eikä
+   * loppuun.
    */
   const lonN = new Float64Array(lon.length);
-  for (let i = 0; i < lon.length; i++) {
-    let v = lon[i];
-    while (v > 180) v -= 360;
-    while (v < -180) v += 360;
-    lonN[i] = v;
+  let kierros = 0;
+  if (lon.length) {
+    let v = lon[0];
+    while (v >= 180) { v -= 360; kierros += 360; }
+    while (v < -180) { v += 360; kierros -= 360; }
+  }
+  for (let i = 0; i < lon.length; i++) lonN[i] = lon[i] - kierros;
+  /*
+   * Kasvavuus tarkistetaan: jos NCSS:n ruudukko joskus katkeaa
+   * kesken, se näkyy tässä eikä vasta liimatun ruudukon leveytenä.
+   */
+  if (lonN.length > 1 && lonN[lonN.length - 1] <= lonN[0]) {
+    throw new Error('lon ei ole kasvava — NCSS palautti katkenneen ruudukon');
   }
   return {
     z, lat, lon: lonN, leveys: lon.length, korkeus: lat.length,
@@ -457,6 +481,14 @@ export async function haeIkkuna({
        * Varmistus: NCSS on palauttanut joskus koko tiedoston leveyden
        * pyydetyn ikkunan sijaan. Se ei saa jäädä huomaamatta — muuten
        * virhe näkyy vain muistinkulutuksena eikä koskaan kuvassa.
+       *
+       * TÄMÄ VAHTI EI OLLUT RIKKI sarakkeen 166 tapauksessa, vaikka
+       * edellinen erä niin arveli. Pala oli 308 saraketta leveä eli
+       * täsmälleen oikean levyinen (katto 311); väärin oli sen PAIKKA.
+       * Leveysvahti ei voi nähdä paikkaa, ja paikkavahti alempana
+       * päästi palan läpi, koska rikkinäinen alkiokohtainen
+       * normalisointi jätti taulukon molemmat päät uskottaviksi. Vika
+       * oli `haePala`:n normalisoinnissa — korjattu siellä.
        */
       const odotettu = Math.ceil((lo1 - lo0) * 240) + 4;
       if (pala.leveys > odotettu) {
