@@ -45,6 +45,14 @@ Pages-julkaisussa — dist/-kansiota EI committoida, historia paisuisi).
 - docs/moduulit/kaupunkilehti.md, docs/moduulit/maalehti.md ja
   docs/tyolista-opukselle.md — lehtimalli ja lehtityön ohjeet.
 
+## Mac Studio (18.9.2026 alkaen)
+
+Fable ja agentit ajavat omistajan Mac Studiolla. Uuden session aloitus
+ilman omistajan ohjetta ja kaikkien avainten sijainti (Macin ympäristö,
+GitHub Actions secrets, gh-token) on Raamatun osiossa "MAC STUDIO: UUDEN
+SESSION ALOITUS ILMAN OMISTAJAN OHJETTA, JA MISSA AVAIMET OVAT".
+Avaimia ei kysytä omistajalta.
+
 ## Tärkeimmät säännöt
 
 - Julkaisukaava ja versionumerokäytäntö: docs/roolitus.md
