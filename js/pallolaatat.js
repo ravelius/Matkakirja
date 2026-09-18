@@ -766,6 +766,19 @@ export const LAATTAKERROS_SILMAT_MIN = 16;
 export const LAATTAKERROS_SILMAT_MAX = 160;
 /** polygonOffsetUnits: syvyyspuskurin askelta kameraa kohti (negatiivinen). */
 export const LAATTAKERROS_SYVYYSSIIRTO = -8;
+/*
+ * NIMIÖN VAALEA REUNUS RELIEFIN PÄÄLLÄ (ks. käyttökohta alempana).
+ * Sävy on linssiperheen oma vaalea pergamentti eikä puhdas valkoinen:
+ * valkoinen reunus kirkkaan lumirajan päällä olisi näkymätön, ja
+ * maastossa se näyttäisi liidulta. Peittävyys 0,92, jotta reunus on
+ * vankka mutta ei laatikko kirjaimen ympärillä.
+ */
+const NIMION_HALO = 'rgba(247, 241, 224, 0.92)';
+/** Reunuksen leveys laatan omissa pikseleissä (laatta on 512 px). */
+const NIMION_HALO_PX = 3;
+/** Vetoja saman varjon kanssa: yksi jää ohueksi, kolme kantaa. */
+const NIMION_HALO_VETOJA = 3;
+
 /** renderOrder = tämä + z: karkeat tasot ensin, kaikki läpinäkyvien alkuun. */
 export const LAATTAKERROS_RENDER_ORDER_POHJA = -10;
 /** Onko kerros oletuksena päällä (?laattakerros=0 sammuttaa). */
@@ -1628,6 +1641,38 @@ export function luoLaattakerros({
         continue;
       }
       if (!kuva) continue;
+      /*
+       * NIMIÖT LUETTAVIKSI RELIEFIN PÄÄLLÄ (Fablen kohta 3, 18.9.2026).
+       *
+       * Nostotason nimiöt — La Chaux-de-Fonds, Bern 1905, Chillon,
+       * Aletsch — on poltettu laattoihin SEEPIAKARTTAA varten: tummaa
+       * harmaata tasaisen vaalealle pergamentille. Reliefin päällä
+       * tausta ei ole tasainen vaan Alppien vaaleanvihreää ja ruskeaa
+       * rinnettä, joka vaihtelee kirjaimen sisällä, ja teksti hukkuu
+       * siihen. Mitattu 18.9.2026 (Chromium 390 × 844, Alpit,
+       * "Bern 1905"): maasto (182, 195, 117), teksti (82, 71, 54).
+       *
+       * HALO EIKÄ VÄRINVAIHTO. Nimiö on laatan pikseleissä eikä
+       * elementtinä, joten sen väriin ei pääse käsiksi ilman uutta
+       * polttoa. Vaalea reunus sen sijaan on kankaan oma työ: se
+       * erottaa tumman kirjaimen vaihtelevasta taustasta, ja se on
+       * kartografian tavallinen keino juuri tähän. Kolme vetoa yhdellä
+       * varjolla — yksi veto jää ohueksi, kolme tekee yhtenäisen
+       * reunuksen — ja sen päälle nimiö itse terävänä.
+       *
+       * VAIN RELIEFIN AIKANA (`kerrokset.reliefi`): pelin omalla
+       * seepiakartalla tausta on tasainen pergamentti, jossa reunus
+       * olisi pelkkää sotkua, eikä sinne kosketa.
+       */
+      if (kerrokset.reliefi && kerrostasot[i]?.nosto) {
+        ctx.save();
+        ctx.shadowColor = NIMION_HALO;
+        ctx.shadowBlur = NIMION_HALO_PX;
+        for (let veto = 0; veto < NIMION_HALO_VETOJA; veto += 1) {
+          ctx.drawImage(kuva, 0, 0, kartta.leveys, kartta.korkeus);
+        }
+        ctx.restore();
+      }
       ctx.drawImage(kuva, 0, 0, kartta.leveys, kartta.korkeus);
       kuva.close?.();
     }
