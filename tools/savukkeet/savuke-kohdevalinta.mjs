@@ -24,11 +24,13 @@
  *
  * ── VARTIOT (390 × 844 ja 1400 × 900, dpr 2, Lontoo) ──────────────
  *
- *   1. ILMAN NOPPAA KOHDEKAUPUNKI AVAA LIUSKAN (päätöksen kohta 4:
- *      *"siirtovaiheen ulkopuolella kaikki kuten ennen"*). Pariisin
- *      merkki toimintavaiheessa → liuska auki.
+ *   1. ILMAN NOPPAA NÄKYVÄ KAUPUNKI AVAA LIUSKAN (päätöksen kohta 4:
+ *      *"siirtovaiheen ulkopuolella kaikki kuten ennen"*). Kohdemaan
+ *      kaupungin merkki toimintavaiheessa → liuska auki. (Pariisia ei
+ *      enää voi napauttaa tässä: PAATOKSET 43 kohta 8 piilottaa muiden
+ *      maiden kaupungit siirtovaiheen ulkopuolella.)
  *   2. EI-KOHDEKAUPUNKI AVAA LIUSKAN SIIRTOVAIHEESSAKIN (kohta 2).
- *      Nopanheiton jälkeen napautetaan kaupunkia, joka EI ole
+ *      Nopanheiton jälkeen napautetaan KOHDEMAAN kaupunkia, joka EI ole
  *      moveOptionsissa → liuska auki.
  *   3. PELAAJAN OMA KAUPUNKI AVAA YHÄ LIUSKAN (kohta 3), myös
  *      siirtovaiheessa.
@@ -75,6 +77,36 @@ mkdirSync(KAAPPAUKSET, { recursive: true });
 const LAHTO = 'lontoo';
 const KOHDE = 'pariisi';
 const SILMA = 4;
+
+/*
+ * ── MUIDEN MAIDEN KAUPUNGIT OVAT PIILOSSA (PAATOKSET 43 kohta 8) ───
+ *
+ * v1947 piilottaa pelinäkymässä kohdemaan ULKOPUOLISET kaupungit,
+ * kun siirtovaihe ei ole päällä (js/pallolauta/lauta.js
+ * `pelinKaupunkirajaus` = kohdemaa + oma kaupunki + tarjolla olevat
+ * kohteet). Tämä savuke napautti aiemmin Pariisia ilman noppaa
+ * (vartio 1) ja Amsterdamia/Alppeja ei-kohteena (vartio 2) — ne ovat
+ * nyt oikein piilossa, joten napautus meni paljaaseen CANVASiin ja
+ * kumpikin vartio oli punainen syystä, joka EI ollut PAATOKSET 42:n
+ * väite. Napautettavat kaupungit valitaan siksi samasta lähteestä
+ * kuin rajaus itse: KOHDEMAAN kaupungeista (`pack.map.cityCountry`).
+ *
+ *   vartio 1 (ilman noppaa): kohdemaan kaupunki, joka ei ole oma
+ *     (Lontoosta Edinburgh) — ja jos pallon laudalla ei ole yhdelläkään
+ *     niistä pistettä, varalla on OMA kaupunki, joka on aina näkyvissä
+ *     ja avaa liuskan siirtovaiheen ulkopuolella (kohta 4). Valinta
+ *     kirjataan lokiin, jotta vihreästä näkee, kumpi mitattiin.
+ *   vartio 2 (siirtovaiheessa): kohdemaan kaupunki, joka EI ole
+ *     nopanheiton kohde eikä oma (Lontoosta silmällä 4: Bermuda tai
+ *     Falkland — Edinburgh ja Pariisi ovat kohteita).
+ *
+ * Väite säilyy sanasta sanaan: kohdekaupungin napautus valitsee
+ * siirron (vartiot 4–6), muu kaupunki avaa liuskan (1–3).
+ */
+const KARTTA = packById('maailmankartta');
+const MAATAULU = KARTTA?.map?.cityCountry ?? {};
+const KOHDEMAA = MAATAULU[LAHTO] ?? null;
+const KOHDEMAAN_KAUPUNGIT = Object.keys(MAATAULU).filter((id) => MAATAULU[id] === KOHDEMAA);
 /** Kuinka kauan liuskan avautumista odotetaan (kamera-ajo 1400 ms + ladonta). */
 const LIUSKAN_ODOTUS_MS = 3500;
 /** Kuinka kauan siirron alkua odotetaan napautuksen jälkeen. */
@@ -137,7 +169,7 @@ if (kirjasto?.status !== 200) {
 
 const peli = new Game({
   players: [{ name: 'Fogg', color: '#c9a227', start: LAHTO }],
-  pack: packById('maailmankartta'),
+  pack: KARTTA,
   seed: 5,
 });
 peli.phase = 'action';
@@ -202,6 +234,32 @@ const keskita = (sivu, id) => sivu.evaluate(async (tunnus) => {
   ui.pallolauta.ladoHeti?.();
   await new Promise((r) => setTimeout(r, 1400));
 }, id);
+
+/**
+ * ENSIMMÄINEN EHDOKAS, JOLLA ON OIKEASTI PISTE PALLOLLA.
+ *
+ * Pisteetöntä kaupunkia ei voi napauttaa (js/pallolauta/lauta.js
+ * `pisteNakyy`), ja PAATOKSET 43 kohta 8:n rajauksen jälkeen piste on
+ * vain kohdemaalla, omalla kaupungilla ja heiton kohteilla — lisäksi
+ * nimikerros karsii kaukaiset. Kamera viedään siksi kunkin ehdokkaan
+ * päälle ja piste luetaan laudan omasta pistekerroksesta, samasta
+ * lähteestä kuin peli piirtää. Palauttaa valitun tunnuksen tai null.
+ */
+async function valitseNakyva(sivu, ehdokkaat) {
+  const katsotut = [];
+  for (const id of ehdokkaat) {
+    /* eslint-disable no-await-in-loop */
+    await keskita(sivu, id);
+    const on = await sivu.evaluate((tunnus) => {
+      const l = window.matkakirja.ui.pallolauta;
+      return (l.pallo.pointsData() ?? []).some((d) => d?.id === tunnus);
+    }, id);
+    katsotut.push(`${id}:${on ? 'piste' : 'ei pistettä'}`);
+    if (on) return { id, katsotut };
+    /* eslint-enable no-await-in-loop */
+  }
+  return { id: null, katsotut };
+}
 
 /** Liuskan tila yhtenä lukemana: kerroksen lippu ja DOMin rivit. */
 const liuskanTila = (sivu) => sivu.evaluate(() => ({
@@ -313,10 +371,23 @@ async function mittaa(ruutu) {
     };
   }, [LAHTO, KOHDE]);
 
-  /* ── vartio 1: ILMAN NOPPAA KOHDEKAUPUNKI AVAA LIUSKAN ──────────── */
-  tulos.ilmanNoppaa = await napautaJaOdotaLiuska(sivu, KOHDE);
+  /*
+   * ── vartio 1: ILMAN NOPPAA NÄKYVÄ KAUPUNKI AVAA LIUSKAN ─────────
+   * Kohta 4: *"siirtovaiheen ulkopuolella kaikki kuten ennen"*.
+   * Napautettava kaupunki on kohdemaan oma (PAATOKSET 43 kohta 8),
+   * ensisijaisesti muu kuin pelaajan kaupunki; varalla oma kaupunki.
+   */
+  const ykkonen = await valitseNakyva(sivu, [
+    ...KOHDEMAAN_KAUPUNGIT.filter((id) => id !== LAHTO), LAHTO,
+  ]);
+  tulos.ilmanNoppaaValinta = { maa: KOHDEMAA, ...ykkonen, omaVara: ykkonen.id === LAHTO };
+  tulos.ilmanNoppaa = ykkonen.id
+    ? await napautaJaOdotaLiuska(sivu, ykkonen.id)
+    : { auki: null, syy: 'kohdemaassa ei pisteellistä kaupunkia' };
   await suljeLiuska(sivu);
   await sivu.waitForTimeout(400);
+  // Takaisin omistajan iPad-kuvan rajaukseen ennen noppaa.
+  await rajaa(sivu, 3);
 
   /* ── nopanheitto: Pariisi on nyt kohde ─────────────────────────── */
   const heitto = await heitaNoppa(sivu, SILMA);
@@ -335,60 +406,21 @@ async function mittaa(ruutu) {
    * omista pisteistä ja kamera viedään sen päälle; vartiot 3–5
    * ajetaan taas omistajan omassa rajauksessa.
    */
-  const eiKohde = await sivu.evaluate((sade) => {
-    const { ui, game: g } = window.matkakirja;
-    const l = ui.pallolauta;
-    const kohteina = new Set((g.moveOptions?.() ?? [])
-      .map((o) => o.city?.id).filter(Boolean));
-    const r = l.kotelo.getBoundingClientRect();
-    const oma = g.player.pos?.city ?? null;
-    /*
-     * PALLON TAKAPUOLI EI KELPAA (sama sääntö kuin laudan omassa
-     * osumatestissä, js/pallolauta/lauta.js `lahin`): takana oleva
-     * kaupunki projisoituu samaan pikseliin kuin edessä oleva, ja
-     * ensimmäinen ajo valitsi ei-kohteeksi Dunedinin ja
-     * Christchurchin. Etupuoli rajataan kameran omalla näkyvällä
-     * laatikolla LAUDAN yksiköissä — se on sama ikkuna, jonka
-     * kamera juuri ajoi.
-     */
-    const kam = ui.kamera()?.kameranTila?.() ?? null;
-    if (!kam) return null;
-    const puoliL = kam.leveys / 2;
-    const puoliK = puoliL * (r.height / r.width);
-    // Kohteiden ruutupisteet: ei-kohteen on oltava selvästi erillään,
-    // muuten napautus valitsisi kohteen (NAPAUTUKSEN_SADE_PX).
-    const kohdePisteet = (g.moveOptions?.() ?? []).map((o) => {
-      const k = o.city ? l.kaupunki(o.city.id) : null;
-      return k ? l.pallo.getScreenCoords(k.lat, k.lon, 0) : null;
-    }).filter(Boolean);
-    /*
-     * VAIN PISTEKERROKSEN KAUPUNGIT KELPAAVAT. Pallolla on piste vain
-     * NIMETYLLÄ kaupungilla (js/pallolauta/lauta.js `pisteNakyy`),
-     * eikä pisteetöntä kaupunkia voi napauttaa: toinen ajo valitsi
-     * Amsterdamin, jolla ei ollut pistettä, ja liuska jäi auki
-     * aukeamatta. Lähde on siis sama kuin laudalla itsellään.
-     */
-    const pisteelliset = new Set(l.pallo.pointsData()
-      .map((d) => d?.id).filter((id) => id && g.board.cityById.has(id)));
-    let paras = null;
-    const ehdokkaat = [];
-    const hylatyt = [];
-    for (const c of g.board.cities) {
-      if (!pisteelliset.has(c.id)) continue;
-      if (kohteina.has(c.id) || c.id === oma) { hylatyt.push(`${c.id}:kohde/oma`); continue; }
-      if (Math.abs(c.x - kam.x) > puoliL || Math.abs(c.y - kam.y) > puoliK) { hylatyt.push(`${c.id}:laatikon ulkopuolella`); continue; }
-      const k = l.kaupunki(c.id);
-      if (!k) continue;
-      const p = l.pallo.getScreenCoords(k.lat, k.lon, 0);
-      // Vain ruudulla ja reunoista irti (kosketusvara).
-      if (!p || p.x < 8 || p.y < 8 || p.x > r.width - 8 || p.y > r.height - 8) { hylatyt.push(`${c.id}:ruudun ulkopuolella`); continue; }
-      if (kohdePisteet.some((q) => Math.hypot(q.x - p.x, q.y - p.y) < sade * 1.5)) { hylatyt.push(`${c.id}:kohteen vieressa`); continue; }
-      const etaisyys = Math.hypot(p.x - r.width / 2, p.y - r.height / 2);
-      ehdokkaat.push({ id: c.id, etaisyys: Math.round(etaisyys) });
-      if (!paras || etaisyys < paras.etaisyys) paras = { id: c.id, etaisyys };
-    }
-    return paras ? { ...paras, ehdokkaat, hylatyt } : { ehdokkaat, hylatyt, pisteellisia: [...pisteelliset] };
-  }, 44);
+  const eiKohde = await (async () => {
+    const tila = await sivu.evaluate((idt) => {
+      const { game: g } = window.matkakirja;
+      const kohteina = new Set((g.moveOptions?.() ?? [])
+        .map((o) => o.city?.id).filter(Boolean));
+      const oma = g.player.pos?.city ?? null;
+      return {
+        kohteet: [...kohteina],
+        oma,
+        ehdokkaat: idt.filter((id) => !kohteina.has(id) && id !== oma),
+      };
+    }, KOHDEMAAN_KAUPUNGIT);
+    const valinta = await valitseNakyva(sivu, tila.ehdokkaat);
+    return { maa: KOHDEMAA, ...tila, ...valinta };
+  })();
   tulos.eiKohde = eiKohde;
   if (eiKohde?.id) {
     await keskita(sivu, eiKohde.id);
@@ -510,13 +542,15 @@ for (const ruutu of RUUDUT.filter((r) => !VAIN || r.nimi === VAIN)) {
   const t = ruutu.nimi;
 
   tieto(`${t} lähtötila`, JSON.stringify(tulos.alkutila ?? null));
-  vaadi(`1 ${t}: ilman noppaa kohdekaupunki avaa liuskan`,
+  tieto(`${t} ilman noppaa napautettu`, JSON.stringify(tulos.ilmanNoppaaValinta ?? null));
+  vaadi(`1 ${t}: ilman noppaa näkyvä kaupunki (${tulos.ilmanNoppaaValinta?.id ?? '—'}`
+    + `${tulos.ilmanNoppaaValinta?.omaVara ? ', oma varalla' : ''}) avaa liuskan`,
     Boolean(tulos.ilmanNoppaa?.auki),
-    JSON.stringify(tulos.ilmanNoppaa ?? null));
+    JSON.stringify({ valinta: tulos.ilmanNoppaaValinta, tulos: tulos.ilmanNoppaa ?? null }));
 
   tieto(`${t} nopanheitto`, JSON.stringify(tulos.heitto ?? null));
   tieto(`${t} ei-kohdekaupunki`, JSON.stringify(tulos.eiKohde ?? null));
-  vaadi(`2 ${t}: ei-kohdekaupunki avaa liuskan siirtovaiheessa`,
+  vaadi(`2 ${t}: ei-kohdekaupunki (${tulos.eiKohde?.id ?? '—'}) avaa liuskan siirtovaiheessa`,
     Boolean(tulos.eiKohteenLiuska?.auki),
     JSON.stringify({ valittu: tulos.eiKohde, tulos: tulos.eiKohteenLiuska ?? null }));
 
