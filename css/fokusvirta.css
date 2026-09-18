@@ -2855,6 +2855,40 @@ body.luenta-huntu .map-pane::after {
   body.luenta-huntu .map-pane::after { transition: none; }
 }
 
+/*
+ * HUNTU EI TULE TOPOGRAFIALINSSIN PÄÄLLE (mitattu 18.9.2026, erä 4).
+ *
+ * MIKÄ OLI VIKANA. Linssi avattiin, terävä reliefi tuli ruudulle — ja
+ * noin sekunti myöhemmin koko karttaruutu tummui ja sumeni. Kaappauksista
+ * mitattuna vaikutus osui myös linssin OMAAN nimiölaattaan, joka on
+ * DOM-elementti eikä pallon pintaa lainkaan: kultateksti luki terävässä
+ * kehyksessä (217, 161, 59) ja hunnun alla (86, 65, 29), eli kontrasti
+ * romahti 6,47:stä 1,51:een. Maasto muuttui samalla puuroksi
+ * (`backdrop-filter: blur(3.5px)`). Erän 3 mittaus luki tämän
+ * "asettuneeksi näkymäksi" ja sitä edeltävän terävän kehyksen
+ * "kirkkausvälähdykseksi" — päinvastoin kuin se oli.
+ *
+ * MIKSI SÄÄNTÖ ON OIKEIN EIKÄ PELKKÄ VAIMENNUS. Huntu on olemassa YHTÄ
+ * TARKOITUSTA VARTEN: että luentakuva erottuu kartasta (ks. perustelu
+ * tämän tiedoston alussa). Topografialinssin ajan sitä kuvaa EI OLE —
+ * `body.linssi-topografia` piilottaa sekä ison luentakuvan
+ * (`.fokusvirta-isokuva`, `display: none`) että pienen kuvapakan
+ * (`.fokusvirta-luentakuva`, `visibility: hidden`) css/styles.css:ssä,
+ * omistajan 16.9.2026 antamasta listasta. Huntu siis tummensi ja sumensi
+ * kartan erottaakseen sen kuvasta, jota ruudulla ei ollut.
+ *
+ * Luenta itse jatkuu: kertojan ääni, kaiutin, tekstipiilo ja Liiku-piilo
+ * ovat omia luokkiaan (`luenta-aanessa`, `kertoja-aanessa`,
+ * `luenta-tekstit-piiloon`) eikä tämä kajoa niihin. Vain huntu jää pois.
+ *
+ * `content: none` eikä `opacity: 0`: jälkielementtiä ei tarvitse olla
+ * olemassa, ja css/styles.css sammuttaa `.map-pane::after`:n samalla
+ * tavalla silloin kun sitä ei tarvita.
+ */
+body.linssi-topografia.luenta-huntu .map-pane::after {
+  content: none;
+}
+
 /* =====================================================================
    PIKKUKUVAT MATKAKIRJAN TEKSTIN LOPUSSA
    (omistaja 17.9.2026 klo 22.05, Raamattu KARTTAUUDISTUKSEN PAATOKSET 35

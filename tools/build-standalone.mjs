@@ -795,6 +795,13 @@ const MODULES = [
    * tähän: paikka on kelvollinen kaikille lukijoille, ja rivin
    * siirtely tässä luettelossa on aina riski.
    */
+  /*
+   * Reliefipyramidin laatasto (topografialinssi). ENNEN
+   * js/laattapyramidi.js:ää, koska se tuo tämän — yhden tiedoston
+   * versiossa moduulit ajetaan listan järjestyksessä, eikä tuoja saa
+   * olla ennen tuotua.
+   */
+  'js/reliefipyramidi.js',
   'js/laattapyramidi.js',
   /*
    * Siirron koreografian luvut ja käyrät (pallolauta vaihe 2). Nousi

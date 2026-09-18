@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1939, teksti: 'Topografialinssi piirtaa reliefipyramidista (15 kaarisek.)' },
   { v: 1938, teksti: 'Kerma heti ja meret; liuska; nostot kasvavat; nostotaso' },
   { v: 1937, teksti: 'Liuska heti merkin oikealle, kaupungin nimi piiloon' },
   { v: 1936, teksti: 'Liuskan teksti poltetun kokoa; nimi ja nostot paikallaan' },

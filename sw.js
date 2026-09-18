@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1938';
+const CACHE = 'matkakirja-2026-08-09.1939';
 const SHELL = [
   './',
   './index.html',
@@ -219,6 +219,7 @@ const SHELL = [
   // Laattakerroksen puhtaat apurit (erä E0, 6.9.2026): js/pallo.js tuo
   // ne staattisesti, joten ne kulkevat samaa polkua offline-käyttöön.
   './js/pallolaatat.js',
+  './js/reliefipyramidi.js',
   // Vektoriviivat laattojen päälle (erä V1, 6.9.2026, Raamattu
   // VEKTORIT SAMALLA): pallolauta tuo kerroksen, joten se kulkee samaa
   // polkua offline-käyttöön. Vektoriaineisto itse on HTTP-välimuistissa

@@ -288,11 +288,29 @@ const TILA = `() => {
   };
 }`;
 
-/** Yksi ruutu: peli auki Pariisiin, linssi päälle, mittaukset. */
-async function ajaRuutu(ruutu, { tarkennus = true } = {}) {
+/** Onko URL seepiapohjan (julisteet/pyramidi) laatta? */
+const seepiaLaatta = (u) => /julisteet\/pyramidi\/[^/]+\/z\d+\/\d+\/\d+\.\w+/.test(u);
+/** Onko URL reliefipyramidin laatta? */
+const reliefiLaatta = (u) => /reliefipyramidi\/[^/]+\/z\d+\/\d+\/\d+\.\w+/.test(u);
+
+/**
+ * Yksi ruutu: peli auki Pariisiin, linssi päälle, mittaukset.
+ *
+ * `pyramidi = true` on OLETUS eli se, mitä pelaaja saa (Raamattu,
+ * ASTRONAUTIN KAMERA LISAYS 16 kohta 49): topografialinssi piirtää
+ * reliefipyramidista, eikä koko pallon kalvoa tai tarkennuslaastaria
+ * ole lainkaan. `pyramidi = false` (`?reliefipyramidi=0`) on VARALLA
+ * oleva vanha maailma — yksi kuva ja laastari — ja se ajetaan
+ * vastakokeena, jotta varapolku ei mätäne huomaamatta.
+ */
+async function ajaRuutu(ruutu, { pyramidi = true } = {}) {
+  /* Laastari ja koko pallon kalvo ovat olemassa vain varapolulla. */
+  const tarkennus = !pyramidi;
   const virheet = [];
+  const pyynnot = [];
   const konteksti = await selain.newContext({ ...ruutu, serviceWorkers: 'block' });
   const sivu = await konteksti.newPage();
+  sivu.on('request', (r) => pyynnot.push({ t: Date.now(), url: r.url() }));
   await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
   await sivu.route(/media\.matkakirja\.app|r2\.dev/, async (route) => {
     const vastaus = await ampariHaku(route.request().url());
@@ -309,7 +327,7 @@ async function ajaRuutu(ruutu, { tarkennus = true } = {}) {
   );
   const lue = () => sivu.evaluate(`(${TILA})()`);
 
-  const osoite = `http://127.0.0.1:${PORTTI}/index.html?lauta=pallo${tarkennus ? '' : '&tarkennus=0'}`;
+  const osoite = `http://127.0.0.1:${PORTTI}/index.html?lauta=pallo${pyramidi ? '' : '&reliefipyramidi=0'}`;
   await sivu.goto(osoite, { waitUntil: 'load' });
   await sivu.waitForTimeout(2500);
   await sivu.evaluate(() => {
@@ -335,6 +353,7 @@ async function ajaRuutu(ruutu, { tarkennus = true } = {}) {
   const ennen = await lue();
 
   /* ---- linssi päälle ------------------------------------------------ */
+  const t0 = Date.now();
   await sivu.evaluate(async () => {
     const { ui } = window.matkakirja;
     ui.busy = false;
@@ -360,10 +379,23 @@ async function ajaRuutu(ruutu, { tarkennus = true } = {}) {
    * mitattuna 16.9.2026 kuormitetussa kontissa sivun kehyssilmukka ja
    * ajastimet voivat pysähtyä sekunneiksi kesken linssin avautumisen.
    */
-  await sivu.waitForFunction(() => {
+  await sivu.waitForFunction((pyr) => {
     const t = window.matkakirja?.ui?.pallolinssi?.kahva?.tila?.();
-    return Boolean(t) && (t.perusKalvo === true || t.tarkennus?.paalla === true);
-  }, null, { timeout: 30000 }).catch(() => null);
+    if (!t) return false;
+    /*
+     * PYRAMIDITILASSA EI OLE KALVOA EIKÄ LAASTARIA (kohta 49), joten
+     * vanha ehto ei toteudu koskaan — ja juuri se katkaisi savukkeen
+     * 18.9.2026: jokainen tämän tiedoston odotus käveli aikakattoonsa
+     * (30 + 120 + 20 s ruutua kohden) ja ajo kuoli 600 sekuntiin
+     * kesken. Pyramiditilassa odotetaan sitä, mikä oikeasti piirtää:
+     * laattakerros on ajossa ja on koonnut laattoja.
+     */
+    if (pyr) {
+      const m = window.matkakirja?.ui?.pallolauta?.lepokerros?.()?.mittarit?.() ?? null;
+      return Boolean(t.reliefipyramidi) && (m?.laattoja ?? 0) > 0;
+    }
+    return t.perusKalvo === true || t.tarkennus?.paalla === true;
+  }, pyramidi, { timeout: 30000 }).catch(() => null);
 
   if (tarkennus) {
     await sivu.waitForFunction(
@@ -378,12 +410,16 @@ async function ajaRuutu(ruutu, { tarkennus = true } = {}) {
     null, { timeout: 120000 },
     ).catch(() => null);
   }
-  if (!tarkennus) {
-    // Vastakoe: laastaria ei tule, joten mitataan vasta kun koko pallon
-    // kalvo on oikeasti näkyvissä (sama rajattu odotus kuin yllä).
+  if (pyramidi) {
+    /*
+     * Pyramiditilassa lähizoomi mitataan vasta kun laatasto on osunut
+     * tarkkaan tasoon (z ≥ 5) — kerros aloittaa karkeasta ja täydentää.
+     * Rajattu odotus: jos se ei tapahdu 30 sekunnissa, väitteet
+     * kaatuvat kuten kuuluukin.
+     */
     await sivu.waitForFunction(() => {
-      const t = window.matkakirja?.ui?.pallolinssi?.kahva?.tila?.();
-      return Boolean(t) && t.perusKalvo === true;
+      const m = window.matkakirja?.ui?.pallolauta?.lepokerros?.()?.mittarit?.() ?? null;
+      return Boolean(m) && (m.taso ?? 0) >= 5 && (m.valmiita ?? 0) > 0;
     }, null, { timeout: 30000 }).catch(() => null);
   }
   await sivu.waitForTimeout(3000);
@@ -442,7 +478,21 @@ async function ajaRuutu(ruutu, { tarkennus = true } = {}) {
     return { vanha: vanhaMitta, uusi: uusiMitta };
   }, tarkennus ? (lahi.laastari?.tarkennus?.ikkuna ?? null) : null);
   const lahikuva = await kuvaa();
-  writeFileSync(join(ULOS, `topografialinssi-${ruutu.nimi}-lahi${tarkennus ? '' : '-vastakoe'}.png`), lahikuva);
+  writeFileSync(join(ULOS, `topografialinssi-${ruutu.nimi}-lahi${pyramidi ? '' : '-vastakoe'}.png`), lahikuva);
+  /*
+   * LAATTAKERROKSEN OMA TILA lähizoomista. Ruutukuva kertoo, MITÄ
+   * näkyy; kerroksen mittarit kertovat, MISTÄ se tuli — mihin tasoon
+   * laatasto osui ja montako laattaa se on koonnut
+   * (js/pallolaatat.js, sama luenta kuin mittaa-reliefipyramidi.mjs).
+   */
+  const kerrosLahi = await sivu.evaluate(() => {
+    const k = window.matkakirja?.ui?.pallolauta?.lepokerros?.();
+    const m = k?.mittarit?.() ?? null;
+    return m ? {
+      tila: m.tila, syy: m.syy, taso: m.taso, laattoja: m.laattoja,
+      valmiita: m.valmiita, pyyntoja: m.pyyntoja,
+    } : null;
+  });
 
   /* ---- uloimpaan sallittuun: mahtuuko koko pallo? ------------------- */
   await sivu.evaluate(() => {
@@ -462,23 +512,46 @@ async function ajaRuutu(ruutu, { tarkennus = true } = {}) {
    * Raja on silti tiukka: jos tila ei asetu 20 sekunnissa, väite
    * kaatuu.
    */
-  await sivu.waitForFunction(() => {
+  await sivu.waitForFunction((pyr) => {
     const t = window.matkakirja?.ui?.pallolinssi?.kahva?.tila?.();
-    return Boolean(t) && t.perusKalvo === true && t.tarkennus?.paalla === false;
-  }, null, { timeout: 20000 }).catch(() => null);
+    if (!t) return false;
+    /* Pyramiditilassa yleiskuva on laatasto karkealla tasolla. */
+    if (pyr) {
+      const m = window.matkakirja?.ui?.pallolauta?.lepokerros?.()?.mittarit?.() ?? null;
+      return (m?.laattoja ?? 0) > 0 && (m?.taso ?? 99) <= 3;
+    }
+    return t.perusKalvo === true && t.tarkennus?.paalla === false;
+  }, pyramidi, { timeout: 20000 }).catch(() => null);
   await sivu.waitForTimeout(600);
   const uloin = await lue();
   const pallokuva = await kuvaa();
-  writeFileSync(join(ULOS, `topografialinssi-${ruutu.nimi}-pallo${tarkennus ? '' : '-vastakoe'}.png`), pallokuva);
+  writeFileSync(join(ULOS, `topografialinssi-${ruutu.nimi}-pallo${pyramidi ? '' : '-vastakoe'}.png`), pallokuva);
 
   /* ---- linssi kiinni ------------------------------------------------ */
+  /*
+   * LAATTALASKURIN IKKUNA SULKEUTUU TÄHÄN. Linssin sulkeminen palauttaa
+   * seepiakartan, ja sen laatat ovat silloin oikea tila — ilman tätä
+   * rajaa väite "seepiaa ei haeta linssin aikana" mittasi myös
+   * sulkemisen jälkeisen paluun (mitattu 18.9.2026: 94 pyyntöä, joista
+   * yksikään ei ollut linssin ajalta).
+   */
+  const t1 = Date.now();
   await sivu.evaluate(() => window.matkakirja.ui.valitseLinssi(null));
   await sivu.waitForTimeout(4000);
   const kiinni = await lue();
 
   await konteksti.close();
+  /*
+   * LAATTAPYYNNÖT LINSSIN AVAUKSEN JÄLKEEN. Kohta 49: pyramiditilassa
+   * seepiapohjaa EI ladota linssin alle, joten `seepiat` on oikea tila
+   * vain nollana — ja `reliefit` todistaa, että laatasto todella haki
+   * laattansa ämpäristä (route-välityksen läpi).
+   */
+  const jalkeen = pyynnot.filter((p) => p.t >= t0 && p.t <= t1).map((p) => p.url);
   return {
-    ennen, avattu, lahi, uloin, kiinni, virheet, lahteet,
+    ennen, avattu, lahi, uloin, kiinni, virheet, lahteet, kerrosLahi,
+    seepiapyyntoja: new Set(jalkeen.filter(seepiaLaatta)).size,
+    reliefipyyntoja: new Set(jalkeen.filter(reliefiLaatta)).size,
     teravyysLahi: teravyys(lahikuva),
   };
 }
@@ -489,29 +562,40 @@ for (const ruutu of RUUDUT) {
   const r = await ajaRuutu(ruutu);
   const nimi = `${ruutu.nimi} px`;
 
-  /* 1. TARKKUUS */
-  const t = r.lahi.laastari?.tarkennus ?? null;
-  const tiheys = t?.kangas && t?.ikkuna
-    ? t.kangas.leveys / (t.ikkuna.lng1 - t.ikkuna.lng0) : 0;
-  vaadi(`${nimi}: tarkennuslaastari on päällä lähizoomissa`,
-    Boolean(t?.paalla) && r.lahi.laastari?.perusKalvo === false,
-    JSON.stringify({ paalla: t?.paalla, perus: r.lahi.laastari?.perusKalvo, rakennuksia: t?.rakennuksia }));
-  vaadi(`${nimi}: laastarin kangas on lähteen omassa tiheydessä`,
-    tiheys >= LAHTEEN_TIHEYS * 0.9 && tiheys >= PERUSKUVAN_TIHEYS * 2.5,
-    `${tiheys.toFixed(1)} px/aste (4k-pallokuva ${PERUSKUVAN_TIHEYS.toFixed(1)}, lähde ${LAHTEEN_TIHEYS})`);
-
   /*
-   * POHJAKUVA VALITAAN RUUDUN MUKAAN (16.9.2026, js/linssit/reliefikuva.js
-   * valitseReliefi): leveällä ruudulla 8192 px (22,8 px/aste), kapealla
-   * 4096 px (11,4 px/aste). Sama valinta kuin Astronautin kameralla.
+   * 1. TARKKUUS — RELIEFIPYRAMIDI ON OLETUS (Raamattu, ASTRONAUTIN
+   * KAMERA LISAYS 16 kohta 49 ja KARTTAUUDISTUKSEN PAATOKSET 36
+   * TARKENNUS 3). Linssi piirtää 15 kaarisekunnin laatastosta, eikä
+   * koko pallon kalvoa tai tarkennuslaastaria rakenneta lainkaan.
+   * Vanhan maailman väitteet (kalvo, laastari, pohjakuvan valinta,
+   * lähteiden terävyys) ovat siirtyneet vastakokeeseen alla.
    */
-  const odotettuPohja = ruutu.viewport.width >= 1024 ? '8k' : '4k';
-  vaadi(`${nimi}: pohjakuva on ruudulle oikea (${odotettuPohja})`,
-    r.lahi.laastari?.pohja === odotettuPohja,
+  vaadi(`${nimi}: linssi piirtää reliefipyramidista, ei kalvosta eikä laastarista`,
+    r.lahi.laastari?.reliefipyramidi === true
+      && r.lahi.laastari?.perusKalvo === false
+      && r.lahi.laastari?.tarkennus === null,
     JSON.stringify({
-      pohja: r.lahi.laastari?.pohja, tiheys: r.lahi.laastari?.pohjanTiheys,
-      kynnys: r.lahi.laastari?.tarkennus?.kynnys,
+      pyramidi: r.lahi.laastari?.reliefipyramidi, perus: r.lahi.laastari?.perusKalvo,
+      laastari: r.lahi.laastari?.tarkennus,
     }));
+  /*
+   * LAATASTO ON OIKEASSA TASOSSA. Alppien lähizoomissa (altitude 0,06)
+   * kerroksen on osuttava tarkkaan tasoon eikä jäätävä karkeaan: z ≥ 5
+   * on se raja, jonka alapuolella pyramidi ei anna enempää kuin vanha
+   * 4k-pallokuva. Laattoja on oltava koottuna ja valmiina.
+   */
+  vaadi(`${nimi}: reliefilaatasto on lähizoomissa tarkassa tasossa (z ≥ 5)`,
+    (r.kerrosLahi?.taso ?? 0) >= 5 && (r.kerrosLahi?.valmiita ?? 0) > 0,
+    JSON.stringify(r.kerrosLahi));
+  /*
+   * KOHTA 49 KONEELLISESTI: seepiapohjaa EI ladota linssin alle.
+   * Nolla pyyntöä on tässä oikea tila — ja se on nimenomaan
+   * mitattava, koska pohjan laatat olivat ennen erää 4 se, mikä
+   * välähti vaaleana reliefin alta.
+   */
+  vaadi(`${nimi}: seepiapohjan laattoja ei haeta linssin aikana (0 pyyntöä)`,
+    r.seepiapyyntoja === 0 && r.reliefipyyntoja > 0,
+    `seepia ${r.seepiapyyntoja}, reliefi ${r.reliefipyyntoja}`);
 
   /* 2. PELIN ELEMENTIT */
   const e = r.lahi.elementit;
@@ -539,12 +623,11 @@ for (const ruutu of RUUDUT) {
    * pinnalle eikä koko pallon kalvo saa jäädä läpinäkyväksi — muuten
    * yleiskuvassa näkyy laikku ja muualla ei reliefiä lainkaan.
    */
-  vaadi(`${nimi}: yleiskuvassa laastari on pois ja koko pallon kalvo näkyvissä`,
-    r.uloin.laastari?.tarkennus?.paalla === false && r.uloin.laastari?.perusKalvo === true,
+  vaadi(`${nimi}: yleiskuvassa reliefi on yhä pallon pinnalla (karkea taso)`,
+    r.uloin.laastari?.reliefipyramidi === true && r.uloin.laastari?.perusKalvo === false,
     JSON.stringify({
-      peitto: r.uloin.laastari?.perusPeitto, tavoite: r.uloin.laastari?.perusTavoite,
-      ladattu: r.uloin.laastari?.perusLadattu, pohja: r.uloin.laastari?.pohja,
-      laastari: r.uloin.laastari?.tarkennus?.paalla,
+      pyramidi: r.uloin.laastari?.reliefipyramidi, perus: r.uloin.laastari?.perusKalvo,
+      laastari: r.uloin.laastari?.tarkennus,
     }));
   vaadi(`${nimi}: linssin katto on laudan omaa kattoa ulompana`,
     (r.uloin.rajat?.max ?? 0) > (r.ennen.rajat?.max ?? 0) * 1.5,
@@ -572,8 +655,63 @@ for (const ruutu of RUUDUT) {
 
   vaadi(`${nimi}: ei sivuvirheitä`, r.virheet.length === 0, r.virheet.slice(0, 3).join(' | '));
 
-  /* 1b. TERÄVYYS: laastarin lähde vs. koko pallon kalvon lähde */
-  const L = r.lahteet;
+  /*
+   * 1b. LINSSI PIIRTÄÄ JOTAIN. Ruudun terävyys ei erottele lähteitä
+   * (pallon oma pinta hallitsee gradienttia), mutta se erottaa
+   * PIIRRETYN linssin piirtämättömästä — mustan pallon vika 17.9.2026
+   * näkyi juuri tässä luvussa.
+   */
+  vaadi(`${nimi}: lähizoomissa ruudulla on piirrettyä reliefiä`,
+    r.teravyysLahi > 0, `ruudun terävyys ${r.teravyysLahi}`);
+
+  /* ────────────────────────────────────────────────────────────────
+   * 5. VASTAKOE: ?reliefipyramidi=0 eli VARALLA OLEVA VANHA MAAILMA
+   * ────────────────────────────────────────────────────────────────
+   * Varapolku on oltava ehjä: jos pyramidi ei ole saatavilla, linssin
+   * on yhä piirrettävä koko pallon kalvo ja tarkennuslaastari. Nämä
+   * viisi väitettä ovat entiset päävaiheen väitteet, siirrettyinä
+   * sinne, missä mitattava maailma yhä on. (Entinen `?tarkennus=0`
+   * -vastakoe on jäänyt pois: pyramidin kanssa laastaria ei ole, ja
+   * ilman pyramidia laastarin poisjättö mitataan tässä samassa
+   * ajossa `tarkennus`-kentän kautta.)
+   */
+  const v = await ajaRuutu(ruutu, { pyramidi: false });
+  const t = v.lahi.laastari?.tarkennus ?? null;
+  const tiheys = t?.kangas && t?.ikkuna
+    ? t.kangas.leveys / (t.ikkuna.lng1 - t.ikkuna.lng0) : 0;
+  vaadi(`${nimi}: vastakoe — ilman pyramidia tarkennuslaastari on päällä lähizoomissa`,
+    Boolean(t?.paalla) && v.lahi.laastari?.perusKalvo === false,
+    JSON.stringify({ paalla: t?.paalla, perus: v.lahi.laastari?.perusKalvo, rakennuksia: t?.rakennuksia }));
+  vaadi(`${nimi}: vastakoe — laastarin kangas on lähteen omassa tiheydessä`,
+    tiheys >= LAHTEEN_TIHEYS * 0.9 && tiheys >= PERUSKUVAN_TIHEYS * 2.5,
+    `${tiheys.toFixed(1)} px/aste (4k-pallokuva ${PERUSKUVAN_TIHEYS.toFixed(1)}, lähde ${LAHTEEN_TIHEYS})`);
+  /*
+   * POHJAKUVA VALITAAN RUUDUN MUKAAN (16.9.2026, js/linssit/reliefikuva.js
+   * valitseReliefi): leveällä ruudulla 8192 px (22,8 px/aste), kapealla
+   * 4096 px (11,4 px/aste). Sama valinta kuin Astronautin kameralla.
+   */
+  const odotettuPohja = ruutu.viewport.width >= 1024 ? '8k' : '4k';
+  vaadi(`${nimi}: vastakoe — pohjakuva on ruudulle oikea (${odotettuPohja})`,
+    v.lahi.laastari?.pohja === odotettuPohja,
+    JSON.stringify({
+      pohja: v.lahi.laastari?.pohja, tiheys: v.lahi.laastari?.pohjanTiheys,
+      kynnys: v.lahi.laastari?.tarkennus?.kynnys,
+    }));
+  /*
+   * YLEISKUVASSA LAASTARIA EI OLE (mitattu vika 16.9.2026): kun
+   * pelaaja zoomaa ulos, tarkennettu suorakaide ei saa jäädä pallon
+   * pinnalle eikä koko pallon kalvo saa jäädä läpinäkyväksi.
+   */
+  vaadi(`${nimi}: vastakoe — yleiskuvassa laastari on pois ja kalvo näkyvissä`,
+    v.uloin.laastari?.tarkennus?.paalla === false && v.uloin.laastari?.perusKalvo === true,
+    JSON.stringify({
+      peitto: v.uloin.laastari?.perusPeitto, tavoite: v.uloin.laastari?.perusTavoite,
+      ladattu: v.uloin.laastari?.perusLadattu, pohja: v.uloin.laastari?.pohja,
+      laastari: v.uloin.laastari?.tarkennus?.paalla,
+    }));
+
+  /* 5b. TERÄVYYS: laastarin lähde vs. koko pallon kalvon lähde */
+  const L = v.lahteet;
   /*
    * KAKSI KYNNYSTÄ, ERI LUONNETTA. Lähdepikselien suhde on pelkkää
    * geometriaa (10800 / 4096 × sama ikkuna = 2,64) ja siksi tiukka.
@@ -583,30 +721,12 @@ for (const ruutu of RUUDUT) {
    * vaihtelua 512 pikseliin piirrettynä). Kynnys on 1,25, jotta
    * vartija kertoo regressiosta eikä maisemasta.
    */
-  vaadi(`${nimi}: laastarin lähde on mitattavasti terävämpi`,
+  vaadi(`${nimi}: vastakoe — laastarin lähde on mitattavasti terävämpi`,
     Boolean(L) && L.uusi.teravyys > L.vanha.teravyys * 1.25
       && L.uusi.lahdePx > L.vanha.lahdePx * 2.5,
     L ? `terävyys ${L.vanha.teravyys} → ${L.uusi.teravyys} `
       + `(${(L.uusi.teravyys / L.vanha.teravyys).toFixed(2)}×), lähdepikseleitä `
       + `${L.vanha.lahdePx} → ${L.uusi.lahdePx}` : 'mittaa ei saatu');
-
-  /* 5. VASTAKOE: ilman laastaria linssi jää koko pallon kalvoon */
-  const v = await ajaRuutu(ruutu, { tarkennus: false });
-  vaadi(`${nimi}: vastakoe — ?tarkennus=0 jättää laastarin pois`,
-    v.lahi.laastari?.tarkennus?.paalla !== true && v.lahi.laastari?.perusKalvo === true,
-    JSON.stringify(v.lahi.laastari));
-  /*
-   * VARAPOLKU ON OLTAVA EHJÄ. Jos laite ei jaksa purkaa 10800 pikselin
-   * kuvaa, linssin on silti näytettävä reliefiä koko pallon kalvolla —
-   * ei tyhjää karttaa. Mitta on ruudun terävyys: se ei erottele
-   * lähteitä luotettavasti (linssin alla oleva laattakartta hallitsee
-   * gradienttia), mutta se erottaa PIIRRETYN linssin piirtämättömästä.
-   */
-  vaadi(`${nimi}: vastakoe — ilman laastaria linssi piirtää yhä reliefin`,
-    v.lahi.laastari?.perusKalvo === true && v.teravyysLahi > 0,
-    `ruudun terävyys ilman laastaria ${v.teravyysLahi}, laastarilla ${r.teravyysLahi}; `
-    + `pelin elementtejä ${Object.values(v.lahi.elementit ?? {}).reduce((a, b) => a + b, 0)} `
-    + JSON.stringify(v.lahi.elementit));
 }
 
 /* ══════════════════════════════════════════════════════════════════════
@@ -790,12 +910,22 @@ async function ajaAvaus({ peite = true } = {}) {
       const ui = window.matkakirja?.ui;
       let t = null;
       try { t = ui?.pallolinssi?.kahva?.tila?.() ?? null; } catch { t = null; }
+      /*
+       * PYRAMIDITILASSA KALVOA EI OLE (kohta 49), joten `peitto` on
+       * null eikä kerro mitään. Reliefin saapuminen luetaan silloin
+       * laattakerroksen omista mittareista (js/pallolaatat.js) — sama
+       * luenta kuin mittaa-reliefipyramidi.mjs:ssa.
+       */
+      let valmiita = null;
+      try { valmiita = ui?.pallolauta?.lepokerros?.()?.mittarit?.()?.valmiita ?? null; } catch { valmiita = null; }
       window.__topo.naytteet.push({
         t: +performance.now().toFixed(1),
         portti: document.body.classList.contains('aikajana-paalla'),
         peitto: t?.perusPeitto ?? null,
         tavoite: t?.perusTavoite ?? null,
         peite: t?.peite ?? null,
+        pyramidi: t?.reliefipyramidi ?? null,
+        valmiita,
       });
       requestAnimationFrame(askel);
     };
@@ -828,9 +958,20 @@ async function ajaAvaus({ peite = true } = {}) {
   // Reliefi perille asti; kuormitetussa kontissa se vie kymmeniä sekunteja.
   await sivu.waitForFunction(() => {
     const t = window.matkakirja?.ui?.pallolinssi?.kahva?.tila?.();
-    return Boolean(t) && (t.perusPeitto ?? 0) >= (t.perusTavoite ?? 0.72) * 0.98;
+    if (!t) return false;
+    /* Pyramiditilassa perille on laattakerroksen ensimmäinen valmis laatta. */
+    if (t.reliefipyramidi) {
+      const m = window.matkakirja?.ui?.pallolauta?.lepokerros?.()?.mittarit?.() ?? null;
+      return (m?.valmiita ?? 0) > 0;
+    }
+    return (t.perusPeitto ?? 0) >= (t.perusTavoite ?? 0.72) * 0.98;
   }, null, { timeout: 120000 }).catch(() => null);
-  await sivu.waitForTimeout(1200);
+  /*
+   * KAAPPAUS JATKUU VAKIINTUNEESEEN TILAAN ASTI (2,5 s). Välähdys on
+   * vika vain suhteessa siihen, mihin ruutu asettuu — ja se vertailuluku
+   * on otettava SAMASTA kehyssarjasta, ei toisesta kuvasta.
+   */
+  await sivu.waitForTimeout(2500);
   await cdp.send('Page.stopScreencast').catch(() => {});
 
   const data = await sivu.evaluate(() => {
@@ -928,17 +1069,53 @@ async function ajaAvaus({ peite = true } = {}) {
    * on perillä. Sen jälkeen ruutu on linssin oma eikä siirtymää enää
    * ole.
    */
-  const valmis = data.naytteet.find((s) => (s.peitto ?? 0) >= (s.tavoite ?? 0.72) * 0.98);
-  const loppu = valmis ? valmis.t - t0 : Infinity;
+  const valmis = data.naytteet.find((s) => (s.pyramidi
+    ? (s.valmiita ?? 0) > 0
+    : (s.peitto ?? 0) >= (s.tavoite ?? 0.72) * 0.98));
+  /*
+   * AVAUSIKKUNA ON VÄHINTÄÄN SEKUNTI. Pyramiditilassa ensimmäinen
+   * valmis laatta on ruudulla noin sadassa millisekunnissa, jolloin
+   * ikkunaan mahtuisi yksi kompositorin kehys eikä vartija näkisi
+   * mitään (mitattu 18.9.2026: 1 kehys, kattavuus 0 %). Vaalea
+   * välivaihe näkyisi yhtä hyvin heti reliefin saapumisen jälkeen,
+   * joten ikkuna pidetään sekunnin mittaisena riippumatta siitä, kuinka
+   * nopeasti reliefi on perillä.
+   */
+  const IKKUNA_VAHINTAAN_MS = 1000;
+  const loppu = Math.max(valmis ? valmis.t - t0 : Infinity, IKKUNA_VAHINTAAN_MS);
   const ennenRivit = rivit.filter((x) => x.t < 0);
   const avausRivit = rivit.filter((x) => x.t >= 0 && x.t <= loppu);
   const ennenKirkkaus = ennenRivit.length
     ? ennenRivit.reduce((a, b) => a + b.kirkkaus, 0) / ennenRivit.length : 0;
+  /*
+   * VAKIINTUNUT TILA = kehykset 2 sekuntia avauksen jälkeen. Tämä on se
+   * luku, jota vasten välähdys mitataan (ks. väite alla).
+   */
+  const vakiintuneet = rivit.filter((x) => x.t >= 2000);
+  const vakiintunut = vakiintuneet.length
+    ? vakiintuneet.reduce((a, b) => a + b.kirkkaus, 0) / vakiintuneet.length : 0;
+  /*
+   * PALUU YLHÄÄLTÄ ALAS: suurin pudotus siihenastisesta huipusta
+   * avausikkunan sisällä. Juuri se on "vaalea kartta ensin ja
+   * topografia sen päälle" — kirkkaus käy ylhäällä ja tulee alas.
+   */
+  let huippuToistaiseksi = -Infinity;
+  let suurinPudotus = 0;
+  for (const x of rivit.filter((y) => y.t >= 0 && y.t <= loppu)) {
+    huippuToistaiseksi = Math.max(huippuToistaiseksi, x.kirkkaus);
+    suurinPudotus = Math.max(suurinPudotus, huippuToistaiseksi - x.kirkkaus);
+  }
 
   /* Paljaan kartan näytteet: portti auki, ei peitettä eikä reliefiä. */
   const avausNaytteet = data.naytteet.filter((s) => s.t >= t0 && s.t - t0 <= loppu);
+  /*
+   * PALJAS KARTTA = portti auki (pelin kerrokset riisuttu), ei
+   * odotuspeitettä EIKÄ reliefiä. Pyramiditilassa reliefi on
+   * laattakerroksen valmiissa laatoissa, ei kalvon peittävyydessä.
+   */
   const paljaat = avausNaytteet.filter(
-    (s) => s.portti === true && (s.peitto ?? 0) < 0.05 && s.peite !== true,
+    (s) => s.portti === true && s.peite !== true
+      && (s.peitto ?? 0) < 0.05 && (s.valmiita ?? 0) === 0,
   );
 
   const pitkat = data.pitkat.map((l) => ({ dt: l.alku - t0, kesto: l.kesto }));
@@ -964,6 +1141,9 @@ async function ajaAvaus({ peite = true } = {}) {
     avausKattavuus: avausRivit.length >= 2 && Number.isFinite(loppu) && loppu > 0
       ? (avausRivit[avausRivit.length - 1].t - avausRivit[0].t) / loppu : 0,
     avausHuippu: avausRivit.length ? Math.max(...avausRivit.map((x) => x.kirkkaus)) : 0,
+    vakiintunut,
+    vakiintuneita: vakiintuneet.length,
+    suurinPudotus,
     avausNaytteita: avausNaytteet.length,
     paljaita: paljaat.length,
     avausMs: Number.isFinite(loppu) ? Math.round(loppu) : null,
@@ -1005,26 +1185,41 @@ vaadi(`${nimiA}: omistajan tila toistui (luenta, saapumiskuva, pluskupla, kuvapa
 
 /*
  * (a) EI VAALEAA VÄLIVAIHETTA. Omistajan sanat: *"vaalea kartta piirtyy
- * ilmeisesti ensin ja sitten Topografia sen päälle"*. Ruudun
- * keskipisteen kirkkaus ei saa avauksen aikana nousta yli sen, mitä se
- * oli ENNEN linssiä — ei kymmentäkään prosenttia. Näytteitä on
- * kompositorin kehyksistä, ja niitä vaaditaan vähintään 20, jottei
- * väite mene läpi tyhjällä otoksella.
- */
-/*
+ * ilmeisesti ensin ja sitten Topografia sen päälle"*.
+ *
+ * VERTAILULUKU ON LOPPUTILA, EI SEEPIA (Fablen linjaus 18.9.2026, erän
+ * 2 raportti "TÄRKEIN LÖYTÖ"). Pyramiditilassa itse reliefi on
+ * seepiakarttaa vaaleampi — vakiintunut ruutu on noin 115, seepia noin
+ * 61 — joten vanha ehto "ei saa olla seepiaa vaaleampi" olisi
+ * vaatimus siitä, ettei reliefi piirry lainkaan. Välähdys on vika vain
+ * suhteessa siihen, mihin ruutu asettuu:
+ *
+ *   1) avausikkunan MAKSIMI on yli 15 yksikköä vakiintunutta
+ *      kirkkaampi (piikki, joka ei jää), tai
+ *   2) ikkunassa on PALUU YLHÄÄLTÄ ALAS yli 15 yksikköä (kirkkaus käy
+ *      ensin vaaleassa ja putoaa sitten) — juuri se, mitä omistaja
+ *      kuvasi.
+ *
  * OTOKSEN RIITTÄVYYS MITATAAN KATTAVUUTENA, EI KEHYSTEN MÄÄRÄNÄ
  * (17.9.2026, Mac). Vaatimus "vähintään 20 kehystä" oli kontin
  * kehystahdin mitta: Macilla sama 384 ms:n avaus tuotti 10 kehystä ja
- * väite kaatui, vaikka huippu (91,9) oli täsmälleen ennen-linssiä-
- * tasolla. Tyhjää otosta vastaan suojaa nyt kaksi ehtoa: vähintään 8
- * kehystä JA kehysten on peitettävä vähintään 60 % avausikkunasta.
- * Itse väite (ei vaaleaa välivaihetta) ei löysty lainkaan.
+ * väite kaatui, vaikka huippu oli täsmälleen odotetulla tasolla.
+ * Tyhjää otosta vastaan suojaa nyt kaksi ehtoa: vähintään 8 kehystä JA
+ * kehysten on peitettävä vähintään 60 % avausikkunasta.
  */
-vaadi(`${nimiA}: avauksen aikana ruutu ei ole kertaakaan ennen-linssiä-tasoa vaaleampi`,
-  a.avausKehykset >= 8 && a.avausKattavuus >= 0.6 && a.avausHuippu <= a.ennenKirkkaus * 1.1,
+const VALAHDYSVARA = 15;
+console.log(`INFO  ${nimiA}: avauksen maksimikirkkaus ${a.avausHuippu.toFixed(1)}, `
+  + `vakiintunut (2 s jälkeen, ${a.vakiintuneita} kehystä) ${a.vakiintunut.toFixed(1)}, `
+  + `suurin paluu ylhäältä alas ${a.suurinPudotus.toFixed(1)}, `
+  + `seepia ennen linssiä ${a.ennenKirkkaus.toFixed(1)}`);
+vaadi(`${nimiA}: avauksessa ei ole välähdystä suhteessa linssin lopputilaan`,
+  a.avausKehykset >= 8 && a.avausKattavuus >= 0.6 && a.vakiintuneita > 0
+    && a.avausHuippu <= a.vakiintunut + VALAHDYSVARA
+    && a.suurinPudotus <= VALAHDYSVARA,
   `kehyksiä ${a.avausKehykset} (kattavuus ${(100 * a.avausKattavuus).toFixed(0)} %), `
-  + `huippu ${a.avausHuippu.toFixed(1)}, `
-  + `ennen linssiä ${a.ennenKirkkaus.toFixed(1)} (raja ${(a.ennenKirkkaus * 1.1).toFixed(1)})`);
+  + `maksimi ${a.avausHuippu.toFixed(1)} vs vakiintunut ${a.vakiintunut.toFixed(1)} `
+  + `(raja ${(a.vakiintunut + VALAHDYSVARA).toFixed(1)}), `
+  + `paluu alas ${a.suurinPudotus.toFixed(1)} (raja ${VALAHDYSVARA})`);
 
 /*
  * (b) KARTTA EI OLE HETKEÄKÄÄN PALJAANA. Tämä on se väite, joka
@@ -1086,8 +1281,19 @@ vaadi(`${nimiA}: avaus ei kolminkertaista sivun omaa pisintä tehtävää`,
 vaadi(`${nimiA}: ImageBitmapin vienti näytönohjaimelle on alle puolet <img>:n hinnasta`,
   Boolean(a.purku) && a.purku.img > 0 && a.purku.bitmap <= a.purku.img * 0.5,
   JSON.stringify(a.purku));
-vaadi(`${nimiA}: linssin pohjatekstuuri on valmiiksi käännetty ImageBitmap`,
-  a.tekstuuri?.laji === 'ImageBitmap' && a.tekstuuri?.flipY === false,
+/*
+ * PYRAMIDITILASSA LINSSILLÄ EI OLE OMAA POHJATEKSTUURIA LAINKAAN
+ * (kohta 49: kalvoa ei rakenneta), joten sitä ei voi vaatia — mutta
+ * sen POISSAOLO on yhtä lailla mitattava tila: jos kalvo palaisi
+ * huomaamatta pyramidin alle, ruudulla olisi kaksi lähdettä
+ * päällekkäin. Varapolulla (`?reliefipyramidi=0`) vaatimus on entinen.
+ */
+vaadi(`${nimiA}: ${a.tila?.laastari?.reliefipyramidi
+  ? 'pyramidin alla ei ole linssin omaa kalvotekstuuria'
+  : 'linssin pohjatekstuuri on valmiiksi käännetty ImageBitmap'}`,
+  a.tila?.laastari?.reliefipyramidi
+    ? a.tekstuuri === null
+    : (a.tekstuuri?.laji === 'ImageBitmap' && a.tekstuuri?.flipY === false),
   JSON.stringify(a.tekstuuri));
 
 vaadi(`${nimiA}: ei sivuvirheitä`, a.virheet.length === 0, a.virheet.slice(0, 3).join(' | '));

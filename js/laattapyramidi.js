@@ -89,6 +89,10 @@
  */
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
+import {
+  haeReliefinLuettelo, reliefiKaytossa, reliefinLaattaUrl,
+  reliefinSyvinTaso, reliefinTaso, reliefinVersio, reliefipyramidiPaalla,
+} from './reliefipyramidi.js';
 import { NOSTOLADONTA_SAANTO } from './nostoladonta.js';
 import {
   lataaMaapolygonit, maanAluevesiPolku, maanAluevesiRenkaat, puraMaanRenkaat,
@@ -468,6 +472,15 @@ function noudaLuettelo() {
 
 async function haeLuettelo() {
   if (luettelo) return luettelo;
+  /*
+   * RELIEFIN LUETTELO HAETAAN SAMALLA, mutta ERIKSEEN eikä tätä
+   * odottaen (`void`): reliefi on kytkimen takana, eikä pohjakartan
+   * ensimmäinen piirto saa jäädä odottamaan toista tiedostoa. Kun
+   * vastaus saapuu, `pyramidinKerrostasot` alkaa palauttaa
+   * reliefitason seuraavassa päivityksessä. Kytkimen ollessa pois
+   * kutsu palaa heti nullilla eikä hae mitään.
+   */
+  if (reliefipyramidiPaalla()) void haeReliefinLuettelo();
   if (!luetteloHaku) {
     luetteloHaku = noudaLuettelo()
       .then((v) => (v.ok ? v.json() : null))
@@ -612,6 +625,7 @@ const tasonVersio = (taso) => {
   if (taso.nosto) return luettelo?.nostotaso?.versio ?? '';
   if (taso.viiva) return luettelo?.viivataso?.versio ?? '';
   if (taso.ranta) return luettelo?.rantataso?.versio ?? '';
+  if (taso.reliefi) return reliefinVersio();
   /*
    * VÄRITASOLLA AVAIN ON KOKO POLKU EIKÄ PELKKÄ VERSIO. Maa on
    * 14.9.2026 alkaen osoitteessa (ks. varitasonKansio), ja kahdella
@@ -740,6 +754,13 @@ function laattaUrl(taso, sarake, rivi) {
       varitasonKirjaus(), taso.z, sarake, rivi, luettelo.muoto ?? 'webp',
     ));
   }
+  /*
+   * Reliefitaso asuu OMASSA LUETTELOSSAAN ja omassa ämpärin
+   * polussaan (js/reliefipyramidi.js). Se ei ole pohjan versio
+   * eikä pohjan muoto — laatat ovat aina webp — joten osoite
+   * kysytään sieltä eikä rakenneta tässä.
+   */
+  if (taso.reliefi) return reliefinLaattaUrl(taso, sarake, rivi);
   return pyramidiUrl(`${luettelo.versio}/z${taso.z}/${sarake}/${rivi}`
     + `.${luettelo.muoto ?? 'webp'}`);
 }
@@ -754,6 +775,8 @@ const noutoEtuliite = (taso) => {
   if (taso.nosto) return 'n';
   if (taso.viiva) return 'v';
   if (taso.ranta) return 'r';
+  // f = reliefi; r on jo rantatasolla.
+  if (taso.reliefi) return 'f';
   // c = color/väri; v on jo viivatasolla, r rantatasolla.
   if (taso.vari) return 'c';
   return '';
@@ -2518,6 +2541,47 @@ export function pyramidinKerrostasot(z) {
   if (!pohja) return null;
   const kerrokset = [pohja];
   /*
+   * RELIEFITASO ON HETI POHJAN PÄÄLLÄ (topografialinssi, 18.9.2026).
+   *
+   * Reliefi on MAASTOA kuten väritasokin, ei merkki kartan päällä —
+   * rantaviiva, reitti ja noston symboli kuuluvat sen päälle. Se
+   * tulee ennen väritasoa, koska väritaso on kohdemaan oma tasoitus
+   * ja saa peittää reliefin siinä maassa.
+   *
+   * KYTKIN ON OLETUKSENA POIS (`?reliefipyramidi=1`): ilman sitä
+   * `reliefinTaso` palauttaa nullin, kerros jää listasta pois eikä
+   * yksikään pyyntö lähde. Peli on silloin täsmälleen se, mikä se
+   * oli ennen tätä erää — topografialinssin yksi kuva ja laastari.
+   */
+  const reliefi = reliefiKaytossa() ? reliefinTaso(z) : null;
+  /*
+   * RELIEFI KORVAA POHJAN, EI PEITÄ SITÄ (omistajan lisäys 18.9.2026,
+   * Raamattu LISAYS 16 kohta 49).
+   *
+   * Kaksi karttaa päällekkäin olisi kaksi hakua, kaksi kangasta ja
+   * kaksi kertaa muistia jokaisesta laatasta — ja näkyvä välähdys:
+   * seepialaatta saapuu ensin, reliefi vasta sen jälkeen, ja pelaaja
+   * näkee vaalean pelikartan ennen maastoa. Kun reliefi on pohja, ei
+   * ole mitään mikä välähtäisi: paikanpitäjä on laattakoneen oma
+   * karkea kerros eli SAMAN pyramidin ylemmän tason laatta
+   * skaalattuna, kuten pohjakartallakin.
+   *
+   * VÄRITASO JÄÄ MYÖS POIS: se on kohdemaan tasoitus seepiakartalle
+   * eikä tarkoitettu maaston päälle. Ranta-, viiva- ja nostotaso
+   * säilyvät — ne ovat MERKKEJÄ kartan päällä, ja omistajan lisäys
+   * sanoo ne nimenomaan reliefin päälle.
+   */
+  if (reliefi) {
+    const merkit = [];
+    const ranta0 = rantatasonTasot()?.find((t) => t.z === z);
+    if (ranta0) merkit.push(ranta0);
+    const viiva0 = viivatasonTasot()?.find((t) => t.z === z);
+    if (viiva0) merkit.push(viiva0);
+    const nosto0 = nostotasonTasot()?.find((t) => t.z === z);
+    if (nosto0) merkit.push(nosto0);
+    return [reliefi, ...merkit];
+  }
+  /*
    * VÄRITASO ON MAASTOA, JOTEN SE TULEE POHJAN PÄÄLLE MUTTA RANNAN
    * ALLE (erä 1b). Rantaviiva, reitti ja noston symboli ovat MERKKEJÄ
    * kartan päällä; värillinen topografia on se kartta itse. Jos väri
@@ -2548,4 +2612,23 @@ export function pyramidinLaattaUrl(taso, sarake, rivi) {
 /** Onko laatta olemassa levyllä (harvan tason bittikartta)? */
 export function pyramidinLaattaOlemassa(taso, sarake, rivi) {
   return laattaOlemassa(taso, sarake, rivi);
+}
+
+/*
+ * RELIEFIN PORTTI KULKEE TÄMÄN OVEN KAUTTA, kuten luettelo ja
+ * osoitteetkin. Pallo ei tuo js/reliefipyramidi.js:ää itse —
+ * tasokartta ja pallo lukevat saman vastauksen samasta paikasta, eikä
+ * kahta eriytynyttä porttia synny (tests/pallolepokerros.test.mjs
+ * vartioi tuontilistaa koneellisesti).
+ */
+export function pyramidinReliefiKaytossa() {
+  return reliefiKaytossa();
+}
+
+/**
+ * Reliefilaataston syvin taso (z) tai null. Laattakone ei saa valita
+ * tätä syvempää tasoa linssin ajan: sitä ei ole poltettu.
+ */
+export function pyramidinReliefinSyvinTaso() {
+  return reliefinSyvinTaso();
 }
