@@ -44,6 +44,7 @@ import { el } from '../mapart.js';
 import { kokoPallonKorkeus } from '../pallolauta/kamera.js';
 import { luoTarkennus } from './topografia-tarkennus.js';
 import { valitseReliefi } from './reliefikuva.js';
+import { asetaReliefiLinssi, reliefiKaytossa } from '../reliefipyramidi.js';
 
 /*
  * PEITTÄVYYS.
@@ -472,6 +473,23 @@ export const LINSSI = {
     let suljettu = false;
 
     /*
+     * RELIEFIPYRAMIDI PÄÄLLE TÄMÄN LINSSIN AJAKSI (kytkin
+     * `?reliefipyramidi=1`, oletus pois).
+     *
+     * Lippu kertoo laattakoneelle (js/laattapyramidi.js
+     * pyramidinKerrostasot, js/pallolaatat.js lepokerroksenKerrokset),
+     * että reliefilaatasto saa piirtyä pohjan päälle. SE ON TÄMÄN
+     * LINSSIN TILA EIKÄ PELIN: seepiakartta pysyy seepiana, kun linssi
+     * on kiinni. `pura` laskee lipun.
+     *
+     * Kytkimen ollessa pois tämä ei tee mitään: kerrostasoja ei ole,
+     * eikä yksikään pyyntö lähde. Linssi on silloin täsmälleen se,
+     * mikä se oli ennen tätä erää — yksi kuva ja laastari.
+     */
+    asetaReliefiLinssi(true);
+    const pyramidiPaalla = reliefiKaytossa();
+
+    /*
      * ────────────────────────────────────────────────────────────────
      * 1. KOKO PALLON KALVO — yleiskuva
      * ────────────────────────────────────────────────────────────────
@@ -665,6 +683,7 @@ export const LINSSI = {
     return {
       pura: () => {
         suljettu = true;
+        asetaReliefiLinssi(false);
         clearTimeout(peitteenKello);
         peitteenKello = 0;
         // Peite pois ennen muita: se on kartan päällä, ja sen alle ei
@@ -716,6 +735,8 @@ export const LINSSI = {
         pohja: pohja.tunnus,
         pohjanTiheys: +(pohja.leveys / 360).toFixed(2),
         tarkennus: tarkennus?.tila?.() ?? null,
+        /** Onko reliefipyramidi tämän linssin ajan päällä (savuke). */
+        reliefipyramidi: pyramidiPaalla,
       }),
     };
   },

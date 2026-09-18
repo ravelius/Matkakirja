@@ -28,7 +28,7 @@
  */
 import {
   haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
-  pyramidinTasoitus, pyramidinVaritasonMaa,
+  pyramidinReliefiKaytossa, pyramidinTasoitus, pyramidinVaritasonMaa,
 } from './laattapyramidi.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 
@@ -428,8 +428,31 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null)
    * (js/laattapyramidi.js pyramidiViivaKerros) — siellä rajat eivät ole
    * vektorina. Tämä portti on pallon oma.
    */
+  /*
+   * RELIEFITASO ON VÄRITASON LAJIA EIKÄ KOKO KERROKSEN EHTO: se on
+   * topografialinssin laatasto pohjan päällä, ja sen puuttuminen
+   * tekee kartasta sen, mikä se oli ennen — ei väärää karttaa.
+   * Siksi tämä on BOOLEAN eikä `return null`, ja siksi se ei vertaa
+   * versiota pallon sarjaan: reliefillä on oma luettelo ja oma
+   * versionsa, eikä pallon laatat.json tiedä siitä mitään.
+   *
+   * Kytkin (`?reliefipyramidi=1`) on portin ainoa ehto pelin
+   * puolella; ilman sitä `pyramidinKerrostasot` ei palauta
+   * reliefitasoa lainkaan, joten tämä lippu jää vaikutuksetta.
+   */
+  /*
+   * POHJA POIS, KUN RELIEFI ON PÄÄLLÄ (omistajan lisäys 18.9.2026):
+   * reliefi ei ole seepiakartan päällä vaan sen TILALLA, joten
+   * pohjalaattoja ei haeta lainkaan linssin ajan.
+   */
+  const reliefi = pyramidinReliefiKaytossa();
   return {
-    pohja: true, ranta: Boolean(ranta), viiva: false, nosto: Boolean(nostot), vari,
+    pohja: !reliefi,
+    ranta: Boolean(ranta),
+    viiva: false,
+    nosto: Boolean(nostot),
+    vari: vari && !reliefi,
+    reliefi,
   };
 }
 
@@ -1448,7 +1471,9 @@ export function luoLaattakerros({
         if (k.viiva) return kerrokset.viiva;
         if (k.ranta) return kerrokset.ranta;
         if (k.vari) return kerrokset.vari;
-        return true;
+        if (k.reliefi) return kerrokset.reliefi;
+        // Pohja: reliefilinssin ajan `kerrokset.pohja` on epätosi.
+        return kerrokset.pohja !== false;
       });
     if (!kerrostasot.length) { t.tila = 'virhe'; return; }
     const katkaisin = ikkuna.AbortController ? new ikkuna.AbortController() : null;
@@ -1460,7 +1485,20 @@ export function luoLaattakerros({
     t.varillinen = kerrostasot.some((k, i) => k.vari && kuvat[i]);
     t.katkaisin = null;
     if (purettu || !laatat.has(t.avain)) { for (const k of kuvat) k?.close?.(); return; }
-    if (!kuvat.some(Boolean)) { t.tila = 'virhe'; return; }
+    /*
+     * AVOMERI EI OLE VIRHE, KUN POHJAA EI OLE ALLA.
+     *
+     * Omistajan lisäys 18.9.2026 (Raamattu LISAYS 16 kohta 49):
+     * reliefilinssin alle EI ladota seepiapohjaa. Reliefilaatasto on
+     * HARVA — avomerestä ei polteta laattaa lainkaan (6 228 laattaa
+     * 6 631:stä z7:llä on merta) — joten ilman tätä jokainen
+     * merilaatta olisi `virhe` ja meri jäisi reikinä. Tasolla on
+     * `taustavari`, ja se maalataan kankaalle: sama väri, jonka
+     * polttotyökalu antaisi merelle (tools/tee-reliefipyramidi.mjs
+     * MERIVARI), joten saumaa laatan ja aukon välillä ei näy.
+     */
+    const tausta = kerrostasot.find((k) => k.taustavari)?.taustavari ?? null;
+    if (!kuvat.some(Boolean) && !tausta) { t.tila = 'virhe'; return; }
     /*
      * KANGAS ON MITATUSTI NOPEAMPI TEKSTUURILÄHDE KUIN BITTIKARTTA
      * (kokeiltu ja hylätty 7.9.2026). Kokeilussa yhden kerroksen laatta
@@ -1498,6 +1536,10 @@ export function luoLaattakerros({
      * kartalla nähtävissä. Perustelu: js/laattapyramidi.js
      * pyramidinTasoitus.
      */
+    if (tausta) {
+      ctx.fillStyle = tausta;
+      ctx.fillRect(0, 0, kartta.leveys, kartta.korkeus);
+    }
     const tasoitus = kerrokset.vari ? pyramidinTasoitus() : null;
     for (let i = 0; i < kuvat.length; i += 1) {
       const kuva = kuvat[i];
