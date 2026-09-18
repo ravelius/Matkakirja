@@ -8989,7 +8989,17 @@ export const RAAMATTU = {
           + 'kasvavat kartan mukana (helpompi nahda). Mitataan 390 px: pohjan '
           + 'alfa < 1, marginaalit +-1 px samat nelja puolta, syvin zoomi '
           + 'ennen/jalkeen, nimion ruutukoko syvimmassa zoomissa. Tila: '
-          + 'kirjattu, tyo Opus-agentilla kun paikka vapautuu.',
+          + 'kirjattu. TILA (18.9.2026 klo 10.20): a-b toteutettu (alfa 0,824, '
+          + 'kontrasti 7,2:1, marginaalit 0,8 x fontti +-0,9 px, liuskan alle '
+          + 'jaavat nimiot piiloon), c: puhelimen zoomiraja 60 -> 40 '
+          + 'lautayksikkoa (kerroin 1,5) toteutettu, MUTTA nostot eivat kasva, '
+          + 'koska PAATOKSET 32 kohta 4 lukitsee nostojen karttakertoimen '
+          + 'ykkoseen (nimio 8,5 px joka zoomilla). FABLEN PAATOS omistajan '
+          + 'tarkoituksesta ("nostot nakyisivat hieman isommalla"): kerroin-1-'
+          + 'lukko puretaan - elavat nostot (pallo ja nimio) skaalautuvat kartan '
+          + 'mukana kuten laattaan poltettu muste (saapumisnakymassa poltetun '
+          + 'koko, lahemmas zoomattaessa isompina), nimion ruutukatto 16 px '
+          + '(PAATOKSET 31) sailyy. Tyo Opus-agentilla, julkaistaan v1938.',
         'KARTTAUUDISTUKSEN PAATOKSET 33: NOSTOT YMPARI RANSKAA, ENSIN PISTEET '
           + 'JA OTSIKOT, KAIKKI POLTETUN MERKIN KOKOA (omistaja 17.9.2026 klo '
           + '21.40 Suomen aikaa, ankkurieran kaappauksista, sanatarkasti: '
