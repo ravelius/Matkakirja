@@ -1,5 +1,6 @@
 /*
- * Savuke: YLÄPALKKI PIILOSSA VAAKAPUHELIMELLA, VÄKÄSNAPPI KARTALLA.
+ * Savuke: YLÄPALKKI PIILOSSA VAAKAPUHELIMELLA JA IPADILLA, VÄKÄSNAPPI
+ * KARTALLA.
  *
  * OMISTAJAN TILAUS 13.9.2026, sanatarkasti: *"Kännykän vaakanäkymässä
  * yläpalkin voisi piilottaa niin että vain kolme päällekköistä väkästä
@@ -15,20 +16,31 @@
  * ne mene päällekkäin eivätkä ulos ruudulta, palkin todellinen
  * näkyvyys ja se, että napautus kartalla sulkee sen.
  *
+ * LAAJENNUS IPADIIN 18.9.2026 (Raamattu, KARTTAUUDISTUKSEN PAATOKSET
+ * 43 kohta 9; omistaja sanatarkasti: *"Ylapalkin voisi piilottaa myos
+ * ipadilla niin kuin iphonella on."*). Neljä ruutua: vaakapuhelin
+ * 844 × 390, pystypuhelin 390 × 844, iPad 1024 × 1366 ja 1366 × 1024
+ * kosketuksella sekä työpöytä 1400 × 900 hiirellä. Kaksi viimeistä
+ * ovat vastinpari: iPadilla säännön on osuttava KOSKETUSEHDOSTA (ei
+ * matalasta ruudusta) ja työpöydällä ei kummastakaan.
+ *
  * VASTAKOE kuuluu ajoon: säännöt riisutaan ja mitataan uudelleen. Jos
  * mittari näyttää vihreää ilman niitä, se ei mittaa mitään.
  *
- *   node tools/savukkeet/savuke-ylapalkki-vaaka.mjs
+ *   node tools/savukkeet/savuke-ylapalkki-vaaka.mjs [kuvakansio]
  */
 import http from 'node:http';
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { extname, join } from 'node:path';
 
 const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
+/** Kuvakansio (valinnainen): kaappaukset iPadin kummastakin suunnasta. */
+const KUVAKANSIO = process.argv[2] ?? null;
+if (KUVAKANSIO && !existsSync(KUVAKANSIO)) mkdirSync(KUVAKANSIO, { recursive: true });
 const TYYPIT = {
   '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css',
   '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png',
@@ -55,12 +67,26 @@ const vaadi = (nimi, ehto, lisa = '') => {
 const VAAKA = { width: 844, height: 390 };
 /** Pysty: sama laite toisin päin — palkin pitää olla siinä ennallaan. */
 const PYSTY = { width: 390, height: 844 };
+/*
+ * IPAD MOLEMMISSA SUUNNISSA (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 43
+ * kohta 9; omistaja 18.9.2026: *"Ylapalkin voisi piilottaa myos
+ * ipadilla niin kuin iphonella on."*). iPad Pro 12,9" on rajan uloin
+ * laite (1366 px vaakasuunnassa), joten se on se, joka mitataan.
+ * `hasTouch` on se, mikä tekee ruudusta `pointer: coarse` -laitteen —
+ * ilman sitä sama ruutu on hiiriruutu eikä osu sääntöön.
+ */
+const IPAD_PYSTY = { width: 1024, height: 1366 };
+const IPAD_VAAKA = { width: 1366, height: 1024 };
+/** Työpöytä hiirellä: säännön on jätettävä tämä täsmälleen ennalleen. */
+const TYOPOYTA = { width: 1400, height: 900 };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({
+  executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
+});
 
-/** Avaa pelin karttanäkymään annetulla ruudulla. */
-async function avaaPeli(viewport) {
-  const ctx = await selain.newContext({ viewport, serviceWorkers: 'block' });
+/** Avaa pelin karttanäkymään annetulla ruudulla (`kosketus` = iPad). */
+async function avaaPeli(viewport, { kosketus = false } = {}) {
+  const ctx = await selain.newContext({ viewport, hasTouch: kosketus, serviceWorkers: 'block' });
   const sivu = await ctx.newPage();
   const virheet = [];
   sivu.on('pageerror', (e) => virheet.push(String(e)));
@@ -105,7 +131,11 @@ const MITAT = `() => {
     palkkiNakyvyys: tyyli?.visibility ?? null,
     palkkiAuki: document.body.classList.contains('ylapalkki-auki'),
     leveys: window.innerWidth,
+    korkeus: window.innerHeight,
     seliteOliPiilossa: oliPiilossa,
+    // Kumpi ehto sääntölohkosta osui: matala ruutu vai kosketus-iPad.
+    matalaRuutu: matchMedia('(max-height: 520px)').matches,
+    kosketusIpad: matchMedia('(pointer: coarse) and (min-width: 700px) and (max-width: 1366px)').matches,
   };
   if (kotelo) kotelo.hidden = oliPiilossa;
   return mitat;
@@ -194,6 +224,81 @@ const MITAT = `() => {
     p.selite && p.selite.x + p.selite.width > p.leveys - 40,
     JSON.stringify({ leveys: p.leveys, selite: p.selite }));
   vaadi('pysty: ei poikkeuksia', virheet.length === 0, virheet.join(' | ').slice(0, 300));
+  await ctx.close();
+}
+
+/* ── 3. IPAD, MOLEMMAT SUUNNAT: sama nappi, sama sulkusääntö ────────
+ *
+ * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 43 kohta 9.) Ehto ei ole enää
+ * ruudun korkeus vaan laitelaatu ja leveys, joten vartio mittaa
+ * MOLEMMAT: että sääntö osuu oikeasta syystä (`kosketusIpad`, ei
+ * `matalaRuutu`) ja että asettelu on sama kuin vaakapuhelimella.
+ */
+for (const [nimi, ruutu] of [['iPad pysty', IPAD_PYSTY], ['iPad vaaka', IPAD_VAAKA]]) {
+  const { ctx, sivu, virheet } = await avaaPeli(ruutu, { kosketus: true });
+  const alku = await sivu.evaluate(`(${MITAT})()`);
+  vaadi(`${nimi}: sääntö osuu kosketusehdosta eikä matalasta ruudusta`,
+    alku.kosketusIpad && !alku.matalaRuutu,
+    JSON.stringify({ kosketus: alku.kosketusIpad, matala: alku.matalaRuutu, korkeus: alku.korkeus }));
+  vaadi(`${nimi}: yläpalkki on piilossa`, alku.palkkiNakyvyys === 'hidden',
+    `visibility=${alku.palkkiNakyvyys}`);
+  vaadi(`${nimi}: väkäsnappi näkyy kartalla`, alku.nappiNakyy, JSON.stringify(alku.nappi));
+
+  // Nappi ei saa peittää kartan oikean yläkulman muita nappeja:
+  // karttaselite on ainoa naapuri ja se väistyy vasemmalle.
+  const rako = alku.nappi && alku.selite
+    ? alku.nappi.x - (alku.selite.x + alku.selite.width) : null;
+  vaadi(`${nimi}: karttaselite väistyy napin vasemmalle puolelle`,
+    rako !== null && rako >= 0, JSON.stringify({ rako, selite: alku.selite, nappi: alku.nappi }));
+  vaadi(`${nimi}: molemmat mahtuvat ruudulle`,
+    alku.nappi && alku.nappi.x + alku.nappi.width <= alku.leveys + 0.5
+      && alku.selite && alku.selite.x >= -0.5,
+    JSON.stringify({ leveys: alku.leveys, nappi: alku.nappi, selite: alku.selite }));
+
+  await sivu.click('.ylapalkki-nappi');
+  await sivu.waitForTimeout(400);
+  const auki = await sivu.evaluate(`(${MITAT})()`);
+  vaadi(`${nimi}: nappi avaa palkin sisällön päälle`,
+    auki.palkkiNakyvyys === 'visible' && auki.palkkiAuki
+      && auki.palkki && auki.palkki.y >= -0.5 && auki.palkki.y < 8,
+    JSON.stringify({ nakyvyys: auki.palkkiNakyvyys, palkki: auki.palkki }));
+  if (KUVAKANSIO) {
+    await sivu.screenshot({
+      path: join(KUVAKANSIO, `ylapalkki-${nimi.replace(/\s+/g, '-').toLowerCase()}-auki.png`),
+    });
+  }
+
+  await sivu.mouse.click(Math.round(ruutu.width / 2), Math.round(ruutu.height - 60));
+  await sivu.waitForTimeout(400);
+  const kiinni = await sivu.evaluate(`(${MITAT})()`);
+  vaadi(`${nimi}: napautus palkin ulkopuolelta sulkee sen`,
+    kiinni.palkkiNakyvyys === 'hidden' && !kiinni.palkkiAuki,
+    JSON.stringify({ nakyvyys: kiinni.palkkiNakyvyys, auki: kiinni.palkkiAuki }));
+  if (KUVAKANSIO) {
+    await sivu.screenshot({
+      path: join(KUVAKANSIO, `ylapalkki-${nimi.replace(/\s+/g, '-').toLowerCase()}-kiinni.png`),
+    });
+  }
+  vaadi(`${nimi}: ei poikkeuksia`, virheet.length === 0, virheet.join(' | ').slice(0, 300));
+  await ctx.close();
+}
+
+/* ── 4. TYÖPÖYTÄ HIIRELLÄ: ei saa muuttua ──────────────────────── */
+{
+  const { ctx, sivu, virheet } = await avaaPeli(TYOPOYTA);
+  const t = await sivu.evaluate(`(${MITAT})()`);
+  vaadi('työpöytä 1400 × 900: kumpikaan sääntöehto ei osu',
+    !t.matalaRuutu && !t.kosketusIpad,
+    JSON.stringify({ matala: t.matalaRuutu, kosketus: t.kosketusIpad }));
+  vaadi('työpöytä 1400 × 900: yläpalkki näkyy',
+    t.palkkiNakyvyys === 'visible' && t.palkki && t.palkki.height > 20,
+    JSON.stringify({ nakyvyys: t.palkkiNakyvyys, palkki: t.palkki }));
+  vaadi('työpöytä 1400 × 900: väkäsnappi on piilossa', !t.nappiNakyy, JSON.stringify(t.nappi));
+  vaadi('työpöytä 1400 × 900: karttaselite on ennallaan oikeassa reunassa',
+    t.selite && t.selite.x + t.selite.width > t.leveys - 40,
+    JSON.stringify({ leveys: t.leveys, selite: t.selite }));
+  vaadi('työpöytä 1400 × 900: ei poikkeuksia', virheet.length === 0,
+    virheet.join(' | ').slice(0, 300));
   await ctx.close();
 }
 

@@ -25,6 +25,7 @@
     "savuke-luentakuvat.mjs",
     "savuke-kerma-reuna.mjs",
     "savuke-ranskan-nostot-lukossa.mjs",
+    "savuke-kaupungit-piiloon.mjs",
     "savuke-maailmatila-zoomi.mjs",
     "savuke-reittihelmet.mjs",
     "savuke-siirtozoomi.mjs",
@@ -125,6 +126,10 @@
         "pallon takapuolen merkki ei ota napautusta"
       ],
       "huomautus": "Mac 8 rinnakkain (v1940-ajo 35338031662, 18.9.2026): sama kuormahäily 'uusi napautus avaa selitteen takaisin' nousi nyt puhelimella (yksin vihreä, ks. #isot ja astro-valokuva) — kirjattu tunnetuksi Mac-punaiseksi tällekin puolikkaalle. Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Pienet näytöt. Vain \"pallon takapuolen merkki ei ota napautusta\" (näkymä kirjaamatta, ks. #isot)."
+    },
+    "savuke-kaupungit-piiloon.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Uusi 18.9.2026 (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 43 kohta 8: muiden maiden kaupungit piiloon, kun ei olla liikkumassa). Ajaa molemmat ruudut (390 ja 1400) yhdessa rivissa; Mac-mittaus 18.9.2026: 20/20 lapi, kesto noin 80 s. SAVUKE_RUUTU rajaa yhteen ruutuun, jos rivi joskus pitaa jakaa. Tarvitsee amparin (pallon kirjasto haetaan sielta); ilman sita savuke OHITTAA itsensa exit 0:lla."
     },
     "savuke-kaupunkipopup.mjs#390": {
       "env": {
