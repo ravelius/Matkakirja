@@ -1032,8 +1032,14 @@ test('kaupunkipisteen koko seuraa kameraa ilman uutta pistedataa', () => {
   assert.match(lauta, /ohjaimet\.removeEventListener\('change', tahdistaPisteidenKoko\);/);
   // Ruudun koko on osa vakiota, joten koon muutos päivittää säteen.
   assert.match(lauta, /tahdistaZoomirajat\(\);\n\s*\/\/ Ruudun korkeus on osa kaupunkipisteen ruutuvakiota\.\n\s*tahdistaPisteidenKoko\(\);/);
-  // Askelhelmi ja aihevalo ovat yhä kartan mittoja: vain kaupunkipiste skaalataan.
-  assert.match(lauta, /if \(d\.laji === 'helmi' \|\| d\.laji === 'valo'\) continue;/);
+  // Aihevalo on yhä kartan mitta; askelhelmi on PAATOKSET 39:n jälkeen
+  // ruudun vakio (pergamentti + tumma reunus) ja skaalataan tässä myös.
+  assert.match(lauta, /if \(d\.laji === 'valo'\) continue;/);
+  assert.match(lauta, /const helmiSkaala = sadeRuudulta\(REITTIHELMEN_TAYTE_PX\) \* PISTEEN_SKAALA;/);
+  assert.match(lauta, /const helmiReunaSkaala = sadeRuudulta\(REITTIHELMEN_HALKAISIJA_PX\) \* PISTEEN_SKAALA;/);
+  assert.match(lauta, /if \(d\.laji === 'helmi'\) s = d\.reuna \? helmiReunaSkaala : helmiSkaala;/);
+  // Punainen jää päätepisteelle: helmen reunus on mustetta, ei --mark.
+  assert.doesNotMatch(lue('../js/pallolauta/reitit.js'), /HELMEN_REUNAN_VARI = 'rgba\(1[0-9][0-9]/);
 });
 
 test('kaupungin oma pallopiste kulkee kaikkiin merkkeihin yhdestä paikasta', () => {

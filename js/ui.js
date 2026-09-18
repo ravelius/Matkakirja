@@ -11628,10 +11628,21 @@ export class UI {
           // sinne itsestään (js/pollo.js lisaaPinoon).
           polloLuennanKuplatPiiloon();
         } else if (this.luennanKortinKutistus) {
+          /*
+           * LUENNAN LOPPU EI AVAA KORTTIA MILLÄÄN LAITTEELLA (omistaja
+           * 18.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 38 kohta 1,
+           * sanatarkasti: *"onhan isoisan ja pulun tekstit piilossa? ne
+           * pitavat tulla nakyviin vain klikattaessa."*).
+           *
+           * Ennen tämä palautti kortin auki työpöydällä
+           * (asetaPaivakirjanKoko(puhelinTila())) ja jätti lapun lapuksi
+           * vain puhelimella (v1891). Nyt sääntö on yksi kaikille
+           * ruuduille: lappu jää lapuksi, ja kortin avaa VAIN pelaajan
+           * oma napautus (factCardin click- ja keydown-kuuntelija).
+           * Lippu nollataan silti, jottei myöhempi polku luulisi
+           * kutistusta tämän vahdin velaksi.
+           */
           this.luennanKortinKutistus = false;
-          // Puhelimella lappu jää lapuksi (v1891), työpöydällä kortti
-          // palaa auki kuten ennen luentaa.
-          this.asetaPaivakirjanKoko(puhelinTila());
         }
       }
       /*
