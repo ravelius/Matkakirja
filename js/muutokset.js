@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1936, teksti: 'Liuskan teksti poltetun kokoa; nimi ja nostot paikallaan' },
   { v: 1935, teksti: 'Kaupunki yksi piste: valilehti; nostot ankkuroitu' },
   { v: 1934, teksti: 'Astronautin kamera hehkuu, chatti mallilta; luentakuvat' },
   { v: 1933, teksti: 'Astronautin kamera: kohdepisteen napautus osuu merkkiin' },

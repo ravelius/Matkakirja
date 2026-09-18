@@ -15,6 +15,18 @@
  *   4. OHITA NAKYY KUVAN JA KUVATEKSTIN ALLA.
  *   5. OHITA PYSAYTTAA LUENNAN: alle 1 s:ssa aani on pysahtynyt, isot
  *      kuvat ovat poissa ja kartta nakyy; pulun sarja ei enaa nouse.
+ *   5b. OHITA PYSAYTTAA MYOS PULUN (PAATOKSET 35 TARKENNUS 2 kohta 6).
+ *      Saapumisen koko ketju viritetaan (fokusvirtaSaapumiskupla), ja
+ *      HTMLMediaElement.play seka AudioBufferSourceNode.start on
+ *      vakoitu. Ohitan jalkeen: kaikki <audio> paused/ended 1 s:ssa,
+ *      eika 10 s:n kuluessa yhtaan uutta play/start-kutsua, yhtaan
+ *      soivaa audiota eika pulun kuplia tai kuvasolmuja.
+ *   8. VARJO EI LANKEA KUVATEKSTIN PAPERILLE (TARKENNUS 2 kohta 5).
+ *      Paperin pikselit kuvan alareunan alla luetaan KAAPPAUKSESTA
+ *      (oma png-purku): kaikkien on oltava paperin varia (#f7f1e2)
+ *      +-6. Sama mittaus ajetaan vastakokeena vanhalla tyylilla (varjo
+ *      takaisin kuvaan), jolloin saman kaistan on oltava selvasti
+ *      tummempi — muuten mittari ei nakisi varjoa lainkaan.
  *   6. PIKKUKUVAT MATKAKIRJAN LOPUSSA: auki-tilassa kuvien maara,
  *      pienennetyssa kortissa 0 nakyvaa.
  *   7. PIKKUKUVAN NAPAUTUS AVAA SUURENNOKSEN.
@@ -109,6 +121,72 @@ function pngSuorakaide(leveys, korkeus) {
  * sita kattoa, jota PAATOKSET 35 muuttaa.
  */
 const VARAKUVA = pngSuorakaide(1500, 1000);
+/*
+ * PNG-PURKU KAAPPAUKSESTA. Playwright palauttaa 8-bittisen RGBA-png:n
+ * (varityyppi 6, ei lomitusta); tama purkaa sen suodattimineen, jotta
+ * varjon kaista voidaan lukea PIKSELEINA eika css-arvoina.
+ */
+function puraPng(buf) {
+  let i = 8;
+  let leveys = 0; let korkeus = 0; let syvyys = 0; let tyyppi = 0;
+  const palat = [];
+  while (i < buf.length) {
+    const pituus = buf.readUInt32BE(i);
+    const nimi = buf.toString('latin1', i + 4, i + 8);
+    const data = buf.subarray(i + 8, i + 8 + pituus);
+    if (nimi === 'IHDR') {
+      leveys = data.readUInt32BE(0); korkeus = data.readUInt32BE(4);
+      syvyys = data[8]; tyyppi = data[9];
+    } else if (nimi === 'IDAT') palat.push(data);
+    else if (nimi === 'IEND') break;
+    i += 12 + pituus;
+  }
+  if (syvyys !== 8 || (tyyppi !== 6 && tyyppi !== 2)) {
+    throw new Error(`png: syvyys ${syvyys} tyyppi ${tyyppi} ei tuettu`);
+  }
+  const kanavia = tyyppi === 6 ? 4 : 3;
+  const raaka = zlib.inflateSync(Buffer.concat(palat));
+  const rivi = leveys * kanavia;
+  const kuva = Buffer.alloc(rivi * korkeus);
+  const paeth = (a, b, c) => {
+    const pa = Math.abs(b - c); const pb = Math.abs(a - c);
+    const pc = Math.abs(a + b - 2 * c);
+    return (pa <= pb && pa <= pc) ? a : (pb <= pc ? b : c);
+  };
+  for (let y = 0; y < korkeus; y += 1) {
+    const suodatin = raaka[y * (rivi + 1)];
+    const lahde = y * (rivi + 1) + 1;
+    const kohde = y * rivi;
+    for (let x = 0; x < rivi; x += 1) {
+      const raw = raaka[lahde + x];
+      const a = x >= kanavia ? kuva[kohde + x - kanavia] : 0;
+      const b = y > 0 ? kuva[kohde - rivi + x] : 0;
+      const c = (x >= kanavia && y > 0) ? kuva[kohde - rivi + x - kanavia] : 0;
+      let arvo = raw;
+      if (suodatin === 1) arvo = raw + a;
+      else if (suodatin === 2) arvo = raw + b;
+      else if (suodatin === 3) arvo = raw + ((a + b) >> 1);
+      else if (suodatin === 4) arvo = raw + paeth(a, b, c);
+      kuva[kohde + x] = arvo & 0xff;
+    }
+  }
+  return {
+    leveys,
+    korkeus,
+    pikseli: (x, y) => {
+      const xi = Math.round(x); const yi = Math.round(y);
+      if (xi < 0 || yi < 0 || xi >= leveys || yi >= korkeus) return null;
+      const k = yi * rivi + xi * kanavia;
+      return [kuva[k], kuva[k + 1], kuva[k + 2]];
+    },
+  };
+}
+/** Paperin savy (css/fokusvirta.css .fokusvirta-isokuva-teksti). */
+const PAPERI = [0xf7, 0xf1, 0xe2];
+const poikkeama = (p) => (p ? Math.max(
+  Math.abs(p[0] - PAPERI[0]), Math.abs(p[1] - PAPERI[1]), Math.abs(p[2] - PAPERI[2]),
+) : 999);
+
 /* Aanen runko: dekooderi hylkaa sen, jolloin <audio> paatyy virheeseen
    ja `paused` on tosi — riittaa, koska mitattava on OHITA eika toisto. */
 const VARAAANI = Buffer.from('SUQzBAAAAAAAI1RTU0UAAAAPAAADTGF2ZjU4Ljc2LjEwMAAAAAAAAAAAAAAA', 'base64');
@@ -143,6 +221,29 @@ await ctx.addInitScript((data) => {
     localStorage.setItem('matkakirja-livia-paljastus', '1');
   } catch { /* yksityinen tila */ }
 }, tallenne);
+/*
+ * AANIVAKOOJA. Mitattava vaite on "Ohitan jalkeen ei ala uutta aanta",
+ * ja se on kutsu, ei tyyliarvo: jokainen HTMLMediaElement.play ja
+ * jokainen Web Audio -lahteen start kirjataan aikaleimoineen. Vakooja
+ * ei muuta toistoa, se vain laskee.
+ */
+await ctx.addInitScript(() => {
+  const vakooja = { play: [], start: [], alkoi: 0 };
+  window.__aanivakooja = vakooja;
+  const soita = HTMLMediaElement.prototype.play;
+  HTMLMediaElement.prototype.play = function play(...a) {
+    vakooja.play.push({ t: Date.now(), src: String(this.currentSrc || this.src || '') });
+    return soita.apply(this, a);
+  };
+  const lahde = window.AudioScheduledSourceNode ?? window.AudioBufferSourceNode;
+  if (lahde?.prototype?.start) {
+    const alku = lahde.prototype.start;
+    lahde.prototype.start = function start(...a) {
+      vakooja.start.push({ t: Date.now() });
+      return alku.apply(this, a);
+    };
+  }
+});
 const sivu = await ctx.newPage();
 sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
 await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
@@ -175,6 +276,20 @@ await sivu.evaluate(async (id) => {
 }, KAUPUNKI);
 await sivu.waitForSelector('.fokusvirta-isokuva-ruutu', { timeout: 30000 });
 await sivu.waitForTimeout(1500);
+/*
+ * PAKKA MITATAAN OIKEANA PAKKANA: odotetaan toinen kortti (sarja
+ * vaihtaa kuvaa ISON_KUVAN_VAIHTO_MS = 4000 ms valein), jotta varjon
+ * mittaus kattaa myos takana olevan kortin varjon.
+ */
+await sivu.waitForFunction(
+  () => document.querySelectorAll('.fokusvirta-isokuva-ruutu').length >= 2,
+  null, { timeout: 20000 },
+).catch(() => console.log('HUOM  toinen kortti ei ehtinyt pakkaan'));
+await sivu.waitForTimeout(800);
+const kortteja = await sivu.evaluate(
+  () => document.querySelectorAll('.fokusvirta-isokuva-ruutu').length,
+);
+tieto('kortteja pakassa', kortteja);
 
 const laatikot = () => sivu.evaluate(() => {
   const b = (el) => (el ? (({ x, y, width, height, bottom, top }) => ({
@@ -214,6 +329,100 @@ vaadi('kuvateksti on paperin sisällä',
 vaadi('Ohita näkyy kuvan ja kuvatekstin alla',
   jalkeen.ohitaNakyy && Boolean(jalkeen.ohita) && jalkeen.ohita.top > jalkeen.paperi.bottom,
   JSON.stringify(jalkeen.ohita));
+
+/*
+ * 8: VARJO EI SAA LANGETA KUVATEKSTIN PAPERILLE.
+ *
+ * Mittapisteet lasketaan paperin OMASSA koordinaatistossa ja
+ * kaannetaan ruudulle kortin kiertokulmalla (pakan kortti on
+ * kallistettu, mutta kierto on sama kuvalle, paperille ja varjolle).
+ * Kaista on kuvan alareunan ALAPUOLELLA ja kuvatekstin YLAPUOLELLA:
+ * juuri se ala, jolle kuvan oma varjo lankesi.
+ */
+const varjoPisteet = await sivu.evaluate(() => {
+  const ruutu = [...document.querySelectorAll('.fokusvirta-isokuva-ruutu')].pop();
+  const paperi = ruutu?.querySelector('.fokusvirta-isokuva-teksti');
+  const selite = ruutu?.querySelector('.fokusvirta-isokuva-selite');
+  if (!paperi || !selite) return null;
+  const m = new DOMMatrix(getComputedStyle(ruutu).transform);
+  const kulma = Math.atan2(m.b, m.a);
+  const r = paperi.getBoundingClientRect();
+  const cx = r.x + r.width / 2;
+  const cy = r.y + r.height / 2;
+  const w = paperi.offsetWidth;
+  const h = paperi.offsetHeight;
+  const limitys = parseFloat(getComputedStyle(paperi)
+    .getPropertyValue('--isokuva-paperin-limitys')) || 3;
+  const ruudulle = (x, y) => {
+    const dx = x - w / 2;
+    const dy = y - h / 2;
+    return [
+      cx + dx * Math.cos(kulma) - dy * Math.sin(kulma),
+      cy + dx * Math.sin(kulma) + dy * Math.cos(kulma),
+    ];
+  };
+  const pisteet = [];
+  // Kaista kuvan alareunan alla, kuvatekstin ylapuolella.
+  const yAlku = limitys + 2;
+  const yLoppu = Math.max(yAlku + 1, selite.offsetTop - 2);
+  for (let i = 0; i <= 10; i += 1) {
+    const x = w * (0.06 + (0.88 * i) / 10);
+    for (let j = 0; j <= 4; j += 1) {
+      pisteet.push(ruudulle(x, yAlku + ((yLoppu - yAlku) * j) / 4));
+    }
+  }
+  // Sivukaistat: paperin oma pehmuste kuvatekstin vierella.
+  for (let j = 0; j <= 6; j += 1) {
+    const y = yAlku + ((h - 6 - yAlku) * j) / 6;
+    pisteet.push(ruudulle(3, y));
+    pisteet.push(ruudulle(w - 3, y));
+  }
+  return { pisteet, w, h, limitys, kaistaPx: Math.round(yLoppu - yAlku) };
+});
+const lueVarjo = async (nimi) => {
+  const kuva = puraPng(await sivu.screenshot());
+  let pahin = 0;
+  let missa = null;
+  for (const [x, y] of varjoPisteet.pisteet) {
+    const ero = poikkeama(kuva.pikseli(x, y));
+    if (ero > pahin) { pahin = ero; missa = [Math.round(x), Math.round(y)]; }
+  }
+  tieto(`paperin pahin poikkeama (${nimi})`, `${pahin} @ ${JSON.stringify(missa)}`);
+  return pahin;
+};
+vaadi('paperin mittapisteet loytyivat', Boolean(varjoPisteet?.pisteet?.length),
+  JSON.stringify(varjoPisteet));
+tieto('mittakaista px', varjoPisteet?.kaistaPx);
+tieto('mittapisteita', varjoPisteet?.pisteet?.length);
+const varjoNyt = await lueVarjo('nyt');
+vaadi('paperi on tasaisesti paperin väriä kuvan alla (±6)', varjoNyt <= 6,
+  `poikkeama ${varjoNyt}`);
+if (KUVAKANSIO) {
+  await sivu.screenshot({ path: join(KUVAKANSIO, 'luentakuva-paperi-ei-varjoa.png') });
+}
+/*
+ * VASTAKOE: vanha tyyli takaisin (varjo kuvassa, ei kotelossa). Jos
+ * mittari ei nae varjoa silloinkaan, se ei mittaa mitaan.
+ */
+const varjoEnnen = await (async () => {
+  await sivu.evaluate(() => {
+    const t = document.createElement('style');
+    t.id = 'vanha-varjo';
+    t.textContent = `.fokusvirta-isokuva-kotelo{box-shadow:none !important}
+      .fokusvirta-isokuva-kuva{box-shadow:0 10px 26px rgba(20,14,6,0.45) !important}`;
+    document.head.appendChild(t);
+  });
+  await sivu.waitForTimeout(200);
+  if (KUVAKANSIO) {
+    await sivu.screenshot({ path: join(KUVAKANSIO, 'luentakuva-paperi-vanha-varjo.png') });
+  }
+  const arvo = await lueVarjo('vanha varjo kuvassa');
+  await sivu.evaluate(() => document.getElementById('vanha-varjo')?.remove());
+  await sivu.waitForTimeout(200);
+  return arvo;
+})();
+vaadi('vastakoe: vanha kuvan varjo NÄKYY paperilla (mittari toimii)',
+  varjoEnnen > 12, `poikkeama ${varjoEnnen}`);
 
 /* 1: ENNEN/JÄLKEEN samassa ajossa (vanhat katot takaisin). */
 const ennen = await sivu.evaluate(() => {
@@ -298,11 +507,48 @@ vaadi('pikkukuvan napautus avaa suurennoksen', suurennos > 0, `solmuja ${suurenn
 await sivu.keyboard.press('Escape');
 await sivu.waitForTimeout(400);
 
-/* 5: Ohita pysäyttää luennan alle 1 s:ssa */
-await sivu.evaluate(() => {
-  const { ui } = window.matkakirja;
-  ui.diaryVoice = { paused: false, currentTime: 1, ended: false, error: null };
+/*
+ * 5: Ohita pysäyttää luennan alle 1 s:ssa.
+ *
+ * SAAPUMISEN KOKO KETJU VIRITETAAN ENSIN (fokusvirtaSaapumiskupla):
+ * pulun kommentti ei ole luenta vaan puheenvuoro, joka odottaa luennan
+ * LOPPUA — ja Ohita on juuri se loppu. Ilman viritysta mittari ei
+ * koskisi siihen ketjuun, joka omistajan puhelimessa jai soimaan.
+ * Sijaisluenta saa kuuntelijarungot, koska luennanLoppuun kuuntelee
+ * `ended`/`error`-tapahtumia.
+ */
+const viritys = await sivu.evaluate(async () => {
+  const { ui, game } = window.matkakirja;
+  ui.diaryVoice = {
+    paused: false, currentTime: 1, ended: false, error: null, duration: 30,
+    addEventListener() {}, removeEventListener() {}, pause() { this.paused = true; },
+  };
+  ui.luennat ??= new Set();
+  /*
+   * KERRAN NAYTETTY EI NAYTETA UUDESTAAN: saapuminen on jo ajettu
+   * kerran taman mittauksen alussa (ui.render), ja ketju muistaa sen
+   * kaupungittain. Muisti tyhjennetaan, jotta ketju voidaan virittaa
+   * uudelleen juuri ennen Ohitaa — samaan tilaan kuin omistajan
+   * puhelimessa, jossa Ohita painetaan luennan aikana.
+   */
+  ui.saapumiskuplaNaytetty?.clear?.();
+  ui.huudahdusNaytetty?.clear?.();
+  const m = await import('/js/fokusvirta.js');
+  const city = game.cityOf();
+  const sisalto = m.fokusvirtaSisalto?.(ui, city) ?? null;
+  const kupla = m.fokusvirtaSaapumiskupla(ui, city);
+  const huudahdus = m.fokusvirtaHuudahdus?.(ui, city) ?? false;
+  return {
+    kupla,
+    huudahdus,
+    kentta: sisalto?.pollo?.kommentti ? 'kommentti'
+      : (sisalto?.pollo?.maadoitus ? 'maadoitus' : ''),
+  };
 });
+tieto('saapumisketju viritetty', JSON.stringify(viritys));
+vaadi('pulun puheenvuoro on oikeasti vireessä (muuten mittari ei mittaa mitään)',
+  viritys.kupla === true, JSON.stringify(viritys));
+await sivu.evaluate(() => { window.__aanivakooja.alkoi = Date.now(); });
 const t0 = Date.now();
 await sivu.evaluate(() => document.querySelector('.fokusvirta-isokuva-ohita')?.click());
 let ohitus = null;
@@ -332,7 +578,63 @@ vaadi('Ohita ei jätä pakkaa kartalle (PAATOKSET 31)', ohitus.pakkaKartalla ===
 vaadi('kartta näkyy heti', ohitus.karttaNakyy);
 vaadi('Ohita toimii alle 1 s:ssa', kesto < 1000, `${kesto} ms`);
 
-/* Pulun sarja ei nouse ohituksen jälkeen. */
+/* 5b: sekunnissa jokainen <audio> on pysähtynyt. */
+await sivu.waitForTimeout(1000);
+const sekunnissa = await sivu.evaluate(() => {
+  const kaikki = [...document.querySelectorAll('audio')];
+  return {
+    yhteensa: kaikki.length,
+    soi: kaikki.filter((a) => !a.paused && !a.ended).length,
+  };
+});
+tieto('audiot 1 s ohituksen jälkeen', JSON.stringify(sekunnissa));
+vaadi('yksikään <audio> ei soi sekunnin kuluttua Ohitasta', sekunnissa.soi === 0,
+  JSON.stringify(sekunnissa));
+
+/*
+ * 5b: KYMMENEN SEKUNTIA MYOHEMMIN. Pulun kommentti tuli omalla
+ * kellollaan noin sekunti luennan lopusta, ja huudahdus oman
+ * kellonsa mukaan — kymmenen sekuntia kattaa molemmat reilusti.
+ */
+await sivu.waitForTimeout(10000);
+const myohemmin = await sivu.evaluate(() => {
+  const v = window.__aanivakooja;
+  const kaikki = [...document.querySelectorAll('audio')];
+  return {
+    play: v.play.filter((k) => k.t >= v.alkoi).map((k) => k.src.split('/').pop()),
+    start: v.start.filter((k) => k.t >= v.alkoi).length,
+    audioita: kaikki.length,
+    soi: kaikki.filter((a) => !a.paused && !a.ended).length,
+    // Pulun kupla on `.pollo-vihje` kuplapinossa (js/pollo.js luoKupla).
+    kuplia: document.querySelectorAll(
+      '.pollo-kuplapino .pollo-vihje, .fokusvirta-huudahdus',
+    ).length,
+    pulunSolmuja: document.querySelectorAll(
+      '.fokusvirta-isokuva-ruutu, .fokusvirta-isokuva, .fokusvirta-luentakuva, .pulucam-kortti',
+    ).length,
+    luentakuvasarja: Boolean(window.matkakirja.ui.luentakuvasarja),
+    /*
+     * KETJUN KELLO. Pulun kommentti lahtee matkaan nain: luennan loppu
+     * tayttaa odotuksen, ja `nayta` asettaa uuden ajastimen. Tama luku
+     * on siis se juurisyy, joka omistajan puhelimessa soi — mitattuna
+     * ennen kuin siita tulee aanta.
+     */
+    kuplaAjastin: Boolean(window.matkakirja.ui.saapumiskuplaAjastin),
+  };
+});
+tieto('10 s ohituksen jälkeen', JSON.stringify(myohemmin));
+vaadi('Ohitan jälkeen ei ala yhtään uutta ääntä (play/start)',
+  myohemmin.play.length === 0 && myohemmin.start === 0, JSON.stringify(myohemmin));
+vaadi('10 s myöhemmin yksikään <audio> ei soi', myohemmin.soi === 0,
+  `${myohemmin.soi} / ${myohemmin.audioita}`);
+vaadi('pulun kuplia ei nouse ohituksen jälkeen', myohemmin.kuplia === 0,
+  `${myohemmin.kuplia}`);
+vaadi('pulun sarjan solmuja ei ole DOMissa', myohemmin.pulunSolmuja === 0,
+  `${myohemmin.pulunSolmuja}`);
+vaadi('pulun puheenvuoron kello ei käy ohituksen jälkeen',
+  myohemmin.kuplaAjastin === false, `ajastin ${myohemmin.kuplaAjastin}`);
+
+/* Pulun sarja ei nouse ohituksen jälkeen edes suoraan kutsuttuna. */
 await sivu.evaluate(async () => {
   const { ui, game } = window.matkakirja;
   const m = await import('/js/fokusvirta.js');
@@ -343,6 +645,45 @@ const puluJalkeen = await sivu.evaluate(
   () => document.querySelectorAll('.fokusvirta-isokuva-ruutu, .fokusvirta-luentakuva').length,
 );
 vaadi('pulun kuvat eivät enää nouse ohituksen jälkeen', puluJalkeen === 0, `${puluJalkeen}`);
+
+/*
+ * VASTAKOE ILMAN OHITUSTA: sama ketju, sama luennan loppu — mutta
+ * lippu alhaalla. Jos pulu ei puhu tallekaan, mittari mittaisi tyhjaa
+ * ja kohdan 5b lapimeno olisi silkkaa sattumaa.
+ */
+const ilmanOhitusta = await sivu.evaluate(async () => {
+  const { ui, game } = window.matkakirja;
+  const m = await import('/js/fokusvirta.js');
+  const city = game.cityOf();
+  ui.luennanOhitus = null;
+  ui.saapumiskuplaNaytetty?.clear?.();
+  ui.diaryVoice = {
+    paused: false, currentTime: 1, ended: false, error: null, duration: 30,
+    addEventListener() {}, removeEventListener() {}, pause() { this.paused = true; },
+  };
+  const kupla = m.fokusvirtaSaapumiskupla(ui, city);
+  // Luenta loppuu luonnollisesti: sama hetki, jonka Ohita ennen teki.
+  ui.diaryVoice = null;
+  return kupla;
+});
+/*
+ * Mitattava on KETJU, ei kupla: paljas mittarisivu ei avaa pöllön
+ * kuplapinoa lainkaan (pallolauta jää nousematta), joten puheenvuoron
+ * lähtö luetaan siitä kellosta, jonka `nayta` asettaa.
+ */
+let puluLahti = false;
+for (let i = 0; i < 20; i += 1) {
+  // eslint-disable-next-line no-await-in-loop
+  puluLahti = await sivu.evaluate(
+    () => Boolean(window.matkakirja.ui.saapumiskuplaAjastin),
+  );
+  if (puluLahti) break;
+  // eslint-disable-next-line no-await-in-loop
+  await sivu.waitForTimeout(200);
+}
+tieto('vastakoe ilman ohitusta', `kupla ${ilmanOhitusta}, kello ${puluLahti}`);
+vaadi('vastakoe: ilman ohitusta pulun puheenvuoro LÄHTEE (mittari ei mittaa tyhjää)',
+  ilmanOhitusta === true && puluLahti === true, `${ilmanOhitusta} / ${puluLahti}`);
 if (KUVAKANSIO) {
   await sivu.screenshot({ path: join(KUVAKANSIO, 'ohita-kartta-nakyy.png') });
 }
