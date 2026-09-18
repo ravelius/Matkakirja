@@ -330,7 +330,15 @@ const OLETUSPORRAS = 1.5;
 /** Osumasäde ruudulla (js/pallolauta/lauta.js NAPAUTUKSEN_SADE_PX). */
 const NAPAUTUKSEN_SADE_PX = 44;
 /** Liuskan rivin sallittu ero poltetun nimiön ruutukokoon (k. 13 a). */
-const LIUSKAN_KOON_SIETO_PX = 1;
+/*
+ * LIUSKAN KIRJASIMEN RAJAT RUUDULLA (omistajan tarkistus 18.9.2026).
+ * Edellinen erä sitoi rivin poltetun nimiön ruutukokoon ilman kattoa
+ * ja mittasi sen syvimmässä zoomissa: 25 px:n rivit katkesivat ja
+ * valuivat ruudun laidan yli. Omistajan oma tavoitetaso on v1935:n
+ * kuvan poltettu *"Chartresin."*, noin 16 px.
+ */
+const LIUSKAN_KIRJASIN_LATTIA_PX = 13;
+const LIUSKAN_KIRJASIN_KATTO_PX = 18;
 /** Ruutuvektorin sallittu heitto vedon yli (k. 13 b ja c). */
 const PAIKALLAAN_SIETO_PX = 1;
 /** Vedon pituus 8m:ssä (px, molempiin suuntiin). */
@@ -2278,24 +2286,98 @@ for (const ruutu of RUUDUT) {
     };
   });
   const rivienKoot = liuskanKoot.rivit.map((r) => r.ruutuPx);
-  const suurinEro = rivienKoot.length
-    ? Math.max(...rivienKoot.map((k) => Math.abs(k - liuskanKoot.poltettuPx)))
-    : Infinity;
+  const pieninKoko = rivienKoot.length ? Math.min(...rivienKoot) : 0;
+  const suurinKoko = rivienKoot.length ? Math.max(...rivienKoot) : 0;
   const levein = liuskanKoot.rivit.length
     ? Math.max(...liuskanKoot.rivit.map((r) => r.leveys))
     : 0;
   tieto(`${ruutu.nimi} · 8l liuskan rivit`,
-    `kerroin ${p(liuskanKoot.kerroin, 3)}, poltettu ${p(liuskanKoot.poltettuPx)} px, `
+    `kerroin ${p(liuskanKoot.kerroin, 3)}, poltettu (kaava) ${p(liuskanKoot.poltettuPx)} px, `
     + `rivejä ${rivienKoot.length}, koot ${rivienKoot.map((k) => p(k, 1)).join('/') || '—'}, `
     + `levein rivi ${p(levein)} / kotelo ${liuskanKoot.koteloLeveys} px`);
-  vaadi(`8l. ${ruutu.nimi}: liuskan rivin fonttikoko = poltetun nimiön ruutukoko ±1 px`,
-    rivienKoot.length > 0 && suurinEro <= LIUSKAN_KOON_SIETO_PX,
-    `suurin ero ${p(suurinEro)} px (poltettu ${p(liuskanKoot.poltettuPx)} px)`);
-  // Leveä rivi työntäisi liuskan ruudun laidan yli (ks. RIVI EI SAA
-  // VENYÄ RUUDUN YLI): katkaisu on osa kohtaa 13 a eikä oma päätös.
+  /*
+   * VÄITE ON KIRJASIMEN VÄLI, EI TÄSMÄLLEEN POLTETTU KOKO. Kaava on
+   * yhä poltetun musteen ruutukoko (js/pallolauta/nostot.js
+   * liuskanKirjasinPx), mutta se leikataan 13…18 px:iin: syvimmässä
+   * zoomissa kaava antaa 25 px, joka ei mahdu ruudulle.
+   */
+  vaadi(`8l. ${ruutu.nimi}: liuskan rivin fonttikoko on ${LIUSKAN_KIRJASIN_LATTIA_PX}–${LIUSKAN_KIRJASIN_KATTO_PX} px`,
+    rivienKoot.length > 0 && pieninKoko >= LIUSKAN_KIRJASIN_LATTIA_PX - 0.5
+      && suurinKoko <= LIUSKAN_KIRJASIN_KATTO_PX + 0.5,
+    `pienin ${p(pieninKoko)} px, suurin ${p(suurinKoko)} px`);
+  // Leveä rivi työntäisi liuskan ruudun laidan yli: leveys on
+  // sisällön mukainen, kattona 78 % ruudusta (kohta 13 a).
   vaadi(`8l2. ${ruutu.nimi}: levein liuskan rivi mahtuu kotelon leveyteen`,
     levein > 0 && levein <= liuskanKoot.koteloLeveys,
     `levein ${p(levein)} px, kotelo ${liuskanKoot.koteloLeveys} px`);
+  /*
+   * ══ 8l3. EI KOLMEA PISTETTÄ ════════════════════════════════════
+   * Fablen tarkistus 18.9.2026 (liuska-auki-390.png): *"Kadonneet i…
+   * (2)"*, *"Kauppa ja te… (3)"*, *"Mona Lisan v…"*. Nimi ei saa
+   * katketa — liian pitkä rivi rivittyy.
+   */
+  const katkaistut = liuskanKoot.rivit.filter((r) => r.teksti.includes('…'))
+    .map((r) => r.teksti);
+  vaadi(`8l3. ${ruutu.nimi}: yksikään liuskan rivi ei katkea kolmeen pisteeseen`,
+    katkaistut.length === 0,
+    `katkaistuja ${katkaistut.length}: ${katkaistut.join(' | ') || 'ei'}`);
+  /*
+   * ══ 8l4. LIUSKA EI LEIKKAA MITÄÄN ══════════════════════════════
+   * PAATOKSET 32 kohta 5 (*"yksikään nimiö ei saa olla toisen nimiön,
+   * merkin, kaupungin nimen tai pelinappulan päällä"*) ja Fablen
+   * tarkistus: lista ulottui ruudun oikean laidan yli ja peitti
+   * Joseph Meister -nimiön. Esteet luetaan DOMista, ei mallista:
+   * kartan nimet, muiden nostojen nimiöt (piilotetut pois), pelaajan
+   * nappula ja kelluvat napit (pulu/pöllö).
+   */
+  const esteMitta = await sivu.evaluate(() => {
+    const l = window.matkakirja.ui.pallolauta;
+    const r = l.pallo.renderer().domElement.getBoundingClientRect();
+    const laatikko = (el) => {
+      const b = el.getBoundingClientRect();
+      return {
+        x0: b.left - r.left,
+        y0: b.top - r.top,
+        x1: b.right - r.left,
+        y1: b.bottom - r.top,
+        leveys: b.width,
+        korkeus: b.height,
+      };
+    };
+    const kerää = (valitsin) => [...document.querySelectorAll(valitsin)]
+      .map(laatikko)
+      .filter((b) => b.leveys > 0 && b.korkeus > 0);
+    return {
+      ruutu: { leveys: r.width, korkeus: r.height },
+      rivit: l.nostot.liuskanRivit?.() ?? [],
+      esteet: [
+        ...kerää('.pallolauta-nimi .karttanimi').map((b) => ({ ...b, mikä: 'nimi' })),
+        // Muiden nostojen nimiöt: listan alle piilotetut eivät ole
+        // esteitä (ne piiloutuvat listan ajaksi), liuskan oma merkki
+        // ei ole este (liuska piirtyy siihen).
+        ...kerää('.pallolauta-nosto:not(.pallolauta-liuska-auki):not(.pallolauta-nosto-piilossa) '
+          + '.pallolauta-nosto-siirto text, '
+          + '.pallolauta-nosto:not(.pallolauta-liuska-auki):not(.pallolauta-nosto-piilossa) '
+          + '.pallolauta-nosto-siirto image').map((b) => ({ ...b, mikä: 'nimiö' })),
+        ...kerää('.pallolauta-nappula').map((b) => ({ ...b, mikä: 'nappula' })),
+        ...kerää('.pulu-paikkamerkki.esilla, .pollo-nappi').map((b) => ({ ...b, mikä: 'pulu' })),
+      ],
+    };
+  });
+  const esteRivit = esteMitta.rivit ?? [];
+  const esteYli = esteRivit.filter((b) => b.x0 < 0 || b.y0 < 0
+    || b.x1 > esteMitta.ruutu.leveys || b.y1 > esteMitta.ruutu.korkeus).map((b) => b.nimi || b.laji);
+  const leikkaukset = [];
+  for (const rivi2 of esteRivit) {
+    for (const este of esteMitta.esteet) {
+      if (limittyy(rivi2, este)) leikkaukset.push(`${rivi2.nimi || rivi2.laji} × ${este.mikä}`);
+    }
+  }
+  tieto(`${ruutu.nimi} · 8l4 esteet`,
+    `esteitä ${esteMitta.esteet.length}, liuskan rivejä ${esteRivit.length}`);
+  vaadi(`8l4. ${ruutu.nimi}: liuska on ruudussa eikä leikkaa nimeä, nimiötä, nappulaa tai pulua`,
+    esteRivit.length > 0 && esteYli.length === 0 && leikkaukset.length === 0,
+    `reunan yli: ${esteYli.join(', ') || 'ei'}, leikkaa: ${leikkaukset.slice(0, 6).join(', ') || 'ei'}`);
   await kaappaa(sivu, `liuska-auki-${ruutu.w}.png`);
 
   /*

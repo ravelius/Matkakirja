@@ -243,10 +243,10 @@ export const VIUHKAN_TIHEIN_VALI_PX = 2 * VIUHKAN_RIVI_PX;
  * 12). Lista kasvaa yhtä paljon ylös ja alas, joten sen korkeus on
  * kaksi kertaa se puoli, joka on lyhyempi.
  */
-function keskitettyTila(p, ruutu, vara = VIUHKAN_REUNAVARA_PX) {
+function keskitettyTila(p, ruutu, vara = VIUHKAN_REUNAVARA_PX, riviPx = VIUHKAN_RIVI_PX) {
   const y = p?.y ?? 0;
-  const yla = Math.max(0, y - (vara + VIUHKAN_RIVI_PX));
-  const ala = Math.max(0, ((ruutu?.korkeus ?? 0) - vara - VIUHKAN_RIVI_PX) - y);
+  const yla = Math.max(0, y - (vara + riviPx));
+  const ala = Math.max(0, ((ruutu?.korkeus ?? 0) - vara - riviPx) - y);
   return 2 * Math.min(yla, ala);
 }
 
@@ -255,10 +255,13 @@ function keskitettyTila(p, ruutu, vara = VIUHKAN_REUNAVARA_PX) {
  * kohta 12). Mitta on TIHEIN väli, kuten alaspäin kasvavalla listalla:
  * kelaus alkaa vasta kun tiheinkään keskitetty lista ei mahdu.
  */
-export function keskitettyMahtuvatRivit({ p, ruutu, vara = VIUHKAN_REUNAVARA_PX }) {
-  const tilaa = keskitettyTila(p, ruutu, vara);
+export function keskitettyMahtuvatRivit({
+  p, ruutu, vara = VIUHKAN_REUNAVARA_PX,
+  tihein = VIUHKAN_TIHEIN_VALI_PX, riviPx = VIUHKAN_RIVI_PX,
+}) {
+  const tilaa = keskitettyTila(p, ruutu, vara, riviPx);
   if (!(tilaa > 0)) return 0;
-  return Math.floor(tilaa / VIUHKAN_TIHEIN_VALI_PX) + 1;
+  return Math.floor(tilaa / Math.max(1, tihein)) + 1;
 }
 
 function alasTila(p, ruutu, vara = VIUHKAN_REUNAVARA_PX) {
@@ -287,16 +290,25 @@ export const VIUHKAN_POHJAN_VYOT = [
 
 const RAD = Math.PI / 180;
 
-/** Yhden kohdan laatikko ruudulla, kun se on kohdassa (dx, dy). */
-export function kohdanLaatikko(dx, dy, leveys, puoli) {
+/**
+ * Yhden kohdan laatikko ruudulla, kun se on kohdassa (dx, dy).
+ *
+ * RIVIN PUOLIKORKEUS ON PARAMETRI (kaupunkiliuska, PAATOKSET 34 kohta
+ * 13 a). Viuhkan rivi on yhtä kokoa (VIUHKAN_RIVI_PX), mutta liuskan
+ * kirjasin kasvaa poltetun musteen mukana, ja silloin laatikon on
+ * kasvettava sen mukana — muuten osumapinta ja esteiden väistö
+ * mittaisivat pienempää riviä kuin silmä näkee. Oletus pitää viuhkan
+ * oman ladonnan ennallaan.
+ */
+export function kohdanLaatikko(dx, dy, leveys, puoli, riviPx = VIUHKAN_RIVI_PX) {
   const sisa = 12;
   const ulko = 16 + leveys;
   return puoli === 'vasen'
     ? {
-      x0: dx - ulko, x1: dx + sisa, y0: dy - VIUHKAN_RIVI_PX, y1: dy + VIUHKAN_RIVI_PX,
+      x0: dx - ulko, x1: dx + sisa, y0: dy - riviPx, y1: dy + riviPx,
     }
     : {
-      x0: dx - sisa, x1: dx + ulko, y0: dy - VIUHKAN_RIVI_PX, y1: dy + VIUHKAN_RIVI_PX,
+      x0: dx - sisa, x1: dx + ulko, y0: dy - riviPx, y1: dy + riviPx,
     };
 }
 
@@ -352,6 +364,13 @@ function paallekkaisyys(a, b) {
 export function viuhkanAsemat({
   p, ruutu, leveydet, esteet = [], kasvu = 'keskitetty', kovaEnsin = false,
   vaakaEhdokkaat = [0],
+  /*
+   * RIVIN MITAT OVAT PARAMETREJA (kaupunkiliuska, PAATOKSET 34 kohta
+   * 13 a). Riviväli ja rivin puolikorkeus seuraavat liuskan kirjasinta
+   * (1,45 × fontti); oletukset ovat viuhkan omat vakiot, joten
+   * aihemerkin viuhka latoo kuten ennenkin.
+   */
+  valiPx = VIUHKAN_VALI_PX, tiheinPx = VIUHKAN_TIHEIN_VALI_PX, riviPx = VIUHKAN_RIVI_PX,
 }) {
   const n = leveydet.length;
   if (!n) {
@@ -370,7 +389,7 @@ export function viuhkanAsemat({
    * päälle tai kelannut turhaan (mitattu 18.9.2026). Tiheinkään väli
    * ei päästä rivejä päällekkäin: se on täsmälleen nimiörivin korkeus.
    */
-  const tila = Math.max(0, ruutu.korkeus - 2 * (vara + VIUHKAN_RIVI_PX));
+  const tila = Math.max(0, ruutu.korkeus - 2 * (vara + riviPx));
   /*
    * KESKITETTY LISTA (kasvu 'keskitetty', PAATOKSET 34 kohta 12,
    * omistaja: *"Lista voisi olla keskitetysti seka ylos etta alas"*):
@@ -381,10 +400,10 @@ export function viuhkanAsemat({
    */
   const kaytettava = kasvu === 'alas'
     ? Math.min(tila, alasTila(p, ruutu, vara))
-    : Math.min(tila, keskitettyTila(p, ruutu, vara));
+    : Math.min(tila, keskitettyTila(p, ruutu, vara, riviPx));
   const vali = n > 1
-    ? Math.max(VIUHKAN_TIHEIN_VALI_PX, Math.min(VIUHKAN_VALI_PX, kaytettava / (n - 1)))
-    : VIUHKAN_VALI_PX;
+    ? Math.max(tiheinPx, Math.min(valiPx, kaytettava / (n - 1)))
+    : valiPx;
   const korkeus = (n - 1) * vali;
   const puolet = p.x <= ruutu.leveys / 2 ? ['oikea', 'vasen'] : ['vasen', 'oikea'];
   const askel = Math.round(vali);
@@ -432,14 +451,14 @@ export function viuhkanAsemat({
     for (const { vaaka, siirto } of asennot) {
       const dx0 = (puoli === 'vasen' ? -1 : 1) * (VIUHKAN_SADE_PX + vaaka);
       // Vaakakiinnitys: koko lista siirtyy yhtenä, rivit pysyvät suorassa.
-      const rivi = kohdanLaatikko(dx0, 0, leveys, puoli);
+      const rivi = kohdanLaatikko(dx0, 0, leveys, puoli, riviPx);
       let dx = dx0;
       if (p.x + rivi.x0 < vara) dx += vara - (p.x + rivi.x0);
       else if (p.x + rivi.x1 > ruutu.leveys - vara) dx += (ruutu.leveys - vara) - (p.x + rivi.x1);
       // Pystykiinnitys: ylin ja alin rivi ruudun sisään.
       let ylin = perus + siirto;
-      const yYla = p.y + ylin - VIUHKAN_RIVI_PX;
-      const yAla = p.y + ylin + korkeus + VIUHKAN_RIVI_PX;
+      const yYla = p.y + ylin - riviPx;
+      const yAla = p.y + ylin + korkeus + riviPx;
       if (yYla < vara) ylin += vara - yYla;
       else if (yAla > ruutu.korkeus - vara) ylin += (ruutu.korkeus - vara) - yAla;
       const asemat = [];
@@ -451,7 +470,7 @@ export function viuhkanAsemat({
       // (js/pallolauta/nostot.js, liuskan kelaus).
       let kova = 0;
       for (const a of asemat) {
-        const l = kohdanLaatikko(a.dx, a.dy, leveys, puoli);
+        const l = kohdanLaatikko(a.dx, a.dy, leveys, puoli, riviPx);
         const yli = 1000 * yliReunan(l, p, ruutu, vara);
         sakko += yli;
         kova += yli;
@@ -493,7 +512,7 @@ export function viuhkanAsemat({
     puoli: paras.puoli,
     leveys: paras.leveys,
     asemat: paras.asemat,
-    pohja: listanPohja(paras.asemat, paras.leveys, paras.puoli),
+    pohja: listanPohja(paras.asemat, paras.leveys, paras.puoli, riviPx),
     kovaSakko: paras.kova,
   };
 }
@@ -515,11 +534,11 @@ export function alasMahtuvatRivit({ p, ruutu, vara = VIUHKAN_REUNAVARA_PX }) {
 }
 
 /** Listan pehmeän pohjan laatikko merkin omissa ruutupikseleissä. */
-export function listanPohja(asemat, leveys, puoli) {
+export function listanPohja(asemat, leveys, puoli, riviPx = VIUHKAN_RIVI_PX) {
   if (!asemat?.length) return null;
   let x0 = Infinity; let y0 = Infinity; let x1 = -Infinity; let y1 = -Infinity;
   for (const a of asemat) {
-    const l = kohdanLaatikko(a.dx, a.dy, leveys, puoli);
+    const l = kohdanLaatikko(a.dx, a.dy, leveys, puoli, riviPx);
     x0 = Math.min(x0, l.x0); y0 = Math.min(y0, l.y0);
     x1 = Math.max(x1, l.x1); y1 = Math.max(y1, l.y1);
   }

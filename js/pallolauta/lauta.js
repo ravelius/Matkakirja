@@ -626,11 +626,17 @@ const YLAKALUSTEEN_RAJA = 1 / 3;
 /*
  * MISSÄ KAUPUNKIMERKKI ON RUUDULLA, KUN LIUSKA AUKEAA (PAATOKSET 34
  * kohta 12: *"kartta voisi liikkua automaattisesti niin että oikealle
- * puolelle tulis lisää tilaa"*). Osuus ruudun leveydestä: kolmannes
- * jättää liuskalle kaksi kolmannesta oikealle ja pitää merkin silti
- * selvästi kuvassa.
+ * puolelle tulis lisää tilaa"*). Osuus ruudun leveydestä.
+ *
+ * NELJÄNNES, EI KOLMANNES (omistajan tarkistus 18.9.2026). Liuskan
+ * rivit ovat nyt poltetun musteen kokoisia ja niiden leveyden katto on
+ * 78 % ruudusta (js/pallolauta/nostot.js LIUSKAN_LEVEYDEN_OSUUS);
+ * kolmannekselle ajettu merkki jätti oikealle vain kaksi kolmannesta,
+ * jolloin levein rivi olisi joko rivittynyt turhaan tai työntänyt
+ * listan merkin vasemmalle puolelle. Omistajan ohje sallii kameran
+ * siirtyä enemmän, jos leveämpi lista ei muuten mahdu oikealle.
  */
-const LIUSKAN_MERKIN_OSUUS_X = 1 / 3;
+const LIUSKAN_MERKIN_OSUUS_X = 1 / 4;
 /** Napautuksen osuma ruudulla: lähin kaupunki tai kohde tämän säteen sisällä (px). */
 export const NAPAUTUKSEN_SADE_PX = 44;
 
