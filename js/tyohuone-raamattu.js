@@ -9263,7 +9263,17 @@ export const RAAMATTU = {
           + 'sailyy). Mitataan 390 px: kokoruutu-napautus vie kartan koko '
           + 'ruudun kokoiseksi (kartan laatikko >= 95 % nakyvasta korkeudesta) '
           + 'ja takaisin, nappi kartan ylapuolella (y < kartan y), selitteita '
-          + '0, +/- -painikkeita 0.',
+          + '0, +/- -painikkeita 0. 19) (omistaja 18.9.2026 klo 18.05 Suomen '
+          + 'aikaa, sanatarkasti: "Vaikka maailma tila paalla, peli ei anna '
+          + 'zoomata ulospain"): ZOOMI ULOS MAAILMATILASSA: kun maailmanakyma '
+          + '(ui.maailmanakyma) on paalla, pallon pitaa antaa loitontaa koko '
+          + 'maapalloon asti (iPhone v1942: loitonnus pysahtyy). Juurisyy '
+          + 'selvitetaan (loitonnusraja js/pallolauta/kamera.js vs. PAATOKSET 34 '
+          + 'kohta 15 c:n puhelimen zoomiraja 60 -> 40, joka ei saa koskea '
+          + 'ulosrajaa; maailmanakyman tarkistus). Mitataan 390 px: maailmatila '
+          + 'paalla nipistys ulos -> kameran etaisyys kasvaa koko pallon '
+          + 'nakymaan asti (pallon halkaisija <= ruudun leveys), maailmatila pois '
+          + '-> raja kuten ennen. Tila: kirjattu; tyo Opus-agentilla.',
         'KARTTAUUDISTUKSEN PAATOKSET 33: NOSTOT YMPARI RANSKAA, ENSIN PISTEET '
           + 'JA OTSIKOT, KAIKKI POLTETUN MERKIN KOKOA (omistaja 17.9.2026 klo '
           + '21.40 Suomen aikaa, ankkurieran kaappauksista, sanatarkasti: '
