@@ -379,32 +379,64 @@ jota kerros ei piilota (polttovelkaa). **Koko maailman nostotason
 uusinta (`tasot=vain-nostotaso`) ei jätä tätä velkaa.** Suositus:
 `vain-nostotaso`.
 
-## E2.4 Mitä EI ehditty (erä 3)
+## E2.4 Koepoltto paikallisesti — laatat ajettu ja luettu
+
+`node tools/generoi-laattapyramidi.mjs <scratch>/poltto-ranska
+--nostotaso --nostoversio 2026-09-18-fra --paikkaus 2026-09-08a-nostot
+--alue -5,41,10,52 --tasot 5-7`
+
+| | |
+| --- | --- |
+| laattoja | **47** (z5 6 · z6 18 · z7 23), 8 lohkoa à 4×4 |
+| kokoa | **0,38 Mt** (keski z5 10,5 kt · z6 8,5 kt · z7 6,7 kt) |
+| kokonaisaika | 2,8 s (16,4 Mpx/s) |
+| luettelo | `pyramidi.json` 66 006 tavua, `nostotaso.versio` **2026-09-18-fra**, **1612 nostoa** |
+
+Generaattori kovakoodasi selaimen konttipolkuun; Macilla ajo vaatii
+`PW_CHROMIUM=<Chrome for Testing>`. (Vientityökalu ei enää kovakoodaa,
+ks. E2.1; generaattoriin ei koskettu.)
+
+**Read-tarkistus, kaksi laattaa** (webp → png `sips`):
+
+1. **z7/83/33** (Pariisin pohjoispuoli, Lillen seutu): merkit
+   *Lille*, *Deltatyöt*, *Delftin linssit*. **Yhtään siirtoviivaa ei
+   näy** ja pisteet ovat nimiöidensä vieressä. Pariisin oma laatta
+   z7/83/34 ei ollut tässä ajossa mukana (47 laattaa kattaa vain osan
+   alueesta), joten kaupungin sisäisten poissaolo on mitattu datasta
+   (E2.3) eikä tästä laatasta.
+2. **z6/40/17** (Bretagne): *Mont-Saint-Michel* ja *Nantes*, ei
+   siirtoviivoja. **Carnacin kivirivit ei ole laatassa** — se on niitä
+   kolmea, joilta puuttuu lukittu ankkuri, ja jää siksi eläväksi (E2.1).
+
+**Musteen paikka mitattu laatasta:** Mont-Saint-Michelin lukittu
+ankkuri (48,502711 N / −1,504295 E) osuu laatassa z6/40/17 kohtaan
+(339,5 · 299,9) px, ja laatan piste on siinä. **Poltettu muste on
+lukitussa ankkurissa.**
+
+## E2.5 Vartio (uusi testi)
+
+`tests/poltto-lukitut-ankkurit.test.mjs` — viisi väitettä, mitta ilman
+selainta ja ilman laattoja: jokainen poltettava Ranskan nosto on TASAN
+lukitussa ankkurissaan (`x`, `y`, `ankkuriX`, `ankkuriY`, ero 0 — ei
+sietoa), lukitulta ei polteta siirtoviivaa, kaupungin sisäisiä on
+suodattunut pois, ja luettelon tiiviste on merkin oma. **Koko sarja:
+3600 pass, 0 fail.**
+
+## E2.6 Mitä EI ehditty (erä 3)
 
 Aikakatto täyttyi ennen näitä; **laattoja ei ajettu eikä pelin puolta
 mitattu Playwrightilla**:
 
-1. **Koepoltto paikallisesti** (luvun 6 komento, `--tasot 5-7`) ja
-   kahden laatan Read-tarkistus.
-2. **Pelin puoli:** mitä manifestiin/luetteloon kirjoitetaan uudella
+1. **Pelin puoli:** mitä manifestiin/luetteloon kirjoitetaan uudella
    nostoversiolla, ettei nostotaso sammu (`js/pallolaatat.js`
    `lepokerroksenKerrokset` -versiovahti, `js/pallo.js` sarja).
    Selvitys on erän 1 luvussa 5 kohdassa 2; **muutosta ei tehty.**
-3. **Kolmen ankkurittoman noston** (biskajanlahti, carnacin-kivirivit,
+2. **Kolmen ankkurittoman noston** (biskajanlahti, carnacin-kivirivit,
    chambord) juurisyy — epäilys: aihenoston jäseniä.
-4. **Playwright-mitta** 390 px Pariisin lähizoomista ja Ranskan
+3. **Playwright-mitta** 390 px Pariisin lähizoomista ja Ranskan
    saapumisesta paikallisilla koelaatoilla (route-välitys).
 
-## E2.5 Komennot (ÄLÄ aja ennen erän 3 laattakoetta)
-
-Paikallinen koepoltto (liput luvusta 6, tarkistettu):
-
-```
-node tools/generoi-laattapyramidi.mjs <koekansio>/poltto-ranska \
-  --nostotaso --nostoversio 2026-09-18-fra \
-  --paikkaus 2026-09-08a-nostot \
-  --alue -5,41,10,52 --tasot 5-7
-```
+## E2.7 Komennot (ÄLÄ aja — Fablen päätös)
 
 Actions-työnkulku — **koko maailman nostotaso**, ks. E2.3:n varoitus:
 
