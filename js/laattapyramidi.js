@@ -1937,9 +1937,23 @@ export function pyramidinTasoitus() {
   }
   if (!variSuoja) return null;
   const s = variSuoja;
-  // Maailmanäkymässä eikä matkalla ole kermaa: leikkuri on kohdemaan
-  // rengas, ja avaimen `M`/`L` mitätöi kankaat kytkennässä (ks. yllä).
-  const renkaat = variMaailma || variLiike ? variMaanRenkaat() : null;
+  /*
+   * RENKAAT AINA, EIVÄT VAIN MAAILMANÄKYMÄSSÄ (omistaja 18.9.2026,
+   * Raamattu PAATOKSET 37 TARKENNUS kohdat 3–5).
+   *
+   * Maailmanäkymässä renkaat olivat kuvan LEIKKURI; nyt ne ovat myös
+   * pelin oman kartan kerman REIKÄ: peli maalaa kerman maamaskilla koko
+   * laatalle ja palauttaa kohdemaan renkaiden sisuksen alkuperäiseksi
+   * (js/pallolaatat.js maalaaTasoitus). Silloin kerman rajana ei ole
+   * suojasuorakaide vaan maan oma ääriviiva, eikä laatikon reuna voi
+   * näkyä kartalla missään zoomissa.
+   *
+   * SUOJA JÄÄ: se kertoo yhä, onko aineisto saapunut (`tarkka`) ja se
+   * on maalauksen varapolun raja, jos pikselimaski ei ole käytettävissä.
+   * Renkaat tulevat samasta aineistosta kuin suoja, joten ne ovat
+   * valmiina täsmälleen silloin kun suoja on tarkka.
+   */
+  const renkaat = variMaanRenkaat();
   // Ilman renkaita matkan kermattomuus jää pois (ks. ILMAN RENKAITA);
   // maailmanäkymä on kehittäjän oma näkymä ja saa jäädä ennalleen.
   const kermatta = variMaailma || (variLiike && Boolean(renkaat));
