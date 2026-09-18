@@ -186,7 +186,7 @@ jobs:
           # muuteta tätä varten, vaan jäljitellään sama polku täällä.
           sudo mkdir -p /opt/pw-browsers
           sudo ln -sf "$CHROM" /opt/pw-browsers/chromium
-      - name: Aja savuke ${{ matrix.tiedosto }}
+      - name: Aja savuke ${{ matrix.nimi }}
         id: aja
         # HUOM (korjattu 17.9.2026, ks. commit-viesti): tämä askel EI
         # koskaan itse kaada jobia — savukkeen oma poistumiskoodi on 1
@@ -250,7 +250,7 @@ jobs:
         run: |
           mkdir -p /tmp/tulokset
           cat > "/tmp/tulokset/tulos-${{ matrix.nimiTunniste }}.json" <<EOF
-          {"tiedosto":"${{ matrix.tiedosto }}","kesto":${{ steps.aja.outputs.kesto || 'null' }},"tulosJson":${{ steps.tarkista.outputs.json || 'null' }}}
+          {"tiedosto":"${{ matrix.nimi }}","kesto":${{ steps.aja.outputs.kesto || 'null' }},"tulosJson":${{ steps.tarkista.outputs.json || 'null' }}}
           EOF
       - name: Lataa tulos
         if: always()

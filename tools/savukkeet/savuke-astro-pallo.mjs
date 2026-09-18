@@ -72,7 +72,12 @@
  * VERKKO: ämpäri (laatat, Globe.gl, reliefi) Noden fetchin kautta, muu
  * katki. Ympäristömuuttuja NAKYMAT rajaa ajettavat näytöt
  * (esim. NAKYMAT=tyopoyta). Väite 9 ei ole näyttökoko vaan vartija:
- * se ajetaan oletuksena kerran, ja `NAKYMAT=vartija` ajaa vain sen.
+ * se ajetaan oletuksena kerran, `NAKYMAT=vartija` ajaa vain sen ja
+ * `NAKYMAT=tyopoyta,ei-vartija` jättää sen pois. Vartijalohko jakautuu
+ * vielä kahtia (`vartija-a`, `vartija-b`). Julkaisusarja ajaa tämän
+ * savukkeen NELJÄNÄ rinnakkaisena rivinä näillä muuttujilla
+ * (tools/savukkeet/sarjat.json: `#puhelin`, `#tyopoyta`, `#vartija-a`,
+ * `#vartija-b`).
  */
 import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -156,7 +161,21 @@ const NAKYMAT = {
   tyopoyta: { viewport: { width: 1400, height: 900 }, deviceScaleFactor: 1 },
   puhelin: { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, hasTouch: true },
 };
-const VALITUT = (process.env.NAKYMAT ?? '').split(',').map((x) => x.trim()).filter(Boolean);
+/*
+ * NAKYMAT rajaa ajon. Arvot: `tyopoyta`, `puhelin`, `vartija` (väite 9:n
+ * vastakoelohko, ei näyttökoko) ja `ei-vartija`, joka jättää vartija-
+ * lohkon pois valituista näytöistä huolimatta.
+ *
+ * `ei-vartija` on jaon (18.9.2026, Raamattu AGENTIT ... TARKENNUS 9)
+ * takia: julkaisusarja ajaa tämän savukkeen neljänä rinnakkaisena
+ * rivinä. Ilman kieltoa vartijalohko ajettaisiin `#tyopoyta`-rivillä
+ * omien vartijarivien LISÄKSI, koska
+ * `tyopoyta` laukaisee sen oletuksena — rivit eivät saa tehdä samaa
+ * työtä kahdesti eikä yksikään väite saa jäädä ajamatta.
+ */
+const KAIKKI_VALITUT = (process.env.NAKYMAT ?? '').split(',').map((x) => x.trim()).filter(Boolean);
+const VARTIJA_POIS = KAIKKI_VALITUT.includes('ei-vartija');
+const VALITUT = KAIKKI_VALITUT.filter((x) => x !== 'ei-vartija');
 
 const tulokset = [];
 const vaadi = (nimi, ok, lisa = '') => {
@@ -2186,12 +2205,21 @@ for (const nimi of Object.keys(NAKYMAT)) {
  * kerran. `NAKYMAT=vartija` ajaa VAIN sen (nopea uusinta ilman kahta
  * täyttä näyttöajoa); `NAKYMAT=puhelin` jättää sen pois.
  */
-if (!VALITUT.length || VALITUT.includes('tyopoyta') || VALITUT.includes('vartija')) {
+/*
+ * Vartijalohko on tämän savukkeen PISIN osa (Mac-mittaus 18.9.2026:
+ * 294 s neljän rinnakkaisen savukkeen kuormassa), joten se jakautuu
+ * vielä kahtia: `vartija-a` ja `vartija-b`. `vartija` ajaa molemmat.
+ */
+const vartijaKaikki = !VARTIJA_POIS
+  && (!VALITUT.length || VALITUT.includes('tyopoyta') || VALITUT.includes('vartija'));
+if (vartijaKaikki || VALITUT.includes('vartija-a')) {
   await ajaVastakoeIlmanEstoa();
   await ajaKirjastoEstetty();
   await ajaPintaEstetty();
   /* LISÄYS 13, kohdat 36 ja 37: Mac-WebAppin kotelo ja Safarin rajat. */
   await ajaMacVastakoe();
+}
+if (vartijaKaikki || VALITUT.includes('vartija-b')) {
   await ajaSafarinRajatMacissa();
   await ajaKehyksetPoikki();
   await ajaMustaPinta();

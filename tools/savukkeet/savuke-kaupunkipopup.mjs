@@ -84,10 +84,26 @@ const KAUPUNGIT = [
   { id: 'marseille', nimi: 'Marseille', lat: 43.3, lng: 5.37 },
 ];
 /** Kaksi ruutua: puhelin ja työpöytä (valmis-kriteeri). */
-const RUUDUT = [
+const KAIKKI_RUUDUT = [
   { nimi: '390 px', width: 390, height: 844, dpr: 2 },
   { nimi: '1400 px', width: 1400, height: 900, dpr: 1 },
 ];
+/*
+ * YKSI RUUTU KERRALLAAN: `SAVUKE_RUUTU=390` tai `SAVUKE_RUUTU=1400`
+ * (sama muuttujan nimi kuin savuke-pariisi-lahizoom.mjs:ssä). Ilman
+ * muuttujaa ajetaan molemmat, kuten ennenkin. Julkaisusarja jakaa tämän
+ * savukkeen kahdeksi rinnakkaiseksi riviksi tällä muuttujalla
+ * (tools/savukkeet/sarjat.json, `#390` ja `#1400`) — omistaja 18.9.2026,
+ * Raamattu AGENTIT ... TARKENNUS 9/10: PR-portin seinäkello on niin
+ * pitkä kuin sarjan pisin savuke.
+ */
+const RUUDUT = process.env.SAVUKE_RUUTU
+  ? KAIKKI_RUUDUT.filter((r) => String(r.width) === String(process.env.SAVUKE_RUUTU))
+  : KAIKKI_RUUDUT;
+if (!RUUDUT.length) {
+  console.log(`FAIL  SAVUKE_RUUTU=${process.env.SAVUKE_RUUTU} ei vastaa yhtäkään ruutua (390, 1400)`);
+  process.exit(1);
+}
 
 const TYYPIT = {
   '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json',
