@@ -181,7 +181,35 @@ mittauksen sivutuote.
 mitään pantavaa. En myöskään väitä mitään fps:stä, laattamääristä tai
 kirkkaudesta, koska en mitannut niitä.
 
-Paikallinen ajo on kuitenkin **valmiiksi tuettu**, jotta mittaaminen ei
+### Yksi luku kuitenkin mitattiin — ilman selainta
+
+Laattamäärän voi mitata ilman savuketta, koska ikkunan laattavalinta
+on puhdas funktio (`lepokerroksenLaatat`). Ajoin sen Alppien
+lähizoomin ikkunalla (keski 7,5 °E / 46 °N; 390 × 844 px ruutu,
+lähizoomin mitattu tiheys 178 px/aste = 2,19° × 4,74°) ja tarkistin
+osumat levyltä:
+
+| taso | ikkuna | laattoja | levyllä | puuttuu | tavuja |
+| --- | --- | --- | --- | --- | --- |
+| z7 | näkyvä | **8** | 8 | 0 | 684 kt |
+| z7 | 2,4× laajennettu | 21 | 21 | 0 | 1 606 kt |
+| z6 | näkyvä | 6 | 6 | 0 | 564 kt |
+| z6 | 2,4× laajennettu | 8 | 8 | 0 | 697 kt |
+
+**Näkyvän ikkunan tavoite ≤ 12 täyttyy: 8 laattaa, 684 kt.** Jokainen
+osoite osui levyllä olevaan tiedostoon, eli osoitekaava ja ruudukko
+täsmäävät oikeasti eivätkä vain testin mielestä.
+
+Huomio seuraavalle erälle: 2,4× laajennus (tarkennuslaastarin
+panorointivara) veisi z7:llä **21 laattaa**. Laattakerroksella on oma,
+pienempi varansa (`LAATTAKERROS_VARA_AST`), joten tämä ei ole sen
+luku — mutta jos vara joskus säädetään laastarin mukaan, katto
+ylittyy. Luku kannattaa pitää silmällä.
+
+Tämä EI korvaa savuketta: se ei kerro mitään fps:stä, ensimmäisen
+kehyksen viiveestä, muistista eikä siitä, ettei seepiapyyntöjä lähde.
+
+Paikallinen ajo on **valmiiksi tuettu**, jotta mittaaminen ei
 odota vientiä: `globalThis.RELIEFIPYRAMIDI_KANSIO` korvaa ämpärin
 juuren, ja savuke välittää sen Noden route-välityksellä levyltä kuten
 ämpärin muutkin kuvat. Laatat ovat levyllä valmiina.
@@ -193,7 +221,8 @@ juuren, ja savuke välittää sen Noden route-välityksellä levyltä kuten
    suodatin `julisteet/pyramidi/`. Tämä on pohjattomuuden ainoa
    kelvollinen todiste; koodi on sitä varten kirjoitettu, mutta
    koodinluku ei ole mittaus.
-3. Näkyvän ikkunan laattahaut **≤ 12** (390 px, Alpit lähizoomi).
+3. Näkyvän ikkunan laattahaut ≤ 12 — *tämä on jo mitattu offline
+   (8 kpl), savuke vahvistaa sen oikeassa ajossa.*
 4. Reliefi näkyy: gradienttienergia kasvaa ennen/jälkeen.
 5. **fps ≥ 50** (rAF 3 s) + yksi WebKit-tarkistus samasta.
 6. Muisti vs. nykyinen — lisäyksen mukaan tämän pitäisi **laskea**,
