@@ -194,7 +194,11 @@ test('piste, ladonta ja osuma lukevat saman yhden säännön', () => {
     'lehden osuus palasi pisteen kokoon');
   // Kohdemerkkien oma portti on yhä nostoilla, ei pisteellä.
   const nostot = lue('../js/pallolauta/nostot.js');
-  assert.match(nostot, /lehdenOsuus\(pohja, nakyva, pack\.id\) >= LEHDEN_VAHIN_OSUUS/);
+  // PAATOKSET 34 kohta 21: sama portti, mutta osuus luetaan omaan
+  // muuttujaansa, jotta sen alapuolella voi piirtää PELKÄT pisteet.
+  assert.match(nostot, /const osuusNyt = lehdenOsuus\(pohja, nakyva, pack\.id\);/);
+  assert.match(nostot, /const lehtiNakyy = osuusNyt >= LEHDEN_VAHIN_OSUUS;/);
+  assert.match(nostot, /const pisteetVain = !lehtiNakyy && osuusNyt > 0 && uloinOsuus > 0;/);
   assert.match(nostot, /if \(!pack \|\| ui\.katselu \|\| game\.phase === 'pickstart' \|\| ui\.aloituslentoKesken\) return 0;/);
   assert.match(nostot, /if \(ui\.movingPlayerId != null\) return 0;/);
   // Osuma-alue ei ole sidottu pisteen kokoon (sormen 44 px).

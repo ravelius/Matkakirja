@@ -65,30 +65,29 @@ import { onMaalla } from '../maamaski.mjs';
 const JUURI = new URL('../..', import.meta.url).pathname;
 
 /*
- * Ranskan kartalla näkyviä nostopisteitä vähintään (kohta 17 b).
+ * PISTEET NAKYVAT AINA KOHDEMAASSA (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 34 kohta 21, omistajan puhelintesti v1944): kohdemaan
+ * nostojen ja nakyvien kaupunkien PISTEET piirtyvat saapumisnakymassa
+ * ja siita ulospain jokaisella zoomitasolla, jolla kohdemaa on
+ * ruudulla. Luvut ovat omistajan antamat; 390 px:n pienempi luku on
+ * PAATOKSET 17:n korkeuteen sovitus (maan ita- ja lansireuna jaavat
+ * ruudun ulkopuolelle), ei tingitty tavoite.
  *
- * 40 -> 35 (Fable 18.9.2026): jasenyys datasta -eran jalkeen seitseman
- * Pariisin sisaista ei enaa lasketa kartan pisteiksi; ulkopuolisia on 36
- * (hahmotelman 12 varastokohdetta nostavat lukua myohemmin).
- *
- * 35 -> 40 (Opus-erä 18.9.2026, hahmotelman 12 varastokohdetta):
- * datassa Ranskan kaupungin ulkopuolisia nostoja on nyt 60 (oli 48).
- * MITATTU saapumisnäkymässä tämän erän jälkeen: 390 px 43 pistettä,
- * 1400 px 44. Raja on mitatun pohjan (43) alapuolella kolmen pisteen
- * marginaalilla, jotta vartio ei häily ruutujen välillä.
- *
- * MIKSI RAJA EI OLE 50, VAIKKA DATASSA ON 60. Elävien nostojen määrän
- * kattaa `NOSTOJEN_KATTO = 40` (js/pallolauta/nostot.js, karttapallo.md
- * luku 6): pallolla piirtyy enintään 40 elävää merkkiä kerrallaan.
- * Mittaus ennen/jälkeen 1400 px:llä: DOM-merkkejä 40 -> 40 ja
- * nostopisteitä 44 -> 44, mutta "puuttuvia" 4 -> 16 — uudet kaksitoista
- * eivät siis lisää pisteitä vaan syrjäyttävät yhtä monta vanhaa. Katon
- * nosto on koko pallon linjaus eikä tämän erän päätettävissä; kirjattu
- * Fablelle (docs/raportit/viesti-fable-hahmotelma-12-20260918.md).
+ * Historia: 40 -> 35 (jasenyys datasta) -> 40 (hahmotelman 12
+ * varastokohdetta: datassa ulkopuolisia 60, mutta NOSTOJEN_KATTO 40
+ * syrjaytti uudet) -> kohta 21 nosti pisteiden katon 120:een, joten
+ * v1945:sta alkaen raja saa nousta, kun poltto kohdemaan saannolla on
+ * ampärissä (docs/raportit/viesti-fable-hahmotelma-12-20260918.md,
+ * viesti-fable-pisteet-aina-20260918.md).
  */
+/** Ranskan kartalla näkyviä nostopisteitä vähintään (kohta 17 b, 21). */
 const PISTEITA_VAHINTAAN = 40;
+/** Sama luku 390 px:n pystyruudulla (PAATOKSET 17 rajaa reunat). */
+const PISTEITA_VAHINTAAN_390 = 36;
 /** Kaupunkimerkkejä vähintään (kohta 17 c). */
 const KAUPUNKEJA_VAHINTAAN = 7;
+/** Sama luku 390 px:n pystyruudulla (kohta 21). */
+const KAUPUNKEJA_VAHINTAAN_390 = 5;
 /** Vedon pituus saapumisnäkymässä (px). */
 const VEDON_PITUUS_PX = 200;
 /** Ruutuvektorin sallittu heitto vedon yli (px). */
@@ -325,8 +324,39 @@ async function veda(sivu, dx) {
   });
 }
 
+/**
+ * Yksi loitonnusporras: rullaa ulos kartan keskellä ja ladotaan uudelleen.
+ * Uloszoomaus on lukittu maan laatikkoon, joten kamera ei välttämättä
+ * liiku — ele riittää silti laukaisemaan uuden ladonnan (ks. vartio 7).
+ */
+async function loitonna(sivu) {
+  const keskus = await sivu.evaluate(() => {
+    const k = document.querySelector('.pallolauta-kotelo canvas') ?? document.querySelector('canvas');
+    const r = k.getBoundingClientRect();
+    return { x: r.left + r.width / 2, y: r.top + r.height / 2 };
+  });
+  await sivu.mouse.move(keskus.x, keskus.y);
+  for (let i = 0; i < 6; i += 1) {
+    /* eslint-disable no-await-in-loop */
+    await sivu.mouse.wheel(0, 240);
+    await sivu.waitForTimeout(250);
+    /* eslint-enable no-await-in-loop */
+  }
+  await sivu.waitForTimeout(1200);
+  await sivu.evaluate(async () => {
+    window.matkakirja.ui.pallolauta.ladoHeti?.();
+    await new Promise((v) => setTimeout(v, 600));
+  });
+}
+
 const VAIN = Number(process.env.SAVUKE_RUUTU ?? 0) || 0;
-const RUUDUT = [{ w: 390, h: 844 }, { w: 1400, h: 900 }]
+/*
+ * 2000 x 1300 ON OMISTAJAN OMA RUUTU (puhelintesti 18.9.2026,
+ * PAATOKSET 34 kohta 21): juuri silla leveydella han naki Ranskan
+ * saapumisnakyman ilman nostopisteita. Ilman tata rivia mittasarja ei
+ * kayttanyt ollenkaan sita ruutua, josta loydos tuli.
+ */
+const RUUDUT = [{ w: 390, h: 844 }, { w: 1400, h: 900 }, { w: 2000, h: 1300 }]
   .filter((r) => !VAIN || r.w === VAIN);
 
 for (const ruutu of RUUDUT) {
@@ -362,8 +392,9 @@ for (const ruutu of RUUDUT) {
   const puuttuvat = [...ODOTETUT].filter((id) => !nakyvatTunnukset.has(id));
   tieto(`${ruutu.w}px puuttuvia Ranskan nostoja (ei riviä eikä aihemerkin jäsenenä)`,
     `${puuttuvat.length}${puuttuvat.length ? `: ${puuttuvat.join(', ')}` : ''}`);
-  vaadi(`5. ${ruutu.w}px saapumisnäkymässä Ranskan nostopisteitä >= ${PISTEITA_VAHINTAAN}`,
-    pisteet.length >= PISTEITA_VAHINTAAN,
+  const pisteRaja = ruutu.w < 1000 ? PISTEITA_VAHINTAAN_390 : PISTEITA_VAHINTAAN;
+  vaadi(`5. ${ruutu.w}px saapumisnäkymässä Ranskan nostopisteitä >= ${pisteRaja}`,
+    pisteet.length >= pisteRaja,
     `pisteitä ${pisteet.length}; puuttuvia ${puuttuvat.length}: ${puuttuvat.slice(0, 20).join(', ')}`);
   /*
    * KAUPUNKIMERKIT MITATAAN LEVEÄLLÄ RUUDULLA, PUHELIMELLA INFONA.
@@ -378,13 +409,15 @@ for (const ruutu of RUUDUT) {
    * kirjattu Fablelle (docs/raportit/viesti-fable-nostot-lukko-k17-
    * 20260918.md).
    */
-  if (ruutu.w >= 1000) {
-    vaadi(`6. ${ruutu.w}px kaupunkimerkkejä nimineen >= ${KAUPUNKEJA_VAHINTAAN}`,
-      kaupungit.length >= KAUPUNKEJA_VAHINTAAN, `kaupunkeja ${kaupungit.length}`);
-  } else {
-    tieto(`6. ${ruutu.w}px kaupunkimerkkejä (korkeuteen sovitettu saapuminen, PÄÄTÖKSET 17)`,
-      kaupungit.length);
-  }
+  /*
+   * 390 px:n luku on nyt VARTIO eikä pelkkä INFO (PAATOKSET 34 kohta
+   * 21: *"390 px: >= 36 ja >= 5"*). Korkeuteen sovitus jättää itä- ja
+   * länsireunan ruudun ulkopuolelle, joten raja on viisi eikä
+   * seitsemän — mutta se on raja, ei tyhjä kohta.
+   */
+  const kaupunkiRaja = ruutu.w < 1000 ? KAUPUNKEJA_VAHINTAAN_390 : KAUPUNKEJA_VAHINTAAN;
+  vaadi(`6. ${ruutu.w}px kaupunkimerkkejä nimineen >= ${kaupunkiRaja}`,
+    kaupungit.length >= kaupunkiRaja, `kaupunkeja ${kaupungit.length}`);
 
   await veda(sivu, VEDON_PITUUS_PX);
   const jalkeen = await lueTila(sivu);
@@ -412,6 +445,31 @@ for (const ruutu of RUUDUT) {
   vaadi(`4b. ${ruutu.w}px nimiön ruutuvektori merkistä sama vedon jälkeen`,
     vektoriHeitot.length === 0,
     `heittoja ${vektoriHeitot.length}: ${vektoriHeitot.slice(0, 8).join(' | ')}`);
+
+  /*
+   * ── VARTIO 7: LOITONNUS EI VIE PISTEITÄ ──────────────────────────
+   *
+   * PAATOKSET 34 kohta 21 sanoo pisteiden näkyvän saapumisnäkymässä
+   * *"ja siita ulospain jokaisella zoomitasolla, jolla kohdemaa on
+   * ruudulla"*. Uloszoomaus on lukittu maan laatikkoon (PAATOKSET 17,
+   * js/pallolauta/kamera.js), joten ele ei yleensä liikuta kameraa
+   * lainkaan — ja juuri siksi tämä vartio on tarpeen: MITATTU
+   * 18.9.2026 ennen korjausta, että pelkkä loitonnusele pudotti
+   * 390 px:llä pisteet 34 → 14 ja kaupungit 5 → 1, vaikka kameran
+   * korkeus pysyi sadasosan tarkkuudella samana.
+   *
+   * NIMIÖT SAAVAT VÄHETÄ, PISTEET EIVÄT: mitta on sama pisteraja kuin
+   * vartiossa 5.
+   */
+  await loitonna(sivu);
+  const ulompana = await lueTila(sivu);
+  const ulomPisteet = ulompana.rivit.filter((r) => r.avain && !r.avain.startsWith('piste:')
+    && !r.kaupunki && (r.perhe === 'nosto' || r.perhe === 'aihemerkki'));
+  const ulomKaupungit = ulompana.rivit.filter((r) => r.kaupunki && r.nimi);
+  tieto(`${ruutu.w}px loitonnuksen jälkeen kaupunkimerkkejä`, ulomKaupungit.length);
+  vaadi(`7. ${ruutu.w}px yhtä porrasta loitompana nostopisteitä >= ${pisteRaja}`,
+    ulomPisteet.length >= pisteRaja,
+    `pisteitä ${ulomPisteet.length} (saapumisnäkymässä ${pisteet.length})`);
   await ctx.close();
   /* eslint-enable no-await-in-loop */
 }
