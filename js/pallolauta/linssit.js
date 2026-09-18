@@ -520,6 +520,13 @@ export function luoLinssit({
       tila.materiaali = materiaali;
       tila.tekstuuri = tekstuuri;
       /*
+       * PINNAN OMA KIERTO TALTEEN, jotta kuori voi saada OMAN kierron
+       * sen päälle (kahvan `kierra`). Astronautin kameran pilvikuori
+       * pyörii pinnan suhteen hitaasti (js/linssit/astro-sumu.js), ja
+       * ilman lähtökulmaa jokainen kirjoitus nollaisi pinnan asennon.
+       */
+      tila.pinnanKierto = pinta.rotation.y;
+      /*
        * KALVO EHTI VANHENTUA LATAUKSEN AIKANA. Silloin puretaan TÄMÄ
        * kalvo eikä osaa — `o.kalvo` on jo se uusi, jonka kutsuja on
        * pannut tilalle, ja sen purkaminen jättäisi juuri tämän meshin
@@ -564,6 +571,37 @@ export function luoLinssit({
         if (!tila.materiaali) return;
         tila.peru?.();
         tila.peru = haivyta(tila.materiaali, tila.peittavyys);
+      },
+      /*
+       * PEITTO HETI, ILMAN HÄIVYTYSTÄ. `peittavyys` käynnistää
+       * animaation, ja se on oikein kerran tapahtuvaan vaihtoon —
+       * mutta väärin silloin, kun arvo lasketaan JOKA KEHYKSELLÄ
+       * kameran korkeudesta (astronautin pilvikuori, PAATOKSET 43
+       * kohta 7). Peräkkäiset häivytykset kilpailisivat keskenään ja
+       * kirjanpitoon kertyisi tuhansia aloituksia sekunnissa. Tämä
+       * kirjoittaa arvon suoraan materiaaliin ja herättää laudan vain,
+       * kun luku todella muuttui.
+       */
+      peitto: (arvo) => {
+        if (tila.peruttu || !tila.materiaali) return;
+        const uusi = Math.max(0, Math.min(1, Number(arvo) || 0));
+        tila.peittavyys = uusi;
+        if (Math.abs((tila.materiaali.opacity ?? 0) - uusi) < 0.002) return;
+        // Kesken oleva häivytys pois: muuten se jatkaisi kirjoittamista.
+        tila.peru?.();
+        tila.peru = null;
+        tila.materiaali.opacity = uusi;
+        lauta?.heraa?.();
+      },
+      /**
+       * Kuoren OMA kierto radiaaneina pinnan kierron päälle
+       * (pilvikuori pyörii pinnan suhteen). Ei kutsuta, jos kuori ei
+       * ole vielä valmis — silloin kulma tulee seuraavalla kehyksellä.
+       */
+      kierra: (kulma) => {
+        if (tila.peruttu || !tila.mesh) return;
+        tila.mesh.rotation.y = (tila.pinnanKierto ?? 0) + (Number(kulma) || 0);
+        lauta?.heraa?.();
       },
     };
   };

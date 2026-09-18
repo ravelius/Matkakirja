@@ -167,6 +167,15 @@ import {
 import {
   asetaReliefiLinssi, astronautinLaastariKannattaa, reliefiKaytossa,
 } from '../reliefipyramidi.js';
+/*
+ * SUMU OMASSA MODUULISSAAN (PAATOKSET 43 kohta 7). `astro-sumu.js` tuo
+ * takaisin tämän moduulin `pilvipaino`-käyrän — kehä on tarkoituksella
+ * sallittu: molemmat vientinsä ovat funktioesittelyjä (nostetaan), eikä
+ * kumpikaan kutsu toista moduulin ARVIOINNIN aikana, vaan vasta kun
+ * linssi avataan. Vaihtoehto olisi toinen kopio samasta käyrästä, ja
+ * kaksi totuutta on pahempi kuin kehä.
+ */
+import { luoAstroSumu } from './astro-sumu.js';
 
 /* ═════════════════ 1. AVAUSNÄKYMÄN KORKEUS ══════════════════════ */
 
@@ -2429,6 +2438,23 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   const kalvo = luoAvaruusKalvo({
     pallo, kotelo, reduced, ikkuna,
   });
+  /* ---- 2c. pilvikerros ja avaruussumu (PAATOKSET 43 kohta 7) ------- */
+  /*
+   * SUMU LUODAAN AVARUUSKALVON JÄLKEEN, jolloin se jää DOM-
+   * järjestyksessä sen päälle: ISS ja auringon sivuvalo ovat pallon
+   * luona ja näkyvät sumun läpi. `avaus` annetaan funktiona, koska
+   * avauskorkeus lasketaan vasta `sovita`ssa alempana ja se muuttuu
+   * laitteen kääntyessä — peiton profiili lukee aina tuoreen luvun.
+   *
+   * OMA MUUTTUJA EIKÄ `alt`: `alt` on `let`, joka esitellään vasta
+   * luvussa 3, eikä siihen saa viitata täältä (ajallinen kuollut
+   * vyöhyke, jos kehyssilmukka ajetaan synkronisesti testin
+   * rAF-tynkässä). `sovita` kirjoittaa saman luvun molempiin.
+   */
+  let avauskorkeus = 0;
+  const sumu = luoAstroSumu({
+    lauta, kotelo, avaus: () => avauskorkeus, reduced, ikkuna,
+  });
   /*
    * LINSSIN OMA KEHYSSILMUKKA. Kaksi työtä samassa silmukassa: pölyn
    * hidas ajautuma (tarvitsee kehyskellon; liikkeenvähennyksellä dt
@@ -2554,6 +2580,12 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      * sama kutsu hoitaa myös nipistyksen ja laitteen kääntämisen.
      */
     kalvo?.paivita?.(t ?? 0, kameranKorkeus());
+    /*
+     * SUMU SAMASTA KORKEUDESTA. Kaksi kirjoitusta kehystä kohti
+     * (kuoren peitto ja kahden kalvon tyyli) — ei uutta laskentaa,
+     * koska kohinakankaat syntyivät kerran avauksessa.
+     */
+    sumu?.paivita?.(t ?? 0, kameranKorkeus());
     if (!taivas) return;
     const dt = reduced || !edellinen ? 0 : (t - edellinen) / 1000;
     edellinen = t;
@@ -2593,6 +2625,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     const uusi = avausKorkeus(mitat);
     if (Math.abs(uusi - alt) < 0.001) return;
     alt = uusi;
+    // Sumun peiton profiili lukee saman avauskorkeuden (ks. luku 2c).
+    avauskorkeus = alt;
     aloitusAlt = avausKorkeus({ ...mitat, marginaali: ALOITUKSEN_MARGINAALI });
     rajat = zoomirajat(alt);
     /*
@@ -2700,6 +2734,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       pinnanOsoite: String(pallo.globeImageUrl?.() ?? '').slice(0, 24),
       diag: pallodiagLoki(),
       kalvo: kalvo?.tila?.() ?? null,
+      /* PAATOKSET 43 kohta 7: pilvikerroksen ja avaruussumun peitto. */
+      sumu: sumu?.tila?.() ?? null,
       /* Piirtokangas ja kontekstin kunto: vartija lukee nämä. */
       kangas: kangasMitat(),
       kontekstiHukassa: kontekstiHukassa(pallo),
@@ -2763,6 +2799,13 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       kehys = 0;
       taivas?.pura?.();
       kalvo?.pura?.();
+      /*
+       * SUMU POIS ENNEN PINNAN PALAUTUSTA. Purku vie sumukalvot DOMista
+       * ja häivyttää pilvikuoren ulos; kuoren mesh, materiaali ja
+       * tekstuuri vapautetaan `lauta.linssit.pura`n omassa ketjussa
+       * (vapautaKalvo), joten GPU:lle ei jää mitään.
+       */
+      sumu?.pura?.();
       pinnat.pura();
       /*
        * LIPPU ALAS ENNEN PINNAN PALAUTUSTA: laattakerros herää
