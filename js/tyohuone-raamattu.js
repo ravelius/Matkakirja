@@ -9212,7 +9212,12 @@ export const RAAMATTU = {
           + 'elaviksi, tarkoitettu). Savukkeet: pallo-nostolaput 6-7 mittaavat '
           + 'poltetun musteen kaupungin ulkopuolisista nostoista (Transilvania); '
           + 'Helsinki/Istanbul-nakymat ovat lapputtomia (raportti '
-          + 'viesti-fable-nostolaput-67-20260918.md).',
+          + 'viesti-fable-nostolaput-67-20260918.md). VELKA MAKSETTU: '
+          + 'JULKAISTU v1941 18.9.2026 klo 14.45 (PR #2582) - nostotaso '
+          + '2026-09-19-nostot ja pallon sarja h poltettu yhdella ajolla ilman '
+          + 'valitilaa (TARKENNUS 10 kohta 20 tyokalu): 91 488 laattaa 8 min, '
+          + 'lahdelaatat levylta, luettelo vietiin viimeisena; kaupunkipisteiden '
+          + 'muste poissa laatoista.',
         'KARTTAUUDISTUKSEN PAATOKSET 32: NOSTOT EIVAT LIIKU ZOOMATESSA, '
           + 'VIUHKA SIISTIKSI LISTAKSI, KAIKKI NOSTOT POLTETUN KARTAN KOKOA, '
           + 'EI TEKSTIA TOISEN PAALLE (omistaja 17.9.2026 klo 20.35 Suomen '
