@@ -28,7 +28,8 @@
  */
 import {
   haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
-  pyramidinReliefiKaytossa, pyramidinTasoitus, pyramidinVaritasonMaa,
+  pyramidinReliefiKaytossa, pyramidinReliefinSyvinTaso,
+  pyramidinTasoitus, pyramidinVaritasonMaa,
 } from './laattapyramidi.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 
@@ -1232,6 +1233,24 @@ export function luoLaattakerros({
    */
   let variMaaEdellinen = null;
   /*
+   * RELIEFILINSSI AUKEAA KESKEN AJON — JA SE ON MAANVAIHDON LAJI.
+   *
+   * Mitattu 18.9.2026 (tools/savukkeet/mittaa-reliefipyramidi.mjs,
+   * Chromium 390 × 844, Alppien lähizoomi): linssin avauksesta kului
+   * 15,7 SEKUNTIA ensimmäiseen reliefilaattapyyntöön, ja sekin lähti
+   * vasta kun kamera liikkui. Syy: kerrostasot luetaan vasta laatan
+   * VALMISTELUSSA (`lataa`), ja näkyvän ikkunan laatat olivat jo
+   * tilassa `valmis` seepiakankaineen. Päivitys käyttää valmiin
+   * laatan uudelleen, joten kytkin ei näkynyt ruudulla lainkaan
+   * ennen panorointia.
+   *
+   * Reliefi on samalla tavalla KANKAASSA kuin väri: vanha laatta ei
+   * ole vanhentunut kuva vaan väärä kuva. Mitätöinti on siksi sama
+   * kuin maanvaihdossa alla — eikä se ole raskas, koska lippu
+   * kääntyy vain linssin avautuessa ja sulkeutuessa.
+   */
+  let reliefiEdellinen = null;
+  /*
    * TASOITUKSEN SUOJA TARKENTUU KESKEN AJON. Maapolygonit ovat laiskat,
    * ja ennen niitä suoja on koko laatikko (js/laattapyramidi.js
    * pyramidinTasoitus). Kun tarkka suoja saapuu, jo kootut kankaat on
@@ -1866,9 +1885,11 @@ export function luoLaattakerros({
      * ei asenna purettua laattaa takaisin.
      */
     const tasoitusAvain = kerrokset.vari ? (pyramidinTasoitus()?.avain ?? '') : '';
-    if (variMaa !== variMaaEdellinen || tasoitusAvain !== tasoitusAvainEdellinen) {
+    if (variMaa !== variMaaEdellinen || tasoitusAvain !== tasoitusAvainEdellinen
+      || kerrokset.reliefi !== reliefiEdellinen) {
       variMaaEdellinen = variMaa;
       tasoitusAvainEdellinen = tasoitusAvain;
+      reliefiEdellinen = kerrokset.reliefi;
       mittarit.variMaa = kerrokset.vari ? variMaa : null;
       mittarit.varimitatointeja += 1;
       sukupolvi += 1;
@@ -1920,6 +1941,20 @@ export function luoLaattakerros({
     let valittu = kertomuslukko && Number.isFinite(kertomustaso)
       ? (tasoZ(kertomustaso) ?? laattakerroksenTaso(pyramidi.tasot, tarvePxAste, taso))
       : laattakerroksenTaso(pyramidi.tasot, tarvePxAste, taso);
+    /*
+     * RELIEFIN KATTO. Taso valitaan POHJAN luettelosta, jossa on z8;
+     * reliefi on poltettu z7:ään asti. Mitattu 18.9.2026
+     * (tools/savukkeet/mittaa-reliefipyramidi.mjs, Alppien lähizoomi):
+     * ilman kattoa kerros valitsi z8:n, `pyramidinKerrostasot` ei
+     * löytänyt sille reliefitasoa, pohja oli portista kiinni — ja
+     * jokainen laatta jäi tilaan `virhe`. Ruutu oli musta eikä yhtään
+     * laattapyyntöä lähtenyt. Katto on reliefin oma syvin taso; sitä
+     * karkeampi valinta on yhä tarkempi kuin yhden kuvan 30 px/aste.
+     */
+    const reliefinKatto = kerrokset.reliefi ? pyramidinReliefinSyvinTaso() : null;
+    while (valittu && Number.isFinite(reliefinKatto) && valittu.z > reliefinKatto) {
+      valittu = tasoZ(valittu.z - 1);
+    }
     let kartta = null;
     let nakyvatLaatat = null;
     while (valittu) {

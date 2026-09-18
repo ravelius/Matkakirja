@@ -90,8 +90,8 @@
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
 import {
-  haeReliefinLuettelo, reliefiKaytossa, reliefinLaattaUrl, reliefinTaso,
-  reliefinVersio, reliefipyramidiPaalla,
+  haeReliefinLuettelo, reliefiKaytossa, reliefinLaattaUrl,
+  reliefinSyvinTaso, reliefinTaso, reliefinVersio, reliefipyramidiPaalla,
 } from './reliefipyramidi.js';
 import { NOSTOLADONTA_SAANTO } from './nostoladonta.js';
 import {
@@ -2623,4 +2623,12 @@ export function pyramidinLaattaOlemassa(taso, sarake, rivi) {
  */
 export function pyramidinReliefiKaytossa() {
   return reliefiKaytossa();
+}
+
+/**
+ * Reliefilaataston syvin taso (z) tai null. Laattakone ei saa valita
+ * tätä syvempää tasoa linssin ajan: sitä ei ole poltettu.
+ */
+export function pyramidinReliefinSyvinTaso() {
+  return reliefinSyvinTaso();
 }

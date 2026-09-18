@@ -260,3 +260,166 @@ kannattaa mitata vasta savukkeella, ei arvata.
 Raamattu, `sarjat.json`, pääkartan pyramidi, `js/pallolauta/nostot*.js`,
 kaupunkiliuska, fokusvirta. Uusia .md-tiedostoja vain
 `docs/raportit/`-kansioon (tämä).
+
+---
+
+# Erä 3 — mittaus
+
+Opus-agentti 18.9.2026 klo 09.37–10.15 (Suomen aikaa), haara
+`claude/bold-ride-vow4ki-reliefi-kytkenta`. Mac Studio, Playwright
+(Chromium 1234 ja WebKit 2336), ruutu 390 × 844 dpr 2, Alppien
+lähizoomi (45,8 °N / 6,9 °E, korkeus 0,06). Laatat levyltä
+route-välityksellä ämpärin omaan polkuun; ämpäriin ei viety mitään.
+
+Savuke on **`tools/savukkeet/mittaa-reliefipyramidi.mjs`** (uusi).
+`savuke-topografialinssi.mjs` on olemassa ja on VARTIJA — se kaatuu,
+jos pelin kerroksia näkyy linssin aikana. Mittari tarvitsi kaksi
+rinnakkaista ajoa (kytkin pois ja päällä) samoista luvuista, mikä ei
+mahdu vartijan runkoon muuttamatta vartijaa mittariksi.
+
+```
+PLAYWRIGHT_JS=<repo>/node_modules/playwright/index.js \
+CHROMIUM="<...>/Google Chrome for Testing" \
+RELIEFIPYRAMIDI_KANSIO=<levyn pyramidijuuri> PORTTI=9121 SELAIN=chromium \
+  node tools/savukkeet/mittaa-reliefipyramidi.mjs
+```
+
+## 1. Ensimmäinen ajo löysi kolme vikaa — kytkin ei tehnyt mitään
+
+Ensimmäinen mittaus (ennen korjauksia) näytti kytkin päällä tasan
+saman kuvan kuin kytkin pois: gradienttienergia **1,71 vs 1,77** eli
+kohinaa, eikä yhtään reliefilaattapyyntöä lähtenyt näkyvälle
+ikkunalle. Kolme syytä, kaikki mitattuja:
+
+1. **Taso valittiin pohjan luettelosta.** Lähizoomissa laattakerros
+   valitsi z8:n (172 800 px). Reliefi on poltettu z7:ään asti, joten
+   `pyramidinKerrostasot` ei löytänyt tasolle reliefiä — ja koska
+   pohja on pohjattomuuden takia portista kiinni, kerrostasolista jäi
+   TYHJÄKSI ja jokainen laatta tilaan `virhe`. Ruutu oli musta, eikä
+   yhtään pyyntöä lähtenyt. Korjaus: reliefin syvin taso on kerroksen
+   katto (`reliefinSyvinTaso` → `pyramidinReliefinSyvinTaso`, rajaus
+   `js/pallolaatat.js`).
+2. **Lipun nosto ei herättänyt kerrosta.** Laattakerros päivittyy
+   piirtokoukusta; paikallaan olevassa näkymässä koukku ei tuonut
+   mitään uutta. Mitattu: ensimmäinen reliefilaattapyyntö lähti
+   **15,7 sekuntia** linssin avauksen jälkeen — silloin kun kamera
+   liikkui. Korjaus: linssi kutsuu kerroksen omaa `kokoa()`:a
+   avatessa ja sulkiessa.
+3. **Vanhat seepialaatat jäivät kankaalle.** Valmis laatta käytetään
+   uudelleen, ja reliefi on kankaassa samalla tavalla kuin väri.
+   Korjaus: lipun vaihto mitätöi laatat kuten maanvaihto
+   (`kerrokset.reliefi !== reliefiEdellinen`).
+
+Lisäksi **koko pallon kalvo ja tarkennuslaastari jäävät nyt pois**,
+kun kytkin on päällä (omistajan lisäys, LISAYS 16 kohta 49: linssi
+ilman pohjakarttaa). Kalvo on 0,72-peittävä kuva samasta reliefistä
+30 px/asteen tiheydellä; laataston päällä se hukutti juuri sen
+tarkkuuden, jota varten laatasto poltettiin. Odotuspeitteen mitta
+vaihtui samalla: kalvoa ei ole, joten peite väistyy vasta kun
+laattakerroksen näkyvän ikkunan KAIKKI laatat ovat scenessä ja häive
+perillä (`nakyvia`/`nakyviaTaysin`).
+
+## 2. Mittaustaulukko
+
+Näkyvän ikkunan luvut, yksi ajo per selain. Kaappaukset ja raaka JSON:
+`docs/raportit/kuvat/reliefipyramidi-20260918/`.
+
+| | Chromium pois | Chromium päällä | WebKit pois | WebKit päällä | tavoite |
+| --- | --- | --- | --- | --- | --- |
+| a) ensimmäinen reliefikehys | 2 496 ms | **2 714 ms** | 2 436 ms | **2 788 ms** | < 300 ms ✗ |
+| b) seepiapohjan laattapyyntöjä linssin aikana | 35 | **0** | 35 | **0** | 0 ✓ |
+| c) reliefilaattoja näkyvälle ikkunalle | — | **12** | — | **12** | ≤ 12 ✓ |
+| d) gradienttienergia (Alpit) | 1,77 | **2,50** | 3,78 | **21,17** | päällä > pois ✓ |
+| e) fps 3 s panoroinnissa | 77,5 | **77,3** | 49,3 | **60,0** | ≥ 50 ✓ (Chromium) |
+| f) meri: reikiä laikussa | 0 / 14 400 | **0 / 14 400** | — | **1 / 14 400** | 0 ✓ |
+| g) kirkkaus: asettunut / max avauksen jälkeen | 86 / 138,8 | **69 / 101,9** | 86 / 136,3 | **68,9 / 102,0** | ei välähdystä ✗ |
+
+Seepiapohjan kirkkaus ennen linssiä oli 95,7 (Chromium) ja 95,9
+(WebKit).
+
+**a) Ensimmäinen reliefikehys 2,7 s — tavoite 300 ms ei täyty.**
+Luku on mitattu kaappaussarjasta (kehys 60–100 ms välein): ensimmäinen
+kehys, joka on jo asettuneen näkymän värissä. Se EI ole pelkkä
+laattojen haku — sarjasta näkyy, että avaus menee kokonaan
+odotuspeitteen kautta: seepia 0–0,8 s, peite 1,1–1,4 s, välivaihe
+1,7–2,5 s, reliefi 2,7 s. Kytkin pois sama tapahtumaketju vie 2,5 s.
+**Ero pois/päällä on siis 0,2 s, ei sekunteja** — 300 ms:n tavoite on
+odotuspeitteen ja häivytysten hinta, ei laataston.
+
+**c) 12 laattaa** on tasan edellisen erän offline-mittauksen luku
+(8 näkyvää + reunavara) ja tasan katossa. Levyllä oli jokainen.
+
+**d) Terävyys.** Chromiumilla laatasto on mitattavasti terävämpi
+(2,50 vs 1,77, +41 %). WebKitin luvut ovat eri suuruusluokassa
+(21,17 vs 3,78), koska WebKitin kaappaus ei pehmennä kuvaa samalla
+tavalla kuin Chromiumin — SELAINTEN LUKUJA EI SAA VERRATA KESKENÄÄN,
+vain saman selaimen pois/päällä.
+
+**f) Meri.** Laikku (120 × 120 px avomerta Lyoninlahden edustalla) on
+yhtenäinen: suurin poikkeama laikun omasta keskiväristä 1,9 yksikköä
+Chromiumilla ja 30,8 WebKitillä (yksi pikseli yli rajan). **Reikiä ei
+ole.** Ruudulla väri on rgb(48, 72, 104), ei kankaan rgb(38, 78, 145):
+pallon materiaali ja valaistus tummentavat sen. Sävy on siis oikea
+vain kankaalla — se ei ole vika, mutta se on syytä tietää, jos väriä
+joskus sovitetaan silmällä.
+
+**g) Välähdys ei ole poissa.** Kirkkaus nousee avauksen jälkeen
+arvoon 101,9 (Chromium) noin sekunniksi, kun seepiapohja on 95,7 ja
+asettunut reliefi 69. **Sama välähdys on kytkin POIS** ja
+voimakkaampana (138,8), eli se ei ole laataston tekoa: se on linssin
+oman avausketjun välivaihe peitteen väistyessä. Kytkin siis
+puolittaa sen, muttei poista. Juurisyy on peitteen ja häivytysten
+ajoituksessa, joka on linssin yhteistä koodia eikä kytkimen sisällä —
+**jätän sen Fablen päätettäväksi**, koska sen korjaaminen koskee myös
+nykyistä yhden kuvan linssiä.
+
+## 3. Kaappaukset
+
+Kansiossa `docs/raportit/kuvat/reliefipyramidi-20260918/`, kaikki
+390 × 844 dpr 2:
+
+- `reliefi-chromium-pois-alpit.png` ja `reliefi-chromium-paalla-alpit.png`
+  — Alppien lähizoomi, kytkin pois vs päällä. Päällä-kuvassa harjanteet
+  ja laaksot erottuvat yksittäin ja väri on maaston oma; pois-kuvassa
+  sama alue on venytettyä ja seepian sävyttämää.
+- `reliefi-webkit-pois-alpit.png`, `reliefi-webkit-paalla-alpit.png` — sama WebKitillä.
+- `reliefi-*-meri.png` — avomeri Lyoninlahden edustalla (kohta f).
+- `reliefi-chromium-pois-ennen-linssia.png` — sama näkymä ennen linssin
+  avausta (pelin seepiakartta); vertailukohta kirkkausluvuille.
+- `reliefi-mittaus-chromium.json`, `reliefi-mittaus-webkit.json` — raakaluvut, myös kirkkaussarja.
+
+## 4. Suositus: kytkintä EI oteta vielä oletukseksi
+
+Kolme syytä, tässä järjestyksessä:
+
+1. **Laatat eivät ole ämpärissä.** Tämä yksin riittää: oletuksena
+   päällä tarkoittaisi tyhjää linssiä jokaiselle pelaajalle. Vienti on
+   omistajan avaimen takana.
+2. **Syvin zoomi menettää yhden tason.** Reliefi on z7, pohja z8.
+   Lähimmässä zoomissa reliefi on siis puolet karkeampi kuin
+   seepiapohja samassa näkymässä — yhä 240 px/aste eli
+   kahdeksankertainen yhteen kuvaan (30 px/aste) nähden, mutta jos
+   linssiä katsotaan aivan pohjassa, ero näkyy. Ratkaisu on joko z8:n
+   polttaminen (lähde on 15″ eli 240 px/aste, joten z8 olisi
+   venytystä — EI kannata) tai se, että katto hyväksytään.
+3. **Välähdys on yhä ruudulla** (kohta g). Se ei ole kytkimen vika,
+   mutta se on asia, jonka omistaja on nimenomaan kieltänyt, ja
+   oletukseksi ottaminen tekisi siitä jokaisen pelaajan asian.
+
+Kohdat b, c, d, e ja f ovat tavoitteissaan kummallakin selaimella, eli
+**laatasto itsessään on mittausten mukaan valmis**: se ei lataa
+seepiaa, se pysyy laattakatossa, se on terävämpi, se ei maksa
+kehysaikaa ja meri on ehjä. Kun laatat ovat ämpärissä ja välähdys on
+ratkaistu, kytkin voidaan poistaa kokonaan ja reliefipyramidi tehdä
+linssin ainoaksi lähteeksi.
+
+## 5. Testit ja mitä EI koskettu
+
+`tests/reliefipyramidi.test.mjs` sai yhden uuden testin, joka
+vartioi kaikkia kolmea korjattua vikaa (katto, herätys, mitätöinti).
+`node --test tests/*.test.mjs` vihreä, `node tools/build-standalone.mjs`
+ajettu ennen pushia. Laattoja ei committoitu.
+
+Koskematta: Raamattu, `sarjat.json`, pohjapyramidi, `js/pallolauta/nostot*.js`,
+kaupunkiliuska, fokusvirta, Astronautin kamera. Versionostoa ei tehty
+(tehtävänannon mukaan); kytkin on yhä oletuksena pois.

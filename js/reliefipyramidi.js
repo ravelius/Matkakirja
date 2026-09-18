@@ -192,6 +192,22 @@ export function reliefinTasot() {
   return luettelo.__tasot.length ? luettelo.__tasot : null;
 }
 
+/*
+ * RELIEFIN SYVIN TASO — LAATTAKONEEN KATTO LINSSIN AJAN.
+ *
+ * Pohjapyramidissa on z8 (172 800 px), reliefissä vain z0…z7
+ * (86 400 px). Mitattu 18.9.2026 (mittaa-reliefipyramidi.mjs, Alppien
+ * lähizoomi): kerros valitsi tarpeen mukaan z8:n, jolle reliefitasoa
+ * EI ole — jokainen laatta jäi tilaan `virhe`, ruutu oli musta eikä
+ * yhtään laattapyyntöä lähtenyt. Taso valitaan pohjan luettelosta,
+ * joten katto on kysyttävä reliefiltä erikseen.
+ */
+export function reliefinSyvinTaso() {
+  const tasot = reliefinTasot();
+  if (!tasot?.length) return null;
+  return tasot.reduce((a, t) => Math.max(a, t.z), 0);
+}
+
 /** Tason z reliefikerros tai null. */
 export function reliefinTaso(z) {
   return reliefinTasot()?.find((t) => t.z === z) ?? null;

@@ -15,8 +15,8 @@ import { dirname, join } from 'node:path';
 
 import {
   MERIVARI, VERSIO_VARALLA, asetaReliefiLinssi, meripeitonBitit, nollaaReliefi,
-  reliefiKaytossa, reliefinJuuri, reliefinLaattaUrl, reliefinTaso, reliefinVersio,
-  reliefipyramidiPaalla,
+  reliefiKaytossa, reliefinJuuri, reliefinLaattaUrl, reliefinSyvinTaso, reliefinTaso,
+  reliefinVersio, reliefipyramidiPaalla,
 } from '../js/reliefipyramidi.js';
 
 const juuri = dirname(fileURLToPath(import.meta.url));
@@ -131,4 +131,40 @@ test('reliefi korvaa pohjan eikä peitä sitä', () => {
   assert.match(laatat, /vari: vari && !reliefi,/);
   // Avomeri maalataan taustavärillä eikä merkitä virheeksi.
   assert.match(laatat, /if \(!kuvat\.some\(Boolean\) && !tausta\)/);
+});
+
+/*
+ * RELIEFIN KATTO, KOLME MITATTUA VIKAA YHDESSÄ TESTISSÄ (18.9.2026,
+ * tools/savukkeet/mittaa-reliefipyramidi.mjs, Chromium 390 × 844,
+ * Alppien lähizoomi):
+ *
+ *   1. Kerros valitsi tason POHJAN luettelosta, jossa on z8. Reliefi
+ *      on poltettu z7:ään, joten jokainen laatta jäi tilaan `virhe`,
+ *      ruutu oli musta eikä yhtään laattapyyntöä lähtenyt.
+ *   2. Lipun nosto ei yksin herättänyt kerrosta: paikallaan olevassa
+ *      näkymässä ensimmäinen reliefilaattapyyntö lähti vasta 15,7 s
+ *      päästä, kun kamera liikkui.
+ *   3. Linssin vaihtuminen ei mitätöinyt jo koottuja seepialaattoja,
+ *      joten kytkin ei näkynyt ruudulla lainkaan.
+ *
+ * Kaikki kolme ovat yhden rivin kokoisia, ja jokainen niistä palaisi
+ * huomaamatta — vika näkyy vain ruudulla, ei virheenä.
+ */
+test('reliefin syvin taso on laattakoneen katto, ja kytkin herättää kerroksen', () => {
+  nollaaReliefi({
+    versio: '20260918',
+    tasot: [
+      { z: 6, sarakkeita: 85, riveja: 46, meriLaatat: [] },
+      { z: 7, sarakkeita: 169, riveja: 91, meriLaatat: [] },
+    ],
+  });
+  assert.equal(reliefinSyvinTaso(), 7);
+  nollaaReliefi();
+  assert.equal(reliefinSyvinTaso(), null, 'ilman luetteloa ei kattoa');
+
+  const laatat = lue('../js/pallolaatat.js');
+  assert.match(laatat, /valittu\.z > reliefinKatto/, 'taso rajataan reliefin kattoon');
+  assert.match(laatat, /kerrokset\.reliefi !== reliefiEdellinen/, 'lipun vaihto mitätöi laatat');
+  const linssi = lue('../js/linssit/topografia.js');
+  assert.match(linssi, /lauta\.lepokerros\?\.\(\)\?\.kokoa\?\.\(\)/, 'kerros herätetään');
 });
