@@ -29,7 +29,8 @@
     "savuke-maailmatila-zoomi.mjs",
     "savuke-reittihelmet.mjs",
     "savuke-siirtozoomi.mjs",
-    "savuke-kohdevalinta.mjs"
+    "savuke-kohdevalinta.mjs",
+    "savuke-astro-sumu.mjs"
   ],
   "asetukset": {
     "savuke-ihmisen-kappaleet.mjs": {
@@ -225,6 +226,9 @@
     },
     "savuke-kohdevalinta.mjs": {
       "huomautus": "PAATOKSET 42 (18.9.2026): nopanheiton kohteen napautus valitsee siirron, liuska muille; 14/14 Fablen mergessa. Lisatty julkaisusarjaan v1947."
+    },
+    "savuke-astro-sumu.mjs": {
+      "huomautus": "PAATOKSET 43 kohta 7 (18.9.2026): pilvikerros + avaruussumu; 8/8. Lisatty julkaisusarjaan v1947."
     }
   }
 }
