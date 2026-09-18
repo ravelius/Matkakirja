@@ -389,6 +389,25 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null)
   const variKirjaus = variMaa ? (pyramidi.varitasot?.[variMaa] ?? null) : null;
   const vari = Boolean(variKirjaus?.versio && variKirjaus.tasot?.length);
   /*
+   * NOSTOTASO MAITTAIN (18.9.2026, Raamattu PAATOKSET 34 kohta 17 d:
+   * *"muiden maiden nostot piiloon"*). Sama laji kuin väritaso, ja
+   * samasta syystä BOOLEAN eikä `return null`: puuttuva maakohtainen
+   * nostolaatasto pudottaa nostot, ei karttaa.
+   *
+   * EHTO ON `!nostot`: jos pallon sarjaan ON poltettu nostot, ne ovat
+   * jo laattojen kankaassa KOKO MAAILMASTA, eikä tämä kerros voi
+   * ottaa niitä pois — silloin käytös on entinen (portti yllä vaatii
+   * saman version kuin pyramidin maailmanlaajuinen nostotaso).
+   * Maakohtainen kerros herää vasta, kun pallon sarja ajetaan ILMAN
+   * `--nostot`-lippua: silloin liikkuvassa pallossa ei ole nostoja
+   * lainkaan ja lepokerros latoo VAIN kohdemaan nostolaatat, kuten
+   * tasokartta. Ks. raportti
+   * docs/raportit/viesti-fable-nostotaso-maittain-20260918.md.
+   */
+  const nostoKirjaus = variMaa ? (pyramidi.nostotasot?.[variMaa] ?? null) : null;
+  const nostotMaittain = !nostot
+    && Boolean(nostoKirjaus?.versio && nostoKirjaus.tasot?.length);
+  /*
    * ══════════════════════════════════════════════════════════════
    * VIIVATASO EI TULE PALLOLLE — REITTIVIUHKA OLI POLTETTU LAATTAAN
    * ══════════════════════════════════════════════════════════════
@@ -451,7 +470,7 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null)
     pohja: !reliefi,
     ranta: Boolean(ranta),
     viiva: false,
-    nosto: Boolean(nostot),
+    nosto: Boolean(nostot) || nostotMaittain,
     vari: vari && !reliefi,
     reliefi,
   };

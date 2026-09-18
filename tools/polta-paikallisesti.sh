@@ -565,6 +565,36 @@ lue_ampari () {
 Z8_SARAKKEITA=338
 Z8_KAISTA=4
 
+# NOSTOTASON SHARDIT MAITTAIN (18.9.2026, Raamattu PAATOKSET 34
+# kohta 17 d: "muiden maiden nostot piiloon").
+#
+# Nostotaso ei ole enää yksi maailmanlaajuinen laatasto vaan
+# maakohtainen (<nostoversio>/nostot/<ISO>/z...), koska naapurimaan
+# laattaan poltettu muste kuulsi kerman läpi eikä kerros voi piilottaa
+# poltettua. Maalista tulee SAMASTA funktiosta, josta merkitkin
+# (tools/nostomaat.mjs -> tools/fokuskartta/nostot.mjs keraaNostot) —
+# käsin kirjoitettu lista ehtisi eriytyä, ja listalta pudonneen maan
+# nostot jäisivät polttamatta.
+#
+# Yksi maa on pieni ajo (kymmeniä laattoja), ja shardit menevät
+# rinnakkain ytimille kuten ennenkin.
+NOSTOMAAT_VALIMUISTI=""
+nostomaat () {
+  if [ -z "$NOSTOMAAT_VALIMUISTI" ]; then
+    NOSTOMAAT_VALIMUISTI="$(node "$JUURI/tools/nostomaat.mjs" --rivi)"
+  fi
+  echo "$NOSTOMAAT_VALIMUISTI"
+}
+
+# Emittoi nostoshardit yhdelle tasovälille kaikille maille.
+# $1 = shardin nimen etuliite, $2 = tasoargumentit, $3 = nostoarg
+nostoshardit () {
+  local etuliite="$1" tasot="$2" nostoarg="$3" iso
+  for iso in $(nostomaat); do
+    echo "$etuliite-$iso|$tasot $nostoarg --nostomaa $iso"
+  done
+}
+
 shardit () {
   local nostoarg="--nostotaso --nostoversio $NOSTOVERSIO"
   local viivaarg="--viivataso --viivaversio $VIIVAVERSIO"
@@ -591,7 +621,7 @@ shardit () {
   case "$SARJAT" in
     z8)
       if [ "$NOSTOVERSIO" != "${A_NOSTOVERSIO:-$NOSTOVERSIO}" ]; then
-        echo "nosto-z5-z7|--tasot 5-7 $nostoarg"
+        nostoshardit "nosto-z5-z7" "--tasot 5-7" "$nostoarg"
       fi
       if [ "$VIIVAVERSIO" != "${A_VIIVAVERSIO:-$VIIVAVERSIO}" ]; then
         echo "viiva-z0-z7|--tasot 0-7 $viivaarg"
@@ -603,8 +633,8 @@ shardit () {
   # nostoversio polttaa koko kerroksen z5-z8 (ks. yllä).
   case "$SARJAT" in
     nostot)
-      echo "nosto-z5-z7|--tasot 5-7 $nostoarg"
-      echo "nosto-z8|--tasoja 9 --tasot 8 $nostoarg"
+      nostoshardit "nosto-z5-z7" "--tasot 5-7" "$nostoarg"
+      nostoshardit "nosto-z8" "--tasoja 9 --tasot 8" "$nostoarg"
       ;;
   esac
   case "$SARJAT" in
@@ -615,7 +645,7 @@ shardit () {
       echo "z7c|--tasot 7 --sarakkeet 88-131 --kaariminuutit $KORKEUS$pohjaarg"
       echo "z7d|--tasot 7 --sarakkeet 132-168 --kaariminuutit $KORKEUS$pohjaarg"
       echo "viiva-z0-z7|--tasot 0-7 $viivaarg"
-      echo "nosto-z5-z7|--tasot 5-7 $nostoarg"
+      nostoshardit "nosto-z5-z7" "--tasot 5-7" "$nostoarg"
       [ "$ILMAN_RANTAVIIVAA" -eq 1 ] && echo "ranta-z0-z7|--tasot 0-7 $rantaarg"
       ;;
   esac
@@ -639,7 +669,7 @@ shardit () {
         printf 'viiva-z8-%02d|--tasoja 9 --tasot 8 --sarakkeet %s-%s %s\n' "$n" "$a" "$b" "$viivaarg"
         a=$((b + 1)); n=$((n + 1))
       done
-      echo "nosto-z8|--tasoja 9 --tasot 8 $nostoarg"
+      nostoshardit "nosto-z8" "--tasoja 9 --tasot 8" "$nostoarg"
       if [ "$ILMAN_RANTAVIIVAA" -eq 1 ]; then
         a=0; n=1
         while [ "$a" -lt "$Z8_SARAKKEITA" ]; do
@@ -726,10 +756,13 @@ kirjaa_laskut () {
   local polku="$ULOS/lokit/$nimi.laskut"
   local d kerros z n
   : > "$polku.tmp"
-  for d in "$kansio"/z* "$kansio"/nostot/z* "$kansio"/viivat/z* "$kansio"/ranta/z*; do
+  # Nostotaso on maakohtainen: sen tasokansiot ovat nostot/<ISO>/z*.
+  for d in "$kansio"/z* "$kansio"/nostot/z* "$kansio"/nostot/*/z* \
+           "$kansio"/viivat/z* "$kansio"/ranta/z*; do
     [ -d "$d" ] || continue
     z="$(basename "$d")"; z="${z#z}"
     kerros="$(basename "$(dirname "$d")")"
+    case "$d" in *"/nostot/"*) kerros=nostot ;; esac
     case "$kerros" in nostot|viivat|ranta) ;; *) kerros=pohja ;; esac
     n="$(find "$d" -name "$pate" | wc -l | tr -d ' ')"
     printf '%s %s %s\n' "$kerros" "$z" "$n" >> "$polku.tmp"
