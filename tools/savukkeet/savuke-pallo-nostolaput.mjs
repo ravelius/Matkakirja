@@ -301,8 +301,14 @@ if (auki) {
     nimettomia === 0, `nimettömiä näkymiä ${nimettomia}`);
   vaadi('4. sovittelun asento on myös elementissä (muunnos ja kylki) ja lappu liukuu 200 ms',
     tasmaa && siirtyma === '0.2s', `tasmaa=${tasmaa} siirtyma=${siirtyma}`);
-  vaadi('5. pakotettu väistö toimii: este lapun päähän, eikä näkyvä lappu jää sen alle',
-    pakotettuja > 0 && pakoteLimityksia === 0 && pakoteKasitellyt === pakotettuja,
+  /*
+   * 5. VANHENTUNUT (Fable 18.9.2026, Raamattu PAATOKSET 34 kohta 13 c):
+   *    sovittelu ajetaan vain kun lappujoukko tai ruutukoko muuttuu —
+   *    nostot ja nimiöt PYSYVÄT PAIKALLAAN, eikä kesken levon istutettu
+   *    keinotekoinen este saa enää siirtää lappua. Vartio mittasi juuri
+   *    sitä käytöstä, jonka omistaja kumosi, joten se on INFO.
+   */
+  tieto('5. pakotettu väistö (vanhentunut, kohta 13 c: ei uudelleensovittelua levossa)',
     `pakotettuja ${pakotettuja}, käsiteltyjä ${pakoteKasitellyt}, limityksiä ${pakoteLimityksia}`);
   /*
    * 6. NAPAUTUS LAPUN TEKSTIIN AVAA SAMAN NOSTON (Raamattu, VIAT v1672;
