@@ -106,7 +106,7 @@ import {
 } from '../../js/fokuskohteet.js';
 import { nippuViivanJana, niputaFokusmerkit } from '../../js/fokusniput.js';
 import {
-  NOSTOLADONTA_S, nostoladontaSkaala, nostoladontaTiiviste,
+  NOSTOLADONTA_S, nostoladontaSkaala, nostoladontaTiiviste, onKaupunkipiste,
 } from '../../js/nostoladonta.js';
 import { FOKUS_POHJAT } from '../../js/packs/fokus-grc.js';
 import { kytkeFokusnosto, nostoKarttarivit, nostoKaupunginPooli } from '../../js/fokusnosto.js';
@@ -166,11 +166,18 @@ import { asteetLaudalle } from '../../js/pulu-paikka.js';
  * paikan asteina, ja polttoketjussa piste on laudan yksiköissä, joten
  * se käännetään takaisin (js/fokusmitat.js laudaltaAsteiksi).
  *
- * KAUPUNKIPISTEET JA ELÄINTÄKY PALAVAT KUTEN ENNEN (Fablen rajaus
- * kohta a): `nakyva-kaupunki-*` ON kaupungin piste eikä kaupungissa
- * oleva nosto, ja eläintäky ei kulje kohdekerroksen läpi lainkaan.
+ * KAUPUNKIPISTE EI PALA LAINKAAN (18.9.2026, korjaus). Fablen rajaus
+ * kohta a sanoo kaupunkipisteistä *"kuten ennen"*, ja tämä ketju luki
+ * sen *"palaa kuten muutkin"*: 18.9.2026 vietyyn nostotasoon
+ * (2026-09-18-nostot) paloi seitsemän `nakyva-kaupunki-*`-pistettä,
+ * joita 8.9. luettelossa ei ollut lainkaan — ja Ranskan lisäkaupungit
+ * katosivat kartalta, koska poltetulla merkillä ei ole elävää solmua.
+ * KUTEN ENNEN tarkoittaa siis eläviä: kaupungin nimiö on 11,5 px ja
+ * merkin napautus avaa liuskan, eikä laattamuste ole kumpaakaan.
+ * Sääntö on pelin oma (js/nostoladonta.js `onKaupunkipiste`) ja sen
+ * perustelu Raamatusta on siellä; eläintäky ei kulje kohdekerroksen
+ * läpi lainkaan, joten sitä tämä ei koske.
  */
-const onKaupunkipiste = (tunnus) => String(tunnus ?? '').startsWith('nakyva-kaupunki-');
 
 /**
  * Maan kaupungit laudan paketista.
@@ -321,7 +328,6 @@ function nostoladontaMerkit({
     .map((k) => laudaltaAsteiksi(pack.id, k.x, k.y))
     .filter((k) => k && Number.isFinite(k.lat));
   const sisainen = (r) => {
-    if (onKaupunkipiste(r.id)) return false;
     const oma = laudaltaAsteiksi(pack.id, r.x, r.y);
     if (!oma) return false;
     const nosto = {
@@ -335,6 +341,7 @@ function nostoladontaMerkit({
   };
   const merkit = [];
   let sisaisia = 0;
+  let kaupunkipisteita = 0;
   let ilmanAnkkuria = 0;
   for (const r of ui.fokuskohdeRyhmat) {
     const viiva = viivaTunnuksittain.get(r.id) ?? null;
@@ -428,11 +435,16 @@ function nostoladontaMerkit({
      * poltetuksi eikä piirry musteen päälle.
      */
     merkki.tiiviste = nostoladontaTiiviste(merkki);
-    if (merkki.poltettava && !onKaupunkipiste(r.id) && sisainen(r)) {
+    // Kaupunkipiste jää eläväksi (ks. KAUPUNKIPISTE EI PALA LAINKAAN).
+    if (merkki.poltettava && onKaupunkipiste(r.id)) {
+      merkki.poltettava = false;
+      kaupunkipisteita += 1;
+    }
+    if (merkki.poltettava && sisainen(r)) {
       merkki.poltettava = false;
       sisaisia += 1;
     }
-    if (merkki.poltettava && lukittuMaa && !onKaupunkipiste(r.id)) {
+    if (merkki.poltettava && lukittuMaa) {
       const a = lukittuAnkkuri(`nosto:${r.id}`);
       const p = a ? asteetLaudalle(pack.id, a.lat, a.lng) : null;
       if (p) {
@@ -451,7 +463,12 @@ function nostoladontaMerkit({
     merkit.push(merkki);
   }
   return {
-    s, merkit, porttiPiiloon: merkit.length - paastetyt.size, sisaisia, ilmanAnkkuria,
+    s,
+    merkit,
+    porttiPiiloon: merkit.length - paastetyt.size,
+    sisaisia,
+    kaupunkipisteita,
+    ilmanAnkkuria,
   };
 }
 
@@ -574,6 +591,7 @@ export function keraaNostot(pack) {
     porttiMaat: [],
     // Kaupungin sisäiset (PAATOKSET 34) ja lukitun maan ankkurittomat.
     sisaisia: 0,
+    kaupunkipisteita: 0,
     ilmanAnkkuria: 0,
     estot: [],
   };
@@ -598,7 +616,7 @@ export function keraaNostot(pack) {
       ...takyt.rivit.map(({ kohde, paikka }) => ({ kohde, paikka })),
     ];
     const {
-      s, merkit: maanMerkit, porttiPiiloon, sisaisia, ilmanAnkkuria,
+      s, merkit: maanMerkit, porttiPiiloon, sisaisia, kaupunkipisteita, ilmanAnkkuria,
     } = nostoladontaMerkit({
       pack, iso, pohja, lisat, estetty: !takyt.vakaa,
     });
@@ -610,6 +628,7 @@ export function keraaNostot(pack) {
         + `${porttiPiiloon} yli katon ${PAAKARTAN_MERKKIKATTO}`);
     }
     tilasto.sisaisia += sisaisia ?? 0;
+    tilasto.kaupunkipisteita += kaupunkipisteita ?? 0;
     tilasto.ilmanAnkkuria += ilmanAnkkuria ?? 0;
     if (!takyt.vakaa) {
       tilasto.maitaEstetty += 1;
@@ -676,6 +695,8 @@ export function nostojenYhteenveto(tilasto) {
       ? ` · ${tilasto.porttiPiiloon} merkkiä merkkiportin taakse (katto ${PAAKARTAN_MERKKIKATTO})`
       : '')
     + (tilasto.sisaisia ? ` · ${tilasto.sisaisia} kaupungin sisäistä eläväksi` : '')
+    + (tilasto.kaupunkipisteita
+      ? ` · ${tilasto.kaupunkipisteita} kaupunkipistettä eläväksi` : '')
     + (tilasto.ilmanAnkkuria
       ? ` · ${tilasto.ilmanAnkkuria} ilman lukittua ankkuria eläväksi` : '');
 }
