@@ -17870,6 +17870,37 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 
 .kartta-zoomi { display: flex; gap: 0.3rem; }
 
+/*
+ * KOKORUUTU-NAPPI KARTAN YLÄPUOLELLA (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 34 kohta 18 e, omistaja 18.9.2026). Nähtävyysarkilla rivi
+ * on yksinään napin kanssa, ja silloin se kuuluu oikeaan reunaan —
+ * sama laita, jossa näkymävipu on ollut. `space-between` jättäisi
+ * yksinäisen napin vasemmalle.
+ */
+.kartta-tyokalut > .kartta-kokoruutu-nappi:only-child { margin-left: auto; }
+
+/*
+ * Nähtävyysarkin kartta ei ole aina .dialogin sisällä (tiivis arkki
+ * voi olla oma kehyksensä), joten nappi saa saman pillerityylin myös
+ * ilman dialogin esi-isää.
+ */
+.kartta-tyokalut button.kartta-kokoruutu-nappi {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  min-height: 0;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-type);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(70, 51, 31, 0.85);
+  background: rgba(255, 250, 238, 0.6);
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 999px;
+  box-shadow: none;
+}
+
 .kartta-vipu {
   display: flex;
   justify-content: flex-end;
