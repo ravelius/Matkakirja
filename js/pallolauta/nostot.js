@@ -56,6 +56,7 @@ import {
   suljeFokuskohde,
 } from '../fokuskohteet.js';
 import { avaaElaintaky, elaintakyLaudalla } from '../elaintaky.js';
+import { kaupunkikartanSiirretyt } from '../nahtavyydet.js';
 import { avaaFokuspiste, fokuspisteKuvio, fokuspisteenAsteet } from '../fokuspiste.js';
 import { fokusvirtaAarrepisteOhje, fokusvirtaKohtaamispiste } from '../fokusvirta.js';
 import {
@@ -2235,6 +2236,11 @@ export function luoNostot({
      * liuska ei näytä.
      */
     const liuskanLahde = rivit.filter((r) => !r.poltettu);
+    /*
+     * Maan kohdetiedot kerran ladontaa kohti: nähtävyyskartalta
+     * siirrettyjen nostojen aihe luetaan täältä (ks. alla).
+     */
+    const kohdetiedot = maanKohdetiedot(ui, kohteidenNykyinenIso(ui));
     sisaisetKaupungeittain = new Map();
     const sisaisetAvaimet = new Set();
     for (const city of kaupunkirivit) {
@@ -2252,12 +2258,48 @@ export function luoNostot({
        * voi koskaan laueta ja jäsenyys jää pelkän säteen varaan.
        */
       const keskus = { ...city, ...(nostonOmaPaikka(city) ?? {}) };
-      const omat = liuskanLahde.filter((r) => r.perhe === 'nosto' && !r.kaupunki
+      const kartalta = liuskanLahde.filter((r) => r.perhe === 'nosto' && !r.kaupunki
         && !r.vainNimi && typeof r.avaa === 'function'
         && onKaupunginSisainen(r, keskus));
+      /*
+       * ══ NÄHTÄVYYSKARTALTA SIIRRETYT KOHTEET (PAATOKSET 34 kohta 18
+       * b, omistaja 18.9.2026 klo 17.55) ════════════════════════════
+       *
+       * Kaupungin nähtävyyskartalla oli kolmenlaisia merkkejä; vain
+       * piirretyt rakennukset jäivät sinne. Loput ovat kaupungin
+       * SISÄISIÄ NOSTOJA, ja koska ne eivät ole pääkartan riveissä
+       * lainkaan (js/fokuskohteet.js karsiKaupunkikartanNostot pudottaa
+       * kohdekartalla olevan noston pääkartalta), liuska ei voisi
+       * löytää niitä `liuskanLahde`sta. Ne luetaan siksi suoraan
+       * kartan datasta samalla ehdolla kuin kartta jättää ne
+       * piirtämättä (js/nahtavyydet.js kaupunkikartanSiirretyt).
+       *
+       * AIHE TULEE NOSTON OMASTA DATASTA, ei kartan pisteestä: kohteen
+       * `nosto`-tunnus osoittaa maan kohdetietoihin, joiden `symboli`
+       * on sama kenttä, josta kartan merkkikin ottaa kategoriansa.
+       * Aiheeton — ja tunnukseton — kohde menee "Muut"-kasaan (kohta
+       * 11), joten yksikään siirretty ei katoa listasta.
+       *
+       * EI POLTTOON EIKÄ KARTAN SIIVOUKSEEN: nämä rivit eivät ole
+       * `sisaisetAvaimet`-joukossa, koska niillä ei ole pääkartan
+       * merkkiä, jota pitäisi piilottaa (PAATOKSET 33 rajaus a:
+       * kaupungin sisäisiä ei polteta laattaan).
+       */
+      const siirretyt = kaupunkikartanSiirretyt(ui, city.id).map((k) => {
+        const kohde = kohdetiedot.get(k.id) ?? null;
+        const symboli = kohde?.symboli ?? kohde?.tyyppi ?? null;
+        return {
+          ...k,
+          perhe: 'nosto',
+          kartalta: true,
+          aihe: symboli ? nostosymPaakategoria(symboli) : '',
+          ladontaNro: Number.MAX_SAFE_INTEGER,
+        };
+      });
+      const omat = [...kartalta, ...siirretyt];
       if (!omat.length) continue;
       sisaisetKaupungeittain.set(city.avain, omat);
-      for (const r of omat) sisaisetAvaimet.add(r.avain);
+      for (const r of kartalta) sisaisetAvaimet.add(r.avain);
     }
     liuskaanSiirretyt = sisaisetAvaimet;
     const elavat = elavatKaikki.filter((r) => !sisaisetAvaimet.has(r.avain));
@@ -3417,6 +3459,15 @@ export function luoNostot({
     })),
     /** Kaupungin sisaisten nostojen tunnukset (savukkeen vartio 3). */
     liuskanSisaiset: (avain) => (sisaisetKaupungeittain.get(avain) ?? []).map((r) => r.id),
+    /**
+     * Kaupungin sisäiset nostot nimineen ja aiheineen (PAATOKSET 34
+     * kohta 18 b:n mittaus): savuke tarkistaa tästä, että jokainen
+     * nähtävyyskartalta siirretty kohde on liuskassa ja tasan yhdessä
+     * kategoriassa. `kartalta` erottaa siirretyt pääkartan nostoista.
+     */
+    liuskanSisaisetTiedot: (avain) => (sisaisetKaupungeittain.get(avain) ?? []).map((r) => ({
+      id: r.id, nimi: r.nimi ?? '', aihe: r.aihe ?? '', kartalta: Boolean(r.kartalta),
+    })),
     laudanAnkkurit: () => laudanAnkkurit.map((r) => ({
       avain: r.avain,
       id: r.id,

@@ -133,8 +133,14 @@ export function kytkeKarttaZoom(ui, kehys, lava, napit, ydin = { x: 0, y: 0, lev
     // jottei numeroympyrä paisu kolminkertaiseksi zoomatessa.
     lava.style.setProperty('--zoom', k.toFixed(4));
     kehys.classList.toggle('zoomattu', zoomattu);
-    napit.lahenna.disabled = k >= SUURIN - 0.001;
-    napit.loitonna.disabled = !zoomattu;
+    /*
+     * NAPIT OVAT VALINNAISET (PAATOKSET 34 kohta 18 g, 18.9.2026):
+     * nähtävyyskartalla ei ole enää plussaa eikä miinusta, ja zoom
+     * elää nipistyksessä, rullassa ja tuplanapautuksessa. Vanhat
+     * kutsujat antavat napit kuten ennen.
+     */
+    if (napit.lahenna) napit.lahenna.disabled = k >= SUURIN - 0.001;
+    if (napit.loitonna) napit.loitonna.disabled = !zoomattu;
     /*
      * KERTOIMEN MUUTOS KUTSUJALLE (22.8.2026, kokoruudun levitys).
      * Kutsuja saa muuttaa kehyksen kokoa, joten rajat lasketaan sen
@@ -196,8 +202,8 @@ export function kytkeKarttaZoom(ui, kehys, lava, napit, ydin = { x: 0, y: 0, lev
     setTimeout(() => kehys.removeEventListener('click', nielu, true), 350);
   };
 
-  napit.lahenna.addEventListener('click', () => keskelta(k * ASKEL));
-  napit.loitonna.addEventListener('click', () => keskelta(k / ASKEL));
+  napit.lahenna?.addEventListener('click', () => keskelta(k * ASKEL));
+  napit.loitonna?.addEventListener('click', () => keskelta(k / ASKEL));
 
   /*
    * RULLA. Kartan yli rullaaminen zoomaa, mutta rajalla tapahtuma

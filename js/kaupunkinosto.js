@@ -920,6 +920,15 @@ export function latoNahtavyysnakyma(ui, sisalto, city) {
   sisalto.appendChild(kartta);
   piirraKaupunkiKartta(ui, kartta, {
     cityId: city.id, esittely: false, selitelista: false, kuvagalleria: false,
+    /*
+     * OSION OMA OTSAKE POIS (PAATOKSET 34 kohta 18 c): arkilla lukee
+     * jo NAHTAVYYSNAKYMAN_OTSIKKO, joten kartan oma h3 oli sama sana
+     * toiseen kertaan heti sen alla.
+     */
+    otsikko: false,
+    // Kohta 18 e-g: kokoruutu on oikea nappi kartan yläpuolella,
+    // plus/miinus ja kartan päälliskyltit jäävät pois.
+    zoomiNapit: false, opasteet: false, kokoruutuNappi: true,
   });
   if (!kartta.childElementCount) kartta.hidden = true;
   const koko = kaupunginNahtavyysteksti(city.id);

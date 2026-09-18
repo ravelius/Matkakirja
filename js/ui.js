@@ -15387,6 +15387,21 @@ export class UI {
      * ennen saapumisikkunaa, koska se avataan aina päällimmäiseksi.
      */
     if (this.passportDialog?.open) return this.passportDialog;
+    /*
+     * TIIVIS ARKKI ON MYÖS ISÄNTÄ (PAATOKSET 34 kohta 18 d, omistaja
+     * 18.9.2026: *"Kokoruutu-nappi EI TOIMI iPhonella"*).
+     *
+     * MITATTU JUURISYY (390 px, Pariisin Nähtävyydet-arkki): suurennos
+     * meni `arrivalDialog`iin, joka ei ole auki lainkaan — liuskan
+     * Nähtävyydet-rivi avaa OMAN modaalinsa `tiivis-lehtiarkki`.
+     * Suljettuun dialogiin liitetty kortti ei piirry (mitattu korkeus
+     * 0 px), ja auki ollessaankin modaali elää selaimen ylimmässä
+     * kerroksessa, jonka taakse toisen dialogin lapsi jäisi. Sama
+     * sääntö kuin nähtävyysikkunalla ja matkalaukulla: päällimmäinen
+     * AUKI oleva dialogi on isäntä.
+     */
+    const arkki = document.getElementById('tiivis-lehtiarkki');
+    if (arkki?.open) return arkki;
     return this.arrivalDialog;
   }
 
