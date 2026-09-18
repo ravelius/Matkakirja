@@ -111,13 +111,28 @@ test('ennakkozoomi ajaa kertoimeen ja odottaa perilletuloa', () => {
   const metodi = UI.match(/async ennakoiSiirtoZoomi\([\s\S]*?\n  \}\n/)[0];
   assert.match(metodi, /siirtoZoomiKerroin\(SIIRTOZOOMIN_LAHENNYS\)/,
     'ennakko ei kysy siirtozoomin kerrointa kartalta');
-  assert.match(metodi, /await kartta\.ajaKamera\([\s\S]*?ENNAKKOZOOMIN_MS/,
+  assert.match(metodi, /await this\.ajaEnnakkozoomi\(kartta,/,
     'ennakkoajoa ei odoteta');
   assert.match(metodi, /await this\.wait\(ENNAKON_HENGAHDYS_MS\)/,
     'zoomin ja liikkeen väliin ei jää hengähdystä');
   // Liikeherkkyys ja yleiskuva ohittavat, kuten saatollakin.
   assert.match(metodi, /if \(this\.reducedMotion \|\| this\.dead\) return;/);
   assert.match(metodi, /!this\.mannerZoom\) return;/);
+  /*
+   * AJO AJETAAN LOPPUUN (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 40).
+   * `ajaKamera`n `false` tarkoittaa kahta eri asiaa, ja vain toinen
+   * niistä saa keskeyttää koreografian: pelaajan ele voittaa, mutta
+   * ohjelmallinen tilanvaihdos ei ole ele. Mitattuna (18.9.2026) juuri
+   * jälkimmäinen ratkaisi ennakon `await`in yhdessä millisekunnissa.
+   */
+  const ajuri = UI.match(/ {2}async ajaEnnakkozoomi\(kartta, kohde\) \{[\s\S]*?\n {2}\}\n/)[0];
+  assert.match(ajuri, /await kartta\.ajaKamera\(kohde, \{ kesto: jaljella, sovita: kierros === 0 \}\)/,
+    'ennakon ajoa ei odoteta');
+  assert.match(ajuri, /if \(kartta\.ajonKeskeytys\?\.\(\) !== 'ohjelma'\) return false;/,
+    'ELE VOITTAA -sääntö katosi: eleen jälkeen ennakkoa ei saa jatkaa');
+  assert.match(ajuri, /let jaljella = ENNAKKOZOOMIN_MS;/,
+    'jatko ei saa kerrata ennakon kestoa — jäljellä oleva aika vain');
+  assert.match(ajuri, /kierros <= ENNAKON_JATKOT/, 'jatkoilla ei ole ylärajaa');
 });
 
 test('saattoajo ei enää zoomaa itse eikä palaa perillä', () => {
@@ -355,8 +370,11 @@ test('ennakkozoomi ja kohdesovitus sovittavat kestonsa liikkeen mukaan', async (
   // Katto pitää kohtauksen mittaisena, eikä koskaan lyhene pyydetystä.
   assert.equal(sovitaAjonKesto(760, 3 * Math.LN2, 3), SOVITETUN_AJON_PISIN_MS);
   assert.equal(sovitaAjonKesto(2000, 0, 0), 2000);
-  const ennakko = UI.match(/async ennakoiSiirtoZoomi\([\s\S]*?\n  \}\n/)[0];
-  assert.match(ennakko, /\{ kesto: ENNAKKOZOOMIN_MS, sovita: true \}/, 'ennakko ei sovita kestoaan');
+  // Sovitus luetaan ennakon omasta ajurista (PAATOKSET 40): se venyttää
+  // ENSIMMÄISEN kierroksen keston liikkeen mukaan, ja mahdollinen jatko
+  // ajaa vain jäljellä olevan loppumatkan.
+  const ennakko = UI.match(/ {2}async ajaEnnakkozoomi\(kartta, kohde\) \{[\s\S]*?\n {2}\}\n/)[0];
+  assert.match(ennakko, /sovita: kierros === 0/, 'ennakko ei sovita kestoaan');
   const sovitus = UI.match(/ {2}sovitaKohteetNakyviin\(bbox[\s\S]*?\n {2}\}\n/)[0];
   assert.match(sovitus, /\{ kesto, sovita: true \}/, 'kohdesovitus ei sovita kestoaan');
 });

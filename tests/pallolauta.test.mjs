@@ -568,16 +568,23 @@ test('vaihe 5b: kone on vaiheen 2 kuljettaja, kaari vaiheen 2 kaari', () => {
     'avauslento ei saa tarvita uutta Globe.gl-kerrosta');
   assert.match(avaus, /ui\.lentoKaari = \{ a: lahto\.id, b: kohde\.id \};/);
   // Niukkuus: ei nappulaa, ei kohteita, ei nostoja, kaksi nimeä.
-  assert.match(lauta, /merkit\.paivita\(\{ nappula: liikkuu \|\| lento \|\| linssiPaalla\(\) \? null : kohta, kohteet \}\);/);
+  assert.match(lauta, /merkit\.paivita\(\{ nappula: liikkuu \|\| lento \|\| linssiPaalla\(\) \? null : nappulanKohta, kohteet \}\);/);
+  // Paikallaan oleva nappula on ennakkozoomin ajan LÄHTÖruudussaan
+  // (PAATOKSET 40): `player.pos` on jo määränpää, koska actionMove ajetaan
+  // ennen animaatiota.
+  assert.match(lauta, /const nappulanKohta = !liikkuu && ui\.siirtoKaynnissa\n\s*\? \(pallonKohta\(ui\.siirtoKaynnissa\) \?\? kohta\)\n\s*: kohta;/);
   assert.match(lauta, /const kohteet = lento \|\| linssiPaalla\(\) \? \[\] : kohdevalinta\(\);/);
   assert.match(lauta, /katto: lento \? 0 : Math\.min\(NOSTOJEN_KATTO/);
   assert.ok(!lauta.includes('objectsData'), 'lentotila lisäisi three.js-objektin');
   /*
    * Kamera ei sukella nappulan perään lennon aikana (peli on jo
-   * perillä) — ei avauslennolla (`lento`) eikä pelin omalla lennolla
-   * (`ui.lentoKaari`, KARTTAUUDISTUKSEN PAATOKSET 30).
+   * perillä) — ei avauslennolla (`lento`), ei pelin omalla lennolla
+   * (`ui.lentoKaari`, KARTTAUUDISTUKSEN PAATOKSET 30) eikä maa- tai
+   * merimatkan koreografian aikana (`ui.siirtoKaynnissa`, PAATOKSET 40:
+   * tämä saapumisajo keskeytti ennakkozoomin ensimmäisellä
+   * millisekunnilla).
    */
-  assert.match(lauta, /if \(!liikkuu && !lento && !ui\.lentoKaari && pos\) \{/);
+  assert.match(lauta, /if \(!liikkuu && !lento && !ui\.lentoKaari && !ui\.siirtoKaynnissa && pos\) \{/);
 });
 
 test('matkakirja on vasemmassa ylänurkassa myös pallolla (omistaja 5.9.2026)', () => {

@@ -412,7 +412,7 @@ test('pelin kerrokset sammuvat linssin ajaksi laudalla ja tyyleissä', () => {
   const lauta = lue('../js/pallolauta/lauta.js');
   // Reitti, pelinappula ja kerma samasta portista kuin korostus.
   assert.match(lauta, /const valinta = linssiPaalla\(\)/);
-  assert.match(lauta, /nappula: liikkuu \|\| lento \|\| linssiPaalla\(\) \? null : kohta/);
+  assert.match(lauta, /nappula: liikkuu \|\| lento \|\| linssiPaalla\(\) \? null : nappulanKohta/);
   assert.match(lauta, /asetaTasoituksenMaailma\(\s*\n?\s*linssiPaalla\(\)/);
   // Katon puristusmuisti ei saa viedä kameraa, kun linssi nostaa katon.
   assert.match(lauta, /kattoPuristus = null;\s*\n\s*tahdistaZoomirajat\(\);/);

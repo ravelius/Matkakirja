@@ -506,10 +506,25 @@ export function luoPallokamera({
   /** Korkeus → näkyvä leveys samalla kuvasuhteella. */
   const leveys = (korkeusArvo) => leveysKorkeudesta(korkeusArvo, { laudanLeveys, kuvasuhde: kuvasuhde() });
 
-  const pysaytaKameraAjo = () => {
+  /*
+   * MIKSI AJO PÄÄTTYI — 'perilla' | 'ele' | 'ohjelma' (PAATOKSET 40).
+   *
+   * `ajaKamera` palauttaa vain true/false, ja `false` tarkoitti ennen
+   * kahta täysin eri asiaa: pelaaja tarttui karttaan, TAI jokin muu
+   * ohjelman osa käynnisti oman ajonsa päälle. Ennakkozoomi tarvitsee
+   * eron: ELE VOITTAA (silloin luovutetaan heti ja nappula lähtee
+   * siitä näkymästä, jonka pelaaja valitsi), mutta ohjelmallinen
+   * tilanvaihdos EI ole ele eikä siis saa katkaista koreografiaa.
+   *
+   * Lippu luetaan heti `await`in jälkeen: seuraava ajo kirjoittaa sen
+   * vasta omassa lopussaan, joten väliin ei mahdu toista arvoa.
+   */
+  let ajonLoppu = null;
+  const pysaytaKameraAjo = (syy = 'ohjelma') => {
     if (!ajo) return false;
     const kesken = ajo;
     ajo = null;
+    ajonLoppu = syy;
     cancelAnimationFrame(kesken.kehys);
     kesken.valmis(false);
     return true;
@@ -521,8 +536,8 @@ export function luoPallokamera({
   // katkaisee wheelin kotelon kaappauksessa, joten kuplintaan jäänyt
   // kuuntelija ei enää saisi tapahtumaa. Saman solmun kaappaajat ajetaan
   // kaikki (stopPropagation koskee vain seuraavaa solmua).
-  kotelo?.addEventListener('pointerdown', () => pysaytaKameraAjo());
-  kotelo?.addEventListener('wheel', () => pysaytaKameraAjo(), { passive: true, capture: true });
+  kotelo?.addEventListener('pointerdown', () => pysaytaKameraAjo('ele'));
+  kotelo?.addEventListener('wheel', () => pysaytaKameraAjo('ele'), { passive: true, capture: true });
 
   /** Näkymän tila: keskipiste laudalla, näkyvä leveys, korkeus, asteet. */
   const kameranTila = () => {
@@ -918,6 +933,7 @@ export function luoPallokamera({
     const dLng = lyhinLng(alku.lng, maali.lng);
     if (ui?.reducedMotion || !(kesto > 0)) {
       pallo.pointOfView(maali, 0);
+      ajonLoppu = 'perilla';
       return Promise.resolve(true);
     }
     // Ajo, joka ei liikuta mitään, on turha.
@@ -925,6 +941,7 @@ export function luoPallokamera({
     const suhde = Math.abs(Math.log(maali.altitude / alku.altitude));
     if (Math.hypot(dLat, dLng) < 0.01 && suhde < 0.005) {
       pallo.pointOfView(maali, 0);
+      ajonLoppu = 'perilla';
       return Promise.resolve(true);
     }
     if (sovita) {
@@ -953,6 +970,7 @@ export function luoPallokamera({
           return;
         }
         ajo = null;
+        ajonLoppu = 'perilla';
         valmis(true);
       };
       oma.kehys = requestAnimationFrame(askel);
@@ -1195,6 +1213,11 @@ export function luoPallokamera({
     },
     kameraAjossa: () => Boolean(ajo),
     pysaytaKameraAjo,
+    /**
+     * Miksi viimeisin ajo päättyi: 'perilla' | 'ele' | 'ohjelma' | null.
+     * Luetaan heti `ajaKamera`n lupauksen jälkeen (ks. ajonLoppu).
+     */
+    ajonKeskeytys: () => ajonLoppu,
     siirtoZoomiKerroin,
     kameranKohde,
     kotiin,

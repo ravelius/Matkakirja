@@ -30,9 +30,18 @@
  *      siirtoajonKesto(nappulanKesto) antaa — zoomi ei saa muuttaa
  *      koreografian ajoitusta.
  *   6. EI SIVUVIRHEITÄ.
+ *   7. ZOOMI ENSIN, VASTA SITTEN NAPPULA (Raamattu, KARTTAUUDISTUKSEN
+ *      PAATOKSET 40; omistaja 1.9.2026: *"kartta saisi zoomautua
+ *      lähemmäksi ensin ja sitten vasta pelaaja alkaisi liikkua"*).
+ *      Sillä kehyksellä, jolla nappula IRTOAA laudalta (liikkuva
+ *      nappula ilmestyy), kameran korkeus on ennakkozoomin
+ *      TAVOITEkorkeudessa ±5 %. Tämä on koko koreografian sääntö
+ *      lukuna: ennen korjausta ennakon `await` ratkesi yhdessä
+ *      millisekunnissa, ja zoomaus tapahtui vasta saaton aikana.
  *
- * Kaappaus saaton keskeltä kansioon tools/savukkeet/kaappaukset/
- * siirtozoomi/ (saatto-390.png, saatto-1400.png).
+ * Kaappaukset kansioon tools/savukkeet/kaappaukset/siirtozoomi/:
+ * ennakko-390.png (ennakkozoomin lopussa, nappula vielä paikallaan) ja
+ * saatto-390.png / saatto-1400.png (saaton keskeltä).
  *
  * Aja: NODE_USE_ENV_PROXY=1 PORTTI=8826 \
  *      node tools/savukkeet/savuke-siirtozoomi.mjs
@@ -50,7 +59,10 @@ import {
 } from '../../js/pallolauta/kamera.js';
 
 const JUURI = new URL('../..', import.meta.url).pathname;
-const KAAPPAUKSET = join(JUURI, 'tools/savukkeet/kaappaukset/siirtozoomi');
+// Julkaisusarjassa kaappauskansio tulee ajurilta (tools/savukkeet/
+// aja-sarja.mjs asettaa KAAPPAUKSET), paikallisesti oma kansio.
+const KAAPPAUKSET = process.env.KAAPPAUKSET
+  || join(JUURI, 'tools/savukkeet/kaappaukset/siirtozoomi');
 mkdirSync(KAAPPAUKSET, { recursive: true });
 
 /** Nopan silmäluku: kolmen askeleen maasiirto Marseillesta. */
@@ -59,6 +71,26 @@ const SILMA = 3;
 const KESTON_SIETO = 0.1;
 /** Keskialue: ruudun keskimmäinen 60 % molemmissa suunnissa. */
 const KESKIALUE = 0.6;
+/**
+ * Ennakkozoomin sallittu heitto tavoitekorkeudesta nappulan lähtiessä.
+ *
+ * Kamera-ajo päättyy tavoitteeseen tasan, mutta nappulan irtoaminen on
+ * DOM-tapahtuma ja mittaus rAF-näyte: väliin mahtuu kehys tai pari,
+ * eikä hengähdyksen (ENNAKON_HENGAHDYS_MS) aikana kuvan pidä liikkua
+ * lainkaan. 5 % on siis reilusti enemmän kuin mittauksen kohina ja
+ * selvästi vähemmän kuin yksikään oikea zoomiaskel.
+ */
+const ENNAKON_SIETO = 0.05;
+/**
+ * Askelvartion (2) pyöristysvara.
+ *
+ * `askelenSiirtoleveys` tähtää TÄSMÄLLEEN ASKELEEN_VAHIN_OSUUTEEN, eli
+ * työpöytäruudulla mitattu askel osuu vartion rajalle desimaalin
+ * tarkkuudella. Ilman varaa vartio kaatuisi siihen, että savuke lukee
+ * ruudun koon kotelon laatikosta ja peli karttaruudun clientWidthistä —
+ * ero on pikselin murto-osia, ei koreografiaa.
+ */
+const ASKELEN_SIETO = 0.99;
 
 let lapi = 0;
 let kaikki = 0;
@@ -224,6 +256,7 @@ async function mittaa(ruutu) {
       const laatikko = nappula?.getBoundingClientRect() ?? null;
       naytteet.push({
         t: performance.now() - alkuhetki,
+        nappula: Boolean(nappula),
         leveys: t?.leveys ?? null,
         korkeus: t?.korkeus ?? null,
         px: laatikko && laatikko.width
@@ -267,7 +300,35 @@ async function mittaa(ruutu) {
       || s.py < koteloLaatikko.height * raja
       || s.py > koteloLaatikko.height * (1 - raja));
 
+    /*
+     * VARTIO 7: onko ennakkozoomi VALMIS sillä kehyksellä, jolla nappula
+     * irtoaa laudalta? Tavoitekorkeus lasketaan kameran omalla kaavalla
+     * ennakkoajon pyytämästä leveydestä — sama muunnos, jonka
+     * `kameranKohde` tekee, kattoineen ja lattioineen.
+     */
+    const kam2 = await import('./js/pallolauta/kamera.js');
+    const kuvasuhde = koteloLaatikko.width / koteloLaatikko.height;
+    const lattia = kam2.lahinKorkeus({
+      laudanLeveys: kam2.PALLOLAUDAN_LEVEYS,
+      kuvasuhde,
+      syvennys: kam2.lahizoominSyvennys({
+        leveysPx: koteloLaatikko.width, dpr: window.devicePixelRatio || 1,
+      }),
+    });
+    const pyydettyLeveys = ennakko?.kohde?.leveys ?? null;
+    const tavoiteKorkeus = pyydettyLeveys > 0
+      ? kam2.korkeusLeveydesta(pyydettyLeveys, {
+        laudanLeveys: kam2.PALLOLAUDAN_LEVEYS, kuvasuhde, min: lattia,
+      })
+      : null;
+    const lahtoNayte = naytteet.find((s) => s.nappula && s.korkeus > 0) ?? null;
+
     return {
+      pyydettyLeveys,
+      tavoiteKorkeus,
+      lahdonKorkeus: lahtoNayte?.korkeus ?? null,
+      lahdonLeveys: lahtoNayte?.leveys ?? null,
+      lahdonHetki: lahtoNayte ? Math.round(lahtoNayte.t) : null,
       askeleet: siirto.path.length,
       askelYks,
       ruutuPx: { w: koteloLaatikko.width, h: koteloLaatikko.height },
@@ -298,9 +359,14 @@ async function mittaa(ruutu) {
   return { ctx, sivu, mitta, virheet };
 }
 
-/** Kaappaus saaton keskeltä: sama siirto uudestaan, kuva puolivälissä. */
-async function kaappaaSaatto(sivu, nimi) {
-  await sivu.evaluate(async (silma) => {
+/**
+ * Sama siirto uudestaan kuvaa varten. `jaadyta` pysäyttää koreografian
+ * kuvan ajaksi TÄSMÄLLEEN ennakkozoomin loppuun (nappulaa ei ole vielä
+ * poimittu laudalta) — muuten tuo hetki on vain hengähdyksen mittainen
+ * eikä kaappaus osuisi siihen.
+ */
+async function aloitaSiirtoKuvaa(sivu, { jaadyta = 0 } = {}) {
+  await sivu.evaluate(async ({ silma, jaadytys }) => {
     const { ui, game: g } = window.matkakirja;
     const { findMoves } = await import('./js/rules.js');
     clearTimeout(ui.automaattiheittoAjastin);
@@ -310,6 +376,17 @@ async function kaappaaSaatto(sivu, nimi) {
     g.autoTravel = false;
     ui.render();
     await new Promise((r) => setTimeout(r, 1200));
+    window.__ennakkoValmis = false;
+    if (jaadytys > 0) {
+      const alkuperainen = ui.ajaEnnakkozoomi.bind(ui);
+      ui.ajaEnnakkozoomi = async (...args) => {
+        const arvo = await alkuperainen(...args);
+        ui.ajaEnnakkozoomi = alkuperainen;
+        window.__ennakkoValmis = true;
+        await new Promise((r) => setTimeout(r, jaadytys));
+        return arvo;
+      };
+    }
     if (!g.actionTravel('land').ok) return;
     g.die = silma;
     g.phase = 'move';
@@ -317,7 +394,28 @@ async function kaappaaSaatto(sivu, nimi) {
     const parit = [...g.moves.entries()].sort((a, b) => b[1].path.length - a[1].path.length);
     if (!parit.length) return;
     void ui.doMove(parit[0][0]);
-  }, SILMA);
+  }, { silma: SILMA, jaadytys: jaadyta });
+}
+
+/** Odottaa, että siirto on kokonaan ohi (seuraava kaappaus alkaa puhtaalta). */
+async function odotaSiirronLoppu(sivu) {
+  await sivu.waitForFunction(() => !window.matkakirja?.ui?.busy, null, { timeout: 30000 })
+    .catch(() => {});
+  await sivu.waitForTimeout(600);
+}
+
+/** Kaappaus ennakkozoomin lopusta: nappula on vielä paikallaan. */
+async function kaappaaEnnakko(sivu, nimi) {
+  await aloitaSiirtoKuvaa(sivu, { jaadyta: 4000 });
+  await sivu.waitForFunction(() => window.__ennakkoValmis === true, null, { timeout: 25000 })
+    .catch(() => {});
+  await sivu.screenshot({ path: join(KAAPPAUKSET, `${nimi}.png`) });
+  await odotaSiirronLoppu(sivu);
+}
+
+/** Kaappaus saaton keskeltä: sama siirto uudestaan, kuva puolivälissä. */
+async function kaappaaSaatto(sivu, nimi) {
+  await aloitaSiirtoKuvaa(sivu);
   // Ennakkozoomi (~760–1800 ms) + noin puolet saatosta.
   await sivu.waitForTimeout(2600);
   await sivu.screenshot({ path: join(KAAPPAUKSET, `${nimi}.png`) });
@@ -365,7 +463,7 @@ for (const ruutu of RUUDUT.filter((r) => !VAIN || r.nimi === VAIN)) {
     mitta.leveysSaatossa > 0 && mitta.leveysSaatossa <= mitta.leveysEnnen * 1.02,
     JSON.stringify({ ennen: mitta.leveysEnnen, saatossa: mitta.leveysSaatossa }));
   vaadi(`2 ${ruutu.nimi}: askel ruudulla ≥ 25 % lyhyemmästä sivusta (${askelPx.toFixed(0)} px ≥ ${tavoitePx.toFixed(0)} px)`,
-    askelPx >= tavoitePx,
+    askelPx >= tavoitePx * ASKELEN_SIETO,
     JSON.stringify({ askelYks: mitta.askelYks, leveysSaatossa: mitta.leveysSaatossa, lyhyempi }));
   vaadi(`3 ${ruutu.nimi}: katto pitää — ei syvimmän zoomin alle (${mitta.leveysSaatossa?.toFixed(1)} ≥ ${syvin.toFixed(1)} yks)`,
     mitta.leveysSaatossa >= syvin - 0.5,
@@ -378,7 +476,32 @@ for (const ruutu of RUUDUT.filter((r) => !VAIN || r.nimi === VAIN)) {
     && Math.abs(mitta.saatonKesto - ODOTETTU_SAATTO) <= KESTON_SIETO * ODOTETTU_SAATTO,
     JSON.stringify({ mitattu: mitta.saatonKesto, odotettu: ODOTETTU_SAATTO }));
   vaadi(`6 ${ruutu.nimi}: ei sivuvirheitä`, virheet.length === 0, virheet.join(' | '));
+  /*
+   * 7. ENNAKKOZOOMI VALMIS ENNEN NAPPULAN LÄHTÖÄ. Mitta on kameran
+   * KORKEUS sillä kehyksellä, jolla liikkuva nappula ilmestyy laudalle
+   * — se on koreografian sääntö *"kartta ensin, sitten pelaaja"*
+   * yhtenä lukuna. Ennen korjausta ennakon ajo keskeytyi ohjelmallisesti
+   * ensimmäisellä millisekunnilla, ja tämä luku oli lähtönäkymän eikä
+   * tavoitteen korkeus.
+   */
+  const ennakonHeitto = mitta.tavoiteKorkeus > 0 && mitta.lahdonKorkeus > 0
+    ? Math.abs(mitta.lahdonKorkeus / mitta.tavoiteKorkeus - 1) : null;
+  tieto(`${ruutu.nimi} ennakko nappulan lähtiessä`, `korkeus ${mitta.lahdonKorkeus?.toFixed(4)} vs. tavoite ${mitta.tavoiteKorkeus?.toFixed(4)} (${ennakonHeitto === null ? '—' : `${(ennakonHeitto * 100).toFixed(1)} %`}), t = ${mitta.lahdonHetki} ms`);
+  vaadi(`7 ${ruutu.nimi}: ennakkozoomi valmis ennen nappulan lähtöä (±5 %)`,
+    ennakonHeitto !== null && ennakonHeitto <= ENNAKON_SIETO,
+    JSON.stringify({
+      lahdonKorkeus: mitta.lahdonKorkeus,
+      tavoiteKorkeus: mitta.tavoiteKorkeus,
+      pyydettyLeveys: mitta.pyydettyLeveys,
+      lahdonHetki: mitta.lahdonHetki,
+    }));
 
+  // Ennakkozoomin loppu (nappula vielä paikallaan) vain puhelinruudulla:
+  // sama kuva kahdesta ruutukoosta ei kerro mitään lisää.
+  if (ruutu.nimi === '390') {
+    await kaappaaEnnakko(sivu, 'ennakko-390');
+    tieto(`${ruutu.nimi} kaappaus (ennakko)`, join(KAAPPAUKSET, 'ennakko-390.png'));
+  }
   await kaappaaSaatto(sivu, `saatto-${ruutu.nimi}`);
   tieto(`${ruutu.nimi} kaappaus`, join(KAAPPAUKSET, `saatto-${ruutu.nimi}.png`));
   await ctx.close();

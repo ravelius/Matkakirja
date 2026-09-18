@@ -2,7 +2,7 @@
 
 import { pixelOf, pointAlong, posKey } from './rules.js';
 import {
-  ENNAKKOZOOMIN_MS, ENNAKON_ASKELIA, ENNAKON_HENGAHDYS_MS, HYPYN_TAUKO_MS,
+  ENNAKKOZOOMIN_MS, ENNAKON_ASKELIA, ENNAKON_HENGAHDYS_MS, ENNAKON_JATKOT, HYPYN_TAUKO_MS,
   NAPPULAN_LAHDON_VIIVE_MS, SAATON_PEHMENNYS, SAATON_VAHIN_OSUUS, SAATON_VAHIN_PX,
   MATKARAJAUKSEN_MARGINAALI, MATKARAJAUKSEN_PALUU_MS, MATKARAJAUKSEN_VAHIN_YKS,
   SIIRTOZOOMIN_LAHENNYS, STEP_MS, askelenSiirtoleveys, autokyydinAskel, autokyydinVaihe,
@@ -22380,21 +22380,55 @@ export class UI {
       // Uloszoomauksen esto pois matkan ajaksi kuten matkarajauksella:
       // askelen leveys voi olla maan ikkunaa isompi pitkällä askeleella.
       this.matkaZoomivapaus(true);
-      await kartta.ajaKamera(
-        { x: kohta.x, y: kohta.y, leveys: this.siirtozoominLeveys },
-        { kesto: ENNAKKOZOOMIN_MS, sovita: true },
-      );
+      await this.ajaEnnakkozoomi(kartta, { x: kohta.x, y: kohta.y, leveys: this.siirtozoominLeveys });
     } else if (rajaus) {
       this.matkaZoomivapaus(true);
-      await kartta.ajaKamera(rajaus, { kesto: ENNAKKOZOOMIN_MS, sovita: true });
+      await this.ajaEnnakkozoomi(kartta, rajaus);
     } else {
       const kerroin = kartta.siirtoZoomiKerroin(SIIRTOZOOMIN_LAHENNYS);
       // Kesto liikkeen mukaan (kartta.js sovitaAjonKesto): iso zoomi
       // yleiskuvasta saa aikaa, pieni ele pysyy 760 ms:ssa.
-      await kartta.ajaKamera({ x: kohta.x, y: kohta.y, kerroin }, { kesto: ENNAKKOZOOMIN_MS, sovita: true });
+      await this.ajaEnnakkozoomi(kartta, { x: kohta.x, y: kohta.y, kerroin });
     }
     if (this.dead) return;
     await this.wait(ENNAKON_HENGAHDYS_MS);
+  }
+
+  /**
+   * Ennakkozoomi LOPPUUN ASTI (Raamattu, KARTTAUUDISTUKSEN PAATOKSET
+   * 40; omistaja 1.9.2026: *"kartta saisi zoomautua lähemmäksi ensin ja
+   * sitten vasta pelaaja alkaisi liikkua"*).
+   *
+   * `ajaKamera`n `false` tarkoitti ennen kahta eri asiaa, ja vain
+   * toinen niistä on tilaus:
+   *
+   *   ELE VOITTAA — pelaaja tarttui karttaan (sormi, nipistys, rulla).
+   *     Silloin luovutetaan heti ja nappula lähtee siitä näkymästä,
+   *     jonka pelaaja itse valitsi. Tämä on pelin sääntö eikä muutu.
+   *   OHJELMA KESKEYTTI — jokin muu ajo osui päälle. Se ei ole ele,
+   *     ja mitattuna (18.9.2026) se katkaisi ennakon ensimmäisellä
+   *     millisekunnilla. Juurisyy on korjattu (teleporttivahti,
+   *     js/pallolauta/lauta.js), ja tämä on varmistin: ajo jatketaan
+   *     JÄLJELLÄ OLEVALLA ajalla, enintään ENNAKON_JATKOT kertaa.
+   *
+   * Kesto ei siis kerraannu: vaihe kestää yhden ENNAKKOZOOMIN_MS:n
+   * (venytettynä kamera-ajon omalla `sovita`-säännöllä, joka luetaan
+   * vain ensimmäisellä kierroksella — jatko on lyhyt loppumatka eikä
+   * uusi kohtaus). Kaikki laudat, joilla keskeytyksen syytä ei kerrota
+   * (`ajonKeskeytys` puuttuu), käyttäytyvät täsmälleen kuten ennen.
+   */
+  async ajaEnnakkozoomi(kartta, kohde) {
+    let jaljella = ENNAKKOZOOMIN_MS;
+    for (let kierros = 0; kierros <= ENNAKON_JATKOT; kierros += 1) {
+      const alku = performance.now();
+      // eslint-disable-next-line no-await-in-loop
+      const perilla = await kartta.ajaKamera(kohde, { kesto: jaljella, sovita: kierros === 0 });
+      if (perilla || this.dead) return Boolean(perilla);
+      if (kartta.ajonKeskeytys?.() !== 'ohjelma') return false;
+      jaljella -= performance.now() - alku;
+      if (!(jaljella > 0)) return false;
+    }
+    return false;
   }
 
   /**
@@ -22543,7 +22577,25 @@ export class UI {
      * käytännössä ruudun keskellä, ajo näyttäisi vain siltä että kartta
      * värähtää nappulan lähtiessä.
      */
-    const matka = Math.hypot(kohta.x - nyt.x, kohta.y - nyt.y) * nyt.skaala;
+    /*
+     * MITTA ON ENNAKKOZOOMIN TAVOITEMITTAKAAVA, EI SE MISSÄ KAMERA
+     * SATTUU OLEMAAN (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 40 kohta 3).
+     *
+     * Kynnys on olemassa siksi, ettei kartta värähdä nappulan lähtiessä,
+     * ja se mitattiin nykyisestä mittakaavasta. Mittauksessa 18.9.2026
+     * (390 × 844) se esti saaton KOKONAAN juuri silloin kun saattoa
+     * eniten tarvittiin: kamera oli nykäisty avaruuteen, jolloin koko
+     * matka oli ruudulla 15,7 px eli alle 24 px:n pohjan — ja saatto
+     * jäi ajamatta. Kamera on saaton alkaessa menossa ennakkozoomin
+     * tavoitteeseen, joten oikea vertailu on siinä mittakaavassa.
+     *
+     * Ilman tavoitelukua (laiva, tuntematon kulkutapa) mitta on entinen.
+     */
+    const tavoiteLeveys = this.siirtozoominLeveys;
+    const skaala = tavoiteLeveys > 0 && nyt.leveys > 0
+      ? nyt.skaala * (nyt.leveys / tavoiteLeveys)
+      : nyt.skaala;
+    const matka = Math.hypot(kohta.x - nyt.x, kohta.y - nyt.y) * skaala;
     // Kynnys ruudun leveydestä, pohja absoluuttinen (ks. SAATON_VAHIN_PX).
     const kynnys = Math.max(SAATON_VAHIN_PX,
       (this.mapPane?.clientWidth ?? 0) * SAATON_VAHIN_OSUUS);
@@ -22574,10 +22626,9 @@ export class UI {
      * Ilman lukua (laiva, tuntematon kulkutapa) käytös on entinen:
      * pelkkä keskipiste siirtyy.
      */
-    const leveys = this.siirtozoominLeveys;
     void kartta.ajaKamera(
-      leveys > 0
-        ? { x: kohta.x, y: kohta.y, leveys, saapuminen: true }
+      tavoiteLeveys > 0
+        ? { x: kohta.x, y: kohta.y, leveys: tavoiteLeveys, saapuminen: true }
         : { x: kohta.x, y: kohta.y, saapuminen: true },
       { kesto, pehmennys: SAATON_PEHMENNYS },
     );
@@ -22795,6 +22846,30 @@ export class UI {
     if (musiikki) this.aloitaSiirronMusiikki(musiikki);
 
     /*
+     * SIIRTO ON KÄYNNISSÄ — LIPPU YLÖS ENNEN MITÄÄN MUUTA (Raamattu,
+     * KARTTAUUDISTUKSEN PAATOKSET 40).
+     *
+     * Sama lippu kuin lennon `lentoKaari`, ja samasta syystä: `ui.run`
+     * on jo ajanut `game.actionMove`n, joten pelaajan paikka on
+     * määränpää, mutta `movingPlayerId` nousee vasta ennakkozoomin
+     * jälkeen. Ilman lippua pallolaudan teleporttivahti luki tuon
+     * välin paikanvaihdokseksi ja käynnisti saapumisajon, joka
+     * keskeytti ennakkozoomin ensimmäisellä millisekunnilla
+     * (juurisyy ja mittaus js/pallolauta/lauta.js `paivita`).
+     *
+     * Lippu lasketaan vasta kun kuljettaja on laskenut nappulan ja
+     * merkinnyt paikkansa (merkitseNappulanPaikka) — ja kuolleen pelin
+     * haarassa heti, jottei se jää päälle.
+     *
+     * ARVO ON LÄHTÖPAIKKA EIKÄ `true`: sama tieto kertoo laudalle myös,
+     * MIHIN paikallaan oleva nappula piirretään ennakkozoomin ajan
+     * (js/pallolauta/lauta.js `paivita`). Ilman sitä nappula seisoisi
+     * määränpäässä koko zoomin ajan ja hyppäisi lähtöön vasta kun
+     * liikkuva kopio syntyy.
+     */
+    this.siirtoKaynnissa = from;
+
+    /*
      * KERMA POIS HETI KOKO KOREOGRAFIAN ALUSSA (ks. matkanKermattomuus):
      * laattakerros kokoaa kankaansa uudelleen, ja ennakkozoomi on juuri
      * se hetki, jonka aikana se ehtii tapahtua — kun nappula lähtee
@@ -22829,6 +22904,7 @@ export class UI {
     if (this.dead) {
       if (musiikki) this.lopetaSiirronMusiikki();
       this.matkanKermattomuus(false);
+      this.siirtoKaynnissa = null;
       return;
     }
 
@@ -22994,6 +23070,9 @@ export class UI {
     }
 
     kuljettaja.laske();
+    // Paikka on nyt merkitty (merkitseNappulanPaikka), joten
+    // teleporttivahti saa taas toimia: lippu alas vasta tässä.
+    this.siirtoKaynnissa = null;
     this.movingPlayerId = null;
     this.revealShownFor = null;
     this.piirraNappulat();
