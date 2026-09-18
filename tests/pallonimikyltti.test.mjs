@@ -54,6 +54,11 @@ function ymparisto({ px = 390 / 240, W = 390, H = 844 } = {}) {
       const lista = merkityt.at(-1)?.lista ?? [];
       return new Map(lista.map((d) => [d.id, d.koko]));
     },
+    /** Yhden nimen ladottu ruutulaatikko (vartio 8). */
+    laatikko(id) {
+      const lista = merkityt.at(-1)?.lista ?? [];
+      return lista.find((d) => d.id === id)?.laatikko ?? null;
+    },
     /** Viimeksi asetetut datumit sijoituksineen. */
     sijoitukset() {
       const lista = merkityt.at(-1)?.lista ?? [];
@@ -283,4 +288,55 @@ test('7. laitekohtainen vertailu: saapumisnäkymä antaa saman koon joka ruudull
   assert.ok(koot.every((k) => k > 0));
   assert.ok(Math.max(...koot) - Math.min(...koot) < 1e-9,
     `saapumisnäkymän kyltti ei saa riippua ruudusta: ${koot.join(', ')}`);
+});
+
+/*
+ * 8. NAPPULA RATKAISTAAN LEVOSSA, EI KESKEN VEDON (18.9.2026,
+ * js/pallolauta/nimet.js samanniminen osio; Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 32 kohdat 1 ja 5).
+ *
+ * Pelimerkki on kova este, joka purkaa nimen lukon — mutta VAIN levon
+ * ladonnassa. Liikkeen aikana ajettu ladonta ei saa vaihtaa kylttiä,
+ * koska leikkaustestin kaksi puolta luetaan eri kehyksestä (lukon
+ * laatikko tämän kehyksen kamerasta, nappulan laatikko edellisen
+ * kehyksen DOM-paikasta) ja veto kääntää testin kesken matkan.
+ * Mitattu selaimessa: kylki vaihtui askelella 4 ja kyltti siirtyi
+ * 102,4 px vedon yli.
+ */
+test('8. pelimerkki ei pura lukkoa kesken vedon, mutta purkaa sen levossa', () => {
+  const px = 1400 / 1200;
+  const y = ymparisto({ px, W: 1400, H: 900 });
+  y.nimet.lado({ katto: 40 });
+  const alku = y.sijoitukset().get('pariisi');
+  const r = y.laatikko('pariisi');
+  assert.ok(alku && r, 'Pariisi ladottiin');
+  // Pelimerkki keskelle nimen omaa laatikkoa: lukko on nyt sen päällä.
+  const pino = {
+    x0: r.x0 + 1, y0: r.y0 + 1, x1: r.x1 - 1, y1: r.y1 - 1,
+  };
+  const avain = 'nappula@48.8566,2.3522';
+  y.nimet.lado({
+    katto: 40, pinot: [pino], levossa: false, pinojenAvain: avain,
+  });
+  assert.equal(y.sijoitukset().get('pariisi'), alku,
+    'liikkeen ladonta ei saa vaihtaa kylttiä pelimerkin takia');
+  // VASTAKOE: sama pelimerkki levossa purkaa lukon ja nimi väistää.
+  y.nimet.lado({
+    katto: 40, pinot: [pino], levossa: true, pinojenAvain: avain,
+  });
+  const jalkeen = y.sijoitukset().get('pariisi');
+  assert.notEqual(jalkeen, alku, 'levossa nimi väistää pelimerkin');
+  /*
+   * VÄISTÖ RATKAISTAAN KERRAN. Sama kokoonpano ei saa koetella lukkoa
+   * uudestaan seuraavissa levon ladonnoissa — juuri se käänsi
+   * veitsenterällä olevan leikkaustestin vedon perälaudassa ja siirsi
+   * kyltin 102 px (savuke-nimikyltti vartiot 1-2).
+   */
+  for (let i = 0; i < 3; i += 1) {
+    y.nimet.lado({
+      katto: 40, pinot: [pino], levossa: true, pinojenAvain: avain,
+    });
+    assert.equal(y.sijoitukset().get('pariisi'), jalkeen,
+      'ratkaistua väistöä ei koetella uudestaan');
+  }
 });

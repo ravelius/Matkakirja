@@ -563,8 +563,17 @@ function nostosymKyna(tera) {
  * piste umpimusta täplä. Kaupunkiin kuuluu lisäksi sen oma nimi
  * suoraan vieressä (Raamatun tietoinen poikkeus).
  */
-/** Pistemerkin mustereunan säde kirjaston yksiköinä. */
-const NOSTOSYM_PISTE_R = 3.4;
+/**
+ * Pistemerkin mustereunan säde kirjaston yksiköinä.
+ *
+ * TÄMÄ ON POLTETUN MERKIN MITTA (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 33 kohta 3: *"kaikki nostopisteet pitää olla yhtä pieniä,
+ * kuin mitä kartalle poltetut merkit ovat"*). Sama luku piirtää sekä
+ * laattaan poltetun pisteen että elävän — ja on nyt VIETY ULOS, jotta
+ * myös aihenoston lautanen mitataan siitä eikä omasta vakiostaan
+ * (js/pallolauta/aihemerkit.js AIHEMERKIN_R).
+ */
+export const NOSTOSYM_PISTE_R = 3.4;
 
 /**
  * PISTEMERKIN LUONNOS — sama muoto jokaiselle pisteytetylle

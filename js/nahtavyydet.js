@@ -12,6 +12,7 @@
 
 import { piirraNostosymboli } from './fokusnosto-symbolit.js';
 import { kytkeKarttaZoom } from './karttazoom.js';
+import { NAHTAVYYDET_NIMIO } from './kaupunkiliuska-nimiot.js';
 import { galleriaNappi } from './kuvagalleria.js';
 import { liitaLukija, pysaytaLukija } from './lukija.js';
 import { el } from './mapart.js';
@@ -169,7 +170,11 @@ export function piirraKaupunkiKartta(ui, kohde, { cityId = null } = {}) {
   const kartta = KAUPUNKIKARTAT[kaupunkiId];
   if (!kartta) return;
   const lohko = html('div', 'kaupunkikartta');
-  lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', 'Kaupunki kartalla'));
+  // OTSIKKO ON NYT "Nähtävyydet" (Raamattu, KARTTAUUDISTUKSEN
+  // PAATOKSET 34 kohta 8: *"Nahtavyydet (entinen 'Kaupunki kartalla',
+  // nimi vaihtuu kaikkialla)"*). Sisältö on sama kohdekartta ja sama
+  // esittely — vain nimi vaihtui.
+  lohko.appendChild(html('h3', 'kaupunkikartta-otsikko', NAHTAVYYDET_NIMIO));
   // Esittely kahdessa palstassa (omistajan tilaus 15.8.2026:
   // "kaupunki kartalla teksti voisi olla kahdessa palstassa");
   // kapealla ruudulla CSS palauttaa yhden palstan.

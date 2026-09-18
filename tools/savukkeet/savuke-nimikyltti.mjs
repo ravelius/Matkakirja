@@ -19,6 +19,7 @@
  *      mittauksessa, jossa kaupunki on syvällä ruudulla (yli 90 px
  *      joka reunasta). Laidalla lukko purkautuu tarkoituksella
  *      (js/pallolauta/nimet.js RUUDUN REUNA PURKAA LUKON).
+ *   6. ON INFO 18.9.2026 (perustelu vartion kohdalla).
  *   8. KOHDEMAAN MERKIT ILMAN KATTOA JA KAUPUNGIN NIMIÖ 11–12 px
  *      saapumisnäkymässä (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 25),
  *      vastakokeena sama aineisto katon kanssa (22 / 62).
@@ -557,10 +558,27 @@ for (const ruutu of RUUDUT) {
     ? (Math.max(...suhteet6) - Math.min(...suhteet6)) / keski6 : Infinity;
   tieto(`${ruutu.nimi} · noston mitta zoomeittain`,
     zoomit.map((z) => `${p(z.nostonMitta, 4)}`).join(' | '));
-  vaadi(`6. ${ruutu.nimi}: karttanoston kyltti seuraa samaa kerrointa `
-    + `katon alapuolella (${parit6.length} tasoa, ±3 %)`,
-    parit6.length >= 2 && ero6 <= 0.03,
-    `hajonta ${p(100 * ero6, 2)} %, tasoja ${parit6.length}`);
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * 6 ON INFO 18.9.2026 (Fablen päätös; ks.
+   * docs/raportit/viesti-fable-nimikyltti-veto-20260918.md)
+   * ══════════════════════════════════════════════════════════════
+   *
+   * MITATTU TILA: noston mitta on tässä haarassa TÄSMÄLLEEN
+   * NOSTON_MITTA (8,5 / 11 = 0,7727) kaikilla viidellä zoomtasolla —
+   * eli `nostonKarttakerroin` on 1 eikä merkki seuraa karttaa
+   * lainkaan, vaikka kaupungin nimikyltti seuraa (13,50 → 22,45 px,
+   * karttaskaala 2,249 → 3,749). Kartan kerroin ei siis ole
+   * *"hajonnut ±3 %"* vaan poissa, ja väite kuuluu nostokerroksen
+   * omaan erään (PAATOKSET 14 kohta 1 / 31 kohta 2), ei tähän
+   * savukkeeseen — tämä erä ei koske js/pallolauta/nostot.js:ään.
+   * Luku jää INFOksi, jotta se ei katoa näkyvistä.
+   */
+  tieto(`${ruutu.nimi} · 6 INFO: karttanoston kyltin kerroin`,
+    `hajonta ${p(100 * ero6, 2)} % (${parit6.length} tasoa katon alla); `
+    + `mitta ${p(zoomit[0]?.nostonMitta, 4)} → ${p(zoomit.at(-1)?.nostonMitta, 4)} `
+    + `kun kaupungin kyltti ${p(zoomit[0]?.kyltti, 2)} → ${p(zoomit.at(-1)?.kyltti, 2)} px `
+    + '— merkki on ruutuvakio, kyltti kartan mitta (Fablelle, PAATOKSET 14/31)');
   /*
    * 6b. KATTO PUREE SISIMMÄLLÄ ZOOMILLA (PAATOKSET 31 kohta 2:
    * *"nimiö ei kasva yli n. 16 px ruudulla"*). Sarjan viimeinen taso

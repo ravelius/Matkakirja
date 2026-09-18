@@ -59,15 +59,21 @@
   --satelliitti-vihrea: #5dffa8;
   /* Ytimen valo: vihreään taittuva lähes valkoinen (LISÄYS 15 kohta 41). */
   --satelliitti-ydinvalo: #eafff3;
-  /* Pisteen halkaisija ruutupikseleinä, sama kaikilla zoomeilla: 8 px
-     riittää hehkulle (uloin neljännes on liukua) ja on avauksessa,
-     jossa pallo on 330 px leveä, vain pieni täplä. */
-  --satelliitti-pisteen-koko: 8px;
+  /* Ytimen halkaisija ruutupikseleinä, sama kaikilla zoomeilla: 5 px.
+     8 px:n liuku luki tasaisena ympyränä (LISÄYS 16 kohta 45), koska
+     ydin täytti lähes koko kiekon; nyt ydin on terävä ja hehku on
+     erillisessä, paljon leveämmässä sädekehässä. */
+  --satelliitti-pisteen-koko: 5px;
+  /* Sädekehän halkaisija: 28 px valaisee karttaa ytimen ympäriltä
+     mutta ei yllä naapurikohteeseen (lähimmät kohdeparit ovat
+     avauskorkeudella yli 30 px:n päässä toisistaan). */
+  --satelliitti-hehkun-koko: 28px;
   /* Läpinäkyvä osuma-ala sormen mitassa (ks. tiedoston alku). */
-  --satelliitti-osuman-koko: 36px;
+  --satelliitti-osuman-koko: 44px;
 }
 
 .satelliitti-osuma,
+.satelliitti-sadekeha,
 .satelliitti-ydin {
   position: absolute;
   left: 50%;
@@ -87,10 +93,48 @@
 }
 
 /*
+ * SÄDEKEHÄ VALAISEE KARTTAA (Raamattu ASTRONAUTIN KAMERA LISÄYS 16
+ * kohta 45, omistaja 18.9.2026, sanatarkasti: *"Pisteet eivät näytä
+ * hehkulta vaan tasaisilta ympyröiltä. — — Piste saisi siis hehkua ja
+ * valaista karttaa ympärillään hieman."*).
+ *
+ * Yksi 8 px:n liuku ei riitä hehkuun: kun ydin täyttää kiekon melkein
+ * reunaan asti, silmä lukee sen tasaisena ympyränä. Hehku syntyy vasta
+ * kokoerosta — terävä 5 px:n ydin ja sen ympärillä 28 px:n sädekehä,
+ * jonka alfa on niin matala (0,26 keskellä, 0 reunalla), ettei se piirry
+ * omaksi kiekokseen vaan vain kirkastaa allaan olevaa karttaa.
+ *
+ * `mix-blend-mode: screen` on tässä nimenomaan VALAISUA varten: screen
+ * ei voi koskaan tummentaa, joten manner ja meri kirkastuvat pisteen
+ * ympäriltä eivätkä peity vihreän kalvon alle. Sekoitus kohdistuu
+ * kankaaseen vain, jos CSS2D-kerros ei eristä sekoitusryhmäänsä; jos
+ * eristää, sädekehä piirtyy tavallisena läpikuultavana valona eikä
+ * mikään rikkoudu (mitattu: pinta kirkastuu kummassakin tapauksessa).
+ * Ero mitataan savukkeessa erikseen (savuke-astro-pallo.mjs, väite 45).
+ *
+ * EI `box-shadow`ia. Hohto on yhä gradientissa, koska box-shadow’n
+ * pehmennys kasvaa naapurimerkkiin asti ja teki pisteistä rypäleitä.
+ */
+.satelliitti-sadekeha {
+  width: var(--satelliitti-hehkun-koko);
+  height: var(--satelliitti-hehkun-koko);
+  background: radial-gradient(
+    circle closest-side,
+    rgba(93, 255, 168, 0.26) 0%,
+    rgba(93, 255, 168, 0.13) 38%,
+    rgba(93, 255, 168, 0.05) 66%,
+    rgba(93, 255, 168, 0) 100%
+  );
+  mix-blend-mode: screen;
+}
+
+/*
  * HEHKUVA PISTE YHTENÄ ELEMENTTINÄ. Ei rengasta, ei reunaviivaa, ei
- * `box-shadow`-hohtoa (omistajan tilaus 16.9.2026) — hehku on
+ * `box-shadow`-hohtoa (omistajan tilaus 16.9.2026) — ytimen oma hehku on
  * gradientissa: kirkas ydin, vihreä kehä ja häipyvä reuna (LISÄYS 15
  * kohta 41). Sävyt: keskusta #eafff3, kehä #5dffa8, reuna läpinäkyvä.
+ * LISÄYS 16 kohta 45 kavensi ytimen 8 px:stä 5 px:iin, jotta sädekehän
+ * ja ytimen kokoero näkyy hehkuna.
  */
 .satelliitti-ydin {
   width: var(--satelliitti-pisteen-koko);
@@ -98,8 +142,8 @@
   background: radial-gradient(
     circle closest-side,
     var(--satelliitti-ydinvalo) 0%,
-    var(--satelliitti-vihrea) 42%,
-    rgba(93, 255, 168, 0.55) 68%,
+    var(--satelliitti-vihrea) 55%,
+    rgba(93, 255, 168, 0.6) 80%,
     rgba(93, 255, 168, 0) 100%
   );
 }

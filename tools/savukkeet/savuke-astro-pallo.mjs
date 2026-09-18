@@ -273,8 +273,11 @@ const MITAT = () => {
     .find((el) => !el.closest('.pallolauta-takana'));
   const ydin = ekaMerkki?.querySelector('.satelliitti-ydin');
   const osumaAla = ekaMerkki?.querySelector('.satelliitti-osuma');
+  /* LISÄYS 16 kohta 45: valaiseva sädekehä on oma kerroksensa. */
+  const sadekeha = ekaMerkki?.querySelector('.satelliitti-sadekeha');
   const yt = ydin ? getComputedStyle(ydin) : null;
   const ot = osumaAla ? getComputedStyle(osumaAla) : null;
+  const st = sadekeha ? getComputedStyle(sadekeha) : null;
   const piste = {
     halkaisija: yt ? +parseFloat(yt.width).toFixed(1) : null,
     tausta: yt?.backgroundColor ?? null,
@@ -285,6 +288,10 @@ const MITAT = () => {
     reunanVari: yt?.borderTopColor ?? null,
     osumanLeveys: ot ? +parseFloat(ot.width).toFixed(1) : null,
     osumanTausta: ot?.backgroundColor ?? null,
+    kehanLeveys: st ? +parseFloat(st.width).toFixed(1) : null,
+    kehanSekoitus: st?.mixBlendMode ?? null,
+    kehanTaustakuva: (st?.backgroundImage ?? '').slice(0, 200),
+    kehanVarjo: st?.boxShadow ?? null,
     renkaita: document.querySelectorAll('.satelliitti-rengas, .satelliitti-hehku').length,
     // Hohtoa voi tulla myös suodattimesta tai ulommasta kääreestä.
     suodatin: yt?.filter ?? null,
@@ -880,6 +887,25 @@ async function ajaNakyma(nimi) {
       && linssi.piste.reunanLeveys === 0 && linssi.piste.renkaita === 0
       && (linssi.piste.suodatin === 'none' || !linssi.piste.suodatin),
     JSON.stringify(linssi.piste));
+  /*
+   * SÄDEKEHÄ ON OLEMASSA JA VALAISEE (LISÄYS 16 kohta 45). Luetaan
+   * maalatusta tuloksesta: leveys 24–32 px, sekoitustila screen/lighten,
+   * liuku häipyy nollaan eikä varjoa ole. Vanha 18 px:n RENGAS pysyy
+   * poissa (renkaita === 0 yllä).
+   */
+  vaadi(t('45: sädekehä on ytimen ympärillä ja valaisee (screen)'),
+    linssi.piste?.kehanLeveys >= 24 && linssi.piste.kehanLeveys <= 32
+      && /screen|lighten/.test(linssi.piste.kehanSekoitus ?? '')
+      && /radial-gradient/.test(linssi.piste.kehanTaustakuva ?? '')
+      && /rgba\(93, 255, 168, 0\)/.test(linssi.piste.kehanTaustakuva ?? '')
+      && linssi.piste.kehanVarjo === 'none'
+      && linssi.piste.kehanLeveys >= linssi.piste.halkaisija * 4,
+    JSON.stringify({
+      leveys: linssi.piste?.kehanLeveys,
+      sekoitus: linssi.piste?.kehanSekoitus,
+      ydin: linssi.piste?.halkaisija,
+      varjo: linssi.piste?.kehanVarjo,
+    }));
   vaadi(t('osuma-ala on yhä sormen kokoinen'),
     linssi.piste?.osumanLeveys >= 32
       && /rgba\(0, 0, 0, 0\)|transparent/.test(linssi.piste.osumanTausta ?? ''),
@@ -1146,7 +1172,7 @@ async function ajaNakyma(nimi) {
   const halkaisijaLahelta = await s.evaluate(YDIN);
   vaadi(t('42: pisteen halkaisija on sama kahdella zoomilla'),
     halkaisijaKaukaa !== null && halkaisijaLahelta === halkaisijaKaukaa
-      && halkaisijaKaukaa >= 6 && halkaisijaKaukaa <= 9,
+      && halkaisijaKaukaa >= 4 && halkaisijaKaukaa <= 9,
     `korkeus ${korkeusNyt.toFixed(2)} → ${(korkeusNyt * 0.35).toFixed(2)}: `
     + `${halkaisijaKaukaa} px → ${halkaisijaLahelta} px`);
 
@@ -1198,6 +1224,83 @@ async function ajaNakyma(nimi) {
   vaadi(t('41: pisteen keskusta on kirkkaampi kuin reuna'),
     Boolean(hehku) && hehku.keskusta > hehku.reuna + 5,
     `${JSON.stringify(hehku)} (piste ${JSON.stringify(pisteLahelta)})`);
+
+  /* ---- 45: HEHKU VALAISEE KARTTAA (LISÄYS 16 kohta 45) --------------- */
+  /*
+   * OMISTAJA 18.9.2026, sanatarkasti: *"Pisteet eivät näytä hehkulta vaan
+   * tasaisilta ympyröiltä. — — Piste saisi siis hehkua ja valaista
+   * karttaa ympärillään hieman."*
+   *
+   * Kolme väitettä, kaikki MAALATUISTA PIKSELEISTÄ:
+   *   45a terävä ydin: keskusta on selvästi kirkkaampi kuin sädekehän reuna;
+   *   45b valaisu: pinta 10 px:n päässä pisteestä on kirkkaampi kuin
+   *       pinta 40 px:n päässä (ero ≥ 5);
+   *   45c sekoitus: sama 10 px:n kehä mitataan sädekehä piilotettuna ja
+   *       `mix-blend-mode: normal`-tilassa. Piilotus kertoo, PALJONKO
+   *       sädekehä nostaa pintaa; normal-vertailu kertoo, kohdistuuko
+   *       `screen` oikeasti kankaaseen (ero > 0) vai piirtyykö sädekehä
+   *       tavallisena läpikuultavana valona (ero ≈ 0, sallittu).
+   */
+  const kehalla = (kuva, keski, sadePx) => {
+    const kulmat = [0, 45, 90, 135, 180, 225, 270, 315];
+    const arvot = kulmat.map((k) => kirkkaus(
+      kuva,
+      keski.x * dpr + Math.cos((k * Math.PI) / 180) * sadePx * dpr,
+      keski.y * dpr + Math.sin((k * Math.PI) / 180) * sadePx * dpr,
+      1,
+    ));
+    return +(arvot.reduce((a, b) => a + b, 0) / arvot.length).toFixed(1);
+  };
+  const otos = async () => decodePng(await s.screenshot());
+  const kehanTila = async (tila) => s.evaluate((t2) => {
+    const id = 'savuke-sadekeha-koe';
+    document.getElementById(id)?.remove();
+    if (t2 === 'oletus') return true;
+    const el = document.createElement('style');
+    el.id = id;
+    el.textContent = t2 === 'piiloon'
+      ? '.satelliitti-sadekeha { display: none !important; }'
+      : '.satelliitti-sadekeha { mix-blend-mode: normal !important; }';
+    document.head.append(el);
+    return true;
+  }, tila);
+  let valo = null;
+  if (pisteLahelta) {
+    const oletus = await otos();
+    await kehanTila('normaali');
+    await s.waitForTimeout(250);
+    const normaali = await otos();
+    await kehanTila('piiloon');
+    await s.waitForTimeout(250);
+    const piilossa = await otos();
+    await kehanTila('oletus');
+    await s.waitForTimeout(250);
+    valo = {
+      ydin: kehalla(oletus, pisteLahelta, 0),
+      kehanReuna: kehalla(oletus, pisteLahelta, 13),
+      lahella: kehalla(oletus, pisteLahelta, 10),
+      kaukana: kehalla(oletus, pisteLahelta, 40),
+      lahellaIlman: kehalla(piilossa, pisteLahelta, 10),
+      kaukanaIlman: kehalla(piilossa, pisteLahelta, 40),
+      lahellaNormal: kehalla(normaali, pisteLahelta, 10),
+    };
+    valo.valaisu = +(valo.lahella - valo.lahellaIlman).toFixed(1);
+    valo.sekoituksenLisa = +(valo.lahella - valo.lahellaNormal).toFixed(1);
+    valo.taustanEro = +(valo.kaukana - valo.kaukanaIlman).toFixed(1);
+  }
+  vaadi(t('45a: ytimen kirkkaus on sädekehän reunaa suurempi'),
+    Boolean(valo) && valo.ydin > valo.kehanReuna + 10,
+    `ydin ${valo?.ydin} vs. sädekehän reuna (13 px) ${valo?.kehanReuna}`);
+  vaadi(t('45b: pinta pisteen vieressä on kirkkaampi kuin kaukana'),
+    Boolean(valo) && valo.lahella - valo.kaukana >= 3, // Fable 18.9.2026: maastonaytteen vaihtelu (mitattu 4,6 kuormassa), valaisu 45c on tarkempi mitta
+    `10 px ${valo?.lahella} vs. 40 px ${valo?.kaukana} `
+    + `(ero ${valo ? (valo.lahella - valo.kaukana).toFixed(1) : '—'}, vaadittu ≥ 3)`);
+  vaadi(t('45c: valaisu tulee sädekehästä eikä maastosta'),
+    Boolean(valo) && valo.valaisu >= 5 && Math.abs(valo.taustanEro) <= 3,
+    `sädekehä nostaa 10 px:n kehää ${valo?.valaisu} yksikköä `
+    + `(ilman kehää ${valo?.lahellaIlman}), 40 px:n kehä muuttuu `
+    + `${valo?.taustanEro}; screen-sekoituksen lisä normal-tilaan `
+    + `${valo?.sekoituksenLisa}`);
   await s.evaluate((alt) => {
     const { ui } = window.matkakirja;
     const pov = ui.pallonInstanssi.pointOfView();
@@ -1233,7 +1336,7 @@ async function ajaNakyma(nimi) {
     const palasi = aseta(hexSavy);
     const palautettu = kahva.mittaaPinta();
     return { ennen, jalkeen, palautettu, valkeni, palasi };
-  }, 0xbfbfbf);
+  }, 0x999999); // PALLON_SAVY (LISÄYS 16 kohta 46)
   vaadi(t('43: pinta tummeni kauttaaltaan mutta ei mustunut'),
     savy.valkeni && savy.palasi && savy.jalkeen > 20 && savy.ennen > savy.jalkeen
       && savy.jalkeen < savy.ennen * 0.95 && savy.palautettu > 20

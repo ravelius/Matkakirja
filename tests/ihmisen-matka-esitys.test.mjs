@@ -420,8 +420,14 @@ test('avauksen vaiheet lasketaan luennan aikaleimoista', () => {
    * oli kiinni luennassa ja jokainen zoomiin lisätty sekunti lyhensi
    * ajoa yhtä paljon (8,9 s → 2,7 s). Nyt ajo pitää entisen pituutensa
    * ja saapuminen siirtyy — ks. seuraava vartio.
+   *
+   * SEKUNTI TAKAISIN (Raamattu JATKO 4 kohta 2, omistaja 18.9.2026 klo
+   * 01.15 Suomen aikaa: *"Alku zoomi voisi olla noin sekunnin
+   * nopeampi"*): jatko on 4 s. Lähtöhetki (`zoomPerus`) ja koko luennan
+   * ajoitus ovat yhä ennallaan — vain päätepiste tulee sekunnin
+   * aiemmin, ja Marokon ajo alkaa yhä vasta zoomin jälkeen.
    */
-  assert.equal(ZOOMIN_JATKO_MS, 5000, `${ZOOMIN_JATKO_MS} ms`);
+  assert.equal(ZOOMIN_JATKO_MS, 4000, `${ZOOMIN_JATKO_MS} ms`);
   /*
    * MAROKON AJO PITÄÄ ENTISEN PITUUTENSA. Ajo lähtee vasta zoomin (ja
    * tauon) jälkeen, ja sen kesto on jäljellä oleva aika jaksoon PLUS
@@ -567,8 +573,17 @@ test('kamera lähtee Marokkoon hitaasti, kiihtyy ja jarruttaa perille', () => {
   assert.ok(kaarenNopeus(0.6) > kaarenNopeus(0.3) && kaarenNopeus(0.3) > kaarenNopeus(0.1));
   assert.ok(kaarenNopeus(0.99) < kaarenNopeus(MAROKON_JARRU - 0.05) * 0.35, 'ei jarruta lopussa');
   assert.match(OHJAAJA, /const rivi = ensimmainenKohde \? luenta\.leimat\(ensimmainenKohde\.id\) : null;/);
-  assert.match(OHJAAJA, /if \(jakso\.alue && !tila\.kohdeajo\) ajaAlueeseen\(jakso\.alue, alueenKesto\);/,
+  assert.match(OHJAAJA, /if \(jakso\.alue && !tila\.kohdeajo && !zoomiKesken\) ajaAlueeseen\(jakso\.alue, alueenKesto\);/,
     "'afrikka'-jakso nykäisee kameran takaisin kesken Marokon ajon");
+  /*
+   * EIKÄ KESKEN AVAUSZOOMIN (Raamattu JATKO 4 kohta 4, omistaja
+   * 18.9.2026: *"Zoomissa on pieni nykäisy lopussa ennen siirtymistä
+   * kohti Marokkoa joka olisi hyvä saada pois."*). 'afrikka'-jakso alkaa
+   * kesken zoomin, ja sama rajaus uudestaan ajettuna aloitti laudan
+   * käyrän ALUSTA: nopeus putosi nollaan ja nousi takaisin. Ajo on jo
+   * matkalla samaan maaliin, joten uusi käsky ohitetaan.
+   */
+  assert.match(OHJAAJA, /const zoomiKesken = jakso\.vaihe === 'valot' && avaruuttaJaljella\(\) > 0;/);
   assert.match(OHJAAJA, /if \(tila\.kohdeajo\) tila\.kohdeajo = false;\n\s*else ajaKohteeseen\(/);
   assert.ok(MAROKON_POHJA_MS > 0);
   // Varareitti ilman ääntä: aika lasketaan varakestoista.
@@ -676,6 +691,16 @@ test('avauksen lauseet ovat keskellä ja laskeutuvat alas ensimmäisessä kohtee
     /const onAvausjakso = \(jakso\) => !tila\.avausOhi\n\s*&& \(jakso\?\.vaihe === 'pimea' \|\| jakso\?\.vaihe === 'valot'\);/);
   assert.match(OHJAAJA, /const keskella = onAvausjakso\(jakso\);\n\s*tila\.lauseet = keskella\n\s*\? jaaOsiin\(jakso\.teksti, \{ virkkeita: 1, merkkeja: 1 \}\)\n\s*: jaaOsiin\(jakso\.teksti\);/);
   assert.match(OHJAAJA, /tekstirivi\.classList\.toggle\('keskella', keskella\);/);
+  /*
+   * VIIMEINEN AVAUSLAUSE ON JO ALAREUNASSA (Raamattu JATKO 4 kohta 3,
+   * omistaja 18.9.2026: *"viimeinen keskitetty teksti voisi olla jo
+   * sijoitettu alareunaan"*). Lippu nousee vain avauksen VIIMEISELLÄ
+   * jaksolla, ja rivi laskeutuu jo toiseksi viimeisen lauseen
+   * häipyessä — yksisuuntaisesti, kuten `avausOhi`.
+   */
+  assert.match(OHJAAJA, /tila\.avausLasku = keskella && !onAvausjakso\(kertomus\[i \+ 1\]\);/);
+  assert.match(OHJAAJA,
+    /const viimeinen = tila\.lauseet\.length - 1;\n\s*if \(tila\.avausLasku && \(i >= viimeinen \|\| \(i === viimeinen - 1 && haipyy\)\)\) \{\n\s*tila\.avausLasku = false;\n\s*tekstirivi\.classList\.remove\('keskella'\);/);
   // Lause vaihtuu vasta häivytyksen jälkeen (ei kirjainten vaihtoa
   // lukijan silmien alla), ja ajoitus on tila.kulunut eli tauko pysäyttää.
   assert.ok(LAUSEEN_HAIVE_MS > 200 && LAUSEEN_HAIVE_MS < 700, `${LAUSEEN_HAIVE_MS} ms`);
@@ -817,10 +842,22 @@ test('esityksen pinnat ovat olemassa: pimeä, teksti, kuva ja koukku', () => {
   assert.match(CSS, /\.aikajana\.esitys-musta \.aikajana-ylarivi \{\n\s*opacity: 0;/);
   // Mustan noustessa palkki palaa samassa feidauksessa.
   assert.match(OHJAAJA, /ajo\.juuri\?\.style\?\.setProperty\('--avauksen-feidi'/);
-  // Kuva on sivuosassa: pieni, kohteen vieressä, kytkettävissä pois.
+  /*
+   * KUVA ON ISO JA REUNOILTAAN HÄIVYTETTY (Raamattu JATKO 4 kohta 1,
+   * omistaja 18.9.2026: *"Kuvat pitäisi tulla isompana ja reunat
+   * häivytettyinä ruudulle."*). Entinen mitta oli 22 % ruudusta
+   * valkoisen kehyksen sisällä; nyt 60–70 % ilman kehystä.
+   */
   assert.equal(IHMISEN_MATKA_KUVAT_ESITYKSESSA, true);
-  assert.ok(KUVAN_OSUUS > 0.15 && KUVAN_OSUUS < 0.3, `kuvan osuus ${KUVAN_OSUUS}`);
+  assert.ok(KUVAN_OSUUS >= 0.6 && KUVAN_OSUUS <= 0.7, `kuvan osuus ${KUVAN_OSUUS}`);
   assert.match(CSS, /\.aikajana-kertomuskuva \{/);
+  // Reunan alfa-liuku on MASKI eikä suodatin (iOS: filter ei piirry).
+  assert.match(CSS, /\.aikajana-kertomuskuva img \{[\s\S]{0,900}mask-image: radial-gradient\(ellipse 52% 52%[\s\S]{0,200}transparent 94%\)/);
+  assert.ok(!/\.aikajana-kertomuskuva[\s\S]{0,400}filter:/.test(CSS), 'kuvassa ei saa olla suodatinta');
+  // Kehys, pergamenttitausta ja varjo ovat poissa: reuna häviää karttaan.
+  assert.ok(!/\.aikajana-kertomuskuva \{[^}]*background:/.test(CSS), 'kuvalla ei saa olla kehystaustaa');
+  // Paikka on pisteen YLÄPUOLELLA: iso kuva ei peitä kohdepistettä.
+  assert.match(CSS, /\.aikajana-kertomuskuva \{[\s\S]{0,400}transform: translate\(-50%, calc\(-100% - 1\.1rem\)\) scale\(0\.6\)/);
   assert.match(OHJAAJA, /esityskuvat/);
   // Lähikuva on väljempi kuin pysäkkiajon, muttei koko pallo.
   assert.ok(ESITYKSEN_LAHIKUVA > 560 && ESITYKSEN_LAHIKUVA < 4000);

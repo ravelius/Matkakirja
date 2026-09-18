@@ -28,9 +28,10 @@
       "huomautus": "Häilyvä (v1926/v1927), pallo pyörii mittauksen ja napautuksen välissä. 'Sulje linssi palauttaa yläpalkin, pelitilan ja tallennuksen täsmälleen' (VIKA LISAYS 12) korjattu haarassa astro-sulje-vaaka, mergetty v1929:ään — poistettu listalta. Jos tämä nousee punaiseksi PR:n Savukkeet-ajossa, se on aito löydös.",
       "tunnetutPunaisetMac": [
         "kohteen nimi ja selite lukevat kuvan päällä, muuta tekstiä ei ole",
-        "pienoiskuvat kelluvat ruudun vasemmassa alakulmassa"
+        "pienoiskuvat kelluvat ruudun vasemmassa alakulmassa",
+        "uusi napautus avaa selitteen takaisin"
       ],
-      "huomautusMac": "Mac-runnerin rinnakkaiskuormassa katselun otsikko/nauha ei ehdi DOMiin mittaushetkellä (tyopoyta; 17.9.2026 run 35242567540); yksin ajettuna vihreä. Ubuntu vartioi."
+      "huomautusMac": "Mac-runnerin rinnakkaiskuormassa katselun otsikko/nauha ei ehdi DOMiin mittaushetkellä (tyopoyta; 17.9.2026 run 35242567540); yksin ajettuna vihreä. Ubuntu vartioi. 18.9. v1935-ajot: myös 'uusi napautus avaa selitteen takaisin' (ipadvaaka) kuormassa."
     },
     "savuke-ihmisen-kappaleet.mjs": {
       "env": {
@@ -62,9 +63,10 @@
         "TÄHDET: pistepilvi feidautuu esiin mustan laskiessa harsoksi",
         "AFRIKKA-SANA: zoomi lähtee entisestä hetkestä ja jatkuu sanan yli",
         "TAUKO: lauseet, kello JA zoomi pysähtyvät samasta kohdasta",
-        "ZOOMI: pallo kasvaa pisteestä ja Afrikka pysyy keskellä"
+        "ZOOMI: pallo kasvaa pisteestä ja Afrikka pysyy keskellä",
+        "JATKO 4 / NYKÄISY: korkeus jatkuu pehmeästi zoomista Marokon ajoon"
       ],
-      "huomautusMac": "Mac-runnerin rinnakkaiskuormassa (6 savuketta) kamera ei aina nouse avaruuteen (korkeus 0,417 odotetun 300 sijaan) vaikka yksin ajettuna 13/13 (17.9.2026, run 35242567540). Ubuntu vartioi nämä; oma erä: avaaKaukaisuus kuormassa. 17.9. ilta (run 35269837042, v1934): myös MUSTA ALKU samasta syystä (korkeus 0,417)."
+      "huomautusMac": "Mac-runnerin rinnakkaiskuormassa (6 savuketta) kamera ei aina nouse avaruuteen (korkeus 0,417 odotetun 300 sijaan) vaikka yksin ajettuna 13/13 (17.9.2026, run 35242567540). Ubuntu vartioi nämä; oma erä: avaaKaukaisuus kuormassa. 17.9. ilta (run 35269837042, v1934): myös MUSTA ALKU samasta syystä (korkeus 0,417). 18.9. v1935: NYKÄISY-vartio kuormassa (kehysajoitus), yksin 17/17."
     },
     "savuke-pariisi-lahizoom.mjs": {
       "kuvakansio": true,
@@ -101,9 +103,10 @@
     "savuke-astro-valokuva.mjs": {
       "tunnetutPunaisetMac": [
         "minipulu reagoi vastauksen aikana",
-        "otsikkorivin napautus avaa selitteen sisällön"
+        "otsikkorivin napautus avaa selitteen sisällön",
+        "uusi napautus avaa selitteen takaisin"
       ],
-      "huomautusMac": "Mac-runnerin rinnakkaiskuormassa (run 35269837042, v1934) minipulun ele ja selitteen avaus eivät ehdi mittaushetkellä; yksin ajettuna 180/180 ja ensimmäisessä Mac-ajossa vihreä. Ubuntu vartioi."
+      "huomautusMac": "Mac-runnerin rinnakkaiskuormassa (run 35269837042, v1934) minipulun ele ja selitteen avaus eivät ehdi mittaushetkellä; yksin ajettuna 180/180 ja ensimmäisessä Mac-ajossa vihreä. Ubuntu vartioi. 18.9. v1935-ajot: myös 'uusi napautus avaa selitteen takaisin' kuormassa (yksin vihreä)."
     }
   }
 }
