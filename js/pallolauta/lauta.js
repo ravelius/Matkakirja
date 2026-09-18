@@ -2327,6 +2327,24 @@ export async function avaaPallolauta(ui) {
   /** Liuskan "Liiku tänne" -rivin siirtovalinta tai null. */
   let liuskanSiirto = null;
 
+  /**
+   * SIIRRON VALINTA — YKSI FUNKTIO KOLMELLE POLULLE (Raamattu,
+   * KARTTAUUDISTUKSEN PAATOKSET 42). Sama teko tehdään nyt kolmesta
+   * paikasta: liuskan "Liiku tänne" -rivi, kohdemerkki (punainen
+   * katkorengas) ja siirtovaiheessa kohteena olevan kaupungin oma
+   * merkki. Päätös sanoo *"sama teko kuin Liiku tänne"*, joten teko on
+   * kirjoitettu tähän kerran eikä kolmeen kopioon: liuskan muisti
+   * nollataan ja `ui.doMove` saa avaimen.
+   */
+  const valitseSiirto = (avain) => {
+    if (!avain) return false;
+    liuskanKaupunki = null;
+    liuskanSiirto = null;
+    heraa();
+    ui.doMove(avain);
+    return true;
+  };
+
   const napautaKaupunki = (k) => {
     if (ui.dead || ui.busy || !k) return false;
     /*
@@ -2405,6 +2423,35 @@ export async function avaaPallolauta(ui) {
       const siirto = (game.phase === 'move' && !game.player?.isBot)
         ? (game.moveOptions?.().find((opt) => opt.city?.id === city.id) ?? null)
         : null;
+      /*
+       * ══ KOHDEKAUPUNKI VALITSEE SIIRRON HETI, EI AVAA LIUSKAA ══════
+       * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 42; omistaja 18.9.2026
+       * klo 22.41, iPad-kuva Lontoosta nopan jälkeen: *"Liftauksessa
+       * jos painaa kohdekaupunkia, aukeaa viuhka vaikka pitaisi valita
+       * kohde liikkeelle"*.)
+       *
+       * KOHDEMERKIN NAPAUTUS TEKI TÄMÄN JO (napautaKohde → doMove),
+       * mutta kaupungin OMA piste on kirjaston pistekerroksen olio ja
+       * sillä on oma click (reititaPallopisteenNapautus → tämä
+       * funktio) — se ohittaa `napautaPintaan`in kohdetestin
+       * (`lahinKohde`) kokonaan. Punaisen katkorenkaan keskellä oleva
+       * kaupunkimerkki avasi siis liuskan, vaikka merkin ja kohteen
+       * ruutupiste on sama. Nyt sama sääntö kuin kohdemerkillä
+       * (`kohdevalinta`, drawTargets): siirtovaihe, ei botti, ei
+       * katselu.
+       *
+       * KAMERA-AJO JÄÄ AJAMATTA (kohta 10 koskee vain liuskan
+       * avausta): valinta palaa tästä ennen `void (async …)` -ajoa,
+       * joten siirron oma ennakkozoomi (js/siirtokoreografia.js) saa
+       * kameran koskemattomana — kaksi ajoa peräkkäin nykisi.
+       *
+       * PELAAJAN OMA KAUPUNKI EI OLE KOHDE (kohta 3): sen merkki avaa
+       * liuskan siirtovaiheessakin, vaikka moveOptions jostain syystä
+       * tarjoaisi paikallaan pysymistä.
+       */
+      if (siirto && !ui.katselu && !(oma && oma.id === city.id)) {
+        return valitseSiirto(siirto.key);
+      }
       void (async () => {
         /*
          * ══ KAMERA AJAA SEN VERRAN, ETTÄ SUURIN LIUSKA MAHTUU ══════
@@ -2550,9 +2597,9 @@ export async function avaaPallolauta(ui) {
       return true;
     }
     if (game.phase !== 'move' || game.player?.isBot) return false;
-    heraa();
-    ui.doMove(kohde.key);
-    return true;
+    // Sama funktio kuin liuskan "Liiku tänne" -rivillä ja kohteena
+    // olevan kaupungin merkillä (PAATOKSET 42).
+    return valitseSiirto(kohde.key);
   };
 
   /** NAPAUTUS NOSTOON (vaihe 3): kortti aukeaa merkin ruutupisteestä. */
@@ -3153,10 +3200,11 @@ export async function avaaPallolauta(ui) {
         heraa();
         const city = liuskanKaupunki ?? ui.game.cityOf?.();
         if (osui.laji === 'liiku') {
-          const avain = liuskanSiirto?.key;
+          // Sama funktio kuin kohdemerkillä ja kohdekaupungilla
+          // (PAATOKSET 42): valitseSiirto nollaa liuskan muistin.
+          valitseSiirto(liuskanSiirto?.key);
           liuskanKaupunki = null;
           liuskanSiirto = null;
-          if (avain) ui.doMove(avain);
           return;
         }
         /*
