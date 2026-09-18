@@ -22,6 +22,7 @@
     "savuke-ihmisen-esitys.mjs",
     "savuke-pallo-nostolaput.mjs",
     "savuke-nimikyltti.mjs",
+    "savuke-luentakuvat.mjs",
     "savuke-kerma-reuna.mjs",
     "savuke-ranskan-nostot-lukossa.mjs",
     "savuke-maailmatila-zoomi.mjs"
@@ -195,6 +196,10 @@
       },
       "kuvakansio": true,
       "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. LIUSKA-LOHKO: kaupunkiliuskan vartiot 8a-8n. Lohko siirrettiin savukkeessa omaan silmukkaansa MUUTTAMATTA yhtaan vaitetta; se avaa oman sivun ja oman zoomin (oma 44 s saapuminen on jaon hinta). Ruutu 1400 px. Tunnettuja punaisia ei ole: 18.9.2026 mitattu 390 px:lla 17/17 vihreaa yksin ajettuna."
+    },
+    "savuke-luentakuvat.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Luentakuvien savuke (PAATOKSET 35 + TARKENNUS 2 ja PAATOKSET 38). Nimetty 18.9.2026 mittaa-luentakuvat.mjs -> savuke-luentakuvat.mjs, koska rakenna-matriisi.mjs hyvaksyy julkaisusarjaan vain savuke-*.mjs -tiedostoja. Ajaa Pariisin saapumisen 390 x 844 (paavartiot, kaappaukset) ja PAATOKSET 38:n vartiot MOLEMMILLA ruuduilla (390 ja 1400), koska saanto \"tekstit piilossa\" on nimenomaan kaikille laitteille."
     },
     "savuke-astro-pallo.mjs#vartija-c": {
       "env": {

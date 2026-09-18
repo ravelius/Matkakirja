@@ -2934,3 +2934,47 @@ body.linssi-topografia.luenta-huntu .map-pane::after {
   height: 100%;
   object-fit: cover;
 }
+
+/* =====================================================================
+   KUVAT LENTÄVÄT PIENENNETTYYN MATKAKIRJAAN
+   (omistaja 18.9.2026, Raamattu KARTTAUUDISTUKSEN PAATOKSET 38 kohta 2:
+   *"kuvat lentavat matkakirjan ylareunaan, mutta matkakirja itse pysyy
+   pienennettyna"*.)
+
+   KERROS ON RUNGON LAPSI, EI `.stage`. Isojen luentakuvien päällys jää
+   tahallaan matkakirjakortin ALLE (z-index 3 `.stagen` sisällä), mutta
+   lento on päinvastainen liike: kuva matkaa kortin luo ja katoaa sen
+   yläreunaan, joten sen kuuluu kulkea kaiken päällä. Kerros ei ota
+   napautuksia eikä ole ruudunlukijalle mitään (aria-hidden), ja se
+   poistetaan DOMista heti kun viimeinen kuva on perillä (js/fokusvirta.js
+   lennataKuvatMatkakirjaan).
+   ===================================================================== */
+.fokusvirta-lentokerros {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 47;
+}
+
+.fokusvirta-lento {
+  position: fixed;
+  /* Muunnos lasketaan vasemmasta yläkulmasta: js antaa siirron ja
+     kutistuksen yhtenä transformina (FLIP, sama malli kuin
+     suurennoksella). */
+  transform-origin: top left;
+  overflow: hidden;
+  border: 2px solid #f7f1e2;
+  border-radius: 4px;
+  box-shadow: 0 6px 18px rgba(20, 14, 6, 0.32);
+  background: #ded5c2;
+  /* Selain saa varata kuvalle oman tason: lento ei silloin kilpaile
+     kartan rasteroinnin kanssa. */
+  will-change: transform, opacity;
+}
+
+.fokusvirta-lento img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
