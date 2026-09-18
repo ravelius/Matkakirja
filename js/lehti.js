@@ -45,6 +45,14 @@ import { JULISTE_LAHDE } from './packs/julisteet.js';
 import { KULTTUURI_KATEGORIAT } from './packs/kulttuuri-kategoriat.js';
 import { MAA_KATEGORIAT } from './packs/maa-kategoriat.js';
 import { KAUPUNKIKARTAT, MAAKARTAT } from './packs/maakartat.js';
+
+/**
+ * ONKO KOHDEKARTTA KAUPUNKILEHDEN ETUSIVULLA. Epätosi PAATOKSET 34
+ * kohdasta 9 alkaen (kartta on kaupunkiliuskan Nähtävyydet-rivillä).
+ * Ehto on nimetty eikä poistettu, jotta sammutuksen syy näkyy siinä
+ * kohdassa, jossa osio ennen piirtyi.
+ */
+const KOHDEKARTTA_LEHDESSA = false;
 import { SAATIEDOT } from './packs/saatiedot.js';
 import { lueOmatPoiminnat, tyhjennaPoiminnat, vientiLohko } from './pollopoiminnat.js';
 import {
@@ -521,7 +529,17 @@ export function piirraTutkiSivu(ui, indeksi, { heti = false, suunta = 0 } = {}) 
    * avattiin kaupunkilehden liitenapista, koska arrivalShownFor
    * osoittaa yhä kaupunkiin.
    */
-  const karttaEtusivulla = etusivu && ui.lehtitila.tutkiTila !== 'maa'
+  /*
+   * ══ KOHDEKARTTA EI OLE ENÄÄ LEHDESSÄ (Raamattu, KARTTAUUDISTUKSEN
+   * PAATOKSET 34 kohta 9) ═══════════════════════════════════════════
+   *
+   * Sama sisältö on nyt kaupunkiliuskan "Nähtävyydet"-rivin takana
+   * (js/pallolauta/kaupunkiliuska.js NAHTAVYYDET_NIMIO), joten
+   * lehden etusivulla se olisi sama asia kahdesti. Matkailijalle-osio
+   * JÄÄ etusivulle: se ei ole kartta eikä liuskan rivi.
+   */
+  const karttaEtusivulla = KOHDEKARTTA_LEHDESSA && etusivu
+    && ui.lehtitila.tutkiTila !== 'maa'
     && KAUPUNKIKARTAT[ui.lehtitila.arrivalShownFor];
   /*
    * Aluelehdillä (Islanti, Lappi, Kreeta, Sisilia, Alpit) ei ole

@@ -205,8 +205,14 @@ test('lauta sovittelee nimien JÄLKEEN, ja nimi väistää vain liikkumatonta mu
   const sovitteluKohta = lauta.indexOf('nostot.sovittele(');
   assert.ok(nimiKohta > 0 && sovitteluKohta > nimiKohta,
     'sovittelu on ladottava nimien jälkeen — muuten nimi ei ole kiinteä');
-  assert.match(lauta,
-    /nostot\.sovittele\(\{ nimet: nimet\.laatikot\(\), kiinteat: infoTulos \}\)/);
+  /*
+   * PELINAPPULA ON ESTE MYÖS SOVITTELUSSA (omistaja 17.9.2026 illalla,
+   * Raamattu KARTTAUUDISTUKSEN PAATOKSET 32 TARKENNUS 2 kohta b):
+   * `sovitteleLaput` vaihtaa nimiön kylkeä joka zoomilla, ja sen
+   * esteistössä oli ennen vain nimet ja kyltti — nimiö *"Tuileriain
+   * rauniot…"* käännettiin siksi lähizoomissa nappulan puolelle.
+   */
+  assert.match(lauta, /kiinteat: \[\.\.\.infoTulos, \.\.\.merkit\.laatikot\('peli'\)\],/);
   const nostot = lue('../js/pallolauta/nostot.js');
   // Elävän noston LAPPU ei ole nimen varaus, ikoni on.
   assert.match(nostot, /nostonLaatikko\(r\.p, r, \{\s*dx: datum\.dx, dy: datum\.dy, nimio: false,\s*\}\)/);
@@ -237,7 +243,14 @@ test('turisti-infon kyltti on sovittelun este ja sen varaus on koko kyltti', () 
   // 3. Varaus lasketaan SAMASTA kaavasta kuin nostojen omat laatikot —
   //    ei lueta ruudulta, koska merkin rasteri valmistuu omalla ajallaan.
   assert.match(lauta, /return \[nostonLaatikko\(p, KYLTIN_LADONTA\)\];/);
-  assert.match(lauta, /const KYLTIN_LADONTA = \{\n {4}kaupunki: true,/);
+  /*
+   * KYLTTI ON SAMAA KOKOA KUIN NOSTOT (omistaja 17.9.2026 illalla,
+   * PAATOKSET 32 TARKENNUS 2 kohta a): `kaupunki` tarkoitti tässä
+   * tietueessa vain kaupunkimerkin mittakerrointa (11,5 px), ja uusi
+   * mitta on poltetun kartan 8,5 px eli kerroin 1. Kumoaa PAATOKSET 31
+   * TARKENNUS 2 kohdan 5 mitan.
+   */
+  assert.match(lauta, /const KYLTIN_LADONTA = \{\n {4}kaupunki: false,/);
   assert.match(lauta, /nimi: TURISTI_INFO_NIMIO,/);
   /*
    * 4. KAKSI LAATIKKOA, KUMPIKIN OMAAN TEHTÄVÄÄNSÄ. Ladonta ja

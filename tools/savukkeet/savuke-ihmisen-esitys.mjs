@@ -43,8 +43,9 @@
  *      rajattuna koko Afrikkaan ja musiikki on käynnistetty.
  *   3b. TEKSTI ALAS: ensimmäisessä kohteessa rivi laskeutuu alalaitaan.
  *   4. MATKA: jaksot etenevät ilman käyttäjän toimia viimeiseen asti.
- *   5. KUVA: kohteellisella jaksolla kuva on esillä ja pieni (noin 22 %
- *      ruudun leveydestä); kohteettomalla jaksolla se on poissa.
+ *   5. KUVA: kohteellisella jaksolla kuva on esillä ja ISO (noin 66 %
+ *      ruudun leveydestä, reunat häivytettyinä — Raamattu JATKO 4);
+ *      kohteettomalla jaksolla se on poissa.
  *   6. KELLO: lukema etenee (pienenee) ja AIKAHYPYSSÄ kelaa taaksepäin
  *      14 500 → 50 000.
  *   7. PULU: välihuomiot sanotaan (KOLME kuplaa: denisova, beringia,
@@ -69,7 +70,7 @@
  * lopettaa siihen: koko esitys kestää kontissa 10–20 minuuttia.
  */
 import { createServer } from 'node:http';
-import { readFileSync, existsSync, mkdirSync } from 'node:fs';
+import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -79,8 +80,21 @@ const PORTTI = Number(process.env.PORTTI ?? 8747);
 const ULOS = process.env.KAAPPAUKSET ?? '/tmp/matkakirja-kaappaukset';
 mkdirSync(ULOS, { recursive: true });
 
-/** Näkymä: omistajan arviointimitta esitykselle (834 × 1100). */
-const NAKYMA = { viewport: { width: 834, height: 1100 }, deviceScaleFactor: 1 };
+/**
+ * Näkymä: omistajan arviointimitta esitykselle (834 × 1100).
+ *
+ * PUHELINMITTA YMPÄRISTÖSTÄ (LEVEYS/KORKEUS). Raamatun JATKO 4 mittaa
+ * kohdekuvan nimenomaan 390 px:llä, ja sama savuke kelpaa siihen, kun
+ * näkymän saa vaihtaa ilman koodin muokkausta:
+ * `LEVEYS=390 KORKEUS=844 VAIN_AVAUS=1 node …`.
+ */
+const NAKYMA = {
+  viewport: {
+    width: Number(process.env.LEVEYS ?? 834),
+    height: Number(process.env.KORKEUS ?? 1100),
+  },
+  deviceScaleFactor: 1,
+};
 
 const MIME = {
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript', '.mjs': 'text/javascript',
@@ -745,6 +759,38 @@ vaadi('ZOOMI: pallo kasvaa pisteestä ja Afrikka pysyy keskellä',
   }));
 await jatkaEsitys();
 
+/*
+ * KORKEUDEN AIKASARJA 16 MS VÄLEIN (Raamattu JATKO 4 kohta 4, omistaja
+ * 18.9.2026: *"Zoomissa on pieni nykäisy lopussa ennen siirtymistä
+ * kohti Marokkoa joka olisi hyvä saada pois."*).
+ *
+ * Näytteenotto alkaa TÄSSÄ, zoomin puolivälissä, ja kattaa sen kohdan,
+ * jossa 'afrikka'-jakso alkaa kesken zoomin — siinä ajo ennen
+ * käynnistettiin uudestaan. Sarja jatkuu zoomin loppuun, tauon yli ja
+ * Marokon ajon alkuun, joten yksi sarja todistaa molemmat saumat.
+ * Mitta on log-korkeuden nopeus (zoomi on eksponentiaalinen, ks.
+ * js/pallolauta/kamera.js), jolloin tasainen zoomi on tasainen suora.
+ */
+await s.evaluate(() => {
+  const { ui } = window.matkakirja;
+  window.__korkeus = [];
+  window.__korkeusKello = setInterval(() => {
+    const pov = ui.pallonInstanssi?.pointOfView?.() ?? null;
+    const t = ui.aikajana?.esitys?.tila?.() ?? {};
+    if (!pov) return;
+    window.__korkeus.push({
+      aika: Math.round(performance.now()),
+      alt: pov.altitude,
+      lat: pov.lat,
+      lng: pov.lng,
+      jakso: t.jakso ?? null,
+      pimea: t.pimea ?? null,
+      kohdeajo: Boolean(t.kohdeajo),
+      tauolla: Boolean(t.tauolla),
+    });
+  }, 16);
+});
+
 /* ------------------------------------------------------ 3. valot syttyvät */
 
 /*
@@ -842,6 +888,112 @@ vaadi('MAROKKO: ajo pitää entisen pituutensa, saapuminen siirtyy',
     ajonMyohassa: valot.ajonMyohassa,
   }));
 
+/* ------------------------------- JATKO 4: zoomin kesto ja nykäisy pois */
+
+/*
+ * ZOOMI ON SEKUNNIN NOPEAMPI (Raamattu JATKO 4 kohta 2). Lähtöhetki on
+ * ennallaan, joten mitta on jatko: entinen 5 000 ms, uusi 4 000 ms.
+ * `zoomLahti.kesto` on ohjaajan oma kirjaus todellisesta kestosta
+ * (peruskesto + jatko) sillä hetkellä, kun ajo lähti.
+ */
+vaadi('JATKO 4 / ZOOMI: sisäänzoomaus on sekunnin lyhyempi kuin ennen',
+  ZOOMIN_JATKO_MS === 4000
+    && Number.isFinite(zoomHetki.zoomLahti?.kesto)
+    && zoomHetki.zoomLahti.kesto > 4000,
+  JSON.stringify({
+    jatkoEnnen: 5000,
+    jatkoNyt: ZOOMIN_JATKO_MS,
+    zoominKestoNyt: zoomHetki.zoomLahti?.kesto ?? null,
+    zoominKestoEnnen: Number.isFinite(zoomHetki.zoomLahti?.kesto)
+      ? zoomHetki.zoomLahti.kesto + 1000 : null,
+  }));
+
+const sarja = await s.evaluate(() => {
+  clearInterval(window.__korkeusKello);
+  return window.__korkeus ?? [];
+});
+// Raakasarja talteen kaappausten viereen: mittarin voi tarkistaa ilman uutta ajoa.
+writeFileSync(join(ULOS, 'korkeussarja.json'), JSON.stringify(sarja));
+/*
+ * NYKÄISY ON LOVI NOPEUDESSA, EI PELKKÄ PIIKKI. Uudestaan käynnistetty
+ * ajo aloitti laudan käyrän alusta: nopeus putosi lähes nollaan ja
+ * nousi takaisin kesken zoomin. Sarjasta lasketaan siis kaksi asiaa:
+ *
+ *   hyppyja  näyte, jonka nopeus on yli 2 × kumpikin naapuri (omistajan
+ *            oma mitta kysymyskortissa) — ja yli kohinarajan.
+ *   lovia    zoomin sisällä oleva näyte, jonka nopeus on alle 12 %
+ *            huipusta, vaikka nopeus on sekä ennen että jälkeen yli
+ *            puolet huipusta. Juuri tämän uudelleenkäynnistys teki:
+ *            MITATTU ennen korjausta 23 lovinäytettä, korjauksen
+ *            jälkeen 0.
+ *
+ * KOHINARAJA ON NELJÄNNES HUIPPUNOPEUDESTA. Tauon tasanne ja Marokon
+ * ajon ryömivä lähtö ovat tarkoituksella lähellä nollaa, ja siellä
+ * kahden peräkkäisen näytteen suhde heittelee vapaasti (mitattu:
+ * matalalla rajalla pelkkä tauko tuotti 19 "hyppyä" ilman että kuvassa
+ * liikkui mitään). Nykäisy, jota omistaja katsoo, on zoomin
+ * täysvauhdissa — siellä raja puree.
+ */
+const nykaisy = (() => {
+  const zoomi = sarja.filter((n) => n.pimea !== false && !n.kohdeajo);
+  /*
+   * NOPEUS LASKETAAN VIIDEN NÄYTTEEN IKKUNASTA (n. 80 ms) EIKÄ
+   * PERÄKKÄISISTÄ NÄYTTEISTÄ. Näytteenotto käy 16 ms:n välein ja kamera
+   * piirtyy requestAnimationFramessa: osaan väleistä ei osu yhtään uutta
+   * kehystä (nopeus 0) ja seuraavaan kaksi (nopeus kaksinkertainen).
+   * MITATTU: raakasarjasta löytyi 21 "hyppyä" ja 18 "lovea" silloinkin,
+   * kun kuva liikkui tasaisesti — ne olivat näytteenoton omaa aliasta.
+   * Ikkuna on lyhyempi kuin uudelleenkäynnistyksen ramppi (satoja
+   * millisekunteja), joten oikea nykäisy näkyy yhä.
+   */
+  const IKKUNA = 2;
+  const v = [];
+  for (let i = IKKUNA; i < sarja.length - IKKUNA; i += 1) {
+    const a = sarja[i - IKKUNA];
+    const b = sarja[i + IKKUNA];
+    const dt = Math.max(1, b.aika - a.aika);
+    const da = Math.abs(Math.log(b.alt) - Math.log(a.alt));
+    v.push({ i, nopeus: (da / dt) * 1000, zoomissa: sarja[i].pimea !== false });
+  }
+  const huippu = v.reduce((m, x) => Math.max(m, x.nopeus), 0);
+  const kohina = huippu * 0.25;
+  let hyppyja = 0;
+  let lovia = 0;
+  for (let k = 1; k < v.length - 1; k += 1) {
+    const { nopeus } = v[k];
+    if (nopeus > kohina && nopeus > 2 * Math.max(v[k - 1].nopeus, v[k + 1].nopeus)) hyppyja += 1;
+    if (!v[k].zoomissa) continue;
+    /*
+     * LOVEN IKKUNAT ON MITATTU RAAKASARJASTA (KAAPPAUKSET/
+     * korkeussarja.json, 18.9.2026, sama ajo kummallakin versiolla):
+     * ennen korjausta nopeus romahti 0,86 → 0,06 juuri 'afrikka'-jakson
+     * alkaessa ja nousi takaisin puoleen huipusta vasta 575 ms
+     * myöhemmin. Ikkunat ovat siis 400 ms taakse ja 800 ms eteen —
+     * lyhyemmällä (96 ms) lovi jäi näkymättä, koska ramppi on hidas.
+     * MITATTU: vanha koodi 12 lovinäytettä, korjattu 0.
+     */
+    const ennen = v.slice(Math.max(0, k - 25), k).some((x) => x.nopeus > huippu * 0.5);
+    const jalkeen = v.slice(k + 1, k + 51).some((x) => x.nopeus > huippu * 0.4);
+    if (ennen && jalkeen && nopeus < huippu * 0.15) lovia += 1;
+  }
+  return {
+    naytteita: sarja.length,
+    zoomissa: zoomi.length,
+    huippu: Number(huippu.toFixed(4)),
+    hyppyja,
+    lovia,
+    kohdeajoAlkoi: sarja.some((n) => n.kohdeajo),
+    korkeusAlku: sarja.length ? Number(sarja[0].alt.toFixed(3)) : null,
+    korkeusLoppu: sarja.length ? Number(sarja[sarja.length - 1].alt.toFixed(3)) : null,
+  };
+})();
+vaadi('JATKO 4 / NYKÄISY: korkeus jatkuu pehmeästi zoomista Marokon ajoon',
+  // Sarjan on katettava sekä zoomi että Marokon ajon lähtö.
+  nykaisy.zoomissa > 50 && nykaisy.kohdeajoAlkoi
+    && nykaisy.hyppyja === 0 && nykaisy.lovia === 0
+    && nykaisy.korkeusLoppu < nykaisy.korkeusAlku,
+  JSON.stringify(nykaisy));
+
 /* --------------------------------- teksti hyppää alas ensimmäisessä kohteessa */
 
 /*
@@ -854,9 +1006,32 @@ vaadi('MAROKKO: ajo pitää entisen pituutensa, saapuminen siirtyy',
 const kohdeHetki = await s.evaluate(async () => {
   const { ui } = window.matkakirja;
   ui.aikajana.esitys.jatka();
+  /*
+   * VIIMEINEN AVAUSLAUSE (Raamattu JATKO 4 kohta 3) mitataan matkalla:
+   * se on avauksen viimeisen jakson viimeinen osa, ja sen ON oltava jo
+   * alalaidassa (`keskella` epätosi) — ennen se laskeutui vasta
+   * ensimmäisen kohteen alkaessa.
+   */
+  window.__viimeinenAvaus = null;
+  const lueRivi = () => {
+    const sisus = document.querySelector('.aikajana-kertomusteksti-sisus');
+    const laatikko = sisus?.getBoundingClientRect() ?? null;
+    return laatikko ? Math.round(laatikko.top + laatikko.height / 2) : null;
+  };
   for (let i = 0; i < 1200; i += 1) {
     const t = ui.aikajana?.esitys?.tila?.();
     if (!t || t.paattynyt) break;
+    if (t.jakso === 'afrikka' && t.lauseita > 0 && t.lause === t.lauseita - 1) {
+      window.__viimeinenAvaus = {
+        jakso: t.jakso,
+        lause: t.lause,
+        lauseita: t.lauseita,
+        keskella: t.keskella,
+        teksti: String(t.teksti ?? '').slice(0, 40),
+        keskiY: lueRivi(),
+        ruutu: window.innerHeight,
+      };
+    }
     if (t.jakso === 'jebel-irhoud') {
       await new Promise((r) => setTimeout(r, 1500));
       ui.aikajana.esitys.tauko();
@@ -887,6 +1062,68 @@ vaadi('TEKSTI: rivi laskeutuu alalaitaan ensimmäisessä kohteessa',
     teksti: String(alhaalla.teksti ?? '').slice(0, 30),
     osia: JEBELIN_OSAT.length,
   }));
+
+/*
+ * JATKO 4 / VIIMEINEN LAUSE. Rivi laskeutuu YHTÄ LAUSETTA AIEMMIN:
+ * avauksen viimeinen lause on jo alalaidassa, ei enää keskellä.
+ */
+const viimeinenAvaus = await s.evaluate(() => window.__viimeinenAvaus ?? null);
+vaadi('JATKO 4 / TEKSTI: avauksen viimeinen lause on jo alareunassa',
+  Boolean(viimeinenAvaus) && viimeinenAvaus.keskella === false
+    && viimeinenAvaus.keskiY > viimeinenAvaus.ruutu * 0.7,
+  JSON.stringify(viimeinenAvaus));
+
+/*
+ * JATKO 4 / KUVA. Kohdekuva on ISO (60–70 % ruudun leveydestä),
+ * KEHYKSETÖN ja reunoiltaan häivytetty maskilla (ei filteriä —
+ * iOS-sääntö). Lisäksi se ei saa peittää tekstilaatikkoa eikä
+ * kohdepistettä: kuvan alareuna on lampun yläpuolella ja selvästi
+ * tekstirivin yläpuolella.
+ */
+const jatko4Kuva = await s.evaluate(async () => {
+  const lue = () => {
+    const el = document.querySelector('.aikajana-kertomuskuva');
+    return el ? Math.round(el.getBoundingClientRect().width) : 0;
+  };
+  // Poksahdus scale(0,6) → scale(1) kestää 0,5 s: odotetaan vakaa mitta.
+  let edellinen = -1;
+  for (let i = 0; i < 40; i += 1) {
+    const nyt = lue();
+    if (nyt > 0 && nyt === edellinen) break;
+    edellinen = nyt;
+    await new Promise((r) => setTimeout(r, 150));
+  }
+  const el = document.querySelector('.aikajana-kertomuskuva');
+  const img = el?.querySelector('img') ?? null;
+  const laatikko = el?.getBoundingClientRect() ?? null;
+  const tyyli = img ? getComputedStyle(img) : null;
+  const maski = tyyli ? (tyyli.maskImage || tyyli.webkitMaskImage || 'none') : 'none';
+  const kehys = el ? getComputedStyle(el) : null;
+  const teksti = document.querySelector('.aikajana-kertomusteksti-sisus')?.getBoundingClientRect() ?? null;
+  return {
+    leveys: laatikko ? Math.round(laatikko.width) : 0,
+    korkeus: laatikko ? Math.round(laatikko.height) : 0,
+    osuus: laatikko ? Number((laatikko.width / window.innerWidth).toFixed(3)) : 0,
+    ala: laatikko ? Math.round(laatikko.bottom) : null,
+    // Häivytys: maski olemassa ja alfa-liuku päättyy läpinäkyvään.
+    maski: maski.slice(0, 120),
+    liuku: /transparent|rgba\(0, 0, 0, 0\)/.test(maski),
+    suodatin: kehys?.filter ?? 'none',
+    kehysTausta: kehys?.backgroundColor ?? null,
+    kehysVarjo: kehys?.boxShadow ?? null,
+    tekstiYla: teksti ? Math.round(teksti.top) : null,
+    ruutu: window.innerHeight,
+  };
+});
+vaadi('JATKO 4 / KUVA: kohdekuva on iso, kehyksetön ja reunoilta häivytetty',
+  jatko4Kuva.osuus >= 0.55 && jatko4Kuva.osuus <= 0.72
+    && jatko4Kuva.liuku === true && jatko4Kuva.suodatin === 'none'
+    && /^rgba\(0, 0, 0, 0\)$/.test(String(jatko4Kuva.kehysTausta))
+    && String(jatko4Kuva.kehysVarjo) === 'none'
+    // Ei tekstilaatikon päälle: kuvan alareuna on rivin yläpuolella.
+    && Number.isFinite(jatko4Kuva.ala) && jatko4Kuva.ala < jatko4Kuva.tekstiYla,
+  JSON.stringify(jatko4Kuva));
+await s.screenshot({ path: kuva('6b-kohdekuva-iso') });
 await jatkaEsitys();
 
 /*
@@ -944,13 +1181,13 @@ const kuvamitat = await s.evaluate(async () => {
 if (kuvahetki.osui) await s.screenshot({ path: kuva('7-kuva-kohteen-vieressa') });
 await jatkaEsitys();
 /*
- * PIENI KUVA: 22 % ruudun leveydestä (KUVAN_OSUUS), katto 260 px.
- * 834 px:n näkymässä osuus voittaa katon vasta 1 182 px:ssä, joten
- * mitta on tässä 183 px — sivuosassa, ei näyttämön keskellä.
+ * ISO KUVA: 66 % ruudun leveydestä (KUVAN_OSUUS, Raamattu JATKO 4
+ * kohta 1), katto 560 px. 834 px:n näkymässä osuus (550 px) jää juuri
+ * katon alle. Entinen mitta oli 22 % eli 183 px pergamenttikehyksessä.
  */
-vaadi('KUVA: löytökuva nousee pienenä kohteen viereen',
-  kuvahetki.osui && kuvamitat.leveys > 100 && kuvamitat.leveys < 300
-    && kuvamitat.osuus > 0.15 && kuvamitat.osuus < 0.3,
+vaadi('KUVA: löytökuva nousee isona kohteen ylle',
+  kuvahetki.osui && kuvamitat.leveys > 400 && kuvamitat.leveys <= 560
+    && kuvamitat.osuus > 0.55 && kuvamitat.osuus < 0.72,
   JSON.stringify({ jakso: kuvahetki.jakso, ...kuvamitat }));
 
 /* 6. HYPPY: kello kelaa taaksepäin. */

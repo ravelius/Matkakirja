@@ -295,6 +295,62 @@ test('viuhkan kohdat eivät kasaudu päällekkäin', () => {
   }
 });
 
+/*
+ * ══ VIUHKA ON LISTA (PAATOKSET 32 kohta 3) ═══════════════════════
+ *
+ * Omistaja 17.9.2026 klo 20.35 Suomen aikaa: *"Viuhkana kohteet voisi
+ * avautua yhdeksi siistiksi listaksi"*, rivit väljästi, eikä lista saa
+ * peittää kaupungin nimeä tai pelinappulaa.
+ */
+test('viuhkan kohdat ovat yhtenä pystylistana: sama kylki, sama leveys', () => {
+  const ruutu = { leveys: 390, korkeus: 844 };
+  const leveydet = [60, 92, 55, 70, 48, 81];
+  const p = { x: 150, y: 420 };
+  const { asemat, leveys } = viuhkanAsemat({ p, ruutu, leveydet });
+  assert.equal(leveys, Math.max(...leveydet), 'listan leveys on levein nimiö');
+  for (const a of asemat) {
+    assert.ok(Math.abs(a.dx - asemat[0].dx) < 1e-9, 'rivit eivät ole samassa kyljessä');
+  }
+  for (let i = 1; i < asemat.length; i += 1) {
+    assert.ok(asemat[i].dy - asemat[i - 1].dy >= 2 * VIUHKAN_RIVI_PX,
+      `riviväli ${(asemat[i].dy - asemat[i - 1].dy).toFixed(1)} px < nimiön korkeus`);
+  }
+});
+
+test('listan rivilaatikot eivät limity keskenään', () => {
+  const ruutu = { leveys: 390, korkeus: 844 };
+  const leveydet = [60, 92, 55, 70, 48, 81];
+  const p = { x: 260, y: 300 };
+  const { asemat, leveys, puoli } = viuhkanAsemat({ p, ruutu, leveydet });
+  const laatikot = asemat.map((a) => kohdanLaatikko(a.dx, a.dy, leveys, puoli));
+  for (let i = 0; i < laatikot.length; i += 1) {
+    for (let j = i + 1; j < laatikot.length; j += 1) {
+      const a = laatikot[i];
+      const b = laatikot[j];
+      const limittyy = a.x0 < b.x1 && b.x0 < a.x1 && a.y0 < b.y1 && b.y0 < a.y1;
+      assert.ok(!limittyy, `rivit ${i} ja ${j} limittyvät`);
+    }
+  }
+});
+
+test('lista väistää kaupungin nimen ja pelinappulan', () => {
+  const ruutu = { leveys: 390, korkeus: 844 };
+  const leveydet = [70, 70, 70];
+  const p = { x: 140, y: 400 };
+  // Este peittää oletuspuolen (oikea) koko korkeudeltaan.
+  const este = {
+    x0: p.x, x1: ruutu.leveys, y0: 0, y1: ruutu.korkeus,
+  };
+  const { asemat, leveys, puoli } = viuhkanAsemat({
+    p, ruutu, leveydet, esteet: [este],
+  });
+  assert.equal(puoli, 'vasen', 'lista ei siirtynyt tyhjemmälle puolelle');
+  for (const a of asemat) {
+    const l = kohdanLaatikko(a.dx, a.dy, leveys, puoli);
+    assert.ok(p.x + l.x1 <= este.x0 + 1e-9, 'rivi jäi esteen päälle');
+  }
+});
+
 test('viuhka kääntyy ruudun keskeltä poispäin', () => {
   const ruutu = { leveys: 390, korkeus: 844 };
   const leveydet = [80, 80];

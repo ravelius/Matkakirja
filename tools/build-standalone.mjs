@@ -624,6 +624,29 @@ const MODULES = [
    * sen samalta riviltä.
    */
   'js/fokusnosto-symbolit.js',
+  /*
+   * Aihevalojen koneisto ennen kaikkia merkkikerroksia: kohdemerkit
+   * ja eläintäyt piirtävät kumpikin valotäplänsä sillä
+   * (js/karttavalot.js). Se tuo mapartin ja symbolikirjaston (aiheiden
+   * ryhmittely, NOSTOSYM_PAAKATEGORIAT) — molemmat jo yllä.
+   *
+   * SIIRRETTY YLÖS 18.9.2026: kaupunkiliuskan malli (alla) tarvitsee
+   * aihemerkit, jotka lukevat aiheiden nimet tästä moduulista, ja
+   * liuskan nimiö on nähtävyyksien staattinen riippuvuus.
+   */
+  'js/karttavalot.js',
+  /*
+   * KAUPUNKILIUSKAN NIMIÖT ENNEN NÄHTÄVYYKSIÄ (Raamattu,
+   * KARTTAUUDISTUKSEN PAATOKSET 34 kohta 8). `NAHTAVYYDET_NIMIO` on
+   * liuskan rivin ja kohdekartan otsikon YHTEINEN sana, ja se asuu
+   * omassa pikkumoduulissaan juuri siksi, ettei nähtävyyksien tarvitse
+   * tuoda pallolautaa: PALLOLAUTA EI KUULU YHDEN TIEDOSTON VERSIOON,
+   * eikä tällä listalla saa olla yhtään pallolaudan moduulia
+   * (tests/pallolauta.test.mjs ja tests/linssikartta.test.mjs
+   * vartioivat sitä tekstihaulla, joten sitä polkua ei saa mainita
+   * tässä tiedostossa edes kommentissa).
+   */
+  'js/kaupunkiliuska-nimiot.js',
   // M4: nähtävyydet ennen opasta (opas tuo sen apurit).
   'js/nahtavyydet.js',
   'js/opas.js',
@@ -819,13 +842,6 @@ const MODULES = [
    * tuo sen). Se tuo vain symbolikirjaston kategorianimet, jotka ovat
    * rivin yllä.
    */
-  /*
-   * Aihevalojen koneisto ennen kaikkia merkkikerroksia: kohdemerkit,
-   * ja eläintäyt piirtävät kumpikin valotäplänsä sillä
-   * (js/karttavalot.js). Se tuo mapartin ja symbolikirjaston (aiheiden
-   * ryhmittely, NOSTOSYM_PAAKATEGORIAT) — molemmat jo yllä.
-   */
-  'js/karttavalot.js',
   /*
    * Karttaselitevalikko ennen ui:ta (ui tuo sen käynnistys- ja
    * päivityskutsun). Se tuo valojen koneiston, symbolikirjaston,
