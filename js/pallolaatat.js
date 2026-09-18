@@ -1118,15 +1118,176 @@ export function maalaaMaailmanVari(ctx, {
 const TASOITUS_MERI_ERO = 36;
 const TASOITUS_MAA_ERO = 52;
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * SUOJASUORAKAIDE EI OLE KERMAN RAJA (omistaja 18.9.2026 klo 15.05,
+ * Raamattu PAATOKSET 37 TARKENNUS kohdat 3–5)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Sanatarkasti: *"kartta nakyy vaarin ranskan ymparistossa"* —
+ * työpöytäkuvassa (1400 px, Ranskan saapuminen) kerma peitti vain
+ * suojasuorakaiteen sisäpuolen, laatikon vino kova reuna näkyi
+ * kartalla, ja laatikon sisällä myös Kanaali ja Välimeri olivat
+ * kerman vaaleita.
+ *
+ * JUURISYY OLI KERMAN KAKSI ERI LÄHDETTÄ. v1938:aan asti kerma
+ * koottiin kahdesta palasta, joiden raja oli suojasuorakaide:
+ *   • SISÄLLÄ kerman antoi VÄRILAATAN POLTETTU KUVA, johon leikkuri
+ *     (tools/fokuskartta/maailmapiirto.js polttaVariLeikkuri) on
+ *     maalannut kerman kaiken muun kuin kohdemaan päälle — MYÖS
+ *     MERTEN päälle, koska poltossa ei ole maamaskia. Siksi Kanaali
+ *     ja Välimeri olivat laatikon sisällä kermaa (TARKENNUS 4).
+ *   • ULKOPUOLELLA kerman maalasi peli itse maamaskilla. Pohjalaatan
+ *     R − B on kohdemaan naapurustossa (Belgian ja Saksan alangot,
+ *     webp-pakkauksen jäljiltä) lähellä alarajaa, joten `smoothstep`
+ *     antoi sinne vain murto-osan peitosta — ruudulla se on
+ *     peittämätön reliefi, ja laatikon reunassa portaan toinen puoli
+ *     (TARKENNUS 3).
+ * Kaksi eri lähdettä ei voi koskaan kohdata saumattomasti: toinen
+ * peittää meretkin, toinen ei peitä maatakaan.
+ *
+ * KORJAUS ON YKSI LÄHDE JA MAAN OMA ÄÄRIVIIVA RAJANA. Kerma maalataan
+ * maamaskilla KOKO LAATALLE, ja kohdemaan renkaiden sisus palautetaan
+ * maalausta edeltäneeseen tilaan (`maalaaKermaRenkaidenUlkopuolelle`).
+ * Silloin
+ *   a) kohdemaan ulkopuolinen maa saa saman peiton joka puolella
+ *      näkyvää karttaa — suorakaiteen reunaa ei ole olemassa,
+ *   b) meri ei saa kermaa missään, ei laatikon sisälläkään,
+ *   c) kohdemaan reliefi ja rajat ovat kirjaimellisesti koskematta:
+ *      niiden pikselit ovat samat kuin ennen maalausta.
+ * Värilaatan poltettu kuva jää silloin käyttämättä (sen sisus on
+ * kohdemaassa sama alkuperäinen reliefi kuin pohjalaatassa), eikä
+ * laataston ruudukon reuna pääse kartalle.
+ *
+ * MASKIN RAMPPI (36…52) JÄÄ ENNALLEEN. Se on mitattu kohdan 2 erässä,
+ * ja se on kapea tarkoituksella: kerman oma R − B on 36 ja rannikon
+ * matala meri 38, joten alarajaa ei saa laskea ilman että ranta alkaa
+ * vaaleta. Peittävyyden TASAISUUS ei riipu rampista, koska laatikon
+ * molemmilla puolilla on nyt sama maski.
+ */
+/** Osuuko yksikään kohdemaan rengas tämän laatan alalle (laatikkotesti)? */
+function renkaatOsuvat({
+  renkaat, W, H, kx, ky,
+}) {
+  for (const rengas of renkaat) {
+    if (!rengas || rengas.length < 3) continue;
+    let minX = Infinity;
+    let maxX = -Infinity;
+    let minY = Infinity;
+    let maxY = -Infinity;
+    for (const piste of rengas) {
+      const x = kx(piste[0]);
+      const y = ky(piste[1]);
+      if (x < minX) minX = x;
+      if (x > maxX) maxX = x;
+      if (y < minY) minY = y;
+      if (y > maxY) maxY = y;
+    }
+    if (maxX < 0 || minX > W || maxY < 0 || minY > H) continue;
+    return true;
+  }
+  return false;
+}
+
+/** Kohdemaan renkaiden polku laatan kankaan pikseleinä; false jos ei osu. */
+function renkaidenPolku(ctx, {
+  renkaat, W, H, kx, ky,
+}) {
+  let osui = false;
+  ctx.beginPath();
+  for (const rengas of renkaat) {
+    if (!rengas || rengas.length < 3) continue;
+    let minX = Infinity;
+    let maxX = -Infinity;
+    let minY = Infinity;
+    let maxY = -Infinity;
+    for (const piste of rengas) {
+      const x = kx(piste[0]);
+      const y = ky(piste[1]);
+      if (x < minX) minX = x;
+      if (x > maxX) maxX = x;
+      if (y < minY) minY = y;
+      if (y > maxY) maxY = y;
+    }
+    if (maxX < 0 || minX > W || maxY < 0 || minY > H) continue;
+    osui = true;
+    for (let i = 0; i < rengas.length; i += 1) {
+      const x = kx(rengas[i][0]);
+      const y = ky(rengas[i][1]);
+      if (i === 0) ctx.moveTo(x, y);
+      else ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+  }
+  return osui;
+}
+
+/** Tilapäinen kangas kohdemaan alkuperäisten pikselien talteenottoon. */
+function tilapainenKangas(w, h) {
+  const ikkuna = globalThis;
+  if (ikkuna.OffscreenCanvas) {
+    try { return new ikkuna.OffscreenCanvas(w, h); } catch { /* vara alla */ }
+  }
+  const kangas = ikkuna.document?.createElement?.('canvas');
+  if (!kangas) return null;
+  kangas.width = w;
+  kangas.height = h;
+  return kangas;
+}
+
+/**
+ * Kerma koko laatalle maamaskilla niin, että kohdemaan renkaiden sisus
+ * jää täsmälleen ennalleen. Kolme vaihetta: talteenotto, maalaus,
+ * palautus — eikä yksikään pikseli saa peittoa kahdesti.
+ *
+ * @returns {boolean} onnistuiko (false → kutsuja tekee varapolun)
+ */
+function maalaaKermaRenkaidenUlkopuolelle(ctx, {
+  W, H, renkaat, kx, ky, kerma, peitto,
+}) {
+  if (typeof ctx.save !== 'function' || typeof ctx.drawImage !== 'function') return false;
+  /*
+   * OSUUKO KOHDEMAA TÄHÄN LAATTAAN LAINKAAN? Valtaosa näkyvistä
+   * laatoista on kokonaan sen ulkopuolella, eikä niille tarvita
+   * talteenottoa — ja TALTEENOTTO ON TEHTÄVÄ ENNEN MAALAUSTA, koska
+   * maalauksen jälkeen alkuperäisiä pikseleitä ei ole enää missään.
+   */
+  let kangas = null;
+  if (renkaatOsuvat({
+    renkaat, W, H, kx, ky,
+  })) {
+    kangas = tilapainenKangas(W, H);
+    const apu = kangas?.getContext?.('2d');
+    if (!apu) return false;
+    try { apu.drawImage(ctx.canvas, 0, 0); } catch { return false; }
+  }
+  if (!maalaaKermaMaamaskilla(ctx, {
+    W, H, x0: 0, y0: 0, x1: 0, y1: 0, kerma, peitto,
+  })) return false;
+  if (!kangas) return true;
+  ctx.save();
+  renkaidenPolku(ctx, {
+    renkaat, W, H, kx, ky,
+  });
+  ctx.clip();
+  ctx.drawImage(kangas, 0, 0);
+  ctx.restore();
+  return true;
+}
+
 /**
  * Kerma laatan kankaalle suojan ULKOPUOLELLE niin, että meri jää
  * pohjan omaan syvyysväriin. Yksi pikselipassi laattaa kohti.
+ *
+ * `x1 > x0 && y1 > y0` rajaa suojan sisuksen maalauksen ulkopuolelle
+ * (varapolku); renkailla maalataan koko laatta (x0 = x1 = 0).
  *
  * @returns {boolean} maalattiinko
  */
 function maalaaKermaMaamaskilla(ctx, {
   W, H, x0, y0, x1, y1, kerma, peitto,
 }) {
+  if (typeof ctx.getImageData !== 'function' || typeof ctx.putImageData !== 'function') return false;
   let data = null;
   try { data = ctx.getImageData(0, 0, W, H); } catch { return false; }
   const d = data.data;
@@ -1166,13 +1327,37 @@ export function maalaaTasoitus(ctx, {
   const x1 = raja(x0, W, Math.round((s.x + s.w - arkki.x) * ppu - kartta.kansX0));
   const y1 = raja(y0, H, Math.round((s.y + s.h - arkki.y) * ppu - kartta.kansY0));
   const [r, g, b] = [1, 3, 5].map((i) => parseInt(tasoitus.kerma.slice(i, i + 2), 16));
-  if (maamaski) {
-    maalaaKermaMaamaskilla(ctx, {
+  let maskilla = false;
+  if (maamaski && tasoitus.renkaat?.length) {
+    /*
+     * KERMA KOKO LAATALLE, KOHDEMAA REIKÄNÄ (PAATOKSET 37 TARKENNUS).
+     * Värilaatan kuvaa ei piirretä lainkaan: sen sisus on kohdemaassa
+     * sama alkuperäinen reliefi, ja sen ulkopuolinen osa on juuri se
+     * maskiton kerma, joka peitti meret.
+     */
+    const kx = (bx) => (bx - arkki.x) * ppu - kartta.kansX0;
+    const ky = (by) => (by - arkki.y) * ppu - kartta.kansY0;
+    if (maalaaKermaRenkaidenUlkopuolelle(ctx, {
+      W,
+      H,
+      renkaat: tasoitus.renkaat,
+      kx,
+      ky,
+      kerma: [r, g, b],
+      peitto: tasoitus.peitto,
+    })) return true;
+    // Varapolku alla: pikselimaskia ei saatu (tainted canvas, vanha
+    // konteksti) — silloin kerma maalataan kuten ennen kohtaa 2,
+    // suojan ulkopuolelle ja meristä välittämättä. Se on porras, mutta
+    // peittämätön reliefi olisi pahempi.
+  }
+  else if (maamaski) {
+    maskilla = maalaaKermaMaamaskilla(ctx, {
       W, H, x0, y0, x1, y1, kerma: [r, g, b], peitto: tasoitus.peitto,
     });
-    if (!(x1 > x0) || !(y1 > y0)) return true;
+    if (maskilla && (!(x1 > x0) || !(y1 > y0))) return true;
   }
-  else {
+  if (!maskilla) {
     ctx.fillStyle = `rgba(${r},${g},${b},${tasoitus.peitto})`;
     if (!(x1 > x0) || !(y1 > y0)) { ctx.fillRect(0, 0, W, H); return true; }
     if (y0 > 0) ctx.fillRect(0, 0, W, y0);
