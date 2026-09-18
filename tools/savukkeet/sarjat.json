@@ -97,7 +97,10 @@
       "env": {
         "NAKYMAT": "tyopoyta,ei-vartija"
       },
-      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Työpöytänäyttö ILMAN vartijalohkoa: ei-vartija estää sen, koska tyopoyta laukaisisi lohkon oletuksena ja se ajettaisiin kahdesti (ks. savuke-astro-pallo.mjs, NAKYMAT-kommentti)."
+      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Työpöytänäyttö ILMAN vartijalohkoa: ei-vartija estää sen, koska tyopoyta laukaisisi lohkon oletuksena ja se ajettaisiin kahdesti (ks. savuke-astro-pallo.mjs, NAKYMAT-kommentti). TUNNETTU KUORMAPUNAINEN 19.9.2026 klo 02.00 (v1947): 45c sadekehamitta 4,8 vs raja 5 rinnakkaisajossa (savukkeen oma kommentti: mitattu 4,6 kuormassa); ei kulje pinnanKirkkaus-mittarin kautta. Poistetaan kahden perakkaisen vihrean jalkeen. Ks. docs/raportit/viesti-fable-astro-pallo-pilvet-20260919.md.",
+      "tunnetutPunaiset": [
+        "45c: valaisu tulee sädekehästä eikä maastosta"
+      ]
     },
     "savuke-satelliittilinssi.mjs#isot": {
       "env": {

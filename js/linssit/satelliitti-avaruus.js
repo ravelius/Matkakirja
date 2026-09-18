@@ -1688,6 +1688,23 @@ export function kontekstiHukassa(pallo) {
  * pallon takana; keskeltä näkyy vain pinta. Ruudukko on 5 × 5 ja
  * kattaa 30 % pallon säteestä — riittävän laaja, ettei yksi musta
  * meri tai yksi valkoinen pilvi ratkaise.
+ *
+ * ── ESTEET POIS SIKSI YHDEKSI KEHYKSEKSI (19.9.2026) ──────────────
+ *
+ * PAATOKSET 43 kohta 7 toi pinnan päälle PILVIKUOREN (säde 1,01 ×
+ * pallon säde, peitto kaukaa 0,9). Se on täsmälleen näytteiden ja
+ * pinnan välissä, joten mittari alkoi lukea PILVIÄ: mitattu PR #2590:n
+ * ajossa `MUSTA PINTA` 186 (pinta oli musta) ja sävyvartio 216
+ * (valkoisella 222) — kumpikin luku on pilvien, ei pinnan.
+ *
+ * "Yksi valkoinen pilvi ei ratkaise" pitää yhä paikkansa YHDESTÄ
+ * pilvestä; koko pallon kattava kuori on eri asia, eikä sitä voi
+ * kiertää näytteitä siirtämällä. Siksi kutsuja antaa `piilotaEsteet`-
+ * kytkimen: mittaus vie kuoren pois piirrosta, piirtää oman kehyksensä,
+ * lukee pikselit ja palauttaa kuoren heti perään. Pelaajan näkymä ei
+ * muutu (mittauksen kehys ei mene ruudulle asti, ja seuraava kehys
+ * piirretään kuori paikallaan), mutta musta pinta jää kiinni MYÖS
+ * pilvien alta — juuri se on vartion tehtävä.
  */
 
 /** Pinta on musta, jos kirkkain näyte alittaa tämän. */
@@ -1707,8 +1724,21 @@ export const PINNAN_MITTAUKSEN_VIIVE_MS = 900;
  * jos mittausta ei voi tehdä (ei kontekstia, konteksti hukassa, ei
  * readPixelsia). `null` EI ole puute: vartija ei saa olla tiukempi
  * kuin sen tieto.
+ *
+ * @param piilotaEsteet  valinnainen `(kylla: boolean) => boolean`, joka
+ *   vie pinnan päällä olevat kuoret (pilvet) pois piirrosta mittauksen
+ *   ajaksi ja palauttaa ne perään. Ks. luvun johdanto.
  */
-export function pinnanKirkkaus(pallo, ikkuna = globalThis) {
+export function pinnanKirkkaus(pallo, ikkuna = globalThis, piilotaEsteet = null) {
+  let esteetPiilossa = false;
+  /*
+   * PIIRTOKAHVAT MYÖS `finally`n ULOTTUVILLE: kun kuori palautetaan,
+   * ruudulle on piirrettävä YKSI KEHYS LISÄÄ. Mittauksen oma kehys
+   * menee samasta puskurista myös ruudulle (selain kompositoi tehtävän
+   * lopussa), joten ilman tätä pilvet välähtäisivät pois yhdeksi
+   * kehykseksi joka mittauksella.
+   */
+  let jalkipiirto = null;
   try {
     const piirtaja = pallo?.renderer?.();
     const gl = piirtaja?.getContext?.();
@@ -1722,6 +1752,15 @@ export function pinnanKirkkaus(pallo, ikkuna = globalThis) {
     const nayttamo = pallo.scene?.();
     const kamera = pallo.camera?.();
     if (!nayttamo || !kamera || typeof piirtaja.render !== 'function') return null;
+    /*
+     * ESTEET POIS ENNEN OMAA KEHYSTÄ. Jos kytkintä ei ole tai kuorta ei
+     * ole vielä rakennettu, mittaus tehdään kuten ennenkin — vartija ei
+     * saa kaatua siihen, ettei pilvikerrosta ole.
+     */
+    if (typeof piilotaEsteet === 'function') {
+      try { esteetPiilossa = piilotaEsteet(true) === true; } catch { esteetPiilossa = false; }
+    }
+    if (esteetPiilossa) jalkipiirto = () => piirtaja.render(nayttamo, kamera);
     piirtaja.render(nayttamo, kamera);
     /*
      * PALLON SÄDE RUUDULLA: kirjasto antaa kameran korkeuden säteinä,
@@ -1749,7 +1788,16 @@ export function pinnanKirkkaus(pallo, ikkuna = globalThis) {
       }
     }
     return paras;
-  } catch { return null; }
+  } catch { return null; } finally {
+    /*
+     * KUORI TAKAISIN AINA — myös jos readPixels heitti. Muuten yksi
+     * epäonnistunut mittaus jättäisi pilvet pois pelaajan näkymästä.
+     */
+    if (esteetPiilossa) {
+      try { piilotaEsteet(false); } catch { /* kuori jo purettu */ }
+      try { jalkipiirto?.(); } catch { /* piirtäjä jo purettu */ }
+    }
+  }
 }
 
 /*
@@ -2302,12 +2350,28 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   let pinnanKello = 0;
   let varapolullaKaytiin = false;
   let varinValkaisuTehty = false;
+  /*
+   * PILVIKUOREN KYTKIN MITTAUSTA VARTEN (19.9.2026, ks. pinnanKirkkaus).
+   * Sumu luodaan vasta alempana (luku 2c), joten tähän kirjoitetaan
+   * `null` nyt ja kytkin sitten — mittaus ajetaan vasta ajastimesta,
+   * joten se näkee aina tuoreen arvon.
+   */
+  let pintamittauksenEste = null;
+  let esteitaPiilotettu = 0;
   const mittaaPinta = () => {
-    const kirkkaus = pinnanKirkkaus(pallo, ikkuna);
+    const este = typeof pintamittauksenEste === 'function'
+      ? (kylla) => {
+        const ok = pintamittauksenEste(kylla) === true;
+        if (ok && kylla) esteitaPiilotettu += 1;
+        return ok;
+      }
+      : null;
+    const kirkkaus = pinnanKirkkaus(pallo, ikkuna, este);
     viimeisinKirkkaus = kirkkaus;
     pallodiag('pinta-mittaus', {
       kirkkaus: kirkkaus ?? '?', reliefi: reliefiPaalla ? 1 : 0,
       varapolku: varapolullaKaytiin ? 2 : (varinValkaisuTehty ? 1 : 0),
+      este: esteitaPiilotettu,
     }, ikkuna);
     if (kirkkaus === null || kirkkaus >= PINNAN_MUSTAN_KYNNYS) return kirkkaus;
     if (purettu) return kirkkaus;
@@ -2455,6 +2519,13 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   const sumu = luoAstroSumu({
     lauta, kotelo, avaus: () => avauskorkeus, reduced, ikkuna,
   });
+  /*
+   * PILVIKUORI POIS PINNAN MITTAUKSEN AJAKSI (19.9.2026). Ilman tätä
+   * `pinnanKirkkaus` lukee pilvet eikä pintaa, ja musta pallo jää
+   * huomaamatta niiden alle — mitattu PR #2590:ssä (186 mustasta
+   * pinnasta). Kytkin annetaan vasta tässä, koska sumu syntyy vasta nyt.
+   */
+  pintamittauksenEste = sumu ? (kylla) => sumu.piilotaPilvet(kylla) : null;
   /*
    * LINSSIN OMA KEHYSSILMUKKA. Kaksi työtä samassa silmukassa: pölyn
    * hidas ajautuma (tarvitsee kehyskellon; liikkeenvähennyksellä dt
@@ -2743,6 +2814,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       kehykset: kehysvahti.tila(),
       pinnanKirkkaus: viimeisinKirkkaus,
       pinnanVarapolku: varapolullaKaytiin,
+      /* Montako kertaa pilvikuori vietiin pois mittauksen ajaksi. */
+      pinnanEsteita: esteitaPiilotettu,
       /* LISÄYS 15 kohta 43: sävyvahdin kirjoitukset ja voimassa oleva sävy. */
       pallonSavy: `#${PALLON_SAVY.toString(16)}`,
       savyKirjoituksia,

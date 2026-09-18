@@ -1752,7 +1752,29 @@ async function ajaAvaus({ peite = true } = {}) {
   const rivit = kehykset.map((k) => ({
     t: k.ts - data.alku - t0,
     kirkkaus: keskikirkkaus(Buffer.from(k.data, 'base64')),
+    data: k.data,
   })).sort((a, b) => a.t - b.t);
+  /*
+   * KEHYSSARJA LEVYLLE (KEHYSSARJA=1). Diagnoosia varten: (t, kirkkaus)
+   * JSONina ja tummimman kehyksen ympäristö PNG:inä, jotta näkee MIKÄ
+   * ruudulla on kun kirkkaus putoaa. Ei vaikuta väitteisiin.
+   */
+  if (process.env.KEHYSSARJA) {
+    const tunnus = peite ? '' : '-vastakoe';
+    writeFileSync(join(ULOS, `avaus-kehyssarja${tunnus}.json`),
+      JSON.stringify(rivit.map((x) => ({ t: Math.round(x.t), k: +x.kirkkaus.toFixed(1) })), null, 1));
+    const ikkuna = rivit.filter((x) => x.t >= -500 && x.t <= 3000);
+    let pieninI = 0;
+    ikkuna.forEach((x, i) => { if (x.kirkkaus < ikkuna[pieninI].kirkkaus) pieninI = i; });
+    const otokset = new Set([0, Math.max(0, pieninI - 2), Math.max(0, pieninI - 1), pieninI,
+      Math.min(ikkuna.length - 1, pieninI + 1), Math.min(ikkuna.length - 1, pieninI + 3),
+      Math.min(ikkuna.length - 1, pieninI + 8), ikkuna.length - 1]);
+    for (const i of otokset) {
+      if (!ikkuna[i]) continue;
+      writeFileSync(join(ULOS, `kehys${tunnus}-${String(Math.round(ikkuna[i].t)).padStart(5, '0')}ms.png`),
+        Buffer.from(ikkuna[i].data, 'base64'));
+    }
+  }
 
   /*
    * IKKUNA ON AVAUS: linssin valinnasta siihen hetkeen, jolloin reliefi
@@ -1774,9 +1796,40 @@ async function ajaAvaus({ peite = true } = {}) {
   const IKKUNA_VAHINTAAN_MS = 1000;
   const loppu = Math.max(valmis ? valmis.t - t0 : Infinity, IKKUNA_VAHINTAAN_MS);
   const ennenRivit = rivit.filter((x) => x.t < 0);
-  const avausRivit = rivit.filter((x) => x.t >= 0 && x.t <= loppu);
   const ennenKirkkaus = ennenRivit.length
     ? ennenRivit.reduce((a, b) => a + b.kirkkaus, 0) / ennenRivit.length : 0;
+  /*
+   * IKKUNA ALKAA SIITÄ, MISSÄ LINSSIN OMA KUVA ALKAA — ei siitä, missä
+   * `valitseLinssi` kutsuttiin (korjattu 19.9.2026).
+   *
+   * Kello `t0` on JS-kutsun hetki. Ensimmäiset kehykset sen jälkeen
+   * ovat yhä PELAAJAN OMA EDELLINEN NÄKYMÄ: selain ei ole vielä
+   * ehtinyt maalata mitään linssin omaa. Ne eivät ole avausta vaan
+   * sitä, mitä ruudulla oli ennestään — ja savuke mittaa sen jo
+   * erikseen (`seepia ennen linssiä`).
+   *
+   * Mitattu 19.9.2026 (390 × 844, luenta päällä, kehyssarja): kehykset
+   * t = 4 ms ja t = 12 ms olivat kirkkaudeltaan 132,1 eli bitilleen
+   * sama kuin linssiä edeltävä ruutu, ja seuraava kehys (t = 266 ms)
+   * oli odotuspeite 20,5. Vartija luki tästä "paluun ylhäältä alas"
+   * 111,5 — mutta se ei ole välähdys vaan TÄSMÄLLEEN SE TUMMA LASI,
+   * jonka ODOTUSPEITE-osio lupaa (js/linssit/topografia.js). Väite
+   * koskee VAALEAA välivaihetta ("vaalea kartta piirtyy ensin ja
+   * topografia sen päälle"), ja paljaan kartan näytteet mitataan omalla
+   * väitteellään vastakokeineen.
+   *
+   * Raja EI löysty: pudotusraja on yhä 15 yksikköä. Ikkunasta jätetään
+   * pois vain ne alkukehykset, joiden kirkkaus on yhä linssiä edeltävä
+   * kirkkaus (± ENNEN_VARA) — eli ne, joissa ruutu ei ole vielä
+   * muuttunut. Ensimmäinen muuttunut kehys on mukana.
+   */
+  const ENNEN_VARA = 3;
+  const ikkunanRivit = rivit.filter((x) => x.t >= 0 && x.t <= loppu);
+  const alkuI = ennenRivit.length
+    ? ikkunanRivit.findIndex((x) => Math.abs(x.kirkkaus - ennenKirkkaus) > ENNEN_VARA) : 0;
+  /* Jos ruutu ei muutu lainkaan, mitataan koko ikkuna (ei piilotusta). */
+  const avausRivit = alkuI > 0 ? ikkunanRivit.slice(alkuI) : ikkunanRivit;
+  const ohitettuja = ikkunanRivit.length - avausRivit.length;
   /*
    * VAKIINTUNUT TILA = kehykset 2 sekuntia avauksen jälkeen. Tämä on se
    * luku, jota vasten välähdys mitataan (ks. väite alla).
@@ -1791,7 +1844,7 @@ async function ajaAvaus({ peite = true } = {}) {
    */
   let huippuToistaiseksi = -Infinity;
   let suurinPudotus = 0;
-  for (const x of rivit.filter((y) => y.t >= 0 && y.t <= loppu)) {
+  for (const x of avausRivit) {
     huippuToistaiseksi = Math.max(huippuToistaiseksi, x.kirkkaus);
     suurinPudotus = Math.max(suurinPudotus, huippuToistaiseksi - x.kirkkaus);
   }
@@ -1825,6 +1878,8 @@ async function ajaAvaus({ peite = true } = {}) {
     tekstuuri,
     virheet,
     ennenKirkkaus,
+    /** Ikkunan alusta pois jätetyt, yhä linssiä edeltävät kehykset. */
+    ohitettuja,
     avausKehykset: avausRivit.length,
     /*
      * KATTAVUUS = kuinka suuren osan avausikkunasta kehysnäytteet
@@ -1904,7 +1959,8 @@ const VALAHDYSVARA = 15;
 console.log(`INFO  ${nimiA}: avauksen maksimikirkkaus ${a.avausHuippu.toFixed(1)}, `
   + `vakiintunut (2 s jälkeen, ${a.vakiintuneita} kehystä) ${a.vakiintunut.toFixed(1)}, `
   + `suurin paluu ylhäältä alas ${a.suurinPudotus.toFixed(1)}, `
-  + `seepia ennen linssiä ${a.ennenKirkkaus.toFixed(1)}`);
+  + `seepia ennen linssiä ${a.ennenKirkkaus.toFixed(1)} `
+  + `(ikkunan alusta ohi ${a.ohitettuja} muuttumatonta kehystä)`);
 /*
  * ── MEDIAANI KOLMESTA NÄYTTEESTÄ KUORMASSA ──────────────────────────
  *

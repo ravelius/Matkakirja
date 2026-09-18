@@ -98,3 +98,4 @@ ne-data/
 # R2-ämpäri, ei repo — työnkulku .github/workflows/renderoi-reliefi-macilla.yml
 # vie kuvat polkuun matkakirja/linssit/.
 pallo-topografia-ulos/
+.claude/settings.local.json
