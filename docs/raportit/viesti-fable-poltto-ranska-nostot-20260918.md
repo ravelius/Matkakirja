@@ -408,6 +408,10 @@ ks. E2.1; generaattoriin ei koskettu.)
    siirtoviivoja. **Carnacin kivirivit ei ole laatassa** — se on niitä
    kolmea, joilta puuttuu lukittu ankkuri, ja jää siksi eläväksi (E2.1).
 
+Kumpikin laatta on kansiossa `docs/raportit/kuvat/poltto-ranska-20260918/`
+(`koelaatta-z7-83-33.png`, `koelaatta-z6-40-17.png`) — **laattoja
+itseään ei committoitu**, vain nämä kaksi luettua kuvaa.
+
 **Musteen paikka mitattu laatasta:** Mont-Saint-Michelin lukittu
 ankkuri (48,502711 N / −1,504295 E) osuu laatassa z6/40/17 kohtaan
 (339,5 · 299,9) px, ja laatan piste on siinä. **Poltettu muste on
@@ -422,21 +426,84 @@ sietoa), lukitulta ei polteta siirtoviivaa, kaupungin sisäisiä on
 suodattunut pois, ja luettelon tiiviste on merkin oma. **Koko sarja:
 3600 pass, 0 fail.**
 
-## E2.6 Mitä EI ehditty (erä 3)
+## E2.6 Pelin puoli: mitä uusi nostoversio vaatii (selvitetty, EI tehty)
 
-Aikakatto täyttyi ennen näitä; **laattoja ei ajettu eikä pelin puolta
-mitattu Playwrightilla**:
+Kysymys oli: *mitä manifestiin/luetteloon pitää kirjoittaa, ettei
+nostotaso sammu.* Vastaus on luettu koodista, ja se on **kolme
+tiedostoa, jotka on vaihdettava samassa julkaisussa**:
 
-1. **Pelin puoli:** mitä manifestiin/luetteloon kirjoitetaan uudella
-   nostoversiolla, ettei nostotaso sammu (`js/pallolaatat.js`
-   `lepokerroksenKerrokset` -versiovahti, `js/pallo.js` sarja).
-   Selvitys on erän 1 luvussa 5 kohdassa 2; **muutosta ei tehty.**
-2. **Kolmen ankkurittoman noston** (biskajanlahti, carnacin-kivirivit,
-   chambord) juurisyy — epäilys: aihenoston jäseniä.
-3. **Playwright-mitta** 390 px Pariisin lähizoomista ja Ranskan
-   saapumisesta paikallisilla koelaatoilla (route-välitys).
+**1. `pyramidi.json` — tasokartan luettelo.** Generaattori kirjoittaa
+kentän itse (todennettu koepoltosta, E2.4):
 
-## E2.7 Komennot (ÄLÄ aja — Fablen päätös)
+```json
+"nostotaso": { "versio": "2026-09-18-fra", "nostot": { "<tunnus>": "<tiiviste>" } }
+```
+
+Ämpäriin se menee lipulla `-f vie_luettelo=true` (tai erillisellä
+luettelojobilla). Tunnus→tiiviste-taulussa on **1612 riviä** ja siitä
+puuttuvat nyt kaupungin sisäiset ja ankkurittomat (E2.3).
+
+**2. Pallon oma sarja `laatat.json`.** Pallo EI lue pyramidin
+tiivisteitä vaan oman sarjansa `nostotaso.nostot`-kenttää
+(js/pallo.js `pallonNostoOnPoltettu`). `tools/tee-pallolaatat.mjs
+--nostot` kopioi sen pyramidista ja kirjoittaa samalla
+**`"nostot": "2026-09-18-fra"`** (rivi 786). Ilman tätä ajoa pallon
+sarjassa lukee yhä vanha nostoversio.
+
+**3. `js/pallo.js` — sarjan nimi.** Kansio on
+`PALLO_LAATTAVERSIO`-`nostot`-`PALLO_LAATTATUNNISTE`, nyt
+`2026-09-07a-nostot-f` (rivit 112, 142–143). Uusi nostosarja on uusi
+kansio, eli **`PALLO_LAATTATUNNISTE` nousee `'f'` → `'g'`**.
+
+**MIKSI KAIKKI KOLME SAMASSA JULKAISUSSA.**
+`js/pallolaatat.js lepokerroksenKerrokset` (rivit 351–359) palauttaa
+**null — eli EI KERROSTA LAINKAAN** heti kun
+`pallonLuettelo.nostot !== pyramidi.nostotaso.versio`. Vahti on
+ehdoton, eikä sitä voi ohittaa kytkimellä: jos pallon sarja jää
+vanhaan ja pyramidiin viedään uusi nostoversio, **koko laattakerros
+sammuu** ja pallo putoaa takaisin pohjalaattoihin.
+
+**`?nostoversio=…`-KYTKINTÄ EI TEHTY, EIKÄ SITÄ KANNATA TEHDÄ.**
+Kytkin ohittaisi juuri sen vahdin, joka estää sekatilan (osa merkeistä
+laatassa, osa elävänä) — ja koska luettelo `nostotaso.nostot` ei ole
+tasokohtainen, sekatila näkyisi kaksoiskuvina ja kadonneina merkkeinä.
+Oikea järjestys on versionosto, joka on tässä tehtävänannossa
+kielletty. **Tämä on siis Fablen päätös ja seuraavan julkaisun työ.**
+
+**PLAYWRIGHT-MITTAA PELIN PUOLELTA EI AJETTU.** Se vaatisi valelun
+sekä `pyramidi.json`:sta että pallon `laatat.json`:sta ja koelaattojen
+tarjoilun route-välityksellä — eli juuri sen sekatilan rakentamisen,
+jonka vahti on tehty estämään. Ketju on silti suljettu mittaamalla,
+kolmessa osassa samasta taulusta:
+
+1. **Elävä ankkuri = taulu** — erä 1, luku 3.4: 65/65, suurin ero
+   4,17·10⁻⁷° (≈ 0,05 m) ja **sama luku 390 px:llä ja 1400 px:llä**.
+2. **Poltettava merkki = taulu** — E2.3: ero **0,00** laudan yksikköä,
+   9/9 (vartiona `tests/poltto-lukitut-ankkurit.test.mjs`).
+3. **Laatan muste = taulu** — E2.4: Mont-Saint-Michelin piste laatassa
+   z6/40/17 kohdassa (339,5 · 299,9) px, joka on ankkurin oma piste.
+
+Elävä nimiö ja osumapinta ovat siis poltetun pisteen kohdalla ≈ 0,05 m
+tarkkuudella kaikilla ruuduilla. **Silmämääräinen tarkistus pelissä on
+silti erän 3 työ**, koska tuplapistettä ja nimiön väistöä ei voi mitata
+datasta.
+
+## E2.7 Mitä EI ehditty (erä 3)
+
+Kolme asiaa jäi, ja kaikki kolme ovat Fablen päätöksen takana:
+
+1. **Versionosto** (E2.6): `tools/tee-pallolaatat.mjs --nostot`,
+   `PALLO_LAATTATUNNISTE` `'f'` → `'g'` ja `vie_luettelo=true` samassa
+   julkaisussa. **Kielletty tässä tehtävänannossa, ei tehty.**
+2. **Kolmen ankkurittoman noston** (`biskajanlahti`,
+   `carnacin-kivirivit`, `chambord`) juurisyy — epäilys: aihenoston
+   jäseniä, jolloin ne eivät ole `osumat()`-listalla omina riveinään.
+   Ne jäävät nyt eläviksi eivätkä polta mitään, joten **laattaan ei
+   tule väärää mustetta** — mutta ne eivät myöskään hyödy poltosta.
+3. **Silmämääräinen tarkistus pelissä** (tuplapiste, nimiön väistö)
+   uusilla laatoilla, kun versionosto on tehty.
+
+## E2.8 Komennot (ÄLÄ aja — Fablen päätös)
 
 Actions-työnkulku — **koko maailman nostotaso**, ks. E2.3:n varoitus:
 
