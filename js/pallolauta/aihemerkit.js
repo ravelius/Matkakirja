@@ -365,6 +365,17 @@ export function viuhkanAsemat({
   p, ruutu, leveydet, esteet = [], kasvu = 'keskitetty', kovaEnsin = false,
   vaakaEhdokkaat = [0],
   /*
+   * LISTA AINA MERKIN OIKEALLE PUOLELLE (kaupunkiliuska, Raamattu
+   * KARTTAUUDISTUKSEN PAATOKSET 34 kohta 14 b; omistaja 18.9.2026:
+   * *"kartta liikkuisi aina niin, etta teksti mahtuisi Pariisin
+   * oikealle puolelle"*). Viuhka valitsee puolensa kuten ennen
+   * (oletus epätosi); liuskalle puoli on päätös eikä hakutulos, koska
+   * kamera on jo ajanut merkin ruudun vasempaan neljännekseen. Sama
+   * lippu estää reunakiinnitystä vetämästä listaa merkin yli: se saa
+   * siirtää listaa vain oikealle.
+   */
+  vainOikea = false,
+  /*
    * RIVIN MITAT OVAT PARAMETREJA (kaupunkiliuska, PAATOKSET 34 kohta
    * 13 a). Riviväli ja rivin puolikorkeus seuraavat liuskan kirjasinta
    * (1,45 × fontti); oletukset ovat viuhkan omat vakiot, joten
@@ -405,7 +416,9 @@ export function viuhkanAsemat({
     ? Math.max(tiheinPx, Math.min(valiPx, kaytettava / (n - 1)))
     : valiPx;
   const korkeus = (n - 1) * vali;
-  const puolet = p.x <= ruutu.leveys / 2 ? ['oikea', 'vasen'] : ['vasen', 'oikea'];
+  const puolet = vainOikea
+    ? ['oikea']
+    : (p.x <= ruutu.leveys / 2 ? ['oikea', 'vasen'] : ['vasen', 'oikea']);
   const askel = Math.round(vali);
   /*
    * KASVUSUUNTA. Viuhka on merkin ympärillä keskitetty, mutta
@@ -455,6 +468,10 @@ export function viuhkanAsemat({
       let dx = dx0;
       if (p.x + rivi.x0 < vara) dx += vara - (p.x + rivi.x0);
       else if (p.x + rivi.x1 > ruutu.leveys - vara) dx += (ruutu.leveys - vara) - (p.x + rivi.x1);
+      // Oikean laidan kiinnitys ei saa vetää liuskaa merkin päälle
+      // (kohta 14 b): leveys on kutsujan asia (rivit rivittyvät sen
+      // mukaan, paljonko oikealle jää tilaa), asema ei.
+      if (vainOikea) dx = Math.max(dx, dx0);
       // Pystykiinnitys: ylin ja alin rivi ruudun sisään.
       let ylin = perus + siirto;
       const yYla = p.y + ylin - riviPx;

@@ -1669,11 +1669,21 @@ export function luoNostot({
    * Kamera-ajo (kohta 10) tehdään ENNEN tätä kutsua laudalla, jottei
    * ajon oma siirto sulje juuri avattua liuskaa.
    */
-  const avaaLiuska = (rivi, { liiku = false } = {}) => {
+  const avaaLiuska = (rivi, { liiku = false, id = null } = {}) => {
     if (!rivi?.p) return false;
     viuhka = null;
     liuska = {
       avain: rivi.avain,
+      /*
+       * KAUPUNGIN TUNNUS KULKEE MUKANA (PAATOKSET 34 kohta 14 c):
+       * lauta piilottaa kaupungin ISON NIMEN liuskan ajaksi
+       * (js/pallolauta/lauta.js `nimet.lado` → `piilota`), ja tämä
+       * ladonta jättää saman nimen pois liuskan kovista esteistä.
+       * Tunnus tulee kutsujalta (`avaaLiuskaKaupungista` → laudan
+       * kaupunki), koska laudan oman kaupungin rivi on ankkuri eikä
+       * nostokerroksen kaupunkirivi.
+       */
+      kaupunkiId: id ?? rivi.id ?? null,
       p: { x: rivi.p.x, y: rivi.p.y },
       uloinOsuus: viimeisinUloinOsuus,
       avattuKategoria: null,
@@ -2548,8 +2558,18 @@ export function luoNostot({
           return Array.isArray(tuoreet) && tuoreet.length ? tuoreet : viimeisimmatNimet;
         })();
         // Sama varjostus kuin viuhkalla (ks. ESTEET ON TÄSSÄ LISTA).
+        /*
+         * KAUPUNGIN ISO NIMI EI OLE ESTE, KUN LIUSKA ON AUKI (kohta
+         * 14 c, omistaja: *"Pariisin nimikyltinhan voi vaikka ottaa
+         * pois nakyvista silloin, kun viuhka aukeaa."*). Nimi on
+         * piilotettu ladonnasta samalla tunnuksella, mutta edellisen
+         * ladonnan laatikko elää yhä `nimienLaatikot`issa — se
+         * pudotetaan tässä, jottei kadonnut nimi työnnä listaa.
+         */
+        const piiloNimi = liuska.kaupunkiId ?? null;
         const kovat = [...nimiLaatikot, ...(Array.isArray(esteet) ? esteet : [])]
           .filter(Boolean)
+          .filter((e) => !(piiloNimi && e.id === piiloNimi))
           .map((e) => ({ ...e, paino: KOVAN_ESTEEN_PAINO }));
         const listanEsteet = [...kovat, ...laatikot];
         /*
@@ -2564,11 +2584,13 @@ export function luoNostot({
         for (const e of kovat) {
           if (!Number.isFinite(e?.x0) || !Number.isFinite(e?.x1)) continue;
           if (!Number.isFinite(e?.y0) || !Number.isFinite(e?.y1)) continue;
-          for (const reuna of [e.x1 - rivi.p.x, rivi.p.x - e.x0]) {
-            const d = Math.round(reuna + VIUHKAN_REUNAVARA_PX);
-            if (d > 0 && d < ruutuNyt.leveys && !vaakaEhdokkaat.includes(d)) {
-              vaakaEhdokkaat.push(d);
-            }
+          // VAIN OIKEAN PUOLEN EHDOKKAAT (kohta 14 b): lista ei enää
+          // hae asentoa merkin vasemmalta, joten esteen VASEN reuna
+          // (`rivi.p.x - e.x0`) ei ole ehdokas — se vei listan
+          // nappulan päälle omistajan kuvassa v1936.
+          const d = Math.round((e.x1 - rivi.p.x) + VIUHKAN_REUNAVARA_PX);
+          if (d > 0 && d < ruutuNyt.leveys && !vaakaEhdokkaat.includes(d)) {
+            vaakaEhdokkaat.push(d);
           }
         }
         vaakaEhdokkaat.sort((a, b) => a - b);
@@ -2612,8 +2634,19 @@ export function luoNostot({
         const leveydenKatto = ruutuNyt.leveys * LIUSKAN_LEVEYDEN_OSUUS - LIUSKAN_LAATIKON_VARA_PX;
         const tilaaOikealla = ruutuNyt.leveys - rivi.p.x
           - VIUHKAN_REUNAVARA_PX - 2 * VIUHKAN_SADE_PX;
+        /*
+         * RIVIN LEVEYS ON SE, MIKÄ OIKEALLE JÄÄ (kohta 14 b). Ennen
+         * tässä oli `Math.max(tilaaOikealla, ruutu/2)`: se antoi
+         * listalle puoli ruutua silloinkin, kun merkin oikealle
+         * puolelle ei mahtunut niin paljon, ja ainoa tapa mahduttaa
+         * se oli siirtää lista merkin vasemmalle puolelle. Nyt puoli
+         * on lukittu, joten LEVEYS joustaa: pitkä nimi rivittyy.
+         * Lattia (neljännes ruudusta) on vain sen varalta, ettei
+         * merkki ole aivan oikeassa laidassa — silloin reunakiinnitys
+         * hoitaa lopun.
+         */
         const rivinTila = Math.max(0,
-          Math.min(leveydenKatto, Math.max(tilaaOikealla, ruutuNyt.leveys / 2)));
+          Math.min(leveydenKatto, Math.max(tilaaOikealla, ruutuNyt.leveys / 4)));
         const rivinLeveys = (teksti) => (teksti
           ? viuhkanNimioLeveys(nostosymNimioMitta(teksti, null, Infinity).leveys, liuskaMitta)
           : 0);
@@ -2677,6 +2710,8 @@ export function luoNostot({
             esteet: listanEsteet,
             kasvu: 'keskitetty',
             vaakaEhdokkaat,
+            // Puoli on päätös, ei hakutulos (kohta 14 b).
+            vainOikea: true,
             valiPx,
             tiheinPx,
             riviPx,
@@ -3100,6 +3135,11 @@ export function luoNostot({
     })),
     /** Auki olevan liuskan kaupunkirivin avain tai null. */
     liuskaAuki: () => liuska?.avain ?? null,
+    /**
+     * Auki olevan liuskan KAUPUNGIN tunnus tai null (kohta 14 c).
+     * Lauta piilottaa tämän kaupungin ison nimen liuskan ajaksi.
+     */
+    liuskanKaupunkiId: () => liuska?.kaupunkiId ?? null,
     /** Auki olevan kategorian aihe tai null (haitari, kohta 8). */
     liuskanKategoria: () => liuska?.avattuKategoria ?? null,
     suljeLiuska,
@@ -3177,7 +3217,7 @@ export function luoNostot({
         const matka = Math.hypot(o.p.x - p.x, o.p.y - p.y);
         if (matka < parasMatka) { parasMatka = matka; paras = o; }
       }
-      if (paras && parasMatka <= 60) return avaaLiuska(paras, valinnat);
+      if (paras && parasMatka <= 60) return avaaLiuska(paras, { ...valinnat, id: valinnat.id ?? paras.id });
       return avaaLiuska({ avain: laudanAvain({ id: valinnat.id, nimi: valinnat.nimi }), p }, valinnat);
     },
     /**
