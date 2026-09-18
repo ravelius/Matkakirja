@@ -1477,8 +1477,15 @@ export function luoNostot({
       const oma = kohdekarttaPaikat.get(rivi.id) ?? null;
       rivit.push({
         ...rivi,
-        omaLat: oma?.lat ?? (Number.isFinite(rivi.lat) ? rivi.lat : null),
-        omaLng: oma?.lng ?? (Number.isFinite(rivi.lng) ? rivi.lng : null),
+        /*
+         * JÄRJESTYS: kaupunkilehden kohdekartan piste voittaa, sitten
+         * rivin oma ladontaa edeltävä piste (`omaX`/`omaY` → `omaLat`,
+         * ks. kutsut alempana), ja vasta viimeisenä ladottu `lat`.
+         */
+        omaLat: oma?.lat ?? (Number.isFinite(rivi.omaLat) ? rivi.omaLat
+          : (Number.isFinite(rivi.lat) ? rivi.lat : null)),
+        omaLng: oma?.lng ?? (Number.isFinite(rivi.omaLng) ? rivi.omaLng
+          : (Number.isFinite(rivi.lng) ? rivi.lng : null)),
         ladontaNro: nro++,
       });
     };
@@ -1513,12 +1520,22 @@ export function luoNostot({
         if (!a) continue;
         const kohde = tiedot.get(m.id) ?? m.kohde;
         if (!kohde) continue;
+        /*
+         * OMA PAIKKA ON LADONTAA EDELTÄVÄ PISTE (PAATOKSET 34 kohta 4).
+         * `asteet(m)` antaa merkin ladotun paikan — erottelupassin ja
+         * kasauspassin jälkeen. Jäsenyys mitataan `omaX`/`omaY`:stä
+         * (js/fokuskohteet.js maanKohdemerkit).
+         */
+        const oma = Number.isFinite(m.omaX) && Number.isFinite(m.omaY)
+          ? asteet({ x: m.omaX, y: m.omaY }) : null;
         lisaa({
           avain: `nosto:${m.id}`,
           id: m.id,
           perhe: 'nosto',
           lat: a.lat,
           lng: a.lon,
+          omaLat: oma ? oma.lat : null,
+          omaLng: oma ? oma.lon : null,
           nimi: m.nimi ?? '',
           nimioNakyy: m.nimioNakyy,
           kategoria: m.kategoria,
@@ -1556,7 +1573,12 @@ export function luoNostot({
            * kaupungin sisällä ilman koordinaattimittaa — arvioitu
            * koordinaatti ei voi kiistää datan omaa sanaa.
            */
-          paikkaNimi: typeof kohde.paikka === 'string' ? kohde.paikka : null,
+          paikkaNimi: (typeof kohde.paikka === 'string'
+            ? kohde.paikka
+            // Pakoissa `paikka` on useimmiten olio `{ nimi, laudat }`
+            // (js/packs/maalehtinostot-fra.js), joten pelkkä merkkijono
+            // ei löydä datan omaa sanaa lainkaan.
+            : (kohde.paikka?.nimi ?? null)) || null,
           avaa: kohde.vainNimi
             ? null
             : ((ankkuri) => avaaFokuskohde(ui, kohde, { ankkuri })),
@@ -2099,7 +2121,30 @@ export function luoNostot({
      *
      * SAMA LISTA TÄYTTÄÄ LIUSKAN. Jos suodatus ja liuska laskettaisiin
      * erikseen, kartalta voisi kadota nosto, jota mikään lista ei avaa.
+     *
+     * ══ KAUPUNKIJÄSENYYS ON DATAN TIETO, EI RUUDUN ════════════════
+     * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34 kohta 3 ja 17 a;
+     * mitattu 18.9.2026: `nosto-maalehti-pasteur-meister` liikkui yhä
+     * vedossa 390 px:llä.)
+     *
+     * JUURISYY: tämä lista syntyi `elavatKaikki`sta eli RUUDULLA
+     * olevista riveistä, ja laudan ankkuririvi vaati `ruudulla()`-
+     * pisteen. 390 px:n ruudulla Pariisin oma piste jää kuvan
+     * ulkopuolelle, vaikka sen nostot (ankkurilevityksen jäljiltä
+     * 33–74 km päässä, PAATOKSET 32) ovat ruudulla. Silloin Pariisia
+     * ei ollut jäsenyyslistassa lainkaan, kaupungin sisäiset nostot
+     * eivät karsiutuneet kartalta, ja ne latoivat itsensä uudelleen
+     * joka vedossa — juuri se liike, jonka omistaja näki.
+     *
+     * KORJAUS: jäsenyys lasketaan DATASTA (`rivit` ja
+     * `laudanKaupungit()`), piirtäminen ruudusta. Kaksi listaa:
+     * `*Jasenyys` kattaa kaikki kaupungit zoomista ja panoroinnista
+     * riippumatta, `kaupunkirivitNyt` / `laudanAnkkurit` vain ne,
+     * joilla on ruutupiste (liuska ripustetaan merkkiin, joten sitä
+     * ei voi avata ilman pistettä). Sama sääntö on jo `liuskanLahde`
+     * lla alempana.
      */
+    const omatKaupunkirivitJasenyys = rivit.filter((r) => r.kaupunki && !r.poltettu);
     const omatKaupunkirivit = elavatKaikki.filter((r) => r.kaupunki);
     kaupunkirivitNyt = omatKaupunkirivit;
     /*
@@ -2139,9 +2184,10 @@ export function luoNostot({
     for (const k of (laudanKaupungit?.() ?? [])) {
       const nimi = k?.nimi ?? k?.name ?? '';
       if (!Number.isFinite(k?.lat) || !Number.isFinite(k?.lng)) continue;
-      if (omatKaupunkirivit.some((r) => r.nimi === nimi)) continue;
+      if (omatKaupunkirivitJasenyys.some((r) => r.nimi === nimi)) continue;
+      // Ruutupiste on piirtämisen ehto, ei jäsenyyden: rivi syntyy
+      // ilmankin ja `laudanAnkkurit` suodattaa piirrettävät.
       const p = ruudulla(k.lat, k.lng);
-      if (!p) continue;
       laudanRivit.push({
         avain: laudanAvain(k),
         id: k.id,
@@ -2159,11 +2205,11 @@ export function luoNostot({
         omaLat: k.lat,
         omaLng: k.lng,
         p,
-        etaisyys: keskipiste ? Math.hypot(p.x - keskipiste.x, p.y - keskipiste.y) : 0,
+        etaisyys: p && keskipiste ? Math.hypot(p.x - keskipiste.x, p.y - keskipiste.y) : 0,
       });
     }
-    laudanAnkkurit = laudanRivit;
-    const kaupunkirivit = [...omatKaupunkirivit, ...laudanRivit];
+    laudanAnkkurit = laudanRivit.filter((r) => r.p);
+    const kaupunkirivit = [...omatKaupunkirivitJasenyys, ...laudanRivit];
     /*
      * ══ JÄSENYYS LUETAAN KOKO DATASTA, EI RUUDUSTA ═════════════════
      * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34 kohta 4; Fablen
@@ -2199,7 +2245,13 @@ export function luoNostot({
        * kaupungilla (Lille) sen datapaikka. Säde mitataan tästä
        * pisteestä noston omaan datapaikkaan, ei ladottuun.
        */
-      const keskus = nostonOmaPaikka(city) ?? city;
+      /*
+       * NIMI KULKEE KESKUKSEN MUKANA. `onKaupunginSisainen` katsoo
+       * ensin DATAN oman polun (noston `paikkaNimi` === kaupungin
+       * nimi); jos keskukseksi antaa paljaan `{lat, lng}`, se polku ei
+       * voi koskaan laueta ja jäsenyys jää pelkän säteen varaan.
+       */
+      const keskus = { ...city, ...(nostonOmaPaikka(city) ?? {}) };
       const omat = liuskanLahde.filter((r) => r.perhe === 'nosto' && !r.kaupunki
         && !r.vainNimi && typeof r.avaa === 'function'
         && onKaupunginSisainen(r, keskus));
