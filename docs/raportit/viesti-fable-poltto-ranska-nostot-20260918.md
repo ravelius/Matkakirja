@@ -842,3 +842,18 @@ pisteeseen — viimeinen niistä oikeasta laatasta mitattuna.
 **Mitä tämä EI korvaa:** tuplapistettä ja nimiön väistöä ei voi lukea
 laatasta, joten tarkistuslistan kohta 6 (silmämääräinen tarkistus
 pelissä uusilla laatoilla) jää voimaan.
+
+## E3.8 Missä laatat ovat
+
+Poltettu kansio on Mac Studiolla polussa
+
+```
+/Users/samireivinen/poltto-nostotaso-2026-09-18
+```
+
+13 Mt: `nostot/z5|z6|z7/<sarake>/<rivi>.webp` (1977 laattaa) ja
+`pyramidi.json` (nostotasoajon oma luettelo — ks. E3.3: sitä ei viedä
+ämpäriin sellaisenaan, vaan `tools/yhdista-nostoluettelo.mjs`:n läpi).
+Kansio on kopio istunnon työkansiosta, jotta se säilyy istunnon
+jälkeen; sitä ei ole committoitu. Luvun E3.5 komennoissa `<kansio>`
+tarkoittaa tätä polkua.
