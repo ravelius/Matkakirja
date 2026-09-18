@@ -368,8 +368,11 @@ test('valittavan kaupungin nimi tulee merkistä, ei nimikerroksesta', () => {
   assert.match(lauta, /const aloitusNimet = \(\) => \{/);
   assert.match(lauta, /const kohteet = new Set\(aloitusKohteet\(\)\.map\(\(k\) => k\.city\.id\)\);/);
   assert.match(lauta, /return new Set\(\[\.\.\.nakyvat\]\.filter\(\(id\) => !kohteet\.has\(id\)\)\);/);
-  assert.match(lauta, /const vain = lento\?\.nimet \?\? aloitusNimet\(\);/,
+  assert.match(lauta, /const niukka = lento\?\.nimet \?\? aloitusNimet\(\);/,
     'ladonta rajaa nimet aloitusNimet-joukkoon (Lontoo), ei koko näkyvään joukkoon');
+  // Niukka joukko VOITTAA pelinäkymän maarajauksen (PAATOKSET 43 kohta
+  // 8): lähtövalinnassa kohdemaata ei ole, eikä rajaus saa astua tähän.
+  assert.match(lauta, /const vain = niukka \?\? pelinKaupunkirajaus\(\);/);
   // Piste näkyy edelleen molemmilta (PISTE VAIN NIMEN KANSSA ei koske
   // valintaa: kohdemerkki on nimi).
   assert.match(lauta, /const valinta = aloitusNakyvat\(\);\n\s*if \(valinta\) return valinta\.has\(k\.id\);/);
