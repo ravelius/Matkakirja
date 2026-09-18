@@ -5,6 +5,7 @@
  *        [--ilman-rantaa]
  *        [--ulos pallolaatat-ulos] [--alue lon0,lat0,lon1,lat1] [--tunniste b]
  *        [--osa i/n] [--noutovali ms]
+ *        [--luettelo <paikallinen pyramidi.json>] [--lahde <kansio>]
  *
  * SHARDIT (--osa i/n, 7.9.2026). Sarja on 87 381 laattaa tasoille 0–8, ja
  * yhtenä prosessina se kesti Mac Studiolla noin kolme tuntia YHDELLÄ
@@ -95,7 +96,9 @@
  * Kuvankäsittely on sharp-kirjastolla (workflow asentaa sen ajoon).
  */
 import { spawnSync } from 'node:child_process';
-import { writeFileSync, mkdirSync } from 'node:fs';
+import {
+  writeFileSync, mkdirSync, readFileSync, existsSync,
+} from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { arkinPikseli, millerY, JULKINEN_JUURI } from './tee-pallotekstuuri.mjs';
@@ -110,6 +113,14 @@ if (process.argv[1] === TAMA && !process.env.NODE_USE_ENV_PROXY
   process.exit(ajo.status ?? 1);
 }
 
+/*
+ * LUETTELON OSOITE. Oletus on ämpärin julkinen luettelo, mutta
+ * `--luettelo <polku>` lukee sen PAIKALLISESTA tiedostosta (POLTTO
+ * ILMAN VÄLITILAA, omistaja 18.9.2026): yhden ajon tilassa pallon
+ * sarja on koottava juuri siitä luettelosta, jota ei ole vielä viety
+ * ämpäriin — muuten uusi nostotaso pitäisi julkaista ennen palloa ja
+ * pelin pallo olisi sumea siihen asti, kunnes sarja valmistuu.
+ */
 const LUETTELO = `${JULKINEN_JUURI}julisteet/pyramidi/pyramidi.json`;
 /** Laatan koko pikseleinä (slippy map -vakio). */
 export const LAATTA = 256;
@@ -302,6 +313,79 @@ async function noudaLaatta(url, yrityksia = 9) {
   return null;
 }
 
+/*
+ * LÄHDELAATAT PAIKALLISESTI (--lahde <kansio>, omistaja 18.9.2026).
+ *
+ * Mitattu 18.9.2026: pallon 16 shardia kestivät 20 min, ja CPU-käyttö
+ * jäi alle 20 % — työ ei ollut laskentaa vaan lähdelaattojen noutoa
+ * ämpäristä HTTP:llä 240 ms:n noutovälillä. Kun sama pyramidi on jo
+ * levyllä (aws s3 sync kerran, tai juuri poltetun kerroksen työkansio),
+ * laatta luetaan tiedostosta ja noutoväli menettää merkityksensä.
+ *
+ * Kansion polkurakenne on SAMA kuin ämpärissä `julisteet/pyramidi/`
+ * -etuliitteen alla, esim. <kansio>/<versio>/z6/12/34.webp ja
+ * <kansio>/<nostoversio>/nostot/z7/… — sama merkkijono, jolla laatta
+ * haettaisiin verkosta.
+ *
+ * KANSIO ON TOTUUS, EI VÄLIMUISTI: puuttuva tiedosto tarkoittaa samaa
+ * kuin ämpärin 404 (läpinäkyvä kerros, umpimeri pohjassa). Verkkoon ei
+ * palata, koska hiljainen paluu tekisi vajaasta synkronoinnista
+ * näkymättömän — 43 000 laatan ajo kestäisi taas tunteja eikä kukaan
+ * huomaisi. Siksi varmistaLahde() tarkistaa ENNEN ajoa, että jokainen
+ * tarvittava kerros/taso on kansiossa, ja kaatuu heti jos ei ole.
+ */
+let lahdeKansio = null;
+/** Paikallinen lähdekansio (sama rakenne kuin ämpärin julisteet/pyramidi/). */
+export function asetaLahde(kansio) {
+  lahdeKansio = kansio || null;
+}
+const lahdeTilasto = { paikallisia: 0, verkosta: 0 };
+
+/**
+ * Lähdelaatta polulla, joka on ämpärin `julisteet/pyramidi/` alla
+ * (esim. `2026-09-07a/z6/12/34.webp`). Paikallisesta kansiosta ilman
+ * verkkoa, jos --lahde on annettu.
+ */
+async function noudaPyramidi(polku) {
+  if (lahdeKansio) {
+    const tiedosto = join(lahdeKansio, ...polku.split('/'));
+    if (!existsSync(tiedosto)) return null;
+    lahdeTilasto.paikallisia += 1;
+    return readFileSync(tiedosto);
+  }
+  lahdeTilasto.verkosta += 1;
+  return noudaLaatta(`${JULKINEN_JUURI}julisteet/pyramidi/${polku}`);
+}
+
+/**
+ * ENNAKKOTARKISTUS PAIKALLISELLE LÄHTEELLE. Vajaa kansio näkyisi
+ * valmiissa laatoissa vain merenä ja kadonneina rajoina, joten jokaisen
+ * tarvittavan kerroksen ja tason kansio tarkistetaan ennen ensimmäistä
+ * laattaa. Puute on virhe, ei varoitus.
+ */
+export function varmistaLahde(luettelo, min, max, { nostot = false, ranta = true } = {}) {
+  if (!lahdeKansio) return;
+  const nostotasot = new Set(luettelo.nostotaso?.tasot ?? []);
+  const puuttuu = [];
+  for (let Z = min; Z <= max; Z += 1) {
+    const z = lahdetaso(Z);
+    const vaaditut = [`${luettelo.versio}/z${z}`];
+    if (luettelo.viivataso?.versio) vaaditut.push(`${luettelo.viivataso.versio}/viivat/z${z}`);
+    if (ranta && luettelo.rantataso?.versio) vaaditut.push(`${luettelo.rantataso.versio}/ranta/z${z}`);
+    if (nostot && luettelo.nostotaso?.versio && nostotasot.has(z)) {
+      vaaditut.push(`${luettelo.nostotaso.versio}/nostot/z${z}`);
+    }
+    for (const p of vaaditut) {
+      if (!existsSync(join(lahdeKansio, ...p.split('/'))) && !puuttuu.includes(p)) puuttuu.push(p);
+    }
+  }
+  if (puuttuu.length) {
+    throw new Error(`--lahde ${lahdeKansio}: kansiosta puuttuu ${puuttuu.length} tarvittavaa `
+      + `kerros/taso-kansiota, esim. ${puuttuu.slice(0, 4).join(', ')}. `
+      + 'Synkronoi ne ämpäristä (aws s3 sync) tai aja ilman --lahde-lippua.');
+  }
+}
+
 /**
  * Lähdelaattojen lukija: antaa arkin pikselin (z, px, py) RGB:nä.
  * Pohja ja viivataso yhdistetään laattaa noudettaessa; puuttuva
@@ -338,7 +422,7 @@ function teeLukija(luettelo, sharp, { nostot = false, ranta = true } = {}) {
     const taso = luettelo.tasot.find((t) => t.z === z);
     let ulos = null;
     if (tx >= 0 && ty >= 0 && tx < taso.sarakkeita && ty < taso.riveja) {
-      const pohja = await noudaLaatta(`${JULKINEN_JUURI}julisteet/pyramidi/${luettelo.versio}/z${z}/${tx}/${ty}.webp`);
+      const pohja = await noudaPyramidi(`${luettelo.versio}/z${z}/${tx}/${ty}.webp`);
       if (pohja) {
         tilasto.noudettu += 1;
         const { data, info } = await sharp(pohja).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
@@ -353,7 +437,7 @@ function teeLukija(luettelo, sharp, { nostot = false, ranta = true } = {}) {
         if (viivaversio) kerrokset.push(`${viivaversio}/viivat/z${z}/${tx}/${ty}.webp`);
         if (nostoversio && nostotasot.has(z)) kerrokset.push(`${nostoversio}/nostot/z${z}/${tx}/${ty}.webp`);
         for (const polku of kerrokset) {
-          const kerros = await noudaLaatta(`${JULKINEN_JUURI}julisteet/pyramidi/${polku}`); // eslint-disable-line no-await-in-loop
+          const kerros = await noudaPyramidi(polku); // eslint-disable-line no-await-in-loop
           if (!kerros) continue;
           const v = await sharp(kerros).ensureAlpha().raw().toBuffer({ resolveWithObject: true }); // eslint-disable-line no-await-in-loop
           const n = Math.min(v.info.width * v.info.height, info.width * info.height);
@@ -702,7 +786,17 @@ async function paa() {
     : (osa ? YHTEISTAHTI_MS * osa.n : NOUTOVALI_OLETUS);
   asetaNoutovali(noutovali);
 
-  const luettelo = await noudaJson(LUETTELO);
+  /*
+   * LUETTELO JA LÄHDELAATAT PAIKALLISESTI (ks. LUETTELO ja
+   * noudaPyramidi tiedoston yläosassa): yhden ajon poltossa luetteloa
+   * ei ole vielä viety ämpäriin, ja lähdelaatat ovat levyllä.
+   */
+  const luettelopolku = lippu('--luettelo');
+  const lahde = lippu('--lahde');
+  asetaLahde(lahde);
+  const luettelo = luettelopolku
+    ? JSON.parse(readFileSync(luettelopolku, 'utf8'))
+    : await noudaJson(LUETTELO);
   const kansio = laattojenKansio(luettelo.versio, nostot, tunniste);
   const lista = osanLaatat(min, max, alue, osa);
   const yhteensa = lista.length;
@@ -711,6 +805,7 @@ async function paa() {
     + `nostot ${nostot ? (luettelo.nostotaso?.versio ?? '-') : 'ei'}, `
     + `Mercator-tasot ${min}–${max} (lähteet z${lahdetaso(min)}–z${lahdetaso(max)}), `
     + `${yhteensa} laattaa → ${kansio}`);
+  console.log(`luettelo ${luettelopolku ?? LUETTELO}, lähteet ${lahde ? `paikallisesti ${lahde}` : 'ämpäristä'}`);
   if (osa) {
     const kaistat = [];
     for (let Z = min; Z <= max; Z += 1) {
@@ -720,6 +815,7 @@ async function paa() {
     console.log(`osa ${osa.i}/${osa.n}: sarakekaistat ${kaistat.join(', ') || '(tyhjä)'}, `
       + `noutovali ${noutovali} ms`);
   }
+  varmistaLahde(luettelo, min, max, { nostot, ranta });
   if (kuiva) { console.log('Kuiva ajo: ei nouda laattoja eikä kirjoita.'); return; }
 
   /*
@@ -751,7 +847,8 @@ async function paa() {
     tehty += 1;
     if (tehty % 500 === 0 || tehty === yhteensa) {
       const s = Math.round((Date.now() - alkuAika) / 1000);
-      console.log(`${tehty}/${yhteensa} laattaa (${s} s, lähdelaattoja noudettu ${lukija.tilasto.noudettu}, puuttui ${lukija.tilasto.puuttui})`);
+      console.log(`${tehty}/${yhteensa} laattaa (${s} s, lähdelaattoja noudettu ${lukija.tilasto.noudettu}, `
+        + `puuttui ${lukija.tilasto.puuttui}, levyltä ${lahdeTilasto.paikallisia}, verkosta ${lahdeTilasto.verkosta})`);
     }
   }
   /*

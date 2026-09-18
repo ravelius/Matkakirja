@@ -7,20 +7,107 @@
 # Settings → Branches → Branch protection rule (main) →
 # Require status checks to pass → valitse "Testit / testit".
 # Ilman sitäkin tulos näkyy PR:ssä ja mergeävä sessio tarkistaa sen.
+#
+# ── KAKSI REITTIÄ, YKSI JOBI (omistaja 18.9.2026, Raamattu: AGENTIT
+#    VAIN OPUS JA SONNET, TARKENNUS 9) ────────────────────────────────
+#
+# PR-portin seinäkello lyhenee, kun testit ajetaan Mac Studion omalla
+# self-hosted-runnerilla (ei setup-nodea, ei npm ci:tä, ei kylmää
+# ubuntu-konetta). Reitti valitaan `reitti`-jobissa ja annetaan
+# `runs-on`-kenttään — NIMI PYSYY SAMANA ("Testit / testit"), joten
+# mainin haarasuojauksen pakollinen tarkistus ei katkea reitin
+# vaihtuessa. Sama kahden reitin kaava kuin .github/workflows/
+# savukkeet.yml:ssä: fork-PR ei koskaan pääse Macille (repo on
+# julkinen), vaan ajaa aina ubuntulla.
+#
+# ┌── KYTKIN ─────────────────────────────────────────────────────────┐
+# │ Mac-reitti otetaan käyttöön vaihtamalla `reitti`-jobin YKSI rivi  │
+# │   REITTI=ubuntu   →   REITTI=mac                                  │
+# │ (etsi kommentti "KYTKIN: ubuntu | mac" alta).                     │
+# └───────────────────────────────────────────────────────────────────┘
+#
+# ÄLÄ VAIHDA ENNEN KUIN RUNNERI ON OLEMASSA. Labelin "testit" runneria
+# (SamiMacStudio2-testit) ei 18.9.2026 vielä ole — omistaja rekisteröi
+# sen erikseen (komennot: docs/raportit/viesti-fable-ci-portti-
+# 20260918.md). Jos Mac-reitti kytketään päälle ilman runneria, jobi
+# jää JONOON, eikä `timeout-minutes` auta: se mittaa vasta ajoaikaa,
+# ei jonotusta (GitHub peruu jonottavan jobin vasta 24 h:n jälkeen).
+# Siksi kytkin on oletuksena `ubuntu` ja vaihdetaan vasta, kun
+# `gh api repos/ravelius/Matkakirja/actions/runners` näyttää runnerin
+# tilassa "online" labelilla "testit".
 
 name: Testit
 
 on:
   pull_request:
+  push:
+    branches:
+      - main
+
+# Peruu saman haaran vanhan, yhä käynnissä olevan ajon uuden pushin
+# tullessa — yksi self-hosted-runner ajaa yhden jobin kerrallaan, joten
+# vanhentunut ajo veisi paikan tuoreelta (vrt. savukkeet.yml).
+concurrency:
+  group: testit-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
-  testit:
+  # Valitsee ajokoneen. Erillinen jobi, koska `runs-on` ei voi lukea
+  # `env`-kontekstia eikä job-tason `if` `env`-muuttujia — ainoa tapa
+  # pitää kytkin YHDELLÄ rivillä TÄSSÄ TIEDOSTOSSA (ei repo-asetuksissa)
+  # on tuottaa `runs-on`-arvo askeleen ulostulona ja lukea se
+  # fromJSONilla. Jobi on muutaman sekunnin mittainen eikä tee checkoutia.
+  reitti:
     runs-on: ubuntu-latest
+    outputs:
+      ajaja: ${{ steps.valinta.outputs.ajaja }}
+      nimi: ${{ steps.valinta.outputs.nimi }}
     steps:
+      - id: valinta
+        env:
+          LAHDEREPO: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          OMAREPO: ${{ github.repository }}
+        run: |
+          REITTI=ubuntu   # KYTKIN: ubuntu | mac  (ks. tiedoston alku)
+          if [ "$REITTI" = "mac" ] && [ "$LAHDEREPO" = "$OMAREPO" ]; then
+            echo 'ajaja=["self-hosted","macOS","ARM64","testit"]' >> "$GITHUB_OUTPUT"
+            echo 'nimi=Mac Studio (self-hosted, label testit)' >> "$GITHUB_OUTPUT"
+          else
+            echo 'ajaja="ubuntu-latest"' >> "$GITHUB_OUTPUT"
+            if [ "$REITTI" = "mac" ]; then
+              echo 'nimi=ubuntu-latest (fork-PR — Macille ei päästetä vierasta koodia)' >> "$GITHUB_OUTPUT"
+            else
+              echo 'nimi=ubuntu-latest (kytkin: REITTI=ubuntu)' >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+  testit:
+    needs: reitti
+    runs-on: ${{ fromJSON(needs.reitti.outputs.ajaja) }}
+    # Ajoaikakatto. HUOM: tämä EI kata jonotusta (ks. tiedoston alku).
+    timeout-minutes: 15
+    steps:
+      - name: Reitti
+        run: 'echo "Ajokone: ${{ needs.reitti.outputs.nimi }}"'
       - uses: actions/checkout@v4
+      # Macilla node on koneella valmiina (Homebrew, node@22) — vain
+      # GitHubin omalle koneelle asennetaan node erikseen.
       - uses: actions/setup-node@v4
+        if: runner.environment == 'github-hosted'
         with:
           node-version: '22'
+      # launchd-palvelun PATH ei välttämättä sisällä Homebrew'n nodea
+      # (sama kuin savukkeet.yml:n Mac-askeleissa). Ubuntulla polkua ei
+      # ole olemassa, joten lisäys on vaaraton.
+      - name: Node polkuun
+        run: |
+          echo "/opt/homebrew/opt/node@22/bin" >> "$GITHUB_PATH"
+          echo "/opt/homebrew/bin" >> "$GITHUB_PATH"
+      - name: Node-versio
+        run: node -v
       - name: Testit
         run: npm test
       - name: Kaksoisavaimet

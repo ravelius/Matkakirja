@@ -1,38 +1,26 @@
 {
-  "_kommentti": "Yksi paikka savukesarjoille (.github/workflows/savukkeet.yml luku, tools/savukkeet/rakenna-matriisi.mjs jäsennys). 'julkaisu' listaa julkaisuraporttien savukkeet järjestyksessä (docs/raportit/viesti-fable-julkaisu-v1925..v1927); 'asetukset' antaa jokaiselle tiedostolle sen ympäristömuuttujat, mahdollisen kuvakansio-argumentin ja tunnetut punaiset (vertaillaan tools/savukkeet/vertaa-tulos.mjs:llä FAIL-riveihin — uusi täsmäämätön FAIL nostaa ::warning::-huomautuksen, ei kaada julkaisusarjan porttia niiltä tiedostoilta joilla salliEpaonnistua on tosi). Lähteet: docs/raportit/viesti-fable-julkaisu-v1925-20260916.md, -v1926-20260916.md, -v1927-20260917.md ja kunkin savukkeen oma alkukommentti (process.env-lukukohdat tarkistettu tekstistä, ei arvattu).",
+  "_kommentti": "Yksi paikka savukesarjoille (.github/workflows/savukkeet.yml luku, tools/savukkeet/rakenna-matriisi.mjs jäsennys). 'julkaisu' listaa julkaisuraporttien savukkeet järjestyksessä (docs/raportit/viesti-fable-julkaisu-v1925..v1927); 'asetukset' antaa jokaiselle tiedostolle sen ympäristömuuttujat, mahdollisen kuvakansio-argumentin ja tunnetut punaiset (vertaillaan tools/savukkeet/vertaa-tulos.mjs:llä FAIL-riveihin — uusi täsmäämätön FAIL nostaa ::warning::-huomautuksen, ei kaada julkaisusarjan porttia niiltä tiedostoilta joilla salliEpaonnistua on tosi). Lähteet: docs/raportit/viesti-fable-julkaisu-v1925-20260916.md, -v1926-20260916.md, -v1927-20260917.md ja kunkin savukkeen oma alkukommentti (process.env-lukukohdat tarkistettu tekstistä, ei arvattu). JAETUT RIVIT (18.9.2026): 'julkaisu'-listan ja 'asetukset'-avaimen muoto 'savuke-x.mjs#osa' ajaa SAMAN savukkeen useana rinnakkaisena rivinä; '#':n jälkeinen osa on vain rivin nimilappu (kaappaus-, loki- ja artefaktipolku), ja rajaus tulee rivin omasta env-lohkosta. Lista on PITUUSJÄRJESTYKSESSÄ: aja-sarja.mjs antaa rivit työntekijöille tässä järjestyksessä, joten pisin rivi ei saa alkaa vasta lopussa.",
   "julkaisu": [
-    "savuke-astro-pallo.mjs",
+    "savuke-pariisi-lahizoom.mjs#390",
+    "savuke-pariisi-lahizoom.mjs#1400",
+    "savuke-astro-pallo.mjs#vartija-a",
+    "savuke-astro-pallo.mjs#vartija-b",
+    "savuke-satelliittilinssi.mjs#isot",
+    "savuke-satelliittilinssi.mjs#pienet",
+    "savuke-astro-pallo.mjs#tyopoyta",
+    "savuke-astro-pallo.mjs#puhelin",
+    "savuke-kaupunkipopup.mjs#390",
+    "savuke-kaupunkipopup.mjs#1400",
     "savuke-astro-valokuva.mjs",
     "savuke-astro-aani.mjs",
-    "savuke-satelliittilinssi.mjs",
     "savuke-ihmisen-kappaleet.mjs",
     "savuke-ihmisen-kehys.mjs",
     "savuke-ihmisen-esitys.mjs",
     "savuke-topografialinssi.mjs",
-    "savuke-pariisi-lahizoom.mjs",
     "savuke-pallo-nostolaput.mjs",
-    "savuke-nimikyltti.mjs",
-    "savuke-kaupunkipopup.mjs"
+    "savuke-nimikyltti.mjs"
   ],
   "asetukset": {
-    "savuke-astro-pallo.mjs": {
-      "env": {
-        "NAKYMAT": "tyopoyta,puhelin"
-      },
-      "huomautus": "Korjattu 17.9.2026, mittaus pysäytetystä tilasta: varjovartiot (\"varjon puoli tummuu\", \"valon puoli kirkastuu\", \"varjo ei ulotu puoliväliin\") ja \"VASTAKOE: kytkin pois palauttaa pikselit\" olivat häilyviä, koska kolmen kuvakaappauksen välissä ruutu eli: ISS-merkki ja ratakaari piirtyvät joka kehyksellä ja kulkevat juuri reunan näytepisteiden yli (Actions 35221065011, PR #2555: päällä 63,5 → pois 83,5 → takaisin 57,9, puhelin). Savuke odottaa nyt pinnan lopulliseksi, pysäyttää pyörimisen, piilottaa .astro-rata ja .astro-iss mittauksen ajaksi ja hyväksyy näytteen vasta kun kaksi peräkkäistä kaappausta ovat samat; uusi vartio \"varjomittaus tehdään pysäytetystä tilasta ja samasta kamera-asennosta\" kirjaa eron. Mac-mittaus 17.9.2026: peräkkäisten näytteiden ero 0 molemmilla näytöillä kahdessa ajossa."
-    },
-    "savuke-satelliittilinssi.mjs": {
-      "tunnetutPunaiset": [
-        "pallon takapuolen merkki ei ota napautusta"
-      ],
-      "huomautus": "Häilyvä (v1926/v1927), pallo pyörii mittauksen ja napautuksen välissä. 'Sulje linssi palauttaa yläpalkin, pelitilan ja tallennuksen täsmälleen' (VIKA LISAYS 12) korjattu haarassa astro-sulje-vaaka, mergetty v1929:ään — poistettu listalta. Jos tämä nousee punaiseksi PR:n Savukkeet-ajossa, se on aito löydös.",
-      "tunnetutPunaisetMac": [
-        "kohteen nimi ja selite lukevat kuvan päällä, muuta tekstiä ei ole",
-        "pienoiskuvat kelluvat ruudun vasemmassa alakulmassa",
-        "uusi napautus avaa selitteen takaisin"
-      ],
-      "huomautusMac": "Mac-runnerin rinnakkaiskuormassa katselun otsikko/nauha ei ehdi DOMiin mittaushetkellä (tyopoyta; 17.9.2026 run 35242567540); yksin ajettuna vihreä. Ubuntu vartioi. 18.9. v1935-ajot: myös 'uusi napautus avaa selitteen takaisin' (ipadvaaka) kuormassa."
-    },
     "savuke-ihmisen-kappaleet.mjs": {
       "env": {
         "KOOT": "390,1400"
@@ -68,13 +56,6 @@
       ],
       "huomautusMac": "Mac-runnerin rinnakkaiskuormassa (6 savuketta) kamera ei aina nouse avaruuteen (korkeus 0,417 odotetun 300 sijaan) vaikka yksin ajettuna 13/13 (17.9.2026, run 35242567540). Ubuntu vartioi nämä; oma erä: avaaKaukaisuus kuormassa. 17.9. ilta (run 35269837042, v1934): myös MUSTA ALKU samasta syystä (korkeus 0,417). 18.9. v1935: NYKÄISY-vartio kuormassa (kehysajoitus), yksin 17/17."
     },
-    "savuke-pariisi-lahizoom.mjs": {
-      "kuvakansio": true,
-      "tunnetutPunaiset": [
-        "7e. tyopoyta: kyltin laatikko on vapaa"
-      ],
-      "huomautus": "häilyvä hitaalla Actions-koneella (17.9.2026: v1930:n ajossa vihreä, v1931:n ajossa punainen samalla koodilla, nimiä 1 kyltin laatikolla = kaupungin nimi edellisen ladontakierroksen paikassa). v1930:n ajoituskorjaus kattoi 7c:n; 7e:n nimiladonnan ajoitus on oma erä (Mac, SAVUKE_HIDASTUS=6). Poista listalta kun erä on mainissa."
-    },
     "savuke-pallo-nostolaput.mjs": {
       "kuvakansio": true,
       "tunnetutPunaiset": [
@@ -92,14 +73,6 @@
       ],
       "huomautus": "Sama nelikko v1925:sta v1927:ään (mainin oma, ei tämän haaran aiheuttama). Vartio 9b:n FAIL-rivien MÄÄRÄ on kasvanut aihenostojen nimiöiden myötä (v1927 luku 5.1) mutta itse vartio pysyy tunnettuna punaisena."
     },
-    "savuke-kaupunkipopup.mjs": {
-      "kuvakansio": true,
-      "tunnetutPunaisetMaara": 17,
-      "tunnetutPunaiset": [
-        "merkki skaalautuu zoomatessa"
-      ],
-      "huomautus": "v1927: 40/57, 17 punaista - sama lista kuin turisti-kyltti-haaran pohjalla (docs/raportit/viesti-fable-turisti-kyltti-20260916.md). Yksittäisiä FAIL-tekstejä ei ole eritelty raporteissa, joten perusjoukko on lukumääräpohjainen (17, vertaa-tulos.mjs). PR #2551:n kahdessa Actions-ajossa (run 35183224944, 35184089613) 17:n LISÄKSI häilyi 'merkki skaalautuu zoomatessa (katto ...)' -vartio, eri kertoina eri kaupungissa/ruudussa (Marseille 390px, Marseille 1400px) ja eri mitatuin luvuin — häilyvä zoomiajoituksen mittaus, ei uusi vika. Lisätty patterniksi, joka poistetaan lukumäärästä ENNEN 17:n vertailua (vertaa-tulos.mjs tukee molempia samanaikaisesti)."
-    },
     "savuke-astro-valokuva.mjs": {
       "tunnetutPunaisetMac": [
         "minipulu reagoi vastauksen aikana",
@@ -107,6 +80,92 @@
         "uusi napautus avaa selitteen takaisin"
       ],
       "huomautusMac": "Mac-runnerin rinnakkaiskuormassa (run 35269837042, v1934) minipulun ele ja selitteen avaus eivät ehdi mittaushetkellä; yksin ajettuna 180/180 ja ensimmäisessä Mac-ajossa vihreä. Ubuntu vartioi. 18.9. v1935-ajot: myös 'uusi napautus avaa selitteen takaisin' kuormassa (yksin vihreä)."
+    },
+    "savuke-astro-pallo.mjs#puhelin": {
+      "env": {
+        "NAKYMAT": "puhelin"
+      },
+      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Puhelinnäyttö ilman vartijalohkoa. Mac-mittaus 18.9.2026: 87 s (oli yhtenä rivinä 464 s). Korjattu 17.9.2026, mittaus pysäytetystä tilasta: varjovartiot (\"varjon puoli tummuu\", \"valon puoli kirkastuu\", \"varjo ei ulotu puoliväliin\") ja \"VASTAKOE: kytkin pois palauttaa pikselit\" olivat häilyviä, koska kolmen kuvakaappauksen välissä ruutu eli: ISS-merkki ja ratakaari piirtyvät joka kehyksellä ja kulkevat juuri reunan näytepisteiden yli (Actions 35221065011, PR #2555: päällä 63,5 → pois 83,5 → takaisin 57,9, puhelin). Savuke odottaa nyt pinnan lopulliseksi, pysäyttää pyörimisen, piilottaa .astro-rata ja .astro-iss mittauksen ajaksi ja hyväksyy näytteen vasta kun kaksi peräkkäistä kaappausta ovat samat; uusi vartio \"varjomittaus tehdään pysäytetystä tilasta ja samasta kamera-asennosta\" kirjaa eron. Mac-mittaus 17.9.2026: peräkkäisten näytteiden ero 0 molemmilla näytöillä kahdessa ajossa."
+    },
+    "savuke-astro-pallo.mjs#tyopoyta": {
+      "env": {
+        "NAKYMAT": "tyopoyta,ei-vartija"
+      },
+      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Työpöytänäyttö ILMAN vartijalohkoa: ei-vartija estää sen, koska tyopoyta laukaisisi lohkon oletuksena ja se ajettaisiin kahdesti (ks. savuke-astro-pallo.mjs, NAKYMAT-kommentti)."
+    },
+    "savuke-satelliittilinssi.mjs#isot": {
+      "env": {
+        "NAKYMAT": "tyopoyta,ipad,ipadvaaka"
+      },
+      "tunnetutPunaisetMac": [
+        "kohteen nimi ja selite lukevat kuvan päällä, muuta tekstiä ei ole",
+        "pienoiskuvat kelluvat ruudun vasemmassa alakulmassa",
+        "uusi napautus avaa selitteen takaisin"
+      ],
+      "tunnetutPunaiset": [
+        "pallon takapuolen merkki ei ota napautusta"
+      ],
+      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Isot näytöt. Kaikki kolme tunnettua Mac-punaista syntyvät täällä (tyopoyta ja ipadvaaka). Mac-mittaus 18.9.2026: 125 s, 95/97, punaiset \"kohteen nimi ja selite...\" ja \"pienoiskuvat kelluvat...\" (molemmat tyopoyta). tunnetutPunaiset-rivi \"pallon takapuolen merkki ei ota napautusta\" on MOLEMMILLA puolikkailla, koska raporteissa ei ole kirjattu missä näkymässä se häilyy — kun se seuraavan kerran nähdään, poista se toiselta puolikkaalta. Häilyvä (v1926/v1927), pallo pyörii mittauksen ja napautuksen välissä. 'Sulje linssi palauttaa yläpalkin, pelitilan ja tallennuksen täsmälleen' (VIKA LISAYS 12) korjattu haarassa astro-sulje-vaaka, mergetty v1929:ään — poistettu listalta. Jos tämä nousee punaiseksi PR:n Savukkeet-ajossa, se on aito löydös. Mac-runnerin rinnakkaiskuormassa katselun otsikko/nauha ei ehdi DOMiin mittaushetkellä (tyopoyta; 17.9.2026 run 35242567540); yksin ajettuna vihreä. Ubuntu vartioi. 18.9. v1935-ajot: myös 'uusi napautus avaa selitteen takaisin' (ipadvaaka) kuormassa."
+    },
+    "savuke-satelliittilinssi.mjs#pienet": {
+      "env": {
+        "NAKYMAT": "puhelin,puhelinvaaka,pienivaaka"
+      },
+      "tunnetutPunaiset": [
+        "pallon takapuolen merkki ei ota napautusta"
+      ],
+      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Pienet näytöt. Vain \"pallon takapuolen merkki ei ota napautusta\" (näkymä kirjaamatta, ks. #isot)."
+    },
+    "savuke-pariisi-lahizoom.mjs#390": {
+      "env": {
+        "SAVUKE_RUUTU": "390"
+      },
+      "kuvakansio": true,
+      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Puhelinruutu. Mac-mittaus 18.9.2026: 220 s, kaikki vihreä (oli yhtenä rivinä 440 s). Tunnettu punainen \"7e. tyopoyta: ...\" on määritelmän mukaan työpöytäruudulla, joten sitä EI ole täällä."
+    },
+    "savuke-pariisi-lahizoom.mjs#1400": {
+      "env": {
+        "SAVUKE_RUUTU": "1400"
+      },
+      "kuvakansio": true,
+      "tunnetutPunaiset": [
+        "7e. tyopoyta: kyltin laatikko on vapaa"
+      ],
+      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Työpöytäruutu; tunnettu punainen \"7e. tyopoyta: kyltin laatikko on vapaa\" ajetaan vain täällä. häilyvä hitaalla Actions-koneella (17.9.2026: v1930:n ajossa vihreä, v1931:n ajossa punainen samalla koodilla, nimiä 1 kyltin laatikolla = kaupungin nimi edellisen ladontakierroksen paikassa). v1930:n ajoituskorjaus kattoi 7c:n; 7e:n nimiladonnan ajoitus on oma erä (Mac, SAVUKE_HIDASTUS=6). Poista listalta kun erä on mainissa."
+    },
+    "savuke-kaupunkipopup.mjs#390": {
+      "env": {
+        "SAVUKE_RUUTU": "390"
+      },
+      "kuvakansio": true,
+      "tunnetutPunaisetMaara": 3,
+      "tunnetutPunaiset": [
+        "merkki skaalautuu zoomatessa"
+      ],
+      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Puhelinruutu; vartion 9 vastakö (\"vastakö 1: kuvaton kaupunki avaa pop-upin silti\") on savukkeessa rajattu 390 px:iin, joten se kuuluu tähän puolikkaaseen. LUKUMÄÄRÄ KALIBROITU UUDELLEEN 18.9.2026: vanha 17 oli v1927:n ajalta, jolloin savukkeessa oli 57 väitettä; PAATOKSET 34 muutti suuren osan vartioista INFO-riveiksi ja savukkeessa on nyt 13 väitettä per ruutu. Mac-mittaus 18.9.2026: 93 s, 10/13, punaiset \"Marseille @ 390 px: kaupunkimerkin napautus avaa liuskan eikä isoa pop-upia\", \"Marseille @ 390 px: liuskan yläryhmä on 3 riviä\" ja \"vastakö 1: kuvaton kaupunki avaa pop-upin silti\" = 3. v1927: 40/57, 17 punaista - sama lista kuin turisti-kyltti-haaran pohjalla (docs/raportit/viesti-fable-turisti-kyltti-20260916.md). Yksittäisiä FAIL-tekstejä ei ole eritelty raporteissa, joten perusjoukko on lukumääräpohjainen (17, vertaa-tulos.mjs). PR #2551:n kahdessa Actions-ajossa (run 35183224944, 35184089613) 17:n LISÄKSI häilyi 'merkki skaalautuu zoomatessa (katto ...)' -vartio, eri kertoina eri kaupungissa/ruudussa (Marseille 390px, Marseille 1400px) ja eri mitatuin luvuin — häilyvä zoomiajoituksen mittaus, ei uusi vika. Lisätty patterniksi, joka poistetaan lukumäärästä ENNEN 17:n vertailua (vertaa-tulos.mjs tukee molempia samanaikaisesti)."
+    },
+    "savuke-kaupunkipopup.mjs#1400": {
+      "env": {
+        "SAVUKE_RUUTU": "1400"
+      },
+      "kuvakansio": true,
+      "tunnetutPunaisetMaara": 2,
+      "tunnetutPunaiset": [
+        "merkki skaalautuu zoomatessa"
+      ],
+      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Työpöytäruutu. Mac-mittaus 18.9.2026: 92 s, 10/12, punaiset \"Marseille @ 1400 px: kaupunkimerkin napautus avaa liuskan eikä isoa pop-upia\" ja \"Marseille @ 1400 px: liuskan yläryhmä on 3 riviä\" = 2. Lukumäärä kalibroitu uudelleen, ks. #390."
+    },
+    "savuke-astro-pallo.mjs#vartija-a": {
+      "env": {
+        "NAKYMAT": "vartija-a"
+      },
+      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Väitteen 9 vastakoelohkon ENSIMMÄINEN puolisko: vastakoe ilman estoa, kirjasto estetty, pinta estetty, Mac-kotelon vastakoe. Lohko EI ole näyttökoko vaan vartija, ja se on tämän savukkeen pisin osa: koko lohko mitattiin Macilla 18.9.2026 294 s (27/27 läpi, neljän savukkeen rinnakkaiskuormassa), joten se jaettiin vielä kahtia."
+    },
+    "savuke-astro-pallo.mjs#vartija-b": {
+      "env": {
+        "NAKYMAT": "vartija-b"
+      },
+      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Väitteen 9 vastakoelohkon TOINEN puolisko: Safarin rajat, kehykset poikki, musta pinta, kolme avausta peräkkäin. Ks. #vartija-a."
     }
   }
 }

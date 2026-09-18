@@ -11,7 +11,7 @@
 //     "savuke-nimikyltti.mjs,savuke-pallo-nostolaput"), .mjs-pääte
 //     lisätään tarvittaessa
 //
-// Jokainen matriisin alkio: { tiedosto, nimiTunniste, env,
+// Jokainen matriisin alkio: { nimi, tiedosto, nimiTunniste, env,
 // kuvakansio, tunnetutPunaiset, tunnetutPunaisetMaara, salliEpaonnistua }.
 // salliEpaonnistua on tosi, jos tiedostolle on annettu tunnetutPunaiset
 // tai tunnetutPunaisetMaara (silloin job saa continue-on-error: true
@@ -20,6 +20,31 @@
 // YKSI PAIKKA: sekä "julkaisu" että "kaikki" ja mukautettu lista
 // lukevat SAMAN sarjat.json:n "asetukset"-osion, joten NAKYMAT/KOOT/
 // VAIN_AVAUS ja tunnetut punaiset eivät ole kahdessa paikassa.
+//
+// ── SAVUKKEEN JAKO KAHDEKSI RIVIKSI (`#osa`) ───────────────────────
+//
+// Omistaja 18.9.2026 (Raamattu: AGENTIT ... TARKENNUS 9): PR-portin
+// seinäkello on niin pitkä kuin sarjan PISIN savuke, koska rinnakkaisia
+// paikkoja on enemmän kuin pitkiä savukkeita. Kaksi pisintä (astro-pallo
+// ja pariisi-lahizoom) ajavat molemmat kaksi näyttöä peräkkäin YHDEN
+// prosessin sisällä, joten ne voi jakaa kahdeksi rinnakkaiseksi riviksi
+// ilman että yhtään väitettä menetetään.
+//
+// Jako kirjoitetaan sarjat.json:n "julkaisu"-listaan ja "asetukset"-
+// avaimeen muodossa `savuke-astro-pallo.mjs#puhelin`, jossa `#`:n
+// jälkeinen osa on VAIN rivin nimilappu (ei mene savukkeelle):
+//   - `tiedosto`     = `#`:n vasen puoli (ajettava savuke)
+//   - `nimiTunniste` = `savuke-astro-pallo-puhelin` (kaappaus-, loki- ja
+//                      artefaktipolut eivät törmää)
+//   - `nimi`         = koko `savuke-astro-pallo.mjs#puhelin` (yhteenveto)
+// Rajaus ITSE ajoon tulee rivin omasta `env`-lohkosta (NAKYMAT,
+// SAVUKE_RUUTU), ja tunnetut punaiset kirjataan sille puolikkaalle,
+// jolla väite oikeasti ajetaan — toisen puolikkaan lista ei saa sisältää
+// väitteitä, joita se ei aja (vertaa-tulos.mjs ei vaadi osumaa, joten
+// väärään puolikkaaseen jäänyt tunnettu punainen VAIN vaikenisi).
+//
+// "kaikki" ja mukautettu lista ajavat savukkeen aina kokonaisena (ei
+// jakoa) — jako on julkaisusarjan seinäkellon optimointi.
 
 import { readFileSync, readdirSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
@@ -46,22 +71,35 @@ export function rakennaMatriisi(sarja) {
   } else if (sarja === 'kaikki') {
     tiedostot = kaikkiSavukeTiedostot();
   } else {
-    const olemassaolevat = new Set(kaikkiSavukeTiedostot());
     tiedostot = sarja.split(',').map((s) => s.trim()).filter(Boolean).map((nimi) => (
       nimi.endsWith('.mjs') ? nimi : `${nimi}.mjs`
     ));
-    const puuttuvat = tiedostot.filter((t) => !olemassaolevat.has(t));
-    if (puuttuvat.length) {
-      throw new Error(`rakenna-matriisi: tiedostoa ei löydy tools/savukkeet/:sta: ${puuttuvat.join(', ')}`);
-    }
   }
 
   if (!tiedostot || !tiedostot.length) {
     throw new Error(`rakenna-matriisi: sarja "${sarja}" ei tuottanut yhtään savuketta`);
   }
 
-  return tiedostot.map((tiedosto) => {
-    const asetus = sarjat.asetukset?.[tiedosto] ?? {};
+  // `#osa`-pääte on vain rivin nimilappu; ajettava tiedosto on sen vasen
+  // puoli. Olemassaolo tarkistetaan AINA (myös julkaisusarjasta), jotta
+  // kirjoitusvirhe sarjat.jsonissa kaataa matriisin heti eikä vasta
+  // savukkeen "Cannot find module" -kaatumisena Actionsissa.
+  const olemassaolevat = new Set(kaikkiSavukeTiedostot());
+  const puuttuvat = tiedostot
+    .map((nimi) => nimi.split('#')[0])
+    .filter((t) => !olemassaolevat.has(t));
+  if (puuttuvat.length) {
+    throw new Error(`rakenna-matriisi: tiedostoa ei löydy tools/savukkeet/:sta: ${puuttuvat.join(', ')}`);
+  }
+
+  const kaksoiset = tiedostot.filter((n, i) => tiedostot.indexOf(n) !== i);
+  if (kaksoiset.length) {
+    throw new Error(`rakenna-matriisi: sama rivi on sarjassa kahdesti: ${[...new Set(kaksoiset)].join(', ')}`);
+  }
+
+  return tiedostot.map((nimi) => {
+    const asetus = sarjat.asetukset?.[nimi] ?? {};
+    const [tiedosto, osa] = nimi.split('#');
     // tunnetutPunaisetMac (Fable 17.9.2026, Raamattu AGENTIT TARKENNUS 7):
     // Macin runnerilla rinnakkaiskuormassa häilyvät väitteet, jotka
     // ubuntu-matriisi vartioi yhä. Yhdistetään listaan vain kun matriisi
@@ -73,8 +111,9 @@ export function rakennaMatriisi(sarja) {
     ];
     const tunnetutPunaisetMaara = asetus.tunnetutPunaisetMaara ?? null;
     return {
+      nimi,
       tiedosto,
-      nimiTunniste: tiedosto.replace(/\.mjs$/, ''),
+      nimiTunniste: `${tiedosto.replace(/\.mjs$/, '')}${osa ? `-${osa}` : ''}`,
       env: asetus.env ?? {},
       kuvakansio: Boolean(asetus.kuvakansio),
       tunnetutPunaiset,
