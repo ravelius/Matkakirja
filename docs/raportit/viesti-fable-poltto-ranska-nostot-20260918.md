@@ -790,7 +790,7 @@ Kohtien 3–5 väli kannattaa pitää lyhyenä (tai tehdä 4 valmiiksi ennen
 
 ## E3.6 Mitä EI tehty
 
-1. **Playwright-mittaa uusilla laatoilla ei ajettu.** Se vaatisi
+1. **Playwright-mittaa pelin puolelta uusilla laatoilla ei ajettu** (laatasta mitattiin sen sijaan E3.7). Se vaatisi
    route-välityksen sekä nostolaatoille, manifestille ETTÄ pallon
    `laatat.json`:lle — eli juuri sen sekatilan rakentamisen, jonka
    versiovahti estää. Aika meni patinan varmistukseen ja luettelovian
@@ -804,3 +804,41 @@ Kohtien 3–5 väli kannattaa pitää lyhyenä (tai tehdä 4 valmiiksi ennen
 3. **`--vain-luettelo`-haaran korjaus** — syy E3.3 (jaettu polku,
    Fablen päätös).
 4. **Versionosto** — kielletty tässä tehtävänannossa.
+
+## E3.7 Mitta laatasta: muste on lukitussa ankkurissa (kaikki 9, ei vain yksi)
+
+Erä 2 mittasi yhden pisteen laatasta silmällä (Mont-Saint-Michel).
+Tässä erässä se on koneellinen ja kattaa **kaikki** lukitut poltettavat:
+uusi `tools/mittaa-nostomuste.mjs` laskee jokaiselle lukitun ankkurin
+saaneelle poltettavalle Ranskan nostolle arkin pikselin (luettelon
+`arkki` + tason `pikseliaPerYksikko`), avaa sen laatan, johon piste
+osuu, ja etsii lähimmän pikselin, jonka alfa ≥ 120.
+
+`node tools/mittaa-nostomuste.mjs <kansio> <taso>`, 36 ankkuria,
+**9 poltettavaa lukittua merkkiä**:
+
+| taso | muste löytyi | suurin ero | mediaani | lautayksikköinä (suurin) |
+| --- | --- | ---: | ---: | ---: |
+| z5 (1,8 px/yks.) | **9 / 9** | 1,56 px | 0,52 px | 0,87 |
+| z6 (3,6 px/yks.) | **9 / 9** | 2,69 px | 0,33 px | 0,75 |
+| z7 (7,2 px/yks.) | **9 / 9** | 3,67 px | 0,38 px | 0,51 |
+
+Luku on **lähimmän mustepikselin etäisyys ankkurista laatan
+pikseleissä**. Mediaani (0,3–0,5 px) on reunanpehmennyksen kokoinen eli
+muste alkaa ankkuripikselistä. Kaksi merkkiä yhdeksästä jää noin
+**0,5 lautayksikön** päähän kaikilla tasoilla — se on symbolin oman
+muodon mitta (lähin *ei-läpinäkyvä* pikseli on renkaan reunalla, ei
+keskellä), ei ladonnan ero: jos ladonta olisi siirtynyt, ero kasvaisi
+tason tiheyden mukana, ja se pienenee.
+
+Saapumisnäkymän mittakaava on ~2,1 px/lautayksikkö, joten pahinkin
+tapaus on ruudulla **noin 1 px** eli vaaditun 2 px:n sisällä. Elävän
+nimiön ja osuman yhtäpitävyys samaan ankkuriin on mitattu erässä 1
+(65/65, ero ≈ 0,05 m) ja vartioitu testillä
+`tests/poltto-lukitut-ankkurit.test.mjs` (ero 0,00 lautayksikköä, ei
+sietoa), joten ketjun kaikki kolme lenkkiä osoittavat nyt samaan
+pisteeseen — viimeinen niistä oikeasta laatasta mitattuna.
+
+**Mitä tämä EI korvaa:** tuplapistettä ja nimiön väistöä ei voi lukea
+laatasta, joten tarkistuslistan kohta 6 (silmämääräinen tarkistus
+pelissä uusilla laatoilla) jää voimaan.
