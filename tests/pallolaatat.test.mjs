@@ -309,7 +309,9 @@ test('kerros pitää juuri nähdyt laatat jonossa ja lataa liikesuuntaan ennakol
   // 2. Näkyvät ladataan silti ensin.
   assert.match(laatat, /jono\.sort\(\(a, b\) => \(a\.nakyva \? 0 : 1\) - \(b\.nakyva \? 0 : 1\) \|\| a\.etaisyys - b\.etaisyys\);/);
   // 3. Valmis laatta menee sceneen, jos se on yhä alueella (ei vain näkyvissä).
-  assert.match(laatat, /if \(t\.nakyva \|\| t\.pito\) lisaaSceneen\(t\);/);
+  // Vienti scenen puolelle: sama ehto kuin ennen, mutta lohkona — linssin
+  // avauksen vaihemerkki (pyramidinLinssiketju) kulkee samassa haarassa.
+  assert.match(laatat, /if \(t\.nakyva \|\| t\.pito\) \{\n\s*lisaaSceneen\(t\);/);
   /*
    * 4. Pito lasketaan viimeisestä näöstä — JA KERTOMUSLUKKO SAA PIDENTÄÄ
    *    SEN, MUTTA VAIN VALMIILLE LAATALLE (Fablen päätös 14.9.2026,
@@ -477,7 +479,7 @@ test('kerros: laatan materiaali, verkko ja osoitteet ovat suunnitelman mukaiset'
   assert.match(laatat, /if \(!karkeampiValmis\(t, valittu, valmiit\)\) continue;\n\s*t\.haipyy = true;/);
   assert.ok(!/LEPOKERROS_KOROTUS \* 1\.00/.test(laatat), 'ei sädekorotusta');
   // Osoitteet ja luettelo VAIN tasokartan moduulista — ei omaa kaavaa.
-  assert.match(laatat, /import \{\n\s*haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,\n\s*pyramidinReliefiKaytossa, pyramidinReliefinSyvinTaso,\n\s*pyramidinTasoitus, pyramidinVaritasonMaa,\n\} from '\.\/laattapyramidi\.js';/);
+  assert.match(laatat, /import \{\n\s*haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,\n\s*pyramidinLinssiketju, pyramidinReliefiKaytossa, pyramidinReliefinSyvinTaso,\n\s*pyramidinTasoitus, pyramidinVaritasonMaa,\n\} from '\.\/laattapyramidi\.js';/);
   assert.ok(!/julisteet\/pyramidi/.test(laatat), 'kerros ei rakenna pyramidin polkua itse');
   // Moduuli ei tuo js/pallo.js:ää: kirjaston luokat tulevat parametreina.
   assert.ok(!/from '\.\/pallo\.js'/.test(laatat), 'tuonti pallo.js:stä tekisi kehän');

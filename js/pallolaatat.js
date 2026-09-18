@@ -28,7 +28,7 @@
  */
 import {
   haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
-  pyramidinReliefiKaytossa, pyramidinReliefinSyvinTaso,
+  pyramidinLinssiketju, pyramidinReliefiKaytossa, pyramidinReliefinSyvinTaso,
   pyramidinTasoitus, pyramidinVaritasonMaa,
 } from './laattapyramidi.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
@@ -815,14 +815,27 @@ export const LAATTAKERROS_SYVYYSSIIRTO = -8;
  * NIMIÖN VAALEA REUNUS RELIEFIN PÄÄLLÄ (ks. käyttökohta alempana).
  * Sävy on linssiperheen oma vaalea pergamentti eikä puhdas valkoinen:
  * valkoinen reunus kirkkaan lumirajan päällä olisi näkymätön, ja
- * maastossa se näyttäisi liidulta. Peittävyys 0,92, jotta reunus on
- * vankka mutta ei laatikko kirjaimen ympärillä.
+ * maastossa se näyttäisi liidulta.
+ *
+ * PEITTÄVYYS 0,92 EI KANTANUT (mitattu 18.9.2026,
+ * tools/savukkeet/savuke-topografialinssi.mjs, Chromium 390 × 844,
+ * z7 nostotaso reliefin päällä, 1 314 mustepikseliä): tekstin ja sen
+ * välittömän taustan WCAG-suhde oli tummimmalla reliefikolmanneksella
+ * 1,97:1 ja vaaleimmalla 2,18:1 — eli reunus oli olemassa muttei
+ * riittänyt 4,5:1:een. Syy on varjon LÄPINÄKYVYYS: kolme vetoa 0,92:lla
+ * jättää kirjaimen reunaan sen verran maastoa läpi, että tumma rinne
+ * tulee kirjaimen viereen. Sävy pysyy pergamenttina, mutta veto on nyt
+ * täysi ja vetoja on neljä — mitä lähempänä kirjainta, sitä vankempi
+ * reunus, ja ulompana se yhä liukuu maastoon eikä ole laatikko.
  */
-const NIMION_HALO = 'rgba(247, 241, 224, 0.92)';
+export const NIMION_HALO = 'rgb(247, 241, 224)';
 /** Reunuksen leveys laatan omissa pikseleissä (laatta on 512 px). */
-const NIMION_HALO_PX = 3;
-/** Vetoja saman varjon kanssa: yksi jää ohueksi, kolme kantaa. */
-const NIMION_HALO_VETOJA = 3;
+export const NIMION_HALO_PX = 3;
+/**
+ * Vetoja saman varjon kanssa: yksi jää ohueksi, neljä kantaa myös
+ * tummimman rinteen päällä (ks. mittaus yllä).
+ */
+export const NIMION_HALO_VETOJA = 4;
 
 /** renderOrder = tämä + z: karkeat tasot ensin, kaikki läpinäkyvien alkuun. */
 export const LAATTAKERROS_RENDER_ORDER_POHJA = -10;
@@ -1867,8 +1880,17 @@ export function luoLaattakerros({
     if (!kerrostasot.length) { t.tila = 'virhe'; return; }
     const katkaisin = ikkuna.AbortController ? new ikkuna.AbortController() : null;
     t.katkaisin = katkaisin;
+    /*
+     * LINSSIKETJUN VAIHEET (js/reliefipyramidi.js). Kolme merkkiä
+     * kertovat, kuinka paljon avauksen ajasta on VERKKOA ja kuinka
+     * paljon pääsäikeen työtä — ilman niitä optimointi olisi arvausta.
+     * `merkitseLinssiketju` ottaa vain ensimmäisen kutsun vaihetta
+     * kohti, joten kymmenien laattojen silmukka ei kasvata lokia.
+     */
+    if (kerrokset.reliefi) pyramidinLinssiketju('laatta-haku');
     const kuvat = await Promise.all(kerrostasot.map((k) => (pyramidinLaattaOlemassa(k, t.sarake, t.rivi)
       ? haeKuva(pyramidinLaattaUrl(k, t.sarake, t.rivi), katkaisin?.signal ?? null) : null)));
+    if (kerrokset.reliefi) pyramidinLinssiketju('laatta-kuvat');
     // Väritaso mittariin vasta haun jälkeen: harvasta laatastosta
     // puuttuva laatta ei ole värillinen laatta.
     t.varillinen = kerrostasot.some((k, i) => k.vari && kuvat[i]);
@@ -2118,6 +2140,7 @@ export function luoLaattakerros({
     t.silmat = [nx, ny];
     t.tavut = Math.round(kartta.leveys * kartta.korkeus * 4 * (webgl2 ? 4 / 3 : 1));
     t.tila = 'valmis';
+    if (kerrokset.reliefi) pyramidinLinssiketju('laatta-valmis');
     const valmisteluKesti = aika() - valmisteluAlkoi;
     mittarit.valmisteluMs += valmisteluKesti;
     mittarit.valmisteluja += 1;
@@ -2233,7 +2256,10 @@ export function luoLaattakerros({
          * sattui valmistumaan sillä kehyksellä, jolla laatta oli
          * käännöksen toisella puolella (omistajan palaute v1649).
          */
-        if (t.nakyva || t.pito) lisaaSceneen(t);
+        if (t.nakyva || t.pito) {
+          lisaaSceneen(t);
+          if (kerrokset.reliefi) pyramidinLinssiketju('laatta-ruudulla');
+        }
       }
       if (vientijono.length) ajaVienti();
     });

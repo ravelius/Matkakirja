@@ -445,6 +445,12 @@ import { kaynnistaYlapalkkiVaaka } from './ylapalkki-vaaka.js';
  * skaalautua zoomissa — ks. js/fokusmitat.js.
  */
 import { nollaaFokusmitat, paivitaFokusmitat, projisoiLaudalle } from './fokusmitat.js';
+/*
+ * LINSSIKETJUN LOKI (js/reliefipyramidi.js). Avaus kulkee kolmen
+ * moduulin läpi, eikä yksikään näe muiden osuutta — yhteinen loki on
+ * ainoa tapa sanoa, mikä vaihe maksaa. Ks. moduulin oma perustelu.
+ */
+import { aloitaLinssiketju, merkitseLinssiketju, linssiketjunLoki } from './reliefipyramidi.js';
 
 const DIE_FACES = ['', '⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
 const BOT_DELAY = 650;
@@ -18471,8 +18477,15 @@ export class UI {
   }
 
   /** Sytyttää linssin kartalle; tunnus === null sammuttaa. */
+  /** Viimeisimmän linssin avauksen vaiheet millisekunteina (savuke, kenttä). */
+  linssiketju() {
+    return linssiketjunLoki();
+  }
+
   async sytytaLinssi(tunnus) {
+    merkitseLinssiketju('sytyta');
     const tuki = await this.lataaLinssit();
+    merkitseLinssiketju('linssit-ladattu');
     if (!tuki || this.dead) return;
     const askel = tunnus ? this.linssiAskeleet.get(tunnus) ?? null : null;
     const tila = tuki.kerros.linssitila(this.game.pack, askel);
@@ -18493,6 +18506,7 @@ export class UI {
         // Aineisto haetaan kuten kerrosmoottorissa (kerros.js vaihda):
         // linssin lataa() tuo pakat ja kuvat ennen piirtoa.
         await linssi.lataa?.();
+        merkitseLinssiketju('lataa');
         if (this.dead || this.linssiValittu !== tunnus) return;
         // Body-luokat (linssi-paalla, linssi-<tunnus>, linssi-valokuva)
         // ovat samat kuin kartalla: selite, sävyt ja rakeisuus lukevat ne.
@@ -18505,6 +18519,7 @@ export class UI {
          * jättävät parametrin lukematta, joten muutos on lisäys.
          */
         this.pallolinssi = { tunnus, kahva: linssi.pallolle(this.pallolauta, tila, this) ?? null };
+        merkitseLinssiketju('pallolle');
         tulos = { tunnus, linssi, elementteja: 0, rasteroitu: false };
       } catch (syy) {
         console.error(syy);
@@ -18624,6 +18639,12 @@ export class UI {
     // Merkintä valikkoon heti, kerros hetkeä myöhemmin: raskas linssi
     // rasteroidaan, eikä napin pidä odottaa sitä näyttääkseen valinnan.
     this.paivitaLinssiTiedot();
+    /*
+     * KELLO KÄYNTIIN NAPAUTUKSESTA, ei siitä hetkestä, jolloin
+     * `sytytaLinssi` pääsee ajoon: pelaajan odotus alkaa napista, ja
+     * juuri se on se luku, jota vastaan 400 ms:n katto mitataan.
+     */
+    if (tunnus) aloitaLinssiketju();
     void this.sytytaLinssi(tunnus);
     this.varmistaLinssinAvaus(tunnus);
   }
