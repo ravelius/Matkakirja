@@ -1557,7 +1557,38 @@ export function avaaKarttaSuurennos(ui, kehys, kartta, asetukset = {}) {
    * ennen kuin panoroinnin rajat lasketaan uudelleen. Lehden kartta
    * ei anna kahvaa, joten sen kehys pysyy kiinteänä kuten ennen.
    */
-  if (lava) kytkeKarttaZoom(ui, iso, lava, isoNapit, ydin, { zoomMuuttui: levita });
+  /*
+   * ZOOMIN KATTO RUUDUN MUKAAN (PAATOKSET 34 kohta 18 h, omistaja
+   * 18.9.2026: *"Yla ja alaosa taytyy kun kayttaja zoomaa sisaan"*).
+   *
+   * Lepotilassa kortti on kartan kuvasuhteen mittainen, joten
+   * pystyruudulla vaakakartan ylle ja alle jää mustaa — se on
+   * kuvasuhteen laki. Zoomatessa ikkuna saa kasvaa mustan päälle
+   * (levita), mutta vain niin pitkälle kuin zoomattua karttaa
+   * riittää: ikkunan korkeus on `min(näkyvä × 0,98, kartan
+   * lepokorkeus × kerroin)`. Jotta ylä- ja alaosa TÄYTTYVÄT, kertoimen
+   * on siis päästävä arvoon `näkyvä × 0,98 / lepokorkeus`.
+   *
+   * 390 × 844 px:llä lepokorkeus on noin 291 px ja vaadittu kerroin
+   * 2,8 — juuri ja juuri widgetin oman katon (3) alla. Pidemmällä
+   * puhelimella (430 × 932) vaadittu kerroin on jo yli kolmen, joten
+   * katto EI voi olla vakio: se lasketaan tässä ja annetaan
+   * funktiona, koska ruudun kääntö muuttaa sekä näkyvää alaa että
+   * vaadittua kerrointa kesken katselun. Arkin kartta ei anna kattoa
+   * lainkaan, joten sen yläraja pysyy kolmessa.
+   */
+  const ruudunKatto = () => {
+    const { vh } = nakyvaAla();
+    const lepokorkeus = (ydin.korkeus / 100) * (lava?.offsetHeight ?? 0);
+    if (!(vh > 0) || !(lepokorkeus > 0)) return 0;
+    return (vh * 0.98) / lepokorkeus;
+  };
+  if (lava) {
+    kytkeKarttaZoom(ui, iso, lava, isoNapit, ydin, {
+      zoomMuuttui: levita,
+      suurin: ruudunKatto,
+    });
+  }
   // Avausääni kuuluu jo napautuksessa (naytaNahtavyys), joten tässä ei
   // enää soiteta mitään — sama korjaus kuin kohdepopupeilla (v1119).
 }
