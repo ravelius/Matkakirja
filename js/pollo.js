@@ -1688,7 +1688,11 @@ export class Pollo {
     this.pino = null;
     this.kuplaPiilotusAjastin = null;
     this.viimeisinPiilotettuKupla = null;
-    this.kuplaPalautus = null;
+    /*
+     * Chatin ylärivin "Näytä puhekuplat" (rakenna). Se korvasi kartan
+     * laidassa olleen pluskuplan 18.9.2026 — ks. varmistaPino.
+     */
+    this.kuplaPalautusNappi = null;
     // Tosi vain palautuksen ajan (ks. lisaaPinoon ja
     // palautaViimeisinKupla): estää palautetun kuplan imeytymisen
     // takaisin pluskuplaan puhelimella.
@@ -1806,6 +1810,29 @@ export class Pollo {
       ui.naytaPalauteKulmasta();
     });
     this.ehdotaNappi = ehdota;
+    /*
+     * "NÄYTÄ PUHEKUPLAT" CHATIN YLÄRIVILLÄ (omistaja 18.9.2026,
+     * Raamattu "KARTTAUUDISTUKSEN PAATOKSET 34" kohta 20).
+     *
+     * Pieni pluskupla kartan laidassa on poistettu näkyvistä, joten
+     * ohi menneille repliikeille tarvittiin uusi paluureitti. Se on
+     * tässä: sama sisältö, jonka pluskuplan napautus palautti (saman
+     * kohdekaupungin viimeisin piilotettu kupla,
+     * palautaViimeisinKupla). Kuplat elävät kartan päällä, joten
+     * napautus sulkee ensin paneelin (naytaPuhekuplatUudelleen).
+     *
+     * NAPPI ON PIILOSSA, KUN NÄYTETTÄVÄÄ EI OLE — ei disabled-tilassa
+     * (omistajan kohta 20 c). Näkyvyyden ainoa lähde on
+     * paivitaKuplanPalautus, joka lukee saman muistin kuin palautus.
+     */
+    const naytaKuplat = polloElementti('button', 'pollo-naytakuplat', 'Näytä puhekuplat');
+    naytaKuplat.type = 'button';
+    naytaKuplat.hidden = true;
+    naytaKuplat.title = 'Tuo ohi menneet puhekuplat takaisin näkyviin';
+    naytaKuplat.setAttribute('aria-label', 'Näytä Pulun puhekuplat uudelleen');
+    naytaKuplat.addEventListener('click', () => this.naytaPuhekuplatUudelleen());
+    this.kuplaPalautusNappi = naytaKuplat;
+    ylarivi.appendChild(naytaKuplat);
     ylarivi.appendChild(ehdota);
     paneeli.appendChild(ylarivi);
 
@@ -2649,8 +2676,16 @@ export class Pollo {
      * SULKURUKSIA EI ENÄÄ OLE (omistaja 13.9.2026, sanatarkasti: *"Ota
      * pulun puhekuplista sulkemis ruksi pois. Ja muuta toiminto niin
      * että Puhekuplat voi sulkea napauttamalla niitä."*). Kupla itse on
-     * sulkunappi, ja pieni pluskupla jää jäljelle avaamista varten —
-     * ks. sidoKuplanNapautus ja imeKuplatPalautukseen.
+     * sulkunappi — ks. sidoKuplanNapautus.
+     *
+     * PLUSKUPLAA EI ENÄÄ PIIRRETÄ (omistaja 18.9.2026, Raamattu
+     * "KARTTAUUDISTUKSEN PAATOKSET 34" kohta 20 a). Sitä ei luoda eikä
+     * liitetä runkoon lainkaan, joten imeytymisanimaatiolla ei ole
+     * kohdetta ja kuplat vain sulkeutuvat paikallaan
+     * (imeKuplatPalautukseen huomaa puuttuvan kohteen ja häivyttää).
+     * MUISTI JÄÄ: viimeisin piilotettu kupla talletetaan yhä
+     * (viimeisinPiilotettuKupla), ja chatin ylärivin "Näytä
+     * puhekuplat" palauttaa sen (rakenna, naytaPuhekuplatUudelleen).
      */
     /*
      * KELAUS LAAJENTAA (omistaja 7.9.2026: *"jos käyttäjä menee
@@ -2701,27 +2736,8 @@ export class Pollo {
     this.doc.body.appendChild(kehys);
     this.pinoKehys = kehys;
     this.pino = pino;
-    this.varmistaKuplanPalautus();
     this.paivitaPinonKorkeus({ heti: true });
     return pino;
-  }
-
-  /** Pieni pluskupla palauttaa viimeisimmän automaattisen puhekuplan. */
-  varmistaKuplanPalautus() {
-    if (this.kuplaPalautus) return this.kuplaPalautus;
-    const nappi = polloElementti('button', 'pollo-kuplapalautus', '+');
-    nappi.type = 'button';
-    nappi.hidden = true;
-    nappi.setAttribute('aria-label', 'Näytä viimeisin Pulun puhekupla');
-    const nielaise = (e) => { e.stopPropagation(); e.preventDefault(); };
-    nappi.addEventListener('pointerdown', nielaise);
-    nappi.addEventListener('click', (e) => {
-      nielaise(e);
-      this.palautaViimeisinKupla();
-    });
-    this.doc.body.appendChild(nappi);
-    this.kuplaPalautus = nappi;
-    return nappi;
   }
 
   kuplaKonteksti() {
@@ -2852,10 +2868,14 @@ export class Pollo {
      * kupla, aivan kuten ajastimen piilotuksessa.
      */
     this.viimeisinPiilotettuKupla = { kupla: viimeinen, konteksti: this.kuplaKonteksti() };
-    const palautus = this.varmistaKuplanPalautus();
-    palautus.hidden = false;
+    /*
+     * KOHDETTA EI ENÄÄ OLE (omistaja 18.9.2026, kohta 20 a): pluskupla
+     * on poistettu näkyvistä, joten lennolle ei anneta maalia ja
+     * imeKuplatPalautukseen häivyttää kuplat paikallaan. Muisti jää
+     * yllä talteen, ja chatin ylärivin nappi palauttaa sen.
+     */
     this.asetaPinonPaikka();
-    this.imeKuplatPalautukseen(puheet, palautus);
+    this.imeKuplatPalautukseen(puheet, null);
     /*
      * Viimeisin kupla säilyy muistissa palautusta varten, mutta sen
      * DOM-solmu lentää muiden mukana. Irrotetaan se pinosta heti,
@@ -2890,8 +2910,6 @@ export class Pollo {
     kupla.remove();
     this.viimeisinPiilotettuKupla = { kupla, konteksti: this.kuplaKonteksti() };
     this.paivitaPinonNakyvyys();
-    const palautus = this.varmistaKuplanPalautus();
-    palautus.hidden = false;
     this.paivitaKuplanPalautus();
     this.asetaPinonPaikka();
     return true;
@@ -2930,8 +2948,6 @@ export class Pollo {
     this.poistaKuplat(puheet.slice(0, -1));
     this.viimeisinPiilotettuKupla = { kupla: viimeinen, konteksti: this.kuplaKonteksti() };
     this.paivitaPinonNakyvyys();
-    const palautus = this.varmistaKuplanPalautus();
-    palautus.hidden = false;
     this.paivitaKuplanPalautus();
     this.asetaPinonPaikka();
     return true;
@@ -2962,7 +2978,7 @@ export class Pollo {
       return false;
     }
     this.viimeisinPiilotettuKupla = null;
-    this.kuplaPalautus.hidden = true;
+    if (this.kuplaPalautusNappi) this.kuplaPalautusNappi.hidden = true;
     this.nollaaKuplanImu(muistettu.kupla);
     /*
      * PALAUTETTU KUPLA JÄÄ NÄKYVIIN. Puhelimella lisaaPinoon imee uudet
@@ -2981,15 +2997,35 @@ export class Pollo {
 
   unohdaPiilotettuKupla() {
     this.viimeisinPiilotettuKupla = null;
-    if (this.kuplaPalautus) this.kuplaPalautus.hidden = true;
+    if (this.kuplaPalautusNappi) this.kuplaPalautusNappi.hidden = true;
   }
 
+  /**
+   * CHATIN YLÄRIVIN "NÄYTÄ PUHEKUPLAT" (omistaja 18.9.2026, kohta 20 b).
+   *
+   * Kuplat asuvat kartan päällä, eivät paneelissa, joten paneeli
+   * väistyy ensin — muuten napautus näyttäisi kuplat auki olevan
+   * chatin taakse, ja palautaViimeisinKupla kieltäytyisi (`this.auki`).
+   */
+  naytaPuhekuplatUudelleen() {
+    if (!this.viimeisinPiilotettuKupla) return false;
+    if (this.auki) this.sulje();
+    return this.palautaViimeisinKupla();
+  }
+
+  /**
+   * Näytettävää on tai ei — kolmatta tilaa ei ole.
+   *
+   * Nappi PIILOTETAAN (hidden) eikä himmennetä: omistajan kohta 20 c
+   * kieltää pelkän disabled-tilan. Ehto on sama kuin palautuksen
+   * portti (palautaViimeisinKupla): muistin pitää olla olemassa ja
+   * kuulua nykyiseen kohdekaupunkiin, tai nappi valehtelisi.
+   */
   paivitaKuplanPalautus() {
-    if (!this.kuplaPalautus) return;
-    const peittyy = this.auki || this.nappi.hidden || linssiEstaa(this.doc)
-      || Boolean(this.doc.querySelector?.('dialog[open]'));
-    this.kuplaPalautus.hidden = !this.viimeisinPiilotettuKupla || peittyy;
-    if (!this.kuplaPalautus.hidden) this.asetaPinonPaikka();
+    if (!this.kuplaPalautusNappi) return;
+    const muistettu = this.viimeisinPiilotettuKupla;
+    this.kuplaPalautusNappi.hidden = !muistettu
+      || muistettu.konteksti !== this.kuplaKonteksti();
   }
 
   tuhoaKuplamuisti() {
@@ -3002,8 +3038,7 @@ export class Pollo {
     this.irrotaKarttapiilotus = null;
     this.viimeisinPiilotettuKupla = null;
     this.kuplaPuhetilat.clear();
-    this.kuplaPalautus?.remove?.();
-    this.kuplaPalautus = null;
+    if (this.kuplaPalautusNappi) this.kuplaPalautusNappi.hidden = true;
   }
 
   seuraaKohtauspiilotusta() {
@@ -3844,8 +3879,9 @@ export class Pollo {
    */
   asetaPinonPaikka() {
     const kehys = this.pinoKehys;
-    const palautus = this.kuplaPalautus;
-    if ((!kehys || kehys.hidden) && (!palautus || palautus.hidden)) return;
+    // Pluskupla on poistettu (18.9.2026), joten asemoitavaa on enää
+    // kuplapinon kehys.
+    if (!kehys || kehys.hidden) return;
     const ikkuna = this.doc.defaultView ?? window;
     const nappi = this.ankkuriLaatikko(this.nappi, ikkuna);
     /*
@@ -3871,12 +3907,6 @@ export class Pollo {
     const kasvonYlitys = this.nappi?.classList?.contains?.('livia-kasvot-valmis') ? 40 : 0;
     const alareuna = Math.round((ikkuna.innerHeight || 0) - nappi.top + 10 + kasvonYlitys);
     if (kehys) kehys.style.bottom = `${alareuna}px`;
-    if (palautus) {
-      // 44 px osuma-alue jää kokonaan Pulun chat-osuman vasemmalle
-      // yläpuolelle; vain sen oikea alanurkka näyttää minikuplan.
-      palautus.style.left = `${Math.max(6, Math.round(nappi.left - 46))}px`;
-      palautus.style.top = `${Math.max(6, Math.round(nappi.top - 46))}px`;
-    }
   }
 
   /**
@@ -4339,8 +4369,24 @@ export class Pollo {
      * chattinäkymään"*). Pino tyhjenee, mutta mitään ei menetetä: joka
      * puhekupla on kirjattu virtaan jo sanomishetkellään
      * (kirjaaKuplaViestiin), joten ne ovat tässä alla.
+     *
+     * MUISTI SÄILYY CHATIN YLI (omistaja 18.9.2026, kohta 20 b).
+     * tyhjennaPino unohtaa viimeisimmän piilotetun kuplan, mikä oli
+     * oikein niin kauan kuin paluureitti oli kartan laidan pluskupla:
+     * chatin avaus korvasi kuplat. Nyt paluureitti on chatin OMALLA
+     * ylärivillä, joten muistin pitää elää chatin yli — muuten nappi
+     * olisi aina piilossa. Ruudulla juuri olevat repliikit ovat
+     * tuoreempia kuin vanha muisti, joten ne voittavat.
      */
+    const ruudulla = this.pinonKuplat().filter(
+      (k) => k.dataset?.laji === 'puhe' || k.dataset?.laji === 'vihje',
+    ).at(-1) ?? null;
+    const muistettava = ruudulla
+      ? { kupla: ruudulla, konteksti: this.kuplaKonteksti() }
+      : this.viimeisinPiilotettuKupla;
     this.tyhjennaPino();
+    this.viimeisinPiilotettuKupla = muistettava;
+    this.paivitaKuplanPalautus();
     this.kiinnita();
     this.auki = true;
     // Edellisen vastauksen tyhjä varaus pois ennen kuin paneeli näkyy:

@@ -89,18 +89,26 @@ export const MINIATYYRIT = {
     'Orsayn taidemuseo': 'assets/kartat/miniatyyrit/pariisi-orsayn-taidemuseo.webp',
     'Palais Garnier': 'assets/kartat/miniatyyrit/pariisi-palais-garnier.webp',
     'Place des Vosges': 'assets/kartat/miniatyyrit/pariisi-place-des-vosges.webp',
-    // Karttanostot kohdekartalle (M1/M2, 2.9.2026): kuva on tilattu
-    // kuvaputkelta ja ilmestyy ämpäriin — siihen asti merkki on täplä.
-    'Carmenin ensi-ilta': 'pariisi-carmenin-ensi-ilta',
-    'Kirahvin kävelymatka': 'pariisi-kirahvin-kavelymatka',
-    'Torni romuraudaksi': 'pariisi-torni-romuraudaksi',
-    'Vrain-Lucas': 'pariisi-vrain-lucas',
-    Impressionistit: 'pariisi-impressionistit',
-    Kyyhkyposti: 'pariisi-kyyhkyposti',
-    'Tuileriain rauniot': 'pariisi-tuileriain-rauniot',
-    // M3 (4.9.2026, omistaja: "Lisää kaikkiin puuttuviin kaupunki
-    // karttoihin oikeat miniatyyrikuvat"): tunnus tilattu kuvaputkelta
-    // kiireellisenä; merkki on täplä, kunnes PNG on ämpärissä.
+    /*
+     * MERKINTÄ ON LUPAUS PIIRROKSESTA (Raamattu, KARTTAUUDISTUKSEN
+     * PAATOKSET 34 kohta 18 a, omistaja 18.9.2026 klo 17.55).
+     *
+     * Nähtävyyskartalla on nyt VAIN piirrettyjä rakennuksia, ja
+     * lajittelun tekee tämä taulu: merkinnätön kohde on kaupungin
+     * sisäinen nosto. Siksi tässä ei saa olla tilausta, jota ämpäri ei
+     * ole toimittanut — sellainen merkintä piirsi WebKitillä sinisen
+     * kysymysmerkin (rikkinäisen kuvan merkki) juuri sinne, mistä
+     * omistaja pyysi merkit pois. Seitsemän M1/M2-tilausta (Carmenin
+     * ensi-ilta, Kirahvin kävelymatka, Torni romuraudaksi,
+     * Vrain-Lucas, Impressionistit, Kyyhkyposti, Tuileriain rauniot)
+     * vastasivat 404:llä 18.9.2026, joten ne on poistettu tästä
+     * taulusta — kohteet ovat liuskan kategorioissa ja avautuvat
+     * samalla kortilla. Kun kuvaputki toimittaa piirroksen, rivi
+     * palaa tähän ja kohde palaa kartalle.
+     *
+     * M3 (4.9.2026) toimitti Bastiljin PNG:n ämpäriin, joten se on
+     * piirretty rakennus ja pysyy kartalla.
+     */
     Bastilji: 'pariisi-bastilji',
   },
   lontoo: {

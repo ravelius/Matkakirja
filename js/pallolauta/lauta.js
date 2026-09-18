@@ -109,8 +109,8 @@ import { NOSTOLADONTA_POLTON_TIHEYS } from '../nostoladonta.js';
 import {
   LIUSKAN_AJO_MS, LIUSKAN_PEHMENNYS,
   PALLOKAMERAN_AJO_MS, PALLOLAUDAN_LEVEYS, PALLO_FOV, PALLO_KORKEUS_MAX,
-  PALLON_SALLITTU_VENYTYS, ULOSZOOMAUKSEN_KERROIN, laattojenVenytys, leveysKorkeudesta,
-  luoPallokamera,
+  PALLON_SALLITTU_VENYTYS, ULOSZOOMAUKSEN_KERROIN, kokoPallonKorkeus, laattojenVenytys,
+  leveysKorkeudesta, luoPallokamera,
 } from './kamera.js';
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
 import { luoNimet, nimibudjetti } from './nimet.js';
@@ -1495,10 +1495,42 @@ export async function avaaPallolauta(ui) {
    * ikkunaa isompi, ja se palautuu perillä (palaaMaanRajaukseen).
    */
   let matkallaVapaana = false;
+  /**
+   * KEHITTÄJÄN MAAILMANÄKYMÄ PÄÄLLÄ (sama ehto kuin ui.maailmanakyma:
+   * kehittäjätila JA maailmanappi JA ei katselukuva). Yksi kysymys
+   * kahdelle rajalle — uloszoomaukselle ja panoroinnille — ja laudan
+   * omalle katolle (`maailmatilanKatto` alempana).
+   */
+  const maailmatilassa = () => kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu;
+  /** Maailmatilan edellinen arvo: kytkentä tahdistaa zoomirajat (paivita). */
+  let maailmatilaEnnen = maailmatilassa();
+  /**
+   * ULOSZOOMAUKSEN KATTO MAAILMATILASSA: KOKO PALLO RUUTUUN
+   * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34 kohta 19; omistaja
+   * 18.9.2026 klo 18.05, iPhone, v1942: *"Vaikka maailma tila päällä,
+   * peli ei anna zoomata ulospäin"*).
+   *
+   * MIKSI PALLO_KORKEUS_MAX EI RIITÄ. Laudan oma katto on 2,5, ja se
+   * näyttää koko pallon vain leveällä ruudulla: Globe.gl:n fov on
+   * PYSTYkulma, joten pystyruudulla mitta on ruudun kapeampi sivu.
+   * Mitattuna 390 × 844 vaatii korkeuden 4,37 (kokoPallonKorkeus) —
+   * 2,5:ssä pallo on ruutua isompi ja loitonnus pysähtyy kesken.
+   * Työpöydällä (1440 × 800) sama kaava antaa 1,63, eli katto EI nouse
+   * siellä mihinkään: `Math.max` pitää entisen 2,5:n voimassa.
+   *
+   * SAMA KAAVA KUIN LINSSEILLÄ (js/pallolauta/kamera.js
+   * kokoPallonKorkeus): satelliittilinssin avaruusnäkymä ja
+   * topografialinssi lukevat sitä jo, eikä maailmatila saa olla kolmas
+   * kopio. Marginaali on kaavan oletus 0,12, joten pallon halkaisija on
+   * 0,88 × ruudun kapeampi sivu — halkaisija siis mahtuu leveyteen.
+   */
+  const maailmatilanKatto = () => Math.max(PALLO_KORKEUS_MAX, kokoPallonKorkeus({
+    leveys: kotelo.clientWidth, korkeus: kotelo.clientHeight, fov: PALLO_FOV,
+  }));
   const maanZoomiraja = () => {
     if (!maanLaatikko) return null;
     if (matkallaVapaana) return null;
-    if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu) return null;
+    if (maailmatilassa()) return null;
     return kamera.uloszoomausRaja(maanLaatikko, ULOSZOOMAUKSEN_KERROIN);
   };
   /**
@@ -1587,7 +1619,7 @@ export async function avaaPallolauta(ui) {
     if (!maanLaatikko) return null;
     if (zoomirajaSyrjaytys) return null;
     if (matkallaVapaana) return null;
-    if (kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu) return null;
+    if (maailmatilassa()) return null;
     /*
      * ELÄVÄ RAJA EI MAHDU MUISTIIN (erä 14). Korkeuteen sovitetulla
      * ruudulla X-raja riippuu zoomista (kamera.js panoraja), joten se
@@ -1648,6 +1680,9 @@ export async function avaaPallolauta(ui) {
     let max = PALLO_KORKEUS_MAX;
     if (Number.isFinite(zoomirajaSyrjaytys?.max)) max = zoomirajaSyrjaytys.max;
     else if (Number.isFinite(maa?.max)) max = maa.max;
+    // Maailmatilassa maan katto on pois (maanZoomiraja → null), ja
+    // laudan oma 2,5 jäisi pystyruudulla pallon halkaisijaa pienemmäksi.
+    else if (maailmatilassa()) max = maailmatilanKatto();
     const pov = pallo.pointOfView();
     const nyt = pov?.altitude;
     if (Number.isFinite(nyt) && Number.isFinite(max)) {
@@ -4134,9 +4169,31 @@ export async function avaaPallolauta(ui) {
      * ulkopuolta vaalentava tasoituskerma ei ole käytössä, joten
      * reliefi näkyy linssissä koko laudalla eikä vain kohdemaassa.
      */
-    asetaTasoituksenMaailma(
-      linssiPaalla() || (kehittajaTilaPaalla() && kehittajaMaailmaPaalla() && !ui.katselu),
-    );
+    asetaTasoituksenMaailma(linssiPaalla() || maailmatilassa());
+    /*
+     * ZOOMIRAJAT SAMASTA KYTKENNÄSTÄ (PAATOKSET 34 kohta 19, omistaja
+     * 18.9.2026: *"Vaikka maailma tila päällä, peli ei anna zoomata
+     * ulospäin"*).
+     *
+     * MITATTU VIKA. `tahdistaZoomirajat` ajettiin vain maan vaihtuessa
+     * (alempana), ruudun mitatessa (`mitoita`) ja linssin/matkan
+     * kytkennöistä — EI maailmanapista. Maailmanappi ohittaa maan katon
+     * (`maanZoomiraja` → null), mutta OrbitControlsin `maxDistance` jäi
+     * siihen lukuun, jonka kohdemaan saapumisnäkymä oli asettanut:
+     * nipistys ja rulla pysähtyivät saapumisnäkymään, vaikka tila oli
+     * päällä. Kytkin on `ui.paivitaKehittajaMaailma` → `paivita`, joten
+     * tahdistus kuuluu tähän, samaan hetkeen kuin kerman kytkentä.
+     *
+     * KATON MUISTI NOLLATAAN (sama syy kuin linssin syrjäytyksessä,
+     * `asetaZoomirajat`): katto nousee tahallaan, eikä `kattoPuristus`
+     * saa vetää kameraa mukanaan avaruuteen — maailmatila SALLII koko
+     * pallon, ei vie sinne.
+     */
+    if (maailmatilassa() !== maailmatilaEnnen) {
+      maailmatilaEnnen = maailmatilassa();
+      kattoPuristus = null;
+      tahdistaZoomirajat();
+    }
     /*
      * VÄRITASON MAA JA ULOSZOOMAUKSEN KATTO SAMASTA HETKESTÄ KUIN KEHÄ
      * (erät 1b ja 2). Kolme asiaa kertoo samaa maata — punainen kehä,

@@ -503,14 +503,15 @@ for (const ruutu of RUUDUT) {
    isoisän matkakirjamerkinnän teksti (saapumiskortin lappu) ja pulun
    puhekupla piilotetaan KAIKILLA laitteilla. Näkyviin jää kuva ja
    kuvateksti; merkinnän saa esiin lappua napauttamalla ja pulun
-   repliikin pluskuplasta.
+   repliikin chatin ylärivin napista "Näytä puhekuplat" (omistaja
+   18.9.2026, PAATOKSET 34 kohta 20 — pluskupla poistettiin).
 
    VARTIOT (kolmella ruudulla, myös iPadilla, jossa kumpikaan
    puhelinraja ei osu):
      7.  Luennan aikana kortti on lappu ja merkinnän teksti mitaton.
      8.  Kuva ja kuvateksti näkyvät samaan aikaan.
      9.  Lapun napautus avaa merkinnän kesken luennan.
-     10. Pulun uusi repliikki ei jää ruudulle vaan pluskuplaan.
+     10. Pulun uusi repliikki ei jää ruudulle; pluskuplaa ei ole.
      11. Pluskuplan napautus palauttaa repliikin.
      12. Luennan jälkeen (1400 px) kortti on auki ja teksti näkyy.
 
@@ -547,17 +548,19 @@ const TEKSTINAYTE = `(() => {
     kuvateksti: mitta(document.querySelector('.fokusvirta-isokuva-teksti')),
     kuva: mitta(document.querySelector('.fokusvirta-isokuva-kuva')),
     kuplia: document.querySelectorAll('.pollo-kuplapino .pollo-vihje').length,
-    pluskupla: mitta(document.querySelector('.pollo-kuplapalautus')),
+    // Pluskupla poistettiin 18.9.2026: sitä ei saa enää olla DOMissa.
+    pluskuplia: document.querySelectorAll('.pollo-kuplapalautus').length,
+    naytaNappi: mitta(document.querySelector('.pollo-naytakuplat')),
     kuplateksti: (document.querySelector('.pollo-kuplapino .pollo-vihje')?.textContent ?? '').trim(),
   };
 })()`;
 
-const KUPLAN_TEKSTI = 'Savukkeen koerepliikki pluskuplasta.';
+const KUPLAN_TEKSTI = 'Savukkeen koerepliikki chatin ylärivin napista.';
 
 /*
  * NAPAUTUS CDP:N KAUTTA, EI page.click.
  *
- * Playwrightin oma napautus jäi aikakatkaisuun sekä pluskuplalla että
+ * Playwrightin oma napautus jäi aikakatkaisuun sekä pulun napeilla että
  * lapulla iPadilla ja työpöydällä (mitattu 15.9.2026: "page.click:
  * Timeout 5000ms exceeded", myös `force: true`). Syy on siinä, että
  * molemmat elementit elävät omissa siirtymissään koko luennan ajan.
@@ -623,7 +626,7 @@ for (const ruutu of TEKSTIRUUDUT) {
       && lappuAuki.tekstinPituus > 10,
     JSON.stringify({ klikki: lappuKlikki, piilo: lappuAuki.piilo, rivi: lappuAuki.rivi }));
 
-  // 10–11. PULU: uusi repliikki imeytyy pluskuplaan, napautus palauttaa.
+  // 10–11. PULU: uusi repliikki sulkeutuu; chatin ylärivi palauttaa.
   await sivu.evaluate(async (teksti) => {
     const m = await import('/js/pollo.js');
     m.polloSaapumiskupla(teksti, { linssinOma: true });
@@ -631,14 +634,24 @@ for (const ruutu of TEKSTIRUUDUT) {
   await sivu.waitForTimeout(400);
   const kuplaKiinni = await sivu.evaluate(TEKSTINAYTE);
   tieto(`${ruutu.nimi} pulun kupla luennan aikana`,
-    `piilo=${kuplaKiinni.piilo} kuplia=${kuplaKiinni.kuplia} pluskupla=${JSON.stringify(kuplaKiinni.pluskupla)}`);
-  vaadi(`${ruutu.nimi}: pulun repliikki ei jää ruudulle vaan pluskuplaan`,
-    kuplaKiinni.piilo && kuplaKiinni.kuplia === 0 && (kuplaKiinni.pluskupla?.w ?? 0) > 4,
-    JSON.stringify({ piilo: kuplaKiinni.piilo, kuplia: kuplaKiinni.kuplia, plus: kuplaKiinni.pluskupla }));
-  const plusKlikki = await napauta(sivu, cdp, '.pollo-kuplapalautus');
+    `piilo=${kuplaKiinni.piilo} kuplia=${kuplaKiinni.kuplia} pluskuplia=${kuplaKiinni.pluskuplia}`);
+  vaadi(`${ruutu.nimi}: pulun repliikki ei jää ruudulle eikä pluskuplaa ole`,
+    kuplaKiinni.piilo && kuplaKiinni.kuplia === 0 && kuplaKiinni.pluskuplia === 0,
+    JSON.stringify({ piilo: kuplaKiinni.piilo, kuplia: kuplaKiinni.kuplia, plus: kuplaKiinni.pluskuplia }));
+  /*
+   * PALUUREITTI ON CHATIN YLÄRIVILLÄ (omistaja 18.9.2026, kohta 20 b).
+   * Chatti avataan pulun omasta napista, ja "Näytä puhekuplat" sulkee
+   * chatin ja tuo repliikin takaisin ruudulle.
+   */
+  await napauta(sivu, cdp, '.pollo-nappi');
+  await sivu.waitForTimeout(500);
+  const chatissa = await sivu.evaluate(TEKSTINAYTE);
+  vaadi(`${ruutu.nimi}: "Näytä puhekuplat" näkyy chatin ylärivillä`,
+    (chatissa.naytaNappi?.w ?? 0) > 4, JSON.stringify(chatissa.naytaNappi));
+  const plusKlikki = await napauta(sivu, cdp, '.pollo-naytakuplat');
   await sivu.waitForTimeout(500);
   const kuplaAuki = await sivu.evaluate(TEKSTINAYTE);
-  vaadi(`${ruutu.nimi}: pluskuplan napautus näyttää repliikin`,
+  vaadi(`${ruutu.nimi}: napin napautus näyttää repliikin`,
     kuplaAuki.kuplia >= 1 && kuplaAuki.kuplateksti.includes('koerepliikki'),
     JSON.stringify({ klikki: plusKlikki, kuplia: kuplaAuki.kuplia, teksti: kuplaAuki.kuplateksti }));
 

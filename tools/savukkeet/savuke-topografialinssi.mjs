@@ -890,7 +890,9 @@ async function ajaAvaus({ peite = true } = {}) {
   for (let yritys = 0; yritys < 5; yritys += 1) {
     await pakota();
     await sivu.waitForTimeout(2500);
-    if (await nakyvissa('.pollo-kuplapalautus') && await nakyvissa('.fokusvirta-luentakuva')) break;
+    // Pluskupla poistui 18.9.2026 (PAATOKSET 34 kohta 20 a), joten
+    // pakotuksen mittari on enää luentakuva.
+    if (await nakyvissa('.fokusvirta-luentakuva')) break;
   }
 
   const ennenJaanteet = await sivu.evaluate(`(${JAANTEET})()`);
@@ -1165,8 +1167,10 @@ const nimiA = '390 px, luenta';
  * lähteestä, ja kun se kääntyy takaisin, pakka on jälleen pakollinen
  * osa omistajan tilaa ilman että tätä savuketta kirjoitetaan uusiksi.
  *
- * MUU EI MUUTU: luenta, saapumiskuva ja pulun pluskupla ovat yhä
- * pakollisia, ja juuri ne ovat se tila, jossa omistaja linssin avasi.
+ * MUU EI MUUTU: luenta ja saapumiskuva ovat yhä pakollisia, ja juuri
+ * ne ovat se tila, jossa omistaja linssin avasi. PLUSKUPLA POISTETTIIN
+ * 18.9.2026 (PAATOKSET 34 kohta 20 a), joten sitä ei enää vaadita —
+ * pulun repliikit palaavat nyt chatin ylärivin napista.
  * Mittaukset (a) kirkkaus, (b) paljas kartta ja (c) jäänteet ajetaan
  * kytkimestä riippumatta.
  */
@@ -1174,12 +1178,9 @@ const PAKKA_KARTALLA = /^export const LUENTAKUVAPAKKA_KARTALLA = true;$/m
   .test(readFileSync(new URL('../../js/fokusvirta.js', import.meta.url), 'utf8'));
 const pakkaRuudulla = a.ennenJaanteet.some((x) => x.valitsin.includes('fokusvirta-luentakuva'));
 
-vaadi(`${nimiA}: omistajan tila toistui (luenta, saapumiskuva, pluskupla, kuvapakka)`,
-  a.luentaSoi
-    && a.ennenJaanteet.some((x) => x.valitsin.includes('pollo-kuplapalautus'))
-    && (PAKKA_KARTALLA ? pakkaRuudulla : !pakkaRuudulla),
-  `luenta ${a.luentaSoi}, pluskupla `
-  + `${a.ennenJaanteet.some((x) => x.valitsin.includes('pollo-kuplapalautus'))}, kuvapakka `
+vaadi(`${nimiA}: omistajan tila toistui (luenta, saapumiskuva, kuvapakka)`,
+  a.luentaSoi && (PAKKA_KARTALLA ? pakkaRuudulla : !pakkaRuudulla),
+  `luenta ${a.luentaSoi}, kuvapakka `
   + `${pakkaRuudulla} (odotus ${PAKKA_KARTALLA}, LUENTAKUVAPAKKA_KARTALLA=${PAKKA_KARTALLA}); `
   + `ennen linssiä ruudulla ${JSON.stringify(a.ennenJaanteet.slice(0, 6))}`);
 

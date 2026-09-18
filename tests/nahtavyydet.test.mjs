@@ -39,14 +39,20 @@ test('miniatyyri ladataan sitkeästi: täplä vasta kaikkien yritysten jälkeen'
     'osoite asetetaan vain sitkeän latauksen kautta (uusinta ja jono)');
 });
 
-test('täplä säilyttää nimen ja napin: vain piirros poistuu', () => {
-  // onVirhe poistaa KUVAN ja kohde-piirros-luokan — ei merkkiä
-  // itseään. Nimilappu ja napin tyyppi (avattava → <button>) tulevat
-  // merkistä, joten kohde pysyy napautettavana täplänäkin.
+test('puuttuva piirros vie koko merkin: kartalla vain piirretyt', () => {
+  /*
+   * PAATOKSET 34 kohta 18 a (omistaja 18.9.2026): nähtävyyskartalle
+   * jäävät VAIN piirretyt nähtävyysrakennukset. Ennen puuttuva kuva
+   * pudotti merkin varatäpläksi — juuri se vaalea ympyrä, joka pyydettiin
+   * pois. Kohde ei katoa pelistä: se on kaupunkiliuskan sisäinen nosto
+   * (kaupunkikartanSiirretyt) ja avautuu sieltä samalla kortilla.
+   */
   const virhehaara = LAHDE.match(/lataaKuvaSitkeasti\(pikku, miniatyyri, \{[\s\S]{0,300}?\}\);/)?.[0] ?? '';
   assert.match(virhehaara, /pikku\.remove\(\)/);
-  assert.match(virhehaara, /piste\.classList\.remove\('kohde-piirros'\)/);
-  assert.doesNotMatch(virhehaara, /piste\.remove\(\)/, 'merkki jää kartalle');
+  assert.match(virhehaara, /piste\.remove\(\)/, 'merkki lähtee kartalta piirroksen mukana');
+  assert.doesNotMatch(virhehaara, /classList\.remove\('kohde-piirros'\)/, 'täplää ei jää');
+  // Miniatyyritön kohde ei piirry kartalle lainkaan.
+  assert.match(LAHDE, /if \(!miniatyyri\) \{\s*avaajat\.push\(null\);\s*return;/);
   assert.match(LAHDE, /const avattava = Boolean\(k\.teksti \|\| k\.wiki\);/);
   assert.match(LAHDE, /html\(avattava \? 'button' : 'span',/);
 });
