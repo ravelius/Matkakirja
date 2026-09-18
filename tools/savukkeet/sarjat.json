@@ -27,12 +27,6 @@
     "savuke-maailmatila-zoomi.mjs"
   ],
   "asetukset": {
-    "savuke-ranskan-nostot-lukossa.mjs": {
-      "tunnetutPunaiset": [
-        "yhtä porrasta loitompana nostopisteitä"
-      ],
-      "huomautus": "Vartio 7 (loitonnus ei vie pisteitä) on UUSI ja TIETOISESTI PUNAINEN 18.9.2026. Se mittaa Raamatun KARTTAUUDISTUKSEN PAATOKSET 34 kohta 21:n toista puolta: pisteiden pitää näkyä saapumisnäkymästä ULOSPÄIN. Saapumisnäkymän puoli (vartiot 5 ja 6) on vihreä kaikilla kolmella ruudulla tämän erän jälkeen, mutta loitonnusele pudottaa pisteet yhä (390 px 36 -> 4, 1400 px 45 -> 23, 2000 px 45 -> 32) vaikka kameran korkeus ei muutu (uloszoomaus on lukittu maan laatikkoon, PAATOKSET 17). Juurisyy on eri kuin katto ja lehden portti, jotka tämä erä korjasi — ks. docs/raportit/viesti-fable-pisteet-aina-20260918.md luku 6 kohta 2. Vartio jätetään punaiseksi eikä lievennetä, jotta korjaamaton puoli ei katoa näkyvistä."
-    },
     "savuke-ihmisen-kappaleet.mjs": {
       "env": {
         "KOOT": "390,1400"
