@@ -162,7 +162,13 @@ export const PALLO_LAATTAVERSIO = '2026-09-07a';
  * ("Erä 3"), jossa on vientikomennot ja tarkistuslista.
  */
 export const PALLO_LAATTATUNNISTE = 'i';
-export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}-nostot-${PALLO_LAATTATUNNISTE}`;
+/*
+ * Sarja i on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
+ * kansiossa ei ole '-nostot'-osaa): nostot tulevat maittain lepokerroksesta
+ * (js/pallolaatat.js nostotMaittain). Sama tieto sw.js LAATTAKANSIO.
+ */
+export const PALLO_SARJASSA_NOSTOT = false;
+export const PALLO_LAATTAKANSIO = `${PALLO_LAATTAVERSIO}${PALLO_SARJASSA_NOSTOT ? '-nostot' : ''}-${PALLO_LAATTATUNNISTE}`;
 export const PALLO_LAATAT = `${R2}julisteet/pallo/laatat/${PALLO_LAATTAKANSIO}/`;
 /** Syvin taso, jonka peli käyttää — luettelo (laatat.json) voi rajata matalammaksi. */
 export const PALLO_LAATTATASO_MAX = 8;
