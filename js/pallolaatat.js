@@ -30,9 +30,9 @@ import {
   PYRAMIDIN_JAARAJA_LAT as JAARAJA_LAT,
   haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
   pyramidinLinssiketju, pyramidinReliefiAstronautilla, pyramidinReliefiKaytossa,
-  pyramidinReliefinSuodatin, pyramidinReliefinSyvinTaso,
+  pyramidinReliefinSavy, pyramidinReliefinSuodatin, pyramidinReliefinSyvinTaso,
   pyramidinReliefinTaso, pyramidinReliefinTaustavari as reliefinTaustavari,
-  pyramidinReliefinVaraLahde as reliefinVaraLahde,
+  pyramidinReliefinValoliuku, pyramidinReliefinVaraLahde as reliefinVaraLahde,
   pyramidinTasoitus, pyramidinVaritasonMaa,
 } from './laattapyramidi.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
@@ -1084,6 +1084,55 @@ export function laatanKartta(taso, sarake, rivi, {
 }
 
 /**
+ * ASTRONAUTIN VALOLIUKU LAATAN KANKAALLE — valon vastakaava.
+ *
+ * Perustelu ja kaava ovat js/reliefipyramidi.js:ssä (VALON VASTAKAAVA
+ * MYÖS LAASTARILLE): pallon suunnattu valo kertoo pinnan kirkkauden
+ * kertoimella 1 + 0,6 · sin(lat), ja linssin oma 4k-pohjatekstuuri on
+ * jaettu samalla kertoimella ennen käyttöä. Ilman tätä laastari oli
+ * 41,6°:ssa 1,40-kertaisesti kirkkaampi kuin pohja samassa kohdassa,
+ * ja reunalla oli kirkkausraja.
+ *
+ * `multiply` yhdistää alfat source-overina, joten läpinäkyvä pikseli
+ * täyttyisi harmaalla. Laatan kangas on tässä vaiheessa
+ * läpinäkymätön — meriväri on maalattu taustaksi ennen laattaa
+ * (`taustavari`, ks. AVOMERI EI OLE VIRHE) — joten alfan palautusta ei
+ * tarvita. Sekoitustila luetaan silti takaisin: `globalCompositeOperation`
+ * ei heitä tuntemattomasta arvosta vaan jättää edellisen voimaan.
+ *
+ * @param {object} ctx      2D-konteksti
+ * @param {number} leveys   kankaan leveys
+ * @param {number} korkeus  kankaan korkeus
+ * @param {Array}  pysakit  [{ t, arvo }] (pyramidinReliefinValoliuku)
+ * @returns {boolean} maalattiinko liuku
+ */
+export function maalaaAstronautinValoliuku(ctx, leveys, korkeus, pysakit) {
+  if (!ctx || !(leveys > 0) || !(korkeus > 0) || !pysakit?.length) return false;
+  let liuku = null;
+  try {
+    liuku = ctx.createLinearGradient(0, 0, 0, korkeus);
+    for (const p of pysakit) {
+      const v = Math.round(255 * Math.max(0, Math.min(1, p.arvo)));
+      liuku.addColorStop(Math.max(0, Math.min(1, p.t)), `rgb(${v},${v},${v})`);
+    }
+  } catch { return false; }
+  try {
+    ctx.globalCompositeOperation = 'multiply';
+    if (ctx.globalCompositeOperation !== 'multiply') {
+      ctx.globalCompositeOperation = 'source-over';
+      return false;
+    }
+    ctx.fillStyle = liuku;
+    ctx.fillRect(0, 0, leveys, korkeus);
+    ctx.globalCompositeOperation = 'source-over';
+    return true;
+  } catch {
+    try { ctx.globalCompositeOperation = 'source-over'; } catch { /* ei kontekstia */ }
+    return false;
+  }
+}
+
+/**
  * Tasoituksen kerma-peite laatan kankaalle: suojatun suorakaiteen
  * ULKOPUOLI maalataan käsin, sisäpuoli jätetään laatalle.
  *
@@ -1671,6 +1720,8 @@ export function luoLaattakerros({
      * (savuke-pallo-kehystahti lukee nämä).
      */
     valmisteluMs: 0, valmisteluja: 0, valmisteluMax: 0,
+    /* Astronautin laastarin valoliuku: montako laattaa sai vastakaavan. */
+    valoliukuja: 0,
     /*
      * VÄRITASO (erä 1b): `variMaa` on se maa, jonka värilaatasto on
      * juuri nyt käytössä (null = ei väriä), ja `varillisia` niiden
@@ -2319,6 +2370,22 @@ export function luoLaattakerros({
     }
     // Suodatin pois heti piirron jälkeen: kangas jää tekstuurin lähteeksi.
     if (suodatinPaalla) { try { ctx.filter = 'none'; } catch { /* ei suodatinta */ } }
+    /*
+     * VALON VASTAKAAVA VIIMEISENÄ (PAATOKSET 41 kohta 4). Liuku menee
+     * KAIKEN päälle — pohjan, meritaustan ja nimiöiden — koska myös
+     * pallon 4k-pohjatekstuuri on jaettu samalla kertoimella kokonaan.
+     * Rivin leveysaste tulee samasta `yLat`-muunnoksesta kuin laatan
+     * oma pallonala, joten liuku ja verkko ovat samaa mieltä rivistä.
+     */
+    if (kerrokset.astronautti) {
+      const arkkiY = pyramidi?.arkki?.y ?? 0;
+      const ppuY = tasoOlio.pikseliaPerYksikko;
+      const pysakit = pyramidinReliefinValoliuku(kartta.korkeus,
+        (y) => yLat((kartta.kansY0 + y) / ppuY + arkkiY));
+      if (maalaaAstronautinValoliuku(ctx, kartta.leveys, kartta.korkeus, pysakit)) {
+        mittarit.valoliukuja += 1;
+      }
+    }
     // Verkko: laatan oma lat/lon-suorakaide, UV laatan omalla kankaalla.
     const alue = laatanAlue(tasoOlio, t.sarake, t.rivi);
     if (!Number.isFinite(alue.lat0) || !Number.isFinite(alue.lat1) || !(alue.lat1 > alue.lat0)) {
@@ -2347,9 +2414,18 @@ export function luoLaattakerros({
     tekstuuri.wrapT = THREE_CLAMP;
     tekstuuri.anisotropy = renderer?.capabilities?.getMaxAnisotropy?.() ?? 1;
     tekstuuri.needsUpdate = true;
+    /*
+     * LAASTARIN SÄVY ON PALLON SÄVY (PAATOKSET 41 kohta 4). Linssin oma
+     * pallo on tummennettu materiaalin värillä 0x999999 (omistajan
+     * tilaus *"hieman tummempi kauttaaltaan"*), ja laatan oma materiaali
+     * jäi valkoiseksi — mitattuna 1,68-kertainen kirkkaus pohjaan
+     * nähden. Sama diffuse-kerroin molemmille, ei pikselityötä.
+     */
+    const savy = kerrokset.astronautti ? pyramidinReliefinSavy() : null;
     const materiaali = new luokat.LaattaMateriaali({
       map: tekstuuri, transparent: true, opacity: 0, depthWrite: true,
       polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: LAATTAKERROS_SYVYYSSIIRTO,
+      ...(savy === null ? {} : { color: savy }),
     });
     const verkko = new luokat.Mesh(geometria, materiaali);
     verkko.renderOrder = LAATTAKERROS_RENDER_ORDER_POHJA + t.z;

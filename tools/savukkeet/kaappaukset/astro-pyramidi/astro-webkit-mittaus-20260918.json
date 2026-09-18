@@ -3,21 +3,21 @@
   "selain": "chromium",
   "kotelo": "iphone",
   "kerta": 1,
-  "kirjasto": "kirjasto yritys=0 ok=1 ms=398",
+  "kirjasto": "kirjasto yritys=0 ok=1 ms=366",
   "avaruusAlku": "avaruus-alku kotelo=374x771 kangas=1122x2313 hukassa=0 itsenainen=0 dpr=3",
   "lahde": "4096x2048",
   "ladontaKangas": "2048x1024",
   "ladontaRivit": [
    "2048x1024 ok=1 tapa=suodatin"
   ],
-  "valmis": "blob 599 ms",
+  "valmis": "blob 1456 ms",
   "vaiheetKaatui": [],
   "pintaMittaus": [
-   "kirkkaus=90 reliefi=1 varapolku=0"
+   "kirkkaus=89 reliefi=1 varapolku=0"
   ],
   "pintaMusta": [],
   "kehykset": [
-   "piirtoja=1309 alussa=428 pakotettu=0"
+   "piirtoja=545 alussa=98 pakotettu=0"
   ],
   "pistemittari": [
    "kohteita=64 domissa=64 kerros=71",
@@ -154,43 +154,43 @@
   ],
   "pisteitaEnsinHetki": 0,
   "kirkkaus5": {
-   "keski": 59.8,
+   "keski": 50.6,
    "sivut": [
-    53.8,
-    67.1,
-    82.8,
-    22.7
+    53.5,
+    67,
+    82.6,
+    22.6
    ],
-   "max": 82.8
+   "max": 82.6
   },
   "kirkkaus15": {
-   "keski": 59.1,
+   "keski": 56.9,
    "sivut": [
-    46.6,
-    64.5,
-    79.9,
-    21.9
+    46.2,
+    64.1,
+    79.5,
+    21.8
    ],
-   "max": 79.9
+   "max": 79.5
   },
   "kirkkausSarja": [
    [
     1,
-    63.5,
-    82.9
+    58.9,
+    83.2
    ],
    [
     2,
-    60.5,
-    85
+    55.2,
+    85.2
    ],
    [
     5,
-    59.8,
-    82.8
+    50.6,
+    82.6
    ]
   ],
-  "eleMs": 22675,
+  "eleMs": 31755,
   "kartta": {
    "map": true,
    "tyyppi": "HTMLImageElement",
@@ -204,7 +204,7 @@
   "erittely": null,
   "kuva": "astro-webkit-chromium-iphone-1-20260918.jpg",
   "reliefinTarkkuus": "4k",
-  "reliefinKestoMs": 599,
+  "reliefinKestoMs": 1456,
   "pinnanOsoite": "blob:http://127.0.0.1:88",
   "kangas": {
    "leveys": 1122,
@@ -214,13 +214,39 @@
    "lat": 41.6,
    "lng": 14.6,
    "altitude": 0.14,
-   "kuva": "astro-laastari-chromium-iphone-1-jalkeen-20260918.jpg",
-   "teravyys": 19.545,
-   "fps": 76.9,
-   "muistiMt": 258,
+   "kuva": "astro-laastari-yo-chromium-jalkeen.jpg",
+   "teravyys": 11.496,
+   "fps": 21.3,
+   "muistiMt": 257,
+   "kaistat": [
+    46.94,
+    51.97,
+    45.76,
+    55.49
+   ],
+   "kaari": 0.8459,
+   "vartio5": {
+    "pohjanKaistat": [
+     49.61,
+     57.42,
+     49.58,
+     58.45
+    ],
+    "erot": [
+     -2.67,
+     -5.45,
+     -3.82,
+     -2.96
+    ],
+    "kaistaEro": 5.45,
+    "kaistaEroOk": true,
+    "pohjanKaari": 0.8488,
+    "kaariEro": 0.0029,
+    "kaariOk": true
+   },
    "reliefipyyntoja": 20,
    "seepiapyyntoja": 0,
-   "ekaLaattaMs": 13,
+   "ekaLaattaMs": 66,
    "tila": "astronautti",
    "kaytossa": true,
    "astro": true,
@@ -242,19 +268,19 @@
    "alku lahde=4096x2048 kangas=2048x1024 ruutu=390 kokoPallo=1 webkit=1",
    "avaruus-pinta tekstuuri=1 tarkkuus=4k",
    "avaruus-valmis alt=3.91 kotelo=374x771 tahtia=2190 kalvo=1",
-   "vaihe nimi=avaruus ok=1 ms=56",
+   "vaihe nimi=avaruus ok=1 ms=51",
    "vaihe nimi=pulu ok=1 ms=0",
    "vaihe nimi=aanet ok=1 ms=0",
    "vaihe nimi=linssiaani ok=1 ms=0",
    "vaihe nimi=pisteet ok=1 ms=0",
-   "kuva px=4096x2048 ms=339",
-   "ladonta koko=2048x1024 ok=1 tapa=suodatin ms=145",
-   "blob kt=3702 ms=114",
-   "valmis syy=blob osoite=blob:http:// ms=599",
-   "pinta-mittaus kirkkaus=90 reliefi=1 varapolku=0",
+   "kuva px=4096x2048 ms=190",
+   "ladonta koko=2048x1024 ok=1 tapa=suodatin ms=141",
+   "blob kt=3766 ms=1123",
+   "valmis syy=blob osoite=blob:http:// ms=1456",
+   "pinta-mittaus kirkkaus=89 reliefi=1 varapolku=0",
    "vartija puute=ei pisteita=64 vaiheet=0",
    "pistemittari kohteita=64 domissa=64 kerros=71",
-   "kehykset piirtoja=1309 alussa=428 pakotettu=0",
+   "kehykset piirtoja=545 alussa=98 pakotettu=0",
    "vartija puute=ei pisteita=64 vaiheet=0",
    "pistemittari kohteita=64 domissa=64 kerros=71"
   ],
@@ -266,6 +292,11 @@
   },
   "virheet": [],
   "konsoli": [
+   "error: Failed to load resource: net::ERR_FAILED",
+   "warning: [.WebGL-0x11c004f2200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+   "warning: [.WebGL-0x11c004f2200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+   "warning: [.WebGL-0x11c004f2200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels",
+   "warning: [.WebGL-0x11c004f2200]GL Driver Message (OpenGL, Performance, GL_CLOSE_PATH_NV, High): GPU stall due to ReadPixels (this message will no longer repeat)",
    "error: Failed to load resource: net::ERR_FAILED",
    "error: Failed to load resource: net::ERR_FAILED",
    "error: The AudioContext encountered an error from the audio device or the WebAudio renderer.",

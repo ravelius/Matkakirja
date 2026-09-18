@@ -54,6 +54,12 @@ const PVM = process.env.PVM ?? '20260917';
  * terävyysvertailun "ennen".
  */
 const LISAPARAMIT = process.env.LISAPARAMIT ?? '';
+/*
+ * LAASTARIN KAAPPAUKSEN NIMI. Oletus on savukkeen oma pitkä nimi
+ * (selain, kotelo, kerta, päivä); `LAASTARIN_KUVA=astro-laastari-yo`
+ * antaa raportin pyytämän parin `…-ennen.jpg` / `…-jalkeen.jpg`.
+ */
+const LAASTARIN_KUVA = process.env.LAASTARIN_KUVA ?? '';
 const AVAUKSIA = Number(process.env.AVAUKSIA ?? 3);
 const SEURANTA_MS = 15000;
 const SEURANTA_VALI_MS = 500;
@@ -346,6 +352,81 @@ function teravyys(kuva, osuus = 0.6) {
   return n ? +(summa / n).toFixed(3) : 0;
 }
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * VARTIO 5: LAASTARI ON YHTÄ HÄMÄRÄ KUIN POHJA (PAATOKSET 41 kohta 4)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Fablen luenta 18.9.2026: laastarin alue oli *kirkas päivänvalo*
+ * siinä missä 4k-pohja oli astronautin hämärä, ja reunalla oli
+ * kirkkausraja. Juurisyy on pallon valo: pohjatekstuuriin on poltettu
+ * valon käänteisluku (`valoLiuku`), laastariin ei ollut.
+ *
+ * ── MIKSI TÄSSÄ EI OLE "YÖNÄKYMÄÄ" JA "PÄIVÄNÄKYMÄÄ" ─────────────
+ *
+ * Astronautin kamerassa EI OLE TERMINAATTORIA. Pallon valot ovat
+ * pelin omat (AmbientLight π + DirectionalLight 0,6 π pohjoisnavan
+ * yläpuolelta), eikä niissä ole vuorokautta: "yö" kaappauksessa on
+ * valon vastakaava (41,6°:ssa 0,72) ja kalvon reunavarjo. Vartio on
+ * siksi se SUHDE, joka pätee 4k-pohjalle — juuri kuten tilauksessa
+ * sanottiin: *mittaa pohjasta ensin, käytä samaa suhdetta.*
+ *
+ * KAKSI LUKUA, MOLEMMAT SAMASTA NÄKYMÄSTÄ (Italia, korkeus 0,14):
+ *
+ *  5a. KAISTAERO. Ruudun pallonala jaetaan neljään vaakakaistaan
+ *      (= neljä leveysastevyöhykettä). Kaistan keskikirkkaus
+ *      laastarin kanssa ja ilman laastaria saa erota alle 8:n.
+ *      Tämä ON laastarin reunan kahden puolen ero: reuna on
+ *      täsmälleen se paikka, jossa laastari kohtaa pohjan, ja jos
+ *      kaista on pohjan kanssa samassa kirkkaudessa joka
+ *      leveysasteella, rajaa ei ole missään.
+ *  5b. VALON KAARI. Pohjoisimman ja eteläisimmän kaistan suhde
+ *      kertoo, kulkeeko valon vaimennus laastarin yli. Pohjan suhde
+ *      mitataan ensin, ja laastarin suhde saa erota siitä alle 0,04.
+ *
+ * VERTAILUPARI ON AJOPARI. "Ennen" on `LISAPARAMIT=&reliefipyramidi=0`
+ * (vanha 4k-polku) ja "jälkeen" oletusajo. Ensimmäinen kirjoittaa
+ * lukunsa kaappauskansioon (`astro-laastari-pohja.json`), jälkimmäinen
+ * lukee ne ja tulostaa vartion. Ilman pohjatiedostoa luvut tulostuvat
+ * mittarina ilman tuomiota — vartija ei saa olla tiukempi kuin sen
+ * tieto.
+ */
+const KAISTAERON_KATTO = 8;
+const KAAREN_KATTO = 0.04;
+/** Mitta-ala ruudusta: pallo ilman reunaa ja ilman pallodiag-lokia. */
+const KAISTA_ALA = { x0: 0.12, x1: 0.88, y0: 0.08, y1: 0.52 };
+
+/**
+ * Vaakakaistojen keskikirkkaus mitta-alalta (ylin kaista ensin eli
+ * pohjoisin). Sama ala ja sama jako molemmissa ajoissa, joten luvut
+ * vertautuvat suoraan.
+ */
+function kaistojenKirkkaus(kuva, kaistoja = 4) {
+  const x0 = Math.floor(kuva.width * KAISTA_ALA.x0);
+  const x1 = Math.ceil(kuva.width * KAISTA_ALA.x1);
+  const y0 = Math.floor(kuva.height * KAISTA_ALA.y0);
+  const y1 = Math.ceil(kuva.height * KAISTA_ALA.y1);
+  const ulos = [];
+  for (let k = 0; k < kaistoja; k += 1) {
+    const ya = y0 + Math.floor(((y1 - y0) * k) / kaistoja);
+    const yb = y0 + Math.floor(((y1 - y0) * (k + 1)) / kaistoja);
+    let summa = 0;
+    let n = 0;
+    for (let y = ya; y < yb; y += 1) {
+      for (let x = x0; x < x1; x += 1) { summa += luminanssi(kuva.data, (y * kuva.width + x) * 4); n += 1; }
+    }
+    ulos.push(n ? +(summa / n).toFixed(2) : 0);
+  }
+  return ulos;
+}
+
+/** Valon kaari: pohjoisimman ja eteläisimmän kaistan suhde. */
+function valonKaari(kaistat) {
+  const a = kaistat?.[0];
+  const b = kaistat?.[kaistat.length - 1];
+  return b > 0 ? +(a / b).toFixed(4) : null;
+}
+
 /** Kehystahti: kuinka monta rAF-kehystä kahdessa sekunnissa. */
 const LUE_FPS = () => new Promise((valmis) => {
   let n = 0;
@@ -469,7 +550,10 @@ async function mittaaAvaus(s, { selain, kotelo, kerta, dpr, leveys, korkeus }) {
   await s.waitForTimeout(LAASTARIN_ODOTUS_MS);
   s.off('request', kuuntelija);
   const laastarinKuva = await s.screenshot({ type: 'png', timeout: 60000 });
-  const laastarinTeravyys = teravyys(decodePng(laastarinKuva));
+  const laastarinPikselit = decodePng(laastarinKuva);
+  const laastarinTeravyys = teravyys(laastarinPikselit);
+  const laastarinKaistat = kaistojenKirkkaus(laastarinPikselit);
+  const laastarinKaari = valonKaari(laastarinKaistat);
   const laastarinFps = await s.evaluate(LUE_FPS);
   const laastarinMuisti = await s.evaluate(LUE_MUISTI);
   const laastarinTila = await s.evaluate(async () => {
@@ -482,21 +566,65 @@ async function mittaaAvaus(s, { selain, kotelo, kerta, dpr, leveys, korkeus }) {
       scenessa: m?.scenessa ?? null, tavut: m?.kaytetytTavut ?? null, syy: m?.syy ?? null,
     };
   }).catch((e) => ({ virhe: String(e).slice(0, 120) }));
+  const pohjaAjo = /reliefipyramidi=0/.test(LISAPARAMIT);
   if (ULOS) {
-    const nimi = `astro-laastari-${selain}-${kotelo}-${kerta}-${LISAPARAMIT ? 'ennen' : 'jalkeen'}-${PVM}.jpg`;
+    const nimi = LAASTARIN_KUVA
+      ? `${LAASTARIN_KUVA}-${pohjaAjo ? 'ennen' : 'jalkeen'}.jpg`
+      : `astro-laastari-${selain}-${kotelo}-${kerta}-${pohjaAjo ? 'ennen' : 'jalkeen'}-${PVM}.jpg`;
     await s.screenshot({
       path: join(ULOS, nimi), type: 'jpeg', quality: 60, scale: 'css', timeout: 60000,
     }).catch(() => {});
     laastari.kuva = nimi;
   }
+  /*
+   * VARTIO 5 (ks. VARTIO 5 yllä). Pohja-ajo kirjoittaa lukunsa
+   * levylle, laastariajo lukee ne ja tuomitsee. Tiedosto on
+   * kaappauskansiossa ja kotelokohtainen: eri kotelo on eri ruutu eikä
+   * sen kaistat vertaudu.
+   */
+  const pohjaPolku = ULOS ? join(ULOS, `astro-laastari-pohja-${selain}-${kotelo}.json`) : '';
+  let vartio5 = null;
+  if (pohjaAjo) {
+    if (pohjaPolku) {
+      writeFileSync(pohjaPolku, JSON.stringify({
+        selain, kotelo, kaistat: laastarinKaistat, kaari: laastarinKaari, teravyys: laastarinTeravyys,
+      }, null, 1));
+    }
+  } else if (pohjaPolku && existsSync(pohjaPolku)) {
+    try {
+      const pohja = JSON.parse(readFileSync(pohjaPolku, 'utf8'));
+      const erot = laastarinKaistat.map((v, i) => +(v - (pohja.kaistat?.[i] ?? v)).toFixed(2));
+      const kaistaEro = Math.max(...erot.map(Math.abs));
+      const kaariEro = (laastarinKaari !== null && pohja.kaari)
+        ? +Math.abs(laastarinKaari - pohja.kaari).toFixed(4) : null;
+      vartio5 = {
+        pohjanKaistat: pohja.kaistat ?? null,
+        erot,
+        kaistaEro: +kaistaEro.toFixed(2),
+        kaistaEroOk: kaistaEro < KAISTAERON_KATTO,
+        pohjanKaari: pohja.kaari ?? null,
+        kaariEro,
+        kaariOk: kaariEro === null ? null : kaariEro < KAAREN_KATTO,
+      };
+    } catch (e) { vartio5 = { virhe: String(e).slice(0, 80) }; }
+  }
   Object.assign(laastari, {
     teravyys: laastarinTeravyys, fps: laastarinFps, muistiMt: laastarinMuisti,
+    kaistat: laastarinKaistat, kaari: laastarinKaari, vartio5,
     reliefipyyntoja: verkko.reliefi, seepiapyyntoja: verkko.seepia, ekaLaattaMs: verkko.ekaMs,
     ...laastarinTila,
   });
   console.log(`    LAASTARI Italia: terävyys ${laastarinTeravyys}, fps ${laastarinFps},`
     + ` muisti ${laastarinMuisti ?? '–'} Mt, reliefipyyntöjä ${verkko.reliefi} (1. ${verkko.ekaMs ?? '–'} ms),`
     + ` seepiapyyntöjä ${verkko.seepia}, tila ${JSON.stringify(laastarinTila)}`);
+  console.log(`    LAASTARI kirkkaus: kaistat ${laastarinKaistat.join(' / ')}, valon kaari ${laastarinKaari}`
+    + (vartio5
+      ? (vartio5.virhe ? `, pohjaa ei luettu (${vartio5.virhe})`
+        : `, pohja ${vartio5.pohjanKaistat?.join(' / ')}, erot ${vartio5.erot.join(' / ')},`
+          + ` suurin ${vartio5.kaistaEro} → ${vartio5.kaistaEroOk ? 'VIHREÄ' : 'PUNAINEN'} (< ${KAISTAERON_KATTO}),`
+          + ` kaari ${vartio5.pohjanKaari} → ${laastarinKaari}, ero ${vartio5.kaariEro}`
+          + ` → ${vartio5.kaariOk ? 'VIHREÄ' : 'PUNAINEN'} (< ${KAAREN_KATTO})`)
+      : (pohjaAjo ? ' (pohja-ajo: luvut talteen)' : ' (pohjatiedostoa ei ole — ei tuomiota)')));
 
   /* Kuva raporttiin ENNEN erittelyn kokeita: kokeet muuttavat pinnan tilaa. */
   let kuvanNimi = null;
