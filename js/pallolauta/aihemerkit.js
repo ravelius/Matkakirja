@@ -863,12 +863,16 @@ export function piirraViuhka(juuri, d) {
    * on yhä pohja → rivit.
    */
   const rivit = el('g', { class: 'pallolauta-viuhka-rivit' }, juuri);
-  for (const [nro, k] of kohdat.entries()) {
+  /*
+   * RIVIEN PORRASTUS ON POISTETTU (PAATOKSET 34 kohta 16 c, omistaja
+   * 18.9.2026: *"animaatio nayttaa nyt huonolta, ota se pois"*). Rivit
+   * eivät enää kanna järjestyslukua (`--liuskan-rivi`), koska mikään
+   * sääntö ei viivytä niiden saapumista — liuska on täydessä koossa jo
+   * avauksen jälkeisessä kehyksessä.
+   */
+  for (const k of kohdat) {
     const kohta = el('g', { class: 'pallolauta-viuhka-kohta' }, rivit);
     kohta.style.transform = `translate(${k.dx.toFixed(2)}px, ${k.dy.toFixed(2)}px)`;
-    // Rivin järjestysluku porrastusta varten (css/styles.css
-    // pallolauta-liuska-saapuu): 30 ms riviä kohti.
-    kohta.style.setProperty('--liuskan-rivi', String(nro));
     const kuva = el('g', { class: 'pallolauta-viuhka-kuva' }, kohta);
     kuva.style.transform = `scale(${(k.mitta ?? 1).toFixed(4)})`;
     k.piirra?.(kuva, k.puoli);
@@ -909,12 +913,12 @@ export function piirraViuhka(juuri, d) {
  * RIVIEN TODELLINEN LAATIKKO merkin omissa ruutupikseleissä, tai null
  * jos selain ei sitä anna (elementti ei ole vielä piirtopuussa).
  *
- * MITTAUS EI SAA NÄHDÄ ANIMAATIOTA. Liuskan rivit saapuvat
- * porrastetusti ja haitarin kohderivi alkaa `translateY(-6px)`:stä
- * (css/styles.css pallolauta-liuska-haitari) — mittaushetkellä se
- * siirto olisi laatikossa mukana ja pohja jäisi 6 px vinoon. Luokka
- * sammuttaa animaatiot mittauksen ajaksi (`animation: none !important`)
- * ja poistuu heti perään, joten rivit saapuvat kuten ennenkin.
+ * MITTAUS EI SAA NÄHDÄ ANIMAATIOTA. Kaupunkiliuskalla animaatioita ei
+ * enää ole (PAATOKSET 34 kohta 16 c), mutta aihemerkin oma viuhka
+ * aukeaa yhä (pallolauta-viuhka-avaa: `scale(0.72)` ja opacity 0), ja
+ * mittaushetkellä se skaalaus olisi laatikossa mukana. Luokka sammuttaa
+ * animaatiot mittauksen ajaksi (`animation: none !important`) ja poistuu
+ * heti perään, joten viuhka aukeaa kuten ennenkin.
  */
 function musteenLaatikko(rivit) {
   try {

@@ -3462,9 +3462,22 @@ export async function avaaPallolauta(ui) {
   let pisteAvain = null;
   let helmet = [];
   const paivitaPisteet = () => {
-    const nakyvat = kaupungit.filter(pisteNakyy);
+    /*
+     * KAUPUNGIN PISTE PIILOON LIUSKAN AJAKSI (PAATOKSET 34 kohta 16 a,
+     * omistajan iPhone-kuva v1939: *"piste nakyy liikaa taustan
+     * lapi"*). Liuskan pohja on läpikuultava (alfa 0,824, kohta 15 a),
+     * ja piste piirtyy pallon OMASSA kerroksessa pohjan alle — siksi
+     * se kuulsi läpi. Sama kaava kuin ison nimen piilotuksella (kohta
+     * 14 c, `nimet.lado` → `piilota`): tunnus tulee nostokerrokselta,
+     * ja piste palaa itsestään, kun liuska sulkeutuu.
+     */
+    const piiloKaupunki = nostot.liuskanKaupunkiId?.() ?? null;
+    const nakyvat = kaupungit.filter((k) => pisteNakyy(k) && k.id !== piiloKaupunki);
     const valot = nostot.valot();
     const avain = [
+      // Piilotettu kaupunki on osa avainta: ilman sitä pistejoukko
+      // näyttäisi muuttumattomalta eikä kirjasto saisi uutta dataa.
+      `liuska:${piiloKaupunki ?? ''}`,
       nakyvat.map((k) => `${k.id}${k.kayty ? '*' : ''}`).join(','),
       helmet.map((h) => h.id).join(','),
       valot.map((v) => v.id).join(','),

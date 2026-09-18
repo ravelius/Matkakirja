@@ -27521,62 +27521,39 @@ body[data-mode] .fact-card.pieni > button#fact-kuuntele.fact-kuuntele.ghost {
 /*
  * ══ KAUPUNKILIUSKA (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34) ═══════
  *
- * ANIMAATIO ON LIUKU MERKISTÄ, EI HYPPY (kohta 6): liuska feidaa
- * 150 ms:ssä ja liukuu kaupunkimerkin puolelta paikalleen, rivit
- * 30 ms:n porrastuksella ylhäältä alas, ja haitarin avaus on 200 ms:n
- * korkeusliuku. Porrastus on CSS-muuttuja, jonka rivin järjestysluku
- * antaa (--liuska-rivi), jottei piirto tarvitse omaa kelloaan.
+ * LIUSKASSA EI OLE ANIMAATIOTA (kohta 16 c, omistaja 18.9.2026
+ * sanatarkasti: *"animaatio nayttaa nyt huonolta, ota se pois"*).
+ * Poistettu: liuskan 150 ms:n feidi, rivien 30 ms:n porrastus
+ * (`--liuskan-rivi`) ja haitarin 200 ms:n korkeusliuku — liuska ja
+ * avattu kategoria ovat täydessä koossaan heti. Kamera-ajo (kohta
+ * 14 a) on eri asia ja säilyy.
+ *
+ * SÄÄNTÖ ON KIELTO, EI PELKKÄ POISTO: liuska piirtyy nostomerkin
+ * omaan `.pallolauta-viuhka`-ryhmään, jolla on aihemerkin viuhkan
+ * oma avausanimaatio (pallolauta-viuhka-avaa). Ilman tätä kieltoa se
+ * jäisi voimaan liuskalle. Kohde on nimenomaan noston sisällä oleva
+ * viuhkaryhmä, joten aihemerkin oma viuhka säilyy ennallaan.
  *
  * SUODATINTA EI KÄYTETÄ (iOS-sääntö, tests/rules.test.mjs): pehmennys
  * on pohjan vyöhykkeissä (js/pallolauta/aihemerkit.js), ei filterissä.
  */
-.pallolauta-liuska-auki .pallolauta-viuhka-kohta {
-  /*
-   * RIVIEN 30 ms PORRASTUS (PAATOKSET 34 kohta 8): lista ei ilmesty
-   * yhtenä levynä vaan valuu ylhäältä alas, kuten paperiliuska
-   * käännettäisiin esiin. Järjestysluku tulee piirrosta muuttujana
-   * (js/pallolauta/nostot.js `--liuskan-rivi`), koska SVG-ryhmillä ei
-   * ole :nth-child-lukua, joka kestäisi haitarin avaukset.
-   */
-  animation: pallolauta-liuska-saapuu 150ms ease-out both;
-  animation-delay: calc(var(--liuskan-rivi, 0) * 30ms);
+.pallolauta-nosto .pallolauta-viuhka,
+.pallolauta-nosto .pallolauta-viuhka * {
+  animation: none;
+  transition: none;
 }
 
-.pallolauta-liuska-auki .pallolauta-viuhka-pohja {
-  animation: pallolauta-liuska-pohja 150ms ease-out both;
-}
-
-@keyframes pallolauta-liuska-saapuu {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes pallolauta-liuska-pohja {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-/* Haitarin avaus: sisennetty kohderivi kasvaa paikalleen 200 ms:ssä. */
-.pallolauta-liuska-kohde {
-  animation: pallolauta-liuska-haitari 200ms ease-out both;
-  transform-origin: left center;
-}
-
-@keyframes pallolauta-liuska-haitari {
-  from { opacity: 0; transform: translateY(-6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+/*
+ * KAUPUNGIN MERKKI PIILOON LIUSKAN AJAKSI (kohta 16 a). Piilotus
+ * koskee VAIN merkin omaa piirtoryhmää, ei koko elementtiä: liuska
+ * on saman elementin lapsi (ks. js/pallolauta/nostot.js
+ * nostoElementti), ja `visibility: hidden` koko elementille veisi
+ * liuskan mukanaan.
+ */
+.pallolauta-liuska-merkki-piilossa .pallolauta-nosto-siirto { visibility: hidden; }
 
 .pallolauta-liuska-hiusviiva {
   stroke: var(--muste, #3a2f24);
   stroke-width: 0.6;
   opacity: 0.35;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pallolauta-liuska-auki .pallolauta-viuhka-kohta,
-  .pallolauta-liuska-auki .pallolauta-viuhka-pohja,
-  .pallolauta-liuska-kohde {
-    animation: none;
-  }
 }
