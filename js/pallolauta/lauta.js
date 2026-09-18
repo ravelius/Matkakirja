@@ -101,7 +101,8 @@ import { KARTTANIMI_KOOT } from '../karttanimet.js';
  */
 import {
   TURISTI_INFON_ASENNOT, TURISTI_INFO_NIMIO, asemoiKaupunkipopup, asetteleTuristiInfo,
-  avaaTiivisKaupunkietusivu, avaaTuristiOpas, kaupunginMatkailijalle, suljeKaupunkipopup,
+  avaaKaupunkiesittely, avaaNahtavyysnakyma, avaaTiivisKaupunkietusivu, avaaTuristiOpas,
+  kaupunginMatkailijalle, suljeKaupunkipopup,
   turistiInfoElementti, turistiInfonAsteet, turistiInfonAsteetRuudulta,
 } from '../kaupunkinosto.js';
 import { NOSTOLADONTA_POLTON_TIHEYS } from '../nostoladonta.js';
@@ -3122,17 +3123,20 @@ export async function avaaPallolauta(ui) {
           if (avain) ui.doMove(avain);
           return;
         }
-        if (city && osui.laji === 'lehti') ui.avaaTutkinta?.(city);
-        else if (city && osui.laji === 'nahtavyydet') {
-          /*
-           * "Nähtävyydet" on ENTINEN kaupunkipopupin kohdekartta
-           * (PAATOKSET 34 kohta 8, nimi js/nahtavyydet.js). Tässä
-           * erässä se avataan tiiviinä etusivuna, jossa kohdekartta
-           * on — oma pelkkä karttakortti on seuraavan erän työ, ja
-           * puolivalmis oma kortti veisi kohteet kokonaan pois.
-           */
-          avaaTiivisKaupunkietusivu(ui, city);
-        }
+        /*
+         * KAKSI YLÄRIVIÄ AVAAVAT OMAT KEVYET NÄKYMÄNSÄ (omistaja
+         * 18.9.2026 klo 14.05, Raamattu KARTTAUUDISTUKSEN PAATOKSET 34
+         * kohta 16 d ja e). Kaupungin oma rivi avasi ennen KOKO
+         * kaupunkilehden (`ui.avaaTutkinta`) ja "Nähtävyydet" tiiviin
+         * etusivun, jossa oli sekä kuvat, kartta että kohdeluettelo —
+         * nyt rivit jakavat sisällön: kuvat ja leipäteksti kaupungin
+         * riville, kartta ja nähtävyysteksti Nähtävyydet-riville.
+         * Molemmat näkymät ovat js/kaupunkinosto.js:ssä, koska ne
+         * latovat lehden dataa lehden omilla piirtäjillä; lauta vain
+         * kertoo, mitä riviä napautettiin.
+         */
+        if (city && osui.laji === 'lehti') avaaKaupunkiesittely(ui, city);
+        else if (city && osui.laji === 'nahtavyydet') avaaNahtavyysnakyma(ui, city);
         else if (city && osui.laji === 'opas') avaaTuristiOpas(ui, city);
         return;
       }
@@ -3458,9 +3462,22 @@ export async function avaaPallolauta(ui) {
   let pisteAvain = null;
   let helmet = [];
   const paivitaPisteet = () => {
-    const nakyvat = kaupungit.filter(pisteNakyy);
+    /*
+     * KAUPUNGIN PISTE PIILOON LIUSKAN AJAKSI (PAATOKSET 34 kohta 16 a,
+     * omistajan iPhone-kuva v1939: *"piste nakyy liikaa taustan
+     * lapi"*). Liuskan pohja on läpikuultava (alfa 0,824, kohta 15 a),
+     * ja piste piirtyy pallon OMASSA kerroksessa pohjan alle — siksi
+     * se kuulsi läpi. Sama kaava kuin ison nimen piilotuksella (kohta
+     * 14 c, `nimet.lado` → `piilota`): tunnus tulee nostokerrokselta,
+     * ja piste palaa itsestään, kun liuska sulkeutuu.
+     */
+    const piiloKaupunki = nostot.liuskanKaupunkiId?.() ?? null;
+    const nakyvat = kaupungit.filter((k) => pisteNakyy(k) && k.id !== piiloKaupunki);
     const valot = nostot.valot();
     const avain = [
+      // Piilotettu kaupunki on osa avainta: ilman sitä pistejoukko
+      // näyttäisi muuttumattomalta eikä kirjasto saisi uutta dataa.
+      `liuska:${piiloKaupunki ?? ''}`,
       nakyvat.map((k) => `${k.id}${k.kayty ? '*' : ''}`).join(','),
       helmet.map((h) => h.id).join(','),
       valot.map((v) => v.id).join(','),

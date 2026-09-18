@@ -165,7 +165,41 @@ function asetaKylttiRaja(piste, polku) {
  * jossa pelaaja on, ei siihen, jonka merkkiä napautettiin. Oletus on
  * entinen kenttä, joten kaupunkilehti ei muutu miksikään.
  */
-export function piirraKaupunkiKartta(ui, kohde, { cityId = null } = {}) {
+/**
+ * NÄHTÄVYYSTEKSTI = KOHDEKARTAN OMA SAATETEKSTI.
+ *
+ * PAATOKSET 34 kohta 16 e puhuu *"nähtävyystekstistä"* kartan alla.
+ * Pelissä on täsmälleen yksi teksti, joka on kirjoitettu kaupungin
+ * kohdekartasta: `KAUPUNKIKARTAT[id].esittely` (js/packs/maakartat.js),
+ * jonka kaupunkilehti latoo kahteen palstaan kartan yläpuolelle. Uusi
+ * näkymä lukee siis SAMAA tekstiä — yhtään uutta sisältöä ei
+ * kirjoiteta, ja teksti on kartan omaa saatetta eikä kaupungin yleistä
+ * esittelyä (se on lehden `intro`, jonka "Pariisi"-rivi näyttää).
+ *
+ * Kaupunki ilman kohdekarttaa palauttaa tyhjän: silloin koko näkymää ei
+ * ole olemassakaan, koska liuskan rivi tulee vain kartalliselle
+ * kaupungille (kaupungillaKohdekartta).
+ */
+export function kaupunginNahtavyysteksti(cityId) {
+  return KAUPUNKIKARTAT[cityId]?.esittely ?? '';
+}
+
+/*
+ * KOLME OSAA VOI JÄTTÄÄ POIS (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34
+ * kohta 16, omistaja 18.9.2026): kaupunkiliuskan "Nähtävyydet"-rivin
+ * näkymässä on VAIN kartta ja sen alla nähtävyysteksti, jonka
+ * ensimmäinen lause näkyy ja loput tulevat "Lue lisää" -napista —
+ * kohdeluettelo (`selitteet`) poistuu siitä näkymästä kokonaan, ja
+ * saateteksti (`esittely`) latoo kutsuja itse KARTAN ALLE.
+ *
+ * LIPUT EIVÄT MUUTA VANHAA: oletukset ovat entiset, joten kaupunkilehti
+ * ja vanha iso pop-up piirtyvät rivilleen kuten ennen. Kohteet avataan
+ * uudessa näkymässä kartalta napauttamalla, aivan kuten kartalla on
+ * aina voinut (avaaJuttu on merkissä kiinni, ei listassa).
+ */
+export function piirraKaupunkiKartta(ui, kohde, {
+  cityId = null, esittely = true, selitelista = true, kuvagalleria = true,
+} = {}) {
   const kaupunkiId = cityId ?? ui.lehtitila.arrivalShownFor;
   const kartta = KAUPUNKIKARTAT[kaupunkiId];
   if (!kartta) return;
@@ -178,11 +212,13 @@ export function piirraKaupunkiKartta(ui, kohde, { cityId = null } = {}) {
   // Esittely kahdessa palstassa (omistajan tilaus 15.8.2026:
   // "kaupunki kartalla teksti voisi olla kahdessa palstassa");
   // kapealla ruudulla CSS palauttaa yhden palstan.
-  const palstat = html('div', 'kaupunkikartta-palstat');
-  for (const kappale of (kartta.esittely ?? '').split('\n\n').filter(Boolean)) {
-    palstat.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
+  if (esittely) {
+    const palstat = html('div', 'kaupunkikartta-palstat');
+    for (const kappale of (kartta.esittely ?? '').split('\n\n').filter(Boolean)) {
+      palstat.appendChild(html('p', 'kaupunkikartta-esittely', kappale));
+    }
+    lohko.appendChild(palstat);
   }
-  lohko.appendChild(palstat);
   /*
    * ZOOMATTAVA KARTTAIKKUNA (omistajan tilaus 14.8.2026: "voiko
    * kaupunkikartasta tehdä zoomattavaa ... pyörisi nykyisessä
@@ -857,7 +893,7 @@ export function piirraKaupunkiKartta(ui, kohde, { cityId = null } = {}) {
   vihje.setAttribute('aria-hidden', 'true');
   kehys.appendChild(vihje);
   lohko.appendChild(kehys);
-  lohko.appendChild(selitteet);
+  if (selitelista) lohko.appendChild(selitteet);
   lohko.appendChild(lahderivi);
   /*
    * KAUPUNGIN OMA KUVAGALLERIA (omistajan tilaus 23.8.2026). Sama
@@ -870,13 +906,13 @@ export function piirraKaupunkiKartta(ui, kohde, { cityId = null } = {}) {
   const kaupunkitieto = ui.game?.board?.cityById?.get(kaupunki) ?? null;
   const keskiLat = kartta.rajat ? (kartta.rajat.pohjoinen + kartta.rajat.etela) / 2 : NaN;
   const keskiLon = kartta.rajat ? (kartta.rajat.ita + kartta.rajat.lansi) / 2 : NaN;
-  const galleria = galleriaNappi(ui, {
+  const galleria = kuvagalleria ? galleriaNappi(ui, {
     nimi: kaupunkitieto?.name ?? kaupunki,
     wiki: kaupunkitieto?.wiki ?? kaupunkitieto?.name ?? '',
     lat: keskiLat,
     lon: keskiLon,
     sade: 5000,
-  }, 'Lisää kuvia tästä kaupungista');
+  }, 'Lisää kuvia tästä kaupungista') : null;
   if (galleria) lohko.appendChild(galleria);
   kohde.appendChild(lohko);
   kytkeKarttaZoom(ui, kehys, kotelo, napit, ydin, zoomOhjain);
