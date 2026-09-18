@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1944, teksti: 'Maailmatilan zoomi, Nayta puhekuplat, nahtavyyskartta' },
   { v: 1943, teksti: 'Hotfix: kerma WebKitissa (kohdemaa jai kerman alle)' },
   { v: 1942, teksti: 'Kerma, nostot lukossa, nostotaso maittain, Nahtavyydet-arkki' },
   { v: 1941, teksti: 'Pallon sarja h: kaupunkipisteet pois nostotasosta' },
