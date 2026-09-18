@@ -2,40 +2,40 @@
  {
   "nimi": "paalla",
   "selain": "chromium",
-  "ensimmainenMs": 2680,
+  "ensimmainenMs": 1538,
   "seepiapyyntoja": 0,
   "reliefipyyntoja": 12,
-  "teravyys": 2.5,
-  "fps": 81.2,
+  "teravyys": 36.46,
+  "fps": 79,
   "meri": {
    "n": 1296,
-   "hajonta": 18.1,
-   "reikia": 0,
+   "hajonta": 81.2,
+   "reikia": 245,
    "keski": [
-    59,
-    80,
-    101
+    79,
+    121,
+    163
    ],
-   "eroMerivarista": 49.3
+   "eroMerivarista": 61.9
   },
   "pohjaL": 95.7,
-  "asettunutL": 69,
+  "asettunutL": 101.9,
   "valahdysL": 101.9,
   "reliefipyramidiLipussa": true,
-  "peiteMs": 638,
+  "peiteMs": 553,
   "peiteLoki": [
    {
-    "ms": 91,
+    "ms": 92,
     "tila": "nakyy",
     "taso": 7,
     "nakyvia": 12,
     "scenessa": 0,
     "taysin": 0,
-    "ladattavia": 3,
+    "ladattavia": 1,
     "jonossa": 0
    },
    {
-    "ms": 181,
+    "ms": 183,
     "tila": "nakyy",
     "taso": 7,
     "nakyvia": 12,
@@ -45,7 +45,7 @@
     "jonossa": 0
    },
    {
-    "ms": 272,
+    "ms": 274,
     "tila": "nakyy",
     "taso": 7,
     "nakyvia": 12,
@@ -55,7 +55,7 @@
     "jonossa": 0
    },
    {
-    "ms": 364,
+    "ms": 371,
     "tila": "nakyy",
     "taso": 7,
     "nakyvia": 12,
@@ -65,27 +65,17 @@
     "jonossa": 0
    },
    {
-    "ms": 455,
+    "ms": 462,
     "tila": "nakyy",
     "taso": 7,
     "nakyvia": 12,
     "scenessa": 12,
-    "taysin": 1,
+    "taysin": 10,
     "ladattavia": 0,
     "jonossa": 0
    },
    {
-    "ms": 547,
-    "tila": "nakyy",
-    "taso": 7,
-    "nakyvia": 12,
-    "scenessa": 12,
-    "taysin": 11,
-    "ladattavia": 0,
-    "jonossa": 0
-   },
-   {
-    "ms": 638,
+    "ms": 553,
     "tila": "nakyy",
     "taso": 7,
     "nakyvia": 12,
@@ -101,126 +91,142 @@
    "taso": 7,
    "laattoja": 12,
    "valmiita": 12,
-   "pyyntoja": 499,
+   "pyyntoja": 505,
    "lukossa": false
   },
   "virheet": [],
   "sarja": [
    {
-    "ms": 7,
-    "L": 92.4
+    "ms": 9,
+    "L": 92.8
    },
    {
-    "ms": 218,
+    "ms": 213,
+    "L": 82.8
+   },
+   {
+    "ms": 431,
     "L": 82.7
    },
    {
-    "ms": 434,
-    "L": 82.7
+    "ms": 624,
+    "L": 81.4
    },
    {
-    "ms": 641,
-    "L": 78.7
+    "ms": 916,
+    "L": 15.5
    },
    {
-    "ms": 865,
-    "L": 28.3
-   },
-   {
-    "ms": 1164,
+    "ms": 1237,
     "L": 15.2
    },
    {
-    "ms": 1462,
+    "ms": 1538,
     "L": 101.9
    },
    {
-    "ms": 1705,
+    "ms": 1780,
     "L": 101.9
    },
    {
-    "ms": 1945,
+    "ms": 2027,
     "L": 101.9
    },
    {
-    "ms": 2193,
+    "ms": 2268,
     "L": 101.9
    },
    {
-    "ms": 2444,
+    "ms": 2526,
     "L": 101.9
    },
    {
-    "ms": 2680,
-    "L": 69
+    "ms": 2774,
+    "L": 101.9
    },
    {
-    "ms": 2981,
-    "L": 69
+    "ms": 3017,
+    "L": 101.9
    },
    {
-    "ms": 3277,
-    "L": 69
+    "ms": 3255,
+    "L": 101.9
    },
    {
-    "ms": 3578,
-    "L": 69
+    "ms": 3487,
+    "L": 101.9
    },
    {
-    "ms": 3887,
-    "L": 69
+    "ms": 3722,
+    "L": 101.9
    },
    {
-    "ms": 4182,
-    "L": 69
+    "ms": 3970,
+    "L": 101.9
    },
    {
-    "ms": 4473,
-    "L": 69
+    "ms": 4219,
+    "L": 101.9
    },
    {
-    "ms": 4773,
-    "L": 69
+    "ms": 4469,
+    "L": 101.9
    },
    {
-    "ms": 5068,
-    "L": 69
+    "ms": 4708,
+    "L": 101.9
    },
    {
-    "ms": 5370,
-    "L": 69
+    "ms": 4943,
+    "L": 101.9
    },
    {
-    "ms": 5679,
-    "L": 69
+    "ms": 5174,
+    "L": 101.9
    },
    {
-    "ms": 5976,
-    "L": 69
+    "ms": 5420,
+    "L": 101.9
    },
    {
-    "ms": 6273,
-    "L": 69
+    "ms": 5669,
+    "L": 101.9
    },
    {
-    "ms": 6572,
-    "L": 69
+    "ms": 5908,
+    "L": 101.9
    },
    {
-    "ms": 6870,
-    "L": 69
+    "ms": 6140,
+    "L": 101.9
    },
    {
-    "ms": 7178,
-    "L": 69
+    "ms": 6385,
+    "L": 101.9
    },
    {
-    "ms": 7473,
-    "L": 69
+    "ms": 6620,
+    "L": 101.9
    },
    {
-    "ms": 7769,
-    "L": 69
+    "ms": 6861,
+    "L": 101.9
+   },
+   {
+    "ms": 7107,
+    "L": 101.9
+   },
+   {
+    "ms": 7337,
+    "L": 101.9
+   },
+   {
+    "ms": 7572,
+    "L": 101.9
+   },
+   {
+    "ms": 7810,
+    "L": 101.9
    }
   ]
  }
