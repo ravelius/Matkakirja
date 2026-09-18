@@ -80,6 +80,17 @@ PALLO_LAATTATUNNISTE g (33 tark. 2), Fablen Raamattu. Tila:
 
 - v1938:n sisältö (yllä). Puhelintesti v1937:stä tekemättä.
 
+## Omistajan pyyntö uudelle sessiolle (18.9. klo 10.55)
+
+Anna omistajalle heti aloituksessa VALMIS LISTA api-avaimista täydennettäväksi:
+~/.zshrc:ssä on jo lohko `MATKAKIRJA-AVAIMET` tyhjillä arvoilla
+(ELEVEN_API_KEY, OPENAI_API_KEY, ANTHROPIC_API_KEY, GOOGLE_API_KEY,
+CLOUDFLARE_ACCOUNT_ID, CLOUDFLARE_API_TOKEN, FREESOUND_API_KEY, EUROPEANA_API,
+FLICKR_API_KEY, SAMIREIVINEN_DRIVE_API). Tulosta omistajalle lista nimistä ja
+siitä, mikä työkalu kutakin tarvitsee ja mistä palvelusta arvo haetaan (nimet
+vain, ei arvoja); omistaja täyttää arvot itse, ja sessio tarkistaa sen
+jälkeen `source ~/.zshrc; env | grep -oE '^(ELEVEN|OPENAI|ANTHROPIC|GOOGLE|CLOUDFLARE|FREESOUND|EUROPEANA|FLICKR|SAMIREIVINEN)[A-Z_]*'`.
+
 ## Aloitusviesti uudelle sessiolle
 
 "Olet Fable, päätoimittaja pelissä Matkakirja ja unohdettu aarre, Mac Studiolla.
@@ -87,5 +98,5 @@ git fetch origin && git checkout -B claude/bold-ride-vow4ki origin/claude/bold-r
 lue CLAUDE.md, docs/roolitus.md, docs/raportit/viesti-fable-luovutus-20260918.md
 ja Raamatun MAC STUDIO -osio. Tee ensin v1938 (PR #2577) valmiiksi luovutusraportin
 järjestyksessä (Niputustarkistus, savukkeet, pallon sarja shardeina, merge),
-sitten reliefipyramidi v1939. Agentit vain Opus/Sonnet, enintään kolme, ei PR:iä
+sitten reliefipyramidi v1939. Anna heti aloituksessa omistajalle valmis api-avainlista täydennettäväksi (raportin kohta). Agentit vain Opus/Sonnet, enintään kolme, ei PR:iä
 agenteilta; kaikki mahdollinen Macilla; avaimet etsitään ennen kysymistä."
