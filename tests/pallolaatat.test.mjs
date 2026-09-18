@@ -479,7 +479,7 @@ test('kerros: laatan materiaali, verkko ja osoitteet ovat suunnitelman mukaiset'
   assert.match(laatat, /if \(!karkeampiValmis\(t, valittu, valmiit\)\) continue;\n\s*t\.haipyy = true;/);
   assert.ok(!/LEPOKERROS_KOROTUS \* 1\.00/.test(laatat), 'ei sädekorotusta');
   // Osoitteet ja luettelo VAIN tasokartan moduulista — ei omaa kaavaa.
-  assert.match(laatat, /import \{\n\s*haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,\n\s*pyramidinLinssiketju, pyramidinReliefiAstronautilla, pyramidinReliefiKaytossa,\n\s*pyramidinReliefinSuodatin, pyramidinReliefinSyvinTaso,\n\s*pyramidinTasoitus, pyramidinVaritasonMaa,\n\} from '\.\/laattapyramidi\.js';/);
+  assert.match(laatat, /import \{\n\s*PYRAMIDIN_JAARAJA_LAT as JAARAJA_LAT,\n\s*haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,\n\s*pyramidinLinssiketju, pyramidinReliefiAstronautilla, pyramidinReliefiKaytossa,\n\s*pyramidinReliefinSuodatin, pyramidinReliefinSyvinTaso,\n\s*pyramidinReliefinTaso, pyramidinReliefinTaustavari as reliefinTaustavari,\n\s*pyramidinReliefinVaraLahde as reliefinVaraLahde,\n\s*pyramidinTasoitus, pyramidinVaritasonMaa,\n\} from '\.\/laattapyramidi\.js';/);
   assert.ok(!/julisteet\/pyramidi/.test(laatat), 'kerros ei rakenna pyramidin polkua itse');
   // Moduuli ei tuo js/pallo.js:ää: kirjaston luokat tulevat parametreina.
   assert.ok(!/from '\.\/pallo\.js'/.test(laatat), 'tuonti pallo.js:stä tekisi kehän');

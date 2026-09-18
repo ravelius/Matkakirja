@@ -85,6 +85,29 @@ export const VERSIO_VARALLA = '20260918';
  */
 export const MERIVARI = 'rgb(38, 78, 145)';
 
+/*
+ * NAPAJÄÄN VÄRI. Sama luku kuin polttotyökalun `JAAN_VARI`
+ * (tools/reliefivarit.mjs [236, 240, 244]). Etelämantereen laattoja ei
+ * ole poltettu −65,4°:n eteläpuolelta, eikä siellä ole merta vaan
+ * mannerjäätä: avomeren sininen maalasi sen kohdalle valtameren
+ * (omistajan iPhone-kuva 18.9.2026, PAATOKSET 41 kohta 2).
+ */
+export const JAAVARI = 'rgb(236, 240, 244)';
+
+/*
+ * MISTÄ ETELÄSSÄ ALKAA JÄÄ.
+ *
+ * Laatasto on poltettu 18.9.2026 alueelle, jonka eteläreuna on z4:llä
+ * −65,4° ja z5…z7:llä −60°; sitä etelämpänä KAIKKI tasot ovat
+ * puuttuvia, myös karkeat — z0…z3 johdettiin alinäytteistämällä
+ * z4:stä, ja puuttuvan lapsen tilalle työkalu kirjoitti MERIVARIn
+ * (tools/tee-reliefipyramidi.mjs). Karkea laatta ei siis ole siellä
+ * paikanpitäjäksi kelpaava: se on itsekin sinistä väriä. Siksi tämän
+ * rajan eteläpuolella puuttuva laatta maalataan jään sävyllä eikä
+ * haeta ylemmän tason laattaa lainkaan.
+ */
+export const JAARAJA_LAT = -65;
+
 /** Kytkimen nimi osoiterivillä. */
 export const KYTKIN = 'reliefipyramidi';
 
@@ -320,6 +343,83 @@ export function reliefinTaso(z) {
   return reliefinTasot()?.find((t) => t.z === z) ?? null;
 }
 
+/** Onko laatta poltettu tälle tasolle? (bittikartta = meripeitto.) */
+function laattaTasolla(taso, sarake, rivi) {
+  if (!taso) return false;
+  if (sarake < 0 || sarake >= taso.sarakkeita) return false;
+  if (rivi < 0 || rivi >= taso.riveja) return false;
+  const i = rivi * taso.sarakkeita + sarake;
+  const tavu = taso.__bitit?.[i >> 3];
+  return tavu === undefined ? false : ((tavu >> (i & 7)) & 1) === 1;
+}
+
+/**
+ * PUUTTUVAN LAATAN PAIKANPITÄJÄ ON YLEMMÄN TASON LAATTA
+ * (Raamattu LISAYS 16 kohta 49, PAATOKSET 41 kohdat 1 ja 3).
+ *
+ * Laatasto on harva kahdesta syystä: avomerestä ei polteta laattaa
+ * lainkaan (`meriLaatat`, 6 228 laattaa z7:llä) ja poltto on ajettu
+ * rajatulle alueelle (18.9.2026: lat −60…76,7 z7:llä), joten sen
+ * ulkopuolella laatta puuttuu myös luettelosta. Tähän asti molempien
+ * tilalle maalattiin YKSI TASAINEN VÄRI (MERIVARI, −4 000 metrin
+ * sävy). Omistajan puhelinkuvassa se näkyi Mustallamerellä ja
+ * Välimerellä tummansinisenä suorakaiteena: pyramidin meri on
+ * BATYMETRINEN, ja 1 000 metrin syvyinen Välimeri on reilusti
+ * vaaleampi kuin valtameren pohja.
+ *
+ * KARKEA LAATTA ON OIKEA VASTAUS MOLEMPIIN. Se on samasta
+ * aineistosta, samalla asteikolla ja samalla varjostuksella kuin
+ * naapuri, joten sauman kahta puolta on sama väri — ja merellä, joka
+ * on sileä kenttä, kahdeksankertainen venytys ei näy. Se on myös
+ * kohdan 49 vaatima paikanpitäjä maalaatan aukolle: seepiapohjaa ei
+ * ladota linssin alle.
+ *
+ * Palauttaa lähteen `{ z, sarake, rivi, sx, sy, sw, sh }`, jossa
+ * sx…sh ovat karkean laatan OMIA pikseleitä — se osa, joka vastaa
+ * pyydettyä laattaa. Null, jos yhtään olemassa olevaa esi-isää ei ole
+ * (silloin kutsuja maalaa tasaisen värin).
+ *
+ * @param {number} z Pyydetyn laatan taso.
+ * @param {number} sarake Pyydetyn laatan sarake.
+ * @param {number} rivi Pyydetyn laatan rivi.
+ * @param {number} laatta Laatan sivu pikseleinä (512).
+ */
+export function reliefinVaraLahde(z, sarake, rivi, laatta = 512) {
+  for (let k = 1; k <= z; k += 1) {
+    const taso = reliefinTaso(z - k);
+    if (!taso) continue;
+    const s = sarake >> k;
+    const r = rivi >> k;
+    if (!laattaTasolla(taso, s, r)) continue;
+    const osa = laatta >> k;
+    // Lapsen koko voi olla laattaa pienempi arkin oikealla ja alalla
+    // reunalla; karkealla tasolla sama osuus on `osa`:n murto-osa.
+    const leveysPx = Math.min(laatta, taso.leveys * 2 ** k - sarake * laatta);
+    const korkeusPx = Math.min(laatta, taso.korkeus * 2 ** k - rivi * laatta);
+    return {
+      z: taso.z,
+      sarake: s,
+      rivi: r,
+      sx: (sarake % 2 ** k) * osa,
+      sy: (rivi % 2 ** k) * osa,
+      sw: Math.max(1, Math.round(leveysPx / 2 ** k)),
+      sh: Math.max(1, Math.round(korkeusPx / 2 ** k)),
+    };
+  }
+  return null;
+}
+
+/**
+ * Puuttuvan laatan tasainen väri, kun karkeaa laattaa ei ole.
+ * Pohjoisessa ja keskileveyksillä avomeren sävy, Etelämantereella
+ * jään sävy (PAATOKSET 41 kohta 2).
+ *
+ * @param {number} lat Laatan pohjoisreunan leveysaste (tai NaN).
+ */
+export function reliefinTaustavari(lat) {
+  return Number.isFinite(lat) && lat <= JAARAJA_LAT ? JAAVARI : MERIVARI;
+}
+
 /**
  * Hakee luettelon kerran istuntoa kohti.
  *
@@ -352,8 +452,14 @@ export async function haeReliefinLuettelo(ikkuna = globalThis) {
  * elinkaaresta; laattakone lukee tuloksen `reliefiKaytossa`:sta.
  */
 export function asetaReliefiLinssi(paalla, tila = 'topografia') {
-  linssiAuki = Boolean(paalla);
-  linssiTila = linssiAuki ? tila : null;
+  const uusi = Boolean(paalla);
+  const uusiTila = uusi ? tila : null;
+  if (uusi === linssiAuki && uusiTila === linssiTila) return;
+  linssiAuki = uusi;
+  linssiTila = uusiTila;
+  for (const kuuntelija of kuuntelijat) {
+    try { kuuntelija(linssiAuki); } catch { /* yksi kuuntelija ei kaada linssiä */ }
+  }
 }
 
 /** Kumpi linssi laatastoa piirtää: 'topografia', 'astronautti' tai null. */
@@ -364,6 +470,31 @@ export function reliefinLinssitila() {
 /** Piirtääkö Astronautin kamera laatastoa juuri nyt? */
 export function reliefiAstronautilla(ikkuna = globalThis) {
   return reliefiKaytossa(ikkuna) && linssiTila === 'astronautti';
+}
+
+/*
+ * KUKA MUU TARVITSEE TIEDON LINSSISTÄ: NAPAKANNET.
+ *
+ * Pallon navat eivät ole laatoilla. Arkki loppuu ~88,7°:seen ja sen
+ * yli on kaksi yksiväristä kantta (js/pallo.js NAPAKANSI_POHJOINEN
+ * `#c9c2af`, NAPAKANSI_ETELA `#dcd6c6`) sekä niiden päällä seepiakartan
+ * napakalotti — pelin oman kartan sävyjä. Reliefilinssin alla ne
+ * näkyivät omistajan puhelinkuvassa ISONA BEIGENÄ LEVYNÄ, jonka
+ * ympärillä kiersi tummansininen rengas (avomerivärillä maalatut
+ * laatat 76,7°…83,7°). Kansi ei tiedä linssistä mitään, eikä linssi
+ * saa tuntea palloa — siksi tieto kulkee tämän moduulin kautta, joka
+ * on molempien yhteinen.
+ */
+const kuuntelijat = new Set();
+
+/**
+ * Ilmoita, kun topografialinssi avataan tai suljetaan.
+ * Palauttaa purkajan.
+ */
+export function kuunteleReliefiLinssi(kuuntelija) {
+  if (typeof kuuntelija !== 'function') return () => {};
+  kuuntelijat.add(kuuntelija);
+  return () => kuuntelijat.delete(kuuntelija);
 }
 
 /**

@@ -174,18 +174,28 @@ const vaadi = (nimi, ok, lisa = '') => {
  * puuroa — ja juuri se oli omistajan havainto.
  */
 function pngRGBA(buf) {
-  let i = 8; let w = 0; let h = 0; const idat = [];
+  let i = 8; let w = 0; let h = 0; let kanavia = 4; const idat = [];
   while (i < buf.length) {
     const len = buf.readUInt32BE(i);
     const tyyppi = buf.toString('ascii', i + 4, i + 8);
     const data = buf.subarray(i + 8, i + 8 + len);
-    if (tyyppi === 'IHDR') { w = data.readUInt32BE(0); h = data.readUInt32BE(4); }
+    /*
+     * KANAVAMÄÄRÄ LUETAAN IHDR:stä. Chromiumin CDP-kaappaus on
+     * värityyppiä 2 (RGB, 3 tavua/pikseli) ja WebKitin 6 (RGBA):
+     * kiinteä 4 luki väärää tavua joka kolmannesta pikselistä, ja
+     * värimitta (meriMitat) antoi mitä sattuu. Gradienttimitta
+     * (teravyys) kesti sen, koska se summaa eroja — värimitta ei.
+     */
+    if (tyyppi === 'IHDR') {
+      w = data.readUInt32BE(0); h = data.readUInt32BE(4);
+      kanavia = data[9] === 6 ? 4 : (data[9] === 2 ? 3 : 4);
+    }
     else if (tyyppi === 'IDAT') idat.push(data);
     else if (tyyppi === 'IEND') break;
     i += 12 + len;
   }
   const raaka = inflateSync(Buffer.concat(idat));
-  const bpp = 4; const rivi = w * bpp;
+  const bpp = kanavia; const rivi = w * bpp;
   const ulos = Buffer.alloc(w * h * bpp);
   let p = 0;
   for (let y = 0; y < h; y += 1) {
@@ -208,14 +218,14 @@ function pngRGBA(buf) {
     }
     p += rivi;
   }
-  return { w, h, d: ulos };
+  return { w, h, d: ulos, kanavia };
 }
 function teravyys(buf, osuus = 0.5) {
-  const { w, h, d } = pngRGBA(buf);
+  const { w, h, d, kanavia } = pngRGBA(buf);
   const x0 = Math.round(w * (1 - osuus) / 2); const x1 = w - x0;
   const y0 = Math.round(h * (1 - osuus) / 2); const y1 = h - y0;
   const L = (x, y) => {
-    const i = (y * w + x) * 4;
+    const i = (y * w + x) * kanavia;
     return 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2];
   };
   let s = 0; let n = 0;
@@ -596,9 +606,283 @@ async function ajaRuutu(ruutu, { pyramidi = true } = {}) {
   };
 }
 
+/* ══════════════════ VAIHE=meret: avomeri, napa, aukot ══════════════ */
+
+/*
+ * KOLME NÄKYMÄÄ OMISTAJAN PUHELINKUVISTA (Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 41 kohdat 1–3, iPhone-kuvat 18.9.2026):
+ *
+ *   a) Musta meri / Välimeri — kaksi tummansinistä suorakaidetta meren
+ *      päällä. Ne olivat avomerilaattoja, joita ei ole poltettu ja
+ *      jotka maalattiin YHDELLÄ värillä (−4 000 metrin sävy); pyramidin
+ *      meri on batymetrinen, joten 1 000 metrin Välimeri on paljon
+ *      vaaleampi ja laatta erottui suorakaiteena.
+ *   b) Pohjoisnapa — iso beige levy (napakansi ja seepiakartan kalotti)
+ *      ja sen ympärillä tummansininen rengas.
+ *   c) Siperia — reliefilaattojen vieressä seepiapohjaa siellä, missä
+ *      laattaa ei ole poltettu (kohta 49: pohjaa ei ladota linssin
+ *      alle, joten paikanpitäjän on oltava karkeampi reliefilaatta).
+ *
+ * MITTA ON PIKSELEISSÄ, koska vika on pikseleissä: tasaisen värin
+ * suorakaide, beige levy ja seepia ovat kaikki asioita, joita mikään
+ * tilamittari ei näe. Kaksi niistä tunnistetaan väristä ja yksi
+ * sauman kirkkaushypystä.
+ */
+const MERI_NAKYMAT = [
+  {
+    nimi: 'valimeri', selite: 'Musta meri / Välimeri',
+    pov: { lat: 38.5, lng: 26.5, altitude: 0.22 },
+  },
+  {
+    nimi: 'napa', selite: 'pohjoisnapa',
+    pov: { lat: 88, lng: 20, altitude: 0.55 },
+  },
+  {
+    nimi: 'siperia', selite: 'Siperia',
+    pov: { lat: 72.5, lng: 105, altitude: 0.18 },
+  },
+];
+
+/** Avomeren tasainen sävy (js/reliefipyramidi.js MERIVARI). */
+const MERIVARI_RGB = [38, 78, 145];
+
+/**
+ * Yhden näkymän pikselimitat.
+ *
+ *  - `merivari`: osuus pikseleistä, jotka ovat TÄSMÄLLEEN avomeren
+ *    tasaista väriä (±6 kanavaa). Poltettu meri on varjostettua ja
+ *    batymetristä, joten se osuu tähän vain sattumalta; tasaisella
+ *    värillä maalattu laatta osuu kokonaan.
+ *  - `beige`: osuus pergamentin sävyisiä pikseleitä (kartan oma väri:
+ *    vaalea, punainen yli sinisen). Reliefissä ei ole pergamenttia.
+ *  - `saumaHyppy`: suurin vierekkäisten pystyrivien keskikirkkauden ero
+ *    ruudun keskiosassa. Tasaisen värin laatta naapurinsa vieressä on
+ *    juuri tämä: portaan kokoinen hyppy pystysuoraa sauman linjaa
+ *    pitkin. Vaatimus < 6 on omistajan päätöksen luku.
+ */
+function meriMitat(buf, rajaus = null) {
+  const { w, h, d, kanavia } = pngRGBA(buf);
+  /*
+   * RAJAUS ON CSS-PIKSELEITÄ, KUVA EI VÄLTTÄMÄTTÄ. Chromiumin
+   * CDP-kaappaus on ruudun kokoinen (390 px) vaikka dpr on 2, WebKitin
+   * omassa kaappauksessa mitat vaihtelevat. Skaala luetaan siksi
+   * kuvasta eikä laitteesta.
+   */
+  const k = rajaus?.ikkunaLeveys ? w / rajaus.ikkunaLeveys : 1;
+  /*
+   * MITTA VAIN KARTALLE. Ruutukuvassa on pelin oma pergamenttinen
+   * yläpalkki ja linssin nimiö; ne ovat beigeä, eivätkä ne ole kartan
+   * beigeä levyä. Rajaus on `.map-pane`:n suorakaide laitepikseleinä.
+   */
+  const x0 = Math.max(0, Math.round((rajaus?.x ?? 0) * k));
+  const y0 = Math.max(0, Math.round((rajaus?.y ?? 0) * k));
+  const x1 = Math.min(w, Math.round(((rajaus?.x ?? 0) + (rajaus?.w ?? w / k)) * k));
+  const y1 = Math.min(h, Math.round(((rajaus?.y ?? 0) + (rajaus?.h ?? h / k)) * k));
+  const L = (x, y) => {
+    const i = (y * w + x) * kanavia;
+    return 0.299 * d[i] + 0.587 * d[i + 1] + 0.114 * d[i + 2];
+  };
+  const meripikseli = (x, y) => {
+    const i = (y * w + x) * kanavia;
+    return d[i + 2] > d[i] + 15 && d[i + 2] > d[i + 1] + 10;
+  };
+  let merivari = 0; let beige = 0; let n = 0;
+  for (let y = y0; y < y1; y += 1) {
+    for (let x = x0; x < x1; x += 1) {
+      const i = (y * w + x) * kanavia;
+      const r = d[i]; const g = d[i + 1]; const b = d[i + 2];
+      n += 1;
+      if (Math.abs(r - MERIVARI_RGB[0]) <= 6 && Math.abs(g - MERIVARI_RGB[1]) <= 6
+        && Math.abs(b - MERIVARI_RGB[2]) <= 6) merivari += 1;
+      // Pergamentti: vaalea ja selvästi punertava (kartan pohja).
+      if (r > 165 && r - b > 25 && r >= g && g > b) beige += 1;
+    }
+  }
+  /*
+   * SAUMA MITATAAN VAIN MEREN YLI. Rannikko on oikea kirkkaushyppy
+   * eikä sauma; laatan reuna keskellä merta ei ole. Pystyrivin
+   * keskikirkkaus lasketaan siksi vain meripikseleistä, ja rivi
+   * ohitetaan, jos merta on alle puolet.
+   */
+  const sx0 = Math.round(x0 + (x1 - x0) * 0.15);
+  const sx1 = Math.round(x0 + (x1 - x0) * 0.85);
+  const sy0 = Math.round(y0 + (y1 - y0) * 0.15);
+  const sy1 = Math.round(y0 + (y1 - y0) * 0.85);
+  const sarake = [];
+  for (let x = sx0; x < sx1; x += 1) {
+    let s = 0; let m = 0;
+    for (let y = sy0; y < sy1; y += 1) {
+      if (!meripikseli(x, y)) continue;
+      s += L(x, y); m += 1;
+    }
+    sarake.push(m > (sy1 - sy0) * 0.3 ? s / m : null);
+  }
+  let hyppy = 0;
+  for (let i = 1; i < sarake.length; i += 1) {
+    if (sarake[i] === null || sarake[i - 1] === null) continue;
+    hyppy = Math.max(hyppy, Math.abs(sarake[i] - sarake[i - 1]));
+  }
+  return {
+    merivariOsuus: +(merivari / n).toFixed(4),
+    beigeOsuus: +(beige / n).toFixed(4),
+    saumaHyppy: +hyppy.toFixed(2),
+    merisarakkeita: sarake.filter(Boolean).length,
+  };
+}
+
+async function ajaMeret() {
+  const ruutu = { viewport: { width: 390, height: 844 }, deviceScaleFactor: 2 };
+  const konteksti = await selain.newContext({ ...ruutu, serviceWorkers: 'block' });
+  const sivu = await konteksti.newPage();
+  const pyynnot = [];
+  sivu.on('request', (r) => pyynnot.push(r.url()));
+  await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
+  await sivu.route(/media\.matkakirja\.app|r2\.dev/, async (route) => {
+    const vastaus = await ampariHaku(route.request().url());
+    if (!vastaus) { route.fulfill({ status: 404, body: '' }); return; }
+    route.fulfill({
+      status: 200, contentType: vastaus.tyyppi ?? 'application/octet-stream', body: vastaus.body,
+      headers: { 'access-control-allow-origin': '*' },
+    });
+  });
+  const cdp = MOOTTORI === 'webkit' ? null : await konteksti.newCDPSession(sivu);
+  const kuvaa = async () => (cdp
+    ? Buffer.from((await cdp.send('Page.captureScreenshot', { format: 'png' })).data, 'base64')
+    : sivu.screenshot({ type: 'png' }));
+
+  /*
+   * WEBKITILLÄ `load` EI VÄLTTÄMÄTTÄ TULE 30 SEKUNNISSA: sivu pitää
+   * yllä pyyntöjä (service worker on estetty, ämpäri kulkee
+   * route-välityksen läpi), ja mitattuna 18.9.2026 navigointi kaatui
+   * aikakattoon vaikka peli oli jo ruudulla. Odotetaan siksi DOMia ja
+   * sen jälkeen pelin omaa tilaa.
+   */
+  sivu.setDefaultNavigationTimeout(90000);
+  await sivu.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo`, { waitUntil: 'domcontentloaded' });
+  await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui), null, { timeout: 60000 }).catch(() => null);
+  await sivu.waitForTimeout(2500);
+  await sivu.evaluate(() => {
+    [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
+  });
+  await sivu.waitForTimeout(2500);
+  await sivu.evaluate(() => {
+    const { game, ui } = window.matkakirja;
+    if (game.phase === 'pickstart') game.actionPickStart(game.pack.cities.find((c) => c.links?.length).id, 0);
+    const kaupunki = game.pack.cities.find((c) => c.id === 'pariisi') ?? game.pack.cities[0];
+    game.player.pos = { type: 'city', city: kaupunki.id };
+    game.world.visited.add(kaupunki.id);
+    game.phase = 'action';
+    ui.render();
+  });
+  await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 45000 })
+    .catch(() => null);
+  await sivu.waitForTimeout(2500);
+  await sivu.evaluate(async () => {
+    const { ui } = window.matkakirja;
+    ui.busy = false;
+    if (!ui.game.player.linssit.includes('topografia')) ui.game.player.linssit.push('topografia');
+    await ui.lataaLinssit?.();
+    ui.valitseLinssi('topografia');
+  });
+  await sivu.waitForTimeout(3000);
+  /* Seepiapyynnöt lasketaan vasta linssin avauksen jälkeen (kohta 49). */
+  const linssinAlku = pyynnot.length;
+  const rajaus = await sivu.evaluate(() => {
+    const el = document.querySelector('.map-pane') ?? document.querySelector('.kartta-kuori');
+    if (!el) return null;
+    const r = el.getBoundingClientRect();
+    return { x: r.x, y: r.y, w: r.width, h: r.height, ikkunaLeveys: window.innerWidth };
+  });
+
+  const ulos = [];
+  for (const nakyma of MERI_NAKYMAT) {
+    await sivu.evaluate((pov) => {
+      const lauta = window.matkakirja.ui.pallolauta;
+      lauta.kamera?.pysaytaKameraAjo?.();
+      lauta.pallo.pointOfView(pov, 0);
+    }, nakyma.pov);
+    /*
+     * ODOTETAAN LAATTOJA, EI KELLOA: kerros aloittaa karkeasta tasosta
+     * ja täydentää. Jos jono ei tyhjene 25 sekunnissa, mitataan se mitä
+     * ruudulla on — väite kaatuu silloin kuten kuuluukin.
+     */
+    await sivu.waitForFunction(() => {
+      const m = window.matkakirja?.ui?.pallolauta?.lepokerros?.()?.mittarit?.() ?? null;
+      return Boolean(m) && (m.laattoja ?? 0) > 0 && (m.jonossa ?? 0) === 0 && (m.ladattavia ?? 0) === 0;
+    }, null, { timeout: 25000 }).catch(() => null);
+    await sivu.waitForTimeout(2500);
+    const kuva = await kuvaa();
+    writeFileSync(join(ULOS, `reliefi-meret-${nakyma.nimi}${MOOTTORI === 'webkit' ? '-webkit' : ''}.png`), kuva);
+    const aukot = await sivu.evaluate(() => window.matkakirja?.ui?.reliefi404?.() ?? null);
+    const kerros = await sivu.evaluate(() => {
+      const m = window.matkakirja?.ui?.pallolauta?.lepokerros?.()?.mittarit?.() ?? null;
+      return m ? { laattoja: m.laattoja, valmiita: m.valmiita, taso: m.taso } : null;
+    });
+    ulos.push({ ...nakyma, ...meriMitat(kuva, rajaus), aukot, kerros });
+  }
+  const seepiaa = new Set(pyynnot.slice(linssinAlku).filter(seepiaLaatta)).size;
+  await konteksti.close();
+  return { nakymat: ulos, seepiaa };
+}
+
+if (VAIHE === 'meret') {
+  const m = await ajaMeret();
+  for (const n of m.nakymat) {
+    console.log(`  ${n.selite}: merivaripikseleitä ${(n.merivariOsuus * 100).toFixed(2)} %, `
+      + `beigeä ${(n.beigeOsuus * 100).toFixed(2)} %, sauman hyppy ${n.saumaHyppy} `
+      + `(${n.merisarakkeita} merisaraketta), aukot ${JSON.stringify(n.aukot)}, `
+      + `kerros ${JSON.stringify(n.kerros)}`);
+  }
+  const valimeri = m.nakymat.find((n) => n.nimi === 'valimeri');
+  const napa = m.nakymat.find((n) => n.nimi === 'napa');
+  const siperia = m.nakymat.find((n) => n.nimi === 'siperia');
+  /*
+   * VÄRI EI YKSIN RIITÄ TODISTEEKSI: näkymä on pallon yöpuolella, ja
+   * varjo siirtää jokaisen sävyn — mitattuna 18.9.2026 se painoi
+   * Egeanmeren batymetrian täsmälleen MERIVARIn lukemaan, eli
+   * väritesti antoi saman tuloksen oikeasta ja väärästä merestä.
+   * Suora todiste on
+   * kerroksen oma laskuri — `tasavareja` on niiden laattojen määrä,
+   * jotka maalattiin YHDELLÄ värillä, ja juuri ne olivat omistajan
+   * kuvassa suorakaiteina.
+   */
+  vaadi('Välimeri: ei tasaisen värin suorakaidetta',
+    (valimeri.aukot?.tasavareja ?? -1) === 0,
+    `merivaripikseleitä ${(valimeri.merivariOsuus * 100).toFixed(2)} %, `
+    + `tasavärilaattoja ${valimeri.aukot?.tasavareja}, varalaattoja ${valimeri.aukot?.varoja}`);
+  vaadi('meren sauman kirkkausero < 6',
+    valimeri.saumaHyppy < 6 && napa.saumaHyppy < 6 && (valimeri.merisarakkeita + napa.merisarakkeita) > 0,
+    `Välimeri ${valimeri.saumaHyppy} (${valimeri.merisarakkeita} saraketta), `
+    + `napa ${napa.saumaHyppy} (${napa.merisarakkeita} saraketta)`);
+  vaadi('pohjoisnapa: ei beigeä levyä', napa.beigeOsuus < 0.005,
+    `beigeä ${(napa.beigeOsuus * 100).toFixed(2)} %`);
+  /*
+   * SIPERIASSA VÄRI EI KELPAA MITAKSI: reliefin ylänkösävy (205, 196,
+   * 112) on yhtä beige kuin pergamentti, joten seepia tunnistetaan
+   * siitä, mikä sen tuo ruudulle — pohjalaatan pyynnöstä linssin
+   * aikana (kohta 49) ja laatasta, joka jäi kokoamatta (silloin alta
+   * näkyy pallon oma seepiatekstuuri).
+   */
+  vaadi('Siperia: ei seepiapohjaa linssin alla',
+    m.seepiaa === 0 && (siperia.kerros?.valmiita ?? 0) === (siperia.kerros?.laattoja ?? -1),
+    `seepiapyyntöjä ${m.seepiaa}, laattoja ${siperia.kerros?.laattoja}, `
+    + `valmiita ${siperia.kerros?.valmiita}, 404 ${siperia.aukot?.puuttuvat}`);
+  /*
+   * VAIHE=meret on OMA AJONSA eikä osa julkaisusarjaa: se päättyy
+   * tähän, jotta kolmen näkymän mittaus ei maksa neljää raskasta
+   * istuntoa. Vartijana savuke ajetaan aina kokonaan (sarjat.json ei
+   * anna muuttujaa).
+   */
+  const kaatuiMeret = tulokset.filter((t) => !t.ok);
+  console.log(`\n${tulokset.length - kaatuiMeret.length}/${tulokset.length} väitettä läpi.`);
+  await selain.close();
+  palvelin.close();
+  process.exit(kaatuiMeret.length ? 1 : 0);
+}
+
 /* ═══════════════════════════════ ajo ═══════════════════════════════ */
 
-for (const ruutu of (VAIHE === 'avaus' ? [] : RUUDUT)) {
+for (const ruutu of (VAIHE === 'avaus' || VAIHE === 'meret' ? [] : RUUDUT)) {
   const r = await ajaRuutu(ruutu);
   const nimi = `${ruutu.nimi} px`;
 

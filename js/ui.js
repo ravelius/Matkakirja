@@ -18493,6 +18493,29 @@ export class UI {
     return linssiketjunLoki();
   }
 
+  /*
+   * RELIEFIN AUKOT KENTÄLTÄ LUETTAVIKSI (Raamattu PAATOKSET 41 kohta 3).
+   *
+   * Laatasto on harva kahdesta syystä — avomerestä ei polteta laattaa
+   * ja poltto on ajettu rajatulle alueelle — ja vain toinen niistä on
+   * luettelossa. `puuttuvat` on niiden laattojen määrä, jotka
+   * luettelon mukaan pitäisi olla mutta joita ämpäri ei anna (404);
+   * `varoja` ne, joille piirrettiin karkeampi reliefilaatta
+   * paikanpitäjäksi, ja `tasavareja` ne, joille maalattiin yksi väri.
+   * Sama luku on savukkeen ja omistajan puhelimen ulottuvilla ilman
+   * erillistä ajoa.
+   */
+  reliefi404() {
+    const m = this.pallolauta?.lepokerros?.()?.mittarit?.() ?? null;
+    if (!m) return null;
+    return {
+      puuttuvat: m.reliefi404 ?? 0,
+      varoja: m.reliefiVaroja ?? 0,
+      tasavareja: m.reliefiTasavareja ?? 0,
+      taso: m.taso ?? null,
+    };
+  }
+
   async sytytaLinssi(tunnus) {
     merkitseLinssiketju('sytyta');
     const tuki = await this.lataaLinssit();

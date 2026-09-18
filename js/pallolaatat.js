@@ -27,9 +27,12 @@
  * joten ne tuodaan tästä suoraan — sama ovi kuin tasokartalla.
  */
 import {
+  PYRAMIDIN_JAARAJA_LAT as JAARAJA_LAT,
   haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
   pyramidinLinssiketju, pyramidinReliefiAstronautilla, pyramidinReliefiKaytossa,
   pyramidinReliefinSuodatin, pyramidinReliefinSyvinTaso,
+  pyramidinReliefinTaso, pyramidinReliefinTaustavari as reliefinTaustavari,
+  pyramidinReliefinVaraLahde as reliefinVaraLahde,
   pyramidinTasoitus, pyramidinVaritasonMaa,
 } from './laattapyramidi.js';
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
@@ -1683,6 +1686,16 @@ export function luoLaattakerros({
      */
     kertomustaso: null,
     /*
+     * RELIEFIN AUKOT (PAATOKSET 41 kohta 3). `reliefi404` on niiden
+     * laattojen määrä, jotka luettelon mukaan pitäisi olla olemassa
+     * mutta joita ämpäri ei anna; `reliefiVaroja` niiden laattojen
+     * määrä, joille piirrettiin karkeamman tason laatta paikanpitäjäksi
+     * (avomeri tai aukko), ja `reliefiTasavareja` ne, joille ei ollut
+     * sitäkään ja jotka maalattiin yhdellä värillä. Kentät ovat
+     * kentällä luettavissa (window.matkakirja.ui.reliefi404).
+     */
+    reliefi404: 0, reliefiVaroja: 0, reliefiTasavareja: 0,
+    /*
      * Laattoja, jotka koottiin ILMAN kerman maalausta, koska suojasta ei
      * leikkaudu niille mitään (ks. tasoituksenUlkopuolella). Savukkeen
      * mitta siitä, että lukko todella jättää tyhjät arkit pois.
@@ -1818,6 +1831,44 @@ export function luoLaattakerros({
       kuva.onerror = () => ok(null);
       kuva.src = url;
     });
+  };
+
+  /*
+   * VARALAATTOJEN PIKKUVÄLIMUISTI.
+   *
+   * Yksi karkea laatta on paikanpitäjä 4^k:lle tarkalle laatalle —
+   * näkyvässä ikkunassa kymmenille — joten ilman välimuistia sama kuva
+   * purettaisiin kymmenen kertaa peräkkäin. Välimuisti on tarkoituksella
+   * PIENI: bittikartta on 512 × 512 × 4 = 1 Mt keskusmuistia, ja
+   * puhelimessa se on oikea raha. Kuudes työntää vanhimman ulos ja
+   * sulkee sen; kerroksen purku sulkee loput.
+   */
+  const VARAKUVIA = 6;
+  const varakuvat = new Map();
+  const varalaatanKuva = async (lahde, merkki) => {
+    const taso = pyramidinReliefinTaso?.(lahde.z) ?? null;
+    if (!taso) return null;
+    const url = pyramidinLaattaUrl(taso, lahde.sarake, lahde.rivi);
+    if (varakuvat.has(url)) {
+      const osuma = varakuvat.get(url);
+      // LRU: tuoreimmaksi.
+      varakuvat.delete(url);
+      varakuvat.set(url, osuma);
+      return osuma;
+    }
+    const lupaus = haeKuva(url, merkki);
+    varakuvat.set(url, lupaus);
+    while (varakuvat.size > VARAKUVIA) {
+      const vanhin = varakuvat.keys().next().value;
+      const kuva = varakuvat.get(vanhin);
+      varakuvat.delete(vanhin);
+      Promise.resolve(kuva).then((k) => k?.close?.(), () => {});
+    }
+    return lupaus;
+  };
+  const sulkeVarakuvat = () => {
+    for (const kuva of varakuvat.values()) Promise.resolve(kuva).then((k) => k?.close?.(), () => {});
+    varakuvat.clear();
   };
 
   const luoKangas = (w, h) => {
@@ -2001,8 +2052,43 @@ export function luoLaattakerros({
      * polttotyökalu antaisi merelle (tools/tee-reliefipyramidi.mjs
      * MERIVARI), joten saumaa laatan ja aukon välillä ei näy.
      */
-    const tausta = kerrostasot.find((k) => k.taustavari)?.taustavari ?? null;
-    if (!kuvat.some(Boolean) && !tausta) { t.tila = 'virhe'; return; }
+    /*
+     * PUUTTUVAN RELIEFILAATAN PAIKANPITÄJÄ (PAATOKSET 41 kohdat 1–3).
+     *
+     * Tasainen MERIVARI oli väärä vastaus kahdesti: batymetrisen meren
+     * päällä se näkyi tummansinisenä suorakaiteena (Musta meri,
+     * Välimeri) ja maa-aukon päällä se ei ollut maata lainkaan.
+     * Tilalle haetaan KARKEAMMAN TASON reliefilaatta ja siitä tämän
+     * laatan oma neljännes (js/reliefipyramidi.js reliefinVaraLahde) —
+     * sama aineisto, sama asteikko, sama varjostus kuin naapurilla,
+     * joten sauman kahta puolta on sama väri. Tasainen väri jää vain
+     * siihen, mihin karkeaakaan laattaa ei ole: Etelämantereelle
+     * (jään sävy) ja aivan pyramidin ulkopuolelle (avomeren sävy).
+     */
+    const reliefiKohta = kerrostasot.findIndex((k) => k.reliefi);
+    let vara = null;
+    let varaKartta = null;
+    if (reliefiKohta >= 0 && !kuvat[reliefiKohta]) {
+      if (pyramidinLaattaOlemassa(kerrostasot[reliefiKohta], t.sarake, t.rivi)) mittarit.reliefi404 += 1;
+      const ylaLat = yLat(pyramidi.arkki.y + kartta.kansY0 / tasoOlio.pikseliaPerYksikko);
+      if (!(Number.isFinite(ylaLat) && ylaLat <= JAARAJA_LAT)) {
+        varaKartta = reliefinVaraLahde(t.z, t.sarake, t.rivi, laattaKoko());
+        if (varaKartta) {
+          vara = await varalaatanKuva(varaKartta, katkaisin?.signal ?? null);
+          if (purettu || !laatat.has(t.avain)) { for (const k of kuvat) k?.close?.(); return; }
+        }
+      }
+      if (vara) mittarit.reliefiVaroja += 1; else mittarit.reliefiTasavareja += 1;
+      t.reliefiVara = vara ? varaKartta.z : -1;
+    }
+    const tausta = (() => {
+      const k = kerrostasot.find((x) => x.taustavari);
+      if (!k) return null;
+      if (!k.reliefi) return k.taustavari;
+      const ylaLat = yLat(pyramidi.arkki.y + kartta.kansY0 / tasoOlio.pikseliaPerYksikko);
+      return reliefinTaustavari(ylaLat);
+    })();
+    if (!kuvat.some(Boolean) && !tausta && !vara) { t.tila = 'virhe'; return; }
     /*
      * KANGAS ON MITATUSTI NOPEAMPI TEKSTUURILÄHDE KUIN BITTIKARTTA
      * (kokeiltu ja hylätty 7.9.2026). Kokeilussa yhden kerroksen laatta
@@ -2066,6 +2152,18 @@ export function luoLaattakerros({
     if (tausta) {
       ctx.fillStyle = tausta;
       ctx.fillRect(0, 0, kartta.leveys, kartta.korkeus);
+    }
+    /*
+     * Karkea laatta tasaisen värin PÄÄLLE ja varsinaisten kerrosten
+     * ALLE: jos varalaatta on vaillinainen (reunalaatta), tasainen väri
+     * jää sen alle eikä kankaalle jää läpinäkyvää kohtaa.
+     */
+    if (vara) {
+      ctx.imageSmoothingEnabled = true;
+      ctx.drawImage(
+        vara, varaKartta.sx, varaKartta.sy, varaKartta.sw, varaKartta.sh,
+        0, 0, kartta.leveys, kartta.korkeus,
+      );
     }
     const tasoitus = kerrokset.vari ? pyramidinTasoitus() : null;
     /*
@@ -2889,6 +2987,7 @@ export function luoLaattakerros({
       rivimuisti.clear();
       for (const t of [...laatat.values()]) poista(t);
       laatat.clear();
+      sulkeVarakuvat();
       mittarit.tila = 'purettu';
       mittarit.laattoja = 0;
       mittarit.scenessa = 0;
