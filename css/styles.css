@@ -17870,6 +17870,37 @@ button.opas-nauha:hover { filter: brightness(1.06); }
 
 .kartta-zoomi { display: flex; gap: 0.3rem; }
 
+/*
+ * KOKORUUTU-NAPPI KARTAN YLÄPUOLELLA (Raamattu, KARTTAUUDISTUKSEN
+ * PAATOKSET 34 kohta 18 e, omistaja 18.9.2026). Nähtävyysarkilla rivi
+ * on yksinään napin kanssa, ja silloin se kuuluu oikeaan reunaan —
+ * sama laita, jossa näkymävipu on ollut. `space-between` jättäisi
+ * yksinäisen napin vasemmalle.
+ */
+.kartta-tyokalut > .kartta-kokoruutu-nappi:only-child { margin-left: auto; }
+
+/*
+ * Nähtävyysarkin kartta ei ole aina .dialogin sisällä (tiivis arkki
+ * voi olla oma kehyksensä), joten nappi saa saman pillerityylin myös
+ * ilman dialogin esi-isää.
+ */
+.kartta-tyokalut button.kartta-kokoruutu-nappi {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  min-height: 0;
+  padding: 0.2rem 0.6rem;
+  font-family: var(--font-type);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(70, 51, 31, 0.85);
+  background: rgba(255, 250, 238, 0.6);
+  border: 1px solid rgba(70, 51, 31, 0.35);
+  border-radius: 999px;
+  box-shadow: none;
+}
+
 .kartta-vipu {
   display: flex;
   justify-content: flex-end;
@@ -21021,6 +21052,12 @@ body.lento-kesken .pollo-nappi.pollo-ilmestyy {
  * SULKURUKSI POISTETTU (omistaja 13.9.2026: *"Ota pulun puhekuplista
  * sulkemis ruksi pois. Ja muuta toiminto niin että Puhekuplat voi
  * sulkea napauttamalla niitä."*). Kupla itse on sulkunappi, ja
+ * HUOM 18.9.2026 (omistajan kohta 20 a): pluskuplaa EI ENÄÄ PIIRRETÄ
+ * — js/pollo.js ei luo elementtiä lainkaan, joten alla olevat säännöt
+ * eivät osu mihinkään. Ne on jätetty paikalleen vain, jotta pulun
+ * piilotuslistat (js/ui.js PULUN_PIILO_OSAT) pysyvät ehjinä; paluureitti
+ * kupliin on nyt chatin ylärivin .pollo-naytakuplat.
+ *
  * sulkeminen imee kuplat pluskuplaan (.pollo-kuplapalautus), joka jää
  * ruudulle avaamista varten.
  */
@@ -21863,8 +21900,42 @@ a.pollo-tekstilinkki {
 .pollo-ylarivi {
   display: flex;
   justify-content: flex-end;
+  gap: 0.4rem;
   padding: 0.4rem 0.55rem 0;
 }
+
+/*
+ * "NÄYTÄ PUHEKUPLAT" — CHATIN PALUUREITTI OHI MENNEISIIN REPLIIKKEIHIN
+ * (omistaja 18.9.2026, Raamattu "KARTTAUUDISTUKSEN PAATOKSET 34"
+ * kohta 20 b).
+ *
+ * Sama pikkupilleri kuin .pollo-ehdota — rivi on paljasta paperia,
+ * eikä toinen nappi saa muuttaa sen luonnetta. Nappi PIILOTETAAN
+ * kokonaan, kun näytettävää ei ole (kohta 20 c): himmeä disabled-nappi
+ * jäisi lupaamaan jotain, mitä ei ole.
+ */
+button.pollo-naytakuplat {
+  padding: 0.12rem 0.55rem;
+  min-height: 0;
+  border: 1px solid var(--pollo-viiva);
+  border-radius: 999px;
+  background: var(--pollo-paperi-2);
+  color: var(--pollo-korostus);
+  font-family: inherit;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+button.pollo-naytakuplat:hover,
+button.pollo-naytakuplat:focus-visible,
+body[data-mode] .actions .pollo-paneeli button.pollo-naytakuplat:hover {
+  border-color: var(--pollo-korostus);
+  background: rgba(122, 85, 20, 0.16);
+  color: var(--pollo-muste);
+}
+
+.pollo-naytakuplat[hidden] { display: none; }
 
 button.pollo-ehdota {
   padding: 0.12rem 0.55rem;

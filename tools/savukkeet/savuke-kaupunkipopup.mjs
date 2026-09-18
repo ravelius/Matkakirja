@@ -70,6 +70,8 @@ import { KULTTUURI_KATEGORIAT } from '../../js/packs/kulttuuri-kategoriat.js';
 import { NOSTOSYM_MITAN_KATTO, NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
 import { KAUPUNKIMERKIN_NIMIO_PX } from '../../js/pallolauta/nostot.js';
 import { KAUPUNKIKARTAT } from '../../js/packs/maakartat.js';
+import { MINIATYYRIT } from '../../js/packs/miniatyyrit.js';
+import { NAHTAVYYSJUTUT } from '../../js/packs/nahtavyysjutut.js';
 
 const paketti = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
@@ -162,6 +164,17 @@ const odotettuEsittely = (nimi) => (ARTIKKELIT[nimi]?.intro ?? '')
  * oletukseen.
  */
 const odotettuNahtavyysteksti = (KAUPUNKIKARTAT.pariisi?.esittely ?? '').trim();
+/*
+ * NÄHTÄVYYSKARTALTA LIUSKAAN SIIRTYNEET (PAATOKSET 34 kohta 18 b).
+ * Odotus luetaan samasta datasta kuin peli: kohde, jolla ei ole
+ * miniatyyriä, ei ole piirretty nähtävyysrakennus — ja avautuvaksi
+ * nostoksi kelpaa vain kohde, jolla on juttu tai wiki-artikkeli
+ * (js/nahtavyydet.js kaupunkikartanSiirretyt).
+ */
+const odotetutSiirretyt = (KAUPUNKIKARTAT.pariisi?.kohteet ?? [])
+  .filter((k) => !MINIATYYRIT.pariisi?.[k.nimi])
+  .filter((k) => k.teksti || k.wiki || NAHTAVYYSJUTUT.pariisi?.[k.nimi]?.teksti)
+  .map((k) => k.nimi);
 
 /** Kansiosasto lehtidatasta — vartio 9 tarvitsee tietää, mitä poistetaan. */
 const kansiOsasto = (id) => (KULTTUURI_KATEGORIAT[id] ?? []).find((k) => k.id === 'kaupunki');
@@ -554,6 +567,48 @@ for (const ruutu of RUUDUT) {
         await sivu.waitForTimeout(300);
       }
 
+      /* --- vartio 13: SIIRRETYT KOHTEET LIUSKASSA (kohta 18 b) -----
+       *
+       * Omistaja 18.9.2026 klo 17.55: nähtävyyskartan ympyrä- ja
+       * kysymysmerkkikohteista tulee kaupungin SISÄISIÄ NOSTOJA, jotka
+       * näkyvät liuskan kategorioissa ja avautuvat samalla kortilla.
+       * Odotus lasketaan DATASTA (ei kovakoodattua listaa): kohde,
+       * jolla ei ole miniatyyriä, on siirretty.
+       */
+      {
+        // Liuska on voinut sulkeutua edellisen rivin napautuksesta.
+        const liuskassa = await sivu.evaluate(
+          () => window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null,
+        );
+        if (!liuskassa) await avaaLiuska();
+        const siirretyt = await sivu.evaluate(() => {
+          const n = window.matkakirja.ui.pallolauta.nostot;
+          const avain = n.liuskaAuki?.();
+          const sisaiset = avain ? (n.liuskanSisaisetTiedot?.(avain) ?? []) : [];
+          const rivit = n.liuskanRivit?.() ?? [];
+          const kategoriat = rivit.filter((r) => r.laji === 'kategoria');
+          return {
+            avain,
+            sisaisia: sisaiset.length,
+            kartalta: sisaiset.filter((r) => r.kartalta).map((r) => r.nimi),
+            summa: kategoriat.reduce((a, k) => a + (k.maara ?? 0), 0),
+            kategorioita: kategoriat.length,
+            nimet: sisaiset.map((r) => r.nimi),
+          };
+        });
+        tieto(`${tunnus}: liuskan sisäiset`,
+          `${siirretyt.sisaisia} kpl, joista kartalta siirrettyjä `
+          + `${siirretyt.kartalta.length}: ${siirretyt.kartalta.join(', ')}`);
+        vaadi(`${tunnus}: nähtävyyskartalta siirretyt ovat liuskassa`,
+          siirretyt.kartalta.length === odotetutSiirretyt.length
+            && odotetutSiirretyt.every((nimi) => siirretyt.kartalta.includes(nimi)),
+          `liuskassa ${siirretyt.kartalta.length}, datassa ${odotetutSiirretyt.length}`);
+        vaadi(`${tunnus}: kategorioiden summa = sisäisten määrä (tasan yksi kategoria)`,
+          siirretyt.summa === siirretyt.sisaisia && siirretyt.kategorioita >= 2,
+          `summa ${siirretyt.summa}, sisäisiä ${siirretyt.sisaisia}, `
+          + `kategorioita ${siirretyt.kategorioita}`);
+      }
+
       /* --- vartio 11: "NÄHTÄVYYDET"-rivi (kohta 16 e) --------------- */
       const uudelleen = await avaaLiuska();
       vaadi(`${tunnus}: liuska aukeaa uudelleen näkymän sulkemisen jälkeen`, uudelleen);
@@ -577,6 +632,32 @@ for (const ruutu of RUUDUT) {
             nahtavyysNakyma: d.classList.contains('nahtavyysnakyma'),
             kartta: palsta.querySelectorAll('.kartta-kehys').length,
             kohteita: palsta.querySelectorAll('.maakartta-piste').length,
+            /*
+             * PAATOKSET 34 kohta 18 (omistaja 18.9.2026 klo 17.55 ja
+             * 18.00). Kartalla saa olla VAIN piirrettyjä
+             * nähtävyysrakennuksia: ei vaaleita ympyröitä (piste ilman
+             * .kohde-piirros-luokkaa) eikä sinisiä kysymysmerkkejä
+             * (WebKitin rikkinäisen kuvan merkki = ladattu kuva, jolla
+             * ei ole luonnollista leveyttä). Kartan päällä ei ole
+             * selitteitä eikä +/- -painikkeita, ja Kokoruutu on oikea
+             * nappi kartan YLÄPUOLELLA.
+             */
+            piirroksia: palsta.querySelectorAll('.maakartta-piste.kohde-piirros').length,
+            ympyroita: palsta.querySelectorAll('.maakartta-piste:not(.kohde-piirros)').length,
+            rikkinaisia: [...palsta.querySelectorAll('img.kohde-piirros-kuva')]
+              .filter((i) => i.complete && i.naturalWidth === 0).length,
+            selitteita: palsta.querySelectorAll(
+              '.kartta-opaste, .kartta-ihmeselite, .kartta-suurennusvihje',
+            ).length,
+            zoominappeja: palsta.querySelectorAll('.kartta-zoomi-nappi').length,
+            kokoruutuNappeja: palsta.querySelectorAll('.kartta-kokoruutu-nappi').length,
+            nappiYlla: (() => {
+              const n = palsta.querySelector('.kartta-kokoruutu-nappi');
+              const kk = palsta.querySelector('.kartta-kehys');
+              if (!n || !kk) return null;
+              return Math.round(n.getBoundingClientRect().top)
+                < Math.round(kk.getBoundingClientRect().top);
+            })(),
             luettelo: palsta.querySelectorAll('.kartta-selite').length,
             pituus: (teksti?.textContent ?? '').trim().length,
             kappaleita: palsta.querySelectorAll('.nahtavyysnakyma-teksti').length,
@@ -603,6 +684,20 @@ for (const ruutu of RUUDUT) {
             `kehyksiä ${ennen.kartta}, kohteita ${ennen.kohteita}`);
           vaadi(`${tunnus}: kartan alla EI ole kohdeluetteloa`, ennen.luettelo === 0,
             `rivejä ${ennen.luettelo}`);
+          /* --- PAATOKSET 34 kohta 18 a ja 18 f-g ---------------------- */
+          vaadi(`${tunnus}: kartalla EI ole ympyrämerkkejä eikä kysymysmerkkejä`,
+            ennen.ympyroita === 0 && ennen.rikkinaisia === 0,
+            `ympyröitä ${ennen.ympyroita}, rikkinäisiä kuvia ${ennen.rikkinaisia}`);
+          vaadi(`${tunnus}: kartalla on vain piirretyt nähtävyysrakennukset`,
+            ennen.piirroksia > 0 && ennen.piirroksia === ennen.kohteita,
+            `piirroksia ${ennen.piirroksia} / kohteita ${ennen.kohteita}`);
+          vaadi(`${tunnus}: kartan päällä EI ole selitteitä`, ennen.selitteita === 0,
+            `selitteitä ${ennen.selitteita}`);
+          vaadi(`${tunnus}: kartalla EI ole plus- ja miinuspainikkeita`,
+            ennen.zoominappeja === 0, `painikkeita ${ennen.zoominappeja}`);
+          vaadi(`${tunnus}: Kokoruutu on nappi kartan YLÄPUOLELLA`,
+            ennen.kokoruutuNappeja === 1 && ennen.nappiYlla === true,
+            `nappeja ${ennen.kokoruutuNappeja}, ylhäällä ${ennen.nappiYlla}`);
           /*
            * KOHTA 17 e (omistaja 18.9.2026 klo 15.20). Kolme väitettä
            * kääntyi päinvastoin kuin kohdassa 16 e: lehtimäinen yläosa
@@ -633,6 +728,81 @@ for (const ruutu of RUUDUT) {
             `kortti ${ennen.kortinAla}, teksti ${ennen.tekstinAla}, `
             + `rivi ${ennen.rivinKorkeus}`);
         }
+        /* --- vartio 12: KOKORUUTU TOIMII (kohta 18 d) ----------------
+         *
+         * Omistaja 18.9.2026 klo 18.00: *"Kokoruutu-nappi EI TOIMI
+         * iPhonella"*. Nappi oli ennen pelkkä kyltti kartan kulmassa,
+         * eikä sitä voinut painaa; suurennos aukesi vain kehyksen
+         * osoitin-eleestä. Väite on nyt teko: napin napautus levittää
+         * kartan lähes koko näkyvälle korkeudelle, ja sulku palauttaa.
+         */
+        const kokoruutuTila = await sivu.evaluate(async () => {
+          const d = document.getElementById('tiivis-lehtiarkki');
+          const nappi = d?.querySelector('.kartta-kokoruutu-nappi');
+          if (!nappi) return null;
+          const nakyva = window.visualViewport?.height || window.innerHeight;
+          nappi.click();
+          let kortti = null;
+          let kehys = null;
+          for (let i = 0; i < 20; i += 1) {
+            /* eslint-disable no-await-in-loop */
+            await new Promise((r) => { setTimeout(r, 100); });
+            kortti = document.querySelector('.kartta-suurennos');
+            kehys = kortti?.querySelector('.kartta-kehys') ?? null;
+            if (kehys && kehys.getBoundingClientRect().height > 0) break;
+            /* eslint-enable no-await-in-loop */
+          }
+          const kr = kortti?.getBoundingClientRect() ?? null;
+          const kehysR = kehys?.getBoundingClientRect() ?? null;
+          const arkkiKartta = d?.querySelector('.kartta-kehys')?.getBoundingClientRect() ?? null;
+          // Sulku on sama kuin rastilla ja Escapella (js/nahtavyydet.js).
+          window.matkakirja.ui.suljeKulttuuriKuva?.();
+          await new Promise((r) => { setTimeout(r, 350); });
+          return {
+            avautui: Boolean(kr),
+            nakyva: Math.round(nakyva),
+            kortinKorkeus: kr ? Math.round(kr.height) : 0,
+            kartanKorkeus: kehysR ? Math.round(kehysR.height) : 0,
+            arkinKartta: arkkiKartta ? Math.round(arkkiKartta.height) : 0,
+            osuus: kehysR ? Math.round((kehysR.height / nakyva) * 100) : 0,
+            jaljella: document.querySelectorAll('.kartta-suurennos').length,
+            kartta: Boolean(d?.querySelector('.kartta-kehys')),
+          };
+        });
+        tieto(`${tunnus}: kokoruutu`, JSON.stringify(kokoruutuTila));
+        /*
+         * MITTA ON KASVU, EI PROSENTTI RUUDUSTA: kartan kuvasuhde on
+         * vaaka (Pariisi 1,6), joten pystyruudulla kokoruutukartta
+         * täyttää LEVEYDEN eikä korkeutta — 98 % leveydestä on laki,
+         * ei mitoituksen puute (js/nahtavyydet.js
+         * mitoitaKarttaSuurennos). Väite on siksi: suurennos aukesi ja
+         * kartta on selvästi isompi kuin arkilla.
+         */
+        /*
+         * MITTA ON AUKEAMINEN JA KASVU, EI PROSENTTI KORKEUDESTA.
+         * Ennen tätä erää nappi ei tehnyt MITÄÄN: suurennos meni
+         * suljettuun `arrivalDialog`iin, ja kortin mitattu korkeus oli
+         * 0 px (mitattu 390 px, 18.9.2026). Nyt kortti on
+         * päällimmäisessä auki olevassa dialogissa ja täyttää ruudun.
+         *
+         * Kartan oma laatikko EI voi olla 95 % puhelimen korkeudesta:
+         * kohdekartan kuvasuhde on vaaka (Pariisi 1,57), joten
+         * pystyruudulla rajoittaa LEVEYS (98 vw = 382 px) ja korkeus
+         * jää sen mukaiseksi. Väite on siksi: kortti peittää ruudun ja
+         * kartta on suurempi kuin arkilla. Mitattu: kortti 482 px /
+         * 844 px = 57 %, kartta 291 px (arkilla 261 px).
+         */
+        vaadi(`${tunnus}: Kokoruutu-nappi avaa kartan suurennoksen ruudulle`,
+          Boolean(kokoruutuTila?.avautui)
+            && kokoruutuTila.kortinKorkeus > kokoruutuTila.nakyva * 0.5
+            && kokoruutuTila.kartanKorkeus > kokoruutuTila.arkinKartta,
+          `kortti ${kokoruutuTila?.kortinKorkeus ?? '-'} px / `
+          + `${kokoruutuTila?.nakyva ?? '-'} px, kartta `
+          + `${kokoruutuTila?.kartanKorkeus ?? '-'} px, `
+          + `arkilla ${kokoruutuTila?.arkinKartta ?? '-'} px`);
+        vaadi(`${tunnus}: sulku palauttaa arkin kartan`,
+          Boolean(kokoruutuTila) && kokoruutuTila.jaljella === 0 && kokoruutuTila.kartta,
+          `suurennoksia ${kokoruutuTila?.jaljella ?? '-'}`);
         if (KUVAKANSIO && ruutu.width === 390) {
           await sivu.screenshot({
             path: join(KUVAKANSIO, 'liuska-k16-pariisi-nahtavyydet.png'), scale: 'css',

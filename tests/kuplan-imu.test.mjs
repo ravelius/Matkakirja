@@ -44,8 +44,7 @@ test('kuplan napautus sulkee eikä avaa chattia', () => {
 test('sulku katkaisee kesken olevan puheenvuoron', () => {
   /*
    * Ilman tätä osiin jaetun puheenvuoron loput osat saapuisivat
-   * sekunnin päästä, avaisivat pinon uudelleen ja söisivät juuri
-   * syntyneen pluskuplan. Mitattu: pluskupla katosi 400 ms:ssa.
+   * sekunnin päästä ja avaisivat pinon uudelleen.
    */
   const runko = LAHDE.slice(
     LAHDE.indexOf('supistaKuplatPalautukseen() {'),
@@ -53,8 +52,15 @@ test('sulku katkaisee kesken olevan puheenvuoron', () => {
   );
   assert.match(runko, /this\.peruPuheenvuoro\(\)/,
     'sulku ei katkaise kesken olevaa puheenvuoroa');
-  assert.match(runko, /this\.varmistaKuplanPalautus\(\)/,
-    'sulku ei näytä pluskuplaa');
+  /*
+   * PLUSKUPLA POISTETTU (omistaja 18.9.2026, PAATOKSET 34 kohta 20 a):
+   * sulku ei enää näytä mitään kohdetta, mutta MUISTI on jäätävä —
+   * chatin ylärivin "Näytä puhekuplat" lukee juuri sen.
+   */
+  assert.match(runko, /this\.viimeisinPiilotettuKupla = \{ kupla: viimeinen/,
+    'sulku ei muista viimeisintä kuplaa');
+  assert.match(runko, /this\.imeKuplatPalautukseen\(puheet, null\)/,
+    'sulku antaa imulle yhä kohteen — pluskuplan piti kadota');
 });
 
 test('imu mittaa kohteen eikä laske sitä', () => {
@@ -82,7 +88,30 @@ test('palautettu kupla nollataan imun jäljiltä', () => {
     'palautus ei nollaa imun tyylejä — kupla palaisi läpinäkyvänä tynkänä');
 });
 
-test('pluskupla on yhä olemassa ja siinä on plusmerkki', () => {
-  assert.match(RAAKA, /'pollo-kuplapalautus', '\+'/);
-  assert.match(TYYLIT, /\.pollo-kuplapalautus \{/);
+/*
+ * PLUSKUPLA POIS, "NÄYTÄ PUHEKUPLAT" TILALLE (omistaja 18.9.2026,
+ * Raamattu "KARTTAUUDISTUKSEN PAATOKSET 34" kohta 20). Elementtiä ei
+ * enää piirretä, joten imeytymisen kohde katoaa ja kuplat vain
+ * sulkeutuvat; paluureitti on chatin ylärivillä.
+ */
+test('pluskuplaa ei enää rakenneta', () => {
+  assert.equal(RAAKA.includes("'pollo-kuplapalautus'"), false,
+    'js/pollo.js rakentaa yhä pluskuplan');
+  assert.equal(LAHDE.includes('varmistaKuplanPalautus'), false,
+    'pluskuplan tehdas on yhä koodissa');
+});
+
+test('chatin ylärivillä on Näytä puhekuplat -nappi, joka piiloutuu tyhjänä', () => {
+  assert.match(RAAKA, /'pollo-naytakuplat', 'Näytä puhekuplat'/);
+  assert.match(TYYLIT, /button\.pollo-naytakuplat \{/);
+  assert.match(TYYLIT, /\.pollo-naytakuplat\[hidden\] \{ display: none; \}/);
+  // Piilotus, ei disabled-tila (omistajan kohta 20 c).
+  const runko = LAHDE.slice(
+    LAHDE.indexOf('paivitaKuplanPalautus() {'),
+    LAHDE.indexOf('tuhoaKuplamuisti() {'),
+  );
+  assert.match(runko, /this\.kuplaPalautusNappi\.hidden = !muistettu/,
+    'nappi ei piiloudu, kun näytettävää ei ole');
+  assert.equal(runko.includes('disabled'), false,
+    'nappi jää disabled-tilaan piilottamisen sijaan');
 });

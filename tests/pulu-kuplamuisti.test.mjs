@@ -21,12 +21,31 @@ test('todellinen karttaveto piilottaa mutta napautus ei', () => {
   assert.match(pollo, /karttaveto\.piilotettu = true;\s*this\.piilotaPuhekuplat\(\)/);
 });
 
-test('plus palauttaa vain saman kontekstin viimeisimmän kuplan eikä avaa chatia', () => {
+/*
+ * PALUUREITTI ON 18.9.2026 ALKAEN CHATIN YLÄRIVILLÄ (omistaja,
+ * PAATOKSET 34 kohta 20): pluskuplaa ei enää piirretä, mutta sama
+ * muisti — saman kohdekaupungin viimeisin piilotettu kupla — palautuu
+ * nyt "Näytä puhekuplat" -napista. Nappi sulkee paneelin ensin, koska
+ * kuplat elävät kartan päällä.
+ */
+test('palautus antaa vain saman kontekstin viimeisimmän kuplan', () => {
   assert.match(pollo, /muistettu\.konteksti !== this\.kuplaKonteksti\(\) \|\| this\.auki/);
-  assert.match(pollo, /nappi\.addEventListener\('pointerdown', nielaise\)/);
-  assert.match(pollo, /nappi\.addEventListener\('click',[\s\S]{0,100}this\.palautaViimeisinKupla\(\)/);
-  assert.match(css, /\.pollo-kuplapalautus\s*\{/);
-  assert.match(css, /\.pollo-kuplapalautus\[hidden\] \{ display: none; \}/);
+  assert.match(pollo, /naytaKuplat\.addEventListener\('click',[\s\S]{0,120}naytaPuhekuplatUudelleen\(\)/);
+  const runko = pollo.slice(
+    pollo.indexOf('  naytaPuhekuplatUudelleen() {'),
+    pollo.indexOf('  paivitaKuplanPalautus() {'),
+  );
+  assert.match(runko, /if \(this\.auki\) this\.sulje\(\);/,
+    'nappi ei sulje paneelia — kuplat jäisivät chatin taakse');
+  assert.match(runko, /this\.palautaViimeisinKupla\(\)/);
+  assert.match(css, /button\.pollo-naytakuplat \{/);
+  assert.match(css, /\.pollo-naytakuplat\[hidden\] \{ display: none; \}/);
+});
+
+test('chatin avaus säilyttää kuplamuistin ylärivin nappia varten', () => {
+  const runko = pollo.slice(pollo.indexOf('  avaa() {'), pollo.indexOf('  sulje() {'));
+  assert.match(runko, /this\.tyhjennaPino\(\);\s*this\.viimeisinPiilotettuKupla = muistettava;/,
+    'chatin avaus unohtaa kuplat — ylärivin nappi olisi aina piilossa');
 });
 
 test('automaattinen puhe säilyy lokissa mutta jää pois chatin näkyvästä historiasta', () => {
@@ -139,13 +158,12 @@ test('karttapiilotuksen kaikki uudet DOM-kuuntelijat irrotetaan', () => {
   assert.match(pollo, /this\.irrotaKarttapiilotus\?\.\(\)/);
 });
 
-test('plus säilyttää pienen kuvan mutta tarjoaa 44 pikselin erillisen osuma-alueen', () => {
-  assert.match(css, /\.pollo-kuplapalautus \{[\s\S]*?width: 44px;[\s\S]*?height: 44px;/);
-  assert.match(css, /\.pollo-kuplapalautus::before \{[\s\S]*?width: 1\.45rem;[\s\S]*?height: 1\.3rem;/);
-  assert.match(css, /button\.pollo-kuplapalautus:hover:not\(:disabled\),[\s\S]*?button\.pollo-kuplapalautus:active:not\(:disabled\)[\s\S]*?background: transparent;[\s\S]*?box-shadow: none;/);
-  assert.match(pollo, /nappi\.left - 46/);
-  assert.match(pollo, /nappi\.top - 46/);
-  assert.match(pollo, /this\.auki \|\| this\.nappi\.hidden \|\| linssiEstaa\(this\.doc\)/);
+test('pluskuplaa ei enää piirretä ruudulle', () => {
+  // Omistaja 18.9.2026 (kohta 20 a): elementtiä ei luoda eikä liitetä.
+  assert.equal(pollo.includes("'pollo-kuplapalautus'"), false);
+  assert.equal(pollo.includes('kuplaPalautus.hidden'), false);
+  // Asemointi koskee enää pinon kehystä.
+  assert.equal(pollo.includes('nappi.left - 46'), false);
 });
 
 test('chatin hyväksytty vastaus sitoutuu odotustokeniin kerran ennen loppua', () => {

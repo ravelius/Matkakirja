@@ -20,7 +20,8 @@
     "savuke-pallo-nostolaput.mjs",
     "savuke-nimikyltti.mjs",
     "savuke-kerma-reuna.mjs",
-    "savuke-ranskan-nostot-lukossa.mjs"
+    "savuke-ranskan-nostot-lukossa.mjs",
+    "savuke-maailmatila-zoomi.mjs"
   ],
   "asetukset": {
     "savuke-ihmisen-kappaleet.mjs": {
