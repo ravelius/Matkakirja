@@ -4734,7 +4734,15 @@ export const RAAMATTU = {
           + 'aanivartiot kaatuvat kaikki kerralla, tarkista ensin oletuslaite '
           + '(system_profiler SPAudioDataType, "Default Output Device") ennen '
           + 'koodin epailya; omistaja saa vaihtaa Scarlettin takaisin, kun se on '
-          + 'paalla - runnerille riittaa mika tahansa aktiivinen laite.',
+          + 'paalla - runnerille riittaa mika tahansa aktiivinen laite. D) '
+          + 'KELLONAJAT AINA SUOMEN AIKAA (omistaja 19.9.2026 klo 03.25 Suomen '
+          + 'aikaa, sanatarkasti: "Kayta aina suomen aikaa ja kirjaa se '
+          + 'raamattuun"): jokainen Raamatun, raporttien, commit-viestien ja '
+          + 'omistajalle annettujen viestien kellonaika ilmoitetaan Suomen '
+          + 'aikana (Europe/Helsinki, kesalla EEST = UTC+3, talvella EET = '
+          + 'UTC+2) ja merkitaan "Suomen aikaa"; UTC-aikoja ei kirjata. Fable '
+          + 'tarkistaa ajan komennolla date ennen kirjausta (Macin kello on '
+          + 'Suomen ajassa). Tila: voimassa heti.',
         'IHMISEN MATKA: KELLO EI KULJE TAAKSEPAIN, PAITSI AIKAHYPYSSA (omistaja '
           + '7.9.2026 ilta klo 21.50 Suomen aikaa, sanatarkasti: "Ja tarinan '
           + 'jarjestys pitaa muuttaa. Outoa etta kello menee taaksepain etela '
