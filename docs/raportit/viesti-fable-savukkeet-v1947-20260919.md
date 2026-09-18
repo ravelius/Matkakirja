@@ -12,7 +12,7 @@ kuormahäilyn aidoista yhteisvaikutuksista.
 Ympäristö: Mac Studio, node 22, Chromium 1234. Rinnalla kulki
 omistajan reliefipyramidin poltto (kohtalainen kuorma). Kestot:
 kohdevalinta 109 s, kerma-reuna 62 s, pallo-nostolaput 44 s,
-astro-aani (puhelin) 31 s.
+astro-aani (puhelin) 31 s, kaupunkipopup-390 186 s, kerma-reuna --vanha 63 s.
 
 ---
 
@@ -24,7 +24,7 @@ astro-aani (puhelin) 31 s.
 | topografialinssi (Ohita jäänteenä) | punainen | — | Ohita on kohdan 10 mukaan kelluva nappi luennan elinkaarella | KORJATTU (poikkeuslista) |
 | astro-aani, puhelin `soi:false` | punainen | **soi: true, 84 s silmukka** | otos loppui 10 s:iin ennen kuin linssi heräsi kuormassa | KORJATTU (otos soittimen mukaan) |
 | astro-aani, `taso 0` (molemmat ruudut) | punainen | punainen, `ctxAika 0` | AudioContext on **suspended** tässä Chromiumissa | VELKA, ks. kohta 3 |
-| kerma-reuna V4 | 14/16 | **14/16, samat luvut** | EI kuormaa; deterministinen | VELKA, ks. kohta 4 |
+| kerma-reuna V4 | 14/16 | **14/16, samat luvut** | EI kuormaa eikä v1947: `--vanha` antaa bitilleen saman | VELKA (mittausraja), ks. kohta 4 |
 | pallo-nostolaput 6–7 | 6/7 | **4/6, sama napautus ohi** | EI kuormaa; deterministinen | VELKA, ks. kohta 5 |
 | kaupunkipopup-390 | 6 punaista | punainen samoin | sama juurisyy kuin kohdevalinnassa: kohta 8 | VELKA, ks. kohta 5 |
 | pariisi-lahizoom 8c 20 s | punainen | (ajo kesken aikakatossa) | — | ks. kohta 5 |
@@ -126,7 +126,7 @@ En muuttanut näitä väitteitä ilman omistajan/Fablen päätöstä
 kun `ctx.currentTime > 0`, muuten mittana on ajastettu automaatio.
 Paikallinen tulos tämän erän korjauksen jälkeen: **9/12 puhelimella**.
 
-## 4. savuke-kerma-reuna V4 — EI kuormahäilyä, aito ero
+## 4. savuke-kerma-reuna V4 — EI kuormahäilyä EIKÄ v1947:n vika
 
 | | CI (rinnan) | paikallinen (yksin, 62 s) |
 | --- | --- | --- |
@@ -144,14 +144,28 @@ Lähdelukemisen perusteella kumpikaan epäilty v1947:n muutos ei koske
 pelinäkymän pohjakarttaa: `maalaaAstronautinValoliuku` on portitettu
 `kerrokset.astronautti`-lipulla (js/pallolaatat.js ~2385) ja
 `reliefinVaraLahde` / `reliefinTaustavari` ajetaan vain reliefitasolle
-(`k.reliefi`, ~2136). **Vertailuajo `--vanha`** (savukkeessa valmiina:
-tarjoilee `origin/main`-version `js/pallolaatat.js`:stä ja
-`js/laattapyramidi.js`:stä) käynnistettiin, mutta jäi tämän erän
-aikakaton ulkopuolelle. Jatko: `node tools/savukkeet/savuke-kerma-reuna.mjs
---vanha` — jos vanha antaa saman 6/7, V4 ei ole v1947:n aiheuttama
-vaan mittausraja on ollut alusta asti liian tiukka tälle parille
-(Kanaali ja Pohjanmeri ovat eri leveysasteilla, ja pallon suunnattu
-valo tekee niihin juuri tämän kokoisen eron).
+(`k.reliefi`, ~2136).
+
+**VERTAILUAJO RATKAISI SEN (63 s).** Savukkeen oma `--vanha` tarjoilee
+`origin/main`-version `js/pallolaatat.js`:stä ja
+`js/laattapyramidi.js`:stä eli v1947:ää EDELTÄVÄN kerman ja laattojen
+maalauksen. Tulos on **bitilleen sama**:
+
+| | v1947 | `--vanha` (origin/main) |
+| --- | --- | --- |
+| työpöytä | 224,216,194 vs 230,222,199 → 6 | **224,216,194 vs 230,222,199 → 6** |
+| puhelin | 223,215,193 vs 230,222,198 → 7 | **223,215,193 vs 230,222,198 → 7** |
+
+**V4 ei siis ole v1947:n aiheuttama eikä reliefi-merten tai astro-yön
+sivuvaikutus.** Peli ei muuttunut. Ero on Kanaalin ja Pohjanmeren
+välinen, ja pisteet ovat eri leveysasteilla (49,9° ja 53,2°), joten
+pallon suunnattu valo tekee niihin juuri tämän kokoisen kertoimen.
+Mittausraja 5 on tälle parille liian tiukka. Koska raja on omistajan
+päätöksen (PAATOKSET 37 TARKENNUS) mittari enkä muuta väitettä ilman
+Fablen päätöstä (Kustannuskuri kohta 1), **ehdotus Fablelle**: joko
+raja 8 tälle parille perusteluineen, tai mittauspari samalle
+leveysasteelle (esim. Kanaali 49,9° / Biskaja 49,9° suojan
+ulkopuolelta), jolloin väite mittaa kermaa eikä valoa.
 
 ## 5. Kertaluonteiset tarkistukset
 
