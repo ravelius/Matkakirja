@@ -554,3 +554,253 @@ koepoltto hyväksytty):
    `js/pallolaatat.js lepokerroksenKerrokset` sammuttaa koko
    laattakerroksen, jos pallon sarja ja nostoversio eivät täsmää.
    Tämä on versionosto, eikä sitä tehty tässä erässä.
+
+---
+
+# Erä 3 — koko maailman nostotaso poltettu Macilla (18.9.2026 klo 10.50)
+
+Opus-agentti, sama haara. Aikakatto 45 min. Ämpäriin **ei** viety
+(Fable vie), Actions-työnkulkua **ei** ajettu, PR:ää **ei** avattu.
+Laattoja ei committoitu; kaksi luettua laattaa on kuvina.
+
+**Tiivistelmä yhdellä rivillä:** koko maailman nostotaso
+`2026-09-18-nostot` on poltettu paikallisesti (1977 laattaa, 9,26 Mt,
+91 s) Fablen päätöksen e mukaisesti, pelin puoli on valmis samassa
+haarassa (pallon sarja **g**), ja matkalla löytyi **julkaisua uhkaava
+vika luettelon kokoamisessa** — luku E3.3 on luettava ennen vientiä.
+
+## E3.1 Poltto
+
+```
+PW_CHROMIUM="$HOME/Library/Caches/ms-playwright/chromium-1234/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing" \
+node tools/generoi-laattapyramidi.mjs <kansio> \
+  --nostotaso --nostoversio 2026-09-18-nostot \
+  --versio 2026-09-07a --patina kevyt --tasot 5-7
+```
+
+`--versio 2026-09-07a` on ÄMPÄRIN NYKYINEN POHJAVERSIO (luettu
+`julisteet/pyramidi/pyramidi.json`:sta; peli lukee pohjan polun
+`js/laattapyramidi.js laattaUrl` → `<versio>/z…`). Nostolaatta asuu
+oman versionsa alla: `<nostoversio>/nostot/z<taso>/<sarake>/<rivi>.webp`.
+
+| | |
+| --- | --- |
+| laattoja | **1977** (z5 251 · z6 575 · z7 1151), 394 lohkoa à 4×4 |
+| kokoa | **9,26 Mt** (keski z5 4,6 kt · z6 5,1 kt · z7 4,3 kt) |
+| piirtoaika | 90,8 s (19,3 Mpx/s, 21,8 laattaa/s), kokonaisaika **91,4 s** |
+| pikseleitä | 518,3 Mpx |
+| luettelo | `pyramidi.json` 65 780 tavua, `nostotaso.versio` **2026-09-18-nostot**, tasot **[5,6,7]**, sääntö `v11-limitys` |
+| nostoja luettelossa | **1612** (ämpärissä nyt 1609) |
+
+Polttoketjun oma tilasto on sama kuin erässä 2 — ketju ei muuttunut:
+1857 merkkiä 112 maasta, poltetaan 1612 · 2 maata estetty (täky) · 82
+monen maan merkkiä eläväksi · 109 eläintäkyä · 88 merkkiä merkkiportin
+taakse · **32 kaupungin sisäistä eläväksi** · **3 ilman lukittua
+ankkuria eläväksi** (Fablen rajaus f: aihemerkin sisällä olevat jäävät
+eläviksi).
+
+**Nostotaulun muutos ämpärin luetteloon nähden** (tiiviste = merkin
+tunniste, js/fokuskohteet.js `kohteenNostotiiviste`): **70 uutta**,
+**67 poistunutta**, **198 tiiviste muuttunut**. Poistuneissa ovat mm.
+kaupungin sisäiset (PAATOKSET 34); muuttuneet tiivisteet ovat lukitun
+ankkurin ja uuden ladonnan tulos. Tämä taulu on se, jolla peli päättää
+kumpi merkki vaikenee ja kumpi piirtyy elävänä.
+
+**Patina mitattiin, koska ämpärin pohja on `kevyt` ja generaattorin
+oletus on `taysi`.** Koko maailman ajo tehtiin molemmilla, ja tulos on
+**1977/1977 laattaa tavulleen samat** (`diff -rq`): patina ei kosketa
+läpinäkyvää nostotasoa, jolle ei piirretä paperia lainkaan. Fablelle
+viedään silti `--patina kevyt` -ajo, koska luettelon `patina`-kenttä
+kuvaa pohjaa. (Sivuhuomio samasta kokeesta: `--alue`-rajattu ajo antaa
+z5:llä muutaman tavun eri laatan kuin koko maailman ajo — lohkon
+reunan piirtoero, ei patina. Sillä ei ole tässä merkitystä, koska
+Fablen päätös e oli koko maailman poltto.)
+
+## E3.2 Read-tarkistus, kaksi laattaa
+
+`docs/raportit/kuvat/poltto-ranska-20260918/` (webp → png, `sips`):
+
+1. **`maailmapoltto-z7-83-33.png`** (Lillen seutu, z7): *Lille*,
+   *Deltatyöt*, *Delftin linssit* — piste ja nimiö vierekkäin,
+   **yhtään siirtoviivaa ei näy** (lukitulta nostolta viivaa ei
+   polteta, erä 2 kohta 2), ei tuplapisteitä.
+2. **`maailmapoltto-z6-40-17.png`** (Bretagne, z6):
+   *Mont-Saint-Michel* (piste ~339 · 300 px eli sama kohta kuin erän 2
+   mitassa = lukittu ankkuri) ja *Nantes*. **Carnacin kivirivit ei ole
+   laatassa** — se on niitä kolmea aihemerkin sisällä olevaa, jotka
+   jäävät eläviksi.
+3. **Pariisin oma laatta z7/83/34 EI OLE OLEMASSA tässä poltossa.**
+   Harvassa pyramidissa tyhjää laattaa ei kirjoiteta, joten kaupungin
+   sisäisten poissaolo näkyy vahvimmassa muodossaan: Pariisin ruudussa
+   ei ole yhtään mustepikseliä.
+
+## E3.3 VIKA, JOKA ON LUETTAVA ENNEN LUETTELON VIENTIÄ
+
+**Työnkulun luettelojobi kirjoittaisi ämpärin luettelon yli.**
+
+`.github/workflows/generoi-pyramidi.yml` pohjustaa ajokansion ämpärin
+`pyramidi.json`:lla juuri siksi, että luettelo TÄYDENTYISI eikä
+korvautuisi — jobin oma kommentti luettelee, mitä muuten katoaisi.
+**Mitattu 18.9.2026: pohjustus ei vaikuta mihinkään.**
+`tools/generoi-laattapyramidi.mjs` kirjoittaa `--vain-luettelo`-haarassa
+`teeLuettelo()`:n suoraan tiedostoon eikä kutsu `yhdistaLuettelo`a
+lainkaan (`if (lippu('vain-luettelo'))`); yhdistäminen tapahtuu vasta
+piirtoajon lopussa.
+
+Koe paikallisesti: ämpärin luettelo kansioon, sitten luettelojobin oma
+komento (`--tasot 0-7 --versio 2026-09-07a --nostoversio … --vain-luettelo`).
+Tulos olisi viety ämpäriin, ja siitä olisivat kadonneet:
+
+| kenttä | ämpärissä | luettelojobin tulos |
+| --- | --- | --- |
+| `rantataso` | 2026-09-07a-ranta | **null** |
+| `varitasot` | **27 maata** | **null** |
+| `viivataso` | 2026-09-08a-viivat | 2026-09-07a (ajopäivän oletus) |
+| `tasot` | z0–z8 laatastoineen | z0–z7 ilman ämpärin laatastoja |
+| `erat`, `korkeus`, `alue` | täydet | tyhjät tai puuttuvat |
+
+Peli ei näkisi 404:ää eikä virhettä — rantaviiva ja 27 maan väritasot
+vain katoaisivat kartalta. Sama hiljainen vika, josta
+`docs/raportit/viesti-fable-laattapolku-20260914.md` varoittaa.
+
+**Korjaus tähän julkaisuun (tehty):** uusi
+`tools/yhdista-nostoluettelo.mjs` kokoaa vietävän luettelon pelin omalla
+yhdistämissäännöllä (`tools/pyramidiluettelo.mjs yhdistaLuettelo`, ehto
+`merkkitaso: true` = "tämä ajo ei polttanut yhtään pohjalaattaa").
+Skripti kantaa `viivataso`n, `rantataso`n ja `patina`n ämpäristä
+(nostoajon oma luettelo keksisi niille ajopäivän arvot — mitattu: se
+olisi vaihtanut viivatason `2026-09-08a-viivat` → `2026-09-07a`, eli
+viivakerros olisi osoittanut polkuun, jota ei ole ajettu) ja
+**pysähtyy virheeseen, jos tulos eroaisi ämpäristä muualta kuin
+`nostotaso`- ja `erat`-kentistä**. Ajettu tässä erässä:
+
+```
+nostotaso 2026-09-08a-nostot (1609 nostoa) → 2026-09-18-nostot (1612 nostoa), tasot 5,6,7
+pohja 2026-09-07a · viivataso 2026-09-08a-viivat · rantataso 2026-09-07a-ranta
+· väritasot 27 maata · tasot z0 z1 z2 z3 z4 z5 z6 z7 z8
+```
+
+**Korjaus itse `--vain-luettelo`-haaraan on Fablen päätös** (se on
+jaettu polku, jota ajavat myös pohja- ja väriajot), eikä sitä tehty
+tässä erässä.
+
+**Toinen huomio Fablelle: z8.** Ämpärin luettelossa nostotason tasot
+ovat [5,6,7,**8**] (z8:lla 2089 laattaa), mutta sekä työnkulun shardi
+(`generoi-pyramidi.yml`: `"nimi":"nostotaso","tasot":"5-7"`) että
+`tools/polta-paikallisesti.sh` polttavat nostotason **vain z5–z7**, ja
+generaattorin oma kommentti sanoo saman ("TASOT VAIN z5–z7"). Tämä ajo
+noudattaa sitä, ja seuraus on kirjattava: uuden luettelon jälkeen
+**nostokerrosta ei ole syvimmällä laattatasolla z8**, toisin kuin nyt.
+Jos z8 halutaan säilyttää, sama komento lipulla `--tasot 5-8` (~2100
+laattaa lisää, arvio 5–8 min Macilla); kaikki muu tästä ohjeesta pätee
+sellaisenaan.
+
+## E3.4 Pelin puoli tehty samaan haaraan
+
+| tiedosto | muutos |
+| --- | --- |
+| `js/pallo.js` | `PALLO_LAATTATUNNISTE` **'f' → 'g'** ja perustelu (kansio `2026-09-07a-nostot-g`) |
+| `sw.js` | `LAATTAKANSIO` samaan kansioon (tahallinen kaksoiskappale, jota `tests/sw.test.mjs` vartioi) |
+| `tests/pallo.test.mjs` | kolme vartiota uuteen kansioon |
+| `tools/yhdista-nostoluettelo.mjs` | uusi, ks. E3.3 |
+
+**Pallon `laatat.json`:n nostot-tiivisteitä EI VOI vielä ajaa.**
+`tools/tee-pallolaatat.mjs` lukee sekä luettelon että lähdelaatat
+**ämpäristä** (`JULKINEN_JUURI julisteet/pyramidi/pyramidi.json`, vakio
+tiedostossa), joten ajo ennen vientiä kokoaisi pallon sarjan vanhasta
+nostotasosta ja kirjaisi `nostot: "2026-09-08a-nostot"` — juuri sen
+sekatilan, jonka versiovahti on tehty estämään. Pallon sarja poltetaan
+siis vasta, kun nostolaatat ja luettelo ovat ämpärissä (järjestys
+E3.5). Silloin `laatat.json` saa ajosta kentät `nostot:
+"2026-09-18-nostot"` ja `nostotaso.nostot` = luettelon 1612 tiivistettä
+(`pallonNostotaso`, `kirjoitaLuettelo`) — ne eivät ole käsin
+kirjoitettavia.
+
+**Tämän haaran koodi ei saa mennä mainiin ennen pallon sarjaa.**
+Tunniste `g` osoittaa kansioon, jota ämpärissä ei vielä ole; yksin
+julkaistuna pallo putoaisi z4-varatekstuuriin.
+
+## E3.5 Vientikomennot Fablelle ja julkaisun tarkistuslista
+
+Polkukaava on luettu `js/laattapyramidi.js`:stä (`laattaUrl`:
+`pyramidiUrl('<nostoversio>/nostot/z<taso>/<sarake>/<rivi>.webp')`,
+`pyramidiUrl` = `julisteet/pyramidi/`), ja polttokansion rakenne on
+sama: `<kansio>/nostot/z5|z6|z7/<sarake>/<rivi>.webp`. **Nostoversio on
+polussa ENNEN `nostot`-osaa**, ei sen jälkeen.
+
+**1. Nostolaatat ämpäriin** (ikuinen välimuisti, osoite on uusi):
+
+```
+aws s3 cp <kansio>/nostot/ \
+  "s3://$AMPARI/julisteet/pyramidi/2026-09-18-nostot/nostot/" \
+  --recursive --endpoint-url "$PAATE" \
+  --content-type image/webp \
+  --cache-control 'public, max-age=31536000, immutable' --no-progress
+```
+
+Tarkista: `aws s3 ls "s3://$AMPARI/julisteet/pyramidi/2026-09-18-nostot/nostot/"
+--recursive --endpoint-url "$PAATE" | wc -l` = **1977**.
+
+**2. Luettelo** (lyhyt välimuisti — tämä on julkaisuhetki):
+
+```
+aws s3 cp "s3://$AMPARI/julisteet/pyramidi/pyramidi.json" ampari.json \
+  --endpoint-url "$PAATE" --no-progress
+node tools/yhdista-nostoluettelo.mjs \
+  --ampari ampari.json --poltto <kansio>/pyramidi.json --ulos pyramidi.json
+aws s3 cp pyramidi.json "s3://$AMPARI/julisteet/pyramidi/pyramidi.json" \
+  --endpoint-url "$PAATE" --content-type application/json \
+  --cache-control 'public, max-age=300' --no-progress
+```
+
+**ÄLÄ vie `<kansio>/pyramidi.json`:ia sellaisenaan** — se on
+nostotasoajon oma luettelo, ks. E3.3.
+
+**3. Pallon Mercator-sarja** (vasta kun 1 ja 2 ovat ämpärissä):
+
+```
+node tools/tee-pallolaatat.mjs --nostot --tunniste g --max 8 --ulos pallolaatat-ulos
+```
+
+— tai työnkulku `tee-pallolaatat` samoilla arvoilla. Sarja menee
+kansioon `julisteet/pallo/laatat/2026-09-07a-nostot-g/`, ja sen
+`laatat.json` saa kentän `nostot: 2026-09-18-nostot`.
+
+**4. Asiakas mainiin:** tämän haaran `js/pallo.js` (tunniste g), `sw.js`
+ja testit. Vaatii versionoston (ei ajettu tässä erässä).
+
+### Tarkistuslista (järjestys on osa julkaisua)
+
+1. `git fetch origin main`, versionumero vasta tässä kohtaa.
+2. Nostolaatat ämpärissä (1977 kpl), **luetteloa ei vielä viety** —
+   tässä tilassa peli näkyy pelaajalle ennallaan.
+3. Luettelo viety `yhdista-nostoluettelo.mjs`:n tuloksena. **Tästä
+   hetkestä pallon laattakerros on pimeänä**, kunnes kohta 4 ja 5 ovat
+   valmiit (`js/pallolaatat.js lepokerroksenKerrokset` → null, kun
+   pallon sarjan `nostot` ≠ `pyramidi.nostotaso.versio`). Tasokartta
+   toimii normaalisti ja näyttää uuden nostotason heti.
+4. Pallon sarja `2026-09-07a-nostot-g` ämpärissä.
+5. Asiakas mainissa (tunniste g) → versiovahti päästää kerroksen.
+6. Silmämääräinen tarkistus pelissä: Ranskaan saapuminen ja Pariisin
+   lähizoomi 390 px:llä — elävä nimiö ja osumapinta poltetun pisteen
+   kohdalla, ei tuplapistettä, ei irrallista siirtoviivaa.
+
+Kohtien 3–5 väli kannattaa pitää lyhyenä (tai tehdä 4 valmiiksi ennen
+3:a), koska siinä välissä pallo on sumea.
+
+## E3.6 Mitä EI tehty
+
+1. **Playwright-mittaa uusilla laatoilla ei ajettu.** Se vaatisi
+   route-välityksen sekä nostolaatoille, manifestille ETTÄ pallon
+   `laatat.json`:lle — eli juuri sen sekatilan rakentamisen, jonka
+   versiovahti estää. Aika meni patinan varmistukseen ja luettelovian
+   (E3.3) mittaamiseen; kumpikin arvioitiin tärkeämmäksi, koska
+   ämpäriin viety väärä muste tai luettelon yli kirjoittaminen on
+   pysyvä vahinko, kun taas silmämääräinen tarkistus on tarkistuslistan
+   kohta 6. Ketju on mitattu erissä 1–2 kolmessa osassa (elävä ankkuri
+   = taulu, poltettava merkki = taulu, laatan muste = taulu), ja tämän
+   erän laatat on luettu kuvina (E3.2).
+2. **Pallon `laatat.json`** — syy E3.4 (ämpäririippuvuus).
+3. **`--vain-luettelo`-haaran korjaus** — syy E3.3 (jaettu polku,
+   Fablen päätös).
+4. **Versionosto** — kielletty tässä tehtävänannossa.
