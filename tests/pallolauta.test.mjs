@@ -404,7 +404,21 @@ test('vaihe 2: siirto haarautuu laudan mukaan kuljettajalle, koreografia pysyy y
   assert.match(ui, /from '\.\/siirtokoreografia\.js';/);
   // Kohteet napautettavissa: lähin kohde 44 px → doMove; R-malli, ei elementin click.
   const lauta = lue('../js/pallolauta/lauta.js');
-  assert.match(lauta, /ui\.doMove\(kohde\.key\)/);
+  /*
+   * SIIRTO TEHDÄÄN YHDESTÄ FUNKTIOSTA (Raamattu, KARTTAUUDISTUKSEN
+   * PAATOKSET 42): kohdemerkki, liuskan "Liiku tänne" -rivi ja
+   * siirtovaiheessa kohteena olevan kaupungin merkki kutsuvat samaa
+   * `valitseSiirto`a, joka kutsuu `ui.doMove`n. Ennen tätä päätöstä
+   * kohdemerkki kutsui doMovea itse; kolmen kopion sijaan kutsuja on
+   * yksi, ja tämä väite lukee sen.
+   */
+  assert.match(lauta, /return valitseSiirto\(kohde\.key\);/);
+  assert.match(lauta, /const valitseSiirto = \(avain\) => \{[\s\S]{0,200}?ui\.doMove\(avain\);/);
+  assert.equal(lauta.split('ui.doMove(').length - 1, 2,
+    'siirto lähtee useammasta kuin yhdestä funktiosta (valitseSiirto + varapolku)');
+  // Kohdekaupungin merkki valitsee siirron eikä avaa liuskaa; pelaajan
+  // oma kaupunki ja katselutila jäävät liuskalle (PAATOKSET 42).
+  assert.match(lauta, /if \(siirto && !ui\.katselu && !\(oma && oma\.id === city\.id\)\) \{\s*\n\s+return valitseSiirto\(siirto\.key\);/);
   assert.match(lauta, /const kohde = lahinKohde\(lat, lng\);/);
   assert.match(lue('../css/styles.css'), /\.pallolauta-kohde \{\n  pointer-events: none;/);
   // Kamera seuraa teleporttia, ei siirtoa: kuljettaja kirjaa paikkansa perillä.
