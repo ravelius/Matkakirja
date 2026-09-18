@@ -566,8 +566,12 @@ test('pallon laatat: oma pysyvä kori, katto, esilataus ja vanhan kansion siivou
   const pallo = readFileSync(join(JUURI, 'js/pallo.js'), 'utf8');
   const versio = pallo.match(/PALLO_LAATTAVERSIO = '([^']+)'/)?.[1];
   const tunniste = pallo.match(/PALLO_LAATTATUNNISTE = '([^']*)'/)?.[1] ?? '';
-  const kansio = pallo.match(/PALLO_LAATTAKANSIO = `\$\{PALLO_LAATTAVERSIO\}-(\w+)-\$\{PALLO_LAATTATUNNISTE\}`/)?.[1];
-  assert.equal(swKansio, `${versio}-${kansio}-${tunniste}`,
+  // Sarja voi olla poltettu ilman nostoja (PALLO_SARJASSA_NOSTOT = false,
+  // 18.9.2026): silloin kansiossa ei ole '-nostot'-osaa (tools/tee-pallolaatat.mjs
+  // laattojenKansio).
+  const sarjassaNostot = pallo.match(/PALLO_SARJASSA_NOSTOT = (true|false)/)?.[1] === 'true';
+  assert.match(pallo, /PALLO_LAATTAKANSIO = `\$\{PALLO_LAATTAVERSIO\}\$\{PALLO_SARJASSA_NOSTOT \? '-nostot' : ''\}-\$\{PALLO_LAATTATUNNISTE\}`/);
+  assert.equal(swKansio, `${versio}${sarjassaNostot ? '-nostot' : ''}-${tunniste}`,
     'sw.js:n LAATTAKANSIO ja js/pallo.js:n PALLO_LAATTAKANSIO ovat eri kansiot — '
     + 'activate siivoaisi juuri käytössä olevat laatat');
 });
