@@ -1241,7 +1241,7 @@ function renkaidenPolku(ctx, {
   return osui;
 }
 
-/** Tilapäinen kangas kohdemaan alkuperäisten pikselien talteenottoon. */
+/** Tilapäinen kangas kohdemaan peitemaskin rasterointiin. */
 function tilapainenKangas(w, h) {
   const ikkuna = globalThis;
   if (ikkuna.OffscreenCanvas) {
@@ -1255,43 +1255,81 @@ function tilapainenKangas(w, h) {
 }
 
 /**
+ * Kohdemaan renkaiden PEITEMASKI laatan kankaan kokoisena: renkaat
+ * rasteroidaan tyhjälle tilapäiskankaalle, ja alfa kertoo kuinka suuri
+ * osa pikselistä on kohdemaan sisällä (reunalla 0…255, antialiasoitu).
+ *
+ * @returns {Uint8ClampedArray|null} RGBA-puskuri, tai null jos ei saatu
+ */
+function renkaidenMaski({
+  renkaat, W, H, kx, ky,
+}) {
+  const kangas = tilapainenKangas(W, H);
+  let apu = null;
+  try { apu = kangas?.getContext?.('2d', { willReadFrequently: true }); } catch { apu = null; }
+  if (!apu || typeof apu.getImageData !== 'function') return null;
+  apu.clearRect(0, 0, W, H);
+  if (!renkaidenPolku(apu, {
+    renkaat, W, H, kx, ky,
+  })) return null;
+  apu.fillStyle = '#fff';
+  apu.fill();
+  try { return apu.getImageData(0, 0, W, H).data; } catch { return null; }
+}
+
+/**
  * Kerma koko laatalle maamaskilla niin, että kohdemaan renkaiden sisus
- * jää täsmälleen ennalleen. Kolme vaihetta: talteenotto, maalaus,
- * palautus — eikä yksikään pikseli saa peittoa kahdesti.
+ * jää täsmälleen ennalleen.
+ *
+ * ══════════════════════════════════════════════════════════════════
+ * MIKSI MASKI EIKÄ TALTEENOTTO + PALAUTUS (hotfix 18.9.2026)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * v1942 teki tämän kolmessa vaiheessa: laatan kangas kopioitiin
+ * tilapäiselle kankaalle (`drawImage(ctx.canvas)`), kerma maalattiin
+ * koko laatalle, ja kohdemaan renkaiden sisus PALAUTETTIIN piirtämällä
+ * kopio takaisin `clip()`in läpi. Chromiumilla se oli oikein, mutta
+ * OMISTAJAN iPhonella (Safari/WebKit, 390 px) Ranskan saapumisnäkymä
+ * oli rikki: kohdemaan sisus oli merenvärinen ja kerma näkyi vain
+ * vaakaraitoina. Ketjussa on kolme WebKitille herkkää kohtaa —
+ * `ctx.canvas` kiihdytetyltä OffscreenCanvasilta, sen piirto toiselle
+ * kankaalle ja saman kankaan piirto takaisin monen alipolun clipin
+ * läpi — eikä yksikään niistä kerro epäonnistuessaan mitään: jokainen
+ * voi hiljaa jättää pikselit koskematta tai tyhjiksi, jolloin
+ * varapolku ei koskaan laukea.
+ *
+ * MASKISSA EI OLE YHTÄKÄÄN NIISTÄ VAIHEISTA. Renkaat rasteroidaan
+ * TYHJÄLLE tilapäiskankaalle (laatan omia pikseleitä ei kopioida
+ * minnekään), maski luetaan kerran, ja kerman pikselisilmukka kertoo
+ * peiton maskin alfalla: kohdemaan sisällä 0, ulkona täysi, reunalla
+ * pehmeä. Yksikään pikseli ei siis saa peittoa kahdesti eikä yhtäkään
+ * makseta takaisin — sisus on kirjaimellisesti koskematta, koska sitä
+ * ei kirjoiteta. Jos maskia ei saada (vanha konteksti, tainted
+ * kangas), palautetaan false ja kutsuja tekee saman varapolun kuin
+ * ennenkin.
  *
  * @returns {boolean} onnistuiko (false → kutsuja tekee varapolun)
  */
 function maalaaKermaRenkaidenUlkopuolelle(ctx, {
   W, H, renkaat, kx, ky, kerma, peitto,
 }) {
-  if (typeof ctx.save !== 'function' || typeof ctx.drawImage !== 'function') return false;
   /*
    * OSUUKO KOHDEMAA TÄHÄN LAATTAAN LAINKAAN? Valtaosa näkyvistä
    * laatoista on kokonaan sen ulkopuolella, eikä niille tarvita
-   * talteenottoa — ja TALTEENOTTO ON TEHTÄVÄ ENNEN MAALAUSTA, koska
-   * maalauksen jälkeen alkuperäisiä pikseleitä ei ole enää missään.
+   * maskia — silloin kerma maalataan suoraan koko laatalle.
    */
-  let kangas = null;
+  let maski = null;
   if (renkaatOsuvat({
     renkaat, W, H, kx, ky,
   })) {
-    kangas = tilapainenKangas(W, H);
-    const apu = kangas?.getContext?.('2d');
-    if (!apu) return false;
-    try { apu.drawImage(ctx.canvas, 0, 0); } catch { return false; }
+    maski = renkaidenMaski({
+      renkaat, W, H, kx, ky,
+    });
+    if (!maski) return false;
   }
-  if (!maalaaKermaMaamaskilla(ctx, {
-    W, H, x0: 0, y0: 0, x1: 0, y1: 0, kerma, peitto,
-  })) return false;
-  if (!kangas) return true;
-  ctx.save();
-  renkaidenPolku(ctx, {
-    renkaat, W, H, kx, ky,
+  return maalaaKermaMaamaskilla(ctx, {
+    W, H, x0: 0, y0: 0, x1: 0, y1: 0, kerma, peitto, maski,
   });
-  ctx.clip();
-  ctx.drawImage(kangas, 0, 0);
-  ctx.restore();
-  return true;
 }
 
 /**
@@ -1301,10 +1339,14 @@ function maalaaKermaRenkaidenUlkopuolelle(ctx, {
  * `x1 > x0 && y1 > y0` rajaa suojan sisuksen maalauksen ulkopuolelle
  * (varapolku); renkailla maalataan koko laatta (x0 = x1 = 0).
  *
+ * `maski` (valinnainen) on kohdemaan renkaiden peitemaski samalla
+ * kankaalla: peitto kerrotaan sen ULKOPUOLISELLA osuudella, joten
+ * kohdemaan sisällä kerroin on 0 eikä pikseliin kosketa lainkaan.
+ *
  * @returns {boolean} maalattiinko
  */
 function maalaaKermaMaamaskilla(ctx, {
-  W, H, x0, y0, x1, y1, kerma, peitto,
+  W, H, x0, y0, x1, y1, kerma, peitto, maski = null,
 }) {
   if (typeof ctx.getImageData !== 'function' || typeof ctx.putImageData !== 'function') return false;
   let data = null;
@@ -1320,9 +1362,11 @@ function maalaaKermaMaamaskilla(ctx, {
       const i = (y * W + x) * 4;
       const ero = d[i] - d[i + 2];
       if (ero <= TASOITUS_MERI_ERO) continue;
+      const ulkona = maski ? 1 - maski[i + 3] / 255 : 1;
+      if (!(ulkona > 0)) continue;
       let t = ero >= TASOITUS_MAA_ERO ? 1 : (ero - TASOITUS_MERI_ERO) / vali;
       t = t * t * (3 - 2 * t);
-      const a = peitto * t;
+      const a = peitto * t * ulkona;
       d[i] += (kr - d[i]) * a;
       d[i + 1] += (kg - d[i + 1]) * a;
       d[i + 2] += (kb - d[i + 2]) * a;
