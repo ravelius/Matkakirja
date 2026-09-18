@@ -123,6 +123,30 @@ Huomaa, että tämä mitta todistaa **ankkurin vakauden**, ei sitä että
 poltettu muste osuu siihen — sitä ei voi mitata ennen kuin luvun 4
 korjaukset on tehty ja laatat ajettu.
 
+### 3.5 Pariisin savuke ja kaappaukset
+
+`tools/savukkeet/savuke-pariisi-lahizoom.mjs` ajettiin muutoksen
+päällä: **0 FAIL**, limittyviä nimiöpareja rykelmässä 0 saapuen ja 0
+lähizoomissa. Kaappaukset `docs/raportit/kuvat/poltto-ranska-20260918/`
+— `pariisi-lahizoom-390/1400.png` (Ranska lähizoomissa) ja
+`pariisi-liuska-auki-390/1400.png` (saapumisnäkymä liuska auki).
+Savukkeen muut kaappaukset on karsittu: kansio oli 27 Mt, ja nämä
+neljä riittävät (10 Mt).
+
+Kaksi silmämääräistä havaintoa, kun kuvia vertaa mainin omiin
+(`docs/raportit/kuvat/paikallaan-20260918/`, sama savuke ennen tätä
+erää):
+
+1. **Kaksi *Kaulanauhajuttu*-nimiötä on MAINISSA JO ENNESTÄÄN** —
+   täsmälleen samoissa paikoissa kummassakin kuvassa, vaikka
+   `js/packs/skandaalit.js`:ssä on vain yksi tietue. **Ei siis tämän
+   erän vika, mutta se on vika**, ja kannattaa selvittää erikseen.
+2. **Lähizoomissa oli kaksi *Loire*-nimiötä, nyt yksi.** Lukittu
+   ankkuri siirsi noston 0,81 yksikköä, ja nimiö osuu nyt yhteen
+   kartan oman jokinimen kanssa. Tämä on todennäköisesti parannus
+   (kaksoiskuva poistui), mutta sitä ei ole mitattu — jos omistaja
+   haluaa jokinimiön näkyviin, se on väistön eikä ankkurin asia.
+
 ## 4. Kaksi vikaa polttoketjussa — korjattava ennen laattoja
 
 Nämä löytyivät mittaamalla `keraaNostot`ia suoraan (18.9.2026).
