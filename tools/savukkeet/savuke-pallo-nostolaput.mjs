@@ -355,6 +355,14 @@ if (auki) {
    */
   const LAPPUNAKYMAT = [
     { nimi: 'Bukarest', lat: 44.43, lng: 26.10, etsi: 'strousberg' },
+    /*
+     * TRANSILVANIA ON POLTETUN MUSTEEN NÄKYMÄ (18.9.2026). Bukarestin
+     * omat nostot ovat kaupungin sisäisiä eivätkä enää pala laattaan
+     * (PAATOKSET 33 TARKENNUS 2), joten poltettu muste haetaan
+     * kaupunkien VÄLISTÄ: Bran, Transfăgărășan ja Balkanvuoret ovat
+     * nostotasossa 2026-09-18-nostot poltettuja.
+     */
+    { nimi: 'Transilvania', lat: 45.52, lng: 25.37, etsi: 'bran' },
     { nimi: 'Helsinki', lat: 60.17, lng: 24.94, etsi: 'kirjasota' },
     { nimi: 'Istanbul', lat: 41.01, lng: 28.98, etsi: 'mustameri' },
   ];
@@ -420,19 +428,42 @@ if (auki) {
         y: koti.top + piste.y,
       };
     };
-    /** Valitut laput: nimetty, ensimmäinen elävä ja ulottumaton pää. */
+    /**
+     * Valitut laput: nimetty, ensimmäinen elävä, ulottumaton pää ja
+     * POLTETTU muste. Jokainen laji haetaan omalla haullaan, ja jo
+     * valittu lappu OHITETAAN eikä katkaise hakua — muuten yksi lappu
+     * söisi toisen lajin otoksesta (18.9.2026: Bukarestin "Strousberg"
+     * oli sekä nimetty että ensimmäinen elävä, jolloin ulottumattoman
+     * haku katkesi ensimmäiseen ehdokkaaseen ja vartio 6 näki nolla
+     * ulottumatonta).
+     */
     const valitut = [];
     const lisaa = (r, laji, osuus) => {
-      if (!r || valitut.some((v) => v.r.id === r.id)) return;
+      if (!r || valitut.some((v) => v.r.id === r.id)) return false;
       valitut.push({ r, laji, osuus });
+      return true;
     };
     lisaa(laput.find((v) => v.nimi.toLowerCase().includes(etsi)), 'nimetty', 0.5);
     lisaa(laput.find((v) => !v.poltettu), 'elävä', 0.5);
-    // Ensimmäinen, jonka ULKOPÄÄ jäi vanhalta säännöltä saamatta.
+    // Ensimmäinen, jonka ULKOPÄÄ jäi vanhalta säännöltä saamatta —
+    // ja jota ei vielä valittu (haku jatkuu, kunnes yksi kelpaa).
     for (const r of laput) {
       if (rivi(r, 1, 0, 'ulottumaton').vanha === 'sama') continue;
-      lisaa(r, 'ulottumaton', 1);
-      break;
+      if (lisaa(r, 'ulottumaton', 1)) break;
+    }
+    /*
+     * POLTETTU MUSTE OMANA LAJINAAN (18.9.2026, Raamattu PAATOKSET 33
+     * TARKENNUS 2 ja PAATOKSET 34): uusi polttoketju polttaa vain
+     * KAUPUNGIN ULKOPUOLISET nostot, joten kaupungin sisäiset nostot
+     * (Bukarestin "Strousberg", "Draculan alaviite") ovat nykyään
+     * ELÄVIÄ. Vanha otos sai poltetun musteensa vahingossa juuri
+     * niistä; nyt se haetaan nimenomaisesti. Ellei yhdessäkään
+     * näkymässä ole poltettua mustetta ruudulla, vartio 7 mittaa
+     * elävällä ja kirjaa siitä INFO-rivin — ei hiljaista vanhenemista.
+     */
+    for (const r of laput) {
+      if (!r.poltettu) continue;
+      if (lisaa(r, 'poltettu', 0.5)) break;
     }
     // Kumpikin: muste keskeltä ja sormen poikkeamalla musteen ulkopuolelta.
     const ulos = [];
@@ -440,7 +471,18 @@ if (auki) {
       ulos.push(rivi(v.r, v.osuus, 0, v.laji));
       ulos.push(rivi(v.r, v.osuus, poikkeama, `${v.laji}+sormi`));
     }
-    return ulos;
+    /*
+     * OTOKSEN LUETTELO RAPORTTIIN: kun vartio kaatuu otoksen puutteeseen
+     * (ei poltettua, ei ulottumatonta), raportista on nähtävä MITÄ
+     * ruudulla oli — muuten seuraava lukija arvaa.
+     */
+    const inventaario = {
+      kaikki: laput.length,
+      poltettuja: laput.filter((v) => v.poltettu).length,
+      elavia: laput.filter((v) => !v.poltettu).length,
+      nimet: laput.slice(0, 12).map((v) => `${v.nimi}${v.poltettu ? '*' : ''}`),
+    };
+    return { ulos, inventaario };
   }, {
     lat: nakyma.lat,
     lng: nakyma.lng,
@@ -460,7 +502,11 @@ if (auki) {
   let sormiPoltettuja = 0;
   for (const nakyma of LAPPUNAKYMAT) {
     // eslint-disable-next-line no-await-in-loop
-    const kohteet = await lappukohteet(nakyma, KORKEUDET[1]);
+    const { ulos: kohteet, inventaario } = await lappukohteet(nakyma, KORKEUDET[1]);
+    tieto(`  otos ${nakyma.nimi}`,
+      `nimettyjä lappuja ${inventaario.kaikki} (poltettuja ${inventaario.poltettuja}, `
+      + `eläviä ${inventaario.elavia})`
+      + (inventaario.nimet.length ? `: ${inventaario.nimet.join(', ')}` : ''));
     for (const kohde of kohteet) {
       /*
        * MITTARI JOKAISEN NOSTON `avaa`:iin. Osumat pysyvät samoina,
@@ -560,11 +606,28 @@ if (auki) {
    *    LAPUN_KOSKETUSVARA_PX) nämä napautukset eivät avanneet mitään:
    *    vaakalapun muste on vain 11,4 px korkea.
    */
+  /*
+   *    OTOKSEN POLTETTU MUSTE EI OLE ENÄÄ ITSESTÄÄNSELVYYS (18.9.2026,
+   *    Raamattu PAATOKSET 33 TARKENNUS 2 / PAATOKSET 34): kaupungin
+   *    sisäiset nostot eivät enää pala laattaan, joten tiheässä
+   *    kaupunkinäkymässä voi olla pelkkää elävää mustetta. Silloin
+   *    vartio mittaa sen, mitä ruudulla on, JA kirjaa erillisen
+   *    INFO-rivin siitä, että poltettu muste jäi otoksen ulkopuolelle —
+   *    vartio ei saa vanhentua hiljaa vihreänä.
+   */
+  const poltettuaOtoksessa = sormiPoltettuja >= 1;
   vaadi('7. lapun teksti ottaa napautuksen myös sormen poikkeamalla '
-    + `(${KOSKETUSPOIKKEAMA_PX} px musteen ulkopuolelta), elävällä ja poltetulla musteella`,
-    sormiKokeita >= 3 && sormiElavia >= 1 && sormiPoltettuja >= 1 && sormiOsui === sormiKokeita,
+    + `(${KOSKETUSPOIKKEAMA_PX} px musteen ulkopuolelta), `
+    + (poltettuaOtoksessa ? 'elävällä ja poltetulla musteella' : 'elävällä musteella'),
+    sormiKokeita >= 3 && sormiElavia >= 1 && sormiOsui === sormiKokeita,
     `poikkeamanapautuksia ${sormiKokeita} (eläviä ${sormiElavia}, poltettuja `
     + `${sormiPoltettuja}), oikein ${sormiOsui}`);
+  if (!poltettuaOtoksessa) {
+    tieto('7. poltettu muste otoksen ulkopuolella',
+      'yhdessäkään näkymässä ei ollut nimettyä POLTETTUA nostoa ruudulla '
+      + '(uusi polttoketju polttaa vain kaupungin ULKOPUOLISET nostot) — '
+      + 'poikkeamanapautus mitattiin pelkällä elävällä musteella');
+  }
 
   tieto('sivun virheet', virheet.length ? virheet.join(' | ') : 'ei yhtään');
 }
