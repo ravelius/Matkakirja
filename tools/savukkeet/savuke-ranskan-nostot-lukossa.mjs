@@ -80,7 +80,16 @@ let lapi = 0;
 let kaikki = 0;
 const vaadi = (nimi, ehto, lisa = '') => {
   kaikki += 1;
-  if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
+  if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); return; }
+  console.log(`FAIL  ${nimi} — ${lisa}`);
+  /*
+   * VÄITETEKSTI MYÖS PR-LOKIIN. GitHub Actions nostaa `::warning::`-
+   * rivin (vanha `##[warning]`-muoto) yhteenvetoon, ja
+   * tools/savukkeet/aja-sarja.mjs poimii juuri sen kuvioon
+   * `^::(warning|error)::`. Ilman tätä punaisen vartion väite jää
+   * lokin sisälle eikä näy PR:n annotaatioissa.
+   */
+  console.log(`::warning::${nimi} — ${lisa}`);
 };
 const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
 
@@ -115,6 +124,9 @@ const elavat = fraRivit.filter((r) => !onKaupunkipiste(r.id) && !sisainen(r));
 tieto('Ranskan pääkartan rivejä', fraRivit.length);
 tieto('kaupunkipisteitä', fraRivit.filter((r) => onKaupunkipiste(r.id)).length);
 tieto('kartan eläviä nostoja (ei kaupunkipiste, ei sisäinen)', elavat.length);
+
+/** Ranskan kartalla elävien nostojen tunnukset (odotuslista kohdalle 5). */
+const ODOTETUT = new Set(elavat.map((r) => r.id));
 
 const lukitut = new Set(Object.keys(NOSTOANKKURIT_FRA));
 const ilmanLukkoa = elavat.filter((r) => !lukitut.has(`nosto:${r.id}`));
@@ -259,6 +271,7 @@ const lueTila = (sivu) => sivu.evaluate(() => {
       nimi: o.nimi ?? null,
       perhe: o.perhe ?? null,
       maara: o.maara ?? 0,
+      jasenet: Array.isArray(o.jasenet) ? o.jasenet : [],
       kaupunki: Boolean(o.kaupunki),
       poltettu: Boolean(o.poltettu),
       lat: o.lat,
@@ -314,8 +327,26 @@ for (const ruutu of RUUDUT) {
     + `aihemerkkejä ${aiheet.length}, niissä jäseniä ${jasenia})`);
   tieto(`${ruutu.w}px kaupunkimerkkejä`,
     `${kaupungit.length}: ${kaupungit.map((r) => r.nimi).join(', ')}`);
+  /*
+   * MITKÄ NOSTOT PUUTTUVAT. Pelkkä lukumäärä ei kerro, mikä meni
+   * rikki: aihemerkki on yksi rivi mutta edustaa monta nostoa, ja
+   * poltettu muste tulee listalle omana rivinään. Puuttuva on siis
+   * odotuslistan (Ranskan kartan elävät nostot, vartio 1) tunnus,
+   * joka ei ole listalla omana rivinään eikä minkään aihemerkin
+   * jäsenenä — eli kadonnut pelaajan silmistä.
+   */
+  const nakyvatTunnukset = new Set();
+  for (const r of ennen.rivit) {
+    if (r.kaupunki) continue;
+    if (r.id) nakyvatTunnukset.add(r.id);
+    for (const j of r.jasenet) nakyvatTunnukset.add(j);
+  }
+  const puuttuvat = [...ODOTETUT].filter((id) => !nakyvatTunnukset.has(id));
+  tieto(`${ruutu.w}px puuttuvia Ranskan nostoja (ei riviä eikä aihemerkin jäsenenä)`,
+    `${puuttuvat.length}${puuttuvat.length ? `: ${puuttuvat.join(', ')}` : ''}`);
   vaadi(`5. ${ruutu.w}px saapumisnäkymässä Ranskan nostopisteitä >= ${PISTEITA_VAHINTAAN}`,
-    pisteet.length >= PISTEITA_VAHINTAAN, `pisteitä ${pisteet.length}`);
+    pisteet.length >= PISTEITA_VAHINTAAN,
+    `pisteitä ${pisteet.length}; puuttuvia ${puuttuvat.length}: ${puuttuvat.slice(0, 20).join(', ')}`);
   /*
    * KAUPUNKIMERKIT MITATAAN LEVEÄLLÄ RUUDULLA, PUHELIMELLA INFONA.
    *

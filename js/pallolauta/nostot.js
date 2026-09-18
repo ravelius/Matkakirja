@@ -2494,6 +2494,15 @@ export function luoNostot({
       nimi: r.nimi,
       aiheNimi: r.aiheNimi,
       maara: r.maara,
+      /*
+       * RYHMÄN JÄSENTEN TUNNUKSET NÄKYVIIN (18.9.2026). Aihemerkki on
+       * osumalistalla YKSI rivi, joka edustaa `maara` nostoa. Ilman
+       * tunnuksia ulkopuolinen mittari (tools/savukkeet/savuke-ranskan-
+       * nostot-lukossa.mjs) ei voi sanoa, MITKÄ nostot ovat kartalla ja
+       * mitkä ovat kadonneet — se näkisi vain lukumäärän. Kenttä on
+       * luettava eikä ohjaa piirtoa.
+       */
+      jasenet: (r.jasenet ?? []).map((j) => j.id).filter(Boolean),
       aihe: r.aihe,
       kategoria: r.kategoria,
       symLaji: r.symLaji,

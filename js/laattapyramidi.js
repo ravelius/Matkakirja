@@ -424,6 +424,25 @@ function nostotasonKirjaus() {
   return luettelo.nostotasot[variMaaNyt] ?? null;
 }
 
+/**
+ * MAAKOHTAISEN nostotason tunnus→tiiviste-taulu, tai null kun
+ * luettelossa ei ole `nostotasot`-taulua tai kohdemaalla ei ole
+ * kirjausta.
+ *
+ * PALLO LUKEE TÄMÄN (js/pallo.js pallonNostoOnPoltettu). Pallon oma
+ * sarja voidaan ajaa ILMAN nostoja (laatat.json `nostot: null`),
+ * jolloin liikkuvassa pallossa ei ole mustetta lainkaan ja lepokerros
+ * latoo kohdemaan nostolaatat tästä samasta pyramidista
+ * (js/pallolaatat.js nostotMaittain). Silloin myös VAIKENEMISEN on
+ * tultava tästä taulusta — muuten peli piirtäisi jokaisen noston
+ * elävänä poltetun musteen päälle, ja CSS2D-katto (NOSTOJEN_KATTO 40)
+ * pudottaisi osan merkeistä kokonaan pois osumalistalta.
+ */
+export function nostotasonPoltetut() {
+  if (!luettelo?.nostotasot) return null;
+  return nostotasonKirjaus()?.nostot ?? null;
+}
+
 /** Tunnus→tiiviste-taulu, josta elävä kerros saa vaieta. */
 function poltetutNostot() {
   if (luettelo?.nostotasot) return nostotasonKirjaus()?.nostot ?? null;

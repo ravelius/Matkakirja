@@ -42,7 +42,8 @@
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 import { diagNyt, pallodiag } from './pallodiag.js';
 import {
-  haePyramidinLuettelo, pyramidinKerrostasot, pyramidinLaattaOlemassa, pyramidinLaattaUrl,
+  haePyramidinLuettelo, nostotasonPoltetut, pyramidinKerrostasot, pyramidinLaattaOlemassa,
+  pyramidinLaattaUrl,
 } from './laattapyramidi.js';
 import {
   KOSKETUKSEN_VAPAUTUS, laattakerrosPaalla, laatuAinaPaalla, nollaaKosketusOhjaimet,
@@ -470,8 +471,28 @@ export function webglTuettu(doc = document) {
  * ajetaan tyngästä (maanKohdemerkit), joten tiiviste on annettavissa;
  * pelkkä tunnus riittää päätökseen "laatoissa vai ei".
  */
+/*
+ * NELJÄS LÄHDE: MAAKOHTAINEN NOSTOTASO (18.9.2026, Raamattu
+ * PAATOKSET 34 kohta 17 d). Kun pallon sarja ajetaan ILMAN
+ * `--nostot`-lippua, sen laatat.json ei kanna nostotasoa lainkaan
+ * (`nostot: null`) ja lepokerros latoo kohdemaan nostolaatat
+ * PYRAMIDISTA (js/pallolaatat.js nostotMaittain). Poltettu muste on
+ * silloin ruudulla, mutta se on pyramidin luettelossa — ja jos tämä
+ * funktio katsoisi vain pallon omaa luetteloa, peli ei tietäisi
+ * mistään poltosta ja piirtäisi jokaisen noston ELÄVÄNÄ mustetta
+ * vasten. MITATTU HINTA (v1942, Ranska): eläviä merkkejä kilpaili
+ * CSS2D-katosta (NOSTOJEN_KATTO 40) niin monta, että saapumisnäkymän
+ * nostopisteitä jäi 34 (390 px) ja 31 (1400 px) — aiemman 43:n
+ * sijaan. Katon yli jääneet eivät olleet DOMissa eivätkä
+ * osumalistalla: pelaajalle ne olivat kadonneet.
+ *
+ * JÄRJESTYS ON PALLON OMA ENSIN. Jos pallon sarjaan ON poltettu
+ * nostot, ne ovat laattojen kankaassa koko maailmasta, eikä
+ * pyramidin maakohtainen taulu saa muuttaa sitä päätöstä — sama
+ * järjestys kuin kerrosportissa (js/pallolaatat.js: `!nostot`).
+ */
 export function pallonNostoOnPoltettu(tunnus, tiiviste = null) {
-  const nostot = laattaluettelo?.nostotaso?.nostot;
+  const nostot = laattaluettelo?.nostotaso?.nostot ?? nostotasonPoltetut();
   if (!nostot || !tunnus) return false;
   const poltettu = nostot[tunnus];
   if (!poltettu) return false;
@@ -480,8 +501,8 @@ export function pallonNostoOnPoltettu(tunnus, tiiviste = null) {
 
 /** Onko pallon laatoissa lainkaan nostotasoa? */
 export function pallonLaatoissaOnNostoja() {
-  return Boolean(laattaluettelo?.nostotaso?.nostot
-    && Object.keys(laattaluettelo.nostotaso.nostot).length);
+  const nostot = laattaluettelo?.nostotaso?.nostot ?? nostotasonPoltetut();
+  return Boolean(nostot && Object.keys(nostot).length);
 }
 /** Sukelluksen näkyvä leveys laudan yksikköinä (maan kokoinen ikkuna). */
 export const PALLO_SUKELLUSLEVEYS = 620;
