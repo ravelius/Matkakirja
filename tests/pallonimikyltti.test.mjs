@@ -291,19 +291,24 @@ test('7. laitekohtainen vertailu: saapumisnäkymä antaa saman koon joka ruudull
 });
 
 /*
- * 8. NAPPULA RATKAISTAAN LEVOSSA, EI KESKEN VEDON (18.9.2026,
- * js/pallolauta/nimet.js samanniminen osio; Raamattu KARTTAUUDISTUKSEN
- * PAATOKSET 32 kohdat 1 ja 5).
+ * 8. PELIMERKKI EI PURA LUKKOA (18.9.2026 aamu, Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 34 kohta 13 b, sanatarkasti:
+ * *"pelimerkki ei pura lukkoa"*; js/pallolauta/nimet.js PELINAPPULA ON
+ * ESTE VAIN TUOREELLE LADONNALLE).
  *
- * Pelimerkki on kova este, joka purkaa nimen lukon — mutta VAIN levon
- * ladonnassa. Liikkeen aikana ajettu ladonta ei saa vaihtaa kylttiä,
- * koska leikkaustestin kaksi puolta luetaan eri kehyksestä (lukon
- * laatikko tämän kehyksen kamerasta, nappulan laatikko edellisen
- * kehyksen DOM-paikasta) ja veto kääntää testin kesken matkan.
- * Mitattu selaimessa: kylki vaihtui askelella 4 ja kyltti siirtyi
- * 102,4 px vedon yli.
+ * KUMOTTU EDELLINEN VARTIO: *"pelimerkki ei pura lukkoa kesken vedon,
+ * mutta purkaa sen levossa"* (18.9.2026 aamuyöllä). Purku oli kavennettu
+ * levon ladontoihin ja yhteen kertaan merkkien kokoonpanoa kohden, mutta
+ * lukon sai yhä purkaa kesken pelin — ja purun ratkaisi leikkaustesti,
+ * jonka kaksi puolta luetaan eri kehyksestä (lukon laatikko tämän
+ * kehyksen kamerasta, nappulan laatikko edellisen kehyksen DOM-paikasta).
+ * Omistaja tilasi lukon, joka ei purkaudu lainkaan.
+ *
+ * Väite on nyt kaksiosainen, jotta se mittaa myös sen, ettei nappulan
+ * väistö katosi mukana: TUORE ladonta (ei lukkoa) väistää nappulan,
+ * LUKITTU ei enää koettele sitä.
  */
-test('8. pelimerkki ei pura lukkoa kesken vedon, mutta purkaa sen levossa', () => {
+test('8. pelimerkki ei pura lukkoa, mutta tuore ladonta väistää sen', () => {
   const px = 1400 / 1200;
   const y = ymparisto({ px, W: 1400, H: 900 });
   y.nimet.lado({ katto: 40 });
@@ -314,29 +319,54 @@ test('8. pelimerkki ei pura lukkoa kesken vedon, mutta purkaa sen levossa', () =
   const pino = {
     x0: r.x0 + 1, y0: r.y0 + 1, x1: r.x1 - 1, y1: r.y1 - 1,
   };
-  const avain = 'nappula@48.8566,2.3522';
-  y.nimet.lado({
-    katto: 40, pinot: [pino], levossa: false, pinojenAvain: avain,
-  });
-  assert.equal(y.sijoitukset().get('pariisi'), alku,
-    'liikkeen ladonta ei saa vaihtaa kylttiä pelimerkin takia');
-  // VASTAKOE: sama pelimerkki levossa purkaa lukon ja nimi väistää.
-  y.nimet.lado({
-    katto: 40, pinot: [pino], levossa: true, pinojenAvain: avain,
-  });
-  const jalkeen = y.sijoitukset().get('pariisi');
-  assert.notEqual(jalkeen, alku, 'levossa nimi väistää pelimerkin');
-  /*
-   * VÄISTÖ RATKAISTAAN KERRAN. Sama kokoonpano ei saa koetella lukkoa
-   * uudestaan seuraavissa levon ladonnoissa — juuri se käänsi
-   * veitsenterällä olevan leikkaustestin vedon perälaudassa ja siirsi
-   * kyltin 102 px (savuke-nimikyltti vartiot 1-2).
-   */
-  for (let i = 0; i < 3; i += 1) {
-    y.nimet.lado({
-      katto: 40, pinot: [pino], levossa: true, pinojenAvain: avain,
-    });
-    assert.equal(y.sijoitukset().get('pariisi'), jalkeen,
-      'ratkaistua väistöä ei koetella uudestaan');
+  for (let i = 0; i < 4; i += 1) {
+    y.nimet.lado({ katto: 40, pinot: [pino] });
+    assert.equal(y.sijoitukset().get('pariisi'), alku,
+      'lukittu kyltti ei vaihda asentoa pelimerkin takia');
   }
+  /*
+   * VASTAKOE: TUORE LADONTA VÄISTÄÄ NAPPULAN. Ilman tätä vartio 8
+   * menisi läpi myös silloin, jos nappula olisi lakannut olemasta este
+   * kokonaan — silloin PAATOKSET 32 kohta 5 rikkoutuisi hiljaa.
+   * Sama pelimerkki, mutta ilman lukkoa (oma ympäristö) antaa eri
+   * sijoituksen kuin ladonta ilman pelimerkkiä.
+   */
+  const puhdas = ymparisto({ px, W: 1400, H: 900 });
+  puhdas.nimet.lado({ katto: 40, pinot: [pino] });
+  assert.notEqual(puhdas.sijoitukset().get('pariisi'), alku,
+    'tuore ladonta väistää pelimerkin');
+});
+
+/*
+ * 9. RUUDUN REUNA EI PURA LUKKOA — NIMI SAA LEIKKAUTUA (18.9.2026,
+ * Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta 13 b, sanatarkasti:
+ * *"ruudun reuna ei pura lukkoa (nimi saa leikkautua)"*).
+ *
+ * KUMOTTU SÄÄNTÖ: *RUUDUN REUNA PURKAA LUKON* (14.9.2026). Se oli se,
+ * minkä pelaaja näkee vedossa: kun kaupunki lähestyy ruudun laitaa,
+ * lukitun kyltin laatikko ei enää mahdu, lukko jätettiin huomiotta ja
+ * ladonta valitsi nimelle toisen kyljen — kesken vedon.
+ *
+ * Vartio panoroi Pariisin ruudun oikeaan laitaan niin, että piste on
+ * yhä ruudulla mutta nimi ei mahdu kokonaan, ja vaatii saman sijoituksen.
+ */
+test('9. ruudun reuna ei pura lukkoa eikä pudota lukittua nimeä', () => {
+  const px = 390 / 240;
+  const W = 390;
+  const y = ymparisto({ px, W, H: 844 });
+  y.nimet.lado({ katto: 40 });
+  const alku = y.sijoitukset().get('pariisi');
+  const r = y.laatikko('pariisi');
+  assert.ok(alku && r, 'Pariisi ladottiin');
+  // Vedä laitaan: piste jää ruudulle, mutta nimen laatikko ei mahdu.
+  // Suunta on nimen OMA kylki (`ank`), jotta laatikko oikeasti leikkautuu.
+  const askel = ((W / 2) - 4) / px;
+  y.panoroi(alku.endsWith('end') ? askel : -askel, 0);
+  y.nimet.lado({ katto: 40 });
+  const laatikko = y.laatikko('pariisi');
+  assert.ok(laatikko, 'lukittu nimi ei putoa reunalta');
+  assert.ok(laatikko.x0 < 0 || laatikko.x1 > W,
+    `nimen pitää leikkautua: ${laatikko.x0} … ${laatikko.x1}`);
+  assert.equal(y.sijoitukset().get('pariisi'), alku,
+    'reuna ei saa vaihtaa kylkeä');
 });

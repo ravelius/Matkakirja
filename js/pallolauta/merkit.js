@@ -437,10 +437,9 @@ export function luoMerkit({ pallo, ui, siirtyma, asteet, kotelo = null, nakyviss
     /**
      * OSAN KARTTA-AVAIN: mitkä merkit ovat kartalla ja missä KARTAN
      * pisteessä. Panorointi ja zoomi eivät muuta tätä lukua — vain
-     * merkin ilmestyminen, katoaminen tai siirtyminen. Nimiladonta
-     * päättää tästä, onko pelimerkin väistö jo ratkaistu tälle
-     * kokoonpanolle (js/pallolauta/nimet.js NAPPULA RATKAISTAAN
-     * LEVOSSA, EI KESKEN VEDON).
+     * merkin ilmestyminen, katoaminen tai siirtyminen. Ladontakerrokset
+     * päättävät tästä, onko jokin kerran ratkaistava asia jo ratkaistu
+     * tälle merkkien kokoonpanolle.
      */
     avain: (osa) => (osat.get(osa) ?? [])
       .filter((d) => !d.poistuu)

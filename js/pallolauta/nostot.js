@@ -38,7 +38,7 @@
 
 import {
   KOVAN_ESTEEN_PAINO,
-  VIUHKAN_ALAS_ALKU_PX, VIUHKAN_REUNAVARA_PX, VIUHKAN_RIVI_PX, VIUHKAN_VALI_PX,
+  VIUHKAN_ALAS_ALKU_PX, VIUHKAN_REUNAVARA_PX, VIUHKAN_SADE_PX,
   aiheenNimi, aihemerkinLaatikko, aihemerkkiElementti, aihenostonNimio, alasMahtuvatRivit,
   asetteleAihemerkki, keskitettyMahtuvatRivit, kohdanLaatikko, piirraViuhka, ryhmitaNostot,
   viuhkanAsemat, viuhkanNimioLeveys,
@@ -801,6 +801,95 @@ export const VALON_PEITTO = 0.45;
 
 const SVG = 'http://www.w3.org/2000/svg';
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * LIUSKAN TEKSTIKOKO = KARTTAAN POLTETUN TEKSTIN RUUTUKOKO (omistaja
+ * 18.9.2026 klo 06.58 Suomen aikaa, Raamattu KARTTAUUDISTUKSEN
+ * PAATOKSET 34 kohta 13 a, iPhone-kuva v1935:n liuskasta:
+ * *"Teksteja ei nae puhelimella. Kaikki pitaisi olla samalla koolla
+ * kuin karttaan poltetut tekstit."*)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MITATTU VIKA (Chromium 390 × 844 dpr 2, Pariisi, lähizoomi 0,34
+ * uloimmasta; tools/savukkeet/savuke-pariisi-lahizoom.mjs vartio 8l):
+ *
+ *   kartan kerroin (nimenKarttakerroin)            2,937
+ *   POLTETTU nimiö ruudulla (8,5 px × kerroin)    24,96 px
+ *   PARIISI-nimi ruudulla (13,5 px × kerroin)     39,65 px
+ *   liuskan rivi ruudulla (NOSTON_MITTA × 11)      8,50 px
+ *
+ * Poltettu muste on KARTAN mitta: se on laatassa kiinni ja kasvaa
+ * ruudulla sitä mukaa kuin kartta suurenee allansa. Elävä nosto sen
+ * sijaan on ruutuvakio (PAATOKSET 32 kohta 4, *"yksi koko"*), ja
+ * liuska peri sen — 8,5 px on lähizoomissa alle kolmasosa siitä,
+ * mitä sen vieressä oleva poltettu nimiö on. Juuri sen omistaja näki.
+ *
+ * SÄÄNTÖ ON SIKSI SAMA FUNKTIO KUIN POLTETULLA MUSTEELLA, EI UUSI
+ * LUKU: liuskan rivin mitta on NOSTON_MITTA × `nimenKarttakerroin`
+ * (js/pallolauta/nimet.js), täsmälleen se kerroin, jolla kaupunkien
+ * nimikyltit ja laattojen muste seuraavat karttaa. Kartan omat merkit
+ * pysyvät yhtenä kokona kuten ennen — muutos koskee VAIN liuskaa,
+ * joka ei ole kartan merkki vaan sen päälle avautuva lista.
+ *
+ * KATTO JA LATTIA OVAT PIKSELEITÄ, RIVIVÄLI SEURAA NIITÄ. Kaava
+ * yksin antoi syvimmässä zoomissa 25 px:n rivin, joka ei mahtunut
+ * ruudulle; omistajan tarkistus 18.9.2026 asetti katoksi 18 px ja
+ * lattiaksi 13 px (ks. LIUSKAN_KIRJASIN_KATTO_PX). Riviväli EI ole
+ * enää viuhkan vakio vaan 1,45 × kirjasin, eli se kasvaa ja kutistuu
+ * rivin mukana — päätöksen lause *"rivivali vastaavasti"* on juuri
+ * tämä. 16 px:n nimiökatto on KARTAN merkkien katto (ne ovat kartan
+ * päällä, missä *"jattimaiset ja sumeat"* nimiöt peittivät kartan);
+ * liuskan rivi on listan sisällä eikä peitä muuta kuin oman pohjansa.
+ */
+/*
+ * KATTO 18 px, LATTIA 13 px (omistajan tarkistus 18.9.2026, Fablen
+ * kaappaus liuska-auki-390.png). Edellinen erä sitoi rivin suoraan
+ * poltetun nimiön ruutukokoon ja mittasi sen SYVIMMÄSSÄ zoomissa:
+ * kerroin 2,937 → 25 px. Omistajan omassa v1935:n kuvassa poltettu
+ * *"Chartresin."* oli ruudulla noin 16 px, ja se on tavoitetaso —
+ * 25 px:n rivit katkesivat, valuivat ruudun laidan yli ja peittivät
+ * naapurin nimiön. Kaava on siis ennallaan (poltetun musteen
+ * ruutukoko), mutta se leikataan näiden kahden luvun väliin: katto
+ * pitää listan luettavana venyttämättä sitä ruudun yli, lattia estää
+ * uloimmassa zoomissa syntyvän silmälle näkymättömän rivin.
+ */
+/** Liuskan rivin kirjasimen katto ruudulla (px). */
+export const LIUSKAN_KIRJASIN_KATTO_PX = 18;
+/** Liuskan rivin kirjasimen lattia ruudulla (px). */
+export const LIUSKAN_KIRJASIN_LATTIA_PX = 13;
+/** Riviväli kirjasinkokoon nähden (omistaja: *"riviväli 1,45 × fontti"*). */
+export const LIUSKAN_RIVIVALI_KERROIN = 1.45;
+/**
+ * Tihein sallittu riviväli kirjasinkokoon nähden. Lista kutistaa
+ * rivivälin ennen kuin se kelaa (kelaus on viimeinen keino), mutta ei
+ * niin tiheäksi, että hiusviivan molemmin puolin jäisi alle puolta
+ * kirjasinta ilmaa: rivin puolikorkeus on puoli riviväliä, joten
+ * 1,25 jättää hiusviivan ja tekstin väliin 0,5 × fontti.
+ */
+export const LIUSKAN_TIHEIN_KERROIN = 1.25;
+/** Kartan kerroin liuskalle (ks. yllä); `paivita` asettaa sen. */
+let liuskanKarttakerroin = 1;
+/** Liuskan rivin kirjasinkoko ruudulla juuri nyt (px). */
+export function liuskanKirjasinPx() {
+  const poltettu = NOSTOSYM_NIMIO_KOKO * NOSTON_MITTA * Math.max(1, liuskanKarttakerroin);
+  return Math.min(LIUSKAN_KIRJASIN_KATTO_PX, Math.max(LIUSKAN_KIRJASIN_LATTIA_PX, poltettu));
+}
+/**
+ * Liuskan rivin mitta juuri nyt: poltetun kartan tekstin ruutukoko
+ * leikattuna kirjasimen lattian ja katon väliin.
+ */
+export function liuskanMitta() {
+  return liuskanKirjasinPx() / NOSTOSYM_NIMIO_KOKO;
+}
+/**
+ * LIUSKAN LEVEYDEN KATTO: osuus ruudun leveydestä. Liuska on sisällön
+ * levyinen (levein rivi + laatikon marginaalit), mutta ei koskaan
+ * leveämpi kuin tämä — loppu rivittyy, ei katkea (omistaja 18.9.2026:
+ * *"ei katkaisua"*).
+ */
+export const LIUSKAN_LEVEYDEN_OSUUS = 0.78;
+/** Rivilaatikon vaakamarginaalit (kohdanLaatikko sisä + ulko, px). */
+const LIUSKAN_LAATIKON_VARA_PX = 28;
 /** Kaupunkiliuskan haitarin sisennys yhtä tasoa kohti (merkin yksiköt). */
 export const LIUSKAN_SISENNYS_PX = 9;
 /** Kategoriarivin väripallon säde (merkin yksiköt). */
@@ -812,13 +901,33 @@ const LIUSKAN_PALLON_R = 2.4;
  * karttaselitteessä) ja haitarin kohteet ovat sisennettyjä.
  * Hiusviiva erottaa yläryhmän kategorioista (PAATOKSET 34 kohta 8).
  */
-function piirraLiuskanRivi(g, r, kylki, suunta) {
+function piirraLiuskanRivi(g, r, kylki, suunta, teksti = null, { leveysYksikkoina = 60, jatko = false } = {}) {
   const sisennys = suunta * r.sisennys * LIUSKAN_SISENNYS_PX;
   const sisus = document.createElementNS(SVG, 'g');
   sisus.setAttribute('class', `pallolauta-liuska-rivi pallolauta-liuska-${r.laji}`);
   if (sisennys) sisus.style.transform = `translate(${sisennys.toFixed(2)}px, 0px)`;
   g.appendChild(sisus);
-  if (r.laji === 'kategoria') {
+  /*
+   * HIUSVIIVA ON OMA RIVINSÄ (Fablen tarkistus 18.9.2026: viiva leikkasi
+   * Turistiopas-rivin tekstin). Se piirtyy oman rivinsä keskelle, joten
+   * riviväli (1,45 × kirjasin) jättää sen molemmin puolin yli puolen
+   * kirjasimen verran ilmaa — ennen viiva oli ensimmäisen kategoriarivin
+   * sisällä 11 yksikköä sen yläpuolella ja kasvoi kirjasimen mukana
+   * naapurin tekstin päälle.
+   */
+  if (r.laji === 'hiusviiva') {
+    const viiva = document.createElementNS(SVG, 'line');
+    viiva.setAttribute('class', 'pallolauta-liuska-hiusviiva');
+    viiva.setAttribute('x1', String(suunta * 5));
+    viiva.setAttribute('x2', String(suunta * Math.max(20, leveysYksikkoina)));
+    viiva.setAttribute('y1', '0');
+    viiva.setAttribute('y2', '0');
+    sisus.appendChild(viiva);
+    return;
+  }
+  // Väripallo on rivin OMALLA ensimmäisellä rivillä; rivityksen
+  // jatkorivi on pelkkää tekstiä, jottei pallo toistu kahdesti.
+  if (r.laji === 'kategoria' && !jatko) {
     const pallo = document.createElementNS(SVG, 'circle');
     pallo.setAttribute('class', 'pallolauta-liuska-pallo');
     pallo.setAttribute('r', String(LIUSKAN_PALLON_R));
@@ -827,16 +936,8 @@ function piirraLiuskanRivi(g, r, kylki, suunta) {
     pallo.setAttribute('fill', karttavaloVari(r.aihe));
     sisus.appendChild(pallo);
   }
-  if (r.hiusviiva) {
-    const viiva = document.createElementNS(SVG, 'line');
-    viiva.setAttribute('class', 'pallolauta-liuska-hiusviiva');
-    viiva.setAttribute('x1', String(suunta * 5));
-    viiva.setAttribute('x2', String(suunta * 60));
-    viiva.setAttribute('y1', '-11');
-    viiva.setAttribute('y2', '-11');
-    sisus.appendChild(viiva);
-  }
-  if (r.nimi) piirraNostosymNimio(sisus, r.nimi, null, kylki, Infinity);
+  const nimi = teksti ?? r.nimi;
+  if (nimi) piirraNostosymNimio(sisus, nimi, null, kylki, Infinity);
 }
 
 /** Elävän noston elementti: viivamerkki + nimiö samaan pieneen svg:hen. */
@@ -1140,6 +1241,18 @@ export function luoNostot({
   let viimeisinUloinOsuus = 0;
   let sovittelu = {
     siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0, lappuja: 0,
+  };
+  /*
+   * MILLE LAPPUJOUKOLLE JA RUUDULLE SOVITTELU ON RATKAISTU (ks.
+   * NIMIÖN KYLKI LUKITAAN, KUN ANKKURI VALITAAN `sovittele`n yllä).
+   * Tyhjä = ei ratkaistu, jolloin seuraava sovittelu ajetaan.
+   */
+  let sovittelunAvain = '';
+  /** Lukitut asennot avaimittain: avain → { kylki, dx, dy, nimio }. */
+  let sovitellutAsennot = new Map();
+  /** Viimeisin oikeasti ajettu sovittelu (ohitettu ajo palauttaa tämän). */
+  let viimeisinSovittelu = {
+    siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0,
   };
   let laskeLaatikot = () => { laatikot = []; };
   /*
@@ -1806,6 +1919,9 @@ export function luoNostot({
     nostonKarttakerroin = yksiKokoSallittu()
       ? 1
       : nimenKarttakerroin(karttaskaala, vertailuskaala || undefined);
+    // Liuska seuraa karttaa myös silloin, kun kartan merkit eivät
+    // (ks. LIUSKAN TEKSTIKOKO = KARTTAAN POLTETUN TEKSTIN RUUTUKOKO).
+    liuskanKarttakerroin = nimenKarttakerroin(karttaskaala, vertailuskaala || undefined);
     viimeisinUloinOsuus = uloinOsuus;
     const rivit = keraa(nakyva, uloinOsuus);
     rivitNyt = rivit;
@@ -2456,10 +2572,104 @@ export function luoNostot({
           }
         }
         vaakaEhdokkaat.sort((a, b) => a - b);
+        /*
+         * LIUSKAN RIVI ON POLTETUN TEKSTIN KOKOA, LEIKATTUNA KATTOON
+         * JA LATTIAAN (ks. LIUSKAN TEKSTIKOKO = KARTTAAN POLTETUN
+         * TEKSTIN RUUTUKOKO). Sama mitta menee leveyslaskentaan,
+         * riviväliin, asemointiin ja piirtoon — yksi luku, ei kopiota.
+         */
+        const liuskaMitta = liuskanMitta();
+        const kirjasinPx = liuskanKirjasinPx();
+        /*
+         * RIVIVÄLI JA RIVIN PUOLIKORKEUS SEURAAVAT KIRJASINTA. Ennen
+         * ne olivat viuhkan vakioita (30 / 26 / 13 px), jotka on
+         * mitoitettu 11 px:n kirjasimelle: 18 px:n rivit menivät
+         * toistensa päälle ja rivin osumalaatikko oli tekstiä matalampi.
+         * Tihein väli on riviväli, jonka lista sallii itselleen ennen
+         * kelausta (kelaus on viimeinen keino), ja rivin puolikorkeus
+         * on puolet siitä — laatikot koskettavat toisiaan mutta eivät
+         * mene päällekkäin edes tiheimmillään.
+         */
+        const valiPx = LIUSKAN_RIVIVALI_KERROIN * kirjasinPx;
+        const tiheinPx = LIUSKAN_TIHEIN_KERROIN * kirjasinPx;
+        const riviPx = tiheinPx / 2;
+        /*
+         * LIUSKAN LEVEYS ON SISÄLLÖN LEVEYS, KATTONA 78 % RUUDUSTA
+         * (omistajan tarkistus 18.9.2026, kaappaus liuska-auki-390.png:
+         * *"Kadonneet i… (2)"*, *"Mona Lisan v…"*, lista ruudun oikean
+         * laidan yli). Edellinen erä KATKAISI rivin siihen, mikä jäi
+         * merkin oikealle puolelle, ja katkaisu söi nimen. Nyt tila on
+         * suurempi kahdesta (oikea puoli tai puoli ruutua), leikattuna
+         * kattoon — ja se, mikä ei mahdu, RIVITTYY (ei kolmea pistettä).
+         *
+         * SÄDE KAHDESTI oikean puolen laskennassa: ensimmäinen on
+         * listan oma etäisyys merkistä (VIUHKAN_SADE_PX), toinen on
+         * pelinappulan vara. Nappula seisoo pelaajan kaupungin merkin
+         * kyljessä ja on kova este, joka ei voi väistää; jos rivit
+         * veisivät koko oikean laidan, listalle ei jäisi vapaata
+         * asentoa sen vierestä (vartio 8j).
+         */
+        const leveydenKatto = ruutuNyt.leveys * LIUSKAN_LEVEYDEN_OSUUS - LIUSKAN_LAATIKON_VARA_PX;
+        const tilaaOikealla = ruutuNyt.leveys - rivi.p.x
+          - VIUHKAN_REUNAVARA_PX - 2 * VIUHKAN_SADE_PX;
+        const rivinTila = Math.max(0,
+          Math.min(leveydenKatto, Math.max(tilaaOikealla, ruutuNyt.leveys / 2)));
+        const rivinLeveys = (teksti) => (teksti
+          ? viuhkanNimioLeveys(nostosymNimioMitta(teksti, null, Infinity).leveys, liuskaMitta)
+          : 0);
+        /*
+         * PITKÄ NIMI RIVITTYY, EI KATKEA (PAATOKSET 34 kohta 5:
+         * lukumäärä *"(n)"* on osa riviä, ja kohta 13 a kieltää
+         * lukukelvottoman rivin). Jako on sanoittainen; lukumäärä
+         * liimataan edeltävään sanaan, jottei *"(3)"* jää yksin
+         * omalle rivilleen. Sanaa ei koskaan katkaista: jos yksi sana
+         * on tilaa leveämpi, se saa oman rivinsä sellaisenaan ja
+         * reunakiinnitys pitää listan silti ruudussa.
+         */
+        const rivinTekstit = (nimi, sisennys) => {
+          if (!nimi) return [''];
+          const tila = Math.max(0, rivinTila - sisennys * LIUSKAN_SISENNYS_PX * liuskaMitta);
+          if (rivinLeveys(nimi) <= tila) return [nimi];
+          const sanat = String(nimi).split(/\s+/u).filter(Boolean);
+          if (sanat.length > 1 && /^\(\d+\)$/u.test(sanat[sanat.length - 1])) {
+            const hanta = sanat.pop();
+            sanat[sanat.length - 1] = `${sanat[sanat.length - 1]} ${hanta}`;
+          }
+          const ulos = [];
+          let nyt = '';
+          for (const sana of sanat) {
+            const ehdokas = nyt ? `${nyt} ${sana}` : sana;
+            if (!nyt || rivinLeveys(ehdokas) <= tila) { nyt = ehdokas; continue; }
+            ulos.push(nyt);
+            nyt = sana;
+          }
+          if (nyt) ulos.push(nyt);
+          return ulos.length ? ulos : [nimi];
+        };
+        /*
+         * HIUSVIIVA ON OMA RIVINSÄ (kohta 3 omistajan tarkistuksessa).
+         * Malli (js/pallolauta/kaupunkiliuska.js) merkitsee sen yhä
+         * ensimmäisen kategoriarivin lipuksi — ladonta on se kerros,
+         * joka tietää rivivälin, joten viiva saa oman asemansa vasta
+         * tässä. Listan RIVIT ovat siis piirrettäviä rivejä: yksi
+         * mallirivi voi olla useampi niistä (rivitys), ja osumatesti
+         * lukee `r`:n, joten kumpikin puolisko avaa saman asian.
+         */
+        const HIUSVIIVA = {
+          laji: 'hiusviiva', nimi: '', avain: 'hiusviiva', sisennys: 0,
+        };
+        const levita = (lista) => {
+          const ulos = [];
+          for (const r2 of lista) {
+            if (r2.hiusviiva) ulos.push({ r: HIUSVIIVA, teksti: '', osa: 0 });
+            rivinTekstit(r2.nimi, r2.sisennys)
+              .forEach((teksti, i) => ulos.push({ r: r2, teksti, osa: i }));
+          }
+          return ulos;
+        };
         const laske = (lista) => {
-          const leveydet = lista.map((r2) => viuhkanNimioLeveys(
-            r2.nimi ? nostosymNimioMitta(r2.nimi, null, Infinity).leveys : 0, mittaNyt,
-          ) + r2.sisennys * LIUSKAN_SISENNYS_PX);
+          const leveydet = lista.map((k) => (k.r.laji === 'hiusviiva' ? 0
+            : rivinLeveys(k.teksti) + k.r.sisennys * LIUSKAN_SISENNYS_PX * liuskaMitta));
           return viuhkanAsemat({
             p: rivi.p,
             ruutu: ruutuNyt,
@@ -2467,6 +2677,9 @@ export function luoNostot({
             esteet: listanEsteet,
             kasvu: 'keskitetty',
             vaakaEhdokkaat,
+            valiPx,
+            tiheinPx,
+            riviPx,
             /*
              * `kovaEnsin` EI OLE PÄÄLLÄ — mitattu 18.9.2026. Kokeilin
              * ratkaista puolen pelkällä kovalla sakolla, jotta runsas
@@ -2479,19 +2692,26 @@ export function luoNostot({
              */
           });
         };
-        const mahtuu = keskitettyMahtuvatRivit({ p: rivi.p, ruutu: ruutuNyt });
-        let rivit = kaikkiRivit;
+        const mahtuu = keskitettyMahtuvatRivit({
+          p: rivi.p, ruutu: ruutuNyt, tihein: tiheinPx, riviPx,
+        });
+        let rivit = levita(kaikkiRivit);
         let asemointi = laske(rivit);
         // Kelaus vasta kun vapaata asentoa EI löytynyt (kovaSakko > 0):
         // väljällä ruudulla lista on kokonaisena, kuten ennenkin.
-        if (asemointi.kovaSakko > 0 && kaikkiRivit.length > mahtuu) {
+        if (asemointi.kovaSakko > 0 && rivit.length > mahtuu) {
+          // Ikkuna on MALLIRIVEJÄ, mutta ruutuun mahtuu piirrettäviä
+          // rivejä: rivityksen ja hiusviivan lisärivit vähennetään
+          // ikkunasta, jottei kelattu liuska silti ylitä ruutua.
+          const lisaa = rivit.length - kaikkiRivit.length;
+          const ikkuna = Math.max(1, mahtuu - lisaa);
           const kelattu = kelattuLiuska(kaikkiRivit, {
-            enintaan: mahtuu, kelaus: liuska.kelaus ?? 0,
+            enintaan: ikkuna, kelaus: liuska.kelaus ?? 0,
           });
           liuska.kelaus = kelattu.kelaus;
-          liuska.kelausIkkuna = mahtuu;
+          liuska.kelausIkkuna = ikkuna;
           liuska.kelausRiveja = kaikkiRivit.length;
-          rivit = kelattu.rivit;
+          rivit = levita(kelattu.rivit);
           asemointi = laske(rivit);
         } else {
           liuska.kelaus = 0;
@@ -2501,21 +2721,31 @@ export function luoNostot({
         const {
           puoli, asemat, leveys: listaLeveys, pohja,
         } = asemointi;
-        liuskanKohdat = rivit.map((r2, i) => ({
-          r: r2, rivi, asema: asemat[i], leveys: listaLeveys, puoli,
+        liuskanKohdat = rivit.map((k, i) => ({
+          r: k.r,
+          teksti: k.teksti,
+          osa: k.osa,
+          rivi,
+          asema: asemat[i],
+          leveys: listaLeveys,
+          puoli,
+          riviPx,
         }));
         const datum = datumit[naytetaan.indexOf(rivi)];
         if (datum) {
           const suunta = puoli === 'vasen' ? -1 : 1;
-          datum.viuhka = rivit.map((r2, i) => ({
-            id: r2.avain,
-            nimi: r2.nimi,
+          datum.viuhka = rivit.map((k, i) => ({
+            id: `${k.r.avain}#${k.osa}`,
+            nimi: k.teksti,
             dx: asemat[i].dx,
             dy: asemat[i].dy,
             puoli,
             leveys: listaLeveys,
-            mitta: mittaNyt,
-            piirra: (g2, kylki) => piirraLiuskanRivi(g2, r2, kylki, suunta),
+            mitta: liuskaMitta,
+            piirra: (g2, kylki) => piirraLiuskanRivi(
+              g2, k.r, kylki, suunta, k.teksti,
+              { leveysYksikkoina: listaLeveys / liuskaMitta, jatko: k.osa > 0 },
+            ),
           }));
           datum.viuhkaPohja = pohja;
         }
@@ -2626,6 +2856,24 @@ export function luoNostot({
         lappuja.push({ r, datum: datumit[i], laatikko: lapunLaatikko(r, datumit[i]) });
       }
     });
+    /*
+     * EDELLINEN SOVITTELU KANNETAAN ETEENPÄIN (ks. NIMIÖN KYLKI
+     * LUKITAAN, KUN ANKKURI VALITAAN `sovittele`n yllä). Datumit
+     * rakennetaan joka ladonnassa datasta, joten ilman tätä nimiön
+     * kylki putoaisi takaisin merkin omaan kylkeen joka ladonnalla ja
+     * sovittelun olisi pakko ratkaista se uudestaan — juuri se, minkä
+     * kohta 13 c kieltää. Asento luetaan lukosta jo TÄSSÄ, jotta myös
+     * nimiladonnan varaukset ja osumapinnat kuvaavat sitä, mikä
+     * ruudulla on.
+     */
+    for (const d of datumit) {
+      const a = sovitellutAsennot.get(d.avain);
+      if (!a) continue;
+      d.puoli = a.kylki;
+      d.dx = a.dx;
+      d.dy = a.dy;
+      if (d.nimi) d.nimioNakyy = d.nimioNakyy && a.nimio;
+    }
     const ikonilaatikko = ({ r, datum }) => (r.perhe === 'aihemerkki'
       ? aihemerkinLaatikko(r.p, datum, { dx: datum.dx, dy: datum.dy, nimio: false })
       : nostonLaatikko(r.p, r, {
@@ -2694,10 +2942,61 @@ export function luoNostot({
    * ladoLevossa, Raamattu KARTTAUUDISTUKSEN PAATOKSET 31 TARKENNUS 2
    * kohta 6). Se on eri lista kuin `nimet` vain kutsujan selkeyden
    * vuoksi — sovittelulle kaikki esteet ovat samaa laatikkojoukkoa.
+   *
+   * ══════════════════════════════════════════════════════════════════
+   * NIMIÖN KYLKI LUKITAAN, KUN ANKKURI VALITAAN (omistaja 18.9.2026 klo
+   * 06.58 Suomen aikaa, Raamattu KARTTAUUDISTUKSEN PAATOKSET 34 kohta
+   * 13 c: *"Samoin kaikki nostot pitaisi pysya paikallaan."*)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * JUURISYY: SOVITTELU AJETTIIN JOKA LADONNASSA. `ladoLevossa`
+   * (js/pallolauta/lauta.js) kutsuu tätä jokaisella ladonnalla — myös
+   * niillä viidellä sekunnissa, jotka ajetaan kesken vedon (LADONTA
+   * KULKEE MUKANA) — ja `sovitteleLaput` ratkaisee kyljen ja siirron
+   * uudestaan sitä vasten, mitä juuri sillä hetkellä on ruudulla
+   * tiellä. Kaupungin nimi, pelinappula ja naapurilaput liikkuvat
+   * ruudulla vedossa ja kasvavat zoomissa, joten sama nimiö vaihtoi
+   * kylkeä kesken vedon — sama ilmiö kuin kaupunkien nimillä ennen
+   * niiden lukkoa (js/pallolauta/nimet.js NIMIKYLTTI ON KIINNI
+   * KAUPUNGISSA), vain toisessa kerroksessa.
+   *
+   * LÄÄKE ON SAMA KUIN NIMILLÄ: ratkaise kerran, kanna eteenpäin.
+   * Sovittelu ajetaan vain, kun SE, MITÄ SOVITELLAAN, muuttuu — eli
+   * kun lappujoukko (nostot ja niiden nimiöiden näkyvyys) tai ruudun
+   * koko vaihtuu. Veto ja zoomi eivät kumpaakaan muuta, joten nimiön
+   * kylki ja siirto pysyvät ja koko ruutuvektori merkistä nimiöön on
+   * sama pikselilleen (zoomissa kerrottuna merkin mitalla).
+   *
+   * MIKSI RUUDUN KOKO ON MUKANA AVAIMESSA: kääntö tai ikkunan koon
+   * muutos vaihtaa sen, mitä laidalle mahtuu, ja silloin ladonta ON
+   * uusi — sama raja kuin ankkurivaraston tunnuksella
+   * (js/pallolauta/nostoankkurit.js `tunnus`).
    */
   const sovittele = ({ nimet = [], kiinteat = [] } = {}) => {
     viimeisimmatNimet = nimet ?? [];
-    if (!lappuja.length) return sovittelu;
+    if (!lappuja.length) {
+      sovittelunAvain = '';
+      sovitellutAsennot = new Map();
+      return sovittelu;
+    }
+    const ruutuNyt = ruutu?.() ?? { leveys: 0, korkeus: 0 };
+    /*
+     * AVAIN LUETAAN RIVILTÄ, EI DATUMISTA. Sovittelu kirjoittaa
+     * tuloksensa datumiin (`nimioNakyy` piilotuksessa), ja jos avain
+     * lukisi sen, jokainen piilotus muuttaisi avainta ja pakottaisi
+     * uuden sovittelun — sama ansa kuin `omatLaatikot`issa (ks. ASENTO
+     * LUETAAN RIVILTÄ, EI DATUMILTA). Rivi rakennetaan datasta.
+     */
+    const avain = `${Math.round(ruutuNyt.leveys)}x${Math.round(ruutuNyt.korkeus)}#`
+      + lappuja.map(({ r, datum }) => `${datum.avain}:${r.nimioNakyy && r.nimi ? 1 : 0}`
+        + `:${r.perhe === 'aihemerkki' ? 'a' : 'n'}`).join(';');
+    // Sama lappujoukko samalla ruudulla: kylki on jo ratkaistu (ks.
+    // NIMIÖN KYLKI LUKITAAN). Veto ja zoomi eivät koeta sitä uudestaan.
+    if (avain === sovittelunAvain) {
+      sovittelu = { ...viimeisinSovittelu, lappuja: lappuja.length };
+      return sovittelu;
+    }
+    sovittelunAvain = avain;
     const tulos = sovitteleLaput({
       laput: lappuja.map(({ r, datum, laatikko }) => ({
         avain: datum.avain,
@@ -2730,13 +3029,16 @@ export function luoNostot({
     // Siirtynyt ikoni on myös siirtynyt varaus (js/pallolauta/lauta.js
     // lukee laatikot myös sovittelun jälkeen).
     if (muuttui) { laskeLaatikot(); merkit.aseta('nostot', datumit); }
-    sovittelu = {
+    // Lukko talteen: seuraavat ladonnat kantavat tämän eteenpäin
+    // (ks. EDELLINEN SOVITTELU KANNETAAN ETEENPÄIN).
+    sovitellutAsennot = new Map(tulos.asennot);
+    viimeisinSovittelu = {
       siirretty: tulos.siirretty,
       kylkiVaihtui: tulos.kylkiVaihtui,
       piilotettu: tulos.piilotettu,
       jaljella: tulos.jaljella,
-      lappuja: lappuja.length,
     };
+    sovittelu = { ...viimeisinSovittelu, lappuja: lappuja.length };
     return sovittelu;
   };
 
@@ -2824,16 +3126,23 @@ export function luoNostot({
         const rivi = kaupunkirivitNyt.find((o) => o.nimi === valinnat.nimi);
         omat = rivi ? (sisaisetKaupungeittain.get(rivi.avain) ?? []) : [];
       }
-      const n = liuskanSuurinRivimaara({ nostot: omat ?? [], liiku: Boolean(valinnat.liiku) });
+      const n = liuskanSuurinRivimaara({ nostot: omat ?? [], liiku: Boolean(valinnat.liiku) })
+        // Hiusviiva on oma rivinsä (ks. HIUSVIIVA ON OMA RIVINSÄ),
+        // joten kamera-ajon on varattava sille tilaa sekin.
+        + 1;
+      // Riviväli ja rivin puolikorkeus ovat liuskan omat, eivät viuhkan
+      // vakiot: ne seuraavat kirjasinta (ks. LIUSKAN TEKSTIKOKO…).
+      const vali = LIUSKAN_RIVIVALI_KERROIN * liuskanKirjasinPx();
+      const puolikas = (LIUSKAN_TIHEIN_KERROIN * liuskanKirjasinPx()) / 2;
       return {
         rivit: n,
         // Alaspäin kasvavan listan tarve (jää mittariksi).
-        px: VIUHKAN_ALAS_ALKU_PX + Math.max(0, n - 1) * VIUHKAN_VALI_PX
-          + VIUHKAN_RIVI_PX + VIUHKAN_REUNAVARA_PX,
+        px: VIUHKAN_ALAS_ALKU_PX + Math.max(0, n - 1) * vali
+          + puolikas + VIUHKAN_REUNAVARA_PX,
         // KESKITETYN listan koko korkeus (PAATOKSET 34 kohta 12):
         // rivivälit + ylimmän ja alimman rivin puolikkaat + reunavara.
-        korkeus: Math.max(0, n - 1) * VIUHKAN_VALI_PX
-          + 2 * (VIUHKAN_RIVI_PX + VIUHKAN_REUNAVARA_PX),
+        korkeus: Math.max(0, n - 1) * vali
+          + 2 * (puolikas + VIUHKAN_REUNAVARA_PX),
       };
     },
     /**
@@ -2881,9 +3190,11 @@ export function luoNostot({
     napautaLiuskasta: (kohta) => {
       if (!kohta || !liuskanKohdat.length) return null;
       for (const k of liuskanKohdat) {
+        // Hiusviiva on oma rivinsä muttei tekonsa: sormi menee sen läpi.
+        if (k.r.laji === 'hiusviiva') continue;
         const p = ruudulla(k.rivi.lat, k.rivi.lng);
         if (!p) continue;
-        const l = kohdanLaatikko(p.x + k.asema.dx, p.y + k.asema.dy, k.leveys, k.puoli);
+        const l = kohdanLaatikko(p.x + k.asema.dx, p.y + k.asema.dy, k.leveys, k.puoli, k.riviPx);
         if (kohta.x < l.x0 || kohta.x > l.x1 || kohta.y < l.y0 || kohta.y > l.y1) continue;
         if (k.r.laji === 'kategoria') {
           liuska.avattuKategoria = liuska.avattuKategoria === k.r.aihe ? null : k.r.aihe;
@@ -2922,24 +3233,54 @@ export function luoNostot({
       }
       return null;
     },
-    /** Liuskan rivit juuri nyt (savukkeet ja vartijat). */
-    liuskanRivit: () => liuskanKohdat.map((k) => {
-      const p = ruudulla(k.rivi.lat, k.rivi.lng);
-      const l = p ? kohdanLaatikko(p.x + k.asema.dx, p.y + k.asema.dy, k.leveys, k.puoli) : null;
-      return {
-        laji: k.r.laji,
-        avain: k.r.avain ?? null,
-        nimi: k.r.nimi,
-        aihe: k.r.aihe ?? null,
-        maara: k.r.maara ?? null,
-        sisennys: k.r.sisennys,
-        auki: Boolean(k.r.auki),
-        // Onko rivillä avaaja (savukkeiden 8h: erottaa "napautus ei
-        // mennyt läpi" ja "nostolla ei ole korttia" toisistaan).
-        avattava: typeof k.r.nosto?.avaa === 'function',
-        ...(l ?? {}),
-      };
-    }),
+    /**
+     * LIUSKAN RIVIT JUURI NYT (savukkeet ja vartijat).
+     *
+     * YKSI MALLIRIVI ON YKSI RIVI, vaikka se piirtyisi kahdelle
+     * riville: rivitys on ladonnan keino eikä listan sisältöä, ja
+     * vartiot laskevat rivejä (*"kategorioita ≥ 2"*, *"kohteita =
+     * otsikon luku"*). Rivitetyn rivin laatikko on sen osien YHTEINEN
+     * laatikko, jotta *"ei toisen päällä"* mittaa koko rivin, ja
+     * teksti on osat yhteen liitettynä — silloin vartio näkee saman
+     * nimen kuin silmä (ja katkaisumerkin, jos sellainen syntyisi).
+     */
+    liuskanRivit: () => {
+      const ulos = [];
+      const paikat = new Map();
+      for (const k of liuskanKohdat) {
+        const p = ruudulla(k.rivi.lat, k.rivi.lng);
+        const l = p
+          ? kohdanLaatikko(p.x + k.asema.dx, p.y + k.asema.dy, k.leveys, k.puoli, k.riviPx)
+          : null;
+        const oli = paikat.get(k.r);
+        if (oli) {
+          if (k.teksti) oli.nimi = `${oli.nimi} ${k.teksti}`.trim();
+          if (l) {
+            oli.x0 = Math.min(oli.x0 ?? l.x0, l.x0);
+            oli.y0 = Math.min(oli.y0 ?? l.y0, l.y0);
+            oli.x1 = Math.max(oli.x1 ?? l.x1, l.x1);
+            oli.y1 = Math.max(oli.y1 ?? l.y1, l.y1);
+          }
+          continue;
+        }
+        const uusi = {
+          laji: k.r.laji,
+          avain: k.r.avain ?? null,
+          nimi: k.r.laji === 'hiusviiva' ? '' : (k.teksti ?? k.r.nimi),
+          aihe: k.r.aihe ?? null,
+          maara: k.r.maara ?? null,
+          sisennys: k.r.sisennys,
+          auki: Boolean(k.r.auki),
+          // Onko rivillä avaaja (savukkeiden 8h: erottaa "napautus ei
+          // mennyt läpi" ja "nostolla ei ole korttia" toisistaan).
+          avattava: typeof k.r.nosto?.avaa === 'function',
+          ...(l ?? {}),
+        };
+        paikat.set(k.r, uusi);
+        ulos.push(uusi);
+      }
+      return ulos;
+    },
     /**
      * OSUIKO NAPAUTUS VIUHKAN KOHTAAN (js/pallolauta/lauta.js
      * napautaPintaan). `kohta` on napautuksen ruutupiste kotelon

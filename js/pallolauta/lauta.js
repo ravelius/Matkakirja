@@ -626,11 +626,17 @@ const YLAKALUSTEEN_RAJA = 1 / 3;
 /*
  * MISSÄ KAUPUNKIMERKKI ON RUUDULLA, KUN LIUSKA AUKEAA (PAATOKSET 34
  * kohta 12: *"kartta voisi liikkua automaattisesti niin että oikealle
- * puolelle tulis lisää tilaa"*). Osuus ruudun leveydestä: kolmannes
- * jättää liuskalle kaksi kolmannesta oikealle ja pitää merkin silti
- * selvästi kuvassa.
+ * puolelle tulis lisää tilaa"*). Osuus ruudun leveydestä.
+ *
+ * NELJÄNNES, EI KOLMANNES (omistajan tarkistus 18.9.2026). Liuskan
+ * rivit ovat nyt poltetun musteen kokoisia ja niiden leveyden katto on
+ * 78 % ruudusta (js/pallolauta/nostot.js LIUSKAN_LEVEYDEN_OSUUS);
+ * kolmannekselle ajettu merkki jätti oikealle vain kaksi kolmannesta,
+ * jolloin levein rivi olisi joko rivittynyt turhaan tai työntänyt
+ * listan merkin vasemmalle puolelle. Omistajan ohje sallii kameran
+ * siirtyä enemmän, jos leveämpi lista ei muuten mahdu oikealle.
  */
-const LIUSKAN_MERKIN_OSUUS_X = 1 / 3;
+const LIUSKAN_MERKIN_OSUUS_X = 1 / 4;
 /** Napautuksen osuma ruudulla: lähin kaupunki tai kohde tämän säteen sisällä (px). */
 export const NAPAUTUKSEN_SADE_PX = 44;
 
@@ -3761,15 +3767,6 @@ export async function avaaPallolauta(ui) {
    * Lopuksi pisteet nimettyjen mukaan ja auki oleva kortti ankkurinsa
    * perään.
    */
-  /*
-   * ONKO TÄMÄ LADONTA LEVON LADONTA? Ladonta ajetaan myös liikkeen
-   * aikana (ks. LADONTA KULKEE MUKANA), ja nimien lukko saa purkautua
-   * pelimerkin takia vain levossa (js/pallolauta/nimet.js NAPPULA
-   * RATKAISTAAN LEVOSSA, EI KESKEN VEDON). Lippu on tosi kaikkialla
-   * muualla — lepoajastin, ladoHeti, fokuspiste — ja epätosi vain
-   * siinä yhdessä kutsussa, jonka `pyydaLadonta` tekee kesken liikkeen.
-   */
-  let liikkeenLadonta = false;
   const ladoLevossa = () => {
     lepoAjastin = 0;
     // Kurituksen kello käy myös ohitetuista ajoista: piilossa oleva
@@ -3842,10 +3839,6 @@ export async function avaaPallolauta(ui) {
       // Ladonta varaa pelaajan pisteelle sen tilan, joka sillä ruudulla
       // OIKEASTI on — sama yksi sääntö kuin piirrolla.
       pisteSade: piirrettyHalkaisijaPx(pelaajanKaupunki() ? { id: pelaajanKaupunki() } : null) / 2,
-      // Pelimerkin väistö ratkaistaan vain levossa (ks. liikkeenLadonta)
-      // ja kerran kutakin merkkien kokoonpanoa kohden (merkit.avain).
-      levossa: !liikkeenLadonta,
-      pinojenAvain: merkit.avain('peli'),
     });
     /*
      * KYLTTI ON SOVITTELUSSA KIINTEÄ ESTE, KUTEN KAUPUNGIN NIMI
@@ -3896,11 +3889,7 @@ export async function avaaPallolauta(ui) {
     clearTimeout(lepoAjastin);
     const nyt = globalThis.performance?.now?.() ?? Date.now();
     const { heti, viiveMs } = ladonnanAjoitus(nyt - ladottuHetki);
-    if (heti) {
-      // Tämä yksi ajo on kesken liikettä (ks. liikkeenLadonta).
-      liikkeenLadonta = true;
-      try { ladoLevossa(); } finally { liikkeenLadonta = false; }
-    }
+    if (heti) ladoLevossa();
     // Perälauta: liikkeen VIIMEINEN muutos saa vielä oman ajonsa, jottei
     // se jää kuritusikkunan sisään.
     lepoAjastin = setTimeout(ladoLevossa, viiveMs);
