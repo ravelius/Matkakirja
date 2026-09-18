@@ -40,6 +40,14 @@
  *      ylareunan +-8 px, loppukoko <= pikkukuvan koko (3,1 rem).
  *  11.  LAPPU EI LIIKAHDA EIKA VAIHDA LUOKKAA lennon aikana.
  *  12.  OHITA LAUKAISEE SAMAN LENNON.
+ *  13.  OHITA ON KELLUVA SOLMU, EI PAALLYKSEN LAPSI (PAATOKSET 43
+ *      kohta 10) — ja nakyy luennan aikana.
+ *  14.  KARTAN OIKEA NAPAUTUS EI VIE OHITAA: kuvat lentavat lappuun,
+ *      paallys purkautuu, mutta Ohita on yha DOMissa, nakyvissa
+ *      (opacity > 0, koko > 0) ja tasan samassa kohdassa ruutua.
+ *  15.  MOLEMPIEN LUENTOJEN LOPPU VIE OHITAN (vahdin oma odotus).
+ *  16.  KELLUVA OHITA PYSAYTTAA YHA KAIKEN: luenta pysahtyy, yksikaan
+ *      <audio> ei soi ja nappi poistuu itse painalluksesta.
  *
  * Aja:
  *   PLAYWRIGHT_JS=... CHROMIUM="..." PORTTI=8911 \
@@ -942,6 +950,186 @@ async function mittaaPaatokset38(ruutu, lappuNimi, kuvia = false) {
   tieto(`${lappuNimi} Ohita → lento`, `${JSON.stringify(ohitanLento)} (viritys ${ohitus})`);
   vaadi(`${lappuNimi}: Ohita laukaisee saman lennon`, ohitanLento.lentoja > 0,
     JSON.stringify(ohitanLento));
+
+  /* ==================================================================
+   * 13–16: OHITA PYSYY KUNNES KUMPIKIN LUENTA ON LOPPU
+   * (PAATOKSET 43 kohta 10, omistaja 18.9.2026 klo 22.50:
+   * *"Ohita nappi ei saisi havita vaikka pelaaja painaa jostain
+   * muualta ennen kuin kumpikin luenta on loppu."*)
+   *
+   * Napautus on OIKEA hiiren napautus kartalle (s.mouse.click), ei
+   * tapahtuman lähetys: juuri se polku (document pointerdown →
+   * onkoKartanLiike → paataLuentakuvasarja) vei ennen Ohitan mukanaan.
+   * Mittapiste haetaan elementFromPointilla, jotta napautus ei osu
+   * kaupunkimerkkiin eikä kelluvaan nappiin.
+   * ================================================================== */
+  const ohitanTila = () => s.evaluate(() => {
+    const el = document.querySelector('.fokusvirta-isokuva-ohita');
+    if (!el?.isConnected) return { domissa: false };
+    const r = el.getBoundingClientRect();
+    let opacity = 1;
+    let piilossa = false;
+    let n = el;
+    while (n && n !== document.body) {
+      const t = getComputedStyle(n);
+      opacity *= Number(t.opacity);
+      if (t.visibility === 'hidden' || t.display === 'none') piilossa = true;
+      n = n.parentElement;
+    }
+    return {
+      domissa: true,
+      opacity: Math.round(opacity * 1000) / 1000,
+      w: Math.round(r.width),
+      h: Math.round(r.height),
+      y: Math.round(r.y),
+      piilossa,
+      kelluva: el.classList.contains('fokusvirta-ohitanappi'),
+      paallyksessa: Boolean(el.closest('.fokusvirta-isokuva')),
+    };
+  });
+  const viritaLuenta = () => s.evaluate(async () => {
+    const { ui, game } = window.matkakirja;
+    const m = await import('/js/fokusvirta.js');
+    const l = await import('/js/luenta.js');
+    // Edellinen vaihe painoi Ohitaa: lippu alas, tai päällys ei nouse.
+    ui.luennanOhitus = null;
+    const aani = {
+      paused: false, ended: false, error: null, currentTime: 1, duration: 30,
+      addEventListener() {}, removeEventListener() {}, removeAttribute() {},
+      pause() { this.paused = true; },
+    };
+    window.__ohitaAani = aani;
+    ui.luennat ??= new Set();
+    ui.luennat.add(aani);
+    ui.diaryVoice = aani;
+    l.merkitsePuhuja(ui, aani, l.PUHUJA_KERTOJA);
+    m.naytaLuentakuvasarja(ui, game.cityOf());
+  });
+
+  await viritaLuenta();
+  await s.waitForSelector('.fokusvirta-isokuva-ruutu', { timeout: 30000 });
+  await s.waitForTimeout(900);
+  const ennenNapautusta = await ohitanTila();
+  tieto(`${lappuNimi} Ohita ennen napautusta`, JSON.stringify(ennenNapautusta));
+  vaadi(`${lappuNimi}: Ohita on kelluva solmu, ei päällyksen lapsi`,
+    ennenNapautusta.kelluva === true && ennenNapautusta.paallyksessa === false,
+    JSON.stringify(ennenNapautusta));
+  vaadi(`${lappuNimi}: Ohita näkyy luennan aikana`,
+    ennenNapautusta.domissa && ennenNapautusta.opacity > 0
+      && ennenNapautusta.w > 0 && ennenNapautusta.h > 0 && !ennenNapautusta.piilossa,
+    JSON.stringify(ennenNapautusta));
+
+  const piste = await s.evaluate(() => {
+    const kartta = document.querySelector('.map-pane');
+    const r = kartta?.getBoundingClientRect();
+    if (!r) return null;
+    for (const osuus of [0.22, 0.3, 0.38, 0.46, 0.14]) {
+      for (const dx of [24, 40, 60]) {
+        const x = Math.round(r.x + dx);
+        const y = Math.round(r.y + r.height * osuus);
+        const el = document.elementFromPoint(x, y);
+        if (!el?.closest('.map-pane')) continue;
+        if (el.closest('button, a, [role="button"], .fact-card')) continue;
+        return { x, y, tagi: el.tagName, luokat: el.className?.baseVal ?? el.className };
+      }
+    }
+    return null;
+  });
+  tieto(`${lappuNimi} napautuspiste kartalla`, JSON.stringify(piste));
+  vaadi(`${lappuNimi}: kartalta löytyi napautuspiste (mittari ei mittaa tyhjää)`,
+    piste !== null, 'ei pistettä');
+  if (piste) await s.mouse.click(piste.x, piste.y);
+  await s.waitForTimeout(160);
+  const heti = await ohitanTila();
+  const lentoja = await s.evaluate(
+    () => document.querySelectorAll('.fokusvirta-lento').length,
+  );
+  tieto(`${lappuNimi} napautuksen jälkeen heti`, `${JSON.stringify(heti)} lentoja ${lentoja}`);
+  vaadi(`${lappuNimi}: kartan napautus laukaisee kuvien lennon lappuun`,
+    lentoja > 0, `lentoja ${lentoja}`);
+  vaadi(`${lappuNimi}: Ohita on yhä DOMissa heti kartan napautuksen jälkeen`,
+    heti.domissa === true, JSON.stringify(heti));
+
+  await s.waitForTimeout(1400);
+  const lennonJalkeen = await ohitanTila();
+  const isojaJaljella = await s.evaluate(() => ({
+    ruutuja: document.querySelectorAll('.fokusvirta-isokuva-ruutu').length,
+    paallyksia: document.querySelectorAll('.fokusvirta-isokuva').length,
+    lentoja: document.querySelectorAll('.fokusvirta-lento').length,
+  }));
+  tieto(`${lappuNimi} lennon jälkeen`,
+    `${JSON.stringify(lennonJalkeen)} ${JSON.stringify(isojaJaljella)}`);
+  vaadi(`${lappuNimi}: kuvat todella lensivät pois (päällys purettu)`,
+    isojaJaljella.ruutuja === 0 && isojaJaljella.paallyksia === 0,
+    JSON.stringify(isojaJaljella));
+  vaadi(`${lappuNimi}: Ohita näkyy yhä, kun kuva on lentänyt lappuun`,
+    lennonJalkeen.domissa && lennonJalkeen.opacity > 0
+      && lennonJalkeen.w > 0 && lennonJalkeen.h > 0 && !lennonJalkeen.piilossa,
+    JSON.stringify(lennonJalkeen));
+  vaadi(`${lappuNimi}: Ohita ei liikahtanut lennon aikana`,
+    lennonJalkeen.y === ennenNapautusta.y,
+    `${ennenNapautusta.y} → ${lennonJalkeen.y}`);
+  if (kuvia && KUVAKANSIO) {
+    await s.screenshot({ path: join(KUVAKANSIO, 'ohita-pysyy-kartan-napautuksen-jalkeen.png') });
+  }
+
+  /*
+   * 15: MOLEMPIEN LUENTOJEN LOPPU VIE OHITAN. Isoisän luenta päättyy
+   * (vapautaPuhuja + diaryVoice null) eikä pulun repliikki ala:
+   * vahdin oma odotus (OHITAN_PULUN_ODOTUS_MS = 6 s) kuluu loppuun.
+   */
+  await s.evaluate(async () => {
+    const { ui } = window.matkakirja;
+    const l = await import('/js/luenta.js');
+    const aani = window.__ohitaAani;
+    aani.paused = true;
+    aani.ended = true;
+    l.vapautaPuhuja(ui, aani);
+    ui.diaryVoice = null;
+    ui.liviaAani = null;
+  });
+  let loppui = null;
+  for (let i = 0; i < 40; i += 1) {
+    // eslint-disable-next-line no-await-in-loop
+    loppui = await ohitanTila();
+    if (!loppui.domissa) break;
+    // eslint-disable-next-line no-await-in-loop
+    await s.waitForTimeout(250);
+  }
+  tieto(`${lappuNimi} Ohita luentojen jälkeen`, JSON.stringify(loppui));
+  vaadi(`${lappuNimi}: Ohita poistuu, kun kumpikin luenta on loppu`,
+    loppui.domissa === false, JSON.stringify(loppui));
+
+  /*
+   * 16: KELLUVA OHITA PYSÄYTTÄÄ YHÄ KAIKEN (PAATOKSET 35 kohta 6:
+   * yksi pysäytys kattaa kaikki saapumisen äänet ja kuvat). Nappi ei
+   * ole enää päällyksen lapsi, joten pysäytysketju mitataan uudelleen.
+   */
+  await viritaLuenta();
+  await s.waitForSelector('.fokusvirta-isokuva-ruutu', { timeout: 30000 });
+  await s.waitForTimeout(700);
+  await s.evaluate(() => document.querySelector('.fokusvirta-isokuva-ohita')?.click());
+  await s.waitForTimeout(1000);
+  const pysaytys = await s.evaluate(() => {
+    const { ui } = window.matkakirja;
+    const aani = window.__ohitaAani;
+    const kaikki = [...document.querySelectorAll('audio')];
+    return {
+      luentaPysahtyi: aani.paused === true || aani.ended === true || ui.diaryVoice === null,
+      audioita: kaikki.length,
+      soi: kaikki.filter((a) => !a.paused && !a.ended).length,
+      ohitaDomissa: Boolean(document.querySelector('.fokusvirta-isokuva-ohita')),
+      isoja: document.querySelectorAll('.fokusvirta-isokuva-ruutu').length,
+    };
+  });
+  tieto(`${lappuNimi} kelluva Ohita → pysäytys`, JSON.stringify(pysaytys));
+  vaadi(`${lappuNimi}: kelluva Ohita pysäyttää luennan sekunnissa`,
+    pysaytys.luentaPysahtyi === true, JSON.stringify(pysaytys));
+  vaadi(`${lappuNimi}: kelluvan Ohitan jälkeen yksikään <audio> ei soi`,
+    pysaytys.soi === 0, JSON.stringify(pysaytys));
+  vaadi(`${lappuNimi}: kelluva Ohita poistuu itse painalluksesta`,
+    pysaytys.ohitaDomissa === false && pysaytys.isoja === 0, JSON.stringify(pysaytys));
+
   await konteksti.close();
 }
 

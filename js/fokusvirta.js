@@ -945,6 +945,14 @@ export function vaiennaLivianKaupunkipuhe(ui) {
    * lähdettäessä. Kuva häipyy pehmeästi kuten kuplatkin.
    */
   piilotaLuentakuva(ui);
+  /*
+   * OHITA LÄHTEE KAUPUNGIN MUKANA (PAATOKSET 43 kohta 10). Nappi ei
+   * ole päällyksen lapsi eikä siis lähde piilotaLuentakuvan mukana —
+   * ja juuri se on koko korjauksen idea. Kaupungista lähtö on silti
+   * sen puheenvuoron loppu, jonka ajaksi nappi nousi, joten tämä yksi
+   * kohta vie sen. Kartan liike ja lapun napautus EIVÄT kulje täältä.
+   */
+  piilotaOhitaNappi(ui, { heti: true });
   // Kesken jäänyt minitraileri ei saa jäädä uuden kaupungin päälle.
   piilotaSaapumistraileri(ui, { peru: true });
 }
@@ -3610,23 +3618,18 @@ function avaaIsokuvaPaallys(ui, city, pohjakuva) {
   const kehys = html('div', 'fokusvirta-isokuva');
   kehys.setAttribute('role', 'group');
   kehys.setAttribute('aria-label', `${city.name}: matkakirjan kuva`);
-  /*
-   * OHITA-TEKSTI KUVAN JA KUVATEKSTIN ALLA (PAATOKSET 35 kohta 3).
-   * Se asuu PAALLYKSESSA eikä yksittäisessä ruudussa: ruudut
-   * kasaantuvat pakaksi, ja jokaisella kortilla oma Ohita olisi
-   * seitsemän päällekkäistä sanaa.
-   */
-  const ohita = html('button', 'fokusvirta-isokuva-ohita', 'Ohita');
-  ohita.type = 'button';
-  ohita.title = 'Ohita luenta ja palaa kartalle';
-  ohita.addEventListener('click', (tapahtuma) => {
-    // Napautus ei saa kuplia kartalle: kartan liike päättäisi sarjan
-    // omaa polkuaan (kytkeSarjanKartanLiike) ja jättäisi äänen soimaan.
-    tapahtuma?.stopPropagation?.();
-    ohitaSaapumisluenta(ui, city);
-  });
-  kehys.appendChild(ohita);
   isokuvanKoti().appendChild(kehys);
+  /*
+   * OHITA-TEKSTI KUVAN JA KUVATEKSTIN ALLA (PAATOKSET 35 kohta 3) —
+   * MUTTA EI PÄÄLLYKSEN LAPSENA (PAATOKSET 43 kohta 10, omistaja
+   * 18.9.2026). Nappi oli ennen tässä kehyksessä, ja päällyksen purku
+   * (kartan liike, kuvien lento lappuun) vei sen mukanaan kesken
+   * luennan. Nyt se on oma kelluva solmunsa samassa kodissa ja
+   * samassa kohdassa ruutua — ks. naytaOhitaNappi. Päällyksen JÄLKEEN
+   * ladottuna se jää kuvien päälle, vaikka nappi eläisi useamman
+   * päällyksen yli (isoisä, pulun oma sarja).
+   */
+  naytaOhitaNappi(ui, city);
 
   const ajastimet = [];
   const tila = {
@@ -4066,7 +4069,11 @@ function aloitaMyohastynytPuluSarja(ui, city) {
 function kytkeSarjanKartanLiike(ui, tila) {
   if (typeof document?.addEventListener !== 'function') return;
   const kasittele = (tapahtuma) => {
-    if (tapahtuma.target?.closest?.('.fokusvirta-isokuva, .fokuszoom')) return;
+    // Ohita on oma kelluva solmunsa (PAATOKSET 43 kohta 10), ei enää
+    // päällyksen lapsi: sen oma napautus ei ole kartan liike.
+    if (tapahtuma.target?.closest?.(
+      '.fokusvirta-isokuva, .fokusvirta-ohitanappi, .fokuszoom',
+    )) return;
     if (!onkoKartanLiike(tapahtuma)) return;
     if (ui.luentakuvasarja === tila) paataLuentakuvasarja(ui, { heti: true });
   };
@@ -4198,6 +4205,13 @@ export function ohitaSaapumisluenta(ui, city = null) {
    */
   if (kohde?.id) ui.luennanOhitus = kohde.id;
   /*
+   * NAPPI POIS SAMASSA HETKESSÄ KUIN ÄÄNI (PAATOKSET 43 kohta 10).
+   * Nappi ei ole enää päällyksen lapsi, joten päällyksen siivous ei
+   * vie sitä mukanaan — poisto on oma rivinsä, eikä sitä jätetä
+   * vahdin varaan (vahti kysyisi vasta 250 ms:n päästä).
+   */
+  piilotaOhitaNappi(ui, { heti: true });
+  /*
    * OHITA LAUKAISEE SAMAN LENNON (PAATOKSET 38 kohta 2: *"sarjan loppu,
    * Ohita, kartan liike"*).
    *
@@ -4254,6 +4268,164 @@ export function ohitaSaapumisluenta(ui, city = null) {
 export function luentaOhitettu(ui, city = null) {
   const tunnus = city?.id ?? ui?.game?.cityOf?.()?.id ?? null;
   return Boolean(tunnus && ui?.luennanOhitus === tunnus);
+}
+
+/* ========== OHITA PYSYY KUNNES KUMPIKIN LUENTA ON LOPPU ============
+ *
+ * Omistaja 18.9.2026 klo 22.50 (Raamattu KARTTAUUDISTUKSEN PAATOKSET
+ * 43 kohta 10), sanatarkasti: *"Ohita nappi ei saisi havita vaikka
+ * pelaaja painaa jostain muualta ennen kuin kumpikin luenta on
+ * loppu."*
+ *
+ * JUURISYY, JOKA EI NÄY DIFFISTÄ. Ohita oli ison kuvan päällyksen
+ * (`.fokusvirta-isokuva`) lapsi, joten sen elinkaari oli KUVAN
+ * elinkaari eikä LUENNAN. Päällys purkautuu kolmesta asiasta, joista
+ * yksikään ei ole luennan loppu: kartan liike (kytkeSarjanKartanLiike
+ * → paataLuentakuvasarja), ankkuroidun paneelin pienennys
+ * (pienennaLuentakuva) ja kuvien lento lappuun (PAATOKSET 38).
+ * Napautus karttaan, lappuun tai puluun vei siis Ohitan mukanaan,
+ * vaikka isoisän ääni ja pulun luenta jatkoivat — eikä pelaajalla
+ * ollut enää mitään, mistä pysäyttää.
+ *
+ * KORJAUS ON IRROTUS, EI UUSI EHTO. Nappi on oma kelluva solmunsa
+ * samassa kodissa (isokuvanKoti, `.stage`) ja TÄSMÄLLEEN samassa
+ * kohdassa ruutua kuin ennen: vanha sääntö oli `position: absolute` +
+ * `bottom` koko ruudun kokoisessa päällyksessä, uusi on sama luku
+ * `position: fixed`-solmussa. Kuvat lentävät sen ylitse pois eikä
+ * nappi liikahda — pelaajan sormen alta ei siis katoa eikä siirry
+ * mitään, ja se on luontevin paikka juuri siksi (lapun alle siirtyvä
+ * nappi hyppäisi kesken luennan ruudun toiseen laitaan).
+ *
+ * POISTUMISIA ON VAIN KAKSI: Ohitan oma painallus (ohitaSaapumisluenta)
+ * ja molempien luentojen loppu (vahtiOhitanLoppua). Kaupungista lähtö
+ * on kolmas, mutta se ei ole napautus vaan koko puheenvuoron loppu
+ * (vaiennaLivianKaupunkipuhe).
+ */
+
+/** Ohitan vahdin kysely: sama tahti kuin sarjan omalla vahdilla. */
+const OHITAN_VAHTI_MS = SARJAN_LUENTAVAHTI_MS;
+
+/**
+ * Kuinka kauan pulun vuorolle annetaan aikaa ALKAA sen jälkeen, kun
+ * isoisän luenta on loppunut. Sama luku kuin isoisän kuvan omalla
+ * kellolla (ISON_KUVAN_LOPPU_MS): pulun kommentti nousee normaalisti
+ * 0,9 s tauon jälkeen (SAAPUMISKUPLAN_TAUKO_MS), joten kuusi sekuntia
+ * kattaa tavallisen kulun reilusti. Jos pulun vuoro alkaa vasta
+ * myöhemmin (paljastussarja, linssi), se avaa oman päällyksensä
+ * (aloitaMyohastynytPuluSarja → avaaIsokuvaPaallys) ja Ohita palaa
+ * sen mukana — kuten ennenkin.
+ */
+const OHITAN_PULUN_ODOTUS_MS = ISON_KUVAN_LOPPU_MS;
+
+/**
+ * ONKO PULUN OMA VUORO KÄYNNISSÄ JUURI NYT?
+ *
+ * Kaksi merkkiä, molemmat olemassa olevia: soiva repliikki
+ * (`ui.liviaAani`, js/liviapuhe.js soitaLivianAani) ja pulun oma
+ * kuvasarja (`puluAlkoi`, aloitaPuluCamSarja). Uutta rinnakkaista
+ * tilaa ei synny.
+ */
+function pulunVuoroKesken(ui) {
+  if (!ui) return false;
+  return Boolean(ui.liviaAani) || ui.luentakuvasarja?.puluAlkoi === true;
+}
+
+/**
+ * VAHTI, JOKA PÄÄTTÄÄ OHITAN ELINKAAREN.
+ *
+ * Sama kaksivaiheinen luku kuin sarjan omalla vahdilla
+ * (vahtiLuennanLoppua): ensin odotetaan, että isoisän luenta ylipäätään
+ * alkaa (SARJAN_LUENNAN_ALKUKATTO_MS — mykistys ja kertojatila 'ei'
+ * eivät saa jättää nappia roikkumaan), sitten hiljaisuutta mitataan.
+ * Pulun osien välinen tauko ei ole loppu (PULUN_KUVAN_HILJAISUUSKATTO_MS,
+ * sama luku kuin vahtiPulunLoppua käyttää).
+ */
+function vahtiOhitanLoppua(ui, tila) {
+  clearTimeout(ui.ohitaVahti);
+  ui.ohitaVahti = setTimeout(() => {
+    ui.ohitaVahti = null;
+    // Nappi on jo vaihtunut tai poistunut: tämä vahti on vanha.
+    if (ui.ohitaNappi !== tila.nappi) return;
+    const { city } = tila;
+    const lahti = ui.dead || luentaOhitettu(ui, city)
+      || ui.game?.cityOf?.()?.id !== city.id;
+    if (lahti) { piilotaOhitaNappi(ui, { heti: true }); return; }
+    tila.kulunut += OHITAN_VAHTI_MS;
+    if (ui.luentaKesken?.() === true) {
+      tila.alkanut = true;
+      tila.hiljaisuus = 0;
+    } else if (pulunVuoroKesken(ui)) {
+      tila.puluNahty = true;
+      tila.hiljaisuus = 0;
+    } else if (tila.alkanut || tila.kulunut >= SARJAN_LUENNAN_ALKUKATTO_MS) {
+      tila.hiljaisuus += OHITAN_VAHTI_MS;
+      const katto = tila.puluNahty
+        ? PULUN_KUVAN_HILJAISUUSKATTO_MS : OHITAN_PULUN_ODOTUS_MS;
+      if (tila.hiljaisuus >= katto) { piilotaOhitaNappi(ui); return; }
+    }
+    // Varoventtiili: mikään yllä olevista ei saa jäädä ikuisuudeksi.
+    if (tila.kulunut >= SARJAN_LUENNAN_KATTO_MS) { piilotaOhitaNappi(ui); return; }
+    vahtiOhitanLoppua(ui, tila);
+  }, OHITAN_VAHTI_MS);
+}
+
+/**
+ * OHITA RUUDULLE (avaaIsokuvaPaallys). Idempotentti: saman kaupungin
+ * toinen kutsu (pulun oma päällys) ei rakenna uutta nappia eikä
+ * nollaa vahtia — muuten pulun sarjan avaus aloittaisi odotuksen
+ * alusta.
+ *
+ * @returns {?Element} nappi, tai null jos sitä ei voitu rakentaa
+ */
+export function naytaOhitaNappi(ui, city) {
+  if (typeof document === 'undefined' || !ui || !city) return null;
+  if (ui.ohitaNappi?.isConnected && ui.ohitaKaupunki === city.id) return ui.ohitaNappi;
+  piilotaOhitaNappi(ui, { heti: true });
+  lataaTyyli();
+  const nappi = html('button', 'fokusvirta-isokuva-ohita fokusvirta-ohitanappi', 'Ohita');
+  nappi.type = 'button';
+  nappi.title = 'Ohita luenta ja palaa kartalle';
+  nappi.addEventListener('click', (tapahtuma) => {
+    // Napautus ei saa kuplia kartalle: kartan liike päättäisi sarjan
+    // omaa polkuaan (kytkeSarjanKartanLiike) ja jättäisi äänen soimaan.
+    tapahtuma?.stopPropagation?.();
+    ohitaSaapumisluenta(ui, city);
+  });
+  isokuvanKoti().appendChild(nappi);
+  ui.ohitaNappi = nappi;
+  ui.ohitaKaupunki = city.id;
+  // Sama häivytys kuin päällyksellä ennen: nappi ei ilmesty kuvia ennen.
+  const nayta = () => { if (nappi.isConnected) nappi.classList.add('nakyy'); };
+  globalThis.requestAnimationFrame?.(nayta);
+  ui.ohitaNakyviin = setTimeout(nayta, 50);
+  vahtiOhitanLoppua(ui, {
+    nappi, city, alkanut: false, kulunut: 0, hiljaisuus: 0, puluNahty: false,
+  });
+  return nappi;
+}
+
+/**
+ * OHITA POIS. `heti` on pelaajan oma teko (Ohitan painallus,
+ * kaupungista lähtö): silloin nappi katoaa samassa hetkessä kuin ääni.
+ * Luentojen luonnollinen loppu saa häivytyksen, ettei sana katoa
+ * ruudulta napsahtaen.
+ *
+ * @returns {boolean} oliko nappi ruudulla
+ */
+export function piilotaOhitaNappi(ui, { heti = false } = {}) {
+  if (!ui) return false;
+  clearTimeout(ui.ohitaVahti);
+  ui.ohitaVahti = null;
+  clearTimeout(ui.ohitaNakyviin);
+  ui.ohitaNakyviin = null;
+  const nappi = ui.ohitaNappi;
+  ui.ohitaNappi = null;
+  ui.ohitaKaupunki = null;
+  if (!nappi) return false;
+  if (heti || liikeVahennetty()) { nappi.remove(); return true; }
+  nappi.classList.remove('nakyy');
+  setTimeout(() => nappi.remove(), ISON_KUVAN_POISTUMA_MS);
+  return true;
 }
 
 /* ========== KUVAT LENTÄVÄT PIENENNETTYYN MATKAKIRJAAN ==============
