@@ -88,7 +88,7 @@ export const MERIVARI = 'rgb(38, 78, 145)';
 /** Kytkimen nimi osoiterivillä. */
 export const KYTKIN = 'reliefipyramidi';
 
-let luettelo = null;
+let reliefiLuettelo = null;
 let haku = null;
 
 /*
@@ -144,7 +144,7 @@ export function reliefinJuuri(ikkuna = globalThis, ampariJuuri = 'https://media.
 
 /** Käytössä oleva versio (luettelo voittaa vakion). */
 export function reliefinVersio() {
-  return luettelo?.versio ?? VERSIO_VARALLA;
+  return reliefiLuettelo?.versio ?? VERSIO_VARALLA;
 }
 
 /** Luettelon osoite. */
@@ -194,9 +194,9 @@ export function meripeitonBitit(taso) {
  * jää silloin tyhjäksi eikä yksikään pyyntö lähde.
  */
 export function reliefinTasot() {
-  if (!luettelo?.tasot?.length) return null;
-  if (!luettelo.__tasot) {
-    luettelo.__tasot = luettelo.tasot.map((t) => ({
+  if (!reliefiLuettelo?.tasot?.length) return null;
+  if (!reliefiLuettelo.__tasot) {
+    reliefiLuettelo.__tasot = reliefiLuettelo.tasot.map((t) => ({
       ...t,
       reliefi: true,
       laatasto: undefined,
@@ -204,7 +204,7 @@ export function reliefinTasot() {
       taustavari: MERIVARI,
     }));
   }
-  return luettelo.__tasot.length ? luettelo.__tasot : null;
+  return reliefiLuettelo.__tasot.length ? reliefiLuettelo.__tasot : null;
 }
 
 /*
@@ -238,7 +238,7 @@ export function reliefinTaso(z) {
  * vastata välimuistista (lentokonetila).
  */
 export async function haeReliefinLuettelo(ikkuna = globalThis) {
-  if (luettelo) return luettelo;
+  if (reliefiLuettelo) return reliefiLuettelo;
   if (!reliefipyramidiPaalla(ikkuna)) return null;
   haku ??= (async () => {
     const osoite = reliefinLuetteloUrl(ikkuna);
@@ -246,8 +246,8 @@ export async function haeReliefinLuettelo(ikkuna = globalThis) {
       let v = await fetch(osoite, { cache: 'no-cache' });
       if (!v.ok) v = await fetch(osoite);
       if (!v.ok) return null;
-      luettelo = await v.json();
-      return luettelo;
+      reliefiLuettelo = await v.json();
+      return reliefiLuettelo;
     } catch {
       return null;
     }
@@ -273,7 +273,7 @@ export function reliefiKaytossa(ikkuna = globalThis) {
 
 /** Vain testejä varten: nollaa moduulin tila. */
 export function nollaaReliefi(uusiLuettelo = null) {
-  luettelo = uusiLuettelo;
+  reliefiLuettelo = uusiLuettelo;
   haku = null;
   linssiAuki = false;
 }
