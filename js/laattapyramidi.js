@@ -90,8 +90,10 @@
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
 import {
-  haeReliefinLuettelo, merkitseLinssiketju, reliefiKaytossa, reliefinLaattaUrl,
-  reliefinSyvinTaso, reliefinTaso, reliefinVersio, reliefipyramidiPaalla,
+  ASTRONAUTIN_SUODATIN,
+  haeReliefinLuettelo, merkitseLinssiketju, reliefiAstronautilla, reliefiKaytossa,
+  reliefinLaattaUrl, reliefinSyvinTaso, reliefinTaso, reliefinVersio,
+  reliefipyramidiPaalla,
 } from './reliefipyramidi.js';
 import { NOSTOLADONTA_SAANTO } from './nostoladonta.js';
 import {
@@ -2718,6 +2720,16 @@ export function pyramidinKerrostasot(z) {
    * sanoo ne nimenomaan reliefin päälle.
    */
   if (reliefi) {
+    /*
+     * ASTRONAUTIN KAMERASSA EI OLE PELIN MUSTETTA (PAATOKSET 41 kohta
+     * 4, LISAYS 16 kohta 47). Sama laatasto, sama laattakone — mutta
+     * astronautin ikkunasta ei näy rantaviivaa, reittiverkkoa eikä
+     * poltettuja nimiöitä, vaan pelkkä maasto, jonka päälle linssi
+     * piirtää omat kerroksensa (ISS, varjo, kohdepisteet). Merkkitasot
+     * ovat myös kolme hakua ja kolme drawImagea laattaa kohti, eli
+     * niiden jättäminen pois on suoraan puhelimen muistia ja aikaa.
+     */
+    if (reliefiAstronautilla()) return [reliefi];
     const merkit = [];
     const ranta0 = rantatasonTasot()?.find((t) => t.z === z);
     if (ranta0) merkit.push(ranta0);
@@ -2769,6 +2781,24 @@ export function pyramidinLaattaOlemassa(taso, sarake, rivi) {
  */
 export function pyramidinReliefiKaytossa() {
   return reliefiKaytossa();
+}
+
+/**
+ * Piirtääkö Astronautin kamera laatastoa (eikä topografialinssi)?
+ * Sama ovi kuin muillakin reliefipyramidin kysymyksillä — pallo ei tuo
+ * js/reliefipyramidi.js:ää itse.
+ */
+export function pyramidinReliefiAstronautilla() {
+  return reliefiAstronautilla();
+}
+
+/**
+ * Kankaan suodatin Astronautin kameran laastarille (kylläisyys alas)
+ * tai null. Sama kerroin kuin linssin omalla pallotekstuurilla, jotta
+ * laastarin ja 4k-pohjan välillä ei näy sävyrajaa.
+ */
+export function pyramidinReliefinSuodatin() {
+  return reliefiAstronautilla() ? ASTRONAUTIN_SUODATIN : null;
 }
 
 /**

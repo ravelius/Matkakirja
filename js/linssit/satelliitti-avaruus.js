@@ -146,6 +146,27 @@ import {
   valitseReliefi,
   valitseLadonta,
 } from './reliefikuva.js';
+/*
+ * RELIEFIPYRAMIDI — SAMA LAATTAKONE KUIN TOPOGRAFIALINSSILLÄ
+ * (Raamattu, ASTRONAUTIN KAMERA LISAYS 16 kohta 47, PAATOKSET 41
+ * kohta 4; omistaja 18.9.2026: *"Tuleeko tarkempi topografia myos
+ * tahan avaruuslinssiin?"*).
+ *
+ * Pallon tekstuuri on 4k (8k purkautuisi puhelimella 134 Mt:n
+ * puskuriksi), joten lähizoomi on sumea. Topografialinssi ratkaisi
+ * saman ongelman laatastolla: reliefi on poltettu pääkartan
+ * pyramidiin z0…z7 (240 px/aste), ja näkyvästä ikkunasta haetaan vain
+ * sen omat laatat. Tässä käytetään TÄSMÄLLEEN sitä samaa konetta —
+ * ei kopiota, ei toista laatastoa: linssi nostaa lipun
+ * (`asetaReliefiLinssi(true, 'astronautti')`), jolloin pallon oma
+ * laattakerros (js/pallolaatat.js) piirtää reliefilaatat pelin
+ * seepiakartan sijaan, ja `piilotaKarttapinnat` jättää sen kerroksen
+ * auki. Kaikki muu — pohjatekstuuri, ISS, varjo, tähdet, pöly — on
+ * ennallaan laastarin ympärillä ja päällä.
+ */
+import {
+  asetaReliefiLinssi, astronautinLaastariKannattaa, reliefiKaytossa,
+} from '../reliefipyramidi.js';
 
 /* ═════════════════ 1. AVAUSNÄKYMÄN KORKEUS ══════════════════════ */
 
@@ -1940,7 +1961,7 @@ export const TAHTIEN_KERROIN = 1.6;
  * (rannikko, rajat), joten `material.visible = false` sulkee myös ne
  * oliot, joita ei vielä ole olemassa.
  */
-function piilotaKarttapinnat(pallo, lauta, ikkuna = globalThis) {
+function piilotaKarttapinnat(pallo, lauta, ikkuna = globalThis, laastari = null) {
   /*
    * KERROS SULJETAAN PIIRTOKERROKSISTA, EI `visible`-lipusta. Mitattu
    * 12.9.2026: laattakerros kirjoittaa omien verkkojensa `visible`-lipun
@@ -1959,23 +1980,26 @@ function piilotaKarttapinnat(pallo, lauta, ikkuna = globalThis) {
     if (!maskit.has(olio)) maskit.set(olio, olio.layers.mask);
     olio.layers.mask = 0;
   };
+  /*
+   * NÄKYVIIN TAKAISIN — LAASTARIN AIKANA LAATTAKERROS ON LINSSIN OMA
+   * PINTA (PAATOKSET 41 kohta 4).
+   *
+   * Sama maskikenttä kumpaankin suuntaan: lähtömaski on muistissa
+   * jokaiselle oliolle, jonka pyyhkäisy on joskus sulkenut, joten
+   * avaaminen on sen kirjoittamista takaisin. Ilman muistissa olevaa
+   * lähtöarvoa ei kirjoiteta MITÄÄN — arvattu 1 olisi sama kuin
+   * pelin oman laudan päätöksen ohittaminen.
+   */
+  const nakyviin = (olio) => {
+    if (!olio?.layers || !maskit.has(olio)) return;
+    olio.layers.mask = maskit.get(olio);
+    maskit.delete(olio);
+  };
   const suljeMateriaali = (m) => {
     if (!m) return;
     if (!materiaalit.has(m)) materiaalit.set(m, m.visible);
     m.visible = false;
   };
-  let pyyhkaisyja = 0;
-  const pyyhkaise = () => {
-    if (purettu) return;
-    pyyhkaisyja += 1;
-    pallo.scene?.()?.traverse?.((o) => {
-      const ud = o?.userData;
-      if (!ud) return;
-      if (ud.laattakerros || ud.lepokerros || ud.napakansi || ud.napakalotti) piiloon(o);
-      if (ud.pallovektorit && o.material) suljeMateriaali(o.material);
-    });
-  };
-  pyyhkaise();
   /*
    * PINTAKERROS SEIS. `lauta.lepokerros()` antaa pallon pintakerroksen
    * kahvan — laattakerroksen, kun se on päällä (oletus), ja vanhan
@@ -1984,10 +2008,50 @@ function piilotaKarttapinnat(pallo, lauta, ikkuna = globalThis) {
    * synny linssin aikana lainkaan; `piilota` vie pois sen, mitä on jo
    * koottu. Vanhassa lepokerroksessa ei ole lukkoa (se ei kokoa
    * yleiskuvassa lainkaan), ja `?.` hoitaa senkin tapauksen.
+   *
+   * LAASTARIN AIKANA LUKKO AUKEAA (PAATOKSET 41 kohta 4). Kun kamera
+   * on niin lähellä, että 4k-pohja sumenee, sama laattakerros piirtää
+   * RELIEFIPYRAMIDIN laatat — ei pelin seepiakarttaa, koska
+   * `pyramidinKerrostasot` vaihtaa kerroslistan linssitilan mukaan
+   * (js/reliefipyramidi.js `reliefiAstronautilla`). Silloin kerrosta
+   * ei suljeta vaan herätetään: se on linssin oma terävä pinta.
    */
   const pintakerros = lauta?.lepokerros?.() ?? null;
+  let laastariNyt = false;
   pintakerros?.lukitse?.(true);
   pintakerros?.piilota?.();
+  let pyyhkaisyja = 0;
+  /** Mittari savukkeelle: montako kehystä laastari on ollut päällä. */
+  let laastarikehyksia = 0;
+  const pyyhkaise = () => {
+    if (purettu) return;
+    pyyhkaisyja += 1;
+    /*
+     * LAASTARIN KYTKENTÄ ON REUNATAPAHTUMA, EI JOKA KEHYKSEN TYÖ:
+     * `kokoa` ja `piilota` ovat kummatkin koko kerroksen läpikäyntejä,
+     * eikä niitä saa ajaa 60 kertaa sekunnissa. Hystereesi on
+     * kynnyksessä (js/reliefipyramidi.js astronautinLaastariKannattaa),
+     * joten tämä ei värähtele rajan kohdalla.
+     */
+    const halutaan = Boolean(laastari?.(laastariNyt));
+    if (halutaan !== laastariNyt) {
+      laastariNyt = halutaan;
+      pintakerros?.lukitse?.(!halutaan);
+      if (halutaan) pintakerros?.kokoa?.();
+      else pintakerros?.piilota?.();
+    }
+    if (laastariNyt) laastarikehyksia += 1;
+    pallo.scene?.()?.traverse?.((o) => {
+      const ud = o?.userData;
+      if (!ud) return;
+      if (ud.laattakerros) {
+        if (laastariNyt) nakyviin(o);
+        else piiloon(o);
+      } else if (ud.lepokerros || ud.napakansi || ud.napakalotti) piiloon(o);
+      if (ud.pallovektorit && o.material) suljeMateriaali(o.material);
+    });
+  };
+  pyyhkaise();
   /*
    * PYYHKÄISY AJETAAN JOKA KEHYS (linssin oma kehyssilmukka kutsuu
    * tätä). Ajastin ei riitä: laattakerros luo verkon vasta kun sen
@@ -2002,6 +2066,10 @@ function piilotaKarttapinnat(pallo, lauta, ikkuna = globalThis) {
     maara: () => maskit.size + materiaalit.size,
     /** Mittari: montako kertaa näyttämö on käyty läpi. */
     kertoja: () => pyyhkaisyja,
+    /** Onko reliefilaastari päällä juuri nyt (savuke ja vartio). */
+    laastarilla: () => laastariNyt,
+    /** Mittari: montako kehystä laastari on ollut päällä. */
+    laastarikehyksia: () => laastarikehyksia,
     /** Yksi pyyhkäisy: kehyssilmukka kutsuu. */
     pyyhkaise,
     pura() {
@@ -2293,7 +2361,48 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   pallodiag('avaruus-pinta', {
     tekstuuri: tekstuuri ? 1 : 0, tarkkuus: reliefinValinta.tunnus,
   }, ikkuna);
-  const pinnat = piilotaKarttapinnat(pallo, lauta, ikkuna);
+  /*
+   * ── RELIEFILAASTARI PÄÄLLE TÄMÄN LINSSIN AJAKSI ─────────────────
+   *
+   * Lippu kertoo laattakoneelle kaksi asiaa: reliefilaatasto saa
+   * piirtyä (`reliefiKaytossa`), ja piirtäjä on ASTRONAUTTI eikä
+   * topografialinssi — jolloin kerroslistasta jäävät pois ranta, reitti
+   * ja poltetut nimiöt ja kankaalle tulee sama kylläisyyskerroin kuin
+   * pallon omalle tekstuurille (js/laattapyramidi.js
+   * pyramidinKerrostasot, js/pallolaatat.js lepokerroksenKerrokset).
+   * `pura` laskee lipun.
+   */
+  asetaReliefiLinssi(true, 'astronautti');
+  const pyramidiPaalla = reliefiKaytossa(ikkuna);
+  /*
+   * KYNNYS: laastari vain siellä, missä pohja ei riitä.
+   *
+   * Pohjan tiheys on sen reliefitekstuurin oma (4 096 px → 11,4
+   * px/aste puhelimella, 8 192 → 22,8 leveällä ruudulla), ja ruudun
+   * tarve luetaan kameran korkeudesta (js/reliefipyramidi.js
+   * `astronautinLaastariKannattaa`). Avausnäkymässä koko pallo on
+   * ruudulla, tarve on murto-osa pohjasta eikä yhtään laattaa haeta —
+   * astronautin sininen pallo on juuri se, joka oli. Zoomatessa
+   * laastari syttyy, ja z valitaan kuten topografialinssissä.
+   */
+  const perusTiheysPxAste = (reliefinValinta.leveys ?? 0) / 360;
+  const piirtokorkeus = () => {
+    const kangas = pallo.renderer?.()?.domElement ?? null;
+    if (kangas?.height > 0) return kangas.height;
+    const h = kotelo?.clientHeight ?? 0;
+    return h * Math.min(ikkuna.devicePixelRatio ?? 1, 3);
+  };
+  /** Kameran korkeus laastarikyselylle (asetetaan alla, ks. kameranKorkeus). */
+  let korkeudenLukija = null;
+  const laastariKannattaa = (paallaNyt) => {
+    if (!pyramidiPaalla || purettu) return false;
+    const korkeus = korkeudenLukija?.();
+    if (!Number.isFinite(korkeus)) return false;
+    return astronautinLaastariKannattaa(
+      piirtokorkeus(), korkeus, perusTiheysPxAste, paallaNyt,
+    );
+  };
+  const pinnat = piilotaKarttapinnat(pallo, lauta, ikkuna, laastariKannattaa);
   // Luokka kertoo CSS:lle, että pisteitä on ruudulla koko pallon verran
   // (css/satelliitti.css: nimet pienemmällä). Poistetaan purkaessa.
   ikkuna.document?.body?.classList?.add?.('satelliitti-avaruus');
@@ -2342,6 +2451,9 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     if (sade > 0 && p?.length) return p.length() / sade - 1;
     return pallo.pointOfView?.()?.altitude ?? NaN;
   };
+  // Laastarin kynnys lukee korkeuden samasta paikasta kuin nimien
+  // kynnys ja kalvo — yksi mittaus kehystä kohti, ei kolmea.
+  korkeudenLukija = kameranKorkeus;
   const tahdistaNimet = () => {
     const nyt = nimetNakyvat(kameranKorkeus(), alt, nimetPaalla);
     if (nyt === nimetPaalla) return;
@@ -2652,6 +2764,19 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       taivas?.pura?.();
       kalvo?.pura?.();
       pinnat.pura();
+      /*
+       * LIPPU ALAS ENNEN PINNAN PALAUTUSTA: laattakerros herää
+       * seuraavalla kehyksellä, ja jos lippu olisi yhä pystyssä, se
+       * latoisi reliefilaattoja pelin omalle seepiakartalle.
+       */
+      asetaReliefiLinssi(false);
+      /*
+       * JA KERROS KOOTAAN KERRAN: lippu yksin ei riitä, koska
+       * laattakerros mitätöi reliefilaattansa vasta seuraavassa
+       * päivityksessä, ja paikallaan olevassa näkymässä päivitystä ei
+       * tule (sama syy kuin topografialinssin `pura`ssa).
+       */
+      if (pyramidiPaalla) lauta?.lepokerros?.()?.kokoa?.();
       ikkuna.document?.body?.classList?.remove?.('satelliitti-avaruus');
       ikkuna.document?.body?.classList?.remove?.(NIMIEN_LUOKKA);
       nimetPaalla = false;

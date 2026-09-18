@@ -48,6 +48,12 @@ const ULOS = process.env.KAAPPAUKSET ?? '';
 if (ULOS) mkdirSync(ULOS, { recursive: true });
 const PORTTI = Number(process.env.PORTTI ?? 8757);
 const PVM = process.env.PVM ?? '20260917';
+/*
+ * LISÄPARAMETRIT OSOITERIVILLE. `LISAPARAMIT=&reliefipyramidi=0` ajaa
+ * saman mittauksen VANHALLA polulla (pelkkä 4k-tekstuuri), ja se on
+ * terävyysvertailun "ennen".
+ */
+const LISAPARAMIT = process.env.LISAPARAMIT ?? '';
 const AVAUKSIA = Number(process.env.AVAUKSIA ?? 3);
 const SEURANTA_MS = 15000;
 const SEURANTA_VALI_MS = 500;
@@ -145,7 +151,7 @@ function pallonKirkkaus(kuva, { leveys, korkeus, dpr }) {
 }
 
 async function avaaPeli(s) {
-  await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo&pallodiag=1`, { waitUntil: 'load' });
+  await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo&pallodiag=1${LISAPARAMIT}`, { waitUntil: 'load' });
   await s.waitForTimeout(2500);
   await s.evaluate(() => {
     [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
@@ -264,6 +270,77 @@ const DIAG_PITUUS = async () => {
   return pallodiagLoki().length;
 };
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * RELIEFILAASTARIN VARTIOT (Raamattu PAATOKSET 41 kohta 4,
+ * ASTRONAUTIN KAMERA LISAYS 16 kohta 47)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistajan vika 18.9.2026 (iPhone-kuva "Italian saapas yöllä"):
+ * Astronautin kameran lähizoomi on sumea, koska pallolla on 4k-
+ * tekstuuri. Korjaus on sama reliefipyramidin laattakone kuin
+ * topografialinssillä, laastarina näkyvälle ikkunalle.
+ *
+ * NELJÄ MITTAA, KAIKKI SAMASTA NÄKYMÄSTÄ (Italia, korkeus 0,14):
+ *
+ *  1. TERÄVYYS = reunojen gradienttisumma linssin sisällä. Sumea
+ *     kuva on tasainen: naapuripikselien ero on pieni. Sama luku
+ *     lasketaan `?reliefipyramidi=0`-ajosta (vanha 4k-polku) ja
+ *     oletusajosta, ja jälkimmäisen on oltava selvästi suurempi.
+ *     Mitta on ruudun keskiöstä (60 %), jotta pallon reuna ja tähdet
+ *     eivät ole mukana.
+ *  2. ENSIMMÄINEN RELIEFILAATTA < 300 ms laastarin syttymisestä.
+ *  3. SEEPIAPOHJAN PYYNTÖJÄ 0 — laastari ei saa ladata pelin omaa
+ *     karttaa alleen (LISAYS 16 kohta 49).
+ *  4. MUISTI JA FPS (karttapallo.md luku 6, fps >= 50).
+ */
+const LAASTARIN_NAKYMA = { lat: 41.6, lng: 14.6, altitude: 0.14 };
+const LAASTARIN_ODOTUS_MS = Number(process.env.LAASTARI_ODOTUS_MS ?? 6000);
+
+/**
+ * Reunojen gradienttisumma ruudun keskiössä (osuus 0,6).
+ *
+ * Summa jaetaan näytteiden määrällä, jotta luku ei riipu kaappauksen
+ * koosta: sama näkymä eri dpr:llä antaa saman suuruusluokan.
+ */
+function teravyys(kuva, osuus = 0.6) {
+  const x0 = Math.floor((kuva.width * (1 - osuus)) / 2);
+  const x1 = Math.ceil(kuva.width - x0);
+  const y0 = Math.floor((kuva.height * (1 - osuus)) / 2);
+  const y1 = Math.ceil(kuva.height - y0);
+  let summa = 0;
+  let n = 0;
+  for (let y = y0; y < y1 - 1; y += 1) {
+    for (let x = x0; x < x1 - 1; x += 1) {
+      const i = (y * kuva.width + x) * 4;
+      const oikea = (y * kuva.width + x + 1) * 4;
+      const ala = ((y + 1) * kuva.width + x) * 4;
+      summa += Math.abs(luminanssi(kuva.data, i) - luminanssi(kuva.data, oikea))
+        + Math.abs(luminanssi(kuva.data, i) - luminanssi(kuva.data, ala));
+      n += 1;
+    }
+  }
+  return n ? +(summa / n).toFixed(3) : 0;
+}
+
+/** Kehystahti: kuinka monta rAF-kehystä kahdessa sekunnissa. */
+const LUE_FPS = () => new Promise((valmis) => {
+  let n = 0;
+  const alku = performance.now();
+  const askel = () => {
+    n += 1;
+    if (performance.now() - alku >= 2000) { valmis(+(n / ((performance.now() - alku) / 1000)).toFixed(1)); return; }
+    requestAnimationFrame(askel);
+  };
+  requestAnimationFrame(askel);
+});
+
+/** JS-kasa megatavuina tai null (WebKitissä ei ole performance.memory). */
+const LUE_MUISTI = () => {
+  const m = performance.memory;
+  return m ? Math.round(m.usedJSHeapSize / 1048576) : null;
+};
+
 const poimi = (rivit, alku) => rivit.filter((r) => r.startsWith(alku));
 const kentta = (rivi, nimi) => (rivi ?? '').match(new RegExp(`(?:^|\\s)${nimi}=(\\S+)`))?.[1] ?? '';
 
@@ -345,6 +422,59 @@ async function mittaaAvaus(s, { selain, kotelo, kerta, dpr, leveys, korkeus }) {
       };
     } catch (e) { return { virhe: String(e).slice(0, 80) }; }
   });
+  /*
+   * ── RELIEFILAASTARI: ITALIAN SAAPAS LÄHIZOOMISSA ────────────────
+   * Vartiot 1–4 (ks. RELIEFILAASTARIN VARTIOT yllä). Ajetaan ENNEN
+   * mustan pinnan erittelyä, koska erittely muuttaa pinnan tilaa.
+   */
+  const laastari = { ...LAASTARIN_NAKYMA };
+  const verkko = { reliefi: 0, seepia: 0, ekaMs: null };
+  const t0Laastari = Date.now();
+  const kuuntelija = (pyynto) => {
+    const url = pyynto.url();
+    if (/\/reliefipyramidi\//.test(url) && /\.webp/.test(url)) {
+      verkko.reliefi += 1;
+      if (verkko.ekaMs === null) verkko.ekaMs = Date.now() - t0Laastari;
+    } else if (/\/laatat\/|\/pyramidi\//.test(url) && /\.webp/.test(url)) verkko.seepia += 1;
+  };
+  s.on('request', kuuntelija);
+  await s.evaluate((n) => {
+    const p = window.matkakirja?.ui?.pallolauta?.pallo;
+    p?.pointOfView?.({ lat: n.lat, lng: n.lng, altitude: n.altitude }, 0);
+    window.matkakirja?.ui?.pallolauta?.heraa?.();
+  }, laastari);
+  await s.waitForTimeout(LAASTARIN_ODOTUS_MS);
+  s.off('request', kuuntelija);
+  const laastarinKuva = await s.screenshot({ type: 'png', timeout: 60000 });
+  const laastarinTeravyys = teravyys(decodePng(laastarinKuva));
+  const laastarinFps = await s.evaluate(LUE_FPS);
+  const laastarinMuisti = await s.evaluate(LUE_MUISTI);
+  const laastarinTila = await s.evaluate(async () => {
+    const { reliefiAstronautilla, reliefiKaytossa, reliefinLinssitila } = await import('/js/reliefipyramidi.js');
+    const kerros = window.matkakirja?.ui?.pallolauta?.lepokerros?.() ?? null;
+    const m = kerros?.mittarit?.() ?? null;
+    return {
+      tila: reliefinLinssitila(), kaytossa: reliefiKaytossa(), astro: reliefiAstronautilla(),
+      taso: m?.taso?.z ?? m?.taso ?? null, laattoja: m?.laattoja ?? null, valmiita: m?.valmiita ?? null,
+      scenessa: m?.scenessa ?? null, tavut: m?.kaytetytTavut ?? null, syy: m?.syy ?? null,
+    };
+  }).catch((e) => ({ virhe: String(e).slice(0, 120) }));
+  if (ULOS) {
+    const nimi = `astro-laastari-${selain}-${kotelo}-${kerta}-${LISAPARAMIT ? 'ennen' : 'jalkeen'}-${PVM}.jpg`;
+    await s.screenshot({
+      path: join(ULOS, nimi), type: 'jpeg', quality: 60, scale: 'css', timeout: 60000,
+    }).catch(() => {});
+    laastari.kuva = nimi;
+  }
+  Object.assign(laastari, {
+    teravyys: laastarinTeravyys, fps: laastarinFps, muistiMt: laastarinMuisti,
+    reliefipyyntoja: verkko.reliefi, seepiapyyntoja: verkko.seepia, ekaLaattaMs: verkko.ekaMs,
+    ...laastarinTila,
+  });
+  console.log(`    LAASTARI Italia: terävyys ${laastarinTeravyys}, fps ${laastarinFps},`
+    + ` muisti ${laastarinMuisti ?? '–'} Mt, reliefipyyntöjä ${verkko.reliefi} (1. ${verkko.ekaMs ?? '–'} ms),`
+    + ` seepiapyyntöjä ${verkko.seepia}, tila ${JSON.stringify(laastarinTila)}`);
+
   /* Kuva raporttiin ENNEN erittelyn kokeita: kokeet muuttavat pinnan tilaa. */
   let kuvanNimi = null;
   if (ULOS) {
@@ -467,6 +597,7 @@ async function mittaaAvaus(s, { selain, kotelo, kerta, dpr, leveys, korkeus }) {
     reliefinKestoMs: tila.reliefinKestoMs,
     pinnanOsoite: tila.pinnanOsoite,
     kangas: tila.kangas,
+    laastari,
     koteloMitat: tila.kotelo,
     kontekstiHukassa: tila.kontekstiHukassa,
     ilmoitus: tila.ilmoitus,
