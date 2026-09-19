@@ -9225,7 +9225,15 @@ export const RAAMATTU = {
           + '-nimilapuissa (kohdekortti, fokusnosto, Ihmisen matka, satelliitti); merella '
           + 'meri, |lat| >= 66 polar; pitka nimi tiivistetaan scaleX (alaraja 0,4) ilman '
           + 'rivitysta; vartio savuke-arvonimet 20 avausta -> 15 eri nimea. Julkaistaan '
-          + 'v1968.',
+          + 'v1968. EUROOPAN MAAT TAYTETTY (Sonnet-agentti klo 22.10, 41 maata, 383 nimea) '
+          + 'JA KARSITTU (omistaja klo 22.35: "Karsi ehdotuksesi mukaan"): pois 76 heikointa '
+          + '- 11 yleista (mm. Kaksisataa astetta Kaantyvalta Paalta, latteat), 2 '
+          + 'maanosaa, ja agentin toistuvat kaavat ("Tuoksun Tuntijalta" 43 -> 6, '
+          + '"Basaarin Kuulijalta" 9 -> 2, "Rantavahdilta" 15 -> 4, "Kansantarun Kertojalta" '
+          + '5 -> 1) seka Aleksanteri Suuren Karttakirjuri (MKD, arka), Jogurtin Keksija, '
+          + 'Sininen Ikkuna (romahti 2017). Jaljella 78 yleista + 62 maanosittain + 329 '
+          + 'maittain = 469; testi vaatii >= 5 per maa. SAANTO jatkoon: yksi kaava enintaan '
+          + 'kerran per maa, ruoka enintaan joka viidennessa maassa.',
         'KAUPUNGITTOMAN MAAN NOSTOT NAKYVAT KAMERAN OLLESSA MAAN RAJAUKSESSA (Fable '
           + '19.9.2026 klo 21.46 Suomen aikaa, Opus 2:n mittaus era K: kohdemaa johdetaan '
           + 'AINA pelaajan kaupungista (fokuskohteet.js nykyinenIso), joten ilman '

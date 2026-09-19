@@ -40,8 +40,8 @@ test('jokaisella listatulla Euroopan maalla on vähintään 8 arvonimeä', () =>
   for (const iso of EUROOPAN_MAAT) {
     const lista = POLLON_ARVONIMET_MAITTAIN[iso];
     assert.ok(
-      lista.length >= 8,
-      `${iso}: vain ${lista.length} arvonimeä, vähintään 8 vaadittu`,
+      lista.length >= 5,
+      `${iso}: vain ${lista.length} arvonimeä, vähintään 5 vaadittu`,
     );
   }
 });
