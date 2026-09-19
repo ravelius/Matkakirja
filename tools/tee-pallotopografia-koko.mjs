@@ -96,8 +96,9 @@ import { fileURLToPath } from 'node:url';
 import { haeKorkeusikkuna, hilanMitat } from './hae-korkeusruudukko.mjs';
 import { varjosta, tasainenVarjo, AURINKO } from './varjostus.mjs';
 import {
-  LUT, lutKohta, KALVO, JAAN_VARI, jaapaino,
+  LUT, lutKohta, KALVO, JAAN_VARI, jaapaino, TUNDRAN_VARI, tundrapaino,
 } from './reliefivarit.mjs';
+import { lataaJaatikkomaski } from './jaatikkomaski.mjs';
 
 /*
  * Verkko: Noden fetch ei lue HTTPS_PROXYa ilman NODE_USE_ENV_PROXY=1
@@ -238,6 +239,8 @@ console.log(`varjostus: atsimuutti ${AURINKO.atsimuutti}°, korkeuskulma ${AURIN
   + `liioittelu ${LIIOITTELU}`);
 
 mkdirSync(VALIMUISTI, { recursive: true });
+const jaatikot = await lataaJaatikkomaski({ ruutu: RUUTU, leveys: HILA.leveys, korkeus: HILA.korkeus });
+console.log(`jäätikkömaski: ${jaatikot.muotoja} aluetta, ${(jaatikot.osuus * 100).toFixed(2)} % pohjoisen hilasta`);
 const raakaPolku = join(VALIMUISTI, `pallo-koko-${LEVEYS}x${KORKEUS}.raw`);
 const raaka = openSync(raakaPolku, 'w');
 
@@ -306,10 +309,14 @@ for (let j0 = 0; j0 < KORKEUS; j0 += LOHKO) {
       if (p <= 0) continue;
       paino += p;
       const lat = -90 + gy * RUUTU;
-      // Jään osuus riippuu vain leveysasteesta ja siitä, onko solu
-      // maata vai merta — kaksi lukua per rivi, ei per solu.
+      // Jään osuus riippuu leveysasteesta ja siitä, onko solu maata vai
+      // merta — kaksi lukua per rivi. Pohjoisessa maajää tulee
+      // jäätikkömaskista solukohtaisesti (tools/jaatikkomaski.mjs), ja
+      // maskin ulkopuolinen maa saa tundrasävyn (TUNDRAN_VARI).
       const jaaMaa = jaapaino(lat, 0);
       const jaaMeri = jaapaino(lat, -1);
+      const maskiRivi = lat > 0 ? jaatikot.rivi(gy) : null;
+      const tundraTaysi = tundrapaino(lat, 0, 0);
       const alku = (gy - alaraja) * HILA.leveys;
       for (let x = 0; x < HILA.leveys; x += 1) {
         const i = alku + x;
@@ -318,7 +325,17 @@ for (let j0 = 0; j0 < KORKEUS; j0 += LOHKO) {
         let r = LUT[l];
         let v = LUT[l + 1];
         let s = LUT[l + 2];
-        const jaa = m >= 0 ? jaaMaa : jaaMeri;
+        let jaa = m >= 0 ? jaaMaa : jaaMeri;
+        if (m >= 0 && maskiRivi) {
+          const maski = maskiRivi[x] / 255;
+          jaa = jaapaino(lat, m, maski);
+          const tundra = tundraTaysi * (1 - maski);
+          if (tundra > 0) {
+            r += (TUNDRAN_VARI[0] - r) * tundra;
+            v += (TUNDRAN_VARI[1] - v) * tundra;
+            s += (TUNDRAN_VARI[2] - s) * tundra;
+          }
+        }
         if (jaa > 0) {
           r += (JAAN_VARI[0] - r) * jaa;
           v += (JAAN_VARI[1] - v) * jaa;
