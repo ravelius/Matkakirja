@@ -916,8 +916,8 @@ test('koko pallon reliefi on KYTKETTY (Mac-ajo 20260916)', () => {
   assert.equal(nyt.korkeus, RELIEFIN_KORKEUS);
   assert.equal(nyt.kokoPallo, true);
   // Tunniste näkyy molemmissa osoitteissa.
-  assert.match(RELIEFIN_KOKO_8K.osoite, /topografia-pallo-koko-8k-20260916\.webp$/);
-  assert.match(RELIEFIN_KOKO_4K.osoite, /topografia-pallo-koko-4k-20260916\.webp$/);
+  assert.match(RELIEFIN_KOKO_8K.osoite, /topografia-pallo-koko-8k-20260919\.webp$/);
+  assert.match(RELIEFIN_KOKO_4K.osoite, /topografia-pallo-koko-4k-20260919\.webp$/);
 });
 
 test('kytkin vaihtaa kuvan mutta EI tarkkuuden valintaa', () => {
