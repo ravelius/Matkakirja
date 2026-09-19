@@ -916,8 +916,8 @@ test('koko pallon reliefi on KYTKETTY (Mac-ajo 20260916)', () => {
   assert.equal(nyt.korkeus, RELIEFIN_KORKEUS);
   assert.equal(nyt.kokoPallo, true);
   // Tunniste näkyy molemmissa osoitteissa.
-  assert.match(RELIEFIN_KOKO_8K.osoite, /topografia-pallo-koko-8k-20260919\.webp$/);
-  assert.match(RELIEFIN_KOKO_4K.osoite, /topografia-pallo-koko-4k-20260919\.webp$/);
+  assert.match(RELIEFIN_KOKO_8K.osoite, /topografia-pallo-koko-8k-20260919b\.webp$/);
+  assert.match(RELIEFIN_KOKO_4K.osoite, /topografia-pallo-koko-4k-20260919b\.webp$/);
 });
 
 test('kytkin vaihtaa kuvan mutta EI tarkkuuden valintaa', () => {
@@ -950,7 +950,7 @@ test('kytkin vaihtaa kuvan mutta EI tarkkuuden valintaa', () => {
   // linssikuvat, ja molemmissa on tunniste (ikuinen välimuisti).
   for (const k of [RELIEFIN_KOKO_8K, RELIEFIN_KOKO_4K]) {
     assert.match(k.osoite, /^https:\/\/media\.matkakirja\.app\/matkakirja\/linssit\//);
-    assert.match(k.osoite, /topografia-pallo-koko-(4k|8k)-\d{8}\.webp$/);
+    assert.match(k.osoite, /topografia-pallo-koko-(4k|8k)-\d{8}[a-z]?\.webp$/);
   }
   assert.notEqual(RELIEFIN_KOKO_8K.osoite, RELIEFIN_KOKO_4K.osoite);
 });
