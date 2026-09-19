@@ -419,6 +419,8 @@ KOHDE_MAAT.HRV = [...(KOHDE_MAAT.HRV ?? []), ...HAHMOTELMA_HRV];
 KOHDE_MAAT.BGR = [...(KOHDE_MAAT.BGR ?? []), ...HAHMOTELMA_BGR];
 
 /*
+
+/*
  * PUOLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
  * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
  * hahmotelmalla; rivit ovat aidosti pelikaupunkien (Varsova, Krakova)
@@ -491,6 +493,8 @@ KOHDE_MAAT.FIN = [...(KOHDE_MAAT.FIN ?? []), ...HAHMOTELMA_FIN];
  * (Bukarest) ulkopuolella, lähin (Ploiești) yli 8 lautayksikön päässä.
  */
 KOHDE_MAAT.ROU = [...(KOHDE_MAAT.ROU ?? []), ...HAHMOTELMA_ROU];
+
+/*
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
