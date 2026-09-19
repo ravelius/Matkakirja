@@ -507,14 +507,67 @@ const ajo = spawnSync('python3', [skriptiPolku], {
   encoding: 'utf8',
   maxBuffer: 16 * 1024 * 1024,
 });
-unlinkSync(raakaPolku);
 
-if (ajo.status !== 0) {
-  console.error(ajo.stderr || ajo.stdout);
-  throw new Error('pakkaus epäonnistui — onko python3 + Pillow asennettu?');
+/*
+ * SHARP-VARAPOLKU (Opus 19.9.2026): Mac Studiolla ei ole Pillow'ta
+ * missään Pythonissa, mutta repon kehitysriippuvuus sharp on. Jos
+ * Python-pakkaus kaatuu, sama pari pakataan sharpilla: WebP samalla
+ * laadulla ja effort 6 (Pillow'n method=6), pieni versio
+ * laatikkosuodatuksella kuten Pillow'n Image.BOX (tasan puolitus, joten
+ * keskiarvo 2 × 2 on täsmälleen BOX). Koekuvaa varapolku ei tee.
+ */
+async function pakkaaSharpilla() {
+  const { createRequire } = await import('node:module');
+  const vaadi = createRequire(import.meta.url);
+  // Worktreessä ei ole omaa node_modulesia: SHARP_JS kuten PLAYWRIGHT_JS.
+  const sharp = vaadi(process.env.SHARP_JS ?? 'sharp');
+  const { readFileSync } = await import('node:fs');
+  const raakaData = readFileSync(raakaPolku);
+  const talleta = async (data, leveys, korkeus, polku) => {
+    const tavut = await sharp(data, { raw: { width: leveys, height: korkeus, channels: 3 } })
+      .webp({ quality: LAATU, effort: 6 }).toBuffer();
+    const meta = await sharp(tavut).metadata();
+    if (!kuiva) writeFileSync(polku, tavut);
+    return {
+      polku, tavua: tavut.length, leveys: meta.width, korkeus: meta.height,
+      alfa: meta.hasAlpha ? [0, 255] : [255, 255], muoto: meta.hasAlpha ? 'RGBA' : 'RGB',
+    };
+  };
+  const ulos = { iso: await talleta(raakaData, LEVEYS, KORKEUS, join(ULOS, NIMI_ISO)) };
+  if (PIENI && PIENI * 2 === LEVEYS) {
+    const pl = PIENI; const pk = KORKEUS / 2;
+    const pieni = Buffer.allocUnsafe(pl * pk * 3);
+    for (let y = 0; y < pk; y += 1) {
+      for (let x = 0; x < pl; x += 1) {
+        for (let c = 0; c < 3; c += 1) {
+          const a = ((2 * y) * LEVEYS + 2 * x) * 3 + c;
+          const b = a + LEVEYS * 3;
+          pieni[(y * pl + x) * 3 + c] = Math.round(
+            (raakaData[a] + raakaData[a + 3] + raakaData[b] + raakaData[b + 3]) / 4,
+          );
+        }
+      }
+    }
+    ulos.pieni = await talleta(pieni, pl, pk, join(ULOS, NIMI_PIENI));
+  } else if (PIENI) {
+    throw new Error('sharp-varapolku osaa vain tasan puolitetun pienen version (--pieni = --leveys / 2)');
+  }
+  return ulos;
 }
 
-const tulos = JSON.parse(ajo.stdout.trim().split('\n').pop());
+let tulos;
+if (ajo.status !== 0) {
+  console.error(ajo.stderr || ajo.stdout);
+  console.log('Python-pakkaus ei onnistunut — pakataan sharpilla');
+  tulos = await pakkaaSharpilla().catch((e) => {
+    unlinkSync(raakaPolku);
+    throw new Error(`pakkaus epäonnistui (Pillow ja sharp): ${e.message}`);
+  });
+} else {
+  tulos = JSON.parse(ajo.stdout.trim().split('\n').pop());
+}
+unlinkSync(raakaPolku);
+
 for (const [avain, t] of Object.entries(tulos)) {
   console.log(`${avain.padEnd(8)} ${t.leveys} × ${t.korkeus}, ${(t.tavua / 1024).toFixed(0)} kt`
     + (t.alfa ? `, alfa ${t.alfa[0]}…${t.alfa[1]} (${t.muoto})` : '')
