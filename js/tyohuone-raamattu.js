@@ -9273,7 +9273,9 @@ export const RAAMATTU = {
           + 'savuke-luentakuvat 99/99 (390 ja 1400 px), vastakoe 93/99. AVOIN omaksi '
           + 'eraksi ja omistajan paatokseksi: kuvan suurennos .fokuszoom (z-index 46) '
           + 'peittaa Ohitan - muuttaminen rikkoisi linjauksen "iso kuva jaa '
-          + 'matkakirjakortin alle". JULKAISTAAN v1954.',
+          + 'matkakirjakortin alle". JULKAISTAAN v1954. PAATOS (omistaja 19.9.2026 '
+          + 'klo 15.29 Suomen aikaa, kortti "Jatetaan nykyiselleen"): kuvan suurennos '
+          + 'saa peittaa Ohitan; Ohita palaa, kun suurennos suljetaan.',
         'KARTTAUUDISTUKSEN PAATOKSET 42: SIIRTOVAIHEESSA KOHDEKAUPUNGIN '
           + 'NAPAUTUS VALITSEE KOHTEEN, EI AVAA LIUSKAA (omistaja 18.9.2026 klo '
           + '22.41 Suomen aikaa, puhelintestin v1945 loydos 6, iPad-kuva '
