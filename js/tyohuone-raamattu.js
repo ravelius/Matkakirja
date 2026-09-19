@@ -9240,7 +9240,10 @@ export const RAAMATTU = {
           + '24 / 69 / 8 visaa (ei pelikaupunkia; tiheat parit karsittu 28 -> 24; Kobarid ja '
           + 'Lendava asiallisesti; sl-Wikipedia toisena lahteena 6 nostossa), HEAD 200 '
           + '69/69, julkaistaan v1966. Seuraava maa Sonnet 3:lle: Viro; Sonnet 2: Luxemburg '
-          + '(15, lista hyvaksytty 21.00), sitten visakieli-era.',
+          + '(15, lista hyvaksytty 21.00), sitten visakieli-era. LUXEMBURG (Sonnet 2, Fable '
+          + 'klo 21.15): LUX 15 / 40 / 6 visaa (ei pelikaupunkia; Ardennien taistelu pois), '
+          + 'HEAD 200 40/40, julkaistaan v1966. Sonnet 2 aloitti visakieli-eran; Sonnet 3: '
+          + 'Viro (24, lista hyvaksytty 21.14).',
         'KUVASELITTEISSA EI LAHDEVIITTAUKSIA LUKIJALLE (Sonnet 3:n loyto 19.9.2026 klo '
           + '20.40 Suomen aikaa): kuva-agenttien selitteissa oli pelaajalle nakyvia '
           + 'viittauksia ("Commonsin kuvauksen mukaan", "Artikkelin mukaan", "tiedoston '
