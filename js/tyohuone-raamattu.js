@@ -9376,7 +9376,12 @@ export const RAAMATTU = {
           + 'matka 1876 ei artikkeleissa -> nappi harjun suojelusta 1803; Kaustisen '
           + 'esiintyjakuva pudotettu), HEAD 200 82/82, julkaistaan v1964. Seuraava maa '
           + 'Sonnet 3:lle: Romania. Kroatia (Sonnet 2) vaihe 2 kaynnissa (lista '
-          + 'hyvaksytty 20.05).',
+          + 'hyvaksytty 20.05). KROATIA (Sonnet 2, Fable klo 20.20): HRV 26 / 63 / 10 visaa '
+          + '(Vukovar ja Kumrovec asiallisesti; kolme tyyppia vaihdettu lahdesaannolla), '
+          + 'HEAD 200 63/63, julkaistaan v1964. Seuraava maa Sonnet 2:lle: Bulgaria; '
+          + 'Sonnet 3: Romania (lista hyvaksytty 20.18). v1963 CI: ylapalkkipunainen oli '
+          + 'savukkeen kosketusemuloinnin katoaminen CI:ssa (ei pelin vika, Opus 1 korjasi '
+          + 'savukkeen, 13717511); takapuolen merkki Opus 2:lla.',
         'KARTTAUUDISTUKSEN PAATOKSET 47: NOPAN JALKEEN KAMERA JAI TYHJAAN KOHTAAN - '
           + 'KOHDEMAAN ZOOMIKATTO KUMOSI ULOSSOVITUKSEN (Sonnet-simulaattoritesti kierros 5, '
           + '19.9.2026 klo 14.05-14.19 Suomen aikaa: Pariisi -> liftaus -> Amsterdam -> Liiku '
