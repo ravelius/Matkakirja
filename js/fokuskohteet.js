@@ -139,6 +139,7 @@ import { HAHMOTELMA_DNK } from './packs/hahmotelma-dnk.js';
 import { HAHMOTELMA_HUN } from './packs/hahmotelma-hun.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
+import { HAHMOTELMA_SVN } from './packs/hahmotelma-svn.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -436,6 +437,14 @@ KOHDE_MAAT.ESP = [...(KOHDE_MAAT.ESP ?? []), ...HAHMOTELMA_ESP];
  * raja 7).
  */
 KOHDE_MAAT.ITA = [...(KOHDE_MAAT.ITA ?? []), ...HAHMOTELMA_ITA];
+
+/*
+ * SLOVENIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla; Slovenialla ei ole pelikaupunkia
+ * eikä aiempia nostoja, ja lista on karsittu 24:ään maan pienen koon takia.
+ */
+KOHDE_MAAT.SVN = [...(KOHDE_MAAT.SVN ?? []), ...HAHMOTELMA_SVN];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
