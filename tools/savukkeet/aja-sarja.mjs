@@ -114,7 +114,10 @@ function ajaYksi(rivi, indeksi) {
      * omaa koodia ei tarvitse muuttaa (ks. chromium-liput.mjs).
      * NODE_OPTIONS säilytetään, jos se on jo asetettu.
      */
-    if (ymparisto.SAVUKE_CHROMIUM_LIPUT) {
+    // Shim on aina päällä (19.9.2026): se kytkee Macin mediapaneelin pois
+    // jokaisesta savukkeen Chromiumista (ks. chromium-liput.mjs OLETUSPOIS)
+    // ja lisää rivin omat liput sen päälle.
+    {
       const shim = pathToFileURL(join(TASSA, 'chromium-liput.mjs')).href;
       ymparisto.NODE_OPTIONS = `${process.env.NODE_OPTIONS ?? ''} --import ${shim}`.trim();
     }
