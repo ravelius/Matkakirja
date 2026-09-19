@@ -45,6 +45,7 @@ import {
   haePyramidinLuettelo, nostotasonPoltetut, pyramidinKerrostasot, pyramidinLaattaOlemassa,
   pyramidinLaattaUrl,
 } from './laattapyramidi.js';
+import { JAAVARI, MERIVARI, kuunteleReliefiLinssi, reliefiKaytossa } from './reliefipyramidi.js';
 import {
   KOSKETUKSEN_VAPAUTUS, laattakerrosPaalla, laatuAinaPaalla, nollaaKosketusOhjaimet,
 } from './ui-apurit.js';
@@ -1534,6 +1535,29 @@ export const NAPAKANSI_POHJOINEN = '#c9c2af';
 export const NAPAKANSI_ETELA = '#dcd6c6';
 
 /*
+ * ======== NAVAT TOPOGRAFIALINSSIN ALLA (PAATOKSET 41 kohta 2) =======
+ *
+ * Omistajan iPhone-kuva 18.9.2026: reliefilinssi auki, pohjoisnapa
+ * ruudulla, ja keskellä ISO BEIGE LEVY, jonka ympärillä tummansininen
+ * rengas; reliefiä vain reunoilla. Levy on juuri nämä kaksi kappaletta
+ * — yksivärinen napakansi (`#c9c2af`) ja sen päälle ladattu
+ * SEEPIAKARTAN napakalotti — eikä kumpikaan tiedä linssistä mitään.
+ * Rengas on kansien ja reliefin poltetun reunan (76,7°…83,7°) väliin
+ * jäävä laattakaistale, joka maalattiin avomeren värillä.
+ *
+ * Linssin ajaksi napa saa reliefin omat sävyt: pohjoisessa avomeri
+ * (Jäämeri on pyramidin asteikolla syvää merta, sama sävy kuin
+ * kaistaleessa, joten rengasta ei synny) ja etelässä napajää — se
+ * VAALEA, jonka polttotyökalu antaa mannerjäälle
+ * (tools/reliefivarit.mjs JAAN_VARI), ei kartan beige.
+ *
+ * Kalotti ei ole värjättävissä (se on kuva), joten se piilotetaan
+ * linssin ajaksi ja palautetaan sulkiessa.
+ */
+export const NAPAKANSI_RELIEFI_POHJOINEN = MERIVARI;
+export const NAPAKANSI_RELIEFI_ETELA = JAAVARI;
+
+/*
  * ======== NAPAKALOTIT: KANNEN TILALLE OMA KARTTA ====================
  *
  * OMISTAJA 11.9.2026, sanatarkasti: *"Maapallon ylä- ja alaosan voisi
@@ -1862,6 +1886,32 @@ function lisaaNapakannet(kolmi, sade, ikkuna = globalThis) {
   kansi(true, NAPAKANSI_ETELA, true);
 
   /*
+   * KANSI SEURAA TOPOGRAFIALINSSIÄ (ks. NAPAKANSI_RELIEFI_* yllä).
+   * Kalotti on pelin oman kartan kuva, joten linssin ajan se on pois ja
+   * kansi näkyy — nyt reliefin sävyssä. Sulkiessa kaikki palaa
+   * täsmälleen entiselleen: kalotti takaisin ja kansi sen alle
+   * piiloon, jos kuva ehti latautua.
+   */
+  const kalottiLadattu = { pohjoinen: false, etela: false };
+  const napojenSavy = (paalla, etela) => {
+    if (paalla) return etela ? NAPAKANSI_RELIEFI_ETELA : NAPAKANSI_RELIEFI_POHJOINEN;
+    return etela ? NAPAKANSI_ETELA : NAPAKANSI_POHJOINEN;
+  };
+  const linssiinPaivitys = (paalla) => {
+    for (const puoli of ['pohjoinen', 'etela']) {
+      for (const verkko of kannet[puoli]) {
+        verkko.material?.color?.set?.(napojenSavy(paalla, puoli === 'etela'));
+        verkko.visible = paalla ? true : !kalottiLadattu[puoli];
+      }
+    }
+    for (const verkko of tehdyt) {
+      if (verkko.userData?.napakalotti) verkko.visible = !paalla;
+    }
+  };
+  const irrotaLinssi = kuunteleReliefiLinssi(linssiinPaivitys);
+  if (reliefiKaytossa(ikkuna)) linssiinPaivitys(true);
+
+  /*
    * KARTTAKALOTTI KANNEN PÄÄLLE (ks. NAPAKALOTIT yllä). Kuva haetaan
    * ämpäristä; verkko ja tekstuuri syntyvät vasta kun kuva on ladattu,
    * joten 404 tai katkennut verkko EI jätä palloa tyhjäksi eikä heitä
@@ -1928,7 +1978,12 @@ function lisaaNapakannet(kolmi, sade, ikkuna = globalThis) {
        * takeeksi mistään, eikä kalottia pidä nostaa vektorien yli
        * senkään vuoksi: varakappale otetaan yksinkertaisesti pois.
        */
-      for (const k of kannet[puoli]) k.visible = false;
+      kalottiLadattu[puoli] = true;
+      // Linssin ajan kansi on se, joka näkyy (reliefin sävyssä), ja
+      // kalotti on piilossa: kuva ei saa nousta reliefin päälle.
+      const linssi = reliefiKaytossa(ikkuna);
+      verkko.visible = !linssi;
+      for (const k of kannet[puoli]) k.visible = linssi;
     };
     kuva.src = napakalotinUrl(puoli);
   };
@@ -1937,6 +1992,7 @@ function lisaaNapakannet(kolmi, sade, ikkuna = globalThis) {
 
   return () => {
     purettu = true;
+    irrotaLinssi();
     for (const verkko of tehdyt) {
       juuri.remove(verkko);
       verkko.geometry?.dispose?.();

@@ -895,6 +895,58 @@ async function napauta(sivu, x, y) {
   await sivu.mouse.click(x, y);
 }
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * ÄÄNIPIIRI VIRITETÄÄN ENNEN KELLOA — MUUTEN 8c MITTAA ÄÄNILAITETTA
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * MITATTU 19.9.2026 (CDP-profiili napautuksen yli, 390 × 844):
+ * vartion 8c *"ajo 20 668 ms"* koostui yhdestä ainoasta asiasta —
+ * `new AudioContext()` **20 003 ms**, 7 038 profiiliosumaa 7 278:sta
+ * (96,7 %) solmussa `AudioContext ← kytkeVahvistin` (js/puhe.js).
+ * Liuskan oma kamera-ajo oli SAMASSA mittauksessa **429 ms** (ajo
+ * alkoi t = 20 184, päättyi t = 20 613 `perilla`) ja liuska aukesi
+ * 17 ms myöhemmin — eli täsmälleen se, mitä väite vaatii.
+ *
+ * MIKSI NAPAUTUS MAKSOI SEN. js/puhe.js virittää äänen ISTUNNON
+ * ENSIMMÄISESTÄ kosketuksesta (`document.addEventListener(
+ * 'pointerdown', virita, { once: true, capture: true })`) — se on
+ * omistajan päätös 15.8.2026 (Mac-Safari: striimiluenta alkaa vasta
+ * verkkovastauksen jälkeen eli eleen ulkopuolella, joten piiri on
+ * herätettävä eleessä). Liuska-lohko avaa oman sivunsa ja ajaa 8a:n
+ * ja 8b:n pelkillä `evaluate`-luennoilla, joten 8c:n napautus on
+ * lohkon ENSIMMÄINEN pointerdown — ja se maksoi koko istunnon
+ * äänivirityksen.
+ *
+ * MIKSI 20 s. Tässä Chromiumissa (Mac Studio, ei äänilaitetta)
+ * äänilaitteen valtuutus ei vastaa ja katkeaa sisäiseen 20 sekunnin
+ * aikakatkoon: `about:blank`-sivulla sama konstruktori on **127 ms**,
+ * pelin sivulla **20 003 ms**, ja piiri palaa tilassa `running`
+ * mutta `currentTime` 0 — sama oire kuin savuke-astro-aanen velassa
+ * `ctxAika 0` ja savuke-topografialinssin `luenta false` -velassa
+ * (docs/raportit/viesti-fable-savukkeet-v1947-20260919.md kohdat 2
+ * ja 3 b). Pelaajan laitteella sama kutsu on millisekunteja.
+ *
+ * EI V1947:N VIKA. Sama savuke `origin/main`-puussa (v1946) antaa
+ * bitilleen saman: `ajo 20 631 ms`, 16/17.
+ *
+ * KORJAUS EI OLE RAJAN LÖYSENNYS. Katto pysyy 2 000 ms:ssä ja väite
+ * sanasta sanaan ennallaan; virittäminen siirtää vain istunnon
+ * kertaluonteisen äänikustannuksen kellon ULKOPUOLELLE, kuten se on
+ * oikeassa pelissäkin (pelaaja on koskettanut ruutua kymmeniä kertoja
+ * ennen kuin napauttaa kaupunkimerkkiä). Ele on synteettinen
+ * pointerdown BODYYN — ei kartan koteloon, jottei se pysäytä
+ * kamera-ajoa (`pysaytaKameraAjo('ele')`) eikä osu mihinkään
+ * merkkiin.
+ */
+async function viritaAanipiiri(sivu) {
+  await sivu.evaluate(() => {
+    const e = new PointerEvent('pointerdown', { bubbles: true, cancelable: true, pointerType: 'touch' });
+    document.body.dispatchEvent(e);
+  });
+  await sivu.waitForTimeout(100);
+}
+
 /** Napautuksen jälkeen: mitkä asteet kirjasto antoi pelille? */
 const jalkitila = (sivu, asteet) => sivu.evaluate((a) => {
   const v = window.matkakirja.ui.pallolauta.viimeinenNapautus?.();
@@ -2666,6 +2718,9 @@ if (lohko('liuska')) for (const ruutu of RUUDUT) {
 
   /* 8c-8h: liuska auki kaupunkimerkin napautuksesta. */
   await suljeKortti(sivu);
+  // Istunnon äänipiiri kellon ULKOPUOLELLA (ks. viritaAanipiiri):
+  // ilman tätä 8c mittaa 20 s:n äänilaitevaltuutuksen eikä kamera-ajoa.
+  await viritaAanipiiri(sivu);
   await sivu.waitForTimeout(300);
   /*
    * NAPAUTUS OSUU LAUDAN OMAAN KAUPUNKIMERKKIIN (Fablen paatos

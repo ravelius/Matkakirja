@@ -554,8 +554,19 @@ test('peli ottaa yksivärisen kannen pois, kun kalotti on paikallaan', () => {
    * piirtojärjestys ei siis ratkaise, kumpi jää päälle. Mitattu
    * 11.9.2026 etelänavalta, jossa kansi voitti. Varakappale otetaan
    * siksi pois näkyvistä — eikä kalottia nosteta vektorien yli.
+   *
+   * POIKKEUS (PAATOKSET 41 kohta 2, 18.9.2026): topografialinssin ajan
+   * kalotti on pelin oman kartan kuva reliefin päällä, joten silloin
+   * järjestys on päinvastainen — kalotti piiloon ja kansi näkyviin
+   * reliefin sävyssä. `linssi` on siis tarkoituksella muuttuja eikä
+   * vakio `false`.
    */
-  assert.match(pallo, /for \(const k of kannet\[puoli\]\) k\.visible = false;/);
+  assert.match(pallo, /const linssi = reliefiKaytossa\(ikkuna\);/);
+  assert.match(pallo, /verkko\.visible = !linssi;/);
+  assert.match(pallo, /for \(const k of kannet\[puoli\]\) k\.visible = linssi;/);
+  assert.match(pallo, /export const NAPAKANSI_RELIEFI_POHJOINEN = MERIVARI;/);
+  assert.match(pallo, /export const NAPAKANSI_RELIEFI_ETELA = JAAVARI;/);
+  assert.match(pallo, /const irrotaLinssi = kuunteleReliefiLinssi\(linssiinPaivitys\);/);
   assert.match(pallo, /const kannet = \{ pohjoinen: \[\], etela: \[\] \};/);
   assert.doesNotMatch(pallo, /verkko\.renderOrder = 1;/);
 });

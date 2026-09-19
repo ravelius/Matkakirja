@@ -1384,6 +1384,58 @@ test('pinnanKirkkaus piirtää kehyksen ja lukee pallon keskustan', async () => 
   }), null);
 });
 
+/*
+ * PILVIKUORI EI SAA SOKAISTA MUSTAN PINNAN VARTIOTA (19.9.2026,
+ * PR #2590). PAATOKSET 43 kohta 7 toi pinnan päälle pilvikerroksen
+ * (peitto kaukaa 0,9), ja se osui täsmälleen mittauksen näytepisteisiin:
+ * savuke luki mustasta pinnasta 186 eli "kaikki hyvin". Tämä testi
+ * mallintaa tilanteen kahdella arvolla — kuori päällä (vaalea) ja pois
+ * (musta pinta) — ja vaatii, että mittaus näkee PINNAN ja että kuori
+ * palautetaan jokaisen mittauksen jälkeen.
+ */
+test('pinnanKirkkaus näkee mustan pinnan myös pilvikuoren alta', async () => {
+  const { pinnanKirkkaus, PINNAN_MUSTAN_KYNNYS } = await import('../js/linssit/satelliitti-avaruus.js');
+  const kuori = { nakyvissa: true, piilotuksia: 0, palautuksia: 0 };
+  const piirrot = [];
+  const gl = {
+    RGBA: 1,
+    UNSIGNED_BYTE: 2,
+    isContextLost: () => false,
+    readPixels: (x, y, w, h, f, t, ulos) => {
+      // Pilvikuori peittää mustan pinnan; pinta itse on musta.
+      const v = kuori.nakyvissa ? 186 : 0;
+      ulos[0] = v; ulos[1] = v; ulos[2] = v; ulos[3] = 255;
+    },
+  };
+  const pallo = {
+    renderer: () => ({
+      getContext: () => gl,
+      domElement: { width: 400, height: 300 },
+      render: () => { piirrot.push(kuori.nakyvissa); },
+    }),
+    scene: () => ({}),
+    camera: () => ({}),
+  };
+  const piilota = (kylla) => {
+    kuori.nakyvissa = !kylla;
+    if (kylla) kuori.piilotuksia += 1; else kuori.palautuksia += 1;
+    return true;
+  };
+  // Ilman kytkintä vartija näkee pilvet (tämä OLI vika).
+  assert.equal(pinnanKirkkaus(pallo, globalThis, null), 186);
+  // Kytkimen kanssa se näkee pinnan ja menee mustan kynnyksen alle.
+  assert.ok(pinnanKirkkaus(pallo, globalThis, piilota) < PINNAN_MUSTAN_KYNNYS);
+  assert.equal(kuori.piilotuksia, 1);
+  assert.equal(kuori.palautuksia, 1);
+  // Kuori on mittauksen jälkeen taas piirrossa, ja se myös PIIRRETTIIN.
+  assert.equal(kuori.nakyvissa, true);
+  assert.deepEqual(piirrot, [true, false, true]);
+  // Heittävä readPixels ei saa jättää kuorta piiloon.
+  gl.readPixels = () => { throw new Error('puskuri poissa'); };
+  assert.equal(pinnanKirkkaus(pallo, globalThis, piilota), null);
+  assert.equal(kuori.nakyvissa, true);
+});
+
 test('musta pinta korjataan ensin materiaalin värillä', async () => {
   const { valkaiseMateriaali } = await import('../js/linssit/satelliitti-avaruus.js');
   /*

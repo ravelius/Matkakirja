@@ -90,8 +90,11 @@
 import { el } from './mapart.js';
 import { pyramidiUrl } from './media.js';
 import {
-  haeReliefinLuettelo, merkitseLinssiketju, reliefiKaytossa, reliefinLaattaUrl,
-  reliefinSyvinTaso, reliefinTaso, reliefinVersio, reliefipyramidiPaalla,
+  ASTRONAUTIN_SAVY, ASTRONAUTIN_SUODATIN, JAARAJA_LAT, astronautinValoliuunPysakit,
+  haeReliefinLuettelo, merkitseLinssiketju, reliefiAstronautilla, reliefiKaytossa,
+  reliefinLaattaUrl, reliefinSyvinTaso, reliefinTaso, reliefinTaustavari, reliefinVaraLahde,
+  reliefinVersio,
+  reliefipyramidiPaalla,
 } from './reliefipyramidi.js';
 import { NOSTOLADONTA_SAANTO } from './nostoladonta.js';
 import {
@@ -2718,6 +2721,16 @@ export function pyramidinKerrostasot(z) {
    * sanoo ne nimenomaan reliefin päälle.
    */
   if (reliefi) {
+    /*
+     * ASTRONAUTIN KAMERASSA EI OLE PELIN MUSTETTA (PAATOKSET 41 kohta
+     * 4, LISAYS 16 kohta 47). Sama laatasto, sama laattakone — mutta
+     * astronautin ikkunasta ei näy rantaviivaa, reittiverkkoa eikä
+     * poltettuja nimiöitä, vaan pelkkä maasto, jonka päälle linssi
+     * piirtää omat kerroksensa (ISS, varjo, kohdepisteet). Merkkitasot
+     * ovat myös kolme hakua ja kolme drawImagea laattaa kohti, eli
+     * niiden jättäminen pois on suoraan puhelimen muistia ja aikaa.
+     */
+    if (reliefiAstronautilla()) return [reliefi];
     const merkit = [];
     const ranta0 = rantatasonTasot()?.find((t) => t.z === z);
     if (ranta0) merkit.push(ranta0);
@@ -2772,6 +2785,49 @@ export function pyramidinReliefiKaytossa() {
 }
 
 /**
+ * Piirtääkö Astronautin kamera laatastoa (eikä topografialinssi)?
+ * Sama ovi kuin muillakin reliefipyramidin kysymyksillä — pallo ei tuo
+ * js/reliefipyramidi.js:ää itse.
+ */
+export function pyramidinReliefiAstronautilla() {
+  return reliefiAstronautilla();
+}
+
+/**
+ * Kankaan suodatin Astronautin kameran laastarille (kylläisyys alas)
+ * tai null. Sama kerroin kuin linssin omalla pallotekstuurilla, jotta
+ * laastarin ja 4k-pohjan välillä ei näy sävyrajaa.
+ */
+export function pyramidinReliefinSuodatin() {
+  return reliefiAstronautilla() ? ASTRONAUTIN_SUODATIN : null;
+}
+
+/**
+ * Astronautin laastarin valoliu'un pysäkit laatan kankaalle tai tyhjä
+ * taulukko (ei astronauttitila, tai rivin leveysastetta ei saada).
+ *
+ * Sama ovi kuin kylläisyyssuodattimella: pallo ei tuo
+ * js/reliefipyramidi.js:ää itse. Perustelu ja kaava ovat siellä
+ * (VALON VASTAKAAVA MYÖS LAASTARILLE).
+ *
+ * @param {number} korkeus      kankaan korkeus pikseleinä
+ * @param {function} latRivilla kankaan y (px) → leveysaste
+ */
+export function pyramidinReliefinValoliuku(korkeus, latRivilla) {
+  if (!reliefiAstronautilla()) return [];
+  return astronautinValoliuunPysakit(korkeus, latRivilla);
+}
+
+/**
+ * Laastarin materiaalin sävy (0x999999) tai null. Sama tummennus kuin
+ * linssin omalla pallolla (`PALLON_SAVY`); ilman sitä laastari on
+ * 1,68-kertaisesti kirkkaampi kuin pohja samassa kohdassa.
+ */
+export function pyramidinReliefinSavy() {
+  return reliefiAstronautilla() ? ASTRONAUTIN_SAVY : null;
+}
+
+/**
  * Reliefilaataston syvin taso (z) tai null. Laattakone ei saa valita
  * tätä syvempää tasoa linssin ajan: sitä ei ole poltettu.
  */
@@ -2788,3 +2844,27 @@ export function pyramidinReliefinSyvinTaso() {
 export function pyramidinLinssiketju(vaihe) {
   merkitseLinssiketju(vaihe);
 }
+
+/*
+ * PUUTTUVAN RELIEFILAATAN PAIKANPITÄJÄ SAMAN OVEN KAUTTA
+ * (PAATOKSET 41 kohdat 1–3). Pallon lepokerros ei tuo
+ * js/reliefipyramidi.js:ää itse, joten karkean varalaatan haku, sen
+ * tason luenta ja aukon tasainen väri kulkevat tästä kuten luettelo ja
+ * osoitteetkin.
+ */
+export function pyramidinReliefinVaraLahde(z, sarake, rivi, laatta) {
+  return reliefinVaraLahde(z, sarake, rivi, laatta);
+}
+
+/** Reliefin taso z laattakoneen muodossa (varalaatan osoitetta varten). */
+export function pyramidinReliefinTaso(z) {
+  return reliefinTaso(z);
+}
+
+/** Aukon tasainen väri leveysasteen mukaan (meri tai napajää). */
+export function pyramidinReliefinTaustavari(lat) {
+  return reliefinTaustavari(lat);
+}
+
+/** Leveysaste, jonka eteläpuolella aukko on jäätä eikä merta. */
+export const PYRAMIDIN_JAARAJA_LAT = JAARAJA_LAT;

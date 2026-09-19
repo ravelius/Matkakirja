@@ -112,6 +112,22 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
   assert.match(lauta, /const valinta = aloitusNakyvat\(\);\n\s+if \(valinta\) return valinta\.has\(k\.id\);/);
   assert.match(lauta, /return nimet\.nimetty\(k\.id\)\n\s+\|\| ui\.game\.cityOf\?\.\(\)\?\.id === k\.id\n\s+\|\| Boolean\(ui\.maailmanakyma\?\.\(\)\);/);
   /*
+   * MUIDEN MAIDEN KAUPUNGIT PIILOON, KUN EI OLLA LIIKKUMASSA (Raamattu,
+   * KARTTAUUDISTUKSEN PAATOKSET 43 kohta 8; omistaja 18.9.2026
+   * sanatarkasti: *"Voiko muiden maiden kaupungit piilottaa kartalta
+   * jos ei olla liikkumassa?"*). Rajaus on pistekerroksen portti
+   * ENNEN vanhaa sääntöä, ja sama joukko menee nimien ladontaan.
+   */
+  assert.match(lauta, /const rajaus = pelinKaupunkirajaus\(\);\n\s+if \(rajaus && !rajaus\.has\(k\.id\)\) return false;/);
+  // Maa luetaan samasta paikasta kuin korostuskehä ja nostotaso, ja
+  // jäsenyys PALLON oman laudan taulusta (pelin pack voi olla toinen).
+  assert.match(lauta, /const taulu = pack\?\.map\?\.cityCountry \?\? null;/);
+  assert.match(lauta, /const iso = taulu \? kohteidenNykyinenIso\(ui\) : null;/);
+  // Maailmatila, linssi ja avauslento näyttävät kaikki kuten ennen.
+  assert.match(lauta, /if \(lento \|\| linssiPaalla\(\) \|\| maailmatilassa\(\) \|\| ui\.maailmanakyma\?\.\(\)\) \{/);
+  // Siirtovaiheessa tarjolla olevat kohteet tulevat joukkoon.
+  assert.match(lauta, /game\.phase === 'move' && !game\.player\?\.isBot && !ui\.katselu/);
+  /*
    * KAUPUNGIN PISTE PIILOON LIUSKAN AJAKSI (Raamattu, KARTTAUUDISTUKSEN
    * PAATOKSET 34 kohta 16 a, omistajan iPhone-kuva v1939: *"piste nakyy
    * liikaa taustan lapi"*). Sääntö on pistekerroksen suodatin, ja se on
@@ -168,7 +184,17 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
   // (nimet.js `vain`, aalto 3A). Valittavan kaupungin nimi tulee sen
   // omasta kohdemerkistä, joten karttanimi jää siltä pois — muuten
   // ruudulla oli kaksi nimeä päällekkäin (omistajan kaappaus 5.9.2026).
-  assert.match(lauta, /const vain = lento\?\.nimet \?\? aloitusNimet\(\);/);
+  assert.match(lauta, /const niukka = lento\?\.nimet \?\? aloitusNimet\(\);/);
+  /*
+   * MUIDEN MAIDEN NIMET POIS SAMASTA PORTISTA (Raamattu,
+   * KARTTAUUDISTUKSEN PAATOKSET 43 kohta 8, 18.9.2026: *"Voiko muiden
+   * maiden kaupungit piilottaa kartalta jos ei olla liikkumassa?"*).
+   * Pelinäkymän rajaus kulkee ladonnan `vain`-portista, mutta BUDJETTI
+   * tulee yhä zoomtasosta — katto luetaan `niukka`sta eikä `vain`ista,
+   * tai kohdemaan koko ohittaisi nimibudjetin.
+   */
+  assert.match(lauta, /const vain = niukka \?\? pelinKaupunkirajaus\(\);/);
+  assert.match(lauta, /const katto = niukka\n\s*\? niukka\.size/);
   assert.match(lauta, /const aloitusNimet = \(\) => \{/);
   assert.match(lauta, /^ {6}vain,$/m);
   assert.match(lue('../js/pallolauta/nimet.js'), /if \(vain && !vain\.has\(k\.c\.id\)\) continue;/);

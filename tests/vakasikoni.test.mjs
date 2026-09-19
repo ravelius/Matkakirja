@@ -90,11 +90,18 @@ test('väkäsnappi näkyy vain kun yläpalkki on piilossa', () => {
   // eriytyisivät, kartalle jäisi nappi ilman palkkia tai päinvastoin.
   const CSS = lue('../css/styles.css');
   assert.match(CSS, /\.ylapalkki-nappi \{ display: none; \}/);
-  // Samalla otsikolla on useampi kysely (mm. .intro-tyopoyta): otetaan
-  // se, jossa väkäsnappi asuu.
-  const kysely = [...CSS.matchAll(/@media \(max-height: 520px\) \{[\s\S]*?\n\}/g)]
+  /*
+   * Samalla otsikolla on useampi kysely (mm. .intro-tyopoyta): otetaan
+   * se, jossa väkäsnappi asuu. Ehtolista alkaa matalasta ruudusta ja
+   * jatkuu iPadin kosketusehdolla (Raamattu, KARTTAUUDISTUKSEN
+   * PAATOKSET 43 kohta 9), joten otsikko luetaan pilkkuun asti.
+   */
+  const kysely = [...CSS.matchAll(/@media \(max-height: 520px\)[^{]*\{[\s\S]*?\n\}/g)]
     .map((o) => o[0]).find((o) => o.includes('.ylapalkki-nappi'));
-  assert.ok(kysely, 'väkäsnapin max-height 520px -media-kyselyä ei löytynyt');
+  assert.ok(kysely, 'väkäsnapin media-kyselyä ei löytynyt');
+  // iPad kulkee samassa lohkossa: yksi sääntö, kaksi ehtoa.
+  assert.match(kysely,
+    /\(pointer: coarse\) and \(min-width: 700px\) and \(max-width: 1366px\)/);
   assert.match(kysely, /\.ylapalkki-nappi \{\s+display: grid;/);
   assert.match(kysely, /\.topbar \{[\s\S]*?transform: translateY\(-100%\);/);
 });

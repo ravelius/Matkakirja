@@ -88,18 +88,18 @@ test('versiovahti: kerros vain kun pallon sarja on poltettu samasta pyramidista'
    * ovat samaa ajoa.
    */
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A', viivat: 'V', nostot: 'N' }, pyramidi),
-    { pohja: true, ranta: false, viiva: false, nosto: true, vari: false, reliefi: false });
+    { pohja: true, ranta: false, viiva: false, nosto: true, vari: false, reliefi: false, astronautti: false, suodatin: null });
   // Rantataso (V4): rannan kanssa poltettu sarja vaatii saman rantaversion;
   // rannaton sarja (ranta null, vektorit piirtävät rannan) ohittaa tason.
   const pyramidiRanta = { ...pyramidi, rantataso: { versio: 'R' } };
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A', ranta: 'R', viivat: 'V', nostot: 'N' }, pyramidiRanta),
-    { pohja: true, ranta: true, viiva: false, nosto: true, vari: false, reliefi: false });
+    { pohja: true, ranta: true, viiva: false, nosto: true, vari: false, reliefi: false, astronautti: false, suodatin: null });
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A', ranta: null, viivat: 'V', nostot: 'N' }, pyramidiRanta),
-    { pohja: true, ranta: false, viiva: false, nosto: true, vari: false, reliefi: false });
+    { pohja: true, ranta: false, viiva: false, nosto: true, vari: false, reliefi: false, astronautti: false, suodatin: null });
   assert.equal(lepokerroksenKerrokset({ versio: 'A', ranta: 'R2', viivat: 'V', nostot: 'N' }, pyramidiRanta), null, 'eri ranta');
   // Pohjasarja ilman viivoja ja nostoja: vain pohja (nostot ovat pallolla elävinä).
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A' }, pyramidi),
-    { pohja: true, ranta: false, viiva: false, nosto: false, vari: false, reliefi: false });
+    { pohja: true, ranta: false, viiva: false, nosto: false, vari: false, reliefi: false, astronautti: false, suodatin: null });
   assert.equal(lepokerroksenKerrokset({ versio: 'B', viivat: 'V', nostot: 'N' }, pyramidi), null, 'eri pohja');
   assert.equal(lepokerroksenKerrokset({ versio: 'A', viivat: 'V', nostot: 'N2' }, pyramidi), null, 'eri nostot');
   assert.equal(lepokerroksenKerrokset({ versio: 'A', viivat: 'V' }, { versio: 'A' }), null, 'pyramidilla ei viivatasoa');
