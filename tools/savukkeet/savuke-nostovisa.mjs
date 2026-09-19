@@ -293,6 +293,27 @@ const visaUlkoasu = (sivu, kortti) => sivu.evaluate((valitsin) => {
 const ulkoasuOk = (u) => u.laatikko && u.korkeus <= u.ruutu / 2 && u.napit.length >= 2
   && u.napit.every((n) => n.lum >= 200 && n.reuna && n.teksti < 80);
 
+/*
+ * LIVIAN KASVOKANGAS SEURAA NAPPIA (Fable 19.9.2026 klo 21.36). Näkyvä
+ * lintu on .livia-kasvot-pinta (js/livia-eleet.js), joka sijoitetaan napin
+ * laatikon mukaan. Mitataan kankaan keskipisteen siirtymä napin
+ * keskipisteestä: nostetussa tilassa sen on oltava sama kuin levossa, eli
+ * kangas on siirtynyt napin mukana eikä jäänyt vanhaan paikkaan.
+ */
+const kankaanSiirtyma = (sivu) => sivu.evaluate(async () => {
+  await new Promise((v) => setTimeout(v, 700));
+  const n = document.querySelector('.pollo-nappi.pollo-kelluu');
+  const pinta = document.querySelector('.livia-kasvot-pinta');
+  if (!n || !pinta || pinta.hidden || !pinta.getClientRects().length) return null;
+  const a = n.getBoundingClientRect();
+  const b = pinta.getBoundingClientRect();
+  return {
+    dx: Math.round((b.left + b.width / 2) - (a.left + a.width / 2)),
+    dy: Math.round((b.top + b.height / 2) - (a.top + a.height / 2)),
+    napinAla: Math.round(a.bottom),
+  };
+});
+
 const luvut = (sivu) => sivu.evaluate(() => ({
   money: window.matkakirja.game.player.money,
   laskuri: window.matkakirja.game.nostotehtavatRatkaistu,
@@ -381,7 +402,15 @@ if (a.auki) {
       paneelinYla: pa ? Math.round(pa.getBoundingClientRect().top) : null,
     };
   }, paalle);
+  await alapaneeli(false); // kortti ja traileri pois: pulu levossa
+  const lepoKangas = await kankaanSiirtyma(a.sivu);
   const alaEnnen = await alapaneeli(true);
+  const nostettuKangas = await kankaanSiirtyma(a.sivu);
+  tieto('kasvokangas levossa / nostettuna', JSON.stringify({ lepoKangas, nostettuKangas }));
+  vaadi('9e. Livian kasvokangas seuraa nostettua pulua (siirtymä napista sama kuin levossa ±3 px)',
+    Boolean(lepoKangas && nostettuKangas) && nostettuKangas.napinAla < lepoKangas.napinAla - 20
+      && Math.abs(nostettuKangas.dx - lepoKangas.dx) <= 3 && Math.abs(nostettuKangas.dy - lepoKangas.dy) <= 3,
+    JSON.stringify({ lepoKangas, nostettuKangas }));
   await avaaKortti(a.sivu, KOE.id);
   const peittoC = await puluPeitto(a.sivu, '.fokusnosto-kortti');
   tieto('pulu alapaneelin päälle avatulla kortilla', JSON.stringify({ alaEnnen, peittoC }));
