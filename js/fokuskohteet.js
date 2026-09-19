@@ -6430,8 +6430,21 @@ function kuunteleKohdetta(ui, popup) {
    * lähderivin linkit, sulkuristi — eivät ole sulkuja: ne hoitavat
    * oman tekonsa itse.
    */
+  /*
+   * VAIN VAIHEESSA 1 (omistaja 19.9.2026 klo 23.41, iPad, Chartres,
+   * sanatarkasti: *"Nosto sulkeutuu kun leipätekstin kohdalta klikkaa.
+   * Johtuu siitä että peliin ei päivity että lisää sisältöä on tuotu
+   * ruudulle."*). Kortti pitää luokan `nostokuva-kortti` myös Lisää-
+   * napautuksen jälkeen, joten tämä vahti sulki kortin leipätekstin,
+   * kuvatekstin ja lähderivin napautuksesta. Vaiheessa 2
+   * (`nostokuva-vaihe2`, js/nostokuva.js avaaLisaa) kortti on tavallinen
+   * luettava kortti: sen päällä napautus ei tee mitään, ja sulku on ✕ tai
+   * napautus kortin ULKOPUOLELLE (`ulos`/`sulkeva` alla) — sama sopimus
+   * kuin täkynoston ja eläinkortin kerroksilla.
+   */
   const kuvanNapautus = kuunteleSulkevaNapautus(popup, {
     kelpaa: (tapahtuma) => nostokuvaKortissa(popup)
+      && !popup.classList.contains('nostokuva-vaihe2')
       && !tapahtuma.target?.closest?.('button, a'),
     napautus: () => {
       sfx.play('paper');
