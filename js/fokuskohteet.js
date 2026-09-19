@@ -141,6 +141,7 @@ import { HAHMOTELMA_CZE } from './packs/hahmotelma-cze.js';
 import { HAHMOTELMA_SWE } from './packs/hahmotelma-swe.js';
 import { HAHMOTELMA_DNK } from './packs/hahmotelma-dnk.js';
 import { HAHMOTELMA_SVK } from './packs/hahmotelma-svk.js';
+import { HAHMOTELMA_LUX } from './packs/hahmotelma-lux.js';
 import { HAHMOTELMA_HUN } from './packs/hahmotelma-hun.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
@@ -428,6 +429,14 @@ KOHDE_MAAT.BGR = [...(KOHDE_MAAT.BGR ?? []), ...HAHMOTELMA_BGR];
  * (Bratislava, Košice ym.) ovat sallittuja.
  */
 KOHDE_MAAT.SVK = [...(KOHDE_MAAT.SVK ?? []), ...HAHMOTELMA_SVK];
+
+/*
+ * LUXEMBURGIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; Luxemburgissa ei ole pelikaupunkia, joten kaupunkikohteet
+ * (Luxembourgin kaupunki, Esch ym.) ovat sallittuja.
+ */
+KOHDE_MAAT.LUX = [...(KOHDE_MAAT.LUX ?? []), ...HAHMOTELMA_LUX];
 
 /*
  * PUOLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
