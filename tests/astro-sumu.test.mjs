@@ -15,7 +15,8 @@ import {
   sumupikselit, sumuKaytossa,
   PILVIEN_PEITTO, PILVIEN_TAYSI, PILVIEN_NOLLA,
   SUMUN_KAUKO, SUMUN_KESKI, SUMUN_LAHI, SUMUN_KAUKO_PEITTO, SUMUN_KESKI_PEITTO,
-  PILVIEN_LAHDE, PILVIEN_SADE,
+  PILVIEN_LAHDE, PILVIEN_SADE, PILVIEN_OSOITE, PILVIEN_LEVEYS, PILVIEN_KORKEUS,
+  PILVIEN_NAPAHAIVYTYS, pilvikuvanAlfa,
 } from '../js/linssit/astro-sumu.js';
 
 const AVAUS = 4.5;
@@ -143,4 +144,74 @@ test('kalvokahvassa on suora peitto ja oma kierto (ei häivytystä kehyksittäin
   assert.match(lahde, /peitto: \(arvo\) =>/);
   assert.match(lahde, /kierra: \(kulma\) =>/);
   assert.match(lahde, /tila\.pinnanKierto = pinta\.rotation\.y/);
+});
+
+test('aito pilvikuva on kytketty ämpärin osoitteeseen', () => {
+  assert.match(PILVIEN_OSOITE, /^https:\/\/media\.matkakirja\.app\/.*pilvet-bluemarble-2048\.jpg$/);
+});
+
+/*
+ * ALFA LUMINANSSISTA — TÄMÄN ERÄN JUURISYY.
+ *
+ * Aito NASA-kuva on JPEG eikä siinä ole alfaa: sellaisenaan kalvon
+ * tekstuuriksi pantuna kuori on MUSTA pallo, ja jokainen pintaa
+ * mittaava savuke lukee kuorta. Testi tarkistaa kolme asiaa, jotka
+ * mustan pallon estävät: musta tausta on LÄPINÄKYVÄ, valkoinen pilvi
+ * on PEITTÄVÄ eikä missään kohdassa jää mustaa RGB:tä.
+ */
+test('pilvikuvanAlfa: musta taivas läpinäkyväksi, valkoinen pilvi peittäväksi', () => {
+  const leveys = 8;
+  const korkeus = 4;
+  const data = new Uint8ClampedArray(leveys * korkeus * 4);
+  for (let i = 0; i < leveys * korkeus; i += 1) {
+    // Parilliset pikselit mustia (taivas), parittomat valkoisia (pilvi).
+    const arvo = i % 2 === 0 ? 0 : 255;
+    data[i * 4] = arvo;
+    data[i * 4 + 1] = arvo;
+    data[i * 4 + 2] = arvo;
+    data[i * 4 + 3] = 255;
+  }
+  pilvikuvanAlfa(data, leveys, korkeus);
+  // Rivi 1 ja 2 ovat päiväntasaajan puolella (napahäivytys ei pure).
+  for (let x = 0; x < leveys; x += 1) {
+    const i = ((1 * leveys) + x) * 4;
+    if (x % 2 === 0) assert.equal(data[i + 3], 0, `taivas ${x} ei ole läpinäkyvä`);
+    else assert.ok(data[i + 3] > 240, `pilvi ${x} on liian ohut: ${data[i + 3]}`);
+    assert.ok(data[i] > 200, `RGB tummui: ${data[i]}`);
+  }
+});
+
+test('pilvikuvanAlfa: navat häivytetään (tasavälisen kuvan venymä)', () => {
+  const leveys = 2;
+  const korkeus = 180;
+  const data = new Uint8ClampedArray(leveys * korkeus * 4);
+  data.fill(255);
+  pilvikuvanAlfa(data, leveys, korkeus);
+  const alfa = (y) => data[(y * leveys) * 4 + 3];
+  assert.equal(alfa(0), 0, 'pohjoisnapa ei häivytetty');
+  assert.equal(alfa(korkeus - 1), 0, 'etelänapa ei häivytetty');
+  assert.ok(alfa(Math.round(korkeus / 2)) > 240, 'päiväntasaaja häipyi');
+  // Häivytysraja on sama kuin proseduraalisella kankaalla.
+  assert.equal(PILVIEN_NAPAHAIVYTYS.length, 2);
+});
+
+test('pilvikangas maalataan ensin ja aito kuva sen päälle (ei osoitetta kalvolle)', () => {
+  const lahde = readFileSync(new URL('../js/linssit/astro-sumu.js', import.meta.url), 'utf8');
+  // Kalvo saa KANKAAN, ei osoitetta: JPEGillä ei ole alfaa.
+  assert.match(lahde, /kuva: pilvikangasOlio/);
+  assert.ok(!/kuva: PILVIEN_OSOITE/.test(lahde), 'osoite menee yhä suoraan kalvolle');
+  assert.match(lahde, /pilvikuvanAlfa\(kuvadata\.data/);
+  // Mitat eivät saa karata muistirajasta (PAATOKSET 36).
+  assert.ok((PILVIEN_LEVEYS * PILVIEN_KORKEUS * 4) / 1048576 <= 32);
+});
+
+test('savukkeet mittaavat pintaa pilvikuoren alta (piilotaPilvet)', () => {
+  const kahva = readFileSync(new URL('../js/linssit/satelliitti-avaruus.js', import.meta.url), 'utf8');
+  assert.match(kahva, /piilotaPilvet: \(kylla = true\) =>/);
+  const pallo = readFileSync(new URL('../tools/savukkeet/savuke-astro-pallo.mjs', import.meta.url), 'utf8');
+  assert.ok(pallo.includes('piilotaPilvet?.(true)'), 'astro-pallo ei piilota kuorta');
+  assert.ok(pallo.includes('piilotaPilvet?.(false)'), 'astro-pallo ei palauta kuorta');
+  const sumu = readFileSync(new URL('../tools/savukkeet/savuke-astro-sumu.mjs', import.meta.url), 'utf8');
+  assert.ok(sumu.includes('piilotaPilvet?.(true)'), 'astro-sumu ei piilota kuorta');
+  assert.ok(sumu.includes('access-control-allow-origin'), 'astro-sumu ei salli CORSia');
 });

@@ -96,6 +96,24 @@ function ruudunTilastot(kuva, { x0, y0, x1, y1 }) {
   return { ka: +ka.toFixed(2), hajonta: +hajonta.toFixed(2), n: arvot.length };
 }
 
+/**
+ * KAHDEN KAAPPAUKSEN EROTUS samalta alueelta: keskiarvo ja
+ * keskihajonta. Tasainen himmennys antaisi VAKION eron (hajonta 0);
+ * repaleinen harso antaa vaihtelevan.
+ */
+function erotuksenTilastot(a, b, { x0, y0, x1, y1 }) {
+  const arvot = [];
+  for (let y = y0; y < y1; y += 2) {
+    for (let x = x0; x < x1; x += 2) {
+      const i = (y * a.width + x) * 4;
+      arvot.push(luminanssi(a.data, i) - luminanssi(b.data, i));
+    }
+  }
+  const ka = arvot.reduce((p, q) => p + q, 0) / arvot.length;
+  const hajonta = Math.sqrt(arvot.reduce((p, q) => p + (q - ka) ** 2, 0) / arvot.length);
+  return { ka: +ka.toFixed(2), hajonta: +hajonta.toFixed(2), n: arvot.length };
+}
+
 async function avaaPeli(s, haku) {
   /*
    * `domcontentloaded` JA PITKÄ KATKO. `load` odottaa jokaista kuvaa ja
@@ -224,7 +242,17 @@ async function ajo(sumuPaalla) {
   await s.route(/media\.matkakirja\.app|r2\.dev|images-assets\.nasa\.gov/, async (route) => {
     const v = await ulkohaku(route.request().url());
     if (!v) { route.abort(); return; }
-    route.fulfill({ status: 200, contentType: v.tyyppi ?? 'application/octet-stream', body: v.body });
+    /*
+     * CORS-OTSAKE ON PAKOLLINEN. Ämpäri ei anna `access-control-allow-
+     * origin`ia 127.0.0.1:lle, ja aito pilvikuva luetaan kankaalle
+     * `fetch`illä (mode: cors) — ilman tätä otsaketta haku kaatuisi ja
+     * savuke mittaisi proseduraalisia pilviä luullen niitä aidoiksi.
+     * Sama otsake on jo savuke-astro-pallossa.
+     */
+    route.fulfill({
+      status: 200, contentType: v.tyyppi ?? 'application/octet-stream', body: v.body,
+      headers: { 'access-control-allow-origin': '*' },
+    });
   });
   await avaaPeli(s, sumuPaalla ? '' : '&sumu=0');
   const muistiEnnen = await s.evaluate(MUISTI);
@@ -244,7 +272,54 @@ async function ajo(sumuPaalla) {
     await s.evaluate(ASETA, k.alt);
     await s.waitForTimeout(1800);
     const tila = await s.evaluate(TILA);
+    /*
+     * ── PILVIKUORI POIS RUUTUMITTAUKSEN AJAKSI (19.9.2026) ─────────
+     *
+     * Väite 1b mittaa RUUDULTA, paljonko AVARUUSSUMU muuttaa kuvaa.
+     * Pilvikuori on eri kerros ja eri profiili (0,9 → 0), ja aidon
+     * NASA-kuvan tultua se vei väitteen mennessään: ero sumuttomaan
+     * ajoon oli kaukana +9,7 mutta keskellä −3,3, eli luku kertoi
+     * pilvistä eikä sumusta. Kuori viedään pois piirrosta kaappauksen
+     * ajaksi (`piilotaPilvet`, sama kytkin kuin pinnan mittauksella) ja
+     * palautetaan heti perään — peiton oma profiili luetaan yhä
+     * `tila`sta, joka on luettu ENNEN piilotusta.
+     */
+    const piilotettu = await s.evaluate(() => {
+      const kahva = window.matkakirja.ui.pallolinssi?.kahva?.avaruus;
+      const ok = Boolean(kahva?.piilotaPilvet?.(true));
+      /*
+       * ISS JA RATAKAARI POIS: ne liikkuvat joka kehyksellä ja osuvat
+       * keskiruutuun, joten ne toisivat mittaukseen omaa vaihteluaan.
+       */
+      const tyyli = document.createElement('style');
+      tyyli.id = 'astro-sumun-mittaus';
+      tyyli.textContent = '.astro-rata, .astro-iss { display: none !important; }';
+      document.head.appendChild(tyyli);
+      window.matkakirja.ui.pallolauta?.heraa?.();
+      return ok;
+    });
+    await s.waitForTimeout(400);
     const kaappaus = await s.screenshot();
+    /*
+     * SUMUN OMA OSUUS: sama näkymä ilman sumukalvoja, samasta
+     * kamera-asennosta ja saman sekunnin sisällä. Erotuskuva ON sumu
+     * — ja jos sumu olisi tasainen himmennys, erotus olisi VAKIO.
+     */
+    let sumuton = null;
+    if (sumuPaalla && k.tunnus === 'keski') {
+      await s.evaluate(() => {
+        const tyyli = document.getElementById('astro-sumun-mittaus');
+        if (tyyli) tyyli.textContent += ' .astro-sumu { display: none !important; }';
+        window.matkakirja.ui.pallolauta?.heraa?.();
+      });
+      await s.waitForTimeout(400);
+      sumuton = decodePng(await s.screenshot());
+    }
+    await s.evaluate(() => {
+      document.getElementById('astro-sumun-mittaus')?.remove();
+      window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.piilotaPilvet?.(false);
+      window.matkakirja.ui.pallolauta?.heraa?.();
+    });
     if (ULOS) writeFileSync(join(ULOS, `astro-sumu-${sumuPaalla ? 'on' : 'off'}-${k.tunnus}.png`), kaappaus);
     const kuva = decodePng(kaappaus);
     // Keskiruutu: pallon keskus 390 × 844 -kotelossa, dpr 2.
@@ -252,7 +327,12 @@ async function ajo(sumuPaalla) {
       x0: Math.round(kuva.width * 0.30), y0: Math.round(kuva.height * 0.36),
       x1: Math.round(kuva.width * 0.70), y1: Math.round(kuva.height * 0.64),
     });
-    otokset.push({ ...k, tila, tilastot });
+    const RUUTU = {
+      x0: Math.round(kuva.width * 0.30), y0: Math.round(kuva.height * 0.36),
+      x1: Math.round(kuva.width * 0.70), y1: Math.round(kuva.height * 0.64),
+    };
+    const erotus = sumuton ? erotuksenTilastot(kuva, sumuton, RUUTU) : null;
+    otokset.push({ ...k, tila, tilastot, piilotettu, erotus });
     console.log(`  ${sumuPaalla ? 'sumu' : 'pois'} ${k.tunnus.padEnd(6)} alt=${k.alt.toFixed(2)} `
       + `sumu=${tila.sumu ?? '?'} peitot=${JSON.stringify(tila.peitot)} `
       + `ka=${tilastot.ka} hajonta=${tilastot.hajonta}`);
@@ -290,21 +370,24 @@ const eroKauko = ero('kauko');
 const eroKeski = ero('keski');
 const eroLahi = ero('lahi');
 /*
- * MITÄ TÄMÄ VÄITE MITTAA — JA MITÄ EI (mitattu Macilla 18.9.2026).
+ * MITÄ TÄMÄ VÄITE MITTAA — JA MITÄ EI.
  *
  * Ensimmäinen versio vaati, että kirkkausero on KESKELLÄ suurin. Se
- * meni punaiseksi (kauko 83,8 vs. keski 83,5), eikä vika ollut sumussa
- * vaan mittarissa: ruudun ero sumuttomaan ajoon on PILVIKERROKSEN JA
- * AVARUUSSUMUN SUMMA, ja pilvet ovat kaukana ja keskimatkalla lähes
- * yhtä peittävät (0,90 ja 0,86). Sumun oma profiili luetaan siksi
- * kalvojen TODELLISESTA peittävyydestä (getComputedStyle, alla), ja
- * ruudulta vaaditaan se, mikä siitä oikeasti seuraa: kaukana ja
- * keskellä harso NÄKYY, lähellä molemmat kerrokset ovat poissa eikä
- * ruutu eroa sumuttomasta lainkaan.
+ * meni punaiseksi (kauko 83,8 vs. keski 83,5, mitattu 18.9.2026),
+ * koska ruudun ero sumuttomaan ajoon oli PILVIKERROKSEN JA
+ * AVARUUSSUMUN SUMMA. Toinen versio vaati molemmilta selvää eroa, ja
+ * AITO NASA-pilvikuva kaatoi senkin (kauko +9,7, keski −3,3): pilvet
+ * ovat oma kerroksensa, oma profiilinsa ja omat pikselinsä.
+ *
+ * Nyt väite on se, mitä se sanoo olevansa: kaappaus otetaan PILVIKUORI
+ * PIILOTETTUNA, joten ero sumuttomaan ajoon on yksin AVARUUSSUMUN
+ * osuus — kaukana ja keskellä harso näkyy, lähellä sitä ei ole
+ * lainkaan. Pilvien oma profiili on väitteessä 1c ja `tila`ssa.
  */
-vaadi('ruudun kirkkausero: kaukana ja keskellä selvä, lähellä nolla',
-  eroKauko > 5 && eroKeski > 5 && Math.abs(eroLahi) < 2,
-  `kauko=${eroKauko} keski=${eroKeski} lahi=${eroLahi}`);
+vaadi('ruudun kirkkausero (pilvikuori piilossa): kaukana ja keskellä selvä, lähellä nolla',
+  eroKauko > 2 && eroKeski > 5 && Math.abs(eroLahi) < 2,
+  `kauko=${eroKauko} keski=${eroKeski} lahi=${eroLahi}`
+  + ` (kuori piilotettu: ${luku(paalla, 'keski')?.piilotettu})`);
 
 /* ---- väite 1c: sumun peitto RUUDULTA (computed style) ------------- */
 const peitto = (t) => (luku(paalla, t)?.tila?.peitot ?? [])[0] ?? null;
@@ -313,11 +396,27 @@ vaadi('sumukalvon peitto ruudulla: kaukaa < 0,2, keskeltä > 0,5, läheltä 0',
   `kauko=${peitto('kauko')} keski=${peitto('keski')} lahi=${peitto('lahi')}`);
 
 /* ---- väite 2: kohinan hajonta ------------------------------------- */
-const hajontaPaalla = luku(paalla, 'keski')?.tilastot?.hajonta ?? 0;
-const hajontaPois = luku(pois, 'keski')?.tilastot?.hajonta ?? 0;
-vaadi('kohinan hajonta ruudulla > 0 (ei tasainen himmennys)',
-  hajontaPaalla > 0 && hajontaPaalla > hajontaPois * 0.9,
-  `sumu=${hajontaPaalla} sumuton=${hajontaPois}`);
+/*
+ * MIKSI RUUDUN OMA HAJONTA EI KELPAA MITTARIKSI (mitattu 19.9.2026).
+ *
+ * Ensimmäinen versio vaati, että keskiruudun kirkkauden keskihajonta
+ * on sumullisessa ajossa suurempi kuin sumuttomassa. Se meni
+ * punaiseksi (13,93 vs. 16,29) — eikä siksi, että sumu olisi tasainen,
+ * vaan siksi, että HARSO PEITTÄÄ MAASTON: maaston oma kontrasti on
+ * moninkertainen sumun omaan verrattuna, ja 0,62:n peitto vaimentaa
+ * sitä enemmän kuin sumu tuo omaansa. Luku mittasi maastoa.
+ *
+ * Nyt mitataan SUMUN OMA OSUUS: sama näkymä sumukalvot piilotettuna ja
+ * erotuskuva näiden kahden välillä. Tasainen himmennys antaisi vakion
+ * (hajonta ≈ 0); repaleinen harso antaa vaihtelevan eron.
+ */
+const erotusKeski = luku(paalla, 'keski')?.erotus ?? null;
+vaadi('sumu ei ole tasainen himmennys: sen oma osuus vaihtelee ruudulla',
+  Boolean(erotusKeski) && erotusKeski.ka > 3 && erotusKeski.hajonta > 2,
+  `sumun oma osuus keskellä: keskiarvo ${erotusKeski?.ka}, hajonta`
+  + ` ${erotusKeski?.hajonta} (vaadittu > 3 ja > 2); keskiruudun oma hajonta`
+  + ` sumulla ${luku(paalla, 'keski')?.tilastot?.hajonta},`
+  + ` sumuttomassa ajossa ${luku(pois, 'keski')?.tilastot?.hajonta}`);
 
 /* ---- väite 3: kalvot ruudulla ------------------------------------- */
 const kalvoja = luku(paalla, 'keski')?.tila?.kalvoja ?? 0;

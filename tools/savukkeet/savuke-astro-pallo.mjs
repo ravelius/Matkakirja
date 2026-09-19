@@ -801,6 +801,24 @@ async function ajaNakyma(nimi) {
     return tila.reliefinKestoMs > 0 && muisti.kerrat >= 5;
   }, null, { timeout: 90000 }).catch(() => {});
   const povTeksti = (p) => (p ? `${p.lat.toFixed(3)},${p.lng.toFixed(3)},${p.altitude.toFixed(4)}` : 'null');
+  /*
+   * ── PILVIKUORI POIS MYÖS TÄSTÄ MITTAUKSESTA (19.9.2026) ─────────
+   *
+   * Aito NASA-pilvikuva (PAATOKSET 43 kohta 7) kaatoi kolme väitettä
+   * tästä lohkosta, eikä vika ollut varjossa vaan näkökentässä:
+   * kuori (säde 1,01, peitto kaukaa 0,9) on TÄSMÄLLEEN näytepisteiden
+   * ja pinnan välissä, ja se PYÖRII omaa tahtiaan
+   * (PILVIEN_KIERTO_ASTETTA_MIN) — terävä pilvireuna näytteen päällä
+   * liikkuu joka kehyksellä, joten "pysäytetty tila" ei ollut
+   * pysähtynyt (peräkkäisten näytteiden ero 0,9 ja 2, raja 0,5), ja
+   * "keskusta jää koskematta" luki pilviä (143,2 → 146,9).
+   *
+   * Sama lääke kuin `pinnanKirkkaus`illa (3a30fbf8): kuori pois
+   * piirrosta `visible`-lipulla mittauksen ajaksi ja takaisin heti
+   * perään. Varjo, valoreuna ja keskusta ovat PINNAN ilmiöitä, ja
+   * juuri niitä nämä väitteet koskevat. Pilvien oma näkyvyys on
+   * savuke-astro-sumun asia.
+   */
   const jaadytys = await s.evaluate(() => {
     const { ui } = window.matkakirja;
     const ohjaimet = ui.pallonInstanssi.controls?.();
@@ -808,14 +826,30 @@ async function ajaNakyma(nimi) {
     if (ohjaimet) ohjaimet.autoRotate = false;
     const tyyli = document.createElement('style');
     tyyli.id = 'astro-mittauksen-jaadytys';
-    tyyli.textContent = '.astro-rata, .astro-iss { display: none !important; }';
+    /*
+     * AVARUUSSUMUN KALVOT MYÖS POIS (19.9.2026). Ne ovat CSS-kalvoja
+     * kotelon päällä ja AJELEHTIVAT joka kehyksellä
+     * (`backgroundPosition` kellosta, peitto tässä korkeudessa noin
+     * 0,39) — kaappaus kaappaa ne mukaan, joten "pysäytetty tila" ei
+     * ollut pysähtynyt (peräkkäisten näytteiden ero 0,9, raja 0,5).
+     * Nämä väitteet koskevat PINNAN reunavarjoa; sumu on oma
+     * kerroksensa ja sen mittaa savuke-astro-sumu.
+     */
+    tyyli.textContent = '.astro-rata, .astro-iss, .astro-sumu'
+      + ' { display: none !important; }';
     document.head.appendChild(tyyli);
+    const pilvetPiiloon = Boolean(ui.pallolinssi?.kahva?.avaruus?.piilotaPilvet?.(true));
+    const pilvienPeitto = ui.pallolinssi?.kahva?.avaruus?.tila?.()?.sumu?.pilvet ?? null;
     ui.pallolauta?.heraa?.();
     const p = ui.pallonInstanssi.pointOfView();
-    return { pyoriEnnen, pov: { lat: p.lat, lng: p.lng, altitude: p.altitude } };
+    return {
+      pyoriEnnen, pilvetPiiloon, pilvienPeitto,
+      pov: { lat: p.lat, lng: p.lng, altitude: p.altitude },
+    };
   });
   const purajaadytys = () => s.evaluate((pyoriEnnen) => {
     document.getElementById('astro-mittauksen-jaadytys')?.remove();
+    window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.piilotaPilvet?.(false);
     const ohjaimet = window.matkakirja.ui.pallonInstanssi.controls?.();
     if (ohjaimet && pyoriEnnen !== null) ohjaimet.autoRotate = pyoriEnnen;
     window.matkakirja.ui.pallolauta?.heraa?.();
@@ -864,7 +898,8 @@ async function ajaNakyma(nimi) {
     paalla.vakaa && pois.vakaa && takaisin.vakaa && !kameraLiikkui,
     `peräkkäisten näytteiden ero: päällä ${paalla.ero}, pois ${pois.ero},`
     + ` takaisin ${takaisin.ero} (raja ${VAKAUDEN_RAJA}); kamera`
-    + ` ${povTeksti(jaadytys.pov)} → ${povTeksti(povLopussa)}`);
+    + ` ${povTeksti(jaadytys.pov)} → ${povTeksti(povLopussa)};`
+    + ` pilvikuori piilossa ${jaadytys.pilvetPiiloon} (peitto ${jaadytys.pilvienPeitto})`);
 
   vaadi(t('varjon puoli tummuu reunan tuntumassa'),
     paalla.vasenKa < pois.vasenKa * 0.92,
@@ -1310,6 +1345,18 @@ async function ajaNakyma(nimi) {
     document.head.append(el);
     return true;
   }, tila);
+  /*
+   * PILVIKUORI POIS MYÖS TÄSTÄ: 45b vertaa PINNAN kirkkautta 10 px:n ja
+   * 40 px:n päässä pisteestä, ja aidon pilvikuvan tultua molemmat
+   * näytteet olivat kuorta (ero 0,3, vaadittu ≥ 3). Kuori palautetaan
+   * heti lohkon jälkeen.
+   */
+  const pilvetPoisKehalta = pisteLahelta ? await s.evaluate(() => {
+    const ok = Boolean(window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.piilotaPilvet?.(true));
+    window.matkakirja.ui.pallolauta?.heraa?.();
+    return ok;
+  }) : false;
+  if (pisteLahelta) await s.waitForTimeout(300);
   let valo = null;
   if (pisteLahelta) {
     const oletus = await otos();
@@ -1333,6 +1380,14 @@ async function ajaNakyma(nimi) {
     valo.valaisu = +(valo.lahella - valo.lahellaIlman).toFixed(1);
     valo.sekoituksenLisa = +(valo.lahella - valo.lahellaNormal).toFixed(1);
     valo.taustanEro = +(valo.kaukana - valo.kaukanaIlman).toFixed(1);
+    valo.pilvetPiilossa = pilvetPoisKehalta;
+  }
+  if (pisteLahelta) {
+    await s.evaluate(() => {
+      window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.piilotaPilvet?.(false);
+      window.matkakirja.ui.pallolauta?.heraa?.();
+    });
+    await s.waitForTimeout(250);
   }
   vaadi(t('45a: ytimen kirkkaus on sädekehän reunaa suurempi'),
     Boolean(valo) && valo.ydin > valo.kehanReuna + 10,
@@ -1340,7 +1395,8 @@ async function ajaNakyma(nimi) {
   vaadi(t('45b: pinta pisteen vieressä on kirkkaampi kuin kaukana'),
     Boolean(valo) && valo.lahella - valo.kaukana >= 3, // Fable 18.9.2026: maastonaytteen vaihtelu (mitattu 4,6 kuormassa), valaisu 45c on tarkempi mitta
     `10 px ${valo?.lahella} vs. 40 px ${valo?.kaukana} `
-    + `(ero ${valo ? (valo.lahella - valo.kaukana).toFixed(1) : '—'}, vaadittu ≥ 3)`);
+    + `(ero ${valo ? (valo.lahella - valo.kaukana).toFixed(1) : '—'}, vaadittu ≥ 3;`
+    + ` pilvikuori piilossa ${valo?.pilvetPiilossa})`);
   vaadi(t('45c: valaisu tulee sädekehästä eikä maastosta'),
     Boolean(valo) && valo.valaisu >= 5 && Math.abs(valo.taustanEro) <= 3,
     `sädekehä nostaa 10 px:n kehää ${valo?.valaisu} yksikköä `
@@ -1563,14 +1619,32 @@ async function ajaNakyma(nimi) {
   await avaaLinssiEleella(f, 4500);
   await rauhoitu(f);
   const safariTila = await f.evaluate(MITAT);
+  /*
+   * PILVIKUORI POIS MUSTUUSMITTAUKSEN AJAKSI. Väite koskee PINTAA
+   * (LISÄYS 13 kohta 37, globe.gl Color(0)), ja aidon pilvikuvan
+   * tultua kaappaus luki kuorta: kirkkaus 13,6 kynnyksen 20 alta,
+   * vaikka pinnalla oli osoite. Sama sääntö kuin `pinnanKirkkaus`illa
+   * — jos musta pallo on mustana pilvien alla, sen pitää jäädä kiinni.
+   */
+  const safariPilvetPiiloon = await f.evaluate(() => {
+    const ok = Boolean(window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.piilotaPilvet?.(true));
+    window.matkakirja.ui.pallolauta?.heraa?.();
+    return ok;
+  });
+  await f.waitForTimeout(350);
   const safariKuva = decodePng(await f.screenshot({ type: 'png', timeout: 120000 }));
+  await f.evaluate(() => {
+    window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.piilotaPilvet?.(false);
+    window.matkakirja.ui.pallolauta?.heraa?.();
+  });
   const safariKirkkaus = keskipisteenKirkkaus(safariKuva, { keskiX, keskiY, dpr });
   vaadi(t('SAFARIN RAJOILLA: pallon pinnalla on yhä osoite'),
     Boolean(safariTila.avaruus?.pinnanOsoite) && safariTila.avaruus.pinnanOsoite !== 'null',
     `pinnanOsoite "${safariTila.avaruus?.pinnanOsoite}", reliefi ${safariTila.avaruus?.reliefi}`);
   vaadi(t('SAFARIN RAJOILLA: pallo ei ole musta'), safariKirkkaus > 20,
     `kirkkaus ${safariKirkkaus.toFixed(1)} (kynnys 20), reliefi `
-    + `${safariTila.avaruus?.reliefi}, kesto ${safariTila.avaruus?.reliefinKestoMs} ms`);
+    + `${safariTila.avaruus?.reliefi}, kesto ${safariTila.avaruus?.reliefinKestoMs} ms,`
+    + ` pilvikuori piilossa ${safariPilvetPiiloon}`);
   vaadi(t('SAFARIN RAJOILLA: ei sivuvirheitä'), safariVirheet.length === 0,
     safariVirheet.slice(0, 2).join(' | '));
   console.log(`    SAFARI-DIAG ${JSON.stringify(safariTila.avaruus?.diag ?? [])}`);
