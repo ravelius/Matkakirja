@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1948, teksti: 'Ranskan nostojen sisällöt ja kuvat, pilvikuva ämpäristä' },
   { v: 1947, teksti: 'Astronautin kamera pyramidista, sumu, kohdevalinta, saatto' },
   { v: 1946, teksti: 'Tekstit piilossa, kuvat lentävät, välipisteet, siirtozoomi' },
   { v: 1945, teksti: 'Pisteet aina kohdemaassa, poltto kohdemaan säännöllä' },
