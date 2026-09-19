@@ -16,8 +16,8 @@
  * js/fokuskohteet.js:ssä, ei sw.js SHELL:iin eikä tools/build-standalone.mjs:iin).
  * Rekisteröinti tehdään vasta, kun Opus on lisännyt Maltan kartalle
  * (countryShape, MLT.webp-fokuslehti, FOKUS_POHJAT). Kun se on tehty:
- *   0. `git mv tools/odottavat-paketit/hahmotelma-mlt.js js/packs/hahmotelma-mlt.js`
- *   1. js/fokuskohteet.js: `import { HAHMOTELMA_MLT } from './packs/hahmotelma-mlt.js';`
+ *   0. siirretty tools/odottavat-paketit/ -> js/packs/ (tehty 19.9.2026)
+ *   1. js/fokuskohteet.js: HAHMOTELMA_MLT tuotu tästä tiedostosta (tehty)
  *      ja `KOHDE_MAAT.MLT = [...(KOHDE_MAAT.MLT ?? []), ...HAHMOTELMA_MLT];`
  *   2. sw.js SHELL ja tools/build-standalone.mjs: rivi `hahmotelma-mlt.js`.
  *   3. Aja `node tools/tarkista-nostopaikat.mjs` ja `node --test tests/*.test.mjs`;
