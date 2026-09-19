@@ -49,6 +49,25 @@
  * tarvitse muuttaa. Ilman riviä lehti näkyy ilman säätä.
  */
 export const SAATIEDOT = {
+  /*
+   * BRYSSEL (20.9.2026, kaupunkilehti erä 2): Open-Meteon ERA5-arkisto,
+   * 1991–2020 (lat 50,85 / lon 4,35), kuukausikeskiarvot laskettu
+   * päivittäisistä arvoista; ylin/alin lisätään työkalulla
+   * tools/hae-saanormaalit.mjs --vain bryssel.
+   */
+  bryssel: {
+    lat: 50.85,
+    lon: 4.35,
+    keskilampo: [3.7, 4.1, 6.7, 9.9, 13.6, 16.5, 18.5, 18.3, 15.3, 11.6, 7.3, 4.3],
+    ylin: [6, 7, 10, 15, 18, 21, 22, 23, 19, 14, 10, 6],
+    alin: [1, 2, 4, 5, 9, 12, 15, 14, 11, 9, 4, 2],
+    sade: [63, 59, 57, 47, 63, 66, 71, 71, 55, 59, 65, 74],
+    luonnehdinta: 'Brysselin vuosi on tasainen ja kostea: sadetta kertyy '
+      + 'joka kuukausi 47–74 millimetriä ja vuodessa noin seitsemänsataa '
+      + 'viisikymmentä. Kuivin kuukausi on huhtikuu, märin joulukuu. '
+      + 'Keskilämpö nousee tammikuun 3,7 asteesta heinäkuun 18,5 '
+      + 'asteeseen, eikä yksikään kuukausi jää keskimäärin pakkaselle.',
+  },
   lontoo: {
     lat: 51.51,
     lon: -0.13,

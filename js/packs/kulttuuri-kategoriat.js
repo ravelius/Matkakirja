@@ -62784,6 +62784,679 @@ export const KULTTUURI_KATEGORIAT = {
     },
   ],
   /*
+   * BRYSSEL (20.9.2026, kaupunkilehti erä 2; omistajan päätös 19.9.2026:
+   * Belgian pelikaupunki). Täysi lehti: etusivu (kansi- ja avauskuvat,
+   * ennen ja nyt, Matkailijalle-opas) sekä aihesivut Historia,
+   * Rakennukset ja Ruoka ja juoma. Tekstit omin sanoin en-Wikipediasta
+   * (luettu 20.9.2026); kuvat Commonsista, lisenssi ja tekijä luettu
+   * rajapinnan extmetadatasta ja jokainen kuva katsottu silmin.
+   */
+  bryssel: [
+    {
+      id: 'kaupunki',
+      nimi: 'Bryssel',
+      johdanto: 'Kuninkaanlinna, puutarhaportaat ja pieni pronssipoika, jolla on noin tuhat '
+          + 'asua: Brysselissä kukkulan yläkaupunki ja alakaupunki liittyvät toisiinsa '
+          + 'portaiden ja puistojen kautta.',
+      kansikuvat: [
+        {
+          tiedosto: 'Arcade centrale - Cinquantenaire - Brussels, Belgium - DSC08490.jpg',
+          lyhyt: 'Cinquantenaire-kaari valmistui 1905 Jubelpuiston keskukseksi.',
+          selite: 'Cinquantenaire-kaari valmistui vuonna 1905 Jubelpuiston keskipisteeksi; '
+              + 'puiston rakennukset syntyivät alun perin Belgian kapinan '
+              + '50-vuotisjuhlanäyttelyyn 1880.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Koekelberg Basilique Nationale Sacré-Coeur Fassade 1.jpg',
+          lyhyt: 'Koekelbergin basilika on Belgian suurin kirkko, ja sen vihreä kupoli '
+              + 'nousee 89 metriin.',
+          selite: 'Koekelbergin Pyhän Sydämen basilika aloitettiin 1905 ja valmistui vasta '
+              + '1970; art deco -tyylisen kirkon kupoli hallitsee Brysselin luoteista '
+              + 'siluettia.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Eglise Notre-Dame du Sablon from the parc.jpg',
+          lyhyt: 'Sablonin Notre-Dame-kirkko edustaa myöhäistä brabantilaista goottia '
+              + '1400-luvulta.',
+          selite: 'Sablonin kirkko rakennettiin 1400-luvulla, ja sen uusgoottilaiset '
+              + 'koristeet ovat 1800-luvulta; rikkaassa sisustuksessa on kaksi '
+              + 'barokkikappelia.',
+          lahde: 'Leogs, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Brussels from air 4.jpg',
+          lyhyt: 'Lentokuvassa Bryssel levittäytyy puistojen ja tiheästi rakennettujen '
+              + 'asuinalueiden yli.',
+          selite: 'Lentokoneesta otetussa kuvassa Bryssel jatkuu horisonttiin asti: keskellä '
+              + 'on laajoja puistoja ja niiden ympärillä tiheää kaupunkia.',
+          lahde: 'Karelj, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Brussels panorama (9376295145).jpg',
+          lyhyt: 'Kerrostalojen ja tiilikattojen yllä avautuu katunäkymä Brysselin '
+              + 'asuinalueelle.',
+          selite: 'Ylhäältä otetussa kuvassa Brysselin kadut haarautuvat vanhojen '
+              + 'kerrostalojen ja punatiilikattojen välissä, ja kaukaisuudessa kohoaa '
+              + 'torneja.',
+          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Vue depuis le mont des arts Bruxelles.jpg',
+          lyhyt: 'Mont des Artsin puutarhasta avautuu näkymä kohti kaupungintornia.',
+          selite: 'Mont des Artsin geometrinen puutarha yhdistää yläkaupungin ja '
+              + 'alakaupungin, ja portailta erottuu Brysselin kaupungintalon torni.',
+          lahde: 'Alex Sirac, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Place Royale, Bruxelles, 1904.jpg',
+          vuosi: 'noin 1904',
+          lyhyt: 'Place Royalen aukiolla kuljettiin 1900-luvun alussa hevosvaunuilla ja '
+              + 'raitiovaunuilla.',
+          selite: 'Place Royale oli 1900-luvun alussa vilkas aukio: hevosvaunut ja '
+              + 'raitiovaunut kiertelivät Bouillonin Gottfriedin ratsastajapatsaan '
+              + 'ympärillä.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Place Royale Bruxelles 2023 vu du BELvue.jpg',
+          lyhyt: 'Nykyään Place Royale on väljä kivetty aukio, ja Bouillonin patsas seisoo '
+              + 'yhä keskellä.',
+          selite: 'Aukio rakennettiin vuosina 1775–1782 Coudenbergin palatsin raunioiden '
+              + 'päälle; se on 77 × 113 metrin kokoinen ja kokonaan kivetty.',
+          lahde: 'Jérôme, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Bruxelles Grand-Place Maison des Ducs de Brabant 1.jpg',
+          lyhyt: 'Grand-Placen laidalla kohoaa barokkinen julkisivu pilastereineen ja '
+              + 'kultakoristeineen.',
+          selite: 'Grand-Placen reunoja kiertävät entisten kiltojen barokkitalot, joiden '
+              + 'kultakoristeet hohtavat auringossa; talot rakennettiin uudelleen vuoden '
+              + '1695 pommituksen jälkeen.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Bryssel on Belgian pääkaupunki ja samalla kaksikielinen suurkaupunki, jossa '
+            + 'puhutaan sekä ranskaa että hollantia. Alue koostuu 19 kunnasta, ja EU:n ja '
+            + 'Naton keskeiset toimielimet ovat täällä. Matkailijalle kaupunki alkaa '
+            + 'vanhasta keskustasta: Grand-Placelta kävelee minuutissa kujille, joissa on '
+            + 'ravintoloita ja suklaakauppoja, ja suurin osa nähtävyyksistä on '
+            + 'kävelymatkan päässä. Ratikka ja metro vievät kauemmas.',
+        artikkeli: {
+          nimi: 'Matkailijan Bryssel',
+          teksti: 'Brysseliin tutustutaan jalan Grand-Placelta alkaen ja ratikalla siitä '
+              + 'eteenpäin.',
+          nosto: 'Grand-Placen talot rakennettiin uudelleen muutamassa vuodessa sen '
+              + 'jälkeen, kun ranskalaiset olivat polttaneet ne vuonna 1695.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Suomesta Brysseliin lentää suoraan Finnair, ja lentokentältä pääsee '
+                  + 'junalla keskustan asemille. Junalla saapuva jää usein pois '
+                  + 'Bruxelles-Midin asemalla, joka on Belgian vilkkain ja ainoa, jossa '
+                  + 'pysähtyvät kansainväliset Eurostar- ja TGV-suurnopeusjunat. Aseman '
+                  + 'alla on metro. Liikennettä hoitaa STIB, jonka verkkoon kuuluvat '
+                  + 'metro, raitiovaunut ja bussit. Metrolinjoja on vähän, mutta '
+                  + 'ratikkaverkko on yksi Euroopan laajimmista. Vanhassa keskustassa '
+                  + 'kävely on silti nopein tapa liikkua.',
+              kuva: [
+                {
+                  tiedosto: 'Brussels Midi okt 2019 1.jpg',
+                  lyhyt: 'Bruxelles-Midin asemalla pysähtyy Eurostar-suurnopeusjunia.',
+                  selite: 'Bruxelles-Midin asemalla pysähtyy Eurostar-suurnopeusjunia; asema '
+                      + 'on Belgian vilkkain.',
+                  lahde: 'Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Brussels tram T3000 3097.JPG',
+                  lyhyt: 'Ratikka linjalla 92 ajaa Notre-Dame du Grand Sablonin kirkon ohi.',
+                  selite: 'Brysselin raitiovaunuverkko on yksi Euroopan laajimmista. Kuvan '
+                      + 'ratikka ajaa linjaa 92 Notre-Dame du Grand Sablonin kirkon '
+                      + 'edessä.',
+                  lahde: 'Jacek Rużyczka, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Grand-Place ja vanhakaupunki',
+              teksti: 'Grand-Place on 68 × 110 metrin kokoinen kokonaan kivetty aukio, jonka '
+                  + 'ympärillä on entisten kiltojen barokkitaloja, kaupungintalo ja '
+                  + 'Kuninkaantalo. Kaupungintalon torni on 96 metriä korkea, ja sen '
+                  + 'huipulla seisoo Pyhän Mikaelin patsas. Ranskan armeija pommitti '
+                  + 'kaupunkia vuonna 1695 ja tuhosi suurimman osan aukion rakennuksista; '
+                  + 'vain kaupungintalon julkisivu ja torni kestivät. Talot nousivat pian '
+                  + 'uudelleen, ja aukio on ollut Unescon maailmanperintökohde vuodesta '
+                  + '1998. Parillisten vuosien elokuussa keskelle levitetään muutamaksi '
+                  + 'päiväksi kukkamatto, jossa on lähes miljoona begoniaa ja daaliaa.',
+              kuva: {
+                tiedosto: '2018 flower carpet at Grand Place, Brussels (DSCF6849).jpg',
+                lyhyt: 'Grand-Placen kukkamatto levitetään joka toinen elokuu aukion keskelle.',
+                selite: 'Joka toinen elokuu Grand-Placelle levitetään kolmeksi tai neljäksi '
+                    + 'päiväksi kukkamatto, jonka kuviot on tehty lähes miljoonasta '
+                    + 'kukasta.',
+                lahde: 'Trougnouf (Benoit Brummer), Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ruoka ja juoma',
+              teksti: 'Bryssel tunnetaan vohvelistaan, suklaastaan, ranskalaisista '
+                  + 'perunoistaan ja monista oluistaan. Brysselin vohveli on '
+                  + 'kevyttaikinainen ja pursotetaan kermalla tai hedelmillä, kun taas '
+                  + 'Liègen vohvelissa on taikinassa helmisokeria. Klassikkoannos on '
+                  + 'moules-frites eli simpukat ja ranskalaiset. Olutpuolella kannattaa '
+                  + 'kokeilla kaupungin omaa lambic-olutta: gueuze on melko hapan ja kriek '
+                  + 'kirsikalla maustettu, makeampi. Kriekiä saa lähes jokaisesta '
+                  + 'baarista.',
+              kuva: [
+                {
+                  tiedosto: 'AuPreSale Moules.JPG',
+                  lyhyt: 'Kattilallinen simpukoita ja lautasellinen ranskalaisia perunoita.',
+                  selite: 'Simpukat ja ranskalaiset ovat yksi Brysselin kolmesta klassikosta '
+                      + 'suklaan ohella.',
+                  lahde: 'Jpatokal, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Delirium Cafe, Brussels.jpg',
+                  lyhyt: 'Olutbaarin seinillä on panimoiden kilpiä ja kyltti, jossa lukee '
+                      + 'Gueuze en Kriek.',
+                  selite: 'Brysselin olutbaarien seinillä on panimoiden kilpiä; kyltissä '
+                      + 'mainitaan kaupungin tunnetuimmat lambic-oluet, gueuze ja kriek.',
+                  lahde: 'Nicolas Vigier, Wikimedia Commons (CC0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Ilta',
+              teksti: 'Illalla ihmiset suuntaavat Saint-Géryn aukiolle, jossa on paljon '
+                  + 'baareja, kahviloita ja ravintoloita. Aukion kauppahalli valmistui '
+                  + 'vuonna 1882 lähelle paikkaa, jossa Brysselin tarinan uskotaan '
+                  + 'alkaneen: 900-luvulla Senne-joen saarelle rakennetusta linnakkeesta. '
+                  + 'Sainte-Catherinen aukion ympäristö on tunnettu kalaravintoloistaan. '
+                  + 'Grand-Placen pohjoispuolen Rue des Bouchers -kadulla tarjoilijat '
+                  + 'houkuttelevat ohikulkijoita sisään, joten ruokapaikan voi valita '
+                  + 'rauhassa muualta. Perjantaisin ja lauantaisin yöbussit kulkevat '
+                  + 'keskustasta keskiyöstä kolmeen.',
+              kuva: [
+                {
+                  tiedosto: 'Halles Saint-Gery68.jpg',
+                  lyhyt: 'Punatiilinen Saint-Géryn kauppahalli sijaitsee kivetyn aukion '
+                      + 'laidalla.',
+                  selite: 'Saint-Géryn kauppahalli rakennettiin uusflaamilaiseen '
+                      + 'renessanssityyliin ja valmistui vuonna 1882; nykyään siellä on '
+                      + 'kulttuuri- ja näyttelytilaa.',
+                  lahde: 'Karmakolle, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Brussels (52191056580).jpg',
+                  lyhyt: 'Ravintolan terassi täyttyy illalla vanhankaupungin kivetyllä kujalla.',
+                  selite: 'Vanhankaupungin kujilla ravintoloiden terassit täyttyvät illan '
+                      + 'tullen, ja seinillä loistavat neonkyltit.',
+                  lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Grand-Place',
+                tahdet: 3,
+                selite: 'Unescon maailmanperintökohde ja kaupungin sydän: kaikki tärkeä on '
+                    + 'lyhyen kävelyn päässä.',
+              },
+              {
+                mita: 'Ruoka ja juoma',
+                tahdet: 3,
+                selite: 'Vohvelit, suklaa, ranskalaiset ja lambic-oluet löytyvät kaikki '
+                    + 'samalta kävelykierrokselta.',
+              },
+              {
+                mita: 'Art nouveau',
+                tahdet: 3,
+                selite: 'Victor Hortan kaupunkitalot ovat Unescon maailmanperintöä, ja '
+                    + 'tyylin taloja on ympäri kaupunkia.',
+              },
+              {
+                mita: 'Kävely',
+                tahdet: 2,
+                selite: 'Keskustassa on noin 50 hehtaarin jalankulkualue, mutta vanhan '
+                    + 'kaupungin katukivet vaativat kunnon kengät.',
+              },
+              {
+                mita: 'Museot',
+                tahdet: 2,
+                selite: 'Kaupungissa on yli kahdeksankymmentä museota, joten sadepäivänä on '
+                    + 'aina jotain nähtävää.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade',
+                teksti: 'Sataa ympäri vuoden: vuosisade on noin 750 millimetriä ja märin '
+                    + 'kuukausi on joulukuu. Sadetakki ja vedenpitävät kengät kuuluvat '
+                    + 'laukkuun.',
+              },
+              {
+                otsikko: 'Kielet',
+                teksti: 'Kaupunki on virallisesti kaksikielinen, joten kadunnimet ovat sekä '
+                    + 'ranskaksi että hollanniksi. Englannilla pärjää yleensä hyvin.',
+              },
+              {
+                otsikko: 'Taskuvarkaat',
+                teksti: 'Väkijoukoissa, asemilla ja metrossa liikkuu taskuvarkaita. '
+                    + 'Arvotavarat kannattaa pitää lähellä, ja hätänumero on 112.',
+              },
+              {
+                otsikko: 'Kaupat',
+                teksti: 'Harva kauppa avautuu ennen kymmentä, ja monet ovat kiinni '
+                    + 'sunnuntaisin ja maanantaisin.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–syyskuu, kun kuukausikeskilämpö on 13,6–18,5 '
+                + 'astetta eikä kesä ole tukala. Huhtikuu on vuoden kuivin kuukausi, ja '
+                + 'parillisten vuosien elokuussa Grand-Placelle levitetään kukkamatto. '
+                + 'Talvi on leuto mutta märkä, ja joulun aikaan aukiolla on valo- ja '
+                + 'äänishow.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '6,7…13,6 °C',
+                kuvaus: 'Lämpötila nousee maaliskuun 6,7 asteesta toukokuun 13,6 asteeseen. '
+                    + 'Huhtikuu on vuoden kuivin kuukausi, ja sadetta tulee silloin 47 '
+                    + 'millimetriä.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '16,5…18,5 °C',
+                kuvaus: 'Lämpimin aika, mutta keskilämpö jää alle 19 asteen. Sadetta tulee '
+                    + 'heinä- ja elokuussa 71 millimetriä kuukaudessa.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '7,3…15,3 °C',
+                kuvaus: 'Syyskuu on vielä leuto 15,3 asteella, mutta marraskuussa keskilämpö '
+                    + 'on enää 7,3 astetta ja sadetta tulee 65 millimetriä.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '3,7…4,3 °C',
+                kuvaus: 'Keskilämpö pysyy plussan puolella, tammikuussa 3,7 astetta. '
+                    + 'Joulukuu on vuoden märin kuukausi: sadetta tulee 74 millimetriä.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Visit Brussels — kaupungin oma matkailusivu',
+                url: 'https://www.visit.brussels/',
+              },
+              {
+                nimi: 'Wikivoyage: Bryssel',
+                url: 'https://fi.wikivoyage.org/wiki/Bryssel',
+              },
+              {
+                nimi: 'STIB — metro, raitiovaunut ja bussit',
+                url: 'https://www.stib-mivb.be/',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+      nostot: [
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Pieni poika, jolla on tuhat asua',
+          tiedosto: 'French costumes of Manneken Pis Beret & Baguette.jpg',
+          teksti: 'Manneken Pis on vain 55,5 senttiä korkea pronssipatsas: alaston poika, '
+              + 'joka virtsaa suihkulähteen altaaseen. Kaivo mainitaan jo 1400-luvun '
+              + 'puolivälin asiakirjassa, ja nykyisen patsaan veisti brabantilainen '
+              + 'kuvanveistäjä Jérôme Duquesnoy vanhempi vuonna 1619. Poika saa päälleen '
+              + 'vaatteita useita kertoja viikossa: pukukokoelmassa on noin tuhat asua, ja '
+              + 'niille avattiin oma museo vuonna 2017. Kadun kulmassa seisova patsas on '
+              + 'kopio vuodelta 1965, sillä alkuperäinen on Brysselin kaupunginmuseossa.',
+          lyhyt: 'Manneken Pis ranskalaisasussa: baskeri, raitapaita, punainen huivi ja '
+              + 'patonki.',
+          selite: 'Manneken Pisin vaatekaappiin kuuluu noin tuhat asua, ja patsas pukeutuu '
+              + 'niihin useita kertoja viikossa; kuvassa se on ranskalaisasussa.',
+          lahde: 'Libor Háček, Wikimedia Commons (CC0)',
+          wiki: 'Manneken Pis',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Palatsi, jossa kuningas työskentelee mutta ei asu',
+          tiedosto: 'Koninklijk Paleis Brussel 01.jpg',
+          teksti: 'Kuninkaanpalatsi on Belgian kuninkaan virallinen palatsi, mutta '
+              + 'kuningasperhe asuu Laekenin linnassa; Brysselissä kuningas hoitaa '
+              + 'valtiollisia tehtäviään ja vastaanottaa vieraita. Paikalla seisoi ennen '
+              + 'Coudenbergin palatsi, joka tuhoutui tulipalossa vuonna 1731. Nykyisen '
+              + 'palatsin ensimmäinen ydin on 1700-luvun lopulta, mutta Leopold II '
+              + 'laajensi sitä niin, että sen pinta-ala lähes kaksinkertaistui. Yleisölle '
+              + 'palatsi on avoinna kesällä, Belgian kansallispäivästä 21. heinäkuuta '
+              + 'syyskuun alkuun.',
+          lyhyt: 'Kuninkaanpalatsin symmetrinen julkisivu kohoaa Place des Palais\'n aukion '
+              + 'laidalla.',
+          selite: 'Nykyinen julkisivu valmistui vasta vuoden 1904 jälkeen Leopold II:n '
+              + 'aloitteesta, ja sen keskellä on Thomas Vinçotten veistämä päätykolmio.',
+          lahde: 'FrDr, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Royal Palace of Brussels',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Kukkula, jolta näkee kaupungintalon tornille',
+          tiedosto: 'Mont des Arts Kunstberg.jpg',
+          teksti: 'Mont des Arts eli Kunstberg on keskustan kukkulaan rakennettu '
+              + 'kulttuurikortteli, jonka kuningas Leopold II halusi alun perin taiteiden '
+              + 'kaupunginosaksi. Ensimmäinen puisto portaikkoineen ja vesiputouksineen '
+              + 'vihittiin käyttöön 1910, mutta nykyisen ilmeensä alue sai vuosina '
+              + '1956–1969, kun sinne nousivat kuninkaallinen kirjasto ja '
+              + 'kongressipalatsi. Puutarhan suunnitteli maisema-arkkitehti René Pechère, '
+              + 'ja ylhäältä näkyy kaupungintalon torni; kirkkaana päivänä horisontissa '
+              + 'erottuvat myös Koekelbergin basilika ja Atomium.',
+          lyhyt: 'Mont des Artsin geometrinen puutarha laskeutuu kohti Albert I:n patsasta '
+              + 'ja kaupungintornia.',
+          selite: 'Puutarhan suunnitteli René Pechère, ja rinteen alapäässä seisoo Albert '
+              + 'I:n ratsastajapatsas, jonka takana kohoaa Brysselin kaupungintalon torni.',
+          lahde: 'FrDr, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mont des Arts',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Tykkitulessa palanut tori, kapina oopperasta, joki katujen alla ja '
+          + 'tanssiaiset juuri ennen Waterloota: neljä käännekohtaa, jotka muovasivat '
+          + 'Brysselin.',
+      tehtava: {
+        kysymys: 'Minkä ansiosta Brysseliin voitiin 1800-luvun lopulla rakentaa uusia '
+            + 'keskeisiä bulevardeja?',
+        vaihtoehdot: [
+          'Vanhojen kaupunkimuurien purkamisen',
+          'Senne-joen peittämisen kaupungin alueella',
+          'Uuden kanavan kaivamisen keskustaan',
+          'Rautatieaseman rakentamisen keskustaan',
+        ],
+        oikea: 1,
+        fakta: 'Senne oli 1800-luvun jälkipuoliskolla vakava terveysriski, ja pormestari '
+            + 'Jules Anspach ryhtyi peittämään sen. Joki virtaa nykyään suurimmaksi osaksi '
+            + 'kaupungin sisärenkaan alla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaksi päivää tulta, neljä vuotta jälleenrakennusta',
+          tiedosto: 'Ruïnes op de Grote Markt te Brussel, 1695 Debris d\'une partie du grand marché depuis le coing de la Heuvelstraet vers St. Nicolas (titel op object) Perspectives des ruines de la ville de Bruxelles (serietitel), RP-P-1903-A-23488.jpg',
+          teksti: 'Elokuussa 1695 ranskalaiset Villeroin johdolla ampuivat Brysseliä '
+              + 'tykeillä ja sytytyspanoksilla kahden päivän ajan. Tarkoitus oli '
+              + 'houkutella liittoutuneiden armeija pois Namurin piirityksestä. Tuli '
+              + 'levisi kapeiden, osin puisten talojen kaduilla, ja arviolta kolmannes '
+              + 'kaupungin rakennuksista tuhoutui, Grand-Place mukaan lukien. Raatihuoneen '
+              + 'julkisivu ja torni pysyivät pystyssä, vaikka ne olivat tykkien pääkohde. '
+              + 'Aukio rakennettiin uudelleen neljässä vuodessa: killat rakensivat '
+              + 'talonsa, ja viranomaiset tarkastivat suunnitelmat, joten tuloksesta tuli '
+              + 'yllättävän yhtenäinen.',
+          lyhyt: 'Vuoden 1695 pommituksen jälkeen Grand-Placen raatihuone kohoaa raunioiden '
+              + 'keskellä.',
+          selite: 'Vuoden 1695 pommituksen jälkeen Grand-Placen raatihuone kohoaa raunioiden '
+              + 'keskellä; kuvan piirsi paikallinen taiteilija Augustin Coppens, ja sen '
+              + 'kaiversi Richard van Orley.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'Grand-Place',
+        },
+        {
+          otsikko: 'Ooppera, joka käynnisti kapinan',
+          tiedosto: 'Angels & Belgian flags, Martyrs\' Square - Place des Martyrs - Martelaarsplaats, Brussels, Belgium (4039417307).jpg',
+          teksti: 'Belgian kapina alkoi Brysselistä 25. elokuuta 1830. Monnaien teatterissa '
+              + 'esitettiin kuningas Vilhelm I:n syntymäpäivän kunniaksi isänmaallinen '
+              + 'ooppera La muette de Portici, ja osa yleisöstä liittyi kaduilla jo '
+              + 'alkaneisiin mellakoihin. Syyskuun lopulla noin 8 000 '
+              + 'hollantilaissotilasta ei onnistunut valtaamaan kaupunkia takaisin, ja '
+              + 'armeija vetäytyi. Brysselissä perustettu väliaikainen hallitus julisti '
+              + 'Belgian itsenäiseksi, ja Leopold I vannoi kuninkaanvalan heinäkuussa '
+              + '1831. Martyyrien aukion krypttiin on haudattu yli 400 kapinan sankaria.',
+          lyhyt: 'Martyyrien aukion muistomerkin enkelipatsaat ja Belgian liput '
+              + 'muistuttavat vuoden 1830 kapinasta.',
+          selite: 'Martyyrien aukion muistomerkin kaksi enkelipatsasta ja Belgian liput '
+              + 'muistuttavat vuoden 1830 kapinasta; muistomerkin alla on krypta, jonne '
+              + 'kapinan sankareita on haudattu.',
+          lahde: 'Dr Les (Leszek - Leslie) Sachs from Brussels, Belgium, Wikimedia Commons '
+              + '(CC BY 2.0)',
+          wiki: 'Place des Martyrs, Brussels',
+        },
+        {
+          otsikko: 'Joki, joka katosi katujen alle',
+          tiedosto: 'Bruxelles. Boulevard Anspach LCCN2017659123.jpg',
+          teksti: 'Brysselin läpi virtaava Senne-joki oli 1800-luvun jälkipuoliskolla vakava '
+              + 'terveysriski. Pormestari Jules Anspachin aikana joki peitettiin kaupungin '
+              + 'alueella kokonaan vuosina 1867–1871. Peiton ansiosta keskustaan voitiin '
+              + 'rakentaa Haussmannin Pariisia muistuttavia uusia taloja keskeisten '
+              + 'bulevardien varrelle. Bulevardi Anspachia kutsuttiin aluksi '
+              + 'Keskusbulevardiksi, ja nykyisen nimensä se sai vuonna 1879. Joki ei enää '
+              + 'virtaa sen alla: se kulkee suurimmaksi osaksi kaupungin sisärenkaan alla.',
+          lyhyt: 'Anspachin bulevardi ja pörssirakennus näkyvät 1890-luvun värivalokuvassa.',
+          selite: 'Anspachin bulevardi ja pörssirakennus 1890-luvun värivalokuvassa; '
+              + 'bulevardi rakennettiin Senne-joen peittämisen jälkeen.',
+          lahde: 'Photoglob Co., Wikimedia Commons (PD)',
+          wiki: 'Boulevard Anspach',
+        },
+        {
+          otsikko: 'Tanssiaiset, jotka keskeytyivät sotaan',
+          tiedosto: 'Summoned to Waterloo, Brussels, dawn of June 16, 1815 by Robert Alexander Hillingford (1898).jpg',
+          teksti: 'Kesäkuun 15. päivän iltana 1815 Richmondin herttuatar järjesti '
+              + 'Brysselissä tanssiaiset, joita on sanottu historian kuuluisimmiksi. Illan '
+              + 'mittaan Wellingtonin herttualle saapui viestejä: Napoleonin joukot olivat '
+              + 'ylittäneet rajan. Wellington käski upseerinsa rykmenttiensä luo, ja osa '
+              + 'heistä lähti kohti Quatre Brasia vielä juhla-asussaan. Tanssisali oli '
+              + 'entinen vaunuvaja, jossa skottilaiset Gordon Highlanders tanssivat '
+              + 'reeliä. Tanssiaisista on tullut taiteilijoiden ja kirjailijoiden suosima '
+              + 'aihe.',
+          lyhyt: 'Upseerit lähtevät tanssiaisista sotaan, ja skottisotilaat marssivat ohi '
+              + 'Brysselin kadulla.',
+          selite: 'Robert Hillingfordin maalauksessa vuodelta 1898 upseerit poistuvat '
+              + 'Richmondin herttuattaren tanssiaisista kesäkuun 16. päivän aamuyönä, ja '
+              + 'skottisotilaat marssivat sotaan.',
+          lahde: 'Robert Alexander Hillingford, Wikimedia Commons (PD)',
+          wiki: 'Duchess of Richmond\'s ball',
+        },
+      ],
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Brysselin katukuvassa ovat vierekkäin 1800-luvun jättipalatsi, lasikattoinen '
+          + 'kauppakuja, art nouveau -kaupunkitalo ja rautakiteeksi rakennettu maamerkki. '
+          + 'Jokaisella on oma tarinansa.',
+      tehtava: {
+        kysymys: 'Mikä Brysselin rakennus piti alun perin purkaa jo noin kuuden kuukauden '
+            + 'kuluttua?',
+        vaihtoehdot: [
+          'Palais de Justice',
+          'Galeries Saint-Hubert',
+          'Hôtel Tassel',
+          'Atomium (Heysel)',
+        ],
+        oikea: 3,
+        fakta: 'Atomium rakennettiin Expo 58 -maailmannäyttelyn keskukseksi, mutta suosio '
+            + 'pelasti sen purkamiselta. Nykyään se on Brysselin suosituin nähtävyys.',
+      },
+      nostot: [
+        {
+          otsikko: '1800-luvun suurin rakennus kohoaa Marollesin yllä',
+          tiedosto: 'Brussels Palais de Justice (52190836980).jpg',
+          teksti: 'Brysselin oikeuspalatsi on Belgian tärkein oikeustalo, ja se seisoo '
+              + 'Marollesin kaupunginosan reunalla ylä- ja alakaupungin välissä. '
+              + 'Arkkitehti Joseph Poelaert suunnitteli sen '
+              + 'kreikkalais-roomalaisvaikutteiseen, eklektiseen tyyliin, ja rakennustyöt '
+              + 'kestivät vuodesta 1866 vuoteen 1883. Pohja-alaa on yli 26 000 '
+              + 'neliömetriä, ja palatsia pidetään 1800-luvun suurimpana rakennuksena. '
+              + 'Kupoli romahti sodan lopussa tulipalossa ja rakennettiin uudelleen '
+              + 'entistä korkeammaksi. Kunnostustyöt alkoivat 1984, ja telineet ovat yhä '
+              + 'paikoillaan.',
+          lyhyt: 'Oikeuspalatsin kullattu kupoli kohoaa telineiden takaa julkisivun '
+              + 'yläpuolelle.',
+          selite: 'Oikeuspalatsin kupoli kohoaa telineiden peittämänä julkisivun '
+              + 'yläpuolelle; kunnostustyöt alkoivat vuonna 1984.',
+          lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Palace of Justice, Brussels',
+        },
+        {
+          otsikko: 'Lasikatto, joka tuli katujen päälle 1847',
+          tiedosto: 'Galeries Royales Saint-Hubert Brusel.jpg',
+          teksti: 'Saint-Hubertin kuninkaalliset galleriat avattiin kesäkuussa 1847, ja '
+              + 'niitä pidetään Euroopan ensimmäisinä aidosti julkisina katettuina '
+              + 'kauppakujina. Arkkitehti Jean-Pierre Cluysenaar korvasi hämärien kujien '
+              + 'vyyhdin yli 200 metriä pitkällä lasikattoisella käytävällä. '
+              + 'Kokonaisuuteen kuuluu kolme osaa: Kuninkaan, Kuningattaren ja Ruhtinaiden '
+              + 'galleria. Esikuvana oli Pariisin Galerie d\'Orléans, ja Milanon kuuluisa '
+              + 'Galleria Vittorio Emanuele II otti puolestaan mallia Brysselistä.',
+          lyhyt: 'Saint-Hubertin galleriassa lasikatto kaartuu kauppakujan ja julkisivujen '
+              + 'ylle.',
+          selite: 'Lasikatto kaartuu gallerian ylle, ja julkisivun kapeissa seisoo patsaita.',
+          lahde: 'ViktorEP, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Royal Saint-Hubert Galleries',
+        },
+        {
+          otsikko: 'Talo, joka toi päivänvalon portaikkoon',
+          tiedosto: 'Tassel House stairway.JPG',
+          teksti: 'Hôtel Tassel on kaupunkitalo, jonka Victor Horta suunnitteli professori '
+              + 'Emile Tasselille vuosina 1892–1893. Sitä pidetään yhtenä ensimmäisistä '
+              + 'art nouveau -tyylisistä rakennuksista. Horta hylkäsi perinteisen '
+              + 'pohjaratkaisun: kadunpuoleisen ja puutarhanpuoleisen tiilirakennuksen '
+              + 'väliin hän rakensi lasikattoisen teräsrakenteen, jonka portaikko tuo '
+              + 'luonnonvalon talon keskelle. Horta suunnitteli ovenkahvoista '
+              + 'lasimaalauksiin ja mosaiikkilattiaan kaiken itse. Talo kuuluu Hortan '
+              + 'kolmen muun kaupunkitalon kanssa Unescon maailmanperintöluetteloon '
+              + 'vuodesta 2000.',
+          lyhyt: 'Hôtel Tasselin portaikossa rautapylväs ja kaartuva kaide muodostavat art '
+              + 'nouveau -kuvioita.',
+          selite: 'Portaikossa rautapylväs, kaartuva kaide, koristeltu seinä ja '
+              + 'mosaiikkilattia muodostavat yhden kokonaisuuden.',
+          lahde: 'Henry Townsend, Wikimedia Commons (PD)',
+          wiki: 'Hôtel Tassel',
+        },
+        {
+          otsikko: 'Rautakide, joka jäi kuudeksi kuukaudeksi',
+          tiedosto: 'Atomium-Brussels-1.jpg',
+          teksti: 'Atomium rakennettiin Brysselin Expo 58 -maailmannäyttelyn keskukseksi '
+              + 'Heyselin tasangolle. Sen suunnittelivat insinööri André Waterkeyn sekä '
+              + 'arkkitehdit André ja Jean Polak. Yhdeksän palloa esittää rautakiteen '
+              + 'yksikkökoppia 165 miljardia kertaa suurennettuna, ja rakennus on 102 '
+              + 'metriä korkea. Sen piti seistä vain näyttelyn ajan, noin kuusi kuukautta, '
+              + 'mutta suosio pelasti sen purkamiselta. Nykyään Atomium on Brysselin '
+              + 'suosituin nähtävyys, ja huipulla on ravintola.',
+          lyhyt: 'Atomiumin ruostumattomalla teräksellä verhotut pallot on yhdistetty '
+              + 'toisiinsa putkilla.',
+          selite: 'Yhdeksän palloa on liitetty toisiinsa putkilla, joiden sisällä kulkevat '
+              + 'portaat, liukuportaat ja hissi.',
+          lahde: 'acediscovery, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Atomium',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka ja juoma',
+      johdanto: 'Bryssel maistuu suklaalta, vohveleilta ja oluelta, jonka käymisen hoitaa '
+          + 'laakson ilma. Kadunkulmassa tarjotaan ranskanperunoita, joiden alkuperästä '
+          + 'naapurit kiistelevät.',
+      tehtava: {
+        kysymys: 'Mitä Jean Neuhaus II:n vaimo Louise Agostini kehitti vuonna 1915, kun '
+            + 'konvehdit murskaantuivat paperitötteröissä?',
+        vaihtoehdot: [
+          'Lasisen säilytyspurkin',
+          'Puisen kuljetuslaatikon',
+          'Ballotin-lahjarasian',
+          'Kankaisen kantopussin',
+        ],
+        oikea: 2,
+        fakta: 'Ballotin-rasian malli patentoitiin 16. elokuuta 1915. Rasia on yhä '
+            + 'laadukkaiden suklaakonvehtien tyypillinen pakkaus.',
+      },
+      nostot: [
+        {
+          otsikko: 'Apteekki, jonka lääkkeet päällystettiin suklaalla',
+          tiedosto: 'Belgium Chocolates.jpg',
+          teksti: 'Sveitsiläinen Jean Neuhaus avasi vuonna 1857 apteekin Galeries Royales '
+              + 'Saint-Hubertiin lähelle Grand-Placea. Hän päällysti lääkkeet suklaalla, '
+              + 'jotta niitä oli helpompi käsitellä, ja pian tiskille tuli lakritsia, '
+              + 'vaahtokarkkeja ja suklaalevyjä. Vuonna 1912 hänen pojanpoikansa Jean '
+              + 'Neuhaus II valmisti ensimmäiset täytetyt suklaakonvehdit eli pralinet. '
+              + 'Vuonna 1915 hänen vaimonsa Louise Agostini kehitti konvehdeille '
+              + 'lahjarasian, ballotinin, koska paperitötteröissä ne murskaantuivat.',
+          lyhyt: 'Valkoinen ja tumma suklaakonvehti vierekkäin, kuoressa kuviointia.',
+          selite: 'Belgialaisessa pralinessa on suklaakuori ja sen sisällä pehmeämpi täyte; '
+              + 'kuvan konvehtien kuoret on koristeltu kuvioin.',
+          lahde: 'David Wilmot, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Neuhaus (chocolatier)',
+        },
+        {
+          otsikko: 'Suorakaiteinen vohveli, joka ei ole liegeläinen',
+          tiedosto: 'Gaufre de Brussel.001 - Brussel.jpg',
+          teksti: 'Belgiassa on toistakymmentä alueellista vohvelityyppiä, ja kaksi '
+              + 'tunnetuinta eroavat selvästi. Brysselin vohveli nostatetaan '
+              + 'munanvalkuaisella tai hiivalla, perinteisesti olutpanimon hiivalla; se on '
+              + 'kevyt ja rapea, siinä on isot kuopat ja suorakaiteen muotoiset reunat. '
+              + 'Liègen vohveli tehdään briossitaikinasta, ja sen sisällä olevat '
+              + 'helmisokeripalat karamellisoituvat: se on tiheämpi, makeampi ja '
+              + 'sitkeämpi. Nimi Brysselin vohveli esiintyy kirjoissa 1840-luvulta, ja '
+              + 'katukauppiaat tarjoavat sen lämpimänä tomusokerin kanssa.',
+          lyhyt: 'Brysselin vohveli on suorakaiteen muotoinen ja tomusokerilla ripoteltu.',
+          selite: 'Brysselin vohvelin tunnistaa suorakaiteesta ja syvistä ruuduista; '
+              + 'Brysselin keskustassa sitä tarjotaan tomusokerilla.',
+          lahde: 'Fernando Losada Rodríguez, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Waffle',
+        },
+        {
+          otsikko: 'Olut, jonka panee käymään Sennen laakson ilma',
+          tiedosto: 'Bieren uit de streek rond brussel.jpg',
+          teksti: 'Lambic on olutta, jota on valmistettu Brysselin lounaispuolella '
+              + '1200-luvulta lähtien. Sen käyminen ei perustu viljeltyyn hiivaan vaan '
+              + 'Sennen laaksossa eläviin villihiivoihin ja bakteereihin: vierre '
+              + 'jäähdytetään yön yli matalassa avoimessa altaassa, jossa ilma tuo '
+              + 'mikrobit mukanaan. Siksi olutta tehdään vain viileinä kuukausina, '
+              + 'lokakuusta toukokuuhun. Sekoittamalla yksivuotista ja 2–3-vuotiasta '
+              + 'lambicia saadaan gueuze, joka käy pullossa uudelleen ja kuohuu niin, että '
+              + 'sitä kutsutaan Brysselin samppanjaksi.',
+          lyhyt: 'Vitriinissä rivi Brysselin seudun lambic-oluita, muun muassa geuze- ja '
+              + 'hedelmälambic-pulloja.',
+          selite: 'Pullotettu gueuze on kuohuvaa, ja siksi sitä on perinteisesti tarjottu '
+              + 'samppanjapulloissa.',
+          lahde: 'Paul Hermans, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Lambic',
+        },
+        {
+          otsikko: 'Perunat, joiden alkuperästä kiistellään yhä',
+          tiedosto: 'Frituur fries frikandel mayo curry ketchup.jpg',
+          teksti: 'Belgiassa ranskanperunat ovat frietejä tai frites-annoksia, ja niitä '
+              + 'myydään frituureissa, frietkoteissa ja friteriesissä. Perinteinen annos '
+              + 'tarjoillaan valkoisessa pahvitötterössä, ja päälle laitetaan lusikallinen '
+              + 'kastiketta, usein majoneesia. Belgialaisessa friteriessä on suuri '
+              + 'valikoima kastikkeita, ja vanhin tunnettu kioski toimi Antwerpenissä '
+              + '1842. Belgialaiset ja ranskalaiset kiistelevät yhä siitä, kumpi keksi '
+              + 'perunat: belgialainen ruokahistorioitsija Pierre Leclercq pitää alkuperää '
+              + 'ranskalaisena.',
+          lyhyt: 'Ranskanperunat paperitötterössä majoneesin kanssa ja vieressä frikandel, '
+              + 'taustalla frituur-kioski.',
+          selite: 'Perinteisen paperitötterön päällä on lusikallinen majoneesia ja pieni '
+              + 'muovihaarukka; taustalla näkyy frituur-kioski.',
+          lahde: 'Jon Åslund, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Friterie',
+        },
+      ],
+    },
+  ],
+
+  /*
    * BERGEN on Euroopan laudan uusi kaupunkilehti (23.8.2026).
    * Aineisto: docs/mantereet-tyoaineisto/faktapohja-bergen.md ja sen
    * riippumaton tarkistus tarkistus-bergen.md — TARKISTUKSEN KORJAUKSET
