@@ -31,7 +31,7 @@ test('luentakuvalliset kaupungit johdetaan pakeista', () => {
    * kaupungeilla ei ole vielä ajettu Brysselille). Poikkeus on nimetty,
    * jotta uusi aukko ei livahda mukaan huomaamatta.
    */
-  const ILMAN_LUENTAKUVAA = new Set(['bryssel', 'ljubljana']);
+  const ILMAN_LUENTAKUVAA = new Set(['bryssel', 'ljubljana', 'kosice']);
   const puuttuu = Object.keys(FOKUSVIRRAT).filter((id) => !joukko.has(id));
   assert.deepEqual(puuttuu.sort(), [...ILMAN_LUENTAKUVAA].sort(),
     'kuva puuttuu vain nimetyiltä, tietoisesti keskeneräisiltä kaupungeilta');

@@ -386,6 +386,31 @@ export const PAIKALLISAARTEET = {
    * tests/paikallisaarteet.test.mjs) — samat kuvat generoidaan
    * myöhemmin kuin muillekin maille.
    */
+  /*
+   * SLOVAKIA (20.9.2026, omistajan päätös 19.9.2026: Slovakian
+   * pelikaupunki Košice). Faktat ovat Slovakian karttanostojen
+   * (js/packs/hahmotelma-svk.js Kremnica, Banská Štiavnica)
+   * en-Wikipedia-pohjaisia tekstejä. Ei kuvaa vielä
+   * (KUVAA_ODOTTAVAT-lista, tests/paikallisaarteet.test.mjs).
+   */
+  SVK: {
+    pieniAarre: {
+      name: 'Kremnican kultadukaatti',
+      fakta: 'Kremnican rahapaja on maailman vanhin yhä toimiva: '
+        + 'kaupunki sai kuninkaalliset oikeutensa 1328, ja vuodesta 1335 '
+        + 'siellä lyötiin kultaflorineja ja myöhemmin kuuluisia '
+        + 'dukaatteja. Niiden tasainen kultapuhtaus teki niistä '
+        + 'kansainvälisen maksuvälineen.',
+    },
+    isoAarre: {
+      name: 'Banská Štiavnican hopeakaivoksen kätkö',
+      fakta: 'Banská Štiavnica kasvoi keskiajalla runsaiden '
+        + 'hopeamalmivarojen ansiosta. Siellä käytettiin 1627 ruutia '
+        + 'kaivoksessa yhtenä ensimmäisistä maailmassa, ja vuonna 1735 '
+        + 'perustettu kaivoskoulu kasvoi kaivosakatemiaksi, jota '
+        + 'kutsutaan maailman ensimmäiseksi teknilliseksi yliopistoksi.',
+    },
+  },
   SVN: {
     pieniAarre: {
       name: 'Lipicanhevosen kavioraudan jäljennös',
