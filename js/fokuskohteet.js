@@ -141,6 +141,7 @@ import { HAHMOTELMA_CZE } from './packs/hahmotelma-cze.js';
 import { HAHMOTELMA_SWE } from './packs/hahmotelma-swe.js';
 import { HAHMOTELMA_DNK } from './packs/hahmotelma-dnk.js';
 import { HAHMOTELMA_SVK } from './packs/hahmotelma-svk.js';
+import { HAHMOTELMA_CYP } from './packs/hahmotelma-cyp.js';
 import { HAHMOTELMA_HUN } from './packs/hahmotelma-hun.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
@@ -428,6 +429,23 @@ KOHDE_MAAT.BGR = [...(KOHDE_MAAT.BGR ?? []), ...HAHMOTELMA_BGR];
  * (Bratislava, Košice ym.) ovat sallittuja.
  */
 KOHDE_MAAT.SVK = [...(KOHDE_MAAT.SVK ?? []), ...HAHMOTELMA_SVK];
+
+/*
+ * KYPROKSEN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat pelikaupungin (Nikosia) ulkopuolella (lähin yli
+ * 7 lautayksikön päässä) eivätkä toista Kyproksen 13 nykyistä nostoa.
+ *
+ * LIITOSJÄRJESTYS ON TARKOITUKSELLINEN: uudet rivit ovat ENNEN nykyisiä
+ * (`[...HAHMOTELMA_CYP, ...KOHDE_MAAT.CYP]`), koska nimiöladonta on
+ * järjestysriippuvainen ja Kyproksen nykyiset nimiöt ovat ahtaassa
+ * ryppäässä (Khirokitia, Asinou, Kykkos, skandaalit): nykyisten perään
+ * liitettynä mikä tahansa eteläinen tai läntinen uusi nosto kaatoi
+ * tests/nimiolimitys.test.mjs:n (mitattu 19.9.2026), ja HAHMOTELMA_CYP:n
+ * sisäinen järjestys (kormakitis, karpas, akamas, ...) on valittu niin,
+ * että testi menee läpi. Jos järjestystä muutetaan, aja testi.
+ */
+KOHDE_MAAT.CYP = [...HAHMOTELMA_CYP, ...(KOHDE_MAAT.CYP ?? [])];
 
 /*
  * PUOLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
