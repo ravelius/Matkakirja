@@ -9181,7 +9181,11 @@ export const RAAMATTU = {
           + 'pallo 120,6 % ruudun leveydesta. Vartiot 52a-d, 59/59. Julkaistu v1966 (PR '
           + 'klo 21.17). GRONLANTI: ei vikaa - laastari leikataan 60 asteeseen ja 4k-pohja '
           + 'nayttaa jaan (Gronlanti 0,605 laastari paalla ja pois; vastakoe 70 astetta '
-          + '0,002); vartio lohko 49. Avoin: Patagonian jaa laastarissa (oma paatos).',
+          + '0,002); vartio lohko 49. Avoin: Patagonian jaa laastarissa (oma paatos). WEBKIT-'
+          + 'VAHVISTUS (Opus 1 klo 21.41): iPhone-kotelo 390x844 dpr 3 - musta kerros, '
+          + 'otsikkokortti, paljastus ilman kattoa, pilvet 0,9, pallo 120,6 %, rata 25, ISS '
+          + '24x12 - identtinen Chromiumin kanssa, WebKit paljastaa aiemmin (518 vs 665 ms). '
+          + 'Pulun kasvokangas seuraa nostettua pulua (ei korjausta tarvittu, vartiot 9e).',
         'MAAT ILMAN PELIKAUPUNKIA SAAVAT PELIKAUPUNGIN (omistaja 19.9.2026 klo 20.50 Suomen '
           + 'aikaa, kortti; Sonnet 1:n loydos kierros 12: Belgian napautus avaa Lillen tai ei '
           + 'mitaan, joten BEL-nostoihin ei paase): vaihtoehdoista (maan napautus avaa '
