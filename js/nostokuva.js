@@ -141,6 +141,29 @@ export function nostokuvanMitat({
 }
 
 /**
+ * LUKITUN LAATIKON KORKEUS kuvan omasta suhteesta (vaihe 2).
+ *
+ * Leveys on jo lukittu (kortti on sen levyinen), joten korjattavaa on
+ * vain korkeus: kuvan suhde × leveys, enintään ruudun korkeus
+ * marginaaleineen. Palauttaa nollan, jos mitat eivät kelpaa — silloin
+ * laatikkoon ei kosketa. Puhdas funktio (tests/nostokuva.test.mjs).
+ *
+ * @param {{laatikkoLeveys:number, kuvaLeveys:number, kuvaKorkeus:number,
+ *   ruutuKorkeus:number, marginaali?:number}} p
+ * @returns {number} korkeus pikseleinä, tai 0
+ */
+export function nostokuvanLukitunKorkeus({
+  laatikkoLeveys, kuvaLeveys, kuvaKorkeus, ruutuKorkeus,
+  marginaali = NOSTOKUVA_MARGINAALI,
+} = {}) {
+  const luvut = [laatikkoLeveys, kuvaLeveys, kuvaKorkeus];
+  if (!luvut.every((n) => Number.isFinite(n) && n > 0)) return 0;
+  const katto = Number.isFinite(ruutuKorkeus) && ruutuKorkeus > 0
+    ? Math.max(0, ruutuKorkeus - 2 * marginaali) : Infinity;
+  return Math.min(katto, laatikkoLeveys * (kuvaKorkeus / kuvaLeveys));
+}
+
+/**
  * VAIHEENVAIHDON KORJAUS — montako pikseliä korttia siirretään ja
  * paljonko sisältöä vieritetään, jotta kuva jää TÄSMÄLLEEN paikalleen.
  *
@@ -413,7 +436,33 @@ export function nostokuvaAloita({
     onKuvatta?.();
   };
 
-  img.addEventListener('load', () => { if (vaihe === 1) asemoi(); }, { once: true });
+  /*
+   * KUVAN SUHDE VOI SELVITÄ VASTA TOISELLA LATAUKSELLA (Sonnet 1,
+   * kierros 16, 20.9.2026, FRA Canigou: *"panoraamakuva täyttää vain
+   * kuva-alan yläkolmanneksen ja alle jää iso tyhjä beige"*).
+   *
+   * Kuvan laatikko on inline-pikseleitä, ja se laskettiin vain
+   * ENSIMMÄISESTÄ latauksesta (`once: true`). Jos ensimmäinen osoite
+   * kaatui ja varareitti (js/media.js asetaKuva) toi eri muotoisen
+   * kuvan, laatikko jäi vanhaan suhteeseen ja `object-fit: contain`
+   * jätti paperin näkyviin. Kuuntelija on nyt pysyvä: vaiheessa 1
+   * ladonta ajetaan uudestaan, ja vaiheessa 2 — jossa laatikon leveys
+   * on lukittu — korjataan korkeus kuvan omaan suhteeseen.
+   */
+  const sovitaLukittuLaatikko = () => {
+    const ruutu = nostokuvaRuutu();
+    const korkeus = nostokuvanLukitunKorkeus({
+      laatikkoLeveys: Number.parseFloat(img.style.width) || 0,
+      kuvaLeveys: img.naturalWidth,
+      kuvaKorkeus: img.naturalHeight,
+      ruutuKorkeus: ruutu.korkeus,
+    });
+    if (korkeus) img.style.height = `${Math.round(korkeus)}px`;
+  };
+  img.addEventListener('load', () => {
+    if (vaihe === 1) { asemoi(); return; }
+    if (vaihe === 2) sovitaLukittuLaatikko();
+  });
   aseta(img, NOSTOKUVA_PYYNTO_PX, peru);
   asemoi();
 
