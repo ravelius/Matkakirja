@@ -476,6 +476,229 @@ const JAKO = [
   },
 ];
 
+/*
+ * === TOINEN KUVA JOKAISELLE NOSTOLLE (19.9.2026) =====================
+ *
+ * Omistaja 18.9.2026 (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 44 kohta 2):
+ * *"commonsista voisi etsiä vähintään kaksi kuvaa joka juttuun"*. Lehden
+ * nosto kantaa yhden kuvan (`kuva`, luetaan maa-kategoriat.js:n
+ * FRA-taulusta Commons-tiedostonimenä), joten jokainen kartan nosto sai
+ * tässä erässä TOISEN kuvan — kahdeksantoista uutta Commons-kuvaa.
+ *
+ * MIKSI `galleria` EIKÄ `kuvat`. Maalehtinostot ovat NOSTOJA, ja noston
+ * kortin kuvalista on `galleria` (js/fokusnosto.js nostonKuvat: `kuva`
+ * ensin, `galleria` perään). Kenttä `kuvat` on KOHTEEN lista
+ * (js/fokuskohteet.js kohteenKuvat) eikä sitä lueta nostolta lainkaan,
+ * joten `kuvat`-listaan kirjattu kuva ei näkyisi kortilla. Sama muoto
+ * molemmissa, joten kuvatietueet ovat merkilleen samanlaiset kuin
+ * js/packs/maastokohteet-fra.js:ssä. Renderöijään EI tarvinnut koskea:
+ * kahden kuvan nosto piirtyy valmiilla selailunuolilla
+ * (piirraNostonKuvasarja), ja `osoite` kulkee assetOsoiten läpi
+ * sellaisenaan kuten maastokohteilla.
+ *
+ * MIKSI OMA TAULU EIKÄ JAKO-RIVIN KENTTÄ. `JAKO` on jakosuunnitelma:
+ * mistä lehden sivusta kortti syntyy ja mihin se ankkuroidaan. Kuvat
+ * eivät ole jakosuunnitelmaa vaan kartan omaa kuvitusta, ja omassa
+ * taulussaan ne eivät hukkaa ankkuririvien luettavuutta.
+ *
+ * LISENSSIT. Vain Public domain, CC0, CC BY ja CC BY-SA kelpasivat;
+ * NC-, ND-, GFDL- ja FAL-ehtoiset hylättiin. Jokaisen tekijä, lisenssi
+ * ja lähdesivu on luettu Commonsin omasta API:sta (extmetadata) ennen
+ * latausta, ja jokainen tiedosto on katsottu silmällä.
+ *
+ * PARI ON MIELUITEN HISTORIA + NYKYPÄIVÄ, ja kymmenellä nostolla toinen
+ * kuva on 1800-luvun tai varhaisen 1900-luvun kuva.
+ *
+ * KUVAT EIVÄT OLE VIELÄ ÄMPÄRISSÄ. Osoitteet osoittavat kansioon
+ * karttanostot/20260919/, jonne Fable vie tiedostot; ennen vientiä ne
+ * vastaavat 404:llä. Puuttuva kuva pudotetaan sarjasta eikä kortille jää
+ * tyhjää kehystä (js/fokusnosto.js piirraNostonKuvasarja).
+ */
+const OSOITE = 'https://media.matkakirja.app/karttanostot/20260919/';
+
+const KUVAT = {
+  'maalehti-peilisali': [{
+    osoite: `${OSOITE}fra-maalehti-peilisali-a22fa9d8.jpg`,
+    lyhyt: 'Rauhansopimus allekirjoitetaan peilisalissa kesäkuussa 1919.',
+    selite: 'Peilisali täyttyi valtuuskunnista 28. kesäkuuta 1919, kun Versailles’n rauhansopimus allekirjoitettiin; katselijat seisovat peilien ja ikkunoiden välissä.',
+    lahde: 'Valokuva: Helen Johns Kirtland ja Lucian Swift Kirtland, Wikimedia Commons (public domain).',
+    tekija: 'Helen Johns Kirtland ja Lucian Swift Kirtland',
+    lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Treaty_of_Versailles_Signing,_Hall_of_Mirrors.jpg',
+    lisenssi: 'Public domain',
+    lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+  }],
+  'maalehti-roquefort': [{
+    osoite: `${OSOITE}fra-maalehti-roquefort-28df3754.jpg`,
+    lyhyt: 'Juustohyllyt Combalou-vuoren luonnonluolassa Roquefort-sur-Soulzonissa.',
+    selite: 'Roquefort-sur-Soulzonin suuri kypsytysluola: tammihyllyt nousevat kerroksittain vuoren sisään kaiverretussa holvissa.',
+    lahde: 'Valokuva: Daniel Villafruela, Wikimedia Commons (CC BY-SA 3.0).',
+    tekija: 'Daniel Villafruela',
+    lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Roquefort_sur_Soulzon-Grande_cave-20140628.jpg',
+    lisenssi: 'CC BY-SA 3.0',
+    lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+  }],
+  'maalehti-michelin-opas': [{
+    osoite: `${OSOITE}fra-maalehti-michelin-opas-707cb9ef.jpg`,
+    lyhyt: 'Ensimmäisen Michelin-oppaan punainen kansi vuodelta 1900.',
+    selite: 'Vuoden 1900 Michelin-oppaan kansi: rengas ja lupaus "Offert gracieusement aux Chauffeurs" — opas jaettiin autoilijoille ilmaiseksi.',
+    lahde: 'Kuva: tekijä tuntematon, Wikimedia Commons (public domain).',
+    tekija: 'Tekijä tuntematon',
+    lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Guidem_michelin_1900.jpg',
+    lisenssi: 'Public domain',
+    lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+  }],
+  'maalehti-chandeleur': [{
+    osoite: `${OSOITE}fra-maalehti-chandeleur-5eb70599.jpg`,
+    lyhyt: 'Ohukaisia paistetaan kynttilänpäivänä 2. helmikuuta 1934.',
+    selite: 'Lehtikuva kynttilänpäivältä 2. helmikuuta 1934: taikina kaadetaan pannulle ja valmiit ohukaiset pinotaan viereen.',
+    lahde: 'Valokuva: Agence Rol, Wikimedia Commons (public domain).',
+    tekija: 'Agence Rol',
+    lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2-2-34,_Chandeleur_(fabrication_de_cr%C3%AApes)_-_btv1b532912784.jpg',
+    lisenssi: 'Public domain',
+    lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+  }],
+  'maalehti-montgolfier': [{
+    osoite: `${OSOITE}fra-maalehti-montgolfier-84c01965.jpg`,
+    lyhyt: 'Montgolfierin veljesten muistomerkki Annonayssa.',
+    selite: 'Annonayn muistomerkki: veljekset pitelevät pallon kuvaa, jonka he ensi kerran nostivat ilmaan kotikaupungissaan.',
+    lahde: 'Valokuva: Jacques Forêt (Sequajectrof), Wikimedia Commons (CC BY-SA 3.0).',
+    tekija: 'Jacques Forêt (Sequajectrof)',
+    lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Annonay_Montgolfier_2011-08-01-032.jpg',
+    lisenssi: 'CC BY-SA 3.0',
+    lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+  }],
+  'maalehti-braille': [{
+    osoite: `${OSOITE}fra-maalehti-braille-ac1fa422.jpg`,
+    lyhyt: 'Kaksi sormea lukee pistekirjoitussivua.',
+    selite: 'Lukija kulkee kahdella sormella pistekirjoitusrivistöä pitkin; kohopisteet erottuvat sivulta varjoina.',
+    lahde: 'Valokuva: Antonio X. Alonso, Wikimedia Commons (CC BY 2.0).',
+    tekija: 'Antonio X. Alonso',
+    lahdeUrl: 'https://commons.wikimedia.org/wiki/File:A_person_reading_a_braille_book.jpg',
+    lisenssi: 'CC BY 2.0',
+    lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+  }],
+  'maalehti-pasteur-meister': [{
+    osoite: `${OSOITE}fra-maalehti-pasteur-meister-219fe1ca.jpg`,
+    lyhyt: 'Rabiesrokotus Pasteurin vastaanotolla Pariisissa, litografia.',
+    selite: 'Litografia Pasteurin vastaanotolta: lääkäri Grancher pistää rokotteen, potilaat odottavat vuoroaan ja Pasteur itse seisoo seuraamassa.',
+    lahde: 'Litografia: F. Pirodon L.-L. Gsellin mukaan, Wellcome Collection / Wikimedia Commons (CC BY 4.0).',
+    tekija: 'F. Pirodon L.-L. Gsellin mukaan (Wellcome Collection)',
+    lahdeUrl: "https://commons.wikimedia.org/wiki/File:Rabies_vaccination_in_Pasteur's_clinic_in_Paris._Lithograph_Wellcome_L0003730.jpg",
+    lisenssi: 'CC BY 4.0',
+    lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0/',
+  }],
+  'maalehti-cinematographe': [{
+    osoite: `${OSOITE}fra-maalehti-cinematographe-e35af7e5.jpg`,
+    lyhyt: 'Lumièren cinématographe, puinen laatikko kammella.',
+    selite: 'Cinématographe Institut Lumièren kokoelmassa: sama puulaatikko oli vuoroin kamera, kopiokone ja projektori.',
+    lahde: 'Valokuva: Victor Grigas, Wikimedia Commons (CC BY-SA 4.0).',
+    tekija: 'Victor Grigas',
+    lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Institut_Lumi%C3%A8re_-_CINEMATOGRAPHE_Camera.jpg',
+    lisenssi: 'CC BY-SA 4.0',
+    lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+  }],
+  'maalehti-dune-du-pilat': [{
+    osoite: `${OSOITE}fra-maalehti-dune-du-pilat-cb0307f3.jpg`,
+    lyhyt: 'Dyynin itärinne ja La Teste-de-Buchin mäntymetsä.',
+    selite: 'Dune du Pilat’n itärinne laskeutuu suoraan La Teste-de-Buchin mäntymetsään — juuri sille puolelle hiekka vaeltaa.',
+    lahde: 'Valokuva: Rundvald, Wikimedia Commons (CC BY-SA 4.0).',
+    tekija: 'Rundvald',
+    lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dune-du-Pilat%2Bpinede-byMmeRundvald.jpg',
+    lisenssi: 'CC BY-SA 4.0',
+    lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+  }],
+  'maalehti-camarguen-hevoset': [{
+    osoite: `${OSOITE}fra-maalehti-camarguen-hevoset-de271f45.jpg`,
+    lyhyt: 'Valkoinen tamma ja sen tummanruskea varsa Camarguessa.',
+    selite: 'Camarguelainen tamma on valkoinen, mutta sen varsa syntyy tummanruskeana ja vaalenee vasta vuosien myötä.',
+    lahde: 'Valokuva: Elliott Brown, Wikimedia Commons (CC BY 2.0).',
+    tekija: 'Elliott Brown',
+    lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Camargue_Jument_et_son_poulain.jpg',
+    lisenssi: 'CC BY 2.0',
+    lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+  }],
+  'maalehti-chaine-des-puys': [{
+    osoite: `${OSOITE}fra-maalehti-chaine-des-puys-0401261b.jpg`,
+    lyhyt: 'Tulivuoriketju Puy de Dômen laelta nähtynä.',
+    selite: 'Puy de Dômen laelta ketju erottuu sellaisena kuin se on: rivi pyöreitä kraatterikukkuloita peltojen ja metsien seassa.',
+    lahde: 'Valokuva: Tangopaso, Wikimedia Commons (public domain).',
+    tekija: 'Tangopaso',
+    lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cha%C3%AEne_des_Puys_from_Puy_de_Dome.jpg',
+    lisenssi: 'Public domain',
+    lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+  }],
+  'maalehti-couesnonin-vuorovesi': [{
+    osoite: `${OSOITE}fra-maalehti-couesnonin-vuorovesi-62337764.jpg`,
+    lyhyt: 'Vuosisadan vuorovesi ympäröi Mont-Saint-Michelin maaliskuussa 2015.',
+    selite: 'Maaliskuun 2015 päiväntasauksen "vuosisadan vuorovesi": vesi on noussut saaren muurien juureen ja lahti on yhtä ulappaa.',
+    lahde: 'Valokuva: Édouard Hue, Wikimedia Commons (CC BY-SA 4.0).',
+    tekija: 'Édouard Hue',
+    lahdeUrl: 'https://commons.wikimedia.org/wiki/File:March_2015_equinox_spring_tide_at_Mont_Saint-Michel-2.jpg',
+    lisenssi: 'CC BY-SA 4.0',
+    lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+  }],
+  'maalehti-tour-de-france-1903': [{
+    osoite: `${OSOITE}fra-maalehti-tour-de-france-1903-56fde3f3.jpg`,
+    lyhyt: 'Ensimmäisen Tour de Francen reittikartta heinäkuulta 1903.',
+    selite: 'L’Auto-vélo -lehden kartta heinäkuulta 1903: kuuden etapin silmukka Pariisista Lyoniin, Marseilleen, Toulouseen, Bordeaux’hon, Nantesiin ja takaisin.',
+    lahde: 'Kartta: L’Auto-vélo, Wikimedia Commons (public domain).',
+    tekija: 'L’Auto-vélo',
+    lahdeUrl: "https://commons.wikimedia.org/wiki/File:L'itin%C3%A9raire_du_premier_Tour_de_France_cycliste,_en_juillet_1903.jpg",
+    lisenssi: 'Public domain',
+    lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+  }],
+  'maalehti-petanque': [{
+    osoite: `${OSOITE}fra-maalehti-petanque-933799cc.jpg`,
+    lyhyt: 'Jeu provençalia pelataan Avignonin puistokujalla.',
+    selite: 'Jeu provençal eli "la longue" on pétanquen edeltäjä: heittäjä ottaa vauhtia juosten, ja juuri siksi paikallaan pysyvä pétanque keksittiin.',
+    lahde: 'Valokuva: Fif’, Wikimedia Commons (CC BY-SA 2.0).',
+    tekija: 'Fif’',
+    lahdeUrl: "https://commons.wikimedia.org/wiki/File:Jeu_proven%C3%A7al_all%C3%A9es_de_l'Oulle_Avignon.jpg",
+    lisenssi: 'CC BY-SA 2.0',
+    lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+  }],
+  'maalehti-roland-garros': [{
+    osoite: `${OSOITE}fra-maalehti-roland-garros-96be9593.jpg`,
+    lyhyt: 'Lentäjä Roland Garros Demoiselle-koneensa edessä vuonna 1910.',
+    selite: 'Roland Garros seisoo Demoiselle-koneensa edessä vuonna 1910 — kolme vuotta ennen ensimmäistä Välimeren ylitystä ja kahdeksantoista vuotta ennen kuin stadion sai hänen nimensä.',
+    lahde: 'Valokuva: Agence Meurisse, Wikimedia Commons (public domain).',
+    tekija: 'Agence Meurisse',
+    lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Roland_Garros_1910.jpg',
+    lisenssi: 'Public domain',
+    lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+  }],
+  'maalehti-le-mans': [{
+    osoite: `${OSOITE}fra-maalehti-le-mans-d9fc444d.jpg`,
+    lyhyt: 'Brasier-autot varikolla ensimmäisen 24 tunnin kisan jälkeen 1923.',
+    selite: 'Lehtikuva 27. toukokuuta 1923: Brasier-autot seisovat varikolla heti ensimmäisen Le Mansin 24 tunnin kisan maalin jälkeen.',
+    lahde: 'Valokuva: Agence Rol, Wikimedia Commons (public domain).',
+    tekija: 'Agence Rol',
+    lahdeUrl: 'https://commons.wikimedia.org/wiki/File:27-5-23,_Le_Mans,_les_Brasier_apr%C3%A8s_la_course_(automobile_des_24_heures)_-_btv1b531077586.jpg',
+    lisenssi: 'Public domain',
+    lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+  }],
+  'maalehti-marseillen-saippua': [{
+    osoite: `${OSOITE}fra-maalehti-marseillen-saippua-d96c8915.jpg`,
+    lyhyt: 'Saippuamassa leikataan paloiksi veitsellä, puupiirros vuodelta 1873.',
+    selite: 'Puupiirros Louis Figuier’n teoksesta 1873: jäähtynyt saippuamassa leikataan lattialla veitsellä paloiksi, jotka vasta sitten leimataan.',
+    lahde: 'Puupiirros: Louis Figuier ja Jules Férat, Wikimedia Commons (CC BY 2.0).',
+    tekija: 'Louis Figuier ja Jules Férat',
+    lahdeUrl: "https://commons.wikimedia.org/wiki/File:Les_merveilles_de_l'industrie,_1873_%22Coupage_du_savon_de_Marseille_en_pains,_au_moyen_du_couteau%22._(4618578904).jpg",
+    lisenssi: 'CC BY 2.0',
+    lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+  }],
+  'maalehti-bouquinistit': [{
+    osoite: `${OSOITE}fra-maalehti-bouquinistit-11d8e477.jpg`,
+    lyhyt: 'Kirjalaatikot Quai Saint-Michelillä Notre-Damen edessä vuonna 1967.',
+    selite: 'Quai Saint-Michel vuonna 1967: kirjamyyjän laatikot ja painokuvat levällään rantakaiteella, Notre-Dame taustalla.',
+    lahde: 'Valokuva: Daniel Villafruela, Wikimedia Commons (CC BY-SA 4.0).',
+    tekija: 'Daniel Villafruela',
+    lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Paris_75005_Quai_Saint-Michel_towards_Notre-Dame_Bouquinistes_1967.jpg',
+    lisenssi: 'CC BY-SA 4.0',
+    lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+  }],
+};
+
 /** Lehden nosto tunnuksilla, tai null jos jako osoittaa harhaan. */
 function lehdenNosto(sivu, indeksi) {
   const kategoria = (MAA_KATEGORIAT.FRA ?? []).find((k) => k.id === sivu);
@@ -507,6 +730,10 @@ function korttiLehdesta(rivi) {
     otsikko: lahde.otsikko,
     lunastus: [lahde.teksti],
     ...(kuva ? { kuva } : {}),
+    // Kartan oma toinen kuva lehden kuvan pariksi (ks. KUVAT yllä).
+    // Noston kuvalista on `galleria`, ei `kuvat` — js/fokusnosto.js
+    // nostonKuvat lukee vain sen.
+    ...(KUVAT[rivi.id]?.length ? { galleria: KUVAT[rivi.id] } : {}),
     symboli: rivi.symboli,
     ...(rivi.lahi ? { lahi: true } : {}),
     ...(rivi.visa ? { visa: rivi.visa } : {}),

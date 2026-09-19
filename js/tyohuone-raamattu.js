@@ -9063,7 +9063,14 @@ export const RAAMATTU = {
           + 'havainnekuvat taydennetaan myohemmin, kun kuvaputken tokenit '
           + 'palaavat (Codexille ei viestita nyt). Fablen sisaltopistokoe ennen '
           + 'mergea (roolitus kohta 4). Tila: kirjattu; tyo kolmena Opus-erana '
-          + '(9-10 nostoa kullakin) + tarkistusera.',
+          + '(9-10 nostoa kullakin) + tarkistusera. TILA (Fable 19.9.2026 klo 13.45 Suomen '
+          + 'aikaa): kohta 1 JULKAISTU v1948 (27 nostoa, 56 kuvaa), maastokohteiden kuvat '
+          + 'v1948 (25 kuvaa); kohta 2 MAALEHTINOSTOT: Sonnet-tarkistus 19.9. loysi 18 '
+          + 'maalehtinostoa yhdella kuvalla - Opus-era lisasi jokaiselle toisen Commons-'
+          + 'kuvan galleria-kenttaan (nostot piirtyvat js/fokusnosto.js:lla, joka lukee '
+          + 'kuva + galleria, ei kuvat-listaa), Fable vei 18 kuvaa ampariin karttanostot/'
+          + '20260919/ (HEAD 200 18/18). JULKAISTAAN v1952. Kohta 4 (havainnekuvat) yha '
+          + 'avoin.',
         'KARTTAUUDISTUKSEN PAATOKSET 43: PUHELINTESTIN LOYDOKSET 7-11 (omistaja '
           + '18.9.2026 klo 22.50 Suomen aikaa, iPad/iPhone-testi v1946, '
           + 'sanatarkasti viisi kohtaa): 7) "Avaruus Linssissa pitaisi olla '
