@@ -133,7 +133,9 @@ import { fokusvirtaKaupungille } from './packs/fokusvirrat.js';
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
+/** Kuvan tekijä- tai lisenssirivi (ei tekstin lähde). */
+const KUVAN_TEKIJARIVI = /Wikimedia Commons|Valokuva:|havainnekuva|\bCC[ -](?:BY|0)|public domain/i;
 
 /* ==================== POOLI ==================== */
 
@@ -988,7 +990,17 @@ function piirraNostonSisus(ui, sisalto, nosto, valmisKuva) {
   sisalto.appendChild(teksti);
   if (nosto.valokuva) piirraNostonValokuva(ui, sisalto, nosto.valokuva);
   if (nosto.lahde) {
-    sisalto.appendChild(taytaLahderivi(html('p', 'fokusnosto-lahde'), nosto.lahde, nosto));
+    /*
+     * KUVAN TEKIJÄRIVI VAIN SUURENNOKSESSA (omistaja 19.9.2026 klo
+     * 19.04): lehden nostoissa `lahde` on kuvan tekijä- ja lisenssirivi
+     * (esim. "Tuntematon kaivertaja (BnF/Gallica), Wikimedia Commons
+     * (public domain)"), ja se näkyy kuvan suurennoksessa. Tekstin oma
+     * lähde (esim. "en-Wikipedia …") jää näkyviin.
+     */
+    const kuvanRivi = KUVAN_TEKIJARIVI.test(nosto.lahde) && Boolean(nosto.kuva || nosto.tiedosto);
+    sisalto.appendChild((kuvanRivi ? kortinKuvalahde : taytaLahderivi)(
+      html('p', 'fokusnosto-lahde'), nosto.lahde, nosto,
+    ));
   }
   // Karttaliite tulee jutun JÄLKEEN, myös lähderivin jälkeen: se ei ole
   // jutun kuvitusta vaan erillinen arkki jutun välissä (ks.
@@ -1249,7 +1261,7 @@ export function piirraNostonKuva(
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');
   teksti.append(
     html('span', 'fokusnosto-kuvaselite', kuvatekstiLyhyt(kuva)),
-    taytaLahderivi(html('span', 'fokusnosto-kuvalahde'), kuva.lahde ?? '', kuva),
+    kortinKuvalahde(html('span', 'fokusnosto-kuvalahde'), kuva.lahde ?? '', kuva),
   );
   kehys.appendChild(teksti);
   kohde.appendChild(kehys);
@@ -1395,7 +1407,7 @@ export function piirraNostonKuvasarja(ui, sailio, kuvat, {
      * (js/havainnekuva.js) ja Commons-kuvan tekijä näkyy niin kuin
      * lisenssi vaatii.
      */
-    taytaLahderivi(lahderivi, kuva.lahde ?? '', kuva);
+    kortinKuvalahde(lahderivi, kuva.lahde ?? '', kuva);
     laskuri.textContent = jaljella.length > 1 ? `${kohdalla + 1} / ${jaljella.length}` : '';
     laskuri.hidden = jaljella.length < 2;
     // Suurennos näyttää sen kuvan, joka on kohdalla — myös silloin kun

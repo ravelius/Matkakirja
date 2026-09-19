@@ -178,7 +178,7 @@ import {
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 import { asetaAkustiikka } from './tehosteketju.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 
 /*
  * Maakohtaiset kohdelistat ISO-tunnuksella. Sama tunnus kuin
@@ -5001,7 +5001,7 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
     const teksti = html('figcaption', 'fokuskohde-kuvateksti', kortinTeksti);
     // CC BY vaatii tekijän maininnan: lähde on aina kuvan vieressä.
     if (kuva.lahde) {
-      teksti.appendChild(taytaLahderivi(html('span', 'fokuskohde-kuvalahde'), kuva.lahde, kuva));
+      teksti.appendChild(kortinKuvalahde(html('span', 'fokuskohde-kuvalahde'), kuva.lahde, kuva));
     }
     kehys.appendChild(teksti);
   }
