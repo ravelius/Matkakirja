@@ -127,6 +127,7 @@ import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
 import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
 import { NAKYVAT_KAUPUNGIT_FRA } from './packs/nakyvat-kaupungit-fra.js';
 import { HAHMOTELMA_FRA } from './packs/hahmotelma-fra.js';
+import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -325,6 +326,15 @@ KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...NAKYVAT_KAUPUNGIT_FRA];
  * Liitos on tässä samasta syystä kuin kahdella edellisellä.
  */
 KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...HAHMOTELMA_FRA];
+
+/*
+ * ITALIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot, Espanjan pilotin jälkeen Italia). Sama reitti ja
+ * sama rakenne kuin Ranskan hahmotelmalla yllä; rivit ovat aidosti
+ * kaupunkien ulkopuolella (lähin pelikaupunki yli 9 lautayksikön päässä,
+ * raja 7).
+ */
+KOHDE_MAAT.ITA = [...(KOHDE_MAAT.ITA ?? []), ...HAHMOTELMA_ITA];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN

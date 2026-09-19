@@ -402,6 +402,7 @@ const SHELL = [
   './js/packs/nakyvat-kaupungit-fra.js',
   './js/packs/nostoankkurit-fra.js',
   './js/packs/hahmotelma-fra.js',
+  './js/packs/hahmotelma-ita.js',
   './js/packs/maakartat.js',
   './js/packs/nahtavyysjutut.js',
   './js/packs/miniatyyrit.js',
