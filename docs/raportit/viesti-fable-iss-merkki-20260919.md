@@ -35,7 +35,26 @@ Mitattu vanhalla koodilla (30 s, 60 näytettä, 390 px): 15 näkyvästä näytte
 
 `node --test tests/*.test.mjs`: pass 3704, fail 0.
 
-## AVOIN (kirjattu tauon vuoksi, ei selvitetty)
+## 45b RATKAISTU 20.9.2026: ei liity ISS-merkkiin
+
+Mittasin saman ajon sisällä samalta pisteeltä ja samasta kamera-asennosta 45b:n luvut
+kahdesti: ISS-merkki ja ratakaari näkyvissä ja `display: none` -tilassa.
+
+| Ajo | Piste | Merkki näkyvissä (10 px / 40 px, ero) | Merkki piilossa (ero) |
+| --- | --- | --- | --- |
+| 1 | 349, 346 | 74,7 / 71,2 → **3,5** | 74,6 / 71,2 → **3,4** |
+| 2 | 76, 274 | 77,9 / 74,1 → **3,8** | 77,8 / 74,1 → **3,7** |
+
+Merkin vaikutus on 0,1 yksikköä eli mittauskohinaa. 45b riippuu siitä, minkä pisteen savuke
+valitsee (lähin ruudun keskeltä) ja millaista maastoa sen ympärillä on: pyörivä pallo antaa
+joka ajossa eri pisteen. Fable oli kirjannut saman jo 18.9.2026 savukkeen kommenttiin
+("maastonaytteen vaihtelu, mitattu 4,6 kuormassa; valaisu 45c on tarkempi mitta").
+
+Aiemmat kaksi punaista (−5,7 ja −5,9) osuivat siis pisteeseen, jonka ympärillä maasto oli
+kauempana kirkkaampaa. **ISS-merkin rajaus kiekon sisälle ei aiheuta 45b:tä, eikä erän
+julkaisulle ole tästä estettä.** Koekoukut poistettiin savukkeesta mittausten jälkeen.
+
+## Alkuperäinen avoin kohta (19.9.2026, ratkaistu yllä)
 
 **45b** ("pinta pisteen vieressä on kirkkaampi kuin kaukana") oli punainen molemmissa
 korjatuissa ajoissa (ero −5,7 ja −5,9, vaadittu ≥ 3) ja vihreä vastakokeessa (vanha koodi).
