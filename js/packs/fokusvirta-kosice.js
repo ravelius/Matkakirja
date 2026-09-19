@@ -30,7 +30,7 @@ export const FOKUSVIRTA_KOSICE = {
     paikkarivi: 'Kassa (Košice), 1873. Tuomiokirkon torni kohoaa '
       + 'kaupungin yllä.',
     /*
-     * LUONNOS, Fable kirjoittaa kaanonin (≤450 merkkiä). Tilapäisteksti,
+     * Fablen kaanon 20.9.2026 klo 00.55 (≤450 merkkiä; oli LUONNOS).
      * jotta fokusvirtapakki ja saapumisteksti-testi
      * (tests/vanha-maailma.test.mjs) läpäisevät ennen sitä. Perustuu
      * artikkelin (EUROPE_ARTIKKELIT.Košice) faktoihin: Kassa Unkarin
@@ -39,12 +39,13 @@ export const FOKUSVIRTA_KOSICE = {
      * Päivämäärä ja reitin järjestys on jätetty auki (paikkarivissä vain
      * vuosi).
      */
-    teksti: 'Kassa, 1873. Unkarilaiset sanovat kaupunkia Kassaksi, saksalaiset '
-      + 'Kaschauksi. Leveän pääkadun keskellä kohoaa tuomiokirkko, joka on '
-      + 'ollut vuosisatoja Unkarin kuningaskunnan suurin, ja vanhojen '
-      + 'kaupunginmuurien paikalle on jäänyt vain yksi bastioni. Juna '
-      + 'Miskolcista toi minut perille ennen iltaa; isoisäni olisi '
-      + 'kulkenut tämän matkan viikon.',
+    teksti: 'Kassa (Košice), lokakuussa 1873. Juna toi minut Krakovasta vuorten '
+      + 'läpi, ja Karpaatit jäivät taakse kuin kynnys. Pyhän Elisabetin '
+      + 'tuomiokirkko on niin suuri, että kaupunki tuntuu rakennetun sen '
+      + 'ympärille; kivi on kulunut, mutta tornit seisovat. Pääkatu on leveä '
+      + 'kuin tori, ja sen keskellä kultainen Immaculata muistuttaa rutosta, '
+      + 'jonka kaupunki selätti. Kapakassa juodaan tokajia ja puhutaan kolmea '
+      + 'kieltä samassa lauseessa.',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
