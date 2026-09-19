@@ -57,3 +57,9 @@ Uusi nimikyltti (`Košice`, oikealle) läpäisee nimipäällekkäisyys- ja nimi�
 - **Saapumisteksti on luonnos** (`fokusvirta-kosice.js` `matkakirja.teksti`, ~360 merkkiä; paikkarivi "Kassa (Košice), 1873."; päivämäärä ja reitti sinulle. Luonnos mainitsee junan Miskolcista, koska reitti ei ole tiedossa: vaihda Budapestiin/Krakovaan kaanonin mukaan).
 - Reitit Krakova–Košice ja Košice–Budapest korvaavat suoran Krakova–Budapest-yhteyden (kuten Bryssel/Ljubljana korvasivat omansa). Jos haluat suoran yhteyden säilyvän rinnalla, se on yksi rivi.
 - Koska Košice on Slovakian ensimmäinen pelikaupunki, Slovakian nostot ovat nyt saavutettavissa; nostotason uudelleenpoltto voi olla tarpeen (uusi kaupunki maailmankartalla).
+
+## Päivitys (Fablen päätökset, 20.9.2026)
+
+- `hahmotelma-kosice` **poistettu** `js/packs/hahmotelma-svk.js`:stä (SVK 19 nostoa), otsikkokommentti päivitetty; räikkä **takaisin 50:een** (`tests/nostot-kartalla.test.mjs` samaksi kuin v1970-prepissä). Kuvat jäävät kansioon/ämpäriin koskematta.
+- Kysymysten oikea-indeksit tasattu vaihtamalla vaihtoehtojen järjestystä (sisältö ennallaan): Košice 2,1,3,0,2,3,0,1,0,1 (0:3, 1:3, 2:2, 3:2), Ljubljana 3,2,1 (yhteensä 13 kysymystä: 0:3, 1:4, 2:3, 3:3).
+- Testit 3724, 3711 läpi, 0 kaatunutta, 13 ohitettua; niputus kunnossa.

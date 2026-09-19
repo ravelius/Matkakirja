@@ -170,16 +170,8 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
   // Brysselin Tervurenilla, kaupunkiresepti luku 4 kohta 11, vaihtoehto
   // 3). Katto nousee vain tämän yhden noston verran; kun Ljubljana saa
   // kohdekartan, nosto siirtyy sinne ja katto voi laskea takaisin.
-  // 50 → 51 (20.9.2026): Košice liittyi pelikaupungiksi (omistajan
-  // päätös 19.9.2026, Slovakian pelikaupunki), ja Slovakian oma
-  // Košice-nosto (hahmotelma-kosice, 0,3 yksikköä kaupungin pisteestä)
-  // osuu nyt suoraan kaupungin päälle syyllä "kohdekarttaa ei ole" —
-  // Košicella ei vielä ole kaupunkikarttaa (sama ratkaisu kuin
-  // Brysselin Tervurenilla ja Ljubljanan suolla). Katto nousee vain
-  // tämän yhden noston verran. Vaihtoehto: nosto pois SVK-listalta,
-  // koska kaupungilla on nyt oma artikkeli ja fokusvirta.
   const muutKuinHetket = kesken.filter((r) => r.kaupunginKohdalla !== 'hetki');
-  assert.ok(muutKuinHetket.length <= 51,
+  assert.ok(muutKuinHetket.length <= 50,
     `muita kuin hetkiä on kaupungin kohdalla ${muutKuinHetket.length} — luku saa vain laskea`);
 });
 

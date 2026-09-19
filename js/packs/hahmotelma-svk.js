@@ -19,8 +19,12 @@
  * Bratislava on Pozsony/Pressburg ja Košice Kassa, ja nappi-alaotsikot
  * käyttävät niiden 1873 nimiä. Slovakian kansallinen liike toimii
  * Martinissa ja Liptovský Mikulášissa. Slovakiassa ei ole pelikaupunkia,
- * eikä nykyisiä SVK-nostoja: kaupunkikohteet (Bratislava, Košice, Trenčín,
- * Nitra, Trnava) ovat siksi sallittuja. Vuoden 1873 jälkeiset asiat
+ * eikä nykyisiä SVK-nostoja: kaupunkikohteet (Bratislava, Trenčín, Nitra,
+ * Trnava) ovat siksi sallittuja. KOŠICE POISTETTU (20.9.2026): Košice
+ * tuli pelikaupungiksi (omistajan päätös 19.9.2026), ja sen oma nosto
+ * olisi ollut tupla kaupungin päällä (0,3 yksikköä); päätoimittaja poisti
+ * sen tästä pakista, ja kaupungin sisältö on europe-*-pakeissa ja
+ * js/packs/fokusvirta-kosice.js:ssä. Vuoden 1873 jälkeiset asiat
  * (Zemplínska šírava 1961–65, Bojnicen jälleenrakennus 1888–1910,
  * Smolenicen linna 1900-luvulla) ovat mukana: teksti on nykytietoa ja
  * `nappi` katsoo vuodesta 1873.
@@ -747,68 +751,6 @@ export const HAHMOTELMA_SVK = [
       ],
       oikea: 0,
       fakta: 'Kaupungit ovat Euroopan lähimmät pääkaupungit.',
-    },
-  },
-  {
-    id: 'hahmotelma-kosice',
-    kuva: {
-      osoite: 'https://media.matkakirja.app/karttanostot/20260920/svk-nosto-kosice-81c1473a.jpg',
-      lyhyt: 'Pyhän Elisabetin tuomiokirkko Košicessa.',
-      selite: 'Suuri goottilainen tuomiokirkko, jonka katto on kuvioitu värillisillä tiilillä ja jonka tornin huipussa on kultakoristeita. Kuva näyttää kirkon kaupungin aukiolta.',
-      lahde: 'Valokuva: Ingo Mehling, Wikimedia Commons (CC BY-SA 3.0).',
-      tekija: 'Ingo Mehling',
-      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:St_Elisabeth_Cathedral_Kosice.jpeg',
-      lisenssi: 'CC BY-SA 3.0',
-      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
-    },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/svk-nosto-kosice-2dc35a9e.jpg',
-        lyhyt: 'Hlavná-katu Košicen vanhassakaupungissa.',
-        selite: 'Leveän kävelykadun keskellä kulkevat raitiotiekiskot, ja reunoilla on kahvilaterasseja. Kadun päässä häämöttää kupolikattoinen rakennus.',
-        lahde: 'Valokuva: Ladislav Luppa, Wikimedia Commons (CC BY-SA 4.0).',
-        tekija: 'Ladislav Luppa',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ko%C5%A1ice_-_Hlavn%C3%A1_ulica_-a.jpg',
-        lisenssi: 'CC BY-SA 4.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
-      },
-    ],
-    nimi: 'Košice (Kassa)',
-    tyyppi: 'historia',
-    lahi: true,
-    kysymykset: [
-      'Mikä on Slovakian suurin kirkko?',
-      'Mitkä viisi kaupunkia kuuluivat Pentapolitanaan?',
-    ],
-    korostukset: ['tuomiokirkko|tuomiokirkko'],
-    nappi: 'Kassa: Ylä-Unkarin viiden kaupungin liiton johtava kaupunki, jolla on Slovakian suurin kirkko',
-    // 21.25 E / 48.71666667 N — en-Wikipedia "Košice"
-    laudat: {
-      maailmankartta: { x: 6541.7, y: 1445.6 },
-      europe: { x: 619.2, y: 612.4 },
-    },
-    teksti: 'Košice, unkariksi Kassa ja saksaksi Kaschau, on Itä-Slovakian suurin kaupunki '
-      + 'Hornád-joen varrella Slovakian malmivuorten itäosassa lähellä Unkarin ja Ukrainan '
-      + 'rajaa. Ensimmäinen kirjallinen maininta on vuodelta 1230 nimellä Villa Cassa. '
-      + 'Kaupungin historiallinen keskusta on Slovakian kaupungeista laajin, ja siellä on '
-      + 'Slovakian suurin kirkko, Pyhän Elisabetin tuomiokirkko, joka oli aikanaan Unkarin '
-      + 'kuningaskunnan suurin ja jonka rakentamista tuki keisari Sigismund. 1400-luvun '
-      + 'alusta Košice oli Pentapolitanan, Ylä-Unkarin viiden tärkeimmän kaupungin (Bardejov, '
-      + 'Levoča, Košice, Prešov ja Sabinov) liiton, johtavia jäseniä; kuningas Matthias '
-      + 'Corvinuksen aikana noin 10 000 asukkaan kaupunki oli Euroopan suurimpia. Kaupungin '
-      + 'kerrotaan olleen ensimmäinen Euroopan asutus, jolle myönnettiin oma vaakuna.',
-    lahde: 'en-Wikipedia "Košice", johdanto-osa ja osiot "Etymology" ja "History" (tarkistettu '
-      + '19.9.2026).',
-    visa: {
-      kysymys: 'Mitä ensimmäistä Košicen kerrotaan olleen Euroopassa?',
-      vaihtoehdot: [
-        'Höyryrautatie',
-        'Oma vaakuna',
-        'Yliopisto',
-        'Kirjapaino',
-      ],
-      oikea: 1,
-      fakta: 'Pyhän Elisabetin tuomiokirkko on Slovakian suurin kirkko.',
     },
   },
   {
