@@ -9188,6 +9188,14 @@ export const RAAMATTU = {
           + 'animointipyynto toimitettu haaraan claude/postilaatikko (posti/fable-codex-'
           + 'pulu-astronautti-20260919.md, 644c6359) ja mainiin docs-PR #2620 (20.9.2026 '
           + 'klo 00.02).',
+        'TAUKO PAATTYI 20.9.2026 klo 00.12 Suomen aikaa (omistaja sanatarkasti: "Saat '
+          + 'jatkaa kaikkia"; tauko alkoi 19.9. klo 22.11 "Pida tauko kaikesta", valissa '
+          + 'vain kesken jaaneet ja omistajan korjaustilaukset): JAKO: Opus 1 = tekstin '
+          + 'valinta pois (D), saapumisblur, ISS 45b; Opus 2 = rannikon rajaviiva (A) ja '
+          + 'joen piikit (E), Biskajanlahden napautus (C), zoom/panorointi (B), DNK/EST-'
+          + 'poltto v1969:n jalkeen; Sonnet 1 = kierros 16 v1969:lla; Sonnet 2 = vanhojen '
+          + 'nostojen kuvat era 2 (189); Sonnet 3 = Ljubljana pelikaupungiksi era 1 '
+          + 'Brysselin kaavalla. v1969 PR avattu 00.09, mergetaan vihreana.',
         'JONOSSA TAUON JALKEEN (omistaja 19.9.2026 klo 23.31-23.35 Suomen aikaa; "ala '
           + 'aloita uusia toita viela"): A) MAALEHDEN RAJAVIIVA VIRHEELLINEN RANNIKOLLA '
           + '(sanatarkasti: "Taalla virheita rajaviivassa", Ranskan lehden iPad-kuva '
