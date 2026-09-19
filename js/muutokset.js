@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1950, teksti: 'Laivamatkan noppa toimii: liuku auki roll-vaiheessa' },
   { v: 1949, teksti: 'Astronautin kamera: aito NASA-pilvikuva, alfa luminanssista' },
   { v: 1948, teksti: 'Ranskan nostojen sisällöt ja kuvat, pilvikuva ämpäristä' },
   { v: 1947, teksti: 'Astronautin kamera pyramidista, sumu, kohdevalinta, saatto' },
