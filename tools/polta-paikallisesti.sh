@@ -1732,7 +1732,12 @@ fi
 # koko z8:n keston neljällä, kahdellatoista ja kahdellakymmenelläneljällä
 # ytimellä — hukkaa ei ole, koska kaistoja on ytimiä paljon enemmän.
 if [ "$KOE" -eq 1 ]; then
-  koe="$(shardit | awk -F'|' '/^z8-/ { print $1; exit }')"
+  # AWK EI SAA SULKEA PUTKEA KESKEN (korjattu 20.9.2026, Mac Studio).
+  # `exit` ensimmaisen osuman jalkeen tappoi `shardit`-silmukan SIGPIPEen
+  # ("echo: write error: Broken pipe"), ja koska skripti ajaa
+  # pipefaililla, koko koeajo paattyi koodiin 141 ilman yhtaan laattaa.
+  # Nyt tuottaja saa kirjoittaa listansa loppuun.
+  koe="$(shardit | awk -F'|' '/^z8-/ && !nahty++ { print $1 }')"
   [ -n "$koe" ] || { echo "VIRHE: --koe vaatii z8-sarjan" >&2; exit 2; }
   echo "· koeajo: shardi $koe"
   alkoi="$(date +%s)"
