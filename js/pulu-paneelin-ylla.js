@@ -105,6 +105,20 @@ export function asennaPuluPaneelinYlla(nappi, doc = globalThis.document) {
       const alla = nakyvissa(paneeli, win) && r.top < oletus.bottom && r.bottom > oletus.top
         && r.left < oletus.right && r.right > oletus.left;
       if (!alla) { vapauta(); return; }
+      /*
+       * UUSI PANEELI MUISTETUN PÄÄLLE (Sonnet, kierros 11, v1962 laitteella:
+       * laaja nostokortti avautui alapaneelin päälle, ja pulu jäi vanhan
+       * paneelin yläreunaan — keskelle korttia, tekstin ja visan napin
+       * päälle). Oletuspaikan päällimmäinen paneeli on se, joka pulun on
+       * väistettävä; jos se ei ole muistettu eikä sen sisä- tai
+       * ulkolaatikko, vaihdetaan siihen.
+       */
+      const paalla = paneeliPisteessa(doc, win, nappi,
+        (oletus.left + oletus.right) / 2, (oletus.top + oletus.bottom) / 2);
+      if (paalla && paalla !== paneeli && !paneeli.contains(paalla) && !paalla.contains(paneeli)) {
+        paneeli = paalla;
+        hyppyja += 1;
+      }
     } else {
       const r = nappi.getBoundingClientRect();
       const loydetty = paneeliPisteessa(doc, win, nappi, r.left + r.width / 2, r.top + r.height / 2);

@@ -108,3 +108,20 @@ ole enää laastarin reunaa eikä sävyeroa.
 
 Topografialinssi ja pelilauta eivät muuttuneet, koska muutos on
 `kerrokset.astronautti`-haaran takana, kuten v1961:ssä.
+
+---
+
+## LISÄYS klo 20.15: omistajan laitekuva 20.00 (v1962, "Laatta virhe meressä")
+
+Omistajan kuvassa Joonianmerellä Italian ja Kreikan välissä näkyy tummia
+suorakaidelaattoja ja pilkkuvanoja. Se on sama vika kuin G. Mitattu
+omistajan rajauksella (36,3 N, 20,0 E, WebKit 390 × 844 dpr 3):
+- ennen: G:n kutsukohta palautettu v1961:n MERIVARI-maskiin
+- jälkeen: tämä haara
+
+| Korkeus | Ennen | Jälkeen |
+|---|---|---|
+| 0,358 (lähin katto) | `G-omistajan-joonia-0358-ennen.jpg`: suorakaiteet ja pilkkureunat Joonianmerellä, sama kuvio kuin omistajan kuvassa | `G-omistajan-joonia-0358-jalkeen.jpg`: yhtenäinen meri, ei laattarajoja |
+| 0,50 (omistajan arvio) | `G-omistajan-joonia-050-ennen.jpg` | `G-omistajan-joonia-050-jalkeen.jpg`: puhdas |
+
+G:n korjaus (laastari vain maa) kattaa siis juuri omistajan näkymän.

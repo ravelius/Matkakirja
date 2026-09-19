@@ -37,7 +37,7 @@
  *      hehkun napautus RUUTUKOORDINAATILLA avaa kortin.
  *   6. KORTTI: ajoitus, otsikko, kuva-alue (löytöpaikalla kaksi
  *      kehystä, lisänostolla kuvituskuva tai sen varapaikka), teksti,
- *      lähde ja 2–3 valmista kysymystä; kysymys menee pulun chattiin.
+ *      lähde ja 2–3 valmista kysymystä; vastaus tulee kortin kuplaan.
  *   7. LUE LISÄÄ: löytöpaikan kortista aukeaa Tiedeliite, jonka
  *      sisällys on YKSI aikajärjestyksen lista väripilkkuineen.
  *   8. VIISI NAPPIA: V3 (Siperia) kääntää kameran, korostaa vanan ja
@@ -647,22 +647,29 @@ for (const nakyma of ['tabletti', 'puhelin']) {
     JSON.stringify(lisanosto));
   await s.screenshot({ path: kuva('kortti-lisanosto') });
 
-  /* --- 6b. Kysymys pulun chattiin ----------------------------------- */
+  /*
+   * --- 6b. Kysymys vastaa kortissa ---------------------------------
+   * 19.9.2026 (Fablen kiireellinen erä, Sonnet 1:n kierros 11): vastaus
+   * kirjoitetaan kortin omaan kuplaan eikä pelin pulupaneeliin, joka on
+   * esityksen aikana piilossa. Lisänoston kysymys kulkee mallireittiä;
+   * savukkeen verkossa palvelu ei vastaa, joten kuplassa on siisti
+   * virherivi ja nappi palautuu uudelleen kysyttäväksi.
+   */
   const kysymys = await s.evaluate(async () => {
     const nappi = document.querySelector('.ihmisen-nostokysymys');
     const teksti = nappi?.textContent ?? '';
     nappi?.click();
-    await new Promise((r) => setTimeout(r, 700));
-    const viestit = [...document.querySelectorAll('.pollo-viesti.pollo-kayttaja')].map((v) => v.textContent);
+    await new Promise((r) => setTimeout(r, 1500));
+    const kupla = document.querySelector('.ihmisen-nostokortti-vastaus');
     return {
       teksti,
-      merkitty: Boolean(nappi?.classList.contains('lahetetty')),
-      chatissa: viestit.some((v) => v.trim() === teksti.trim()),
+      kuplassa: (kupla?.textContent ?? '').trim().length > 0,
+      paneeliAuki: Boolean(window.matkakirjaPollo?.auki),
       kysymyksia: window.matkakirja.ui.tutkimusvaihe?.tila?.().kysymyksia ?? 0,
     };
   });
-  vaadi(nimessa('kysymysnappi vie kysymyksen pulun chattiin'),
-    kysymys.merkitty && kysymys.chatissa && kysymys.kysymyksia === 1,
+  vaadi(nimessa('kysymysnappi vastaa kortin omaan kuplaan eikä avaa pulun paneelia'),
+    kysymys.kuplassa && !kysymys.paneeliAuki && kysymys.kysymyksia >= 1,
     JSON.stringify(kysymys));
 
   /* --- 7. Lue lisää: Tiedeliite yhtenä listana ---------------------- */

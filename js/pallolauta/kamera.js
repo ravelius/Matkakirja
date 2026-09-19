@@ -473,7 +473,7 @@ function lyhinLng(alusta, kohteeseen) {
  */
 export function luoPallokamera({
   pallo, kotelo, ui, lauta = PALLOLAUDAN_LAUTA, laudanLeveys = PALLOLAUDAN_LEVEYS, heraa = null,
-  laattataso = 7, dpr = globalThis.devicePixelRatio || 1,
+  laattataso = 7, dpr = globalThis.devicePixelRatio || 1, ajonKatto = null,
 }) {
   let ajo = null; // { kehys, valmis, nyt } kesken olevalle ajolle
 
@@ -926,6 +926,17 @@ export function luoPallokamera({
     if (ui?.dead) return Promise.resolve(false);
     const maali = kameranKohde(kohde);
     if (!maali) return Promise.resolve(false);
+    /*
+     * KATTO ON AJON OMA EHTO (Raamattu KARTTAUUDISTUKSEN PAATOKSET 47,
+     * avoin velka; erä opus-local-zoomikatto 19.9.2026). Maan
+     * uloszoomauskatto elää OrbitControlsin maxDistancessa ja puree
+     * vasta, kun ajo lakkaa kirjoittamasta pointOfView'ta: ajo nousi
+     * 0,82:een ja 1,5 s myöhemmin kamera oli puristettu takaisin
+     * 0,205:een panoroituun keskipisteeseen (mitattu Pariisi → Ateena).
+     * Laudan koukku nostaa katon maalin korkeuteen ENNEN ajoa, joten
+     * mikään ulossovitus ei enää tarvitse omaa matkaZoomivapaus-kutsuaan.
+     */
+    ajonKatto?.(maali.altitude);
     // Lähtö on se, missä kuva juuri nyt on — myös kesken ajon.
     const alku = ajo?.nyt ? { ...ajo.nyt } : pallo.pointOfView();
     pysaytaKameraAjo();

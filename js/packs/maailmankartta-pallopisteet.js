@@ -53,6 +53,14 @@
  * Wikidata-piste on alueen keskipiste, ei se kohta jota lauta
  * tarkoittaa. Mosambik ja Orjarannikko jäävät yhä tarinan ratkaistaviksi.
  *
+ * KOLMAS KIERROS 19.9.2026 (Fablen päätös klo 19.50, erä H, raportti
+ * docs/raportit/viesti-fable-kaupunkisiirtymat-20260919.md): kuusi
+ * PISTEMÄISTÄ kohdetta siirrettiin alueista asutusten joukkoon, koska
+ * niissä laudan tarkoitus on juuri Wikidatan piste — Sansibar (Stone
+ * Town; fi-sivun piste on saaren keskipiste, joten kaupungin piste
+ * otettiin en-Wikipediasta), Victorian putoukset, Mount Rushmore,
+ * Kilimandžaro (huippu), Uluru ja Milford Sound.
+ *
  * Vartio: tools/tarkista-laudan-pisteet.mjs lukee tämän kentän ja
  * vaatii, että yli 15 km:n poikkeamia jää vain alueille.
  */
@@ -96,6 +104,7 @@ export const PALLON_KAUPUNKIPISTEET = {
   karachi: { lat: 24.86, lon: 67.01 },          // Karachi, 18 km
   karthago: { lat: 36.887, lon: 10.315 },       // Karthago, 184,3 km
   kathmandu: { lat: 27.7, lon: 85.333 },        // Kathmandu, 74,3 km
+  kilimandzaro: { lat: -3.067, lon: 37.359 },   // Kilimanjaro (huippu), 139,8 km — 19.9.
   kioto: { lat: 35.012, lon: 135.768 },         // Kioto, 187,9 km
   kumasi: { lat: 6.683, lon: -1.617 },          // Kumasi, 127 km
   lagos: { lat: 6.441, lon: 3.418 },            // Lagos, 411,6 km
@@ -112,8 +121,10 @@ export const PALLON_KAUPUNKIPISTEET = {
   merida: { lat: 20.97, lon: -89.62 },          // Mérida, 109,9 km
   mexico: { lat: 19.411, lon: -99.131 },        // Mexico City, 21,5 km
   miami: { lat: 25.788, lon: -80.224 },         // Miami, 66,1 km
+  milfordsound: { lat: -44.617, lon: 167.867 }, // Milford Sound, 81,3 km — 19.9.
   montevideo: { lat: -34.906, lon: -56.191 },   // Montevideo, 17,8 km
   montreal: { lat: 45.546, lon: -73.639 },      // Montreal, 75,2 km
+  mountrushmore: { lat: 43.879, lon: -103.459 }, // Mount Rushmore, 162,1 km — 19.9.
   mumbai: { lat: 18.975, lon: 72.826 },         // Mumbai, 16 km
   murzuk: { lat: 25.916, lon: 13.918 },         // Murzuk, 241,9 km
   nairobi: { lat: -1.283, lon: 36.817 },        // Nairobi, 418,7 km
@@ -134,6 +145,7 @@ export const PALLON_KAUPUNKIPISTEET = {
   salvador: { lat: -12.983, lon: -38.493 },     // Salvador, 38,9 km
   sanfrancisco: { lat: 37.779, lon: -122.419 }, // San Francisco, 23,5 km
   sanjuan: { lat: 18.465, lon: -66.117 },       // San Juan, 42 km
+  sansibar: { lat: -6.162, lon: 39.191 },       // Stone Town (en-Wikipedia), 530,8 km laudan pisteestä — 19.9.
   santafe: { lat: 35.667, lon: -105.967 },      // Santa Fe, 120,6 km
   saoluis: { lat: -2.53, lon: -44.303 },        // São Luís, 66 km
   saopaulo: { lat: -23.55, lon: -46.634 },      // São Paulo, 183,6 km
@@ -150,9 +162,11 @@ export const PALLON_KAUPUNKIPISTEET = {
   townsville: { lat: -19.262, lon: 146.816 },   // Townsville, 150,8 km
   tromssa: { lat: 69.683, lon: 18.943 },        // Tromssa, 21,8 km
   ulanbator: { lat: 47.917, lon: 106.917 },     // Ulan Bator, 113 km
+  uluru: { lat: -25.345, lon: 131.036 },        // Uluru, 107,7 km — 19.9.
   valparaiso: { lat: -33.046, lon: -71.62 },    // Valparaíso, 39,5 km
   vancouver: { lat: 49.264, lon: -123.139 },    // Vancouver, 31,4 km
   varanasi: { lat: 25.317, lon: 83 },           // Varanasi, 258,1 km
+  viktorianputoukset: { lat: -17.925, lon: 25.858 }, // Victorian putoukset, 232,7 km — 19.9.
   vilna: { lat: 54.689, lon: 25.28 },           // Vilna, 66 km
   vladivostok: { lat: 43.115, lon: 131.884 },   // Vladivostok, 44,3 km
   wellington: { lat: -41.289, lon: 174.777 },   // Wellington, 21,2 km
