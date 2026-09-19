@@ -897,8 +897,8 @@ export const HAHMOTELMA_SWE = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-lacko-f4079e74.jpg',
         lyhyt: 'Läckön linna heijastuu tyynestä vedestä auringonlaskun valossa.',
-        selite: 'Kuvan mukaan linna on kuvattu Kållandsön saarella auringonlaskun aikaan. Vesi '
-          + 'ja pilvinen taivas tekevät linnan ympärille tunnelmallisen maiseman.',
+        selite: 'Linna on kuvattu Kållandsön saarella auringonlaskun aikaan. Vesi ja pilvinen '
+          + 'taivas tekevät linnan ympärille tunnelmallisen maiseman.',
         lahde: 'Valokuva: Billy Palmius, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Billy Palmius',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:L%C3%A4ck%C3%B6_Slott_vid_solnedg%C3%A5ng.jpg',
