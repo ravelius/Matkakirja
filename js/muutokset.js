@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1968, teksti: 'Bryssel pelikaupungiksi; Malta kartalle; Kypros; nostotaso' },
   { v: 1967, teksti: 'Viro; visojen kieli; lehtinimiöt; kortin tyyppinimike' },
   { v: 1966, teksti: 'Astronautin avaus; ankkurit 13 maalle; Slovenia, Luxemburg' },
   { v: 1965, teksti: 'Bulgaria, Romania, Slovakia; visan paperityyli; selitteet' },

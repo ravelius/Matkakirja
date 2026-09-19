@@ -465,6 +465,31 @@ async function mittaaAvaus(s, { selain, kotelo, kerta, dpr, leveys, korkeus }) {
   console.log(`    VÄRI ENNEN AVAUSTA ${variEnnen}`);
   await avaaLinssiEleella(s);
   /*
+   * PAATOKSET 52 (astro-avaus, Fable 19.9.2026 klo 21.36): paljastushetken
+   * tila tallennetaan sivulla 50 ms:n välein kysyvällä pollarilla, joka ei
+   * pysäytä alla olevaa seurantaa. Luetaan seurannan jälkeen (AVAUS52).
+   */
+  await s.evaluate(() => {
+    window.__avaus52 = null;
+    const alku = performance.now();
+    const ajastin = setInterval(() => {
+      const t = window.matkakirja?.ui?.pallolinssi?.kahva?.avaruus?.tila?.();
+      if (!t?.paljastus) return;
+      if (!window.__avaus52Musta && t.paljastus.vaihe === 'musta') {
+        const k = document.querySelector('.astro-paljastus');
+        window.__avaus52Musta = { ms: Math.round(performance.now() - alku), teksti: k?.textContent ?? '', tausta: k ? getComputedStyle(k).backgroundColor : null };
+      }
+      if (t.paljastus.vaihe === 'musta') return;
+      window.__avaus52 = {
+        ms: Math.round(performance.now() - alku), ...t.paljastus,
+        pilvetValmiit: t.sumu?.pilvetValmiit ?? null, pilvet: t.sumu?.pilvet ?? null,
+        reliefinKestoMs: t.reliefinKestoMs, osuus: t.avausajo?.osuus,
+      };
+      clearInterval(ajastin);
+    }, 50);
+    setTimeout(() => clearInterval(ajastin), 60000);
+  }).catch(() => {});
+  /*
    * KELLO ALKAA AKTIVOI-NAPAUTUKSESTA. Playwrightin omat napautukset
    * odottavat elementin rauhoittumista, ja raskaalla WebGL-sivulla
    * kolme napautusta voi kestää yli kymmenen sekuntia (mitattu
@@ -491,6 +516,25 @@ async function mittaaAvaus(s, { selain, kotelo, kerta, dpr, leveys, korkeus }) {
     const seuraava = t0 + (pisteSarja.length) * SEURANTA_VALI_MS;
     await s.waitForTimeout(Math.max(0, seuraava - Date.now()));
   }
+  const avaus52 = await s.evaluate(() => {
+    const t = window.matkakirja?.ui?.pallolinssi?.kahva?.avaruus?.tila?.();
+    const viiva = document.querySelector('.astro-rata path');
+    const v = (viiva?.getAttribute('stroke') ?? '').match(/[\d.]+/g)?.map(Number) ?? [];
+    const iss = document.querySelector('.astro-iss')?.getBoundingClientRect();
+    const kapein = Math.min(t?.kotelo?.leveys ?? 0, t?.kotelo?.korkeus ?? 0) || 1;
+    return {
+      musta: window.__avaus52Musta ?? null,
+      paljastus: window.__avaus52 ?? t?.paljastus ?? null,
+      avausajo: t?.avausajo ?? null,
+      korkeus: { nyt: t?.korkeusNyt, lepo: t?.lepokorkeus, avaus: t?.avauskorkeus },
+      halkaisijaOsuus: t ? +(t.halkaisijaNytPx / kapein).toFixed(3) : null,
+      pilvetLevossa: t?.sumu?.pilvet ?? null,
+      radanLuminanssi: v.length >= 3 ? Math.round(0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2]) : null,
+      iss: iss ? [Math.round(iss.width), Math.round(iss.height)] : null,
+      issOsia: document.querySelectorAll('.astro-iss svg rect').length,
+    };
+  }).catch((e) => ({ virhe: String(e).slice(0, 80) }));
+  console.log(`    AVAUS52 ${JSON.stringify(avaus52)}`);
   const kuva15 = await s.screenshot({ type: 'png', timeout: 60000 });
   const kirkkaus15 = pallonKirkkaus(decodePng(kuva15), { leveys, korkeus, dpr });
   /* Materiaalin kartta: mikä kuva pinnalla oikeasti on ja onko se latautunut. */

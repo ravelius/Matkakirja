@@ -2,7 +2,10 @@
  * ONKO NOSTOTASON POLTTO AJAN TASALLA? (erä J, 19.9.2026; raportti
  * docs/raportit/viesti-fable-lehtinimiot-20260919.md)
  *
- *   node tools/tarkista-polton-tuoreus.mjs [ISO …]
+ *   node tools/tarkista-polton-tuoreus.mjs [--luettelo <pyramidi.json>] [ISO …]
+ *
+ * `--luettelo` lukee paikallisen luettelon (uudelleenpolton tarkistus
+ * ennen vientiä); oletus on ämpärin julkaistu luettelo.
  *
  * Peli pitää nostoa poltettuna vain, jos sen sisältötiiviste on sama
  * kuin luettelossa (js/laattapyramidi.js nostoOnPoltettu). Kun maahan
@@ -20,9 +23,16 @@
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
 import { keraaNostot } from './fokuskartta/nostot.mjs';
 
-const luettelo = await (await fetch('https://media.matkakirja.app/julisteet/pyramidi/pyramidi.json')).json();
+import { readFileSync } from 'node:fs';
+
+const argv = process.argv.slice(2);
+const li = argv.indexOf('--luettelo');
+const luettelo = li >= 0
+  ? JSON.parse(readFileSync(argv[li + 1], 'utf8'))
+  : await (await fetch('https://media.matkakirja.app/julisteet/pyramidi/pyramidi.json')).json();
+if (li >= 0) argv.splice(li, 2);
 const { merkit } = keraaNostot(MAAILMANKARTTA);
-const valitut = process.argv.slice(2).map((m) => m.toUpperCase());
+const valitut = argv.map((m) => m.toUpperCase());
 const maat = valitut.length ? valitut : Object.keys(luettelo.nostotasot ?? {}).sort();
 let yhteensa = 0;
 for (const iso of maat) {

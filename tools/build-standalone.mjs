@@ -82,6 +82,8 @@ const MODULES = [
   'js/packs/hahmotelma-dnk.js',
   'js/packs/hahmotelma-svk.js',
   'js/packs/hahmotelma-lux.js',
+  'js/packs/hahmotelma-cyp.js',
+  'js/packs/hahmotelma-mlt.js',
   'js/packs/hahmotelma-hun.js',
   'js/packs/hahmotelma-esp.js',
   'js/packs/hahmotelma-ita.js',
@@ -188,6 +190,9 @@ const MODULES = [
   'js/packs/fokusvirta-alpit.js',
   'js/packs/fokusvirta-lappi.js',
   'js/packs/fokusvirta-tromssa.js',
+  // Bryssel (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti).
+  // Kevyt pakki samasta syystä kuin kuusi edellä.
+  'js/packs/fokusvirta-bryssel.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan
@@ -338,6 +343,8 @@ const MODULES = [
   'js/packs/pollo-asetukset.js',
   // Pöllön valmiskysymykset. js/pollo.js tuo tämän staattisesti.
   'js/packs/pollo-kysymykset.js',
+  // Viisaan pöllön arvonimet (nimilappuvitsi, js/ui-apurit.js polloNimilappu).
+  'js/packs/pollon-arvonimet.js',
   // Kuratoidut pöllöpoiminnat (kysymys–vastaus-pillerit artikkeleissa).
   // js/pollopoiminnat.js tuo tämän staattisesti.
   'js/packs/pollo-poiminnat.js',

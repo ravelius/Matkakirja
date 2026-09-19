@@ -150,7 +150,11 @@ const PALLON_PACK = packById('maailmankartta');
  */
 function amsterdaminKynnyksella() {
   const peli = new Game({
-    players: [{ name: 'Fogg', color: '#c9a227', start: 'pariisi' }],
+    // v1968: Bryssel tuli pelikaupungiksi Pariisin ja Amsterdamin väliin
+    // (reitti Pariisi–Bryssel–Amsterdam), joten Amsterdamin kynnys on nyt
+    // Bryssel–Amsterdam-kaarella. Lähtö Brysselistä pitää tilan samana kuin
+    // ennen: yksi askel Amsterdamista, sama liftauslogiikka.
+    players: [{ name: 'Fogg', color: '#c9a227', start: 'bryssel' }],
     pack: PALLON_PACK,
     seed: 7,
   });
@@ -159,10 +163,11 @@ function amsterdaminKynnyksella() {
   let kaariId = null;
   let kaari = null;
   for (const [id, e] of peli.board.edgeById.entries()) {
-    if ((e.a === 'pariisi' && e.b === 'amsterdam') || (e.a === 'amsterdam' && e.b === 'pariisi')) {
+    if ((e.a === 'bryssel' && e.b === 'amsterdam') || (e.a === 'amsterdam' && e.b === 'bryssel')) {
       kaariId = id; kaari = e; break;
     }
   }
+  if (!kaari) throw new Error('Bryssel–Amsterdam-kaarta ei löydy laudalta');
   const idx = kaari.a === 'amsterdam' ? 0 : kaari.steps - 1;
   peli.player.pos = { type: 'edge', edge: kaariId, idx };
   peli.phase = 'action';

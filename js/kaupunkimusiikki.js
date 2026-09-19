@@ -159,6 +159,7 @@ export const ALUEEN_MAAT = {
   ISL: 'pohjola',
   FRA: 'keski-eurooppa',
   NLD: 'keski-eurooppa',
+  BEL: 'keski-eurooppa',
   DEU: 'keski-eurooppa',
   CZE: 'keski-eurooppa',
   AUT: 'keski-eurooppa',

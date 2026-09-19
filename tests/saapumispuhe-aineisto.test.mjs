@@ -12,8 +12,24 @@ test('media lookup exposes the new take without fallback or playback',()=>{
   assert.equal(haeSaapumispuhe({id:'sofia'}),SAAPUMISPUHEET.sofia);
   for(const id of ['missing','toString','__proto__',undefined,null])assert.equal(haeSaapumispuhe(id),null);
 });
-test('saapumispuheet cover exactly the canonical 45 Europe cities',()=>{
-  assert.deepEqual(Object.keys(SAAPUMISPUHEET),Object.keys(FOKUSVIRRAT));
+/*
+ * KAUPUNGIT ILMAN HORATION SAAPUMISOTTOA — nimetty poikkeus, ei
+ * löysennys. Bryssel (19.9.2026, omistajan päätös: Belgian
+ * pelikaupunki, pilotti) on ensimmäinen fokusvirtakaupunki sen 15.9.2026
+ * suljetun 45 kaupungin erän jälkeen. Sonnet-sisältösessiolla ei ole
+ * pääsyä ElevenLabs-äänituotantoon, joten saapumisottoa ei voi luoda
+ * tässä sessiossa — se vaatii oman Horatio-tuotantoerän (ks.
+ * docs/raportit/horatio-saapumisaanet-eurooppa-20260915.json ja
+ * tools/, joilla erä ajettiin). Poikkeus on nimetty, jotta uusi
+ * äänetön kaupunki ei livahda mukaan huomaamatta.
+ */
+const ILMAN_SAAPUMISOTTOA = new Set(['bryssel']);
+
+test('saapumispuheet cover exactly the canonical 45 Europe cities plus named gaps',()=>{
+  const odotettu=Object.keys(FOKUSVIRRAT).filter((id)=>!ILMAN_SAAPUMISOTTOA.has(id));
+  assert.deepEqual(Object.keys(SAAPUMISPUHEET),odotettu);
+  const puuttuu=Object.keys(FOKUSVIRRAT).filter((id)=>!Object.hasOwn(SAAPUMISPUHEET,id));
+  assert.deepEqual(puuttuu.sort(),[...ILMAN_SAAPUMISOTTOA].sort());
   assert.equal(delivery.cities.length,45);
   assert.equal(new Set(delivery.cities.map(r=>r.id)).size,45);
 });

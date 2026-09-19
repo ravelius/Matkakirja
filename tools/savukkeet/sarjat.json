@@ -39,7 +39,8 @@
     "savuke-astro-pallo.mjs#vartija-a",
     "savuke-astro-pallo.mjs#vartija-b",
     "savuke-ihmisen-kappaleet.mjs",
-    "savuke-astro-valokuva.mjs"
+    "savuke-astro-valokuva.mjs",
+    "savuke-arvonimet.mjs"
   ],
   "harvaPolut": {
     "_kommentti": "PR:ssä harvan sarjan rivi ajetaan vain, jos PR:n muutetut tiedostot osuvat sen polkuihin (tools/savukkeet/valitse-harvat.mjs). Rivin oma savuketiedosto ja yhteiset apurit (YHTEISET) kuuluvat aina mukaan. * = mikä tahansa paitsi /, ** = mikä tahansa.",
@@ -134,6 +135,12 @@
       "js/pallolauta/tahdet.js",
       "css/satelliitti.css",
       "js/pallodiag.js"
+    ],
+    "savuke-arvonimet.mjs": [
+      "js/ui-apurit.js",
+      "js/packs/pollon-arvonimet.js",
+      "js/fokuskohteet.js",
+      "js/nostokuva.js"
     ]
   },
   "asetukset": {
