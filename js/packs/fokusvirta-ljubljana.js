@@ -8,7 +8,7 @@
  * muuta (js/fokusvirta.js FOKUSVIRTA_KORTIT === false). Kevyet pakit on
  * nimetty rekisterissä (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT).
  *
- * MATKAKIRJAN TEKSTI ON LUONNOS — Fable kirjoittaa kaanonin
+ * MATKAKIRJAN TEKSTI ON Fablen kaanon 20.9.2026 klo 00.30 (oli LUONNOS) — Fable kirjoittaa kaanonin
  * (isoisän matkakirjan sävy, päivämäärä ja reitti). Livian kupla on
  * Sonnetin kirjoittama, koska se on nykypäivän ääni eikä kaanonia.
  *
@@ -35,11 +35,13 @@ export const FOKUSVIRTA_LJUBLJANA = {
      * Päivämäärä ja reitin järjestys on jätetty auki (paikkarivissä vain
      * vuosi).
      */
-    teksti: 'Laibach, 1873. Höyryjuna toi minut Wienistä kaupunkiin, joka '
-      + 'on pieni mutta äänekäs: kadulla kuulee sekä sloveenia että '
-      + 'saksaa. Linnavuoren torni näkyy joka kadun päästä, ja lohikäärme '
-      + 'katsoo alas vaakunasta. Ljubljanica virtaa hiljaa pajujen alla, '
-      + 'ja minä jäin katsomaan sitä pidemmäksi aikaa kuin oli tarkoitus.',
+    teksti: 'Ljubljana, syyskuussa 1873. Laibach, sanovat itävaltalaiset '
+      + 'virkamiehet, ja kaupunki kuuntelee kahdella korvalla. Linna '
+      + 'kyyhöttää kukkulalla kuin vartija, joka on nukahtanut virkaansa: '
+      + 'sisällä on vankila, ei ruhtinaita. Ljubljanica kiertää vanhan '
+      + 'kaupungin hitaasti kuin ei tahtoisi lähteä, ja rannan pajat haisevat '
+      + 'nahalta ja tervalta. Juna toi minut Wienistä yhdessä päivässä; '
+      + 'isoisäni aikaan matka kesti viikon.',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
