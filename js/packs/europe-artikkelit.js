@@ -1595,6 +1595,67 @@ export const EUROPE_ARTIKKELIT = {
    * töitä (1920–30-luvut) EI mainita nykyhetken asioina — ne tulevat
    * vasta isoisän matkan jälkeen.
    */
+  /*
+   * KOŠICE (20.9.2026, omistajan päätös 19.9.2026: Slovakia saa
+   * pelikaupungin Košice). Teksti on kirjoitettu omin sanoin
+   * en-Wikipedian artikkelista "Košice" (luettu 20.9.2026),
+   * 1873-näkökulmasta: unkarilainen Kassa Unkarin kuningaskunnassa
+   * (Itävalta-Unkari), Pyhän Elisabetin tuomiokirkko, Pentapolitana,
+   * jesuiittojen yliopisto 1657, hiippakunta 1802, muurit purettu
+   * 1856 mennessä, sähkösanoma 1856, rautatie Miskolciin 1860 ja
+   * Ylä-Unkarin museo 1872. Slovakian itsenäisyyttä, Tšekkoslovakian
+   * aikaa ja sodan aikaisia tapahtumia EI käsitellä — ne tulevat
+   * vasta isoisän matkan jälkeen. Väestötiedot ovat vuodelta 1891
+   * (28 884), ei 1873.
+   */
+  Košice: {
+    intro: 'Košice, unkariksi **Kassa** ja saksaksi Kaschau, on Ylä-Unkarin '
+      + 'suurin kaupunki Hornád-joen varrella. Se kuuluu Unkarin '
+      + 'kuningaskuntaan ja on siellä vapaa kuninkaallinen kaupunki. Vielä vuonna 1891 asukkaita on '
+      + 'vasta noin 29 000, mutta kaupungin asema on ollut suuri jo '
+      + 'keskiajalta.'
+      + '\n\n'
+      + 'Kaupungin sydän on pitkä, linssinmuotoinen **Hlavná-katu**, jonka '
+      + 'varrella kohoaa **Pyhän Elisabetin tuomiokirkko**. Se on '
+      + 'rakennettu 1300-luvun lopulta alkaen ja oli aikanaan Unkarin '
+      + 'kuningaskunnan suurin kirkko.'
+      + '\n\n'
+      + 'Höyryjuna on tuonut kaupungin lähemmäs maailmaa: rautatie '
+      + 'Miskolciin valmistui vuonna 1860, ja vuonna 1873 kaupungista on '
+      + 'jo yhteys Prešoviin, Žilinaan ja Chopiin. Vanhat kaupunginmuurit '
+      + 'on purettu vaiheittain 1800-luvun alusta vuoteen 1856.',
+    teksti: 'Košicen ensimmäinen tunnettu kirjallinen maininta on '
+      + 'vuodelta 1230, jolloin se oli kuninkaallinen kylä nimeltä Villa '
+      + 'Cassa. Mongolien hyökkäyksen jälkeen 1241 kuningas Béla IV kutsui '
+      + 'kaupunkiin saksalaisia uudisasukkaita, ja Ala- ja Ylä-Kassa '
+      + 'yhdistyivät 1200-luvulla pitkän Hlavná-kadun ympärille. '
+      + 'Kaupunki sai ensimmäiset tunnetut kaupunkioikeutensa 1290, ja '
+      + 'se oli strateginen risteys kauppatiellä.'
+      + '\n\n1300-luvun lopulla kaupunki oli niin rikas, että '
+      + 'sinne päätettiin rakentaa aivan uusi kirkko: Pyhän Elisabetin '
+      + 'tuomiokirkko, Unkarin kuningaskunnan suurin. Keisari Sigismund '
+      + 'ja paavin istuin tukivat hanketta. 1400-luvun alusta Košice oli '
+      + 'Pentapolitanan, Ylä-Unkarin viiden tärkeimmän kaupungin '
+      + '(Bardejov, Levoča, Košice, Prešov ja Sabinov) liiton, '
+      + 'johtavia jäseniä, ja kuningas Matthias Corvinuksen aikana noin '
+      + '10 000 asukkaan kaupunki oli yksi Euroopan suurimmista.'
+      + '\n\nMyöhemmin kaupunki kärsi Unkarin valtataisteluista ja '
+      + 'Ottomaanien valtakunnan läsnäolosta. Vuonna 1657 jesuiitat '
+      + 'perustivat kaupunkiin kirjapainon ja yliopiston, josta tuli '
+      + 'vuonna 1777 kuninkaallinen akatemia ja myöhemmin oikeusakatemia. '
+      + 'Vuonna 1723 Hlavná-kadulle pystytettiin Immaculata-patsas '
+      + '1710–1711 ruton muistoksi. Kaupunki sai oman hiippakunnan '
+      + 'vuonna 1802, ja vuosien 1848–1849 sota kulki myös sen '
+      + 'ympäristössä.'
+      + '\n\nKaupunki nykyaikaistuu: ensimmäiset tehtaat perustettiin '
+      + '1840-luvulla (sokeri- ja naulatehtaat), sähkösanoma saapui 1856 '
+      + 'ja rautatie Miskolciin 1860. Vuonna 1872 perustettiin Ylä-'
+      + 'Unkarin museo, josta tuli myöhemmin Itä-Slovakian museo. '
+      + 'Muurit puretaan, ja vain Pyövelin bastioni säilyy niiden '
+      + 'jäänteenä.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
   Ljubljana: {
     intro: 'Ljubljana on Krainin herttuakunnan pääkaupunki '
       + 'Ljubljanica-joen varrella, ja saksaksi sitä kutsutaan '

@@ -21,7 +21,10 @@
  *   node tools/kirjoita-radiot.mjs
  * Radio Browserin aineistosta. Älä muokkaa käsin: aja haku uudelleen.
  *
- * 112 maata, joista 74 maan yleisradion kanava. SVN (20.9.2026) on
+ * 113 maata, joista 75 maan yleisradion kanava. SVK (20.9.2026) on
+ * käsin lisätty: Rádio Slovensko (Slovenský rozhlas), osoite tarkistettu
+ * hakemalla (HTTP 200, audio/mpeg; CORS-otsaketta ei lähetetä, joten
+ * VU-mittari ei mittaa tätä lähetystä). SVN (20.9.2026) on
  * käsin lisätty: Radio Prvi, RTV Slovenijan ykköskanava, osoite
  * tarkistettu hakemalla (HTTP 200, audio/aac, CORS *). BEL (19.9.2026) on
  * käsin lisätty: VRT Radio 1 -osoite tarkistettu hakemalla (302-uudelleen-
@@ -141,6 +144,7 @@ export const RADIOT = {
   SLB: { url: 'https://listen.mixlr.com/e1e2be07dfce2a18e8ee3cdd0dd2d437', asema: 'SIBC Solomon Islands Broadcasting (Honiara)', virallinen: true },
   SLE: { url: 'https://stream.zeno.fm/jetj7igyezmtv', asema: 'Culture Radio FM 104.5 (Freetown)' },
   SOM: { url: 'https://stream.zeno.fm/m7p996vfec9uv', asema: 'Radio Shabelle 101.5 (Mogadishu)' },
+  SVK: { url: 'https://icecast.stv.livebox.sk/slovensko_128.mp3', asema: 'Rádio Slovensko (Slovenský rozhlas)', virallinen: true },
   SVN: { url: 'https://mp3.rtvslo.si/ra1', asema: 'Radio Prvi (RTV Slovenija)', virallinen: true },
   SWE: { url: 'https://live1.sr.se/p1-aac-32', asema: 'Sveriges Radio P1', virallinen: true },
   SYR: { url: 'https://asima.out.airtime.pro/asima_a', asema: 'Al Asemeh FM / العاصمة إف إم (Damaskos)' },

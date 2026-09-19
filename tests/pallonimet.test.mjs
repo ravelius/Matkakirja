@@ -221,11 +221,13 @@ test('sama sääntö kahdelle laudalle: laudan ladonta ja ruutuladonta kulkevat 
   // pakotus kirjataan (tests/karttanimet.test.mjs vertaa arvot).
   const tulos = karttanimienLadonta(MAAILMANKARTTA, 1.88);
   // Jokainen kaupunki saa merkkinsä: nimi on oma tai maastoparin (Alpit).
+  // 263 → 264 (20.9.2026): Košice liittyi maailmankartalle (Slovakian
+  // pelikaupunki, omistajan päätös 19.9.2026).
   // 262 → 263 (20.9.2026): Ljubljana liittyi maailmankartalle (Slovenian
   // pelikaupunki, omistajan päätös 19.9.2026).
   // 261 → 262 (19.9.2026): Bryssel liittyi maailmankartalle (omistajan
   // päätös, Belgian pelikaupunki, pilotti).
-  assert.equal(tulos.merkit.filter((m) => m.laji === 'kaupunki').length, 263);
+  assert.equal(tulos.merkit.filter((m) => m.laji === 'kaupunki').length, 264);
   assert.equal(typeof tulos.pakotettu, 'number');
   // Nimen elementti käyttää samaa kirjasinta ja luokkia kuin kartta.
   const nimet = lue('../js/pallolauta/nimet.js');

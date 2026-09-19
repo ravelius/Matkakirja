@@ -22,6 +22,7 @@ export const EUROPE_CITY_COUNTRY = {
   istanbul: 'TUR',
   kiova: 'UKR',
   kobenhavn: 'DNK',
+  kosice: 'SVK',
   lappi: 'FIN',
   ljubljana: 'SVN',
   lissabon: 'PRT',

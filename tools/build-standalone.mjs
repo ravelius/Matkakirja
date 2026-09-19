@@ -197,6 +197,8 @@ const MODULES = [
   'js/packs/fokusvirta-bryssel.js',
   // Ljubljana (20.9.2026, omistajan päätös: Slovenian pelikaupunki).
   'js/packs/fokusvirta-ljubljana.js',
+  // Košice (20.9.2026, omistajan päätös: Slovakian pelikaupunki).
+  'js/packs/fokusvirta-kosice.js',
   // Egyptillä ja Irakilla ei ole omaa fokusvirtaa: pelkät kohteet
   // (kadonneiden ihmeiden erä 26.8.2026), joten paririviä ei ole.
   // Sama koskee Ranskaa ja Britanniaa (Matkakirjan ihmeiden Euroopan

@@ -581,6 +581,104 @@ export const EUROPE_QUESTIONS = {
    * artikkelista (en-Wikipedia Ljubljana ja Ljubljana Castle, luettu
    * 20.9.2026), ei uusia väitteitä.
    */
+  /*
+   * KOŠICE (20.9.2026, omistajan päätös 19.9.2026: Slovakia saa
+   * pelikaupungin Košice; Bratislava ei mahtunut lautaan). Faktapohja
+   * EUROPE_ARTIKKELIT.Košice-artikkelista (en-Wikipedia Košice, luettu
+   * 20.9.2026), ei uusia väitteitä. Isoisän aikana kaupunki on
+   * Unkarin kuningaskunnan Kassa.
+   */
+  kosice: [
+    {
+      q: 'Minkä maan toiseksi suurin kaupunki Košice on nykyään?',
+      options: ['Slovakian', 'Tšekin', 'Puolan', 'Unkarin'],
+      correct: 0,
+      level: 1,
+      fact: 'Košice on Slovakian toiseksi suurin kaupunki ja Itä-Slovakian keskus Hornád-joen varrella. Isoisän aikana se oli Unkarin kuningaskunnan Kassa.',
+      hint: 'Kaupunki on lähellä Unkarin ja Ukrainan rajaa.',
+      source: 'https://en.wikipedia.org/wiki/Ko%C5%A1ice',
+    },
+    {
+      q: 'Millä nimellä Košicea kutsuttiin unkariksi?',
+      options: ['Kassa', 'Kaschau', 'Koszyce', 'Cassovie'],
+      correct: 0,
+      level: 1,
+      fact: 'Unkariksi kaupunki on Kassa, saksaksi Kaschau, puolaksi Koszyce ja latinaksi Cassovia. Ensimmäinen kirjallinen maininta on vuodelta 1230 nimellä Villa Cassa.',
+      hint: 'Nimi alkaa K-kirjaimella ja päättyy a:han.',
+      source: 'https://en.wikipedia.org/wiki/Ko%C5%A1ice',
+    },
+    {
+      q: 'Mikä on Slovakian suurin kirkko, joka kohoaa Košicen keskustassa?',
+      options: ['Pyhän Elisabetin tuomiokirkko', 'Pyhän Martinin tuomiokirkko', 'Pyhän Egidiuksen kirkko', 'Pyhän Mikaelin kappeli'],
+      correct: 0,
+      fact: 'Pyhän Elisabetin tuomiokirkko rakennettiin 1300-luvun lopulta alkaen, ja se oli Unkarin kuningaskunnan suurin katedraali. Keisari Sigismund tuki sen rakentamista.',
+      hint: 'Kirkko on kaupungin tunnetuin nähtävyys.',
+      source: 'https://en.wikipedia.org/wiki/Ko%C5%A1ice',
+    },
+    {
+      q: 'Minä vuonna Košice mainitaan ensimmäisen kerran kirjallisesti?',
+      options: ['1104', '1230', '1345', '1478'],
+      correct: 1,
+      level: 2,
+      fact: 'Vuoden 1230 asiakirjassa kaupunki mainitaan kuninkaallisena kylänä nimellä Villa Cassa. Ensimmäiset kaupunkioikeudet tunnetaan vuodelta 1290.',
+      hint: 'Vuosi on ennen mongolien hyökkäystä 1241.',
+      source: 'https://en.wikipedia.org/wiki/Ko%C5%A1ice',
+    },
+    {
+      q: 'Minkä viiden kaupungin liiton johtava jäsen Košice oli 1400-luvulta alkaen?',
+      options: ['Pentapolitanan', 'Hansaliiton', 'Reinin liiton', 'Lombardian liiton'],
+      correct: 0,
+      level: 2,
+      fact: 'Pentapolitana oli Ylä-Unkarin viiden tärkeimmän kaupungin liitto: Bardejov, Levoča, Košice, Prešov ja Sabinov.',
+      hint: 'Nimi viittaa viiteen kaupunkiin.',
+      source: 'https://en.wikipedia.org/wiki/Ko%C5%A1ice',
+    },
+    {
+      q: 'Minkä epidemian muistoksi Košicen pääkadulle pystytettiin Immaculata-patsas vuonna 1723?',
+      options: ['ruttoepidemian', 'koleraepidemian', 'isorokkoepidemian', 'lavantautiepidemian'],
+      correct: 0,
+      level: 2,
+      fact: 'Immaculata-patsas pystytettiin entisen mestauspaikan kohdalle Hlavná-kadulle vuosien 1710–1711 ruton muistoksi.',
+      hint: 'Tauti tunnetaan myös nimellä musta surma.',
+      source: 'https://en.wikipedia.org/wiki/Ko%C5%A1ice',
+    },
+    {
+      q: 'Minkä joen varrella Košice sijaitsee?',
+      options: ['Hornád', 'Tonava', 'Visla', 'Dnestr'],
+      correct: 0,
+      fact: 'Košice sijaitsee Hornád-joen varrella Slovakian malmivuorten itälaidalla.',
+      hint: 'Joen nimi alkaa H-kirjaimella.',
+      source: 'https://en.wikipedia.org/wiki/Ko%C5%A1ice',
+    },
+    {
+      q: 'Minä vuonna rautatie yhdisti Košicen Miskolciin?',
+      options: ['1830', '1888', '1860', '1905'],
+      correct: 2,
+      level: 3,
+      fact: 'Rautatie Miskolciin valmistui vuonna 1860, ja vuoteen 1873 mennessä Košicesta oli yhteys myös Prešoviin, Žilinaan ja Chopiin. Sähkösanoma oli saapunut kaupunkiin jo 1856.',
+      hint: 'Vuosi on hieman ennen isoisän matkaa.',
+      source: 'https://en.wikipedia.org/wiki/Ko%C5%A1ice',
+    },
+    {
+      q: 'Mitä Košicen kaupunginmuureille tapahtui 1800-luvun alusta vuoteen 1856?',
+      options: ['ne purettiin vaiheittain', 'ne rakennettiin uusiksi', 'ne maalattiin valkoisiksi', 'ne siirrettiin toiseen kaupunkiin'],
+      correct: 0,
+      level: 3,
+      fact: 'Vain Pyövelin bastioni säilyi muurien jäänteistä. Nykyään siinä toimii Itä-Slovakian museon näyttelytilaa.',
+      hint: 'Kaupunki kasvoi ulos vanhojen linnoitusten sisältä.',
+      source: 'https://en.wikipedia.org/wiki/Ko%C5%A1ice',
+    },
+    {
+      q: 'Mikä perustettiin Košicessa vuonna 1872?',
+      options: ['Ylä-Unkarin museo', 'Ensimmäinen yliopisto', 'Raitiotie', 'Kirjapaino'],
+      correct: 0,
+      level: 3,
+      fact: 'Ylä-Unkarin museo (Felső-magyarországi Múzeum) perustettiin 1872, ja siitä tuli myöhemmin Itä-Slovakian museo. Kaupungin yliopisto oli perustettu jo 1657.',
+      hint: 'Perustaminen tapahtui vuotta ennen isoisän matkaa.',
+      source: 'https://en.wikipedia.org/wiki/Ko%C5%A1ice',
+    },
+  ],
+
   ljubljana: [
     {
       q: 'Minkä maan pääkaupunki Ljubljana on nykyään?',
@@ -2349,6 +2447,14 @@ export const EUROPE_FACTS = {
     'Galeries Royales Saint-Hubert avattiin vuonna 1847 lasikattoisena kauppakujana, ja se oli aikanaan yksi Euroopan ensimmäisistä katetuista ostoskaduista.',
     {
       text: 'Belgian suklaa on vielä tavallista kaakaolevyä: täytetty praliini keksitään täällä vasta neljänkymmenen vuoden päästä. Torilla myydään sen sijaan pitsiä, jota nyplätään sormin niin nopeasti, etten ehdi seurata.',
+      voice: 'isoisa',
+    },
+  ],
+  kosice: [
+    'Košicen keskustan muodostaa pitkä, linssinmuotoinen Hlavná-katu: sen ympärille yhdistyivät Ala- ja Ylä-Kassa 1200-luvulla.',
+    'Košicessa oli 1657 perustettu jesuiittojen yliopisto (Universitas Cassoviensis), josta tuli 1777 kuninkaallinen akatemia ja myöhemmin oikeusakatemia.',
+    {
+      text: 'Kassaan tuli sähkölennätin 1856 ja rautatie Miskolcista 1860. Nyt yhteydet kulkevat jo Prešoviin, Žilinaan ja Chopiin asti, ja asemalla on aina vilinää.',
       voice: 'isoisa',
     },
   ],
