@@ -254,6 +254,45 @@ const puluPeitto = (sivu, kortti) => sivu.evaluate(async (valitsin) => {
   };
 }, kortti);
 
+/*
+ * VISALAATIKON ULKOASU (Raamattu NOSTOVISAN ULKOASU JA VAIHTOEHTOJEN
+ * KIELI, omistajan laitekuva 19.9.2026 klo 20.41: "Tämä visuaalisesti
+ * outo"). Laatikko on paperia: vaihtoehdot ovat VAALEITA nappeja
+ * ruskealla reunalla, ja laatikko on enintään puolet 390 × 844 -ruudun
+ * korkeudesta. Mitataan laatikon korkeus ja jokaisen vaihtoehtonapin
+ * taustan luminanssi (tausta sekoitettuna laatikon paperiin alfan
+ * mukaan) sekä reunan olemassaolo. Laitekuvassa kohdekortin napit
+ * olivat tummanruskeita (pelin yleinen nappi), koska laatikon säännöt
+ * oli kirjoitettu vain nostokortin valitsimella.
+ */
+const visaUlkoasu = (sivu, kortti) => sivu.evaluate((valitsin) => {
+  const laatikko = document.querySelector(`${valitsin} .fokusnosto-visa`);
+  if (!laatikko) return { laatikko: false };
+  const rgba = (c) => (c.match(/[\d.]+/g) ?? []).map(Number);
+  const lum = ([r, g, b]) => 0.2126 * r + 0.7152 * g + 0.0722 * b;
+  const napit = [...laatikko.querySelectorAll('.kulttuuri-vaihtoehdot button')].map((n) => {
+    const t = getComputedStyle(n);
+    const [r, g, b, a = 1] = rgba(t.backgroundColor);
+    // Läpinäkyvä tausta näyttää paperin (kortin sävy #f5f0e2 ≈ 240).
+    const paperi = 240;
+    return {
+      lum: Math.round(a * lum([r, g, b]) + (1 - a) * paperi),
+      reuna: parseFloat(t.borderTopWidth) > 0 && t.borderTopStyle !== 'none',
+      teksti: Math.round(lum(rgba(t.color))),
+    };
+  });
+  const otsikko = laatikko.querySelector('.minitehtava-otsikko');
+  return {
+    laatikko: true,
+    korkeus: Math.round(laatikko.getBoundingClientRect().height),
+    ruutu: innerHeight,
+    napit,
+    otsikkoKoko: otsikko ? parseFloat(getComputedStyle(otsikko).fontSize) : null,
+  };
+}, kortti);
+const ulkoasuOk = (u) => u.laatikko && u.korkeus <= u.ruutu / 2 && u.napit.length >= 2
+  && u.napit.every((n) => n.lum >= 200 && n.reuna && n.teksti < 80);
+
 const luvut = (sivu) => sivu.evaluate(() => ({
   money: window.matkakirja.game.player.money,
   laskuri: window.matkakirja.game.nostotehtavatRatkaistu,
@@ -308,6 +347,10 @@ if (a.auki) {
   tieto('pulu nostokortilla', JSON.stringify(peittoA));
   vaadi('9. pulu ei peitä nostokortin tekstiä (390 px)',
     peittoA.pulu && peittoA.kortti && peittoA.leikkaa === 0, JSON.stringify(peittoA));
+  const ulkoasuA = await visaUlkoasu(a.sivu, '.fokusnosto-kortti');
+  tieto('visan ulkoasu nostokortilla', JSON.stringify(ulkoasuA));
+  vaadi('12. nostokortin visa on paperia: vaaleat reunalliset napit, laatikko ≤ puoli ruutua',
+    ulkoasuOk(ulkoasuA), JSON.stringify(ulkoasuA));
 
   /*
    * 9c. KORTTI JO NOSTETUN PULUN PÄÄLLE (Sonnet, kierros 11, v1962
@@ -489,6 +532,20 @@ if (d.auki) {
   tieto('pulu kohdekortilla', JSON.stringify(peittoD));
   vaadi('10. pulu ei peitä kohdekortin tekstiä (390 px)',
     peittoD.pulu && peittoD.kortti && peittoD.leikkaa === 0, JSON.stringify(peittoD));
+  const ulkoasuD = await visaUlkoasu(d.sivu, '.fokuskohde-popup');
+  tieto('visan ulkoasu kohdekortilla', JSON.stringify(ulkoasuD));
+  if (KUVAKANSIO) {
+    await d.sivu.evaluate(async () => {
+      // Saapumistraileri on savukkeen latauksen jäänne kortin päällä.
+      for (const e of document.querySelectorAll('.saapumistraileri')) e.remove();
+      document.querySelector('.fokuskohde-popup .fokusnosto-visa')?.scrollIntoView({ block: 'center' });
+      await new Promise((v) => setTimeout(v, 300));
+    });
+    await d.sivu.locator('.fokuskohde-popup .fokusnosto-visa')
+      .screenshot({ path: join(KUVAKANSIO, 'nostovisa-kohdekortti-laatikko.png'), scale: 'css' }).catch(() => {});
+  }
+  vaadi('12b. kohdekortin visa on paperia: vaaleat reunalliset napit, laatikko ≤ puoli ruutua',
+    ulkoasuOk(ulkoasuD), JSON.stringify(ulkoasuD));
   vaadi('6. hahmotelmanoston kohdekortissa on lukijan kysymys lipukkeineen',
     ek.loytyi && ek.onLaatikko && ek.napit >= 2, JSON.stringify(ek));
   const ennenD = await luvut(d.sivu);
