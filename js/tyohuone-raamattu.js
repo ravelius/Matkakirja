@@ -9393,7 +9393,13 @@ export const RAAMATTU = {
           + 'vie-nostoankkurit --yhdista + lukitse kaikille 13 maalle ja kytketaan '
           + 'LUKITUT_ANKKURIT-taulut (nostoankkurit-<iso>.js) kuten FRA; 4) LUKITUT_MAAT '
           + '(poltto) EI muuteta - hahmotelmat pysyvat elavina pisteina, poltto on oma '
-          + 'myohempi paatos. Julkaistaan v1965.',
+          + 'myohempi paatos. Julkaistaan v1965. v1963 MERGETTY klo 20.28 (CI uusinta '
+          + 'vihrea), tuotannossa 20.33. v1964 PR #2615 klo 20.32: SWE, IRL, FIN, HRV, '
+          + 'Ihmisen matkan kortin kysymykset omaan kuplaan, PAATOKSET 47, kuusi '
+          + 'pallopistetta, visa-lukko (Opus 1: laitehavainto ei toistunut Playwrightissa, '
+          + 'lukko vartioitu 4b/11/11b) ja pulu-paneelin-ylla: vahti vaihtaa oletuspaikan '
+          + 'paallimmaiseen paneeliin (laaja nostokortti), 21/21. Opus 1 seuraava era: '
+          + 'Gronlanti laastaritilassa (jaasekoitus).',
         'KARTTAUUDISTUKSEN PAATOKSET 47: NOPAN JALKEEN KAMERA JAI TYHJAAN KOHTAAN - '
           + 'KOHDEMAAN ZOOMIKATTO KUMOSI ULOSSOVITUKSEN (Sonnet-simulaattoritesti kierros 5, '
           + '19.9.2026 klo 14.05-14.19 Suomen aikaa: Pariisi -> liftaus -> Amsterdam -> Liiku '
