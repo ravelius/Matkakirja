@@ -151,6 +151,8 @@ import { HAHMOTELMA_FIN } from './packs/hahmotelma-fin.js';
 import { HAHMOTELMA_ROU } from './packs/hahmotelma-rou.js';
 import { HAHMOTELMA_SVN } from './packs/hahmotelma-svn.js';
 import { HAHMOTELMA_EST } from './packs/hahmotelma-est.js';
+import { HAHMOTELMA_LTU } from './packs/hahmotelma-ltu.js';
+import { HAHMOTELMA_LVA } from './packs/hahmotelma-lva.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -559,6 +561,20 @@ KOHDE_MAAT.EST = [...(KOHDE_MAAT.EST ?? []), ...HAHMOTELMA_EST];
  * eikä aiempia nostoja, ja lista on karsittu 24:ään maan pienen koon takia.
  */
 KOHDE_MAAT.SVN = [...(KOHDE_MAAT.SVN ?? []), ...HAHMOTELMA_SVN];
+
+/*
+ * LIETTUAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla.
+ */
+KOHDE_MAAT.LTU = [...(KOHDE_MAAT.LTU ?? []), ...HAHMOTELMA_LTU];
+
+/*
+ * LATVIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla.
+ */
+KOHDE_MAAT.LVA = [...(KOHDE_MAAT.LVA ?? []), ...HAHMOTELMA_LVA];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
