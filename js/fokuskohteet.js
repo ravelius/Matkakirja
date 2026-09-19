@@ -140,6 +140,7 @@ import { HAHMOTELMA_POL } from './packs/hahmotelma-pol.js';
 import { HAHMOTELMA_CZE } from './packs/hahmotelma-cze.js';
 import { HAHMOTELMA_SWE } from './packs/hahmotelma-swe.js';
 import { HAHMOTELMA_DNK } from './packs/hahmotelma-dnk.js';
+import { HAHMOTELMA_SVK } from './packs/hahmotelma-svk.js';
 import { HAHMOTELMA_HUN } from './packs/hahmotelma-hun.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
@@ -419,6 +420,14 @@ KOHDE_MAAT.HRV = [...(KOHDE_MAAT.HRV ?? []), ...HAHMOTELMA_HRV];
 KOHDE_MAAT.BGR = [...(KOHDE_MAAT.BGR ?? []), ...HAHMOTELMA_BGR];
 
 /*
+
+/*
+ * SLOVAKIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; Slovakiassa ei ole pelikaupunkia, joten kaupunkikohteet
+ * (Bratislava, Košice ym.) ovat sallittuja.
+ */
+KOHDE_MAAT.SVK = [...(KOHDE_MAAT.SVK ?? []), ...HAHMOTELMA_SVK];
 
 /*
  * PUOLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
