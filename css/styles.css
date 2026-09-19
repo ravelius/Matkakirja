@@ -2293,6 +2293,7 @@ button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
  * lehden kuvan alla on vain lyhyt kuvateksti.
  */
 .kuvalahde-vain-suurennoksessa { display: none !important; }
+.ihmisen-nostokortti-kuvakehys.suurennettava img { cursor: zoom-in; }
 button:disabled { opacity: 0.45; cursor: not-allowed; }
 
 button.primary {

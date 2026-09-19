@@ -73,6 +73,7 @@ const PINNAT = [
   { nimi: 'hahmotelma Texel (vaihe 2)', avaa: 'kohde:NLD:hahmotelma-texel', lisaa: true, kortti: '.fokuskohde-popup', kuva: '.fokuskohde-kuvanappi, .nostokuva-nappi' },
   { nimi: 'maalehtinosto Montgolfier (vaihe 1)', avaa: 'nosto:maalehti-montgolfier', kortti: '.fokusnosto-kortti', kuva: '.nostokuva-nappi, .fokusnosto-kuvanappi' },
   { nimi: 'maalehtinosto Montgolfier (vaihe 2)', avaa: 'nosto:maalehti-montgolfier', lisaa: true, kortti: '.fokusnosto-kortti', kuva: '.nostokuva-nappi, .fokusnosto-kuvanappi' },
+  { nimi: 'Ihmisen matka Toba (lisänosto)', avaa: 'ihmisen:toba', kortti: '.ihmisen-nostokortti', kuva: '.ihmisen-nostokortti-kuvakehys.suurennettava img' },
 ];
 const selain = await paketti.chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
 const ctx = await selain.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, serviceWorkers: 'block' });
@@ -96,7 +97,16 @@ for (const p of PINNAT) {
     const odota = (ms) => new Promise((v) => setTimeout(v, ms));
     for (const el of document.querySelectorAll('.saapumistraileri, .fokusvirta-isokuva, .fokuskohde-popup, .fokusnosto-kerros, [class*="zoomkerros"], [class*="fokuskohde-zoom"]')) el.remove();
     const [laji, a, b] = p.avaa.split(':');
-    if (laji === 'kohde') {
+    if (laji === 'ihmisen') {
+      const { ui } = window.matkakirja;
+      ui.busy = false;
+      if (!ui.game.player.linssit.includes('ihmisen-matka')) ui.game.player.linssit.push('ihmisen-matka');
+      if (!ui.aikajana) ui.valitseLinssi('ihmisen-matka');
+      for (let i = 0; i < 600 && !ui.nostokortti; i += 1) await odota(25);
+      await ui.aikajana?.virrat?.valmis;
+      ui.nostokortti?.avaa(a);
+      await odota(1500);
+    } else if (laji === 'kohde') {
       const { KOHDE_MAAT, avaaFokuskohde } = await import('/js/fokuskohteet.js');
       const kohde = (KOHDE_MAAT[a] ?? []).find((k) => k.id === b);
       if (!kohde) return { virhe: 'ei kohdetta' };

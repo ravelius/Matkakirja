@@ -67,3 +67,33 @@ lähdetekstitestin kaava hyväksyy nyt `kortinKuvalahde`n). Niputus 405, build k
   vaihto riittää.
 - `savuke-nostokuva-karuselli` ja `savuke-kuvalahteet` sarjat.jsonin PR-porttiin
   tehdään v1962:n karsitun sarjat.jsonin päälle.
+
+---
+
+## LISÄYS klo 19.45 Suomen aikaa: rebase v1962:n päälle, Ihmisen matka, sarjat.json
+
+- **Rebase** origin/mainin (v1962, ec319360) päälle: ristiriidat eivät syntyneet.
+- **Ihmisen matkan lisänostot** (Sonnet 3:n kuvalähderivi v1962:ssa,
+  `js/linssit/ihmisen-matka-kortti.js`): rivi kulkee nyt `kortinKuvalahde`n
+  kautta. Kortin kuvalla ei ollut suurennosta lainkaan, joten pelkkä
+  piilotus olisi poistanut CC BY -maininnan kokonaan. Kuvasta tehtiin
+  napautettava (`.suurennettava`, cursor: zoom-in), ja se avaa saman
+  `avaaKohdeSuurennos`in kuin kohdekortti. Suurennosmoduuli tuodaan
+  dynaamisesti vasta napautuksella, koska staattinen tuonti kaatoi
+  `tests/aikaselain.test.mjs`:n (fokuskohteet.js asentaa dokumentin
+  kuuntelijoita alustuksessa). Ihmisen matka -perhe ladataan muutenkin
+  dynaamisesti. Pääjaksojen `ihmisen-nostokortti-lahde` on TEKSTIN
+  lähde, joten se jäi ennalleen.
+- **sarjat.json**: `savuke-nostokuva-karuselli.mjs` (sama tiedosto kuin
+  opus-local-pystykuva-haarassa) ja `savuke-kuvalahteet.mjs` julkaisusarjaan;
+  `tests/savukesarjat.test.mjs` 6/6.
+- **Auditointi laajennettu**: Ihmisen matka Toba (lisänosto) kortilla ja
+  suurennoksessa. Astronautin kameran kohdekortti jäi auditoimatta (ei
+  tässä erässä).
+
+| Ajo | Tulos |
+| --- | --- |
+| Vastakoe origin/main (v1962) | 10/15: Loire, Texel ja Montgolfier vaihe 2 sekä Toba kortilla FAIL; Toban suurennos puuttui kokonaan |
+| Korjattu | 15/15 |
+
+`node --test tests/*.test.mjs`: pass 3685, fail 0; niputus 409; build kokoontuu.
