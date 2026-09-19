@@ -9195,7 +9195,11 @@ export const RAAMATTU = {
           + 'joen piikit (E), Biskajanlahden napautus (C), zoom/panorointi (B), DNK/EST-'
           + 'poltto v1969:n jalkeen; Sonnet 1 = kierros 16 v1969:lla; Sonnet 2 = vanhojen '
           + 'nostojen kuvat era 2 (189); Sonnet 3 = Ljubljana pelikaupungiksi era 1 '
-          + 'Brysselin kaavalla. v1969 PR avattu 00.09, mergetaan vihreana.',
+          + 'Brysselin kaavalla. v1969 PR avattu 00.09, mergetaan vihreana. RAJA (omistaja '
+          + 'klo 00.14, sanatarkasti: "Mutta ala jatka Euroopan ulkopuolelle"): '
+          + 'sisaltotyo (hahmotelmanostot, visat, vanhojen nostojen kuvat, arvonimien '
+          + 'maalistat, pelikaupungit) pysyy Euroopassa; muut maanosat vasta erillisella '
+          + 'paatoksella.',
         'JONOSSA TAUON JALKEEN (omistaja 19.9.2026 klo 23.31-23.35 Suomen aikaa; "ala '
           + 'aloita uusia toita viela"): A) MAALEHDEN RAJAVIIVA VIRHEELLINEN RANNIKOLLA '
           + '(sanatarkasti: "Taalla virheita rajaviivassa", Ranskan lehden iPad-kuva '
