@@ -80,7 +80,7 @@ import { asetaKuva, assetOsoite } from './media.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import {
-  asetaKohdeNostot, avaaFokuskohde, avaaKohdeSuurennos, rekisteroiLisakohteet,
+  asetaKohdeNostot, asetaKohdeVisa, avaaFokuskohde, avaaKohdeSuurennos, rekisteroiLisakohteet,
   rekisteroiMaanKohteet, suljeFokuskohde, suljeKohdeSuurennos,
 } from './fokuskohteet.js';
 import { NOSTOSYM_TYYPIT, nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
@@ -1773,6 +1773,8 @@ export function kytkeFokusnosto() {
       .map(({ kohde, paikka }) => ({ kohde, paikka }))
     : []), 4);
   asetaKohdeNostot(nostoKohteelle);
+  // Kohdekortin lukijan kysymys (hahmotelmanostot, ks. js/fokuskohteet.js).
+  asetaKohdeVisa(piirraNostonVisa);
 }
 
 /**

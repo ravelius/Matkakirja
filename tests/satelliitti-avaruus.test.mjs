@@ -148,9 +148,24 @@ test('zoomikaistassa on yksi taso lisää mutta se on yhä pelin omaa kapeampi',
    * nyt vierekkäiset kohteet erottuvat: puhelimella Etna ja Italian
    * saapas olivat 11 px päässä ja ovat nyt 102 px (mitattu 12.9.2026).
    */
-  assert.ok(ZOOMIN_KAUIN / ZOOMIN_LAHIN > 5 && ZOOMIN_KAUIN / ZOOMIN_LAHIN < 15);
+  assert.ok(ZOOMIN_KAUIN / ZOOMIN_LAHIN > 5 && ZOOMIN_KAUIN / ZOOMIN_LAHIN < 20);
   // Pohja ei saa olla kaistan yläpuolella.
   assert.ok(ZOOMIN_POHJA > 0 && ZOOMIN_POHJA < 0.5);
+});
+
+test('zoomikatto 25–35 % lähempänä kuin 0,12, eikä reliefilaastari pikselöidy (PAATOKSET 50)', () => {
+  const lahemmas = 1 - ZOOMIN_LAHIN / 0.12;
+  assert.ok(lahemmas >= 0.25 && lahemmas <= 0.35, `katto siirtyi ${Math.round(lahemmas * 100)} %`);
+  /*
+   * Puhelin 390 × 844 dpr 3: avauskorkeus 4,257 ja piirtokangas 2 484
+   * px korkea (mitattu WebKitillä 19.9.2026). Reliefipyramidin syvin
+   * taso z7 on 675 · 2^7 / 360 = 240 px/aste; näyte ruudulla saa olla
+   * enintään yksi CSS-pikseli (3 laitepikseliä).
+   */
+  const { min } = zoomirajat(4.257);
+  const tarve = 2484 / (53.43 * min);
+  assert.ok(tarve / 240 < 1, `näyte ${(tarve / 240).toFixed(2)} laitepx syvimmällä tasolla`);
+  assert.ok(min > ZOOMIN_POHJA, 'puhelimen katto on suhdeluku, ei pohja');
 });
 
 test('lähin raja ei koskaan alita pohjaa eikä ylitä katsoa', () => {
@@ -509,7 +524,8 @@ test('avaruusnäkymä asettuu ja purkautuu täsmälleen ennalleen', () => {
   assert.equal(lauta.rajat.length, 2, JSON.stringify(lauta.rajat));
   assert.ok(lauta.rajat[0].max > lauta.rajat[1].max,
     'avausajon katto ei ollut leponäkymää korkeammalla');
-  assert.ok(lauta.rajat[1].min > 0.5 && lauta.rajat[1].max > lauta.rajat[1].min);
+  // PAATOKSET 50: puhelimen lähin raja 0,084 × avaus ≈ 0,36 (ennen 0,51).
+  assert.ok(lauta.rajat[1].min > 0.3 && lauta.rajat[1].max > lauta.rajat[1].min);
   assert.ok(ikkuna.luokat.has('satelliitti-avaruus'), 'ruumiin luokka puuttuu');
   assert.ok(!ikkuna.luokat.has(NIMIEN_LUOKKA), 'nimet olivat päällä heti avattaessa');
   // Pinta vaihtui oikeasti: laattamoottori kiinni, pohjapallolla oma kuva.

@@ -1,6 +1,6 @@
 // AJA SARJA — ajaa savukesarjan RINNAKKAIN YHDESSÄ prosessipuussa.
 //
-//   node tools/savukkeet/aja-sarja.mjs [julkaisu|kaikki|lista] [tuloskansio]
+//   node tools/savukkeet/aja-sarja.mjs [julkaisu|harva|taysi|kaikki|lista] [tuloskansio]
 //
 // Tehty Mac Studion self-hosted-runneria varten (omistaja 17.9.2026,
 // Raamattu: AGENTIT ... TARKENNUS 6): yksi self-hosted-runner ajaa yhden

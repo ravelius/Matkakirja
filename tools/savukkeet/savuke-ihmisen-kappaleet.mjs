@@ -776,6 +776,42 @@ async function mittaa(leveys, korkeus) {
       luokka: lopussa.piiloluokka, nakyy: lopussa.puluNakyy, tullut: lopussa.puluTullut,
     }));
 
+  /*
+   * --- 1e. PULU EI PEITÄ JAKSON TEKSTIÄ (omistaja 19.9.2026 klo 18.01,
+   * Siperia-kortti; Raamattu PAATOKSET 50, js/pulu-paneelin-ylla.js).
+   * Pulun laatikon yhdeksästä pisteestä luetaan, mitä pulun ALLA on:
+   * yksikään elementti, jolla on oma tekstisolmu, ei saa olla siellä.
+   */
+  // Sib.-välilehti avaa Siperia-kortin (omistajan kuva 19.9.2026 klo 18.01).
+  const sib = s.getByText('Sib.', { exact: true }).first();
+  const siperia = await sib.click({ timeout: 5000 }).then(() => 'Sib.').catch((e) => `ei: ${String(e).slice(0, 60)}`);
+  await s.waitForTimeout(4000);
+  const peitto = await s.evaluate(() => {
+    const n = document.querySelector('.pollo-nappi.pollo-kelluu');
+    if (!n || Number(getComputedStyle(n).opacity) === 0 || getComputedStyle(n).visibility === 'hidden') {
+      return { pulu: false };
+    }
+    const r = n.getBoundingClientRect();
+    const tekstit = new Set();
+    for (const fx of [0.15, 0.5, 0.85]) {
+      for (const fy of [0.15, 0.5, 0.85]) {
+        for (const e of document.elementsFromPoint(r.left + r.width * fx, r.top + r.height * fy)) {
+          if (n.contains(e) || e === document.body || e === document.documentElement) continue;
+          const oma = [...e.childNodes].some((c) => c.nodeType === 3 && c.textContent.trim().length > 2);
+          if (oma) tekstit.add(`${e.tagName.toLowerCase()}.${String(e.className).split(' ')[0]}`);
+        }
+      }
+    }
+    return {
+      pulu: true, tekstit: [...tekstit], ylla: n.classList.contains('pulu-paneelin-ylla'),
+      piilossa: n.classList.contains('pulu-paneelin-alla-piilossa'),
+      pulunAla: Math.round(r.bottom),
+    };
+  });
+  vaadi(`${leveys}px: pulu ei peitä jakson tekstiä esityksen jälkeen`,
+    peitto.pulu && peitto.tekstit.length === 0, JSON.stringify({ siperia, ...peitto }));
+  await s.screenshot({ path: join(ULOS, `savuke-ihmisen-pulu-siperia-${leveys}.jpg`), type: 'jpeg', quality: 60 }).catch(() => {});
+
   writeFileSync(join(ULOS, `savuke-ihmisen-kappaleet-${leveys}.json`), JSON.stringify({
     sarja, kamerasarja, avausLoppu, vastakoeRajaus, mitat, vastakoe, arabia, lopussa,
   }, null, 1));

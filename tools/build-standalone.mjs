@@ -67,11 +67,14 @@ const MODULES = [
   'js/packs/maalehtinostot-fra.js',
   'js/packs/nakyvat-kaupungit-fra.js',
   'js/packs/hahmotelma-fra.js',
+  'js/packs/hahmotelma-bel.js',
   'js/packs/hahmotelma-deu.js',
   'js/packs/hahmotelma-prt.js',
   'js/packs/hahmotelma-grc.js',
   'js/packs/hahmotelma-aut.js',
   'js/packs/hahmotelma-nld.js',
+  'js/packs/hahmotelma-pol.js',
+  'js/packs/hahmotelma-cze.js',
   'js/packs/hahmotelma-esp.js',
   'js/packs/hahmotelma-ita.js',
   'js/packs/maakartat.js',
@@ -694,6 +697,7 @@ const MODULES = [
   'js/livia-nostotila.js',
   'js/livia-dialogitila.js',
   'js/livia-eleet.js',
+  'js/pulu-paneelin-ylla.js',
   'js/pollo.js',
   /*
    * Livian ääni ennen Livian kuplia: js/livia.js soittaa repliikin

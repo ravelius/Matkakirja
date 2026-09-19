@@ -361,8 +361,29 @@ export function nimetNakyvat(korkeus, avaus, nyt = false) {
  * kamera saa joutua ilmakehän hehkun (ILMAKEHAN_KORKEUS 0,25) sisään
  * niin syvälle, että hehku kääntyy kameran ympärille.
  */
-/** Zoomin lähin raja avauskorkeudesta: yksi taso lisää (ks. yllä). */
-export const ZOOMIN_LAHIN = 0.12;
+/*
+ * ── KATTO 30 % LÄHEMMÄS (Raamattu PAATOKSET 50 kohta 1, 19.9.2026) ──
+ *
+ * Omistaja: *"Pitäisi voida zoomata hieman lähemmäs."* 0,12 → 0,084.
+ * Mitattu WebKitillä 390 × 844 dpr 3 Välimeren itäosan yllä
+ * (tools/savukkeet/mittaa-astro-zoomikatto.mjs, raportti
+ * docs/raportit/viesti-fable-zoomikatto-20260919.md):
+ *
+ *   katto            korkeus   ala (lev.)   laattataso   näyte ruudulla
+ *   ────────────────┼─────────┼────────────┼────────────┼───────────────
+ *   0,12 (vanha)     0,511     14,6°        z5           1,52 laitepx
+ *   0,09 (−25 %)     0,383     10,8°        z6           1,01 laitepx
+ *   0,078 (−35 %)    0,332      9,3°        z6           1,17 laitepx
+ *
+ * RELIEFI EI PIKSELÖIDY, koska lähikuvan terävyys tulee reliefi-
+ * pyramidin laastarista (z7 = 240 px/aste), ei pallon 4k-tekstuurista:
+ * näytepikseli pysyy noin yhdessä laitepikselissä (alle puolen CSS-
+ * pikselin), ja laattakone vaihtaa tasoa tarpeen mukaan. Pelkkä 4k-
+ * pohja olisi jo vanhalla katolla 8 laitepikselin näytteinä — se ei
+ * ole katon mittari, vaan laastarin tehtävä.
+ */
+/** Zoomin lähin raja avauskorkeudesta: 30 % lähemmäs (PAATOKSET 50). */
+export const ZOOMIN_LAHIN = 0.084;
 /** Absoluuttinen lattia: matala rata, ei pinnan läpi (pallonsäteinä). */
 export const ZOOMIN_POHJA = 0.1;
 /** Zoomin kauin raja avauskorkeudesta: pallo pienenee, ei katoa. */

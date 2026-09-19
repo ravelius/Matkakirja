@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1961';
+const CACHE = 'matkakirja-2026-08-09.1962';
 const SHELL = [
   './',
   './index.html',
@@ -118,6 +118,7 @@ const SHELL = [
   './js/maalehti.js',
   './js/lukija.js',
   './js/pollo.js',
+  './js/pulu-paneelin-ylla.js',
   './js/livia-kasvot.js',
   './js/livia-puhetila.js',
   './js/livia-pilotti-cuet.js',
@@ -282,6 +283,11 @@ const SHELL = [
   './js/linssit/keksinnot.js',
   './js/linssit/ihmisen-matka.js',
   './js/linssit/ihmisen-matka-data.js',
+  // Livia-pulun valmiit kysymykset ja vastaukset jokaiselle pääjaksolle
+  // (omistaja 19.9.2026 klo 18.02, Raamattu). Sama malli kuin
+  // astronaut-kysymykset.js.
+  './js/linssit/ihmisen-matka-kysymykset.js',
+  './js/linssit/ihmisen-matka-pulukysymykset.js',
   /*
    * TÄSSÄ OLI './js/linssit/ihmisen-matka-kertomus.js' TOISEEN KERTAAN
    * (v1699, 7.9.2026). Sama rivi on alempana omine perusteluineen, eikä
@@ -402,11 +408,14 @@ const SHELL = [
   './js/packs/nakyvat-kaupungit-fra.js',
   './js/packs/nostoankkurit-fra.js',
   './js/packs/hahmotelma-fra.js',
+  './js/packs/hahmotelma-bel.js',
   './js/packs/hahmotelma-deu.js',
   './js/packs/hahmotelma-prt.js',
   './js/packs/hahmotelma-grc.js',
   './js/packs/hahmotelma-aut.js',
   './js/packs/hahmotelma-nld.js',
+  './js/packs/hahmotelma-pol.js',
+  './js/packs/hahmotelma-cze.js',
   './js/packs/hahmotelma-esp.js',
   './js/packs/hahmotelma-ita.js',
   './js/packs/maakartat.js',
