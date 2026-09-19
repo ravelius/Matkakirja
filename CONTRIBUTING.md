@@ -287,6 +287,14 @@ node tools/source-report.mjs    # lähteiden kattavuus
 Kerro pull requestin kuvauksessa lyhyesti, mistä lähteistä tarkistit
 kysymysten faktat.
 
+Selainsavukkeet ajetaan PR:ssä automaattisesti (.github/workflows/
+savukkeet.yml). PR-portti on `tools/savukkeet/sarjat.json`:n `julkaisu`.
+Aina vihreät ja hitaat rivit ovat `harva`-sarjassa: PR ajaa niistä vain
+ne, joiden vartioimia tiedostoja muutit (`harvaPolut`), ja koko sarja
+(`taysi`) ajetaan kerran päivässä mainista. Paikallisesti:
+`node tools/savukkeet/aja-sarja.mjs taysi`. Perustelut:
+docs/raportit/viesti-fable-savukekarsinta-20260919.md.
+
 ## Etukäteispuskurin periaate
 
 Omistajan linjaus 15.8.2026: **jokainen pelin vaihe lataa seuraavan

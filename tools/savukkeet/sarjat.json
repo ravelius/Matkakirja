@@ -1,5 +1,5 @@
 {
-  "_kommentti": "Yksi paikka savukesarjoille (.github/workflows/savukkeet.yml luku, tools/savukkeet/rakenna-matriisi.mjs jäsennys). 'julkaisu' listaa julkaisuraporttien savukkeet järjestyksessä (docs/raportit/viesti-fable-julkaisu-v1925..v1927); 'asetukset' antaa jokaiselle tiedostolle sen ympäristömuuttujat, mahdollisen kuvakansio-argumentin ja tunnetut punaiset (vertaillaan tools/savukkeet/vertaa-tulos.mjs:llä FAIL-riveihin — uusi täsmäämätön FAIL nostaa ::warning::-huomautuksen, ei kaada julkaisusarjan porttia niiltä tiedostoilta joilla salliEpaonnistua on tosi). Lähteet: docs/raportit/viesti-fable-julkaisu-v1925-20260916.md, -v1926-20260916.md, -v1927-20260917.md ja kunkin savukkeen oma alkukommentti (process.env-lukukohdat tarkistettu tekstistä, ei arvattu). JAETUT RIVIT (18.9.2026): 'julkaisu'-listan ja 'asetukset'-avaimen muoto 'savuke-x.mjs#osa' ajaa SAMAN savukkeen useana rinnakkaisena rivinä; '#':n jälkeinen osa on vain rivin nimilappu (kaappaus-, loki- ja artefaktipolku), ja rajaus tulee rivin omasta env-lohkosta. Lista on PITUUSJÄRJESTYKSESSÄ: aja-sarja.mjs antaa rivit työntekijöille tässä järjestyksessä, joten pisin rivi ei saa alkaa vasta lopussa. KIERROS 2 (18.9.2026, Raamattu TARKENNUS 11 kohta 24): rivit jaettiin niin, etta jokainen jaa alle kahden minuutin. pariisi-lahizoom jaettiin ruudun LISAKSI vartiolohkoittain (SAVUKE_LOHKOT=perus|liuska|vastakoe) ja astro-pallon vartijalohko kolmeen (vartija-a/b/c). Rivikohtaiset Chromium-liput: env-avain SAVUKE_CHROMIUM_LIPUT (esim. \"--use-gl=angle --use-angle=swiftshader\") ajaa sen rivin WebGL:n CPU:lla, ks. tools/savukkeet/chromium-liput.mjs.",
+  "_kommentti": "Yksi paikka savukesarjoille (.github/workflows/savukkeet.yml luku, tools/savukkeet/rakenna-matriisi.mjs jäsennys). 'julkaisu' listaa julkaisuraporttien savukkeet järjestyksessä (docs/raportit/viesti-fable-julkaisu-v1925..v1927); 'asetukset' antaa jokaiselle tiedostolle sen ympäristömuuttujat, mahdollisen kuvakansio-argumentin ja tunnetut punaiset (vertaillaan tools/savukkeet/vertaa-tulos.mjs:llä FAIL-riveihin — uusi täsmäämätön FAIL nostaa ::warning::-huomautuksen, ei kaada julkaisusarjan porttia niiltä tiedostoilta joilla salliEpaonnistua on tosi). Lähteet: docs/raportit/viesti-fable-julkaisu-v1925-20260916.md, -v1926-20260916.md, -v1927-20260917.md ja kunkin savukkeen oma alkukommentti (process.env-lukukohdat tarkistettu tekstistä, ei arvattu). JAETUT RIVIT (18.9.2026): 'julkaisu'-listan ja 'asetukset'-avaimen muoto 'savuke-x.mjs#osa' ajaa SAMAN savukkeen useana rinnakkaisena rivinä; '#':n jälkeinen osa on vain rivin nimilappu (kaappaus-, loki- ja artefaktipolku), ja rajaus tulee rivin omasta env-lohkosta. Lista on PITUUSJÄRJESTYKSESSÄ: aja-sarja.mjs antaa rivit työntekijöille tässä järjestyksessä, joten pisin rivi ei saa alkaa vasta lopussa. KIERROS 2 (18.9.2026, Raamattu TARKENNUS 11 kohta 24): rivit jaettiin niin, etta jokainen jaa alle kahden minuutin. pariisi-lahizoom jaettiin ruudun LISAKSI vartiolohkoittain (SAVUKE_LOHKOT=perus|liuska|vastakoe) ja astro-pallon vartijalohko kolmeen (vartija-a/b/c). Rivikohtaiset Chromium-liput: env-avain SAVUKE_CHROMIUM_LIPUT (esim. \"--use-gl=angle --use-angle=swiftshader\") ajaa sen rivin WebGL:n CPU:lla, ks. tools/savukkeet/chromium-liput.mjs. HARVA SARJA (omistaja 19.9.2026 klo 18.50, Raamattu SAVUKKEITA VAHENNETAAN SIELLA, MISSA ONGELMIA TULEE HARVOIN; raportti docs/raportit/viesti-fable-savukekarsinta-20260919.md): 'julkaisu' on PR-portti. 'harva' ajetaan kerran päivässä mainista (schedule) ja PR:ssä vain harvaPolut-osumilla. 'taysi' = julkaisu + harva (julkaisuraportin täysi ajo). Sarjanimiä voi yhdistää pilkulla tiedostonimien kanssa.",
   "julkaisu": [
     "savuke-pariisi-lahizoom.mjs#390-perus",
     "savuke-pariisi-lahizoom.mjs#1400-perus",
@@ -8,23 +8,14 @@
     "savuke-topografialinssi.mjs",
     "savuke-musta-laatta.mjs#webkit",
     "savuke-musta-laatta.mjs#chromium",
-    "savuke-astro-pallo.mjs#vartija-b",
-    "savuke-satelliittilinssi.mjs#isot",
-    "savuke-astro-pallo.mjs#vartija-a",
     "savuke-astro-pallo.mjs#vartija-c",
-    "savuke-satelliittilinssi.mjs#pienet",
-    "savuke-kaupunkipopup.mjs#390",
-    "savuke-kaupunkipopup.mjs#1400",
     "savuke-astro-pallo.mjs#tyopoyta",
     "savuke-astro-pallo.mjs#puhelin",
-    "savuke-astro-valokuva.mjs",
     "savuke-astro-aani.mjs",
-    "savuke-ihmisen-kappaleet.mjs",
     "savuke-ihmisen-kehys.mjs",
     "savuke-ihmisen-esitys.mjs",
     "savuke-pallo-nostolaput.mjs",
     "savuke-nimikyltti.mjs",
-    "savuke-luentakuvat.mjs",
     "savuke-kerma-reuna.mjs",
     "savuke-ranskan-nostot-lukossa.mjs",
     "savuke-kaupungit-piiloon.mjs",
@@ -34,8 +25,115 @@
     "savuke-kohdevalinta.mjs",
     "savuke-astro-sumu.mjs",
     "savuke-laivamatka-tanger.mjs",
-    "savuke-noppa-saapumisen-aikana.mjs"
+    "savuke-noppa-saapumisen-aikana.mjs",
+    "savuke-ihmisen-pulukysymykset.mjs"
   ],
+  "harva": [
+    "savuke-luentakuvat.mjs",
+    "savuke-kaupunkipopup.mjs#390",
+    "savuke-kaupunkipopup.mjs#1400",
+    "savuke-satelliittilinssi.mjs#isot",
+    "savuke-satelliittilinssi.mjs#pienet",
+    "savuke-astro-pallo.mjs#vartija-a",
+    "savuke-astro-pallo.mjs#vartija-b",
+    "savuke-ihmisen-kappaleet.mjs",
+    "savuke-astro-valokuva.mjs"
+  ],
+  "harvaPolut": {
+    "_kommentti": "PR:ssä harvan sarjan rivi ajetaan vain, jos PR:n muutetut tiedostot osuvat sen polkuihin (tools/savukkeet/valitse-harvat.mjs). Rivin oma savuketiedosto ja yhteiset apurit (YHTEISET) kuuluvat aina mukaan. * = mikä tahansa paitsi /, ** = mikä tahansa.",
+    "YHTEISET": [
+      "tools/savukkeet/aja-sarja.mjs",
+      "tools/savukkeet/rakenna-matriisi.mjs",
+      "tools/savukkeet/vertaa-tulos.mjs",
+      "tools/savukkeet/pallon-liike-mittarit.mjs",
+      "tools/savukkeet/chromium-liput.mjs",
+      ".github/workflows/savukkeet.yml",
+      "index.html",
+      "sw.js"
+    ],
+    "savuke-luentakuvat.mjs": [
+      "js/luenta*.js",
+      "js/fokusvirta.js",
+      "js/pallolauta/maapaneeli.js"
+    ],
+    "savuke-kaupunkipopup.mjs#390": [
+      "js/nahtavyydet.js",
+      "js/kaupunkinosto.js",
+      "js/karttazoom.js",
+      "js/packs/kulttuuri-kategoriat.js",
+      "js/pallolauta/lauta.js",
+      "js/pallolauta/nostot.js"
+    ],
+    "savuke-satelliittilinssi.mjs#isot": [
+      "js/linssit/satelliitti*.js",
+      "js/linssit/astro*.js",
+      "js/linssit/reliefikuva.js",
+      "js/linssit/omistus.js",
+      "js/reliefipyramidi.js",
+      "js/pallolauta/linssit.js",
+      "js/pallolauta/tahdet.js",
+      "css/satelliitti.css",
+      "js/saapumistraileri.js"
+    ],
+    "savuke-astro-pallo.mjs#vartija-a": [
+      "js/linssit/satelliitti*.js",
+      "js/linssit/astro*.js",
+      "js/linssit/reliefikuva.js",
+      "js/linssit/omistus.js",
+      "js/reliefipyramidi.js",
+      "js/pallolauta/linssit.js",
+      "js/pallolauta/tahdet.js",
+      "css/satelliitti.css",
+      "js/pallodiag.js"
+    ],
+    "savuke-astro-valokuva.mjs": [
+      "js/linssit/satelliitti*.js",
+      "js/linssit/astro*.js",
+      "js/linssit/reliefikuva.js",
+      "js/linssit/omistus.js",
+      "js/reliefipyramidi.js",
+      "js/pallolauta/linssit.js",
+      "js/pallolauta/tahdet.js",
+      "css/satelliitti.css",
+      "js/saapumistraileri.js"
+    ],
+    "savuke-ihmisen-kappaleet.mjs": [
+      "js/linssit/ihmisen-matka*.js",
+      "js/aikajana*.js",
+      "js/pallolauta/kamera.js",
+      "css/aikajana.css"
+    ],
+    "savuke-kaupunkipopup.mjs#1400": [
+      "js/nahtavyydet.js",
+      "js/kaupunkinosto.js",
+      "js/karttazoom.js",
+      "js/packs/kulttuuri-kategoriat.js",
+      "js/pallolauta/lauta.js",
+      "js/pallolauta/nostot.js"
+    ],
+    "savuke-satelliittilinssi.mjs#pienet": [
+      "js/linssit/satelliitti*.js",
+      "js/linssit/astro*.js",
+      "js/linssit/reliefikuva.js",
+      "js/linssit/omistus.js",
+      "js/reliefipyramidi.js",
+      "js/pallolauta/linssit.js",
+      "js/pallolauta/tahdet.js",
+      "css/satelliitti.css",
+      "js/saapumistraileri.js"
+    ],
+    "savuke-astro-pallo.mjs#vartija-b": [
+      "js/linssit/satelliitti*.js",
+      "js/linssit/astro*.js",
+      "js/linssit/reliefikuva.js",
+      "js/linssit/omistus.js",
+      "js/reliefipyramidi.js",
+      "js/pallolauta/linssit.js",
+      "js/pallolauta/tahdet.js",
+      "css/satelliitti.css",
+      "js/pallodiag.js"
+    ]
+  },
   "asetukset": {
     "savuke-ihmisen-kappaleet.mjs": {
       "env": {

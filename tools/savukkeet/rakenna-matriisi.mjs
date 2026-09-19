@@ -65,16 +65,25 @@ function kaikkiSavukeTiedostot() {
 }
 
 export function rakennaMatriisi(sarja) {
-  let tiedostot;
-  if (sarja === 'julkaisu') {
-    tiedostot = sarjat.julkaisu;
-  } else if (sarja === 'kaikki') {
-    tiedostot = kaikkiSavukeTiedostot();
-  } else {
-    tiedostot = sarja.split(',').map((s) => s.trim()).filter(Boolean).map((nimi) => (
-      nimi.endsWith('.mjs') ? nimi : `${nimi}.mjs`
-    ));
-  }
+  /*
+   * SARJANIMET JA TIEDOSTOT SAMASSA LISTASSA (savukekarsinta 19.9.2026,
+   * docs/raportit/viesti-fable-savukekarsinta-20260919.md):
+   *   julkaisu  PR-portti
+   *   harva     aina vihreät ja hitaat (schedule + PR:ssä polkuosumilla)
+   *   taysi     julkaisu + harva
+   *   kaikki    kaikki savuke-*.mjs
+   * Pilkulla erotettu lista voi yhdistää nimiä ja tiedostoja, esim.
+   * "julkaisu,savuke-luentakuvat.mjs" (tools/savukkeet/valitse-harvat.mjs).
+   */
+  const NIMETYT = {
+    julkaisu: () => sarjat.julkaisu,
+    harva: () => sarjat.harva ?? [],
+    // Harvat ensin: hitaimmat rivit alkavat heti (valitse-harvat.mjs sarjaPr).
+    taysi: () => [...(sarjat.harva ?? []), ...sarjat.julkaisu],
+    kaikki: () => kaikkiSavukeTiedostot(),
+  };
+  const tiedostot = String(sarja ?? '').split(',').map((s) => s.trim()).filter(Boolean)
+    .flatMap((nimi) => (NIMETYT[nimi] ? NIMETYT[nimi]() : [nimi.includes('.mjs') ? nimi : `${nimi}.mjs`]));
 
   if (!tiedostot || !tiedostot.length) {
     throw new Error(`rakenna-matriisi: sarja "${sarja}" ei tuottanut yhtään savuketta`);
@@ -127,7 +136,7 @@ export function rakennaMatriisi(sarja) {
 if (process.argv[1] && fileURLToPath(import.meta.url) === resolve(process.argv[1])) {
   const sarja = process.argv[2];
   if (!sarja) {
-    console.error('Käyttö: node tools/savukkeet/rakenna-matriisi.mjs <julkaisu|kaikki|tiedosto1,tiedosto2,...>');
+    console.error('Käyttö: node tools/savukkeet/rakenna-matriisi.mjs <julkaisu|harva|taysi|kaikki|tiedosto1,tiedosto2,...>');
     process.exit(1);
   }
   let matriisi;
