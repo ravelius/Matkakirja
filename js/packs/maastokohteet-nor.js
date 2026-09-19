@@ -57,10 +57,9 @@
  * maastokohteita; ne esiintyvät uusissa teksteissä mutta eivät
  * uutena nimenä kartalla (sääntö N3).
  *
- * KUVATON ERÄ. Sama linja kuin maastokohteilla muutenkin: kortti
- * kantaa tekstin ja lähteen, ei kuvaa. Tarkistamaton Commons-tiedosto
- * olisi huonompi kuin kuvaton kortti (Perustuslaki, faktakuri).
- * Faktat on tarkistettu en-Wikipediasta kohde kerrallaan 6.9.2026.
+ * KUVAT (20.9.2026). Vanhat kuvattomat kortit ovat saaneet kaksi Commons-kuvaa
+ * (PD/CC, lisenssi ja tekijä Commonsin rajapinnasta), ämpärin osoite
+ * karttanostot/20260920/.
  *
  * Norjan maastokohteet. Faktat en-Wikipediasta 29.8.2026.
  */
@@ -108,6 +107,28 @@ export const MAASTOKOHTEET_NOR = [
   },
   {
     id: 'norjanmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-norjanmeri-004473a2.jpg',
+      lyhyt: 'Satelliittikuva Norjan rannikosta ja sen edustan Norjanmerestä.',
+      selite: 'Satelliittikuvassa Norjan pohjoisrannikon vuonot ja saaret erottuvat tumman meren reunalla. Rannikon edustan vaaleansiniset ja vihertävät vedet ovat todennäköisesti kasviplanktonia.',
+      lahde: 'Satelliittikuva: MODIS Rapid Response Team, NASA GSFC, Wikimedia Commons (public domain).',
+      tekija: 'MODIS Rapid Response Team, NASA GSFC',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bloom_in_the_Norwegian_Sea.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-norjanmeri-97b6dd3a.jpg',
+        lyhyt: 'Pieni saari ja punainen venevaja Norjanmeren rannikolla Brønnøysundin edustalla.',
+        selite: 'Matalalla saarella on punainen venevaja ja pieni valkoinen mökki. Saari on Brønnøysundin satamaa vastapäätä Nordlandin rannikolla.',
+        lahde: 'Valokuva: K1008, Wikimedia Commons (CC0).',
+        tekija: 'K1008',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Buholmen.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+    ],
     nimi: 'Norjanmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -128,6 +149,28 @@ export const MAASTOKOHTEET_NOR = [
   },
   {
     id: 'barentsinmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-barentsinmeri-44cab68c.jpg',
+      lyhyt: 'Grense Jakobselvin satama Barentsinmeren rannalla Finnmarkissa.',
+      selite: 'Punaiset venevajat ja kaksi venettä kalliorannalla, taustalla avautuu Barentsinmeri. Paikka on Norjan itärajalla, Venäjän rajan tuntumassa.',
+      lahde: 'Valokuva: MattiPaavola, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'MattiPaavola',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Grense_Jakobselv_harbor_2009-09-29.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-barentsinmeri-34d1fcb2.jpg',
+        lyhyt: 'Barentsinmeren aava vesi Kibergnesetin kallioniemeltä Finnmarkissa.',
+        selite: 'Jyrkkä, sammalpeitteinen kalliorinne laskeutuu Barentsinmereen, jonka harmaa vesi jatkuu horisonttiin asti. Kibergneset on Norjan mantereen itäisin kärki.',
+        lahde: 'Valokuva: magnethy, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'magnethy',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kibergneset.jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Barentsinmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -246,6 +289,28 @@ export const MAASTOKOHTEET_NOR = [
   },
   {
     id: 'roros',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-roros-93c7c236.jpg',
+      lyhyt: 'Røroksen vanhaa puukaupunkia, kirkko ja kuparisulatto kuonakasojen takana.',
+      selite: 'Etualalla ovat kuparinsulatuksen kuonakasat, niiden takana tummia puutaloja, valkoinen kirkontorni ja pitkä sulattorakennus. Kaupunki on Trøndelagissa ja Unescon maailmanperintökohde.',
+      lahde: 'Valokuva: Geir Hval, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Geir Hval',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bergstaden_Røros_Røros_kirke_Bergstadens_Ziir_Slegghaugan_Smelthytta_Trøndelag_Norway_(2022.08.04).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-roros-62d07cc7.jpg',
+        lyhyt: 'Røroksen sulatto talvella, sen ohi virtaa puro.',
+        selite: 'Lumen peittämä tumma puurakennus, sulatto, on puron varrella. Rakennuksessa sulatettiin aikoinaan Røroksen kaivosten kuparimalmia.',
+        lahde: 'Valokuva: Henrik Dvergsdal, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Henrik Dvergsdal',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Røros_smeltehytta_vinter.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Røros',
     tyyppi: 'historia',
     kysymykset: [
@@ -270,6 +335,28 @@ export const MAASTOKOHTEET_NOR = [
   },
   {
     id: 'altankalliopiirrokset',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-altankalliopiirrokset-81c27406.jpg',
+      lyhyt: 'Punaisiksi maalattuja kalliopiirroksia Altassa: poroja ja muita eläinhahmoja.',
+      selite: 'Sileälle kalliopinnalle on veistetty eläinhahmoja, muun muassa poroja, sekä pitkä kiemurteleva juova. Kuvat ovat Bergbukten 1 -alueelta ja 6 000–7 000 vuotta vanhoja.',
+      lahde: 'Valokuva: Hans A. Rosbach, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Hans A. Rosbach',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Alta_helleristninger_2018-07-26-9465.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-altankalliopiirrokset-242d8a47.jpg',
+        lyhyt: 'Kalliopiirroksia Hjemmeluftin kalliolla Altavuonon rannalla.',
+        selite: 'Kalliolla erottuu himmeästi punaisiksi maalattuja kalliopiirroksia, taustalla avautuu Altavuono. Hjemmeluft on osa Altan Unescon maailmanperintökohdetta.',
+        lahde: 'Valokuva: Tore Sætre, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Tore Sætre',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hjemmeluft_(144130).jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Altan kalliopiirrokset',
     tyyppi: 'historia',
     kysymykset: [
@@ -298,6 +385,28 @@ export const MAASTOKOHTEET_NOR = [
   },
   {
     id: 'nordkapp',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-nordkapp-b19a6323.jpg',
+      lyhyt: 'Peder Balken 1840-luvun maalaus: Nordkappin jyrkänne, soutuvene ja purjeveneitä.',
+      selite: 'Öljymaalauksessa pilviaukosta laskeutuvat valonsäteet valaisevat Nordkappin tummaa, pystysuoraa jyrkännettä ja aavaa merta. Etualalla soutuvene ja rannalla kaksi purjevenettä.',
+      lahde: 'Maalaus: Peder Balke, Wikimedia Commons (public domain).',
+      tekija: 'Peder Balke',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Peder_Balke_-_From_North_Cape_-_NG.M.04152_-_National_Museum_of_Art,_Architecture_and_Design.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-nordkapp-cc4bd668.jpg',
+        lyhyt: 'Nordkappin tasanko, maapallopatsas ja meri horisontissa.',
+        selite: 'Karulla kivikkotasangolla on maapalloa esittävä teräspatsas ja kaide, jonka takana meri jatkuu horisonttiin. Pieni joukko kävijöitä katselee merta.',
+        lahde: 'Valokuva: Hanspeter Hofer, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Hanspeter Hofer',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nordkap_5102.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Nordkapp',
     tyyppi: 'merenkulku',
     kysymykset: [
@@ -325,6 +434,28 @@ export const MAASTOKOHTEET_NOR = [
   },
   {
     id: 'nidaros',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-nidaros-415aedfa.jpg',
+      lyhyt: 'Nidarosin tuomiokirkon goottilainen länsijulkisivu Trondheimissa.',
+      selite: 'Kaksitorninen länsijulkisivu on täynnä patsaita ja kaarikäytäviä, keskellä ruusuikkuna. Tuomiokirkko seisoo Trondheimissa.',
+      lahde: 'Valokuva: Leonhard Lenz, Wikimedia Commons (CC0).',
+      tekija: 'Leonhard Lenz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nidarosdomen_Trondheim_2022-08-18_06.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-nidaros-8c9205a1.jpg',
+        lyhyt: 'Nidarosin tuomiokirkon ruusuikkuna sisältä.',
+        selite: 'Lasimaalauksin koristeltu ruusuikkuna hohtaa punaisena ja sinisenä tummaa goottilaista kaarta vasten. Ikkunan lehtimäiset osat säteilevät keskustasta.',
+        lahde: 'Valokuva: Ad Meskens, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Ad Meskens',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trondheim_Nidaros_Cathedral_Rose_Window_01.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Nidarosin tuomiokirkko',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -352,6 +483,28 @@ export const MAASTOKOHTEET_NOR = [
   },
   {
     id: 'vemork',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-vemork-31d0a6d2.jpg',
+      lyhyt: 'Vemorkin vesivoimalaitos ja jyrkkä putkisto vuorenrinteellä Rjukanissa.',
+      selite: 'Kivinen voimalaitosrakennus seisoo metsäisen rinteen juurella. Rinnettä pitkin nousevat valkoiset paineputket, joita pitkin vesi syöksyy voimalaitokselle.',
+      lahde: 'Valokuva: G.Lanting, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'G.Lanting',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:P1000742Vemork.JPG',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-vemork-0e40ed5f.jpg',
+        lyhyt: 'Vanha sepiakuva Vemorkin voimalaitoksesta, putkistosta ja vesiputouksesta.',
+        selite: 'Vanhassa valokuvassa pitkä voimalaitosrakennus on jyrkän vuorenrinteen kupeessa. Rinnettä pitkin kulkee paineputkien rivi ja sen vieressä putoaa korkea vesiputous.',
+        lahde: 'Kuva: tekijä tuntematon, Wikimedia Commons (public domain).',
+        tekija: 'tuntematon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rjukan_Kraftanlæg_I_-_no-nb_digifoto_20160412_00123_bldsa_EYDE_5_07B_013_(cropped).jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Vemork',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -381,6 +534,28 @@ export const MAASTOKOHTEET_NOR = [
   },
   {
     id: 'flamsbana',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-flamsbana-558bc4f5.jpg',
+      lyhyt: 'Flåmsbanan juna kulkee vuorten ympäröimässä Flåmsdalenin laaksossa.',
+      selite: 'Tumma juna kulkee rinnettä pitkin Berekvamin aseman kohdalla, alempana laaksossa on punaisia maalaistaloja. Radan takana kohoavat jyrkät vuorenrinteet.',
+      lahde: 'Valokuva: Henning Klokkeråsen from Oslo, Norway, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Henning Klokkeråsen from Oslo, Norway',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Flåmsbana_at_Berekvam_station.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-flamsbana-bed15db1.jpg',
+        lyhyt: 'Sähköveturi vetää Flåmsbanan junaa Flåmin asemalle.',
+        selite: 'Vihreä sähköveturi saapuu asemalaiturin viereen, vieressä on keltainen Flåmsbanan museo ja taustalla vuorenrinne. Rata yhdistää Flåmin Myrdalin asemaan.',
+        lahde: 'Kuva: Alasdair McLellan, Wikimedia Commons (public domain).',
+        tekija: 'Alasdair McLellan',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Flåmsbana_train_at_Flåm_Station.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Flåmsbana',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -407,6 +582,28 @@ export const MAASTOKOHTEET_NOR = [
   },
   {
     id: 'eidsvoll',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-eidsvoll-61252011.jpg',
+      lyhyt: 'Eidsvollsbygningen, valkoinen kartanorakennus, ja Norjan liput.',
+      selite: 'Vaaleaksi maalattu kaksikerroksinen puurakennus, jossa on punainen tiilikatto ja parveke. Rakennuksen edessä liehuu Norjan lippuja. Täällä Norjan perustuslaki allekirjoitettiin 17. toukokuuta 1814.',
+      lahde: 'Valokuva: Asgeir Kolberg, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Asgeir Kolberg',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Eidsvoll_building.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nor-nosto-eidsvoll-b06dc383.jpg',
+        lyhyt: 'Eidsvollsbygningen puiston rinteellä Andelva-joen rannalla.',
+        selite: 'Joen yli katsottuna valkoinen päärakennus näkyy vihreällä rinteellä puiden keskellä. Etualalla virtaa Andelva.',
+        lahde: 'Valokuva: Øyvind Holmstad, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Øyvind Holmstad',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Eidsvoldsbygningen_ved_Andelva.JPG',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Eidsvollin rakennus',
     tyyppi: 'historia',
     kysymykset: [

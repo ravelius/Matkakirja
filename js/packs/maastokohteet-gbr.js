@@ -53,15 +53,37 @@
  * jätettiin siksi pois: se on 7,1 yksikön päässä Edinburghista eli
  * käytännössä kaupungin kohdalla, ja sen paikka olisi kohdekartalla.
  *
- * KUVATON ERÄ. Kortti kantaa tekstin ja lähteen, ei kuvaa — sama linja
- * kuin erässä 1. Faktat on tarkistettu en-Wikipediasta kohde
- * kerrallaan 6.9.2026.
+ * KUVAT (20.9.2026). Vanhat kuvattomat kortit ovat saaneet kaksi Commons-kuvaa
+ * (PD/CC, lisenssi ja tekijä Commonsin rajapinnasta), ämpärin osoite
+ * karttanostot/20260920/.
  *
  * Britannian maastokohteet. Faktat en-Wikipediasta 29.8.2026.
  */
 export const MAASTOKOHTEET_GBR = [
   {
     id: 'bennevis',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-bennevis-d378318f.jpg',
+      lyhyt: 'Ben Nevis kohoaa vihreän laakson yllä.',
+      selite: 'Skotlannin korkein vuori näkyy Banavien suunnasta kesäisessä valossa. Harmaa kallioinen huippu ja jyrkkä rinne hallitsevat maisemaa, ja alarinteet ovat ruohon ja metsän peitossa.',
+      lahde: 'Valokuva: Thincat, Wikimedia Commons (public domain).',
+      tekija: 'Thincat',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:BenNevis2005.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-bennevis-ad388164.jpg',
+        lyhyt: 'Ben Nevis ja Càrn Mòr Dearg aamuauringossa.',
+        selite: 'Ilmakuvassa Ben Nevisin massiivinen rinne ja vierellä oleva Càrn Mòr Dearg. Laaksossa mutkittelee puro ja oikealla näkyy pieni järvi.',
+        lahde: 'Valokuva: HikingisKing, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'HikingisKing',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:20250715_Ben_Nevis_4.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Ben Nevis',
     tyyppi: 'vuori',
     kysymykset: [
@@ -84,6 +106,28 @@ export const MAASTOKOHTEET_GBR = [
   },
   {
     id: 'snowdon',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-snowdon-8748dd20.jpg',
+      lyhyt: 'Snowdonin huippu kohoaa Llyn Llydaw -järven yllä.',
+      selite: 'Snowdonin kolmiomainen huippu nousee jyrkkien kallioseinämien takaa. Etualalla on Llyn Llydaw -järvi ja sen ympärillä ruohoisia rinteitä.',
+      lahde: 'Valokuva: Peter S, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Peter S',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Llyn_Llydaw_and_Snowdon_-_geograph.org.uk_-_4302038.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-snowdon-ae490094.jpg',
+        lyhyt: 'Näkymä Snowdonin huipun läheltä Llyn Llydaw -järvelle.',
+        selite: 'Ylhäältä Snowdonin rinteeltä avautuu näkymä kapealle Llyn Llydaw -järvelle ja Crib Gochin terävälle harjanteelle. Polut kiemurtelevat vihreillä rinteillä.',
+        lahde: 'Valokuva: Julian Herzog (Website), Wikimedia Commons (CC BY 4.0).',
+        tekija: 'Julian Herzog (Website)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Yr_Wyddfa_towards_Llyn_Llydaw_Crib_Goch_2019_01.jpg',
+        lisenssi: 'CC BY 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+      },
+    ],
     nimi: 'Snowdon',
     tyyppi: 'vuori',
     kysymykset: [
@@ -107,6 +151,28 @@ export const MAASTOKOHTEET_GBR = [
   },
   {
     id: 'pohjanmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-pohjanmeri-ff42ed0b.jpg',
+      lyhyt: 'Kallioinen Pohjanmeren rannikko Fethalandissa, etualalla ohdake.',
+      selite: 'Vihreät kukkulat ja tummat kalliot ympäröivät pientä hiekkaista poukamaa. Sininen Pohjanmeri levittäytyy taustalle, ja etualalla kukkii purppuranpunainen ohdake.',
+      lahde: 'Valokuva: Colin Smith, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Colin Smith',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:North_Sea_Coast,_Fethaland_-_geograph.org.uk_-_2075000.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-pohjanmeri-982c28f0.jpg',
+        lyhyt: 'Aallot iskeytyvät toisiinsa Pohjanmerellä Seaburnin rannalla.',
+        selite: 'Aallot kohtaavat ja roiskuvat korkeana vaahtosuihkuna tummansinisellä merellä. Taivas on kirkkaan sininen, ja kuvan reunassa näkyy vihreä kaide.',
+        lahde: 'Valokuva: Les Hull, Wikimedia Commons (CC BY-SA 2.0).',
+        tekija: 'Les Hull',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Incoming_and_Outgoing_Waves_Crash_together_in_the_North_Sea_at_Seaburn_-_geograph.org.uk_-_6013605.jpg',
+        lisenssi: 'CC BY-SA 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+      },
+    ],
     nimi: 'Pohjanmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -127,6 +193,28 @@ export const MAASTOKOHTEET_GBR = [
   },
   {
     id: 'irlanninmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-irlanninmeri-bd58cd2d.jpg',
+      lyhyt: 'Auringonlasku Irlanninmerellä Llanddwyn-saarelta katsottuna.',
+      selite: 'Tyyni meri hehkuu oranssina ja kullanhohtoisena taivaan alla. Etualalla on tummia rannikkokallioita ja horisontissa näkyy maakaistale.',
+      lahde: 'Valokuva: TXGemGem, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'TXGemGem',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sunset_and_Coastal_Rock_in_the_Irish_Sea_from_Llanddwyn_Island_–_July_2025.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-irlanninmeri-4b2b4046.jpg',
+        lyhyt: 'Syvänsininen Irlanninmeri ruohoisen kallion takana.',
+        selite: 'Ruohoinen rinne ja kiviaita johtavat kohti laajaa, kirkkaansinistä merta. Horisontti erottuu terävänä vaaleansinistä taivasta vasten.',
+        lahde: 'Valokuva: Glyn Baker, Wikimedia Commons (CC BY-SA 2.0).',
+        tekija: 'Glyn Baker',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Azure_Irish_Sea_at_Contrary_Point_-_geograph.org.uk_-_6123224.jpg',
+        lisenssi: 'CC BY-SA 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+      },
+    ],
     nimi: 'Irlanninmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -147,6 +235,28 @@ export const MAASTOKOHTEET_GBR = [
   },
   {
     id: 'thames',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-thames-c4ec5869.jpg',
+      lyhyt: 'Thames Lontoon keskustassa, vasemmalla London Eye ja kaukana parlamenttitalo.',
+      selite: 'Leveä joki virtaa kohti Big Beniä ja parlamenttitaloa, ja vasemmalla kohoaa London Eye. Oikealla puiden reunustamalla rannalla on laiva ja kaukana joen yli kulkee silta.',
+      lahde: 'Valokuva: Diliff, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Diliff',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Thames_Panorama,_London_-_May_2009.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-thames-c0c90078.jpg',
+        lyhyt: 'Thames Oxfordissa Folly Bridgeltä katsottuna.',
+        selite: 'Panoraamakuvassa joki virtaa puiden reunustamana Oxfordin kohdalla Folly Bridgeltä katsottuna. Vasemmalla on rantapub ja vedessä lomaveneitä.',
+        lahde: 'Valokuva: Diliff, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Diliff',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Folly_Bridge_View_of_downstream_River_Thames,_Oxford_-_May_2010.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Thames',
     tyyppi: 'joki',
     kysymykset: [
@@ -174,6 +284,28 @@ export const MAASTOKOHTEET_GBR = [
    * ============================================================== */
   {
     id: 'stonehenge',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-stonehenge-83c6d60d.jpg',
+      lyhyt: 'Stonehengen kivipylväät ja päällyskivet ruohokentällä.',
+      selite: 'Suuret pystykivet ja niiden päälle asetetut poikkikivet kohoavat vihreällä tasangolla tummien sadepilvien alla. Kaukana kuvan reunoilla näkyy pieniä kävijöitä.',
+      lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Diego Delso',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stonehenge,_Condado_de_Wiltshire,_Inglaterra,_2014-08-12,_DD_08.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-stonehenge-756093eb.jpg',
+        lyhyt: 'Stonehenge auringonlaskussa John Constablen maalauksessa.',
+        selite: '1800-luvun öljymaalaus esittää kiviryhmää kumpuilevan nummen laella. Taivaanrannassa hehkuu punainen auringonlasku, ja tie kiemurtelee kohti horisonttia.',
+        lahde: 'Maalaus: John Constable, Wikimedia Commons (public domain).',
+        tekija: 'John Constable',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:John_Constable_-_Stonehenge_at_Sunset_-_Google_Art_Project.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Stonehenge',
     tyyppi: 'historia',
     kysymykset: [
@@ -210,6 +342,28 @@ export const MAASTOKOHTEET_GBR = [
   },
   {
     id: 'hadrianuksen-muuri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-hadrianuksen-muuri-e2ddc440.jpg',
+      lyhyt: 'Hadrianuksen muuri kiemurtelee kallioisen harjanteen yli.',
+      selite: 'Kivimuuri kulkee jyrkkien kukkuloiden ja avoimen nummen halki Northumberlandissa. Muurin varrella kulkevalla polulla näkyy pieniä kävelijöitä.',
+      lahde: 'Kuva: Steven Fruitsmaak, Wikimedia Commons (public domain).',
+      tekija: 'Steven Fruitsmaak',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hadrian\'s_Wall_west_of_Housesteads_3.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-hadrianuksen-muuri-f75fd9cd.jpg',
+        lyhyt: 'Lähikuva Hadrianuksen muurin kuivasta kiviladelmasta.',
+        selite: 'Tiiviisti latoutuneet, jäkälän peittämät kivet muodostavat muurin, joka nousee ruohoisen rinteen reunaa pitkin. Oikealla kulkee kivetty polku harjanteen yli.',
+        lahde: 'Kuva: Steven Fruitsmaak, Wikimedia Commons (public domain).',
+        tekija: 'Steven Fruitsmaak',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hadrian\'s_Wall_west_of_Housesteads_4.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Hadrianuksen muuri',
     tyyppi: 'historia',
     kysymykset: [
@@ -245,6 +399,28 @@ export const MAASTOKOHTEET_GBR = [
   },
   {
     id: 'skara-brae',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-skara-brae-0c96761e.jpg',
+      lyhyt: 'Skara Brae -kylän kiviset talonjäänteet meren rannalla.',
+      selite: 'Nurmen peittämät kivirakennusten jäänteet sijaitsevat Orkneyn rannikolla Skaillinlahden äärellä. Hiekkalattiaisten talojen matalat kiviseinät erottuvat vihreän nurmen keskeltä.',
+      lahde: 'Valokuva: Ekrem Canli, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ekrem Canli',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Skara_brae_2026_1.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-skara-brae-66b14abc.jpg',
+        lyhyt: 'Skara Brae -kylän talon sisätila, jossa on keskellä tulisija.',
+        selite: 'Kiviseinäinen talo on säilynyt matalana kuoppana, jonka keskellä on neliön muotoinen kivireunainen tulisija. Seinien vierellä on pystyyn nostettuja kivilaattoja.',
+        lahde: 'Valokuva: Ymblanter, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Ymblanter',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sandwick_Skara_Brae_2.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Skara Brae',
     tyyppi: 'historia',
     kysymykset: [
@@ -279,6 +455,28 @@ export const MAASTOKOHTEET_GBR = [
   },
   {
     id: 'ironbridge',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-ironbridge-4853b993.jpg',
+      lyhyt: 'Ironbridgen valurautakaari Severn-joen yllä.',
+      selite: 'Vuonna 1781 avattu silta kaartuu harmaana rautarakenteena ruskean joen yli metsäisessä rotkossa. Kaaren välissä on ympyröitä ja ristikkorakenteita, ja sillan päällä kulkee kaide.',
+      lahde: 'Valokuva: Nilfanion, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Nilfanion',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Iron_Bridge_(8530).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-ironbridge-157e0786.jpg',
+        lyhyt: 'Ironbridge Coalbrookdalessa akvarellimaalauksessa.',
+        selite: 'Akvarelli esittää rautakaarisiltaa Severn-joen yllä, sillalla ajaa hevosvaunu. Joella on purjeveneitä ja tiellä kulkee kuormattuja aaseja.',
+        lahde: 'Akvarelli: Thomas Frederick Burney, Wikimedia Commons (CC0).',
+        tekija: 'Thomas Frederick Burney',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Thomas_Frederick_Burney_-_The_Iron_Bridge,_Coalbrookdale_-_B1981.25.2406_-_Yale_Center_for_British_Art.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+    ],
     nimi: 'Ironbridge',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -314,6 +512,28 @@ export const MAASTOKOHTEET_GBR = [
   },
   {
     id: 'bathin-roomalaiset-kylpylat',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-bathin-roomalaiset-kylpylat-465008b9.jpg',
+      lyhyt: 'Bathin Suuri kylpylä, taustalla Bath Abbeyn torni.',
+      selite: 'Vihreänä hohtava kylpyvesi on pylväskäytävien ympäröimä. Yläparvella seisoo roomalaissotilaita esittäviä patsaita, ja taustalla kohoaa Bath Abbeyn torni.',
+      lahde: 'Valokuva: Diliff, Wikimedia Commons (CC BY 2.5).',
+      tekija: 'Diliff',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Roman_Baths_in_Bath_Spa,_England_-_July_2006_edit3.jpg',
+      lisenssi: 'CC BY 2.5',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/gbr-nosto-bathin-roomalaiset-kylpylat-da84eb1a.jpg',
+        lyhyt: 'Höyryävä kylpyvesi heijastaa Bathin kylpylän pylväitä.',
+        selite: 'Suuren kylpylän tyyni vesi heijastaa hiekkakiviset pylväät ja yläparven patsaat. Veden pinnalta nousee höyryä.',
+        lahde: 'Valokuva: Simon Burchell, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Simon Burchell',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Roman_Baths,_Bath,_Somerset_125.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Bathin roomalaiset kylpylät',
     tyyppi: 'kulttuuri',
     kysymykset: [
