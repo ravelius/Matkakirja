@@ -60,9 +60,8 @@
  * nimiön päälle Rotterdamissa (tools/tarkista-nimiolimitys.mjs), joten
  * vesitekniikan paikan sai Woudagemaal.
  *
- * KUVATON ERÄ. Sama linja kuin maastokohteilla muutenkin: kortti
- * kantaa tekstin ja lähteen, ei kuvaa. Tarkistamaton Commons-tiedosto
- * olisi huonompi kuin kuvaton kortti (Perustuslaki, faktakuri).
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kortti kantaa nyt kaksi tarkistettua
+ * Commons-kuvaa.
  * Faktat on tarkistettu en-Wikipediasta kohde kerrallaan 6.9.2026.
  *
  * Alankomaiden maastokohteet. Faktat en-Wikipediasta 29.8.2026. Pieni maa: kolme kohdetta.
@@ -70,6 +69,28 @@
 export const MAASTOKOHTEET_NLD = [
   {
     id: 'vaalserberg',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-vaalserberg-57f9a84c.jpg',
+      lyhyt: 'Vaalserbergin metsäinen kukkula Vaalsin ympäristön peltojen takana.',
+      selite: 'Alankomaiden kaakkoiskulmassa Limburgissa kohoava kukkula näkyy lännestä katsottuna vihreän maiseman yllä.',
+      lahde: 'Valokuva: Romaine, Wikimedia Commons (CC0).',
+      tekija: 'Romaine',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vaals-Vaalserberg_gezien_vanuit_het_westen.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-vaalserberg-1ace4a86.jpg',
+        lyhyt: 'Näkymä metsäisen Vaalserbergin ylle Wilhelminatornista.',
+        selite: 'Lehtimetsä peittää kukkulaa, ja metsän halki kulkee polku tai tie.',
+        lahde: 'Valokuva: Ziko van Dijk, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Ziko van Dijk',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2017-05_Vaalserberg_03.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Vaalserberg',
     tyyppi: 'vuori',
     kysymykset: [
@@ -92,6 +113,28 @@ export const MAASTOKOHTEET_NLD = [
   },
   {
     id: 'pohjanmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-pohjanmeri-f1f4a0dc.jpg',
+      lyhyt: 'Pohjanmeren aallot ja leveä hiekkaranta Texelin saarella.',
+      selite: 'Aallot rullaavat pitkälle hiekkarannalle, ja rantaviivan takana kohoavat dyynit.',
+      lahde: 'Valokuva: Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Txllxt TxllxT',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Texel_-_De_Koog_-_Kogerstrand_-_North_Sea_Beach_-_View_WNW.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-pohjanmeri-3db7140b.jpg',
+        lyhyt: 'Pohjanmeren hiekkaranta Texelin De Koogin kohdalla.',
+        selite: 'Tuuli ja aallot ovat muovanneet leveän rannan, jonka taustalla siintää dyynivyöhyke.',
+        lahde: 'Valokuva: Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Txllxt TxllxT',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Texel_-_De_Koog_-_Kogerstrand_-_North_Sea_Beach_-_View_NNE.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Pohjanmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -112,6 +155,28 @@ export const MAASTOKOHTEET_NLD = [
   },
   {
     id: 'maas',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-maas-0fd12d1f.jpg',
+      lyhyt: 'Maas virtaa Maastrichtin läpi, ja joen yli kaartuu silta.',
+      selite: 'Leveä joki halkoo kaupunkia, ja rantojen rakennukset näkyvät sillan takana.',
+      lahde: 'Valokuva: Mark Ahsmann, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Mark Ahsmann',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:20150312_Maastricht%3B_Meuse_seen_from_Kennedybrug_to_the_north_04.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-maas-a0075408.jpg',
+        lyhyt: 'Maas Dinantin kohdalla, kaupunki ja linnoitus rinteessä.',
+        selite: 'Joki kulkee kaupungin ohi jyrkkien rinteiden alla, ja kirkontorni kohoaa rannalla.',
+        lahde: 'Valokuva: DimiTalen, Wikimedia Commons (CC0).',
+        tekija: 'DimiTalen',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_of_Dinant_from_on_the_Meuse_River_near_Neffe,_2025.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+      },
+    ],
     nimi: 'Maas',
     tyyppi: 'joki',
     kysymykset: [
@@ -179,6 +244,28 @@ export const MAASTOKOHTEET_NLD = [
   },
   {
     id: 'deltatyot',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-deltatyot-c26ae542.jpg',
+      lyhyt: 'Oosterscheldekeringin patoluukkujen valkoiset tornit tuulivoimaloiden edessä.',
+      selite: 'Pato ulottuu Oosterschelden suulle, ja sen betonipilarit nousevat vedestä.',
+      lahde: 'Valokuva: Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Dietmar Rabich',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vrouwenpolder_(NL),_Oosterscheldekering_--_2022_--_5023.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-deltatyot-6e7ba321.jpg',
+        lyhyt: 'Oosterscheldekering etäältä hiekkarannan ja matalan veden takaa.',
+        selite: 'Pitkä myrskyvyöry-este ulottuu poikki salmen Zeelandissa.',
+        lahde: 'Valokuva: Dietmar Rabich, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Dietmar Rabich',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vrouwenpolder_(NL),_Oosterscheldekering_--_2022_--_5016.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Deltatyöt',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -208,6 +295,28 @@ export const MAASTOKOHTEET_NLD = [
   },
   {
     id: 'vredespaleis',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-vredespaleis-6ff2e643.jpg',
+      lyhyt: 'Vredespaleis eli Rauhanpalatsi Haagissa.',
+      selite: 'Tiilinen palatsi tornineen ja koristeellisine julkisivuineen toimii kansainvälisten oikeusistuinten kotina.',
+      lahde: 'Valokuva: Carl Sotomil, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Carl Sotomil',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Den_Haag_Peace_Palace_September_2016.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-vredespaleis-9bdfd950.jpg',
+        lyhyt: 'Rauhanpalatsi Haagin Carnegieplein-aukiolta katsottuna.',
+        selite: 'Palatsin pääjulkisivu, torni ja portti kohoavat rakennusta ympäröivän puiston yllä.',
+        lahde: 'Valokuva: Steven Lek, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Steven Lek',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Peace_Palace_The_Hague_1.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Vredespaleis',
     tyyppi: 'historia',
     kysymykset: [
@@ -235,6 +344,28 @@ export const MAASTOKOHTEET_NLD = [
   },
   {
     id: 'domtoren',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-domtoren-7f1f0afb.jpg',
+      lyhyt: 'Utrechtin Domtoren kohoaa Oudegrachtin kaupunkimaiseman yllä.',
+      selite: 'Korkea kivinen kirkontorni hallitsee kaupungin siluettia kanavan ja vanhojen rakennusten takana.',
+      lahde: 'Valokuva: Michielverbeek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Michielverbeek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Utrecht,_de_Domtoren_(RM36075)_vanaf_de_Oudegracht_230_ongeveer_foto5_2015-11-01_08.56.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-domtoren-ab363aa2.jpg',
+        lyhyt: 'Domtoren Stadhuisbrugilta katsottuna Utrechtissa.',
+        selite: 'Korkea kirkontorni nousee kaupungin rakennusten yläpuolelle, ja edessä kulkee kanavan silta.',
+        lahde: 'Valokuva: Andy Li, Wikimedia Commons (CC0).',
+        tekija: 'Andy Li',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_of_Utrecht_Dom_Tower_from_Stadhuisbrug_2024-11-28.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+      },
+    ],
     nimi: 'Domtoren',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -297,6 +428,28 @@ export const MAASTOKOHTEET_NLD = [
   },
   {
     id: 'giethoorn',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-giethoorn-24f87aec.jpg',
+      lyhyt: 'Giethoornin kanava ja talot sen rannalla.',
+      selite: 'Kapea kanava kulkee kylän läpi, ja talojen pihat ulottuvat suoraan veden reunaan.',
+      lahde: 'Valokuva: Steven Lek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Steven Lek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Giethoorn_canal_2016.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-giethoorn-7395711b.jpg',
+        lyhyt: 'Giethoornin kanavia ja siltoja Overijsselissä.',
+        selite: 'Vesi ja vihreys ympäröivät kylän vanhaa osaa, jossa ei ole teitä vaan kanavia.',
+        lahde: 'Valokuva: Zairon, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Zairon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Giethoorn_Kan%C3%A4le_19.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Giethoorn',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -321,6 +474,28 @@ export const MAASTOKOHTEET_NLD = [
   },
   {
     id: 'krollermuller',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-krollermuller-0a4c59d3.jpg',
+      lyhyt: 'Kröller-Müllerin museo Hoge Veluwen kansallispuiston keskellä.',
+      selite: 'Museorakennus sijaitsee Otterlossa metsäisessä kansallispuistossa Veluwessa.',
+      lahde: 'Valokuva: qwesy qwesy, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'qwesy qwesy',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kr%C3%B6ller-M%C3%BCller_Museum_im_Hoge_Veluwe_National_Park,_Otterlo_-_panoramio_(3).jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-krollermuller-91ec189e.jpg',
+        lyhyt: 'Kröller-Müllerin museon rakennus ja ympäröivä puisto Otterlossa.',
+        selite: 'Matala museorakennus on istutettu vehreän kansallispuiston keskelle.',
+        lahde: 'Valokuva: qwesy qwesy, Wikimedia Commons (CC BY 3.0).',
+        tekija: 'qwesy qwesy',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hoge_Veluwe_National_Park,_Kr%C3%B6ller-M%C3%BCller_Museum_-_panoramio.jpg',
+        lisenssi: 'CC BY 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+      },
+    ],
     nimi: 'Kröller-Müllerin museo',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -348,6 +523,28 @@ export const MAASTOKOHTEET_NLD = [
   },
   {
     id: 'nijmegen',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-nijmegen-933c9fd4.jpg',
+      lyhyt: 'Waalbrug ylittää Waal-joen Nijmegenissä, Valkhofin puistosta katsottuna.',
+      selite: 'Kaareva silta yhdistää Waalin rannat, ja kaupungin rakennukset näkyvät joen varrella.',
+      lahde: 'Valokuva: Michielverbeek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Michielverbeek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nijmegen,_de_Waalbrug_RM523067_vanaf_het_Valkhof_foto6_2016-06-08_14.19.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-nijmegen-c2e75189.jpg',
+        lyhyt: 'Valkhofin kappeli ja Waalbrug Nijmegenissä.',
+        selite: 'Pieni kivikappeli seisoo Valkhofin puistossa, ja taustalla siintää Waalin yli kaartuva silta.',
+        lahde: 'Valokuva: Michielverbeek, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Michielverbeek',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nijmegen,_kapel_van_het_Valkhof_met_Waalbrug_foto13_2010-12-20_12.36.JPG',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Nijmegen',
     tyyppi: 'historia',
     kysymykset: [
@@ -382,10 +579,32 @@ export const MAASTOKOHTEET_NLD = [
    * Amsterdamista, joten kumpikin on pääkartan merkki. Ensimmäinen
    * ehdokas oli Kinderdijk, mutta sen nimiö osui Van Meegerenin
    * skandaalinimiön päälle (tools/tarkista-nimiolimitys.mjs), ja
-   * tilalle valittiin Afsluitdijk. Kuvaton erä.
+   * tilalle valittiin Afsluitdijk. Kuvat lisätty 20.9.2026 (ent. kuvaton erä).
    * ============================================================== */
   {
     id: 'afsluitdijk',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-afsluitdijk-2cf83c33.jpg',
+      lyhyt: 'Näkymä Afsluitdijkiltä Den Oeverin lähellä.',
+      selite: 'Pitkä pato leikkaa merta, ja tie kulkee sen harjalla.',
+      lahde: 'Valokuva: Gouwenaar, Wikimedia Commons (CC0).',
+      tekija: 'Gouwenaar',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Zicht_vanaf_Afsluitdijk_nabij_Den_Oever.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-afsluitdijk-50ea6763.jpg',
+        lyhyt: 'Afsluitdijkin alku Den Oeverin kohdalla.',
+        selite: 'Padon tie lähtee Den Oeverin rakennusten vierestä kohti Frieslandia.',
+        lahde: 'Valokuva: Paul van Galen, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Paul van Galen',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Het_begin_van_de_Afsluitdijk_bij_Den_Oever_-_Den_Oever_-_20398723_-_RCE.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Afsluitdijk',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -417,6 +636,28 @@ export const MAASTOKOHTEET_NLD = [
   },
   {
     id: 'maastricht',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-maastricht-2fd7e8bb.jpg',
+      lyhyt: 'Maastrichtin Vrijthof-aukio ja sen ympäristö.',
+      selite: 'Historiallisten rakennusten reunustama aukio on kaupungin vanhan keskustan sydän.',
+      lahde: 'Valokuva: Berthold Werner, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Berthold Werner',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Maastricht_Vrijthof_15_BW_2017-08-19_12-06-24.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-maastricht-1347c9ea.jpg',
+        lyhyt: 'Vanha Sint Servaasbrug Maasin yllä Maastrichtissa.',
+        selite: 'Kivinen kaarisilta ylittää joen kaupungin kohdalla.',
+        lahde: 'Valokuva: Edgar El, Wikimedia Commons (CC BY 3.0).',
+        tekija: 'Edgar El',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Maastricht_2010-30-03_%E2%80%93_Old_St_Servaas_Bridge_-_panoramio.jpg',
+        lisenssi: 'CC BY 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+      },
+    ],
     nimi: 'Maastricht',
     tyyppi: 'kaupunki',
     kysymykset: [

@@ -53,9 +53,8 @@
  * kaikki ovat pääkartan merkkejä — omistajan sääntö kohdekaupunkien
  * nostoista ei koske näitä.
  *
- * KUVATON ERÄ. Sama linja kuin maastokohteilla muutenkin: kortti
- * kantaa tekstin ja lähteen, ei kuvaa. Tarkistamaton Commons-tiedosto
- * olisi huonompi kuin kuvaton kortti (Perustuslaki, faktakuri).
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kortti kantaa nyt kaksi tarkistettua
+ * Commons-kuvaa.
  * Faktat on tarkistettu en-Wikipediasta kohde kerrallaan 2.9.2026.
  *
  * Tšekin maastokohteet. Faktat en-Wikipediasta 29.8.2026. Sisämaavaltio: ei meriä.
@@ -475,6 +474,28 @@ export const MAASTOKOHTEET_CZE = [
   },
   {
     id: 'konesprezna-draha',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-konesprezna-draha-7c400e6c.jpg',
+      lyhyt: 'Hevosvetoiset vaunut kulkevat kiskoilla Linzissä vanhassa kaiverruksessa.',
+      selite: 'Vanha kuvitus 1800-luvulta: hevosten vetämät matkustajavaunut ajavat kiskoja pitkin Tonavan rannalla, taustalla puinen silta, höyrylaiva ja Linzin kaupunki.',
+      lahde: 'Kaiverrus: tekijä tuntematon, Wikimedia Commons (public domain).',
+      tekija: 'tekijä tuntematon',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pferdebahnin_Linz.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-konesprezna-draha-0a60aa76.jpg',
+        lyhyt: 'Hevosrautatien vanha ratavartijan talo vehreässä Etelä-Böömissä.',
+        selite: 'Valkoinen, paanukattoinen talo seisoo puiden katveessa entisen hevosrautatien varrella. Ratapenger kulkee talon ohi.',
+        lahde: 'Valokuva: Dralon, Wikimedia Commons (CC BY-SA 2.0).',
+        tekija: 'Dralon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pferdeeisenbahn_Budweis_Linz_Waechterhaus_39.jpg',
+        lisenssi: 'CC BY-SA 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+      },
+    ],
     nimi: 'Hevosrautatie',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -510,6 +531,28 @@ export const MAASTOKOHTEET_CZE = [
   },
   {
     id: 'jablonec',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-jablonec-05f9fb26.jpg',
+      lyhyt: 'Jablonec nad Nisoun vanha keltainen raatihuone kauppatorin laidalla.',
+      selite: 'Keltainen kellotornillinen raatihuone ja kadunvarren talot Jablonec nad Nisoun keskustassa. Taustalla näkyy toinen, punatiilinen torni.',
+      lahde: 'Valokuva: ŠJů, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'ŠJů',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Jablonec_nad_Nisou,_Doln%C3%AD_n%C3%A1m%C4%9Bst%C3%AD,_radnice.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-jablonec-ab64eefc.jpg',
+        lyhyt: 'Jablonecin uuden raatihuoneen korkea kellotorni ja funkkistyylinen julkisivu.',
+        selite: 'Oranssinruskea, pystysuuntaisin ikkunarivein koristeltu rakennus torneineen kohoaa aukion laidalla tummien pilvien alla.',
+        lahde: 'Valokuva: Jiří Sedláček, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Jiří Sedláček',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Town_hall_in_Jablonec_nad_Nisou,_Jablonec_nad_Nisou_District.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Jablonec nad Nisou',
     nimio: 'Jablonec',
     tyyppi: 'kauppa',
@@ -539,6 +582,28 @@ export const MAASTOKOHTEET_CZE = [
   },
   {
     id: 'decin',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-decin-5a9b7795.jpg',
+      lyhyt: 'Děčínin linna kohoaa kalliolla Elben rannalla.',
+      selite: 'Valkoinen punakattoinen linna torneineen seisoo kalliokielekkeellä joen äärellä. Laiturissa on höyrylaivan tyylinen matkustaja-alus, ja taustalla häämöttävät metsäiset kukkulat.',
+      lahde: 'Valokuva: Ondřej Koníček, Wikimedia Commons (public domain).',
+      tekija: 'Ondřej Koníček',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Decin.JPG',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-decin-650b7ae4.jpg',
+        lyhyt: 'Ilmakuva Děčínistä, Elbestä ja joen ylittävästä kaarisillasta.',
+        selite: 'Elbe virtaa kaupungin läpi metsäisten kukkuloiden välissä. Teräksinen kaarisilta yhdistää joen rannat.',
+        lahde: 'Valokuva: Pudelek, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Pudelek',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:D%C4%9B%C4%8D%C3%ADn_(Tetschen),_Czech_Republic.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Děčín',
     tyyppi: 'merenkulku',
     kysymykset: [
@@ -580,10 +645,32 @@ export const MAASTOKOHTEET_CZE = [
    * pääkartan merkkejä. Prahan omat nähtävyydet jätettiin siksi pois:
    * ne kuuluvat kaupunkilehden kohdekartalle.
    *
-   * KUVATON ERÄ. Faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
+   * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä). Faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
    * ============================================================== */
   {
     id: 'tabor',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-tabor-81af7eb7.jpg',
+      lyhyt: 'Tábor kohoaa Jordán-lammen takana, kirkontorni näkyy kaupungin yllä.',
+      selite: 'Jordán-tekolammen yli avautuu näkymä Táborin vanhaan kaupunkiin. Kirkon vihreä tornihuippu kohoaa talojen ja puiden yläpuolelle.',
+      lahde: 'Valokuva: Michielverbeek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Michielverbeek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:T%C3%A1bor,_stadszicht_met_de_Jord%C3%A1n_op_de_voorgrond_IMG_6377_2018-08-02_09.30.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-tabor-ccd28e5d.jpg',
+        lyhyt: 'Táborin Bechyně-portti Kotnovin linnoitusmuurissa.',
+        selite: 'Vanha tornimainen kaupunginportti, jonka alla on kaarevakehyksinen holvikäytävä. Portin seinässä on pieniä ikkunoita ja rintaman reunalla punaisia kattoja.',
+        lahde: 'Valokuva: ŠJů, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'ŠJů',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bechy%C5%88sk%C3%A1_br%C3%A1na.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+      },
+    ],
     nimi: 'Tábor',
     tyyppi: 'historia',
     kysymykset: [
@@ -611,6 +698,28 @@ export const MAASTOKOHTEET_CZE = [
   },
   {
     id: 'olomouc',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-olomouc-d63c404f.jpg',
+      lyhyt: 'Pyhän Kolminaisuuden pylväs kohoaa Olomoucin ylätorilla.',
+      selite: 'Barokkinen patsaspylväs ja sen ympärillä värikkäät kaupunkitalot Olomoucin Horní náměstí -torilla. Torilla kävelee ihmisiä.',
+      lahde: 'Valokuva: Pudelek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Pudelek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Olomouc,_Horn%C3%AD_n%C3%A1m%C4%9Bst%C3%AD_(2017).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-olomouc-a6db98df.jpg',
+        lyhyt: 'Valaistu Kolminaisuuden pylväs sinisessä illassa.',
+        selite: 'Runsaasti koristeltu barokkipylväs, jonka huipulla on kullattu ryhmä ja säteillevä aurinko. Patsaita on pylvään jokaisella tasolla.',
+        lahde: 'Valokuva: Zinneke, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Zinneke',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Holy_Trinity_Column_in_Olomouc_blue_hour_2015-08.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Olomoucin Kolminaisuus',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -641,6 +750,28 @@ export const MAASTOKOHTEET_CZE = [
   },
   {
     id: 'jachymov',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-jachymov-da36842f.jpg',
+      lyhyt: 'Jáchymovin vanha raatihuone ja museo Malmivuorten kaupungissa.',
+      selite: 'Valkoiset, punakehyksiset renessanssirakennukset ja kellotornillinen julkisivu. Museon ovi on kaarevan portaalin alla.',
+      lahde: 'Valokuva: Ondrej.konicek, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Ondrej.konicek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:J%C3%A1chymov_radnice_muzeum.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-jachymov-2169d1af.jpg',
+        lyhyt: 'Kaivostorni kohoaa metsän yllä Jáchymovissa.',
+        selite: 'Harmaa metallinen nostotorni erottuu metsän ylle ja tummaa taivasta vasten.',
+        lahde: 'Valokuva: Jan Helebrant, Wikimedia Commons (CC BY-SA 2.0).',
+        tekija: 'Jan Helebrant',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2019-07-30_14-23-38_Pentax_JHe_(49293564762).jpg',
+        lisenssi: 'CC BY-SA 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+      },
+    ],
     nimi: 'Jáchymov',
     tyyppi: 'kauppa',
     kysymykset: [
@@ -668,6 +799,28 @@ export const MAASTOKOHTEET_CZE = [
   },
   {
     id: 'moravskykras',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-moravskykras-9b715543.jpg',
+      lyhyt: 'Macochan syvä luolakuilu kalliojyrkänteen alla vehreässä metsässä.',
+      selite: 'Jyrkkä kalkkikiviseinämä kohoaa kuilun yllä ja sen alla avautuu pimeä luola. Reunoilla kasvaa keväisen vihreitä lehtipuita.',
+      lahde: 'Valokuva: Ben Skála, Benfoto, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Ben Skála, Benfoto',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Macocha-z-doln%C3%ADho-m%C5%AFstku2013a.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-moravskykras-b6dab245.jpg',
+        lyhyt: 'Punkevan luolien suulta lähtevät punaiset retkiveneet Määrin karstilla.',
+        selite: 'Luolan pimeästä suuaukosta virtaa kirkas joki. Laiturissa on punaisia retkiveneitä ja rannalla kulkee kiveys.',
+        lahde: 'Valokuva: Prazak, Wikimedia Commons (CC BY 2.5).',
+        tekija: 'Prazak',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Punkevn%C3%AD_jeskyn%C4%9B_-_p%C5%99%C3%ADstavi%C5%A1t%C4%9B.jpg',
+        lisenssi: 'CC BY 2.5',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5',
+      },
+    ],
     nimi: 'Moravský kras',
     tyyppi: 'vuori',
     kysymykset: [
@@ -692,6 +845,28 @@ export const MAASTOKOHTEET_CZE = [
   },
   {
     id: 'boubin',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-boubin-f3787b6b.jpg',
+      lyhyt: 'Boubín kohoaa metsäisenä kupolina Etelä-Böömin maiseman yllä.',
+      selite: 'Havumetsän peittämä pyöreä vuori ja sen edessä ruohoinen pelto. Rinteillä näkyy ohut lumikerros.',
+      lahde: 'Valokuva: Dingoa, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Dingoa',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Boub%C3%ADn.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-boubin-060c3e98.jpg',
+        lyhyt: 'Näkymä Boubínin rinteeltä yli metsien ja Böömin tasangon.',
+        selite: 'Havupuita ja kuolleita puunrunkoja vuorenrinteellä, kaukana avautuu laaja alanko.',
+        lahde: 'Valokuva: Safranek-interia.eu, Wikimedia Commons (CC0).',
+        tekija: 'Safranek-interia.eu',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Boub%C3%ADn_-_v%C3%BDhled_z_kopce.JPG',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0',
+      },
+    ],
     nimi: 'Boubín',
     tyyppi: 'vuori',
     kysymykset: [
@@ -714,6 +889,28 @@ export const MAASTOKOHTEET_CZE = [
   },
   {
     id: 'lednice',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-lednice-c6b5302a.jpg',
+      lyhyt: 'Lednicen linna ja sen muotopuutarha vanhassa kaiverruksessa.',
+      selite: '1700-luvun kaiverrus, jossa barokkilinna sijaitsee symmetrisen puutarhan päässä. Etualalla on koristeellisia kuvioistutuksia ja suihkulähteitä.',
+      lahde: 'Kaiverrus: Johann Adam Delsenbach, Wikimedia Commons (public domain).',
+      tekija: 'Johann Adam Delsenbach',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lednice_podle_Delsenbacha.JPG',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-lednice-b21c577a.jpg',
+        lyhyt: 'Lednicen ja Valticen maisemapuiston metsästyshuvila pylväineen.',
+        selite: 'Klassistinen kaksikerroksinen huvila, jonka etuosassa on pylväskuisti ja kaarevat holvit. Rakennuksen ympärillä on metsää.',
+        lahde: 'Valokuva: Harold, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Harold',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lednice,_Loveck%C3%BD_z%C3%A1me%C4%8Dek.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Lednice ja Valtice',
     tyyppi: 'kulttuuri',
     kysymykset: [

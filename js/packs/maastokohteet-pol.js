@@ -65,9 +65,8 @@
  * päällä"); se on väistön oma sallittu tinkiminen eikä nimiö–nimiö-
  * limitys, joten portti menee läpi ja peli siirtää nimiön ajossa.
  *
- * KUVATON ERÄ. Sama linja kuin maastokohteilla muutenkin: kortti
- * kantaa tekstin ja lähteen, ei kuvaa. Tarkistamaton Commons-tiedosto
- * olisi huonompi kuin kuvaton kortti (Perustuslaki, faktakuri).
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kortti kantaa nyt kaksi tarkistettua
+ * Commons-kuvaa.
  * Faktat on tarkistettu en-Wikipediasta kohde kerrallaan 6.9.2026.
  *
  * Puolan maastokohteet. Faktat en-Wikipediasta 29.8.2026.
@@ -445,6 +444,28 @@ export const MAASTOKOHTEET_POL = [
   },
   {
     id: 'zamosc',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-zamosc-84c84dd8.jpg',
+      lyhyt: 'Zamościn Rynek Wielki ja kaupungintalon torni.',
+      selite: 'Aukiota reunustavat renessanssiarkadein varustetut värikkäät kaupunkitalot, ja keskellä kohoaa kaupungintalo vihertävine kupoleineen ja kaksikaarisine ulkoportaineen.',
+      lahde: 'Valokuva: Szlomo Lejb, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Szlomo Lejb',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ratusz_zamosc_przyklad_01.JPG',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-zamosc-e0d8d37b.jpg',
+        lyhyt: 'Zamościn kaupungintalo ja pastellinsävyiset kauppiastalot pilvisen taivaan alla.',
+        selite: 'Kaupungintalon korkea torni ja sen molemmin puolin väriltään vaaleanpunaiset, keltaiset ja vihreät julkisivut Zamościn Rynek Wielkillä.',
+        lahde: 'Valokuva: A.Osytek, Wikimedia Commons (CC BY-SA 3.0 pl).',
+        tekija: 'A.Osytek',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rynek_Wielki_na_Starym_Mieście_w_Zamościu.jpg',
+        lisenssi: 'CC BY-SA 3.0 pl',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/pl/deed.en',
+      },
+    ],
     nimi: 'Zamość',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -473,6 +494,16 @@ export const MAASTOKOHTEET_POL = [
   },
   {
     id: 'westerplatte',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-westerplatte-033f4da7.jpg',
+      lyhyt: 'Westerplatten hiekkaranta Gdańskin edustalla Itämeren rannalla.',
+      selite: 'Vaalea hiekkaranta ja vihreä pensaikko niemellä, jonka takana avautuu Gdańskinlahden ja sataman horisontti.',
+      lahde: 'Valokuva: Osmar Valdebenito from Santiago, Chile, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Osmar Valdebenito from Santiago, Chile',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gdańsk_Westerplatte_plaża_(2010).JPG',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
     nimi: 'Westerplatte',
     tyyppi: 'historia',
     kysymykset: [
@@ -501,6 +532,28 @@ export const MAASTOKOHTEET_POL = [
   },
   {
     id: 'gniezno',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-gniezno-febe1bd8.jpg',
+      lyhyt: 'Gnieznon katedraalin tornit heijastuvat järven pintaan.',
+      selite: 'Punatiilisen katedraalin kaksi tornia kohoavat kaupungin talojen yläpuolelle, ja kokonaisuus peilautuu tyyneen veteen.',
+      lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Diego Delso',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Catedral_de_Gniezno,_Polonia,_2012-04-06,_DD_05.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-gniezno-94b92d1e.jpg',
+        lyhyt: 'Gnieznon katedraalin kaksitorninen julkisivu.',
+        selite: 'Punatiiliset tornit vihertävine kattoineen kohoavat nurmikkoisen kukkulan ja kivetyn pihan yläpuolelle.',
+        lahde: 'Valokuva: Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Krzysztof Golik',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cathedral_of_Gniezno_(2).jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Gniezno',
     tyyppi: 'historia',
     kysymykset: [
@@ -529,6 +582,28 @@ export const MAASTOKOHTEET_POL = [
   },
   {
     id: 'elblaginkanava',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-elblaginkanava-652a99d4.jpg',
+      lyhyt: 'Purjevene liukuu Elblągin kanavalla lumpeiden ja puiden reunustamalla väylällä.',
+      selite: 'Kapea kanava kulkee vehreän metsän halki, ja veden pintaa peittävät lumpeenlehdet.',
+      lahde: 'Valokuva: MarmothGD, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'MarmothGD',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ruda_Woda_Elblag_Canal.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-elblaginkanava-43cc5a6c.jpg',
+        lyhyt: 'Kaareva silta Elblągin kanavan yllä.',
+        selite: 'Pieni betonisilta ylittää kanavan tiheän lehtimetsän keskellä.',
+        lahde: 'Valokuva: rysnal, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'rysnal',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kanał_Elbląski_-_panoramio_(1).jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Elblągin kanava',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -558,6 +633,28 @@ export const MAASTOKOHTEET_POL = [
   },
   {
     id: 'krzemionki',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-krzemionki-3b40ccad.jpg',
+      lyhyt: 'Krzemionkin neoliittisen piikivikaivoksen valaistu käytävä.',
+      selite: 'Maanalainen kaivoskäytävä jatkuu vaaleiden kalliopintojen ja punaisen sekä sinisen valaistuksen keskellä.',
+      lahde: 'Valokuva: Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Jakub Hałun',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Krzemionki_20150519_6496.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-krzemionki-2bbc0af5.jpg',
+        lyhyt: 'Krzemionkin arkeologisen luonnonsuojelualueen vierailukeskus.',
+        selite: 'Kaivosalueen sisäänkäyntirakennuksen julkisivussa on Krzemionki-teksti ja kalliota esittävä tunnuskuva.',
+        lahde: 'Valokuva: Gorofil, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Gorofil',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Krzemionki_Opatowskie_(2).jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Krzemionki',
     tyyppi: 'kauppa',
     kysymykset: [

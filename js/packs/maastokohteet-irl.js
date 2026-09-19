@@ -54,14 +54,35 @@
  * js/fokuskohteet.js). Yksikään ei siis kuulu kohdekartalle, vaan
  * kaikki ovat pääkartan merkkejä.
  *
- * KUVATON ERÄ. Sama linja kuin maastokohteilla muutenkin: kortti kantaa
- * tekstin ja lähteen, ei kuvaa. Tarkistamaton Commons-tiedosto olisi
- * huonompi kuin kuvaton kortti (Perustuslaki, faktakuri). Faktat on
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kortti kantaa nyt kaksi tarkistettua
+ * Commons-kuvaa. Faktat on
  * tarkistettu en-Wikipediasta kohde kerrallaan 6.9.2026.
  */
 export const MAASTOKOHTEET_IRL = [
   {
     id: 'carrauntoohil',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-carrauntoohil-d9254197.jpg',
+      lyhyt: 'Carrauntoohil kohoaa Hag\'s Glenin laakson perukalla.',
+      selite: 'Polku kulkee Hag\'s Glenin laaksossa kohti MacGillycuddy\'s Reeksin vuoria. Taustalla häämöttää Carrauntoohil, Irlannin korkein vuori.',
+      lahde: 'Valokuva: Mariusz Z, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Mariusz Z',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Carrauntoohil_from_the_Hag\'s_Glen,_Ireland.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-carrauntoohil-bb3decb3.jpg',
+        lyhyt: 'Carrauntoohil ja Caherin harju Beenkeraghin huipulta nähtynä.',
+        selite: 'Karuja kallioita ja jyrkkiä harjanteita MacGillycuddy\'s Reeksin vuoristossa Kerryn kreivikunnassa. Vasemmalla Carrauntoohil, oikealla Caherin harju.',
+        lahde: 'Valokuva: Reeks District, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'Reeks District',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Carrauntoohil,_Beenkeragh_Ridge,_Caher.jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Carrauntoohil',
     tyyppi: 'vuori',
     kysymykset: [
@@ -84,6 +105,28 @@ export const MAASTOKOHTEET_IRL = [
   },
   {
     id: 'irlanninmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-irlanninmeri-f84ead63.jpg',
+      lyhyt: 'Baily-majakka Howth Headin kärjessä Irlanninmeren rannalla.',
+      selite: 'Majakka seisoo jyrkän kallioniemen päässä Dublinin kreivikunnassa. Taustalla näkyvät Irlanninmeri ja Wicklowin vuoret.',
+      lahde: 'Valokuva: Christian David, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Christian David',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Baily_Lighthouse,_Howth_Head,_Dublin,_Ireland.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-irlanninmeri-fb3301ad.jpg',
+        lyhyt: 'Tyyni Irlanninmeri Howthin kalliopolulta katsottuna.',
+        selite: 'Näkymä avautuu Howthin rannikkopolulta Irlanninmeren tyyneen vesipintaan.',
+        lahde: 'Valokuva: Lizardolson, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Lizardolson',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Irish_Sea_Off_Howth.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Irlanninmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -104,6 +147,28 @@ export const MAASTOKOHTEET_IRL = [
   },
   {
     id: 'shannon',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-shannon-ddb14def.jpg',
+      lyhyt: 'Shannon virtaa Limerickin kaupungin halki.',
+      selite: 'Joki levenee kaupungin kohdalla, ja rannoilla näkyy kaupungin rakennuksia sekä keskiaikaisen linnan muureja.',
+      lahde: 'Valokuva: Santiperez, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Santiperez',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Limerick_-_Shannon_River_cropped.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-shannon-87670722.jpg',
+        lyhyt: 'Shannon-joen rauhallinen vesi Athlonessa aamun valossa.',
+        selite: 'Jokea reunustavat Athlonen rakennukset ja pienvenesatama. Shannon virtaa kaupungin läpi Irlannin keskiosassa.',
+        lahde: 'Valokuva: Photogoddle, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Photogoddle',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Shannon_River_at_Athlone.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Shannon',
     tyyppi: 'joki',
     kysymykset: [
@@ -177,6 +242,28 @@ export const MAASTOKOHTEET_IRL = [
   },
   {
     id: 'taran-kukkula',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-taran-kukkula-bee93deb.jpg',
+      lyhyt: 'Lia Fáil -kivipylväs Tarán kukkulalla.',
+      selite: 'Pystyyn nostettu kivipylväs seisoo pyöreän kiveyksen keskellä Tarán kukkulan nurmella. Vanhan tarinan mukaan kivi huusi oikean ylikuninkaan kohdalla.',
+      lahde: 'Valokuva: Ianfhunter, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Ianfhunter',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stone_Of_Destiny_-_Hill_of_Tara.JPG',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-taran-kukkula-4cae96f6.jpg',
+        lyhyt: 'Panttivankien kumpu Tarán kukkulalla Meathin kreivikunnassa.',
+        selite: 'Nurmen peittämä hautakumpu, jonka sisäänkäynti avautuu kivellä vuorattuun käytävään. Kumpu on Tarán esihistoriallisia monumentteja.',
+        lahde: 'Valokuva: Nigel Thompson, Wikimedia Commons (CC BY-SA 2.0).',
+        tekija: 'Nigel Thompson',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%22The_Mound_of_the_hostages%22_burial_chamber,_Hill_of_Tara,_Co._Meath_-_geograph.org.uk_-_7779755.jpg',
+        lisenssi: 'CC BY-SA 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+      },
+    ],
     nimi: 'Tarán kukkula',
     tyyppi: 'sana',
     kysymykset: [
@@ -213,6 +300,28 @@ export const MAASTOKOHTEET_IRL = [
   },
   {
     id: 'clonmacnoise',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-clonmacnoise-cf495da4.jpg',
+      lyhyt: 'Clonmacnoisen pyöreä torni kohoaa nurmen keskeltä Shannonin varrella.',
+      selite: 'Kivinen pyöreä torni seisoo luostarialueen nurmikolla, ja taustalla siintää Shannon-joen tasainen lakeus.',
+      lahde: 'Valokuva: Martin Kerans, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Martin Kerans',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:O\'Rourke\'s_Tower_Clonmacnoise_-_geograph.org.uk_-_5625459.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-clonmacnoise-3d6d2d84.jpg',
+        lyhyt: 'Clonmacnoisen luostarin rauniot Shannonin niittyjen takaa katsottuna.',
+        selite: 'Matalat kirkonrauniot ja pyöreä torni näkyvät kaukaa joen tulva-alueen laidalta.',
+        lahde: 'Valokuva: Eric Jones, Wikimedia Commons (CC BY-SA 2.0).',
+        tekija: 'Eric Jones',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Clonmacnoise_Monastic_Site_from_the_Shannon_Callows_-_geograph.org.uk_-_3802559.jpg',
+        lisenssi: 'CC BY-SA 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+      },
+    ],
     nimi: 'Clonmacnoise',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -245,6 +354,28 @@ export const MAASTOKOHTEET_IRL = [
   },
   {
     id: 'rock-of-cashel',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-rock-of-cashel-4449044f.jpg',
+      lyhyt: 'Rock of Cashelin rauniolinnake kohoaa kalliolla sinisen taivaan alla.',
+      selite: 'Kalliokukkulan huipulla seisovat kivitornit ja kirkon muurit kohoavat nurmikentän ja muurin yllä.',
+      lahde: 'Valokuva: Michael Deligan, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Michael Deligan',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rock_of_Cashel_Co._Tipperary_4.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-rock-of-cashel-293adc22.jpg',
+        lyhyt: 'Cashelin katedraalin rauniot ja niiden korkeat ikkunat.',
+        selite: 'Kivinen katedraalin kuori on vailla kattoa. Sen korkeat kapeat ikkuna-aukot ovat Cashelin kallion näkyvimpiä rakennuksia.',
+        lahde: 'Valokuva: Michael Deligan, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Michael Deligan',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rock_of_Cashel_Co._Tipperary_5.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Rock of Cashel',
     tyyppi: 'historia',
     kysymykset: [
@@ -279,6 +410,28 @@ export const MAASTOKOHTEET_IRL = [
   },
   {
     id: 'skellig-michael',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-skellig-michael-a831b0c3.jpg',
+      lyhyt: 'Skellig Michael kohoaa merestä kaksihuippuisena kalliona.',
+      selite: 'Jyrkkä kallioluoto nousee Atlantin aalloista Kerryn rannikon edustalla.',
+      lahde: 'Valokuva: Jerzy Strzelecki, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Jerzy Strzelecki',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Skellig_Michael03(js).jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-skellig-michael-a05e6588.jpg',
+        lyhyt: 'Mehiläispesämäisten kivimajojen alue Skellig Michaelilla ja näkymä Pikku Skelligille.',
+        selite: 'Luostariyhdyskunnan kuivamuurattuja rakennuksia on saaren rinteellä, ja etäällä merellä erottuu Skellig Beag.',
+        lahde: 'Valokuva: NoNameIsLeft, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'NoNameIsLeft',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Skellig_Michael_Views.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Skellig Michael',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -312,6 +465,28 @@ export const MAASTOKOHTEET_IRL = [
   },
   {
     id: 'ceide-fields',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-ceide-fields-29fbccf0.jpg',
+      lyhyt: 'Céide Fieldsin kävijäkeskus, pyramidin muotoinen rakennus nummella.',
+      selite: 'Ruohon peittämä kävijäkeskus kohoaa avarassa suomaisemassa Mayon pohjoisrannikolla.',
+      lahde: 'Valokuva: Michael Dibb, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Michael Dibb',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ceide_Fields_(1)_-_geograph.org.uk_-_5521483.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-ceide-fields-69d190ca.jpg',
+        lyhyt: 'Merikallioita Céide Fieldsin lähellä Mayon pohjoisrannikolla.',
+        selite: 'Jyrkät kerroksiset kalliot laskeutuvat suoraan Atlantin aaltoihin.',
+        lahde: 'Valokuva: Michael Dibb, Wikimedia Commons (CC BY-SA 2.0).',
+        tekija: 'Michael Dibb',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ceide_Fields_(4)_-_geograph.org.uk_-_5521486.jpg',
+        lisenssi: 'CC BY-SA 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+      },
+    ],
     nimi: 'Céide Fields',
     tyyppi: 'historia',
     kysymykset: [
@@ -347,6 +522,28 @@ export const MAASTOKOHTEET_IRL = [
   },
   {
     id: 'moherin-kalliot',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-moherin-kalliot-0748a859.jpg',
+      lyhyt: 'O\'Brienin torni Moherin kallioiden reunalla.',
+      selite: 'Pieni kivitorni seisoo ruohoisen kalliojyrkänteen päällä Atlantin ääressä Claren kreivikunnassa.',
+      lahde: 'Valokuva: Joseph Mischyshyn, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Joseph Mischyshyn',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cliffs_of_Moher_-_O\'Brien\'s_Tower_-_Horizontal_Orientation_-_geograph.org.uk_-_3775427.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-moherin-kalliot-ea0b412c.jpg',
+        lyhyt: 'Moherin kallioiden jyrkät seinämät ja aallot kallion juurella.',
+        selite: 'Kerroksiset merikalliot kohoavat suoraan Atlantista, ja irrallinen kalliopylväs nousee vedestä.',
+        lahde: 'Valokuva: Colin Park, Wikimedia Commons (CC BY-SA 2.0).',
+        tekija: 'Colin Park',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cliffs_of_Moher_-_Cliffs_N_of_O\'Brien\'s_Tower_-_geograph.org.uk_-_5610739.jpg',
+        lisenssi: 'CC BY-SA 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+      },
+    ],
     nimi: 'Moherin kalliot',
     tyyppi: 'vuori',
     kysymykset: [
@@ -381,6 +578,28 @@ export const MAASTOKOHTEET_IRL = [
   },
   {
     id: 'kilkennyn-linna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-kilkennyn-linna-27c88ed2.jpg',
+      lyhyt: 'Kilkennyn linnan pohjoissivu ja Nore-joki.',
+      selite: 'Linnan tornit kohoavat kiviseinän ja puiden takaa, ja joen tyyni vesi heijastaa rantaa.',
+      lahde: 'Valokuva: Zairon, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Zairon',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kilkenny_Kilkenny_Castle_Exterior_North_Side_%26_River_Nore_1.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-kilkennyn-linna-0a6727bd.jpg',
+        lyhyt: 'Kilkennyn linnan puutarha ja linna taustalla.',
+        selite: 'Siistit nurmikot ja kukkapenkit ympäröivät linnaa Kilkennyn keskustassa.',
+        lahde: 'Valokuva: Elena Tatiana Chis, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Elena Tatiana Chis',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kilkenny_Castle_-_Garden_view.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Kilkennyn linna',
     tyyppi: 'kaupunki',
     kysymykset: [
@@ -421,10 +640,32 @@ export const MAASTOKOHTEET_IRL = [
    * päätoimittajan tavoite on vähintään kaksikymmentä. Kolme uutta
    * kohdetta ovat kaikki yli yhdentoista lautayksikön päässä
    * Dublinista, joten ne ovat pääkartan merkkejä eivätkä kuulu
-   * kohdekartalle. Kuvaton erä, kuten tiedoston muutkin kohteet.
+   * kohdekartalle. Kuvat lisätty 20.9.2026 (ent. kuvaton erä), kuten tiedoston muutkin kohteet.
    * ============================================================== */
   {
     id: 'croagh-patrick',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-croagh-patrick-d8df07a5.jpg',
+      lyhyt: 'Croagh Patrick Clew Baylta katsottuna.',
+      selite: 'Pyhä vuori kohoaa Mayon kreivikunnassa, ja sen edessä leviää Clew Bayn rantaseutu.',
+      lahde: 'Valokuva: Gary Miotla, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Gary Miotla',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Croagh_Patrick,_Irelands\'_Holy_Mountain_viewed_from_Clew_Bay._December_2007_-_panoramio.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-croagh-patrick-931b3379.jpg',
+        lyhyt: 'Croagh Patrickin kartiomainen huippu meren ja matalan rannan takana.',
+        selite: 'Vuoren rinteet laskeutuvat rantaviivaan, jossa vuoroveden paljastama ranta reunustaa Clew Bayta.',
+        lahde: 'Valokuva: Robert Ashby, Wikimedia Commons (CC BY-SA 2.0).',
+        tekija: 'Robert Ashby',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Croagh_Patrick_-_geograph.org.uk_-_3980321.jpg',
+        lisenssi: 'CC BY-SA 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+      },
+    ],
     nimi: 'Croagh Patrick',
     tyyppi: 'vuori',
     kysymykset: [
@@ -455,6 +696,28 @@ export const MAASTOKOHTEET_IRL = [
   },
   {
     id: 'dun-aonghasa',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-dun-aonghasa-9ee14f68.jpg',
+      lyhyt: 'Dún Aonghasan kiviaitaa linnakkeen sisäpuolella.',
+      selite: 'Kuivamuurattu kivimuuri kiertää linnakkeen kalliota Inis Mórilla, ja taustalla siintää meri.',
+      lahde: 'Valokuva: Marathon, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Marathon',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Inside_the_fort_of_Dun_Aonghasa_on_the_Aran_Islands_-_geograph.org.uk_-_7861966.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-dun-aonghasa-9afc8aea.jpg',
+        lyhyt: 'Dún Aonghasan jyrkkä merikallio Atlantin ääressä.',
+        selite: 'Kalliojyrkänne putoaa suoraan Atlantin aaltoihin Aransaarten Inis Mórilla.',
+        lahde: 'Valokuva: Sonse, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'Sonse',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cliffs_at_D%C3%BAn_Aonghasa_%E2%80%A2_Dun_Aengus_(40324982390).jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Dún Aonghasa',
     tyyppi: 'historia',
     kysymykset: [
@@ -484,6 +747,28 @@ export const MAASTOKOHTEET_IRL = [
   },
   {
     id: 'glendalough',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-glendalough-5d59e27b.jpg',
+      lyhyt: 'Glendaloughin yläjärvi syksyn väreissä Wicklowin vuorten keskellä.',
+      selite: 'Tyyni järvi ja sitä ympäröivät metsäiset rinteet Glendaloughin laaksossa.',
+      lahde: 'Valokuva: Bananenfalter, Wikimedia Commons (CC0).',
+      tekija: 'Bananenfalter',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Glendalough_upper_lake_autumn.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-glendalough-052aabc1.jpg',
+        lyhyt: 'Glendaloughin pyöreä torni luostarialueella.',
+        selite: 'Ohut kivinen pyöreä torni kohoaa Glendaloughin muinaisen luostarin alueella.',
+        lahde: 'Valokuva: Karlunun, Wikimedia Commons (CC0).',
+        tekija: 'Karlunun',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Glendalough_RoundTower_SE_330_IMG_20250805_0957.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+      },
+    ],
     nimi: 'Glendalough',
     tyyppi: 'kulttuuri',
     kysymykset: [

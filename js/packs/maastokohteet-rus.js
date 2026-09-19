@@ -56,8 +56,7 @@
  * lainkaan. Kaikki kahdeksan osuvat Venäjän fokuslehden rajaukseen
  * (js/packs/fokus-grc.js FOKUS_POHJAT.RUS).
  *
- * KUVATON ERÄ. Kortti kantaa tekstin ja lähteen, ei kuvaa — sama linja
- * kuin erässä 1. Faktat on tarkistettu en-Wikipediasta kohde
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä). Faktat on tarkistettu en-Wikipediasta kohde
  * kerrallaan 6.9.2026.
  *
  * Venäjän maastokohteet. Faktat en-Wikipediasta 29.8.2026. Venäjällä on KURATOITU fokuslehti (tools/fokuskartta/maat.mjs FOKUSMAAT.RUS), jonka meret ovat JÄÄMERI, BARENTSINMERI, OHOTANMERI ja BERINGINMERI — Barentsinmeren merkki istuu siis lehteen poltetun nimen päälle. Vuoria lehdellä ei ole yhtään. Suurin osa maasta on Euroopan laudan kaavan (lon -11...41) itäpuolella, joten useimmat kohteet saavat vain maailmankartan rivin.
@@ -65,6 +64,28 @@
 export const MAASTOKOHTEET_RUS = [
   {
     id: 'elbrus',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-elbrus-9da3d7ca.jpg',
+      lyhyt: 'Elbrus kaksihuippuisena lumihuippuna Kaukasuksella.',
+      selite: 'Lumen ja jäätikön peittämä Elbrus kohoaa tasangon yläpuolelle kirkkaalla säällä.',
+      lahde: 'Valokuva: JukoFF, Wikimedia Commons (public domain).',
+      tekija: 'JukoFF',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mount_Elbrus_May_2008.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-elbrus-b194949e.jpg',
+        lyhyt: 'Elbrusin kaksi lumista huippua ja pilvi Chegetin rinteeltä nähtynä.',
+        selite: 'Kaksihuippuinen tulivuori loistaa valkoisena vihreiden alarinteiden yllä.',
+        lahde: 'Valokuva: Dmitry A. Mottl, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Dmitry A. Mottl',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Elbrus_from_Cheget.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Elbrus',
     tyyppi: 'vuori',
     kysymykset: [
@@ -87,6 +108,28 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'narodnaja',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-narodnaja-294610d0.jpg',
+      lyhyt: 'Narodnajan eteläpuoli kivisellä tundralla Uralilla.',
+      selite: 'Vuoren pitkä harmaa rinne nousee huipulle, ja etualalla on jäkälän peittämiä lohkareita.',
+      lahde: 'Valokuva: Bmattlet, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Bmattlet',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:South_face_of_Narodnaya.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-narodnaja-32843d43.jpg',
+        lyhyt: 'Narodnaja ja sen ympäristön vuoristo raskaiden pilvien alla.',
+        selite: 'Uralin korkein huippu kohoaa jyrkkien kalliorinteiden ja laakson yläpuolelle.',
+        lahde: 'Valokuva: Oleg Chegodaev, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Oleg Chegodaev',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Высшая-точка-Урала-гора-Народная.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Narodnaja',
     tyyppi: 'vuori',
     kysymykset: [
@@ -113,6 +156,28 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'barentsinmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-barentsinmeri-9297860c.jpg',
+      lyhyt: 'Barentsinmeren kivinen rannikko Kalastajasaarennon alueella.',
+      selite: 'Meren huuhtomat mustat kalliot ja ruskeat merilevät peittävät matalan rannan, taustalla nousee tunturinen niemi.',
+      lahde: 'Valokuva: RostislavMashin, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'RostislavMashin',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kekurskiy_MashinRostislav.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-barentsinmeri-9c2b4041.jpg',
+        lyhyt: 'Barentsinmeren rannikko Nordkappin lähellä.',
+        selite: 'Jyrkkä vuorinen niemi kohoaa tyynen sinisen meren ja sumun reunustamana.',
+        lahde: 'Valokuva: Ad Meskens, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Ad Meskens',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Norwegian_Coast_near_Nordkapp_03.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Barentsinmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -142,6 +207,28 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'jaameri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-jaameri-4890fd2c.jpg',
+      lyhyt: 'Jäämeren jäälautat tummassa vedessä.',
+      selite: 'Pakkasen tekemät jäälohkareet kelluvat sinertävässä merivedessä, taivas on raskaan pilvinen.',
+      lahde: 'Valokuva: Patrick Kelley, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Patrick Kelley',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Arctic_ice.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-jaameri-8a23f1bf.jpg',
+        lyhyt: 'Jäävuori Jäämerellä, sen vedenalainen osa näkyy turkoosina.',
+        selite: 'Tyynellä säällä jäävuoren pinnan alla oleva osa kuultaa vedessä.',
+        lahde: 'Valokuva: AWeith, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'AWeith',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Iceberg_in_the_Arctic_with_its_underside_exposed.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Jäämeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -166,6 +253,28 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'ohotanmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-ohotanmeri-38b68854.jpg',
+      lyhyt: 'Ohotanmeren rannikko Sahalinin Tihii-niemellä.',
+      selite: 'Vihreä niitty ja pieni metsä johtavat kallioiselle niemelle, jonka takana meri jatkuu horisonttiin.',
+      lahde: 'Valokuva: Vihljun, Wikimedia Commons (public domain).',
+      tekija: 'Vihljun',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cape_Tihii._Sakhalin_coast_of_Sea_of_Okhotsk.JPG',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-ohotanmeri-3ee0b66a.jpg',
+        lyhyt: 'Norsukallio matalan veden paljastamalla Ohotanmeren rannalla.',
+        selite: 'Norsun näköinen kivi seisoo laskuveden paljastamalla kivikkoisella rannalla Tihii-niemen lähellä.',
+        lahde: 'Valokuva: Vihljun, Wikimedia Commons (public domain).',
+        tekija: 'Vihljun',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Elefant_Rock_near_Cape_Tihii._Sakhalin_coast_of_Sea_of_Okhotsk.JPG',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Ohotanmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -188,6 +297,28 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'beringinmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-beringinmeri-94822b9d.jpg',
+      lyhyt: 'Jyrkkä rannikkokallio Beringinmeren äärellä.',
+      selite: 'Ruohon peittämä kalliojyrkänne laskee tummaan mereen, ja aallot murtuvat rannalla.',
+      lahde: 'Valokuva: U.S. Fish and Wildlife Service, Wikimedia Commons (public domain).',
+      tekija: 'U.S. Fish and Wildlife Service',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bering_sea_cliffs.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-beringinmeri-c90b3b8f.jpg',
+        lyhyt: 'Aallot ja lumi Beringinmeren mustalla rannalla.',
+        selite: 'Tumma kivinen ranta kaartuu lumen peittämälle rinteelle, ja aallot murtuvat rantaan.',
+        lahde: 'Valokuva: Benson Poppy, U.S. Fish and Wildlife Service, Wikimedia Commons (public domain).',
+        tekija: 'Benson Poppy, U.S. Fish and Wildlife Service',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bering_sea_shore_in_ice.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Beringinmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -212,6 +343,28 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'volga',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-volga-10ff670e.jpg',
+      lyhyt: 'Ilja Repinin maalaus Volgan lastinvetäjistä joen rannalla.',
+      selite: 'Maalauksessa lastinvetäjät kiskovat proomua Volgan hiekkaista rantaa pitkin; maalaus valmistui vuosina 1870–1873.',
+      lahde: 'Maalaus: Ilya Repin, Wikimedia Commons (public domain).',
+      tekija: 'Ilya Repin',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ilia_Efimovich_Repin_(1844-1930)_-_Volga_Boatmen_(1870-1873).jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-volga-d456f217.jpg',
+        lyhyt: 'Jaroslavlin uspenskin katedraali Volgan rannalla.',
+        selite: 'Valkoinen kirkko kohoaa joen äärellä, ja Volga virtaa etualalla.',
+        lahde: 'Valokuva: Alexxx1979, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Alexxx1979',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Yaroslavl._Volga_River._Cathedral_of_the_Dormition_P5212715_2200.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Volga',
     tyyppi: 'joki',
     kysymykset: [
@@ -235,6 +388,28 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'ob',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-ob-cbc82663.jpg',
+      lyhyt: 'Jäänlähtö Ob-joella.',
+      selite: 'Rikkoutuneet jääkasat ovat kasautuneet joen rannalle kevään tullen.',
+      lahde: 'Valokuva: Игоревич, Wikimedia Commons (public domain).',
+      tekija: 'Игоревич',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:IceDamOb.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-ob-97d1238f.jpg',
+        lyhyt: 'Metrosilta Ob-joen yllä Novosibirskissa.',
+        selite: 'Pitkä silta jatkuu kaupungin rannalta joen yli, kaukana horisontissa näkyy kaupunkia.',
+        lahde: 'Valokuva: Mikhail Koninin, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'Mikhail Koninin',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bridges_thru_Ob\'_river_Novosibirsk_Siberia_17.04.2012.jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Ob',
     tyyppi: 'joki',
     kysymykset: [
@@ -264,6 +439,28 @@ export const MAASTOKOHTEET_RUS = [
    * ============================================================== */
   {
     id: 'kizhin-pogosta',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-kizhin-pogosta-7a9115d9.jpg',
+      lyhyt: 'Kižin puukirkot ja kellotorni nurmikentällä Äänisen rannalla.',
+      selite: 'Monikupolinen puukirkko ja sen viereinen kellotorni seisovat vihreällä nurmella harmaan taivaan alla.',
+      lahde: 'Valokuva: Alexxx1979, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Alexxx1979',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kizhi_Pogost_DSC02742_2200.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-kizhin-pogosta-3d5dbd1e.jpg',
+        lyhyt: 'Kižin pogostan puiset rakennukset Äänisen saarella.',
+        selite: 'Kirkko, kellotorni ja pieni kappeli kohoavat pilvisen sinisen taivaan alla nurmikentän keskeltä.',
+        lahde: 'Valokuva: Deniszverev, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Deniszverev',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kizhi_Pogost_DS5846.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Kizhin pogosta',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -297,6 +494,28 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'solovetskin-luostari',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-solovetskin-luostari-b816d38e.jpg',
+      lyhyt: 'Solovetskin luostarin muurit ja kirkot heijastuvat järven pintaan.',
+      selite: 'Linnoitetun luostarin tornit ja kupolit kohoavat rannan yllä, etualalla on soutuvene ruohikossa.',
+      lahde: 'Valokuva: Алексей Задонский, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Алексей Задонский',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Соловецкий_монастырь.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-solovetskin-luostari-4a3a731f.jpg',
+        lyhyt: 'Solovetskin luostari ilmasta katsottuna.',
+        selite: 'Kivimuurien ympäröimä luostarikompleksi sijaitsee saaren rannalla, ja pieni satama näkyy oikealla.',
+        lahde: 'Valokuva: Trasprd, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Trasprd',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Solovetsky_Monastery_drone_1.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Solovetskin luostari',
     tyyppi: 'historia',
     kysymykset: [
@@ -332,6 +551,28 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'kazanin-kreml',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-kazanin-kreml-1f91fbe3.jpg',
+      lyhyt: 'Kazanin kreml valkoisine muureineen joen rannalta katsottuna.',
+      selite: 'Linnoituksen tornit ja moskeijan huiput kohoavat rinteen yllä pilvisellä taivaalla.',
+      lahde: 'Valokuva: Untifler, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Untifler',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kremlin_Qazansu.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-kazanin-kreml-226d18fa.jpg',
+        lyhyt: 'Kazanin kremlin Spasskaja-torni kadun päässä.',
+        selite: 'Valkoinen kellotorni, jonka huipulla on tähti, kohoaa katukiveyksen ja lyhtyjen takaa.',
+        lahde: 'Valokuva: Alexxx1979, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Alexxx1979',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kazan_Kremlin._Spasskaya_Tower_P8111872_2200.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Kazanin kreml',
     tyyppi: 'historia',
     kysymykset: [
@@ -365,6 +606,28 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'veliki-novgorod',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-veliki-novgorod-17adaf99.jpg',
+      lyhyt: 'Novgorodin kreml eli Detinets ilmasta katsottuna Volhov-joen rannalla.',
+      selite: 'Punatiiliset muurit kiertävät kremlin katedraaleineen ja kellotorneineen, ja joki kaartuu taustalla.',
+      lahde: 'Valokuva: EkaterinaKhomichenko, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'EkaterinaKhomichenko',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Новгородский_Кремль_(Детинец).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-veliki-novgorod-dba5c1d8.jpg',
+        lyhyt: 'Novgorodin kremlin tiilimuuri ja tornit nurmikkoisen rinteen päällä.',
+        selite: 'Punatiiliset tornit ja muuri kohoavat vihreän penkereen yllä sinisellä taivaalla.',
+        lahde: 'Valokuva: Ludvig14, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Ludvig14',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:VNovogorod_Detinets_VN13.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Veliki Novgorod',
     tyyppi: 'kaupunki',
     kysymykset: [
@@ -396,6 +659,28 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'kolan-syvareika',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-kolan-syvareika-473f520e.jpg',
+      lyhyt: 'Kolan syväreiän kiinni hitsattu kansi hiekassa.',
+      selite: 'Pulteilla kiinnitetyssä metallikannessa lukee syvyys 12262 metriä.',
+      lahde: 'Valokuva: Alexander Novikov, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Alexander Novikov',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kolskaya-sverhglubokaya-025.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-kolan-syvareika-ada4521a.jpg',
+        lyhyt: 'Kolan syväreiän tutkimusaseman hylätyt rakennukset ilmasta.',
+        selite: 'Autioituneet rakennukset seisovat tundralla järven rannalla Zapoljarnyin lähellä.',
+        lahde: 'Valokuva: Шелковников Евгений Анатольевич, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Шелковников Евгений Анатольевич',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kola_sverhglubokaya_2020.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Kolan syväreikä',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -430,6 +715,28 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'tunguskan-rajahdys',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-tunguskan-rajahdys-ed06abe9.jpg',
+      lyhyt: 'Tunguskan räjähdyksessä kaatuneita puita.',
+      selite: 'Mustavalkoisessa vanhassa valokuvassa tuhannet kaatuneet rungot lepäävät samaan suuntaan lumisessa metsässä.',
+      lahde: 'Valokuva: Leonid Kulik, the expedition to the Tunguska event, Wikimedia Commons (public domain).',
+      tekija: 'Leonid Kulik, the expedition to the Tunguska event',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tunguska_Ereignis-1.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-tunguskan-rajahdys-ca9a1beb.jpg',
+        lyhyt: 'Kartta Tunguskan tapahtuman vaikutusalueesta Siperiassa.',
+        selite: 'Karttaan on merkitty räjähdyksen keskusta, metsän tuhoutuma-alue ja Vanavaran kylä.',
+        lahde: 'Kartta: Merikanto, Wikimedia Commons (CC BY 4.0).',
+        tekija: 'Merikanto',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tunguska_explosion_effect_areas_1.png',
+        lisenssi: 'CC BY 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+      },
+    ],
     nimi: 'Tunguskan räjähdys',
     tyyppi: 'historia',
     kysymykset: [
@@ -463,6 +770,28 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'tobolskin-kreml',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-tobolskin-kreml-0b19dc91.jpg',
+      lyhyt: 'Tobolskin kremlin valkoiset rakennukset ja kellotorni rinteen päällä.',
+      selite: 'Valkoiseksi kalkitut kivirakennukset ja kellotorni nousevat vihreän mäen laelle sinistä taivasta vasten.',
+      lahde: 'Valokuva: Óðinn, Wikimedia Commons (CC BY-SA 2.5 ca).',
+      tekija: 'Óðinn',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tobolsk_Kremlin_panorama1.jpg',
+      lisenssi: 'CC BY-SA 2.5 ca',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.5/ca/deed.en',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-tobolskin-kreml-e69497b4.jpg',
+        lyhyt: 'Tobolskin kreml nurmikentän takaa.',
+        selite: 'Valkoiset muurit, tornit ja katedraalin sinikupolit näkyvät nurmen yli kesäisellä sinisellä taivaalla.',
+        lahde: 'Valokuva: Keith Ruffles, Wikimedia Commons (CC BY 3.0).',
+        tekija: 'Keith Ruffles',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tobolsk_kremlin_-_panoramio_(1).jpg',
+        lisenssi: 'CC BY 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+      },
+    ],
     nimi: 'Tobolskin kreml',
     tyyppi: 'historia',
     kysymykset: [
@@ -496,6 +825,28 @@ export const MAASTOKOHTEET_RUS = [
   },
   {
     id: 'jasnaja-poljana',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-jasnaja-poljana-e8495046.jpg',
+      lyhyt: 'Jasnaja Poljanan valkoinen kartanotalo vihreässä puistossa.',
+      selite: 'Kaksikerroksinen valkoinen rakennus vihreine kattoineen seisoo lehtipuiden varjossa.',
+      lahde: 'Valokuva: Celest.ru, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Celest.ru',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Yasnaya_Polyana_6.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rus-nosto-jasnaja-poljana-dc9efdc5.jpg',
+        lyhyt: 'Jasnaja Poljanan kartanon sisäänkäynnin valkoiset portintornit.',
+        selite: 'Kaksi pientä pyöreää tornia vihreine kattoineen reunustaa tietä kartanon portilla.',
+        lahde: 'Valokuva: Karel x, Wikimedia Commons (CC0).',
+        tekija: 'Karel x',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Yasnaya_Polyana_Museum_Entrance.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+      },
+    ],
     nimi: 'Jasnaja Poljana',
     tyyppi: 'kulttuuri',
     kysymykset: [

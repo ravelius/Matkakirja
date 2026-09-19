@@ -32,6 +32,28 @@
 export const MAASTOKOHTEET_ROU = [
   {
     id: 'negoiu',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-negoiu-b0a2ec06.jpg',
+      lyhyt: 'Negoiun terävä huippu Fagarasvuorilla.',
+      selite: 'Tumma kallioinen huippu kohoaa vihreiden rinteiden ja lumilaikkujen yläpuolelle Fagarasvuoristossa.',
+      lahde: 'Valokuva: Civilistul at English Wikipedia, Wikimedia Commons (public domain).',
+      tekija: 'Civilistul at English Wikipedia',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Negoiu.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-negoiu-d84687ba.jpg',
+        lyhyt: 'Negoiun huipun pylväs ja kyltti Fagarasvuorilla.',
+        selite: 'Huipun kivipylvään kyltissä lukee Negoiu 2535, ja taustalla avautuvat vuoristolaaksot.',
+        lahde: 'Valokuva: Krzysztof Dudzik-Górnicki, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Krzysztof Dudzik-Górnicki',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gory_Fogaraskie_(Fagaras_Mountains)_59.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Negoiu',
     tyyppi: 'vuori',
     kysymykset: [
@@ -58,6 +80,28 @@ export const MAASTOKOHTEET_ROU = [
   },
   {
     id: 'mustameri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-mustameri-503342f9.jpg',
+      lyhyt: 'Mustanmeren aallot iskeytyvät Constanţan kasinon rantapromenadin kiviin.',
+      selite: 'Aallot murtuvat rantakiviin, ja vanha kasinorakennus kohoaa merenrantabulevardin päässä sinisen taivaan alla.',
+      lahde: 'Valokuva: Julian Nyča, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Julian Nyča',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Constanta_Casino.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-mustameri-4d6d6856.jpg',
+        lyhyt: 'Mustanmeren rannikko ja hiekkaranta Constanţassa ylhäältä katsottuna.',
+        selite: 'Hiekkaranta ja aallonmurtajat kaartuvat sinisen meren äärellä, etualalla on puiden varjo.',
+        lahde: 'Valokuva: Trecătorul răcit, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Trecătorul răcit',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Constanța_5.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Mustameri',
     tyyppi: 'meri',
     kysymykset: [
@@ -79,6 +123,28 @@ export const MAASTOKOHTEET_ROU = [
   },
   {
     id: 'tonava',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-tonava-b3d2d724.jpg',
+      lyhyt: 'Tonavan suiston vesiväylä syksyn värittämien pajujen välissä.',
+      selite: 'Kapea vesiväylä kulkee keltaisenruskeiden puiden ja kaislojen keskellä Tonavan suistossa.',
+      lahde: 'Valokuva: Raff, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Raff',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Danube_Delta,_autumn.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-tonava-06c68dcb.jpg',
+        lyhyt: 'Aurinko laskee Tonavan suiston tyynen vesialueen taakse.',
+        selite: 'Iltataivas heijastuu rauhallisesta vedestä, ja puiden siluetit reunustavat rantaa Tonavan suistossa.',
+        lahde: 'Valokuva: Pyretus, Wikimedia Commons (public domain).',
+        tekija: 'Pyretus',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Danube_Delta_oct_2006_120.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Tonava',
     tyyppi: 'joki',
     kysymykset: [

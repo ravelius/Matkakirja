@@ -55,9 +55,8 @@
  * merkkejä. Drottningholm jätettiin tästä syystä pois: se on kuuden
  * yksikön päässä Tukholmasta eli kaupungin kohdalla.
  *
- * KUVATON ERÄ. Sama linja kuin maastokohteilla muutenkin: kortti kantaa
- * tekstin ja lähteen, ei kuvaa. Tarkistamaton Commons-tiedosto olisi
- * huonompi kuin kuvaton kortti (Perustuslaki, faktakuri). Faktat on
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kortti kantaa nyt kaksi tarkistettua
+ * Commons-kuvaa. Faktat on
  * tarkistettu en-Wikipediasta kohde kerrallaan 6.9.2026.
  */
 export const MAASTOKOHTEET_SWE = [
@@ -105,6 +104,28 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'itameri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-itameri-8160be2e.jpg',
+      lyhyt: 'Aurinko nousee tyynen Itämeren yllä Kristianopelin lähellä.',
+      selite: 'Oranssi aamurusko heijastuu tyyneen veteen, ja horisontissa näkyy matala saari.',
+      lahde: 'Valokuva: Leonhard Lenz, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Leonhard Lenz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sunrise_at_the_baltic_sea_near_Kristianopel_02.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-itameri-28da9932.jpg',
+        lyhyt: 'Ukkospilvi Itämeren yllä ja kiviaallonmurtaja rannalla.',
+        selite: 'Tummat pilvet kerääntyvät merenrannan yläpuolelle, ja kivistä tehty aallonmurtaja johtaa laiturille.',
+        lahde: 'Valokuva: Arnold Paul, Wikimedia Commons (CC BY-SA 2.5).',
+        tekija: 'Arnold Paul',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cloud_cumulonimbus_at_baltic_sea(1).jpg',
+        lisenssi: 'CC BY-SA 2.5',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.5',
+      },
+    ],
     nimi: 'Itämeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -133,6 +154,28 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'pohjanlahti',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-pohjanlahti-99b15e99.jpg',
+      lyhyt: 'Pohjanlahti satelliittikuvassa lumisen Pohjolan välissä.',
+      selite: 'Pohjanlahden tumma vesialue erottuu lumen peittämien rantojen välissä.',
+      lahde: 'Satelliittikuva: MODIS Land Rapid Response Team, NASA GSFC, Wikimedia Commons (public domain).',
+      tekija: 'MODIS Land Rapid Response Team, NASA GSFC',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gulf_of_Bothnia_(MODIS).jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-pohjanlahti-ccde74b0.jpg',
+        lyhyt: 'Merenkurkun saaristo satelliittikuvassa.',
+        selite: 'Metsäiset saaret ja matalat niemet kohoavat tummasta merestä Pohjanlahden Merenkurkussa.',
+        lahde: 'Satelliittikuva: NASA Earth Observatory / Wanmei Liang, Wikimedia Commons (public domain).',
+        tekija: 'NASA Earth Observatory / Wanmei Liang',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Uplift_Underway_in_Finland’s_Kvarken_Archipelago_(153740_-_oli_20240529_lrg).jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Pohjanlahti',
     tyyppi: 'meri',
     kysymykset: [
@@ -295,6 +338,28 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'birka',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-birka-76b486e7.jpg',
+      lyhyt: 'Aukko Birkan kaupunkia ympäröivässä maavallissa.',
+      selite: 'Ruohoinen vallinharjanne ja kivet erottuvat avaralla niityllä pilvisen sinisen taivaan alla.',
+      lahde: 'Valokuva: Jonathan Olsson, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Jonathan Olsson',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Opening_in_Birka_town_rampart.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-birka-2d871fc7.jpg',
+        lyhyt: 'Birkan viikinkiajan taloja jäljittelevät olkikattoiset rakennukset.',
+        selite: 'Ruokokattoiset hirsirakennukset seisovat puiden lomassa Björkön saarella.',
+        lahde: 'Valokuva: Holger.Ellgaard, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Holger.Ellgaard',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Birka_hus_2008a.JPG',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Birka',
     tyyppi: 'kauppa',
     kysymykset: [
@@ -329,6 +394,28 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'falunin-kaivos',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-falunin-kaivos-cce33bbd.jpg',
+      lyhyt: 'Falunin kuparikaivon suuri avolouhos ja kaivostorni.',
+      selite: 'Ruosteenkeltaiset louhoksen seinämät laskevat syvyyteen, taustalla kohoaa punatiilinen kaivostorni.',
+      lahde: 'Valokuva: Hans Lindqvist, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Hans Lindqvist',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Falun_Copper_Mine_21.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-falunin-kaivos-16bd4ae5.jpg',
+        lyhyt: 'Falunin avolouhos ja kaupunki taustalla.',
+        selite: 'Suuri kuoppa avautuu aidatun katselupaikan edessä, ja kaupungin rakennukset näkyvät kauempana.',
+        lahde: 'Valokuva: Hans Lindqvist, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Hans Lindqvist',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Falun_Copper_Mine_27.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Falunin kaivos',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -362,6 +449,28 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'gota-kanava',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-gota-kanava-3c7f2c3f.jpg',
+      lyhyt: 'Göta-kanavan sulku Sjötorpissa.',
+      selite: 'Kivireunainen sulkukammio ja puiset sulkuportit erottuvat puiden varjostamassa kanavassa.',
+      lahde: 'Valokuva: Leonhard Lenz, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Leonhard Lenz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Göta_Canal_lock_in_Sjötorp_02.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-gota-kanava-4c357238.jpg',
+        lyhyt: 'Göta-kanava kulkee suorana vehreässä maisemassa.',
+        selite: 'Rauhallinen kanava jatkuu ruovikon ja puiden reunustamana kesäisen taivaan alla.',
+        lahde: 'Valokuva: Pudelek, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Pudelek',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Göta_kanal_near_road_E20.JPG',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Göta-kanava',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -396,6 +505,28 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'vadstenan-luostari',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-vadstenan-luostari-26ff435c.jpg',
+      lyhyt: 'Vadstenan luostari ilmasta katsottuna Vätternin rannalla.',
+      selite: 'Vihreäkattoinen luostarikirkko ja punaiset tiilirakennukset ympäröivät pihaa vesistön äärellä.',
+      lahde: 'Valokuva: L.G.foto, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'L.G.foto',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vadstena_kloster_från_luften.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-vadstenan-luostari-2e387218.jpg',
+        lyhyt: 'Vadstenan luostarin punatiilinen rakennus ja nurmikenttä.',
+        selite: 'Pitkä keskiaikainen tiilirakennus punaisine kattoineen seisoo nurmen reunalla.',
+        lahde: 'Valokuva: Sniper Zeta, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Sniper Zeta',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vadstena_kloster_104.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Vadstenan luostari',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -430,6 +561,28 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'kiruna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-kiruna-6c01e377.jpg',
+      lyhyt: 'Kirunan kirkko ja erillinen kellotorni ilmasta katsottuna.',
+      selite: 'Punainen puukirkko ja kellotorni seisovat syksyisen koivumetsän keskellä.',
+      lahde: 'Valokuva: Arild Vågen, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Arild Vågen',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kiruna_kyrka_September_2017_02.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-kiruna-5e2e61d9.jpg',
+        lyhyt: 'Kirunan keskusta jalankulkualueineen.',
+        selite: 'Keltainen puurakennus ja kivetty aukio erottuvat pilvisellä säällä kaupungin keskustassa.',
+        lahde: 'Valokuva: Arild Vågen, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Arild Vågen',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kiruna_centrum_September_2017_01.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Kiruna',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -521,10 +674,32 @@ export const MAASTOKOHTEET_SWE = [
    * VÄNERN ON TYYPPIÄ 'meri' EIKÄ 'jarvi' — perustelu on kirjattu
    * js/packs/maastokohteet-gha.js:n Voltajärvi-kortissa.
    *
-   * KUVATON ERÄ. Faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
+   * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä). Faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
    * ============================================================== */
   {
     id: 'vanern',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-vanern-dd0217b8.jpg',
+      lyhyt: 'Vänernin kivinen ranta ja aaltoileva järvi.',
+      selite: 'Tuulinen järvi kimmeltää kivikkoisen rannan ja männikön takana sinisen taivaan alla.',
+      lahde: 'Valokuva: Leonhard Lenz, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Leonhard Lenz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:East_bank_of_the_Vänern_lake_in_Sweden_03.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-vanern-5b74f244.jpg',
+        lyhyt: 'Aurinko laskee Vänernin yllä männyn takana.',
+        selite: 'Oranssi taivas heijastuu tummaan järveen, ja horisontissa näkyy matala saari.',
+        lahde: 'Valokuva: Leonhard Lenz, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Leonhard Lenz',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:East_bank_of_the_Vänern_lake_in_Sweden_with_sunset_01.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Vänern',
     tyyppi: 'meri',
     kysymykset: [
@@ -552,6 +727,28 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'kalmarinlinna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-kalmarinlinna-b88b09bf.jpg',
+      lyhyt: 'Kalmarin linna vihreän niityn takaa.',
+      selite: 'Vaaleanpunertava linna kupariturkoosine kattoineen kohoaa ruovikon ja vallien yläpuolelle sinistä taivasta vasten.',
+      lahde: 'Valokuva: Hstad, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Hstad',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kalmar_Slott_9,_Kalmar.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-kalmarinlinna-ef219e27.jpg',
+        lyhyt: 'Kalmarin linna heijastuu tyyneen Kalmarinsalmeen.',
+        selite: 'Linna siluettina matalalla rannalla, ja sen tornit ja vallit näkyvät vedessä.',
+        lahde: 'Valokuva: Alexandru Baboş Albabos, Wikimedia Commons (CC BY 3.0).',
+        tekija: 'Alexandru Baboş Albabos',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kalmar_slott.nordostra_sidan.jpg',
+        lisenssi: 'CC BY 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+      },
+    ],
     nimi: 'Kalmarin linna',
     tyyppi: 'historia',
     kysymykset: [
@@ -581,6 +778,28 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'karlskrona',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-karlskrona-8f2c175d.jpg',
+      lyhyt: 'Karlskronan Stumholmenin majakka ja vanhat rakennukset meren rannalla.',
+      selite: 'Valkoinen majakka ja vanhat tiilirakennukset seisovat saaren rannalla sinisen lahden takana.',
+      lahde: 'Valokuva: Pudelek, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Pudelek',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stumholmen,_Karlskrona_(by_Pudelek).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-karlskrona-51da72b0.jpg',
+        lyhyt: 'Karlskronan Amiraliteettikirkko.',
+        selite: 'Punaseinäinen puukirkko, jonka vihreä kupolikatto ja pieni lyhty kohoavat puiden keskeltä.',
+        lahde: 'Valokuva: Sendelbach, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Sendelbach',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Karlskrona_Amiralitetskyrkan.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Karlskrona',
     tyyppi: 'merenkulku',
     kysymykset: [
@@ -608,6 +827,28 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'lundintuomiokirkko',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-lundintuomiokirkko-e661c473.jpg',
+      lyhyt: 'Lundin tuomiokirkon kaksi tornia ja romaaninen julkisivu.',
+      selite: 'Harmaakivinen kirkko kohoaa sinistä taivasta vasten, ja sen kaksi suippokattoista tornia hallitsevat julkisivua.',
+      lahde: 'Valokuva: Jorchr, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Jorchr',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lunds_domkyrka_augusti_2012.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-lundintuomiokirkko-72f7ab6b.jpg',
+        lyhyt: 'Lundin tuomiokirkko ilmasta katsottuna.',
+        selite: 'Ilmakuvassa näkyvät kirkon ristikirkon muotoinen pohja, tornit ja pyöreä kuori puiden ympäröimänä.',
+        lahde: 'Valokuva: David Castor, Wikimedia Commons (CC0).',
+        tekija: 'David Castor',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lunds_domkyrka–flygbild_06_september_2014.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+      },
+    ],
     nimi: 'Lundin tuomiokirkko',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -637,6 +878,28 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'tornionjoki',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-tornionjoki-fb698967.jpg',
+      lyhyt: 'Tornionjoki levenee tyyneksi pilvien alla Ylitorniolla.',
+      selite: 'Leveä joki heijastaa pilviä, ja metsäiset rannat jatkuvat horisonttiin.',
+      lahde: 'Valokuva: Estormiz, Wikimedia Commons (CC0).',
+      tekija: 'Estormiz',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tornionjoki_Ylitornio_20220724_01.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-tornionjoki-214023fb.jpg',
+        lyhyt: 'Aurinko laskee Tornionjoen rannalla Pellossa, veneet rannassa.',
+        selite: 'Punainen ja oranssi taivas heijastuu jokeen, ja puuveneet lepäävät rannalla.',
+        lahde: 'Valokuva: Arto Alanenpää, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Arto Alanenpää',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tornionjoki-Pello.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Tornionjoki',
     tyyppi: 'joki',
     kysymykset: [
@@ -663,6 +926,28 @@ export const MAASTOKOHTEET_SWE = [
   },
   {
     id: 'salanhopeakaivos',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-salanhopeakaivos-0943d942.jpg',
+      lyhyt: 'Salan hopeakaivoksen kuningatar Kristiinan kuilun rakennus.',
+      selite: 'Punatiilinen ja keltainen kuilurakennus seisoo lumisessa kaivosalueella.',
+      lahde: 'Valokuva: Riggwelter, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Riggwelter',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Queen_Christina_shaft,_Sala_Silver_mine,_Sala,_Sweden.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-salanhopeakaivos-bb860e17.jpg',
+        lyhyt: 'Salan hopeakaivoksen pyöreä punainen kuiluhuone.',
+        selite: 'Puusta ja tiilestä rakennettu pyöreä kuilurakennus seisoo kivikkoisen kaivoskasan keskellä.',
+        lahde: 'Valokuva: Tulipasylvestris, Wikimedia Commons (CC BY 4.0).',
+        tekija: 'Tulipasylvestris',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Karl_XI_schakt_vid_Sala_silvergruva.jpg',
+        lisenssi: 'CC BY 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+      },
+    ],
     nimi: 'Salan hopeakaivos',
     tyyppi: 'tekniikka',
     kysymykset: [

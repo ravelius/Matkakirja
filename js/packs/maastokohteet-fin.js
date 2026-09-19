@@ -55,9 +55,8 @@
  * KAUPUNKIKARTAT.helsinki, juttu js/packs/nahtavyysjutut.js), ja
  * sääntö N3 sallii saman nimen kartalla vain kerran.
  *
- * KUVATON ERÄ. Sama linja kuin maastokohteilla muutenkin: kortti
- * kantaa tekstin ja lähteen, ei kuvaa. Tarkistamaton Commons-tiedosto
- * olisi huonompi kuin kuvaton kortti (Perustuslaki, faktakuri).
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kortti kantaa nyt kaksi tarkistettua
+ * Commons-kuvaa.
  * Faktat on tarkistettu en-Wikipediasta kohde kerrallaan 6.9.2026.
  *
  * Suomen maastokohteet. Faktat en-Wikipediasta 29.8.2026.
@@ -327,6 +326,28 @@ export const MAASTOKOHTEET_FIN = [
   },
   {
     id: 'verla',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-verla-84ee6c72.jpg',
+      lyhyt: 'Verlan punatiilinen puuhiomorakennus ja korkea piippu.',
+      selite: 'Kymijoen varrella Jaalassa sijaitseva 1800-luvun tehdaskylä: tiilinen hiomorakennus, savupiippu ja viereinen puinen kuivaamorakennus.',
+      lahde: 'Valokuva: Pöllö, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Pöllö',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Verla_groundwood_and_board_mill_museum.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-verla-88f1a8c0.jpg',
+        lyhyt: 'Verlan voimalaitoksen pato ja punaiset tehdasrakennukset joen rannalla.',
+        selite: 'Tumma koskivesi virtaa patoluukkujen ohi, ja taustalla näkyy punaisia puurakennuksia metsän reunassa.',
+        lahde: 'Valokuva: Ypsilon from Finland, Wikimedia Commons (CC0).',
+        tekija: 'Ypsilon from Finland',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Verla_rapids.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+      },
+    ],
     nimi: 'Verla',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -649,6 +670,28 @@ export const MAASTOKOHTEET_FIN = [
   },
   {
     id: 'saimaankanava',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-saimaankanava-0321b850.jpg',
+      lyhyt: 'Saimaan kanava aukeaa metsäisten rantojen välissä.',
+      selite: 'Kanavan tyyni vesiväylä jatkuu suoraan kohti siltaa ja sulkua, molemmin puolin sekametsää ja nurmikkoreunustoja.',
+      lahde: 'Valokuva: Sami Koskinen, Wikimedia Commons (CC BY-SA 2.5).',
+      tekija: 'Sami Koskinen',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Saimaa_Canal_Malkia.JPG',
+      lisenssi: 'CC BY-SA 2.5',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.5',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-saimaankanava-92071792.jpg',
+        lyhyt: 'Mälkiän sulun portit Saimaan kanavalla.',
+        selite: 'Betoniset sulkuportit ja valvomotornit avautuvat kalliojyrkänteen ja metsän rajaamana, sulun nimi Malkia näkyy portin seinässä.',
+        lahde: 'Valokuva: Леонид Порошков, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Леонид Порошков',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Malkian_sulku_2006.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Saimaan kanava',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -722,6 +765,16 @@ export const MAASTOKOHTEET_FIN = [
   },
   {
     id: 'ruotsinsalmi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-ruotsinsalmi-21a191b3.jpg',
+      lyhyt: 'Ruotsinsalmen vesiväylä Kotkan edustalla kesäisenä päivänä.',
+      selite: 'Saaria ja luotoja pilkottaa sinisen merenlahden yllä, ja väylällä näkyy viitta ja pieni vene.',
+      lahde: 'Kuva: MKFI, Wikimedia Commons (public domain).',
+      tekija: 'MKFI',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ruotsinsalmi_Kotka.JPG',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
     nimi: 'Ruotsinsalmi',
     tyyppi: 'merenkulku',
     kysymykset: [
@@ -747,6 +800,28 @@ export const MAASTOKOHTEET_FIN = [
   },
   {
     id: 'kultala',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-kultala-e7c015d8.jpg',
+      lyhyt: 'Tenojoki virtaa hiekkaisten rantapenkkojen välissä syksyisessä Lapissa.',
+      selite: 'Joki mutkittelee laajan sora- ja hiekkatörmän halki, ja rinteillä kellastuvat vaivaiskoivut.',
+      lahde: 'Valokuva: MattiPaavola, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'MattiPaavola',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tenojoki_Utsjoki_2009-09-28.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-kultala-f13a49ed.jpg',
+        lyhyt: 'Tenojoen koski ja kivinen ranta Nuorgamin seudulla.',
+        selite: 'Kirkasvetinen Tenojoki virtaa kivikkoisen rannan vieritse vihreiden tunturirinteiden alla.',
+        lahde: 'Valokuva: BishkekRocks, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'BishkekRocks',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Utsjoki-Nuorgam_Tenojoki.JPG',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Kultala',
     tyyppi: 'kauppa',
     kysymykset: [

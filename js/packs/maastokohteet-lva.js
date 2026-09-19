@@ -53,9 +53,8 @@
  * kaikki ovat pääkartan merkkejä — omistajan sääntö kohdekaupunkien
  * nostoista ei koske näitä.
  *
- * KUVATON ERÄ. Sama linja kuin maastokohteilla muutenkin: kortti
- * kantaa tekstin ja lähteen, ei kuvaa. Tarkistamaton Commons-tiedosto
- * olisi huonompi kuin kuvaton kortti (Perustuslaki, faktakuri).
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kortti kantaa nyt kaksi tarkistettua
+ * Commons-kuvaa.
  * Faktat on tarkistettu en-Wikipediasta kohde kerrallaan 2.9.2026.
  *
  * Latvian maastokohteet. Faktat en-Wikipediasta 29.8.2026. Pieni maa: kolme kohdetta.
@@ -63,6 +62,28 @@
 export const MAASTOKOHTEET_LVA = [
   {
     id: 'gaizinkalns',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-gaizinkalns-d635b014.jpg',
+      lyhyt: 'Talvinen näkymä Gaiziņkalnsin rinteeltä yli Vidzemen metsien.',
+      selite: 'Lumen peittämä rinne laskee kohti metsäistä ylänköä. Huurteiset puut reunustavat maisemaa selkeän talvitaivaan alla.',
+      lahde: 'Valokuva: Sirujs Enobs, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Sirujs Enobs',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gaizi%C5%86kalns_-_panoramio_-_Sirujs_Enobs.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-gaizinkalns-c3e1cdd6.jpg',
+        lyhyt: 'Gaiziņkalnsin kukkula ja metsät ilmasta nähtynä.',
+        selite: 'Ilmakuvassa kukkulan laella kulkee avoin rinne, jota ympäröi havu- ja lehtimetsä. Rinteen alla erottuu pieni rakennus.',
+        lahde: 'Valokuva: BirdsEyeLV, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'BirdsEyeLV',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gaizi%C5%86kalns-aeropanorama_-_panoramio.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Gaiziņkalns',
     tyyppi: 'vuori',
     kysymykset: [
@@ -85,6 +106,28 @@ export const MAASTOKOHTEET_LVA = [
   },
   {
     id: 'itameri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-itameri-c109878d.jpg',
+      lyhyt: 'Itämeren hiekkaranta ja rantaheinää Latvian ja Liettuan rajan tienoilla.',
+      selite: 'Pitkä vaalea hiekkaranta kaartuu kohti horisonttia, ja aallot vyöryvät rannalle. Oikealla kasvaa kuivunutta rantaheinää.',
+      lahde: 'Valokuva: Algirts, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Algirts',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Baltic_sea_coast_near_LV-LT_border_-_panoramio.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-itameri-25d26bff.jpg',
+        lyhyt: 'Auringon kimmeltämät Itämeren aallot ja hiekkaranta uhkaavan pilvitaivaan alla.',
+        selite: 'Vaahtopäinen aalto vyöryy matalalle hiekkarannalle. Taustalla kasvaa rannan mäntymetsää.',
+        lahde: 'Valokuva: Laima Gūtmane (simka…, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Laima Gūtmane (simka…',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Liepaja,_silver_waves_-_panoramio.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Itämeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -114,6 +157,28 @@ export const MAASTOKOHTEET_LVA = [
   },
   {
     id: 'vainajoki',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-vainajoki-600febc5.jpg',
+      lyhyt: 'Väinäjoen rantaa ja kalkkikivipaljastuma Latviassa.',
+      selite: 'Jyrkän törmän kylkeen paljastuu vaaleaa kalliota, ja joen sininen vesi leviää oikealla. Paljaat puut kasvavat rannan nurmella.',
+      lahde: 'Valokuva: Ainars Brūvelis, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Ainars Brūvelis',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Daugava_river_near_Dole_Island_-_panoramio.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-vainajoki-5c6aa6f2.jpg',
+        lyhyt: 'Väinäjoen leveä ja tyyni vesi Ikšķilen kohdalla.',
+        selite: 'Joki leviää laajaksi vesialueeksi, jonka rannalla kasvaa koivuja ja ruohoa. Etualalla on pieni laituri.',
+        lahde: 'Valokuva: Kikos, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Kikos',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Daugava_iepret%C4%AB_Ik%C5%A1%C4%B7ilei.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Väinäjoki',
     tyyppi: 'joki',
     kysymykset: [
@@ -151,6 +216,28 @@ export const MAASTOKOHTEET_LVA = [
    * ============================================================== */
   {
     id: 'rundale',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-rundale-4d331246.jpg',
+      lyhyt: 'Rundālen palatsin keltainen barokkijulkisivu ja portaikko.',
+      selite: 'Palatsin julkisivua koristavat pilasterit ja koristeelliset ikkunankehykset. Sisäänkäynnin edessä on kaareva kivikaide ja pihamaa.',
+      lahde: 'Valokuva: Zhagatasligzda, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Zhagatasligzda',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rund%C4%81les_pils_no_d%C4%81rza_puses.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-rundale-78296cb7.jpg',
+        lyhyt: 'Rundālen palatsin juhlasali, jossa on rokokoo-koristeet ja veistokset.',
+        selite: 'Vaaleaseinäisessä salissa on koristeellinen katto, kristallikruunuja, marmoripatsaita ja kullattu lipasto.',
+        lahde: 'Valokuva: Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Pudelek (Marcin Szala)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rund%C4%81le_Palace_-_the_Marble_Hall.JPG',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Rundālen palatsi',
     nimio: 'Rundāle',
     tyyppi: 'kulttuuri',
@@ -189,6 +276,28 @@ export const MAASTOKOHTEET_LVA = [
   },
   {
     id: 'cesis',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-cesis-0686991c.jpg',
+      lyhyt: 'Cēsisin keskiaikaisen linnan rauniot syksyisessä puistossa.',
+      selite: 'Kivilinnan pyöreä torni ja hataraksi jääneet muurit kohoavat ruohokentän takana. Kaksi suurta puuta värjää maiseman syksyn väreillä.',
+      lahde: 'Valokuva: AgrisR, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'AgrisR',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:C%C4%93sis_Castle_frontside_in_2014.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-cesis-57cced62.jpg',
+        lyhyt: 'Cēsisin linnan länsitorni ja Pyhän Johanneksen kirkon torni.',
+        selite: 'Kiviseinäinen linnantorni kohoaa puiden lomasta iltavalossa. Taustalla erottuu kirkon terävä huippu.',
+        lahde: 'Valokuva: AgrisR, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'AgrisR',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:C%C4%93sis_Castle_west_tower_and_St._John%27s_church_in_the_background.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Cēsisin linna',
     nimio: 'Cēsis',
     tyyppi: 'historia',
@@ -226,6 +335,28 @@ export const MAASTOKOHTEET_LVA = [
   },
   {
     id: 'turaidan-ruusu',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-turaidan-ruusu-e43cda37.jpg',
+      lyhyt: 'Turaidan linnan punatiiliset tornit ja polku linnanmäellä.',
+      selite: 'Pyöreät tiilitornit kohoavat vihreiden pensaiden takaa. Hiekkapolku johtaa kohti linnan portteja.',
+      lahde: 'Valokuva: Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Pudelek (Marcin Szala)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Turaida_Castle.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-turaidan-ruusu-ed967a6c.jpg',
+        lyhyt: 'Turaidan linnan päätorni nousee metsän yläpuolelle.',
+        selite: 'Punatiilinen linnan torni ja jyrkkä katto erottuvat vihreästä metsästä Gauja-joen laaksossa.',
+        lahde: 'Valokuva: Fawksik, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Fawksik',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Turaida_castle_from_the_opposite_side.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Turaidan ruusu',
     nimio: 'Turaida',
     tyyppi: 'sana',
@@ -268,6 +399,28 @@ export const MAASTOKOHTEET_LVA = [
   },
   {
     id: 'liepaja',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-liepaja-b151cb8e.jpg',
+      lyhyt: 'Liepājan rannalla peilipintaiset kirjaimet muodostavat kaupungin nimen.',
+      selite: 'Suuret metallikirjaimet seisovat hiekalla ja heijastavat auringonvaloa. Taustalla näkyy Itämeri ja pieni joukko rannalla kulkijoita.',
+      lahde: 'Valokuva: Werner100359, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Werner100359',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Liepaja_beach.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-liepaja-ee57fca1.jpg',
+        lyhyt: 'Liepājan Pyhän Kolminaisuuden kirkko kirkkaan taivaan alla.',
+        selite: 'Barokkityylisen kirkon korkea kellotorni kohoaa katukuvan yläpuolelle. Vaalean kiven pinta on aikojen saatossa tummunut.',
+        lahde: 'Valokuva: Chmee2, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Chmee2',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Liep%C4%81ja_-_church_(1).jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Liepāja',
     tyyppi: 'merenkulku',
     kysymykset: [
@@ -300,6 +453,28 @@ export const MAASTOKOHTEET_LVA = [
   },
   {
     id: 'sabile',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-sabile-a552b713.jpg',
+      lyhyt: 'Sabilen viinimäen rinteellä kasvaa viiniköynnöksiä kaupungin yläpuolella.',
+      selite: 'Viinipuut kasvavat riveissä tukikeppien varassa rinteellä. Alhaalla laaksossa erottuu Sabilen kylä punakattoisine taloineen.',
+      lahde: 'Valokuva: BirdsEyeLV, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'BirdsEyeLV',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sabiles_v%C4%ABna_kalns_-_panoramio.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-sabile-6945eb9e.jpg',
+        lyhyt: 'Näkymä Sabilen kaupunkiin ja sen kattoihin viinimäeltä.',
+        selite: 'Vihreiden puiden ympäröimä pikkukaupunki levittäytyy kukkulan rinteelle. Etualalla erottuu valkoinen rakennus, jossa on koristeellinen päätykoriste.',
+        lahde: 'Valokuva: Rimantas Lazdynas, Wikimedia Commons (public domain).',
+        tekija: 'Rimantas Lazdynas',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:SabilenoVinakalna.JPG',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Sabile',
     tyyppi: 'ruoka',
     kysymykset: [
@@ -327,6 +502,28 @@ export const MAASTOKOHTEET_LVA = [
   },
   {
     id: 'jelgava',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-jelgava-4c77523d.jpg',
+      lyhyt: 'Jelgavan palatsi kohoaa Lielupe-joen tyynen veden rannalla.',
+      selite: 'Pitkä punavalkoinen barokkipalatsi seisoo joen vasemmalla rannalla. Vesi heijastaa palatsia sinisen taivaan alla.',
+      lahde: 'Valokuva: Yakikaki, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Yakikaki',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Jelgava_Palace_viewed_from_the_Lielupe_riverside.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-jelgava-bfcadbea.jpg',
+        lyhyt: 'Jelgavan palatsin punatiilinen julkisivu koristeellisine ikkunoineen.',
+        selite: 'Palatsin pitkää siipeä koristavat vaaleat ikkunankehykset ja pilasterit. Edessä on ruohokenttä ja kävelytie.',
+        lahde: 'Valokuva: Pudelek (Marcin Szala), Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Pudelek (Marcin Szala)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Jelgava_Castle_(Schloss_Mitau).JPG',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Jelgava',
     tyyppi: 'kauppa',
     kysymykset: [
@@ -360,6 +557,28 @@ export const MAASTOKOHTEET_LVA = [
   },
   {
     id: 'daugavpilsin-linnoitus',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-daugavpilsin-linnoitus-78d97a57.jpg',
+      lyhyt: 'Puinen silta ja vallihauta Daugavpilsin linnoituksella.',
+      selite: 'Silta johtaa punatiilirakennelmalle, jonka vieressä ruohoinen vallihauta ja puurivi kaartuvat. Taivas on kesäisen kirkas.',
+      lahde: 'Valokuva: Scotch Mist, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Scotch Mist',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Daugavpils_Fortress_04.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-daugavpilsin-linnoitus-610a116b.jpg',
+        lyhyt: 'Daugavpilsin linnoituksen Nikolauksen portti tiilestä ja graniitista.',
+        selite: 'Portin holvattua kaarta ja sivuikkunoita kehystävät harmaat graniittilohkareet. Portin päällä kohoaa nurmipeitteinen valli.',
+        lahde: 'Valokuva: Scotch Mist, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Scotch Mist',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Daugavpils_Fortress_05.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Daugavpilsin linnoitus',
     nimio: 'Daugavpils',
     tyyppi: 'tekniikka',
@@ -392,6 +611,28 @@ export const MAASTOKOHTEET_LVA = [
   },
   {
     id: 'engure',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-engure-fcc682c3.jpg',
+      lyhyt: 'Enguren järven ruovikot ja pienet veneet kesäpäivänä.',
+      selite: 'Matalan järven rannalla kasvaa ruovikkoa, ja kapean vesiuoman varrella lepää vihreitä veneitä. Kaukana näkyy vastarannan metsä.',
+      lahde: 'Valokuva: Uldis Osis, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Uldis Osis',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Engures_ezers_(Lake_Engure)_-_Uldis_Osis_-_Panoramio.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-engure-5751f2e2.jpg',
+        lyhyt: 'Karjaa laiduntamassa Enguren järven rantaniityllä.',
+        selite: 'Nurmella lepää ruskea sarvikarja, ja toinen eläin laiduntaa etäämpänä. Taustalla häämöttää vesialue ja ruovikko.',
+        lahde: 'Valokuva: Evita wiki, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Evita wiki',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Engures_ezera_dabas_parks3.JPG',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Enguren luontopuisto',
     nimio: 'Engure',
     tyyppi: 'elain',
@@ -433,11 +674,33 @@ export const MAASTOKOHTEET_LVA = [
    *
    * Riika on jätetty rauhaan kuten K2-erässäkin: lähin uusi kohde on
    * Ventas rumba 73 lautayksikön päässä, joten kaikki neljä ovat
-   * pääkartan merkkejä. Kuvaton erä; faktat en-Wikipediasta kohde
+   * pääkartan merkkejä. Kuvat lisätty 20.9.2026 (ent. kuvaton erä); faktat en-Wikipediasta kohde
    * kerrallaan 11.9.2026.
    * ============================================================== */
   {
     id: 'ventas-rumba',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-ventas-rumba-d5d2802d.jpg',
+      lyhyt: 'Ventas rumba Kuldīgassa ulottuu leveänä koskena joen poikki.',
+      selite: 'Matala vesiputous jatkuu suoraa linjaa pitkin Venta-jokea. Rannalla on puita ja pieni rakennus.',
+      lahde: 'Valokuva: Christopher Voitus, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Christopher Voitus',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kuldiga-Venta_Rumba.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-ventas-rumba-efd84bdd.jpg',
+        lyhyt: 'Venta-joki ja Ventas rumba iltahämärässä ylhäältä nähtynä.',
+        selite: 'Joen vesi kohisee kivien yli, ja pitkä rumba erottuu taustalla. Rannat ovat vehreiden puiden ja ruohikon peitossa.',
+        lahde: 'Valokuva: Андрей Романенко, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Андрей Романенко',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Venta_Rapid,_view_from_Pils_Hill.JPG',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Ventas rumba',
     tyyppi: 'ruoka',
     kysymykset: [
@@ -479,6 +742,28 @@ export const MAASTOKOHTEET_LVA = [
   },
   {
     id: 'kolkan-niemi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-kolkan-niemi-de394d88.jpg',
+      lyhyt: 'Kuivunut puu Kolkan niemen hiekkarannalla ja Itämeri taustalla.',
+      selite: 'Puunrunko on kuivunut valkeaksi rantadyynin päällä. Pilvet kasautuvat taivaalle, ja aallot vyöryvät kapealle hiekkarannalle.',
+      lahde: 'Valokuva: Italas, Wikimedia Commons (public domain).',
+      tekija: 'Italas',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Baltijos_j%C5%ABra_Kolkos_rage.JPG',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-kolkan-niemi-79fd5eb4.jpg',
+        lyhyt: 'Sumuinen hiekkaranta ja mäntyjä Kolkan niemellä.',
+        selite: 'Sumu peittää maiseman, ja hiekkadyyni kohoaa rannalla. Vasemmalla kasvaa mäntyjä.',
+        lahde: 'Valokuva: Zairon, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Zairon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kolka_Kolkarags_10.JPG',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Kolkan niemi',
     tyyppi: 'merenkulku',
     kysymykset: [
@@ -520,6 +805,28 @@ export const MAASTOKOHTEET_LVA = [
   },
   {
     id: 'aglona',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-aglona-3a13dcf1.jpg',
+      lyhyt: 'Aglonan valkoinen kaksitorninen basilika ja rukouskappeli.',
+      selite: 'Basilikan kaksi tornia kohoavat sinistä pilvitaivasta vasten. Vasemmalla on pieni pyöreä kappeli ja oikealla luostarirakennus.',
+      lahde: 'Valokuva: Dainis Matisons uploaded and derivative work: MrPanyGoff, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Dainis Matisons uploaded and derivative work: MrPanyGoff',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aglona_Basilica.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-aglona-236a6093.jpg',
+        lyhyt: 'Aglonan basilika iltavalossa.',
+        selite: 'Valkoiset tornit hehkuvat laskevan auringon valossa. Etualalla on nurmikenttä ja valaisinpylväs.',
+        lahde: 'Valokuva: Chmee2, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Chmee2',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aglona_Basilica(2).jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Aglonan basilika',
     nimio: 'Aglona',
     tyyppi: 'kulttuuri',
@@ -558,6 +865,28 @@ export const MAASTOKOHTEET_LVA = [
   },
   {
     id: 'gluckin-raamattumuseo',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-gluckin-raamattumuseo-57f2f9e4.jpg',
+      lyhyt: 'Alūksnen raamattumuseon vihreäkattoinen rakennus nurmikon reunassa.',
+      selite: 'Vihreä kupariperäinen katto peittää pienen museorakennuksen. Nurmikon halki kulkee kivetty polku ja taustalla kasvaa vanha puu.',
+      lahde: 'Valokuva: Martins Smits, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Martins Smits',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bible_museum_in_Al%C5%ABksne_-_panoramio.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/lva-nosto-gluckin-raamattumuseo-43753b37.jpg',
+        lyhyt: 'Alūksnen raamattumuseon vihreäkattoinen paviljonki lähempää.',
+        selite: 'Rakennuksessa on pyöreitä ikkunoita, vihreä ovi ja ikkunaluukut. Sen edessä on penkkejä ja kukkaistutuksia.',
+        lahde: 'Valokuva: WikedKentaur, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'WikedKentaur',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bible_Museum_in_Aluksne.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Glückin raamattumuseo',
     nimio: 'Alūksne',
     tyyppi: 'sana',

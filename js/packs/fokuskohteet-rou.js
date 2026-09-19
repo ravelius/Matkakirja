@@ -683,12 +683,34 @@ export const FOKUSKOHTEET_ROU = [
    * nostoa per Euroopan maa; Romania oli 19:ssä.
    *
    * Kohde on kaukana Bukarestin laatasta (128 lautayksikköä), joten se
-   * on pääkartan merkki eikä valu kohdekartalle. Kuvaton nosto: sama
+   * on pääkartan merkki eikä valu kohdekartalle. Kuvat lisätty 20.9.2026 (ent. kuvaton nosto): sama
    * linja kuin muissa tämän erän kohteissa (js/packs/maastokohteet-aut.js),
    * kuvat tilataan erikseen. Faktat en-Wikipediasta 11.9.2026.
    * ============================================================== */
   {
     id: 'voronet',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-voronet-8b95bcce.jpg',
+      lyhyt: 'Voroneţin luostarikirkko kesäisessä puistossa.',
+      selite: 'Luostarikirkon pyöreä torni ja leveä lape kohoavat puiden keskeltä; seinien maalaukset erottuvat vielä alaosassa.',
+      lahde: 'Valokuva: Gary Todd, Wikimedia Commons (CC0).',
+      tekija: 'Gary Todd',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Voronet_Monastery_-_2016-1.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-voronet-0286ec46.jpg',
+        lyhyt: 'Voroneţin kirkon maalattu ulkoseinä ruusujen takana.',
+        selite: 'Kirkon ulkoseinät on peitetty värikkäillä pyhimyskuvilla ja kohtauksilla, jotka ulottuvat lavan alle.',
+        lahde: 'Valokuva: Adam Jones Adam63, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Adam Jones Adam63',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Voronet_Monastery_-_Romania_-_02.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Voronețin luostari',
     symboli: 'kulttuuri',
     tyyppi: 'kulttuuri',

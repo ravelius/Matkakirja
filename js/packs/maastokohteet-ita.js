@@ -32,6 +32,28 @@
 export const MAASTOKOHTEET_ITA = [
   {
     id: 'adrianmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-adrianmeri-975193f4.jpg',
+      lyhyt: 'Sirolon hiekkaranta ja turkoosi Adrianmeri mäntyjen välistä nähtynä.',
+      selite: 'Männiköstä avautuu näkymä Conero-vuoren rannikon vaalealle rannalle ja kirkkaanvihreänsiniselle merelle.',
+      lahde: 'Valokuva: Cinnich, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Cinnich',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Riviera_del_Conero,_Sirolo_beach.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-adrianmeri-979e3c47.jpg',
+        lyhyt: 'Adrianmeren aava Miramaren linnan puutarhasta katsottuna.',
+        selite: 'Tyyni harmaansininen meri jatkuu horisonttiin asti, etualalla koristeellinen valurautalyhty.',
+        lahde: 'Valokuva: Máté Bányi, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Máté Bányi',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_from_Miramare_Castle_-_Sea.JPG',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+      },
+    ],
     nimi: 'Adrianmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -53,6 +75,28 @@ export const MAASTOKOHTEET_ITA = [
   },
   {
     id: 'tyrrhenanmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-tyrrhenanmeri-d5c36a2b.jpg',
+      lyhyt: 'Tyyni Tyrrhenanmeri ja pilviä taivaalla.',
+      selite: 'Sininen meri on aivan tyven, ja horisontin yllä leijuu kumpupilviä.',
+      lahde: 'Valokuva: Patrick Nouhailler, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Patrick Nouhailler',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_Tyrrhenian_Sea_-_panoramio.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-tyrrhenanmeri-8309d129.jpg',
+        lyhyt: 'Amalfin rannikon jyrkät kalliot Tyrrhenanmereltä katsottuna.',
+        selite: 'Rannikon kalliot kohoavat turkoosin meren yllä, ja rinteellä näkyy valkoisia taloja.',
+        lahde: 'Valokuva: Daniel Ventura, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Daniel Ventura',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Amalfi_Coast_viewed_from_the_Tyrrhenian_Sea_55.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Tyrrhenanmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -80,6 +124,28 @@ export const MAASTOKOHTEET_ITA = [
   },
   {
     id: 'ligurianmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-ligurianmeri-862c0a99.jpg',
+      lyhyt: 'Turkoosi Ligurianmeri ja Cinque Terren jyrkkä rannikko.',
+      selite: 'Vuorinen rannikko laskeutuu mereen, ja alhaalla vasemmalla näkyy Vernazzan pieni kylä; merellä on purjeveneitä.',
+      lahde: 'Valokuva: Micael Widell, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Micael Widell',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Looking_south_on_the_mountainous_Ligurian_coast_from_north_of_Vernazza.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-ligurianmeri-1eb6bbc7.jpg',
+        lyhyt: 'Ligurianmeren rannikon vihreät vuoret ja tummansininen meri.',
+        selite: 'Metsäiset kukkulat kohoavat meren yllä, ja kylä on rinteessä veden äärellä.',
+        lahde: 'Valokuva: Antonina Dattola, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Antonina Dattola',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vernazza_-_Panoramica_(1).jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Ligurianmeri',
     tyyppi: 'meri',
     kysymykset: [

@@ -54,14 +54,35 @@
  * 7, js/fokuskohteet.js). Yksikään ei siis kuulu kohdekartalle, vaan
  * kaikki ovat pääkartan merkkejä.
  *
- * KUVATON ERÄ. Sama linja kuin maastokohteilla muutenkin: kortti kantaa
- * tekstin ja lähteen, ei kuvaa. Tarkistamaton Commons-tiedosto olisi
- * huonompi kuin kuvaton kortti (Perustuslaki, faktakuri). Faktat on
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kortti kantaa nyt kaksi tarkistettua
+ * Commons-kuvaa. Faktat on
  * tarkistettu en-Wikipediasta kohde kerrallaan 6.9.2026.
  */
 export const MAASTOKOHTEET_DNK = [
   {
     id: 'mllehj',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-mllehj-bccab0f6.jpg',
+      lyhyt: 'Møllehøj näkyy Ejer Bavnehøjn tornista katsottuna Jyllannin viljelymaisemassa.',
+      selite: 'Loivasti aaltoileva maisema, jossa on peltoja, tie ja maatilan rakennuksia. Møllehøj on Tanskan korkein luonnollinen kohta.',
+      lahde: 'Valokuva: JMiall, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'JMiall',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:M%C3%B8lleh%C3%B8j_from_Ejer_Bavneh%C3%B8j.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-mllehj-03674e5f.jpg',
+        lyhyt: 'Myllynkivi merkitsee Møllehøjn huippua.',
+        selite: 'Pyöreä myllynkivi on asetettu nurmikumpareen huipulle. Kohta on 170,86 metriä merenpinnan yläpuolella.',
+        lahde: 'Valokuva: JMiall, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'JMiall',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:M%C3%B8lleh%C3%B8j_millstone.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+      },
+    ],
     nimi: 'Møllehøj',
     tyyppi: 'vuori',
     kysymykset: [
@@ -83,6 +104,28 @@ export const MAASTOKOHTEET_DNK = [
   },
   {
     id: 'pohjanmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-pohjanmeri-66293ebe.jpg',
+      lyhyt: 'Pohjanmeren rannikkoa Nørre Vorupørissa Tanskassa.',
+      selite: 'Pitkä hiekkarantaviiva ja aaltoilevan meren yllä avara taivas.',
+      lahde: 'Valokuva: Slaunger, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Slaunger',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:N%C3%B8rre_Vorup%C3%B8r_Coast_one_third_sky_2012-11-18.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-pohjanmeri-7fbf41bc.jpg',
+        lyhyt: 'Rømøn hiekkaranta Pohjanmeren rannalla Tanskassa.',
+        selite: 'Leveä hiekkaranta ulottuu Tanskan Pohjanmeren puolella.',
+        lahde: 'Valokuva: Bärbel Miemietz, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Bärbel Miemietz',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2019-08-15_Strand_von_R%C3%B8m%C3%B8.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Pohjanmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -103,6 +146,28 @@ export const MAASTOKOHTEET_DNK = [
   },
   {
     id: 'itameri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-itameri-060f343d.jpg',
+      lyhyt: 'Myrskyisä Itämeri Bornholmin rannikolla.',
+      selite: 'Aallot vyöryvät kivikkoiselle rannalle Bornholmin saarella Tanskassa, ja taivas on raskaiden pilvien peittämä.',
+      lahde: 'Valokuva: Socket0, Wikimedia Commons (CC0).',
+      tekija: 'Socket0',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stormy_Baltic_sea_on_Bornholm.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-itameri-7fad2547.jpg',
+        lyhyt: 'Keltaisen jäkälän peittämiä kallioita Itämeren rannalla Bornholmilla.',
+        selite: 'Kivikkoinen rannikko lähellä Nexøa Bornholmin saarella; horisontissa meri häviää utuun.',
+        lahde: 'Valokuva: Socket0, Wikimedia Commons (CC0).',
+        tekija: 'Socket0',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Yellow_rocks_on_the_Baltic.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+    ],
     nimi: 'Itämeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -135,6 +200,28 @@ export const MAASTOKOHTEET_DNK = [
    * ============================================================== */
   {
     id: 'roskilden-tuomiokirkko',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-roskilden-tuomiokirkko-dbb66426.jpg',
+      lyhyt: 'Roskilden tuomiokirkon punatiilinen länsipääty ja kaksi tornia.',
+      selite: 'Kirkon julkisivu on punatiiltä, ja kaksi korkeaa teräväkärkistä tornia kohoaa sinistä taivasta vasten.',
+      lahde: 'Valokuva: Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Jakub Hałun',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fasada_katedry_w_Roskilde,_20220617_1200_6741.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-roskilden-tuomiokirkko-85bea254.jpg',
+        lyhyt: 'Roskilden tuomiokirkko ilmasta katsottuna kaupungin keskellä.',
+        selite: 'Tuomiokirkon kaksi tornia kohoavat punakattoisten talojen yläpuolelle Sjællandin saarella.',
+        lahde: 'Valokuva: CucombreLibre, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'CucombreLibre',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Roskilde_Cathedral_aerial.jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Roskilden tuomiokirkko',
     tyyppi: 'historia',
     kysymykset: [
@@ -167,6 +254,28 @@ export const MAASTOKOHTEET_DNK = [
   },
   {
     id: 'kronborg',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-kronborg-d93a0dd3.jpg',
+      lyhyt: 'Kronborgin linna kohoaa meren rannalla Helsingørissä.',
+      selite: 'Renessanssilinnan vihreät kupariset tornit ja linnoitusvallit erottuvat vedestä katsottuna.',
+      lahde: 'Valokuva: Ermell, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ermell',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kronborg_Castle-20140723-RM-150812.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-kronborg-89161023.jpg',
+        lyhyt: 'Kronborgin linna linnoitusvallin takaa.',
+        selite: 'Kupariset tornit ja tiilimuurit nousevat ruohoisen vallin yli.',
+        lahde: 'Valokuva: Richard Mortel, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'Richard Mortel',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kronborg_Castle,_1574-85_(5)_(36398296055).jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Kronborg',
     tyyppi: 'sana',
     kysymykset: [
@@ -199,6 +308,28 @@ export const MAASTOKOHTEET_DNK = [
   },
   {
     id: 'jellingin-kivet',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-jellingin-kivet-18c71b13.jpg',
+      lyhyt: 'Jellingin kaksi riimukiveä valkoisen kirkon vieressä.',
+      selite: 'Vasemmalla seisoo Gorm Vanhan pystyttämä kivi ja oikealla Harald Sinihampaan suurempi kivi. Kivet on kaiverrettu 900-luvulla.',
+      lahde: 'Valokuva: Jürgen Howaldt, Wikimedia Commons (CC BY-SA 2.0 de).',
+      tekija: 'Jürgen Howaldt',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Runensteine_Gorm_Blauzahn.jpg',
+      lisenssi: 'CC BY-SA 2.0 de',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/de/deed.en',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-jellingin-kivet-a31d537d.jpg',
+        lyhyt: 'Jellingin riimukivet lasisen ja teräksisen katoksen alla.',
+        selite: 'Nykyaikainen tumma katos kehystää 900-luvun kiviä valkoisen kirkon vieressä.',
+        lahde: 'Valokuva: Ajepbah, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Ajepbah',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Jelling_rune_stones.1.ajb.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Jellingin kivet',
     tyyppi: 'historia',
     kysymykset: [
@@ -235,6 +366,28 @@ export const MAASTOKOHTEET_DNK = [
   },
   {
     id: 'ribe',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-ribe-3af8c15f.jpg',
+      lyhyt: 'Ribe ilmasta katsottuna: punakattoista vanhaa kaupunkia ja tuomiokirkko.',
+      selite: 'Tanskan vanhimman kaupungin tiiviit punaiset katot levittäytyvät vihreiden peltojen keskelle Lounais-Jyllannissa.',
+      lahde: 'Valokuva: Arne Müseler, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Arne Müseler',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Denmark_ribe.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-ribe-2ea4bc10.jpg',
+        lyhyt: 'Ribe Domkirke kaakosta katsottuna.',
+        selite: 'Romaaninen kivikirkko vihreine kupariyläkattoineen ja korkeine torneineen seisoo kivetyn aukion laidalla.',
+        lahde: 'Valokuva: Hjart, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Hjart',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ribe_Domkirke_SE.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Ribe',
     tyyppi: 'kaupunki',
     kysymykset: [
@@ -266,6 +419,28 @@ export const MAASTOKOHTEET_DNK = [
   },
   {
     id: 'skagen',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-skagen-e79e75f8.jpg',
+      lyhyt: 'Grenen-niemen hiekkaranta Skagenin lähellä Jyllannin pohjoiskärjessä.',
+      selite: 'Näkymä majakalta: kapea hiekkainen niemi työntyy merelle, ja rannalla on aallonmurtajia.',
+      lahde: 'Valokuva: Lukas Riebling, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Lukas Riebling',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Grenen_as_seen_from_Skagen_Fyr_2006-08-21.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-skagen-86faa84b.jpg',
+        lyhyt: 'Punakattoisia taloja dyynien takana Skagenin rannalla.',
+        selite: 'Aallot vyöryvät hiekkarannalle, ja rantaruohoa kasvava dyyni erottaa meren kylän taloista.',
+        lahde: 'Valokuva: Strokin.ru, Wikimedia Commons (CC BY 3.0).',
+        tekija: 'Strokin.ru',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Skagen4.jpg',
+        lisenssi: 'CC BY 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+      },
+    ],
     nimi: 'Skagen',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -295,6 +470,28 @@ export const MAASTOKOHTEET_DNK = [
   },
   {
     id: 'frederiksborgin-linna',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-frederiksborgin-linna-1a648f36.jpg',
+      lyhyt: 'Frederiksborgin linna järven saarilla Hillerødissä.',
+      selite: 'Renessanssilinnan tiilipunaiset seinät ja vihreät kupariset tornit heijastuvat linnajärven veteen.',
+      lahde: 'Valokuva: Casper Moller, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Casper Moller',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Frederiksborg_Castle_and_boat_crop.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-frederiksborgin-linna-60d2ad5d.jpg',
+        lyhyt: 'Frederiksborgin linna maalattuna vuonna 1814.',
+        selite: 'J. C. Dahlin maalauksessa linna kohoaa järven yllä pilvisen taivaan alla.',
+        lahde: 'Maalaus: Johan Christian Dahl, Wikimedia Commons (public domain).',
+        tekija: 'Johan Christian Dahl',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Frederiksborg_Slot_1814_by_J.C._Dahl.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Frederiksborgin linna',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -326,6 +523,28 @@ export const MAASTOKOHTEET_DNK = [
   },
   {
     id: 'storebaeltin-silta',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-storebaeltin-silta-25596307.jpg',
+      lyhyt: 'Storebæltin riippusilta ja sen jatkeena kulkeva matala silta Sjællandin puolelta nähtynä.',
+      selite: 'Kaksi korkeaa pylonia kantaa riippusiltaa, ja rannalla seisoo pieni punakattoinen rakennus.',
+      lahde: 'Valokuva: Sendelbach, Wikimedia Commons (public domain).',
+      tekija: 'Sendelbach',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Storeb%C3%A6ltsbroen_from_Sj%C3%A6lland.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-storebaeltin-silta-81a50794.jpg',
+        lyhyt: 'Storebæltin sillan itäinen osuus alhaalta katsottuna.',
+        selite: 'Sillan tienpohja kaartuu kohti tornia, ja alla levittäytyy tyyni meri.',
+        lahde: 'Valokuva: Johnston9494, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Johnston9494',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Denmark_Great_Belt_Bridge_East.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Storebæltin silta',
     // Karttanimiö lyhennetty: täkynosto nosto-trelleborg on lähellä (nimiölimitys, 20.9.2026).
     nimio: '',
@@ -365,11 +584,33 @@ export const MAASTOKOHTEET_DNK = [
    * Kaikki viisi ovat kaukana Kööpenhaminan laatasta (lähinkin Møns
    * Klint 33 lautayksikköä, KAUPUNKIKATON_SADE on 8), joten yksikään
    * ei kuulu kohdekartalle vaan kaikki ovat pääkartan merkkejä.
-   * Kuvaton erä kuten muutkin maastokohteet. Faktat en-Wikipediasta
+   * Kuvat lisätty 20.9.2026 (ent. kuvaton erä) kuten muutkin maastokohteet. Faktat en-Wikipediasta
    * kohde kerrallaan 11.9.2026.
    * ============================================================== */
   {
     id: 'tollundin-mies',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-tollundin-mies-47badc76.jpg',
+      lyhyt: 'Bjældskovdalin turvemaa, jossa Tollundin mies löydettiin.',
+      selite: 'Polku kulkee kanervaisen ja koivikkoisen suomaiseman läpi lähellä Silkeborgia Jyllannissa.',
+      lahde: 'Valokuva: Nils Jepsen, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Nils Jepsen',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bjeldskovdal_Tollundmandens_findested.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-tollundin-mies-2045f7a2.jpg',
+        lyhyt: 'Bjældskovdalin kanervikkoa, mäntyjä ja lankkupolku.',
+        selite: 'Löytöpaikan lähistön avaraa nummi- ja turvemaisemaa keväisessä valossa.',
+        lahde: 'Valokuva: Nils Jepsen, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Nils Jepsen',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bjeldskovdal.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Tollundin mies',
     tyyppi: 'historia',
     kysymykset: [
@@ -412,6 +653,28 @@ export const MAASTOKOHTEET_DNK = [
   },
   {
     id: 'egeskov',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-egeskov-bece6603.jpg',
+      lyhyt: 'Egeskovin vesilinna heijastuu linnanlammen pintaan.',
+      selite: 'Punatiilinen renessanssilinna seisoo veden ympäröimänä Fynin saarella, ja tornien kupariset kärjet ovat vihreät.',
+      lahde: 'Valokuva: Malene Thyssen, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Malene Thyssen',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Egeskov_Slot_spejling_Edit_2.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-egeskov-f3df1c9e.jpg',
+        lyhyt: 'Egeskovin linna ja puutarhat ilmasta.',
+        selite: 'Vesigraavin ympäröimä linna sijaitsee muotopuutarhojen ja peltojen keskellä.',
+        lahde: 'Valokuva: CucombreLibre, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'CucombreLibre',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Egeskov_Castle_(28103028186).jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Egeskovin linna',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -449,6 +712,28 @@ export const MAASTOKOHTEET_DNK = [
   },
   {
     id: 'mons-klint',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-mons-klint-251a591e.jpg',
+      lyhyt: 'Møns Klintin valkoinen liitujyrkänne ja turkoosi Itämeri.',
+      selite: 'Jyrkänne kohoaa suoraan merestä, ja sen päällä kasvaa metsää.',
+      lahde: 'Valokuva: Josef F. Stuefer, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Josef F. Stuefer',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Denmark_coast.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-mons-klint-5886325c.jpg',
+        lyhyt: 'Liitujyrkänteet Møns Klintin rannalla.',
+        selite: 'Vaalea kalkkikivijyrkänne nousee kivikkoisen rannan yllä, ja jyrkänteen päällä kasvaa metsää.',
+        lahde: 'Valokuva: Chad K, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'Chad K',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Chalk_cliffs_of_Moen.jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Møns Klint',
     tyyppi: 'vuori',
     kysymykset: [
@@ -482,6 +767,28 @@ export const MAASTOKOHTEET_DNK = [
   },
   {
     id: 'lindholm-hoje',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-lindholm-hoje-69cd9740.jpg',
+      lyhyt: 'Lindholm Højen museon rakennus kumpareen laidalla.',
+      selite: 'Valkoinen moderni museorakennus sijaitsee viikinkiaikaisen asuin- ja hautapaikan vieressä Aalborgin pohjoispuolella.',
+      lahde: 'Valokuva: Liberaler Humanist, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Liberaler Humanist',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_southwestern_part_of_Lindholm_H%C3%B8je_Museet,_Aalborg.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-lindholm-hoje-6c396fc2.jpg',
+        lyhyt: 'Lindholm Højen viikinkiajan kivikehiä kumpuilevalla nurmella.',
+        selite: 'Kivet muodostavat kehiä ja soikioita kukkulan rinteellä, ja taustalla näkyy puita sekä kaupunkia.',
+        lahde: 'Valokuva: Frank Vincentz, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Frank Vincentz',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aalborg_-_Lindholm_H%C3%B8je_03_ies.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+      },
+    ],
     nimi: 'Lindholm Høje',
     tyyppi: 'sana',
     kysymykset: [
@@ -522,6 +829,28 @@ export const MAASTOKOHTEET_DNK = [
   },
   {
     id: 'billund',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-billund-2a4997bc.jpg',
+      lyhyt: 'Billundin keskustaa ylhäältä katsottuna.',
+      selite: 'Punakattoisia rakennuksia ja puita jyllantilaisessa kaupungissa.',
+      lahde: 'Valokuva: HartOve, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'HartOve',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Billund_skyline.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-billund-1d2fc8fe.jpg',
+        lyhyt: 'LEGO-hahmon patsas LEGO Campuksen edessä Billundissa.',
+        selite: 'Lasipintainen rakennus ja jättimäinen legohahmo kuuluvat kaupunkiin, jossa LEGO-yritys perustettiin 1932.',
+        lahde: 'Valokuva: Michał Beim, Wikimedia Commons (CC BY 4.0).',
+        tekija: 'Michał Beim',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:The_LEGO_Campus_in_Billund_(2025).jpg',
+        lisenssi: 'CC BY 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+      },
+    ],
     nimi: 'Billund',
     tyyppi: 'kauppa',
     kysymykset: [

@@ -32,6 +32,28 @@
 export const MAASTOKOHTEET_BIH = [
   {
     id: 'maglic',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/bih-nosto-maglic-8037ea00.jpg',
+      lyhyt: 'Maglićin jyrkkä kallioinen massiivi kohoaa vihreiden laidunten yllä.',
+      selite: 'Bosnian korkein vuori kohoaa paljaana kalkkikivimassiivina alppiniittyjen takana. Rinteillä kasvaa vain matalaa pensasta ja yksittäisiä puita.',
+      lahde: 'Valokuva: Martin Brož, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Martin Brož',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Maglic_(2386_m)_od_Prijevoru.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/bih-nosto-maglic-3ccb594d.jpg',
+        lyhyt: 'Ylhäältä katsottuna Trnovačko-järvi lepää Maglićin vuorten juurella.',
+        selite: 'Sydämenmuotoinen vuorijärvi on metsän ympäröimä, ja sen takana kohoaa harmaa kalliomassiivi.',
+        lahde: 'Valokuva: Dingoa, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Dingoa',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Magli%C4%87,_Trnova%C4%8Dko_jezero.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Maglić',
     tyyppi: 'vuori',
     kysymykset: [
@@ -54,6 +76,28 @@ export const MAASTOKOHTEET_BIH = [
   },
   {
     id: 'adrianmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/bih-nosto-adrianmeri-64f539c3.jpg',
+      lyhyt: 'Kirkasvetinen Adrianmeren ranta ja vuoristoinen rannikko.',
+      selite: 'Turkoosi meri huuhtoo hiekkaista rantaa, ja rannikon takana kohoavat kalkkikivivuoret. Rannalla näkyy pieniä uimareita kaukana.',
+      lahde: 'Valokuva: tomkennedyastro, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'tomkennedyastro',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Adriatic_Sea_Croatia.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/bih-nosto-adrianmeri-3b9cc988.jpg',
+        lyhyt: 'Aallot iskeytyvät kallioiselle Adrianmeren rannikolle maalauksessa.',
+        selite: 'Vanha öljymaalaus, jossa vaahtopäiset aallot murtuvat rannikon kallioihin ja taustalla näkyy vuorinen niemi.',
+        lahde: 'Maalaus: Alfred Zoff, Wikimedia Commons (public domain).',
+        tekija: 'Alfred Zoff',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Alfred_Zoff_-_Campo_Maria_near_the_Adriatic_Coast.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Adrianmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -86,11 +130,33 @@ export const MAASTOKOHTEET_BIH = [
    * kysymyksiin eikä kuvaa väkivaltaa. Počitelj oli ensin erän
    * kolmas ehdokas, mutta sen nimiö olisi työntänyt Neumin nimiön
    * Stonin muurien päälle (tools/tarkista-nimiolimitys.mjs), joten
-   * tilalle valittiin Blidinje. Kuvaton erä, kuten pakin muutkin
+   * tilalle valittiin Blidinje. Kuvat lisätty 20.9.2026 (ent. kuvaton erä), kuten pakin muutkin
    * kohteet.
    * ============================================================== */
   {
     id: 'blidinje',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/bih-nosto-blidinje-cdc9134d.jpg',
+      lyhyt: 'Ylhäältä katsottuna Blidinje-järvi lepää karstiylängön laaksossa.',
+      selite: 'Karstiylängön keskellä on matala järvi, jota ympäröivät laidunmaat ja tummat vuoret. Etualalla on kivikkoista rinnettä.',
+      lahde: 'Valokuva: Martin Brož, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Martin Brož',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Blidinjsko_jezero_(23_ha,_hl._max._3,5_m)_z_Maleho_Vranu.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/bih-nosto-blidinje-8785fe58.jpg',
+        lyhyt: 'Lumihuippuiset vuoret kohoavat Blidinjen ylängön yllä.',
+        selite: 'Talvinen maisema Blidinjen luonnonpuistossa: ruskeaa ruohikkoa, järven vesi ja lumipeitteiset Dinaaristen vuorten rinteet.',
+        lahde: 'Valokuva: Hienstorfer, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Hienstorfer',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Blidinje_national_park.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Blidinjen puisto',
     tyyppi: 'vuori',
     symboli: 'luonto',
@@ -122,6 +188,28 @@ export const MAASTOKOHTEET_BIH = [
   },
   {
     id: 'bobovac',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/bih-nosto-bobovac-f3f75204.jpg',
+      lyhyt: 'Bobovacin linnan raunioilla kohoaa kivinen rakennus paanukattoineen.',
+      selite: 'Keskiaikaisen linnan alueella seisova kivirakennus, jonka katto on peitetty puupaanuilla. Rakennuksen takana nousee metsäinen rinne.',
+      lahde: 'Valokuva: Badener, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Badener',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bobovac_0343.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/bih-nosto-bobovac-2c329585.jpg',
+        lyhyt: 'Bobovacin linnoituksen rauniot kalliolla jyrkän rotkolaakson yllä.',
+        selite: 'Linnanraunio kohoaa kapean harjanteen päässä. Ympärillä jyrkät metsäiset rinteet laskeutuvat laaksoon.',
+        lahde: 'Valokuva: Branimir Mlakić, Wikimedia Commons (CC BY 3.0).',
+        tekija: 'Branimir Mlakić',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bobovac_Fortress_-_panoramio.jpg',
+        lisenssi: 'CC BY 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+      },
+    ],
     nimi: 'Bobovac',
     tyyppi: 'historia',
     kysymykset: [

@@ -58,8 +58,7 @@
  * kolminkertaisesti rajan yli. Kaikki kahdeksan ovat siis pääkartan
  * merkkejä.
  *
- * KUVATON ERÄ. Kortti kantaa tekstin ja lähteen, ei kuvaa — sama linja
- * kuin erässä 1. Faktat on tarkistettu en-Wikipediasta kohde
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä). Faktat on tarkistettu en-Wikipediasta kohde
  * kerrallaan 6.9.2026.
  *
  * Espanjan maastokohteet. Faktat en-Wikipediasta 29.8.2026. HUOM: Teide (3 715 m) on Espanjan korkein, mutta se on Kanariansaarilla eikä siten mahdu maan fokuslehden ikkunaan (YLEINEN.saarenEtaisyys 2,5 astetta) — merkki jäisi kuvan ulkopuolelle. Siksi listalla on Mulhacén, jonka artikkeli itse nimeää mannermaisen Espanjan korkeimmaksi.
@@ -67,6 +66,28 @@
 export const MAASTOKOHTEET_ESP = [
   {
     id: 'mulhacen',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-mulhacen-c81cff57.jpg',
+      lyhyt: 'Mulhacénin kivinen pohjoisrinne aurinkoisessa säässä.',
+      selite: 'Mulhacénin huippu kohoaa lumilaikkuisen kallioisen rinteen yläpuolella Sierra Nevadassa.',
+      lahde: 'Valokuva: Carlos Serra, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Carlos Serra',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mulhacen_north_face.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-mulhacen-e4c1e841.jpg',
+        lyhyt: 'Lumipeitteinen Mulhacén talvella.',
+        selite: 'Mulhacén länsipuolelta nähtynä: laaja, pyöreähuippuinen vuori on talvella lumen peitossa.',
+        lahde: 'Valokuva: Nilsf at German Wikipedia, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Nilsf at German Wikipedia',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mulhacen_Winter.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+      },
+    ],
     nimi: 'Mulhacén',
     tyyppi: 'vuori',
     kysymykset: [
@@ -88,6 +109,28 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'aneto',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-aneto-02d047b8.jpg',
+      lyhyt: 'Lumen ja jään peittämä Aneton huippu kesäkuussa.',
+      selite: 'Pyreneiden korkein huippu kohoaa tummaa taivasta vasten, ja sen rinteitä peittävät lumi ja jäätikkö.',
+      lahde: 'Valokuva: Manuel Velazquez, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Manuel Velazquez',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:ANETO_EN_JUNIO_-_panoramio.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-aneto-6a4856d9.jpg',
+        lyhyt: 'Aneton huippu ja Tuca del Coll de Corones vuoristoharjanteelta nähtynä.',
+        selite: 'Aneton (3 404 m) tumma huippu ja sen alapuolella Tuca del Coll de Corones (3 286 m) Maladetan massiivissa, kuvattu Pic de Coronesilta.',
+        lahde: 'Valokuva: Pere Ramon, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Pere Ramon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aneto_i_Tuca_del_Coll_de_Corones.JPG',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Aneto',
     tyyppi: 'vuori',
     kysymykset: [
@@ -116,6 +159,28 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'valimeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-valimeri-02f2eb60.jpg',
+      lyhyt: 'Kallioinen Costa Bravan rannikko ja purjevene Välimerellä.',
+      selite: 'Kalliorannikko aaltoineen ja aluskasvillisuutta Lloret de Marin kohdalla Costa Bravalla, ja avomerellä purjevene.',
+      lahde: 'Valokuva: Txllxt TxllxT, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Txllxt TxllxT',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lloret_de_Mar_-_Camí_a_Cala_Banys_-_View_South_on_Mediterranean_Sea_coast_of_Costa_Brava.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-valimeri-323dd5ab.jpg',
+        lyhyt: 'Vastavalossa kimmeltävä Välimeri ja kallioinen rannikko.',
+        selite: 'Aurinko kimaltaa tummansinisellä Välimerellä, ja oikealla kohoaa jyrkkä rantakallio.',
+        lahde: 'Valokuva: Friedrich Haag, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Friedrich Haag',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:002_2014_03_16_Gegenlicht.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Välimeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -137,6 +202,28 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'tajo',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-tajo-45e803dd.jpg',
+      lyhyt: 'Tajo-joki virtaa Toledon kaupungin ohi.',
+      selite: 'Tajo mutkittelee kallioisten rinteiden välissä Toledossa, jonka vanhakaupunki kohoaa vasemmalla kukkulalla; etualalla on pato ja vanha rakennus joen rannalla.',
+      lahde: 'Valokuva: Diliff, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Diliff',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tagus_River_Panorama_-_Toledo,_Spain_-_Dec_2006.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-tajo-1d7e8ee9.jpg',
+        lyhyt: 'Tajo-joen laaja mutka Monfragüen kansallispuistossa.',
+        selite: 'Tajo kiertää metsäisen niemen Monfragüen kansallispuistossa Extremadurassa keväisessä maisemassa.',
+        lahde: 'Valokuva: Manzana de Eva, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Manzana de Eva',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tajo_River_at_Monfragüe_National_Park,_Extremadura,_Spain.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Tajo',
     tyyppi: 'joki',
     kysymykset: [
@@ -163,6 +250,28 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'ebro',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-ebro-4c37394f.jpg',
+      lyhyt: 'Ebro-joen ruskea tulvavesi ja Pilarin basilikan tornit Zaragozassa.',
+      selite: 'Ebro virtaa Zaragozan halki runsasvetisenä, ja vastarannalla kohoavat Nuestra Señora del Pilarin basilikan tornit.',
+      lahde: 'Valokuva: Adam Jones from Kelowna, BC, Canada, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Adam Jones from Kelowna, BC, Canada',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ebro_River_Scene_-_Zaragoza_-_Aragon_-_Spain_-_01_(14589167764).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-ebro-08d4dce6.jpg',
+        lyhyt: 'Zaragoza illalla Ebro-joen rannalta nähtynä.',
+        selite: 'Ebro-joen yli kulkee valaistu sillat ja vinoköysisilta, ja kaukana häämöttää Pilarin basilikka.',
+        lahde: 'Valokuva: Juanedc from Zaragoza, España, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'Juanedc from Zaragoza, España',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Zaragoza_desde_el_Ebro_(8093079548).jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Ebro',
     tyyppi: 'joki',
     kysymykset: [
@@ -191,6 +300,28 @@ export const MAASTOKOHTEET_ESP = [
    * ============================================================== */
   {
     id: 'santiago-de-compostela',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-santiago-de-compostela-08aeadff.jpg',
+      lyhyt: 'Santiago de Compostelan katedraalin tornit kohoavat vanhankaupungin katojen yläpuolelle.',
+      selite: 'Katedraalin barokkinen Obradoiro-julkisivu ja kaksi tornia näkyvät puiston palmujen ja punaisten kattojen takaa Galician pääkaupungissa.',
+      lahde: 'Valokuva: Luis Miguel Bugallo Sánchez (Lmbuga), Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Luis Miguel Bugallo Sánchez (Lmbuga)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fachada_do_Obradoiro_e_parte_traseira_do_Pazo_de_Raxoi_Santiago_de_Compostela-2.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-santiago-de-compostela-38141651.jpg',
+        lyhyt: 'Santiagon katedraalin barokkinen Obradoiro-julkisivu.',
+        selite: 'Kaksi koristeellista tornia ja runsaasti veistoksin somistettu graniittijulkisivu kohoavat portaikon yläpuolella Praza do Obradoirolla.',
+        lahde: 'Valokuva: Joseolgon, Wikimedia Commons (CC BY 4.0).',
+        tekija: 'Joseolgon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fachada_do_obradoiro.jpg',
+        lisenssi: 'CC BY 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+      },
+    ],
     nimi: 'Santiago de Compostela',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -227,6 +358,28 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'segovian-akvedukti',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-segovian-akvedukti-73564f47.jpg',
+      lyhyt: 'Segovian roomalainen akvedukti kaartuu kaupunkiaukion ylle.',
+      selite: 'Kaksikerroksinen graniittinen kaarisarja kulkee Plaza de la Artillerían laidalla Segoviassa.',
+      lahde: 'Valokuva: Bernard Gagnon, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Bernard Gagnon',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aqueduct_of_Segovia_01.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-segovian-akvedukti-9c6c8108.jpg',
+        lyhyt: 'Akveduktin kaaret ja laasteitta ladotut graniittilohkareet lähikuvassa.',
+        selite: 'Akveduktin pilarit ja kaaret on rakennettu sopimaan yhteen ilman laastia, ja lähikuvassa näkyvät yksittäiset kivilohkareet.',
+        lahde: 'Valokuva: Jebulon, Wikimedia Commons (CC0).',
+        tekija: 'Jebulon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Segovia_2012_aqueduc_1.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+      },
+    ],
     nimi: 'Segovian akvedukti',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -261,6 +414,28 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'altamiran-luola',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-altamiran-luola-c68f3891.jpg',
+      lyhyt: 'Biisoni-maalaus Altamiran luolan katossa.',
+      selite: 'Luolan seinään ja kattoon on maalattu esihistoriallisia eläinkuvia hiilellä ja okralla; kuvassa tumma biisoni ruskeaa kalliota vasten.',
+      lahde: 'Valokuva: Daniel VILLAFRUELA, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Daniel VILLAFRUELA',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cueva_de_Altamira-19621007-001.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-altamiran-luola-97d9efed.jpg',
+        lyhyt: 'Altamiran luolan sisäänkäynti nurmikkoisessa notkossa.',
+        selite: 'Luolan suuaukko näkyy pensaiden ja puiden takana vihreän ruohorinteen päässä Santillana del Marin lähellä Kantabriassa.',
+        lahde: 'Valokuva: Alonso de Mendoza, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Alonso de Mendoza',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Entrada_a_la_cueva_de_Altamira,_Santillana_del_Mar.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Altamiran luola',
     tyyppi: 'historia',
     kysymykset: [
@@ -295,6 +470,28 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'toledo',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-toledo-91c3ad0f.jpg',
+      lyhyt: 'Toledon siluetti iltahämärässä: Alcázar ja katedraalin torni.',
+      selite: 'Kaupungin kattojen yläpuolelle kohoavat vasemmalla Alcázarin linnoitus ja oikealla katedraalin korkea kellotorni.',
+      lahde: 'Valokuva: Diliff, Wikimedia Commons (CC BY 2.5).',
+      tekija: 'Diliff',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Toledo_Skyline_Panorama,_Spain_-_Dec_2006.jpg',
+      lisenssi: 'CC BY 2.5',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-toledo-c080dd4e.jpg',
+        lyhyt: 'Toledon vanhakaupunki ja Alcázar kukkulan laella.',
+        selite: 'Vanhankaupungin tiheä talokuja ja kukkulan laella kohoava nelitorninen Alcázar.',
+        lahde: 'Valokuva: ajay_suresh, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'ajay_suresh',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Alcázar_de_Toledo_-_Skyline_(52142644470).jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Toledo',
     tyyppi: 'kaupunki',
     kysymykset: [
@@ -330,6 +527,28 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'cordoban-moskeijakatedraali',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-cordoban-moskeijakatedraali-4f97b8f7.jpg',
+      lyhyt: 'Córdoban moskeijakatedraalin koristeellinen mihrab-kaari.',
+      selite: 'Hevosenkenkäkaaren ympärillä on kullattua mosaiikkia, arabialaista kirjoitusta ja rikasta koristeveistosta.',
+      lahde: 'Valokuva: Alvaro.vinuela.carnicero, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Alvaro.vinuela.carnicero',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mezquita_cordoba_arco_interior.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-cordoban-moskeijakatedraali-279dd986.jpg',
+        lyhyt: 'Punavalkoraidalliset hevosenkenkäkaaret moskeijakatedraalin sisällä.',
+        selite: 'Päällekkäiset punaiset ja vaaleat kaarikivet ja koristeellinen puukatto luonnehtivat Córdoban moskeijan pylväikköä.',
+        lahde: 'Valokuva: Benjamin Smith, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Benjamin Smith',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Córdoba_-_Mezquita-Catedral_-_Interior_-_10.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Córdoban moskeijakatedraali',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -364,6 +583,28 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'las-medulas',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-las-medulas-4c69f614.jpg',
+      lyhyt: 'Las Médulasin punaoranssit kalliomuodostelmat auringonvalossa.',
+      selite: 'Roomalaisten kultakaivostoiminnan muovaamat jyrkät punaiset kalliot kohoavat metsäisten rinteiden ja kaukaisten vuorten edessä León-maakunnassa.',
+      lahde: 'Valokuva: Rafael Ibáñez Fernández, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Rafael Ibáñez Fernández',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Panorámica_de_Las_Médulas.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-las-medulas-551f11e1.jpg',
+        lyhyt: 'Las Médulasin punaiset kalliohuiput ja vihreä kastanjametsä.',
+        selite: 'Kaivostoiminnan jättämät kalliopiikit ja -seinämät nousevat vihreän metsän seasta El Bierzon seudulla.',
+        lahde: 'Valokuva: Justraveling.com, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Justraveling.com',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Las_Médulas_View.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Las Médulas',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -397,6 +638,28 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'meridan-roomalainen-teatteri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-meridan-roomalainen-teatteri-d0a1dd51.jpg',
+      lyhyt: 'Méridan roomalaisen teatterin pylväikköinen näyttämöseinä.',
+      selite: 'Kaksikerroksinen pylväsjulkisivu ja portaittain kohoavat katsomorivit Méridassa Extremadurassa; taustalla korkea sypressi.',
+      lahde: 'Valokuva: Octopus at Slovenian Wikipedia, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Octopus at Slovenian Wikipedia',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Merida_Roman_Theatre_6528.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-meridan-roomalainen-teatteri-a7c5be38.jpg',
+        lyhyt: 'Méridan teatterin katsomo ja orkesteraalue.',
+        selite: 'Puoliympyrän muotoinen katsomo kohoaa kivisinä riveinä pyöreän orkesteran ympärillä.',
+        lahde: 'Valokuva: Benjamín Núñez González, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Benjamín Núñez González',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Teatro_de_Mérida,_España,_2017_14.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Méridan roomalainen teatteri',
     tyyppi: 'historia',
     kysymykset: [
@@ -430,6 +693,28 @@ export const MAASTOKOHTEET_ESP = [
   },
   {
     id: 'salamancan-yliopisto',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-salamancan-yliopisto-9a4973f1.jpg',
+      lyhyt: 'Salamancan yliopiston Escuelas Mayores -rakennuksen platereski-julkisivu.',
+      selite: 'Hiekkakiveen veistetty runsas koristejulkisivu, jonka alaosassa on kaksi ovea ja yläosassa vaakunoita ja medaljonkeja.',
+      lahde: 'Valokuva: Alejandro Moreno Calvo from Madrid, Spain, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Alejandro Moreno Calvo from Madrid, Spain',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fachada_de_la_Universidad_de_Salamanca_(3580468605).jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-salamancan-yliopisto-5f8003df.jpg',
+        lyhyt: 'Salamancan yliopiston julkisivun veistoskoristeita lähikuvassa.',
+        selite: 'Hiekkakiviseen julkisivuun on veistetty kohokuvia, medaljonkeja ja köynnöskoristeita.',
+        lahde: 'Valokuva: Zarateman, Wikimedia Commons (CC0).',
+        tekija: 'Zarateman',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Salamanca_-_Universidad,_Escuelas_Mayores,_fachada_05.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+      },
+    ],
     nimi: 'Salamancan yliopisto',
     tyyppi: 'kulttuuri',
     kysymykset: [

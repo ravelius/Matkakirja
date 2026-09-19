@@ -54,14 +54,35 @@
  * Yksikään ei siis kuulu kohdekartalle, vaan kaikki ovat pääkartan
  * merkkejä.
  *
- * KUVATON ERÄ. Sama linja kuin maastokohteilla muutenkin: kortti kantaa
- * tekstin ja lähteen, ei kuvaa. Tarkistamaton Commons-tiedosto olisi
- * huonompi kuin kuvaton kortti (Perustuslaki, faktakuri). Faktat on
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kortti kantaa nyt kaksi tarkistettua
+ * Commons-kuvaa. Faktat on
  * tarkistettu en-Wikipediasta kohde kerrallaan 6.9.2026.
  */
 export const MAASTOKOHTEET_AUT = [
   {
     id: 'groglockner',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-groglockner-b8fd003e.jpg',
+      lyhyt: 'Großglockner kohoaa lumisten ja jäätikköisten rinteiden yläpuolelle.',
+      selite: 'Itävallan korkein vuori lounaasta katsottuna. Kolmiomainen huippu ja sitä ympäröivät jäätiköt erottuvat kirkasta taivasta vasten.',
+      lahde: 'Valokuva: Michael Schmid, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Michael Schmid',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Grossglockner_from_SW.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/at',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-groglockner-8b705f03.jpg',
+        lyhyt: 'Pilvien lomasta pilkistää Großglocknerin lumihuippu.',
+        selite: 'Vuoristolaakson metsien ja pilvivyöhykkeen yllä kohoaa Alppien korkeimpiin kuuluva lumipeitteinen huippu.',
+        lahde: 'Valokuva: Dimitry Anikin, Wikimedia Commons (CC0).',
+        tekija: 'Dimitry Anikin',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gro%C3%9Fglockner.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0',
+      },
+    ],
     nimi: 'Großglockner',
     tyyppi: 'vuori',
     kysymykset: [
@@ -83,6 +104,28 @@ export const MAASTOKOHTEET_AUT = [
   },
   {
     id: 'wildspitze',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-wildspitze-2925002c.jpg',
+      lyhyt: 'Wildspitze kohoaa jäätikköjen ja kallioharjanteiden yllä Tirolissa.',
+      selite: 'Ötztalin Alppien korkein huippu lumipeitteisine rinteineen ja jäätikkökieleineen etualalla.',
+      lahde: 'Valokuva: Tiia Monto, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Tiia Monto',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Wildspitze_2.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-wildspitze-63b1bf3d.jpg',
+        lyhyt: 'Lähikuva Wildspitzen tummasta kalliohuipusta ja lumikentistä.',
+        selite: 'Jyrkkä kallioinen huippu ja sen vieressä lumen peittämä rinne erottuvat sinistä taivasta vasten.',
+        lahde: 'Valokuva: Whgler, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Whgler',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Wildspitze_vom_Brunnenkogel.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Wildspitze',
     tyyppi: 'vuori',
     kysymykset: [
@@ -110,6 +153,28 @@ export const MAASTOKOHTEET_AUT = [
   },
   {
     id: 'tonava',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-tonava-be5a05bd.jpg',
+      lyhyt: 'Tonava virtaa leveänä metsäisten rinteiden välissä Wachaun laaksossa.',
+      selite: 'Leveä Tonava Melkin lähellä Wachaun laaksossa. Vastarannalla kohoaa metsäinen kukkula ja vasemmalla näkyy laituri.',
+      lahde: 'Valokuva: Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Jakub Hałun',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Danube_near_Melk,_20210728_1605_0892.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-tonava-405fa06b.jpg',
+        lyhyt: 'Hevosia kuljetetaan lautalla Tonavan yli.',
+        selite: 'Vanha maalaus, jossa vetohevosia siirretään lautalla joen yli Wachaun alueella. Taustalla häämöttää vastaranta iltapilvien alla.',
+        lahde: 'Maalaus: Alexander von Bensa, Wikimedia Commons (public domain).',
+        tekija: 'Alexander von Bensa',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Alexander_von_Bensa_%C3%9Cberfuhr_von_Treidelpferden_in_der_Wachau.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Tonava',
     tyyppi: 'joki',
     kysymykset: [
@@ -131,6 +196,28 @@ export const MAASTOKOHTEET_AUT = [
   },
   {
     id: 'inn',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-inn-57295f63.jpg',
+      lyhyt: 'Inn virtaa Innsbruckin vanhan kaupungin talojen ohi.',
+      selite: 'Vihertävä Inn-joki ja sen rannan värikkäät talot sekä kirkon vihreäkupuiset tornit Innsbruckissa. Taustalla näkyy lumihuippuinen vuori.',
+      lahde: 'Valokuva: Nicholas Hartmann, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Nicholas Hartmann',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2007_Austria_Innsbruck_Inn_river_&_Altstadt.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-inn-f90eddd2.jpg',
+        lyhyt: 'Ilmakuva Innin ja Salzachin yhtymäkohdasta.',
+        selite: 'Kaksi eri värisenä virtaavaa jokea kohtaa metsäisessä, tasaisessa maisemassa. Ilmakuvassa erottuvat jokien rannat ja niiden välinen niemeke.',
+        lahde: 'Valokuva: Carsten Steger, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Carsten Steger',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aerial_image_of_the_confluence_of_the_Inn_and_Salzach_(view_from_the_west).jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Inn',
     tyyppi: 'joki',
     kysymykset: [
@@ -154,6 +241,28 @@ export const MAASTOKOHTEET_AUT = [
    * ============================================================== */
   {
     id: 'hallstatt',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-hallstatt-8496f795.jpg',
+      lyhyt: 'Hallstatt nojaa vuorenrinteeseen Hallstätter Seen rannalla.',
+      selite: 'Kylän talot ja kirkon korkea torni heijastuvat tyyneen järveen. Jyrkkä kalliovuori kohoaa kylän takana.',
+      lahde: 'Valokuva: C.Stadler/Bwag, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'C.Stadler/Bwag',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hallstatt_-_Zentrum_.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-hallstatt-db2871a8.jpg',
+        lyhyt: 'Kukilla ja köynnöksillä koristeltuja taloja Hallstattin torin laidalla.',
+        selite: 'Puuparvekkeilla ja punaisilla pelargonioilla koristellut talot reunustavat Hallstattin toria. Talojen takana kohoaa metsäinen rinne.',
+        lahde: 'Valokuva: Andrew Bossi, Wikimedia Commons (CC BY-SA 2.5).',
+        tekija: 'Andrew Bossi',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:1126_-_Hallstatt_-_Marktplatz.jpg',
+        lisenssi: 'CC BY-SA 2.5',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.5',
+      },
+    ],
     nimi: 'Hallstatt',
     tyyppi: 'historia',
     kysymykset: [
@@ -188,6 +297,28 @@ export const MAASTOKOHTEET_AUT = [
   },
   {
     id: 'melkin-luostari',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-melkin-luostari-0ba9598e.jpg',
+      lyhyt: 'Melkin barokkiluostari kohoaa kalliokukkulalla.',
+      selite: 'Keltaraidallinen barokkiluostari ja sen kaksi kellotornia sekä vihreä kupoli kohoavat kukkulan huipulla sinistä taivasta vasten.',
+      lahde: 'Valokuva: Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Thomas Ledl',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stift_Melk,_Westansicht.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-melkin-luostari-e9d0e86c.jpg',
+        lyhyt: 'Ilmakuva Melkin luostarista ja sen alla olevasta kaupungista.',
+        selite: 'Luostarin laajat punakattoiset rakennukset ja sisäpiha kohoavat Melkin kaupungin yläpuolella. Vasemmalla näkyy joki.',
+        lahde: 'Valokuva: Carsten Steger, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Carsten Steger',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aerial_image_of_Melk_Abbey_(view_from_the_southwest).jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Melkin luostari',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -224,6 +355,28 @@ export const MAASTOKOHTEET_AUT = [
   },
   {
     id: 'hohensalzburg',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-hohensalzburg-5bff5ff5.jpg',
+      lyhyt: 'Hohensalzburgin valkoiset linnoitusmuurit ja tornit kohoavat metsäisen kukkulan päällä.',
+      selite: 'Salzburgin keskiaikainen linnoitus koillisesta katsottuna. Pyöreät tornit ja jyrkät muurit hallitsevat vuorenhuippua.',
+      lahde: 'Valokuva: Andreas Stiasny, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Andreas Stiasny',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Festung_Hohensalzburg_von_Nordost.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-hohensalzburg-0132a2ed.jpg',
+        lyhyt: 'Ilmakuva Hohensalzburgin linnoituksesta.',
+        selite: 'Linnoituksen muurit, pihat ja rakennukset ylhäältä katsottuna. Ympärillä on metsää, ja vasemmassa yläkulmassa näkyy Salzburgin vanhaakaupunkia.',
+        lahde: 'Valokuva: Carsten Steger, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Carsten Steger',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aerial_image_of_Hohensalzburg_Fortress_(view_from_the_southwest).jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Hohensalzburgin linnoitus',
     tyyppi: 'historia',
     kysymykset: [
@@ -259,6 +412,28 @@ export const MAASTOKOHTEET_AUT = [
   },
   {
     id: 'semmeringin-rata',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-semmeringin-rata-c3ebbc7c.jpg',
+      lyhyt: 'Juna ylittää Krausel-Klausen kaarisillan Semmeringin radalla.',
+      selite: 'Kivinen ratasilta jatkuu vuoren kupeeseen ja punainen juna ajaa sillan yli. Metsäiset rinteet ympäröivät rataa.',
+      lahde: 'Valokuva: Haeferl, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Haeferl',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Breitenstein_-_Semmeringbahn_-_Krausel-Klause-Viadukt_-_2.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/at',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-semmeringin-rata-976013fa.jpg',
+        lyhyt: 'Semmeringin metsäiset vuoret ja kalliot, joiden halki rata kulkee.',
+        selite: 'Syksyn värittämä metsä ja valkoiset kalliojyrkänteet Semmeringin laaksossa. Taustalla kohoaa kaukainen vuorijono.',
+        lahde: 'Valokuva: C.Stadler/Bwag, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'C.Stadler/Bwag',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Semmering_-_Adlitzgr%C3%A4ben_mit_Semmeringbahn.JPG',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Semmeringin rata',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -294,6 +469,28 @@ export const MAASTOKOHTEET_AUT = [
   },
   {
     id: 'mauthausen',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-mauthausen-75900a7d.jpg',
+      lyhyt: 'Mauthausenin muistopaikan kivinen sisäänkäyntirakennus ja valkoinen muistomerkki.',
+      selite: 'Graniittikivestä rakennetut tornimaiset porttirakennukset ja niiden edessä valkoinen muistokivi aukiolla. Mauthausen on nykyisin muistopaikka ja museo.',
+      lahde: 'Valokuva: Dnalor 01, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Dnalor 01',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Eingangsgeb%C3%A4ude_KZ_Mauthausen_2014.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/at',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-mauthausen-29be8719.jpg',
+        lyhyt: 'Mauthausenin muistopaikan graniittimuurit ja sisäänkäynti ylhäältä nähtynä.',
+        selite: 'Kukkulalla sijaitseva muistopaikka on rakennettu louhitusta graniitista. Paksu kivimuuri ja porttirakennus erottuvat vihreän nurmikkorinteen takana.',
+        lahde: 'Valokuva: Philipp7423, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Philipp7423',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:KZ_Mauthausen_2017-01.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Mauthausen',
     tyyppi: 'historia',
     kysymykset: [
@@ -327,6 +524,28 @@ export const MAASTOKOHTEET_AUT = [
   },
   {
     id: 'durnstein',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-durnstein-56b71ced.jpg',
+      lyhyt: 'Dürnsteinin sininen kirkontorni kohoaa Tonavan rannalla.',
+      selite: 'Luostarikirkon sinivalkoinen torni ja punakattoiset rakennukset Tonavan rannalla. Kukkulan päällä näkyy linnanraunio.',
+      lahde: 'Valokuva: Jakub Hałun, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Jakub Hałun',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stift_D%C3%BCrnstein,_20210728_1223_0745.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-durnstein-ec3ea478.jpg',
+        lyhyt: 'Dürnsteinin linnanraunio kohoaa kalliolla syksyisen metsän yllä.',
+        selite: 'Linnan rauniot seisovat kalliokielekkeellä syksyn värjäämän metsän yllä. Alarinteessä erottuu viinitarhan terasseja.',
+        lahde: 'Valokuva: Uoaei1, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Uoaei1',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:D%C3%BCrnstein_Burgruine_20211024_01.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Dürnstein',
     tyyppi: 'sana',
     kysymykset: [
@@ -360,6 +579,28 @@ export const MAASTOKOHTEET_AUT = [
   },
   {
     id: 'carnuntum',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-carnuntum-c7b1733d.jpg',
+      lyhyt: 'Rekonstruoitu roomalaisen kylpylän suuri sali Carnuntumissa.',
+      selite: 'Kylpylärakennuksen sisätila on maalattu roomalaistyyliin: kuviolliset katot, kaarevat ikkunat ja marmorinen allas. Seinillä on vaatekoukkuja ja huoneessa penkkejä.',
+      lahde: 'Valokuva: Barnos, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Barnos',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Basilica_thermarum_Carnuntum.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-carnuntum-c60d27a4.jpg',
+        lyhyt: 'Roomalaisen kylpylän lattian alle rakennetut tiilipylväät Carnuntumissa.',
+        selite: 'Lattian alla näkyvät pienet tiilipylväät kuuluivat kylpylän lämmitysjärjestelmään. Laatat lepäävät pylväiden päällä.',
+        lahde: 'Valokuva: Tobias Kleinlercher, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Tobias Kleinlercher',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Carnuntum_in_2026_by_TheTokl_-_01.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Carnuntum',
     tyyppi: 'kaupunki',
     kysymykset: [
@@ -394,6 +635,28 @@ export const MAASTOKOHTEET_AUT = [
   },
   {
     id: 'eisriesenwelt',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-eisriesenwelt-96fade9c.jpg',
+      lyhyt: 'Eisriesenweltin luolan suuaukko avautuu jyrkässä vuorenrinteessä.',
+      selite: 'Kalkkikivirinne, luolan suuaukko ja kulkusilta vuoren kyljessä. Vasemmalla näkyy syvä laakso ja pilvinen taivas.',
+      lahde: 'Valokuva: Wolfgang Kritzinger, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Wolfgang Kritzinger',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Eingang_Eisriesenwelt.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/at',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-eisriesenwelt-793cd1df.jpg',
+        lyhyt: 'Luolan sisältä avautuu näkymä lumisille Alpeille.',
+        selite: 'Kallioportti kehystää näkymän laaksoon ja kaukaisiin lumihuippuisiin vuoriin. Alhaalla kiemurtelee kulkupolku kaiteineen.',
+        lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Diego Delso',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Eisriesenwelt,_Macizos_de_Tennen,_Austria,_2019-05-18,_DD_58.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Eisriesenwelt',
     tyyppi: 'vuori',
     kysymykset: [
@@ -431,11 +694,33 @@ export const MAASTOKOHTEET_AUT = [
    * nostoa per Euroopan maa; Itävalta oli 17:ssä.
    *
    * Kaikki kolme ovat kaukana Wienin laatasta (lähinkin Erzberg 58
-   * lautayksikköä), joten ne ovat pääkartan merkkejä. Kuvaton erä;
+   * lautayksikköä), joten ne ovat pääkartan merkkejä. Kuvat lisätty 20.9.2026 (ent. kuvaton erä);
    * faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
    * ============================================================== */
   {
     id: 'erzberg',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-erzberg-ebd73b0e.jpg',
+      lyhyt: 'Erzberg kohoaa Eisenerzin yllä porrastettuna avolouhoksena.',
+      selite: 'Iltavalo värjää rautamalmivuoren ruskeankeltaiseksi. Louhoksen tasanteet erottuvat vuoren rinteessä, ja edessä on metsää ja talo.',
+      lahde: 'Valokuva: Duke of W4, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Duke of W4',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Der_Erzberg_(Steiermark).jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-erzberg-f5948e97.jpg',
+        lyhyt: 'Erzbergin louhostasanteilla työskentelee kaivinkone ja kuorma-auto.',
+        selite: 'Lähikuva avolouhoksen kerroksellisista kallioseinämistä. Pienet työkoneet erottuvat jättimäisillä tasanteilla.',
+        lahde: 'Valokuva: Haeferl, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Haeferl',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Eisenerz_-_Erzbergstufen.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Erzberg',
     tyyppi: 'kauppa',
     kysymykset: [
@@ -480,6 +765,28 @@ export const MAASTOKOHTEET_AUT = [
   },
   {
     id: 'bregenzin-jarvinayttamo',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-bregenzin-jarvinayttamo-83b6f66f.jpg',
+      lyhyt: 'Ilmakuva Bregenzin festivaalitalosta ja Bodenjärvellä kelluvasta näyttämöstä.',
+      selite: 'Kelluva järvinäyttämö lavasteineen sijaitsee Bodenjärven rannalla festivaalirakennuksen vieressä. Kuva on otettu ilmasta.',
+      lahde: 'Valokuva: Edda Praefcke, Wikimedia Commons (CC BY 2.5).',
+      tekija: 'Edda Praefcke',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bregenz_Festspielhaus_Tosca.jpg',
+      lisenssi: 'CC BY 2.5',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.5',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-bregenzin-jarvinayttamo-efd41cfe.jpg',
+        lyhyt: 'Bregenzin järvinäyttämön katsomo vesirajassa.',
+        selite: 'Vihreät ja siniset katsomon istuimet nousevat porrastettuina festivaalirakennuksen edessä. Oikealla näkyy järven vesi.',
+        lahde: 'Valokuva: Olaf Kosinsky, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Olaf Kosinsky',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Carmen_Festspiele_Bregenz_2017_by_Olaf_Kosinsky-17.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/de',
+      },
+    ],
     nimi: 'Bregenzin järvinäyttämö',
     nimio: 'Bregenz',
     tyyppi: 'kulttuuri',
@@ -520,6 +827,28 @@ export const MAASTOKOHTEET_AUT = [
   },
   {
     id: 'krimmlin-vesiputoukset',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-krimmlin-vesiputoukset-53ad9d1b.jpg',
+      lyhyt: 'Krimmlin vesiputous syöksyy kalliolta metsäiseen laaksoon.',
+      selite: 'Valkoinen vesimassa putoaa kallioseinämää alas ja sumu leijuu laaksossa. Etualalla näkyy joen uoma ja pieniä kävelijöitä.',
+      lahde: 'Valokuva: Andrew Bossi, Wikimedia Commons (CC BY-SA 2.5).',
+      tekija: 'Andrew Bossi',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:1424_-_Nationalpark_Hohe_Tauern_-_Krimmler_Wasserf%C3%A4lle.JPG',
+      lisenssi: 'CC BY-SA 2.5',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.5',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-krimmlin-vesiputoukset-67048bae.jpg',
+        lyhyt: 'Krimmlin putouksen vesi vaahtoaa kallioiden välissä.',
+        selite: 'Lähikuva putouksen alaosasta: vaahtoava vesi ja sumu nousevat tummien kallioiden ja metsän edessä.',
+        lahde: 'Valokuva: Andrew Bossi, Wikimedia Commons (CC BY-SA 2.5).',
+        tekija: 'Andrew Bossi',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:1437_-_Nationalpark_Hohe_Tauern_-_Krimmler_Wasserf%C3%A4lle.JPG',
+        lisenssi: 'CC BY-SA 2.5',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.5',
+      },
+    ],
     nimi: 'Krimmlin vesiputoukset',
     nimio: 'Krimml',
     tyyppi: 'joki',

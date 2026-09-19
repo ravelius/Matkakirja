@@ -37,7 +37,7 @@
  * mallilla kuin erät M1–M4. Koordinaatit on laskettu koneella
  * (`import { laudat } from tools/johda-maastokohteet.mjs`, lon/lat
  * en-Wikipedian coordinates-propista), tekstit kirjoitettu käsin
- * raakatekstistä. Kuvaton erä, vain maailmankartan rivi.
+ * raakatekstistä. Kuvat lisätty 20.9.2026 (ent. kuvaton erä), vain maailmankartan rivi.
  *
  * MAA ON PIENI, JA SE MÄÄRÄSI MÄÄRÄN. Kyproksen fokuslehden rajaus on
  * 100,9 × 66,5 lautayksikköä (js/packs/fokus-grc.js FOKUS_POHJAT.CYP),
@@ -83,6 +83,28 @@
 export const MAASTOKOHTEET_CYP = [
   {
     id: 'olympos',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-olympos-eca11222.jpg',
+      lyhyt: 'Lumen peittämää mäntymetsää Troodosin vuoristossa Chionistran huipun tuntumassa.',
+      selite: 'Talvinen näkymä Troodosin vuoriston mäntymetsään. Chionistra eli Ólympos on Kyproksen korkein huippu.',
+      lahde: 'Valokuva: Chneophytou, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Chneophytou',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Chionistra_winter_1.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-olympos-af19c907.jpg',
+        lyhyt: 'Troodosin vuoristoa, jossa lumilaikkuja rinteillä ja kylä laaksossa.',
+        selite: 'Ólympos kuuluu Troodosin vuoristoon Kyproksen keskiosassa. Rinteitä peittävät metsät, ja korkeimmilla kohdilla on talvisin lunta.',
+        lahde: 'Valokuva: Digr, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Digr',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Troodos_Olympus.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Ólympos',
     tyyppi: 'vuori',
     kysymykset: [
@@ -105,6 +127,28 @@ export const MAASTOKOHTEET_CYP = [
   },
   {
     id: 'pediaios',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-pediaios-60b3e990.jpg',
+      lyhyt: 'Pediaíos-joen uoma Nikosiassa puiden reunustamana.',
+      selite: 'Joki virtaa Nikosian halki kivisessä uomassa, jonka rannoilla kasvaa puita ja pensaita.',
+      lahde: 'Valokuva: Peter in s, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Peter in s',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pedieos_River.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-pediaios-8ccd3173.jpg',
+        lyhyt: 'Pediaíos-joen reunus ja kävelypolku Nikosiassa.',
+        selite: 'Kaupungin läpi kulkeva joenuoma on rajattu betonireunuksella, jonka vieressä kulkee polku.',
+        lahde: 'Valokuva: Fry72, Karel Frydrýšek, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Fry72, Karel Frydrýšek',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C5%98eka_Pedieos,_Nicosia,_Kypr.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Pediaíos',
     tyyppi: 'joki',
     kysymykset: [
@@ -131,6 +175,28 @@ export const MAASTOKOHTEET_CYP = [
    * ============================================================== */
   {
     id: 'levantinmeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-levantinmeri-240d3beb.jpg',
+      lyhyt: 'Aallot vyöryvät rannalle Levantinmerellä Rodoksen Stegnassa.',
+      selite: 'Marraskuun aamu Stegnassa Rodoksen saarella: Levantinmeren aallot ja pilvinen taivas.',
+      lahde: 'Valokuva: Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Manfred Werner (Tsui)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stegna_%CE%A3%CF%84%CE%B5%CE%B3%CE%BD%CE%AC_Rhodes_%CE%A1%CF%8C%CE%B4%CE%BF%CF%82_2019-11-26_02_Levantine_Sea_%CE%98%CE%AC%CE%BB%CE%B1%CF%83%CF%83%CE%B1_%CF%84%CE%BF%CF%85_%CE%9B%CE%B5%CE%B2%CE%AC%CE%BD%CF%84%CE%B5.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-levantinmeri-767853b4.jpg',
+        lyhyt: 'Levantinmerta Lindosin akropolikselta Rodoksella.',
+        selite: 'Näkymä akropolikselta merelle: rannikon kallio ja pieni lahti erottuvat alhaalla.',
+        lahde: 'Valokuva: Manfred Werner (Tsui), Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Manfred Werner (Tsui)',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lindos_Acropolis_%CE%91%CE%BA%CF%81%CF%8C%CF%80%CE%BF%CE%BB%CE%B7_%CF%84%CE%B7%CF%82_%CE%9B%CE%AF%CE%BD%CE%B4%CE%BF%CF%85_Rhodes_%CE%A1%CF%8C%CE%B4%CE%BF%CF%82_2019-11-24_41_Levantine_Sea_%CE%98%CE%AC%CE%BB%CE%B1%CF%83%CF%83%CE%B1_%CF%84%CE%BF%CF%85_%CE%9B%CE%B5%CE%B2%CE%AC%CE%BD%CF%84%CE%B5.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Levantinmeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -159,6 +225,28 @@ export const MAASTOKOHTEET_CYP = [
   },
   {
     id: 'paphoksenmosaiikit',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-paphoksenmosaiikit-1a3f75af.jpg',
+      lyhyt: 'Narkissos-mosaiikki Paphoksen Dionysoksen talossa.',
+      selite: 'Roomalaisajan lattiamosaiikissa Narkissos lepää kalliolla. Mosaiikki on Nea Paphoksen arkeologisessa puistossa Kyproksella.',
+      lahde: 'Valokuva: Carole Raddato, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Carole Raddato',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mosaic_of_Narcissus,_from_the_House_of_Dionysos,_Paphos_Archaeological_Park_(Nea_Paphos),_Cyprus_(22518456155).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-paphoksenmosaiikit-dc09919f.jpg',
+        lyhyt: 'Ikarioksen ja ensimmäisten juomarien mosaiikki Dionysoksen talossa Paphoksella.',
+        selite: 'Lattiamosaiikissa kuvataan Ikarios härkien vetämät vaunut ja viinin ensimmäiset maistajat. Kuvaa kehystää koristeellinen reunus.',
+        lahde: 'Valokuva: Institute for the Study of the Ancient World, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'Institute for the Study of the Ancient World',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mosaics_in_the_House_of_Dionysus_(I)_(5030266269).jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Paphoksen mosaiikit',
     tyyppi: 'historia',
     kysymykset: [
@@ -186,6 +274,28 @@ export const MAASTOKOHTEET_CYP = [
   },
   {
     id: 'palaipafos',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-palaipafos-a1f2f873.jpg',
+      lyhyt: 'Aphroditen pyhäkön rauniot Palaipafoksessa Kouklian kylän luona.',
+      selite: 'Laajan pyhäkköalueen kiviperustuksia avoimella kukkulalla. Aphroditen palvontapaikka on perustettu 1100-luvulla eaa.',
+      lahde: 'Valokuva: Carole Raddato, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Carole Raddato',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Palaepaphos,_the_famous_Sanctuary_of_Aphrodite,_a_large_centre_of_worship_established_in_the_12th_century_BC,_Kouklia,_Cyprus.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-palaipafos-eb64a3a5.jpg',
+        lyhyt: 'Aphroditen pyhäkön kivilohkareita ja pylväänpätkiä Palaipafoksessa, taustalla meri.',
+        selite: 'Pyhäkkörakennusten sortuneita osia on aseteltu riviin kukkulan laella, ja horisontissa siintää Välimeri.',
+        lahde: 'Valokuva: Wojciech Biegun, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Wojciech Biegun',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Santuary_of_Aphrodite_at_Palaepafos,_Cyprus_-_panoramio.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Palaipafos',
     tyyppi: 'historia',
     kysymykset: [
@@ -211,6 +321,28 @@ export const MAASTOKOHTEET_CYP = [
   },
   {
     id: 'kourion',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-kourion-2f5347ab.jpg',
+      lyhyt: 'Kourionin antiikin teatteri rinteessä meren äärellä.',
+      selite: 'Kivinen teatteri kohoaa rinteellä Kyproksen lounaisrannikolla. Portailla näkyy pieni joukko kävijöitä, ja taustalla kimmeltää meri.',
+      lahde: 'Valokuva: Peter Collins, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Peter Collins',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2009_0930_21_Kourion_(4237478979).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-kourion-b677ad09.jpg',
+        lyhyt: 'Kourionin rauniokaupungin kivikaaret meren rannalla.',
+        selite: 'Kaaria ja mosaiikkilattian jäänteitä Kourionin raunioissa, taustalla rannikon jyrkänne ja meri.',
+        lahde: 'Valokuva: Jules Verne Times Two, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Jules Verne Times Two',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ancient_Kourion_twin_arches,_Cyprus_(PPL1-Corrected)_julesvernex2.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Kourion',
     tyyppi: 'historia',
     kysymykset: [
@@ -236,6 +368,28 @@ export const MAASTOKOHTEET_CYP = [
   },
   {
     id: 'khirokitia',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-khirokitia-43a78a04.jpg',
+      lyhyt: 'Rekonstruoidut pyöreät kivimajat Khirokitian neoliittisella asuinpaikalla.',
+      selite: 'Pyöreät kivijalkaiset asumukset on rakennettu uudelleen alkuperäisten mallin mukaan. Alkuperäiset talot ovat noin vuosilta 7000–5800 eaa.',
+      lahde: 'Valokuva: Ophelia2, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Ophelia2',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Khirokitia2.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-khirokitia-5fec094a.jpg',
+        lyhyt: 'Khirokitian neoliittisen asuinpaikan pyöreiden talojen kivijalat.',
+        selite: 'Kivipohjat paljastavat pyöreiden talojen asemakaavan rinteessä, jota ympäröivät puut ja aita.',
+        lahde: 'Valokuva: Pan narrans, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Pan narrans',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Choirokoitia_1.JPG',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Khirokitia',
     tyyppi: 'historia',
     kysymykset: [
@@ -262,6 +416,28 @@ export const MAASTOKOHTEET_CYP = [
   },
   {
     id: 'asinounkirkko',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-asinounkirkko-ccd34b37.jpg',
+      lyhyt: 'Asinoun Panagia Phorbiotissa -kirkko Troodosin metsäisellä rinteellä.',
+      selite: 'Kivinen 1100-luvun kirkko seisoo nurmella jyrkän harjakattonsa alla. Kirkon sisäseinät on maalattu bysanttilaisin freskoin.',
+      lahde: 'Valokuva: Xenophon, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Xenophon',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Asinou_-_Kirche_Au%C3%9Fen_1.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-asinounkirkko-c9160a15.jpg',
+        lyhyt: 'Neitsyt Marian ja enkelien fresko Asinoun kirkon apsiksen holvissa.',
+        selite: 'Holvin keskellä seisoo Neitsyt Maria kohotetuin käsin, ja hänen kummallakin puolellaan on enkeli. Maalaus on bysanttilaistyylinen.',
+        lahde: 'Valokuva: Zairon, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Zairon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nikitari_Kirche_Panagia_Asinou_Innen_Chorgew%C3%B6lbe.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Asinoun kirkko',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -288,6 +464,28 @@ export const MAASTOKOHTEET_CYP = [
   },
   {
     id: 'kykkoksenluostari',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-kykkoksenluostari-ce9e97ff.jpg',
+      lyhyt: 'Kykkoksen luostarin sisäpiha kaarikäytävineen.',
+      selite: 'Kaarikäytävien reunustama piha sijaitsee vuoristossa, ja taustalla nousee metsäinen rinne.',
+      lahde: 'Valokuva: Julian Nyča, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Julian Nyča',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kykkos_Monastery_Courtyard_1.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-kykkoksenluostari-0befa706.jpg',
+        lyhyt: 'Kykkoksen luostarin koristeellinen sisäänkäynti.',
+        selite: 'Portaalin seinillä on värikkäitä pyhimyskuvia, ja aukon takaa avautuu luostarin sisäpiha.',
+        lahde: 'Valokuva: Héctor Ochoa \'Robot8A\', Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Héctor Ochoa \'Robot8A\'',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kykkos_monastery_20180403_img_1.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Kykkoksen luostari',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -312,6 +510,28 @@ export const MAASTOKOHTEET_CYP = [
   },
   {
     id: 'kapgreco',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-kapgreco-bb95686f.jpg',
+      lyhyt: 'Aallot murtuvat Kap Grecon kallioiselle rannalle.',
+      selite: 'Kap Greco on Kyproksen kaakkoiskulman niemeke. Kuvassa vaahtopäiset aallot lyövät ruskeisiin kallioihin, ja taustalla kohoaa tasainen kalliomuodostuma.',
+      lahde: 'Valokuva: kallerna, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'kallerna',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cape_Greco_view_3.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-kapgreco-6155dffd.jpg',
+        lyhyt: 'Luonnollinen kivisilta Kap Grecon rannikolla.',
+        selite: 'Meri on kaivertanut kallioon kaaren, jonka alla turkoosi vesi kimmeltää.',
+        lahde: 'Valokuva: kallerna, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'kallerna',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Natural_Bridge_Cape_Greco.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Kap Greco',
     // Niemi ei ole vuori eikä meri: tyyppi 'muu' + symboli 'luonto'
     // (sama sopimus kuin ARE:n Rub al-Khalilla).
@@ -342,6 +562,28 @@ export const MAASTOKOHTEET_CYP = [
    * ============================================================== */
   {
     id: 'apostolosandreas',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-apostolosandreas-e7a46399.jpg',
+      lyhyt: 'Apostolos Andreaksen luostari Karpasin niemimaan kärjessä meren rannalla.',
+      selite: 'Kivinen luostarirakennus, jonka päällä kohoaa pieni kellotorni ja jonka edessä avautuu hiekkainen piha aivan meren rannalla.',
+      lahde: 'Valokuva: Anja Leidel, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Anja Leidel',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Apostolos_Andreas.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/cyp-nosto-apostolosandreas-2b239c01.jpg',
+        lyhyt: 'Apostolos Andreaksen luostari kalliorannalta katsottuna.',
+        selite: 'Luostarirakennukset erottuvat matalina rannikon kallioiden takaa Kyproksen koillisimmassa kärjessä.',
+        lahde: 'Valokuva: Chris06, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Chris06',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Apostolos_Andreas_Monastery_(1).JPG',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Apostolos Andreas',
     tyyppi: 'kulttuuri',
     kysymykset: [

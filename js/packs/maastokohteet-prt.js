@@ -56,9 +56,8 @@
  * kohdalle. Alcobaçan luostari pudotettiin, koska se olisi osunut 6,7
  * lautayksikön päähän Batalhan luostarista.
  *
- * KUVATON ERÄ. Sama linja kuin maastokohteilla muutenkin: kortti
- * kantaa tekstin ja lähteen, ei kuvaa. Tarkistamaton Commons-tiedosto
- * olisi huonompi kuin kuvaton kortti (Perustuslaki, faktakuri).
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kortti kantaa nyt kaksi tarkistettua
+ * Commons-kuvaa.
  * Faktat on tarkistettu en-Wikipediasta kohde kerrallaan 6.9.2026.
  *
  * Portugalin maastokohteet. Faktat en-Wikipediasta 29.8.2026. HUOM: Pico (2 351 m) on Portugalin korkein, mutta se on Azoreilla (lon -28) eikä mahdu maan fokuslehden ikkunaan. Listalla on siksi Torre, jonka artikkeli itse nimeää mannermaisen Portugalin korkeimmaksi pisteeksi.
@@ -66,6 +65,28 @@
 export const MAASTOKOHTEET_PRT = [
   {
     id: 'torre',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-torre-b7b0c739.jpg',
+      lyhyt: 'Torre, Portugalin korkein kohta Serra da Estrelan vuoristossa.',
+      selite: 'Karu kalliomaasto ja matala kasvillisuus peittävät vuoriston korkeinta aluetta.',
+      lahde: 'Valokuva: Reinhard Müller, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Reinhard Müller',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Torre_(Serra_da_Estrela)_2.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-torre-de7b948a.jpg',
+        lyhyt: 'Näkymä Torren huipulta Serra da Estrelan vuoristoon.',
+        selite: 'Etäisyyteen jatkuvat vuoristomaisemat avautuvat Portugalin korkeimmasta kohdasta.',
+        lahde: 'Valokuva: Reinhard Müller, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Reinhard Müller',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_from_Torre_(Serra_da_Estrela).jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Torre',
     tyyppi: 'vuori',
     kysymykset: [
@@ -87,6 +108,28 @@ export const MAASTOKOHTEET_PRT = [
   },
   {
     id: 'atlantti',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-atlantti-0b7ffea9.jpg',
+      lyhyt: 'Auringonlasku Atlantin yllä Nazarén rannalla Portugalissa.',
+      selite: 'Meri ja taivas hehkuvat punaisena rannikon siluetin takana.',
+      lahde: 'Valokuva: Alexey Komarov, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Alexey Komarov',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sunset_over_Atlantic_Ocean,_Nazar%C3%A9,_Portugal,_November,_2018-3.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-atlantti-5c690967.jpg',
+        lyhyt: 'Atlantin rannikkoa Sagresissa Portugalin lounaisrannikolla.',
+        selite: 'Jyrkkä kallioranta ja meri kohtaavat Euroopan mantereen lounaiskulmassa.',
+        lahde: 'Valokuva: pictures Jettcom, Wikimedia Commons (CC BY 3.0).',
+        tekija: 'pictures Jettcom',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:August_Sagres_Coast_End_of_Continent_-_Magic_Portugal_Photography_1989_violent_Atlantic_Ocean_-_panoramio.jpg',
+        lisenssi: 'CC BY 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+      },
+    ],
     nimi: 'Atlantti',
     tyyppi: 'meri',
     kysymykset: [
@@ -107,6 +150,28 @@ export const MAASTOKOHTEET_PRT = [
   },
   {
     id: 'tejo',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-tejo-c4f03fd1.jpg',
+      lyhyt: 'Tejo-joki auringonnousun aikaan Lissabonin lähellä.',
+      selite: 'Leveä joki levittäytyy rannikon ja taivaan väliin aamun valossa.',
+      lahde: 'Valokuva: Avarim, Wikimedia Commons (CC BY-SA 3.0 de).',
+      tekija: 'Avarim',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tagus_River,_sunrise_next_to_Lisbon,_2009.jpg',
+      lisenssi: 'CC BY-SA 3.0 de',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/de/deed.en',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-tejo-ffe54fc9.jpg',
+        lyhyt: 'Praça do Comércio Tejo-joelta katsottuna Lissabonissa.',
+        selite: 'Joen rannalle avautuva suuri aukio ja sitä ympäröivät rakennukset nähtynä vedeltä.',
+        lahde: 'Valokuva: Jakub Hałun, Wikimedia Commons (CC BY 4.0).',
+        tekija: 'Jakub Hałun',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:View_of_Pra%C3%A7a_do_Com%C3%A9rcio_from_the_Tagus_River_in_Lisbon,_20250604_2038_9656.jpg',
+        lisenssi: 'CC BY 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+      },
+    ],
     nimi: 'Tejo',
     tyyppi: 'joki',
     kysymykset: [
@@ -133,6 +198,28 @@ export const MAASTOKOHTEET_PRT = [
   },
   {
     id: 'douro',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-douro-a515df5d.jpg',
+      lyhyt: 'Terassoidut viinitarhat Douro-joen rinteillä.',
+      selite: 'Portaittaiset viinitarharivit nousevat joen laakson rinteille Portugalin pohjoisosassa.',
+      lahde: 'Valokuva: Yiwenli0203, Wikimedia Commons (CC0).',
+      tekija: 'Yiwenli0203',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Terraced_vineyards_along_the_Douro_river.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'http://creativecommons.org/publicdomain/zero/1.0/deed.en',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-douro-b4e0ae1a.jpg',
+        lyhyt: 'Douro-joki Portossa.',
+        selite: 'Joki virtaa kaupungin läpi, ja rannoilla näkyvät kaupungin rakennukset.',
+        lahde: 'Valokuva: Alexkom000, Wikimedia Commons (CC BY 4.0).',
+        tekija: 'Alexkom000',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2025-08-07_Douro_River_in_Porto.jpg',
+        lisenssi: 'CC BY 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+      },
+    ],
     nimi: 'Douro',
     tyyppi: 'joki',
     kysymykset: [
@@ -240,6 +327,28 @@ export const MAASTOKOHTEET_PRT = [
   },
   {
     id: 'tomar',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-tomar-d052b597.jpg',
+      lyhyt: 'Tomarin Kristuksen luostarin pyöreä Charola-kirkko.',
+      selite: 'Kaksitoistakulmainen temppeliherrojen rotunda kuuluu Tomarin linnoitusluostarin vanhimpaan osaan.',
+      lahde: 'Valokuva: GFreihalter, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'GFreihalter',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tomar_Convento_de_Cristo_Charola_750.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-tomar-231c456c.jpg',
+        lyhyt: 'Charolan sisätilaa Tomarin Kristuksen luostarissa.',
+        selite: 'Koristeellisia kaaria ja pylväitä keskiaikaisen temppeliherrojen kirkon sisällä.',
+        lahde: 'Valokuva: Palickap, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Palickap',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tomar,_Convento_de_Cristo,_charola_(02).jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Tomarin luostari',
     tyyppi: 'historia',
     kysymykset: [
@@ -269,6 +378,28 @@ export const MAASTOKOHTEET_PRT = [
   },
   {
     id: 'guimaraes',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-guimaraes-0c6e7928.jpg',
+      lyhyt: 'Braganzan herttuoiden palatsi Guimarãesissa.',
+      selite: 'Tiilinen palatsirakennus korkeine savupiippuineen kohoaa kaupungin historiallisessa keskustassa.',
+      lahde: 'Valokuva: CEphoto, Uwe Aranas, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'CEphoto, Uwe Aranas',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Guimaraes_Portugal_Pa%C3%A7o-dos-Duques-de-Bragan%C3%A7a-02.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-guimaraes-276a9bd4.jpg',
+        lyhyt: 'Paço dos Duques de Bragança ulkoa katsottuna.',
+        selite: 'Palatsin kivi- ja tiilirakenteita ja muuria Guimarãesissa.',
+        lahde: 'Valokuva: John Samuel, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'John Samuel',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Exterior_view_of_Pa%C3%A7o_dos_Duques_de_Bragan%C3%A7a_(Guimar%C3%A3es)_02.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Guimarães',
     tyyppi: 'historia',
     kysymykset: [
@@ -296,6 +427,28 @@ export const MAASTOKOHTEET_PRT = [
   },
   {
     id: 'almendres',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-almendres-012f21e4.jpg',
+      lyhyt: 'Almendresin megaliittikehän pystykiviä Évoran lähellä.',
+      selite: 'Pystyyn nostetut kivet seisovat kehinä Alentejon maisemassa.',
+      lahde: 'Valokuva: Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ingo Mehling',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cromeleque_dos_Almendres_-_Southwest.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-almendres-e4d9cf01.jpg',
+        lyhyt: 'Almendresin kivikehän ylempi rengas.',
+        selite: 'Kivet muodostavat renkaan rinteessä, ja niiden välissä kasvaa puita.',
+        lahde: 'Valokuva: Ingo Mehling, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Ingo Mehling',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cromeleque_dos_Almendres_-_Upper_Ring.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Almendresin kivikehä',
     tyyppi: 'historia',
     kysymykset: [
@@ -323,6 +476,28 @@ export const MAASTOKOHTEET_PRT = [
   },
   {
     id: 'saovicente',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-saovicente-aff8d079.jpg',
+      lyhyt: 'São Vicenten niemen majakka Portugalin lounaiskulmassa.',
+      selite: 'Majakka seisoo korkealla kalliolla Algarven lounaisimmassa kohdassa.',
+      lahde: 'Valokuva: Auvideo, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Auvideo',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lighthouse_of_Cabo_de_S%C3%A3o_Vicente.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-saovicente-d6ef4b89.jpg',
+        lyhyt: 'Kalliot ja meri São Vicenten niemellä Sagresissa.',
+        selite: 'Jyrkät rannikon kalliot ja Atlantin näkymä Euroopan lounaiskulmassa.',
+        lahde: 'Valokuva: Freebird from Madrid, Spain, Wikimedia Commons (CC BY-SA 2.0).',
+        tekija: 'Freebird from Madrid, Spain',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cape_St._Vincent_(Sagres,_Algarve)_(20927438946).jpg',
+        lisenssi: 'CC BY-SA 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+      },
+    ],
     nimi: 'São Vicenten niemi',
     tyyppi: 'merenkulku',
     kysymykset: [
@@ -352,6 +527,28 @@ export const MAASTOKOHTEET_PRT = [
   },
   {
     id: 'elvas',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-elvas-c3a9892c.jpg',
+      lyhyt: 'Amoreiran akvedukti Elvasissa.',
+      selite: 'Pitkä monikerroksinen kaarikäytävä johtaa vettä kaupungin luo.',
+      lahde: 'Valokuva: Jacinto Júlio Nozes César, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Jacinto Júlio Nozes César',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aqueduto_da_Amoreira_-_Elvas_Portugal.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-elvas-20a8df46.jpg',
+        lyhyt: 'Nossa Senhora da Graçan linnoitus Elvasin lähellä.',
+        selite: 'Tähtimäinen muuri ja vallihaudat kuuluvat Elvasin linnoitusjärjestelmään.',
+        lahde: 'Valokuva: Alvesgaspar, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Alvesgaspar',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Forte_da_Gra%C3%A7a_December_2016-2.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Elvas',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -380,6 +577,28 @@ export const MAASTOKOHTEET_PRT = [
   },
   {
     id: 'obidos',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-obidos-e7dfcca3.jpg',
+      lyhyt: 'Óbidosin linna sinisen taivaan alla.',
+      selite: 'Kiviset linnan muurit ja tornit kohoavat kaupungin yllä.',
+      lahde: 'Valokuva: Alexkom000, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Alexkom000',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2025-09-21_Castle_of_%C3%93bidos.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-obidos-5f9f24a1.jpg',
+        lyhyt: 'Óbidosin muurien ympäröimä valkoinen kaupunki.',
+        selite: 'Valkoiset talot punaisine kattoineen ryhmittyvät kaupunginmuurien sisään.',
+        lahde: 'Valokuva: Travelholic Path, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'Travelholic Path',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C3%93bidos,_a_city_within_the_walls_(23434109220).jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Óbidos',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -415,11 +634,33 @@ export const MAASTOKOHTEET_PRT = [
    *
    * Kohde on kaukana Lissabonin laatasta (76 lautayksikköä) ja yli 19
    * yksikön päässä lähimmästä olemassa olevasta merkistä, joten se on
-   * pääkartan merkki eikä valu kohdekartalle. Kuvaton nosto kuten muut
+   * pääkartan merkki eikä valu kohdekartalle. Kuvat lisätty 20.9.2026 (ent. kuvaton nosto) kuten muut
    * tämän tiedoston kohteet; faktat en-Wikipediasta 11.9.2026.
    * ============================================================== */
   {
     id: 'aveiro',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-aveiro-066cc099.jpg',
+      lyhyt: 'Moliceiro-vene Aveiron kanavassa.',
+      selite: 'Värikäs perinteinen vene liukuu kanavassa kaupungin keskustassa.',
+      lahde: 'Valokuva: CardosoSousa1988, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'CardosoSousa1988',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Moliceiro_no_Canal_de_S._Roque_-_Aveiro_-_Portugal.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-aveiro-5b10d29d.jpg',
+        lyhyt: 'Aveiron kanava ja sen rantatalot.',
+        selite: 'Kapea vesiväylä halkoo kaupunkia, jota kutsutaan Portugalin Venetsiaksi.',
+        lahde: 'Valokuva: John Samuel, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'John Samuel',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Canal_in_Aveiro_03.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Aveiro',
     tyyppi: 'kulttuuri',
     kysymykset: [
