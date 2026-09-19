@@ -1439,6 +1439,60 @@ async function ajaNakyma(nimi) {
   }, korkeusNyt);
   await s.waitForTimeout(1000);
 
+  /*
+   * 46: NIMIÖT EIVÄT LIMITY (omistaja 19.9.2026, Egyptin kuva: "Niilin
+   * suisto", "Suezin kanava", "Kairo yöllä" ja "Faiyumin keidas"
+   * limittäin; erä E, js/linssit/satelliitti-nimiot.js). Puhelimella
+   * Egyptin rypään yllä kahdella korkeudella: lähin sallittu (uusi
+   * katto 0,084 × avaus) ja 1,3-kertainen (omistajan kuvan korkeus
+   * vanhalla katolla). Näkyvien nimiöparien leikkaus saa olla enintään
+   * 10 % pienemmän alasta. Ennen korjausta (mitattu WebKit 390 px):
+   * Niilin suisto × Suezin kanava 21 % ja 35 %.
+   */
+  if (nimi === 'puhelin') {
+    const nimiot = [];
+    for (const kerroin of [1, 1.3]) {
+      await s.evaluate((k) => {
+        const { ui } = window.matkakirja;
+        const r = ui.pallolinssi.kahva.avaruus.tila().rajat;
+        ui.pallonInstanssi.pointOfView({ lat: 29.5, lng: 31, altitude: r.min * k }, 0);
+        ui.pallolauta.heraa();
+      }, kerroin);
+      await s.waitForTimeout(1200);
+      nimiot.push(await s.evaluate((k) => {
+        const r = [...document.querySelectorAll('.satelliitti-piste:not(.pallolauta-takana) .satelliitti-nimi')]
+          .map((el) => { const b = el.getBoundingClientRect(); return { n: el.textContent, x: b.left, y: b.top, w: b.width, h: b.height, o: Number(getComputedStyle(el).opacity) }; })
+          .filter((b) => b.w > 0 && b.o > 0.5 && b.x < innerWidth && b.x + b.w > 0 && b.y < innerHeight && b.y + b.h > 0);
+        let pahin = 0;
+        let pari = null;
+        for (let i = 0; i < r.length; i += 1) {
+          for (let j = i + 1; j < r.length; j += 1) {
+            const a = r[i]; const c = r[j];
+            const ix = Math.max(0, Math.min(a.x + a.w, c.x + c.w) - Math.max(a.x, c.x));
+            const iy = Math.max(0, Math.min(a.y + a.h, c.y + c.h) - Math.max(a.y, c.y));
+            const o = (ix * iy) / Math.min(a.w * a.h, c.w * c.h);
+            if (o > pahin) { pahin = o; pari = `${a.n} × ${c.n}`; }
+          }
+        }
+        return {
+          kerroin: k, nakyvia: r.length, pahin: +pahin.toFixed(2), pari,
+          luokka: document.body.classList.contains('satelliitti-nimet'),
+          ladonta: window.matkakirja.ui.pallolinssi.kahva.avaruus.tila().nimiot,
+        };
+      }, kerroin));
+    }
+    vaadi(t('46: nimiöt eivät limity Egyptin yllä (≤ 10 %)'),
+      nimiot.every((x) => x.luokka && x.nakyvia >= 4 && x.pahin <= 0.1),
+      JSON.stringify(nimiot));
+    await s.evaluate((alt) => {
+      const { ui } = window.matkakirja;
+      const pov = ui.pallonInstanssi.pointOfView();
+      ui.pallonInstanssi.pointOfView({ ...pov, altitude: alt }, 0);
+      ui.pallolauta.heraa();
+    }, korkeusNyt);
+    await s.waitForTimeout(1000);
+  }
+
   /* 43: pinnan sävy — ennen (valkoinen) ja jälkeen (PALLON_SAVY). */
   /*
    * VÄRI ON NULL, KUN TEKSTUURI ON SAAPUNUT (LISÄYS 13 kohta 37:
@@ -1824,6 +1878,7 @@ async function ajaNakyma(nimi) {
       }
       await odota(800);
       let tasaisia = 0; let lohkoja = 0; let kankaita = 0; const varit = {}; const laatoittain = {};
+      let peittavia = 0; let meriPeittavia = 0;
       p.scene().traverse((o) => {
         if (!o.userData?.laattakerros || !o.visible) return;
         const kuva = o.material?.map?.image;
@@ -1831,6 +1886,17 @@ async function ajaNakyma(nimi) {
         if (!ctx) return;
         kankaita += 1;
         const d = ctx.getImageData(0, 0, kuva.width, kuva.height).data;
+        /*
+         * 48b (erä G): LAASTARI PIIRTÄÄ VAIN MAAN. Joka neljäs pikseli:
+         * peittävä pikseli, jonka sävy on reliefin merta (sama raja kuin
+         * js/pallolaatat.js onReliefinMeri), on meren laastaria.
+         */
+        for (let i = 0; i < d.length; i += 16) {
+          if (d[i + 3] < 250) continue;
+          peittavia += 1;
+          const r = d[i]; const g = d[i + 1]; const b = d[i + 2];
+          if (b > g + 2 && b > r * 1.2 + 4 && b > g * 1.05) meriPeittavia += 1;
+        }
         for (let by = 0; by + 16 <= kuva.height; by += 16) {
           for (let bx = 0; bx + 16 <= kuva.width; bx += 16) {
             let n = 0; let sr = 0; let sg = 0; let sb = 0; let sl = 0; let sl2 = 0; let lapi = false;
@@ -1870,6 +1936,7 @@ async function ajaNakyma(nimi) {
       return {
         laastarilla, korkeus: +p.pointOfView().altitude.toFixed(3), laattoja, valmiita,
         kankaita, lohkoja, tasaisia, merivariAukkoja: m.merivariAukkoja ?? null,
+        peittavia, meriPeittavia,
         varit: Object.entries(varit).sort((a, b) => b[1] - a[1]).slice(0, 4),
         laatoittain,
       };
@@ -1924,6 +1991,19 @@ async function ajaNakyma(nimi) {
          */
         && laastari48.kankaita <= laastari48.laattoja,
       JSON.stringify(laastari48));
+    /*
+     * 48b: MERI EI OLE LAASTARISSA (Fablen erä G, Sonnet 1:n kierros 10
+     * kuvat 05/06). MERIVARI on reliefipaletin −4 000 m:n sävy, joten
+     * vanha ±6-maski lävisti poltetun batymetrian pilkuiksi ja laatan
+     * reuna piirtyi suorakaiteena. Nyt laastari on maata; meri tulee
+     * 4k-pohjasta. Raja 0,5 % peittävistä pikseleistä (rannan
+     * antialiasointi). Mitattu raportissa
+     * viesti-fable-kreikka-reliefi-20260919.md.
+     */
+    vaadi(t('48b: laastarin merellä ei ole peittäviä pikseleitä (meri tulee 4k-pohjasta)'),
+      laastari48.laastarilla && laastari48.peittavia > 0
+        && laastari48.meriPeittavia <= 0.005 * laastari48.peittavia,
+      `meren sävyisiä peittäviä ${laastari48.meriPeittavia} / ${laastari48.peittavia}`);
     await s.evaluate((pov) => {
       const { ui } = window.matkakirja;
       ui.pallonInstanssi.pointOfView({ lat: pov.lat, lng: pov.lng, altitude: pov.altitude }, 0);

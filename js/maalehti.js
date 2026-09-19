@@ -24,7 +24,7 @@ import { vanhaTallenne } from './packs/vanhat-aanet.js';
 import { aiheAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
 import { piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.js';
 import { KIELET, MAATIEDOT } from './sisaltotaulut.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import {
   html, lahdemerkinta, MERKKI_SOITA, piirraLeipa,
   suojaa,
@@ -956,7 +956,7 @@ export function piirraKategoria(ui, kategoria, kohde = ui.arrivalKategoria, { ot
       if (ekaLyhyt || eka.lahde) {
         const teksti = html('figcaption', 'vinkki-hero-teksti');
         if (ekaLyhyt) teksti.appendChild(html('span', 'vinkki-hero-selite', ekaLyhyt));
-        if (eka.lahde) teksti.appendChild(taytaLahderivi(html('span', 'lahde'), eka.lahde, eka));
+        if (eka.lahde) teksti.appendChild(kortinKuvalahde(html('span', 'lahde'), eka.lahde, eka));
         hero.appendChild(teksti);
       }
       // Hero johdannon perään, ennen ryhmiä.

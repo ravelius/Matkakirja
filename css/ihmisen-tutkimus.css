@@ -453,6 +453,22 @@
 /* Lähetetty kysymys jää näkyviin harmaana: pelaaja näkee, mitä jo kysyi. */
 .ihmisen-nostokysymys.lahetetty { opacity: 0.5; cursor: default; }
 .ihmisen-nostokysymys.ei-lahtenyt { border-color: rgba(180, 90, 60, 0.7); }
+/* Vastaus kortin omaan kuplaan (ks. js/linssit/ihmisen-matka-kortti.js
+   VASTAUS KORTTIIN, EI PULUN PANEELIIN). */
+.ihmisen-nostokortti-vastaus {
+  margin-top: 0.45rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 8px;
+  border: 1px solid var(--tutkimus-reuna);
+  background: rgba(var(--tutkimus-kulta), 0.05);
+  color: #f1e6d0;
+  font-size: 0.84rem;
+  line-height: 1.4;
+}
+.ihmisen-nostokortti-vastausteksti { margin: 0; }
+.ihmisen-nostokortti-vastausteksti.odottaa { opacity: 0.6; }
+.ihmisen-nostokortti-vastauslahde { margin: 0.35rem 0 0; font-size: 0.74rem; opacity: 0.8; }
+.ihmisen-nostokortti-vastauslahde a { color: #c9a15a; }
 
 /*
  * KAPEAHKO PALKKI (≤ 1000 px, myös iPad pystyssä 834 px): nimet

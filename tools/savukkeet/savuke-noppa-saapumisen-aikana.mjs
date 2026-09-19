@@ -373,6 +373,35 @@ for (const selainTieto of SELAIMET) {
     vaadi(`${tunnus}: 4. Liiku on DOMissa uudelleenlatauksen jälkeen`,
       ladattu.liikuNappi === true,
       JSON.stringify(ladattu));
+    /*
+     * 5. KATTO ON AJON OMA EHTO (PAATOKSET 47 avoin velka, 19.9.2026):
+     * mikä tahansa ulossovittava ajo — ei vain nopanheiton — pysyy
+     * maalissaan eikä puristu maan uloszoomauskattoon, ja saapumis-
+     * rajaus palauttaa katon. Vastakoe (katto ajon ulkopuolella):
+     * korkeus 0,82 → 0,205 1,5 s:ssa (mitattu Pariisi → Ateena).
+     */
+    const ajonKatto = await sivu.evaluate(async () => {
+      const { ui } = window.matkakirja;
+      const p = ui.pallolauta.pallo;
+      const maxNyt = () => +(p.controls().maxDistance / p.getGlobeRadius() - 1).toFixed(3);
+      await ui.pallolauta.saavu({ kesto: 0 });
+      await new Promise((v) => setTimeout(v, 600));
+      const maxAlussa = maxNyt();
+      const kohde = ui.game.pack.cities.find((c) => c.id === 'ateena');
+      const leveys = (ui.kamera().kameranTila?.()?.leveys ?? 300) * 4;
+      await ui.kamera().ajaKamera({ x: kohde.x, y: kohde.y, leveys }, { kesto: 700 });
+      const heti = p.pointOfView().altitude;
+      await new Promise((v) => setTimeout(v, 1500));
+      const jalkeen = p.pointOfView().altitude;
+      await ui.pallolauta.saavu({ kesto: 0 });
+      await new Promise((v) => setTimeout(v, 600));
+      return { maxAlussa, heti: +heti.toFixed(3), jalkeen: +jalkeen.toFixed(3), maxPalattua: maxNyt() };
+    });
+    tieto(`${tunnus}: ajon katto`, JSON.stringify(ajonKatto));
+    vaadi(`${tunnus}: 5. ulossovittava ajo pysyy maalissaan eikä puristu maan kattoon`,
+      ajonKatto.heti > ajonKatto.maxAlussa && Math.abs(ajonKatto.jalkeen - ajonKatto.heti) < 0.01, JSON.stringify(ajonKatto));
+    vaadi(`${tunnus}: 5b. saapumisrajaus palauttaa maan katon`,
+      Math.abs(ajonKatto.maxPalattua - ajonKatto.maxAlussa) < 0.01, JSON.stringify(ajonKatto));
     vaadi(`${tunnus}: ei sivuvirheitä`, virheet.length === 0, virheet.join(' | ').slice(0, 300));
 
     await ctx.close();

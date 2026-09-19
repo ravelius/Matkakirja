@@ -2284,8 +2284,26 @@ button {
   touch-action: manipulation;
 }
 
-button:hover:not(:disabled) { background: #43331f; }
+/*
+ * HOVER VAIN HIIRELLE (omistajan laitekuva 19.9.2026 klo 17.44, Annonayn
+ * nosto: seuraava-nuolen 24 %:n osuma-alue jäi tummanruskeaksi paneeliksi
+ * kuvan päälle). iOS jättää :hoverin päälle napautuksen jälkeen, joten
+ * tumma hover-tausta kuului vain laitteille, joilla on oikea osoitin.
+ * Kosketuksella palaute on lyhyt :active painalluksen ajan.
+ */
+@media (hover: hover) {
+  button:hover:not(:disabled) { background: #43331f; }
+}
+button:active:not(:disabled) { background: #43331f; }
 button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/*
+ * KUVAN LÄHDE JA HAVAINNEKUVAMERKINTÄ VAIN SUURENNOKSESSA (omistaja
+ * 19.9.2026 klo 19.04, js/tekijakortti.js kortinKuvalahde). Kortin ja
+ * lehden kuvan alla on vain lyhyt kuvateksti.
+ */
+.kuvalahde-vain-suurennoksessa { display: none !important; }
+.ihmisen-nostokortti-kuvakehys.suurennettava img { cursor: zoom-in; }
 button:disabled { opacity: 0.45; cursor: not-allowed; }
 
 button.primary {

@@ -133,10 +133,16 @@ import { HAHMOTELMA_PRT } from './packs/hahmotelma-prt.js';
 import { HAHMOTELMA_GRC } from './packs/hahmotelma-grc.js';
 import { HAHMOTELMA_AUT } from './packs/hahmotelma-aut.js';
 import { HAHMOTELMA_NLD } from './packs/hahmotelma-nld.js';
+import { HAHMOTELMA_IRL } from './packs/hahmotelma-irl.js';
+import { HAHMOTELMA_HRV } from './packs/hahmotelma-hrv.js';
 import { HAHMOTELMA_POL } from './packs/hahmotelma-pol.js';
 import { HAHMOTELMA_CZE } from './packs/hahmotelma-cze.js';
+import { HAHMOTELMA_SWE } from './packs/hahmotelma-swe.js';
+import { HAHMOTELMA_DNK } from './packs/hahmotelma-dnk.js';
+import { HAHMOTELMA_HUN } from './packs/hahmotelma-hun.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
+import { HAHMOTELMA_FIN } from './packs/hahmotelma-fin.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -176,7 +182,7 @@ import {
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 import { asetaAkustiikka } from './tehosteketju.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 
 /*
  * Maakohtaiset kohdelistat ISO-tunnuksella. Sama tunnus kuin
@@ -387,6 +393,22 @@ KOHDE_MAAT.AUT = [...(KOHDE_MAAT.AUT ?? []), ...HAHMOTELMA_AUT];
 KOHDE_MAAT.NLD = [...(KOHDE_MAAT.NLD ?? []), ...HAHMOTELMA_NLD];
 
 /*
+ * IRLANNIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti kaupungin (Dublin) ulkopuolella,
+ * lähin yli 5 lautayksikön päässä.
+ */
+KOHDE_MAAT.IRL = [...(KOHDE_MAAT.IRL ?? []), ...HAHMOTELMA_IRL];
+
+/*
+ * KROATIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti kaupungin (Dubrovnik) ulkopuolella,
+ * lähin yli 26 lautayksikön päässä.
+ */
+KOHDE_MAAT.HRV = [...(KOHDE_MAAT.HRV ?? []), ...HAHMOTELMA_HRV];
+
+/*
  * PUOLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
  * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
  * hahmotelmalla; rivit ovat aidosti pelikaupunkien (Varsova, Krakova)
@@ -401,6 +423,30 @@ KOHDE_MAAT.POL = [...(KOHDE_MAAT.POL ?? []), ...HAHMOTELMA_POL];
  * Tšekin 24 nykyistä nostoa.
  */
 KOHDE_MAAT.CZE = [...(KOHDE_MAAT.CZE ?? []), ...HAHMOTELMA_CZE];
+
+/*
+ * RUOTSIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin Alankomaiden hahmotelmalla; rivit ovat aidosti kaupungin
+ * (Tukholma) ulkopuolella, lähin (Sigtuna) yli 8 lautayksikön päässä.
+ */
+KOHDE_MAAT.SWE = [...(KOHDE_MAAT.SWE ?? []), ...HAHMOTELMA_SWE];
+
+/*
+ * TANSKAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin Alankomaiden hahmotelmalla; rivit ovat aidosti kaupungin
+ * (Kööpenhamina) ulkopuolella, lähin (Lejre) yli 8 lautayksikön päässä.
+ */
+KOHDE_MAAT.DNK = [...(KOHDE_MAAT.DNK ?? []), ...HAHMOTELMA_DNK];
+
+/*
+ * UNKARIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti Budapestin ulkopuolella eivätkä
+ * toista Unkarin 23 nykyistä nostoa.
+ */
+KOHDE_MAAT.HUN = [...(KOHDE_MAAT.HUN ?? []), ...HAHMOTELMA_HUN];
 
 /*
  * ESPANJAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
@@ -418,6 +464,15 @@ KOHDE_MAAT.ESP = [...(KOHDE_MAAT.ESP ?? []), ...HAHMOTELMA_ESP];
  * raja 7).
  */
 KOHDE_MAAT.ITA = [...(KOHDE_MAAT.ITA ?? []), ...HAHMOTELMA_ITA];
+
+/*
+ * SUOMEN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla; rivit ovat aidosti pelikaupunkien
+ * (Helsinki, Tampere, Lappi) ulkopuolella, lähin (Nokia) yli 8
+ * lautayksikön päässä.
+ */
+KOHDE_MAAT.FIN = [...(KOHDE_MAAT.FIN ?? []), ...HAHMOTELMA_FIN];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
@@ -4983,7 +5038,7 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
     const teksti = html('figcaption', 'fokuskohde-kuvateksti', kortinTeksti);
     // CC BY vaatii tekijän maininnan: lähde on aina kuvan vieressä.
     if (kuva.lahde) {
-      teksti.appendChild(taytaLahderivi(html('span', 'fokuskohde-kuvalahde'), kuva.lahde, kuva));
+      teksti.appendChild(kortinKuvalahde(html('span', 'fokuskohde-kuvalahde'), kuva.lahde, kuva));
     }
     kehys.appendChild(teksti);
   }
