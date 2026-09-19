@@ -596,11 +596,62 @@ async function ajaNakyma(nimi) {
     () => Boolean(window.matkakirja?.ui?.pallolinssi?.kahva?.avaruus?.tila?.()),
     null, { timeout: 60000 },
   ).catch(() => {});
+  /*
+   * PALJASTUS (PAATOKSET 52): linssi rakentuu mustan kerroksen alla,
+   * jolla on pelin oma otsikkokortti (ei NASAn tunnusta). Mustan alla
+   * avausajo odottaa. Paljastushetkellä pilvien lopullinen kuva on
+   * ratkaissut ja pilvikuori on täydessä peitossa — omistajan vika oli
+   * "Nyt sumu ilmestyy vasta jälkikäteen".
+   */
+  const mustana = await s.evaluate(() => {
+    const k = document.querySelector('.astro-paljastus');
+    const t = window.matkakirja.ui.pallolinssi.kahva.avaruus.tila();
+    return {
+      kerros: Boolean(k),
+      teksti: k?.textContent ?? '',
+      tausta: k ? getComputedStyle(k).backgroundColor : null,
+      vaihe: t?.paljastus?.vaihe ?? null,
+      osuus: t?.avausajo?.osuus ?? null,
+    };
+  });
+  vaadi(t('52a: linssi aukeaa mustana otsikkokortilla, avausajo odottaa'),
+    (mustana.kerros && /ASTRONAUTIN KAMERA/.test(mustana.teksti) && /kuvat: NASA/.test(mustana.teksti)
+      && mustana.tausta === 'rgb(0, 0, 0)' && mustana.osuus === 0)
+      || mustana.vaihe === 'paljastettu',
+    JSON.stringify(mustana));
+  await s.waitForFunction(
+    () => window.matkakirja.ui.pallolinssi.kahva.avaruus.tila()?.paljastus?.vaihe !== 'musta',
+    null, { timeout: 60000 },
+  ).catch(() => {});
+  const paljastus = await s.evaluate(() => {
+    const t = window.matkakirja.ui.pallolinssi.kahva.avaruus.tila();
+    return {
+      ...t.paljastus,
+      pilvetValmiit: t.sumu?.pilvetValmiit ?? null,
+      pilvet: t.sumu?.pilvet ?? null,
+      pilvetPiilossa: t.sumu?.pilvetPiilossa ?? null,
+      reliefinKestoMs: t.reliefinKestoMs,
+      osuus: t.avausajo?.osuus,
+    };
+  });
+  if (ULOS) {
+    await s.screenshot({
+      path: join(ULOS, `astro-avaus-paljastus-${NAKYMAT[nimi].viewport.width}.jpg`), type: 'jpeg', quality: 70, timeout: 120000,
+    }).catch(() => {});
+  }
+  vaadi(t('52b: paljastushetkellä pilvet ovat valmiina ja täydessä peitossa'),
+    paljastus.vaihe !== 'musta' && paljastus.katonKautta === false
+      && paljastus.pilvetValmiit === true && paljastus.pilvet >= 0.85 && paljastus.reliefinKestoMs > 0,
+    JSON.stringify(paljastus));
+  await s.waitForFunction(
+    () => window.matkakirja.ui.pallolinssi.kahva.avaruus.tila()?.paljastus?.vaihe === 'paljastettu',
+    null, { timeout: 10000 },
+  ).catch(() => {});
   const alku = await s.evaluate(() => window.matkakirja.ui.pallolinssi.kahva.avaruus.tila());
   vaadi(t('avausajo on käynnissä ja pallo näkyy ensin kokonaan'),
     alku?.avausajo?.kaynnissa === true && alku.avausajo.osuus < 0.6
-      && alku.halkaisijaAlussaPx / Math.min(alku.kotelo.leveys, alku.kotelo.korkeus) >= 0.6
-      && alku.halkaisijaAlussaPx / Math.min(alku.kotelo.leveys, alku.kotelo.korkeus) <= 0.7,
+      && alku.halkaisijaAlussaPx / Math.min(alku.kotelo.leveys, alku.kotelo.korkeus) >= 0.9
+      && alku.halkaisijaAlussaPx / Math.min(alku.kotelo.leveys, alku.kotelo.korkeus) <= 0.95,
     `osuus ${alku?.avausajo?.osuus} (${alku?.avausajo?.kulunutMs} ms ajettu),`
     + ` halkaisija alussa ${alku?.halkaisijaAlussaPx} px /`
     + ` ruutu ${alku?.kotelo?.leveys} × ${alku?.kotelo?.korkeus},`
@@ -613,11 +664,41 @@ async function ajaNakyma(nimi) {
   const loppu = await s.evaluate(() => window.matkakirja.ui.pallolinssi.kahva.avaruus.tila());
   const kapein = Math.min(loppu.kotelo.leveys, loppu.kotelo.korkeus);
   const kasvu = loppu.halkaisijaNytPx / (alku.halkaisijaAlussaPx || 1);
-  vaadi(t('pallo kasvaa avausajossa vähintään 1,3× ja peittää melkein koko ruudun'),
-    kasvu >= 1.3 && loppu.halkaisijaNytPx / kapein >= 0.9
-      && loppu.halkaisijaNytPx / kapein <= 0.95,
+  if (ULOS) {
+    await s.screenshot({
+      path: join(ULOS, `astro-avaus-lepo-${NAKYMAT[nimi].viewport.width}.jpg`), type: 'jpeg', quality: 70, timeout: 120000,
+    }).catch(() => {});
+  }
+  /*
+   * 52c: LEPONÄKYMÄ ON RAJATTU LÄHIKUVA PILVIEN YLLÄ (PAATOKSET 52:
+   * "pallosta rajautuu osia ruudun ulkopuolelle. Kuitenkin sen verran
+   * kaukana että sumu näkyy edelleen pallon päällä").
+   */
+  vaadi(t('52c: pallo kasvaa avausajossa ja rajautuu ruudun yli, pilvet yhä täysinä'),
+    kasvu >= 1.15 && loppu.halkaisijaNytPx / kapein > 1.05
+      && Math.abs(loppu.korkeusNyt - loppu.lepokorkeus) < 0.02
+      && (loppu.sumu?.pilvet ?? 0) >= 0.85,
     `${alku.halkaisijaAlussaPx} → ${loppu.halkaisijaNytPx} px (${kasvu.toFixed(2)}×,`
-    + ` ${(100 * loppu.halkaisijaNytPx / kapein).toFixed(1)} % ruudusta)`);
+    + ` ${(100 * loppu.halkaisijaNytPx / kapein).toFixed(1)} % ruudusta), korkeus ${loppu.korkeusNyt}`
+    + ` (lepo ${loppu.lepokorkeus}, avaus ${loppu.avauskorkeus}), pilvet ${loppu.sumu?.pilvet}`);
+  /* 52d: ISS:n rata on tumma ja merkki on aseman piirros. */
+  const iss52 = await s.evaluate(() => {
+    const viiva = document.querySelector('.astro-rata path');
+    const v = (viiva?.getAttribute('stroke') ?? '').match(/[\d.]+/g)?.map(Number) ?? [];
+    const lum = v.length >= 3 ? 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2] : null;
+    const iss = document.querySelector('.astro-iss');
+    const r = iss?.getBoundingClientRect();
+    return {
+      radanVari: viiva?.getAttribute('stroke') ?? null,
+      radanLuminanssi: lum === null ? null : Math.round(lum),
+      piirroksenOsia: iss?.querySelectorAll('svg rect').length ?? 0,
+      koko: r ? [Math.round(r.width), Math.round(r.height)] : null,
+    };
+  });
+  vaadi(t('52d: ISS:n rata on tumma ja merkki on aseman piirros (runko + paneelit)'),
+    iss52.radanLuminanssi !== null && iss52.radanLuminanssi < 60
+      && iss52.piirroksenOsia >= 10 && iss52.koko?.[0] > iss52.koko?.[1],
+    JSON.stringify(iss52));
   /*
    * REUNAVARJON SÄDE LUETAAN KAMERAN KORKEUDESTA JOKA KEHYKSELLÄ.
    * Väite: kalvon säde kasvoi samassa suhteessa kuin pallo. Jos se
@@ -720,13 +801,28 @@ async function ajaNakyma(nimi) {
     Math.abs(kulma(a1, a2)) > jaljella * 4 && Math.abs(kulma(a1, a2)) > 0.2,
     `ennen ${Math.abs(kulma(a1, a2)).toFixed(3)}°, jälkeen ${jaljella.toFixed(3)}° (2 s)`);
 
+  /*
+   * KOKO PALLO RUUTUUN MITTAUSTEN AJAKSI (PAATOKSET 52). Leponäkymä on
+   * nyt rajattu lähikuva (0,72 × avauskorkeus), jossa pallon reunat ovat
+   * ruudun ulkopuolella. Alla olevat reuna-, varjo- ja pistemittaukset
+   * lukevat pallon REUNAA, joten kamera viedään avauskorkeuteen (koko
+   * pallo 92 %), joka on pelaajan omassa zoomikaistassa (≤ 1,3 × avaus).
+   */
+  await s.evaluate(() => {
+    const { ui } = window.matkakirja;
+    const t = ui.pallolinssi.kahva.avaruus.tila();
+    ui.pallonInstanssi.pointOfView({ altitude: t.avauskorkeus }, 0);
+    ui.pallolauta?.heraa?.();
+  });
+  await s.waitForTimeout(800);
   await rauhoitu(s);
   const linssi = await s.evaluate(MITAT);
 
   /* ---- 1. ISS ------------------------------------------------------ */
+  // PAATOKSET 52: merkki on aseman piirros 24 × 12 px, ei 8 px:n piste.
   vaadi(t('ISS-merkki on DOMissa pallon kotelossa'),
-    linssi.issDomissa && linssi.issLeveys >= 6 && linssi.issLeveys <= 10,
-    `merkki ${linssi.issDomissa}, halkaisija ${linssi.issLeveys} px`);
+    linssi.issDomissa && linssi.issLeveys >= 20 && linssi.issLeveys <= 28,
+    `merkki ${linssi.issDomissa}, leveys ${linssi.issLeveys} px`);
   /*
    * PALLO KÄÄNNETÄÄN ISS:N KOHDALLE. Rata kiertää koko pallon, joten
    * merkki on puolet kierroksesta takapuolella — mittari ei saa
@@ -2077,9 +2173,9 @@ async function ajaNakyma(nimi) {
   vaadi(t('VASTAKOE: liikkeenvähennyksellä zoom on heti perillä eikä pallo pyöri'),
     hidasTila?.avausajo?.kaynnissa === false && hidasTila.avausajo.osuus === 1
       && hidasTila.pyorii === false
-      && Math.abs(hidasTila.korkeusNyt - hidasTila.avauskorkeus) < 0.01,
+      && Math.abs(hidasTila.korkeusNyt - hidasTila.lepokorkeus) < 0.01,
     `ajo ${JSON.stringify(hidasTila?.avausajo)}, pyörii ${hidasTila?.pyorii},`
-    + ` korkeus ${hidasTila?.korkeusNyt} (loppu ${hidasTila?.avauskorkeus},`
+    + ` korkeus ${hidasTila?.korkeusNyt} (loppu ${hidasTila?.lepokorkeus},`
     + ` alku ${hidasTila?.aloituskorkeus})`);
   await rauhoitu(h);
   const h1 = (await h.evaluate(MITAT)).avaruus?.kalvo?.iss ?? null;
