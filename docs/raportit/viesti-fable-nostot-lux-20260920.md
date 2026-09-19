@@ -1,13 +1,13 @@
 # Viesti Fablelle: Luxemburgin hahmotelmanostot valmiina (vaihe 2 ja 3)
 
 19.9.2026 klo 21.08 Suomen aikaa, Sonnet-sisältösessio "Matkakirja Sonnet nostot",
-haara `sonnet-nostot-lux` (pohja origin/main a2acffc2, v1964). Versiota ei nostettu,
+haara `sonnet-nostot-lux` (pohja origin/main 39f1a2ee, v1965; rebasattu v1964-pohjalta). Versiota ei nostettu,
 PR:ää ei avattu, ämpäriin ei viety, Raamattuun ei koskettu.
 
 **Tulos: 15 nostoa (Fablen hyväksymä lista sellaisenaan, ei korvauksia), 40 Commons-kuvaa, 6 rahavisaa.**
 Uusi tiedosto `js/packs/hahmotelma-lux.js` (`HAHMOTELMA_LUX`, rakenne täsmälleen kuin hahmotelma-fra.js ja muut EU-pakat).
-Rekisteröinti: `js/fokuskohteet.js` (import + `KOHDE_MAAT.LUX`), `sw.js` SHELL, `tools/build-standalone.mjs`; rivit ovat hahmotelma-dnk-rivien jälkeen (v1964-pohja).
-**Pohja on v1964 (ennen v1965:tä)**: v1965 lisäsi BGR-, ROU- ja SVK-rivit samoihin kohtiin, joten LUX-haaran mergessä voi tulla pieni konflikti fokuskohteet.js:ssä, sw.js:ssä ja build-standalone.mjs:ssä: pidä kaikki rivit (tai rebasoin haaran origin/mainin päälle pyynnöstä).
+Rekisteröinti: `js/fokuskohteet.js` (import + `KOHDE_MAAT.LUX`), `sw.js` SHELL, `tools/build-standalone.mjs`; rivit ovat hahmotelma-svk-rivien jälkeen.
+**Haara on rebasattu v1965:n päälle**: rekisteröintirivit (fokuskohteet.js, sw.js, build-standalone.mjs) on yhdistetty BGR-, ROU- ja SVK-rivien kanssa, eikä mergekonfliktia pitäisi tulla.
 Luxemburgissa ei ole pelikaupunkia eikä yhtään aiempaa nostoa; kaikki 15 ovat uusia.
 **Visat ja kuvaselitteet on kirjoitettu uuden visakielisäännön mukaan** (vaihtoehdot lyhyitä, ≤ 40 merkkiä, kysymys ≤ 95 merkkiä, oikea ei selvästi pisin, ei "-malla"; selitteissä ei lähdeviittauksia).
 
