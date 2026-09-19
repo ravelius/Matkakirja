@@ -135,6 +135,7 @@ import { HAHMOTELMA_AUT } from './packs/hahmotelma-aut.js';
 import { HAHMOTELMA_NLD } from './packs/hahmotelma-nld.js';
 import { HAHMOTELMA_IRL } from './packs/hahmotelma-irl.js';
 import { HAHMOTELMA_HRV } from './packs/hahmotelma-hrv.js';
+import { HAHMOTELMA_BGR } from './packs/hahmotelma-bgr.js';
 import { HAHMOTELMA_POL } from './packs/hahmotelma-pol.js';
 import { HAHMOTELMA_CZE } from './packs/hahmotelma-cze.js';
 import { HAHMOTELMA_SWE } from './packs/hahmotelma-swe.js';
@@ -407,6 +408,14 @@ KOHDE_MAAT.IRL = [...(KOHDE_MAAT.IRL ?? []), ...HAHMOTELMA_IRL];
  * lähin yli 26 lautayksikön päässä.
  */
 KOHDE_MAAT.HRV = [...(KOHDE_MAAT.HRV ?? []), ...HAHMOTELMA_HRV];
+
+/*
+ * BULGARIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti kaupungin (Sofia) ulkopuolella,
+ * lähin yli 20 lautayksikön päässä.
+ */
+KOHDE_MAAT.BGR = [...(KOHDE_MAAT.BGR ?? []), ...HAHMOTELMA_BGR];
 
 /*
  * PUOLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
