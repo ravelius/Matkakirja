@@ -202,9 +202,7 @@ export const HAHMOTELMA_DNK = [
         'Noin 150 metriä',
       ],
       oikea: 1,
-      fakta: 'Dyynissä on yhteensä noin neljä miljoonaa kuutiometriä hiekkaa. Alue on myös '
-        + 'kansainvälisesti tärkeä muuttavien petolintujen levähdyspaikka, ja siellä '
-        + 'pesivät muun muassa kapustarinta ja liro.',
+      fakta: 'Dyynissä on yhteensä noin neljä miljoonaa kuutiometriä hiekkaa.',
     },
   },
   {
@@ -463,8 +461,7 @@ export const HAHMOTELMA_DNK = [
     lahde: 'en-Wikipedia "Himmelbjerget", johdanto-osa ja osio "Height and prominence" ja '
       + '"Historic importance" (tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Kenen kunniaksi Himmelbjergetin huipulle rakennettu punatiilinen torni '
-        + 'pystytettiin?',
+      kysymys: 'Kenen kunniaksi Himmelbjergetin punatiilinen torni pystytettiin?',
       vaihtoehdot: [
         'Kuningas Christian IV',
         'Kuningas Christian IX',
@@ -472,9 +469,7 @@ export const HAHMOTELMA_DNK = [
         'Kuningas Valdemar Voittoisa',
       ],
       oikea: 2,
-      fakta: 'Lähellä huippua on muitakin muistomerkkejä, ja yksi niistä muistuttaa naisten '
-        + 'äänioikeudesta vuonna 1915. Silkeborgista kulkee kukkulan juurelle yhä '
-        + 'historiallinen höyrylaiva Hjejlen.',
+      fakta: 'Huipun lähellä on myös naisten äänioikeuden muistomerkki vuodelta 1915.',
     },
   },
   {
@@ -540,18 +535,15 @@ export const HAHMOTELMA_DNK = [
     lahde: 'en-Wikipedia "Læsø", johdanto-osa ja osio "Name and Norse mythology" ja "Climate, '
       + 'industry, and wildlife" (tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Miksi Læsøn talojen katot alettiin tehdä meriajokkaasta?',
+      kysymys: 'Miksi Læsøn talojen katot tehtiin meriajokkaasta?',
       vaihtoehdot: [
-        'Suolan keitto oli syönyt puut, joten kattoaineista oli pulaa',
-        'Meriajokas kestää myrskyjä paremmin kuin savi- ja olkikatot',
-        'Kuninkaan käsky velvoitti käyttämään vain saaren omaa raaka-ainetta',
-        'Suolapitoinen ajokas suojasi talot tulipaloilta ja hiekalta',
+        'Kuninkaan määräys',
+        'Tulipalojen pelko',
+        'Vanha viikinkiperinne',
+        'Puun puute',
       ],
-      oikea: 0,
-      fakta: 'Læsø kuuluu Tanskan \'aavikkovyöhykkeeseen\': kesällä sataa niin vähän, että '
-        + 'purot ja lammet osittain kuivuvat. Suolan valmistus aloitettiin uudelleen '
-        + 'pienessä mittakaavassa 1980-luvun lopulla arkeologisena kokeiluna ja '
-        + 'matkailunähtävyytenä.',
+      oikea: 3,
+      fakta: 'Kesällä Læsøllä sataa niin vähän, että purot ja lammet osittain kuivuvat.',
     },
   },
   {
@@ -692,9 +684,8 @@ export const HAHMOTELMA_DNK = [
         '750 metriä',
       ],
       oikea: 3,
-      fakta: 'Bornholmin epätavallisen valon ja vain neljän tunnin kesäyön vuoksi monet '
-        + 'Tanskan varhaisimmista taiteilijoista maalasivat Hammershusin maisemia. '
-        + 'Tunnetuimpia on Anton Eduard Kieldrupin vuoden 1848 maalaus.',
+      fakta: 'Bornholmin erikoinen valo houkutteli monia varhaisia tanskalaistaiteilijoita '
+        + 'maalaamaan Hammershusia.',
     },
   },
   {
@@ -1143,7 +1134,7 @@ export const HAHMOTELMA_DNK = [
     lahde: 'en-Wikipedia "Christiansfeld", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Minkä väristä tiiltä Christiansfeldin herrnhutilaistalot on pääosin rakennettu?',
+      kysymys: 'Minkä väristä tiiltä Christiansfeldin talot on pääosin rakennettu?',
       vaihtoehdot: [
         'Punaista tiiltä',
         'Keltaista tiiltä',
@@ -1151,8 +1142,7 @@ export const HAHMOTELMA_DNK = [
         'Valkoista kalkkikiveä',
       ],
       oikea: 1,
-      fakta: 'Kaupungin hunajakakut leivotaan salaisen reseptin mukaan vuodelta 1783. Vuoteen '
-        + '2008 asti ne leivottiin alkuperäisessä 1700-luvun leipomossa.',
+      fakta: 'Kaupungin hunajakakut leivotaan salaisen reseptin mukaan vuodelta 1783.',
     },
   },
   {
@@ -1294,9 +1284,8 @@ export const HAHMOTELMA_DNK = [
         'Tyrin pyhäkköä',
       ],
       oikea: 2,
-      fakta: 'Kaupunki juhli tuhatvuotisjuhlaansa vuonna 1988 ja istutti sen kunniaksi '
-        + 'Tusindårsskoven-metsän. Metsässä pidetään nykyään vuosittain '
-        + 'Tinderbox-musiikkifestivaali.',
+      fakta: 'Odense juhli tuhatvuotisjuhlaansa vuonna 1988 ja istutti sen kunniaksi '
+        + 'Tusindårsskoven-metsän.',
     },
   },
   {
@@ -1365,18 +1354,16 @@ export const HAHMOTELMA_DNK = [
     lahde: 'en-Wikipedia "Horsens", johdanto-osa ja osiot "History", "Culture" ja "Prison" '
       + '(tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Minkä eläimen nimeä vanhan tanskan sana hors tarkoittaa, josta Horsensin nimen '
-        + 'uskotaan tulevan?',
+      kysymys: 'Minkä eläimen nimestä Horsensin nimen uskotaan tulevan?',
       vaihtoehdot: [
-        'Hevosta',
-        'Hirveä',
-        'Hyljettä',
-        'Hanhea',
+        'Hevosen',
+        'Hirven',
+        'Hylkeen',
+        'Hanhen',
       ],
       oikea: 0,
-      fakta: 'Vankilasta pakeni vuonna 1949 mies, joka kaivoi sellistään tunnelin ulos ja '
-        + 'jätti jälkeensä lapun: "Missä on tahto, siellä on keino". Hänet saatiin '
-        + 'kuitenkin kiinni muutaman päivän kuluttua läheiseltä tilalta.',
+      fakta: 'Horsensin vankilasta pakeni vuonna 1949 mies, joka kaivoi tunnelin sellistään '
+        + 'ulos.',
     },
   },
   {
@@ -1498,18 +1485,16 @@ export const HAHMOTELMA_DNK = [
     lahde: 'en-Wikipedia "Aalborg", johdanto-osa ja osiot "16th to 19th centuries" ja "Major '
       + 'private companies" (tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Minkä juoman maailman suurin tuottaja ja viejä Aalborgissa toiminut De Danske '
-        + 'Spritfabrikker on?',
+      kysymys: 'Mitä juomaa Aalborgin De Danske Spritfabrikker tuotti ja vei maailman eniten?',
       vaihtoehdot: [
-        'Viskin',
-        'Rommin',
-        'Konjakin',
-        'Akvaviitin',
+        'Akvaviittia',
+        'Punaviiniä',
+        'Konjakkia',
+        'Mallasviskiä',
       ],
-      oikea: 3,
+      oikea: 0,
       fakta: 'Aalborg-merkin akvaviitti tislataan meripihkan kanssa, mikä antaa siihen männyn '
-        + 'ja sitrusten sävyjä. EU:n sääntöjen mukaan akvaviitin hallitsevan maun täytyy '
-        + 'tulla kuminan tai tillin siemenistä.',
+        + 'ja sitrusten sävyjä.',
     },
   },
   {
@@ -1651,9 +1636,8 @@ export const HAHMOTELMA_DNK = [
         'Lübeck',
       ],
       oikea: 2,
-      fakta: 'Esbjergistä kulki vuodesta 1875 aina syyskuuhun 2014 asti matkustajalaivayhteys '
-        + 'Englannin Harwichiin. Nykyään satama huolehtii suuresta osasta Tanskan '
-        + 'tuulivoimaloiden kuljetuksia.',
+      fakta: 'Esbjergistä kulki vuodesta 1875 syyskuuhun 2014 matkustajalaivayhteys Englannin '
+        + 'Harwichiin.',
     },
   },
   {
@@ -1721,16 +1705,15 @@ export const HAHMOTELMA_DNK = [
     lahde: 'en-Wikipedia "Samsø", johdanto-osa ja osiot "Kanhave canal" ja "Renewable energy" '
       + '(tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Mitä Samsøn poikki kaivettiin vuosina 726–729 viikinkiaikaan?',
+      kysymys: 'Mitä Samsøn poikki kaivettiin vuosina 726–729?',
       vaihtoehdot: [
-        'Kivinen silta',
+        'Kivireunainen kanava',
         'Puureunainen kanava',
-        'Puolustusmuuri',
-        'Kivetty tie',
+        'Puolustusvallihauta',
+        'Suuri laivatunneli',
       ],
       oikea: 1,
-      fakta: 'Samsø tunnetaan Tanskassa aikaisista uusista perunoistaan. Saarella on myös '
-        + 'maailman suurin pysyvä labyrintti, joka kasvaa entisellä joulukuusiviljelmällä.',
+      fakta: 'Samsø tunnetaan Tanskassa aikaisista uusista perunoistaan.',
     },
   },
   {

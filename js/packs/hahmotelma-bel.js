@@ -415,16 +415,15 @@ export const HAHMOTELMA_BEL = [
       + 'on näköalapaikka taistelutantereelle.',
     lahde: 'en-Wikipedia "Lion\'s Mound", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Minkä tapahtuman muistoksi Leijonakumpu rakennettiin juuri tähän kohtaan?',
+      kysymys: 'Minkä tapahtuman muistoksi Leijonakumpu rakennettiin?',
       vaihtoehdot: [
-        'Ranskan keisarin kruunajaisten',
-        'Wienin kongressin päätöksen',
-        'Belgian itsenäisyysjulistuksen',
-        'Vilhelm Oranialaisen haavoittumisen Waterloon taistelussa',
+        'Ranskan keisarin kruunajaiset',
+        'Wienin kongressin päätökset',
+        'Belgian itsenäisyysjulistus',
+        'Vilhelm Oranialaisen haavoittuminen',
       ],
       oikea: 3,
-      fakta: 'Vuonna 1832 ranskalaissotilaat melkein kaatoivat leijonapatsaan ja katkaisivat sen '
-        + 'hännän.',
+      fakta: 'Vuonna 1832 ranskalaissotilaat melkein kaatoivat leijonapatsaan ja katkaisivat sen hännän.',
     },
   },
   {
@@ -724,14 +723,13 @@ export const HAHMOTELMA_BEL = [
     visa: {
       kysymys: 'Mistä Kultaisten kannusten taistelu on saanut nimensä?',
       vaihtoehdot: [
-        'Flanderin kreivin kultaisesta ritarimerkistä',
-        'Noin 500 saaliiksi saadusta kannusparista',
-        'Ranskan kuninkaan kultaisesta sotalipusta',
-        'Taistelupaikalla kasvaneesta kultaisesta viljasta',
+        'Ranskan kuninkaan kultaisesta lipusta',
+        'Noin 500 kannusparin saaliista',
+        'Flanderin kreivin ritarimerkistä',
+        'Taistelukentän kultaisesta viljasta',
       ],
       oikea: 1,
-      fakta: 'Vuonna 1984 taistelusta tehtiin elokuva De leeuw van Vlaanderen eli Flanderin '
-        + 'leijona.',
+      fakta: 'Vuonna 1984 taistelusta tehtiin elokuva De leeuw van Vlaanderen eli Flanderin leijona.',
     },
   },
   {
@@ -739,7 +737,7 @@ export const HAHMOTELMA_BEL = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bel-nosto-orval-48bcef92.jpg',
       lyhyt: 'Orvalin luostarin kirkon rauniot: korkeat pylväät ja kaaret sekä kuorin päätyseinä ikkunoineen.',
-      selite: 'Kuva on luostarin keskiaikaisen kirkon raunioista. Suorakaiteen muotoinen kuori oli kuvauksen mukaan tarkoituksella matala ja vaatimaton.',
+      selite: 'Kuva on luostarin keskiaikaisen kirkon raunioista. Suorakaiteen muotoinen kuori oli tarkoituksella matala ja vaatimaton.',
       lahde: 'Valokuva: Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0).',
       tekija: 'Dennis G. Jarvis',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Belgium-5545_-_Choir_%2813270739723%29.jpg',
@@ -796,13 +794,12 @@ export const HAHMOTELMA_BEL = [
       kysymys: 'Miksi Orvalin luostarissa elvytettiin oluenpano vuonna 1931?',
       vaihtoehdot: [
         'Vieraiden majoituksen mainostamiseksi',
-        'Vanhan kilpailijan ostamiseksi',
-        'Piispan määräyksestä',
-        'Luostarin jälleenrakennuksen rahoittamiseksi',
+        'Kilpailevan panimon ostamiseksi',
+        'Piispan määräyksen takia',
+        'Jälleenrakennuksen rahoittamiseksi',
       ],
       oikea: 3,
-      fakta: 'Vuonna 1637 ranskalaiset palkkasotilaat ryöstivät ja polttivat luostarin '
-        + 'kolmikymmenvuotisessa sodassa.',
+      fakta: 'Vuonna 1637 ranskalaiset palkkasotilaat ryöstivät ja polttivat luostarin kolmikymmenvuotisessa sodassa.',
     },
   },
   {
@@ -810,7 +807,7 @@ export const HAHMOTELMA_BEL = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bel-nosto-chimay-3f842554.jpg',
       lyhyt: 'Chimayn ruhtinaiden linna, jonka sipulikupolinen torni kohoaa puiden yläpuolelle sinistä taivasta vasten.',
-      selite: 'Kuvauksen mukaan linnan rakennusvaiheet ovat peräisin 1200- ja 1800-luvuilta. Harmaa liuskekatto ja tiilipiiput hallitsevat siluettia.',
+      selite: 'Linnan rakennusvaiheet ovat peräisin 1200- ja 1800-luvuilta. Harmaa liuskekatto ja tiilipiiput hallitsevat siluettia.',
       lahde: 'Valokuva: Jean-Pol GRANDMONT, Wikimedia Commons (CC BY 3.0).',
       tekija: 'Jean-Pol GRANDMONT',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:00_Chimay_-_Ch%C3%A2teau_1.JPG',
@@ -961,7 +958,7 @@ export const HAHMOTELMA_BEL = [
         'Saksalaisen kylpyammeen nimestä',
       ],
       oikea: 0,
-      fakta: 'Spassa pidettiin maailman ensimmäinen kauneuskilpailu 19. syyskuuta 1888.',
+      fakta: 'Spassa järjestettiin syyskuussa 1888 maailman ensimmäinen kauneuskilpailu.',
     },
   },
   {
@@ -1031,7 +1028,7 @@ export const HAHMOTELMA_BEL = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/bel-nosto-tervuren-0d6b66a7.jpg',
         lyhyt: 'Museon edessä oleva lampi suihkulähteineen ja puisto Tervurenissa.',
-        selite: 'Kuvassa Tervurenin museopuiston lampi (kuvatiedoston kuvaus: "vijver voor het museum"), jonka takana näkyy museorakennuksen kupoli ja metsäinen puisto.',
+        selite: 'Kuvassa on Tervurenin museopuiston lampi, jonka takana näkyy museorakennuksen kupoli ja metsäinen puisto.',
         lahde: 'Valokuva: Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Smiley.toerist',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Park_museum_Tervuren_2019_2.jpg',
@@ -1068,10 +1065,10 @@ export const HAHMOTELMA_BEL = [
     visa: {
       kysymys: 'Mitä varten Tervurenin Kongon museo perustettiin vuonna 1898?',
       vaihtoehdot: [
-        'Belgialaisten taiteilijoiden näyttelysaliksi',
-        'Kuninkaan yksityiseksi metsästysmuseoksi',
-        'Siirtomaapropagandan ja -toiminnan tueksi',
-        'Afrikkalaisten opiskelijoiden kouluksi',
+        'Taiteilijoiden näyttelysaliksi',
+        'Kuninkaan metsästysmuseoksi',
+        'Siirtomaapropagandan tueksi',
+        'Afrikkalaisten koulutukseen',
       ],
       oikea: 2,
       fakta: 'Museo oli suljettuna marraskuusta 2013 joulukuuhun 2018 laajan remontin ajan.',
@@ -1245,14 +1242,13 @@ export const HAHMOTELMA_BEL = [
     visa: {
       kysymys: 'Miksi Thieun ja Houdeng-Gœgnies\'n välillä käytettiin laivanostimia sulkujen sijaan?',
       vaihtoehdot: [
-        'Kanava oli liian kapea sulkuportaille',
-        'Nousu oli liian jyrkkä sulkuportaille',
-        'Sulkujen rakentaminen oli kielletty kuninkaan päätöksellä',
-        'Vesi oli siellä liian suolaista sulkuja varten',
+        'Kanava oli liian kapea',
+        'Nousu oli liian jyrkkä',
+        'Kuningas kielsi sulut',
+        'Vesi oli liian suolaista',
       ],
       oikea: 1,
-      fakta: 'Vuonna 2002 avattu laajennettu kanava korvasi vanhat nostimet kauppa-alusten '
-        + 'reittinä uudella Strépy-Thieun laivanostimella.',
+      fakta: 'Vuonna 2002 avattu laajennettu kanava korvasi vanhat nostimet kauppa-alusten reittinä uudella Strépy-Thieun laivanostimella.',
     },
   },
   {

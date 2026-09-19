@@ -158,10 +158,10 @@ export const HAHMOTELMA_GRC = [
     visa: {
       kysymys: 'Mitä varten Samarian rotkon kansallispuisto perustettiin erityisesti?',
       vaihtoehdot: [
-        'Muinaisten raunioiden suojelemiseksi',
-        'Vaellusreitin turvaamiseksi matkailijoille',
-        'Harvinaisen kri-kri-vuohen turvapaikaksi',
-        'Volakiaksen vuoren metsien suojelemiseksi',
+        'Antiikin raunioiden suojelemiseksi',
+        'Vaellusreitin turvaamiseksi',
+        'Kri-kri-vuohen suojelemiseksi',
+        'Volakiaksen metsien suojelemiseksi',
       ],
       oikea: 2,
       fakta: 'Rotko ja sen sisällä ollut Samarian kylä on nimetty kylän muinaisen Óssia María '
@@ -252,7 +252,7 @@ export const HAHMOTELMA_GRC = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/grc-nosto-prespa-779e6b27.jpg',
         lyhyt: 'Valkoisia pelikaaneja ruovikkosaarekkeella Prespan kosteikolla.',
-        selite: 'Kuvan nimi on Pelican nest, ja se kuuluu Prespan luontoa esittäviin Commons-kuviin; ruovikkosaarekkeen keskellä näkyy valkoisten lintujen joukko.',
+        selite: 'Pelikaanien pesä Prespan alueella: ruovikkosaarekkeen keskellä näkyy valkoisten lintujen joukko.',
         lahde: 'Valokuva: Chalki25, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Chalki25',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pelican_nest.jpg',
@@ -344,12 +344,12 @@ export const HAHMOTELMA_GRC = [
     lahde: 'en-Wikipedia "Lake Kerkini", johdanto-osa ja osiot "History" ja "Geography" '
       + '(tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Mitä Kerkinijärven paikalla oli ennen kuin siitä tehtiin tekojärvi?',
+      kysymys: 'Mitä Kerkinijärven paikalla oli ennen tekojärveä?',
       vaihtoehdot: [
-        'Laaja suoalue ja epäsäännöllisiä suojärviä',
-        'Viljeltyjä peltoja ja pieniä maalaiskyliä',
-        'Kuivaa arolakeutta ilman merkittäviä vesistöjä',
-        'Tiheää tammimetsää Strymón-joen molemmin puolin',
+        'Laaja suoalue ja suojärviä',
+        'Viljeltyjä peltoja ja kyliä',
+        'Kuivaa arolakeutta ja ketoja',
+        'Tammimetsää Strymónin varrella',
       ],
       oikea: 0,
       fakta: 'Kerkinijärvellä on havaittu 227 lintulajia, joista 76 on kirjattu Kreikan '
@@ -477,10 +477,10 @@ export const HAHMOTELMA_GRC = [
     visa: {
       kysymys: 'Mihin Milosin obsidiaania käytettiin ennen maanviljelyn alkua?',
       vaihtoehdot: [
-        'Siitä tehtiin koruja kuninkaiden haudoille',
-        'Siitä tehtiin erittäin teräviä kivityökaluja',
-        'Sitä poltettiin lämmitykseen ja ruoanlaittoon',
-        'Siitä rakennettiin asuntojen paksuja muureja',
+        'Kuninkaiden hautakoruihin',
+        'Teräviin kivityökaluihin',
+        'Lämmitykseen ja ruoanlaittoon',
+        'Asuntojen paksuihin muureihin',
       ],
       oikea: 1,
       fakta: 'Milosin pronssikautisen Phylakopin kylän ensimmäiset asukkaat olivat tonnikalan '
@@ -538,10 +538,10 @@ export const HAHMOTELMA_GRC = [
     visa: {
       kysymys: 'Mitä Aigain teatterissa tapahtui vuonna 336 eaa.?',
       vaihtoehdot: [
-        'Aleksanteri Suuri kuoli siellä sairauteen',
-        'Persialaiset polttivat kaupungin maan tasalle',
-        'Roomalaiset valtasivat kaupungin ensimmäisenä',
-        'Makedonian kuningas Filippos II murhattiin',
+        'Aleksanteri Suuri kuoli sairauteen',
+        'Persialaiset polttivat kaupungin',
+        'Roomalaiset valtasivat kaupungin',
+        'Kuningas Filippos II murhattiin',
       ],
       oikea: 3,
       fakta: 'Nykyinen Verginan kaupunki perustettiin vasta vuonna 1922 Lausannen sopimuksen '
@@ -1229,7 +1229,7 @@ export const HAHMOTELMA_GRC = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/grc-nosto-naoussa-0f13f524.jpg',
         lyhyt: 'Viinitarha vuorten juurella Naoussan seudulla.',
-        selite: 'Kuvan kuvauksen mukaan viinitarhassa kasvatetaan Xinomavro-rypälettä, Naoussan ylänköjen tärkeintä punaviinirypälettä. Kuvan resoluutio on pieni.',
+        selite: 'Kuvassa on viinitarha, jossa kasvatetaan Xinomavro-rypälettä, Naoussan ylänköjen tärkeintä punaviinirypälettä.',
         lahde: 'Valokuva: Vagrand, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Vagrand',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vineyard_in_Naoussa,_Central_Macedonia,_Greece.jpg',
@@ -1312,17 +1312,15 @@ export const HAHMOTELMA_GRC = [
       + 'hopeasuonen löydön tuotot laivaston laajentamiseen 200 triremiin.',
     lahde: 'en-Wikipedia "Lavrio", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Mihin Themistokles sai ateenalaiset käyttämään Lavrion hopeasuonen tuotot noin '
-        + 'vuonna 483 eaa.?',
+      kysymys: 'Mihin Themistokles sai ateenalaiset käyttämään Lavrion hopeasuonen tuotot?',
       vaihtoehdot: [
-        'Akropoliin temppeleiden rakentamiseen',
-        'Ateenan sotalaivaston laajentamiseen',
-        'Kaupungin pitkien muurien rakentamiseen',
-        'Palkkasoturien maksamiseen Spartaa vastaan',
+        'Akropoliin temppeleihin',
+        'Sotalaivaston laajentamiseen',
+        'Kaupungin pitkiin muureihin',
+        'Palkkasotureihin Spartaa vastaan',
       ],
       oikea: 1,
-      fakta: 'Lavrion kaivokset olivat Ateenan valtion omaisuutta, ja niissä työskenteli antiikin '
-        + 'aikana yksinomaan orjia.',
+      fakta: 'Lavrion hopeaa käytettiin antiikissa pääasiassa rahoihin.'
     },
   },
   {
@@ -1548,7 +1546,7 @@ export const HAHMOTELMA_GRC = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/grc-nosto-thermopylae-a4682ae1.jpg',
       lyhyt: 'Leonidaksen patsas kohoaa Thermopylain muistomerkin muurin päällä.',
-      selite: 'Thermopylain muistomerkillä seisoo keihästä kohottava soturipatsas jalustallaan, ja sen takana on kaiverrettu marmorimuuri. Kuvan nimi ja kuvaus viittaavat Thermopylain Leonidas-muistomerkkiin.',
+      selite: 'Thermopylain Leonidas-muistomerkillä seisoo keihästä kohottava soturipatsas jalustallaan, ja sen takana on kaiverrettu marmorimuuri.',
       lahde: 'Valokuva: Ribouldingue, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Ribouldingue',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Leonidas-Denkmal_Thermopylen.jpg',
@@ -1594,10 +1592,10 @@ export const HAHMOTELMA_GRC = [
     visa: {
       kysymys: 'Mitä Simonideen epitafi kehottaa ohikulkijaa tekemään?',
       vaihtoehdot: [
-        'Palaamaan Spartaan ja vaatimaan kaatuneiden puolesta kostoa',
-        'Sytyttämään muistotulen Leonidaan haudalle Spartassa',
-        'Kertomaan spartalaisille, että he kaatuivat lakeja noudattaen',
-        'Varoittamaan persialaisia kuumien lähteiden kirouksesta',
+        'Kostamaan kaatuneiden puolesta',
+        'Sytyttämään Leonidaan muistotulen',
+        'Kertomaan Spartaan: makaamme täällä',
+        'Varoittamaan persialaisia lähteistä',
       ],
       oikea: 2,
       fakta: 'Taistelupaikka on nykyisin noin 20 metrin paksuisen maakerroksen alla, koska '
@@ -1705,10 +1703,10 @@ export const HAHMOTELMA_GRC = [
     visa: {
       kysymys: 'Miksi Navarinon taistelu on merkittävä meritaisteluiden historiassa?',
       vaihtoehdot: [
-        'Se oli ensimmäinen taistelu, jossa käytettiin höyrylaivoja',
-        'Se oli viimeinen suuri meritaistelu pelkillä purjelaivoilla',
-        'Siinä kaikki laivat taistelivat liikkeessä ilman ankkuria',
-        'Siinä kreikkalaiset voittivat ottomaanit yksin ilman apua',
+        'Ensimmäinen höyrylaivataistelu',
+        'Viimeinen suuri purjelaivataistelu',
+        'Taisteltiin ilman ankkureita',
+        'Kreikkalaiset voittivat yksin',
       ],
       oikea: 1,
       fakta: 'Taistelu syntyi pikemminkin vahingossa kuin suunnitelmallisesti, kun amiraali '
