@@ -30,6 +30,7 @@
     "savuke-nostokuva-karuselli.mjs",
     "savuke-kortti-sulku.mjs",
     "savuke-tekstivalinta.mjs",
+    "savuke-saapumisblur.mjs",
     "savuke-kuvalahteet.mjs"
   ],
   "harva": [

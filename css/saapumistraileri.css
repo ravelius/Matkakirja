@@ -66,7 +66,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.85);
+  /*
+   * KARTTA NÄKYY TRAILERIN TAKANA SUMENNETTUNA (omistaja 19.9.2026 klo
+   * 23.22: *"Kun tullaan uuteen kaupunkiin niin esittely kuvien taustalla
+   * saisi olla jo kartta blurrina yms jotta ei tule hyppäystä kun isoisän
+   * kuvat ja puhe alkaa"*). Ennen tässä oli 85 %:n musta peite: kartta
+   * oli jo valmiina uuden kaupungin kohdalla, mutta se paljastui vasta
+   * trailerin kadotessa — siitä syntyi hyppäys. Nyt kartta piirtyy
+   * taustalla koko ajan, sumennettuna ja hieman tummennettuna, ja
+   * trailerin lopussa häipyy vain sumennus (kerros katoaa 200 ms:ssä).
+   *
+   * BACKDROP-FILTER, EI filter: suodatin kohdistuu KERROKSEN TAKANA
+   * olevaan kuvaan eikä pallon omaan kankaaseen, joten WebGL-piirto,
+   * laattamoottori ja linssien kerrokset eivät mene suodattimen läpi
+   * (sama varovaisuus kuin linssikerroksen suodatinkiellossa).
+   */
+  background: rgba(8, 12, 18, 0.3);
+  -webkit-backdrop-filter: blur(12px) saturate(0.9) brightness(0.82);
+  backdrop-filter: blur(12px) saturate(0.9) brightness(0.82);
   /* Traileri on tervehdys eikä valikko: napautus missä tahansa ohittaa. */
   cursor: pointer;
   /* Kirjainten lento tulee "horisontista": yhteinen katselupiste ruudun
@@ -75,6 +92,14 @@
   perspective-origin: 50% 50%;
   opacity: 1;
   transition: opacity 200ms ease;
+}
+
+/*
+ * VARAREITTI: jos selain ei tue backdrop-filteriä, kartta ei saa jäädä
+ * paljaaksi trailerin tekstien alle — silloin peite on entinen musta.
+ */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .saapumistraileri { background: rgba(0, 0, 0, 0.85); }
 }
 
 /* Napautus ohittaa: koko päällys häipyy 200 ms:ssä (skripti poistaa sen). */
