@@ -89,7 +89,7 @@ export const PILVIEN_LAHDE = {
  * Fable vaihtaa tähän osoitteen vietyään kuvan ämpäriin; koodi ei
  * muutu, eikä puuttuva tiedosto aiheuta yhtään turhaa pyyntöä.
  */
-export const PILVIEN_OSOITE = null;
+export const PILVIEN_OSOITE = 'https://media.matkakirja.app/matkakirja/linssit/pilvet-bluemarble-2048.jpg';
 
 /** Pilvikuoren säde pallon säteestä (PAATOKSET 43: noin 1,01). */
 export const PILVIEN_SADE = 1.01;
