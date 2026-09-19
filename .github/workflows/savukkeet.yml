@@ -30,6 +30,14 @@
 # Ei secretejä: savukkeet eivät niitä tarvitse (vrt. savuke-pollo.yml,
 # joka TARVITSEE secretit ja ajaa siksi vain workflow_dispatchilla).
 #
+# HARVA SARJA (savukekarsinta, omistaja 19.9.2026 klo 18.50: "Testejä voi
+# vähentää siellä missä harvemmin tulee ongelmia vastaan"; raportti
+# docs/raportit/viesti-fable-savukekarsinta-20260919.md): PR-portti on
+# sarjat.json:n `julkaisu`. Aina vihreät ja hitaat rivit ovat `harva`-
+# sarjassa: PR ajaa niistä vain ne, joiden vartioimia tiedostoja PR
+# muuttaa (tools/savukkeet/valitse-harvat.mjs, sarjat.json harvaPolut),
+# ja schedule ajaa kerran päivässä mainista koko sarjan (`taysi`).
+#
 # Yksi paikka sarjojen määrittelylle: tools/savukkeet/sarjat.json
 # (NAKYMAT/KOOT/VAIN_AVAUS ja tunnetut punaiset), luetaan
 # tools/savukkeet/rakenna-matriisi.mjs:llä — sekä "lista"-jobissa,
@@ -46,11 +54,16 @@ on:
       - 'css/**'
       - 'tools/savukkeet/**'
       - '.github/workflows/savukkeet.yml'
+  # Kerran päivässä mainista koko sarja (julkaisu + harva), klo 06 Suomen
+  # kesäaikaa — ennen kuin sessiot alkavat ajaa selaimiaan.
+  schedule:
+    - cron: '0 3 * * *'
   workflow_dispatch:
     inputs:
       sarja:
         description: >-
-          julkaisu = julkaisusarja (tools/savukkeet/sarjat.json);
+          julkaisu = PR-portti (tools/savukkeet/sarjat.json);
+          harva = aina vihreät ja hitaat; taysi = julkaisu + harva;
           kaikki = kaikki tools/savukkeet/savuke-*.mjs;
           tai pilkuilla eroteltu tiedostonimilista
         required: false
@@ -62,6 +75,8 @@ on:
 
 permissions:
   contents: read
+  # gh pr diff --name-only (harvan sarjan polkusuodatin).
+  pull-requests: read
 
 # Peruu saman haaran/PR:n vanhan, yhä käynnissä olevan ajon uuden
 # pushin tullessa (omistaja/Fable 17.9.2026, PR #2551:n korjaussilmukka)
@@ -76,6 +91,7 @@ jobs:
   savukkeet-mac:
     if: >-
       github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'schedule' ||
       (github.event_name == 'pull_request' &&
        github.event.pull_request.head.repo.full_name == github.repository)
     # Label savukkeet on vain SamiMacStudio2:lla (18.9.2026): testit-runner
@@ -142,11 +158,23 @@ jobs:
             !/docs/
       - name: Aja sarja rinnakkain
         id: aja
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           # launchd-palvelun PATH ei välttämättä sisällä Homebrew'n nodea.
           export PATH="/opt/homebrew/opt/node@22/bin:/opt/homebrew/bin:$PATH"
           node -v
           SARJA="${{ github.event.inputs.sarja }}"
+          if [ -z "$SARJA" ] && [ "${{ github.event_name }}" = "schedule" ]; then
+            SARJA=taysi
+          elif [ -z "$SARJA" ] && [ "${{ github.event_name }}" = "pull_request" ]; then
+            # Harvan sarjan rivit vain PR:n muuttamien tiedostojen mukaan.
+            # gh:n virhe antaa tyhjän listan, jolloin valitsin ajaa kaikki
+            # harvat (varmalla puolella).
+            SARJA=$(gh pr diff "${{ github.event.pull_request.number }}" --name-only --repo "${{ github.repository }}" \
+              | node tools/savukkeet/valitse-harvat.mjs) || SARJA=taysi
+            echo "PR-sarja: $SARJA"
+          fi
           node tools/savukkeet/aja-sarja.mjs "${SARJA:-julkaisu}" "$TULOKSET"
       - name: Yhteenveto
         if: always()
