@@ -9317,7 +9317,15 @@ export const RAAMATTU = {
           + 'Fable klo 19.25): DNK 28 / 81 / 10 visaa (Aarhus -> Nyborgin linna; Fyn ja '
           + 'saaret renkaan ulkopuolella, ankkurilukitus velkana; Trelleborg-nimiolimitys '
           + 'ratkaistu maastokohteen nimio: \'\' -kentalla), HEAD 200 81/81, julkaistaan '
-          + 'v1963. Seuraava maa Sonnet 3:lle: Ruotsi.',
+          + 'v1963. Seuraava maa Sonnet 3:lle: Ruotsi (lista hyvaksytty 19.28). UNKARI '
+          + '(Sonnet 2, Fable klo 19.38): HUN 25 / 58 / 10 visaa (Mohacs ja Szigetvar '
+          + 'asiallisesti, Fesztyn kaatuneet pois; Herendin kolmas kuva pudotettu: '
+          + 'tunnistettava yksityishenkilo lahikuvassa - EMME JULKAISE TUNNISTETTAVIA '
+          + 'YKSITYISHENKILOITA nostokuvissa, sama saanto kaikille maille), HEAD 200 '
+          + '58/58, julkaistaan v1963. LOYDOS: Budapestin pelikaupunkimerkki on ~33 '
+          + 'lautayksikkoa kaakkoon todellisesta paikasta (kasin asetettu x/y '
+          + 'js/packs/europe.js) - Opus 2 -era H mittaa kaikki pelikaupungit. Seuraava '
+          + 'maa Sonnet 2:lle: Irlanti.',
         'KARTTAUUDISTUKSEN PAATOKSET 47: NOPAN JALKEEN KAMERA JAI TYHJAAN KOHTAAN - '
           + 'KOHDEMAAN ZOOMIKATTO KUMOSI ULOSSOVITUKSEN (Sonnet-simulaattoritesti kierros 5, '
           + '19.9.2026 klo 14.05-14.19 Suomen aikaa: Pariisi -> liftaus -> Amsterdam -> Liiku '
