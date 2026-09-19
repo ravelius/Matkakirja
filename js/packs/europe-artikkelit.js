@@ -1512,6 +1512,77 @@ export const EUROPE_ARTIKKELIT = {
   },
 
   /*
+   * BRYSSEL (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti).
+   * Teksti on kirjoitettu omin sanoin en-Wikipedian artikkeleista
+   * "Brussels" ja "History of Brussels" (luettu 19.9.2026), 1873-
+   * näkökulmasta: Belgian pääkaupunki, kuningas Leopold II (hallitsi
+   * vuodesta 1865), Grand-Place, Manneken Pis, Galeries Royales Saint-
+   * Hubert (avattu 1847), Palais de Justice rakenteilla 1866–1883,
+   * pitsinnyplääjät ja Sennejoen kattaminen 1867–1871. Praliinisuklaata
+   * (Neuhaus 1912) ja Atomiumia (Expo 58) EI mainita esittelyssä
+   * saavutuksina — ne eivät ole vielä olemassa isoisän matkan aikaan;
+   * praliini mainitaan vain vastakohtana EUROPE_FACTS-tiedossa.
+   */
+  Bryssel: {
+    intro: 'Bryssel on Belgian pääkaupunki Sennejoen varrella, ja '
+      + 'siellä asuu vuonna 1873 noin 180 000 ihmistä — esikaupunkeineen '
+      + 'huomattavasti enemmän. Kaupunki on kaksikielinen: kadulla '
+      + 'kuulee sekä ranskaa että flaamia. Belgia itsenäistyi '
+      + 'Alankomaista vuonna 1830, ja sitä hallitsee nyt kuningas '
+      + '**Leopold II**, joka nousi valtaistuimelle 1865.'
+      + '\n\n'
+      + 'Keskustan sydän on **Grand-Place**, keskiaikaisten '
+      + 'kiltatalojen reunustama tori. Ranskan tykistö ampui torin '
+      + 'raunioiksi vuonna 1695, ja porvarikillat rakensivat sen '
+      + 'uudelleen muutamassa vuodessa nykyiseen, kullattuun asuunsa. '
+      + 'Torin lähellä seisoo kaupungin toinen tunnusmerkki, pieni '
+      + 'pronssinen **Manneken Pis** -suihkulähde, joka on huvittanut '
+      + 'matkalaisia jo vuosisatoja.'
+      + '\n\n'
+      + 'Kaupunki on juuri uudistanut itseään: likainen Sennejoki '
+      + 'katettiin keskustan kohdalta vuosina 1867–1871 ja sen päälle '
+      + 'rakennettiin leveät bulevardit. Kauppiaat kulkevat lasikattoisen '
+      + '**Galeries Royales Saint-Hubertin** läpi jo vuodesta 1847, ja '
+      + 'kaupungin laidalla nousee valtava oikeuspalatsi, Palais de '
+      + 'Justice, jota on rakennettu vuodesta 1866 eikä se ole vielä '
+      + 'valmis. Toreilla myydään maailmankuulua brysseliläistä pitsiä.',
+    teksti: 'Bryssel sai alkunsa Sennejoen saaresta, jolle rakennettiin '
+      + 'kappeli 900-luvulla, ja siitä kasvoi kauppatie Kölnin ja '
+      + 'Brugesin välillä. Keskiajalla kaupunki rikastui '
+      + 'tekstiiliteollisuudesta ja kilta-järjestelmästä, ja sen '
+      + 'hallintoa johtivat vuorotellen porvarikillat ja aateli. '
+      + 'Keskustan torin, Grand-Placen, reunustavat yhä samat '
+      + 'kiltatalot, jotka rakennettiin uudelleen sen jälkeen kun '
+      + 'Ranskan kuninkaan tykistö pommitti torin raunioiksi elokuussa '
+      + '1695 — jälleenrakennus vei vain muutaman vuoden, ja lopputulos '
+      + 'on yksi Euroopan komeimmista toreista.'
+      + '\n\nVuonna 1830 belgialaiset nousivat kapinaan Alankomaiden '
+      + 'kuningasta vastaan, ja kapinan tuloksena syntyi itsenäinen '
+      + 'Belgian kuningaskunta, jonka pääkaupungiksi Bryssel tuli. '
+      + 'Ensimmäinen kuningas oli Leopold I; hänen poikansa Leopold II '
+      + 'on hallinnut vuodesta 1865. Belgia on nuori valtio, mutta se '
+      + 'teollistui nopeasti — maassa avattiin jo 1835 Euroopan mantereen '
+      + 'ensimmäinen rautatielinja, ja Bryssel on sittemmin kasvanut '
+      + 'rautateiden solmukohdaksi.'
+      + '\n\nKaupunki on äskettäin uudistanut keskustansa perin '
+      + 'pohjin: pormestari Jules Anspachin johdolla likainen ja '
+      + 'usein tulviva Sennejoki katettiin ja peitettiin leveillä '
+      + 'bulevardeilla vuosina 1867–1871, mikä paransi terveysoloja '
+      + 'huomattavasti. Kauppiaat ovat kulkeneet lasikattoisen '
+      + 'ostoskadun, Galeries Royales Saint-Hubertin, läpi jo vuodesta '
+      + '1847 — se on yksi Euroopan ensimmäisistä katetuista '
+      + 'kauppakujista. Kaupungin laidalla nousee valtava oikeustalo, '
+      + 'Palais de Justice, jonka arkkitehti Joseph Poelaert suunnitteli '
+      + 'ja jota rakennetaan vuodesta 1866; se valmistuu vasta '
+      + '1880-luvulla ja on tuolloin pinta-alaltaan maailman suurin '
+      + 'rakennus. Toreilla ja kaduilla myydään brysseliläistä pitsiä, '
+      + 'jota nyplätään käsin sukupolvesta toiseen — ja pieni '
+      + 'pronssinen poikapatsas, Manneken Pis, jatkaa vuosisataista '
+      + 'ilveilyään kaupungin sydämessä.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
+  /*
    * TEKSTIREMONTTI 20.8.2026, erä E1: intro on nyt etusivun leipäteksti
    * kappaleineen ja lihavointeineen (ks. Rooman lohkokommentti yllä).
    * Muuri ja kaupungin jako kerrotaan neutraalina historiana ilman

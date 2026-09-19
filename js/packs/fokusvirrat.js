@@ -36,6 +36,7 @@ import { FOKUSVIRTA_TUKHOLMA } from './fokusvirta-tukholma.js';
 import { FOKUSVIRTA_WIEN } from './fokusvirta-wien.js';
 import { FOKUSVIRTA_SEVILLA } from './fokusvirta-sevilla.js';
 import { FOKUSVIRTA_BERGEN } from './fokusvirta-bergen.js';
+import { FOKUSVIRTA_BRYSSEL } from './fokusvirta-bryssel.js';
 import { FOKUSVIRTA_AMSTERDAM } from './fokusvirta-amsterdam.js';
 import { FOKUSVIRTA_DUBLIN } from './fokusvirta-dublin.js';
 import { FOKUSVIRTA_EDINBURGH } from './fokusvirta-edinburgh.js';
@@ -80,9 +81,15 @@ import { FOKUSVIRTA_TROMSSA } from './fokusvirta-tromssa.js';
  * kun kentät katoavat TÄYDESTÄ pakista vahingossa. Nimetty joukko
  * pitää poikkeuksen luettelona: uusi kevyt pakki on yksi rivi tässä,
  * ja täyden pakin rapautuminen kaataa testin kuten ennenkin.
+ *
+ * BRYSSEL (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti)
+ * liittyi samaan kevyeen joukkoon: uusi pelikaupunki tarvitsee
+ * fokusvirtapakin heti (tests/fokusvirta.test.mjs), mutta täysi pino
+ * (täkyt, oppitunti, kohtaaminen, lehtitehtävät) on oma, isompi
+ * sisältöerä eikä kuulu minimiin.
  */
 export const KEVYET_FOKUSVIRRAT = new Set([
-  'alpit', 'islanti', 'kreeta', 'lappi', 'sisilia', 'tromssa',
+  'alpit', 'islanti', 'kreeta', 'lappi', 'sisilia', 'tromssa', 'bryssel',
 ]);
 
 export const FOKUSVIRRAT = {
@@ -250,6 +257,13 @@ export const FOKUSVIRRAT = {
   alpit: FOKUSVIRTA_ALPIT,
   lappi: FOKUSVIRTA_LAPPI,
   tromssa: FOKUSVIRTA_TROMSSA,
+  /*
+   * BRYSSEL (19.9.2026, omistajan päätös: Belgia saa pelikaupungin
+   * Bryssel, pilotti). Kevyt pakki (KEVYET_FOKUSVIRRAT yllä), sama
+   * perustelu kuin edellisellä kuudella: peli tarvitsee matkakirjan ja
+   * pulun kuplan heti, täysi pino on oma sisältöerä.
+   */
+  bryssel: FOKUSVIRTA_BRYSSEL,
 };
 
 /** Kaupungin fokusvirta tai null, jos kaupungille ei ole sisältöä. */

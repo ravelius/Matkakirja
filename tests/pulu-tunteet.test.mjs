@@ -33,8 +33,10 @@ const LAHDE = readFileSync(new URL('../js/fokusvirta.js', import.meta.url), 'utf
  */
 const SUURI = new Set(['venetsia']);
 
-test('jokaisella 45 kaupungilla on kelvollinen pulun tunnetagi', () => {
-  assert.equal(KAUPUNGIT.length, 45, 'Euroopan fokusvirtapakkeja pitää olla 45');
+test('jokaisella fokusvirtakaupungilla on kelvollinen pulun tunnetagi', () => {
+  // 45 → 46 (19.9.2026): Bryssel liittyi pelikaupungiksi (omistajan
+  // päätös, Belgian pilotti).
+  assert.equal(KAUPUNGIT.length, 46, 'Euroopan fokusvirtapakkeja pitää olla 46');
   for (const id of KAUPUNGIT) {
     const tagi = FOKUSVIRRAT[id]?.pollo?.tunne;
     assert.ok(tagi, `${id}: pollo.tunne puuttuu`);
@@ -77,8 +79,23 @@ test('fokusvirta ilmoittaa tunnetagin kommenttikuplan alussa', () => {
  * jos tunnetagi vuotaisi tekstiin, jokainen 45 kaupungin äänite
  * vaikenisi kerralla. Tämä testi ajaa saman portin läpi kaikki kuplat.
  */
+/*
+ * ÄÄNITETTÄ VAILLA OLEVAT KAUPUNGIT — nimetty poikkeus, ei löysennys.
+ *
+ * Bryssel (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti)
+ * on ensimmäinen fokusvirtakaupunki, jolle Livian ääntä ei ole vielä
+ * tuotettu (LIVIAN_VERSIOIDUT_AANET on suljettu 45 kaupungin erä,
+ * js/liviapuhe.js livianKaupunkiKentat). Sonnet-sisältösessiolla ei ole
+ * pääsyä äänituotantoon; tämä testi ei siis voi tarkistaa Brysselin
+ * ääniporttia ennen kuin Livian repliikki äänitetään ja indeksoidaan
+ * samaan tauluun. Poikkeus on nimetty, jotta uusi äänetön kaupunki ei
+ * livahda mukaan huomaamatta.
+ */
+const AANETTOMAT = new Set(['bryssel']);
+
 test('tunnetagi ei muuta tekstiä eikä ohita versionoidun äänen porttia', () => {
   for (const id of KAUPUNGIT) {
+    if (AANETTOMAT.has(id)) continue;
     const kuplat = livianKentanKuplat(FOKUSVIRRAT[id], 'kommentti');
     assert.ok(kuplat.length, `${id}: kommenttikupla puuttuu`);
     kuplat.forEach((teksti, i) => {

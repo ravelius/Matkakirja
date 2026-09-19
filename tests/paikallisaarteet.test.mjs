@@ -118,7 +118,7 @@ test('jokaisella maalla on molemmat aarteet nimineen ja faktoineen', () => {
  * ODOTTAVAT KUVAT on lueteltu tässä nimeltä, jotta lista ei kasva
  * huomaamatta: uusi kuvaton pari on lisättävä tähän tietoisesti.
  */
-const KUVAA_ODOTTAVAT = new Set(['FIN']);
+const KUVAA_ODOTTAVAT = new Set(['FIN', 'BEL']);
 
 test('kuva on maan oma ja olemassa — tai sitä ei ole vielä lainkaan', () => {
   for (const [iso, pari] of Object.entries(PAIKALLISAARTEET)) {
