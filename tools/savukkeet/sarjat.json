@@ -30,7 +30,8 @@
     "savuke-reittihelmet.mjs",
     "savuke-siirtozoomi.mjs",
     "savuke-kohdevalinta.mjs",
-    "savuke-astro-sumu.mjs"
+    "savuke-astro-sumu.mjs",
+    "savuke-laivamatka-tanger.mjs"
   ],
   "asetukset": {
     "savuke-ihmisen-kappaleet.mjs": {
@@ -247,6 +248,9 @@
         "SAVUKE_CHROMIUM_LIPUT": "--disable-features=AudioServiceOutOfProcess"
       },
       "huomautus": "AANI SAMASSA PROSESSISSA (Fable 19.9.2026 klo 08.45 Suomen aikaa, v1947 rerun 35423483607): headless Chromiumin ERILLINEN aanipalvelu (AudioServiceOutOfProcess) antoi Macilla AudioContext-kellolle vain n. 1/7 reaaliajasta (mitattu about:blank: currentTime +0,29 s / 2,0 s; lipulla +1,96 s), joten 2 s:n gain-feidi oli 2,7 s:n naytteella yha 0,007 ja vaitteet 1 ja 3 kaatuivat myos YKSIN ajettuna (20/24, deterministinen, ei kuorma). Oletusaanilaite oli oikea (Mac Studio-kaiuttimet, Raamattu MAC STUDIO C) - tama on eri vika kuin Scarlett-jumi. Lippu ajaa aanen selainprosessissa: 24/24 yksin. Muut aanivartiot (pariisi-lahizoom 8c, topografialinssi) eivat mittaa kellon nopeutta, joten lippu on rajattu talle riville."
+    },
+    "savuke-laivamatka-tanger.mjs": {
+      "huomautus": "Laivamatkan noppa liu'ussa (Sonnet-simulaattoritesti 19.9.2026, Opus-era laivamatka-tanger): noppanappi piirtyi suljettuun .toimintorivi-liukuun (opacity 0, pointer-events none) vaiheessa roll. WebKit 7/7, Chromium 7/7, ~1 min. Lisatty julkaisusarjaan v1950."
     }
   }
 }
