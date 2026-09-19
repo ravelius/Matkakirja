@@ -303,7 +303,7 @@ for (const ruutu of RUUDUT) {
   });
   tieto(`${tunnus}: maailmatila pisteitä päällä / pois`, `${maailma.paalla} / ${maailma.pois}`);
   vaadi(`${tunnus}: 5. maailmatila näyttää kaikki ja sammutus palauttaa rajauksen`,
-    maailma.paalla === 262 && maailma.pois < maailma.paalla, JSON.stringify(maailma));
+    maailma.paalla === 264 && maailma.pois < maailma.paalla, JSON.stringify(maailma));
 
   vaadi(`${tunnus}: 6. ei sivuvirheitä`, virheet.length === 0,
     virheet.join(' | ').slice(0, 300));
