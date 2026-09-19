@@ -33,11 +33,19 @@
  * ── MISSÄ AITO NASA-PILVIKUVA ON ──────────────────────────────────
  *
  * PAATOKSET 43 kohta 7 nimeää NASA Blue Marble -pilvikuvan (public
- * domain). Sitä EI voi tuoda repoon eikä ladata tästä ennen kuin se on
- * ämpärissä, joten kytkin on valmiina: `PILVIEN_OSOITE` on `null`, ja
- * kun Fable on vienyt kuvan ämpäriin, yhden vakion vaihto ottaa sen
- * käyttöön — proseduraalinen kangas jää varareitiksi, jos lataus ei
- * onnistu (offline, 404). Lähde ja lisenssi: ks. PILVIEN_LAHDE.
+ * domain). Kuva on ämpärissä ja `PILVIEN_OSOITE` osoittaa siihen
+ * (19.9.2026). Proseduraalinen kangas EI poistunut: se maalataan
+ * ensin ja jää voimaan, jos lataus ei onnistu (offline, 404, CORS).
+ * Lähde ja lisenssi: ks. PILVIEN_LAHDE.
+ *
+ * AITO KUVA ON JPEG — SILLÄ EI OLE ALFAA. Tämä on koko erän juurisyy:
+ * kun osoite kytkettiin suoraan kalvon tekstuuriksi, kuori oli MUSTA
+ * pallo valkoisine pilvineen (kuvan tausta on musta: 37 % pikseleistä
+ * alle luminanssin 32) peittävyydellä 0,9 — pallo mustui, ja jokainen
+ * pintaa katsova mittari luki pilvikuoren. Siksi kuva käännetään
+ * ladattaessa RGBA:ksi, jossa ALFA TULEE LUMINANSSISTA (`pilvikuvanAlfa`):
+ * musta = läpinäkyvä taivas, valkoinen = peittävä pilvi. Sama
+ * napahäivytys kuin proseduraalisella kankaalla.
  *
  * ── KOHINA ON SAUMATON ────────────────────────────────────────────
  *
@@ -89,8 +97,7 @@ export const PILVIEN_LAHDE = {
  * Fable vaihtaa tähän osoitteen vietyään kuvan ämpäriin; koodi ei
  * muutu, eikä puuttuva tiedosto aiheuta yhtään turhaa pyyntöä.
  */
-export const PILVIEN_OSOITE = null;
-/* Ampärissa on jo https://media.matkakirja.app/matkakirja/linssit/pilvet-bluemarble-2048.jpg (NASA Blue Marble, PD); kytketaan omassa erassa, kun astro-pallon, astro-sumun ja astro-aanen savukkeet on kalibroitu aidolle pilvikuvalle (v1948 CI 35425678571: 6 savuketta punaisena aidolla kuvalla). */
+export const PILVIEN_OSOITE = 'https://media.matkakirja.app/matkakirja/linssit/pilvet-bluemarble-2048.jpg';
 
 /** Pilvikuoren säde pallon säteestä (PAATOKSET 43: noin 1,01). */
 export const PILVIEN_SADE = 1.01;
@@ -156,6 +163,14 @@ export const SUMUKERROKSET = [
  * kuin reliefin omalla häivytyksellä: alfa nollataan navoille päin.
  */
 export const PILVIEN_NAPAHAIVYTYS = [66, 80];
+
+/**
+ * AIDON PILVIKUVAN ALFAKYNNYS. Kuvan tausta ei ole puhdas musta (JPEGin
+ * pakkaus jättää 2–8 yksikön kohinaa), ja ilman kynnystä koko taivas
+ * saisi ohuen harson. 0,06 leikkaa kohinan mutta jättää ohuimmat
+ * kuituset pilvet näkyviin.
+ */
+export const PILVIEN_KUVAN_KYNNYS = 0.06;
 
 /** Sumun sävy (kylmä sinivalkoinen — avaruuspöly, ei savu). */
 export const SUMUN_SAVY = [206, 222, 246];
@@ -263,6 +278,46 @@ export function pilvipikselit({
     }
   }
   return { leveys, korkeus, data };
+}
+
+/**
+ * AITO PILVIKUVA RGBA-PILVIKANKAAKSI — ALFA LUMINANSSISTA.
+ *
+ * NASA Blue Marble -pilvikuva on JPEG (luminanssikartta): musta =
+ * pilvetön taivas, valkoinen = paksu pilvi. JPEGillä ei ole alfaa,
+ * joten sellaisenaan tekstuuriksi pantuna kuori olisi MUSTA pallo
+ * (mitattu 19.9.2026: keskipisteen kirkkaus 13,6, kynnys 20).
+ *
+ * Tämä kirjoittaa `data`n paikalleen: RGB on pilven oma valkoinen
+ * (luminanssi antaa hienoisen vaihtelun, tasainen valkoinen olisi
+ * maali) ja ALFA on luminanssi kynnystettynä ja napahäivytettynä —
+ * täsmälleen sama napasääntö kuin proseduraalisella kankaalla, koska
+ * tasavälisen kuvan navat venyvät säteittäisiksi juoviksi.
+ *
+ * Puhdas funktio (tests/astro-sumu.test.mjs): ei DOMia, ei latausta.
+ *
+ * @param {Uint8ClampedArray} data  RGBA, leveys × korkeus
+ */
+export function pilvikuvanAlfa(data, leveys = PILVIEN_LEVEYS, korkeus = PILVIEN_KORKEUS, {
+  napahaivytys = PILVIEN_NAPAHAIVYTYS, kynnys = PILVIEN_KUVAN_KYNNYS,
+} = {}) {
+  for (let y = 0; y < korkeus; y += 1) {
+    const lat = 90 - ((y + 0.5) / korkeus) * 180;
+    const napa = 1 - raja01(
+      (Math.abs(lat) - napahaivytys[0]) / (napahaivytys[1] - napahaivytys[0]),
+    );
+    for (let x = 0; x < leveys; x += 1) {
+      const i = (y * leveys + x) * 4;
+      const lum = (data[i] * 0.2126 + data[i + 1] * 0.7152 + data[i + 2] * 0.0722) / 255;
+      const alfa = raja01((lum - kynnys) / (1 - kynnys)) ** 0.85;
+      const savy = 226 + Math.round(29 * lum);
+      data[i] = savy;
+      data[i + 1] = savy;
+      data[i + 2] = Math.min(255, savy + 6);
+      data[i + 3] = Math.round(255 * alfa * napa);
+    }
+  }
+  return data;
 }
 
 /**
@@ -403,6 +458,8 @@ export function luoAstroSumu({
     return a > 0 ? a : 0;
   };
 
+  let purettu = false;
+
   /* ---- a) pilvikuori pallon pinnan päälle -------------------------- */
   /*
    * KUORI ON LAUDAN OMA KALVO (js/pallolauta/linssit.js `kalvo`), ei
@@ -419,15 +476,56 @@ export function luoAstroSumu({
   try {
     pilvikangasOlio = pilvikangas({}, doc);
   } catch { pilvikangasOlio = null; }
+  let pilvienLahde = 'kangas';
   if (pilvikangasOlio && lauta?.linssit?.kalvo) {
+    /*
+     * KANGAS ENSIN, AITO KUVA SEN PÄÄLLE. Osoitetta EI anneta kalvolle
+     * suoraan: JPEGillä ei ole alfaa, ja kalvo panisi sen tekstuuriksi
+     * sellaisenaan — musta pallo (ks. tiedoston alku). Kuori syntyy
+     * proseduraalisesta kankaasta heti (ei odotusta, toimii offline),
+     * ja kun ämpärin kuva on ladattu, SAMA kangas maalataan uusiksi
+     * luminanssialfalla ja tekstuuri viedään kerran näytönohjaimelle.
+     */
     pilvet = lauta.linssit.kalvo(PILVIEN_OSA, {
-      // Ämpärin aito NASA-kuva, jos se on jo siellä; muuten kangas.
-      kuva: PILVIEN_OSOITE ?? pilvikangasOlio,
+      kuva: pilvikangasOlio,
       peittavyys: 0,
       sade: PILVIEN_SADE,
       jarjestys: 2,
     });
   }
+
+  /**
+   * ÄMPÄRIN AITO PILVIKUVA KANKAALLE (PAATOKSET 43 kohta 7).
+   *
+   * Haku on `fetch` + `createImageBitmap`: blob on samaa alkuperää,
+   * joten kangas EI tahriinnu eikä `getImageData` heitä — ja jos haku
+   * kaatuu (offline, 404, CORS), kankaaseen ei ole koskettu ja
+   * proseduraaliset pilvet jäävät voimaan. Kangas maalataan VASTA kun
+   * bittikartta on käsissä, juuri tästä syystä.
+   */
+  const maalaaAitoPilvikuva = async () => {
+    if (!PILVIEN_OSOITE || !pilvikangasOlio || !pilvet) return false;
+    try {
+      const ctx = pilvikangasOlio.getContext?.('2d');
+      if (!ctx || typeof ikkuna.fetch !== 'function'
+        || typeof ikkuna.createImageBitmap !== 'function') return false;
+      const vastaus = await ikkuna.fetch(PILVIEN_OSOITE, { mode: 'cors', credentials: 'omit' });
+      if (!vastaus?.ok) return false;
+      const bittikartta = await ikkuna.createImageBitmap(await vastaus.blob());
+      if (purettu) { bittikartta?.close?.(); return false; }
+      ctx.clearRect(0, 0, PILVIEN_LEVEYS, PILVIEN_KORKEUS);
+      ctx.drawImage(bittikartta, 0, 0, PILVIEN_LEVEYS, PILVIEN_KORKEUS);
+      bittikartta?.close?.();
+      const kuvadata = ctx.getImageData(0, 0, PILVIEN_LEVEYS, PILVIEN_KORKEUS);
+      pilvikuvanAlfa(kuvadata.data, PILVIEN_LEVEYS, PILVIEN_KORKEUS);
+      ctx.putImageData(kuvadata, 0, 0);
+      pilvet.paivita?.();
+      pilvienLahde = 'ampari';
+      return true;
+    } catch {
+      return false;
+    }
+  };
 
   /* ---- b) avaruussumu kameran ja pallon väliin --------------------- */
   let sumuOsoite = null;
@@ -483,7 +581,8 @@ export function luoAstroSumu({
   };
   sijoita();
 
-  let purettu = false;
+  if (PILVIEN_OSOITE) void maalaaAitoPilvikuva();
+
   let sumunPeittoNyt = 0;
   let pilvienPeittoNyt = 0;
   let pilvienKulma = 0;
@@ -580,6 +679,7 @@ export function luoAstroSumu({
       kehyksia,
       reduced,
       aito: Boolean(PILVIEN_OSOITE),
+      pilvienLahde,
     }),
     pura() {
       if (purettu) return;

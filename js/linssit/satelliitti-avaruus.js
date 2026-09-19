@@ -2849,6 +2849,18 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     pakotaKehys: () => kehysvahti.pakota(),
     /** Vartion kytkin: reunavarjo pois/päälle samaan näkymään. */
     asetaVarjostus: (paalla) => kalvo?.asetaVarjostus?.(paalla),
+    /*
+     * MITTARIN KYTKIN: PILVIKUORI POIS PINNAN MITTAUKSEN AJAKSI.
+     *
+     * Sama tarve kuin `pinnanKirkkaus`illa (19.9.2026, PAATOKSET 43
+     * kohta 7), mutta KUVAKAAPPAUKSESTA mittaaville savukkeille:
+     * auringon sivuvarjo, sädekehän valaisu ja pinnan mustuus luetaan
+     * PINNASTA, ja pilvikuori (säde 1,01, peitto kaukaa 0,9) on
+     * täsmälleen näytteiden ja pinnan välissä. `visible`-lippu, ei
+     * häivytystä — arvo palautuu sellaisenaan. EI pelin polkua:
+     * pelaajalle pilvet ovat aina päällä.
+     */
+    piilotaPilvet: (kylla = true) => Boolean(sumu?.piilotaPilvet?.(kylla)),
     pura() {
       purettu = true;
       avausajo.kaynnissa = false;
