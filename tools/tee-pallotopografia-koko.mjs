@@ -217,7 +217,10 @@ const KOETIN = [
   { nimi: 'Intian valtameri', lon: 80, lat: -20, odotus: 'meri' },
   { nimi: 'Etelämantereen sisäosa', lon: 0, lat: -80, odotus: 'jaa' },
   { nimi: 'Grönlannin jäätikkö', lon: -42, lat: 72, odotus: 'jaa' },
-  { nimi: 'Pohjoisnapa (Jäämeri)', lon: 0, lat: 89.5, odotus: 'jaa' },
+  // Jäämeri on 19.9.2026 alkaen merijäätä 40 %:n peitolla (tools/
+  // reliefivarit.mjs JAA.meriPohjoinen): sininen johtaa, mutta sävy on
+  // vaalennettu — ei puhdasta jäätä eikä puhdasta syvää merta.
+  { nimi: 'Pohjoisnapa (Jäämeri)', lon: 0, lat: 89.5, odotus: 'merijaa' },
 ];
 
 const koetinPaikat = KOETIN.map((k) => {
@@ -394,7 +397,10 @@ for (const k of koetinPaikat) {
   // on samaa väriä, mutta koettimet ovat tasaisilla jäätiköillä) eikä
   // vaaleaan rannikkoveteen (jonka sini johtaa yhä).
   const jaa = Math.min(r, v, s) > 150 && (Math.max(r, v, s) - Math.min(r, v, s)) < 45;
-  const osui = k.odotus === 'meri' ? meri : (k.odotus === 'jaa' ? jaa : !meri && !jaa);
+  // Merijää: sininen johtaa punaista, ja jää on vaalentanut syvän meren.
+  const merijaa = s > r + 15 && r > 60;
+  const osui = k.odotus === 'meri' ? meri
+    : (k.odotus === 'jaa' ? jaa : (k.odotus === 'merijaa' ? merijaa : !meri && !jaa));
   if (!osui) virheita += 1;
   console.log(`  ${osui ? 'ok  ' : 'VIKA'} ${k.nimi.padEnd(24)} `
     + `rgb(${String(r).padStart(3)},${String(v).padStart(3)},${String(s).padStart(3)}) `

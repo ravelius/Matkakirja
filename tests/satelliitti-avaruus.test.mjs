@@ -982,7 +982,11 @@ test('jään sekoitus: päiväntasaajalla ei jäätä, navalla lähes pelkkää'
   // Etelämanner on jäätä, Jäämeri vain osittain — muuten rantaviiva
   // katoaisi, ja juuri se on tämän kuvan tarkoitus.
   assert.ok(Math.abs(jaapaino(-80, 2500) - JAA.maaKatto) < 1e-9);
-  assert.ok(Math.abs(jaapaino(89, -4000) - JAA.meriKatto) < 1e-9);
+  assert.ok(Math.abs(jaapaino(-89, -4000) - JAA.meriKatto) < 1e-9);
+  // Jäämeri kevyemmin (19.9.2026): altaat näkyvät jään läpi.
+  assert.ok(Math.abs(jaapaino(89, -4000) - JAA.meriPohjoinenKatto) < 1e-9);
+  assert.ok(JAA.meriPohjoinenKatto < JAA.meriKatto, "Jäämeren jää ei saa olla etelän merijäätä peittävämpää");
+  assert.equal(jaapaino(71, -1000), 0, "Jäämeren jää alkaa vasta 72°:ssa");
   assert.ok(JAA.meriKatto < JAA.maaKatto, 'merijää ei saa peittää yhtä täysin kuin mannerjää');
   // Liuku eikä kytkin: terävä raja piirtäisi navan ympäri renkaan.
   let edellinen = 0;

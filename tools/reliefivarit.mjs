@@ -192,12 +192,25 @@ export const KALVO = { tummennus: 0.85, vaalennus: 0.5 };
  */
 export const JAAN_VARI = [236, 240, 244];
 
+/*
+ * JÄÄMERI KEVYEMMÄKSI (omistaja 19.9.2026 klo 15.40 Suomen aikaa,
+ * Fablen tehtävä 5b). Astronautin kamerassa pohjoisnapa näkyi
+ * tasaisena vaaleana levynä: 72 %:n merijää peitti Jäämeren altaat ja
+ * Lomonosovin selänteen, ja linssin oma himmennys (saturaatio 0,8 ja
+ * valokompensaatio navalla noin 0,63) vei loputkin sävyerot. Pohjoisen
+ * merijää alkaa nyt 72°:sta ja jää 40 %:iin, joten syvyysasteikko
+ * näkyy jään läpi. Koeala 64–90° N: meren sinisyys (sininen − punainen)
+ * yli 80°:n leveydellä 34 → 67. ETELÄ EI MUUTU: Etelämantereen
+ * ympäryksen merijää ja kaikki mannerjää (maa, maaKatto) ovat ennallaan.
+ */
 /** Jäävyöhykkeet asteina ja sekoituksen katto. Ks. yllä. */
 export const JAA = {
   maa: [62, 70],
   meri: [66, 78],
   maaKatto: 0.88,
   meriKatto: 0.72,
+  meriPohjoinen: [72, 84],
+  meriPohjoinenKatto: 0.4,
 };
 
 /** Pehmeä askel (smoothstep) — sama kaava kuin pelin linsseillä. */
@@ -217,5 +230,7 @@ export function jaapaino(lat, korkeusM) {
   const a = Math.abs(lat);
   return korkeusM >= 0
     ? JAA.maaKatto * pehmea(JAA.maa[0], JAA.maa[1], a)
-    : JAA.meriKatto * pehmea(JAA.meri[0], JAA.meri[1], a);
+    : (lat > 0
+      ? JAA.meriPohjoinenKatto * pehmea(JAA.meriPohjoinen[0], JAA.meriPohjoinen[1], a)
+      : JAA.meriKatto * pehmea(JAA.meri[0], JAA.meri[1], a));
 }
