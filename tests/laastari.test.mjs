@@ -31,3 +31,11 @@ test('laastarin leveysraja jättää navat 4k-pohjalle', () => {
   assert.ok(LAASTARIN_LEVEYSRAJA <= 62, 'Grönlannin jää alkaa 60 °N:n tienoilla');
   assert.ok(LAASTARIN_LEVEYSRAJA >= 55, 'Välimeri ja Itämeren eteläosa kuuluvat laastariin');
 });
+
+test('aukko laajenee reunan sekoitettuihin pikseleihin, ei batymetriaan', () => {
+  // 5 × 1: aukko | reunan sekoitus | reunan sekoitus | batymetria | maa
+  const rivi = [[38, 78, 145], [50, 88, 150], [60, 95, 160], [110, 150, 200], [120, 140, 90]];
+  const data = new Uint8ClampedArray(rivi.flatMap((p) => [...p, 255]));
+  merkitseMerivariAukoksi(data, LAASTARIN_MERIVARI, 3, 5);
+  assert.deepEqual([3, 7, 11, 15, 19].map((i) => data[i]), [0, 0, 0, 255, 255]);
+});
