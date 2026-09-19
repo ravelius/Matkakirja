@@ -9561,7 +9561,12 @@ export const RAAMATTU = {
           + '(+656 laattaa, viivataso 6 319); Mac 3,96 laattaa/s/ydin, arvio n. 0,5 h; '
           + 'luetteloa EI vieda amparin juureen ajossa - Fable julkaisee sen versiossa. '
           + 'savuke-nostoklikkaus: 4b mittaa maakohtaista polttoa, 5 pois, 6 zoomaa '
-          + 'datapisteen ulos; vaite 1 (Lyon ei avaudu aidosta napautuksesta) selvitys kesken.',
+          + 'datapisteen ulos; vaite 1 (Lyon) oli vartion odotusvika, ei tuotevika. KIERROS 17 '
+          + 'OSA 1 (Sonnet 1, v1970, Fable 02.35): Borgundin visa toimii v1970:ssa (+50), v1969:n '
+          + 'vika ei toistunut; vaara vastaus 0 puntaa ja nayttaa oikean, uudelleenavaus ei '
+          + 'maksa tuplasti; kartuscha ei aukea kortin taakse; ISL/CHE/NOR kuvat OK; '
+          + 'arvonimet oikeista maista (4 nimea); saapumisblur Pariisissa ilman hyppaysta. '
+          + 'Loput v1971:lla.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
