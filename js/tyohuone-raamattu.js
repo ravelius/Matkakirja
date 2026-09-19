@@ -9333,7 +9333,12 @@ export const RAAMATTU = {
           + '58/58, julkaistaan v1963. LOYDOS: Budapestin pelikaupunkimerkki on ~33 '
           + 'lautayksikkoa kaakkoon todellisesta paikasta (kasin asetettu x/y '
           + 'js/packs/europe.js) - Opus 2 -era H mittaa kaikki pelikaupungit. Seuraava '
-          + 'maa Sonnet 2:lle: Irlanti.',
+          + 'maa Sonnet 2:lle: Irlanti (lista hyvaksytty 19.44). v1963 PR #2614 klo 19.46 '
+          + '(DNK, HUN, kuvalahteet suurennokseen, pystykuva, nimiot, laastari vain maa). '
+          + 'RUOTSI (Sonnet 3, Fable klo 19.48): SWE 28 / 83 / 10 visaa (Halsingegardar '
+          + 'Erik-Andersin kohdalla; Rattvik ja Almhult kuntartikkeleista; Jokkmokk '
+          + 'asiallisesti), HEAD 200 83/83, julkaistaan v1964. Seuraava maa Sonnet 3:lle: '
+          + 'Suomi.',
         'KARTTAUUDISTUKSEN PAATOKSET 47: NOPAN JALKEEN KAMERA JAI TYHJAAN KOHTAAN - '
           + 'KOHDEMAAN ZOOMIKATTO KUMOSI ULOSSOVITUKSEN (Sonnet-simulaattoritesti kierros 5, '
           + '19.9.2026 klo 14.05-14.19 Suomen aikaa: Pariisi -> liftaus -> Amsterdam -> Liiku '
