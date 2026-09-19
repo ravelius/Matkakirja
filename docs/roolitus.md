@@ -162,8 +162,10 @@ hyväksyttäväksi — omistaja ei halua hyväksyä näitä kyselyitä.
 Työtapa on siksi tämä:
 
 - **Työsessio (Opus/Sonnet) raportoi Fablelle VAIN gitillä**:
-  kirjoita `docs/viesti-fable.md` omalle haaralle, committaa ja
-  pushaa. Vuoron saa myös päättää toteavasti pelkkään pushattuun
+  kirjoita `docs/raportit/viesti-fable-<aihe>-<pvm>.md` omalle
+  haaralle, committaa ja pushaa. (Vanha polku `docs/viesti-fable.md`
+  kaataa `tests/dokumentit.test.mjs`:n — `docs/`-juuren dokumentin
+  pitäisi olla Raamatun ohjedokumenttikartalla.) Vuoron saa myös päättää toteavasti pelkkään pushattuun
   PR:ään — Fablen vahtikierros (~45 min välein) lukee haarat ja
   PR:t. ÄLÄ kutsu `create_trigger`- tai `fire_trigger`-työkaluja
   kertaakaan, älä edes "vain tämän kerran" — kutsu ei mene läpi,
@@ -264,6 +266,20 @@ tehtävää ja kuluttamaan turhaan. Säännöt kaikille:
    raportoi Fablelle ennen jatkamista.
 5. Erä kerrallaan: yksi looginen kokonaisuus valmiiksi ja PR
    sisään ennen seuraavan aloittamista.
+
+## Session vaihto ja siirtoraportti
+
+Kun sessio päättyy, resetoidaan tai rooli siirtyy toiselle sessiolle,
+lähtevä sessio kirjoittaa siirtoraportin
+`docs/raportit/viesti-fable-luovutus-<pvm>.md` ja **pushaa sen**.
+Mitä raportissa on aina oltava — tila, pushatut haarat, kesken jäänyt,
+omistajan päätöstä odottavat, ympäristö ja avainten sijainnit, velat,
+opetukset ja valmis aloitusviesti yhtenä koodilohkona — on ohjeessa
+**`docs/moduulit/siirtoraportti.md`**, tarkistuslistoineen.
+
+Uudet pysyvät linjaukset eivät kuulu raporttiin vaan Raamattuun
+(`js/tyohuone-raamattu.js`); raportti viittaa Raamatun osioihin
+nimeltä.
 
 ## Julkaisusäännöt (kaikille rooleille)
 

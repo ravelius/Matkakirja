@@ -38,6 +38,8 @@ Pages-julkaisussa — dist/-kansiota EI committoida, historia paisuisi).
   ohje (tests/dokumentit.test.mjs valvoo tätä koneellisesti).
 - docs/tarina.md ja docs/isoisan-raamattu.md — tarinan kaanon
   (sitova kaikessa sisällössä; vain Fable kirjoittaa näihin).
+- docs/moduulit/siirtoraportti.md — mitä siirtoraportin pitää sisältää
+  ja mihin se tallennetaan, kun sessio päättyy tai rooli siirtyy.
 - docs/moduulit/tarinakaari.md — miten uuden laudan kaaritekstit
   kirjoitetaan (prosessi, kiintiöt, tarkistuslistat).
 - Perustuslaki (viisi pilaria) on Raamatun osiossa "Perustuslaki";

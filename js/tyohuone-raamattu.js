@@ -11202,6 +11202,12 @@ export const RAAMATTU = {
         'docs/siirto-2026-08-30.md — session siirtodokumentti: kesken '
           + 'olevat erät, auki olevat PR:t ja jono (Fable 30.8.2026; '
           + 'arkistoidaan kun listat on ajettu loppuun).',
+        'docs/moduulit/siirtoraportti.md — siirtoraportin ohje: mihin '
+          + 'luovutus tallennetaan (docs/raportit/viesti-fable-luovutus-'
+          + '<pvm>.md) ja mitkä kymmenen osiota siinä on aina oltava, '
+          + 'aloitusviesti yhtenä koodilohkona ja tarkistuslista. Koottu '
+          + 'kaikista 24.8.–19.9.2026 kirjoitetuista siirto- ja '
+          + 'luovutusraporteista.',
         'docs/moduulit/karttapallo.md — karttapallo pelilautana: '
           + 'arkkitehtuuri, kytkin ja palautusoptio, vaiheistus.',
         'docs/moduulit/laattapyramidi.md — laattapyramidin mitoitus, '
