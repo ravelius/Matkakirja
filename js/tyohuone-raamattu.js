@@ -9136,7 +9136,16 @@ export const RAAMATTU = {
           + 'lahteet jakson omista lahteista ja en-Wikipediasta, 13+, ei arvattuja '
           + 'lukuja); koodi: Opus 1 (pulun paneeli linssissa lukee nykyisen jakson '
           + 'tunnuksen ja piirtaa kysymysnapit kuten satelliitti.js pulukortti). '
-          + 'Tila: tilattu klo 18.10.',
+          + 'Tila: tilattu klo 18.10. TILA (Opus 2, erat B klo 19.02 ja kortti-fix klo '
+          + '20.08): linssin pulupaneeli nayttaa nykyisen paikan 3 kysymysta (auki oleva '
+          + 'nostokortti ensin, muuten jakso tai lahin edeltava loytopaikka) ja vastaa '
+          + 'esikirjoitetusti ilman mallikutsua (js/linssit/ihmisen-matka-pulukysymykset.js); '
+          + 'julkaistu v1962. LAITEVIKA (Sonnet 1 kierros 11): paajakson kortin '
+          + 'kysymysnappi kutsui vanhaa polloKysy-reittia, joka kirjoitti vastauksen '
+          + 'esityksen ajaksi piilotettuun pelipaneeliin - nakyi vain himmennys. Korjaus: '
+          + 'kortti kirjoittaa esikirjoitetun vastauksen ja lahteen omaan kuplaansa '
+          + '(lisanosto striimaa polloUlkoinenKysymys-reitilla kuplaan), paneelia ei avata; '
+          + 'savuke-ihmisen-pulukysymykset lohko 7, 12/12. Julkaistaan v1964.',
         'KARTTAUUDISTUKSEN PAATOKSET 51: HAHMOTELMANOSTOIHIN RAHAVISA NOIN JOKA '
           + 'KOLMANTEEN (omistaja 19.9.2026 klo 17.55 Suomen aikaa, sanatarkasti: "Onko '
           + 'noin joka kolmannessa nostossa tietovisa josta voi ansaita rahaa?"; Fablen '
