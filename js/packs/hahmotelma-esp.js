@@ -341,7 +341,7 @@ export const HAHMOTELMA_ESP = [
       'Onko Tabernas todella Euroopan ainoa aavikko?',
       'Mitä elokuvia täällä on kuvattu?',
     ],
-    korostukset: ['aavikkoilmastoa|aavikkoilmastoa'],
+    korostukset: ['aavikko|aavikkona'],
     nappi: 'Euroopan ainoa aavikko, jonka ympärillä vuoret nousevat',
     // -2.45 E / 37 N — en-Wikipedia "Tabernas Desert"
     laudat: {
@@ -565,14 +565,14 @@ export const HAHMOTELMA_ESP = [
     },
     kuvat: [
       {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-numancia-b07c6bb0.jpg',
-        lyhyt: 'Alejo Veran maalaus Numancian viimeisestä päivästä, roomalaiset tulevat kaupunkiin.',
-        selite: 'Alejo Veran vuoden 1881 maalaus esittää hetkeä, jolloin Numancian viimeiset puolustajat surmasivat itsensä eivätkä antautuneet elävinä roomalaisille. Kuvauksen mukaan roomalaiset astuvat kaupunkiin samalla kun numantialaiset tekevät itsemurhan.',
-        lahde: 'Maalaus: Alejo Vera, Wikimedia Commons (public domain).',
-        tekija: 'Alejo Vera',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Numancia_Alejo_Vera_Estaca_1881.jpg',
-        lisenssi: 'Public domain',
-        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-numancia-3054a634.jpg',
+        lyhyt: 'Jälleenrakennetut olkikattoiset puiset vartiotornit Numancian kukkulalla.',
+        selite: 'Numancian arkeologisella alueella jälleenrakennetut olkikattoiset puiset vartiotornit kivi- ja savimuurin päällä.',
+        lahde: 'Valokuva: Multitud, Wikimedia Commons (CC BY 3.0).',
+        tekija: 'Multitud',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Numancia.jpg',
+        lisenssi: 'CC BY 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
       },
     ],
     nimi: 'Numancia',
@@ -640,7 +640,7 @@ export const HAHMOTELMA_ESP = [
       'Kuka Francisco Pizarro oli?',
       'Mikä Plaza Mayor on?',
     ],
-    korostukset: ['Francisco Pizarro|Francisco Pizarron'],
+    korostukset: ['Francisco Pizarro|Francisco Pizarrosta'],
     nappi: 'Graniittikukkulan kaupunki, josta conquistadorin tie alkoi',
     // -5.87888889 E / 39.46527778 N — en-Wikipedia "Trujillo, Spain"
     laudat: {
@@ -756,7 +756,7 @@ export const HAHMOTELMA_ESP = [
       'Miksi Kaarle V luopui vallasta?',
       'Mitä Yusten luostarille tapahtui vuonna 1809?',
     ],
-    korostukset: ['Kaarle V|Kaarle V:n'],
+    korostukset: ['Kaarle V|Kaarle V'],
     nappi: 'Poltettu luostari, jossa keisari Kaarle vietti viimeiset vuotensa',
     // -5.73888889 E / 40.11416667 N — en-Wikipedia "Monastery of Yuste"
     laudat: {
@@ -804,7 +804,7 @@ export const HAHMOTELMA_ESP = [
       'Miksi taistelua sanottiin ristiretkeksi?',
       'Mitä taistelun jälkeen tapahtui?',
     ],
-    korostukset: ['Reconquistan|Reconquistan'],
+    korostukset: ['Reconquista|Reconquistassa'],
     nappi: 'Sierra Morenan solat, joissa kolme kuningasta voitti kalifin',
     // -3.54902778 E / 38.343 N — es-Wikipedia "Batalla de las Navas de Tolosa"
     laudat: {
@@ -1154,7 +1154,7 @@ export const HAHMOTELMA_ESP = [
       'Miksi joki on punainen?',
       'Miksi britit ostivat kaivoksen?',
     ],
-    korostukset: ['Rio Tinto Company|Rio Tinto Companyn'],
+    korostukset: ['Rio Tinto Company|Rio Tinto Company'],
     nappi: 'Kuparikaivos, jonka omistaja vaihtuu juuri nyt brittiyhtiölle',
     // -6.60277778 E / 37.70333333 N — en-Wikipedia "Corta Atalaya"
     laudat: {
@@ -1167,8 +1167,9 @@ export const HAHMOTELMA_ESP = [
       + 'Rothschildien pankkiirisuku osti esiintymät Espanjan ensimmäisen tasavallan '
       + 'hallitukselta, ja ne siirtyivät muutamaa kuukautta myöhemmin vastaperustetulle '
       + 'brittiläiselle Rio Tinto Company Limitedille. Samana vuonna alkoi Huelvaan johtavan '
-      + 'Riotinton rautatien rakennus. Yhtiön aikana alue koki huippukautensa 1800-luvun '
-      + 'lopulta 1900-luvun puoliväliin, ja sen kaivokset olivat maailman mittapuun kohde.',
+      + 'Riotinton rautatien rakennus. Brittiyhtiön aikana alue koki huippukautensa '
+      + '1800-luvun lopulta 1900-luvun puoliväliin, ja Riotinton kaivoksista tuli alansa '
+      + 'maailmanlaajuinen esikuva.',
     lahde: 'en-Wikipedia "Riotinto-Nerva mining basin", johdanto-osa ja osiot "British phase" ja '
       + '"Railway network"; koordinaatti en-Wikipedia "Corta Atalaya" (tarkistettu '
       + '19.9.2026).',
@@ -1204,7 +1205,7 @@ export const HAHMOTELMA_ESP = [
       'Mihin elohopeaa käytettiin?',
       'Miksi kaivos suljettiin?',
     ],
-    korostukset: ['elohopea|elohopeaa'],
+    korostukset: ['elohopea|elohopeasta'],
     nappi: 'Maailman elohopeakaivos, jonka nesteestä hopeaa erotetaan Amerikassa',
     // -4.83694444 E / 38.77638889 N — en-Wikipedia "Almadén"
     laudat: {
@@ -1407,7 +1408,7 @@ export const HAHMOTELMA_ESP = [
       'Miksi tammi on baskeille tärkeä?',
       'Mitä tapahtui vuonna 1937?',
     ],
-    korostukset: ['karlistisodissa|karlistisodissa'],
+    korostukset: ['karlistisota|karlistisodassa'],
     nappi: 'Baskien vapauksien tammi, jonka nimeen kolmas karlistisota vetoaa',
     // -2.67972222 E / 43.31472222 N — en-Wikipedia "Tree of Gernika"
     laudat: {
