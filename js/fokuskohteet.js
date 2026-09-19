@@ -6000,10 +6000,34 @@ function piirraKohteenNosto(ui, sisalto, kohde) {
   sisalto.appendChild(nappi);
 }
 
+/*
+ * KORTIN YLÄRIVI KERTOO KOHTEEN OMAN TYYPIN, EI KARTAN RYHMÄÄ (Sonnet 1,
+ * kierros 13, laitekuvat 19.9.2026: Karlskogan, Fiskarsin ja Kalavrytan
+ * tekniikkanostot ja Cobhin merenkulkunosto näyttivät "KAUPPA"). Kartalla
+ * on vain seliteryhmän kärkisymboli (omistaja 31.8.2026,
+ * js/karttavalot.js karttavaloKarkisymboli), ja ylärivi luki ennen samaa
+ * merkkiä — "Kauppa ja tekniikka" -ryhmän kärki on kauppa. Nyt kortti
+ * piirtää tarkan kategorian merkin ja nimen (veturi + Tekniikka, ankkuri
+ * + Merenkulku, malja + Ruoka ja juoma …). Luonnon viidellä tyypillä on
+ * yksi merkki, joten nimi tarkennetaan tyypillä.
+ */
+const LUONNON_NIMIKKEET = {
+  vuori: 'vuori', meri: 'meri', saari: 'saari', joki: 'joki', jarvi: 'järvi',
+};
+
+/** Kohdekortin ylärivin nimike tarkasta kategoriasta. Vartio testissä. */
+export function kohteenYlarivinNimike(kohde) {
+  const kategoria = kohteenKategoria(kohde);
+  const luokka = kategoria ? NOSTOSYM_LUOKAT[kategoria] : null;
+  if (!luokka) return null;
+  const laji = kategoria === 'luonto' ? LUONNON_NIMIKKEET[kohde?.tyyppi] : null;
+  return laji ? `${luokka} · ${laji}` : luokka;
+}
+
 function piirraKohdeYlarivi(kohde) {
   const rivi = html('p', 'fokuskohde-ylarivi');
-  const symboli = kohteenSymboli(kohde);
-  const luokka = symboli ? NOSTOSYM_LUOKAT[symboli] : null;
+  const symboli = kohteenKategoria(kohde);
+  const luokka = kohteenYlarivinNimike(kohde);
   if (!luokka) {
     rivi.textContent = KOHDE_TYYPIT[kohde.tyyppi] ?? KOHDE_TYYPIT.muu;
     return rivi;
