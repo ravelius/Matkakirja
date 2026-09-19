@@ -931,7 +931,7 @@ export const HAHMOTELMA_CZE = [
       'Mitä kaupungin nimi Karlovy Vary tarkoittaa?',
     ],
     korostukset: ['kylpyläkaupunki|kylpyläkaupunki'],
-    nappi: 'Kaarle IV:n legendaarinen kylpyläkaupunki, jonka saksankielinen väestö kutsuu sitä Karlsbadiksi',
+    nappi: 'Kaarle IV:n kylpyläkaupunki, jota saksankieliset kutsuvat Karlsbadiksi',
     // 12.8725 E / 50.23055556 N — en-Wikipedia "Karlovy Vary"
     laudat: {
       maailmankartta: { x: 6262.4, y: 1380.1 },
