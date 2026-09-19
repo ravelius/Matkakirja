@@ -28,6 +28,7 @@
     "savuke-noppa-saapumisen-aikana.mjs",
     "savuke-ihmisen-pulukysymykset.mjs",
     "savuke-nostokuva-karuselli.mjs",
+    "savuke-nostokuva-suhde.mjs",
     "savuke-kortti-sulku.mjs",
     "savuke-tekstivalinta.mjs",
     "savuke-saapumisblur.mjs",
