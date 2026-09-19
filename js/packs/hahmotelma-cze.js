@@ -278,10 +278,10 @@ export const HAHMOTELMA_CZE = [
     visa: {
       kysymys: 'Mikä tekee Hranicen syvänteestä erityisen?',
       vaihtoehdot: [
-        'Se on maailman korkein tippukiviluola',
-        'Se on Euroopan vanhin luola',
-        'Se on maailman syvin tulivuorenkraatteri',
-        'Se on maailman syvin tulvinut luola',
+        'Euroopan suurin tippukiviluola',
+        'Euroopan vanhin luola',
+        'Maailman syvin kraatterijärvi',
+        'Maailman syvin tulvinut luola',
       ],
       oikea: 3,
       fakta: 'Lähellä sijaitsevat Zbrašovin aragoniittiluolat ovat avoinna yleisölle.',
@@ -292,7 +292,7 @@ export const HAHMOTELMA_CZE = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/cze-nosto-machovo-0e2321d8.jpg',
       lyhyt: 'Máchovo jezero, kallio lahdella ja taustalla Bezdězin kukkulat.',
-      selite: 'Järven rannalla kohoaa metsäinen niemi ja veden päällä pieni kallio, ja taustalla kukkulan päällä erottuu linna. Kuvauksen mukaan kohteena ovat Máchovo jezero ja Bezdězin kukkulat.',
+      selite: 'Järven rannalla kohoaa metsäinen niemi ja veden päällä pieni kallio, ja taustalla kukkulan päällä erottuu linna. Kuvassa ovat Máchovo jezero ja Bezdězin kukkulat.',
       lahde: 'Valokuva: LaSo, Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'LaSo',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Máchovo_jezero_a_kopce_1.jpg',
@@ -536,12 +536,11 @@ export const HAHMOTELMA_CZE = [
       vaihtoehdot: [
         'Kentällä oli kolme hallitsijaa',
         'Taistelu kesti kolme päivää',
-        'Kolme valtakuntaa voitti samanaikaisesti',
-        'Taistelu käytiin kolmen valtakunnan rajalla',
+        'Kolme maata voitti yhdessä',
+        'Paikka oli kolmen maan rajalla',
       ],
       oikea: 0,
-      fakta: 'Napoleonin päämaja oli Žuráň-kukkulalla, jossa on nykyään graniittinen muistomerkki '
-        + 'taistelun asemista.',
+      fakta: 'Napoleonin päämaja oli Žuráň-kukkulalla, jossa on nykyään graniittinen muistomerkki taistelun asemista.',
     },
   },
   {
@@ -840,13 +839,12 @@ export const HAHMOTELMA_CZE = [
       kysymys: 'Mikä sotilaallinen innovaatio auttoi Preussia voittamaan Königgrätzin taistelun?',
       vaihtoehdot: [
         'Ilmapallotiedustelu',
-        'Höyrylaivat',
-        'Neulakivääri ja rautatiekuljetukset',
-        'Kenttäsairaalat',
+        'Höyrykäyttöiset panssarit',
+        'Neulakivääri ja rautatiet',
+        'Kenttäsairaalaverkosto',
       ],
       oikea: 2,
-      fakta: 'Itävallan ylipäällikkö Ludwig von Benedek oli ottanut tehtävän vastahakoisesti, '
-        + 'koska hän ei tuntenut joukkoja eikä maastoa.',
+      fakta: 'Itävallan ylipäällikkö Ludwig von Benedek oli ottanut tehtävän vastahakoisesti, koska hän ei tuntenut joukkoja eikä maastoa.',
     },
   },
   {
@@ -951,13 +949,12 @@ export const HAHMOTELMA_CZE = [
       kysymys: 'Miten legendan mukaan Karlovy Varyn kuuma lähde löydettiin?',
       vaihtoehdot: [
         'Kalastaja huomasi höyryävän joen',
-        'Munkit kaivoivat kaivoa',
-        'Karhu johdatti metsästäjät lähteelle',
-        'Kaarle IV:n seurue löysi sen sattumalta metsästysretkellä',
+        'Munkit kaivoivat uutta kaivoa',
+        'Paimen etsi kadonnutta lammasta',
+        'Keisarin seurue metsästysretkellä',
       ],
       oikea: 3,
-      fakta: 'Kaupunkia kutsuttiin puhekielessä myös nimellä Warmbad, joka tarkoittaa saksaksi '
-        + 'lämmintä kylpyä.',
+      fakta: 'Kaupunkia kutsuttiin puhekielessä myös nimellä Warmbad, joka tarkoittaa saksaksi lämmintä kylpyä.',
     },
   },
   {
@@ -1416,13 +1413,12 @@ export const HAHMOTELMA_CZE = [
       kysymys: 'Minkä vuonna 1895 Mladá Boleslavissa perustetun yhtiön seuraaja Škoda Auto on?',
       vaihtoehdot: [
         'Laurin & Klement',
-        'Tatra',
-        'Praga',
-        'Walter',
+        'Tatra Kopřivnice',
+        'Aero Vodochody',
+        'Praga Hostivař',
       ],
       oikea: 0,
-      fakta: 'Mladá Boleslav on myös teknisen koulutuksen keskus, ja siellä toimii Škoda Auto '
-        + '-yliopisto.',
+      fakta: 'Mladá Boleslav on myös teknisen koulutuksen keskus, ja siellä toimii Škoda Auto -yliopisto.',
     },
   },
   {
@@ -1483,8 +1479,7 @@ export const HAHMOTELMA_CZE = [
       + 'yllä kohoava Svatá Hora on Böömin vanhin ja tärkein Marian pyhiinvaelluskohde.',
     lahde: 'en-Wikipedia "Příbram", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Minkä metallin louhinta teki Příbramista Habsburgien monarkian tuottoisimman '
-        + 'kaivoskaupungin 1700-luvulla?',
+      kysymys: 'Minkä metallin louhinnassa Příbram oli Habsburgien monarkian tuottoisin 1700-luvulla?',
       vaihtoehdot: [
         'Kulta',
         'Hopea',
@@ -1544,12 +1539,12 @@ export const HAHMOTELMA_CZE = [
     lahde: 'en-Wikipedia "Kamenický Šenov", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Mikä Kamenický Šenovin koulu on maailman vanhin omalla alallaan?',
+      kysymys: 'Minkä alan ammattikoulu Kamenický Šenovissa on maailman vanhin omalla alallaan?',
       vaihtoehdot: [
-        'Kaivoskoulu',
-        'Kelloseppäkoulu',
-        'Lasialan ammattikoulu',
-        'Kutomakoulu',
+        'Kaivostoiminta',
+        'Kellonvalmistus',
+        'Lasinvalmistus',
+        'Kankaankudonta',
       ],
       oikea: 2,
       fakta: 'Kaupungin tunnetuin maamerkki on Panská skála -basalttikallio.',

@@ -229,10 +229,10 @@ export const HAHMOTELMA_ESP = [
     visa: {
       kysymys: 'Mistä Bardenas Realesin Valkoinen Bardena on saanut nimensä?',
       vaihtoehdot: [
-        'Pinnalla näkyvästä valkoisesta suolasta',
-        'Alueella laiduntavista valkoisista lampaista',
-        'Talvisin maiseman peittävästä lumesta',
-        'Vanhan luostarin kalkituista seinistä',
+        'Pinnan valkoisesta suolasta',
+        'Valkoisista lampaista',
+        'Talven lumipeitteestä',
+        'Luostarin kalkituista seinistä',
       ],
       oikea: 0,
       fakta: 'Alueen keskellä on ympäristöään noin sata metriä korkeampi tasanne, jolla viljellään '
@@ -315,7 +315,7 @@ export const HAHMOTELMA_ESP = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-sierra-de-gredos-ddb35e00.jpg',
         lyhyt: 'Lumipeitteiset Gredosin huiput hehkuvat vaaleanpunaisina talviaamun auringossa.',
-        selite: 'Talvinen auringonnousu Gredosin kehdon yllä: kuvatekstin mukaan keskellä kohoaa Almanzor (2592 m), sen vieressä Risco Moreno ja La Galana.',
+        selite: 'Talvinen auringonnousu Gredosin kehdon yllä: keskellä kohoaa Almanzor (2592 m), sen vieressä Risco Moreno ja La Galana.',
         lahde: 'Valokuva: Torobravo2011, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Torobravo2011',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pico_Almanzor_wintery_sunrise.jpg',
@@ -506,7 +506,7 @@ export const HAHMOTELMA_ESP = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-covadonga-0a34016d.jpg',
         lyhyt: 'Luis de Madrazon maalaus: Pelayo julistetaan kuninkaaksi Covadongassa.',
-        selite: 'Luis de Madrazon vuonna 1855 valmistunut maalaus, joka esittää Pelayon julistamista Asturian kuninkaaksi Covadongassa. Kuvauksen mukaan tapahtuma liitetään Reconquistan alkuun.',
+        selite: 'Luis de Madrazon vuonna 1855 valmistunut maalaus, joka esittää Pelayon julistamista Asturian kuninkaaksi Covadongassa. Tapahtuma liitetään Reconquistan alkuun.',
         lahde: 'Maalaus: Luis de Madrazo, Wikimedia Commons (public domain).',
         tekija: 'Luis de Madrazo',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:El_rey_Don_Pelayo_en_Covadonga_(Museo_del_Prado).jpg',
@@ -919,8 +919,7 @@ export const HAHMOTELMA_ESP = [
     lahde: 'en-Wikipedia "Campo de Criptana", johdanto-osa ja osio "Windmills" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Minkä kirjallisen teoksen kahdeksannen luvun alussa mainitaan kolmekymmentä tai '
-        + 'neljäkymmentä tuulimyllyä tasangolla?',
+      kysymys: 'Missä kirjassa kahdeksannen luvun alussa on 30–40 tuulimyllyä tasangolla?',
       vaihtoehdot: [
         'Lazarillo de Tormes',
         'Don Quijote',
@@ -1031,10 +1030,10 @@ export const HAHMOTELMA_ESP = [
     visa: {
       kysymys: 'Miten La Tomatina sai alkunsa Buñolissa?',
       vaihtoehdot: [
-        'Viljelijät protestoivat halpoja hintoja heittelemällä satoa kaupungintalolle',
-        'Kaupunginjohtaja järjesti kisan tomaattisadon menekin lisäämiseksi',
-        'Kulkueen aikaisesta yhteenotosta, joka kaatoi vihanneskojun',
-        'Rikkoutunut kuorma-auto pudotti tomaattilastinsa torille',
+        'Viljelijöiden protesti',
+        'Kaupunginjohtajan tomaattikisa',
+        'Kulkueessa syttynyt kahakka',
+        'Kuorma-auton onnettomuus',
       ],
       oikea: 2,
       fakta: 'Franco kielsi tapahtuman 1950-luvun alussa, mutta tomaattien hautajaiskulkueen '
@@ -1191,7 +1190,7 @@ export const HAHMOTELMA_ESP = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-riotinto-4c8af57d.jpg',
       lyhyt: 'Riotinto-joen punertava vesi virtaa oranssien ja punaruskeiden kivien välissä.',
-      selite: 'Tinto-joen matalaa vettä, joka värjää kivet punaisiksi ja oransseiksi. Kuvaajan mukaan joki tarjoaa erityisen kauniin maiseman, kun vedenpinta on matala.',
+      selite: 'Tinto-joen matalaa vettä, joka värjää kivet punaisiksi ja oransseiksi. Joki tarjoaa erityisen kauniin maiseman, kun vedenpinta on matala.',
       lahde: 'Valokuva: FJavier GómezL, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'FJavier GómezL',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:R%C3%ADo_Tinto_entre_piedras_4153.jpg',
@@ -1247,8 +1246,7 @@ export const HAHMOTELMA_ESP = [
       + '"Railway network"; koordinaatti en-Wikipedia "Corta Atalaya" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Kuka osti Riotinton kaivosesiintymät Espanjan ensimmäisen tasavallan hallitukselta '
-        + 'vuonna 1873?',
+      kysymys: 'Kuka osti Riotinton kaivosesiintymät Espanjan hallitukselta vuonna 1873?',
       vaihtoehdot: [
         'Krupp-teollisuussuku',
         'Rothschildien pankkiirisuku',
@@ -1276,7 +1274,7 @@ export const HAHMOTELMA_ESP = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-almaden-2502627a.jpg',
         lyhyt: 'Real Hospital de Mineros de San Rafaelin julkisivu Almadénissa.',
-        selite: 'Almadénin kaivostyöläisten sairaalan, Real Hospital de Mineros de San Rafaelin, päärakennus. Kuvauksen mukaan rakennus valmistui vuosina 1755–1773, ja nykyään siinä toimii kaivosalan historiallinen arkisto.',
+        selite: 'Almadénin kaivostyöläisten sairaalan, Real Hospital de Mineros de San Rafaelin, päärakennus. Rakennus valmistui vuosina 1755–1773, ja nykyään siinä toimii kaivosalan historiallinen arkisto.',
         lahde: 'Valokuva: Raimundo Pastor, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Raimundo Pastor',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Almad%C3%A9n_(RPS_21-07-2012)_Real_Hospital_de_Mineros_de_San_Rafael,_fachada.jpg',
@@ -1370,10 +1368,10 @@ export const HAHMOTELMA_ESP = [
     visa: {
       kysymys: 'Miten autot ylittävät Vizcayan sillan Nervión-joen yli?',
       vaihtoehdot: [
-        'Kiinteää siltakantta pitkin, jossa on pitkät rampit',
-        'Lautalla, joka kulkee ketjujen varassa joen pinnalla',
-        'Korkealle ripustetussa gondolissa, joka liikkuu joen yli',
-        'Nostosillalla, jonka kansi kääntyy pystyyn laivoja varten',
+        'Kiinteää siltakantta pitkin',
+        'Lautalla ketjujen varassa',
+        'Ripustetussa gondolissa',
+        'Nostosillan yli',
       ],
       oikea: 2,
       fakta: 'Sillan suunnitteli Gustave Eiffelin oppilas Alberto Palacio.',
@@ -1491,7 +1489,7 @@ export const HAHMOTELMA_ESP = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-gernikako-arbola-95ed4c25.jpg',
         lyhyt: 'Gernikan puu Casa de Juntasin pihalla, taustalla pylväshalli.',
-        selite: 'Mustavalkoisessa kuvassa tammi kasvaa rautaisen aidan ympäröimänä Casa de Juntasin pihalla, ja sen takana näkyy klassinen pylväshalli. Kuvaajan mukaan puu on historiaan ja lauluihin ikuistettu Gernikan tammi.',
+        selite: 'Mustavalkoisessa kuvassa tammi kasvaa rautaisen aidan ympäröimänä Casa de Juntasin pihalla, ja sen takana näkyy klassinen pylväshalli. Puu on historiaan ja lauluihin ikuistettu Gernikan tammi.',
         lahde: 'Valokuva: Timtregenza, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Timtregenza',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:P5393_Guernica_Gernikako_Arbola_Tregenza.jpg',
@@ -1633,7 +1631,7 @@ export const HAHMOTELMA_ESP = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-aranjuez-963193aa.jpg',
         lyhyt: 'Herkuleen suihkulähde ja marmoripatsaat Jardín de la Islan puutarhassa.',
-        selite: 'Kuvassa on Aranjuezin Jardín de la Islan Herkuleen suihkulähde, jonka edessä on kaksi marmoripatsasta. Kuvauksen mukaan Filip IV tilasi suihkulähteen Herkuleen urotöistä 1660-luvulla.',
+        selite: 'Kuvassa on Aranjuezin Jardín de la Islan Herkuleen suihkulähde, jonka edessä on kaksi marmoripatsasta. Filip IV tilasi suihkulähteen Herkuleen urotöistä 1660-luvulla.',
         lahde: 'Valokuva: Jl FilpoC, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Jl FilpoC',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fuente_de_H%C3%A9rcules,_Jard%C3%ADn_de_la_Isla_(Aranjuez).jpg',
@@ -1682,7 +1680,7 @@ export const HAHMOTELMA_ESP = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/esp-nosto-poblet-c3bcf1b3.jpg',
         lyhyt: 'Pobletin luostarin sisäpihan kuorikäytävä ja suihkulähdepaviljonki kaarineen.',
-        selite: 'Kuvassa on Pobletin sisäpiha kiviholveineen ja kaarikäytävineen, ja etualalla on syprestejä ja yrttipuutarhaa. Kuvauksen mukaan sisäpihan (klaustrin) tyyli on romaanista alkuperää ja valmistui goottilaiseksi 1200-luvulla.',
+        selite: 'Kuvassa on Pobletin sisäpiha kiviholveineen ja kaarikäytävineen, ja etualalla on syprestejä ja yrttipuutarhaa. Sisäpihan (klaustrin) tyyli on romaanista alkuperää ja valmistui goottilaiseksi 1200-luvulla.',
         lahde: 'Valokuva: José Luis Filpo Cabana, Wikimedia Commons (CC BY 3.0).',
         tekija: 'José Luis Filpo Cabana',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Monasterio_de_Poblet._Claustro.jpg',

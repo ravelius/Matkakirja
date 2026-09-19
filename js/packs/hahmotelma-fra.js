@@ -237,14 +237,13 @@ export const HAHMOTELMA_FRA = [
     visa: {
       kysymys: 'Miksi Canigoua pidettiin 1700-luvulle asti Pyreneiden korkeimpana vuorena?',
       vaihtoehdot: [
-        'Huippu oli aina lumen peitossa läpi vuoden',
-        'Jyrkät rinteet ja sijainti lähellä merta',
-        'Siellä sijaitsi Pyreneiden vanhin observatorio',
-        'Se oli pyhiinvaeltajien tärkein maamerkki',
+        'Ympärivuotinen lumipeite',
+        'Jyrkät rinteet ja merenläheisyys',
+        'Huipun vanha observatorio',
+        'Pyhiinvaeltajien maamerkki',
       ],
       oikea: 1,
-      fakta: 'Joka vuosi 23. kesäkuuta, Johanneksen yön aattona, Canigoun huipulle kannetaan '
-        + 'Perpignanista palava soihtu ja koko seudulla sytytetään kokkoja.',
+      fakta: 'Joka vuosi Johanneksen yön aattona Canigoun huipulle kannetaan Perpignanista palava soihtu.',
     },
   },
   {
@@ -797,7 +796,7 @@ export const HAHMOTELMA_FRA = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-bonifacio-b2afc271.jpg',
         lyhyt: 'Bonifacion kalliot ja kaupunki varhaisessa valokuvassa.',
-        selite: 'Bonifacion kerroksiset kalkkikivikalliot ja niiden päällä häämöttävä kaupunki. Valokuva noin vuosilta 1905–1910 erään ranskalaisen harrastajakuvaajan albumista.',
+        selite: 'Bonifacion kerroksiset kalkkikivikalliot ja niiden päällä häämöttävä kaupunki. Ranskalainen harrastajavalokuva noin vuosilta 1905–1910.',
         lahde: 'Valokuva: Rijksmuseum, Wikimedia Commons (CC0).',
         tekija: 'Rijksmuseum',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gezicht_op_de_kliffen_bij_Bonifacio_op_Corsica,_RP-F-F01162-EE.jpg',
@@ -1114,10 +1113,10 @@ export const HAHMOTELMA_FRA = [
     visa: {
       kysymys: 'Miksi Rouenin tuomiokirkon kolme tornia ovat kaikki eri tyyliä?',
       vaihtoehdot: [
-        'Kolme kilpailevaa rakennusmestaria sai kukin oman tornin',
-        'Kirkkoa rakennettiin ja uusittiin yli 800 vuoden ajan',
-        'Kunkin tornin rahoitti eri hiippakunta omalla tyylillään',
-        'Tornit rakennettiin eri kuninkaiden muistomerkeiksi',
+        'Rakennusmestarien kilpailu',
+        'Yli 800 vuoden rakennusaika',
+        'Eri hiippakuntien rahoitus',
+        'Eri kuninkaiden muistomerkkejä',
       ],
       oikea: 1,
       fakta: 'Normandian ensimmäinen herttua, viikinkipäällikkö Rollo, kastettiin tuomiokirkon '
@@ -1168,15 +1167,14 @@ export const HAHMOTELMA_FRA = [
       + 'AOC-suojauksen vuonna 1996.',
     lahde: 'en- ja fr-Wikipedia "Rocamadour", johdanto-osa (tarkistettu 18.9.2026).',
     visa: {
-      kysymys: 'Miten pyhiinvaeltajat perinteisesti nousivat Rocamadourin monumentaalista portaikkoa '
-        + 'pyhäköille?',
+      kysymys: 'Miten pyhiinvaeltajat perinteisesti nousivat Rocamadourin portaikkoa pyhäköille?',
       vaihtoehdot: [
-        'Nousemalla ne polvillaan',
-        'Nousemalla ne paljain jaloin',
-        'Nousemalla ne selkä edellä',
-        'Nousemalla ne kivi kantamuksenaan',
+        'Paljain jaloin',
+        'Kantaen kiveä',
+        'Polvillaan',
+        'Selkä edellä',
       ],
-      oikea: 0,
+      oikea: 2,
       fakta: 'Rocamadourin pyhiinvaeltajien joukossa on ollut muun muassa Englannin kuningas '
         + 'Henrik II ja Ranskan kuningas Ludvig IX.',
     },
@@ -1225,12 +1223,12 @@ export const HAHMOTELMA_FRA = [
       + '1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.',
     lahde: 'en- ja fr-Wikipedia "Saint-Émilion", johdanto-osa (tarkistettu 18.9.2026).',
     visa: {
-      kysymys: 'Miksi Saint-Émilion ympäristöineen otettiin Unescon maailmanperintöluetteloon?',
+      kysymys: 'Miksi Saint-Émilion otettiin Unescon maailmanperintöluetteloon?',
       vaihtoehdot: [
-        'Roomalaisten kylpylöiden ja vesijohtojen vuoksi',
-        'Renessanssiaikaisten linnojensa ja puutarhojensa vuoksi',
-        'Pitkän ja yhä elävän viininviljelyhistoriansa vuoksi',
-        'Kaupunkimuurin ja linnan täydellisen säilymisen vuoksi',
+        'Roomalaiset kylpylät ja vesijohdot',
+        'Renessanssilinnat ja puutarhat',
+        'Pitkä viininviljelyhistoria',
+        'Ehjänä säilynyt kaupunkimuuri',
       ],
       oikea: 2,
       fakta: 'Saint-Émilionin macaronit on valmistettu jatkuvasti vuodesta 1620 lähtien, ja '
@@ -1296,7 +1294,7 @@ export const HAHMOTELMA_FRA = [
     kuvat: [{
       osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-hahmotelma-vichy-1f180188.jpg',
       lyhyt: 'Vichyn kylpylälaitokset vuoden 1862 puupiirroksessa.',
-      selite: 'Vichyn kylpylälaitokset, puistokäytävät ja vaunut vuoden 1862 kuvateoksen puupiirroksessa, jonka otsikkona on "Eaux thermales de Vichy".',
+      selite: 'Vichyn kylpylälaitokset, puistokäytävät ja vaunut vuoden 1862 puupiirroksessa "Eaux thermales de Vichy".',
       lahde: 'Kuva: Charles-Émile Jacque (1813–1894), Gallica / Wikimedia Commons (public domain).',
       tekija: 'Charles-Émile Jacque',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vichy_(Allier)_-_btv1b10571602q.jpg',
@@ -1326,10 +1324,10 @@ export const HAHMOTELMA_FRA = [
     visa: {
       kysymys: 'Mikä asema Vichyllä oli Ranskassa vuosina 1940–1944?',
       vaihtoehdot: [
-        'Vapaan Ranskan kenraalin hallituksen päämaja',
-        'Ranskan valtion tosiasiallinen hallintopääkaupunki',
-        'Vastarintaliikkeen salainen ylin johtokeskus',
-        'Liittoutuneiden ensimmäinen mantereen tukikohta',
+        'Vapaan Ranskan päämaja',
+        'Ranskan valtion hallintokeskus',
+        'Vastarintaliikkeen salainen johtokeskus',
+        'Liittoutuneiden tukikohta',
       ],
       oikea: 1,
       fakta: 'Kylmä perunakeitto vichyssoise on nimetty Vichyn kaupungin mukaan.',
@@ -1433,10 +1431,10 @@ export const HAHMOTELMA_FRA = [
     visa: {
       kysymys: 'Mikä oli Canal du Midin rakentamisen vaikein tehtävä?',
       vaihtoehdot: [
-        'Johtaa vettä vuorilta kanavan korkeimpaan kohtaan',
-        'Louhia kanava kovan graniitin läpi Toulousessa',
-        'Ylittää Garonne-joki kanavasillalla',
-        'Saada rakennustyöhön riittävästi työmiehiä',
+        'Veden johtaminen vuorilta',
+        'Louhiminen graniitin läpi',
+        'Garonnen ylittäminen sillalla',
+        'Työvoiman löytäminen',
       ],
       oikea: 0,
       fakta: 'Kanavan alkuperäinen nimi oli Canal Royal en Languedoc, ja nykyisen nimensä se sai '

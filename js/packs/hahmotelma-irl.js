@@ -341,7 +341,7 @@ export const HAHMOTELMA_IRL = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-achill-d9d2649c.jpg',
       lyhyt: 'Croaghaunin jyrkät merikalliot Achill-saarella laskeutuvat suoraan Atlantille.',
-      selite: 'Kuvassa Croaghaunin rinne ja kallioinen rannikko Achill-saaren länsipäässä, jota kuvaus kutsuu Irlannin korkeimmiksi merikallioiksi.',
+      selite: 'Kuvassa Croaghaunin rinne ja kallioinen rannikko Achill-saaren länsipäässä, jossa on Irlannin korkeimpia merikallioita.',
       lahde: 'Valokuva: Deejayw, Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'Deejayw',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Croghaun_Cliffs,_Dooagh,_Achill,_Co._Mayo,_Ireland.jpg',
@@ -402,7 +402,7 @@ export const HAHMOTELMA_IRL = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/irl-nosto-powerscourt-dd226067.jpg',
         lyhyt: 'Ylhäältä kuvattu näkymä Powerscourtin peuranpuistoon ja vesiputoukseen Wicklow\'n vuorten keskellä.',
-        selite: 'Kuvauksen mukaan putous on 121 metriä ja Irlannin korkein. Kuva on otettu Crone Woodsin rinteeltä Enniskerryn lähistöltä, ja taustalla kohoaa Djouce-vuori.',
+        selite: 'Putous on 121 metriä korkea. Kuva on otettu Crone Woodsin rinteeltä Enniskerryn lähistöltä, ja taustalla kohoaa Djouce-vuori.',
         lahde: 'Valokuva: Joe King, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Joe King',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Powerscourt_Deerpark_and_Waterfall.jpg',
@@ -650,16 +650,15 @@ export const HAHMOTELMA_IRL = [
     lahde: 'en-Wikipedia "Cobh", johdanto-osa ja osiot "Name" ja "History" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Miksi Cobh nimettiin Queenstowniksi vuonna 1849?',
+      kysymys: 'Minkä tapahtuman yhteydessä Cobh nimettiin Queenstowniksi vuonna 1849?',
       vaihtoehdot: [
-        'Kuningatar Victorian vierailun aikana',
-        'Kuningatar Elisabetin perustaman sataman mukaan',
-        'Kuningatar Annen kuoleman muistoksi',
-        'Kuningattaren laivaston majoituspaikan mukaan',
+        'Kuninkaallisen laivaston saapuminen',
+        'Kuningatar Annen kruunajaiset',
+        'Kuningatar Elisabetin vierailu',
+        'Kuningatar Victorian vierailu',
       ],
-      oikea: 0,
-      fakta: 'Pyhän Colmanin katedraali on 91,4 metriä korkea ja yksi Irlannin korkeimmista '
-        + 'rakennuksista.',
+      oikea: 3,
+      fakta: 'Pyhän Colmanin katedraali on 91,4 metriä korkea ja yksi Irlannin korkeimmista rakennuksista.',
     },
   },
   {
@@ -814,10 +813,10 @@ export const HAHMOTELMA_IRL = [
     visa: {
       kysymys: 'Miksi William Marshall rakennutti tornin Hook Headille?',
       vaihtoehdot: [
-        'Vartioimaan rannikkoa viikingeiltä ja merirosvoilta',
-        'Kuninkaan tähystyspaikaksi meren yllä',
-        'Ohjaamaan laivat hänen uuteen New Rossin satamaansa',
-        'Merkiksi luostarin pyhiinvaeltajille',
+        'Vartioimaan rannikkoa viikingeiltä',
+        'Toimimaan kuninkaan tähystyspaikkana',
+        'Ohjaamaan laivat New Rossiin',
+        'Opastamaan pyhiinvaeltajia luostariin',
       ],
       oikea: 2,
       fakta: 'Perimätiedon mukaan lähetyssaarnaaja Dubhán perusti merkkitulen jo 400-luvulla.',
@@ -1240,10 +1239,10 @@ export const HAHMOTELMA_IRL = [
     visa: {
       kysymys: 'Ketkä katolisen uskon mukaan ilmestyivät Knockissa 21. elokuuta 1879?',
       vaihtoehdot: [
-        'Pyhä Patrick, pyhä Brigid ja pyhä Columba',
-        'Neitsyt Maria, pyhä Joosef ja pyhä Johannes',
-        'Pyhä Franciscus ja pyhä Antonius Padovalainen',
-        'Kolme itämaan tietäjää ja Joosef',
+        'Pyhä Patrick, Brigid ja Columba',
+        'Neitsyt Maria, Joosef ja Johannes',
+        'Franciscus ja Antonius Padovalainen',
+        'Kolme tietäjää ja Joosef',
       ],
       oikea: 1,
       fakta: 'Paavi Franciscus vieraili Knockin basilikassa 26. elokuuta 2018.',
@@ -1360,12 +1359,12 @@ export const HAHMOTELMA_IRL = [
     lahde: 'en-Wikipedia "Valentia Island", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Minkä keksinnön itäinen päätepiste Valentia oli?',
+      kysymys: 'Minkä yhteyden itäpää Valentia-saari oli 1860-luvulla?',
       vaihtoehdot: [
-        'Ensimmäisen radiolähetyksen Amerikkaan',
-        'Irlannin ja Amerikan välisen höyrylaivareitin',
-        'Ensimmäisen puhelinyhteyden Amerikkaan',
-        'Atlantin ensimmäisen toimivan lennätinkaapelin',
+        'Atlantin höyrylaivareitin',
+        'Irlannin postilaivayhteyden',
+        'Atlantin majakkaketjun',
+        'Atlantin lennätinkaapelin',
       ],
       oikea: 3,
       fakta: 'Saaren liuskelouhoksen liuskeita käytettiin Britannian parlamenttitalossa.',
@@ -1420,16 +1419,15 @@ export const HAHMOTELMA_IRL = [
     lahde: 'en-Wikipedia "Birr Castle", johdanto-osa ja osiot "History" ja "The Great Telescope" '
       + '(tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Miksi Birrin teleskooppi oli merkittävä valmistuttuaan vuonna 1845?',
+      kysymys: 'Mikä oli Birrin Leviathan-teleskooppi valmistuttuaan vuonna 1845?',
       vaihtoehdot: [
-        'Se oli maailman ensimmäinen radioteleskooppi',
-        'Se oli maailman suurin teleskooppi',
-        'Se oli ensimmäinen avaruusteleskooppi',
-        'Se oli maailman ainoa aurinkoteleskooppi',
+        'Ensimmäinen radioteleskooppi',
+        'Maailman suurin teleskooppi',
+        'Ensimmäinen avaruusteleskooppi',
+        'Maailman ainoa aurinkoteleskooppi',
       ],
       oikea: 1,
-      fakta: 'Teleskoopin ennätyskokoa ei ylitetty ennen Hooker-teleskoopin valmistumista Mount '
-        + 'Wilsonilla vuonna 1917.',
+      fakta: 'Teleskoopin ennätyskokoa ei ylitetty ennen Hooker-teleskoopin valmistumista Mount Wilsonilla vuonna 1917.',
     },
   },
 ];

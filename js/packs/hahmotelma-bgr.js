@@ -81,7 +81,7 @@ export const HAHMOTELMA_BGR = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-bansko-f64e060c.jpg',
         lyhyt: 'Pyhän Kolminaisuuden kirkko ja sen kellotorni Banskossa.',
-        selite: 'Kivinen kellotorni kohoaa kirkon muurin yläpuolelle vanhankaupungin mukulakivikadun laidalla. Kuvauksen mukaan kirkko on rakennettu noin 1835 ja 30 metriä korkea kellotorni pystytetty 1850.',
+        selite: 'Kivinen kellotorni kohoaa kirkon muurin yläpuolelle vanhankaupungin mukulakivikadun laidalla. Kirkko on rakennettu noin 1835 ja 30 metriä korkea kellotorni pystytetty 1850.',
         lahde: 'Valokuva: Christian Koehn (fragwürdig), Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Christian Koehn (fragwürdig)',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sveta_troica_bansko.jpg',
@@ -238,7 +238,7 @@ export const HAHMOTELMA_BGR = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-vratsa-ledenika-7bdbfabf.jpg',
       lyhyt: 'Ledenikan luolan suuri sali, jossa tippukivet loistavat valaistuksessa.',
-      selite: 'Kuvauksen mukaan kyseessä on luolan konserttisaliksi kutsuttu kammio Vratsan lähellä. Katosta riippuu tippukiviä ja kulkua varten on rakennettu kaide ja portaat.',
+      selite: 'Kuvassa on luolan konserttisaliksi kutsuttu kammio Vratsan lähellä. Katosta riippuu tippukiviä ja kulkua varten on rakennettu kaide ja portaat.',
       lahde: 'Valokuva: Martin Marinov, Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'Martin Marinov',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:LedenikaCave.jpg',
@@ -344,7 +344,7 @@ export const HAHMOTELMA_BGR = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-strandzha-cf9c0ec1.jpg',
       lyhyt: 'Strandzhan vuoristoa ja metsäisiä rinteitä Zarevon ja Malko Tarnovon välillä.',
-      selite: 'Kuvassa on Strandzhan metsäinen vuorimaisema niityn takaa. Tiedoston kuvauksen mukaan näkymä on Zarevon ja Malko Tarnovon välisestä Strandzhan vuoristosta.',
+      selite: 'Kuvassa on Strandzhan metsäinen vuorimaisema niityn takaa. Näkymä on Zarevon ja Malko Tarnovon välisestä Strandzhan vuoristosta.',
       lahde: 'Valokuva: Julian Nyča, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Julian Nyča',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Zarewo_Strandscha.JPG',
@@ -355,7 +355,7 @@ export const HAHMOTELMA_BGR = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-strandzha-d4cccd74.jpg',
         lyhyt: 'Vanha tammi Strandzhan Paroriassa aitauksen takana.',
-        selite: 'Kuvassa on Strandzhan alueen vanha unkarintammi (Quercus frainetto) niityllä. Tiedoston kuvauksen mukaan puu on noin 970-vuotias ja yksi Strandzhan vanhimmista tunnetuista tammista.',
+        selite: 'Kuvassa on Strandzhan alueen vanha unkarintammi (Quercus frainetto) niityllä. Puu on noin 970-vuotias ja yksi Strandzhan vanhimmista tunnetuista tammista.',
         lahde: 'Valokuva: TodorBozhinov, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'TodorBozhinov',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ancient_oak_in_Paroria,_Strandzha,_Bulgaria.jpg',
@@ -415,7 +415,7 @@ export const HAHMOTELMA_BGR = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-smolyan-6688e5ef.jpg',
         lyhyt: 'Havupuiden kehystämä Trevisto-järvi ja metsäinen vuori Smolyanin järvien alueella.',
-        selite: 'Kuva on tiedoston nimen mukaan Smolyanin järvien Trevisto-järveltä. Havupuiden lomasta näkyvät niittyä ympäröivät vesialtaat ja metsäinen vuorenhuippu.',
+        selite: 'Kuva on Smolyanin järvien Trevisto-järveltä. Havupuiden lomasta näkyvät niittyä ympäröivät vesialtaat ja metsäinen vuorenhuippu.',
         lahde: 'Valokuva: Krisko26, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Krisko26',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Смолянски_езера,_Тревисто_езеро_поглед_към_пайзажа,_в_който_се_вижда_и_Смолян.jpg',
@@ -555,7 +555,7 @@ export const HAHMOTELMA_BGR = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-koprivshtitsa-d68d9550.jpg',
       lyhyt: 'Koprivshtitsan kaareva kivisilta ja herätysajan talot sen takana.',
-      selite: 'Kuvassa on Koprivshtitsan kaareva kivisilta purolla ja sen takana kivijalkaisia, puuosaisia taloja. Kuvan nimi viittaa Ensimmäisen laukauksen siltaan.',
+      selite: 'Kuvassa on Koprivshtitsan kaareva kivisilta purolla ja sen takana kivijalkaisia, puuosaisia taloja. Silta on Ensimmäisen laukauksen silta.',
       lahde: 'Valokuva: Esther Westerveld, Wikimedia Commons (CC BY 2.0).',
       tekija: 'Esther Westerveld',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Brug_van_het_eerste_schot_-_Koprivshtitsa_(4759742960).jpg',
@@ -736,7 +736,7 @@ export const HAHMOTELMA_BGR = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-bachkovo-c6d70fc4.jpg',
         lyhyt: 'Maalattu kaari ja pyhien kuvia Bachkovon luostarin kirkon eteisessä.',
-        selite: 'Kaaren ympärillä on kukkakuvioista koristemaalausta ja soikeissa kehyksissä pyhien hahmojen kuvia. Kuvateksti kertoo paikaksi Bachkovon luostarin Marian kuolonuinumisen kirkon.',
+        selite: 'Kaaren ympärillä on kukkakuvioista koristemaalausta ja soikeissa kehyksissä pyhien hahmojen kuvia. Paikka on Bachkovon luostarin Marian kuolonuinumisen kirkko.',
         lahde: 'Valokuva: Kritzolina, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Kritzolina',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Church_of_the_Dormition,_Bachkovo_Monastery_02.jpg',
@@ -799,7 +799,7 @@ export const HAHMOTELMA_BGR = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-lovech-80203ab4.jpg',
         lyhyt: 'Hisarin linnoituksen kiviset muurinpohjat Lovetšin kukkulalla.',
-        selite: 'Kuvassa on kuivamuurattuja kiviseiniä ja laatoitettuja lattioita linnoituksen alueella. Kuvan otsikko liittää paikan Varoshan ja Hissaryan linnoituksen alueeseen.',
+        selite: 'Kuvassa on kuivamuurattuja kiviseiniä ja laatoitettuja lattioita linnoituksen alueella. Paikka kuuluu Varoshan ja Hissaryan linnoituksen alueeseen.',
         lahde: 'Valokuva: Камен Ханджиев, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Камен Ханджиев',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lovech_Province_-_Lovech_Municipality_-_Town_of_Lovech_-_Ethnographic_complex_Varosha_-_Hissarya_Fortress_(7).jpg',
@@ -809,7 +809,7 @@ export const HAHMOTELMA_BGR = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-lovech-187b92b1.jpg',
         lyhyt: 'Talvinen katunäkymä Varoshan vanhastakaupungista kirkkoineen.',
-        selite: 'Lumisen kivikadun päässä on kaari, portaat ja kirkon tornit. Kukkulalla siintää patsas, jonka kuvateksti kertoo olevan Vasil Levskin muistomerkki.',
+        selite: 'Lumisen kivikadun päässä on kaari, portaat ja kirkon tornit. Kukkulalla siintää patsas, joka on Vasil Levskin muistomerkki.',
         lahde: 'Valokuva: Svilen Enev, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Svilen Enev',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Varosha_Lovech_Church.jpg',
@@ -1089,17 +1089,15 @@ export const HAHMOTELMA_BGR = [
       + 'Zagra, joka vahvistettiin vuonna 1871.',
     lahde: 'en-Wikipedia "Stara Zagora", johdanto-osa ja osio "Name" (tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Millä turkkilaisella nimellä Stara Zagoraa kutsuttiin ennen nykyisen nimen '
-        + 'vahvistamista vuonna 1871?',
+      kysymys: 'Millä turkkilaisella nimellä Stara Zagoraa kutsuttiin ennen vuotta 1871?',
       vaihtoehdot: [
-        'Beroe',
+        'Islimye',
         'Eski Zagra',
-        'Borui',
-        'Irenopolis',
+        'Kazanlık',
+        'Yeni Zagra',
       ],
       oikea: 1,
-      fakta: 'Vuonna 1968 löydetyt neoliittiset asuinrakennukset ovat Euroopan parhaiten '
-        + 'säilyneitä.',
+      fakta: 'Vuonna 1968 löydetyt neoliittiset asuinrakennukset ovat Euroopan parhaiten säilyneitä.',
     },
   },
   {
@@ -1240,7 +1238,7 @@ export const HAHMOTELMA_BGR = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/bgr-nosto-svishtov-98c841d6.jpg',
       lyhyt: 'Svishtov ja Tonava vuoden 1824 litografiassa.',
-      selite: 'Vanha litografia esittää Svishtovin kaupunkia rinteellä Tonavan rannalla, purjeveneitä joella ja linnoitusta kukkulan huipulla. Kuvan mukaan alkuperäisen piirroksen on tehnyt Erminy ja litografian Adolph Kunike.',
+      selite: 'Vanha litografia esittää Svishtovin kaupunkia rinteellä Tonavan rannalla, purjeveneitä joella ja linnoitusta kukkulan huipulla. Alkuperäisen piirroksen on tehnyt Erminy ja litografian Adolph Kunike.',
       lahde: 'Kaiverrus: Erminy (piirros), Adolph Kunike (litografia), Wikimedia Commons (public domain).',
       tekija: 'Erminy (piirros), Adolph Kunike (litografia)',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Svishtov_panoramic_1824.jpg',

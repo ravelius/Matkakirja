@@ -208,8 +208,7 @@ export const HAHMOTELMA_FIN = [
       ],
       oikea: 2,
       fakta: 'Valsörarnan majakka valmistui vuonna 1885, ja se muistuttaa rakenteeltaan '
-        + 'Eiffel-tornia. Sen suunnitteli Henry Lepaute, joka työskenteli Gustave Eiffelin '
-        + 'insinööritoimistossa.',
+        + 'Eiffel-tornia.',
     },
   },
   {
@@ -551,15 +550,13 @@ export const HAHMOTELMA_FIN = [
     visa: {
       kysymys: 'Minkä joen kautta Päijänteen vedet virtaavat Suomenlahteen?',
       vaihtoehdot: [
+        'Vuoksi',
         'Kokemäenjoki',
         'Oulujoki',
         'Kymijoki',
-        'Vuoksi',
       ],
-      oikea: 2,
-      fakta: 'Päijänteen rannoilla on noin 16 000 mökkiä. Järven eteläosan puhtaan veden '
-        + 'hyväksi työtä tehnyt yhdistys sai vuonna 1995 Euroopan komission matkailu- ja '
-        + 'ympäristöpalkinnon.',
+      oikea: 3,
+      fakta: 'Päijänteen rannoilla on noin 16 000 mökkiä.',
     },
   },
   {
@@ -702,9 +699,8 @@ export const HAHMOTELMA_FIN = [
         'Lähes jokainen talo',
       ],
       oikea: 0,
-      fakta: 'Vanha kaupunki oli 1800-luvulla lähellä purkamista uuden kaupunkisuunnitelman '
-        + 'vuoksi, mutta kansalaisvastarinta, jota johti kreivi Louis Sparre, pysäytti '
-        + 'hankkeen. Tuomiokirkko on palanut viisi kertaa, viimeksi vuonna 2006.',
+      fakta: 'Vanha kaupunki oli 1800-luvulla lähellä purkamista, mutta kansalaisvastarinta '
+        + 'pysäytti hankkeen.',
     },
   },
   {
@@ -781,9 +777,7 @@ export const HAHMOTELMA_FIN = [
         'Axel Löwen',
       ],
       oikea: 3,
-      fakta: 'Linnoituksen kuusi bastionia on nimetty suomalaisten kaupunkien mukaan. '
-        + '1700-luvun lopulla lisätty Keskusbastioni on nykyään kulttuuritapahtumien '
-        + 'käytössä.',
+      fakta: 'Haminan linnoituksen kuusi bastionia on nimetty suomalaisten kaupunkien mukaan.',
     },
   },
   {
@@ -1238,8 +1232,7 @@ export const HAHMOTELMA_FIN = [
       + 'taulun taustana. Kuhmon tervantuotanto oli vuonna 1900 Suomen suurin.',
     lahde: 'en-Wikipedia "Kuhmo", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Kuka keräsi runoja Karjalasta kulkien Kuhmon kautta ja muokkasi osan '
-        + 'Kalevalasta Kuhmossa?',
+      kysymys: 'Kuka muokkasi osan Kalevalasta Kuhmossa runonkeruumatkallaan?',
       vaihtoehdot: [
         'Zacharias Topelius',
         'J. L. Runeberg',
@@ -1248,9 +1241,7 @@ export const HAHMOTELMA_FIN = [
       ],
       oikea: 2,
       fakta: 'Kuhmossa järjestetään joka vuosi kamarimusiikkifestivaali, jonka perustivat '
-        + 'vuonna 1970 sellisti Seppo Kimanen ja pieni ystäväjoukko. Kunta on '
-        + 'pinta-alaltaan Suomen kahdestoista suurin, ja sen erämaissa elää karhuja, susia '
-        + 'ja metsäpeuroja.',
+        + 'vuonna 1970 sellisti Seppo Kimanen ja ystäväjoukko.',
     },
   },
   {
@@ -1316,9 +1307,7 @@ export const HAHMOTELMA_FIN = [
       ],
       oikea: 1,
       fakta: 'Peanuts-sarjakuvan pieni keltainen lintu Woodstock on suomeksi nimeltään '
-        + 'Kaustinen, viittauksena Kaustisen kansanmusiikkijuhliin. Kunnan tunnettuihin '
-        + 'asukkaisiin kuuluu myös kanteleensoittaja ja laulunkirjoittaja Kreeta Haapasalo '
-        + '(1813–1893).',
+        + 'Kaustinen.',
     },
   },
   {
@@ -1709,9 +1698,8 @@ export const HAHMOTELMA_FIN = [
         'Charles Bassi',
       ],
       oikea: 2,
-      fakta: 'Kylän tunnetuimman rakennuksen, kartanon, suunnitteli vuonna 1818 '
-        + 'italialaissyntyinen arkkitehti Charles Bassi. Fiskarsissa ratkaistiin myös '
-        + 'ensimmäiset suunnistuksen maailmanmestaruuskilpailut vuonna 1966.',
+      fakta: 'Fiskarsin kartanon suunnitteli vuonna 1818 italialaissyntyinen arkkitehti '
+        + 'Charles Bassi.',
     },
   },
   {
@@ -1916,7 +1904,7 @@ export const HAHMOTELMA_FIN = [
       ],
       oikea: 0,
       fakta: 'Kemin jalokivigalleriassa on Suomen kruunun malli, vaikka alkuperäistä kruunua '
-        + 'ei koskaan tehty. Kaupungin nähtävyyksiin kuuluu myös jäänmurtaja Sampo.',
+        + 'ei koskaan tehty.',
     },
   },
   {
@@ -1982,8 +1970,7 @@ export const HAHMOTELMA_FIN = [
       ],
       oikea: 3,
       fakta: 'Suomen Gummitehdas perusti Nokiaan tehtaan vuonna 1904, ja sen jatkaja Nokian '
-        + 'Renkaat toimii kaupungissa yhä. Nokian nykyiset suurimmat yritykset toimivat '
-        + 'aivan muilla aloilla kuin puhelimissa.',
+        + 'Renkaat toimii kaupungissa yhä.',
     },
   },
 ];
