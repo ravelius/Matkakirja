@@ -108,7 +108,6 @@ ole enää laastarin reunaa eikä sävyeroa.
 
 Topografialinssi ja pelilauta eivät muuttuneet, koska muutos on
 `kerrokset.astronautti`-haaran takana, kuten v1961:ssä.
-<<<<<<< HEAD
 
 ---
 
@@ -126,5 +125,3 @@ omistajan rajauksella (36,3 N, 20,0 E, WebKit 390 × 844 dpr 3):
 | 0,50 (omistajan arvio) | `G-omistajan-joonia-050-ennen.jpg` | `G-omistajan-joonia-050-jalkeen.jpg`: puhdas |
 
 G:n korjaus (laastari vain maa) kattaa siis juuri omistajan näkymän.
-=======
->>>>>>> origin/main
