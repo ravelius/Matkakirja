@@ -308,6 +308,62 @@ if (a.auki) {
   tieto('pulu nostokortilla', JSON.stringify(peittoA));
   vaadi('9. pulu ei peitä nostokortin tekstiä (390 px)',
     peittoA.pulu && peittoA.kortti && peittoA.leikkaa === 0, JSON.stringify(peittoA));
+
+  /*
+   * 9c. KORTTI JO NOSTETUN PULUN PÄÄLLE (Sonnet, kierros 11, v1962
+   * laitteella). Pulu oli jo hypännyt alalaidan paneelin yläpuolelle, ja
+   * laaja nostokortti avautui sen päälle. Vahti piti vanhan paneelin
+   * muistissa, joten pulu jäi kortin keskelle tekstin ja visan napin
+   * päälle. Vastakoe ennen korjausta (js/pulu-paneelin-ylla.js):
+   * leikkaa 1, pulun alareuna 636 px kortin sisällä. Alapaneeli on
+   * savukkeen oma (kiinteä, taustallinen, tekstiä), jotta väite ei
+   * riipu siitä, mikä pelin paneeli sattuu olemaan auki.
+   */
+  const alapaneeli = (paalle) => a.sivu.evaluate(async (lisaa) => {
+    for (const e of document.querySelectorAll('.fokusnosto-kerros, .saapumistraileri')) e.remove();
+    document.querySelector('.savuke-alapaneeli')?.remove();
+    if (lisaa) {
+      const pa = document.createElement('div');
+      pa.className = 'savuke-alapaneeli';
+      pa.style.cssText = 'position:fixed;left:0;right:0;bottom:0;height:200px;background:#eee;z-index:5';
+      pa.textContent = 'Alalaidan infopaneeli, jossa on luettavaa tekstiä riittävästi.';
+      document.body.appendChild(pa);
+    }
+    await new Promise((v) => setTimeout(v, 800));
+    const n = document.querySelector('.pollo-nappi.pollo-kelluu');
+    const pa = document.querySelector('.savuke-alapaneeli');
+    return {
+      ylla: Boolean(n?.classList.contains('pulu-paneelin-ylla')),
+      pulunAla: n ? Math.round(n.getBoundingClientRect().bottom) : null,
+      paneelinYla: pa ? Math.round(pa.getBoundingClientRect().top) : null,
+    };
+  }, paalle);
+  const alaEnnen = await alapaneeli(true);
+  await avaaKortti(a.sivu, KOE.id);
+  const peittoC = await puluPeitto(a.sivu, '.fokusnosto-kortti');
+  tieto('pulu alapaneelin päälle avatulla kortilla', JSON.stringify({ alaEnnen, peittoC }));
+  vaadi('9c. kortti jo nostetun pulun päälle: pulu väistyy eikä peitä tekstiä',
+    alaEnnen.ylla && alaEnnen.pulunAla <= alaEnnen.paneelinYla
+      && peittoC.pulu && peittoC.kortti && peittoC.leikkaa === 0,
+    JSON.stringify({ alaEnnen, peittoC }));
+  // Kortti kiinni: pulu palaa alapaneelin yläpuolelle (ei heiluria).
+  const alaJalkeen = await a.sivu.evaluate(async () => {
+    for (const e of document.querySelectorAll('.fokusnosto-kerros')) e.remove();
+    await new Promise((v) => setTimeout(v, 800));
+    const n = document.querySelector('.pollo-nappi.pollo-kelluu');
+    return {
+      ylla: Boolean(n?.classList.contains('pulu-paneelin-ylla')),
+      piilossa: Boolean(n?.classList.contains('pulu-paneelin-alla-piilossa')),
+      pulunAla: n ? Math.round(n.getBoundingClientRect().bottom) : null,
+      paneelinYla: Math.round(document.querySelector('.savuke-alapaneeli').getBoundingClientRect().top),
+    };
+  });
+  vaadi('9d. kortin sulkeuduttua pulu palaa alapaneelin yläpuolelle',
+    alaJalkeen.ylla && !alaJalkeen.piilossa && alaJalkeen.pulunAla <= alaJalkeen.paneelinYla,
+    JSON.stringify(alaJalkeen));
+  await alapaneeli(false);
+  await avaaKortti(a.sivu, KOE.id);
+
   const ennen = await luvut(a.sivu);
   const jalkeen = await vastaa(a.sivu, KOE.visa.oikea);
   tieto('oikea vastaus', `money ${ennen.money} → ${jalkeen.money}, `
