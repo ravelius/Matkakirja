@@ -87,8 +87,8 @@ export const HAHMOTELMA_FIN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-punkaharju-801e2a8b.jpg',
         lyhyt: 'Harjutie Punkaharjulla mäntyjen ja järvinäkymien keskellä.',
-        selite: 'Tie 4792 (entinen valtatie 14) kulkee harjun päällä Punkaharjulla. Commonsin '
-          + 'kuvauksen mukaan tämä on yksi harjun tunnetuimmista kohdista.',
+        selite: 'Tie 4792 (entinen valtatie 14) kulkee harjun päällä Punkaharjulla. Tämä on '
+          + 'yksi harjun tunnetuimmista kohdista.',
         lahde: 'Valokuva: SeppVei, Wikimedia Commons (Public domain).',
         tekija: 'SeppVei',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Punkaharju_landscape.JPG',
@@ -307,7 +307,7 @@ export const HAHMOTELMA_FIN = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-oulanka-e9a36b98.jpg',
         lyhyt: 'Portaita Karhunkierroksen vaellusreitillä havumetsässä.',
         selite: 'Karhunkierros on 80 kilometrin vaellusreitti Oulangan kansallispuiston halki '
-          + 'Kuusamossa. Commonsin kuvauksen mukaan sen kulkeminen kestää 4–7 päivää.',
+          + 'Kuusamossa. Sen kulkeminen kestää 4–7 päivää.',
         lahde: 'Valokuva: Heather Sunderland, Wikimedia Commons (CC BY 2.0).',
         tekija: 'Heather Sunderland',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:80km_Karhunkierros_Hiking_Trail.jpg',
@@ -371,9 +371,9 @@ export const HAHMOTELMA_FIN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-aavasaksa-8618e0ae.jpg',
         lyhyt: 'Näkymä Aavasaksan huipulta pohjoiseen Tengeliönjoen mutkan yli.',
-        selite: 'Commonsin kuvauksen mukaan tämä on Aavasaksan tunnetuin näkymä, erityisesti '
-          + 'juhannuksena, kun keskiyön aurinko kulkee lähellä kukkuloiden muodostamaa '
-          + 'horisonttia. Etualalla on Tengeliönjoen mutka.',
+        selite: 'Tämä on Aavasaksan tunnetuin näkymä, erityisesti juhannuksena, kun keskiyön '
+          + 'aurinko kulkee lähellä kukkuloiden muodostamaa horisonttia. Etualalla on '
+          + 'Tengeliönjoen mutka.',
         lahde: 'Valokuva: Clem23, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Clem23',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:AavasaksaNorth.jpg',
@@ -490,9 +490,8 @@ export const HAHMOTELMA_FIN = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-paijanne-677917b4.jpg',
       lyhyt: 'Thorsten Waenerbergin maalaus kesäpäivästä Päijänteellä, vuodelta 1902.',
-      selite: 'Maalaus on Kansallisgallerian kokoelmassa, ja sen päiväys Commonsissa on 1902. '
-        + 'Se esittää kesäistä järvimaisemaa, jossa metsäisiä saaria ja niemiä on '
-        + 'runsaasti.',
+      selite: 'Maalaus on Kansallisgallerian kokoelmassa, ja sen päiväys on 1902. Se esittää '
+        + 'kesäistä järvimaisemaa, jossa metsäisiä saaria ja niemiä on runsaasti.',
       lahde: 'Valokuva: Thorsten Waenerberg, Wikimedia Commons (Public domain).',
       tekija: 'Thorsten Waenerberg',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Thorsten_Waenerberg_-_A_Summer%27s_Day_on_Lake_P%C3%A4ij%C3%A4nne_-_A_I_729_-_Finnish_National_Gallery.jpg',
@@ -514,8 +513,8 @@ export const HAHMOTELMA_FIN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-paijanne-3636a5ff.jpg',
         lyhyt: 'Auringonlasku Päijänteellä Sysmässä, oikealla Päijätsalon saari.',
-        selite: 'Kuvan oikealla puolella näkyy Päijätsalon saari, joka on Commonsin kuvauksen '
-          + 'mukaan osa Päijätsalon luonnonpuistoa. Kuva on otettu Sysmässä.',
+        selite: 'Kuvan oikealla puolella näkyy Päijätsalon saari, joka on osa Päijätsalon '
+          + 'luonnonpuistoa. Kuva on otettu Sysmässä.',
         lahde: 'Valokuva: Joonas Lyytinen, Wikimedia Commons (CC BY 2.0).',
         tekija: 'Joonas Lyytinen',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:P%C3%A4ij%C3%A4nne_and_p%C3%A4ij%C3%A4tsalo.jpg',
@@ -581,9 +580,9 @@ export const HAHMOTELMA_FIN = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-lemmenjoki-cfc1f85e.jpg',
         lyhyt: 'Vaeltaja polulla kohti Karhu-Korhosen kirjastoa Lemmenjoen '
           + 'kansallispuistossa.',
-        selite: 'Punakeltainen mökki on Commonsin sivun mukaan Karhu-Korhosen kirjasto, joka '
-          + 'sijaitsee Lemmenjoen kansallispuistossa Inarissa. Avoin tunturimaasto ja '
-          + 'polku antavat käsityksen puiston laajuudesta.',
+        selite: 'Punakeltainen mökki on Karhu-Korhosen kirjasto, joka sijaitsee Lemmenjoen '
+          + 'kansallispuistossa Inarissa. Avoin tunturimaasto ja polku antavat käsityksen '
+          + 'puiston laajuudesta.',
         lahde: 'Valokuva: Markus Säynevirta, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Markus Säynevirta',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Karhu-Korhosen_kirjasto,_Lemmenjoki_National_Park,_Inari_(August_2019,_1).jpg',
@@ -594,8 +593,7 @@ export const HAHMOTELMA_FIN = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-lemmenjoki-a3aa2cd0.jpg',
         lyhyt: 'Kivikkoinen joenranta ja mäntyjä Lemmenjoen kansallispuistossa.',
         selite: 'Kuvassa virtaa kirkas vesi kivikkoisen rannan vieressä, ja rinteellä kasvaa '
-          + 'mäntyjä. Commonsin sivun mukaan kuva on otettu Lemmenjoen kansallispuistossa '
-          + 'Lapissa.',
+          + 'mäntyjä. Kuva on otettu Lemmenjoen kansallispuistossa Lapissa.',
         lahde: 'Valokuva: Nemo bis, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Nemo bis',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lapland_-_Lemmenjoki_National_Park_-_20180727170023.jpg',
@@ -738,8 +736,8 @@ export const HAHMOTELMA_FIN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-hamina-5054c8ae.jpg',
         lyhyt: 'Reserviupseerikoulun keltainen klassistinen päärakennus Haminassa.',
-        selite: 'Kuvan rakennus on Commonsin sivun mukaan Haminan Reserviupseerikoulu. '
-          + 'Artikkelin mukaan koulu aloitti vuonna 1920 kadettikoulun entisissä tiloissa.',
+        selite: 'Kuvan rakennus on Haminan Reserviupseerikoulu. Koulu aloitti vuonna 1920 '
+          + 'kadettikoulun entisissä tiloissa.',
         lahde: 'Valokuva: Teuvo Salmenjoki, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Teuvo Salmenjoki',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vanha_Hamina_Reserviupseerikoulu.jpg',
@@ -793,9 +791,8 @@ export const HAHMOTELMA_FIN = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-tornio-cbdd57f6.jpg',
       lyhyt: 'Tornion puukirkko ja sen erillinen kellotapuli.',
-      selite: 'Valkoinen puukirkko teräväkärkisine torneineen ja ruskea kellotapuli. '
-        + 'Artikkelin mukaan Tornion kirkon torni oli yksi Maupertuis\'n pituuspiirin '
-        + 'mittauksen kiintopisteistä.',
+      selite: 'Valkoinen puukirkko teräväkärkisine torneineen ja ruskea kellotapuli. Tornion '
+        + 'kirkon torni oli yksi Maupertuis\'n pituuspiirin mittauksen kiintopisteistä.',
       lahde: 'Valokuva: Santeri Viinamäki, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Santeri Viinamäki',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tornio_Church_and_bell_tower_20190801.jpg',
@@ -990,9 +987,8 @@ export const HAHMOTELMA_FIN = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-vaasa-826178f8.jpg',
       lyhyt: 'Pyhän Marian kirkon rauniot Vaasassa.',
-      selite: 'Pyhän Marian kirkko rakennettiin artikkelin mukaan 1300-luvun puolivälissä '
-        + 'seudulle, jossa Vaasan varhainen historia alkoi. Kuvassa kirkon kiviset '
-        + 'rauniot.',
+      selite: 'Pyhän Marian kirkko rakennettiin 1300-luvun puolivälissä seudulle, jossa Vaasan '
+        + 'varhainen historia alkoi. Kuvassa kirkon kiviset rauniot.',
       lahde: 'Valokuva: Jouni Jurmu, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Jouni Jurmu',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vaasa_-_Ruins_of_Saint_Mary_Church.jpg',
@@ -1068,8 +1064,7 @@ export const HAHMOTELMA_FIN = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-kajaani-1d555b9e.jpg',
         lyhyt: 'Kajaanin linnan rauniot ja koski I. K. Inhan vanhassa valokuvassa.',
         selite: 'Sillalta kuvattu koskimaisema alavirtaan, etualalla ruohon peittämät '
-          + 'linnanrauniot. Kuvan on ottanut I. K. Inha, ja tiedoston nimessä on vuosiluku '
-          + '1890.',
+          + 'linnanrauniot. Kuvan on ottanut I. K. Inha noin vuonna 1890.',
         lahde: 'Valokuva: I. K. Inha, Wikimedia Commons (CC0).',
         tekija: 'I. K. Inha',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kajaanin_linnan_rauniot_Sarjasta_K_E_St%C3%A5hlberg_N_o_460_1890_(D2005-132_21).jpg',
@@ -1121,8 +1116,8 @@ export const HAHMOTELMA_FIN = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-raseborg-5f584c69.jpg',
       lyhyt: 'Raaseporin linnan kiviseinät ja pyöreä torni kallion päällä.',
-      selite: 'Linnan ensimmäinen vaihe valmistui Commonsin kuvauksen mukaan 1300-luvun '
-        + 'lopulla. Muurit nousevat paljaalta kalliolta.',
+      selite: 'Linnan ensimmäinen vaihe valmistui 1300-luvun lopulla. Muurit nousevat '
+        + 'paljaalta kalliolta.',
       lahde: 'Valokuva: Pöllö, Wikimedia Commons (CC BY 3.0).',
       tekija: 'Pöllö',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Castle_of_Raseborg_(Raaseporin_linna)_in_Tammisaari_Finland.jpg',
@@ -1331,8 +1326,8 @@ export const HAHMOTELMA_FIN = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-inari-6951640f.jpg',
       lyhyt: 'Näkymä Inarijärvelle läheiseltä kukkulalta.',
-      selite: 'Commonsin kuvauksen mukaan kuva on otettu Inarijärven lähellä olevalta '
-        + 'kukkulalta. Inarijärvi on artikkelin mukaan Suomen kolmanneksi suurin järvi.',
+      selite: 'Kuva on otettu Inarijärven lähellä olevalta kukkulalta. Inarijärvi on Suomen '
+        + 'kolmanneksi suurin järvi.',
       lahde: 'Valokuva: Karlis Strazdins, Wikimedia Commons (Public domain).',
       tekija: 'Karlis Strazdins',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lake_Inari.jpg',
@@ -1416,8 +1411,8 @@ export const HAHMOTELMA_FIN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-kuopio-e7b8cf62.jpg',
         lyhyt: 'Avattu kalakukko, jonka täytteenä on kalaa.',
-        selite: 'Commonsin kuvauksen mukaan itäsuomalainen kalakukko on tehty ahvenesta ja '
-          + 'läskistä. Kalakukko on savolainen perinneruoka.',
+        selite: 'Itäsuomalainen kalakukko on tehty ahvenesta ja läskistä. Kalakukko on '
+          + 'savolainen perinneruoka.',
         lahde: 'Valokuva: Rst2000, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Rst2000',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kalakukko_(opened).jpg',
@@ -1457,8 +1452,8 @@ export const HAHMOTELMA_FIN = [
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-kristinestad-ccd9f5cc.jpg',
       lyhyt: 'Läntinen Pitkäkatu ja matalat puutalot Kristiinankaupungin vanhassa '
         + 'kaupungissa.',
-      selite: 'Katunäkymä Läntiseltä Pitkäkadulta. Commons liittää kuvan Kristiinankaupungin '
-        + 'ruutukaava-alueeseen, joka on valtakunnallisesti merkittävä rakennettu '
+      selite: 'Katunäkymä Läntiseltä Pitkäkadulta. Kuva on Kristiinankaupungin '
+        + 'ruutukaava-alueelta, joka on valtakunnallisesti merkittävä rakennettu '
         + 'kulttuuriympäristö (RKY).',
       lahde: 'Valokuva: Mikkoau, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Mikkoau',
@@ -1470,8 +1465,7 @@ export const HAHMOTELMA_FIN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-kristinestad-22b32f7e.jpg',
         lyhyt: 'Punaisia puurakennuksia Lebellin kauppiaantalon pihassa.',
-        selite: 'Kuvan nimen mukaan piha kuuluu Lebellin kauppiaantaloon. Commons liittää '
-          + 'kuvan Kristiinankaupungin ruutukaava-alueeseen.',
+        selite: 'Piha kuuluu Lebellin kauppiaantaloon Kristiinankaupungin ruutukaava-alueella.',
         lahde: 'Valokuva: Mikkoau, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Mikkoau',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kristiinankaupunki_Lebellin_kauppiaantalon_piha.jpg',
@@ -1532,9 +1526,8 @@ export const HAHMOTELMA_FIN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-mariehamn-4163c3e1.jpg',
         lyhyt: 'Puutaloja ja puurivi Södragatanilla Maarianhaminassa.',
-        selite: 'Kuva on otettu Södragatania itään päin; oikealla on Commonsin mukaan '
-          + 'Södragatan 9. Katu kuuluu kaupungin vanhimpiin, ja sillä on säilynyt '
-          + '1800-luvun puutaloja.',
+        selite: 'Kuva on otettu Södragatania itään päin; oikealla on Södragatan 9. Katu kuuluu '
+          + 'kaupungin vanhimpiin, ja sillä on säilynyt 1800-luvun puutaloja.',
         lahde: 'Valokuva: Håkan Skogsjö, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Håkan Skogsjö',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:S%C3%B6dragatan_Mariehamn_2014-09-17.jpg',
@@ -1544,9 +1537,8 @@ export const HAHMOTELMA_FIN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-mariehamn-f344d442.jpg',
         lyhyt: 'Satamanäkymä Maarianhaminasta.',
-        selite: 'Commonsin kuvauksen mukaan kuva esittää Maarianhaminan Länsisatamaa '
-          + '(Västerhamn). Kaupungin molemmat satamat pysyvät artikkelin mukaan suurimman '
-          + 'osan vuodesta jäättöminä.',
+        selite: 'Kuva esittää Maarianhaminan Länsisatamaa (Västerhamn). Kaupungin molemmat '
+          + 'satamat pysyvät suurimman osan vuodesta jäättöminä.',
         lahde: 'Valokuva: Fanny Schertzer, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Fanny Schertzer',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:V%C3%A4sterhamn_in_Mariehamn,_%C3%85land.jpg',
@@ -1585,8 +1577,8 @@ export const HAHMOTELMA_FIN = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-ilomantsi-205c132f.jpg',
       lyhyt: 'Ilomantsin ortodoksinen kirkko talvella.',
-      selite: 'Ilomantsin ortodoksinen kirkko tammikuussa 2015. Artikkelin mukaan puukirkko on '
-        + 'Suomen suurin ortodoksinen kirkko ja omistettu profeetta Elialle.',
+      selite: 'Ilomantsin ortodoksinen kirkko tammikuussa 2015. Puukirkko on Suomen suurin '
+        + 'ortodoksinen kirkko ja omistettu profeetta Elialle.',
       lahde: 'Valokuva: Niera, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Niera',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ilomantsi_Orthodox_Church,_January_2015_(2).JPG',
@@ -1597,9 +1589,8 @@ export const HAHMOTELMA_FIN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-ilomantsi-8a74074e.jpg',
         lyhyt: 'Hirsitalo Parppeinvaaran runokylän ulkomuseoalueella.',
-        selite: 'Commonsin kuvauksen mukaan kuva esittää Parppeinvaaran runokylän '
-          + 'ulkomuseoalueella olevaa runolaulajan majaa. Runokylä on artikkelin mukaan '
-          + 'Ilomantsin nähtävyys.',
+        selite: 'Kuva esittää Parppeinvaaran runokylän ulkomuseoalueella olevaa runolaulajan '
+          + 'majaa. Runokylä on Ilomantsin nähtävyys.',
         lahde: 'Valokuva: Hedi Witter, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Hedi Witter',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:ParppeinvaaraBardsHouse0.jpg',
@@ -1609,8 +1600,8 @@ export const HAHMOTELMA_FIN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-ilomantsi-228e0ea2.jpg',
         lyhyt: 'Koitajoki Ilomantsissa.',
-        selite: 'Koitajoki on artikkelin mukaan yksi Ilomantsin tärkeimmistä vesistöistä. '
-          + 'Kuvassa joen tyyni pinta heijastaa rannoilla kasvavaa metsää.',
+        selite: 'Koitajoki on yksi Ilomantsin tärkeimmistä vesistöistä. Kuvassa joen tyyni '
+          + 'pinta heijastaa rannoilla kasvavaa metsää.',
         lahde: 'Valokuva: Saruwine, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Saruwine',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Koitajoki1.jpg',
@@ -1650,8 +1641,8 @@ export const HAHMOTELMA_FIN = [
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-fiskars-aa12e8b9.jpg',
       lyhyt: 'Tumma ruukkirakennus kosken rannalla Fiskarsissa.',
       selite: 'Kivijalan päällä seisova tummaseinäinen rakennus kohoaa virtaavan veden '
-        + 'äärellä, ikkunoita reunustavat punatiiliset kehykset. Commonsissa kuva on '
-        + 'merkitty osaksi Pohjan ruukkiympäristöä.',
+        + 'äärellä, ikkunoita reunustavat punatiiliset kehykset. Rakennus kuuluu Pohjan '
+        + 'ruukkiympäristöön.',
       lahde: 'Valokuva: Teuvo Salmenjoki, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Teuvo Salmenjoki',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fiskarsin_mylly.jpg',
@@ -1674,8 +1665,8 @@ export const HAHMOTELMA_FIN = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-fiskars-e772c467.jpg',
         lyhyt: 'Fiskarsin kartano vuonna 1910 otetussa mustavalkokuvassa.',
         selite: 'Vanha valokuva vaaleasta, kolmikerroksisesta kartanorakennuksesta puiden ja '
-          + 'pensaiden ympäröimänä. Artikkelin mukaan Fiskarsin tunnetuimman rakennuksen, '
-          + 'kartanon, suunnitteli vuonna 1818 Charles Bassi.',
+          + 'pensaiden ympäröimänä. Fiskarsin tunnetuimman rakennuksen, kartanon, '
+          + 'suunnitteli vuonna 1818 Charles Bassi.',
         lahde: 'Valokuva: Signe Brander, Wikimedia Commons (Public domain).',
         tekija: 'Signe Brander',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fiskarsin_kartano.jpg',
@@ -1817,9 +1808,8 @@ export const HAHMOTELMA_FIN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-varkaus-51463788.jpg',
         lyhyt: 'Varkauden tehdasalue vesiväylän rannalla: punatiilirakennuksia ja piippuja.',
-        selite: 'Panoraamakuva Varkauden paperitehtaiden alueelta. Commonsissa alue on '
-          + 'merkitty valtakunnallisesti merkittäväksi rakennetuksi kulttuuriympäristöksi, '
-          + '\'Varkauden paperitehtaat\'.',
+        selite: 'Panoraamakuva Varkauden paperitehtaiden alueelta. Alue on valtakunnallisesti '
+          + 'merkittävä rakennettu kulttuuriympäristö, \'Varkauden paperitehtaat\'.',
         lahde: 'Valokuva: Tiia Monto, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Tiia Monto',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Varkaus_factory_-_canal.jpg',
@@ -1883,8 +1873,7 @@ export const HAHMOTELMA_FIN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-kemi-8161a210.jpg',
         lyhyt: 'Kemin kirkko: korkea torni ja kaarevat ikkunat.',
-        selite: 'Kemin kirkko valmistui fi-Wikipedian mukaan vuonna 1902. Kuva on otettu '
-          + 'kesäkuussa 2022.',
+        selite: 'Kemin kirkko valmistui vuonna 1902. Kuva on otettu kesäkuussa 2022.',
         lahde: 'Valokuva: kallerna, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'kallerna',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kemi_Church_1.jpg',
@@ -1949,8 +1938,7 @@ export const HAHMOTELMA_FIN = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-nokia-353f4aea.jpg',
         lyhyt: 'Nokianvirta ja Tehdassaari lähellä kaupungin keskustaa syksyllä.',
         selite: 'Panoraamakuva Nokianvirrasta ja Tehdassaaren saaresta lokakuussa 2021. '
-          + 'Artikkelin mukaan Idestamin puuhiomo perustettiin juuri Nokianvirran '
-          + 'rannalle.',
+          + 'Idestamin puuhiomo perustettiin juuri Nokianvirran rannalle.',
         lahde: 'Valokuva: kallerna, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'kallerna',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nokianvirta_4.jpg',
