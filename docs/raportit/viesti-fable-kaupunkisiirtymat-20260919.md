@@ -192,3 +192,39 @@ jättää. Niiden keskipiste ei ole parempi kuin laudan valinta.
 | Machu Picchu | 3413.3 / 3660.8 | 3415.1 / 3652.8 | 8.2 | kyllä | 0 (pallopiste) |
 | Darwin | 10200.7 / 3633.7 | 10194.7 / 3628.2 | 8.1 | kyllä | 0 (pallopiste) |
 | Falkland | 3863.9 / 5115.5 | 3859.3 / 5108.9 | 8.0 | **ei** | 19 |
+
+---
+
+## LISÄYS klo 19.55: kuusi pallopistettä tehty (Fablen päätös klo 19.50)
+
+Tehtiin `js/packs/maailmankartta-pallopisteet.js`: `PALLON_KAUPUNKIPISTEET`
++6 riviä (aakkosjärjestyksessä, kolme desimaalia). Kommenttiin lisättiin
+"kolmas kierros 19.9.2026".
+
+| Kohde | Piste | Siirtyy laudan pisteestä |
+|---|---|---|
+| sansibar | −6,162 / 39,191 (Stone Town, en-Wikipedia; fi-sivun Wikidata on saaren keskipiste −5,9 / 39,3) | 531 km |
+| viktorianputoukset | −17,925 / 25,858 | 233 km |
+| mountrushmore | 43,879 / −103,459 | 162 km |
+| kilimandzaro | −3,067 / 37,359 (huippu) | 140 km |
+| uluru | −25,345 / 131,036 | 108 km |
+| milfordsound | −44,617 / 167,867 | 81 km |
+
+Laudan x/y ei muuttunut. Reitin pää siirtyy samalla siirtymällä
+(`js/pallolauta/reitit.js` korjattuPoly; testattu pallo.test.mjs:ssä).
+
+**Todisteet:**
+- `tests/pallo.test.mjs` "pallopisteitä on vain asutuksille": kuusi
+  kohdetta poistettiin aluelistalta. 500 km:n kattoon lisättiin
+  nimetty poikkeus Sansibarille (560 km), koska sen laudan piste on
+  avomerellä.
+- `node --test tests/*.test.mjs`: 3685 / 0.
+- `tools/tarkista-laudan-pisteet.mjs --raja 15`: yli rajan 40 → 35.
+  Sansibar jää listalle 31,5 km:n päähän, koska työkalu vertaa fi-sivun
+  saaren keskipisteeseen; Stone Town on tarkoituksellinen piste.
+- `savuke-pallo-reitit`: 3/5, sama 3/5 myös muuttamattomalla mainilla.
+  Väitteet 1–2 ovat punaisia jo ennestään, koska savuke ei löydä yhtään
+  reittipolkua (`polkuja 0`; reitit ovat nykyään piilossa kunnes
+  valitaan, vrt. savuke-reitit-piiloon). Savuke ei myöskään testaa näitä
+  kuutta kaupunkia. Sen polut `/opt/...` ovat kovakoodatut, joten ajoin
+  sen väliaikaisella kopiolla. Tämä on oma velkansa, en korjannut.
