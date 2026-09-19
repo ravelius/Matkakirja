@@ -79,7 +79,7 @@ import { merkitseLivianNosto } from './livia-tilanteet.js';
  * (tools/tarkista-niputus.mjs), joten kaikki top-level-nimet alkavat
  * ELAINTAKY_/elaintaky-etuliitteellä.
  */
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import {
   html, jaaKappaleiksi, kuunteleSulkevaNapautus, nielaiseSulkevaNapautus, TOAST_MS,
 } from './ui-apurit.js';
@@ -911,7 +911,7 @@ function elaintakyPiirraKaruselli(ui, kohde, kuvat, vakioselite) {
      * eläinkuvat ovat pelin omia generoituja kuvia — sama vakiorivi
      * kuin yhden kuvan kortissa.
      */
-    taytaLahderivi(lahde, kuva.lahde || 'Matkakirjan havainnekuva', kuva);
+    kortinKuvalahde(lahde, kuva.lahde || 'Matkakirjan havainnekuva', kuva);
     // Uusi kuvateksti tulee esiin pehmeästi: luokka irrotetaan ja
     // kiinnitetään uudestaan, jotta CSS-animaatio alkaa alusta.
     teksti.classList.remove('vaihtui');
@@ -1069,7 +1069,7 @@ function elaintakyValmisKaruselli(ui, kohde, kuvat, vakioselite, kehys) {
      * havainnekuva" saa painettavan selitteensä (js/havainnekuva.js)
      * kummallakin kuvalla — sama lauseke kuin raitakarusellissa.
      */
-    taytaLahderivi(lahde, kuva.lahde || 'Matkakirjan havainnekuva', kuva);
+    kortinKuvalahde(lahde, kuva.lahde || 'Matkakirjan havainnekuva', kuva);
     pistenapit.forEach((piste, j) => {
       piste.classList.toggle('nykyinen', j === kohdalla);
       if (j === kohdalla) piste.setAttribute('aria-current', 'true');
@@ -1248,7 +1248,7 @@ function elaintakyPiirraKuva(ui, kohde, taky, maa, valmisKuva) {
    * karusellissa — kaksi kuvaa ja yksi kuva eivät saa ajautua eri
    * tulkintoihin.
    */
-  teksti.appendChild(taytaLahderivi(html('span', 'fokusnosto-kuvalahde'),
+  teksti.appendChild(kortinKuvalahde(html('span', 'fokusnosto-kuvalahde'),
     kuva.lahde || 'Matkakirjan havainnekuva', kuva));
   kehys.appendChild(teksti);
   kohde.appendChild(kehys);

@@ -1160,6 +1160,67 @@ export function merkitseMerivariAukoksi(data, vari = LAASTARIN_MERIVARI, tol = L
 /** Reunan laajennuksen toleranssi (ks. REUNA LAAJENEE). */
 export const LAASTARIN_REUNAN_TOLERANSSI = 40;
 
+/*
+ * ── KOKO MERI ON AUKKO (Fablen erä G, 19.9.2026; Sonnet 1:n kierros 10,
+ *    kuvat 05/06: Kreetan etelä- ja Peloponnesoksen länsipuolella
+ *    tasaiset suorakaiteet ohuine reunoineen ja pikselöityä läiskää) ──
+ *
+ * MITATTU JUURISYY: MERIVARI (38, 78, 145) EI OLE VAIN POLTTAMATTOMAN
+ * LAATAN TÄYTE, vaan TÄSMÄLLEEN reliefipaletin −4 000 metrin merisävy
+ * (tools/reliefivarit.mjs MERI). Välimeren syvät altaat Kreetan
+ * eteläpuolella ovat 3–5 km syviä, joten ±6-toleranssi osui POLTETUN
+ * batymetrian pikseleihin: z6-laatoista 50–85 % meni aukoksi pilkkuina
+ * (mitattu 19.9.2026, raportti viesti-fable-kreikka-reliefi-20260919.md).
+ * Aukosta näkyy 4k-pohja, jonka sävy on eri kuin laastarin meren, ja
+ * laatan reuna piirtyi suorakaiteena.
+ *
+ * KORJAUS: laastari piirtää vain MAAN. Meri tulee kokonaan pallon
+ * omasta 4k-pohjasta, joten laastarin reunaa ei merellä ole lainkaan,
+ * eikä sävyeroa voi syntyä. Maa ja meri erotetaan värisävystä:
+ * reliefipaletin meri on sinistä (b > r · 1,2 + 4 ja b > g · 1,05),
+ * maa vihreää, ruskeaa tai valkoista (lumi, jää: b ≈ r ≈ g).
+ * Rinnevarjostus säilyttää suhteet, joten tummakin meri tunnistuu.
+ * Rantaviivan sekoittuneet pikselit laajennetaan aukkoon yhdellä
+ * kierroksella (b > r + 8 ja b ≥ g), jottei rannalle jää sininen hiussauma.
+ */
+/** Onko reliefin pikseli merta (ks. KOKO MERI ON AUKKO). */
+export function onReliefinMeri(r, g, b) {
+  return b > g + 2 && b > r * 1.2 + 4 && b > g * 1.05;
+}
+
+/**
+ * Laastarin meri aukoksi. Palauttaa aukkopikselien määrän.
+ *
+ * @param {Uint8ClampedArray} data RGBA
+ * @param {number} leveys kuvan leveys (reunan laajennukseen; 0 = ei)
+ */
+export function merkitseMeriAukoksi(data, leveys = 0) {
+  let aukkoja = 0;
+  for (let i = 0; i < data.length; i += 4) {
+    const meri = onReliefinMeri(data[i], data[i + 1], data[i + 2]);
+    data[i + 3] = meri ? 0 : 255;
+    if (meri) aukkoja += 1;
+  }
+  if (leveys > 0) {
+    const korkeus = data.length / 4 / leveys;
+    const lisattavat = [];
+    for (let y = 0; y < korkeus; y += 1) {
+      for (let x = 0; x < leveys; x += 1) {
+        const i = (y * leveys + x) * 4;
+        if (data[i + 3] === 0) continue;
+        if (!(data[i + 2] > data[i] + 8 && data[i + 2] >= data[i + 1])) continue;
+        const naapuri = (x > 0 && data[i - 1] === 0)
+          || (x < leveys - 1 && data[i + 7] === 0)
+          || (y > 0 && data[i - leveys * 4 + 3] === 0)
+          || (y < korkeus - 1 && data[i + leveys * 4 + 3] === 0);
+        if (naapuri) lisattavat.push(i);
+      }
+    }
+    for (const i of lisattavat) { data[i + 3] = 0; aukkoja += 1; }
+  }
+  return aukkoja;
+}
+
 /**
  * ASTRONAUTIN VALOLIUKU LAATAN KANKAALLE — valon vastakaava.
  *
@@ -2326,8 +2387,9 @@ export function luoLaattakerros({
               0, 0, kartta.leveys, kartta.korkeus);
           }
           const d = mctx.getImageData(0, 0, kartta.leveys, kartta.korkeus);
-          mittarit.merivariAukkoja += merkitseMerivariAukoksi(d.data, LAASTARIN_MERIVARI,
-            LAASTARIN_MERIVARIN_TOLERANSSI, kartta.leveys);
+          // Koko meri aukoksi (ks. KOKO MERI ON AUKKO); tasainen
+          // MERIVARI on sen osajoukko.
+          mittarit.merivariAukkoja += merkitseMeriAukoksi(d.data, kartta.leveys);
           mctx.putImageData(d, 0, 0);
         } catch { aukkoMaski = null; }
       }

@@ -64,7 +64,7 @@ import { sfx } from './sound.js';
 import {
   aloitaSivunVeto, kaannaSivu, lataaSivunkaanto, sivunkaantoMahdollinen,
 } from './sivunkaanto.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { kehittajalehdenSivut } from './tyohuone-kehittajalehti.js';
 import { musiikkiSivut } from './tyohuone-musiikki.js';
 import { RAAMATTU } from './tyohuone-raamattu.js';
@@ -2297,7 +2297,7 @@ export function latoLehtiKuvat(ui, {
       // Väli tulee CSS:n ::before-sisällöstä, ei tekstistä
       // (css/styles.css "LÄHDERIVI KUVATEKSTIN JATKEEKSI").
       if (teos.lahde) {
-        teksti.appendChild(taytaLahderivi(html('span', 'lehti-kuvalahde'), teos.lahde, teos));
+        teksti.appendChild(kortinKuvalahde(html('span', 'lehti-kuvalahde'), teos.lahde, teos));
       }
       kotelo.appendChild(teksti);
     }

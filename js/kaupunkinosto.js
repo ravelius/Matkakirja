@@ -61,7 +61,7 @@ import {
 } from './nahtavyydet.js';
 import { KAUPUNKIKARTAT } from './packs/maakartat.js';
 import { sfx } from './sound.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { html, jaaKappaleiksi, kuunteleSulkevaNapautus } from './ui-apurit.js';
 
 /* ===================== MERKIN MITAT KARTALLA ===================== */
@@ -1104,7 +1104,7 @@ export function latoLisakaupunginKortti(ui, sisalto, kohde) {
     if (lyhyt) {
       const teksti = html('figcaption', 'kuvateksti', lyhyt);
       if (heroKuva.lahde) {
-        teksti.appendChild(taytaLahderivi(
+        teksti.appendChild(kortinKuvalahde(
           html('span', 'lehti-kuvalahde'), heroKuva.lahde, heroKuva,
         ));
       }
