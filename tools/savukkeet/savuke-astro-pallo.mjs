@@ -793,10 +793,20 @@ async function ajaNakyma(nimi) {
   await s.waitForTimeout(4000);
   const a2 = await lng();
   const nopeus = Math.abs(kulma(a1, a2)) / 4;
-  vaadi(t('pallo jää pyörimään hitaasti ajon jälkeen'),
-    loppu.pyorii === true && nopeus > 0.05 && nopeus < 0.6,
+  /*
+   * PYÖRIMISEN LÄHDE VAIHTUI (Raamattu PAATOKSET 53, 19.9.2026): ennen
+   * pallo pyöri kirjaston autoRotatella 0,16 °/s; nyt avauksessa kamera
+   * SEURAA ISS:ää, ja Maa kiertyy aseman alla, kunnes pelaaja koskee
+   * ruutuun. Mitattu 20.9.2026: seurannassa 0,70 °/s (ISS-seurannan
+   * kerroin 0,1), autoRotate on silloin pois. Väite mittaa siis
+   * edelleen, että pallo EI ole paikallaan ajon jälkeen, mutta kaista on
+   * uuden lähteen mukainen ja tila kertoo kumpi liike on käynnissä.
+   * Pysähtyminen otteeseen on seuraavan väitteen asia.
+   */
+  vaadi(t('pallo pyörii ajon jälkeen (ISS-seuranta tai autoRotate)'),
+    loppu.pyorii === true && nopeus > 0.05 && nopeus < 1.5,
     `${a1.toFixed(3)}° → ${a2.toFixed(3)}° = ${nopeus.toFixed(3)} °/s`
-    + ` (tilaus 0,16; kirjaston autoRotateSpeed ${loppu.pyorimisenNopeus})`);
+    + ` (seuranta ${loppu.issSeuranta}; kirjaston autoRotateSpeed ${loppu.pyorimisenNopeus})`);
   /*
    * PELAAJAN OTE PYSÄYTTÄÄ. Veto pallon yli: sormi alas, liike, ylös —
    * sama ele, jolla pelaaja kääntää palloa.
