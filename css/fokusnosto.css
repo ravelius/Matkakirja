@@ -49,6 +49,14 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  /*
+   * TILAPALKKI EI LEIKKAA KORTTIA (omistajan laitekuva 19.9.2026 klo
+   * 17.44: kello 17.44 kortin yläreunan päällä). Sivu on
+   * viewport-fit=cover, joten kotinäytön sovelluksessa ruutu alkaa
+   * tilapalkin alta; yläreunan vara on safe-area + 1rem.
+   */
+  padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
   background: rgba(18, 12, 4, 0);
   transition: background 220ms ease-out;
 }
@@ -909,6 +917,16 @@ button.fokusnosto-liitenappi:focus-visible { background: transparent; }
 .hetki-kuvanuoli.seuraava,
 .skandaali-kuvanuoli.seuraava,
 .nostosarja-kuvanuoli.seuraava { right: 0; text-align: right; padding-right: 0.4rem; }
+/*
+ * KUVAN PÄÄLLÄ OLEVA NUOLI EI SAA TAUSTAA MISSÄÄN TILASSA: yleinen
+ * button:hover/:active-tausta (css/styles.css) voitti ennen tämän
+ * `background: none` -säännön spesifisyydellä ja maalasi 24 %:n
+ * tumman paneelin kuvan päälle (mitattu 19.9.2026, WebKit ja Chromium
+ * kosketustilassa: rgb(67, 51, 31)). Nuoli näkyy vain merkkinä.
+ */
+button.hetki-kuvanuoli:is(:hover, :active, :focus, :focus-visible),
+button.skandaali-kuvanuoli:is(:hover, :active, :focus, :focus-visible),
+button.nostosarja-kuvanuoli:is(:hover, :active, :focus, :focus-visible) { background: none; }
 .hetki-kuvanuoli:hover,
 .hetki-kuvanuoli:focus-visible,
 .skandaali-kuvanuoli:hover,

@@ -188,7 +188,7 @@ import { piirraOtsikonReaktio, piirraReaktiot } from './reaktiot.js';
  * siitä kahta asiaa: valikon retkikuntaosio ja piirtokutsu.
  */
 import { paivitaSahke, retkikuntaOsio } from './sahke.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 // Tietäjätasot: matkalaukun nimikerivi ja pöllön onnittelukuplat.
 import {
   seuraavaTietajataso, tietajaAvatar, tietajataso, tietajatasonOsuus, varssynSakeet,
@@ -16046,7 +16046,7 @@ export class UI {
       kuva.galleriaTila = { teokset, kohdalla };
       // Sivulla lyhyt; pitkä näkyy vasta suurennoksessa.
       if (selite) selite.textContent = kuvatekstiLyhyt(teos);
-      if (lahde) taytaLahderivi(lahde, teos.lahde ?? nosto.lahde ?? '', teos);
+      if (lahde) kortinKuvalahde(lahde, teos.lahde ?? nosto.lahde ?? '', teos);
       laskuri.textContent = `${kohdalla + 1} / ${teokset.length}`;
     };
     const nuoli = (luokka, merkki, nimi, suunta) => {
@@ -16452,7 +16452,7 @@ export class UI {
       // Sama apuri kuin kaikilla muilla lähderiveillä (2.9.2026):
       // kuratoitu kuva voi olla myös Matkakirjan oma havainnekuva.
       this.wikiKuvateksti.appendChild(
-        taytaLahderivi(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva),
+        kortinKuvalahde(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva),
       );
     }
   }

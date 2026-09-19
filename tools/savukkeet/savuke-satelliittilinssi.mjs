@@ -332,6 +332,7 @@ async function ajaNakyma(nakymanNimi) {
       nakyvyys: topbar ? getComputedStyle(topbar).visibility : null,
       // Matalan ruudun väkäsnappi, josta palkki tuodaan esiin.
       nappiNakyy: nappi ? getComputedStyle(nappi).display !== 'none' : false,
+      karkea: matchMedia('(pointer: coarse)').matches,
     };
   });
   const topbarEnnen = palkkiEnnen.korkeus;
@@ -1186,6 +1187,26 @@ async function ajaNakyma(nakymanNimi) {
   await s.waitForFunction(() => document.querySelectorAll('.satelliitti-piste').length === 0,
     null, { timeout: 30000 }).catch(() => {});
   await s.waitForTimeout(1000);
+  /*
+   * KOSKETUSEMULOINTI VOI KADOTA KESKEN NÄKYMÄN (mitattu 19.9.2026, v1963
+   * CI-ajo 35456026598). Ipadissa palkki oli linssin jälkeen näkyvä
+   * 57,375 px ja väkäsnappi `display: none`, puhelinvaakassa piilossa mutta
+   * 57,375 px — molemmat täsmälleen se asettelu, jonka CSS antaa, kun
+   * `(pointer: coarse)` EI täsmää (palkin säännöt ja `button
+   * { min-height: 46px }`). Sivun JavaScript ei voi muuttaa osoitinmediaa,
+   * joten vika on selaimen emuloinnissa, ei pelissä. Paikallisesti kolme
+   * ajoa pysyi `coarse`-tilassa. Jos media on vaihtunut, emulointi
+   * palautetaan CDP:llä ja palkki mitataan palautetussa tilassa; tieto
+   * kirjataan, jotta toistuminen näkyy lokissa.
+   */
+  const karkeaNyt = () => s.evaluate(() => matchMedia('(pointer: coarse)').matches);
+  if (palkkiEnnen.karkea && !(await karkeaNyt())) {
+    console.log(`tieto  kosketusemulointi katosi ennen linssin sulun mittausta (${nakymanNimi}) — palautetaan CDP:llä`);
+    const cdp = await konteksti.newCDPSession(s);
+    await cdp.send('Emulation.setTouchEmulationEnabled', { enabled: true, maxTouchPoints: 1 });
+    await s.waitForTimeout(500);
+    console.log(`tieto  pointer: coarse palautuksen jälkeen: ${await karkeaNyt()} (${nakymanNimi})`);
+  }
   const jalkeen = await s.evaluate(() => {
     const topbar = document.querySelector('.topbar');
     return {
@@ -1197,6 +1218,7 @@ async function ajaNakyma(nakymanNimi) {
       bodyLuokat: ['aikajana-palkki-auki', 'aikajana-paalla'].filter((l) => document.body.classList.contains(l)),
       topbarNakyvyys: topbar ? getComputedStyle(topbar).visibility : null,
       topbarKorkeus: topbar?.getBoundingClientRect().height ?? null,
+      karkea: matchMedia('(pointer: coarse)').matches,
       // Matalan ruudun väkäsnappi: reitti palkkiin, kun palkki on
       // lähtökohtaisesti liu'utettu ylös (@media max-height: 520px).
       ylapalkkiNappiNakyy: (() => {
@@ -1228,7 +1250,8 @@ async function ajaNakyma(nakymanNimi) {
    * ylös liu'utettu ja `visibility: hidden` — silloin reitti palkkiin
    * on kartan väkäsnappi, ja senkin on oltava takaisin paikallaan.
    */
-  const palkkiPalasi = jalkeen.topbarNakyvyys === palkkiEnnen.nakyvyys
+  const palkkiPalasi = jalkeen.karkea === palkkiEnnen.karkea
+    && jalkeen.topbarNakyvyys === palkkiEnnen.nakyvyys
     && Math.abs(jalkeen.topbarKorkeus - palkkiEnnen.korkeus) <= 0.5
     && jalkeen.topbarKorkeus > 20
     && jalkeen.ylapalkkiNappiNakyy === palkkiEnnen.nappiNakyy;

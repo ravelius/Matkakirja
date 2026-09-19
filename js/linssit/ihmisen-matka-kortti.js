@@ -50,7 +50,7 @@ import { IHMISEN_MATKA_VIRRAT } from './ihmisen-matka-virrat.js';
 import { polloUlkoinenKysymys } from '../pollo.js';
 import { haeIhmisenMatkanKysymykset, haeIhmisenMatkanVastaus } from './ihmisen-matka-kysymykset.js';
 import { kuvatekstiLyhyt } from '../kuvatekstit.js';
-import { taytaLahderivi } from '../tekijakortti.js';
+import { kortinKuvalahde } from '../tekijakortti.js';
 
 /*
  * LYHYT KORTILLA (js/kuvatekstit.js, omistaja 9.9.2026). Ihmisen matkan
@@ -357,7 +357,23 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
     kehys.appendChild(kuva);
     if (selite) kehys.appendChild(solmu('figcaption', 'ihmisen-nostokortti-kuvateksti', selite));
     if (kuvaTiedot?.lahde) {
-      kehys.appendChild(taytaLahderivi(solmu('div', 'ihmisen-nostokortti-kuvalahde'), kuvaTiedot.lahde, kuvaTiedot));
+      /*
+       * LÄHDE VAIN SUURENNOKSESSA (omistaja 19.9.2026 klo 19.04): kortin
+       * kuvan alla on vain lyhyt kuvateksti, ja kuvan napautus avaa saman
+       * suurennoksen kuin kartan kohdekortti (js/fokuskohteet.js
+       * avaaKohdeSuurennos), jossa tekijä ja lisenssi näkyvät — CC BY
+       * vaatii maininnan siellä, missä kuva on isoimmillaan.
+       */
+      kehys.appendChild(kortinKuvalahde(solmu('div', 'ihmisen-nostokortti-kuvalahde'), kuvaTiedot.lahde, kuvaTiedot));
+      kehys.classList.add('suurennettava');
+      kuva.addEventListener('click', (tapahtuma) => {
+        tapahtuma.stopPropagation();
+        // Tuonti vasta napautuksella: fokuskohteet.js asentaa dokumentin
+        // kuuntelijoita moduulin alustuksessa (testit ajavat tätä Nodessa).
+        import('../fokuskohteet.js').then(({ avaaKohdeSuurennos }) => avaaKohdeSuurennos(
+          ui, { osoite, lyhyt: selite ?? '', ...kuvaTiedot }, () => kuva, 'ihmisenKuvaZoom',
+        ));
+      });
     }
     return kehys;
   }

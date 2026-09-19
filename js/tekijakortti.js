@@ -172,6 +172,30 @@ export function avaaTekijaKortti(id, nimi = '') {
   return dialogi;
 }
 
+/*
+ * KUVAN LÄHDE JA HAVAINNEKUVAMERKINTÄ VAIN SUURENNOKSESSA (omistaja
+ * 19.9.2026 klo 19.04 Suomen aikaa, Loire-kohdekortin laitekuva,
+ * sanatarkasti: *"Havainnekuva ja lähteet saa näkyä vasta kun kuva
+ * klikataan isoksi. Tsekkaa kaikkialta läpi"*).
+ *
+ * Yksi apuri kaikille kortin ja lehden kuville: rivi täytetään samalla
+ * `taytaLahderivi`llä kuin ennen (gallerioiden kuvanvaihto kirjoittaa
+ * siihen yhä, eikä elementtiä saa poistaa), mutta luokka
+ * KUVALAHDE_VAIN_SUURENNOKSESSA piilottaa sen kortilla
+ * (css/styles.css). Suurennokset (fokuskohteet.js avaaKohdeSuurennos,
+ * ui.js openLightbox, fokusvirta.js avaaSuurennos) rakentavat oman
+ * rivinsä `taytaLahderivi`llä, joten lähde ja CC BY -maininta näkyvät
+ * siellä kerran linkkeineen.
+ */
+export const KUVALAHDE_VAIN_SUURENNOKSESSA = 'kuvalahde-vain-suurennoksessa';
+
+/** Kortin kuvan lähderivi: täytetty, mutta näkyy vain suurennoksessa. */
+export function kortinKuvalahde(el, lahde, kohde = {}) {
+  const rivi = taytaLahderivi(el, lahde, kohde) ?? el;
+  rivi.classList?.add(KUVALAHDE_VAIN_SUURENNOKSESSA);
+  return rivi;
+}
+
 /**
  * Täyttää kuvan lähderivin niin, että tekijän nimi on painettava, jos
  * kuvalla on `tekijaId`.

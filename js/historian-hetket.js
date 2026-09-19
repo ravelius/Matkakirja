@@ -64,7 +64,7 @@ import { nostosymKortinYlarivi } from './fokusnosto-symbolit.js';
 import { nostokuvaAloita } from './nostokuva.js';
 import { TAKY_PALKKIO } from './fokusvirta.js';
 import { projisoiLaudalle } from './fokusmitat.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
@@ -386,7 +386,7 @@ function piirraHetkenKuvat(ui, sailio, hetki, valmisKuva) {
      * kulkee taytaLahderivin läpi, "Matkakirjan havainnekuva" saa
      * painettavan selitteen joka kerta (js/havainnekuva.js).
      */
-    taytaLahderivi(lahde, kuva.lahde ?? 'Matkakirjan havainnekuva', kuva);
+    kortinKuvalahde(lahde, kuva.lahde ?? 'Matkakirjan havainnekuva', kuva);
   };
   nayta(!valmisKuva);
 
