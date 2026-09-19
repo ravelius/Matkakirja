@@ -9355,7 +9355,14 @@ export const RAAMATTU = {
           + 'kiireellinen). Pulu peittaa laajassa nostokortissa sanan reunan (Opus 1). '
           + 'PAATOKSET 47 VELKA TEHTY (Opus 1 klo 19.58): ajaKamera nostaa maan katon '
           + 'maalin korkeuteen (ajonKatto), katto laskee saapuessa; vartio noppa-'
-          + 'saapumisen-aikana 5 ja 5b, 14/14; julkaistaan v1964.',
+          + 'saapumisen-aikana 5 ja 5b, 14/14; julkaistaan v1964. IRLANTI (Sonnet 2, Fable '
+          + 'klo 20.00): IRL 25 / 52 / 10 visaa (nalanhadan kohteet asiallisesti, Cobh = '
+          + 'Queenstown 1873, seitseman rannikkokohdetta renkaan ulkopuolella), HEAD 200 '
+          + '52/52, julkaistaan v1964. Seuraava maa Sonnet 2:lle: Kroatia. v1963 CI '
+          + 'PUNAINEN (klo 19.59): savuke-satelliittilinssi - ylapalkin korkeus 61 -> 57 '
+          + 'px linssin sulkemisen jalkeen (pystykuvaeran styles.css-muutos, Opus 1) ja '
+          + 'takapuolen merkki ottaa napautuksen (nimioera, Opus 2); korjaukset '
+          + 'v1963-haaraan ennen mergea.',
         'KARTTAUUDISTUKSEN PAATOKSET 47: NOPAN JALKEEN KAMERA JAI TYHJAAN KOHTAAN - '
           + 'KOHDEMAAN ZOOMIKATTO KUMOSI ULOSSOVITUKSEN (Sonnet-simulaattoritesti kierros 5, '
           + '19.9.2026 klo 14.05-14.19 Suomen aikaa: Pariisi -> liftaus -> Amsterdam -> Liiku '
