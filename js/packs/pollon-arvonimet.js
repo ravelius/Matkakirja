@@ -38,10 +38,6 @@ export const POLLON_ARVONIMET_YLEISET = [
   'Hänen Höyhenisyydeltään',
   'Ikuisesti Valvovalta',
   'Pyöreäsilmäiseltä Viisaudelta',
-<<<<<<< HEAD
-  'Tiedon Kynsijältä',
-=======
->>>>>>> origin/main
   'Puunkolon Filosofilta',
   'Sanakirjan Syöjältä',
   'Kaikkien Tietosanakirjojen Isältä',
@@ -50,19 +46,11 @@ export const POLLON_ARVONIMET_YLEISET = [
   'Yön Kuninkaalta',
   'Hiljaisen Lennon Mestarilta',
   'Kuunvalon Kirjurilta',
-<<<<<<< HEAD
-  'Kaksisataa astetta Kääntyvältä Päältä',
-=======
->>>>>>> origin/main
   'Pöllöjen Pöllöltä, Viisauden Viisaudelta',
   'Kaikkien Aikojen Kaikkitietävältä',
   'Ylhäiseltä, Korkeimmalta ja Kaikkein Pöllöisimmältä',
   'Huuhkajien Huuhkajalta',
   'Sulkien Sulttaanilta',
-<<<<<<< HEAD
-  'Ylimmältä Uhuilijalta',
-=======
->>>>>>> origin/main
   'Vanhalta Viisaalta, joka ei koskaan räpäytä silmäänsä',
   // — 1873-henkiset (höyryn, lennättimen ja maailmannäyttelyjen aika) —
   'Höyrykoneen Aikakauden Pöllöltä',
@@ -74,16 +62,8 @@ export const POLLON_ARVONIMET_YLEISET = [
   'Kahdeksankymmenen Päivän Matkatoverilta',
   'Höyrylaivan Kansiluennoitsijalta',
   'Rautatieaikataulun Ulkoa Osaavalta',
-<<<<<<< HEAD
-  'Valokuvaajan Hiljaiselta Mallilta',
-  'Sanomalehtien Yöpainoksen Lukijalta',
-  'Vuoden 1873 Pörssiromahduksen Ennustajalta',
-  'Kuningatar Victorian Hovin Yölinnulta',
-  'Kaikkien Postivaunujen Kyydissä Olleelta',
-=======
   'Sanomalehtien Yöpainoksen Lukijalta',
   'Kuningatar Victorian Hovin Yölinnulta',
->>>>>>> origin/main
   // — akateemiset —
   'Professori Emeritukselta',
   'Tiedeakatemian Kunniajäseneltä',
@@ -95,10 +75,6 @@ export const POLLON_ARVONIMET_YLEISET = [
   'Tähtitornin Vahtimestarilta',
   'Väitöskirjan Vastaväittäjältä',
   'Alaviitteiden Aatelilta',
-<<<<<<< HEAD
-  'Sivistyssanakirjan Sisällysluettelolta',
-=======
->>>>>>> origin/main
   'Luentosalin Takarivin Viisaalta',
   'Kirjastonhoitajien Kirjastonhoitajalta',
   'Museon Yövartijalta, Joka Luki Kaikki Kyltit',
@@ -130,15 +106,7 @@ export const POLLON_ARVONIMET_YLEISET = [
   'Viisaudesta Vastaavalta Ministeriltä',
   'Höyhenten Herralta ja Hämärän Hallitsijalta',
   // — lämpimät ja pienet —
-<<<<<<< HEAD
-  'Puunkolon Naapurilta',
   'Yökahvin Ystävältä',
-  'Hiljaiselta Kuuntelijalta',
-  'Sulkia Pöyhivältä Tietäjältä',
-  'Aina Hereillä Olevalta',
-=======
-  'Yökahvin Ystävältä',
->>>>>>> origin/main
   'Pöllöltä, Joka Muistaa Kaiken Lukemansa',
 ];
 
@@ -193,10 +161,6 @@ export const POLLON_ARVONIMET_MAANOSITTAIN = {
   americas: [
     'Preerian Huhuilijalta',
     'Andien Kondoripöllöltä',
-<<<<<<< HEAD
-    'Uuden Maailman Kirjastonhoitajalta',
-=======
->>>>>>> origin/main
     'Amazonin Yökuiskaajalta',
     'Sähkölennättimen Pöllöltä',
     'Kultakuumeen Kirjanpitäjältä',
@@ -210,10 +174,6 @@ export const POLLON_ARVONIMET_MAANOSITTAIN = {
     'Eukalyptuksen Viisaalta',
     'Etelän Ristin Tähtitieteilijältä',
     'Korallimeren Majakanvartijalta',
-<<<<<<< HEAD
-    'Vastarannan Pöllöltä',
-=======
->>>>>>> origin/main
     'Kengurujen Yöpaimenelta',
     'Tyynenmeren Saarikartan Piirtäjältä',
     'Maorien Tarinoiden Kuuntelijalta',
@@ -251,8 +211,6 @@ export const POLLON_ARVONIMET_MAITTAIN = {
     'Pyreneiden Huuhkajalta',
     'Jules Vernen Pöytäkirjurilta',
     'Montmartren Tuulimyllyn Vahdilta',
-<<<<<<< HEAD
-=======
     'Mont Blancin Lumipöllöltä',
     'Seinen Rantakäytävän Yövahdilta',
     "Versailles'n Peilisalin Tietäjältä",
@@ -260,7 +218,6 @@ export const POLLON_ARVONIMET_MAITTAIN = {
     'Balzacin Muistiinpanojen Lukijalta',
     'Pasteurin Pöytäkirjurilta',
     'Croissantin Tuoksun Tuntijalta',
->>>>>>> origin/main
   ],
   FIN: [
     'Kolin Huuhkajalta',
@@ -269,8 +226,6 @@ export const POLLON_ARVONIMET_MAITTAIN = {
     'Saimaan Rannan Yölinnulta',
     'Tuonelan Joutsenen Naapurilta',
     'Snellmanin Sanakirjan Syöjältä',
-<<<<<<< HEAD
-=======
     'Ounasvaaran Erakolta',
     'Imatrankosken Kuiskaajalta',
     'Suomenlinnan Yövahdilta',
@@ -278,30 +233,24 @@ export const POLLON_ARVONIMET_MAITTAIN = {
     'Sibeliuksen Nuottien Kuuntelijalta',
     'Kalevalan Kanteleen Vartijalta',
     'Karjalanpiirakan Tuoksun Tuntijalta',
->>>>>>> origin/main
   ],
   DEU: [
     'Grimmin Veljesten Satupöllöltä',
     'Reinin Loreleyn Kuuntelijalta',
     'Goethen Puutarhan Yölinnulta',
     'Schwarzwaldin Käkikellon Kilpailijalta',
-<<<<<<< HEAD
-=======
     'Zugspitzen Lumipöllöltä',
     'Elben Rantatörmän Yövahdilta',
     'Brandenburgin Portin Tähystäjältä',
     'Beethovenin Nuottikirjurilta',
     'Wagnerin Oopperakirjurilta',
     'Kölnin Tuomiokirkon Yövahdilta',
->>>>>>> origin/main
   ],
   GBR: [
     'Big Benin Yövahdilta',
     'Sherlock Holmesin Konsultilta',
     'Shakespearen Kuiskaajalta',
     'Tower of Londonin Korppien Kilpailijalta',
-<<<<<<< HEAD
-=======
     'Ben Nevisin Erakolta',
     'Thamesin Sumun Tähystäjältä',
     'Loch Nessin Legendan Vartijalta',
@@ -309,21 +258,12 @@ export const POLLON_ARVONIMET_MAITTAIN = {
     'Darwinin Kirjeenvaihtajalta',
     'Yorkshiren Nummien Yövahdilta',
     'Teekupin Höyryn Tulkilta',
->>>>>>> origin/main
   ],
   ITA: [
     'Colosseumin Kaarien Pöllöltä',
     'Danten Kommentaattorilta',
     'Vesuviuksen Rinteen Tähystäjältä',
     'Galilein Kaukoputken Vartijalta',
-<<<<<<< HEAD
-  ],
-  GRC: [
-    'Athenen Olkapään Pöllöltä',
-    'Delfoin Oraakkelin Sijaiselta',
-    'Olympoksen Yökokouksen Puheenjohtajalta',
-    'Sokrateen Kysymysten Kuulijalta',
-=======
     'Firenzen Kupolin Yövahdilta',
     'Venetsian Kanavan Kuiskaajalta',
     'Vatikaanin Kirjaston Salaisimmalta Lukijalta',
@@ -668,7 +608,6 @@ export const POLLON_ARVONIMET_MAITTAIN = {
     'Krimin Niemimaan Tähystäjältä',
     'Gogolin Kirjeenvaihtajalta',
     'Odessan Sataman Yövahdilta',
->>>>>>> origin/main
   ],
   EGY: [
     'Sfinksin Arvoitusten Ratkojalta',
