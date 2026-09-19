@@ -11130,6 +11130,37 @@ export class UI {
         napit.push(backBtn);
       }
 
+      /*
+       * NOPPA ON LIU'USSA, JOTEN LIUKU ON AUKI (mitattu 19.9.2026,
+       * Tangerin laivamatka-jumi — Sonnetin pelitesti v1949, löydös 2:
+       * *"ilmestyi noppakuvake, joka ei reagoinut yhteenkään
+       * kosketukseen"*, ja ulospääsy oli vain "Uusi peli").
+       *
+       * piirraToimintorivi latoo matkanapit `.toimintorivi-liuku`-
+       * laatikkoon, joka on SULJETTUNA `opacity: 0; pointer-events:
+       * none` (css/styles.css .toimintorivi-liuku) ja avautuu vain
+       * `liuku-auki`-luokalla. Vaiheessa 'roll' juuri noppa JA
+       * matkustustavan vaihto ovat ne napit — mutta `liukuAuki` on
+       * silloin epätosi, koska liu'un oma napautuskuuntelija nollaa
+       * sen heti kun matkustustapa valitaan (ja laivalippu valitaan
+       * kokonaan liu'un ulkopuolelta, vaiheen B listasta). Noppa siis
+       * PIIRTYI ruudulle mutta jäi läpinäkyvän, napautusta
+       * läpäisemättömän liu'un sisään.
+       *
+       * MIKSI VIKA NÄKYI VAIN LAIVALLA. Liftaus (doWalk), bussi
+       * (doBus) ja lento (doFly) tekevät heiton tai siirron samassa
+       * eleessä, eikä peli jää vaiheeseen 'roll' lainkaan. Laiva on
+       * ainoa tapa, joka VALITSEE tavan ja jättää heiton pelaajalle —
+       * ja sama umpikuja odotti myös vuoron alussa esivalittua tapaa
+       * (game.beginTurn autoTravel) sekä kesken reittiä pysähtynyttä
+       * matkaa, jos automaattiheitto ei lähtenyt.
+       *
+       * KORJAUS ON TILAN TOTEAMINEN, EI UUSI SÄÄNTÖ: vaiheessa 'roll'
+       * rivin sisältö ON liuku, joten liuku on auki. Muut vaiheet
+       * eivät tätä haaraa näe, joten liftaus, bussi, kyyhky ja lento
+       * käyttäytyvät täsmälleen kuten ennen.
+       */
+      this.liukuAuki = true;
       this.piirraToimintorivi(napit, this.tutkiNappi());
       return;
     }
