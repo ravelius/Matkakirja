@@ -79,7 +79,9 @@ const palvelin = createServer((req, res) => {
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
   res.end(readFileSync(polku));
 });
-await new Promise((r) => palvelin.listen(8759, r));
+/* Portti env:stä, jotta kaksi ajoa mahtuu samalle koneelle rinnakkain. */
+const PORTTI = Number(process.env.PORTTI ?? 8759);
+await new Promise((r) => palvelin.listen(PORTTI, r));
 
 const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
 const chromium = paketti.chromium ?? paketti.default?.chromium;
@@ -168,7 +170,31 @@ const VAHTI = () => {
   const vanhaLahde = P.createBufferSource;
   P.createBufferSource = function createBufferSource(...args) {
     const solmu = vanhaLahde.apply(this, args);
-    const kirjaus = { alkoi: null, loop: null, kesto: null, pysaytetty: false, solmu };
+    /*
+     * LUONTIPAIKAN PINO TALTEEN (19.9.2026). Väite 3 häilyi CI:ssä,
+     * koska mittari laski sivun KAIKKI lähteet: hitaassa ajossa
+     * kohteenvaihdon ikkunaan osui lyhyt lähde muualta. Pino kertoo
+     * MITTAAMALLA, mistä moduulista kukin lähde tuli — ei arvaamalla.
+     * Kolme ensimmäistä riviä riittää diagnoosiin.
+     *
+     * MITATTU 19.9.2026 (kaksi rinnakkaista puhelinajoa): sivun kaikki
+     * lyhyet lähteet syntyvät `js/sound.js` `playSlice`in kautta, ja ne
+     * ovat Livian avaussarjan kuplaääniä (`paper`, `kupla`) ja pulun
+     * tehosteita (PULUN_TEHOSTEET, puskuri 0,28 s). Sarja etenee
+     * ketjutetuilla ajastimilla (js/livia.js `seuraavaRepliikki`), joten
+     * sen viimeiset äänet valuvat kuormassa eteenpäin — siinä on väitteen
+     * häilynnän mekanismi. Pelin äänimaisemaa (ambienceBed) ei tässä
+     * näkymässä synny lainkaan, joten se EI ole selitys.
+     */
+    let pino = null;
+    try {
+      pino = String(new Error().stack ?? '').split('\n').slice(1, 4)
+        .map((r) => r.trim()).join(' | ');
+    } catch { pino = null; }
+    const kirjaus = {
+      alkoi: null, loop: null, kesto: null, pysaytetty: false, solmu, pino,
+      luotu: (() => { try { return Number(this.currentTime.toFixed(2)); } catch { return null; } })(),
+    };
     window.__astroAani.lahteita += 1;
     window.__astroAani.lahteet.push(kirjaus);
     const vanhaStart = solmu.start.bind(solmu);
@@ -223,6 +249,14 @@ const AANITILA = async () => {
     lahteet: kirjanpito.lahteet.map((r) => ({
       alkoi: r.alkoi, loop: r.loop, kesto: r.kesto ? Math.round(r.kesto) : null,
       pysaytetty: r.pysaytetty,
+      // Puskurin kesto luetaan solmusta, joten myös aloittamaton lähde
+      // paljastaa pituutensa (r.kesto kirjautuu vasta start()-kutsussa).
+      puskuri: (() => {
+        try { return r.solmu?.buffer ? Number(r.solmu.buffer.duration.toFixed(2)) : null; }
+        catch { return null; }
+      })(),
+      luotu: r.luotu ?? null,
+      pino: r.pino ?? null,
     })),
     ctx: window.matkakirja?.ui ? undefined : undefined,
   };
@@ -283,7 +317,7 @@ async function avaaSivu(nakyma, virheet, musiikkipyynnot) {
 }
 
 async function avaaPeli(s) {
-  await s.goto('http://127.0.0.1:8759/index.html?lauta=pallo', { waitUntil: 'load' });
+  await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo`, { waitUntil: 'load' });
   await s.waitForTimeout(2500);
   await s.evaluate(() => {
     [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
@@ -483,7 +517,38 @@ async function ajaNakyma(nakymanNimi) {
     JSON.stringify(kierros));
 
   /* --- 3: kohteen ja kuvan vaihto ei luo uutta soitinta ------------- */
+  /*
+   * VÄITE KOSKEE HUMINASOITINTA, EI SIVUN KAIKKIA LÄHTEITÄ
+   * (juurisyykorjaus 19.9.2026).
+   *
+   * Vanha mittari vertasi `__astroAani.lahteita`-kokonaislukua ennen ja
+   * jälkeen vaihdon. Se laskee SIVUN JOKAISEN `createBufferSource`-
+   * kutsun, myös ne joilla ei ole mitään tekemistä linssin äänen
+   * kanssa: mitattuna (pinot yllä) kaikki lyhyet lähteet tulevat
+   * `js/sound.js` `playSlice`ista — Livian avaussarjan kuplaäänet ja
+   * pulun tehosteet, jotka etenevät ketjutetuilla ajastimilla.
+   * Kohteenvaihdon ikkuna on ~2,7 s, joten hitaassa rinnakkaisajossa
+   * yksi tällainen lyhyt lähde osui ikkunaan ja väite kaatui 7 → 8,
+   * vaikka humina soi ennallaan (tasolla 0,26) ja vastakoe "pitkiä
+   * soittimia on täsmälleen yksi" oli vihreä. Kolme PR-Savukkeet-ajoa
+   * 19.9.2026 kaatui juuri näin (35423483607, 35425678571, 35427542597)
+   * ja kaikki uusinnat sekä yksinajot olivat vihreitä.
+   *
+   * Nyt mitataan se mitä väite tarkoittaa: pitkä silmukoitu soitin on
+   * yhä TÄSMÄLLEEN SAMA OLIO ja sen `startedAt` ei ole vaihtunut (kuten
+   * väite 2 tekee) — eli feidi ei ole alkanut alusta. Lyhyet lähteet
+   * muualta eivät kaada väitettä, mutta ne kirjataan INFO-rivinä
+   * pinoineen, jottei mikään jää näkymättömäksi.
+   */
   const ennenVaihtoa = await s.evaluate(AANITILA);
+  const huminaEnnen = await s.evaluate(() => {
+    const k = window.__astroAani;
+    // Raja: tämän jälkeen syntyneet lähteet ovat vaihdon ikkunasta.
+    k.__vaihdonRaja = k.lahteet.length;
+    const pitkat = k.lahteet.filter((r) => r.kesto && r.kesto >= 60);
+    window.__astroHuminaEnnen = pitkat.at(-1)?.solmu ?? null;
+    return { pitkia: pitkat.length, alkoi: pitkat.at(-1)?.alkoi ?? null };
+  });
   const vaihdot = await s.evaluate(async () => {
     const osoitteet = [];
     const kahva = window.matkakirja.ui.pallolinssi?.kahva;
@@ -501,15 +566,48 @@ async function ajaNakyma(nakymanNimi) {
     return osoitteet;
   });
   const vaihdonJalkeen = await s.evaluate(AANITILA);
+  const huminaJalkeen = await s.evaluate(() => {
+    const k = window.__astroAani;
+    const pitkat = k.lahteet.filter((r) => r.kesto && r.kesto >= 60);
+    const uudet = k.lahteet.slice(k.__vaihdonRaja ?? 0);
+    const puskurinKesto = (r) => {
+      try { return r.solmu?.buffer ? Number(r.solmu.buffer.duration.toFixed(2)) : null; }
+      catch { return null; }
+    };
+    return {
+      pitkia: pitkat.length,
+      alkoi: pitkat.at(-1)?.alkoi ?? null,
+      // Sama OLIO, ei vain sama määrä: uusi soitin tarkoittaisi uutta feidiä.
+      samaSoitin: pitkat.at(-1)?.solmu === window.__astroHuminaEnnen,
+      lyhyita: uudet.length,
+      uudet: uudet.map((r) => ({
+        kesto: r.kesto ?? null, puskuri: puskurinKesto(r), loop: r.loop, pino: r.pino,
+      })),
+    };
+  });
   const oikeastiVaihtui = new Set(vaihdot.filter(Boolean)).size >= 2;
+  /*
+   * LYHYET LÄHTEET NÄKYVIIN, EIVÄT VÄITTEESEEN. Rivi kertoo montako
+   * lähdettä vaihdon ikkunassa syntyi muualla ja mistä pinosta.
+   */
+  if (huminaJalkeen.lyhyita) {
+    console.log(`    INFO: vaihdon ikkunassa syntyi ${huminaJalkeen.lyhyita} muuta lähdettä `
+      + `(ei kaada väitettä): ${JSON.stringify(huminaJalkeen.uudet)}`);
+  }
+  const startSailyi = huminaEnnen.alkoi === null
+    ? huminaJalkeen.alkoi === null
+    : Math.abs((huminaJalkeen.alkoi ?? -1) - huminaEnnen.alkoi) < 1e-6;
   vaadi(nimessa('kohteen ja kuvan vaihto ei luo uutta soitinta eikä nollaa feidiä'),
-    oikeastiVaihtui && vaihdonJalkeen.lahteita === ennenVaihtoa.lahteita
+    oikeastiVaihtui && huminaJalkeen.pitkia === huminaEnnen.pitkia
+      && huminaJalkeen.pitkia === 1
+      && huminaJalkeen.samaSoitin === true && startSailyi
       && vaihdonJalkeen.tila.kerrokset.humina.soi
       && Math.abs(vaihdonJalkeen.tila.kerrokset.humina.taso
         - vaihdonJalkeen.tila.kerrokset.humina.tavoite)
         <= vaihdonJalkeen.tila.kerrokset.humina.tavoite * 0.12,
-    JSON.stringify({ lahteitaEnnen: ennenVaihtoa.lahteita, jalkeen: vaihdonJalkeen.lahteita,
-      kuvia: new Set(vaihdot.filter(Boolean)).size,
+    JSON.stringify({ huminaEnnen, huminaJalkeen: { ...huminaJalkeen, uudet: undefined },
+      startSailyi, kuvia: new Set(vaihdot.filter(Boolean)).size,
+      kaikkiLahteita: [ennenVaihtoa.lahteita, vaihdonJalkeen.lahteita],
       humina: vaihdonJalkeen.tila?.kerrokset?.humina }));
 
   /* --- 6: musiikki on kytketty pois, humina soi yksin -------------- */
