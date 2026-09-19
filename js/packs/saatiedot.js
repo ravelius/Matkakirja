@@ -55,6 +55,25 @@ export const SAATIEDOT = {
    * päivittäisistä arvoista; ylin/alin lisätään työkalulla
    * tools/hae-saanormaalit.mjs --vain bryssel.
    */
+  /*
+   * LJUBLJANA (20.9.2026, kaupunkilehti erä 2): Open-Meteon ERA5-arkisto,
+   * 1991–2020 (lat 46,05 / lon 14,51), kuukausikeskiarvot laskettu
+   * päivittäisistä arvoista; ylin/alin lisätään työkalulla
+   * tools/hae-saanormaalit.mjs --vain ljubljana.
+   */
+  ljubljana: {
+    lat: 46.05,
+    lon: 14.51,
+    keskilampo: [0.1, 1.4, 5.6, 10.2, 14.7, 18.6, 20.7, 20.5, 15.5, 10.7, 5.9, 0.9],
+    ylin: [4, 6, 10, 16, 20, 23, 26, 25, 21, 15, 10, 3],
+    alin: [-4, -4, 1, 4, 9, 14, 15, 16, 10, 7, 2, -1],
+    sade: [60, 76, 77, 89, 101, 104, 96, 112, 127, 118, 124, 92],
+    luonnehdinta: 'Ljubljanan vuosi on sateinen ja vuodenajoiltaan selvä: '
+      + 'sadetta kertyy vuodessa noin 1 175 millimetriä, ja syyskuu on '
+      + 'märin kuukausi 127 millimetrillä. Keskilämpö nousee tammikuun '
+      + 'nollasta heinäkuun 20,7 asteeseen, ja talvikuukausina se on '
+      + 'pakkasen rajalla.',
+  },
   bryssel: {
     lat: 50.85,
     lon: 4.35,

@@ -63460,6 +63460,664 @@ export const KULTTUURI_KATEGORIAT = {
   ],
 
   /*
+   * LJUBLJANA (20.9.2026, kaupunkilehti erä 2; omistajan päätös 19.9.2026:
+   * Slovenian pelikaupunki). Täysi lehti: etusivu (kansi- ja avauskuvat,
+   * ennen ja nyt, Matkailijalle-opas) sekä aihesivut Historia,
+   * Plečnikin ja Secessionin Ljubljana sekä Ruoka ja juoma. Tekstit omin
+   * sanoin en-Wikipediasta (luettu 20.9.2026); kuvat Commonsista, lisenssi
+   * ja tekijä luettu
+   * rajapinnan extmetadatasta ja jokainen kuva katsottu silmin.
+   */
+  ljubljana: [
+    {
+      id: 'kaupunki',
+      nimi: 'Ljubljana',
+      johdanto: 'Kaupunki Ljubljanica-joen varrella linnavuoren juurella, jossa lohikäärme '
+          + 'vartioi siltaa ja koristaa vaakunaa. Vanhakaupunki on autoton, ja '
+          + 'punakattoiset talot, joen rannat ja iso puisto ovat lähellä toisiaan.',
+      kansikuvat: [
+        {
+          tiedosto: 'Robba Fountain - Ljubljana I.jpg',
+          lyhyt: 'Robban suihkulähteen marmoriset jokijumalat seisovat Ljubljanan '
+              + 'kaupungintalon edessä.',
+          selite: 'Francesco Robban suihkulähde valmistui 1751, ja sen kolmen hahmon on '
+              + 'myöhemmin tulkittu esittävän Savaa, Krkaa ja Ljubljanicaa. Torilla '
+              + 'nykyään seisova suihkulähde on vuonna 2006 pystytetty kopio, ja '
+              + 'alkuperäinen on Slovenian kansallisgalleriassa.',
+          lahde: 'Sumitsurai, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ljubljana Town Hall (Magistrat, Mestni trg 2).jpg',
+          lyhyt: 'Magistratin eli kaupungintalon sisäpihaa kattaa lasikatto, ja pihan '
+              + 'keskellä on kaivo.',
+          selite: 'Kaupungintalo rakennettiin alun perin goottilaiseen tyyliin 1484, ja '
+              + 'vuosina 1717–1719 se uudistettiin barokkityyliin venetsialaisin '
+              + 'vaikuttein. Rakennuksessa toimii Ljubljanan kaupungin hallinto.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ljubljana, France Preseren monument.jpg',
+          lyhyt: 'Runoilija France Prešerenin patsas seisoo Ljubljanan keskusaukiolla.',
+          selite: 'Ivan Zajecin suunnittelema pronssipatsas paljastettiin 1905, ja se '
+              + 'esittää Slovenian kansallisrunoilijaa ja hänen runottarensa. Jalustan '
+              + 'suunnitteli arkkitehti Max Fabiani.',
+          lahde: 'Ajznponar, Wikimedia Commons (CC0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Views from Ljubljana Castle 20150819-1.jpg',
+          lyhyt: 'Linnalta näkyy vanhakaupunki punaisine kattoineen, joen käänne ja '
+              + 'Fransiskaanikirkko.',
+          selite: 'Ljubljanan linnan näköalapaikalta avautuu näkymä vanhankaupungin '
+              + 'punaisten kattojen yli kohti Prešernin aukiota, jonka laidalla kohoaa '
+              + 'vaaleanpunainen Fransiskaanikirkko.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ljubljana (Slovenia) (54248876094).jpg',
+          lyhyt: 'Nebotičnik-pilvenpiirtäjästä katsottuna Linnavuori kohoaa vanhankaupungin '
+              + 'kattojen yli.',
+          selite: 'Nebotičnikin näköalapaikalta näkee, kuinka metsäinen Linnavuori ja sen '
+              + 'huipulla oleva linna kohoavat punakattoisen vanhankaupungin takana, ja '
+              + 'vasemmalla erottuu vaaleanpunainen Fransiskaanikirkko.',
+          lahde: 'Jose A., Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Ljubljana Evening (49152933117).jpg',
+          lyhyt: 'Ljubljanan valot syttyvät illan hämärässä, ja horisontissa erottuu vuorijono.',
+          selite: 'Illan hämärässä kaupungin talot ja kirkontorni erottuvat valaistuina '
+              + 'rinteen alapuolella, ja horisontissa kohoaa vuorijono.',
+          lahde: 'Radek Kucharski, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Postcard of Prešeren Square 1925.jpg',
+          vuosi: '1925',
+          lyhyt: 'Prešernin aukio 1920-luvulla: patsas kuvan vasemmassa reunassa ja linna '
+              + 'talojen takana.',
+          selite: 'Vuoden 1895 maanjäristyksen jälkeen aukion ympärille rakennettiin uusia '
+              + 'palatseja, ja vuonna 1905 paljastettu Prešernin patsas näkyy kuvan '
+              + 'vasemmassa reunassa.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Ljubljana Prešeren Square.jpg',
+          lyhyt: 'Aukiolla on yhä patsas ja linna taustalla, mutta nyt kävelijät saavat '
+              + 'aukion itselleen.',
+          selite: 'Aukio uudistettiin 1987–1988 suppilonmuotoisesta ympyränmuotoiseksi, ja '
+              + 'vuodesta 2007 se on ollut suljettu moottoriliikenteeltä.',
+          lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Ljubljana old town with excursion boat.JPG',
+          lyhyt: 'Ljubljanica-joella kulkee retkivene, ja rantojen terasseilla istutaan '
+              + 'kahvilapöytien ääressä.',
+          selite: 'Vanhankaupungin halki virtaavan Ljubljanica-joen molemmilla rannoilla on '
+              + 'kahviloiden ja ravintoloiden terasseja, ja joella kulkee retkiveneitä.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Ljubljana on Slovenian pääkaupunki, ja asukkaita on noin 295 000. '
+            + 'Nähtävyydet ovat tiiviisti vanhassa keskustassa, ja sen halki kävelee '
+            + 'vaivatta. Ljubljanica-joen rannoilla on kahviloita ja ravintoloita, ja '
+            + 'linnavuori kohoaa vanhankaupungin yllä. Ytimessä ei ajeta autoilla: '
+            + 'keskusta on suljettu moottoriliikenteeltä, ja juna-asemalta, lentokentältä '
+            + 'ja vuokrapyörällä pääsee perille helposti. Tämä on kaupunki, jossa '
+            + 'kannattaa kävellä hitaasti.',
+        artikkeli: {
+          nimi: 'Matkailijan Ljubljana',
+          teksti: 'Ljubljanaan ei tutustuta rientämällä nähtävyydeltä toiselle vaan '
+              + 'kävelemällä hitaasti joen ja vanhan kaupungin katuja.',
+          nosto: 'Kun joelle kaivettiin 1700-luvulla oma oikopolku, linnavuoresta tuli '
+              + 'saari — ja vanhakaupunki säästyi tulvilta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Ljubljanaan lennetään Jože Pučnikin lentokentälle, joka on noin 27 '
+                  + 'kilometrin päässä pohjoisessa; bussilla keskustaan pääsee noin '
+                  + 'tunnissa. Juna-asema ja linja-autoasema ovat vierekkäin noin '
+                  + 'kilometrin päässä joesta, ja junayhteyksiä on esimerkiksi Zagrebiin, '
+                  + 'Wieniin ja Müncheniin. Keskusta on pieni ja moottoriliikenteeltä '
+                  + 'suljettu, joten sen kulkee jalan. Kaupunkibusseissa maksetaan '
+                  + 'Urbana-kortilla tai puhelinsovelluksella, ja lainapyöriä löytyy '
+                  + 'BicikeLJ-asemilta.',
+              kuva: [
+                {
+                  tiedosto: 'Železniška postaja Ljubljana 1.6.2019 02.jpg',
+                  lyhyt: 'Ljubljanan päärautatieaseman laiturit ja punaiset paikallisjunat.',
+                  selite: 'Ljubljanan rautatieasema on noin kilometrin päässä joen '
+                      + 'pohjoispuolella, ja siitä on lyhyt kävelymatka vanhaankaupunkiin.',
+                  lahde: 'Christian Alexander Tietgen, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'Bicikelj station.jpg',
+                  lyhyt: 'BicikeLJ-kaupunkipyörät odottavat telineessä vanhankaupungin '
+                      + 'kadun varrella.',
+                  selite: 'BicikeLJ on kaupungin itsepalvelullinen pyörävuokraus: pyörän voi '
+                      + 'ottaa yhdeltä asemalta ja palauttaa toiselle.',
+                  lahde: 'Fighting Irish 1977 from Kuala Lumpur, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Vanhakaupunki ja joki',
+              teksti: 'Vanhakaupunki on ahdettu linnavuoren ja Ljubljanica-joen väliin. Sen '
+                  + 'kaksi aukiota ovat Mestni trg, jossa on Robban suihkulähde ja '
+                  + 'kaupungintalo, ja ylempänä Gornji trg. Keskiaikaisissa taloissa '
+                  + 'toimii nykyään pieniä muotikauppoja, kahviloita ja ravintoloita, ja '
+                  + 'kapeat kujat johtavat pieniin aukioihin. Joella kulkee retkiveneitä, '
+                  + 'joiden risteilyt kestävät tunnista kahteen, ja linnan tornille pääsee '
+                  + 'köysiradalla tai kävellen.',
+              kuva: {
+                tiedosto: 'Ljubljana, view of Stari trg 02.jpg',
+                lyhyt: 'Stari trgin kivetty katu kulkee värikkäiden vanhojen talojen '
+                    + 'välissä vanhassakaupungissa.',
+                selite: 'Stari trg eli Vanha tori on yksi vanhankaupungin katuja: kivetty ja '
+                    + 'kapea, ja sen varrella on värikkäitä taloja ja liiketiloja.',
+                lahde: 'Ajznponar, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Ruoka ja juoma',
+              teksti: 'Keskustori Vodnikov trgillä on kaupungin ruokasydän: aukion pöydiltä '
+                  + 'myydään paikallista tuotetta, ja viereisessä rakennuksessa on '
+                  + 'juustoja, leipiä ja lihaa. Tori on auki aamupäivisin ja iltapäivän '
+                  + 'alussa sunnuntaita lukuun ottamatta, ja vilkkaimmillaan se on '
+                  + 'lauantaiaamuna. Kevään ja syksyn välisenä aikana perjantaisin '
+                  + 'Pogačarjev trgillä pidetään Odprta kuhna -ruokamarkkinat, joilla on '
+                  + 'kojuja eri puolilta Slovenian.',
+              kuva: {
+                tiedosto: 'Vodnikov trg (1).JPG',
+                lyhyt: 'Vodnikov trgin keskustori täyttyy kojujen valkoisista katoksista.',
+                selite: 'Vodnikov trg on Ljubljanan keskustorin aukio Ljubljanica-joen '
+                    + 'oikealla rannalla, muutaman sadan metrin päässä Kolmoissillasta.',
+                lahde: 'Ljuba brank, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Ilta',
+              teksti: 'Illalla vanhankaupungin rantakadut täyttyvät terasseista, ja pöytiä '
+                  + 'katetaan aivan joen reunalle. Baarit ryhmittyvät Prešernin aukiolta '
+                  + 'lähteville kaduille, ja kiinnostavimmat löytyvät sivukaduilta eivätkä '
+                  + 'suoraan joen rannalta. Kaupungissa järjestetään vuosittain yli '
+                  + 'kymmenentuhatta kulttuuritapahtumaa, ja Ljubljana Festivalin ohjelmaa '
+                  + 'on kesäisin ulkolavoilla. Metelkova on entinen kasarmi, josta tehtiin '
+                  + 'vuonna 1993 taidegallerioiden, ateljeiden ja yökerhojen alue.',
+              kuva: [
+                {
+                  tiedosto: 'VidGajsek - Umbrellas at the river.jpg',
+                  lyhyt: 'Joen rannan ravintolan terassi illalla: pöydät ja varjot valmiina '
+                      + 'yleisölle.',
+                  selite: 'Ljubljanican rannalla ravintolat kattavat pöytänsä terasseille, '
+                      + 'ja varjot suojaavat sekä auringolta että sateelta.',
+                  lahde: 'Vid Gajšek, Wikimedia Commons (PD)',
+                },
+                {
+                  tiedosto: 'Ljubljana Metelkova mesto 07.JPG',
+                  lyhyt: 'Metelkovan värikkäiksi maalatut kaiteet kiertävät puuta '
+                      + 'kasarmialueen pihalla.',
+                  selite: 'Metelkova on entisen kasarmialueen taidekortteli, jossa maalatut '
+                      + 'kaiteet ja graffitit peittävät pihat ja rakennukset.',
+                  lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Vanhakaupunki',
+                tahdet: 3,
+                selite: 'Kapeat kujat ja keskiaikaiset talot linnavuoren juurella, ja kaikki '
+                    + 'on kävelymatkan päässä.',
+              },
+              {
+                mita: 'Joki ja rannat',
+                tahdet: 3,
+                selite: 'Ljubljanican molemmilla rannoilla on kahviloita, ja retkiveneillä '
+                    + 'näkee kaupungin veden puolelta.',
+              },
+              {
+                mita: 'Kävely-ympäristö',
+                tahdet: 3,
+                selite: 'Keskusta on pieni ja moottoriliikenteeltä suljettu, ja Ljubljana '
+                    + 'valittiin Euroopan vihreäksi pääkaupungiksi 2016.',
+              },
+              {
+                mita: 'Tori ja ruoka',
+                tahdet: 2,
+                selite: 'Keskustori on avoinna aamuisin, ja perjantaisin markkinoilla on '
+                    + 'kojuja koko Sloveniasta.',
+              },
+              {
+                mita: 'Kulttuuri ja ilta',
+                tahdet: 2,
+                selite: 'Yli kymmenentuhatta tapahtumaa vuodessa, festivaaleja ja Metelkovan '
+                    + 'yökerhot.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Autoton keskusta',
+                teksti: 'Keskusta on ollut suljettu moottoriliikenteeltä vuodesta 2007, '
+                    + 'joten Prešernin aukion ympäristö kävellään.',
+              },
+              {
+                otsikko: 'Lentokentältä',
+                teksti: 'Jože Pučnikin lentokenttä on noin 27 kilometrin päässä, ja bussilla '
+                    + 'keskustaan pääsee noin 50 minuutissa.',
+              },
+              {
+                otsikko: 'Englanti riittää',
+                teksti: 'Suurin osa asukkaista puhuu englantia, erityisesti alle '
+                    + 'nelikymppiset, monet myös saksaa tai italiaa.',
+              },
+              {
+                otsikko: 'Sateinen syksy',
+                teksti: 'Sateisin kuukausi on syyskuu, 127 millimetriä. Sadetakki kannattaa '
+                    + 'pakata kaikkina vuodenaikoina.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–syyskuu: rannan terassit ovat täynnä, '
+                + 'ulkoilmatapahtumia riittää ja lämpötila on miellyttävä. Alkusyksy on '
+                + 'vielä leuto mutta sateisin, ja talvella joulun aikaan kadut '
+                + 'koristellaan valoin ja joen rantaan ilmestyy ruoka- ja juomakioskeja.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '5,6…14,7 °C',
+                kuvaus: 'Maaliskuun keskilämpö on 5,6 astetta ja toukokuun 14,7, joten kevät '
+                    + 'lämpenee tasaisesti. Sadetta tulee 77–101 millimetriä kuussa, '
+                    + 'eniten toukokuussa.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '18,6…20,7 °C',
+                kuvaus: 'Heinäkuu on lämpimin kuukausi, keskilämpö 20,7 astetta. Sadetta on '
+                    + '96–112 millimetriä kuussa, elokuussa eniten.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '5,9…15,5 °C',
+                kuvaus: 'Syyskuu on vielä leuto, 15,5 astetta, mutta samalla vuoden '
+                    + 'sateisin: 127 millimetriä. Marraskuussa keskilämpö on 5,9 astetta '
+                    + 'ja sadetta 124 millimetriä.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '0,1…1,4 °C',
+                kuvaus: 'Lämpötila pysyy nollan tuntumassa: tammikuun keskilämpö on 0,1 '
+                    + 'astetta, mikä on vuoden kylmin. Tammikuu on samalla vuoden kuivin, '
+                    + '60 millimetriä.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Visit Ljubljana — kaupungin oma matkailusivu',
+                url: 'https://www.visitljubljana.com/',
+              },
+              {
+                nimi: 'Wikivoyage: Ljubljana',
+                url: 'https://fi.wikivoyage.org/wiki/Ljubljana',
+              },
+              {
+                nimi: 'LPP — Ljubljanan kaupunkibussit',
+                url: 'https://www.lpp.si/en',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+      nostot: [
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Linna, josta tuli vankila ja sitten kulttuurikeskus',
+          tiedosto: 'View of Ljubljana Castle, 20240502 1812 7787.jpg',
+          teksti: 'Ljubljanan linna kohoaa Linnavuorella vanhankaupungin yläpuolella. '
+              + 'Nykyisen ulkoasunsa se sai 1400-luvun perusteellisessa uudistuksessa, ja '
+              + 'suurin osa rakennuksista on 1500- ja 1600-luvuilta. Linna oli ensin '
+              + 'Krainin herrojen pääpaikka, mutta 1800-luvulla siitä tehtiin muun muassa '
+              + 'vankila, ja vuonna 1905 kaupunki osti sen. Nykyään linnassa järjestetään '
+              + 'konsertteja, näyttelyitä ja häitä. Ylös pääsee metsäpolkuja pitkin tai '
+              + 'vuonna 2006 avatulla köysiradalla.',
+          lyhyt: 'Ljubljanan linna kohoaa metsäisen Linnavuoren laella vanhankaupungin '
+              + 'yläpuolella.',
+          selite: 'Linna on lohikäärmeineen kaupungin vaakunassa, ja sen laelle voi nousta '
+              + 'köysiradalla, joka avattiin joulukuussa 2006.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Ljubljana Castle',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Lohikäärme, joka vartioi siltaa ja vaakunaa',
+          tiedosto: 'Dragon Bridge (Zmajski Most) (11992450283).jpg',
+          teksti: 'Lohikäärmesilta ylittää Ljubljanica-joen vanhankaupungin pohjoispuolella. '
+              + 'Se valmistui 1901 teräsbetonisena Wienin secession-tyylin siltana, ja sen '
+              + 'kaari oli tuolloin Euroopan kolmanneksi suurin. Nimensä silta sai vuonna '
+              + '1919, sitä ennen se kantoi keisari Frans Joosefin nimeä. Sillan kulmissa '
+              + 'seisovat lohikäärmeet ovat kaupungin tunnus, ja lohikäärme on myös '
+              + 'vaakunassa linnan tornin päällä. Alkuperästä kerrotaan monta tarinaa: '
+              + 'yksi liittää sen Jasoniin ja argonautteihin, toinen linnankappelin '
+              + 'suojeluspyhimykseen Yrjöön.',
+          lyhyt: 'Lohikäärmesillan kulmapylväiden päällä seisoo vihreä lohikäärmeveistos.',
+          selite: 'Lohikäärmesillan neljän kulmapylvään päällä seisovat lohikäärmeveistokset '
+              + 'ovat Ljubljanan tunnetuimpia symboleja.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (PD)',
+          wiki: 'Dragon Bridge (Ljubljana)',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Puisto, joka syntyi Illyrian maakuntien aikana',
+          tiedosto: 'Tivoli City Park, Ljubljana (2019).jpg',
+          teksti: 'Tivoli on Ljubljanan suurin puisto, ja se ulottuu keskustan reunalta '
+              + 'Rožnikin rinteille. Sen suunnitteli insinööri Jean Blanchard vuonna 1813, '
+              + 'kun kaupunki oli Ranskan Illyrian maakuntien pääkaupunki. 1920-luvulla '
+              + 'Jože Plečnik suunnitteli puiston halki kulkevan Jakopičin kävelykadun, '
+              + 'joka muodostaa suoran näköakselin Tivolin linnalta Prešernin aukion ja '
+              + 'Kolmoissillan kautta Ljubljanan linnalle. Lammen rannalla toimii '
+              + 'lämpiminä kuukausina ulkokirjasto.',
+          lyhyt: 'Jakopičin kävelykatu johtaa Tivolin puistossa kohti Tivolin linnaa.',
+          selite: 'Jakopičin kävelykatu on puiston pääakseli, ja sen päässä kohoaa Tivolin '
+              + 'linna; kävelykadun sivuilla on ulkonäyttelyn kuvatauluja.',
+          lahde: 'Dedo70, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tivoli City Park',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Roomalaisten Emonasta ranskalaisten Illyriaan ja vuoden 1895 järistykseen: '
+          + 'Ljubljana on uusiutunut monta kertaa, ja jokaisesta kerroksesta näkyy jälki '
+          + 'vielä katukuvassa.',
+      tehtava: {
+        kysymys: 'Kuka Ljubljanan pormestari johti kaupungin jälleenrakennusta vuoden 1895 '
+            + 'maanjäristyksen jälkeen?',
+        vaihtoehdot: [
+          'Primož Trubar',
+          'Ivan Hribar',
+          'Jože Plečnik',
+          'Max Fabiani',
+        ],
+        oikea: 1,
+        fakta: 'Ivan Hribar oli järjestänyt avustustyötä heti järistyksen jälkeen ja toimi '
+            + 'pormestarina vuosina 1896–1910. Hänen kaudellaan Ljubljanan sillat, puistot '
+            + 'ja keskeiset rakennukset saivat nykyisen ilmeensä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Emona: roomalainen kaupunki nykyisen keskustan alla',
+          tiedosto: 'Ljubljana (Iulia Aemona) - Emona Roman Walls (53322646036).jpg',
+          teksti: 'Ennen Ljubljanaa täällä oli Emona. Roomalaiset rakensivat linnavuoren '
+              + 'juurelle sotilasleirin jo ennen ajanlaskun alkua, ja muurein varustettu '
+              + 'kaupunki perustettiin vuoden 14 tienoilla. Siellä asui viidestä kuuteen '
+              + 'tuhatta ihmistä, enimmäkseen kauppiaita ja käsityöläisiä. Katuverkko oli '
+              + 'roomalaiseen tapaan ristikko, jonka keskellä oli tori. Nykykeskustan alta '
+              + 'on löytynyt muurinpätkiä, asuintaloja, patsaita ja mosaiikkeja, ja Jože '
+              + 'Plečnik kunnosti muurin jäänteet puistoksi.',
+          lyhyt: 'Emonan roomalaista kaupunginmuuria on yhä pystyssä Ljubljanan keskustassa.',
+          selite: 'Emonan kivimuuria on säilynyt Ljubljanan keskustassa, ja sen vieressä '
+              + 'olevassa opastaulussa kerrotaan roomalaiskaupungin historiasta.',
+          lahde: 'Jamie Heath, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Emona',
+        },
+        {
+          otsikko: 'Mies, joka kirjoitti sloveniaksi ensimmäisenä painettuna',
+          tiedosto: 'Primož Trubar - Catechismus (cover).jpg',
+          teksti: 'Primož Trubar oli protestanttinen uudistaja, joka saarnasi Ljubljanassa '
+              + '1530-luvulta ja joutui lähtemään kaupungista vuonna 1547. Saksassa hän '
+              + 'kirjoitti vuonna 1550 kaksi ensimmäistä sloveniankielistä kirjaa, '
+              + 'Catechismuksen ja Abecedariumin, jotka painettiin Schwäbisch Hallissa. '
+              + 'Kaikkiaan hän kirjoitti 22 sloveniankielistä kirjaa ja käänsi koko Uuden '
+              + 'testamentin. Kirjakielen pohjaksi hän valitsi Ljubljanan puheen, koska '
+              + 'piti sitä sopivimpana.',
+          lyhyt: 'Trubarin Catechismus painettiin vuonna 1550, ja se on ensimmäinen '
+              + 'sloveniankielinen painettu kirja.',
+          selite: 'Primož Trubarin Catechismuksen nimiösivulla on kirjan nimi saksaksi ja '
+              + 'sloveniaksi sekä kaksi puupiirrosta. Kirja painettiin vuonna 1550.',
+          lahde: 'Primož Trubar, Wikimedia Commons (PD)',
+          wiki: 'Primož Trubar',
+        },
+        {
+          otsikko: 'Ranskalaisten Illyria ja kongressi, jossa Laibach oli maailman keskus',
+          tiedosto: 'Ljubljana, Illyrian Column 01.jpg',
+          teksti: 'Vuonna 1809 Napoleon voitti Itävallan, ja Schönbrunnin rauhassa Itävalta '
+              + 'luovutti Ranskalle Krainin ja muita alueita. Niistä muodostettiin '
+              + 'Illyrian maakunnat, joiden hallinnon pääkaupungiksi tuli Ljubljana, '
+              + 'ranskaksi Laybach. Vuonna 1810 perustettu École centrale pidetään nykyään '
+              + 'Ljubljanan yliopiston perustamisasiakirjana. Itävalta sai alueen takaisin '
+              + '1813–1814, ja vuonna 1821 kaupungissa, silloin Laibachissa, kokoontui '
+              + 'kongressi, joka antoi Itävallalle luvan tukahduttaa kapina Napolissa.',
+          lyhyt: 'Illyrian pylväs Ranskan vallankumouksen aukiolla muistuttaa Napoleonin '
+              + 'ajasta.',
+          selite: 'Illyrian pylväs eli Napoleonin pylväs seisoo Ranskan vallankumouksen '
+              + 'aukiolla. Muistomerkki pystytettiin vuonna 1929 Napoleonin ja Illyrian '
+              + 'kunniaksi.',
+          lahde: 'Ajznponar, Wikimedia Commons (CC0)',
+          wiki: 'Illyrian Provinces',
+        },
+        {
+          otsikko: 'Yksi yö, joka muutti kaupungin ilmeen',
+          tiedosto: '1895 Ljubljana earthquake by Helfer - Kongresni trg (1).jpg',
+          teksti: 'Myöhään illalla 14. huhtikuuta 1895 Ljubljanaa ravisti magnitudiltaan 6,1 '
+              + 'maanjäristys, jonka keskus oli Jančessa noin 16 kilometrin päässä idässä. '
+              + 'Kaupungissa oli silloin noin 31 000 asukasta, ja noin kymmenesosa '
+              + 'rakennuksista vaurioitui tai tuhoutui. Avustustyötä johtanut Ivan Hribar '
+              + 'valittiin pormestariksi ja johti kaupungin laajaa jälleenrakennusta. '
+              + 'Vuosina 1895–1910 rakennettiin 436 uutta taloa, enimmäkseen Wienin '
+              + 'secession tyyliin, ja monet sillat, puistot ja päärakennukset ovat tältä '
+              + 'ajalta.',
+          lyhyt: 'Kongressiaukion talo vuoden 1895 maanjäristyksen jälkeen, seinät tuettu '
+              + 'vinoilla hirsillä.',
+          selite: 'Vuoden 1895 maanjäristys vaurioitti pahasti Kongressiaukion taloja: '
+              + 'ikkunat olivat rikki ja seiniä tuettiin vinoilla hirsillä. Kuvan on '
+              + 'ottanut Wilhelm Helfer järistyksen jälkeen.',
+          lahde: 'Wilhelm Helfer, Wikimedia Commons (PD)',
+          wiki: '1895 Ljubljana earthquake',
+        },
+      ],
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Plečnikin ja Secessionin Ljubljana',
+      johdanto: 'Maanjäristyksen jälkeen Ljubljanan kadut täyttyivät secession-palatseista, ja '
+          + 'arkkitehti Jože Plečnik antoi kaupungille sillat, kirjaston ja kesäteatterin.',
+      tehtava: {
+        kysymys: 'Mikä ljubljanalainen rakennus oli valmistuessaan vuonna 1933 Jugoslavian '
+            + 'kuningaskunnan korkein?',
+        vaihtoehdot: [
+          'Kansallis- ja yliopistokirjasto NUK',
+          'Križanken kesäteatteri',
+          'Kolmoissillan keskisilta',
+          'Nebotičnik-pilvenpiirtäjä',
+        ],
+        oikea: 3,
+        fakta: 'Vladimir Šubicin suunnittelema Nebotičnik oli valmistuessaan Euroopan '
+            + 'yhdeksänneksi korkein pilvenpiirtäjä ja pitkään Euroopan korkein '
+            + 'asuinrakennus.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kolmoissilta, jolle Plečnik lisäsi kaksi siltaa',
+          tiedosto: 'Tromostovje midden.jpg',
+          teksti: 'Tromostovje eli Kolmoissilta koostuu kolmesta sillasta, jotka ylittävät '
+              + 'Ljubljanica-joen ja yhdistävät keskiaikaisen vanhankaupungin Prešerenin '
+              + 'aukioon. Paikalla mainitaan puusilta jo vuonna 1280, ja nykyisen '
+              + 'keskisillan suunnitteli Giovanni Picco vuonna 1842. Kun silta alkoi '
+              + 'ahtaana estää liikennettä, Jože Plečnik suunnitteli sen molemmin puolin '
+              + 'jalankulkusillat, ja työ valmistui keväällä 1932. Vuonna 2021 silta '
+              + 'liitettiin Unescon maailmanperintöluetteloon osana Plečnikin perintöä.',
+          lyhyt: 'Keskisillan kaarella on latinankielinen omistuskirjoitus vuodelta 1842.',
+          selite: 'Keskisillan kaarella on latinankielinen omistuskirjoitus, joka omistaa '
+              + 'sillan arkkiherttua Frans Kaarlelle vuonna 1842.',
+          lahde: 'Marion Golsteijn, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Triple Bridge',
+        },
+        {
+          otsikko: 'Kirjasto, jonka puolesta opiskelijat osoittivat mieltään',
+          tiedosto: 'Jože Plečnik - National and University Library (37211035596).jpg',
+          teksti: 'Kansallis- ja yliopistokirjasto NUK perustettiin vuonna 1774, ja se on '
+              + 'yksi Slovenian tärkeimmistä kulttuurilaitoksista. Nykyisen talon '
+              + 'suunnitteli Jože Plečnik vuosina 1930–1931, ja se rakennettiin 1936–1941. '
+              + 'Belgradin viranomaiset vastustivat hanketta aluksi, mutta opiskelijoiden '
+              + 'sinnikkäät mielenosoitukset auttoivat sen läpi. Julkisivu yhdistää tiiltä '
+              + 'ja kiveä, ja osa kivistä on paikalta löytyneitä arkeologisia jäänteitä. '
+              + 'Päänoven kahvojen päissä on Pegasoksen pää.',
+          lyhyt: 'Kirjaston päänoven kahvan päässä on Pegasoksen pää.',
+          selite: 'Plečnikin suunnitteleman kirjaston oven kahvan päässä on Pegasoksen pää, '
+              + 'ja ovi on vihertyneen kuparin värinen.',
+          lahde: 'Andrew Moore, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'National and University Library of Slovenia',
+        },
+        {
+          otsikko: 'Ritarikunnan luostarista kesäteatteriksi',
+          tiedosto: 'Krizanke, main courtyard 02.jpg',
+          teksti: 'Križanken luostarin rakentamisen uskotaan alkaneen 1200-luvulla '
+              + 'saksalaisen ritarikunnan käyttöön, ja sen barokkikirkko valmistui vuosina '
+              + '1714–1715. Luostari toimi vuoteen 1945 asti, jolloin kompleksi '
+              + 'kansallistettiin. Vuonna 1952 kaupunki pyysi Jože Plečnikia muuttamaan '
+              + 'rappeutuneen luostarin Ljubljanan festivaalin näyttämöksi, ja työt '
+              + 'valmistuivat 1956. Nykyään pihoilla järjestetään klassisen musiikin, '
+              + 'jazzin ja rockin konsertteja, ja pääpihaa koristavat värikkäät '
+              + 'sgraffitot.',
+          lyhyt: 'Križanken pääpihaa reunustavat kaarikäytävät ja maalatut sgraffito-koristeet.',
+          selite: 'Križanken entisen luostarin pääpihaa reunustavat matalat kaarikäytävät, '
+              + 'ja seinät on koristeltu värikkäin sgraffitoin.',
+          lahde: 'Ajznponar, Wikimedia Commons (CC0)',
+          wiki: 'Križanke',
+        },
+        {
+          otsikko: 'Secession-katu ja Jugoslavian korkein talo',
+          tiedosto: '0 Miklošičeva cesta Ljubljana Slovenia.jpg',
+          teksti: 'Vuoden 1895 maanjäristyksen jälkeen osa Ljubljanasta rakennettiin '
+              + 'uudelleen Wienin secession-tyyliin. Miklošičeva-kadun alaosa Prešerenin '
+              + 'aukion päässä täyttyi pääosin secession-palatseista, esimerkiksi Grand '
+              + 'Hotel Union valmistui vuosina 1903–1905. Vladimir Šubicin suunnittelema '
+              + 'Nebotičnik-pilvenpiirtäjä avattiin 21. helmikuuta 1933. Sen 13 kerrosta '
+              + 'ja 70,35 metriä tekivät siitä Jugoslavian kuningaskunnan korkeimman '
+              + 'rakennuksen, ja tyyliltään se yhdistää uusklassismia ja art decoa.',
+          lyhyt: 'Miklošičeva-katua reunustavat värikkäät 1900-luvun alun palatsit.',
+          selite: 'Miklošičeva-katua reunustavat värikkäät ja koristeelliset palatsit, ja '
+              + 'katu yhdistää Prešerenin aukion rautatieaseman seutuun.',
+          lahde: 'Herbert wie, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Nebotičnik',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka ja juoma',
+      johdanto: 'Krainin makkara, pähkinäkääretorttu, harmaa mehiläinen ja hunaja: Slovenian '
+          + 'ruoka on tarkasti vartioitua perinnettä. Ljubljanassa sitä ostetaan '
+          + 'jokirannan torilta, jonka on suunnitellut Plečnik.',
+      tehtava: {
+        kysymys: 'Minkä EU:n suojamerkinnän Slovenia sai Kranjska klobasa -makkaralle '
+            + 'tammikuussa 2015?',
+        vaihtoehdot: [
+          'Aito perinteinen ruokatuote (TSG)',
+          'Suojattu alkuperänimitys (PDO)',
+          'Suojattu maantieteellinen merkintä (PGI)',
+          'Luonnonmukaisen tuotannon merkintä',
+        ],
+        oikea: 2,
+        fakta: 'Makkaralle myönnettiin PGI-merkintä, vaikka Itävalta, Kroatia ja Saksa '
+            + 'vastustivat. TSG-merkintä on sen sijaan potica-leivoksella, joka '
+            + 'rekisteröitiin vuonna 2021.',
+      },
+      nostot: [
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Makkara, jonka ainekset on säädetty tarkasti',
+          tiedosto: 'Kranjska klobasa.jpg',
+          teksti: 'Kranjska klobasa eli Carniolan makkara on sloveenialainen esikeitetty '
+              + 'makkara, joka muistuttaa puolalaista kielbasaa. Nimi tulee Krainin '
+              + '(sloveeniksi Kranjska) historiallisesta herttuakunnasta, ja '
+              + 'sloveeninkielinen nimi mainitaan ensi kerran F. Kalinšekin keittokirjassa '
+              + '1912. Makkarassa on vähintään 75–80 % sianlihaa ja enintään 20 % pekonia, '
+              + 'ja mausteiksi sallitaan vain merisuola, valkosipulia, salpietaria ja '
+              + 'mustapippuria. Makkarat liitetään pareiksi puutikulla ja '
+              + 'kuumasavustetaan. Tammikuussa 2015 Slovenia sai sille EU:n suojatun '
+              + 'maantieteellisen merkinnän (PGI), vaikka Itävalta, Kroatia ja Saksa '
+              + 'vastustivat.',
+          lyhyt: 'Grillattu kranjska klobasa tarjoillaan pareina lautasella leivän ja '
+              + 'lisukkeiden kanssa.',
+          selite: 'Grillatut makkarat on liitetty pareiksi puutikulla, ja lautasella on '
+              + 'lisäksi tomaattia, salaattia ja valkoista leipää.',
+          lahde: 'J.O., Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Carniolan sausage',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Kääretorttu, joka leivotaan omassa vuoassaan',
+          tiedosto: 'Potica (9501040588).jpg',
+          teksti: 'Potica on perinteinen slovenialainen juhlaleivos: ohueksi kaulitusta '
+              + 'hiivataikinasta ja täytteestä tehdään rulla, jonka viipaleessa näkyy '
+              + 'spiraali. Yleisin täyte on saksanpähkinä, mutta käytetään myös rusinoita, '
+              + 'rakuunaa, tuorejuustoa, hasselpähkinää ja unikonsiemeniä. Aito slovenska '
+              + 'potica leivotaan potičnik-vuoassa, jonka keskellä on kartiomainen piippu, '
+              + 'ja valmiissa leivoksessa pitää olla vähintään kolme tai neljä taikina- ja '
+              + 'täytekierrosta. Varhaisin kirjallinen maininta on Primož Trubarilta '
+              + '1500-luvulta, ja EU on rekisteröinyt potican aidoksi perinteiseksi '
+              + 'ruokatuotteeksi (TSG) vuodesta 2021.',
+          lyhyt: 'Potica-viipaleessa näkyy taikinan ja pähkinätäytteen spiraali.',
+          selite: 'Viipaleen poikkileikkauksessa taikina ja pähkinätäyte kiertyvät '
+              + 'spiraaliksi, ja täytteen seassa on rusinoita.',
+          lahde: 'Michael R Perry, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Potica',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Harmaa mehiläinen Krainista',
+          tiedosto: 'Apis mellifera carnica worker hive entrance 2.jpg',
+          teksti: 'Kranjska čebela eli Carniolan mehiläinen (Apis mellifera carnica) on '
+              + 'läntisen mehiläisen alalaji, jonka kotiseutu on Slovenia ja jonka nimi '
+              + 'viittaa Krainin alueeseen. Sen ruskeanharmaan värin vuoksi sitä kutsutaan '
+              + 'myös harmaaksi mehiläiseksi. Se on hyvin lempeä, joten sitä voi pitää '
+              + 'asutuksen lähellä, ja se on maailman toiseksi suosituin tarhamehiläinen '
+              + 'italianmehiläisen jälkeen. Kranjalainen Anton Janša (1734–1773) nousi '
+              + 'Itävallan ensimmäiseksi kuninkaalliseksi mehiläishoidon opettajaksi, ja '
+              + 'EU:n suojaamiin ruokatuotteisiin kuuluu slovenialainen hunaja.',
+          lyhyt: 'Carniolan mehiläisen työläinen on ruskeanharmaa, ja sen takaruumiissa on '
+              + 'vaaleampia raitoja.',
+          selite: 'Lähikuvassa Carniolan mehiläisen työläinen, jonka takaruumista koristavat '
+              + 'ruskeat ja vaaleammat raidat.',
+          lahde: 'Richard Bartz, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Carniolan honey bee',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Tori Plečnikin kaarien alla',
+          tiedosto: 'Fruit stalls at Ljubljana Central Market 01.JPG',
+          teksti: 'Ljubljanan keskustori (Osrednja ljubljanska tržnica) sijaitsee '
+              + 'Ljubljanica-joen oikealla rannalla Kolmoissillan ja Lohikäärmesillan '
+              + 'välissä. Rakennuksen suunnitteli Jože Plečnik: kaksikerroksinen halli '
+              + 'seuraa joen kaarta, jokipuolella on suuret puolipyöreät ikkunat ja '
+              + 'katupuolella pylväskäytävä. Tori on auki päivittäin sunnuntaita lukuun '
+              + 'ottamatta. Alakerrassa myydään kalaa ja kuivattuja hedelmiä, molemmissa '
+              + 'kerroksissa leipomo-, maito- ja lihakojuja, ja pylväskäytävän alla '
+              + 'yrttejä, mausteita ja käsitöitä. Vuodesta 2021 tori kuuluu Plečnikin '
+              + 'perintönä UNESCOn maailmanperintöluetteloon.',
+          lyhyt: 'Keskustorin hedelmäkojussa on granaattiomenoita, ananaksia, avokadoja, '
+              + 'appelsiineja ja kastanjoita.',
+          selite: 'Hedelmäkojussa on esillä granaattiomenoita, ananaksia, avokadoja, '
+              + 'meloneja, appelsiineja ja kastanjoita.',
+          lahde: 'domdomegg, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Ljubljana Central Market',
+        },
+      ],
+    },
+  ],
+
+  /*
    * BERGEN on Euroopan laudan uusi kaupunkilehti (23.8.2026).
    * Aineisto: docs/mantereet-tyoaineisto/faktapohja-bergen.md ja sen
    * riippumaton tarkistus tarkistus-bergen.md — TARKISTUKSEN KORJAUKSET
