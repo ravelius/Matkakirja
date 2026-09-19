@@ -1423,6 +1423,22 @@ export function radallaEdessa(kamera, piste, sade) {
   return kamera.x * piste.x + kamera.y * piste.y + kamera.z * piste.z > R * R;
 }
 
+/**
+ * ONKO ISS-MERKKI PALLON KIEKON SISÄLLÄ ruudulla (Sonnet 1, kierros 14,
+ * v1966 laitekuvat b-11 ja b-13: merkki piirtyi kiekon ulkopuolelle).
+ * Rata on 6 % pinnan yläpuolella, joten reunan takana horisontin yllä
+ * oleva asema projisoituu kiekon ULKOPUOLELLE, vaikka `radallaEdessa`
+ * pitää sitä näkyvänä. Tilaus (Fable 19.9.2026 klo 22.02): merkki näkyy
+ * vain kiekon sisällä; ratakaari saa jatkua reunan yli. `vara` px
+ * pitää merkin keskipisteen hieman reunan sisäpuolella.
+ * Puhdas funktio (tests/satelliitti-avaruus.test.mjs).
+ */
+export function issKiekonSisalla(piste, keskus, sadePx, vara = 2) {
+  if (!piste || !keskus || !(sadePx > 0)) return false;
+  if (!Number.isFinite(piste.x) || !Number.isFinite(piste.y)) return false;
+  return Math.hypot(piste.x - keskus.x, piste.y - keskus.y) <= sadePx - vara;
+}
+
 /*
  * ── AURINKO SIVULLA (PALLONÄKYMÄ 12) ──────────────────────────────
  *
@@ -1629,7 +1645,14 @@ export function luoAvaruusKalvo({
     const kohta = issPaikka(aika);
     const xyz = pallo.getCoords(kohta.lat, kohta.lng, ISS_KORKEUS);
     const ruudulla = pallo.getScreenCoords(kohta.lat, kohta.lng, ISS_KORKEUS);
-    const nakyvissa = Boolean(xyz && radallaEdessa(kamera, xyz, sade3d));
+    /*
+     * NÄKYVÄ = kameraa kohti oleva puolisko (radallaEdessa) JA ruutupiste
+     * pallon kiekon sisällä (issKiekonSisalla). Kiekon keskipiste on
+     * kotelon keskipiste — sama, johon varjo ja valoreuna asettuvat.
+     */
+    const keskus = { x: kotelo.clientWidth / 2, y: kotelo.clientHeight / 2 };
+    const nakyvissa = Boolean(xyz && radallaEdessa(kamera, xyz, sade3d)
+      && issKiekonSisalla(ruudulla, keskus, sadePx));
     if (ruudulla && Number.isFinite(ruudulla.x)) {
       issPiste = {
         x: +ruudulla.x.toFixed(1), y: +ruudulla.y.toFixed(1), ...kohta, nakyvissa,
