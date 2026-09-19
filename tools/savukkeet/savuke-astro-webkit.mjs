@@ -564,8 +564,73 @@ async function mittaaAvaus(s, { selain, kotelo, kerta, dpr, leveys, korkeus }) {
       tila: reliefinLinssitila(), kaytossa: reliefiKaytossa(), astro: reliefiAstronautilla(),
       taso: m?.taso?.z ?? m?.taso ?? null, laattoja: m?.laattoja ?? null, valmiita: m?.valmiita ?? null,
       scenessa: m?.scenessa ?? null, tavut: m?.kaytetytTavut ?? null, syy: m?.syy ?? null,
+      reliefi404: m?.reliefi404 ?? null, varoja: m?.reliefiVaroja ?? null, tasavareja: m?.reliefiTasavareja ?? null,
+      jumissa: m?.jumissa ?? null, valmiita: m?.valmiita ?? null,
     };
   }).catch((e) => ({ virhe: String(e).slice(0, 120) }));
+  if (process.env.LAASTARIN_LAATAT === '1') {
+    const laatat = await s.evaluate(() => {
+      const p = window.matkakirja.ui.pallolauta.pallo;
+      const ulos = [];
+      p.scene().traverse((o) => {
+        const ud = o.userData?.laattakerros;
+        if (!ud || !o.material?.map?.image) return;
+        const kuva = o.material.map.image;
+        let ka = null; let hajonta = null;
+        try {
+          const c = document.createElement('canvas');
+          c.width = 32; c.height = 32;
+          const x = c.getContext('2d');
+          x.drawImage(kuva, 0, 0, 32, 32);
+          const d = x.getImageData(0, 0, 32, 32).data;
+          const r = []; const g = []; const b = [];
+          for (let i = 0; i < d.length; i += 4) { r.push(d[i]); g.push(d[i + 1]); b.push(d[i + 2]); }
+          const m = (a) => a.reduce((s2, v) => s2 + v, 0) / a.length;
+          ka = [m(r), m(g), m(b)].map(Math.round);
+          const l = r.map((v, i) => 0.2126 * v + 0.7152 * g[i] + 0.0722 * b[i]);
+          const lm = m(l);
+          hajonta = +Math.sqrt(m(l.map((v) => (v - lm) ** 2))).toFixed(1);
+        } catch (e) { ka = String(e).slice(0, 40); }
+        let nakyy = o.visible; let y = o.parent; while (nakyy && y) { nakyy = y.visible; y = y.parent; }
+        ulos.push({ z: ud.z, s: ud.sarake, r: ud.rivi, nakyy, ka, hajonta });
+      });
+      return ulos;
+    });
+    console.log(`LAATAT ${JSON.stringify(laatat)}`);
+    const muut = await s.evaluate(() => {
+      const { pallo: p, kotelo } = window.matkakirja.ui.pallolauta;
+      const kamera = p.camera(); const kr = kotelo.getBoundingClientRect();
+      const ryhmat = {};
+      p.scene().traverse((o) => {
+        if (!o.isMesh || Object.keys(o.userData ?? {}).length) return;
+        let nakyy = o.visible; let y = o.parent; while (nakyy && y) { nakyy = y.visible; y = y.parent; }
+        if (!nakyy) return;
+        const m = Array.isArray(o.material) ? o.material[0] : o.material;
+        const kuva = m?.map?.image;
+        const tila = !m?.map ? 'ei-karttaa' : (!kuva ? 'ei-kuvaa' : (kuva.complete === false ? 'lataamatta' : `${kuva.width ?? kuva.naturalWidth}x${kuva.height ?? kuva.naturalHeight}`));
+        o.geometry?.computeBoundingSphere?.();
+        const bs = o.geometry?.boundingSphere;
+        let ruutu = null;
+        if (bs) {
+          const v = bs.center.clone().applyMatrix4(o.matrixWorld).project(kamera);
+          if (Math.abs(v.x) <= 1.2 && Math.abs(v.y) <= 1.2 && v.z < 1) ruutu = [Math.round((v.x + 1) / 2 * kr.width), Math.round((1 - v.y) / 2 * kr.height)];
+        }
+        const avain = `${m?.type} vari=${m?.color?.getHexString?.()} ${tila} ro=${o.renderOrder} ${String(kuva?.src ?? '').replace(/^.*\/laatat\//, '').replace(/\/\d+\/\d+\.jpg.*$/, '')}`;
+        (ryhmat[avain] ??= { n: 0, ruudulla: [] }).n += 1;
+        if (ruutu && ryhmat[avain].ruudulla.length < 6) ryhmat[avain].ruudulla.push(ruutu);
+      });
+      return ryhmat;
+    });
+    console.log(`MUUT ${JSON.stringify(muut)}`);
+    if (ULOS) {
+      await s.evaluate(() => { window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.piilotaPilvet?.(true); window.matkakirja.ui.pallolauta?.heraa?.(); });
+      await s.waitForTimeout(800);
+      await s.screenshot({ path: join(ULOS, `laastari-ilman-pilvia-${selain}.jpg`), type: 'jpeg', quality: 60, scale: 'css' }).catch(() => {});
+      await s.evaluate(() => { window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.piilotaPilvet?.(false); window.matkakirja.ui.pallolauta?.heraa?.(); });
+      await s.waitForTimeout(800);
+      await s.screenshot({ path: join(ULOS, `laastari-pilvet-takaisin-${selain}.jpg`), type: 'jpeg', quality: 60, scale: 'css' }).catch(() => {});
+    }
+  }
   const pohjaAjo = /reliefipyramidi=0/.test(LISAPARAMIT);
   if (ULOS) {
     const nimi = LAASTARIN_KUVA
