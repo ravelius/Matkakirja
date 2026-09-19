@@ -76,7 +76,9 @@ import { luoPallovektorit, pallovektoritPaalla } from '../pallovektorit.js';
  * päättele maata itse (js/pallolaatat.js), koska väri on osa laatan
  * kangasta eikä kerros, jonka voisi jälkikäteen piilottaa.
  */
-import { asetaTasoituksenLiike, asetaTasoituksenMaailma, asetaVaritasonMaa } from '../laattapyramidi.js';
+import {
+  asetaTasoituksenLiike, asetaTasoituksenMaailma, asetaVaritasonMaa, haePyramidinLuettelo,
+} from '../laattapyramidi.js';
 import {
   lataaMaapolygonit, maanLautalaatikko, nollaaPallonMaakorostus, paivitaPallonMaakorostus,
 } from '../maanaariviivat.js';
@@ -2023,6 +2025,15 @@ export async function avaaPallolauta(ui) {
       setTimeout(() => { if (!kuori.hidden) ladoLevossa(); }, 0);
     },
   });
+  /*
+   * PYRAMIDIN LUETTELO SAAPUU VERKOSTA (erä J, 19.9.2026): ennen sitä
+   * `pallonNostoOnPoltettu` ei tunne yhtään poltettua nostoa, ja
+   * saapumisen ladonta piirtää ne kaikki elävinä laatan musteen päälle.
+   * Kun luettelo on perillä, ladotaan kerran uudelleen (idempotentti).
+   */
+  haePyramidinLuettelo()
+    ?.then?.(() => setTimeout(() => { if (!kuori.hidden) ladoLevossa(); }, 0))
+    ?.catch?.(() => {});
   /*
    * MAAN PERUSTIEDOT JA LISÄÄ-VALIKKO KARTTAAN KIINNITETTYNÄ
    * (karttauudistus erä 3, Raamattu KARTTAUUDISTUKSEN PAATOKSET 2
@@ -4418,7 +4429,21 @@ export async function avaaPallolauta(ui) {
      * sen maittain, mutta se on lupaus (aineisto on laiska), joten
      * tahdistus tehdään vastauksen saavuttua.
      */
-    if (asetaVaritasonMaa(korostusIso) || (korostusIso && !maanLaatikko)) {
+    const maaVaihtui = asetaVaritasonMaa(korostusIso);
+    /*
+     * POLTETTU-LIPPU TARVITSEE UUDEN LADONNAN, KUN MAA VAIHTUU (erä J,
+     * 19.9.2026; Sonnet 1:n kierros 12 kuva 06, Tanska). Nostokerros
+     * kysyy `pallonNostoOnPoltettu`lta kohdemaan nostotason
+     * tiivisteitä, ja ne luetaan tästä maasta (nostotasonPoltetut →
+     * variMaaNyt). Saapumisen ensimmäinen ladonta ehti ajaa ennen tätä,
+     * joten jokainen poltettu nosto piirtyi ELÄVÄNÄ laattaan paistetun
+     * musteen päälle — sama nimi kahdesti hieman eri paikassa — kunnes
+     * pelaaja panoroi. Mitattu Chromium 390 × 844 dpr 3 Kööpenhaminassa:
+     * Storebæltin silta ja Egeskov `poltettu:false` saapuessa,
+     * `poltettu:true` ensimmäisen kameran liikkeen jälkeen.
+     */
+    if (maaVaihtui) setTimeout(() => { if (!kuori.hidden) ladoLevossa(); }, 0);
+    if (maaVaihtui || (korostusIso && !maanLaatikko)) {
       if (!korostusIso) {
         maanLaatikko = null;
         /*

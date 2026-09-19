@@ -1920,6 +1920,8 @@ export function luoNostot({
    * Perustelu ja algoritmi: js/pallolauta/nostoankkurit.js.
    */
   const ankkurivarasto = luoAnkkurivarasto();
+  /** Edellisen ladonnan poltettujen avaimet (ks. POLTETTUJEN JOUKKO VAIHTUI). */
+  let viimeisinPoltettujenJoukko = null;
   /** Ankkurointi on päällä, kun lippu sallii ja kamera on mitattavissa. */
   const ankkurointiPaalla = (uloinOsuus) => nostoankkuritSallittu() && uloinOsuus > 0;
   /**
@@ -2019,6 +2021,22 @@ export function luoNostot({
      * Levitys väistää niitä silti, koska varastoon asetettu ankkuri
      * on `kiinteat`-listan "jo ankkuroitu" -haara.
      */
+    /*
+     * POLTETTUJEN JOUKKO VAIHTUI → LEVITYS ALUSTA (erä J, 19.9.2026).
+     * Saapumisen ensimmäinen ladonta ajetaan usein ennen kuin nostotason
+     * luettelo on perillä: silloin yksikään nosto ei ole poltettu, eikä
+     * levitys tunne laattaan paistettua mustetta esteenä. Ankkurit
+     * talletetaan, joten myöhempi ladonta ei väistäisi mustetta
+     * lainkaan (mitattu Chromium 390 px Kööpenhaminassa: elävä
+     * *Odense* poltetun *Storebæltin silta* -nimiön päällä). Kun
+     * poltettujen joukko muuttuu, varasto tyhjennetään ja levitys
+     * ajetaan uudestaan nykyisillä esteillä.
+     */
+    const poltettujenJoukko = nakyvat.filter((r) => r.poltettu).map((r) => r.avain).sort().join('|');
+    if (poltettujenJoukko !== viimeisinPoltettujenJoukko) {
+      if (viimeisinPoltettujenJoukko !== null) ankkurivarasto.tyhjenna();
+      viimeisinPoltettujenJoukko = poltettujenJoukko;
+    }
     const lukitusPaalla = lukitutAnkkuritSallittu();
     if (lukitusPaalla) {
       const lukitut = new Map();
