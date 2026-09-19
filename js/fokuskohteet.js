@@ -5233,6 +5233,8 @@ function piirraKohdeKysymykset(ui, sisalto, kohde) {
   // tekstiä eikä siinä ole yliviivausta.
   sisalto.appendChild(polloNimilappu(html('p', 'fokuskohde-kysy-otsikko'), {
     ennen: 'Kysy ', yli: 'viisaalta pöllöltä', tilalle: 'pululta', jalkeen: ':',
+    // Arvonimi vaihtuu joka avauksella (Raamattu VIISAAN POLLON ARVONIMET).
+    arvonimi: true,
   }));
   const rivi = html('div', 'fokuskohde-kysymykset');
   rivi.setAttribute('role', 'group');

@@ -6,6 +6,7 @@
  * docs/moduulirakenne-suunnitelma.md) — ei pelitilariippuvuuksia.
  */
 
+import { pollonArvonimi } from './packs/pollon-arvonimet.js';
 import { HUUDAHDUKSET } from './aani-ehdokkaat.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import { asetaKuva, assetOsoite, lataaKuvaSitkeasti } from './media.js';
@@ -738,11 +739,101 @@ export function html(tag, className, text) {
  * @param {{ennen?: string, yli?: string, tilalle?: string, jalkeen?: string}} osat
  * @returns {Element} sama kohde
  */
+/*
+ * VIISAAN PÖLLÖN ARVONIMET (Raamattu, VIISAAN POLLON ARVONIMET; omistaja
+ * 19.9.2026 klo 21.45: *"Keksisitkö viisaalle pöllölle synonyymejä
+ * yliviivauksiin niin vitsi ei vanhenisi niin nopeasti? … jos on pidempi
+ * loru niin tiivistetään kirjaimia vaakasuunnassa yliviivatun osalta,
+ * jotta mahtuu."*). Lista ja arvonta ovat Fablen tiedostossa
+ * js/packs/pollon-arvonimet.js; tämä vain kertoo, missä pelaaja on.
+ *
+ * Arvonimet ovat ABLATIIVISSA ("Kysy X pululta"), joten ne kuuluvat vain
+ * kysy-otsikoihin (`arvonimi: true`). Nominatiivinen "Viisas Pöllö Pulu"
+ * (pulun nappi, aarteen paljastus, fokusvirran ylärivi) pysyy ennallaan.
+ */
+const ARVONIMEN_MAANOSA = {
+  europe: 'europe', africa: 'africa', middleeast: 'asia', asia: 'asia',
+  northamerica: 'americas', southamerica: 'americas', oceania: 'oceania',
+};
+/** Napapiirin leveysaste: tätä pohjoisempana tai etelämpänä arvonimet 'polar'. */
+const NAPAPIIRI = 66;
+
+/**
+ * Pelaajan maanosa ja maa arvonimen arvontaan: laivamatkalla 'meri',
+ * napapiirin takana 'polar', muuten kaupungin maanosa (cityManner).
+ */
+export function arvonimenPaikka(game = globalThis.matkakirja?.game ?? null) {
+  const pack = game?.pack;
+  const pos = game?.player?.pos;
+  if (!pack || !pos) return { maanosa: null, iso: null };
+  if (pos.type !== 'city') {
+    return { maanosa: game.travelMode === 'sea' ? 'meri' : null, iso: null };
+  }
+  const iso = pack.map?.cityCountry?.[pos.city] ?? null;
+  const kaupunki = (pack.cities ?? []).find((c) => c.id === pos.city);
+  const lat = kaupunki?.pallo?.lat;
+  if (iso === 'GRL' || (Number.isFinite(lat) && Math.abs(lat) >= NAPAPIIRI)) {
+    return { maanosa: 'polar', iso };
+  }
+  return { maanosa: ARVONIMEN_MAANOSA[pack.map?.cityManner?.[pos.city]] ?? null, iso };
+}
+
+/**
+ * Tiivistyksen alaraja. Pisin nimi ("Pöllöltä, Jolla On Kaksi Tutkintoa
+ * Enemmän Kuin Sinulla") tarvitsee 390 px:n kohdekortissa 0,447
+ * (tools/savukkeet/savuke-arvonimet.mjs); raja jättää varaa.
+ */
+export const NIMILAPUN_TIIVISTYS_MIN = 0.4;
+
+/**
+ * PITKÄ ARVONIMI TIIVISTETÄÄN, EI RIVITETÄ. Mitataan, mahtuuko rivi
+ * kohteen leveyteen; jos ei, VAIN yliviivattu sana puristetaan
+ * vaakasuunnassa (scaleX vasemmasta reunasta), ja <s>-laatikko saa
+ * puristetun leveyden, jolloin kynänveto (100 % laatikosta) seuraa
+ * mukana ja "pululta" siirtyy viereen. Palauttaa kertoimen (1 = mahtui).
+ */
+export function tiivistaNimilappu(kohde) {
+  const viiva = kohde?.querySelector?.('.pollo-yliviivattu');
+  const sana = viiva?.querySelector('.pollo-yliviivattu-sana');
+  if (!viiva || !sana || !kohde.isConnected) return 1;
+  sana.style.transform = '';
+  sana.style.marginRight = '';
+  const tila = kohde.clientWidth;
+  const tarve = kohde.scrollWidth;
+  if (!(tila > 0) || tarve <= tila + 0.5) return 1;
+  const leveys = sana.getBoundingClientRect().width;
+  if (!(leveys > 0)) return 1;
+  const k = Math.max(NIMILAPUN_TIIVISTYS_MIN, (leveys - (tarve - tila) - 2) / leveys);
+  sana.style.display = 'inline-block';
+  sana.style.transformOrigin = 'left center';
+  sana.style.transform = `scaleX(${k.toFixed(3)})`;
+  // Transform ei muuta asettelua: negatiivinen marginaali kutistaa sanan
+  // asettelulaatikon piirretyn levyiseksi, jolloin <s> (ja kynänveto,
+  // joka on sen levyinen) seuraa sitä eikä rivi ylivuoda.
+  sana.style.marginRight = `${(-leveys * (1 - k)).toFixed(1)}px`;
+  return k;
+}
+
 export function polloNimilappu(kohde, osat = {}) {
+  let { yli = 'Viisas Pöllö' } = osat;
   const {
-    ennen = '', yli = 'Viisas Pöllö', tilalle = 'Pulu', jalkeen = '',
+    ennen = '', tilalle = 'Pulu', jalkeen = '', arvonimi = false,
   } = osat;
   if (!kohde) return kohde;
+  if (arvonimi) {
+    const paikka = (osat.maanosa !== undefined || osat.iso !== undefined)
+      ? { maanosa: osat.maanosa ?? null, iso: osat.iso ?? null } : arvonimenPaikka();
+    yli = pollonArvonimi(paikka.maanosa, paikka.iso) || yli;
+    // Rivi ei katkea: pitkä nimi tiivistetään (tiivistaNimilappu).
+    kohde.style.whiteSpace = 'nowrap';
+    kohde.classList?.add?.('pollo-nimilappu-arvonimi');
+    const tiivista = () => tiivistaNimilappu(kohde);
+    if (typeof requestAnimationFrame === 'function') {
+      requestAnimationFrame(tiivista);
+      // Kortti voi liittyä DOMiin vasta myöhemmin tai animoida leveytensä.
+      setTimeout(tiivista, 250);
+    }
+  }
   kohde.textContent = '';
   if (ennen) kohde.appendChild(document.createTextNode(ennen));
   const viiva = document.createElement('s');

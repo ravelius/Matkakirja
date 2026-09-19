@@ -51,6 +51,8 @@ const SHELL = [
   './js/packs/fokus-grc.js',
   './js/sisaltotaulut.js',
   './js/ui-apurit.js',
+  // Viisaan pöllön arvonimet (nimilappuvitsi, Raamattu VIISAAN POLLON ARVONIMET).
+  './js/packs/pollon-arvonimet.js',
   './js/liput.js',
   './js/karttazoom.js',
   './js/vertailu.js',

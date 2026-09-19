@@ -343,6 +343,8 @@ const MODULES = [
   'js/packs/pollo-asetukset.js',
   // Pöllön valmiskysymykset. js/pollo.js tuo tämän staattisesti.
   'js/packs/pollo-kysymykset.js',
+  // Viisaan pöllön arvonimet (nimilappuvitsi, js/ui-apurit.js polloNimilappu).
+  'js/packs/pollon-arvonimet.js',
   // Kuratoidut pöllöpoiminnat (kysymys–vastaus-pillerit artikkeleissa).
   // js/pollopoiminnat.js tuo tämän staattisesti.
   'js/packs/pollo-poiminnat.js',

@@ -159,7 +159,7 @@
  * (js/ui.js linssikarttaEstaa, joka lukee myös linssiEstaa()).
  */
 
-import { html } from '../ui-apurit.js';
+import { html, polloNimilappu } from '../ui-apurit.js';
 import {
   polloKuplatPois, polloLinssiAlkoi, polloLinssiPaattyi, polloUlkoinenKysymys,
 } from '../pollo.js';
@@ -944,7 +944,11 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
   pulukortti.setAttribute('role', 'dialog');
   pulukortti.setAttribute('aria-label', `Kysy pululta: ${kohde.nimi}`);
   pulukortti.hidden = true;
-  const pulunOtsikko = html('div', 'satelliitti-pulu-otsikko', 'Kysy pululta:');
+  // Nimilappuvitsi arvonimineen (js/ui-apurit.js polloNimilappu,
+  // Raamattu VIISAAN POLLON ARVONIMET).
+  const pulunOtsikko = polloNimilappu(html('div', 'satelliitti-pulu-otsikko'), {
+    ennen: 'Kysy ', yli: 'viisaalta pöllöltä', tilalle: 'pululta', jalkeen: ':', arvonimi: true,
+  });
   const pulunSulku = nappi('satelliitti-pulu-sulku', '×', 'Sulje kysymykset');
   const pulunYlarivi = html('div', 'satelliitti-pulu-ylarivi');
   pulunYlarivi.append(pulunOtsikko, pulunSulku);
