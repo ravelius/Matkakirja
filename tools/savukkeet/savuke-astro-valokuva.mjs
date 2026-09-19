@@ -84,7 +84,13 @@ const palvelin = createServer((req, res) => {
   res.writeHead(200, { 'content-type': MIME[extname(polku)] || 'application/octet-stream' });
   res.end(readFileSync(polku));
 });
-await new Promise((r) => palvelin.listen(8757, r));
+/*
+ * PORTTI YMPÄRISTÖSTÄ (Fable 20.9.2026): kiinteä 8757 kaatoi rinnakkaisen
+ * ajon EADDRINUSEen. Oletus on sama kuin ennen, joten vanhat komennot
+ * toimivat muuttumatta.
+ */
+const PORTTI = Number(process.env.PORTTI) || 8757;
+await new Promise((r) => palvelin.listen(PORTTI, r));
 
 const paketti = await import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js');
 const chromium = paketti.chromium ?? paketti.default?.chromium;
@@ -208,7 +214,7 @@ async function avaaSivu(nakyma, virheet) {
 const MALLIVASTAUS = 'Savukkeen mallivastaus: tama tuli pulun omaa chattireittia pitkin.';
 
 async function avaaPeli(s) {
-  await s.goto('http://127.0.0.1:8757/index.html?lauta=pallo', { waitUntil: 'load' });
+  await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo`, { waitUntil: 'load' });
   await s.waitForTimeout(2500);
   await s.evaluate(() => {
     [...document.querySelectorAll('button')].find((b) => /aloita seikkailu/i.test(b.textContent))?.click();
