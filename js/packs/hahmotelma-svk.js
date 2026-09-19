@@ -1494,7 +1494,7 @@ export const HAHMOTELMA_SVK = [
     lahde: 'en-Wikipedia "Skalica", johdanto-osa ja osiot "History" ja "Sights" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Mistä trdelník-leivonnaisen alkuperä on?',
+      kysymys: 'Mistä trdelník-leivonnainen on peräisin?',
       vaihtoehdot: [
         'Wienin seutu',
         'Prahan seutu',

@@ -110,10 +110,10 @@ export const HAHMOTELMA_HUN = [
     visa: {
       kysymys: 'Mikä tekee Hévízin järvestä erityisen Euroopassa?',
       vaihtoehdot: [
-        'Se on Euroopan syvin luolajärvi',
-        'Se on Euroopan suurin uitavissa oleva lämpöjärvi',
-        'Se on Euroopan suolaisin järvi',
-        'Se on Euroopan korkein vuoristojärvi',
+        'Syvin tulivuoren kraatterijärvi',
+        'Suurin uimakelpoinen lämpöjärvi',
+        'Suolaisin sisämaan järvi',
+        'Korkein vuoristojärvi',
       ],
       oikea: 1,
       fakta: 'Järven pohjalla on turvekerros, joka on jopa kahdeksan metriä paksu.',
@@ -313,7 +313,7 @@ export const HAHMOTELMA_HUN = [
       vaihtoehdot: [
         'Sándor Petőfi',
         'János Arany',
-        'Endre Ady',
+        'Mihály Vörösmarty',
         'Sándor Kisfaludy',
       ],
       oikea: 3,
@@ -369,10 +369,10 @@ export const HAHMOTELMA_HUN = [
     visa: {
       kysymys: 'Mikä tekee Gemencistä ainutlaatuisen Unkarissa?',
       vaihtoehdot: [
-        'Se on Tonavan ainoa jäljellä oleva vuorovesialue Unkarissa',
-        'Se on Unkarin suurin havumetsä',
-        'Se on Unkarin korkein vuorimetsä',
-        'Se on Unkarin ainoa saarimetsä',
+        'Tonavan ainoa vuorovesialue',
+        'Unkarin suurin havumetsä',
+        'Unkarin korkein vuorimetsä',
+        'Unkarin ainoa saarimetsä',
       ],
       oikea: 0,
       fakta: 'Gemenc on osa Tonava-Dráva-kansallispuistoa.',
@@ -431,14 +431,13 @@ export const HAHMOTELMA_HUN = [
     visa: {
       kysymys: 'Mitä osmanit tekivät Esztergomin katedraalille vuonna 1543?',
       vaihtoehdot: [
-        'He polttivat sen maan tasalle ilman jälleenrakennusta',
-        'He käyttivät sitä ruutivarastona',
-        'He purkivat kuorin ja käyttivät loppua moskeijana',
-        'He muuttivat sen sotilassairaalaksi',
+        'Se poltettiin maan tasalle',
+        'Se muutettiin ruutivarastoksi',
+        'Kuori purettiin, loppu moskeijaksi',
+        'Se muutettiin sotilassairaalaksi',
       ],
       oikea: 2,
-      fakta: 'Kryptaan on rakennettu vuonna 1831 muinaisegyptiläiseen tyyliin hautakammio, jossa '
-        + 'lepäävät entiset arkkipiispat.',
+      fakta: 'Kryptaan on rakennettu vuonna 1831 muinaisegyptiläiseen tyyliin hautakammio, jossa lepäävät entiset arkkipiispat.',
     },
   },
   {
@@ -540,14 +539,13 @@ export const HAHMOTELMA_HUN = [
     visa: {
       kysymys: 'Miten sulttaani Suleiman kuoli Szigetvárin piirityksen aikana?',
       vaihtoehdot: [
-        'Hän kaatui hyökkäyksessä muurille',
-        'Hän kuoli luonnollisiin syihin vanhuudessaan',
+        'Hän kaatui muurin valtauksessa',
+        'Hän kuoli luonnollisiin syihin',
         'Hänet myrkytettiin leirissä',
         'Hän hukkui Almás-jokeen',
       ],
       oikea: 1,
-      fakta: 'Vuonna 2016 alkaneet kaivaukset paljastivat Suleimanin haudan läheisen tuhoutuneen '
-        + 'Turbékin asutuksen alueelta.',
+      fakta: 'Vuonna 2016 alkaneet kaivaukset paljastivat Suleimanin haudan läheisen tuhoutuneen Turbékin asutuksen alueelta.',
     },
   },
   {
@@ -661,14 +659,13 @@ export const HAHMOTELMA_HUN = [
     visa: {
       kysymys: 'Miksi Soprónia kutsutaan uskollisimmaksi kaupungiksi?',
       vaihtoehdot: [
-        'Se torjui osmanien piirityksen vuonna 1566',
-        'Se pysyi keisarin puolella vuoden 1848 kapinassa',
-        'Se maksoi kuninkaalle veroja ilman valituksia',
-        'Se äänesti kansanäänestyksessä Unkariin kuulumisen puolesta',
+        'Torjui osmanien piirityksen',
+        'Pysyi keisarin puolella 1848',
+        'Maksoi veronsa valittamatta',
+        'Äänesti Unkariin kuulumisesta',
       ],
       oikea: 3,
-      fakta: 'Soprónin rajalla vuonna 1989 pidetyssä Paneurooppalaisessa piknikissä yli 600 '
-        + 'itäsaksalaista pakeni länteen.',
+      fakta: 'Soprónin rajalla vuonna 1989 pidetyssä Paneurooppalaisessa piknikissä yli 600 itäsaksalaista pakeni länteen.',
     },
   },
   {
@@ -1265,8 +1262,8 @@ export const HAHMOTELMA_HUN = [
       vaihtoehdot: [
         'Kuningas Matthias Corvinukselle',
         'Ruhtinas Nikolaus Esterházylle',
-        'Frans Joosefille ja keisarinna Elisabethille',
-        'Lajos Kossuthille',
+        'Frans Joosefille ja Sisille',
+        'Kreivi Gyula Andrássylle',
       ],
       oikea: 2,
       fakta: 'Kuninkaallisen kesäpaikan vuoksi pohjoinen rautatie kulkee Gödöllön läheltä.',
@@ -1327,7 +1324,7 @@ export const HAHMOTELMA_HUN = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/hun-nosto-opusztaszer-cac056ad.jpg',
       lyhyt: 'Ópusztaszerin rotunda-rakennus, jonka sisällä Feszty-panoraama on esillä, järven takana.',
-      selite: 'Suuri kartiomainen, metallikattoinen rotunda kohoaa kansallisen perintöpuiston järven takana. Kuvauksen mukaan Feszty-panoraama on tässä rakennuksessa.',
+      selite: 'Suuri kartiomainen, metallikattoinen rotunda kohoaa kansallisen perintöpuiston järven takana. Feszty-panoraama on tässä rakennuksessa.',
       lahde: 'Valokuva: Pasztilla (Attila Terbócs), Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Pasztilla (Attila Terbócs)',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C3%93pusztaszeri_Nemzeti_T%C3%B6rt%C3%A9neti_Eml%C3%A9kpark,_Rotunda_2021_01.jpg',
@@ -1383,7 +1380,7 @@ export const HAHMOTELMA_HUN = [
     visa: {
       kysymys: 'Mitä tapahtumaa Ópusztaszerin Feszty-panoraama kuvaa?',
       vaihtoehdot: [
-        'Unkarilaisten maahantuloa Karpaattien altaalle',
+        'Unkarilaisten maahantuloa',
         'Mohácsin taistelua',
         'Budapestin perustamista',
         'Tapani Pyhän kruunajaisia',
@@ -1397,7 +1394,7 @@ export const HAHMOTELMA_HUN = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/hun-nosto-herend-9eb0fc5b.jpg',
       lyhyt: 'Käsinmaalattuja Herendin posliinilautasia, väripurkkeja ja pensseleitä työpöydällä.',
-      selite: 'Pöydällä on kukka- ja perhoskuvioin koristeltuja lautasia ja posliinikiviä sekä laatikollinen jauhemaisia posliiniemalivärejä. Kuvauksen mukaan posliinit ovat koristelu- ja maalausvaiheen jälkeen Herendin posliinimuseossa.',
+      selite: 'Pöydällä on kukka- ja perhoskuvioin koristeltuja lautasia ja posliinikiviä sekä laatikollinen jauhemaisia posliiniemalivärejä. Posliinit ovat koristelu- ja maalausvaiheen jälkeen Herendin posliinimuseossa.',
       lahde: 'Valokuva: Davidi Vardi, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Davidi Vardi',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Painting_process_of_porcelain.jpg',
@@ -1408,7 +1405,7 @@ export const HAHMOTELMA_HUN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/hun-nosto-herend-b1d37b58.jpg',
         lyhyt: 'Katettu pöytä täynnä Herendin posliinia: kuppeja, teekannu, lautasia ja eläinhahmoja.',
-        selite: 'Pöydälle on aseteltu kultareunaisia astioita, kalapatsas ja verkkokuvioista posliinia. Kuvauksen mukaan pöytä on esillä Herendin posliinitehtaan vierailukeskuksessa.',
+        selite: 'Pöydälle on aseteltu kultareunaisia astioita, kalapatsas ja verkkokuvioista posliinia. Pöytä on esillä Herendin posliinitehtaan vierailukeskuksessa.',
         lahde: 'Valokuva: Davidi Vardi, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Davidi Vardi',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Porcelain_product_table.jpg',
@@ -1445,8 +1442,7 @@ export const HAHMOTELMA_HUN = [
     lahde: 'en-Wikipedia "Herend Porcelain Manufactory", johdanto-osa ja osio "History" '
       + '(tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Kuka otti Herendin tehtaan haltuunsa velkojana vuonna 1839 ja aloitti taideposliinin '
-        + 'valmistuksen?',
+      kysymys: 'Kuka otti Herendin tehtaan haltuunsa velkojana vuonna 1839?',
       vaihtoehdot: [
         'Vince Stingl',
         'Mór Fischer',
@@ -1454,8 +1450,7 @@ export const HAHMOTELMA_HUN = [
         'Prinssi Esterházy',
       ],
       oikea: 1,
-      fakta: 'Herendin kuvioita on nimetty ensimmäisten asiakkaiden mukaan, muun muassa kuningatar '
-        + 'Viktorian, Esterházyn ja Rothschildin.',
+      fakta: 'Herendin kuvioita on nimetty ensimmäisten asiakkaiden mukaan, muun muassa kuningatar Viktorian, Esterházyn ja Rothschildin.',
     },
   },
 ];

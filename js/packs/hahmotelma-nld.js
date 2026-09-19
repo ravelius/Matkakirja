@@ -604,10 +604,10 @@ export const HAHMOTELMA_NLD = [
     visa: {
       kysymys: 'Mihin vanhaan uskomukseen noitavaa\'an punnitus perustui?',
       vaihtoehdot: [
-        'Noita painaa tavallista enemmän raskaan synnin vuoksi',
-        'Noidan paino vaihtelee kuun vaiheiden mukaan',
-        'Noidalla ei ole sielua, joten hän painaa selvästi tavallista vähemmän',
-        'Noidan paino on aina sama kuin hänen isänsä painoi',
+        'Synti raskauttaa noitaa',
+        'Kuun vaihe muuttaa painoa',
+        'Sieluton noita on kevyt',
+        'Paino periytyy isältä',
       ],
       oikea: 2,
       fakta: 'Oudewaterissa ketään ei koskaan todettu oikeaksi noidaksi.',
@@ -1058,7 +1058,7 @@ export const HAHMOTELMA_NLD = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-edam-36f16a55.jpg',
         lyhyt: 'Perinteinen juustomarkkina Edamin torilla: juustopyöriä laatikoissa ja kantajia työssä.',
-        selite: 'Edamin juustomarkkinan esitys torilla. Kuvauksen mukaan kyseessä on turisteille järjestetty uudelleenesitys aiemmin pidetystä oikeasta juustotorista.',
+        selite: 'Edamin juustomarkkinan esitys torilla. Kyseessä on turisteille järjestetty uudelleenesitys aiemmin pidetystä oikeasta juustotorista.',
         lahde: 'Valokuva: Lupo, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Lupo',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kaasmarkt_Edam.jpg',
@@ -1153,10 +1153,10 @@ export const HAHMOTELMA_NLD = [
     visa: {
       kysymys: 'Miksi Oranian Vilhelm I perusti Leidenin yliopiston?',
       vaihtoehdot: [
-        'Palkkioksi kaupungin sankarillisesta puolustuksesta',
+        'Palkkioksi kaupungin puolustuksesta',
         'Rangaistukseksi kaupungin kapinasta',
         'Espanjan kuninkaan käskystä',
-        'Tuhoutuneen luostarin korvaajaksi',
+        'Tuhoutuneen luostarin tilalle',
       ],
       oikea: 0,
       fakta: 'Leidenin piirityksen aikana kaupungissa lyötiin Euroopan ensimmäinen paperiraha, kun '
@@ -1168,7 +1168,7 @@ export const HAHMOTELMA_NLD = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-hindeloopen-38efc253.jpg',
       lyhyt: 'Hindeloopenin satamasuu ja purjeveneitä IJsselmeerin rannalla.',
-      selite: 'Kuvan kuvauksen mukaan näkymä on Hindeloopenin satamasta IJsselmeerille päin. Oikealla on kalastusalus ja purjeveneiden mastoja, vasemmalla satamaan johtavan aallonmurtajan rakenne.',
+      selite: 'Näkymä on Hindeloopenin satamasta IJsselmeerille päin. Oikealla on kalastusalus ja purjeveneiden mastoja, vasemmalla satamaan johtavan aallonmurtajan rakenne.',
       lahde: 'Valokuva: Gouwenaar, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Gouwenaar',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:20190717_Haven_van_Hindeloopen.jpg',
@@ -1189,7 +1189,7 @@ export const HAHMOTELMA_NLD = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-hindeloopen-10d51bd8.jpg',
         lyhyt: 'Hindeloopenin kirkko ja sen kellotorni sekä oikealla museorakennus.',
-        selite: 'Kuvan kuvauksen mukaan kuvassa on Hindeloopenin kirkko Friisinmaalla, ja oikealla näkyy Museum Hindeloopenin rakennus.',
+        selite: 'Kuvassa on Hindeloopenin kirkko Friisinmaalla, ja oikealla näkyy Museum Hindeloopenin rakennus.',
         lahde: 'Valokuva: Wutsje, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Wutsje',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:20080504_Church_Hindeloopen_NL.jpg',
@@ -1239,7 +1239,7 @@ export const HAHMOTELMA_NLD = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-urk-7f2e7484.jpg',
         lyhyt: 'Vanha mustavalkoinen valokuva Urkin satamasta, jossa kalastusveneitä on tiiviisti rivissä ja poikia rannalla.',
-        selite: 'Kuvan nimi on Urk Harbour. Satamassa on lukuisia purjeveneitä mastot pystyssä, ja etualalla seisoo rivi poikia. Kuva on rajattu kirjan aukeamasta pelkäksi valokuvaksi.',
+        selite: 'Kuvassa on Urkin satama. Satamassa on lukuisia purjeveneitä mastot pystyssä, ja etualalla seisoo rivi poikia.',
         lahde: 'Kuva: George Christopher Davies, Rijksmuseum, Wikimedia Commons (CC0).',
         tekija: 'George Christopher Davies (Rijksmuseum)',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gezicht_op_de_haven_van_Urk_Urk_Harbour_(titel_op_object),_RP-F-2001-7-1357-12.jpg',
@@ -1284,10 +1284,10 @@ export const HAHMOTELMA_NLD = [
     visa: {
       kysymys: 'Miksi Urkin murre on säilynyt omaleimaisena?',
       vaihtoehdot: [
-        'Saarella oli vuosisatoja oma kuningas',
-        'Murretta suojaa laki jo keskiajalta',
-        'Urk oli toiseen maailmansotaan asti saari, jolle pääsi vain veneellä',
-        'Kaikki asukkaat ovat muuttaneet mantereelta viime vuosikymmeninä',
+        'Saarella oli oma kuningas',
+        'Keskiaikainen laki suojaa murretta',
+        'Saari toiseen maailmansotaan asti',
+        'Asukkaat muuttivat mantereelta',
       ],
       oikea: 2,
       fakta: 'Kun IJsselmeer syntyi, urkilaiset siirsivät kalastuksensa Pohjanmerelle.',
@@ -1319,7 +1319,7 @@ export const HAHMOTELMA_NLD = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-thorn-da091bd0.jpg',
         lyhyt: 'Thornin valkoiset talot, oranssit tiilikatot ja pieni kellotapuli.',
-        selite: 'Kuvan kuvauksen mukaan kohde on Thornin valkoinen kylä Limburgin maakunnassa. Valkoisten talojen katolla näkyy avoin kellotapuli kelloineen.',
+        selite: 'Kuvassa on Thornin valkoinen kylä Limburgin maakunnassa. Valkoisten talojen katolla näkyy avoin kellotapuli kelloineen.',
         lahde: 'Valokuva: Microtoerisme, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Microtoerisme',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Juli_2012_Thorn_40.JPG',
@@ -1428,7 +1428,7 @@ export const HAHMOTELMA_NLD = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-orvelte-5b7a36be.jpg',
         lyhyt: 'Orvelten museokylän olkikattoinen tiilinen maalaistalo ja opastaulu.',
-        selite: 'Kuvan kuvauksen mukaan kohde on Drenthen maakunnan Orvelten museokylä. Talossa on olkikatto ja tiiliseinä, ja sen edessä kasvaa kastanjapuu.',
+        selite: 'Kuvassa on Drenthen maakunnan Orvelten museokylä. Talossa on olkikatto ja tiiliseinä, ja sen edessä kasvaa kastanjapuu.',
         lahde: 'Valokuva: Antoine, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Antoine',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Museumdorp_Orvelte_Drenthe_Nederland-01.JPG',
@@ -1438,7 +1438,7 @@ export const HAHMOTELMA_NLD = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/nld-nosto-orvelte-b7ec0517.jpg',
         lyhyt: 'Flintenweg 2:n olkikattoinen talo punaisine ikkunaluukkuineen Orvelten kylässä.',
-        selite: 'Kuvan kuvauksen mukaan kyseessä on Orvelten Flintenweg 2:n tilan asuinosa, joka on suojeltu rakennusmonumentti (rijksmonument).',
+        selite: 'Kuvassa on Orvelten Flintenweg 2:n tilan asuinosa, joka on suojeltu rakennusmonumentti (rijksmonument).',
         lahde: 'Valokuva: Anthony Ruijtenbeek, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Anthony Ruijtenbeek',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Flintenweg_2_in_Orvelte_Voorhuis.jpg',
@@ -1620,12 +1620,12 @@ export const HAHMOTELMA_NLD = [
     lahde: 'en-Wikipedia "Museum De Cruquius", johdanto-osa ja osio "Heritage site" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Mitä Cruquiuksen koneesta uskotaan?',
+      kysymys: 'Millainen Cruquiuksen pumppuaseman kone uskotaan olevan?',
       vaihtoehdot: [
-        'Että se oli maailman ensimmäinen sähköpumppu',
-        'Että se on suurin koskaan rakennettu höyrykone',
-        'Että se on Alankomaiden vanhin tuulimylly',
-        'Että se rakennettiin Haarlemin kaupungintalon kellariin',
+        'Maailman ensimmäinen sähköpumppu',
+        'Suurin koskaan rakennettu höyrykone',
+        'Alankomaiden vanhin tuulimylly',
+        'Kaikkien aikojen nopein pumppu',
       ],
       oikea: 1,
       fakta: 'Haarlemmermeeren pumppuasemat nimettiin kuivatuksen suunnittelijoiden mukaan: '

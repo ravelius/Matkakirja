@@ -88,6 +88,7 @@ const MODULES = [
   'js/packs/hahmotelma-fin.js',
   'js/packs/hahmotelma-rou.js',
   'js/packs/hahmotelma-svn.js',
+  'js/packs/hahmotelma-est.js',
   'js/packs/maakartat.js',
   'js/packs/nahtavyysjutut.js',
   'js/packs/miniatyyrit.js',
@@ -707,8 +708,8 @@ const MODULES = [
   'js/livia-svg.js',
   'js/livia-nostotila.js',
   'js/livia-dialogitila.js',
-  'js/livia-eleet.js',
   'js/pulu-paneelin-ylla.js',
+  'js/livia-eleet.js',
   'js/pollo.js',
   /*
    * Livian ääni ennen Livian kuplia: js/livia.js soittaa repliikin
