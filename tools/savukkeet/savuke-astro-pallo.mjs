@@ -1378,6 +1378,8 @@ async function ajaNakyma(nimi) {
       lahellaNormal: kehalla(normaali, pisteLahelta, 10),
     };
     valo.valaisu = +(valo.lahella - valo.lahellaIlman).toFixed(1);
+    valo.vara = +(255 - valo.lahellaIlman).toFixed(1);
+    valo.suhteellinen = valo.vara > 0 ? +(valo.valaisu / valo.vara).toFixed(3) : 0;
     valo.sekoituksenLisa = +(valo.lahella - valo.lahellaNormal).toFixed(1);
     valo.taustanEro = +(valo.kaukana - valo.kaukanaIlman).toFixed(1);
     valo.pilvetPiilossa = pilvetPoisKehalta;
@@ -1397,10 +1399,24 @@ async function ajaNakyma(nimi) {
     `10 px ${valo?.lahella} vs. 40 px ${valo?.kaukana} `
     + `(ero ${valo ? (valo.lahella - valo.kaukana).toFixed(1) : '—'}, vaadittu ≥ 3;`
     + ` pilvikuori piilossa ${valo?.pilvetPiilossa})`);
+  /*
+   * 45c MITATAAN SUHTEESSA KIRKASTUMISVARAAN, EI KIINTEÄNÄ LUKUNA (Opus
+   * 19.9.2026, erä opus-local-45c). `screen` nostaa pikseliä määrän
+   * α·c·(255 − tausta)/255, joten sama sädekehä nostaa tummaa merta
+   * enemmän kuin vaaleaa maata. Kiinteä raja 5 luki siis sitä, MINKÄ
+   * pisteen päälle kamera sattui pysähtymään: Mac 19.9. puhelin, sama
+   * koodi — tausta 39,1 → nosto 6,5 (vihreä), tausta 79,2 → nosto 4,9
+   * (punainen); suhde varaan 0,030 ja 0,028. "Kuormapunainen" oli
+   * pisteen valinta, ei kuorma. Raja 0,02 varasta ja vähintään 2
+   * yksikköä; sädekehä piilossa nosto on 0, joten mittari osaa yhä
+   * mennä punaiseksi.
+   */
   vaadi(t('45c: valaisu tulee sädekehästä eikä maastosta'),
-    Boolean(valo) && valo.valaisu >= 5 && Math.abs(valo.taustanEro) <= 3,
+    Boolean(valo) && valo.valaisu >= 2 && valo.suhteellinen >= 0.02
+      && Math.abs(valo.taustanEro) <= 3,
     `sädekehä nostaa 10 px:n kehää ${valo?.valaisu} yksikköä `
-    + `(ilman kehää ${valo?.lahellaIlman}), 40 px:n kehä muuttuu `
+    + `= ${valo?.suhteellinen} kirkastumisvarasta ${valo?.vara} (vaadittu ≥ 0,02) `
+    + `(ilman kehää ${valo?.lahellaIlman}, piste ${pisteLahelta ? `${Math.round(pisteLahelta.x)},${Math.round(pisteLahelta.y)}` : '—'}), 40 px:n kehä muuttuu `
     + `${valo?.taustanEro}; screen-sekoituksen lisä normal-tilaan `
     + `${valo?.sekoituksenLisa}`);
   await s.evaluate((alt) => {
