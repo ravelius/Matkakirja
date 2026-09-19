@@ -13,8 +13,8 @@
  * ablatiivissa, koska pulu tuuraa pöllöä ("kysy pöllöltä" → "pululta").
  * Kortti arpoo arvonimen: ensin maanosan listasta (jos pelaajan
  * maanosa tunnetaan), muuten tai puolet ajasta yleisestä listasta.
- * Sama kortti näyttää saman arvonimen uudelleen avattaessa (siemen
- * noston tunnuksesta), jotta vitsi ei vilku. Pitkät nimet tiivistetään
+ * Joka avauksella arvotaan uusi nimi (omistaja 19.9.2026: "tulee aina
+ * eri vaihtoehto"). Pitkät nimet tiivistetään
  * vaakasuunnassa (font-stretch / letter-spacing / scaleX) vain
  * yliviivatun osan verran — "pululta" pysyy normaalina.
  *
@@ -55,6 +55,70 @@ export const POLLON_ARVONIMET_YLEISET = [
   'Sulkien Sulttaanilta',
   'Ylimmältä Uhuilijalta',
   'Vanhalta Viisaalta, joka ei koskaan räpäytä silmäänsä',
+  // — 1873-henkiset (höyryn, lennättimen ja maailmannäyttelyjen aika) —
+  'Höyrykoneen Aikakauden Pöllöltä',
+  'Lennätinlinjan Kuuntelijalta',
+  'Maailmannäyttelyn Kunniavieraalta',
+  'Suezin Kanavan Luotsipöllöltä',
+  'Jules Vernen Neuvonantajalta',
+  'Kaasulyhdyn Tietäjältä',
+  'Kahdeksankymmenen Päivän Matkatoverilta',
+  'Höyrylaivan Kansiluennoitsijalta',
+  'Rautatieaikataulun Ulkoa Osaavalta',
+  'Valokuvaajan Hiljaiselta Mallilta',
+  'Sanomalehtien Yöpainoksen Lukijalta',
+  'Vuoden 1873 Pörssiromahduksen Ennustajalta',
+  'Kuningatar Victorian Hovin Yölinnulta',
+  'Kaikkien Postivaunujen Kyydissä Olleelta',
+  // — akateemiset —
+  'Professori Emeritukselta',
+  'Tiedeakatemian Kunniajäseneltä',
+  'Kunniatohtorilta, honoris causa',
+  'Dosentti Bubolta',
+  'Filosofian Maisteripöllöltä',
+  'Kaikkien Tiedekuntien Dekaanilta',
+  'Latinaa Lukevalta Pöllöltä',
+  'Tähtitornin Vahtimestarilta',
+  'Väitöskirjan Vastaväittäjältä',
+  'Alaviitteiden Aatelilta',
+  'Sivistyssanakirjan Sisällysluettelolta',
+  'Luentosalin Takarivin Viisaalta',
+  'Kirjastonhoitajien Kirjastonhoitajalta',
+  'Museon Yövartijalta, Joka Luki Kaikki Kyltit',
+  'Kolmen Tutkinnon Pöllöltä',
+  // — kansantarut ja myytit —
+  'Athenen Olkapään Pöllöltä',
+  'Kalevalan Pöllöltä',
+  'Väinämöisen Kuiskaajalta',
+  'Louhen Neuvonantajalta',
+  'Merlinin Höyhenkirjurilta',
+  'Metsänhaltijan Sanansaattajalta',
+  'Tapion Pöydän Pöllöltä',
+  'Yön Tietäjältä, Joka Kuuli Hiiren Askeleet',
+  'Seitsemän Veljeksen Kuuntelijalta',
+  'Tuonelan Joen Tähystäjältä',
+  'Sammon Vartijalta',
+  'Aleksis Kiven Metsäpöllöltä',
+  // — huolella yliampuvat —
+  'Ainoalta Oikealta ja Alkuperäiseltä Viisaalta Pöllöltä',
+  'Pöllöltä, Jonka Nimeä Ei Sovi Lausua Ääneen',
+  'Kaikkien Kysymysten Ennalta Arvaajalta',
+  'Vastausten Valtiaalta',
+  'Universumin Vanhimmalta Uhuulta',
+  'Pöllöltä, Joka Tiesi Sen Jo Ennen Kuin Kysyit',
+  'Kolmesti Kruunatulta Huuhkajakuninkaalta',
+  'Ikuisuuden Ylikirjastonhoitajalta',
+  'Yön Suurmestarilta ja Aamun Kunniavieraalta',
+  'Pöllöltä, Jolla On Kaksi Tutkintoa Enemmän Kuin Sinulla',
+  'Viisaudesta Vastaavalta Ministeriltä',
+  'Höyhenten Herralta ja Hämärän Hallitsijalta',
+  // — lämpimät ja pienet —
+  'Puunkolon Naapurilta',
+  'Yökahvin Ystävältä',
+  'Hiljaiselta Kuuntelijalta',
+  'Sulkia Pöyhivältä Tietäjältä',
+  'Aina Hereillä Olevalta',
+  'Pöllöltä, Joka Muistaa Kaiken Lukemansa',
 ];
 
 /**
@@ -72,6 +136,12 @@ export const POLLON_ARVONIMET_MAANOSITTAIN = {
     'Oxfordin Rehtoripöllöltä',
     'Alppien Huuhkajalta',
     'Vanhan Mantereen Kirjastonhoitajalta',
+    'Reinin Linnojen Yöpöllöltä',
+    'Venetsian Kirjapainojen Pöllöltä',
+    'Böömin Metsien Huuhkajalta',
+    'Pohjolan Huuhkajalta',
+    'Balkanin Vuoristo-oraakkelilta',
+    'Skotlannin Ylämaan Yöpöllöltä',
   ],
   africa: [
     'Savannin Yövartijalta',
@@ -80,6 +150,10 @@ export const POLLON_ARVONIMET_MAANOSITTAIN = {
     'Karavaanien Oppaalta',
     'Saharan Tähtienlukijalta',
     'Kilimandžaron Lumipöllöltä',
+    'Timbuktun Käsikirjoitusten Vartijalta',
+    'Sansibarin Maustekauppiaiden Neuvonantajalta',
+    'Hyväntoivonniemen Tähystäjältä',
+    'Kongon Sademetsän Kuiskaajalta',
   ],
   asia: [
     'Mandariinipöllöltä',
@@ -89,6 +163,11 @@ export const POLLON_ARVONIMET_MAANOSITTAIN = {
     'Silkkitien Kirjurilta',
     'Riisipeltojen Yövahdilta',
     'Monsuunin Ennustajalta',
+    'Suuren Muurin Yövartijalta',
+    'Maharadžan Hovipöllöltä',
+    'Fuji-vuoren Erakkopöllöltä',
+    'Basaarin Kuulijalta',
+    'Mekongin Yökalastajalta',
   ],
   americas: [
     'Preerian Huhuilijalta',
@@ -97,33 +176,52 @@ export const POLLON_ARVONIMET_MAANOSITTAIN = {
     'Amazonin Yökuiskaajalta',
     'Sähkölennättimen Pöllöltä',
     'Kultakuumeen Kirjanpitäjältä',
+    'Inkojen Tähtiportaiden Vartijalta',
+    'Mississipin Siipirataslaivan Pöllöltä',
+    'Rocky Mountainsin Huuhkajalta',
+    'Patagonian Tuulen Lukijalta',
+    'Karibian Merirosvokarttojen Tuntijalta',
   ],
   oceania: [
     'Eukalyptuksen Viisaalta',
     'Etelän Ristin Tähtitieteilijältä',
     'Korallimeren Majakanvartijalta',
     'Vastarannan Pöllöltä',
+    'Kengurujen Yöpaimenelta',
+    'Tyynenmeren Saarikartan Piirtäjältä',
+    'Maorien Tarinoiden Kuuntelijalta',
   ],
   polar: [
     'Napajään Lumipöllöltä',
     'Revontulten Lukijalta',
     'Ikiroudan Erakolta',
+    'Jäänmurtajan Keulapöllöltä',
+    'Kaamoksen Kuninkaalta',
   ],
   meri: [
     'Seitsemän Meren Luotsipöllöltä',
     'Kompassin Kärjeltä',
     'Mastonhuipun Tähystäjältä',
+    'Laivanlokin Pitäjältä',
+    'Myrskyn Silmän Pöllöltä',
   ],
 };
 
 /**
- * Deterministinen arvonta: sama siemen (esim. noston tunnus) antaa aina
- * saman arvonimen. Maanosan lista puolet ajasta, jos se tunnetaan.
+ * Arvonta: OMISTAJA 19.9.2026 klo 21.52 ("Parempi mitä enemmän
+ * vaihtoehtoja niin tulee aina eri vaihtoehto") — joka avauksella uusi
+ * satunnainen arvonimi, ei siemenestä. Maanosan lista noin joka
+ * kolmannella kerralla, jos maanosa tunnetaan. Sama nimi ei toistu
+ * heti peräkkäin (edellinen muistetaan).
  */
-export function pollonArvonimi(siemen = '', maanosa = null) {
-  let h = 2166136261;
-  for (const c of String(siemen)) h = Math.imul(h ^ c.charCodeAt(0), 16777619) >>> 0;
+let edellinenArvonimi = null;
+export function pollonArvonimi(maanosa = null) {
   const oma = POLLON_ARVONIMET_MAANOSITTAIN[maanosa] ?? null;
-  const lista = (oma && oma.length && (h & 1)) ? oma : POLLON_ARVONIMET_YLEISET;
-  return lista[(h >>> 1) % lista.length];
+  const lista = (oma && oma.length && Math.random() < 0.34) ? oma : POLLON_ARVONIMET_YLEISET;
+  let nimi = lista[Math.floor(Math.random() * lista.length)];
+  if (nimi === edellinenArvonimi && lista.length > 1) {
+    nimi = lista[(lista.indexOf(nimi) + 1) % lista.length];
+  }
+  edellinenArvonimi = nimi;
+  return nimi;
 }
