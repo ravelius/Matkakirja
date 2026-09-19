@@ -133,6 +133,7 @@ import { HAHMOTELMA_PRT } from './packs/hahmotelma-prt.js';
 import { HAHMOTELMA_GRC } from './packs/hahmotelma-grc.js';
 import { HAHMOTELMA_AUT } from './packs/hahmotelma-aut.js';
 import { HAHMOTELMA_NLD } from './packs/hahmotelma-nld.js';
+import { HAHMOTELMA_IRL } from './packs/hahmotelma-irl.js';
 import { HAHMOTELMA_POL } from './packs/hahmotelma-pol.js';
 import { HAHMOTELMA_CZE } from './packs/hahmotelma-cze.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
@@ -385,6 +386,14 @@ KOHDE_MAAT.AUT = [...(KOHDE_MAAT.AUT ?? []), ...HAHMOTELMA_AUT];
  * lähin yli 8 lautayksikön päässä.
  */
 KOHDE_MAAT.NLD = [...(KOHDE_MAAT.NLD ?? []), ...HAHMOTELMA_NLD];
+
+/*
+ * IRLANNIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti kaupungin (Dublin) ulkopuolella,
+ * lähin yli 5 lautayksikön päässä.
+ */
+KOHDE_MAAT.IRL = [...(KOHDE_MAAT.IRL ?? []), ...HAHMOTELMA_IRL];
 
 /*
  * PUOLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
