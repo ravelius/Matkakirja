@@ -1474,6 +1474,69 @@ export const EUROPE_VALOKUVAT = {
       + 'kuvassa hän on ilman.',
   },
 
+  /*
+   * LJUBLJANA (20.9.2026, Sonnet-sisältösessio). Kaksi Commons-kuvaa
+   * Ljubljanica-joesta ja Linnavuoresta; lisenssit ja tekijät luettu
+   * Commonsin imageinfo/extmetadata-rajapinnasta 20.9.2026 (CC BY 4.0
+   * ja CC BY-SA 4.0, ei tunnistettavia yksityishenkilöitä lähikuvassa).
+   * Sama linja kuin muulla Euroopalla Ateenasta lähtien: kuvat haetaan
+   * suoraan Commonsista, ei paikallista kopiota (ks. tiedoston
+   * alkukommentti).
+   */
+  /*
+   * KOŠICE (20.9.2026, Sonnet-sisältösessio). Kaksi Commons-kuvaa
+   * (tuomiokirkon sisätila ja Immaculata-patsaan enkeli); lisenssit ja
+   * tekijät luettu Commonsin imageinfo/extmetadata-rajapinnasta
+   * 20.9.2026 (CC BY-SA 3.0 ja CC BY-SA 4.0, ei tunnistettavia
+   * yksityishenkilöitä lähikuvassa: patsaskuvassa taustalla kaukaisia
+   * ohikulkijoita). Sama linja kuin muulla Euroopalla Ateenasta
+   * lähtien: kuvat haetaan suoraan Commonsista, ei paikallista kopiota
+   * (ks. tiedoston alkukommentti). Slovakian karttanosto
+   * (hahmotelma-svk Košice) käyttää tuomiokirkon ulkokuvaa ja
+   * Hlavná-katua, joten nämä kuvat ovat eri.
+   */
+  kosice: {
+    lisat: [
+      {
+        tiedosto: 'Košice - Hlavná (Main Street) - Statue of an angel at the Immaculata Marian Column, the memorial column for plague victims (July 2009).jpg',
+        vuosi: '2009',
+        lahde: 'ZemplinTemplar, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Enkeli Immaculata-patsaan juurella Hlavná-kadulla.',
+        selite: 'Kiviveistos Immaculata-patsaan juurella. Patsas pystytettiin '
+          + 'vuonna 1723 Hlavná-kadun entisen mestauspaikan kohdalle '
+          + 'vuosien 1710–1711 ruton muistoksi.',
+      },
+    ],
+    tiedosto: 'Kosice - St. Elisabeth Cathedral inside.JPG',
+    vuosi: '2004',
+    lahde: 'Maros M r a z, Commons (CC BY-SA 3.0)',
+    lyhyt: 'Pyhän Elisabetin tuomiokirkon sisätila Košicessa.',
+    selite: 'Goottilaisen tuomiokirkon holvit, lasimaalausikkunat ja '
+      + 'kultainen pääalttari. Kirkon rakentaminen alkoi 1300-luvun lopulla, '
+      + 'ja se oli aikanaan Unkarin kuningaskunnan suurin.',
+  },
+
+  ljubljana: {
+    lisat: [
+      {
+        tiedosto: 'Castle hill in Ljubljana, Slovenia.jpg',
+        vuosi: '2023',
+        lahde: 'Viktar Palstsiuk, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Linnavuori kohoaa Ljubljanica-joen varren talojen yläpuolella.',
+        selite: 'Linnavuoren metsä ja linnan torni Ljubljanica-joen '
+          + 'yllä. Linna toimi 1800-luvulla läänin vankilana, ja '
+          + 'lohikäärme koristaa yhä sen tornia.',
+      },
+    ],
+    tiedosto: 'Franciscan Church of the Annunciation and Ljubljanica River in Ljubljana, 20240502 1809 7777.jpg',
+    vuosi: '2024',
+    lahde: 'Jakub Hałun, Commons (CC BY 4.0)',
+    lyhyt: 'Ljubljanica-joki ja punainen fransiskaanikirkko Ljubljanan keskustassa.',
+    selite: 'Ljubljanica-joen rantamuuri ja Ilmestyksen fransiskaanikirkko '
+      + 'Prešerenin aukiolla. Kirkko rakennettiin vuosina 1646–1660, joten '
+      + 'se seisoi jo isoisän matkan aikaan.',
+  },
+
   berliini: {
 
     lisat: [

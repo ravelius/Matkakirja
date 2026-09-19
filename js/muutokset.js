@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1970, teksti: 'v1970: Ljubljana ja Kosice; tekstivalinta pois; saapumisblur' },
   { v: 1969, teksti: 'Latvia, Liettua; hyppy takaisin; astro-pulu; kartuscha' },
   { v: 1968, teksti: 'Bryssel pelikaupungiksi; Malta kartalle; Kypros; nostotaso' },
   { v: 1967, teksti: 'Viro; visojen kieli; lehtinimiöt; kortin tyyppinimike' },

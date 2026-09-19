@@ -1583,6 +1583,131 @@ export const EUROPE_ARTIKKELIT = {
   },
 
   /*
+   * LJUBLJANA (20.9.2026, omistajan päätös 19.9.2026: Slovenia saa
+   * pelikaupungin Ljubljana). Teksti on kirjoitettu omin sanoin
+   * en-Wikipedian artikkeleista "Ljubljana" ja "Ljubljana Castle"
+   * (luettu 20.9.2026), 1873-näkökulmasta: Krainin herttuakunnan
+   * pääkaupunki (saksaksi Laibach) Itävallan keisarikunnassa, rautatie
+   * Wienistä 1849 ja Triesteen 1857, linna läänin vankilana, Tivoli-
+   * puisto ja Napoleonin Illyria 1809–1813, lohikäärme kaupungin
+   * tunnuksena sekä slovenien ja saksalaisten kilpailu 1800-luvulla.
+   * Vuoden 1895 maanjäristystä, Lohikäärmesiltaa (1901) ja Plečnikin
+   * töitä (1920–30-luvut) EI mainita nykyhetken asioina — ne tulevat
+   * vasta isoisän matkan jälkeen.
+   */
+  /*
+   * KOŠICE (20.9.2026, omistajan päätös 19.9.2026: Slovakia saa
+   * pelikaupungin Košice). Teksti on kirjoitettu omin sanoin
+   * en-Wikipedian artikkelista "Košice" (luettu 20.9.2026),
+   * 1873-näkökulmasta: unkarilainen Kassa Unkarin kuningaskunnassa
+   * (Itävalta-Unkari), Pyhän Elisabetin tuomiokirkko, Pentapolitana,
+   * jesuiittojen yliopisto 1657, hiippakunta 1802, muurit purettu
+   * 1856 mennessä, sähkösanoma 1856, rautatie Miskolciin 1860 ja
+   * Ylä-Unkarin museo 1872. Slovakian itsenäisyyttä, Tšekkoslovakian
+   * aikaa ja sodan aikaisia tapahtumia EI käsitellä — ne tulevat
+   * vasta isoisän matkan jälkeen. Väestötiedot ovat vuodelta 1891
+   * (28 884), ei 1873.
+   */
+  Košice: {
+    intro: 'Košice, unkariksi **Kassa** ja saksaksi Kaschau, on Ylä-Unkarin '
+      + 'suurin kaupunki Hornád-joen varrella. Se kuuluu Unkarin '
+      + 'kuningaskuntaan ja on siellä vapaa kuninkaallinen kaupunki. Vielä vuonna 1891 asukkaita on '
+      + 'vasta noin 29 000, mutta kaupungin asema on ollut suuri jo '
+      + 'keskiajalta.'
+      + '\n\n'
+      + 'Kaupungin sydän on pitkä, linssinmuotoinen **Hlavná-katu**, jonka '
+      + 'varrella kohoaa **Pyhän Elisabetin tuomiokirkko**. Se on '
+      + 'rakennettu 1300-luvun lopulta alkaen ja oli aikanaan Unkarin '
+      + 'kuningaskunnan suurin kirkko.'
+      + '\n\n'
+      + 'Höyryjuna on tuonut kaupungin lähemmäs maailmaa: rautatie '
+      + 'Miskolciin valmistui vuonna 1860, ja vuonna 1873 kaupungista on '
+      + 'jo yhteys Prešoviin, Žilinaan ja Chopiin. Vanhat kaupunginmuurit '
+      + 'on purettu vaiheittain 1800-luvun alusta vuoteen 1856.',
+    teksti: 'Košicen ensimmäinen tunnettu kirjallinen maininta on '
+      + 'vuodelta 1230, jolloin se oli kuninkaallinen kylä nimeltä Villa '
+      + 'Cassa. Mongolien hyökkäyksen jälkeen 1241 kuningas Béla IV kutsui '
+      + 'kaupunkiin saksalaisia uudisasukkaita, ja Ala- ja Ylä-Kassa '
+      + 'yhdistyivät 1200-luvulla pitkän Hlavná-kadun ympärille. '
+      + 'Kaupunki sai ensimmäiset tunnetut kaupunkioikeutensa 1290, ja '
+      + 'se oli strateginen risteys kauppatiellä.'
+      + '\n\n1300-luvun lopulla kaupunki oli niin rikas, että '
+      + 'sinne päätettiin rakentaa aivan uusi kirkko: Pyhän Elisabetin '
+      + 'tuomiokirkko, Unkarin kuningaskunnan suurin. Keisari Sigismund '
+      + 'ja paavin istuin tukivat hanketta. 1400-luvun alusta Košice oli '
+      + 'Pentapolitanan, Ylä-Unkarin viiden tärkeimmän kaupungin '
+      + '(Bardejov, Levoča, Košice, Prešov ja Sabinov) liiton, '
+      + 'johtavia jäseniä, ja kuningas Matthias Corvinuksen aikana noin '
+      + '10 000 asukkaan kaupunki oli yksi Euroopan suurimmista.'
+      + '\n\nMyöhemmin kaupunki kärsi Unkarin valtataisteluista ja '
+      + 'Ottomaanien valtakunnan läsnäolosta. Vuonna 1657 jesuiitat '
+      + 'perustivat kaupunkiin kirjapainon ja yliopiston, josta tuli '
+      + 'vuonna 1777 kuninkaallinen akatemia ja myöhemmin oikeusakatemia. '
+      + 'Vuonna 1723 Hlavná-kadulle pystytettiin Immaculata-patsas '
+      + '1710–1711 ruton muistoksi. Kaupunki sai oman hiippakunnan '
+      + 'vuonna 1802, ja vuosien 1848–1849 sota kulki myös sen '
+      + 'ympäristössä.'
+      + '\n\nKaupunki nykyaikaistuu: ensimmäiset tehtaat perustettiin '
+      + '1840-luvulla (sokeri- ja naulatehtaat), sähkösanoma saapui 1856 '
+      + 'ja rautatie Miskolciin 1860. Vuonna 1872 perustettiin Ylä-'
+      + 'Unkarin museo, josta tuli myöhemmin Itä-Slovakian museo. '
+      + 'Muurit puretaan, ja vain Pyövelin bastioni säilyy niiden '
+      + 'jäänteenä.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
+  Ljubljana: {
+    intro: 'Ljubljana on Krainin herttuakunnan pääkaupunki '
+      + 'Ljubljanica-joen varrella, ja saksaksi sitä kutsutaan '
+      + '**Laibachiksi**. Kaupunki kuuluu Itävallan keisarikuntaan, ja se '
+      + 'on pieni: vielä vuonna 1895 asukkaita on vasta noin 31 000. '
+      + 'Slovenit ja saksalaiset asuvat samoilla kaduilla.'
+      + '\n\n'
+      + 'Kaupungin yllä kohoaa **Ljubljanan linna** Linnavuoren '
+      + 'huipulla. Keskiaikainen linnoitus on menettänyt merkityksensä ja '
+      + 'rapistuu, ja sitä käytetään läänin vankilana. Kaupungin tunnus '
+      + 'on **lohikäärme**, joka koristaa linnan tornia ja vaakunaa; se '
+      + 'periytyy Pyhän Yrjön legendasta.'
+      + '\n\n'
+      + 'Wienistä tulee nyt höyryjuna: rautatie ulotettiin Ljubljanaan '
+      + 'vuonna 1849 ja Triesteen 1857, ja se on tehnyt kaupungista '
+      + 'kulkureitin Itävallan sisämaan ja Adrianmeren välillä. Slovenit '
+      + 'ja saksalaiset kilpailevat keskenään yhdistyksissä ja '
+      + 'urheiluseuroissa.',
+    teksti: 'Ljubljanan seudulla seisoi antiikin aikana roomalainen '
+      + 'Emona, ja keskiaikaisen kaupungin asutus syntyi '
+      + 'Ljubljanica-joen ja linnavuoren ympärille 1100-luvun toisella '
+      + 'puoliskolla. Vuonna 1278 Ljubljana siirtyi osana Krainia '
+      + 'Habsburgien haltuun, ja se pysyi heidän alaisenaan vuoteen 1918, '
+      + 'Napoleonin ajan lyhyttä väliaikaa lukuun ottamatta. Kaupungin '
+      + 'saksankielinen nimi Laibach on ollut käytössä jo keskiajalta '
+      + 'asti.'
+      + '\n\nVuosina 1809–1813 seutu kuului Napoleonin Illyrian '
+      + 'maakuntiin, ja Ljubljana (Laybach) oli niiden pääkaupunki. '
+      + 'Ranskalaiset jättivät jälkeensä Tivoli-puiston, jonka '
+      + 'ranskalainen insinööri Jean Blanchard suunnitteli vuonna 1813. '
+      + 'Napoleonin tappion jälkeen kaupunki palasi Itävallalle ja oli '
+      + 'vuosina 1815–1849 Illyrian kuningaskunnan hallinnollinen '
+      + 'keskus. Vuonna 1821 siellä kokoontui Laibachin kongressi, joka '
+      + 'vahvisti Euroopan poliittiset rajat vuosikymmeniksi.'
+      + '\n\nLinnavuoren linna on vaihtanut tehtäväänsä: 1600- ja '
+      + '1700-luvulla se oli asevarasto, ranskalaisaikana kasarmi ja '
+      + 'sotilassairaala, ja vuodesta 1813 se on toiminut läänin '
+      + 'vankilana. Vankilan vanhimpaan osaan vangit laskettiin '
+      + 'kuiluun köydellä tai ketjulla. Linna ei ole enää '
+      + 'hallitsijan asuinpaikka eikä puolustuslinnoitus, joten sen '
+      + 'ylläpito on käynyt liian kalliiksi ja muureja rapistuu.'
+      + '\n\nRautatie on muuttanut kaupunkia: ensimmäinen juna saapui '
+      + 'Wienistä vuonna 1849, ja rata jatkui Triesteen 1857. '
+      + 'Slovenien ja saksalaisten kilpailu näkyy jopa urheiluseuroissa: '
+      + 'ensimmäinen kaupungin urheiluseura, Južni Sokol, perustettiin '
+      + 'vuonna 1863. Ljubljanan 1500-luvun puhekieli oli pohjana '
+      + 'slovenian kirjakielelle, jonka perustan laski uskonpuhdistaja '
+      + 'Primož Trubar.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
+  /*
    * TEKSTIREMONTTI 20.8.2026, erä E1: intro on nyt etusivun leipäteksti
    * kappaleineen ja lihavointeineen (ks. Rooman lohkokommentti yllä).
    * Muuri ja kaupungin jako kerrotaan neutraalina historiana ilman

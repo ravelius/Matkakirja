@@ -378,6 +378,56 @@ export const PAIKALLISAARTEET = {
         + 'Antwerpenin kauppiaiden kautta.',
     },
   },
+  /*
+   * SLOVENIA (20.9.2026, omistajan päätös 19.9.2026: Slovenian
+   * pelikaupunki Ljubljana). Faktat ovat Slovenian karttanostojen
+   * (js/packs/hahmotelma-svn.js Lipica, Idrija) en-Wikipedia-pohjaisia
+   * tekstejä. Ei kuvaa vielä (KUVAA_ODOTTAVAT-lista,
+   * tests/paikallisaarteet.test.mjs) — samat kuvat generoidaan
+   * myöhemmin kuin muillekin maille.
+   */
+  /*
+   * SLOVAKIA (20.9.2026, omistajan päätös 19.9.2026: Slovakian
+   * pelikaupunki Košice). Faktat ovat Slovakian karttanostojen
+   * (js/packs/hahmotelma-svk.js Kremnica, Banská Štiavnica)
+   * en-Wikipedia-pohjaisia tekstejä. Ei kuvaa vielä
+   * (KUVAA_ODOTTAVAT-lista, tests/paikallisaarteet.test.mjs).
+   */
+  SVK: {
+    pieniAarre: {
+      name: 'Kremnican kultadukaatti',
+      fakta: 'Kremnican rahapaja on maailman vanhin yhä toimiva: '
+        + 'kaupunki sai kuninkaalliset oikeutensa 1328, ja vuodesta 1335 '
+        + 'siellä lyötiin kultaflorineja ja myöhemmin kuuluisia '
+        + 'dukaatteja. Niiden tasainen kultapuhtaus teki niistä '
+        + 'kansainvälisen maksuvälineen.',
+    },
+    isoAarre: {
+      name: 'Banská Štiavnican hopeakaivoksen kätkö',
+      fakta: 'Banská Štiavnica kasvoi keskiajalla runsaiden '
+        + 'hopeamalmivarojen ansiosta. Siellä käytettiin 1627 ruutia '
+        + 'kaivoksessa yhtenä ensimmäisistä maailmassa, ja vuonna 1735 '
+        + 'perustettu kaivoskoulu kasvoi kaivosakatemiaksi, jota '
+        + 'kutsutaan maailman ensimmäiseksi teknilliseksi yliopistoksi.',
+    },
+  },
+  SVN: {
+    pieniAarre: {
+      name: 'Lipicanhevosen kavioraudan jäljennös',
+      fakta: 'Lipican ratsutila Karstin alueella on perustettu vuonna '
+        + '1580, ja sen ensimmäiset hevoset ostettiin Espanjasta, koska '
+        + 'Karstin maaperä ja ilmasto muistuttavat Espanjan oloja. '
+        + 'Lipizzanerhevonen on saanut nimensä tilan mukaan.',
+    },
+    isoAarre: {
+      name: 'Idrijan elohopeakaivoksen kätkö',
+      fakta: 'Idrijan kaivoksessa elohopeaa esiintyy sekä puhtaana että '
+        + 'sinooperina, ja legendan mukaan saavinvalmistaja huomasi '
+        + 'lähteessä nestemäistä elohopeaa jo vuonna 1490. Kaivos '
+        + 'kuuluu Espanjan Almadénin kanssa UNESCOn maailmanperintöön '
+        + 'vuodesta 2012.',
+    },
+  },
   GBR: {
     pieniAarre: {
       name: 'Purkki marmeladia',

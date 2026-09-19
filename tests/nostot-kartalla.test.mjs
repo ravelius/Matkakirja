@@ -162,8 +162,16 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
   // (docs/raportit/viesti-fable-kaupunkiresepti-20260919.md, luku 4
   // kohta 11, vaihtoehto 3). Katto nousee vain tämän yhden noston
   // verran; muiden kaupunkien luku ei saa yhä kasvaa.
+  // 49 → 50 (20.9.2026): Ljubljana liittyi pelikaupungiksi (omistajan
+  // päätös 19.9.2026, Slovenian pelikaupunki), ja Ljubljanan suon
+  // museonosto (hahmotelma-ljubljansko-barje, 3,4 yksikköä
+  // Ljubljanasta) osuu nyt kaupungin kohdalle syyllä "kohdekarttaa ei
+  // ole" — Ljubljanalla ei vielä ole kaupunkikarttaa (sama ratkaisu kuin
+  // Brysselin Tervurenilla, kaupunkiresepti luku 4 kohta 11, vaihtoehto
+  // 3). Katto nousee vain tämän yhden noston verran; kun Ljubljana saa
+  // kohdekartan, nosto siirtyy sinne ja katto voi laskea takaisin.
   const muutKuinHetket = kesken.filter((r) => r.kaupunginKohdalla !== 'hetki');
-  assert.ok(muutKuinHetket.length <= 49,
+  assert.ok(muutKuinHetket.length <= 50,
     `muita kuin hetkiä on kaupungin kohdalla ${muutKuinHetket.length} — luku saa vain laskea`);
 });
 

@@ -41,7 +41,7 @@ import { packById } from '../js/pack.js';
  * Bryssel (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti)
  * liittyi seitsemänneksi samaan nimettyyn joukkoon.
  */
-const KEVYET = ['alpit', 'islanti', 'kreeta', 'lappi', 'sisilia', 'tromssa', 'bryssel'];
+const KEVYET = ['alpit', 'islanti', 'kreeta', 'lappi', 'sisilia', 'tromssa', 'bryssel', 'ljubljana', 'kosice'];
 /** Täyden pakin verrokki: Pariisilla on kohtaamispiste ja aarretehtävä. */
 const TAYSI = 'pariisi';
 

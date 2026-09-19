@@ -1716,3 +1716,17 @@ test('linssin avaus ilmoittaa itsestään, jos lautaa ei ole', () => {
   assert.match(ui, /clearTimeout\(this\.linssinAvausVahti\);/);
   assert.match(ui, /Maapalloa ei saatu ladattua/);
 });
+
+/* ══ 52e. ISS-merkki vain pallon kiekon sisällä (kierros 14, 19.9.2026) ══ */
+test('ISS-merkki näkyy vain pallon kiekon sisällä, rata saa jatkua reunan yli', async () => {
+  const { issKiekonSisalla } = await import('../js/linssit/satelliitti-avaruus.js');
+  const keskus = { x: 195, y: 414 };
+  assert.equal(issKiekonSisalla({ x: 195, y: 414 }, keskus, 200), true, 'keskellä');
+  assert.equal(issKiekonSisalla({ x: 195 + 197, y: 414 }, keskus, 200), true, 'reunan sisällä');
+  // Laitekuva b-11: merkki kiekon alareunan alapuolella.
+  assert.equal(issKiekonSisalla({ x: 195, y: 414 + 215 }, keskus, 200), false, 'reunan ulkopuolella');
+  assert.equal(issKiekonSisalla({ x: 195 + 199, y: 414 }, keskus, 200), false, 'vara 2 px');
+  assert.equal(issKiekonSisalla(null, keskus, 200), false);
+  assert.equal(issKiekonSisalla({ x: NaN, y: 1 }, keskus, 200), false);
+  assert.equal(issKiekonSisalla({ x: 1, y: 1 }, keskus, 0), false);
+});
