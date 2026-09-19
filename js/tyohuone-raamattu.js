@@ -9247,6 +9247,12 @@ export const RAAMATTU = {
           + 'countryShapes.MLT (NE 1:50M, Malta+Gozo), maapolygonit 135/135, '
           + 'FOKUS_POHJAT.MLT saaristorajauksella, lippu, genetiivi; osuuLehteen(MLT) true '
           + '11 kohteelle; ampariin ei vietavaa (laattapyramidi kattaa jo Maltan). v1968.',
+        'ISOISAN MATKAKIRJAN KAUPUNKITEKSTI ENINTAAN 450 MERKKIA (omistaja 19.9.2026 klo '
+          + '22.46 Suomen aikaa, Brysselin tekstista, sanatarkasti: "Brysseli oli hyva mutta '
+          + 'liian pitka. Max 450 merkkia."): uuden pelikaupungin saapumisteksti (isoisan '
+          + 'matkakirja, fokusvirta-<kaupunki>.js teksti) on enintaan 450 merkkia; Bryssel '
+          + 'lyhennetty 424 merkkiin (oikeuspalatsi-virke pois). Koskee Ljubljanaa ja '
+          + 'Kosicea; vanhoja tekstejä ei lyhenneta ilman erillista paatosta.',
         'MAAT ILMAN PELIKAUPUNKIA SAAVAT PELIKAUPUNGIN (omistaja 19.9.2026 klo 20.50 Suomen '
           + 'aikaa, kortti; Sonnet 1:n loydos kierros 12: Belgian napautus avaa Lillen tai ei '
           + 'mitaan, joten BEL-nostoihin ei paase): vaihtoehdoista (maan napautus avaa '
