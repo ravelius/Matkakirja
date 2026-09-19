@@ -383,9 +383,57 @@ for (const ruutu of RUUDUT) {
        *     pisteeseen napsautti karttaa merkin vierestä. Piste
        *     luetaan siksi uudestaan ennen jokaista yritysta.
        */
+      /*
+       * SAAPUMISTRAILERI ENSIN POIS RUUDULTA (ks. alla oleva mittaus):
+       * savuke mittaa kaupunkimerkkiä, ei traileria, joten napautus
+       * tehdään vasta kun traileri on päättynyt itse. Odotettu aika
+       * kirjataan.
+       */
+      const traileriAlku = Date.now();
+      const traileriPois = await sivu.waitForFunction(
+        () => !document.querySelector('.saapumistraileri'), null, { timeout: 20000, polling: 100 },
+      ).then(() => true).catch(() => false);
+      tieto(`${tunnus}: saapumistrailerin odotus`,
+        `${Date.now() - traileriAlku} ms, ${traileriPois ? 'poissa' : 'yhä ruudulla'}`);
       for (let yritys = 0; yritys < 2; yritys += 1) {
         /* eslint-disable no-await-in-loop */
-        await sivu.mouse.click(kaupunkiAlussa.x, kaupunkiAlussa.y);
+        /*
+         * OSOITIN LIIKKUU KANKAAN YLLÄ ENNEN NAPAUTUSTA (mitattu 19.9.2026,
+         * erä opus-local-kaupunkipopup, CI 35445339970: Pariisi @ 1400
+         * punainen kolmesti). Ensimmäinen napautus osui usein
+         * SAAPUMISTRAILERIIN (elementFromPoint div.saapumistraileri-kuvat),
+         * joka vain ohitti trailerin. Toinen napautus samaan pikseliin ei
+         * tuottanut kankaalle uutta pointermovea, ja globe.gl etsi
+         * osumansa VANHENTUNEESTA osoitinpaikasta: lauta.viimeinenNapautus
+         * oli 51,379 N / −14,414 E sekä Pariisin että Marseillen
+         * napautuksella, eikä kaupunki auennut. Suora napautaKaupunki(id)
+         * avasi liuskan heti, joten peli oli kunnossa. Oikea sormi ja
+         * hiiri antavat aina sijaintinsa; savukkeen hiiri ei, jos se ei
+         * liiku. Piste luetaan myös tuoreena (kamera voi siirtää merkkiä).
+         * SAVUKE_VANHA_PISTE=1 on vastakoe: alkuperäinen piste ilman
+         * liikettä (punainen). Ks. docs/raportit/viesti-fable-kaupunkipopup-20260919.md.
+         */
+        const tuore = await kaupunkiPiste();
+        const piste = process.env.SAVUKE_VANHA_PISTE === '1' || !tuore ? kaupunkiAlussa : tuore;
+        const tila = () => sivu.evaluate(({ x, y }) => {
+          const e = document.elementFromPoint(x, y);
+          const { ui, game } = window.matkakirja;
+          return {
+            alla: e ? `${e.tagName.toLowerCase()}.${String(e.className?.baseVal ?? e.className ?? '').split(' ')[0]}` : 'tyhjä',
+            busy: Boolean(ui.busy),
+            traileri: Boolean(document.querySelector('.saapumistraileri')),
+            vaihe: game.phase,
+            radio: Boolean(ui.radioPaalla?.()),
+          };
+        }, piste);
+        const ennen = await tila();
+        const alla = JSON.stringify(ennen);
+        const alku = Date.now();
+        if (process.env.SAVUKE_VANHA_PISTE !== '1') {
+          await sivu.mouse.move(piste.x + 24, piste.y + 24);
+          await sivu.mouse.move(piste.x, piste.y, { steps: 3 });
+        }
+        await sivu.mouse.click(piste.x, piste.y);
         let auki = null;
         // 60 x 50 ms = 3 s: kamera-ajo (1400 ms) + ladonta + avaus.
         for (let i = 0; i < 60; i += 1) {
@@ -395,6 +443,9 @@ for (const ruutu of RUUDUT) {
           if (auki) break;
           await sivu.waitForTimeout(50);
         }
+        tieto(`${tunnus}: kaupunkimerkin napautus ${yritys + 1}`,
+          `piste ${Math.round(piste.x)},${Math.round(piste.y)} (tuore ${tuore ? `${Math.round(tuore.x)},${Math.round(tuore.y)}` : '-'}), `
+          + `alla ${alla}, liuska ${auki ?? '-'} ${Date.now() - alku} ms`);
         /* eslint-enable no-await-in-loop */
         if (auki) break;
       }
