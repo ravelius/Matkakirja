@@ -1,4 +1,4 @@
-/* Kortin ja linnun omat tilat; ei nosteta lintua tekstin päälle. */
+/* Kortin ja linnun omat tilat; ei nosteta lintua tekstin päälle. Yläreunan vara väistää myös tilapalkin (safe-area, 19.9.2026). */
 import { livianNostonTiedot } from './livia-tilanteet.js';
 export function livianNostoAsettelu({width,height,top=0,left=0,headerBottom=0,birdBottom,birdLeft}){
  const y=Math.max(top+12,headerBottom+12),side=height<480;
@@ -11,7 +11,7 @@ export function asennaLivianNostoTila(pollo,pinta,reagoi,muuttui){
  const style=doc.createElement('style');
  style.textContent=`
  @media(max-width:560px){.pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla.livia-kasvot-valmis:not(.livia-chat-nappi){bottom:calc(3.8rem + env(safe-area-inset-bottom,0px));}}
- .livia-kortille.livia-kortille{box-sizing:border-box;padding:var(--lv-top) var(--lv-right) var(--lv-bottom) var(--lv-left);align-items:flex-end;}
+ .livia-kortille.livia-kortille{box-sizing:border-box;padding:max(var(--lv-top),calc(env(safe-area-inset-top,0px) + 12px)) var(--lv-right) var(--lv-bottom) var(--lv-left);align-items:flex-end;}
  .livia-kortille.livia-kortille>div[role="dialog"]{box-sizing:border-box;max-height:var(--lv-height);min-height:0;overflow-y:auto;}
  .livia-lentonayttamo.livia-nosto-nakyva{z-index:47;}
  `;

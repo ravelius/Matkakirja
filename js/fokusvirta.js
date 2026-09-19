@@ -180,7 +180,7 @@ import {
 } from './pulucam.js';
 import { sfx } from './sound.js';
 import { lisaaLukijanappi } from './lukija.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 /*
  * HAVAINNEKUVA-LINKKI PITKÄN KUVATEKSTIN PERÄÄN (omistaja 9.9.2026 klo
  * 18.50). Lähderivin oma maininta säilyy ennallaan; tämä on sen rinnalle
@@ -1785,7 +1785,7 @@ function piirraKuva(ui, kohde, kuva, luokka = 'fokusvirta-viite') {
   nappi.addEventListener('click', () => avaaSuurennos(ui, [kuva], 0, () => nappi));
   kuvateksti.append(
     html('span', 'fokusvirta-kuvaselite', kuvatekstiLyhyt(kuva)),
-    taytaLahderivi(html('span', 'fokusvirta-kuvalahde'), kuva.lahde ?? '', kuva),
+    kortinKuvalahde(html('span', 'fokusvirta-kuvalahde'), kuva.lahde ?? '', kuva),
   );
   viite.append(nappi, kuvateksti);
   kohde.appendChild(viite);

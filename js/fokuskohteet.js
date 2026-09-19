@@ -135,6 +135,8 @@ import { HAHMOTELMA_AUT } from './packs/hahmotelma-aut.js';
 import { HAHMOTELMA_NLD } from './packs/hahmotelma-nld.js';
 import { HAHMOTELMA_POL } from './packs/hahmotelma-pol.js';
 import { HAHMOTELMA_CZE } from './packs/hahmotelma-cze.js';
+import { HAHMOTELMA_DNK } from './packs/hahmotelma-dnk.js';
+import { HAHMOTELMA_HUN } from './packs/hahmotelma-hun.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
@@ -176,7 +178,7 @@ import {
 import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 import { asetaAkustiikka } from './tehosteketju.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 
 /*
  * Maakohtaiset kohdelistat ISO-tunnuksella. Sama tunnus kuin
@@ -401,6 +403,22 @@ KOHDE_MAAT.POL = [...(KOHDE_MAAT.POL ?? []), ...HAHMOTELMA_POL];
  * Tšekin 24 nykyistä nostoa.
  */
 KOHDE_MAAT.CZE = [...(KOHDE_MAAT.CZE ?? []), ...HAHMOTELMA_CZE];
+
+/*
+ * TANSKAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin Alankomaiden hahmotelmalla; rivit ovat aidosti kaupungin
+ * (Kööpenhamina) ulkopuolella, lähin (Lejre) yli 8 lautayksikön päässä.
+ */
+KOHDE_MAAT.DNK = [...(KOHDE_MAAT.DNK ?? []), ...HAHMOTELMA_DNK];
+
+/*
+ * UNKARIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti Budapestin ulkopuolella eivätkä
+ * toista Unkarin 23 nykyistä nostoa.
+ */
+KOHDE_MAAT.HUN = [...(KOHDE_MAAT.HUN ?? []), ...HAHMOTELMA_HUN];
 
 /*
  * ESPANJAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
@@ -4983,7 +5001,7 @@ function piirraKohdeKuva(ui, sisalto, kuva) {
     const teksti = html('figcaption', 'fokuskohde-kuvateksti', kortinTeksti);
     // CC BY vaatii tekijän maininnan: lähde on aina kuvan vieressä.
     if (kuva.lahde) {
-      teksti.appendChild(taytaLahderivi(html('span', 'fokuskohde-kuvalahde'), kuva.lahde, kuva));
+      teksti.appendChild(kortinKuvalahde(html('span', 'fokuskohde-kuvalahde'), kuva.lahde, kuva));
     }
     kehys.appendChild(teksti);
   }

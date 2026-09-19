@@ -267,6 +267,9 @@ export const MAASTOKOHTEET_DNK = [
   {
     id: 'trelleborg-slagelse',
     nimi: 'Trelleborg',
+    // Täkynosto nosto-trelleborg on samassa paikassa samalla nimellä: kortti
+    // säilyy, mutta karttanimiö näytetään vain sillä (nimiölimitys, 20.9.2026).
+    nimio: '',
     tyyppi: 'historia',
     kysymykset: [
       'Miksi linnoitus on täsmälleen ympyrä?',

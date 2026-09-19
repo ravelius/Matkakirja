@@ -55,7 +55,7 @@
  * NOSTOKUVA_/nostokuva-etuliitteellä.
  */
 import { html, suurennoksenMitat } from './ui-apurit.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
 
 /** Oman tyylitiedoston tunnus (sama kaava kuin muilla kelluvilla pinnoilla). */
@@ -302,7 +302,7 @@ export function nostokuvaAloita({
      * ja vaiheessa 2 se on näkyvissä. Jos elementin poistaa, ne
      * kaatuvat — mitattu 12.9.2026, kaksitoista testiä.
      */
-    taytaLahderivi(html('span', 'nostokuva-lahde'), kuva.lahde ?? '', kuva),
+    kortinKuvalahde(html('span', 'nostokuva-lahde'), kuva.lahde ?? '', kuva),
   );
   kehys.appendChild(selite);
 

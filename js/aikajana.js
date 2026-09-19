@@ -199,7 +199,7 @@ import { avaaTiedeliite, suljeTiedeliite } from './tiedeliite.js';
 import { sytytaLyhdyt } from './lyhty.js';
 import { repaleinenPaperi, siemenNimesta } from './pergamentti.js';
 import { rajausTyyli } from './isoisan-valokuvat.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import {
   aloitaSiirtymamusiikki, himmennaSiirtymamusiikki, lopetaSiirtymamusiikki,
@@ -4356,7 +4356,7 @@ class Aikajana {
     if (kortinTeksti) selite.appendChild(solmu('span', 'aikajana-avaus-kuvanimi', kortinTeksti));
     if (tiedot.lahde) {
       const lahde = solmu('span', 'aikajana-avaus-kuvalahde');
-      taytaLahderivi(lahde, tiedot.lahde, tiedot);
+      kortinKuvalahde(lahde, tiedot.lahde, tiedot);
       selite.appendChild(lahde);
     }
     if (selite.childNodes.length) kehys.appendChild(selite);

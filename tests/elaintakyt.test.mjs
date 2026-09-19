@@ -335,7 +335,7 @@ test('kortti tekee karusellin vain useammasta kuvasta', () => {
   assert.match(KORTTI, /kuva\.lahde \|\| 'Matkakirjan havainnekuva', kuva\)\);/);
   // Kuvateksti ja lähderivi ovat kuvan omat ja vaihtuvat sen mukana.
   assert.match(KORTTI, /selite\.textContent = selitteet\[kohdalla\]/);
-  assert.match(KORTTI, /taytaLahderivi\(lahde, kuva\.lahde \|\| 'Matkakirjan havainnekuva', kuva\)/);
+  assert.match(KORTTI, /(?:kortinKuvalahde|taytaLahderivi)\(lahde, kuva\.lahde \|\| 'Matkakirjan havainnekuva', kuva\)/);
   // Suurennos näyttää NYKYISEN kuvan eikä aina ensimmäistä — ja siinä
   // PITKÄN kuvatekstin, kun kortilla on lyhyt (js/kuvatekstit.js,
   // omistaja 9.9.2026).
