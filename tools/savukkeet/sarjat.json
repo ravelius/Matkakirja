@@ -29,6 +29,7 @@
     "savuke-ihmisen-pulukysymykset.mjs",
     "savuke-nostokuva-karuselli.mjs",
     "savuke-kortti-sulku.mjs",
+    "savuke-tekstivalinta.mjs",
     "savuke-kuvalahteet.mjs"
   ],
   "harva": [
