@@ -9221,7 +9221,7 @@ export const RAAMATTU = {
           + '252; vartiot 12/12b. Julkaistaan v1965. SLOVAKIA (Sonnet 2, Fable klo 20.55): '
           + 'SVK 27 / 62 / 10 visaa (ei pelikaupunkia, Bratislava ja Kosice nostoina '
           + 'Pozsony/Kassa 1873; visat jo uuden kielisaannon mukaan), HEAD 200 62/62, '
-          + 'julkaistaan v1965.',
+          + 'julkaistaan v1965. v1965 MERGETTY klo 21.06 (PR #2616 vihrea): BGR, ROU, SVK, visan paperityyli, selitesiivoukset.',
         'KUVASELITTEISSA EI LAHDEVIITTAUKSIA LUKIJALLE (Sonnet 3:n loyto 19.9.2026 klo '
           + '20.40 Suomen aikaa): kuva-agenttien selitteissa oli pelaajalle nakyvia '
           + 'viittauksia ("Commonsin kuvauksen mukaan", "Artikkelin mukaan", "tiedoston '
