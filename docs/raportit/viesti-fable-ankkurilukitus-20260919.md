@@ -115,3 +115,83 @@ Kysymykset:
 - DNK, HUN ja SWE: mainissa niillä ei vielä ole hahmotelmia (0), vaan
   vanhat nostot; DNK ja HUN tulevat v1963:ssa. Mittaus koskee nykyisiä
   rivejä.
+
+---
+
+## LISÄYS klo 21.05: taulut tehty ja kytketty (Fablen päätökset K1 ja K2, klo 20.28)
+
+**K1 tehty.** `vie-nostoankkurit.mjs --iso <ISO> --kaupunki <k> --yhdista`
+ajettiin 21 fokuskaupungista yksi selain kerrallaan (Chromium, 390 × 844):
+- ESP: Madrid, Barcelona, Granada, Sevilla
+- ITA: Venetsia, Firenze, Rooma, Sisilia
+- GRC: Ateena, Kreeta
+- POL: Varsova, Krakova
+- DEU Berliini, PRT Lissabon, AUT Wien, NLD Amsterdam, CZE Praha,
+  DNK Kööpenhamina, HUN Budapest, SWE Tukholma
+- BEL Amsterdamista, koska Brysseliä ei ole kartalla (Sonnet 1:n
+  havainto).
+
+Sen jälkeen ajettiin `lukitse-nostoankkurit-maalle.mjs --maa <ISO>`.
+Viennistä puuttuvat nostot (kameran ulkopuolella) saivat oman
+datapisteensä maalle lukittuna.
+
+| Maa | Ankkureita | Viennistä | Omasta pisteestä | Siirretty maalle | Saari | Meri |
+|---|---|---|---|---|---|---|
+| ESP | 54 | 49 | 5 | 5 | 0 | 3 |
+| ITA | 50 | 45 | 5 | 1 | 3 | 3 |
+| DEU | 57 | 40 | 17 | 1 | 1 | 3 |
+| PRT | 48 | 47 | 1 | 4 | 1 | 4 |
+| GRC | 62 | 42 | 20 | 6 | 1 | 5 |
+| AUT | 44 | 12 | 32 | 0 | 0 | 0 |
+| NLD | 49 | 42 | 7 | 3 | 0 | 1 |
+| BEL | 26 | 0 | 26 | 0 | 0 | 2 |
+| POL | 45 | 35 | 10 | 0 | 0 | 2 |
+| CZE | 46 | 22 | 24 | 0 | 0 | 0 |
+| DNK | 20 | 13 | 7 | 4 | 0 | 3 |
+| HUN | 23 | 9 | 14 | 0 | 0 | 0 |
+| SWE | 20 | 19 | 1 | 3 | 0 | 1 |
+
+**K2 tehty.** Tyypin `meri` nosto pitää pisteensä merellä (viedyn ankkurin
+tai oman datapisteen). Sääntö koskee uusia maita. FRA-taulu on poltettu ja
+pysyy ennallaan: kuiva-ajo 62/0/0.
+
+**Saaret.** Levitys oli työntänyt Elban 44 km merelle. Maskisiirto olisi
+vienyt sen mantereelle, joten saaren merellä oleva ankkuri palaa nyt
+saaren omaan datapisteeseen. Sama koskee Strombolia, Capria,
+Helgolandia, Berlengasia ja Antikytheraa.
+
+**Kytkentä.** `js/pallolauta/nostoankkurit.js` tuo 13 uutta taulua.
+`LUKITUT_MAAT` on yhä `['FRA']`: hahmotelmat pysyvät elävinä, eikä
+poltto muutu.
+
+**LÖYDÖS JA KORJAUS: sama id eri maissa.** 29 nosto-id:tä on usealla
+maalla eri paikassa (`valimeri` ESP/FRA/TUR/DZA/LBY/TUN/SYR, `pohjanmeri`,
+`itameri`, `tonava`, `rhone`, `adrianmeri` …). Avain `nosto:<id>` ei siis
+kerro maata. **Jo mainissa** Espanjan, Turkin ja Pohjois-Afrikan Välimeri
+sai lukitun FRA-ankkurin Toulonista, ja CHE:n Rhône FRA:n Rhônen.
+Korjaus:
+- `lukittuAnkkuri(avain, iso)` hakee vain rivin oman maan taulusta.
+- Elävä nostorivi kantaa `iso`-kentän (`js/pallolauta/nostot.js`).
+- Maa ilman taulua ei saa toisen maan ankkuria.
+- Polttoketju kysyy yhä ilman maata (yhteinen taulu, FRA voittaa), joten
+  FRA:n poltto ei muutu.
+
+**Vartiot:**
+- `tests/nostoankkurit-maat.test.mjs` (4 testiä):
+  - jokaisella 13 maalla on taulu, jossa on vain maan omia nostoja
+  - maakohteen ankkuri on maalla (paitsi saari ja meri)
+  - `LUKITUT_MAAT` on `['FRA']`
+  - Välimeren ankkuri on ESP:llä ja FRA:lla eri, eikä SYR saa kumpaakaan
+- `tests/nostoankkurit-lukitut.test.mjs`: määrä ≥ FRA.
+- `tests/nimiolimitys.test.mjs`: vihreä.
+- `tests/sw.test.mjs`: taulut NIPUTTAMATTOMAT-listalla samalla
+  perusteella kuin FRA.
+- `node --test tests/*.test.mjs`: 3689 / 0.
+- Selainvartio `savuke-ranskan-nostot-lukossa`: 27/27.
+
+**Huomio:** Barcelonan vienti ajettiin mahdollisesti silloin, kun kytkentä
+oli hetken päällä (ennen kuin peruin sen viennin ajaksi). Vaikutus: Madridin
+jo lukitut ESP-ankkurit olivat kiinteitä esteitä Barcelonan levityksessä.
+`--yhdista` pitää joka tapauksessa ensimmäisen kaupungin arvon, joten
+taulun sisältöön tämä vaikuttaa vain Barcelonan kuudessa uudessa
+ankkurissa.

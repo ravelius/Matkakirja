@@ -51,6 +51,17 @@
  * lähimpään maskin maapisteeseen siirto veisi saaren mantereelle.
  * Saaripoikkeus: jos nosto on saari (tyyppi 'saari' tai SAARET-lista)
  * ja maski siirtäisi sen yli SAAREN_RAJA_KM:n, oma piste pidetään.
+ *
+ * ── MERI ON KOHDE (Fablen päätös K2 19.9.2026 klo 20.28) ──────────────
+ * Tyypin 'meri' nosto (Välimeri, Joonianmeri, Pohjanmeri…) pitää
+ * pisteensä merellä. Koskee uusia maita; FRA-taulu on poltettu ja
+ * pysyy ennallaan (sen merinostot siirrettiin rannalle v1941:ssä).
+ *
+ * ── VAIN OMAN MAAN NOSTOT ──────────────────────────────────────────
+ * Vienti lukee kaikki kameran näkemät rivit, joten Madridin ajossa on
+ * myös Ranskan nostoja ja naapurimusteen (`naapuri:`) rivejä. Uuden
+ * maan taulusta karsitaan muut kuin sen omat `nosto:<id>`-avaimet,
+ * jottei sama avain ole kahdessa taulussa eri pisteellä.
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -79,6 +90,9 @@ export const SAARET = new Set(['hahmotelma-stromboli']);
 /** Pidempi maskisiirto saarelta tarkoittaa, että saari puuttuu 1:50M-maskista. */
 export const SAAREN_RAJA_KM = 10;
 const onSaari = (r) => r?.tyyppi === 'saari' || SAARET.has(r?.id);
+const MERI_POIKKEUS = MAA !== 'FRA';
+const onMeri = (r) => MERI_POIKKEUS && r?.tyyppi === 'meri';
+const merinostot = [];
 const saaret = [];
 
 const { kaikki: kaikkiRivit } = paakartanNostot();
@@ -97,6 +111,13 @@ const elavat = fraRivit.filter((r) => !onKaupunkipiste(r.id) && !sisainen(r)
 
 const taulu = new Map(Object.entries(vanhaTaulu));
 const rivitIdlla = new Map(elavat.map((r) => [`nosto:${r.id}`, r]));
+const karsitut = [];
+if (MAA !== 'FRA') {
+  const omat = new Set(fraRivit.map((r) => `nosto:${r.id}`));
+  for (const avain of [...taulu.keys()]) {
+    if (!omat.has(avain)) { taulu.delete(avain); karsitut.push(avain); }
+  }
+}
 const lisatyt = [];
 const siirretyt = [];
 
@@ -104,7 +125,10 @@ for (const r of elavat) {
   const avain = `nosto:${r.id}`;
   if (taulu.has(avain)) continue;
   let piste = { lat: Number(r.lat.toFixed(6)), lng: Number(r.lon.toFixed(6)) };
-  if (!onMaalla(piste.lat, piste.lng)) {
+  if (onMeri(r)) {
+    merinostot.push(`${avain} (omasta paikasta)`);
+    lisatyt.push(`${avain} (omasta paikasta, MERI pidetään)`);
+  } else if (!onMaalla(piste.lat, piste.lng)) {
     const maalle = lahinMaapiste(piste.lat, piste.lng);
     if (onSaari(r) && (!maalle || maalle.siirtoKm > SAAREN_RAJA_KM)) {
       saaret.push(`${avain} (${maalle?.siirtoKm ?? '?'} km maskin maasta — saari puuttuu 1:50M-maskista)`);
@@ -120,9 +144,23 @@ for (const r of elavat) {
 for (const [avain, a] of taulu) {
   if (onMaalla(a.lat, a.lng)) continue;
   if (lisatyt.some((r) => r.startsWith(`${avain} `))) continue;
+  if (onMeri(rivitIdlla.get(avain) ?? fraRivit.find((r) => `nosto:${r.id}` === avain))) {
+    merinostot.push(`${avain} (viedystä ankkurista)`);
+    continue;
+  }
   const maalle = lahinMaapiste(a.lat, a.lng);
-  if (onSaari(rivitIdlla.get(avain)) && (!maalle || maalle.siirtoKm > SAAREN_RAJA_KM)) {
-    saaret.push(`${avain} (${maalle?.siirtoKm ?? '?'} km maskin maasta — saari puuttuu 1:50M-maskista)`);
+  /*
+   * SAAREN ANKKURI MERELLÄ → SAAREN OMA PISTE. Levitys voi työntää
+   * saaren merkin merelle (Elba 44 km, mitattu 19.9.2026), ja lähin
+   * maapiste veisi sen silloin mantereelle. Saari palaa omaan
+   * datapisteeseensä, joka on joko maskin maalla (Elba) tai saarella,
+   * jota 1:50M-maski ei tunne (Stromboli, Capri…).
+   */
+  const oma = rivitIdlla.get(avain);
+  if (onSaari(oma) && Number.isFinite(oma?.lat)) {
+    const piste = { lat: Number(oma.lat.toFixed(6)), lng: Number(oma.lon.toFixed(6)) };
+    saaret.push(`${avain} (ankkuri merellä ${maalle?.siirtoKm ?? '?'} km → saaren oma piste)`);
+    taulu.set(avain, piste);
     continue;
   }
   if (!maalle) { console.log(`VAROITUS  ${avain} on merellä eikä maapistettä löytynyt`); continue; }
@@ -130,10 +168,12 @@ for (const [avain, a] of taulu) {
   taulu.set(avain, { lat: maalle.lat, lng: maalle.lng });
 }
 
-console.log(`${MAA}: taulussa ${taulu.size} ankkuria (${lisatyt.length} uutta, ${siirretyt.length} siirrettyä, ${saaret.length} saarta pidetty)`);
+console.log(`${MAA}: taulussa ${taulu.size} ankkuria (${lisatyt.length} uutta, ${siirretyt.length} siirrettyä, ${saaret.length} saarta ja ${merinostot.length} merinostoa pidetty, ${karsitut.length} muun maan avainta karsittu)`);
 for (const rivi of lisatyt) console.log(`  UUSI     ${rivi}`);
 for (const rivi of siirretyt) console.log(`  MAALLE   ${rivi}`);
 for (const rivi of saaret) console.log(`  SAARI    ${rivi}`);
+for (const rivi of merinostot) console.log(`  MERI     ${rivi}`);
+for (const rivi of karsitut) console.log(`  KARSITTU ${rivi}`);
 if (KUIVA) process.exit(0);
 
 const polku = TAULUN_POLKU;
