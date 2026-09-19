@@ -9260,7 +9260,17 @@ export const RAAMATTU = {
           + 'Ljubljana perassa; Bratislavan tilalle Kosice" - Slovakian pelikaupunki on '
           + 'Kosice (Kassa 1873). Tila: Bryssel-era 1 (kaupunkilehden sisalto Firenzen '
           + 'kaavalla) tilattu Sonnet-agentilta klo 21.13; koodi-integrointi Opus-agentilta '
-          + 'sisallon jalkeen; saapumisteksti Fable.',
+          + 'sisallon jalkeen; saapumisteksti Fable. TILA (klo 22.00): Bryssel-era 1 '
+          + 'valmis (Sonnet-agentti b038ad7b: kysymykset, tiesitko, artikkeli 1873, 2 '
+          + 'Commons-kuvaa, kevyt fokusvirta-bryssel, radio, aarrepari, musiikkialue, '
+          + 'pollon saapumiskysymykset; nimetyt poikkeukset testeissa: luentakuva, Horatio-'
+          + 'otto, Livian kupla - aanituotantoera myohemmin); Opus 1 integroi (cb6ea4b3: '
+          + 'lautapiste 5978,4/1353,0, reitit Pariisi-Bryssel 2 ja Bryssel-Amsterdam 2, '
+          + 'laatat 30/166, Tervuren jaa nostoksi, rakka 49); Fable kirjoitti isoisan '
+          + 'matkakirjan tekstin (Senne katettu, kiltatalot, Manneken Pis, oikeuspalatsi '
+          + 'rakenteilla, pitsi). MALTA REKISTEROITY (Opus 1): KOHDE_MAAT.MLT 11 nostoa. '
+          + 'Julkaistaan v1968. Taysi kaupunkilehti (kansi, kategoriat, nostot) ja aanet '
+          + 'ovat Brysselin era 2; Ljubljana ja Kosice seuraavat samalla kaavalla.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
