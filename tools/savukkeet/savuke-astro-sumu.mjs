@@ -42,7 +42,13 @@ const MIME = {
 };
 
 const VALIMUISTI = new Map();
+/* Paikallinen ämpäri kuten savuke-astro-pallo.mjs:ssä (SAVUKE_AMPARI_PAIKALLINEN). */
+const PAIKALLINEN_AMPARI = process.env.SAVUKE_AMPARI_PAIKALLINEN ?? '';
 async function ulkohaku(url) {
+  if (PAIKALLINEN_AMPARI) {
+    const polku = join(PAIKALLINEN_AMPARI, new URL(url).pathname.split('/').pop());
+    if (existsSync(polku)) return { body: readFileSync(polku), tyyppi: 'image/webp' };
+  }
   if (VALIMUISTI.has(url)) return VALIMUISTI.get(url);
   const lupaus = (async () => {
     for (let yritys = 0; yritys < 3; yritys += 1) {
