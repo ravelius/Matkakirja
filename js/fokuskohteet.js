@@ -127,6 +127,7 @@ import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
 import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
 import { NAKYVAT_KAUPUNGIT_FRA } from './packs/nakyvat-kaupungit-fra.js';
 import { HAHMOTELMA_FRA } from './packs/hahmotelma-fra.js';
+import { HAHMOTELMA_BEL } from './packs/hahmotelma-bel.js';
 import { HAHMOTELMA_DEU } from './packs/hahmotelma-deu.js';
 import { HAHMOTELMA_PRT } from './packs/hahmotelma-prt.js';
 import { HAHMOTELMA_GRC } from './packs/hahmotelma-grc.js';
@@ -332,6 +333,14 @@ KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...NAKYVAT_KAUPUNGIT_FRA];
  * Liitos on tässä samasta syystä kuin kahdella edellisellä.
  */
 KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...HAHMOTELMA_FRA];
+
+/*
+ * BELGIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; Belgiassa ei ole pelikaupunkia eikä muita karttanostoja,
+ * ja rivit on harvennettu keskenään yli 7 lautayksikön päähän.
+ */
+KOHDE_MAAT.BEL = [...(KOHDE_MAAT.BEL ?? []), ...HAHMOTELMA_BEL];
 
 /*
  * SAKSAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
