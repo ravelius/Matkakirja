@@ -12224,6 +12224,38 @@ export class UI {
       pisteet.push(pixelOf(game.board, opt.pos));
     }
     if (!pisteet.length) return false;
+    /*
+     * NOPANHEITON KOHTEET OVAT MAAN IKKUNAN ULKOPUOLELLA, JOTEN
+     * ULOSZOOMAUKSEN ESTO ON KUMOTTAVA TÄSSÄKIN (mitattu 19.9.2026,
+     * Sonnetin puhelintesti v1952 löydös 1 — Pariisi → Amsterdam,
+     * liftaus → Liiku → liftaus → noppa: *"kamera panoroituu tyhjälle
+     * pergamentille Maastrichtin kaakkoispuolelle, kohteita ei
+     * ilmesty"* — ja sama Tangerin laivapolulla).
+     *
+     * JUURISYY, MITATTUNA KEHYS KEHYKSELTÄ. `sovitaKohteetNakyviin`
+     * ajaa kameran `ajaKamera`lla, joka kirjoittaa `pointOfView`in
+     * suoraan joka kehyksessä — uloszoomaus siis NÄYTTÄÄ onnistuvan
+     * (Amsterdamissa korkeus nousi 0,058 → 0,579 kahden sekunnin
+     * ajossa). Kohdemaan uloszoomauskatto elää kuitenkin
+     * OrbitControlsin `maxDistance`issa (js/pallolauta/lauta.js
+     * tahdistaZoomirajat, maanZoomiraja), ja se puree vasta kun ajo
+     * lakkaa kirjoittamasta: ajon päätyttyä ohjain kuristi korkeuden
+     * takaisin 0,058:aan JA JÄTTI PANOROIDUN KESKIPISTEEN paikalleen
+     * (49,60 N 7,85 E — tyhjää maata Pariisin ja Berliinin puolivälissä,
+     * juuri Maastrichtin kaakkoispuolella). Lopputulos on lähikuva,
+     * jossa nappula (ruudulla −243, −233) ja molemmat kohteet
+     * (−758, 556 ja 908, −316) ovat ruudun ulkopuolella: mitään ei ole
+     * näkyvissä eikä napautettavissa, ja vaihe jää 'move'iin — jossa
+     * renderActions ei piirrä yhtään nappia, joten myös Liiku katoaa,
+     * ja tila säilyy tallennuksessa (matkakirja-save-v1).
+     *
+     * MIKSI JUURI TÄSSÄ. Esto kumotaan jo lennolla (doFly),
+     * matkavalikossa (avaaMatkavalikko) ja siirron animaatiossa
+     * (animatePawn) — nopanheiton oma sovitus oli ainoa reitti ilman
+     * kumousta. Esto palaa entiseen tapaan perillä
+     * (palaaMaanRajaukseen) ja matkavalikon sulkeutuessa.
+     */
+    this.matkaZoomivapaus(true);
     return this.sovitaKohteetNakyviin(this.kohteidenRajaus(pisteet));
   }
 

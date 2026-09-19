@@ -138,7 +138,7 @@ natiiviSeuraa(STAMP_KEY);
 // Vanha maailma korvattiin maailmankartalla; tallennukset siirretään.
 const VANHA_LAUTA = 'vanhamaailma';
 const UUSI_LAUTA = 'maailmankartta';
-const APP_VERSION = '2026-08-09.1952';
+const APP_VERSION = '2026-08-09.1953';
 
 const rulesDialog = document.getElementById('rules-dialog');
 const winnerDialog = document.getElementById('winner-dialog');
@@ -1405,11 +1405,30 @@ if (katseluPack) {
 } else {
   const saved = loadGame();
   if (saved) {
-    if (paivitysTapahtui) nollaaValitila(saved);
+    /*
+     * SIIRTOVAIHE EI SAA SÄILYÄ LATAUKSEN YLI (19.9.2026, Sonnetin
+     * puhelintesti v1952 löydös 1: *"uudelleenlatauksen jälkeen Liiku-
+     * nappi puuttui kokonaan"*, ja ulospääsy oli vain "Uusi peli").
+     *
+     * Vaiheessa 'move' valinta tehdään KARTALTA, joten js/ui.js
+     * renderActions ei piirrä yhtään nappia — Liiku mukaan lukien.
+     * Latauksen jälkeen kamera asettuu saapumisrajaukseen
+     * (js/pallolauta/lauta.js saavu), jolloin kaukaiset kohteet jäävät
+     * ruudun ulkopuolelle: ruudulla ei ole napautettavaa eikä yhtään
+     * nappia, ja tila palaa joka latauksella tallennuksesta
+     * (matkakirja-save-v1). Heiton välitila nollataan siksi AINA kun
+     * peli ladataan, ei vain version vaihtuessa — pelaaja menettää
+     * yhden heiton, ei koko peliä.
+     *
+     * Sama nollaus hoitaa myös vaiheen 'roll' (PAATOKSET 45:n
+     * laivamatka odottaa jo kumpaakin vaihetta latauksen jäljiltä).
+     */
+    const heitonValitila = saved.phase === 'move' || saved.phase === 'roll';
+    if (paivitysTapahtui || heitonValitila) nollaaValitila(saved);
     attach(saved);
     // Nollattu tila myös levylle, jottei sama välitila palaa seuraavalla
     // avauksella.
-    if (paivitysTapahtui) saveGame(saved);
+    if (paivitysTapahtui || heitonValitila) saveGame(saved);
   } else startGame();
 }
 
