@@ -179,6 +179,55 @@ async function avaaLinssiEleella(s, odota = 6500) {
   await s.waitForTimeout(odota);
 }
 
+/*
+ * AVAUSANIMAATIO POIS ENNEN MITTAUSTA (PAATOKSET 52 ja 53, 19.–20.9.2026).
+ * Linssin avausajo kirjoittaa kameran korkeuden joka kehyksellä, ja
+ * ISS-seuranta kääntää Maata, kunnes pelaaja koskee ruutuun. Savukkeen
+ * asettama korkeus vedettiin siksi takaisin lepokorkeuteen ja merkit
+ * liikkuivat napautuksen alta. Sama ele kuin pelaajalla: yksi pointerdown
+ * pallon koteloon (js/linssit/satelliitti-avaruus.js otePalloon) päättää
+ * ajon ja seurannan. Ei napautus kartalle: mitään ei avata.
+ */
+const pysaytaAvaus = async (s) => {
+  /*
+   * PALJASTUS ENSIN: mustan kerroksen aikana ote ei päätä ajoa
+   * (otePalloon palaa, kun paljastus odottaa) — otsikkokortti on ruudulla
+   * vähintään PALJASTUKSEN_MINIMI_MS eli 1,8 s.
+   */
+  await s.waitForFunction(
+    () => window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.tila?.()?.paljastus?.vaihe === 'paljastettu',
+    null, { timeout: 20000 },
+  ).catch(() => {});
+  await s.evaluate(() => {
+    // Sama kotelo, johon linssi kuuntelee otteen (lauta.kotelo).
+    const kotelo = window.matkakirja.ui.pallolauta?.kotelo
+      ?? document.querySelector('.pallo-kotelo, .pallo-kuori');
+    for (const laji of ['pointerdown', 'pointerup']) {
+      kotelo?.dispatchEvent(new PointerEvent(laji, { bubbles: true, cancelable: true, clientX: 1, clientY: 1 }));
+    }
+  });
+  await s.waitForTimeout(500);
+  const tila = () => s.evaluate(() => {
+    const t = window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.tila?.();
+    return { ajo: t?.avausajo?.kaynnissa ?? null, seuranta: t?.issSeuranta ?? null };
+  });
+  let nyt = await tila();
+  // Toinen yritys, jos ensimmäinen ele osui vielä paljastuksen häivytykseen.
+  if (nyt.ajo !== false || nyt.seuranta !== false) {
+    await s.waitForTimeout(800);
+    await s.evaluate(() => {
+      const kotelo = window.matkakirja.ui.pallolauta?.kotelo
+        ?? document.querySelector('.pallo-kotelo, .pallo-kuori');
+      for (const laji of ['pointerdown', 'pointerup']) {
+        kotelo?.dispatchEvent(new PointerEvent(laji, { bubbles: true, cancelable: true, clientX: 1, clientY: 1 }));
+      }
+    });
+    await s.waitForTimeout(400);
+    nyt = await tila();
+  }
+  return nyt;
+};
+
 /** Kamera Italian saappaan ylle annettuun korkeuteen. */
 const ASETA = (alt) => {
   const { ui } = window.matkakirja;
@@ -263,6 +312,8 @@ async function ajo(sumuPaalla) {
   await avaaPeli(s, sumuPaalla ? '' : '&sumu=0');
   const muistiEnnen = await s.evaluate(MUISTI);
   await avaaLinssiEleella(s);
+  const avausPysahtyi = await pysaytaAvaus(s);
+  console.log(`    AVAUS PYSÄYTETTY ${JSON.stringify(avausPysahtyi)}`);
   const avaus = await s.evaluate(
     () => window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.tila?.()?.avauskorkeus ?? null,
   );

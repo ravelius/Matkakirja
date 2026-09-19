@@ -53,16 +53,37 @@
  * kaikki ovat pääkartan merkkejä — omistajan sääntö kohdekaupunkien
  * nostoista ei koske näitä.
  *
- * KUVATON ERÄ. Sama linja kuin maastokohteilla muutenkin: kortti
- * kantaa tekstin ja lähteen, ei kuvaa. Tarkistamaton Commons-tiedosto
- * olisi huonompi kuin kuvaton kortti (Perustuslaki, faktakuri).
- * Faktat on tarkistettu en-Wikipediasta kohde kerrallaan 2.9.2026.
+ * KUVAT (20.9.2026). Vanhat kuvattomat kortit ovat saaneet kaksi Commons-kuvaa
+ * (PD/CC, lisenssi ja tekijä Commonsin rajapinnasta), ämpärin osoite
+ * karttanostot/20260920/.
  *
  * Sveitsin maastokohteet. Faktat en-Wikipediasta 29.8.2026. Sisämaavaltio: ei meriä.
  */
 export const MAASTOKOHTEET_CHE = [
   {
     id: 'dufourspitze',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-dufourspitze-338dca2c.jpg',
+      lyhyt: 'Monte Rosan lumihuippuinen massiivi ja jäätikkö Gornergratilta nähtynä.',
+      selite: 'Monte Rosan massiivin korkein huippu Dufourspitze (4 634 m) kohoaa lumen ja jäätiköiden peittämänä kirkkaan sinistä taivasta vasten.',
+      lahde: 'Valokuva: Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ximonic (Simo Räsänen)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Dufourspitze_(Monte_Rosa)_and_Monte_Rosa_Glacier_as_seen_from_Gornergrat,_Wallis,_Switzerland,_2012_August.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-dufourspitze-97babe83.jpg',
+        lyhyt: 'Monte Rosan jyrkkä itäseinämä ilmasta nähtynä.',
+        selite: 'Ilmakuva Monte Rosan massiivin yli kahden kilometrin korkuisesta itäseinämästä, jonka huipulla kohoaa Dufourspitze.',
+        lahde: 'Valokuva: Carsten Steger, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Carsten Steger',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aerial_image_of_the_Monte_Rosa_east_face_(view_from_the_east).jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Dufourspitze',
     tyyppi: 'vuori',
     kysymykset: [
@@ -85,6 +106,28 @@ export const MAASTOKOHTEET_CHE = [
   },
   {
     id: 'matterhorn',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-matterhorn-88a7024d.jpg',
+      lyhyt: 'Matterhornin jyrkkä pyramidihuippu Zermattin suunnasta.',
+      selite: 'Matterhornin lumen peittämä koillisseinämä kohoaa kirkkaan sinistä taivasta vasten Zermattin laakson yläpuolella.',
+      lahde: 'Valokuva: Ximonic (Simo Räsänen), Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ximonic (Simo Räsänen)',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Matterhorn_as_seen_from_Zermatt,_Wallis,_Switzerland,_2012_August.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-matterhorn-1837ca35.jpg',
+        lyhyt: 'Matterhorn heijastuu Stellisee-järven pintaan auringonlaskussa.',
+        selite: 'Matterhornin terävä huippu ja värikkäät pilvet peilautuvat tyyneen Stellisee-järveen.',
+        lahde: 'Valokuva: Giles Laurent, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Giles Laurent',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:043_Matterhorn_reflecting_in_Stellisee_at_sunset_Photo_by_Giles_Laurent.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Matterhorn',
     tyyppi: 'vuori',
     kysymykset: [
@@ -106,6 +149,28 @@ export const MAASTOKOHTEET_CHE = [
   },
   {
     id: 'jungfrau',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-jungfrau-b3973167.jpg',
+      lyhyt: 'Jungfraun lumiset rinteet Kleine Scheideggin suunnasta.',
+      selite: 'Jungfrau (4 158 m) kohoaa Bernin Alppien jäätikköisenä huippuna vihreän alppiniityn ja polun yläpuolella.',
+      lahde: 'Valokuva: Dirk Beyer, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Dirk Beyer',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Jungfrau_2416.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-jungfrau-1279d63c.jpg',
+        lyhyt: 'Kleine Scheidegg talvisessa lumimaisemassa Jungfraun juurella.',
+        selite: 'Kleine Scheideggin rakennukset ja hiihtorinteet lumen keskellä, taustalla Jungfrau.',
+        lahde: 'Valokuva: Albinfo, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Albinfo',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kleine_Scheidegg_und_Jungfrau.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Jungfrau',
     tyyppi: 'vuori',
     kysymykset: [
@@ -126,6 +191,28 @@ export const MAASTOKOHTEET_CHE = [
   },
   {
     id: 'rein',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-rein-11ae70f6.jpg',
+      lyhyt: 'Reinin (Vorderrhein) vaaleiden kallioseinämien reunustama rotko Graubündenissä.',
+      selite: 'Vaaleat, jyrkät kalliot kohoavat metsän ja Vorderrhein-joen yläpuolella Ruinaulta-rotkossa, jossa kulkee myös rautatie.',
+      lahde: 'Valokuva: JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'JoachimKohler-HB',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rheinschlucht_bei_Versam-Safien_(2014).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-rein-4a77cac5.jpg',
+        lyhyt: 'Tomasee, Vorderrheinin lähdejärvi Graubündenin Alpeilla.',
+        selite: 'Kirkkaansininen vuoristojärvi rinteiden ja kalliojyrkänteiden ympäröimänä. Tomasee lasketaan Vorderrheinin ja siten koko Reinin lähdejärveksi.',
+        lahde: 'Valokuva: Albinfo, Wikimedia Commons (CC BY 4.0).',
+        tekija: 'Albinfo',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tomasee_1.JPG',
+        lisenssi: 'CC BY 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+      },
+    ],
     nimi: 'Rein',
     tyyppi: 'joki',
     kysymykset: [
@@ -147,6 +234,28 @@ export const MAASTOKOHTEET_CHE = [
   },
   {
     id: 'rhone',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-rhone-de5ac5f6.jpg',
+      lyhyt: 'Rhônen jäätikkö Valais\'n Alpeilla, joen lähde.',
+      selite: 'Halkeillut jäätikkö laskeutuu vuorten välistä; kaukana jäätikön pinnalla näkyy pieniä retkeilijöitä. Rhône saa alkunsa jäätikön alta.',
+      lahde: 'Valokuva: Jamcib, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Jamcib',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Glacier_du_Rhône_2009.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-rhone-4caad0c3.jpg',
+        lyhyt: 'Rhône virtaa Sionin kohdalla Valais\'n laaksossa.',
+        selite: 'Leveä Rhône-joki, kaareva kävelysilta ja viinitarharinteet Sionin lähellä Valais\'n kantonissa.',
+        lahde: 'Valokuva: Tiia Monto, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Tiia Monto',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rhône_River_in_Sion_2.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Rhône',
     tyyppi: 'joki',
     kysymykset: [
@@ -175,6 +284,28 @@ export const MAASTOKOHTEET_CHE = [
    * ============================================================== */
   {
     id: 'kapellbrucke',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-kapellbrucke-f6ccdea3.jpg',
+      lyhyt: 'Kapellbrücke ja Wasserturm-vesitorni Reuss-joen yllä Luzernissa.',
+      selite: 'Katettu puinen silta kukkaistutuksineen ulottuu Reussin yli, ja sen vieressä kohoaa kivinen kahdeksankulmainen vesitorni.',
+      lahde: 'Valokuva: Ikiwaner, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Ikiwaner',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Luzern_Kapellbruecke.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-kapellbrucke-1d6cd0a2.jpg',
+        lyhyt: 'Katetun sillan sisäpuoli, jonka orsien alla on maalattuja kolmiotauluja.',
+        selite: 'Puinen käytävä jatkuu pitkälle Reussin yli, ja kattoristikoiden alla riippuu 1600-luvulla maalattuja kolmionmuotoisia kuvatauluja.',
+        lahde: 'Valokuva: Dennis G. Jarvis, Wikimedia Commons (CC BY-SA 2.0).',
+        tekija: 'Dennis G. Jarvis',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Switzerland-03442_-_Chapel_Bridge_Paintings_(23216397583).jpg',
+        lisenssi: 'CC BY-SA 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0',
+      },
+    ],
     nimi: 'Kapellbrücke',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -211,6 +342,28 @@ export const MAASTOKOHTEET_CHE = [
   },
   {
     id: 'stiftsbibliothek',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-stiftsbibliothek-d24194e4.jpg',
+      lyhyt: 'St. Gallenin luostarikirjaston barokkisali kirjahyllyineen ja kattofreskoineen.',
+      selite: 'Kirjahyllyjen reunustama sali, jossa on puukoristeellinen parkettilattia, parvekekäytävät ja lasivitriinejä, ja katossa maalauksia sekä stukkia.',
+      lahde: 'Valokuva: Martin Thurnherr, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Martin Thurnherr',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stiftsbibliothek_St,_Gallen_Barocksaal_01.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-stiftsbibliothek-8472edd4.jpg',
+        lyhyt: 'St. Gallenin luostarikirjaston sali pitkittäin katsottuna, katossa rokokoofreskoja.',
+        selite: 'Kirjaparvekkeiden ja hyllyjen välissä avautuu pitkä sali, jonka lattiassa on kuviollinen puuparketti ja katossa maalauksia sekä stukkikoristeita.',
+        lahde: 'Valokuva: Bobo11, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Bobo11',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Stiftsbibliothek_Saal_2023_1.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Stiftsbibliothek',
     tyyppi: 'sana',
     kysymykset: [
@@ -244,6 +397,28 @@ export const MAASTOKOHTEET_CHE = [
   },
   {
     id: 'chillon',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-chillon-8052ab90.jpg',
+      lyhyt: 'Chillonin linna Genevenjärven rannalla, taustalla lumihuippuiset Dents du Midi -vuoret.',
+      selite: 'Kivilinna torneineen kohoaa suoraan järven rannalta, ja taustalla näkyy lumen peittämä vuoristo.',
+      lahde: 'Valokuva: Christian David, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Christian David',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Château_de_Chillon_and_the_snow-capped_Dents_du_Midi,_Veytaux,_Vaud.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-chillon-f7cbddb1.jpg',
+        lyhyt: 'Chillonin linnan katettu puusilta ja tornit.',
+        selite: 'Kivipilarien varassa seisova katettu puusilta johtaa linnan portille, ja taustalla kohoavat linnan tornit ja kivimuurit.',
+        lahde: 'Valokuva: Llez, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Llez',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Château_de_Chillon_-_Veytaux_06.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Chillonin linna',
     nimio: 'Chillon',
     tyyppi: 'historia',
@@ -279,6 +454,28 @@ export const MAASTOKOHTEET_CHE = [
   },
   {
     id: 'gotthardin-tunneli',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-gotthardin-tunneli-92cb82c2.jpg',
+      lyhyt: 'Gotthardin rautatietunnelin pohjoisportaali Göschenenissä.',
+      selite: 'Kivinen tunnelin suuaukko, jossa roomalaisin numeroin merkitty vuosiluku 1882, ja sen edessä junaraiteita.',
+      lahde: 'Valokuva: Kecko, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Kecko',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Göschenen_traforo_Gottardo_portale_nord.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-gotthardin-tunneli-d7f72faa.jpg',
+        lyhyt: 'Vanha valokuva Gotthardin tunnelin portaalista ja Göschenenin rautatiealueesta.',
+        selite: '1800-luvun valokuvassa tunnelin kivinen suuaukko avautuu vuorenrinteen alla, ja sen edessä näkyvät raiteet, silta, vartijan talo sekä Reuss-joki.',
+        lahde: 'Valokuva: Giorgio Sommer, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Giorgio Sommer',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:SBB_Historic_-_F_111_00001_027_-_Göschenen,_Reussbrücke,_Gotthard-Tunnelportal_und_Wärterhaus.tiff',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Gotthardin tunneli',
     nimio: 'Gotthard',
     tyyppi: 'tekniikka',
@@ -318,6 +515,28 @@ export const MAASTOKOHTEET_CHE = [
   },
   {
     id: 'grand-st-bernard',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-grand-st-bernard-883627e1.jpg',
+      lyhyt: 'Suuren Pyhän Bernhardin hospitaalin rakennukset vuoristosolassa.',
+      selite: 'Vaaleat, useampikerroksiset hospitaalirakennukset seisovat karun vuoristorinteen juurella solatien varrella; pihalla näkyy pieni joukko kävijöitä ja autoja.',
+      lahde: 'Valokuva: Ludovic Péron, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Ludovic Péron',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hospice_du_Grand_Saint-Bernard_-_1.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-grand-st-bernard-367dd5ff.jpg',
+        lyhyt: 'Hospitaali ja jäinen vuoristojärvi Suuren Pyhän Bernhardin solassa.',
+        selite: 'Jäätynyt ja osin sulanut järvi lumen keskellä, sen takana hospitaalirakennus ja lumiset vuorenhuiput.',
+        lahde: 'Valokuva: Olaf brandt, Wikimedia Commons (CC BY 4.0).',
+        tekija: 'Olaf brandt',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Blick_auf_den_vereisten_See_und_das_Hospiz_am_Grossen_St._Bernhard_Pass.jpg',
+        lisenssi: 'CC BY 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+      },
+    ],
     nimi: 'Suuren Pyhän Bernhardin hospitaali',
     nimio: 'Pyhä Bernhard',
     tyyppi: 'elain',
@@ -353,6 +572,28 @@ export const MAASTOKOHTEET_CHE = [
   },
   {
     id: 'zytglogge',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-zytglogge-2abc406e.jpg',
+      lyhyt: 'Zytglogge-tornin tähtitieteellinen kello Bernissä.',
+      selite: 'Punainen ja tumman sininen kellotaulu roomalaisin numeroin, keskellä eläinradan merkein koristeltu tähtitieteellinen mekanismi.',
+      lahde: 'Valokuva: Sandstein, Wikimedia Commons (public domain).',
+      tekija: 'Sandstein',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Zytglogge_astronomical_clock.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-zytglogge-e574afef.jpg',
+        lyhyt: 'Zytglogge-torni Kramgassen päässä vanhassa valokuvassa vuodelta 1865.',
+        selite: 'Vanhan kaupungin katu johtaa tornille, jonka kellotaulu ja terävä torninhuippu kohoavat rakennusten yläpuolelle; kadulla näkyy hevosvaunuja ja muutama kulkija.',
+        lahde: 'Kuva: tekijä tuntematon, Wikimedia Commons (public domain).',
+        tekija: 'tuntematon',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Zytglogge_1865.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Zytglogge',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -385,6 +626,28 @@ export const MAASTOKOHTEET_CHE = [
   },
   {
     id: 'la-chaux-de-fonds',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-la-chaux-de-fonds-9b57320e.jpg',
+      lyhyt: 'La Chaux-de-Fondsin kaupunki Juravuorilla ilmasta nähtynä.',
+      selite: 'Ilmakuva kaupungin punakattoisista kortteleista, rautatieasemasta ja ympäröivästä metsäisestä ylängöstä.',
+      lahde: 'Valokuva: Jérémy Toma, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Jérémy Toma',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:La_Chaux-de-Fonds_vue_du_ciel.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-la-chaux-de-fonds-f9a41a4b.jpg',
+        lyhyt: 'Kansainvälisen kelloteollisuusmuseon sisäänkäynti La Chaux-de-Fondsissa.',
+        selite: 'Museon betoninen, köynnösten peittämä katos suojaa lasista sisäänkäyntiä. Museo esittelee kellonvalmistuksen historiaa.',
+        lahde: 'Valokuva: Tomleighmartin, Wikimedia Commons (CC0).',
+        tekija: 'Tomleighmartin',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:LaChauxDeFondsMuseeDHorlogerieCH1.jpg',
+        lisenssi: 'CC0',
+        lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      },
+    ],
     nimi: 'La Chaux-de-Fonds',
     tyyppi: 'kauppa',
     kysymykset: [
@@ -417,6 +680,28 @@ export const MAASTOKOHTEET_CHE = [
   },
   {
     id: 'gruyeres',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-gruyeres-7c7c922b.jpg',
+      lyhyt: 'Gruyèresin vanha kaupunki ja linna kukkulan rinteellä.',
+      selite: 'Keskiaikaisen kaupungin talot ja kivilinna torneineen kohoavat vihreän kukkulan rinteellä Fribourgin kantonissa.',
+      lahde: 'Valokuva: JoachimKohler-HB, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'JoachimKohler-HB',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Altstadthügel_und_Schloss_Greyerz_(2014).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-gruyeres-4cb60b74.jpg',
+        lyhyt: 'Gruyères kukkulan laella metsäisten vuorten ja niittyjen keskellä.',
+        selite: 'Kukkulan päällä kohoava keskiaikainen kaupunki ja linna nähtynä kauempaa, ympärillä niittyjä, taloja ja Fribourgin esialppien vuoria.',
+        lahde: 'Valokuva: Christian David, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Christian David',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gruyères_et_sa_cité_médiévale.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Gruyères',
     tyyppi: 'ruoka',
     kysymykset: [
@@ -449,11 +734,33 @@ export const MAASTOKOHTEET_CHE = [
    * nostoa per Euroopan maa; Sveitsi oli 17:ssä.
    *
    * Kaikki kolme ovat kaukana Alppien laatasta (lähinkin Reininputous
-   * 43 lautayksikköä), joten ne ovat pääkartan merkkejä. Kuvaton erä;
+   * 43 lautayksikköä), joten ne ovat pääkartan merkkejä. Kuvat lisätty 20.9.2026;
    * faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
    * ============================================================== */
   {
     id: 'rutli',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-rutli-87fbb1b2.jpg',
+      lyhyt: 'Rütlin niitty Luzernin järven rannalla ilmasta nähtynä.',
+      selite: 'Vihreä vuoristoniitty rakennuksineen ja polkuineen kohoaa metsäisen rinteen ja turkoosinvihreän järven välissä.',
+      lahde: 'Valokuva: Daniel Reust, Wikimedia Commons (CC BY 4.0).',
+      tekija: 'Daniel Reust',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rütliwiese.jpg',
+      lisenssi: 'CC BY 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-rutli-4565d752.jpg',
+        lyhyt: 'Maalaus Luzernin järven maisemasta Rütlin niityn suunnalta vuodelta 1855.',
+        selite: 'François Didayn maalaamassa maisemassa järven ylle nousevat jyrkät vuoret, ja etualan kalliorannalla istuu kaksi pientä hahmoa.',
+        lahde: 'Maalaus: François Diday, Wikimedia Commons (public domain).',
+        tekija: 'François Diday',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:François_Diday_-_Lake_Lucerne_near_Brunnen_with_a_view_of_Seelisberg,_the_Rütli_meadow_and_the_Engelberger_Rotstock_(1855).jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Rütlin niitty',
     tyyppi: 'historia',
     kysymykset: [
@@ -494,6 +801,28 @@ export const MAASTOKOHTEET_CHE = [
   },
   {
     id: 'landwasserin-viadukti',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-landwasserin-viadukti-c636a02c.jpg',
+      lyhyt: 'Punainen juna Landwasserin viaduktilla, taustalla vuorenrinne.',
+      selite: 'Kaareva kivinen viadukti ylittää rotkon, ja juna on saapumassa kalliorinteeseen louhittuun tunneliin.',
+      lahde: 'Valokuva: Ikiwaner, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Ikiwaner',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Landwasserviadukt.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-landwasserin-viadukti-9db928e7.jpg',
+        lyhyt: 'Landwasserin viadukti ilmasta nähtynä.',
+        selite: 'Kivinen kaarisilta kohoaa korkealle Landwasser-joen rotkon yllä, ja junan vaunut ylittävät sen metsäisten rinteiden välissä.',
+        lahde: 'Valokuva: Capricorn4049, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Capricorn4049',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Landwasserviadukt,_aerial_photography_from_northeast_2.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Landwasserin viadukti',
     nimio: 'Landwasser',
     tyyppi: 'tekniikka',
@@ -534,6 +863,28 @@ export const MAASTOKOHTEET_CHE = [
   },
   {
     id: 'reininputous',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-reininputous-6ba56bef.jpg',
+      lyhyt: 'Reininputous syksyllä, Laufenin linna ja rautatiesilta taustalla.',
+      selite: 'Vaahtoava Rein putoaa kalliosaarekkeen ohi, ja rannalla kohoaa Laufenin linna syksyn värittämän metsän keskellä.',
+      lahde: 'Valokuva: Christian David, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Christian David',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Chutes_du_Rhin_-_Octobre_2021.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/che-nosto-reininputous-9280f1f4.jpg',
+        lyhyt: 'Reininputouksen keskellä kohoava kallio ilmasta nähtynä.',
+        selite: 'Ilmakuvassa vaahtoava vesi ympäröi putouksen keskellä olevaa kalliota, jonne johtavat portaat, ja taustalla näkyvät silta ja linna.',
+        lahde: 'Valokuva: Hansueli Krapf, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Hansueli Krapf',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:2016-08-30_18-36-45_324.2_Switzerland_Kanton_Schaffhausen_Neuhausen_Rheinfall.JPG',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Reininputous',
     nimio: 'Rheinfall',
     tyyppi: 'joki',

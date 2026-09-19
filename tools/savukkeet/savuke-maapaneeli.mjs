@@ -135,6 +135,9 @@ const palvelin = http.createServer((req, res) => {
       + ' padding: 8px 9px !important; }\n')]);
   }
   if (vastakoe === 'EI_VAISTOA' && polkuOsa.endsWith('/css/styles.css')) {
+    // Infotaulun Liiku-piilotus pois (sääntö ei enää osu mihinkään).
+    runko = Buffer.from(runko.toString('utf8')
+      .replaceAll('body.infotaulu-auki .toimintorivi', 'body.infotaulu-auki-ei .toimintorivi'));
     runko = Buffer.from(runko.toString('utf8').replace(
       /bottom: max\(\s*calc\(var\(--gap\)[^;]*?var\(--liiku-pohja, 0px\)\s*\);/,
       'bottom: calc(var(--gap) + 0.4rem + env(safe-area-inset-bottom, 0px));',
@@ -410,6 +413,7 @@ const mittaaPaneeli = (sivu) => sivu.evaluate(() => {
       harvennus: parseFloat(t.letterSpacing) / (parseFloat(t.fontSize) || 1),
       kapiteeli: t.textTransform,
       valittu: n.classList.contains('on'),
+      viiva: getComputedStyle(n.querySelector('.maapaneeli-aihe-nimi')).borderBottomStyle,
       alleviivaus: getComputedStyle(n.querySelector('.maapaneeli-aihe-nimi')).borderBottomColor,
     };
   });
@@ -513,6 +517,23 @@ const mittaaPaneeli = (sivu) => sivu.evaluate(() => {
       osuuLappuun: osuu(napinLaatikko, laatikko('.fact-card')),
       osuuKaupunkikorttiin: osuu(napinLaatikko, laatikko('.kaupunkikortti')),
     } : null,
+    maa: kaluste?.dataset.iso ?? null,
+    kartuscha: kaluste ? (() => {
+      const t = getComputedStyle(kaluste);
+      return {
+        paperi: !/rgba\([^)]*,\s*0\)/.test(t.backgroundColor) && t.backgroundColor !== 'transparent',
+        reunaviiva: parseFloat(t.borderTopWidth) > 0,
+      };
+    })() : null,
+    vuosiLohko: nakyy('.maapaneeli-vuosi'),
+    sijojaNakyy: [...document.querySelectorAll('.maapaneeli-sija')]
+      .filter((e) => e.getClientRects().length).length,
+    liikuPiilossa: (() => {
+      const n = document.querySelector('.toimintorivi .monitoimi-nappi');
+      if (!n) return false;
+      const t = getComputedStyle(n);
+      return t.visibility === 'hidden' || t.display === 'none' || Number(t.opacity) === 0;
+    })(),
     liikuPohja: getComputedStyle(document.documentElement)
       .getPropertyValue('--liiku-pohja').trim(),
     pollonPoikkeama: (() => {
@@ -631,6 +652,7 @@ const kalusteLiikkui = [];
 const lapiOk = [];
 const liikuOk = [];
 const otsikkoTulokset = [];
+const sijatOk = [];
 let paaVirheet = [];
 
 for (const ruutu of RUUDUT) {
@@ -754,17 +776,33 @@ for (const ruutu of RUUDUT) {
   await napautaKohtaa(sivu, lepo.avain);
   // eslint-disable-next-line no-await-in-loop
   const auki2 = await mittaaPaneeli(sivu);
+  /*
+   * MAALEHDEN INFOTAULU (Raamattu, omistaja 19.9.2026): auki kaluste on
+   * paperikartuscha, jossa masthead on ENSIN, sitten 1873-lohko ja
+   * nykyluvut, ja kategoriat viimeisinä. Leveys on kiinteä noin 40 %
+   * ruudusta (alle 700 px:n ruudulla koko leveys marginaalien sisällä).
+   */
   const jarjestys = Boolean(auki2.valikko && auki2.perustiedot && auki2.avain
-    && auki2.valikko.y1 <= auki2.perustiedot.y0 + 2
-    && auki2.perustiedot.y1 <= auki2.avain.y0 + 2);
+    && auki2.avain.y1 <= auki2.perustiedot.y0 + 2
+    && auki2.perustiedot.y1 <= auki2.valikko.y0 + 2);
+  const kartuschaLeveys = auki2.kortti && (auki2.ruutu.w > 700
+    ? Math.abs(auki2.kortti.w / auki2.ruutu.w - 0.4) <= 0.03
+    : auki2.kortti.w <= auki2.ruutu.w);
+  const kartuscha = Boolean(auki2.kartuscha?.paperi && auki2.kartuscha?.reunaviiva
+    && kartuschaLeveys);
+  const aiheNimet = auki2.otsikot.map((k) => k.nimi);
+  const kategoriatHyvat = new Set(aiheNimet).size === aiheNimet.length
+    && (auki2.maa !== 'FRA' || aiheNimet.join('|')
+      === 'Historia|Ruoka|Keksinnöt|Luonto|Urheilu|Arki|Menovinkit');
   const avautuuHyva = Boolean(auki2.valikkoAuki && auki2.valikko && auki2.perustiedot
-    && auki2.otsikot.length >= 4 && auki2.otsikkorivit === 2
+    && auki2.otsikot.length >= 4
     && auki2.perustietoja >= 4
-    && jarjestys
+    && jarjestys && kartuscha && kategoriatHyvat
+    && auki2.vuosiLohko && auki2.sijojaNakyy === 0
     && auki2.valikko.y0 >= -1 && auki2.valikko.x0 >= -1
     && auki2.valikko.x1 <= auki2.ruutu.w + 1
-    && auki2.kortti.y1 <= auki2.ruutu.h + 1
-    && kaikkiPohjattomia(auki2.pohjat));
+    && auki2.kortti.y0 >= -1
+    && auki2.kortti.y1 <= auki2.ruutu.h + 1);
   tieto(`${ruutu.nimi} px · avattuna`,
     `otsikoita ${auki2.otsikot.length} rivillä ${auki2.otsikkorivit}, `
     + `perustietorivejä ${auki2.perustietoja}, `
@@ -773,7 +811,23 @@ for (const ruutu of RUUDUT) {
     + `nimi y ${auki2.avain ? Math.round(auki2.avain.y0) : '—'}, `
     + `kaluste ${auki2.kortti ? `${Math.round(auki2.kortti.w)} x ${Math.round(auki2.kortti.h)} px` : '—'}, `
     + `otsikkokoko ${auki2.koot.otsikko}, lukurivi ${auki2.koot.lukurivi}, `
-    + `pohjaton ${kaikkiPohjattomia(auki2.pohjat)}`);
+    + `kartuscha ${JSON.stringify(auki2.kartuscha)} (${auki2.kortti ? Math.round(100 * auki2.kortti.w / auki2.ruutu.w) : '—'} %), `
+    + `järjestys ${jarjestys}, 1873 ${auki2.vuosiLohko}, sijoja näkyy ${auki2.sijojaNakyy}, `
+    + `kategoriat ${aiheNimet.join(' · ')}`);
+
+  /* --- 2b. sijoitukset vasta napautuksesta (INFOTAULU kohta 3) ----- */
+  // eslint-disable-next-line no-await-in-loop
+  await napautaKohtaa(sivu, auki2.perustiedot);
+  // eslint-disable-next-line no-await-in-loop
+  const sijat = await mittaaPaneeli(sivu);
+  sijatOk.push({
+    ruutu: ruutu.nimi,
+    ok: auki2.sijojaNakyy === 0 && sijat.sijojaNakyy >= 3 && sijat.valikkoAuki,
+    ennen: auki2.sijojaNakyy,
+    jalkeen: sijat.sijojaNakyy,
+  });
+  // eslint-disable-next-line no-await-in-loop
+  await napautaKohtaa(sivu, sijat.perustiedot);
 
   /* --- 3. kaikki samalla fontilla ---------------------------------- */
   const perheet = Object.values(auki2.perheet).filter(Boolean);
@@ -782,8 +836,10 @@ for (const ruutu of RUUDUT) {
   tieto(`${ruutu.nimi} px · fontit`, JSON.stringify(auki2.perheet));
 
   /* --- 4. otsikot ovat pelkkää tekstiä ----------------------------- */
-  const erotinOk = auki2.erottimet.length === auki2.otsikot.length - auki2.otsikkorivit
-    && auki2.erottimet.every((t) => t === '·');
+  // Infotaulussa kategoriat ovat erillisiä merkkejä pisteviivalla, ei
+  // välipisteillä erotettu rivi (Raamattu, MAALEHDEN INFOTAULU kohta 1).
+  const erotinOk = auki2.erottimet.length === 0
+    && auki2.otsikot.every((k) => k.viiva === 'dotted' || k.valittu);
   const kapiteeliOk = auki2.otsikot.every(
     (k) => k.kapiteeli === 'uppercase' && k.harvennus >= 0.1,
   );
@@ -810,12 +866,8 @@ for (const ruutu of RUUDUT) {
 
   /* --- 8b. Liiku avattuna: väistö nostaa sanan -------------------- */
   const liikuAuki = auki2.liiku;
-  const liikuAukiHyva = Boolean(liikuAuki
-    && liikuAuki.laatikko.y0 >= 0 && liikuAuki.laatikko.y1 <= auki2.ruutu.h + 1
-    && liikuAuki.laatikko.y0 > auki2.ruutu.h * 0.5
-    && liikuAuki.keskipoikkeama <= 8
-    && !liikuAuki.osuuPaneeliin && !liikuAuki.osuuPuluun
-    && !liikuAuki.osuuLappuun && !liikuAuki.osuuKaupunkikorttiin);
+  // Infotaulu auki → Liiku piilossa (Raamattu, MAALEHDEN INFOTAULU kohta 4).
+  const liikuAukiHyva = Boolean(auki2.liikuPiilossa);
   liikuOk.push({
     ruutu: ruutu.nimi,
     ok: liikuHyva && liikuAukiHyva,
@@ -945,14 +997,17 @@ vaadi('1. LEVOSSA vain nimi, viiva ja alarivi — ei taustaa, ei plussaa, ruudun
   + 'alakulma (390 px ja 1400 px)',
 levossaOk.length === RUUDUT.length && levossaOk.every((t) => t.ok),
 `tulokset ${JSON.stringify(levossaOk)}`);
-vaadi('2. napautus nimeen AVAA (otsikot 2 rivillä, perustiedot niiden alla) ja uusi '
-  + 'napautus SULKEE',
+vaadi('2. napautus nimeen AVAA infotaulun kartuschaan (masthead, 1873, nyt, kategoriat; '
+  + '~40 % leveä, 7 erillistä Ranskan kategoriaa, sijat piilossa) ja uusi napautus SULKEE',
 avautuuOk.length === RUUDUT.length && avautuuOk.every((t) => t.ok),
 `tulokset ${JSON.stringify(avautuuOk)}`);
+vaadi('2b. nykylukujen sijoitukset näkyvät vasta napautuksesta',
+  sijatOk.length === RUUDUT.length && sijatOk.every((t) => t.ok),
+  `tulokset ${JSON.stringify(sijatOk)}`);
 vaadi('3. nimi, alarivi, perustiedot ja otsikot ovat SAMALLA fontilla',
   fonttiOk.length === RUUDUT.length && fonttiOk.every((t) => t.ok),
   `tulokset ${JSON.stringify(fonttiOk)}`);
-vaadi('4. otsikot ovat pelkkää tekstiä: 0 väripalloa, erottimina välipisteet, '
+vaadi('4. kategoriat ovat erillisiä merkkejä pisteviivalla: 0 väripalloa, 0 erotinta, '
   + 'harvennetut kapiteelit',
 tekstiOtsikotOk.length === RUUDUT.length && tekstiOtsikotOk.every((t) => t.ok),
 `tulokset ${JSON.stringify(tekstiOtsikotOk)}`);
@@ -969,11 +1024,11 @@ const otsikotOsui = otsikkoTulokset.filter(
   (t) => t.auki && t.maa === 'FRA' && t.id === t.pyydetty,
 ).length;
 vaadi('7. jokainen otsikko avaa maalehden OMAN sivunsa',
-  otsikkoTulokset.length >= 8 && otsikotOsui === otsikkoTulokset.length,
+  otsikkoTulokset.length >= 7 && otsikotOsui === otsikkoTulokset.length,
   `otsikoita ${otsikkoTulokset.length}, oikein ${otsikotOsui}: `
   + JSON.stringify(otsikkoTulokset.filter((t) => t.id !== t.pyydetty)));
-vaadi('8. Liiku on kuultava sana alareunan keskellä eikä osu kalusteeseen — ei levossa '
-  + 'eikä avattuna',
+vaadi('8. Liiku on kuultava sana alareunan keskellä eikä osu kalusteeseen levossa, '
+  + 'ja infotaulun ollessa auki se on piilossa',
 liikuOk.length === RUUDUT.length && liikuOk.every((t) => t.ok),
 `tulokset ${JSON.stringify(liikuOk)}`);
 tieto('sivun virheet (pääajo)', paaVirheet.length ? paaVirheet.join(' | ') : 'ei yhtään');
@@ -1073,9 +1128,9 @@ poistaKategoriat = null;
     `Liiku y ${m?.liiku ? `${Math.round(m.liiku.laatikko.y0)}…${Math.round(m.liiku.laatikko.y1)}` : '—'}, `
     + `kaluste y ${m?.kortti ? `${Math.round(m.kortti.y0)}…${Math.round(m.kortti.y1)}` : '—'}, `
     + `osuu kalusteeseen ${m?.liiku?.osuuPaneeliin}`);
-  vaadi('VASTAKOE F: ilman väistöä Liiku OSUU avattuun kalusteeseen (390 px)',
-    Boolean(auki && m?.valikkoAuki && m?.liiku?.osuuPaneeliin),
-    JSON.stringify({ auki, avattu: m?.valikkoAuki, osuu: m?.liiku?.osuuPaneeliin }));
+  vaadi('VASTAKOE F: ilman piilotussääntöä Liiku NÄKYY avatun infotaulun aikana (390 px)',
+    Boolean(auki && m?.valikkoAuki && m?.liiku && !m?.liikuPiilossa),
+    JSON.stringify({ auki, avattu: m?.valikkoAuki, piilossa: m?.liikuPiilossa }));
   await ctx.close();
 }
 

@@ -264,6 +264,20 @@ export const OTSIKON_HAIVYTYS_MS = 700;
 export const MUSTAN_HAIVYTYS_MS = 1100;
 /** Valmiin näkymän kehyksiä ennen paljastusta (tekstuurit piirretty). */
 export const PALJASTUKSEN_KEHYKSET = 3;
+/**
+ * OTSIKKOKORTIN MINIMIAIKA (Raamattu PAATOKSET 53, omistaja 19.9.2026:
+ * "Kun linssi alkaa niin pitäisi olla joku minimi aika kun alkuteksti tai
+ * logo on näytöllä jotta animaatio on rauhallinen"). Mitattu ennen:
+ * paljastus 450–665 ms avauksesta. Nyt otsikko pysyy mustalla vähintään
+ * 1,8 s, vaikka pallo valmistuisi aiemmin.
+ */
+export const PALJASTUKSEN_MINIMI_MS = 1800;
+/**
+ * ISS:n nopeuskerroin avauksen seurannassa (PAATOKSET 53): asema kulkee
+ * kymmenesosanopeudella (0,48 °/s), ja kamera seuraa sitä, joten Maa
+ * pyörii ruudulla hitaasti aseman alla.
+ */
+export const ISS_SEURANNAN_KERROIN = 0.1;
 export const PALJASTUKSEN_LUOKKA = 'astro-paljastus';
 /** Avausajon kesto (ms). Tilaus: 4–6 s. */
 export const AVAUSZOOMIN_KESTO_MS = 5000;
@@ -1575,6 +1589,8 @@ export function luoAvaruusKalvo({
   let issPiste = null;
   let kaarenPisteita = 0;
   let aika = 0;
+  let edellinenSekunti = null;
+  let aikakerroin = 1;
   let purettu = false;
 
   const asetaSade = (r) => {
@@ -1600,7 +1616,20 @@ export function luoAvaruusKalvo({
     const kamera = pallo.camera?.()?.position;
     if (!sade3d || !kamera) return;
     asetaSade(halkaisijaRuudulla(korkeus, { korkeus: kotelo.clientHeight }) / 2);
-    aika = reduced ? 0 : (Number(nyt) || 0) / 1000;
+    /*
+     * AIKA KERTYY KEHYKSISTÄ AIKAKERTOIMELLA (PAATOKSET 53): avauksen
+     * ISS-seurannan ajan asema kulkee hitaammin, jotta Maa pyörii sen
+     * alla rauhallisesti. Ensimmäinen kehys aloittaa kellonajasta kuten
+     * ennenkin; yksittäinen väli katkaistaan 0,25 s:iin.
+     */
+    if (reduced) {
+      aika = 0;
+    } else {
+      const sekunnit = (Number(nyt) || 0) / 1000;
+      if (edellinenSekunti === null) aika = sekunnit;
+      else aika += Math.max(0, Math.min(0.25, sekunnit - edellinenSekunti)) * aikakerroin;
+      edellinenSekunti = sekunnit;
+    }
 
     /* ratakaari: näkyvä puoli katkoviivattomina jaksoina */
     const osat = [];
@@ -1644,6 +1673,10 @@ export function luoAvaruusKalvo({
   return {
     paivita,
     /** Vartion kytkin: varjo ja valoreuna pois/päälle samaan näkymään. */
+    /** ISS:n nopeuskerroin (1 = normaali; PAATOKSET 53 avauksen seuranta). */
+    asetaAikakerroin(k) {
+      aikakerroin = Number.isFinite(k) && k >= 0 ? k : 1;
+    },
     asetaVarjostus(paalla) {
       varjostus = Boolean(paalla);
       varjo.style.opacity = varjostus ? '1' : '0';
@@ -1745,7 +1778,8 @@ export function luoPaljastus({ kotelo, reduced = false, ikkuna = globalThis } = 
     kehys(valmis) {
       if (vaihe !== 'musta') return;
       valmiitaKehyksia = valmis ? valmiitaKehyksia + 1 : 0;
-      if (valmiitaKehyksia >= PALJASTUKSEN_KEHYKSET) { paljasta(); return; }
+      if (valmiitaKehyksia >= PALJASTUKSEN_KEHYKSET
+        && (reduced || Date.now() - alku >= PALJASTUKSEN_MINIMI_MS)) { paljasta(); return; }
       if (Date.now() - alku >= PALJASTUKSEN_KATTO_MS) { katonKautta = true; paljasta(); }
     },
     tila: () => ({ vaihe, paljastettuMs, katonKautta, valmiitaKehyksia }),
@@ -2787,8 +2821,36 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     ohjaimet.autoRotateSpeed = PYORIMISEN_NOPEUS;
     ohjaimet.autoRotate = true;
   }
-  /** Pyöriikö pallo juuri nyt (vartio lukee tämän). */
-  const pyorii = () => Boolean(ohjaimet?.autoRotate);
+  /*
+   * ── ISS KESKELLÄ, MAA PYÖRII SEN ALLA (Raamattu PAATOKSET 53) ─────
+   *
+   * Omistaja 19.9.2026: *"Alussa iss voisi pysyä keskellä ja maapallo
+   * pyöriä kunnes pelaaja pysäyttää liikkeen."* Avauksesta alkaen kamera
+   * seuraa asemaa joka kehyksellä (kameran suunta = aseman leveys ja
+   * pituus), joten ISS pysyy ruudun keskellä ja Maa kiertyy sen alla.
+   * Asema kulkee seurannan ajan ISS_SEURANNAN_KERROIN-nopeudella, jotta
+   * pyöriminen on hidasta. Kirjaston autoRotate on seurannan ajan pois
+   * (kaksi kirjoittajaa kameralle). Pelaajan ensimmäinen ote pysäyttää
+   * seurannan (otePalloon), ja sen jälkeen ohjaus on tavallinen.
+   */
+  const seuranta = { paalla: !reduced && Boolean(kalvo) };
+  if (seuranta.paalla) {
+    kalvo.asetaAikakerroin?.(ISS_SEURANNAN_KERROIN);
+    if (ohjaimet) ohjaimet.autoRotate = false;
+  }
+  const lopetaSeuranta = () => {
+    if (!seuranta.paalla) return;
+    seuranta.paalla = false;
+    kalvo?.asetaAikakerroin?.(1);
+  };
+  const seuraaAsemaa = () => {
+    if (!seuranta.paalla) return;
+    const iss = kalvo?.tila?.()?.iss;
+    if (!Number.isFinite(iss?.lat) || !Number.isFinite(iss?.lng)) return;
+    pallo.pointOfView?.({ lat: iss.lat, lng: iss.lng }, 0);
+  };
+  /** Pyöriikö pallo juuri nyt (vartio lukee tämän); seuranta on pyörimistä. */
+  const pyorii = () => Boolean(ohjaimet?.autoRotate) || seuranta.paalla;
 
   /**
    * AVAUSAJON YKSI KEHYS: korkeus aloituksesta leponäkymään pehmeästi.
@@ -2842,7 +2904,11 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
    * passiivisia, jottei mikään ele hidastu.
    */
   // Mustan alla pelaaja ei näe palloa: ote ei vielä päätä ajoa.
-  const otePalloon = () => { if (!paljastus.odottaa()) paataAvausajo(); };
+  const otePalloon = () => {
+    if (paljastus.odottaa()) return;
+    lopetaSeuranta();
+    paataAvausajo();
+  };
   kotelo?.addEventListener?.('pointerdown', otePalloon, { capture: true, passive: true });
   kotelo?.addEventListener?.('wheel', otePalloon, { capture: true, passive: true });
 
@@ -2866,6 +2932,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      * sama kutsu hoitaa myös nipistyksen ja laitteen kääntämisen.
      */
     kalvo?.paivita?.(t ?? 0, kameranKorkeus());
+    seuraaAsemaa();
     /*
      * SUMU SAMASTA KORKEUDESTA. Kaksi kirjoitusta kehystä kohti
      * (kuoren peitto ja kahden kalvon tyyli) — ei uutta laskentaa,
@@ -2993,6 +3060,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       avauskorkeus: +alt.toFixed(3),
       aloituskorkeus: +aloitusAlt.toFixed(3),
       lepokorkeus: +lepoAlt.toFixed(3),
+      issSeuranta: seuranta.paalla,
       paljastus: paljastus.tila(),
       korkeusNyt: +(pallo.pointOfView?.()?.altitude ?? 0).toFixed(3),
       halkaisijaNytPx: Math.round(halkaisijaRuudulla(

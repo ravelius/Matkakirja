@@ -24784,7 +24784,9 @@ body.fokuspohja .toimintorivi-liuku {
    SÄÄNTÖ EI RAJAA ITSEÄÄN FOKUSNÄKYMÄÄN, koska maataulu on olemassa vain
    siellä — tilauksen ehto ("jos se on laudalla") toteutuu siis itsestään.
    --------------------------------------------------------------------------- */
-body.maataulu-auki .toimintorivi .monitoimi-nappi {
+body.maataulu-auki .toimintorivi .monitoimi-nappi,
+/* Maalehden infotaulu auki (Raamattu, MAALEHDEN INFOTAULU kohta 4). */
+body.infotaulu-auki .toimintorivi .monitoimi-nappi {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -24792,7 +24794,8 @@ body.maataulu-auki .toimintorivi .monitoimi-nappi {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  body.maataulu-auki .toimintorivi .monitoimi-nappi { transition: none; }
+  body.maataulu-auki .toimintorivi .monitoimi-nappi,
+  body.infotaulu-auki .toimintorivi .monitoimi-nappi { transition: none; }
 }
 
 /* ===========================================================================
@@ -26719,6 +26722,125 @@ button.maapaneeli-aihe:active:not(:disabled) {
   .maapaneeli-arvo { font-size: 0.72rem; }
   .maapaneeli-valikko { --otsikko-perus: 10px; }
 }
+
+/* --- MAALEHDEN INFOTAULU: KARTUSCHA (omistaja 19.9.2026) ------------------
+ *
+ * Raamattu, MAALEHDEN INFOTAULU (VASEN ALAKULMA). Levossa kaluste on
+ * ennallaan (nimi, viiva, alarivi) ja saa vain napautusvihjeen. AUKI se
+ * piirretään paperikartuschaan: kevyt läpikuultava paperi ja ohut
+ * reunaviiva, kiinteä leveys noin 40 % ruudusta. Paperi on niin
+ * peittävä, ettei kartan nimiö lue kartuschan tekstin läpi — teksti ei
+ * siis törmää nimiöihin, vaan kartuscha on oma painettu laattansa.
+ *
+ * KAPEALLA RUUDULLA 40 % ei riitä luettavaan riviin (390 px → 156 px),
+ * joten alle 700 px:n ruudulla kartuscha on ruudun levyinen marginaalien
+ * sisällä.
+ * ------------------------------------------------------------------------ */
+.maapaneeli-vihje {
+  display: block;
+  position: relative;
+  width: 2.2em;
+  height: 0.55em;
+  margin-top: 0.12rem;
+  border-top: 1px dotted rgba(74, 52, 33, 0.7);
+}
+.maapaneeli-vihje::after {
+  content: '';
+  position: absolute;
+  left: calc(2.2em + 0.3em);
+  top: -0.42em;
+  width: 0.34em;
+  height: 0.34em;
+  border-right: 1px solid rgba(74, 52, 33, 0.7);
+  border-bottom: 1px solid rgba(74, 52, 33, 0.7);
+  transform: rotate(-135deg);
+}
+.maapaneeli-kortti.valikko-auki .maapaneeli-vihje::after { transform: rotate(45deg); top: -0.62em; }
+
+.maapaneeli-kortti.valikko-auki {
+  width: 40vw;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem 0.85rem 0.75rem;
+  background: rgba(247, 239, 219, 0.94);
+  border: 1px solid rgba(74, 52, 33, 0.55);
+  outline: 1px solid rgba(74, 52, 33, 0.22);
+  outline-offset: -5px;
+  border-radius: 2px;
+  box-shadow: 0 1px 6px rgba(58, 40, 25, 0.18);
+}
+@media (max-width: 700px) {
+  .maapaneeli-kortti.valikko-auki { width: 100%; }
+}
+.maapaneeli-kortti.valikko-auki .maapaneeli-avain { width: 100%; }
+.maapaneeli-kortti.valikko-auki .maapaneeli-alarivi { white-space: normal; }
+.maapaneeli-kortti.valikko-auki .maapaneeli-sisus { width: 100%; margin-top: 0.45rem; }
+
+/* 1873 edellä, isommalla (kohta 3). */
+.maapaneeli-vuosi {
+  margin: 0 0 0.35rem;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.1rem 0.5rem;
+  align-items: baseline;
+}
+.maapaneeli-vuosi[hidden] { display: none; }
+.maapaneeli-vuosi-otsikko {
+  margin: 0;
+  font-size: 0.72rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: rgba(74, 52, 33, 0.78);
+}
+.maapaneeli-vuosi-arvo {
+  margin: 0;
+  font-size: 1.02rem;
+  color: rgba(58, 40, 25, 0.95);
+}
+
+/* Nykyluvut pienempinä "nyt"-riveinä; sijat vasta napautuksesta. */
+.maapaneeli-nyt {
+  grid-column: 1 / -1;
+  margin: 0.1rem 0 0.05rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-style: italic;
+  color: rgba(74, 52, 33, 0.62);
+}
+.maapaneeli-kortti.valikko-auki .maapaneeli-rivit { width: 100%; }
+.maapaneeli-kortti.valikko-auki .maapaneeli-otsikko { font-size: 0.62rem; }
+.maapaneeli-kortti.valikko-auki .maapaneeli-arvo { font-size: 0.7rem; }
+.maapaneeli-kortti .maapaneeli-sija { display: none; }
+.maapaneeli-kortti.sijat-auki .maapaneeli-sija { display: inline; }
+.maapaneeli-kortti.valikko-auki .maapaneeli-kielet { white-space: normal; }
+
+/* Kategoriat viimeisinä napautettavina merkkeinä, pisteviivalla (kohta 1). */
+.maapaneeli-kortti.valikko-auki .maapaneeli-valikko { width: 100%; margin: 0.35rem 0 0; }
+.maapaneeli-kortti.valikko-auki .maapaneeli-otsikkorivi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.85rem;
+  white-space: normal;
+}
+.maapaneeli-kortti.valikko-auki .maapaneeli-aihe {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  white-space: nowrap;
+  text-shadow: none;
+}
+.maapaneeli-kortti.valikko-auki .maapaneeli-aihe-nimi {
+  border-bottom: 1px dotted rgba(74, 52, 33, 0.75);
+}
+.maapaneeli-kortti.valikko-auki .maapaneeli-aihe.on .maapaneeli-aihe-nimi {
+  border-bottom-style: solid;
+  border-bottom-color: var(--aihe-vari, var(--sym-silma));
+}
+/* Paperilla halo on turha: tekstin varjot pois kartuschan sisällä. */
+.maapaneeli-kortti.valikko-auki .maapaneeli-nimi-suomi,
+.maapaneeli-kortti.valikko-auki .maapaneeli-alarivi,
+.maapaneeli-kortti.valikko-auki .maapaneeli-otsikko,
+.maapaneeli-kortti.valikko-auki .maapaneeli-arvo { text-shadow: none; }
 /*
  * NOSTON LAPPU VÄISTÄÄ KAUPUNGIN NIMEÄ PEHMEÄSTI (Raamattu, KAUPUNGIN
  * NIMI NOSTOJEN PAALLA; js/pallolauta/sovittelu.js). Sovittelun pieni

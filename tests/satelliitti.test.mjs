@@ -163,7 +163,12 @@ test('piste on YKSI hehkuva vihreä piste — ei rengasta, ei reunaa, ei pulssia
   assert.match(tyyli, /--satelliitti-vihrea:\s*#5dffa8/);
   // Jatkuva pulssi kieltää pallolta 60 fps:n (js/linssit/kerros.js haivyta):
   // yksikään animaatio ei saa toistua loputtomiin.
-  assert.ok(!/animation:[^;]*infinite/.test(tyyli), 'hehku ei saa sykkiä jatkuvasti');
+  // POIKKEUS (Raamattu PAATOKSET 53, 19.9.2026): minipulun leijunta
+  // valokuvanäkymässä on loputon, mutta se on pelkkä transform napissa
+  // pallon PÄÄLLÄ olevassa valokuvanäkymässä, ei pallon piirrossa, eikä se
+  // koske pisteitä. Muut loputtomat animaatiot ovat yhä kiellettyjä.
+  const ilmanLeijuntaa = tyyli.replace(/animation:\s*satelliitti-pulu-leijuu[^;]*infinite/g, '');
+  assert.ok(!/animation:[^;]*infinite/.test(ilmanLeijuntaa), 'hehku ei saa sykkiä jatkuvasti');
   // Liikkeenvähennys: vakaa hehku ilman ilmestymisanimaatiotakin.
   assert.match(tyyli, /prefers-reduced-motion[\s\S]*satelliitti-piste \{ animation: none/);
 });
