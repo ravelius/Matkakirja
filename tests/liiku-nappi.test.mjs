@@ -36,8 +36,12 @@ import { KEVYET_FOKUSVIRRAT, fokusvirtaKaupungille } from '../js/packs/fokusvirr
 import { Game } from '../js/game.js';
 import { packById } from '../js/pack.js';
 
-/** Kuusi kevyttä kohdetta NIMETTYINÄ — ei pääteltynä (ks. fokusvirrat.js). */
-const KEVYET = ['alpit', 'islanti', 'kreeta', 'lappi', 'sisilia', 'tromssa'];
+/*
+ * Kevyet kohteet NIMETTYINÄ — ei pääteltynä (ks. fokusvirrat.js).
+ * Bryssel (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti)
+ * liittyi seitsemänneksi samaan nimettyyn joukkoon.
+ */
+const KEVYET = ['alpit', 'islanti', 'kreeta', 'lappi', 'sisilia', 'tromssa', 'bryssel'];
 /** Täyden pakin verrokki: Pariisilla on kohtaamispiste ja aarretehtävä. */
 const TAYSI = 'pariisi';
 

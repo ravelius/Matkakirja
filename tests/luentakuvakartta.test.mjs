@@ -24,8 +24,17 @@ test('luentakuvalliset kaupungit johdetaan pakeista', () => {
   const odotus = Object.entries(FOKUSVIRRAT)
     .filter(([, v]) => v?.matkakirja?.luentakuva).map(([id]) => id);
   assert.deepEqual([...joukko].sort(), odotus.sort());
-  assert.equal(joukko.size, Object.keys(FOKUSVIRRAT).length,
-    'kuva on nyt kaikissa kaupungeissa — siksi erillinen väri ei erota mitään');
+  /*
+   * BRYSSEL (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti)
+   * on ensimmäinen poikkeus tähän: kevyt pilottipakki kirjoitettiin
+   * ilman kuvatoimituksen luentakuvaa (sama kuvitusputki kuin muilla
+   * kaupungeilla ei ole vielä ajettu Brysselille). Poikkeus on nimetty,
+   * jotta uusi aukko ei livahda mukaan huomaamatta.
+   */
+  const ILMAN_LUENTAKUVAA = new Set(['bryssel']);
+  const puuttuu = Object.keys(FOKUSVIRRAT).filter((id) => !joukko.has(id));
+  assert.deepEqual(puuttuu.sort(), [...ILMAN_LUENTAKUVAA].sort(),
+    'kuva puuttuu vain nimetyiltä, tietoisesti keskeneräisiltä kaupungeilta');
 });
 
 test('kaupungin piste on alkuperäisessä värissään: ei sinistä merkintää', () => {

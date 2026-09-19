@@ -143,6 +143,7 @@ import { HAHMOTELMA_DNK } from './packs/hahmotelma-dnk.js';
 import { HAHMOTELMA_SVK } from './packs/hahmotelma-svk.js';
 import { HAHMOTELMA_LUX } from './packs/hahmotelma-lux.js';
 import { HAHMOTELMA_CYP } from './packs/hahmotelma-cyp.js';
+import { HAHMOTELMA_MLT } from './packs/hahmotelma-mlt.js';
 import { HAHMOTELMA_HUN } from './packs/hahmotelma-hun.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
@@ -457,6 +458,15 @@ KOHDE_MAAT.LUX = [...(KOHDE_MAAT.LUX ?? []), ...HAHMOTELMA_LUX];
  * että testi menee läpi. Jos järjestystä muutetaan, aja testi.
  */
 KOHDE_MAAT.CYP = [...HAHMOTELMA_CYP, ...(KOHDE_MAAT.CYP ?? [])];
+
+/*
+ * MALTAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48;
+ * Malta kartalle v1968). Paketti odotti tools/odottavat-paketit/-kansiossa,
+ * kunnes maa oli pallolla; rekisteröinti tiedoston alun ohjeen mukaan.
+ * Nostot ovat laudalla 0,5–2 yksikön päässä toisistaan, joten nimiöladonta
+ * on vartioitu (tests/nimiolimitys.test.mjs).
+ */
+KOHDE_MAAT.MLT = [...(KOHDE_MAAT.MLT ?? []), ...HAHMOTELMA_MLT];
 
 /*
  * PUOLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:

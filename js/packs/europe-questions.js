@@ -535,6 +535,46 @@ export const EUROPE_QUESTIONS = {
     },
   ],
 
+  /*
+   * BRYSSEL (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti).
+   * Faktapohja EUROPE_ARTIKKELIT.Bryssel-artikkelista (en-Wikipedia
+   * Brussels / History of Brussels, luettu 19.9.2026), ei uusia
+   * väitteitä.
+   */
+  bryssel: [
+    {
+      q: 'Minkä maan pääkaupunki Bryssel on?',
+      options: ['Belgia', 'Alankomaat', 'Luxemburg', 'Ranska'],
+      correct: 0,
+      level: 1,
+      fact: 'Bryssel on Belgian pääkaupunki ja samalla itsehallinnollinen alue, jonka väestö on suurelta osin ranskankielinen vaikka kaupunki on virallisesti kaksikielinen.',
+      hint: 'Maa itsenäistyi Alankomaista vuonna 1830.',
+      source: 'https://en.wikipedia.org/wiki/Brussels',
+    },
+    {
+      q: 'Mistä pienestä pronssipatsaasta Bryssel on kuuluisa?',
+      options: ['pissivästä pojasta', 'tanssivasta karhusta', 'laulavasta linnusta', 'nukkuvasta leijonasta'],
+      correct: 0,
+      fact: 'Manneken Pis on 1600-luvulla valettu suihkulähdepatsas kaupungin keskustassa, ja se on ollut Brysselin tunnetuimpia nähtävyyksiä jo vuosisatojen ajan.',
+      hint: 'Poika seisoo altaan reunalla selkä katua vasten.',
+      source: 'https://en.wikipedia.org/wiki/Brussels',
+    },
+    {
+      q: 'Mikä suurtyö Brysselin keskustassa valmistui juuri ennen isoisän matkaa, 1867–1871?',
+      options: [
+        'Sennejoen kattaminen kaupungin alta',
+        'metrotunnelin louhinta',
+        'satama-altaan ruoppaus',
+        'rautatieaseman siirto maan alle',
+      ],
+      correct: 0,
+      level: 3,
+      fact: 'Pormestari Jules Anspachin johdolla likainen ja usein tulviva Senne-joki katettiin keskustan kohdalta ja sen päälle rakennettiin leveät bulevardit — työ valmistui vuonna 1871.',
+      hint: 'Kyse on joesta, joka virtaa kaupungin halki.',
+      source: 'https://en.wikipedia.org/wiki/History_of_Brussels',
+    },
+  ],
+
   berliini: [
     {
       q: 'Minkä maan pääkaupunki Berliini on?',
@@ -2266,6 +2306,14 @@ export const EUROPE_FACTS = {
     'Kaupungissa on enemmän polkupyöriä kuin asukkaita, ja pyöriä nostetaan vuosittain tuhansittain kanavista.',
     {
       text: 'Talot seisovat paalujen päällä pehmeässä maassa ja nojaavat toisiinsa kuin väsyneet herrat. Osa maasta on merenpinnan alapuolella ja pysyy kuivana vain siksi, että sitä pumpataan.',
+      voice: 'isoisa',
+    },
+  ],
+  bryssel: [
+    'Grand-Placen kauppahuoneet rakennettiin uudelleen 1690-luvun lopulla, kun Ranskan tykistö pommitti torin raunioiksi vuonna 1695 — nykyiset kullatut julkisivut ovat siis jälleenrakennusta, ei alkuperäisiä.',
+    'Galeries Royales Saint-Hubert avattiin vuonna 1847 lasikattoisena kauppakujana, ja se oli aikanaan yksi Euroopan ensimmäisistä katetuista ostoskaduista.',
+    {
+      text: 'Belgian suklaa on vielä tavallista kaakaolevyä: täytetty praliini keksitään täällä vasta neljänkymmenen vuoden päästä. Torilla myydään sen sijaan pitsiä, jota nyplätään sormin niin nopeasti, etten ehdi seurata.',
       voice: 'isoisa',
     },
   ],

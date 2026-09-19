@@ -355,6 +355,29 @@ export const PAIKALLISAARTEET = {
         + 'tilikirjoissa.',
     },
   },
+  /*
+   * BELGIA (19.9.2026, omistajan päätös: Belgian pelikaupunki Bryssel,
+   * pilotti). Ei kuvaa vielä (KUVAA_ODOTTAVAT-lista,
+   * tests/paikallisaarteet.test.mjs) — samat kuvat generoidaan myöhemmin
+   * kuin muillekin maille.
+   */
+  BEL: {
+    pieniAarre: {
+      name: 'Käärö brysseliläistä pitsiä',
+      fakta: 'Brysseliläistä pitsiä on nyplätty käsin 1600-luvulta asti, '
+        + 'kymmenillä puunapeilla yhtä aikaa ilman että tekijä katsoo '
+        + 'käsiään. Työ vaati niin paljon aikaa, että valmis liina saattoi '
+        + 'maksaa enemmän kuin tekijänsä koko vuoden palkka.',
+    },
+    isoAarre: {
+      name: 'Antwerpenin timanttihiojan kätkö',
+      fakta: 'Antwerpenista on hiottu timantteja 1400-luvulta lähtien, ja '
+        + 'kaupungista tuli Euroopan johtava timanttikeskus, kun '
+        + 'portugalinjuutalaiset pakolaiset toivat hiontataidon mukanaan '
+        + '1500-luvulla. Suuri osa maailman raakatimanteista kulkee yhä '
+        + 'Antwerpenin kauppiaiden kautta.',
+    },
+  },
   GBR: {
     pieniAarre: {
       name: 'Purkki marmeladia',

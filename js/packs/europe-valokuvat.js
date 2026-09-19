@@ -1443,6 +1443,37 @@ export const EUROPE_VALOKUVAT = {
     },
   },
 
+  /*
+   * BRYSSEL (19.9.2026, Sonnet-sisältösessio). Kaksi Commons-kuvaa
+   * Grand-Placesta ja Manneken Pis'stä; lisenssit tarkistettu Commonsin
+   * imageinfo/extmetadata-rajapinnasta 19.9.2026 (kumpikin CC, ei
+   * tunnistettavia yksityishenkilöitä lähikuvassa). Sama linja kuin
+   * muulla Euroopalla Ateenasta lähtien: kuvat haetaan suoraan
+   * Commonsista, ei paikallista kopiota (ks. tiedoston alkukommentti).
+   */
+  bryssel: {
+    lisat: [
+      {
+        tiedosto: 'Grand-Place, Brussels - panorama, June 2018.jpg',
+        vuosi: '2018',
+        lahde: 'Celuici, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Grand-Place Brysselin keskustassa vuonna 2018.',
+        selite: 'Grand-Placen kiltatalot ja raatihuoneen torni. Tori '
+          + 'ammuttiin raunioiksi Ranskan tykistöllä vuonna 1695, ja '
+          + 'porvarikillat rakensivat julkisivut nykyiseen, kullattuun '
+          + 'asuunsa muutamassa vuodessa sen jälkeen.',
+      },
+    ],
+    tiedosto: 'Manneken Pis, Brussels (DSCF4467).jpg',
+    vuosi: '2018',
+    lahde: 'Trougnouf, Commons (CC BY 4.0)',
+    lyhyt: 'Manneken Pis -suihkulähdepatsas Brysselin keskustassa.',
+    selite: 'Manneken Pis, kaupungin tunnetuin pikkupatsas. Pronssinen '
+      + 'poika on seisonut kadunkulmassa 1600-luvulta asti, ja häntä on '
+      + 'sittemmin puettu satoihin eri asuihin juhlapäivinä — tässä '
+      + 'kuvassa hän on ilman.',
+  },
+
   berliini: {
 
     lisat: [

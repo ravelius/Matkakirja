@@ -155,8 +155,15 @@ test('kaupungin kohdalla olevien nostojen työlista ei kasva', () => {
   assert.ok(kesken.length <= 52,
     `kaupungin kohdalla on pääkartalla ${kesken.length} nostoa (säde `
     + `${KAUPUNGIN_KOHDALLA_SADE}), enintään 52 sallittu — uusi nosto kuuluu kohdekartalle`);
+  // 48 → 49 (19.9.2026): Bryssel liittyi pelikaupungiksi (omistajan
+  // päätös, Belgian pilotti), ja Tervurenin museonosto
+  // (hahmotelma-tervuren) osuu nyt kaupungin kohdalle syyllä
+  // "kohdekarttaa ei ole" — Brysselillä ei vielä ole kaupunkikarttaa
+  // (docs/raportit/viesti-fable-kaupunkiresepti-20260919.md, luku 4
+  // kohta 11, vaihtoehto 3). Katto nousee vain tämän yhden noston
+  // verran; muiden kaupunkien luku ei saa yhä kasvaa.
   const muutKuinHetket = kesken.filter((r) => r.kaupunginKohdalla !== 'hetki');
-  assert.ok(muutKuinHetket.length <= 48,
+  assert.ok(muutKuinHetket.length <= 49,
     `muita kuin hetkiä on kaupungin kohdalla ${muutKuinHetket.length} — luku saa vain laskea`);
 });
 
