@@ -6,7 +6,7 @@
 # 1) savukkeet-mac — PÄÄREITTI. Mac Studion self-hosted-runner
 #    (SamiMacStudio2, labelit self-hosted/macOS/ARM64) ajaa KOKO sarjan
 #    YHDESSÄ jobissa: tools/savukkeet/aja-sarja.mjs käynnistää savukkeet
-#    rinnakkain lapsiprosesseina (SAVUKE_RINNAKKAIN, oletus 6). Yksi
+#    rinnakkain lapsiprosesseina (SAVUKE_RINNAKKAIN, oletus 4). Yksi
 #    self-hosted-runner ajaa yhden jobin kerrallaan, joten GitHubin
 #    matriisi (12 rinnakkaista ubuntu-jobia) ei sovi sille. Koneella on
 #    node ja Playwrightin selain valmiina — ei setup-nodea, ei
@@ -92,7 +92,17 @@ jobs:
       # pisin rivi alle 2 min, joten seinäkello = kokonaistyö / 12.
       # Mac Studio: 16 ydintä, 64 Gt. Historia: 4 → 9 min 40 s,
       # 8 → 6 min, 12 → ks. docs/raportit/viesti-fable-ci-kierros2-*.
-      SAVUKE_RINNAKKAIN: '12'
+      # 6 rinnakkain (omistaja 19.9.2026 klo 15.30 ja Fablen päätös klo
+      # 15.35 Suomen aikaa; oli 12): Macin kuormakeskiarvo oli 96, kun
+      # sarjan Chromiumit ajoivat samaan aikaan agenttien selainten kanssa,
+      # ja kellovartiot häilyivät. Hinta seinäkellossa (pisin rivi
+      # ratkaisee vain, kun paikkoja on yhtä paljon kuin pitkiä rivejä):
+      # 32 riviä, 18.9. kestot 12:n kuormassa, jonosimulaatio 12 → 269 s,
+      # 6 → 513 s, 4 → 759 s (ylärajoja; kevyemmässä kuormassa rivit
+      # lyhenevät). Paikallinen aja-sarja.mjs:n oletus on 4 (agenttien ja
+      # käsiajojen rinnalla). Raportti docs/raportit/
+      # viesti-fable-testit-github-20260919.md.
+      SAVUKE_RINNAKKAIN: '6'
       TULOKSET: /tmp/matkakirja-savukkeet/${{ github.run_id }}
     steps:
       # CHECKOUT ILMAN docs/-KANSIOTA (Fable/omistaja 18.9.2026, Raamattu
