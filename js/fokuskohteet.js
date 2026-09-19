@@ -135,14 +135,17 @@ import { HAHMOTELMA_AUT } from './packs/hahmotelma-aut.js';
 import { HAHMOTELMA_NLD } from './packs/hahmotelma-nld.js';
 import { HAHMOTELMA_IRL } from './packs/hahmotelma-irl.js';
 import { HAHMOTELMA_HRV } from './packs/hahmotelma-hrv.js';
+import { HAHMOTELMA_BGR } from './packs/hahmotelma-bgr.js';
 import { HAHMOTELMA_POL } from './packs/hahmotelma-pol.js';
 import { HAHMOTELMA_CZE } from './packs/hahmotelma-cze.js';
 import { HAHMOTELMA_SWE } from './packs/hahmotelma-swe.js';
 import { HAHMOTELMA_DNK } from './packs/hahmotelma-dnk.js';
+import { HAHMOTELMA_SVK } from './packs/hahmotelma-svk.js';
 import { HAHMOTELMA_HUN } from './packs/hahmotelma-hun.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
 import { HAHMOTELMA_FIN } from './packs/hahmotelma-fin.js';
+import { HAHMOTELMA_ROU } from './packs/hahmotelma-rou.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -409,6 +412,24 @@ KOHDE_MAAT.IRL = [...(KOHDE_MAAT.IRL ?? []), ...HAHMOTELMA_IRL];
 KOHDE_MAAT.HRV = [...(KOHDE_MAAT.HRV ?? []), ...HAHMOTELMA_HRV];
 
 /*
+ * BULGARIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti kaupungin (Sofia) ulkopuolella,
+ * lähin yli 20 lautayksikön päässä.
+ */
+KOHDE_MAAT.BGR = [...(KOHDE_MAAT.BGR ?? []), ...HAHMOTELMA_BGR];
+
+/*
+
+/*
+ * SLOVAKIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; Slovakiassa ei ole pelikaupunkia, joten kaupunkikohteet
+ * (Bratislava, Košice ym.) ovat sallittuja.
+ */
+KOHDE_MAAT.SVK = [...(KOHDE_MAAT.SVK ?? []), ...HAHMOTELMA_SVK];
+
+/*
  * PUOLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
  * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
  * hahmotelmalla; rivit ovat aidosti pelikaupunkien (Varsova, Krakova)
@@ -473,6 +494,16 @@ KOHDE_MAAT.ITA = [...(KOHDE_MAAT.ITA ?? []), ...HAHMOTELMA_ITA];
  * lautayksikön päässä.
  */
 KOHDE_MAAT.FIN = [...(KOHDE_MAAT.FIN ?? []), ...HAHMOTELMA_FIN];
+
+/*
+ * ROMANIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla; rivit ovat aidosti kaupungin
+ * (Bukarest) ulkopuolella, lähin (Ploiești) yli 8 lautayksikön päässä.
+ */
+KOHDE_MAAT.ROU = [...(KOHDE_MAAT.ROU ?? []), ...HAHMOTELMA_ROU];
+
+/*
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN

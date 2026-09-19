@@ -101,8 +101,8 @@ export const HAHMOTELMA_SWE = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-sarek-9e78f647.jpg',
         lyhyt: 'Tjakkeli-tunturi ja Lulep Suobbatjávrre Kungsledeniltä katsottuna.',
         selite: 'Näkymä Kungsleden-vaellusreitiltä Sarekin kansallispuistossa kohti '
-          + 'Tjakkeli-tunturia ja sen edustan järveä. Artikkelin mukaan Kungsleden kulkee '
-          + 'puiston itäosan halki.',
+          + 'Tjakkeli-tunturia ja sen edustan järveä. Kungsleden kulkee puiston itäosan '
+          + 'halki.',
         lahde: 'Valokuva: Trougnouf (Benoit Brummer), Wikimedia Commons (CC BY 4.0).',
         tekija: 'Trougnouf (Benoit Brummer)',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tjakkeli_and_Lulep_Suobbatj%C3%A1vrre_viewed_from_the_Kungsleden_in_Sarek_National_Park_(DSCF2781).jpg',
@@ -154,8 +154,7 @@ export const HAHMOTELMA_SWE = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-abisko-cd41bcc4.jpg',
         lyhyt: 'Revontulet taivaalla Abiskossa Torneträsk-järven lähellä.',
         selite: 'Vihreät revontulet loimuavat lumisen rinteen yllä Abiskon kansallispuistossa. '
-          + 'Artikkelin mukaan puisto on valosaasteeton ja siksi hyvä revontulten '
-          + 'katseluun.',
+          + 'Puisto on valosaasteeton ja siksi hyvä revontulten katseluun.',
         lahde: 'Valokuva: Pavel.shyshkouski, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Pavel.shyshkouski',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aurora_in_Abisko_near_Tornetr%C3%A4sk.jpg',
@@ -435,8 +434,8 @@ export const HAHMOTELMA_SWE = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-hoga-kusten-3fd22a3d.jpg',
         lyhyt: 'Högakustenbron-riippusilta Höga kustenin eteläreunalla.',
-        selite: 'Silta on maailmanperintökohteen eteläinen päätepiste: artikkelin mukaan kohde '
-          + 'ulottuu sillalta etelässä Skagsuddeen pohjoisessa.',
+        selite: 'Silta on maailmanperintökohteen eteläinen päätepiste: kohde ulottuu sillalta '
+          + 'etelässä Skagsuddeen pohjoisessa.',
         lahde: 'Valokuva: Tunegravity, Wikimedia Commons (CC0).',
         tekija: 'Tunegravity',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:High_Coast_Bridge,_Sweden_in_summer.jpg',
@@ -784,9 +783,8 @@ export const HAHMOTELMA_SWE = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-gripsholm-11991860.jpg',
         lyhyt: 'Kustaa III:n linnateatteri Gripsholmissa.',
-        selite: 'Kustaa III:n rakennuttama teatteri sijaitsee linnan pyöreässä tornissa. '
-          + 'Commonsin mukaan se on yksi Euroopan parhaiten säilyneistä 1700-luvun '
-          + 'teattereista.',
+        selite: 'Kustaa III:n rakennuttama teatteri sijaitsee linnan pyöreässä tornissa. Se on '
+          + 'yksi Euroopan parhaiten säilyneistä 1700-luvun teattereista.',
         lahde: 'Valokuva: ArildV, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'ArildV',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Slottsteatern_Gripsholm_2016_01.jpg',
@@ -899,8 +897,8 @@ export const HAHMOTELMA_SWE = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-lacko-f4079e74.jpg',
         lyhyt: 'Läckön linna heijastuu tyynestä vedestä auringonlaskun valossa.',
-        selite: 'Kuvan mukaan linna on kuvattu Kållandsön saarella auringonlaskun aikaan. Vesi '
-          + 'ja pilvinen taivas tekevät linnan ympärille tunnelmallisen maiseman.',
+        selite: 'Linna on kuvattu Kållandsön saarella auringonlaskun aikaan. Vesi ja pilvinen '
+          + 'taivas tekevät linnan ympärille tunnelmallisen maiseman.',
         lahde: 'Valokuva: Billy Palmius, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Billy Palmius',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:L%C3%A4ck%C3%B6_Slott_vid_solnedg%C3%A5ng.jpg',
@@ -1030,7 +1028,7 @@ export const HAHMOTELMA_SWE = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-kivik-006b8d76.jpg',
         lyhyt: 'Näkymä Kuninkaanhaudan ovelta ulos kivimuurien välistä.',
         selite: 'Kuvassa katsotaan hautaröykkiön ovelta kivetyn käytävän ja kivimuurien '
-          + 'ylitse. Taustalla on rakennus, jota Commonsin kuvaus kutsuu majataloksi.',
+          + 'ylitse. Taustalla on rakennus, jota kuvataan majataloksi.',
         lahde: 'Valokuva: Schorle, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Schorle',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kungagraven_Kivik_(21).JPG',
@@ -1218,9 +1216,9 @@ export const HAHMOTELMA_SWE = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-jokkmokk-cdd84c0e.jpg',
       lyhyt: 'Ájtte-museon rakennus Jokkmokkissa; etualalla poroveistos.',
-      selite: 'Ájtte on Ruotsin vuori- ja saamelaismuseo Jokkmokkissa (Commonsin nimi Svenskt '
-        + 'fjäll- och samemuseum). Artikkelin mukaan museo on yksi Jokkmokkin saamelaisiin '
-        + 'liittyvistä laitoksista.',
+      selite: 'Ájtte on Ruotsin vuori- ja saamelaismuseo Jokkmokkissa (ruotsiksi Svenskt '
+        + 'fjäll- och samemuseum). Museo on yksi Jokkmokkin saamelaisiin liittyvistä '
+        + 'laitoksista.',
       lahde: 'Valokuva: Dove SV, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Dove SV',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C3%81jtte,_Svenskt_fj%C3%A4ll-_och_samemuseum.JPG',
@@ -1296,8 +1294,8 @@ export const HAHMOTELMA_SWE = [
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-vimmerby-cc74fb58.jpg',
       lyhyt: 'Keltaisia taloja Vimmerbyn keskustassa Storgatan-kadun varrella.',
       selite: 'Näkymä Vimmerbyn pääkadulta Storgatanilta, jossa vanhat rakennukset reunustavat '
-        + 'katua. Artikkelin mukaan kadun muoto on säilynyt keskiajalta ja kaupungissa on '
-        + 'paljon vanhoja puutaloja.',
+        + 'katua. Kadun muoto on säilynyt keskiajalta ja kaupungissa on paljon vanhoja '
+        + 'puutaloja.',
       lahde: 'Valokuva: I99pema, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'I99pema',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Storgatan,_Vimmerby_02.jpg',
@@ -1384,8 +1382,8 @@ export const HAHMOTELMA_SWE = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-kalix-e9654e7c.jpg',
         lyhyt: 'Lusikallinen oranssia Kalixin löjromia, muikun mätiä.',
-        selite: 'Kalixin löjrom on muikun mätiä. Artikkelin mukaan jokien makea vesi tekee sen '
-          + 'mausta ainutlaatuisen. Kuva on vuodelta 2010.',
+        selite: 'Kalixin löjrom on muikun mätiä. Jokien makea vesi tekee sen mausta '
+          + 'ainutlaatuisen. Kuva on vuodelta 2010.',
         lahde: 'Valokuva: Dalmato99, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Dalmato99',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Caviar_of_Kalix.jpg',
@@ -1396,9 +1394,9 @@ export const HAHMOTELMA_SWE = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-kalix-ab0c5657.jpg',
         lyhyt: 'Kalixjoen ranta Kalixin keskustassa: laituri, punainen vene ja punainen '
           + 'rakennus.',
-        selite: 'Näkymä Kalixjoen yli Centrumkajen-rantaan Kalixin keskustassa; Commonsin '
-          + 'kuvauksen mukaan rannalla toimii Kalixin kalastusmuseo. Joen vanhan nimen '
-          + 'uskotaan tarkoittaneen ”kylmää jokea”.',
+        selite: 'Näkymä Kalixjoen yli Centrumkajen-rantaan Kalixin keskustassa; rannalla '
+          + 'toimii Kalixin kalastusmuseo. Joen vanhan nimen uskotaan tarkoittaneen '
+          + '”kylmää jokea”.',
         lahde: 'Valokuva: Villr99, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Villr99',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Centrumkajen_i_Kalix_vid_Kalixälven_2013.jpg',
@@ -1604,7 +1602,7 @@ export const HAHMOTELMA_SWE = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-halsingegardar-01c5ae32.jpg',
         lyhyt: 'Gästgivars, yksi Hälsingen maailmanperintötiloista Vallstassa.',
         selite: 'Gästgivars kuuluu samaan Unescon maailmanperintökohteeseen kuin Erik-Anders; '
-          + 'artikkeli sijoittaa sen Vallstaan Bollnäsin kuntaan. Kuvassa kaksikerroksinen '
+          + 'se sijaitsee Vallstassa Bollnäsin kunnassa. Kuvassa kaksikerroksinen '
           + 'päärakennus ja oikealla toinen rakennus.',
         lahde: 'Valokuva: Catasa, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Catasa',
@@ -1647,8 +1645,8 @@ export const HAHMOTELMA_SWE = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-karlskoga-14de3d5b.jpg',
       lyhyt: 'Björkbornin kartano Karlskogassa, jossa Alfred Nobel asui kesäisin.',
-      selite: 'Valkoinen kaksikerroksinen kartanorakennus ympäröivine puistoineen. Artikkelin '
-        + 'mukaan Nobel asui Björkbornin kartanossa kesäisin 1894–1896.',
+      selite: 'Valkoinen kaksikerroksinen kartanorakennus ympäröivine puistoineen. Nobel asui '
+        + 'Björkbornin kartanossa kesäisin 1894–1896.',
       lahde: 'Valokuva: Eskil Malmberg, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Eskil Malmberg',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bj%C3%B6rkborns_herrg%C3%A5rd.jpg',
@@ -1671,8 +1669,8 @@ export const HAHMOTELMA_SWE = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-karlskoga-5b264f82.jpg',
         lyhyt: 'Karlskogan kirkko punaisine seinineen ja vihreine tornin huippuineen.',
         selite: 'Punaseinäinen kirkko, jonka patinoitunut vihreä tornin huippu erottuu '
-          + 'pilvistä taivasta vasten. Artikkelin mukaan seurakunnan vanhin kirkko voidaan '
-          + 'jäljittää 1600-luvulle.',
+          + 'pilvistä taivasta vasten. Seurakunnan vanhin kirkko voidaan jäljittää '
+          + '1600-luvulle.',
         lahde: 'Valokuva: AleWi, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'AleWi',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Karlskoga_kyrka,_20220902.jpg',
@@ -1729,8 +1727,8 @@ export const HAHMOTELMA_SWE = [
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-eskilstuna-a7a07950.jpg',
       lyhyt: 'Punaisia puurakennuksia Rademachersmedjornan kadun varrella Eskilstunassa.',
       selite: 'Rademachersmedjorna eli \'Rademacherin takomot\' on Eskilstunan vanha takomoalue. '
-        + 'Artikkelin mukaan Karl Gustavs Stad rakennettiin seppä Reinhold Rademacherin '
-        + 'takomoiden ympärille.',
+        + 'Karl Gustavs Stad rakennettiin seppä Reinhold Rademacherin takomoiden '
+        + 'ympärille.',
       lahde: 'Valokuva: Calle Eklund/V-wolf, Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'Calle Eklund/V-wolf',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rademachersmedjorna_04.jpg',
@@ -1808,8 +1806,8 @@ export const HAHMOTELMA_SWE = [
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-norrkoping-22c6d61d.jpg',
       lyhyt: 'Entinen Holmens bruk -tehdasrakennus joen rannalla Norrköpingissä.',
       selite: 'Keltainen tehdasrakennus ja punatiilisiä teollisuusrakennuksia Motala ströminin '
-        + 'varrella; oikealla virtaa koski. Artikkelin mukaan tunnettu Holmenin '
-        + 'paperitehdas ilmoitti sulkemisestaan vuonna 1970.',
+        + 'varrella; oikealla virtaa koski. Tunnettu Holmenin paperitehdas ilmoitti '
+        + 'sulkemisestaan vuonna 1970.',
       lahde: 'Valokuva: ArildV, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'ArildV',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Holmens_bruk_October_2024_01.jpg',
@@ -1820,10 +1818,9 @@ export const HAHMOTELMA_SWE = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-norrkoping-451086cd.jpg',
         lyhyt: 'Norrköpingin teollisuusmaisema Motala ströminin varrella mustavalkokuvassa.',
-        selite: 'Commonsin kuvauksen mukaan Industrilandskapet on hyvin säilynyt '
-          + 'historiallinen teollisuusalue joen varrella, jossa teollistuminen alkoi '
-          + '1600-luvulla. Artikkeli kertoo, että joen varrella sijaitsivat aikanaan '
-          + 'vanhat tekstiilitehtaat.',
+        selite: 'Industrilandskapet on hyvin säilynyt historiallinen teollisuusalue joen '
+          + 'varrella, jossa teollistuminen alkoi 1600-luvulla. Joen varrella sijaitsivat '
+          + 'aikanaan vanhat tekstiilitehtaat.',
         lahde: 'Valokuva: Arild Vågen, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Arild Vågen',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Industrilandskapet_Norrk%C3%B6ping_February_2017.jpg',
@@ -1879,8 +1876,7 @@ export const HAHMOTELMA_SWE = [
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-gammelstad-c267ed89.jpg',
       lyhyt: 'Nederluleån kirkko ja sitä ympäröivät kirkkomajat ilmakuvassa.',
       selite: 'Kivikirkko ja valkoinen kellotorni kohoavat kirkkokylän keskellä, ja ympärillä '
-        + 'on punaisia ja vaaleita puutaloja. Artikkelin mukaan kirkko on kylän ainoa '
-        + 'kivirakennus.',
+        + 'on punaisia ja vaaleita puutaloja. Kirkko on kylän ainoa kivirakennus.',
       lahde: 'Valokuva: Tortap, Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'Tortap',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nederlule%C3%A5_kyrka_2.jpg',
@@ -1903,8 +1899,8 @@ export const HAHMOTELMA_SWE = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-gammelstad-c93ac87f.jpg',
         lyhyt: 'Nederluleån harmaakivikirkko ja valkoinen kellotorni Gammelstadissa.',
-        selite: 'Nederluleån kirkko on 1400-luvun lopun kivikirkko, jonka koko kertoo '
-          + 'artikkelin mukaan seudun vauraudesta.',
+        selite: 'Nederluleån kirkko on 1400-luvun lopun kivikirkko, jonka koko kertoo seudun '
+          + 'vauraudesta.',
         lahde: 'Valokuva: Lars Falkdalen Lindahl, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Lars Falkdalen Lindahl',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Nederlule%C3%A5_church_October_2011.jpg',
@@ -1945,7 +1941,7 @@ export const HAHMOTELMA_SWE = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-almhult-1fbfd487.jpg',
       lyhyt: 'IKEA-museon rakennus Älmhultissa.',
-      selite: 'IKEA-museo avattiin Älmhultissa 30. kesäkuuta 2016, ja se esittelee IKEAn '
+      selite: 'IKEA-museo avattiin Älmhultissa 30. Kesäkuuta 2016, ja se esittelee IKEAn '
         + 'historiaa.',
       lahde: 'Valokuva: Kigsz, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Kigsz',
@@ -1957,8 +1953,8 @@ export const HAHMOTELMA_SWE = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-almhult-595625bd.jpg',
         lyhyt: 'Älmhultin kirkko: keltainen rakennus ja tumma kellotorni.',
-        selite: 'Commonsin sivun mukaan kuvassa on Älmhultin kirkko Smålandissa. Rakennuksen '
-          + 'tumma kellotorni kohoaa vaalean kirkkorakennuksen päältä.',
+        selite: 'Kuvassa on Älmhultin kirkko Smålandissa. Rakennuksen tumma kellotorni kohoaa '
+          + 'vaalean kirkkorakennuksen päältä.',
         lahde: 'Valokuva: MPD01605 from Sterling, Virginia, United States, Wikimedia Commons (CC BY-SA 2.0).',
         tekija: 'MPD01605 from Sterling, Virginia, United States',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C3%84lmhults_kyrka_2011.jpg',
@@ -1968,8 +1964,7 @@ export const HAHMOTELMA_SWE = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/swe-nosto-almhult-ef924d64.jpg',
         lyhyt: 'Älmhultin rautatieasemarakennus.',
-        selite: 'Commonsin sivun mukaan kuvassa on Älmhultin rautatieasema (Järnvägsstationen '
-          + 'i Älmhult).',
+        selite: 'Kuvassa on Älmhultin rautatieasema (Järnvägsstationen i Älmhult).',
         lahde: 'Valokuva: Sven pe, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Sven pe',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Almhult_railroad_station.JPG',
