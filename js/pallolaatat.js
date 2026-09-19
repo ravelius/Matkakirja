@@ -2452,6 +2452,42 @@ export function luoLaattakerros({
 
   const kaynnista = () => {
     if (purettu) return;
+    /*
+     * ── LINSSI KATKAISEE JONON HETI (19.9.2026) ───────────────────────
+     *
+     * `kerrokset` päivittyy vain `suorita`ssa, joka ajetaan pallon
+     * piirtokoukusta. Latausjono sen sijaan valuu ITSESTÄÄN: jokainen
+     * valmistunut haku kutsuu `kaynnista`n uudestaan, eikä se katso
+     * kehyksiä lainkaan. Kun topografialinssi avataan, pohjalaattojen
+     * jono on siis yhä entisellään, ja se ehtii lähettää lisää
+     * seepiapohjan hakuja ennen kuin ensimmäinen kehys käy —
+     * kuormitetulla koneella kehysten väli venyy sadoiksi
+     * millisekunneiksi, ja juuri silloin savuke näki 1–3 pohjalaattaa
+     * linssin ajalta (tools/savukkeet/savuke-topografialinssi.mjs,
+     * kolme rinnakkaista ajoa 19.9.2026; yksin ajettuna 0).
+     *
+     * Portti on siksi tässä eikä vain `suorita`ssa: jos linssin tila on
+     * vaihtunut viime päivityksen jälkeen, jonossa oleva laatta on
+     * VÄÄRÄÄ KARTTAA eikä vanhentunutta karttaa. Jonoa ei käynnistetä,
+     * ja kesken olevat haut katkaistaan (AbortController) — turha
+     * verkkoliikenne on puhelimella oikeaa rahaa. Seuraava `suorita`
+     * purkaa laatat ja kokoaa jonon uudestaan oikeilla kerroksilla,
+     * kuten ennenkin (sukupolvi + `poista`).
+     *
+     * Sama portti pätee molempiin suuntiin: linssin sulkeutuessa
+     * reliefilaattojen jono katkeaa samalla tavalla.
+     */
+    if (kerrokset && kerrokset.reliefi !== pyramidinReliefiKaytossa()) {
+      for (const t of jono) t.jonossa = false;
+      jono.length = 0;
+      mittarit.jonossa = 0;
+      for (const t of laatat.values()) {
+        if (t.aloitettu && t.tila === 'ladataan') {
+          try { t.katkaisin?.abort?.(); } catch { /* ei väliä */ }
+        }
+      }
+      return;
+    }
     // Näkyvät ensin, sitten ennakko ja pidetyt — kumpikin ruudun keskeltä.
     jono.sort((a, b) => (a.nakyva ? 0 : 1) - (b.nakyva ? 0 : 1) || a.etaisyys - b.etaisyys);
     while (ladattavia < LAATTAKERROS_RINNAKKAIN && jono.length) {
