@@ -503,7 +503,17 @@ export function luoAstroSumu({
    * proseduraaliset pilvet jäävät voimaan. Kangas maalataan VASTA kun
    * bittikartta on käsissä, juuri tästä syystä.
    */
+  /*
+   * PILVIEN LOPULLINEN KUVA ON RATKAISSUT (PAATOKSET 52): aito kuva on
+   * maalattu tai sen haku päättyi (offline, virhe). Linssin paljastus
+   * odottaa tätä, jottei pelaaja näe proseduraalisten pilvien vaihtuvan
+   * aitoihin kesken kuvan.
+   */
+  let pilvetValmiit = !PILVIEN_OSOITE || !pilvikangasOlio || !pilvet;
   const maalaaAitoPilvikuva = async () => {
+    try { return await maalaaAitoPilvikuvaRaaka(); } finally { pilvetValmiit = true; }
+  };
+  const maalaaAitoPilvikuvaRaaka = async () => {
     if (!PILVIEN_OSOITE || !pilvikangasOlio || !pilvet) return false;
     try {
       const ctx = pilvikangasOlio.getContext?.('2d');
@@ -671,6 +681,7 @@ export function luoAstroSumu({
       pilvet: +pilvienPeittoNyt.toFixed(3),
       pilvienNakyvyys: pilvet?.nakyvyys?.() ?? null,
       pilvetLadattu: Boolean(pilvet?.ladattu?.()),
+      pilvetValmiit,
       pilvetPiilossa,
       pilvienKulmaAstetta: +((pilvienKulma * 180) / Math.PI).toFixed(3),
       kerroksia: kalvot.length,

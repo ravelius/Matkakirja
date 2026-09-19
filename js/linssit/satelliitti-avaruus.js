@@ -232,8 +232,39 @@ export const AVAUKSEN_MARGINAALI = 0.08;
  * valikkopallolla; (3) `enableRotate = false` ei estä sitä — kirjasto
  * tarkistaa vain, ettei sormi ole alhaalla.
  */
-/** Reunan rako avausajon ALUSSA (pallo 65 % ruudun kapeimmasta). */
-export const ALOITUKSEN_MARGINAALI = 0.35;
+/**
+ * Reunan rako avausajon ALUSSA. PAATOKSET 52 (omistaja 19.9.2026 klo
+ * 20.51): avaus alkaa lähempää — koko pallo 92 %:na ruudun kapeimmasta
+ * sivusta (sama rako kuin avauskorkeudella) — ja ajo vie sen
+ * lepokorkeuteen, jossa reunat rajautuvat ruudun ulkopuolelle.
+ */
+export const ALOITUKSEN_MARGINAALI = AVAUKSEN_MARGINAALI;
+/**
+ * LEPOKORKEUS avauskorkeuden osuutena (PAATOKSET 52, sanatarkasti:
+ * *"Pallo saisi lisäksi zoomautua lähemmäs niin että pallo täyttää kuva
+ * alan melkein kokonaan ja pallosta rajautuu osia ruudun ulkopuolelle.
+ * Kuitenkin sen verran kaukana että sumu näkyy edelleen pallon
+ * päällä."*). Pilvet ovat täydessä peitossa suhteesta PILVIEN_TAYSI
+ * (0,65 × avauskorkeus) ylöspäin (js/linssit/astro-sumu.js), joten 0,72
+ * jättää 0,07:n varan: pilvikuori on täysi ja avaruussumu lähellä
+ * tiheintä kohtaansa. Puhelimella (390 × 844) pallo on noin 1,3 ×
+ * ruudun leveys. Avauskorkeus pysyy kaikkien profiilien (pilvet, sumu,
+ * nimet, zoomirajat) mittana; vain kameran lepopaikka on lähempänä.
+ */
+export const AVAUSAJON_LOPPU = 0.72;
+/**
+ * PALJASTUS (PAATOKSET 52): linssi rakennetaan mustan kerroksen alla
+ * valmiiksi ja paljastetaan vasta sitten. Otsikko näkyy mustalla,
+ * häipyy, ja sen jälkeen musta häipyy. Katto takaa, ettei ruutu jää
+ * koskaan mustaksi, vaikka jokin lataus ei valmistuisi.
+ */
+export const PALJASTUKSEN_KATTO_MS = 12000;
+/** Otsikon häivytys (ms) ja mustan häivytys sen jälkeen (ms). */
+export const OTSIKON_HAIVYTYS_MS = 700;
+export const MUSTAN_HAIVYTYS_MS = 1100;
+/** Valmiin näkymän kehyksiä ennen paljastusta (tekstuurit piirretty). */
+export const PALJASTUKSEN_KEHYKSET = 3;
+export const PALJASTUKSEN_LUOKKA = 'astro-paljastus';
 /** Avausajon kesto (ms). Tilaus: 4–6 s. */
 export const AVAUSZOOMIN_KESTO_MS = 5000;
 /**
@@ -1319,9 +1350,30 @@ export const ISS_SOLMUN_KIERTO_S = 900;
 export const ISS_MERKIN_PX = 8;
 /** Ratakaaren pisteet (koko kierros); takapuoli karsitaan piirrossa. */
 export const ISS_KAAREN_PISTEITA = 240;
-/** Kaaren paksuus ja sävy: kuultava viiva, ei valokaapeli. */
-export const ISS_KAAREN_LEVEYS_PX = 1.1;
-export const ISS_KAAREN_VARI = 'rgba(198, 222, 255, 0.34)';
+/**
+ * Kaaren paksuus ja sävy. PAATOKSET 52 (omistaja 19.9.2026): *"iss viiva
+ * saisi olla tummempi"* — vaalea kuultava viiva vaihtui tummaksi
+ * piirtoviivaksi, joka erottuu pilvien ja maan päällä.
+ */
+export const ISS_KAAREN_LEVEYS_PX = 1.3;
+export const ISS_KAAREN_VARI = 'rgba(16, 26, 44, 0.62)';
+/**
+ * ISS:N PIIRROS (PAATOKSET 52: *"itse iss itsensä näköinen"*): runko,
+ * ristikko ja neljä aurinkopaneelisiipeä kummallakin puolella, ruudulla
+ * 24 × 12 px. Oikean aseman siivet ovat kullanruskeat.
+ */
+export const ISS_PIIRROKSEN_LEVEYS_PX = 24;
+export const ISS_PIIRROKSEN_KORKEUS_PX = 12;
+export const ISS_PIIRROS_SVG = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 12" width="24" height="12">'
+  + '<g fill="#c9953a" stroke="#5a3d10" stroke-width="0.3">'
+  + '<rect x="1.4" y="0.6" width="2.6" height="4.2"/><rect x="4.6" y="0.6" width="2.6" height="4.2"/>'
+  + '<rect x="1.4" y="7.2" width="2.6" height="4.2"/><rect x="4.6" y="7.2" width="2.6" height="4.2"/>'
+  + '<rect x="16.8" y="0.6" width="2.6" height="4.2"/><rect x="20" y="0.6" width="2.6" height="4.2"/>'
+  + '<rect x="16.8" y="7.2" width="2.6" height="4.2"/><rect x="20" y="7.2" width="2.6" height="4.2"/></g>'
+  + '<rect x="1.2" y="5.4" width="21.6" height="1.2" fill="#e6ebf1"/>'
+  + '<rect x="10.2" y="3.6" width="3.6" height="4.8" rx="0.8" fill="#f4f7fb" stroke="#8a95a3" stroke-width="0.3"/>'
+  + '<rect x="11.2" y="1.6" width="1.6" height="2" fill="#dfe5ec"/>'
+  + '</svg>';
 /** Merkin sävy: kirkas, hieman sinertävä piste. */
 export const ISS_VARI = '#f2f8ff';
 
@@ -1480,10 +1532,16 @@ export function luoAvaruusKalvo({
   const iss = doc.createElement('div');
   iss.className = ISSIN_LUOKKA;
   iss.setAttribute('aria-hidden', 'true');
-  iss.style.cssText = `position:absolute;left:0;top:0;width:${ISS_MERKIN_PX}px;height:${ISS_MERKIN_PX}px;`
-    + `margin:${-ISS_MERKIN_PX / 2}px 0 0 ${-ISS_MERKIN_PX / 2}px;border-radius:50%;`
-    + `background:${ISS_VARI};box-shadow:0 0 ${ISS_MERKIN_PX}px rgba(210,230,255,0.85),`
-    + `0 0 ${ISS_MERKIN_PX * 2}px rgba(150,190,255,0.45);pointer-events:none;`;
+  /*
+   * PIIRROS EIKÄ PISTE (PAATOKSET 52): väri ja siivet kertovat, mikä se
+   * on. Ei hehkua CSS-suodattimella — linssikerroksessa ei saa olla
+   * suodattimia (iOS:n webapp-tila, tests/sw.test.mjs).
+   */
+  iss.style.cssText = `position:absolute;left:0;top:0;width:${ISS_PIIRROKSEN_LEVEYS_PX}px;`
+    + `height:${ISS_PIIRROKSEN_KORKEUS_PX}px;`
+    + `margin:${-ISS_PIIRROKSEN_KORKEUS_PX / 2}px 0 0 ${-ISS_PIIRROKSEN_LEVEYS_PX / 2}px;`
+    + 'pointer-events:none;';
+  iss.innerHTML = ISS_PIIRROS_SVG;
 
   kalvo.append(varjo, valoreuna, rata, iss);
 
@@ -1602,6 +1660,98 @@ export function luoAvaruusKalvo({
     pura() {
       purettu = true;
       kalvo.remove?.();
+    },
+  };
+}
+
+/* ═══════════ 2e. PALJASTUS: VALMIS PALLO MUSTAN ALTA ═══════════ */
+
+/**
+ * PAATOKSET 52 (omistaja 19.9.2026 klo 20.51, sanatarkasti): *"Avaruus
+ * linssi pitäisi renderöidä piilossa kokonaan valmiiksi ja paljastaa
+ * vasta sitten pelaajalle. Voisi olla musta ruutu johon tulisi nasan tai
+ * vastaavan logo ja sitten se feidautuisi pois ja musta feidautuisi sen
+ * jälkeen pois paljastaen valmiin pallon sumuineen. Nyt sumu ilmestyy
+ * vasta jälkikäteen."*
+ *
+ * NASAn virallista tunnusta EI käytetä (sen käyttö on rajoitettu):
+ * mustalla on pelin oma otsikkokortti "ASTRONAUTIN KAMERA" ja rivi
+ * "kuvat: NASA". Kerros on kotelon päällä ja ottaa osoittimen, joten
+ * pelaaja ei tartu palloon, jota ei näe; linssin ✕ on kehyksessä
+ * kerroksen yläpuolella.
+ *
+ * `kehys(valmis)` ajetaan linssin kehyssilmukassa: kun näkymä on ollut
+ * valmis PALJASTUKSEN_KEHYKSET peräkkäistä kehystä (tai katto täyttyy),
+ * otsikko häipyy ja sen jälkeen musta. Liikkeenvähennyksellä kerros
+ * poistuu ilman häivytyksiä.
+ */
+export function luoPaljastus({ kotelo, reduced = false, ikkuna = globalThis } = {}) {
+  const doc = ikkuna?.document;
+  const alku = Date.now();
+  let vaihe = 'musta';
+  let valmiitaKehyksia = 0;
+  let paljastettuMs = null;
+  let katonKautta = false;
+  let kerros = null;
+  let otsikko = null;
+  const ajastimet = [];
+  if (kotelo && doc?.createElement) {
+    kerros = doc.createElement('div');
+    kerros.className = PALJASTUKSEN_LUOKKA;
+    kerros.setAttribute?.('aria-hidden', 'true');
+    if (kerros.style) kerros.style.cssText = 'position:absolute;inset:0;z-index:40;background:#000;'
+      + 'display:flex;align-items:center;justify-content:center;pointer-events:auto;'
+      + `opacity:1;transition:opacity ${MUSTAN_HAIVYTYS_MS}ms ease;`;
+    otsikko = doc.createElement('div');
+    otsikko.className = `${PALJASTUKSEN_LUOKKA}-otsikko`;
+    if (otsikko.style) otsikko.style.cssText = 'text-align:center;color:#e8edf5;font-family:var(--font-type, monospace);'
+      + `opacity:1;transition:opacity ${OTSIKON_HAIVYTYS_MS}ms ease;`;
+    const nimi = doc.createElement('div');
+    nimi.textContent = 'ASTRONAUTIN KAMERA';
+    if (nimi.style) nimi.style.cssText = 'font-size:1.05rem;letter-spacing:0.32em;text-indent:0.32em;font-weight:700;';
+    const viiva = doc.createElement('div');
+    if (viiva.style) viiva.style.cssText = 'width:3.2rem;height:1px;margin:0.7rem auto;background:rgba(232,237,245,0.5);';
+    const lahde = doc.createElement('div');
+    lahde.textContent = 'kuvat: NASA';
+    if (lahde.style) lahde.style.cssText = 'font-size:0.78rem;letter-spacing:0.12em;color:rgba(232,237,245,0.72);';
+    otsikko.append?.(nimi, viiva, lahde);
+    kerros.appendChild?.(otsikko);
+    kotelo.appendChild?.(kerros);
+  }
+  const ajasta = (fn, ms) => { ajastimet.push(ikkuna.setTimeout?.(fn, ms)); };
+  const poista = () => {
+    vaihe = 'paljastettu';
+    kerros?.remove?.();
+    kerros = null;
+  };
+  const paljasta = () => {
+    if (vaihe !== 'musta') return;
+    paljastettuMs = Date.now() - alku;
+    if (reduced || !kerros) { poista(); return; }
+    vaihe = 'otsikko-pois';
+    if (otsikko?.style) otsikko.style.opacity = '0';
+    ajasta(() => {
+      vaihe = 'musta-pois';
+      if (kerros?.style) {
+        kerros.style.opacity = '0';
+        kerros.style.pointerEvents = 'none';
+      }
+      ajasta(poista, MUSTAN_HAIVYTYS_MS + 50);
+    }, OTSIKON_HAIVYTYS_MS);
+  };
+  return {
+    /** Onko näkymä vielä kokonaan mustan alla (avausajo odottaa). */
+    odottaa: () => vaihe === 'musta' || vaihe === 'otsikko-pois',
+    kehys(valmis) {
+      if (vaihe !== 'musta') return;
+      valmiitaKehyksia = valmis ? valmiitaKehyksia + 1 : 0;
+      if (valmiitaKehyksia >= PALJASTUKSEN_KEHYKSET) { paljasta(); return; }
+      if (Date.now() - alku >= PALJASTUKSEN_KATTO_MS) { katonKautta = true; paljasta(); }
+    },
+    tila: () => ({ vaihe, paljastettuMs, katonKautta, valmiitaKehyksia }),
+    pura() {
+      for (const a of ajastimet) ikkuna.clearTimeout?.(a);
+      poista();
     },
   };
 }
@@ -2574,6 +2724,16 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
    */
   pintamittauksenEste = sumu ? (kylla) => sumu.piilotaPilvet(kylla) : null;
   /*
+   * PALJASTUS (PAATOKSET 52, luku 2e). Valmis = reliefin haku on
+   * päättynyt (onnistui tai putosi varapolulle), pilvien lopullinen kuva
+   * on ratkaissut ja kalvo on piirtänyt ainakin kerran. Pisteet ja ISS
+   * ovat DOMissa jo tässä vaiheessa.
+   */
+  const paljastus = luoPaljastus({ kotelo, reduced, ikkuna });
+  const valmisPaljastettavaksi = () => reliefinKesto > 0
+    && (!sumu || sumu.tila?.()?.pilvetValmiit !== false)
+    && (!kalvo || (kalvo.tila?.()?.sadePx ?? 0) > 0);
+  /*
    * LINSSIN OMA KEHYSSILMUKKA. Kaksi työtä samassa silmukassa: pölyn
    * hidas ajautuma (tarvitsee kehyskellon; liikkeenvähennyksellä dt
    * jätetään antamatta, jolloin taivas on liikkumaton) ja karttapintojen
@@ -2648,12 +2808,12 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     if (!avausajo.kaynnissa) return;
     if (reduced) {
       avausajo.osuus = 1;
-    } else if (dt > 0) {
+    } else if (dt > 0 && !paljastus.odottaa()) {
       avausajo.kulunut += Math.min(dt, AVAUSAJON_KEHYSKATTO_MS);
       avausajo.osuus = Math.min(1, avausajo.kulunut / AVAUSZOOMIN_KESTO_MS);
     }
     const k = avausPehmennys(avausajo.osuus);
-    const korkeus = aloitusAlt + (alt - aloitusAlt) * k;
+    const korkeus = aloitusAlt + (lepoAlt - aloitusAlt) * k;
     // VAIN KORKEUS: kirjasto yhdistää tämän nykyiseen näkymään, joten
     // pyörivä lat/lng säilyy (ks. luvun 1 perustelu).
     pallo.pointOfView?.({ altitude: korkeus }, 0);
@@ -2670,7 +2830,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   const paataAvausajo = () => {
     if (!avausajo.kaynnissa) return;
     avausajo.kaynnissa = false;
-    omaKorkeus = pallo.pointOfView?.()?.altitude ?? alt;
+    omaKorkeus = pallo.pointOfView?.()?.altitude ?? lepoAlt;
     lauta?.zoomirajat?.({ min: rajat.min, max: rajat.max });
   };
 
@@ -2681,7 +2841,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
    * kiskoisi vastaan sormea. Kuuntelijat ovat kaappausvaiheessa ja
    * passiivisia, jottei mikään ele hidastu.
    */
-  const otePalloon = () => paataAvausajo();
+  // Mustan alla pelaaja ei näe palloa: ote ei vielä päätä ajoa.
+  const otePalloon = () => { if (!paljastus.odottaa()) paataAvausajo(); };
   kotelo?.addEventListener?.('pointerdown', otePalloon, { capture: true, passive: true });
   kotelo?.addEventListener?.('wheel', otePalloon, { capture: true, passive: true });
 
@@ -2711,6 +2872,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      * koska kohinakankaat syntyivät kerran avauksessa.
      */
     sumu?.paivita?.(t ?? 0, kameranKorkeus());
+    paljastus.kehys(valmisPaljastettavaksi());
     if (!taivas) return;
     const dt = reduced || !edellinen ? 0 : (t - edellinen) / 1000;
     edellinen = t;
@@ -2733,6 +2895,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   const mitat = { leveys: 0, korkeus: 0 };
   let alt = 0;
   let aloitusAlt = 0;
+  /** Kameran lepopaikka avausajon jälkeen (AVAUSAJON_LOPPU × alt). */
+  let lepoAlt = 0;
   let rajat = { min: 0, max: 0 };
   let omaKorkeus = 0;
   /*
@@ -2753,6 +2917,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     // Sumun peiton profiili lukee saman avauskorkeuden (ks. luku 2c).
     avauskorkeus = alt;
     aloitusAlt = avausKorkeus({ ...mitat, marginaali: ALOITUKSEN_MARGINAALI });
+    lepoAlt = alt * AVAUSAJON_LOPPU;
     rajat = zoomirajat(alt);
     /*
      * ZOOMIRAJAT ENSIN, KAMERA VASTA SEN JÄLKEEN. OrbitControls rajaa
@@ -2790,21 +2955,21 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
      * laitteen kääntö) muuttaa ajon päätepistettä eikä nykäise kameraa.
      */
     if (avausajo.kaynnissa) {
-      omaKorkeus = alt;
+      omaKorkeus = lepoAlt;
       ajaAvaus(0);
       return;
     }
     const tuore = Date.now() - avattu < ASETTUMISEN_IKKUNA_MS;
     const nyt = pallo.pointOfView()?.altitude ?? 0;
     const omassa = tuore || !omaKorkeus || Math.abs(nyt - omaKorkeus) < omaKorkeus * 0.02;
-    omaKorkeus = alt;
+    omaKorkeus = lepoAlt;
     if (!omassa) return;
     lauta?.kamera?.pysaytaKameraAjo?.();
     // Napa keskellä olisi outo avaus: pidetään pelaajan oma kohta, mutta
     // korkeintaan 55 asteessa, jotta pallo näyttää pallolta eikä kiekolta.
     const lat = Math.max(-55, Math.min(55, Number(pallo.pointOfView()?.lat) || 0));
     const lng = Number(pallo.pointOfView()?.lng) || 0;
-    pallo.pointOfView({ lat, lng, altitude: alt }, reduced ? 0 : AVAUSAJON_MS);
+    pallo.pointOfView({ lat, lng, altitude: lepoAlt }, reduced ? 0 : AVAUSAJON_MS);
     lauta?.heraa?.();
   };
   sovita();
@@ -2827,6 +2992,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     tila: () => ({
       avauskorkeus: +alt.toFixed(3),
       aloituskorkeus: +aloitusAlt.toFixed(3),
+      lepokorkeus: +lepoAlt.toFixed(3),
+      paljastus: paljastus.tila(),
       korkeusNyt: +(pallo.pointOfView?.()?.altitude ?? 0).toFixed(3),
       halkaisijaNytPx: Math.round(halkaisijaRuudulla(
         pallo.pointOfView?.()?.altitude ?? alt, { korkeus: mitat.korkeus },
@@ -2923,6 +3090,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     pura() {
       purettu = true;
       avausajo.kaynnissa = false;
+      paljastus.pura();
       kotelo?.removeEventListener?.('pointerdown', otePalloon, { capture: true });
       kotelo?.removeEventListener?.('wheel', otePalloon, { capture: true });
       /*
