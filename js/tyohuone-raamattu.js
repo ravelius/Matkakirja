@@ -9159,7 +9159,17 @@ export const RAAMATTU = {
           + 'katosi); 2) automaattinen nopanheitto toimii asetuksen mukaan; 3) reittiviiva '
           + 'nakyy koko siirron ajan myos kun heitto vie kertaheitolla seuraavaan '
           + 'kaupunkiin. Opus 2 -era siirto-hyppy tilattu klo 23.50 (tauosta poikkeus '
-          + 'korjaustilauksella).',
+          + 'korjaustilauksella). TILA (Opus 2 20.9.2026 klo 00.05, 3aabb1f7, kaikki '
+          + 'mitattu): 1) hyppy katosi commitissa 0efa3d9b (13.9., v1845 era 8): doMove '
+          + 'antoi kyyti: maitse -> autokyytihaara sammutti pystykaaren; nyt kyyti: false '
+          + 'maareitilla, hyppy 23,5 px (oli 0), bussi/laiva/lento ennallaan. 2) '
+          + 'automaattiheitto ei ollut asetus vaan portti: v1950:n laivakorjaus nosti '
+          + 'liukuAuki roll-vaiheessa ja automaattiheittoSallittu luki sen pelaajan '
+          + 'valikoksi; uusi merkki liukuNopalle; heitto itsestaan 750 ms tauon jalkeen. '
+          + '3) reitti: actionMove siirsi pelaajan maaranpaahan ennen animaatiota, jolloin '
+          + 'matkasessio nollautui; siirtoKaynnissa pitaa session elossa, reitti nakyy '
+          + 'koko siirron (195 naytetta, 0 ilman). Vartiot noppa-saapumisen-aikana 6, 7, 8 '
+          + '(vastakoe 7/10). Julkaistaan v1969.',
         'LAAJA NOSTOKORTTI SULKEUTUU LEIPATEKSTIN NAPAUTUKSESTA - KORJAUS (omistaja '
           + '19.9.2026 klo 23.41 Suomen aikaa, Chartresin katedraalin iPad-kuva, '
           + 'sanatarkasti: "Nosto sulkeutuu kun leipatekstin kohdalta klikkaa. Johtuu siita '
