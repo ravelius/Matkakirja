@@ -11,13 +11,13 @@ Uusi työkalu `tools/tarkista-visakieli.mjs [ISO ...]` (koko aineisto ilman argu
 
 | Kova sääntö (pitää olla 0) | Ennen | Jälkeen |
 | --- | ---: | ---: |
-| kysymys ≤ 95 merkkiä | 7 rikkojaa | 0 |
+| kysymys ≤ 95 merkkiä | 13 visaa | 0 |
 | vaihtoehto ≤ 40 merkkiä | 71 visaa | 0 |
 | ei "-malla/-mällä" vaihtoehdoissa | 2 | 0 |
 | oikea ei selvästi pisin (pisin JA > 1,6 × lyhin) | 20 | 0 |
 | 4 vaihtoehtoa, oikea 0–3 | – | 199/199 |
 
-Kovia virheitä ennen: 90 visaa (koodilla laskettuna), jälkeen 0. Pehmeitä varoituksia (> 5 sanaa, fakta useampi virke, vaihtoehto toistaa kysymyksen sanoja) 73 → 3; jäljelle jääneet kolme ovat vääriä hälytyksiä: skripti laskee päivämäärän ("26. elokuuta") virkkeen loppupisteeksi (IRL knock, HRV sinj, BGR kaliakra). Tekstin rikkova rakenne poistui: `fakta` on yksi virke, kysymys mahtuu kahdelle riville (~90 merkkiä), vaihtoehdot ovat lyhyitä nimikkeitä tai lausekkeita (1–5 sanaa), ei kysymyksen toistoa.
+Kovia virheitä (visaa, jossa vähintään yksi kova sääntö rikkoutui) ennen: 90 visaa, jälkeen 0; yksittäisten sääntöjen luvut ovat ensimmäisen auditin karkeita lukuja. Pehmeitä varoituksia (> 5 sanaa, fakta useampi virke, vaihtoehto toistaa kysymyksen sanoja) 73 → 3; jäljelle jääneet kolme ovat vääriä hälytyksiä: skripti laskee päivämäärän ("26. elokuuta") virkkeen loppupisteeksi (IRL knock, HRV sinj, BGR kaliakra). Tekstin rikkova rakenne poistui: `fakta` on yksi virke, kysymys mahtuu kahdelle riville (~90 merkkiä), vaihtoehdot ovat lyhyitä nimikkeitä tai lausekkeita (1–5 sanaa), ei kysymyksen toistoa.
 
 Kuvateksteissä ei ole enää lähdeviittauksia lukijalle ("Commonsin kuvauksen mukaan", "Kuvauksen mukaan", "Kuvan otsikko", "Tiedoston nimessä", "Kuvaajan/infotaulun mukaan", "Kuvan kuvaus:"): viittaus poistettu, fakta säilytetty. Selite-skripti (karkea, etsii sanoja kuten "mukaan") näyttää vielä 7 osumaa, jotka ovat faktan osia eivätkä lähdeviittauksia (esim. "piirustusten mukaan", "nimetty Kaarle X Kustaan mukaan", "1800-luvun kuvaus" kuvan iästä).
 
