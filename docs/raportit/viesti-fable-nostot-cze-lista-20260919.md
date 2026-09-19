@@ -16,8 +16,8 @@ Sisältöjä ei ole vielä kirjoitettu. Vaiheessa 2 mukaan tulevat myös rahavis
 - **Pudotettu liian lähellä olevana**: Böömin Sveitsi/Hřensko (3,2 Děčínistä), Hluboká-linna (3,5 hevosrautatiestä), Mikulov (5,5 Lednicestä), Ještěd (6,1 Jablonecista), Rožmberkin lammikko (6,9 hevosrautatiestä).
 - Ei suuria kaupunkeja: Praha, Brno, Ostrava, Plzeň, České Budějovice, Olomouc ym. jätetty pois. Mukana on pieniä kaupunkeja ja paikkoja, joiden merkitys on kohde: Karlovy Vary, Mariánské Lázně (kylpylät), Cheb (Wallenstein), Telč, Třebíč, Žďár, Kroměříž.
 - Tyypit ovat pelin oman `KOHDE_TYYPPISYMBOLIT`-taulun arvot (luonto = vuori / saari / jarvi / meri / joki; muut historia, kulttuuri, ruoka, kauppa, tekniikka). Luolalle (Hranice) ja hiekkakivikaupungeille ei ole omaa tyyppiä: Hranice `jarvi` (Hranice Lake), kalliot `vuori`.
-- **1873-näkökulma (Böömi ja Määri Itävalta-Unkarissa)**: nappi-alaotsikoissa hallitsija Franz Joseph tarvittaessa; Königgrätz 1866 on vasta 7 vuotta sitten, Hussiitit ym. taustaa. Wallenstein murhattiin Chebissä 1634.
-- Lähdesääntö: artikkelien johdanto-osat on luettu ja avainväitteet grep-tarkistettu (Sax-tyyppiset sivuväitteet vain jos koko artikkeli tukee). Vaiheessa 2 kirjoitan tekstit vain artikkelin tukemista väitteistä ja kirjaan poikkeamat.
+- **1873-näkökulma (Böömi ja Määri Itävalta-Unkarissa)**: nappi-alaotsikoissa hallitsija Franz Joseph tarvittaessa; Königgrätz 1866 on vasta 7 vuotta sitten (Itävalta hävisi Preussille), Wallenstein murhattiin Chebissä 1634.
+- Lähdesääntö: artikkelien johdanto-osat on luettu ja avainväitteet grep-tarkistettu koko artikkeleista. Vaiheessa 2 kirjoitan tekstit vain artikkelin tukemista väitteistä ja kirjaan poikkeamat.
 
 ## Lista
 
@@ -26,7 +26,7 @@ Sisältöjä ei ole vielä kirjoitettu. Vaiheessa 2 mukaan tulevat myös rahavis
 | # | id | nimi | tyyppi | lat / lon | en-Wikipedia | Miksi |
 |--:|----|------|--------|-----------|--------------|-------|
 | 1 | hahmotelma-bohemian-paradise | Böömin paratiisi | vuori | 50,5197 / 15,1706 | Bohemian Paradise | Hiekkakalliomuodostelmien maisema Jičínin ja Turnovin välissä; kaupungit on rakennettu hiekkakivestä. |
-| 2 | hahmotelma-adrspach | Adršpach-Teplicen kalliot | vuori | 50,6114 / 16,115 | Adršpach-Teplice Rocks | Hiekkakivipylväiden kalliokaupunki Kuninkaanhovin maakunnassa. Renkaan reunalla 0,5. |
+| 2 | hahmotelma-adrspach | Adršpach-Teplicen kalliot | vuori | 50,6114 / 16,115 | Adršpach-Teplice Rocks | Hiekkakivipylväiden kalliokaupunki Hradec Královén alueella. Renkaan reunalla 0,5. |
 | 3 | hahmotelma-praded | Praděd | vuori | 50,0833 / 17,2333 | Praděd | Hrubý Jeseníkin korkein vuori, 1 491 m, Tšekin viidenneksi korkein. |
 | 4 | hahmotelma-hranice | Hranicen syvänne | jarvi | 49,532 / 17,7508 | Hranice Abyss | Maailman syvin tulvinut luola (yli 519 m), Hranice-järven pohjaton kuilu. |
 | 5 | hahmotelma-machovo | Máchovo jezero | jarvi | 50,5831 / 14,6497 | Lake Mácha | Doksyn lampi, joka on nimetty runoilija Karel Hynek Máchan mukaan. |
