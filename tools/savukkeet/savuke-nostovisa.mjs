@@ -228,6 +228,32 @@ const vastaa = (sivu, i) => sivu.evaluate(async (indeksi) => {
   };
 }, i);
 
+/**
+ * PULU EI PEITÄ KORTIN TEKSTIÄ (PAATOKSET 50, js/pulu-paneelin-ylla.js):
+ * pulun laatikko ei leikkaa yhtään kortin näkyvää tekstiriviä.
+ */
+const puluPeitto = (sivu, kortti) => sivu.evaluate(async (valitsin) => {
+  await new Promise((v) => setTimeout(v, 700));
+  const n = document.querySelector('.pollo-nappi.pollo-kelluu');
+  const k = document.querySelector(valitsin);
+  if (!n || !k) return { pulu: Boolean(n), kortti: Boolean(k), leikkaa: -1 };
+  const p = n.getBoundingClientRect();
+  const kr = k.getBoundingClientRect();
+  // Väistynyt (näkymätön) pulu ei peitä mitään.
+  if (Number(getComputedStyle(n).opacity) === 0) {
+    return { pulu: true, kortti: true, leikkaa: 0, piilossa: true };
+  }
+  const leikkaavat = [...k.querySelectorAll('p, h1, h2, h3, li, figcaption, button')]
+    .map((e) => e.getBoundingClientRect())
+    .filter((r) => r.width > 0 && r.height > 0 && r.bottom > kr.top && r.top < kr.bottom)
+    .filter((r) => r.left < p.right && r.right > p.left && r.top < p.bottom && r.bottom > p.top);
+  return {
+    pulu: true, kortti: true, leikkaa: leikkaavat.length,
+    ylla: n.classList.contains('pulu-paneelin-ylla'),
+    pulunAla: Math.round(p.bottom), kortinYla: Math.round(kr.top),
+  };
+}, kortti);
+
 const luvut = (sivu) => sivu.evaluate(() => ({
   money: window.matkakirja.game.player.money,
   laskuri: window.matkakirja.game.nostotehtavatRatkaistu,
@@ -278,6 +304,10 @@ if (a.auki) {
     await a.sivu.locator('.fokusnosto-kortti')
       .screenshot({ path: join(KUVAKANSIO, 'karttauudistus-6-nostovisa-kysymys.png'), scale: 'css' });
   }
+  const peittoA = await puluPeitto(a.sivu, '.fokusnosto-kortti');
+  tieto('pulu nostokortilla', JSON.stringify(peittoA));
+  vaadi('9. pulu ei peitä nostokortin tekstiä (390 px)',
+    peittoA.pulu && peittoA.kortti && peittoA.leikkaa === 0, JSON.stringify(peittoA));
   const ennen = await luvut(a.sivu);
   const jalkeen = await vastaa(a.sivu, KOE.visa.oikea);
   tieto('oikea vastaus', `money ${ennen.money} → ${jalkeen.money}, `
@@ -386,6 +416,10 @@ if (d.auki) {
   }, i);
   const ek = await avaaKohde();
   tieto('hahmotelmakortti', JSON.stringify(ek));
+  const peittoD = await puluPeitto(d.sivu, '.fokuskohde-popup');
+  tieto('pulu kohdekortilla', JSON.stringify(peittoD));
+  vaadi('10. pulu ei peitä kohdekortin tekstiä (390 px)',
+    peittoD.pulu && peittoD.kortti && peittoD.leikkaa === 0, JSON.stringify(peittoD));
   vaadi('6. hahmotelmanoston kohdekortissa on lukijan kysymys lipukkeineen',
     ek.loytyi && ek.onLaatikko && ek.napit >= 2, JSON.stringify(ek));
   const ennenD = await luvut(d.sivu);
