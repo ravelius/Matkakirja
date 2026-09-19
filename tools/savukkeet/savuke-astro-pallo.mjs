@@ -113,7 +113,19 @@ const VALIMUISTI = new Map();
  * vastaus jää muistiin.
  */
 const ULKOHAUN_YRITYKSET = 3;
+/*
+ * PAIKALLINEN ÄMPÄRI (Opus 19.9.2026, erä opus-local-jaameri): jos
+ * SAVUKE_AMPARI_PAIKALLINEN osoittaa kansioon, jossa on pyydetyn
+ * osoitteen niminen tiedosto, se palvellaan levyltä. Näin uuden
+ * kuvan voi mitata ennen ämpärivientiä. Oletuksena pois päältä.
+ */
+const PAIKALLINEN_AMPARI = process.env.SAVUKE_AMPARI_PAIKALLINEN ?? '';
 async function ulkohaku(url) {
+  if (PAIKALLINEN_AMPARI) {
+    const { existsSync, readFileSync } = await import('node:fs');
+    const polku = join(PAIKALLINEN_AMPARI, new URL(url).pathname.split('/').pop());
+    if (existsSync(polku)) return { body: readFileSync(polku), tyyppi: 'image/webp' };
+  }
   if (VALIMUISTI.has(url)) return VALIMUISTI.get(url);
   const lupaus = (async () => {
     for (let yritys = 0; yritys < ULKOHAUN_YRITYKSET; yritys += 1) {
@@ -1705,6 +1717,30 @@ async function ajaNakyma(nimi) {
     };
     const kiekko = kaista(napaKuva, 0, 70);
     const keha = kaista(napaKuva, 90, 115);
+    /*
+     * DIAGNOSTIIKKA (erä opus-local-jaameri 19.9.2026): sama kiekko ja
+     * kehä avaruussumun kalvot (.astro-sumu) piilotettuina. Ei väitettä:
+     * luku kertoo, paljonko navan vaaleudesta on ruudun ja pallon väliin
+     * piirrettyä harsoa eikä pintaa.
+     */
+    await s.evaluate(() => {
+      const el = document.createElement('style');
+      el.id = 'savuke-sumu-pois';
+      el.textContent = '.astro-sumu { display: none !important; }';
+      document.head.append(el);
+    });
+    await s.waitForTimeout(300);
+    const ilmanSumua = decodePng(await s.screenshot({ type: 'png', timeout: 120000 }));
+    if (ULOS) {
+      await s.screenshot({
+        path: join(ULOS, `astro-napa-ilman-sumua-${NAKYMAT[nimi].viewport.width}-20260919.jpg`),
+        type: 'jpeg', quality: 70, timeout: 120000,
+      }).catch(() => {});
+    }
+    await s.evaluate(() => document.getElementById('savuke-sumu-pois')?.remove());
+    console.log(`    NAPA-ILMAN-SUMUA ${JSON.stringify({
+      kiekko: kaista(ilmanSumua, 0, 70), keha: kaista(ilmanSumua, 90, 115),
+    })}`);
     /*
      * 47d LAATTALAIKUT. Kamera 70° N:lle (Grönlanti–Norja, Sonnetin
      * kuvan 07 alue) ja näytealue ruudun keskeltä. Laatan rako tai
