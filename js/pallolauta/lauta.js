@@ -1431,6 +1431,8 @@ export async function avaaPallolauta(ui) {
   const laattataso = laatat ? laattatasoMax(laatat) : PALLO_LAATTATASO_MAX - 1;
   const kamera = luoPallokamera({
     pallo, kotelo, ui, lauta: PALLO_LAUTA, heraa, laattataso,
+    // Ks. AJON KATTO alempana; määritelty myöhemmin, kutsutaan vasta ajossa.
+    ajonKatto: (korkeus) => asetaAjonKatto(korkeus),
   });
   /*
    * SAMA RAJA MYÖS SORMELLE: kamera-ajot kulkevat kameran kautta, mutta
@@ -1673,6 +1675,24 @@ export async function avaaPallolauta(ui) {
    * ennen luontia kutsu on tyhjä, sen jälkeen se on kerroksen oma.
    */
   let maapaneeliKerros = null;
+  /*
+   * AJON KATTO (PAATOKSET 47, erä opus-local-zoomikatto): kamera-ajo,
+   * jonka maali on maan uloszoomauskaton yläpuolella, nostaa katon maalin
+   * korkeuteen (js/pallolauta/kamera.js ajaKamera → ajonKatto). Katto jää
+   * voimaan perillä, jotta ulossovitettu näkymä ei puristu takaisin, ja
+   * laskee seuraavan kerran, kun ajo pysyy katon sisällä (esim. saapumis-
+   * rajaus) tai matka palauttaa rajat. Linssin oma syrjäytys voittaa.
+   */
+  let ajonKorkeus = null;
+  const asetaAjonKatto = (korkeus) => {
+    if (!Number.isFinite(korkeus)) return;
+    const maa = maanZoomiraja();
+    const normaali = Number.isFinite(maa?.max) ? maa.max : null;
+    const uusi = normaali !== null && korkeus > normaali + 1e-6 ? korkeus : null;
+    if (uusi === ajonKorkeus) return;
+    ajonKorkeus = uusi;
+    tahdistaZoomirajat();
+  };
   const tahdistaZoomirajat = () => {
     const ohj = pallo.controls();
     const maa = maanZoomiraja();
@@ -1684,6 +1704,10 @@ export async function avaaPallolauta(ui) {
     // Maailmatilassa maan katto on pois (maanZoomiraja → null), ja
     // laudan oma 2,5 jäisi pystyruudulla pallon halkaisijaa pienemmäksi.
     else if (maailmatilassa()) max = maailmatilanKatto();
+    // Ajon nostama katto (ks. AJON KATTO) vain maan katon päälle; linssin
+    // syrjäytys voittaa.
+    if (!Number.isFinite(zoomirajaSyrjaytys?.max) && Number.isFinite(maa?.max)
+      && Number.isFinite(ajonKorkeus)) max = Math.min(PALLO_KORKEUS_MAX, Math.max(max, ajonKorkeus));
     const pov = pallo.pointOfView();
     const nyt = pov?.altitude;
     if (Number.isFinite(nyt) && Number.isFinite(max)) {
@@ -4628,6 +4652,8 @@ export async function avaaPallolauta(ui) {
     } else {
       zoomirajaSyrjaytys = matkasyrjaytysTalteen;
       matkasyrjaytysTalteen = null;
+      // Perillä maan katto palaa kokonaan, myös ajon nostama.
+      ajonKorkeus = null;
     }
     tahdistaZoomirajat();
   };
