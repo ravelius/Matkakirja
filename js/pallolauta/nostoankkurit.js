@@ -54,6 +54,19 @@
  */
 
 import { NOSTOANKKURIT_FRA } from '../packs/nostoankkurit-fra.js';
+import { NOSTOANKKURIT_ESP } from '../packs/nostoankkurit-esp.js';
+import { NOSTOANKKURIT_ITA } from '../packs/nostoankkurit-ita.js';
+import { NOSTOANKKURIT_DEU } from '../packs/nostoankkurit-deu.js';
+import { NOSTOANKKURIT_PRT } from '../packs/nostoankkurit-prt.js';
+import { NOSTOANKKURIT_GRC } from '../packs/nostoankkurit-grc.js';
+import { NOSTOANKKURIT_AUT } from '../packs/nostoankkurit-aut.js';
+import { NOSTOANKKURIT_NLD } from '../packs/nostoankkurit-nld.js';
+import { NOSTOANKKURIT_BEL } from '../packs/nostoankkurit-bel.js';
+import { NOSTOANKKURIT_POL } from '../packs/nostoankkurit-pol.js';
+import { NOSTOANKKURIT_CZE } from '../packs/nostoankkurit-cze.js';
+import { NOSTOANKKURIT_DNK } from '../packs/nostoankkurit-dnk.js';
+import { NOSTOANKKURIT_HUN } from '../packs/nostoankkurit-hun.js';
+import { NOSTOANKKURIT_SWE } from '../packs/nostoankkurit-swe.js';
 
 /** Pienin tyhjä väli kahden laatikon välissä saapumiskehyksessä (px). */
 export const ANKKURIN_VALJYYS_PX = 7;
@@ -115,7 +128,40 @@ export function kartanMittaSallittu() {
  * esteen-alla-uudelleenladontaa — jolloin nimiö ja osumapinta ovat
  * poltetun pisteen kohdalla joka ruudulla ja joka zoomilla.
  */
-const LUKITUT_ANKKURIT = new Map(Object.entries(NOSTOANKKURIT_FRA));
+/*
+ * EU-MAIDEN HAHMOTELMANOSTOT (Fablen erä I 19.9.2026, PAATOKSET 48:n
+ * velka): sama lukitus kuin Ranskalla, jotta elävä merkki ei ladu
+ * itseään uudelleen panoroinnissa eikä maakohde ole merellä (saaret ja
+ * tyypin 'meri' nostot pitävät pisteensä). Maat EIVÄT ole
+ * LUKITUT_MAAT-listalla: hahmotelmat pysyvät elävinä, poltto on oma
+ * päätöksensä. FRA ensin: sen poltettu piste voittaa.
+ */
+const MAIDEN_TAULUT = {
+  FRA: NOSTOANKKURIT_FRA, ESP: NOSTOANKKURIT_ESP, ITA: NOSTOANKKURIT_ITA,
+  DEU: NOSTOANKKURIT_DEU, PRT: NOSTOANKKURIT_PRT, GRC: NOSTOANKKURIT_GRC,
+  AUT: NOSTOANKKURIT_AUT, NLD: NOSTOANKKURIT_NLD, BEL: NOSTOANKKURIT_BEL,
+  POL: NOSTOANKKURIT_POL, CZE: NOSTOANKKURIT_CZE, DNK: NOSTOANKKURIT_DNK,
+  HUN: NOSTOANKKURIT_HUN, SWE: NOSTOANKKURIT_SWE,
+};
+/*
+ * MAAKOHTAINEN HAKU (19.9.2026, erä I). Sama nosto-id on usealla maalla
+ * ERI PAIKASSA — `valimeri` on Espanjalla 38,6/0,6 ja Ranskalla
+ * 42,6/5,5, samoin `pohjanmeri`, `itameri`, `tonava`, `rhone`
+ * (29 id:tä, mitattu). Avain `nosto:<id>` ei siis yksin kerro maata:
+ * yhteisestä taulusta Espanjan Välimeri sai Ranskan ankkurin
+ * Toulonista. Elävä rivi kysyy siksi OMAN maansa taulusta
+ * (`lukittuAnkkuri(avain, iso)`); maalla ilman taulua ei ole lukittua
+ * ankkuria, ja levitys toimii kuten ennen.
+ */
+const ANKKURIT_MAITTAIN = new Map(Object.entries(MAIDEN_TAULUT)
+  .map(([iso, taulu]) => [iso, new Map(Object.entries(taulu ?? {}))]));
+/** Yhteinen taulu (FRA voittaa): polttoketju kysyy ilman maata. */
+const LUKITUT_ANKKURIT = new Map();
+for (const taulu of ANKKURIT_MAITTAIN.values()) {
+  for (const [avain, a] of taulu) {
+    if (!LUKITUT_ANKKURIT.has(avain)) LUKITUT_ANKKURIT.set(avain, a);
+  }
+}
 
 /**
  * VASTAKOE: `?lukitutankkurit=0` palauttaa lasketun levityksen myös
@@ -132,10 +178,14 @@ export function lukitutAnkkuritSallittu() {
 /**
  * Nostorivin lukittu kartta-ankkuri tai null.
  * @param {string} avain nostokerroksen rivin avain (`nosto:<id>` …)
+ * @param {string|null} [iso] rivin maa: haku vain sen taulusta (ks.
+ *   MAAKOHTAINEN HAKU). Ilman maata yhteinen taulu (polttoketju).
  */
-export function lukittuAnkkuri(avain) {
+export function lukittuAnkkuri(avain, iso = null) {
   if (!avain || !LUKITUT_ANKKURIT.size) return null;
-  const a = LUKITUT_ANKKURIT.get(avain);
+  const a = iso
+    ? ANKKURIT_MAITTAIN.get(String(iso).toUpperCase())?.get(avain)
+    : LUKITUT_ANKKURIT.get(avain);
   return (a && Number.isFinite(a.lat) && Number.isFinite(a.lng)) ? { lat: a.lat, lng: a.lng } : null;
 }
 

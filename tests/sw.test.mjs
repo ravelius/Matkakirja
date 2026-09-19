@@ -266,6 +266,19 @@ const NIPUTTAMATTOMAT = new Set([
   // js/pallolauta/nostoankkurit.js, ja pallolauta on niputuksen
   // ulkopuolella (sama peruste kuin yllä). SHELLissä paketti on.
   'js/packs/nostoankkurit-fra.js',
+  'js/packs/nostoankkurit-esp.js',
+  'js/packs/nostoankkurit-ita.js',
+  'js/packs/nostoankkurit-deu.js',
+  'js/packs/nostoankkurit-prt.js',
+  'js/packs/nostoankkurit-grc.js',
+  'js/packs/nostoankkurit-aut.js',
+  'js/packs/nostoankkurit-nld.js',
+  'js/packs/nostoankkurit-bel.js',
+  'js/packs/nostoankkurit-pol.js',
+  'js/packs/nostoankkurit-cze.js',
+  'js/packs/nostoankkurit-dnk.js',
+  'js/packs/nostoankkurit-hun.js',
+  'js/packs/nostoankkurit-swe.js',
   // Koelaudat poistettiin pelin rekisteristä (js/pack.js) — tiedostot
   // jäävät repoon mahdollista myöhempää käyttöä varten.
   'js/packs/istanbul-questions.js',

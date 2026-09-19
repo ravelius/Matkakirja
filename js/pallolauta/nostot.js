@@ -1590,6 +1590,9 @@ export function luoNostot({
         lisaa({
           avain: `nosto:${m.id}`,
           id: m.id,
+          // Lukitun ankkurin maa (js/pallolauta/nostoankkurit.js
+          // MAAKOHTAINEN HAKU): sama id on usealla maalla eri paikassa.
+          iso,
           perhe: 'nosto',
           lat: a.lat,
           lng: a.lon,
@@ -2020,12 +2023,12 @@ export function luoNostot({
     if (lukitusPaalla) {
       const lukitut = new Map();
       for (const r of liikkuvat) {
-        const a = lukittuAnkkuri(r.avain);
+        const a = lukittuAnkkuri(r.avain, r.iso ?? null);
         if (a && !ankkurivarasto.lue(r.avain)) lukitut.set(r.avain, a);
       }
       if (lukitut.size) ankkurivarasto.aseta(tunnus, lukitut);
     }
-    const onLukittu = (r) => lukitusPaalla && Boolean(lukittuAnkkuri(r.avain));
+    const onLukittu = (r) => lukitusPaalla && Boolean(lukittuAnkkuri(r.avain, r.iso ?? null));
     const uudetRivit = liikkuvat.filter((r) => !onLukittu(r)
       && (!ankkurivarasto.lue(r.avain) || esteenAlla(r)));
     if (uudetRivit.length) {
