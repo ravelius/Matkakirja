@@ -49,7 +49,8 @@ uudella).
   15,5) ja avauskokeen välitys `min > 0,5` → `> 0,3` (puhelimen uusi
   katto 0,36).
 - `node --test tests/*.test.mjs`: 3655 / 0 hylättyä.
-- Savukevartio savuke-astro-pallo: ks. alla.
+- Savukevartio `savuke-astro-pallo` (Chromium, Mac): **130 / 130 läpi**
+  (musta pallo, Safarin rajat, kolme avausta, kehykset poikki).
 
 ## Havainto, EI korjattu (PAATOKSET 50 kohta 2 / Opus 1)
 
