@@ -11273,6 +11273,11 @@ export const RAAMATTU = {
           + 'lähettää kutsumalleen pro-sisällöntuottajalle: mitä '
           + 'luovutetaan, lisenssi, krediitti ja tekijäsivu, '
           + 'peruutusehto.',
+        'AGENTS.md — agentin ensimmäinen päivä: projektin kuvaus, '
+          + 'hakemistorakenne, asennus- ja ajokomennot, testit ja portit, '
+          + 'kielivalinnat, kielletyt tiedostot ja git-käytännöt yhdeltä '
+          + 'istumalta; koottu olemassa olevista ohjeista, ei uusi säännöstö '
+          + '(Claude Projects -thread 19.9.2026, PR #2591; Fable vei karttaan).',
         'CONTRIBUTING.md — avoin lähdekoodi + tekniset periaatteet. '
           + 'README.md — esittely.',
         'TYÖSESSIOIDEN SPEKSIOPPI (omistajan havainto 16.8.2026): '
