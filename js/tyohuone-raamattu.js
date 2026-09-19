@@ -9210,7 +9210,13 @@ export const RAAMATTU = {
           + '(PAATOKSET 51, ensimmainen maa visoilla; Watteninsaaret renkaan '
           + 'ulkopuolella mutta lehdella; nimiolimitys korjattu `nimio`-kentalla, '
           + 'Kinderdijk) - julkaistaan v1961 yhdessa seitseman maan visaeran kanssa. '
-          + 'Kuvat ampariin HEAD 200 71/71 ja 73/73. Seuraava maa: Belgia.',
+          + 'Kuvat ampariin HEAD 200 71/71 ja 73/73. NLD ja 70 visaa julkaistu v1960 '
+          + '(klo 18.38). BELGIA (Fable klo 18.40): BEL 26 nostoa / 57 kuvaa / 9 visaa '
+          + '(maa pieni ja tiheä, ei nykyisia nostoja eika pelikaupunkia; Tervurenin '
+          + 'Kongo-nayttely 1897 kerrotaan artikkelin mukaan asiallisesti, Menin Gate '
+          + 'ja Bastogne muistopaikkoina, kuvissa ei hautoja eika verta), HEAD 200 '
+          + '57/57, julkaistaan v1962. Seuraava maa: Puola (ei toisen maailmansodan '
+          + 'leireja tahan luetteloon).',
         'KARTTAUUDISTUKSEN PAATOKSET 47: NOPAN JALKEEN KAMERA JAI TYHJAAN KOHTAAN - '
           + 'KOHDEMAAN ZOOMIKATTO KUMOSI ULOSSOVITUKSEN (Sonnet-simulaattoritesti kierros 5, '
           + '19.9.2026 klo 14.05-14.19 Suomen aikaa: Pariisi -> liftaus -> Amsterdam -> Liiku '
