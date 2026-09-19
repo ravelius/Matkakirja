@@ -9287,7 +9287,11 @@ export const RAAMATTU = {
           + 'tuoreus.mjs) -> nostotaso poltetaan uudelleen naille kuudelle maalle yksi '
           + 'kerrallaan (kuorma), tuoreustarkistus polton porttina (Opus 2 -era L, K:n '
           + 'jalkeen). Tanskan Trelleborg kahdesti (maastokohde + takynosto): '
-          + 'maastokohteet-dnk trelleborg-slagelse poistetaan, takynosto jaa (Sonnet 3).',
+          + 'maastokohteet-dnk trelleborg-slagelse poistetaan, takynosto jaa (Sonnet 3). '
+          + 'TEHTY (Sonnet 3 klo 21.36, haara sonnet3-trelleborg): trelleborg-slagelse ja sen '
+          + 'ankkuri pois; limitys siirtyi Storebaeltin silta / Trelleborg-taky -parille -> '
+          + 'Fable valitsi nimio: \'\' (nimio pois, symboli ja kortti jaavat; "Silta" yksin '
+          + 'olisi ollut outo). v1968; DNK poltetaan erassa L viimeisena taman jalkeen.',
         'KUVASELITTEISSA EI LAHDEVIITTAUKSIA LUKIJALLE (Sonnet 3:n loyto 19.9.2026 klo '
           + '20.40 Suomen aikaa): kuva-agenttien selitteissa oli pelaajalle nakyvia '
           + 'viittauksia ("Commonsin kuvauksen mukaan", "Artikkelin mukaan", "tiedoston '
