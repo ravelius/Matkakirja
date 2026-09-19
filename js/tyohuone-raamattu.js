@@ -9161,7 +9161,12 @@ export const RAAMATTU = {
           + 'juurisyy (laattojen lataus/purku paakierteessa, nimioladonta joka kehyksella, '
           + 'liian tihea repaint, kuvien dekoodaus) ja korjaa; tavoite alle 16 ms kehys '
           + 'eleen aikana; vartio savukkeeseen (kehysaikojen 95-persentiili). Kumpikaan '
-          + 'ei ala ennen omistajan lupaa.',
+          + 'ei ala ennen omistajan lupaa. C) BISKAJANLAHTEA EI VOI KLIKATA (sanatarkasti, '
+          + 'klo 23.36): maalehden meri-nosto (BISKAJANLAHTI-nimio aaltomerkilla) ei ota '
+          + 'napautusta iPadilla - Opus-era: mittaa meri-tyypin nostojen osuma-alue '
+          + 'maalehdella (poltettu nimio ilman elavaa merkkia? osuma-alue vain pisteessa '
+          + 'merella?), tee nimiosta ja pisteesta napautettava kuten muilla nostoilla; '
+          + 'tarkista kaikki meri- ja lahtinostot. Ei ala ennen lupaa.',
         'MAALEHDEN INFOTAULU (VASEN ALAKULMA): KARTUSCHA, JARJESTYS, KATEGORIAT, '
           + '1873-LUVUT, LIIKU PIILOON (omistaja 19.9.2026 klo 23.21-23.30 Suomen aikaa, '
           + 'Ranskan maalehden iPad-kuvat; kysymys "Miten parantaisit vas alakulman '
@@ -9185,7 +9190,12 @@ export const RAAMATTU = {
           + 'napautusvihje (pisteviiva tai vakanen rivin alla). Mittaus: nimiotormaykset '
           + 'ennen/jalkeen iPad 1024 px ja puhelin 390 px, Ranska, Italia, Tanska. Tila: '
           + 'Opus 2 -era maalehti-kartuscha tilattu klo 23.32 (tauosta poikkeus omistajan '
-          + '"Tee nuo" -paatoksella).',
+          + '"Tee nuo" -paatoksella). PAATOKSET 53 TILA (Opus 1 klo 23.35, 107362c9): '
+          + 'kupla tumma (tausta 40, teksti 243), kysymykset virran ensimmainen rivi ja '
+          + 'vierivat pois, otsikkokortti vahintaan 1,8 s (PALJASTUKSEN_MINIMI_MS), ISS '
+          + 'keskella ja Maa pyorii 0,5 astetta/s kunnes ensimmainen ote, minipulu leijuu '
+          + '(5 px, 3 astetta, 5 s; pysahtyy puhuessa; liikkeenvahennys pois). Vartiot 53a-d, '
+          + 'puhelin 64/64. Julkaistaan v1969.',
         'SAAPUMINEN UUTEEN KAUPUNKIIN: KARTTA BLURRINA JO ESITTELYKUVIEN TAUSTALLA '
           + '(omistaja 19.9.2026 klo 23.22 Suomen aikaa, sanatarkasti: "Kun tullaan uuteen '
           + 'kaupunkiin niin esittely kuvien taustalla saisi olla jo kartta blurrina yms '
