@@ -1439,6 +1439,60 @@ async function ajaNakyma(nimi) {
   }, korkeusNyt);
   await s.waitForTimeout(1000);
 
+  /*
+   * 46: NIMIÖT EIVÄT LIMITY (omistaja 19.9.2026, Egyptin kuva: "Niilin
+   * suisto", "Suezin kanava", "Kairo yöllä" ja "Faiyumin keidas"
+   * limittäin; erä E, js/linssit/satelliitti-nimiot.js). Puhelimella
+   * Egyptin rypään yllä kahdella korkeudella: lähin sallittu (uusi
+   * katto 0,084 × avaus) ja 1,3-kertainen (omistajan kuvan korkeus
+   * vanhalla katolla). Näkyvien nimiöparien leikkaus saa olla enintään
+   * 10 % pienemmän alasta. Ennen korjausta (mitattu WebKit 390 px):
+   * Niilin suisto × Suezin kanava 21 % ja 35 %.
+   */
+  if (nimi === 'puhelin') {
+    const nimiot = [];
+    for (const kerroin of [1, 1.3]) {
+      await s.evaluate((k) => {
+        const { ui } = window.matkakirja;
+        const r = ui.pallolinssi.kahva.avaruus.tila().rajat;
+        ui.pallonInstanssi.pointOfView({ lat: 29.5, lng: 31, altitude: r.min * k }, 0);
+        ui.pallolauta.heraa();
+      }, kerroin);
+      await s.waitForTimeout(1200);
+      nimiot.push(await s.evaluate((k) => {
+        const r = [...document.querySelectorAll('.satelliitti-piste:not(.pallolauta-takana) .satelliitti-nimi')]
+          .map((el) => { const b = el.getBoundingClientRect(); return { n: el.textContent, x: b.left, y: b.top, w: b.width, h: b.height, o: Number(getComputedStyle(el).opacity) }; })
+          .filter((b) => b.w > 0 && b.o > 0.5 && b.x < innerWidth && b.x + b.w > 0 && b.y < innerHeight && b.y + b.h > 0);
+        let pahin = 0;
+        let pari = null;
+        for (let i = 0; i < r.length; i += 1) {
+          for (let j = i + 1; j < r.length; j += 1) {
+            const a = r[i]; const c = r[j];
+            const ix = Math.max(0, Math.min(a.x + a.w, c.x + c.w) - Math.max(a.x, c.x));
+            const iy = Math.max(0, Math.min(a.y + a.h, c.y + c.h) - Math.max(a.y, c.y));
+            const o = (ix * iy) / Math.min(a.w * a.h, c.w * c.h);
+            if (o > pahin) { pahin = o; pari = `${a.n} × ${c.n}`; }
+          }
+        }
+        return {
+          kerroin: k, nakyvia: r.length, pahin: +pahin.toFixed(2), pari,
+          luokka: document.body.classList.contains('satelliitti-nimet'),
+          ladonta: window.matkakirja.ui.pallolinssi.kahva.avaruus.tila().nimiot,
+        };
+      }, kerroin));
+    }
+    vaadi(t('46: nimiöt eivät limity Egyptin yllä (≤ 10 %)'),
+      nimiot.every((x) => x.luokka && x.nakyvia >= 4 && x.pahin <= 0.1),
+      JSON.stringify(nimiot));
+    await s.evaluate((alt) => {
+      const { ui } = window.matkakirja;
+      const pov = ui.pallonInstanssi.pointOfView();
+      ui.pallonInstanssi.pointOfView({ ...pov, altitude: alt }, 0);
+      ui.pallolauta.heraa();
+    }, korkeusNyt);
+    await s.waitForTimeout(1000);
+  }
+
   /* 43: pinnan sävy — ennen (valkoinen) ja jälkeen (PALLON_SAVY). */
   /*
    * VÄRI ON NULL, KUN TEKSTUURI ON SAAPUNUT (LISÄYS 13 kohta 37:

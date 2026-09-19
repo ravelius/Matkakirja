@@ -176,6 +176,7 @@ import {
  * kaksi totuutta on pahempi kuin kehä.
  */
 import { luoAstroSumu } from './astro-sumu.js';
+import { luoNimiolimitys } from './satelliitti-nimiot.js';
 
 /* ═════════════════ 1. AVAUSNÄKYMÄN KORKEUS ══════════════════════ */
 
@@ -2597,6 +2598,12 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
   // Laastarin kynnys lukee korkeuden samasta paikasta kuin nimien
   // kynnys ja kalvo — yksi mittaus kehystä kohti, ei kolmea.
   korkeudenLukija = kameranKorkeus;
+  /*
+   * NIMIÖIDEN LIMITYKSEN PURKU (erä E, js/linssit/satelliitti-nimiot.js):
+   * vain kun nimet ovat näkyvissä, ja ruutu mitataan harvemmin kuin
+   * kehys (LADONNAN_VALI_MS).
+   */
+  const nimiot = luoNimiolimitys({ doc: ikkuna.document, nakyvat: () => nimetPaalla });
   const tahdistaNimet = () => {
     const nyt = nimetNakyvat(kameranKorkeus(), alt, nimetPaalla);
     if (nyt === nimetPaalla) return;
@@ -2682,6 +2689,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
     kehys = ikkuna.requestAnimationFrame?.(askel) ?? 0;
     pinnat.pyyhkaise();
     tahdistaNimet();
+    nimiot.paivita(t ?? Date.now());
     /*
      * KEHYSVÄLI AVAUSAJOLLE: katkaistu delta, ei seinäkello (ks.
      * ajaAvaus). Sama kello kuin tähtien ajautumalla, mutta oma
@@ -2841,6 +2849,8 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       piilotettuja: pinnat.maara(),
       nimetNakyvissa: nimetPaalla,
       nimienKynnys: +(alt * NIMIEN_KYNNYS).toFixed(3),
+      /* Erä E: nimiöiden ladonta (montako kertaa, montako piilossa). */
+      nimiot: nimiot.tila(),
       pyyhkaisyja: pinnat.kertoja(),
       /* PAATOKSET 41 kohta 4: onko reliefilaastari päällä juuri nyt. */
       laastarilla: pinnat.laastarilla(),
@@ -2957,6 +2967,7 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       ikkuna.document?.body?.classList?.remove?.('satelliitti-avaruus');
       ikkuna.document?.body?.classList?.remove?.(NIMIEN_LUOKKA);
       nimetPaalla = false;
+      nimiot.pura();
       lauta?.zoomirajat?.(null);
       if (tekstuuri) {
         /*

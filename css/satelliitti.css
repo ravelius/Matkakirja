@@ -207,6 +207,27 @@ body.satelliitti-nimet .satelliitti-nimi { opacity: 1; }
 }
 
 /*
+ * NIMIÖ VÄISTÄÄ (omistaja 19.9.2026, Egyptin nimiöt limittäin; erä E).
+ * js/linssit/satelliitti-nimiot.js kirjoittaa pisteelle kyljen, kun
+ * oletuspaikka (alla) osuisi toiseen nimiöön tai pisteeseen; `piilo`
+ * pitää nimiön poissa, kunnes lähempi zoomi antaa tilaa. Etäisyys
+ * pisteestä on sama 11 px kuin alla (NIMION_VALI).
+ */
+.satelliitti-piste[data-kylki="yla"] .satelliitti-nimi { top: auto; bottom: 11px; }
+.satelliitti-piste[data-kylki="oikea"] .satelliitti-nimi {
+  top: 0;
+  left: 11px;
+  transform: translateY(-50%);
+}
+.satelliitti-piste[data-kylki="vasen"] .satelliitti-nimi {
+  top: 0;
+  left: auto;
+  right: 11px;
+  transform: translateY(-50%);
+}
+body.satelliitti-nimet .satelliitti-piste[data-kylki="piilo"] .satelliitti-nimi { opacity: 0; }
+
+/*
  * PULU PIILOON LINSSIN AJAKSI (omistaja 12.9.2026, sanatarkasti:
  * *"Pulun voisi piilottaa"*).
  *
