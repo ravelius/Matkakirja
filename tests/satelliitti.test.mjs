@@ -358,7 +358,16 @@ test('yläpalkin osat (nimi, ikoni, NASA-rivi, pilleri, i-nappi) ovat kaikki poi
   assert.match(lahde, /teeRivi\('Lisenssi'/);
   // Kohteen nimi ja seutu ladotaan kuvan päällä olevaan selitteeseen.
   assert.match(lahde, /html\('div', 'satelliitti-selite-otsikko', kohde\.nimi\)/);
-  assert.match(lahde, /seliteOtsikko\.appendChild\(html\('span', 'satelliitti-seutu', ` — \$\{kohde\.seutu\}`\)\)/);
+  assert.match(lahde, /const SEUTU_KOKO = ` — \$\{kohde\.seutu\}`;/);
+  assert.match(lahde, /seliteOtsikko\.appendChild\(seutuOsa\)/);
+  /*
+   * SEUTU LYHENEE SANARAJALTA (Sonnetin puhelintesti 19.9.2026, löydös 5:
+   * *"Reinin suistosaaret — Zeeland, Alankom…"*). CSS:n ellipsi katkaisee
+   * pikselistä; kun pieninkään fonttikoko ei riitä, seutuosa pudottaa
+   * kokonaisen sanan kerrallaan eikä jätä puolikasta sanaa ruudulle.
+   */
+  assert.match(lahde, /SEUDUN_SANAT = SEUTU_KOKO\.replace\(\/\^\\s\*—\\s\*\/, ''\)\.split/);
+  assert.match(lahde, /seutuOsa\.textContent = ` — \$\{SEUDUN_SANAT\.slice\(0, n\)\.join\(' '\)\}…`;/);
 });
 
 test('kelluva ✕ on ruudun oikeassa yläkulmassa turva-alue huomioiden', () => {

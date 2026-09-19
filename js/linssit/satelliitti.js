@@ -687,7 +687,9 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
    */
   const selite = html('div', 'satelliitti-selite');
   const seliteOtsikko = html('div', 'satelliitti-selite-otsikko', kohde.nimi);
-  seliteOtsikko.appendChild(html('span', 'satelliitti-seutu', ` — ${kohde.seutu}`));
+  const SEUTU_KOKO = ` — ${kohde.seutu}`;
+  const seutuOsa = html('span', 'satelliitti-seutu', SEUTU_KOKO);
+  seliteOtsikko.appendChild(seutuOsa);
   const seliteRunko = html('div', 'satelliitti-selite-runko');
   const seliteTeksti = html('div', 'satelliitti-selite-teksti');
   const lisatiedot = html('div', 'satelliitti-lisatiedot');
@@ -723,15 +725,33 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
    */
   const OTSIKON_ISOIN = 16;
   const OTSIKON_PIENIN = 11;
+  const otsikkoMahtuu = () => (seliteOtsikko.scrollWidth ?? 0) <= (seliteOtsikko.clientWidth ?? 0) + 1;
+  /*
+   * SEUTU LYHENEE SANARAJALTA, EI KESKEN SANAA (Sonnetin puhelintesti
+   * 19.9.2026, löydös 5: *"Reinin suistosaaret — Zeeland, Alankom…"*).
+   * CSS:n `text-overflow: ellipsis` katkaisee PIKSELISTÄ, joten
+   * "Alankomaat" jäi puolikkaaksi sanaksi. Kun pieninkään fonttikoko ei
+   * riitä, seutuosa pudottaa SANAN kerrallaan ja ellipsi tulee vasta
+   * kokonaisen sanan perään. Kohteen oma nimi ei lyhene koskaan — se on
+   * se, mitä pelaaja etsii; ellipsi jää siihen CSS:n varaan vain siinä
+   * ääritapauksessa, ettei pelkkä nimikään mahdu.
+   */
+  const SEUDUN_SANAT = SEUTU_KOKO.replace(/^\s*—\s*/, '').split(/\s+/).filter(Boolean);
   const sovitaOtsikko = () => {
+    seutuOsa.textContent = SEUTU_KOKO;
     if (!selite.classList.contains('satelliitti-selite-kiinni')) {
       seliteOtsikko.style.removeProperty('font-size');
       return;
     }
     for (let koko = OTSIKON_ISOIN; koko >= OTSIKON_PIENIN; koko -= 1) {
       seliteOtsikko.style.fontSize = `${koko}px`;
-      if ((seliteOtsikko.scrollWidth ?? 0) <= (seliteOtsikko.clientWidth ?? 0) + 1) return;
+      if (otsikkoMahtuu()) return;
     }
+    for (let n = SEUDUN_SANAT.length - 1; n >= 1; n -= 1) {
+      seutuOsa.textContent = ` — ${SEUDUN_SANAT.slice(0, n).join(' ')}…`;
+      if (otsikkoMahtuu()) return;
+    }
+    seutuOsa.textContent = '';
   };
 
   /** Selite auki/kiinni — vain otsikkorivi jää (korkeussiirtymä CSS:ssä). */
