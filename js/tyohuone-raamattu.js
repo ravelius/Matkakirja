@@ -9206,7 +9206,13 @@ export const RAAMATTU = {
           + 'tai kortti avautuu (Ihmisen matka -jakson kortti, nostokortti, muut '
           + 'infopalkit), pulu hypahtaa sen ylapuolelle (paneelin ylareunan paalle, '
           + 'kartan puolelle) eika koskaan peita tekstia; paneelin sulkeutuessa pulu '
-          + 'palaa paikalleen. Tila: Opus 1 -erat webkit-napa '
+          + 'palaa paikalleen. TILA (Opus 1 klo 19.20, Fable hyvaksyi 19.22): yleinen '
+          + 'toteutus js/pulu-paneelin-ylla.js tunnistaa 200 ms valein pulun oletuspaikan '
+          + 'alla olevan tekstipaneelin ja nostaa pulun sen ylareunan paalle; KORKEAN '
+          + 'KORTIN (nostokortti, kohdekortti 390 px:lla lahes koko ruutu) ajaksi pulu '
+          + 'VAISTYY nakyvista ja palaa sulkiessa (Fablen paatos: kortti pysyy '
+          + 'taysikokoisena). Mitattu: nostokortti ja kohdekortti leikkaavat 0 rivia, '
+          + 'Siperia-kortilla pulu kortin ylapuolella. Julkaistaan v1962. Tila: Opus 1 -erat webkit-napa '
           + '(ykkonen), nostokortti, zoomikatto; mitataan v1958-koodilla.',
         'KARTTAUUDISTUKSEN PAATOKSET 49: MUSTA LAATTA PANOROITAESSA - MOOTTORIN '
           + 'POHJAPALLO SAA KARTAN SAVYN (omistaja 19.9.2026 klo 14.58 Suomen aikaa, iPhone '
@@ -9297,7 +9303,9 @@ export const RAAMATTU = {
           + '(Bialowieza renkaan ulkopuolella 2,7; nappi-alaotsikoissa jakajavalta 1873; '
           + 'ei leireja; Pszczynan visentit pois lahdesaannolla), HEAD 200 64/64, '
           + 'julkaistaan v1962. Rinnakkain Sonnet 3: Tanska (lista hyvaksytty 18.55). '
-          + 'Seuraava maa Sonnet 2:lle: Tsekki.',
+          + 'TSEKKI (Fable klo 19.25): CZE 27 / 60 / 10 visaa (Konigratz ja Cheb '
+          + 'asiallisesti, ei ossuarium- tai taistelukuvia), HEAD 200 60/60, julkaistaan '
+          + 'v1962. Seuraava maa Sonnet 2:lle: Unkari.',
         'KARTTAUUDISTUKSEN PAATOKSET 47: NOPAN JALKEEN KAMERA JAI TYHJAAN KOHTAAN - '
           + 'KOHDEMAAN ZOOMIKATTO KUMOSI ULOSSOVITUKSEN (Sonnet-simulaattoritesti kierros 5, '
           + '19.9.2026 klo 14.05-14.19 Suomen aikaa: Pariisi -> liftaus -> Amsterdam -> Liiku '
