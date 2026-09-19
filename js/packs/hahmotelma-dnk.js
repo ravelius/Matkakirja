@@ -1449,9 +1449,8 @@ export const HAHMOTELMA_DNK = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-aalborg-b89c088f.jpg',
       lyhyt: 'Aalborgin akvaviittitehdas punatiilirakennuksineen ja säiliöineen vuonna 2006.',
-      selite: 'Kuvan otsikko on Aalborg Akvavit, ja rakennuksen katolla on samanlainen kyltti. '
-        + 'Kaupungissa toimi vuoteen 2014 asti De Danske Spritfabrikker, joka tuotti '
-        + 'lukuisia akvaviittimerkkejä.',
+      selite: 'Rakennuksen katolla on Aalborg Akvavit -kyltti. Kaupungissa toimi vuoteen 2014 '
+        + 'asti De Danske Spritfabrikker, joka tuotti lukuisia akvaviittimerkkejä.',
       lahde: 'Valokuva: Tomasz Sienicki, Wikimedia Commons (CC BY 2.5).',
       tekija: 'Tomasz Sienicki',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aalborg_Akvavit_2006_ubt.jpeg',
@@ -1806,9 +1805,9 @@ export const HAHMOTELMA_DNK = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-ebeltoft-da20990c.jpg',
       lyhyt: 'Vanha ristikkotalo torin laidalla Ebeltoftin vanhassa kaupungissa.',
-      selite: 'Kuvan otsikon mukaan kyseessä on vanha kaupunkitalo Ebeltoftissa, kuvattu '
-        + 'kesäkuussa 2006. Kaupunki tunnetaan mukulakivikaduistaan ja vuosisatoja '
-        + 'vanhoista ristikkotaloistaan.',
+      selite: 'Kuva esittää vanhaa kaupunkitaloa Ebeltoftissa, kuvattu kesäkuussa 2006. '
+        + 'Kaupunki tunnetaan mukulakivikaduistaan ja vuosisatoja vanhoista '
+        + 'ristikkotaloistaan.',
       lahde: 'Valokuva: Lars Larsen, Wikimedia Commons (CC BY 3.0).',
       tekija: 'Lars Larsen',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Torvet,_Ebeltoft,_Denmark_2006.jpg',
