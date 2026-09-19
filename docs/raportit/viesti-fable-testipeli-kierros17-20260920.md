@@ -31,8 +31,21 @@ Loput (tekstinvalinta, ISS, Košice, v1971:n lisäkohdat) ajetaan v1971:llä.
 | CHE Chillon | Alaviitteiden aatelilta |
 | SVN Idrija | Vipavan laakson viinitarhan vartijalta |
 
-## Ei ehditty (siirtyy v1971:lle)
+## v1971 (klo 2.30–2.36, ladattu "PELI PÄIVITTYI" -dialogista: "zoom/pan, Biskajanlahti, Bryssel- ja Ljubljana-lehdet")
 
-Tekstinvalinta pois (pitkä painallus, kaksoisnapautus), ISS-merkki Astronautin kamerassa,
-Košice, Ljubljanan saapumisteksti/pöllön kuplat/artikkeli, TUR uudet kuvat,
-zoomaus/panorointi-sujuvuus, v1971:n lisäkohdat.
+| Kohta | Tulos |
+|---|---|
+| Tekstinvalinta (Ljubljana, saapumisteksti) | Pitkä painallus (1,2 s) otsikossa ja leipätekstissä sekä kaksoisnapautus: **ei valintaa, ei kehotetta** (kaappaukset `v1971-valinta-*`). Pitkä painallus otsikossa laajentaa saapumistekstin kokonaan näkyviin. Nappeja, artikkelin leipätekstiä ja pulun kysymyksiä ei ehditty kokeilla. |
+| Ljubljana kartalla | Saapumiskortti (pitkä teksti) ja kartta toimivat. **Kaupunkilehteä ei löytynyt:** shakkinappulan napautus avaa "Ljubljana Turistiopas · Historia (1)" -paneelin, Historia-rivin napautus sulki paneelin (kaappaus `lju-lehti-2`) — en tiedä, avautuiko lehti hetkeksi. Rakennukset/Plečnik, Ruoka ja etusivu eivät näkyneet. ☰-nappi avaa vain karttaselitteet (Luonto 5, Historia 4, Kulttuuri ja ruoka 2, Kauppa ja tekniikka 4). |
+
+**Aika-merkintä:** Opus 2:n pyramidipolttoa ei havaittu; simulaattori toimi normaalisti 2.30–2.36 (rate-limit vain klassifikaattorissa).
+
+## Ei ehditty (jää seuraavalle kierrokselle)
+
+ISS-merkki Astronautin kamerassa, Košice, Ljubljanan pöllön kuplat/artikkeli/kuvat/radio,
+Brysselin lehdet (etusivu, Historia, Rakennukset, Ruoka, minitehtävät), Biskajanlahden ja
+Välimeren merinostot, Astronautin pulun vastaukset, Canigoun kuva-ala, TUR uudet kuvat,
+zoomaus/panorointi-sujuvuus laitteella, Bryssel/Ljubljana-saapumisen blur-siirtymä (kaappaus
+ei ehtinyt oikeaan hetkeen).
+
+Kierroksen kokonaisaika ylitti 45 min (1.50–2.36), joten pysähdyin tähän. Maailma-kytkin POIS (vahvistettu).
