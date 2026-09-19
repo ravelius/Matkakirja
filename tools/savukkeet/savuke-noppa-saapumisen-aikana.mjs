@@ -334,11 +334,59 @@ for (const selainTieto of SELAIMET) {
       () => window.matkakirja.game.phase === 'move' && !window.matkakirja.ui.busy,
       null, { timeout: 20000 },
     ).catch(() => {});
-    await sivu.evaluate(() => {
+    /*
+     * SIIRTO MITATAAN KEHYS KEHYKSELTÄ (omistaja 19.9.2026 klo 23.47,
+     * iPad Pariisi–Marseille). Kaksi väitettä yhdestä siirrosta, joka
+     * päättyy KERTAHEITOLLA kaupunkiin:
+     *
+     *   6. Nappula HYPPII: hahmon pystysiirtymä on kesken askeleen
+     *      suurempi kuin nolla (js/pallolauta/siirto.js hypynVaihe).
+     *      Autokyyti (erä 8) liu'utti sen nollassa.
+     *   7. REITTI NÄKYY KOKO SIIRRON AJAN: ui.matkareittienValinta()
+     *      antaa reitin jokaisessa näytteessä. Sääntö on yksi ja sama
+     *      kummallekin laudalle, ja pallon reittikerros piirtää sen.
+     */
+    const siirto = await sivu.evaluate(async () => {
       const { ui, game } = window.matkakirja;
-      // Amsterdam on yhden askeleen päässä, joten se on aina listalla.
-      if (game.moves?.has('c:amsterdam')) ui.doMove('c:amsterdam');
+      if (!game.moves?.has('c:amsterdam')) return { virhe: 'Amsterdam ei ollut listalla' };
+      const naytteet = [];
+      let kaynnissa = true;
+      const kehys = () => {
+        const hahmo = document.querySelector('.pallolauta-liikkuva .pawn-hahmo');
+        const h = /translate\(0,([-\d.]+)\)/.exec(hahmo?.getAttribute('transform') ?? '');
+        const v = ui.matkareittienValinta();
+        naytteet.push({
+          korkeus: h ? Math.abs(Number(h[1])) : 0,
+          reitteja: v.reittiTunnukset.length,
+          avain: Boolean(v.avain),
+        });
+        if (kaynnissa) requestAnimationFrame(kehys);
+      };
+      requestAnimationFrame(kehys);
+      ui.doMove('c:amsterdam');
+      for (let i = 0; i < 200; i += 1) {
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((r) => setTimeout(r, 100));
+        if (game.player.pos.type === 'city' && !ui.busy && !ui.siirtoKaynnissa) break;
+      }
+      kaynnissa = false;
+      const jalkeen = ui.matkareittienValinta();
+      const liikkeessa = naytteet.filter((n) => n.korkeus > 0 || n.reitteja > 0);
+      return {
+        naytteita: naytteet.length,
+        korkein: Math.max(0, ...naytteet.map((n) => n.korkeus)),
+        reitittomia: liikkeessa.filter((n) => n.reitteja === 0).length,
+        liikkeessa: liikkeessa.length,
+        reittiPerilla: jalkeen.reittiTunnukset.length,
+      };
     });
+    tieto(`${tunnus}: siirto Amsterdamiin`, JSON.stringify(siirto));
+    vaadi(`${tunnus}: 6. nappula hyppii siirrossa (pystysiirtymä `
+      + `${(siirto.korkein ?? 0).toFixed(2)} px > 0)`,
+    Boolean(siirto.korkein > 0.01), JSON.stringify(siirto));
+    vaadi(`${tunnus}: 7. reitti näkyy koko siirron ajan eikä jää perille`,
+      Boolean(siirto.liikkeessa >= 5 && siirto.reitittomia === 0 && siirto.reittiPerilla === 0),
+      JSON.stringify(siirto));
     await sivu.waitForFunction(
       () => window.matkakirja.game.player.pos.type === 'city' && !window.matkakirja.ui.busy,
       null, { timeout: 30000 },
@@ -407,6 +455,55 @@ for (const selainTieto of SELAIMET) {
       ajonKatto.heti > ajonKatto.maxAlussa && Math.abs(ajonKatto.jalkeen - ajonKatto.heti) < 0.01, JSON.stringify(ajonKatto));
     vaadi(`${tunnus}: 5b. saapumisrajaus palauttaa maan katon`,
       Math.abs(ajonKatto.maxPalattua - ajonKatto.maxAlussa) < 0.01, JSON.stringify(ajonKatto));
+    /*
+     * 8. AUTOMAATTIHEITTO JATKAA MATKAA REITIN VARRELLA (omistaja
+     * 19.9.2026 klo 23.47: *"automaattinen nopanheitto on poistunut
+     * vaikka pitäisi olla päällä"*). Matka pysäytetään reitin
+     * välipisteeseen, ja peli saa heittää seuraavan nopan itse
+     * (js/ui.js ajastaAutomaattinenHeitto, AUTOMAATTIHEITON_TAUKO_MS).
+     */
+    tieto(`${tunnus}: 8. liftaus reitille`, await liftaa(sivu));
+    await sivu.waitForFunction(
+      () => window.matkakirja.game.phase === 'move' && !window.matkakirja.ui.busy,
+      null, { timeout: 20000 },
+    ).catch(() => {});
+    const automaatti = await sivu.evaluate(async () => {
+      const { ui, game } = window.matkakirja;
+      const avaimet = [...(game.moves?.keys() ?? [])];
+      const reitille = avaimet.find((k) => !String(k).startsWith('c:'));
+      if (!reitille) return { virhe: 'reitin varrelle ei päässyt', avaimet, vaihe: game.phase };
+      ui.doMove(reitille);
+      // Nappula pysähtyy reitin varteen: tila luetaan heti kun siirto on
+      // maalissa, ennen kuin automaattiheiton 750 ms:n tauko on kulunut.
+      let paikka = null;
+      for (let i = 0; i < 400; i += 1) {
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((r) => setTimeout(r, 30));
+        if (!ui.busy && !ui.siirtoKaynnissa) { paikka = { ...game.player.pos }; break; }
+      }
+      if (!paikka) return { virhe: 'siirto ei pysähtynyt', reitille };
+      const jatkaa = game.jatkaMatkaaItsestaan();
+      const sallittu = ui.automaattiheittoSallittu();
+      // Automaattiheiton tauko on 750 ms; annetaan sille kolme sekuntia.
+      const alku = Date.now();
+      let heitetty = false;
+      while (Date.now() - alku < 3000) {
+        if (game.die !== null || ui.busy || game.player.pos.type === 'city') { heitetty = true; break; }
+        // eslint-disable-next-line no-await-in-loop
+        await new Promise((r) => setTimeout(r, 50));
+      }
+      return {
+        reitille, paikka: paikka.type, jatkaa, sallittu, heitetty,
+        liukuAuki: Boolean(ui.liukuAuki), liukuNopalle: Boolean(ui.liukuNopalle),
+      };
+    });
+    tieto(`${tunnus}: automaattiheitto`, JSON.stringify(automaatti));
+    vaadi(`${tunnus}: 8. reitin varrella noppa heitetään itsestään`,
+      Boolean(automaatti.paikka === 'edge' && automaatti.jatkaa && automaatti.sallittu
+        && automaatti.heitetty),
+      JSON.stringify(automaatti));
+
+
     vaadi(`${tunnus}: ei sivuvirheitä`, virheet.length === 0, virheet.join(' | ').slice(0, 300));
 
     await ctx.close();
