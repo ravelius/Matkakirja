@@ -53,9 +53,37 @@
  * se on vain 7,3 yksikön päässä Pariisista eli käytännössä kiinni
  * rajassa, joten sen paikka olisi kohdekartalla eikä pääkartalla.
  *
- * KUVATON ERÄ. Kortti kantaa tekstin ja lähteen, ei kuvaa — sama linja
- * kuin erässä 1. Faktat on tarkistettu en-Wikipediasta kohde
+ * KUVATON ERÄ (6.9.2026). Kortti kantoi tekstin ja lähteen, ei kuvaa —
+ * sama linja kuin erässä 1. Faktat on tarkistettu en-Wikipediasta kohde
  * kerrallaan 6.9.2026.
+ *
+ * ── KUVAERÄ 19.9.2026: JOKAISELLA KOHTEELLA VÄHINTÄÄN KAKSI KUVAA ──
+ *
+ * Omistaja 18.9.2026 (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 44):
+ * *"commonsista voisi etsiä vähintään kaksi kuvaa joka juttuun"*.
+ * Tässä erässä neljätoista kohdetta sai puuttuvat kuvansa Wikimedia
+ * Commonsista: kolmelle (montblanc, vignemale, mont-saint-michel)
+ * lisättiin toinen kuva jo hyväksytyn pääkuvan pariksi, yhdelletoista
+ * molemmat. Yhteensä 25 uutta kuvaa, kaikki 900 px leveitä.
+ *
+ * LISENSSIT. Vain Public domain, CC0, CC BY ja CC BY-SA kelpasivat;
+ * NC-, ND-, GFDL- ja FAL-ehtoiset sekä epäselvät hylättiin. Jokaisen
+ * lisenssi ja tekijä on tarkistettu `node tools/hae-commons.mjs tiedot`
+ * -komennolla ja jokainen tiedosto on katsottu silmällä: ei vesileimoja,
+ * oikea kohde, järkevä rajaus. Hylättyjen luettelo perusteluineen on
+ * raportissa docs/raportit/viesti-fable-maastokuvat-20260919.md.
+ *
+ * PARI ON MIELUITEN HISTORIA + NYKYPÄIVÄ. Kymmenellä kohteella toinen
+ * kuva on 1800-luvun tai varhaisen 1900-luvun valokuva, piirros tai
+ * maalaus (mm. Édouard Baldusin 1850-luvun akvedukti- ja
+ * paavinpalatsikuvat, Charles Nègren Chartres, Gabriel Loppén
+ * Mont Blancin varjo elokuulta 1873). Välimerellä, Biskajanlahdella,
+ * Lascaux'lla ja Millaun sillalla kelvollista vanhaa kuvaa ei löytynyt,
+ * joten pari on kaksi nykykuvaa eri näkökulmista.
+ *
+ * KUVAT EIVÄT OLE VIELÄ ÄMPÄRISSÄ. Osoitteet osoittavat kansioon
+ * karttanostot/20260918/, jonne Fable vie tiedostot; ennen vientiä ne
+ * vastaavat 404:llä samoin kuin hahmotelma-fra.js:n kuvat.
  *
  * Ranskan maastokohteet. Faktat en-Wikipediasta 29.8.2026; koordinaatit artikkelien omia paitsi merillä ja joilla, joilla piste on valittu käsin lehden ikkunan sisältä (ks. lahdeKoordinaatti).
  */
@@ -72,6 +100,16 @@ export const MAASTOKOHTEET_FRA = [
       lisenssi: 'CC BY-SA 2.0 France',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en',
     },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-montblanc-6f13a0ce.jpg',
+      lyhyt: 'Mont Blancin varjo lankeaa pilvimereen elokuussa 1873.',
+      selite: 'Gabriel Loppé maalasi vuoren kolmiomaisen varjon pilvimereen huipulla 6. elokuuta 1873; köysikunta kulkee lumikentällä etualalla.',
+      lahde: 'Maalaus: Gabriel Loppé, Wikimedia Commons (public domain).',
+      tekija: 'Gabriel Loppé',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:LoppeOmbreMontBlanc.png',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    }],
     nimi: 'Mont Blanc',
     tyyppi: 'vuori',
     kysymykset: [
@@ -104,6 +142,16 @@ export const MAASTOKOHTEET_FRA = [
       lisenssi: 'CC BY-SA 3.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
     },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-vignemale-30637627.jpg',
+      lyhyt: 'Vignemalen massiivi ja Ossouen jäätikkö Cardousin ylängöltä.',
+      selite: 'Vignemalen harjanne ja Ossouen jäätikkö nähtynä Cardousin ylängöltä; jäätikkö on Pyreneiden suurin.',
+      lahde: 'Valokuva: Guillaume Baviere, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Guillaume Baviere',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Massif_du_Vignemale_et_glacier_d%27Ossoue_depuis_le_plateau_des_Cardous.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    }],
     nimi: 'Vignemale',
     tyyppi: 'vuori',
     kysymykset: [
@@ -124,6 +172,26 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'valimeri',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-valimeri-1c259265.jpg',
+      lyhyt: 'Välimeri aukeaa tyynenä Marseillen edustalla.',
+      selite: 'Välimeren avoin ulappa Marseillen rannikolta katsottuna; alukset kulkevat horisontin tuntumassa.',
+      lahde: 'Valokuva: Chabe01, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Chabe01',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mer_M%C3%A9diterran%C3%A9e_Marseille_1.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-valimeri-c3b5c8c1.jpg',
+      lyhyt: 'Kalkkikivijyrkänne ja männyt laskeutuvat mereen Cassisin luona.',
+      selite: 'Cassisin calanquet: kalkkikivijyrkänteet ja aleppomännyt laskeutuvat suoraan Välimereen.',
+      lahde: 'Valokuva: GabrielleMerk, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'GabrielleMerk',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Cassis-Calanques.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }],
     nimi: 'Välimeri',
     tyyppi: 'meri',
     kysymykset: [
@@ -146,6 +214,26 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'biskajanlahti',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-biskajanlahti-574ec6f8.jpg',
+      lyhyt: 'Pilatin dyyni kohoaa Biskajanlahden rannalla.',
+      selite: 'Euroopan korkein hiekkadyyni Pilat erottaa Landesin mäntymetsän Biskajanlahden ulapasta.',
+      lahde: 'Valokuva: Jörg Braukmann, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Jörg Braukmann',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sommet_de_la_Dune_du_Pilat.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-biskajanlahti-83dab453.jpg',
+      lyhyt: 'Atlantin maininki vyöryy Biarritzin rannalle.',
+      selite: 'Biskajanlahden maininki murtuu Biarritzin Grande Plagen rannalla; taustalla kaupungin rantarakennukset.',
+      lahde: 'Valokuva: Florian Pépellin, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Florian Pépellin',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Biarritz-Plage.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    }],
     nimi: 'Biskajanlahti',
     tyyppi: 'meri',
     kysymykset: [
@@ -266,6 +354,16 @@ export const MAASTOKOHTEET_FRA = [
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
     },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-mont-saint-michel-7f5fa32d.jpg',
+      lyhyt: 'Mont-Saint-Michel koillisesta noin vuonna 1895.',
+      selite: 'Luostarisaaren koillissivu nousuveden aikaan noin vuonna 1895 tehdyssä photochrom-värivedoksessa.',
+      lahde: 'Photochrom-vedos noin 1895, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Flickr-käyttäjä trialsanderrors',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Flickr_-_%E2%80%A6trialsanderrors_-_North-east_face,_Mont-Saint-Michel,_Normandy,_France,_ca._1895.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+    }],
     nimi: 'Mont-Saint-Michel',
     tyyppi: 'kulttuuri',
     // MAASTOKOHDE EI SULAUDU AIHEMERKKIIN (omistaja 16.9.2026, ks.
@@ -357,6 +455,26 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'lascaux',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-lascaux-1162075d.jpg',
+      lyhyt: 'Vastakkain kääntyneet biisonit Lascaux 2 -jäljennöksessä.',
+      selite: 'Kaksi selät vastakkain kääntynyttä biisonia luolan tunnetuimmasta maalausryhmästä, kuvattuna Lascaux 2 -jäljennöksessä.',
+      lahde: 'Valokuva jäljennöksestä: Raimond Spekking, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Raimond Spekking',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:A_l%27int%C3%A9rieur_de_Lascaux_2,_Montignac-Lascaux-47023.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-lascaux-af29a2cf.jpg',
+      lyhyt: 'Härkien sali Lascaux 2 -jäljennöksessä.',
+      selite: 'Härkien salin holvi maalattuine sonneineen ja hevosineen; kävijäryhmä seisoo jäljennöksen keskellä.',
+      lahde: 'Valokuva jäljennöksestä: Elke Wetzig, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Elke Wetzig',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lascaux_II,_Salle_des_taureaux-4970.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }],
     nimi: 'Lascaux',
     tyyppi: 'historia',
     kysymykset: [
@@ -391,6 +509,26 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'chartresin-katedraali',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-chartresin-katedraali-13d8d62f.jpg',
+      lyhyt: 'Chartresin katedraalin eri-ikäiset tornit kaupungin yllä.',
+      selite: 'Katedraali kohoaa Chartresin kattojen yli; vasemmalla liekehtivän gotiikan torni, oikealla vanhempi ja yksinkertaisempi torni.',
+      lahde: 'Valokuva: Ludvig14, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Ludvig14',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Chartres_DJI_0352a.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-chartresin-katedraali-f9f6ef8a.jpg',
+      lyhyt: 'Kuninkaallisen portaalin oikea ovi 1850-luvun valokuvassa.',
+      selite: 'Charles Nègre kuvasi kuninkaallisen portaalin oikean oven pylväshahmoineen 1850-luvulla, jolloin valokuvaus oli vasta tulossa Ranskan muistomerkkien tallentajaksi.',
+      lahde: 'Valokuva: Charles Nègre, Cleveland Museum of Art, Wikimedia Commons (CC0).',
+      tekija: 'Charles Nègre',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Charles_N%C3%A8gre_-_Chartres_Cathedral-_Right_Door_of_the_Royal_Portal_with_Our_Lady_of_Chartre_-_1992.11_-_Cleveland_Museum_of_Art.tif',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    }],
     nimi: 'Chartresin katedraali',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -427,6 +565,26 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'pont-du-gard',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-pont-du-gard-96d4bf00.jpg',
+      lyhyt: 'Pont du Gardin kolme holvikerrosta Gardon-joen yllä.',
+      selite: 'Roomalainen akveduktisilta kolmine holvikerroksineen; etualalla polku joen rantatasanteella.',
+      lahde: 'Valokuva: Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Krzysztof Golik',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pont_du_Gard_(01).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-pont-du-gard-42a87741.jpg',
+      lyhyt: 'Édouard Baldus kuvasi akveduktin 1850-luvulla.',
+      selite: 'Kolme kulkijaa seisoo Gardonin rannalla akveduktin alla Édouard Baldusin 1850-luvun valokuvassa.',
+      lahde: 'Valokuva: Édouard Baldus, Wikimedia Commons (public domain).',
+      tekija: 'Édouard Baldus',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pontdugard.png',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    }],
     nimi: 'Pont du Gard',
     tyyppi: 'tekniikka',
     kysymykset: [
@@ -463,6 +621,26 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'carnacin-kivirivit',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-carnacin-kivirivit-742f071c.jpg',
+      lyhyt: 'Kerlescanin kivirivit nousevat nummesta Carnacissa.',
+      selite: 'Kerlescanin riveissä pystykivet jatkuvat jonoina nummen halki; takana Carnacin mäntymetsä.',
+      lahde: 'Valokuva: Myrabella, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Myrabella',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Alignement_Kerlescan_Carnac.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-carnacin-kivirivit-99196915.jpg',
+      lyhyt: 'Kivirivit vuoden 1886 puupiirroksessa.',
+      selite: 'Carnacin kivirivit T. Taylorin puupiirroksessa Élisée Recluksen teoksessa France, Algérie et colonies vuodelta 1886; kaksi kulkijaa antaa kiville mittakaavan.',
+      lahde: 'Puupiirros: T. Taylor, Wikimedia Commons (public domain).',
+      tekija: 'T. Taylor',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Reclus_-_France,_Alg%C3%A9rie_et_colonies_(1886)-p211.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    }],
     nimi: 'Carnacin kivirivit',
     tyyppi: 'historia',
     kysymykset: [
@@ -508,6 +686,26 @@ export const MAASTOKOHTEET_FRA = [
    * ============================================================== */
   {
     id: 'avignonin-paavinpalatsi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-avignonin-paavinpalatsi-337e54e5.jpg',
+      lyhyt: 'Paavinpalatsin muurit ja tornit Avignonissa.',
+      selite: 'Palais des Papes -palatsin puolustustornit ja aukio; oikealla kappelin korkeat tukipilarit.',
+      lahde: 'Valokuva: Jean-Marc Rosier, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Jean-Marc Rosier',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Avignon,_Palais_des_Papes_by_JM_Rosier.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-avignonin-paavinpalatsi-c04b6217.jpg',
+      lyhyt: 'Palatsi Édouard Baldusin 1800-luvun valokuvassa.',
+      selite: 'Paavinpalatsi ja katedraalin kellotorni Édouard Baldusin albumiinivedoksessa 1800-luvun puolivälistä; aukio on vielä tyhjä hiekkakenttä.',
+      lahde: 'Valokuva: Édouard Baldus, Metropolitan Museum of Art, Wikimedia Commons (CC0).',
+      tekija: 'Édouard Baldus',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Avignon,_Palais_des_Papes_MET_DP137988.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    }],
     nimi: 'Avignonin paavinpalatsi',
     nimio: 'Avignon',
     tyyppi: 'historia',
@@ -552,6 +750,26 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'chambord',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-chambord-5a395a1d.jpg',
+      lyhyt: 'Chambordin linna aamuvalossa.',
+      selite: 'Linnan julkisivu ja kattojen tornimetsä aamunkoitteessa; edessä puiston suora käytävä.',
+      lahde: 'Valokuva: Clément Bardot, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Clément Bardot',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chambord_at_dawn.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-chambord-f7807e1a.jpg',
+      lyhyt: 'Chambord ilmasta kaakon suunnasta.',
+      selite: 'Ilmakuva näyttää linnan neliömäisen pohjakaavan, keskustornin ja ennallistetut ranskalaiset puutarhat vallihaudan sisällä.',
+      lahde: 'Valokuva: Carsten Steger, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Carsten Steger',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aerial_image_of_Ch%C3%A2teau_de_Chambord_(view_from_the_southeast).jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }],
     nimi: 'Chambordin linna',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -593,6 +811,26 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'douaumont',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-douaumont-ff17b042.jpg',
+      lyhyt: 'Luukammion torni ja hautausmaa Douaumontissa.',
+      selite: 'Luukammion torni kohoaa ristien hautausmaan yllä; etualalla Ranskan puolella kaatuneiden muslimisotilaiden hautakivet.',
+      lahde: 'Valokuva: vasse nicolas antoine, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'vasse nicolas antoine',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ossuaire_de_Douaumont_-_Verdun_(France)_(17074336958).jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-douaumont-e7683d63.jpg',
+      lyhyt: 'Luukammio pian vuoden 1932 vihkimisen jälkeen.',
+      selite: 'Ilmakuva vastavalmistuneesta luukammiosta ja sen eteen rivitetystä ristien hautausmaasta; maasto on yhä taistelujen jäljiltä paljas.',
+      lahde: 'Postikorttivalokuva, tekijä tuntematon, Wikimedia Commons (public domain).',
+      tekija: 'tuntematon',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ossuaire_de_Douaumont,_Verdun_1914-1918_P-FG-CP-01050-13.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    }],
     nimi: 'Douaumontin luukammio',
     nimio: 'Verdun',
     tyyppi: 'historia',
@@ -634,6 +872,26 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'bayeux-seinavaate',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-bayeux-seinavaate-69016d69.jpg',
+      lyhyt: 'Pyrstötähti ja Harold seinävaatteen kohtauksissa 32 ja 33.',
+      selite: 'Miehet osoittavat taivaalle ilmestynyttä pyrstötähteä ja Harold saa kuulla enteestä; latinankielinen tekstinauha kuuluu ISTI MIRANT STELLA.',
+      lahde: 'Valokuva seinävaatteesta: Myrabella, Wikimedia Commons (public domain).',
+      tekija: 'Myrabella',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bayeux_Tapestry_32-33_comet_Halley_Harold.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-bayeux-seinavaate-4f10834b.jpg',
+      lyhyt: 'Haroldin kuolema Hastingsin taistelussa, kohtaus 57.',
+      selite: 'Tekstinauha HIC HAROLD REX INTERFECTUS EST kertoo kuningas Haroldin kaatuvan; alareunassa kaatuneiden aseita ja kilpiä.',
+      lahde: 'Valokuva seinävaatteesta: Myrabella, Wikimedia Commons (public domain).',
+      tekija: 'Myrabella',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bayeux_Tapestry_scene57_Harold_death.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    }],
     nimi: 'Bayeux\'n seinävaate',
     nimio: 'Bayeux',
     tyyppi: 'sana',
@@ -676,6 +934,26 @@ export const MAASTOKOHTEET_FRA = [
   },
   {
     id: 'millaun-silta',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-millaun-silta-714e5cc4.jpg',
+      lyhyt: 'Millaun silta ylittää Tarnin laakson Creisselsin kohdalla.',
+      selite: 'Vinoköysisillan pylväät nousevat laakson pohjalta pilvien tasolle; alla peltoja ja kylän katot.',
+      lahde: 'Valokuva: Stefan Krause, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Stefan Krause',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Creissels_et_Viaduct_de_Millau.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [{
+      osoite: 'https://media.matkakirja.app/karttanostot/20260918/fra-maasto-millaun-silta-98307e26.jpg',
+      lyhyt: 'Silta kaartuu Millaun kaupungin yllä.',
+      selite: 'Millaun kaupunki laakson pohjalla ja vinoköysisilta sen takana rinteestä rinteeseen; silta kiertää kaupungin liikenteen.',
+      lahde: 'Valokuva: W. Bulach, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'W. Bulach',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:00_0237_Millau_-_D%C3%A9partement_Aveyron.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    }],
     nimi: 'Millaun silta',
     tyyppi: 'tekniikka',
     // MAASTOKOHDE EI SULAUDU AIHEMERKKIIN — ks. Mont-Saint-Michelin

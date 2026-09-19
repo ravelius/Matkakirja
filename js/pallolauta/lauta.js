@@ -2293,16 +2293,89 @@ export async function avaaPallolauta(ui) {
 
   /** Laudan kaupunki (x, y, id, name) pallon kaupungista. */
   const laudanKaupunki = (k) => ui.game.board?.cityById?.get(k.id) ?? null;
+  /*
+   * ══════════════════════════════════════════════════════════════════
+   * MUIDEN MAIDEN KAUPUNGIT PIILOON, KUN EI OLLA LIIKKUMASSA
+   * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 43 kohta 8; omistaja
+   * 18.9.2026 sanatarkasti: *"Voiko muiden maiden kaupungit piilottaa
+   * kartalta jos ei olla liikkumassa?"*)
+   * ══════════════════════════════════════════════════════════════════
+   *
+   * PELINÄKYMÄ ON KOHDEMAAN NÄKYMÄ. Kartuutsi, maapaneeli, korostuskehä,
+   * värilaatasto ja elävät nostot kertovat jo yhtä ja samaa maata
+   * (kohteidenNykyinenIso); kaupunkipisteet ja niiden nimet olivat
+   * ainoa kerros, joka levitti mustetta koko pallolle. Nyt ne
+   * noudattavat samaa rajaa.
+   *
+   * SUODATUS ON DATASSA EIKÄ CSS:SSÄ (omistajan tehtävänanto): pois
+   * jäävä kaupunki ei tule pistejoukkoon (`pointsData`) eikä ladonnan
+   * ehdokkaaksi lainkaan, joten kehyksen työ ja ladonnan törmäystesti
+   * kevenevät samassa suhteessa — piilotus pelkällä läpinäkyvyydellä
+   * olisi maksanut saman verran kuin näyttäminen.
+   *
+   * MIKÄ EI MUUTU: kehittäjän maailmatila ja `ui.maailmanakyma`
+   * näyttävät kaikki kuten ennen, linssi sammuttaa nämä kerrokset
+   * muutenkin, avauslennolla ja lähtövalinnassa on oma niukka joukkonsa,
+   * ja laattaan poltetut kaupunkinimet ovat kerman alla (PAATOKSET 37)
+   * eli tämän kerroksen ulkopuolella.
+   *
+   * SIIRTOVAIHE AVAA KOHTEET. Nopanheiton tarjolla olevat kaupungit
+   * (sama sääntö kuin drawTargets: vaihe `move`, ei bottia, ei
+   * katselua) tulevat joukkoon nimineen — muut muiden maiden kaupungit
+   * pysyvät piilossa. Pelaajan oma kaupunki on aina mukana.
+   *
+   * MAA LUETAAN YHDESTÄ PAIKASTA, JÄSENYYS PALLON OMASTA LAUDASTA.
+   * `kohteidenNykyinenIso` on sama luku kuin korostuskehällä ja
+   * nostotasolla (`nostotasot[kohdemaa]`), ja jäsenyystaulu on sen
+   * laudan oma, jonka kaupunkeja tässä piirretään (`pack`) — pelin
+   * oma pack voi lähtövalinnassa olla toinen.
+   *
+   * KUN MAATA EI OLE, EI RAJATA. Nappulan ollessa reitillä
+   * (liftaus, saatto) `cityOf` on tyhjä eikä kohdemaata ole: silloin
+   * kartta on entisellään, mikä on juuri omistajan ehto *"jos ei olla
+   * liikkumassa"*.
+   */
+  let rajausAvain = null;
+  let rajausJoukko = null;
+  const pelinKaupunkirajaus = () => {
+    const { game } = ui;
+    if (lento || linssiPaalla() || maailmatilassa() || ui.maailmanakyma?.()) {
+      rajausAvain = null;
+      return null;
+    }
+    const taulu = pack?.map?.cityCountry ?? null;
+    const iso = taulu ? kohteidenNykyinenIso(ui) : null;
+    if (!iso) { rajausAvain = null; return null; }
+    const oma = game.cityOf?.()?.id ?? null;
+    const kohdeIdt = game.phase === 'move' && !game.player?.isBot && !ui.katselu
+      ? (game.moveOptions?.() ?? []).map((o) => o.city?.id).filter(Boolean)
+      : [];
+    // Avain karsii turhan työn: joukko rakennetaan vasta kun maa,
+    // oma kaupunki tai kohdejoukko on oikeasti vaihtunut.
+    const avain = `${iso}|${oma ?? ''}|${kohdeIdt.join(',')}`;
+    if (avain === rajausAvain) return rajausJoukko;
+    const joukko = new Set();
+    for (const id of Object.keys(taulu)) if (taulu[id] === iso) joukko.add(id);
+    if (oma) joukko.add(oma);
+    for (const id of kohdeIdt) joukko.add(id);
+    rajausAvain = avain;
+    rajausJoukko = joukko;
+    return joukko;
+  };
+
   /**
    * Näkyykö kaupungin piste: nimetty, oma tai kehittäjän maailmanäkymä.
    * Avauslennolla vain reitin kaksi päätä ja lähtövalinnassa vain Lontoo
    * ja valittavat (PISTE VAIN NIMEN KANSSA pitää silloinkin: nimet ovat
-   * täsmälleen samat kaupungit).
+   * täsmälleen samat kaupungit). Pelinäkymässä rajana on lisäksi
+   * kohdemaa (ks. MUIDEN MAIDEN KAUPUNGIT PIILOON).
    */
   const pisteNakyy = (k) => {
     if (lento) return lento.nimet.has(k.id);
     const valinta = aloitusNakyvat();
     if (valinta) return valinta.has(k.id);
+    const rajaus = pelinKaupunkirajaus();
+    if (rajaus && !rajaus.has(k.id)) return false;
     return nimet.nimetty(k.id)
       || ui.game.cityOf?.()?.id === k.id
       || Boolean(ui.maailmanakyma?.());
@@ -2326,6 +2399,24 @@ export async function avaaPallolauta(ui) {
   let liuskanKaupunki = null;
   /** Liuskan "Liiku tänne" -rivin siirtovalinta tai null. */
   let liuskanSiirto = null;
+
+  /**
+   * SIIRRON VALINTA — YKSI FUNKTIO KOLMELLE POLULLE (Raamattu,
+   * KARTTAUUDISTUKSEN PAATOKSET 42). Sama teko tehdään nyt kolmesta
+   * paikasta: liuskan "Liiku tänne" -rivi, kohdemerkki (punainen
+   * katkorengas) ja siirtovaiheessa kohteena olevan kaupungin oma
+   * merkki. Päätös sanoo *"sama teko kuin Liiku tänne"*, joten teko on
+   * kirjoitettu tähän kerran eikä kolmeen kopioon: liuskan muisti
+   * nollataan ja `ui.doMove` saa avaimen.
+   */
+  const valitseSiirto = (avain) => {
+    if (!avain) return false;
+    liuskanKaupunki = null;
+    liuskanSiirto = null;
+    heraa();
+    ui.doMove(avain);
+    return true;
+  };
 
   const napautaKaupunki = (k) => {
     if (ui.dead || ui.busy || !k) return false;
@@ -2405,6 +2496,35 @@ export async function avaaPallolauta(ui) {
       const siirto = (game.phase === 'move' && !game.player?.isBot)
         ? (game.moveOptions?.().find((opt) => opt.city?.id === city.id) ?? null)
         : null;
+      /*
+       * ══ KOHDEKAUPUNKI VALITSEE SIIRRON HETI, EI AVAA LIUSKAA ══════
+       * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 42; omistaja 18.9.2026
+       * klo 22.41, iPad-kuva Lontoosta nopan jälkeen: *"Liftauksessa
+       * jos painaa kohdekaupunkia, aukeaa viuhka vaikka pitaisi valita
+       * kohde liikkeelle"*.)
+       *
+       * KOHDEMERKIN NAPAUTUS TEKI TÄMÄN JO (napautaKohde → doMove),
+       * mutta kaupungin OMA piste on kirjaston pistekerroksen olio ja
+       * sillä on oma click (reititaPallopisteenNapautus → tämä
+       * funktio) — se ohittaa `napautaPintaan`in kohdetestin
+       * (`lahinKohde`) kokonaan. Punaisen katkorenkaan keskellä oleva
+       * kaupunkimerkki avasi siis liuskan, vaikka merkin ja kohteen
+       * ruutupiste on sama. Nyt sama sääntö kuin kohdemerkillä
+       * (`kohdevalinta`, drawTargets): siirtovaihe, ei botti, ei
+       * katselu.
+       *
+       * KAMERA-AJO JÄÄ AJAMATTA (kohta 10 koskee vain liuskan
+       * avausta): valinta palaa tästä ennen `void (async …)` -ajoa,
+       * joten siirron oma ennakkozoomi (js/siirtokoreografia.js) saa
+       * kameran koskemattomana — kaksi ajoa peräkkäin nykisi.
+       *
+       * PELAAJAN OMA KAUPUNKI EI OLE KOHDE (kohta 3): sen merkki avaa
+       * liuskan siirtovaiheessakin, vaikka moveOptions jostain syystä
+       * tarjoaisi paikallaan pysymistä.
+       */
+      if (siirto && !ui.katselu && !(oma && oma.id === city.id)) {
+        return valitseSiirto(siirto.key);
+      }
       void (async () => {
         /*
          * ══ KAMERA AJAA SEN VERRAN, ETTÄ SUURIN LIUSKA MAHTUU ══════
@@ -2550,9 +2670,9 @@ export async function avaaPallolauta(ui) {
       return true;
     }
     if (game.phase !== 'move' || game.player?.isBot) return false;
-    heraa();
-    ui.doMove(kohde.key);
-    return true;
+    // Sama funktio kuin liuskan "Liiku tänne" -rivillä ja kohteena
+    // olevan kaupungin merkillä (PAATOKSET 42).
+    return valitseSiirto(kohde.key);
   };
 
   /** NAPAUTUS NOSTOON (vaihe 3): kortti aukeaa merkin ruutupisteestä. */
@@ -3153,10 +3273,11 @@ export async function avaaPallolauta(ui) {
         heraa();
         const city = liuskanKaupunki ?? ui.game.cityOf?.();
         if (osui.laji === 'liiku') {
-          const avain = liuskanSiirto?.key;
+          // Sama funktio kuin kohdemerkillä ja kohdekaupungilla
+          // (PAATOKSET 42): valitseSiirto nollaa liuskan muistin.
+          valitseSiirto(liuskanSiirto?.key);
           liuskanKaupunki = null;
           liuskanSiirto = null;
-          if (avain) ui.doMove(avain);
           return;
         }
         /*
@@ -3892,7 +4013,20 @@ export async function avaaPallolauta(ui) {
     });
     // Niukka nimijoukko: avauslennolla kaksi päätä, lähtövalinnassa
     // Lontoo (aalto 3A) — muulloin koko lauta budjetilla.
-    const vain = lento?.nimet ?? aloitusNimet();
+    const niukka = lento?.nimet ?? aloitusNimet();
+    /*
+     * MUIDEN MAIDEN NIMET POIS SAMALLA RAJALLA KUIN PISTEET (Raamattu,
+     * KARTTAUUDISTUKSEN PAATOKSET 43 kohta 8; perustelu tässä
+     * tiedostossa, ks. MUIDEN MAIDEN KAUPUNGIT PIILOON). Rajaus menee
+     * ladonnan `vain`-portista eli EHDOKKAIDEN karsintana: pois jäävä
+     * kaupunki ei mittaa tekstiään eikä osallistu törmäystestiin.
+     *
+     * BUDJETTI EI SAA TULLA RAJAUKSESTA. Niukka joukko (lento,
+     * lähtövalinta) on määritelmänsä mukaan kokonaan ruudulla, joten
+     * sen koko kelpaa katoksi; kohdemaan joukko on tavallinen
+     * pelinäkymä, jossa zoomtason nimibudjetti pätee kuten ennenkin.
+     */
+    const vain = niukka ?? pelinKaupunkirajaus();
     /*
      * NIMIBUDJETTI ZOOMTASOSTA (omistaja 12.9.2026: *"Kaupunki
      * tekstejä on liikaa näkyvillä uloimmilla zoom tasoilla"*).
@@ -3900,8 +4034,8 @@ export async function avaaPallolauta(ui) {
      * täällä se vain yhdistetään CSS2D-kerroksen omaan kattoon.
      */
     const korkeusAst = nakyva?.h > 0 ? (nakyva.h * 360) / PALLOLAUDAN_LEVEYS : Infinity;
-    const katto = vain
-      ? vain.size
+    const katto = niukka
+      ? niukka.size
       // Nimibudjetista vähennetään NIMIÖLLISET nostot, ei nimiöttömiä
       // pisteitä (ks. nostot.js `nimiollisia`, PAATOKSET 34 kohta 21).
       : Math.min(nimibudjetti(korkeusAst),

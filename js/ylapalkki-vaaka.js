@@ -20,9 +20,11 @@
  * TYÖNJAKO CSS:N KANSSA. Tämä moduuli ei mittaa ruutua eikä kuuntele
  * kokoa: se vain luo napin ja pitää kirjaa siitä, onko palkki auki
  * (body.ylapalkki-auki). NÄKYYKÖ nappi ja väistyykö palkki, on yksin
- * CSS:n media-kyselyn asia (css/styles.css, max-height 520px).
- * Kahdessa paikassa laskettu sama raja menisi ennen pitkää eri
- * suuntiin.
+ * CSS:n media-kyselyn asia (css/styles.css: matala ruutu TAI
+ * kosketuslaite iPadin levyisellä ruudulla, Raamattu
+ * KARTTAUUDISTUKSEN PAATOKSET 43 kohta 9). Kahdessa paikassa
+ * laskettu sama raja menisi ennen pitkää eri suuntiin — siksi
+ * täällä ei ole yhtään mittalukua.
  *
  * SULKU ON POINTERDOWN EIKÄ CLICK. Napautus kartalla saa sulkea
  * palkin ilman että se samalla valitsee kohteen alta — pointerdown

@@ -60,7 +60,12 @@
  *  10c. MUSTA PINTA HUOMATAAN JA KORJATAAN. Kun kangas valehtelee
  *      (drawImage ei piirrä, getImageData antaa uskottavia pikseleitä),
  *      pinnasta tulee musta. Mittauksen on nähtävä se PIIRTOPUSKURISTA
- *      ja vaihdettava generoitu vyöhykepallo tilalle.
+ *      ja vaihdettava generoitu vyöhykepallo tilalle. MYÖS PILVIEN ALTA
+ *      (19.9.2026): PAATOKSET 43 kohta 7:n pilvikuori on täsmälleen
+ *      mittauspisteiden päällä, ja ilman korjausta vartio luki mustasta
+ *      pinnasta 186 eli "kaikki hyvin". Lohko vaatii siksi erikseen,
+ *      että pilvet OLIVAT päällä kokeen aikana — muuten punaisen voisi
+ *      "korjata" sammuttamalla pilvet.
  *  10d. PISTEET DOMISSA AJOISSA JA PYSYVÄT PINNAN VAIHDON YLI.
  *  11. KOLME AVAUSTA PERÄKKÄIN (Raamattu LISÄYS 13 kohta 37
  *      TARKENNUS, Mac-session mittaus oikealla WebKitillä): musta
@@ -1361,6 +1366,17 @@ async function ajaNakyma(nimi) {
    * (`specular`in konstruktori) ensin valkoisena ja sitten takaisin
    * linssin sävyyn — ja pinta luetaan piirtopuskurista joka kerta.
    */
+  /*
+   * PILVET OVAT PÄÄLLÄ, MUTTA MITTAUS NÄKEE PINNAN (19.9.2026).
+   *
+   * PAATOKSET 43 kohta 7 toi pinnan päälle pilvikuoren (peitto kaukaa
+   * 0,9), ja se jäi täsmälleen näytteiden ja pinnan väliin: tämä rivi
+   * luki PR #2590:ssä valkoisella 222 ja sävyllä 216 — molemmat
+   * pilvistä, eivät pinnasta. Korjaus vie kuoren pois siksi yhdeksi
+   * kehykseksi, jonka mittaus itse piirtää (`pinnanKirkkaus`). Siksi
+   * tässä kirjataan MYÖS pilvien peitto ja esteen laskuri: jos pilvet
+   * olisivat pois päältä, mittaus olisi helppo mutta väite tyhjä.
+   */
   const savy = await s.evaluate((hexSavy) => {
     const kahva = window.matkakirja.ui.pallolinssi.kahva.avaruus;
     const materiaali = window.matkakirja.ui.pallonInstanssi.globeMaterial?.();
@@ -1371,12 +1387,19 @@ async function ajaNakyma(nimi) {
       materiaali.needsUpdate = true;
       return true;
     };
+    const esteetEnnen = kahva.tila?.()?.pinnanEsteita ?? null;
+    const pilvet = kahva.tila?.()?.sumu?.pilvet ?? null;
     const jalkeen = kahva.mittaaPinta();
     const valkeni = aseta(0xffffff);
     const ennen = kahva.mittaaPinta();
     const palasi = aseta(hexSavy);
     const palautettu = kahva.mittaaPinta();
-    return { ennen, jalkeen, palautettu, valkeni, palasi };
+    const esteetJalkeen = kahva.tila?.()?.pinnanEsteita ?? null;
+    const pilvetNyt = kahva.tila?.()?.sumu?.pilvienNakyvyys ?? null;
+    return {
+      ennen, jalkeen, palautettu, valkeni, palasi,
+      pilvet, pilvetNyt, esteetEnnen, esteetJalkeen,
+    };
   }, 0x999999); // PALLON_SAVY (LISÄYS 16 kohta 46)
   vaadi(t('43: pinta tummeni kauttaaltaan mutta ei mustunut'),
     savy.valkeni && savy.palasi && savy.jalkeen > 20 && savy.ennen > savy.jalkeen
@@ -1384,6 +1407,17 @@ async function ajaNakyma(nimi) {
       && Math.abs(savy.palautettu - savy.jalkeen) <= Math.max(6, savy.jalkeen * 0.1),
     `valkoisella ${savy.ennen} → linssin sävyllä ${savy.jalkeen} `
     + `(sama sävy uudestaan ${savy.palautettu}, mustan kynnys 12)`);
+  /*
+   * 43b: MITTAUS TEHTIIN PILVIEN LÄPI, EI NIIDEN PUUTTUESSA. Kolme
+   * mittausta yllä → esteen laskurin on kasvettava kolmella, ja
+   * pilvipeiton on oltava yli nollan. Jos jompikumpi ei toteudu,
+   * yllä oleva väite mittasi jotain muuta kuin lupasi.
+   */
+  vaadi(t('43b: sävy mitattiin pilvikuoren läpi (kuori pois vain mittauksen ajaksi)'),
+    Number(savy.pilvet) > 0 && Number(savy.esteetJalkeen) - Number(savy.esteetEnnen) === 3
+      && Number(savy.pilvetNyt) > 0,
+    `pilvipeitto ${savy.pilvet}, este ${savy.esteetEnnen} → ${savy.esteetJalkeen}, `
+    + `kuoren näkyvyys mittausten jälkeen ${savy.pilvetNyt}`);
 
   /* ---- 7. reliefin tarkkuus ----------------------------------------- */
   const odotettu = NAKYMAT[nimi].viewport.width >= 1024 ? '8k' : '4k';
@@ -2030,6 +2064,34 @@ async function ajaMustaPinta() {
   vaadi('MUSTA PINTA: varapolku palauttaa värillisen pinnan',
     mittaukset.length >= 2 && mittaukset[mittaukset.length - 1] > 20,
     `mittaukset ${JSON.stringify(mittaukset)}`);
+  /*
+   * MUSTA JÄÄ KIINNI MYÖS PILVIEN ALTA (19.9.2026, PR #2590).
+   *
+   * Tämä lohko ON mustan pallon vastakoe: kangas valehtelee, pinnasta
+   * tulee musta, ja vartion on nähtävä se. PAATOKSET 43 kohta 7:n
+   * pilvikuori (peitto kaukaa 0,9, kangas 2 048 × 1 024 eli
+   * valehtelevan kankaan rajan ALAPUOLELLA) piirtyy tässä normaalisti
+   * ja peitti mittauspisteen: PR #2590:ssä vartio luki 186 mustasta
+   * pinnasta eli ei nähnyt vikaa lainkaan. Siksi tässä vaaditaan
+   * ERIKSEEN, että pilvet OLIVAT päällä ja näkyvissä kokeen aikana ja
+   * että kuori on mittausten jälkeen taas piirrossa. Ilman tätä riviä
+   * yllä olevat kaksi väitettä voisi "korjata" sammuttamalla pilvet.
+   */
+  const sumutila = await s.evaluate(() => {
+    const t = window.matkakirja?.ui?.pallolinssi?.kahva?.avaruus?.tila?.() ?? null;
+    return {
+      pilvet: t?.sumu?.pilvet ?? null,
+      nakyvyys: t?.sumu?.pilvienNakyvyys ?? null,
+      ladattu: t?.sumu?.pilvetLadattu ?? null,
+      piilossa: t?.sumu?.pilvetPiilossa ?? null,
+      esteita: t?.pinnanEsteita ?? null,
+    };
+  });
+  vaadi('MUSTA PINTA: pilvet olivat päällä, ja musta jäi silti kiinni',
+    sumutila.ladattu === true && Number(sumutila.pilvet) > 0
+      && Number(sumutila.nakyvyys) > 0 && sumutila.piilossa === false
+      && Number(sumutila.esteita) >= 2,
+    JSON.stringify(sumutila));
   const kirkkausNyt = await macKirkkaus(s);
   vaadi('MUSTA PINTA: pallo ei ole ruudulla musta', kirkkausNyt > 20,
     `kirkkaus ${kirkkausNyt.toFixed(1)} (kynnys 20)`);

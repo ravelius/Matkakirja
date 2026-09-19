@@ -26929,10 +26929,43 @@ body.aikajana-paalla .pollo-nappi.pollo-kelluu.livia-kasvot-valmis { width:48px;
  * Nappi on olemassa DOM:ssa aina (js/ylapalkki-vaaka.js), mutta
  * näkyy vain tässä. Niin moduulin ei tarvitse mitata ruutua eikä
  * kuunnella koon muutoksia: sama raja on yhdessä paikassa.
+ *
+ * ── SAMA KÄYTÖS IPADILLA, MOLEMMISSA SUUNNISSA ────────────────────
+ * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 43 kohta 9; omistaja
+ * 18.9.2026 sanatarkasti: *"Ylapalkin voisi piilottaa myos ipadilla
+ * niin kuin iphonella on."*)
+ *
+ * IPADIN KUMPIKAAN SUUNTA EI OLE MATALA RUUTU: 1024 × 1366 ja
+ * 1366 × 1024 ovat molemmat yli 520 px korkeita, joten pelkkä
+ * korkeusraja ei tavoita niitä. Toinen ehto on siksi LAITELAATU JA
+ * LEVEYS, ei orientaatio:
+ *
+ *   pointer: coarse   — sormi, ei hiiri. Työpöytä (1400 × 900 hiiri)
+ *                       on `pointer: fine` eikä osu tähän missään
+ *                       ikkunakoossa, joten se jää täsmälleen
+ *                       ennalleen.
+ *   min-width: 700px  — pelin oma puhelinraja on `max-width: 699px`
+ *                       (ks. PUHELIN: ISOISÄN JA PULUN TEKSTIT
+ *                       PIILOON alla). Pystypuhelin jää siis
+ *                       ennalleen: siellä palkki mahtuu ja omistaja
+ *                       pyysi muutosta vaakaan ja iPadiin, ei
+ *                       pystypuhelimeen. Vaakapuhelin (844 × 390)
+ *                       osuu yhä ylempään korkeusehtoon.
+ *   max-width: 1366px — iPad Pro 12,9" on vaakasuunnassa laajin
+ *                       iPad (1366 px). Sitä leveämpi kosketusnäyttö
+ *                       on jo työpöytäluokan ruutu, jossa palkille
+ *                       on tilaa.
+ *
+ * Mitatut laitteet rajan sisällä: iPad mini 744 × 1133 / 1133 × 744,
+ * iPad 10,9" 820 × 1180 / 1180 × 820, iPad Pro 12,9" 1024 × 1366 /
+ * 1366 × 1024. Nappi, sen paikka, karttaselitteen väistö ja
+ * sulkusääntö ovat samat kaikissa — sääntölohko on yksi eikä kahta
+ * taitekohtaa synny.
  */
 .ylapalkki-nappi { display: none; }
 
-@media (max-height: 520px) {
+@media (max-height: 520px),
+  (pointer: coarse) and (min-width: 700px) and (max-width: 1366px) {
   /*
    * Palkki pois asettelusta, ei vain näkyvistä: `.app` on grid, jonka
    * ensimmäinen rivi on palkki. Pelkkä visibility jättäisi rivin

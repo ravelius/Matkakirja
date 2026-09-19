@@ -516,8 +516,25 @@ if (AMPARI_TOIMII) {
     });
     await sivu.waitForTimeout(300);
     const kokoMerkit = await MITTAA_MERKIT();
-    vaadi('12b. koko pallo: nimiä 10–40 (ehdokkaita > 40), ei limityksiä, piste vain nimetyillä, html ≤ 60',
-      kokoMerkit.nimia >= 10 && kokoMerkit.nimia <= 40 && kokoPallo.ehdokkaita > 40 && kokoMerkit.limitykset.length === 0
+    /*
+     * KOHDEMAAN NIMIÄ, EI KOKO LAUDAN (Raamattu, KARTTAUUDISTUKSEN
+     * PAATOKSET 43 kohta 8, 18.9.2026: muiden maiden kaupunkien pisteet
+     * ja nimet jäävät pelinäkymässä pois, kun siirtovaihe ei ole
+     * päällä). Vartio mittasi ENNEN sitä, että zoomtason nimibudjetti
+     * leikkaa koko pallon ehdokasjoukon 10–40 nimeen; nyt ehdokkaita on
+     * vain kohdemaasta (Fogg Ateenassa → Kreikka), joten sekä alaraja
+     * 10 että ehto "ehdokkaita > 40" mittaisivat väärää asiaa. Budjetin
+     * oma vartio kuuluu maailmatilaan, jossa rajausta ei ole — se on
+     * kirjattu Fablelle omaksi eräkseen (docs/raportit/
+     * viesti-fable-kaupungit-piiloon-20260918.md).
+     *
+     * SE, MIKÄ TÄSSÄ YHÄ MITATAAN, on kerroksen oma lupaus: nimet
+     * eivät limity, jokaisella nimellä on piste, piste on vain
+     * nimetyillä ja CSS2D-budjetti pitää.
+     */
+    vaadi('12b. koko pallo: kohdemaan nimiä 1–40, ei limityksiä, piste vain nimetyillä, html ≤ 60',
+      kokoMerkit.nimia >= 1 && kokoMerkit.nimia <= 40 && kokoPallo.ehdokkaita >= 1
+        && kokoMerkit.limitykset.length === 0
         && kokoMerkit.pisteVainNimella && kokoMerkit.nimillaPiste && kokoMerkit.htmlYhteensa <= 60,
       JSON.stringify({ nimia: kokoMerkit.nimia, ehdokkaita: kokoPallo.ehdokkaita, pudotettu: kokoPallo.pudotettu, limitykset: kokoMerkit.limitykset, html: kokoMerkit.htmlYhteensa, pisteita: kokoMerkit.pisteita }));
     tieto('koko pallo: nimiä / ehdokkaita / pudotettu / nostoja / DOM / tekstuurit',
