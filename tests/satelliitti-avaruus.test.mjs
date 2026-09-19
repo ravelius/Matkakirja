@@ -916,8 +916,8 @@ test('koko pallon reliefi on KYTKETTY (Mac-ajo 20260916)', () => {
   assert.equal(nyt.korkeus, RELIEFIN_KORKEUS);
   assert.equal(nyt.kokoPallo, true);
   // Tunniste näkyy molemmissa osoitteissa.
-  assert.match(RELIEFIN_KOKO_8K.osoite, /topografia-pallo-koko-8k-20260916\.webp$/);
-  assert.match(RELIEFIN_KOKO_4K.osoite, /topografia-pallo-koko-4k-20260916\.webp$/);
+  assert.match(RELIEFIN_KOKO_8K.osoite, /topografia-pallo-koko-8k-20260919b\.webp$/);
+  assert.match(RELIEFIN_KOKO_4K.osoite, /topografia-pallo-koko-4k-20260919b\.webp$/);
 });
 
 test('kytkin vaihtaa kuvan mutta EI tarkkuuden valintaa', () => {
@@ -950,7 +950,7 @@ test('kytkin vaihtaa kuvan mutta EI tarkkuuden valintaa', () => {
   // linssikuvat, ja molemmissa on tunniste (ikuinen välimuisti).
   for (const k of [RELIEFIN_KOKO_8K, RELIEFIN_KOKO_4K]) {
     assert.match(k.osoite, /^https:\/\/media\.matkakirja\.app\/matkakirja\/linssit\//);
-    assert.match(k.osoite, /topografia-pallo-koko-(4k|8k)-\d{8}\.webp$/);
+    assert.match(k.osoite, /topografia-pallo-koko-(4k|8k)-\d{8}[a-z]?\.webp$/);
   }
   assert.notEqual(RELIEFIN_KOKO_8K.osoite, RELIEFIN_KOKO_4K.osoite);
 });
@@ -982,7 +982,11 @@ test('jään sekoitus: päiväntasaajalla ei jäätä, navalla lähes pelkkää'
   // Etelämanner on jäätä, Jäämeri vain osittain — muuten rantaviiva
   // katoaisi, ja juuri se on tämän kuvan tarkoitus.
   assert.ok(Math.abs(jaapaino(-80, 2500) - JAA.maaKatto) < 1e-9);
-  assert.ok(Math.abs(jaapaino(89, -4000) - JAA.meriKatto) < 1e-9);
+  assert.ok(Math.abs(jaapaino(-89, -4000) - JAA.meriKatto) < 1e-9);
+  // Jäämeri kevyemmin (19.9.2026): altaat näkyvät jään läpi.
+  assert.ok(Math.abs(jaapaino(89, -4000) - JAA.meriPohjoinenKatto) < 1e-9);
+  assert.ok(JAA.meriPohjoinenKatto < JAA.meriKatto, "Jäämeren jää ei saa olla etelän merijäätä peittävämpää");
+  assert.equal(jaapaino(71, -1000), 0, "Jäämeren jää alkaa vasta 72°:ssa");
   assert.ok(JAA.meriKatto < JAA.maaKatto, 'merijää ei saa peittää yhtä täysin kuin mannerjää');
   // Liuku eikä kytkin: terävä raja piirtäisi navan ympäri renkaan.
   let edellinen = 0;
