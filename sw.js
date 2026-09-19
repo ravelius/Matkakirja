@@ -282,6 +282,11 @@ const SHELL = [
   './js/linssit/keksinnot.js',
   './js/linssit/ihmisen-matka.js',
   './js/linssit/ihmisen-matka-data.js',
+  // Livia-pulun valmiit kysymykset ja vastaukset jokaiselle pääjaksolle
+  // (omistaja 19.9.2026 klo 18.02, Raamattu). Sama malli kuin
+  // astronaut-kysymykset.js.
+  './js/linssit/ihmisen-matka-kysymykset.js',
+  './js/linssit/ihmisen-matka-pulukysymykset.js',
   /*
    * TÄSSÄ OLI './js/linssit/ihmisen-matka-kertomus.js' TOISEEN KERTAAN
    * (v1699, 7.9.2026). Sama rivi on alempana omine perusteluineen, eikä
