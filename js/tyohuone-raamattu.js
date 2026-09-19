@@ -9102,7 +9102,16 @@ export const RAAMATTU = {
           + 'nostoankkurien lukitus maamaskilla (LUKITUT_MAAT vain FRA; Finisterren piste '
           + 'on pelin yksinkertaistetussa ESP-renkaassa 3,9 lautayksikkoa merella, vaikka '
           + 'koordinaatti on majakalla maalla). Seuraava maa: Italia (fokuskohteet-ita ja '
-          + 'maastokohteet-ita jo olemassa).',
+          + 'maastokohteet-ita jo olemassa). ITALIA (Fable 19.9.2026 klo 16.20 Suomen '
+          + 'aikaa): Sonnet 2 teki listan 29 kohdetta (hyvaksytty), vaiheen 2 ja 3 klo 16.00: '
+          + 'js/packs/hahmotelma-ita.js 29 nostoa, 67 Commons-kuvaa (9 kohteella kolme), '
+          + 'tarkistukset 29/29, lisenssit 67/67 extmetadatasta uudelleen luettuina, testit '
+          + '3650/0. Fablen pistokoe Tarquinia (Leopardien haudan fresko kelpaa 13+), '
+          + 'Solferino (Bossolin taistelumaalaus ilman verta kelpaa) ja Carrara; Fable vei 67 '
+          + 'kuvaa ampariin karttanostot/20260920/ (HEAD 200 67/67). JULKAISTAAN v1957 '
+          + 'hahmotelmana. VELKA: ITA-ankkurien lukitus (Stromboli 21,2 ja Elba 10,9 '
+          + 'lautayksikkoa ITA-renkaan ulkopuolella, rengas ei sisalla pienia saaria). '
+          + 'Seuraava maa: Saksa.',
         'KARTTAUUDISTUKSEN PAATOKSET 47: NOPAN JALKEEN KAMERA JAI TYHJAAN KOHTAAN - '
           + 'KOHDEMAAN ZOOMIKATTO KUMOSI ULOSSOVITUKSEN (Sonnet-simulaattoritesti kierros 5, '
           + '19.9.2026 klo 14.05-14.19 Suomen aikaa: Pariisi -> liftaus -> Amsterdam -> Liiku '

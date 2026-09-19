@@ -1,6 +1,6 @@
 # Fablen luovutus Mac Studiolla — 19.9.2026 iltapäivä (Suomen aikaa)
 
-Sessio 19.9.2026 klo 08.27 – noin 16.00 Suomen aikaa (omistaja pyysi resetin).
+Sessio 19.9.2026 klo 08.27 – 15.55 Suomen aikaa (omistaja pyysi resetin; uusi Fable-sessio käynnistetty).
 Kaikki tila on repossa, Raamatussa (Fablen haara claude/bold-ride-vow4ki) ja tässä.
 
 ## Lue ensin
@@ -38,7 +38,7 @@ matkakirja.app: v1954 (v1955 Pages-julkaisu kesken luovutushetkellä).
 ## Pushatut mutta julkaisemattomat haarat ja avoimet PR:t
 
 - **#2606 opus-local-testit-github** — Testit GitHubin ubuntu-runnerille, Macin savukesarja 12 → 6 rinnakkain, paikallinen 4. Mergeä kun Testit (ubuntu) ja Savukkeet vihreitä. Jos ubuntu-ajo kaatuu verkkoon, kysy Opus 1:ltä.
-- **#2607 claude/bold-ride-vow4ki-v1956** — Espanjan 30 hahmotelmanostoa + 68 kuvaa (ämpärissä karttanostot/20260920/, HEAD 200 68/68). Mergeä vihreänä. Tarkista `git fetch` + uusi-versio ennen mergeä, jos main liikkuu.
+- **#2607 claude/bold-ride-vow4ki-v1956** — Espanjan 30 hahmotelmanostoa + 68 kuvaa (ämpärissä karttanostot/20260920/, HEAD 200 68/68). Rakennettu uudelleen mainin (v1955) päälle klo 15.52 (SHA 69d74659), CI ajaa jonossa #2606:n perässä. Mergeä vihreänä; jos main liikkuu ennen sitä, `git checkout -B ... origin/main`, merge origin/sonnet-nostot-esp + Fablen haara, uusi-versio, testit, build, force-with-lease.
 - **origin/sonnet-nostot-ita** — Italian kohdelista (hyväksytty); vaihe 2 (hahmotelma-ita.js + kuvat kansioon /Users/samireivinen/Matkakirja-nostot-kuvat/ita/) Sonnet 2 -sessiolla kesken. Kun valmis: pistokoe, `aws s3 cp` ämpäriin karttanostot/20260920/ (`source ~/.zshrc`, `--endpoint-url $PAATE`), HEAD-tarkistus, v1957.
 - **origin/opus-local-napakansi** — vain raportti (premissi kumottu), ei mergettävää.
 - **Opus 1 -sessio: erä opus-local-jaameri** kesken: Jäämeren jääpaino kevyemmäksi (tools/reliefivarit.mjs), 4k-pallokuva uudella tunnisteella kansioon /Users/samireivinen/Matkakirja-opus-tulokset/. Kun valmis: Fable vie kuvan ämpäriin (matkakirja/linssit/ tai reliefi-polku, katso js/reliefikuva.js), tarkistaa verkosta, ottaa tunnistecommitin mukaan versioon.
