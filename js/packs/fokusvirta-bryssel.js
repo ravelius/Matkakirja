@@ -28,22 +28,20 @@ export const FOKUSVIRTA_BRYSSEL = {
     paikkarivi: 'Bryssel, kesäkuussa 1873. Sateen jäljiltä kiiltävää; '
       + 'katukivi kaikuu askelista.',
     /*
-     * Isoisän matkakirja, Fable 19.9.2026 klo 22.08 Suomen aikaa (kaanon;
+     * Isoisän matkakirja, Fable 19.9.2026 klo 22.08, lyhennetty 22.48 (omistaja:
+     * "liian pitkä. Max 450 merkkiä"; nyt alle 450) (kaanon;
      * korvasi Sonnet-sisältösession luonnoksen). Faktat: Sennen kattaminen
      * 1867–1871 ja bulevardit, Grand-Placen kiltatalot, Manneken Pis,
      * Palais de Justice rakenteilla 1866–1883 (Joseph Poelaert), Brysselin
      * pitsi (EUROPE_ARTIKKELIT.Bryssel).
      */
-    teksti: 'Bryssel, kesäkuussa 1873. Kaupunki on juuri haudannut '
-      + 'jokensa: Senne katettiin kivellä, ja sen päälle vedettiin '
-      + 'bulevardi, jolla herrasväki kävelee kuin joki ei olisi koskaan '
-      + 'haissutkaan. Grand-Placen kiltatalot on kullattu niin tiheään, '
-      + 'että tori näyttää sateen jälkeen avatulta korulippaalta. Kulman '
-      + 'takana pronssinen poika tekee tarpeensa suihkulähteeseen, ja '
-      + 'koko kaupunki pitää sitä pyhänä. Kukkulalla nousee oikeuspalatsi, '
-      + 'jonka pitäisi valmistua kymmenen vuoden päästä; työmiehet sanovat, '
-      + 'ettei arkkitehti Poelaert itsekään tiedä, mihin se loppuu. Ostin '
-      + 'pitsiä, jota täällä kehrätään kuin hämähäkit kilpaa.',
+    teksti: 'Bryssel, kesäkuussa 1873. Kaupunki on juuri haudannut jokensa: Senne '
+      + 'katettiin kivellä, ja päälle vedettiin bulevardi, jolla herrasväki '
+      + 'kävelee kuin joki ei olisi koskaan haissutkaan. Grand-Placen '
+      + 'kullatut kiltatalot kiiltävät sateen jälkeen kuin avattu korulipas. '
+      + 'Kulman takana pronssinen poika tekee tarpeensa suihkulähteeseen, ja '
+      + 'koko kaupunki pitää sitä pyhänä. Ostin pitsiä, jota täällä kehrätään '
+      + 'kuin hämähäkit kilpaa.',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */

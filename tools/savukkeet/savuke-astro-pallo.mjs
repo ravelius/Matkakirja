@@ -643,11 +643,48 @@ async function ajaNakyma(nimi) {
     paljastus.vaihe !== 'musta' && paljastus.katonKautta === false
       && paljastus.pilvetValmiit === true && paljastus.pilvet >= 0.85 && paljastus.reliefinKestoMs > 0,
     JSON.stringify(paljastus));
+  /*
+   * 53a: OTSIKKOKORTIN MINIMIAIKA (Raamattu PAATOKSET 53): otsikko on
+   * mustalla vähintään 1,8 s, vaikka pallo valmistuisi aiemmin (ennen
+   * 450–665 ms).
+   */
+  vaadi(t('53a: otsikkokortti on ruudulla vähintään 1,8 s ennen paljastusta'),
+    paljastus.paljastettuMs >= 1800, JSON.stringify({ paljastettuMs: paljastus.paljastettuMs }));
   await s.waitForFunction(
     () => window.matkakirja.ui.pallolinssi.kahva.avaruus.tila()?.paljastus?.vaihe === 'paljastettu',
     null, { timeout: 10000 },
   ).catch(() => {});
+  // Avausajon alkumittaus heti paljastuksen jälkeen (ennen 53b:n näytteitä).
   const alku = await s.evaluate(() => window.matkakirja.ui.pallolinssi.kahva.avaruus.tila());
+  /*
+   * 53b: ISS KESKELLÄ, MAA PYÖRII (PAATOKSET 53): ennen pelaajan
+   * kosketusta kamera seuraa asemaa — merkki pysyy kotelon keskellä ja
+   * kameran pituusaste muuttuu (Maa kiertyy aseman alla).
+   */
+  const issKeskella = await s.evaluate(async () => {
+    const odota = (ms) => new Promise((v) => setTimeout(v, ms));
+    const kotelo = document.querySelector('.pallo-kotelo, .pallo-kuori');
+    const naytteet = [];
+    const pov0 = window.matkakirja.ui.pallonInstanssi.pointOfView();
+    for (let i = 0; i < 6; i += 1) {
+      const t = window.matkakirja.ui.pallolinssi.kahva.avaruus.tila();
+      const iss = t?.kalvo?.iss;
+      if (iss?.x !== null && kotelo) {
+        naytteet.push(Math.round(Math.hypot(iss.x - kotelo.clientWidth / 2, iss.y - kotelo.clientHeight / 2)));
+      }
+      await odota(400);
+    }
+    const pov1 = window.matkakirja.ui.pallonInstanssi.pointOfView();
+    const t = window.matkakirja.ui.pallolinssi.kahva.avaruus.tila();
+    return {
+      seuranta: t?.issSeuranta, naytteet,
+      liike: +Math.hypot(pov1.lat - pov0.lat, pov1.lng - pov0.lng).toFixed(3),
+    };
+  });
+  vaadi(t('53b: ennen kosketusta ISS pysyy ruudun keskellä ja Maa pyörii sen alla'),
+    issKeskella.seuranta === true && issKeskella.naytteet.length >= 4
+      && issKeskella.naytteet.every((d) => d <= 6) && issKeskella.liike > 0.2,
+    JSON.stringify(issKeskella));
   vaadi(t('avausajo on käynnissä ja pallo näkyy ensin kokonaan'),
     alku?.avausajo?.kaynnissa === true && alku.avausajo.osuus < 0.6
       && alku.halkaisijaAlussaPx / Math.min(alku.kotelo.leveys, alku.kotelo.korkeus) >= 0.9
@@ -1207,6 +1244,51 @@ async function ajaNakyma(nimi) {
       auki0.length, { timeout: 30000 },
     ).catch(() => {});
     auki1 = await s.evaluate(AUKI);
+    /*
+     * 53c–d: PULUN KYSYMYSKORTTI TUMMALLE POHJALLE JA VIERIVÄT KYSYMYKSET
+     * (Raamattu PAATOKSET 53). Kortti avataan minipulusta, kysytään kolme
+     * kertaa (vastaus tulee virheenä tai mallilta, kupla syntyy kummin
+     * päin), ja mitataan: vastauskuplan taustan luminanssi on tumma ja
+     * teksti vaalea; valmiit kysymykset ovat virran sisällä ja vierineet
+     * ylös pois näkyvistä.
+     */
+    const pulu53 = await s.evaluate(async () => {
+      const odota = (ms) => new Promise((v) => setTimeout(v, ms));
+      const lum = (c) => { const v = (c.match(/[\d.]+/g) ?? []).map(Number); return v.length >= 3 ? Math.round(0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2]) : null; };
+      document.querySelector('.satelliitti-katselu .satelliitti-pulunappi')?.click();
+      await odota(400);
+      const kortti = document.querySelector('.satelliitti-katselu .satelliitti-pulukortti');
+      if (!kortti || kortti.hidden) return { kortti: false };
+      const kentta = kortti.querySelector('.satelliitti-pulu-kentta');
+      const lomake = kortti.querySelector('.satelliitti-pulu-syote');
+      for (const k of ['Mikä tämä on?', 'Missä tämä on?', 'Milloin kuva on otettu?']) {
+        kentta.value = k;
+        lomake.requestSubmit();
+        for (let i = 0; i < 60 && kortti.querySelector('.satelliitti-pulu-laheta')?.disabled; i += 1) await odota(250);
+        await odota(200);
+      }
+      const virta = kortti.querySelector('.satelliitti-pulu-virta');
+      const rivi = kortti.querySelector('.satelliitti-pulu-kysymykset');
+      const kupla = [...kortti.querySelectorAll('.satelliitti-pulu-vastaus')].at(-1);
+      const kt = kupla ? getComputedStyle(kupla) : null;
+      const vr = virta.getBoundingClientRect();
+      const rr = rivi?.getBoundingClientRect();
+      return {
+        kortti: true,
+        kuplia: kortti.querySelectorAll('.satelliitti-pulu-vastaus').length,
+        kuplanTausta: kt ? lum(kt.backgroundColor) : null,
+        kuplanTeksti: kt ? lum(kt.color) : null,
+        kysymyksetVirrassa: Boolean(rivi && virta.contains(rivi)),
+        vieritetty: Math.round(virta.scrollTop),
+        kysymyksetPoissa: rr ? rr.bottom <= vr.top + 1 : null,
+      };
+    });
+    vaadi(t('53c: pulun vastauskupla on tumma ja teksti vaalea'),
+      pulu53.kortti && pulu53.kuplanTausta !== null && pulu53.kuplanTausta < 70 && pulu53.kuplanTeksti > 200,
+      JSON.stringify(pulu53));
+    vaadi(t('53d: valmiit kysymykset ovat virrassa ja vierivät pois vastausten tullessa'),
+      pulu53.kortti && pulu53.kysymyksetVirrassa && pulu53.vieritetty > 0 && pulu53.kysymyksetPoissa === true,
+      JSON.stringify(pulu53));
     // LISÄYS 8: `.satelliitti-sulku` osuu vain KUVAN sulkuun; linssin
     // oma ✕ on `.satelliitti-linssisulku` eikä sitä saa napauttaa tässä.
     await s.evaluate(() => document.querySelector('.satelliitti-katselu .satelliitti-sulku')?.click());

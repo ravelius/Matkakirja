@@ -922,6 +922,31 @@ body.aikajana-pulu-piilossa .satelliitti-pulukulma .minipulu {
  * osoitettu sääntö ei siis menisi koskaan perille.
  */
 .satelliitti-pulunappi:hover { filter: brightness(1.15); }
+
+/*
+ * LEIJUNTA AVARUUDESSA (Raamattu PAATOKSET 53, omistaja 19.9.2026:
+ * "Tai ainakin se voisi leijua paikallaan kuin avaruudessa?"). Väliaikainen
+ * CSS-leijunta, kunnes Codexin astronauttiasu tulee
+ * (docs/raportit/viesti-codex-pulu-astronautti-20260919.md): 5 px ylös ja
+ * alas, kallistus ±3°, 5 s kierros. Animaatio on napissa eikä hahmossa,
+ * joten minipulun omat eleet (js/minipulu.js) eivät törmää siihen.
+ * Pysähtyy, kun pulu puhuu (luokka js/linssit/satelliitti.js lahetaKysymys).
+ */
+@keyframes satelliitti-pulu-leijuu {
+  0% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-5px) rotate(3deg); }
+  100% { transform: translateY(0) rotate(-3deg); }
+}
+
+.satelliitti-pulunappi { animation: satelliitti-pulu-leijuu 5s ease-in-out infinite; }
+
+.satelliitti-pulukulma.satelliitti-pulu-puhuu .satelliitti-pulunappi {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .satelliitti-pulunappi { animation: none; }
+}
 .satelliitti-pulunappi[disabled] { cursor: default; opacity: 0.6; }
 
 /*
@@ -1028,13 +1053,15 @@ button.satelliitti-pulunappi:focus-visible {
   cursor: pointer;
 }
 
+/* Kysymykset ovat virran ensimmäinen rivi (PAATOKSET 53): ne vierivät pois. */
 .satelliitti-pulu-kysymykset {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  margin-top: 8px;
 }
+
+.satelliitti-pulu-kysymykset:empty { display: none; }
 
 .satelliitti-pulu-kysymys {
   text-align: left;
@@ -1069,7 +1096,7 @@ button.satelliitti-pulunappi:focus-visible {
   min-height: 0;
   flex-direction: column;
   gap: 6px;
-  margin-top: 9px;
+  margin-top: 8px;
   max-height: min(34vh, 260px);
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -1089,14 +1116,22 @@ button.satelliitti-pulunappi:focus-visible {
   font-size: 0.85rem;
 }
 
-/* Vastaus on pulun kupla: pyöristetty, oikealta lähtevä kärki alhaalla. */
+/*
+ * Vastaus on pulun kupla: pyöristetty, oikealta lähtevä kärki alhaalla.
+ * TUMMA KUPLA, VAALEA TEKSTI (Raamattu PAATOKSET 53, omistaja 19.9.2026:
+ * "muuta sinä pulun teksti myös tummalle pohjalle"). Vaalea paperikupla
+ * mustassa avaruudessa häikäisi; kupla on nyt kortin sävyä vaaleampi
+ * tumma vihreä, ja erottuu pelaajan kysymyksestä reunaviivalla ja
+ * kärjen suunnalla.
+ */
 .satelliitti-pulu-vastaus {
   align-self: flex-start;
   max-width: 96%;
   padding: 9px 11px;
   border-radius: 12px 12px 12px 4px;
-  background: rgba(233, 246, 240, 0.94);
-  color: #10251c;
+  border: 1px solid rgba(93, 255, 168, 0.32);
+  background: rgba(20, 46, 34, 0.96);
+  color: #e6f7ee;
   font-size: 0.88rem;
 }
 
