@@ -2313,6 +2313,8 @@ export class UI {
     // (ajastaAutomaattinenHeitto, automaattiheittoSallittu).
     this.automaattiheittoAjastin = null;
     this.automaattiheittoPaikka = null;
+    // Liuku auki vain nopalle (renderActions roll-haara) — ei pelaajan avaamana.
+    this.liukuNopalle = false;
 
     this.svg = document.getElementById('board');
     this.turnPill = document.getElementById('turn-pill');
@@ -7840,6 +7842,25 @@ export class UI {
    * @returns {boolean} onko matka kesken
    */
   matkaSessioKesken(kaupunki = this.game.cityOf?.()) {
+    /*
+     * SIIRRON ANIMAATIO ON YHÄ MATKAA (omistaja 19.9.2026 klo 23.47,
+     * iPad Pariisi–Marseille, sanatarkasti: *"jos onnistuu heittämään
+     * tarpeeksi ison luvun että pääsee kertaheitolla seuraavaan
+     * kaupunkiin niin reitti virheellisesti häviää näkyvistä siirtymän
+     * ajaksi"*).
+     *
+     * `game.actionMove` on siirtänyt pelaajan määränpäähän jo ennen kuin
+     * nappula lähtee liikkeelle, joten `cityOf()` on tässä KOHDEKAUPUNKI
+     * eikä lähtökaupunki — sessio päättyi alla olevaan ehtoon ja viuhka
+     * katosi kesken hyppyjen. Kun matka päättyi reitin varrelle, viivan
+     * piti pystyssä `kesken`-haara (nappula on `edge`illä), ja juuri
+     * siksi vika näkyi vain kertaheiton mittaisella matkalla.
+     *
+     * `siirtoKaynnissa` on lähtöpaikka ja se lasketaan vasta kun
+     * kuljettaja on laskenut nappulan perille, joten reitti pysyy
+     * näkyvissä koko siirron ajan ja katoaa vasta saapumisen jälkeen.
+     */
+    if (this.siirtoKaynnissa) return true;
     if (!this.matkaSessio) return false;
     // Kesken reittiä ei olla missään kaupungissa: matka jatkuu.
     if (!kaupunki) return true;
@@ -7863,12 +7884,20 @@ export class UI {
   matkareittienValinta() {
     const { game } = this;
     const vaiheessa = game.phase === 'roll' || game.phase === 'move';
-    const kaupunki = game.cityOf?.();
+    /*
+     * SIIRRON AIKANA PAIKKA ON LÄHTÖPAIKKA, EI MÄÄRÄNPÄÄ (ks.
+     * matkaSessioKesken): `siirtoKaynnissa` kertoo mistä nappula on
+     * matkalla, ja reitti piirretään siitä, kunnes se on perillä.
+     */
+    const siirtyva = this.siirtoKaynnissa ?? null;
+    const kaupunki = siirtyva
+      ? (siirtyva.type === 'city' ? game.board.cityById.get(siirtyva.city) : null)
+      : game.cityOf?.();
     const matkalla = this.matkaSessioKesken(kaupunki);
     const naytetaan = !this.katselu && !game.player?.isBot
       && (matkalla || this.liukuAuki || vaiheessa);
-    const kesken = !kaupunki && game.player?.pos?.type === 'edge'
-      ? game.player.pos.edge : null;
+    const paikka = siirtyva ?? game.player?.pos;
+    const kesken = !kaupunki && paikka?.type === 'edge' ? paikka.edge : null;
     const reittiTunnukset = kaupunki
       ? (matkalla ? [...(game.board.adj.get(kaupunki.id) ?? [])] : [])
       : (kesken ? [kesken] : []);
@@ -7883,7 +7912,9 @@ export class UI {
     const lennot = [...new Set(lentoKohteet)];
     const lentoLahto = this.lentoKaari?.a ?? kaupunki?.id ?? null;
     const avain = naytetaan && (reittiTunnukset.length || lennot.length)
-      ? `${game.pack.id}:${kaupunki?.id ?? kesken}:${game.phase}`
+      // Siirron ajan avain on vakio: vaiheen vaihtuminen kesken
+      // animaation ei saa piirtää viivaa uudestaan.
+      ? `${game.pack.id}:${kaupunki?.id ?? kesken}:${siirtyva ? 'siirto' : game.phase}`
         + `:${lentoLahto ?? ''}>${lennot.join(',')}` : '';
     return { reittiTunnukset, lennot, lentoLahto, avain };
   }
@@ -11041,6 +11072,8 @@ export class UI {
 
   renderActions() {
     const { game } = this;
+    // Nopan oma liuku merkitään uudestaan vain roll-haarassa (ks. alla).
+    this.liukuNopalle = false;
     this.actionsEl.textContent = '';
     // Matkustustavan ensimmäinen vaihe latoo nappinsa aina yhteen riviin;
     // muut näkymät (vaihe B, kysymykset) käyttävät tavallista ruudukkoa.
@@ -11161,6 +11194,17 @@ export class UI {
        * käyttäytyvät täsmälleen kuten ennen.
        */
       this.liukuAuki = true;
+      /*
+       * LIUKU ON AUKI NOPPAA VARTEN, EI PELAAJAN AVAAMANA. Ero on
+       * automaattiheitolle ratkaiseva: `automaattiheittoSallittu` pitää
+       * auki olevaa liukua merkkinä siitä, että pelaaja avasi jotain ja
+       * matka odottaa. Tämä rivi (v1950, laivamatka-jumin korjaus) nosti
+       * lipun JOKA roll-vaiheessa, jolloin kesken reittiä pysähtynyt
+       * matka ei enää jatkunut itsestään (omistaja 19.9.2026 klo 23.47:
+       * *"automaattinen nopanheitto on poistunut vaikka pitäisi olla
+       * päällä"*). Merkki erottaa nämä kaksi tilaa toisistaan.
+       */
+      this.liukuNopalle = true;
       this.piirraToimintorivi(napit, this.tutkiNappi());
       return;
     }
@@ -11982,6 +12026,8 @@ export class UI {
     // Linssikartan kuoressa ei matkusteta (linssikarttaEstaa).
     if (this.linssikarttaEstaa()) return;
     this.liukuAuki = !this.liukuAuki;
+    // Pelaajan oma napautus: liuku ei ole enää pelkkä nopan koti.
+    this.liukuNopalle = false;
     // Liuku peittää pöllön napin, joten avautuessaan se sulkee chatin.
     if (this.liukuAuki) polloSulje();
     /*
@@ -12025,6 +12071,7 @@ export class UI {
   suljeLiuku() {
     if (!this.liukuAuki) return;
     this.liukuAuki = false;
+    this.liukuNopalle = false;
     this.paivitaLiuku();
     this.paivitaMatkareitit();
   }
@@ -20461,16 +20508,22 @@ export class UI {
           );
         }
         /*
-         * LIFTAUS AJAA, LAIVA HYPPII. `kyyti` kytkee autokyydin
-         * (karttauudistus erä 8): maareitillä nappula liikkuu yhtenä
-         * kiihtyvänä ja jarruttavana ajona, merellä kaikki on
-         * ennallaan (*"laiva ja lento entisellaan"*).
+         * NAPPULA HYPPII TAAS ASKEL ASKELEELTA (omistaja 19.9.2026 klo
+         * 23.47 Suomen aikaa, iPad Pariisi–Marseille, sanatarkasti:
+         * *"Ota hyppiminen takaisin nappulan siirtymiseen."*). Erän 8
+         * autokyyti (v1845, 13.9.2026: `kyyti: maitse`) korvasi
+         * hyppyketjun maareitillä yhdellä liukuvalla ajolla; nyt
+         * maareitti kulkee taas hyppyketjua (js/siirtokoreografia.js
+         * hypynVaihe/hypynHuippu, HYPYN_TAUKO_MS joka välissä), kamera
+         * edellä ja nappula perässä kuten ennen v1845:tä. Askeltahti on
+         * sama porrastus (autokyydinAskel = jalkamatkanAskel). Bussin
+         * ilmainen kyyti (kyyti: true alempana) ajaa yhä autona.
          */
         return this.animatePawn(
         player, from, path,
         maitse ? autokyydinAskel(path.length) : STEP_MS,
         {
-          saatto: true, maitse, musiikki, kyyti: maitse, tapa,
+          saatto: true, maitse, musiikki, kyyti: false, tapa,
         },
         );
       },
@@ -23539,7 +23592,12 @@ export class UI {
     if (this.radioPaalla()) return false;
     // Pelaaja avasi jotain: pöllö, alanappien liuku tai mikä tahansa
     // modaali (lehti, laukku, passi, nähtävyys) — matka odottaa.
-    if (polloAuki() || this.liukuAuki) return false;
+    /*
+     * NOPPAVAIHEEN LIUKU EI OLE "PELAAJA AVASI JOTAIN" (ks.
+     * renderActions `liukuNopalle`): siinä liu'ussa on vain noppa, jonka
+     * peli on juuri aikeissa heittää itse.
+     */
+    if (polloAuki() || (this.liukuAuki && !this.liukuNopalle)) return false;
     if (document.querySelector('dialog[open]')) return false;
     /*
      * SAMASTA PISTEESTÄ VAIN KERRAN. Jos automaatin heitto ei tuota
