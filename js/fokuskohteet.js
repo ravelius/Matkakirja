@@ -127,7 +127,12 @@ import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
 import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
 import { NAKYVAT_KAUPUNGIT_FRA } from './packs/nakyvat-kaupungit-fra.js';
 import { HAHMOTELMA_FRA } from './packs/hahmotelma-fra.js';
+import { HAHMOTELMA_DEU } from './packs/hahmotelma-deu.js';
+import { HAHMOTELMA_PRT } from './packs/hahmotelma-prt.js';
+import { HAHMOTELMA_GRC } from './packs/hahmotelma-grc.js';
+import { HAHMOTELMA_AUT } from './packs/hahmotelma-aut.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
+import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -328,12 +333,55 @@ KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...NAKYVAT_KAUPUNGIT_FRA];
 KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...HAHMOTELMA_FRA];
 
 /*
+ * SAKSAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot, Espanjan ja Italian jälkeen Saksa). Sama reitti
+ * ja sama rakenne kuin Ranskan hahmotelmalla; rivit ovat aidosti
+ * kaupungin (Berliini) ulkopuolella, lähin yli 33 lautayksikön päässä.
+ */
+KOHDE_MAAT.DEU = [...(KOHDE_MAAT.DEU ?? []), ...HAHMOTELMA_DEU];
+
+/*
+ * PORTUGALIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot, Espanjan, Italian ja Saksan jälkeen Portugali).
+ * Sama reitti ja sama rakenne kuin Ranskan hahmotelmalla; rivit ovat
+ * aidosti kaupungin (Lissabon) ulkopuolella, lähin yli 14 lautayksikön
+ * päässä.
+ */
+KOHDE_MAAT.PRT = [...(KOHDE_MAAT.PRT ?? []), ...HAHMOTELMA_PRT];
+
+/*
+ * KREIKAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot, Espanjan, Italian, Saksan ja Portugalin jälkeen
+ * Kreikka). Sama reitti ja sama rakenne kuin Ranskan hahmotelmalla; rivit
+ * ovat aidosti kaupunkien (Ateena, Kreeta) ulkopuolella, lähin yli 44
+ * lautayksikön päässä.
+ */
+KOHDE_MAAT.GRC = [...(KOHDE_MAAT.GRC ?? []), ...HAHMOTELMA_GRC];
+
+/*
+ * ITÄVALLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti kaupungin (Wien) ulkopuolella, lähin
+ * yli 8 lautayksikön päässä.
+ */
+KOHDE_MAAT.AUT = [...(KOHDE_MAAT.AUT ?? []), ...HAHMOTELMA_AUT];
+
+/*
  * ESPANJAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
  * EU-maiden karttanostot, pilotti Espanja). Sama reitti ja sama rakenne
  * kuin Ranskan hahmotelmalla yllä; rivit ovat aidosti kaupunkien
  * ulkopuolella (lähin pelikaupunki 15 lautayksikön päässä, raja 7).
  */
 KOHDE_MAAT.ESP = [...(KOHDE_MAAT.ESP ?? []), ...HAHMOTELMA_ESP];
+
+/*
+ * ITALIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot, Espanjan pilotin jälkeen Italia). Sama reitti ja
+ * sama rakenne kuin Ranskan hahmotelmalla yllä; rivit ovat aidosti
+ * kaupunkien ulkopuolella (lähin pelikaupunki yli 9 lautayksikön päässä,
+ * raja 7).
+ */
+KOHDE_MAAT.ITA = [...(KOHDE_MAAT.ITA ?? []), ...HAHMOTELMA_ITA];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
