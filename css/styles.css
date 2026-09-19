@@ -2286,6 +2286,13 @@ button {
 
 button:hover:not(:disabled) { background: #43331f; }
 button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/*
+ * KUVAN LÄHDE JA HAVAINNEKUVAMERKINTÄ VAIN SUURENNOKSESSA (omistaja
+ * 19.9.2026 klo 19.04, js/tekijakortti.js kortinKuvalahde). Kortin ja
+ * lehden kuvan alla on vain lyhyt kuvateksti.
+ */
+.kuvalahde-vain-suurennoksessa { display: none !important; }
 button:disabled { opacity: 0.45; cursor: not-allowed; }
 
 button.primary {

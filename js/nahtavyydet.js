@@ -29,7 +29,7 @@ import { NAHTAVYYSJUTUT } from './packs/nahtavyysjutut.js';
 import { juttuAvain, piirraPoimintapillerit } from './pollopoiminnat.js';
 import { piirraReaktiot } from './reaktiot.js';
 import { sfx } from './sound.js';
-import { taytaLahderivi } from './tekijakortti.js';
+import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
 import { esilataaKuvat, html, lahdemerkinta, vuosiluku } from './ui-apurit.js';
 
@@ -1677,7 +1677,7 @@ export function piirraMatkailijalle(ui, kohde, { kansi = null } = {}) {
       const teksti = html('figcaption', 'kuvateksti', kuvanLyhyt);
       if (tiedot.kuva.lahde) {
         // Väli tulee CSS:stä (ks. "LÄHDERIVI KUVATEKSTIN JATKEEKSI").
-        teksti.appendChild(taytaLahderivi(html('span', 'lehti-kuvalahde'),
+        teksti.appendChild(kortinKuvalahde(html('span', 'lehti-kuvalahde'),
           tiedot.kuva.lahde, tiedot.kuva));
       }
       kotelo.appendChild(teksti);
@@ -2495,7 +2495,7 @@ export function nahtavyydenKuva(ui, kuva) {
   // avaa tekijäsivun (js/tekijakortti.js). Ilman `tekijaId`-kenttää
   // rivi on tavallista tekstiä kuten ennen.
   if (kuva.lahde) {
-    teksti.appendChild(taytaLahderivi(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva));
+    teksti.appendChild(kortinKuvalahde(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva));
   }
   kehys.appendChild(teksti);
   return kehys;
@@ -2554,7 +2554,7 @@ export function nahtavyydenKaruselli(ui, kuvat) {
     const lyhyt = kuvatekstiLyhyt(kuva);
     if (lyhyt) teksti.appendChild(html('span', 'nahtavyys-selite', lyhyt));
     if (kuva.lahde) {
-      teksti.appendChild(taytaLahderivi(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva));
+      teksti.appendChild(kortinKuvalahde(html('span', 'nahtavyys-lahde'), kuva.lahde, kuva));
     }
     laskuri.textContent = `${kohta + 1}/${kuvat.length}`;
   };
