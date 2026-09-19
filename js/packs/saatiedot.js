@@ -74,6 +74,25 @@ export const SAATIEDOT = {
       + 'nollasta heinäkuun 20,7 asteeseen, ja talvikuukausina se on '
       + 'pakkasen rajalla.',
   },
+  /*
+   * KOŠICE (20.9.2026, kaupunkilehti erä 2): Open-Meteon ERA5-arkisto,
+   * 1991–2020 (lat 48,72 / lon 21,26), kuukausikeskiarvot laskettu
+   * päivittäisistä arvoista; ylin/alin lisätään työkalulla
+   * tools/hae-saanormaalit.mjs --vain kosice.
+   */
+  kosice: {
+    lat: 48.72,
+    lon: 21.26,
+    keskilampo: [-2.3, -0.5, 4, 10.1, 15.1, 18.8, 20.6, 20.4, 15.1, 9.4, 4, -1],
+    ylin: [0, 3, 8, 16, 20, 24, 26, 25, 20, 13, 7, 1],
+    alin: [-5, -4, 0, 4, 10, 14, 16, 15, 10, 6, 1, -3],
+    sade: [31, 38, 41, 62, 98, 97, 115, 86, 67, 58, 47, 37],
+    luonnehdinta: 'Košicen ilmasto on mantereinen: tammikuun keskilämpö on '
+      + 'noin −2,3 astetta ja heinäkuun 20,6 astetta, ja talvikuukaudet '
+      + 'jäävät pakkasen puolelle. Sadetta kertyy vuodessa noin 776 '
+      + 'millimetriä, ja kuivin talvi (tammikuu 31 mm) vaihtuu '
+      + 'sateisimpaan kesään: heinäkuussa sataa 115 millimetriä.',
+  },
   bryssel: {
     lat: 50.85,
     lon: 4.35,
