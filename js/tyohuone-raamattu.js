@@ -9536,7 +9536,16 @@ export const RAAMATTU = {
           + '(Fable 01.45): amparissa 1 396 525 objektia, 30,5 Gt - ilmaisraja ylitetty jo '
           + 'kauan sitten, lisays 2-3 Gt on n. 5 snt/kk -> POHJA-AJO SAA ALKAA uuteen '
           + 'paivattyyn kansioon, laatat ennen luetteloa, vanhoja kansioita ei poisteta. '
-          + 'OMISTAJALLE JONOON: vanhojen pyramidiversioiden siivous amparista (30 Gt).',
+          + 'OMISTAJALLE JONOON: vanhojen pyramidiversioiden siivous amparista (30 Gt). '
+          + 'KIERROS 16B (Sonnet 1, v1969, Fable 01.55): LVA Tukums ja Kemeri OK, visa maksoi '
+          + '+25; LTU 5 nostoa OK (ei visaa niissa); Ranskan kartuscha 7 luokkaa ja '
+          + 'Chartres LISAA OK. VIAT -> Opus 1: NOR Borgundin visa ei reagoi napautukseen '
+          + '(kartuscha aukesi kortin taakse, napautus lapaisee?); arvonimi vaarasta '
+          + 'maasta (Pariisin salonkien pollo Rumsiskesissa - ISO vaara); pulu Ranskan '
+          + 'kartuschan kielirivin paalla. PAATOS OSLO 1873: otsikkokortti kartan nimella '
+          + '(OSLO), 1873-teksteissa yhtenaisesti Christiania (kirjoitusasu vaihtui '
+          + 'Kristianiaksi virallisesti 1877); sama saanto muille: otsikko = kartan nimi, '
+          + 'isoisan tekstit = ajan nimi. Sonnet 1 jatkaa kierrokseen 17 (v1970 + CHE/ISL/TUR).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
