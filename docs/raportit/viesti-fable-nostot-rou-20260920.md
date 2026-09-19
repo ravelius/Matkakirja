@@ -109,7 +109,7 @@ Lukitus (`LUKITUT_MAAT`) on velka kuten muillakin EU-mailla.
 10. **Bigăr**: en "Izvorul Bigăr" ohut -> ro toisena lähteenä; nappi kertoo suojelualueesta 1982 (ei 1873-tietoa). **Reșița**: artikkeli sanoo "metal-manufacturing center", ei "rautaruukki" -> teksti "metallinvalmistus"; veturi 1872 artikkelin. **Slănic**: historia ro-artikkelista "Salina Slănic".
     **Băile Herculane**: Franz Joseph 1852 ja Habsburg-aika ro-artikkelista.
 11. **Kuvat**: Bicaz-pääkuva PD mutta tekijä vain oletettu (Laurap); varmempi vaihtoehto olisi CC0-kuva "Hairpin turn" (pystykuva; ei ladattu). Sfânta Ana#1–2 PD, tekijä oletettu (Csanády). Heikoimmat: Ploiești#3 (jalostamo, 1024 px, ikkunalasi), Iași#2 (litografia 1845, 760 px), Alba Iulia#3 (1024 px),
-    Reșița#3 (1425 px), Scărișoara#1 (1069 px). "CC BY-SA 3.0 ro" on Commonsin oma lisenssinimi (9 kuvaa). Ranska-tyylisiä hylättyjä kuvia: Bicazin myyntikojut, Herculanen värikartta.
+    Reșița#3 (1425 px), Scărișoara#1 (1069 px). "CC BY-SA 3.0 ro" on Commonsin oma lisenssinimi (9 kuvaa). Hylättyjä ehdokkaita: Bicazin myyntikojut, Herculanen kuva värikartta- ja mittaliuskan kanssa.
 12. **Tyypit** (`muu` kielletty): Retezat, Bicaz, Ceahlău, Berca ja Scărișoara `vuori`, Sovata ja Sfânta Ana `jarvi`, Bigăr `joki`, historiakohteet `historia`, Cotnari `ruoka`, Băile Herculane `kulttuuri`, Ploiești/Roșia Montană/Reșița/Slănic `tekniikka`, muut `kulttuuri`.
 13. **Kuvakansion tapaturmat**: ei; kansiossa 83 nimeä, kaikki täsmäävät dataan.
 
