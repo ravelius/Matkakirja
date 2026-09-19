@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1958, teksti: 'Jäämeri kevyemmäksi, maajää jäätikkömaskista (reliefi b)' },
   { v: 1957, teksti: 'Italian 29 hahmotelmanostoa ja 67 Commons-kuvaa' },
   { v: 1956, teksti: 'Espanjan 30 hahmotelmanostoa ja 68 Commons-kuvaa' },
   { v: 1955, teksti: 'Astronautin kameran otsikko ja napamittari, pohjapallon sävy' },
