@@ -328,7 +328,7 @@ export const MAASTOKOHTEET_DNK = [
     id: 'storebaeltin-silta',
     nimi: 'Storebæltin silta',
     // Karttanimiö lyhennetty: täkynosto nosto-trelleborg on lähellä (nimiölimitys, 20.9.2026).
-    nimio: 'Silta',
+    nimio: '',
     tyyppi: 'tekniikka',
     kysymykset: [
       'Kuinka kauan salmen ylitys kesti ennen siltaa?',
