@@ -105,11 +105,20 @@ function bitit(luettelo, laatastot) {
 
 /* ------------------------------------------------ 1. luettelon muoto */
 
-test('pohja.rantaviiva: false kirjautuu vain --ilman-rantaviivaa-ajossa', () => {
+test('pohja.rantaviiva kirjautuu joka pohja-ajossa, kumpaankin suuntaan', () => {
+  /*
+   * KENTÄN PUUTTUMINEN EI OLE TIETO (korjattu 20.9.2026; mittaus
+   * docs/raportit/viesti-fable-maalehti-viivat-20260920.md).
+   *
+   * Sääntö oli ennen "puuttuva kenttä tarkoittaa, että rantaviiva on
+   * pohjassa", mutta tuotannon `pyramidi.json`:ssa ei ole kenttää
+   * vaikka pohja on mitatusti rannaton (laatta z7/81/37, tummin
+   * kirkkaus 189). Luettelo väitti siis päinvastaista kuin ämpärin
+   * sisältö. Nyt pohja-ajo kirjoittaa kentän aina.
+   */
   const tavallinen = ajaLuettelo();
-  assert.equal(tavallinen.pohja, undefined,
-    'vanha pohja EI saa saada pohja-kenttää — sen puuttuminen tarkoittaa '
-    + '"rantaviiva on pohjassa", ja väärä kenttä valehtelisi ämpäristä');
+  assert.equal(tavallinen.pohja?.rantaviiva, true,
+    'pohja-ajo ei kerro, että rantaviiva on pohjassa');
   const rannaton = ajaLuettelo(['--ilman-rantaviivaa']);
   assert.equal(rannaton.pohja?.rantaviiva, false,
     '--ilman-rantaviivaa ei kirjaudu luetteloon; ämpäristä ei silloin näe, '

@@ -91,6 +91,66 @@ export function nostonOmaPaikka(nosto) {
 /** Nimet vertautuvat löyhästi: iso/pieni kirjain ja reunavälit eivät eroa. */
 const nimiAvain = (s) => String(s ?? '').trim().toLocaleLowerCase('fi');
 
+/*
+ * ── JÄSENYYS ON LADONNAN KUUMIN SILMUKKA (mitattu 20.9.2026) ───────
+ *
+ * Ladonta ajetaan panoroinnin ja zoomin aikana viisi kertaa sekunnissa
+ * (js/pallolauta/lauta.js LADONNAN_TAHTI_MS), ja joka ajolla tämä
+ * suodatus kävi jokaisen rivin jokaista kaupunkia vasten. Nimen
+ * normalisointi (`toLocaleLowerCase('fi')`) tehtiin siis rivien ja
+ * kaupunkien TULONA. CPU-profiili kuudesosanopeudella kuristetulla
+ * koneella (vedon ja rullazoomin ajalta): `nimiAvain` 10,8 % ja
+ * `etaisyysKm` 1,3 % kaikista näytteistä — suurin yksittäinen JS-erä
+ * koko eleessä.
+ *
+ * Kaksi korjausta, jotka EIVÄT muuta tulosta:
+ *   1. Kaupungin nimi ja keskus normalisoidaan KERRAN (luoSisaisyysTesti),
+ *      ja noston oma nimi kerran per rivi (muistettu WeakMapissa).
+ *      Vertailuja on siis rivit + kaupungit, ei rivit × kaupungit.
+ *   2. Haversine ajetaan vasta, kun karkea astelaatikko sallii sen:
+ *      12 km on 0,108° leveyttä, joten valtaosa pareista karsiutuu
+ *      kahdella vähennyslaskulla.
+ */
+const nimiMuisti = new WeakMap();
+const nostonNimiAvain = (nosto) => {
+  if (!nosto || typeof nosto !== 'object') return nimiAvain(nosto?.paikkaNimi);
+  const muistissa = nimiMuisti.get(nosto);
+  if (muistissa !== undefined) return muistissa;
+  const arvo = nimiAvain(nosto.paikkaNimi);
+  nimiMuisti.set(nosto, arvo);
+  return arvo;
+};
+/** Asteen pituus kilometreinä leveyspiirillä (karkea, karsintaan). */
+const ASTE_KM = 111.2;
+
+/**
+ * Yhden kaupungin jäsenyystesti valmiiksi laskettuna: palauttaa
+ * funktion (nosto) → boolean, joka vastaa `onKaupunginSisainen`ia
+ * täsmälleen mutta ei laske kaupungin nimeä eikä keskusta uudestaan.
+ * Puhdas tehdas (tests/kaupunkiliuska.test.mjs).
+ */
+export function luoSisaisyysTesti(kaupunki, sadeKm = KAUPUNGIN_SADE_KM) {
+  if (!kaupunki) return () => false;
+  const kaupunginNimi = nimiAvain(kaupunki.nimi ?? kaupunki.name);
+  const keskus = Number.isFinite(kaupunki.lat) && Number.isFinite(kaupunki.lng)
+    ? { lat: kaupunki.lat, lng: kaupunki.lng } : null;
+  const latRaja = sadeKm / ASTE_KM;
+  return (nosto) => {
+    if (!nosto) return false;
+    if (nosto.kaupunki || nosto.poltettu) return false;
+    if (kaupunginNimi && nostonNimiAvain(nosto) === kaupunginNimi) return true;
+    const oma = nostonOmaPaikka(nosto);
+    if (!oma || !keskus) return false;
+    // Karkea laatikko ensin: haversine vain naapureille.
+    if (Math.abs(oma.lat - keskus.lat) > latRaja) return false;
+    const lngRaja = latRaja / Math.max(0.01, Math.cos(keskus.lat * RAD));
+    let dLng = Math.abs(oma.lng - keskus.lng);
+    if (dLng > 180) dLng = 360 - dLng;
+    if (dLng > lngRaja) return false;
+    return etaisyysKm(oma, keskus) <= sadeKm;
+  };
+}
+
 /**
  * ONKO NOSTO KAUPUNGIN SISÄLLÄ (PAATOKSET 34 kohdat 3-4).
  *
@@ -106,19 +166,15 @@ const nimiAvain = (s) => String(s ?? '').trim().toLocaleLowerCase('fi');
  */
 export function onKaupunginSisainen(nosto, kaupunki, sadeKm = KAUPUNGIN_SADE_KM) {
   if (!nosto || !kaupunki) return false;
-  if (nosto.kaupunki || nosto.poltettu) return false;
-  const kaupunginNimi = nimiAvain(kaupunki.nimi ?? kaupunki.name);
-  if (kaupunginNimi && nimiAvain(nosto.paikkaNimi) === kaupunginNimi) return true;
-  const oma = nostonOmaPaikka(nosto);
-  if (!oma) return false;
-  return etaisyysKm(oma, kaupunki) <= sadeKm;
+  return luoSisaisyysTesti(kaupunki, sadeKm)(nosto);
 }
 
 /** Kaupungin sisäiset nostot annetuista riveistä, ladontajärjestyksessä. */
 export function kaupunginNostot(rivit, kaupunki, sadeKm = KAUPUNGIN_SADE_KM) {
+  const sisainen = luoSisaisyysTesti(kaupunki, sadeKm);
   return (rivit ?? [])
     .filter((r) => r.perhe === 'nosto' && !r.vainNimi && typeof r.avaa === 'function'
-      && onKaupunginSisainen(r, kaupunki, sadeKm))
+      && sisainen(r))
     .sort((a, b) => (a.ladontaNro ?? 0) - (b.ladontaNro ?? 0));
 }
 

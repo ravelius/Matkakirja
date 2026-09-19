@@ -531,8 +531,37 @@ export function kokoaKonteksti({
  * (Maiden tiedot -varuste). Sen käyttäminen sijaintina oli juuri se
  * vika, joka teki Sofiasta Kreikan pääkaupungin.
  */
+/**
+ * ONKO ASTRONAUTIN KAMERA PÄÄLLÄ (Sonnet 1, kierros 16, 20.9.2026):
+ * pulun vastaus alkoi *"…ei mitään tekemistä Brysselin kanssa"*, eli
+ * pelaajan sijainti vuoti avaruuskuvan vastaukseen. Linssissä pelaaja ei
+ * ole kaupungissa vaan radalla, joten sijainti ei ole vastauksen
+ * konteksti.
+ *
+ * Kaksi lähdettä: linssin oma tunnus (varmin) ja valokuvanäkymän
+ * ruumiinluokka (js/linssit/satelliitti.js KUVA_AUKI_LUOKKA), joka
+ * kattaa myös sen, jos kutsuja ei anna ui-oliota.
+ */
+export function astronautinKameraPaalla(ui = null, doc = null) {
+  if (ui?.pallolinssi?.tunnus === 'satelliitti') return true;
+  if (ui?.linssiValittu === 'satelliitti') return true;
+  return Boolean(doc?.body?.classList?.contains?.('satelliitti-kuva-auki'));
+}
+
 export function lueNakyma({ game = null, ui = null, doc = document, aineisto = [] } = {}) {
   const tila = pelinTila(game);
+  /*
+   * AVARUUDESSA EI OLE SIJAINTIA: kaupunki, maa ja matkapäivä jäävät
+   * pois, ja näkymä kerrotaan sellaisena kuin se on. Muut pinnat eivät
+   * muutu (ks. astronautinKameraPaalla).
+   */
+  if (astronautinKameraPaalla(ui, doc)) {
+    return kokoaKonteksti({
+      lauta: tila.lauta,
+      nakyma: 'Astronautin kamera: valokuva avaruudesta, ei pelaajan sijaintia',
+      aineisto,
+    });
+  }
   const lehti = doc?.getElementById?.('arrival-dialog') ?? null;
   const lehtiAuki = Boolean(lehti?.open);
   const matkakirja = polloSiisti(doc?.getElementById?.('fact-text')?.textContent);
@@ -5351,10 +5380,18 @@ export class Pollo {
   haeAineisto(kysymys) {
     const indeksi = this.varmistaIndeksi();
     if (!indeksi?.merkinnat?.length) return [];
-    const game = this.haeUi?.()?.game ?? null;
+    const ui = this.haeUi?.() ?? null;
+    const game = ui?.game ?? null;
     // Missä pelaaja seisoo: oman kaupungin ja maan jutut painavat
     // haussa selvästi enemmän (js/pollo-haku.js HAUN_SIJAINTIKERROIN).
-    const cityId = game?.player?.pos?.city ?? null;
+    /*
+     * ASTRONAUTIN KAMERASSA SIJAINTIPAINO POIS (kierros 16, 20.9.2026):
+     * muuten katkelmat olisivat pelaajan kaupungista ja kaupungin nimi
+     * palaisi vastaukseen aineiston kautta, vaikka konteksti ei sitä
+     * kerro (ks. lueNakyma).
+     */
+    const cityId = astronautinKameraPaalla(ui, this.doc)
+      ? null : (game?.player?.pos?.city ?? null);
     const tulos = haeKatkelmat(indeksi, kysymys, {
       maara: 4,
       onVastattu: (m) => this.tehtavaRatkaistu(m),

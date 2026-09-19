@@ -226,8 +226,10 @@ async function haeJakso(kaupungit, vuosi, kuukausi) {
       await new Promise((r) => setTimeout(r, 4000 * virheita));
       continue;
     }
-    const data = await vastaus.json();
-    if (!Array.isArray(data) || data.length !== kaupungit.length) {
+    const raaka = await vastaus.json();
+    // Yhdellä paikalla (--vain <yksi>) Open-Meteo palauttaa olion eikä taulukkoa.
+    const data = Array.isArray(raaka) ? raaka : [raaka];
+    if (data.length !== kaupungit.length) {
       throw new Error(`vastauksessa ${data.length ?? '?'} paikkaa, odotettiin ${kaupungit.length}`);
     }
     mkdirSync(VALIMUISTIKANSIO, { recursive: true });

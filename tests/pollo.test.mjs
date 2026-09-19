@@ -374,6 +374,32 @@ test('lueNakyma: koko paketti on spoilerivapaa ja mahtuu kattoon', () => {
   assert.ok(konteksti.includes(JUTUN_TEKSTI));
 });
 
+/*
+ * ASTRONAUTIN KAMERASSA EI OLE SIJAINTIA (Sonnet 1, kierros 16,
+ * 20.9.2026): pulun vastaus alkoi *"…ei mitään tekemistä Brysselin
+ * kanssa"*, eli pelaajan kaupunki vuoti avaruuskuvan kontekstiin.
+ */
+test('lueNakyma astronautin kamerassa: ei kaupunkia, maata eikä matkapäivää', () => {
+  const doc = teeDoc({ lehti: teeLehti({ auki: false }) });
+  const kartalla = lueNakyma({ game: teeGame(), ui: {}, doc });
+  assert.ok(kartalla.includes('Doha'), 'kartalla sijainti kuuluu kontekstiin');
+  for (const ui of [
+    { pallolinssi: { tunnus: 'satelliitti' } },
+    { linssiValittu: 'satelliitti' },
+  ]) {
+    const avaruudessa = lueNakyma({ game: teeGame(), ui, doc });
+    assert.ok(!avaruudessa.includes('Doha'), `kaupunki vuoti: ${avaruudessa}`);
+    assert.ok(!avaruudessa.includes('Qatar'), `maa vuoti: ${avaruudessa}`);
+    assert.ok(!/Matkapäivä/.test(avaruudessa), `matkapäivä vuoti: ${avaruudessa}`);
+    assert.ok(avaruudessa.includes('Astronautin kamera'), avaruudessa);
+  }
+  // Sama myös ilman ui-oliota, pelkän valokuvanäkymän luokan perusteella.
+  const luokat = new Set(['satelliitti-kuva-auki']);
+  const kuvaDoc = { ...doc, body: { classList: { contains: (l) => luokat.has(l) } } };
+  const kuvassa = lueNakyma({ game: teeGame(), ui: null, doc: kuvaDoc });
+  assert.ok(!kuvassa.includes('Doha'), kuvassa);
+});
+
 test('lueNakyma kartalla: ei lehtitekstiä, ei kaatumista ilman peliä', () => {
   const kartalla = lueNakyma({ game: teeGame(), doc: teeDoc({ lehti: teeLehti({ auki: false }) }) });
   assert.ok(kartalla.includes('Näkymä: kartta'));

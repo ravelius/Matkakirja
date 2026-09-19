@@ -62784,6 +62784,1340 @@ export const KULTTUURI_KATEGORIAT = {
     },
   ],
   /*
+   * BRYSSEL (20.9.2026, kaupunkilehti erä 2; omistajan päätös 19.9.2026:
+   * Belgian pelikaupunki). Täysi lehti: etusivu (kansi- ja avauskuvat,
+   * ennen ja nyt, Matkailijalle-opas) sekä aihesivut Historia,
+   * Rakennukset ja Ruoka ja juoma. Tekstit omin sanoin en-Wikipediasta
+   * (luettu 20.9.2026); kuvat Commonsista, lisenssi ja tekijä luettu
+   * rajapinnan extmetadatasta ja jokainen kuva katsottu silmin.
+   */
+  bryssel: [
+    {
+      id: 'kaupunki',
+      nimi: 'Bryssel',
+      johdanto: 'Kuninkaanlinna, puutarhaportaat ja pieni pronssipoika, jolla on noin tuhat '
+          + 'asua: Brysselissä kukkulan yläkaupunki ja alakaupunki liittyvät toisiinsa '
+          + 'portaiden ja puistojen kautta.',
+      kansikuvat: [
+        {
+          tiedosto: 'Arcade centrale - Cinquantenaire - Brussels, Belgium - DSC08490.jpg',
+          lyhyt: 'Cinquantenaire-kaari valmistui 1905 Jubelpuiston keskukseksi.',
+          selite: 'Cinquantenaire-kaari valmistui vuonna 1905 Jubelpuiston keskipisteeksi; '
+              + 'puiston rakennukset syntyivät alun perin Belgian kapinan '
+              + '50-vuotisjuhlanäyttelyyn 1880.',
+          lahde: 'Daderot, Wikimedia Commons (CC0)',
+        },
+        {
+          tiedosto: 'Koekelberg Basilique Nationale Sacré-Coeur Fassade 1.jpg',
+          lyhyt: 'Koekelbergin basilika on Belgian suurin kirkko, ja sen vihreä kupoli '
+              + 'nousee 89 metriin.',
+          selite: 'Koekelbergin Pyhän Sydämen basilika aloitettiin 1905 ja valmistui vasta '
+              + '1970; art deco -tyylisen kirkon kupoli hallitsee Brysselin luoteista '
+              + 'siluettia.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Eglise Notre-Dame du Sablon from the parc.jpg',
+          lyhyt: 'Sablonin Notre-Dame-kirkko edustaa myöhäistä brabantilaista goottia '
+              + '1400-luvulta.',
+          selite: 'Sablonin kirkko rakennettiin 1400-luvulla, ja sen uusgoottilaiset '
+              + 'koristeet ovat 1800-luvulta; rikkaassa sisustuksessa on kaksi '
+              + 'barokkikappelia.',
+          lahde: 'Leogs, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Brussels from air 4.jpg',
+          lyhyt: 'Lentokuvassa Bryssel levittäytyy puistojen ja tiheästi rakennettujen '
+              + 'asuinalueiden yli.',
+          selite: 'Lentokoneesta otetussa kuvassa Bryssel jatkuu horisonttiin asti: keskellä '
+              + 'on laajoja puistoja ja niiden ympärillä tiheää kaupunkia.',
+          lahde: 'Karelj, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Brussels panorama (9376295145).jpg',
+          lyhyt: 'Kerrostalojen ja tiilikattojen yllä avautuu katunäkymä Brysselin '
+              + 'asuinalueelle.',
+          selite: 'Ylhäältä otetussa kuvassa Brysselin kadut haarautuvat vanhojen '
+              + 'kerrostalojen ja punatiilikattojen välissä, ja kaukaisuudessa kohoaa '
+              + 'torneja.',
+          lahde: 'Francisco Anzola, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Vue depuis le mont des arts Bruxelles.jpg',
+          lyhyt: 'Mont des Artsin puutarhasta avautuu näkymä kohti kaupungintornia.',
+          selite: 'Mont des Artsin geometrinen puutarha yhdistää yläkaupungin ja '
+              + 'alakaupungin, ja portailta erottuu Brysselin kaupungintalon torni.',
+          lahde: 'Alex Sirac, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Place Royale, Bruxelles, 1904.jpg',
+          vuosi: 'noin 1904',
+          lyhyt: 'Place Royalen aukiolla kuljettiin 1900-luvun alussa hevosvaunuilla ja '
+              + 'raitiovaunuilla.',
+          selite: 'Place Royale oli 1900-luvun alussa vilkas aukio: hevosvaunut ja '
+              + 'raitiovaunut kiertelivät Bouillonin Gottfriedin ratsastajapatsaan '
+              + 'ympärillä.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Place Royale Bruxelles 2023 vu du BELvue.jpg',
+          lyhyt: 'Nykyään Place Royale on väljä kivetty aukio, ja Bouillonin patsas seisoo '
+              + 'yhä keskellä.',
+          selite: 'Aukio rakennettiin vuosina 1775–1782 Coudenbergin palatsin raunioiden '
+              + 'päälle; se on 77 × 113 metrin kokoinen ja kokonaan kivetty.',
+          lahde: 'Jérôme, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Bruxelles Grand-Place Maison des Ducs de Brabant 1.jpg',
+          lyhyt: 'Grand-Placen laidalla kohoaa barokkinen julkisivu pilastereineen ja '
+              + 'kultakoristeineen.',
+          selite: 'Grand-Placen reunoja kiertävät entisten kiltojen barokkitalot, joiden '
+              + 'kultakoristeet hohtavat auringossa; talot rakennettiin uudelleen vuoden '
+              + '1695 pommituksen jälkeen.',
+          lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Bryssel on Belgian pääkaupunki ja samalla kaksikielinen suurkaupunki, jossa '
+            + 'puhutaan sekä ranskaa että hollantia. Alue koostuu 19 kunnasta, ja EU:n ja '
+            + 'Naton keskeiset toimielimet ovat täällä. Matkailijalle kaupunki alkaa '
+            + 'vanhasta keskustasta: Grand-Placelta kävelee minuutissa kujille, joissa on '
+            + 'ravintoloita ja suklaakauppoja, ja suurin osa nähtävyyksistä on '
+            + 'kävelymatkan päässä. Ratikka ja metro vievät kauemmas.',
+        artikkeli: {
+          nimi: 'Matkailijan Bryssel',
+          teksti: 'Brysseliin tutustutaan jalan Grand-Placelta alkaen ja ratikalla siitä '
+              + 'eteenpäin.',
+          nosto: 'Grand-Placen talot rakennettiin uudelleen muutamassa vuodessa sen '
+              + 'jälkeen, kun ranskalaiset olivat polttaneet ne vuonna 1695.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Suomesta Brysseliin lentää suoraan Finnair, ja lentokentältä pääsee '
+                  + 'junalla keskustan asemille. Junalla saapuva jää usein pois '
+                  + 'Bruxelles-Midin asemalla, joka on Belgian vilkkain ja ainoa, jossa '
+                  + 'pysähtyvät kansainväliset Eurostar- ja TGV-suurnopeusjunat. Aseman '
+                  + 'alla on metro. Liikennettä hoitaa STIB, jonka verkkoon kuuluvat '
+                  + 'metro, raitiovaunut ja bussit. Metrolinjoja on vähän, mutta '
+                  + 'ratikkaverkko on yksi Euroopan laajimmista. Vanhassa keskustassa '
+                  + 'kävely on silti nopein tapa liikkua.',
+              kuva: [
+                {
+                  tiedosto: 'Brussels Midi okt 2019 1.jpg',
+                  lyhyt: 'Bruxelles-Midin asemalla pysähtyy Eurostar-suurnopeusjunia.',
+                  selite: 'Bruxelles-Midin asemalla pysähtyy Eurostar-suurnopeusjunia; asema '
+                      + 'on Belgian vilkkain.',
+                  lahde: 'Smiley.toerist, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Brussels tram T3000 3097.JPG',
+                  lyhyt: 'Ratikka linjalla 92 ajaa Notre-Dame du Grand Sablonin kirkon ohi.',
+                  selite: 'Brysselin raitiovaunuverkko on yksi Euroopan laajimmista. Kuvan '
+                      + 'ratikka ajaa linjaa 92 Notre-Dame du Grand Sablonin kirkon '
+                      + 'edessä.',
+                  lahde: 'Jacek Rużyczka, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Grand-Place ja vanhakaupunki',
+              teksti: 'Grand-Place on 68 × 110 metrin kokoinen kokonaan kivetty aukio, jonka '
+                  + 'ympärillä on entisten kiltojen barokkitaloja, kaupungintalo ja '
+                  + 'Kuninkaantalo. Kaupungintalon torni on 96 metriä korkea, ja sen '
+                  + 'huipulla seisoo Pyhän Mikaelin patsas. Ranskan armeija pommitti '
+                  + 'kaupunkia vuonna 1695 ja tuhosi suurimman osan aukion rakennuksista; '
+                  + 'vain kaupungintalon julkisivu ja torni kestivät. Talot nousivat pian '
+                  + 'uudelleen, ja aukio on ollut Unescon maailmanperintökohde vuodesta '
+                  + '1998. Parillisten vuosien elokuussa keskelle levitetään muutamaksi '
+                  + 'päiväksi kukkamatto, jossa on lähes miljoona begoniaa ja daaliaa.',
+              kuva: {
+                tiedosto: '2018 flower carpet at Grand Place, Brussels (DSCF6849).jpg',
+                lyhyt: 'Grand-Placen kukkamatto levitetään joka toinen elokuu aukion keskelle.',
+                selite: 'Joka toinen elokuu Grand-Placelle levitetään kolmeksi tai neljäksi '
+                    + 'päiväksi kukkamatto, jonka kuviot on tehty lähes miljoonasta '
+                    + 'kukasta.',
+                lahde: 'Trougnouf (Benoit Brummer), Wikimedia Commons (CC BY 4.0)',
+              },
+            },
+            {
+              otsikko: 'Ruoka ja juoma',
+              teksti: 'Bryssel tunnetaan vohvelistaan, suklaastaan, ranskalaisista '
+                  + 'perunoistaan ja monista oluistaan. Brysselin vohveli on '
+                  + 'kevyttaikinainen ja pursotetaan kermalla tai hedelmillä, kun taas '
+                  + 'Liègen vohvelissa on taikinassa helmisokeria. Klassikkoannos on '
+                  + 'moules-frites eli simpukat ja ranskalaiset. Olutpuolella kannattaa '
+                  + 'kokeilla kaupungin omaa lambic-olutta: gueuze on melko hapan ja kriek '
+                  + 'kirsikalla maustettu, makeampi. Kriekiä saa lähes jokaisesta '
+                  + 'baarista.',
+              kuva: [
+                {
+                  tiedosto: 'AuPreSale Moules.JPG',
+                  lyhyt: 'Kattilallinen simpukoita ja lautasellinen ranskalaisia perunoita.',
+                  selite: 'Simpukat ja ranskalaiset ovat yksi Brysselin kolmesta klassikosta '
+                      + 'suklaan ohella.',
+                  lahde: 'Jpatokal, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+                {
+                  tiedosto: 'Delirium Cafe, Brussels.jpg',
+                  lyhyt: 'Olutbaarin seinillä on panimoiden kilpiä ja kyltti, jossa lukee '
+                      + 'Gueuze en Kriek.',
+                  selite: 'Brysselin olutbaarien seinillä on panimoiden kilpiä; kyltissä '
+                      + 'mainitaan kaupungin tunnetuimmat lambic-oluet, gueuze ja kriek.',
+                  lahde: 'Nicolas Vigier, Wikimedia Commons (CC0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Ilta',
+              teksti: 'Illalla ihmiset suuntaavat Saint-Géryn aukiolle, jossa on paljon '
+                  + 'baareja, kahviloita ja ravintoloita. Aukion kauppahalli valmistui '
+                  + 'vuonna 1882 lähelle paikkaa, jossa Brysselin tarinan uskotaan '
+                  + 'alkaneen: 900-luvulla Senne-joen saarelle rakennetusta linnakkeesta. '
+                  + 'Sainte-Catherinen aukion ympäristö on tunnettu kalaravintoloistaan. '
+                  + 'Grand-Placen pohjoispuolen Rue des Bouchers -kadulla tarjoilijat '
+                  + 'houkuttelevat ohikulkijoita sisään, joten ruokapaikan voi valita '
+                  + 'rauhassa muualta. Perjantaisin ja lauantaisin yöbussit kulkevat '
+                  + 'keskustasta keskiyöstä kolmeen.',
+              kuva: [
+                {
+                  tiedosto: 'Halles Saint-Gery68.jpg',
+                  lyhyt: 'Punatiilinen Saint-Géryn kauppahalli sijaitsee kivetyn aukion '
+                      + 'laidalla.',
+                  selite: 'Saint-Géryn kauppahalli rakennettiin uusflaamilaiseen '
+                      + 'renessanssityyliin ja valmistui vuonna 1882; nykyään siellä on '
+                      + 'kulttuuri- ja näyttelytilaa.',
+                  lahde: 'Karmakolle, Wikimedia Commons (CC0)',
+                },
+                {
+                  tiedosto: 'Brussels (52191056580).jpg',
+                  lyhyt: 'Ravintolan terassi täyttyy illalla vanhankaupungin kivetyllä kujalla.',
+                  selite: 'Vanhankaupungin kujilla ravintoloiden terassit täyttyvät illan '
+                      + 'tullen, ja seinillä loistavat neonkyltit.',
+                  lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Grand-Place',
+                tahdet: 3,
+                selite: 'Unescon maailmanperintökohde ja kaupungin sydän: kaikki tärkeä on '
+                    + 'lyhyen kävelyn päässä.',
+              },
+              {
+                mita: 'Ruoka ja juoma',
+                tahdet: 3,
+                selite: 'Vohvelit, suklaa, ranskalaiset ja lambic-oluet löytyvät kaikki '
+                    + 'samalta kävelykierrokselta.',
+              },
+              {
+                mita: 'Art nouveau',
+                tahdet: 3,
+                selite: 'Victor Hortan kaupunkitalot ovat Unescon maailmanperintöä, ja '
+                    + 'tyylin taloja on ympäri kaupunkia.',
+              },
+              {
+                mita: 'Kävely',
+                tahdet: 2,
+                selite: 'Keskustassa on noin 50 hehtaarin jalankulkualue, mutta vanhan '
+                    + 'kaupungin katukivet vaativat kunnon kengät.',
+              },
+              {
+                mita: 'Museot',
+                tahdet: 2,
+                selite: 'Kaupungissa on yli kahdeksankymmentä museota, joten sadepäivänä on '
+                    + 'aina jotain nähtävää.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Sade',
+                teksti: 'Sataa ympäri vuoden: vuosisade on noin 750 millimetriä ja märin '
+                    + 'kuukausi on joulukuu. Sadetakki ja vedenpitävät kengät kuuluvat '
+                    + 'laukkuun.',
+              },
+              {
+                otsikko: 'Kielet',
+                teksti: 'Kaupunki on virallisesti kaksikielinen, joten kadunnimet ovat sekä '
+                    + 'ranskaksi että hollanniksi. Englannilla pärjää yleensä hyvin.',
+              },
+              {
+                otsikko: 'Taskuvarkaat',
+                teksti: 'Väkijoukoissa, asemilla ja metrossa liikkuu taskuvarkaita. '
+                    + 'Arvotavarat kannattaa pitää lähellä, ja hätänumero on 112.',
+              },
+              {
+                otsikko: 'Kaupat',
+                teksti: 'Harva kauppa avautuu ennen kymmentä, ja monet ovat kiinni '
+                    + 'sunnuntaisin ja maanantaisin.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–syyskuu, kun kuukausikeskilämpö on 13,6–18,5 '
+                + 'astetta eikä kesä ole tukala. Huhtikuu on vuoden kuivin kuukausi, ja '
+                + 'parillisten vuosien elokuussa Grand-Placelle levitetään kukkamatto. '
+                + 'Talvi on leuto mutta märkä, ja joulun aikaan aukiolla on valo- ja '
+                + 'äänishow.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '6,7…13,6 °C',
+                kuvaus: 'Lämpötila nousee maaliskuun 6,7 asteesta toukokuun 13,6 asteeseen. '
+                    + 'Huhtikuu on vuoden kuivin kuukausi, ja sadetta tulee silloin 47 '
+                    + 'millimetriä.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '16,5…18,5 °C',
+                kuvaus: 'Lämpimin aika, mutta keskilämpö jää alle 19 asteen. Sadetta tulee '
+                    + 'heinä- ja elokuussa 71 millimetriä kuukaudessa.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '7,3…15,3 °C',
+                kuvaus: 'Syyskuu on vielä leuto 15,3 asteella, mutta marraskuussa keskilämpö '
+                    + 'on enää 7,3 astetta ja sadetta tulee 65 millimetriä.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '3,7…4,3 °C',
+                kuvaus: 'Keskilämpö pysyy plussan puolella, tammikuussa 3,7 astetta. '
+                    + 'Joulukuu on vuoden märin kuukausi: sadetta tulee 74 millimetriä.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Visit Brussels — kaupungin oma matkailusivu',
+                url: 'https://www.visit.brussels/',
+              },
+              {
+                nimi: 'Wikivoyage: Bryssel',
+                url: 'https://fi.wikivoyage.org/wiki/Bryssel',
+              },
+              {
+                nimi: 'STIB — metro, raitiovaunut ja bussit',
+                url: 'https://www.stib-mivb.be/',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+      nostot: [
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Pieni poika, jolla on tuhat asua',
+          tiedosto: 'French costumes of Manneken Pis Beret & Baguette.jpg',
+          teksti: 'Manneken Pis on vain 55,5 senttiä korkea pronssipatsas: alaston poika, '
+              + 'joka virtsaa suihkulähteen altaaseen. Kaivo mainitaan jo 1400-luvun '
+              + 'puolivälin asiakirjassa, ja nykyisen patsaan veisti brabantilainen '
+              + 'kuvanveistäjä Jérôme Duquesnoy vanhempi vuonna 1619. Poika saa päälleen '
+              + 'vaatteita useita kertoja viikossa: pukukokoelmassa on noin tuhat asua, ja '
+              + 'niille avattiin oma museo vuonna 2017. Kadun kulmassa seisova patsas on '
+              + 'kopio vuodelta 1965, sillä alkuperäinen on Brysselin kaupunginmuseossa.',
+          lyhyt: 'Manneken Pis ranskalaisasussa: baskeri, raitapaita, punainen huivi ja '
+              + 'patonki.',
+          selite: 'Manneken Pisin vaatekaappiin kuuluu noin tuhat asua, ja patsas pukeutuu '
+              + 'niihin useita kertoja viikossa; kuvassa se on ranskalaisasussa.',
+          lahde: 'Libor Háček, Wikimedia Commons (CC0)',
+          wiki: 'Manneken Pis',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Palatsi, jossa kuningas työskentelee mutta ei asu',
+          tiedosto: 'Koninklijk Paleis Brussel 01.jpg',
+          teksti: 'Kuninkaanpalatsi on Belgian kuninkaan virallinen palatsi, mutta '
+              + 'kuningasperhe asuu Laekenin linnassa; Brysselissä kuningas hoitaa '
+              + 'valtiollisia tehtäviään ja vastaanottaa vieraita. Paikalla seisoi ennen '
+              + 'Coudenbergin palatsi, joka tuhoutui tulipalossa vuonna 1731. Nykyisen '
+              + 'palatsin ensimmäinen ydin on 1700-luvun lopulta, mutta Leopold II '
+              + 'laajensi sitä niin, että sen pinta-ala lähes kaksinkertaistui. Yleisölle '
+              + 'palatsi on avoinna kesällä, Belgian kansallispäivästä 21. heinäkuuta '
+              + 'syyskuun alkuun.',
+          lyhyt: 'Kuninkaanpalatsin symmetrinen julkisivu kohoaa Place des Palais\'n aukion '
+              + 'laidalla.',
+          selite: 'Nykyinen julkisivu valmistui vasta vuoden 1904 jälkeen Leopold II:n '
+              + 'aloitteesta, ja sen keskellä on Thomas Vinçotten veistämä päätykolmio.',
+          lahde: 'FrDr, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Royal Palace of Brussels',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Kukkula, jolta näkee kaupungintalon tornille',
+          tiedosto: 'Mont des Arts Kunstberg.jpg',
+          teksti: 'Mont des Arts eli Kunstberg on keskustan kukkulaan rakennettu '
+              + 'kulttuurikortteli, jonka kuningas Leopold II halusi alun perin taiteiden '
+              + 'kaupunginosaksi. Ensimmäinen puisto portaikkoineen ja vesiputouksineen '
+              + 'vihittiin käyttöön 1910, mutta nykyisen ilmeensä alue sai vuosina '
+              + '1956–1969, kun sinne nousivat kuninkaallinen kirjasto ja '
+              + 'kongressipalatsi. Puutarhan suunnitteli maisema-arkkitehti René Pechère, '
+              + 'ja ylhäältä näkyy kaupungintalon torni; kirkkaana päivänä horisontissa '
+              + 'erottuvat myös Koekelbergin basilika ja Atomium.',
+          lyhyt: 'Mont des Artsin geometrinen puutarha laskeutuu kohti Albert I:n patsasta '
+              + 'ja kaupungintornia.',
+          selite: 'Puutarhan suunnitteli René Pechère, ja rinteen alapäässä seisoo Albert '
+              + 'I:n ratsastajapatsas, jonka takana kohoaa Brysselin kaupungintalon torni.',
+          lahde: 'FrDr, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mont des Arts',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Tykkitulessa palanut tori, kapina oopperasta, joki katujen alla ja '
+          + 'tanssiaiset juuri ennen Waterloota: neljä käännekohtaa, jotka muovasivat '
+          + 'Brysselin.',
+      tehtava: {
+        kysymys: 'Minkä ansiosta Brysseliin voitiin 1800-luvun lopulla rakentaa uusia '
+            + 'keskeisiä bulevardeja?',
+        vaihtoehdot: [
+          'Vanhojen kaupunkimuurien purkamisen',
+          'Senne-joen peittämisen kaupungin alueella',
+          'Uuden kanavan kaivamisen keskustaan',
+          'Rautatieaseman rakentamisen keskustaan',
+        ],
+        oikea: 1,
+        fakta: 'Senne oli 1800-luvun jälkipuoliskolla vakava terveysriski, ja pormestari '
+            + 'Jules Anspach ryhtyi peittämään sen. Joki virtaa nykyään suurimmaksi osaksi '
+            + 'kaupungin sisärenkaan alla.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kaksi päivää tulta, neljä vuotta jälleenrakennusta',
+          tiedosto: 'Ruïnes op de Grote Markt te Brussel, 1695 Debris d\'une partie du grand marché depuis le coing de la Heuvelstraet vers St. Nicolas (titel op object) Perspectives des ruines de la ville de Bruxelles (serietitel), RP-P-1903-A-23488.jpg',
+          teksti: 'Elokuussa 1695 ranskalaiset Villeroin johdolla ampuivat Brysseliä '
+              + 'tykeillä ja sytytyspanoksilla kahden päivän ajan. Tarkoitus oli '
+              + 'houkutella liittoutuneiden armeija pois Namurin piirityksestä. Tuli '
+              + 'levisi kapeiden, osin puisten talojen kaduilla, ja arviolta kolmannes '
+              + 'kaupungin rakennuksista tuhoutui, Grand-Place mukaan lukien. Raatihuoneen '
+              + 'julkisivu ja torni pysyivät pystyssä, vaikka ne olivat tykkien pääkohde. '
+              + 'Aukio rakennettiin uudelleen neljässä vuodessa: killat rakensivat '
+              + 'talonsa, ja viranomaiset tarkastivat suunnitelmat, joten tuloksesta tuli '
+              + 'yllättävän yhtenäinen.',
+          lyhyt: 'Vuoden 1695 pommituksen jälkeen Grand-Placen raatihuone kohoaa raunioiden '
+              + 'keskellä.',
+          selite: 'Vuoden 1695 pommituksen jälkeen Grand-Placen raatihuone kohoaa raunioiden '
+              + 'keskellä; kuvan piirsi paikallinen taiteilija Augustin Coppens, ja sen '
+              + 'kaiversi Richard van Orley.',
+          lahde: 'Rijksmuseum, Wikimedia Commons (CC0)',
+          wiki: 'Grand-Place',
+        },
+        {
+          otsikko: 'Ooppera, joka käynnisti kapinan',
+          tiedosto: 'Angels & Belgian flags, Martyrs\' Square - Place des Martyrs - Martelaarsplaats, Brussels, Belgium (4039417307).jpg',
+          teksti: 'Belgian kapina alkoi Brysselistä 25. elokuuta 1830. Monnaien teatterissa '
+              + 'esitettiin kuningas Vilhelm I:n syntymäpäivän kunniaksi isänmaallinen '
+              + 'ooppera La muette de Portici, ja osa yleisöstä liittyi kaduilla jo '
+              + 'alkaneisiin mellakoihin. Syyskuun lopulla noin 8 000 '
+              + 'hollantilaissotilasta ei onnistunut valtaamaan kaupunkia takaisin, ja '
+              + 'armeija vetäytyi. Brysselissä perustettu väliaikainen hallitus julisti '
+              + 'Belgian itsenäiseksi, ja Leopold I vannoi kuninkaanvalan heinäkuussa '
+              + '1831. Martyyrien aukion krypttiin on haudattu yli 400 kapinan sankaria.',
+          lyhyt: 'Martyyrien aukion muistomerkin enkelipatsaat ja Belgian liput '
+              + 'muistuttavat vuoden 1830 kapinasta.',
+          selite: 'Martyyrien aukion muistomerkin kaksi enkelipatsasta ja Belgian liput '
+              + 'muistuttavat vuoden 1830 kapinasta; muistomerkin alla on krypta, jonne '
+              + 'kapinan sankareita on haudattu.',
+          lahde: 'Dr Les (Leszek - Leslie) Sachs from Brussels, Belgium, Wikimedia Commons '
+              + '(CC BY 2.0)',
+          wiki: 'Place des Martyrs, Brussels',
+        },
+        {
+          otsikko: 'Joki, joka katosi katujen alle',
+          tiedosto: 'Bruxelles. Boulevard Anspach LCCN2017659123.jpg',
+          teksti: 'Brysselin läpi virtaava Senne-joki oli 1800-luvun jälkipuoliskolla vakava '
+              + 'terveysriski. Pormestari Jules Anspachin aikana joki peitettiin kaupungin '
+              + 'alueella kokonaan vuosina 1867–1871. Peiton ansiosta keskustaan voitiin '
+              + 'rakentaa Haussmannin Pariisia muistuttavia uusia taloja keskeisten '
+              + 'bulevardien varrelle. Bulevardi Anspachia kutsuttiin aluksi '
+              + 'Keskusbulevardiksi, ja nykyisen nimensä se sai vuonna 1879. Joki ei enää '
+              + 'virtaa sen alla: se kulkee suurimmaksi osaksi kaupungin sisärenkaan alla.',
+          lyhyt: 'Anspachin bulevardi ja pörssirakennus näkyvät 1890-luvun värivalokuvassa.',
+          selite: 'Anspachin bulevardi ja pörssirakennus 1890-luvun värivalokuvassa; '
+              + 'bulevardi rakennettiin Senne-joen peittämisen jälkeen.',
+          lahde: 'Photoglob Co., Wikimedia Commons (PD)',
+          wiki: 'Boulevard Anspach',
+        },
+        {
+          otsikko: 'Tanssiaiset, jotka keskeytyivät sotaan',
+          // POIKKEUS 1200 px:n kuvasääntöön (Fable 20.9.2026): Hillingfordin
+          // maalaus on vain 960 px leveä (PD; Commonsissa ei ole isompaa
+          // versiota), ja se on hyväksytty tämän yhden kuvan poikkeuksena.
+          tiedosto: 'Summoned to Waterloo, Brussels, dawn of June 16, 1815 by Robert Alexander Hillingford (1898).jpg',
+          teksti: 'Kesäkuun 15. päivän iltana 1815 Richmondin herttuatar järjesti '
+              + 'Brysselissä tanssiaiset, joita on sanottu historian kuuluisimmiksi. Illan '
+              + 'mittaan Wellingtonin herttualle saapui viestejä: Napoleonin joukot olivat '
+              + 'ylittäneet rajan. Wellington käski upseerinsa rykmenttiensä luo, ja osa '
+              + 'heistä lähti kohti Quatre Brasia vielä juhla-asussaan. Tanssisali oli '
+              + 'entinen vaunuvaja, jossa skottilaiset Gordon Highlanders tanssivat '
+              + 'reeliä. Tanssiaisista on tullut taiteilijoiden ja kirjailijoiden suosima '
+              + 'aihe.',
+          lyhyt: 'Upseerit lähtevät tanssiaisista sotaan, ja skottisotilaat marssivat ohi '
+              + 'Brysselin kadulla.',
+          selite: 'Robert Hillingfordin maalauksessa vuodelta 1898 upseerit poistuvat '
+              + 'Richmondin herttuattaren tanssiaisista kesäkuun 16. päivän aamuyönä, ja '
+              + 'skottisotilaat marssivat sotaan.',
+          lahde: 'Robert Alexander Hillingford, Wikimedia Commons (PD)',
+          wiki: 'Duchess of Richmond\'s ball',
+        },
+      ],
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Brysselin katukuvassa ovat vierekkäin 1800-luvun jättipalatsi, lasikattoinen '
+          + 'kauppakuja, art nouveau -kaupunkitalo ja rautakiteeksi rakennettu maamerkki. '
+          + 'Jokaisella on oma tarinansa.',
+      tehtava: {
+        kysymys: 'Mikä Brysselin rakennus piti alun perin purkaa jo noin kuuden kuukauden '
+            + 'kuluttua?',
+        vaihtoehdot: [
+          'Palais de Justice',
+          'Galeries Saint-Hubert',
+          'Hôtel Tassel',
+          'Atomium (Heysel)',
+        ],
+        oikea: 3,
+        fakta: 'Atomium rakennettiin Expo 58 -maailmannäyttelyn keskukseksi, mutta suosio '
+            + 'pelasti sen purkamiselta. Nykyään se on Brysselin suosituin nähtävyys.',
+      },
+      nostot: [
+        {
+          otsikko: '1800-luvun suurin rakennus kohoaa Marollesin yllä',
+          tiedosto: 'Brussels Palais de Justice (52190836980).jpg',
+          teksti: 'Brysselin oikeuspalatsi on Belgian tärkein oikeustalo, ja se seisoo '
+              + 'Marollesin kaupunginosan reunalla ylä- ja alakaupungin välissä. '
+              + 'Arkkitehti Joseph Poelaert suunnitteli sen '
+              + 'kreikkalais-roomalaisvaikutteiseen, eklektiseen tyyliin, ja rakennustyöt '
+              + 'kestivät vuodesta 1866 vuoteen 1883. Pohja-alaa on yli 26 000 '
+              + 'neliömetriä, ja palatsia pidetään 1800-luvun suurimpana rakennuksena. '
+              + 'Kupoli romahti sodan lopussa tulipalossa ja rakennettiin uudelleen '
+              + 'entistä korkeammaksi. Kunnostustyöt alkoivat 1984, ja telineet ovat yhä '
+              + 'paikoillaan.',
+          lyhyt: 'Oikeuspalatsin kullattu kupoli kohoaa telineiden takaa julkisivun '
+              + 'yläpuolelle.',
+          selite: 'Oikeuspalatsin kupoli kohoaa telineiden peittämänä julkisivun '
+              + 'yläpuolelle; kunnostustyöt alkoivat vuonna 1984.',
+          lahde: 'Jorge Franganillo, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Palace of Justice, Brussels',
+        },
+        {
+          otsikko: 'Lasikatto, joka tuli katujen päälle 1847',
+          tiedosto: 'Galeries Royales Saint-Hubert Brusel.jpg',
+          teksti: 'Saint-Hubertin kuninkaalliset galleriat avattiin kesäkuussa 1847, ja '
+              + 'niitä pidetään Euroopan ensimmäisinä aidosti julkisina katettuina '
+              + 'kauppakujina. Arkkitehti Jean-Pierre Cluysenaar korvasi hämärien kujien '
+              + 'vyyhdin yli 200 metriä pitkällä lasikattoisella käytävällä. '
+              + 'Kokonaisuuteen kuuluu kolme osaa: Kuninkaan, Kuningattaren ja Ruhtinaiden '
+              + 'galleria. Esikuvana oli Pariisin Galerie d\'Orléans, ja Milanon kuuluisa '
+              + 'Galleria Vittorio Emanuele II otti puolestaan mallia Brysselistä.',
+          lyhyt: 'Saint-Hubertin galleriassa lasikatto kaartuu kauppakujan ja julkisivujen '
+              + 'ylle.',
+          selite: 'Lasikatto kaartuu gallerian ylle, ja julkisivun kapeissa seisoo patsaita.',
+          lahde: 'ViktorEP, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Royal Saint-Hubert Galleries',
+        },
+        {
+          otsikko: 'Talo, joka toi päivänvalon portaikkoon',
+          tiedosto: 'Tassel House stairway.JPG',
+          teksti: 'Hôtel Tassel on kaupunkitalo, jonka Victor Horta suunnitteli professori '
+              + 'Emile Tasselille vuosina 1892–1893. Sitä pidetään yhtenä ensimmäisistä '
+              + 'art nouveau -tyylisistä rakennuksista. Horta hylkäsi perinteisen '
+              + 'pohjaratkaisun: kadunpuoleisen ja puutarhanpuoleisen tiilirakennuksen '
+              + 'väliin hän rakensi lasikattoisen teräsrakenteen, jonka portaikko tuo '
+              + 'luonnonvalon talon keskelle. Horta suunnitteli ovenkahvoista '
+              + 'lasimaalauksiin ja mosaiikkilattiaan kaiken itse. Talo kuuluu Hortan '
+              + 'kolmen muun kaupunkitalon kanssa Unescon maailmanperintöluetteloon '
+              + 'vuodesta 2000.',
+          lyhyt: 'Hôtel Tasselin portaikossa rautapylväs ja kaartuva kaide muodostavat art '
+              + 'nouveau -kuvioita.',
+          selite: 'Portaikossa rautapylväs, kaartuva kaide, koristeltu seinä ja '
+              + 'mosaiikkilattia muodostavat yhden kokonaisuuden.',
+          lahde: 'Henry Townsend, Wikimedia Commons (PD)',
+          wiki: 'Hôtel Tassel',
+        },
+        {
+          otsikko: 'Rautakide, joka jäi kuudeksi kuukaudeksi',
+          tiedosto: 'Atomium-Brussels-1.jpg',
+          teksti: 'Atomium rakennettiin Brysselin Expo 58 -maailmannäyttelyn keskukseksi '
+              + 'Heyselin tasangolle. Sen suunnittelivat insinööri André Waterkeyn sekä '
+              + 'arkkitehdit André ja Jean Polak. Yhdeksän palloa esittää rautakiteen '
+              + 'yksikkökoppia 165 miljardia kertaa suurennettuna, ja rakennus on 102 '
+              + 'metriä korkea. Sen piti seistä vain näyttelyn ajan, noin kuusi kuukautta, '
+              + 'mutta suosio pelasti sen purkamiselta. Nykyään Atomium on Brysselin '
+              + 'suosituin nähtävyys, ja huipulla on ravintola.',
+          lyhyt: 'Atomiumin ruostumattomalla teräksellä verhotut pallot on yhdistetty '
+              + 'toisiinsa putkilla.',
+          selite: 'Yhdeksän palloa on liitetty toisiinsa putkilla, joiden sisällä kulkevat '
+              + 'portaat, liukuportaat ja hissi.',
+          lahde: 'acediscovery, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Atomium',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka ja juoma',
+      johdanto: 'Bryssel maistuu suklaalta, vohveleilta ja oluelta, jonka käymisen hoitaa '
+          + 'laakson ilma. Kadunkulmassa tarjotaan ranskanperunoita, joiden alkuperästä '
+          + 'naapurit kiistelevät.',
+      tehtava: {
+        kysymys: 'Mitä Jean Neuhaus II:n vaimo Louise Agostini kehitti vuonna 1915, kun '
+            + 'konvehdit murskaantuivat paperitötteröissä?',
+        vaihtoehdot: [
+          'Lasisen säilytyspurkin',
+          'Puisen kuljetuslaatikon',
+          'Ballotin-lahjarasian',
+          'Kankaisen kantopussin',
+        ],
+        oikea: 2,
+        fakta: 'Ballotin-rasian malli patentoitiin 16. elokuuta 1915. Rasia on yhä '
+            + 'laadukkaiden suklaakonvehtien tyypillinen pakkaus.',
+      },
+      nostot: [
+        {
+          otsikko: 'Apteekki, jonka lääkkeet päällystettiin suklaalla',
+          tiedosto: 'Belgium Chocolates.jpg',
+          teksti: 'Sveitsiläinen Jean Neuhaus avasi vuonna 1857 apteekin Galeries Royales '
+              + 'Saint-Hubertiin lähelle Grand-Placea. Hän päällysti lääkkeet suklaalla, '
+              + 'jotta niitä oli helpompi käsitellä, ja pian tiskille tuli lakritsia, '
+              + 'vaahtokarkkeja ja suklaalevyjä. Vuonna 1912 hänen pojanpoikansa Jean '
+              + 'Neuhaus II valmisti ensimmäiset täytetyt suklaakonvehdit eli pralinet. '
+              + 'Vuonna 1915 hänen vaimonsa Louise Agostini kehitti konvehdeille '
+              + 'lahjarasian, ballotinin, koska paperitötteröissä ne murskaantuivat.',
+          lyhyt: 'Valkoinen ja tumma suklaakonvehti vierekkäin, kuoressa kuviointia.',
+          selite: 'Belgialaisessa pralinessa on suklaakuori ja sen sisällä pehmeämpi täyte; '
+              + 'kuvan konvehtien kuoret on koristeltu kuvioin.',
+          lahde: 'David Wilmot, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Neuhaus (chocolatier)',
+        },
+        {
+          otsikko: 'Suorakaiteinen vohveli, joka ei ole liegeläinen',
+          tiedosto: 'Gaufre de Brussel.001 - Brussel.jpg',
+          teksti: 'Belgiassa on toistakymmentä alueellista vohvelityyppiä, ja kaksi '
+              + 'tunnetuinta eroavat selvästi. Brysselin vohveli nostatetaan '
+              + 'munanvalkuaisella tai hiivalla, perinteisesti olutpanimon hiivalla; se on '
+              + 'kevyt ja rapea, siinä on isot kuopat ja suorakaiteen muotoiset reunat. '
+              + 'Liègen vohveli tehdään briossitaikinasta, ja sen sisällä olevat '
+              + 'helmisokeripalat karamellisoituvat: se on tiheämpi, makeampi ja '
+              + 'sitkeämpi. Nimi Brysselin vohveli esiintyy kirjoissa 1840-luvulta, ja '
+              + 'katukauppiaat tarjoavat sen lämpimänä tomusokerin kanssa.',
+          lyhyt: 'Brysselin vohveli on suorakaiteen muotoinen ja tomusokerilla ripoteltu.',
+          selite: 'Brysselin vohvelin tunnistaa suorakaiteesta ja syvistä ruuduista; '
+              + 'Brysselin keskustassa sitä tarjotaan tomusokerilla.',
+          lahde: 'Fernando Losada Rodríguez, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Waffle',
+        },
+        {
+          otsikko: 'Olut, jonka panee käymään Sennen laakson ilma',
+          tiedosto: 'Bieren uit de streek rond brussel.jpg',
+          teksti: 'Lambic on olutta, jota on valmistettu Brysselin lounaispuolella '
+              + '1200-luvulta lähtien. Sen käyminen ei perustu viljeltyyn hiivaan vaan '
+              + 'Sennen laaksossa eläviin villihiivoihin ja bakteereihin: vierre '
+              + 'jäähdytetään yön yli matalassa avoimessa altaassa, jossa ilma tuo '
+              + 'mikrobit mukanaan. Siksi olutta tehdään vain viileinä kuukausina, '
+              + 'lokakuusta toukokuuhun. Sekoittamalla yksivuotista ja 2–3-vuotiasta '
+              + 'lambicia saadaan gueuze, joka käy pullossa uudelleen ja kuohuu niin, että '
+              + 'sitä kutsutaan Brysselin samppanjaksi.',
+          lyhyt: 'Vitriinissä rivi Brysselin seudun lambic-oluita, muun muassa geuze- ja '
+              + 'hedelmälambic-pulloja.',
+          selite: 'Pullotettu gueuze on kuohuvaa, ja siksi sitä on perinteisesti tarjottu '
+              + 'samppanjapulloissa.',
+          lahde: 'Paul Hermans, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Lambic',
+        },
+        {
+          otsikko: 'Perunat, joiden alkuperästä kiistellään yhä',
+          tiedosto: 'Frituur fries frikandel mayo curry ketchup.jpg',
+          teksti: 'Belgiassa ranskanperunat ovat frietejä tai frites-annoksia, ja niitä '
+              + 'myydään frituureissa, frietkoteissa ja friteriesissä. Perinteinen annos '
+              + 'tarjoillaan valkoisessa pahvitötterössä, ja päälle laitetaan lusikallinen '
+              + 'kastiketta, usein majoneesia. Belgialaisessa friteriessä on suuri '
+              + 'valikoima kastikkeita, ja vanhin tunnettu kioski toimi Antwerpenissä '
+              + '1842. Belgialaiset ja ranskalaiset kiistelevät yhä siitä, kumpi keksi '
+              + 'perunat: belgialainen ruokahistorioitsija Pierre Leclercq pitää alkuperää '
+              + 'ranskalaisena.',
+          lyhyt: 'Ranskanperunat paperitötterössä majoneesin kanssa ja vieressä frikandel, '
+              + 'taustalla frituur-kioski.',
+          selite: 'Perinteisen paperitötterön päällä on lusikallinen majoneesia ja pieni '
+              + 'muovihaarukka; taustalla näkyy frituur-kioski.',
+          lahde: 'Jon Åslund, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Friterie',
+        },
+      ],
+    },
+  ],
+
+  /*
+   * LJUBLJANA (20.9.2026, kaupunkilehti erä 2; omistajan päätös 19.9.2026:
+   * Slovenian pelikaupunki). Täysi lehti: etusivu (kansi- ja avauskuvat,
+   * ennen ja nyt, Matkailijalle-opas) sekä aihesivut Historia,
+   * Plečnikin ja Secessionin Ljubljana sekä Ruoka ja juoma. Tekstit omin
+   * sanoin en-Wikipediasta (luettu 20.9.2026); kuvat Commonsista, lisenssi
+   * ja tekijä luettu
+   * rajapinnan extmetadatasta ja jokainen kuva katsottu silmin.
+   */
+  ljubljana: [
+    {
+      id: 'kaupunki',
+      nimi: 'Ljubljana',
+      johdanto: 'Kaupunki Ljubljanica-joen varrella linnavuoren juurella, jossa lohikäärme '
+          + 'vartioi siltaa ja koristaa vaakunaa. Vanhakaupunki on autoton, ja '
+          + 'punakattoiset talot, joen rannat ja iso puisto ovat lähellä toisiaan.',
+      kansikuvat: [
+        {
+          tiedosto: 'Robba Fountain - Ljubljana I.jpg',
+          lyhyt: 'Robban suihkulähteen marmoriset jokijumalat seisovat Ljubljanan '
+              + 'kaupungintalon edessä.',
+          selite: 'Francesco Robban suihkulähde valmistui 1751, ja sen kolmen hahmon on '
+              + 'myöhemmin tulkittu esittävän Savaa, Krkaa ja Ljubljanicaa. Torilla '
+              + 'nykyään seisova suihkulähde on vuonna 2006 pystytetty kopio, ja '
+              + 'alkuperäinen on Slovenian kansallisgalleriassa.',
+          lahde: 'Sumitsurai, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ljubljana Town Hall (Magistrat, Mestni trg 2).jpg',
+          lyhyt: 'Magistratin eli kaupungintalon sisäpihaa kattaa lasikatto, ja pihan '
+              + 'keskellä on kaivo.',
+          selite: 'Kaupungintalo rakennettiin alun perin goottilaiseen tyyliin 1484, ja '
+              + 'vuosina 1717–1719 se uudistettiin barokkityyliin venetsialaisin '
+              + 'vaikuttein. Rakennuksessa toimii Ljubljanan kaupungin hallinto.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ljubljana, France Preseren monument.jpg',
+          lyhyt: 'Runoilija France Prešerenin patsas seisoo Ljubljanan keskusaukiolla.',
+          selite: 'Ivan Zajecin suunnittelema pronssipatsas paljastettiin 1905, ja se '
+              + 'esittää Slovenian kansallisrunoilijaa ja hänen runottarensa. Jalustan '
+              + 'suunnitteli arkkitehti Max Fabiani.',
+          lahde: 'Ajznponar, Wikimedia Commons (CC0)',
+        },
+      ],
+      avauskuvat: [
+        {
+          tiedosto: 'Views from Ljubljana Castle 20150819-1.jpg',
+          lyhyt: 'Linnalta näkyy vanhakaupunki punaisine kattoineen, joen käänne ja '
+              + 'Fransiskaanikirkko.',
+          selite: 'Ljubljanan linnan näköalapaikalta avautuu näkymä vanhankaupungin '
+              + 'punaisten kattojen yli kohti Prešernin aukiota, jonka laidalla kohoaa '
+              + 'vaaleanpunainen Fransiskaanikirkko.',
+          lahde: 'Suicasmo, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          tiedosto: 'Ljubljana (Slovenia) (54248876094).jpg',
+          lyhyt: 'Nebotičnik-pilvenpiirtäjästä katsottuna Linnavuori kohoaa vanhankaupungin '
+              + 'kattojen yli.',
+          selite: 'Nebotičnikin näköalapaikalta näkee, kuinka metsäinen Linnavuori ja sen '
+              + 'huipulla oleva linna kohoavat punakattoisen vanhankaupungin takana, ja '
+              + 'vasemmalla erottuu vaaleanpunainen Fransiskaanikirkko.',
+          lahde: 'Jose A., Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          tiedosto: 'Ljubljana Evening (49152933117).jpg',
+          lyhyt: 'Ljubljanan valot syttyvät illan hämärässä, ja horisontissa erottuu vuorijono.',
+          selite: 'Illan hämärässä kaupungin talot ja kirkontorni erottuvat valaistuina '
+              + 'rinteen alapuolella, ja horisontissa kohoaa vuorijono.',
+          lahde: 'Radek Kucharski, Wikimedia Commons (CC BY 2.0)',
+        },
+      ],
+      ennenNyt: [
+        {
+          tiedosto: 'Postcard of Prešeren Square 1925.jpg',
+          vuosi: '1925',
+          lyhyt: 'Prešernin aukio 1920-luvulla: patsas kuvan vasemmassa reunassa ja linna '
+              + 'talojen takana.',
+          selite: 'Vuoden 1895 maanjäristyksen jälkeen aukion ympärille rakennettiin uusia '
+              + 'palatseja, ja vuonna 1905 paljastettu Prešernin patsas näkyy kuvan '
+              + 'vasemmassa reunassa.',
+          lahde: 'Tuntematon tekijä, Wikimedia Commons (PD)',
+        },
+        {
+          tiedosto: 'Ljubljana Prešeren Square.jpg',
+          lyhyt: 'Aukiolla on yhä patsas ja linna taustalla, mutta nyt kävelijät saavat '
+              + 'aukion itselleen.',
+          selite: 'Aukio uudistettiin 1987–1988 suppilonmuotoisesta ympyränmuotoiseksi, ja '
+              + 'vuodesta 2007 se on ollut suljettu moottoriliikenteeltä.',
+          lahde: 'Wolfgang Moroder, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      matkailijalle: {
+        kuva: {
+          tiedosto: 'Ljubljana old town with excursion boat.JPG',
+          lyhyt: 'Ljubljanica-joella kulkee retkivene, ja rantojen terasseilla istutaan '
+              + 'kahvilapöytien ääressä.',
+          selite: 'Vanhankaupungin halki virtaavan Ljubljanica-joen molemmilla rannoilla on '
+              + 'kahviloiden ja ravintoloiden terasseja, ja joella kulkee retkiveneitä.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        kappale: 'Ljubljana on Slovenian pääkaupunki, ja asukkaita on noin 295 000. '
+            + 'Nähtävyydet ovat tiiviisti vanhassa keskustassa, ja sen halki kävelee '
+            + 'vaivatta. Ljubljanica-joen rannoilla on kahviloita ja ravintoloita, ja '
+            + 'linnavuori kohoaa vanhankaupungin yllä. Ytimessä ei ajeta autoilla: '
+            + 'keskusta on suljettu moottoriliikenteeltä, ja juna-asemalta, lentokentältä '
+            + 'ja vuokrapyörällä pääsee perille helposti. Tämä on kaupunki, jossa '
+            + 'kannattaa kävellä hitaasti.',
+        artikkeli: {
+          nimi: 'Matkailijan Ljubljana',
+          teksti: 'Ljubljanaan ei tutustuta rientämällä nähtävyydeltä toiselle vaan '
+              + 'kävelemällä hitaasti joen ja vanhan kaupungin katuja.',
+          nosto: 'Kun joelle kaivettiin 1700-luvulla oma oikopolku, linnavuoresta tuli '
+              + 'saari — ja vanhakaupunki säästyi tulvilta.',
+          taitto: 'opas',
+          jaksot: [
+            {
+              otsikko: 'Perille ja liikkeelle',
+              teksti: 'Ljubljanaan lennetään Jože Pučnikin lentokentälle, joka on noin 27 '
+                  + 'kilometrin päässä pohjoisessa; bussilla keskustaan pääsee noin '
+                  + 'tunnissa. Juna-asema ja linja-autoasema ovat vierekkäin noin '
+                  + 'kilometrin päässä joesta, ja junayhteyksiä on esimerkiksi Zagrebiin, '
+                  + 'Wieniin ja Müncheniin. Keskusta on pieni ja moottoriliikenteeltä '
+                  + 'suljettu, joten sen kulkee jalan. Kaupunkibusseissa maksetaan '
+                  + 'Urbana-kortilla tai puhelinsovelluksella, ja lainapyöriä löytyy '
+                  + 'BicikeLJ-asemilta.',
+              kuva: [
+                {
+                  tiedosto: 'Železniška postaja Ljubljana 1.6.2019 02.jpg',
+                  lyhyt: 'Ljubljanan päärautatieaseman laiturit ja punaiset paikallisjunat.',
+                  selite: 'Ljubljanan rautatieasema on noin kilometrin päässä joen '
+                      + 'pohjoispuolella, ja siitä on lyhyt kävelymatka vanhaankaupunkiin.',
+                  lahde: 'Christian Alexander Tietgen, Wikimedia Commons (CC BY 4.0)',
+                },
+                {
+                  tiedosto: 'Bicikelj station.jpg',
+                  lyhyt: 'BicikeLJ-kaupunkipyörät odottavat telineessä vanhankaupungin '
+                      + 'kadun varrella.',
+                  selite: 'BicikeLJ on kaupungin itsepalvelullinen pyörävuokraus: pyörän voi '
+                      + 'ottaa yhdeltä asemalta ja palauttaa toiselle.',
+                  lahde: 'Fighting Irish 1977 from Kuala Lumpur, Wikimedia Commons (CC BY 2.0)',
+                },
+              ],
+            },
+            {
+              otsikko: 'Vanhakaupunki ja joki',
+              teksti: 'Vanhakaupunki on ahdettu linnavuoren ja Ljubljanica-joen väliin. Sen '
+                  + 'kaksi aukiota ovat Mestni trg, jossa on Robban suihkulähde ja '
+                  + 'kaupungintalo, ja ylempänä Gornji trg. Keskiaikaisissa taloissa '
+                  + 'toimii nykyään pieniä muotikauppoja, kahviloita ja ravintoloita, ja '
+                  + 'kapeat kujat johtavat pieniin aukioihin. Joella kulkee retkiveneitä, '
+                  + 'joiden risteilyt kestävät tunnista kahteen, ja linnan tornille pääsee '
+                  + 'köysiradalla tai kävellen.',
+              kuva: {
+                tiedosto: 'Ljubljana, view of Stari trg 02.jpg',
+                lyhyt: 'Stari trgin kivetty katu kulkee värikkäiden vanhojen talojen '
+                    + 'välissä vanhassakaupungissa.',
+                selite: 'Stari trg eli Vanha tori on yksi vanhankaupungin katuja: kivetty ja '
+                    + 'kapea, ja sen varrella on värikkäitä taloja ja liiketiloja.',
+                lahde: 'Ajznponar, Wikimedia Commons (CC0)',
+              },
+            },
+            {
+              otsikko: 'Ruoka ja juoma',
+              teksti: 'Keskustori Vodnikov trgillä on kaupungin ruokasydän: aukion pöydiltä '
+                  + 'myydään paikallista tuotetta, ja viereisessä rakennuksessa on '
+                  + 'juustoja, leipiä ja lihaa. Tori on auki aamupäivisin ja iltapäivän '
+                  + 'alussa sunnuntaita lukuun ottamatta, ja vilkkaimmillaan se on '
+                  + 'lauantaiaamuna. Kevään ja syksyn välisenä aikana perjantaisin '
+                  + 'Pogačarjev trgillä pidetään Odprta kuhna -ruokamarkkinat, joilla on '
+                  + 'kojuja eri puolilta Slovenian.',
+              kuva: {
+                tiedosto: 'Vodnikov trg (1).JPG',
+                lyhyt: 'Vodnikov trgin keskustori täyttyy kojujen valkoisista katoksista.',
+                selite: 'Vodnikov trg on Ljubljanan keskustorin aukio Ljubljanica-joen '
+                    + 'oikealla rannalla, muutaman sadan metrin päässä Kolmoissillasta.',
+                lahde: 'Ljuba brank, Wikimedia Commons (CC BY-SA 3.0)',
+              },
+            },
+            {
+              otsikko: 'Ilta',
+              teksti: 'Illalla vanhankaupungin rantakadut täyttyvät terasseista, ja pöytiä '
+                  + 'katetaan aivan joen reunalle. Baarit ryhmittyvät Prešernin aukiolta '
+                  + 'lähteville kaduille, ja kiinnostavimmat löytyvät sivukaduilta eivätkä '
+                  + 'suoraan joen rannalta. Kaupungissa järjestetään vuosittain yli '
+                  + 'kymmenentuhatta kulttuuritapahtumaa, ja Ljubljana Festivalin ohjelmaa '
+                  + 'on kesäisin ulkolavoilla. Metelkova on entinen kasarmi, josta tehtiin '
+                  + 'vuonna 1993 taidegallerioiden, ateljeiden ja yökerhojen alue.',
+              kuva: [
+                {
+                  tiedosto: 'VidGajsek - Umbrellas at the river.jpg',
+                  lyhyt: 'Joen rannan ravintolan terassi illalla: pöydät ja varjot valmiina '
+                      + 'yleisölle.',
+                  selite: 'Ljubljanican rannalla ravintolat kattavat pöytänsä terasseille, '
+                      + 'ja varjot suojaavat sekä auringolta että sateelta.',
+                  lahde: 'Vid Gajšek, Wikimedia Commons (PD)',
+                },
+                {
+                  tiedosto: 'Ljubljana Metelkova mesto 07.JPG',
+                  lyhyt: 'Metelkovan värikkäiksi maalatut kaiteet kiertävät puuta '
+                      + 'kasarmialueen pihalla.',
+                  selite: 'Metelkova on entisen kasarmialueen taidekortteli, jossa maalatut '
+                      + 'kaiteet ja graffitit peittävät pihat ja rakennukset.',
+                  lahde: 'Zairon, Wikimedia Commons (CC BY-SA 4.0)',
+                },
+              ],
+            },
+          ],
+          matkailu: {
+            parasta: [
+              {
+                mita: 'Vanhakaupunki',
+                tahdet: 3,
+                selite: 'Kapeat kujat ja keskiaikaiset talot linnavuoren juurella, ja kaikki '
+                    + 'on kävelymatkan päässä.',
+              },
+              {
+                mita: 'Joki ja rannat',
+                tahdet: 3,
+                selite: 'Ljubljanican molemmilla rannoilla on kahviloita, ja retkiveneillä '
+                    + 'näkee kaupungin veden puolelta.',
+              },
+              {
+                mita: 'Kävely-ympäristö',
+                tahdet: 3,
+                selite: 'Keskusta on pieni ja moottoriliikenteeltä suljettu, ja Ljubljana '
+                    + 'valittiin Euroopan vihreäksi pääkaupungiksi 2016.',
+              },
+              {
+                mita: 'Tori ja ruoka',
+                tahdet: 2,
+                selite: 'Keskustori on avoinna aamuisin, ja perjantaisin markkinoilla on '
+                    + 'kojuja koko Sloveniasta.',
+              },
+              {
+                mita: 'Kulttuuri ja ilta',
+                tahdet: 2,
+                selite: 'Yli kymmenentuhatta tapahtumaa vuodessa, festivaaleja ja Metelkovan '
+                    + 'yökerhot.',
+              },
+            ],
+            hyvaTietaa: [
+              {
+                otsikko: 'Autoton keskusta',
+                teksti: 'Keskusta on ollut suljettu moottoriliikenteeltä vuodesta 2007, '
+                    + 'joten Prešernin aukion ympäristö kävellään.',
+              },
+              {
+                otsikko: 'Lentokentältä',
+                teksti: 'Jože Pučnikin lentokenttä on noin 27 kilometrin päässä, ja bussilla '
+                    + 'keskustaan pääsee noin 50 minuutissa.',
+              },
+              {
+                otsikko: 'Englanti riittää',
+                teksti: 'Suurin osa asukkaista puhuu englantia, erityisesti alle '
+                    + 'nelikymppiset, monet myös saksaa tai italiaa.',
+              },
+              {
+                otsikko: 'Sateinen syksy',
+                teksti: 'Sateisin kuukausi on syyskuu, 127 millimetriä. Sadetakki kannattaa '
+                    + 'pakata kaikkina vuodenaikoina.',
+              },
+            ],
+            parasAika: 'Paras aika on touko–syyskuu: rannan terassit ovat täynnä, '
+                + 'ulkoilmatapahtumia riittää ja lämpötila on miellyttävä. Alkusyksy on '
+                + 'vielä leuto mutta sateisin, ja talvella joulun aikaan kadut '
+                + 'koristellaan valoin ja joen rantaan ilmestyy ruoka- ja juomakioskeja.',
+            kaudet: [
+              {
+                nimi: 'Kevät',
+                kk: 'maalis–toukokuu',
+                lampotila: '5,6…14,7 °C',
+                kuvaus: 'Maaliskuun keskilämpö on 5,6 astetta ja toukokuun 14,7, joten kevät '
+                    + 'lämpenee tasaisesti. Sadetta tulee 77–101 millimetriä kuussa, '
+                    + 'eniten toukokuussa.',
+              },
+              {
+                nimi: 'Kesä',
+                kk: 'kesä–elokuu',
+                lampotila: '18,6…20,7 °C',
+                kuvaus: 'Heinäkuu on lämpimin kuukausi, keskilämpö 20,7 astetta. Sadetta on '
+                    + '96–112 millimetriä kuussa, elokuussa eniten.',
+              },
+              {
+                nimi: 'Syksy',
+                kk: 'syys–marraskuu',
+                lampotila: '5,9…15,5 °C',
+                kuvaus: 'Syyskuu on vielä leuto, 15,5 astetta, mutta samalla vuoden '
+                    + 'sateisin: 127 millimetriä. Marraskuussa keskilämpö on 5,9 astetta '
+                    + 'ja sadetta 124 millimetriä.',
+              },
+              {
+                nimi: 'Talvi',
+                kk: 'joulu–helmikuu',
+                lampotila: '0,1…1,4 °C',
+                kuvaus: 'Lämpötila pysyy nollan tuntumassa: tammikuun keskilämpö on 0,1 '
+                    + 'astetta, mikä on vuoden kylmin. Tammikuu on samalla vuoden kuivin, '
+                    + '60 millimetriä.',
+              },
+            ],
+            linkit: [
+              {
+                nimi: 'Visit Ljubljana — kaupungin oma matkailusivu',
+                url: 'https://www.visitljubljana.com/',
+              },
+              {
+                nimi: 'Wikivoyage: Ljubljana',
+                url: 'https://fi.wikivoyage.org/wiki/Ljubljana',
+              },
+              {
+                nimi: 'LPP — Ljubljanan kaupunkibussit',
+                url: 'https://www.lpp.si/en',
+              },
+            ],
+          },
+          lahde: 'Wikipedia',
+        },
+      },
+      nostot: [
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Linna, josta tuli vankila ja sitten kulttuurikeskus',
+          tiedosto: 'View of Ljubljana Castle, 20240502 1812 7787.jpg',
+          teksti: 'Ljubljanan linna kohoaa Linnavuorella vanhankaupungin yläpuolella. '
+              + 'Nykyisen ulkoasunsa se sai 1400-luvun perusteellisessa uudistuksessa, ja '
+              + 'suurin osa rakennuksista on 1500- ja 1600-luvuilta. Linna oli ensin '
+              + 'Krainin herrojen pääpaikka, mutta 1800-luvulla siitä tehtiin muun muassa '
+              + 'vankila, ja vuonna 1905 kaupunki osti sen. Nykyään linnassa järjestetään '
+              + 'konsertteja, näyttelyitä ja häitä. Ylös pääsee metsäpolkuja pitkin tai '
+              + 'vuonna 2006 avatulla köysiradalla.',
+          lyhyt: 'Ljubljanan linna kohoaa metsäisen Linnavuoren laella vanhankaupungin '
+              + 'yläpuolella.',
+          selite: 'Linna on lohikäärmeineen kaupungin vaakunassa, ja sen laelle voi nousta '
+              + 'köysiradalla, joka avattiin joulukuussa 2006.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Ljubljana Castle',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Lohikäärme, joka vartioi siltaa ja vaakunaa',
+          tiedosto: 'Dragon Bridge (Zmajski Most) (11992450283).jpg',
+          teksti: 'Lohikäärmesilta ylittää Ljubljanica-joen vanhankaupungin pohjoispuolella. '
+              + 'Se valmistui 1901 teräsbetonisena Wienin secession-tyylin siltana, ja sen '
+              + 'kaari oli tuolloin Euroopan kolmanneksi suurin. Nimensä silta sai vuonna '
+              + '1919, sitä ennen se kantoi keisari Frans Joosefin nimeä. Sillan kulmissa '
+              + 'seisovat lohikäärmeet ovat kaupungin tunnus, ja lohikäärme on myös '
+              + 'vaakunassa linnan tornin päällä. Alkuperästä kerrotaan monta tarinaa: '
+              + 'yksi liittää sen Jasoniin ja argonautteihin, toinen linnankappelin '
+              + 'suojeluspyhimykseen Yrjöön.',
+          lyhyt: 'Lohikäärmesillan kulmapylväiden päällä seisoo vihreä lohikäärmeveistos.',
+          selite: 'Lohikäärmesillan neljän kulmapylvään päällä seisovat lohikäärmeveistokset '
+              + 'ovat Ljubljanan tunnetuimpia symboleja.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (PD)',
+          wiki: 'Dragon Bridge (Ljubljana)',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Puisto, joka syntyi Illyrian maakuntien aikana',
+          tiedosto: 'Tivoli City Park, Ljubljana (2019).jpg',
+          teksti: 'Tivoli on Ljubljanan suurin puisto, ja se ulottuu keskustan reunalta '
+              + 'Rožnikin rinteille. Sen suunnitteli insinööri Jean Blanchard vuonna 1813, '
+              + 'kun kaupunki oli Ranskan Illyrian maakuntien pääkaupunki. 1920-luvulla '
+              + 'Jože Plečnik suunnitteli puiston halki kulkevan Jakopičin kävelykadun, '
+              + 'joka muodostaa suoran näköakselin Tivolin linnalta Prešernin aukion ja '
+              + 'Kolmoissillan kautta Ljubljanan linnalle. Lammen rannalla toimii '
+              + 'lämpiminä kuukausina ulkokirjasto.',
+          lyhyt: 'Jakopičin kävelykatu johtaa Tivolin puistossa kohti Tivolin linnaa.',
+          selite: 'Jakopičin kävelykatu on puiston pääakseli, ja sen päässä kohoaa Tivolin '
+              + 'linna; kävelykadun sivuilla on ulkonäyttelyn kuvatauluja.',
+          lahde: 'Dedo70, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Tivoli City Park',
+        },
+      ],
+    },
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Roomalaisten Emonasta ranskalaisten Illyriaan ja vuoden 1895 järistykseen: '
+          + 'Ljubljana on uusiutunut monta kertaa, ja jokaisesta kerroksesta näkyy jälki '
+          + 'vielä katukuvassa.',
+      tehtava: {
+        kysymys: 'Kuka Ljubljanan pormestari johti kaupungin jälleenrakennusta vuoden 1895 '
+            + 'maanjäristyksen jälkeen?',
+        vaihtoehdot: [
+          'Primož Trubar',
+          'Ivan Hribar',
+          'Jože Plečnik',
+          'Max Fabiani',
+        ],
+        oikea: 1,
+        fakta: 'Ivan Hribar oli järjestänyt avustustyötä heti järistyksen jälkeen ja toimi '
+            + 'pormestarina vuosina 1896–1910. Hänen kaudellaan Ljubljanan sillat, puistot '
+            + 'ja keskeiset rakennukset saivat nykyisen ilmeensä.',
+      },
+      nostot: [
+        {
+          otsikko: 'Emona: roomalainen kaupunki nykyisen keskustan alla',
+          tiedosto: 'Ljubljana (Iulia Aemona) - Emona Roman Walls (53322646036).jpg',
+          teksti: 'Ennen Ljubljanaa täällä oli Emona. Roomalaiset rakensivat linnavuoren '
+              + 'juurelle sotilasleirin jo ennen ajanlaskun alkua, ja muurein varustettu '
+              + 'kaupunki perustettiin vuoden 14 tienoilla. Siellä asui viidestä kuuteen '
+              + 'tuhatta ihmistä, enimmäkseen kauppiaita ja käsityöläisiä. Katuverkko oli '
+              + 'roomalaiseen tapaan ristikko, jonka keskellä oli tori. Nykykeskustan alta '
+              + 'on löytynyt muurinpätkiä, asuintaloja, patsaita ja mosaiikkeja, ja Jože '
+              + 'Plečnik kunnosti muurin jäänteet puistoksi.',
+          lyhyt: 'Emonan roomalaista kaupunginmuuria on yhä pystyssä Ljubljanan keskustassa.',
+          selite: 'Emonan kivimuuria on säilynyt Ljubljanan keskustassa, ja sen vieressä '
+              + 'olevassa opastaulussa kerrotaan roomalaiskaupungin historiasta.',
+          lahde: 'Jamie Heath, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Emona',
+        },
+        {
+          otsikko: 'Mies, joka kirjoitti sloveniaksi ensimmäisenä painettuna',
+          tiedosto: 'Primož Trubar - Catechismus (cover).jpg',
+          teksti: 'Primož Trubar oli protestanttinen uudistaja, joka saarnasi Ljubljanassa '
+              + '1530-luvulta ja joutui lähtemään kaupungista vuonna 1547. Saksassa hän '
+              + 'kirjoitti vuonna 1550 kaksi ensimmäistä sloveniankielistä kirjaa, '
+              + 'Catechismuksen ja Abecedariumin, jotka painettiin Schwäbisch Hallissa. '
+              + 'Kaikkiaan hän kirjoitti 22 sloveniankielistä kirjaa ja käänsi koko Uuden '
+              + 'testamentin. Kirjakielen pohjaksi hän valitsi Ljubljanan puheen, koska '
+              + 'piti sitä sopivimpana.',
+          lyhyt: 'Trubarin Catechismus painettiin vuonna 1550, ja se on ensimmäinen '
+              + 'sloveniankielinen painettu kirja.',
+          selite: 'Primož Trubarin Catechismuksen nimiösivulla on kirjan nimi saksaksi ja '
+              + 'sloveniaksi sekä kaksi puupiirrosta. Kirja painettiin vuonna 1550.',
+          lahde: 'Primož Trubar, Wikimedia Commons (PD)',
+          wiki: 'Primož Trubar',
+        },
+        {
+          otsikko: 'Ranskalaisten Illyria ja kongressi, jossa Laibach oli maailman keskus',
+          tiedosto: 'Ljubljana, Illyrian Column 01.jpg',
+          teksti: 'Vuonna 1809 Napoleon voitti Itävallan, ja Schönbrunnin rauhassa Itävalta '
+              + 'luovutti Ranskalle Krainin ja muita alueita. Niistä muodostettiin '
+              + 'Illyrian maakunnat, joiden hallinnon pääkaupungiksi tuli Ljubljana, '
+              + 'ranskaksi Laybach. Vuonna 1810 perustettu École centrale pidetään nykyään '
+              + 'Ljubljanan yliopiston perustamisasiakirjana. Itävalta sai alueen takaisin '
+              + '1813–1814, ja vuonna 1821 kaupungissa, silloin Laibachissa, kokoontui '
+              + 'kongressi, joka antoi Itävallalle luvan tukahduttaa kapina Napolissa.',
+          lyhyt: 'Illyrian pylväs Ranskan vallankumouksen aukiolla muistuttaa Napoleonin '
+              + 'ajasta.',
+          selite: 'Illyrian pylväs eli Napoleonin pylväs seisoo Ranskan vallankumouksen '
+              + 'aukiolla. Muistomerkki pystytettiin vuonna 1929 Napoleonin ja Illyrian '
+              + 'kunniaksi.',
+          lahde: 'Ajznponar, Wikimedia Commons (CC0)',
+          wiki: 'Illyrian Provinces',
+        },
+        {
+          otsikko: 'Yksi yö, joka muutti kaupungin ilmeen',
+          tiedosto: '1895 Ljubljana earthquake by Helfer - Kongresni trg (1).jpg',
+          teksti: 'Myöhään illalla 14. huhtikuuta 1895 Ljubljanaa ravisti magnitudiltaan 6,1 '
+              + 'maanjäristys, jonka keskus oli Jančessa noin 16 kilometrin päässä idässä. '
+              + 'Kaupungissa oli silloin noin 31 000 asukasta, ja noin kymmenesosa '
+              + 'rakennuksista vaurioitui tai tuhoutui. Avustustyötä johtanut Ivan Hribar '
+              + 'valittiin pormestariksi ja johti kaupungin laajaa jälleenrakennusta. '
+              + 'Vuosina 1895–1910 rakennettiin 436 uutta taloa, enimmäkseen Wienin '
+              + 'secession tyyliin, ja monet sillat, puistot ja päärakennukset ovat tältä '
+              + 'ajalta.',
+          lyhyt: 'Kongressiaukion talo vuoden 1895 maanjäristyksen jälkeen, seinät tuettu '
+              + 'vinoilla hirsillä.',
+          selite: 'Vuoden 1895 maanjäristys vaurioitti pahasti Kongressiaukion taloja: '
+              + 'ikkunat olivat rikki ja seiniä tuettiin vinoilla hirsillä. Kuvan on '
+              + 'ottanut Wilhelm Helfer järistyksen jälkeen.',
+          lahde: 'Wilhelm Helfer, Wikimedia Commons (PD)',
+          wiki: '1895 Ljubljana earthquake',
+        },
+      ],
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Plečnikin ja Secessionin Ljubljana',
+      johdanto: 'Maanjäristyksen jälkeen Ljubljanan kadut täyttyivät secession-palatseista, ja '
+          + 'arkkitehti Jože Plečnik antoi kaupungille sillat, kirjaston ja kesäteatterin.',
+      tehtava: {
+        kysymys: 'Mikä ljubljanalainen rakennus oli valmistuessaan vuonna 1933 Jugoslavian '
+            + 'kuningaskunnan korkein?',
+        vaihtoehdot: [
+          'Kansallis- ja yliopistokirjasto NUK',
+          'Križanken kesäteatteri',
+          'Kolmoissillan keskisilta',
+          'Nebotičnik-pilvenpiirtäjä',
+        ],
+        oikea: 3,
+        fakta: 'Vladimir Šubicin suunnittelema Nebotičnik oli valmistuessaan Euroopan '
+            + 'yhdeksänneksi korkein pilvenpiirtäjä ja pitkään Euroopan korkein '
+            + 'asuinrakennus.',
+      },
+      nostot: [
+        {
+          otsikko: 'Kolmoissilta, jolle Plečnik lisäsi kaksi siltaa',
+          tiedosto: 'Tromostovje midden.jpg',
+          teksti: 'Tromostovje eli Kolmoissilta koostuu kolmesta sillasta, jotka ylittävät '
+              + 'Ljubljanica-joen ja yhdistävät keskiaikaisen vanhankaupungin Prešerenin '
+              + 'aukioon. Paikalla mainitaan puusilta jo vuonna 1280, ja nykyisen '
+              + 'keskisillan suunnitteli Giovanni Picco vuonna 1842. Kun silta alkoi '
+              + 'ahtaana estää liikennettä, Jože Plečnik suunnitteli sen molemmin puolin '
+              + 'jalankulkusillat, ja työ valmistui keväällä 1932. Vuonna 2021 silta '
+              + 'liitettiin Unescon maailmanperintöluetteloon osana Plečnikin perintöä.',
+          lyhyt: 'Keskisillan kaarella on latinankielinen omistuskirjoitus vuodelta 1842.',
+          selite: 'Keskisillan kaarella on latinankielinen omistuskirjoitus, joka omistaa '
+              + 'sillan arkkiherttua Frans Kaarlelle vuonna 1842.',
+          lahde: 'Marion Golsteijn, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Triple Bridge',
+        },
+        {
+          otsikko: 'Kirjasto, jonka puolesta opiskelijat osoittivat mieltään',
+          tiedosto: 'Jože Plečnik - National and University Library (37211035596).jpg',
+          teksti: 'Kansallis- ja yliopistokirjasto NUK perustettiin vuonna 1774, ja se on '
+              + 'yksi Slovenian tärkeimmistä kulttuurilaitoksista. Nykyisen talon '
+              + 'suunnitteli Jože Plečnik vuosina 1930–1931, ja se rakennettiin 1936–1941. '
+              + 'Belgradin viranomaiset vastustivat hanketta aluksi, mutta opiskelijoiden '
+              + 'sinnikkäät mielenosoitukset auttoivat sen läpi. Julkisivu yhdistää tiiltä '
+              + 'ja kiveä, ja osa kivistä on paikalta löytyneitä arkeologisia jäänteitä. '
+              + 'Päänoven kahvojen päissä on Pegasoksen pää.',
+          lyhyt: 'Kirjaston päänoven kahvan päässä on Pegasoksen pää.',
+          selite: 'Plečnikin suunnitteleman kirjaston oven kahvan päässä on Pegasoksen pää, '
+              + 'ja ovi on vihertyneen kuparin värinen.',
+          lahde: 'Andrew Moore, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'National and University Library of Slovenia',
+        },
+        {
+          otsikko: 'Ritarikunnan luostarista kesäteatteriksi',
+          tiedosto: 'Krizanke, main courtyard 02.jpg',
+          teksti: 'Križanken luostarin rakentamisen uskotaan alkaneen 1200-luvulla '
+              + 'saksalaisen ritarikunnan käyttöön, ja sen barokkikirkko valmistui vuosina '
+              + '1714–1715. Luostari toimi vuoteen 1945 asti, jolloin kompleksi '
+              + 'kansallistettiin. Vuonna 1952 kaupunki pyysi Jože Plečnikia muuttamaan '
+              + 'rappeutuneen luostarin Ljubljanan festivaalin näyttämöksi, ja työt '
+              + 'valmistuivat 1956. Nykyään pihoilla järjestetään klassisen musiikin, '
+              + 'jazzin ja rockin konsertteja, ja pääpihaa koristavat värikkäät '
+              + 'sgraffitot.',
+          lyhyt: 'Križanken pääpihaa reunustavat kaarikäytävät ja maalatut sgraffito-koristeet.',
+          selite: 'Križanken entisen luostarin pääpihaa reunustavat matalat kaarikäytävät, '
+              + 'ja seinät on koristeltu värikkäin sgraffitoin.',
+          lahde: 'Ajznponar, Wikimedia Commons (CC0)',
+          wiki: 'Križanke',
+        },
+        {
+          otsikko: 'Secession-katu ja Jugoslavian korkein talo',
+          tiedosto: '0 Miklošičeva cesta Ljubljana Slovenia.jpg',
+          teksti: 'Vuoden 1895 maanjäristyksen jälkeen osa Ljubljanasta rakennettiin '
+              + 'uudelleen Wienin secession-tyyliin. Miklošičeva-kadun alaosa Prešerenin '
+              + 'aukion päässä täyttyi pääosin secession-palatseista, esimerkiksi Grand '
+              + 'Hotel Union valmistui vuosina 1903–1905. Vladimir Šubicin suunnittelema '
+              + 'Nebotičnik-pilvenpiirtäjä avattiin 21. helmikuuta 1933. Sen 13 kerrosta '
+              + 'ja 70,35 metriä tekivät siitä Jugoslavian kuningaskunnan korkeimman '
+              + 'rakennuksen, ja tyyliltään se yhdistää uusklassismia ja art decoa.',
+          lyhyt: 'Miklošičeva-katua reunustavat värikkäät 1900-luvun alun palatsit.',
+          selite: 'Miklošičeva-katua reunustavat värikkäät ja koristeelliset palatsit, ja '
+              + 'katu yhdistää Prešerenin aukion rautatieaseman seutuun.',
+          lahde: 'Herbert wie, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Nebotičnik',
+        },
+      ],
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka ja juoma',
+      johdanto: 'Krainin makkara, pähkinäkääretorttu, harmaa mehiläinen ja hunaja: Slovenian '
+          + 'ruoka on tarkasti vartioitua perinnettä. Ljubljanassa sitä ostetaan '
+          + 'jokirannan torilta, jonka on suunnitellut Plečnik.',
+      tehtava: {
+        kysymys: 'Minkä EU:n suojamerkinnän Slovenia sai Kranjska klobasa -makkaralle '
+            + 'tammikuussa 2015?',
+        vaihtoehdot: [
+          'Aito perinteinen ruokatuote (TSG)',
+          'Suojattu alkuperänimitys (PDO)',
+          'Suojattu maantieteellinen merkintä (PGI)',
+          'Luonnonmukaisen tuotannon merkintä',
+        ],
+        oikea: 2,
+        fakta: 'Makkaralle myönnettiin PGI-merkintä, vaikka Itävalta, Kroatia ja Saksa '
+            + 'vastustivat. TSG-merkintä on sen sijaan potica-leivoksella, joka '
+            + 'rekisteröitiin vuonna 2021.',
+      },
+      nostot: [
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Makkara, jonka ainekset on säädetty tarkasti',
+          tiedosto: 'Kranjska klobasa.jpg',
+          teksti: 'Kranjska klobasa eli Carniolan makkara on sloveenialainen esikeitetty '
+              + 'makkara, joka muistuttaa puolalaista kielbasaa. Nimi tulee Krainin '
+              + '(sloveeniksi Kranjska) historiallisesta herttuakunnasta, ja '
+              + 'sloveeninkielinen nimi mainitaan ensi kerran F. Kalinšekin keittokirjassa '
+              + '1912. Makkarassa on vähintään 75–80 % sianlihaa ja enintään 20 % pekonia, '
+              + 'ja mausteiksi sallitaan vain merisuola, valkosipulia, salpietaria ja '
+              + 'mustapippuria. Makkarat liitetään pareiksi puutikulla ja '
+              + 'kuumasavustetaan. Tammikuussa 2015 Slovenia sai sille EU:n suojatun '
+              + 'maantieteellisen merkinnän (PGI), vaikka Itävalta, Kroatia ja Saksa '
+              + 'vastustivat.',
+          lyhyt: 'Grillattu kranjska klobasa tarjoillaan pareina lautasella leivän ja '
+              + 'lisukkeiden kanssa.',
+          selite: 'Grillatut makkarat on liitetty pareiksi puutikulla, ja lautasella on '
+              + 'lisäksi tomaattia, salaattia ja valkoista leipää.',
+          lahde: 'J.O., Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Carniolan sausage',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Kääretorttu, joka leivotaan omassa vuoassaan',
+          tiedosto: 'Potica (9501040588).jpg',
+          teksti: 'Potica on perinteinen slovenialainen juhlaleivos: ohueksi kaulitusta '
+              + 'hiivataikinasta ja täytteestä tehdään rulla, jonka viipaleessa näkyy '
+              + 'spiraali. Yleisin täyte on saksanpähkinä, mutta käytetään myös rusinoita, '
+              + 'rakuunaa, tuorejuustoa, hasselpähkinää ja unikonsiemeniä. Aito slovenska '
+              + 'potica leivotaan potičnik-vuoassa, jonka keskellä on kartiomainen piippu, '
+              + 'ja valmiissa leivoksessa pitää olla vähintään kolme tai neljä taikina- ja '
+              + 'täytekierrosta. Varhaisin kirjallinen maininta on Primož Trubarilta '
+              + '1500-luvulta, ja EU on rekisteröinyt potican aidoksi perinteiseksi '
+              + 'ruokatuotteeksi (TSG) vuodesta 2021.',
+          lyhyt: 'Potica-viipaleessa näkyy taikinan ja pähkinätäytteen spiraali.',
+          selite: 'Viipaleen poikkileikkauksessa taikina ja pähkinätäyte kiertyvät '
+              + 'spiraaliksi, ja täytteen seassa on rusinoita.',
+          lahde: 'Michael R Perry, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Potica',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Harmaa mehiläinen Krainista',
+          tiedosto: 'Apis mellifera carnica worker hive entrance 2.jpg',
+          teksti: 'Kranjska čebela eli Carniolan mehiläinen (Apis mellifera carnica) on '
+              + 'läntisen mehiläisen alalaji, jonka kotiseutu on Slovenia ja jonka nimi '
+              + 'viittaa Krainin alueeseen. Sen ruskeanharmaan värin vuoksi sitä kutsutaan '
+              + 'myös harmaaksi mehiläiseksi. Se on hyvin lempeä, joten sitä voi pitää '
+              + 'asutuksen lähellä, ja se on maailman toiseksi suosituin tarhamehiläinen '
+              + 'italianmehiläisen jälkeen. Kranjalainen Anton Janša (1734–1773) nousi '
+              + 'Itävallan ensimmäiseksi kuninkaalliseksi mehiläishoidon opettajaksi, ja '
+              + 'EU:n suojaamiin ruokatuotteisiin kuuluu slovenialainen hunaja.',
+          lyhyt: 'Carniolan mehiläisen työläinen on ruskeanharmaa, ja sen takaruumiissa on '
+              + 'vaaleampia raitoja.',
+          selite: 'Lähikuvassa Carniolan mehiläisen työläinen, jonka takaruumista koristavat '
+              + 'ruskeat ja vaaleammat raidat.',
+          lahde: 'Richard Bartz, Wikimedia Commons (CC BY-SA 2.5)',
+          wiki: 'Carniolan honey bee',
+        },
+        {
+          tyyppi: 'kuva',
+          otsikko: 'Tori Plečnikin kaarien alla',
+          tiedosto: 'Fruit stalls at Ljubljana Central Market 01.JPG',
+          teksti: 'Ljubljanan keskustori (Osrednja ljubljanska tržnica) sijaitsee '
+              + 'Ljubljanica-joen oikealla rannalla Kolmoissillan ja Lohikäärmesillan '
+              + 'välissä. Rakennuksen suunnitteli Jože Plečnik: kaksikerroksinen halli '
+              + 'seuraa joen kaarta, jokipuolella on suuret puolipyöreät ikkunat ja '
+              + 'katupuolella pylväskäytävä. Tori on auki päivittäin sunnuntaita lukuun '
+              + 'ottamatta. Alakerrassa myydään kalaa ja kuivattuja hedelmiä, molemmissa '
+              + 'kerroksissa leipomo-, maito- ja lihakojuja, ja pylväskäytävän alla '
+              + 'yrttejä, mausteita ja käsitöitä. Vuodesta 2021 tori kuuluu Plečnikin '
+              + 'perintönä UNESCOn maailmanperintöluetteloon.',
+          lyhyt: 'Keskustorin hedelmäkojussa on granaattiomenoita, ananaksia, avokadoja, '
+              + 'appelsiineja ja kastanjoita.',
+          selite: 'Hedelmäkojussa on esillä granaattiomenoita, ananaksia, avokadoja, '
+              + 'meloneja, appelsiineja ja kastanjoita.',
+          lahde: 'domdomegg, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Ljubljana Central Market',
+        },
+      ],
+    },
+  ],
+
+  /*
    * BERGEN on Euroopan laudan uusi kaupunkilehti (23.8.2026).
    * Aineisto: docs/mantereet-tyoaineisto/faktapohja-bergen.md ja sen
    * riippumaton tarkistus tarkistus-bergen.md — TARKISTUKSEN KORJAUKSET
