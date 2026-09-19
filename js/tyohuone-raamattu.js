@@ -9146,6 +9146,18 @@ export const RAAMATTU = {
           + 'kortti kirjoittaa esikirjoitetun vastauksen ja lahteen omaan kuplaansa '
           + '(lisanosto striimaa polloUlkoinenKysymys-reitilla kuplaan), paneelia ei avata; '
           + 'savuke-ihmisen-pulukysymykset lohko 7, 12/12. Julkaistaan v1964.',
+        'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
+          + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
+          + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
+          + 'tsekata erityyppiset nostot poistoina lapi, etta ovat linjassa keskenaan ja '
+          + 'muuten toimivia"): Sonnet 1 (QA, simulaattori) toimittaa Fablelle '
+          + 'kuvakaappaussarjan yksi nosto per tyyppi (vuori, saari, jarvi, joki, meri, '
+          + 'historia, kulttuuri, ruoka, kauppa, tekniikka, merenkulku) eri maista: pieni '
+          + 'kortti, LISAA-tila, visalaatikko, kuvan suurennos; Fable katsoo kuvat '
+          + 'paatoimittajana ja kirjaa poikkeamat (tyyppikuvake, nappi, kuvateksti, lahde, '
+          + 'visa, pulu, suurennos) yhteen listaan Opus- ja Sonnet-erille. Toistetaan '
+          + 'jokaisen sisaltoversion jalkeen otoksella. Tila: kierros 13 tilattu Sonnet '
+          + '1:lta klo 20.50 (v1964 tuotannossa).',
         'NOSTOVISAN ULKOASU JA VAIHTOEHTOJEN KIELI (omistaja 19.9.2026 klo 20.41 Suomen '
           + 'aikaa, Rocamadour-noston visalaatikon laitekuva v1963, sanatarkasti: "Tama '
           + 'visuaalisesti outo"): kuvassa LUKIJAN KYSYMYS -laatikko on raskas - suuri '
