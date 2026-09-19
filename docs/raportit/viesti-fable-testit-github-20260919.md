@@ -80,3 +80,9 @@ työnkuluille). Ubuntu-ajon todentaa PR.
   Savukkeet-työnkulussa ensimmäisellä pelikoodia koskevalla PR:llä;
   tämä PR laukaisee sen, koska savukkeet.yml ja tools/savukkeet/
   muuttuvat).
+
+## Päivitys 19.9.2026 klo 15.37 Suomen aikaa (Fablen päätös)
+
+`savukkeet.yml` `SAVUKE_RINNAKKAIN` = **6** (PR-portti arviolta ~8,5 min,
+simulaatio 513 s); `aja-sarja.mjs`:n paikallinen oletus pysyy **4**:ssä
+(agenttien ja käsiajojen rinnalla). Kommentit päivitetty vastaamaan.

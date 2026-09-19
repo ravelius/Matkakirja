@@ -53,7 +53,7 @@ const sarja = process.argv[2] || 'julkaisu';
 const tuloskansio = process.argv[3] || join('/tmp', 'matkakirja-savukkeet', 'paikallinen');
 // Oletus 4 (omistaja 19.9.2026 klo 15.30 Suomen aikaa): kuormakeskiarvo oli
 // 96, kun Macilla ajoi rinnakkain kuusi sarjan Chromiumia ja agenttien omat
-// selaimet; kuormassa kellovartiot häilyivät. Sama arvo savukkeet.yml:ssä.
+// selaimet; kuormassa kellovartiot häilyivät. CI (savukkeet.yml) ajaa 6.
 const rinnakkain = Math.max(1, Number(process.env.SAVUKE_RINNAKKAIN ?? 4));
 const aikakattoMs = Number(process.env.SAVUKE_AIKAKATTO_MS ?? 10 * 60 * 1000);
 
