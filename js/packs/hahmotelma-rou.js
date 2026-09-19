@@ -329,16 +329,14 @@ export const HAHMOTELMA_ROU = [
     visa: {
       kysymys: 'Miksi Bercan mutatulivuorten muta on kylmää?',
       vaihtoehdot: [
-        'Se nousee maankuoren kerroksista, ei vaipasta',
-        'Se sekoittuu jäiseen pohjaveteen ennen purkausta',
-        'Suolapitoisuus laskee sen lämpötilaa pinnalla',
-        'Kuivuva kuori jäähdyttää sen heti maan pinnalla',
+        'Se tulee maankuoren kerroksista',
+        'Se sekoittuu pohjaveteen',
+        'Suola alentaa sen lämpötilaa',
+        'Kuori jäähdyttää sen nopeasti',
       ],
       oikea: 0,
       fakta: 'Alueelle pääsee vierailijana vain kuivina päivinä, koska kuivunut mutakuori ei '
-        + 'ole täysin kiinteä ja kävely märällä säällä vahingoittaisi ainutlaatuista '
-        + 'ympäristöä. Suolaisessa maaperässä viihtyy joitakin harvinaisia kasveja, '
-        + 'esimerkiksi Nitraria schoberi.',
+        + 'ole täysin kiinteä.',
     },
   },
   {
@@ -412,9 +410,8 @@ export const HAHMOTELMA_ROU = [
         '50 metriä',
       ],
       oikea: 3,
-      fakta: 'Luola on noin 720 metriä pitkä ja sijaitsee noin 1 150 metrin korkeudessa. Vain '
-        + 'osa siitä on avoinna matkailijoille, ja muut salit on varattu tieteelliselle '
-        + 'tutkimukselle.',
+      fakta: 'Scărișoaran jääluola on noin 720 metriä pitkä ja sijaitsee noin 1 150 metrin '
+        + 'korkeudessa.',
     },
   },
   {
@@ -667,8 +664,8 @@ export const HAHMOTELMA_ROU = [
     lahde: 'en-Wikipedia "Biertan", johdanto-osa ja osiot "History" ja "Demographics" '
       + '(tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Minä vuosina Biertanin linnoitettu kirkko oli Transilvanian '
-        + 'evankelis-luterilaisen piispan istuin?',
+      kysymys: 'Minä vuosina Biertanin linnoitettu kirkko oli Transilvanian luterilaisen piispan '
+        + 'istuin?',
       vaihtoehdot: [
         '1283–1510',
         '1572–1867',
@@ -676,9 +673,8 @@ export const HAHMOTELMA_ROU = [
         '1510–1867',
       ],
       oikea: 1,
-      fakta: 'Biertanin kunta koostuu kolmesta kylästä, ja jokaisessa niistä on oma '
-        + 'linnoitettu kirkkonsa. Kunnan läpi kulkee myös Via Transilvanica -pitkän matkan '
-        + 'vaellusreitti.',
+      fakta: 'Biertanin kunta koostuu kolmesta kylästä, joissa jokaisessa on oma linnoitettu '
+        + 'kirkkonsa.',
     },
   },
   {
@@ -881,8 +877,7 @@ export const HAHMOTELMA_ROU = [
       ],
       oikea: 3,
       fakta: 'Kaupungin nimi Târgoviște juontuu vanhasta slaavilaisesta sanasta, joka '
-        + 'tarkoittaa markkinapaikkaa. Kaupungin rautatieasema vihittiin käyttöön 2. '
-        + 'tammikuuta 1884.',
+        + 'tarkoittaa markkinapaikkaa.',
     },
   },
   {
@@ -1198,16 +1193,16 @@ export const HAHMOTELMA_ROU = [
     lahde: 'en-Wikipedia "Sibiu", johdanto-osa ja osiot "History" ja "Museums and parks" '
       + '(tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Millä lempinimellä Sibiuta kutsutaan vanhojen talojen kattoikkunoiden vuoksi?',
+      kysymys: 'Mikä on Sibiun lempinimi vanhojen talojen kattoikkunoiden takia?',
       vaihtoehdot: [
-        'Kaupunki, jolla on kellot',
-        'Kaupunki, jolla on torni',
-        'Kaupunki, jolla on silmät',
-        'Kaupunki, jolla on seitsemän porttia',
+        'Kellojen kaupunki',
+        'Tornien kaupunki',
+        'Silmien kaupunki',
+        'Seitsemän portin kaupunki',
       ],
       oikea: 2,
-      fakta: 'Sibiun joulumarkkinat ovat Romanian ensimmäiset. Ne järjestettiin ensimmäisen '
-        + 'kerran vuonna 2007 Wienin joulumarkkinoiden mallin mukaan.',
+      fakta: 'Sibiun joulumarkkinat ovat Romanian ensimmäiset, ja ne järjestettiin ensimmäisen '
+        + 'kerran vuonna 2007.',
     },
   },
   {
@@ -1410,15 +1405,13 @@ export const HAHMOTELMA_ROU = [
     visa: {
       kysymys: 'Kuka perusti Horezun luostarin vuonna 1690?',
       vaihtoehdot: [
-        'Vlad Seivästäjä',
-        'Tapani Suuri',
-        'Constantin Brâncoveanu',
-        'Mikael Urhea',
+        'Ruhtinas Constantin Brâncoveanu',
+        'Ruhtinas Vlad Seivästäjä',
+        'Ruhtinas Tapani Suuri',
+        'Ruhtinas Mikael Urhea',
       ],
-      oikea: 2,
-      fakta: 'Luostarikokonaisuuteen kuuluu pääkirkon lisäksi kolme muuta pyhäkköä, muun '
-        + 'muassa ruhtinaan puolison Marian rakennuttama sairaalakirkko vuodelta 1696. '
-        + 'Työn valvojana toimi aluksi ruhtinaan serkku Pârvu Cantacuzino.',
+      oikea: 0,
+      fakta: 'Luostarikokonaisuuteen kuuluu pääkirkon lisäksi kolme muuta pyhäkköä.',
     },
   },
   {
@@ -1548,7 +1541,7 @@ export const HAHMOTELMA_ROU = [
     lahde: 'en-Wikipedia "Cotnari", johdanto-osa ja osiot "History" ja "Climate" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Minkä viinilajikkeen nimeen Cotnarin kylä on tunnettu?',
+      kysymys: 'Mistä viinilajikkeesta Cotnarin kylä tunnetaan?',
       vaihtoehdot: [
         'Fetească neagră',
         'Tămâioasă românească',
@@ -1556,9 +1549,8 @@ export const HAHMOTELMA_ROU = [
         'Grasă de Cotnari',
       ],
       oikea: 3,
-      fakta: 'Talvet alueella ovat ankaria, ja pakkasvaara pakotti viininviljelijät '
-        + 'peittämään köynnökset talveksi mullalla. Kasvukausi kestää noin 190 päivää '
-        + 'huhtikuun alusta syyskuun loppuun.',
+      fakta: 'Talvet Cotnarin alueella ovat ankaria, ja pakkasvaara pakotti viininviljelijät '
+        + 'peittämään köynnökset talveksi mullalla.',
     },
   },
   {
@@ -1896,12 +1888,11 @@ export const HAHMOTELMA_ROU = [
       vaihtoehdot: [
         'Barbu Știrbei',
         'Matei Basarab',
-        'Carol I',
         'Mihail Cantacuzino',
+        'Kuningas Carol I',
       ],
-      oikea: 3,
-      fakta: 'Vuonna 1713 Cantacuzino lahjoitti sekä Slănicin tilansa että suolakaivokset '
-        + 'Bukarestin Colțea-luostarille.',
+      oikea: 2,
+      fakta: 'Vuonna 1713 tila ja suolakaivokset lahjoitettiin Bukarestin Colțea-luostarille.',
     },
   },
   {

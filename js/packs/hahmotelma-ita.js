@@ -262,10 +262,10 @@ export const HAHMOTELMA_ITA = [
     visa: {
       kysymys: 'Mistä Gardajärven nykyinen nimi on peräisin?',
       vaihtoehdot: [
-        'Roomalaisten palvomasta järvijumalasta Benacuksesta',
-        'Kreikkalaisesta sanasta, joka tarkoittaa vettä',
-        'Kelttiläisestä sanasta, joka tarkoittaa sinistä',
-        'Germaanisesta sanasta, joka tarkoittaa vartiopaikkaa',
+        'Roomalaisen jumalan Benacuksen nimestä',
+        'Kreikkalaisesta sanasta \'vesi\'',
+        'Kelttiläisestä sanasta \'sininen\'',
+        'Germaanien sanasta \'vartiopaikka\'',
       ],
       oikea: 3,
       fakta: 'Gardajärven rantaa jakavat keskenään Brescian, Veronan ja Trenton maakunnat.',
@@ -321,10 +321,10 @@ export const HAHMOTELMA_ITA = [
     visa: {
       kysymys: 'Miksi Strombolin saarta kutsutaan Välimeren majakaksi?',
       vaihtoehdot: [
-        'Sen huipulla palaa vanha majakka merenkulkijoille',
-        'Tulivuori purkautuu lähes jatkuvasti lievin purkauksin',
-        'Saari nousee yksinään keskelle avointa Välimerta',
-        'Sen rinteiltä hohtaa yöllä kirkkaana lasimaista kiveä',
+        'Huipulla palava majakka',
+        'Lähes jatkuvat purkaukset',
+        'Yksinäinen sijainti avomerellä',
+        'Yöllä hohtava lasimainen kivi',
       ],
       oikea: 1,
       fakta: 'Tulivuoren luoteisrinteellä on hevosenkengän muotoinen Sciara del Fuoco, jonka nimi '
@@ -380,10 +380,10 @@ export const HAHMOTELMA_ITA = [
     visa: {
       kysymys: 'Mistä Elban saari oli tunnettu jo antiikin aikana?',
       vaihtoehdot: [
-        'Suolanvalmistuksesta ja suolan viennistä',
-        'Purppuranvärin valmistuksesta ja kaupasta',
-        'Rautavaroistaan ja arvostetuista kaivoksistaan',
-        'Marmorilouhoksistaan ja kuvanveistäjistään',
+        'Suolasta ja suolakaupasta',
+        'Purppuranväristä ja kaupasta',
+        'Raudasta ja kaivoksistaan',
+        'Marmorista ja kuvanveistäjistä',
       ],
       oikea: 2,
       fakta: 'Napoleon karkotettiin Elballe ensimmäisen kerran vuosiksi 1814–1815.',
@@ -617,10 +617,10 @@ export const HAHMOTELMA_ITA = [
       kysymys: 'Mikä seikka viittaa siihen, ettei Castel del Monte ehkä ollut tavallinen '
         + 'puolustuslinna?',
       vaihtoehdot: [
-        'Siinä ei ole vallihautaa eikä nostosiltaa',
-        'Sen muurit rakennettiin tavallista ohuemmiksi',
-        'Se rakennettiin keskelle tasaista peltoa',
-        'Sen ainoa torni lisättiin vasta myöhemmin',
+        'Vallihaudan ja sillan puute',
+        'Tavallista ohuemmat muurit',
+        'Sijainti tasaisella pellolla',
+        'Myöhemmin lisätty torni',
       ],
       oikea: 0,
       fakta: 'UNESCO merkitsi Castel del Monten maailmanperintökohteeksi vuonna 1996.',
@@ -751,7 +751,7 @@ export const HAHMOTELMA_ITA = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-chianti-1e831c8a.jpg',
       lyhyt: 'Näkymä Castellina in Chiantin ympäristön viinitarhoihin ja kumpuilevaan Chiantin maisemaan.',
-      selite: 'Kuvassa näkyy Chiantin viinialueen kumpuilevaa maastoa Castellina in Chiantin seudulla: viiniköynnösrivejä rinteillä, sypressejä ja kivinen maalaistalo. Kuvan otsikko paikantaa sen Castellina in Chiantiin.',
+      selite: 'Kuvassa näkyy Chiantin viinialueen kumpuilevaa maastoa Castellina in Chiantin seudulla: viiniköynnösrivejä rinteillä, sypressejä ja kivinen maalaistalo.',
       lahde: 'Valokuva: Rowan Heuvel, Wikimedia Commons (CC0).',
       tekija: 'Rowan Heuvel',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Castellina_In_Chianti_(Unsplash).jpg',
@@ -762,7 +762,7 @@ export const HAHMOTELMA_ITA = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-chianti-edfddf7f.jpg',
         lyhyt: 'Syksyisen Chianti Classicon viinitarhat lähellä Radda in Chiantia.',
-        selite: 'Syksyn värittämät viiniköynnösrivit etualalla ja kumpuilevat Chianti Classicon rinteet taustalla. Kuvaus paikantaa viinitarhat Radda in Chiantin lähelle.',
+        selite: 'Syksyn värittämät viiniköynnösrivit etualalla ja kumpuilevat Chianti Classicon rinteet taustalla. Viinitarhat ovat Radda in Chiantin lähellä.',
         lahde: 'Valokuva: Repuli, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Repuli',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Autunno_in_Chianti_Toscana.jpg',
@@ -801,7 +801,7 @@ export const HAHMOTELMA_ITA = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-val-d-orcia-f0f64013.jpg',
       lyhyt: 'Sypressirivi kulkee kumpuilevan Val d\'Orcian pellon halki.',
-      selite: 'Pitkä sypressirivi nousee peltoaukean poikki Val d\'Orcian maisemassa Toscanassa. Kuvan kuvaus viittaa Val d\'Orcian sypressien viehätykseen.',
+      selite: 'Pitkä sypressirivi nousee peltoaukean poikki Val d\'Orcian maisemassa Toscanassa.',
       lahde: 'Valokuva: Iaia quark, Wikimedia Commons (CC0).',
       tekija: 'Iaia quark',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Continua_-_cypresses_(no_watermark).jpg',
@@ -860,7 +860,7 @@ export const HAHMOTELMA_ITA = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-alba-bab01ae9.jpg',
         lyhyt: 'Albalaisia valkoisia tryffeleitä puisessa laatikossa.',
-        selite: 'Kuvassa on joukko valkoisia tryffeleitä (Alban tryffeleitä) harmaan kankaan päällä puisessa laatikossa. Kuvan otsikon mukaan tryffelit ovat Albasta.',
+        selite: 'Kuvassa on joukko Alban valkoisia tryffeleitä harmaan kankaan päällä puisessa laatikossa.',
         lahde: 'Valokuva: Kent Wang, Wikimedia Commons (CC BY-SA 2.0).',
         tekija: 'Kent Wang',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:White_truffles_from_Alba.jpg',
@@ -910,7 +910,7 @@ export const HAHMOTELMA_ITA = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-valdobbiadene-b065e0f0.jpg',
       lyhyt: 'Prosecco-viinitarhojen rinteitä ja kylän kirkontorni Valdobbiadenen kukkuloilla.',
-      selite: 'Kuvassa Conegliano Valdobbiadene -proseccon viinitarhoja San Pietro di Barbozzan kohdalla Valdobbiadenessa, Venetossa. Kuvausteksti nimeää alueen Prosecco Superiore DOCG -tuotantoalueeksi.',
+      selite: 'Kuvassa Conegliano Valdobbiadene -proseccon viinitarhoja San Pietro di Barbozzan kohdalla Valdobbiadenessa, Venetossa. Alue kuuluu Prosecco Superiore DOCG -tuotantoalueeseen.',
       lahde: 'Valokuva: Patafisik, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Patafisik',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Tra_le_vigne_di_Valdobbiadene_-_wikiraduno_Alle_colline_del_prosecco_abc5.jpg',
@@ -1111,10 +1111,10 @@ export const HAHMOTELMA_ITA = [
     visa: {
       kysymys: 'Mihin tarkoitukseen roomalaiset perustivat Cremonan?',
       vaihtoehdot: [
-        'Kauppasatamaksi Adrianmeren rannalle',
-        'Marmorilouhosten työläisten asuinkyläksi',
-        'Keisarin kesäasuinpaikaksi Po-tasangolle',
-        'Ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle',
+        'Kauppasatama Adrianmeren rannalla',
+        'Marmorilouhosten työläisten kylä',
+        'Keisarin kesäasuinpaikka',
+        'Po-joen pohjoispuolen tukikohta',
       ],
       oikea: 3,
       fakta: 'Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja '
@@ -1126,7 +1126,7 @@ export const HAHMOTELMA_ITA = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-portofino-bc38ab85.jpg',
       lyhyt: 'Portofinon satamalahti ja värikkäät rantatalot pohjoiseen katsottuna.',
-      selite: 'Kuvassa näkyy Portofinon rantaan rakennettu värikäs taloriviä, satamalahti veneineen ja metsäinen rinne taustalla. Kuvaus mukaan näkymä on Portofinosta pohjoiseen.',
+      selite: 'Kuvassa näkyy Portofinon rantaan rakennettu värikäs taloriviä, satamalahti veneineen ja metsäinen rinne taustalla. Näkymä on Portofinosta pohjoiseen.',
       lahde: 'Valokuva: Luka Peternel, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Luka Peternel',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Portofino-2017-Luka-Peternel.jpg',
@@ -1221,10 +1221,10 @@ export const HAHMOTELMA_ITA = [
     visa: {
       kysymys: 'Mihin Carraran motto Fortitudo mea in rota eli voimani on pyörässä viittaa?',
       vaihtoehdot: [
-        'Kaupungin muinaisiin ratsuväkijoukkoihin',
-        'Vesipyöriin, jotka pyörittivät viljamyllyjä',
-        'Marmorin kuljetukseen roomalaisajoista lähtien',
-        'Kaupungin puolustukseen keskiajan piirityksissä',
+        'Muinaisiin ratsuväkijoukkoihin',
+        'Viljamyllyjen vesipyöriin',
+        'Marmorin kuljetuksen historiaan',
+        'Keskiajan piiritysten puolustukseen',
       ],
       oikea: 2,
       fakta: '1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden '
@@ -1463,7 +1463,7 @@ export const HAHMOTELMA_ITA = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/ita-nosto-canossa-0bfb5305.jpg',
         lyhyt: 'Keskiaikainen kirjaminiatyyri: Henrik IV polvistuu apotti Hugon ja Matildan edessä.',
-        selite: 'Kuvassa Henrik IV polvistuu Clunyn apotti Hugon ja Toscanan Matildan edessä. Latinankielinen kuvateksti kertoo kuninkaan pyytävän apottia ja Matildaa esirukoilijoiksi; kohtaus liittyy Canossan tapahtumiin vuonna 1077.',
+        selite: 'Kuvassa Henrik IV polvistuu Clunyn apotti Hugon ja Toscanan Matildan edessä ja pyytää heitä esirukoilijoikseen; kohtaus liittyy Canossan tapahtumiin vuonna 1077.',
         lahde: 'Kirjaminiatyyri: Donizo, Wikimedia Commons (public domain).',
         tekija: 'Donizo',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mathilde_und_Hugo_von_Cluny_als_Fürsprecher_Heinrichs_IV..jpg',
@@ -1617,10 +1617,10 @@ export const HAHMOTELMA_ITA = [
       kysymys: 'Mikä Solferinon taistelun jälkeen kirjoitettu teos johti Punaisen Ristin '
         + 'perustamiseen?',
       vaihtoehdot: [
-        'Itävallan ja Ranskan yhteinen rauhansopimus',
-        'Napoleon III:n julistus haavoittuneiden suojelusta',
-        'Sveitsin hallituksen laatima sotilassairaalan ohjesääntö',
-        'Henry Dunantin kirja Muisto Solferinosta',
+        'Itävallan ja Ranskan rauhansopimus',
+        'Napoleon III:n suojelujulistus',
+        'Sveitsin sotilassairaalan ohjesääntö',
+        'Henry Dunantin Muisto Solferinosta',
       ],
       oikea: 3,
       fakta: 'Solferinon taistelu oli viimeinen suuri taistelu, jossa kaikki armeijat olivat '

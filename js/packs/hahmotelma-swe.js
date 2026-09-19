@@ -262,18 +262,17 @@ export const HAHMOTELMA_SWE = [
     lahde: 'en-Wikipedia "Lake Vättern", johdanto-osa ja osio "Geography" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Miksi Vättern sisältää puolet Vänernin vesimäärästä, vaikka sen pinta-ala on '
-        + 'vain kolmannes?',
+      kysymys: 'Miksi Vätternissä on puolet Vänernin vedestä, vaikka pinta-ala on vain '
+        + 'kolmannes?',
       vaihtoehdot: [
-        'Koska sen vesi haihtuu hitaammin',
-        'Koska siihen laskee enemmän jokia',
-        'Koska se on paljon Vänerniä syvempi',
-        'Koska sen ranta on paljon pidempi',
+        'Se on paljon syvempi',
+        'Sen vesi haihtuu hitaammin',
+        'Siihen laskee enemmän jokia',
+        'Sen rannat ovat pidemmät',
       ],
-      oikea: 2,
+      oikea: 0,
       fakta: 'Vättern tunnetaan Vätternrundan-pyöräilytapahtumasta, jossa noin 20 000 '
-        + 'osallistujaa ajaa 300 kilometrin lenkin järven ympäri. Järvessä elää myös '
-        + 'jääkaudelta peräisin oleva Vätternin nieriäkanta.',
+        + 'osallistujaa ajaa 300 kilometrin lenkin järven ympäri.',
     },
   },
   {
@@ -346,9 +345,7 @@ export const HAHMOTELMA_SWE = [
         'Graniittivuoristo',
       ],
       oikea: 0,
-      fakta: 'Saaren mukaan on nimetty kambrikautinen trilobiitti Eccaparadoxides oelandicus. '
-        + 'Ölandin itärannikko on myös kansainvälisesti tärkeä lintualue, jolla pesii muun '
-        + 'muassa merikotkia.',
+      fakta: 'Saaren mukaan on nimetty kambrikautinen trilobiitti Eccaparadoxides oelandicus.',
     },
   },
   {
@@ -470,18 +467,16 @@ export const HAHMOTELMA_SWE = [
     lahde: 'en-Wikipedia "High Coast", johdanto-osa ja osio "Geology" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Mikä ilmiö on nostanut Höga kustenin rannikkoa lähes 300 metriä jääkauden '
-        + 'jälkeen?',
+      kysymys: 'Mikä ilmiö on nostanut Höga kustenin rannikkoa lähes 300 metriä?',
       vaihtoehdot: [
-        'Vuoristojen hidas poimuttuminen',
-        'Tulivuorten toistuvat purkaukset',
-        'Merenpinnan pitkäaikainen lasku',
-        'Jääkauden jälkeinen maankohoaminen',
+        'Vuoristojen poimuttuminen',
+        'Tulivuorten purkaukset',
+        'Suuren meteoriitin törmäys',
+        'Maankohoaminen jääkauden jälkeen',
       ],
       oikea: 3,
       fakta: 'Höga kusten -vaellusreitti kulkee noin 135 kilometrin matkan '
-        + 'maailmanperintöalueen halki Högakustenbron-sillalta Örnsköldsvikiin. Alueella '
-        + 'elää myös ruskeakarhuja, ilveksiä ja hirviä.',
+        + 'maailmanperintöalueen halki.',
     },
   },
   {
@@ -743,14 +738,14 @@ export const HAHMOTELMA_SWE = [
     visa: {
       kysymys: 'Miksi Sigtunan merkitys alkoi vähetä 1200-luvulla?',
       vaihtoehdot: [
-        'Suuri tulipalo tuhosi kaupungin kokonaan',
-        'Kuninkaat muuttivat pois Ruotsin rajamaille',
-        'Maankohoaminen vaikeutti laivaliikennettä',
-        'Kauppiaat siirtyivät kalastamaan Atlantille',
+        'Tuhoisa tulipalo kaupungissa',
+        'Kuninkaat muuttivat muualle',
+        'Maankohoaminen haittasi laivoja',
+        'Kauppiaat siirtyivät kalastukseen',
       ],
       oikea: 2,
-      fakta: 'Kaupungin vaakuna voidaan jäljittää vanhimpaan tunnettuun sinettiin vuodelta '
-        + '1311. Nykyään Tukholman Arlandan lentokenttä on vain noin 10 kilometrin päässä.',
+      fakta: 'Sigtunan vaakuna voidaan jäljittää vanhimpaan tunnettuun sinettiin vuodelta '
+        + '1311.',
     },
   },
   {
@@ -1283,9 +1278,7 @@ export const HAHMOTELMA_SWE = [
         'Joen mutka',
       ],
       oikea: 3,
-      fakta: 'Jokkmokk on talvilämpötiloissa Ruotsin kylmin kuntakeskus: se sijaitsee 250 '
-        + 'metrin korkeudessa vuoristojen juurella, ja öisin ilma jäähtyy lämpötilan '
-        + 'inversion vuoksi. Kesäisin paikalla on yötön yö.',
+      fakta: 'Jokkmokk on talvilämpötiloissa Ruotsin kylmin kuntakeskus.',
     },
   },
   {
@@ -1360,9 +1353,7 @@ export const HAHMOTELMA_SWE = [
         '1913–1914',
       ],
       oikea: 2,
-      fakta: 'Kirkon graniittinen kastemalja on paljon kirkkoa vanhempi, noin vuodelta 1200. '
-        + 'Saarnatuoli on tehty vuonna 1713, ja alttaritaulun maalasi Sven Alfred Thörne '
-        + 'vuonna 1877.',
+      fakta: 'Kirkon graniittinen kastemalja on paljon kirkkoa vanhempi, noin vuodelta 1200.',
     },
   },
   {
@@ -1567,9 +1558,7 @@ export const HAHMOTELMA_SWE = [
         'Raitatikku',
       ],
       oikea: 1,
-      fakta: 'Amalia Erikssonin patsas seisoo nykyään puistossa Grännavuoren juurella. '
-        + 'Grännan museo esittelee polkagrisin historian lisäksi näyttelyn '
-        + 'Andrée-retkikunnasta vuodelta 1897.',
+      fakta: 'Amalia Erikssonin patsas seisoo puistossa Grännavuoren juurella.',
     },
   },
   {
@@ -1709,16 +1698,14 @@ export const HAHMOTELMA_SWE = [
     visa: {
       kysymys: 'Millä alalla Boforsin yhtiö erikoistui 1880-luvulta alkaen?',
       vaihtoehdot: [
-        'Laivojen rakentamiseen',
-        'Tykkien valmistukseen',
-        'Tekstiilien kutomiseen',
-        'Paperin valmistukseen',
+        'Laivanrakennus',
+        'Tekstiilien kudonta',
+        'Tykkien valmistus',
+        'Paperin valmistus',
       ],
-      oikea: 1,
+      oikea: 2,
       fakta: 'Karlskogan seudulle asettui 1580-luvulla suomalaisia kaskeamaan tulleita '
-        + 'uudisasukkaita: vuonna 1649 jopa 32 tilaa 186:sta oli suomalaisten hallussa. '
-        + 'Nykyään Karlskogan kunta on virallisesti suomenkielinen hallintokunta (vuodesta '
-        + '2012).',
+        + 'uudisasukkaita.',
     },
   },
   {
@@ -1789,15 +1776,14 @@ export const HAHMOTELMA_SWE = [
     visa: {
       kysymys: 'Minkä lempinimen Eskilstuna sai teollisen vallankumouksen aikana?',
       vaihtoehdot: [
-        'Rautakaupunki (Järnstaden)',
-        'Työkalukaupunki (Verktygsstaden)',
-        'Asekaupunki (Vapenstaden)',
-        'Teräksen kaupunki (Stålstaden)',
+        'Rautakaupunki',
+        'Työkalujen kaupunki',
+        'Asekaupunki',
+        'Teräksen kaupunki',
       ],
       oikea: 3,
-      fakta: 'Kaupungin nimi tulee englantilaisesta pyhästä Eskilistä, jonka luostari \'Tuna\' '
-        + 'oli paikalla keskiajalla; Kustaa Vaasa tuhosi luostarin uskonpuhdistuksen '
-        + 'aikana. Kaupungin ensimmäiset kaupunkioikeudet myönnettiin vasta vuonna 1659.',
+      fakta: 'Kaupungin nimi tulee englantilaisesta pyhästä Eskilistä, jonka luostari Tuna oli '
+        + 'paikalla keskiajalla.',
     },
   },
   {

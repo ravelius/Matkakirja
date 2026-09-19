@@ -30,6 +30,12 @@ export const PULUN_RAKO_PX = 8;
 export const PANEELIN_TEKSTI_MIN = 20;
 /** Tarkistusväli (ms): kortit avautuvat animoiden, ruutu kääntyy. */
 export const PULUN_TARKISTUSVALI_MS = 200;
+/**
+ * Pulu väistynyt korkean paneelin alta. Myös Livian kasvokangas
+ * (js/livia-eleet.js) lukee tämän: näkyvä lintu piirretään omalle
+ * kankaalleen napin kohdalle, joten pelkkä napin opacity ei riitä.
+ */
+export const PULU_PANEELIN_ALLA_PIILOSSA = 'pulu-paneelin-alla-piilossa';
 
 /**
  * Pulun uusi alareuna (CSS `bottom`, px ikkunan alareunasta) paneelin
@@ -90,7 +96,7 @@ export function asennaPuluPaneelinYlla(nappi, doc = globalThis.document) {
   const vapauta = () => {
     paneeli = null;
     oletus = null;
-    nappi.classList.remove('pulu-paneelin-ylla', 'pulu-paneelin-alla-piilossa');
+    nappi.classList.remove('pulu-paneelin-ylla', PULU_PANEELIN_ALLA_PIILOSSA);
     nappi.style.removeProperty('--pulu-paneelin-ylla-bottom');
   };
 
@@ -143,10 +149,10 @@ export function asennaPuluPaneelinYlla(nappi, doc = globalThis.document) {
      */
     if (bottom === null) {
       nappi.classList.remove('pulu-paneelin-ylla');
-      nappi.classList.add('pulu-paneelin-alla-piilossa');
+      nappi.classList.add(PULU_PANEELIN_ALLA_PIILOSSA);
       return;
     }
-    nappi.classList.remove('pulu-paneelin-alla-piilossa');
+    nappi.classList.remove(PULU_PANEELIN_ALLA_PIILOSSA);
     nappi.style.setProperty('--pulu-paneelin-ylla-bottom', `${bottom}px`);
     nappi.classList.add('pulu-paneelin-ylla');
   };
@@ -156,7 +162,7 @@ export function asennaPuluPaneelinYlla(nappi, doc = globalThis.document) {
   paivita();
   return {
     paivita,
-    tila: () => ({ ylla: nappi.classList.contains('pulu-paneelin-ylla'), piilossa: nappi.classList.contains('pulu-paneelin-alla-piilossa'), hyppyja, paneeli: paneeli?.className ?? null }),
+    tila: () => ({ ylla: nappi.classList.contains('pulu-paneelin-ylla'), piilossa: nappi.classList.contains(PULU_PANEELIN_ALLA_PIILOSSA), hyppyja, paneeli: paneeli?.className ?? null }),
     pura() {
       win.clearInterval(ajastin);
       win.removeEventListener('resize', paivita);

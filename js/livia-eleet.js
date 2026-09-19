@@ -1,5 +1,7 @@
 import { LIVIAN_PITKAN_ODOTUKSEN_VIIVE, kuunteleLivianTilanteita, livianAiheEle, livianLuentareaktionTiedot, livianPuheeleenTiedot } from './livia-tilanteet.js';
 import { asennaLivianNostoTila } from './livia-nostotila.js';
+// Vahdin piilotusluokka: näkyvä lintu on kankaalla, ei napissa (kierros 13).
+import { PULU_PANEELIN_ALLA_PIILOSSA } from './pulu-paneelin-ylla.js';
 /* Livian kokopulun SVG-eleet. Nykyinen chat ja puhekuplat omistavat sisällön;
  * tämä sovitin kuuntelee niitä ja äänen todellista toistotilaa. */
 import { LIVIA_SVG_ELEET, livianSvgAsento, luoLivianSvg, livianEleenVoima } from './livia-svg.js';
@@ -209,7 +211,7 @@ export function asennaLivianKasvot(pollo) {
  function jatkaPitkiaOdotuksia(){for(const[tunnus,tila]of pitkatOdotukset){if(tila.valmis)yritaPitkaaOdotusta();else ajastaPitkaOdotus(tunnus,tila.jaljella??LIVIAN_PITKAN_ODOTUKSEN_VIIVE);}}
  function peruLoppu(){if(luennanLoppu)luennanLoppu.sallittu=false;}
  const lepo=()=>livianSvgAsento('blink',0);
- const nappiNakyy=()=>!doc.hidden&&nappi.isConnected&&(ensiliito||((!nappi.getClientRects||nappi.getClientRects().length>0)&&!nappi.hidden&&getComputedStyle(nappi).display!=='none'&&getComputedStyle(nappi).visibility!=='hidden'));
+ const nappiNakyy=()=>!doc.hidden&&nappi.isConnected&&!nappi.classList?.contains?.(PULU_PANEELIN_ALLA_PIILOSSA)&&(ensiliito||((!nappi.getClientRects||nappi.getClientRects().length>0)&&!nappi.hidden&&getComputedStyle(nappi).display!=='none'&&getComputedStyle(nappi).visibility!=='hidden'));
  const nakyy=()=>nappiNakyy()&&livianDialogiSalliiReaktion(doc,nappi,Boolean(pollo.auki));
  function sijoita(){
   if(kuollut)return;const tavallinen=nappi.getBoundingClientRect?.()||{right:152,bottom:304};

@@ -148,6 +148,7 @@ import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
 import { HAHMOTELMA_FIN } from './packs/hahmotelma-fin.js';
 import { HAHMOTELMA_ROU } from './packs/hahmotelma-rou.js';
 import { HAHMOTELMA_SVN } from './packs/hahmotelma-svn.js';
+import { HAHMOTELMA_EST } from './packs/hahmotelma-est.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -512,6 +513,14 @@ KOHDE_MAAT.FIN = [...(KOHDE_MAAT.FIN ?? []), ...HAHMOTELMA_FIN];
  * (Bukarest) ulkopuolella, lähin (Ploiești) yli 8 lautayksikön päässä.
  */
 KOHDE_MAAT.ROU = [...(KOHDE_MAAT.ROU ?? []), ...HAHMOTELMA_ROU];
+
+/*
+ * VIRON HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla; rivit ovat aidosti kaupungin
+ * (Tallinna) ulkopuolella.
+ */
+KOHDE_MAAT.EST = [...(KOHDE_MAAT.EST ?? []), ...HAHMOTELMA_EST];
 
 /*
 
@@ -5991,10 +6000,34 @@ function piirraKohteenNosto(ui, sisalto, kohde) {
   sisalto.appendChild(nappi);
 }
 
+/*
+ * KORTIN YLÄRIVI KERTOO KOHTEEN OMAN TYYPIN, EI KARTAN RYHMÄÄ (Sonnet 1,
+ * kierros 13, laitekuvat 19.9.2026: Karlskogan, Fiskarsin ja Kalavrytan
+ * tekniikkanostot ja Cobhin merenkulkunosto näyttivät "KAUPPA"). Kartalla
+ * on vain seliteryhmän kärkisymboli (omistaja 31.8.2026,
+ * js/karttavalot.js karttavaloKarkisymboli), ja ylärivi luki ennen samaa
+ * merkkiä — "Kauppa ja tekniikka" -ryhmän kärki on kauppa. Nyt kortti
+ * piirtää tarkan kategorian merkin ja nimen (veturi + Tekniikka, ankkuri
+ * + Merenkulku, malja + Ruoka ja juoma …). Luonnon viidellä tyypillä on
+ * yksi merkki, joten nimi tarkennetaan tyypillä.
+ */
+const LUONNON_NIMIKKEET = {
+  vuori: 'vuori', meri: 'meri', saari: 'saari', joki: 'joki', jarvi: 'järvi',
+};
+
+/** Kohdekortin ylärivin nimike tarkasta kategoriasta. Vartio testissä. */
+export function kohteenYlarivinNimike(kohde) {
+  const kategoria = kohteenKategoria(kohde);
+  const luokka = kategoria ? NOSTOSYM_LUOKAT[kategoria] : null;
+  if (!luokka) return null;
+  const laji = kategoria === 'luonto' ? LUONNON_NIMIKKEET[kohde?.tyyppi] : null;
+  return laji ? `${luokka} · ${laji}` : luokka;
+}
+
 function piirraKohdeYlarivi(kohde) {
   const rivi = html('p', 'fokuskohde-ylarivi');
-  const symboli = kohteenSymboli(kohde);
-  const luokka = symboli ? NOSTOSYM_LUOKAT[symboli] : null;
+  const symboli = kohteenKategoria(kohde);
+  const luokka = kohteenYlarivinNimike(kohde);
   if (!luokka) {
     rivi.textContent = KOHDE_TYYPIT[kohde.tyyppi] ?? KOHDE_TYYPIT.muu;
     return rivi;

@@ -118,10 +118,10 @@ export const HAHMOTELMA_DEU = [
     visa: {
       kysymys: 'Miksi Elben hiekkakivivuoristoa alettiin kutsua Saksilaiseksi Sveitsiksi?',
       vaihtoehdot: [
-        'Sveitsiläiset taiteilijat näkivät maisemassa kotimaansa Juran',
-        'Alueen linnoitukseen palkattiin sveitsiläisiä sotilaita',
-        'Elbe saa alkunsa sveitsiläisiltä Alpeilta',
-        'Dresdenin hovi tilasi alueelle sveitsiläisiä juustomestareita',
+        'Taiteilijat näkivät siinä Juran',
+        'Sveitsiläiset linnoitussotilaat',
+        'Elben lähde on Alpeilla',
+        'Sveitsiläiset juustomestarit',
       ],
       oikea: 0,
       fakta: 'Alueen tunnetuin maamerkki on Königsteinin linnoitus.',
@@ -332,12 +332,12 @@ export const HAHMOTELMA_DEU = [
     lahde: 'en-Wikipedia "Lüneburg Heath", johdanto-osa ja osio "Geography" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Miten Lüneburgin nummen keltaiset kanervanummet pidetään avoimina?',
+      kysymys: 'Miten Lüneburgin nummen kanervanummet pidetään avoimina?',
       vaihtoehdot: [
-        'Niittämällä ne koneilla joka kesä',
-        'Kastelemalla nummet joka kevät kanavilla',
-        'Polttamalla ne hallitusti joka syksy',
-        'Laiduntamalla nummilampaita eli heidschnuckeja',
+        'Koneellinen niitto joka kesä',
+        'Kastelu kanavista joka kevät',
+        'Hallittu polttaminen syksyisin',
+        'Nummilampaiden laidunnus',
       ],
       oikea: 3,
       fakta: 'Nummialueen korkein kohta on 169 metriä korkea Wilseder Berg.',
@@ -693,7 +693,7 @@ export const HAHMOTELMA_DEU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-quedlinburg-1ab34198.jpg',
         lyhyt: 'Quedlinburgin linnavuoren rakennukset ja Stiftskirchen kaksi tornia.',
-        selite: 'Linnavuoren renessanssirakennukset punaisine kattoineen ja niiden takana kohoavat Stiftskirchen mustat kaksoistornit. Kuvan otsikko on Schloss und Stiftskirche.',
+        selite: 'Schloss und Stiftskirche: linnavuoren renessanssirakennukset punaisine kattoineen ja niiden takana kohoavat Stiftskirchen mustat kaksoistornit.',
         lahde: 'Valokuva: Kora27, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Kora27',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Quedlinburg-Schlossberg....IMG_1747WI.jpg',
@@ -791,7 +791,7 @@ export const HAHMOTELMA_DEU = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-rothenburg-f1a4947f.jpg',
       lyhyt: 'Plönlein Rothenburgissa: ristikkotalo kahden kaupunginportin ja tornin välissä.',
-      selite: 'Plönlein on entinen kauppatori, jonka vasemmalla puolella on Siebersin torni ja oikealla Kobolzellin portti. Kuvauksen mukaan paikka on yksi Saksan valokuvatuimpia.',
+      selite: 'Plönlein on entinen kauppatori, jonka vasemmalla puolella on Siebersin torni ja oikealla Kobolzellin portti. Paikka on yksi Saksan valokuvatuimpia.',
       lahde: 'Kuva: Berthold Werner, Wikimedia Commons (public domain).',
       tekija: 'Berthold Werner',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rothenburg_BW_4.JPG',
@@ -802,7 +802,7 @@ export const HAHMOTELMA_DEU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-rothenburg-8a0dcddd.jpg',
         lyhyt: 'Rothenburgin vanhakaupunki kohoaa Tauberin laakson yllä, etualalla kivinen tuplasilta.',
-        selite: 'Tauberin yli johtava 123 metriä pitkä kaksikerroksinen kivisilta on kuvauksen mukaan rakennettu todennäköisesti noin vuonna 1330. Taustalla näkyvät vanhankaupungin katot ja tornit.',
+        selite: 'Tauberin yli johtava 123 metriä pitkä kaksikerroksinen kivisilta on rakennettu todennäköisesti noin vuonna 1330. Taustalla näkyvät vanhankaupungin katot ja tornit.',
         lahde: 'Valokuva: Rainer Lippert, Wikimedia Commons (CC0).',
         tekija: 'Rainer Lippert',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rothenburg_mit_Brücke,_2.jpg',
@@ -899,7 +899,7 @@ export const HAHMOTELMA_DEU = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-ruedesheim-e13c404a.jpg',
       lyhyt: 'Rüdesheimin yläpuolen laajat viinitarharinteet köysiradan tolppineen.',
-      selite: 'Näkymä köysiradalta Rüdesheimin yllä levittäytyville viinitarhoille. Kuvauksen mukaan köysiradan vasemmalla puolella häämöttää Niederwalddenkmal-muistomerkki rinteen harjalla.',
+      selite: 'Näkymä köysiradalta Rüdesheimin yllä levittäytyville viinitarhoille. Köysiradan vasemmalla puolella häämöttää Niederwalddenkmal-muistomerkki rinteen harjalla.',
       lahde: 'Valokuva: Partonez, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Partonez',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vineyard_above_the_town_of_Rüdesheim_am_Rhein_2.jpg',
@@ -979,7 +979,7 @@ export const HAHMOTELMA_DEU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-bernkastel-05787825.jpg',
         lyhyt: 'Lähikuva Bernkastelin torin koristeellisista ristikkotalojen päädyistä.',
-        selite: 'Fachwerkhäuser prägen kuvauksen mukaan Bernkastel-Kuesin keskiaikaisen torin ilmettä. Alhaalla keskellä näkyy siivekäs patsas kaivon päällä.',
+        selite: 'Ristikkotalot (Fachwerkhäuser) leimaavat Bernkastel-Kuesin keskiaikaisen torin ilmettä. Alhaalla keskellä näkyy siivekäs patsas kaivon päällä.',
         lahde: 'Valokuva: Elisabeth Schittenhelm, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Elisabeth Schittenhelm',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Historischer_Marktplatz_in_der_Altstadt_von_Bernkastel-Kues,_Rheinland-Pfalz.jpg',
@@ -1012,8 +1012,7 @@ export const HAHMOTELMA_DEU = [
     lahde: 'en-Wikipedia "Bernkastel-Kues", johdanto-osa ja osiot "History" ja "Sights" '
       + '(tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Minkä muinaisen rakennuksen paikalla Bernkastelin yläpuolisen Landshutin linnan '
-        + 'rauniot mahdollisesti ovat?',
+      kysymys: 'Minkä rakennuksen paikalla Bernkastelin Landshutin linnanrauniot ehkä ovat?',
       vaihtoehdot: [
         'Roomalaisen castellumin',
         'Frankkikuninkaan metsästysmajan',
@@ -1041,7 +1040,7 @@ export const HAHMOTELMA_DEU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-triberg-c6ac11d1.jpg',
         lyhyt: 'Maailman suurin käkikello Tribergissä: puurakenteinen kellotalo ja iso kellotaulu.',
-        selite: 'Triberg im Schwarzwaldin jättimäinen käkikello (kuvauksen mukaan maailman suurin), jonka julkisivussa on roomalaisin numeroin varustettu kellotaulu. Kuva on rajattu alareunasta.',
+        selite: 'Triberg im Schwarzwaldin jättimäinen käkikello (maailman suurin), jonka julkisivussa on roomalaisin numeroin varustettu kellotaulu. Kuva on rajattu alareunasta.',
         lahde: 'Valokuva: Stefan Gerl, Wikimedia Commons (CC0).',
         tekija: 'Stefan Gerl',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Landappbw_771468_1822_Kuckucksuhr_Triberg.jpg',
@@ -1133,10 +1132,10 @@ export const HAHMOTELMA_DEU = [
     visa: {
       kysymys: 'Mistä Hamelnin kaupunki sai alkunsa?',
       vaihtoehdot: [
-        'Luostarista, jonka ympärille kasvoi kylä',
-        'Weserin ylityspaikan tullilinnasta',
-        'Hansakauppiaiden perustamasta kauppa-asemasta',
-        'Ruhtinaan rakennuttamasta rajalinnoituksesta',
+        'Vanhasta luostarista',
+        'Weserin tullilinnasta',
+        'Hansan kauppa-asemasta',
+        'Ruhtinaan rajalinnoituksesta',
       ],
       oikea: 0,
       fakta: 'Hamelnista tuli vuonna 1664 Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, '
@@ -1159,7 +1158,7 @@ export const HAHMOTELMA_DEU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-oberammergau-3ac3a025.jpg',
         lyhyt: 'Oberammergaun talon seinämaalaus, jossa hevosvaunut ja matkalaisia vuoristomaisemassa.',
-        selite: 'Lüftlmalerei on Oberammergaun talojen perinteistä julkisivumaalausta. Tämä seinämaalaus esittää vanhan Rottstraßen liikennettä hevosineen, ja tekstikartussi mainitsee reitin Augsburgista Venetsiaan.',
+        selite: 'Lüftlmalerei on Oberammergaun talojen perinteistä julkisivumaalausta. Tämä seinämaalaus esittää vanhan Rottstraßen liikennettä hevosineen, ja tekstikartussissa lukee reitti Augsburgista Venetsiaan.',
         lahde: 'Valokuva: Andreas Praefcke, Wikimedia Commons (CC BY 3.0).',
         tekija: 'Andreas Praefcke',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Oberammergau_L%C3%BCftlmalerei_Stra%C3%9Fenszene.jpg',
@@ -1260,8 +1259,7 @@ export const HAHMOTELMA_DEU = [
     lahde: 'en-Wikipedia "Völklingen Ironworks", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Kuka osti Julius Buchin Saar-joen rannalle rakennuttaman terästehtaan, kun se oli '
-        + 'toiminut vain muutaman vuoden?',
+      kysymys: 'Kuka osti Julius Buchin Saar-joen rannalle rakentaman terästehtaan?',
       vaihtoehdot: [
         'Alfred Krupp',
         'August Thyssen',
@@ -1415,7 +1413,7 @@ export const HAHMOTELMA_DEU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-jena-2173c05f.jpg',
         lyhyt: 'Carl Zeiss Jenan kaksiokulaarinen mikroskooppi vuodelta 1914.',
-        selite: 'Messinkiä ja mustaa metallia oleva mikroskooppi, jonka putkessa lukee Carl Zeiss Jena. Kuvan mukaan laite on valmistettu vuonna 1914.',
+        selite: 'Messinkiä ja mustaa metallia oleva mikroskooppi, jonka putkessa lukee Carl Zeiss Jena. Laite on valmistettu vuonna 1914.',
         lahde: 'Valokuva: Chad Anderson, staff photographer for SFO Museum, Wikimedia Commons (CC BY-SA 2.0).',
         tekija: 'Chad Anderson, staff photographer for SFO Museum',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Binocular_compound_microscope,_Carl_Zeiss_Jena,_1914_(6779276516).jpg',
@@ -1475,7 +1473,7 @@ export const HAHMOTELMA_DEU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-muengsten-bbcc8e19.jpg',
         lyhyt: 'Vanha postikortti näyttää Kaiser-Wilhelm-sillan ja höyryjunan laakson yllä.',
-        selite: 'Vuoden 1912 postikortin mukaan silta tunnettiin silloin nimellä Kaiser-Wilhelm-Brücke. Etualalla näkyy näkötemppeli ja polku alas laaksoon.',
+        selite: 'Vuoden 1912 postikortti sillasta, joka tunnettiin silloin nimellä Kaiser-Wilhelm-Brücke. Etualalla näkyy näkötemppeli ja polku alas laaksoon.',
         lahde: 'Kuva: Max Wipperling, Elberfeld, Wikimedia Commons (public domain).',
         tekija: 'Max Wipperling, Elberfeld',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kaiser-Wilhelm-Br%C3%BCcke_M%C3%BCngstener_Br%C3%BCcke_1912.jpg',
@@ -1545,7 +1543,7 @@ export const HAHMOTELMA_DEU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-hambach-5498e810.jpg',
         lyhyt: 'Vuoden 1832 piirros esittää juhlakulkueen nousemassa Hambachin linnalle.',
-        selite: 'Osittain värjätty kynäpiirros vuodelta 1832 kuvaa kulkuetta linnalle 27. toukokuuta 1832, Hambachin juhlan päivänä. Lippujen värit on Commonsin kuvauksen mukaan luultavasti lisätty jälkikäteen.',
+        selite: 'Osittain värjätty kynäpiirros vuodelta 1832 kuvaa kulkuetta linnalle 27. toukokuuta 1832, Hambachin juhlan päivänä. Lippujen värit on luultavasti lisätty jälkikäteen.',
         lahde: 'Piirros: tekijä tuntematon, Wikimedia Commons (public domain).',
         tekija: 'tekijä tuntematon',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Zug_auf_das_Schloss_Hambach_1832_Deutschland.png',
@@ -1604,7 +1602,7 @@ export const HAHMOTELMA_DEU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/deu-nosto-bad-ems-c553949c.jpg',
         lyhyt: 'Muistokivi kertoo Emsin sähkeen taustalla olleen tapaamisen ajan.',
-        selite: 'Kiveen on kaiverrettu 13. heinäkuuta 1870, kello 9.10 aamulla. Infotaulun mukaan paikalla Preussin kuningas Wilhelm I tapasi Ranskan lähettilään Benedettin.',
+        selite: 'Kiveen on kaiverrettu 13. heinäkuuta 1870, kello 9.10 aamulla. Paikalla Preussin kuningas Wilhelm I tapasi Ranskan lähettilään Benedettin.',
         lahde: 'Valokuva: Holger Weinandt, Wikimedia Commons (CC BY-SA 3.0 de).',
         tekija: 'Holger Weinandt',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gedenkstein_Emser_Depesche.jpg',
