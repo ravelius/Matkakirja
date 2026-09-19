@@ -265,40 +265,6 @@ export const MAASTOKOHTEET_DNK = [
     lahde: 'en-Wikipedia "Ribe", johdanto-osa ja osio "History" (tarkistettu 6.9.2026).',
   },
   {
-    id: 'trelleborg-slagelse',
-    nimi: 'Trelleborg',
-    // Täkynosto nosto-trelleborg on samassa paikassa samalla nimellä: kortti
-    // säilyy, mutta karttanimiö näytetään vain sillä (nimiölimitys, 20.9.2026).
-    nimio: '',
-    tyyppi: 'historia',
-    kysymykset: [
-      'Miksi linnoitus on täsmälleen ympyrä?',
-      'Kuka linnoituksen rakennutti?',
-    ],
-    korostukset: ['rengaslinnoitus|rengaslinnoituksista'],
-    nappi: 'Viikinkien ympyrälinnoitus',
-    // 11.2653 E / 55.3942 N — en-Wikipedia "Trelleborg (Slagelse)"
-    laudat: {
-      maailmankartta: { x: 6208.8, y: 1147.5 },
-      europe: { x: 427.5, y: 436.7 },
-    },
-    teksti: 'Trelleborg Slagelsen länsipuolella Sjællandissa on yksi seitsemästä tunnetusta '
-      + 'viikinkiaikaisesta rengaslinnoituksesta. Rakennusaikanaan se seisoi niemellä, joka '
-      + 'työntyi kahden joen väliseen soiseen maastoon; suo oli järven kautta yhteydessä '
-      + 'Isoonbelttiin, ja viikinkilaivat pääsivät sinne.\n\n'
-      + 'Linnoituksen uskotaan syntyneen Harald Sinihampaan käskystä vuonna 980, ja se on '
-      + 'saattanut valvoa Isonbeltin laivaliikennettä Sjællandin ja Fynin välissä.\n\n'
-      + 'Muoto on täsmällinen ympyrä. Kaksi tietä risteää suorassa kulmassa keskipisteessä '
-      + 'ja johtaa neljälle portille, jotka ovat aina kaksittain vastakkain. Kussakin '
-      + 'neljänneksessä seisoi neljä lähes samanlaista pitkätaloa neliönä. Valli oli viisi '
-      + 'metriä korkea ja perustaltaan 17,5 metriä leveä, ja ympyrän halkaisija oli 137 '
-      + 'metriä. Koko linnoituksessa saattoi olla tilaa noin 1 300 ihmiselle.\n\n'
-      + 'Trelleborg on parhaiten säilynyt rengaslinnoituksista. Vuonna 2023 se liitettiin '
-      + 'neljän muun tanskalaisen rengaslinnoituksen kanssa maailmanperintöluetteloon.',
-    lahde: 'en-Wikipedia "Trelleborg (Slagelse)", johdanto-osa sekä osiot "Layout and '
-      + 'construction" ja "Main castle" (tarkistettu 6.9.2026).',
-  },
-  {
     id: 'skagen',
     nimi: 'Skagen',
     tyyppi: 'kulttuuri',
@@ -361,6 +327,8 @@ export const MAASTOKOHTEET_DNK = [
   {
     id: 'storebaeltin-silta',
     nimi: 'Storebæltin silta',
+    // Karttanimiö lyhennetty: täkynosto nosto-trelleborg on lähellä (nimiölimitys, 20.9.2026).
+    nimio: 'Silta',
     tyyppi: 'tekniikka',
     kysymykset: [
       'Kuinka kauan salmen ylitys kesti ennen siltaa?',
