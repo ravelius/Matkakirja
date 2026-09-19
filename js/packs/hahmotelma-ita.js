@@ -259,6 +259,17 @@ export const HAHMOTELMA_ITA = [
       + 'tunnettiin nimellä Benacus, ja jotkut palvoivat järven henkilöitynyttä jumalaa. '
       + 'Nykyinen nimi on germaanista alkuperää ja tulee sanasta warda, vartiopaikka.',
     lahde: 'en-Wikipedia "Lake Garda", johdanto-osa ja osio "Etymology" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mistä Gardajärven nykyinen nimi on peräisin?',
+      vaihtoehdot: [
+        'Roomalaisten palvomasta järvijumalasta Benacuksesta',
+        'Kreikkalaisesta sanasta, joka tarkoittaa vettä',
+        'Kelttiläisestä sanasta, joka tarkoittaa sinistä',
+        'Germaanisesta sanasta, joka tarkoittaa vartiopaikkaa',
+      ],
+      oikea: 3,
+      fakta: 'Gardajärven rantaa jakavat keskenään Brescian, Veronan ja Trenton maakunnat.',
+    },
   },
   {
     id: 'hahmotelma-stromboli',
@@ -307,6 +318,18 @@ export const HAHMOTELMA_ITA = [
       + 'oli 11. syyskuuta 1930, ja siinä kuoli kuusi ihmistä.',
     lahde: 'en-Wikipedia "Stromboli", johdanto-osa sekä osiot "Height and shape" ja "Volcano" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Miksi Strombolin saarta kutsutaan Välimeren majakaksi?',
+      vaihtoehdot: [
+        'Sen huipulla palaa vanha majakka merenkulkijoille',
+        'Tulivuori purkautuu lähes jatkuvasti lievin purkauksin',
+        'Saari nousee yksinään keskelle avointa Välimerta',
+        'Sen rinteiltä hohtaa yöllä kirkkaana lasimaista kiveä',
+      ],
+      oikea: 1,
+      fakta: 'Tulivuoren luoteisrinteellä on hevosenkengän muotoinen Sciara del Fuoco, jonka nimi '
+        + 'tarkoittaa tulen virtaa.',
+    },
   },
   {
     id: 'hahmotelma-elba',
@@ -354,6 +377,17 @@ export const HAHMOTELMA_ITA = [
       + 'nimellä Ilva, ja se oli jo silloin tunnettu rautavaroistaan ja arvostetuista '
       + 'kaivoksistaan.',
     lahde: 'en-Wikipedia "Elba", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mistä Elban saari oli tunnettu jo antiikin aikana?',
+      vaihtoehdot: [
+        'Suolanvalmistuksesta ja suolan viennistä',
+        'Purppuranvärin valmistuksesta ja kaupasta',
+        'Rautavaroistaan ja arvostetuista kaivoksistaan',
+        'Marmorilouhoksistaan ja kuvanveistäjistään',
+      ],
+      oikea: 2,
+      fakta: 'Napoleon karkotettiin Elballe ensimmäisen kerran vuosiksi 1814–1815.',
+    },
   },
   {
     id: 'hahmotelma-villa-adriana',
@@ -579,6 +613,18 @@ export const HAHMOTELMA_ITA = [
       + 'maailmanperintökohteeksi vuonna 1996.',
     lahde: 'en-Wikipedia "Castel del Monte, Apulia", johdanto-osa ja osio "Location" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mikä seikka viittaa siihen, ettei Castel del Monte ehkä ollut tavallinen '
+        + 'puolustuslinna?',
+      vaihtoehdot: [
+        'Siinä ei ole vallihautaa eikä nostosiltaa',
+        'Sen muurit rakennettiin tavallista ohuemmiksi',
+        'Se rakennettiin keskelle tasaista peltoa',
+        'Sen ainoa torni lisättiin vasta myöhemmin',
+      ],
+      oikea: 0,
+      fakta: 'UNESCO merkitsi Castel del Monten maailmanperintökohteeksi vuonna 1996.',
+    },
   },
   {
     id: 'hahmotelma-tarquinia',
@@ -687,6 +733,18 @@ export const HAHMOTELMA_ITA = [
       + 'rakennettiin sodan jälkeen uudelleen.',
     lahde: 'en-Wikipedia "Monte Cassino", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Ketkä ryöstivät Monte Cassinon ensimmäisen luostarin noin vuonna 570?',
+      vaihtoehdot: [
+        'Attilan hunnit',
+        'Vandaalit',
+        'Langobardit',
+        'Itägootit',
+      ],
+      oikea: 2,
+      fakta: 'Monte Cassinon luostari tuhoutui vuonna 1944 liittoutuneiden pommituksissa ja '
+        + 'rakennettiin sodan jälkeen uudelleen.',
+    },
   },
   {
     id: 'hahmotelma-chianti',
@@ -834,6 +892,18 @@ export const HAHMOTELMA_ITA = [
       + 'kaupungissa on konditoriakonserni Ferreron kotipaikka.',
     lahde: 'en-Wikipedia "Alba, Piedmont", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Minkä ruoka-aineen tuotannosta Alba on erityisen kuuluisa?',
+      vaihtoehdot: [
+        'Parmankinkusta ja parmesaanista',
+        'Valkoisesta tryffelistä',
+        'Balsamietikasta ja oliiviöljystä',
+        'Mozzarellasta ja burratasta',
+      ],
+      oikea: 1,
+      fakta: 'Alban roomalainen nimi oli Alba Pompeia, ja siellä syntyi Pertinax, josta tuli '
+        + 'vuonna 193 hetkeksi Rooman keisari.',
+    },
   },
   {
     id: 'hahmotelma-valdobbiadene',
@@ -1038,6 +1108,18 @@ export const HAHMOTELMA_ITA = [
       + 'kaupungin vuonna 218 eaa. ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle.',
     lahde: 'en-Wikipedia "Cremona", johdanto-osa ja osiot "History" ja "Music" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Mihin tarkoitukseen roomalaiset perustivat Cremonan?',
+      vaihtoehdot: [
+        'Kauppasatamaksi Adrianmeren rannalle',
+        'Marmorilouhosten työläisten asuinkyläksi',
+        'Keisarin kesäasuinpaikaksi Po-tasangolle',
+        'Ensimmäiseksi tukikohdakseen Po-joen pohjoispuolelle',
+      ],
+      oikea: 3,
+      fakta: 'Cremona alkoi 1500-luvulta lähtien tunnetuksi soitinvalmistuksen keskuksena, ja '
+        + 'Amatin sekä Rugerin viuluja seurasivat Guarnerin ja Stradivarin verstaat.',
+    },
   },
   {
     id: 'hahmotelma-portofino',
@@ -1136,6 +1218,18 @@ export const HAHMOTELMA_ITA = [
       + 'louhijoiden keskuudessa.',
     lahde: 'en-Wikipedia "Carrara", johdanto-osa ja osiot "History" ja "Carrara marble" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mihin Carraran motto Fortitudo mea in rota eli voimani on pyörässä viittaa?',
+      vaihtoehdot: [
+        'Kaupungin muinaisiin ratsuväkijoukkoihin',
+        'Vesipyöriin, jotka pyörittivät viljamyllyjä',
+        'Marmorin kuljetukseen roomalaisajoista lähtien',
+        'Kaupungin puolustukseen keskiajan piirityksissä',
+      ],
+      oikea: 2,
+      fakta: '1800-luvun lopulla Carrarasta tuli Italian anarkismin kehto erityisesti louhijoiden '
+        + 'keskuudessa.',
+    },
   },
   {
     id: 'hahmotelma-larderello',
@@ -1185,6 +1279,17 @@ export const HAHMOTELMA_ITA = [
       + 'käytännössä, ja vuonna 1911 rakennettiin maailman ensimmäinen geoterminen voimala.',
     lahde: 'en-Wikipedia "Larderello", johdanto-osa ja osiot "Geography" ja "History" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mihin Larderellon maasta purkautuvaa kuumaa höyryä käytettiin 1800-luvulla?',
+      vaihtoehdot: [
+        'Boorihapon erottamiseen mudasta',
+        'Suolan haihduttamiseen merivedestä',
+        'Kankaiden värjäämiseen ja huuhteluun',
+        'Raudan sulattamiseen kaivoksissa',
+      ],
+      oikea: 0,
+      fakta: 'Vuonna 1911 Larderelloon rakennettiin maailman ensimmäinen geoterminen voimala.',
+    },
   },
   {
     id: 'hahmotelma-brennero',
@@ -1508,6 +1613,19 @@ export const HAHMOTELMA_ITA = [
       + 'haavoittuneiden kärsimyksestä. Hän kirjoitti kirjan Muisto Solferinosta, ja se johti '
       + 'Geneven sopimuksiin ja Punaisen Ristin perustamiseen.',
     lahde: 'en-Wikipedia "Battle of Solferino", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mikä Solferinon taistelun jälkeen kirjoitettu teos johti Punaisen Ristin '
+        + 'perustamiseen?',
+      vaihtoehdot: [
+        'Itävallan ja Ranskan yhteinen rauhansopimus',
+        'Napoleon III:n julistus haavoittuneiden suojelusta',
+        'Sveitsin hallituksen laatima sotilassairaalan ohjesääntö',
+        'Henry Dunantin kirja Muisto Solferinosta',
+      ],
+      oikea: 3,
+      fakta: 'Solferinon taistelu oli viimeinen suuri taistelu, jossa kaikki armeijat olivat '
+        + 'hallitsijoidensa henkilökohtaisessa johdossa.',
+    },
   },
   {
     id: 'hahmotelma-teano',

@@ -120,6 +120,18 @@ export const HAHMOTELMA_PRT = [
       + 'Penedasta ja Serra do Gerêsistä. Jyrkkiä laaksoja peittävät tammi- ja mäntymetsät '
       + 'ovat yksi Portugalin viimeisistä atlanttisen Euroopan kasvillisuuden tukikohdista.',
     lahde: 'en-Wikipedia "Peneda-Gerês National Park", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mistä Peneda-Gerêsin kansallispuiston nimi tulee?',
+      vaihtoehdot: [
+        'Kahdesta alueen läpi virtaavasta joesta',
+        'Kahdesta graniittimassiivista',
+        'Kahdesta rajalinnasta Espanjan vastaisella rajalla',
+        'Kahdesta muinaisesta roomalaisesta tiestä',
+      ],
+      oikea: 1,
+      fakta: 'Puisto jatkuu rajan yli Espanjan puolelle, ja yhdessä espanjalaisen luonnonpuiston '
+        + 'kanssa se muodostaa Gerês-Xurésin biosfäärialueen.',
+    },
   },
   {
     id: 'hahmotelma-ria-formosa',
@@ -178,6 +190,18 @@ export const HAHMOTELMA_PRT = [
       + 'satamaa. Ria Formosa on Ramsar-alue, ja se toimii keväisin ja syksyisin '
       + 'muuttolintujen pysähdyspaikkana.',
     lahde: 'en-Wikipedia "Ria Formosa", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Miten Ria Formosan laguunin kuudes salmi eroaa muista salmista?',
+      vaihtoehdot: [
+        'Se on luonnollinen salmi, joka liikkuu hiekan mukana',
+        'Se on keskiaikaisten kalastajien kaivama kanava',
+        'Se erottaa laguunin Guadiana-joen suistosta',
+        'Se on tekoväylä, joka helpottaa pääsyä Faron satamaan',
+      ],
+      oikea: 3,
+      fakta: 'Ria Formosa on Ramsar-alue, ja se toimii keväisin ja syksyisin muuttolintujen '
+        + 'pysähdyspaikkana.',
+    },
   },
   {
     id: 'hahmotelma-arrabida',
@@ -339,6 +363,18 @@ export const HAHMOTELMA_PRT = [
       + 'auttamaan merenkulkua ja usein haaksirikkoon joutuneita, mutta munkit joutuivat '
       + 'lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.',
     lahde: 'en-Wikipedia "Berlengas", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Miksi Pyhän Hieronymuksen munkit perustivat yhteisön Berlengasin saarelle vuonna '
+        + '1513?',
+      vaihtoehdot: [
+        'Auttaakseen merenkulkijoita ja haaksirikkoutuneita',
+        'Viljelläkseen saarella viiniä Lissabonin laivastolle',
+        'Vartioidakseen rannikkoa merirosvoilta ja salakuljettajilta',
+        'Elääkseen erakkoina kaukana mantereen kiireistä',
+      ],
+      oikea: 0,
+      fakta: 'Britannian merimiehet kutsuivat saaria vanhastaan nimellä "the Burlings".',
+    },
   },
   {
     id: 'hahmotelma-sabugal',
@@ -654,6 +690,18 @@ export const HAHMOTELMA_PRT = [
     lahde: 'en-Wikipedia "Prehistoric Rock Art Sites in the Côa Valley and Siega Verde", '
       + 'johdanto-osa ja osio "Côa Valley"; koordinaatti en-Wikipedia "Vila Nova de Foz Côa" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Miksi Côa-laaksoon suunniteltu padon rakennushanke lopulta peruttiin?',
+      vaihtoehdot: [
+        'Vesi olisi tulvinut Espanjan puolelle ja aiheuttanut riidan',
+        'Rakennuskustannukset nousivat liian suuriksi',
+        'Yleisö vaati kalliopiirrosten suojelua ja uusi hallitus perui hankkeen',
+        'Padon paikalta löytyi roomalaisen sillan jäänteet',
+      ],
+      oikea: 2,
+      fakta: 'Kalliopiirrokset ovat paleoliittisia: ne on ajoitettu vuosille 22 000–10 000 eaa., '
+        + 'ja niissä on hevosia ja nautoja.',
+    },
   },
   {
     id: 'hahmotelma-castelo-rodrigo',
@@ -902,6 +950,18 @@ export const HAHMOTELMA_PRT = [
       + 'Vinho Verde -viinistään ja sarrabulho-riisistään.',
     lahde: 'en-Wikipedia "Ponte de Lima", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Minkä ruokien ja juomien mukaan Ponte de Lima tunnetaan koko maassa?',
+      vaihtoehdot: [
+        'Valkoisen portviinin ja bacalhau-kuivakalan',
+        'Kuohuvan viinin ja pastéis de nata -leivosten',
+        'Oliiviöljyn ja tuoreen vuohenjuuston',
+        'Punaisen Vinho Verde -viinin ja sarrabulho-riisin',
+      ],
+      oikea: 3,
+      fakta: 'Ponte de Limaa ympäröivällä maaseudulla on Portugalin suurin barokkikartanoiden '
+        + 'keskittymä.',
+    },
   },
   {
     id: 'hahmotelma-vila-vicosa',
@@ -1069,6 +1129,19 @@ export const HAHMOTELMA_PRT = [
       + 'Castro de Ladário oli asuttu 1. vuosisadalta eaa. 400-luvulle jaa.',
     lahde: 'en-Wikipedia "Amarante, Portugal", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Minkä alan kaupunkina Amarante kuuluu UNESCOn luovien kaupunkien verkostoon vuodesta '
+        + '2017?',
+      vaihtoehdot: [
+        'Kirjallisuuskaupunkina',
+        'Musiikkikaupunkina',
+        'Ruokakaupunkina',
+        'Elokuvakaupunkina',
+      ],
+      oikea: 1,
+      fakta: 'Kaupungin lähellä sijaitsevassa linnoitetussa kukkula-asutuksessa Castro de '
+        + 'Ladáriossa asuttiin ensimmäiseltä vuosisadalta eaa. 400-luvulle jaa.',
+    },
   },
   {
     id: 'hahmotelma-chaves',
@@ -1167,6 +1240,18 @@ export const HAHMOTELMA_PRT = [
       + 'satamaan, ja tulva tuhosi Pomarãon joulukuussa 1876.',
     lahde: 'en-Wikipedia "São Domingos Mine", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Minkä uuden asian São Domingosin kaivosalue sai ensimmäisenä paikkana Portugalissa?',
+      vaihtoehdot: [
+        'Sähkövalon',
+        'Puhelinverkon',
+        'Lennätinlinjan',
+        'Vesijohdon',
+      ],
+      oikea: 0,
+      fakta: 'Vuonna 1862 kaivokselta avattiin 18 kilometrin rautatie Guadiana-joen Pomarãon '
+        + 'satamaan.',
+    },
   },
   {
     id: 'hahmotelma-castro-marim',
@@ -1224,6 +1309,18 @@ export const HAHMOTELMA_PRT = [
       + 'kuoriutui 550 flamingoa, mikä oli Portugalissa ensimmäinen kerta.',
     lahde: 'en-Wikipedia "Castro Marim and Vila Real de Santo António Marsh Natural Reserve", '
       + 'koko artikkeli (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mitkä linnut kuoriutuivat Castro Marimin suoalueella kevättalvella 2021 ensimmäistä '
+        + 'kertaa Portugalissa?',
+      vaihtoehdot: [
+        'Avosetit',
+        'Haikarat',
+        'Flamingot',
+        'Rantasipit',
+      ],
+      oikea: 2,
+      fakta: 'Alue on Ramsar-kosteikko, jossa tavataan noin 153 lintulajia ja yli 400 kasvilajia.',
+    },
   },
   {
     id: 'hahmotelma-trancoso',
@@ -1403,6 +1500,19 @@ export const HAHMOTELMA_PRT = [
       + 'käytetään kaikkialla, jopa kynnyksinä ja katukivinä.',
     lahde: 'en-Wikipedia "Estremoz", johdanto-osa ja osiot "History" ja "Marble" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Mihin rakennushankkeeseen Estremozin marmorin ensimmäisten vientierien uskotaan '
+        + 'menneen antiikin aikana?',
+      vaihtoehdot: [
+        'Rooman Colosseumin lattioiden rakentamiseen',
+        'Emerita Augustan Circus Maximuksen rakentamiseen',
+        'Bracaran roomalaisen akveduktin rakentamiseen',
+        'Toledon katedraalin alttarien rakentamiseen',
+      ],
+      oikea: 1,
+      fakta: 'Estremozin seudulla marmoria on niin runsaasti, että sitä käytetään kaikkialla jopa '
+        + 'kynnyksinä ja katukivinä.',
+    },
   },
   {
     id: 'hahmotelma-torres-vedras',
@@ -1570,6 +1680,18 @@ export const HAHMOTELMA_PRT = [
       + 'suurimman osan kaupungista. Nimi tulee arabian sanasta al-Maʾida, pöytä.',
     lahde: 'en-Wikipedia "Almeida, Portugal", johdanto-osa sekä osiot "Location" ja "History" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mikä tuhosi suurimman osan Almeidan kaupungista niemimaasodan vuoden 1810 '
+        + 'piirityksessä?',
+      vaihtoehdot: [
+        'Sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti',
+        'Ranskalaisten kaivama miina räjäytti linnoituksen muurin',
+        'Côa-joen tulva nousi vallihaudan yli kaupunkiin',
+        'Kaupunkilaisten sytyttämä tulipalo ennen antautumista',
+      ],
+      oikea: 0,
+      fakta: 'Almeidan nimi juontuu arabian sanasta al-Maʾida, joka tarkoittaa pöytää.',
+    },
   },
   {
     id: 'hahmotelma-peniche',
