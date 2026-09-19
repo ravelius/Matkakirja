@@ -9187,7 +9187,14 @@ export const RAAMATTU = {
           + 'hahmotelmat era 2), jotta CI-jono ei kasva. VELKA: DEU/PRT/GRC-ankkurien '
           + 'lukitus (saaret ja rannikko renkaan ulkopuolella: Rugen 19,3, Sylt 10,8, '
           + 'Helgoland 22,3; Berlengas 6,4; Milos 41,5, Chios 50,7, Delos 34,2). '
-          + 'Seuraava maa: Itavalta (lista hyvaksytty klo 17.35, valmis 17.40).',
+          + 'Seuraava maa: Itavalta (lista hyvaksytty klo 17.35, valmis 17.40). ITAVALTA JA '
+          + 'ALANKOMAAT (Fable 19.9.2026 klo 18.10 Suomen aikaa): AUT 29 / 71 (kaikki '
+          + 'renkaan sisalla; Ferlach ja Steyr vain kaupunki- ja teollisuuskuvina), '
+          + 'julkaistu v1959:ssa neljan maan erana; NLD 29 / 73 + 10 rahavisaa '
+          + '(PAATOKSET 51, ensimmainen maa visoilla; Watteninsaaret renkaan '
+          + 'ulkopuolella mutta lehdella; nimiolimitys korjattu `nimio`-kentalla, '
+          + 'Kinderdijk) - julkaistaan v1961 yhdessa seitseman maan visaeran kanssa. '
+          + 'Kuvat ampariin HEAD 200 71/71 ja 73/73. Seuraava maa: Belgia.',
         'KARTTAUUDISTUKSEN PAATOKSET 47: NOPAN JALKEEN KAMERA JAI TYHJAAN KOHTAAN - '
           + 'KOHDEMAAN ZOOMIKATTO KUMOSI ULOSSOVITUKSEN (Sonnet-simulaattoritesti kierros 5, '
           + '19.9.2026 klo 14.05-14.19 Suomen aikaa: Pariisi -> liftaus -> Amsterdam -> Liiku '
