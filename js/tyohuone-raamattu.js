@@ -9212,7 +9212,16 @@ export const RAAMATTU = {
           + 'esim. "Polvillaan", "Paljain jaloin"), eivat kysymyksen toistoa eivatka '
           + '"-malla"-rakenteita; kysymys yhdella rivilla tai kahdella; Sonnet 2 auditoi ja '
           + 'korjaa KAIKKI visat (FRA, ESP, ITA, DEU, PRT, GRC, AUT, NLD, BEL, POL, CZE, '
-          + 'HUN, DNK, SWE, FIN, IRL, HRV, BGR, ROU) yhdessa erassa. Tila: tilattu 20.45.',
+          + 'HUN, DNK, SWE, FIN, IRL, HRV, BGR, ROU) yhdessa erassa. Tila: tilattu 20.45. '
+          + 'TILA ULKOASU (Opus 1 klo 20.53, mitattu): laatikko oli KOHDEKORTISSA, jonka '
+          + 'pinnalle fokusnosto.css ei latautunut - napit saivat pelin yleisen tumman '
+          + 'tyylin. Korjaus styles.css:n osio .minitehtava.fokusnosto-visa molemmille '
+          + 'korteille: kevyt 1 px kehys, otsake 0,66 rem, vaaleat paperinapit '
+          + '(tumma vain :active), kohdekortin laatikko 398 -> 327 px, napin tausta 41 -> '
+          + '252; vartiot 12/12b. Julkaistaan v1965. SLOVAKIA (Sonnet 2, Fable klo 20.55): '
+          + 'SVK 27 / 62 / 10 visaa (ei pelikaupunkia, Bratislava ja Kosice nostoina '
+          + 'Pozsony/Kassa 1873; visat jo uuden kielisaannon mukaan), HEAD 200 62/62, '
+          + 'julkaistaan v1965.',
         'KUVASELITTEISSA EI LAHDEVIITTAUKSIA LUKIJALLE (Sonnet 3:n loyto 19.9.2026 klo '
           + '20.40 Suomen aikaa): kuva-agenttien selitteissa oli pelaajalle nakyvia '
           + 'viittauksia ("Commonsin kuvauksen mukaan", "Artikkelin mukaan", "tiedoston '
