@@ -378,6 +378,31 @@ export const PAIKALLISAARTEET = {
         + 'Antwerpenin kauppiaiden kautta.',
     },
   },
+  /*
+   * SLOVENIA (20.9.2026, omistajan päätös 19.9.2026: Slovenian
+   * pelikaupunki Ljubljana). Faktat ovat Slovenian karttanostojen
+   * (js/packs/hahmotelma-svn.js Lipica, Idrija) en-Wikipedia-pohjaisia
+   * tekstejä. Ei kuvaa vielä (KUVAA_ODOTTAVAT-lista,
+   * tests/paikallisaarteet.test.mjs) — samat kuvat generoidaan
+   * myöhemmin kuin muillekin maille.
+   */
+  SVN: {
+    pieniAarre: {
+      name: 'Lipicanhevosen kavioraudan jäljennös',
+      fakta: 'Lipican ratsutila Karstin alueella on perustettu vuonna '
+        + '1580, ja sen ensimmäiset hevoset ostettiin Espanjasta, koska '
+        + 'Karstin maaperä ja ilmasto muistuttavat Espanjan oloja. '
+        + 'Lipizzanerhevonen on saanut nimensä tilan mukaan.',
+    },
+    isoAarre: {
+      name: 'Idrijan elohopeakaivoksen kätkö',
+      fakta: 'Idrijan kaivoksessa elohopeaa esiintyy sekä puhtaana että '
+        + 'sinooperina, ja legendan mukaan saavinvalmistaja huomasi '
+        + 'lähteessä nestemäistä elohopeaa jo vuonna 1490. Kaivos '
+        + 'kuuluu Espanjan Almadénin kanssa UNESCOn maailmanperintöön '
+        + 'vuodesta 2012.',
+    },
+  },
   GBR: {
     pieniAarre: {
       name: 'Purkki marmeladia',

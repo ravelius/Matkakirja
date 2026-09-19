@@ -35,8 +35,8 @@ const SUURI = new Set(['venetsia']);
 
 test('jokaisella fokusvirtakaupungilla on kelvollinen pulun tunnetagi', () => {
   // 45 → 46 (19.9.2026): Bryssel liittyi pelikaupungiksi (omistajan
-  // päätös, Belgian pilotti).
-  assert.equal(KAUPUNGIT.length, 46, 'Euroopan fokusvirtapakkeja pitää olla 46');
+  // päätös, Belgian pilotti); 46 → 47 (20.9.2026): Ljubljana (Slovenia).
+  assert.equal(KAUPUNGIT.length, 47, 'Euroopan fokusvirtapakkeja pitää olla 47');
   for (const id of KAUPUNGIT) {
     const tagi = FOKUSVIRRAT[id]?.pollo?.tunne;
     assert.ok(tagi, `${id}: pollo.tunne puuttuu`);
@@ -91,7 +91,7 @@ test('fokusvirta ilmoittaa tunnetagin kommenttikuplan alussa', () => {
  * samaan tauluun. Poikkeus on nimetty, jotta uusi äänetön kaupunki ei
  * livahda mukaan huomaamatta.
  */
-const AANETTOMAT = new Set(['bryssel']);
+const AANETTOMAT = new Set(['bryssel', 'ljubljana']);
 
 test('tunnetagi ei muuta tekstiä eikä ohita versionoidun äänen porttia', () => {
   for (const id of KAUPUNGIT) {

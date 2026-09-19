@@ -23,6 +23,7 @@ export const EUROPE_CITY_COUNTRY = {
   kiova: 'UKR',
   kobenhavn: 'DNK',
   lappi: 'FIN',
+  ljubljana: 'SVN',
   lissabon: 'PRT',
   lontoo: 'GBR',
   madrid: 'ESP',

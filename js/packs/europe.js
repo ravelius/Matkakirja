@@ -77,6 +77,18 @@ const EU_CITIES = [
    * peli sitä lukee, eikä sitä tarvitse siirtää.
    */
   { id: 'bryssel', name: 'Bryssel', wiki: 'Bryssel', ambience: 'kaupunki', x: 295, y: 556, la: 'end', lx: -16, ly: 5 },
+  /*
+   * LJUBLJANA ON TODELLISELLA PAIKALLAAN (46,0569 N / 14,5058 E). Laudan
+   * kaava x = (lon + 11) x 19,2 ja y = (72 - lat) x 26,3 antaa
+   * (489,7, 682,3), ja se on tässä pyöristettynä kokonaisluvuiksi.
+   * Erillislautaa ei enää ole (Raamattu 30.8.2026), joten tätä pakkaa
+   * ei tarkisteta minCityDistance-portilla. Pelilauta on maailmankartta,
+   * jossa sama piste on (6316,9, 1558,0) ja lähimpään kaupunkiin,
+   * Venetsiaan, on 72,9 yksikköä — yli vaaditun 60:n. Piste on siis
+   * mitattu oikeaksi juuri siellä missä peli sitä lukee, eikä sitä
+   * tarvitse siirtää.
+   */
+  { id: 'ljubljana', name: 'Ljubljana', wiki: 'Ljubljana', ambience: 'kaupunki', x: 490, y: 682, la: 'middle', lx: 0, ly: -20 },
   { id: 'berliini', name: 'Berliini', wiki: 'Berliini', ambience: 'kaupunki', x: 468, y: 512, airport: true },
   { id: 'praha', name: 'Praha', wiki: 'Praha', ambience: 'kaupunki', x: 488, y: 576, la: 'end', lx: -16, ly: 5 },
   { id: 'wien', name: 'Wien', wiki: 'Wien', ambience: 'kaupunki', x: 526, y: 626, la: 'start', lx: 16, ly: -6 },
@@ -240,7 +252,15 @@ const EU_EDGES = [
   { a: 'krakova', b: 'varsova', steps: 2 },
   { a: 'krakova', b: 'budapest', steps: 3 },
   { a: 'wien', b: 'budapest', steps: 2 },
-  { a: 'wien', b: 'venetsia', steps: 4 },
+  /*
+   * Ljubljana katkaisi vanhan wien–venetsia-yhteyden (4 askelta)
+   * kahdeksi (2 + 2), samalla tavalla kuin Bryssel ja Firenze
+   * katkaisivat omansa: Ljubljana on Krainin pääkaupunki Wienin ja
+   * Venetsian välisellä reitillä, joten suora jätettiin pois eikä
+   * matka-aika muutu.
+   */
+  { a: 'wien', b: 'ljubljana', steps: 2 },
+  { a: 'ljubljana', b: 'venetsia', steps: 2 },
   { a: 'alpit', b: 'venetsia', steps: 3 },
   { a: 'alpit', b: 'berliini', steps: 4 },
   /*
@@ -389,11 +409,11 @@ export const EUROPE = {
           + 'asti, ja kirkkaimpiin paloihin on jäänyt hyönteisiä kiinni.',
       },
     }),
-    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (46). Uusi
+    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (47). Uusi
     // kaupunki lisätään paikallisaarteisiin samassa suhteessa kuin
     // muutkin (noin kolmasosa isoja) — pääaarre ja mantereen aarre ovat
     // aina yksi kumpikin, eikä ryöstäjien määrä muutu kaupunkien mukana.
-    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 30 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 31 },
   },
 
   questions: EUROPE_QUESTIONS,

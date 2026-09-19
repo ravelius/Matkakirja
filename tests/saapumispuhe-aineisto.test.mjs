@@ -23,7 +23,7 @@ test('media lookup exposes the new take without fallback or playback',()=>{
  * tools/, joilla erä ajettiin). Poikkeus on nimetty, jotta uusi
  * äänetön kaupunki ei livahda mukaan huomaamatta.
  */
-const ILMAN_SAAPUMISOTTOA = new Set(['bryssel']);
+const ILMAN_SAAPUMISOTTOA = new Set(['bryssel', 'ljubljana']);
 
 test('saapumispuheet cover exactly the canonical 45 Europe cities plus named gaps',()=>{
   const odotettu=Object.keys(FOKUSVIRRAT).filter((id)=>!ILMAN_SAAPUMISOTTOA.has(id));

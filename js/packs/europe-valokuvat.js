@@ -1474,6 +1474,36 @@ export const EUROPE_VALOKUVAT = {
       + 'kuvassa hän on ilman.',
   },
 
+  /*
+   * LJUBLJANA (20.9.2026, Sonnet-sisältösessio). Kaksi Commons-kuvaa
+   * Ljubljanica-joesta ja Linnavuoresta; lisenssit ja tekijät luettu
+   * Commonsin imageinfo/extmetadata-rajapinnasta 20.9.2026 (CC BY 4.0
+   * ja CC BY-SA 4.0, ei tunnistettavia yksityishenkilöitä lähikuvassa).
+   * Sama linja kuin muulla Euroopalla Ateenasta lähtien: kuvat haetaan
+   * suoraan Commonsista, ei paikallista kopiota (ks. tiedoston
+   * alkukommentti).
+   */
+  ljubljana: {
+    lisat: [
+      {
+        tiedosto: 'Castle hill in Ljubljana, Slovenia.jpg',
+        vuosi: '2023',
+        lahde: 'Viktar Palstsiuk, Commons (CC BY-SA 4.0)',
+        lyhyt: 'Linnavuori kohoaa Ljubljanica-joen varren talojen yläpuolella.',
+        selite: 'Linnavuoren metsä ja linnan torni Ljubljanica-joen '
+          + 'yllä. Linna toimi 1800-luvulla läänin vankilana, ja '
+          + 'lohikäärme koristaa yhä sen tornia.',
+      },
+    ],
+    tiedosto: 'Franciscan Church of the Annunciation and Ljubljanica River in Ljubljana, 20240502 1809 7777.jpg',
+    vuosi: '2024',
+    lahde: 'Jakub Hałun, Commons (CC BY 4.0)',
+    lyhyt: 'Ljubljanica-joki ja punainen fransiskaanikirkko Ljubljanan keskustassa.',
+    selite: 'Ljubljanica-joen rantamuuri ja Ilmestyksen fransiskaanikirkko '
+      + 'Prešerenin aukiolla. Kirkko rakennettiin vuosina 1646–1660, joten '
+      + 'se seisoi jo isoisän matkan aikaan.',
+  },
+
   berliini: {
 
     lisat: [

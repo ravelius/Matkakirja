@@ -390,6 +390,19 @@ export const POLLO_VALMISKYSYMYKSET = {
     ],
   },
 
+  /*
+   * LJUBLJANA (20.9.2026, omistajan päätös 19.9.2026: Slovenian
+   * pelikaupunki). Vain saapuminen kirjoitettu — kevyt pakki
+   * (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT), laatta ja lehti jäävät
+   * täyden pinon sisältöerään.
+   */
+  ljubljana: {
+    saapuminen: [
+      'Mikä otus on Ljubljanan vaakunassa ja linnan tornissa?',
+      'Millä saksankielisellä nimellä Ljubljanaa kutsuttiin?',
+    ],
+  },
+
   berliini: {
     saapuminen: [
       'Minkä sotien tykeistä voitonpylvään putket otettiin?',

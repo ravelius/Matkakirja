@@ -575,6 +575,41 @@ export const EUROPE_QUESTIONS = {
     },
   ],
 
+  /*
+   * LJUBLJANA (20.9.2026, omistajan päätös 19.9.2026: Slovenia saa
+   * pelikaupungin Ljubljana). Faktapohja EUROPE_ARTIKKELIT.Ljubljana-
+   * artikkelista (en-Wikipedia Ljubljana ja Ljubljana Castle, luettu
+   * 20.9.2026), ei uusia väitteitä.
+   */
+  ljubljana: [
+    {
+      q: 'Minkä maan pääkaupunki Ljubljana on nykyään?',
+      options: ['Slovenia', 'Kroatia', 'Itävalta', 'Unkari'],
+      correct: 0,
+      level: 1,
+      fact: 'Ljubljana on Slovenian pääkaupunki. Isoisän aikana se oli Habsburgien Krainin herttuakunnan pääkaupunki, ja saksaksi sitä kutsuttiin Laibachiksi.',
+      hint: 'Maa on Alppien ja Adrianmeren välissä, Italian ja Itävallan naapurina.',
+      source: 'https://en.wikipedia.org/wiki/Ljubljana',
+    },
+    {
+      q: 'Mikä otus on Ljubljanan tunnus?',
+      options: ['lohikäärme', 'karhu', 'leijona', 'kotka'],
+      correct: 0,
+      fact: 'Lohikäärme koristaa linnan tornia ja kaupungin vaakunaa. Se on peräisin Pyhän Yrjön legendasta: linnan kappelin suojeluspyhimys surmasi lohikäärmeen.',
+      hint: 'Kaupungin kuuluisimmalla sillalla on neljä sen patsasta.',
+      source: 'https://en.wikipedia.org/wiki/Ljubljana',
+    },
+    {
+      q: 'Minä vuonna ensimmäinen juna saapui Wienistä Ljubljanaan?',
+      options: ['1821', '1857', '1849', '1895'],
+      correct: 2,
+      level: 3,
+      fact: 'Rautatie Wienistä ulottui Ljubljanaan vuonna 1849 ja jatkui Triesteen 1857. Juna kuljetti kaupunkiin sekä matkustajia että uusia aikoja.',
+      hint: 'Vuosi on vain hieman vuoden 1848 jälkeen.',
+      source: 'https://en.wikipedia.org/wiki/Ljubljana',
+    },
+  ],
+
   berliini: [
     {
       q: 'Minkä maan pääkaupunki Berliini on?',
@@ -2314,6 +2349,14 @@ export const EUROPE_FACTS = {
     'Galeries Royales Saint-Hubert avattiin vuonna 1847 lasikattoisena kauppakujana, ja se oli aikanaan yksi Euroopan ensimmäisistä katetuista ostoskaduista.',
     {
       text: 'Belgian suklaa on vielä tavallista kaakaolevyä: täytetty praliini keksitään täällä vasta neljänkymmenen vuoden päästä. Torilla myydään sen sijaan pitsiä, jota nyplätään sormin niin nopeasti, etten ehdi seurata.',
+      voice: 'isoisa',
+    },
+  ],
+  ljubljana: [
+    'Ljubljanan linna toimi Krainin läänin vankilana vuosina 1813–1945, ja linnan vanha vankila oli kuilu, johon vangit laskettiin köydellä tai ketjulla.',
+    'Ljubljanan Tivoli-puisto on suunniteltu vuonna 1813 ranskalaisen insinöörin johdolla, ja sen nimi tulee Pariisin Tivolista.',
+    {
+      text: 'Laibach oli Napoleonin Illyrian maakuntien pääkaupunki neljä vuotta, 1809–1813. Ranskalaisten insinööri ehti jättää kaupunkiin puiston, jossa minäkin kävelin tänään.',
       voice: 'isoisa',
     },
   ],
