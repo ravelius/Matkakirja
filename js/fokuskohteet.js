@@ -130,6 +130,7 @@ import { HAHMOTELMA_FRA } from './packs/hahmotelma-fra.js';
 import { HAHMOTELMA_DEU } from './packs/hahmotelma-deu.js';
 import { HAHMOTELMA_PRT } from './packs/hahmotelma-prt.js';
 import { HAHMOTELMA_GRC } from './packs/hahmotelma-grc.js';
+import { HAHMOTELMA_AUT } from './packs/hahmotelma-aut.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
@@ -355,6 +356,14 @@ KOHDE_MAAT.PRT = [...(KOHDE_MAAT.PRT ?? []), ...HAHMOTELMA_PRT];
  * lautayksikön päässä.
  */
 KOHDE_MAAT.GRC = [...(KOHDE_MAAT.GRC ?? []), ...HAHMOTELMA_GRC];
+
+/*
+ * ITÄVALLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti kaupungin (Wien) ulkopuolella, lähin
+ * yli 8 lautayksikön päässä.
+ */
+KOHDE_MAAT.AUT = [...(KOHDE_MAAT.AUT ?? []), ...HAHMOTELMA_AUT];
 
 /*
  * ESPANJAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:

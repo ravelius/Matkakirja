@@ -405,6 +405,7 @@ const SHELL = [
   './js/packs/hahmotelma-deu.js',
   './js/packs/hahmotelma-prt.js',
   './js/packs/hahmotelma-grc.js',
+  './js/packs/hahmotelma-aut.js',
   './js/packs/hahmotelma-esp.js',
   './js/packs/maakartat.js',
   './js/packs/nahtavyysjutut.js',
