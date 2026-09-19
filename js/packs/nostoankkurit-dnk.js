@@ -30,7 +30,6 @@ export const NOSTOANKKURIT_DNK = {
   'nosto:syvennys-kobenhavn-jelling': { lat: 55.756670, lng: 9.419440 },
   'nosto:syvennys-kobenhavn-lego': { lat: 55.730830, lng: 9.115280 },
   'nosto:tollundin-mies': { lat: 56.168691, lng: 9.395000 },
-  'nosto:trelleborg-slagelse': { lat: 55.438249, lng: 11.326367 },
 };
 
 /** Vientikehys, jotta raportti kertoo mistä luvut ovat. */

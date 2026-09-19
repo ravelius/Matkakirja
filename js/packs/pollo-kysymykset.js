@@ -378,6 +378,18 @@ export const POLLO_VALMISKYSYMYKSET = {
     ],
   },
 
+  /*
+   * BRYSSEL (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti).
+   * Vain saapuminen kirjoitettu — kevyt pakki (js/packs/fokusvirrat.js
+   * KEVYET_FOKUSVIRRAT), laatta ja lehti jäävät täyden pinon sisältöerään.
+   */
+  bryssel: {
+    saapuminen: [
+      'Mistä pieni pronssipatsas Brysselissä on kuuluisa?',
+      'Mikä joki katettiin Brysselin keskustan alta 1867–1871?',
+    ],
+  },
+
   berliini: {
     saapuminen: [
       'Minkä sotien tykeistä voitonpylvään putket otettiin?',

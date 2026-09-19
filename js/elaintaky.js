@@ -677,7 +677,15 @@ export function avaaElaintaky(ui, iso) {
     avaaSuurennos: (nappi) => avaaKohdeSuurennos(
       ui,
       kuvakehysRef?.nostokuvaKuva
-        ?? { osoite: paaosoite, selite: kuvatekstiPitka(paakuva) || vakioselite },
+        ?? {
+          tekijaId: paakuva?.tekijaId,
+          tekija: paakuva?.tekija,
+          osoite: paaosoite,
+          selite: kuvatekstiPitka(paakuva) || vakioselite,
+          // Lähde vain suurennoksessa (omistaja 19.9.2026, js/tekijakortti.js
+          // kortinKuvalahde): suurennoksen on siis kannettava se.
+          lahde: paakuva?.lahde || 'Matkakirjan havainnekuva',
+        },
       () => nappi,
       'elaintakyZoom',
     ),
@@ -859,7 +867,13 @@ function elaintakyPiirraKaruselli(ui, kohde, kuvat, vakioselite) {
       if (estaNapautus) { estaNapautus = false; return; }
       avaaKohdeSuurennos(
         ui,
-        { osoite: osoitteet[kohdalla], selite: pitkat[kohdalla] },
+        {
+          tekijaId: kuvat[kohdalla]?.tekijaId,
+          tekija: kuvat[kohdalla]?.tekija,
+          osoite: osoitteet[kohdalla],
+          selite: pitkat[kohdalla],
+          lahde: kuvat[kohdalla]?.lahde || 'Matkakirjan havainnekuva',
+        },
         () => ruudut[kohdalla],
         'elaintakyZoom',
       );
@@ -1219,7 +1233,13 @@ function elaintakyPiirraKuva(ui, kohde, taky, maa, valmisKuva) {
    */
   nappi.addEventListener('click', (tapahtuma) => {
     tapahtuma.stopPropagation();
-    avaaKohdeSuurennos(ui, { osoite: elainkuva, selite: pitka }, () => nappi, 'elaintakyZoom');
+    avaaKohdeSuurennos(ui, {
+      osoite: elainkuva,
+      selite: pitka,
+      lahde: kuva.lahde || 'Matkakirjan havainnekuva',
+      tekijaId: kuva.tekijaId,
+      tekija: kuva.tekija,
+    }, () => nappi, 'elaintakyZoom');
   });
   kehys.appendChild(nappi);
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');

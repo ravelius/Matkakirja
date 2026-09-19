@@ -301,7 +301,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--tasoja 8|9] '
     + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
-    + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>]] '
+    + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia]] '
     + '[--viivataso --viivaversio <v> [--eipiirit]] '
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
     + '[--vari <ISO> --variversio <v> [--aluevesi <yksikköä>] '
@@ -1092,8 +1092,20 @@ for (const rivi of nostot.tilasto.estot) console.log(`    esto ${rivi}`);
  * bittikartta), piirtosivun `nostot.json` ja luettelon
  * tunnus→tiiviste-taulu.
  */
+/*
+ * `--ilman-hahmotelmia` (Fablen erä L, 19.9.2026): uudelleenpoltto, joka
+ * korjaa VANHENTUNEET tiivisteet (tools/tarkista-polton-tuoreus.mjs)
+ * mutta jättää hahmotelmanostot (`hahmotelma-*`) eläviksi — linjaus:
+ * hahmotelmat pysyvät elävinä pisteinä, niiden poltto on oma
+ * päätöksensä. Hahmotelmat ovat silti LADONNASSA mukana (keraaNostot
+ * latoo koko maailman), joten poltettujen paikat ja kyljet ovat samat
+ * kuin pelin mallissa; ne vain eivät pala laattaan eivätkä tule
+ * luettelon tiivistetauluun, jolloin peli piirtää ne elävinä.
+ */
+const ILMAN_HAHMOTELMIA = process.argv.includes('--ilman-hahmotelmia');
 const poltettavatMerkit = nostot.merkit
-  .filter((m) => m.poltettava && (!NOSTO_MAA || m.iso === NOSTO_MAA));
+  .filter((m) => m.poltettava && (!NOSTO_MAA || m.iso === NOSTO_MAA))
+  .filter((m) => !ILMAN_HAHMOTELMIA || !String(m.tunnus ?? '').startsWith('hahmotelma-'));
 /** Tämän ajon tunnus→tiiviste-taulu (maakohtaisessa ajossa maan omat). */
 const poltettuLuettelo = NOSTO_MAA
   ? Object.fromEntries(poltettavatMerkit.map((m) => [m.tunnus, m.tiiviste]))

@@ -104,6 +104,7 @@ const GENETIIVIT = {
   Libya: 'Libyan',
   Liettua: 'Liettuan',
   Luxemburg: 'Luxemburgin',
+  Malta: 'Maltan',
   Madagaskar: 'Madagaskarin',
   Mali: 'Malin',
   Marokko: 'Marokon',

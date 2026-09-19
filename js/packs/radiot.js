@@ -21,7 +21,9 @@
  *   node tools/kirjoita-radiot.mjs
  * Radio Browserin aineistosta. Älä muokkaa käsin: aja haku uudelleen.
  *
- * 110 maata, joista 72 maan yleisradion kanava.
+ * 111 maata, joista 73 maan yleisradion kanava. BEL (19.9.2026) on
+ * käsin lisätty: VRT Radio 1 -osoite tarkistettu hakemalla (302-uudelleen-
+ * ohjaus quantumcast.vrtcdn.be:hen, content-type audio/mpeg, CORS *).
  *
  * Avaimena ISO-3-maatunnus, sama jota map.cityCountry käyttää.
  */
@@ -32,6 +34,7 @@ export const RADIOT = {
   ARG: { url: 'https://sa.mp3.icecast.magma.edge-access.net/sc_rad1', asema: 'LRA1 Radio Nacional Argentina', virallinen: true },
   AUS: { url: 'https://abc.streamguys1.com/live/rnnsw/icecast.audio', asema: 'ABC Radio National', virallinen: true },
   AUT: { url: 'https://orf-live.ors-shoutcast.at/oe1-q2a', asema: 'Ö1 | ORF | HQ', virallinen: true },
+  BEL: { url: 'https://icecast.vrtcdn.be/radio1-high.mp3', asema: 'VRT Radio 1 (Vlaanderen)', virallinen: true },
   BGR: { url: 'https://play.global.audio/testb.aac?dist=RADIOPLAY', asema: 'BNR Horizont', virallinen: true },
   BIH: { url: 'https://s2.free-shoutcast.com/stream/18170', asema: 'Federalni radio (RTVFBiH)', virallinen: true },
   BOL: { url: 'https://stream.zeno.fm/pnwpbyfambruv', asema: 'Radio Panamericana', virallinen: true },

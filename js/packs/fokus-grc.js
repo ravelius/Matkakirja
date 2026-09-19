@@ -290,6 +290,24 @@ export const FOKUS_POHJAT = {
     rajaus: { x: 6494.81, y: 1684.57, w: 125.51, h: 108.51 },
     tiedosto: 'MKD.webp',
   },
+  /*
+   * MALTA (Fablen erä K 19.9.2026; raportti
+   * docs/raportit/viesti-fable-malta-kartalle-20260919.md). Saaristo on
+   * noin 13 × 9 lautayksikköä, joten rajaukseen jätetään vain 5
+   * yksikön marginaali (muilla maillä noin 20 = 0,6°): nostot ovat
+   * 0,5–2 yksikön päässä toisistaan, ja saarten on täytettävä lehti.
+   * Rajaus Natural Earth 1:50M:stä (ne50.geojson) ja Gozon länsikärjestä
+   * 14,18° E; bbox samalla kaavalla kuin muilla (korkeus 1,3 ×
+   * rajaus, kuvasuhde 1,6). `tiedosto` on muiden rivien tapaan
+   * pelkkä nimi: lehtikuvia ei ole generoitu sitten v1365:n
+   * (lehtijärjestelmä purettiin, kartta on laattapyramidi).
+   */
+  MLT: {
+    lauta: 'maailmankartta',
+    bbox: { x: 6290.81, y: 1946.35, w: 43.68, h: 27.3 },
+    rajaus: { x: 6301, y: 1949.5, w: 23.3, h: 21 },
+    tiedosto: 'MLT.webp',
+  },
   MNE: {
     lauta: 'maailmankartta',
     bbox: { x: 6358.49, y: 1619.24, w: 242.65, h: 151.65 },
@@ -1160,6 +1178,9 @@ export const FOKUS_MAANIMET = {
   // cnr: "Crna Gora" / "Црна Гора" (en-Wikipedia, Montenegro).
   // Ruhtinaskunta, osmanien vasalli mutta tosiasiassa itsehallinnollinen
   // (en-Wikipedia, Principality of Montenegro).
+  // mt/en "Malta". Britannian kruununsiirtomaa 1813–1964
+  // (en-Wikipedia, Crown Colony of Malta).
+  MLT: { paikallinen: 'Malta', valtiomuoto: 'Britannian kruununsiirtomaa v. 1873' },
   MNE: { paikallinen: 'Crna Gora · Црна Гора', valtiomuoto: 'ruhtinaskunta v. 1873' },
   // nl: "Nederland" (en-Wikipedia, Netherlands, native_name).
   // Kuningaskunta 1815 lähtien (en-Wikipedia, Netherlands, History).

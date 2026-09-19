@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1967';
+const CACHE = 'matkakirja-2026-08-09.1968';
 const SHELL = [
   './',
   './index.html',
@@ -439,6 +439,8 @@ const SHELL = [
   './js/packs/hahmotelma-dnk.js',
   './js/packs/hahmotelma-svk.js',
   './js/packs/hahmotelma-lux.js',
+  './js/packs/hahmotelma-cyp.js',
+  './js/packs/hahmotelma-mlt.js',
   './js/packs/hahmotelma-hun.js',
   './js/packs/hahmotelma-esp.js',
   './js/packs/hahmotelma-ita.js',
@@ -553,6 +555,9 @@ const SHELL = [
   './js/packs/fokusvirta-alpit.js',
   './js/packs/fokusvirta-lappi.js',
   './js/packs/fokusvirta-tromssa.js',
+  // Bryssel (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti).
+  // Kevyt pakki samasta syystä kuin kuusi edellä.
+  './js/packs/fokusvirta-bryssel.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',

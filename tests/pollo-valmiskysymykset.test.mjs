@@ -28,7 +28,9 @@ const FOKUSVIRTAKAUPUNGIT = readdirSync(new URL('../js/packs/', import.meta.url)
   .map((n) => n.slice('fokusvirta-'.length, -'.js'.length));
 
 test('fokusvirtakaupunkeja löytyy odotettu määrä', () => {
-  assert.equal(FOKUSVIRTAKAUPUNGIT.length, 45);
+  // 45 → 46 (19.9.2026): Bryssel liittyi pelikaupungiksi (omistajan
+  // päätös, Belgian pilotti).
+  assert.equal(FOKUSVIRTAKAUPUNGIT.length, 46);
 });
 
 test('jokaisella fokusvirtakaupungilla on tasan kaksi saapumiskysymystä', () => {

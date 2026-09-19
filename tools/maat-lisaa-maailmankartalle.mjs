@@ -91,6 +91,10 @@ const MAAT = {
   SRB: ['Serbia', 'Serbia', 'Flag of Serbia.svg'],
   SVK: ['Slovakia', 'Slovakia', 'Flag of Slovakia.svg'],
   SVN: ['Slovenia', 'Slovenia', 'Flag of Slovenia.svg'],
+  // Malta (Fablen erä K 19.9.2026): saaristo Malta + Gozo + Comino on
+  // 1:50M:ssä vain muutaman lautayksikön kokoinen, joten pienin rengas
+  // ja harvennus kuten Hongkongilla ja Singaporella.
+  MLT: ['Malta', 'Malta', 'Flag of Malta.svg', { minKoko: 0, sieto: 0.3 }],
   // Aasia ja Atlantti: pienet mutta kaupungilliset — pilleri ja
   // Tutki-palsta tarvitsevat muodon, pieni rengas riittää.
   HKG: ['Hongkong', 'Hongkong', 'Flag of Hong Kong.svg', { minKoko: 0, sieto: 0.3 }],
@@ -141,6 +145,7 @@ const ANKKURIT = [
   ['NPL', ['BGD', 'BTN']],
   ['UZB', ['KGZ', 'TJK', 'TKM']],
   ['DNK', ['ALB', 'BEL', 'BLR', 'LUX', 'MDA', 'MKD', 'MNE', 'SRB', 'SVK', 'SVN']],
+  ['MKD', ['MLT']],
   ['MDG', ['SHN']],
   ['CHN', ['HKG']],
   ['MYS', ['SGP']],
