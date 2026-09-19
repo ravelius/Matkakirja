@@ -1,10 +1,10 @@
 # Viesti Fablelle: Unkarin hahmotelmanostot valmiina (vaihe 2 ja 3)
 
-19.9.2026 klo 19.34 Suomen aikaa, Sonnet-sisältösessio "Matkakirja Sonnet nostot",
+19.9.2026 klo 19.36 Suomen aikaa, Sonnet-sisältösessio "Matkakirja Sonnet nostot",
 haara `sonnet-nostot-hun` (pohja origin/main 883f09fb, v1961). Versiota ei nostettu,
 PR:ää ei avattu, ämpäriin ei viety, Raamattuun ei koskettu.
 
-**Tulos: 25 nostoa (Fablen hyväksymä lista, ei korvauksia; Kecskemét pysyy pudotettuna), 58 Commons-kuvaa, 10 rahavisaa.**
+**Tulos: 25 nostoa (Fablen hyväksymä lista, ei korvauksia; Kecskemét pysyy pudotettuna), 57 Commons-kuvaa, 10 rahavisaa.**
 Uusi tiedosto `js/packs/hahmotelma-hun.js` (`HAHMOTELMA_HUN`, rakenne täsmälleen kuin hahmotelma-fra.js ja muut EU-pakat).
 Rekisteröinti: `js/fokuskohteet.js` (import + `KOHDE_MAAT.HUN`), `sw.js` SHELL, `tools/build-standalone.mjs`; rivit ovat hahmotelma-nld-rivien jälkeen.
 Unkarissa on jo 23 nykyistä nostoa; uudet lisätään niiden jatkoksi `KOHDE_MAAT.HUN`:iin, eikä mikään toista niitä (Balaton, Tokaj, Hortobágy, Eger, Pécs, Pannonhalma, Hollókő ja Aggtelek ovat jo pelissä).
@@ -41,9 +41,9 @@ Unkarissa on jo 23 nykyistä nostoa; uudet lisätään niiden jatkoksi `KOHDE_MA
 | godollo | Gödöllön palatsi | kulttuuri | 689 | 2 | Zizzi, Rlevente | Public domain, CC BY-SA 3.0 | 21.3 |
 | gyula | Gyula | kulttuuri | 688 | 2 | Szalax, Visitgyula2024 | CC BY-SA 4.0, CC0 | 2.9 |
 | opusztaszer | Ópusztaszer | kulttuuri | 634 | 3 | Pasztilla (Attila Terbócs), Árpád Feszty | CC BY-SA 4.0, Public domain | 14.2 |
-| herend | Herendin posliini | kauppa | 921 | 3 | Davidi Vardi | CC BY-SA 4.0 | 27.3 |
+| herend | Herendin posliini | kauppa | 921 | 2 | Davidi Vardi | CC BY-SA 4.0 | 27.3 |
 
-Kuvia yhteensä 58; lisenssijakauma: CC BY-SA 4.0 29, CC BY-SA 3.0 16, Public domain 5, CC0 4, CC BY 3.0 3, CC BY 2.0 1.
+Kuvia yhteensä 57; lisenssijakauma: CC BY-SA 4.0 28, CC BY-SA 3.0 16, Public domain 5, CC0 4, CC BY 3.0 3, CC BY 2.0 1.
 
 ## Rahavisat (10 noston kenttä `visa`, muoto kuten NLD:ssä ja fokusvirta-*.js:ssä)
 
@@ -70,10 +70,10 @@ Neljä vaihtoehtoa, oikea-indeksit 1,3,0,2,1,3,2,2,0,1 (tasainen), vastaus nosto
 | Teksti ≥ 200 merkkiä | 25/25 (401–921 merkkiä) |
 | `lahde`-rivi (artikkeli + 19.9.2026) | 25/25 |
 | 2 kysymystä pululle | 25/25 |
-| ≥ 2 kuvaa | 25/25 (8 kohteella vähintään 2, viidellä 3) |
-| Kuvan kentät (osoite, lyhyt, selite, lahde, tekija, lahdeUrl, lisenssi, lisenssiUrl) | 58/58 |
-| Lisenssi kelvollinen (PD / CC0 / CC BY / CC BY-SA) | 58/58; **luettu uudelleen Commonsin extmetadata-rajapinnasta erikseen** (4 rinnakkain) |
-| Kuvatiedostot olemassa, sha256-etuliite = tiedostonimen tunniste | 58/58 |
+| ≥ 2 kuvaa | 25/25 (7 kohteella vähintään 2, viidellä 3) |
+| Kuvan kentät (osoite, lyhyt, selite, lahde, tekija, lahdeUrl, lisenssi, lisenssiUrl) | 57/57 |
+| Lisenssi kelvollinen (PD / CC0 / CC BY / CC BY-SA) | 57/57; **luettu uudelleen Commonsin extmetadata-rajapinnasta erikseen** (4 rinnakkain) |
+| Kuvatiedostot olemassa, sha256-etuliite = tiedostonimen tunniste | 57/57 |
 | Korostukset löytyvät tekstistä | 25/25 |
 | Fokuslehden rajaus (`osuuLehteen('HUN')`) | 25/25 |
 | Karttarivi pelin omalla passilla (`nostojenKarttapaikat`) | 25/25 pääkartalla, `kaupunginKohdalla` = null kaikilla (pelikaupunki Budapest; lähin Kiskunságin puisto 13,3 ja Ópusztaszer 23,1 merkistä) |
@@ -92,13 +92,13 @@ Neljä vaihtoehtoa, oikea-indeksit 1,3,0,2,1,3,2,2,0,1 (tasainen), vastaus nosto
 5. **Mohács ja Szigetvár**: teksti asiallinen (1526, 1687; Suleiman kuoli luonnollisiin syihin, Zrinskin viimeinen rynnäkkö); kuvina Mohácsin muistopuiston portti (Sátorhely) ja Szigetvárin linnan vanhat Fortepan-valokuvat (mustavalkoinen ja seepia). Mohácsin nappi ja teksti kertovat myös Busójárás-karnevaalin (Unesco 2009).
 6. **Fertőd, Ják**: artikkelit ovat lyhyitä (931 ja 1 690 merkkiä), tekstit lyhyitä (401 ja 467 merkkiä). Fertődin kolmas kuva on kappelin enkelinpäät (kullattuja enkeleitä sisäkuvassa jätettiin pois alastomuuden takia).
 7. **Gödöllö**: teksti Franz Joseph ja Sisi; Unkarin valtio osti kartanon takaisin maaliskuussa 1867 ja lahjoitti sen kruunajaislahjana (artikkelin osio "Habsburg rule"). Pääkuva on PD (tekijä käyttäjätunnus "Zizzi").
-8. **Herend**: kolmen kuvan joukossa yksi, jossa on tunnistettava henkilö (posliinimestari työssä; Commons-kuvaus sanoo häntä patsaan tekijäksi, mutta kuvassa hän tekee korikulhoa — selite kuvaa neutraalisti). **Ópusztaszer**: Feszty-panoraaman yksityiskohta (PD) valittu, kaatuneita esittävät osat hylätty; sen Commons-kuvaus on tyhjä, selite perustuu tiedostonimeen ja kuvaan.
+8. **Herend**: kolmas kuva (hun-nosto-herend-ef6e693f, posliinimestari työssä, tunnistettava yksityishenkilö) pudotettu Fablen ohjeesta; Herendillä kaksi kuvaa (siirretty kansioon _poistettu). **Ópusztaszer**: Feszty-panoraaman yksityiskohta (PD) valittu, kaatuneita esittävät osat hylätty; sen Commons-kuvaus on tyhjä, selite perustuu tiedostonimeen ja kuvaan.
 9. **1873-näkökulma**: nappi-alaotsikot: Esztergom (1856 vihitty), Szentendre (kaupunkioikeudet 1872), Gödöllö (1867), Herend (Fischer Farkasházy 1872), Villány (postitoimisto 1867), Mezőkövesd (rautatie 1860), Ópusztaszer (panoraama maalataan 1892–94), Tisza-tó (pato 1973).
 10. **Kuvat**: 10 tiedostoa nimetty uudelleen todellisen sha256:n mukaan (agentit B; JSON päivitetty); osa kuvista 1920 px leveitä (Commonsin vakiokoko); Hévízin lumpeet 1219 px. Fortepan-kuvien tekijä on kirjattu lahjoittajan mukaan (Lechner Nonprofit Kft., Ebner, Lissák Tivadar).
 
 ## Mitä jäi tekemättä
 
-- **Kuvien vienti ämpäriin** (Fable): 58 tiedostoa kansiosta
+- **Kuvien vienti ämpäriin** (Fable): 57 tiedostoa kansiosta
   `/Users/samireivinen/Matkakirja-nostot-kuvat/bel/` osoitteeseen
   `https://media.matkakirja.app/karttanostot/20260920/<tiedosto>`; osoitteet on kirjattu pakkaan
   etukäteen, ennen vientiä ne vastaavat 404:llä (puuttuva kuva pudotetaan sarjasta). Kuvia ei ole
@@ -111,5 +111,5 @@ Neljä vaihtoehtoa, oikea-indeksit 1,3,0,2,1,3,2,2,0,1 (tasainen), vastaus nosto
 
 ## Kuvat ja kansio
 
-`/Users/samireivinen/Matkakirja-nostot-kuvat/bel/`: 58 kpl `bel-nosto-<id>-<sha8>.jpg`, alikansio
+`/Users/samireivinen/Matkakirja-nostot-kuvat/bel/`: 57 kpl `bel-nosto-<id>-<sha8>.jpg`, alikansio
 `_json/` (kuvatiedot kohteittain).
