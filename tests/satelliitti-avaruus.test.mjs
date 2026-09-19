@@ -522,8 +522,10 @@ test('avaruusnäkymä asettuu ja purkautuu täsmälleen ennalleen', () => {
    * heti, joten molemmat tulevat samassa avauksessa.
    */
   assert.equal(lauta.rajat.length, 2, JSON.stringify(lauta.rajat));
-  assert.ok(lauta.rajat[0].max > lauta.rajat[1].max,
-    'avausajon katto ei ollut leponäkymää korkeammalla');
+  // PAATOKSET 52: ajo alkaa avauskorkeudesta, joka on jo kaistan sisällä
+  // (1,3 × avaus), joten ajon katto ei ole leponäkymän kattoa matalampi.
+  assert.ok(lauta.rajat[0].max >= lauta.rajat[1].max,
+    'avausajon katto oli leponäkymää matalampi');
   // PAATOKSET 50: puhelimen lähin raja 0,084 × avaus ≈ 0,36 (ennen 0,51).
   assert.ok(lauta.rajat[1].min > 0.3 && lauta.rajat[1].max > lauta.rajat[1].min);
   assert.ok(ikkuna.luokat.has('satelliitti-avaruus'), 'ruumiin luokka puuttuu');
@@ -823,21 +825,28 @@ test('avaruuskalvo palaa nullina ilman koteloa eikä kaada linssiä', async () =
  * loppuu."*
  */
 
-test('avausajo alkaa koko pallosta ja päättyy melkein koko ruutuun', async () => {
+test('avausajo alkaa koko pallosta ja päättyy rajattuun lähikuvaan pilvien alle', async () => {
+  /*
+   * PAATOKSET 52 (omistaja 19.9.2026 klo 20.51): avaus alkaa lähempää
+   * (koko pallo 92 %) ja päättyy lepokorkeuteen, jossa pallo on ruudun
+   * kapeinta sivua leveämpi (reunat rajautuvat ulos), mutta kamera on
+   * yhä pilvikuoren täyden peiton korkeudella.
+   */
   const m = await import('../js/linssit/satelliitti-avaruus.js');
+  const { PILVIEN_TAYSI } = await import('../js/linssit/astro-sumu.js');
+  assert.ok(m.AVAUSAJON_LOPPU >= PILVIEN_TAYSI, 'lepokorkeus menee pilvien alle');
   for (const [nimi, mitat] of Object.entries(RUUDUT)) {
     const kapein = Math.min(mitat.leveys, mitat.korkeus);
     const alku = m.avausKorkeus({ ...mitat, marginaali: m.ALOITUKSEN_MARGINAALI });
-    const loppu = m.avausKorkeus(mitat);
+    const loppu = m.avausKorkeus(mitat) * m.AVAUSAJON_LOPPU;
     const dAlku = m.halkaisijaRuudulla(alku, { korkeus: mitat.korkeus }) / kapein;
     const dLoppu = m.halkaisijaRuudulla(loppu, { korkeus: mitat.korkeus }) / kapein;
-    // Alussa pallo näkyy KOKONAAN väljästi: 60–70 % kapeimmasta sivusta.
-    assert.ok(dAlku >= 0.6 && dAlku <= 0.7, `${nimi}: alku ${(dAlku * 100).toFixed(1)} %`);
-    // Lopuksi se peittää melkein koko ruudun: 90–95 %.
-    assert.ok(dLoppu >= 0.9 && dLoppu <= 0.95, `${nimi}: loppu ${(dLoppu * 100).toFixed(1)} %`);
-    // Ajo menee SISÄÄNPÄIN ja kasvattaa pallon vähintään 1,3-kertaiseksi.
+    // Alussa pallo näkyy KOKONAAN: 90–95 % kapeimmasta sivusta.
+    assert.ok(dAlku >= 0.9 && dAlku <= 0.95, `${nimi}: alku ${(dAlku * 100).toFixed(1)} %`);
+    // Lopuksi se on kapeinta sivua leveämpi: reunat rajautuvat ulos.
+    assert.ok(dLoppu > 1.05, `${nimi}: loppu ${(dLoppu * 100).toFixed(1)} %`);
     assert.ok(alku > loppu, `${nimi}: ajo ei tule lähemmäs`);
-    assert.ok(dLoppu / dAlku >= 1.3, `${nimi}: kasvu ${(dLoppu / dAlku).toFixed(2)}×`);
+    assert.ok(dLoppu / dAlku >= 1.15, `${nimi}: kasvu ${(dLoppu / dAlku).toFixed(2)}×`);
   }
 });
 
@@ -902,10 +911,10 @@ test('liikkeenvähennys: ei pyörimistä ja zoom suoraan loppuasentoon', () => {
   assert.equal(tila.pyorii, false);
   assert.equal(tila.avausajo.kaynnissa, false, 'ajo jäi kesken');
   assert.equal(tila.avausajo.osuus, 1);
-  // Kamera on LOPPUASENNOSSA heti, ei aloituskorkeudessa.
-  assert.ok(Math.abs(pallo.tila.pov.altitude - tila.avauskorkeus) < 0.001,
-    `${pallo.tila.pov.altitude} vs ${tila.avauskorkeus}`);
-  assert.ok(tila.aloituskorkeus > tila.avauskorkeus);
+  // Kamera on LOPPUASENNOSSA (lepokorkeus) heti, ei aloituskorkeudessa.
+  assert.ok(Math.abs(pallo.tila.pov.altitude - tila.lepokorkeus) < 0.001,
+    `${pallo.tila.pov.altitude} vs ${tila.lepokorkeus}`);
+  assert.ok(tila.aloituskorkeus > tila.lepokorkeus);
   // Ja kaikki kamerakirjoitukset ovat hyppyjä (kesto 0).
   assert.ok(pallo.tila.ajot.every((k) => k === 0), JSON.stringify(pallo.tila.ajot));
   nakyma.pura();
