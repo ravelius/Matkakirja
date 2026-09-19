@@ -782,6 +782,26 @@ async function mittaa(leveys, korkeus) {
    * Pulun laatikon yhdeksästä pisteestä luetaan, mitä pulun ALLA on:
    * yksikään elementti, jolla on oma tekstisolmu, ei saa olla siellä.
    */
+  /*
+   * KASVOKANGAS SEURAA NAPPIA (Fable 19.9.2026 klo 21.36): näkyvä lintu
+   * on .livia-kasvot-pinta (js/livia-eleet.js). Sen siirtymä napista
+   * mitataan ennen Siperia-korttia ja kortin jälkeen (pulu nostettu):
+   * siirtymän on oltava sama, muuten lintu jäi vanhaan paikkaan.
+   */
+  const kangas = () => s.evaluate(() => {
+    const n = document.querySelector('.pollo-nappi.pollo-kelluu');
+    const pinta = document.querySelector('.livia-kasvot-pinta');
+    if (!n || !pinta || pinta.hidden || !pinta.getClientRects().length) return null;
+    const a = n.getBoundingClientRect();
+    const b = pinta.getBoundingClientRect();
+    return {
+      dx: Math.round((b.left + b.width / 2) - (a.left + a.width / 2)),
+      dy: Math.round((b.top + b.height / 2) - (a.top + a.height / 2)),
+      napinAla: Math.round(a.bottom),
+      ylla: n.classList.contains('pulu-paneelin-ylla'),
+    };
+  });
+  const kangasEnnen = await kangas();
   // Sib.-välilehti avaa Siperia-kortin (omistajan kuva 19.9.2026 klo 18.01).
   const sib = s.getByText('Sib.', { exact: true }).first();
   const siperia = await sib.click({ timeout: 5000 }).then(() => 'Sib.').catch((e) => `ei: ${String(e).slice(0, 60)}`);
@@ -810,6 +830,11 @@ async function mittaa(leveys, korkeus) {
   });
   vaadi(`${leveys}px: pulu ei peitä jakson tekstiä esityksen jälkeen`,
     peitto.pulu && peitto.tekstit.length === 0, JSON.stringify({ siperia, ...peitto }));
+  const kangasJalkeen = await kangas();
+  vaadi(`${leveys}px: Livian kasvokangas seuraa pulua Siperia-kortilla (siirtymä napista ±3 px)`,
+    Boolean(kangasEnnen && kangasJalkeen)
+      && Math.abs(kangasJalkeen.dx - kangasEnnen.dx) <= 3 && Math.abs(kangasJalkeen.dy - kangasEnnen.dy) <= 3,
+    JSON.stringify({ kangasEnnen, kangasJalkeen }));
   await s.screenshot({ path: join(ULOS, `savuke-ihmisen-pulu-siperia-${leveys}.jpg`), type: 'jpeg', quality: 60 }).catch(() => {});
 
   writeFileSync(join(ULOS, `savuke-ihmisen-kappaleet-${leveys}.json`), JSON.stringify({
