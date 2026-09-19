@@ -2106,6 +2106,114 @@ async function ajaNakyma(nimi) {
       ui.pallolauta?.heraa?.();
     }, paluu);
     await s.waitForTimeout(800);
+
+    /*
+     * ---- 49: LAASTARI EI VÄRJÄÄ JÄÄTÄ RUSKEAKSI ---------------------
+     *
+     * Raamattu PAATOKSET 50 (jäännös): reliefipyramidissa ei ole
+     * jääsekoitusta (jaapaino ja jäätikkömaski ovat vain pallokuvassa),
+     * joten laastari maalaisi jäätiköt korkeusväreillä ruskeiksi. Laastari
+     * on rajattu ±LAASTARIN_LEVEYSRAJAan (js/pallolaatat.js). Koealat:
+     * Grönlannin eteläkärki (raja kulkee sen poikki), Islanti, Alaskan
+     * St. Elias -jäätiköt ja Patagonian eteläinen mannerjäätikkö (rajan
+     * sisällä). Jokaisesta kaksi kaappausta pilvet piilossa: laastari
+     * näkyvissä ja laastarin verkot hetkeksi piilotettuina (4k-pohja).
+     * Vaaleiden (jää) pikselien osuus ruudun keskineliössä saa poiketa
+     * pohjasta enintään 5 prosenttiyksikköä.
+     */
+    const JAA_KOEALAT = [
+      { nimi: 'Grönlanti', lat: 63.0, lng: -44.0 },
+      { nimi: 'Islanti', lat: 64.4, lng: -16.8 },
+      { nimi: 'Alaska', lat: 60.4, lng: -140.5 },
+      { nimi: 'Patagonia', lat: -49.5, lng: -73.4 },
+    ];
+    const vaaleus = (kuva, dpr) => {
+      const w = kuva.width; const h = kuva.height;
+      const puoli = Math.round(90 * dpr);
+      const cx = Math.round(w / 2); const cy = Math.round(h / 2);
+      let vaaleita = 0; let n = 0;
+      for (let y = cy - puoli; y < cy + puoli; y += 2) {
+        for (let x = cx - puoli; x < cx + puoli; x += 2) {
+          const i = (y * w + x) * 4;
+          const r = kuva.data[i]; const g = kuva.data[i + 1]; const b = kuva.data[i + 2];
+          n += 1;
+          /*
+           * JÄÄ ON HARMAATA. Linssin varjostus himmentää pinnan, joten jää
+           * ei ole valkoista: mitattu Grönlannin keskeltä luminanssi
+           * 79–93 ja kylläisyys 1–2 (max − min). Korkeusvärit (ruskea,
+           * vihreä) ja meri ovat kylläisyydeltään yli 10.
+           */
+          const l = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+          if (l >= 60 && Math.max(r, g, b) - Math.min(r, g, b) <= 8) vaaleita += 1;
+        }
+      }
+      return n ? vaaleita / n : 0;
+    };
+    const jaa49 = [];
+    await s.evaluate(() => window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.piilotaPilvet?.(true));
+    for (const ala of JAA_KOEALAT) {
+      const tila = await s.evaluate(async (a) => {
+        const { ui } = window.matkakirja;
+        const p = ui.pallonInstanssi;
+        const odota = (ms) => new Promise((v) => setTimeout(v, ms));
+        let laastarilla = false;
+        for (const alt of [0.35, 0.25, 0.18, 0.13]) {
+          p.pointOfView({ lat: a.lat, lng: a.lng, altitude: alt }, 0);
+          ui.pallolauta?.heraa?.();
+          await odota(1500);
+          laastarilla = Boolean(ui.pallolinssi?.kahva?.avaruus?.tila?.()?.laastarilla);
+          if (laastarilla) break;
+        }
+        const alku = Date.now();
+        while (Date.now() - alku < 15000) {
+          const m = ui.pallolauta?.lepokerros?.()?.mittarit?.() ?? {};
+          if (laastarilla && (m.laattoja ?? 0) > 0 && (m.valmiita ?? 0) >= m.laattoja) break;
+          await odota(300);
+        }
+        await odota(800);
+        let verkkoja = 0;
+        p.scene().traverse((o) => { if (o.userData?.laattakerros && o.visible) verkkoja += 1; });
+        return { laastarilla, verkkoja, korkeus: +p.pointOfView().altitude.toFixed(3) };
+      }, ala);
+      const dpr = NAKYMAT[nimi].deviceScaleFactor;
+      const kanssa = decodePng(await s.screenshot({ type: 'png', timeout: 120000 }));
+      await s.evaluate(async () => {
+        window.matkakirja.ui.pallonInstanssi.scene().traverse((o) => {
+          if (o.userData?.laattakerros) o.visible = false;
+        });
+        await new Promise((v) => setTimeout(v, 600));
+      });
+      const ilman = decodePng(await s.screenshot({ type: 'png', timeout: 120000 }));
+      await s.evaluate(() => {
+        window.matkakirja.ui.pallonInstanssi.scene().traverse((o) => {
+          if (o.userData?.laattakerros) o.visible = true;
+        });
+      });
+      if (ULOS) {
+        await s.screenshot({
+          path: join(ULOS, `astro-laastari-jaa-${ala.nimi}-20260919.jpg`), type: 'jpeg', quality: 70, timeout: 120000,
+        }).catch(() => {});
+      }
+      jaa49.push({
+        ...ala, ...tila,
+        vaaleaLaastari: +vaaleus(kanssa, dpr).toFixed(3),
+        vaaleaPohja: +vaaleus(ilman, dpr).toFixed(3),
+      });
+    }
+    await s.evaluate(() => window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.piilotaPilvet?.(false));
+    console.log(`    JAA49 ${JSON.stringify(jaa49)}`);
+    vaadi(t('49: laastari ei värjää jäätä ruskeaksi (vaaleiden osuus kuten 4k-pohjassa ±5 %)'),
+      jaa49.length === JAA_KOEALAT.length
+        && jaa49.every((a) => Math.abs(a.vaaleaLaastari - a.vaaleaPohja) <= 0.05),
+      JSON.stringify(jaa49.map((a) => ({
+        nimi: a.nimi, laastarilla: a.laastarilla, verkkoja: a.verkkoja, laastari: a.vaaleaLaastari, pohja: a.vaaleaPohja,
+      }))));
+    await s.evaluate((pov) => {
+      const { ui } = window.matkakirja;
+      ui.pallonInstanssi.pointOfView({ lat: pov.lat, lng: pov.lng, altitude: pov.altitude }, 0);
+      ui.pallolauta?.heraa?.();
+    }, paluu);
+    await s.waitForTimeout(800);
     napa = {
       ...napaTila, kiekko, keha, laikut, pilvetPiilossa: pilvetPois,
     };
