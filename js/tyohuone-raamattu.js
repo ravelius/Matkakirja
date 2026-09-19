@@ -9525,7 +9525,14 @@ export const RAAMATTU = {
           + 'Ljubljanalle ja Kosicelle (resepti kohta 20, n. 3 h/kaupunki); savuke-'
           + 'nostoklikkaus punainen mainissa, ei sarjoissa (Opus 2 DNK/EST:n jalkeen); '
           + 'pohja-ajo (arvio ennen kaynnistysta); Brysselin aanet; vanhat kuvat era 2 '
-          + 'silmatarkistus taydessa koossa (Sonnet 2) ja ampparilataus (Fable).',
+          + 'silmatarkistus taydessa koossa (Sonnet 2) ja ampparilataus (Fable). DNK JA EST '
+          + 'NOSTOTASOLLE (Opus 2 797a546e, Fable vei 20.9.2026 klo 01.36): 15 + 14 laattaa '
+          + 'julisteet/pyramidi/2026-09-19-L/nostot/, HEAD 200, pyramidi.json laattojen '
+          + 'jalkeen; vanhentuneita jaljella CYP 4, ITA 1, POL 1 (Opus 2 ottaa). Macilla '
+          + 'generaattori tarvitsee PLAYWRIGHT_JS ja PW_CHROMIUM (savukkeet CHROMIUM). '
+          + 'POHJA-AJON ARVIO (Opus 2): 16 ytimella 1,5-2 h, uusi paivatty kansio 2-3 Gt; '
+          + 'R2:n ilmaisraja 10 Gt sisaltaa vanhat versiot -> Fable mittaa amparin koon '
+          + 'ennen lupaa; ajo tools/polta-paikallisesti.sh:lla (luettelo oikein).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
