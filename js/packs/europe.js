@@ -64,6 +64,19 @@ const EU_CITIES = [
    */
   { id: 'sevilla', name: 'Sevilla', wiki: 'Sevilla', ambience: 'kaupunki', x: 81, y: 917, la: 'end', lx: -16, ly: 5 },
   { id: 'amsterdam', name: 'Amsterdam', wiki: 'Amsterdam', ambience: 'satama', x: 305, y: 516, la: 'start', lx: 16, ly: 5 },
+  /*
+   * BRYSSEL ON TODELLISELLA PAIKALLAAN (50,8503 N / 4,3517 E). Laudan
+   * kaava x = (lon + 11) x 19,2 ja y = (72 - lat) x 26,3 antaa
+   * (294,8, 556,2), ja se on tässä pyöristettynä kokonaisluvuiksi.
+   * Vanhan 1000 x 1000 -laudan mitassa Amsterdamiin jää vain 41
+   * yksikköä eli alle laudan 60:n, MUTTA erillislautaa ei enää ole
+   * (Raamattu 30.8.2026) eikä tätä pakkaa tarkisteta
+   * minCityDistance-portilla. Pelilauta on maailmankartta, jossa sama
+   * piste on (5978,4, 1353,0) ja Amsterdamiin on 70,2 yksikköä — yli
+   * vaaditun 60:n. Piste on siis mitattu oikeaksi juuri siellä missä
+   * peli sitä lukee, eikä sitä tarvitse siirtää.
+   */
+  { id: 'bryssel', name: 'Bryssel', wiki: 'Bryssel', ambience: 'kaupunki', x: 295, y: 556, la: 'end', lx: -16, ly: 5 },
   { id: 'berliini', name: 'Berliini', wiki: 'Berliini', ambience: 'kaupunki', x: 468, y: 512, airport: true },
   { id: 'praha', name: 'Praha', wiki: 'Praha', ambience: 'kaupunki', x: 488, y: 576, la: 'end', lx: -16, ly: 5 },
   { id: 'wien', name: 'Wien', wiki: 'Wien', ambience: 'kaupunki', x: 526, y: 626, la: 'start', lx: 16, ly: -6 },
@@ -191,7 +204,15 @@ const EU_EDGES = [
 
   // Länsi-Eurooppa. Biskajan rannikon suora reitti on jätetty pois:
   // Iberiaan kuljetaan Rhônen laaksoa ja rannikkoa pitkin (haaste).
-  { a: 'pariisi', b: 'amsterdam', steps: 3 },
+  /*
+   * Bryssel katkaisi vanhan pariisi–amsterdam-yhteyden (3 askelta)
+   * kahdeksi, samalla tavalla kuin Firenze katkaisi Venetsia–Rooman.
+   * Suora jätettiin pois, koska se olisi kulkenut Brysselin ohi
+   * rinnakkaisena pikatienä ja tehnyt uudesta kaupungista
+   * väliinjäävän mutkan.
+   */
+  { a: 'pariisi', b: 'bryssel', steps: 2 },
+  { a: 'bryssel', b: 'amsterdam', steps: 2 },
   { a: 'pariisi', b: 'marseille', steps: 4 },
   { a: 'pariisi', b: 'alpit', steps: 3 },
   { a: 'marseille', b: 'barcelona', steps: 3 },
@@ -368,11 +389,11 @@ export const EUROPE = {
           + 'asti, ja kirkkaimpiin paloihin on jäänyt hyönteisiä kiinni.',
       },
     }),
-    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (45). Uusi
+    // Laattoja on oltava tasan yhtä monta kuin kaupunkeja (46). Uusi
     // kaupunki lisätään paikallisaarteisiin samassa suhteessa kuin
     // muutkin (noin kolmasosa isoja) — pääaarre ja mantereen aarre ovat
     // aina yksi kumpikin, eikä ryöstäjien määrä muutu kaupunkien mukana.
-    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 29 },
+    counts: { star: 1, mannerAarre: 1, isoAarre: 14, pieniAarre: 30 },
   },
 
   questions: EUROPE_QUESTIONS,
