@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1962, teksti: 'Belgia, Puola, Tšekki; visa kortille; pulu; zoom; karsinta' },
   { v: 1961, teksti: 'Astronautin kameran laattavirhe: merilaastari ja orpo laatta' },
   { v: 1960, teksti: 'Alankomaat 29 nostoa ja 80 rahavisaa 8 EU-maahan' },
   { v: 1959, teksti: 'EU-hahmotelmat erä 2: Saksa, Portugali, Kreikka, Itävalta' },

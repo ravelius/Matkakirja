@@ -127,11 +127,14 @@ import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
 import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
 import { NAKYVAT_KAUPUNGIT_FRA } from './packs/nakyvat-kaupungit-fra.js';
 import { HAHMOTELMA_FRA } from './packs/hahmotelma-fra.js';
+import { HAHMOTELMA_BEL } from './packs/hahmotelma-bel.js';
 import { HAHMOTELMA_DEU } from './packs/hahmotelma-deu.js';
 import { HAHMOTELMA_PRT } from './packs/hahmotelma-prt.js';
 import { HAHMOTELMA_GRC } from './packs/hahmotelma-grc.js';
 import { HAHMOTELMA_AUT } from './packs/hahmotelma-aut.js';
 import { HAHMOTELMA_NLD } from './packs/hahmotelma-nld.js';
+import { HAHMOTELMA_POL } from './packs/hahmotelma-pol.js';
+import { HAHMOTELMA_CZE } from './packs/hahmotelma-cze.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
@@ -334,6 +337,14 @@ KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...NAKYVAT_KAUPUNGIT_FRA];
 KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...HAHMOTELMA_FRA];
 
 /*
+ * BELGIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; Belgiassa ei ole pelikaupunkia eikä muita karttanostoja,
+ * ja rivit on harvennettu keskenään yli 7 lautayksikön päähän.
+ */
+KOHDE_MAAT.BEL = [...(KOHDE_MAAT.BEL ?? []), ...HAHMOTELMA_BEL];
+
+/*
  * SAKSAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
  * EU-maiden karttanostot, Espanjan ja Italian jälkeen Saksa). Sama reitti
  * ja sama rakenne kuin Ranskan hahmotelmalla; rivit ovat aidosti
@@ -374,6 +385,22 @@ KOHDE_MAAT.AUT = [...(KOHDE_MAAT.AUT ?? []), ...HAHMOTELMA_AUT];
  * lähin yli 8 lautayksikön päässä.
  */
 KOHDE_MAAT.NLD = [...(KOHDE_MAAT.NLD ?? []), ...HAHMOTELMA_NLD];
+
+/*
+ * PUOLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti pelikaupunkien (Varsova, Krakova)
+ * ulkopuolella eivätkä toista Puolan 25 nykyistä nostoa.
+ */
+KOHDE_MAAT.POL = [...(KOHDE_MAAT.POL ?? []), ...HAHMOTELMA_POL];
+
+/*
+ * TŠEKIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti Prahan ulkopuolella eivätkä toista
+ * Tšekin 24 nykyistä nostoa.
+ */
+KOHDE_MAAT.CZE = [...(KOHDE_MAAT.CZE ?? []), ...HAHMOTELMA_CZE];
 
 /*
  * ESPANJAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
@@ -5826,6 +5853,22 @@ export function asetaKohdeNostot(hae) {
   kohdeNostoHaku = typeof hae === 'function' ? hae : null;
 }
 
+/*
+ * LUKIJAN KYSYMYS MYÖS KOHDEKORTILLE (Sonnet 1:n laitetesti 19.9.2026,
+ * v1960; Raamattu PAATOKSET 51). Hahmotelmanostot ovat KOHDE_MAAT-
+ * rivejä eli kohdeolioita, joten ne avautuvat tällä kortilla eivätkä
+ * nostokortilla, ja `visa`-kenttä jäi piirtämättä: kuvat, teksti,
+ * pulun kysymykset ja lähde näkyivät, visalaatikko ei. Piirtäjä on
+ * nostokortin oma (js/fokusnosto.js piirraNostonVisa) — sama laatikko,
+ * sama palkkio, sama kerran maksava avain — ja se rekisteröidään
+ * samasta syystä kuin nostohaku yllä (niputusjärjestys).
+ */
+let kohdeVisaPiirtaja = null;
+
+export function asetaKohdeVisa(piirra) {
+  kohdeVisaPiirtaja = typeof piirra === 'function' ? piirra : null;
+}
+
 /** Kohteeseen kiinnitetty täkynosto tietoruudun napiksi, jos sellainen on. */
 function piirraKohteenNosto(ui, sisalto, kohde) {
   const nosto = kohdeNostoHaku?.(ui, kohde.id);
@@ -5879,6 +5922,7 @@ function piirraKohteenSisus(ui, sailio, kohde, valmisKuva) {
   // ENSIMMÄISEN kuvan alle (piirraKohdeKuvat), ei otsikon alle.
   piirraKohdeKuvat(ui, sailio, kohde, valmisKuva);
   piirraKohdeTeksti(ui, sailio, kohde);
+  kohdeVisaPiirtaja?.(ui, sailio, kohde);
   piirraKohdeKysymykset(ui, sailio, kohde);
   piirraKierrosnappi(ui, sailio, kohde);
   piirraKohteenNosto(ui, sailio, kohde);

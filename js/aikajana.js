@@ -6211,6 +6211,10 @@ class Aikajana {
     // Nostokortti (kertomuskaari) ja palkki (kumpikin): yläpalkki palaa.
     this.ui.nostokortti?.pura?.();
     this.ui.nostokortti = null;
+    // Pulun linssikysymykset pois (kytketty kaynnistaAikajana-funktiossa):
+    // paneeli palaa tavalliseen tervehdykseen.
+    this.ui.purePulunKysymykset?.();
+    this.ui.purePulunKysymykset = null;
     this.virtanapit = null;
     // Aikaselain on juuren lapsi, mutta sen kuuntelijat ja body-luokka
     // ovat sen omia: purku on moduulin oma (js/linssit/aikaselain.js).
@@ -6348,6 +6352,7 @@ import { suljeElaintaky } from './elaintaky.js';
 import { suljeSyvennys } from './syvennys.js';
 import { luoTutkimusvaihe, luoVirtanapit, lataaTutkimuksenTyyli } from './linssit/ihmisen-matka-tutkimus.js';
 import { luoNostokortti, lyhytAjoitus } from './linssit/ihmisen-matka-kortti.js';
+import { PULUKYSYMYSTEN_LINSSI, kytkePulunKysymykset } from './linssit/ihmisen-matka-pulukysymykset.js';
 import { luoAikaselain } from './linssit/aikaselain.js';
 import { lueMuisti, tallennaMuisti, tyhjennaMuisti } from './linssit/ihmisen-matka-muisti.js';
 
@@ -6407,6 +6412,15 @@ export function kaynnistaAikajana(ui, linssi) {
     ui.tutkimusvaihe = luoTutkimusvaihe({ ajo, ui, linssi });
     return Boolean(ui.tutkimusvaihe);
   };
+  /*
+   * PULUN VALMIIT KYSYMYKSET (Raamattu, "IHMISEN MATKA: PULUN VALMIIT
+   * KYSYMYKSET JOKA JAKSOON"): paneeli kysyy avautuessaan, missä
+   * pelaaja on (js/linssit/ihmisen-matka-pulukysymykset.js). Purku
+   * ajon omassa purussa (Aikajana.pura), jota kaikki sulkutiet kutsuvat.
+   */
+  ui.purePulunKysymykset?.();
+  ui.purePulunKysymykset = linssi.tunnus === PULUKYSYMYSTEN_LINSSI
+    ? kytkePulunKysymykset(ui, ajo) : null;
   ui.aikajana = ajo;
   // Vasta kun ajo on pystyssä: bodyn luokka on paikallaan, joten
   // portti pitää eivätkä juuri suljetut kortit avaudu takaisin.

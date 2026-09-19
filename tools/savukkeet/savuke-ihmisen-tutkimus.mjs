@@ -107,6 +107,24 @@ async function avaaSivu(nakyma, virhelista) {
   const sivu = await konteksti.newPage();
   await sivu.route((url) => !/127\.0\.0\.1|localhost/.test(url.href), (route) => route.abort());
   await sivu.route(/media\.matkakirja\.app|r2\.dev/, async (route) => {
+    /*
+     * LISÄNOSTOJEN AITOT KUVAT (lisanostot-20260920): kunnes Fable on
+     * vienyt ne ämpäriin, ne luetaan paikalliskansiosta (LISAKUVAT,
+     * oletus ~/Matkakirja-nostot-kuvat/ihmisen-matka). Ämpärissä
+     * oleva kuva voittaa vasta, kun kansiota ei ole.
+     */
+    const lisakuva = route.request().url().match(/\/lisanostot-20260920\/(im-[a-z0-9-]+\.jpg)$/);
+    if (lisakuva) {
+      const kansio = process.env.LISAKUVAT ?? join(process.env.HOME ?? '', 'Matkakirja-nostot-kuvat/ihmisen-matka');
+      const polku = join(kansio, lisakuva[1]);
+      if (existsSync(polku)) {
+        route.fulfill({
+          status: 200, contentType: 'image/jpeg', body: readFileSync(polku),
+          headers: { 'access-control-allow-origin': '*' },
+        });
+        return;
+      }
+    }
     const vastaus = await ampariHaku(route.request().url());
     /*
      * PUUTTUVA KUVA ON 404 EIKÄ KATKO. Lisänostojen kuvituskuvat ovat
@@ -233,6 +251,7 @@ async function kortinTila(s) {
       kehyksia: el?.querySelectorAll('.ihmisen-nostokortti-kuvakehys').length ?? 0,
       varapaikkoja: el?.querySelectorAll('.ihmisen-nostokortti-varakuva').length ?? 0,
       kuvia: el?.querySelectorAll('.ihmisen-nostokortti-kuva').length ?? 0,
+      kuvalahteita: el?.querySelectorAll('.ihmisen-nostokortti-kuvalahde').length ?? 0,
       lue: Boolean(el?.querySelector('.ihmisen-nostokortti-lue')),
       kysymyksia: el?.querySelectorAll('.ihmisen-nostokysymys').length ?? 0,
       mahtuu: r ? (r.bottom <= window.innerHeight + 1 && r.right <= window.innerWidth + 1 && r.top >= 0) : false,
@@ -620,7 +639,9 @@ for (const nakyma of ['tabletti', 'puhelin']) {
   const lisanosto = await kortinTila(s);
   vaadi(nimessa('lisänoston kortti: sama malli ja kuva-alue (varapaikka, ei nimikirjainlaattaa)'),
     lisanosto.auki && lisanosto.laji === 'lisanosto' && lisanosto.kehyksia === 1
-      && lisanosto.varapaikkoja === 1 && lisanosto.kuvia === 0
+      // Aito kuva (lisanostot-20260920) paikalla: kuva + lähderivi; muuten varapaikka.
+      && ((lisanosto.kuvia === 1 && lisanosto.kuvalahteita === 1 && lisanosto.varapaikkoja === 0)
+        || (lisanosto.kuvia === 0 && lisanosto.varapaikkoja === 1))
       && /Tulivuori/.test(lisanosto.otsikko ?? '') && lisanosto.teksti > 100
       && lisanosto.kysymyksia >= 2 && lisanosto.mahtuu,
     JSON.stringify(lisanosto));

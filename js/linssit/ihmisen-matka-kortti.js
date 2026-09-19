@@ -49,6 +49,7 @@ import * as data from './ihmisen-matka-data.js';
 import { IHMISEN_MATKA_VIRRAT } from './ihmisen-matka-virrat.js';
 import { polloKysy } from '../pollo.js';
 import { kuvatekstiLyhyt } from '../kuvatekstit.js';
+import { taytaLahderivi } from '../tekijakortti.js';
 
 /*
  * LYHYT KORTILLA (js/kuvatekstit.js, omistaja 9.9.2026). Ihmisen matkan
@@ -197,6 +198,7 @@ export function kokoaNostot(tapahtumat = [], lisat = []) {
       esineSelite: kuvatekstiLyhyt(t.esine) || null,
       kuvaAito: kuvanOsoite(t.kuvaAito) ?? null,
       kuvaAitoSelite: kuvatekstiLyhyt(t.kuvaAito) || null,
+      kuvaAitoTiedot: t.kuvaAito && typeof t.kuvaAito === 'object' ? t.kuvaAito : null,
       lahde: t.lahde ?? null,
       virta: null,
       juttu: Boolean(t.juttu),
@@ -225,6 +227,7 @@ export function kokoaNostot(tapahtumat = [], lisat = []) {
       esineSelite: null,
       kuvaAito: kuvanOsoite(l.kuvaAito) ?? null,
       kuvaAitoSelite: kuvatekstiLyhyt(l.kuvaAito) || null,
+      kuvaAitoTiedot: l.kuvaAito && typeof l.kuvaAito === 'object' ? l.kuvaAito : null,
       lahde: l.lahde ?? null,
       virta: l.virta ?? null,
       juttu: false,
@@ -292,6 +295,10 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
   const tila = { auki: null, kysymyksia: 0, avattu: 0, pysaytin: false };
 
   const tallenna = () => ajo.tallennaMuisti?.();
+  /** Auki olevan pulupaneelin tarjonta nykyiseen paikkaan (js/pollo.js tarkistaKonteksti). */
+  const paivitaPulu = () => {
+    try { globalThis.matkakirjaPollo?.tarkistaKonteksti?.(); } catch { /* pulu ei ole pelissä */ }
+  };
 
   function sulje() {
     if (tila.auki === null && kortti.hidden) return;
@@ -301,6 +308,7 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
     kortti.replaceChildren();
     document.body.classList.remove(KORTIN_LUOKKA);
     if (ui.fokuskohdeAuki?.linssinosto) ui.fokuskohdeAuki = null;
+    paivitaPulu();
     /*
      * ESITYS JATKUU SULUSTA (omistaja: kortti aukeaa myös esityksen
      * aikana; esitys pysähtyy tauolle ja jatkuu sulusta). Jatketaan vain
@@ -316,9 +324,15 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
   /**
    * Kuva-alueen yksi kehys. Puuttuva kuva (404 — kuvaputken erä on
    * vielä tulossa) vaihtuu VARAPAIKKAAN: vanan sävyinen kehys ja
-   * ajoitus, ei tekstilaattaa nimikirjaimin.
+   * ajoitus, ei tekstilaattaa nimikirjaimin. Kun noston aito kuva on
+   * paikalla, tulossa olevan havainnekuvan 404 EI jätä varapaikkaa
+   * aidon kuvan viereen (`ilmanVaraa`): kehys poistuu hiljaa.
+   *
+   * `kuvaTiedot` (aidon kuvan olio) tuo kuvan alle lähderivin —
+   * tekijä ja lisenssi, CC BY/BY-SA vaatii maininnan siellä missä
+   * kuva näkyy (js/tekijakortti.js taytaLahderivi).
    */
-  function kuvakehys(nosto, osoite, selite, luokka) {
+  function kuvakehys(nosto, osoite, selite, luokka, { kuvaTiedot = null, ilmanVaraa = false } = {}) {
     const kehys = solmu('figure', `ihmisen-nostokortti-kuvakehys ${luokka}`);
     kehys.style.setProperty('--nosto-savy', heksaRgb(vari(nosto.tunnus)));
     const kuva = document.createElement('img');
@@ -327,6 +341,7 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
     kuva.decoding = 'async';
     kuva.alt = selite ?? '';
     kuva.addEventListener('error', () => {
+      if (ilmanVaraa) { kehys.remove(); return; }
       kuva.remove();
       kehys.classList.add('vara');
       const vara = solmu('div', 'ihmisen-nostokortti-varakuva');
@@ -340,6 +355,9 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
     kuva.src = osoite;
     kehys.appendChild(kuva);
     if (selite) kehys.appendChild(solmu('figcaption', 'ihmisen-nostokortti-kuvateksti', selite));
+    if (kuvaTiedot?.lahde) {
+      kehys.appendChild(taytaLahderivi(solmu('div', 'ihmisen-nostokortti-kuvalahde'), kuvaTiedot.lahde, kuvaTiedot));
+    }
     return kehys;
   }
 
@@ -374,9 +392,15 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
 
     // KUVA-ALUE: vähintään yksi kehys aina (kuvituskuva tai sen varapaikka).
     const kuvat = solmu('div', 'ihmisen-nostokortti-kuvat');
-    if (nosto.kuva) kuvat.appendChild(kuvakehys(nosto, nosto.kuva, nosto.kuvaSelite, 'kuvitus'));
+    if (nosto.kuva) {
+      kuvat.appendChild(kuvakehys(nosto, nosto.kuva, nosto.kuvaSelite, 'kuvitus',
+        { ilmanVaraa: Boolean(nosto.kuvaAito) }));
+    }
     if (nosto.esine) kuvat.appendChild(kuvakehys(nosto, nosto.esine, nosto.esineSelite, 'esine'));
-    if (nosto.kuvaAito) kuvat.appendChild(kuvakehys(nosto, nosto.kuvaAito, nosto.kuvaAitoSelite ?? 'Aito kuva', 'aito'));
+    if (nosto.kuvaAito) {
+      kuvat.appendChild(kuvakehys(nosto, nosto.kuvaAito, nosto.kuvaAitoSelite ?? 'Aito kuva', 'aito',
+        { kuvaTiedot: nosto.kuvaAitoTiedot }));
+    }
     if (!kuvat.childElementCount) {
       // Ei yhtään osoitetta: varapaikka suoraan, sama asu kuin 404:llä.
       const kehys = solmu('figure', 'ihmisen-nostokortti-kuvakehys kuvitus vara');
@@ -430,6 +454,9 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
      * fokuskohteen omasta, jottei purku vie väärää korttia.
      */
     ui.fokuskohdeAuki = { kohde: nostonKonteksti(nosto), popup: kortti, linssinosto: true };
+    // Auki oleva pulupaneeli vaihtaa valmiit kysymyksensä tämän noston
+    // omiin (js/linssit/ihmisen-matka-pulukysymykset.js).
+    paivitaPulu();
 
     // ESITYS TAUOLLE kortin ajaksi; jatko sulusta (ks. sulje).
     const esitys = ajo.esitys ?? null;

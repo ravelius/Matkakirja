@@ -54,7 +54,7 @@ import { packById } from '../../js/pack.js';
 import { FOKUSVIRTA_PARIISI } from '../../js/packs/fokusvirta-pariisi.js';
 
 const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
@@ -125,7 +125,7 @@ function tallenne({ ilmanLaskuria = false } = {}) {
   return JSON.stringify(data);
 }
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
 
 /** Yksi selainkonteksti valmiiksi ladattuna Pariisin palloon. */
 async function avaaPeli(data) {
@@ -228,6 +228,32 @@ const vastaa = (sivu, i) => sivu.evaluate(async (indeksi) => {
   };
 }, i);
 
+/**
+ * PULU EI PEITÄ KORTIN TEKSTIÄ (PAATOKSET 50, js/pulu-paneelin-ylla.js):
+ * pulun laatikko ei leikkaa yhtään kortin näkyvää tekstiriviä.
+ */
+const puluPeitto = (sivu, kortti) => sivu.evaluate(async (valitsin) => {
+  await new Promise((v) => setTimeout(v, 700));
+  const n = document.querySelector('.pollo-nappi.pollo-kelluu');
+  const k = document.querySelector(valitsin);
+  if (!n || !k) return { pulu: Boolean(n), kortti: Boolean(k), leikkaa: -1 };
+  const p = n.getBoundingClientRect();
+  const kr = k.getBoundingClientRect();
+  // Väistynyt (näkymätön) pulu ei peitä mitään.
+  if (Number(getComputedStyle(n).opacity) === 0) {
+    return { pulu: true, kortti: true, leikkaa: 0, piilossa: true };
+  }
+  const leikkaavat = [...k.querySelectorAll('p, h1, h2, h3, li, figcaption, button')]
+    .map((e) => e.getBoundingClientRect())
+    .filter((r) => r.width > 0 && r.height > 0 && r.bottom > kr.top && r.top < kr.bottom)
+    .filter((r) => r.left < p.right && r.right > p.left && r.top < p.bottom && r.bottom > p.top);
+  return {
+    pulu: true, kortti: true, leikkaa: leikkaavat.length,
+    ylla: n.classList.contains('pulu-paneelin-ylla'),
+    pulunAla: Math.round(p.bottom), kortinYla: Math.round(kr.top),
+  };
+}, kortti);
+
 const luvut = (sivu) => sivu.evaluate(() => ({
   money: window.matkakirja.game.player.money,
   laskuri: window.matkakirja.game.nostotehtavatRatkaistu,
@@ -278,6 +304,10 @@ if (a.auki) {
     await a.sivu.locator('.fokusnosto-kortti')
       .screenshot({ path: join(KUVAKANSIO, 'karttauudistus-6-nostovisa-kysymys.png'), scale: 'css' });
   }
+  const peittoA = await puluPeitto(a.sivu, '.fokusnosto-kortti');
+  tieto('pulu nostokortilla', JSON.stringify(peittoA));
+  vaadi('9. pulu ei peitä nostokortin tekstiä (390 px)',
+    peittoA.pulu && peittoA.kortti && peittoA.leikkaa === 0, JSON.stringify(peittoA));
   const ennen = await luvut(a.sivu);
   const jalkeen = await vastaa(a.sivu, KOE.visa.oikea);
   tieto('oikea vastaus', `money ${ennen.money} → ${jalkeen.money}, `
@@ -349,6 +379,61 @@ if (c.auki) {
     `laskuri ${vanha.laskuri}`);
 }
 await c.ctx.close();
+
+/* ---------- AJO D: HAHMOTELMANOSTO KOHDEKORTILLA (Texel) ----------
+ *
+ * Sonnet 1:n laitetesti 19.9.2026 (v1960): hahmotelmanostojen visa ei
+ * piirtynyt, koska ne ovat KOHDE_MAAT-rivejä ja avautuvat kohdekortilla
+ * (js/fokuskohteet.js piirraKohteenSisus), jolla visaa ei ollut.
+ */
+const HAHMOTELMA = 'hahmotelma-texel';
+const d = await avaaPeli(tallenne());
+vaadi('pallolauta aukesi (hahmotelma)', d.auki, d.virheet.join(' | '));
+if (d.auki) {
+  const avaaKohde = () => d.sivu.evaluate(async (id) => {
+    for (const el of document.querySelectorAll('.fokuskohde-popup')) el.remove();
+    const { KOHDE_MAAT, avaaFokuskohde } = await import('/js/fokuskohteet.js');
+    const kohde = (KOHDE_MAAT.NLD ?? []).find((k) => k.id === id);
+    if (!kohde) return { loytyi: false };
+    avaaFokuskohde(window.matkakirja.ui, kohde);
+    await new Promise((v) => setTimeout(v, 500));
+    const lisaa = document.querySelector('.fokuskohde-popup .nostokuva-lisaa');
+    if (lisaa) { lisaa.click(); await new Promise((v) => setTimeout(v, 500)); }
+    const laatikko = document.querySelector('.fokuskohde-popup .fokusnosto-visa');
+    return {
+      loytyi: true,
+      oikea: kohde.visa?.oikea ?? null,
+      onLaatikko: Boolean(laatikko),
+      napit: laatikko?.querySelectorAll('.kulttuuri-vaihtoehdot button').length ?? 0,
+    };
+  }, HAHMOTELMA);
+  const vastaaKohde = (i) => d.sivu.evaluate(async (indeksi) => {
+    const napit = [...document.querySelectorAll('.fokuskohde-popup .fokusnosto-visa .kulttuuri-vaihtoehdot button')];
+    napit[indeksi]?.click();
+    await new Promise((v) => setTimeout(v, 300));
+    const g = window.matkakirja.game;
+    return { money: g.player.money, laskuri: g.nostotehtavatRatkaistu, napitOli: napit.length };
+  }, i);
+  const ek = await avaaKohde();
+  tieto('hahmotelmakortti', JSON.stringify(ek));
+  const peittoD = await puluPeitto(d.sivu, '.fokuskohde-popup');
+  tieto('pulu kohdekortilla', JSON.stringify(peittoD));
+  vaadi('10. pulu ei peitä kohdekortin tekstiä (390 px)',
+    peittoD.pulu && peittoD.kortti && peittoD.leikkaa === 0, JSON.stringify(peittoD));
+  vaadi('6. hahmotelmanoston kohdekortissa on lukijan kysymys lipukkeineen',
+    ek.loytyi && ek.onLaatikko && ek.napit >= 2, JSON.stringify(ek));
+  const ennenD = await luvut(d.sivu);
+  const jalkeenD = await vastaaKohde(ek.oikea ?? 0);
+  vaadi('7. oikea vastaus kohdekortilla lisää palkkion',
+    jalkeenD.money === ennenD.money + PALKKIO && jalkeenD.laskuri === ennenD.laskuri + 1,
+    `money ${ennenD.money} → ${jalkeenD.money}, laskuri ${ennenD.laskuri} → ${jalkeenD.laskuri}`);
+  const toinenK = await avaaKohde();
+  const toinenD = await vastaaKohde(ek.oikea ?? 0);
+  vaadi('8. kohdekortin kysymys ei maksa kahdesti',
+    toinenK.onLaatikko && toinenK.napit === 0 && toinenD.money === jalkeenD.money,
+    `lipukkeita ${toinenK.napit}, money ${jalkeenD.money} → ${toinenD.money}`);
+}
+await d.ctx.close();
 
 await selain.close();
 palvelin.close();
