@@ -9220,7 +9220,12 @@ export const RAAMATTU = {
           + 'nero"): maakohtaisiin myos "<Paikan> Nerolta" -kaava (Kolin Nerolta, Reinin '
           + 'Nerolta, Tatran Nerolta) ja muunnelmat (Oraakkelilta, Tietajalta, '
           + 'Yovahdilta, Huuhkajalta). Sonnet-agentti tayttaa Euroopan 40 maata (8-12 '
-          + 'per maa) haaraan agent-arvonimet-eur (tilattu 21.58).',
+          + 'per maa) haaraan agent-arvonimet-eur (tilattu 21.58). KYTKENTA TEHTY (Opus 2 '
+          + 'klo 22.05, d3908e46): pollonArvonimi(maanosa, iso) kaikissa "Kysy ... pululta" '
+          + '-nimilapuissa (kohdekortti, fokusnosto, Ihmisen matka, satelliitti); merella '
+          + 'meri, |lat| >= 66 polar; pitka nimi tiivistetaan scaleX (alaraja 0,4) ilman '
+          + 'rivitysta; vartio savuke-arvonimet 20 avausta -> 15 eri nimea. Julkaistaan '
+          + 'v1968.',
         'KAUPUNGITTOMAN MAAN NOSTOT NAKYVAT KAMERAN OLLESSA MAAN RAJAUKSESSA (Fable '
           + '19.9.2026 klo 21.46 Suomen aikaa, Opus 2:n mittaus era K: kohdemaa johdetaan '
           + 'AINA pelaajan kaupungista (fokuskohteet.js nykyinenIso), joten ilman '
@@ -9270,7 +9275,13 @@ export const RAAMATTU = {
           + 'matkakirjan tekstin (Senne katettu, kiltatalot, Manneken Pis, oikeuspalatsi '
           + 'rakenteilla, pitsi). MALTA REKISTEROITY (Opus 1): KOHDE_MAAT.MLT 11 nostoa. '
           + 'Julkaistaan v1968. Taysi kaupunkilehti (kansi, kategoriat, nostot) ja aanet '
-          + 'ovat Brysselin era 2; Ljubljana ja Kosice seuraavat samalla kaavalla.',
+          + 'ovat Brysselin era 2; Ljubljana ja Kosice seuraavat samalla kaavalla. LATVIA '
+          + 'JA LIETTUA (Sonnet 3, Fable klo 22.04): LVA 20 / 60 / 7 visaa, LTU 20 / 60 / 7, '
+          + 'HEAD 200 120/120, julkaistaan v1969. FABLEN VIRHE v1968:ssa: pollon-'
+          + 'arvonimet.js puuttui SHELLista ja hahmotelma-mlt.js:n ohjekommentin import-'
+          + 'teksti luettiin riippuvuutena -> 2 punaista testia ja build kaatui; korjattu '
+          + 'ennen CI:n paatosta (opus2-arvonimet mergetty, kommentti muutettu). OPPI: '
+          + 'versiokomento pysahtyy jos # fail > 0 (ei ketjuteta commit/push perakkain).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
