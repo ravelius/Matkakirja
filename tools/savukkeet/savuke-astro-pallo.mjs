@@ -1824,6 +1824,7 @@ async function ajaNakyma(nimi) {
       }
       await odota(800);
       let tasaisia = 0; let lohkoja = 0; let kankaita = 0; const varit = {}; const laatoittain = {};
+      let peittavia = 0; let meriPeittavia = 0;
       p.scene().traverse((o) => {
         if (!o.userData?.laattakerros || !o.visible) return;
         const kuva = o.material?.map?.image;
@@ -1831,6 +1832,17 @@ async function ajaNakyma(nimi) {
         if (!ctx) return;
         kankaita += 1;
         const d = ctx.getImageData(0, 0, kuva.width, kuva.height).data;
+        /*
+         * 48b (erä G): LAASTARI PIIRTÄÄ VAIN MAAN. Joka neljäs pikseli:
+         * peittävä pikseli, jonka sävy on reliefin merta (sama raja kuin
+         * js/pallolaatat.js onReliefinMeri), on meren laastaria.
+         */
+        for (let i = 0; i < d.length; i += 16) {
+          if (d[i + 3] < 250) continue;
+          peittavia += 1;
+          const r = d[i]; const g = d[i + 1]; const b = d[i + 2];
+          if (b > g + 2 && b > r * 1.2 + 4 && b > g * 1.05) meriPeittavia += 1;
+        }
         for (let by = 0; by + 16 <= kuva.height; by += 16) {
           for (let bx = 0; bx + 16 <= kuva.width; bx += 16) {
             let n = 0; let sr = 0; let sg = 0; let sb = 0; let sl = 0; let sl2 = 0; let lapi = false;
@@ -1870,6 +1882,7 @@ async function ajaNakyma(nimi) {
       return {
         laastarilla, korkeus: +p.pointOfView().altitude.toFixed(3), laattoja, valmiita,
         kankaita, lohkoja, tasaisia, merivariAukkoja: m.merivariAukkoja ?? null,
+        peittavia, meriPeittavia,
         varit: Object.entries(varit).sort((a, b) => b[1] - a[1]).slice(0, 4),
         laatoittain,
       };
@@ -1924,6 +1937,19 @@ async function ajaNakyma(nimi) {
          */
         && laastari48.kankaita <= laastari48.laattoja,
       JSON.stringify(laastari48));
+    /*
+     * 48b: MERI EI OLE LAASTARISSA (Fablen erä G, Sonnet 1:n kierros 10
+     * kuvat 05/06). MERIVARI on reliefipaletin −4 000 m:n sävy, joten
+     * vanha ±6-maski lävisti poltetun batymetrian pilkuiksi ja laatan
+     * reuna piirtyi suorakaiteena. Nyt laastari on maata; meri tulee
+     * 4k-pohjasta. Raja 0,5 % peittävistä pikseleistä (rannan
+     * antialiasointi). Mitattu raportissa
+     * viesti-fable-kreikka-reliefi-20260919.md.
+     */
+    vaadi(t('48b: laastarin merellä ei ole peittäviä pikseleitä (meri tulee 4k-pohjasta)'),
+      laastari48.laastarilla && laastari48.peittavia > 0
+        && laastari48.meriPeittavia <= 0.005 * laastari48.peittavia,
+      `meren sävyisiä peittäviä ${laastari48.meriPeittavia} / ${laastari48.peittavia}`);
     await s.evaluate((pov) => {
       const { ui } = window.matkakirja;
       ui.pallonInstanssi.pointOfView({ lat: pov.lat, lng: pov.lng, altitude: pov.altitude }, 0);
