@@ -2,18 +2,17 @@
 
 Tuotanto v1962 (päivitysikkuna 19.37), kehittäjätila, iPhone 18 Pro -simulaattori (Safari), 390 px -näkymä, yksi välilehti. Äänet: kartan kulmassa mykistyskuvake näkyy (ääni pois); **ratasvalikon liukusäätimet näyttivät kuitenkin 100 % / 90 % / 35 %** (19.50), eli mykistys ei ollut liukusäätimillä vaan toisaalla, tai peli latautui uudelleen 19.47 ja säätimet palasivat oletukseen. Ääniä ei kuulunut eikä MediaRemote-kaatumisia. "Maailma"-kytkin PÄÄLLÄ 19.37 → 19.52 (samassa jaksossa Amsterdam/Varsova/Pariisi/Praha; en kääntänyt sitä pois välillä, koska hypyt Puolaan ja Prahaan sitä vaativat), POIS 19.52 (varmistettu valikosta: "maailma POIS"). Haara `sonnet-local-kierros-11`, kuvat `docs/raportit/kaappaukset/kierros11-20260919/01–09-*.jpg`.
 
-## 1. Rahavisat (Puola/Grunwald, 390 px)
+## 1. Rahavisat (Puola, 390 px)
 
-Gouda/Leiden/Texel-polku ei toteutunut (hyppäsin maailma-kytkimellä Varsovaan, koska Amsterdam oli jo käytetty). Visa testattu **Puolan Grunwald-nostolla** (kartalla oikea "Grunwaldin…"-merkki).
+Gouda/Leiden/Texel-polku ei toteutunut (hyppy maailma-kytkimellä Varsovaan). Visat testattu Puolan nostoilla: **Białowieża** (kuvat 01–03) ja **Grunwald** (kuva 04). HUOM tarkkuus: kuvat 01–03 ovat Białowieża-kortista (en tallentanut tarkkaa vaihtoehtoa, jonka napautin väärin), kuva 04 Grunwaldista.
 
-- **Laatikko näkyy**: "LUKIJAN KYSYMYS · vastaus löytyy tästä jutusta · +25 puntaa", kysymys "Mitä Saksalaiselle ritarikunnalle tapahtui Grunwaldin taistelun jälkeen?", neljä vastausvaihtoehtoa täysleveinä painikkeina. Kortin kuvan alla, tekstin jälkeen, ennen pulun kysymyksiä (kuva 01). **v1960:n puuttuva laatikko on siis korjattu.**
-- **Väärä vastaus (19.41):** laatikon 2. vaihtoehto ("Se sai suuria alueita Liettuan suuriruhtinaalta"): raha £0 → £0 (ei muutosta), oikea vastaus paljastuu (kuva 02). **Toimii.**
-- **Uudelleenavaus väärän jälkeen (19.41):** Grunwald avattiin uudelleen: laatikossa **on yhä vaihtoehdot ja kysymys** (kuva 03: otsikko "LUKIJAN KYSYMYS", vaihtoehdot näkyvissä, ei "jo vastattu" -tilaa). **Kysymys uudelleen vastattavissa väärän vastauksen jälkeen — mahdollinen aukko:** PAATOKSET-linja "ei saa maksaa toista kertaa" koskee oikeaa vastausta; väärän jälkeen uusi yritys sallii palkkion. Onko tarkoitus? Kirjaan ilman arviota.
-- **Oikea vastaus (19.42):** 3. vaihtoehto ("Se kesti Malborkin piirityksen, mutta ei toipunut"): kortti sulkeutuu itsestään, raha **£0 → £25 (+25)**, laatikossa vihreä "Oikein! +25 puntaa. Taistelua muistetaan Puolan ja Liettuan lisäksi myös Ukrainassa ja Valko-Venäjällä." (kuva 04). **Toimii.**
-- **Uudelleenavaus oikean jälkeen:** laatikko näyttää kysymyksen ja vihreän "Oikein!" -tuloksen, ei uusia vaihtoehtoja (kuva 04): **ei voi maksaa toista kertaa.**
-- **Ulkoasu 390 px:** laatikko täysleveä, kaksoisreunus, vaihtoehtopainikkeet 48 pt korkeat, oikea alakulman pulu peittää vaihtoehdon "Se liittyi Puolan kuninkaan armeijaan" oikeaa reunaa hieman (kuva 01). Muuten selkeä.
-- Erhe kesken: ensimmäiset kolme napautusta osuivat vaihtoehtojen ulkopuolelle laskuvirheeni takia (pikselien jakaja 2,288 eikä 4), joten ne sulkivat kortin ilman vastausta; tuloksiin ne eivät vaikuta.
-- Gouda/Leiden/Texelia en avannut tällä kierroksella.
+- **Laatikko näkyy**: "LUKIJAN KYSYMYS · vastaus löytyy tästä jutusta · +25 puntaa", kysymys ja neljä vaihtoehtoa täysleveinä painikkeina, kuvan ja tekstin jälkeen, ennen pulun kysymyksiä (kuva 01, Białowieża). **v1960:n puuttuva laatikko on korjattu.**
+- **Väärä vastaus (Białowieża, 19.41):** raha £0 → £0, oikea vastaus paljastuu (kuva 02). **Toimii.**
+- **Uudelleenavaus väärän jälkeen (Białowieża):** kortissa on **yhä vaihtoehdot ja kysymys** (kuva 03), ei "jo vastattu" -tilaa. Toisin sanoen kysymys on uudelleen vastattavissa väärän vastauksen jälkeen, eli seuraava vastaus voi maksaa. **Onko tarkoitus? Kirjaan ilman arviota; koodin kommentti (js/fokusnosto.js) sanoo "jo vastattu" -tilan vaativan kirjatun vastauksen.**
+- **Oikea vastaus (Grunwald, 19.42):** 3. vaihtoehto ("Se kesti Malborkin piirityksen, mutta ei toipunut"): raha **£0 → £25 (+25)**, laatikossa vihreä "Oikein! +25 puntaa. …" (kuva 04). **Toimii.**
+- **Uudelleenavaus oikean jälkeen (Grunwald):** laatikko näyttää kysymyksen ja vihreän "Oikein!" -tuloksen, ei uusia vaihtoehtoja: **ei voi maksaa toista kertaa.** (Samasta kortista tarkistettu 19.42; kuva 04.)
+- **Ulkoasu 390 px:** laatikko täysleveä, kaksoisreunus, vaihtoehtopainikkeet korkeita ja luettavia; oikean alakulman pulu peittää yhden vaihtoehtopainikkeen oikeaa reunaa hieman (kuva 01).
+- Aiemmat kolme napautusta osuivat kortin ulkopuolelle laskuvirheeni takia ja sulkivat kortin ilman vastausta; tuloksiin ne eivät vaikuta.
 
 ## 2. Annonay/Montgolfier (Ranska)
 
@@ -30,11 +29,11 @@ Aktivoitu matkalaukusta (jalanjälkikuvake, "Ihmisen matka"), Käynnistä → ta
 
 ## 4. Astronautin kamera (zoomikatto, Egypti)
 
-Avattu Pariisin pelistä. Alkuperäinen pallo: vihreä-sininen, NASA-pilvet, kohdepisteet; **Egyptiä en saanut zoomattua keskelle** (nipistys osui Kaukasukseen ja sitten Siperiaan; 19.50). Max-zoomissa (kuva 09, Mustameri + Kaukasus) **näkyvä leveys: Mustan meren pohjoisranta–Kaspianmeri (~n. 1 400 km)** — Ei vertailukelpoista k10-mittaan, koska k10 mitattiin toisesta kohdasta (Kreeta). **Ei nimiöitä ruudulla** (nimiöt on tarkoituksella pois lähellä?). Astronautin kameran hidas lataus näkyy: pohjoisen suuntaan panoroitaessa maasto on hetken pikselöityä/vaaleaa. Nimiölimityksestä ei havaintoa (nimiöitä ei näkynyt).
+Avattu Pariisin pelistä. Alkuperäinen pallo: vihreä-sininen, NASA-pilvet, kohdepisteet; **Egyptiä en saanut zoomattua keskelle** (nipistys osui Kaukasukseen ja sitten Siperiaan; 19.50). Max-zoomissa (kuva 09, Mustameri + Kaukasus) näkyvä leveys on suunnilleen Mustanmeren itäosa–Kaukasus (arvio silmällä, **ei mitattu**, ei vertailukelpoinen k10:een, joka oli Kreeta). **Ei nimiöitä ruudulla** (nimiöt on tarkoituksella pois lähellä?). Astronautin kameran hidas lataus näkyy: pohjoisen suuntaan panoroitaessa maasto on hetken pikselöityä/vaaleaa. Nimiölimityksestä ei havaintoa (nimiöitä ei näkynyt).
 
 ## 5. Uudet maat
 
-- **Puola/Varsova:** Białowieża **avautui**: kuva (ei tallennettu; karhunlauma-otos), teksti, LISÄÄ toimii; kysymys (visa) samalla kortilla → nostoissa on visa, kuten Grunwaldilla. Pszczynan linna (kulttuurinosto) avautuu kortilla. Grunwald OK.
+- **Puola/Varsova:** Białowieża **avautui** (LISÄÄ toimii, visa kortilla, ks. kohta 1). Pszczynan linna (kulttuurinosto) avautuu kortilla. Grunwald OK.
 - **Belgia/Bryssel/Tervuren: EI TESTATTU, EI NÄKYNYT KARTALLA.** Euroopan yleiskartalla (kuva 19.51) Bryssel-merkkiä ei näkynyt (Amsterdam ja Pariisi kyllä, ja välissä vain rajaviiva). Voi olla että Belgian kohdemaa ei ole vielä kartalla tässä versiossa tai että Bryssel puuttuu pallolaudasta. Ei nähty; kirjaan puutteena.
 - **Tšekki/Praha:** Praha avautui (maailma-hyppy 19.52): **kartalla Tšekki, mutta ei Karlovy Varyä**; nähtävissä Děčín, Jablonec, Labe, Kutná Hora, Tábor, Boubín, Český Krumlov, Vltava, Hevosrautatie, Karlštejn, Prazdroj, Jáchymov, Edward Kelley, Siiseli. **Karlovy Vary ei löytynyt kartalta (länsiosa)**; Prahan kartan yläreunassa Saksan raja. Vakavuus 1–2.
 
