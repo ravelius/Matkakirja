@@ -45,6 +45,7 @@ import {
 } from './aihemerkit.js';
 import {
   kelattuLiuska, kelauksenAskel, liuskanRivit, liuskanSuurinRivimaara, nostonOmaPaikka,
+  luoSisaisyysTesti,
   onKaupunginSisainen,
 } from './kaupunkiliuska.js';
 import { FOKUS_POHJAT } from '../packs/fokus-grc.js';
@@ -2340,9 +2341,16 @@ export function luoNostot({
        * voi koskaan laueta ja jäsenyys jää pelkän säteen varaan.
        */
       const keskus = { ...city, ...(nostonOmaPaikka(city) ?? {}) };
+      /*
+       * TESTI KERRAN KAUPUNKIA KOHTI, EI RIVIÄ KOHTI (mitattu 20.9.2026,
+       * ks. js/pallolauta/kaupunkiliuska.js): ladonta ajetaan liikkeen
+       * aikana viidesti sekunnissa, ja nimen normalisointi rivien ja
+       * kaupunkien tulona oli eleen suurin JS-erä.
+       */
+      const sisainen = luoSisaisyysTesti(keskus);
       const kartalta = liuskanLahde.filter((r) => r.perhe === 'nosto' && !r.kaupunki
         && !r.vainNimi && typeof r.avaa === 'function'
-        && onKaupunginSisainen(r, keskus));
+        && sisainen(r));
       /*
        * ══ NÄHTÄVYYSKARTALTA SIIRRETYT KOHTEET (PAATOKSET 34 kohta 18
        * b, omistaja 18.9.2026 klo 17.55) ════════════════════════════
