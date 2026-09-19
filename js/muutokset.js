@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1954, teksti: 'Ohita-nappi pinon päälle ja Liikun yläpuolelle' },
   { v: 1953, teksti: 'Nopan jälkeen kamera pysyy kohteiden luona (zoomivapaus)' },
   { v: 1952, teksti: 'Ranskan maalehtinostoille toinen Commons-kuva (18)' },
   { v: 1951, teksti: 'Topografialinssi: pohjalaatat keskeytyvät lipun kääntyessä' },

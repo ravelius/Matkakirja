@@ -48,6 +48,17 @@
  *  15.  MOLEMPIEN LUENTOJEN LOPPU VIE OHITAN (vahdin oma odotus).
  *  16.  KELLUVA OHITA PYSAYTTAA YHA KAIKEN: luenta pysahtyy, yksikaan
  *      <audio> ei soi ja nappi poistuu itse painalluksesta.
+ *  17.  OHITA ON TAYDELLA PEITOLLA (opacity >= 0,9) EIKA ESTETTYNA
+ *      luennan alusta loppuun (Sonnetin loydos 2, 19.9.2026).
+ *  18.  KARTAN NAPAUTUS EI LASKE PEITTOA (sama luku napautuksen
+ *      jalkeen ja kuvien lennettya).
+ *  19.  LUENTAKUVAKORTTI EI PEITA OHITAA: pulun oma sarja avaa TOISEN
+ *      paallyksen, ja Ohitan on oltava sen PAALLA (sama pino, sama
+ *      z-index -> DOM-jarjestys ratkaisee), osuma elementFromPointissa
+ *      yha Ohita; toinen kartan napautus ei vie nappia.
+ *  20.  OHITA EI OSU LIIKU-SANAAN: laatikot eivat leikkaa myoskaan
+ *      silloin, kun maapaneeli nostaa Liikua (--liiku-pohja 60/80/100).
+ *  21.  MILLOIN OHITA KATOSI: millisekunnit luentojen lopusta.
  *
  * Aja:
  *   PLAYWRIGHT_JS=... CHROMIUM="..." PORTTI=8911 \
@@ -1073,6 +1084,193 @@ async function mittaaPaatokset38(ruutu, lappuNimi, kuvia = false) {
     await s.screenshot({ path: join(KUVAKANSIO, 'ohita-pysyy-kartan-napautuksen-jalkeen.png') });
   }
 
+  /* ==================================================================
+   * 17–21: OHITA EI JÄÄ KORTIN TAAKSE EIKÄ OSU LIIKU-SANAAN
+   * (PAATOKSET 43 kohta 10, Sonnetin puhelintestin löydökset 2 ja 3,
+   * 19.9.2026: *"ensimmainen napautus kartalle toi luentakuvan OHITAN
+   * PAALLE"* ja *"'Ohita' piirtyy suoraan 'Liiku'-tekstin paalle"*.)
+   *
+   * MITÄ TÄSSÄ MITATAAN, JA MIKSI JUURI NÄIN:
+   *
+   *  - PEITTO ON PINOJÄRJESTYS, EI OSUMATESTI. Päällys on
+   *    `pointer-events: none`, joten `elementFromPoint` löytää Ohitan
+   *    silloinkin, kun kuva on maalattu sen PÄÄLLE. Molemmat ovat
+   *    samassa pinossa (`.stage`) samalla luvulla (z-index 3), joten
+   *    ratkaisu on DOM-järjestys: Ohita on päällä täsmälleen silloin,
+   *    kun sen z on suurempi TAI kun se on päällyksen JÄLKEEN. Sekä
+   *    osuma että järjestys kirjataan.
+   *  - TOINEN PÄÄLLYS ON SE, JOKA PEITTI. Ensimmäisen ladonnan
+   *    (avaaIsokuvaPaallys) jälkeen nappi on viimeisenä, mutta pulun
+   *    oma sarja avaa kartan napautuksen jälkeen UUDEN päällyksen
+   *    (aloitaPuluCamSarja → aloitaMyohastynytPuluSarja) — ja se
+   *    ladottiin napin päälle.
+   *  - LIIKU EI OLE KIINTEÄSSÄ KOHDASSA. Maapaneelin kortti nostaa
+   *    sitä `--liiku-pohja`-mitalla (js/pallolauta/maapaneeli.js), ja
+   *    juuri silloin sana nousi Ohitan kaistalle. Siksi laatikot
+   *    mitataan myös nostettuna (60/80/100 px). Mittaus tehdään
+   *    ilman `luenta-aanessa`-luokkaa: se on tasan se hetki, jolloin
+   *    kertoja on vaiennut, Liiku on palannut ruudulle ja Ohita
+   *    odottaa vielä pulun vuoroa.
+   * ================================================================== */
+  const ohitanKerros = () => s.evaluate(() => {
+    const el = document.querySelector('.fokusvirta-isokuva-ohita');
+    if (!el?.isConnected) return { domissa: false };
+    const r = el.getBoundingClientRect();
+    const kx = Math.round(r.left + r.width / 2);
+    const ky = Math.round(r.top + r.height / 2);
+    const osuma = document.elementFromPoint(kx, ky);
+    const kerros = (n) => {
+      const v = getComputedStyle(n).zIndex;
+      return v === 'auto' ? 0 : Number(v);
+    };
+    const leikkaa = (a, b) => a.left < b.right && a.right > b.left
+      && a.top < b.bottom && a.bottom > b.top;
+    const ohitaZ = kerros(el);
+    const paallykset = [...document.querySelectorAll('.fokusvirta-isokuva')].map((p) => {
+      const ruudut = [...p.querySelectorAll('.fokusvirta-isokuva-ruutu')]
+        .map((k) => k.getBoundingClientRect());
+      // Päällys ENNEN nappia DOMissa => nappi maalataan sen päälle.
+      const paallysEnnen = Boolean(
+        el.compareDocumentPosition(p) & Node.DOCUMENT_POSITION_PRECEDING,
+      );
+      const z = kerros(p);
+      return {
+        z,
+        paallysEnnen,
+        ohitaPaalla: ohitaZ > z || (ohitaZ === z && paallysEnnen),
+        leikkaavia: ruudut.filter((kr) => leikkaa(kr, r)).length,
+        alin: ruudut.length ? Math.round(Math.max(...ruudut.map((kr) => kr.bottom))) : null,
+      };
+    });
+    return {
+      domissa: true,
+      opacity: Math.round(Number(getComputedStyle(el).opacity) * 1000) / 1000,
+      disabled: el.disabled === true,
+      ohitaZ,
+      ohitaYla: Math.round(r.top),
+      keski: { x: kx, y: ky },
+      osumaOhita: Boolean(osuma && (osuma === el || el.contains(osuma))),
+      osuma: osuma ? String(osuma.className?.baseVal ?? osuma.className ?? osuma.tagName) : null,
+      paallyksia: paallykset.length,
+      alla: paallykset.filter((p) => !p.ohitaPaalla).length,
+      paallykset,
+    };
+  });
+
+  /* 17 (väite i): Ohita on täydellä peitolla eikä estettynä. */
+  const kerrosEnnen = await ohitanKerros();
+  tieto(`${lappuNimi} Ohitan kerros luennan aikana`, JSON.stringify(kerrosEnnen));
+  vaadi(`${lappuNimi}: Ohita on luennan aikana täysin näkyvissä (opacity ≥ 0,9, ei disabled)`,
+    kerrosEnnen.domissa && kerrosEnnen.opacity >= 0.9 && kerrosEnnen.disabled === false,
+    JSON.stringify(kerrosEnnen));
+
+  /* 18 (väite ii): kartan napautus ei laskenut peittoa. */
+  vaadi(`${lappuNimi}: kartan napautus ei laske Ohitan opacityä`,
+    heti.opacity >= 0.9 && lennonJalkeen.opacity >= 0.9,
+    `heti ${heti.opacity}, lennon jälkeen ${lennonJalkeen.opacity}`);
+
+  /*
+   * 19 (väite iii): pulun oma sarja avaa TOISEN luentakuvakortin —
+   * Ohitan on jäätävä sen päälle.
+   */
+  const puluSarja = await s.evaluate(async () => {
+    const { ui, game } = window.matkakirja;
+    const m = await import('/js/fokusvirta.js');
+    /*
+     * PULUN SARJA ON "KERRAN PER SAAPUMINEN" (aloitaPuluCamSarja).
+     * Mittari on jo ajanut saapumisen läpi kertaalleen (kohdat 9–12),
+     * joten muisti nollataan tähän yhteen kohtaan — mitattava on
+     * TOISEN päällyksen ladonta, ei sarjan kertaluonteisuus.
+     */
+    ui.puluCamSarjaNaytetty?.clear?.();
+    ui.luennanOhitus = null;
+    return {
+      kuvia: m.fokusvirtaPulunKuvat(ui, game.cityOf()).length,
+      alkoi: m.aloitaPuluCamSarja(ui, game.cityOf()) === true,
+    };
+  });
+  await s.waitForTimeout(800);
+  const kerrosPulu = await ohitanKerros();
+  tieto(`${lappuNimi} pulun sarja`, JSON.stringify(puluSarja));
+  tieto(`${lappuNimi} Ohitan kerros pulun kortin kanssa`, JSON.stringify(kerrosPulu));
+  vaadi(`${lappuNimi}: pulun luentakuvakortti nousi ruudulle (mittari ei mittaa tyhjää)`,
+    puluSarja.alkoi === true && kerrosPulu.paallyksia > 0, JSON.stringify(puluSarja));
+  vaadi(`${lappuNimi}: Ohita on luentakuvakortin PÄÄLLÄ, ei sen takana`,
+    kerrosPulu.domissa && kerrosPulu.alla === 0, JSON.stringify(kerrosPulu.paallykset));
+  vaadi(`${lappuNimi}: Ohita ottaa yhä napautuksensa (elementFromPoint = Ohita)`,
+    kerrosPulu.osumaOhita === true, JSON.stringify(kerrosPulu));
+  vaadi(`${lappuNimi}: Ohita pysyy täydellä peitolla kortin avauduttua`,
+    kerrosPulu.opacity >= 0.9 && kerrosPulu.disabled === false, JSON.stringify(kerrosPulu));
+  if (kuvia && KUVAKANSIO) {
+    await s.screenshot({ path: join(KUVAKANSIO, 'ohita-luentakuvakortin-paalla.png') });
+  }
+
+  /* Toinen napautus kartalle kesken pulun kortin: ei saa viedä nappia. */
+  if (piste) await s.mouse.click(piste.x, piste.y);
+  await s.waitForTimeout(200);
+  const toisenJalkeen = await ohitanKerros();
+  tieto(`${lappuNimi} toisen napautuksen jälkeen`, JSON.stringify(toisenJalkeen));
+  vaadi(`${lappuNimi}: toinen kartan napautus ei vie Ohitaa eikä himmennä sitä`,
+    toisenJalkeen.domissa === true && toisenJalkeen.opacity >= 0.9,
+    JSON.stringify(toisenJalkeen));
+
+  /* 20 (väite iv): Ohita ja Liiku eivät osu toisiinsa. */
+  const liikunLaatikot = await s.evaluate(() => {
+    const juuri = document.documentElement;
+    const oliPohja = juuri.style.getPropertyValue('--liiku-pohja');
+    const oliAanessa = document.body.classList.contains('luenta-aanessa');
+    // Kertoja on juuri vaiennut: Liiku palaa, Ohita odottaa pulua.
+    document.body.classList.remove('luenta-aanessa');
+    const b = (n) => {
+      if (!n) return null;
+      const r = n.getBoundingClientRect();
+      return {
+        top: Math.round(r.top), bottom: Math.round(r.bottom),
+        left: Math.round(r.left), right: Math.round(r.right),
+        w: Math.round(r.width), h: Math.round(r.height),
+      };
+    };
+    const leikkaa = (a, c) => Boolean(a && c) && a.left < c.right && a.right > c.left
+      && a.top < c.bottom && a.bottom > c.top;
+    const mittaa = (pohja) => {
+      if (pohja === null) juuri.style.removeProperty('--liiku-pohja');
+      else juuri.style.setProperty('--liiku-pohja', `${pohja}px`);
+      const liiku = document.querySelector('.monitoimi-nappi');
+      const nimio = liiku?.querySelector('.icon-label') ?? null;
+      const ohita = document.querySelector('.fokusvirta-isokuva-ohita');
+      const lR = b(liiku);
+      const nR = b(nimio);
+      const oR = b(ohita);
+      return {
+        pohja,
+        nakyy: Boolean(liiku) && getComputedStyle(liiku).display !== 'none' && (lR?.h ?? 0) > 0,
+        liiku: lR,
+        nimio: nR,
+        ohita: oR,
+        leikkaaNapin: leikkaa(oR, lR),
+        leikkaaNimion: leikkaa(oR, nR),
+      };
+    };
+    const tulos = [null, 60, 80, 100].map(mittaa);
+    if (oliPohja) juuri.style.setProperty('--liiku-pohja', oliPohja);
+    else juuri.style.removeProperty('--liiku-pohja');
+    if (oliAanessa) document.body.classList.add('luenta-aanessa');
+    return tulos;
+  });
+  for (const rivi of liikunLaatikot) {
+    tieto(`${lappuNimi} Ohita vs. Liiku (--liiku-pohja ${rivi.pohja ?? 'ei asetettu'})`,
+      JSON.stringify(rivi));
+  }
+  vaadi(`${lappuNimi}: Liiku on mitattavissa joka nostolla (mittari ei mittaa tyhjää)`,
+    liikunLaatikot.every((rivi) => rivi.nakyy === true && Boolean(rivi.ohita)),
+    JSON.stringify(liikunLaatikot.map((rivi) => rivi.nakyy)));
+  vaadi(`${lappuNimi}: Ohitan ja Liiku-napin laatikot eivät leikkaa`,
+    liikunLaatikot.every((rivi) => rivi.leikkaaNapin === false),
+    JSON.stringify(liikunLaatikot.filter((rivi) => rivi.leikkaaNapin)));
+  vaadi(`${lappuNimi}: Ohitan ja Liiku-sanan laatikot eivät leikkaa`,
+    liikunLaatikot.every((rivi) => rivi.leikkaaNimion === false),
+    JSON.stringify(liikunLaatikot.filter((rivi) => rivi.leikkaaNimion)));
+
   /*
    * 15: MOLEMPIEN LUENTOJEN LOPPU VIE OHITAN. Isoisän luenta päättyy
    * (vapautaPuhuja + diaryVoice null) eikä pulun repliikki ala:
@@ -1089,16 +1287,28 @@ async function mittaaPaatokset38(ruutu, lappuNimi, kuvia = false) {
     ui.liviaAani = null;
   });
   let loppui = null;
+  /*
+   * 21 (väite v): MILLOIN JA MIKSI OHITA KATOSI. Aika luetaan luentojen
+   * päättymisestä, koska juuri se on ainoa sallittu syy napin
+   * katoamiseen painalluksen ohella — napautuksia ei tämän jälkeen
+   * tule, joten mitattu hetki on vahdin oma kello (OHITAN_VAHTI_MS
+   * 250 ms + hiljaisuuskatto), ei pelaajan teko.
+   */
+  const luennanLoppu = Date.now();
+  let katosiMs = null;
   for (let i = 0; i < 40; i += 1) {
     // eslint-disable-next-line no-await-in-loop
     loppui = await ohitanTila();
-    if (!loppui.domissa) break;
+    if (!loppui.domissa) { katosiMs = Date.now() - luennanLoppu; break; }
     // eslint-disable-next-line no-await-in-loop
     await s.waitForTimeout(250);
   }
   tieto(`${lappuNimi} Ohita luentojen jälkeen`, JSON.stringify(loppui));
+  tieto(`${lappuNimi} Ohita katosi luentojen lopusta`, `${katosiMs} ms`);
   vaadi(`${lappuNimi}: Ohita poistuu, kun kumpikin luenta on loppu`,
     loppui.domissa === false, JSON.stringify(loppui));
+  vaadi(`${lappuNimi}: Ohita eli luentojen loppuun asti (ei kadonnut napautuksesta)`,
+    katosiMs !== null && katosiMs > 250, `${katosiMs} ms`);
 
   /*
    * 16: KELLUVA OHITA PYSÄYTTÄÄ YHÄ KAIKEN (PAATOKSET 35 kohta 6:

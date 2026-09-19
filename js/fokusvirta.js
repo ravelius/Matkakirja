@@ -4379,7 +4379,28 @@ function vahtiOhitanLoppua(ui, tila) {
  */
 export function naytaOhitaNappi(ui, city) {
   if (typeof document === 'undefined' || !ui || !city) return null;
-  if (ui.ohitaNappi?.isConnected && ui.ohitaKaupunki === city.id) return ui.ohitaNappi;
+  if (ui.ohitaNappi?.isConnected && ui.ohitaKaupunki === city.id) {
+    /*
+     * TOINEN PÄÄLLYS EI SAA JÄÄDÄ NAPIN PÄÄLLE (mitattu 19.9.2026,
+     * Sonnetin puhelintestin löydös 2: *"saavuttaessa Amsterdamiin
+     * ensimmainen napautus kartalle toi luentakuvan OHITAN PAALLE"*).
+     *
+     * Päällys ja nappi ovat SAMASSA pinossa SAMALLA luvulla (z-index 3,
+     * `.stage`), joten järjestyksen ratkaisee DOM — ja vain ENSIMMÄINEN
+     * päällys ladotaan ennen nappia (avaaIsokuvaPaallys). Pulun oma
+     * sarja, myöhästynyt sarja ja kartan liikkeen jälkeen nouseva uusi
+     * päällys tulevat kaikki napin JÄLKEEN, eli sen päälle: mitattu
+     * 390 ja 1400 px, toisen päällyksen jälkeen "päällys ennen Ohitaa"
+     * oli false, kun sen kuuluu olla true.
+     *
+     * Siirto on `appendChild` samalle solmulle: nappi säilyy samana
+     * elementtinä (sama vahti, sama kuuntelija, sama `nakyy`-luokka eli
+     * sama opacity), se vain palaa kodin viimeiseksi. Vahtia EI nollata
+     * — idempotenssi on tämän haaran koko idea.
+     */
+    isokuvanKoti().appendChild(ui.ohitaNappi);
+    return ui.ohitaNappi;
+  }
   piilotaOhitaNappi(ui, { heti: true });
   lataaTyyli();
   const nappi = html('button', 'fokusvirta-isokuva-ohita fokusvirta-ohitanappi', 'Ohita');
