@@ -132,6 +132,7 @@ import { HAHMOTELMA_PRT } from './packs/hahmotelma-prt.js';
 import { HAHMOTELMA_GRC } from './packs/hahmotelma-grc.js';
 import { HAHMOTELMA_AUT } from './packs/hahmotelma-aut.js';
 import { HAHMOTELMA_NLD } from './packs/hahmotelma-nld.js';
+import { HAHMOTELMA_SWE } from './packs/hahmotelma-swe.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
@@ -374,6 +375,14 @@ KOHDE_MAAT.AUT = [...(KOHDE_MAAT.AUT ?? []), ...HAHMOTELMA_AUT];
  * lähin yli 8 lautayksikön päässä.
  */
 KOHDE_MAAT.NLD = [...(KOHDE_MAAT.NLD ?? []), ...HAHMOTELMA_NLD];
+
+/*
+ * RUOTSIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin Alankomaiden hahmotelmalla; rivit ovat aidosti kaupungin
+ * (Tukholma) ulkopuolella, lähin (Sigtuna) yli 8 lautayksikön päässä.
+ */
+KOHDE_MAAT.SWE = [...(KOHDE_MAAT.SWE ?? []), ...HAHMOTELMA_SWE];
 
 /*
  * ESPANJAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
