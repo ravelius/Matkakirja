@@ -24,8 +24,8 @@ Sisältöjä ei ole vielä kirjoitettu.
   ehdotus ei ole alle 7,5 lautayksikön päässä nykyisestä merkistä.
 - Ei kaupunkeja: Ateena, Thessaloniki, Patras, Iraklion, Volos, Chania, Rodos jne. jätetty pois.
   Mukana pieniä kaupunkeja (Kastoria, Naoussa, Metsovo, Kalavryta), koska niiden merkitys on kohde.
-- Saaret: Fablen sääntö "vain ne, jotka osuvat GRC-fokuslehdelle" — kaikki viisi (Zakynthos/Navagio,
-  Milos, Delos, Korfu, Chios, Samothrace; kuusi) osuvat lehdelle; etäisyys pelin karkeaan GRC-renkaaseen
+- Saaret: Fablen sääntö "vain ne, jotka osuvat GRC-fokuslehdelle" — kaikki kuusi (Zakynthos/Navagio,
+  Milos, Delos, Korfu, Chios, Samothrace) osuvat lehdelle; etäisyys pelin karkeaan GRC-renkaaseen
   taulukossa. Ne ovat renkaan ulkopuolella (rengas ei sisällä pieniä saaria), ankkurilukitus hoitaa.
 - Tyypit ovat pelin oma `KOHDE_TYYPPISYMBOLIT`-taulun arvot (luonto = vuori / saari / jarvi; muut
   historia, kulttuuri, ruoka, kauppa, tekniikka).
@@ -68,7 +68,7 @@ Sisältöjä ei ole vielä kirjoitettu.
 | 20 | hahmotelma-kastoria | Kastoria | kulttuuri | 40,5167 / 21,2667 | Kastoria | Järven ympäröimä turkiskauppiaiden ja bysanttilaisten kirkkojen kaupunki. |
 | 21 | hahmotelma-naoussa | Naoussa | ruoka | 40,6333 / 22,0667 | Naousa, Imathia | Vermion-vuoren juurella oleva Naoussa, Kreikan Xinomavro-punaviinin keskus. |
 
-### Kauppa ja tekniikka (4)
+### Kauppa ja tekniikka (5)
 
 | # | id | nimi | tyyppi | lat / lon | en-Wikipedia | Miksi |
 |--:|----|------|--------|-----------|--------------|-------|
