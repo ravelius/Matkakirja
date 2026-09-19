@@ -9168,7 +9168,16 @@ export const RAAMATTU = {
           + 'saa sulkea korttia; vain X ja napautus kortin ulkopuolelle sulkevat. Osuma '
           + 'tunnistetaan DOM-sisaltavyydella (closest), ei tallennetulla suorakaiteella, '
           + 'joka vanhenee kortin kasvaessa. Opus 1 -era kortti-sulku tilattu klo 23.43 '
-          + '(tauosta poikkeus omistajan korjaustilauksella), vartio 390 px ja iPad.',
+          + '(tauosta poikkeus omistajan korjaustilauksella), vartio 390 px ja iPad. TILA '
+          + '(Opus 1 19.9.2026 klo 23.55, 30e2ce29): juurisyy kuva edella -kortin '
+          + 'napautusvahti (kuvanNapautus 12.9.2026), jonka ehto katsoi vain luokkaa '
+          + 'nostokuva-kortti ja jai paalle Lisaa-vaiheessa; nyt vahti vain vaiheessa 1, '
+          + 'vaiheessa 2 sulku X tai ulkopuoli. savuke-kortti-sulku 8/8 (390 px ja iPad; '
+          + 'ulkopuolinen napautus hiirella, koska Chromiumin kosketuskorjaus vetaa 4-12 '
+          + 'px paassa olevan kosketuksen korttiin). Julkaistaan v1969. CODEX-POSTI: '
+          + 'animointipyynto toimitettu haaraan claude/postilaatikko (posti/fable-codex-'
+          + 'pulu-astronautti-20260919.md, 644c6359) ja mainiin docs-PR #2620 (20.9.2026 '
+          + 'klo 00.02).',
         'JONOSSA TAUON JALKEEN (omistaja 19.9.2026 klo 23.31-23.35 Suomen aikaa; "ala '
           + 'aloita uusia toita viela"): A) MAALEHDEN RAJAVIIVA VIRHEELLINEN RANNIKOLLA '
           + '(sanatarkasti: "Taalla virheita rajaviivassa", Ranskan lehden iPad-kuva '
