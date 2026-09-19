@@ -141,11 +141,13 @@ import { HAHMOTELMA_CZE } from './packs/hahmotelma-cze.js';
 import { HAHMOTELMA_SWE } from './packs/hahmotelma-swe.js';
 import { HAHMOTELMA_DNK } from './packs/hahmotelma-dnk.js';
 import { HAHMOTELMA_SVK } from './packs/hahmotelma-svk.js';
+import { HAHMOTELMA_LUX } from './packs/hahmotelma-lux.js';
 import { HAHMOTELMA_HUN } from './packs/hahmotelma-hun.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
 import { HAHMOTELMA_FIN } from './packs/hahmotelma-fin.js';
 import { HAHMOTELMA_ROU } from './packs/hahmotelma-rou.js';
+import { HAHMOTELMA_SVN } from './packs/hahmotelma-svn.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -430,6 +432,14 @@ KOHDE_MAAT.BGR = [...(KOHDE_MAAT.BGR ?? []), ...HAHMOTELMA_BGR];
 KOHDE_MAAT.SVK = [...(KOHDE_MAAT.SVK ?? []), ...HAHMOTELMA_SVK];
 
 /*
+ * LUXEMBURGIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; Luxemburgissa ei ole pelikaupunkia, joten kaupunkikohteet
+ * (Luxembourgin kaupunki, Esch ym.) ovat sallittuja.
+ */
+KOHDE_MAAT.LUX = [...(KOHDE_MAAT.LUX ?? []), ...HAHMOTELMA_LUX];
+
+/*
  * PUOLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
  * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
  * hahmotelmalla; rivit ovat aidosti pelikaupunkien (Varsova, Krakova)
@@ -504,6 +514,14 @@ KOHDE_MAAT.FIN = [...(KOHDE_MAAT.FIN ?? []), ...HAHMOTELMA_FIN];
 KOHDE_MAAT.ROU = [...(KOHDE_MAAT.ROU ?? []), ...HAHMOTELMA_ROU];
 
 /*
+
+/*
+ * SLOVENIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla; Slovenialla ei ole pelikaupunkia
+ * eikä aiempia nostoja, ja lista on karsittu 24:ään maan pienen koon takia.
+ */
+KOHDE_MAAT.SVN = [...(KOHDE_MAAT.SVN ?? []), ...HAHMOTELMA_SVN];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN

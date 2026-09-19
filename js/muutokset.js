@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1966, teksti: 'Astronautin avaus; ankkurit 13 maalle; Slovenia, Luxemburg' },
   { v: 1965, teksti: 'Bulgaria, Romania, Slovakia; visan paperityyli; selitteet' },
   { v: 1964, teksti: 'Ruotsi, Irlanti, Suomi, Kroatia; kortin kysymys; visa-lukko' },
   { v: 1963, teksti: 'Tanska, Unkari; kuvalähteet suurennokseen; pystykuva; nimiöt' },

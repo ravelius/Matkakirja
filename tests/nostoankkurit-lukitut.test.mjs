@@ -44,7 +44,9 @@ const avaimet = Object.keys(NOSTOANKKURIT_FRA);
 
 test('taulussa on ankkureita ja kehys on kirjattu', () => {
   assert.ok(avaimet.length > 0, 'nostoankkurit-fra.js on tyhjä');
-  assert.equal(lukittujaAnkkureita(), avaimet.length);
+  // Yhteinen taulu sisältää myös EU-maiden taulut (erä I 19.9.2026,
+  // tests/nostoankkurit-maat.test.mjs); FRA:n ankkurit ovat siinä kaikki.
+  assert.ok(lukittujaAnkkureita() >= avaimet.length);
   assert.match(NOSTOANKKURIT_FRA_KEHYS.ruutu, /^\d+x\d+$/);
   assert.ok(NOSTOANKKURIT_FRA_KEHYS.vietty, 'kehyksestä puuttuu vientipäivä');
 });
