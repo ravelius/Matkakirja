@@ -207,17 +207,84 @@ export const POLLON_ARVONIMET_MAANOSITTAIN = {
   ],
 };
 
+
+/**
+ * MAAKOHTAISET KUNNIANIMET (omistaja 19.9.2026 klo 21.56: "Myös maan omat
+ * paikat ja historialliset henkilöt jne sopisivat tähän hyvin. Voisi olla
+ * siis maa spesifejä nimiä"). Avain ISO-3, arvo lista ablatiivissa. Maan
+ * omat paikat, kansantarut ja historialliset henkilöt (1873 tai sitä
+ * vanhemmat; elossa 1873 kelpaa), leikkisästi. Sonnet-sessiot täyttävät
+ * maa kerrallaan Fablen speksillä; muutama malli tässä.
+ */
+export const POLLON_ARVONIMET_MAITTAIN = {
+  FRA: [
+    'Notre-Damen Kellotornin Pöllöltä',
+    'Voltairen Kirjeenvaihtajalta',
+    'Louvren Yökierroksen Oppaalta',
+    'Pyreneiden Huuhkajalta',
+    'Jules Vernen Pöytäkirjurilta',
+    'Montmartren Tuulimyllyn Vahdilta',
+  ],
+  FIN: [
+    'Kolin Huuhkajalta',
+    'Runebergin Tortun Vartijalta',
+    'Lönnrotin Muistiinpanojen Lukijalta',
+    'Saimaan Rannan Yölinnulta',
+    'Tuonelan Joutsenen Naapurilta',
+    'Snellmanin Sanakirjan Syöjältä',
+  ],
+  DEU: [
+    'Grimmin Veljesten Satupöllöltä',
+    'Reinin Loreleyn Kuuntelijalta',
+    'Goethen Puutarhan Yölinnulta',
+    'Schwarzwaldin Käkikellon Kilpailijalta',
+  ],
+  GBR: [
+    'Big Benin Yövahdilta',
+    'Sherlock Holmesin Konsultilta',
+    'Shakespearen Kuiskaajalta',
+    'Tower of Londonin Korppien Kilpailijalta',
+  ],
+  ITA: [
+    'Colosseumin Kaarien Pöllöltä',
+    'Danten Kommentaattorilta',
+    'Vesuviuksen Rinteen Tähystäjältä',
+    'Galilein Kaukoputken Vartijalta',
+  ],
+  GRC: [
+    'Athenen Olkapään Pöllöltä',
+    'Delfoin Oraakkelin Sijaiselta',
+    'Olympoksen Yökokouksen Puheenjohtajalta',
+    'Sokrateen Kysymysten Kuulijalta',
+  ],
+  EGY: [
+    'Sfinksin Arvoitusten Ratkojalta',
+    'Aleksandrian Kirjaston Viimeiseltä Lukijalta',
+    'Niilin Tulvien Ennustajalta',
+  ],
+  USA: [
+    'Mark Twainin Jokilaivan Pöllöltä',
+    'Vapaudenpatsaan Telineiden Yövahdilta',
+    'Preerian Postiratsastajan Oppaalta',
+  ],
+};
+
 /**
  * Arvonta: OMISTAJA 19.9.2026 klo 21.52 ("Parempi mitä enemmän
  * vaihtoehtoja niin tulee aina eri vaihtoehto") — joka avauksella uusi
  * satunnainen arvonimi, ei siemenestä. Maanosan lista noin joka
- * kolmannella kerralla, jos maanosa tunnetaan. Sama nimi ei toistu
+ * kolmannella kerralla, jos maanosa tunnetaan; maan oma lista noin 40 %
+ * ajasta, jos pelaajan maalle on kunnianimiä. Sama nimi ei toistu
  * heti peräkkäin (edellinen muistetaan).
  */
 let edellinenArvonimi = null;
-export function pollonArvonimi(maanosa = null) {
+export function pollonArvonimi(maanosa = null, iso = null) {
+  const maa = POLLON_ARVONIMET_MAITTAIN[iso] ?? null;
   const oma = POLLON_ARVONIMET_MAANOSITTAIN[maanosa] ?? null;
-  const lista = (oma && oma.length && Math.random() < 0.34) ? oma : POLLON_ARVONIMET_YLEISET;
+  const r = Math.random();
+  const lista = (maa && maa.length && r < 0.4) ? maa
+    : (oma && oma.length && r < 0.65) ? oma
+    : POLLON_ARVONIMET_YLEISET;
   let nimi = lista[Math.floor(Math.random() * lista.length)];
   if (nimi === edellinenArvonimi && lista.length > 1) {
     nimi = lista[(lista.indexOf(nimi) + 1) % lista.length];
