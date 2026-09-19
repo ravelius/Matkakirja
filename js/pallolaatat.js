@@ -1083,6 +1083,54 @@ export function laatanKartta(taso, sarake, rivi, {
   };
 }
 
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * ASTRONAUTIN LAASTARI: TASAINEN MERIVARI ON AUKKO, EI MERTA
+ * (Opus 19.9.2026, erä opus-local-laastari; Fablen päätös klo 18.10)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Omistajan laitekuvat (v1957): tummansinisiä suorakaiteita Kreetan
+ * eteläpuolella ja porrastettu rengas navan ympärillä. MITATTU:
+ * reliefipyramidin alinäytteistetyt tasot täyttävät polttamattoman
+ * merilapsen kohdan tasaisella MERIVARIlla (ämpärin z5/22/10: 24,7 %
+ * pikseleistä). Topografialinssissä laatasto on koko pinta ja väri on
+ * oikea. Astronautin kamerassa laastari piirtyy batymetrisen
+ * 4k-pohjan PÄÄLLE, jolloin tasainen alue on väärä: se peittää
+ * merenpohjan muodot. Laastarissa MERIVARI tehdään siksi
+ * läpinäkyväksi, ja pohja näkyy aukosta. Ks.
+ * docs/raportit/viesti-fable-webkit-napa-20260919.md.
+ */
+/** MERIVARI RGB:nä (js/reliefipyramidi.js MERIVARI = rgb(38, 78, 145)). */
+export const LAASTARIN_MERIVARI = [38, 78, 145];
+/** Kanavakohtainen toleranssi (WebP-pakkaus heiluttaa tasaista väriä). */
+export const LAASTARIN_MERIVARIN_TOLERANSSI = 3;
+/**
+ * Leveysraja astronautin laastarille: pyramidissa ei ole jääsekoitusta,
+ * joten Grönlanti ja napa-alueet olisivat laastarissa ruskeita ja
+ * jäättömiä 4k-pohjan jäisen pinnan päällä. Laastari rajataan siksi
+ * ±60°:een; sen pohjoispuolella näkyy 4k-pohja.
+ */
+export const LAASTARIN_LEVEYSRAJA = 60;
+
+/**
+ * Kirjoittaa alfakanavaan 0 niille pikseleille, jotka ovat tasaista
+ * MERIVARIa, ja 255 muille. Puhdas funktio (tests/laastari.test.mjs).
+ *
+ * @param {Uint8ClampedArray} data RGBA
+ * @returns {number} läpinäkyviksi merkittyjen pikselien määrä
+ */
+export function merkitseMerivariAukoksi(data, vari = LAASTARIN_MERIVARI, tol = LAASTARIN_MERIVARIN_TOLERANSSI) {
+  let aukkoja = 0;
+  for (let i = 0; i < data.length; i += 4) {
+    const aukko = Math.abs(data[i] - vari[0]) <= tol
+      && Math.abs(data[i + 1] - vari[1]) <= tol
+      && Math.abs(data[i + 2] - vari[2]) <= tol;
+    data[i + 3] = aukko ? 0 : 255;
+    if (aukko) aukkoja += 1;
+  }
+  return aukkoja;
+}
+
 /**
  * ASTRONAUTIN VALOLIUKU LAATAN KANKAALLE — valon vastakaava.
  *
@@ -1746,6 +1794,8 @@ export function luoLaattakerros({
      * kentällä luettavissa (window.matkakirja.ui.reliefi404).
      */
     reliefi404: 0, reliefiVaroja: 0, reliefiTasavareja: 0,
+    /** Astronautin laastarissa läpinäkyviksi tehdyt MERIVARI-pikselit (ks. LAASTARIN_MERIVARI). */
+    merivariAukkoja: 0,
     /*
      * Laattoja, jotka koottiin ILMAN kerman maalausta, koska suojasta ei
      * leikkaudu niille mitään (ks. tasoituksenUlkopuolella). Savukkeen
@@ -2016,10 +2066,17 @@ export function luoLaattakerros({
     if (!karttaAlaMuisti && pyramidi) {
       karttaAlaMuisti = pyramidinKarttaAla({ pyramidi, yLat, naparaja });
     }
-    return karttaAlaMuisti ?? { latMin: -naparaja, latMax: naparaja };
+    const ala = karttaAlaMuisti ?? { latMin: -naparaja, latMax: naparaja };
+    if (!pyramidinReliefiAstronautilla()) return ala;
+    // Astronautin laastari ±LAASTARIN_LEVEYSRAJA (ks. yllä).
+    return {
+      ...ala,
+      latMin: Math.max(ala.latMin, -LAASTARIN_LEVEYSRAJA),
+      latMax: Math.min(ala.latMax, LAASTARIN_LEVEYSRAJA),
+    };
   };
   const laatanAlue = (tasoOlio, sarake, rivi) => {
-    const muistiavain = `${tasoOlio.z}/${sarake}/${rivi}`;
+    const muistiavain = `${pyramidinReliefiAstronautilla() ? 'a' : 'p'}/${tasoOlio.z}/${sarake}/${rivi}`;
     const muistissa = aluemuisti.get(muistiavain);
     if (muistissa) return muistissa;
     const laskettu = laskeLaatanAlue(tasoOlio, sarake, rivi);
@@ -2200,7 +2257,8 @@ export function luoLaattakerros({
         suodatinPaalla = ctx.filter !== 'none';
       } catch { suodatinPaalla = false; }
     }
-    if (tausta) {
+    // Astronautin laastarissa merilaatta on aukko, ei tasainen meri (ks. LAASTARIN_MERIVARI).
+    if (tausta && !kerrokset.astronautti) {
       ctx.fillStyle = tausta;
       ctx.fillRect(0, 0, kartta.leveys, kartta.korkeus);
     }
@@ -2215,6 +2273,34 @@ export function luoLaattakerros({
         vara, varaKartta.sx, varaKartta.sy, varaKartta.sw, varaKartta.sh,
         0, 0, kartta.leveys, kartta.korkeus,
       );
+    }
+    /*
+     * AUKKOMASKI ASTRONAUTIN LAASTARILLE (ks. LAASTARIN_MERIVARI): raaka
+     * reliefikuva (tai varalaatta) ennen suodatinta ja valoliukua, jolloin
+     * MERIVARI on vielä tarkka luku. Maski leikataan kankaaseen vasta
+     * lopuksi (`destination-in`), koska valoliu'un multiply täyttäisi
+     * läpinäkyvän kohdan. Ilman kuvaa ja varaa merilaatta on kokonaan
+     * aukko.
+     */
+    let aukkoMaski = null;
+    if (kerrokset.astronautti) {
+      const lahde = reliefiKohta >= 0 ? kuvat[reliefiKohta] : null;
+      aukkoMaski = luoKangas(kartta.leveys, kartta.korkeus);
+      const mctx = aukkoMaski?.getContext?.('2d', { willReadFrequently: true });
+      if (!mctx) {
+        aukkoMaski = null;
+      } else if (lahde || vara) {
+        try {
+          if (lahde) mctx.drawImage(lahde, 0, 0, kartta.leveys, kartta.korkeus);
+          else {
+            mctx.drawImage(vara, varaKartta.sx, varaKartta.sy, varaKartta.sw, varaKartta.sh,
+              0, 0, kartta.leveys, kartta.korkeus);
+          }
+          const d = mctx.getImageData(0, 0, kartta.leveys, kartta.korkeus);
+          mittarit.merivariAukkoja += merkitseMerivariAukoksi(d.data);
+          mctx.putImageData(d, 0, 0);
+        } catch { aukkoMaski = null; }
+      }
     }
     const tasoitus = kerrokset.vari ? pyramidinTasoitus() : null;
     /*
@@ -2386,6 +2472,14 @@ export function luoLaattakerros({
         mittarit.valoliukuja += 1;
       }
     }
+    if (aukkoMaski) {
+      try {
+        ctx.globalCompositeOperation = 'destination-in';
+        ctx.drawImage(aukkoMaski, 0, 0);
+      } finally { ctx.globalCompositeOperation = 'source-over'; }
+      aukkoMaski.width = 0;
+      aukkoMaski.height = 0;
+    }
     // Verkko: laatan oma lat/lon-suorakaide, UV laatan omalla kankaalla.
     const alue = laatanAlue(tasoOlio, t.sarake, t.rivi);
     if (!Number.isFinite(alue.lat0) || !Number.isFinite(alue.lat1) || !(alue.lat1 > alue.lat0)) {
@@ -2424,6 +2518,14 @@ export function luoLaattakerros({
     const savy = kerrokset.astronautti ? pyramidinReliefinSavy() : null;
     const materiaali = new luokat.LaattaMateriaali({
       map: tekstuuri, transparent: true, opacity: 0, depthWrite: true,
+      /*
+       * Astronautin laastarin aukko (MERIVARI → alfa 0) ei saa kirjoittaa
+       * syvyyttä: laastari piirtyy ENNEN pohjapalloa (renderOrder), ja
+       * syvyyden kirjoittanut läpinäkyvä pikseli jätti pohjan
+       * piirtämättä — mitattu mustana suorakaiteena. alphaTest hylkää
+       * aukon kokonaan; häivytyksen aikainen opacity > 0,004 ei osu siihen.
+       */
+      ...(kerrokset.astronautti ? { alphaTest: 0.004 } : {}),
       polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: LAATTAKERROS_SYVYYSSIIRTO,
       ...(savy === null ? {} : { color: savy }),
     });

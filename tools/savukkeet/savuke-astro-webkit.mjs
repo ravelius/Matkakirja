@@ -564,7 +564,7 @@ async function mittaaAvaus(s, { selain, kotelo, kerta, dpr, leveys, korkeus }) {
       tila: reliefinLinssitila(), kaytossa: reliefiKaytossa(), astro: reliefiAstronautilla(),
       taso: m?.taso?.z ?? m?.taso ?? null, laattoja: m?.laattoja ?? null, valmiita: m?.valmiita ?? null,
       scenessa: m?.scenessa ?? null, tavut: m?.kaytetytTavut ?? null, syy: m?.syy ?? null,
-      reliefi404: m?.reliefi404 ?? null, varoja: m?.reliefiVaroja ?? null, tasavareja: m?.reliefiTasavareja ?? null,
+      reliefi404: m?.reliefi404 ?? null, merivariAukkoja: m?.merivariAukkoja ?? null, varoja: m?.reliefiVaroja ?? null, tasavareja: m?.reliefiTasavareja ?? null,
       jumissa: m?.jumissa ?? null, valmiita: m?.valmiita ?? null,
     };
   }).catch((e) => ({ virhe: String(e).slice(0, 120) }));
