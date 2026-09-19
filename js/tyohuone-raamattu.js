@@ -9479,7 +9479,12 @@ export const RAAMATTU = {
           + '(48180594, 45b oli kohinaa 0,1 yks.) v1970-prepissa. V1970-PREP: Ljubljana, '
           + 'Kosice, viivat, tekstivalinta, ISS-merkki; tulossa saapumisblur (Opus 1), '
           + 'Biskajanlahti ja rannikko (Opus 2), Bryssel era 2 kaupunkilehti (Sonnet 3), '
-          + 'vanhat kuvat era 2 (Sonnet 2), kierros 16 (Sonnet 1).',
+          + 'vanhat kuvat era 2 (Sonnet 2), kierros 16 (Sonnet 1). SAAPUMISBLUR (Opus 1 '
+          + '5b3d2732, Fable 00.58): juurisyy oli minitrailerin 85 % musta peite, kartta '
+          + 'oli jo valmiina; peite nyt rgba(8,12,18,0,3) + backdrop-filter blur 12 px, '
+          + 'vain sumennus haipyy lopussa; savuke-saapumisblur 10/10, vastakoe 6/10. '
+          + 'V1970 PR #2622 avattu 20.9.2026 klo 00.58 (Ljubljana, Kosice, tekstivalinta, '
+          + 'saapumisblur, ISS-merkki, jokiviivojen tyokalut). Opus 1 seuraavaksi B zoom/pan.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
