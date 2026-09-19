@@ -30,14 +30,9 @@ export const FOKUSVIRTA_KOSICE = {
     paikkarivi: 'Kassa (Košice), 1873. Tuomiokirkon torni kohoaa '
       + 'kaupungin yllä.',
     /*
-     * Fablen kaanon 20.9.2026 klo 00.55 (≤450 merkkiä; oli LUONNOS).
-     * jotta fokusvirtapakki ja saapumisteksti-testi
-     * (tests/vanha-maailma.test.mjs) läpäisevät ennen sitä. Perustuu
-     * artikkelin (EUROPE_ARTIKKELIT.Košice) faktoihin: Kassa Unkarin
-     * kuningaskunnassa, Pyhän Elisabetin tuomiokirkko, Hlavná-katu,
-     * vanhojen muurien purku 1856 mennessä, rautatie Miskolciin 1860.
-     * Päivämäärä ja reitin järjestys on jätetty auki (paikkarivissä vain
-     * vuosi).
+     * Fablen kaanon 20.9.2026 klo 00.55 (424 merkkiä; korvasi Sonnet 3:n
+     * LUONNOKSEN). Lokakuu 1873, tulo Krakovasta Kassa-Oderberg-radan
+     * kautta; tuomiokirkko, Immaculata-ruttopylväs, tokaji, kolme kieltä.
      */
     teksti: 'Kassa (Košice), lokakuussa 1873. Juna toi minut Krakovasta vuorten '
       + 'läpi, ja Karpaatit jäivät taakse kuin kynnys. Pyhän Elisabetin '
