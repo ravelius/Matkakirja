@@ -405,6 +405,59 @@ for (const koko of RUUDUT) {
     k.naapurimerkkeja > 0, `${k.naapurimerkkeja}`);
   vaadi(`${nimi}: 5. lippu vähentää napautettavien määrää`,
     k.osumia + k.naapurimerkkeja > k.osumia, `${k.osumia}`);
+
+  /*
+   * 6. MERINOSTO PYSYY NAPAUTETTAVANA MYÖS LÄHIZOOMISSA (omistaja
+   * 19.9.2026 klo 23.31, iPad: Biskajanlahden nimiö ei ota napautusta).
+   *
+   * Lahden datapiste on ulapalla (45,3 N / −3,2 E), mutta muste on
+   * lukitussa ankkurissa rannikolla (45,2 N / −1,14 E). Ennen korjausta
+   * näkyvyys luettiin datapisteestä, joten lähizoomissa rivi putosi
+   * osumalistalta vaikka nimiö oli keskellä ruutua. Vartio ajaa kameran
+   * ANKKURIIN ja tarkistaa, että datapiste on silloin ruudun
+   * ULKOPUOLELLA — muuten väite ei mittaisi tätä sääntöä lainkaan.
+   */
+  const meri = await sivu.evaluate(async () => {
+    const l = window.matkakirja.ui.pallolauta;
+    l.pallo.pointOfView({ lat: 45.199962, lng: -1.14248, altitude: 0.05 }, 600);
+    await new Promise((r) => setTimeout(r, 2200));
+    l.ladoHeti();
+    await new Promise((r) => setTimeout(r, 900));
+    const kotelo = document.querySelector('.pallo-kotelo')?.getBoundingClientRect()
+      ?? { left: 0, top: 0, width: 0, height: 0 };
+    const ruudulla = (p) => Boolean(p && p.x >= 0 && p.y >= 0
+      && p.x <= kotelo.width && p.y <= kotelo.height);
+    const data = ruudulla(l.pallo.getScreenCoords(45.3, -3.2, 0));
+    const o = (l.nostot?.osumat?.() ?? []).find((x) => x.id === 'biskajanlahti');
+    if (!o) return { listalla: false, dataRuudulla: data };
+    const p = l.pallo.getScreenCoords(o.lat, o.lng, 0);
+    const b = p && o.lappu ? o.lappu(p) : null;
+    return {
+      listalla: true,
+      dataRuudulla: data,
+      lat: Number(o.lat.toFixed(3)),
+      lng: Number(o.lng.toFixed(3)),
+      x: b ? Math.round((b.x0 + b.x1) / 2 + kotelo.left) : null,
+      y: b ? Math.round((b.y0 + b.y1) / 2 + kotelo.top) : null,
+    };
+  });
+  let meriAukesi = null;
+  if (meri.listalla && meri.x != null) {
+    await sivu.mouse.click(meri.x, meri.y);
+    await sivu.waitForTimeout(900);
+    meriAukesi = await sivu.evaluate(() => {
+      const auki = window.matkakirja.ui.fokuskohdeAuki?.id ?? null;
+      document.querySelector('.fokuskohde-sulje')?.click();
+      return auki;
+    });
+    await sivu.waitForTimeout(400);
+  }
+  tieto(`${nimi} merinosto lähizoomissa`,
+    `${JSON.stringify(meri)}, napautus avasi ${meriAukesi ?? 'ei mitään'}`);
+  vaadi(`${nimi}: 6. merinoston nimiö avaa kortin lähizoomissa, vaikka datapiste on ruudun ulkopuolella`,
+    Boolean(meri.listalla && meri.dataRuudulla === false && meriAukesi === 'biskajanlahti'),
+    JSON.stringify({ meri, meriAukesi }));
+  await saavu(sivu);
   /*
    * KUVA VASTA LOPUKSI. Saapumistraileri (kaupungin saapumiskortti)
    * peittää ruudun ensimmäiset sekunnit — sen läpi otettu kuva näyttää

@@ -2165,11 +2165,46 @@ export function luoNostot({
     viimeisinUloinOsuus = uloinOsuus;
     const rivit = keraa(nakyva, uloinOsuus);
     rivitNyt = rivit;
+    /*
+     * ══ NÄKYVYYS LUETAAN SIITÄ PAIKASTA, JOSSA MUSTE ON ══════════════
+     *
+     * Omistaja 19.9.2026 klo 23.31 Suomen aikaa (iPad, Ranskan lehti
+     * lähizoomissa): *"Biskajanlahti-nimiö (meri-nosto) ei ota
+     * napautusta"*.
+     *
+     * JUURISYY (mitattu 20.9.2026, Chromium ja WebKit, raportti
+     * docs/raportit/viesti-fable-meri-napautus-20260920.md): rivin
+     * paikka on tässä vaiheessa DATAN piste — Biskajanlahdella lahden
+     * ulappa 45,3 N / −3,2 E — mutta muste (poltettu nimiö ja sen
+     * osuma-ala) on LUKITUSSA ANKKURISSA 45,2 N / −1,14 E, kaksi
+     * astetta idempänä rannikolla. Ankkuri otettiin käyttöön vasta
+     * tämän silmukan JÄLKEEN (`for (const r of liikkuvat)` alempana),
+     * joten kun kamera zoomasi niin lähelle, ettei datapiste enää
+     * mahtunut ruudulle, rivi putosi `nakyvat`-listalta — ja sen
+     * mukana osumalistalta — vaikka nimiö oli keskellä ruutua.
+     * Mitattu: korkeus 0,12 osumalistalla, korkeus 0,05 ei, vaikka
+     * ankkuri oli molemmissa ruudulla.
+     *
+     * LUKITTU ANKKURI ON SAMA PAIKKA KUIN LAATASSA (ks. LUKITTU
+     * ANKKURI VOITTAA LEVITYKSEN alempana), joten sen lukeminen tässä
+     * ei siirrä mitään: se vain kertoo tälle testille saman paikan,
+     * jonka piirto ja osuma saavat joka tapauksessa.
+     */
+    const lukitutKaytossa = lukitutAnkkuritSallittu();
     const nakyvat = [];
     for (const r of rivit) {
-      const p = ruudulla(r.lat, r.lng);
+      const lukko = lukitutKaytossa ? lukittuAnkkuri(r.avain, r.iso ?? null) : null;
+      const lat = lukko ? lukko.lat : r.lat;
+      const lng = lukko ? lukko.lng : r.lng;
+      const p = ruudulla(lat, lng);
       if (!p) continue;
-      nakyvat.push({ ...r, p, etaisyys: keskipiste ? Math.hypot(p.x - keskipiste.x, p.y - keskipiste.y) : 0 });
+      nakyvat.push({
+        ...r,
+        lat,
+        lng,
+        p,
+        etaisyys: keskipiste ? Math.hypot(p.x - keskipiste.x, p.y - keskipiste.y) : 0,
+      });
     }
     /*
      * Elävät: kohtaamispiste ensin, SITTEN KAUPUNGIT, sitten lähimmät
