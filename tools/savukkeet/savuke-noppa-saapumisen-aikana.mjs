@@ -81,11 +81,12 @@ const KAMERAN_ASETTUMINEN_MS = 6000;
 const KAIKKI_SELAIMET = [
   {
     nimi: 'chromium',
+    latauskatto: 60000,
     avaa: () => paketti.chromium.launch({
       executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
     }),
   },
-  { nimi: 'webkit', avaa: () => paketti.webkit.launch() },
+  { nimi: 'webkit', latauskatto: 90000, avaa: () => paketti.webkit.launch() },
 ];
 const SELAIMET = process.env.SAVUKE_SELAIN
   ? KAIKKI_SELAIMET.filter((s) => s.nimi === process.env.SAVUKE_SELAIN)
@@ -97,7 +98,15 @@ const TYYPIT = {
   '.geojson': 'application/json', '.webmanifest': 'application/manifest+json',
   '.mp3': 'audio/mpeg', '.woff2': 'font/woff2',
 };
-const palvelin = http.createServer((req, res) => {
+/*
+ * KOKEELLINEN VIIVE JA KATTO (vain mittaukseen, erä opus-local-goto
+ * 19.9.2026): SAVUKE_VIIVE_MS viivästää jokaista paikallista vastausta ja
+ * SAVUKE_LATAUSKATTO_MS korvaa selaimen latauskaton. Niillä todennetaan,
+ * että latauksen aikakatkaisu päätyy FAIL-riviksi eikä poikkeukseksi.
+ */
+const VIIVE_MS = Number(process.env.SAVUKE_VIIVE_MS) || 0;
+const palvelin = http.createServer(async (req, res) => {
+  if (VIIVE_MS) await new Promise((v) => setTimeout(v, VIIVE_MS));
   const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
@@ -235,8 +244,15 @@ async function avaaKonteksti(selain, tallenne) {
   const sivu = await ctx.newPage();
   const virheet = [];
   sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
-  await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
-  await sivu.route(/wikimedia\.org/, (r) => r.abort());
+  /*
+   * KAIKKI EI-PAIKALLINEN ESTETÄÄN, ämpäri palvellaan Noden kautta.
+   * WebKit pitää verkkoon lähteneet pyynnöt vireillä, ja kuormassa yksikin
+   * roikkuva ulkopuolinen haku (workers.dev, Wikimedia, archive.org,
+   * Freesound, fontit, analytiikka) venytti latausta kohti goto-kattoa.
+   * Playwright ajaa reitit käänteisessä rekisteröintijärjestyksessä,
+   * joten alla oleva ämpäri-reitti voittaa tämän.
+   */
+  await sivu.route((url) => !/^(127\.0\.0\.1|localhost)$/.test(url.hostname), (r) => r.abort());
   await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
     const v = await ampariHaku(route.request().url());
     if (!v || v.status !== 200) { route.abort(); return; }
@@ -250,16 +266,39 @@ async function avaaKonteksti(selain, tallenne) {
   return { ctx, sivu, virheet };
 }
 
-async function odotaPeli(sivu, { uudelleen = false } = {}) {
-  if (uudelleen) await sivu.reload({ waitUntil: 'domcontentloaded', timeout: 60000 });
-  else await sivu.goto(`${osoite}?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: 60000 });
-  await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: 90000 });
-  await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 60000 });
+/**
+ * Latauksen aikakatkaisu nimetään omaksi virheekseen, jotta selaimen ajo
+ * voi kirjata sen FAIL-riviksi eikä koko savuke kaadu ennen yhtään
+ * väitettä (v1951 CI: WebKit goto domcontentloaded aikakatkaistiin
+ * kuormassa, rivi "0/0 kaatui poikkeukseen").
+ */
+class LatausKatko extends Error {}
+
+async function odotaPeli(sivu, katto, { uudelleen = false } = {}) {
+  const alkuMs = Date.now();
+  try {
+    if (uudelleen) await sivu.reload({ waitUntil: 'domcontentloaded', timeout: katto });
+    else await sivu.goto(`${osoite}?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: katto });
+    await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: katto });
+    await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: katto });
+  } catch (e) {
+    if (e?.name !== 'TimeoutError') throw e;
+    throw new LatausKatko(`${Date.now() - alkuMs} ms, ${String(e.message).split('\n')[0]}`);
+  }
   await sivu.evaluate(async () => {
     const l = window.matkakirja.ui.pallolauta;
     await l.saavu({ kesto: 0 });
     await new Promise((v) => setTimeout(v, 1200));
   });
+}
+
+/** Selaimen ajon poikkeus FAIL-riviksi; seuraava selain ajetaan silti. */
+function kirjaaKaatuminen(tunnus, katto, e) {
+  if (e instanceof LatausKatko) {
+    vaadi(`${tunnus}: peli ei latautunut ${katto} ms:ssa (kuorma?)`, false, e.message);
+  } else {
+    vaadi(`${tunnus}: ajo kaatui poikkeukseen`, false, String(e?.stack ?? e).split('\n').slice(0, 2).join(' | '));
+  }
 }
 
 /** Liiku -> Liftaus: liftaus valitsee tavan JA heittää nopan samalla. */
@@ -279,63 +318,69 @@ for (const selainTieto of SELAIMET) {
   });
   if (!selain) continue;
   const tunnus = selainTieto.nimi;
-  const { ctx, sivu, virheet } = await avaaKonteksti(selain, lahto.tallenne);
-  await odotaPeli(sivu);
+  const katto = Number(process.env.SAVUKE_LATAUSKATTO_MS) || selainTieto.latauskatto;
+  try {
+    const { ctx, sivu, virheet } = await avaaKonteksti(selain, lahto.tallenne);
+    await odotaPeli(sivu, katto);
 
-  /* ── 1. kierros: liftaus Amsterdamiin ────────────────────────── */
-  tieto(`${tunnus}: 1. liftaus`, await liftaa(sivu));
-  await sivu.waitForFunction(
-    () => window.matkakirja.game.phase === 'move' && !window.matkakirja.ui.busy,
-    null, { timeout: 20000 },
-  ).catch(() => {});
-  await sivu.evaluate(() => {
-    const { ui, game } = window.matkakirja;
-    // Amsterdam on yhden askeleen päässä, joten se on aina listalla.
-    if (game.moves?.has('c:amsterdam')) ui.doMove('c:amsterdam');
-  });
-  await sivu.waitForFunction(
-    () => window.matkakirja.game.player.pos.type === 'city' && !window.matkakirja.ui.busy,
-    null, { timeout: 30000 },
-  ).catch(() => {});
-  const perilla = await sivu.evaluate(`(${LUE})()`);
-  tieto(`${tunnus}: perillä Amsterdamissa`, JSON.stringify(perilla));
+    /* ── 1. kierros: liftaus Amsterdamiin ────────────────────────── */
+    tieto(`${tunnus}: 1. liftaus`, await liftaa(sivu));
+    await sivu.waitForFunction(
+      () => window.matkakirja.game.phase === 'move' && !window.matkakirja.ui.busy,
+      null, { timeout: 20000 },
+    ).catch(() => {});
+    await sivu.evaluate(() => {
+      const { ui, game } = window.matkakirja;
+      // Amsterdam on yhden askeleen päässä, joten se on aina listalla.
+      if (game.moves?.has('c:amsterdam')) ui.doMove('c:amsterdam');
+    });
+    await sivu.waitForFunction(
+      () => window.matkakirja.game.player.pos.type === 'city' && !window.matkakirja.ui.busy,
+      null, { timeout: 30000 },
+    ).catch(() => {});
+    const perilla = await sivu.evaluate(`(${LUE})()`);
+    tieto(`${tunnus}: perillä Amsterdamissa`, JSON.stringify(perilla));
 
-  /* ── 2. kierros: HETI uusi liftaus, eli heitto saapumisen päälle ─ */
-  tieto(`${tunnus}: 2. liftaus heti saapumisen päälle`, await liftaa(sivu));
-  await sivu.waitForTimeout(KAMERAN_ASETTUMINEN_MS);
-  const jalkeen = await sivu.evaluate(`(${LUE})()`);
-  tieto(`${tunnus}: heiton jälkeen`, JSON.stringify(jalkeen));
-  if (KUVAKANSIO) {
-    await sivu.screenshot({ path: join(KUVAKANSIO, `noppa-saapuminen-${tunnus}.png`), scale: 'css' });
+    /* ── 2. kierros: HETI uusi liftaus, eli heitto saapumisen päälle ─ */
+    tieto(`${tunnus}: 2. liftaus heti saapumisen päälle`, await liftaa(sivu));
+    await sivu.waitForTimeout(KAMERAN_ASETTUMINEN_MS);
+    const jalkeen = await sivu.evaluate(`(${LUE})()`);
+    tieto(`${tunnus}: heiton jälkeen`, JSON.stringify(jalkeen));
+    if (KUVAKANSIO) {
+      await sivu.screenshot({ path: join(KUVAKANSIO, `noppa-saapuminen-${tunnus}.png`), scale: 'css' });
+    }
+
+    vaadi(`${tunnus}: 1. heitto ei jätä peliä ilman kohteita`,
+      jalkeen.vaihe === 'move' && jalkeen.kohteita > 0,
+      JSON.stringify(jalkeen));
+    vaadi(`${tunnus}: 2. nappula on ruudulla heiton jälkeen`,
+      Boolean(jalkeen.nappula?.ruudulla),
+      JSON.stringify(jalkeen.nappula));
+    vaadi(`${tunnus}: 3. vähintään yksi kohde on ruudulla napautettavissa`,
+      jalkeen.kohteitaRuudulla > 0,
+      JSON.stringify(jalkeen.kohteet));
+
+    /* ── 3. uudelleenlataus kesken siirtovaiheen ─────────────────── */
+    await odotaPeli(sivu, katto, { uudelleen: true });
+    await sivu.waitForTimeout(1500);
+    const ladattu = await sivu.evaluate(`(${LUE})()`);
+    tieto(`${tunnus}: uudelleenlatauksen jälkeen`, JSON.stringify({
+      vaihe: ladattu.vaihe, liikuNappi: ladattu.liikuNappi, paikka: ladattu.paikka,
+    }));
+    if (KUVAKANSIO) {
+      await sivu.screenshot({ path: join(KUVAKANSIO, `noppa-lataus-${tunnus}.png`), scale: 'css' });
+    }
+    vaadi(`${tunnus}: 4. Liiku on DOMissa uudelleenlatauksen jälkeen`,
+      ladattu.liikuNappi === true,
+      JSON.stringify(ladattu));
+    vaadi(`${tunnus}: ei sivuvirheitä`, virheet.length === 0, virheet.join(' | ').slice(0, 300));
+
+    await ctx.close();
+  } catch (e) {
+    kirjaaKaatuminen(tunnus, katto, e);
+  } finally {
+    await selain.close().catch(() => {});
   }
-
-  vaadi(`${tunnus}: 1. heitto ei jätä peliä ilman kohteita`,
-    jalkeen.vaihe === 'move' && jalkeen.kohteita > 0,
-    JSON.stringify(jalkeen));
-  vaadi(`${tunnus}: 2. nappula on ruudulla heiton jälkeen`,
-    Boolean(jalkeen.nappula?.ruudulla),
-    JSON.stringify(jalkeen.nappula));
-  vaadi(`${tunnus}: 3. vähintään yksi kohde on ruudulla napautettavissa`,
-    jalkeen.kohteitaRuudulla > 0,
-    JSON.stringify(jalkeen.kohteet));
-
-  /* ── 3. uudelleenlataus kesken siirtovaiheen ─────────────────── */
-  await odotaPeli(sivu, { uudelleen: true });
-  await sivu.waitForTimeout(1500);
-  const ladattu = await sivu.evaluate(`(${LUE})()`);
-  tieto(`${tunnus}: uudelleenlatauksen jälkeen`, JSON.stringify({
-    vaihe: ladattu.vaihe, liikuNappi: ladattu.liikuNappi, paikka: ladattu.paikka,
-  }));
-  if (KUVAKANSIO) {
-    await sivu.screenshot({ path: join(KUVAKANSIO, `noppa-lataus-${tunnus}.png`), scale: 'css' });
-  }
-  vaadi(`${tunnus}: 4. Liiku on DOMissa uudelleenlatauksen jälkeen`,
-    ladattu.liikuNappi === true,
-    JSON.stringify(ladattu));
-  vaadi(`${tunnus}: ei sivuvirheitä`, virheet.length === 0, virheet.join(' | ').slice(0, 300));
-
-  await ctx.close();
-  await selain.close();
 }
 
 palvelin.close();
