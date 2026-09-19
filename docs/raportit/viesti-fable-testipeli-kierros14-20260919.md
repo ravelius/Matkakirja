@@ -6,13 +6,13 @@ Tuotanto v1966 (päivitysikkuna 21.35: "v1966 Astronautin avaus; ankkurit 13 maa
 
 Sivu ladattu uudelleen, Jatka, matkalaukku → Astronautin kamera → Aktivoi. Kuvasarja (a-01…a-10 ja b-11, b-13):
 
-- **a-01** (matkalaukun kuvaus ennen aktivointia).
+- **a-01**: matkalaukun varusteruutu ennen Aktivoi-napautusta (Astronautin kamera valittuna).
 - **a-02: musta ruutu + otsikkokortti "ASTRONAUTIN KAMERA / kuvat: NASA"** (valkoinen serif-teksti, viiva, alla "kuvat: NASA"). OK.
 - **a-03:** otsikkokortti häipyy mustaan, oikeaan yläkulmaan ilmestyy sulkunappi (X).
-- **a-04: paljastus:** pallo näkyy heti, **pilvet päällä** (ei tyhjää sinistä hetkeä), vihreät kohdepisteet; **pallo ei täytä ruutua vielä** (pallo ~45 % ruudun leveydestä, ympärillä avaruuden sumua).
-- **a-06, a-10 / b-11: avauszoomi**: kamera lähestyy niin, että pallo täyttää koko leveyden (reunat menevät ruudun ulkopuolelle) ja Grönlanti/Atlantti/Eurooppa/Afrikka näkyvät; pilvet säilyvät. Toimii; zoomi valmis ~4–5 s kuluttua aktivoinnista.
-- **ISS-rata:** ohut **tumma kaari** kulkee pallon yli (Atlantilta Välimeren yli Kaspianmerelle) — selvästi näkyvä mutta hienovarainen.
-- **b-13: ISS-merkki:** aseman näköinen **keltamusta merkki (aurinkopaneelit vasemmalla ja oikealla, valkoinen runko)** Pohjois-Afrikan (Algerian) kohdalla radan päällä (kuva 13, 21.36). Näkyy vain kun rata kiertää sen näkyviin (pyyhkäisin pallon kääntämiseksi).
+- **a-04: paljastus:** pallo näkyy heti, **pilvet päällä**, vihreät kohdepisteet, sininen ilmakehän hehku; pallo täyttää jo ~88 % ruudun leveydestä (reunat vielä sisällä). Ei tyhjää sinistä hetkeä.
+- **a-06, a-10: avauszoomi:** pallo kasvaa niin, että sen reunat menevät ruudun ulkopuolelle vasemmalla ja oikealla (a-10 lopputila, ~4–5 s aktivoinnista); pilvet säilyvät. Ero a-04:ään on kohtuullinen, ei dramaattinen.
+- **ISS-rata:** ohut tumma kaari pallon yli (kuvissa a-03…a-10 ja b-11/b-13, oikealla reunalla Välimeren yli Kaspianmerelle päin).
+- **ISS-merkki:** aseman näköinen keltamusta merkki (aurinkopaneelit sivuilla, valkoinen runko). **b-11:ssä merkki on pallon kiekon ULKOPUOLELLA vasemmassa alakulmassa (~x 120, y 660 / 414 leveydestä)**, **b-13:ssa oikeassa reunassa (~x 395, y 292)**; aiemmassa täyden kokoisessa kuvassa (21.36, ei tallennettu) se oli radan päällä Pohjois-Afrikan kohdalla. Merkki liikkuu siis nopeasti (~sekunneissa), ja kahdessa tallennetussa kuvassa se on pallon reunalla/ulkopuolella. Vakavuus 1: onko tarkoituksellista, että merkki näkyy pallon kiekon ulkopuolella?
 - Löydös: **sulkunappi X oikeassa yläkulmassa piirtyy kolmannen kuvan ajaksi näkyviin, kun otsikko vielä häipyy** (a-03) — vähäinen.
 - Ei mustaa välähdystä ennen paljastusta (a-04:ssä pallo heti).
 
