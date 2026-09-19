@@ -1017,12 +1017,17 @@ test('pallopisteitä on vain asutuksille, ja jokainen on laudan lähellä', () =
   // keskipiste eikä se kohta, jota lauta tarkoittaa (luku 12.2).
   for (const alue of ['borneo', 'kamtsatka', 'ahaggar', 'namib', 'nullarbor', 'sahara',
     'viktoria', 'tanganjika', 'tshadjarvi', 'galapagos', 'falkland', 'bali', 'sthelena',
-    'hawaii', 'sierraleone', 'siinai', 'uluru', 'mountrushmore', 'sepik', 'milfordsound',
-    'kappalmas', 'bahrelghazal', 'viktorianputoukset', 'bananal', 'mosambik', 'orjarannikko',
+    'hawaii', 'sierraleone', 'siinai', 'sepik',
+    'kappalmas', 'bahrelghazal', 'bananal', 'mosambik', 'orjarannikko',
     // Toinen kierros 7.9.2026 illalla: samasta syystä nämäkin jäävät.
-    'sumatra', 'sisilia', 'kreeta', 'kapadokia', 'madagaskar', 'sansibar', 'darfur',
+    'sumatra', 'sisilia', 'kreeta', 'kapadokia', 'madagaskar', 'darfur',
     'sahalin', 'kongo', 'kamerun', 'angola', 'islanti', 'alpit', 'appalakit',
-    'kilimandzaro', 'labrador', 'rubalkhali']) {
+    'labrador', 'rubalkhali']) {
+    /*
+     * Kolmas kierros 19.9.2026 (Fablen päätös, erä H): Sansibar,
+     * Victorian putoukset, Mount Rushmore, Kilimandžaro, Uluru ja
+     * Milford Sound ovat PISTEMÄISIÄ kohteita ja saivat pisteen.
+     */
     assert.ok(!PALLON_KAUPUNKIPISTEET[alue], `alue ${alue} ei saa omaa pallopistettä`);
   }
   for (const [id, p] of Object.entries(PALLON_KAUPUNKIPISTEET)) {
@@ -1045,6 +1050,11 @@ test('pallopisteitä on vain asutuksille, ja jokainen on laudan lähellä', () =
     const h = Math.sin(dLat / 2) ** 2
       + Math.cos(laudalla.lat * rad) * Math.cos(p.lat * rad) * Math.sin(dLon / 2) ** 2;
     const km = 2 * 6371 * Math.asin(Math.min(1, Math.sqrt(h)));
-    assert.ok(km < 500, `${id} siirtyisi ${km.toFixed(0)} km`);
+    /*
+     * POIKKEUS: Sansibarin laudan piste on avomerellä 531 km Stone
+     * Townista (−9,28 / 42,70); siirto on juuri se korjaus
+     * (docs/raportit/viesti-fable-kaupunkisiirtymat-20260919.md).
+     */
+    assert.ok(km < (id === 'sansibar' ? 560 : 500), `${id} siirtyisi ${km.toFixed(0)} km`);
   }
 });
