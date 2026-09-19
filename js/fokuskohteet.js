@@ -127,6 +127,7 @@ import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
 import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
 import { NAKYVAT_KAUPUNGIT_FRA } from './packs/nakyvat-kaupungit-fra.js';
 import { HAHMOTELMA_FRA } from './packs/hahmotelma-fra.js';
+import { HAHMOTELMA_GRC } from './packs/hahmotelma-grc.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
@@ -326,6 +327,15 @@ KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...NAKYVAT_KAUPUNGIT_FRA];
  * Liitos on tässä samasta syystä kuin kahdella edellisellä.
  */
 KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...HAHMOTELMA_FRA];
+
+/*
+ * KREIKAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot, Espanjan, Italian, Saksan ja Portugalin jälkeen
+ * Kreikka). Sama reitti ja sama rakenne kuin Ranskan hahmotelmalla; rivit
+ * ovat aidosti kaupunkien (Ateena, Kreeta) ulkopuolella, lähin yli 44
+ * lautayksikön päässä.
+ */
+KOHDE_MAAT.GRC = [...(KOHDE_MAAT.GRC ?? []), ...HAHMOTELMA_GRC];
 
 /*
  * ESPANJAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
