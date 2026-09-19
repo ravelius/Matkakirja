@@ -9028,6 +9028,18 @@ export const RAAMATTU = {
           + 'testit ajetaan kehittajatilalla (laatan napautus vie kaupunkiin) kuten '
           + 'omistaja itse tekee; simulaattoriin kehittajatila kirjoitetaan Safarin '
           + 'localStorage-tietokantaan ilman salasanaa. JULKAISTAAN v1950.',
+        'KARTTAUUDISTUKSEN PAATOKSET 46: POHJALAATTOJEN JONO EI VALU TOPOGRAFIALINSSIN '
+          + 'PUOLELLE (Fable 19.9.2026 klo 12.10 Suomen aikaa; savuke-topografialinssin '
+          + 'vartio "seepiapohjan laattoja ei haeta linssin aikana" kaatui kolmessa '
+          + 'PR-ajossa kuormassa, seepia 3/2/1): JUURISYY (Opus-era topografia-seepia, '
+          + 'rajattu, ei toistunut yksin): js/pallolaatat.js kaynnista() ajettiin jokaisen '
+          + 'valmistuneen haun peraan katsomatta reliefilippua, ja linssin herays '
+          + 'kokoa() on kahden kehyksen paassa - kuormassa linssia edeltava pohjajono '
+          + 'valui linssin puolelle. KORJAUS: kaynnista() tyhjentaa jonon ja keskeyttaa '
+          + 'kesken olevat haut (AbortController), kun kerroksen reliefi ei vastaa '
+          + 'pyramidin lippua; savukkeen laskuri alkaa lipun noususta. Mittaus: yksin ja '
+          + 'kaksi rinnakkain seepia 0, reliefi 64, 47/47, ensimmainen reliefikehys 83-93 '
+          + 'ms. Tunnettu kuormapunainen poistettu. JULKAISTAAN v1951.',
         'KARTTAUUDISTUKSEN PAATOKSET 44: RANSKAN NOSTOJEN SISALLOT JA KUVAT '
           + '(omistaja 18.9.2026 klo 23.35 Suomen aikaa, sanatarkasti: "Ranskan '
           + 'tyhjin nostoihin voisi tehda sisallot ja samalla tarkistaa etta '
