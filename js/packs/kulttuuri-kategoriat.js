@@ -63251,6 +63251,9 @@ export const KULTTUURI_KATEGORIAT = {
         },
         {
           otsikko: 'Tanssiaiset, jotka keskeytyivät sotaan',
+          // POIKKEUS 1200 px:n kuvasääntöön (Fable 20.9.2026): Hillingfordin
+          // maalaus on vain 960 px leveä (PD; Commonsissa ei ole isompaa
+          // versiota), ja se on hyväksytty tämän yhden kuvan poikkeuksena.
           tiedosto: 'Summoned to Waterloo, Brussels, dawn of June 16, 1815 by Robert Alexander Hillingford (1898).jpg',
           teksti: 'Kesäkuun 15. päivän iltana 1815 Richmondin herttuatar järjesti '
               + 'Brysselissä tanssiaiset, joita on sanottu historian kuuluisimmiksi. Illan '

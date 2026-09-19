@@ -1330,6 +1330,16 @@ export function luoNostot({
    * CSS2D-elementin, johon liuska piirtyy.
    */
   laudanKaupungit = null,
+  /*
+   * LIUSKAN YLÄRYHMÄN SISÄLTÖ (20.9.2026, Fablen tarkistus: Brysselin
+   * liuskassa NÄHTÄVYYDET avasi tyhjän otsikkopalkin). Liuska ei tunne
+   * kaupunkien sisältöä: `(kaupunkiId) => { nahtavyyksia, opas }`
+   * kertoo, onko kaupungilla kohdekartta ja turistiopas. Ilman sisältöä
+   * rivi jätetään pois (liuskanRivit, kaupunkiliuska.js) — tyhjää korttia
+   * ei avata. Lauta antaa lukufunktion kaupunkinosto.js:n tiedoista;
+   * ilman sitä kaikki rivit näytetään kuten ennen.
+   */
+  liuskanSisalto = null,
 }) {
   let osumat = []; // ruudulla olevat, napautettavat merkit
   let laatikot = [];
@@ -2921,6 +2931,7 @@ export function luoNostot({
           nostot: omat,
           avattuKategoria: liuska.avattuKategoria,
           liiku: Boolean(liuska.liiku),
+          ...(rivi.id ? (liuskanSisalto?.(rivi.id) ?? {}) : {}),
         });
         /*
          * KAUPUNGIN NIMI LUETAAN TUOREENA (Fablen tarkistus 18.9.2026).
@@ -3660,7 +3671,11 @@ export function luoNostot({
         const rivi = kaupunkirivitNyt.find((o) => o.nimi === valinnat.nimi);
         omat = rivi ? (sisaisetKaupungeittain.get(rivi.avain) ?? []) : [];
       }
-      const n = liuskanSuurinRivimaara({ nostot: omat ?? [], liiku: Boolean(valinnat.liiku) })
+      const n = liuskanSuurinRivimaara({
+        nostot: omat ?? [],
+        liiku: Boolean(valinnat.liiku),
+        ...(valinnat.id ? (liuskanSisalto?.(valinnat.id) ?? {}) : {}),
+      })
         // Hiusviiva on oma rivinsä (ks. HIUSVIIVA ON OMA RIVINSÄ),
         // joten kamera-ajon on varattava sille tilaa sekin.
         + 1;
