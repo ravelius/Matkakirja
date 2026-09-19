@@ -1103,7 +1103,7 @@ export function laatanKartta(taso, sarake, rivi, {
 /** MERIVARI RGB:nä (js/reliefipyramidi.js MERIVARI = rgb(38, 78, 145)). */
 export const LAASTARIN_MERIVARI = [38, 78, 145];
 /** Kanavakohtainen toleranssi (WebP-pakkaus heiluttaa tasaista väriä). */
-export const LAASTARIN_MERIVARIN_TOLERANSSI = 3;
+export const LAASTARIN_MERIVARIN_TOLERANSSI = 6;
 /**
  * Leveysraja astronautin laastarille: pyramidissa ei ole jääsekoitusta,
  * joten Grönlanti ja napa-alueet olisivat laastarissa ruskeita ja
@@ -1119,17 +1119,46 @@ export const LAASTARIN_LEVEYSRAJA = 60;
  * @param {Uint8ClampedArray} data RGBA
  * @returns {number} läpinäkyviksi merkittyjen pikselien määrä
  */
-export function merkitseMerivariAukoksi(data, vari = LAASTARIN_MERIVARI, tol = LAASTARIN_MERIVARIN_TOLERANSSI) {
+export function merkitseMerivariAukoksi(data, vari = LAASTARIN_MERIVARI, tol = LAASTARIN_MERIVARIN_TOLERANSSI, leveys = 0) {
   let aukkoja = 0;
+  const lahella = (i, t) => Math.abs(data[i] - vari[0]) <= t
+    && Math.abs(data[i + 1] - vari[1]) <= t
+    && Math.abs(data[i + 2] - vari[2]) <= t;
   for (let i = 0; i < data.length; i += 4) {
-    const aukko = Math.abs(data[i] - vari[0]) <= tol
-      && Math.abs(data[i + 1] - vari[1]) <= tol
-      && Math.abs(data[i + 2] - vari[2]) <= tol;
+    const aukko = lahella(i, tol);
     data[i + 3] = aukko ? 0 : 255;
     if (aukko) aukkoja += 1;
   }
+  /*
+   * REUNA LAAJENEE KAHDELLA PIKSELILLÄ (mitattu 19.9.2026, Kreeta):
+   * polton alinäytteistys sekoitti tasaisen alueen reunapikseleihin
+   * MERIVARIa, ja pelkkä tarkka osuma jätti suorakaiteen ääriviivaksi
+   * tumman katkoviivan. Aukkoa laajennetaan niihin naapureihin, jotka
+   * ovat yhä lähellä MERIVARIa (LAASTARIN_REUNAN_TOLERANSSI); pohja
+   * näkyy niiden kohdalla, eikä batymetrian muu sävy täytä ehtoa.
+   */
+  if (leveys > 0) {
+    const korkeus = data.length / 4 / leveys;
+    for (let kierros = 0; kierros < 2; kierros += 1) {
+      const lisattavat = [];
+      for (let y = 0; y < korkeus; y += 1) {
+        for (let x = 0; x < leveys; x += 1) {
+          const i = (y * leveys + x) * 4;
+          if (data[i + 3] === 0 || !lahella(i, LAASTARIN_REUNAN_TOLERANSSI)) continue;
+          const naapuri = (x > 0 && data[i - 1] === 0)
+            || (x < leveys - 1 && data[i + 7] === 0)
+            || (y > 0 && data[i - leveys * 4 + 3] === 0)
+            || (y < korkeus - 1 && data[i + leveys * 4 + 3] === 0);
+          if (naapuri) lisattavat.push(i);
+        }
+      }
+      for (const i of lisattavat) { data[i + 3] = 0; aukkoja += 1; }
+    }
+  }
   return aukkoja;
 }
+/** Reunan laajennuksen toleranssi (ks. REUNA LAAJENEE). */
+export const LAASTARIN_REUNAN_TOLERANSSI = 40;
 
 /**
  * ASTRONAUTIN VALOLIUKU LAATAN KANKAALLE — valon vastakaava.
@@ -2297,7 +2326,8 @@ export function luoLaattakerros({
               0, 0, kartta.leveys, kartta.korkeus);
           }
           const d = mctx.getImageData(0, 0, kartta.leveys, kartta.korkeus);
-          mittarit.merivariAukkoja += merkitseMerivariAukoksi(d.data);
+          mittarit.merivariAukkoja += merkitseMerivariAukoksi(d.data, LAASTARIN_MERIVARI,
+            LAASTARIN_MERIVARIN_TOLERANSSI, kartta.leveys);
           mctx.putImageData(d, 0, 0);
         } catch { aukkoMaski = null; }
       }
@@ -2504,6 +2534,14 @@ export function luoLaattakerros({
     tekstuuri.generateMipmaps = webgl2;
     tekstuuri.minFilter = webgl2 ? THREE_LINEAR_MIPMAP_LINEAR : THREE_LINEAR;
     tekstuuri.magFilter = THREE_LINEAR;
+    /*
+     * ESIKERROTTU ALFA AUKON REUNALLE (ks. LAASTARIN_MERIVARI): kangas
+     * tallentaa läpinäkyvän pikselin värin nollaksi, ja suora alfa
+     * sekoitti sen suodatuksessa reunaan mustana ääriviivana (mitattu
+     * 19.9.2026, Kreeta). Esikerrottuna suodatus sekoittaa reunan
+     * pohjaan eikä mustaan.
+     */
+    if (kerrokset.astronautti) tekstuuri.premultiplyAlpha = true;
     tekstuuri.wrapS = THREE_CLAMP;
     tekstuuri.wrapT = THREE_CLAMP;
     tekstuuri.anisotropy = renderer?.capabilities?.getMaxAnisotropy?.() ?? 1;
@@ -2518,6 +2556,7 @@ export function luoLaattakerros({
     const savy = kerrokset.astronautti ? pyramidinReliefinSavy() : null;
     const materiaali = new luokat.LaattaMateriaali({
       map: tekstuuri, transparent: true, opacity: 0, depthWrite: true,
+      polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: LAATTAKERROS_SYVYYSSIIRTO,
       /*
        * Astronautin laastarin aukko (MERIVARI → alfa 0) ei saa kirjoittaa
        * syvyyttä: laastari piirtyy ENNEN pohjapalloa (renderOrder), ja
@@ -2525,8 +2564,7 @@ export function luoLaattakerros({
        * piirtämättä — mitattu mustana suorakaiteena. alphaTest hylkää
        * aukon kokonaan; häivytyksen aikainen opacity > 0,004 ei osu siihen.
        */
-      ...(kerrokset.astronautti ? { alphaTest: 0.004 } : {}),
-      polygonOffset: true, polygonOffsetFactor: 0, polygonOffsetUnits: LAATTAKERROS_SYVYYSSIIRTO,
+      ...(kerrokset.astronautti ? { alphaTest: 0.004, premultipliedAlpha: true } : {}),
       ...(savy === null ? {} : { color: savy }),
     });
     const verkko = new luokat.Mesh(geometria, materiaali);

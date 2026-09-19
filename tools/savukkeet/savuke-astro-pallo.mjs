@@ -1789,6 +1789,114 @@ async function ajaNakyma(nimi) {
       ui.pallolauta?.heraa?.();
     }, paluu);
     await s.waitForTimeout(800);
+    /*
+     * ---- 48: LAASTARISSA EI TASAISIA MERIVARI-SUORAKAITEITA ----------
+     *
+     * Omistajan laitekuvat 19.9.2026 (v1957): tummansinisiä suorakaiteita
+     * Kreetan eteläpuolella lähizoomissa. Juurisyy: reliefipyramidin
+     * alinäytteistetty taso täyttää polttamattoman merilapsen tasaisella
+     * MERIVARIlla (docs/raportit/viesti-fable-webkit-napa-20260919.md).
+     * Kamera laskeutuu Kreetan ylle, kunnes laastari on päällä; sitten
+     * luetaan jokaisen laastarilaatan kangas 16 × 16 -lohkoina ja lasketaan
+     * LÄPINÄKYMÄTTÖMÄT lohkot, jotka ovat tasaisia (hajonta < 1,5) ja
+     * MERIVARIn sävysuhteessa (ks. alla). Korjattuna niitä on 0: aukko
+     * on läpinäkyvä ja 4k-pohjan batymetria näkyy.
+     */
+    const laastari48 = await s.evaluate(async () => {
+      const { ui } = window.matkakirja;
+      const p = ui.pallonInstanssi;
+      const odota = (ms) => new Promise((v) => setTimeout(v, ms));
+      let laastarilla = false;
+      for (const alt of [0.35, 0.25, 0.18, 0.13]) {
+        p.pointOfView({ lat: 33.5, lng: 25.5, altitude: alt }, 0);
+        ui.pallolauta?.heraa?.();
+        await odota(1500);
+        laastarilla = Boolean(ui.pallolinssi?.kahva?.avaruus?.tila?.()?.laastarilla);
+        if (laastarilla) break;
+      }
+      const alku = Date.now();
+      let laattoja = 0; let valmiita = -1;
+      while (Date.now() - alku < 15000) {
+        const m = ui.pallolauta?.lepokerros?.()?.mittarit?.() ?? {};
+        laattoja = m.laattoja ?? 0; valmiita = m.valmiita ?? 0;
+        if (laastarilla && laattoja > 0 && valmiita >= laattoja) break;
+        await odota(300);
+      }
+      await odota(800);
+      let tasaisia = 0; let lohkoja = 0; let kankaita = 0; const varit = {}; const laatoittain = {};
+      p.scene().traverse((o) => {
+        if (!o.userData?.laattakerros || !o.visible) return;
+        const kuva = o.material?.map?.image;
+        const ctx = kuva?.getContext?.('2d');
+        if (!ctx) return;
+        kankaita += 1;
+        const d = ctx.getImageData(0, 0, kuva.width, kuva.height).data;
+        for (let by = 0; by + 16 <= kuva.height; by += 16) {
+          for (let bx = 0; bx + 16 <= kuva.width; bx += 16) {
+            let n = 0; let sr = 0; let sg = 0; let sb = 0; let sl = 0; let sl2 = 0; let lapi = false;
+            for (let y = by; y < by + 16; y += 1) {
+              for (let x = bx; x < bx + 16; x += 1) {
+                const i = (y * kuva.width + x) * 4;
+                if (d[i + 3] < 250) { lapi = true; break; }
+                const l = 0.2126 * d[i] + 0.7152 * d[i + 1] + 0.0722 * d[i + 2];
+                n += 1; sr += d[i]; sg += d[i + 1]; sb += d[i + 2]; sl += l; sl2 += l * l;
+              }
+              if (lapi) break;
+            }
+            lohkoja += 1;
+            if (lapi || !n) continue;
+            const ka = sl / n;
+            const hajonta = Math.sqrt(Math.max(0, sl2 / n - ka * ka));
+            /*
+             * MERIVARI SUODATTIMEN JA VALOLIU'UN JÄLKEEN: sävy tummuu
+             * leveyden mukaan, mutta kanavien suhde pysyy (mitattu
+             * vastakokeessa 19.9.2026: 44,77,130 ja 28,49,82 → r/b 0,34,
+             * g/b 0,59). Tasainen batymetria (esim. 56,86,120) ei täytä
+             * suhdetta, joten sitä ei lasketa.
+             */
+            const rb = sr / sb; const gb = (sg / n) / (sb / n);
+            if (hajonta < 1.5 && Math.abs(rb - 0.34) < 0.04 && Math.abs(gb - 0.59) < 0.04) {
+              tasaisia += 1;
+              const lk = `${o.userData.laattakerros.z}/${o.userData.laattakerros.sarake}/${o.userData.laattakerros.rivi}`;
+              laatoittain[lk] = (laatoittain[lk] ?? 0) + 1;
+              const i0 = (by * kuva.width + bx) * 4;
+              const avain = `${d[i0]},${d[i0 + 1]},${d[i0 + 2]}`;
+              varit[avain] = (varit[avain] ?? 0) + 1;
+            }
+          }
+        }
+      });
+      const m = ui.pallolauta?.lepokerros?.()?.mittarit?.() ?? {};
+      return {
+        laastarilla, korkeus: +p.pointOfView().altitude.toFixed(3), laattoja, valmiita,
+        kankaita, lohkoja, tasaisia, merivariAukkoja: m.merivariAukkoja ?? null,
+        varit: Object.entries(varit).sort((a, b) => b[1] - a[1]).slice(0, 4),
+        laatoittain,
+      };
+    });
+    if (ULOS) {
+      await s.screenshot({
+        path: join(ULOS, `astro-laastari-kreeta-${NAKYMAT[nimi].viewport.width}-20260919.jpg`),
+        type: 'jpeg', quality: 70, timeout: 120000,
+      }).catch(() => {});
+    }
+    console.log(`    LAASTARI48 ${JSON.stringify(laastari48)}`);
+    vaadi(t('48: laastarissa ei tasaisia MERIVARI-suorakaiteita (Kreeta)'),
+      /*
+       * RAJA 1 % LOHKOISTA: vastakoe (korjausta edeltävä koodi) 20 407 /
+       * 73 728 = 27,7 %, korjattu 96 / 73 728 = 0,13 % (19.9.2026; jäännös
+       * laatoissa 5/19/9 ja 5/19/10, syy auki — ks. raportti
+       * viesti-fable-laastari-20260919.md).
+       */
+      laastari48.laastarilla && laastari48.kankaita > 0
+        && laastari48.tasaisia <= 0.01 * laastari48.lohkoja,
+      JSON.stringify(laastari48));
+    await s.evaluate((pov) => {
+      const { ui } = window.matkakirja;
+      ui.pallonInstanssi.pointOfView({ lat: pov.lat, lng: pov.lng, altitude: pov.altitude }, 0);
+      ui.pallolauta?.heraa?.();
+    }, paluu);
+    await s.waitForTimeout(800);
     napa = {
       ...napaTila, kiekko, keha, laikut, pilvetPiilossa: pilvetPois,
     };
