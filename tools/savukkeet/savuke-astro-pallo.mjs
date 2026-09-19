@@ -1550,6 +1550,233 @@ async function ajaNakyma(nimi) {
   vaadi(t('pallon keskipiste ei ole musta'), keskiKirkkaus > 20,
     `kirkkaus ${keskiKirkkaus.toFixed(1)} (kynnys 20)`);
 
+  /* ---- 47: POHJOISNAPA LINSSISSÄ (PAATOKSET 41 kohta 2) ------------- */
+  /*
+   * SONNETIN LÖYDÖS 19.9.2026 (iPhone 18 Pro, v1952, kuva
+   * `08-astro-keskikorkeus-napa-rengas.jpg`): Astronautin kamerassa
+   * pohjoisnavalla on ISO VAALEA LEVY ja sen ympärillä TUMMANSININEN
+   * RENGAS — täsmälleen se vika, jonka PAATOKSET 41 kohta 2 kielsi
+   * (*"ei beigea levya eika rengasta"*) ja joka topografialinssistä
+   * korjattiin v1947:ssä.
+   *
+   * JUURISYY (mitattu tässä lohkossa): `piilotaKarttapinnat` pyyhki
+   * napakannen pois joka kehyksellä, vaikka js/pallo.js oli juuri
+   * värjännyt sen reliefin avomerisävyyn linssiä varten. Kannen alta
+   * paljastui pallon oma pinta, jonka reliefi on häivytetty
+   * läpinäkyväksi jo 76°:ssa (RELIEFIN_HAIVYTYS) — eli generoitu
+   * napajää, se vaalea levy.
+   *
+   * MITTA on pikseleistä, kamera navan kohtisuoraan yläpuolella:
+   *   47a rakenne: pelin omat napapinnat (kansi ja kalotti) ovat
+   *       kumpikin linssin ajan piilossa — jos jompikumpi palaa
+   *       näkyviin, ruudulle tulee tasainen kiekko keskelle napaa
+   *       (mitattu: kansi näkyvissä = kirkkaansininen kiekko);
+   *   47b napa ei ole SEEPIAA: kiekon sinisyys (sininen − punainen)
+   *       on yli 0 eikä kiekossa ole vanhan kannen beigeä
+   *       (201,194,175 → sinisyys −26). Sävy kestää sen, että napa on
+   *       varjon puolella, toisin kuin kirkkaus;
+   *   47c napa on samassa valossa kuin ympäryksensä: kiekon ja kehän
+   *       (90–115 px) kirkkausero alle 25 — renkaan mitta;
+   *   47d laattalaikut: 60–80° N:n näytealueessa ei yhtään
+   *       akselinsuuntaista saumaa (laatan raon mittainen suora).
+   *
+   * MITÄ NÄMÄ EIVÄT VALVO. Navan VAALEA LEVY (generoitu napajää
+   * 76°–90°, ks. piilotaKarttapinnat-kommentti js/linssit/
+   * satelliitti-avaruus.js:ssä) jää yhä ruudulle; sen mitta on
+   * `NAPA`-rivin `sinisyys` ja `levyOsuus`, ja päätös siitä, mitä
+   * 76°–90° näyttää, on Fablen.
+   *
+   * PILVIKUORI JA REUNAVARJO POIS MITTAUKSEN AJAKSI samasta syystä
+   * kuin 45b:ssä (PAATOKSET 43 kohta 7): molemmat ovat näytteiden
+   * PÄÄLLÄ. Ne palautetaan heti lohkon jälkeen.
+   */
+  let napa = null;
+  if (nimi === 'puhelin') {
+    const paluu = await s.evaluate(() => {
+      const { ui } = window.matkakirja;
+      const pov = ui.pallonInstanssi.pointOfView();
+      /*
+       * KORKEUS 3 EIKÄ LÄHIZOOMI. Linssin zoomikaista on tässä ajossa
+       * 0,51–5,53, joten 3 mahtuu siihen sellaisenaan (erä 1 yritti
+       * 0,14:ää ja sai aina lattian 0,511). Ja mikä tärkeämpää, 3 on
+       * juuri se KESKIKORKEUS, jolla omistajan ja Sonnetin kuvassa
+       * napa näkyy: kamera navan yllä, ruudulla koko 76°–90°:n kalotti
+       * eikä sentin kokoinen läikkä.
+       */
+      ui.pallonInstanssi.pointOfView({ lat: 90, lng: 0, altitude: 3 }, 0);
+      ui.pallolauta.heraa();
+      return pov;
+    });
+    await s.waitForTimeout(2200);
+    const napaTila = await s.evaluate(() => {
+      const { ui } = window.matkakirja;
+      const pallo = ui.pallonInstanssi;
+      const luvut = {
+        kansia: 0, kansiNakyy: 0, kansiVari: null, kalotteja: 0, kalottiNakyy: 0,
+        laattoja: 0, laattaNakyy: 0,
+      };
+      pallo.scene?.()?.traverse?.((o) => {
+        const ud = o?.userData;
+        if (!ud) return;
+        const nakyy = o.visible !== false && o.layers?.mask !== 0;
+        if (ud.napakansi) {
+          luvut.kansia += 1;
+          if (nakyy) {
+            luvut.kansiNakyy += 1;
+            const c = o.material?.color;
+            if (c && luvut.kansiVari === null) {
+              luvut.kansiVari = [c.r, c.g, c.b].map((v) => Math.round(v * 255));
+            }
+          }
+        }
+        if (ud.napakalotti) { luvut.kalotteja += 1; if (nakyy) luvut.kalottiNakyy += 1; }
+        if (ud.laattakerros) { luvut.laattoja += 1; if (nakyy) luvut.laattaNakyy += 1; }
+      });
+      const pov = pallo.pointOfView();
+      return {
+        ...luvut,
+        lat: +pov.lat.toFixed(2),
+        korkeus: +pov.altitude.toFixed(3),
+        laastari: ui.pallolinssi?.kahva?.avaruus?.tila?.()?.laastarilla ?? null,
+      };
+    });
+    /*
+     * PILVET JA REUNAVARJO POIS MITTAUKSEN AJAKSI — kumpikin on
+     * pinnan PÄÄLLÄ oleva kerros, ja yhdessä ne veivät ensimmäisessä
+     * mittauksessa sekä kiekon että kehän samaan hämärään (kirkkaus
+     * 95,5 vs. 91,9, sävyero 0,2): mittari näki kalvon, ei napaa.
+     * Molemmat palautetaan heti lohkon jälkeen, ja kumpikin kirjataan.
+     */
+    const pilvetPois = await s.evaluate(() => {
+      const k = window.matkakirja.ui.pallolinssi?.kahva?.avaruus;
+      const ok = Boolean(k?.piilotaPilvet?.(true));
+      k?.asetaVarjostus?.(false);
+      window.matkakirja.ui.pallolauta?.heraa?.();
+      return ok;
+    });
+    await s.waitForTimeout(400);
+    const napaKuva = decodePng(await s.screenshot({ type: 'png', timeout: 120000 }));
+    if (ULOS) {
+      await s.screenshot({
+        path: join(ULOS, `astro-napa-${NAKYMAT[nimi].viewport.width}-20260919.jpg`),
+        type: 'jpeg', quality: 70, timeout: 120000,
+      }).catch(() => {});
+    }
+    /* Kiekon ja kehän pikselit: osuudet ja hajonta yhdellä läpikäynnillä. */
+    const kaista = (kuva, sisa, ulko) => {
+      const cx = keskiX * dpr;
+      const cy = keskiY * dpr;
+      const r1 = sisa * dpr;
+      const r2 = ulko * dpr;
+      let n = 0; let summa = 0; let nelio = 0; let vaaleita = 0;
+      let rs = 0; let bs = 0; let levya = 0;
+      for (let y = Math.max(0, Math.round(cy - r2)); y <= Math.min(kuva.height - 1, Math.round(cy + r2)); y += 1) {
+        for (let x = Math.max(0, Math.round(cx - r2)); x <= Math.min(kuva.width - 1, Math.round(cx + r2)); x += 1) {
+          const d = Math.hypot(x - cx, y - cy);
+          if (d < r1 || d > r2) continue;
+          const i = (y * kuva.width + x) * 4;
+          const L = luminanssi(kuva.data, i);
+          n += 1; summa += L; nelio += L * L;
+          rs += kuva.data[i]; bs += kuva.data[i + 2];
+          // Vaalea levy = generoitu napajää (214,220,224) tai vanha
+          // kansi (201,194,175); reliefin avomeri jää selvästi alle.
+          if (L > 140) vaaleita += 1;
+          if (kuva.data[i + 2] - kuva.data[i] < 20) levya += 1;
+        }
+      }
+      const ka = n ? summa / n : 0;
+      return {
+        n,
+        ka: +ka.toFixed(1),
+        hajonta: +(n ? Math.sqrt(Math.max(0, nelio / n - ka * ka)) : 0).toFixed(1),
+        vaaleaOsuus: +(n ? (100 * vaaleita) / n : 0).toFixed(2),
+        /*
+         * SINISYYS = sininen miinus punainen. Se erottaa reliefin
+         * avomeren (MERIVARI 38,78,145 → +107) neutraalista levystä
+         * (generoitu napajää 214,220,224 → +10, vanha kansi
+         * 201,194,175 → −26) MYÖS VARJON PUOLELLA, jossa pelkkä
+         * kirkkaus ei erota mitään: valo kertoo molemmat värit alas
+         * samassa suhteessa, sävyero säilyy.
+         */
+        sinisyys: +(n ? (bs - rs) / n : 0).toFixed(1),
+        /** Levyn pikseliosuus: neutraali sävy (sininen − punainen < 20). */
+        levyOsuus: +(n ? (100 * levya) / n : 0).toFixed(2),
+      };
+    };
+    const kiekko = kaista(napaKuva, 0, 70);
+    const keha = kaista(napaKuva, 90, 115);
+    /*
+     * 47d LAATTALAIKUT. Kamera 70° N:lle (Grönlanti–Norja, Sonnetin
+     * kuvan 07 alue) ja näytealue ruudun keskeltä. Laatan rako tai
+     * väärän tason laastari näkyy SUORANA akselinsuuntaisena saumana:
+     * pystysauma = sarake, jonka pikseleistä yli 70 % hyppää
+     * naapurisarakkeeseen nähden yli 10 luminanssiyksikköä. Rantaviiva
+     * tai pilvi ei ole suora koko näytealueen matkalta.
+     */
+    await s.evaluate(() => {
+      const { ui } = window.matkakirja;
+      ui.pallonInstanssi.pointOfView({ lat: 70, lng: 5, altitude: 1.2 }, 0);
+      ui.pallolauta.heraa();
+    });
+    await s.waitForTimeout(2200);
+    const laikkuKuva = decodePng(await s.screenshot({ type: 'png', timeout: 120000 }));
+    const saumat = (kuva) => {
+      const leveys = Math.round(120 * dpr);
+      const x0 = Math.round(keskiX * dpr - leveys / 2);
+      const y0 = Math.round(keskiY * dpr - leveys / 2);
+      const L = (x, y) => luminanssi(kuva.data, (y * kuva.width + x) * 4);
+      let pysty = 0; let vaaka = 0;
+      for (let x = x0; x < x0 + leveys - 2; x += 1) {
+        let osumia = 0;
+        for (let y = y0; y < y0 + leveys; y += 1) if (Math.abs(L(x, y) - L(x + 2, y)) > 10) osumia += 1;
+        if (osumia > 0.7 * leveys) pysty += 1;
+      }
+      for (let y = y0; y < y0 + leveys - 2; y += 1) {
+        let osumia = 0;
+        for (let x = x0; x < x0 + leveys; x += 1) if (Math.abs(L(x, y) - L(x, y + 2)) > 10) osumia += 1;
+        if (osumia > 0.7 * leveys) vaaka += 1;
+      }
+      return { pysty, vaaka, leveys };
+    };
+    const laikut = saumat(laikkuKuva);
+    if (ULOS) {
+      await s.screenshot({
+        path: join(ULOS, `astro-napa-laatat-${NAKYMAT[nimi].viewport.width}-20260919.jpg`),
+        type: 'jpeg', quality: 70, timeout: 120000,
+      }).catch(() => {});
+    }
+    await s.evaluate((pov) => {
+      const { ui } = window.matkakirja;
+      ui.pallolinssi?.kahva?.avaruus?.piilotaPilvet?.(false);
+      ui.pallolinssi?.kahva?.avaruus?.asetaVarjostus?.(true);
+      ui.pallonInstanssi.pointOfView({ lat: pov.lat, lng: pov.lng, altitude: pov.altitude }, 0);
+      ui.pallolauta?.heraa?.();
+    }, paluu);
+    await s.waitForTimeout(800);
+    napa = {
+      ...napaTila, kiekko, keha, laikut, pilvetPiilossa: pilvetPois,
+    };
+    vaadi(t('47a: pelin napapinnat ovat linssin ajan piilossa'),
+      napa.kansia > 0 && napa.kansiNakyy === 0 && napa.kalottiNakyy === 0,
+      `kansia ${napa.kansia} (näkyy ${napa.kansiNakyy}, väri `
+      + `${JSON.stringify(napa.kansiVari)}), kalotteja ${napa.kalotteja} `
+      + `(näkyy ${napa.kalottiNakyy}), korkeus ${napa.korkeus}, lat ${napa.lat}`);
+    vaadi(t('47b: navalla ei ole seepiakannen beigeä'),
+      kiekko.n > 500 && kiekko.sinisyys > 0 && kiekko.vaaleaOsuus < 2,
+      `kiekon sinisyys ${kiekko.sinisyys} (beige 201,194,175 = −26, `
+      + `MERIVARI = 107, generoitu napajää = 10), vaaleita `
+      + `${kiekko.vaaleaOsuus} %, kirkkaus ${kiekko.ka}, `
+      + `levyn pikseleitä ${kiekko.levyOsuus} %, pilvet piilossa ${pilvetPois}`);
+    vaadi(t('47c: navan ympärillä ei ole kirkkausrengasta'),
+      kiekko.n > 500 && keha.n > 500 && Math.abs(kiekko.ka - keha.ka) < 25,
+      `kiekko ${kiekko.ka} ± ${kiekko.hajonta}, kehä ${keha.ka} ± ${keha.hajonta}, `
+      + `ero ${Math.abs(kiekko.ka - keha.ka).toFixed(1)} (raja 25)`);
+    vaadi(t('47d: 60–80° N:ssä ei akselinsuuntaisia laattasaumoja'),
+      laikut.pysty === 0 && laikut.vaaka === 0,
+      `pystysaumoja ${laikut.pysty}, vaakasaumoja ${laikut.vaaka} `
+      + `(näytealue ${laikut.leveys} × ${laikut.leveys} px)`);
+  }
+
   /* ---- kuva raporttiin ---------------------------------------------- */
   if (ULOS) {
     await s.screenshot({
@@ -1564,6 +1791,7 @@ async function ajaNakyma(nimi) {
   console.log(`    PIKSELIT pois   ${JSON.stringify(pois)}`);
   console.log(`    KYLLÄISYYS ${JSON.stringify(kylla)}`);
   console.log(`    RELIEFIKETJU ${JSON.stringify(ketju)}`);
+  if (napa) console.log(`    NAPA ${JSON.stringify(napa)}`);
   await konteksti.close();
 
   /* ---- 2. vastakoe: liikkeenvähennys jäädyttää ISS:n ---------------- */

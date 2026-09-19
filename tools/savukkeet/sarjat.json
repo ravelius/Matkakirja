@@ -6,6 +6,8 @@
     "savuke-pariisi-lahizoom.mjs#390-liuska",
     "savuke-pariisi-lahizoom.mjs#1400-liuska",
     "savuke-topografialinssi.mjs",
+    "savuke-musta-laatta.mjs#webkit",
+    "savuke-musta-laatta.mjs#chromium",
     "savuke-astro-pallo.mjs#vartija-b",
     "savuke-satelliittilinssi.mjs#isot",
     "savuke-astro-pallo.mjs#vartija-a",
@@ -167,6 +169,20 @@
         "NAKYMAT": "vartija-b"
       },
       "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. Vaitteen 9 vastakoelohkon TOINEN puolisko: Safarin rajat, kehykset poikki, musta pinta, kolme avausta perakkain. Mac-mittaus 18.9.2026: 128 s. Ks. #vartija-a."
+    },
+    "savuke-musta-laatta.mjs#webkit": {
+      "env": {
+        "SAVUKE_MOOTTORI": "webkit"
+      },
+      "kuvakansio": true,
+      "huomautus": "Omistajan loydos 19.9.2026 klo 14.58 Suomen aikaa (iPhone, v1954): panoroidessa Keski-Ranskaan ilmestyi yhden laatan kokoinen TAYSIN MUSTA suorakaide, joka havisi liikkeen loputtua. Vartio kysyy koko kartan alalta, onko kehyksessa yhtenainen musta suorakaide >= 40 x 40 CSS px. WEBKIT ON ENSISIJAINEN RIVI: loydos on iOS Safarista. Laattapyynnot viivytetaan route-valityksella 300-800 ms, jotta liikkeen aikainen tila nakyy. Jos tama nousee punaiseksi, kartan alla on taas musta pinta."
+    },
+    "savuke-musta-laatta.mjs#chromium": {
+      "env": {
+        "SAVUKE_MOOTTORI": "chromium"
+      },
+      "kuvakansio": true,
+      "huomautus": "Sama vartio Chromiumilla (vertailu). Ks. #webkit."
     },
     "savuke-topografialinssi.mjs": {
       "huomautusMac": "TUNNETTU MAC-PUNAINEN POISTETTU 18.9.2026 (Raamattu TARKENNUS 11 kohta 24 b). Vartio 'avauksessa ei ole valahdysta suhteessa linssin lopputilaan' hailyi kuormassa (paluu alas 19,4 vs raja 15; yksin ajettuna 4,0). Savuke ottaa nyt kolme naytetta JA KAYTTAA MEDIAANIA, mutta vain jos ensimmainen nayte on punainen - vihrea kertakaynti riittaa, koska kuormahaily tekee mittauksesta punaisen eika vihreaa. Rajat (8 kehysta, 60 %, VALAHDYSVARA 15) ovat ennallaan. Jos tama nousee punaiseksi, se on kolmen nayteen mediaani eika yksi pudonnut kehys.",
