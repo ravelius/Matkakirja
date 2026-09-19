@@ -9532,7 +9532,11 @@ export const RAAMATTU = {
           + 'generaattori tarvitsee PLAYWRIGHT_JS ja PW_CHROMIUM (savukkeet CHROMIUM). '
           + 'POHJA-AJON ARVIO (Opus 2): 16 ytimella 1,5-2 h, uusi paivatty kansio 2-3 Gt; '
           + 'R2:n ilmaisraja 10 Gt sisaltaa vanhat versiot -> Fable mittaa amparin koon '
-          + 'ennen lupaa; ajo tools/polta-paikallisesti.sh:lla (luettelo oikein).',
+          + 'ennen lupaa; ajo tools/polta-paikallisesti.sh:lla (luettelo oikein). MITATTU '
+          + '(Fable 01.45): amparissa 1 396 525 objektia, 30,5 Gt - ilmaisraja ylitetty jo '
+          + 'kauan sitten, lisays 2-3 Gt on n. 5 snt/kk -> POHJA-AJO SAA ALKAA uuteen '
+          + 'paivattyyn kansioon, laatat ennen luetteloa, vanhoja kansioita ei poisteta. '
+          + 'OMISTAJALLE JONOON: vanhojen pyramidiversioiden siivous amparista (30 Gt).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
