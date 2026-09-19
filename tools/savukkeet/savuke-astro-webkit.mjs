@@ -532,6 +532,14 @@ async function mittaaAvaus(s, { selain, kotelo, kerta, dpr, leveys, korkeus }) {
       radanLuminanssi: v.length >= 3 ? Math.round(0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2]) : null,
       iss: iss ? [Math.round(iss.width), Math.round(iss.height)] : null,
       issOsia: document.querySelectorAll('.astro-iss svg rect').length,
+      // PAATOKSET 53: seuranta päällä ennen kosketusta ja ISS keskellä.
+      issSeuranta: t?.issSeuranta ?? null,
+      issKeskelta: (() => {
+        const k = document.querySelector('.pallo-kotelo, .pallo-kuori');
+        const p = t?.kalvo?.iss;
+        return k && p?.x !== null && p?.x !== undefined
+          ? Math.round(Math.hypot(p.x - k.clientWidth / 2, p.y - k.clientHeight / 2)) : null;
+      })(),
     };
   }).catch((e) => ({ virhe: String(e).slice(0, 80) }));
   console.log(`    AVAUS52 ${JSON.stringify(avaus52)}`);
