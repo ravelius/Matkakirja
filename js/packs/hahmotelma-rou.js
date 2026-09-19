@@ -209,8 +209,8 @@ export const HAHMOTELMA_ROU = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-ceahlau-b1cbc7ff.jpg',
       lyhyt: 'Toacan huippu Ceahlăun vuoristossa kesäasussa.',
-      selite: 'Tiedoston kuvauksen mukaan Toaca (1 904 m) on Ceahlăun vuoriston toiseksi '
-        + 'korkein huippu. Etualalla on vihreää vuoristokasvillisuutta.',
+      selite: 'Toaca (1 904 m) on Ceahlăun vuoriston toiseksi korkein huippu. Etualalla on '
+        + 'vihreää vuoristokasvillisuutta.',
       lahde: 'Valokuva: xulescu_g, Wikimedia Commons (CC BY-SA 2.0).',
       tekija: 'xulescu_g',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:V%C3%A2rful_Toaca_(Toaca_peak),_Ceahl%C4%83u_mountains,_Romania_(52290098053).jpg',
@@ -346,8 +346,8 @@ export const HAHMOTELMA_ROU = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-scarisoara-2d95de4e.jpg',
       lyhyt: 'Valaistuja jääpuikkoja Scărișoaran jääluolan seinämällä.',
-      selite: 'Kuvassa jääpuikkoja ja kalkkikiviluolan kalliopinta. Tiedoston kuvauksen mukaan '
-        + 'kyseessä ovat jääpuikot (jäätippukivet) Scărișoaran luolassa.',
+      selite: 'Kuvassa jääpuikkoja ja kalkkikiviluolan kalliopinta. Kyseessä ovat jääpuikot '
+        + '(jäätippukivet) Scărișoaran luolassa.',
       lahde: 'Valokuva: E.Coman, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'E.Coman',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:PesteraScarisoaraStalactite.jpg',
@@ -632,9 +632,8 @@ export const HAHMOTELMA_ROU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-biertan-7244ad00.jpg',
         lyhyt: 'Kivetty kulkuväylä Biertanin kirkkolinnoituksen sisäänkäynnillä.',
-        selite: 'Kuvauksen mukaan kuvassa on yksi kirkkoa ympäröivän linnoituksen '
-          + 'sisäänkäynneistä. Paksujen kivimuurien välissä kulkeva käytävä jatkuu useiden '
-          + 'holvikaarien läpi.',
+        selite: 'Kuvassa on yksi kirkkoa ympäröivän linnoituksen sisäänkäynneistä. Paksujen '
+          + 'kivimuurien välissä kulkeva käytävä jatkuu useiden holvikaarien läpi.',
         lahde: 'Valokuva: Alessio Damato, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Alessio Damato',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Biertan_fortified_church_entrance.jpg',
@@ -699,8 +698,8 @@ export const HAHMOTELMA_ROU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-prejmer-e9da0528.jpg',
         lyhyt: 'Prejmerin linnoituskirkon sisäpiha ja monikerroksiset puurakenteet.',
-        selite: 'Kuvauksen mukaan kuva on linnoitetun kirkon sisäpihalta. Muurin sisäpuolella '
-          + 'kulkevat monikerroksiset huonerivit portaineen, joissa kyläläiset saattoivat '
+        selite: 'Kuva on linnoitetun kirkon sisäpihalta. Muurin sisäpuolella kulkevat '
+          + 'monikerroksiset huonerivit portaineen, joissa kyläläiset saattoivat '
           + 'suojautua.',
         lahde: 'Valokuva: Myrabella, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Myrabella',
@@ -764,9 +763,8 @@ export const HAHMOTELMA_ROU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-alba-iulia-7e5b3e8e.jpg',
         lyhyt: 'Sfântul Capistrano -katu linnoituksen muurien välissä.',
-        selite: 'Kuvan otsikon mukaan katu kulkee Alba Carolinan linnoituksen kehämuurien '
-          + 'sisäpuolella vuonna 2017. Vasemmalla kohoaa vallin rinne ja taustalla näkyy '
-          + 'torni.',
+        selite: 'Katu kulkee Alba Carolinan linnoituksen kehämuurien sisäpuolella vuonna 2017. '
+          + 'Vasemmalla kohoaa vallin rinne ja taustalla näkyy torni.',
         lahde: 'Valokuva: DimiTalen, Wikimedia Commons (CC0).',
         tekija: 'DimiTalen',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Aleea_Sf%C3%A2ntul_Capistrano_within_the_curtain_wall_of_Alba_Carolina_Citadel,_Alba_Iulia,_2017.jpg',
@@ -841,8 +839,8 @@ export const HAHMOTELMA_ROU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-targoviste-1323c95f.jpg',
         lyhyt: 'Chindia-torni: leveä kivinen alaosa ja tiilinen yläosa.',
-        selite: 'Kuvauksen mukaan torni on Curtea Domnească -hovialueella Târgoviștessa. '
-          + 'Tornin alaosa on leveä ja kivinen, yläosa kapeampi ja tiilinen.',
+        selite: 'Torni on Curtea Domnească -hovialueella Târgoviștessa. Tornin alaosa on leveä '
+          + 'ja kivinen, yläosa kapeampi ja tiilinen.',
         lahde: 'Valokuva: Nicubunu, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Nicubunu',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Turnul_Chindiei,_Targovi%C8%99te_02.jpg',
@@ -1797,8 +1795,8 @@ export const HAHMOTELMA_ROU = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/rou-nosto-resita-3b9aedf0.jpg',
         lyhyt: 'Veturi Hungaria matkalla Wienin maailmannäyttelyyn vuonna 1873.',
-        selite: 'Vanhan kuvan otsikon mukaan Reșițassa valmistettu höyryveturi nro 4 '
-          + '"Hungaria" kuljetettiin Wienin maailmannäyttelyyn 1873. Kuvaajaa ei tunneta.',
+        selite: 'Reșițassa valmistettu höyryveturi nro 4 "Hungaria" kuljetettiin Wienin '
+          + 'maailmannäyttelyyn 1873. Kuvaajaa ei tunneta.',
         lahde: 'Valokuva: Tuntematon valokuvaaja, Wikimedia Commons (Public domain).',
         tekija: 'Tuntematon valokuvaaja',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Resita_-_Steam_locomotive_Nr._4_\'Hungaria\'_being_transported_to_the_Universial_Exhibition_in_Vienna,_1873.jpg',
