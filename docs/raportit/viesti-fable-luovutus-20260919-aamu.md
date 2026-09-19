@@ -17,7 +17,14 @@ ASTRONAUTIN KAMERA LISAYS 16 (kohdat 47–49).
 | v1947 | #2590 | CI / merge (ks. alla) | topografialinssin meret+navat+aukot (41), Astronautin kamera pyramidista + yövarjostus + sumu (41 k4, 43 k7), kohdevalinta (42), saaton suunta (43 k11), Ohita pysyy (43 k10), kaupungit piiloon + yläpalkki iPad (43 k8–9), savukekorjaukset |
 | v1948 | ei PR:ää vielä | haara claude/bold-ride-vow4ki-v1948, v1947:n tasalla | Ranskan 27 hahmotelmanoston sisällöt + 81 Commons-kuvaa (44), maastokohteiden kuvat, NASA-pilvikuva (PILVIEN_OSOITE) |
 
-v1947:n viimeinen CI-ajo 35423483607 (commit a4f8eb4e): jos vihreä, mergeä
+v1947:n viimeinen CI-ajo 35423483607 (commit a4f8eb4e, klo 08.25): Testit vihreä,
+Savukkeet PUNAINEN kahdella uudella: astro-aani 22/24 (puhelin: gain-ramppi kesken
+näytteellä, taso 0,016 vs tavoite 0,26; "kohteen vaihto loi uuden soittimen" 7→8) ja
+kerma-reuna 15/18 (tyopoyta V5/V7: "piste ei ollut ruudulla" = kamera ei ehtinyt
+näkymään). Molemmat näyttävät kuorma-/ajoitushäilyltä (edellisessä ajossa vihreitä),
+mutta kumpaakaan ei ole vielä uusittu: UUSI KERRAN (`gh run rerun 35423483607
+--failed`); jos toistuu, aja paikallisesti yksin ja päätä (korjaus tai tunnettu
+punainen perusteluin). Kun vihreä, mergeä
 squashina (`gh pr merge 2590 --squash`), sitten rakenna v1948 mainin päälle
 (sama kaava kuin v1946/v1947: `git checkout -B ...-v1948 origin/main && git merge
 <vanha v1948>`, konfliktit `--theirs`), `node tools/uusi-versio.mjs`, testit,
