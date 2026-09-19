@@ -9081,7 +9081,16 @@ export const RAAMATTU = {
           + 'PR-porttiin jaavat viimeisen kahden viikon aikana punaista nayttaneet ja '
           + 'muutettuja tiedostoja koskevat. Tavoite: PR-portti alle 10 min ilman etta '
           + 'yksikaan viime viikkojen oikea loydos olisi jaanyt huomaamatta '
-          + '(takautuva tarkistus). Tila: Opus 2 -era savukekarsinta tilattu klo 18.52.',
+          + '(takautuva tarkistus). TILA (Opus 2 klo 19.12, Fable hyvaksyi 19.13): 62 Mac-'
+          + 'ajon historia luettu, jokainen uusi punainen luokiteltu (aito / kalibrointi / '
+          + 'hailyva / massapunainen). PORTTI 26 rivia (kaikki aidon loydoksen antaneet, '
+          + 'uudet vartiot, lyhyet alle 70 s), HARVA 9 rivia (luentakuvat, kaupunkipopup '
+          + '390 ja 1400, satelliittilinssi isot ja pienet, astro-pallo vartija-a ja -b, '
+          + 'ihmisen-kappaleet, astro-valokuva: 0 aitoa loydosta, 112-180 s). Kaikki 8 '
+          + 'aitoa loydosta tulivat portin riveilta. Jonosimulaatio 6 rinnakkain: 563 s '
+          + '-> 353 s; polkuosuma (harvaPolut) tuo harvan rivin PR:aan, schedule 03 UTC '
+          + 'ajaa taysin sarjan mainista. Julkaistaan v1962:ssa; ensimmaisen PR-ajon '
+          + 'lokirivi "PR-sarja:" tarkistetaan.',
         'HAHMOTELMANOSTOJEN VISA EI PIIRRY LAITTEELLA (Sonnet 1 kierros 9, 19.9.2026 klo '
           + '18.41-18.52 Suomen aikaa, v1960): Texel, Leiden, Gouda avattiin Amsterdamin '
           + 'kartalta, kortissa ei LUKIJAN KYSYMYS -laatikkoa vaikka `visa` on pakassa. '
