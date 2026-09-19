@@ -90,6 +90,7 @@ export const PILVIEN_LAHDE = {
  * muutu, eikä puuttuva tiedosto aiheuta yhtään turhaa pyyntöä.
  */
 export const PILVIEN_OSOITE = null;
+/* Ampärissa on jo https://media.matkakirja.app/matkakirja/linssit/pilvet-bluemarble-2048.jpg (NASA Blue Marble, PD); kytketaan omassa erassa, kun astro-pallon, astro-sumun ja astro-aanen savukkeet on kalibroitu aidolle pilvikuvalle (v1948 CI 35425678571: 6 savuketta punaisena aidolla kuvalla). */
 
 /** Pilvikuoren säde pallon säteestä (PAATOKSET 43: noin 1,01). */
 export const PILVIEN_SADE = 1.01;
