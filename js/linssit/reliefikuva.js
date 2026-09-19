@@ -122,14 +122,19 @@ export const RELIEFI_KOKO_PALLO = true;
  * 19.9.: 8k 2 878 422 tavua/8192×4096, 4k 775 546 tavua/4096×2048;
  * etelä ja keskileveydet ennallaan. Ks. docs/raportit/
  * viesti-fable-jaameri-20260919.md.
+ *
+ * TUNNISTE 20260919b (Fable 19.9.2026 klo 16.55 Suomen aikaa): pohjoisen
+ * maajää jäätikkömaskista (tools/jaatikkomaski.mjs, Natural Earth 10m
+ * Glaciated areas) ja tundra harmaanruskeaan; 8k 2 878 016 tavua, 4k
+ * 780 896 tavua. Ks. docs/raportit/viesti-fable-maajaa-20260919.md.
  */
 export const RELIEFIN_KOKO_4K = {
-  osoite: 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-4k-20260919.webp',
+  osoite: 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-4k-20260919b.webp',
   leveys: RELIEFIN_LEVEYS,
   korkeus: RELIEFIN_KORKEUS,
 };
 export const RELIEFIN_KOKO_8K = {
-  osoite: 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-8k-20260919.webp',
+  osoite: 'https://media.matkakirja.app/matkakirja/linssit/topografia-pallo-koko-8k-20260919b.webp',
   leveys: RELIEFIN_8K_LEVEYS,
   korkeus: RELIEFIN_8K_KORKEUS,
 };
