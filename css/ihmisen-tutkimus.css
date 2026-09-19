@@ -325,6 +325,27 @@
   background: rgba(0, 0, 0, 0.2);
 }
 .ihmisen-nostokortti-kuvakehys.esine .ihmisen-nostokortti-kuva { aspect-ratio: 1 / 1; }
+/* Aito Commons-kuva: kuva kokonaisena (kartat, esineet), ei rajattuna 3:2:een. */
+.ihmisen-nostokortti-kuvakehys.aito .ihmisen-nostokortti-kuva {
+  aspect-ratio: auto;
+  max-height: 15rem;
+  object-fit: contain;
+}
+.ihmisen-nostokortti-kuvakehys.aito .ihmisen-nostokortti-kuvateksti {
+  white-space: normal;
+  overflow: visible;
+}
+.ihmisen-nostokortti-kuvalahde {
+  font-size: 0.62rem;
+  line-height: 1.25;
+  color: #857657;
+}
+.ihmisen-nostokortti-kuvalahde a,
+.ihmisen-nostokortti-kuvalahde a * {
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+}
 .ihmisen-nostokortti-kuvateksti {
   font-size: 0.66rem;
   line-height: 1.25;
