@@ -9545,7 +9545,16 @@ export const RAAMATTU = {
           + 'kartuschan kielirivin paalla. PAATOS OSLO 1873: otsikkokortti kartan nimella '
           + '(OSLO), 1873-teksteissa yhtenaisesti Christiania (kirjoitusasu vaihtui '
           + 'Kristianiaksi virallisesti 1877); sama saanto muille: otsikko = kartan nimi, '
-          + 'isoisan tekstit = ajan nimi. Sonnet 1 jatkaa kierrokseen 17 (v1970 + CHE/ISL/TUR).',
+          + 'isoisan tekstit = ajan nimi. Sonnet 1 jatkaa kierrokseen 17 (v1970 + CHE/ISL/TUR). '
+          + 'LJUBLJANA ERA 2 (Sonnet 3 22b239ff, Fable 01.52): taysi kaupunkilehti 15 nostoa / '
+          + '30 kuvaa, Napoleon ei otsikkoon (pollo.test heikko osuma). KIERROS 16 KORJAUKSET '
+          + '(Opus 1 e0042a59, Fable 02.08): pulun sijaintivuoto - kokoaKonteksti kirjoitti '
+          + 'kaupungin, maan ja matkapaivan joka kysymykseen ja aineistohaku painotti '
+          + 'pelaajan kaupunkia -> astronautinKameraPaalla jattaa ne pois; Canigoun kuva-'
+          + 'ala - kertakayttoinen latauskuuntelija lukitsi laatikon ensimmaisen (vara)'
+          + 'kuvan suhteeseen -> pysyva kuuntelija + nostokuvanLukitunKorkeus; savuke-'
+          + 'nostokuva-suhde julkaisusarjaan. V1971 KOOTAAN (02.10): zoom/pan, Biskajanlahti, '
+          + 'sadekeha, Brysselin ja Ljubljanan lehdet, viuhka, pulun vuoto, Canigou.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
