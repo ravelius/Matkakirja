@@ -72,6 +72,7 @@ const MODULES = [
   'js/packs/hahmotelma-grc.js',
   'js/packs/hahmotelma-aut.js',
   'js/packs/hahmotelma-nld.js',
+  'js/packs/hahmotelma-hun.js',
   'js/packs/hahmotelma-esp.js',
   'js/packs/hahmotelma-ita.js',
   'js/packs/maakartat.js',
