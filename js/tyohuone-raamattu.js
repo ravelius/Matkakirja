@@ -9399,7 +9399,10 @@ export const RAAMATTU = {
           + 'pallopistetta, visa-lukko (Opus 1: laitehavainto ei toistunut Playwrightissa, '
           + 'lukko vartioitu 4b/11/11b) ja pulu-paneelin-ylla: vahti vaihtaa oletuspaikan '
           + 'paallimmaiseen paneeliin (laaja nostokortti), 21/21. Opus 1 seuraava era: '
-          + 'Gronlanti laastaritilassa (jaasekoitus).',
+          + 'Gronlanti laastaritilassa (jaasekoitus). BULGARIA (Sonnet 2, Fable klo 20.36): '
+          + 'BGR 25 / 60 / 10 visaa (Shipka ja Pleven muistopaikkoina, Karlovo/Levski '
+          + 'tosiasiana, Batak pois; 1873-napit "vasta muutaman vuoden kuluttua"), HEAD '
+          + '200 60/60, julkaistaan v1965. Seuraava maa Sonnet 2:lle: Slovakia.',
         'KARTTAUUDISTUKSEN PAATOKSET 47: NOPAN JALKEEN KAMERA JAI TYHJAAN KOHTAAN - '
           + 'KOHDEMAAN ZOOMIKATTO KUMOSI ULOSSOVITUKSEN (Sonnet-simulaattoritesti kierros 5, '
           + '19.9.2026 klo 14.05-14.19 Suomen aikaa: Pariisi -> liftaus -> Amsterdam -> Liiku '
