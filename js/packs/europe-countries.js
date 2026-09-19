@@ -13,6 +13,7 @@ export const EUROPE_CITY_COUNTRY = {
   bergen: 'NOR',
   berliini: 'DEU',
   budapest: 'HUN',
+  bryssel: 'BEL',
   bukarest: 'ROU',
   dublin: 'IRL',
   edinburgh: 'GBR',
