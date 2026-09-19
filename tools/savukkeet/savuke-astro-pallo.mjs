@@ -732,6 +732,39 @@ async function ajaNakyma(nimi) {
       koko: r ? [Math.round(r.width), Math.round(r.height)] : null,
     };
   });
+  /*
+   * 52e: ISS-MERKKI VAIN PALLON KIEKON SISÄLLÄ (Sonnet 1, kierros 14, v1966
+   * laitekuvat b-11 ja b-13: merkki kiekon ulkopuolella). 30 sekunnin
+   * näytteet: joka kerta, kun merkki on näkyvissä (opacity 1), sen
+   * keskipiste on kiekon sisällä (etäisyys kotelon keskipisteestä ≤ säde).
+   */
+  const iss52e = await s.evaluate(async () => {
+    const odota = (ms) => new Promise((v) => setTimeout(v, ms));
+    const kotelo = document.querySelector('.pallo-kotelo, .pallo-kuori');
+    const tulos = { naytteita: 0, nakyvia: 0, ulkonaNakyvia: 0, ulkonaPiilossa: 0, pahin: null };
+    for (let i = 0; i < 60; i += 1) {
+      const t = window.matkakirja.ui.pallolinssi.kahva.avaruus.tila();
+      const iss = t?.kalvo?.iss;
+      const el = document.querySelector('.astro-iss');
+      if (iss && iss.x !== null && el && kotelo) {
+        tulos.naytteita += 1;
+        const d = Math.hypot(iss.x - kotelo.clientWidth / 2, iss.y - kotelo.clientHeight / 2);
+        const yli = d - t.kalvo.sadePx;
+        const nakyy = getComputedStyle(el).opacity === '1';
+        if (nakyy) tulos.nakyvia += 1;
+        if (yli > 0 && nakyy) {
+          tulos.ulkonaNakyvia += 1;
+          if (!tulos.pahin || yli > tulos.pahin.yliPx) tulos.pahin = { x: iss.x, y: iss.y, yliPx: Math.round(yli) };
+        }
+        if (yli > 0 && !nakyy && iss.x > -50) tulos.ulkonaPiilossa += 1;
+      }
+      await odota(500);
+    }
+    return tulos;
+  });
+  vaadi(t('52e: ISS-merkki näkyy vain pallon kiekon sisällä (30 s näytteet)'),
+    iss52e.naytteita >= 40 && iss52e.nakyvia > 0 && iss52e.ulkonaNakyvia === 0,
+    JSON.stringify(iss52e));
   vaadi(t('52d: ISS:n rata on tumma ja merkki on aseman piirros (runko + paneelit)'),
     iss52.radanLuminanssi !== null && iss52.radanLuminanssi < 60
       && iss52.piirroksenOsia >= 10 && iss52.koko?.[0] > iss52.koko?.[1],
