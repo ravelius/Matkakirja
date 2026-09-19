@@ -251,6 +251,34 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+/*
+ * TEKSTIÄ EI VALITA PELISSÄ (Raamattu JONOSSA kohta D, omistaja 19.9.2026).
+ * Peli on lauta ja lehti, ei tekstidokumentti: pitkä painallus kartalla tai
+ * kortin tekstissä maalasi kappaleen siniseksi ja avasi iOS:ssä
+ * jaa-valikon kesken eleen. Sääntö on koko pelin pinnoille; kentät, joihin
+ * pelaaja kirjoittaa, ovat poikkeus alla.
+ */
+body {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/*
+ * POIKKEUS: syöttökentät. Pelaajan on voitava valita ja muokata omaa
+ * tekstiään (pulun kysymyskenttä, kehittäjäkentät), ja iOS:n oma
+ * valikko kuuluu niihin.
+ */
+input,
+textarea,
+select,
+[contenteditable=''],
+[contenteditable='true'] {
+  -webkit-user-select: text;
+  user-select: text;
+  -webkit-touch-callout: default;
+}
+
 button, .brand, .turn-pill, .fact-card h2 {
   -webkit-user-select: none;
   user-select: none;
