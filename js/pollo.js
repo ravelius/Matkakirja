@@ -1917,6 +1917,10 @@ export class Pollo {
    * naapurijutun tarjokkaat ja hakee uudet.
    */
   kysymysAvain() {
+    // Linssin oma paikka (Ihmisen matkan jakso tai nosto) voittaa: ks.
+    // linssikysymykset.
+    const linssi = this.linssikysymykset();
+    if (linssi) return `linssi:${linssi.avain}`;
     const juttu = paallimmainenJuttu(this.doc);
     if (juttu) return `${juttu.id}:${juttu.aihe ?? ''}`;
     const tilanne = this.valmiskysymysTilanne();
@@ -1992,6 +1996,10 @@ export class Pollo {
    * @returns {boolean} ovatko valmiskysymykset pinnassa
    */
   naytaValmiit(avain = this.kysymysAvain()) {
+    // Linssin valmiit kysymykset eivät odota kaupunkipakan lippua: ne
+    // ovat tervehdyksen tilalla (ks. naytaLinssinValmiit).
+    const linssi = this.linssikysymykset();
+    if (linssi) return this.naytaLinssinValmiit(linssi, avain);
     // Lippu alhaalla (omistaja 24.8.2026: "hetkeksi pois"): pinta jää
     // alkutekstiin ja keskusteluun, ja kutsuja hakee palvelimen
     // ehdotukset kuten kaupungeissa ilman valmista pakkaa.
@@ -2031,6 +2039,109 @@ export class Pollo {
       this.virta.scrollTop = this.virta.scrollHeight;
     }
     return true;
+  }
+
+  /**
+   * LINSSIN VALMIIT KYSYMYKSET (Raamattu, "IHMISEN MATKA: PULUN VALMIIT
+   * KYSYMYKSET JOKA JAKSOON", omistaja 19.9.2026 klo 18.02: *"Tässä
+   * pitäisi olla tuon tekstin tilalla muutama valmis kysymys riippuen
+   * siitä missä kohtaa pelaaja on."*).
+   *
+   * Linssin ajo kytkee ui:hin kyselyn `pulunLinssikysymykset`
+   * (js/linssit/ihmisen-matka-pulukysymykset.js). Pöllö ei tunne
+   * linssejä: se kysyy vain, onko nyt paikka, jolla on omat
+   * kysymyksensä. Virhe kyselyssä ei saa kaataa paneelia.
+   *
+   * @returns {object|null} { avain, tunnus, lisanosto, kysymykset, vastaus }
+   */
+  linssikysymykset() {
+    try {
+      return this.haeUi?.()?.pulunLinssikysymykset?.() ?? null;
+    } catch {
+      return null;
+    }
+  }
+
+  /**
+   * Linssin kysymysnapit virtaan. Samat kuplat kuin kaupunkien
+   * valmiskysymyksillä (.pollo-valmis), mutta ne pysyvät tarjolla,
+   * kunnes jokainen on kysytty: esikirjoitettu vastaus ei avaa
+   * dynaamisia jatkokysymyksiä, joten jäljelle jääneet ovat se jatko.
+   *
+   * @returns {boolean} tosi = linssi hoitaa tarjonnan (ei palvelinhakua)
+   */
+  naytaLinssinValmiit(linssi, avain) {
+    this.linssiKysytyt ??= new Map();
+    const kysytyt = this.linssiKysytyt.get(avain) ?? new Set();
+    // Lisänoston kysymykset kulkevat mallireittiä: sen jälkeen vastauksen
+    // omat jatkokysymykset ovat tarjonta, kuten muuallakin.
+    if (linssi.lisanosto && this.kaytetytTarjonnat.has(avain)) return true;
+    const jaljella = linssi.kysymykset.filter((k) => !kysytyt.has(k));
+    this.poistaValmiit();
+    if (!jaljella.length) return true;
+    const lohko = polloElementti('div', 'pollo-valmiit pollo-linssin-valmiit');
+    for (const teksti of jaljella) {
+      const nappi = polloElementti('button', 'pollo-ehdotus pollo-valmis', teksti);
+      nappi.type = 'button';
+      nappi.addEventListener('click', () => this.vastaaLinssinValmiilla(teksti));
+      lohko.appendChild(nappi);
+    }
+    this.virta.appendChild(lohko);
+    this.valmiitLohko = lohko;
+    if (this.virta.querySelectorAll('.pollo-viesti').length <= 1) this.virta.scrollTop = 0;
+    else this.virta.scrollTop = this.virta.scrollHeight;
+    return true;
+  }
+
+  /**
+   * ESIKIRJOITETTU VASTAUS ILMAN MALLIKUTSUA. Vastaus on jo kirjoitettu
+   * ja lähteistetty (js/linssit/ihmisen-matka-kysymykset.js), joten
+   * kutsu maksaisi ja antaisi huonomman vastauksen — sama sääntö kuin
+   * Astronautin kameran alkuperäisellä kortilla. Kysymys, jolle
+   * vastausta ei ole (lisänostot), menee tavallista reittiä (kysy).
+   */
+  vastaaLinssinValmiilla(teksti) {
+    if (this.kesken) return;
+    const linssi = this.linssikysymykset();
+    if (!linssi) { this.kysy(teksti); return; }
+    const avain = `linssi:${linssi.avain}`;
+    this.linssiKysytyt ??= new Map();
+    if (!this.linssiKysytyt.has(avain)) this.linssiKysytyt.set(avain, new Set());
+    this.linssiKysytyt.get(avain).add(teksti);
+    const valmis = linssi.vastaus?.(teksti) ?? null;
+    if (!valmis?.vastaus) { this.kysy(teksti); return; }
+    this.paneeli.classList?.remove('pollo-alku');
+    this.nollaaTyhjaTila();
+    this.poistaValmiit();
+    for (const vanha of this.virta.querySelectorAll('.pollo-jatkot')) vanha.remove();
+    this.ehdotukset.replaceChildren();
+    this.ehdotukset.hidden = true;
+    const kysymysViesti = this.lisaaViesti('kayttaja', teksti);
+    const viesti = this.lisaaViesti('pollo', valmis.vastaus);
+    viesti.classList.add('pollo-valmisvastaus');
+    const lahteet = (valmis.lahteet ?? []).filter((l) => /^https:\/\//.test(String(l?.url ?? '')));
+    if (lahteet.length) {
+      const rivi = polloElementti('p', 'pollo-valmislahteet', 'Lähde: ');
+      lahteet.forEach((l, i) => {
+        if (i) rivi.appendChild(this.doc.createTextNode(', '));
+        const a = polloElementti('a', '', l.title || l.url);
+        a.href = l.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        rivi.appendChild(a);
+      });
+      this.virta.appendChild(rivi);
+    }
+    this.lueVastaus(valmis.vastaus);
+    this.historia.push({ rooli: 'kayttaja', teksti });
+    this.historia.push({ rooli: 'pollo', teksti: valmis.vastaus });
+    this.historia = this.historia.slice(-HISTORIAN_KATTO);
+    kirjaaLivianLokiin('kayttaja', teksti);
+    kirjaaLivianLokiin('pollo', valmis.vastaus);
+    this.naytaLinssinValmiit(linssi, avain);
+    // Kysymys yläreunaan, vastaus sen alle ja jäljelle jääneet napit
+    // perään — sama näkymä kuin mallin vastauksessa.
+    this.ankkuroiYlos(kysymysViesti);
   }
 
   /** Klikkaamattomat valmiskysymyskuplat pois pinnasta. */
@@ -4444,7 +4555,9 @@ export class Pollo {
      */
     if (!this.virta.querySelector(
       '.pollo-viesti:not(.pollo-kuplaviesti):not(.pollo-historiaviesti)',
-    )) {
+    ) && !this.linssikysymykset()) {
+      // Linssin paikalla tervehdyksen TILALLA ovat sen valmiit
+      // kysymykset (naytaValmiit → naytaLinssinValmiit).
       this.naytaTervehdys();
     }
     // Kehittäjätila voi vaihtua kesken pelin, joten kenttä katsotaan

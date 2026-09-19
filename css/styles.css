@@ -22312,6 +22312,17 @@ a.pollo-kuvalahde {
   margin: 0 0 0.6rem;
 }
 
+/* Esikirjoitetun vastauksen lähde (Ihmisen matka -linssin valmiit
+   kysymykset, js/pollo.js vastaaLinssinValmiilla). */
+.pollo-valmislahteet {
+  margin: -0.2rem 0 0.6rem;
+  font-size: 0.8em;
+  opacity: 0.8;
+}
+.pollo-valmislahteet a {
+  color: var(--pollo-korostus);
+}
+
 /* Pelinsisäiset linkit vastauksen alle. Ne rakennetaan paikallisen haun
    tuloksista, ei mallin tekstistä, joten ne osoittavat aina johonkin. */
 .pollo-linkit {

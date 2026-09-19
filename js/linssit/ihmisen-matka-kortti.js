@@ -292,6 +292,10 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
   const tila = { auki: null, kysymyksia: 0, avattu: 0, pysaytin: false };
 
   const tallenna = () => ajo.tallennaMuisti?.();
+  /** Auki olevan pulupaneelin tarjonta nykyiseen paikkaan (js/pollo.js tarkistaKonteksti). */
+  const paivitaPulu = () => {
+    try { globalThis.matkakirjaPollo?.tarkistaKonteksti?.(); } catch { /* pulu ei ole pelissä */ }
+  };
 
   function sulje() {
     if (tila.auki === null && kortti.hidden) return;
@@ -301,6 +305,7 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
     kortti.replaceChildren();
     document.body.classList.remove(KORTIN_LUOKKA);
     if (ui.fokuskohdeAuki?.linssinosto) ui.fokuskohdeAuki = null;
+    paivitaPulu();
     /*
      * ESITYS JATKUU SULUSTA (omistaja: kortti aukeaa myös esityksen
      * aikana; esitys pysähtyy tauolle ja jatkuu sulusta). Jatketaan vain
@@ -430,6 +435,9 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
      * fokuskohteen omasta, jottei purku vie väärää korttia.
      */
     ui.fokuskohdeAuki = { kohde: nostonKonteksti(nosto), popup: kortti, linssinosto: true };
+    // Auki oleva pulupaneeli vaihtaa valmiit kysymyksensä tämän noston
+    // omiin (js/linssit/ihmisen-matka-pulukysymykset.js).
+    paivitaPulu();
 
     // ESITYS TAUOLLE kortin ajaksi; jatko sulusta (ks. sulje).
     const esitys = ajo.esitys ?? null;
