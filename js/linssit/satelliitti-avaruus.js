@@ -2104,7 +2104,32 @@ function piilotaKarttapinnat(pallo, lauta, ikkuna = globalThis, laastari = null)
       if (ud.laattakerros) {
         if (laastariNyt) nakyviin(o);
         else piiloon(o);
-      } else if (ud.lepokerros || ud.napakansi || ud.napakalotti) piiloon(o);
+      } else if (ud.lepokerros || ud.napakansi || ud.napakalotti) {
+        /*
+         * NAPAKANSI PYSYY PIILOSSA — MITATTU 19.9.2026, ÄLÄ PALAUTA
+         * ILMAN UUTTA MITTAUSTA.
+         *
+         * Erä 1 (docs/raportit/viesti-fable-astro-napa-20260919.md)
+         * ehdotti, että tämä rivi jaetaan ja kansi jätetään näkyviin
+         * kuten topografialinssissä (PAATOKSET 41 kohta 2, js/pallo.js
+         * `linssiinPaivitys`). Erä 2 KOKEILI sen ja mittasi
+         * (savuke-astro-pallo NAKYMAT=puhelin, kamera navan yllä
+         * korkeudella 3): kansi tulee näkyviin oikeassa sävyssä
+         * (MERIVARI, materiaali 5,19,72 lineaarisessa) ja navan kiekon
+         * sinisyys nousee 12,3 → 33,5 — mutta RUUDULLA se on TASAINEN
+         * KIRKKAANSININEN KIEKKO keskellä vaaleaa napaa, eli vika
+         * vaihtuu toiseen. Syy on linssien ero: topografialinssissä
+         * pinta on reliefipyramidi, joka loppuu 85°:een, ja 83,7°:n
+         * kansi tukkii juuri sen reiän; Astronautin kamerassa pinta on
+         * 4k-reliefikuva, jonka alfa loppuu jo 76°:ssa
+         * (RELIEFIN_HAIVYTYS), joten 83,7°:n kansi jää keskelle
+         * generoitua napajäätä eikä peitä siitä kuin sisimmän osan.
+         * Astronautin kameran napa on siis eri reikä kuin
+         * topografialinssin, ja sen korjaus on Fablen päätös (mitä
+         * 76°–90° näyttää), ei tämän rivin jako.
+         */
+        piiloon(o);
+      }
       if (ud.pallovektorit && o.material) suljeMateriaali(o.material);
     });
   };
@@ -2796,6 +2821,9 @@ export function avaaAvaruusnakyma(lauta, { ui = null, ikkuna = globalThis } = {}
       nimetNakyvissa: nimetPaalla,
       nimienKynnys: +(alt * NIMIEN_KYNNYS).toFixed(3),
       pyyhkaisyja: pinnat.kertoja(),
+      /* PAATOKSET 41 kohta 4: onko reliefilaastari päällä juuri nyt. */
+      laastarilla: pinnat.laastarilla(),
+      laastarikehyksia: pinnat.laastarikehyksia(),
       tekstuuri: Boolean(tekstuuri),
       reliefi: reliefiPaalla,
       reliefinTarkkuus: reliefinValinta.tunnus,
