@@ -9146,6 +9146,15 @@ export const RAAMATTU = {
           + 'kortti kirjoittaa esikirjoitetun vastauksen ja lahteen omaan kuplaansa '
           + '(lisanosto striimaa polloUlkoinenKysymys-reitilla kuplaan), paneelia ei avata; '
           + 'savuke-ihmisen-pulukysymykset lohko 7, 12/12. Julkaistaan v1964.',
+        'LAAJA NOSTOKORTTI SULKEUTUU LEIPATEKSTIN NAPAUTUKSESTA - KORJAUS (omistaja '
+          + '19.9.2026 klo 23.41 Suomen aikaa, Chartresin katedraalin iPad-kuva, '
+          + 'sanatarkasti: "Nosto sulkeutuu kun leipatekstin kohdalta klikkaa. Johtuu siita '
+          + 'etta peliin ei paivity etta lisaa sisaltoa on tuotu ruudulle. Korjaa"): '
+          + 'PAATOS: LISAA-tilassa napautus kortin sisalle (teksti, kuvat, kysymykset) ei '
+          + 'saa sulkea korttia; vain X ja napautus kortin ulkopuolelle sulkevat. Osuma '
+          + 'tunnistetaan DOM-sisaltavyydella (closest), ei tallennetulla suorakaiteella, '
+          + 'joka vanhenee kortin kasvaessa. Opus 1 -era kortti-sulku tilattu klo 23.43 '
+          + '(tauosta poikkeus omistajan korjaustilauksella), vartio 390 px ja iPad.',
         'JONOSSA TAUON JALKEEN (omistaja 19.9.2026 klo 23.31-23.35 Suomen aikaa; "ala '
           + 'aloita uusia toita viela"): A) MAALEHDEN RAJAVIIVA VIRHEELLINEN RANNIKOLLA '
           + '(sanatarkasti: "Taalla virheita rajaviivassa", Ranskan lehden iPad-kuva '
