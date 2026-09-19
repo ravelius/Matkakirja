@@ -19,6 +19,8 @@
  *   4. Lisänoston kortti (toba) → sen `kysymykset`-kentän kysymykset.
  *   5. Linssin sulku → kysely pois ui:sta (tavallinen tervehdys palaa).
  *   6. Ei sivuvirheitä.
+ *   7. Kortti esityksen aikana: kysymys vastaa kortissa, ✕ sulkee,
+ *      esitys jatkuu (Sonnet 1:n kierros 11, kuva 08).
  */
 import { createServer } from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -251,8 +253,61 @@ const p5 = await s.evaluate(async (PANEELI_T) => {
 }, PANEELI.toString());
 vaadi('linssin sulku purkaa kyselyn', !p5.kysely, JSON.stringify({ kysely: p5.kysely }));
 
-vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
+/*
+ * 7. KORTTI ESITYKSEN AIKANA (Fablen kiireellinen erä 19.9.2026 klo
+ * 19.57; Sonnet 1:n kierros 11, kuva 08): pulu on esityksen ajan
+ * piilossa, joten kortin kysymys vastaa kortin omaan kuplaan. Denisovan
+ * kortti avataan kesken esityksen, ensimmäinen kysymys NAPAUTETAAN
+ * (kosketus), ja vastaus lähteineen on kortissa ilman POST-pyyntöä.
+ * Sen jälkeen ✕ sulkee kortin ja esitys jatkuu.
+ */
 await konteksti.close();
+const sivu7 = await avaaSivu({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 2, hasTouch: true }, virheet);
+const s2 = sivu7.sivu;
+let posteja2 = 0;
+s2.on('request', (r) => { if (r.method() === 'POST') posteja2 += 1; });
+await avaaPeli(s2);
+await avaaLinssi(s2);
+await s2.evaluate(() => document.querySelector('.aikajana-avaus-nappi')?.click());
+await s2.waitForTimeout(4000);
+await s2.evaluate(() => window.matkakirja.ui.nostokortti.avaa('denisova'));
+await s2.waitForTimeout(800);
+const ennen7 = await s2.evaluate(() => ({
+  tauolla: window.matkakirja.ui.aikajana.esitys.tila().tauolla,
+  pulupiilossa: document.body.classList.contains('aikajana-pulu-piilossa'),
+  napit: [...document.querySelectorAll('.ihmisen-nostokysymys')].map((b) => b.textContent),
+}));
+const nappi7 = s2.locator('.ihmisen-nostokysymys').first();
+await nappi7.scrollIntoViewIfNeeded().catch(() => {});
+const postit7 = posteja2;
+await nappi7.tap({ timeout: 5000 });
+await s2.waitForTimeout(700);
+const vastaus7 = await s2.evaluate(() => {
+  const k = document.querySelector('.ihmisen-nostokortti-vastaus');
+  const r = k?.getBoundingClientRect();
+  return {
+    teksti: k?.querySelector('.ihmisen-nostokortti-vastausteksti')?.textContent ?? '',
+    lahteet: [...(k?.querySelectorAll('a') ?? [])].map((a) => a.href),
+    nakyy: Boolean(r && r.width > 0 && r.height > 0),
+    paneeliAuki: Boolean(window.matkakirjaPollo?.auki),
+  };
+});
+vaadi('kortin kysymys esityksen aikana: esikirjoitettu vastaus kortissa, ei mallikutsua, ei paneelia',
+  ennen7.tauolla && ennen7.pulupiilossa && ennen7.napit.length === 3
+    && vastaus7.nakyy && vastaus7.teksti.length > 40 && vastaus7.lahteet.length >= 1
+    && !vastaus7.paneeliAuki && posteja2 === postit7,
+  JSON.stringify({ ennen7, vastaus7, posteja: posteja2 - postit7 }));
+await s2.locator('.ihmisen-nostokortti-sulje').tap({ timeout: 5000 });
+await s2.waitForTimeout(800);
+const jalkeen7 = await s2.evaluate(() => ({
+  kortti: window.matkakirja.ui.nostokortti.tila().auki,
+  kaynnissa: window.matkakirja.ui.aikajana.esitys.tila().kaynnissa,
+}));
+vaadi('kortin ✕ sulkee ja esitys jatkuu kysymyksen jälkeen', jalkeen7.kortti === null && jalkeen7.kaynnissa,
+  JSON.stringify(jalkeen7));
+await sivu7.konteksti.close();
+
+vaadi('ei sivuvirheitä', virheet.length === 0, virheet.slice(0, 3).join(' | '));
 await selain.close();
 palvelin.close();
 const hylatyt = tulokset.filter((t) => !t.ok).length;

@@ -47,7 +47,8 @@
 
 import * as data from './ihmisen-matka-data.js';
 import { IHMISEN_MATKA_VIRRAT } from './ihmisen-matka-virrat.js';
-import { polloKysy } from '../pollo.js';
+import { polloUlkoinenKysymys } from '../pollo.js';
+import { haeIhmisenMatkanKysymykset, haeIhmisenMatkanVastaus } from './ihmisen-matka-kysymykset.js';
 import { kuvatekstiLyhyt } from '../kuvatekstit.js';
 import { kortinKuvalahde } from '../tekijakortti.js';
 
@@ -443,7 +444,15 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
       kortti.appendChild(lue);
     }
 
-    const kysymykset = (nosto.kysymykset ?? []).filter(Boolean).slice(0, 3);
+    /*
+     * PÄÄJAKSON KORTILLA ESIKIRJOITETUT KYSYMYKSET (Fablen kiireellinen
+     * erä 19.9.2026 klo 19.57; Sonnet 1:n kierros 11, kuva 08): jos
+     * jaksolle on valmiit kysymykset vastauksineen
+     * (js/linssit/ihmisen-matka-kysymykset.js), kortti näyttää ne.
+     * Lisänostolla ja ilman valmiita kortti käyttää noston omia.
+     */
+    const valmiit = nosto.laji === 'loytopaikka' ? haeIhmisenMatkanKysymykset(nosto.tunnus) : [];
+    const kysymykset = (valmiit.length ? valmiit : (nosto.kysymykset ?? [])).filter(Boolean).slice(0, 3);
     if (kysymykset.length) {
       const ryhma = solmu('div', 'ihmisen-nostokortti-kysymykset');
       ryhma.appendChild(solmu('div', 'ihmisen-nostokortti-kysyotsikko', 'Kysy pululta'));
@@ -484,13 +493,80 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
     return true;
   }
 
-  /** Valmis kysymys chattiin. Epäonnistuminen näkyy napissa, ei konsolissa. */
-  function kysyPululta(nosto, kysymys, nappi) {
+  /*
+   * VASTAUS KORTTIIN, EI PULUN PANEELIIN (Fablen kiireellinen erä
+   * 19.9.2026 klo 19.57). Sonnet 1:n laitetesti v1962 (kierros 11,
+   * kuva 08): kortti oli auki aikaselaimen tauolla, jolloin pulu on
+   * esityksen ajan piilossa (`aikajana-pulu-piilossa`). `polloKysy`
+   * avasi silti pelin pulupaneelin ja kirjoitti vastauksen sinne, joten
+   * napautus vain himmensi napin eikä vastausta näkynyt missään
+   * (mitattu WebKit 390 px: paneeli `visibility: hidden`, viesti
+   * virrassa). Nyt vastaus kirjoitetaan kortin omaan kuplaan kysymysten
+   * alle, eikä pelin paneelia avata lainkaan:
+   *   • esikirjoitettu vastaus lähteineen, jos jaksolle on sellainen
+   *     (ei mallikutsua),
+   *   • muuten sama mallireitti kuin Astronautin kameran minipulun
+   *     chatissa (polloUlkoinenKysymys, striimi palasina).
+   * Kortin ✕ ja Jatka eivät riipu kysymyksestä: kupla on kortin lapsi,
+   * ja keskeneräinen striimi kirjoittaa vain, jos kupla on yhä DOMissa.
+   */
+  let kysymysKesken = false;
+  function vastauskupla() {
+    let kupla = kortti.querySelector('.ihmisen-nostokortti-vastaus');
+    if (!kupla) {
+      kupla = solmu('div', 'ihmisen-nostokortti-vastaus');
+      kupla.setAttribute('role', 'status');
+      kupla.setAttribute('aria-live', 'polite');
+      kortti.querySelector('.ihmisen-nostokortti-kysymykset')?.after(kupla);
+    }
+    return kupla;
+  }
+  async function kysyPululta(nosto, kysymys, nappi) {
+    if (kysymysKesken || nappi.disabled) return;
     ui.fokuskohdeAuki = { kohde: nostonKonteksti(nosto), popup: kortti, linssinosto: true };
-    const lahti = polloKysy(kysymys);
-    nappi.classList.add(lahti ? 'lahetetty' : 'ei-lahtenyt');
-    nappi.disabled = lahti;
-    tila.kysymyksia += lahti ? 1 : 0;
+    nappi.classList.add('lahetetty');
+    nappi.disabled = true;
+    tila.kysymyksia += 1;
+    const kupla = vastauskupla();
+    const valmis = haeIhmisenMatkanVastaus(nosto.tunnus, kysymys);
+    if (valmis?.vastaus) {
+      kupla.replaceChildren(solmu('p', 'ihmisen-nostokortti-vastausteksti', valmis.vastaus));
+      const lahteet = (valmis.lahteet ?? []).filter((l) => /^https:\/\//.test(String(l?.url ?? '')));
+      if (lahteet.length) {
+        const rivi = solmu('p', 'ihmisen-nostokortti-vastauslahde', 'Lähde: ');
+        lahteet.forEach((l, i) => {
+          if (i) rivi.appendChild(document.createTextNode(', '));
+          const a = solmu('a', '', l.title || l.url);
+          a.href = l.url;
+          a.target = '_blank';
+          a.rel = 'noopener noreferrer';
+          rivi.appendChild(a);
+        });
+        kupla.appendChild(rivi);
+      }
+      return;
+    }
+    kysymysKesken = true;
+    const teksti = solmu('p', 'ihmisen-nostokortti-vastausteksti odottaa', '…');
+    kupla.replaceChildren(teksti);
+    try {
+      const vastaus = await polloUlkoinenKysymys(kysymys, {
+        onPala: (kertynyt) => { if (teksti.isConnected) { teksti.classList.remove('odottaa'); teksti.textContent = kertynyt; } },
+      });
+      if (teksti.isConnected) { teksti.classList.remove('odottaa'); teksti.textContent = vastaus; }
+    } catch (virhe) {
+      if (teksti.isConnected) {
+        teksti.classList.remove('odottaa');
+        teksti.textContent = virhe?.message === 'kesken'
+          ? 'Pulu vastaa vielä edelliseen. Hetki vain.'
+          : 'Pulu ei saanut kysymyksestä kiinni. Yritä hetken päästä uudelleen.';
+      }
+      nappi.classList.remove('lahetetty');
+      nappi.classList.add('ei-lahtenyt');
+      nappi.disabled = false;
+    } finally {
+      kysymysKesken = false;
+    }
   }
 
   return {

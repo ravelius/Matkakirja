@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1964, teksti: 'Ruotsi, Irlanti, Suomi, Kroatia; kortin kysymys; visa-lukko' },
   { v: 1963, teksti: 'Tanska, Unkari; kuvalähteet suurennokseen; pystykuva; nimiöt' },
   { v: 1962, teksti: 'Belgia, Puola, Tšekki; visa kortille; pulu; zoom; karsinta' },
   { v: 1961, teksti: 'Astronautin kameran laattavirhe: merilaastari ja orpo laatta' },
