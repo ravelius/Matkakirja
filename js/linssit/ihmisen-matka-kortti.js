@@ -50,6 +50,7 @@ import { IHMISEN_MATKA_VIRRAT } from './ihmisen-matka-virrat.js';
 import { polloUlkoinenKysymys } from '../pollo.js';
 import { haeIhmisenMatkanKysymykset, haeIhmisenMatkanVastaus } from './ihmisen-matka-kysymykset.js';
 import { kuvatekstiLyhyt } from '../kuvatekstit.js';
+import { polloNimilappu } from '../ui-apurit.js';
 import { kortinKuvalahde } from '../tekijakortti.js';
 
 /*
@@ -455,7 +456,11 @@ export function luoNostokortti({ ajo, ui, linssi = null, koti = null }) {
     const kysymykset = (valmiit.length ? valmiit : (nosto.kysymykset ?? [])).filter(Boolean).slice(0, 3);
     if (kysymykset.length) {
       const ryhma = solmu('div', 'ihmisen-nostokortti-kysymykset');
-      ryhma.appendChild(solmu('div', 'ihmisen-nostokortti-kysyotsikko', 'Kysy pululta'));
+      // Sama nimilappuvitsi arvonimineen kuin kartan korteissa
+      // (js/ui-apurit.js polloNimilappu, VIISAAN POLLON ARVONIMET).
+      ryhma.appendChild(polloNimilappu(solmu('div', 'ihmisen-nostokortti-kysyotsikko'), {
+        ennen: 'Kysy ', yli: 'viisaalta pöllöltä', tilalle: 'pululta', jalkeen: '', arvonimi: true,
+      }));
       for (const kysymys of kysymykset) {
         const nappi = solmu('button', 'ihmisen-nostokysymys', kysymys);
         nappi.type = 'button';

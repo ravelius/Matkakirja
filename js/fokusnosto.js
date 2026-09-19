@@ -1730,6 +1730,8 @@ function piirraNostonKysymykset(ui, sisalto, nosto) {
   // koko nimi yhden vedon alla.
   sisalto.appendChild(polloNimilappu(html('p', 'fokusnosto-kysy-otsikko'), {
     ennen: 'Kysy ', yli: 'viisaalta pöllöltä', tilalle: 'pululta', jalkeen: ':',
+    // Arvonimi vaihtuu joka avauksella (Raamattu VIISAAN POLLON ARVONIMET).
+    arvonimi: true,
   }));
   const rivi = html('div', 'fokusnosto-kysymykset');
   rivi.setAttribute('role', 'group');
