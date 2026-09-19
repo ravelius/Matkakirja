@@ -9449,7 +9449,15 @@ export const RAAMATTU = {
           + 'arvonimet.js puuttui SHELLista ja hahmotelma-mlt.js:n ohjekommentin import-'
           + 'teksti luettiin riippuvuutena -> 2 punaista testia ja build kaatui; korjattu '
           + 'ennen CI:n paatosta (opus2-arvonimet mergetty, kommentti muutettu). OPPI: '
-          + 'versiokomento pysahtyy jos # fail > 0 (ei ketjuteta commit/push perakkain).',
+          + 'versiokomento pysahtyy jos # fail > 0 (ei ketjuteta commit/push perakkain). '
+          + 'LJUBLJANA ERA 1 (Sonnet 3 658fcf75, Fable 20.9.2026 klo 00.30): lautapiste, '
+          + 'reitit, kysymykset, artikkeli, kuvat, kevyt fokusvirta, radio, aarrepari; '
+          + 'rakka 49 -> 50 (Ljubljansko barje jaa nostoksi, Tervuren-kaava), Venetsian '
+          + 'nimio siirretty; Fable kirjoitti isoisan matkakirjan tekstin (414 merkkia: '
+          + 'Laibach kahdella korvalla, linna vankilana, Ljubljanica, Wienista junalla '
+          + 'paivassa). Haara v1970-prep. V1969 CI (Fable 00.32): siirtozoomi korjattu '
+          + '(Opus 2, 17075520: odotusarvo laskee hyppyjen tauot), astro-sumu ja astro-'
+          + 'valokuva ipad Opus 1:lla. SEURAAVA: Kosice era 1 (Sonnet 3, haara sonnet3-kosice).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
