@@ -9070,8 +9070,12 @@ export const RAAMATTU = {
           + 'Epaily: KOHDE_MAAT-rivin kohdeolio -> nostokortti -kuvaus pudottaa `visa`-'
           + 'kentan (fokusnosto.js kuljettaa lapi vain nimetyt kentat, vrt. `lahi`). '
           + 'Fablen virhe: PAATOKSET 51 kohta 4 oletti kortin piirtavan visan ilman '
-          + 'koodimuutosta - ei mitattu. Korjaus Opus 1:n nostokorttieraan + Playwright-'
-          + 'vartija (hahmotelma-texel: .fokusnosto-visa DOMissa, oikea vastaus +25).',
+          + 'koodimuutosta - ei mitattu. JUURISYY (Opus 1 klo 18.58, mitattu): kentta ei '
+          + 'pudonnut - hahmotelmanostot ovat KOHDE_MAAT-kohdeolioita ja avautuvat '
+          + 'KOHDEKORTILLA (fokuskohteet.js piirraKohteenSisus), jolle visaa ei ollut '
+          + 'koskaan kytketty. Korjaus: asetaKohdeVisa-rekisterointi ja kohdekortti '
+          + 'piirtaa saman laatikon (+25, kerran maksava avain); savuke-nostovisa ajo D '
+          + '(hahmotelma-texel 390 px) 14/14, vastakoe mainilla 11/14. Julkaistaan v1962.',
         'IHMISEN MATKA: LISANOSTOILLE AITO COMMONS-KUVA NYT, HAVAINNEKUVA MYOHEMMIN '
           + '(omistaja 19.9.2026 klo 18.14 Suomen aikaa, Clovis-lisanoston kuva tyhjalla '
           + 'kuvapaikalla, sanatarkasti: "Pitaisiko tassa olla oikea kuva vai havainne '
@@ -9255,8 +9259,11 @@ export const RAAMATTU = {
           + '(maa pieni ja tiheä, ei nykyisia nostoja eika pelikaupunkia; Tervurenin '
           + 'Kongo-nayttely 1897 kerrotaan artikkelin mukaan asiallisesti, Menin Gate '
           + 'ja Bastogne muistopaikkoina, kuvissa ei hautoja eika verta), HEAD 200 '
-          + '57/57, julkaistaan v1962. Seuraava maa: Puola (ei toisen maailmansodan '
-          + 'leireja tahan luetteloon).',
+          + '57/57, julkaistaan v1962. PUOLA (Fable klo 18.58): POL 27 / 64 / 10 visaa '
+          + '(Bialowieza renkaan ulkopuolella 2,7; nappi-alaotsikoissa jakajavalta 1873; '
+          + 'ei leireja; Pszczynan visentit pois lahdesaannolla), HEAD 200 64/64, '
+          + 'julkaistaan v1962. Rinnakkain Sonnet 3: Tanska (lista hyvaksytty 18.55). '
+          + 'Seuraava maa Sonnet 2:lle: Tsekki.',
         'KARTTAUUDISTUKSEN PAATOKSET 47: NOPAN JALKEEN KAMERA JAI TYHJAAN KOHTAAN - '
           + 'KOHDEMAAN ZOOMIKATTO KUMOSI ULOSSOVITUKSEN (Sonnet-simulaattoritesti kierros 5, '
           + '19.9.2026 klo 14.05-14.19 Suomen aikaa: Pariisi -> liftaus -> Amsterdam -> Liiku '
