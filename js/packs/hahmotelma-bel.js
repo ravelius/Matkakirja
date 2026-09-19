@@ -102,6 +102,17 @@ export const HAHMOTELMA_BEL = [
       + 'katselupisteen 700 metriin. Kevään pesimäaikana osa suojelualueesta on suljettu '
       + 'uhanalaisen teeren vuoksi, ja kesällä metsäalueilla on tulipalovaara.',
     lahde: 'en-Wikipedia "High Fens", johdanto-osa ja osiot "Geography" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Miksi osa Hautes Fagnesin suojelualueesta on suljettu kävijöiltä keväisin?',
+      vaihtoehdot: [
+        'Tulvavaaran vuoksi sulamisvesien aikaan',
+        'Rahkan keräämisen vuoksi',
+        'Uhanalaisen teeren pesimisen vuoksi',
+        'Metsäpalovaaran vuoksi',
+      ],
+      oikea: 2,
+      fakta: 'Euroopan neuvosto myönsi Hautes Fagnesille suojelun ansiodiplomin vuonna 1966.',
+    },
   },
   {
     id: 'hahmotelma-semois',

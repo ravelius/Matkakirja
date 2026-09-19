@@ -4,7 +4,7 @@
 haara `sonnet-nostot-bel` (pohja origin/main 5e02e295, v1959). Versiota ei nostettu,
 PR:ää ei avattu, ämpäriin ei viety, Raamattuun ei koskettu.
 
-**Tulos: 26 nostoa (Fablen hyväksymä lista, ei korvauksia), 57 Commons-kuvaa, 8 rahavisaa.**
+**Tulos: 26 nostoa (Fablen hyväksymä lista, ei korvauksia), 57 Commons-kuvaa, 9 rahavisaa.**
 Uusi tiedosto `js/packs/hahmotelma-bel.js` (`HAHMOTELMA_BEL`, rakenne täsmälleen kuin hahmotelma-fra.js ja muut EU-pakat).
 Rekisteröinti: `js/fokuskohteet.js` (import + `KOHDE_MAAT.BEL`), `sw.js` SHELL, `tools/build-standalone.mjs`. HUOM: haara on v1959:n päällä ilman
 NLD-rivejä (ne tulevat v1960:ssä), joten rekisteröintirivit tulevat hahmotelma-fra-rivien jälkeen samoihin kohtiin kuin NLD:n — merge tuottaa
@@ -49,12 +49,13 @@ koordinaatit ovat Wikipedian todelliset. Kaikki 26 osuvat Belgian fokuslehteen.
 
 Kuvia yhteensä 57; lisenssijakauma: CC BY-SA 4.0 27, CC BY-SA 3.0 8, CC BY 3.0 7, CC0 4, CC BY 4.0 4, CC BY-SA 2.0 2, CC BY 2.0 2, Public domain 2, CC BY 2.5 1.
 
-## Rahavisat (8 noston kenttä `visa`, muoto kuten NLD:ssä ja fokusvirta-*.js:ssä)
+## Rahavisat (9 noston kenttä `visa`, muoto kuten NLD:ssä ja fokusvirta-*.js:ssä)
 
-Neljä vaihtoehtoa, oikea-indeksit 0,3,1,3,0,2,1,2 (tasainen), vastaus noston omasta tekstistä; `fakta` on saman artikkelin muu tieto. Tyypit: meri, historia ×2, ruoka, kulttuuri ×2, tekniikka, kauppa.
+Neljä vaihtoehtoa, oikea-indeksit 2,0,3,1,3,0,2,1,2 (tasainen), vastaus noston omasta tekstistä; `fakta` on saman artikkelin muu tieto. Tyypit: vuori, meri, historia ×2, ruoka, kulttuuri ×2, tekniikka, kauppa.
 
 | nosto | tyyppi | kysymys | oikea |
 | --- | --- | --- | --- |
+| high-fens | vuori | Miksi osa Hautes Fagnesin suojelualueesta on suljettu kävijöiltä keväisin? | Uhanalaisen teeren pesimisen vuoksi (2) |
 | zwin | meri | Mikä loi Zwin-salmen vuonna 1134? | Myrsky, joka puhkaisi Flanderin rannikon (0) |
 | lions-mound | historia | Minkä tapahtuman muistoksi Leijonakumpu rakennettiin juuri tähän kohtaan? | Vilhelm Oranialaisen haavoittumisen Waterloon taistelussa (3) |
 | kortrijk | historia | Mistä Kultaisten kannusten taistelu on saanut nimensä? | Noin 500 saaliiksi saadusta kannusparista (1) |
@@ -81,7 +82,7 @@ Neljä vaihtoehtoa, oikea-indeksit 0,3,1,3,0,2,1,2 (tasainen), vastaus noston om
 | Karttarivi pelin omalla passilla (`nostojenKarttapaikat`) | 26/26 pääkartalla, `kaupunginKohdalla` = null kaikilla (Belgiassa ei pelikaupunkia) |
 | Nostojen etäisyys toisistaan (pääkartta, lautayks.) | pienin High Fens – Spa 7,5, Lion's Mound – Tervuren 7,7, Zwin – Bruggen Belfry 8,1; raja 7 |
 | Päällekkäisyys nykyisten BEL-nostojen kanssa | ei nykyisiä BEL-nostoja |
-| Visat: 4 vaihtoehtoa, oikea-indeksi kelvollinen, ei kaksoisvaihtoehtoja, ei selvästi pisin oikea | 8/8 |
+| Visat: 4 vaihtoehtoa, oikea-indeksi kelvollinen, ei kaksoisvaihtoehtoja, ei selvästi pisin oikea | 9/9 |
 | `node --test tests/*.test.mjs` | # tests 3667, # pass 3654, # fail 0, # skipped 13 (myös `tests/nimiolimitys.test.mjs`: ei nimiö–nimiö-limityksiä) |
 | `node tools/tarkista-kaksoisavaimet.mjs` | ei kaksoisavaimia |
 
