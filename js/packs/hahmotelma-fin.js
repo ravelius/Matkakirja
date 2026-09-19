@@ -164,8 +164,8 @@ export const HAHMOTELMA_FIN = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-merenkurkku-548b562d.jpg',
         lyhyt: 'Uusi kivinen saari Merenkurkussa, jonka maankohoaminen on nostanut esiin.',
         selite: 'Kuvassa on Merenkurkun vastasyntynyt saari, joka on syntynyt jääkauden '
-          + 'jälkeisen maankohoamisen tuloksena. Kuvaajan mukaan taustalla näkyvä vihreä '
-          + 'kuuluu toiseen saareen muutaman kilometrin päässä.',
+          + 'jälkeisen maankohoamisen tuloksena. Taustalla näkyvä vihreä kuuluu toiseen '
+          + 'saareen muutaman kilometrin päässä.',
         lahde: 'Valokuva: Erik Wannee, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Erik Wannee',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ny_%C3%B6_i_Kvarken.jpg',
@@ -1204,8 +1204,8 @@ export const HAHMOTELMA_FIN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-kuhmo-80a2e340.jpg',
         lyhyt: 'Gallen-Kallelan maalaus Marie Gallénista Kuhmoniemen sillalla.',
-        selite: 'Maalauksen nimen mukaan kuvassa on Marie Gallén Kuhmoniemen sillalla '
-          + 'auringonlaskun aikaan. Kuhmoniemi oli Kuhmon nimi vuoteen 1937.',
+        selite: 'Kuvassa on Marie Gallén Kuhmoniemen sillalla auringonlaskun aikaan. '
+          + 'Kuhmoniemi oli Kuhmon nimi vuoteen 1937.',
         lahde: 'Valokuva: Akseli Gallen-Kallela, Wikimedia Commons (Public domain).',
         tekija: 'Akseli Gallen-Kallela',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gall%C3%A9n-Kallela_-_Marie_Gall%C3%A9n_auf_der_Kuhmoniemi-Br%C3%BCcke_-_1890.jpeg',
@@ -1653,8 +1653,8 @@ export const HAHMOTELMA_FIN = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/fin-nosto-fiskars-1ed75376.jpg',
         lyhyt: 'Fiskarsin kylämaisema: tyyni vesi, vanhat puut ja rakennus rannalla.',
-        selite: 'Kuvaaja kertoo kuvan esittävän Fiskarsin kylän maisemaa. Kylä on kasvanut '
-          + 'vuonna 1649 perustetun ruukin ympärille.',
+        selite: 'Kuva esittää Fiskarsin kylän maisemaa. Kylä on kasvanut vuonna 1649 '
+          + 'perustetun ruukin ympärille.',
         lahde: 'Valokuva: Pöllö, Wikimedia Commons (CC BY 3.0).',
         tekija: 'Pöllö',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Scenary_of_the_Fiskars.jpg',
