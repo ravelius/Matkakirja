@@ -71,7 +71,10 @@ jobs:
           LAHDEREPO: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
           OMAREPO: ${{ github.repository }}
         run: |
-          REITTI=mac   # KYTKIN: ubuntu | mac  (ks. tiedoston alku; Mac 18.9.2026 klo 15.05, runner SamiMacStudio2-testit online)
+          # Takaisin ubuntulle 19.9.2026 (omistaja klo 15.30 Suomen aikaa): Macin
+          # Testit-runner jakoi koneen Savukkeiden ja agenttien selainten kanssa
+          # (kuormakeskiarvo 96), ja seinäkellorajat kaatuivat kuormassa.
+          REITTI=ubuntu   # KYTKIN: ubuntu | mac  (ks. tiedoston alku)
           if [ "$REITTI" = "mac" ] && [ "$LAHDEREPO" = "$OMAREPO" ]; then
             echo 'ajaja=["self-hosted","macOS","ARM64","testit"]' >> "$GITHUB_OUTPUT"
             echo 'nimi=Mac Studio (self-hosted, label testit)' >> "$GITHUB_OUTPUT"

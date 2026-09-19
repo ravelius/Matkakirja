@@ -13,7 +13,7 @@
 // edelleen AINOA TOTUUS (env, kuvakansio, tunnetut punaiset).
 //
 // Ympäristömuuttujat:
-//   SAVUKE_RINNAKKAIN  montako savuketta yhtä aikaa (oletus 6)
+//   SAVUKE_RINNAKKAIN  montako savuketta yhtä aikaa (oletus 4, ks. alla)
 //   SAVUKE_AIKAKATTO_MS  per savuke, oletus 600000 (10 min)
 //   CHROMIUM, PLAYWRIGHT_JS  periytyvät lapsille sellaisenaan
 //   SAVUKE_CHROMIUM_LIPUT  (rivikohtainen, sarjat.jsonin env-lohko)
@@ -51,7 +51,10 @@ const JUURI = join(TASSA, '..', '..');
 
 const sarja = process.argv[2] || 'julkaisu';
 const tuloskansio = process.argv[3] || join('/tmp', 'matkakirja-savukkeet', 'paikallinen');
-const rinnakkain = Math.max(1, Number(process.env.SAVUKE_RINNAKKAIN ?? 6));
+// Oletus 4 (omistaja 19.9.2026 klo 15.30 Suomen aikaa): kuormakeskiarvo oli
+// 96, kun Macilla ajoi rinnakkain kuusi sarjan Chromiumia ja agenttien omat
+// selaimet; kuormassa kellovartiot häilyivät. Sama arvo savukkeet.yml:ssä.
+const rinnakkain = Math.max(1, Number(process.env.SAVUKE_RINNAKKAIN ?? 4));
 const aikakattoMs = Number(process.env.SAVUKE_AIKAKATTO_MS ?? 10 * 60 * 1000);
 
 let matriisi;
