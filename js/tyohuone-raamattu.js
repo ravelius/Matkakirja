@@ -9146,6 +9146,18 @@ export const RAAMATTU = {
           + 'kortti kirjoittaa esikirjoitetun vastauksen ja lahteen omaan kuplaansa '
           + '(lisanosto striimaa polloUlkoinenKysymys-reitilla kuplaan), paneelia ei avata; '
           + 'savuke-ihmisen-pulukysymykset lohko 7, 12/12. Julkaistaan v1964.',
+        'SAAPUMINEN UUTEEN KAUPUNKIIN: KARTTA BLURRINA JO ESITTELYKUVIEN TAUSTALLA '
+          + '(omistaja 19.9.2026 klo 23.22 Suomen aikaa, sanatarkasti: "Kun tullaan uuteen '
+          + 'kaupunkiin niin esittely kuvien taustalla saisi olla jo kartta blurrina yms '
+          + 'jotta ei tule hyppaysta kun isoisan kuvat ja puhe alkaa. Saatko kiinni?"): '
+          + 'PAATOS: saapumisen esittely (isoisan luentakuvat ja puhe, kaupunkiesittely) '
+          + 'piirretaan alusta asti kaupungin kartan paalle - kartta on jo taustalla '
+          + 'sumennettuna (blur) ja hieman tummennettuna, ja kun esittely paattyy, sumennus '
+          + 'haipyy pois eika ruutu hyppaa (ei taustanvaihtoa, ei uudelleenasettelua). '
+          + 'Sama koskee pallolautaa ja tasokarttaa. Mitataan: esittelyn ensimmainen kehys '
+          + 'ja kartan ensimmainen kehys esittelyn jalkeen - kameran paikka ja laudan '
+          + 'asettelu identtiset, vain blur-arvo muuttuu. Tila: Opus-era saapumisblur '
+          + 'tilataan tauon jalkeen (astro-pulu-eran perassa).',
         'KARTTAUUDISTUKSEN PAATOKSET 53: ASTRONAUTIN KAMERAN PULU JA AVAUKSEN RAUHA '
           + '(omistaja 19.9.2026 klo 23.05 Suomen aikaa, Carnegiejarven laitekuva v1967, '
           + 'sanatarkasti: "Voisiko pululla olla jokin astronautin asu tai asuste tassa? Tai '
