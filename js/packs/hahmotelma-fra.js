@@ -234,6 +234,18 @@ export const HAHMOTELMA_FRA = [
       + 'korkeimpana vuorena. Vuori on Pohjois-Kataloniassa ja näkyy Etelä-Kataloniaan asti, '
       + 'ja katalaaneille sillä on historiallinen vertauskuvallinen merkitys.',
     lahde: 'en-Wikipedia "Canigó", johdanto-osa (tarkistettu 18.9.2026).',
+    visa: {
+      kysymys: 'Miksi Canigoua pidettiin 1700-luvulle asti Pyreneiden korkeimpana vuorena?',
+      vaihtoehdot: [
+        'Huippu oli aina lumen peitossa läpi vuoden',
+        'Jyrkät rinteet ja sijainti lähellä merta',
+        'Siellä sijaitsi Pyreneiden vanhin observatorio',
+        'Se oli pyhiinvaeltajien tärkein maamerkki',
+      ],
+      oikea: 1,
+      fakta: 'Joka vuosi 23. kesäkuuta, Johanneksen yön aattona, Canigoun huipulle kannetaan '
+        + 'Perpignanista palava soihtu ja koko seudulla sytytetään kokkoja.',
+    },
   },
   {
     id: 'hahmotelma-verdon',
@@ -279,6 +291,18 @@ export const HAHMOTELMA_FRA = [
       + 'kalkkikivimassiiviin 700 metrin syvyisen uran, ja kanjonin päässä se laskee '
       + 'tekojärveen Lac de Sainte-Croixiin.',
     lahde: 'en-Wikipedia "Verdon Gorge", johdanto-osa (tarkistettu 18.9.2026).',
+    visa: {
+      kysymys: 'Mistä Verdon-joki on saanut nimensä?',
+      vaihtoehdot: [
+        'Rotkon vaaleasta kalkkikivestä',
+        'Rantojen tummista mäntymetsistä',
+        'Läheisen Verdunin kaupungin nimestä',
+        'Veden turkoosinvihreästä väristä',
+      ],
+      oikea: 3,
+      fakta: 'Vanha Les Salles-sur-Verdonin kylä purettiin vuonna 1973, jotta joen laaksoon '
+        + 'voitiin rakentaa Sainte-Croix\'n tekojärvi.',
+    },
   },
   {
     id: 'hahmotelma-chenonceau',
@@ -325,6 +349,18 @@ export const HAHMOTELMA_FRA = [
       + 'renessanssiarkkitehti Philibert de l\'Ormen piirustusten mukaan ja sillan päällä '
       + 'oleva galleria vuosina 1570–1576 Jean Bullantin suunnitelmista.',
     lahde: 'en-Wikipedia "Château de Chenonceau", johdanto-osa (tarkistettu 18.9.2026).',
+    visa: {
+      kysymys: 'Minkä vanhan rakennuksen perustuksille nykyinen Chenonceaun linna rakennettiin?',
+      vaihtoehdot: [
+        'Vanhan myllyn',
+        'Vanhan luostarin',
+        'Vanhan tullitalon',
+        'Vanhan kirkon',
+      ],
+      oikea: 0,
+      fakta: 'Chenonceaussa nähtiin vuonna 1560 Ranskan ensimmäinen ilotulitus, kun juhlittiin '
+        + 'Frans II:n valtaistuimelle nousua.',
+    },
   },
   {
     id: 'hahmotelma-saint-malo',
@@ -372,6 +408,20 @@ export const HAHMOTELMA_FRA = [
       + 'lähivesien kiristyksestä että merentakaisista retkistä.',
     lahde: 'en-Wikipedia "Saint-Malo" ja fi-Wikipedia "Saint-Malo", johdanto-osat '
       + '(tarkistettu 18.9.2026).',
+    visa: {
+      kysymys: 'Miten Saint-Malon muurien ympäröimä vanhakaupunki oli alun perin yhteydessä '
+        + 'mantereeseen?',
+      vaihtoehdot: [
+        'Vain puisella nostosillalla',
+        'Vain kivisellä kaarisillalla',
+        'Vain kapealla hiekkakannaksella',
+        'Vain säännöllisellä lauttayhteydellä',
+      ],
+      oikea: 2,
+      fakta: 'Vuosina 1590–1594 Saint-Malo julistautui itsenäiseksi tasavallaksi, ja sen '
+        + 'asukkaiden ylpeä ohjenuora kuului: ei ranskalainen eikä bretagnelainen vaan '
+        + 'malouinilainen.',
+    },
   },
   {
     id: 'hahmotelma-pointe-du-raz',
@@ -419,6 +469,18 @@ export const HAHMOTELMA_FRA = [
       + 'Pointe de Corsen.',
     lahde: 'en-Wikipedia "Pointe du Raz" ja fr-Wikipedia "Pointe du Raz", johdanto-osat '
       + '(tarkistettu 18.9.2026).',
+    visa: {
+      kysymys: 'Mitä sana raz tarkoittaa Pointe du Raz\'n nimessä?',
+      vaihtoehdot: [
+        'Jyrkkää kalliota',
+        'Myrskyistä tuulta',
+        'Vaarallista karikkoa',
+        'Voimakasta vesivirtaa',
+      ],
+      oikea: 3,
+      fakta: 'Pointe du Raz on Euroopan 3 200 kilometrin pituisen E5-vaellusreitin läntinen '
+        + 'päätepiste, ja reitti päättyy Venetsiaan.',
+    },
   },
   {
     id: 'hahmotelma-etretat',
@@ -1049,6 +1111,18 @@ export const HAHMOTELMA_FRA = [
       + 'kaikki eri tyyliä. Vuosina 1876–1880 kirkko oli maailman korkein rakennus. Claude '
       + 'Monet maalasi sen julkisivusta kokonaisen sarjan impressionistisia töitä.',
     lahde: 'en-Wikipedia "Rouen Cathedral", johdanto-osa (tarkistettu 18.9.2026).',
+    visa: {
+      kysymys: 'Miksi Rouenin tuomiokirkon kolme tornia ovat kaikki eri tyyliä?',
+      vaihtoehdot: [
+        'Kolme kilpailevaa rakennusmestaria sai kukin oman tornin',
+        'Kirkkoa rakennettiin ja uusittiin yli 800 vuoden ajan',
+        'Kunkin tornin rahoitti eri hiippakunta omalla tyylillään',
+        'Tornit rakennettiin eri kuninkaiden muistomerkeiksi',
+      ],
+      oikea: 1,
+      fakta: 'Normandian ensimmäinen herttua, viikinkipäällikkö Rollo, kastettiin tuomiokirkon '
+        + 'edeltäjässä vuonna 915 ja haudattiin sinne vuonna 933.',
+    },
   },
   {
     id: 'hahmotelma-rocamadour',
@@ -1093,6 +1167,19 @@ export const HAHMOTELMA_FRA = [
       + 'polvillaan. Kylän mukaan on nimetty myös Rocamadour, pieni vuohenmaitojuusto, joka sai '
       + 'AOC-suojauksen vuonna 1996.',
     lahde: 'en- ja fr-Wikipedia "Rocamadour", johdanto-osa (tarkistettu 18.9.2026).',
+    visa: {
+      kysymys: 'Miten pyhiinvaeltajat perinteisesti nousivat Rocamadourin monumentaalista portaikkoa '
+        + 'pyhäköille?',
+      vaihtoehdot: [
+        'Nousemalla ne polvillaan',
+        'Nousemalla ne paljain jaloin',
+        'Nousemalla ne selkä edellä',
+        'Nousemalla ne kivi kantamuksenaan',
+      ],
+      oikea: 0,
+      fakta: 'Rocamadourin pyhiinvaeltajien joukossa on ollut muun muassa Englannin kuningas '
+        + 'Henrik II ja Ranskan kuningas Ludvig IX.',
+    },
   },
   {
     id: 'hahmotelma-saint-emilion',
@@ -1137,6 +1224,18 @@ export const HAHMOTELMA_FRA = [
       + 'Kaupunki ympäröivine viinitarhoineen otettiin Unescon maailmanperintöluetteloon vuonna '
       + '1999 pitkän ja yhä elävän viininviljelyhistoriansa vuoksi.',
     lahde: 'en- ja fr-Wikipedia "Saint-Émilion", johdanto-osa (tarkistettu 18.9.2026).',
+    visa: {
+      kysymys: 'Miksi Saint-Émilion ympäristöineen otettiin Unescon maailmanperintöluetteloon?',
+      vaihtoehdot: [
+        'Roomalaisten kylpylöiden ja vesijohtojen vuoksi',
+        'Renessanssiaikaisten linnojensa ja puutarhojensa vuoksi',
+        'Pitkän ja yhä elävän viininviljelyhistoriansa vuoksi',
+        'Kaupunkimuurin ja linnan täydellisen säilymisen vuoksi',
+      ],
+      oikea: 2,
+      fakta: 'Saint-Émilionin macaronit on valmistettu jatkuvasti vuodesta 1620 lähtien, ja '
+        + 'reseptin ovat vieneet eteenpäin ursuliinisisaret.',
+    },
   },
   {
     id: 'hahmotelma-cognac',
@@ -1224,6 +1323,17 @@ export const HAHMOTELMA_FRA = [
       + 'Ranskan valtion tosiasiallinen hallintopääkaupunki. Kymmenen muun eurooppalaisen '
       + 'kylpyläkaupungin kanssa se on ollut Unescon maailmanperintökohde 24.7.2021 alkaen.',
     lahde: 'en- ja fr-Wikipedia "Vichy", johdanto-osa (tarkistettu 18.9.2026).',
+    visa: {
+      kysymys: 'Mikä asema Vichyllä oli Ranskassa vuosina 1940–1944?',
+      vaihtoehdot: [
+        'Vapaan Ranskan kenraalin hallituksen päämaja',
+        'Ranskan valtion tosiasiallinen hallintopääkaupunki',
+        'Vastarintaliikkeen salainen ylin johtokeskus',
+        'Liittoutuneiden ensimmäinen mantereen tukikohta',
+      ],
+      oikea: 1,
+      fakta: 'Kylmä perunakeitto vichyssoise on nimetty Vichyn kaupungin mukaan.',
+    },
   },
   {
     id: 'hahmotelma-biarritz',
@@ -1320,6 +1430,18 @@ export const HAHMOTELMA_FRA = [
       + 'Seuil de Naurouzeen, kanavan korkeimpaan kohtaan. Kanava otettiin Unescon '
       + 'maailmanperintöluetteloon vuonna 1996.',
     lahde: 'en-Wikipedia "Canal du Midi", johdanto-osa (tarkistettu 18.9.2026).',
+    visa: {
+      kysymys: 'Mikä oli Canal du Midin rakentamisen vaikein tehtävä?',
+      vaihtoehdot: [
+        'Johtaa vettä vuorilta kanavan korkeimpaan kohtaan',
+        'Louhia kanava kovan graniitin läpi Toulousessa',
+        'Ylittää Garonne-joki kanavasillalla',
+        'Saada rakennustyöhön riittävästi työmiehiä',
+      ],
+      oikea: 0,
+      fakta: 'Kanavan alkuperäinen nimi oli Canal Royal en Languedoc, ja nykyisen nimensä se sai '
+        + 'vasta Ranskan vallankumouksen aikana vuonna 1789.',
+    },
   },
   {
     id: 'hahmotelma-le-puy-en-velay',

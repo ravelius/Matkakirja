@@ -166,6 +166,18 @@ export const HAHMOTELMA_ESP = [
       + 'Facho, jonka laella on majakka, ja lähellä on Fisterran kalastajakaupunki. Antiikin '
       + 'aikaan seudulla asui keltteihin kuuluva artabrien heimo.',
     lahde: 'en-Wikipedia "Cape Finisterre", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mitä latinankielinen nimi finis terrae tarkoittaa?',
+      vaihtoehdot: [
+        'Meren portti',
+        'Auringon koti',
+        'Maan pää',
+        'Kalastajien satama',
+      ],
+      oikea: 2,
+      fakta: 'Vaikka Finisterreä sanotaan usein Iberian läntisimmäksi pisteeksi, Portugalin Cabo '
+        + 'da Roca on noin 16,5 kilometriä sitä läntisempänä.',
+    },
   },
   {
     id: 'hahmotelma-bardenas-reales',
@@ -214,6 +226,18 @@ export const HAHMOTELMA_ESP = [
       + 'kaakkoinen Musta Bardena on kasvillisuuden peittämä.',
     lahde: 'en-Wikipedia "Bardenas Reales", johdanto-osa sekä osio "Location" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Mistä Bardenas Realesin Valkoinen Bardena on saanut nimensä?',
+      vaihtoehdot: [
+        'Pinnalla näkyvästä valkoisesta suolasta',
+        'Alueella laiduntavista valkoisista lampaista',
+        'Talvisin maiseman peittävästä lumesta',
+        'Vanhan luostarin kalkituista seinistä',
+      ],
+      oikea: 0,
+      fakta: 'Alueen keskellä on ympäristöään noin sata metriä korkeampi tasanne, jolla viljellään '
+        + 'maissia.',
+    },
   },
   {
     id: 'hahmotelma-tablas-de-daimiel',
@@ -262,6 +286,18 @@ export const HAHMOTELMA_ESP = [
       + 'paranisi.',
     lahde: 'en-Wikipedia "Tablas de Daimiel National Park", johdanto-osa (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Mikä on Tablas de Daimielin asema Espanjan viidentoista kansallispuiston joukossa?',
+      vaihtoehdot: [
+        'Se on kansallispuistoista suurin',
+        'Se on kansallispuistoista pienin',
+        'Se on kansallispuistoista vanhin',
+        'Se on ainoa merenrannalla',
+      ],
+      oikea: 1,
+      fakta: 'Kosteikko julistettiin kansallispuistoksi vuonna 1973, ja sitä ennen se oli ollut '
+        + 'suosittu vesilintujen metsästysalue.',
+    },
   },
   {
     id: 'hahmotelma-sierra-de-gredos',
@@ -598,6 +634,18 @@ export const HAHMOTELMA_ESP = [
       + 'mieluummin kuin joutua orjiksi, ja muutama sata poltti kaupungin 13 kuukauden '
       + 'piirityksen jälkeen.',
     lahde: 'en-Wikipedia "Numantia", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Miten suurin osa Numancian asukkaista päätti toimia Rooman pitkän saarron aikana?',
+      vaihtoehdot: [
+        'Paeta yöllä saartomuurin läpi vuorille',
+        'Antautua ja maksaa raskas sotakorvaus',
+        'Pyytää apua naapurikaupungeilta',
+        'Kuolla mieluummin kuin joutua orjiksi',
+      ],
+      oikea: 3,
+      fakta: 'Scipio rakennutti Numancian ympärille noin yhdeksän kilometrin pituisen '
+        + 'saartomuurin, jossa oli tornit ja vallihaudat.',
+    },
   },
   {
     id: 'hahmotelma-trujillo',
@@ -870,6 +918,19 @@ export const HAHMOTELMA_ESP = [
       + 'historiallis-taiteellisesti merkittäväksi monumentiksi vuonna 1978.',
     lahde: 'en-Wikipedia "Campo de Criptana", johdanto-osa ja osio "Windmills" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Minkä kirjallisen teoksen kahdeksannen luvun alussa mainitaan kolmekymmentä tai '
+        + 'neljäkymmentä tuulimyllyä tasangolla?',
+      vaihtoehdot: [
+        'Lazarillo de Tormes',
+        'Don Quijote',
+        'Celestina',
+        'Cidin laulu',
+      ],
+      oikea: 1,
+      fakta: 'Myllyjen kokonaisuus julistettiin historiallis-taiteellisesti merkittäväksi '
+        + 'monumentiksi vuonna 1978.',
+    },
   },
   {
     id: 'hahmotelma-albufera',
@@ -967,6 +1028,18 @@ export const HAHMOTELMA_ESP = [
       + 'alussa, mutta vuonna 1957 pidetyn tomaattien hautajaiskulkueen jälkeen se sallittiin '
       + 'uudelleen.',
     lahde: 'en-Wikipedia "La Tomatina", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Miten La Tomatina sai alkunsa Buñolissa?',
+      vaihtoehdot: [
+        'Viljelijät protestoivat halpoja hintoja heittelemällä satoa kaupungintalolle',
+        'Kaupunginjohtaja järjesti kisan tomaattisadon menekin lisäämiseksi',
+        'Kulkueen aikaisesta yhteenotosta, joka kaatoi vihanneskojun',
+        'Rikkoutunut kuorma-auto pudotti tomaattilastinsa torille',
+      ],
+      oikea: 2,
+      fakta: 'Franco kielsi tapahtuman 1950-luvun alussa, mutta tomaattien hautajaiskulkueen '
+        + 'jälkeen vuonna 1957 se sallittiin uudelleen.',
+    },
   },
   {
     id: 'hahmotelma-rioja-haro',
@@ -1173,6 +1246,19 @@ export const HAHMOTELMA_ESP = [
     lahde: 'en-Wikipedia "Riotinto-Nerva mining basin", johdanto-osa ja osiot "British phase" ja '
       + '"Railway network"; koordinaatti en-Wikipedia "Corta Atalaya" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Kuka osti Riotinton kaivosesiintymät Espanjan ensimmäisen tasavallan hallitukselta '
+        + 'vuonna 1873?',
+      vaihtoehdot: [
+        'Krupp-teollisuussuku',
+        'Rothschildien pankkiirisuku',
+        'Amerikkalainen rautatiemiljonääri',
+        'Katalonian tekstiilitehtailijat',
+      ],
+      oikea: 1,
+      fakta: 'Alueella louhittiin jo esihistoriallisina aikoina, ja järjestäytynyt kaivostoiminta '
+        + 'alkoi roomalaisaikana.',
+    },
   },
   {
     id: 'hahmotelma-almaden',
@@ -1221,6 +1307,17 @@ export const HAHMOTELMA_ESP = [
       + 'vuonna 2002 EU:n elohopeakaivoskiellon vuoksi, ja vuonna 2012 Almadén ja Slovenian '
       + 'Idrija julistettiin yhdessä maailmanperintökohteeksi.',
     lahde: 'en-Wikipedia "Almadén", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Miksi Almadénin kaivos suljettiin vuonna 2002?',
+      vaihtoehdot: [
+        'Malmi oli ehtynyt kokonaan',
+        'Kaivos tulvi käyttökelvottomaksi',
+        'Työntekijät lakkoilivat vuosia',
+        'EU kielsi elohopean louhinnan',
+      ],
+      oikea: 3,
+      fakta: 'Almadénin nimi tulee arabian sanasta, joka tarkoittaa kaivosta.',
+    },
   },
   {
     id: 'hahmotelma-vizcayan-silta',
@@ -1270,6 +1367,17 @@ export const HAHMOTELMA_ESP = [
       + 'maailmanperintökohteeksi vuonna 2006.',
     lahde: 'en-Wikipedia "Vizcaya Bridge", johdanto-osa ja osiot "History" ja "Operation" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Miten autot ylittävät Vizcayan sillan Nervión-joen yli?',
+      vaihtoehdot: [
+        'Kiinteää siltakantta pitkin, jossa on pitkät rampit',
+        'Lautalla, joka kulkee ketjujen varassa joen pinnalla',
+        'Korkealle ripustetussa gondolissa, joka liikkuu joen yli',
+        'Nostosillalla, jonka kansi kääntyy pystyyn laivoja varten',
+      ],
+      oikea: 2,
+      fakta: 'Sillan suunnitteli Gustave Eiffelin oppilas Alberto Palacio.',
+    },
   },
   {
     id: 'hahmotelma-alcantaran-silta',
@@ -1485,6 +1593,19 @@ export const HAHMOTELMA_ESP = [
       + 'tunnustaneet sopimuksia.',
     lahde: 'en-Wikipedia "Treaty of Tordesillas", johdanto-osa; koordinaatti en-Wikipedia '
       + '"Tordesillas" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Kuka sai Tordesillasin sopimuksessa Euroopan ulkopuoliset maat meridiaanin '
+        + 'länsipuolelta?',
+      vaihtoehdot: [
+        'Kastilian kruunu',
+        'Portugalin kuningaskunta',
+        'Aragonian kruunu',
+        'Ranskan kuningaskunta',
+      ],
+      oikea: 0,
+      fakta: 'Maapallon toisen puolen jako tehtiin vasta vuosikymmeniä myöhemmin Zaragozan '
+        + 'sopimuksella.',
+    },
   },
   {
     id: 'hahmotelma-aranjuez',

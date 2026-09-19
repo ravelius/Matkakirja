@@ -115,6 +115,17 @@ export const HAHMOTELMA_DEU = [
       + 'kotimaansa Juraa. Nimeä levitti laajalle Wilhelm Lebrecht Götzinger kirjoillaan.',
     lahde: 'en-Wikipedia "Saxon Switzerland", johdanto-osa ja osio "Etymology" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Miksi Elben hiekkakivivuoristoa alettiin kutsua Saksilaiseksi Sveitsiksi?',
+      vaihtoehdot: [
+        'Sveitsiläiset taiteilijat näkivät maisemassa kotimaansa Juran',
+        'Alueen linnoitukseen palkattiin sveitsiläisiä sotilaita',
+        'Elbe saa alkunsa sveitsiläisiltä Alpeilta',
+        'Dresdenin hovi tilasi alueelle sveitsiläisiä juustomestareita',
+      ],
+      oikea: 0,
+      fakta: 'Alueen tunnetuin maamerkki on Königsteinin linnoitus.',
+    },
   },
   {
     id: 'hahmotelma-ruegen',
@@ -258,6 +269,18 @@ export const HAHMOTELMA_DEU = [
       + 'Heinrich Hoffmann von Fallersleben kirjoitti vuonna 1841 Deutschlandliedin sanat, '
       + 'joista tuli Saksan kansallislaulu.',
     lahde: 'en-Wikipedia "Heligoland", johdanto-osa ja osio "Geography" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mikä tunnettu teksti kirjoitettiin Helgolandin saarella vuonna 1841?',
+      vaihtoehdot: [
+        'Friisiläisten vanha merimieslaulu',
+        'Preussin kuninkaan kruunajaisvala',
+        'Saksan kansallislaulun sanat',
+        'Hansakauppiaiden merenkulkusäännöt',
+      ],
+      oikea: 2,
+      fakta: 'Helgolandin pääsaaren jyrkänne putoaa pohjoisessa, lännessä ja lounaassa 50 metrin '
+        + 'korkeudelta mereen, ja saaren friisiläiset puhuvat Halunder-murretta.',
+    },
   },
   {
     id: 'hahmotelma-lueneburger-heide',
@@ -308,6 +331,17 @@ export const HAHMOTELMA_DEU = [
       + '169 metrin Wilseder Berg.',
     lahde: 'en-Wikipedia "Lüneburg Heath", johdanto-osa ja osio "Geography" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Miten Lüneburgin nummen keltaiset kanervanummet pidetään avoimina?',
+      vaihtoehdot: [
+        'Niittämällä ne koneilla joka kesä',
+        'Kastelemalla nummet joka kevät kanavilla',
+        'Polttamalla ne hallitusti joka syksy',
+        'Laiduntamalla nummilampaita eli heidschnuckeja',
+      ],
+      oikea: 3,
+      fakta: 'Nummialueen korkein kohta on 169 metriä korkea Wilseder Berg.',
+    },
   },
   {
     id: 'hahmotelma-spreewald',
@@ -355,6 +389,18 @@ export const HAHMOTELMA_DEU = [
       + '1 300 kilometriä, sekä litteäpohjaiset Spreewaldkähne-veneet. Yksi tunnetuimmista '
       + 'kaupungeista on Lübbenau, jonka Lehden ja Leipen kylissä kanavat korvaavat kadut.',
     lahde: 'en-Wikipedia "Spree Forest", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minkä vähemmistökansan asuinaluetta Spreewald on?',
+      vaihtoehdot: [
+        'Friisiläisten',
+        'Sorbien',
+        'Tšekkien',
+        'Puolalaisten',
+      ],
+      oikea: 1,
+      fakta: 'Spreewaldin kanavaverkosto on yhteensä noin 1 300 kilometriä pitkä, ja Lehden ja '
+        + 'Leipen kylissä kanavat korvaavat kadut.',
+    },
   },
   {
     id: 'hahmotelma-chiemsee',
@@ -522,6 +568,17 @@ export const HAHMOTELMA_DEU = [
       + 'keskiajalla kristillinen kappeli. Kallioon veistetty Externsteinen reliefi on '
       + 'keskiaikainen kuvaus Ristiltä ottamisesta.',
     lahde: 'en-Wikipedia "Externsteine", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mitä aihetta esittää Externsteinen kallioon keskiajalla veistetty reliefi?',
+      vaihtoehdot: [
+        'Saksien pyhää Irminsul-patsasta',
+        'Pakanajumalien taistelua',
+        'Kristuksen ottamista alas ristiltä',
+        'Kaarle Suuren kastetta',
+      ],
+      oikea: 2,
+      fakta: 'Externsteinen kalliopylväiden läpi kulkee Hermannsweg-vaellusreitti.',
+    },
   },
   {
     id: 'hahmotelma-saalburg',
@@ -954,6 +1011,19 @@ export const HAHMOTELMA_DEU = [
       + 'kaivon ympärillä on rivi hyvin säilyneitä rakennuksia.',
     lahde: 'en-Wikipedia "Bernkastel-Kues", johdanto-osa ja osiot "History" ja "Sights" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minkä muinaisen rakennuksen paikalla Bernkastelin yläpuolisen Landshutin linnan '
+        + 'rauniot mahdollisesti ovat?',
+      vaihtoehdot: [
+        'Roomalaisen castellumin',
+        'Frankkikuninkaan metsästysmajan',
+        'Keskiaikaisen viinikellarin',
+        'Kelttiläisen kukkulalinnan',
+      ],
+      oikea: 0,
+      fakta: 'Bernkastel-Kues on keskiajan filosofin ja kirkonmiehen Nikolaus von Kuesin '
+        + 'syntymäkaupunki.',
+    },
   },
   {
     id: 'hahmotelma-triberg',
@@ -1060,6 +1130,18 @@ export const HAHMOTELMA_DEU = [
       + 'vuonna 1664 siitä tuli Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, minkä '
       + 'jälkeen alkoi sen suurimman vaurauden aika.',
     lahde: 'en-Wikipedia "Hamelin", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mistä Hamelnin kaupunki sai alkunsa?',
+      vaihtoehdot: [
+        'Luostarista, jonka ympärille kasvoi kylä',
+        'Weserin ylityspaikan tullilinnasta',
+        'Hansakauppiaiden perustamasta kauppa-asemasta',
+        'Ruhtinaan rakennuttamasta rajalinnoituksesta',
+      ],
+      oikea: 0,
+      fakta: 'Hamelnista tuli vuonna 1664 Calenbergin ruhtinaskunnan linnoitettu rajakaupunki, '
+        + 'minkä jälkeen alkoi sen suurimman vaurauden aika.',
+    },
   },
   {
     id: 'hahmotelma-oberammergau',
@@ -1177,6 +1259,18 @@ export const HAHMOTELMA_DEU = [
       + 'aloitti toimintansa kaksi vuotta myöhemmin.',
     lahde: 'en-Wikipedia "Völklingen Ironworks", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Kuka osti Julius Buchin Saar-joen rannalle rakennuttaman terästehtaan, kun se oli '
+        + 'toiminut vain muutaman vuoden?',
+      vaihtoehdot: [
+        'Alfred Krupp',
+        'August Thyssen',
+        'Werner von Siemens',
+        'Karl Röchling',
+      ],
+      oikea: 3,
+      fakta: 'UNESCO julisti Völklingenin rautatehtaan maailmanperintökohteeksi vuonna 1994.',
+    },
   },
   {
     id: 'hahmotelma-freiberg',
@@ -1293,6 +1387,17 @@ export const HAHMOTELMA_DEU = [
       + 'Triebisch-joen laaksoon. Meissen on nykyisin Staatliche Porzellan-Manufaktur '
       + 'Meissenin rekisteröity tavaramerkki.',
     lahde: 'en-Wikipedia "Meissen", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Kuka perusti Euroopan ensimmäisen posliinitehtaan Meissenin Albrechtsburgin linnaan?',
+      vaihtoehdot: [
+        'Preussin kuningas Fredrik Suuri',
+        'Saksin vaaliruhtinas Augustus II Väkevä',
+        'Ranskan kuningas Ludvig XIV',
+        'Ruotsin kuningas Kaarle XII',
+      ],
+      oikea: 1,
+      fakta: 'Meissenin posliinituotanto siirrettiin myöhemmin linnasta Triebisch-joen laaksoon.',
+    },
   },
   {
     id: 'hahmotelma-jena',
@@ -1412,6 +1517,17 @@ export const HAHMOTELMA_DEU = [
       + '1897. Hanketta johti insinööri Anton von Rieppel.',
     lahde: 'en-Wikipedia "Müngsten Bridge", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Kenen mukaan Müngstenin silta nimettiin alun perin?',
+      vaihtoehdot: [
+        'Insinööri Anton von Rieppelin',
+        'Preussin kuningas Fredrik Vilhelm IV:n',
+        'Kansleri Otto von Bismarckin',
+        'Keisari Wilhelm I:n',
+      ],
+      oikea: 3,
+      fakta: 'Müngstenin silta on Saksan korkein rautatiesilta ja ylittää Wupper-joen laakson.',
+    },
   },
   {
     id: 'hahmotelma-hambach',

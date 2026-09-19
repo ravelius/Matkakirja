@@ -197,6 +197,17 @@ export const HAHMOTELMA_AUT = [
       + 'keskiaikainen Schloss Ort -linna. Paikallinen legenda kertoo vesihevosesta, joka '
       + 'asuu järvessä, ja paikalliset kutsuvat sitä nimellä "Lungy".',
     lahde: 'en-Wikipedia "Traunsee", koko artikkeli (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mikä olento paikallisen legendan mukaan asuu Traunjärvessä?',
+      vaihtoehdot: [
+        'Jättiläismäinen vesikäärme',
+        'Kultaa vartioiva lohikäärme',
+        'Kalanpyrstöinen vedenneito',
+        'Järvessä asuva vesihevonen',
+      ],
+      oikea: 3,
+      fakta: 'Traunjärven pohjoispäässä sijaitsee Gmunden ja eteläpäässä Ebensee.',
+    },
   },
   {
     id: 'hahmotelma-zell-am-see',
@@ -296,6 +307,17 @@ export const HAHMOTELMA_AUT = [
       + 'vuodesta 1970.',
     lahde: 'en-Wikipedia "Millstätter See", johdanto-osa ja osio "Geography" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Miksi Millstätter Seen vesi voi lämmetä kesällä jopa 25 asteeseen?',
+      vaihtoehdot: [
+        'Etelärannan voimalaitokset johtavat järveen lämmintä vettä',
+        'Järvi on matala ja lämpenee nopeasti auringossa',
+        'Pohjoiset vuoret suojaavat sitä kylmiltä tuulilta',
+        'Järven pohjasta nousee kuumia lähteitä',
+      ],
+      oikea: 2,
+      fakta: 'Lähes asumaton eteläranta on ollut suojelualue vuodesta 1970.',
+    },
   },
   {
     id: 'hahmotelma-oetscher',
@@ -401,6 +423,18 @@ export const HAHMOTELMA_AUT = [
       + 'Ignaz von Kürsinger.',
     lahde: 'en-Wikipedia "Großvenediger", johdanto-osa ja osiot "Name" ja "Climbing history" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mihin vuoren nimen Großvenediger eli suuri venetsialainen uskotaan todennäköisimmin '
+        + 'viittaavan?',
+      vaihtoehdot: [
+        'Jäätiköstä lähtevään ja Venetsiaan laskevaan jokeen',
+        'Solia ylittäneisiin venetsialaisiin kauppiaisiin',
+        'Ensinousuun osallistuneeseen venetsialaiseen oppaaseen',
+        'Huipulta näkyvään Venetsian laguuniin',
+      ],
+      oikea: 1,
+      fakta: 'Vuorta kutsuttiin alun perin nimellä Stützerkopf.',
+    },
   },
   {
     id: 'hahmotelma-mariazell',
@@ -548,6 +582,18 @@ export const HAHMOTELMA_AUT = [
       + 'Matemaattinen torni, jossa observatorio sijaitsee.',
     lahde: 'en-Wikipedia "Kremsmünster Abbey", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Minkä tapahtuman perimätieto kertoo sattuneen paikalla, jolle Kremsmünsterin '
+        + 'luostari perustettiin?',
+      vaihtoehdot: [
+        'Salama tappoi herttuan metsästysretkellä',
+        'Herttuan poika parani ihmeellisesti sairaudesta',
+        'Villisika haavoitti herttuan pojan kuolettavasti',
+        'Kaarle Suuri voitti paikalla vihollisensa',
+      ],
+      oikea: 2,
+      fakta: 'Kremsmünsterin apotit käyttivät aikoinaan piispallista toimivaltaa.',
+    },
   },
   {
     id: 'hahmotelma-admont',
@@ -767,6 +813,17 @@ export const HAHMOTELMA_AUT = [
       + 'sijaitsee Wienistä ja Tonavasta pohjoiseen Korneuburgin ja Stockerauin välillä.',
     lahde: 'en-Wikipedia "Burg Kreuzenstein", johdanto-osa ja osiot "Reconstruction under the '
       + 'Counts of Wilczek" ja "Location" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Millä rahoilla kreivi Wilczek rahoitti Burg Kreuzensteinin jälleenrakennuksen?',
+      vaihtoehdot: [
+        'Sleesian hiilikaivostensa tuotoilla',
+        'Napa-alueiden tutkimusmatkojen palkkioilla',
+        'Habsburgien keisarilta saamallaan lahjoituksella',
+        'Itävalta-Unkarin valtion rakennusavustuksella',
+      ],
+      oikea: 0,
+      fakta: 'Linnan oli määrä toimia Wilczekin suvun sukuhautana.',
+    },
   },
   {
     id: 'hahmotelma-forchtenstein',
@@ -1023,6 +1080,17 @@ export const HAHMOTELMA_AUT = [
       + 'hevosroduista alkuperäisessä muodossaan.',
     lahde: 'en-Wikipedia "Piber Federal Stud", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Mitä varten Piberin valtion talli perustettiin vuonna 1798?',
+      vaihtoehdot: [
+        'Espanjalaisen ratsastuskoulun oriiden kasvattamiseksi',
+        'Sotahevosten kasvattamiseksi armeijan tarpeisiin',
+        'Ravikilpailuihin sopivien hevosten jalostamiseksi',
+        'Luostarin peltotöihin tarvittavien vetohevosten kasvattamiseksi',
+      ],
+      oikea: 1,
+      fakta: 'Piberin linna oli aiemmin Pyhän Lambrechtin luostari.',
+    },
   },
   {
     id: 'hahmotelma-eisenstadt',
@@ -1260,6 +1328,18 @@ export const HAHMOTELMA_AUT = [
       + '1864; vuodesta 1869 sen nimi oli Österreichische Waffenfabriksgesellschaft.',
     lahde: 'en-Wikipedia "Steyr", johdanto-osa ja osiot "Geography" ja "History" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Millaisen yrityksen seppä Leopold Werndl perusti Steyriin vuonna 1830?',
+      vaihtoehdot: [
+        'Kutomon',
+        'Olutpanimon',
+        'Kellotehtaan',
+        'Asetehtaan',
+      ],
+      oikea: 3,
+      fakta: 'Steyr- ja Enns-joet kohtaavat kaupungin keskustan lähellä Lambergin linnan ja Pyhän '
+        + 'Mikaelin kirkon alla.',
+    },
   },
   {
     id: 'hahmotelma-hall-in-tirol',
@@ -1321,6 +1401,18 @@ export const HAHMOTELMA_AUT = [
       + 'Mustaanmetsään ja Reinin laaksoon asti.',
     lahde: 'en-Wikipedia "Hall in Tirol", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Miten suolavesi johdettiin Absamin suolakaivoksesta Hallin haihdutusaltaalle?',
+      vaihtoehdot: [
+        'Hevosvaunuilla kuljetetuissa tynnyreissä',
+        'Inn-jokea pitkin puulautoilla ja proomuilla',
+        'Noin kymmenen kilometrin pituista putkea pitkin',
+        'Vuoren läpi louhittua kanavaa myöten',
+      ],
+      oikea: 2,
+      fakta: 'Hallin suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon '
+        + 'asti.',
+    },
   },
   {
     id: 'hahmotelma-ferlach',
@@ -1431,6 +1523,18 @@ export const HAHMOTELMA_AUT = [
       + 'ylittäville matkaajille.',
     lahde: 'en-Wikipedia "St. Anton am Arlberg", johdanto-osa ja osio "Activities" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Miten St. Antonin hiihtoperinne levisi 1930-luvulla ulkomaille?',
+      vaihtoehdot: [
+        'Paikalliset hiihtoopettajat muuttivat Yhdysvaltoihin opettamaan lajia',
+        'Kylästä lähti Britannian ensimmäinen olympiahiihtojoukkue',
+        'Alueen kilpahiihtäjät voittivat ensimmäiset olympiakultansa',
+        'Arlbergin hiihtokoulun oppikirjat käännettiin monelle kielelle',
+      ],
+      oikea: 0,
+      fakta: 'Lähellä sijaitsevassa Pyhän Christophin kylässä paimen Heinrich Findelkind rakensi '
+        + '1300-luvulla hospiisin suojaksi Arlbergin solan ylittäville matkaajille.',
+    },
   },
   {
     id: 'hahmotelma-oberndorf',
@@ -1492,6 +1596,19 @@ export const HAHMOTELMA_AUT = [
       + 'muistokappeli vuonna 1937.',
     lahde: 'en-Wikipedia "Oberndorf bei Salzburg", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Miksi Oberndorf kuuluu Itävaltaan, vaikka joen toisella puolella oleva Laufen on '
+        + 'Baijerissa?',
+      vaihtoehdot: [
+        'Salzach-joen tulva muutti uomaa ja erotti rannat toisistaan',
+        'Baijerin kuningas osti joen toisen puolen Itävallan keisarilta',
+        'Kaupungin asukkaat äänestivät kansanäänestyksessä kahdesta valtiosta',
+        'Salzburgin arkkipiispakunta jaettiin Baijerin ja Itävallan kesken',
+      ],
+      oikea: 3,
+      fakta: 'Stille Nacht -joululaulu esitettiin ensimmäisen kerran jouluaattona 1818 '
+        + 'Nikolauskirchessä.',
+    },
   },
   {
     id: 'hahmotelma-mayerling',
