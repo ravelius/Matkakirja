@@ -54,7 +54,7 @@ import { packById } from '../../js/pack.js';
 import { FOKUSVIRTA_PARIISI } from '../../js/packs/fokusvirta-pariisi.js';
 
 const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
@@ -125,7 +125,7 @@ function tallenne({ ilmanLaskuria = false } = {}) {
   return JSON.stringify(data);
 }
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({ executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' });
 
 /** Yksi selainkonteksti valmiiksi ladattuna Pariisin palloon. */
 async function avaaPeli(data) {
@@ -349,6 +349,57 @@ if (c.auki) {
     `laskuri ${vanha.laskuri}`);
 }
 await c.ctx.close();
+
+/* ---------- AJO D: HAHMOTELMANOSTO KOHDEKORTILLA (Texel) ----------
+ *
+ * Sonnet 1:n laitetesti 19.9.2026 (v1960): hahmotelmanostojen visa ei
+ * piirtynyt, koska ne ovat KOHDE_MAAT-rivejä ja avautuvat kohdekortilla
+ * (js/fokuskohteet.js piirraKohteenSisus), jolla visaa ei ollut.
+ */
+const HAHMOTELMA = 'hahmotelma-texel';
+const d = await avaaPeli(tallenne());
+vaadi('pallolauta aukesi (hahmotelma)', d.auki, d.virheet.join(' | '));
+if (d.auki) {
+  const avaaKohde = () => d.sivu.evaluate(async (id) => {
+    for (const el of document.querySelectorAll('.fokuskohde-popup')) el.remove();
+    const { KOHDE_MAAT, avaaFokuskohde } = await import('/js/fokuskohteet.js');
+    const kohde = (KOHDE_MAAT.NLD ?? []).find((k) => k.id === id);
+    if (!kohde) return { loytyi: false };
+    avaaFokuskohde(window.matkakirja.ui, kohde);
+    await new Promise((v) => setTimeout(v, 500));
+    const lisaa = document.querySelector('.fokuskohde-popup .nostokuva-lisaa');
+    if (lisaa) { lisaa.click(); await new Promise((v) => setTimeout(v, 500)); }
+    const laatikko = document.querySelector('.fokuskohde-popup .fokusnosto-visa');
+    return {
+      loytyi: true,
+      oikea: kohde.visa?.oikea ?? null,
+      onLaatikko: Boolean(laatikko),
+      napit: laatikko?.querySelectorAll('.kulttuuri-vaihtoehdot button').length ?? 0,
+    };
+  }, HAHMOTELMA);
+  const vastaaKohde = (i) => d.sivu.evaluate(async (indeksi) => {
+    const napit = [...document.querySelectorAll('.fokuskohde-popup .fokusnosto-visa .kulttuuri-vaihtoehdot button')];
+    napit[indeksi]?.click();
+    await new Promise((v) => setTimeout(v, 300));
+    const g = window.matkakirja.game;
+    return { money: g.player.money, laskuri: g.nostotehtavatRatkaistu, napitOli: napit.length };
+  }, i);
+  const ek = await avaaKohde();
+  tieto('hahmotelmakortti', JSON.stringify(ek));
+  vaadi('6. hahmotelmanoston kohdekortissa on lukijan kysymys lipukkeineen',
+    ek.loytyi && ek.onLaatikko && ek.napit >= 2, JSON.stringify(ek));
+  const ennenD = await luvut(d.sivu);
+  const jalkeenD = await vastaaKohde(ek.oikea ?? 0);
+  vaadi('7. oikea vastaus kohdekortilla lisää palkkion',
+    jalkeenD.money === ennenD.money + PALKKIO && jalkeenD.laskuri === ennenD.laskuri + 1,
+    `money ${ennenD.money} → ${jalkeenD.money}, laskuri ${ennenD.laskuri} → ${jalkeenD.laskuri}`);
+  const toinenK = await avaaKohde();
+  const toinenD = await vastaaKohde(ek.oikea ?? 0);
+  vaadi('8. kohdekortin kysymys ei maksa kahdesti',
+    toinenK.onLaatikko && toinenK.napit === 0 && toinenD.money === jalkeenD.money,
+    `lipukkeita ${toinenK.napit}, money ${jalkeenD.money} → ${toinenD.money}`);
+}
+await d.ctx.close();
 
 await selain.close();
 palvelin.close();

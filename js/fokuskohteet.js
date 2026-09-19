@@ -5826,6 +5826,22 @@ export function asetaKohdeNostot(hae) {
   kohdeNostoHaku = typeof hae === 'function' ? hae : null;
 }
 
+/*
+ * LUKIJAN KYSYMYS MYÖS KOHDEKORTILLE (Sonnet 1:n laitetesti 19.9.2026,
+ * v1960; Raamattu PAATOKSET 51). Hahmotelmanostot ovat KOHDE_MAAT-
+ * rivejä eli kohdeolioita, joten ne avautuvat tällä kortilla eivätkä
+ * nostokortilla, ja `visa`-kenttä jäi piirtämättä: kuvat, teksti,
+ * pulun kysymykset ja lähde näkyivät, visalaatikko ei. Piirtäjä on
+ * nostokortin oma (js/fokusnosto.js piirraNostonVisa) — sama laatikko,
+ * sama palkkio, sama kerran maksava avain — ja se rekisteröidään
+ * samasta syystä kuin nostohaku yllä (niputusjärjestys).
+ */
+let kohdeVisaPiirtaja = null;
+
+export function asetaKohdeVisa(piirra) {
+  kohdeVisaPiirtaja = typeof piirra === 'function' ? piirra : null;
+}
+
 /** Kohteeseen kiinnitetty täkynosto tietoruudun napiksi, jos sellainen on. */
 function piirraKohteenNosto(ui, sisalto, kohde) {
   const nosto = kohdeNostoHaku?.(ui, kohde.id);
@@ -5879,6 +5895,7 @@ function piirraKohteenSisus(ui, sailio, kohde, valmisKuva) {
   // ENSIMMÄISEN kuvan alle (piirraKohdeKuvat), ei otsikon alle.
   piirraKohdeKuvat(ui, sailio, kohde, valmisKuva);
   piirraKohdeTeksti(ui, sailio, kohde);
+  kohdeVisaPiirtaja?.(ui, sailio, kohde);
   piirraKohdeKysymykset(ui, sailio, kohde);
   piirraKierrosnappi(ui, sailio, kohde);
   piirraKohteenNosto(ui, sailio, kohde);
