@@ -9226,7 +9226,17 @@ export const RAAMATTU = {
           + 'kohdekortin LISAA-tilan alalaidassa (Opus 1); 3) Santorinin satelliittikuvassa '
           + 'Sentinel Hub -selitepalkki (kuva vaihdetaan, Sonnet 3); 4) yliviivaus '
           + '"VIISAALTA POLLOLTA" on tarkoituksellinen; 5) visa joka kolmannessa on '
-          + 'tarkoitus. Kierros 14 (puuttuvat tyypit, Astronautin avaus) v1966:lla.',
+          + 'tarkoitus. Kierros 14 (puuttuvat tyypit, Astronautin avaus) v1966:lla. TILA '
+          + '(Opus 1 klo 21.33, Fable hyvaksyi 21.36): 1) tyyppinimike luki kartan '
+          + 'RYHMAMERKIN ("Kauppa ja tekniikka" -> kauppa), joten tekniikka (42 '
+          + 'hahmotelmaa), merenkulku (12) ja ruoka nakyivat vaarin; korjaus '
+          + 'kohteenYlarivinNimike antaa tarkan kategorian (veturi Tekniikka, ankkuri '
+          + 'Merenkulku, malja Ruoka ja juoma, Luonto - vuori/meri/saari/joki/jarvi); '
+          + 'TARKENNUS 26.8. linjaukseen "kortti ja merkki kertovat samaa": kartan merkki '
+          + 'on ryhma, kortin ylarivi tarkka kategoria. 2) Pulu peitti lahderivin, koska '
+          + 'Livian kasvokangas ei tuntenut vahdin piilotusluokkaa; korjattu livia-eleet.js, '
+          + 'vartiot 9/9c/10/10b, 24/24. Julkaistaan v1967. v1966 MERGETTY klo 21.30, '
+          + 'tuotannossa 21.34.',
         'NOSTOVISAN ULKOASU JA VAIHTOEHTOJEN KIELI (omistaja 19.9.2026 klo 20.41 Suomen '
           + 'aikaa, Rocamadour-noston visalaatikon laitekuva v1963, sanatarkasti: "Tama '
           + 'visuaalisesti outo"): kuvassa LUKIJAN KYSYMYS -laatikko on raskas - suuri '
