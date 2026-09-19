@@ -555,3 +555,27 @@ test('vaiheessa 1 ei ole sulkuristiä eikä lähderiviä', () => {
   assert.ok(lohko.includes('display: none'), 'piilotus ei ole display: none');
 });
 
+
+/* ══ Lukitun laatikon korjaus (kierros 16, 20.9.2026) ══════════════ */
+
+test('nostokuvanLukitunKorkeus sovittaa korkeuden kuvan suhteeseen', async () => {
+  const { nostokuvanLukitunKorkeus } = await import('../js/nostokuva.js');
+  // Canigoun tapaus: laatikko jäi 3:2-oletukseen, kuva on 16:9.
+  assert.equal(Math.round(nostokuvanLukitunKorkeus({
+    laatikkoLeveys: 342, kuvaLeveys: 960, kuvaKorkeus: 540, ruutuKorkeus: 844,
+  })), 192);
+  // Panoraama: matala laatikko, ei paperia kuvan alle.
+  assert.equal(Math.round(nostokuvanLukitunKorkeus({
+    laatikkoLeveys: 342, kuvaLeveys: 2400, kuvaKorkeus: 800, ruutuKorkeus: 844,
+  })), 114);
+  // Pystykuva ei venytä laatikkoa ruudun yli.
+  const korkea = nostokuvanLukitunKorkeus({
+    laatikkoLeveys: 342, kuvaLeveys: 960, kuvaKorkeus: 4000, ruutuKorkeus: 844,
+  });
+  assert.ok(korkea > 700 && korkea < 844, String(korkea));
+  // Kelvottomat mitat eivät koske laatikkoon.
+  for (const p of [{}, { laatikkoLeveys: 0, kuvaLeveys: 10, kuvaKorkeus: 10 },
+    { laatikkoLeveys: 342, kuvaLeveys: 0, kuvaKorkeus: 10 }]) {
+    assert.equal(nostokuvanLukitunKorkeus(p), 0);
+  }
+});

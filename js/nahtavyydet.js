@@ -209,9 +209,35 @@ export function kaupunginNahtavyysteksti(cityId) {
  * @param {string} cityId kaupungin tunnus (KAUPUNKIKARTAT-avain)
  * @returns {Array<{avain:string,id:string,nimi:string,avaa:Function}>}
  */
+/*
+ * TULOS MUISTETAAN KAUPUNGEITTAIN (mitattu 20.9.2026, pallolaudan
+ * panorointi): kaupunkiliuskan ladonta kutsuu tätä JOKAISELLE
+ * kaupungille joka ladonnassa, ja ladonta ajetaan liikkeen aikana
+ * viidesti sekunnissa (js/pallolauta/lauta.js LADONNAN_TAHTI_MS).
+ * Funktio rakentaa joka kutsulla uudet oliot ja sulkeumat, vaikka
+ * lähde (KAUPUNKIKARTAT, NAHTAVYYSJUTUT, MINIATYYRIT) on vakio ja
+ * sulkeumat kantavat vain `ui`n. Muisti on siksi ui-kohtainen
+ * WeakMap, joka vapautuu pelin mukana.
+ */
+const siirretytMuisti = new WeakMap();
+
 export function kaupunkikartanSiirretyt(ui, cityId) {
   const kartta = KAUPUNKIKARTAT[cityId];
   if (!kartta) return [];
+  if (ui && typeof ui === 'object') {
+    const muisti = siirretytMuisti.get(ui) ?? new Map();
+    const valmis = muisti.get(cityId);
+    if (valmis) return valmis;
+    const tulos = laskeKaupunkikartanSiirretyt(ui, cityId, kartta);
+    muisti.set(cityId, tulos);
+    siirretytMuisti.set(ui, muisti);
+    return tulos;
+  }
+  return laskeKaupunkikartanSiirretyt(ui, cityId, kartta);
+}
+
+/** Varsinainen ladonta (ks. muisti yllä). */
+function laskeKaupunkikartanSiirretyt(ui, cityId, kartta) {
   const ulos = [];
   (kartta.kohteet ?? []).forEach((raaka, i) => {
     if (MINIATYYRIT[cityId]?.[raaka.nimi]) return;

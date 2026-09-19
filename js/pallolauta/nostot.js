@@ -45,6 +45,7 @@ import {
 } from './aihemerkit.js';
 import {
   kelattuLiuska, kelauksenAskel, liuskanRivit, liuskanSuurinRivimaara, nostonOmaPaikka,
+  luoSisaisyysTesti,
   onKaupunginSisainen,
 } from './kaupunkiliuska.js';
 import { FOKUS_POHJAT } from '../packs/fokus-grc.js';
@@ -1329,6 +1330,16 @@ export function luoNostot({
    * CSS2D-elementin, johon liuska piirtyy.
    */
   laudanKaupungit = null,
+  /*
+   * LIUSKAN YLÄRYHMÄN SISÄLTÖ (20.9.2026, Fablen tarkistus: Brysselin
+   * liuskassa NÄHTÄVYYDET avasi tyhjän otsikkopalkin). Liuska ei tunne
+   * kaupunkien sisältöä: `(kaupunkiId) => { nahtavyyksia, opas }`
+   * kertoo, onko kaupungilla kohdekartta ja turistiopas. Ilman sisältöä
+   * rivi jätetään pois (liuskanRivit, kaupunkiliuska.js) — tyhjää korttia
+   * ei avata. Lauta antaa lukufunktion kaupunkinosto.js:n tiedoista;
+   * ilman sitä kaikki rivit näytetään kuten ennen.
+   */
+  liuskanSisalto = null,
 }) {
   let osumat = []; // ruudulla olevat, napautettavat merkit
   let laatikot = [];
@@ -2165,11 +2176,46 @@ export function luoNostot({
     viimeisinUloinOsuus = uloinOsuus;
     const rivit = keraa(nakyva, uloinOsuus);
     rivitNyt = rivit;
+    /*
+     * ══ NÄKYVYYS LUETAAN SIITÄ PAIKASTA, JOSSA MUSTE ON ══════════════
+     *
+     * Omistaja 19.9.2026 klo 23.31 Suomen aikaa (iPad, Ranskan lehti
+     * lähizoomissa): *"Biskajanlahti-nimiö (meri-nosto) ei ota
+     * napautusta"*.
+     *
+     * JUURISYY (mitattu 20.9.2026, Chromium ja WebKit, raportti
+     * docs/raportit/viesti-fable-meri-napautus-20260920.md): rivin
+     * paikka on tässä vaiheessa DATAN piste — Biskajanlahdella lahden
+     * ulappa 45,3 N / −3,2 E — mutta muste (poltettu nimiö ja sen
+     * osuma-ala) on LUKITUSSA ANKKURISSA 45,2 N / −1,14 E, kaksi
+     * astetta idempänä rannikolla. Ankkuri otettiin käyttöön vasta
+     * tämän silmukan JÄLKEEN (`for (const r of liikkuvat)` alempana),
+     * joten kun kamera zoomasi niin lähelle, ettei datapiste enää
+     * mahtunut ruudulle, rivi putosi `nakyvat`-listalta — ja sen
+     * mukana osumalistalta — vaikka nimiö oli keskellä ruutua.
+     * Mitattu: korkeus 0,12 osumalistalla, korkeus 0,05 ei, vaikka
+     * ankkuri oli molemmissa ruudulla.
+     *
+     * LUKITTU ANKKURI ON SAMA PAIKKA KUIN LAATASSA (ks. LUKITTU
+     * ANKKURI VOITTAA LEVITYKSEN alempana), joten sen lukeminen tässä
+     * ei siirrä mitään: se vain kertoo tälle testille saman paikan,
+     * jonka piirto ja osuma saavat joka tapauksessa.
+     */
+    const lukitutKaytossa = lukitutAnkkuritSallittu();
     const nakyvat = [];
     for (const r of rivit) {
-      const p = ruudulla(r.lat, r.lng);
+      const lukko = lukitutKaytossa ? lukittuAnkkuri(r.avain, r.iso ?? null) : null;
+      const lat = lukko ? lukko.lat : r.lat;
+      const lng = lukko ? lukko.lng : r.lng;
+      const p = ruudulla(lat, lng);
       if (!p) continue;
-      nakyvat.push({ ...r, p, etaisyys: keskipiste ? Math.hypot(p.x - keskipiste.x, p.y - keskipiste.y) : 0 });
+      nakyvat.push({
+        ...r,
+        lat,
+        lng,
+        p,
+        etaisyys: keskipiste ? Math.hypot(p.x - keskipiste.x, p.y - keskipiste.y) : 0,
+      });
     }
     /*
      * Elävät: kohtaamispiste ensin, SITTEN KAUPUNGIT, sitten lähimmät
@@ -2340,9 +2386,16 @@ export function luoNostot({
        * voi koskaan laueta ja jäsenyys jää pelkän säteen varaan.
        */
       const keskus = { ...city, ...(nostonOmaPaikka(city) ?? {}) };
+      /*
+       * TESTI KERRAN KAUPUNKIA KOHTI, EI RIVIÄ KOHTI (mitattu 20.9.2026,
+       * ks. js/pallolauta/kaupunkiliuska.js): ladonta ajetaan liikkeen
+       * aikana viidesti sekunnissa, ja nimen normalisointi rivien ja
+       * kaupunkien tulona oli eleen suurin JS-erä.
+       */
+      const sisainen = luoSisaisyysTesti(keskus);
       const kartalta = liuskanLahde.filter((r) => r.perhe === 'nosto' && !r.kaupunki
         && !r.vainNimi && typeof r.avaa === 'function'
-        && onKaupunginSisainen(r, keskus));
+        && sisainen(r));
       /*
        * ══ NÄHTÄVYYSKARTALTA SIIRRETYT KOHTEET (PAATOKSET 34 kohta 18
        * b, omistaja 18.9.2026 klo 17.55) ════════════════════════════
@@ -2878,6 +2931,7 @@ export function luoNostot({
           nostot: omat,
           avattuKategoria: liuska.avattuKategoria,
           liiku: Boolean(liuska.liiku),
+          ...(rivi.id ? (liuskanSisalto?.(rivi.id) ?? {}) : {}),
         });
         /*
          * KAUPUNGIN NIMI LUETAAN TUOREENA (Fablen tarkistus 18.9.2026).
@@ -3617,7 +3671,11 @@ export function luoNostot({
         const rivi = kaupunkirivitNyt.find((o) => o.nimi === valinnat.nimi);
         omat = rivi ? (sisaisetKaupungeittain.get(rivi.avain) ?? []) : [];
       }
-      const n = liuskanSuurinRivimaara({ nostot: omat ?? [], liiku: Boolean(valinnat.liiku) })
+      const n = liuskanSuurinRivimaara({
+        nostot: omat ?? [],
+        liiku: Boolean(valinnat.liiku),
+        ...(valinnat.id ? (liuskanSisalto?.(valinnat.id) ?? {}) : {}),
+      })
         // Hiusviiva on oma rivinsä (ks. HIUSVIIVA ON OMA RIVINSÄ),
         // joten kamera-ajon on varattava sille tilaa sekin.
         + 1;
