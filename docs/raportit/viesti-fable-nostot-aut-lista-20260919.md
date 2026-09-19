@@ -40,7 +40,7 @@ Sisältöjä ei ole vielä kirjoitettu.
 | 3 | hahmotelma-traunsee | Traunsee | jarvi | 47,8667 / 13,8 | Traunsee | Salzkammergutin syvä alppijärvi, jonka rannalla kohoaa Traunstein. |
 | 4 | hahmotelma-zell-am-see | Zell am See | jarvi | 47,3167 / 12,8 | Zell am See | Salzburgin Pinzgaun alppijärvi, jonka rannalla on Kitzsteinhorn-vuori. |
 | 5 | hahmotelma-millstatt | Millstätter See | jarvi | 46,795 / 13,5798 | Millstätter See | Kärntenin syvä alppijärvi ja Millstattin luostarin seutu. |
-| 6 | hahmotelma-oetscher | Ötscher | vuori | 47,8558 / 15,2028 | Ötscher | Ala-Itävallan Alppien esikaupunkien puolen korkein huippu, lähellä Mariazellia. |
+| 6 | hahmotelma-oetscher | Ötscher | vuori | 47,8558 / 15,2028 | Ötscher | Ala-Itävallan korkeimpiin kuuluva kalkkialppien huippu lähellä Mariazellia. |
 | 7 | hahmotelma-grossvenediger | Großvenediger | vuori | 47,1094 / 12,3455 | Großvenediger | Hohe Tauernin jäätikkövuori, Itävallan neljänneksi korkein. |
 
 ### Historia (8)
@@ -56,7 +56,7 @@ Sisältöjä ei ole vielä kirjoitettu.
 | 14 | hahmotelma-kreuzenstein | Burg Kreuzenstein | historia | 48,3792 / 16,3089 | Burg Kreuzenstein | Keskiaikaiseksi rakennettu linna Wienin pohjoispuolella, valmistunut 1874–1906. |
 | 15 | hahmotelma-forchtenstein | Forchtenstein | historia | 47,7094 / 16,3308 | Forchtenstein Castle | Esterházyjen linnoitus Burgenlandissa, jossa on suvun aarrekammio. |
 
-### Kulttuuri ja ruoka (6)
+### Kulttuuri ja ruoka (7)
 
 | # | id | nimi | tyyppi | lat / lon | en-Wikipedia | Miksi |
 |--:|----|------|--------|-----------|--------------|-------|
@@ -66,30 +66,30 @@ Sisältöjä ei ole vielä kirjoitettu.
 | 19 | hahmotelma-piber | Piber | ruoka | 47,0806 / 15,1003 | Piber Federal Stud | Lipizzanien valtion siitoslaitos Steiermarkissa. |
 | 20 | hahmotelma-eisenstadt | Eisenstadt | kulttuuri | 47,85 / 16,5167 | Eisenstadt | Burgenlandin pääkaupunki, jossa Haydn palveli Esterházyjen hovissa. |
 | 21 | hahmotelma-lienz | Lienz | kulttuuri | 46,8297 / 12,7697 | Lienz | Itä-Tirolin kaupunki Dolomiittien juurella, jossa Drau ja Isel kohtaavat. |
+| 22 | hahmotelma-bregenzerwald | Bregenzerwald | kulttuuri | 47,2656 / 9,88 | Bregenz Forest | Vorarlbergin metsäinen vuorialue, jonka kylät ovat säilyttäneet puurakennukset. |
 
 ### Kauppa ja tekniikka (4)
 
 | # | id | nimi | tyyppi | lat / lon | en-Wikipedia | Miksi |
 |--:|----|------|--------|-----------|--------------|-------|
-| 22 | hahmotelma-steyr | Steyr | tekniikka | 48,0333 / 14,4167 | Steyr | Rautateollisuuden ja aseidenvalmistuksen kaupunki, joka on kuuluisa Steyr-aseista. |
-| 23 | hahmotelma-hall-in-tirol | Hall in Tirol | kauppa | 47,2833 / 11,5 | Hall in Tirol | Suolan ja rahapajan kaupunki Inn-joen varrella; talleri lyötiin täällä. |
-| 24 | hahmotelma-ferlach | Ferlach | kauppa | 46,5333 / 14,3 | Ferlach | Kärntenin asesepät, jotka ovat tehneet metsästyskivääreitä yli 400 vuotta. |
-| 25 | hahmotelma-st-anton | St. Anton am Arlberg | tekniikka | 47,1167 / 10,2667 | St. Anton am Arlberg | Arlbergin ratatunneli (1880–84) yhdistää Tirolin ja Vorarlbergin; kylä on hiihdon kehto. |
+| 23 | hahmotelma-steyr | Steyr | tekniikka | 48,0333 / 14,4167 | Steyr | Rautateollisuuden ja aseidenvalmistuksen kaupunki, joka on kuuluisa Steyr-aseista. |
+| 24 | hahmotelma-hall-in-tirol | Hall in Tirol | kauppa | 47,2833 / 11,5 | Hall in Tirol | Suolan ja rahapajan kaupunki Inn-joen varrella; talleri lyötiin täällä. |
+| 25 | hahmotelma-ferlach | Ferlach | kauppa | 46,5333 / 14,3 | Ferlach | Kärntenin asesepät, jotka ovat tehneet metsästyskivääreitä yli 400 vuotta. |
+| 26 | hahmotelma-st-anton | St. Anton am Arlberg | tekniikka | 47,1167 / 10,2667 | St. Anton am Arlberg | Arlbergin ratatunneli (1880–84) yhdistää Tirolin ja Vorarlbergin; kylä on hiihdon kehto. |
 
-### Skandaalit ja hetket (4)
+### Skandaalit ja hetket (3)
 
 | # | id | nimi | tyyppi | lat / lon | en-Wikipedia | Miksi |
 |--:|----|------|--------|-----------|--------------|-------|
-| 26 | hahmotelma-oberndorf | Oberndorf | historia | 47,9417 / 12,9417 | Oberndorf bei Salzburg | Paikka, jossa Stille Nacht -joululaulu esitettiin ensimmäisen kerran 1818. |
-| 27 | hahmotelma-mayerling | Mayerling | historia | 48,0469 / 16,0983 | Mayerling | Kruununprinssi Rudolfin metsästyshuvila, jossa hän kuoli 1889. |
-| 28 | hahmotelma-bad-gastein | Bad Gastein | historia | 47,1 / 13,0167 | Bad Gastein | Itävallan ja Preussin Gasteinin sopimus 1865. |
-| 29 | hahmotelma-bregenzerwald | Bregenzerwald | kulttuuri | 47,2656 / 9,88 | Bregenz Forest | Vorarlbergin metsäinen vuorialue, jonka kylät ovat säilyttäneet puurakennukset. |
+| 27 | hahmotelma-oberndorf | Oberndorf | historia | 47,9417 / 12,9417 | Oberndorf bei Salzburg | Paikka, jossa Stille Nacht -joululaulu esitettiin ensimmäisen kerran 1818. |
+| 28 | hahmotelma-mayerling | Mayerling | historia | 48,0469 / 16,0983 | Mayerling | Kruununprinssi Rudolfin metsästyshuvila, jossa hän kuoli 1889. |
+| 29 | hahmotelma-bad-gastein | Bad Gastein | historia | 47,1 / 13,0167 | Bad Gastein | Itävallan ja Preussin Gasteinin sopimus 1865. |
 
 ## Huomiot Fablelle
 
-1. **Etäisyys AUT-renkaaseen**: kaikki 29 ovat renkaan sisällä (mantereella ei saaria). Lähimmät reunalle: Oberndorf 1,2,
-   Hall 9,9 (renkaalta), Neusiedlinjärvi 5,4, St. Anton 5,7, Achensee-tyyppisiä reuna-arvoja ei ole enää mukana. Sinulle
-   pyydetty etäisyys kirjataan raporttiin kohteittain.
+1. **Etäisyys AUT-renkaaseen**: kaikki 29 ovat renkaan sisällä (Itävallassa ei ole saaria eikä rannikkoa). Renkaan reunaa lähimpänä
+   ovat Oberndorf 1,2 (Saksan rajalla), Hallein-tyyppisiä hylättyjä ei ole mukana, Ferlach 3,9, Eisenstadt 4,3, Neusiedlinjärvi 5,4,
+   St. Anton 5,7 ja Großvenediger 6,4; loput ovat yli 6,9. Tarkat luvut kirjataan raporttiin kohteittain.
 2. **Bad Ischl 6,7 Hallstattista**: alle 7, mutta kohde on pyydetty ja kaupunkiraja koskee vain kaupunkeja; sano, jos haluat
    toisen (esim. Wolfgangsee).
 3. **Läheiset nykyisiin**: Kreuzenstein – Klimtin maalaukset 7,2, Oberndorf – Hohensalzburg 7,1, Grossvenediger – Krimml 7,1,
