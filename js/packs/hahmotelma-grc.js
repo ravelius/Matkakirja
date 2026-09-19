@@ -155,6 +155,18 @@ export const HAHMOTELMA_GRC = [
       + 'neljän metrin levyisiksi ja kohoavat lähes 300 metrin korkeuteen. Puisto '
       + 'perustettiin erityisesti harvinaisen kri-kri-vuohen turvapaikaksi.',
     lahde: 'en-Wikipedia "Samaria Gorge", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mitä varten Samarian rotkon kansallispuisto perustettiin erityisesti?',
+      vaihtoehdot: [
+        'Muinaisten raunioiden suojelemiseksi',
+        'Vaellusreitin turvaamiseksi matkailijoille',
+        'Harvinaisen kri-kri-vuohen turvapaikaksi',
+        'Volakiaksen vuoren metsien suojelemiseksi',
+      ],
+      oikea: 2,
+      fakta: 'Rotko ja sen sisällä ollut Samarian kylä on nimetty kylän muinaisen Óssia María '
+        + '-kirkon mukaan.',
+    },
   },
   {
     id: 'hahmotelma-pelion',
@@ -331,6 +343,18 @@ export const HAHMOTELMA_GRC = [
       + 'tuhansia harvinaisia ja suojeltuja vesilintuja.',
     lahde: 'en-Wikipedia "Lake Kerkini", johdanto-osa ja osiot "History" ja "Geography" '
       + '(tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mitä Kerkinijärven paikalla oli ennen kuin siitä tehtiin tekojärvi?',
+      vaihtoehdot: [
+        'Laaja suoalue ja epäsäännöllisiä suojärviä',
+        'Viljeltyjä peltoja ja pieniä maalaiskyliä',
+        'Kuivaa arolakeutta ilman merkittäviä vesistöjä',
+        'Tiheää tammimetsää Strymón-joen molemmin puolin',
+      ],
+      oikea: 0,
+      fakta: 'Kerkinijärvellä on havaittu 227 lintulajia, joista 76 on kirjattu Kreikan '
+        + 'kansalliseen uhanalaisten lajien luetteloon.',
+    },
   },
   {
     id: 'hahmotelma-navagio',
@@ -450,6 +474,18 @@ export const HAHMOTELMA_GRC = [
       + 'vuotta sitten, ja se muotoiltiin erittäin teräviksi kivityökaluiksi ennen '
       + 'maanviljelyn alkua.',
     lahde: 'en-Wikipedia "Milos", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mihin Milosin obsidiaania käytettiin ennen maanviljelyn alkua?',
+      vaihtoehdot: [
+        'Siitä tehtiin koruja kuninkaiden haudoille',
+        'Siitä tehtiin erittäin teräviä kivityökaluja',
+        'Sitä poltettiin lämmitykseen ja ruoanlaittoon',
+        'Siitä rakennettiin asuntojen paksuja muureja',
+      ],
+      oikea: 1,
+      fakta: 'Milosin pronssikautisen Phylakopin kylän ensimmäiset asukkaat olivat tonnikalan '
+        + 'kalastajia.',
+    },
   },
   {
     id: 'hahmotelma-vergina',
@@ -499,6 +535,18 @@ export const HAHMOTELMA_GRC = [
       + 'maailmanperintökohteeksi poikkeuksellisena todistuksena siirtymästä '
       + 'kaupunkivaltioista hellenistiseen ja roomalaiseen valtiorakenteeseen.',
     lahde: 'en-Wikipedia "Vergina", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mitä Aigain teatterissa tapahtui vuonna 336 eaa.?',
+      vaihtoehdot: [
+        'Aleksanteri Suuri kuoli siellä sairauteen',
+        'Persialaiset polttivat kaupungin maan tasalle',
+        'Roomalaiset valtasivat kaupungin ensimmäisenä',
+        'Makedonian kuningas Filippos II murhattiin',
+      ],
+      oikea: 3,
+      fakta: 'Nykyinen Verginan kaupunki perustettiin vasta vuonna 1922 Lausannen sopimuksen '
+        + 'jälkeisessä väestönvaihdossa.',
+    },
   },
   {
     id: 'hahmotelma-pella',
@@ -914,6 +962,17 @@ export const HAHMOTELMA_GRC = [
       + 'avoinna vierailijoille: Suuri Meteoron (perustettu 1356), Varlaam, Pyhä Kolminaisuus '
       + 'ja Pyhä Stefanos, joka muuttui nunnaluostariksi vuonna 1961.',
     lahde: 'en-Wikipedia "Meteora", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Minkä paikan sanotaan ortodoksisessa maailmassa olevan Meteoraa tärkeämpi?',
+      vaihtoehdot: [
+        'Athos-vuori',
+        'Sinain vuori',
+        'Olympos-vuori',
+        'Delfoin pyhäkkö',
+      ],
+      oikea: 0,
+      fakta: 'Meteoran nimi tarkoittaa korkeaa tai kohotettua, ja se on sukua sanalle meteori.',
+    },
   },
   {
     id: 'hahmotelma-athos',
@@ -1033,6 +1092,17 @@ export const HAHMOTELMA_GRC = [
       + '(1815–1899), mukaan nimetty Averoff-galleria.',
     lahde: 'en-Wikipedia "Metsovo", johdanto-osa ja osiot "Notable people" (tarkistettu '
       + '19.9.2026).',
+    visa: {
+      kysymys: 'Minkä kansan elämän suurin keskus Kreikassa Metsovo on?',
+      vaihtoehdot: [
+        'Sarakatsanien eli paimentolaisten',
+        'Pomakkien eli slaavinkielisten muslimien',
+        'Aromanialaisten eli vlahien kansan',
+        'Arvanittien eli kreikkalaisten albaanien',
+      ],
+      oikea: 2,
+      fakta: 'Aromanian kielellä Metsovon nimi on Aminciu.',
+    },
   },
   {
     id: 'hahmotelma-korfu',
@@ -1241,6 +1311,19 @@ export const HAHMOTELMA_GRC = [
       + 'Themistokles sai ateenalaiset käyttämään noin vuonna 483 eaa. tehdyn suuren '
       + 'hopeasuonen löydön tuotot laivaston laajentamiseen 200 triremiin.',
     lahde: 'en-Wikipedia "Lavrio", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mihin Themistokles sai ateenalaiset käyttämään Lavrion hopeasuonen tuotot noin '
+        + 'vuonna 483 eaa.?',
+      vaihtoehdot: [
+        'Akropoliin temppeleiden rakentamiseen',
+        'Ateenan sotalaivaston laajentamiseen',
+        'Kaupungin pitkien muurien rakentamiseen',
+        'Palkkasoturien maksamiseen Spartaa vastaan',
+      ],
+      oikea: 1,
+      fakta: 'Lavrion kaivokset olivat Ateenan valtion omaisuutta, ja niissä työskenteli antiikin '
+        + 'aikana yksinomaan orjia.',
+    },
   },
   {
     id: 'hahmotelma-kalavryta',
@@ -1290,6 +1373,18 @@ export const HAHMOTELMA_GRC = [
       + 'merkittävässä asemassa: Agia Lavran luostarissa Vanhan Patran piispa Germanos III '
       + 'nosti kapinan lipun 21. maaliskuuta 1821.',
     lahde: 'en-Wikipedia "Kalavryta", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mitä piispa Germanos III teki Agia Lavran luostarissa 21. maaliskuuta 1821?',
+      vaihtoehdot: [
+        'Pyysi sulttaanilta armoa kaupungille',
+        'Vihki käyttöön kaupungin hammasraiteen',
+        'Luovutti luostarin avaimet ottomaaneille',
+        'Nosti kapinan lipun ottomaaneja vastaan',
+      ],
+      oikea: 3,
+      fakta: 'Kalavrytan lähellä Kastriassa on Järvien luola, jonka sisällä on kauniita järviä ja '
+        + 'outoja kivimuodostelmia.',
+    },
   },
   {
     id: 'hahmotelma-chios',
@@ -1496,6 +1591,18 @@ export const HAHMOTELMA_GRC = [
       + 'lakeja. Thermopylai on ainoa riittävän suuri maayhteys Lokriin ja Thessalian '
       + 'välillä, ja nykyisen moottoritien itäpuolella on kuningas Leonidas I:n muistomerkki.',
     lahde: 'en-Wikipedia "Thermopylae", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Mitä Simonideen epitafi kehottaa ohikulkijaa tekemään?',
+      vaihtoehdot: [
+        'Palaamaan Spartaan ja vaatimaan kaatuneiden puolesta kostoa',
+        'Sytyttämään muistotulen Leonidaan haudalle Spartassa',
+        'Kertomaan spartalaisille, että he kaatuivat lakeja noudattaen',
+        'Varoittamaan persialaisia kuumien lähteiden kirouksesta',
+      ],
+      oikea: 2,
+      fakta: 'Taistelupaikka on nykyisin noin 20 metrin paksuisen maakerroksen alla, koska '
+        + 'Spercheios-joen tuoma sedimentti on siirtänyt rantaviivaa kauemmas.',
+    },
   },
   {
     id: 'hahmotelma-missolonghi',
@@ -1595,5 +1702,18 @@ export const HAHMOTELMA_GRC = [
       + 'laivat taistelivat ankkurissa. Liittoutuneiden voitto perustui ylivoimaiseen '
       + 'tulivoimaan ja tykkitaitoon.',
     lahde: 'en-Wikipedia "Battle of Navarino", johdanto-osa (tarkistettu 19.9.2026).',
+    visa: {
+      kysymys: 'Miksi Navarinon taistelu on merkittävä meritaisteluiden historiassa?',
+      vaihtoehdot: [
+        'Se oli ensimmäinen taistelu, jossa käytettiin höyrylaivoja',
+        'Se oli viimeinen suuri meritaistelu pelkillä purjelaivoilla',
+        'Siinä kaikki laivat taistelivat liikkeessä ilman ankkuria',
+        'Siinä kreikkalaiset voittivat ottomaanit yksin ilman apua',
+      ],
+      oikea: 1,
+      fakta: 'Taistelu syntyi pikemminkin vahingossa kuin suunnitelmallisesti, kun amiraali '
+        + 'Codrington yritti pakottaa ottomaanien komentajan noudattamaan liittoutuneiden '
+        + 'ohjeita.',
+    },
   },
 ];
