@@ -1583,6 +1583,70 @@ export const EUROPE_ARTIKKELIT = {
   },
 
   /*
+   * LJUBLJANA (20.9.2026, omistajan päätös 19.9.2026: Slovenia saa
+   * pelikaupungin Ljubljana). Teksti on kirjoitettu omin sanoin
+   * en-Wikipedian artikkeleista "Ljubljana" ja "Ljubljana Castle"
+   * (luettu 20.9.2026), 1873-näkökulmasta: Krainin herttuakunnan
+   * pääkaupunki (saksaksi Laibach) Itävallan keisarikunnassa, rautatie
+   * Wienistä 1849 ja Triesteen 1857, linna läänin vankilana, Tivoli-
+   * puisto ja Napoleonin Illyria 1809–1813, lohikäärme kaupungin
+   * tunnuksena sekä slovenien ja saksalaisten kilpailu 1800-luvulla.
+   * Vuoden 1895 maanjäristystä, Lohikäärmesiltaa (1901) ja Plečnikin
+   * töitä (1920–30-luvut) EI mainita nykyhetken asioina — ne tulevat
+   * vasta isoisän matkan jälkeen.
+   */
+  Ljubljana: {
+    intro: 'Ljubljana on Krainin herttuakunnan pääkaupunki '
+      + 'Ljubljanica-joen varrella, ja saksaksi sitä kutsutaan '
+      + '**Laibachiksi**. Kaupunki kuuluu Itävallan keisarikuntaan, ja se '
+      + 'on pieni: vielä vuonna 1895 asukkaita on vasta noin 31 000. '
+      + 'Slovenit ja saksalaiset asuvat samoilla kaduilla.'
+      + '\n\n'
+      + 'Kaupungin yllä kohoaa **Ljubljanan linna** Linnavuoren '
+      + 'huipulla. Keskiaikainen linnoitus on menettänyt merkityksensä ja '
+      + 'rapistuu, ja sitä käytetään läänin vankilana. Kaupungin tunnus '
+      + 'on **lohikäärme**, joka koristaa linnan tornia ja vaakunaa; se '
+      + 'periytyy Pyhän Yrjön legendasta.'
+      + '\n\n'
+      + 'Wienistä tulee nyt höyryjuna: rautatie ulotettiin Ljubljanaan '
+      + 'vuonna 1849 ja Triesteen 1857, ja se on tehnyt kaupungista '
+      + 'kulkureitin Itävallan sisämaan ja Adrianmeren välillä. Slovenit '
+      + 'ja saksalaiset kilpailevat keskenään yhdistyksissä ja '
+      + 'urheiluseuroissa.',
+    teksti: 'Ljubljanan seudulla seisoi antiikin aikana roomalainen '
+      + 'Emona, ja keskiaikaisen kaupungin asutus syntyi '
+      + 'Ljubljanica-joen ja linnavuoren ympärille 1100-luvun toisella '
+      + 'puoliskolla. Vuonna 1278 Ljubljana siirtyi osana Krainia '
+      + 'Habsburgien haltuun, ja se pysyi heidän alaisenaan vuoteen 1918, '
+      + 'Napoleonin ajan lyhyttä väliaikaa lukuun ottamatta. Kaupungin '
+      + 'saksankielinen nimi Laibach on ollut käytössä jo keskiajalta '
+      + 'asti.'
+      + '\n\nVuosina 1809–1813 seutu kuului Napoleonin Illyrian '
+      + 'maakuntiin, ja Ljubljana (Laybach) oli niiden pääkaupunki. '
+      + 'Ranskalaiset jättivät jälkeensä Tivoli-puiston, jonka '
+      + 'ranskalainen insinööri Jean Blanchard suunnitteli vuonna 1813. '
+      + 'Napoleonin tappion jälkeen kaupunki palasi Itävallalle ja oli '
+      + 'vuosina 1815–1849 Illyrian kuningaskunnan hallinnollinen '
+      + 'keskus. Vuonna 1821 siellä kokoontui Laibachin kongressi, joka '
+      + 'vahvisti Euroopan poliittiset rajat vuosikymmeniksi.'
+      + '\n\nLinnavuoren linna on vaihtanut tehtäväänsä: 1600- ja '
+      + '1700-luvulla se oli asevarasto, ranskalaisaikana kasarmi ja '
+      + 'sotilassairaala, ja vuodesta 1813 se on toiminut läänin '
+      + 'vankilana. Vankilan vanhimpaan osaan vangit laskettiin '
+      + 'kuiluun köydellä tai ketjulla. Linna ei ole enää '
+      + 'hallitsijan asuinpaikka eikä puolustuslinnoitus, joten sen '
+      + 'ylläpito on käynyt liian kalliiksi ja muureja rapistuu.'
+      + '\n\nRautatie on muuttanut kaupunkia: ensimmäinen juna saapui '
+      + 'Wienistä vuonna 1849, ja rata jatkui Triesteen 1857. '
+      + 'Slovenien ja saksalaisten kilpailu näkyy jopa urheiluseuroissa: '
+      + 'ensimmäinen kaupungin urheiluseura, Južni Sokol, perustettiin '
+      + 'vuonna 1863. Ljubljanan 1500-luvun puhekieli oli pohjana '
+      + 'slovenian kirjakielelle, jonka perustan laski uskonpuhdistaja '
+      + 'Primož Trubar.',
+    lahde: 'Wikipedia (CC BY-SA)',
+  },
+
+  /*
    * TEKSTIREMONTTI 20.8.2026, erä E1: intro on nyt etusivun leipäteksti
    * kappaleineen ja lihavointeineen (ks. Rooman lohkokommentti yllä).
    * Muuri ja kaupungin jako kerrotaan neutraalina historiana ilman

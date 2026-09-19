@@ -560,6 +560,8 @@ const SHELL = [
   // Bryssel (19.9.2026, omistajan päätös: Belgian pelikaupunki, pilotti).
   // Kevyt pakki samasta syystä kuin kuusi edellä.
   './js/packs/fokusvirta-bryssel.js',
+  // Ljubljana (20.9.2026, omistajan päätös: Slovenian pelikaupunki).
+  './js/packs/fokusvirta-ljubljana.js',
   // Maat ilman omaa fokusvirtaa: kadonneiden ihmeiden erä 26.8.2026
   // ja Matkakirjan ihmeiden Euroopan erä 27.8.2026.
   './js/packs/fokuskohteet-egy.js',

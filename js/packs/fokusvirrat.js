@@ -37,6 +37,7 @@ import { FOKUSVIRTA_WIEN } from './fokusvirta-wien.js';
 import { FOKUSVIRTA_SEVILLA } from './fokusvirta-sevilla.js';
 import { FOKUSVIRTA_BERGEN } from './fokusvirta-bergen.js';
 import { FOKUSVIRTA_BRYSSEL } from './fokusvirta-bryssel.js';
+import { FOKUSVIRTA_LJUBLJANA } from './fokusvirta-ljubljana.js';
 import { FOKUSVIRTA_AMSTERDAM } from './fokusvirta-amsterdam.js';
 import { FOKUSVIRTA_DUBLIN } from './fokusvirta-dublin.js';
 import { FOKUSVIRTA_EDINBURGH } from './fokusvirta-edinburgh.js';
@@ -90,6 +91,7 @@ import { FOKUSVIRTA_TROMSSA } from './fokusvirta-tromssa.js';
  */
 export const KEVYET_FOKUSVIRRAT = new Set([
   'alpit', 'islanti', 'kreeta', 'lappi', 'sisilia', 'tromssa', 'bryssel',
+  'ljubljana',
 ]);
 
 export const FOKUSVIRRAT = {
@@ -264,6 +266,13 @@ export const FOKUSVIRRAT = {
    * pulun kuplan heti, täysi pino on oma sisältöerä.
    */
   bryssel: FOKUSVIRTA_BRYSSEL,
+  /*
+   * LJUBLJANA (20.9.2026, omistajan päätös 19.9.2026: Slovenia saa
+   * pelikaupungin Ljubljana). Kevyt pakki samasta syystä kuin Bryssel
+   * ja muut KEVYET_FOKUSVIRRAT: peli tarvitsee matkakirjan ja pulun
+   * kuplan heti, täysi pino on oma sisältöerä.
+   */
+  ljubljana: FOKUSVIRTA_LJUBLJANA,
 };
 
 /** Kaupungin fokusvirta tai null, jos kaupungille ei ole sisältöä. */

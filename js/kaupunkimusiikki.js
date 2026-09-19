@@ -166,6 +166,7 @@ export const ALUEEN_MAAT = {
   CHE: 'keski-eurooppa',
   POL: 'keski-eurooppa',
   HUN: 'keski-eurooppa',
+  SVN: 'keski-eurooppa',
   ESP: 'valimeri',
   PRT: 'valimeri',
   ITA: 'valimeri',
