@@ -65,9 +65,10 @@ const RUUTU = { nimi: '390 px', width: 390, height: 844, dpr: 2 };
 const NOPAN_KATTO_MS = 3000;
 
 const KAIKKI_SELAIMET = [
-  { nimi: 'webkit', avaa: () => paketti.webkit.launch() },
+  { nimi: 'webkit', latauskatto: 90000, avaa: () => paketti.webkit.launch() },
   {
     nimi: 'chromium',
+    latauskatto: 60000,
     avaa: () => paketti.chromium.launch({
       executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium',
     }),
@@ -83,7 +84,15 @@ const TYYPIT = {
   '.geojson': 'application/json', '.webmanifest': 'application/manifest+json',
   '.mp3': 'audio/mpeg', '.woff2': 'font/woff2',
 };
-const palvelin = http.createServer((req, res) => {
+/*
+ * KOKEELLINEN VIIVE JA KATTO (vain mittaukseen, erä opus-local-goto
+ * 19.9.2026): SAVUKE_VIIVE_MS viivästää jokaista paikallista vastausta ja
+ * SAVUKE_LATAUSKATTO_MS korvaa selaimen latauskaton. Niillä todennetaan,
+ * että latauksen aikakatkaisu päätyy FAIL-riviksi eikä poikkeukseksi.
+ */
+const VIIVE_MS = Number(process.env.SAVUKE_VIIVE_MS) || 0;
+const palvelin = http.createServer(async (req, res) => {
+  if (VIIVE_MS) await new Promise((v) => setTimeout(v, VIIVE_MS));
   const polku = join(JUURI, req.url.split('?')[0] === '/' ? 'index.html' : req.url.split('?')[0]);
   if (!existsSync(polku)) { res.writeHead(404); res.end(); return; }
   res.writeHead(200, { 'content-type': TYYPIT[extname(polku)] ?? 'application/octet-stream' });
@@ -232,8 +241,15 @@ async function avaaKonteksti(selain, tallenne) {
   const sivu = await ctx.newPage();
   const virheet = [];
   sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
-  await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
-  await sivu.route(/wikimedia\.org/, (r) => r.abort());
+  /*
+   * KAIKKI EI-PAIKALLINEN ESTETÄÄN, ämpäri palvellaan Noden kautta.
+   * WebKit pitää verkkoon lähteneet pyynnöt vireillä, ja kuormassa yksikin
+   * roikkuva ulkopuolinen haku (workers.dev, Wikimedia, archive.org,
+   * Freesound, fontit, analytiikka) venytti latausta kohti goto-kattoa.
+   * Playwright ajaa reitit käänteisessä rekisteröintijärjestyksessä,
+   * joten alla oleva ämpäri-reitti voittaa tämän.
+   */
+  await sivu.route((url) => !/^(127\.0\.0\.1|localhost)$/.test(url.hostname), (r) => r.abort());
   await sivu.route(/media\.matkakirja\.app|r2\.dev\//, async (route) => {
     const v = await ampariHaku(route.request().url());
     if (!v || v.status !== 200) { route.abort(); return; }
@@ -268,16 +284,39 @@ const VALITSE_LAIVA = `async () => {
   return { ok: true };
 }`;
 
-async function odotaPeli(sivu, { uudelleen = false } = {}) {
-  if (uudelleen) await sivu.reload({ waitUntil: 'domcontentloaded', timeout: 60000 });
-  else await sivu.goto(`${osoite}?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: 60000 });
-  await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: 90000 });
-  await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: 60000 });
+/**
+ * Latauksen aikakatkaisu nimetään omaksi virheekseen, jotta selaimen ajo
+ * voi kirjata sen FAIL-riviksi eikä koko savuke kaadu ennen yhtään
+ * väitettä (v1951 CI: WebKit goto domcontentloaded aikakatkaistiin
+ * kuormassa, rivi "0/0 kaatui poikkeukseen").
+ */
+class LatausKatko extends Error {}
+
+async function odotaPeli(sivu, katto, { uudelleen = false } = {}) {
+  const alkuMs = Date.now();
+  try {
+    if (uudelleen) await sivu.reload({ waitUntil: 'domcontentloaded', timeout: katto });
+    else await sivu.goto(`${osoite}?lauta=pallo`, { waitUntil: 'domcontentloaded', timeout: katto });
+    await sivu.waitForFunction(() => window.matkakirja?.ui?.svg, null, { timeout: katto });
+    await sivu.waitForFunction(() => Boolean(window.matkakirja?.ui?.pallolauta), null, { timeout: katto });
+  } catch (e) {
+    if (e?.name !== 'TimeoutError') throw e;
+    throw new LatausKatko(`${Date.now() - alkuMs} ms, ${String(e.message).split('\n')[0]}`);
+  }
   await sivu.evaluate(async () => {
     const l = window.matkakirja.ui.pallolauta;
     await l.saavu({ kesto: 0 });
     await new Promise((v) => setTimeout(v, 1200));
   });
+}
+
+/** Selaimen ajon poikkeus FAIL-riviksi; seuraava selain ajetaan silti. */
+function kirjaaKaatuminen(tunnus, katto, e) {
+  if (e instanceof LatausKatko) {
+    vaadi(`${tunnus}: peli ei latautunut ${katto} ms:ssa (kuorma?)`, false, e.message);
+  } else {
+    vaadi(`${tunnus}: ajo kaatui poikkeukseen`, false, String(e?.stack ?? e).split('\n').slice(0, 2).join(' | '));
+  }
 }
 
 for (const selainTieto of SELAIMET) {
@@ -287,97 +326,101 @@ for (const selainTieto of SELAIMET) {
   });
   if (!selain) continue;
   const tunnus = selainTieto.nimi;
+  const katto = Number(process.env.SAVUKE_LATAUSKATTO_MS) || selainTieto.latauskatto;
+  try {
+    /* ── 1–2. satamasta merelle, ja 3 sama uudelleenladattuna ────── */
+    {
+      const { ctx, sivu, virheet } = await avaaKonteksti(selain, satamassa());
+      await odotaPeli(sivu, katto);
 
+      const valinta = await sivu.evaluate(`(${VALITSE_LAIVA})()`);
+      tieto(`${tunnus}: laivan valinta`, JSON.stringify(valinta));
+      const satamassaTila = await sivu.evaluate(`(${LUE})()`);
+      tieto(`${tunnus}: tila laivalipun jälkeen`, JSON.stringify(satamassaTila));
+      if (KUVAKANSIO) {
+        await sivu.screenshot({ path: join(KUVAKANSIO, `tanger-noppa-${tunnus}.png`), scale: 'css' });
+      }
+      vaadi(`${tunnus}: 1. laivalippu vie nopanheittoon ja toimintorivi elää`,
+        satamassaTila.vaihe === 'roll' && satamassaTila.tapa === 'sea'
+          && satamassaTila.noppaa && !satamassaTila.riviJumissa && !satamassaTila.busy,
+        JSON.stringify(satamassaTila));
 
-  /* ── 1–2. satamasta merelle, ja 3 sama uudelleenladattuna ────── */
-  {
-    const { ctx, sivu, virheet } = await avaaKonteksti(selain, satamassa());
-    await odotaPeli(sivu);
-
-    const valinta = await sivu.evaluate(`(${VALITSE_LAIVA})()`);
-    tieto(`${tunnus}: laivan valinta`, JSON.stringify(valinta));
-    const satamassaTila = await sivu.evaluate(`(${LUE})()`);
-    tieto(`${tunnus}: tila laivalipun jälkeen`, JSON.stringify(satamassaTila));
-    if (KUVAKANSIO) {
-      await sivu.screenshot({ path: join(KUVAKANSIO, `tanger-noppa-${tunnus}.png`), scale: 'css' });
+      const alku = Date.now();
+      const { tulos } = await napautaNoppa(sivu);
+      const eteni = await sivu
+        .waitForFunction(() => window.matkakirja.game.phase !== 'roll', null,
+          { timeout: NOPAN_KATTO_MS, polling: 100 })
+        .then(() => true).catch(() => false);
+      const kesto = Date.now() - alku;
+      const heiton = await sivu.evaluate(`(${LUE})()`);
+      tieto(`${tunnus}: nopan napautus`, `${tulos}, ${kesto} ms, ${JSON.stringify(heiton)}`);
+      vaadi(`${tunnus}: 2. nopan napautus vie siirron eteenpäin alle ${NOPAN_KATTO_MS} ms`,
+        tulos === 'napautettu' && eteni && heiton.vaihe === 'move' && heiton.kohteita > 0,
+        `${tulos} / ${kesto} ms / ${JSON.stringify(heiton)}`);
+      vaadi(`${tunnus}: ei sivuvirheitä satamassa`, virheet.length === 0,
+        virheet.join(' | ').slice(0, 300));
+      await ctx.close();
     }
-    vaadi(`${tunnus}: 1. laivalippu vie nopanheittoon ja toimintorivi elää`,
-      satamassaTila.vaihe === 'roll' && satamassaTila.tapa === 'sea'
-        && satamassaTila.noppaa && !satamassaTila.riviJumissa && !satamassaTila.busy,
-      JSON.stringify(satamassaTila));
 
-    const alku = Date.now();
-    const { tulos } = await napautaNoppa(sivu);
-    const eteni = await sivu
-      .waitForFunction(() => window.matkakirja.game.phase !== 'roll', null,
-        { timeout: NOPAN_KATTO_MS, polling: 100 })
-      .then(() => true).catch(() => false);
-    const kesto = Date.now() - alku;
-    const heiton = await sivu.evaluate(`(${LUE})()`);
-    tieto(`${tunnus}: nopan napautus`, `${tulos}, ${kesto} ms, ${JSON.stringify(heiton)}`);
-    vaadi(`${tunnus}: 2. nopan napautus vie siirron eteenpäin alle ${NOPAN_KATTO_MS} ms`,
-      tulos === 'napautettu' && eteni && heiton.vaihe === 'move' && heiton.kohteita > 0,
-      `${tulos} / ${kesto} ms / ${JSON.stringify(heiton)}`);
-    vaadi(`${tunnus}: ei sivuvirheitä satamassa`, virheet.length === 0,
-      virheet.join(' | ').slice(0, 300));
-    await ctx.close();
-  }
+    /* ── 3. uudelleenlataus kesken laivamatkan ───────────────────── */
+    {
+      const { tallenne, pos } = merella();
+      tieto(`${tunnus}: merellä-tallennuksen paikka`, JSON.stringify(pos));
+      const { ctx, sivu, virheet } = await avaaKonteksti(selain, tallenne);
+      await odotaPeli(sivu, katto);
+      /*
+       * OIKEA UUDELLEENLATAUS, EI PELKKÄ AVAUS. Löydös 2:n toinen puoli
+       * oli juuri se, ettei sivun lataaminen uudestaan vapauttanut
+       * pelaajaa: peli tallentaa itsensä, joten toinen lataus lukee
+       * PELIN oman tallennuksen eikä savukkeen kylvämää alkutilaa.
+       */
+      await sivu.waitForTimeout(1200);
+      await odotaPeli(sivu, katto, { uudelleen: true });
+      await sivu.waitForTimeout(1500);
+      const merella1 = await sivu.evaluate(`(${LUE})()`);
+      tieto(`${tunnus}: tila uudelleenlatauksen jälkeen merellä`, JSON.stringify(merella1));
+      if (KUVAKANSIO) {
+        await sivu.screenshot({ path: join(KUVAKANSIO, `tanger-merella-${tunnus}.png`), scale: 'css' });
+      }
+      /*
+       * SAAPUMISKERTOMUS EI SAA OLLA RUUDULLA MERELLÄ. Nappula on kaaren
+       * askelpisteessä, joten mikään kaupunki ei ole juuri saavuttu —
+       * "Voi että — Tanger!" oli löydöksen 2 toistuva puoli.
+       */
+      vaadi(`${tunnus}: 3a. uudelleenlataus merellä ei toista saapumiskertomusta`,
+        !merella1.kertomus.includes('Voi että'), JSON.stringify(merella1));
+      vaadi(`${tunnus}: 3b. nappula on yhä merellä eikä peli palannut satamaan`,
+        merella1.paikka.startsWith('tanger|dakar'), JSON.stringify(merella1));
 
-  /* ── 3. uudelleenlataus kesken laivamatkan ───────────────────── */
-  {
-    const { tallenne, pos } = merella();
-    tieto(`${tunnus}: merellä-tallennuksen paikka`, JSON.stringify(pos));
-    const { ctx, sivu, virheet } = await avaaKonteksti(selain, tallenne);
-    await odotaPeli(sivu);
-    /*
-     * OIKEA UUDELLEENLATAUS, EI PELKKÄ AVAUS. Löydös 2:n toinen puoli
-     * oli juuri se, ettei sivun lataaminen uudestaan vapauttanut
-     * pelaajaa: peli tallentaa itsensä, joten toinen lataus lukee
-     * PELIN oman tallennuksen eikä savukkeen kylvämää alkutilaa.
-     */
-    await sivu.waitForTimeout(1200);
-    await odotaPeli(sivu, { uudelleen: true });
-    await sivu.waitForTimeout(1500);
-    const merella1 = await sivu.evaluate(`(${LUE})()`);
-    tieto(`${tunnus}: tila uudelleenlatauksen jälkeen merellä`, JSON.stringify(merella1));
-    if (KUVAKANSIO) {
-      await sivu.screenshot({ path: join(KUVAKANSIO, `tanger-merella-${tunnus}.png`), scale: 'css' });
+      /*
+       * JA MATKA JATKUU. Merellä ainoa tapa on laiva; riippumatta siitä,
+       * onko vaihe latauksen jäljiltä 'roll' (sama versio) vai 'action'
+       * (välitila pyyhitty version vaihtuessa, js/main.js nollaaValitila),
+       * pelaajan on päästävä eteenpäin samalla eleellä kuin satamassa.
+       */
+      if (merella1.vaihe !== 'roll') await sivu.evaluate(`(${VALITSE_LAIVA})()`);
+      const alku = Date.now();
+      const { tulos } = await napautaNoppa(sivu);
+      const eteni = await sivu
+        .waitForFunction(() => window.matkakirja.game.phase !== 'roll', null,
+          { timeout: NOPAN_KATTO_MS, polling: 100 })
+        .then(() => true).catch(() => false);
+      const kesto = Date.now() - alku;
+      const jalkeen = await sivu.evaluate(`(${LUE})()`);
+      tieto(`${tunnus}: nopan napautus merellä`, `${tulos}, ${kesto} ms, ${JSON.stringify(jalkeen)}`);
+      vaadi(`${tunnus}: 3c. nopan napautus merellä vie eteenpäin alle ${NOPAN_KATTO_MS} ms`,
+        tulos === 'napautettu' && eteni && jalkeen.vaihe === 'move' && jalkeen.kohteita > 0,
+        `${tulos} / ${kesto} ms / ${JSON.stringify(jalkeen)}`);
+      vaadi(`${tunnus}: ei sivuvirheitä merellä`, virheet.length === 0,
+        virheet.join(' | ').slice(0, 300));
+      await ctx.close();
     }
-    /*
-     * SAAPUMISKERTOMUS EI SAA OLLA RUUDULLA MERELLÄ. Nappula on kaaren
-     * askelpisteessä, joten mikään kaupunki ei ole juuri saavuttu —
-     * "Voi että — Tanger!" oli löydöksen 2 toistuva puoli.
-     */
-    vaadi(`${tunnus}: 3a. uudelleenlataus merellä ei toista saapumiskertomusta`,
-      !merella1.kertomus.includes('Voi että'), JSON.stringify(merella1));
-    vaadi(`${tunnus}: 3b. nappula on yhä merellä eikä peli palannut satamaan`,
-      merella1.paikka.startsWith('tanger|dakar'), JSON.stringify(merella1));
 
-    /*
-     * JA MATKA JATKUU. Merellä ainoa tapa on laiva; riippumatta siitä,
-     * onko vaihe latauksen jäljiltä 'roll' (sama versio) vai 'action'
-     * (välitila pyyhitty version vaihtuessa, js/main.js nollaaValitila),
-     * pelaajan on päästävä eteenpäin samalla eleellä kuin satamassa.
-     */
-    if (merella1.vaihe !== 'roll') await sivu.evaluate(`(${VALITSE_LAIVA})()`);
-    const alku = Date.now();
-    const { tulos } = await napautaNoppa(sivu);
-    const eteni = await sivu
-      .waitForFunction(() => window.matkakirja.game.phase !== 'roll', null,
-        { timeout: NOPAN_KATTO_MS, polling: 100 })
-      .then(() => true).catch(() => false);
-    const kesto = Date.now() - alku;
-    const jalkeen = await sivu.evaluate(`(${LUE})()`);
-    tieto(`${tunnus}: nopan napautus merellä`, `${tulos}, ${kesto} ms, ${JSON.stringify(jalkeen)}`);
-    vaadi(`${tunnus}: 3c. nopan napautus merellä vie eteenpäin alle ${NOPAN_KATTO_MS} ms`,
-      tulos === 'napautettu' && eteni && jalkeen.vaihe === 'move' && jalkeen.kohteita > 0,
-      `${tulos} / ${kesto} ms / ${JSON.stringify(jalkeen)}`);
-    vaadi(`${tunnus}: ei sivuvirheitä merellä`, virheet.length === 0,
-      virheet.join(' | ').slice(0, 300));
-    await ctx.close();
+  } catch (e) {
+    kirjaaKaatuminen(tunnus, katto, e);
+  } finally {
+    await selain.close().catch(() => {});
   }
-
-  await selain.close();
 }
 
 palvelin.close();

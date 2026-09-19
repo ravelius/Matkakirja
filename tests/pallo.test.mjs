@@ -247,7 +247,7 @@ test('napakannet peittävät sauman laattojen omalla sävyllä eivätkä koske H
   assert.ok(pohjoinen.every((v, i) => Math.abs(v - MERI_SAVY[i]) <= 10), 'pohjoinen kansi on merisävyä');
   // Kannet asennetaan laattamoottorihaarasta, ja niitä on kaksi.
   const pallo = lue('../js/pallo.js');
-  assert.match(pallo, /globeTileEngineMaxLevel\([\s\S]{0,200}?\);\n\s*asennaLaatunosto\(pallo, kotelo\);\n\s*asennaNapakannet\(pallo\);/);
+  assert.match(pallo, /globeTileEngineMaxLevel\([\s\S]{0,200}?\);\n\s*asennaLaatunosto\(pallo, kotelo\);\n(?:\s*asenna\w+\(pallo\);\n)*\s*asennaNapakannet\(pallo\);/);
   assert.match(pallo, /kansi\(false, NAPAKANSI_POHJOINEN/);
   assert.match(pallo, /kansi\(true, NAPAKANSI_ETELA/);
   assert.match(pallo, /new LaattaMateriaali\(\{ color: savy \}\)/, 'materiaali laatoilta: valaisematon kansi näkyisi tummana kiekkona');
