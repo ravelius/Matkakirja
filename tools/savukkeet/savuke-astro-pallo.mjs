@@ -1881,7 +1881,33 @@ async function ajaNakyma(nimi) {
       }).catch(() => {});
     }
     console.log(`    LAASTARI48 ${JSON.stringify(laastari48)}`);
-    vaadi(t('48: laastarissa ei tasaisia MERIVARI-suorakaiteita (Kreeta)'),
+    if (ULOS && process.env.LAASTARIN_DUMP === '1') {
+      const pienet = await s.evaluate(() => {
+        const ulos = [];
+        window.matkakirja.ui.pallonInstanssi.scene().traverse((o) => {
+          const ud = o.userData?.laattakerros;
+          const kuva = o.material?.map?.image;
+          if (!ud || !kuva) return;
+          const c = document.createElement('canvas');
+          c.width = 96; c.height = 96;
+          const x = c.getContext('2d');
+          x.fillStyle = '#f0f'; x.fillRect(0, 0, 96, 96);
+          x.drawImage(kuva, 0, 0, 96, 96);
+          ulos.push({ avain: `${ud.z}-${ud.sarake}-${ud.rivi}`, kuva: c.toDataURL('image/png'), leveys: kuva.width, korkeus: kuva.height, nakyy: o.visible });
+        });
+        return ulos;
+      });
+      await s.evaluate(() => { window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.piilotaPilvet?.(true); window.matkakirja.ui.pallolauta?.heraa?.(); });
+      await s.waitForTimeout(400);
+      await s.screenshot({ path: join(ULOS, 'laatat48-pilvet-pois.jpg'), type: 'jpeg', quality: 70 }).catch(() => {});
+      await s.evaluate(() => { window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.piilotaPilvet?.(false); window.matkakirja.ui.pallolauta?.heraa?.(); });
+      await s.waitForTimeout(400);
+      await s.screenshot({ path: join(ULOS, 'laatat48-pilvet-takaisin.jpg'), type: 'jpeg', quality: 70 }).catch(() => {});
+      const { mkdirSync: md, writeFileSync: wf } = await import('node:fs');
+      md(join(ULOS, 'laatat48'), { recursive: true });
+      for (const p of pienet) wf(join(ULOS, 'laatat48', `${p.avain}-${p.leveys}x${p.korkeus}${p.nakyy ? '' : '-piilo'}.png`), Buffer.from(p.kuva.split(',')[1], 'base64'));
+    }
+    vaadi(t('48: laastarissa ei tasaisia MERIVARI-suorakaiteita eikä orpoja laattoja (Kreeta)'),
       /*
        * RAJA 1 % LOHKOISTA: vastakoe (korjausta edeltävä koodi) 20 407 /
        * 73 728 = 27,7 %, korjattu 96 / 73 728 = 0,13 % (19.9.2026; jäännös
@@ -1889,7 +1915,14 @@ async function ajaNakyma(nimi) {
        * viesti-fable-laastari-20260919.md).
        */
       laastari48.laastarilla && laastari48.kankaita > 0
-        && laastari48.tasaisia <= 0.01 * laastari48.lohkoja,
+        && laastari48.tasaisia <= 0.01 * laastari48.lohkoja
+        /*
+         * EI ORPOJA LAATTOJA: näyttämössä ei ole laattakerroksen verkkoa,
+         * jota kerros ei tunne (läiskälaatta, mitattu 19.9.2026: 74
+         * kangasta, 72 laattaa; ylimääräiset olivat pelilaudan
+         * z7-seepialaattoja 7/92/40 ja 7/94/41).
+         */
+        && laastari48.kankaita <= laastari48.laattoja,
       JSON.stringify(laastari48));
     await s.evaluate((pov) => {
       const { ui } = window.matkakirja;

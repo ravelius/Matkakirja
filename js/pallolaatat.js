@@ -2176,7 +2176,7 @@ export function luoLaattakerros({
     // puuttuva laatta ei ole värillinen laatta.
     t.varillinen = kerrostasot.some((k, i) => k.vari && kuvat[i]);
     t.katkaisin = null;
-    if (purettu || !laatat.has(t.avain)) { for (const k of kuvat) k?.close?.(); return; }
+    if (purettu || laatat.get(t.avain) !== t) { for (const k of kuvat) k?.close?.(); return; }
     /*
      * AVOMERI EI OLE VIRHE, KUN POHJAA EI OLE ALLA.
      *
@@ -2212,7 +2212,7 @@ export function luoLaattakerros({
         varaKartta = reliefinVaraLahde(t.z, t.sarake, t.rivi, laattaKoko());
         if (varaKartta) {
           vara = await varalaatanKuva(varaKartta, katkaisin?.signal ?? null);
-          if (purettu || !laatat.has(t.avain)) { for (const k of kuvat) k?.close?.(); return; }
+          if (purettu || laatat.get(t.avain) !== t) { for (const k of kuvat) k?.close?.(); return; }
         }
       }
       if (vara) mittarit.reliefiVaroja += 1; else mittarit.reliefiTasavareja += 1;
@@ -2633,7 +2633,7 @@ export function luoLaattakerros({
     while (ladattavia < LAATTAKERROS_RINNAKKAIN && jono.length) {
       const t = jono.shift();
       t.jonossa = false;
-      if (!laatat.has(t.avain) || t.tila !== 'ladataan' || t.aloitettu) continue;
+      if (laatat.get(t.avain) !== t || t.tila !== 'ladataan' || t.aloitettu) continue;
       t.aloitettu = true;
       ladattavia += 1;
       lataa(t)
@@ -2720,7 +2720,24 @@ export function luoLaattakerros({
       let n = 0;
       while (vientijono.length && n < LAATTAKERROS_TEKSTUUREJA_PER_KEHYS) {
         const t = vientijono.shift();
-        if (!laatat.has(t.avain) || !t.tekstuuri) continue;
+        /*
+         * SAMA AVAIN EI OLE SAMA LAATTA (mitattu 19.9.2026, erä
+         * opus-local-laastari): pelilaudan z7-laatan haku oli kesken,
+         * kun Astronautin kamera avautui, ja laastari loi heti saman
+         * avaimen laatan. `laatat.has(avain)` päästi vanhan seepialaatan
+         * asentamaan verkkonsa, eikä `poista` purkanut sitä koskaan —
+         * se jäi näyttämöön läiskänä (kankaita 74, laattoja 72). Vain
+         * taulun nykyinen olio saa asentua; orpo vapautetaan tässä.
+         */
+        if (laatat.get(t.avain) !== t) {
+          t.verkko?.geometry?.dispose?.();
+          t.tekstuuri?.dispose?.();
+          t.materiaali?.dispose?.();
+          t.verkko = null; t.tekstuuri = null; t.materiaali = null;
+          mittarit.orpoja = (mittarit.orpoja ?? 0) + 1;
+          continue;
+        }
+        if (!t.tekstuuri) continue;
         renderer?.initTexture?.(t.tekstuuri);
         t.viety = true;
         n += 1;

@@ -71,3 +71,55 @@ Kaappaus: `docs/raportit/kaappaukset/laastari-20260919/kreeta-ennen-jalkeen-390.
   lähde on poissa, mutta kaappausta ei ole.
 - Topografialinssi ja pelilauta eivät muuttuneet (muutos on
   astronauttitilan takana), mutta niiden savukkeita en ajanut.
+
+---
+
+## LISÄYS 19.9.2026 klo 18.50 Suomen aikaa: läiskälaatat (Fablen jatkotehtävä klo 18.45)
+
+### Juurisyy (mitattu): orpo pelilaudan laatta jäi näyttämöön
+
+Lohkoon 48 lisättiin `LAASTARIN_DUMP=1`, joka tallentaa jokaisen
+laattakerroksen verkon kankaan pienoiskuvana z/sarake/rivi-nimellä sekä
+kaappaukset pilvet piilotettuina ja palautettuina. Lohkon omissa
+kankaissa (72 kpl) ei ollut läiskiä. Läiskät syntyivät niissä ajoissa,
+joissa näkyviä kankaita oli enemmän kuin kerroksen laattoja: 74/72,
+74/72 ja 73/72 viidestä vanhan koodin ajosta, 72/72 kahdessa. Ylimääräiset
+verkot olivat **z7-laatat 7/92/40, 7/94/41 ja 7/91/40, joissa oli
+PELILAUDAN SEEPIAKARTTA** (nimiö "Thessaloniki"). Astronautin sävy
+ja suodatin näyttävät ne kermanvärisinä tai mustina läiskinä
+(`laiskalaatta-ennen-jalkeen-390.jpg`: vasemmalla läiskät, alhaalla
+ylimääräisten verkkojen pienoiskuvat, oikealla korjattu).
+
+Mekanismi on seuraava. Peli alkaa Ateenasta, ja pelilaudan z7-laatan
+haku on kesken, kun Astronautin kamera avautuu. Kerros mitätöi laattansa
+(reliefi-lippu vaihtuu), mutta laastari luo heti SAMAN AVAIMEN laatan
+Ateenan ympärille. Vanhan haun tarkistus `laatat.has(t.avain)` meni läpi,
+jolloin seepialaatta koottiin ja vienti asensi sen verkon. `poista`
+purkaa aina taulun nykyisen olion verkon, joten vanha verkko jäi
+näyttämöön pysyvästi.
+
+### Korjaus (`js/pallolaatat.js`)
+
+- Kaikki neljä tarkistusta `!laatat.has(t.avain)` → `laatat.get(t.avain) !== t`
+  (haun jälkeen, varalaatan jälkeen, jonon käynnistys ja vienti).
+- Vienti vapauttaa orvon laatan geometrian, tekstuurin ja materiaalin
+  eikä asenna sitä (`mittarit.orpoja`).
+- Lohko 48 vaatii lisäksi, että kankaita ≤ laattoja (ei orpoja).
+
+### Mittaukset
+
+| Ajo | Kankaita / laattoja | Lohko 48 | savuke-astro-pallo puhelin |
+| --- | --- | --- | --- |
+| Vanha koodi (5 ajoa) | 72, 72, 74, 74, 73 / 72 | läiskät kolmessa | – |
+| Korjattu, ajo 1 | 72 / 72 | OK | 54/54 |
+| Korjattu, ajo 2 | 72 / 72 | OK | 54/54 |
+
+`node --test tests/*.test.mjs`: pass 3658, fail 0.
+
+### Sonnetin Kreikka-havainto (pelilauta, kokonaan kermanvärinen ruutu)
+
+Sitä ei mitattu. Korjaus on kuitenkin yleinen: se koskee jokaista tilan
+vaihtoa, jossa sama avain luodaan uudelleen kesken haun, myös paluuta
+linssistä pelilaudalle. Todennäköisesti sama mekanismi toiseen suuntaan
+(astronautin tai topografialinssin laatta orvoksi pelilaudalle). Tämän
+voi todentaa laitteella v1961:n jälkeen.
