@@ -9171,7 +9171,17 @@ export const RAAMATTU = {
           + 'runko; pieni piirroskuvake, ei valokuva). Vartiot savuke-astro-palloon: '
           + 'paljastushetkella pilvikerros nakyvissa (alfa > 0 koealalla), avauskorkeus, '
           + 'ISS-radan luminanssi. Tila: Opus 1 -era astro-avaus tilattu klo 20.55 '
-          + '(visa-ulkoasun jalkeen, ennen Gronlantia).',
+          + '(visa-ulkoasun jalkeen, ennen Gronlantia). TILA (Opus 1 klo 21.14, Fable '
+          + 'hyvaksyi 21.18): TEHTY - linssi rakentuu mustan ruudun ja otsikkokortin '
+          + '"ASTRONAUTIN KAMERA / kuvat: NASA" alla; paljastus kun reliefi haettu, pilvet '
+          + 'ratkaistu (astro-sumu.pilvetValmiit) ja kolme kehysta piirretty (katto 12 s); '
+          + 'otsikko haipyy 700 ms, musta 1100 ms; avausajo 92 % -> 0,72 x avauskorkeus '
+          + '(pilvet taysina, ZOOMIN_LAHIN ennallaan); ISS-rata luminanssi 219 -> 25, '
+          + 'merkki 24x12 px SVG (runko, ristikko, 8 paneelia). Puhelin: paljastus 450 ms, '
+          + 'pallo 120,6 % ruudun leveydesta. Vartiot 52a-d, 59/59. Julkaistu v1966 (PR '
+          + 'klo 21.17). GRONLANTI: ei vikaa - laastari leikataan 60 asteeseen ja 4k-pohja '
+          + 'nayttaa jaan (Gronlanti 0,605 laastari paalla ja pois; vastakoe 70 astetta '
+          + '0,002); vartio lohko 49. Avoin: Patagonian jaa laastarissa (oma paatos).',
         'MAAT ILMAN PELIKAUPUNKIA SAAVAT PELIKAUPUNGIN (omistaja 19.9.2026 klo 20.50 Suomen '
           + 'aikaa, kortti; Sonnet 1:n loydos kierros 12: Belgian napautus avaa Lillen tai ei '
           + 'mitaan, joten BEL-nostoihin ei paase): vaihtoehdoista (maan napautus avaa '
@@ -9210,7 +9220,13 @@ export const RAAMATTU = {
           + 'paatoimittajana ja kirjaa poikkeamat (tyyppikuvake, nappi, kuvateksti, lahde, '
           + 'visa, pulu, suurennos) yhteen listaan Opus- ja Sonnet-erille. Toistetaan '
           + 'jokaisen sisaltoversion jalkeen otoksella. Tila: kierros 13 tilattu Sonnet '
-          + '1:lta klo 20.50 (v1964 tuotannossa).',
+          + '1:lta klo 20.50 (v1964 tuotannossa). KIERROS 13 (klo 20.50-21.14, 12 nostoa, '
+          + '48 kuvaa; Fable katsoi): loydokset 1) tyyppinimike "KAUPPA" tekniikka- ja '
+          + 'merenkulku-nostoilla (koodivika, Opus 1); 2) pulu peittaa lahderivin '
+          + 'kohdekortin LISAA-tilan alalaidassa (Opus 1); 3) Santorinin satelliittikuvassa '
+          + 'Sentinel Hub -selitepalkki (kuva vaihdetaan, Sonnet 3); 4) yliviivaus '
+          + '"VIISAALTA POLLOLTA" on tarkoituksellinen; 5) visa joka kolmannessa on '
+          + 'tarkoitus. Kierros 14 (puuttuvat tyypit, Astronautin avaus) v1966:lla.',
         'NOSTOVISAN ULKOASU JA VAIHTOEHTOJEN KIELI (omistaja 19.9.2026 klo 20.41 Suomen '
           + 'aikaa, Rocamadour-noston visalaatikon laitekuva v1963, sanatarkasti: "Tama '
           + 'visuaalisesti outo"): kuvassa LUKIJAN KYSYMYS -laatikko on raskas - suuri '
