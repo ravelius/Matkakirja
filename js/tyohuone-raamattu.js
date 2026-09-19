@@ -9345,7 +9345,17 @@ export const RAAMATTU = {
           + 'RUOTSI (Sonnet 3, Fable klo 19.48): SWE 28 / 83 / 10 visaa (Halsingegardar '
           + 'Erik-Andersin kohdalla; Rattvik ja Almhult kuntartikkeleista; Jokkmokk '
           + 'asiallisesti), HEAD 200 83/83, julkaistaan v1964. Seuraava maa Sonnet 3:lle: '
-          + 'Suomi.',
+          + 'Suomi (lista hyvaksytty 19.55; fi-Wikipedia sallittu toisena lahteena kun '
+          + 'en-artikkeli on tynka). LAITETESTI v1962 (Sonnet 1 kierros 11, klo 19.36-'
+          + '19.53): visa nakyy ja maksaa +25 (Grunwald), VIKA: vaaran vastauksen jalkeen '
+          + 'uudelleenavaus tarjoaa vaihtoehdot uudelleen -> PAATOS: avain kuluu '
+          + 'molemmista vastauksista, vaaran jalkeen nakyy oikea vastaus ja fakta ilman '
+          + 'vaihtoehtoja (Opus 1 -era visa-lukko). Ihmisen matka: paajakson kortin '
+          + 'kysymysnappi ei anna vastausta ja linssi jumiutuu (Opus 2 -era kortti-fix, '
+          + 'kiireellinen). Pulu peittaa laajassa nostokortissa sanan reunan (Opus 1). '
+          + 'PAATOKSET 47 VELKA TEHTY (Opus 1 klo 19.58): ajaKamera nostaa maan katon '
+          + 'maalin korkeuteen (ajonKatto), katto laskee saapuessa; vartio noppa-'
+          + 'saapumisen-aikana 5 ja 5b, 14/14; julkaistaan v1964.',
         'KARTTAUUDISTUKSEN PAATOKSET 47: NOPAN JALKEEN KAMERA JAI TYHJAAN KOHTAAN - '
           + 'KOHDEMAAN ZOOMIKATTO KUMOSI ULOSSOVITUKSEN (Sonnet-simulaattoritesti kierros 5, '
           + '19.9.2026 klo 14.05-14.19 Suomen aikaa: Pariisi -> liftaus -> Amsterdam -> Liiku '
