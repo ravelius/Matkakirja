@@ -213,6 +213,11 @@ Käyttö: tools/polta-paikallisesti.sh [valitsimet]
                              15 × rinnakkaiset prosessit; nosta, jos
                              lokissa on HTTP 429)
   --ei-luetteloa             älä koota äläkä vie pyramidi.jsonia
+  --ei-luettelovientia       KOKOA luettelo mutta ÄLÄ vie sitä ämpäriin
+                             (laatat viedään normaalisti). Uuden version
+                             laatat eivät näy pelissä ennen kuin luettelo
+                             osoittaa niihin, joten tällä ajon voi tehdä
+                             valmiiksi ja julkaista luettelon erikseen.
   --pakota-luettelo          vie luettelo, vaikka se eroaisi ämpärin
                              luettelosta muutenkin kuin z8:n osalta
   --ohita-eheys              vie luettelo, vaikka laattoja puuttuisi
@@ -274,6 +279,9 @@ KORVAA=0
 # nopeasti ja CLI yrittää uudestaan sen sijaan, että shardi jäisi roikkumaan.
 AWS_YHTEYSAIKA="${AWS_YHTEYSAIKA:-30}"
 LUETTELO=1; PAKOTA_LUETTELO=0; LISTA=0; LAPSI=0; OHITA_EHEYS=0
+# Luettelo kootaan mutta sitä ei viedä (--ei-luettelovientia): julkaisu
+# jää erilliseksi teoksi, vaikka laatat ovat jo ämpärissä.
+LUETTELON_VIENTI=1
 # Edistymisraportti: ajon tunnus ämpärin polussa ja raportointiväli.
 # Shardin oman tilatiedoston päivitysväli on tiheämpi (TILAVALI), koska
 # se on pelkkä lokin loppupään luku eikä maksa mitään.
@@ -315,6 +323,7 @@ while [ $# -gt 0 ]; do
     --korvaa) KORVAA=1; shift ;;
     --noutovali) NOUTOVALI="$2"; shift 2 ;;
     --ei-luetteloa) LUETTELO=0; shift ;;
+    --ei-luettelovientia) LUETTELON_VIENTI=0; shift ;;
     --pakota-luettelo) PAKOTA_LUETTELO=1; shift ;;
     --ohita-eheys) OHITA_EHEYS=1; shift ;;
     --ajo-id) AJO_ID="$2"; shift 2 ;;
@@ -1567,11 +1576,11 @@ EOF
   polta_pallo || return 1
 
   # 4. LUETTELO VASTA NYT (pallon laatat.json on jo ämpärissä).
-  if [ "$VIE" -eq 1 ]; then
+  if [ "$VIE" -eq 1 ] && [ "$LUETTELON_VIENTI" -eq 1 ]; then
     vie_luettelo "$PALLO_LUETTELO"
     echo "· yhdistetty luettelo viety VIIMEISENÄ: nostotaso $NOSTOVERSIO"
   else
-    echo "· (--ei-vie: luetteloa ei viety; se on $PALLO_LUETTELO)"
+    echo "· (luetteloa ei viety; se on $PALLO_LUETTELO)"
   fi
   echo ""
   echo "  MUISTA: js/pallo.js PALLO_LAATTATUNNISTE = '$PALLOTUNNISTE' ja"
@@ -1863,7 +1872,11 @@ if [ "$LUETTELO" -eq 1 ]; then
     const vm = Object.keys(vanha?.varitasot ?? {}).length, um = Object.keys(uusi.varitasot ?? {}).length;
     if (vm > 0 && um === 0) { console.error(`VIRHE: luettelon varitasot puuttuvat (ampäri ${vm} maata) — ei vientiä`); process.exit(1); }
   ' "$LUETTELO_VIETAVA" "$ULOS/ampari-luettelo.json" || exit 1
-  [ "$VIE" -eq 1 ] && vie_luettelo "$LUETTELO_VIETAVA"
+  if [ "$VIE" -eq 1 ] && [ "$LUETTELON_VIENTI" -eq 1 ]; then
+    vie_luettelo "$LUETTELO_VIETAVA"
+  else
+    echo "· luetteloa EI viety ämpäriin; se on $LUETTELO_VIETAVA"
+  fi
 fi
 
 if [ "$PALLO" -eq 1 ]; then polta_pallo; fi

@@ -143,7 +143,7 @@ if ((await ampariHaku(`${AMPARI}vendor/globe.gl-2.46.2.min.js`))?.status !== 200
 }
 
 const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+  .catch(() => import(process.env.PLAYWRIGHT_JS));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const tallenne = (aloitus) => {
@@ -157,7 +157,7 @@ const tallenne = (aloitus) => {
   return JSON.stringify(peli.toJSON());
 };
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch({ executablePath: process.env.PW_CHROMIUM });
 const virheet = [];
 
 async function avaaPeli(kaupunki, leveys, korkeus) {
@@ -405,7 +405,6 @@ for (const koko of RUUDUT) {
   const vaarat = { ikoniHiiri: [], ikoniKosketus: [], lappuHiiri: [] };
   const paneelissa = [];
   const kaupunginAlla = [];
-  const lapunUlkona = [];
   for (const id of k.omat) {
     const odote = await odotettu(sivu, id);
     const ih = await napauta(sivu, id, 'ikoni', 'hiiri', koko);
@@ -417,33 +416,11 @@ for (const koko of RUUDUT) {
       const ik = await napauta(sivu, id, 'ikoni', 'kosketus', koko);
       if (ik.auki !== odote) vaarat.ikoniKosketus.push(`${id}→${ik.auki ?? ik.tila ?? '-'}`);
     }
-    /*
-     * KAUPUNGIN OMAN MUSTEEN PÄÄLLÄ OLEVA NOSTO EI OLE TÄMÄN SÄÄNNÖN
-     * ASIA — EI KUVAKE EIKÄ NIMIÖ (tarkennettu 20.9.2026).
-     *
-     * Kaupungin SISÄISET nostot ovat kaupunkiliuskassa eivätkä kartalla
-     * (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 34 kohdat 2-3), ja niiden
-     * ankkuri on kaupungin oma piste. Mitattu Marseillessa: *Marseillen
-     * saippua* (paikka = Marseille) ja *Cosquer* osuvat samaan
-     * musteläiskään kuin täkynosto *Kiitoslahjat*, joten napautus antaa
-     * sen kortin, joka on musteen voittaja — ei välttämättä sitä, jonka
-     * id savuke kysyi. Vartio kirjaa nämä INFOna, kuten maapaneelin alle
-     * jäävän kuvakkeen; kaupungin ulkopuoliset nostot mitataan ennallaan.
-     */
-    if (kaupungissa) continue;
     const lh = await napauta(sivu, id, 'lappu', 'hiiri', koko);
-    /*
-     * RUUDUN ULKOPUOLELLE JÄÄVÄ NIMIÖ EI OLE VIKA VAAN MITTAUKSEN RAJA:
-     * lappu voi olla kartan laidalla niin, ettei sen keski ole ruudulla.
-     * Silloin napautusta ei voi tehdä, eikä tekemätön napautus voi
-     * kertoa osumareitityksestä mitään.
-     */
-    if (lh.tila === 'ruudun ulkopuolella') { lapunUlkona.push(id); continue; }
     if (lh.auki !== odote) vaarat.lappuHiiri.push(`${id}→${lh.auki ?? lh.tila ?? '-'}`);
   }
   if (paneelissa.length) tieto(`${nimi} maapaneelin alla (kuvake ohitettu)`, paneelissa.join(', '));
-  if (kaupunginAlla.length) tieto(`${nimi} kaupunkipisteen musteen alla (ohitettu)`, kaupunginAlla.join(', '));
-  if (lapunUlkona.length) tieto(`${nimi} nimiö ruudun ulkopuolella (ohitettu)`, lapunUlkona.join(', '));
+  if (kaupunginAlla.length) tieto(`${nimi} kaupunkipisteen musteen alla (kuvake ohitettu)`, kaupunginAlla.join(', '));
 
   vaadi(`${nimi}: 1. jokainen nosto avaa OMAN korttinsa hiirellä (kuvake)`,
     vaarat.ikoniHiiri.length === 0, vaarat.ikoniHiiri.join(', '));
