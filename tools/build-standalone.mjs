@@ -696,6 +696,7 @@ const MODULES = [
   'js/livia-nostotila.js',
   'js/livia-dialogitila.js',
   'js/livia-eleet.js',
+  'js/pulu-paneelin-ylla.js',
   'js/pollo.js',
   /*
    * Livian ääni ennen Livian kuplia: js/livia.js soittaa repliikin

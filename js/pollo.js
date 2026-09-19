@@ -48,6 +48,7 @@
  * sisään, ei pöllön puhetta ulos.
  */
 
+import { asennaPuluPaneelinYlla } from './pulu-paneelin-ylla.js';
 import { aloitaLivianOdotus, ilmoitaLivianTilanne, kuunteleLivianTilanteita, livianTunnetaginTiedot } from './livia-tilanteet.js';
 import { POLLOPALVELIN } from './packs/pollo-asetukset.js';
 import { haeValmiskysymykset } from './packs/pollo-kysymykset.js';
@@ -1754,6 +1755,9 @@ export class Pollo {
       this.vaihdaTila();
     });
     this.nappi = nappi;
+    // Pulu hyppää avoimen tekstipaneelin yläpuolelle (PAATOKSET 50,
+    // js/pulu-paneelin-ylla.js).
+    this.paneelinYlla = asennaPuluPaneelinYlla(nappi, this.doc ?? globalThis.document);
 
     /*
      * PANEELISSA EI OLE YLÄPALKKIA (omistajan linjaus 12.8.2026).

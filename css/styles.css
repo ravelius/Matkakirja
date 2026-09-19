@@ -20692,6 +20692,27 @@ body[data-mode] .toimintorivi.rivi-yksi .monitoimi-nappi:disabled {
  * Sääntö on VAIN kartalla: lehdessä vaalea nappi vaalealla paperilla
  * jäisi näkymättömäksi.
  */
+/*
+ * PULU AVOIMEN PANEELIN YLÄPUOLELLA (PAATOKSET 50, js/pulu-paneelin-ylla.js).
+ * Vahti kirjoittaa paneelin yläreunan mukaan lasketun alareunan; tämä
+ * sääntö voittaa kulman ja linssien omat paikat, koska tekstin peittäminen
+ * on aina väärin. Hyppy animoidaan, paluu samoin.
+ */
+.pollo-nappi.pollo-kelluu.pulu-paneelin-ylla {
+  bottom: var(--pulu-paneelin-ylla-bottom) !important;
+  top: auto !important;
+  transition: bottom 0.28s ease;
+}
+/* Korkea paneeli, jonka yläpuolelle pulu ei mahdu: pulu väistyy. */
+.pollo-nappi.pollo-kelluu.pulu-paneelin-alla-piilossa {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.2s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .pollo-nappi.pollo-kelluu.pulu-paneelin-ylla { transition: none; }
+}
+
 .pollo-nappi.pollo-kelluu.pollo-kelluu-kartalla {
   bottom: calc(5.3rem + env(safe-area-inset-bottom, 0px));
   border-color: rgba(122, 85, 20, 0.42);
