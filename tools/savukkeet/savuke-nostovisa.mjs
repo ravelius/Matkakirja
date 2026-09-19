@@ -308,6 +308,62 @@ if (a.auki) {
   tieto('pulu nostokortilla', JSON.stringify(peittoA));
   vaadi('9. pulu ei peitä nostokortin tekstiä (390 px)',
     peittoA.pulu && peittoA.kortti && peittoA.leikkaa === 0, JSON.stringify(peittoA));
+
+  /*
+   * 9c. KORTTI JO NOSTETUN PULUN PÄÄLLE (Sonnet, kierros 11, v1962
+   * laitteella). Pulu oli jo hypännyt alalaidan paneelin yläpuolelle, ja
+   * laaja nostokortti avautui sen päälle. Vahti piti vanhan paneelin
+   * muistissa, joten pulu jäi kortin keskelle tekstin ja visan napin
+   * päälle. Vastakoe ennen korjausta (js/pulu-paneelin-ylla.js):
+   * leikkaa 1, pulun alareuna 636 px kortin sisällä. Alapaneeli on
+   * savukkeen oma (kiinteä, taustallinen, tekstiä), jotta väite ei
+   * riipu siitä, mikä pelin paneeli sattuu olemaan auki.
+   */
+  const alapaneeli = (paalle) => a.sivu.evaluate(async (lisaa) => {
+    for (const e of document.querySelectorAll('.fokusnosto-kerros, .saapumistraileri')) e.remove();
+    document.querySelector('.savuke-alapaneeli')?.remove();
+    if (lisaa) {
+      const pa = document.createElement('div');
+      pa.className = 'savuke-alapaneeli';
+      pa.style.cssText = 'position:fixed;left:0;right:0;bottom:0;height:200px;background:#eee;z-index:5';
+      pa.textContent = 'Alalaidan infopaneeli, jossa on luettavaa tekstiä riittävästi.';
+      document.body.appendChild(pa);
+    }
+    await new Promise((v) => setTimeout(v, 800));
+    const n = document.querySelector('.pollo-nappi.pollo-kelluu');
+    const pa = document.querySelector('.savuke-alapaneeli');
+    return {
+      ylla: Boolean(n?.classList.contains('pulu-paneelin-ylla')),
+      pulunAla: n ? Math.round(n.getBoundingClientRect().bottom) : null,
+      paneelinYla: pa ? Math.round(pa.getBoundingClientRect().top) : null,
+    };
+  }, paalle);
+  const alaEnnen = await alapaneeli(true);
+  await avaaKortti(a.sivu, KOE.id);
+  const peittoC = await puluPeitto(a.sivu, '.fokusnosto-kortti');
+  tieto('pulu alapaneelin päälle avatulla kortilla', JSON.stringify({ alaEnnen, peittoC }));
+  vaadi('9c. kortti jo nostetun pulun päälle: pulu väistyy eikä peitä tekstiä',
+    alaEnnen.ylla && alaEnnen.pulunAla <= alaEnnen.paneelinYla
+      && peittoC.pulu && peittoC.kortti && peittoC.leikkaa === 0,
+    JSON.stringify({ alaEnnen, peittoC }));
+  // Kortti kiinni: pulu palaa alapaneelin yläpuolelle (ei heiluria).
+  const alaJalkeen = await a.sivu.evaluate(async () => {
+    for (const e of document.querySelectorAll('.fokusnosto-kerros')) e.remove();
+    await new Promise((v) => setTimeout(v, 800));
+    const n = document.querySelector('.pollo-nappi.pollo-kelluu');
+    return {
+      ylla: Boolean(n?.classList.contains('pulu-paneelin-ylla')),
+      piilossa: Boolean(n?.classList.contains('pulu-paneelin-alla-piilossa')),
+      pulunAla: n ? Math.round(n.getBoundingClientRect().bottom) : null,
+      paneelinYla: Math.round(document.querySelector('.savuke-alapaneeli').getBoundingClientRect().top),
+    };
+  });
+  vaadi('9d. kortin sulkeuduttua pulu palaa alapaneelin yläpuolelle',
+    alaJalkeen.ylla && !alaJalkeen.piilossa && alaJalkeen.pulunAla <= alaJalkeen.paneelinYla,
+    JSON.stringify(alaJalkeen));
+  await alapaneeli(false);
+  await avaaKortti(a.sivu, KOE.id);
+
   const ennen = await luvut(a.sivu);
   const jalkeen = await vastaa(a.sivu, KOE.visa.oikea);
   tieto('oikea vastaus', `money ${ennen.money} → ${jalkeen.money}, `
@@ -363,6 +419,19 @@ if (b.auki) {
       && jalkeen.napitJaljella === 0,
     `money ${ennen.money} → ${jalkeen.money}, laskuri ${ennen.laskuri} → ${jalkeen.laskuri}, `
     + `lipukkeita jäljellä ${jalkeen.napitJaljella}`);
+  /*
+   * 4b. VÄÄRÄN JÄLKEEN KORTTI LUKITTUU (Sonnet 1:n laitetesti v1962,
+   * kierros 11; Fablen päätös klo 19.55: avain kuluu molemmista
+   * vastauksista). Uudelleenavatussa kortissa ei ole lipukkeita, ja
+   * oikean vastauksen yritys ei maksa. (Uudelleenlatausta ei mitata tässä:
+   * avaaPeli-init-skripti kirjoittaa alkutallennuksen joka latauksella.)
+   */
+  const uudelleenB = await avaaKortti(b.sivu, KOE.id);
+  const yritysB = await vastaa(b.sivu, KOE.visa.oikea);
+  tieto('väärän jälkeen uudelleen', JSON.stringify({ napit: uudelleenB.napit?.length, money: yritysB.money }));
+  vaadi('4b. väärän vastauksen jälkeen kortti on lukittu eikä oikea vastaus enää maksa',
+    (uudelleenB.napit?.length ?? 0) === 0 && yritysB.money === jalkeen.money
+    , `lipukkeita ${uudelleenB.napit?.length}, money ${jalkeen.money} → ${yritysB.money}`);
   await b.ctx.close();
 } else {
   await b.ctx.close();
@@ -390,10 +459,10 @@ const HAHMOTELMA = 'hahmotelma-texel';
 const d = await avaaPeli(tallenne());
 vaadi('pallolauta aukesi (hahmotelma)', d.auki, d.virheet.join(' | '));
 if (d.auki) {
-  const avaaKohde = () => d.sivu.evaluate(async (id) => {
+  const avaaKohde = (tunnus = HAHMOTELMA, maa = 'NLD') => d.sivu.evaluate(async ({ id, iso }) => {
     for (const el of document.querySelectorAll('.fokuskohde-popup')) el.remove();
     const { KOHDE_MAAT, avaaFokuskohde } = await import('/js/fokuskohteet.js');
-    const kohde = (KOHDE_MAAT.NLD ?? []).find((k) => k.id === id);
+    const kohde = (KOHDE_MAAT[iso] ?? []).find((k) => k.id === id);
     if (!kohde) return { loytyi: false };
     avaaFokuskohde(window.matkakirja.ui, kohde);
     await new Promise((v) => setTimeout(v, 500));
@@ -406,7 +475,7 @@ if (d.auki) {
       onLaatikko: Boolean(laatikko),
       napit: laatikko?.querySelectorAll('.kulttuuri-vaihtoehdot button').length ?? 0,
     };
-  }, HAHMOTELMA);
+  }, { id: tunnus, iso: maa });
   const vastaaKohde = (i) => d.sivu.evaluate(async (indeksi) => {
     const napit = [...document.querySelectorAll('.fokuskohde-popup .fokusnosto-visa .kulttuuri-vaihtoehdot button')];
     napit[indeksi]?.click();
@@ -432,6 +501,56 @@ if (d.auki) {
   vaadi('8. kohdekortin kysymys ei maksa kahdesti',
     toinenK.onLaatikko && toinenK.napit === 0 && toinenD.money === jalkeenD.money,
     `lipukkeita ${toinenK.napit}, money ${jalkeenD.money} → ${toinenD.money}`);
+}
+if (d.auki) {
+  /*
+   * 11. VÄÄRÄN JÄLKEEN KOHDEKORTTI LUKITTUU (Sonnet 1 kierros 11, v1962:
+   * Białowieża — uudelleenavatussa kortissa oli yhä vaihtoehdot).
+   */
+  const avaaKohdeB = () => d.sivu.evaluate(async () => {
+    for (const el of document.querySelectorAll('.fokuskohde-popup')) el.remove();
+    const { KOHDE_MAAT, avaaFokuskohde } = await import('/js/fokuskohteet.js');
+    const kohde = (KOHDE_MAAT.POL ?? []).find((k) => k.id === 'hahmotelma-bialowieza');
+    if (!kohde) return { loytyi: false };
+    avaaFokuskohde(window.matkakirja.ui, kohde);
+    await new Promise((v) => setTimeout(v, 500));
+    document.querySelector('.fokuskohde-popup .nostokuva-lisaa')?.click();
+    await new Promise((v) => setTimeout(v, 500));
+    const laatikko = document.querySelector('.fokuskohde-popup .fokusnosto-visa');
+    return {
+      loytyi: true, oikea: kohde.visa?.oikea ?? null, onLaatikko: Boolean(laatikko),
+      napit: laatikko?.querySelectorAll('.kulttuuri-vaihtoehdot button').length ?? 0,
+      laatikoita: document.querySelectorAll('.fokuskohde-popup .fokusnosto-visa').length,
+      vastatut: [...window.matkakirja.game.minitehtavatVastatut].filter((a) => /bialow/.test(a)),
+    };
+  });
+  const vastaaB = (i) => d.sivu.evaluate(async (indeksi) => {
+    const napit = [...document.querySelectorAll('.fokuskohde-popup .fokusnosto-visa .kulttuuri-vaihtoehdot button')];
+    napit[indeksi]?.click();
+    await new Promise((v) => setTimeout(v, 300));
+    return { money: window.matkakirja.game.player.money, napit: napit.length };
+  }, i);
+  const b1 = await avaaKohdeB();
+  const vaaraB = b1.oikea === null ? 0 : (b1.oikea + 1) % 4;
+  const bv = await vastaaB(vaaraB);
+  await d.sivu.keyboard.press('Escape');
+  await d.sivu.waitForTimeout(400);
+  await d.sivu.waitForTimeout(1500);
+  const tallessa = await d.sivu.evaluate(() => {
+    try {
+      const t = JSON.parse(localStorage.getItem('matkakirja-save-v1') ?? '{}');
+      return (t.minitehtavatVastatut ?? []).filter((a) => /bialow/.test(a));
+    } catch (e) { return String(e); }
+  });
+  tieto('Białowieża tallennuksessa väärän jälkeen', JSON.stringify(tallessa));
+  vaadi('11b. väärän vastauksen avain on tallennuksessa (säilyy uudelleenlatauksen yli)',
+    Array.isArray(tallessa) && tallessa.length === 1, JSON.stringify(tallessa));
+  const b2 = await avaaKohdeB();
+  const bo = await vastaaB(b1.oikea ?? 0);
+  tieto('Białowieża väärä → uudelleen', JSON.stringify({ b1, bv, b2, bo }));
+  vaadi('11. väärän vastauksen jälkeen kohdekortti (Białowieża) on lukittu eikä oikea maksa',
+    b1.loytyi && b1.napit >= 2 && b2.napit === 0 && bo.money === bv.money,
+    JSON.stringify({ ennen: b1.napit, jalkeen: b2.napit, laatikoita: b2.laatikoita, vastatut: b2.vastatut, money: [bv.money, bo.money] }));
 }
 await d.ctx.close();
 
