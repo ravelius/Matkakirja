@@ -909,12 +909,14 @@ const {
 } = await import('../js/pollo-haku.js');
 
 /** Koko pelin aineistosta rakennettu indeksi. Jaetaan testien kesken. */
+const indeksinCpu = process.cpuUsage();
 const INDEKSI = rakennaIndeksi({
   kulttuuri: KULTTUURI_KATEGORIAT,
   maat: MAA_KATEGORIAT,
   nahtavyydet: NAHTAVYYSJUTUT,
   kohdekartat: KAUPUNKIKARTAT,
 });
+const INDEKSIN_CPU_MS = (({ user, system }) => (user + system) / 1000)(process.cpuUsage(indeksinCpu));
 
 test('indeksi rakentuu ja on kokoluokaltaan järkevä', () => {
   assert.ok(INDEKSI.merkinnat.length > 100,
@@ -924,9 +926,21 @@ test('indeksi rakentuu ja on kokoluokaltaan järkevä', () => {
    * avauksella. Jos tämä alkaa lähestyä 200 ms, indeksointi on
    * siirrettävä taustalle (omistajan raja 12.8.2026).
    */
+  /*
+   * RAJA ON CPU-AIKAA, EI SEINÄKELLOA (Opus 19.9.2026, erä
+   * opus-local-pollotesti). Seinäkelloraja 2000 ms kaatui Macin
+   * Testit-runnerilla, kun Savukkeet ajoi rinnalla (2584 ms), ja meni
+   * läpi uusinnassa. Mittaus samalla koneella: yksin seinä 227–410 ms /
+   * CPU 174–220 ms, 20 kuormaprosessin rinnalla seinä 965–1730 ms / CPU
+   * 152–198 ms. Prosessin CPU-aika ei kasva vieraasta kuormasta, joten
+   * raja pysyy merkityksellisenä: 1000 ms on noin viisinkertainen
+   * nykyiseen nähden ja kaatuu, jos indeksointi muuttuu neliölliseksi.
+   * Seinäkello tulostetaan yhä tiedoksi.
+   */
   console.log(`  indeksi: ${INDEKSI.merkinnat.length} merkintää, `
-    + `${INDEKSI.sanoja} sanaa, ${INDEKSI.kesto.toFixed(1)} ms`);
-  assert.ok(INDEKSI.kesto < 2000, `indeksointi kesti ${INDEKSI.kesto} ms`);
+    + `${INDEKSI.sanoja} sanaa, ${INDEKSI.kesto.toFixed(1)} ms seinää, `
+    + `${INDEKSIN_CPU_MS.toFixed(1)} ms CPU`);
+  assert.ok(INDEKSIN_CPU_MS < 1000, `indeksointi vei ${INDEKSIN_CPU_MS} ms CPU-aikaa`);
 });
 
 test('haku löytää tunnetun noston avainsanalla', () => {
@@ -946,8 +960,13 @@ test('haku löytää tunnetun noston avainsanalla', () => {
 });
 
 test('haku on nopea myös koko aineistolla', () => {
+  // CPU-aikaa kuten indeksoinnissa: seinäkello venyy rinnakkaiskuormassa.
+  const alku = process.cpuUsage();
   const { kesto } = haeKatkelmat(INDEKSI, 'Millainen ilmasto Egyptissä on ja mitä siellä kasvaa?');
-  assert.ok(kesto < 250, `haku kesti ${kesto} ms`);
+  const { user, system } = process.cpuUsage(alku);
+  const cpuMs = (user + system) / 1000;
+  console.log(`  haku: ${kesto.toFixed(1)} ms seinää, ${cpuMs.toFixed(1)} ms CPU`);
+  assert.ok(cpuMs < 250, `haku vei ${cpuMs} ms CPU-aikaa`);
 });
 
 test('visakysymykset eivät ole indeksissä', () => {

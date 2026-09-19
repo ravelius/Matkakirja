@@ -857,6 +857,7 @@ export function rakennaPallo(Globe, kotelo, laatat) {
       laattakerrosPaalla(globalThis, LAATTAKERROS_OLETUS) ? Math.min(syvin, POHJAN_TASO_MAX) : syvin,
     );
     asennaLaatunosto(pallo, kotelo);
+    asennaPohjanSavy(pallo);
     asennaNapakannet(pallo);
   } else {
     pallo.globeImageUrl(PALLO_TEKSTUURI);
@@ -1089,6 +1090,54 @@ export function kytkePallonKehys(pallo, kotelo, kuuntelija, ikkuna = globalThis)
     nyt.scene.onBeforeRender = nyt.alkuperainen;
     kehyskoukut.delete(pallo);
   };
+}
+
+/*
+ * ══════════════════════════════════════════════════════════════════
+ * POHJAPALLO EI SAA OLLA MUSTA (omistaja 19.9.2026 klo 14.58)
+ * ══════════════════════════════════════════════════════════════════
+ *
+ * Sanatarkasti, iPhone-kuva v1954:n Ranskan pelinäkymästä:
+ * *"Panoroidessa viela bugittaa hetkellisesti. Korjaantuu kylla mutta
+ * liikkeen aikana nain"* — Keski-Ranskan päälle ilmestyi yhden laatan
+ * kokoinen TÄYSIN MUSTA suorakaide, joka hävisi liikkeen loputtua.
+ *
+ * MUSTA EI OLE LAATTA VAAN AUKKO. Mitattuna (savuke-musta-laatta,
+ * WebKit 390 × 844 dpr 3) laattamoottorin ryhmässä on pohjapallo,
+ * jonka materiaali on `MeshBasicMaterial`, väri RGB(0,0,0), ilman
+ * tekstuuria — globe.gl asettaa sen mustaksi, koska laattatilassa
+ * pallon oman pinnan EI ole tarkoitus näkyä. Se on ainoa pinta
+ * laattojen alla, joten missä tahansa laatta puuttuu tai on vielä
+ * häivettä aloittamassa, ruudulla on juuri tuo väri: puhdas musta.
+ * Nopealla verkolla aukko on lyhyempi kuin yksi kehys; puhelimen
+ * mobiiliverkossa se on sekunnin murto-osia ja NÄKYY.
+ *
+ * KORJAUS ON SAMA PERIAATE KUIN KERMALLA (KARTTAUUDISTUKSEN
+ * PAATOKSET 37): pohjasävy on paikalla HETI eikä vasta laatan
+ * mukana. Pohjapallo saa kartan oman vaalean sävyn, jolloin
+ * puuttuva laatta näkyy kartanvärisenä aukkona eikä reikänä
+ * avaruuteen. Sävy on sama kuin pohjoisen napakannen
+ * (NAPAKANSI_POHJOINEN), eli laattojen oma merisävy — se on
+ * mitattu kartan laatoista eikä keksitty tässä.
+ *
+ * MIKSI TÄMÄ PALLO EIKÄ `globeMaterial()`. Pallon OMA pinta (säde
+ * 100, MeshPhongMaterial) on myös musta, mutta se on laattatilassa
+ * `visible === false`: se on Astronautin kameran ja
+ * topografialinssin pinta, ja sen väri on niiden asia (Raamattu
+ * ASTRONAUTIN KAMERA kohta 37, PAATOKSET 46). Tässä kosketaan VAIN
+ * laattamoottorin omaan taustapalloon, jolla ei ole tekstuuria —
+ * joten yksikään linssi ei voi saada siitä sävyä päälleen.
+ */
+export function asennaPohjanSavy(pallo, ikkuna = globalThis) {
+  let yritys = 0;
+  const yrita = () => {
+    const moottori = laattamoottori(pallo);
+    const pohja = (moottori?.children ?? []).find((o) => o.geometry
+      && o.material?.type === 'MeshBasicMaterial' && !o.material.map && o.material.color);
+    if (pohja) { pohja.material.color.set(NAPAKANSI_POHJOINEN); return; }
+    if (++yritys < 100) ikkuna.setTimeout(yrita, 100);
+  };
+  yrita();
 }
 
 /** Globe.gl:n laattamoottori pallon scenestä (Group, jolla thresholds). */

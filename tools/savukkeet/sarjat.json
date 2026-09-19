@@ -6,6 +6,8 @@
     "savuke-pariisi-lahizoom.mjs#390-liuska",
     "savuke-pariisi-lahizoom.mjs#1400-liuska",
     "savuke-topografialinssi.mjs",
+    "savuke-musta-laatta.mjs#webkit",
+    "savuke-musta-laatta.mjs#chromium",
     "savuke-astro-pallo.mjs#vartija-b",
     "savuke-satelliittilinssi.mjs#isot",
     "savuke-astro-pallo.mjs#vartija-a",
@@ -96,19 +98,13 @@
       "env": {
         "NAKYMAT": "puhelin"
       },
-      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Puhelinnäyttö ilman vartijalohkoa. Mac-mittaus 18.9.2026: 87 s (oli yhtenä rivinä 464 s). Korjattu 17.9.2026, mittaus pysäytetystä tilasta: varjovartiot (\"varjon puoli tummuu\", \"valon puoli kirkastuu\", \"varjo ei ulotu puoliväliin\") ja \"VASTAKOE: kytkin pois palauttaa pikselit\" olivat häilyviä, koska kolmen kuvakaappauksen välissä ruutu eli: ISS-merkki ja ratakaari piirtyvät joka kehyksellä ja kulkevat juuri reunan näytepisteiden yli (Actions 35221065011, PR #2555: päällä 63,5 → pois 83,5 → takaisin 57,9, puhelin). Savuke odottaa nyt pinnan lopulliseksi, pysäyttää pyörimisen, piilottaa .astro-rata ja .astro-iss mittauksen ajaksi ja hyväksyy näytteen vasta kun kaksi peräkkäistä kaappausta ovat samat; uusi vartio \"varjomittaus tehdään pysäytetystä tilasta ja samasta kamera-asennosta\" kirjaa eron. Mac-mittaus 17.9.2026: peräkkäisten näytteiden ero 0 molemmilla näytöillä kahdessa ajossa. TUNNETTU KUORMAPUNAINEN 19.9.2026 klo 11.35 Suomen aikaa (v1950 CI 35432104990): 45c sadekehamitta 4,9 vs raja 5 rinnakkaisajossa, sama kuin tyopoyta-rivilla; poistetaan kahden perakkaisen vihrean jalkeen.",
-      "tunnetutPunaiset": [
-        "45c: valaisu tulee sädekehästä eikä maastosta"
-      ]
+      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Puhelinnäyttö ilman vartijalohkoa. Mac-mittaus 18.9.2026: 87 s (oli yhtenä rivinä 464 s). Korjattu 17.9.2026, mittaus pysäytetystä tilasta: varjovartiot (\"varjon puoli tummuu\", \"valon puoli kirkastuu\", \"varjo ei ulotu puoliväliin\") ja \"VASTAKOE: kytkin pois palauttaa pikselit\" olivat häilyviä, koska kolmen kuvakaappauksen välissä ruutu eli: ISS-merkki ja ratakaari piirtyvät joka kehyksellä ja kulkevat juuri reunan näytepisteiden yli (Actions 35221065011, PR #2555: päällä 63,5 → pois 83,5 → takaisin 57,9, puhelin). Savuke odottaa nyt pinnan lopulliseksi, pysäyttää pyörimisen, piilottaa .astro-rata ja .astro-iss mittauksen ajaksi ja hyväksyy näytteen vasta kun kaksi peräkkäistä kaappausta ovat samat; uusi vartio \"varjomittaus tehdään pysäytetystä tilasta ja samasta kamera-asennosta\" kirjaa eron. Mac-mittaus 17.9.2026: peräkkäisten näytteiden ero 0 molemmilla näytöillä kahdessa ajossa. TUNNETTU KUORMAPUNAINEN 19.9.2026 klo 11.35 Suomen aikaa (v1950 CI 35432104990): 45c sadekehamitta 4,9 vs raja 5 rinnakkaisajossa, sama kuin tyopoyta-rivilla; poistetaan kahden perakkaisen vihrean jalkeen. POISTETTU 19.9.2026 (Opus, erä opus-local-45c): 45c ei ollut kuormapunainen - screen-sädekehän nosto riippuu pisteen alla olevan maaston kirkkaudesta, ja kiinteä raja 5 luki kameran valitseman pisteen taustaa; mittari vertaa nyt nostoa kirkastumisvaraan (≥ 0,02)."
     },
     "savuke-astro-pallo.mjs#tyopoyta": {
       "env": {
         "NAKYMAT": "tyopoyta,ei-vartija"
       },
-      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Työpöytänäyttö ILMAN vartijalohkoa: ei-vartija estää sen, koska tyopoyta laukaisisi lohkon oletuksena ja se ajettaisiin kahdesti (ks. savuke-astro-pallo.mjs, NAKYMAT-kommentti). TUNNETTU KUORMAPUNAINEN 19.9.2026 klo 02.00 (v1947): 45c sadekehamitta 4,8 vs raja 5 rinnakkaisajossa (savukkeen oma kommentti: mitattu 4,6 kuormassa); ei kulje pinnanKirkkaus-mittarin kautta. Poistetaan kahden perakkaisen vihrean jalkeen. Ks. docs/raportit/viesti-fable-astro-pallo-pilvet-20260919.md.",
-      "tunnetutPunaiset": [
-        "45c: valaisu tulee sädekehästä eikä maastosta"
-      ]
+      "huomautus": "Jättu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19): PR-portin seinäkello on niin pitkä kuin sarjan PISIN savuke, ja rinnakkaisia paikkoja on enemmän kuin pitkiä savukkeita. Savuke ajetaan kahtena (astro-pallo kolmena) rinnakkaisena rivinä; rajaus tulee TÄMÄN rivin env-lohkosta, ei savukkeen muutoksesta. Tunnetut punaiset on kohdistettu sille puolikkaalle, jolla väite oikeasti ajetaan. Työpöytänäyttö ILMAN vartijalohkoa: ei-vartija estää sen, koska tyopoyta laukaisisi lohkon oletuksena ja se ajettaisiin kahdesti (ks. savuke-astro-pallo.mjs, NAKYMAT-kommentti). TUNNETTU KUORMAPUNAINEN 19.9.2026 klo 02.00 (v1947): 45c sadekehamitta 4,8 vs raja 5 rinnakkaisajossa (savukkeen oma kommentti: mitattu 4,6 kuormassa); ei kulje pinnanKirkkaus-mittarin kautta. Poistetaan kahden perakkaisen vihrean jalkeen. Ks. docs/raportit/viesti-fable-astro-pallo-pilvet-20260919.md. POISTETTU 19.9.2026 (Opus, erä opus-local-45c): 45c ei ollut kuormapunainen - screen-sädekehän nosto riippuu pisteen alla olevan maaston kirkkaudesta, ja kiinteä raja 5 luki kameran valitseman pisteen taustaa; mittari vertaa nyt nostoa kirkastumisvaraan (≥ 0,02)."
     },
     "savuke-satelliittilinssi.mjs#isot": {
       "env": {
@@ -173,6 +169,20 @@
         "NAKYMAT": "vartija-b"
       },
       "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. Vaitteen 9 vastakoelohkon TOINEN puolisko: Safarin rajat, kehykset poikki, musta pinta, kolme avausta perakkain. Mac-mittaus 18.9.2026: 128 s. Ks. #vartija-a."
+    },
+    "savuke-musta-laatta.mjs#webkit": {
+      "env": {
+        "SAVUKE_MOOTTORI": "webkit"
+      },
+      "kuvakansio": true,
+      "huomautus": "Omistajan loydos 19.9.2026 klo 14.58 Suomen aikaa (iPhone, v1954): panoroidessa Keski-Ranskaan ilmestyi yhden laatan kokoinen TAYSIN MUSTA suorakaide, joka havisi liikkeen loputtua. Vartio kysyy koko kartan alalta, onko kehyksessa yhtenainen musta suorakaide >= 40 x 40 CSS px. WEBKIT ON ENSISIJAINEN RIVI: loydos on iOS Safarista. Laattapyynnot viivytetaan route-valityksella 300-800 ms, jotta liikkeen aikainen tila nakyy. Jos tama nousee punaiseksi, kartan alla on taas musta pinta."
+    },
+    "savuke-musta-laatta.mjs#chromium": {
+      "env": {
+        "SAVUKE_MOOTTORI": "chromium"
+      },
+      "kuvakansio": true,
+      "huomautus": "Sama vartio Chromiumilla (vertailu). Ks. #webkit."
     },
     "savuke-topografialinssi.mjs": {
       "huomautusMac": "TUNNETTU MAC-PUNAINEN POISTETTU 18.9.2026 (Raamattu TARKENNUS 11 kohta 24 b). Vartio 'avauksessa ei ole valahdysta suhteessa linssin lopputilaan' hailyi kuormassa (paluu alas 19,4 vs raja 15; yksin ajettuna 4,0). Savuke ottaa nyt kolme naytetta JA KAYTTAA MEDIAANIA, mutta vain jos ensimmainen nayte on punainen - vihrea kertakaynti riittaa, koska kuormahaily tekee mittauksesta punaisen eika vihreaa. Rajat (8 kehysta, 60 %, VALAHDYSVARA 15) ovat ennallaan. Jos tama nousee punaiseksi, se on kolmen nayteen mediaani eika yksi pudonnut kehys.",
