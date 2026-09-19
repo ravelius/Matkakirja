@@ -9111,7 +9111,7 @@ export const RAAMATTU = {
           + 'pidetaan null, kunnes Opus-era kalibroi savukkeet aidolle kuvalle '
           + '(pilvikuori pois pinnan mittausten ajaksi tai mittapisteet pilvettomalle '
           + 'alueelle) ja omistaja katsoo kuvan puhelimella. TILA 3 (Fable 19.9.2026 '
-          + 'klo 09.50 Suomen aikaa, Opus-era 19 min, haara pilvikuva): JUURISYY OLI '
+          + 'klo 09.45 Suomen aikaa, Opus-era 19 min, haara pilvikuva): JUURISYY OLI '
           + 'PELISSA - NASA-kuva on JPEG-luminanssikartta ilman alfakanavaa, ja kalvo '
           + 'piirsi sen sellaisenaan 0,9 peitolla = musta pallo valkoisin pilvin; '
           + 'siita kaikki kuusi punaista, ja "pallo ei ole musta" oli aito loydos. '
