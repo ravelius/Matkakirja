@@ -4634,7 +4634,16 @@ export const RAAMATTU = {
           + 'uusi ohjedokumentti on ohje vasta kun se on Raamatun kartalla '
           + '(tests/dokumentit.test.mjs). Ensimmaiset projektin PR:t #2591 (AGENTS.md) '
           + 'ja #2592 (siirtoraportin ohje; muokkaa Raamattua - Fable vie osion itse) '
-          + 'mergetaan v1948:n jalkeen. Tila: voimassa.',
+          + 'mergetaan v1948:n jalkeen. KUMOTTU SAMANA AAMUNA (omistaja 19.9.2026 '
+          + 'klo 09.15 Suomen aikaa, sanatarkasti: "Eli projekti ei pysty '
+          + 'kaynnistamaan paikallisia sessioita?" ja "Ehka projektia ei sitten '
+          + 'kannata ottaa tahan mukaan ollenkaan?"; kortti "Pois, mutta PR:t #2591 '
+          + 'ja #2592 mergetaan"): CLAUDE PROJECTS EI OLE KAYTOSSA TASSA PELISSA - '
+          + 'threadit eivat voi kaynnistaa paikallista sessiota eivatka paase '
+          + 'Maciin, ja kolmas rinnakkainen toimija toisi enemman koordinoitavaa '
+          + 'kuin hyotya. Dokumenttisiivous tehdaan Sonnet-agentilla Macilta. '
+          + 'Projektin kaksi valmista PR:aa (AGENTS.md, siirtoraportin ohje) '
+          + 'mergetaan v1948:n jalkeen; Fable lisaa karttarivit. Tila: voimassa.',
         'MAC STUDIO: UUDEN SESSION ALOITUS ILMAN OMISTAJAN OHJETTA, JA MISSA '
           + 'AVAIMET OVAT (omistaja 18.9.2026 klo 09.50 Suomen aikaa, '
           + 'sanatarkasti: "Kirjaa raamattuun selkeasti ylos etta uudet sessiot '
