@@ -137,19 +137,29 @@ datapisteensä maalle lukittuna.
 
 | Maa | Ankkureita | Viennistä | Omasta pisteestä | Siirretty maalle | Saari | Meri |
 |---|---|---|---|---|---|---|
-| ESP | 54 | 49 | 5 | 5 | 0 | 3 |
+| ESP | 54 | 49 | 5 | 5 | 0 | 2 |
 | ITA | 50 | 45 | 5 | 1 | 3 | 3 |
-| DEU | 57 | 40 | 17 | 1 | 1 | 3 |
-| PRT | 48 | 47 | 1 | 4 | 1 | 4 |
-| GRC | 62 | 42 | 20 | 6 | 1 | 5 |
+| DEU | 57 | 40 | 17 | 1 | 1 | 2 |
+| PRT | 48 | 47 | 1 | 4 | 1 | 3 |
+| GRC | 62 | 42 | 20 | 6 | 1 | 4 |
 | AUT | 44 | 12 | 32 | 0 | 0 | 0 |
 | NLD | 49 | 42 | 7 | 3 | 0 | 1 |
-| BEL | 26 | 0 | 26 | 0 | 0 | 2 |
+| BEL | 26 | 0 | 26 | 0 | 0 | 0 |
 | POL | 45 | 35 | 10 | 0 | 0 | 2 |
 | CZE | 46 | 22 | 24 | 0 | 0 | 0 |
-| DNK | 20 | 13 | 7 | 4 | 0 | 3 |
+| DNK | 20 | 13 | 7 | 4 | 0 | 2 |
 | HUN | 23 | 9 | 14 | 0 | 0 | 0 |
 | SWE | 20 | 19 | 1 | 3 | 0 | 1 |
+
+**Omasta pisteestä = ilman levitystä.** Nostot, jotka kaupungin kamera
+ei nähnyt, saivat datapisteensä sellaisenaan. Kyse on
+- BEL:n kaikista 26 nostosta (Brysseliä ei ole),
+- AUT:n 32:sta, CZE:n 24:stä ja HUN:n 14:stä (yksi kaupunki per maa).
+
+Jos näistä syntyy tiheä rypäs, sen nimiöt voivat limittyä, koska lukittu
+ankkuri ohittaa levityksen. Erä J (lehtinimiöt, WebKit 390) mittaa tämän
+samalla. Vaihtoehto on ajaa vienti lisäkaupungeista, kun niitä tulee
+kartalle.
 
 **K2 tehty.** Tyypin `meri` nosto pitää pisteensä merellä (viedyn ankkurin
 tai oman datapisteen). Sääntö koskee uusia maita. FRA-taulu on poltettu ja
