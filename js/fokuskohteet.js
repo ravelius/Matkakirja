@@ -134,6 +134,7 @@ import { HAHMOTELMA_GRC } from './packs/hahmotelma-grc.js';
 import { HAHMOTELMA_AUT } from './packs/hahmotelma-aut.js';
 import { HAHMOTELMA_NLD } from './packs/hahmotelma-nld.js';
 import { HAHMOTELMA_POL } from './packs/hahmotelma-pol.js';
+import { HAHMOTELMA_CZE } from './packs/hahmotelma-cze.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
@@ -392,6 +393,14 @@ KOHDE_MAAT.NLD = [...(KOHDE_MAAT.NLD ?? []), ...HAHMOTELMA_NLD];
  * ulkopuolella eivätkä toista Puolan 25 nykyistä nostoa.
  */
 KOHDE_MAAT.POL = [...(KOHDE_MAAT.POL ?? []), ...HAHMOTELMA_POL];
+
+/*
+ * TŠEKIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti Prahan ulkopuolella eivätkä toista
+ * Tšekin 24 nykyistä nostoa.
+ */
+KOHDE_MAAT.CZE = [...(KOHDE_MAAT.CZE ?? []), ...HAHMOTELMA_CZE];
 
 /*
  * ESPANJAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
