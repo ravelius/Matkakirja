@@ -131,6 +131,17 @@ export const IHMISEN_MATKA_KUVAJUURI = 'https://media.matkakirja.app/aikajana/ih
 export const IHMISEN_MATKA_ESINEJUURI = 'https://media.matkakirja.app/linssit/ihmisen-matka/esineet-20260907';
 
 /**
+ * LISÄNOSTOJEN AITOJEN COMMONS-KUVIEN juuri (omistaja 19.9.2026 klo
+ * 18.20: aito kuva nyt, havainnekuva myöhemmin). Kuva on lisänoston
+ * `kuvaAito`-kenttä: tiedostonimi kantaa sisällön tiivisteen
+ * (im-<tunnus>-<sha8>.jpg), joten uusi kuva on aina uusi osoite eikä
+ * julkaistu peliversio näe vaihtuvaa kuvaa. Tekijä, lisenssi ja
+ * Commonsin tiedostosivu ovat kentissä `tekija`, `lisenssi`,
+ * `lisenssiUrl`, `lahdeUrl` ja näkyvät kortin kuvan alla.
+ */
+export const IHMISEN_MATKA_LISANOSTOKUVAJUURI = 'https://media.matkakirja.app/linssit/ihmisen-matka/lisanostot-20260920';
+
+/**
  * Löytökuvien yhteinen lähderivi. Kuvat ovat lähdeperustaisia
  * kuvituksia eivätkä museovalokuvia, ja se sanotaan pelaajalle
  * suoraan. Alkuosa "Matkakirjan havainnekuva" on talon oma sanamuoto
@@ -1162,6 +1173,19 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'ajatus siitä, että purkaus kutisti ihmiskunnan muutamaan tuhanteen '
       + 'yksilöön, on sittemmin kyseenalaistettu — Afrikan kaivauksissa elämä '
       + 'jatkui tuhkakerroksen yli.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-toba-fc05389a.jpg`,
+      lyhyt: 'Toba-järvi ja sen kaldera Sumatralla korkeuskartalla.',
+      selite: 'Maastokartta näyttää Toban kraatterijärven ja sen keskellä '
+        + 'olevan Samosirin niemimaan. Kaldera on jäänyt jäljelle '
+        + 'valtavasta purkauksesta, joka tapahtui noin 74 000 vuotta '
+        + 'sitten.',
+      lahde: 'Kartta: Batholith, Wikimedia Commons (Public domain).',
+      tekija: 'Batholith',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lake_Toba_(SRTM).jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    },
     lahde: 'en-Wikipedia "Toba eruption"',
     kysymykset: [
       'Miten Toban purkaus ajoitettiin?',
@@ -1178,6 +1202,18 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'tasankona. Sundamaan poikki käveltiin kuivin jaloin, ja sen jokilaaksot '
       + 'ja rannat ovat nyt matalan meren pohjassa — siksi varhaisimmat leirit '
       + 'ovat vaikeimmin löydettäviä.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-sunda-c8515f30.jpg`,
+      lyhyt: 'Sundamaa viimeisen jääkauden huipulla: nykyiset maat tummalla.',
+      selite: 'Kartta näyttää, kuinka laaja alue Kaakkois-Aasiassa oli kuivaa '
+        + 'maata jääkauden matalan merenpinnan aikaan. Vaaleanharmaa on '
+        + 'tuolloin paljastunut maa, tumma nykyiset saaret ja mantere.',
+      lahde: 'Kartta: ש.מירון, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'ש.מירון',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sundaland-at-the-Last-Glacial-Maximum-showing-the-modern-distribution-of-land-in-dark.png',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
     lahde: 'en-Wikipedia "Sundaland"',
     kysymykset: [
       'Miten muinainen merenpinta lasketaan?',
@@ -1194,6 +1230,19 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'kävellen: viimeinen vesiväli oli kymmeniä kilometrejä leveä, joten '
       + 'ensimmäinen australialainen tuli veneellä. Merenpinnan noustua manner '
       + 'katkesi kolmeksi ja rannikon vanhimmat leirit jäivät veden alle.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-sahul-b4f9bd68.jpg`,
+      lyhyt: 'Sahul: Australian ja Uuden-Guinean yhteinen jääkauden manner.',
+      selite: 'Kartta näyttää Sahulin, joka jääkauden matalan merenpinnan '
+        + 'aikaan yhdisti Australian ja Uuden-Guinean yhdeksi '
+        + 'mantereeksi. Vaaleampi harmaa osoittaa alueet, jotka olivat '
+        + 'silloin kuivaa maata.',
+      lahde: 'Kartta: Altaileopard, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Altaileopard',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Map_of_Sunda_and_Sahul_2.png',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
     lahde: 'en-Wikipedia "Sahul"',
     kysymykset: [
       'Millaisilla veneillä Sahuliin päästiin?',
@@ -1210,6 +1259,20 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'koskaan paljastanut siltaa, ja siksi Aasian ja Australian eläimistöt ovat '
       + 'yhä eri maailmoja. Ihminen ylitti rajan silti — ja se on vanhin todiste '
       + 'siitä, että osattiin kulkea merellä.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-wallacea-f7a910fa.jpg`,
+      lyhyt: 'Wallacen alkuperäinen kartta vuodelta 1863 ja hänen vetämänsä '
+        + 'raja.',
+      selite: 'Alfred Russel Wallacen vuoden 1863 kartta Malaijisaaristosta. '
+        + 'Punainen viiva erottaa aasialaisen ja australialaisen '
+        + 'eläimistön alueet Balin ja Lombokin välistä.',
+      lahde: 'Kartta: Alfred Russel Wallace; J. Arrowsmith, Wikimedia '
+        + 'Commons (Public domain).',
+      tekija: 'Alfred Russel Wallace; J. Arrowsmith',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Wallace-line1.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    },
     lahde: 'en-Wikipedia "Wallacea"',
     kysymykset: [
       'Miksi Wallace vetäisi rajansa juuri tähän?',
@@ -1226,6 +1289,19 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'floresiensis eli saarella kymmeniätuhansia vuosia, teki kivityökaluja ja '
       + 'metsästi kääpiönorsuja — ja katosi suunnilleen silloin, kun nykyihminen '
       + 'saapui seudulle.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-flores-b4131f24.jpg`,
+      lyhyt: 'Liang Buan luola Floresilla, Indonesiassa.',
+      selite: 'Liang Buan luolasta löydettiin vuonna 2003 Homo '
+        + 'floresiensiksen jäänteet, ja kuva on otettu luolan sisältä '
+        + 'kaivausalueelta vuonna 2007. Luolassa näkyvät kaivausruudut ja '
+        + 'työskenteleviä ihmisiä.',
+      lahde: 'Valokuva: Rosino, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Rosino',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Homo_floresiensis_cave.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
     lahde: 'en-Wikipedia "Homo floresiensis"',
     kysymykset: [
       'Miksi saarilla eläneet lajit kutistuvat?',
@@ -1242,6 +1318,20 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'vanhin tunnettu kuva, joka kertoo tapahtuman. Ajoitus tehdään maalin '
       + 'päälle kasvaneesta kalkkikerroksesta, joten kuva on vähintään niin vanha '
       + 'kuin sitä peittävä kivi.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-sulawesi-taide-2941b3f9.jpg`,
+      lyhyt: 'Käsijälkimaalauksia Pettakeren luolan seinällä Marosissa.',
+      selite: 'Maros-Pangkepin karstialueen luolissa Etelä-Sulawesilla on '
+        + 'käsijälkiä, jotka on tehty puhaltamalla väriä käden ympärille; '
+        + 'alueen vanhimmat on ajoitettu jopa noin 40 000 vuoden '
+        + 'ikäisiksi. Kuvassa punaruskeat kädenjäljet Pettakeren luolan '
+        + 'seinällä.',
+      lahde: 'Valokuva: Sabjan Badio, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Sabjan Badio',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hand_print_paintings_in_Pettakere_Cave,_Maros.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
     lahde: 'en-Wikipedia "Maros-Pangkep karst"',
     kysymykset: [
       'Miten luolamaalaus ajoitetaan?',
@@ -1258,6 +1348,18 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'ovat pitkiä eivätkä vielä pilkkoutuneita — siitä lasketaan, että '
       + 'sekoittuminen tapahtui noin 50 000–60 000 vuotta sitten, muutama sata '
       + 'sukupolvea ennen tätä miestä.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-ust-ishim-576932ca.jpg`,
+      lyhyt: 'Irtyš-joen ranta Ust-Išimin kylän kohdalla Länsi-Siperiassa.',
+      selite: 'Ust\'-Ishimin miehen luu löytyi vuonna 2008 Irtyšin rannalta '
+        + 'Omskin alueelta, lähellä Išim-joen suuta. Kuvassa Išim yhtyy '
+        + 'Irtyšiin Ust-Išimin kylän kohdalla.',
+      lahde: 'Valokuva: Odessey, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Odessey',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Confluence_of_Siberian_rivers_-_the_Ishim_flows_into_the_Irtysh.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
     lahde: 'en-Wikipedia "Ust\'-Ishim man"',
     kysymykset: [
       'Miten perimästä lasketaan sekoittumisen ajankohta?',
@@ -1274,6 +1376,18 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + '— sama tuhka ajoittaa ne kaikki kerralla. Kostenki 14:n perimä osoittaa, '
       + 'että eurooppalaisten sukupuu haarautui jo tällöin, ja mammutinluista '
       + 'rakennettiin majoja arolla, jossa puuta ei ollut.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-kostenki-52a30bb4.jpg`,
+      lyhyt: 'Don-joki Kostenkin kylän lähellä Voronežin alueella.',
+      selite: 'Kostenki-Borščovon yläpaleoliittiset leiripaikat sijaitsevat '
+        + 'Don-joen rantatörmillä. Kuvassa joki mutkittelee laakson halki '
+        + 'Kostenkin kylän lähellä.',
+      lahde: 'Valokuva: Наталья Филатова, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Наталья Филатова',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Река_Дон_около_села_Костенки_-_panoramio.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0/',
+    },
     lahde: 'en-Wikipedia "Kostyonki–Borshchyovo archaeological complex"',
     kysymykset: [
       'Miten tulivuoren tuhka toimii ajoituksena?',
@@ -1290,6 +1404,20 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'puvun helmien tekemiseen on arvioitu kuluneen tuhansia työtunteja, ja '
       + 'lasten haudassa oli suoraksi oiottuja mammutinsyöksyhampaita. Se kertoo '
       + 'yhteisöstä, jolla oli varaa haudata lapsi kuin ruhtinas.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-sungir-b41a27f1.jpg`,
+      lyhyt: 'Sungirin pojan pukuvaatteen rekonstruktio helmikoristeineen '
+        + 'museossa.',
+      selite: 'Rekonstruktio Sungirin paleoliittisen löytöpaikan pojan '
+        + 'haudasta tehtyjen löytöjen pohjalta: turkiskoristeinen '
+        + 'nahkapuku ja helmirivein ommeltu rintalappu. Esine on esillä '
+        + 'museon vitriinissä.',
+      lahde: 'Valokuva: Лапоть, Wikimedia Commons (CC0).',
+      tekija: 'Лапоть',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Clothes_3_-_Sungir_-_Vladimir_Palaty.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    },
     lahde: 'en-Wikipedia "Sunghir"',
     kysymykset: [
       'Kuinka kauan yhden helmen tekemiseen meni?',
@@ -1306,6 +1434,19 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'ruukkua. Samalta paikalta tunnetaan kudotun kankaan painaumia savessa ja '
       + 'kolmen nuoren yhteishauta, jonka asetelmaa on selitetty monella tavalla '
       + 'eikä yksikään selitys ole varma.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-dolni-vestonice-6b9fd4d0.jpg`,
+      lyhyt: 'Dolní Věstonicen Venus, maailman vanhin tunnettu keraaminen '
+        + 'figuuri.',
+      selite: 'Noin 29 000–25 000 vuotta vanha poltetusta savesta tehty '
+        + 'naishahmo, joka löytyi Dolní Věstonicen paleoliittiselta '
+        + 'löytöpaikalta Määrissä.',
+      lahde: 'Valokuva: Miroslav Zachoval, Wikimedia Commons (CC BY 2.0).',
+      tekija: 'Miroslav Zachoval',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Venus_of_Dolni_Vestonice_2014-09-30.jpg',
+      lisenssi: 'CC BY 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0/',
+    },
     lahde: 'en-Wikipedia "Dolní Věstonice (archaeology)"',
     kysymykset: [
       'Miksi savea poltettiin jo tällöin, mutta ei astioiksi?',
@@ -1322,6 +1463,19 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'sukua sekä eurooppalaisille että Amerikan alkuperäisväestölle. Tästä '
       + '"muinaisten pohjois-eurasialaisten" väestöstä tuli toinen puolikas siinä '
       + 'seoksessa, joka lopulta ylitti Beringian.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-malta-poika-f5823400.jpg`,
+      lyhyt: 'Mal\'tan lapsihaudan esineitä: helmiä, riipuksia ja '
+        + 'rannerengas.',
+      selite: 'Kuvassa on Mal\'tan löytöpaikan lapsen (MA-1) haudasta tehtyjä '
+        + 'löytöjä: mammutinluuhelmiä, riipuksia, kaareva rannerengas ja '
+        + 'muita esineitä. Jäänteitä ei näy.',
+      lahde: 'Valokuva: Liudmila Lbova, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Liudmila Lbova',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Mal%27ta_child_(MA-1)_grave_artifacts.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
     lahde: 'en-Wikipedia "Mal\'ta–Buret\' culture"',
     kysymykset: [
       'Miten yhdestä haudasta voi päätellä kokonaisen väestön?',
@@ -1337,6 +1491,18 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'lähes kaksituhatta kuvaa: hevosia, uroshirviä ja jättimäisiä härkiä. '
       + 'Luola suljettiin yleisöltä 1963, koska kävijöiden hiilidioksidi ja '
       + 'kosteus alkoivat tuhota maalauksia — nyt siellä käydään kopiossa.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-lascaux-afb31501.jpg`,
+      lyhyt: 'Lascaux-luolan maalauksen kopio: hevosia ja villihärkä.',
+      selite: 'Lähikuva Lascaux-luolan maalauksesta, jossa näkyy suuri härkä '
+        + 'ja pienempi keltainen hevonen. Kuva on otettu Lascaux II '
+        + '-kopioluolassa.',
+      lahde: 'Valokuva: Eline13Viki+, Wikimedia Commons (CC0).',
+      tekija: 'Eline13Viki+',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Peinture_Grotte_de_Lascaux.jpg',
+      lisenssi: 'CC0',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+    },
     lahde: 'en-Wikipedia "Lascaux"',
     kysymykset: [
       'Miksi luolamaalauksia tehtiin niin syvälle pimeään?',
@@ -1353,6 +1519,19 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'tulkinta pitää, ihmisiä oli Beringiassa kauan ennen jään väistymistä — '
       + 'mutta viilto voi syntyä myös pedon hampaista ja maan liikkeistä, ja '
       + 'kiista jatkuu.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-bluefish-ebc0b933.jpg`,
+      lyhyt: 'Suuren järven ranta Old Crow Flatsin kosteikoilla Yukonissa.',
+      selite: 'Old Crow Flatsin kosteikkomaisema Vuntutin kansallispuistossa '
+        + 'Luoteis-Yukonissa, lähellä Old Crow\'n kylää. Bluefish Caves '
+        + '-luolat sijaitsevat samalla seudulla, ja niistä on löydetty '
+        + 'jälkiä ihmisistä jääkauden lopun Beringiasta.',
+      lahde: 'Valokuva: Paul Gierszewski, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Paul Gierszewski',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lake_in_Old_Crow_Flats_Vuntut_NP.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
     lahde: 'en-Wikipedia "Bluefish Caves"',
     kysymykset: [
       'Miten teurastusjälki erotetaan pedon puremasta?',
@@ -1368,6 +1547,20 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'joka on radiohiiliajoitettu vanhemmaksi kuin yksikään Clovis-kärki. '
       + 'Siitä luettu DNA ja luolan luuytimestä tehdyt neulat kertovat samaa: '
       + 'Amerikassa oli ihmisiä ennen Clovisia.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-paisley-9083f775.jpg`,
+      lyhyt: 'Paisley Caves -luolat Summer Laken tasangon yläpuolella '
+        + 'Oregonissa.',
+      selite: 'Paisley Caves ovat kallioseinämän onkaloita Oregonin '
+        + 'kaakkoisosassa Summer Laken tasangon yläpuolella. Luolista on '
+        + 'löydetty yhdet Pohjois-Amerikan vanhimmista ihmisjäljistä, '
+        + 'noin 14 000 vuotta vanhoja koprofossiileja.',
+      lahde: 'Valokuva: BLM photo, Wikimedia Commons (Public domain).',
+      tekija: 'BLM photo',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Paisley_caves_-_Fossil_Cave5.jpg',
+      lisenssi: 'Public domain',
+      lisenssiUrl: 'https://creativecommons.org/publicdomain/mark/1.0/',
+    },
     lahde: 'en-Wikipedia "Paisley Caves"',
     kysymykset: [
       'Mitä muinaisesta ulosteesta voi lukea?',
@@ -1384,6 +1577,19 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'kärkeä alkoi löytyä kaikkialta Pohjois-Amerikasta muutaman vuosisadan '
       + 'sisällä, ja pitkään sitä pidettiin maanosan ensimmäisen kulttuurin '
       + 'merkkinä — nykyään se on yksi vaihe muiden joukossa.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-clovis-19487ff7.jpg`,
+      lyhyt: 'Clovis-keihäänkärkiä esillä Clevelandin '
+        + 'luonnonhistoriallisessa museossa.',
+      selite: 'Kuusi kivistä Clovis-kulttuurin keihäänkärkeä museon '
+        + 'näyttelyssä. Nimensä kärjet ovat saaneet Clovisin kaupungista '
+        + 'New Mexicosta, ja ne ovat noin 13 000-13 500 vuotta vanhoja.',
+      lahde: 'Valokuva: Tim Evanson, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Tim Evanson',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Clovis_spearpoints_-_Cleveland_Museum_of_Natural_History.jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
     lahde: 'en-Wikipedia "Clovis culture"',
     kysymykset: [
       'Miksi Clovis-kärki levisi niin nopeasti?',
@@ -1400,6 +1606,20 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'mammutinluita. Meri söi Doggerlandin vähitellen, ja lopun teki noin '
       + '8 200 vuotta sitten Norjan edustan valtava vedenalainen maanvyöry ja sen '
       + 'hyökyaalto.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-doggerland-be5c7d79.jpg`,
+      lyhyt: 'Doggerland ja Doggerbank kartoilla: nykytilanne ja muinainen '
+        + 'maasilta.',
+      selite: 'Kolmen kartan sarja näyttää, miten Britannian ja Euroopan '
+        + 'mantereen välillä oli maa-alue jääkauden lopulla ja '
+        + 'mesoliittisella ajalla. Uponnut Doggerland peittyi vähitellen '
+        + 'merenpinnan noustessa.',
+      lahde: 'Kartta: Francis Lima, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Francis Lima',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Doggerland3er_en.png',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
     lahde: 'en-Wikipedia "Doggerland"',
     kysymykset: [
       'Miten uponnutta maisemaa kartoitetaan?',
@@ -1416,6 +1636,20 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'ja heidän perimänsä on lähes kokonaan aasialaista alkuperää — '
       + 'papualainen aines tuli saarille vasta myöhemmin, mikä kertoo kahdesta '
       + 'eri muuttoaallosta.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-teouma-46a33b40.jpg`,
+      lyhyt: 'Lapita-keramiikkaa Vanuatun kulttuurikeskuksessa Port Vilassa.',
+      selite: 'Koristeltu Lapita-tyyppinen keramiikka-astia esillä Vanuatun '
+        + 'kulttuurikeskuksessa Efaten saarella sijaitsevassa Port '
+        + 'Vilassa. Efaten Teouman hautausmaa on Lapita-kulttuurin '
+        + 'tunnetuimpia löytöpaikkoja, ja sen väki kuului Tyynenmeren '
+        + 'saarten ensimmäisiin asuttajiin.',
+      lahde: 'Valokuva: Torbenbrinker, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Torbenbrinker',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:PortVilaLapita.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
     lahde: 'en-Wikipedia "Teouma"',
     kysymykset: [
       'Miten Lapita-keramiikan koristelu tehtiin?',
@@ -1432,6 +1666,19 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'valtameren yli, eivät kävelleet Mosambikista. Väestö on sekoitus '
       + 'austronesialaista ja bantutaustaa, ja saaren jättiläislinnut ja '
       + 'kääpiövirtahevot katosivat ihmisen tulon jälkeen.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-madagaskar-6c324b37.jpg`,
+      lyhyt: 'Vezo-kalastajien purjekanootti Madagaskarin rannalla.',
+      selite: 'Madagaskarin länsirannikon vezo-kalastajien purjekanootti. '
+        + 'Saaren asuttajat tulivat Kaakkois-Aasiasta austronesialaisilla '
+        + 'purjekanooteilla, ja saaren kanoottiperinne polveutuu heidän '
+        + 'merenkulustaan.',
+      lahde: 'Valokuva: Boosha Afrikaf, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Boosha Afrikaf',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Pirogue_%C3%A0_balancier.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
+    },
     lahde: 'en-Wikipedia "Madagascar"',
     kysymykset: [
       'Miten kielet paljastavat muuttoliikkeen?',
@@ -1448,6 +1695,19 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'nykyisissä inuiteissa. Jäätyneestä maasta säilyneestä hiustupsusta '
       + 'luettiin vuonna 2010 ensimmäinen muinaisen ihmisen koko perimä; se '
       + 'kertoi miehen silmien värin, veriryhmän ja korvavahan laadun.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-saqqaq-7f08cc47.jpg`,
+      lyhyt: 'Sermermiutin laakso Ilulissatin jäävuonon rannalla '
+        + 'Länsi-Grönlannissa.',
+      selite: 'Sermermiutin alue Ilulissatin jäävuonon rannalla '
+        + 'Disko-lahdella on vanha metsästäjien asuinpaikka, jolta '
+        + 'tunnetaan Saqqaq-kulttuurin jälkiä.',
+      lahde: 'Valokuva: Sebastian We, Wikimedia Commons (CC BY-SA 2.0).',
+      tekija: 'Sebastian We',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sermermiut,_Ilulissat_(30393839783).jpg',
+      lisenssi: 'CC BY-SA 2.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/2.0/',
+    },
     lahde: 'en-Wikipedia "Saqqaq culture"',
     kysymykset: [
       'Miten hiuksesta luetaan koko perimä?',
@@ -1464,6 +1724,20 @@ export const IHMISEN_MATKA_LISANOSTOT = [
       + 'lähes tuhat moai-patsasta, ja pitkään kerrottua tarinaa itse aiheutetusta '
       + 'romahduksesta on viime vuosina korjattu: väestö näyttää pysyneen '
       + 'vakaana, ja suurin isku tuli eurooppalaisten mukana.',
+    kuvaAito: {
+      osoite: `${IHMISEN_MATKA_LISANOSTOKUVAJUURI}/im-rapa-nui-bf5da0ea.jpg`,
+      lyhyt: 'Kuusi moai-patsasta Ahu Tongarikin seremoniapaikalla Rapa '
+        + 'Nuilla.',
+      selite: 'Moai-patsaat seisovat Ahu Tongarikin kivialustalla Rapa Nuilla '
+        + 'eli Pääsiäissaarella. Patsaita veistettiin rakentajien '
+        + 'esi-isien muistoksi, ja yksi niistä kantaa punaista '
+        + 'pukao-kivikorkkia.',
+      lahde: 'Valokuva: Rivi, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Rivi',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ahu_Tongariki.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0/',
+    },
     lahde: 'en-Wikipedia "Easter Island"',
     kysymykset: [
       'Miten näin kaukaiselle saarelle osattiin purjehtia?',
