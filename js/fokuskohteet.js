@@ -148,6 +148,7 @@ import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
 import { HAHMOTELMA_FIN } from './packs/hahmotelma-fin.js';
 import { HAHMOTELMA_ROU } from './packs/hahmotelma-rou.js';
 import { HAHMOTELMA_SVN } from './packs/hahmotelma-svn.js';
+import { HAHMOTELMA_EST } from './packs/hahmotelma-est.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -512,6 +513,14 @@ KOHDE_MAAT.FIN = [...(KOHDE_MAAT.FIN ?? []), ...HAHMOTELMA_FIN];
  * (Bukarest) ulkopuolella, lähin (Ploiești) yli 8 lautayksikön päässä.
  */
 KOHDE_MAAT.ROU = [...(KOHDE_MAAT.ROU ?? []), ...HAHMOTELMA_ROU];
+
+/*
+ * VIRON HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla; rivit ovat aidosti kaupungin
+ * (Tallinna) ulkopuolella.
+ */
+KOHDE_MAAT.EST = [...(KOHDE_MAAT.EST ?? []), ...HAHMOTELMA_EST];
 
 /*
 
