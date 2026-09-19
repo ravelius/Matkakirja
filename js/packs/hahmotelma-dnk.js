@@ -84,9 +84,8 @@ export const HAHMOTELMA_DNK = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-rubjerg-knude-b5c77b2f.jpg',
         lyhyt: 'Majakka ja aaltoileva hiekka iltahämärässä.',
-        selite: 'Commonsin sivun mukaan majakka rakennettiin vuonna 1900. Kuvassa se erottuu '
-          + 'vaaleanpunaisen ja violetin iltataivaan edessä, ja hiekkapinnalla näkyy '
-          + 'tuulen tekemiä poimuja.',
+        selite: 'Majakka rakennettiin vuonna 1900. Kuvassa se erottuu vaaleanpunaisen ja '
+          + 'violetin iltataivaan edessä, ja hiekkapinnalla näkyy tuulen tekemiä poimuja.',
         lahde: 'Valokuva: Ansgar Koreng, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Ansgar Koreng',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rubjerg_Knude_Fyr,_Hj%C3%B8rring,_Denmark,_1807072231,_ako.jpg',
@@ -97,8 +96,8 @@ export const HAHMOTELMA_DNK = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-rubjerg-knude-0838bc48.jpg',
         lyhyt: 'Hiekan peittämän sivurakennuksen tuettu katto.',
         selite: 'Majakan henkilökuntarakennus vuonna 2004: katto on tuettu puupuilla ja hiekka '
-          + 'on kasautunut sen ympärille. Artikkelin mukaan hiekan paine vaurioitti pieniä '
-          + 'rakennuksia pahoin.',
+          + 'on kasautunut sen ympärille. Hiekan paine vaurioitti pieniä rakennuksia '
+          + 'pahoin.',
         lahde: 'Valokuva: Frmir, Wikimedia Commons (CC BY 3.0).',
         tekija: 'Frmir',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rubjerg_Knude_Fyr_sidebygning_2004.jpg',
@@ -159,9 +158,8 @@ export const HAHMOTELMA_DNK = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-raabjerg-mile-63ba2fbc.jpg',
         lyhyt: 'Hiekan peittämän kirkon valkoinen torni.',
-        selite: 'Torni on jäljellä kirkosta, jonka hiekka peitti 1700-luvulla. Commonsin sivun '
-          + 'mukaan kuva on Skagenista; kirkko on artikkelissa esimerkki liikkuvan hiekan '
-          + 'voimasta.',
+        selite: 'Torni on jäljellä kirkosta, jonka hiekka peitti 1700-luvulla. Kuva on '
+          + 'Skagenista; kirkko on esimerkki liikkuvan hiekan voimasta.',
         lahde: 'Valokuva: Tomasz Sienicki, Wikimedia Commons (CC BY 2.5).',
         tekija: 'Tomasz Sienicki',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Den_tilsandede_kirke_i_Skagen_2007_ubt.jpeg',
@@ -226,9 +224,8 @@ export const HAHMOTELMA_DNK = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-romo-3b6ab93b.jpg',
         lyhyt: 'Ruokokattoinen tiilirakennus Kommandørgårdin tilalla.',
-        selite: 'Kommandørgården-tilan rakennus lännestä kuvattuna vuonna 2023. Artikkelin '
-          + 'mukaan tilan talo on vuodelta 1770 ja ladon sekä tallin rakennukset vuodelta '
-          + '1744.',
+        selite: 'Kommandørgården-tilan rakennus lännestä kuvattuna vuonna 2023. Tilan talo on '
+          + 'vuodelta 1770 ja ladon sekä tallin rakennukset vuodelta 1744.',
         lahde: 'Valokuva: Hjart, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Hjart',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kommand%C3%B8rg%C3%A5rden_2023_SV.jpg',
@@ -238,9 +235,9 @@ export const HAHMOTELMA_DNK = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-romo-2757ae52.jpg',
         lyhyt: 'Valkoinen Pyhän Klemensin kirkko ja sen hautausmaa.',
-        selite: 'Sankt Clemens Kirke on saaren pääkirkko. Artikkelin mukaan 1800-luvulla '
-          + 'kirkosta sai ostaa penkkien nimikylttejä, ja Maerskin perustajan isoisän nimi '
-          + 'näkyy yhä yhdessä etupenkeistä.',
+        selite: 'Sankt Clemens Kirke on saaren pääkirkko. 1800-luvulla kirkosta sai ostaa '
+          + 'penkkien nimikylttejä, ja Maerskin perustajan isoisän nimi näkyy yhä yhdessä '
+          + 'etupenkeistä.',
         lahde: 'Valokuva: Mojnsen, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Mojnsen',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sankt_Clemens_Kirke_R%C3%B8m%C3%B8_(1).jpg',
@@ -292,8 +289,7 @@ export const HAHMOTELMA_DNK = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-thy-be8b379f.jpg',
         lyhyt: 'Laaja nummi Hanstholmin riistansuojelualueella.',
         selite: 'Avoin hiekkanummi pienine puroineen Hanstholmin riistansuojelualueella. '
-          + 'Artikkelin mukaan Hanstholm Vildtreservat on Tanskan suurin yhtenäinen '
-          + 'hiekkanummi.',
+          + 'Hanstholm Vildtreservat on Tanskan suurin yhtenäinen hiekkanummi.',
         lahde: 'Valokuva: Ragnar1904, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Ragnar1904',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hanstholm_Wildreservat_(3).jpg',
@@ -303,9 +299,8 @@ export const HAHMOTELMA_DNK = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-thy-e67379ce.jpg',
         lyhyt: 'Ruohon peittämiä dyynejä ja havuistutuksia järven rannalla.',
-        selite: 'Commonsin sivun mukaan näkymä on dyyninummien yli Hanstholm Vildtreservatin '
-          + 'ja Tved klitplantagen suuntaan. Havuistutukset ovat osa Thyn hiekan '
-          + 'pysäyttämiseksi tehtyä työtä.',
+        selite: 'Näkymä on dyyninummien yli Hanstholm Vildtreservatin ja Tved klitplantagen '
+          + 'suuntaan. Havuistutukset ovat osa Thyn hiekan pysäyttämiseksi tehtyä työtä.',
         lahde: 'Valokuva: Jens Nielsen, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Jens Nielsen',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Thy_Nationalpark.JPG',
@@ -357,8 +352,8 @@ export const HAHMOTELMA_DNK = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-mols-bjerge-b60b12ea.jpg',
         lyhyt: 'Ruokokattoinen ristikkorakenteinen vesimylly lammen rannalla.',
-        selite: 'Ørnbjerg Mølle on artikkelin mukaan puiston ainoa toimiva vesimylly, jota '
-          + 'ylläpitää vapaaehtoisten ryhmä. Kuva on vuodelta 2013.',
+        selite: 'Ørnbjerg Mølle on puiston ainoa toimiva vesimylly, jota ylläpitää '
+          + 'vapaaehtoisten ryhmä. Kuva on vuodelta 2013.',
         lahde: 'Valokuva: Sebastian Nils, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Sebastian Nils',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%C3%98rnbjerg_M%C3%B8lle.jpg',
@@ -368,8 +363,8 @@ export const HAHMOTELMA_DNK = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-mols-bjerge-8e9d3913.jpg',
         lyhyt: 'Kalø-linnan rauniot ja kivetty keskiaikainen tie.',
-        selite: 'Polku linnan raunioille kulkee pitkin kivetyn penkereen tietä. Artikkelin '
-          + 'mukaan matkasta noin 500 metriä on keskiaikaista tietä.',
+        selite: 'Polku linnan raunioille kulkee pitkin kivetyn penkereen tietä. Matkasta noin '
+          + '500 metriä on keskiaikaista tietä.',
         lahde: 'Valokuva: Ajepbah, Wikimedia Commons (CC BY-SA 3.0 de).',
         tekija: 'Ajepbah',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kal%C3%B8_Slotsruin_(Syddjurs_Kommune).Bro_og_forsvarst%C3%A5rn.2.125359.ajb.jpg',
@@ -564,8 +559,8 @@ export const HAHMOTELMA_DNK = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-bornholm-b0f07d66.jpg',
       lyhyt: 'Rosoinen kalliorannikko Helligdomsklipperne Bornholmin koillisrannalla.',
-      selite: 'Kallioita Helligdomsklipperne-nimisellä rannikolla Bornholmilla. Artikkeli '
-        + 'mainitsee sen yhtenä saaren jyrkkien merikallioiden nähtävyyksistä.',
+      selite: 'Kallioita Helligdomsklipperne-nimisellä rannikolla Bornholmilla. Se on yksi '
+        + 'saaren jyrkkien merikallioiden nähtävyyksistä.',
       lahde: 'Valokuva: Klugschnacker, Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'Klugschnacker',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Heligdomsklipperne,_Bornholm_(2012-07-11),_by_Klugschnacker_in_Wikipedia_(13).JPG',
@@ -895,7 +890,7 @@ export const HAHMOTELMA_DNK = [
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-lejre-385dca0e.jpg',
       lyhyt: 'Rivi suuria kiviä laivan muotoon asetettuna Gammel Lejren nurmella.',
       selite: 'Laivan muotoon pystytettyjä kiviä, joita on Gammel Lejren viikinkiaikaisella '
-        + 'hautausmaalla. Artikkelin mukaan alueella on useita tällaisia laivakivikehiä.',
+        + 'hautausmaalla. Alueella on useita tällaisia laivakivikehiä.',
       lahde: 'Valokuva: Lichterfelder, Wikimedia Commons (CC BY 3.0).',
       tekija: 'Lichterfelder',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gammel_Lejre_skibss%C3%A6tning.jpg',
@@ -906,9 +901,8 @@ export const HAHMOTELMA_DNK = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-lejre-357b99c0.jpg',
         lyhyt: 'Kivilaiva ja Lejren maisema pienen järven suuntaan.',
-        selite: 'Commonsin kuvauksen mukaan kuvassa on viikinkiajan kivilaiva Lejressä, '
-          + 'Sjællandissa. Maisema näyttää, miten avoimessa ja pehmeässä maastossa '
-          + 'muinainen kuningasistuin sijaitsi.',
+        selite: 'Kuvassa on viikinkiajan kivilaiva Lejressä, Sjællandissa. Maisema näyttää, '
+          + 'miten avoimessa ja pehmeässä maastossa muinainen kuningasistuin sijaitsi.',
         lahde: 'Valokuva: Västgöten, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Västgöten',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lejre_Skibs%C3%A6tning_1.jpg',
@@ -961,7 +955,7 @@ export const HAHMOTELMA_DNK = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-ringsted-28baf288.jpg',
       lyhyt: 'Pyhän Bendtin punatiilinen romaaninen kirkko vihreine kattoineen.',
-      selite: 'Pyhän Bendtin kirkko Ringstedissä Sjællandilla. Artikkelin mukaan se on entinen '
+      selite: 'Pyhän Bendtin kirkko Ringstedissä Sjællandilla. Se on entinen '
         + 'benediktiiniläisluostarin romaaninen kirkko.',
       lahde: 'Valokuva: Orf3us, Wikimedia Commons (CC BY 3.0).',
       tekija: 'Orf3us',
@@ -974,7 +968,7 @@ export const HAHMOTELMA_DNK = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-ringsted-1243b267.jpg',
         lyhyt: 'Kirkon pitkä keskilaiva tiilikaarineen alttarille päin katsottuna.',
         selite: 'Kuva Pyhän Bendtin kirkon sisältä keskilaivasta kohti alttaria. Kirkossa on '
-          + 'artikkelin mukaan lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja.',
+          + 'lukuisia keskiaikaisten Tanskan kuninkaallisten hautoja.',
         lahde: 'Valokuva: Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Leif Jørgensen',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sankt_Bendts_Kirke_-_Midtskibet_01.jpg',
@@ -984,8 +978,8 @@ export const HAHMOTELMA_DNK = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-ringsted-1b8ab2b9.jpg',
         lyhyt: 'Kirkon kuori, kullattu alttari ja kuninkaallisen haudan laatta lattialla.',
-        selite: 'Commonsin kuvauksen mukaan etualalla on kuningas Erik Menvedin (1274-1319) ja '
-          + 'kuningatar Ingeborgin hauta. Taustalla on kirkon alttari.',
+        selite: 'Etualalla on kuningas Erik Menvedin (1274-1319) ja kuningatar Ingeborgin '
+          + 'hauta. Taustalla on kirkon alttari.',
         lahde: 'Valokuva: Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Leif Jørgensen',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sankt_Bendts_Kirke_-_Koret.jpg',
@@ -1024,8 +1018,8 @@ export const HAHMOTELMA_DNK = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-ladby-97c43b3b.jpg',
       lyhyt: 'Ladbyn laivan jäljennös rakenteilla viikinkimuseon pihalla.',
-      selite: 'Commonsin kuvauksen mukaan kuvassa on Ladbyn laivan rekonstruktio Ladbyn '
-        + 'viikinkimuseon luona kesällä 2014.',
+      selite: 'Kuvassa on Ladbyn laivan rekonstruktio Ladbyn viikinkimuseon luona kesällä '
+        + '2014.',
       lahde: 'Valokuva: Toxophilus, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Toxophilus',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Rekonstruktion_af_Ladbyskibet.JPG',
@@ -1036,9 +1030,8 @@ export const HAHMOTELMA_DNK = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-ladby-e8d8df45.jpg',
         lyhyt: 'Ladbyn haudan laiva museossa, säilyneet jäänteet.',
-        selite: 'Ladbyn laivan säilynyt jäänne. Commonsin kuvauksen mukaan laiva ja sen '
-          + 'omistaja on haudattu Ladbyhøjiin yhdessä 11 hevosen ja vähintään 4 koiran '
-          + 'kanssa.',
+        selite: 'Ladbyn laivan säilynyt jäänne. Laiva ja sen omistaja on haudattu Ladbyhøjiin '
+          + 'yhdessä 11 hevosen ja vähintään 4 koiran kanssa.',
         lahde: 'Valokuva: Malene Thyssen, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Malene Thyssen',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ladbyskibet.jpg',
@@ -1088,8 +1081,8 @@ export const HAHMOTELMA_DNK = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-christiansfeld-002af1c3.jpg',
       lyhyt: 'Herrnhutilaisten kirkko, pitkä keltatiilinen rakennus tornikupoleineen.',
-      selite: 'Commonsin kuvauksen mukaan kuvassa on herrnhutilaisten kirkko '
-        + 'Christiansfeldissä toukokuussa 2015. Edessä on suihkulähde ja nurmikenttä.',
+      selite: 'Kuvassa on herrnhutilaisten kirkko Christiansfeldissä toukokuussa 2015. Edessä '
+        + 'on suihkulähde ja nurmikenttä.',
       lahde: 'Valokuva: Villy Fink Isaksen, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Villy Fink Isaksen',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Christiansfeld_br%C3%B8dremenighedskirken_2.jpg',
@@ -1168,8 +1161,8 @@ export const HAHMOTELMA_DNK = [
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-kalundborg-064e05c3.jpg',
       lyhyt: 'Vor Frue Kirke ja sen viisi tornia punatiilisen muurin takana.',
       selite: 'Kalundborgin Vor Frue Kirken eli Neitsyt Marian kirkon viisi tornia '
-        + 'punatiilimuurin takaa katsottuna. Artikkelin mukaan viisitorninen kirkko on '
-        + 'kaupungin tunnettu maamerkki.',
+        + 'punatiilimuurin takaa katsottuna. Viisitorninen kirkko on kaupungin tunnettu '
+        + 'maamerkki.',
       lahde: 'Valokuva: Thomas Dahlstrøm Nielsen, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Thomas Dahlstrøm Nielsen',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vor_Frue_Kirke,_Kalundborg_2021.jpg',
@@ -1181,9 +1174,9 @@ export const HAHMOTELMA_DNK = [
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-kalundborg-2395682c.jpg',
         lyhyt: 'Jacob Kornerupin maalaus Vor Frue Kirkesta: kirkko ja sen tornit '
           + '1800-luvulla.',
-        selite: 'Maalaus esittää Kalundborgin Vor Frue Kirkea. Commonsin mukaan '
-          + 'huutokauppayhtiön asiantuntijat ajoittivat sen sen perusteella, että Kornerup '
-          + 'maalasi samanlaisen näkymän vuonna 1853.',
+        selite: 'Maalaus esittää Kalundborgin Vor Frue Kirkea. Huutokauppayhtiön asiantuntijat '
+          + 'ajoittivat sen sen perusteella, että Kornerup maalasi samanlaisen näkymän '
+          + 'vuonna 1853.',
         lahde: 'Valokuva: Jacob Kornerup, Wikimedia Commons (Public domain).',
         tekija: 'Jacob Kornerup',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kalundborg_Vor_Frue_Kirke_(Jacob_Kornerup).jpg',
@@ -1193,8 +1186,8 @@ export const HAHMOTELMA_DNK = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-kalundborg-478cb2f7.jpg',
         lyhyt: 'Vor Frue Kirken runsaskoristeinen barokkialttari kullattuine patsaineen.',
-        selite: 'Commonsin kuvauksen mukaan kuvassa on Kalundborgin Vor Frue Kirken '
-          + 'barokkialttari. Alttarin patsaat ja koristeet on maalattu ja kullattu.',
+        selite: 'Kuvassa on Kalundborgin Vor Frue Kirken barokkialttari. Alttarin patsaat ja '
+          + 'koristeet on maalattu ja kullattu.',
         lahde: 'Valokuva: Leif Jørgensen, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Leif Jørgensen',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vor_Frue_Kirke,_Kalundborg_10.jpg',
@@ -1234,9 +1227,8 @@ export const HAHMOTELMA_DNK = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-odense-189250fb.jpg',
       lyhyt: 'Kivetty katu ja keltaisia taloja Odensen vanhassa kaupungissa.',
-      selite: 'Commonsin kuvan otsikko on Hans Christian Andersenin syntymäkoti. Kuva näyttää '
-        + 'kivetyn kadun ja matalia, keltaisiksi rapattuja taloja Odensen vanhassa '
-        + 'kaupungissa.',
+      selite: 'Kuva näyttää kivetyn kadun ja matalia, keltaisiksi rapattuja taloja Odensen '
+        + 'vanhassa kaupungissa.',
       lahde: 'Valokuva: Rüdiger Stehn, Wikimedia Commons (CC BY-SA 2.0).',
       tekija: 'Rüdiger Stehn',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Hans_Christian_Andersen_Birthplace,_Odense,_Denmark.jpg',
@@ -1313,7 +1305,7 @@ export const HAHMOTELMA_DNK = [
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-horsens-8b2d7267.jpg',
       lyhyt: 'Horsensin rangaistuslaitos ennen vuotta 1875 painetussa piirroksessa.',
       selite: 'Piirros Horsensin valtionvankilasta, joka avattiin vuonna 1853. Kuva on '
-        + 'peräisin Nordiska Taflor -kirjasta (1875), ja Commons ajoittaa sen ennen vuotta '
+        + 'peräisin Nordiska Taflor -kirjasta (1875), ja se on ajoitettu ennen vuotta '
         + '1875.',
       lahde: 'Valokuva: Albert Bonnier: Nordiska Taflor, pittoreska utsigter från Sverige, Norge ock Danmark (1875), Wikimedia Commons (CC0).',
       tekija: 'Albert Bonnier: Nordiska Taflor, pittoreska utsigter från Sverige, Norge ock Danmark (1875)',
@@ -1393,8 +1385,8 @@ export const HAHMOTELMA_DNK = [
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/dnk-nosto-marstal-9665a930.jpg',
       lyhyt: 'Kuunari Marstal Marstalista, laivamuotokuva vuodelta 1873.',
       selite: 'Adolph Marius Nistedin laivamuotokuva kuunari Marstalista, jonka taustalla '
-        + 'näkyy Aarhusin rantaa. Commons ajoittaa työn helmikuuhun 1873, ja alkuperäinen '
-        + 'on Marstalin merenkulkumuseossa.',
+        + 'näkyy Aarhusin rantaa. Työ on ajoitettu helmikuuhun 1873, ja alkuperäinen on '
+        + 'Marstalin merenkulkumuseossa.',
       lahde: 'Valokuva: Adolph Marius Nisted (1829-1919), Wikimedia Commons (Public domain).',
       tekija: 'Adolph Marius Nisted (1829-1919)',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Adolph_Marius_Nisted_-_Marstal_af_Marstal_-_1873.jpg',
@@ -1559,7 +1551,6 @@ export const HAHMOTELMA_DNK = [
       },
     ],
     nimi: 'Sorø Akademi',
-    nimio: 'Sorø',
     tyyppi: 'kulttuuri',
     lahi: true,
     kysymykset: [
@@ -1971,7 +1962,6 @@ export const HAHMOTELMA_DNK = [
       },
     ],
     nimi: 'Nyborgin linna',
-    nimio: 'Nyborg',
     tyyppi: 'historia',
     lahi: true,
     kysymykset: [
