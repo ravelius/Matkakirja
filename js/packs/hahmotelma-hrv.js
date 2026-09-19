@@ -404,7 +404,7 @@ export const HAHMOTELMA_HRV = [
       kysymys: 'Kuka johti Itävallan laivastoa Lissan meritaistelussa 20. heinäkuuta 1866?',
       vaihtoehdot: [
         'Radetzky',
-        'Hoste',
+        'Benedek',
         'Persano',
         'Tegetthoff',
       ],
@@ -477,7 +477,7 @@ export const HAHMOTELMA_HRV = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/hrv-nosto-lastovo-8a258d29.jpg',
       lyhyt: 'Lastovon kylän kivitaloja rinteellä, punaisia ja tummia tiilikattoja.',
-      selite: 'Kuvaus: Lastovon kylä Lastovon saariston luonnonpuistossa. Tiiviisti rinteeseen rakennettuja harmaita kivitaloja vihreine ikkunaluukkuineen.',
+      selite: 'Lastovon kylä Lastovon saariston luonnonpuistossa. Tiiviisti rinteeseen rakennettuja harmaita kivitaloja vihreine ikkunaluukkuineen.',
       lahde: 'Valokuva: Dijana Župan, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Dijana Župan',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lastovo.jpg',
@@ -608,7 +608,7 @@ export const HAHMOTELMA_HRV = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/hrv-nosto-neretva-b5fe010a.jpg',
         lyhyt: 'Perinteisiä lađe-veneitä rivissä Neretvan tyynellä vedellä Metkovićissa.',
-        selite: 'Kuvauksen mukaan lađe ovat Neretvan laakson perinteisiä veneitä; ne kelluvat jonossa joella Metkovićin rannan edustalla.',
+        selite: 'Lađe ovat Neretvan laakson perinteisiä veneitä; ne kelluvat jonossa joella Metkovićin rannan edustalla.',
         lahde: 'Valokuva: Ma▀▄Ga, Wikimedia Commons (CC BY 3.0).',
         tekija: 'Ma▀▄Ga',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ladje_na_Neretvi.jpg',
@@ -767,7 +767,7 @@ export const HAHMOTELMA_HRV = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/hrv-nosto-trogir-1869e77c.jpg',
         lyhyt: 'Kamerlengon linnoituksen muurit ja Trogirin vanhankaupungin tornit ylhäältä nähtynä.',
-        selite: 'Kuvassa Kamerlengon linnoituksen muurit ja holvikäytävät, taustalla Trogirin kellotornit ja palmukatuinen ranta. Kuvauksen mukaan linnoitus rakennettiin 1400-luvun puolivälissä Veriga-tornin laajennukseksi.',
+        selite: 'Kuvassa Kamerlengon linnoituksen muurit ja holvikäytävät, taustalla Trogirin kellotornit ja palmukatuinen ranta. Linnoitus rakennettiin 1400-luvun puolivälissä Veriga-tornin laajennukseksi.',
         lahde: 'Valokuva: Krzysztof Bergier, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Krzysztof Bergier',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Fortress_Kamerlengo_14.jpg',
@@ -1091,10 +1091,10 @@ export const HAHMOTELMA_HRV = [
     visa: {
       kysymys: 'Minkä hallitsijan mukaan Karlovac on nimetty?',
       vaihtoehdot: [
-        'Kaarle Suuren mukaan',
-        'Kaarle V:n, keisarin',
-        'Arkkiherttua Kaarle II:n',
-        'Ruotsin Kaarle XII:n',
+        'Keisari Kaarle Suuri',
+        'Keisari Kaarle V',
+        'Arkkiherttua Kaarle II',
+        'Ruotsin kuningas Kaarle XII',
       ],
       oikea: 2,
       fakta: 'Kaupungin arkkitehti oli Matija Gambon.',
@@ -1166,7 +1166,7 @@ export const HAHMOTELMA_HRV = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/hrv-nosto-sisak-da7116f7.jpg',
         lyhyt: 'Roomalaisen Siscian muurien jäännöksiä Sisakissa.',
-        selite: 'Tiili- ja kivirakenteiset jäänteet ovat osa muinaisen roomalaiskaupungin Siscian puolustusmuureja Sisakin nykykaupungissa. Kuvauksen mukaan ne ajoittuvat 1.–3. vuosisadalle.',
+        selite: 'Tiili- ja kivirakenteiset jäänteet ovat osa muinaisen roomalaiskaupungin Siscian puolustusmuureja Sisakin nykykaupungissa. Ne ajoittuvat 1.–3. vuosisadalle.',
         lahde: 'Valokuva: Darko Tepert Donatus, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Darko Tepert Donatus',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Sisak_Siscia_remnants.JPG',
@@ -1236,7 +1236,7 @@ export const HAHMOTELMA_HRV = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/hrv-nosto-ilok-231bbd20.jpg',
         lyhyt: 'Viinikellarin holvikäytävä täynnä suuria puutynnyreitä.',
-        selite: 'Kuvan otsikko on Ilok vinski podrum, eli viinikellari Iločissa. Holvattu käytävä on molemmin puolin täynnä isoja puutynnyreitä.',
+        selite: 'Kuvassa on viinikellari (Ilok vinski podrum) Iločissa. Holvattu käytävä on molemmin puolin täynnä isoja puutynnyreitä.',
         lahde: 'Valokuva: Igor Karacic, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Igor Karacic',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ilok_vinski_podrum.jpg',

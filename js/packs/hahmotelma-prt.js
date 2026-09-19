@@ -123,10 +123,10 @@ export const HAHMOTELMA_PRT = [
     visa: {
       kysymys: 'Mistä Peneda-Gerêsin kansallispuiston nimi tulee?',
       vaihtoehdot: [
-        'Kahdesta alueen läpi virtaavasta joesta',
+        'Kahdesta vuoristojoesta',
         'Kahdesta graniittimassiivista',
-        'Kahdesta rajalinnasta Espanjan vastaisella rajalla',
-        'Kahdesta muinaisesta roomalaisesta tiestä',
+        'Kahdesta rajalinnasta',
+        'Kahdesta roomalaistiestä',
       ],
       oikea: 1,
       fakta: 'Puisto jatkuu rajan yli Espanjan puolelle, ja yhdessä espanjalaisen luonnonpuiston '
@@ -191,12 +191,12 @@ export const HAHMOTELMA_PRT = [
       + 'muuttolintujen pysähdyspaikkana.',
     lahde: 'en-Wikipedia "Ria Formosa", johdanto-osa (tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Miten Ria Formosan laguunin kuudes salmi eroaa muista salmista?',
+      kysymys: 'Miten Ria Formosan kuudes salmi eroaa muista?',
       vaihtoehdot: [
-        'Se on luonnollinen salmi, joka liikkuu hiekan mukana',
-        'Se on keskiaikaisten kalastajien kaivama kanava',
-        'Se erottaa laguunin Guadiana-joen suistosta',
-        'Se on tekoväylä, joka helpottaa pääsyä Faron satamaan',
+        'Luonnollinen ja liikkuva',
+        'Keskiaikaisten kalastajien kaivama',
+        'Guadianan suistoon johtava',
+        'Ihmisen tekemä väylä',
       ],
       oikea: 3,
       fakta: 'Ria Formosa on Ramsar-alue, ja se toimii keväisin ja syksyisin muuttolintujen '
@@ -364,13 +364,12 @@ export const HAHMOTELMA_PRT = [
       + 'lähtemään 1500-luvulla tautien, tarvikepulan ja huonon yhteyden vuoksi.',
     lahde: 'en-Wikipedia "Berlengas", johdanto-osa ja osio "History" (tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Miksi Pyhän Hieronymuksen munkit perustivat yhteisön Berlengasin saarelle vuonna '
-        + '1513?',
+      kysymys: 'Miksi Pyhän Hieronymuksen munkit perustivat yhteisön Berlengasille?',
       vaihtoehdot: [
-        'Auttaakseen merenkulkijoita ja haaksirikkoutuneita',
-        'Viljelläkseen saarella viiniä Lissabonin laivastolle',
-        'Vartioidakseen rannikkoa merirosvoilta ja salakuljettajilta',
-        'Elääkseen erakkoina kaukana mantereen kiireistä',
+        'Merenkulkijoiden auttamiseksi',
+        'Viinintuotantoa laivastolle',
+        'Rannikon vartioimiseksi',
+        'Erakkoelämää varten',
       ],
       oikea: 0,
       fakta: 'Britannian merimiehet kutsuivat saaria vanhastaan nimellä "the Burlings".',
@@ -691,12 +690,12 @@ export const HAHMOTELMA_PRT = [
       + 'johdanto-osa ja osio "Côa Valley"; koordinaatti en-Wikipedia "Vila Nova de Foz Côa" '
       + '(tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Miksi Côa-laaksoon suunniteltu padon rakennushanke lopulta peruttiin?',
+      kysymys: 'Miksi Côa-laaksoon suunniteltu pato lopulta peruttiin?',
       vaihtoehdot: [
-        'Vesi olisi tulvinut Espanjan puolelle ja aiheuttanut riidan',
-        'Rakennuskustannukset nousivat liian suuriksi',
-        'Yleisö vaati kalliopiirrosten suojelua ja uusi hallitus perui hankkeen',
-        'Padon paikalta löytyi roomalaisen sillan jäänteet',
+        'Espanja vastusti hanketta',
+        'Kustannukset nousivat liian suuriksi',
+        'Kalliopiirrosten suojelun kannatus',
+        'Roomalaisen sillan löytyminen',
       ],
       oikea: 2,
       fakta: 'Kalliopiirrokset ovat paleoliittisia: ne on ajoitettu vuosille 22 000–10 000 eaa., '
@@ -951,12 +950,12 @@ export const HAHMOTELMA_PRT = [
     lahde: 'en-Wikipedia "Ponte de Lima", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Minkä ruokien ja juomien mukaan Ponte de Lima tunnetaan koko maassa?',
+      kysymys: 'Mistä ruoasta ja juomasta Ponte de Lima tunnetaan koko maassa?',
       vaihtoehdot: [
-        'Valkoisen portviinin ja bacalhau-kuivakalan',
-        'Kuohuvan viinin ja pastéis de nata -leivosten',
-        'Oliiviöljyn ja tuoreen vuohenjuuston',
-        'Punaisen Vinho Verde -viinin ja sarrabulho-riisin',
+        'Portviinistä ja bacalhausta',
+        'Kuohuviinistä ja nata-leivoksista',
+        'Oliiviöljystä ja vuohenjuustosta',
+        'Vinho Verdesta ja sarrabulhosta',
       ],
       oikea: 3,
       fakta: 'Ponte de Limaa ympäröivällä maaseudulla on Portugalin suurin barokkikartanoiden '
@@ -968,7 +967,7 @@ export const HAHMOTELMA_PRT = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-vila-vicosa-0daae84b.jpg',
       lyhyt: 'Vila Viçosan Paço Ducalin päätyjulkisivu, jonka seinät on verhoiltu alueen marmorilla.',
-      selite: 'Vila Viçosan herttuapalatsin (Paço Ducal) pääjulkisivu. Kuvauksen mukaan ulkoseinät on päällystetty seudulta louhitulla marmorilla.',
+      selite: 'Vila Viçosan herttuapalatsin (Paço Ducal) pääjulkisivu. Ulkoseinät on päällystetty seudulta louhitulla marmorilla.',
       lahde: 'Valokuva: Alvesgaspar, Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'Alvesgaspar',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Vila_Viçosa_September_2013-10a.jpg',
@@ -1086,7 +1085,7 @@ export const HAHMOTELMA_PRT = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-amarante-5e26677b.jpg',
       lyhyt: 'Kivinen silta kaartuu Tâmega-joen yli Amarantessa, ja sen kaaret heijastuvat tyyneen veteen.',
-      selite: 'Commonsin kuvauksen mukaan kuvassa on silta Amarantessa Portugalissa. Kuvassa näkyy kaksi leveää kaarta, sillan päädyssä kaksi korkeaa obeliskia ja vasemmalla vaaleanpunainen talo.',
+      selite: 'Kuvassa on silta Amarantessa Portugalissa. Siinä näkyy kaksi leveää kaarta, sillan päädyssä kaksi korkeaa obeliskia ja vasemmalla vaaleanpunainen talo.',
       lahde: 'Valokuva: Joseolgon, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Joseolgon',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ponte_de_Amarante_2021_(1).jpg',
@@ -1097,7 +1096,7 @@ export const HAHMOTELMA_PRT = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-amarante-e03d8fb9.jpg',
         lyhyt: 'São Gonçalon silta ja luostarikirkko kohoavat Tâmega-joen rannalla.',
-        selite: 'Kuvan kuvauksen mukaan kohde on São Gonçalon silta ja luostari Amarantessa. Kuvassa näkyvät sillan kaari, oranssinpunainen kupoli ja kellotorni joen yllä.',
+        selite: 'Kuvassa ovat São Gonçalon silta ja luostari Amarantessa: sillan kaari, oranssinpunainen kupoli ja kellotorni joen yllä.',
         lahde: 'Valokuva: Tiagox2, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Tiagox2',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bridge_and_Convent_of_São_Gonçalo.jpg',
@@ -1130,8 +1129,7 @@ export const HAHMOTELMA_PRT = [
     lahde: 'en-Wikipedia "Amarante, Portugal", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Minkä alan kaupunkina Amarante kuuluu UNESCOn luovien kaupunkien verkostoon vuodesta '
-        + '2017?',
+      kysymys: 'Minkä alan kaupunki Amarante on UNESCOn luovien kaupunkien verkostossa?',
       vaihtoehdot: [
         'Kirjallisuuskaupunkina',
         'Musiikkikaupunkina',
@@ -1139,8 +1137,7 @@ export const HAHMOTELMA_PRT = [
         'Elokuvakaupunkina',
       ],
       oikea: 1,
-      fakta: 'Kaupungin lähellä sijaitsevassa linnoitetussa kukkula-asutuksessa Castro de '
-        + 'Ladáriossa asuttiin ensimmäiseltä vuosisadalta eaa. 400-luvulle jaa.',
+      fakta: 'Lähellä sijaitseva linnoitettu kukkula-asutus Castro de Ladário oli asuttu vuosisatojen ajan.'
     },
   },
   {
@@ -1148,7 +1145,7 @@ export const HAHMOTELMA_PRT = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-chaves-c50649ca.jpg',
       lyhyt: 'Chavesin roomalaisen sillan kaaret heijastuvat Tâmega-joen tyyneen pintaan, taustalla valkoisia taloja.',
-      selite: 'Kuvassa on Chavesin roomalainen silta (Ponte Romana) Tâmega-joen yllä. Commonsin kuvauksen mukaan kohde on luokiteltu kansalliseksi monumentiksi (Monumento Nacional).',
+      selite: 'Kuvassa on Chavesin roomalainen silta (Ponte Romana) Tâmega-joen yllä. Kohde on luokiteltu kansalliseksi monumentiksi (Monumento Nacional).',
       lahde: 'Valokuva: João Carvalho, Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'João Carvalho',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ponte_romana_Chaves_01.jpg',
@@ -1159,7 +1156,7 @@ export const HAHMOTELMA_PRT = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-chaves-50b618c5.jpg',
         lyhyt: 'Trajanuksen silta ulottuu pitkänä kaarijonona Tâmega-joen yli.',
-        selite: 'Kuvauksen mukaan kuvassa on Ponte de Trajano (roomalainen silta) Chavesissa Norten alueella. Silta näkyy joen toiselta rannalta, ja vastarannalla on kaupungin taloja.',
+        selite: 'Kuvassa on Ponte de Trajano (roomalainen silta) Chavesissa Norten alueella. Silta näkyy joen toiselta rannalta, ja vastarannalla on kaupungin taloja.',
         lahde: 'Valokuva: GFreihalter, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'GFreihalter',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Chaves_Ponte_de_Trajano_303.jpg',
@@ -1196,7 +1193,7 @@ export const HAHMOTELMA_PRT = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-sao-domingos-9853bba4.jpg',
       lyhyt: 'Entisen kaivoksen louhoksen täyttää tumma hapan vesi, jota ympäröivät ruosteenpunaiset ja keltaiset kalliot.',
-      selite: 'Kuvan nimen mukaan kyse on São Domingosin kaivoksen happamasta lammesta (lagoa ácida). Louhoksen seinämien värit vaihtelevat punaisesta keltaiseen ja valkoiseen.',
+      selite: 'Kuvassa on São Domingosin kaivoksen hapan lampi (lagoa ácida). Louhoksen seinämien värit vaihtelevat punaisesta keltaiseen ja valkoiseen.',
       lahde: 'Valokuva: Alexey Komarov, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Alexey Komarov',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lagoa_ácida,_Mina_de_São_Domingos_2019-11-09-1.jpg',
@@ -1207,7 +1204,7 @@ export const HAHMOTELMA_PRT = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-sao-domingos-e6716e8b.jpg',
         lyhyt: 'São Domingosin kaivoksen raunioituneet betoni- ja tiilirakennukset kohoavat sinistä taivasta vasten.',
-        selite: 'Kuvan nimen ja kuvauksen mukaan rauniorakennuksia São Domingosin kaivosalueella Portugalissa (kuvattu 2011). Rakennusten pinnat ovat ruosteenruskeita ja osin sortuneita.',
+        selite: 'Kuvassa on rauniorakennuksia São Domingosin kaivosalueella Portugalissa (kuvattu 2011). Rakennusten pinnat ovat ruosteenruskeita ja osin sortuneita.',
         lahde: 'Valokuva: Rosino, Wikimedia Commons (CC BY-SA 2.0).',
         tekija: 'Rosino',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Edifícios_em_ruínas_na_Mina_de_São_Domingos.jpg',
@@ -1258,7 +1255,7 @@ export const HAHMOTELMA_PRT = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-castro-marim-f9398891.jpg',
       lyhyt: 'Ylhäältä otetussa kuvassa Castro Marimin valkoiset talot, suola-altaat ja laaja kosteikko.',
-      selite: 'Kuvan nimi on Salinas de Castro Marim (Wiki Loves Monuments Portugal). Etualalla kaupungin punakattoisia taloja, keskellä suola-altaita ja kosteikkoa, ja kaukana vesiväylän takana näkyy toinen kaupunki.',
+      selite: 'Kuvassa on Castro Marimin suolanottoalue (Salinas de Castro Marim). Etualalla kaupungin punakattoisia taloja, keskellä suola-altaita ja kosteikkoa, ja kaukana vesiväylän takana näkyy toinen kaupunki.',
       lahde: 'Valokuva: Concierge.2C, Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'Concierge.2C',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Salinas_de_Castro_Marim.jpg',
@@ -1269,7 +1266,7 @@ export const HAHMOTELMA_PRT = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-castro-marim-b0f2636d.jpg',
         lyhyt: 'Kolme flamingoa etsii ruokaa matalassa vedessä, edessä kaksi mustavalkoista kahlaajaa.',
-        selite: 'Kuvan nimen mukaan flamingot ovat Castro Marimin ja Vila Real de Santo Antóniön suoluonnonpuistossa; Commonsin kuvaus on Greater Flamingo. Taustalla uiskentelee sorsia ja muita vesilintuja.',
+        selite: 'Kuvassa on flamingoja Castro Marimin ja Vila Real de Santo Antónion suoluonnonpuistossa. Taustalla uiskentelee sorsia ja muita vesilintuja.',
         lahde: 'Valokuva: Luis Nunes Alberto, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Luis Nunes Alberto',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Flamingos_at_Castro_Marim_and_Vila_Real_de_Santo_António_Marsh_Natural_Reserve.jpg',
@@ -1279,7 +1276,7 @@ export const HAHMOTELMA_PRT = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-castro-marim-63583d59.jpg',
         lyhyt: 'Valkoinen kupolikirkko ja Castro Marimin linnan paksu muuri kohoavat kaupungin kattojen yläpuolella.',
-        selite: 'Kuvauksen mukaan kuvassa on Castro Marimin kirkko ja linna. Kirkon takana kohoaa linnan hammastettu muuri ja torni.',
+        selite: 'Kuvassa on Castro Marimin kirkko ja linna. Kirkon takana kohoaa linnan hammastettu muuri ja torni.',
         lahde: 'Valokuva: Dmitry Tonkonog, Wikimedia Commons (CC BY-SA 3.0).',
         tekija: 'Dmitry Tonkonog',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Castro_Marim_Church_and_Castle.jpg',
@@ -1310,8 +1307,7 @@ export const HAHMOTELMA_PRT = [
     lahde: 'en-Wikipedia "Castro Marim and Vila Real de Santo António Marsh Natural Reserve", '
       + 'koko artikkeli (tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Mitkä linnut kuoriutuivat Castro Marimin suoalueella kevättalvella 2021 ensimmäistä '
-        + 'kertaa Portugalissa?',
+      kysymys: 'Mitkä linnut kuoriutuivat Castro Marimissa vuonna 2021 ensimmäistä kertaa Portugalissa?',
       vaihtoehdot: [
         'Avosetit',
         'Haikarat',
@@ -1327,7 +1323,7 @@ export const HAHMOTELMA_PRT = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-trancoso-5c65bf18.jpg',
       lyhyt: 'Trancoson linnan hammastetut kivitornit ja paksut muurit kohoavat sinistä taivasta vasten.',
-      selite: 'Kuvauksen mukaan kuvassa on Castelo de Trancoso Portugalissa. Kuva on otettu linnan ulkomuurin juurelta, ja muurin kaariportti näkyy vasemmalla.',
+      selite: 'Kuvassa on Castelo de Trancoso Portugalissa. Kuva on otettu linnan ulkomuurin juurelta, ja muurin kaariportti näkyy vasemmalla.',
       lahde: 'Valokuva: Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Gerd Eichmann',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trancoso-Castelo-04-2011-gje.jpg',
@@ -1338,7 +1334,7 @@ export const HAHMOTELMA_PRT = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-trancoso-00f6a1b1.jpg',
         lyhyt: 'Linnan muurin harjalta avautuu näkymä Trancoson vanhankaupungin punaisten kattojen yli.',
-        selite: 'Kuvan nimen mukaan näkymä Trancoson linnasta kaupunkiin (Stadt). Etualalla ovat linnan hammaslinnakkeet, kaupungin yllä kohoaa kellotorni ja taustalla vuoria.',
+        selite: 'Kuvassa on näkymä Trancoson linnasta kaupunkiin. Etualalla ovat linnan hammaslinnakkeet, kaupungin yllä kohoaa kellotorni ja taustalla vuoria.',
         lahde: 'Valokuva: Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Gerd Eichmann',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trancoso-Castelo-34-Stadt-2011-gje.jpg',
@@ -1348,7 +1344,7 @@ export const HAHMOTELMA_PRT = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-trancoso-29706571.jpg',
         lyhyt: 'Vihertävä pronssipatsas esittää Gonçalo Bandarraa, joka nojaa jalkansa kivilohkareeseen.',
-        selite: 'Patsas on Trancosossa. Jalustan tekstin mukaan se esittää Gonçalo Annes Bandarraa, 1500-luvun runoilijaa, profeettaa ja suutaria Trancososta; jalustalla on suutarin vasara ja lesti.',
+        selite: 'Patsas Trancosossa esittää Gonçalo Annes Bandarraa, 1500-luvun runoilijaa, profeettaa ja suutaria Trancososta; jalustalla on suutarin vasara ja lesti.',
         lahde: 'Valokuva: Gerd Eichmann, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Gerd Eichmann',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Trancoso-22-Goncalo_Bandarra-2011-gje.jpg',
@@ -1386,7 +1382,7 @@ export const HAHMOTELMA_PRT = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-panasqueira-d487f40a.jpg',
       lyhyt: 'Panasqueiran kaivoksen rikastamon ruosteiset teräsrakennukset, hihnakuljettimet ja tornit ylhäältä nähtynä.',
-      selite: 'Commonsin kuvauksen mukaan kuvassa on nykyinen rikastamo (lavaria) Barroca Grandessa, Panasqueiran kaivosalueella. Kuvassa hihnakuljettimet yhdistävät aaltopeltisiä rakennuksia.',
+      selite: 'Kuvassa on nykyinen rikastamo (lavaria) Barroca Grandessa, Panasqueiran kaivosalueella. Hihnakuljettimet yhdistävät aaltopeltisiä rakennuksia.',
       lahde: 'Valokuva: Nuno Madeira Alves, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Nuno Madeira Alves',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Lavaria.jpg',
@@ -1397,7 +1393,7 @@ export const HAHMOTELMA_PRT = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-panasqueira-b6188035.jpg',
         lyhyt: 'Siniset koneet: nostokoneiston suuri kelapyörä ja sähkömoottori kalliotilassa.',
-        selite: 'Commonsin kuvauksen mukaan kuvassa on Panasqueiran kaivoksen nostokone (winch) Cláudio dos Reisin kuilulla. Kalliotilan seinät hehkuvat oranssina valaistuksessa.',
+        selite: 'Kuvassa on Panasqueiran kaivoksen nostokone (winch) Cláudio dos Reisin kuilulla. Kalliotilan seinät hehkuvat oranssina valaistuksessa.',
         lahde: 'Valokuva: Nuno Madeira Alves, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Nuno Madeira Alves',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Máquina_extração_Poço_C._Reis.jpg',
@@ -1407,7 +1403,7 @@ export const HAHMOTELMA_PRT = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-panasqueira-8b9f44ab.jpg',
         lyhyt: 'Pyhän Barbaran patsas lasiovisessa seinäkomerossa, ympärillä tekokukkia.',
-        selite: 'Commonsin kuvauksen mukaan kuva on Panasqueiran kaivokselta (Panasqueira Mine - S. Barbara). Patsaan jalustassa lukee S. Barbara.',
+        selite: 'Kuva on Panasqueiran kaivokselta: patsaan jalustassa lukee S. Barbara.',
         lahde: 'Valokuva: Nuno Madeira Alves, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Nuno Madeira Alves',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:S._Barbara.jpg',
@@ -1446,7 +1442,7 @@ export const HAHMOTELMA_PRT = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-estremoz-db49582f.jpg',
       lyhyt: 'Marmorilouhoksen jyrkät seinämät Estremozissa.',
-      selite: 'Louhoksen kerrostuneet, ruskeajuovaiset marmoriseinämät laskeutuvat syvälle, ja pohjalle on kertynyt vihreää vettä. Kuvan kuvaus: marmorikaivos Estremozissa, Portugalissa.',
+      selite: 'Louhoksen kerrostuneet, ruskeajuovaiset marmoriseinämät laskeutuvat syvälle, ja pohjalle on kertynyt vihreää vettä. Kuvassa on marmorikaivos Estremozissa, Portugalissa.',
       lahde: 'Valokuva: lt:User:Mea, Wikimedia Commons (CC BY-SA 3.0).',
       tekija: 'lt:User:Mea',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Estremoz_marmuro_kasykla.JPG',
@@ -1501,13 +1497,12 @@ export const HAHMOTELMA_PRT = [
     lahde: 'en-Wikipedia "Estremoz", johdanto-osa ja osiot "History" ja "Marble" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Mihin rakennushankkeeseen Estremozin marmorin ensimmäisten vientierien uskotaan '
-        + 'menneen antiikin aikana?',
+      kysymys: 'Mihin antiikin rakennushankkeeseen Estremozin marmorin ensimmäiset vientierät menivät?',
       vaihtoehdot: [
-        'Rooman Colosseumin lattioiden rakentamiseen',
-        'Emerita Augustan Circus Maximuksen rakentamiseen',
-        'Bracaran roomalaisen akveduktin rakentamiseen',
-        'Toledon katedraalin alttarien rakentamiseen',
+        'Rooman Colosseumin lattiat',
+        'Emerita Augustan Circus Maximus',
+        'Bracaran roomalainen akveduktti',
+        'Toledon katedraalin alttarit',
       ],
       oikea: 1,
       fakta: 'Estremozin seudulla marmoria on niin runsaasti, että sitä käytetään kaikkialla jopa '
@@ -1681,13 +1676,12 @@ export const HAHMOTELMA_PRT = [
     lahde: 'en-Wikipedia "Almeida, Portugal", johdanto-osa sekä osiot "Location" ja "History" '
       + '(tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Mikä tuhosi suurimman osan Almeidan kaupungista niemimaasodan vuoden 1810 '
-        + 'piirityksessä?',
+      kysymys: 'Mikä tuhosi suurimman osan Almeidan kaupungista vuoden 1810 piirityksessä?',
       vaihtoehdot: [
-        'Sattumalta osunut kranaatti sytytti pääruutivaraston, joka räjähti',
-        'Ranskalaisten kaivama miina räjäytti linnoituksen muurin',
-        'Côa-joen tulva nousi vallihaudan yli kaupunkiin',
-        'Kaupunkilaisten sytyttämä tulipalo ennen antautumista',
+        'Ruutivaraston räjähdys',
+        'Ranskalaisten kaivama miina',
+        'Côa-joen tulva kaupunkiin',
+        'Piirittäjien sytyttämä tulipalo',
       ],
       oikea: 0,
       fakta: 'Almeidan nimi juontuu arabian sanasta al-Maʾida, joka tarkoittaa pöytää.',

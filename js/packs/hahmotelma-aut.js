@@ -310,10 +310,10 @@ export const HAHMOTELMA_AUT = [
     visa: {
       kysymys: 'Miksi Millstätter Seen vesi voi lämmetä kesällä jopa 25 asteeseen?',
       vaihtoehdot: [
-        'Etelärannan voimalaitokset johtavat järveen lämmintä vettä',
-        'Järvi on matala ja lämpenee nopeasti auringossa',
-        'Pohjoiset vuoret suojaavat sitä kylmiltä tuulilta',
-        'Järven pohjasta nousee kuumia lähteitä',
+        'Voimalaitosten lämmin vesi',
+        'Matala järvi lämpenee nopeasti',
+        'Vuoret suojaavat kylmiltä tuulilta',
+        'Pohjasta nousee kuumia lähteitä',
       ],
       oikea: 2,
       fakta: 'Lähes asumaton eteläranta on ollut suojelualue vuodesta 1970.',
@@ -424,13 +424,12 @@ export const HAHMOTELMA_AUT = [
     lahde: 'en-Wikipedia "Großvenediger", johdanto-osa ja osiot "Name" ja "Climbing history" '
       + '(tarkistettu 19.9.2026).',
     visa: {
-      kysymys: 'Mihin vuoren nimen Großvenediger eli suuri venetsialainen uskotaan todennäköisimmin '
-        + 'viittaavan?',
+      kysymys: 'Mihin nimi Großvenediger, suuri venetsialainen, uskotaan viittaavan?',
       vaihtoehdot: [
-        'Jäätiköstä lähtevään ja Venetsiaan laskevaan jokeen',
-        'Solia ylittäneisiin venetsialaisiin kauppiaisiin',
-        'Ensinousuun osallistuneeseen venetsialaiseen oppaaseen',
-        'Huipulta näkyvään Venetsian laguuniin',
+        'Venetsiaan laskevaan jokeen',
+        'Solia ylittäneisiin kauppiaisiin',
+        'Venetsialaiseen ensinousijaan',
+        'Huipulta näkyvään laguuniin',
       ],
       oikea: 1,
       fakta: 'Vuorta kutsuttiin alun perin nimellä Stützerkopf.',
@@ -583,13 +582,12 @@ export const HAHMOTELMA_AUT = [
     lahde: 'en-Wikipedia "Kremsmünster Abbey", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Minkä tapahtuman perimätieto kertoo sattuneen paikalla, jolle Kremsmünsterin '
-        + 'luostari perustettiin?',
+      kysymys: 'Mikä tapahtui perimätiedon mukaan paikalla, jolle Kremsmünsterin luostari perustettiin?',
       vaihtoehdot: [
-        'Salama tappoi herttuan metsästysretkellä',
-        'Herttuan poika parani ihmeellisesti sairaudesta',
-        'Villisika haavoitti herttuan pojan kuolettavasti',
-        'Kaarle Suuri voitti paikalla vihollisensa',
+        'Salama tappoi herttuan',
+        'Herttuan poika parani ihmeellisesti',
+        'Villisika surmasi herttuan pojan',
+        'Kaarle Suuri voitti vihollisensa',
       ],
       oikea: 2,
       fakta: 'Kremsmünsterin apotit käyttivät aikoinaan piispallista toimivaltaa.',
@@ -699,7 +697,7 @@ export const HAHMOTELMA_AUT = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-riegersburg-ce3afaac.jpg',
       lyhyt: 'Riegersburgin linna kohoaa jyrkän tulivuorikallion päällä.',
-      selite: 'Kuvassa Riegersburgin linna Steiermarkissa, punakattoinen päärakennus kellotorneineen kallion huipulla. Kuvauksen mukaan linnan ensimmäinen maininta on vuodelta 1138.',
+      selite: 'Kuvassa Riegersburgin linna Steiermarkissa, punakattoinen päärakennus kellotorneineen kallion huipulla. Linnan ensimmäinen maininta on vuodelta 1138.',
       lahde: 'Valokuva: C.Stadler/Bwag, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'C.Stadler/Bwag',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Riegersburg_-_Burg,_S%C3%BCdwestansicht.JPG',
@@ -816,10 +814,10 @@ export const HAHMOTELMA_AUT = [
     visa: {
       kysymys: 'Millä rahoilla kreivi Wilczek rahoitti Burg Kreuzensteinin jälleenrakennuksen?',
       vaihtoehdot: [
-        'Sleesian hiilikaivostensa tuotoilla',
-        'Napa-alueiden tutkimusmatkojen palkkioilla',
-        'Habsburgien keisarilta saamallaan lahjoituksella',
-        'Itävalta-Unkarin valtion rakennusavustuksella',
+        'Sleesian hiilikaivosten tuotoilla',
+        'Napa-retkien palkkioilla',
+        'Keisarin lahjoituksella',
+        'Valtion rakennusavustuksella',
       ],
       oikea: 0,
       fakta: 'Linnan oli määrä toimia Wilczekin suvun sukuhautana.',
@@ -830,7 +828,7 @@ export const HAHMOTELMA_AUT = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-forchtenstein-0157fd62.jpg',
       lyhyt: 'Forchtensteinin linna kohoaa metsäisen kallion päälle.',
-      selite: 'Kuvassa Forchtensteinin linnan kaakkoisnäkymä: valkoinen päärakennus, torni ja paksut ulkomuurit kohoavat metsäisen rinteen yläpuolelle. Kuvauksen mukaan linna on jyrkällä dolomiittikalliolla Rosalia-vuoriston itärinteellä.',
+      selite: 'Kuvassa Forchtensteinin linnan kaakkoisnäkymä: valkoinen päärakennus, torni ja paksut ulkomuurit kohoavat metsäisen rinteen yläpuolelle. Linna on jyrkällä dolomiittikalliolla Rosalia-vuoriston itärinteellä.',
       lahde: 'Valokuva: C.Stadler/Bwag, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'C.Stadler/Bwag',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Forchtenstein_-_Burg_(1).JPG',
@@ -892,7 +890,7 @@ export const HAHMOTELMA_AUT = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-bad-ischl-921f3fb4.jpg',
         lyhyt: 'Bad Ischlin Trinkhalle, klassistinen pylväshalli kaupungin keskustassa.',
-        selite: 'Kuvassa Trinkhalle Auböckplatzilla: valkoinen pylväshalli kullattuine korinttilaisine pylväänpäineen. Kuvauksen mukaan rakennus valmistui 1829-1831 arkkitehti Franz Lösslin suunnitelmin klassistiseen tyyliin suolakylpylärakennukseksi.',
+        selite: 'Kuvassa Trinkhalle Auböckplatzilla: valkoinen pylväshalli kullattuine korinttilaisine pylväänpäineen. Rakennus valmistui 1829-1831 arkkitehti Franz Lösslin suunnitelmin klassistiseen tyyliin suolakylpylärakennukseksi.',
         lahde: 'Valokuva: C.Stadler/Bwag, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'C.Stadler/Bwag',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bad_Ischl_-_Trinkhalle.JPG',
@@ -930,7 +928,7 @@ export const HAHMOTELMA_AUT = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-gmunden-7aff5e24.jpg',
       lyhyt: 'Schloss Ort saarella Traunseessä ja Gmundenin kaupunki taustalla.',
-      selite: 'Kuvassa Schloss Ort valkoisine torneineen Traunseen saarella, puusilta linnaan ja Gmundenin rantakaupunki taustalla. Kuvauksen mukaan linna kuuluu Salzkammergutin vanhimpiin rakennuksiin.',
+      selite: 'Kuvassa Schloss Ort valkoisine torneineen Traunseen saarella, puusilta linnaan ja Gmundenin rantakaupunki taustalla. Linna kuuluu Salzkammergutin vanhimpiin rakennuksiin.',
       lahde: 'Valokuva: C.Stadler/Bwag, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'C.Stadler/Bwag',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gmunden_-_Schloss_Ort_(1).JPG',
@@ -941,7 +939,7 @@ export const HAHMOTELMA_AUT = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-gmunden-b60f3878.jpg',
         lyhyt: 'Gmundenin raatihuone ja kaupungin tori.',
-        selite: 'Kuvassa Gmundenin raatihuone vihreine ja valkoisine julkisivuineen ja kellopelitorneineen. Kuvauksen mukaan julkisivu on vuodelta 1756 ja kellopeli on tehty Meissenissä Gmundner Keramikin koristeaiheilla; kellot roikkuvat ylimmässä loggiassa.',
+        selite: 'Kuvassa Gmundenin raatihuone vihreine ja valkoisine julkisivuineen ja kellopelitorneineen. Julkisivu on vuodelta 1756 ja kellopeli on tehty Meissenissä Gmundner Keramikin koristeaiheilla; kellot roikkuvat ylimmässä loggiassa.',
         lahde: 'Valokuva: Isiwal, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Isiwal',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Gmunden_Rathaus-0397.jpg',
@@ -1083,10 +1081,10 @@ export const HAHMOTELMA_AUT = [
     visa: {
       kysymys: 'Mitä varten Piberin valtion talli perustettiin vuonna 1798?',
       vaihtoehdot: [
-        'Espanjalaisen ratsastuskoulun oriiden kasvattamiseksi',
-        'Sotahevosten kasvattamiseksi armeijan tarpeisiin',
-        'Ravikilpailuihin sopivien hevosten jalostamiseksi',
-        'Luostarin peltotöihin tarvittavien vetohevosten kasvattamiseksi',
+        'Ratsastuskoulun oriiden kasvatukseen',
+        'Sotahevosten kasvatukseen',
+        'Ravihevosten jalostukseen',
+        'Vetohevosten kasvatukseen',
       ],
       oikea: 1,
       fakta: 'Piberin linna oli aiemmin Pyhän Lambrechtin luostari.',
@@ -1404,10 +1402,10 @@ export const HAHMOTELMA_AUT = [
     visa: {
       kysymys: 'Miten suolavesi johdettiin Absamin suolakaivoksesta Hallin haihdutusaltaalle?',
       vaihtoehdot: [
-        'Hevosvaunuilla kuljetetuissa tynnyreissä',
-        'Inn-jokea pitkin puulautoilla ja proomuilla',
-        'Noin kymmenen kilometrin pituista putkea pitkin',
-        'Vuoren läpi louhittua kanavaa myöten',
+        'Tynnyreissä hevosvaunuilla',
+        'Puulautoilla Inn-jokea pitkin',
+        'Kymmenen kilometrin putkea pitkin',
+        'Vuoreen louhitussa kanavassa',
       ],
       oikea: 2,
       fakta: 'Hallin suolakauppa vei tavaraa aina Sveitsiin, Mustaanmetsään ja Reinin laaksoon '
@@ -1479,7 +1477,7 @@ export const HAHMOTELMA_AUT = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/aut-nosto-st-anton-2f34a0cb.jpg',
         lyhyt: 'St. Antonin rautatieaseman laituri ja Arlbergin tunnelin itäportaali.',
-        selite: 'Kuvassa on St. Antonin aseman laituri, jonka päässä raiteet katoavat Arlbergin tunneliin; kuvan kuvaus mainitsee itäportaalin raiteiden katetun osuuden päätepisteeksi.',
+        selite: 'Kuvassa on St. Antonin aseman laituri, jonka päässä raiteet katoavat Arlbergin tunneliin; itäportaalin raiteiden katettu osuus on laiturin päätepiste.',
         lahde: 'Valokuva: 32-Fuß-Freak, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: '32-Fuß-Freak',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bhf_St._Anton_und_viergleisiges_Ostportal.jpg',
@@ -1526,10 +1524,10 @@ export const HAHMOTELMA_AUT = [
     visa: {
       kysymys: 'Miten St. Antonin hiihtoperinne levisi 1930-luvulla ulkomaille?',
       vaihtoehdot: [
-        'Paikalliset hiihtoopettajat muuttivat Yhdysvaltoihin opettamaan lajia',
-        'Kylästä lähti Britannian ensimmäinen olympiahiihtojoukkue',
-        'Alueen kilpahiihtäjät voittivat ensimmäiset olympiakultansa',
-        'Arlbergin hiihtokoulun oppikirjat käännettiin monelle kielelle',
+        'Opettajat muuttivat Yhdysvaltoihin',
+        'Olympiajoukkue lähti kylästä',
+        'Kilpahiihtäjät voittivat olympiakultaa',
+        'Oppikirja käännettiin monille kielille',
       ],
       oikea: 0,
       fakta: 'Lähellä sijaitsevassa Pyhän Christophin kylässä paimen Heinrich Findelkind rakensi '
@@ -1597,13 +1595,12 @@ export const HAHMOTELMA_AUT = [
     lahde: 'en-Wikipedia "Oberndorf bei Salzburg", johdanto-osa ja osio "History" (tarkistettu '
       + '19.9.2026).',
     visa: {
-      kysymys: 'Miksi Oberndorf kuuluu Itävaltaan, vaikka joen toisella puolella oleva Laufen on '
-        + 'Baijerissa?',
+      kysymys: 'Miksi Oberndorf on Itävallassa, vaikka joen toisen puolen Laufen on Baijerissa?',
       vaihtoehdot: [
-        'Salzach-joen tulva muutti uomaa ja erotti rannat toisistaan',
-        'Baijerin kuningas osti joen toisen puolen Itävallan keisarilta',
-        'Kaupungin asukkaat äänestivät kansanäänestyksessä kahdesta valtiosta',
-        'Salzburgin arkkipiispakunta jaettiin Baijerin ja Itävallan kesken',
+        'Salzachin tulva muutti uomaa',
+        'Baijerin kuningas osti rannan',
+        'Kansanäänestys ratkaisi rajan',
+        'Arkkipiispakunta jaettiin 1816',
       ],
       oikea: 3,
       fakta: 'Stille Nacht -joululaulu esitettiin ensimmäisen kerran jouluaattona 1818 '

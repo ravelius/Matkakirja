@@ -239,9 +239,20 @@ const puluPeitto = (sivu, kortti) => sivu.evaluate(async (valitsin) => {
   if (!n || !k) return { pulu: Boolean(n), kortti: Boolean(k), leikkaa: -1 };
   const p = n.getBoundingClientRect();
   const kr = k.getBoundingClientRect();
-  // Väistynyt (näkymätön) pulu ei peitä mitään.
+  /*
+   * Väistynyt (näkymätön) pulu ei peitä mitään — MUTTA näkyvä lintu on
+   * Livian kasvokankaalla (.livia-kasvot-pinta, js/livia-eleet.js), ei
+   * napissa. Sonnet 1, kierros 13 (v1964, iPhone-simulaattori): nappi oli
+   * piilossa, mutta kangas piirsi pulun kortin lähderivin päälle. Kankaan
+   * on oltava piilossa samalla. Playwright ei piirrä lintua, joten
+   * vartio lukee kankaan tilan.
+   */
   if (Number(getComputedStyle(n).opacity) === 0) {
-    return { pulu: true, kortti: true, leikkaa: 0, piilossa: true };
+    const pinta = document.querySelector('.livia-kasvot-pinta');
+    const pintaNakyy = Boolean(pinta && !pinta.hidden && pinta.getClientRects().length > 0);
+    return {
+      pulu: true, kortti: true, leikkaa: pintaNakyy ? 1 : 0, piilossa: true, pintaNakyy,
+    };
   }
   const leikkaavat = [...k.querySelectorAll('p, h1, h2, h3, li, figcaption, button')]
     .map((e) => e.getBoundingClientRect())
@@ -532,6 +543,27 @@ if (d.auki) {
   tieto('pulu kohdekortilla', JSON.stringify(peittoD));
   vaadi('10. pulu ei peitä kohdekortin tekstiä (390 px)',
     peittoD.pulu && peittoD.kortti && peittoD.leikkaa === 0, JSON.stringify(peittoD));
+  /*
+   * 10b. KORTTI KIINNI → LINTU TAKAISIN. Vahdin piilotus ei saa jäädä
+   * päälle: kankaan on palattava, kun kohdekortti suljetaan.
+   */
+  const palasiD = await d.sivu.evaluate(async () => {
+    const { suljeFokuskohde } = await import('/js/fokuskohteet.js');
+    suljeFokuskohde(window.matkakirja.ui);
+    // Saapumistraileri on savukkeen latauksen jäänne koko ruudun päällä:
+    // sen alla pulu väistyy oikein, joten se pois ennen mittausta.
+    for (const e of document.querySelectorAll('.fokuskohde-popup, .saapumistraileri')) e.remove();
+    await new Promise((v) => setTimeout(v, 800));
+    const n = document.querySelector('.pollo-nappi');
+    const pinta = document.querySelector('.livia-kasvot-pinta');
+    return {
+      piilossa: Boolean(n?.classList.contains('pulu-paneelin-alla-piilossa')),
+      pinta: pinta ? !pinta.hidden : null,
+    };
+  });
+  vaadi('10b. kohdekortin sulkeuduttua pulu ja sen kasvokangas palaavat',
+    !palasiD.piilossa && palasiD.pinta !== false, JSON.stringify(palasiD));
+  await avaaKohde();
   const ulkoasuD = await visaUlkoasu(d.sivu, '.fokuskohde-popup');
   tieto('visan ulkoasu kohdekortilla', JSON.stringify(ulkoasuD));
   if (KUVAKANSIO) {

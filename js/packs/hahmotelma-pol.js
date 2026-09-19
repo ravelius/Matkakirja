@@ -216,14 +216,13 @@ export const HAHMOTELMA_POL = [
     visa: {
       kysymys: 'Miten Śniardwy syntyi?',
       vaihtoehdot: [
-        'Tulivuoren kraatterin täyttymisestä sadevedellä',
-        'Ihmisten patoamasta jokilaaksosta',
-        'Meteoriitin iskusta',
-        'Sulavan jäätikön ja tulvavesien muovaamana',
+        'Tulivuoren kraatterista',
+        'Ihmisten patoamasta laaksosta',
+        'Meteoriitin iskun jäljestä',
+        'Sulavan jäätikön tulvavesistä',
       ],
       oikea: 3,
-      fakta: 'Śniardwyllä on kaksi pintapurkautumaa: Jeglin kanava Roś-järveen ja Wyszka-joki '
-        + 'Białoławki-järveen.',
+      fakta: 'Śniardwyllä on kaksi pintapurkautumaa: Jeglin kanava Roś-järveen ja Wyszka-joki Białoławki-järveen.',
     },
   },
   {
@@ -277,10 +276,10 @@ export const HAHMOTELMA_POL = [
     visa: {
       kysymys: 'Mikä saa Słowińskin dyynit liikkumaan?',
       vaihtoehdot: [
-        'Tuuli ja aallot kuljettavat hiekkaa sisämaahan',
-        'Maa nousee joka vuosi sulavan jäätikön jäljiltä',
-        'Rannikko vajoaa hitaasti meren alle',
-        'Ihmiset siirtävät hiekkaa pois kaivoksiin',
+        'Tuulen ja aaltojen työ',
+        'Maannousu jäätikön jäljiltä',
+        'Rannikon hidas vajoaminen',
+        'Hiekan louhinta kaivoksiin',
       ],
       oikea: 0,
       fakta: 'Puiston korkein kohta Rowokol kohoaa 115 metriin ja on erinomainen näköalapaikka.',
@@ -537,10 +536,10 @@ export const HAHMOTELMA_POL = [
     visa: {
       kysymys: 'Mitä Saksalaiselle ritarikunnalle tapahtui Grunwaldin taistelun jälkeen?',
       vaihtoehdot: [
-        'Se hajosi heti ja menetti kaikki maansa',
-        'Se sai suuria alueita Liettuan suuriruhtinaalta',
-        'Se kesti Malborkin piirityksen, mutta ei toipunut',
-        'Se liittyi Puolan kuninkaan armeijaan',
+        'Hajosi heti ja menetti maansa',
+        'Sai alueita Liettuan ruhtinaalta',
+        'Selviytyi, mutta ei toipunut',
+        'Liittyi Puolan armeijaan',
       ],
       oikea: 2,
       fakta: 'Taistelua muistetaan Puolan ja Liettuan lisäksi myös Ukrainassa ja Valko-Venäjällä.',
@@ -1166,12 +1165,11 @@ export const HAHMOTELMA_POL = [
       vaihtoehdot: [
         'Paikalta löydettiin hopeaa',
         'Preussi kielsi suolan viennin',
-        'Wieliczka ja Bochnia joutuivat Itävallalle',
-        'Lähteet olivat kuumia ja terveellisiä',
+        'Suolakaivokset jäivät Itävallalle',
+        'Lähteiden vesi oli kuumaa',
       ],
       oikea: 2,
-      fakta: 'Lähteiden hoitovaikutukset kohdistuvat muun muassa sydän-, hengitys- ja tuki- ja '
-        + 'liikuntaelinten sairauksiin.',
+      fakta: 'Lähteiden hoitovaikutukset kohdistuvat muun muassa sydän-, hengitys- ja tuki- ja liikuntaelinten sairauksiin.',
     },
   },
   {
@@ -1179,7 +1177,7 @@ export const HAHMOTELMA_POL = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-kornik-f34d6bbe.jpg',
       lyhyt: 'Kórnikin uusgoottilainen linna peilautuu vallihaudan jäähän.',
-      selite: 'Kórnikin linna kuvattuna vallihaudan puolelta: kuvauksen mukaan linna rakennettiin 1300-luvulla mutta muokattiin nykyiseen uusgoottilaiseen asuunsa. Näkyvissä ovat nelikulmainen torni, hammastetut harjat ja vaalea kivijulkisivu.',
+      selite: 'Kórnikin linna kuvattuna vallihaudan puolelta: linna rakennettiin 1300-luvulla mutta muokattiin nykyiseen uusgoottilaiseen asuunsa. Näkyvissä ovat nelikulmainen torni, hammastetut harjat ja vaalea kivijulkisivu.',
       lahde: 'Valokuva: Diego Delso, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Diego Delso',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Castillo_de_Kórnik,_Kórnik,_Polonia,_2016-12-21,_DD_05.jpg',
@@ -1251,7 +1249,7 @@ export const HAHMOTELMA_POL = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-lancut-acc21f26.jpg',
         lyhyt: 'Gloriette eli pylväskaari Łańcutin linnan puistossa.',
-        selite: 'Kuvauksen mukaan kyseessä on Łańcutin linnapuiston gloriette: keltainen, kaareva pylväikkö korinttilaisin pylväspäin, jonka takana ja ympärillä on vehreää puistoa.',
+        selite: 'Kuvassa on Łańcutin linnapuiston gloriette: keltainen, kaareva pylväikkö korinttilaisin pylväspäin, jonka takana ja ympärillä on vehreää puistoa.',
         lahde: 'Valokuva: Kroton, Wikimedia Commons (CC BY-SA 3.0 pl).',
         tekija: 'Kroton',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:PL_-_Łańcut_-_park_zamkowy_-_2012-05-02--11-09-12-26.jpg',
@@ -1299,7 +1297,7 @@ export const HAHMOTELMA_POL = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-pszczyna-9e966aca.jpg',
         lyhyt: 'Syksyinen valo Pszczynan linnapuistossa.',
-        selite: 'Kuvauksen mukaan kuva on Pszczynan perintöarvoisesta linnapuistosta: aurinko paistaa sumun läpi keltaisten lehtien ja pienen puusillan ylle.',
+        selite: 'Kuvassa on Pszczynan perintöarvoinen linnapuisto: aurinko paistaa sumun läpi keltaisten lehtien ja pienen puusillan ylle.',
         lahde: 'Valokuva: Jacek Cisło, Wikimedia Commons (CC BY-SA 3.0 pl).',
         tekija: 'Jacek Cisło',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Park_zamkowy_w_Pszczynie_03promykjck.jpg',
@@ -1398,14 +1396,13 @@ export const HAHMOTELMA_POL = [
     visa: {
       kysymys: 'Mikä muutos vuonna 1851 auttoi Łódźin tekstiiliteollisuutta kasvamaan?',
       vaihtoehdot: [
-        'Venäjä poisti tullimuurin Kongressi-Puolalta',
-        'Preussi rakensi uuden kanavan Łódźiin',
-        'Kaupunki sai oman kuninkaansa',
+        'Venäjä poisti tullimuurin',
+        'Preussi rakensi uuden kanavan',
+        'Kaupunki sai oman kuninkaan',
         'Höyrykoneet kiellettiin tehtaista',
       ],
       oikea: 0,
-      fakta: 'Scheiblerin Księży Młyn oli vuosisadan lopulla yksi Euroopan suurimmista '
-        + 'teollisuuskomplekseista ja työllisti 5 000 ihmistä yhdessä laitoksessa.',
+      fakta: 'Scheiblerin Księży Młyn oli vuosisadan lopulla yksi Euroopan suurimmista teollisuuskomplekseista ja työllisti 5 000 ihmistä yhdessä laitoksessa.',
     },
   },
   {
@@ -1413,7 +1410,7 @@ export const HAHMOTELMA_POL = [
     kuva: {
       osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-bochnia-e1677404.jpg',
       lyhyt: 'Bochnian suolakaivoksen Campi-kuilun nostotorni ja kaivoksen hallintorakennukset.',
-      selite: 'Kuvassa näkyy Campi-kuilun nostotorni ja Bochnian suolakaivoksen rakennuksia; keskellä olevassa rakennuksessa on kuvauksen mukaan historiallinen höyrykone.',
+      selite: 'Kuvassa näkyy Campi-kuilun nostotorni ja Bochnian suolakaivoksen rakennuksia; keskellä olevassa rakennuksessa on historiallinen höyrykone.',
       lahde: 'Valokuva: Kj, Wikimedia Commons (CC BY-SA 4.0).',
       tekija: 'Kj',
       lahdeUrl: 'https://commons.wikimedia.org/wiki/File:%22Campi%22_shaft_of_Bochnia_Salt_Mine.jpg',
@@ -1424,7 +1421,7 @@ export const HAHMOTELMA_POL = [
       {
         osoite: 'https://media.matkakirja.app/karttanostot/20260920/pol-nosto-bochnia-74b113f5.jpg',
         lyhyt: 'Bochnian suolakaivoksen Ważyn-kammio, jonka holvissa näkyvät raidalliset suolakerrostumat.',
-        selite: 'Suolakaivoksen Ważyn-kammiossa näkyvät kuvauksen mukaan raidalliset suolakerrokset kammion seinässä ja katossa. Kammiossa on puulattia ja pallokenttä.',
+        selite: 'Suolakaivoksen Ważyn-kammiossa näkyvät raidalliset suolakerrokset kammion seinässä ja katossa. Kammiossa on puulattia ja pallokenttä.',
         lahde: 'Valokuva: Adrian Tync, Wikimedia Commons (CC BY-SA 4.0).',
         tekija: 'Adrian Tync',
         lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Bochnia_salt_mine_Wazyn_Chamber_2023.jpg',
