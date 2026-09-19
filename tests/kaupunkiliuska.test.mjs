@@ -15,6 +15,8 @@ import {
 import { laudaltaAsteiksi } from '../js/fokusmitat.js';
 import { PALLO_LAUTA } from '../js/pallo.js';
 import { MAAILMANKARTTA } from '../js/packs/maailmankartta.js';
+import { kaupungillaKohdekartta, turistiOppaanArtikkeli } from '../js/kaupunkinosto.js';
+import { readFileSync } from 'node:fs';
 
 const PARIISI = { lat: 48.8566, lng: 2.3522, nimi: 'Pariisi' };
 
@@ -308,4 +310,38 @@ test('liuskan rivit avaavat Muut-kategorian haitarin kuten muutkin', () => {
   assert.deepEqual(rivit.filter((r) => r.laji === 'kohde').map((r) => r.nimi), ['Ilman aihetta']);
   const otsikot = rivit.filter((r) => r.laji === 'kategoria').map((r) => r.nimi);
   assert.equal(otsikot[otsikot.length - 1], 'Muut (1)');
+});
+
+/*
+ * LIUSKAN YLÄRYHMÄ KERTOO, MIKÄ AVAUTUU (Fablen tarkistus 20.9.2026).
+ * Brysselin liuskassa Nähtävyydet-rivi avasi tyhjän otsikkopalkin, koska
+ * kaupungilla ei ole kohdekarttaa, ja Turistiopas ei reagoinut, kun
+ * matkailijalle-osiota ei vielä ollut. Rivit ovat liuskassa vain, jos
+ * niiden takana on sisältöä; lauta antaa tiedon kaupunkinosto.js:n
+ * datasta (lauta.js liuskanSisalto → nostot.js liuskanRivit).
+ */
+test('Bryssel: opas on, kohdekarttaa ei → liuskassa vain kaupunki ja Turistiopas', () => {
+  assert.equal(kaupungillaKohdekartta('bryssel'), false);
+  assert.ok(turistiOppaanArtikkeli('bryssel'), 'Brysselin oppaan artikkeli puuttuu');
+  const rivit = liuskanRivit({
+    kaupunki: { nimi: 'Bryssel', lat: 50.85, lng: 4.35 },
+    nostot: [],
+    nahtavyyksia: kaupungillaKohdekartta('bryssel'),
+    opas: Boolean(turistiOppaanArtikkeli('bryssel')),
+  });
+  assert.deepEqual(rivit.map((r) => r.laji), ['lehti', 'opas']);
+});
+
+test('Pariisi: kohdekartta ja opas → kaikki kolme yläryhmän riviä', () => {
+  assert.equal(kaupungillaKohdekartta('pariisi'), true);
+  assert.ok(turistiOppaanArtikkeli('pariisi'));
+});
+
+test('lauta antaa liuskalle sisältötiedon, ja nostokerros välittää sen', () => {
+  const lauta = readFileSync(new URL('../js/pallolauta/lauta.js', import.meta.url), 'utf8');
+  const nostot = readFileSync(new URL('../js/pallolauta/nostot.js', import.meta.url), 'utf8');
+  assert.match(lauta, /liuskanSisalto:\s*\(id\)\s*=>/);
+  assert.match(lauta, /kaupungillaKohdekartta\(id\)/);
+  // Kaksi kutsupaikkaa: rivit ja kamera-ajon tilantarve.
+  assert.equal((nostot.match(/liuskanSisalto\?\.\(/g) ?? []).length, 2);
 });

@@ -104,7 +104,7 @@ import { KARTTANIMI_KOOT } from '../karttanimet.js';
 import {
   TURISTI_INFON_ASENNOT, TURISTI_INFO_NIMIO, asemoiKaupunkipopup, asetteleTuristiInfo,
   avaaKaupunkiesittely, avaaNahtavyysnakyma, avaaTiivisKaupunkietusivu, avaaTuristiOpas,
-  kaupunginMatkailijalle, suljeKaupunkipopup,
+  kaupungillaKohdekartta, kaupunginMatkailijalle, suljeKaupunkipopup, turistiOppaanArtikkeli,
   turistiInfoElementti, turistiInfonAsteet, turistiInfonAsteetRuudulta,
 } from '../kaupunkinosto.js';
 import { NOSTOLADONTA_POLTON_TIHEYS } from '../nostoladonta.js';
@@ -2000,6 +2000,16 @@ export async function avaaPallolauta(ui) {
       // Pallon kaupungin nimikentta on `n` (js/pallo.js pallonKaupungit).
       id: k.id, nimi: k.n, lat: k.lat, lng: k.lon,
     })),
+    /*
+     * LIUSKAN YLÄRYHMÄ SAA VAIN SEN, MIKÄ AVAUTUU (20.9.2026, Fablen
+     * tarkistus Brysselistä): Nähtävyydet-rivi tarvitsee kohdekartan ja
+     * Turistiopas-rivi oppaan artikkelin. Ilman niitä rivi puuttuu
+     * liuskasta eikä avaa tyhjää otsikkopalkkia.
+     */
+    liuskanSisalto: (id) => ({
+      nahtavyyksia: kaupungillaKohdekartta(id),
+      opas: Boolean(turistiOppaanArtikkeli(id)),
+    }),
     ankkuri,
     /*
      * VIUHKA ON UUSIA CSS2D-ELEMENTTEJÄ, JA NE SYNTYVÄT VASTA TOISESSA
