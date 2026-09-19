@@ -323,7 +323,17 @@ const DIAG_PITUUS = async () => {
  *     karttaa alleen (LISAYS 16 kohta 49).
  *  4. MUISTI JA FPS (karttapallo.md luku 6, fps >= 50).
  */
-const LAASTARIN_NAKYMA = { lat: 41.6, lng: 14.6, altitude: 0.14 };
+/*
+ * LAASTARIN_NAKYMA=lat,lng,korkeus siirtää laastarimittauksen muualle
+ * (erä opus-local-webkit-napa 19.9.2026: pohjoisnapa lähizoomissa).
+ * Oletus on Italian saapas.
+ */
+const LAASTARIN_NAKYMA = (() => {
+  const [lat, lng, altitude] = (process.env.LAASTARIN_NAKYMA ?? '').split(',').map(Number);
+  return [lat, lng, altitude].every(Number.isFinite)
+    ? { lat, lng, altitude }
+    : { lat: 41.6, lng: 14.6, altitude: 0.14 };
+})();
 const LAASTARIN_ODOTUS_MS = Number(process.env.LAASTARI_ODOTUS_MS ?? 6000);
 
 /**
