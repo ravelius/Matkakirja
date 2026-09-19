@@ -32,10 +32,33 @@
 // ajetaan aivan kuten ennenkin. Mittaus näkyy lokissa rivinä
 // "INFO  chromium-liput: ...", joten hiljainen epäonnistuminen erottuu.
 
-const liput = (process.env.SAVUKE_CHROMIUM_LIPUT ?? '')
-  .split(/[,\s]+/)
-  .map((s) => s.trim())
-  .filter(Boolean);
+/*
+ * MACIN MEDIAPANEELI POIS (Fable 19.9.2026 klo 15.00 Suomen aikaa): macOS:n
+ * MediaRemoteUI ("Toistetaan nyt") kaatui neljästi savukesarjojen aikana
+ * (13.53, 14.07, 14.14, 14.47), koska jokainen ääntä soittava Chromium
+ * rekisteröi mediaistunnon paneeliin ja kuusi rinnakkaista riittää
+ * kaatamaan sen. Savukkeiden selaimet eivät tarvitse mediapaneelia eivätkä
+ * laitteiston medianäppäimiä, joten ne kytketään pois OLETUKSENA. Koska
+ * Chromium lukee vain VIIMEISEN --disable-features-lipun, kaikki
+ * poiskytkettävät piirteet kootaan yhteen lippuun (rivin oma lista,
+ * esim. AudioServiceOutOfProcess, säilyy).
+ */
+const OLETUSPOIS = ['HardwareMediaKeyHandling', 'MediaSessionService'];
+
+function kokoaLiput(lahde) {
+  const annetut = (lahde ?? '').split(/[,\s]+/).map((s) => s.trim()).filter(Boolean);
+  const pois = new Set(OLETUSPOIS);
+  const muut = [];
+  for (const lippu of annetut) {
+    const m = lippu.match(/^--disable-features=(.*)$/);
+    if (m) m[1].split(',').filter(Boolean).forEach((f) => pois.add(f));
+    else muut.push(lippu);
+  }
+  return [...muut, `--disable-features=${[...pois].join(',')}`];
+}
+
+const liput = process.env.SAVUKE_CHROMIUM_LIPUT === '0' ? [] : kokoaLiput(process.env.SAVUKE_CHROMIUM_LIPUT);
+export { kokoaLiput, OLETUSPOIS };
 
 if (liput.length) {
   // Sama kahden lähteen haku kuin savukkeissa itsessään: ensin repon
