@@ -1,7 +1,11 @@
 /*
- * MALTAN HAHMOTELMANOSTOT — VALMIS PAKETTI, EI REKISTERÖITY.
+ * MALTAN HAHMOTELMANOSTOT — REKISTERÖITY v1968 (19.9.2026, Opus).
  *
  * === TILA ============================================================
+ *
+ * REKISTERÖITY 19.9.2026: Malta on kartalla (v1968-prep), paketti siirrettiin
+ * js/packs/:iin ja kytkettiin alla olevan ohjeen mukaan (KOHDE_MAAT.MLT,
+ * sw.js, build-standalone). Alla oleva teksti on odotusajan historiaa.
  *
  * Malta EI OLE vielä pelin kartalla (Fable 19.9.2026): MAAILMANKARTTA.
  * countryShapes ei sisällä MLT:tä, FOKUS_POHJAT ei sisällä MLT:tä ja
