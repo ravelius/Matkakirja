@@ -67,7 +67,9 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
-import { ASKELEN_VAHIN_OSUUS, siirtoajonKesto, autokyydinAskel } from '../../js/siirtokoreografia.js';
+import {
+  ASKELEN_VAHIN_OSUUS, HYPYN_TAUKO_MS, siirtoajonKesto, autokyydinAskel,
+} from '../../js/siirtokoreografia.js';
 import {
   lahinLeveys, lahizoominSyvennys, PALLOLAUDAN_LAHIN_LEVEYS,
 } from '../../js/pallolauta/kamera.js';
@@ -485,7 +487,22 @@ const RUUDUT = [
   { nimi: '1400', w: 1400, h: 900 },
 ];
 const VAIN = process.env.SAVUKE_RUUTU ?? '';
-const nappulanKesto = SILMA * autokyydinAskel(SILMA);
+/*
+ * NAPPULAN MATKA = HYPYT JA NIIDEN VÄLISET TAUOT (js/ui.js
+ * animatePawnSisalla; sama kaava kuin tests/siirtoajoitus.test.mjs
+ * `nappulanMatka`).
+ *
+ * MIKSI KAAVA MUUTTUI. Erän 8 autokyyti (v1845) ajoi maareitin yhtenä
+ * käyränä ilman taukoja, ja tämä luku oli silloin pelkkä askeleiden
+ * summa. Omistaja tilasi hypyn takaisin 19.9.2026 klo 23.47
+ * (docs/raportit/viesti-fable-siirto-hyppy-20260919.md), jolloin
+ * jokaisen askeleen väliin palasi HYPYN_TAUKO_MS — ja saatto piteni
+ * saman verran, koska ui.js mitoittaa kamera-ajon nappulan matkasta.
+ * Mitattu ero oli 12 % (3160 → 3540 ms), eli väite 5 ei mitannut
+ * zoomin vaikutusta vaan taukojen puuttumista kaavasta.
+ */
+const nappulanKesto = SILMA * autokyydinAskel(SILMA)
+  + Math.max(0, SILMA - 1) * HYPYN_TAUKO_MS;
 const ODOTETTU_SAATTO = siirtoajonKesto(nappulanKesto);
 
 for (const ruutu of RUUDUT.filter((r) => !VAIN || r.nimi === VAIN)) {

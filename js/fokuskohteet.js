@@ -151,6 +151,8 @@ import { HAHMOTELMA_FIN } from './packs/hahmotelma-fin.js';
 import { HAHMOTELMA_ROU } from './packs/hahmotelma-rou.js';
 import { HAHMOTELMA_SVN } from './packs/hahmotelma-svn.js';
 import { HAHMOTELMA_EST } from './packs/hahmotelma-est.js';
+import { HAHMOTELMA_LTU } from './packs/hahmotelma-ltu.js';
+import { HAHMOTELMA_LVA } from './packs/hahmotelma-lva.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
 import { FOKUSKOHTEET_HUN } from './packs/fokuskohteet-hun.js';
@@ -559,6 +561,20 @@ KOHDE_MAAT.EST = [...(KOHDE_MAAT.EST ?? []), ...HAHMOTELMA_EST];
  * eikä aiempia nostoja, ja lista on karsittu 24:ään maan pienen koon takia.
  */
 KOHDE_MAAT.SVN = [...(KOHDE_MAAT.SVN ?? []), ...HAHMOTELMA_SVN];
+
+/*
+ * LIETTUAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla.
+ */
+KOHDE_MAAT.LTU = [...(KOHDE_MAAT.LTU ?? []), ...HAHMOTELMA_LTU];
+
+/*
+ * LATVIAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48 ja
+ * 51: EU-maiden karttanostot, rahavisat). Sama reitti ja sama rakenne
+ * kuin muilla EU-maiden hahmotelmilla.
+ */
+KOHDE_MAAT.LVA = [...(KOHDE_MAAT.LVA ?? []), ...HAHMOTELMA_LVA];
 
 /*
  * KOHTEET SÄHKETEHTÄVÄN SISÄLTÖHAKEMISTOON (Raamattu, PÖLLÖN
@@ -6430,8 +6446,21 @@ function kuunteleKohdetta(ui, popup) {
    * lähderivin linkit, sulkuristi — eivät ole sulkuja: ne hoitavat
    * oman tekonsa itse.
    */
+  /*
+   * VAIN VAIHEESSA 1 (omistaja 19.9.2026 klo 23.41, iPad, Chartres,
+   * sanatarkasti: *"Nosto sulkeutuu kun leipätekstin kohdalta klikkaa.
+   * Johtuu siitä että peliin ei päivity että lisää sisältöä on tuotu
+   * ruudulle."*). Kortti pitää luokan `nostokuva-kortti` myös Lisää-
+   * napautuksen jälkeen, joten tämä vahti sulki kortin leipätekstin,
+   * kuvatekstin ja lähderivin napautuksesta. Vaiheessa 2
+   * (`nostokuva-vaihe2`, js/nostokuva.js avaaLisaa) kortti on tavallinen
+   * luettava kortti: sen päällä napautus ei tee mitään, ja sulku on ✕ tai
+   * napautus kortin ULKOPUOLELLE (`ulos`/`sulkeva` alla) — sama sopimus
+   * kuin täkynoston ja eläinkortin kerroksilla.
+   */
   const kuvanNapautus = kuunteleSulkevaNapautus(popup, {
     kelpaa: (tapahtuma) => nostokuvaKortissa(popup)
+      && !popup.classList.contains('nostokuva-vaihe2')
       && !tapahtuma.target?.closest?.('button, a'),
     napautus: () => {
       sfx.play('paper');

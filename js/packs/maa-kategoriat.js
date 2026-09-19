@@ -6895,7 +6895,7 @@ export const MAA_KATEGORIAT = {
     },
     {
       id: 'ruoka',
-      nimi: 'Ruokaa ja tapoja',
+      nimi: 'Ruoka',
       johdanto: 'Ranskassa ruoka noudattaa kalenteria: tammikuussa kakussa on '
         + 'jotain piilossa, helmikuussa paistetaan ohukaisia, ja juusto '
         + 'kypsyy vuoren sisällä.',
@@ -7303,7 +7303,7 @@ export const MAA_KATEGORIAT = {
     },
     {
       id: 'arki',
-      nimi: 'Arki ja tavat',
+      nimi: 'Arki',
       johdanto: 'Merimiesten kiitoslahjat roikkuvat kirkon katossa, ja '
         + 'saippuakuution kylkeen leimataan luku, joka kertoo mitä sen '
         + 'sisällä on.',

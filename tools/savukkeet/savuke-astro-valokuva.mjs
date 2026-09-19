@@ -110,6 +110,53 @@ const vaadi = (nimi, ok, lisa = '') => {
   console.log(`${ok ? 'OK  ' : 'FAIL'}  ${nimi}${lisa ? ` — ${lisa}` : ''}`);
 };
 
+/*
+ * AVAUSANIMAATIO POIS ENNEN MITTAUSTA (PAATOKSET 52 ja 53, 19.–20.9.2026).
+ * Avausajo kirjoittaa kameran korkeuden joka kehyksellä ja ISS-seuranta
+ * kääntää Maata, kunnes pelaaja koskee ruutuun — merkit liikkuivat siis
+ * napautuksen alta. Sama ele kuin pelaajalla: yksi pointerdown pallon
+ * koteloon (otePalloon) päättää ajon ja seurannan, eikä avaa mitään.
+ */
+const pysaytaAvaus = async (s) => {
+  /*
+   * PALJASTUS ENSIN: mustan kerroksen aikana ote ei päätä ajoa
+   * (otePalloon palaa, kun paljastus odottaa) — otsikkokortti on ruudulla
+   * vähintään PALJASTUKSEN_MINIMI_MS eli 1,8 s.
+   */
+  await s.waitForFunction(
+    () => window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.tila?.()?.paljastus?.vaihe === 'paljastettu',
+    null, { timeout: 20000 },
+  ).catch(() => {});
+  await s.evaluate(() => {
+    // Sama kotelo, johon linssi kuuntelee otteen (lauta.kotelo).
+    const kotelo = window.matkakirja.ui.pallolauta?.kotelo
+      ?? document.querySelector('.pallo-kotelo, .pallo-kuori');
+    for (const laji of ['pointerdown', 'pointerup']) {
+      kotelo?.dispatchEvent(new PointerEvent(laji, { bubbles: true, cancelable: true, clientX: 1, clientY: 1 }));
+    }
+  });
+  await s.waitForTimeout(500);
+  const tila = () => s.evaluate(() => {
+    const t = window.matkakirja.ui.pallolinssi?.kahva?.avaruus?.tila?.();
+    return { ajo: t?.avausajo?.kaynnissa ?? null, seuranta: t?.issSeuranta ?? null };
+  });
+  let nyt = await tila();
+  // Toinen yritys, jos ensimmäinen ele osui vielä paljastuksen häivytykseen.
+  if (nyt.ajo !== false || nyt.seuranta !== false) {
+    await s.waitForTimeout(800);
+    await s.evaluate(() => {
+      const kotelo = window.matkakirja.ui.pallolauta?.kotelo
+        ?? document.querySelector('.pallo-kotelo, .pallo-kuori');
+      for (const laji of ['pointerdown', 'pointerup']) {
+        kotelo?.dispatchEvent(new PointerEvent(laji, { bubbles: true, cancelable: true, clientX: 1, clientY: 1 }));
+      }
+    });
+    await s.waitForTimeout(400);
+    nyt = await tila();
+  }
+  return nyt;
+};
+
 async function avaaSivu(nakyma, virheet) {
   const konteksti = await selain.newContext({ ...nakyma, serviceWorkers: 'block' });
   const sivu = await konteksti.newPage();
@@ -372,6 +419,9 @@ async function ajaNakyma(nakymanNimi) {
       && Math.round(parseFloat(pallolla.varit?.pyorea ?? '0')) >= 14
       && harmaa(pallolla.varit?.teksti) && harmaa(pallolla.varit?.tausta) && harmaa(pallolla.varit?.reuna),
     JSON.stringify(pallolla));
+
+  const avausPysahtyi = await pysaytaAvaus(s);
+  console.log(`    AVAUS PYSÄYTETTY ${JSON.stringify(avausPysahtyi)} (${nakymanNimi})`);
 
   const vakaaPaikka = async (tunnus) => {
     let edellinen = null;

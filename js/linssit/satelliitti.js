@@ -967,7 +967,15 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
   const pulunLaheta = nappi('satelliitti-pulu-laheta', '↑', 'Lähetä kysymys');
   pulunLaheta.type = 'submit';
   pulunSyote.append(pulunKentta, pulunLaheta);
-  pulukortti.append(pulunYlarivi, pulunRivi, pulunVirta, pulunSyote);
+  /*
+   * VALMIIT KYSYMYKSET OVAT OSA KESKUSTELUVIRTAA (Raamattu PAATOKSET 53,
+   * omistaja 19.9.2026: "nuo valmiit kysymykset pitäisi scrollautua pois
+   * kuten normaalistikin pululla"). Rivi on virran ensimmäinen lapsi, ja
+   * kun vastaus tulee, virta vierii alas ja kysymykset liukuvat ylös pois
+   * näkyvistä — kuten pelin omassa pulussa.
+   */
+  pulunVirta.appendChild(pulunRivi);
+  pulukortti.append(pulunYlarivi, pulunVirta, pulunSyote);
 
   /**
    * Yksi kupla virtaan.
@@ -1031,6 +1039,8 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
     const teksti = String(raaka ?? '').replace(/\s+/g, ' ').trim();
     if (!teksti || kysymysKesken) return;
     kysymysKesken = true;
+    // Leijunta tauolle, kun pulu puhuu (PAATOKSET 53, css/satelliitti.css).
+    pulukulma.classList.add('satelliitti-pulu-puhuu');
     pulunKentta.value = '';
     pulunLaheta.disabled = true;
     lisaaKupla('oma', teksti);
@@ -1062,6 +1072,7 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
       }
     } finally {
       kysymysKesken = false;
+      pulukulma.classList.remove('satelliitti-pulu-puhuu');
       pulunLaheta.disabled = false;
       pulunVirta.scrollTop = pulunVirta.scrollHeight;
     }

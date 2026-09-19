@@ -465,9 +465,26 @@ export function aiheenPerhe(id) {
  * ajautua erilleen: rivi antaa lehdelle SIVUTUNNUKSEN, ei numeroa.
  */
 export function maanAiheet(iso) {
-  return (MAA_KATEGORIAT[iso] ?? [])
-    .filter((osa) => osa?.id && osa?.nimi)
+  const osat = (MAA_KATEGORIAT[iso] ?? []).filter((osa) => osa?.id && osa?.nimi);
+  /*
+   * ARKI KATTAA TAVAT (Raamattu, MAALEHDEN INFOTAULU kohta 2, omistaja
+   * 19.9.2026: päällekkäiset "Arki ja tavat" ja "Tavat" → yksi Arki).
+   * Tavat-sivu jää lehteen sellaisenaan — sen id, nostot, tehtävä ja
+   * sivunumerot (sähkelinkit) eivät muutu — mutta infotaulussa sillä ei
+   * ole omaa merkkiä, kun maalla on Arki: sivu aukeaa Arjen perästä.
+   */
+  const onArki = osat.some((osa) => osa.id === 'arki');
+  return osat
+    .filter((osa) => !(onArki && osa.id === 'tavat'))
     .map((osa) => ({ id: osa.id, nimi: osa.nimi, perhe: aiheenPerhe(osa.id) }));
+}
+
+/**
+ * Valtiomuoto ilman vuosilukua: FOKUS_MAANIMET kirjoittaa sen muodossa
+ * "tasavalta v. 1873", ja infotaulun 1873-lohkossa vuosi on jo otsikossa.
+ */
+export function valtiomuoto1873(valtiomuoto) {
+  return String(valtiomuoto ?? '').replace(/\s*v\.\s*1873\s*$/, '').trim();
 }
 
 /**
@@ -772,22 +789,6 @@ function osuuLaatikkoon(el, x, y) {
 }
 
 /**
- * OTSIKOT KAHDELLE RIVILLE, TASAN PUOLIKSI (PÄÄTÖKSET 28 TARKENNUS 3:
- * *"kahdessa rivissa … jaa tasaisesti"*).
- *
- * Jako tehdään TÄSSÄ eikä CSS:n rivityksellä, koska kahden rivin on
- * oltava kaksi myös silloin, kun nimet ovat eri pituisia: `flex-wrap`
- * katkaisisi rivin sieltä mihin leveys sattuu loppumaan, ja pitkien
- * otsikoiden maissa rivejä tulisi kolme. Pariton määrä menee niin, että
- * YLÄRIVI on pidempi — sama tapa kuin kirjan sisällysluettelossa.
- */
-function otsikkoRivit(aiheet) {
-  if (!aiheet?.length) return [];
-  const puoli = Math.ceil(aiheet.length / 2);
-  return [aiheet.slice(0, puoli), aiheet.slice(puoli)].filter((rivi) => rivi.length);
-}
-
-/**
  * Kalusteen runko. Sisältö täytetään erikseen (`taytaKortti`), koska
  * sama elementti jää eloon maan vaihtuessa.
  *
@@ -810,13 +811,22 @@ function paneeliElementti(d) {
    */
   const sisus = luo('div', 'maapaneeli-sisus');
   sisus.hidden = true;
-  const valikko = luo('div', 'maapaneeli-valikko');
-  valikko.hidden = true;
-  sisus.appendChild(valikko);
+  /*
+   * KARTUSCHAN JÄRJESTYS (Raamattu, MAALEHDEN INFOTAULU kohta 1):
+   * masthead ensin (avain alla), sitten 1873-lohko, nykyluvut ja
+   * kielet, ja kategoriat viimeisinä. Sisus ladotaan siksi AVAIMEN
+   * JÄLKEEN; kaluste on ankkuroitu ruudun alareunaan, joten auki
+   * kartuscha kasvaa ylöspäin ja masthead nousee sen yläreunaan.
+   */
+  const vuosi = luo('dl', 'maapaneeli-vuosi');
+  vuosi.hidden = true;
+  sisus.appendChild(vuosi);
   const rivit = luo('dl', 'maapaneeli-rivit');
   rivit.hidden = true;
   sisus.appendChild(rivit);
-  kortti.appendChild(sisus);
+  const valikko = luo('div', 'maapaneeli-valikko');
+  valikko.hidden = true;
+  sisus.appendChild(valikko);
 
   /*
    * AVAIN ON KARTUUTSI (27.8.2026 asu, js/fokusmitat.js
@@ -834,8 +844,17 @@ function paneeliElementti(d) {
   alarivi.appendChild(luo('span', 'maapaneeli-nimi-oma'));
   alarivi.appendChild(luo('span', 'maapaneeli-aika'));
   avain.appendChild(alarivi);
+  /*
+   * NAPAUTUSVIHJE (kohta 5): pienennetty muoto pysyy ennallaan, vain
+   * alarivin alle tulee lyhyt pisteviiva ja väkänen — sama pisteviiva
+   * kuin pelin linkeissä. Auki ollessa väkänen kääntyy.
+   */
+  const vihje = luo('span', 'maapaneeli-vihje');
+  vihje.setAttribute('aria-hidden', 'true');
+  avain.appendChild(vihje);
   avain.addEventListener('click', () => d.avaaValikko?.(!d.valikkoAuki));
   kortti.appendChild(avain);
+  kortti.appendChild(sisus);
 
   el.appendChild(kortti);
   return el;
@@ -861,8 +880,28 @@ function taytaKortti(el, d) {
     const avain = kortti.querySelector('.maapaneeli-avain');
     avain.setAttribute('aria-label', `${d.nimi}: näytä perustiedot ja lehden otsikot`);
 
+    /*
+     * 1873 EDELLÄ (kohta 3). Lohkoon tulee vain se, mikä datassa on:
+     * valtiomuoto (FOKUS_MAANIMET). Vuoden 1873 väkilukua ja
+     * pääkaupunkia ei ole vielä datassa, joten niitä ei keksitä.
+     */
+    const vuosi = kortti.querySelector('.maapaneeli-vuosi');
+    vuosi.textContent = '';
+    const muoto = valtiomuoto1873(d.valtiomuoto);
+    if (muoto) {
+      vuosi.appendChild(luo('dt', 'maapaneeli-vuosi-otsikko', 'Valtiomuoto 1873'));
+      vuosi.appendChild(luo('dd', 'maapaneeli-vuosi-arvo', muoto));
+    }
+    vuosi.hidden = !vuosi.firstChild;
+
+    /*
+     * NYKYLUVUT PIENEMPINÄ "NYT"-RIVEINÄ; SIJOITUKSET (23./195) VASTA
+     * NAPAUTUKSESTA (kohta 3). Sijaluku on rivillä valmiina mutta
+     * piilossa, ja napautus nykylukuihin näyttää tai piilottaa sen.
+     */
     const rivit = kortti.querySelector('.maapaneeli-rivit');
     rivit.textContent = '';
+    if (d.rivit.length) rivit.appendChild(luo('div', 'maapaneeli-nyt', 'Nyt'));
     for (const [otsikko, arvo, lisa] of d.rivit) {
       rivit.appendChild(luo('dt', 'maapaneeli-otsikko', otsikko));
       const dd = luo('dd', 'maapaneeli-arvo', arvo);
@@ -891,13 +930,18 @@ function taytaKortti(el, d) {
      * otsikon ohut alleviivaus, ja sekin on aiheen oma kartta-sävy
      * (--sym-*, asetetaan CSS:ssä data-sym-attribuutin mukaan).
      */
+    /*
+     * KATEGORIAT NAPAUTETTAVINA MERKKEINÄ (kohta 1): jokainen on oma
+     * merkkinsä pisteviivalla kuten pelin linkit, ja merkit kietoutuvat
+     * kartuschan kiinteään leveyteen — ei enää kahta koko ruudun
+     * levyistä riviä eikä fontin kutistusta.
+     */
     const valikko = kortti.querySelector('.maapaneeli-valikko');
     valikko.textContent = '';
     valikko.style.removeProperty('--otsikko-koko');
-    for (const rivi of otsikkoRivit(d.aiheet)) {
+    for (const rivi of [d.aiheet ?? []]) {
       const rivisolmu = luo('div', 'maapaneeli-otsikkorivi');
-      rivi.forEach((aihe, i) => {
-        if (i) rivisolmu.appendChild(luo('span', 'maapaneeli-erotin', ' · '));
+      rivi.forEach((aihe) => {
         const nappi = luo('button', 'maapaneeli-aihe');
         nappi.type = 'button';
         nappi.dataset.sym = aihe.perhe;
@@ -937,10 +981,12 @@ function asetaAuki(el, d) {
   if (valikko) valikko.hidden = !auki || !d.aiheet?.length;
   if (avain) avain.setAttribute('aria-expanded', String(auki));
   kortti.classList.toggle('valikko-auki', auki);
+  if (!auki) kortti.classList.remove('sijat-auki');
   for (const nappi of kortti.querySelectorAll('.maapaneeli-aihe')) {
     nappi.classList.toggle('on', Boolean(d.avattuSivu) && nappi.dataset.aihe === d.avattuSivu);
   }
-  if (auki) sovitaOtsikot(kortti);
+  // LIIKU PIILOON, KUN INFOTAULU ON AUKI (kohta 4; css body.infotaulu-auki).
+  globalThis.document?.body?.classList.toggle('infotaulu-auki', auki);
 }
 
 /*
@@ -1023,64 +1069,11 @@ function tahdistaLiikunPohja(kortti) {
 }
 
 /*
- * ══════════════════════════════════════════════════════════════════
- * KAKSI OTSIKKORIVIÄ MAHTUU RUUDULLE (PÄÄTÖKSET 28 TARKENNUS 3)
- * ══════════════════════════════════════════════════════════════════
- *
- * Omistaja pyysi otsikot KAHTEEN RIVIIN. Rivien pituus ei ole meidän
- * valittavissamme: se tulee maalehden omista otsikoista (Ranskassa 74
- * merkkiä kahdeksassa otsikossa, Kreikassa 75 kuudessa, ja
- * MAA_KATEGORIAT-taulussa on maita, joilla otsikoita on 15). Yksi
- * kiinteä fonttikoko ei siis voi kelvata joka maalle ja joka ruudulle
- * — 390 px:n puhelimella Ranskan ylärivi on 13 px:n koossa mitattuna
- * leveämpi kuin koko ruutu.
- *
- * MITTA OTETAAN SELAIMESTA, EI ARVATA. Peruskoko tulee tyylitiedostosta
- * (`--otsikko-perus`, mediakyselyt), ja jos leveämpi rivi ei mahdu
- * kalusteen vasemmasta reunasta ruudun oikeaan reunaan, koko kerrotaan
- * tasan sillä suhteella, joka mahtuu. Leveys kasvaa fonttikoon mukana
- * lineaarisesti (myös harvennus ja erottimen väli ovat em-mittoja),
- * joten yksi jako riittää; toinen kierros korjaa pyöristyksen.
- *
- * ALARAJA ON LUETTAVUUDEN RAJA. Jos edes 8,5 px ei riitä, rivit jäävät
- * sen kokoisiksi ja saavat kiertyä — kolme luettavaa riviä on parempi
- * kuin kaksi, joita ei voi lukea.
- *
- * MIKÄ KUMOUTUI. Erän 19 `sovitaValikko` latoi valikon KAHTEEN
- * SARAKKEESEEN pystyyn ja väisti ruudun kalusteita (`VALIKON_KALUSTEET`,
- * `--valikko-rivit`, `--valikko-siirto`). TARKENNUS 3 tekee otsikoista
- * vaakarivejä, joten sarakelaskenta ja pystyväistö eivät sijoita enää
- * mitään.
+ * KAHDEN OTSIKKORIVIN SOVITUS (PÄÄTÖKSET 28 TARKENNUS 3, `sovitaOtsikot`
+ * ja `otsikkoRivit`) POISTUI: infotaulun kartuschassa (Raamattu,
+ * MAALEHDEN INFOTAULU) kategoriat ovat merkkejä, jotka kietoutuvat
+ * kartuschan kiinteään leveyteen, joten fonttia ei tarvitse kutistaa.
  */
-const OTSIKON_MIN_PX = 8.5;
-/** Rako otsikkorivin lopun ja ruudun oikean reunan väliin. */
-const OTSIKON_REUNAVARA_PX = 10;
-/** Montako kertaa koko lasketaan uudestaan (toinen korjaa pyöristyksen). */
-const OTSIKON_KIERROKSET = 2;
-
-function sovitaOtsikot(kortti) {
-  const valikko = kortti?.querySelector('.maapaneeli-valikko');
-  if (!valikko || valikko.hidden) return;
-  const rivit = [...valikko.querySelectorAll('.maapaneeli-otsikkorivi')];
-  if (!rivit.length) return;
-  const leveys = globalThis.innerWidth || 0;
-  if (!(leveys > 0)) return;
-  // Peruskoko luetaan puhtaalta pöydältä: edellinen sovitus pois ensin.
-  valikko.style.removeProperty('--otsikko-koko');
-  const perus = parseFloat(getComputedStyle(valikko).getPropertyValue('--otsikko-perus'));
-  if (!(perus > 0)) return;
-  const tilaa = leveys - kortti.getBoundingClientRect().left - OTSIKON_REUNAVARA_PX;
-  if (!(tilaa > 0)) return;
-  let koko = perus;
-  for (let kierros = 0; kierros < OTSIKON_KIERROKSET; kierros += 1) {
-    const levein = Math.max(...rivit.map((r) => r.scrollWidth));
-    if (!(levein > tilaa)) break;
-    koko = Math.max(OTSIKON_MIN_PX, Math.floor((koko * tilaa * 10) / levein) / 10);
-    valikko.style.setProperty('--otsikko-koko', `${koko}px`);
-    if (koko <= OTSIKON_MIN_PX) break;
-  }
-}
-
 /**
  * Maapaneelin kerros — ERÄ 20: RUUDUN VASEN ALAKULMA ILMAN LAATIKKOA
  * (PÄÄTÖKSET 28 + TARKENNUS 2 ja 3).
@@ -1188,6 +1181,15 @@ export function luoMaapaneeli({
     if (alku && Math.hypot(e.clientX - alku.x, e.clientY - alku.y) > NAPAUTUKSEN_SIIRTO_PX) return;
     const kohteet = [kortti.querySelector('.maapaneeli-avain'),
       ...kortti.querySelectorAll('.maapaneeli-aihe')];
+    // Nykylukujen napautus näyttää sijoitukset (Raamattu, MAALEHDEN
+    // INFOTAULU kohta 3); rivit eivät ole nappeja, joten luokka vaihtuu tässä.
+    const rivit = kortti.querySelector('.maapaneeli-rivit');
+    if (valikkoAuki && osuuLaatikkoon(rivit, e.clientX, e.clientY)) {
+      e.preventDefault();
+      e.stopPropagation();
+      kortti.classList.toggle('sijat-auki');
+      return;
+    }
     for (const kohde of kohteet) {
       if (!osuuLaatikkoon(kohde, e.clientX, e.clientY)) continue;
       e.preventDefault();
@@ -1201,8 +1203,9 @@ export function luoMaapaneeli({
     if (!sailio?.isConnected && !tila) return;
     if (!tila) {
       if (sailio) sailio.hidden = true;
-      // Ilman kalustetta Liiku palaa perusväliinsä.
+      // Ilman kalustetta Liiku palaa perusväliinsä ja näkyviin.
       document.documentElement?.style.removeProperty('--liiku-pohja');
+      document.body?.classList.remove('infotaulu-auki');
       return;
     }
     const kaluste = varmistaKortti();
@@ -1306,6 +1309,7 @@ export function luoMaapaneeli({
         document.removeEventListener('pointerdown', painallus, true);
         document.removeEventListener('click', napautus, true);
         document.documentElement?.style.removeProperty('--liiku-pohja');
+        document.body?.classList.remove('infotaulu-auki');
       }
     },
   };
