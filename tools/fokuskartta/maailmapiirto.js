@@ -1765,9 +1765,12 @@ export function piirraMaailma(canvas, aineisto, asetukset) {
      * askelhelmet ovat `piirraReititKankaalle`-funktion johdannossa.
      *
      * PYRAMIDIN POHJA-AJO ANTAA TYHJÄT LISTAT (sisalto.reitit = [],
-     * lentoreitit = []): rata on siellä viivatasolla. JOET JÄÄVÄT
-     * POHJAAN (yllä) — joki on maastoa eikä rataa, eikä sitä ole
-     * tarpeen polttaa uudestaan silloin kun reittiverkko muuttuu.
+     * lentoreitit = [], ja 20.9.2026 alkaen myös joet = []): rata ja
+     * uomat ovat viivatasolla. Joet olivat pohjassa siksi, että joki
+     * on maastoa eikä rataa — mutta se maksoi koko pohjapyramidin
+     * uudelleenpolton joka kerta kun jokiaineisto korjataan (Fablen
+     * päätös 20.9.2026; tools/generoi-laattapyramidi.mjs, osio JOET
+     * SIIRTYIVÄT VIIVATASOLLE).
      */
     piirraReititKankaalle(ctx, sisalto, {
       lautaKuvaX, lautaKuvaY, px, P, R, GX, GY, W, H, GW,

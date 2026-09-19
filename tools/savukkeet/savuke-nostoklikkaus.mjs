@@ -419,15 +419,29 @@ for (const koko of RUUDUT) {
    */
   const meri = await sivu.evaluate(async () => {
     const l = window.matkakirja.ui.pallolauta;
-    l.pallo.pointOfView({ lat: 45.199962, lng: -1.14248, altitude: 0.05 }, 600);
-    await new Promise((r) => setTimeout(r, 2200));
-    l.ladoHeti();
-    await new Promise((r) => setTimeout(r, 900));
-    const kotelo = document.querySelector('.pallo-kotelo')?.getBoundingClientRect()
-      ?? { left: 0, top: 0, width: 0, height: 0 };
-    const ruudulla = (p) => Boolean(p && p.x >= 0 && p.y >= 0
-      && p.x <= kotelo.width && p.y <= kotelo.height);
-    const data = ruudulla(l.pallo.getScreenCoords(45.3, -3.2, 0));
+    const kotelo0 = () => (document.querySelector('.pallo-kotelo')?.getBoundingClientRect()
+      ?? { left: 0, top: 0, width: 0, height: 0 });
+    const nakyy = (p, k) => Boolean(p && p.x >= 0 && p.y >= 0 && p.x <= k.width && p.y <= k.height);
+    /*
+     * ZOOMATAAN, KUNNES DATAPISTE ON RUUDUN ULKOPUOLELLA. Leveällä
+     * ruudulla sama korkeus näyttää enemmän karttaa, joten kiinteä
+     * 0,05 jätti lahden ulapan vielä ruudulle eikä väite mitannut
+     * mitään (mitattu 1400 px). Premissi tehdään siis todeksi
+     * mittaamalla, ei arvaamalla.
+     */
+    let data = true;
+    for (const korkeus of [0.05, 0.035, 0.025, 0.018]) {
+      l.pallo.pointOfView({ lat: 45.199962, lng: -1.14248, altitude: korkeus }, 600);
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((r) => setTimeout(r, 2200));
+      l.ladoHeti();
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((r) => setTimeout(r, 900));
+      data = nakyy(l.pallo.getScreenCoords(45.3, -3.2, 0), kotelo0());
+      if (!data) break;
+    }
+    const kotelo = kotelo0();
+    const ruudulla = (p) => nakyy(p, kotelo);
     const o = (l.nostot?.osumat?.() ?? []).find((x) => x.id === 'biskajanlahti');
     if (!o) return { listalla: false, dataRuudulla: data };
     const p = l.pallo.getScreenCoords(o.lat, o.lng, 0);
