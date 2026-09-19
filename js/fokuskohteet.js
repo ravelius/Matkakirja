@@ -128,6 +128,7 @@ import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
 import { NAKYVAT_KAUPUNGIT_FRA } from './packs/nakyvat-kaupungit-fra.js';
 import { HAHMOTELMA_FRA } from './packs/hahmotelma-fra.js';
 import { HAHMOTELMA_DEU } from './packs/hahmotelma-deu.js';
+import { HAHMOTELMA_PRT } from './packs/hahmotelma-prt.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
@@ -335,6 +336,15 @@ KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...HAHMOTELMA_FRA];
  * kaupungin (Berliini) ulkopuolella, lähin yli 33 lautayksikön päässä.
  */
 KOHDE_MAAT.DEU = [...(KOHDE_MAAT.DEU ?? []), ...HAHMOTELMA_DEU];
+
+/*
+ * PORTUGALIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot, Espanjan, Italian ja Saksan jälkeen Portugali).
+ * Sama reitti ja sama rakenne kuin Ranskan hahmotelmalla; rivit ovat
+ * aidosti kaupungin (Lissabon) ulkopuolella, lähin yli 14 lautayksikön
+ * päässä.
+ */
+KOHDE_MAAT.PRT = [...(KOHDE_MAAT.PRT ?? []), ...HAHMOTELMA_PRT];
 
 /*
  * ESPANJAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
