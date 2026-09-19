@@ -9088,7 +9088,7 @@ export const RAAMATTU = {
           + 'muisti tai lataus). 3) NOSTOKORTTI: karusellin pystykuva ei keskity (tyhja '
           + 'tumma paneeli oikealla) ja pulu istuu leipatekstin paalla kortin ollessa '
           + 'auki; kortin ylareuna tilapalkin alla. PULUN PAIKKA (omistaja 19.9.2026 klo '
-          + '18.05 Suomen aikaa, Ihmisen matka -linssin Siperia-kortin kuva, sanatarkasti: '
+          + '18.01 Suomen aikaa, Ihmisen matka -linssin Siperia-kortin kuva, sanatarkasti: '
           + '"Pulu voisi hypahtaa tuon info palkin ylapuolelle jotta teksti nakyy '
           + 'kokonaan kun sellainen avautuu"): kun mika tahansa alalaidan tekstipaneeli '
           + 'tai kortti avautuu (Ihmisen matka -jakson kortti, nostokortti, muut '
