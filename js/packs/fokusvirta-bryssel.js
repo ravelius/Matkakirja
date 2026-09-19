@@ -8,8 +8,7 @@
  * muuta (js/fokusvirta.js FOKUSVIRTA_KORTIT === false). Kevyet pakit on
  * nimetty rekisterissä (js/packs/fokusvirrat.js KEVYET_FOKUSVIRRAT).
  *
- * MATKAKIRJAN TEKSTI ON LUONNOS — Fable viimeistelee isoisän
- * matkakirjan sävyyn (ks. kommentti teksti-kentän vieressä). Livian
+ * MATKAKIRJAN TEKSTI on Fablen kirjoittama kaanon (19.9.2026). Livian
  * kupla on Sonnetin kirjoittama, koska se on nykypäivän ääni eikä
  * kaanonia.
  *
@@ -29,19 +28,22 @@ export const FOKUSVIRTA_BRYSSEL = {
     paikkarivi: 'Bryssel, kesäkuussa 1873. Sateen jäljiltä kiiltävää; '
       + 'katukivi kaikuu askelista.',
     /*
-     * LUONNOS, Fable viimeistelee. Sonnet-sisältösession kirjoittama
-     * tilapäisteksti, jotta fokusvirtapakki ja saapumisteksti-testi
-     * (tests/vanha-maailma.test.mjs) läpäisevät ennen kuin päätoimittaja
-     * kirjoittaa kaanonin sanatarkasti. Perustuu artikkelin
-     * (EUROPE_ARTIKKELIT.Bryssel) faktoihin: Grand-Place, Manneken Pis,
-     * Sennejoen kattaminen 1867–1871.
+     * Isoisän matkakirja, Fable 19.9.2026 klo 22.08 Suomen aikaa (kaanon;
+     * korvasi Sonnet-sisältösession luonnoksen). Faktat: Sennen kattaminen
+     * 1867–1871 ja bulevardit, Grand-Placen kiltatalot, Manneken Pis,
+     * Palais de Justice rakenteilla 1866–1883 (Joseph Poelaert), Brysselin
+     * pitsi (EUROPE_ARTIKKELIT.Bryssel).
      */
-    teksti: 'Bryssel, kesäkuussa 1873. Grand-Placen kullatut '
-      + 'kiltatalot kiiltävät sateen jäljiltä, ja torikivien raoista '
-      + 'nousee tuoreen leivän tuoksu. Sennejoki on juuri katettu '
-      + 'kaupungin alta, eikä kukaan enää puhu vanhasta hajusta. '
-      + 'Pysähdyin pienen pronssipojan luo kadunkulmassa ja nauroin '
-      + 'ääneen ensimmäistä kertaa koko matkalla.',
+    teksti: 'Bryssel, kesäkuussa 1873. Kaupunki on juuri haudannut '
+      + 'jokensa: Senne katettiin kivellä, ja sen päälle vedettiin '
+      + 'bulevardi, jolla herrasväki kävelee kuin joki ei olisi koskaan '
+      + 'haissutkaan. Grand-Placen kiltatalot on kullattu niin tiheään, '
+      + 'että tori näyttää sateen jälkeen avatulta korulippaalta. Kulman '
+      + 'takana pronssinen poika tekee tarpeensa suihkulähteeseen, ja '
+      + 'koko kaupunki pitää sitä pyhänä. Kukkulalla nousee oikeuspalatsi, '
+      + 'jonka pitäisi valmistua kymmenen vuoden päästä; työmiehet sanovat, '
+      + 'ettei arkkitehti Poelaert itsekään tiedä, mihin se loppuu. Ostin '
+      + 'pitsiä, jota täällä kehrätään kuin hämähäkit kilpaa.',
   },
 
   /* ---------- 2. Livian nykypäivän huomio (+ lehden herokuva) ------ */
