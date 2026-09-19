@@ -136,6 +136,7 @@ import { HAHMOTELMA_NLD } from './packs/hahmotelma-nld.js';
 import { HAHMOTELMA_POL } from './packs/hahmotelma-pol.js';
 import { HAHMOTELMA_CZE } from './packs/hahmotelma-cze.js';
 import { HAHMOTELMA_DNK } from './packs/hahmotelma-dnk.js';
+import { HAHMOTELMA_HUN } from './packs/hahmotelma-hun.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { HAHMOTELMA_ITA } from './packs/hahmotelma-ita.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
@@ -410,6 +411,14 @@ KOHDE_MAAT.CZE = [...(KOHDE_MAAT.CZE ?? []), ...HAHMOTELMA_CZE];
  * (Kööpenhamina) ulkopuolella, lähin (Lejre) yli 8 lautayksikön päässä.
  */
 KOHDE_MAAT.DNK = [...(KOHDE_MAAT.DNK ?? []), ...HAHMOTELMA_DNK];
+
+/*
+ * UNKARIN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti Budapestin ulkopuolella eivätkä
+ * toista Unkarin 23 nykyistä nostoa.
+ */
+KOHDE_MAAT.HUN = [...(KOHDE_MAAT.HUN ?? []), ...HAHMOTELMA_HUN];
 
 /*
  * ESPANJAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
