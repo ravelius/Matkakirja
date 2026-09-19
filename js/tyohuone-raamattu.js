@@ -9053,7 +9053,7 @@ export const RAAMATTU = {
           + 'kaksi rinnakkain seepia 0, reliefi 64, 47/47, ensimmainen reliefikehys 83-93 '
           + 'ms. Tunnettu kuormapunainen poistettu. JULKAISTAAN v1951.',
         'SAVUKKEITA VAHENNETAAN SIELLA, MISSA ONGELMIA TULEE HARVOIN (omistaja 19.9.2026 '
-          + 'klo 18.53 Suomen aikaa, sanatarkasti: "Testeja voi vahentaa siella missa '
+          + 'klo 18.50 Suomen aikaa, sanatarkasti: "Testeja voi vahentaa siella missa '
           + 'harvemmin tulee ongelmia vastaan"): PR-portin Savukkeet-sarja (32-34 '
           + 'savuketta, ~20 min per PR Macilla) karsitaan mittaamalla: jokaiselle '
           + 'savukkeelle luetaan CI-historiasta (artefaktit, viimeiset ~30 ajoa) kuinka '
