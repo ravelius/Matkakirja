@@ -48,8 +48,11 @@ import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { findMoves } from '../../js/rules.js';
 
-const paketti = await import('playwright')
+const paketinLahde = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
+// CommonJS-paketti voi tulla default-kääreen sisällä (Macin runner 19.9.2026:
+// paketti.webkit oli undefined, savuke kaatui ennen yhtään väitettä).
+const paketti = paketinLahde?.webkit ? paketinLahde : (paketinLahde?.default ?? paketinLahde);
 
 const JUURI = new URL('../..', import.meta.url).pathname;
 const KUVAKANSIO = process.argv[2] ?? null;
