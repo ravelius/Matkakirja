@@ -217,7 +217,10 @@
       "env": {
         "NAKYMAT": "vartija-c"
       },
-      "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. Vaitteen 9 vastakoelohkon KOLMAS puolisko: pinta estetty ja Mac-kotelon vastakoe. Lohko jaettiin kahdesta kolmeen 18.9.2026, koska #vartija-a mitattiin 168 s:ksi (yli kahden minuutin tavoitteen) ja #vartija-b 128 s:ksi. Ks. #vartija-a."
+      "huomautus": "Jaettu rivi (omistaja 18.9.2026, Raamattu AGENTIT VAIN OPUS JA SONNET, TARKENNUS 9 ja 10 kohta 19 seka TARKENNUS 11 kohta 24 a): PR-portin seinakello on niin pitka kuin sarjan PISIN rivi. Rajaus tulee TAMAN rivin env-lohkosta, ei savukkeen muutoksesta, ja tunnetut punaiset on kohdistettu sille puolikkaalle, jolla vaite oikeasti ajetaan. Vaitteen 9 vastakoelohkon KOLMAS puolisko: pinta estetty ja Mac-kotelon vastakoe. Lohko jaettiin kahdesta kolmeen 18.9.2026, koska #vartija-a mitattiin 168 s:ksi (yli kahden minuutin tavoitteen) ja #vartija-b 128 s:ksi. Ks. #vartija-a. TUNNETTU KUORMAPUNAINEN 19.9.2026 klo 08.45 Suomen aikaa (v1947 rerun 35423483607): \"kehyksia ei tarvitse pakottaa\" pakotettuja 1 (888 piirtoa) rinnakkaisajossa; yksin Macilla 8/8, pakotettuja 0 (kaksi ajoa: 19.9. klo 02 CI ja klo 08.40 paikallinen). Poistetaan kahden perakkaisen vihrean jalkeen.",
+      "tunnetutPunaiset": [
+        "VASTAKOE: kehyksiä ei tarvitse pakottaa, kun laite antaa niitä"
+      ]
     },
     "savuke-reittihelmet.mjs": {
       "kuvakansio": true,
@@ -238,6 +241,12 @@
         "V4 meri laatikon sisällä on pohjan meren väri"
       ],
       "huomautus": "TUNNETTU PUNAINEN 19.9.2026 (v1947): V4 kanavaero 6-7 vs raja 5 tyopoydalla ja puhelimella; vertailuajo --vanha (origin/main-moduulit) antaa bitilleen samat luvut, joten ei v1947:n vika - mittauspari (Kanaali 49,9 N vs Pohjanmeri 53,2 N) on eri leveysasteilla ja pallon suunnattu valo tekee kertoimen. Velka: pari samalle leveysasteelle tai raja 8. Ks. docs/raportit/viesti-fable-savukkeet-v1947-20260919.md."
+    },
+    "savuke-astro-aani.mjs": {
+      "env": {
+        "SAVUKE_CHROMIUM_LIPUT": "--disable-features=AudioServiceOutOfProcess"
+      },
+      "huomautus": "AANI SAMASSA PROSESSISSA (Fable 19.9.2026 klo 08.45 Suomen aikaa, v1947 rerun 35423483607): headless Chromiumin ERILLINEN aanipalvelu (AudioServiceOutOfProcess) antoi Macilla AudioContext-kellolle vain n. 1/7 reaaliajasta (mitattu about:blank: currentTime +0,29 s / 2,0 s; lipulla +1,96 s), joten 2 s:n gain-feidi oli 2,7 s:n naytteella yha 0,007 ja vaitteet 1 ja 3 kaatuivat myos YKSIN ajettuna (20/24, deterministinen, ei kuorma). Oletusaanilaite oli oikea (Mac Studio-kaiuttimet, Raamattu MAC STUDIO C) - tama on eri vika kuin Scarlett-jumi. Lippu ajaa aanen selainprosessissa: 24/24 yksin. Muut aanivartiot (pariisi-lahizoom 8c, topografialinssi) eivat mittaa kellon nopeutta, joten lippu on rajattu talle riville."
     }
   }
 }
