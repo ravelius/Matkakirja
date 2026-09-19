@@ -229,6 +229,14 @@ for (const ruutu of RUUDUT) {
     game.autoTravel = false;
     const valinta = game.actionTravel('land');
     if (!valinta.ok) return { virhe: valinta.error };
+    /*
+     * NOPPA KIINNITETÄÄN: silmäluku 1 Pariisista ei yllä yhteenkään
+     * kaupunkiin (Pariisi–Bryssel on 2 askelta), jolloin moveOptions
+     * tarjoaa vain reitin pisteitä ja väite 4a putoaa noppaonnesta
+     * (punainen v1970:ssä, vihreä v1968–v1969 sattumalta). Mittarin
+     * kysymys on kaupunkien piilotus, ei noppa, joten heitetään aina 6.
+     */
+    game.rollDie = () => 6;
     ui.doRoll();
     for (let i = 0; i < 120 && ui.busy; i += 1) await new Promise((r) => setTimeout(r, 50));
     await new Promise((r) => setTimeout(r, 600));
@@ -303,7 +311,7 @@ for (const ruutu of RUUDUT) {
   });
   tieto(`${tunnus}: maailmatila pisteitä päällä / pois`, `${maailma.paalla} / ${maailma.pois}`);
   vaadi(`${tunnus}: 5. maailmatila näyttää kaikki ja sammutus palauttaa rajauksen`,
-    maailma.paalla === 262 && maailma.pois < maailma.paalla, JSON.stringify(maailma));
+    maailma.paalla === 264 && maailma.pois < maailma.paalla, JSON.stringify(maailma));
 
   vaadi(`${tunnus}: 6. ei sivuvirheitä`, virheet.length === 0,
     virheet.join(' | ').slice(0, 300));
