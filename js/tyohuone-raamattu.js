@@ -9371,7 +9371,12 @@ export const RAAMATTU = {
           + 'PUNAINEN (klo 19.59): savuke-satelliittilinssi - ylapalkin korkeus 61 -> 57 '
           + 'px linssin sulkemisen jalkeen (pystykuvaeran styles.css-muutos, Opus 1) ja '
           + 'takapuolen merkki ottaa napautuksen (nimioera, Opus 2); korjaukset '
-          + 'v1963-haaraan ennen mergea.',
+          + 'v1963-haaraan ennen mergea. SUOMI (Sonnet 3, Fable klo 20.14): FIN 28 / 82 / '
+          + '10 visaa (fi-Wikipedia toisena lahteena 10 nostossa; Punkaharjun keisarin '
+          + 'matka 1876 ei artikkeleissa -> nappi harjun suojelusta 1803; Kaustisen '
+          + 'esiintyjakuva pudotettu), HEAD 200 82/82, julkaistaan v1964. Seuraava maa '
+          + 'Sonnet 3:lle: Romania. Kroatia (Sonnet 2) vaihe 2 kaynnissa (lista '
+          + 'hyvaksytty 20.05).',
         'KARTTAUUDISTUKSEN PAATOKSET 47: NOPAN JALKEEN KAMERA JAI TYHJAAN KOHTAAN - '
           + 'KOHDEMAAN ZOOMIKATTO KUMOSI ULOSSOVITUKSEN (Sonnet-simulaattoritesti kierros 5, '
           + '19.9.2026 klo 14.05-14.19 Suomen aikaa: Pariisi -> liftaus -> Amsterdam -> Liiku '
