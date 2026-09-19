@@ -127,6 +127,7 @@ import { FOKUSKOHTEET_EGY } from './packs/fokuskohteet-egy.js';
 import { FOKUSKOHTEET_FRA } from './packs/fokuskohteet-fra.js';
 import { NAKYVAT_KAUPUNGIT_FRA } from './packs/nakyvat-kaupungit-fra.js';
 import { HAHMOTELMA_FRA } from './packs/hahmotelma-fra.js';
+import { HAHMOTELMA_AUT } from './packs/hahmotelma-aut.js';
 import { HAHMOTELMA_ESP } from './packs/hahmotelma-esp.js';
 import { avaaLisakaupunginKortti } from './kaupunkinosto.js';
 import { FOKUSKOHTEET_GBR } from './packs/fokuskohteet-gbr.js';
@@ -326,6 +327,14 @@ KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...NAKYVAT_KAUPUNGIT_FRA];
  * Liitos on tässä samasta syystä kuin kahdella edellisellä.
  */
 KOHDE_MAAT.FRA = [...(KOHDE_MAAT.FRA ?? []), ...HAHMOTELMA_FRA];
+
+/*
+ * ITÄVALLAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
+ * EU-maiden karttanostot). Sama reitti ja sama rakenne kuin Ranskan
+ * hahmotelmalla; rivit ovat aidosti kaupungin (Wien) ulkopuolella, lähin
+ * yli 8 lautayksikön päässä.
+ */
+KOHDE_MAAT.AUT = [...(KOHDE_MAAT.AUT ?? []), ...HAHMOTELMA_AUT];
 
 /*
  * ESPANJAN HAHMOTELMANOSTOT (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 48:
