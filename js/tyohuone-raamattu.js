@@ -9063,7 +9063,7 @@ export const RAAMATTU = {
           + 'PR-porttiin jaavat viimeisen kahden viikon aikana punaista nayttaneet ja '
           + 'muutettuja tiedostoja koskevat. Tavoite: PR-portti alle 10 min ilman etta '
           + 'yksikaan viime viikkojen oikea loydos olisi jaanyt huomaamatta '
-          + '(takautuva tarkistus). Tila: Opus 2 -era savukekarsinta tilattu klo 18.55.',
+          + '(takautuva tarkistus). Tila: Opus 2 -era savukekarsinta tilattu klo 18.52.',
         'HAHMOTELMANOSTOJEN VISA EI PIIRRY LAITTEELLA (Sonnet 1 kierros 9, 19.9.2026 klo '
           + '18.41-18.52 Suomen aikaa, v1960): Texel, Leiden, Gouda avattiin Amsterdamin '
           + 'kartalta, kortissa ei LUKIJAN KYSYMYS -laatikkoa vaikka `visa` on pakassa. '
