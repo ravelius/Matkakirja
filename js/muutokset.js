@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1960, teksti: 'Alankomaat 29 nostoa ja 80 rahavisaa 8 EU-maahan' },
   { v: 1959, teksti: 'EU-hahmotelmat erä 2: Saksa, Portugali, Kreikka, Itävalta' },
   { v: 1958, teksti: 'Jäämeri kevyemmäksi, maajää jäätikkömaskista (reliefi b)' },
   { v: 1957, teksti: 'Italian 29 hahmotelmanostoa ja 67 Commons-kuvaa' },
