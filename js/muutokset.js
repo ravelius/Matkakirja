@@ -13,6 +13,7 @@
  * Vanhat rivit eivät muutu — loki on historia, ei kuvaus nykytilasta.
  */
 export const MUUTOKSET = [
+  { v: 1952, teksti: 'Ranskan maalehtinostoille toinen Commons-kuva (18)' },
   { v: 1951, teksti: 'Topografialinssi: pohjalaatat keskeytyvät lipun kääntyessä' },
   { v: 1950, teksti: 'Laivamatkan noppa toimii: liuku auki roll-vaiheessa' },
   { v: 1949, teksti: 'Astronautin kamera: aito NASA-pilvikuva, alfa luminanssista' },
