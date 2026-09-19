@@ -9554,7 +9554,14 @@ export const RAAMATTU = {
           + 'ala - kertakayttoinen latauskuuntelija lukitsi laatikon ensimmaisen (vara)'
           + 'kuvan suhteeseen -> pysyva kuuntelija + nostokuvanLukitunKorkeus; savuke-'
           + 'nostokuva-suhde julkaisusarjaan. V1971 KOOTAAN (02.10): zoom/pan, Biskajanlahti, '
-          + 'sadekeha, Brysselin ja Ljubljanan lehdet, viuhka, pulun vuoto, Canigou.',
+          + 'sadekeha, Brysselin ja Ljubljanan lehdet, viuhka, pulun vuoto, Canigou. V1971 '
+          + 'MERGETTY 20.9.2026 klo 02.23 (PR #2623, CI vihrea ensi yrittamalla). Tyohaara '
+          + 'v1972-prep. POHJA-AJO KAYNNISTETTY (Opus 2, Fable lupa 02.20): pyramidi '
+          + '2026-09-20-pohja + pallon Mercator-sarja 2026-09-20-i; joet viivatasolla '
+          + '(+656 laattaa, viivataso 6 319); Mac 3,96 laattaa/s/ydin, arvio n. 0,5 h; '
+          + 'luetteloa EI vieda amparin juureen ajossa - Fable julkaisee sen versiossa. '
+          + 'savuke-nostoklikkaus: 4b mittaa maakohtaista polttoa, 5 pois, 6 zoomaa '
+          + 'datapisteen ulos; vaite 1 (Lyon ei avaudu aidosta napautuksesta) selvitys kesken.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
