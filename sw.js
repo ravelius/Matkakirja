@@ -416,6 +416,7 @@ const SHELL = [
   './js/packs/hahmotelma-nld.js',
   './js/packs/hahmotelma-pol.js',
   './js/packs/hahmotelma-cze.js',
+  './js/packs/hahmotelma-swe.js',
   './js/packs/hahmotelma-esp.js',
   './js/packs/hahmotelma-ita.js',
   './js/packs/maakartat.js',
