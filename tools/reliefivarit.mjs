@@ -220,14 +220,49 @@ export const pehmea = (a, b, x) => {
   return t * t * (3 - 2 * t);
 };
 
+/*
+ * POHJOISEN MAAJÄÄ JÄÄTIKKÖMASKISTA JA TUNDRA OMALLA SÄVYLLÄÄN (Fablen
+ * päätös 19.9.2026 klo 16.55 Suomen aikaa, suunnitelma
+ * docs/raportit/viesti-fable-maajaa-suunnitelma-20260919.md).
+ *
+ * Leveysastesääntö (JAA.maa) teki kaikesta yli 70°:n maasta jäätä, myös
+ * Siperian ja Kanadan tundrasta, ja Astronautin kameran navalle jäi
+ * vaalea rengas. Pohjoisessa maajää tulee nyt tools/jaatikkomaski.mjs:n
+ * maskista (Natural Earth 10m Glaciated areas): Grönlanti, arktiset
+ * saaret ja vuoristojäätiköt ovat jäätä, tundra ei.
+ *
+ * Tundra ei silti ole metsänvihreää. Maskin ulkopuolinen pohjoinen maa
+ * liukuu 64°…76° kohti harmaanruskeaa TUNDRAN_VARIA (katto 0,35), jotta
+ * Taimyr ja Kanadan pohjoisrannikko eivät näytä lauhkealta vyöhykkeeltä.
+ *
+ * ETELÄ ENNALLAAN: Etelämanner on käytännössä kokonaan jäätä, joten
+ * leveysastesääntö on siellä oikea.
+ */
+/** Tundran sävy: harmaanruskea, ei jäätä eikä metsää. */
+export const TUNDRAN_VARI = [150, 145, 125];
+/** Tundran liuku asteina ja sekoituksen katto. */
+export const TUNDRA = { kaista: [64, 76], katto: 0.35 };
+
+/**
+ * Tundrasävyn osuus 0…1. Vain pohjoisen maalla ja vain jäätikön
+ * ulkopuolella (maski 0…1; jäätikön päällä jää peittää tundran).
+ */
+export function tundrapaino(lat, korkeusM, maski = 0) {
+  if (!(lat > 0) || korkeusM < 0) return 0;
+  return TUNDRA.katto * pehmea(TUNDRA.kaista[0], TUNDRA.kaista[1], lat) * (1 - maski);
+}
+
 /**
  * Jään osuus 0…1 leveysasteella ja korkeudella.
  *
  * @param {number} lat leveysaste (−90…90)
  * @param {number} korkeusM metriä merenpinnasta; alle nollan on merta
+ * @param {number|null} maski jäätikkömaski 0…1 (tools/jaatikkomaski.mjs);
+ *   null = ei maskia, jolloin pohjoisessakin käytetään leveysastesääntöä
  */
-export function jaapaino(lat, korkeusM) {
+export function jaapaino(lat, korkeusM, maski = null) {
   const a = Math.abs(lat);
+  if (korkeusM >= 0 && lat > 0 && maski !== null) return JAA.maaKatto * maski;
   return korkeusM >= 0
     ? JAA.maaKatto * pehmea(JAA.maa[0], JAA.maa[1], a)
     : (lat > 0
