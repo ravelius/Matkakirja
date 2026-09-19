@@ -1,4 +1,4 @@
-# Viesti Codexille: pulun astronauttianimaatio (tilaus 19.9.2026 klo 23.08 Suomen aikaa)
+# Viesti Codexille: pulun astronauttianimaatio (tilaus 19.9.2026 klo 23.13 Suomen aikaa)
 
 Omistajan tilaus (Raamattu, KARTTAUUDISTUKSEN PAATOKSET 53): Astronautin kamera -linssissä
 (js/linssit/satelliitti*.js, musta avaruus, NASA-kuvat) pulu saisi astronautin asun tai

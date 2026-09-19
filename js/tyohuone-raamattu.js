@@ -9169,7 +9169,7 @@ export const RAAMATTU = {
           + 'rauhallinen (mitataan). 5) ISS KESKELLA, PALLO PYORII: avauksessa ISS pysyy '
           + 'ruudun keskella ja maapallo pyorii sen alla hitaasti kunnes pelaaja koskee '
           + 'ruutuun (pysayttaa liikkeen) - kamera seuraa asemaa. Tila: Opus-era '
-          + 'astro-pulu tilataan tauon jalkeen; Codex-viesti kirjoitettu 23.08.',
+          + 'astro-pulu tilataan tauon jalkeen; Codex-viesti kirjoitettu 23.13.',
         'KARTTAUUDISTUKSEN PAATOKSET 52: ASTRONAUTIN KAMERAN AVAUS - VALMIIKSI PIILOSSA, '
           + 'MUSTA RUUTU JA PALJASTUS; PALLO LAHEMMAS; ISS (omistaja 19.9.2026 klo 20.51 '
           + 'Suomen aikaa, sanatarkasti: "Avaruus linssi pitaisi renderoida piilossa '
