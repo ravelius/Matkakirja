@@ -85,7 +85,7 @@ export const HAHMOTELMA_AUT = [
       'Mikä tekee Neusiedlinjärvestä UNESCO-kohteen?',
     ],
     korostukset: ['suolainen|suolainen'],
-    nappi: 'Keski-Euroopan suurin arojärvi, joka ulottuu Unkarin puolelle',
+    nappi: 'Keski-Euroopan suurin päätyjärvi, joka ulottuu Unkarin puolelle',
     // 16.75 E / 47.83333333 N — en-Wikipedia "Lake Neusiedl"
     laudat: {
       maailmankartta: { x: 6391.7, y: 1483.3 },
