@@ -296,11 +296,23 @@ test('pallon rajamateriaalit lukevat sävyn --raja-muste-muuttujasta ajossa', ()
   assert.match(lahde, /color: rajanMuste\(\), opacity: RAJA_PEITTO/);
 });
 
-test('korostus piirtyy tavallisen rajan jälkeen mutta samassa kerroksessa', () => {
-  // Suurempi renderOrder = piirtyy myöhemmin eli päälle; ero pidetään
-  // pienenä, jottei korostus nouse reittien tai kalvojen tasolle (0 ja 1).
-  assert.ok(VEKTORIT_KOROSTUS_RENDER_ORDER > VEKTORIT_RENDER_ORDER);
-  assert.ok(VEKTORIT_KOROSTUS_RENDER_ORDER < 0);
+test('korostus piirtyy rantaviivan ALLE mutta samassa kerroksessa', () => {
+  /*
+   * SÄDEKEHÄ, EI TOISTA RANTAVIIVAA (Fablen päätös 20.9.2026;
+   * js/pallovektorit.js osio KOROSTUS ON SÄDEKEHÄ, mittaus
+   * docs/raportit/viesti-fable-maalehti-viivat-20260920.md).
+   *
+   * Ennen korostus piirtyi rannikon PÄÄLLE (−0,45 > −0,5) ja oli
+   * leveämpi, joten hennompi rannikkoviiva — joka tulee eri Natural
+   * Earth -aineistosta ja poikkeaa paikoin yli 700 m — pisti esiin sen
+   * vierestä kaksoisviivana. Nyt korostus on rannikon ALLA ja
+   * leveämpänä, jolloin se lukee sädekehänä yhden viivan takana.
+   * Ero pidetään pienenä, jottei korostus putoa laattojen tasolle
+   * (laatat ja lepokerros ≤ −1).
+   */
+  assert.ok(VEKTORIT_KOROSTUS_RENDER_ORDER < VEKTORIT_RENDER_ORDER,
+    'korostus ei ole rantaviivan alla');
+  assert.ok(VEKTORIT_KOROSTUS_RENDER_ORDER > -1, 'korostus putosi laattojen tasolle');
   const lahde = lue('../js/pallovektorit.js');
   // Sama pinta, sama syvyyssiirto, sama harvennus kuin muilla vektoreilla.
   assert.match(lahde, /const olio = new luokat\.LineSegments2\(geometria, materiaalit\.korostus\)/);

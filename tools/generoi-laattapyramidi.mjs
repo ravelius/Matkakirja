@@ -3677,12 +3677,19 @@ function teeLuettelo() {
    * Peli ei lue tätä — sille riittää rantatason olemassaolo — mutta
    * ämpäristä on voitava nähdä, kumpi pohja siellä on: rantaviivaton
    * pohja ilman rantatasoa olisi kartta ilman rantaviivaa, eikä sitä
-   * saa päätellä laattoja katsomalla. Kenttä syntyy vain
-   * `--ilman-rantaviivaa`-ajossa; vanhoissa luetteloissa sitä ei ole,
-   * ja sen puuttuminen tarkoittaa "rantaviiva on pohjassa".
+   * saa päätellä laattoja katsomalla.
+   *
+   * KENTTÄ KIRJOITETAAN JOKA POHJA-AJOSSA (korjattu 20.9.2026).
+   * Ennen se syntyi vain `--ilman-rantaviivaa`-ajossa, ja puuttuminen
+   * tulkittiin "rantaviiva on pohjassa" — mutta mitattuna
+   * (docs/raportit/viesti-fable-maalehti-viivat-20260920.md, laatta
+   * z7/81/37) tuotannon pohja on rannaton, vaikka `pyramidi.json`:ssa
+   * ei ole kenttää lainkaan. Luettelo väitti siis päinvastaista kuin
+   * ämpärin sisältö. Nyt pohja-ajo kertoo kummassakin tapauksessa,
+   * kumpi pohja syntyi; merkkitaso kantaa vanhan arvon eteenpäin
+   * (tools/pyramidiluettelo.mjs).
    */
-  pohja: (MERKKITASO || !ILMAN_RANTAVIIVAA)
-    ? undefined : { rantaviiva: false },
+  pohja: MERKKITASO ? undefined : { rantaviiva: !ILMAN_RANTAVIIVAA },
   /*
    * MERISÄVY: se yksi väri, jolla peli maalaa karsittujen umpimeren
    * laattojen paikan (ks. umpimeriSavy). Null, jos mitään ei karsittu.

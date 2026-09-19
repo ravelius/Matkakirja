@@ -11,11 +11,15 @@
  * merelle: v1941:ssä *Camarguen hevoset* -nimiö oli Välimeren päällä.
  * Omistajan sääntö on, että ankkuri on maalla.
  *
- * MISTÄ MAA TULEE. `ne50.geojson` on sama Natural Earth 1:50M
- * -aineisto, josta pelin oma rantaviiva ja maan ääriviivat piirtyvät
- * (js/pallovektorit.js, js/maanaariviivat.js). Kun mitta luetaan
- * samasta aineistosta kuin piirto, mittari ei voi olla eri mieltä
- * kuin se, mitä pelaaja näkee.
+ * MISTÄ MAA TULEE. `ne50.geojson` on Natural Earth 1:50M -aineisto.
+ * SE EI OLE SAMA KUIN PIIRRON LÄHDE (korjattu 20.9.2026, mittaus
+ * docs/raportit/viesti-fable-maalehti-viivat-20260920.md): pelin
+ * rantaviiva piirtyy `ne_10m_ocean`ista (js/pallovektorit.js,
+ * tools/tee-pallovektorit.mjs) ja maan ääriviivat
+ * `ne_10m_admin_0_countries`ista (js/maanaariviivat.js,
+ * assets/data/maapolygonit.json). Tämä mittari on siis KARKEAMPI kuin
+ * se ranta, jonka pelaaja näkee, ja sitä käytetään vain ankkurin
+ * maalla-olon tarkistukseen — siksi VARA_ASTETTA alla.
  *
  * MITÄ TÄMÄ EI OLE: tarkka rantakartta. 1:50M yleistää rannan, joten
  * aivan rantaviivan päällä oleva piste voi mennä kumpaan tahansa.

@@ -301,6 +301,40 @@ export function rajanMuste(dokumentti = null) {
  * naapurin rajasta leveyden ja yhtenäisyyden ohella: sävy on nyt
  * sama, joten haalennettu kehä sulaisi naapurirajaan.
  */
+/*
+ * ══ KOROSTUS ON SÄDEKEHÄ, EI TOISTA RANTAVIIVAA ══════════════════════
+ *
+ * Omistaja 19.9.2026 klo 23.31 (iPad, Ranskan lehti Gironden ja
+ * Arcachonin kohdalla): rannikon rajaviiva piirtyy irrallisina
+ * silmukoina ja paikoin kaksoisviivana.
+ *
+ * JUURISYY (mittaus 20.9.2026, docs/raportit/viesti-fable-maalehti-
+ * viivat-20260920.md): sama rannikko piirtyy kahdesta eri Natural
+ * Earth -aineistosta. Rannikkoviiva tulee `ne_10m_ocean`ista 0,006°:n
+ * harvennuksella, ja PELAAJAN OMAN MAAN korostuskehä
+ * `assets/data/maapolygonit.json`ista, joka on `ne_10m_admin_0` DP
+ * 0,2 lautayksikön harvennuksella ja 0,1 yksikön kvantisoinnilla.
+ * Poikkeama on mediaanina 72 m mutta maksimeissa yli 700 m, ja koska
+ * korostus oli LEVEÄMPI ja piirtyi PÄÄLLÄ, ohut rannikkoviiva pisti
+ * esiin sen vierestä. Korostus on päällä vain pelaajan omassa maassa,
+ * ja juuri siksi ilmiö näkyi Ranskassa eikä muualla.
+ *
+ * MIKÄ EI KORJANNUT SITÄ: korostusaineiston tarkkuuden nosto (0,02 yks
+ * + 0,01 kvantisointi) pudotti mediaanin 8 metriin mutta jätti
+ * maksimit ennalleen — ne ovat kohtia, joissa `admin_0` ja `ocean`
+ * ovat eri mieltä rajan kulusta (suiston sulkeva viiva) — ja kasvatti
+ * tiedoston 1,45 → 3,17 Mt ilman näkyvää eroa. Hylätty mittauksen
+ * perusteella.
+ *
+ * MITÄ TEHTIIN (Fablen päätös 20.9.2026, vaihtoehto a): korostus
+ * piirtyy rannikkoviivan ALLE ja leveämpänä, jolloin se lukee
+ * sädekehänä — rannikko on yksi viiva, jonka reuna hohtaa maan omaa
+ * mustetta. PEITTO PYSYY TÄYTENÄ: se on omistajan päätös 13.9.2026
+ * (PÄÄTÖKSET 1, vartiona tests/maakorostus.test.mjs), koska kohdemaan
+ * sisus on värillinen ja himmeä kehä luki ruskeana. Aineistoa ei
+ * kasvatettu eikä kahta lähdettä yhdistetty; rakenteellinen korjaus
+ * (korostuksen naulaus rannikkorenkaaseen) on Fablen jonossa.
+ */
 export const KOROSTUS_PEITTO = 1;
 /*
  * Korostetun rajan leveys css-pikseleinä [kaukana, lähellä].
@@ -318,14 +352,14 @@ export const KOROSTUS_PEITTO = 1;
  * TUMMENNUS_VIIVA); pallolla saaret piirtyvät laatoista eri
  * mittakaavassa eikä sama mittaus päde.
  */
-export const VEKTORIT_KOROSTUS_LEVEYS_CSS = [2.1, 3.1];
+export const VEKTORIT_KOROSTUS_LEVEYS_CSS = [3.2, 5];
 /**
- * Korostus piirtyy tavallisen rajan JÄLKEEN (läpinäkyvien jono),
- * jotta hennompi pisteviiva jää sen alle eikä sekoita reunaa. Sama
- * syvyyssiirto kuin muilla vektoreilla — nostoa ei käytetä
- * (VEKTORIT_KORKEUS 0, parallaksi).
+ * Korostus piirtyy rannikkoviivan ja rajojen ALLE (ks. KOROSTUS ON
+ * SÄDEKEHÄ yllä): läpinäkyvien jonossa pienempi luku piirtyy ensin,
+ * joten −0,55 jää rannikon (−0,5) alle. Sama syvyyssiirto kuin muilla
+ * vektoreilla — nostoa ei käytetä (VEKTORIT_KORKEUS 0, parallaksi).
  */
-export const VEKTORIT_KOROSTUS_RENDER_ORDER = -0.45;
+export const VEKTORIT_KOROSTUS_RENDER_ORDER = -0.55;
 /**
  * Lajin leveyspääte yhdessä taulussa: piirto, mittarit ja testit
  * lukevat saman rivin, joten uusi laji ei tarvitse yhtään ehtolausetta.
