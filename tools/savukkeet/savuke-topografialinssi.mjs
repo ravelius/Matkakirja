@@ -403,7 +403,24 @@ async function ajaRuutu(ruutu, { pyramidi = true } = {}) {
   const ennen = await lue();
 
   /* ---- linssi päälle ------------------------------------------------ */
-  const t0 = Date.now();
+  /*
+   * LAATTALASKURIN IKKUNA ALKAA SIITÄ, KUN LINSSI ON AUKI — ei siitä,
+   * kun sitä pyydetään. Väite on kohta 49:n sanoin *"linssin aikana"*,
+   * ja linssi on auki vasta kun `asetaReliefiLinssi(true)` on ajettu
+   * (js/reliefipyramidi.js). Valinnan ja lipun väliin mahtuu
+   * moduulien lataus ja `linssi.lataa()`, ja kuormitetulla koneella se
+   * on satoja millisekunteja pelin omaa seepiakarttaa — sitä ei lueta
+   * linssin syyksi. Hetki luetaan SIVULTA (sama seinäkello kuin
+   * Nodella) linssin oman kuuntelijan kautta.
+   */
+  await sivu.evaluate(async () => {
+    const M = await import('/js/reliefipyramidi.js');
+    window.__linssiAuki = null;
+    M.kuunteleReliefiLinssi((auki) => {
+      if (auki && window.__linssiAuki === null) window.__linssiAuki = Date.now();
+    });
+  });
+  const pyydetty = Date.now();
   await sivu.evaluate(async () => {
     const { ui } = window.matkakirja;
     ui.busy = false;
@@ -413,6 +430,7 @@ async function ajaRuutu(ruutu, { pyramidi = true } = {}) {
   });
   await sivu.waitForTimeout(4000);
   const avattu = await lue();
+  const t0 = await sivu.evaluate(() => window.__linssiAuki ?? null) ?? pyydetty;
 
   /* ---- lähizoom Alpeille: laastarin oma näkymä ---------------------- */
   await sivu.evaluate(() => {
@@ -592,14 +610,16 @@ async function ajaRuutu(ruutu, { pyramidi = true } = {}) {
 
   await konteksti.close();
   /*
-   * LAATTAPYYNNÖT LINSSIN AVAUKSEN JÄLKEEN. Kohta 49: pyramiditilassa
-   * seepiapohjaa EI ladota linssin alle, joten `seepiat` on oikea tila
-   * vain nollana — ja `reliefit` todistaa, että laatasto todella haki
-   * laattansa ämpäristä (route-välityksen läpi).
+   * LAATTAPYYNNÖT LINSSIN OLLESSA AUKI (t0 = lipun nousu, t1 =
+   * sulkeminen). Kohta 49: pyramiditilassa seepiapohjaa EI ladota
+   * linssin alle, joten `seepiat` on oikea tila vain nollana — ja
+   * `reliefit` todistaa, että laatasto todella haki laattansa
+   * ämpäristä (route-välityksen läpi).
    */
   const jalkeen = pyynnot.filter((p) => p.t >= t0 && p.t <= t1).map((p) => p.url);
   return {
     ennen, avattu, lahi, uloin, kiinni, virheet, lahteet, kerrosLahi,
+    linssinViive: t0 - pyydetty,
     seepiapyyntoja: new Set(jalkeen.filter(seepiaLaatta)).size,
     reliefipyyntoja: new Set(jalkeen.filter(reliefiLaatta)).size,
     teravyysLahi: teravyys(lahikuva),
@@ -919,7 +939,8 @@ for (const ruutu of (VAIHE === 'avaus' || VAIHE === 'meret' ? [] : RUUDUT)) {
    */
   vaadi(`${nimi}: seepiapohjan laattoja ei haeta linssin aikana (0 pyyntöä)`,
     r.seepiapyyntoja === 0 && r.reliefipyyntoja > 0,
-    `seepia ${r.seepiapyyntoja}, reliefi ${r.reliefipyyntoja}`);
+    `seepia ${r.seepiapyyntoja}, reliefi ${r.reliefipyyntoja}, `
+    + `lippu nousi valinnasta +${r.linssinViive} ms`);
 
   /* 2. PELIN ELEMENTIT */
   const e = r.lahi.elementit;
