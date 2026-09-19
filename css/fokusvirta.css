@@ -2750,10 +2750,32 @@ body.kartta-raahaus .fokuspiste-ydin { animation-play-state: paused; }
  * osoittimen takaisin. Muuten kartan liike-vahti (kytkeSarjanKartanLiike)
  * nakisi napautuksen kartan liikkeena.
  */
+/*
+ * OHITA VAISTAA LIIKU-SANAN, EI PIIRRY SEN PAALLE (Sonnetin
+ * puhelintestin loydos 3, 19.9.2026: *"'Ohita' piirtyy suoraan
+ * 'Liiku'-tekstin paalle (paallekkaiset kirjaimet, 390 px)"*).
+ *
+ * MOLEMMAT OVAT KESKELLA ALAREUNAA, ja Liiku EI ole kiinteassa
+ * kohdassa: maapaneelin kortti nostaa sen omalla mitallaan
+ * (`--liiku-pohja`, js/pallolauta/maapaneeli.js mittaaLiikunPohja =
+ * kortin ylareuna ruudun alareunasta + 2 px). Ohitan kiintea
+ * `max(9vh, 56px)` osui siihen heti kun kortti nousi: mitattu 390 px
+ * Chromiumilla --liiku-pohja 60/80/100 px -> laatikot leikkasivat
+ * kaikilla kolmella (Ohita 726-768, Liiku 748-784 / 728-764 /
+ * 708-744), ja 1400 px:lla myos 120 px:lla.
+ *
+ * KOLMAS EHDOKAS `max()`:iin: Liikun oma pohja + napin korkeus + rako.
+ * 44px = mitattu Liiku-napin laatikko (36 px) + 8 px rako, eli Ohita
+ * asettuu tasan sen ylapuolelle eika sana voi enaa osua sanaan. Ilman
+ * muuttujaa (tyopoyta, kartta ilman maapaneelia) luku on 0 + 44 < 56,
+ * joten Ohita pysyy pikselilleen entisella paikallaan.
+ */
 .fokusvirta-isokuva-ohita {
+  --ohita-liikun-tila: 44px;
   position: absolute;
   left: 50%;
-  bottom: max(9vh, 56px); /* Fable 17.9.2026: irti kartan alalaidan Liiku-tekstista */
+  /* Fable 17.9.2026: irti kartan alalaidan Liiku-tekstista */
+  bottom: max(9vh, 56px, calc(var(--liiku-pohja, 0px) + var(--ohita-liikun-tila)));
   transform: translateX(-50%);
   margin: 0;
   padding: 0.35rem 0.9rem;
