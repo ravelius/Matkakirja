@@ -16091,6 +16091,211 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Riian historia on kerroksellista: piispa perusti kaupungin '
+        + 'ristiretken varjolla, kauppiaat rakensivat komeat talonsa ja '
+        + 'vapaustaistelijoita muistetaan patsaalla, joka on selvinnyt '
+        + 'miehityksistä.',
+      nostot: [
+        {
+          otsikko: 'Piispa perusti kaupungin joen suulle',
+          aika: '1201',
+          tiedosto: 'Rīgas Doms (74).JPG',
+          teksti: 'Saksalainen piispa Albert von Buxhoeveden perusti Riian '
+            + 'vuonna 1201 Väinäjoen suulle osana ristiretkeä, jolla alueen '
+            + 'balttilaiset ja liiviläiset heimot käännytettiin '
+            + 'kristinuskoon. Albert perusti myös Miekkaveljien ritarikunnan '
+            + 'suojelemaan uutta valtaansa. Kymmenen vuotta kaupungin '
+            + 'perustamisen jälkeen, vuonna 1211, alettiin rakentaa Riian '
+            + 'tuomiokirkkoa piispan vallan symboliksi, ja siitä kasvoi '
+            + 'Baltian suurin keskiaikainen kirkkorakennus. Kirkkoa on '
+            + 'laajennettu vuosisatojen kuluessa, joten sen sisätiloissa '
+            + 'näkyy sekä varhaista goottia että myöhempiä tyylikausia.',
+          lyhyt: 'Piispa Albert von Buxhoeveden perusti Riian vuonna 1201 ristiretken yhteydessä.',
+          selite: 'Riian tuomiokirkon sisätila. Rakentaminen aloitettiin '
+            + 'vuonna 1211, kymmenen vuotta kaupungin perustamisen jälkeen.',
+          lahde: 'Īriss Sviklis, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Riian tuomiokirkko',
+        },
+        {
+          otsikko: 'Talo joka räjäytettiin ja rakennettiin uudelleen',
+          aika: '1334',
+          tiedosto: 'House of the Blackheads (23335064149).jpg',
+          teksti: 'Mustapäiden talo rakennettiin vuonna 1334 Riian kauppiaiden '
+            + 'kokous- ja juhlapaikaksi, ja 1400-luvulta lähtien siellä '
+            + 'kokoontui mustapäiksi kutsuttu naimattomien ulkomaisten '
+            + 'kauppiaiden veljeskunta. Vuosisatojen aikana julkisivuun '
+            + 'lisättiin koristeellisia renessanssiyksityiskohtia, ja talosta '
+            + 'tuli yksi Riian komeimmista rakennuksista. Kesäkuussa 1941 '
+            + 'sotatoimet vaurioittivat taloa pahoin, ja vuonna 1948 '
+            + 'neuvostoviranomaiset räjäyttivät rauniot kokonaan — '
+            + 'menneisyyttä ei haluttu muistaa. Itsenäistymisen jälkeen talo '
+            + 'rakennettiin vanhojen piirustusten pohjalta uudelleen, ja se '
+            + 'vihittiin käyttöön vuonna 1999, kaupungin 800-vuotisjuhliin.',
+          lyhyt: 'Mustapäiden talo rakennettiin 1334, tuhottiin 1948 ja avattiin uudelleen 1999.',
+          selite: 'Mustapäiden talo Riian Ratuskintorilla. Alkuperäinen '
+            + 'rakennus tuhoutui, ja nykyinen on 1990-luvun jälleenrakennus.',
+          lahde: 'Jorge Láscar, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Mustapäiden talo (Riika)',
+        },
+        {
+          otsikko: 'Kolme taloa, kolme eri vuosisataa',
+          aika: '1490',
+          tiedosto: 'Riga - The three brothers - trīs brāļi - panoramio.jpg',
+          teksti: 'Mazā Pils -kadulla seisoo kolmen talon rivi, jota kutsutaan '
+            + 'kolmeksi veljeksi. Vanhin, numero 17, rakennettiin noin vuonna '
+            + '1490 kauppa- ja työtilaksi, ja sen porrasmaisessa päädyssä '
+            + 'näkyy myöhäisgotiikkaa. Keskimmäinen talo sai nykyisen '
+            + 'ulkoasunsa vuonna 1646, ja kapea, nuorin talo valmistui vasta '
+            + '1600-luvun lopulla — niin rivissä seisoo kolme eri '
+            + 'vuosisataa vierekkäin. Hansaliiton aikaan Riiassa maksettiin '
+            + 'veroa kadunpuoleisen julkisivun leveyden mukaan, minkä vuoksi '
+            + 'kauppiastalot rakennettiin kapeiksi ja syviksi. Nykyään '
+            + 'taloissa toimii Latvian arkkitehtuurimuseo.',
+          lyhyt: 'Kolme veljeä ovat Riian vanhimmat asuinrakennukset, peräisin 1400–1600-luvuilta.',
+          selite: 'Kolme veljeä Mazā Pils -kadulla. Talot edustavat kolmea '
+            + 'eri vuosisataa ja rakennustyyliä vierekkäin.',
+          lahde: 'giggel, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Nainen joka nostaa kolme tähteä',
+          aika: '1935',
+          tiedosto: 'Freedom Monument Latvia 04.jpg',
+          teksti: 'Riian vapaudenpatsas paljastettiin vuonna 1935 muistoksi '
+            + 'vuosien 1918–1920 itsenäisyyssodassa kaatuneille, ja se '
+            + 'rahoitettiin kokonaan kansalaisten lahjoituksilla. Patsaan '
+            + 'huipulla seisova naishahmo, jota kutsutaan lempinimellä '
+            + 'Milda, kohottaa käsissään kolme kultaista tähteä — ne '
+            + 'kuvaavat Latvian kolmea historiallista aluetta, Kuurinmaata, '
+            + 'Liivinmaata ja Latgalea. Neuvostomiehityksen aikana patsasta '
+            + 'ei purettu, mutta sen juurelle kukkien vieminen oli '
+            + 'vaarallista ja saattoi johtaa kuulusteluihin. Jalustan '
+            + 'reliefeissä on kolmetoista hahmoa, jotka kuvaavat työtä, '
+            + 'perhettä ja vapaustaistelua.',
+          lyhyt: 'Vapaudenpatsas paljastettiin 1935 muistoksi itsenäisyyssodan 1918–1920 kaatuneille.',
+          selite: 'Patsaan huipulla seisova Milda kohottaa kolme tähteä, '
+            + 'jotka kuvaavat Latvian kolmea historiallista aluetta.',
+          lahde: 'Scotch Mist, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Mustapäiden talo jouduttiin rakentamaan lähes kokonaan uudelleen?',
+        vaihtoehdot: [
+          'Tulipalo tuhosi sen 1800-luvulla',
+          'Se tuhottiin sodassa ja neuvostoviranomaiset räjäyttivät rauniot',
+          'Se purettiin tieltä pois 1970-luvulla',
+          'Maanjäristys kaatoi sen',
+        ],
+        oikea: 1,
+        fakta: 'Talo vaurioitui pahoin 1941, ja 1948 neuvostoviranomaiset räjäyttivät '
+          + 'rauniot kokonaan; nykyinen rakennus on 1990-luvun jälleenrakennus.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Latvian ruokapöydässä on omat sääntönsä: musta yrttijuoma joka '
+        + 'kerran paransi keisarinnan, porkkanapiirakka jonka ulkonäöstä '
+        + 'kiistellään, ja herneet jotka pitää syödä joulun ja uuden vuoden '
+        + 'aikaan.',
+      nostot: [
+        {
+          otsikko: 'Musta juoma joka pelasti keisarinnan',
+          aika: '1752',
+          tiedosto: 'Rīgas Melnais balzams (Upeņu, klasiskais un Element).jpg',
+          teksti: 'Riianmustabalsami on tumma yrttilikööri, jonka resepti '
+            + 'syntyi vuonna 1752, kun apteekkari Abraham Kunze sekoitti '
+            + 'kaupungissaan parikymmentä yrttiä, juurta ja maustetta '
+            + 'korkeaprosenttiseen alkoholiin. Juomaa myytiin aluksi '
+            + 'lääkkeenä vatsavaivoihin, ja tunnetun tarinan mukaan se '
+            + 'paransi Venäjän keisarinna Katariina Suuren, kun tämä '
+            + 'sairastui vieraillessaan Riiassa. Balsami pullotetaan yhä '
+            + 'perinteisesti tummaan, kivimäiseen pulloon, ja sen tarkan '
+            + 'reseptin tuntee vain harva mestari ja hänen oppilaansa. '
+            + 'Nykyään sitä juodaan usein kahvin tai mustikkamehun kanssa, '
+            + 'ja sitä viedään yli kolmeenkymmeneen maahan.',
+          lyhyt: 'Riianmustabalsamin resepti syntyi 1752, ja legenda kertoo sen parantaneen keisarinnan.',
+          selite: 'Riianmustabalsamia pulloissa. Resepti syntyi vuonna 1752, '
+            + 'ja juoma tunnetaan yhä Latvian kansallisjuomana.',
+          lahde: 'Turaids, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Piirakka jota kutsuttiin maailman rumimmaksi',
+          aika: '1600-luku',
+          tiedosto: 'Sklandrausis pannil (15579200761).jpg',
+          teksti: 'Sklandrausis on liiviläisperäinen piirakka Kuurinmaalta: '
+            + 'ohut ruistaikinapohja taivutetaan matalaksi vuoaksi, '
+            + 'täytetään ohuella perunasoseella ja päälle levitetään paksu '
+            + 'kerros makeaa, kanelilla maustettua porkkanasosetta. Piirakka '
+            + 'syntyi 1600–1700-luvuilla, ja sitä ovat perinteisesti '
+            + 'leiponeet suitit, pieni katolinen kansanryhmä muutoin '
+            + 'luterilaisessa Kuurinmaassa. Euroopan unioni myönsi '
+            + 'sklandrausiselle aidon perinteisen tuotteen suojan vuonna '
+            + '2013. Erikoisen ulkonäkönsä vuoksi piirakka on saanut myös '
+            + 'huonoa mainetta: vuonna 2023 se listattiin yhdeksi maailman '
+            + 'huonoiten arvostelluista ruoista, vaikka suitit itse ovat '
+            + 'siitä edelleen ylpeitä.',
+          lyhyt: 'Sklandrausis on kuurinmaalainen porkkanapiirakka, joka sai EU-suojan 2013.',
+          selite: 'Tuoreita sklandrausis-piirakoita pellillä. Ruistaikinapohja '
+            + 'täytetään peruna- ja porkkanasoseella.',
+          lahde: 'Aivar Ruukel, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Herneet jotka pitää maistaa joulun aikaan',
+          aika: 'Joulu',
+          tiedosto: 'Grey peas at restaurant Milda in Riga.jpg',
+          teksti: 'Harmaat herneet silavan kanssa kuuluvat Latvian '
+            + 'jouluaterialle lähes pakollisena: kuivatut, isot ja '
+            + 'harmaansävyiset herneet liotetaan ja keitetään, minkä '
+            + 'jälkeen ne sekoitetaan paistettuun silavaan ja sipuliin. '
+            + 'Perinteen mukaan jokaisen pöydässä istuvan tulee maistaa '
+            + 'edes kourallinen, sillä pyöreiden herneiden uskotaan vievän '
+            + 'mukanaan tulevan vuoden kyyneleet. Ruoalla on pitkä historia: '
+            + 'herneet, ohra ja pavut olivat maaseudun perusruokaa satoja '
+            + 'vuosia ennen kuin peruna yleistyi 1800-luvulla. Nykyään '
+            + 'harmaita herneitä tarjoillaan myös ravintoloissa '
+            + 'hienostuneempina versioina, pekonin ja retiisin kanssa.',
+          lyhyt: 'Harmaat herneet silavan kanssa on Latvian perinteinen jouluajan ruoka.',
+          selite: 'Harmaita herneitä pekonin ja retiisin kanssa tarjoiltuna. '
+            + 'Ruoka on osa Latvian jouluperinnettä.',
+          lahde: 'JIP, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Juusto joka muistuttaa aurinkoa',
+          aika: 'Juhannus',
+          tiedosto: 'Mājās siets Jāņu siers.jpg',
+          teksti: 'Jāņu siers on hapanmaitojuusto, jota Latviassa valmistetaan '
+            + 'juhannukseksi eli Jāņi-juhlaksi. Se tehdään kuumentamalla '
+            + 'piimää tai rahkaa yhdessä voin, kananmunien ja kuminan '
+            + 'kanssa, kunnes seos hyytyy kiinteäksi, pyöreäksi kakuksi. '
+            + 'Pyöreä muoto ja keltainen sävy vertautuvat aurinkoon, jota '
+            + 'juhannuksena juhlitaan päivän valoisimpana aikana. '
+            + 'Perinnettä on vaalittu jo yli tuhat vuotta, ja vuonna 2015 '
+            + 'Jāņu siers sai Euroopan unionin aidon perinteisen tuotteen '
+            + 'suojan. Juustoa tarjotaan juhannusyönä oluen kanssa, ja '
+            + 'monet perheet valmistavat sen yhä itse kotikeittiössä '
+            + 'isoäidin ohjeella.',
+          lyhyt: 'Jāņu siers on juhannukseksi valmistettava kuminajuusto, jolla on EU-suoja.',
+          selite: 'Kotitekoinen Jāņu siers -juusto. Sen pyöreä muoto '
+            + 'vertautuu juhannuksen aurinkoon.',
+          lahde: 'Turaids, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Minkä vuoksi Latviassa uskotaan, että joulun harmaita herneitä pitää syödä edes kourallinen?',
+        vaihtoehdot: [
+          'Ne tuovat rahaa tulevaan vuoteen',
+          'Pyöreiden herneiden uskotaan vievän mukanaan tulevan vuoden kyyneleet',
+          'Ne suojaavat kylmältä talvelta',
+          'Ne takaavat hyvän sadon',
+        ],
+        oikea: 1,
+        fakta: 'Latvialaisen perinteen mukaan pyöreät herneet vievät mukanaan tulevan '
+          + 'vuoden kyyneleet, joten niitä pitää maistaa edes hiukan.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Latvia on pannut verkkoon yllättävän paljon: kaksi miljoonaa '
