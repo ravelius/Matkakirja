@@ -194,7 +194,7 @@ import { polloKysy } from './pollo.js';
 import { sfx } from './sound.js';
 import { asetaAkustiikka } from './tehosteketju.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
-import { piirraKuvasarja } from './kuvasarja.js';
+import { KUVASARJA_PYYHKAISY_PX, piirraKuvasarja } from './kuvasarja.js';
 import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
 
 /*
@@ -5115,7 +5115,7 @@ function piirraKohdeKuvat(ui, sisalto, kohde, valmisKuva) {
       laskuriLuokka: 'nostosarja-kuvalaskuri',
       leveys: KOHDE_KUVAN_PX,
       lataa: asetaKohdeKuva,
-      avaaSuurennos: (u, kuva, ankkuri) => avaaKohdeSuurennos(u, kuva, ankkuri),
+      avaaSuurennos: (u, kuva, ankkuri, sarja) => avaaKohdeSuurennos(u, kuva, ankkuri, 'fokuskohdeZoom', sarja),
       koristele: (nappi, kuva) => {
         const nauha = piirraIhmenauha(nappi, kuva.nauha);
         if (nauha) nauha.classList.add('kuvasarja-koriste');
@@ -5657,11 +5657,21 @@ export function suljeKohdeSuurennos(ui, avain = 'fokuskohdeZoom') {
  * parametri: nosto pitää omansa omassa kentässään
  * (`fokusnostoZoom`) ja sulkee sen itse.
  */
-export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') {
+export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom', sarja = null) {
   if (typeof document === 'undefined' || (!kuva?.tiedosto && !kuva?.osoite)) return;
   suljeKohdeSuurennos(ui, avain);
   lataaKohdeTyyli();
   let suljettu = false;
+  /*
+   * SARJAA SELATAAN SUURENNOKSESSAKIN (omistaja 20.9.2026, nostokortti 2
+   * kohta 3): kortin karuselli (js/kuvasarja.js) antaa listansa ja
+   * kohtansa, ja suurennos vaihtaa kuvaa pienistä väkäsistä, pyyhkäisyllä
+   * ja nuolinäppäimillä. Vaihto kirjataan myös kortille (`valitse`),
+   * jotta sulkeminen laskeutuu siihen pikkukuvaan, joka on kohdalla.
+   */
+  const kuvat = Array.isArray(sarja?.kuvat) && sarja.kuvat.length > 1 ? sarja.kuvat : null;
+  let kohdalla = kuvat ? Math.max(0, kuvat.indexOf(kuva)) : 0;
+  if (kuvat && kohdalla === 0 && Number.isInteger(sarja.kohdalla)) kohdalla = sarja.kohdalla;
 
   const kerros = html('div', 'fokuskohde-zoom');
   kerros.setAttribute('role', 'dialog');
@@ -5673,31 +5683,66 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') 
   img.draggable = false;
   img.alt = kuvatekstiPitka(kuva);
   const teksti = html('figcaption', 'fokuskohde-zoomteksti');
-  teksti.append(
-    // AVATTU KUVA NÄYTTÄÄ AINA PITKÄN (js/kuvatekstit.js).
-    html('span', 'fokuskohde-zoomselite', kuvatekstiPitka(kuva)),
-    // CC BY vaatii tekijän maininnan myös suurennoksessa.
-    taytaLahderivi(html('span', 'fokuskohde-zoomlahde'), kuva.lahde ?? '', kuva),
-  );
+  const selite = html('span', 'fokuskohde-zoomselite');
+  const lahderivi = html('span', 'fokuskohde-zoomlahde');
+  teksti.append(selite, lahderivi);
   kehys.append(img, teksti);
-  // "Matkakirjan ihme" -nauha myös suurennokseen, samalla komponentilla
-  // kuin kortissa (ks. lohko MATKAKIRJAN IHME). Kehys on nauhan
-  // asemointipohja, ja css nostaa sen kuvan vasempaan yläkulmaan.
-  piirraIhmenauha(kehys, kuva.nauha);
-  /*
-   * REAKTIORIVI SUURENNOKSEN PAPERILLE (js/reaktiot.js), kun kuvalla on
-   * oma tunniste — käytännössä Matkakirjan ihme, joka on oma
-   * sisältönsä eikä sama kuin kortti, jonka napista se aukesi.
-   *
-   * Kehys ohittaa eleet (css pointer-events: none), jotta napautus
-   * paperin päällä sulkee suurennoksen; rivi ottaa ne takaisin omalla
-   * luokallaan, ja kerroksen sulkukuuntelija väistää sen (ks. alempana).
-   */
-  piirraReaktiot(kehys, kuva.reaktio, {
-    otsikko: kuva.reaktioOtsikko ?? kuvatekstiPitka(kuva),
-    luokka: 'reaktiot-suurennos',
-  });
+  /** Paperin tekstit, nauha ja reaktiorivi sille kuvalle, joka on kohdalla. */
+  const taytaPaperi = () => {
+    img.alt = kuvatekstiPitka(kuva);
+    // AVATTU KUVA NÄYTTÄÄ AINA PITKÄN (js/kuvatekstit.js).
+    selite.textContent = kuvatekstiPitka(kuva);
+    // CC BY vaatii tekijän maininnan myös suurennoksessa.
+    taytaLahderivi(lahderivi, kuva.lahde ?? '', kuva);
+    kehys.querySelector('.fokuskohde-ihmenauha')?.remove();
+    kehys.querySelector('.reaktiorivi')?.remove();
+    // "Matkakirjan ihme" -nauha myös suurennokseen, samalla komponentilla
+    // kuin kortissa (ks. lohko MATKAKIRJAN IHME). Kehys on nauhan
+    // asemointipohja, ja css nostaa sen kuvan vasempaan yläkulmaan.
+    piirraIhmenauha(kehys, kuva.nauha);
+    /*
+     * REAKTIORIVI SUURENNOKSEN PAPERILLE (js/reaktiot.js), kun kuvalla on
+     * oma tunniste — käytännössä Matkakirjan ihme, joka on oma
+     * sisältönsä eikä sama kuin kortti, jonka napista se aukesi.
+     *
+     * Kehys ohittaa eleet (css pointer-events: none), jotta napautus
+     * paperin päällä sulkee suurennoksen; rivi ottaa ne takaisin omalla
+     * luokallaan, ja kerroksen sulkukuuntelija väistää sen (ks. alempana).
+     */
+    piirraReaktiot(kehys, kuva.reaktio, {
+      otsikko: kuva.reaktioOtsikko ?? kuvatekstiPitka(kuva),
+      luokka: 'reaktiot-suurennos',
+    });
+  };
+  taytaPaperi();
   kerros.appendChild(kehys);
+  /*
+   * SELAUSOHJAIMET PAPERIN REUNOILLA: samat hyvin pienet chevronit kuin
+   * kortilla (css .fokuskohde-zoomnuoli), kuvan reunassa eikä ruudun
+   * laidassa, jotta ne löytyvät työpöydälläkin. Kehys ohittaa eleet
+   * (pointer-events: none), joten napit ottavat ne takaisin omalla
+   * luokallaan kuten reaktiorivi. Laskuri kertoo paikan sarjassa.
+   */
+  const laskuri = kuvat ? html('span', 'fokuskohde-zoomlaskuri') : null;
+  const paivitaLaskuri = () => {
+    if (laskuri) laskuri.textContent = `${kohdalla + 1} / ${kuvat.length}`;
+  };
+  paivitaLaskuri();
+  if (kuvat) {
+    const nuoli = (luokka, merkki, nimi, suunta) => {
+      const nap = html('button', `fokuskohde-zoomnuoli ${luokka}`, merkki);
+      nap.type = 'button';
+      nap.setAttribute('aria-label', nimi);
+      nap.addEventListener('click', (tapahtuma) => {
+        tapahtuma.stopPropagation();
+        vaihda(suunta);
+      });
+      kehys.appendChild(nap);
+    };
+    nuoli('edellinen', '‹', 'Edellinen kuva', -1);
+    nuoli('seuraava', '›', 'Seuraava kuva', 1);
+    kehys.appendChild(laskuri);
+  }
 
   /*
    * PIKKUKUVA ENSIN, ISO PERÄSSÄ. Kortin pikkukuva on jo selaimen
@@ -5721,16 +5766,40 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') 
    * kummallakin kuvalähteellä.
    */
   let isoValmis = Boolean(kuva.osoite);
-  if (!kuva.osoite) {
+  const lataaIso = () => {
+    if (kuva.osoite) { isoValmis = true; return; }
+    isoValmis = false;
+    const oma = kuva;
     const iso = new Image();
     iso.decoding = 'async';
     iso.addEventListener('load', () => {
-      if (!kerros.isConnected) return;
+      // Kuva on voinut vaihtua latauksen aikana — vanha iso ei saa
+      // kirjoittua uuden päälle.
+      if (!kerros.isConnected || kuva !== oma) return;
       img.src = iso.src;
       isoValmis = true;
     }, { once: true });
     iso.src = valokuvaSuurennos(kuva.tiedosto, KOHDE_ZOOM_PX);
-  }
+  };
+  lataaIso();
+
+  /** Vaihda sarjan kuvaa: mitoitus, paperi ja kortin valinta perässä. */
+  const vaihda = (suunta) => {
+    if (!kuvat || suljettu) return;
+    kohdalla = ((kohdalla + suunta) % kuvat.length + kuvat.length) % kuvat.length;
+    kuva = kuvat[kohdalla];
+    if (!kuva?.tiedosto && !kuva?.osoite) return;
+    sfx.play('paper');
+    sarja.valitse?.(kohdalla);
+    taytaPaperi();
+    paivitaLaskuri();
+    // Kortin pikkukuva on välimuistissa ja kertoo mittasuhteen heti;
+    // iso perässä kuten avatessa. Mitoitus ajetaan vasta latauksen
+    // jälkeen (img 'load' → mitoita), sitä ennen vanha kehys pysyy.
+    asetaKohdeKuva(img, kuva, KOHDE_KUVAN_PX, () => {});
+    lataaIso();
+    mitoita();
+  };
 
   /**
    * KUVASUHDE, JOKA ON TIEDOSSA JO ENSIMMÄISELLÄ KEHYKSELLÄ.
@@ -5819,6 +5888,10 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') 
       pystyVara,
       enintaanLeveys: luonnollinen,
       vahintaanLeveys: KOHDE_ZOOM_KAPEIN,
+      // NIIN ISONA KUIN MAHTUU (omistaja 20.9.2026, nostokortti 2 kohta
+      // 3): kortin suurennos täyttää ruudun contain-periaatteella, ei
+      // "sama suunta jättää reunan" -katolla.
+      tayteen: true,
     });
     let ulko = mitat(KOHDE_ZOOM_REUNA, KOHDE_ZOOM_REUNA).leveys;
     for (let kierros = 0; kierros < 3; kierros += 1) {
@@ -5877,13 +5950,41 @@ export function avaaKohdeSuurennos(ui, kuva, ankkuri, avain = 'fokuskohdeZoom') 
    * kauan kuin ui.fokuskohdeZoom on olemassa (ks. kuunteleKohdetta).
    */
   function nappain(tapahtuma) {
+    if (kuvat && (tapahtuma.key === 'ArrowLeft' || tapahtuma.key === 'ArrowRight')) {
+      if (tapahtuma.altKey || tapahtuma.ctrlKey || tapahtuma.metaKey) return;
+      tapahtuma.preventDefault();
+      tapahtuma.stopPropagation();
+      vaihda(tapahtuma.key === 'ArrowRight' ? 1 : -1);
+      return;
+    }
     if (tapahtuma.key !== 'Escape') return;
     tapahtuma.stopPropagation();
     sulje();
   }
   document.addEventListener('keydown', nappain, true);
+  // Pyyhkäisy selaa sarjaa (sama kynnys kuin kortilla), ja sen päättävä
+  // click ei saa sulkea suurennosta.
+  let pyyhkaisty = 0;
+  let alku = null;
+  if (kuvat) {
+    kerros.addEventListener('pointerdown', (e) => {
+      if (e.button != null && e.button !== 0) return;
+      alku = { x: e.clientX, y: e.clientY, id: e.pointerId };
+    });
+    kerros.addEventListener('pointerup', (e) => {
+      if (!alku || (e.pointerId != null && alku.id != null && e.pointerId !== alku.id)) return;
+      const dx = e.clientX - alku.x;
+      const dy = e.clientY - alku.y;
+      alku = null;
+      if (Math.abs(dx) < KUVASARJA_PYYHKAISY_PX || Math.abs(dx) <= Math.abs(dy)) return;
+      pyyhkaisty = Date.now();
+      vaihda(dx < 0 ? 1 : -1);
+    });
+    kerros.addEventListener('pointercancel', () => { alku = null; });
+  }
   kerros.addEventListener('click', (tapahtuma) => {
     tapahtuma.stopPropagation();
+    if (pyyhkaisty && Date.now() - pyyhkaisty < 400) return;
     // Reaktiorivi on paperin oma toiminto: peukku ei saa sulkea kuvaa,
     // eikä virhelomakkeen kenttään pääsisi muuten kirjoittamaan.
     if (tapahtuma.target?.closest?.('.reaktiorivi')) return;
@@ -6342,18 +6443,25 @@ export function avaaFokuskohde(ui, kohde, { ankkuri = null } = {}) {
    * sellaista.
    */
   const paakuva = kohteenKuvalista(kohde)[0] ?? null;
+  let kuvakehysRef = null;
   const kaksivaihe = paakuva ? nostokuvaAloita({
     kortti: popup,
     sisalto,
     kuva: paakuva,
     aseta: (img, leveys, onVirhe) => asetaKohdeKuva(img, paakuva, leveys, onVirhe),
-    avaaSuurennos: (nappi) => avaaKohdeSuurennos(ui, paakuva, () => nappi),
+    // Suurennos näyttää sen kuvan, joka on kohdalla, ja selaa koko
+    // sarjaa (js/kuvasarja.js kirjoittaa valintansa kuvakehykseen).
+    avaaSuurennos: (nappi) => avaaKohdeSuurennos(
+      ui, kuvakehysRef?.nostokuvaKuva ?? paakuva, () => nappi, 'fokuskohdeZoom',
+      kuvakehysRef?.nostokuvaSarja?.(),
+    ),
     koristele: (nappi, kehys) => {
       if (paakuva.nauha) kehys.classList.add('fokuskohde-kuva-nauhalla');
       piirraIhmenauha(nappi, paakuva.nauha);
     },
     latoNosto: latoKohde,
   }) : null;
+  kuvakehysRef = kaksivaihe?.kehys ?? null;
   if (!kaksivaihe) latoKohde(sisalto, undefined);
   // Kaiutin kortin otsikkoriville (omistaja 6.9.2026: "Kaikissa missä
   // on tekstiä, saisi olla striimi lukijan symboli") — js/lukija.js
