@@ -181,3 +181,40 @@ test('lennon ja trailerin alku poistavat kuplat heti ilman kuittausta tai plusmu
   assert.match(heti, /kupla\.polloKuittaus = null;\s*kupla\.remove\(\)/);
   assert.doesNotMatch(heti, /poistaKuplat/);
 });
+
+/*
+ * TILANTEEN VAIHTO VIE EDELLISEN JUTUN KUPLAT (Sonnet 1, kierros 17D:
+ * *"pulun kupla näyttää koko istunnon vastaushistorian (Mayotte,
+ * Ochtinska, Dubai yhdessä ketjussa)"*).
+ *
+ * Kaupungin vaihto (startFlight) tyhjensi pinon jo ennestään, mutta
+ * saman kaupungin sisällä juttu vaihtui ilman että kuplille tapahtui
+ * mitään. Mitattuna (1280 × 860, Ateena, kolme nähtävyyttä peräkkäin):
+ * pinossa 1 → 2 → 3 → 5 kuplaa, ja ensimmäisen jutun repliikki oli yhä
+ * ruudulla kolmatta juttua luettaessa. Korjauksen jälkeen 1 → 1 → 1 → 2
+ * (viimeisessä kaksi saman jutun kuplaa) ja ikkunan sulku tyhjentää.
+ */
+test('kupla muistaa tilanteensa ja vanhan tilanteen kuplat poistuvat', () => {
+  assert.match(pollo, /kupla\.dataset\.konteksti = this\.kuplaKonteksti\(\)/);
+  const siivous = pollo.slice(
+    pollo.indexOf('  siivoaVanhanKontekstinKuplat() {'),
+    pollo.indexOf('\n  /**', pollo.indexOf('  siivoaVanhanKontekstinKuplat() {')),
+  );
+  assert.ok(siivous.length > 0, 'siivoaVanhanKontekstinKuplat puuttuu');
+  // Sama avain kuin kysymystarjokkailla — ei omaa rinnakkaista käsitettä.
+  assert.match(siivous, /const avain = this\.kuplaKonteksti\(\)/);
+  // Saman tilanteen kuplat säilyvät: vertailu on avaimeen, ei tyhjennys.
+  assert.match(siivous, /\(k\.dataset\?\.konteksti \?\? ''\) !== avain/);
+  // Laajennus saa hakea lokin uudessa tilanteessa uudelleen.
+  assert.match(siivous, /this\.pinonHistoriaLisatty = false/);
+});
+
+test('siivous on kiinni kaikissa kolmessa tilanteenvaihdossa', () => {
+  // 1. dialogi aukeaa tai sulkeutuu,
+  assert.match(pollo, /this\.paivitaKuplanPalautus\(\);\s*\/\/[^\n]*\n\s*this\.siivoaVanhanKontekstinKuplat\(\)/);
+  // 2. lehden aihesivu vaihtuu,
+  assert.match(pollo, /new MutationObserver\(\(\) => \{\s*this\.siivoaVanhanKontekstinKuplat\(\);\s*this\.tarkistaKonteksti\(\);\s*\}\)\s*\.observe\(kategoria/);
+  // 3. juttu vaihtuu SAMASSA ikkunassa (nähtävyyshampurilainen) —
+  //    tämä oli se reitti, jolla kuplat oikeasti kasautuivat.
+  assert.match(pollo, /for \(const ikkuna of ARTIKKELI_IKKUNAT\) \{[\s\S]{0,400}observe\(otsikko, \{ childList: true, characterData: true, subtree: true \}\)/);
+});
