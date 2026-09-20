@@ -116,6 +116,7 @@ import {
   PALLON_SALLITTU_VENYTYS, ULOSZOOMAUKSEN_KERROIN, kokoPallonKorkeus, laattojenVenytys,
   leveysKorkeudesta, luoPallokamera,
 } from './kamera.js';
+import { luoKameraloki } from './kameraloki.js';
 import { MERKIN_KORKEUS, luoMerkit, luoMerkkienNakyvyysTahdistus } from './merkit.js';
 import { luoNimet, nimibudjetti } from './nimet.js';
 import {
@@ -1484,6 +1485,15 @@ export async function avaaPallolauta(ui) {
     pallo, kotelo, ui, lauta: PALLO_LAUTA, heraa, laattataso,
     // Ks. AJON KATTO alempana; määritelty myöhemmin, kutsutaan vasta ajossa.
     ajonKatto: (korkeus) => asetaAjonKatto(korkeus),
+  });
+  /*
+   * KAMERALOKI (Fable 21.9.2026): korkeuden hypyt (> 3× yhdellä
+   * kehyksellä) laukaisijoineen kehittäjätilan konsoliin ja
+   * localStorage-rengaspuskuriin — omistajan satunnaisen
+   * liftauszoomivian silminnäkijä. Ks. js/pallolauta/kameraloki.js.
+   */
+  const kameraloki = luoKameraloki({
+    pallo, kamera, ui, kotelo, kytkeKehys: kytkePallonKehys,
   });
   /*
    * SAMA RAJA MYÖS SORMELLE: kamera-ajot kulkevat kameran kautta, mutta
@@ -5008,6 +5018,8 @@ export async function avaaPallolauta(ui) {
      * voivat erota — tämä on ainoa paikka, josta sen näkee.
      */
     viimeinenNapautus: () => viimeinenNapautus,
+    /** Kameralokin merkinnät (js/pallolauta/kameraloki.js), uusin viimeisenä. */
+    kameraloki: () => kameraloki.merkinnat(),
     /**
      * Kyltin PIIRRETTY laatikko (savukkeet ja vartijat): se, jota
      * osumatesti käyttää, kun merkkikerroksen tween on kesken.
@@ -5092,6 +5104,7 @@ export async function avaaPallolauta(ui) {
       ohjaimet.removeEventListener('change', pyydaLadonta);
       ohjaimet.removeEventListener('change', tahdistaPisteidenKoko);
       kehyspurku();
+      kameraloki.pura();
       // Omat pallopisteet ovat tämän laudan tilaa (ks. pallonAsteet).
       if (omatPisteet === laudanOmatPisteet) omatPisteet = new Map();
       valovahti.disconnect();
