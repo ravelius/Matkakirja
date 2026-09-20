@@ -9901,7 +9901,10 @@ export const RAAMATTU = {
           + '"VALTIOMUOTO 1873 tasavalta" ja "NYT"; radio-merkki (punainen valo palaa kun '
           + 'striimi soi, alla pienella "radio", napautus avaa/sulkee radion) isoon muotoon '
           + 'oikeaan ylakulmaan. Opus 2 toteuttaa (kartuschan tekija), julkaistaan v1976. '
-          + 'V1975 MERGETTY 11.53, TUOTANNOSSA 11.56 (saapumisen piilot, astropulun kuva).',
+          + 'V1975 MERGETTY 11.53, TUOTANNOSSA 11.56 (saapumisen piilot, astropulun kuva). '
+          + 'OMISTAJA 12.00: "iPadilla avaruus linssissa ylareunassa nakyy turhaan vakaset. '
+          + 'Ota se pois" (kaappaus omistaja-20260920/astro-vakaset-ipad.png: kolmen '
+          + 'vakasen nappi X-napin alla oikeassa ylakulmassa) -> Opus 1 poistaa.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
