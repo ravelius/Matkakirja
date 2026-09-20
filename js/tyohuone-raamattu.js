@@ -9729,7 +9729,12 @@ export const RAAMATTU = {
           + '20260920-0605.json), tuotannon varitaso voi olla pois n. 20 min kunnes v1973 '
           + 'on tuotannossa; CI ajetaan uudestaan. OPPI: pohjan versiovaihdossa luettelo '
           + 'ja koodi on julkaistava samassa ikkunassa - CI ei voi olla vihrea ennen '
-          + 'luetteloa, joten jarjestys on luettelo -> CI -> merge, ei toisinpain.',
+          + 'luetteloa, joten jarjestys on luettelo -> CI -> merge, ei toisinpain. CI 2. AJO '
+          + '(06.13): vain kerma-reuna punainen - uusi luettelo oli PUDOTTANUT varitasot-'
+          + 'taulun (FRA 2026-09-14b-tasoitus) ja erat-listan, jolloin Ranskan varitaso '
+          + 'sammui. Fable palautti molemmat vanhasta luettelosta uuteen (06.16), vei '
+          + 'uudestaan ja ajoi CI:n kolmannen kerran. VELKA Opus 2:lle: polta-paikallisesti/'
+          + 'kokoa-luettelo ei sailyta varitasot- ja erat-kenttia pohjan versiovaihdossa.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
