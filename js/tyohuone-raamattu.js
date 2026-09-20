@@ -9962,7 +9962,7 @@ export const RAAMATTU = {
           + 'Rooma tarjolla, kaupunkimerkit eivat nay, liftauskaaret nakyvat) -> Opus 1; '
           + '3) ASTROLINSSIN AANI: "avaruuslinssin aikana ei kuulu avaruuden taustahuminaa '
           + 'joka on jo generoitu. lisaksi taustamusiikki pitaa sammuttaa linssin ajaksi" '
-          + '-> Opus 2. Julkaistaan v1978.',
+          + '-> Opus 2. Julkaistaan v1978. V1977 MERGETTY 14.42 (CI vihrea).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
