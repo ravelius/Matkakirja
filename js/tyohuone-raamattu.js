@@ -2171,8 +2171,11 @@ export const RAAMATTU = {
           + 'CC-kuva: havainnekuvaa ei tarvita, paitsi kun se tuo selvasti lisaa '
           + 'visuaalisuutta (sisatilat, tapahtumat, ruoka, tekniikka toiminnassa). Aina: '
           + 'pieni "Havainnekuva"-merkinta kuvatekstissa, lahde alkaa "Tekoalylla tuotettu '
-          + 'havainnekuva.", ei tunnistettavia todellisia henkiloita, ei poltettuja '
-          + 'aikaleimoja. Tilausjarjestys Codexille: ihmeet ensin, sitten rappeutuneet, '
+          + 'havainnekuva.", ei poltettuja aikaleimoja. TARKENNUS (omistaja 20.09.2026 klo 20.51): '
+          + 'havainnekuvissa SAA olla todellisia historiallisia henkiloita (kielto koskee '
+          + 'vain nykyisia yksityishenkiloita valokuvissa), ja kohteen aika voi olla paljon '
+          + 'vanhempi kuin isoisan vuosi 1873 - kuvataan kohteen oma kulta-aika (esim. '
+          + 'antiikki, keskiaika), ei valttamatta 1873. Tilausjarjestys Codexille: ihmeet ensin, sitten rappeutuneet, '
           + 'sitten visuaalisuuden lisays; Fable tarkastaa ihmeiden kuvaukset kaanonia '
           + 'vasten ennen tilausta. Inventaarioon sarake ihme/rappeutunut.',
         'MAAPANEELI / MAALEHDEN KARTUSCHA (14.–20.9.2026, uusin voimassa): '

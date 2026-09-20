@@ -75,3 +75,7 @@ Jokien (pohjaan) lisaksi: 1) merinimiot merelle ja pois rantaviivan/korostuskeha
 ## HAVAINNEKUVALINJAUS (omistaja 20.09.2026 klo 20.48) (20.9.2026 klo 20.48)
 
 Kirjattu Raamattuun Kaupungit-osioon kohta HAVAINNEKUVAT NOSTOISSA: oikeat kuvat Sisaltokirjuri Commonsista, Codexilta vain havainnekuvat; luokat kadonnut kohde (ihme, havainnekuva paakuvana ajan kanssa), rappeutunut (parikuva nykytila + kulta-aika), olemassa oleva (havainnekuva vain visuaalisuuden vuoksi); tilausjarjestys ihmeet -> rappeutuneet -> visuaalisuus; Fable tarkastaa ihmeet kaanonia vasten.
+
+## HAVAINNEKUVAT: HISTORIALLISET HENKILOT SALLITTU, AIKA VOI OLLA PALJON ENNEN 1873 (omistaja 20.09.2026 klo 20.51) (20.9.2026 klo 20.51)
+
+Tarkennus Raamatun kohtaan HAVAINNEKUVAT NOSTOISSA: todelliset historialliset henkilot sallittu havainnekuvissa (kielto koskee vain nykyisia yksityishenkiloita valokuvissa); kohteen kuvattu aika on sen oma kulta-aika, joka voi olla paljon isoisan 1873:a vanhempi.
