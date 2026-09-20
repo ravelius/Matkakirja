@@ -152,6 +152,463 @@ export function maanAiheOtsikko(maanNimi, aiheNimi) {
 }
 
 export const MAA_KATEGORIAT = {
+  LUX: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Luxemburgin kalliosta kiisteltiin vuosisatoja, mutta lopulta siitä tuli '
+        + 'rauhan ja avointen rajojen paikka. Neljä kohdetta kertoo, miten linnoitus '
+        + 'purettiin, raja avattiin ja masuunit sammuivat.',
+      nostot: [
+        {
+          otsikko: 'Kallion sisään kaivettu linnoitus',
+          aika: '1644–1744',
+          tiedosto: 'Luxembourg Casemates (5).jpg',
+          teksti: 'Pääkäytävä on 110 metriä pitkä ja jopa seitsemän metriä leveä, ja sen '
+            + 'kylkiin louhittiin 25 tykkiasemaa. Espanjalaiset aloittivat tunnelien '
+            + 'kaivamisen Bock-kallioon 1644, ja itävaltalainen kenraali Neipperg '
+            + 'laajensi käytävät 1744. Kasemateissa majoittui tarvittaessa 1 200 '
+            + 'sotilasta, ja vesi tuli 47 metriä syvästä kaivosta. Kalliolle alkoi nousta '
+            + 'linna 963, kun kreivi Siegfried sai alueen vaihtokaupalla. Siitä kasvoi '
+            + 'Luxemburgin kaupunki.',
+          lyhyt: 'Luxemburgin kaupungin Bock-kallioon louhittu tunneliverkosto, vanhan '
+            + 'linnoituksen maanalainen osa.',
+          selite: 'Kasemattien kalliokäytävä Bock-kalliolla. Linnoituksen jäänteet kuuluvat '
+            + 'Luxemburgin kaupungin UNESCO-maailmanperintökohteeseen.',
+          lahde: 'LoKiLeCh, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Sopimus, joka purki linnoituksen',
+          aika: '1867',
+          tiedosto: 'Treaty of London 1867 Art VII and signatures.jpg',
+          teksti: 'Lontoossa 11. toukokuuta 1867 suurvaltojen edustajat panivat nimensä ja '
+            + 'vahasinettinsä paperille, joka lopetti Luxemburgin kriisin. Ranskan '
+            + 'keisari Napoleon III oli yrittänyt ostaa maan Hollannin kuninkaalta, eikä '
+            + 'Preussi sietänyt ajatusta. Sopimus vahvisti Luxemburgin puolueettomuuden, '
+            + 'ja Preussin varuskunta lähti. Kaupungin linnoitukset piti purkaa eikä '
+            + 'koskaan rakentaa uudelleen. Työ kesti 16 vuotta ja maksoi 1,5 miljoonaa '
+            + 'kultafrangia, ja pois meni yli 24 kilometriä maanalaisia käytäviä.',
+          lyhyt: 'Vuoden 1867 Lontoon sopimus vahvisti Luxemburgin puolueettomuuden ja '
+            + 'määräsi kaupungin linnoitukset purettaviksi.',
+          selite: 'Sopimuksen loppuasiakirjan VII artikla sekä allekirjoitukset ja '
+            + 'vahasinetit.',
+          lahde: 'Archives nationales du Luxembourg, Wikimedia Commons (public domain)',
+          wiki: 'Lontoon sopimus (1867)',
+        },
+        {
+          otsikko: 'Rajaton Eurooppa alkoi Moselilta',
+          aika: '1985',
+          tiedosto: 'SCHENGEN, Luxembourg.jpg',
+          teksti: 'Kesäkuun 14. päivänä 1985 jokilaiva Princesse Marie-Astrid oli ankkurissa '
+            + 'Moselilla Schengenin viinikylän kohdalla, missä Luxemburgin, Ranskan ja '
+            + 'Saksan rajat kohtaavat. Laivalla Belgian, Ranskan, Luxemburgin, '
+            + 'Alankomaiden ja Länsi-Saksan edustajat allekirjoittivat sopimuksen '
+            + 'rajatarkastusten asteittaisesta poistamisesta. Laiva myytiin 1992 Saksaan, '
+            + 'mutta se palasi: kesästä 2025 se on museolaivana Schengenin rannassa. '
+            + 'Nykyisin Schengen-alueeseen kuuluu 29 Euroopan maata.',
+          lyhyt: 'Schengen on Moselin rannalla sijaitseva luxemburgilainen viinikylä, jossa '
+            + 'allekirjoitettiin vuoden 1985 sopimus rajatarkastusten poistamisesta.',
+          selite: 'Schengenin kylän ranta Moselin varrella ja Markusbierg-viinirinne '
+            + 'taustalla.',
+          lahde: 'Denise Hastert, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Schengenin sopimus',
+        },
+        {
+          otsikko: 'Masuunit, joista tuli kampus',
+          aika: '1965–1997',
+          tiedosto: 'Belval Blast furnaces 2011-08.JPG',
+          teksti: 'Belvalin masuunit A ja B sytytettiin 1965 ja 1970, ja B:n '
+            + 'vuorokausikapasiteetti oli 3 000 tonnia. Tehdas kuului ARBEDille, joka '
+            + 'syntyi 1911 kolmen terästehtaan yhdistyessä. Luxemburgin teräksentuotanto '
+            + 'kasvoi 145 000 tonnista vuonna 1900 yli miljoonaan tonniin 1913. Huhtikuun '
+            + '30. päivänä 1953 Jean Monnet käynnisti Belvalissa ensimmäisen '
+            + 'eurooppalaisen teräsvalun. Viimeinen masuuni sammui heinäkuussa 1997, ja '
+            + 'vapautuneelle 120 hehtaarille on noussut yliopistoa, arkistoja ja '
+            + 'konserttisali Rockhal.',
+          lyhyt: 'Belvalin vanhat masuunit Esch-sur-Alzettessa ovat Luxemburgin '
+            + 'terästeollisuuden muistomerkki.',
+          selite: 'Belvalin masuunit A ja B, jotka on suojeltu kulttuurimuistomerkkeinä '
+            + 'vuodesta 2000. Alueella toimi ARBEDin terästehdas.',
+          lahde: 'Zinneke, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Esch-sur-Alzette',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka kauan Luxemburgin kaupungin linnoitusten purkaminen kesti?',
+        vaihtoehdot: [
+          '3 vuotta',
+          '16 vuotta',
+          '40 vuotta',
+          '100 vuotta',
+        ],
+        oikea: 1,
+        fakta: 'Linnoitusten purkaminen kesti 16 vuotta ja maksoi 1,5 miljoonaa '
+          + 'kultafrangia.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Luxemburgin keittiö on talonpoikaista ja asettuu ranskalaisen ja '
+        + 'saksalaisen ruokakulttuurin väliin. Pöytään tulee savustettua sianlihaa, '
+        + 'papukeittoa ja Moselin rinteiden viiniä.',
+      nostot: [
+        {
+          otsikko: 'Viinitarhat kahden maan rajalla',
+          aika: 'nykyään',
+          tiedosto: 'LUXEMBOURG\'s VINEYARDS at the Moselle.jpg',
+          teksti: 'Moselin rannalla Luxemburgin ja Saksan raja kulkee 42 kilometrin matkan, '
+            + 'ja rinteillä on viljelty viiniä jo roomalaisten ajoista. Yleisin lajike on '
+            + 'Rivaner, jota oli 29 prosenttia viinitarhoista vuonna 2006. Seuraavina '
+            + 'tulevat Auxerrois, Pinot gris ja Riesling. Viinit ovat enimmäkseen kuivia '
+            + 'valkoviinejä, ja kuohuviini kantaa nimeä Crémant. Vuodesta 1935 pullon '
+            + 'takana on ollut Marque Nationale -sinetti, joka kertoo viinin olevan tehty '
+            + 'kokonaan luxemburgilaisista rypäleistä.',
+          lyhyt: 'Moselin rinteillä kasvatetaan luxemburgilaisia viinirypäleitä, joista '
+            + 'tehdään kuivia valkoviinejä ja Crémant-kuohuviiniä.',
+          selite: 'Viiniköynnösrivejä Moselin rinteellä. Luxemburgin viinialue on maan '
+            + 'kaakkoisosassa Moselin varrella.',
+          lahde: 'Denise Hastert, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Savustettua sikaa ja härkäpapuja',
+          aika: 'nykyään',
+          tiedosto: 'Judd mat Gaardebounen.jpg',
+          teksti: 'Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, ja sitä '
+            + 'pidetään Luxemburgin kansallisruokana. Liha liotetaan yön yli ja keitetään '
+            + 'vihannesten ja mausteiden kanssa, joskus lasillisen Moselin viiniä kera. '
+            + 'Pavut tarjotaan sipulista, voista ja lihaliemestä tehdyssä kastikkeessa. '
+            + 'Annos yhdistetään erityisesti Gostingenin kylään maan kaakkoisosassa, '
+            + 'jonka asukkaita kutsutaan papujensa vuoksi nimellä Bounepatscherten eli '
+            + 'papuhullut. Lisukkeeksi tulee keitettyjä perunoita, ja juomaksi käy viini '
+            + 'tai olut.',
+          lyhyt: 'Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, '
+            + 'Luxemburgin tunnetuimpia kansallisruokia.',
+          selite: 'Annos savustettua sianlihaa, härkäpapuja ja keitettyjä perunoita.',
+          lahde: 'UnorthodoxY, Wikimedia Commons (CC BY-SA 2.0)',
+        },
+        {
+          otsikko: 'Papukeitto, joka ylittää rajat',
+          aika: 'nykyään',
+          tiedosto: 'Bouneschlupp16.jpg',
+          teksti: 'Bouneschlupp on vihreistä pavuista, perunoista, pekonista ja sipulista '
+            + 'keitetty sakea keitto. Sitä pidetään luxemburgilaisena kansallisruokana, '
+            + 'mutta sama keitto löytyy myös Saarlandista, Belgian Gaumesta ja '
+            + 'Arelerlandista sekä Lorrainesta. Resepti ei siis pysähtynyt rajalle. '
+            + 'Luxemburgin keittiö onkin rajaseudun sekoitus: arkiruoat ovat '
+            + 'talonpoikaisia kuten Saksassa, mutta ranskalainen vaikutus näkyy '
+            + 'ravintoloiden listoilla. Kuvan keitossa on myös makkaraviipaleita ja '
+            + 'porkkanaa.',
+          lyhyt: 'Bouneschlupp on vihreistä pavuista, perunoista ja pekonista keitetty '
+            + 'luxemburgilainen keitto.',
+          selite: 'Vihreää papukeittoa, jossa on porkkanaa, perunaa ja makkaraviipaleita.',
+          lahde: 'SITCK, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Rapeat perunaletut',
+          aika: 'nykyään',
+          tiedosto: 'Gromperekichelcher avec compote de pommes.jpg',
+          teksti: 'Gromperekichelcher ovat mausteisia perunalettuja: raastettua perunaa, '
+            + 'silputtua sipulia ja persiljaa, paistettuna rasvassa rapeiksi. Kuvan '
+            + 'tapaan niiden kanssa tarjotaan omenasosetta. Luxemburgin arkiruoka on '
+            + 'talonpoikaista, mutta listalta löytyy myös Moselin pieniä paistettuja '
+            + 'kaloja, taimenta Riesling-kastikkeessa ja luumupiirakka Quetschentaart. '
+            + 'Juustoista tunnetuin on Kachkéis, pehmeä levite, jota kutsutaan myös '
+            + 'nimellä Cancoillotte.',
+          lyhyt: 'Gromperekichelcher on luxemburgilainen perunalettu, joka paistetaan '
+            + 'sipulin ja persiljan kanssa.',
+          selite: 'Kolme Gromperekichelcher-lettua ja omenasosetta lautasella.',
+          lahde: 'Wikibubulle, Wikimedia Commons (CC BY 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä papuja luxemburgilaisessa kansallisruoassa Judd mat Gaardebounen on?',
+        vaihtoehdot: [
+          'Vihreitä papuja',
+          'Kikherneitä',
+          'Soijapapuja',
+          'Härkäpapuja',
+        ],
+        oikea: 3,
+        fakta: 'Judd mat Gaardebounen on savustettua sianniskaa ja härkäpapuja, ja sitä '
+          + 'pidetään Luxemburgin kansallisruokana.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Luxemburgin luonto on pieni mutta jyrkkä: hiekkakivikallioita, metsäisiä '
+        + 'jokilaaksoja ja maan suurin tekojärvi. Neljä paikkaa vie Pikku-Sveitsin '
+        + 'rotkoista Ardenneille.',
+      nostot: [
+        {
+          otsikko: 'Pikku-Sveitsin kalliot',
+          aika: 'nykyään',
+          tiedosto: 'Mullerthal 01.jpg',
+          teksti: 'Luxemburgin Pikku-Sveitsi eli Müllerthal on hiekkakivikallioiden ja '
+            + 'tiheiden metsien seutu maan itäosassa. Se kattaa vain seitsemän prosenttia '
+            + 'maasta, mutta siellä on rotkoja, luolia ja lukemattomia pieniä puroja. '
+            + 'Korkein kohta on vain 414 metrissä. Alueen ainoa keskikokoinen asutus on '
+            + 'Echternach, Luxemburgin vanhin säilynyt kaupunki. Kalliot houkuttivat '
+            + 'kävijöitä jo 1800-luvulla: Berdorfin nuoriso kaiversi Hohllayn '
+            + 'kallioseinään 1880 kiitoksen hallitukselle, joka avasi rotkot yleisön '
+            + 'ulottuville.',
+          lyhyt: 'Müllerthal eli Pikku-Sveitsi on hiekkakiviseudun metsä- ja kallioalue '
+            + 'Luxemburgin itäosassa.',
+          selite: 'Hiekkakivikallio metsässä Müllerthalin alueella. Alue tunnetaan myös '
+            + 'nimellä Pikku-Sveitsi.',
+          lahde: 'Arths-at, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Mullerthal',
+        },
+        {
+          otsikko: 'Silta putouksen päällä',
+          aika: '1879',
+          tiedosto: 'Schiessentümpel 11 08 2013.jpg',
+          teksti: 'Schiessentümpel on pieni vesiputous Mustan Ernzin joessa, noin kilometrin '
+            + 'päässä Müllerthalin kylästä lounaaseen. Putouksen päällä kaartuu '
+            + 'kivisilta, jonka kaide on tehty rustiikkisista puunrungoista. Valtion '
+            + 'budjettiin varattiin 1877 rahaa kolmelle pienelle sillalle Müllerthalin '
+            + 'alueelle. Piirustukset laati Diekirchin piirin insinööri Antoine Hartmann, '
+            + 'ja kivityön teki kivenhakkaaja Jean-Pierre Prommenschenkel. Silta '
+            + 'valmistui todennäköisesti 1879. Paikan nimi tarkoittaa sekä putousta että '
+            + 'sen kohdalla kulkevan tien varren aluetta.',
+          lyhyt: 'Schiessentümpel on Mustan Ernzin joen pieni putous, jonka päällä on '
+            + 'rustiikkinen kivisilta Müllerthalissa.',
+          selite: 'Schiessentümpelin putous ja kivisilta Mustan Ernzin varrella. Silta '
+            + 'rakennettiin todennäköisesti 1879.',
+          lahde: 'VT98Fan, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Järvi, joka rakennettiin',
+          aika: '1955–1958',
+          tiedosto: 'Lac de la Haute Sure - panoramio.jpg',
+          teksti: 'Luxemburgissa ei ole luonnostaan suuria järviä, joten maan suurin järvi '
+            + 'rakennettiin. Juomavesi alkoi loppua 1940-luvun lopulla, ja Sûre-joen '
+            + 'laaksoon nousi 47 metriä korkea holvipato vuosina 1955–1958. Järvi peittää '
+            + 'enimmillään 3,8 neliökilometriä ja on jopa 43 metriä syvä. Laaksosta piti '
+            + 'siirtää myllyjen ja tilojen asukkaat, ja sukeltajat voivat yhä käydä '
+            + 'raunioilla noin 30 metrin syvyydessä. Vuonna 2007 noin 80 prosenttia '
+            + 'väestöstä sai järven vettä.',
+          lyhyt: 'Yläsûren tekojärvi eli Lac de la Haute-Sûre on Luxemburgin suurin järvi ja '
+            + 'tärkeä juomavesivaranto.',
+          selite: 'Yläsûren tekojärvi Ardenneilla Luxemburgin luoteisosassa. Järven ympäristö '
+            + 'on Ramsar-suojelukohde.',
+          lahde: 'Martin D., Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Kylä joen mutkassa',
+          aika: 'nykyään',
+          tiedosto: 'Luxembourg Esch-sur-Sure 12 June 2011.jpg',
+          teksti: 'Esch-sur-Sûren vanha keskusta on ahtautunut Sûre-joen jyrkän mutkan '
+            + 'sisään, kapealle maankielekkeelle. Kielekkeen päällä seisoo 900-luvulle '
+            + 'juontuva linna. Kaupungissa asui vuonna 2025 vain 415 ihmistä. Heti sen '
+            + 'yläpuolella joki on padottu järveksi, joka ulottuu kymmenen kilometriä '
+            + 'laaksoon. Se oli pitkään maan toiseksi pienin kunta pinta-alaltaan, kunnes '
+            + 'kaksi naapurikuntaa liitettiin siihen 2011. Nimen loppuosa erottaa paikan '
+            + 'Esch-sur-Alzettesta, joka on maan toiseksi suurin kaupunki 45 kilometriä '
+            + 'etelämpänä.',
+          lyhyt: 'Esch-sur-Sûre on pieni Ardennien kaupunki, jonka linna ja keskusta ovat '
+            + 'Sûre-joen jyrkän mutkan sisällä.',
+          selite: 'Esch-sur-Sûren talot ja linna metsäisten Ardennien rinteiden keskellä. '
+            + 'Kaupunki sijaitsee Sûre-joen mutkassa.',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka korkea on Yläsûren tekojärven holvipato?',
+        vaihtoehdot: [
+          '47 metriä',
+          '8 metriä',
+          '120 metriä',
+          '250 metriä',
+        ],
+        oikea: 0,
+        fakta: 'Luxemburgin suurimman järven 47 metriä korkea holvipato rakennettiin '
+          + 'Sûre-joen laaksoon vuosina 1955–1958.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Pienessä maassa on suuria rakennuksia: myyty ja pelastettu linna, entinen '
+        + 'kaupungintalo, jossa suurherttua nykyään työskentelee, sekä silta, josta '
+        + 'tuli itsenäisyyden tunnus.',
+      nostot: [
+        {
+          otsikko: 'Linna, jonka katto myytiin pala palalta',
+          aika: '1820–1990',
+          tiedosto: 'Burg Vianden, Luxemburg.jpg',
+          teksti: 'Kuningas Vilhelm I myi Viandenin linnan 1820 neuvosmies Wenzel Costerille '
+            + '3 200 floriinilla. Coster alkoi purkaa linnaa: katon tiilet, '
+            + 'seinäpaneelit, ovet ja ikkunat myytiin kappale kerrallaan, ja jäljelle jäi '
+            + 'rauniot. Kansalaisten suuttumus oli niin suuri, että kuningas osti raunion '
+            + 'takaisin 1827 hintaan 1 100 floriinia. Kunnostus eteni hitaasti: '
+            + 'suurherttua Jean luovutti linnan valtiolle 1977, ja työt valmistuivat '
+            + '1990. Linna seisoo kalliolla noin sata metriä Our-joen yläpuolella.',
+          lyhyt: 'Viandenin linna on yksi Reinin länsipuolen suurimmista linnoitetuista '
+            + 'linnoista.',
+          selite: 'Viandenin linna kalliolla Our-joen laaksossa. Linna rakennettiin '
+            + 'romaanisessa tyylissä 1000–1300-luvuilla.',
+          lahde: 'Jeff Croisé, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Viandenin linna',
+        },
+        {
+          otsikko: 'Silta, jonka kaari löi ennätyksen',
+          aika: '1900–1903',
+          tiedosto: 'Adolphe Bridge over the valley of Petrusse in Luxembourg City.jpg',
+          teksti: 'Adolphe-sillan keskellä on kaksi rinnakkaista 84,65 metrin kaarta, ja sen '
+            + 'piti olla suurin koskaan rakennettu kivikaari. Suunnittelijat olivat '
+            + 'ranskalainen Paul Séjourné ja luxemburgilainen Albert Rodange. Tienpinta '
+            + 'tehtiin uutuusmateriaalista, raudoitetusta betonista, ja kaaret hakattiin '
+            + 'paikallisesta hiekkakivestä. Silta vihittiin käyttöön 24. heinäkuuta 1903. '
+            + 'Luxemburgilaiset kutsuvat sitä yhä Uudeksi sillaksi, Nei Bréckiksi. Vuonna '
+            + '2018 sen alle ripustettiin pyörätie.',
+          lyhyt: 'Adolphe-silta on Luxemburgin kaupungin kaksikerroksinen kaarisilta ja maan '
+            + 'epävirallinen tunnus.',
+          selite: 'Adolphe-silta ylittää Pétrusse-joen laakson Luxemburgin kaupungissa. Silta '
+            + 'on nimetty suurherttua Adolphen mukaan.',
+          lahde: 'Krzysztof Golik, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kaupungintalosta suurherttuan palatsiksi',
+          aika: '1572',
+          tiedosto: 'Luxembourg Grand Ducal Palace 01.jpg',
+          teksti: 'Rakennus oli Luxemburgin kaupungintalo vuosina 1572–1795, ja sen jälkeen '
+            + 'siellä toimivat prefektuuri ja hallitus. Vuodesta 1817 siellä asui '
+            + 'Hollannin suurherttuiden edustaja. Kun Nassau-Weilburgin suku nousi '
+            + 'valtaan 1890, palatsi varattiin suurherttuan perheelle, ja Adolphen aikana '
+            + 'siihen lisättiin uusi siipi. Nykyään palatsi on suurherttuan virallinen '
+            + 'työpaikka, mutta varsinainen koti on Bergin linna Colmar-Bergissä. '
+            + 'Jouluaattona suurherttuan tervehdys lähetetään palatsin Keltaisesta '
+            + 'salista.',
+          lyhyt: 'Suurherttuan palatsi on Luxemburgin valtionpäämiehen virallinen residenssi '
+            + 'kaupungin vanhassa keskustassa.',
+          selite: 'Suurherttuan palatsin julkisivu Luxemburgin kaupungissa. Oikealla näkyy '
+            + 'osa parlamenttitaloa.',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kolme terhoa kolmen tornin päällä',
+          aika: '1732–1733',
+          tiedosto: 'Fort thüngen Dräi Eechelen 01.jpg',
+          teksti: 'Tornien päällä on kolme terhoa, ja siitä Fort Thüngen sai lempinimensä '
+            + 'Dräi Eechelen, Kolme terhoa. Linnake rakennettiin 1732–1733 ja nimettiin '
+            + 'sotapäällikkö Adam Sigmund von Thüngenin mukaan. Lontoon sopimus vaati '
+            + '1867 Luxemburgin linnoitusten purkamista, ja linnakkeesta jäivät jäljelle '
+            + 'vain kolme tornia ja perustukset. Ne rakennettiin uudelleen 1990-luvulla, '
+            + 'kun viereen nousi nykytaiteen museo Mudam. Vuodesta 2012 rakennus on ollut '
+            + 'Musée Dräi Eechelen.',
+          lyhyt: 'Fort Thüngen eli Dräi Eechelen on 1730-luvulla rakennettu linnake '
+            + 'Luxemburgin kaupungin Kirchbergissä.',
+          selite: 'Fort Thüngenin kolme tornia, joiden päällä on terho. Linnake toimii '
+            + 'nykyään museona.',
+          lahde: 'Cayambe, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Fort Thüngen',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä on Fort Thüngenin lempinimi, joka viittaa tornien päällä oleviin '
+          + 'koristeisiin?',
+        vaihtoehdot: [
+          'Kolme kruunua',
+          'Kolme kellotornia',
+          'Kolme terhoa',
+          'Kolme kilpeä',
+        ],
+        oikea: 2,
+        fakta: 'Fort Thüngenin kolmen tornin päällä on kutakin terho, ja siitä linnake on '
+          + 'saanut lempinimensä Dräi Eechelen eli Kolme terhoa.',
+      },
+    },
+    {
+      id: 'arki',
+      nimi: 'Arki',
+      johdanto: 'Pieni maa pitää kiinni omista tavoistaan: omasta kielestä, laaksoon '
+        + 'kätketystä kaupunginosasta, pääsiäismaanantain savipilleistä ja '
+        + 'pyhiinvaeltajien hyppelystä.',
+      nostot: [
+        {
+          otsikko: 'Kaupunki kallion alla',
+          aika: 'nykyään',
+          tiedosto: '20180901 Grund Luxembourg City 03.jpg',
+          teksti: 'Grund on Luxemburgin kaupungin kaupunginosa, joka lepää Alzette-joen '
+            + 'rannalla vanhan kaupungin alapuolella laaksossa. Sinne pääsee kävellen tai '
+            + 'hissillä, joka laskeutuu kallion läpi. Asukkaita on vain 983, ja heistä '
+            + '43,74 prosenttia on luxemburgilaisia (vuoden 2025 lopussa). Illalla Grund '
+            + 'herää eloon, sillä se on suosittua yöelämän aluetta. Täällä toimii myös '
+            + 'Mosconi, yhden Michelin-tähden ravintola, joka erikoistuu pastaan. '
+            + 'Yläpuolella kohoavat vanhan linnoituksen kalliot ja muurit.',
+          lyhyt: 'Grund on Luxemburgin kaupungin kaupunginosa Alzette-joen laaksossa vanhan '
+            + 'kaupungin alapuolella.',
+          selite: 'Näkymä ylhäältä Grundiin, Alzette-joelle ja linnoituksen muurille.',
+          lahde: 'Flocci Nivis, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Lause kaupungintalon päädyssä',
+          aika: '1859',
+          tiedosto: 'Fronton City Hall Esch Alzette.JPG',
+          teksti: 'Esch-sur-Alzetten kaupungintalon päädyssä kaivostyöläinen ja '
+            + 'terästyöläinen tukevat kaupungin vaakunaa, ja alla lukee vanhalla '
+            + 'kirjoitusasulla Mir wölle bleiwe wat mer sin, Haluamme pysyä sellaisina '
+            + 'kuin olemme. Lause on maan tunnuslause, ja se on peräisin Michel Lentzin '
+            + 'runosta De Feierwon, jonka hän kirjoitti 1859 kaupungin rautatien '
+            + 'vihkiäisiin. Luxemburgin kieltä puhuu noin 400 000 ihmistä. Sen vanhin '
+            + 'tunnettu teksti on 1300-luvun alun Codex Mariendalensis.',
+          lyhyt: 'Esch-sur-Alzetten kaupungintalon päätykolmio, jossa on Luxemburgin '
+            + 'kansallinen tunnuslause luxemburgin kielellä.',
+          selite: 'Kaupungintalon päädyssä kaivostyöläinen ja terästyöläinen tukevat '
+            + 'kaupungin vaakunaa. Alla on tunnuslause vanhalla kirjoitusasulla.',
+          lahde: 'Zinneke, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Luxemburgin kieli',
+        },
+        {
+          otsikko: 'Pääsiäismaanantain savilinnut',
+          aika: 'pääsiäismaanantai',
+          tiedosto: 'Péckvillchen 6544.jpg',
+          teksti: 'Pääsiäismaanantaina Luxemburgin kaupungin Fëschmaartilla ja Nospeltin '
+            + 'kylässä pidetään Éimaischen-markkinat, joiden tähtituote on Péckvillchen, '
+            + 'pieni linnun muotoinen savipilli. Linnun pyrstö on suukappale, ja pilliin '
+            + 'saa kaksi eri korkeaa säveltä. Nospelt oli savenvalajien kylä, ja pillejä '
+            + 'tehtiin perinteen mukaan päivän jäännössavesta. Kaupungin markkina sai '
+            + 'nykyisen muotonsa 1937, Nospeltin 1957. Pillit vaihtuvat joka vuosi, joten '
+            + 'niitä kerätään.',
+          lyhyt: 'Péckvillchen on Luxemburgin pääsiäismaanantain markkinoilla myytävä linnun '
+            + 'muotoinen savipilli.',
+          selite: 'Nospeltissa vuonna 1991 valmistettu Péckvillchen-savipilli.',
+          lahde: 'Cornischong, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Hypitään pyhimyksen haudalle',
+          aika: 'helluntaitiistai',
+          tiedosto: 'Luxembourg, foulard procession dansante (101).jpg',
+          teksti: 'Helluntaitiistaina Echternachin kaduilla hypitään: pyhiinvaeltajat pitävät '
+            + 'kiinni valkoisen nenäliinan päistä ja tanssivat vasemmalta oikealle, '
+            + 'jolloin jono etenee hitaasti. Soittajat esittävät vuosisataista sävelmää, '
+            + 'joka muistuttaa irlantilaista jigiä ja perustuu kansanlauluun Adam had '
+            + 'seven sons. Matka jokisillalta basilikaan on noin 1,5 kilometriä, ja '
+            + 'perillä hypitään Pyhän Willibrordin haudan ohi. UNESCO merkitsi kulkueen '
+            + 'aineettoman kulttuuriperinnön luetteloon 2010.',
+          lyhyt: 'Echternachin hyppelykulkue on helluntaitiistaina järjestettävä '
+            + 'pyhiinvaellus, jossa kuljetaan tanssien nenäliinoista kiinni pitäen.',
+          selite: 'Hyppelykulkueessa käytetty nenäliina, jossa on kulkueen tunnus. Kulkue '
+            + 'kuuluu UNESCOn aineettoman kulttuuriperinnön luetteloon.',
+          lahde: 'GilPe, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mistä pyhiinvaeltajat pitävät kiinni Echternachin hyppelykulkueessa?',
+        vaihtoehdot: [
+          'Puisesta rististä',
+          'Nenäliinan päistä',
+          'Palavasta kynttilästä',
+          'Toistensa hatuista',
+        ],
+        oikea: 1,
+        fakta: 'Echternachin hyppelykulkueessa pyhiinvaeltajat pitävät kiinni valkoisen '
+          + 'nenäliinan päistä ja hyppivät vasemmalta oikealle.',
+      },
+    },
+  ],
   SVK: [
     {
       id: 'historia',
