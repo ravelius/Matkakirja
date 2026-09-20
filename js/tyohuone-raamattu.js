@@ -9980,7 +9980,14 @@ export const RAAMATTU = {
           + 'pois linssin ajaksi" (kaappaus topografia-meret-puuttuvat.webp: Intian '
           + 'valtameri tasaisina sinisina suorakaiteina, Kaspianmeri/jarvet puuttuvat) -> '
           + 'Opus 2: merilaatat (batymetria) eivat lataudu tai puuttuvat amparista + '
-          + 'sisajarvet; musiikki pois linssin ajaksi samalla mekanismilla kuin astrossa.',
+          + 'sisajarvet; musiikki pois linssin ajaksi samalla mekanismilla kuin astrossa. '
+          + 'ASTRO-AANI (Opus 2 e4336037, 15.05): humina ei ollut rikki - musiikki jai '
+          + 'soimaan paalle, koska asetaMusiikkitila("linssi") palasi hiljaa (TILARAIDAT '
+          + 'tuntee vain lehti/matkalaukku) -> linssi kutsuu stopPohjaMusiikki ja pitaa '
+          + 'raidan kiinni koko linssin ajan (myos kytkimen paluun yli); savuke 32/32. '
+          + 'KYSYMYS OMISTAJALLE: humina on musiikkikytkimen takana (LISAYS 8) - jos kytkin '
+          + 'on pois, humina ei soi; irrotetaanko humina musiikkikytkimesta '
+          + '(aanimaisema, ei kappale)? Mergetty v1973-prepiin.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
