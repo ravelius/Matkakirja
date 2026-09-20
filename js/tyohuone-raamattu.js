@@ -9763,7 +9763,14 @@ export const RAAMATTU = {
           + '(Opus 1 59f13671, 08.40): EI tuotevika - traileri poistaa itsensa 10 s:ssa, '
           + 'savuke mittasi kesken trailerin -> mittari odottaa trailerin pois; savuke-'
           + 'pollon punaiset 16 -> 11 (jaljella: alanappirivi 345/390, bittikartan '
-          + 'tarkkuus, paneelin reunavalit, move-korostus, vihjekupla - eivat jonossa).',
+          + 'tarkkuus, paneelin reunavalit, move-korostus, vihjekupla - eivat jonossa). '
+          + 'KIERROS 18 (Sonnet 1 fdaa610e, v1973, 08.40): Brysselin ja Ljubljanan '
+          + 'Nahtavyydet toimivat numeroympyroin; pallo latautuu; Frederiksborg OK. VIAT: '
+          + 'Ranskan pelikartalla EI jokiviivoja millaan zoomilla (viivataso ei piirry?) '
+          + '-> Opus 2 heti; Gironde yha kaksinkertainen (korjaus v1974:ssa + tasokartta '
+          + '1b); DNK/EST aariviiva kaukokuvassa musta moykky (vakavuus 2) -> Opus 1; '
+          + 'Padisen arvonimi yha Pariisin (toinen polku) -> Opus 1; Ljubljanan numerot '
+          + '3/4 ja 7/8 paallekkain -> Sonnet 3 tormayksen vaisto. Sonnet 1 pysahtyi.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
