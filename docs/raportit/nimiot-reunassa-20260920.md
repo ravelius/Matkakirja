@@ -194,14 +194,82 @@ Lähde: **elävä** = kohdemaan oma nosto ei vielä poltettu, **poltettu**
 
 Puhtaat (0 löydöstä kaikissa neljässä ruutukoossa, molemmilla ajoilla): **UKR**.
 
-## Seuraava vaihe
+## Ei korjattu tässä erässä (9 löydöstä)
 
-Korjaus omana haaranaan: siirretään yllä olevien nimiöiden ankkuri-
-koordinaattia sisäänpäin (vastakkaiseen suuntaan kuin "Suunta"-sarake)
-verran, joka riittää pahimman mitatun ylityksen kattamaan pienellä
-marginaalilla — ei geometriamuutoksia karttaan, vain nimiöiden/
-maastokohteiden datan `laudat.maailmankartta`/`laudat.europe`-
-koordinaatit tiedostoissa `js/packs/maastokohteet-<iso>.js` ja
-`js/packs/maalehtinostot-<iso>.js` (tai vastaava kohdepaketti kunkin
-maan osalta). Poikkeus: POL/Haikaranpesä tarvitsee siirron sekä ylös-
-että oikealle päin (siirto lounaaseen).
+Näiden 118:sta ei ole yksiselitteistä yhtä lähdekenttää, tai ne
+osoittautuivat naapurimaan väärin kohdistuneiksi eläintäky-merkeiksi
+(oikea omistaja selvitetty koodista, `ELAINTAKYT`-taulu
+`js/packs/elaintakyt.js`):
+
+| Löydös (mitattu maa) | Todellinen omistaja | Syy |
+| --- | --- | --- |
+| CZE Karlovy Vary | ? | nimi esiintyy kahdessa tiedostossa (hahmotelma-cze.js, maakartat.js), ei tarkistettu kumpi piirtää pallolaudalla |
+| FRA Bordeaux | ? | nimi kolmessa tiedostossa (fokus-grc.js, maakartat.js, nakyvat-kaupungit-fra.js) |
+| GRC Ioánnina | ? | nimi kahdessa tiedostossa (fokus-grc.js, fokuskohteet-grc.js) |
+| DEU Mangalitsa | **HUN** | HUN:n oma eläintäky ("mangalitsa"), näkyy Saksan näkymän reunalla naapurina |
+| HUN Mangalitsa | HUN (oma) | oikea maa, mutta ks. Ei korjattu -osion perustelu alla |
+| ITA Dalmatianpentu | **HRV** | Kroatian oma eläintäky ("dalmatianpentu") |
+| POL Haikaranpesä | **LTU** | Liettuan oma eläintäky ("haikaranpesä") |
+| SWE Haikaranpesä | **LTU** | sama kuin edellä, eri näkymästä |
+| SWE Myskihärkä | **NOR** | Norjan oma eläintäky ("myskihärkä") |
+
+## Korjausyritys paljasti: nimiöt eivät ole staattisia koordinaatteja
+
+**Pilotoin korjauksen Ranskan 6 selkeällä löydöksellä ennen skaalausta
+(kustannuskurin mukaisesti) ja tulos oli osittainen — koko erää EI
+korjattu.**
+
+Mekanismi: nimiön nykyinen ruutupiste luetaan `l.nostot.osumat()`:sta,
+tavoitepiste (ylitys + 24 px marginaali sisäänpäin) muunnetaan lat/lng-
+koordinaatiksi globe.gl:n omalla käänteisprojektiolla
+(`pallo.toGlobeCoords(x, y)`) ja edelleen laudan yksiköiksi samalla
+Millerin lieriö -kaavalla kuin data on tuotettu
+(`tools/johda-maastokohteet.mjs` `laudat()`). Työkalu
+`tools/korjaa-nimio-reuna.mjs` (committoitu, `--kuivaharjoitus`-lippu).
+
+**Ranskan pilotin tulos** (6 löydöstä, ajettu oikeasti ja mitattu
+uudelleen): 4/6 korjaantui (Saint-Malo, Nantes, Marseillen saippua,
+Cosquerin luola). **2/6 EI muuttunut lainkaan** (Nancy, Place
+Stanislas ja Välimeri pysyivät TÄSMÄLLEEN samassa ylityksessä
+koordinaatin siirrosta huolimatta), ja **kolme UUTTA reunaan osuvaa
+nimiötä ilmestyi** (Mont-Saint-Michel, Vuorovesi 2015, Pétanque) —
+näitä ei ollut alkuperäisessä 118 löydöksen listassa.
+
+**Syy: nimiöiden sovittelu (`js/pallolauta/sovittelu.js`) on
+DYNAAMINEN törmäyksenvälttelyjärjestelmä, ei staattinen ladonta.**
+`l.ladoHeti()` laskee jokaiselle nimiölle kyljen (puoli) ja pienen
+siirron (dx/dy) suhteessa NAAPUREIHINSA joka kerta uudelleen. Kun
+ankkuria siirtää, sovittelu voi laskea dx/dy:n niin, että lopputulos
+palaa lähelle alkuperäistä ruutupaikkaa (Nancy/Välimeri), TAI se voi
+työntää jonkin ENNALLAAN pysyneen naapurinimiön uuteen, aiemmin
+turvalliseen paikkaan (kolme uutta löydöstä). Ankkurin siirto ei siis
+suoraan hallitse lopullista ruutupaikkaa — se on saman kaltainen
+ongelma kuin fysiikkasimulaation yhden kappaleen siirtäminen ja
+odottaminen, että muut eivät reagoi.
+
+**Reversoin Ranskan pilottimuutokset** (git checkout, työpuu puhdas)
+ennen kuin jatkoin muihin maihin, koska tulos ei ollut luotettava eikä
+"siirrä sisäänpäin yhtenä haarana" toteutunut siististi.
+
+**Päätöstä vaativa kysymys Fablelle:** kumpi tie?
+
+1. **Iteratiivinen korjaus per maa**: muokkaa → lataa sivu uudelleen →
+   mittaa koko maa uudelleen → jos yhä löydöksiä (vanhoja tai uusia),
+   toista. Toimii, mutta jokainen maa vaatii moninkertaisen
+   selainlatauksen (arvio: 3–6× 32 maan ajo koko listan läpiviemiseksi,
+   kymmeniä minuutteja lisää, ja silti mahdollisesti jää tasapainoon
+   jäämättömiä tapauksia).
+2. **Koodikorjaus sovitteluun**: opeta `js/pallolauta/sovittelu.js`
+   tuntemaan ruudun reuna omana esteenään (sama periaate kuin nykyinen
+   "nimi ei mene kaupunkinimen päälle" -sääntö, mutta reunaa vastaan).
+   Tämä olisi pysyvä, yleinen korjaus kaikille nykyisille JA
+   tuleville nimiöille — mutta se on koodimuutos (Karttaseppä/
+   Pelikoodari, ei Sisältökirjuri).
+3. Rajattu yhdistelmä: korjaa data-anchorit VAIN niille 4/6-tyyppisille
+   tapauksille, jotka pilotissa siirtyivät kerralla oikein (ei
+   iteraatiota), ja jätä loput (kuten Nancy/Välimeri -tyyppiset, joissa
+   sovittelu syö korjauksen) koodikorjauksen varaan.
+
+Odotan päätöstä ennen kuin teen enempää koordinaattimuutoksia — data on
+koskematon (git status puhdas tässä haarassa lukuun ottamatta uutta
+työkalua).
