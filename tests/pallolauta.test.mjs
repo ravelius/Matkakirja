@@ -1263,7 +1263,17 @@ test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peru
   const liikuNappi = ui.match(/ {2}vaihdaLiuku\(\) \{[\s\S]*?\n {2}\}\n/)[0];
   assert.match(liikuNappi, /if \(this\.liukuAuki\) this\.matkaSessio = this\.game\.cityOf\?\.\(\)\?\.id \?\? 'kesken';/,
     'matkasessio ei ala Liiku-napin painalluksesta');
-  assert.match(ui, /\? \(matkalla \? \[\.\.\.\(game\.board\.adj\.get\(kaupunki\.id\) \?\? \[\]\)\] : \[\]\)/);
+  /*
+   * KANTAMAN KAARET (omistajan päätös 20.9.2026 klo 13.45): viuhka on
+   * heiton kantama, ei enää pelkkä oman kaupungin naapurusto. Sääntö on
+   * yhä yhdessä paikassa ja yhä matkasession takana; muuttunut on vain
+   * se, MITKÄ kaaret sessio näyttää. Kantama luetaan pelin omasta
+   * laskelmasta (game.moves, js/rules.js findMoves), ja ennen heittoa
+   * varareittinä on entinen naapurusto.
+   */
+  assert.match(ui, /const kantamanKaaret = \(\) => \{/);
+  assert.match(ui, /const liikkeet = game\.phase === 'move' \? game\.moves : null;/);
+  assert.match(ui, /\? \(matkalla\s*\n\s*\? \(kantamanKaaret\(\) \?\? \[\.\.\.\(game\.board\.adj\.get\(kaupunki\.id\) \?\? \[\]\)\]\)\s*\n\s*: \[\]\)/);
   // Kommentit pois: piirtäjän tiedostokommentti SAA kertoa säännön, koodi ei toteuttaa sitä.
   const piirtajat = lue('../js/pallolauta/reitit.js').replace(/\/\*[\s\S]*?\*\/|\/\/.*$/gm, '');
   for (const kentta of ['liukuAuki', 'matkaSessio']) {
