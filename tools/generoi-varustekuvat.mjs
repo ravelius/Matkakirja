@@ -24,6 +24,9 @@
  * maatiedot. Malli vaihdettavissa VARUSTE_MALLI-ympäristömuuttujalla.
  *
  * Ulos: assets/varusteet/varuste-<tunnus>.jpg suoraan 512×512:na.
+ * VARUSTE_ULOS=<kansio> ajaa EHDOKKAAT-listan (astronautin kameran
+ * kuvake-ehdokkaat) siihen kansioon Fablen valittavaksi — ei
+ * assets/varusteet/-kansioon.
  * Malli antaa 1024×1024 PNG:n, ja pienennys tehdään tässä samassa
  * ajossa Chromiumin kanvaasilla (playwright on jo repon riippuvuus) —
  * erillistä pienennysvaihetta ei siis tarvita, toisin kuin aarre- ja
@@ -207,14 +210,60 @@ const KUVAT = [
     + 'dial'],
 ];
 
+/*
+ * ASTRONAUTIN KAMERAN KUVAKE-EHDOKKAAT (omistaja 20.9.2026 klo 14.50:
+ * *"tee astronautin kameralle uusi kuvake, missä on astronautti ja
+ * kamera"*; Fable valitsee kolmesta ehdokkaasta ennen käyttöönottoa).
+ *
+ * Ehdokkaat EIVÄT mene assets/varusteet/-kansioon vaan VARUSTE_ULOS-
+ * kansioon (esim. docs/raportit/kaappaukset/astro-kuvake-20260920/),
+ * josta Fable katsoo ne. Kääre on sama kuin muilla varusteilla, mutta
+ * "no people" väistyy: astronautti on kuvan hahmo. Kolme eri
+ * sommitelmaa, jotta valinta on aito.
+ */
+const ASTRONAUTTI = 'an astronaut in a bulky white spacesuit with a '
+  + 'round reflective gold-tinted helmet visor';
+const EHDOKKAAT = [
+  ['astro-1', `${ASTRONAUTTI}, seen from the waist up, holding up a `
+    + 'sturdy vintage film camera with a large round lens in both '
+    + 'thick gloved hands, the camera turned toward the viewer so its '
+    + 'big round lens is the center of the picture; inside that round '
+    + 'lens a small vivid full-color photograph of the curved blue '
+    + 'Earth seen from space with white clouds and a thin bright rim '
+    + `of atmosphere; the astronaut floats above ${KARTTA}; the Earth `
+    + 'in the lens is the one strong accent color in an otherwise '
+    + 'brown and cream picture; no stars, no spacecraft, nothing '
+    + 'written on the camera or the suit'],
+  ['astro-2', `${ASTRONAUTTI} floating weightless, seen from the side `
+    + 'and slightly above, aiming a vintage film camera downward at '
+    + `${KARTTA} spread below; where the camera looks, a round patch of `
+    + 'the pale map turns into a vivid full-color photograph of blue '
+    + 'sea, white clouds and a brown desert coastline, as if seen from '
+    + 'orbit, that round patch being the one strong accent color in an '
+    + 'otherwise brown and cream picture; no stars, no spacecraft, '
+    + 'nothing written anywhere'],
+  ['astro-3', `a close portrait of ${ASTRONAUTTI}, the round helmet `
+    + 'filling most of the square, the visor reflecting a vivid '
+    + 'full-color curved blue Earth with white clouds and a thin bright '
+    + 'blue rim of atmosphere; in front of the visor the astronaut '
+    + 'lifts a small vintage film camera with a round brass-rimmed '
+    + `lens in one gloved hand; behind the helmet lies ${KARTTA}; the `
+    + 'Earth in the visor is the one strong accent color in an '
+    + 'otherwise brown and cream picture; no stars, no spacecraft, '
+    + 'nothing written on the helmet, the camera or the suit'],
+];
+const TYYLI_HAHMO = (aihe) => TYYLI(aihe).replace('no people', 'no other people, the astronaut is the only figure');
+
 const pyydetyt = process.argv.slice(2);
-const jono = KUVAT.filter(([k]) => !pyydetyt.length || pyydetyt.includes(k));
+const ULOS = process.env.VARUSTE_ULOS ?? null;
+const LAHTEET = ULOS ? EHDOKKAAT : KUVAT;
+const jono = LAHTEET.filter(([k]) => !pyydetyt.length || pyydetyt.includes(k));
 if (!jono.length) {
-  console.error('Ei kohteita. Tunnetut:', KUVAT.map(([k]) => k).join(', '));
+  console.error('Ei kohteita. Tunnetut:', LAHTEET.map(([k]) => k).join(', '));
   process.exit(1);
 }
 
-mkdirSync(resolve(JUURI, 'assets/varusteet'), { recursive: true });
+mkdirSync(ULOS ? resolve(JUURI, ULOS) : resolve(JUURI, 'assets/varusteet'), { recursive: true });
 
 /*
  * Pienennys 1024 → 512 ja JPEG-pakkaus Chromiumin kanvaasilla.
@@ -252,7 +301,7 @@ async function generoi(tunnus, aihe, pienentaja) {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      contents: [{ parts: [{ text: TYYLI(aihe) }] }],
+      contents: [{ parts: [{ text: (ULOS ? TYYLI_HAHMO : TYYLI)(aihe) }] }],
       generationConfig: {
         responseModalities: ['IMAGE'],
         imageConfig: { aspectRatio: '1:1' },
@@ -273,7 +322,9 @@ async function generoi(tunnus, aihe, pienentaja) {
     return false;
   }
   const jpg = await pienentaja.pienenna(Buffer.from(b64, 'base64'));
-  const polku = resolve(JUURI, `assets/varusteet/varuste-${tunnus}.jpg`);
+  const polku = ULOS
+    ? resolve(JUURI, ULOS, `${tunnus}.jpg`)
+    : resolve(JUURI, `assets/varusteet/varuste-${tunnus}.jpg`);
   writeFileSync(polku, jpg);
   console.log(`${tunnus}: ${(jpg.length / 1024).toFixed(0)} kt → ${polku}`);
   return true;

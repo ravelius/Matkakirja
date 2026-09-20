@@ -89,6 +89,7 @@ import { readFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { decodePng, luminanssi } from './pallon-liike-mittarit.mjs';
+import { suorituskykyVaatija } from './suorituskyky.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '';
@@ -199,6 +200,8 @@ const vaadi = (nimi, ok, lisa = '') => {
   tulokset.push({ nimi, ok });
   console.log(`${ok ? 'OK  ' : 'FAIL'}  ${nimi}${lisa ? ` — ${lisa}` : ''}`);
 };
+// Aikaväitteet PR-portin ohi (tools/savukkeet/suorituskyky.mjs).
+const vaadiAika = suorituskykyVaatija(vaadi);
 
 /*
  * PIKSELIT LUETAAN KUVAKAAPPAUKSESTA. WebGL-kangas ei anna
@@ -1627,7 +1630,16 @@ async function ajaNakyma(nimi) {
   vaadi(t('45a: ytimen kirkkaus on sädekehän reunaa suurempi'),
     Boolean(valo) && valo.ydin > valo.kehanReuna + 10,
     `ydin ${valo?.ydin} vs. sädekehän reuna (13 px) ${valo?.kehanReuna}`);
-  vaadi(t('45b: pinta pisteen vieressä on kirkkaampi kuin kaukana'),
+  /*
+   * 45b ON KUORMAHERKKÄ (Fable 20.9.2026, PR #2633): CI:n simulaattori-
+   * kuormassa ero oli −0,8 (57,8 vs 58,6), yksin ajettuna 9,6 — mitta
+   * vertaa kahta maastonäytettä, joiden vaihtelu peittää valaisun, kun
+   * ohjelmisto-WebGL on kuormassa. Vartio on suorituskykysarjassa
+   * (SAVUKE_SUORITUSKYKY=1, tools/savukkeet/suorituskyky.mjs); PR-
+   * portissa se tulostuu INFO-rivinä. 45c on tarkempi valaisumitta ja
+   * pysyy portissa.
+   */
+  vaadiAika(t('45b: pinta pisteen vieressä on kirkkaampi kuin kaukana'),
     Boolean(valo) && valo.lahella - valo.kaukana >= 3, // Fable 18.9.2026: maastonaytteen vaihtelu (mitattu 4,6 kuormassa), valaisu 45c on tarkempi mitta
     `10 px ${valo?.lahella} vs. 40 px ${valo?.kaukana} `
     + `(ero ${valo ? (valo.lahella - valo.kaukana).toFixed(1) : '—'}, vaadittu ≥ 3;`
@@ -1829,7 +1841,11 @@ async function ajaNakyma(nimi) {
     Boolean(linssi.avaruus?.pinnanOsoite) && linssi.avaruus.pinnanOsoite !== 'null',
     `pinnanOsoite "${linssi.avaruus?.pinnanOsoite}", reliefi ${linssi.avaruus?.reliefi},`
     + ` kesto ${linssi.avaruus?.reliefinKestoMs} ms`);
-  vaadi(t('reliefi ehti pinnalle kahdeksassa sekunnissa'),
+  /* Kahtia: RELIEFI TULI on toiminnallinen, 8 s suorituskykyä (suorituskyky.mjs). */
+  vaadi(t('reliefi ehti pinnalle'),
+    linssi.avaruus?.reliefinKestoMs > 0,
+    `${linssi.avaruus?.reliefinKestoMs} ms`);
+  vaadiAika(t('reliefi ehti pinnalle kahdeksassa sekunnissa'),
     linssi.avaruus?.reliefinKestoMs > 0 && linssi.avaruus.reliefinKestoMs <= 8000,
     `${linssi.avaruus?.reliefinKestoMs} ms`);
   const keskiKuva = decodePng(await s.screenshot({ type: 'png', timeout: 120000 }));

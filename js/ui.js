@@ -7881,6 +7881,24 @@ export class UI {
     return auki;
   }
 
+  /**
+   * Lentokohteet, jotka lentolista tarjoaa juuri nyt (lentokentät ja
+   * mannerlennot). Tyhjä, ellei LENTÄEN-lista ole auki. Sama joukko
+   * piirtää lentokaaret (matkareittienValinta) ja tuo kohdekaupunkien
+   * merkit pallolle (js/pallolauta/lauta.js pelinKaupunkirajaus).
+   *
+   * @returns {string[]} kaupunkitunnukset, ilman kaksoiskappaleita
+   */
+  tarjotutLennot() {
+    const { game } = this;
+    if (!(this.travelExpanded && this.travelSuodatin === 'air')) return [];
+    if (this.katselu || game.player?.isBot) return [];
+    const kohteet = [];
+    for (const id of game.airportDestinations?.() ?? []) kohteet.push(id);
+    for (const k of game.mannerLennot?.() ?? []) kohteet.push(k.city);
+    return [...new Set(kohteet)];
+  }
+
   matkareittienValinta() {
     const { game } = this;
     const vaiheessa = game.phase === 'roll' || game.phase === 'move';
@@ -7932,21 +7950,28 @@ export class UI {
       }
       return kaaret.size ? [...kaaret] : null;
     };
-    const reittiTunnukset = kaupunki
-      ? (matkalla
-        ? (kantamanKaaret() ?? [...(game.board.adj.get(kaupunki.id) ?? [])])
-        : [])
-      : (kesken ? [kesken] : []);
     const lennotElavana = pyramidiKattaa(game.pack.id);
-    const lentoKohteet = [];
-    if (lennotElavana && naytetaan && kaupunki
-      && this.travelExpanded && this.travelSuodatin === 'air') {
-      for (const id of game.airportDestinations?.() ?? []) lentoKohteet.push(id);
-      for (const k of game.mannerLennot?.() ?? []) lentoKohteet.push(k.city);
-    }
+    const lentoKohteet = naytetaan && kaupunki ? this.tarjotutLennot() : [];
     if (lennotElavana && this.lentoKaari?.b) lentoKohteet.push(this.lentoKaari.b);
-    const lennot = [...new Set(lentoKohteet)];
+    const lennot = lennotElavana ? [...new Set(lentoKohteet)] : [];
     const lentoLahto = this.lentoKaari?.a ?? kaupunki?.id ?? null;
+    /*
+     * LENTONÄKYMÄSSÄ EI LIFTAUSKAARIA (omistaja 20.9.2026 klo 14.40,
+     * sanatarkasti: *"lentonäkymässä liftausreitit pitää piilottaa ja
+     * lentoreittien kohde kaupungit pitää näkyä"*). Kun lentolista on
+     * auki tai lento valittu, kartta puhuu vain lennosta: heiton
+     * kantaman kaaret veisivät silmän väärään matkaan. Kohdekaupunkien
+     * merkit tulevat näkyviin pallon kaupunkirajauksessa
+     * (js/pallolauta/lauta.js pelinKaupunkirajaus → tarjotutLennot).
+     */
+    const lentonakyma = lennot.length > 0;
+    const reittiTunnukset = lentonakyma
+      ? []
+      : (kaupunki
+        ? (matkalla
+          ? (kantamanKaaret() ?? [...(game.board.adj.get(kaupunki.id) ?? [])])
+          : [])
+        : (kesken ? [kesken] : []));
     const avain = naytetaan && (reittiTunnukset.length || lennot.length)
       // Siirron ajan avain on vakio: vaiheen vaihtuminen kesken
       // animaation ei saa piirtää viivaa uudestaan.
@@ -18921,10 +18946,33 @@ export class UI {
     // "Ei linssiä" on aina ensimmäisenä: paluu tavalliseen karttaan on
     // yhtä lähellä kuin linssin valinta.
     liuskat.appendChild(this.linssiLiuska(null, 'Ei linssiä'));
-    for (const linssi of linssit) {
+    /*
+     * KESKENERÄISET OMALLE RIVILLEEN RUUDUKON LOPPUUN (omistaja
+     * 20.9.2026 klo 15.10: *"merkitse vertailulinssi, maidentiedot,
+     * sekä vesistölinssi harmaalla ja siirrä omalle rivilleen ja
+     * pienennä niiden ikonit. ne ovat vielä liian keskeneräisiä"*).
+     * Linssi kertoo itse (`kesken: true`, linssimoduulin oma metatieto
+     * kuten nimi ja kuvake); laukku latoo ne toiseen ruudukkoon
+     * harmaana ja pienempänä (css .linssi-liuskat-kesken). Napit ovat
+     * samat kuin valmiilla — esikatselu ja aktivointi toimivat.
+     */
+    const valmiit = linssit.filter((l) => !l.kesken);
+    const keskeneraiset = linssit.filter((l) => l.kesken);
+    for (const linssi of valmiit) {
       liuskat.appendChild(this.linssiLiuska(linssi.tunnus, linssi.nimi));
     }
     this.linssiValikko.appendChild(liuskat);
+    if (keskeneraiset.length) {
+      const kesken = html('nav', 'linssi-liuskat linssi-liuskat-kesken');
+      kesken.setAttribute('role', 'group');
+      kesken.setAttribute('aria-label', 'Keskeneräiset linssit');
+      for (const linssi of keskeneraiset) {
+        const nappi = this.linssiLiuska(linssi.tunnus, `${linssi.nimi} (keskeneräinen)`);
+        nappi.classList.add('kesken');
+        kesken.appendChild(nappi);
+      }
+      this.linssiValikko.appendChild(kesken);
+    }
     this.linssiTiedot = html('div', 'linssi-tiedot');
     this.linssiValikko.appendChild(this.linssiTiedot);
     this.paivitaLinssiNappi();
@@ -18943,18 +18991,15 @@ export class UI {
       /*
        * Sama pyöreä rajaus kuin aarteilla; jos kuva ei lataudu, aarreIkoni
        * pudottaa tilalle laattatyypin viivakuvakkeen. ASTRONAUTIN KAMERA
-       * -linssillä (satelliitti) EI ole maalattua varustekuvaa (omistaja
-       * 15.9.2026: "SVG inline ... ei ulkoisia tiedostoja") — sille
-       * varasolu on oma vektorikuvake (js/mapart.js drawTokenIcon
-       * 'linssi-satelliitti') eikä muiden linssien jaettu taikalasi.
+       * -linssillä (satelliitti) on 20.9.2026 alkaen oma maalattu
+       * varustekuva (omistaja klo 14.50: *"tee astronautin kameralle
+       * uusi kuvake, missä on astronautti ja kamera"*; Fable valitsi
+       * ehdokkaan 3, docs/raportit/kaappaukset/astro-kuvake-20260920/).
+       * Varasolu on yhä sen oma vektorikuvake (js/mapart.js
+       * 'linssi-satelliitti'), ei muiden linssien jaettu taikalasi.
        */
       const onSatelliitti = tunnus === 'satelliitti';
-      // Ei kuva-osoitetta ollenkaan tälle linssille: aarreIkoni piirtää
-      // vektorikuvakkeen suoraan sen sijaan, että se yrittäisi ensin
-      // turhaan latautuvaa jpg:tä ja vaihtaisi vasta virheestä.
-      const tiedot = onSatelliitti
-        ? { name: nimi }
-        : { kuva: `assets/varusteet/varuste-${tunnus}.jpg`, name: nimi };
+      const tiedot = { kuva: `assets/varusteet/varuste-${tunnus}.jpg`, name: nimi };
       nappi.appendChild(aarreIkoni(tiedot, onSatelliitti ? 'linssi-satelliitti' : 'linssi', 64));
     } else {
       // "Ei linssiä" ei ole esine, jolla olisi valokuva: yliviivatut

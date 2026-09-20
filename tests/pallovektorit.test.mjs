@@ -202,20 +202,73 @@ test('deltapurku: int16-deltat 1e-4 asteen tarkkuudella, molempiin suuntiin', ()
 
 test('janat: jokainen väli oma jana täsmälleen pinnan säteellä', () => {
   const sade = 100;
-  const { paikat, janoja } = vektorijanat([[[23.7, 37.9], [23.8, 38.0]]], sade);
+  // 0,06 astetta: alle jakorajan, joten väli on yksi jana (ks. seuraava testi).
+  const { paikat, janoja } = vektorijanat([[[23.7, 37.9], [23.75, 37.95]]], sade);
   assert.equal(janoja, 1);
   assert.equal(paikat.length, 6);
   const a = pallonPiste(37.9, 23.7, sade);
-  const b = pallonPiste(38.0, 23.8, sade);
+  const b = pallonPiste(37.95, 23.75, sade);
   const lahella = (x, y, mika) => assert.ok(Math.abs(x - y) < 1e-3, `${mika}: ${x} ≠ ${y}`);
   lahella(paikat[0], a.x, 'x0'); lahella(paikat[1], a.y, 'y0'); lahella(paikat[2], a.z, 'z0');
   lahella(paikat[3], b.x, 'x1'); lahella(paikat[4], b.y, 'y1'); lahella(paikat[5], b.z, 'z1');
   // Piste on säteellä R: VEKTORIT_KORKEUS on 0 (parallaksi, luku 2.3).
   lahella(Math.hypot(paikat[0], paikat[1], paikat[2]), sade, 'säde');
   // Kolme pistettä = kaksi janaa (LineSegments2 haluaa parit).
-  assert.equal(vektorijanat([[[0, 0], [1, 0], [2, 0]]], sade).janoja, 2);
+  assert.equal(vektorijanat([[[0, 0], [0.05, 0], [0.1, 0]]], sade).janoja, 2);
   assert.equal(vektorijanat([[[0, 0]]], sade).janoja, 0, 'yksinäinen piste ei ole jana');
   assert.equal(vektorijanat([], sade).janoja, 0);
+});
+
+test('janat: pitkä jana jaetaan paloiksi, joiden päät ovat pinnalla (Gironde 20.9.2026)', () => {
+  const sade = 100;
+  /*
+   * Médocin ranta: yksi 0,50 asteen jana (−1,199 E 45,121 N → −1,260 E
+   * 44,627 N). Jänteen keskikohta painui pinnan alle 9,5·10⁻⁶·R ja
+   * syvyystesti leikkasi korostuksen pois; paloina jokainen pää on
+   * pinnalla ja painuma on enintään 0,1 asteen janan painuma.
+   */
+  const a = [-1.199, 45.121];
+  const b = [-1.260, 44.627];
+  const yksi = vektorijanat([[a, b]], sade, 0);
+  assert.equal(yksi.janoja, 1, 'enimmäispituus 0 = ei jakoa (vertailukohta)');
+  const { paikat, janoja } = vektorijanat([[a, b]], sade);
+  assert.equal(janoja, 5, '0,50 astetta / 0,1 = 5 palaa');
+  assert.equal(paikat.length, 5 * 6);
+  // Päät ovat täsmälleen alkuperäiset pisteet.
+  const alku = pallonPiste(a[1], a[0], sade);
+  const loppu = pallonPiste(b[1], b[0], sade);
+  const lahella = (x, y, mika) => assert.ok(Math.abs(x - y) < 1e-3, `${mika}: ${x} ≠ ${y}`);
+  lahella(paikat[0], alku.x, 'alku x'); lahella(paikat[1], alku.y, 'alku y'); lahella(paikat[2], alku.z, 'alku z');
+  lahella(paikat[27], loppu.x, 'loppu x'); lahella(paikat[28], loppu.y, 'loppu y'); lahella(paikat[29], loppu.z, 'loppu z');
+  // Palat ovat ketju: palan loppu on seuraavan alku, ja jokainen pää on säteellä R.
+  for (let k = 0; k < janoja; k += 1) {
+    const o = k * 6;
+    lahella(Math.hypot(paikat[o], paikat[o + 1], paikat[o + 2]), sade, `pala ${k} alku säde`);
+    lahella(Math.hypot(paikat[o + 3], paikat[o + 4], paikat[o + 5]), sade, `pala ${k} loppu säde`);
+    if (k) {
+      lahella(paikat[o], paikat[o - 3], `pala ${k} ketju x`);
+      lahella(paikat[o + 1], paikat[o - 2], `pala ${k} ketju y`);
+      lahella(paikat[o + 2], paikat[o - 1], `pala ${k} ketju z`);
+    }
+  }
+  // Painuma: yhden jänteen keskikohta vs. palojen keskikohta (R − säde).
+  const painuma = (p) => sade - Math.hypot(...p);
+  const keski = (o) => [(paikat[o] + paikat[o + 3]) / 2, (paikat[o + 1] + paikat[o + 4]) / 2, (paikat[o + 2] + paikat[o + 5]) / 2];
+  const jannePainuma = painuma(keski(0).map((v, i) => (yksi.paikat[i] + yksi.paikat[i + 3]) / 2));
+  const palaPainuma = painuma(keski(12));
+  assert.ok(jannePainuma > 5e-4, `koko jänne painuu selvästi: ${jannePainuma}`);
+  assert.ok(palaPainuma < jannePainuma / 10, `pala painuu alle kymmenesosan: ${palaPainuma} vs ${jannePainuma}`);
+  // Lyhyt jana ei jakaudu: rosoinen ranta ei kasva.
+  assert.equal(vektorijanat([[[23.7, 37.9], [23.75, 37.95]]], sade).janoja, 1);
+  // Juuri rajan yli (0,127 astetta) jakautuu kahtia — pituus mitataan
+  // leveyspiirin kutistuman kanssa, ei pelkkänä asteruudukkona.
+  assert.equal(vektorijanat([[[23.7, 37.9], [23.8, 38.0]]], sade).janoja, 2);
+  // Sauman yli: 179,96 → −179,96 on 0,08 astetta, ei 359,9 — yksi jana.
+  assert.equal(vektorijanat([[[179.96, 0], [-179.96, 0]]], sade).janoja, 1);
+  // Sauman yli pitkänä: palat kulkevat lyhyempää tietä (x ≈ −R, ei +R).
+  const sauma = vektorijanat([[[179.5, 0], [-179.5, 0]]], sade);
+  assert.equal(sauma.janoja, 10);
+  assert.ok(sauma.paikat[3 * 6 + 2] < -sade * 0.99, `keskipala sauman puolella: z ${sauma.paikat[3 * 6 + 2]}`);
 });
 
 /*

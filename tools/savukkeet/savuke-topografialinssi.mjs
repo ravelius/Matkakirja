@@ -56,6 +56,7 @@ import { readFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join, extname, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { inflateSync } from 'node:zlib';
+import { suorituskykyVaatija } from './suorituskyky.mjs';
 
 const JUURI = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const ULOS = process.env.KAAPPAUKSET ?? '/tmp/matkakirja-kaappaukset';
@@ -165,6 +166,8 @@ const vaadi = (nimi, ok, lisa = '') => {
   tulokset.push({ nimi, ok, lisa });
   console.log(`${ok ? 'OK  ' : 'FAIL'}  ${nimi}${lisa ? ` — ${lisa}` : ''}`);
 };
+// Aikaväitteet PR-portin ohi (tools/savukkeet/suorituskyky.mjs).
+const vaadiAika = suorituskykyVaatija(vaadi);
 
 /* ----------------------------------------------------- PNG:n terävyys */
 /*
@@ -2060,7 +2063,8 @@ if (valahdysNaytteet.length > 1) {
     + `paluu alas ${valahdysNaytteet.map((x) => x.suurinPudotus.toFixed(1)).join(' / ')} `
     + `→ mediaani ${v.suurinPudotus.toFixed(1)}`);
 }
-vaadi(`${nimiA}: avauksessa ei ole välähdystä suhteessa linssin lopputilaan`,
+/* Kuormaherkkä kuten aikamittarit (Fable 20.9.2026): suorituskykysarjassa vartio, portissa INFO. */
+vaadiAika(`${nimiA}: avauksessa ei ole välähdystä suhteessa linssin lopputilaan`,
   valahdysLapi(v),
   `kehyksiä ${v.avausKehykset} (kattavuus ${(100 * v.avausKattavuus).toFixed(0)} %), `
   + `maksimi ${v.avausHuippu.toFixed(1)} vs vakiintunut ${v.vakiintunut.toFixed(1)} `
@@ -2175,9 +2179,15 @@ console.log(`  nimiön kontrasti: ${JSON.stringify(a.kontrasti)}`);
 
 const ruudulla = a.ketju.find((r) => r.vaihe === 'laatta-ruudulla')?.ms ?? null;
 const KETJUN_KATTO_MS = 400;
-vaadi(`${nimiA}: napautuksesta ensimmäiseen reliefikehykseen alle ${KETJUN_KATTO_MS} ms`,
-  MOOTTORI === 'webkit' ? ruudulla !== null : (ruudulla !== null && ruudulla < KETJUN_KATTO_MS),
+/* Kahtia: KEHYS TULI on toiminnallinen, ALLE 400 ms suorituskykyä (suorituskyky.mjs). */
+vaadi(`${nimiA}: napautuksesta tulee reliefikehys ruudulle`,
+  ruudulla !== null,
   `${ruudulla ?? '—'} ms — ${ketjuRivi(a.ketju)}`);
+if (MOOTTORI !== 'webkit') {
+  vaadiAika(`${nimiA}: napautuksesta ensimmäiseen reliefikehykseen alle ${KETJUN_KATTO_MS} ms`,
+    ruudulla !== null && ruudulla < KETJUN_KATTO_MS,
+    `${ruudulla ?? '—'} ms — ${ketjuRivi(a.ketju)}`);
+}
 
 /*
  * ══════════════════════════════════════════════════════════════════════
