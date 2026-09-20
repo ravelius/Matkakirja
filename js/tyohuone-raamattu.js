@@ -10141,6 +10141,14 @@ export const RAAMATTU = {
           + 'kirjoittaa Raamattuun" toteutuu niin, etta Fable tarkastaa tiivistetyn '
           + 'linjausosan ja hyvaksyy ennen mergea. Sonnet ei riita ristiriitojen '
           + 'tuomarointiin, Fablella koko tiedoston luku maksaisi liikaa.',
+        'FABLEN KONTEKSTIKURI (Fable 20.9.2026 klo 18.15, omistajan kysymys): sessiot '
+          + 'viestivat Fablelle vain kun era on valmis ja pushattu, kun ne ovat jumissa tai '
+          + 'tarvitsevat paatoksen, tai kun Fable kysyy - ei kuittauksia eika valiraportteja; '
+          + 'valmistumisviesti enintaan 8 rivia, pitka raportti tiedostoon docs/raportit/ ja '
+          + 'viestiin vain polku. Fable ei seuraa CI:ta (Julkaisija), ei lue tiedostoja '
+          + 'kokonaan (grep/head), paivittaa muistion vain virstanpylvaissa ja kasittelee '
+          + 'saapuneet viestit yhdella kierroksella. Raamatunkarsija (opus) aloitti 18.15 '
+          + 'haaralla raamatunkarsija, worktree ~/Matkakirja-raamattu.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
