@@ -368,7 +368,9 @@ export const KOROSTUS_PEITTO = 1;
  * kehä erottuu yhä korostukseksi mutta ei enää ole leveämpi kuin
  * kuvio, jota se seuraa.
  */
-export const VEKTORIT_KOROSTUS_LEVEYS_CSS = [1.6, 5];
+/* OMISTAJA 20.9.2026 klo 16.45 (Ranska koko iPadin ruudulla): "maan rajan
+ * viiva liian paksu" -> lahipaa 5 -> 3 css-px. */
+export const VEKTORIT_KOROSTUS_LEVEYS_CSS = [1.6, 3];
 /**
  * PIENIN PIIRRETTÄVÄ RENGAS laitepikseleinä (sama havainto). Rengas,
  * jonka laatikon lävistäjä on ruudulla tätä pienempi, ei piirrä muotoa
