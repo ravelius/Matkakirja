@@ -419,6 +419,46 @@ export const KOHDEKAUPUNGIN_NIMI_SUHDE = 1.3;
  * pidä kasvaa sumun mukana rajatta. Lattia on 1 — suurennus ei koskaan
  * pienennä mitään.
  */
+/** Nimiön turva-alue ruudun reunasta (px), laitteen turva-alueiden lisäksi. */
+export const NOSTOJEN_REUNAVARA_PX = 6;
+
+/**
+ * Ruudun laatikko sovittelua varten kotelon pikseleinä: reunavara joka
+ * laidalla ja laitteen turva-alueet (css :root --turva-yla/-ala/
+ * -vasen/-oikea = env(safe-area-inset-*)) siltä osin kuin ne
+ * ulottuvat kotelon sisään. Kotelo on karttaruutu, joka alkaa
+ * yläpalkin alta, joten yläturva-alue vähennetään kotelon omasta
+ * paikasta ikkunassa — ei koko lukuna.
+ *
+ * @param {HTMLElement} kotelo
+ * @returns {?{x0:number,y0:number,x1:number,y1:number}}
+ */
+export function nostojenReuna(kotelo, vara = NOSTOJEN_REUNAVARA_PX) {
+  const w = kotelo?.clientWidth ?? 0;
+  const h = kotelo?.clientHeight ?? 0;
+  if (!(w > 0) || !(h > 0)) return null;
+  let yla = 0;
+  let ala = 0;
+  let vasen = 0;
+  let oikea = 0;
+  if (typeof getComputedStyle === 'function' && typeof document !== 'undefined') {
+    const tyyli = getComputedStyle(document.documentElement);
+    const luku = (nimi) => parseFloat(tyyli.getPropertyValue(nimi)) || 0;
+    const r = kotelo.getBoundingClientRect?.();
+    const ikkunaW = window.innerWidth || w;
+    const ikkunaH = window.innerHeight || h;
+    // Turva-alue on ikkunan reunasta; kotelon sisään jää siitä se osa,
+    // jota kotelon oma etäisyys ikkunan reunaan ei jo kata.
+    yla = Math.max(0, luku('--turva-yla') - (r?.top ?? 0));
+    ala = Math.max(0, luku('--turva-ala') - (ikkunaH - (r?.bottom ?? ikkunaH)));
+    vasen = Math.max(0, luku('--turva-vasen') - (r?.left ?? 0));
+    oikea = Math.max(0, luku('--turva-oikea') - (ikkunaW - (r?.right ?? ikkunaW)));
+  }
+  return {
+    x0: vara + vasen, y0: vara + yla, x1: w - vara - oikea, y1: h - vara - ala,
+  };
+}
+
 export function poltetunMusteenSuurennus({
   leveysPx, dpr = 1, leveysYks, katto = PALLON_SALLITTU_VENYTYS,
 } = {}) {
@@ -1969,6 +2009,15 @@ export async function avaaPallolauta(ui) {
      * pyytää uuden ladonnan — kerros ei omista kameraa eikä tahtia.
      */
     ruutu: () => ({ leveys: kotelo.clientWidth, korkeus: kotelo.clientHeight }),
+    /*
+     * RUUDUN REUNA SOVITTELUN ESTEENÄ (omistaja 20.9.2026: nimiöt
+     * maalehden reunassa; js/pallolauta/sovittelu.js RUUDUN REUNA ON
+     * ESTE). Laatikko on kotelon pikseleinä: turva-alue
+     * NOSTOJEN_REUNAVARA_PX joka laidalla ja lisäksi laitteen omat
+     * turva-alueet (iOS env(safe-area-inset-*), css :root --turva-*)
+     * siltä osin kuin ne ulottuvat kotelon sisään.
+     */
+    reuna: () => nostojenReuna(kotelo),
     /*
      * PELIMERKIT OVAT LISTAN ESTEITÄ (PAATOKSET 32 kohta 3: lista ei
      * saa peittää *"kaupungin nimea eika pelinappulaa"*). Sama luku

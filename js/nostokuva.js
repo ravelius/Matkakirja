@@ -57,6 +57,7 @@
 import { html, suurennoksenMitat } from './ui-apurit.js';
 import { kortinKuvalahde, taytaLahderivi } from './tekijakortti.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
+import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
 
 /** Oman tyylitiedoston tunnus (sama kaava kuin muilla kelluvilla pinnoilla). */
 const NOSTOKUVA_TYYLIN_TUNNUS = 'nostokuva-tyyli';
@@ -317,7 +318,7 @@ export function nostokuvaAloita({
    */
   const selite = html('figcaption', 'nostokuva-selite');
   selite.append(
-    html('span', 'nostokuva-teksti', kuvatekstiLyhyt(kuva)),
+    lisaaHavainnekuvaMerkki(html('span', 'nostokuva-teksti', kuvatekstiLyhyt(kuva)), kuva),
     /*
      * LÄHDERIVI ON OLEMASSA MUTTA PIILOSSA VAIHEESSA 1. Se EI ole
      * turha: galleriakortit (skandaali, historian hetki, eläintäky)

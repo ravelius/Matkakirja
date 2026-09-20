@@ -593,8 +593,8 @@ function piirraTiedeliitteenSivu(ui, sailio, t, lahdeVara) {
     osio.appendChild(rivi);
     sailio.appendChild(osio);
   }
-  const lahde = t.lahde ?? lahdeVara;
-  if (lahde) sailio.appendChild(taytaLahderivi(html('p', 'fokusnosto-lahde'), lahde, t));
+  // Kortin lähderivi ei enää piirry (omistaja 20.9.2026, js/fokusnosto.js
+  // KORTIN LÄHDERIVI POIS); `t.lahde` säilyy datassa.
 
   /*
    * VIHJEIDEN SIIVOUS (omistajan raportti 3.9.2026, kuvakaappaus Benz
