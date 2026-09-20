@@ -103,3 +103,30 @@ tarjoilee tiedoston sivulle ja esilataa sen, piirto on drawImage keskipisteen ym
 kierrettynä; koko skaalautuu tasoittain (KUVAN_KOKOKERROIN z4 0,3 … z8 1,45).
 Luettelon metadataan kirjautuu `luokka: 'kuva'`, tiedostonimi ja kierto. Kuvat
 pudotetaan paikoilleen nimistötiedostoon ilman koodimuutosta.
+
+## Vedos (omistajan tilaus 20.9. ilta, ei polttoa)
+
+Kaappaukset `saapuminen-vedos.webp`, `biskaja-vedos.webp`, `lion-vedos.webp`,
+`pariisi-vedos.webp` (Pariisi lähizoomi z8). Data: `nimiot-vedos.json` (nimistö +
+Codexin koristeet), `nostotasot-vedos.json` (lajin → Codexin tyyppimerkki).
+
+- **Nostot kolmeen tasoon**: Sisältökirjurin `taso`-kenttä (sisalto-nostotasot-fra
+  e161176c, mergetty) kulkee keraaNostot → merkki → generaattori
+  (`--nostotasot <json>` on väliaikainen ohitus/kuvakartta). Taso 1 = symboli ja nimiö
+  1,5× + Codexin tyyppimerkki (assets/koristeet/nostotyypit/, 11 kpl) symbolin päällä;
+  taso 3 vain z7+ (peite ja piirto). Vedoksessa 6 ykköstasoa (Mont-Saint-Michel,
+  Mont Blanc, Chambord, Pont du Gard, Carcassonne, Lascaux); Étretat on hahmotelma
+  (`--ilman-hahmotelmia` pudottaa) ja Versailles'n peilisali tulee maalehtinostojen
+  polkua, jossa `taso` ei vielä kulje — Sisältökirjuri/Pelikoodari.
+- **HUOM. kohdemaan nostot ovat pelissä ELÄVIÄ** (v1983 KOHDEMAAN_NIMIOT_ELAVINA):
+  poltettu FRA-nostotaso ei näy Ranskassa pelattaessa, vain muista maista katsottuna.
+  Vedos on kaapattu kytkin pois (vain kaappauksen ajaksi), jotta poltettu ilme näkyy.
+  Tasot (isompi nimiö + kuvamerkki) on toteutettava myös elävään kerrokseen
+  (Pelikoodari) samasta `taso`-kentästä ja samoista kuvista.
+- **Horation reitti 1873**: nimiötason luokka `reitti` (pisteet [lon,lat], katkoviiva,
+  kursiivinimi keskijanan viereen), Calais–Amiens–Pariisi–Dijon–Chalon–Lyon–Valence–
+  Avignon–Marseille (PLM-rata, ei kaanonia).
+- **Codexin merikoristeet** (assets/koristeet/meri/): kompassiruusu-32 Lioninlahdella
+  (220 px z7), kompassiruusu-8 Biskajalla, fregatti/kuunari/höyry/kalastusvene 6 kpl.
+  Koe 3:n korjaukset: Kanaalin vene siirretty pois Picardien nimiön alta; Picardie
+  väistää Amiensin nostoa (väistöaskelia 17).
