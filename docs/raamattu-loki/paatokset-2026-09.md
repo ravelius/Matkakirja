@@ -127,3 +127,7 @@ Sovittelun keskinainen-vaihe: limittyvat parit 13/9 -> 0/0, nimioita nakyvissa 4
 ## MERINIMION TUPLAUKSEN ESTO TEHTY (Pelikoodari 7bbd2c37) (20.9.2026 klo 22.58)
 
 laattapyramidi.js pyramidinNimiot()/pyramidinMerinimet() lukevat luettelon nimiotaso.nimiot-taulun meri-avaimet (tyhja ennen polttoa); nostot.js jattaa kohdemaan meri-noston ladonnasta pois kun id tai nimen slug osuu avaimeen (kortti aukeaa liuskasta). Savuke 26/26, testit 3784/0. Menee v1983:een; vaikuttaa vasta polton jalkeen.
+
+## v1983 REITTIVERKKO-KORJAUS; MERIKOE 2 VIIMEISTELYT; POLTTOSUUNNITELMA KOHTA 6 (Karttaseppa) (20.9.2026 klo 22.59)
+
+Reittiverkon 40 328 janaa johtui Gironden 0,1 asteen janajaosta; verkolle oma 0,3 asteen jako -> 14 848 janaa, savuke 11/11 (karttaseppa-v1983-reittiverkko 0cfd7f0c, sis. kehan LOD). Merikoe 2 viimeistelyt (346dc6a2): purjelaivat 1,6x isommat ja tummemmat, kompassiruusu Lioninlahdella saapumisnakyman sisalla, nostot maakuntanimien esteiksi. Polttosuunnitelma kohta 6: tarkempi rantaviiva-aineisto (GSHHS full / OSM) vektoreihin ja polttoon - omistajan paatos. Poltto odottaa omistajan tarkennusta merestä.
