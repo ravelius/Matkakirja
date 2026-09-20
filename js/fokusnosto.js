@@ -79,6 +79,8 @@ import {
 } from './ui-apurit.js';
 import { asetaKuva, assetOsoite } from './media.js';
 import { kuvatekstiLyhyt } from './kuvatekstit.js';
+import { piirraKuvasarja } from './kuvasarja.js';
+import { lisaaHavainnekuvaMerkki } from './havainnekuva.js';
 import { valokuvaUrl, valokuvaVara } from './packs/africa-valokuvat.js';
 import {
   asetaKohdeNostot, asetaKohdeVisa, avaaFokuskohde, avaaKohdeSuurennos, rekisteroiLisakohteet,
@@ -990,18 +992,23 @@ function piirraNostonSisus(ui, sisalto, nosto, valmisKuva) {
   }
   sisalto.appendChild(teksti);
   if (nosto.valokuva) piirraNostonValokuva(ui, sisalto, nosto.valokuva);
-  if (nosto.lahde) {
-    /*
-     * KUVAN TEKIJÄRIVI VAIN SUURENNOKSESSA (omistaja 19.9.2026 klo
-     * 19.04): lehden nostoissa `lahde` on kuvan tekijä- ja lisenssirivi
-     * (esim. "Tuntematon kaivertaja (BnF/Gallica), Wikimedia Commons
-     * (public domain)"), ja se näkyy kuvan suurennoksessa. Tekstin oma
-     * lähde (esim. "en-Wikipedia …") jää näkyviin.
-     */
-    const kuvanRivi = KUVAN_TEKIJARIVI.test(nosto.lahde) && Boolean(nosto.kuva || nosto.tiedosto);
-    sisalto.appendChild((kuvanRivi ? kortinKuvalahde : taytaLahderivi)(
-      html('p', 'fokusnosto-lahde'), nosto.lahde, nosto,
-    ));
+  /*
+   * KORTIN LÄHDERIVI POIS (omistaja 20.9.2026, kaappaus nosto-lahderivi-
+   * pois-v1980.webp: *"Maalehden sivu 'ruoka', nosto '…' (js/packs/
+   * maa-kategoriat.js FRA, pelin omaa tarkistettua aineistoa). Teksti ja
+   * kuva luetaan lehdestä ajon aikana…"* on pelin sisäistä
+   * työpolkutekstiä, ei pelaajan lukemista). Fablen päätös: kortin
+   * alaosan lähderivi pois KAIKISTA nostotyypeistä (myös js/elaintaky.js,
+   * js/tiedeliite.js). `lahde`-kenttä säilyy datassa tarkistuksen
+   * kirjanpitona (tests/nostolahteet.test.mjs, tests/tyopolut.test.mjs).
+   *
+   * KUVAN TEKIJÄRIVI SÄILYY (omistaja 19.9.2026 klo 19.04): lehden
+   * nostoissa `lahde` voi olla kuvan tekijä- ja lisenssirivi, ja
+   * lisenssi vaatii sen näkyviin — se ladotaan kuvalähteenä
+   * (kortinKuvalahde, suurennoksessa), ei tekstin lähderivinä.
+   */
+  if (nosto.lahde && KUVAN_TEKIJARIVI.test(nosto.lahde) && Boolean(nosto.kuva || nosto.tiedosto)) {
+    sisalto.appendChild(kortinKuvalahde(html('p', 'fokusnosto-lahde'), nosto.lahde, nosto));
   }
   // Karttaliite tulee jutun JÄLKEEN, myös lähderivin jälkeen: se ei ole
   // jutun kuvitusta vaan erillinen arkki jutun välissä (ks.
@@ -1261,7 +1268,7 @@ export function piirraNostonKuva(
   kehys.appendChild(nappi);
   const teksti = html('figcaption', 'fokusnosto-kuvateksti');
   teksti.append(
-    html('span', 'fokusnosto-kuvaselite', kuvatekstiLyhyt(kuva)),
+    lisaaHavainnekuvaMerkki(html('span', 'fokusnosto-kuvaselite', kuvatekstiLyhyt(kuva)), kuva),
     kortinKuvalahde(html('span', 'fokusnosto-kuvalahde'), kuva.lahde ?? '', kuva),
   );
   kehys.appendChild(teksti);
@@ -1307,153 +1314,25 @@ export function nostonKuvat(nosto) {
 }
 
 /**
- * SELATTAVA KUVASARJA KORTILLE — YKSI TOTEUTUS, KAKSI KÄYTTÄJÄÄ.
- *
- * Tämä on skandaalikortin galleria (js/skandaalit.js, 2.9.2026)
- * nostettuna kortin omaan tiedostoon ja parametroituna, kun
- * `galleria`-kenttä sai ensiluokkaisen tuen myös täkynostolla
- * (karttauudistuksen erä 10, avoin kohta 11.1). Kopiota ei tehty:
- * skandaali kutsuu samaa funktiota omilla luokillaan ja omalla
- * zoomiavaimellaan, joten sen ulkoasu ja käytös ovat entiset merkilleen.
- *
- * PUUTTUVA KUVA POISTUU SARJASTA. Havainnekuva syntyy kuvajonossa
- * kohde kerrallaan, joten sarjassa voi olla osoite, jota ämpärissä ei
- * vielä ole. Virheen sattuessa kuva pudotetaan listalta ja seuraava
- * näytetään; jos yksikään ei lataudu, koko kehys piiloutuu eikä
- * kortille jää tyhjää laatikkoa lupaamaan kuvaa, jota ei ole.
+ * SELATTAVA KUVASARJA KORTILLE — runko on js/kuvasarja.js (siirretty
+ * 20.9.2026, kun kohdekortti sai saman karusellin). Tämä kääre antaa
+ * nostojen omat riippuvuudet: lataaja (assetOsoite('nostot') /
+ * valokuvaUrl) ja suurennos (avaaKohdeSuurennos zoomavaimella).
+ * Skandaalikortti (js/skandaalit.js) kutsuu tätä samaa käärettä omilla
+ * luokillaan ja omalla zoomiavaimellaan, kuten ennenkin.
  *
  * @param {object} ui pelin ui
  * @param {Element} sailio kortin sisus
  * @param {object[]} kuvat sarjan kuvat (vähintään kaksi)
- * @param {object} asetukset
- * @param {string} asetukset.otsikko varateksti alt-riville
- * @param {Element} [asetukset.valmisKehys] KUVA EDELLÄ -avauksen kehys
- * @param {string} asetukset.kehysLuokka figuren luokat
- * @param {string} asetukset.nuoliLuokka selailunuolen luokka
- * @param {string} asetukset.laskuriLuokka laskurin luokka
- * @param {number} asetukset.leveys kuvan pyydetty leveys pikseleinä
- * @param {string} asetukset.zoomAvain suurennoksen ui-kenttä
+ * @param {object} asetukset ks. js/kuvasarja.js piirraKuvasarja;
+ *   `zoomAvain` on suurennoksen ui-kenttä
  */
-export function piirraNostonKuvasarja(ui, sailio, kuvat, {
-  otsikko = '', valmisKehys = undefined, kehysLuokka, nuoliLuokka,
-  laskuriLuokka, leveys, zoomAvain,
-}) {
-  const jaljella = [...kuvat];
-  /*
-   * VALMIS KUVAKEHYS ON SARJAN PÄÄKUVA (js/nostokuva.js).
-   *
-   * Vaiheessa 1 kortissa on pelkkä sarjan ENSIMMÄINEN kuva isona,
-   * lyhyt kuvateksti ja "Lisää" — ei nuolia. Vaiheessa 2 sarja
-   * rakennetaan SAMAN kehyksen ympärille: sama figure, sama nappi,
-   * sama img ja sama src, joten kuva ei liiku eikä lataudu uudestaan.
-   * Nuolet ja laskuri ilmaantuvat kuvan päälle, ja kuvatekstin sekä
-   * lähderivin paikan ottavat kehyksen omat rivit (.nostokuva-teksti,
-   * .nostokuva-lahde), joita selaus päivittää kuvan mukana.
-   */
-  const kehys = valmisKehys ?? html('figure', kehysLuokka);
-  const nappi = valmisKehys
-    ? valmisKehys.querySelector('.nostokuva-nappi')
-    : html('button', 'fokusnosto-kuvanappi');
-  const img = valmisKehys
-    ? valmisKehys.querySelector('.nostokuva-img')
-    : document.createElement('img');
-  if (valmisKehys) {
-    for (const luokka of kehysLuokka.split(' ')) {
-      if (luokka) kehys.classList.add(luokka);
-    }
-  } else {
-    nappi.type = 'button';
-    nappi.title = 'Katso kuva suurempana';
-    img.decoding = 'async';
-    img.draggable = false;
-    nappi.appendChild(img);
-    kehys.appendChild(nappi);
-  }
-
-  const selite = valmisKehys
-    ? valmisKehys.querySelector('.nostokuva-teksti')
-    : html('span', 'fokusnosto-kuvaselite');
-  const lahderivi = valmisKehys
-    ? valmisKehys.querySelector('.nostokuva-lahde')
-    : html('span', 'fokusnosto-kuvalahde');
-  if (!valmisKehys) {
-    const kuvateksti = html('figcaption', 'fokusnosto-kuvateksti');
-    kuvateksti.append(selite, lahderivi);
-    kehys.appendChild(kuvateksti);
-  }
-
-  const laskuri = html('span', laskuriLuokka);
-  let kohdalla = 0;
-
-  /**
-   * @param {boolean} [lataa] `false` jättää kuvan koskematta: valmis
-   *   kehys näyttää jo oikeaa kuvaa, eikä src:ää saa kirjoittaa
-   *   uudestaan (selain lataisi kuvan ja se välähtäisi).
-   */
-  const nayta = (lataa = true) => {
-    if (!jaljella.length) {
-      kehys.hidden = true;
-      return;
-    }
-    kohdalla = ((kohdalla % jaljella.length) + jaljella.length) % jaljella.length;
-    const kuva = jaljella[kohdalla];
-    // Kortilla lyhyt, suurennoksessa pitkä (js/kuvatekstit.js;
-    // avaaKohdeSuurennos saa kuvatiedon sellaisenaan).
-    img.alt = kuvatekstiLyhyt(kuva) || otsikko || '';
-    nappi.setAttribute('aria-label', `${kuvatekstiLyhyt(kuva) || 'Kuva'} — avaa suurena`);
-    selite.textContent = kuvatekstiLyhyt(kuva);
-    /*
-     * LÄHDERIVI ON KUVAN OMA, ja se kulkee taytaLahderivin läpi, joten
-     * "Matkakirjan havainnekuva" saa painettavan selitteen joka kerta
-     * (js/havainnekuva.js) ja Commons-kuvan tekijä näkyy niin kuin
-     * lisenssi vaatii.
-     */
-    kortinKuvalahde(lahderivi, kuva.lahde ?? '', kuva);
-    laskuri.textContent = jaljella.length > 1 ? `${kohdalla + 1} / ${jaljella.length}` : '';
-    laskuri.hidden = jaljella.length < 2;
-    // Suurennos näyttää sen kuvan, joka on kohdalla — myös silloin kun
-    // napin avaa js/nostokuva.js.
-    kehys.nostokuvaKuva = kuva;
-    if (!lataa) return;
-    asetaNostonKuva(img, kuva, leveys, () => {
-      const paikka = jaljella.indexOf(kuva);
-      if (paikka < 0) return;
-      jaljella.splice(paikka, 1);
-      if (kohdalla > paikka) kohdalla -= 1;
-      nayta();
-    });
-  };
-  nayta(!valmisKehys);
-
-  // Napautus suurentaa, kuten kortin muillakin kuvilla; suurennos saa
-  // sen kuvan, joka on kohdalla. Valmiilla kehyksellä kuuntelija on jo
-  // paikallaan (js/nostokuva.js) eikä sitä saa lisätä toista kertaa.
-  if (!valmisKehys) {
-    nappi.addEventListener('click', (tapahtuma) => {
-      tapahtuma.stopPropagation();
-      if (!jaljella.length) return;
-      avaaKohdeSuurennos(ui, jaljella[kohdalla], () => nappi, zoomAvain);
-    });
-  }
-
-  const nuoli = (luokka, merkki, nimi, suunta) => {
-    const nap = html('button', `${nuoliLuokka} ${luokka}`, merkki);
-    nap.type = 'button';
-    nap.setAttribute('aria-label', nimi);
-    nap.addEventListener('click', (tapahtuma) => {
-      tapahtuma.stopPropagation();
-      if (jaljella.length < 2) return;
-      kohdalla += suunta;
-      sfx.play('paper');
-      nayta();
-    });
-    nappi.appendChild(nap);
-  };
-  nuoli('edellinen', '‹', 'Edellinen kuva', -1);
-  nuoli('seuraava', '›', 'Seuraava kuva', 1);
-  nappi.appendChild(laskuri);
-
-  sailio.appendChild(kehys);
+export function piirraNostonKuvasarja(ui, sailio, kuvat, { zoomAvain, ...asetukset }) {
+  return piirraKuvasarja(ui, sailio, kuvat, {
+    ...asetukset,
+    lataa: asetaNostonKuva,
+    avaaSuurennos: (u, kuva, ankkuri) => avaaKohdeSuurennos(u, kuva, ankkuri, zoomAvain),
+  });
 }
 
 /**

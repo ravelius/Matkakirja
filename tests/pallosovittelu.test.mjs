@@ -17,7 +17,8 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 
 import {
-  SOVITTELUN_KYLJET, SOVITTELUN_SIIRTO_PX, laatikotLimittyvat, sovitteleLaput,
+  SOVITTELUN_KYLJET, SOVITTELUN_SIIRTO_PX, SOVITTELUN_REUNASIIRTO_PX,
+  laatikotLimittyvat, laatikkoSisalla, reunaanSiirto, sovitteleLaput,
 } from '../js/pallolauta/sovittelu.js';
 import { NOSTOSYM_NIMIO_KYLJET } from '../js/fokusnosto-symbolit.js';
 
@@ -195,6 +196,79 @@ test('aihenoston lappu saa `este`-lipun nostokerroksessa', () => {
   assert.match(nostot, /este: r\.perhe === 'aihemerkki',/);
 });
 
+/*
+ * ══ RUUDUN REUNA ON ESTE (omistaja 20.9.2026: Biskajanlahti ja Dune du
+ * Pilat maalehden reunassa; docs/raportit/nimiot-reunassa-20260920.md)
+ * ══════════════════════════════════════════════════════════════════
+ */
+const REUNA = { x0: 6, y0: 6, x1: 394, y1: 838 };
+
+test('reuna: lappu, jonka kaista ylittäisi oikean reunan, vaihtaa kyljen vasemmalle', () => {
+  // Ikoni 20 px reunasta: oikea kaista (40 px) menisi yli, vasen mahtuu.
+  const t = sovitteleLaput({ laput: [koelappu('a', 374, 400)], esteet: [], reuna: REUNA });
+  const a = t.asennot.get('a');
+  assert.equal(a.syy, 'kylki');
+  assert.equal(a.kylki, 'vasen');
+  assert.equal(a.nimio, true);
+  assert.ok(laatikkoSisalla(koelappu('a', 374, 400).laatikko(a.kylki, a.dx, a.dy, true), REUNA));
+});
+
+test('reuna: sama lappu ilman reunaa pysyy omassa kyljessään (vastakoe)', () => {
+  const t = sovitteleLaput({ laput: [koelappu('a', 374, 400)], esteet: [] });
+  assert.equal(t.asennot.get('a').syy, 'oma');
+});
+
+test('reuna: kun kylki ei riitä, lappu vedetään sisään enintään reunasiirron verran', () => {
+  // Ikoni 11 px reunan takana: pieni 6 px:n siirto ei riitä millään
+  // kyljellä, mutta 16 px vasemmalle tuo vasemman kaistan sisään → 'reuna'.
+  const t = sovitteleLaput({ laput: [koelappu('a', 405, 400)], esteet: [], reuna: REUNA });
+  const a = t.asennot.get('a');
+  assert.equal(a.syy, 'reuna');
+  assert.equal(a.nimio, true);
+  assert.ok(Math.abs(a.dx) <= SOVITTELUN_REUNASIIRTO_PX && Math.abs(a.dy) <= SOVITTELUN_REUNASIIRTO_PX);
+  assert.ok(laatikkoSisalla(koelappu('a', 405, 400).laatikko(a.kylki, a.dx, a.dy, true), REUNA));
+  assert.equal(t.reunalta, 1);
+});
+
+test('reuna: ikoni kaukana reunan takana → lappu piiloon, ikoni jää (ei siirretä yli katon)', () => {
+  const t = sovitteleLaput({ laput: [koelappu('a', 440, 400)], esteet: [], reuna: REUNA });
+  const a = t.asennot.get('a');
+  assert.equal(a.nimio, false);
+  assert.equal(a.syy, 'piilo');
+  assert.equal(t.piilotettu, 1);
+});
+
+test('reuna: yläreuna ja turva-alue — ylä-kylki ei kelpaa, ala kelpaa', () => {
+  const reuna = { x0: 6, y0: 50, x1: 394, y1: 838 };
+  const t = sovitteleLaput({ laput: [koelappu('a', 200, 60, 'yla')], esteet: [], reuna });
+  const a = t.asennot.get('a');
+  assert.notEqual(a.kylki, 'yla');
+  assert.equal(a.nimio, true);
+  assert.ok(laatikkoSisalla(koelappu('a', 200, 60).laatikko(a.kylki, a.dx, a.dy, true), reuna));
+});
+
+test('reuna: reunaanSiirto antaa pienimmän sisään vievän siirron', () => {
+  assert.deepEqual(reunaanSiirto({ x0: 380, y0: 100, x1: 420, y1: 120 }, REUNA), { dx: -26, dy: 0 });
+  assert.deepEqual(reunaanSiirto({ x0: -4, y0: -10, x1: 40, y1: 10 }, REUNA), { dx: 10, dy: 16 });
+  assert.deepEqual(reunaanSiirto({ x0: 100, y0: 100, x1: 140, y1: 120 }, REUNA), { dx: 0, dy: 0 });
+  assert.equal(laatikkoSisalla({ x0: 100, y0: 100, x1: 140, y1: 120 }, null), true);
+});
+
+test('reuna: nostokerros antaa reunan sovittelulle ja kirjaa ylityksen avaimeen', () => {
+  const nostot = lue('../js/pallolauta/nostot.js');
+  assert.match(nostot, /const reunaNyt = reuna\?\.\(\) \?\? null;/);
+  assert.match(nostot, /reuna: reunaNyt,/);
+  assert.match(nostot, /`#reuna:\$\{reunalla\}#palaa:\$\{palaisi\}`/);
+  // Reunan takia käännetty lappu saa lähtökohdakseen datan kyljen (paluu).
+  assert.match(nostot, /kylki: palaavat\.has\(datum\.avain\) \? \(r\.puoli \?\? .oikea.\) : datum\.puoli,/);
+  const lauta = lue('../js/pallolauta/lauta.js');
+  assert.match(lauta, /reuna: \(\) => nostojenReuna\(kotelo\),/);
+  // Turva-alueet myös sivuilta (css :root).
+  const css = lue('../css/styles.css');
+  assert.match(css, /--turva-vasen: env\(safe-area-inset-left, 0px\);/);
+  assert.match(css, /--turva-oikea: env\(safe-area-inset-right, 0px\);/);
+});
+
 test('kyljet ovat kirjaston omat neljä, eikä sovittelu keksi omiaan', () => {
   assert.deepEqual([...SOVITTELUN_KYLJET], [...NOSTOSYM_NIMIO_KYLJET]);
 });
@@ -216,7 +290,7 @@ test('lauta sovittelee nimien JÄLKEEN, ja nimi väistää vain liikkumatonta mu
   const nostot = lue('../js/pallolauta/nostot.js');
   // Elävän noston LAPPU ei ole nimen varaus, ikoni on.
   assert.match(nostot, /nostonLaatikko\(r\.p, r, \{\s*dx: datum\.dx, dy: datum\.dy, nimio: false,\s*\}\)/);
-  assert.match(nostot, /import \{ sovitteleLaput \} from '\.\/sovittelu\.js';/);
+  assert.match(nostot, /import \{ sovitteleLaput, laatikkoSisalla \} from '\.\/sovittelu\.js';/);
   // Nimikerros antaa laatikkonsa luettavaksi eikä lue sovittelua.
   const nimet = lue('../js/pallolauta/nimet.js');
   assert.match(nimet, /laatikot: \(\) => laatikot,/);

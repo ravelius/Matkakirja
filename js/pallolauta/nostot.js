@@ -76,7 +76,10 @@ import {
 import { pallonNostoOnPoltettu } from '../pallo.js';
 import { PALLOLAUDAN_LEVEYS } from './kamera.js';
 import { nimenKarttakerroin } from './nimet.js';
-import { sovitteleLaput } from './sovittelu.js';
+import { sovitteleLaput, laatikkoSisalla } from './sovittelu.js';
+
+/** Reunan hystereesi: oma kylki palaa vasta, kun se on näin syvällä sisällä (px). */
+export const REUNAN_HYSTEREESI_PX = 24;
 
 /** Eläviä nostoja pallolla enintään kerrallaan (karttapallo.md luku 6). */
 export const NOSTOJEN_KATTO = 40;
@@ -1298,6 +1301,13 @@ export function luoNostot({
    */
   ruutu = null, ankkuri = null, ladoUudelleen = null,
   /*
+   * RUUDUN REUNA SOVITTELUN ESTEENÄ (js/pallolauta/sovittelu.js RUUDUN
+   * REUNA ON ESTE): `reuna()` antaa ruudun laatikon turva-alueineen
+   * kotelon pikseleinä (js/pallolauta/lauta.js nostojenReuna). null =
+   * ei rajaa.
+   */
+  reuna = null,
+  /*
    * LISTA VÄISTÄÄ PELIMERKIT (PAATOKSET 32 kohta 3: lista ei saa
    * peittää *"kaupungin nimea eika pelinappulaa"*). `esteet` antaa
    * pelimerkkien ruutulaatikot (nappula, kohteet) kotelon pikseleinä;
@@ -1351,7 +1361,7 @@ export function luoNostot({
   let portti = null;
   let viimeisinUloinOsuus = 0;
   let sovittelu = {
-    siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0, lappuja: 0,
+    siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0, reunalta: 0, lappuja: 0,
   };
   /*
    * MILLE LAPPUJOUKOLLE JA RUUDULLE SOVITTELU ON RATKAISTU (ks.
@@ -1363,7 +1373,7 @@ export function luoNostot({
   let sovitellutAsennot = new Map();
   /** Viimeisin oikeasti ajettu sovittelu (ohitettu ajo palauttaa tämän). */
   let viimeisinSovittelu = {
-    siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0,
+    siirretty: 0, kylkiVaihtui: 0, piilotettu: 0, jaljella: 0, reunalta: 0,
   };
   let laskeLaatikot = () => { laatikot = []; };
   /*
@@ -3518,9 +3528,48 @@ export function luoNostot({
      * uuden sovittelun — sama ansa kuin `omatLaatikot`issa (ks. ASENTO
      * LUETAAN RIVILTÄ, EI DATUMILTA). Rivi rakennetaan datasta.
      */
+    const reunaNyt = reuna?.() ?? null;
+    /*
+     * REUNAN YLITYS ON OSA AVAINTA (RUUDUN REUNA ON ESTE). Lukko pitää
+     * kyljen vedon yli, mutta vedossa lappu voi kulkea ruudun reunan
+     * yli — juuri se, mitä omistaja ei halua. Siksi avaimeen kirjataan
+     * ne laput, joiden LUKITTU asento ylittää reunan juuri nyt: kun
+     * joukko muuttuu, sovittelu ajetaan uudestaan ja lappu vaihtaa
+     * kylkeä tai siirtyy sisään. Muulloin lukko pitää kuten ennen —
+     * sisäänpäin tullessaan lappu ei palaa omaan kylkeensä itsestään
+     * (ei edestakaista hyppyä reunan tuntumassa).
+     */
+    const reunalla = reunaNyt
+      ? lappuja.filter(({ datum, laatikko }) => datum.nimioNakyy
+        && !laatikkoSisalla(laatikko(datum.puoli, datum.dx, datum.dy, true), reunaNyt))
+        .map(({ datum }) => datum.avain).join(',')
+      : '';
+    /*
+     * PALUU OMAAN KYLKEEN, KUN TILAA TAAS ON. Lukko syntyy usein kesken
+     * kameran ajon (saapumisajo alkaa kaukaa), ja silloin reunan takia
+     * käännetty tai siirretty lappu jäisi käännetyksi, vaikka perillä
+     * sen oma kylki mahtuisi hyvin. Siksi avaimeen kirjataan myös ne
+     * laput, jotka EIVÄT ole omassa asennossaan mutta joiden oma
+     * asento on nyt reunan sisällä HYSTEREESIN verran: ne saavat
+     * sovittelun uudestaan, ja se palauttaa oman kyljen, jos se on
+     * vapaa. Hystereesi (REUNAN_HYSTEREESI_PX) estää edestakaisen
+     * hypyn juuri reunan tuntumassa.
+     */
+    const sisareuna = reunaNyt ? {
+      x0: reunaNyt.x0 + REUNAN_HYSTEREESI_PX, y0: reunaNyt.y0 + REUNAN_HYSTEREESI_PX,
+      x1: reunaNyt.x1 - REUNAN_HYSTEREESI_PX, y1: reunaNyt.y1 - REUNAN_HYSTEREESI_PX,
+    } : null;
+    const palaavat = new Set(sisareuna
+      ? lappuja.filter(({ r, datum, laatikko }) => (datum.puoli !== (r.puoli ?? 'oikea')
+        || datum.dx || datum.dy || !datum.nimioNakyy)
+        && laatikkoSisalla(laatikko(r.puoli ?? 'oikea', 0, 0, true), sisareuna))
+        .map(({ datum }) => datum.avain)
+      : []);
+    const palaisi = [...palaavat].join(',');
     const avain = `${Math.round(ruutuNyt.leveys)}x${Math.round(ruutuNyt.korkeus)}#`
       + lappuja.map(({ r, datum }) => `${datum.avain}:${r.nimioNakyy && r.nimi ? 1 : 0}`
-        + `:${r.perhe === 'aihemerkki' ? 'a' : 'n'}`).join(';');
+        + `:${r.perhe === 'aihemerkki' ? 'a' : 'n'}`).join(';')
+      + `#reuna:${reunalla}#palaa:${palaisi}`;
     // Sama lappujoukko samalla ruudulla: kylki on jo ratkaistu (ks.
     // NIMIÖN KYLKI LUKITAAN). Veto ja zoomi eivät koeta sitä uudestaan.
     if (avain === sovittelunAvain) {
@@ -3531,7 +3580,14 @@ export function luoNostot({
     const tulos = sovitteleLaput({
       laput: lappuja.map(({ r, datum, laatikko }) => ({
         avain: datum.avain,
-        kylki: datum.puoli,
+        /*
+         * LUKITTU KYLKI ON LÄHTÖKOHTA, PAITSI PALAAVALLA (ks. PALUU
+         * OMAAN KYLKEEN): sovittelun "oma" on se kylki, josta haku
+         * alkaa. Lukko kannetaan eteenpäin, jotta uusi lappu ei
+         * käännä naapureitaan; reunan takia käännetty lappu saa
+         * lähtökohdakseen DATAN kyljen, jotta se voi palata.
+         */
+        kylki: palaavat.has(datum.avain) ? (r.puoli ?? 'oikea') : datum.puoli,
         laatikko,
         /*
          * AIHENOSTO VÄISTÄÄ KAIKKEA (js/pallolauta/sovittelu.js
@@ -3544,6 +3600,7 @@ export function luoNostot({
         este: r.perhe === 'aihemerkki',
       })),
       esteet: kiinteat.length ? [...nimet, ...kiinteat] : nimet,
+      reuna: reunaNyt,
     });
     let muuttui = false;
     for (const { r, datum } of lappuja) {
@@ -3568,6 +3625,7 @@ export function luoNostot({
       kylkiVaihtui: tulos.kylkiVaihtui,
       piilotettu: tulos.piilotettu,
       jaljella: tulos.jaljella,
+      reunalta: tulos.reunalta,
     };
     sovittelu = { ...viimeisinSovittelu, lappuja: lappuja.length };
     return sovittelu;

@@ -181,6 +181,10 @@ body.paivittyy .app { visibility: hidden; }
    * suoraan, ja kehittäjätilan mittarivi tarvitsee ne. */
   --turva-yla: env(safe-area-inset-top, 0px);
   --turva-ala: env(safe-area-inset-bottom, 0px);
+  /* Sivut myös: pallolaudan nimiöt väistävät turva-alueita
+     (js/pallolauta/lauta.js nostojenReuna). */
+  --turva-vasen: env(safe-area-inset-left, 0px);
+  --turva-oikea: env(safe-area-inset-right, 0px);
   /* Kartan päällä kelluvat kortit: läpikuultava pergamentti kuten .event-toast. */
   --overlay-card: rgba(46, 33, 20, 0.88);
   --overlay-line: rgba(217, 161, 59, 0.45);
