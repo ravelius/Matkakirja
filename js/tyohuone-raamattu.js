@@ -10180,6 +10180,17 @@ export const RAAMATTU = {
           + 'valahdysvartio (kuormaherkka) siirtyy samaan sarjaan seuraavassa erassa; '
           + 'suorituskyky-sarja ajetaan yolla sarjassa (yksi tyontekija). Julkaistaan '
           + 'erillisena versiona.',
+        'ASTROPULU JA LENTONAKYMA TEHTY (Pelikoodari f2d3a4cf, Fable 20.09.2026 klo 18.45): astropulun '
+          + 'vastauksen alku ankkuroituu, lisateksti kasvaa piiloon alle (tyhja tila omana '
+          + 'elementtina, ei padding WebKitin takia), kortti 52 -> 62 vh, virta puhelimella '
+          + '240 px, savuke astro-valokuva 96/96; lentonakymassa lentolista auki tai lento '
+          + 'valittu -> ei liftauskaaria, lentokohteet pisteina ja nimina (ui.tarjotutLennot, '
+          + 'KOHTEEN_TARKEYS), uusi savuke-lentonakyma 22/22 julkaisusarjaan; '
+          + 'valahdysvartio suorituskykysarjaan; SAVUKE_SUORITUSKYKY-rivit ajetaan '
+          + 'viimeisena yhdella tyontekijalla. HUOM: omistajan kaappaus lentonakyma-'
+          + 'reitit.png on sama tiedosto kuin kartuscha-v1976.png (vaara kopio) - toteutus '
+          + 'Raamatun sanoituksen mukaan. Julkaisija julkaisee. Pelikoodari jatkaa '
+          + 'kartuscha 3:lla (haara pelikoodari-kartuscha-3).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
