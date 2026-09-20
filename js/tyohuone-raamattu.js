@@ -9953,7 +9953,16 @@ export const RAAMATTU = {
           + 'audio-elementin tilasta + 12 s aikakatkaisu, viritin radio.js:n sama viritin; '
           + 'valit yhdesta luvusta (suurempi turva-alue) -> siirtyy oikealle, ei alas '
           + '(alareunan turva-alue on laitteen vaatimus; omistaja katsoo laitteella). V1977 '
-          + 'PR #2629 avattu 14.28.',
+          + 'PR #2629 avattu 14.28. OMISTAJA 14.30-14.40, kolme tilausta: 1) ASTROPULUN '
+          + 'VASTAUS: "teksti saisi pysya paikallaan alussa ja loput tekstista saisi tulla '
+          + 'piiloon alle ... nyt teksti scrollautuu koko ajan kun sita tulee lisaa ... '
+          + 'ikkuna voisi olla myos hieman korkeampi" -> Opus 1; 2) LENTONAKYMA: '
+          + '"lentonakymassa liftausreitit pitaa piilottaa ja lentoreittien kohde '
+          + 'kaupungit pitaa nakya" (kaappaus lentonakyma-reitit.png: Berliinista Lontoo/'
+          + 'Rooma tarjolla, kaupunkimerkit eivat nay, liftauskaaret nakyvat) -> Opus 1; '
+          + '3) ASTROLINSSIN AANI: "avaruuslinssin aikana ei kuulu avaruuden taustahuminaa '
+          + 'joka on jo generoitu. lisaksi taustamusiikki pitaa sammuttaa linssin ajaksi" '
+          + '-> Opus 2. Julkaistaan v1978.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
