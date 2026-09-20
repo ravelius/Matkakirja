@@ -9850,7 +9850,10 @@ export const RAAMATTU = {
           + 'ja jutun vaihdossa (5 -> 2 kuplaa). "Ei kannata luottaa pulu" on mallin '
           + 'tekstia, ei repliikki. LOYDOS (ei jonossa): savuke-pulun-kuplat 16/37 '
           + 'vanhentunut (390 px imee kuplat muistiin, omistaja 14.9.) - ajettava '
-          + 'leveammalla. Mergetty.',
+          + 'leveammalla. Mergetty. OMISTAJA 10.05: "Tokenit vahissa niin tehkaa vain '
+          + 'valttamattomimmat" -> vain v1974:n julkaisu (pallosarja j + luettelo, Opus 2) '
+          + 'ja tyopolut-era (Opus 1) loppuun, sitten kaikki pysahtyvat; astropulun kuva, '
+          + 'CYP/ITA/POL ja muut jonoon.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
