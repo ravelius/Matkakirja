@@ -9622,7 +9622,11 @@ export const RAAMATTU = {
           + 'etusivun, aihesivuille (Historia, Rakennukset, Ruoka) ei paase, kategoriarivi '
           + 'sulkee liuskan ilman haitaria -> Sonnet 3 selvittaa kaikki kolme ennen '
           + 'Ljubljanan kohdekarttaa. Astronautin kameran reitti laitteella: Maailma-kytkin '
-          + 'paalle -> pallonakyman linssiruudukko.',
+          + 'paalle -> matkalaukku (ylapalkin kukkaropilleri) -> VARUSTEET-ruudukko (9 '
+          + 'kuvaketta, Ei linssia ensin); ei ratasvalikossa eika hampurilaisessa. '
+          + 'SIMULAATTORIVUOROT (Fable 05.00): iOS-simulaattori on yksi; Sonnet 3 pitaa '
+          + 'sen mittauksen ajan ja lahettaa Sonnet 1:lle "simulaattori vapaa", Sonnet 1 '
+          + 'kuittaa lopettaneensa; korjaukset ja savukkeet Chromiumissa.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
