@@ -88,22 +88,35 @@ test('versiovahti: kerros vain kun pallon sarja on poltettu samasta pyramidista'
    * ovat samaa ajoa.
    */
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A', viivat: 'V', nostot: 'N' }, pyramidi),
-    { pohja: true, ranta: false, viiva: false, nosto: true, vari: false, reliefi: false, astronautti: false, suodatin: null });
+    { pohja: true, ranta: false, viiva: false, nosto: true, vari: false, reliefi: false, astronautti: false, suodatin: null, joki: false });
   // Rantataso (V4): rannan kanssa poltettu sarja vaatii saman rantaversion;
   // rannaton sarja (ranta null, vektorit piirtävät rannan) ohittaa tason.
   const pyramidiRanta = { ...pyramidi, rantataso: { versio: 'R' } };
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A', ranta: 'R', viivat: 'V', nostot: 'N' }, pyramidiRanta),
-    { pohja: true, ranta: true, viiva: false, nosto: true, vari: false, reliefi: false, astronautti: false, suodatin: null });
+    { pohja: true, ranta: true, viiva: false, nosto: true, vari: false, reliefi: false, astronautti: false, suodatin: null, joki: false });
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A', ranta: null, viivat: 'V', nostot: 'N' }, pyramidiRanta),
-    { pohja: true, ranta: false, viiva: false, nosto: true, vari: false, reliefi: false, astronautti: false, suodatin: null });
+    { pohja: true, ranta: false, viiva: false, nosto: true, vari: false, reliefi: false, astronautti: false, suodatin: null, joki: false });
   assert.equal(lepokerroksenKerrokset({ versio: 'A', ranta: 'R2', viivat: 'V', nostot: 'N' }, pyramidiRanta), null, 'eri ranta');
   // Pohjasarja ilman viivoja ja nostoja: vain pohja (nostot ovat pallolla elävinä).
   assert.deepEqual(lepokerroksenKerrokset({ versio: 'A' }, pyramidi),
-    { pohja: true, ranta: false, viiva: false, nosto: false, vari: false, reliefi: false, astronautti: false, suodatin: null });
+    { pohja: true, ranta: false, viiva: false, nosto: false, vari: false, reliefi: false, astronautti: false, suodatin: null, joki: false });
   assert.equal(lepokerroksenKerrokset({ versio: 'B', viivat: 'V', nostot: 'N' }, pyramidi), null, 'eri pohja');
   assert.equal(lepokerroksenKerrokset({ versio: 'A', viivat: 'V', nostot: 'N2' }, pyramidi), null, 'eri nostot');
   assert.equal(lepokerroksenKerrokset({ versio: 'A', viivat: 'V' }, { versio: 'A' }), null, 'pyramidilla ei viivatasoa');
   assert.equal(lepokerroksenKerrokset(null, pyramidi), null);
+  /*
+   * JOKITASO (omistaja 20.9.2026, Loire; js/laattapyramidi.js JOKITASO):
+   * joet ilman reittejä viivatason paikalle. Sama laji kuin väritaso —
+   * puuttuva kenttä pudottaa joet, ei kerrosta — eikä sitä verrata
+   * pallon sarjaan (sarja kantaa joet liikkeessä omassa laatassaan).
+   */
+  const pyramidiJoki = { ...pyramidi, jokitaso: { versio: 'J', tasot: [0, 7], laatastot: { 0: 'AA==', 7: 'AA==' } } };
+  const joella = lepokerroksenKerrokset({ versio: 'A', viivat: 'V', nostot: 'N' }, pyramidiJoki);
+  assert.equal(joella.joki, true, 'jokitaso ei syttynyt');
+  assert.equal(joella.viiva, false, 'viivataso ei saa syttyä jokitason mukana (reittiviuhka)');
+  assert.equal(joella.pohja, true);
+  // Vajaa kirjaus (ei versiota) ei nosta porttia; vanha luettelo = v1980.
+  assert.equal(lepokerroksenKerrokset({ versio: 'A', viivat: 'V', nostot: 'N' }, { ...pyramidi, jokitaso: { tasot: [7] } }).joki, false);
 });
 
 /*

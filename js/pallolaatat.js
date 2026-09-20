@@ -484,6 +484,15 @@ export function lepokerroksenKerrokset(pallonLuettelo, pyramidi, variMaa = null)
     pohja: !reliefi,
     ranta: Boolean(ranta) && !astronautti,
     viiva: false,
+    /*
+     * JOKITASO (omistaja 20.9.2026, Loire; js/laattapyramidi.js
+     * JOKITASO): joet ja rajat ILMAN reittejä, viivatason paikalle.
+     * Sama laji kuin väritaso — puuttuva kenttä pudottaa joet, ei
+     * karttaa — ja sama astronauttiportti kuin muulla musteella.
+     * Tässä ei verrata versiota pallon sarjaan: sarja k kantaa joet
+     * liikkeessä omassa laatassaan, ja tämä on levon lisäkenttä.
+     */
+    joki: Boolean(pyramidi.jokitaso?.versio) && !astronautti,
     nosto: (Boolean(nostot) || nostotMaittain) && !astronautti,
     vari: vari && !reliefi,
     reliefi,
@@ -2213,6 +2222,7 @@ export function luoLaattakerros({
       .filter((k) => {
         if (k.nosto) return kerrokset.nosto;
         if (k.viiva) return kerrokset.viiva;
+        if (k.joki) return kerrokset.joki;
         if (k.ranta) return kerrokset.ranta;
         if (k.vari) return kerrokset.vari;
         if (k.reliefi) return kerrokset.reliefi;

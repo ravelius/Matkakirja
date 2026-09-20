@@ -726,6 +726,7 @@ const tasonVersio = (taso) => {
     return nk ? nostotasonKansio(nk) : (luettelo?.nostotaso?.versio ?? '');
   }
   if (taso.viiva) return luettelo?.viivataso?.versio ?? '';
+  if (taso.joki) return luettelo?.jokitaso?.versio ?? '';
   if (taso.ranta) return luettelo?.rantataso?.versio ?? '';
   if (taso.reliefi) return reliefinVersio();
   /*
@@ -852,6 +853,13 @@ function laattaUrl(taso, sarake, rivi) {
     return pyramidiUrl(`${luettelo.viivataso.versio}/viivat/z${taso.z}/${sarake}/${rivi}`
       + `.${luettelo.muoto ?? 'webp'}`);
   }
+  // Jokitaso on viivatason generaattorin tuote ilman reittejä, joten
+  // sen laatat asuvat samassa alipolussa: <jokiversio>/viivat/z…
+  // (ks. JOKITASO alempana).
+  if (taso.joki) {
+    return pyramidiUrl(`${luettelo.jokitaso.versio}/viivat/z${taso.z}/${sarake}/${rivi}`
+      + `.${luettelo.muoto ?? 'webp'}`);
+  }
   // Rantataso samoin: <rantaversio>/ranta/z… (omistaja 6.9.2026 ilta).
   if (taso.ranta) {
     return pyramidiUrl(`${luettelo.rantataso.versio}/ranta/z${taso.z}/${sarake}/${rivi}`
@@ -885,6 +893,8 @@ function laattaUrl(taso, sarake, rivi) {
 const noutoEtuliite = (taso) => {
   if (taso.nosto) return 'n';
   if (taso.viiva) return 'v';
+  // j = joki; jokitaso on eri tiedosto kuin saman ruudun viivataso.
+  if (taso.joki) return 'j';
   if (taso.ranta) return 'r';
   // f = reliefi; r on jo rantatasolla.
   if (taso.reliefi) return 'f';
@@ -2354,6 +2364,59 @@ function viivatasonTasot() {
   return luettelo.__viivaTasot.length ? luettelo.__viivaTasot : null;
 }
 
+/*
+ * ═══════════════════════════════════════════════════════════════════
+ * JOKITASO — JOET JA RAJAT ILMAN REITTEJÄ, PALLON LEPOKERROKSELLE
+ * ═══════════════════════════════════════════════════════════════════
+ *
+ * OMISTAJA 20.9.2026 (kaappaus docs/raportit/kaappaukset/omistaja-
+ * 20260920/pariisi-ei-jokia-v1980.webp): Ranskan kartalla "Loire"-nimiö
+ * mutta ei jokiviivaa. MITATTU (Karttaseppä, tuotannon polut): pohja
+ * 2026-09-20-pohja on poltettu ILMAN jokia (z7/82/35 tyhjä paperi),
+ * joet ovat viivatasolla 2026-09-20d (sama laatta: Loiren uoma) — ja
+ * pallon lepokerros jättää viivatason tietoisesti pois, koska sillä on
+ * reittiviuhka (js/pallolaatat.js lepokerroksenKerrokset `viiva:
+ * false`, Raamattu PAATOKSET 8). Liikkeessä pallon sarja k (poltettu
+ * viivat d:n kanssa) näyttää joen; levossa — juuri kun pelaaja katsoo
+ * — se katoaa.
+ *
+ * FABLEN PÄÄTÖS (20.9.2026, vaihtoehto A): viivatason generaattori
+ * polttaa toisen laataston ILMAN REITTEJÄ (`--eireitit`: joet + rajat),
+ * ja luettelo kantaa sen omassa kentässään `jokitaso` (versio, tasot,
+ * laatastot). Pallon lepokerros latoo jokitason siihen väliin, jossa
+ * viivataso olisi (ranta → JOKI → nosto); tasokartta ja linssikartta
+ * EIVÄT lataa sitä, koska niillä on viivataso jokineen — kaksi kertaa
+ * sama uoma olisi tuplamuste. Sarja k pysyy, pallosarjaa ei polteta
+ * (sääntö koskee pohjan ja VIIVATASON vaihtoa; tämä on lisäkenttä).
+ *
+ * VANHA KOODI SIETÄÄ UUDEN KENTÄN: luettelon lukijat poimivat tunnetut
+ * kentät nimeltä, ja ylimääräinen `jokitaso` on niille pelkkä
+ * tuntematon avain — siksi luettelo voidaan viedä ämpäriin vasta kun
+ * tämä osoitin on mainissa, mutta vanha peli ei kaadu, jos se ehtii
+ * ennen (tests/laattapyramidi.test.mjs).
+ *
+ * VANHA LUETTELO ILMAN `jokitaso`-KENTTÄÄ palauttaa nullin ja kerros
+ * jää pois — peli on täsmälleen v1980.
+ */
+function jokitasonTasot() {
+  const jt = luettelo?.jokitaso;
+  if (!jt?.versio || !jt.tasot?.length || !jt.laatastot) return null;
+  if (!luettelo.__jokiTasot) {
+    luettelo.__jokiTasot = luettelo.tasot
+      .filter((t) => jt.tasot.includes(t.z) && jt.laatastot[t.z])
+      .map((t) => ({
+        ...t, laatasto: jt.laatastot[t.z], __bitit: undefined, joki: true,
+      }));
+  }
+  return luettelo.__jokiTasot.length ? luettelo.__jokiTasot : null;
+}
+
+/** Jokitason kirjaus (savukkeet, testit) tai null. */
+export function pyramidinJokitaso() {
+  const jt = luettelo?.jokitaso;
+  return jt?.versio ? jt : null;
+}
+
 /**
  * Päivittää viivatason kerroksen.
  *
@@ -2744,6 +2807,8 @@ export function pyramidinKerrostasot(z) {
     if (ranta0) merkit.push(ranta0);
     const viiva0 = viivatasonTasot()?.find((t) => t.z === z);
     if (viiva0) merkit.push(viiva0);
+    const joki0 = jokitasonTasot()?.find((t) => t.z === z);
+    if (joki0) merkit.push(joki0);
     const nosto0 = nostotasonTasot()?.find((t) => t.z === z);
     if (nosto0) merkit.push(nosto0);
     return [reliefi, ...merkit];
@@ -2766,6 +2831,10 @@ export function pyramidinKerrostasot(z) {
   if (ranta) kerrokset.push(ranta);
   const viiva = viivatasonTasot()?.find((t) => t.z === z);
   if (viiva) kerrokset.push(viiva);
+  // JOKITASO viivatason paikalle pallolle (ks. JOKITASO): kutsuja
+  // suodattaa viivatason pois ja jokitason mukaan — ei koskaan molempia.
+  const joki = jokitasonTasot()?.find((t) => t.z === z);
+  if (joki) kerrokset.push(joki);
   const nosto = nostotasonTasot()?.find((t) => t.z === z);
   if (nosto) kerrokset.push(nosto);
   return kerrokset;

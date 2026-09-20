@@ -302,7 +302,7 @@ if (!kohdekansio || kohdekansio.startsWith('--')) {
     + '[--kaariminuutit 1|3] [--korkeuspalat <kansio>] [--vain-palat [tiedosto]] '
     + '[--vain-lista] [--paikkaus <lähdeversio>] '
     + '[--nostotaso --nostoversio <v> [--nostomaa <ISO>] [--ilman-hahmotelmia]] '
-    + '[--viivataso --viivaversio <v> [--eipiirit]] '
+    + '[--viivataso --viivaversio <v> [--eipiirit] [--eireitit] [--eirajat]] '
     + '[--rantataso --rantaversio <v>] [--ilman-rantaviivaa] '
     + '[--vari <ISO> --variversio <v> [--aluevesi <yksikköä>] '
     + '[--paletti murrettu|taysvari|tasoitus] [--vesi <0..1>] [--feidaus <0..1>] '
@@ -522,7 +522,27 @@ const VIIVAVERSIO = valitsin('viivaversio', VERSIO);
  * peli ei lue kenttää, se piirtää laatat sellaisinaan.
  */
 const PIIRIT = !lippu('eipiirit');
-const VIIVAOSAT = PIIRIT ? null : { piirit: false };
+/*
+ * REITIT POIS VIIVATASOLTA (`--eireitit`, Fablen päätös 20.9.2026,
+ * omistajan kaappaus pariisi-ei-jokia-v1980.webp): pallon lepokerros ei
+ * lataa viivatasoa, koska sillä on reittiviuhka (Raamattu PAATOKSET 8),
+ * ja pohja 2026-09-20 on poltettu ilman jokia — levossa Loire katosi.
+ * Tällä lipulla poltetaan JOKITASO: sama viivatason piirtäjä ja sama
+ * peite, mutta reittipassi pois (joet + rajat jäävät). Luettelo kirjaa
+ * `reitit: false`, ja luettelon kokoaja siirtää kirjauksen kenttään
+ * `jokitaso` (js/laattapyramidi.js JOKITASO) — tämä ajo ei koske
+ * viivatason omaan kirjaukseen ämpärissä.
+ */
+const REITIT = !lippu('eireitit');
+/*
+ * RAJAT POIS (`--eirajat`): pallo piirtää maiden rajat itse vektorina
+ * (js/pallovektorit.js), ja poltettu raja oli vektorin alla
+ * kaksinkertaisena musteena (js/pallolaatat.js VIIVATASO EI TULE
+ * PALLOLLE). Jokitaso poltetaan siksi pelkillä joilla: --eireitit
+ * --eipiirit --eirajat.
+ */
+const RAJAT = !lippu('eirajat');
+const VIIVAOSAT = (PIIRIT && REITIT && RAJAT) ? null : { piirit: PIIRIT, reitit: REITIT, rajat: RAJAT };
 /*
  * REITIT VAIN LÄHITASOILLE (omistaja 1.9.2026, kuvakaappaus jonka
  * mittajana on 1000 km): *"Tällä zoomitasolla ja yli reitit voi
@@ -2665,6 +2685,9 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     ? await (await fetch('./vari.json')).json().catch(() => null) : null;
   // Erikoispiirien passi (ks. ERIKOISPIIRIT POIS VIIVATASOLTA).
   const PIIRIT = ${PIIRIT};
+  // Reitti- ja rajapassi (ks. REITIT POIS VIIVATASOLTA): jokitaso poltetaan ilman.
+  const REITIT = ${REITIT};
+  const RAJAT = ${RAJAT};
   const nostot = await (await fetch('./nostot.json')).json().catch(() => null);
   let aineisto = null;
   let sisalto = null;
@@ -2725,7 +2748,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
     };
     if (VIIVATASO) {
       piirraViivataso(kangas, {
-        ...yhteiset, passit: { reitit: saumaZ >= VIIVA_REITIT_ALIN, piirit: PIIRIT },
+        ...yhteiset, passit: { reitit: REITIT && saumaZ >= VIIVA_REITIT_ALIN, piirit: PIIRIT, rajat: RAJAT },
       });
     } else if (RANTATASO) {
       piirraRantataso(kangas, { ...yhteiset, rannikot });
@@ -2879,7 +2902,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       };
       if (VIIVATASO) {
         piirraViivataso(kangas, {
-          ...yhteiset, passit: { reitit: (perus.__z ?? 7) >= VIIVA_REITIT_ALIN, piirit: PIIRIT },
+          ...yhteiset, passit: { reitit: REITIT && (perus.__z ?? 7) >= VIIVA_REITIT_ALIN, piirit: PIIRIT, rajat: RAJAT },
         });
       } else if (RANTATASO) {
         piirraRantataso(kangas, { ...yhteiset, rannikot });
@@ -2964,7 +2987,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       piirraViivataso(kangas, {
         ...asetukset,
         sisalto,
-        passit: { reitit: asetukset.__z >= VIIVA_REITIT_ALIN, piirit: PIIRIT },
+        passit: { reitit: REITIT && asetukset.__z >= VIIVA_REITIT_ALIN, piirit: PIIRIT, rajat: RAJAT },
       });
     } else if (RANTATASO) {
       /*
@@ -3561,6 +3584,10 @@ function teeLuettelo() {
       tasot: tasot.map((m) => m.z),
       rajat: RAJASETTI,
       piirit: PIIRIT,
+      // Jokitaso (--eireitit) kirjaa reitit: false; tavallinen ajo ei
+      // kirjoita kenttää, joten ämpärin luettelot pysyvät entisellään.
+      ...(REITIT ? {} : { reitit: false }),
+      ...(RAJAT ? {} : { rajat: 'ei' }),
       laatastot,
     };
   })(),
