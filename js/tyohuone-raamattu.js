@@ -10038,7 +10038,11 @@ export const RAAMATTU = {
           + 'tasan yksi luenta; prep sisaltaa v1977:n -> jaljella UI-polku (Opus 1 ajaa '
           + 'napeilla) tai iPad-Safarin aanikaytos (Sonnet 1 laitteella). OPPI: play()-'
           + 'kutsu ei ole aani - mittaa currentTime. V1978 PR #2630 avattu 15.47 (huntu '
-          + '50 %, astron aanet, humina, topografian koodi).',
+          + '50 %, astron aanet, humina, topografian koodi). V1978 MERGETTY 15.59. '
+          + 'TUPLASAAPUMINEN: ei toistu myoskaan aidolla UI-polulla (Opus 1 cf1a3649, '
+          + 'raportti viesti-fable-lento-tuplaluenta) -> jaa iPad-Safari-epailyksi; '
+          + 'ensimmainen paikka katsoa: luenta vapautuu error-tapahtumassa ennen '
+          + 'viivastettya kaynnistysta (hidas verkko). Sonnet 1 laitteella seuraavaksi.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
