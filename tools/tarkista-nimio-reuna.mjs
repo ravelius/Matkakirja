@@ -202,6 +202,11 @@ const MITTAA = () => sivu.evaluate(async () => {
 const NAKYMAT = [
   { nimi: '480px', width: 480, height: 854 },
   { nimi: 'puhelin', width: 390, height: 844 },
+  /* Omistajan oma laite (Fable 20.9.2026): kaappaus docs/raportit/
+   * kaappaukset/omistaja-20260920/kartuscha-iso-ranska.png näyttää
+   * BISKAJANLAHTI-nimiön leikkautuvan ruudun YLÄreunaan. */
+  { nimi: 'iPad-pysty', width: 820, height: 1180 },
+  { nimi: 'iPad-vaaka', width: 1180, height: 820 },
 ];
 
 /* Pieni sallittu marginaali (pyöristys, alipikselit). */
