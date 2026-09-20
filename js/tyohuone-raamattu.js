@@ -9721,7 +9721,15 @@ export const RAAMATTU = {
           + 'yhdista-nostoluettelo estaa pallovaiheen julkaisemattomalla pohjalla; '
           + 'pallosarjan oletus nostojen kanssa. V1973 PR #2625 avattu 05.46; luettelo '
           + 'viedaan amparin juureen heti mergen jalkeen. Opus 2 pysahtyi - KAIKKI VIISI '
-          + 'SESSIOTA PYSAHTYNEET omistajan ohjeen mukaan.',
+          + 'SESSIOTA PYSAHTYNEET omistajan ohjeen mukaan. V1973 CI 1. AJO PUNAINEN (06.01): '
+          + 'kerma-reuna, astro-pallo puhelin, zoom-pan, topografialinssi (aikakatto) - '
+          + 'yhteinen syy "pallon sarja ja pyramidi eri versiota": savukkeet lukevat amparin '
+          + 'luettelon, joka oli viela vanha. PAATOS (Fable 06.02): luettelo vietiin amparin '
+          + 'juureen ENNEN mergea (vanha talletettu pohja-20260920/pyramidi.edellinen-'
+          + '20260920-0605.json), tuotannon varitaso voi olla pois n. 20 min kunnes v1973 '
+          + 'on tuotannossa; CI ajetaan uudestaan. OPPI: pohjan versiovaihdossa luettelo '
+          + 'ja koodi on julkaistava samassa ikkunassa - CI ei voi olla vihrea ennen '
+          + 'luetteloa, joten jarjestys on luettelo -> CI -> merge, ei toisinpain.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
