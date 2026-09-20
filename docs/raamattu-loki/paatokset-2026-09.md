@@ -71,3 +71,7 @@ Omistaja: poltetaan kaikki uudestaan, joet samalla; odotetaan hetki muita kartta
 ## UUSINTAPOLTON SISALTO PAATETTY (omistaja kortilla) (20.9.2026 klo 20.46)
 
 Jokien (pohjaan) lisaksi: 1) merinimiot merelle ja pois rantaviivan/korostuskehan alta; 2) nimiot omaksi nimiotasoksi (kohdemaan nimiot piilotettavissa ja elaviksi); 3) 1873-maakuntien ja merien nimet harvennetuin kapiteelein (Sisaltokirjuri: docs/sisalto/nimisto-1873.md, Ranska ensin, kaanontarkkuus 1873); 4) rannikkoviivoitus tai syvyysvyohykkeet (koe molemmista, omistaja valitsee). EHTO: testataan ensin - Karttaseppa tekee Ranskan koelaatat z6-z8 paikalliseen peliin ja kaappaukset docs/raportit/kaappaukset/poltto-koe-20260920/; koko poltto vasta omistajan hyvaksynnan jalkeen. LTU nostotaso samaan polttoon. Nostojen kuvamerkit eivat ehdi (Codexin merkkisarja ensin).
+
+## HAVAINNEKUVALINJAUS (omistaja 20.09.2026 klo 20.48) (20.9.2026 klo 20.48)
+
+Kirjattu Raamattuun Kaupungit-osioon kohta HAVAINNEKUVAT NOSTOISSA: oikeat kuvat Sisaltokirjuri Commonsista, Codexilta vain havainnekuvat; luokat kadonnut kohde (ihme, havainnekuva paakuvana ajan kanssa), rappeutunut (parikuva nykytila + kulta-aika), olemassa oleva (havainnekuva vain visuaalisuuden vuoksi); tilausjarjestys ihmeet -> rappeutuneet -> visuaalisuus; Fable tarkastaa ihmeet kaanonia vasten.
