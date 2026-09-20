@@ -9822,7 +9822,17 @@ export const RAAMATTU = {
           + 'Luettelo viety amparin juureen 09.17 (edellinen talletettu viivat-20260920c/'
           + 'pyramidi.edellinen-20260920-0918.json). V1974 PR #2626 avattu 09.18. HUOM: '
           + 'Codexin postilaatikko ei ollut haarassa vaan Codexin omassa tyokansiossa '
-          + 'pushaamattomana - katso jatkossa myos ~/Documents/Codex/<pvm>/.',
+          + 'pushaamattomana - katso jatkossa myos ~/Documents/Codex/<pvm>/. V1974 CI '
+          + 'PUNAINEN (09.33): "pallon sarja ja pyramidi eri versiota" - pallon laatat.json '
+          + 'kirjaa viivat-version, joten viivataso c:n luettelo sammutti lepokerroksen '
+          + 'MYOS TUOTANNOSSA 09.17-09.34; Fable palautti edellisen luettelon. SAANTO: '
+          + 'pohjan TAI viivatason versionvaihto vaatii aina pallosarjan polton perassa, '
+          + 'ja luettelo julkaistaan vasta kun pallosarja on amparissa. GIRONDEN OIKEA '
+          + 'JUURISYY (Opus 2 09.30, mitattu laatasta z8/162/74): ne_10m on jo auktoriteetti, '
+          + 'ETOPO/dilataatio vain varareitti; renkaiden harvennus 0,006 astetta (~470 m) '
+          + 'oikaisee mutkat sisaanpain, mediaani 0,7 km, suurin 3,3 km (20 px) -> harvennus '
+          + '0,001 astetta pohja-ajoon, koe laatalla ensin. Opus 2 yhdistaa pohjan '
+          + 'uusintapolton, viivat c:n ja pallosarjan yhteen luetteloon -> v1974 odottaa.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
