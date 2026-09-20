@@ -4851,10 +4851,16 @@ export async function avaaPallolauta(ui) {
    * savukkeet/savuke-nappula-liike.mjs) lukee sen, ja css saa
    * tarvittaessa tarttua siihen.
    */
-  const matkanKerma = (pois) => {
+  /*
+   * HUNTU PYSYY LIIKKEEN AJAN, KAKSI AUKKOA (omistaja 21.9.2026):
+   * `kohdeIso` on matkan kohdemaa, joka saa lähtömaan rinnalle oman
+   * reiän huntuun (js/laattapyramidi.js HUNTU PYSYY LIIKKEEN AJAN).
+   * Runkoluokan nimi on entinen: se tarkoittaa nyt "liikkeen huntu".
+   */
+  const matkanKerma = (pois, kohdeIso = null) => {
     const paalla = Boolean(pois);
     document.body.classList.toggle('kerma-pois-liikkeessa', paalla);
-    if (!asetaTasoituksenLiike(paalla)) return;
+    if (!asetaTasoituksenLiike(paalla, kohdeIso)) return;
     heraa();
     paivita();
   };
