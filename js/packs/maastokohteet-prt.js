@@ -640,27 +640,15 @@ export const MAASTOKOHTEET_PRT = [
   {
     id: 'aveiro',
     kuva: {
-      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-aveiro-066cc099.jpg',
-      lyhyt: 'Moliceiro-vene Aveiron kanavassa.',
-      selite: 'Värikäs perinteinen vene liukuu kanavassa kaupungin keskustassa.',
-      lahde: 'Valokuva: CardosoSousa1988, Wikimedia Commons (CC BY-SA 4.0).',
-      tekija: 'CardosoSousa1988',
-      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Moliceiro_no_Canal_de_S._Roque_-_Aveiro_-_Portugal.jpg',
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-aveiro-5b10d29d.jpg',
+      lyhyt: 'Aveiron kanava ja sen rantatalot.',
+      selite: 'Kapea vesiväylä halkoo kaupunkia, jota kutsutaan Portugalin Venetsiaksi.',
+      lahde: 'Valokuva: John Samuel, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'John Samuel',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Canal_in_Aveiro_03.jpg',
       lisenssi: 'CC BY-SA 4.0',
       lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
     },
-    kuvat: [
-      {
-        osoite: 'https://media.matkakirja.app/karttanostot/20260920/prt-nosto-aveiro-5b10d29d.jpg',
-        lyhyt: 'Aveiron kanava ja sen rantatalot.',
-        selite: 'Kapea vesiväylä halkoo kaupunkia, jota kutsutaan Portugalin Venetsiaksi.',
-        lahde: 'Valokuva: John Samuel, Wikimedia Commons (CC BY-SA 4.0).',
-        tekija: 'John Samuel',
-        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Canal_in_Aveiro_03.jpg',
-        lisenssi: 'CC BY-SA 4.0',
-        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
-      },
-    ],
     nimi: 'Aveiro',
     tyyppi: 'kulttuuri',
     kysymykset: [
