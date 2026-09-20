@@ -1644,12 +1644,16 @@ function lisaaJana(joukko, mitat, ax, ay, bx, by, m) {
  *           todellinen siirtymä on 44,5 px eli alle puolen jakson,
  *           kuten yläraja lupaa.
  *   raja    puoli veton leveyttä (1,8 / 2)                    = 0,90
+ *   joki    puoli pääuoman leveyttä (2,6 / 2) ja varaa sille, että
+ *           uoma piirtyy pehmeänä käyränä pisteiden LÄPI
+ *           (maailmapiirto.js lautaKaari), joten se pullistuu
+ *           murtoviivan ulkopuolelle                          = 2,0
  *
  * LENTOREITTEJÄ EI OLE ENÄÄ LISTASSA: ne eivät ole viivatasolla
  * lainkaan (ks. LENNOT EIVÄT OLE VIIVATASOLLA).
  */
 const ULOTTUMA = {
-  reitti: 13.2, helmi: 58.5, raja: 1.0,
+  reitti: 13.2, helmi: 58.5, raja: 1.0, joki: 2.0,
 };
 /** Patinan musteen ulottuma laatan reunan yli (sama kuin nostolla). */
 const VIIVA_MARGINAALI_PX = NOSTO_MARGINAALI_PX;
@@ -1686,6 +1690,31 @@ function viivatasonPeite(mitat, osat = null) {
   const R = mitat.px / TIHEYS;                // reittiyksikkö kuvapikseleinä
   const px = (bx) => (bx - arkinBbox.x) * mitat.px;
   const py = (by) => (by - arkinBbox.y) * mitat.px;
+
+  /*
+   * --- joet ------------------------------------------------------
+   *
+   * Uomat piirtyvat JOKA TASOLLA (maailmapiirto.js: kaikki uomat
+   * piirretaan joka tasolla), toisin kuin reitit, jotka alkavat
+   * VIIVA_REITIT_ALIN-tasolta. Peite lasketaan samalla janakaavalla
+   * kuin reiteilla, ULOTTUMA.joki-marginaalilla.
+   */
+  if (O.joet !== false) {
+    const kierrosJ = projektio.leveys ?? 0;
+    const siirrotJ = kierrosJ ? [-kierrosJ, 0, kierrosJ] : [0];
+    const mj = ULOTTUMA.joki * R + VIIVA_MARGINAALI_PX;
+    for (const joki of lautaSisalto.joet ?? []) {
+      const poly = joki.pisteet ?? [];
+      for (const d of siirrotJ) {
+        for (let i = 1; i < poly.length; i += 1) {
+          const ax = poly[i - 1][0] + d;
+          const bx = poly[i][0] + d;
+          if (kierrosJ && Math.abs(bx - ax) > kierrosJ / 2) continue;
+          lisaaJana(joukko, mitat, px(ax), py(poly[i - 1][1]), px(bx), py(poly[i][1]), mj);
+        }
+      }
+    }
+  }
 
   /* --- reitit, helmet ja lennot --------------------------------- */
   if (O.reitit !== false && mitat.z >= VIIVA_REITIT_ALIN) {
@@ -1956,30 +1985,36 @@ let meriSavy = null;
  */
 if (VIIVATASO && lippu('peitemittaus')) {
   console.log('\nVIIVATASON PEITE  (laattoja tasolla)');
-  console.log('   z   ruudukko      reitit   rajat  piirit   yhteensä   rajojen lisä');
+  console.log('   z   ruudukko      reitit   rajat  piirit    joet   yhteensä   jokien lisä');
   const summat = {
-    reitit: 0, rajat: 0, piirit: 0, kaikki: 0, lisa: 0,
+    reitit: 0, rajat: 0, piirit: 0, joet: 0, kaikki: 0, lisa: 0,
   };
   for (const m of tasot) {
-    const vainReitit = viivatasonPeite(m, { rajat: false, piirit: false });
-    const vainRajat = viivatasonPeite(m, { reitit: false, piirit: false });
-    const vainPiirit = viivatasonPeite(m, { reitit: false, rajat: false });
+    const vainReitit = viivatasonPeite(m, { rajat: false, piirit: false, joet: false });
+    const vainRajat = viivatasonPeite(m, { reitit: false, piirit: false, joet: false });
+    const vainPiirit = viivatasonPeite(m, { reitit: false, rajat: false, joet: false });
+    // JOET OVAT UUSI SISÄLTÖ VIIVATASOLLA (20.9.2026): niiden hinta on
+    // raportoitava samalla tavalla kuin rajojen, koska ne kasvattavat
+    // tason laattamäärää kaikilla tasoilla eivätkä vain z5:stä ylöspäin.
+    const vainJoet = viivatasonPeite(m, { reitit: false, rajat: false, piirit: false });
     const kaikki = viivatasonPeite(m);
-    const ilmanRajoja = viivatasonPeite(m, { rajat: false });
-    const lisa = kaikki.size - ilmanRajoja.size;
+    const ilmanJokia = viivatasonPeite(m, { joet: false });
+    const lisa = kaikki.size - ilmanJokia.size;
     summat.reitit += vainReitit.size;
     summat.rajat += vainRajat.size;
     summat.piirit += vainPiirit.size;
+    summat.joet += vainJoet.size;
     summat.kaikki += kaikki.size;
     summat.lisa += lisa;
     console.log(`  ${m.z}  ${String(m.sarakkeita).padStart(4)}x${String(m.riveja).padStart(3)}  `
       + `${String(vainReitit.size).padStart(8)}${String(vainRajat.size).padStart(8)}`
-      + `${String(vainPiirit.size).padStart(8)}${String(kaikki.size).padStart(11)}`
-      + `${String(lisa).padStart(15)}`);
+      + `${String(vainPiirit.size).padStart(8)}${String(vainJoet.size).padStart(8)}`
+      + `${String(kaikki.size).padStart(11)}${String(lisa).padStart(14)}`);
   }
   console.log(`  yht          ${String(summat.reitit).padStart(8)}`
     + `${String(summat.rajat).padStart(8)}${String(summat.piirit).padStart(8)}`
-    + `${String(summat.kaikki).padStart(11)}${String(summat.lisa).padStart(15)}`);
+    + `${String(summat.joet).padStart(8)}`
+    + `${String(summat.kaikki).padStart(11)}${String(summat.lisa).padStart(14)}`);
 }
 
 /*
@@ -2165,9 +2200,22 @@ if (!ILMAN_AINEISTOA) {
    * molemmissa tiloissa, ja ero on datassa — sama ratkaisu kuin
    * nostoilla.
    */
+  /*
+   * JOET SIIRTYIVÄT VIIVATASOLLE (Fablen päätös 20.9.2026; mittaus
+   * docs/raportit/viesti-fable-maalehti-viivat-20260920.md).
+   *
+   * Uomat olivat pohjassa, koska joki on maastoa eikä rataa. Se maksoi
+   * liikaa: yksi jokiaineiston korjaus vaati koko pohjapyramidin
+   * uudelleenpolton (23 340 laattaa z0-z7 ja 69 628 z8). Nyt ne ovat
+   * samalla lapinakyvalla tasolla kuin reitit, jolloin seuraava
+   * korjaus maksaa vain viivatason ajon ja pohja pysyy ikuisessa
+   * valimuistissaan.
+   */
   sisalto = lippu('ilman-sisaltoa')
     ? null
-    : { ...lautaSisalto, reitit: [], lentoreitit: [] };
+    : {
+      ...lautaSisalto, reitit: [], lentoreitit: [], joet: [],
+    };
   if (sisalto) console.log(`  sisältö         ${sisallonYhteenveto(sisalto)} `
     + '(reitit viivatasolla, eivät pohjassa)');
 }
@@ -2493,7 +2541,8 @@ writeFileSync(join(tyokansio, 'sisalto.json'), JSON.stringify(VIIVATASO
   ? {
     reitit: lautaSisalto.reitit,
     lentoreitit: [],
-    joet: [],
+    // JOET OVAT VIIVATASOLLA (ks. pohjan sisalto ylla).
+    joet: lautaSisalto.joet,
     rajat: rajaViivat,
   }
   : (sisalto ?? null)));
