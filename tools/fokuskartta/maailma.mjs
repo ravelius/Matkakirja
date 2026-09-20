@@ -305,6 +305,7 @@ export function jarvet(kansio, { vahinKoko = 0.4, harvennus = 0.006 } = {}) {
  */
 export async function keraaMaailma({
   kansio, laatikko, ruutu = 0.05, korkeuslaatikko = null, palat = null,
+  harvennus = 0.006,
 }) {
   /*
    * KORKEUSLAATIKKO SAA OLLA KAPEAMPI KUIN LAATIKKO.
@@ -328,7 +329,7 @@ export async function keraaMaailma({
    * (--harva) ja maalehtien moottori (piirto.js).
    */
   const meri = meriMaski(kansio, korkeus, { laajennus: 1 });
-  const renkaat = meriRenkaat(kansio);
+  const renkaat = meriRenkaat(kansio, { harvennus });
   return {
     korkeus,
     meri,

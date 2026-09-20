@@ -166,11 +166,18 @@ export const PALLO_LAATTAVERSIO = '2026-09-20-pohja';
 /*
  * TUNNISTE ON PELKKIÄ KIRJAIMIA JA NUMEROITA: tools/tee-pallolaatat.mjs
  * hylkää muun ("--tunniste: vain a–z ja 0–9"), joten 20.9.2026 poltettu
- * sarja on `20260920i` eikä `2026-09-20-i`.
+ * sarja on `20260920j` eikä `2026-09-20-j`.
+ *
+ * SARJA j EIKÄ i (20.9.2026): sarja i oli poltettu viivaversiosta
+ * `2026-09-20-viivat`, jossa jokia EI ollut viivatasolla. Kun joet
+ * siirtyivät viivatasolle (`2026-09-20c-viivat`), lepokerroksen
+ * versiovahti (js/pallolaatat.js lepokerroksenKerrokset) vaati saman
+ * viivaversion myös pallon sarjaan — muuten kerros sammuu kokonaan.
+ * Sarja j on sama pohja, sama tunnisteetön sisältö, uusi viivaversio.
  */
-export const PALLO_LAATTATUNNISTE = '20260920i';
+export const PALLO_LAATTATUNNISTE = '20260920j';
 /*
- * Sarja i on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
+ * Sarja j on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
  * kansiossa ei ole '-nostot'-osaa): nostot tulevat maittain lepokerroksesta
  * (js/pallolaatat.js nostotMaittain). Sama tieto sw.js LAATTAKANSIO.
  */
