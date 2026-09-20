@@ -1851,6 +1851,33 @@ export function luoNostot({
    */
   const VIUHKAN_LEPO_PX = 12;
   const VIUHKAN_ZOOMIVARA = 0.01;
+  /*
+   * LIUSKA ASETTUU ENSIN, LEPOTESTI ALKAA VASTA SITTEN (21.9.2026, CI
+   * v1984 savuke-kaupunkipopup: Pariisi ja Marseille 390 px, liuska
+   * "ei auennut"). Mitattu hidastetulla Chromiumilla (CPU 6×): liuska
+   * AUKESI ja sulkeutui 425 ms myöhemmin, koska merkki oli siirtynyt
+   * 42 px — kamera-ajon lupaus (kamera.ajaKamera) täyttyi ennen kuin
+   * kirjaston renderkamera oli perillä, ja avaushetken `p` luettiin
+   * vielä matkalla olevasta kamerasta. Nopealla koneella ero on
+   * pikseleitä, kuormitetulla kymmeniä. Siksi liuska SEURAA merkkiä
+   * asettumisajan (LIUSKAN_ASETTUMISAIKA_MS) avauksesta lukien; vasta
+   * sen jälkeen pelaajan panorointi tai zoomi sulkee sen kuten ennen.
+   *
+   * AIKA, EI LEPO: ensimmäinen ladonta avauksen jälkeen näki merkin
+   * vielä VANHASSA paikassa (renderkamera ei ollut liikahtanut), joten
+   * "piste ei liikkunut kahden ladonnan välillä" olisi julistanut levon
+   * liian aikaisin — mitattu: hyppy 44 px tuli vasta sen jälkeen.
+   * Siksi asettuminen päättyy vasta, kun VÄHIMMÄISAIKA on kulunut JA
+   * piste on pysynyt paikallaan kahden ladonnan välillä — raskaasti
+   * kuormitetulla koneella (mitattu polton aikana: liuska aukesi vasta
+   * 10 s napautuksesta) kamera saapuu paljon myöhemmin kuin lupaus
+   * täyttyy. Aikakatto pitää huolen, ettei liuska seuraa loputtomiin.
+   * Pelaajan sormi ei ehdi panoroida vähimmäisajan sisällä
+   * tarkoituksella.
+   */
+  const LIUSKAN_ASETTUMISAIKA_MS = 1500;
+  const LIUSKAN_ASETTUMISKATTO_MS = 8000;
+  const LIUSKAN_ASETTUMISVARA_PX = 1;
 
   /** Avaa viuhkan aihemerkistä; toinen viuhka sulkeutuu samalla. */
   const avaaViuhka = (rivi) => {
@@ -1914,6 +1941,10 @@ export function luoNostot({
       p: { x: rivi.p.x, y: rivi.p.y },
       uloinOsuus: viimeisinUloinOsuus,
       avattuKategoria: null,
+      // Asettumisvaihe (ks. LIUSKA ASETTUU ENSIN): seuraa merkkiä,
+      // kunnes vähimmäisaika on kulunut ja piste on levossa.
+      avattu: Date.now(),
+      asettuu: true,
       // Sisäisen kelauksen tila (PAATOKSET 34 kohta 5, ks. paivita).
       kelaus: 0,
       kelausIkkuna: 0,
@@ -2699,12 +2730,24 @@ export function luoNostot({
     const elavatJaAnkkurit = [...elavat, ...ankkuriRivit];
     if (liuska) {
       const rivi = elavatJaAnkkurit.find((r) => r.avain === liuska.avain);
-      const siirtyi = rivi
-        ? Math.hypot(rivi.p.x - liuska.p.x, rivi.p.y - liuska.p.y) > VIUHKAN_LEPO_PX
-        : true;
-      const zoomasi = Math.abs(uloinOsuus - liuska.uloinOsuus)
-        > VIUHKAN_ZOOMIVARA * Math.max(uloinOsuus, liuska.uloinOsuus, 1e-6);
-      if (!rivi || siirtyi || zoomasi) liuska = null;
+      const matka = rivi ? Math.hypot(rivi.p.x - liuska.p.x, rivi.p.y - liuska.p.y) : Infinity;
+      if (rivi && liuska.asettuu) {
+        // Asettumisvaihe (ks. LIUSKA ASETTUU ENSIN): kirjaa uusi piste
+        // ja kameran osuus; lepotesti alkaa vasta, kun vähimmäisaika on
+        // kulunut ja piste pysyi paikallaan — tai aikakatto täyttyi.
+        const ika = Date.now() - liuska.avattu;
+        if ((ika >= LIUSKAN_ASETTUMISAIKA_MS && matka <= LIUSKAN_ASETTUMISVARA_PX)
+          || ika >= LIUSKAN_ASETTUMISKATTO_MS) {
+          liuska.asettuu = false;
+        }
+        liuska.p = { x: rivi.p.x, y: rivi.p.y };
+        liuska.uloinOsuus = uloinOsuus;
+      } else {
+        const siirtyi = matka > VIUHKAN_LEPO_PX;
+        const zoomasi = Math.abs(uloinOsuus - liuska.uloinOsuus)
+          > VIUHKAN_ZOOMIVARA * Math.max(uloinOsuus, liuska.uloinOsuus, 1e-6);
+        if (!rivi || siirtyi || zoomasi) liuska = null;
+      }
     }
     const piirrettavat = [...elavat.filter((r) => !ryhmassa.has(r.avain)), ...aiherivit]
       .sort(jarjestys);

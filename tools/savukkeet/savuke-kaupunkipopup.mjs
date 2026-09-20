@@ -58,6 +58,7 @@
  *
  * Aja: NODE_USE_ENV_PROXY=1 PLAYWRIGHT_BROWSERS_PATH=/opt/pw-browsers \
  *      node tools/savukkeet/savuke-kaupunkipopup.mjs [kuvakansio]
+ *      SAVUKE_HIDAS=6 toistaa CI:n kuorman (liuskan asettuminen, ks. alla).
  */
 import http from 'node:http';
 import { readFileSync, existsSync, mkdirSync } from 'node:fs';
@@ -209,6 +210,20 @@ for (const ruutu of RUUDUT) {
       } catch { /* yksityinen tila */ }
     }, tallenne);
     const sivu = await ctx.newPage();
+    /*
+     * HIDASTETTU CHROMIUM (21.9.2026, CI v1984: Pariisi ja Marseille 390
+     * px "liuska ei auennut"). Vika ei toistunut nopealla koneella: liuska
+     * aukesi ja sulkeutui heti, kun kuormitettu renderkamera jäi ajosta
+     * jälkeen (js/pallolauta/nostot.js LIUSKA ASETTUU ENSIN). SAVUKE_HIDAS=6
+     * hidastaa suorittimen CDP:llä samaan luokkaan kuin CI:n rinnakkaisajo;
+     * ilman lippua savuke on entinen.
+     */
+    const hidas = Number(process.env.SAVUKE_HIDAS ?? 0);
+    if (hidas > 1) {
+      const cdp = await ctx.newCDPSession(sivu);
+      await cdp.send('Emulation.setCPUThrottlingRate', { rate: hidas });
+      tieto('hidastettu Chromium', `CPU ${hidas}×`);
+    }
     const virheet = [];
     sivu.on('pageerror', (e) => virheet.push(String(e.message ?? e)));
     await sivu.route('**samireivinen.workers.dev/**', (r) => r.abort());
@@ -1396,11 +1411,24 @@ for (const ruutu of RUUDUT) {
       });
       tieto('vastakoe 1: datassa poiston jälkeen',
         `${poisto.kansikuvat} kansikuvaa, ${poisto.avauskuvat} avauskuvaa`);
-      const uusi = await kaupunkiPiste();
-      if (uusi) {
+      let liuskaKuvattomana = null;
+      // Sama ele ja sama kaksi yritystä kuin vartiossa 1 (juuri suljetun
+      // kortin jälkeen portti nielaisee ensimmäisen napautuksen; osoitin
+      // liikkuu ennen napautusta; piste luetaan tuoreena).
+      for (let yritys = 0; yritys < 2 && !liuskaKuvattomana; yritys += 1) {
+        const uusi = await kaupunkiPiste();
+        if (!uusi) break;
+        await sivu.mouse.move(uusi.x + 24, uusi.y + 24);
+        await sivu.mouse.move(uusi.x, uusi.y, { steps: 3 });
         await sivu.mouse.click(uusi.x, uusi.y);
-        await sivu.waitForTimeout(900);
+        for (let i = 0; i < 60 && !liuskaKuvattomana; i += 1) {
+          liuskaKuvattomana = await sivu.evaluate(
+            () => window.matkakirja.ui.pallolauta.nostot.liuskaAuki?.() ?? null,
+          );
+          if (!liuskaKuvattomana) await sivu.waitForTimeout(50);
+        }
       }
+      await sivu.waitForTimeout(900);
       const tila = await sivu.evaluate(() => {
         const ui = window.matkakirja.ui;
         return {
@@ -1423,8 +1451,18 @@ for (const ruutu of RUUDUT) {
           kartta: Boolean(p.querySelector('.kaupunkipopup-kartta .kartta-kehys')),
         };
       });
-      vaadi('vastakoe 1: kuvaton kaupunki avaa pop-upin silti', Boolean(kuvaton),
-        virheet.join(' | '));
+      /*
+       * KAUPUNKIMERKKI AVAA LIUSKAN MYÖS KUVATTOMANA (PAATOKSET 34 kohta
+       * 1; vartio päivitetty 21.9.2026). Vanha väite odotti isoa
+       * pop-upia, jota kaupunkimerkki ei enää avaa — se oli punainen
+       * jokaisessa CI-ajossa v1983:sta alkaen. Nyt mitataan sama asia
+       * kuin vartiossa 1: liuska aukeaa, vaikka herokuvia ei ole.
+       */
+      vaadi('vastakoe 1: kuvaton kaupunki avaa liuskan silti',
+        Boolean(liuskaKuvattomana) && tila.kortteja === 0,
+        `liuska ${liuskaKuvattomana ?? '-'}, kortteja ${tila.kortteja}; ${virheet.join(' | ')}`);
+      tieto('vastakoe 1: VANHENTUNUT VARTIO (kuvaton kaupunki avaa pop-upin silti)',
+        'kaupunkimerkki avaa liuskan, ei isoa pop-upia (PAATOKSET 34 kohta 1)');
       if (kuvaton) {
         tieto('vastakoe 1: hero-lohkon korkeus', `${kuvaton.hero} px (hidden=${kuvaton.piilossa})`);
         vaadi('vastakoe 1: hero-lohko ei jätä tyhjää tilaa',
