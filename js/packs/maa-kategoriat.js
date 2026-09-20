@@ -152,6 +152,491 @@ export function maanAiheOtsikko(maanNimi, aiheNimi) {
 }
 
 export const MAA_KATEGORIAT = {
+  SVN: [
+    {
+      id: 'historia',
+      nimi: 'Historia',
+      johdanto: 'Slovenian menneisyys on kaivettu maasta ja kirjoitettu linnoihin: täällä '
+        + 'on louhittu elohopeaa maailmalle, kasvatettu valkoisia ratsuja hoveille ja '
+        + 'häädetty talvea lampaantaljoilla.',
+      nostot: [
+        {
+          otsikko: 'Saavin pohjalla kimalsi elohopea',
+          aika: '1490',
+          tiedosto: 'Izvozni stolp Jaška Frančiške, Idrija, Slovenia (6918862385).jpg',
+          teksti: 'Legendan mukaan saavinvalmistaja huomasi vuonna 1490 Idrijan lähteessä '
+            + 'kimaltavan nestemäisen metallin. Se oli elohopeaa, ja löytö teki pienestä '
+            + 'vuoristokylästä tärkeän kaivoskaupungin. Habsburgien aikana Idrijan '
+            + 'elohopea kuljetettiin muun muassa Espanjan valtakunnan hopeakaivoksille, '
+            + 'joissa sitä tarvittiin hopean irrottamiseen malmista. Kaivos ulottui '
+            + 'lopulta lähes 400 metrin syvyyteen. Kuvan ristikkotorni on Frančiškan '
+            + 'kuilun nostotorni, ja sen huipulla risteävät vasarat, kaivosmiesten vanha '
+            + 'tunnus. Vuonna 2012 Idrija liitettiin yhdessä espanjalaisen Almadénin '
+            + 'kanssa Unescon maailmanperintölistalle.',
+          lyhyt: 'Idrija on slovenialainen kaivoskaupunki, jonka elohopeakaivos kuuluu '
+            + 'Unescon maailmanperintöön.',
+          selite: 'Frančiškan kuilun nostotorni Idrijan kaivosalueella. Kaivos ja kaupunki '
+            + 'kuuluvat Unescon maailmanperintökohteisiin.',
+          lahde: 'Stephen Colebourne, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Linna jonka osti skotti',
+          aika: '1656',
+          tiedosto: 'Ptuj Castle above the Drava riverbank 2024.jpg',
+          teksti: 'Ptujin linna kohoaa kukkulalla Drava-joen yllä. Se rakennettiin 1100-luvun '
+            + 'puolivälissä suojaamaan unkarilaisilta, ja myöhemmin siitä tuli Zagrebin '
+            + 'jesuiittojen omaisuutta. Vuonna 1656 rahapulaan joutuneet jesuiitat myivät '
+            + 'linnan skotlantilaissyntyiselle kenraalimarsalkka Walter Leslielle. Tämä '
+            + 'rakennutti sen barokkiaikaan uusiksi maaseutuasunnoksi, sillä '
+            + 'turkkilaisuhan väistyttyä linnan ei tarvinnut enää olla linnake. Lesliet '
+            + 'omistivat sen vuoteen 1802, ja vuonna 1873 kreivitär Theresia von '
+            + 'Herberstein osti linnan itselleen. Herbersteinien suvulla se pysyi vuoteen '
+            + '1945, jolloin linna valtiollistettiin ja muutettiin alueen historian '
+            + 'museoksi.',
+          lyhyt: 'Ptujin linna on 1100-luvulta periytyvä linna Drava-joen rannalla '
+            + 'Koillis-Sloveniassa.',
+          selite: 'Ptujin linna ja vanha kaupunki Drava-joen pohjoisrannalla. Linnassa toimii '
+            + 'nykyään alueen historian museo.',
+          lahde: 'PJakopin, Wikimedia Commons (CC BY 4.0)',
+        },
+        {
+          otsikko: 'Lehmus jokaisen varsan kunniaksi',
+          aika: '1580',
+          tiedosto: 'Slovenia Lipica (8876401592).jpg',
+          teksti: 'Vuonna 1580 Sisä-Itävallan arkkiherttua Kaarle perusti Karstin alueelle '
+            + 'Lipican ratsutilan. Espanjalaista hevosta pidettiin ihanteellisena, ja '
+            + 'Karstin maaperä ja ilmasto muistuttivat Espanjan oloja, joten paikka '
+            + 'valittiin. Ensimmäiset hevoset, 24 tammaa ja kuusi oria, ostettiin '
+            + 'Espanjasta vuonna 1581, ja seudun maanviljelijät häädettiin muualle. '
+            + 'Paikan nimi tulee sanasta lipa, joka tarkoittaa lehmusta. Tilalla '
+            + 'istutetaan yhä uusi lehmus jokaisen syntyvän varsan kunniaksi. '
+            + 'Lipizzan-hevoset syntyvät tummina ja muuttuvat valkoisiksi vasta vuosien '
+            + 'kuluessa.',
+          lyhyt: 'Lipica on Karstin kylä, jossa lipizzan-hevosrotu on saanut alkunsa.',
+          selite: 'Hevoset laiduntavat Lipican ratsutilan niityllä. Rotu on saanut nimensä '
+            + 'Lipicasta.',
+          lahde: 'KLMircea from Focsani, Romania, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Lipizzanhevonen',
+        },
+        {
+          otsikko: 'Lampaantaljat häätävät talven',
+          aika: '1960',
+          tiedosto: 'Korant Ptuj 01.jpg',
+          teksti: 'Helmikuussa Ptujin kaduilla marssivat kurentit, lampaantaljoihin '
+            + 'pukeutuneet hahmot, joilla on värikäs naamio. Heidän kädessään on puinen '
+            + 'nuija, jonka päässä on siilinnahkoja, ja koko melu on tarkoitettu ajamaan '
+            + 'talvi pois. Ensimmäisen nykymuotoisen Kurentovanje-karnevaalin järjestivät '
+            + '27. helmikuuta 1960 Drago Hasl ja hänen ystävänsä. Aiemmin kurentiksi '
+            + 'pääsivät vain naimattomat miehet, mutta nykyään mukana on myös naisia ja '
+            + 'lapsia. Karnevaali on Slovenian suosituin, ja vuonna 2017 kurenttien '
+            + 'kiertäminen talosta taloon merkittiin Unescon aineettoman '
+            + 'kulttuuriperinnön listalle.',
+          lyhyt: 'Kurent on Ptujin karnevaalin lampaantaljaan pukeutunut talvenajaja.',
+          selite: 'Perinteinen kurent-naamio Ptujin linnan museossa. Kurentit ovat Ptujin '
+            + 'kevätkarnevaalin tunnetuimmat hahmot.',
+          lahde: 'Clemens Stockner, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä puu istutetaan Lipicassa jokaisen syntyvän varsan kunniaksi?',
+        vaihtoehdot: [
+          'Tammi',
+          'Lehmus',
+          'Mänty',
+          'Pyökki',
+        ],
+        oikea: 1,
+        fakta: 'Lipican nimi tulee sanasta lipa eli lehmus, ja ratsutilalla istutetaan '
+          + 'uusi lehmus jokaisen syntyvän varsan kunniaksi.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Ruoka',
+      johdanto: 'Slovenian pöydässä kohtaavat pähkinäinen juhlaleivonnainen, Adrianmeren '
+        + 'suola, hunaja ja yli nelisataavuotiaan köynnöksen rypäleet.',
+      nostot: [
+        {
+          otsikko: 'Pähkinärulla joka kiertää',
+          aika: '1575',
+          tiedosto: 'Potica (9501040588).jpg',
+          teksti: 'Potica on juhlaleivonnainen, jossa ohueksi kaulittu hiivataikina sivellään '
+            + 'täytteellä, kääritään rullaksi ja kierretään usein renkaaksi. Yleisin '
+            + 'täyte on pähkinä, mutta käytössä ovat myös rakuuna, rusina, tuorejuusto ja '
+            + 'unikonsiemen. Vanhimmat tunnetut maininnat ovat reformaattori Primož '
+            + 'Trubarin teksteistä vuosilta 1575 ja 1577, jolloin leivonnaista kutsuttiin '
+            + 'nimellä povitica, käärittävä. Johann Weikhard von Valvasor kuvasi '
+            + 'hunajaisen pähkinärullan jo vuonna 1689. Perinteisesti potica paistetaan '
+            + 'potičnik-vuoassa, jonka keskellä on piippu, ja sitä syödään pääsiäisenä ja '
+            + 'jouluna.',
+          lyhyt: 'Potica on slovenialainen juhlaleivonnainen, jossa täytetty hiivataikina '
+            + 'kääritään rullaksi.',
+          selite: 'Viipale pähkinäpoticaa, josta näkyy taikinan ja täytteen kierre. '
+            + 'Leivonnainen kuuluu Slovenian pääsiäisen ja joulun perinteisiin.',
+          lahde: 'Michael R Perry, Wikimedia Commons (CC BY 2.0)',
+        },
+        {
+          otsikko: 'Adrianmeren suola 1200-luvulta',
+          aika: '1200-luvulta',
+          tiedosto: 'Secoveljske soline - Lera3.jpg',
+          teksti: 'Sečovljen suola-altaat Piranin lähellä ovat olleet toiminnassa jo '
+            + '1200-luvulta. Ne ovat Välimeren pohjoisimpia suolantuotantoalueita ja '
+            + 'harvoja paikkoja, joissa suolaa tehdään yhä perinteisin menetelmin: '
+            + 'merivesi haihtuu matalissa altaissa, ja jäljelle jää suola. Tuote myydään '
+            + 'nimellä Piranin suola, ja sillä on EU:n suojattu alkuperänimitys. Alue on '
+            + 'myös 650 hehtaarin kosteikko, jolla on nähty yli 280 lintulajia, ja siellä '
+            + 'toimiva suolanvalmistuksen museo sai Europa Nostra -palkinnon vuonna 2003. '
+            + 'Altaiden reunoilla kasvaa suolaa vaativia kasveja.',
+          lyhyt: 'Sečovljen suola-altaat ovat Slovenian suurin suolantuotantoalue '
+            + 'Adrianmeren rannalla.',
+          selite: 'Suolan haihdutusaltaita Leran toiminnassa olevalla alueella Sečovljen '
+            + 'suolatarhoissa. Alue on kansainvälisesti tärkeä kosteikko.',
+          lahde: 'Yerpo, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Mehiläisten opettaja maalasi pesät',
+          aika: '1770',
+          tiedosto: 'JansevCebelnjak1.jpg',
+          teksti: 'Anton Janša syntyi noin vuonna 1734 Breznican kylässä ja lähti '
+            + 'lukutaidottomana opiskelemaan maalariksi Wieniin. Isän yli sadan pesän '
+            + 'parissa kasvanut mies valitsi lopulta mehiläiset, ja vuonna 1770 hänestä '
+            + 'tuli kaikkien Itävallan maiden ensimmäinen keisarillinen mehiläishoidon '
+            + 'opettaja. Hän muotoili pesät niin, että ne voi pinota kuin palikat, '
+            + 'koristi niiden etupuolet maalauksilla ja neuvoi viemään pesät kukkivien '
+            + 'niittyjen luo. Seudun oma krainilainen mehiläinen on tunnettu '
+            + 'rauhallisuudestaan ja hunajavarastoistaan. Maria Teresia määräsi hänen '
+            + 'kuolemansa jälkeen kaikki opettajat käyttämään hänen kirjojaan.',
+          lyhyt: 'Anton Janša oli slovenialainen mehiläishoidon uranuurtaja 1700-luvulla.',
+          selite: 'Anton Janšan pesäkatos Breznicassa. Pesien etulaudat koristettiin '
+            + 'perinteisesti maalauksilla.',
+          lahde: 'Sl-Ziga, Wikimedia Commons (public domain)',
+        },
+        {
+          otsikko: 'Yli 400-vuotias köynnös',
+          aika: '1657',
+          tiedosto: 'Stara trta, Maribor 3.jpg',
+          teksti: 'Mariborin Lent-kaupunginosassa Drava-joen rannalla talon seinää peittää '
+            + 'köynnös, jonka Guinnessin ennätyskirja tunnustaa maailman vanhimmaksi yhä '
+            + 'hedelmää tuottavaksi viiniköynnökseksi. Se on Žametovka-lajiketta, ja '
+            + 'Grazin museon maalauksissa se näkyy talon seinällä jo vuonna 1657. '
+            + 'Pariisilainen laboratorio vahvisti vuonna 1972 sen olevan yli 400-vuotias. '
+            + 'Köynnös on selvinnyt turkkilaissodista, Napoleonin vallasta, '
+            + 'filloksera-tuhosta ja kahdesta maailmansodasta. Joka syksy siitä saadaan '
+            + 'noin 25 litraa viiniä, joka pullotetaan pieniin 250 millilitran pulloihin '
+            + 'ja annetaan kaupungin lahjoiksi vieraille.',
+          lyhyt: 'Vanha köynnös on Mariborin talon seinällä kasvava Žametovka-viiniköynnös.',
+          selite: 'Stara trta eli Vanha köynnös Mariborin Lentin kaupunginosassa. Sitä '
+            + 'pidetään maailman vanhimpana yhä hedelmää tuottavana viiniköynnöksenä.',
+          lahde: 'Marco Almbauer, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuinka paljon viiniä Mariborin vanha köynnös antaa yhtenä syksynä?',
+        vaihtoehdot: [
+          'Noin 2 litraa',
+          'Noin 10 litraa',
+          'Noin 100 litraa',
+          'Noin 25 litraa',
+        ],
+        oikea: 3,
+        fakta: 'Mariborin yli 400-vuotias Žametovka-köynnös tuottaa vuodessa noin 25 '
+          + 'litraa viiniä, jota ei myydä yleisölle.',
+      },
+    },
+    {
+      id: 'luonto',
+      nimi: 'Luonto',
+      johdanto: 'Pienessä maassa mahtuvat samaan matkaan kolmipäinen vuori, smaragdinvihreä '
+        + 'joki ja saarelle rakennettu pyhiinvaelluskirkko.',
+      nostot: [
+        {
+          otsikko: 'Vuori jonka nimi on kolmipäinen',
+          aika: '1778',
+          tiedosto: 'Triglav north face.jpg',
+          teksti: 'Triglav on Slovenian korkein vuori, noin 2 864 metriä, ja sen nimi '
+            + 'tarkoittaa kolmipäistä, sillä Ylä-Kraiinin suunnasta se näyttää '
+            + 'kolmihuippuiselta. Ensimmäinen tunnettu nousu tehtiin vuonna 1778 '
+            + 'teollisuusmies Sigmund Zoisin aloitteesta. Huipulla seisoo pieni '
+            + 'metallitorni: pappi Jakob Aljaž osti huipun yhdellä floriinilla '
+            + 'huhtikuussa 1895, ja viisi miestä kokosi tornin viidessä tunnissa '
+            + 'elokuussa. Torni ja vuori ovat kansallissymboleja. Sanotaan, että jokaisen '
+            + 'aidon slovenialaisen pitäisi nousta huipulle kerran elämässään.',
+          lyhyt: 'Triglav on Slovenian ja Julian Alppien korkein vuori sekä '
+            + 'kansallissymboli.',
+          selite: 'Triglavin pohjoisseinä Vrata-laaksosta katsottuna. Vuori on Triglavin '
+            + 'kansallispuiston keskus.',
+          lahde: 'MKrolik-WMF, Wikimedia Commons (CC0)',
+          wiki: 'Triglav',
+        },
+        {
+          otsikko: 'Smaragdikaunotar',
+          aika: 'nykyään',
+          tiedosto: 'Soča River Panorama.jpg',
+          teksti: 'Soča saa alkunsa Trenta-laaksossa Julian Alpeilla 876 metrin korkeudessa '
+            + 'ja virtaa 138 kilometrin matkan Adrianmereen. Sen vesi on niin '
+            + 'smaragdinvihreää, että jokea markkinoidaan nimellä Smaragdikaunotar, ja '
+            + 'väri säilyy poikkeuksellisen pitkälle. Rannoilla syntyi myös runoutta: '
+            + 'Simon Gregorčič kirjoitti joesta runon Soči, jota pidetään slovenialaisen '
+            + 'kirjallisuuden mestariteoksena. Jokivarressa elää harvinaista '
+            + 'marmoritaimenta, ja alueella kuvattiin osa vuoden 2008 Narnia-elokuvasta '
+            + 'Prinssi Kaspian. Italiassa joki tunnetaan nimellä Isonzo.',
+          lyhyt: 'Soča on Julian Alppien joki, joka virtaa Sloveniasta Italiaan ja '
+            + 'Adrianmereen.',
+          selite: 'Soča Bovecin lähistöllä Länsi-Sloveniassa. Joki on 138 kilometriä pitkä ja '
+            + 'päätyy Adrianmereen.',
+          lahde: 'MarcusObal, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Soča',
+        },
+        {
+          otsikko: 'Saari jonne morsian kannetaan',
+          aika: '1655',
+          tiedosto: 'Bled Island and Bled Castle, Slovenia, 20240504 0906 8327.jpg',
+          teksti: 'Bledjärven pienellä saarella seisoo Neitsyt Marian taivaaseenoton '
+            + 'pyhiinvaelluskirkko, jonka torni on 52 metriä korkea. Kirkolle johtaa '
+            + 'barokkinen porrasnousu vuodelta 1655, jossa on 99 kiviporrasta, ja '
+            + 'perinteen mukaan onni seuraa sulhasta, joka kantaa morsiamensa ylös asti. '
+            + 'Sen jälkeen soitetaan kelloa ja tehdään toive. Saarelle ei mennä sillalla '
+            + 'vaan pletna-veneellä, jota soutaja ohjaa seisaaltaan kahdella airolla. '
+            + 'Vuonna 1740 Maria Teresia myönsi lauttaoikeuden 22 paikalliselle suvulle, '
+            + 'ja monet nykysoutajat polveutuvat suoraan heistä. Järveä lämmittää '
+            + '23-asteinen lämpölähde.',
+          lyhyt: 'Bledjärvi on Julian Alppien juurella oleva järvi, jonka saarella on '
+            + 'pyhiinvaelluskirkko.',
+          selite: 'Bledin saari ja pyhiinvaelluskirkko, taustalla Bledin linna kalliolla. '
+            + 'Järvi on noin 2,1 kilometriä pitkä ja enimmillään 29,5 metriä syvä.',
+          lahde: 'Jakub Hałun, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Bledjärvi',
+        },
+        {
+          otsikko: 'Rotko avattiin kävelijöille',
+          aika: '1893',
+          tiedosto: 'The-vintgar-gorge-2539912.jpg',
+          teksti: 'Vintgarin rotko Bledin luoteispuolella on 1,6 kilometrin mittainen kuilu, '
+            + 'jonka Radovna-joki on kaivertanut kallioon. Seinämät nousevat 50–100 '
+            + 'metrin korkeuteen, ja jokeen on syntynyt vesialtaita ja koskia. Rotko oli '
+            + 'pitkään melkein saavuttamaton, kunnes Gorjen pormestari Jakob Žumer ja '
+            + 'valokuvaaja Benedikt Lergetporer tutkivat sen vuonna 1891. Kaksi vuotta '
+            + 'myöhemmin siihen rakennettiin puisia kävelysiltoja, ja rotko avattiin '
+            + 'yleisölle 26. elokuuta 1893. Rotkon päässä putoaa 13-metrinen '
+            + 'Šum-vesiputous, Slovenian suurin jokivesiputous. Sana vintgar on sittemmin '
+            + 'alkanut tarkoittaa muitakin suojeltuja rotkoja.',
+          lyhyt: 'Vintgarin rotko on Radovna-joen kaivertama kuilu Bledin lähellä.',
+          selite: 'Vesialtaita Radovna-joessa Vintgarin rotkossa. Rotko sijaitsee Triglavin '
+            + 'kansallispuiston reunalla.',
+          lahde: 'ivabalk, Wikimedia Commons (CC0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mitä Triglav-vuoren nimi tarkoittaa?',
+        vaihtoehdot: [
+          'Kolmipäinen',
+          'Valkoinen kruunu',
+          'Jumalten istuin',
+          'Jäinen huippu',
+        ],
+        oikea: 0,
+        fakta: 'Triglav tarkoittaa kolmipäistä, koska vuori näyttää Ylä-Kraiinista katsoen '
+          + 'kolmihuippuiselta.',
+      },
+    },
+    {
+      id: 'tiede',
+      nimi: 'Tiede',
+      johdanto: 'Slovenian kalkkikivimaa on niin täynnä luolia, katoavia jokia ja kuivuvia '
+        + 'järviä, että koko karstitutkimuksen sanasto tulee täältä.',
+      nostot: [
+        {
+          otsikko: 'Joki joka katoaa maan alle',
+          aika: '1884',
+          tiedosto: 'SkocjanskeJame 2013jpg.jpg',
+          teksti: 'Škocjanin luolissa Reka-joki syöksyy Suureen sortumakuoppaan ja katoaa '
+            + 'kallion alle. Maan alla se virtaa 34 kilometriä ja nousee taas pintaan '
+            + 'Monfalconen lähellä, jossa siitä tulee kolmannes Timavo-joen vedestä. '
+            + 'Luolaston tutkittu pituus on 6 200 metriä, ja 2,2 miljoonan kuutiometrin '
+            + 'Martelin sali on Euroopan suurin tunnettu maanalainen sali. '
+            + 'Järjestelmällinen tutkimus alkoi vuonna 1884, ja Unesco merkitsi luolat '
+            + 'maailmanperintökohteeksi vuonna 1986. Alueelta on löytynyt merkkejä '
+            + 'ihmisasutuksesta yli kymmenentuhannen vuoden ajalta.',
+          lyhyt: 'Škocjanin luolat ovat Karstin alueen luolajärjestelmä, jonka läpi virtaa '
+            + 'maanalainen Reka-joki.',
+          selite: 'Turistipolku Škocjanin luolissa, joissa on runsaasti '
+            + 'tippukivimuodostelmia. Luolat ovat Unescon maailmanperintökohde.',
+          lahde: 'Lander, Wikimedia Commons (CC BY-SA 3.0)',
+          wiki: 'Škocjanin luolat',
+        },
+        {
+          otsikko: 'Sähkövalo luolassa ennen pääkaupunkia',
+          aika: '1884',
+          tiedosto: 'Postojna Cave. 2012-07-26 12-45-36.jpg',
+          teksti: 'Postojnan luola on 24,3 kilometrin mittainen karstiluola, jonka Pivka-joki '
+            + 'on kaivertanut. Vuonna 1818 luolaa valmisteltiin keisari Frans I:n '
+            + 'vierailua varten, ja lamppujen sytyttäjä Luka Čeč löysi sattumalta uuden '
+            + 'osan luolaa. Hänestä tuli luolan ensimmäinen virallinen opas. Vuonna 1872 '
+            + 'luolaan laskettiin raiteet, ja aluksi oppaat työnsivät vieraita vaunuissa. '
+            + 'Sähkövalo saatiin luolaan 1884, ennen kuin Ljubljanassa oli sellaista. '
+            + 'Luolassa on myös maailman ensimmäinen ja ainoa maanalainen postitoimisto, '
+            + 'joka avattiin vuonna 1899.',
+          lyhyt: 'Postojnan luola on Slovenian toiseksi pisin luolajärjestelmä ja yksi maan '
+            + 'tärkeimpiä nähtävyyksiä.',
+          selite: 'Tippukivimuodostelmia Postojnan luolassa. Luola on karstiluola, jonka '
+            + 'Pivka-joki on kaivertanut.',
+          lahde: 'Shesmax, Wikimedia Commons (CC BY-SA 4.0)',
+          wiki: 'Postojnanluola',
+        },
+        {
+          otsikko: 'Järvi joka katoaa kesäksi',
+          aika: '1689',
+          tiedosto: 'Dolenje Jezero (Cerknica).jpg',
+          teksti: 'Kun Cerknican järvi on täynnä, se on Slovenian suurin järvi, mutta kesällä '
+            + 'sen vesi valuu maan alle, ja pohjaan kasvaa vehreä kasvillisuus. Syksyn '
+            + 'sateiden jälkeen vesi nousee takaisin luolista niin nopeasti, että järvi '
+            + 'voi tulvia ympäristöönsä. Joskus se on ollut kuivana yli vuoden, kuten '
+            + 'vuosina 1834–35, ja kalat katoavat ja palaavat veden mukana. Vuonna 1689 '
+            + 'Johann Weikhard von Valvasor kuvasi järveä ja toi karst-sanan '
+            + 'eurooppalaisten tutkijoiden käyttöön kuvaamaan jokien maanalaista '
+            + 'virtausta. Järvi on tärkeä lintualue, ja sen pinta-ala vaihtelee 28 ja 38 '
+            + 'neliökilometrin välillä.',
+          lyhyt: 'Cerknican järvi on ajoittainen karstijärvi, joka katoaa maan alle ja '
+            + 'palaa.',
+          selite: 'Cerknican järvi ja Dolenje Jezeron kylä ilmasta nähtynä keväällä 2025. '
+            + 'Järven vesi nousee ja laskee vuodenaikojen mukaan.',
+          lahde: 'Petar Milošević, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Luolalohikäärmeen poikanen',
+          aika: '1689',
+          tiedosto: 'Proteus anguinus anguinus 48298877.jpg',
+          teksti: 'Olmi eli luolasalamanteri on sokea, valkoinen ja koko elämänsä pimeässä '
+            + 'uiva eläin. Ensimmäisen kerran sen mainitsi kirjassaan Johann Weikhard von '
+            + 'Valvasor vuonna 1689. Sateiden jälkeen olmeja huuhtoutui maan alta '
+            + 'pintaan, ja paikalliset uskoivat niiden olevan luolalohikäärmeen poikasia. '
+            + 'Olmin silmät ovat surkastuneet, mutta haju ja kuulo toimivat '
+            + 'erinomaisesti. Se voi elää jopa kymmenen vuotta ilman ruokaa, ja sen '
+            + 'enimmäiseliniäksi on arvioitu yli sata vuotta. Sloveniassa sitä kutsutaan '
+            + 'ihmiskalaksi, koska sen iho on ihmisen ihon värinen. Postojnan luolassa '
+            + 'olmeja voi nähdä erityisessä akvaariossa.',
+          lyhyt: 'Olmi on sokea luolasalamanteri, joka elää Dinaaristen Alppien '
+            + 'karstiluolien vesissä.',
+          selite: 'Olmi eli Proteus anguinus luolan vedessä. Laji on Slovenian '
+            + 'luonnonperinnön symboli.',
+          lahde: 'Julien Renoult, Wikimedia Commons (CC BY 4.0)',
+          wiki: 'Olmi',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Kuka toi sanan karst eurooppalaisten tutkijoiden käyttöön vuonna 1689?',
+        vaihtoehdot: [
+          'Belsazar Hacquet',
+          'Luka Čeč',
+          'Johann Valvasor',
+          'Jakob Aljaž',
+        ],
+        oikea: 2,
+        fakta: 'Johann Weikhard von Valvasor esitteli sanan karst eurooppalaisille '
+          + 'tutkijoille vuonna 1689 kuvatessaan Cerknican järven maanalaista '
+          + 'vesivirtausta.',
+      },
+    },
+    {
+      id: 'rakennukset',
+      nimi: 'Rakennukset',
+      johdanto: 'Ljubljanan sillat ja kirjasto kertovat, miten pieni pääkaupunki sai '
+        + 'ilmeensä: osa on Wienin secession-ajan betonia, osa arkkitehti Jože '
+        + 'Plečnikin käsialaa.',
+      nostot: [
+        {
+          otsikko: 'Kaksi siltaa vanhan viereen',
+          aika: '1932',
+          tiedosto: 'The Triple Bridge, Ljubljana (49402985288).jpg',
+          teksti: 'Ljubljanica-joen ylittävä Kolmoissilta on kaupungin vanhin siltapaikka, '
+            + 'sillä puusilta mainitaan täällä jo vuonna 1280. Nykyinen kivisilta '
+            + 'valmistui 1842 ja sai nimen Franzin silta arkkiherttua Franz Karlin '
+            + 'mukaan. Kun liikenne ahtautui, arkkitehti Jože Plečnik suunnitteli vuonna '
+            + '1929 sen viereen kaksi hieman vinoon asetettua jalankulkusiltaa, ja '
+            + 'kolmikko avattiin liikenteelle huhtikuussa 1932. Kaiteessa on 642 '
+            + 'kaidepylvästä. Vuodesta 2007 kaikki kolme siltaa ovat olleet vain '
+            + 'jalankulkijoille, ja vuonna 2021 ne liitettiin Unescon maailmanperintöön '
+            + 'osana Plečnikin perintöä.',
+          lyhyt: 'Kolmoissilta on Ljubljanan vanhimman siltapaikan kolmen sillan ryhmä '
+            + 'Ljubljanica-joen yllä.',
+          selite: 'Kolmoissilta ja Ljubljanica-joki, taustalla fransiskaanien Ilmestyskirkko. '
+            + 'Silta yhdistää keskiaikaisen vanhankaupungin Prešerenin aukioon.',
+          lahde: 'David Jones from Isle of Wight, United Kingdom, Wikimedia Commons (CC BY 2.0)',
+          wiki: 'Tromostovje',
+        },
+        {
+          otsikko: 'Lohikäärmeet keisarin kunniaksi',
+          aika: '1901',
+          tiedosto: 'Dragons Bridge, Ljubljana 2.jpg',
+          teksti: 'Ljubljanan Lohikäärmesilta avattiin liikenteelle 4. lokakuuta 1901, ja '
+            + 'alun perin sen nimi oli Keisari Frans Joosefin juhlasilta. Sen oli määrä '
+            + 'juhlistaa keisarin nelikymmenvuotista hallitusta. Silta korvasi vuonna '
+            + '1819 rakennetun tammisillan, jonka maanjäristys vaurioitti vuonna 1895. Se '
+            + 'oli Ljubljanan ensimmäinen betonisilta ja Melan-menetelmällä tehty, ja '
+            + 'avattaessa sen kaari oli Euroopan kolmanneksi suurin. Lohikäärmepatsaat '
+            + 'suunnitteli arkkitehti Giorgio Zaninović ja ne valmistettiin Wienissä. '
+            + 'Nykyisen nimensä silta sai heinäkuussa 1919, ja sitä pidetään usein Wienin '
+            + 'secession kauneimpana siltana.',
+          lyhyt: 'Lohikäärmesilta on Ljubljanan secession-tyylinen betonisilta, jota '
+            + 'koristavat lohikäärmepatsaat.',
+          selite: 'Lohikäärmesilta Ljubljanica-joen yllä, vasemmalla lohikäärmepatsas. Silta '
+            + 'on suojeltu tekniikan muistomerkki.',
+          lahde: 'Thomas Ledl, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Pegasos oven kahvana',
+          aika: '1936',
+          tiedosto: 'Jože Plečnik - National and University Library (37211035596).jpg',
+          teksti: 'Slovenian kansallis- ja yliopistokirjaston suunnitteli Jože Plečnik '
+            + 'vuosina 1930–31, ja se rakennettiin vuosina 1936–1941. Hanke kohtasi '
+            + 'aluksi vastustusta Belgradin viranomaisten taholta, mutta opiskelijoiden '
+            + 'sinnikkäät mielenosoitukset auttoivat sen eteenpäin. Julkisivussa tiili ja '
+            + 'kivi vuorottelevat, ja osa kivistä on paikalta löytyneitä arkeologisia '
+            + 'jäännöksiä. Pääoven kahvat päättyvät pieneen Pegasoksen päähän. Pääportaan '
+            + '32 pylvästä on tehty tummasta Podpečin marmorista, ja rakennuksen ajatus '
+            + 'on kulku tietämättömyyden hämärästä tiedon valoon. Kirjasto sai paikkansa '
+            + 'Unescon listalla vuonna 2021.',
+          lyhyt: 'Slovenian kansallis- ja yliopistokirjasto on Plečnikin suunnittelema '
+            + 'kirjastorakennus Ljubljanan keskustassa.',
+          selite: 'Hevosenpäinen ovenkahva Slovenian kansallis- ja yliopistokirjaston '
+            + 'pääovessa Ljubljanassa. Rakennuksen suunnitteli Jože Plečnik.',
+          lahde: 'Andrew Moore from Johannesburg, South Africa, Wikimedia Commons (CC BY-SA 2.0)',
+          wiki: 'Slovenian kansallis- ja yliopistokirjasto',
+        },
+        {
+          otsikko: 'Satama joka muuttui toriksi',
+          aika: '1894',
+          tiedosto: 'Piran Tartini square from cathedral.jpg',
+          teksti: 'Piranin Tartinin aukio oli ennen kaupungin sisäsatama, jossa pienet '
+            + 'kalastusveneet lepäsivät muurien ulkopuolella. Satama ympäröitiin '
+            + 'keskiajalla tärkeillä rakennuksilla, mutta viemärin takia viranomaiset '
+            + 'päättivät täyttää sen, ja tori rakennettiin vuonna 1894. Aukio sai nimensä '
+            + 'viulisti ja säveltäjä Giuseppe Tartinin mukaan, jonka pronssinen patsas '
+            + 'paljastettiin 1896 kuvanveistäjä Antonio Dal Zòtton tekemänä. Ainoa '
+            + 'alkuperäisen ulkoasunsa säilyttänyt rakennus on 1400-luvun goottilainen '
+            + 'Venetsialainen talo. Myöhemmin torin lattiaksi tehtiin arkkitehti Boris '
+            + 'Podrecan suunnittelema valkoisesta kivestä muodostettu ellipsi.',
+          lyhyt: 'Tartinin aukio on Piranin suurin tori, joka rakennettiin entisen '
+            + 'sisäsataman paikalle.',
+          selite: 'Tartinin aukio Piranissa ylhäältä nähtynä, keskellä Tartinin patsas. Aukio '
+            + 'on Piranin suurin ja tärkein tori.',
+          lahde: 'Isiwal, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Mikä hahmo koristaa Ljubljanan kansalliskirjaston pääoven kahvoja?',
+        vaihtoehdot: [
+          'Lohikäärme',
+          'Pegasos',
+          'Feeniks',
+          'Kentauri',
+        ],
+        oikea: 1,
+        fakta: 'Ljubljanan kansallis- ja yliopistokirjaston pääoven kahvat päättyvät '
+          + 'pieneen Pegasoksen päähän.',
+      },
+    },
+  ],
   LUX: [
     {
       id: 'historia',
