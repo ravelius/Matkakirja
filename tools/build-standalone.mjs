@@ -712,6 +712,7 @@ const MODULES = [
   'js/livia-pikselit.js',
   'js/livia-chat-tila.js',
   'js/livia-svg-paa.js',
+  'js/livia-astronautti.js',
   'js/livia-svg.js',
   'js/livia-nostotila.js',
   'js/livia-dialogitila.js',

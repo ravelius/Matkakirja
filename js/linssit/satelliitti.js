@@ -99,31 +99,12 @@
  * kuin ennen. Näkymä on linssin tilaa eikä pelin: `pura` kirjoittaa
  * pallon lähtötilan takaisin sellaisenaan.
  *
- * ── PULU PIILOON LINSSIN AJAKSI (omistaja 12.9.2026) ──────────────
+ * ── PULU ASTRONAUTIKSI LINSSIN AJAKSI (omistaja 20.9.2026) ────────
  *
- * Sanatarkasti: *"Pulun voisi piilottaa"*. Avaruudesta katsottuna
- * ruudun oikeassa alalaidassa seisova kyyhky on väärästä tarinasta.
- *
- * SAMA MEKANISMI KUIN MUISSA LINSSEISSÄ, EI UUTTA:
- *   • `polloLinssiAlkoi()` (js/pollo.js) panee pulun puheenvuorot
- *     JONOON — ne sanotaan, kun linssi päättyy, eikä mitään menetetä;
- *     `polloKuplatPois()` vie jo auki olevat kuplat pois. Tämä on
- *     täsmälleen se, mitä js/aikajana.js suljeKelluvat tekee linssin
- *     alkaessa.
- *   • Body-luokka `aikajana-pulu-piilossa` (js/linssit/ihmisen-matka-
- *     esitys.js PULUN_PIILO_LUOKKA) piilottaa napin, paneelin ja
- *     kasvokankaan `visibility: hidden` -säännöllä. Juuri sen
- *     livia-eleet lukee näkyvyystestissään (js/livia-eleet.js
- *     nappiNakyy), joten piilotettu pulu ei jää elehtimään eikä
- *     puhumaan näkymättömissä — se ei katkea kesken eleen vaan
- *     lakkaa aloittamasta uusia.
- *   • Sulkeminen poistaa luokan ja kutsuu `polloLinssiPaattyi()`, joka
- *     päästää jonoon jääneet puheenvuorot ulos.
- *
- * LUOKKA ON KIRJOITETTU TÄHÄN MERKKIJONONA eikä tuotu Ihmisen matka
- * -linssistä: tuonti vetäisi koko kertomusesityksen (2 200 riviä)
- * muistiin satelliittilinssiä avattaessa. Vartio pitää merkkijonot
- * samoina (tests/satelliitti-avaruus.test.mjs).
+ * Nykyinen SVG-paperinukke pysyy näkyvissä. Linssi lisää sille oman
+ * astronauttitilan: läpinäkyvän kypärän ja rauhallisen leijunnan.
+ * Livian tavallinen puhe saa jatkua; pinta pysäyttää leijunnan puheen
+ * ajaksi. Linssin sulkeminen palauttaa body-luokan ennalleen.
  *
  * ── KORJAUSERÄ 12.9.2026 (omistajan kuusi havaintoa) ──────────────
  *
@@ -160,9 +141,8 @@
  */
 
 import { html, polloNimilappu } from '../ui-apurit.js';
-import {
-  polloKuplatPois, polloLinssiAlkoi, polloLinssiPaattyi, polloUlkoinenKysymys,
-} from '../pollo.js';
+import { polloUlkoinenKysymys } from '../pollo.js';
+import { asennaLivianAstronauttitila } from '../livia-astronautti.js';
 import { hiljennaAmbienssi, palautaAmbienssi, stopPlaceStream } from '../ambience-stream.js';
 import { LINSSIN_HILJENNYS } from '../siirtymamusiikki.js';
 import { stopDiaryVoice } from '../luenta.js';
@@ -210,13 +190,6 @@ export const PISTEIDEN_UUSINTOJA = 9;
 /** Linssiosan nimi laudan linssiapurissa (lauta.linssit.merkit/pura). */
 export const SATELLIITTI_OSA = 'satelliitti';
 
-/**
- * Pulun piiloluokka. SAMA MERKKIJONO kuin
- * js/linssit/ihmisen-matka-esitys.js PULUN_PIILO_LUOKKA — ks. tiedoston
- * alku (PULU PIILOON LINSSIN AJAKSI) siitä, miksi se on kopio.
- */
-export const PULUN_PIILO_LUOKKA = 'aikajana-pulu-piilossa';
-
 /*
  * KUVA ON ISONA RUUDULLA — LINSSIN SULKEVA ✕ POIS (omistaja 16.9.2026,
  * Raamattu LISÄYS 6, sanatarkasti: *"Poista hampurilainen näkyvistä
@@ -230,33 +203,6 @@ export const PULUN_PIILO_LUOKKA = 'aikajana-pulu-piilossa';
  * vasta pallonäkymästä. Escape toimii yhä näppäimistöllä.
  */
 export const KUVA_AUKI_LUOKKA = 'satelliitti-kuva-auki';
-
-/**
- * Pulu piiloon ja sen puheenvuorot jonoon. Palauttaa kahvan, jonka
- * `pura` palauttaa pulun täsmälleen ennalleen ja päästää jonon ulos.
- */
-export function piilotaPulu(doc = document) {
-  let purettu = false;
-  try { polloLinssiAlkoi(); } catch { /* pöllöä ei ole asennettu */ }
-  try { polloKuplatPois(); } catch { /* kuplia ei ollut */ }
-  const oliPiilossa = Boolean(doc?.body?.classList?.contains(PULUN_PIILO_LUOKKA));
-  if (!oliPiilossa) doc?.body?.classList?.add(PULUN_PIILO_LUOKKA);
-  return {
-    /** Mittari savukkeelle ja testeille. */
-    piilossa: () => !purettu && Boolean(doc?.body?.classList?.contains(PULUN_PIILO_LUOKKA)),
-    pura() {
-      if (purettu) return;
-      purettu = true;
-      /*
-       * LUOKKA POISTETAAN VAIN JOS TÄMÄ SEN LISÄSI: jos jokin toinen
-       * linssi piti pulua piilossa jo ennen satelliittilinssiä, sen
-       * piilotus ei saa purkautua tämän mukana.
-       */
-      if (!oliPiilossa) doc?.body?.classList?.remove(PULUN_PIILO_LUOKKA);
-      try { polloLinssiPaattyi(); } catch { /* pöllöä ei ole asennettu */ }
-    },
-  };
-}
 
 /*
  * ── LINSSI VAIENTAA MUUT ÄÄNET (omistaja 12.9.2026) ───────────────
@@ -406,14 +352,6 @@ export const KRIITTISEN_TUNNUS = 'satelliitti-kriittinen';
 export const KRIITTINEN_TYYLI = `
 .satelliitti-nimi { opacity: 0; }
 body.satelliitti-nimet .satelliitti-nimi { opacity: 1; }
-body.aikajana-pulu-piilossa .pollo-nappi,
-body.aikajana-pulu-piilossa .pollo-paneeli,
-body.aikajana-pulu-piilossa .pollo-kuplapino,
-body.aikajana-pulu-piilossa .pollo-kuplapino-kehys,
-body.aikajana-pulu-piilossa .livia-kasvot-pinta {
-  visibility: hidden;
-  pointer-events: none;
-}
 `;
 
 /**
@@ -866,13 +804,10 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
    * ja jokaiseen kohteeseen voisi generoida kaksi valmista kysymystä."*
    * (Raamattu, kohdat 9 ja 10.)
    *
-   * ISO PULU ON PIILOSSA — JA PYSYY PIILOSSA. Linssi piilottaa pelin
-   * oman pulun napin, paneelin ja kuplapinon (`piilotaPulu`, ks.
-   * tiedoston alku): avaruudesta katsottuna ruudun alalaidassa
-   * seisova kyyhky on väärästä tarinasta, ja sen kuplat jäisivät
-   * avaruuden päälle. TÄMÄ on eri asia: Codexin toimittama MINIPULU
-   * (js/minipulu.js, PR 2521) on sama hahmo pienenä ja tummalle
-   * pohjalle sopivana — se on kuvan oma opas, ei kartan pulu.
+   * PELIN PULU ON NYT ASTRONAUTTINA KARTALLA. Tämä Codexin toimittama
+   * MINIPULU (js/minipulu.js, PR 2521) säilyy silti kuvauskortin omana
+   * oppaana: se on pieni ja tummalle pohjalle sovitettu, eikä korvaa
+   * kartan paperinukkea.
    *
    * KOLME SYYTÄ SILLE, MIKSI TÄMÄ EI OLE `pollo-nappi` UUDESSA
    * PAIKASSA:
@@ -1555,8 +1490,8 @@ function avaa(lauta, tila, ui) {
    */
   const avaruus = vaihe('avaruus', () => avaaAvaruusnakyma(lauta, { ui }));
 
-  // Pulu piiloon ja sen puheenvuorot jonoon (ks. tiedoston alku).
-  const pulu = vaihe('pulu', () => piilotaPulu()) ?? { pura: () => {} };
+  // Pulu pysyy mukana astronauttina; tila purkautuu linssin mukana.
+  const pulu = vaihe('pulu', () => asennaLivianAstronauttitila()) ?? { pura: () => {} };
 
   // Muut äänet vaikenevat linssin ajaksi (ks. vaiennaAanet).
   const aanet = vaihe('aanet', () => vaiennaAanet(ui)) ?? { pura: () => {} };

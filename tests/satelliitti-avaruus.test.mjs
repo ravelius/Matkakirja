@@ -54,8 +54,9 @@ import {
   JAAN_VARI as JAAN_VARI_TYOKALU, JAA, jaapaino,
 } from '../tools/reliefivarit.mjs';
 import {
-  PULUN_PIILO_LUOKKA, VARTIJAN_AIKAKATKO_MS, VARTIJAN_VARHAINEN_MS, piilotaPulu,
+  VARTIJAN_AIKAKATKO_MS, VARTIJAN_VARHAINEN_MS,
 } from '../js/linssit/satelliitti.js';
+import { LIVIAN_ASTRONAUTTI_LUOKKA, asennaLivianAstronauttitila } from '../js/livia-astronautti.js';
 import { PALLO_FOV, PALLO_KORKEUS_MAX } from '../js/pallolauta/kamera.js';
 
 /** Omistajan kolme mitattua ruutua (kotelon mitat linssi auki). */
@@ -324,58 +325,53 @@ test('nimet on häivytetty CSS:ssä eikä piilotettu asettelusta', () => {
   assert.ok(!/satelliitti-(hehku|rengas|ydin)[^}]*opacity: 0/.test(css));
 });
 
-/* ──────────────── 6. pulu piilossa linssin ajan ─────────────────── */
+/* ─────────────── 6. pulu astronauttina linssin ajan ────────────── */
 
-test('pulun piiloluokka on SAMA kuin Ihmisen matka -linssillä', () => {
-  const esitys = readFileSync(new URL('../js/linssit/ihmisen-matka-esitys.js', import.meta.url), 'utf8');
-  assert.match(esitys, new RegExp(`PULUN_PIILO_LUOKKA = '${PULUN_PIILO_LUOKKA}'`),
-    'satelliittilinssin kopio ja alkuperä erkanivat');
-  // Ja sääntö on kopioitu satelliitin omaan tyyliin, koska
-  // css/aikajana.css ei ole ladattu.
+test('astronauttitila leijuttaa Pulua mutta pysähtyy puheen ajaksi', () => {
   const css = readFileSync(new URL('../css/satelliitti.css', import.meta.url), 'utf8');
-  for (const valitsin of ['.pollo-nappi', '.pollo-paneeli', '.livia-kasvot-pinta']) {
-    assert.ok(css.includes(`body.${PULUN_PIILO_LUOKKA} ${valitsin}`), `${valitsin} puuttuu`);
-  }
-  assert.match(css, new RegExp(`body\\.${PULUN_PIILO_LUOKKA} \\.livia-kasvot-pinta \\{\\s*visibility: hidden;`));
+  assert.match(css, /@keyframes livia-astronautti-leijuu/);
+  assert.match(css, /translateY\(-5px\) rotate\(3deg\)/);
+  assert.match(css, /rotate\(-3deg\)/);
+  assert.match(css, /animation: livia-astronautti-leijuu 5s ease-in-out infinite/);
+  assert.match(css, /\.livia-astronautti-puhuu \{\s*animation-play-state: paused;/);
+  assert.match(css, /prefers-reduced-motion: reduce[\s\S]*?animation: none;/);
 });
 
-test('pulu piiloutuu linssin ajaksi ja palaa täsmälleen', () => {
+test('pulu pukeutuu linssin ajaksi ja palaa täsmälleen', () => {
   const luokat = new Set();
   const doc = { body: { classList: {
     add: (n) => luokat.add(n),
     remove: (n) => luokat.delete(n),
     contains: (n) => luokat.has(n),
   } } };
-  const kahva = piilotaPulu(doc);
-  assert.ok(luokat.has(PULUN_PIILO_LUOKKA), 'pulua ei piilotettu');
-  assert.equal(kahva.piilossa(), true);
+  const kahva = asennaLivianAstronauttitila(doc);
+  assert.ok(luokat.has(LIVIAN_ASTRONAUTTI_LUOKKA), 'astronauttiasua ei puettu');
+  assert.equal(kahva.paalla(), true);
   kahva.pura();
-  assert.ok(!luokat.has(PULUN_PIILO_LUOKKA), 'pulu jäi piiloon');
-  assert.equal(kahva.piilossa(), false);
+  assert.ok(!luokat.has(LIVIAN_ASTRONAUTTI_LUOKKA), 'astronauttiasu jäi päälle');
+  assert.equal(kahva.paalla(), false);
   // Toinen purku ei tee mitään.
   kahva.pura();
-  assert.ok(!luokat.has(PULUN_PIILO_LUOKKA));
+  assert.ok(!luokat.has(LIVIAN_ASTRONAUTTI_LUOKKA));
 });
 
-test('toisen linssin piilottamaa pulua ei paljasteta sulkiessa', () => {
-  const luokat = new Set([PULUN_PIILO_LUOKKA]);
+test('ennalta puettua astronauttiasua ei riisuta sulkiessa', () => {
+  const luokat = new Set([LIVIAN_ASTRONAUTTI_LUOKKA]);
   const doc = { body: { classList: {
     add: (n) => luokat.add(n),
     remove: (n) => luokat.delete(n),
     contains: (n) => luokat.has(n),
   } } };
-  const kahva = piilotaPulu(doc);
+  const kahva = asennaLivianAstronauttitila(doc);
   kahva.pura();
-  assert.ok(luokat.has(PULUN_PIILO_LUOKKA), 'toisen linssin piilotus purkautui');
+  assert.ok(luokat.has(LIVIAN_ASTRONAUTTI_LUOKKA), 'ennalta ollut asu riisuttiin');
 });
 
-test('satelliittilinssi piilottaa pulun ja palauttaa sen', () => {
+test('satelliittilinssi pukee astronauttiasun ja palauttaa sen', () => {
   const lahde = readFileSync(new URL('../js/linssit/satelliitti.js', import.meta.url), 'utf8');
-  // Talon oma mekanismi, ei uutta: jono, kuplat ja piiloluokka.
-  assert.match(lahde, /polloLinssiAlkoi, polloLinssiPaattyi/);
-  /* Vaihevartija välissä (16.9.2026): pulu on yhä sama kahva. */
-  assert.match(lahde, /const pulu = vaihe\('pulu', \(\) => piilotaPulu\(\)\)/);
+  assert.match(lahde, /const pulu = vaihe\('pulu', \(\) => asennaLivianAstronauttitila\(\)\)/);
   assert.match(lahde, /pulu\.pura\(\);/);
+  assert.doesNotMatch(lahde, /const pulu = vaihe\('pulu', \(\) => piilotaPulu/);
 });
 
 /* ───────────────────────── 7. purku ─────────────────────────────── */

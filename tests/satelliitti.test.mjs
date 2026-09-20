@@ -163,7 +163,8 @@ test('piste on YKSI hehkuva vihreä piste — ei rengasta, ei reunaa, ei pulssia
   assert.match(tyyli, /--satelliitti-vihrea:\s*#5dffa8/);
   // Jatkuva pulssi kieltää pallolta 60 fps:n (js/linssit/kerros.js haivyta):
   // yksikään animaatio ei saa toistua loputtomiin.
-  assert.ok(!/animation:[^;]*infinite/.test(tyyli), 'hehku ei saa sykkiä jatkuvasti');
+  const pisteTyyli = tyyli.slice(0, tyyli.indexOf('@keyframes livia-astronautti-leijuu'));
+  assert.ok(!/animation:[^;]*infinite/.test(pisteTyyli), 'hehku ei saa sykkiä jatkuvasti');
   // Liikkeenvähennys: vakaa hehku ilman ilmestymisanimaatiotakin.
   assert.match(tyyli, /prefers-reduced-motion[\s\S]*satelliitti-piste \{ animation: none/);
 });
@@ -907,25 +908,19 @@ test('pelin omat nimikyltit piilotetaan linssin omassa tyylitiedostossa', () => 
 });
 
 
-/* ═══ 8. NIMET JA PULU PIILOON VARMASTI (omistaja 12.9.2026) ═══════ */
+/* ═══ 8. NIMET PIILOON VARMASTI (omistaja 12.9.2026) ═══════════════ */
 
 /*
  * Omistaja: *"Kaikissa pisteissä ei tarvitse nimeä näkyä kuin vasta
- * lähemmäs zoomattuna"* ja *"Pulun voisi piilottaa"* — MOLEMMAT oli jo
- * korjattu kertaalleen, ja molemmat näkyivät silti pelaajalle. Nämä
- * vartiot koskevat sitä, MIKSI korjaus ei kantanut: piilotus oli kahden
- * ehdon ja yhden verkkolatauksen takana.
+ * lähemmäs zoomattuna"*. Vartio koskee sitä, miksi korjaus ei aiemmin
+ * kantanut: nimien piilotus oli kahden ehdon ja verkkolatauksen takana.
  */
 
 test('kriittiset piilotukset ovat inline-tyylissä eivätkä verkon varassa', async () => {
   const { KRIITTINEN_TYYLI, KRIITTISEN_TUNNUS, lataaSatelliittiTyyli } = await import('../js/linssit/satelliitti.js');
-  // Nimet ja pulu: molemmat piilotetaan ilman ulkoista tiedostoa.
+  // Nimet piilotetaan ilman ulkoista tiedostoa.
   assert.match(KRIITTINEN_TYYLI, /\.satelliitti-nimi \{ opacity: 0; \}/);
   assert.match(KRIITTINEN_TYYLI, /body\.satelliitti-nimet \.satelliitti-nimi \{ opacity: 1; \}/);
-  for (const valitsin of ['.pollo-nappi', '.pollo-paneeli', '.pollo-kuplapino', '.livia-kasvot-pinta']) {
-    assert.ok(KRIITTINEN_TYYLI.includes(`body.aikajana-pulu-piilossa ${valitsin}`),
-      `${valitsin} puuttuu kriittisestä tyylistä`);
-  }
   // Sama sääntö on myös varsinaisessa tyylitiedostossa: kopio ja
   // alkuperä vartioidaan yhdessä.
   assert.match(tyyli, /\n\.satelliitti-nimi \{\n  opacity: 0;/);
@@ -967,11 +962,9 @@ test('nimien piilotus ei ole avaruusluokan takana', () => {
     'sytytys vaatii yhä avaruusluokan');
 });
 
-test('pulun kuplapino piilotetaan napin ja paneelin kanssa', () => {
-  for (const valitsin of ['.pollo-kuplapino', '.pollo-kuplapino-kehys']) {
-    assert.ok(tyyli.includes(`body.aikajana-pulu-piilossa ${valitsin}`),
-      `${valitsin} jää näkyviin linssiin`);
-  }
+test('satelliittilinssi ei enää käytä Pulun vanhaa piilotustilaa', () => {
+  assert.ok(!tyyli.includes('body.aikajana-pulu-piilossa .pollo-kuplapino'));
+  assert.ok(!LINSSIMODUULI.KRIITTINEN_TYYLI.includes('body.aikajana-pulu-piilossa'));
 });
 
 /* ═══ 9. MUUT ÄÄNET VAIKENEVAT (omistaja 12.9.2026) ════════════════ */
@@ -1153,29 +1146,15 @@ test('linssin ääni käyttää pelin omaa äänikontekstia ja väistää kuten 
   assert.ok(!/console\./.test(aanilahde), 'soitin kirjoittaa konsoliin');
 });
 
-test('minipulu kelluu valokuvan oikeassa alakulmassa eikä piilotu pulun kanssa', () => {
+test('minipulu kelluu valokuvan oikeassa alakulmassa astronautti-Pulun rinnalla', () => {
   /*
    * OMISTAJA 16.9.2026 (Raamattu kohta 9): *"minipulu ... saisi olla
-   * oikeassa alareunassa näkyvillä"*. Pelin ISO pulu on linssin ajan
-   * piilossa; minipulu on oma hahmonsa eikä saa lähteä sen mukana.
+   * oikeassa alareunassa näkyvillä"*. Minipulu on kortin oma opas,
+   * vaikka pelin Pulu näkyy samalla kartalla astronauttiasussa.
    */
   assert.match(lahde, /import \{ luoMinipulu \} from '\.\.\/minipulu\.js'/);
   assert.match(lahde, /luoMinipulu\(pulunappi, \{ koko: 'auto', suunta: 'vasen' \}\)/);
   assert.match(tyyli, /\.satelliitti-pulukulma \{[\s\S]*position: absolute;[\s\S]*right: 12px;[\s\S]*bottom: calc\(12px \+ env\(safe-area-inset-bottom, 0px\)\)/);
-  assert.match(tyyli, /body\.aikajana-pulu-piilossa \.satelliitti-pulukulma,[\s\S]*visibility: visible/);
-  /*
-   * KUPLAPINO KUULUU PIILOTETTAVIIN (omistajan havainto 16.9.2026,
-   * puhelin). Pinon KEHYS on oma elementtinsä, joten pulun napin ja
-   * paneelin piilotus ei osunut siihen ja kesken jäänyt kuplasarja jäi
-   * valokuvan päälle. Sääntö on sekä tyylitiedostossa että
-   * kriittisessä varatyylissä.
-   *
-   * PLUSKUPLA (.pollo-kuplapalautus) oli tässä listassa 16.–18.9.2026;
-   * v1944 poisti elementin kokonaan (Raamattu, PAATOKSET 34 kohta 20),
-   * joten sitä ei enää piiloteta eikä vartioida.
-   */
-  assert.match(tyyli, /body\.aikajana-pulu-piilossa \.pollo-kuplapino-kehys \{[\s\S]{0,80}visibility: hidden/);
-  assert.match(lahde, /body\.aikajana-pulu-piilossa \.pollo-kuplapino-kehys,/);
   /*
    * EI YMPYRÄÄ PULUN YMPÄRILLÄ (omistaja 16.9.2026: *"saisiko pulun
    * ympäriltä tuon ympyrän pois?"*). Tausta on läpinäkyvä, reunaa ja

@@ -228,53 +228,29 @@ body.satelliitti-nimet .satelliitti-nimi { opacity: 1; }
 body.satelliitti-nimet .satelliitti-piste[data-kylki="piilo"] .satelliitti-nimi { opacity: 0; }
 
 /*
- * PULU PIILOON LINSSIN AJAKSI (omistaja 12.9.2026, sanatarkasti:
- * *"Pulun voisi piilottaa"*).
- *
- * SAMA MEKANISMI KUIN IHMISEN MATKA -LINSSISSÄ: body-luokka
- * `aikajana-pulu-piilossa` ja `visibility: hidden` (ks.
- * js/linssit/ihmisen-matka-esitys.js PULUN_PIILO_LUOKKA ja
- * css/aikajana.css). Peittävyys ei riittäisi, koska kasvot piirtyvät
- * napin ULKOPUOLELLA omalle kankaalleen — ja `visibility` on juuri se,
- * jonka livia-eleet lukee näkyvyystestissään (js/livia-eleet.js
- * nappiNakyy), joten piilossa oleva pulu ei elehdi eikä puhu kankaalle.
- *
- * SÄÄNTÖ ON KOPIO, KOSKA css/aikajana.css EI OLE LADATTU: satelliitti-
- * linssi lataa vain oman tyylinsä, samoin kuin `aikajana-paalla`
- * -säännöt alempana tässä tiedostossa. Kopio ja alkuperä vartioidaan
- * yhdessä (tests/satelliitti-avaruus.test.mjs).
+ * Astronautin kamera pukee nykyisen paperinuken, ei korvaa hahmoa.
+ * Koko pinta leijuu viiden sekunnin rauhallisen kierroksen: 5 px ja
+ * ±3 astetta ovat omistajan pyytämän vaihteluvälin keskellä.
  */
-body.aikajana-pulu-piilossa .pollo-nappi,
-body.aikajana-pulu-piilossa .pollo-paneeli,
-body.aikajana-pulu-piilossa .livia-kasvot-pinta {
-  visibility: hidden;
-  pointer-events: none;
+@keyframes livia-astronautti-leijuu {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-5px) rotate(3deg); }
 }
 
-/*
- * MYÖS KUPLAPINO. `polloKuplatPois()` vie auki olevat kuplat ja
- * `polloLinssiAlkoi()` panee uudet jonoon, mutta pinon KEHYS on oma
- * elementtinsä (js/pollo.js `pollo-kuplapino`), eikä sitä piilottanut
- * mikään sääntö. Linssin OMA välinäytöskupla (polloLinssikupla)
- * ohittaa jonon tarkoituksella — tässä linssissä sellaista ei ole,
- * joten pino kuuluu piiloon pulun mukana. Mitattu 12.9.2026: ilman
- * tätä kesken jäänyt kuplasarja jäi ruudun alalaitaan avaruuden
- * päälle.
- */
-/*
- * PLUSKUPLALLA OLI TÄSSÄ OMA RIVINSÄ 16.–18.9.2026 (omistajan havainto
- * puhelimella): `.pollo-kuplapalautus` oli `position: fixed` -nappi
- * SUORAAN bodyssa, ei pinon sisällä, joten se ei kadonnut pinon mukana
- * vaan jäi kellumaan valokuvan päälle. v1944 poisti elementin kokonaan
- * (Raamattu, PAATOKSET 34 kohta 20): kuplat palautetaan nyt chatin
- * ylärivin `.pollo-naytakuplat`-painikkeesta, joka on `.pollo-paneeli`n
- * sisällä. Rivi on siksi poistettu tästä ja js/linssit/satelliitti.js:n
- * KRIITTINEN_TYYLI:stä (osajoukkovartio: tests/satelliitti-avaruus).
- */
-body.aikajana-pulu-piilossa .pollo-kuplapino,
-body.aikajana-pulu-piilossa .pollo-kuplapino-kehys {
-  visibility: hidden;
-  pointer-events: none;
+body.livia-astronautti-paalla .livia-lentonayttamo:not([hidden]) {
+  animation: livia-astronautti-leijuu 5s ease-in-out infinite;
+  transform-origin: 72% 84%;
+}
+
+body.livia-astronautti-paalla .livia-lentonayttamo.livia-astronautti-puhuu {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.livia-astronautti-paalla .livia-lentonayttamo:not([hidden]) {
+    animation: none;
+    transform: none;
+  }
 }
 
 
@@ -852,12 +828,8 @@ body.satelliitti-kuva-auki .satelliitti-linssikehys { display: none; }
  * alakulma on pienoiskuvien (`.satelliitti-nauha`, enintään puolet
  * leveydestä), oikea tämän, joten ne eivät voi leikata toisiaan.
  *
- * TÄMÄ EI OLE PELIN PULU. Linssi piilottaa pelin oman pulun ja sen
- * kuplapinon (`body.aikajana-pulu-piilossa`, ks. tiedoston alku).
- * Minipulu on oma hahmonsa (js/minipulu.js) omalla luokallaan, joten
- * piilotussäännöt eivät osu siihen — ja alla oleva sääntö sanoo sen
- * ääneen, jottei myöhempi laveampi piilotus vahingossa vie sitä
- * mukanaan.
+ * Tämä on korttien opastava minipulu. Pelin oma Pulu näkyy lisäksi
+ * kartan laidalla astronauttiasussa; hahmoilla on eri tehtävä.
  */
 .satelliitti-pulukulma {
   position: absolute;
@@ -873,11 +845,6 @@ body.satelliitti-kuva-auki .satelliitti-linssikehys { display: none; }
 }
 
 .satelliitti-pulukulma > * { pointer-events: auto; }
-
-body.aikajana-pulu-piilossa .satelliitti-pulukulma,
-body.aikajana-pulu-piilossa .satelliitti-pulukulma .minipulu {
-  visibility: visible;
-}
 
 /*
  * ── PULU SEISOO SUORAAN KUVAN PÄÄLLÄ, ILMAN YMPYRÄÄ ──────────────
