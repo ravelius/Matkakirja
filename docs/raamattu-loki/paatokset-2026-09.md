@@ -87,3 +87,7 @@ Inventaarion virhe: visa luettiin vaarasta kentasta ja osa nostoista laskettiin 
 ## NOSTOTYYPPIEN KONTAKTIARKIT (Laitetestaaja) (20.9.2026 klo 20.55)
 
 docs/raportit/laitekierros-19-nostotyypit-20260920.md, kuvat docs/raportit/kaappaukset/nostotyypit-20260920/ (11 tyyppia + 3 kontaktiarkkia). Laitetestaaja oikaisi: visalaatikko nakyy kylla LISAA-tilassa kortin alaosassa (ei vieritetty) - ei tutkintaa. Fablen huomiot arkeista: kortin rakenne on yhtenainen kaikissa tyypeissa; tyyppi erottuu vain ylaotsikon pienesta kuvakkeesta (harkittavaksi tyyppikohtainen tunnus kortissa); merenkulku-esimerkin pienessa kortissa ei kuvaa; LISAA-tilan kuvan kutistuminen jo tilattu. Omistaja katsoo taysikokoiset.
+
+## NOSTOKORTTI TEHTY (Pelikoodari 2f1cf29d) (20.9.2026 klo 20.56)
+
+Tyopolkulahderivi pois kaikista nostotyypeista (historian hetken paikka-paivays ja kuvan Commons-tekijarivi sailyvat; tekstin lahderivi ei enaa kortilla, data ja Lahteet-lehti ennallaan - Fablen paatos); kuvasarja omaan moduuliin js/kuvasarja.js, kohdekortilla sama 1/2-karuselli; Havainnekuva-pienteksti lahderivin alusta viidessa piirtopaikassa; LISAA-tilan kutistus johtui .fokusnosto-kuva img 42vh-katosta 2+ kuvan nostoilla -> koko pysyy (1400 px 696/696, 390 px 240/240); pyyhkaisy ja nuolinappaimet. Savuke-nostokortti 28/28 julkaisusarjaan, testit 3762/0. Julkaistaan v1982:ssa. Pelikoodari jatkaa nimiot elaviksi (nimiotaso erillisena, rajapinta sovittu Karttasepan kanssa).
