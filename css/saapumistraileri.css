@@ -331,3 +331,35 @@
 .saapumistraileri.liike-vahennetty .saapumistraileri-nimi.ulos .saapumistraileri-kirjain {
   transform: none;
 }
+
+/*
+ * ── MATKAKIRJA JA PULUN KUPLA POIS TRAILERIN AJAKSI ───────────────
+ *
+ * OMISTAJA 20.9.2026 klo 11.15 (kaappaus
+ * docs/raportit/kaappaukset/omistaja-20260920/saapuminen-pariisi-v1974.webp):
+ * kartta saa jäädä teräväksi, mutta vasemman yläkulman
+ * matkakirjapaneeli (.fact-card) ja pulun puhekupla eivät saa näkyä
+ * saapumiskuvien päällä. v1974:ssä molemmat olivat ruudulla koko
+ * trailerin ajan.
+ *
+ * VISIBILITY EIKÄ DISPLAY: paneelin sisältö kirjoitetaan saapumisessa
+ * uudelleen, ja `display: none` veisi siltä mitat kesken kirjoituksen.
+ * Piilotettu elementti säilyttää paikkansa ja palaa ennalleen, kun
+ * runkoluokka poistuu (js/saapumistraileri.js piilotaSaapumistraileri).
+ * Häivytys on trailerin oma liuku, ja liikkeenvähennys ohittaa sen.
+ */
+body.saapumistraileri-paalla .fact-card,
+body.saapumistraileri-paalla .pollo-kuplapino-kehys,
+body.saapumistraileri-paalla .pollo-vihje {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 240ms var(--liike-ulos, ease), visibility 0s linear 240ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.saapumistraileri-paalla .fact-card,
+  body.saapumistraileri-paalla .pollo-kuplapino-kehys,
+  body.saapumistraileri-paalla .pollo-vihje {
+    transition: none;
+  }
+}

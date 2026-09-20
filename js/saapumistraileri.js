@@ -69,6 +69,12 @@ import { sfx } from './sound.js';
  */
 
 /** Kuinka monta kuvaa traileriin enintään otetaan. */
+/**
+ * Rungon luokka trailerin ajan: matkakirjapaneeli ja pulun puhekupla
+ * piiloon (css/saapumistraileri.css). Ks. naytaSaapumistraileri.
+ */
+export const TRAILERIN_RUNKOLUOKKA = 'saapumistraileri-paalla';
+
 export const TRAILERIN_KUVIA = 3;
 
 /** Kuvan liuku sisään ruudun oikealta reunalta (ms). */
@@ -278,6 +284,13 @@ function lataaTrailerinTyyli() {
  */
 export function piilotaSaapumistraileri(ui, { peru = false, odotaPuhe = false } = {}) {
   const tila = ui?.saapumistraileri;
+  /*
+   * Luokka pois myös silloin, kun tilaa ei enää ole: se on ruudun
+   * näkyvä tila eikä saa jäädä roikkumaan yhdessäkään haarassa.
+   * Poistumistiet kutsutaan myös ilman DOMia (yksikkötestit kutsuvat
+   * vaiennaLivianKaupunkipuheen kautta), joten haku on varovainen.
+   */
+  globalThis.document?.body?.classList?.remove?.(TRAILERIN_RUNKOLUOKKA);
   if (!tila) return false;
   ui.saapumistraileri = null;
   for (const t of tila.ajastimet) clearTimeout(t);
@@ -497,6 +510,24 @@ export function naytaSaapumistraileri(ui, city) {
    * traileri asettuisi kartan mukana vinoon eikä ruudun keskelle.
    */
   document.body.appendChild(kehys);
+  /*
+   * MATKAKIRJA JA PULUN KUPLA POIS TRAILERIN AJAKSI (omistaja
+   * 20.9.2026 klo 11.15, kaappaus
+   * docs/raportit/kaappaukset/omistaja-20260920/saapuminen-pariisi-v1974.webp).
+   *
+   * Sääntö muuttui: kartta saa jäädä teräväksi, mutta vasemman
+   * yläkulman matkakirjapaneeli ja pulun puhekupla eivät saa näkyä
+   * saapumiskuvien päällä. v1974:ssä molemmat olivat ruudulla koko
+   * trailerin ajan.
+   *
+   * LUOKKA RUNGOLLE, EI TYYLI ELEMENTILLE: piilotus koskee kahta eri
+   * pintaa, joilla on omat elinkaarensa (paneeli piirtyy uudelleen
+   * saapumisessa, kuplapino syntyy ja katoaa pulun tahtiin). Runkoluokka
+   * pätee molempiin riippumatta siitä, kumpi on olemassa juuri nyt, ja
+   * palautuu yhdellä rivillä kaikissa poistumisteissä, koska ne kaikki
+   * kulkevat piilotaSaapumistrailerin kautta.
+   */
+  document.body.classList.add(TRAILERIN_RUNKOLUOKKA);
 
   let ratkaise = null;
   const lupaus = new Promise((ok) => { ratkaise = ok; });
