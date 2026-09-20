@@ -321,8 +321,13 @@ test('korostus piirtyy rantaviivan ALLE mutta samassa kerroksessa', () => {
    * (sisämaa admin_0:sta, rannikko rannikkoaineistosta), ei enää suoraan
    * korostuksen renkaille. Sama funktio, sama harvennusporras.
    */
-  assert.match(lahde, /naulaaKorostus\(renkaat, rannikot\)/);
-  assert.match(lahde, /harvennaViivat\(naulaus\.viivat, harvennus\)/);
+  // Pikkurenkaat karsitaan ennen naulausta (kaukokuvan möykky, 20.9.2026).
+  assert.match(lahde, /const nakyvatRenkaat = renkaat\.filter\(\(r\) => rengasNakyy\(r\)\);/);
+  assert.match(lahde, /naulaaKorostus\(nakyvatRenkaat, rannikot\)/);
+  // Korostus harvennetaan samalla säännöllä kuin rannikkosolu, muuten
+  // naulattu rannikko erkanee rantaviivasta harvennuksessa (20.9.2026).
+  assert.match(lahde, /const porras = harvennus > lodTol \? harvennus : 0;/);
+  assert.match(lahde, /harvennaViivat\(naulaus\.viivat, porras\)/);
   assert.match(lahde, /vektorijanat\(viivat, sade\(\)\)/);
   // Korostus on jaetussa materiaalitaulussa eikä oma kerroksensa.
   assert.match(lahde, /return \{ rannikko: ranta, rajat: raja, korostus: korostusMateriaali \};/);

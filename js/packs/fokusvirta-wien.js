@@ -657,9 +657,7 @@ export const FOKUSVIRTA_WIEN = {
           + 'noin 15 miljoonaa guldenia.',
       ],
       lahde: 'de-Wikipedia "Gründerkrach" ja "Weltausstellung 1873" sekä '
-        + 'en-Wikipedia "Panic of 1873" (tarkistettu 25.8.2026 '
-        + 'työaineistoon docs/mantereet-tyoaineisto/takynostot-itavalta.md, '
-        + 'ehdokas 1).',
+        + 'en-Wikipedia "Panic of 1873" (tarkistettu 25.8.2026).',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
        * areenalla ja v1307:n neljällä nostolla): repon oma generoitu
@@ -766,10 +764,8 @@ export const FOKUSVIRTA_WIEN = {
           + 'keisariperheen yksityisomaisuutta, ja se pysyi sellaisena aina '
           + 'Itävalta-Unkarin hajoamiseen 1918 asti.',
       ],
-      lahde: 'en-Wikipedia "Schönbrunn Zoo", osiot "Founding and early '
-        + 'years" ja "In the 19th century" (tarkistettu 25.8.2026 '
-        + 'työaineistoon docs/mantereet-tyoaineisto/takynostot-itavalta.md, '
-        + 'ehdokas 4).',
+      lahde: 'en-Wikipedia "Schönbrunn Zoo", osiot "Founding and early years" ja "In '
+        + 'the 19th century" (tarkistettu 25.8.2026).',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin yllä): repon
        * oma generoitu havainnekuva, joten kenttä on `osoite` eikä

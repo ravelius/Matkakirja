@@ -19,6 +19,22 @@ const argv = process.argv.slice(2);
 const lippu = (n) => { const i = argv.indexOf(n); return i >= 0 ? argv[i + 1] : null; };
 const ulos = lippu('--ulos');
 const polku = lippu('--luettelo');
+/*
+ * ÄMPÄRIN LUETTELO KANTAA SEN, MITÄ TÄMÄ AJO EI TIEDÄ (20.9.2026).
+ *
+ * Luettelojobi (--vain-luettelo) rakentaa luettelon tyhjästä eikä tunne
+ * väriajojen `varitasot`-taulua eikä aiempien ajojen `erat`-kirjanpitoa,
+ * joten ne katosivat luettelosta — 20.9.2026 yön pohja-ajossa Fable
+ * joutui palauttamaan ne käsin vanhasta luettelosta ennen julkaisua.
+ * Nämä kentät eivät kuulu nostoajolle, joten ne kannetaan sellaisenaan.
+ *
+ * `--pohja-ennallaan` on sama sääntö pohjan kentälle: pelkkä
+ * nostotasoajo ei polta pohjaa, joten se ei saa myöskään väittää mitään
+ * siitä, onko pohjassa rantaviiva (samana yönä nostoajo kirjoitti
+ * `pohja.rantaviiva: true`, vaikka pohja on poltettu ilman rantaviivaa).
+ */
+const amparipolku = lippu('--ampari');
+const pohjaEnnallaan = argv.includes('--pohja-ennallaan');
 if (!ulos || !polku) {
   console.error('kokoa-nostotasot: --ulos <kansio> ja --luettelo <pyramidi.json> ovat pakollisia');
   process.exit(2);
@@ -52,5 +68,24 @@ if (!maita) {
   process.exit(1);
 }
 luettelo.nostotasot = koottu;
+const kannetut = [];
+if (amparipolku && existsSync(amparipolku)) {
+  const ampari = JSON.parse(readFileSync(amparipolku, 'utf8'));
+  const varitasoja = Object.keys(ampari.varitasot ?? {}).length;
+  if (varitasoja && !Object.keys(luettelo.varitasot ?? {}).length) {
+    luettelo.varitasot = ampari.varitasot;
+    kannetut.push(`varitasot ${varitasoja} maata`);
+  }
+  if ((ampari.erat ?? []).length && !(luettelo.erat ?? []).length) {
+    luettelo.erat = ampari.erat;
+    kannetut.push(`erat ${ampari.erat.length}`);
+  }
+  if (pohjaEnnallaan) {
+    if (ampari.pohja) luettelo.pohja = ampari.pohja;
+    else delete luettelo.pohja;
+    kannetut.push(`pohja ${JSON.stringify(ampari.pohja ?? null)}`);
+  }
+}
 writeFileSync(polku, `${JSON.stringify(luettelo)}\n`);
 console.log(`· nostotasot koottu: ${maita} maata ${shardeja} shardista -> ${polku}`);
+if (kannetut.length) console.log(`· ämpäristä kannettu: ${kannetut.join(', ')}`);

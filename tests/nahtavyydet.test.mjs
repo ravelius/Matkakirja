@@ -89,9 +89,9 @@ test('Sevillan kolme kohdetta osoittavat englanninkielisiin artikkeleihin', () =
   assert.equal(nimella('Plaza de España').wiki, 'Plaza de España, Seville');
 });
 
-test('numeroympyrat-lippu pitää kohteet kartalla eikä siirrä niitä liuskaan (Bryssel, Ljubljana)', async () => {
+test('numeroympyrat-lippu pitää kohteet kartalla eikä siirrä niitä liuskaan (Bryssel, Ljubljana, Košice)', async () => {
   const { kaupunkikartanSiirretyt } = await import('../js/nahtavyydet.js');
-  for (const id of ['bryssel', 'ljubljana']) {
+  for (const id of ['bryssel', 'ljubljana', 'kosice']) {
     assert.equal(KAUPUNKIKARTAT[id].numeroympyrat, true, `${id}: lippu puuttuu`);
     assert.deepEqual(kaupunkikartanSiirretyt(null, id), [], `${id}: kohteet eivät saa siirtyä liuskan "Muut"-riville`);
   }
@@ -104,4 +104,35 @@ test('numeroympyrä syntyy vain miniatyyrittömälle kohteelle lipun kartalla, n
   assert.match(LAHDE, /if \(!miniatyyri\) \{\s*piste\.classList\.add\('kohde-numeroympyra'\);\s*piste\.appendChild\(html\('span', 'kohde-numeroteksti', numero\)\);/);
   const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
   assert.match(css, /\.maakartta-piste\.kohde-numero\.kohde-numeroympyra\s*\{[^}]*width:\s*26px/);
+});
+
+test('numeroympyröiden väistö: lähekkäiset ympyrät erotetaan, kaukaiset jäävät paikoilleen', async () => {
+  const { laskeNumeroympyroidenVaisto } = await import('../js/nahtavyydet.js');
+  const erotus = (paikat, v, a, b) => Math.hypot(
+    (paikat[b].X + v[b].vx) - (paikat[a].X + v[a].vx),
+    (paikat[b].Y + v[b].vy) - (paikat[a].Y + v[a].vy),
+  );
+  // Pari 10 px:n päässä ja kolmas kaukana.
+  const pari = [{ X: 100, Y: 100 }, { X: 110, Y: 100 }, { X: 300, Y: 300 }];
+  const v = laskeNumeroympyroidenVaisto(pari);
+  assert.ok(erotus(pari, v, 0, 1) >= 30 - 0.01, 'pari jäi päällekkäin');
+  assert.deepEqual(v[2], { vx: 0, vy: 0 }, 'kaukainen ympyrä ei saa liikkua');
+  // Siirto on pienin mahdollinen: pari liikkuu pitkin yhdistävää viivaa.
+  assert.ok(Math.abs(v[0].vy) < 0.001 && Math.abs(v[1].vy) < 0.001);
+  // Täsmälleen samassa pisteessä olevat erotetaan.
+  const sama = [{ X: 50, Y: 50 }, { X: 50, Y: 50 }];
+  const vs = laskeNumeroympyroidenVaisto(sama);
+  assert.ok(erotus(sama, vs, 0, 1) >= 30 - 0.01);
+  // Kolmen ympyrän rykelmä: kaikki parit erillään, siirto katossa.
+  const kolme = [{ X: 100, Y: 100 }, { X: 112, Y: 104 }, { X: 106, Y: 118 }];
+  const v3 = laskeNumeroympyroidenVaisto(kolme);
+  for (const [a, b] of [[0, 1], [0, 2], [1, 2]]) assert.ok(erotus(kolme, v3, a, b) >= 26, `${a}-${b}`);
+  for (const s of v3) assert.ok(Math.hypot(s.vx, s.vy) <= 24.001, 'siirto ylitti katon');
+});
+
+test('numeroympyrän väistö kytketään kartalle: viiva ja CSS-siirto zoomin vastaskaalauksella', () => {
+  assert.match(LAHDE, /vaistaNumeroympyrat\(kotelo, numeroympyrat\);/);
+  const css = readFileSync(new URL('../css/styles.css', import.meta.url), 'utf8');
+  assert.match(css, /\.kohde-numeroympyra\.kohde-vaistetty\s*\{[^}]*var\(--vx, 0px\) \/ var\(--zoom\)/);
+  assert.match(css, /\.kohde-osoitin\s*\{/);
 });

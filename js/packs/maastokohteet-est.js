@@ -53,9 +53,8 @@
  * kaikki ovat pääkartan merkkejä — omistajan sääntö kohdekaupunkien
  * nostoista ei koske näitä.
  *
- * KUVATON ERÄ. Sama linja kuin maastokohteilla muutenkin: kortti
- * kantaa tekstin ja lähteen, ei kuvaa. Tarkistamaton Commons-tiedosto
- * olisi huonompi kuin kuvaton kortti (Perustuslaki, faktakuri).
+ * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä): kortti kantaa nyt kaksi tarkistettua
+ * Commons-kuvaa.
  * Faktat on tarkistettu en-Wikipediasta kohde kerrallaan 2.9.2026.
  *
  * Viron maastokohteet. Faktat en-Wikipediasta 29.8.2026. Pieni maa: kolme kohdetta.
@@ -454,6 +453,28 @@ export const MAASTOKOHTEET_EST = [
   },
   {
     id: 'matsalu',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-matsalu-9c2e425d.jpg',
+      lyhyt: 'Matsalunlahden rantaniittyjä ja kapea uoma.',
+      selite: 'Matalan lahden rannalla on avaraa niittyä, jota halkoo mutkitteleva puro. Etualalla makaa pieni vene.',
+      lahde: 'Valokuva: Olev Mihkelmaa, olev.ee, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Olev Mihkelmaa, olev.ee',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Haeska_sadam.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-matsalu-eb9c5574.jpg',
+        lyhyt: 'Kasari-joki kiemurtelee Matsalun suojelualueen kosteikossa.',
+        selite: 'Joki virtaa vehreiden pensaikkojen ja avoimen luhdan halki iltaruskon aikaan.',
+        lahde: 'Valokuva: Olev Mihkelmaa, olev.ee, Wikimedia Commons (CC BY-SA 3.0).',
+        tekija: 'Olev Mihkelmaa, olev.ee',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kasari_j%C3%B5gi_1.jpg',
+        lisenssi: 'CC BY-SA 3.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+      },
+    ],
     nimi: 'Matsalu',
     tyyppi: 'elain',
     kysymykset: [
@@ -546,10 +567,20 @@ export const MAASTOKOHTEET_EST = [
    * PEIPSIJÄRVI ON TYYPPIÄ 'meri' EIKÄ 'jarvi' — perustelu on kirjattu
    * js/packs/maastokohteet-gha.js:n Voltajärvi-kortissa.
    *
-   * KUVATON ERÄ. Faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
+   * KUVAT LISÄTTY 20.9.2026 (ent. kuvaton erä). Faktat en-Wikipediasta kohde kerrallaan 11.9.2026.
    * ============================================================== */
   {
     id: 'peipsi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-peipsi-12778514.jpg',
+      lyhyt: 'Peipsijärven ranta punaisine hiekkakivipaljastumineen Kallastessa.',
+      selite: 'Rantaa reunustaa punainen hiekkakivijyrkänne ja metsä, ja järvi ulottuu horisonttiin.',
+      lahde: 'Valokuva: Julian Nyča, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Julian Nyča',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Peipus_Kallaste_2.JPG',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
     nimi: 'Peipsijärvi',
     tyyppi: 'meri',
     kysymykset: [
@@ -578,6 +609,16 @@ export const MAASTOKOHTEET_EST = [
   },
   {
     id: 'emajogi',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-emajogi-bf901b6a.jpg',
+      lyhyt: 'Suur-Emajõgi kiemurtelee kosteikon halki.',
+      selite: 'Joki virtaa leveänä ja tyynenä ruohoisten rantojen ja metsän välissä.',
+      lahde: 'Valokuva: Geonarva, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Geonarva',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Suur-emajogi.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/3.0',
+    },
     nimi: 'Emajoki',
     tyyppi: 'joki',
     kysymykset: [
@@ -607,6 +648,16 @@ export const MAASTOKOHTEET_EST = [
   },
   {
     id: 'kaali',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-kaali-9be24255.jpg',
+      lyhyt: 'Kaalin suuri kraatteri ja vihreä kraatterijärvi Saarenmaalla.',
+      selite: 'Metsän ympäröimässä kraatterissa on pyöreä lampi, jonka rantaa reunustavat kivet.',
+      lahde: 'Valokuva: Pt, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Pt',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Kaali_main_crater_on_2005-08-10.1.jpg',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
     nimi: 'Kaalin kraatterit',
     tyyppi: 'historia',
     kysymykset: [
@@ -635,6 +686,28 @@ export const MAASTOKOHTEET_EST = [
   },
   {
     id: 'haapsalu',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-haapsalu-422601aa.jpg',
+      lyhyt: 'Haapsalun piispanlinnan rauniot ja kirkkorakennus.',
+      selite: 'Vanha kivilinna ja sen kirkko kohoavat nurmikentän takaa Viron länsirannikon kylpyläkaupungissa.',
+      lahde: 'Valokuva: Sander Säde at English Wikipedia, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Sander Säde at English Wikipedia',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Haapsalu_Castle.jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-haapsalu-bfe3191c.jpg',
+        lyhyt: 'Valkoinen pyöreä paviljonki Haapsalun puistossa.',
+        selite: 'Kupolikattoinen, pylväiden kannattama paviljonki seisoo paljaiden puiden keskellä kevätvalossa.',
+        lahde: 'Valokuva: Sergei Gussev, Wikimedia Commons (CC BY 2.0).',
+        tekija: 'Sergei Gussev',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Haapsalu_(33709824373).jpg',
+        lisenssi: 'CC BY 2.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by/2.0',
+      },
+    ],
     nimi: 'Haapsalu',
     tyyppi: 'kulttuuri',
     kysymykset: [
@@ -662,6 +735,16 @@ export const MAASTOKOHTEET_EST = [
   },
   {
     id: 'rakvere',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-rakvere-602667dc.jpg',
+      lyhyt: 'Rakveren linnuksen rauniot kukkulalla.',
+      selite: 'Linnuksen muurit erottuvat vihreän kummun päällä sinistä taivasta vasten.',
+      lahde: 'Valokuva: Janek A, Wikimedia Commons (CC BY 3.0).',
+      tekija: 'Janek A',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:-_panoramio_(4313).jpg',
+      lisenssi: 'CC BY 3.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by/3.0',
+    },
     nimi: 'Rakvere',
     tyyppi: 'historia',
     kysymykset: [
@@ -689,6 +772,28 @@ export const MAASTOKOHTEET_EST = [
   },
   {
     id: 'ontika',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-ontika-392286aa.jpg',
+      lyhyt: 'Ontikan rannikko ilmasta: metsäinen jyrkänne ja Suomenlahti.',
+      selite: 'Baltian klintin kalkkikivijyrkänne rajaa peltoja ja merenrantaa Viron pohjoisrannikolla.',
+      lahde: 'Valokuva: Tiit Tõnurist/Hiiumaa Mudeliklubi, Wikimedia Commons (CC BY-SA 4.0).',
+      tekija: 'Tiit Tõnurist/Hiiumaa Mudeliklubi',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Ontika_pankrannik.jpg',
+      lisenssi: 'CC BY-SA 4.0',
+      lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-ontika-400296d5.jpg',
+        lyhyt: 'Valaste-vesiputous kalkkikivijyrkänteen reunalla.',
+        selite: 'Vesi putoaa kerroksellisen kallioseinämän yli metsäiseen rotkoon, ja putouksen yllä kulkee silta.',
+        lahde: 'Valokuva: Hannu, Wikimedia Commons (public domain).',
+        tekija: 'Hannu',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:Valaste_waterfall,_June_2010.jpg',
+        lisenssi: 'Public domain',
+        lisenssiUrl: 'https://commons.wikimedia.org/wiki/Commons:Licensing',
+      },
+    ],
     nimi: 'Ontikan klintti',
     tyyppi: 'vuori',
     kysymykset: [
@@ -718,6 +823,28 @@ export const MAASTOKOHTEET_EST = [
   },
   {
     id: 'lahemaa',
+    kuva: {
+      osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-lahemaa-cf4581b1.jpg',
+      lyhyt: 'Lohkareita matalassa merivedessä Lahemaan rannikolla.',
+      selite: 'Kivet nousevat tyynestä vedestä rantakaislikon lähellä, ja sumu peittää horisontin.',
+      lahde: 'Valokuva: Ninov, Wikimedia Commons (CC BY-SA 3.0).',
+      tekija: 'Ninov',
+      lahdeUrl: 'https://commons.wikimedia.org/wiki/File:National_Park_Lahemaa_Estonia.JPG',
+      lisenssi: 'CC BY-SA 3.0',
+      lisenssiUrl: 'http://creativecommons.org/licenses/by-sa/3.0/',
+    },
+    kuvat: [
+      {
+        osoite: 'https://media.matkakirja.app/karttanostot/20260920/est-nosto-lahemaa-b57b046d.jpg',
+        lyhyt: 'Puinen rakennelma syksyisessä metsässä Nõmmeveskin luona Lahemaan kansallispuistossa.',
+        selite: 'Vanha puurakenne kulkee syysvärisen metsän ja virtaavan veden ylitse.',
+        lahde: 'Valokuva: Suurjalg, Wikimedia Commons (CC BY-SA 4.0).',
+        tekija: 'Suurjalg',
+        lahdeUrl: 'https://commons.wikimedia.org/wiki/File:N%C3%B5mmeveski.jpg',
+        lisenssi: 'CC BY-SA 4.0',
+        lisenssiUrl: 'https://creativecommons.org/licenses/by-sa/4.0',
+      },
+    ],
     nimi: 'Lahemaa',
     tyyppi: 'elain',
     kysymykset: [

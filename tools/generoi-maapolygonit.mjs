@@ -124,6 +124,32 @@ const LAHDE = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector'
  */
 const PAIKALLINEN = new URL('../.nevalimuisti/ne_10m_admin_0_countries.geojson',
   import.meta.url);
+/*
+ * ═══ RANNIKON NAULAUS JO LÄHTEESSÄ (Fablen päätös 20.9.2026) ═══════
+ *
+ * Maan kehä ja rantaviiva tulevat ERI Natural Earth -aineistoista:
+ * kehä `ne_10m_admin_0_countries`ista, rantaviiva `ne_10m_ocean`ista
+ * (laattoihin poltettu ranta, tools/fokuskartta/piirto.js osio 7, sekä
+ * pallon vektorikerros). Ne ovat eri mieltä rannan kulusta — mitattuna
+ * mediaani 107 m, p95 445 m ja SUURIN 3 939 m — ja koska kehä on
+ * paksumpi ja piirtyy päällä, ohut rantaviiva pistää esiin sen vierestä.
+ * Pallolla ero naulataan ajossa (js/pallovektorit.js naulaaKorostus),
+ * mutta linssin tasokartalla kehä on SVG eikä sinne ole rannikkoa
+ * vektoreina — siellä ero jäi näkyviin.
+ *
+ * Siksi naulaus tehdään jo TÄSSÄ: kehän kärki, joka on rantaviivan
+ * tuntumassa, siirretään rantaviivan omalle kärjelle ennen harvennusta.
+ * Silloin molemmat näkymät piirtävät saman rannan samasta geometriasta,
+ * eikä kumpikaan tarvitse ajonaikaista korjausta. Sisämaan rajat eivät
+ * ole rantaviivan tuntumassa eivätkä siis liiku.
+ */
+const MERI_LAHDE = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector'
+  + '/master/geojson/ne_10m_ocean.geojson';
+const MERI_PAIKALLINEN = new URL('../.nevalimuisti/ne_10m_ocean.geojson',
+  import.meta.url);
+/** Hilan solu ja tuntuma asteina — samat luvut kuin pallon naulauksessa. */
+const NAULAUS_RUUTU = 0.05;
+const NAULAUS_TOLERANSSI = 0.015;
 const KOHDE = new URL('../assets/data/maapolygonit.json', import.meta.url);
 
 const LEVEYS = MAAILMANKARTTA.map.width;
@@ -203,6 +229,169 @@ async function lueLahde() {
   mkdirSync(new URL('.', PAIKALLINEN), { recursive: true });
   writeFileSync(PAIKALLINEN, JSON.stringify(data));
   return data;
+}
+
+/** Meriaineisto välimuistista tai verkosta (ks. RANNIKON NAULAUS). */
+async function lueMeri() {
+  if (existsSync(MERI_PAIKALLINEN)) {
+    console.log(`Meri: ${MERI_PAIKALLINEN.pathname} (välimuisti)`);
+    return JSON.parse(readFileSync(MERI_PAIKALLINEN, 'utf8'));
+  }
+  console.log(`Meri: ${MERI_LAHDE}`);
+  const vastaus = await fetch(MERI_LAHDE);
+  if (!vastaus.ok) throw new Error(`Natural Earth ocean ${vastaus.status}`);
+  const data = await vastaus.json();
+  mkdirSync(new URL('.', MERI_PAIKALLINEN), { recursive: true });
+  writeFileSync(MERI_PAIKALLINEN, JSON.stringify(data));
+  return data;
+}
+
+/**
+ * Rantaviivan kärjet hilaan. Arvo on `[lon, lat, rengas, i]`: kahden
+ * viimeisen avulla naulattu kärki osaa kertoa, MISTÄ KOHTAA rantaa se
+ * on — ja juuri sitä ompelu tarvitsee (ks. ompeleRengas).
+ */
+function rannikkoHila(meri) {
+  const hila = new Map();
+  const renkaat = [];
+  const lisaa = (p, rengasId, i) => {
+    if (!Number.isFinite(p?.[0]) || !Number.isFinite(p[1])) return;
+    const avain = `${Math.round(p[0] / NAULAUS_RUUTU)}|${Math.round(p[1] / NAULAUS_RUUTU)}`;
+    const arvo = [p[0], p[1], rengasId, i];
+    const lista = hila.get(avain);
+    if (lista) lista.push(arvo); else hila.set(avain, [arvo]);
+  };
+  const osat = (geometry) => {
+    if (geometry.type === 'Polygon') return geometry.coordinates;
+    if (geometry.type === 'MultiPolygon') return geometry.coordinates.flat();
+    return [];
+  };
+  for (const f of meri.features ?? []) {
+    for (const rengas of osat(f.geometry ?? {})) {
+      const id = renkaat.length;
+      renkaat.push(rengas);
+      for (let i = 0; i < rengas.length; i += 1) lisaa(rengas[i], id, i);
+    }
+  }
+  return { hila, renkaat };
+}
+
+/**
+ * Kehän kärjet rantaviivalle siellä, missä ranta on tuntumassa.
+ * Palauttaa uuden renkaan ja siirrettyjen kärkien määrän.
+ */
+function naulaaRengas(kehä, hila, meriRenkaat) {
+  let siirretty = 0;
+  const viitteet = [];
+  const ulos = kehä.map((p) => {
+    const gx = Math.round(p[0] / NAULAUS_RUUTU);
+    const gy = Math.round(p[1] / NAULAUS_RUUTU);
+    // Pituusasteen kutistuma leveyspiirillä (napojen lähellä aste on lyhyt).
+    const kerroin = Math.max(0.05, Math.cos(p[1] * Math.PI / 180));
+    let paras = null;
+    let parasEtaisyys = NAULAUS_TOLERANSSI;
+    for (let dx = -1; dx <= 1; dx += 1) {
+      for (let dy = -1; dy <= 1; dy += 1) {
+        for (const q of hila.get(`${gx + dx}|${gy + dy}`) ?? []) {
+          let dLon = p[0] - q[0];
+          if (dLon > 180) dLon -= 360; else if (dLon < -180) dLon += 360;
+          const d = Math.hypot(dLon * kerroin, p[1] - q[1]);
+          if (d < parasEtaisyys) { parasEtaisyys = d; paras = q; }
+        }
+      }
+    }
+    if (!paras) { viitteet.push(null); return p; }
+    /*
+     * SIIRTO JANALLE, EI KÄRKEEN (korjaus mittauksen jälkeen 20.9.2026).
+     * Lähin rantaKÄRKI voi olla kauempana kuin rantaVIIVA: pitkän janan
+     * keskellä kärki on satoja metrejä sivussa, ja kärkeen naulaaminen
+     * SIIRSI kehän pois viivalta (Ranska: suurin ero 192 → 1 610 m).
+     * Projektio lähimmälle janalle ei voi koskaan kasvattaa etäisyyttä.
+     */
+    const rengas = meriRenkaat[paras[2]];
+    const i = paras[3];
+    const n = rengas.length - 1;
+    let osuma = [paras[0], paras[1]];
+    let osumanEtaisyys = Infinity;
+    for (const j of [((i - 1) % n + n) % n, i]) {
+      const a = rengas[j];
+      const b = rengas[(j + 1) % n];
+      if (!a || !b) continue;
+      const kx = kerroin;
+      const ax = a[0] * kx; const bx = b[0] * kx; const px = p[0] * kx;
+      const dx = bx - ax; const dy = b[1] - a[1];
+      const pituus2 = dx * dx + dy * dy;
+      let t = pituus2 ? ((px - ax) * dx + (p[1] - a[1]) * dy) / pituus2 : 0;
+      t = Math.max(0, Math.min(1, t));
+      const piste = [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t];
+      const d = Math.hypot((p[0] - piste[0]) * kx, p[1] - piste[1]);
+      if (d < osumanEtaisyys) { osumanEtaisyys = d; osuma = piste; }
+    }
+    siirretty += 1;
+    viitteet.push([paras[2], paras[3]]);
+    return osuma;
+  });
+  return { rengas: ulos, siirretty, viitteet };
+}
+
+/*
+ * ═══ RANNIKON OMPELU (Fablen päätös 20.9.2026, vaihtoehto 1) ══════
+ *
+ * Naulaus siirtää kärkiä mutta ei voi LUODA niitä: `ne_10m_admin_0`
+ * sulkee suistot ja lahdet jänteellä, eikä siinä ole yhtään kärkeä,
+ * jonka voisi siirtää suiston pohjukkaan. Ranskassa pisin sellainen
+ * jänne on 11,8 km vettä, ja juuri se viiva kulkee veden yli.
+ *
+ * Ompelu korjaa sen: kun kehän kaksi peräkkäistä kärkeä on naulattu
+ * SAMALLE rantarenkaalle, väliin kirjoitetaan rantaviivan oma polku
+ * niiden välistä. Rengas pysyy suljettuna, koska vain sisäosa
+ * korvataan. Suunta valitaan lyhyemmän kaaren mukaan, ja liian pitkä
+ * kierros hylätään (OMPELEEN_KATTO) — muuten kahden lahden välinen
+ * hyppy ompelisi mukaan puolet mantereen rannikosta.
+ */
+/** Pisin rantapolku, joka saa korvata yhden jänteen (asteina). */
+const OMPELEEN_KATTO = 3;
+
+function ompeleRengas(kehä, viitteet, meriRenkaat) {
+  if (kehä.length < 3) return { rengas: kehä, ommeltuja: 0, lisatyt: 0 };
+  const ulos = [kehä[0]];
+  let ommeltuja = 0;
+  let lisatyt = 0;
+  for (let k = 1; k < kehä.length; k += 1) {
+    const a = viitteet[k - 1];
+    const b = viitteet[k];
+    if (a && b && a[0] === b[0]) {
+      const rengas = meriRenkaat[a[0]];
+      const n = rengas.length - 1; // suljettu rengas: viimeinen = ensimmäinen
+      const eteen = ((b[1] - a[1]) % n + n) % n;
+      const taakse = n - eteen;
+      const askel = eteen <= taakse ? 1 : -1;
+      const matka = Math.min(eteen, taakse);
+      // Polun pituus asteina: liian pitkä kierros ei ole tämän jänteen ranta.
+      let pituus = 0;
+      let i = a[1];
+      const polku = [];
+      for (let m = 0; m < matka; m += 1) {
+        const seuraava = ((i + askel) % n + n) % n;
+        const p = rengas[i];
+        const q = rengas[seuraava];
+        const kerroin = Math.max(0.05, Math.cos((p[1] + q[1]) / 2 * Math.PI / 180));
+        let dLon = p[0] - q[0];
+        if (dLon > 180) dLon -= 360; else if (dLon < -180) dLon += 360;
+        pituus += Math.hypot(dLon * kerroin, p[1] - q[1]);
+        if (pituus > OMPELEEN_KATTO) break;
+        polku.push([q[0], q[1]]);
+        i = seuraava;
+      }
+      if (pituus <= OMPELEEN_KATTO && polku.length) {
+        // Viimeinen polun piste on kehän oma kärki — se tulee silmukan lopussa.
+        for (let m = 0; m < polku.length - 1; m += 1) { ulos.push(polku[m]); lisatyt += 1; }
+        ommeltuja += 1;
+      }
+    }
+    ulos.push(kehä[k]);
+  }
+  return { rengas: ulos, ommeltuja, lisatyt };
 }
 
 /** ISO3 → GeoJSON-piirre. Ensisijaisesti ISO_A3, sitten hallinnolliset. */
@@ -358,6 +547,14 @@ todennaProjektio(projektio);
 if (vainTarkistus) process.exit(0);
 
 const geojson = await lueLahde();
+const meri = await lueMeri();
+const { hila: rantaHila, renkaat: meriRenkaat } = rannikkoHila(meri);
+console.log(`Rantaviivan kärkiä hilassa: ${[...rantaHila.values()].reduce((a, v) => a + v.length, 0)}`
+  + ` (${meriRenkaat.length} rantarengasta)`);
+let naulattuja = 0;
+let ommeltuja = 0;
+let ompeleenKarkia = 0;
+let hylattyjaOmpeleita = 0;
 const haku = hakemisto(geojson);
 const pelimaat = Object.keys(MAAILMANKARTTA.map.countryShapes);
 
@@ -371,7 +568,30 @@ for (const iso of pelimaat) {
   const piirre = haku.get(NIMIVASTAAVUUS[iso] ?? iso) ?? haku.get(iso);
   if (!piirre) { puuttuvat.push(iso); continue; }
   const renkaat = [];
-  for (const kehä of ulkokehat(piirre.geometry)) {
+  for (const alkuperainen of ulkokehat(piirre.geometry)) {
+    // Rannikko naulataan ASTEISSA ennen lautakäännöstä (ks. yllä).
+    const { rengas: naulattu, siirretty, viitteet } = naulaaRengas(alkuperainen, rantaHila, meriRenkaat);
+    naulattuja += siirretty;
+    /*
+     * OMMEL EI SAA MUUTTAA RENKAAN LUONNETTA (mitattu 20.9.2026:
+     * ilman tätä Liettuan ja Fidžin renkaat rappeutuivat nollapinta-
+     * alaisiksi, ja tests/maapolygonit.test.mjs "kaikki renkaat
+     * kiertävät samaan suuntaan" putosi punaiseksi). Jos ommeltu
+     * rengas kiertää toisin päin tai sen pinta-ala muuttuu yli
+     * neljänneksen, ommel hylätään ja rengas jää naulatuksi.
+     */
+    const ommelEhdokas = ompeleRengas(naulattu, viitteet, meriRenkaat);
+    const alaEnnen = pinta(naulattu);
+    const alaJalkeen = pinta(ommelEhdokas.rengas);
+    const kelpaa = Math.sign(alaJalkeen) === Math.sign(alaEnnen)
+      && Math.abs(alaJalkeen) > Math.abs(alaEnnen) * 0.75
+      && Math.abs(alaJalkeen) < Math.abs(alaEnnen) * 1.25;
+    const ommel = kelpaa ? ommelEhdokas
+      : { rengas: naulattu, ommeltuja: 0, lisatyt: 0 };
+    if (!kelpaa) hylattyjaOmpeleita += 1;
+    ommeltuja += ommel.ommeltuja;
+    ompeleenKarkia += ommel.lisatyt;
+    const kehä = ommel.rengas;
     const laudalla = puraRengas(kehä, projektio);
     if (koko(laudalla) < MIN_KOKO) { pudonneet++; continue; }
     const kevyt = yksinkertaista(laudalla, TOLERANSSI);
@@ -402,5 +622,8 @@ writeFileSync(KOHDE, JSON.stringify(ulos));
 const kt = Math.round(readFileSync(KOHDE).length / 1024);
 console.log(`Maita ${Object.keys(maat).length} / ${pelimaat.length}`
   + `, renkaita ${renkaita}, pisteitä ${pisteita}, pudotettuja sirpaleita ${pudonneet}`);
+console.log(`Rannikolle naulattuja kärkiä: ${naulattuja}`);
+console.log(`Ommeltuja jänteitä: ${ommeltuja}, rantaviivalta lisättyjä kärkiä: ${ompeleenKarkia}`
+  + `, hylättyjä ompeleita: ${hylattyjaOmpeleita}`);
 if (puuttuvat.length) console.log(`EI LÖYTYNYT: ${puuttuvat.join(' ')}`);
 console.log(`Kirjoitettu ${KOHDE.pathname} — ${kt} kt`);

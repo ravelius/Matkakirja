@@ -1,5 +1,5 @@
 // Palvelutyöntekijä: pelin tiedostot välimuistiin, jotta sovellus toimii myös offline.
-const CACHE = 'matkakirja-2026-08-09.1973';
+const CACHE = 'matkakirja-2026-08-09.1974';
 const SHELL = [
   './',
   './index.html',
@@ -129,7 +129,9 @@ const SHELL = [
   './js/livia-hoyhenet.js',
   './js/livia-pikselit.js',
   './js/livia-svg-paa.js',
+  './js/livia-astronautti.js',
   './js/livia-svg.js',
+  './assets/livia/livia-astronauttikypara-2x.png',
   './js/minipulu.js',
   './js/livia-eleet.js',
   './js/livia-dialogitila.js',
@@ -1532,6 +1534,8 @@ const SHELL = [
   './assets/kartat/bryssel-varikartta.png',
   './assets/kartat/ljubljana-keskusta.png',
   './assets/kartat/ljubljana-varikartta.png',
+  './assets/kartat/kosice-keskusta.png',
+  './assets/kartat/kosice-varikartta.png',
   './assets/kartat/tampere-varikartta.png',
   './assets/kartat/bagdad-varikartta.png',
   './assets/kartat/teheran-varikartta.png',
@@ -1906,7 +1910,7 @@ const LAATTAPOLKU = '/julisteet/pallo/laatat/';
  * on tahallinen: palvelutyöntekijä ei voi tuoda ES-moduulia, ja
  * tests/sw.test.mjs vartioi, että luvut ovat samat.
  */
-const LAATTAKANSIO = '2026-09-20-pohja-20260920i';
+const LAATTAKANSIO = '2026-09-20-pohja-20260920j';
 /** Varakansio syvimmälle tasolle (js/pallo.js PALLO_LAATAT_SYVA), kunnes nostosarja kattaa sen. */
 const LAATTAKANSIO_SYVA = '2026-09-20-pohja';
 const LAATTAKANSIOT = [LAATTAKANSIO, LAATTAKANSIO_SYVA];

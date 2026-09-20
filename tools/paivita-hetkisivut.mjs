@@ -146,7 +146,9 @@ export function sivunLahde(hetki) {
   r.push('     */');
   r.push('    {');
   r.push(`      id: 'hetki-${hetki.id}',`);
-  r.push("      nimi: 'Historian hetki',");
+  // Kartuschan rivi ja sivun nimi tulevat tästä: `aihe` (yleisnimi) erottaa
+  // saman maan hetket toisistaan, muuten kaikki ovat "Historian hetki".
+  r.push(`      nimi: ${hipsuissa(hetki.aihe ?? 'Historian hetki')},`);
   r.push(`      otsikko: ${hipsuissa(`Historian hetki: ${hetki.nimio}`)},`);
   r.push(...kentta(6, 'johdanto', hetki.lehtiJohdanto));
   r.push(...tehtavaLohko(6, hetki.lehtiTehtava));

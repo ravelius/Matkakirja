@@ -1070,9 +1070,8 @@ export const FOKUSVIRTA_SEVILLA = {
           + 'yhdeksässäkymmenessä vuodessa laji ehti kadota melkein '
           + 'kokonaan ja tulla takaisin.',
       ],
-      lahde: 'en-Wikipedia "Iberian lynx", johdanto ja osio "Taxonomy" '
-        + '(tarkistettu 29.8.2026; sama aineisto docs/'
-        + 'mantereet-tyoaineisto/takynostot-espanja.md, ehdokas 10).',
+      lahde: 'en-Wikipedia "Iberian lynx", johdanto ja osio "Taxonomy" (tarkistettu '
+        + '29.8.2026).',
       /*
        * Commons 29.8.2026: 3888×2592, CC BY-SA 4.0, Fernando Diz,
        * kuvattu 12.5.2018, kuvaus "Un lince fotografiado en el Parque

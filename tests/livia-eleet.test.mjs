@@ -6,6 +6,7 @@ import { LIVIAN_MIETINNAT } from '../js/pollo.js';
 import { LIVIA_SVG_ELEET } from '../js/livia-svg.js';
 import { ilmoitaLivianKasvopuhe } from '../js/livia-puhetila.js';
 import { livianDialogikoti, seuraaLivianDialogeja } from '../js/livia-dialogitila.js';
+import { LIVIAN_ASTRONAUTTI_LUOKKA, LIVIAN_ASTRONAUTTI_PUHE_LUOKKA } from '../js/livia-astronautti.js';
 
 // Pieni DOM- ja kellosovitin: testataan pelin odotus/puhe/piilotus-elinkaarta,
 // ei piirtofunktion kopiota. Soittimet eivät vaadi verkkoa tai uusia ääniä.
@@ -738,4 +739,18 @@ test('tilannereaktiot eivät katkaise saapumista, puhetta tai jonota vanhoja kuv
  assert.equal(c.tilanne('card',{symboli:'tekniikka'}),true);e.tick(1800);
  const markup=e.doc.body.children[0].children[0].innerHTML;assert.ok(markup.includes('data-part="glasses"'));
  c.tilanne('cardEnd');e.tick(40);assert.equal(e.raf.size,0,'kortin sulku lopettaa sen eleen');
+});
+
+test('astronauttikypärä seuraa linssitilaa ja leijunta pysähtyy puheeseen',t=>{
+ let c;t.after(()=>c?.tuhoa());const e=liviaTestYmparisto(t);c=asennaLivianKasvot(e.pollo);e.tick(5000);
+ const pinta=e.doc.body.children[0],canvas=pinta.children[0],puhe={};
+ assert.doesNotMatch(canvas.innerHTML,/data-part="astronautti-kypara"/);
+ e.doc.body.classList.add(LIVIAN_ASTRONAUTTI_LUOKKA);e.notify(e.doc.body);
+ assert.match(canvas.innerHTML,/data-part="astronautti-kypara"/);
+ ilmoitaLivianKasvopuhe(puhe,true,'Katson avaruutta.');e.tick(40);
+ assert.equal(pinta.classList.contains(LIVIAN_ASTRONAUTTI_PUHE_LUOKKA),true);
+ ilmoitaLivianKasvopuhe(puhe,false);e.tick(40);
+ assert.equal(pinta.classList.contains(LIVIAN_ASTRONAUTTI_PUHE_LUOKKA),false);
+ e.doc.body.classList.remove(LIVIAN_ASTRONAUTTI_LUOKKA);e.notify(e.doc.body);
+ assert.doesNotMatch(canvas.innerHTML,/data-part="astronautti-kypara"/);
 });

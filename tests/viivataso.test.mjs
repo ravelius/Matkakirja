@@ -194,6 +194,28 @@ test('reittilaattoja ei ole 1000 km:n näkymässä eikä sitä laajemmilla', () 
   assert.ok(peite[7].reitit > peite[6].reitit, 'reittipeite ei kasva syvemmälle');
 });
 
+test('viivatason PIIRTÄJÄ piirtää joet, ei vain peite lupaa niitä', () => {
+  /*
+   * REGRESSIO 20.9.2026 (Sonnet 1:n kierros 18 v1973:lla: *"Ranskan
+   * pelikartalla ei näy jokiviivoja millään zoomilla"*).
+   *
+   * Joet siirrettiin pohjasta viivatasolle, ja peite osasi varata niille
+   * laatat — mutta `piirraViivataso` ei tuntenut jokia lainkaan, joten
+   * uomat katosivat kartalta kokonaan: pohja sai tyhjän listan eikä
+   * viivataso piirtänyt mitään. Peite ja piirto on siksi vartioitava
+   * ERIKSEEN; laattapeite yksin lupaa vain mustetta, jota ei ole.
+   */
+  assert.match(PIIRTO, /export function piirraJoetKankaalle\(/,
+    'jokien piirto ei ole jaettu funktio');
+  const viivataso = PIIRTO.slice(PIIRTO.indexOf('export function piirraViivataso('));
+  assert.match(viivataso, /piirraJoetKankaalle\(ctx, sisalto/,
+    'viivataso ei piirrä jokia — uomat katoaisivat kartalta');
+  // Pohja käyttää samaa funktiota, joten muste ei voi erota.
+  const pohja = PIIRTO.slice(0, PIIRTO.indexOf('export function piirraJoetKankaalle('));
+  assert.match(pohja, /piirraJoetKankaalle\(ctx, sisalto/,
+    'pohja piirtää jokia omalla koodillaan');
+});
+
 test('kaukotasoilla on yhä rajat ja piirit', () => {
   /*
    * Reittien piilotus ei saa viedä rajoja: ne ovat kartan omaa

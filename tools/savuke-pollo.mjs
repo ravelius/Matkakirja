@@ -2794,6 +2794,23 @@ await elvytysCtx.close();
  *      sen, ja tässä mitataan lopputulos.
  */
 
+/**
+ * Odottaa, että saapumistraileri on poistunut ruudulta (tai ohittaa sen
+ * napauttamalla, jos se viipyy). Palauttaa true, jos ruutu on vapaa.
+ */
+async function odotaTraileriPois(sivu, katto = 20000) {
+  const alku = Date.now();
+  while (Date.now() - alku < katto) {
+    const auki = await sivu.evaluate(() => Boolean(document.querySelector('.saapumistraileri')));
+    if (!auki) return true;
+    await sivu.waitForTimeout(500);
+  }
+  // Viipyvä traileri ohitetaan kuten pelaaja tekee: napautus kehykseen.
+  await sivu.evaluate(() => document.querySelector('.saapumistraileri')?.click());
+  await sivu.waitForTimeout(600);
+  return !(await sivu.evaluate(() => Boolean(document.querySelector('.saapumistraileri'))));
+}
+
 /** Näkyvät, riittävän isot sumentavat kerrokset ruudulla. */
 const SUMENNUSKERROKSET = `(() => {
   const osumat = [];
@@ -2813,6 +2830,20 @@ const SUMENNUSKERROKSET = `(() => {
 
 const sumennusCtx = await selain.newContext({ viewport: { width: 390, height: 900 }, serviceWorkers: 'block' });
 const { sivu: sumennusSivu, virheet: sumennusVirheet } = await avaaPeli(sumennusCtx);
+
+/*
+ * SAAPUMISTRAILERI ON SUMEA TARKOITUKSELLA — SE PITÄÄ ODOTTAA POIS.
+ *
+ * Mitattu 20.9.2026: `.saapumistraileri` on kartan päällä
+ * backdrop-filter: blur(12px) noin 5…10 sekuntia saapumisen jälkeen ja
+ * poistaa sitten itsensä (js/saapumistraileri.js
+ * piilotaSaapumistraileri) — DOMiin ei jää mitään eikä sumennusta jää
+ * kartalle. Tämä osio mittasi kuitenkin heti pelin avauksen perään, eli
+ * KESKEN TRAILERIN, ja luki sen sumennuksen kartalle jääneeksi virheeksi
+ * (kuusi punaista, kaikki "kerroksia: 1"). Mitta oli väärässä hetkessä,
+ * ei tuote väärässä.
+ */
+await odotaTraileriPois(sumennusSivu);
 
 const suljettuna = await sumennusSivu.evaluate(`({
   kerrokset: ${SUMENNUSKERROKSET},
@@ -2906,6 +2937,9 @@ await sumennusSivu.evaluate(() => {
 });
 await sumennusSivu.reload({ waitUntil: 'load' });
 await sumennusSivu.waitForTimeout(3000);
+// Päivitys palauttaa tallennetun pelin ja saapumistraileri soi uudelleen
+// — sekin odotetaan pois ennen mittausta (ks. odotaTraileriPois).
+await odotaTraileriPois(sumennusSivu);
 const palautettu = await sumennusSivu.evaluate(`(() => {
   const ui = window.matkakirja?.ui;
   const nakyva = ui?.nakyvaAlue?.();

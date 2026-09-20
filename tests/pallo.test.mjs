@@ -130,7 +130,7 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   const versio = PALLO_KIRJASTO.match(/globe\.gl-(\d+)\.(\d+)\.\d+\.min\.js$/);
   assert.ok(versio && (Number(versio[1]) > 2 || Number(versio[2]) >= 46), PALLO_KIRJASTO);
   /*
-   * TUNNISTE 20260920i, versio 2026-09-20-pohja (20.9.2026, Macin
+   * TUNNISTE 20260920j, versio 2026-09-20-pohja (20.9.2026, Macin
    * pohja-ajo; docs/raportit/viesti-fable-pohja-20260920.md).
    *
    * Sama sääntö kuin sarjalla i: sarja on poltettu ILMAN nostoja, joten
@@ -138,8 +138,8 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
    * lepokerroksesta. Tunniste on pelkkiä kirjaimia ja numeroita, koska
    * tools/tee-pallolaatat.mjs hylkää muun.
    */
-  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-20260920i`);
-  assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, false, '20260920i')}`);
+  assert.equal(PALLO_LAATTAKANSIO, `${PALLO_LAATTAVERSIO}-20260920j`);
+  assert.equal(PALLO_LAATAT, `https://media.matkakirja.app/${laattojenKansio(PALLO_LAATTAVERSIO, false, '20260920j')}`);
   assert.equal(pallonLaatta(3, 5, 4), `${PALLO_LAATAT}4/3/5.jpg`);
   assert.equal(PALLO_LAATTATASO_MAX, 8, 'taso 8 kaytossa 5.9.2026');
   /*
@@ -172,8 +172,8 @@ test('laatoitettu pallo: Mercator-laatat ämpäristä, z4-tekstuuri varana', asy
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 7 } }), 7, 'varakansio ei kanna tasoa 8: vanha napalakki sekoittuisi (5.9.2026 klo 17.30)');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 6 } }), 6);
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 8 } }), 8, 'luettelon 8 riittaa, kun sarja b kantaa sen');
-  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-20-pohja-20260920i\/8\/3\/5\.jpg$/, 'taso 8 samasta kansiosta (varakansio pois 5.9.2026 klo 17.30)');
-  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-20-pohja-20260920i\/7\/3\/5\.jpg$/, 'tasot 0-7 samasta sarjasta');
+  assert.match(pallonLaatta(3, 5, 8), /laatat\/2026-09-20-pohja-20260920j\/8\/3\/5\.jpg$/, 'taso 8 samasta kansiosta (varakansio pois 5.9.2026 klo 17.30)');
+  assert.match(pallonLaatta(3, 5, 7), /laatat\/2026-09-20-pohja-20260920j\/7\/3\/5\.jpg$/, 'tasot 0-7 samasta sarjasta');
   assert.equal(laattatasoMax({ tasot: { min: 0, max: 9 } }), PALLO_LAATTATASO_MAX);
   assert.equal(laattatasoMax(null), PALLO_LAATTATASO_MAX);
   const pallo = lue('../js/pallo.js');

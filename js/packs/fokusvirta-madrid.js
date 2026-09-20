@@ -675,8 +675,7 @@ export const FOKUSVIRTA_MADRID = {
           + 'vuotta.',
       ],
       lahde: 'en-Wikipedia "Cave of Altamira", johdanto ja osio "Discovery, '
-        + 'excavation, scepticism" (tarkistettu 25.8.2026 työaineistoon '
-        + 'docs/mantereet-tyoaineisto/takynostot-espanja.md, ehdokas 1).',
+        + 'excavation, scepticism" (tarkistettu 25.8.2026).',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
        * areenalla ja v1307:n neljällä nostolla): repon oma generoitu
@@ -780,10 +779,8 @@ export const FOKUSVIRTA_MADRID = {
           + 'oravia. Espanja kielsi lajin pidon ja kaupan vuonna 2013.',
       ],
       lahde: 'en-Wikipedia "Monk parakeet", osiot pesinnästä ja '
-        + 'vieraslajistatuksesta (tarkistettu 25.8.2026 työaineistoon '
-        + 'docs/mantereet-tyoaineisto/takynostot-espanja.md, ehdokas 6); '
-        + 'pisteen paikka en-Wikipedia "Parque del Oeste" '
-        + '(tarkistettu 1.9.2026).',
+        + 'vieraslajistatuksesta (tarkistettu 25.8.2026); pisteen paikka '
+        + 'en-Wikipedia "Parque del Oeste" (tarkistettu 1.9.2026).',
       /*
        * PÄÄKUVAKSI HAVAINNEKUVA (28.8.2026, sama malli kuin yllä):
        * repon oma generoitu kuva, joten kenttä on `osoite` eikä
@@ -856,10 +853,8 @@ export const FOKUSVIRTA_MADRID = {
           + 'nostaa Yhdysvaltain lippu, jotta pommitukset lakkaisivat. '
           + 'Lupaa ei tullut. Kaupunki antautui 12. tammikuuta 1874.',
       ],
-      lahde: 'en-Wikipedia "Canton of Cartagena", osiot "Establishment", '
-        + '"Expansion" ja "Defeat", sekä "First Spanish Republic" '
-        + '(tarkistettu 25.8.2026 työaineistoon docs/mantereet-tyoaineisto/'
-        + 'takynostot-espanja.md, ehdokas 4).',
+      lahde: 'en-Wikipedia "Canton of Cartagena", osiot "Establishment", "Expansion" '
+        + 'ja "Defeat", sekä "First Spanish Republic" (tarkistettu 25.8.2026).',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin yllä): repon
        * oma generoitu havainnekuva, joten kenttä on `osoite` eikä

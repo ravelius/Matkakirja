@@ -53,8 +53,11 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 
+// Chromiumin ja Playwrightin paikka vaihtelee koneittain (kontti
+// /opt/..., Mac Studio Playwrightin oma välimuisti): sama PLAYWRIGHT_JS-
+// ja CHROMIUM-varatie kuin muissa savukkeissa.
 const paketti = await import('playwright')
-  .catch(() => import('/opt/node22/lib/node_modules/playwright/index.js'));
+  .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
 const chromium = paketti.chromium ?? paketti.default?.chromium;
 
 const JUURI = new URL('../..', import.meta.url).pathname;
@@ -95,7 +98,10 @@ peli.phase = 'action';
 peli.tokens.delete('ateena');
 const tallenne = JSON.stringify(peli.toJSON());
 
-const selain = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium' });
+const selain = await chromium.launch(
+  process.env.CHROMIUM || existsSync('/opt/pw-browsers/chromium')
+    ? { executablePath: process.env.CHROMIUM ?? '/opt/pw-browsers/chromium' } : {},
+);
 const ctx = await selain.newContext({ viewport: RUUTU, serviceWorkers: 'block' });
 await ctx.addInitScript((data) => {
   try {

@@ -806,10 +806,8 @@ export const FOKUSVIRTA_ROOMA = {
           + 'vaatineet suojan purkamista kaivauksen suojelemiseksi. '
           + 'Suoja on yhä siellä.',
       ],
-      lahde: 'en-Wikipedia "Largo di Torre Argentina", osiot "Roman '
-        + 'temples" ja "Cat shelter" (tarkistettu 1.9.2026; sama '
-        + 'faktapohja kuin docs/mantereet-tyoaineisto/'
-        + 'takynostot-italia.md, ehdokas 1).',
+      lahde: 'en-Wikipedia "Largo di Torre Argentina", osiot "Roman temples" ja "Cat '
+        + 'shelter" (tarkistettu 1.9.2026).',
       avaa: 'kissat',
       /*
        * PÄÄKUVAKSI LOISTOAIKA (28.8.2026, sama malli kuin Sofian
