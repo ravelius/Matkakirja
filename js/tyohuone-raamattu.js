@@ -9641,7 +9641,10 @@ export const RAAMATTU = {
           + 'PAATOS: pyramidi.json vientikansioon Matkakirja-nostot-kuvat/pohja-20260920/, '
           + 'committiin vain osoitin + raportti; Fable vie luettelon amparin juureen '
           + 'versiossa v1973. AMPARIN SIIVOUSLISTA (omistaja): 2026-09-20-nostot, '
-          + '2026-09-20-pohja-nostot-20260920i, vanhat pyramidiversiot (30 Gt).',
+          + '2026-09-20-pohja-nostot-20260920i, vanhat pyramidiversiot (30 Gt). OMISTAJA '
+          + '20.9.2026 klo 05.06: "Pysayta kaikki" -> kaikille viidelle sessiolle '
+          + 'pysaytyskasky, pallosarjan uusinta keskeytetaan, v1972 PR #2624 jaa auki '
+          + 'mergeamatta, Fablen CI-vahti pysaytetty. Ei uusia toita ennen omistajan ohjetta.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
