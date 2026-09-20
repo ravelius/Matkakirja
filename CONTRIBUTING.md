@@ -295,6 +295,16 @@ ne, joiden vartioimia tiedostoja muutit (`harvaPolut`), ja koko sarja
 `node tools/savukkeet/aja-sarja.mjs taysi`. Perustelut:
 docs/raportit/viesti-fable-savukekarsinta-20260919.md.
 
+Aikaa tai kehystahtia mittaavat vartiot (fps, kehysajan p95, "alle N ms
+napautuksesta") eivät ole PR-portissa (omistaja 20.9.2026): ne ovat
+`suorituskyky`-sarjassa, jonka schedule ajaa `taysi`-sarjan osana ja
+jonka voi ajaa käsin (`aja-sarja.mjs suorituskyky`). Savukkeessa
+aikaväite kääritään `suorituskykyVaatija(vaadi)`-apurilla
+(tools/savukkeet/suorituskyky.mjs): SAVUKE_SUORITUSKYKY=1 tekee siitä
+OK/FAIL-väitteen, muuten sama mittaus tulostuu INFO-rivinä. Sekaväite
+(esim. "liuska aukeaa alle 2 s") jaetaan kahtia — toiminnallinen osa jää
+porttiin.
+
 ## Etukäteispuskurin periaate
 
 Omistajan linjaus 15.8.2026: **jokainen pelin vaihe lataa seuraavan
