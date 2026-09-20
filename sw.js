@@ -454,6 +454,7 @@ const SHELL = [
   './js/packs/hahmotelma-ltu.js',
   './js/packs/hahmotelma-lva.js',
   './js/packs/maakartat.js',
+  './js/packs/nimisto-1873.js',
   './js/packs/nahtavyysjutut.js',
   './js/packs/miniatyyrit.js',
   './assets/kartat/symbolit/sym-elain.webp',
