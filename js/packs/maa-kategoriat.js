@@ -19672,6 +19672,315 @@ export const MAA_KATEGORIAT = {
       },
     },
     {
+      id: 'historia',
+      nimi: 'Kalliot ja kruunut',
+      johdanto: 'Bulgarian historia näkyy kalliossa ja kummulla: tuhat vuotta '
+        + 'vanha ratsastajakuva, tsaarien poltettu linna, traakialaisten '
+        + 'kuningashauta mäen sisällä ja katedraali, joka nousi vasta '
+        + 'vapauden jälkeen.',
+      nostot: [
+        {
+          otsikko: 'Kukkula, joka paloi kerran',
+          aika: '1393',
+          tiedosto: 'Tsarevets Fortress, Veliko Tarnovo - 3 March 2021, rk.aerial.jpg',
+          teksti: 'Veliko Tarnovon Tsarevets-kukkula oli toisen Bulgarian '
+            + 'valtakunnan pääkaupunki ja linnoitus vuosina 1185–1393. '
+            + 'Huipulla sijaitsivat sekä tsaarin palatsi että patriarkan '
+            + 'kirkko, joten kukkulalle mahtui koko vallan ydin: maallinen '
+            + 'ja hengellinen johto vierekkäin muurien sisällä. Vuonna 1393 '
+            + 'osmanit piirittivät linnoitusta kolme kuukautta ja polttivat '
+            + 'sen lopulta heinäkuussa, mikä päätti keskiaikaisen Bulgarian '
+            + 'itsenäisyyden vuosisadoiksi. Rauniot seisoivat pitkään '
+            + 'autioina, kunnes kukkula kunnostettiin vuosina 1930–1981 '
+            + 'Bulgarian valtion 1300-vuotisjuhlaan.',
+          lyhyt: 'Tsarevets oli Bulgarian keskiaikaisen valtakunnan pääkaupunki, jonka osmanit polttivat 1393.',
+          selite: 'Veliko Tarnovon Tsarevets-kukkulalla sijaitsivat tsaarin '
+            + 'palatsi ja patriarkan kirkko toisen Bulgarian valtakunnan '
+            + 'aikana.',
+          lahde: 'RKold, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Ratsastaja jyrkänteellä',
+          aika: '700-luku',
+          tiedosto: 'Madara Rider.jpg',
+          teksti: 'Madaran ylängöllä koillis-Bulgariassa kohoaa sata metriä '
+            + 'korkea kalliojyrkänne, johon on veistetty 700-luvulla '
+            + 'ratsastajan kuva 23 metrin korkeuteen maasta. Hevosen selässä '
+            + 'istuva mies survaisee keihäällä leijonaa, ja hevosen jaloissa '
+            + 'juoksee koira. Kuvan ympärille on myöhempinä vuosikymmeninä '
+            + 'hakattu kreikankielisiä kirjoituksia, jotka kertovat '
+            + 'ensimmäisen Bulgarian valtakunnan hallitsijoiden teoista ja '
+            + 'ovat yksi tärkeimmistä lähteistä ajan historiaan. Ratsastaja '
+            + 'on ainoa laatuaan koko Euroopassa, ja se liitettiin Unescon '
+            + 'maailmanperintöluetteloon 1979.',
+          lyhyt: 'Madaran ratsastaja on 700-luvulla kallioon veistetty kuva, ainoa laatuaan Euroopassa.',
+          selite: 'Madaran kalliojyrkänteeseen veistetty ratsastajankuva on '
+            + '700-luvulta ja ainoa laatuaan Euroopassa.',
+          lahde: 'Feradz, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Katedraali kiitokseksi vapauttajille',
+          aika: '1912',
+          tiedosto: 'Alexander Nevsky Cathedral in Sofia, Bulgaria.jpg',
+          teksti: 'Sofian keskustaa hallitseva Aleksanteri Nevskin katedraali '
+            + 'rakennettiin vuosina 1882–1912 ja vihittiin lopulta käyttöön '
+            + '1924. Se on muistomerkki venäläisille sotilaille, jotka '
+            + 'kaatuivat vuosien 1877–1878 Venäjän–Turkin sodassa — sodassa, '
+            + 'joka päätti lähes viisisataa vuotta kestäneen osmanivallan ja '
+            + 'teki Bulgariasta jälleen itsenäisen. Venäläisen arkkitehdin '
+            + 'Aleksandr Pomerantsevin suunnittelema uusbysanttilainen kirkko '
+            + 'mahtuu kymmeneentuhanteen ihmiseen, ja sen kultaiset kupolit '
+            + 'näkyvät Sofian ylle kauas ympäristöön.',
+          lyhyt: 'Katedraali muistaa venäläissotilaita, jotka kaatuivat Bulgarian vapaussodassa 1877–1878.',
+          selite: 'Katedraali rakennettiin 1882–1912 muistoksi Venäjän–Turkin '
+            + 'sodassa 1877–1878 kaatuneille venäläissotilaille.',
+          lahde: 'Elena.laps, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Kuningashauta mäen uumenissa',
+          aika: '300-luku eaa.',
+          tiedosto: 'Thomb-Sveshtari-2.jpg',
+          teksti: 'Koillis-Bulgariassa Sveshtarin kylän lähellä avattiin 1982 '
+            + 'kummun sisältä traakialaisten kuningashauta 300-luvulta ennen '
+            + 'ajanlaskun alkua. Hautakammion seiniä kannattaa kymmenen '
+            + 'naishahmoista veistettyä pylvästä, joiden kädet on nostettu '
+            + 'ylös ikään kuin kantamaan kattoa — kuvien uskotaan esittävän '
+            + 'jumalattaria. Seinillä on myös alkuperäisiä maalauksia, ja '
+            + 'koko rakennelma on säilynyt poikkeuksellisen hyvin kummun '
+            + 'suojassa vuosituhansien ajan. Hauta liitettiin Unescon '
+            + 'maailmanperintöluetteloon 1985 ainutlaatuisen arkkitehtuurinsa '
+            + 'ansiosta.',
+          lyhyt: 'Sveshtarin traakialaishauta on 300-luvulta eaa., kammiota kannattaa kymmenen pylvästä.',
+          selite: 'Sveshtarin kuningashaudan kammiota kannattelee kymmenen '
+            + 'naishahmoiseksi veistettyä pylvästä 300-luvulta eaa.',
+          lahde: 'Interact-Bulgaria, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi Aleksanteri Nevskin katedraali rakennettiin Sofiaan?',
+        vaihtoehdot: [
+          'Muistoksi maanjäristyksen uhreille',
+          'Kiitokseksi venäläisille sotilaille, jotka kaatuivat Bulgarian vapaussodassa',
+          'Sulttaanin lahjaksi kaupungille',
+          'Ensimmäisen tsaarin hautakirkoksi',
+        ],
+        oikea: 1,
+        fakta: 'Aleksanteri Nevskin katedraali on muistomerkki venäläisille '
+          + 'sotilaille, jotka kaatuivat Venäjän–Turkin sodassa 1877–1878 ja '
+          + 'auttoivat vapauttamaan Bulgarian osmanivallasta.',
+      },
+    },
+    {
+      id: 'ruoka',
+      nimi: 'Pöydän perinteet',
+      johdanto: 'Bulgarian ruokapöydässä yhdistyvät tiede ja tapa: jogurtin '
+        + 'bakteeri sai maan nimen, salaatti värjättiin lipun väreillä, '
+        + 'piirakkaan leivotaan onnenlappuja ja jokaisen vieraan eteen '
+        + 'kaadetaan lasillinen kotitekoista viinaa.',
+      nostot: [
+        {
+          otsikko: 'Bakteeri, joka sai maan nimen',
+          aika: '1905',
+          tiedosto: 'Traditional Bulgarian yogurt dish.jpg',
+          teksti: 'Hapanmaitoa on valmistettu Bulgarian kylissä sukupolvelta '
+            + 'toiselle jo ennen kuin kukaan tiesi miksi maito hapantuu. '
+            + 'Vuonna 1905 nuori bulgarialainen lääketieteen opiskelija '
+            + 'Stamen Grigorov tutki Geneven yliopistossa professori Léon '
+            + 'Massolin laboratoriossa kotikylästään tuomiaan '
+            + 'jogurttinäytteitä mikroskoopilla. Hän löysi sauvamaisen '
+            + 'bakteerin, joka sai maidon happanemaan ja paksuuntumaan, ja '
+            + 'kuvaili sen tarkasti tiedejulkaisussa. Tiedeyhteisö nimesi '
+            + 'bakteerin Grigorovin kotimaan mukaan Lactobacillus '
+            + 'bulgaricukseksi, ja se on yhä tänä päivänä yksi maailman '
+            + 'jogurttituotannon tärkeimmistä hapatteista.',
+          lyhyt: 'Stamen Grigorov löysi 1905 jogurtin hapattavan bakteerin, joka nimettiin Bulgarian mukaan.',
+          selite: 'Stamen Grigorov löysi Geneven yliopistossa 1905 bakteerin, '
+            + 'joka nimettiin Lactobacillus bulgaricukseksi.',
+          lahde: 'Savannah Rivka Powell, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Piirakka täynnä ennustuksia',
+          aika: 'Uudenvuoden aatto',
+          tiedosto: 'Баница с късмети-1.jpg',
+          teksti: 'Banitsa on kerroksittain taiteltua filotaikinaa, jonka '
+            + 'väliin levitetään munaa, jogurttia ja suolaista valkoista '
+            + 'juustoa. Arkena se on aamiaispala, mutta uudenvuoden aattona '
+            + 'siitä tulee ennustuskone: taikinaan kääritään pieniä '
+            + 'paperilappuja tai esineitä, joista jokainen lupaa jotain — '
+            + 'terveyttä, rakkautta, rahaa tai matkan. Piirakka leikataan '
+            + 'niin, että jokainen ruokailija saa oman palansa, ja se, jonka '
+            + 'viipaleesta löytyy lappu, kantaa lupausta koko tulevan '
+            + 'vuoden. Banitsan perinne ulottuu bulgarialaisessa '
+            + 'ruokakulttuurissa vuosisatojen taakse ja liittyy myös '
+            + 'jouluun ja pääsiäiseen.',
+          lyhyt: 'Uudenvuoden banitsaan leivotaan onnenlappuja, jotka ennustavat syöjälleen tulevaa vuotta.',
+          selite: 'Uudenvuoden banitsaan kääritään pieniä lappuja tai '
+            + 'esineitä, jotka ennustavat löytäjälleen tulevaa vuotta.',
+          lahde: 'Eugene Zelenko, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Salaatti lipun väreissä',
+          aika: '1956',
+          tiedosto: 'Shopska salad bg.JPG',
+          teksti: 'Shopska-salaatti syntyi 1950-luvulla, kun valtion '
+            + 'matkailuyhtiö Balkantourist kehitti Mustanmeren rannikon '
+            + 'Družban lomakylän ravintolassa uuden annoksen ulkomaisille '
+            + 'turisteille. Kokit valitsivat ainekset tarkoituksella niin, '
+            + 'että lautanen näyttää Bulgarian lipulta: valkoinen raastettu '
+            + 'sirene-juusto, vihreä kurkku ja paprika, ja punainen '
+            + 'tomaatti. Salaatti sai nimensä läntisen Bulgarian shop-alueen '
+            + 'asukkaista, vaikka resepti keksittiin rantahotellissa eikä '
+            + 'vuorikylässä. Monista samaan aikaan luoduista matkailuruoista '
+            + 'shopska on ainoa, joka jäi elämään — siitä tuli koko maan '
+            + 'tunnetuin ruokalaji.',
+          lyhyt: 'Shopska-salaatti keksittiin 1950-luvulla, ja sen värit mukailevat Bulgarian lippua.',
+          selite: 'Shopska-salaatin värit — valkoinen, vihreä ja punainen — '
+            + 'mukailevat tarkoituksella Bulgarian lippua.',
+          lahde: 'Biso, Wikimedia Commons (CC BY 3.0)',
+        },
+        {
+          otsikko: 'Pihapiirin oma viina',
+          aika: 'Syyskuu',
+          tiedosto: 'Bottles of \'rakiya\'.jpg',
+          teksti: 'Rakia on hedelmistä tislattu viina, ja lähes jokaisella '
+            + 'bulgarialaisella maaseutuperheellä on oma reseptinsä. '
+            + 'Yleisimmin sitä valmistetaan luumuista tai rypäleistä: '
+            + 'syksyllä hedelmät murskataan ja niiden annetaan käydä '
+            + 'tynnyrissä viikkoja, minkä jälkeen mäski tislataan '
+            + 'kuparisessa keittimessä, jota naapurit usein lainaavat '
+            + 'vuorotellen toisilleen. Kotitekoisen rakian vahvuus voi '
+            + 'nousta yli viidenkymmenen prosentin, kun kaupan pulloissa se '
+            + 'on tavallisesti neljäkymmentä. Kuuluisinta luumurakiaa '
+            + 'tehdään Troyanin seudulla, ja lasillinen tarjotaan lähes aina '
+            + 'ensimmäisenä tervetulomaljana vieraalle.',
+          lyhyt: 'Rakia on kotitekoinen hedelmäviina, jota tislataan syksyisin luumuista tai rypäleistä.',
+          selite: 'Rakia tislataan kuparisessa keittimessä luumuista tai '
+            + 'rypäleistä, ja Troyanin seutu on kuuluisinta luumurakiaa.',
+          lahde: 'Hakuna.Matata, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Miksi shopska-salaatin ainekset valittiin juuri sellaisiksi?',
+        vaihtoehdot: [
+          'Ne olivat halvimmat raaka-aineet',
+          'Niiden värit mukailevat Bulgarian lippua',
+          'Ne kestivät parhaiten laivakuljetusta',
+          'Kuningas vaati juuri niitä lautaselleen',
+        ],
+        oikea: 1,
+        fakta: 'Shopska-salaatin valkoinen juusto, vihreä kurkku ja paprika '
+          + 'sekä punainen tomaatti valittiin 1950-luvulla mukailemaan '
+          + 'Bulgarian lipun värejä.',
+      },
+    },
+    {
+      id: 'kulttuuri',
+      nimi: 'Naamiot ja narut',
+      johdanto: 'Bulgarialainen kansanperinne näkyy yhä arjessa: maaliskuussa '
+        + 'ranteessa on punavalkoinen naru, tammikuussa kylässä kulkee '
+        + 'kellokas hirviö, vuoristokylässä kudotaan mattoja äidiltä '
+        + 'tyttärelle.',
+      nostot: [
+        {
+          otsikko: 'Naru joka odottaa haikaraa',
+          aika: '1. maaliskuuta',
+          tiedosto: 'Martenitsa-hand-made.jpg',
+          teksti: 'Baba Martan eli maaliskuun mummon päivänä 1. maaliskuuta '
+            + 'bulgarialaiset antavat toisilleen martenitsoja: punaisesta ja '
+            + 'valkoisesta langasta kierrettyjä rannenauhoja tai tupsuja. '
+            + 'Punainen kuvaa verta ja voimaa, valkoinen puhtautta ja onnea, '
+            + 'ja koru puetaan ranteeseen tai vaatteeseen suojaksi '
+            + 'arvaamatonta kevätsäätä vastaan. Martenitsaa kannetaan niin '
+            + 'kauan, kunnes näkee ensimmäisen muuttolinnun, useimmiten '
+            + 'haikaran, tai kukkivan puun — silloin naru riisutaan ja '
+            + 'sidotaan puun oksaan. Perinteen juuret ulottuvat kauas '
+            + 'kristinuskoa varhaisempaan aikaan, ja maaliskuun alussa lähes '
+            + 'jokaisen bulgarialaisen ranteessa näkyy oma punavalkoinen '
+            + 'solmu.',
+          lyhyt: 'Martenitsa on punavalkoinen naru, jota kannetaan ensimmäiseen haikaraan asti.',
+          selite: 'Martenitsa sidotaan ranteeseen 1. maaliskuuta ja riisutaan '
+            + 'vasta, kun näkee ensimmäisen haikaran tai kukkivan puun.',
+          lahde: 'Petko Yotov, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Hirviö joka karkottaa talven',
+          aika: 'Tammikuu',
+          tiedosto: 'Burgas-Ethnographic-museum-kukeri-mask.jpg',
+          teksti: 'Talven pimeimpänä aikana bulgarialaisten kylien läpi '
+            + 'kulkee kukeri-naamioituja miehiä: raskaissa turkiksissa ja '
+            + 'puisissa tai nahkaisissa naamioissa, vyötäröllä painavat '
+            + 'pronssikellot, joita kolistellaan niin kovaa kuin jaksaa. '
+            + 'Äänen ja pelottavan ulkonäön uskottiin karkottavan pahat '
+            + 'henget ja takaavan kylälle hyvän sadon ja terveyden — '
+            + 'perinteen juuret ovat esikristillisissä riiteissä. Vuodesta '
+            + '1966 asti Pernikin kaupunkiin on kokoontunut tammikuussa '
+            + 'satoja kukeri-ryhmiä ympäri maata kansainväliseen '
+            + 'Surva-naamiofestivaaliin, joka liitettiin Unescon aineettoman '
+            + 'kulttuuriperinnön luetteloon 2015.',
+          lyhyt: 'Kukeri-naamioituja miehiä kulkee kylien läpi talvella karkottamassa pahoja henkiä.',
+          selite: 'Kukeri-naamiot ja pronssikellot kuuluvat esikristilliseen '
+            + 'riittiin, jolla karkotettiin talven pahat henget.',
+          lahde: 'Vassia Atanassova - Spiritia, Wikimedia Commons (CC BY-SA 3.0)',
+        },
+        {
+          otsikko: 'Kylä joka kutoo vieläkin',
+          aika: '1600-luku',
+          tiedosto: 'Chiprovtsi 002.jpg',
+          teksti: 'Luoteis-Bulgarian vuoristokylä Chiprovtsi eli aiemmin '
+            + 'hopeakaivoksista, mutta kun kaivostoiminta hiipui 1600-luvun '
+            + 'lopulla, kylän naiset alkoivat kutoa villamattoja '
+            + 'pystysuoralla kangaspuulla. Tekniikka on pysynyt samana '
+            + 'sukupolvesta toiseen: kutoja pujottaa kudelangan loimen läpi '
+            + 'käsin ja tiivistää sen pienellä lyömäkammalla niin, että '
+            + 'maton molemmat puolet näyttävät samalta. Kuvioita — '
+            + 'geometrisia ristikoita, tähtiä ja puun oksia — tunnetaan yhä '
+            + 'yli kaksikymmentä erilaista, ja taito kulkee äidiltä '
+            + 'tyttärelle. Vuonna 2014 Chiprovtsin mattojen kudonta '
+            + 'liitettiin Unescon aineettoman kulttuuriperinnön '
+            + 'luetteloon.',
+          lyhyt: 'Chiprovtsin naiset kutovat villamattoja samalla tekniikalla kuin 1600-luvulla.',
+          selite: 'Chiprovtsin kaksipuoliset villamatot kudotaan '
+            + 'pystysuoralla kangaspuulla, ja taito periytyy äidiltä '
+            + 'tyttärelle.',
+          lahde: 'Vislupus, Wikimedia Commons (CC BY-SA 4.0)',
+        },
+        {
+          otsikko: 'Piiritanssi jonka italialainen piirsi',
+          aika: '1810',
+          tiedosto: 'Dance of Bulgarian peasants - Mayer Luigi - 1810.jpg',
+          teksti: 'Horo on Bulgarian yleisin kansantanssi: tanssijat pitävät '
+            + 'toisiaan käsistä tai vöistä kiinni ja liikkuvat piirissä tai '
+            + 'mutkittelevassa jonossa askelkuvion mukaan. Tahtilaji on '
+            + 'usein epätasainen, esimerkiksi 7/8 tai 9/8, mikä kuulostaa '
+            + 'länsimaiseen korvaan kompastelevalta, vaikka tanssijalle '
+            + 'rytmi on itsestäänselvä nopeiden ja hitaiden askelten '
+            + 'vuorotteluna. Italialainen Luigi Mayer luonnosteli '
+            + 'bulgarialaisten piiritanssia 1780-luvulla, ja luonnokset '
+            + 'julkaistiin kaiverruksina kirjassa vasta 1810, vuosia '
+            + 'taiteilijan kuoleman jälkeen. Horoa tanssitaan yhä häissä ja '
+            + 'kyläjuhlissa, ja jokainen osaa ainakin muutaman '
+            + 'perusaskeleen.',
+          lyhyt: 'Horo on Bulgarian yleisin kansantanssi, jota tanssitaan piirissä epätasaisessa tahtilajissa.',
+          selite: 'Italialainen Luigi Mayer luonnosteli bulgarialaisten '
+            + 'piiritanssia horoa 1780-luvulla; kaiverrus julkaistiin '
+            + 'kirjassa 1810.',
+          lahde: 'Luigi Mayer, Wikimedia Commons (public domain)',
+        },
+      ],
+      tehtava: {
+        kysymys: 'Milloin martenitsa riisutaan ja sidotaan puuhun?',
+        vaihtoehdot: [
+          'Kun ensimmäinen lumi sataa',
+          'Kun näkee ensimmäisen haikaran tai kukkivan puun',
+          'Tasan kuukauden kuluttua maaliskuun alusta',
+          'Kun Surva-festivaali alkaa Pernikissä',
+        ],
+        oikea: 1,
+        fakta: 'Martenitsa riisutaan ja sidotaan puun oksaan, kun näkee '
+          + 'keväällä ensimmäisen haikaran tai kukkivan puun.',
+      },
+    },
+    {
       id: 'menovinkit',
       nimi: 'Menovinkit',
       johdanto: 'Bulgariassa moni museo on skannattu kolmiulotteiseksi, joten '
