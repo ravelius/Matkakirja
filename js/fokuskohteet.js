@@ -6185,11 +6185,15 @@ function piirraKohteenSisus(ui, sailio, kohde, valmisKuva) {
   piirraKohdeKysymykset(ui, sailio, kohde);
   piirraKierrosnappi(ui, sailio, kohde);
   piirraKohteenNosto(ui, sailio, kohde);
-  // Tekstin lähderivi samalla apurilla kuin kuvien (2.9.2026).
-  if (kohde.lahde) {
-    sailio.appendChild(taytaLahderivi(html('p', 'fokuskohde-lahde'),
-      kohde.lahde, kohde));
-  }
+  /*
+   * TEKSTIN LÄHDERIVI EI ENÄÄ PIIRRY KORTILLE (omistaja 20.9.2026,
+   * Laitetestaajan kierros 20: *"en-Wikipedia … tarkistettu 18.9.2026."*
+   * näkyi LISÄÄ-tilan lopussa; omistaja halusi kaiken alaosan
+   * metatekstin pois — sama päätös kuin täkynostolla, js/fokusnosto.js
+   * KORTIN LÄHDERIVI POIS). `kohde.lahde` säilyy datassa tarkistuksen
+   * kirjanpitona ja Lähteet-lehdellä; kuvan Commons-tekijärivi piirtyy
+   * kuvan omana rivinä kuten ennen.
+   */
   /*
    * REAKTIOT LÄHDERIVIN PERÄÄN (js/reaktiot.js): peukku ja
    * virheilmoitus samasta kortista, jossa teksti on. Tunniste on

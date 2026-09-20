@@ -74,6 +74,9 @@ import {
   nostoankkuritSallittu, pikseleistaAsteiksi,
 } from './nostoankkurit.js';
 import { pallonNostoOnPoltettu } from '../pallo.js';
+// Kytkin asuu js/laattapyramidi.js:ssä; pallo.js vie sen eteenpäin, koska
+// nostokerros kysyy vain pallon luetteloa (tests/pallonimet.test.mjs).
+import { KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet } from '../pallo.js';
 import { PALLOLAUDAN_LEVEYS } from './kamera.js';
 import { nimenKarttakerroin } from './nimet.js';
 import { sovitteleLaput, laatikkoSisalla } from './sovittelu.js';
@@ -82,7 +85,17 @@ import { sovitteleLaput, laatikkoSisalla } from './sovittelu.js';
 export const REUNAN_HYSTEREESI_PX = 24;
 
 /** Eläviä nostoja pallolla enintään kerrallaan (karttapallo.md luku 6). */
-export const NOSTOJEN_KATTO = 40;
+export const NOSTOJEN_KATTO = KOHDEMAAN_NIMIOT_ELAVINA ? 120 : 40;
+/*
+ * KATTO 120 ELÄVILLÄ NIMIÖILLÄ (js/laattapyramidi.js
+ * KOHDEMAAN_NIMIOT_ELAVINA, 20.9.2026): kun kohdemaan poltetutkin
+ * nostot piirretään elävinä, Ranskassa niitä on saapumisnäkymässä
+ * ~60–90, ja 40:n katto pudottaisi puolet pelkiksi pisteiksi. Katto on
+ * sama kuin PISTEIDEN_KATTO, joten kohdemaan rivi ei enää putoa
+ * nimiöstä pisteeksi budjetin takia — vain nimibudjetti (nimet.js) ja
+ * sovittelu rajaavat. Mitattu 390 px Pariisi: ks. raportti
+ * docs/raportit/viesti-fable-nimiot-elavat-20260920.md (ladonta, fps).
+ */
 /*
  * ══ KATTO EI SAA PUDOTTAA KOHDEMAAN PISTETTÄ (Raamattu,
  * KARTTAUUDISTUKSEN PAATOKSET 34 kohta 21) ════════════════════════
@@ -741,6 +754,24 @@ export const PAAKARTAN_MERKKIKATTO = 21;
  * naapurimaiden poltetun musteen napautettavaksi kuten ennen.
  */
 export const NAYTA_VAIN_KOHDEMAAN_NOSTOT = true;
+
+/**
+ * Nimen tunnus samalla kaavalla kuin nimiötason generaattori
+ * (tools/generoi-laattapyramidi.mjs `tunnus`): pienet kirjaimet,
+ * ä/ö/å/é/î latinisoituna, muu kuin kirjain tai numero viivaksi.
+ * Aaltomerkki "≈ " ja muut etuliitteet katoavat samalla.
+ */
+export function merinimenTunnus(nimi) {
+  return String(nimi ?? '').toLowerCase()
+    .replace(/ä/g, 'a').replace(/ö/g, 'o').replace(/å/g, 'a').replace(/é/g, 'e').replace(/î/g, 'i')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+/** Onko meri jo nimiötasolla: id tai nimen tunnus osuu `meri`-avaimiin. */
+export function merenTunnusPoltettu(merinimet, id, nimi) {
+  if (!merinimet?.size) return false;
+  return merinimet.has(String(id ?? '')) || merinimet.has(merinimenTunnus(nimi));
+}
 /**
  * LÄHIZOOMIPORTIN KYNNYS — näkymän osuus uloimmasta sallitusta.
  *
@@ -1595,11 +1626,25 @@ export function luoNostot({
         (m) => tiedot.get(m.id) ?? m.kohde ?? null,
         { kohdemaa: true },
       );
+      /*
+       * MEREN NIMI EI TUPLAANNU (Fable 20.9.2026, Karttasepän merikoe 2,
+       * docs/raportit/poltto-koe-20260920.md): uusi nimiötaso polttaa
+       * merien nimet (BISKAJANLAHTI, VÄLIMERI …) laattaan, ja pelin oma
+       * elävä meri-maastokohde ("Biskajanlahti") kirjoittaisi saman nimen
+       * toiseen kertaan sen viereen. Kun luettelon nimiot-taulussa on
+       * `meri`-avain samalle merelle (id tai nimen tunnus), elävää
+       * meri-lappua ei ladota lainkaan — ei ikonia, ei nimiötä, ei
+       * osumaa (kortti aukeaa yhä liuskasta/kohdelistasta). Ennen
+       * polttoa joukko on tyhjä eikä mikään muutu.
+       */
+      const poltetutMerinimet = pyramidinMerinimet();
       for (const m of portti.merkit) {
         const a = asteet(m);
         if (!a) continue;
         const kohde = tiedot.get(m.id) ?? m.kohde;
         if (!kohde) continue;
+        if (poltetutMerinimet.size && kohde.tyyppi === 'meri'
+          && merenTunnusPoltettu(poltetutMerinimet, m.id, m.nimi ?? kohde.nimi)) continue;
         /*
          * OMA PAIKKA ON LADONTAA EDELTÄVÄ PISTE (PAATOKSET 34 kohta 4).
          * `asteet(m)` antaa merkin ladotun paikan — erottelupassin ja
@@ -3513,7 +3558,15 @@ export function luoNostot({
    * uusi — sama raja kuin ankkurivaraston tunnuksella
    * (js/pallolauta/nostoankkurit.js `tunnus`).
    */
-  const sovittele = ({ nimet = [], kiinteat = [] } = {}) => {
+  /*
+   * `rantaviiva` on FUNKTIO (lauta.js rantaviivanLaatikot): kehän
+   * satojen janojen projisointi maksaa ~2 ms, eikä sitä tehdä joka
+   * ladonnassa — vain kun sovittelu oikeasti ajetaan. Avaimeen menee
+   * pelkkä tieto siitä, onko kehä jo saatavilla (`rantaviivaOn`).
+   */
+  const sovittele = ({
+    nimet = [], kiinteat = [], rantaviiva = null, rantaviivaOn = false,
+  } = {}) => {
     viimeisimmatNimet = nimet ?? [];
     if (!lappuja.length) {
       sovittelunAvain = '';
@@ -3566,10 +3619,18 @@ export function luoNostot({
         .map(({ datum }) => datum.avain)
       : []);
     const palaisi = [...palaavat].join(',');
+    /*
+     * RANTAVIIVA ON OSA AVAINTA VAIN MÄÄRÄNÄ (MEREN NIMIÖ EI JÄÄ
+     * RANTAVIIVAN ALLE, js/pallolauta/sovittelu.js): kehän laatikot
+     * saapuvat aineiston latauduttua eri hetkellä kuin ensimmäinen
+     * ladonta, ja silloin meren lappu on sovitteltava uudestaan. Määrä
+     * riittää erottamaan "ei vielä" ja "nyt on"; itse laatikot
+     * liikkuvat vedossa kuten kaikki muukin, eikä lukko avaudu siitä.
+     */
     const avain = `${Math.round(ruutuNyt.leveys)}x${Math.round(ruutuNyt.korkeus)}#`
       + lappuja.map(({ r, datum }) => `${datum.avain}:${r.nimioNakyy && r.nimi ? 1 : 0}`
         + `:${r.perhe === 'aihemerkki' ? 'a' : 'n'}`).join(';')
-      + `#reuna:${reunalla}#palaa:${palaisi}`;
+      + `#reuna:${reunalla}#palaa:${palaisi}#ranta:${rantaviivaOn ? 1 : 0}`;
     // Sama lappujoukko samalla ruudulla: kylki on jo ratkaistu (ks.
     // NIMIÖN KYLKI LUKITAAN). Veto ja zoomi eivät koeta sitä uudestaan.
     if (avain === sovittelunAvain) {
@@ -3589,6 +3650,8 @@ export function luoNostot({
          */
         kylki: palaavat.has(datum.avain) ? (r.puoli ?? 'oikea') : datum.puoli,
         laatikko,
+        // Meren nimiö väistää rantaviivaa (sovittelu.js `rantaviiva`).
+        meri: r.symLaji === 'meri' || r.kategoria === 'meri',
         /*
          * AIHENOSTO VÄISTÄÄ KAIKKEA (js/pallolauta/sovittelu.js
          * AIHENOSTO SOVITELLAAN VIIMEISENÄ). Sen paikka ja nimi
@@ -3601,6 +3664,9 @@ export function luoNostot({
       })),
       esteet: kiinteat.length ? [...nimet, ...kiinteat] : nimet,
       reuna: reunaNyt,
+      rantaviiva: typeof rantaviiva === 'function' ? rantaviiva() : (rantaviiva ?? []),
+      // Elävät laput eivät limity keskenään (sovittelu.js `keskinainen`).
+      keskinainen: KOHDEMAAN_NIMIOT_ELAVINA,
     });
     let muuttui = false;
     for (const { r, datum } of lappuja) {
