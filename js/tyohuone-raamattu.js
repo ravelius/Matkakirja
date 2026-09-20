@@ -9631,7 +9631,17 @@ export const RAAMATTU = {
           + 'mallille sellaisenaan ja vastauksen purku osasi vain hakasulkeet -> '
           + 'puhdistaWikiPutket kahdessa kohdassa; vastauskuvan aihe ei saa olla pelkka '
           + 'luku (1954 toi sotakuvan) -> seuraava kasite. savuke-pollossa 7 vanhaa '
-          + 'punaista (matkustusnapit 4, nahtavyyslinkin kuvapopup 0 kuvaa) -> Opus 1 ottaa.',
+          + 'punaista (matkustusnapit 4, nahtavyyslinkin kuvapopup 0 kuvaa) -> Opus 1 ottaa. '
+          + 'V1972 PR #2624 avattu 05.04. PALLOSARJA (Opus 2 05.03): ensimmainen ajo '
+          + '04.35-05.02 poltti NOSTOT MUKAAN (skriptin oletus) vaikka tuotanto kayttaa '
+          + 'sarjaa ilman nostoja (PALLO_SARJASSA_NOSTOT = false, nostot lepokerroksesta) '
+          + '-> kansio 2026-09-20-pohja-nostot-20260920i roskaksi, uusinta --pallo-ilman-'
+          + 'nostoja alkoi 05.03 (n. 27 min); tunniste 20260920i (vain a-z0-9). Laattojen '
+          + 'HEAD 200 (pohja z0/z8, viivat z5, ranta z3, nostot FRA z7, pallon laatat.json). '
+          + 'PAATOS: pyramidi.json vientikansioon Matkakirja-nostot-kuvat/pohja-20260920/, '
+          + 'committiin vain osoitin + raportti; Fable vie luettelon amparin juureen '
+          + 'versiossa v1973. AMPARIN SIIVOUSLISTA (omistaja): 2026-09-20-nostot, '
+          + '2026-09-20-pohja-nostot-20260920i, vanhat pyramidiversiot (30 Gt).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
