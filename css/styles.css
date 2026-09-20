@@ -26946,12 +26946,27 @@ button.maapaneeli-aihe:active:not(:disabled) {
   display: inline-block;
   flex: 0 0 auto;
   line-height: 0;
+  /*
+   * KARTUSCHA 3 (omistaja 20.9.2026 klo 15.20, kaappaus kartuscha-v1977.png:
+   * *"isonnetussa versiossa se pitää olla yhtä korkea kuin maan nimi
+   * teksti"*). Lipun em-mitta oli KORTIN kirjasinkoko, ei otsikon —
+   * otsikon koko on vain `.maapaneeli-nimi-suomi`-elementillä — joten
+   * 0,62 em jäi 12 px:iin 30 px:n otsikon vieressä. Nyt lippu perii
+   * otsikon koon muuttujasta ja kuvan korkeus on versaalin korkeus
+   * (`cap`; vara 0,68 em vanhoille selaimille). Reuna lasketaan
+   * korkeuteen, jotta lippu on tasan tekstin korkuinen.
+   */
+  font-size: var(--maapaneeli-otsikko);
 }
 .maapaneeli-lippu[hidden] { display: none; }
+/* Pienennetyssä kartuschassa EI lippua (omistaja 20.9.2026 klo 15.20). */
+.maapaneeli-kortti:not(.valikko-auki) .maapaneeli-lippu { display: none; }
 .maapaneeli-lippu.napautettava { cursor: pointer; }
 .maapaneeli-lippukuva {
   display: block;
-  height: 0.62em;
+  box-sizing: border-box;
+  height: 0.68em;
+  height: 1cap;
   width: auto;
   border: 1px solid rgba(74, 52, 33, 0.45);
   box-shadow: 0 1px 2px rgba(58, 40, 25, 0.2);

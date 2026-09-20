@@ -1455,9 +1455,34 @@ export function luoMaapaneeli({
     tahdistaLiikunPohja(kaluste.querySelector('.maapaneeli-kortti'));
   };
 
+  /*
+   * ISO KARTUSCHA PIENENEE, KUN PELAAJA KOSKEE KARTTAAN TAI LIIKUTTAA
+   * SITÄ (omistaja 20.9.2026 klo 15.20, sanatarkasti: *"infokortti
+   * pitää pienentyä automaattisesti jos pelaaja koskee karttaan tai
+   * liikuttaa sitä"*).
+   *
+   * Kuuntelu on KOTELOSSA (karttaruutu), ei dokumentissa: yläpalkin
+   * napit, liuku tai pöllö eivät ole karttaan koskemista. Kortin oma
+   * ala rajataan pois GEOMETRISESTI (osuuLaatikkoon), koska kortti on
+   * `pointer-events: none` (PÄÄTÖKSET 21) ja tapahtuman kohde on aina
+   * kartta — muuten aiheen napautus sulkisi kortin ennen kuin
+   * osumatesti ehtii avata lehden. `pointerdown` kattaa napautuksen,
+   * vedon ja nipistyksen (kosketus ja hiiri), `wheel` työpöydän
+   * rullazoomin. Kaappausvaihe, jotta pallon ohjaimet eivät nielaise
+   * tapahtumaa.
+   */
+  const karttaanKoskettiin = (e) => {
+    if (!valikkoAuki || !el?.isConnected) return;
+    const kortti = el.querySelector('.maapaneeli-kortti');
+    if (kortti && osuuLaatikkoon(kortti, e.clientX, e.clientY)) return;
+    avaaValikko(false);
+  };
+
   if (typeof document !== 'undefined') {
     document.addEventListener('pointerdown', painallus, true);
     document.addEventListener('click', napautus, true);
+    kotelo?.addEventListener?.('pointerdown', karttaanKoskettiin, true);
+    kotelo?.addEventListener?.('wheel', karttaanKoskettiin, { capture: true, passive: true });
   }
 
   return {
@@ -1542,6 +1567,8 @@ export function luoMaapaneeli({
       clearTimeout(liikunPohjaAjastin);
       liikunPohjaAjastin = null;
       if (typeof document !== 'undefined') {
+        kotelo?.removeEventListener?.('pointerdown', karttaanKoskettiin, true);
+        kotelo?.removeEventListener?.('wheel', karttaanKoskettiin, { capture: true });
         document.removeEventListener('pointerdown', painallus, true);
         document.removeEventListener('click', napautus, true);
         document.documentElement?.style.removeProperty('--liiku-pohja');
