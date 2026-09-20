@@ -76,7 +76,7 @@ import {
 import { pallonNostoOnPoltettu } from '../pallo.js';
 // Kytkin asuu js/laattapyramidi.js:ssä; pallo.js vie sen eteenpäin, koska
 // nostokerros kysyy vain pallon luetteloa (tests/pallonimet.test.mjs).
-import { KOHDEMAAN_NIMIOT_ELAVINA } from '../pallo.js';
+import { KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet } from '../pallo.js';
 import { PALLOLAUDAN_LEVEYS } from './kamera.js';
 import { nimenKarttakerroin } from './nimet.js';
 import { sovitteleLaput, laatikkoSisalla } from './sovittelu.js';
@@ -754,6 +754,24 @@ export const PAAKARTAN_MERKKIKATTO = 21;
  * naapurimaiden poltetun musteen napautettavaksi kuten ennen.
  */
 export const NAYTA_VAIN_KOHDEMAAN_NOSTOT = true;
+
+/**
+ * Nimen tunnus samalla kaavalla kuin nimiötason generaattori
+ * (tools/generoi-laattapyramidi.mjs `tunnus`): pienet kirjaimet,
+ * ä/ö/å/é/î latinisoituna, muu kuin kirjain tai numero viivaksi.
+ * Aaltomerkki "≈ " ja muut etuliitteet katoavat samalla.
+ */
+export function merinimenTunnus(nimi) {
+  return String(nimi ?? '').toLowerCase()
+    .replace(/ä/g, 'a').replace(/ö/g, 'o').replace(/å/g, 'a').replace(/é/g, 'e').replace(/î/g, 'i')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+/** Onko meri jo nimiötasolla: id tai nimen tunnus osuu `meri`-avaimiin. */
+export function merenTunnusPoltettu(merinimet, id, nimi) {
+  if (!merinimet?.size) return false;
+  return merinimet.has(String(id ?? '')) || merinimet.has(merinimenTunnus(nimi));
+}
 /**
  * LÄHIZOOMIPORTIN KYNNYS — näkymän osuus uloimmasta sallitusta.
  *
@@ -1608,11 +1626,25 @@ export function luoNostot({
         (m) => tiedot.get(m.id) ?? m.kohde ?? null,
         { kohdemaa: true },
       );
+      /*
+       * MEREN NIMI EI TUPLAANNU (Fable 20.9.2026, Karttasepän merikoe 2,
+       * docs/raportit/poltto-koe-20260920.md): uusi nimiötaso polttaa
+       * merien nimet (BISKAJANLAHTI, VÄLIMERI …) laattaan, ja pelin oma
+       * elävä meri-maastokohde ("Biskajanlahti") kirjoittaisi saman nimen
+       * toiseen kertaan sen viereen. Kun luettelon nimiot-taulussa on
+       * `meri`-avain samalle merelle (id tai nimen tunnus), elävää
+       * meri-lappua ei ladota lainkaan — ei ikonia, ei nimiötä, ei
+       * osumaa (kortti aukeaa yhä liuskasta/kohdelistasta). Ennen
+       * polttoa joukko on tyhjä eikä mikään muutu.
+       */
+      const poltetutMerinimet = pyramidinMerinimet();
       for (const m of portti.merkit) {
         const a = asteet(m);
         if (!a) continue;
         const kohde = tiedot.get(m.id) ?? m.kohde;
         if (!kohde) continue;
+        if (poltetutMerinimet.size && kohde.tyyppi === 'meri'
+          && merenTunnusPoltettu(poltetutMerinimet, m.id, m.nimi ?? kohde.nimi)) continue;
         /*
          * OMA PAIKKA ON LADONTAA EDELTÄVÄ PISTE (PAATOKSET 34 kohta 4).
          * `asteet(m)` antaa merkin ladotun paikan — erottelupassin ja

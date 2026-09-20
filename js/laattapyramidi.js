@@ -463,6 +463,29 @@ function nostotasonKirjaus() {
  */
 export const KOHDEMAAN_NIMIOT_ELAVINA = true;
 
+/*
+ * NIMIÖTASON METADATA (Karttasepän uusintapoltto 20.9.2026, luettelon
+ * kenttä `nimiotaso.nimiot`: id → { luokka, teksti, lon, lat, iso, meri,
+ * laatikot }). Meren nimiöillä on `meri`-avain (= id). Elävä nostokerros
+ * lukee tästä, mitkä meret laatta jo nimeää, jottei sama meri tuplaannu
+ * elävänä maastonimenä (js/pallolauta/nostot.js poltetutMerinimet).
+ * Vanha luettelo ilman kenttää = null = ei mitään piilotettavaa.
+ */
+export function pyramidinNimiot() {
+  return luettelo?.nimiotaso?.nimiot ?? null;
+}
+
+/**
+ * Nimiötason meren nimien avaimet (id-tunnukset, esim. 'biskajanlahti',
+ * 'valimeri'). Tyhjä joukko ennen polttoa.
+ */
+export function pyramidinMerinimet() {
+  const nimiot = pyramidinNimiot();
+  const ulos = new Set();
+  for (const n of Object.values(nimiot ?? {})) if (n?.meri) ulos.add(String(n.meri));
+  return ulos;
+}
+
 export function nostotasonPoltetut() {
   if (!luettelo?.nostotasot) return null;
   return nostotasonKirjaus()?.nostot ?? null;

@@ -471,3 +471,29 @@ test('siirto animoidaan ja reduced motion poistaa siirtymän', () => {
   assert.match(css, /\.pallolauta-aihemerkki-siirto \{ transition: transform 200ms ease-in-out; \}/);
   assert.match(css, /\.pallolauta-aihemerkki-siirto \{ transition: none; \}/);
 });
+
+/*
+ * ══ MEREN NIMI EI TUPLAANNU NIMIÖTASON KANSSA (Fable 20.9.2026,
+ * Karttasepän merikoe 2) ═══════════════════════════════════════════
+ */
+test('merinimen tunnus on sama kaava kuin nimiötason generaattorilla', async () => {
+  const { merinimenTunnus, merenTunnusPoltettu } = await import('../js/pallolauta/nostot.js');
+  assert.equal(merinimenTunnus('Biskajanlahti'), 'biskajanlahti');
+  assert.equal(merinimenTunnus('≈ Biskajanlahti'), 'biskajanlahti');
+  assert.equal(merinimenTunnus('Välimeri'), 'valimeri');
+  assert.equal(merinimenTunnus('Lioninlahti'), 'lioninlahti');
+  const avaimet = new Set(['biskajanlahti', 'valimeri']);
+  assert.ok(merenTunnusPoltettu(avaimet, 'valimeri', 'Välimeri'));
+  assert.ok(merenTunnusPoltettu(avaimet, 'x', '≈ Biskajanlahti'), 'nimen tunnus riittää');
+  assert.ok(!merenTunnusPoltettu(avaimet, 'pohjanmeri', 'Pohjanmeri'));
+  assert.ok(!merenTunnusPoltettu(new Set(), 'valimeri', 'Välimeri'), 'tyhjä joukko = ei piilotusta');
+});
+
+test('nimiötason meri-avaimet luetaan luettelosta; ilman kenttää joukko on tyhjä', async () => {
+  const { pyramidinMerinimet, pyramidinNimiot } = await import('../js/laattapyramidi.js');
+  assert.equal(pyramidinNimiot(), null);
+  assert.equal(pyramidinMerinimet().size, 0);
+  const nostot = lue('../js/pallolauta/nostot.js');
+  assert.match(nostot, /const poltetutMerinimet = pyramidinMerinimet\(\);/);
+  assert.match(nostot, /kohde\.tyyppi === 'meri'\n\s*&& merenTunnusPoltettu\(poltetutMerinimet, m\.id, m\.nimi \?\? kohde\.nimi\)\) continue;/);
+});

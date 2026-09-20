@@ -42,7 +42,7 @@
 import { laudaltaAsteiksi, projisoiLaudalle } from './fokusmitat.js';
 import { diagNyt, pallodiag } from './pallodiag.js';
 import {
-  KOHDEMAAN_NIMIOT_ELAVINA,
+  KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet,
   haePyramidinLuettelo, nostotasonPoltetut, pyramidinKerrostasot, pyramidinLaattaOlemassa,
   pyramidinLaattaUrl,
 } from './laattapyramidi.js';
@@ -513,7 +513,7 @@ export function webglTuettu(doc = document) {
  */
 // Kohdemaan nimiöt elävinä: kytkin ja perustelu js/laattapyramidi.js
 // KOHDEMAAN_NIMIOT_ELAVINA; viedään tästä nostokerrokselle.
-export { KOHDEMAAN_NIMIOT_ELAVINA };
+export { KOHDEMAAN_NIMIOT_ELAVINA, pyramidinMerinimet };
 export function pallonNostoOnPoltettu(tunnus, tiiviste = null) {
   const nostot = laattaluettelo?.nostotaso?.nostot ?? nostotasonPoltetut();
   // Elävät nimiöt: pallon oma sarja ilman nostoja → mikään ei ole poltettu.

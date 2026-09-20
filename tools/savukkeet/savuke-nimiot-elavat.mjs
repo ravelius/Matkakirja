@@ -17,6 +17,9 @@
  *   5. Ladonta (ladoHeti) pysyy nopeana: 30 toiston mediaani ≤ 12 ms
  *      (mitattu 2,5 ms Macilla kuormassa; prep 2,2 ms).
  *   6. Ei sivuvirheitä.
+ *   7. Nimiötason meri-avain (luettelon nimiotaso.nimiot) piilottaa
+ *      elävän meri-lapun eikä koske muihin; ilman avainta laput palaavat
+ *      (Karttasepän merikoe 2, ujutettu taulu koska polttoa ei vielä ole).
  *
  * Aja: PLAYWRIGHT_JS=… CHROMIUM=… node tools/savukkeet/savuke-nimiot-elavat.mjs [kuvakansio]
  */
@@ -241,6 +244,45 @@ for (const ruutu of RUUDUT) {
     }
     if (KUVAKANSIO) await sivu.screenshot({ path: join(KUVAKANSIO, `elavat-${ruutu.width}-x${osuus}.png`), scale: 'css' });
   }
+
+  /*
+   * 7. MEREN NIMI EI TUPLAANNU NIMIÖTASON KANSSA (Fable 20.9.2026,
+   * Karttasepän merikoe 2). Nimiötasoa ei ole vielä poltettu, joten
+   * luetteloon ujutetaan `nimiotaso.nimiot`-taulu, jossa Biskajanlahti
+   * ja Välimeri ovat meri-avaimella: elävät meri-laput katoavat
+   * osumalistalta (ei ikonia, ei nimiötä), muut nostot pysyvät.
+   * Vastakoe: taulun poisto tuo ne takaisin.
+   */
+  const tuplaus = await sivu.evaluate(async () => {
+    const { ui } = window.matkakirja; const l = ui.pallolauta;
+    const { haePyramidinLuettelo } = await import('/js/laattapyramidi.js');
+    const luettelo = await haePyramidinLuettelo();
+    await l.saavu({ kesto: 0 }); await new Promise((v) => setTimeout(v, 500));
+    const merta = (lista) => lista.filter((o) => ['valimeri', 'biskajanlahti'].includes(o.id)).map((o) => o.id).sort();
+    l.ladoHeti(); await new Promise((v) => setTimeout(v, 300));
+    const ennen = { meria: merta(l.nostot.osumat()), osumia: l.nostot.osumat().length };
+    const vanha = luettelo.nimiotaso;
+    luettelo.nimiotaso = { versio: 'koe', tasot: [], laatastot: {}, nimiot: {
+      biskajanlahti: { luokka: 'meri', teksti: 'Biskajanlahti', meri: 'biskajanlahti', iso: null },
+      valimeri: { luokka: 'meri', teksti: 'Välimeri', meri: 'valimeri', iso: null },
+      provence: { luokka: 'maakunta', teksti: 'Provence', iso: 'FRA' },
+    } };
+    l.ladoHeti(); await new Promise((v) => setTimeout(v, 300));
+    const avaimella = { meria: merta(l.nostot.osumat()), osumia: l.nostot.osumat().length };
+    luettelo.nimiotaso = vanha;
+    l.ladoHeti(); await new Promise((v) => setTimeout(v, 300));
+    const jalkeen = { meria: merta(l.nostot.osumat()), osumia: l.nostot.osumat().length };
+    return { ennen, avaimella, jalkeen };
+  });
+  tieto(`${tunnus}: merinimien tuplaus`, JSON.stringify(tuplaus));
+  vaadi(`${tunnus}: 7. nimiötason meri-avain piilottaa elävän meri-lapun, muut nostot pysyvät`,
+    tuplaus.ennen.meria.length >= 1 && tuplaus.avaimella.meria.length === 0
+      && tuplaus.avaimella.osumia === tuplaus.ennen.osumia - tuplaus.ennen.meria.length,
+    JSON.stringify(tuplaus));
+  vaadi(`${tunnus}: 7b. vastakoe: ilman avainta meri-laput palaavat`,
+    tuplaus.jalkeen.meria.length === tuplaus.ennen.meria.length
+      && tuplaus.jalkeen.osumia === tuplaus.ennen.osumia,
+    JSON.stringify(tuplaus));
 
   vaadi(`${tunnus}: 6. ei sivuvirheitä`, virheet.length === 0, virheet.join(' | '));
   await ctx.close();
