@@ -179,6 +179,11 @@ import {
 import { PALLO_LAUTA } from '../pallo.js';
 import { FOKUS_MAANIMET } from '../packs/fokus-grc.js';
 import { radioMaalle } from '../packs/radiot.js';
+import { LIPPUTIEDOT } from '../packs/lipputiedot.js';
+import { lippuUrl, lippuVara } from '../packs/africa-valokuvat.js';
+import { asetaKuva } from '../media.js';
+import { avaaLippuikkuna } from '../liput.js';
+import { viritysaaniPaalle, viritysaaniPois } from '../linssit/radio.js';
 import { MERKKI_SOITA } from '../ui-apurit.js';
 
 /**
@@ -840,7 +845,29 @@ function paneeliElementti(d) {
   const avain = luo('button', 'maapaneeli-avain');
   avain.type = 'button';
   avain.setAttribute('aria-expanded', 'false');
-  avain.appendChild(luo('span', 'maapaneeli-nimi-suomi'));
+  const nimirivi = luo('span', 'maapaneeli-nimirivi');
+  nimirivi.appendChild(luo('span', 'maapaneeli-nimi-suomi'));
+  /*
+   * LIPPU OTSIKON PERÄSSÄ, TEKSTIN KORKUISENA (omistaja 20.9.2026).
+   *
+   * EI <button> VAAN <span>: lippu on otsikkonapin SISÄLLÄ, ja nappi
+   * napin sisällä on virheellistä html:ää. Napautus ei tulekaan
+   * elementiltä itseltään vaan osumatestistä (ks. NAPAUTUS ON
+   * OSUMATESTI), joka poimii lipun ENNEN otsikkoa — muuten lipun
+   * napautus avaisi ja sulkisi kartuschan.
+   *
+   * Sama nappi kuin maalehdessä: `avaaLippuikkuna` on jo olemassa, ja
+   * lippu on napautettava VAIN niillä mailla, joilla on lipputiedot
+   * (js/maalehti.js noudattaa samaa sääntöä).
+   */
+  const lippu = luo('span', 'maapaneeli-lippu');
+  lippu.hidden = true;
+  const lippukuva = luo('img', 'maapaneeli-lippukuva');
+  lippukuva.decoding = 'async';
+  lippukuva.loading = 'lazy';
+  lippu.appendChild(lippukuva);
+  nimirivi.appendChild(lippu);
+  avain.appendChild(nimirivi);
   avain.appendChild(luo('span', 'maapaneeli-viiva'));
   const alarivi = luo('span', 'maapaneeli-alarivi');
   alarivi.appendChild(luo('span', 'maapaneeli-nimi-oma'));
@@ -917,6 +944,33 @@ function taytaKortti(el, d) {
      * kaikille maille, ja ilman tätä Ranskan lähetys jäisi soimaan
      * Espanjan kartuschan valo palaen.
      */
+    /*
+     * LIPPU VAIN, JOS PAKKA TUNTEE SEN. Ilman tiedostoa otsikon perään
+     * ei jää tyhjää laatikkoa.
+     */
+    const lippu = kortti.querySelector('.maapaneeli-lippu');
+    if (lippu) {
+      const tiedosto = d.lippu;
+      lippu.hidden = !tiedosto;
+      lippu.dataset.lippu = tiedosto ?? '';
+      // Tarina on vain osalla maista; muilla lippu on pelkkä kuva.
+      const tarina = tiedosto ? LIPPUTIEDOT[tiedosto] : null;
+      lippu.classList.toggle('napautettava', Boolean(tarina));
+      lippu.title = tarina ? `${tarina.maa} — lipun tarina` : (d.nimi ?? '');
+      if (tarina) {
+        lippu.setAttribute('role', 'button');
+        lippu.setAttribute('aria-label', `${tarina.maa} — avaa lipun tarina`);
+      } else {
+        lippu.removeAttribute('role');
+        lippu.removeAttribute('aria-label');
+      }
+      const kuva = lippu.querySelector('.maapaneeli-lippukuva');
+      if (kuva && tiedosto) {
+        kuva.alt = d.nimi ?? '';
+        asetaKuva(kuva, lippuUrl(tiedosto, 96), lippuVara(tiedosto, 96));
+      }
+    }
+
     const radio = kortti.querySelector('.maapaneeli-radio');
     if (radio) {
       if (radio.classList.contains('soi')) d.pysaytaRadio?.();
@@ -1205,16 +1259,69 @@ export function luoMaapaneeli({
      */
     const soiva = ui.lehtitila?.kulttuuriAani ?? null;
     if (soiva && soiva.nappi !== nappi) ui.pysaytaKulttuuriAani?.();
+    // Radio kiinni omasta napautuksesta: haku ja kohina päättyvät tähän.
+    if (soiva && soiva.nappi === nappi) {
+      lopetaHaku(nappi);
+      ui.kulttuuriAaniNapista?.({ aani: kanava.url, vara: null, otsikko: kanava.asema, suora: true }, nappi);
+      return;
+    }
     ui.kulttuuriAaniNapista?.({
       aani: kanava.url,
       vara: null,
       otsikko: kanava.asema,
       suora: true,
     }, nappi);
+    aloitaHaku(nappi);
   };
 
+  /*
+   * KANAVAN HAKU: VALO VILKKUU JA VIRITYSKOHINA SOI (omistaja
+   * 20.9.2026). Haku kestää siitä, kun napautus lähti, siihen kun
+   * lähetys alkaa kuulua TAI se epäonnistuu.
+   *
+   * SOITIN EI KERRO TILAANSA, joten se luetaan sen omasta
+   * audio-elementistä (`ui.lehtitila.kulttuuriAani.audio`): `playing`
+   * päättää haun onnistuneena, `error` ja `emptied` epäonnistuneena.
+   * Näin valo ei jää vilkkumaan lähetykselle, jota ei tule.
+   *
+   * AIKAKATKAISU on sama syy: jos kumpikaan tapahtuma ei tule (hidas
+   * osoite, joka ei koskaan vastaa), vilkku ja kohina loppuvat silti.
+   */
+  const HAUN_AIKAKATKAISU_MS = 12000;
+  let haunAjastin = null;
+  let haunAudio = null;
+  let haunKuuntelijat = null;
+
+  function lopetaHaku(nappi) {
+    if (haunAjastin) { clearTimeout(haunAjastin); haunAjastin = null; }
+    if (haunAudio && haunKuuntelijat) {
+      for (const [nimi, fn] of haunKuuntelijat) haunAudio.removeEventListener(nimi, fn);
+    }
+    haunAudio = null;
+    haunKuuntelijat = null;
+    nappi?.classList.remove('etsii');
+    viritysaaniPois();
+  }
+
+  function aloitaHaku(nappi) {
+    const audio = ui.lehtitila?.kulttuuriAani?.audio ?? null;
+    // Soitin ei lähtenyt käyntiin: ei hakua, ei kohinaa, ei vilkkua.
+    if (!audio) return;
+    lopetaHaku(nappi);
+    nappi.classList.add('etsii');
+    viritysaaniPaalle();
+    const loppu = () => lopetaHaku(nappi);
+    haunKuuntelijat = [['playing', loppu], ['error', loppu], ['emptied', loppu]];
+    for (const [nimi, fn] of haunKuuntelijat) audio.addEventListener(nimi, fn);
+    haunAudio = audio;
+    haunAjastin = setTimeout(loppu, HAUN_AIKAKATKAISU_MS);
+  }
+
   /** Soiva lähetys kiinni (maan vaihtuessa ja kalustetta purettaessa). */
-  const pysaytaRadio = () => ui.pysaytaKulttuuriAani?.();
+  const pysaytaRadio = () => {
+    lopetaHaku(el?.querySelector?.('.maapaneeli-radio') ?? null);
+    ui.pysaytaKulttuuriAani?.();
+  };
 
   /*
    * YKSI PYSYVÄ TILAOLIO. Kalusteen napautuskäsittelijät sulkevat tämän
@@ -1228,6 +1335,7 @@ export function luoMaapaneeli({
     nimi: '',
     paikallinen: '',
     valtiomuoto: '',
+    lippu: null,
     rivit: [],
     kielet: [],
     aiheet: [],
@@ -1283,6 +1391,19 @@ export function luoMaapaneeli({
      * yläkulmassa, ja rivien laatikko on suorakaide — päällekkäisyyden
      * sattuessa tarkempi kohde voittaa.
      */
+    /*
+     * LIPPU ENNEN OTSIKKOA: lippu on otsikkonapin sisällä, joten
+     * otsikon laatikko kattaa myös sen. Ilman tätä järjestystä lipun
+     * napautus avaisi ja sulkisi kartuschan lippuikkunan sijaan.
+     */
+    const lippu = kortti.querySelector('.maapaneeli-lippu');
+    if (lippu && !lippu.hidden && lippu.classList.contains('napautettava')
+        && osuuLaatikkoon(lippu, e.clientX, e.clientY)) {
+      e.preventDefault();
+      e.stopPropagation();
+      avaaLippuikkuna(lippu.dataset.lippu);
+      return;
+    }
     const radio = kortti.querySelector('.maapaneeli-radio');
     if (valikkoAuki && radio && !radio.hidden
         && osuuLaatikkoon(radio, e.clientX, e.clientY)) {
@@ -1323,6 +1444,7 @@ export function luoMaapaneeli({
     d.nimi = tila.nimi;
     d.paikallinen = tila.paikallinen;
     d.valtiomuoto = tila.valtiomuoto;
+    d.lippu = tila.lippu;
     d.rivit = tila.rivit;
     d.kielet = tila.kielet;
     d.aiheet = tila.aiheet;
@@ -1364,6 +1486,9 @@ export function luoMaapaneeli({
         // joten ne tehdään kerran maan vaihtuessa eikä joka piirrossa.
         kielet: kieliOsat(ui, iso),
         aiheet: maanAiheet(iso),
+        // Sama lähde kuin maalehden otsikkolipulla (js/ui.js
+        // maalehdenEkaSivu): pakan oma maa-aineisto.
+        lippu: ui.game?.pack?.map?.countryShapes?.[iso]?.lippu ?? null,
       };
       // Maan vaihtuessa kaluste sulkeutuu: sen rivit ovat toisen maan.
       if (tila?.iso !== uusi.iso) { valikkoAuki = false; avattuSivu = null; }

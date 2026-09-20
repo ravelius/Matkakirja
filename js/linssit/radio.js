@@ -683,6 +683,33 @@ export function kanavaKaupungille(cityId) {
   };
 }
 
+/*
+ * VIRITYSÄÄNI MUILLE LAITTEILLE (20.9.2026, kartuschan radionappi).
+ *
+ * Maapaneelin kartuschassa on oma radionappi, joka soittaa lähetyksen
+ * pelin yhteisellä äänisoittimella eikä tämän linssin läpi — mutta
+ * KANAVAN HAKU KUULOSTAA SAMALTA kaikkialla pelissä. Nämä kaksi vientiä
+ * antavat sille saman virityskohinan käynnistämättä koko radiolinssiä.
+ *
+ * YKSI VIRITIN, EI KAHTA: `viritin` on tämän moduulin oma, joten
+ * kartuscha ja radiolinssi eivät voi soittaa kahta kohinaa päällekkäin.
+ * Siksi nämä ovat täällä eivätkä kartuschassa.
+ *
+ * LINSSIN OMA VIRITYS VOITTAA: jos radiolinssi on päällä, se omistaa
+ * äänen, eikä kartuscha saa katkaista sen kohinaa kesken haun.
+ */
+export function viritysaaniPaalle() {
+  if (tila !== null) return false;
+  aloitaViritys();
+  return viritin !== null;
+}
+
+/** Kartuschan virityskohina kiinni. Ei koske linssin omaa viritystä. */
+export function viritysaaniPois(haive = 0.35) {
+  if (tila !== null) return;
+  lopetaViritys(haive);
+}
+
 /** Radiotilan tilannekuva kutsujalle — sama olio kuin onMuutos saa. */
 export function tilanne() {
   return {
