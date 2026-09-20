@@ -111,7 +111,7 @@ export const PALLO_TEKSTUURI = `${R2}julisteet/pallo/${PALLO_TEKSTUURIVERSIO}/te
  * tarkkuuskatto poistuu. Yksi z4-tekstuuri jää VARAKSI: jos laattojen
  * luetteloa (laatat.json) ei saada, pallo piirtyy kuten ennen.
  */
-export const PALLO_LAATTAVERSIO = '2026-09-07a';
+export const PALLO_LAATTAVERSIO = '2026-09-20-pohja';
 /*
  * NOSTOTASOLLINEN KANSIO (omistaja 5.9.2026: "lisää palloon myös se
  * toinen kerros missä nimet ja kohteet yms." ja "päästään siitä
@@ -163,7 +163,12 @@ export const PALLO_LAATTAVERSIO = '2026-09-07a';
  * Ks. docs/raportit/viesti-fable-poltto-ranska-nostot-20260918.md
  * ("Erä 3"), jossa on vientikomennot ja tarkistuslista.
  */
-export const PALLO_LAATTATUNNISTE = 'i';
+/*
+ * TUNNISTE ON PELKKIÄ KIRJAIMIA JA NUMEROITA: tools/tee-pallolaatat.mjs
+ * hylkää muun ("--tunniste: vain a–z ja 0–9"), joten 20.9.2026 poltettu
+ * sarja on `20260920i` eikä `2026-09-20-i`.
+ */
+export const PALLO_LAATTATUNNISTE = '20260920i';
 /*
  * Sarja i on poltettu ILMAN nostoja (tools/tee-pallolaatat.mjs laattojenKansio:
  * kansiossa ei ole '-nostot'-osaa): nostot tulevat maittain lepokerroksesta
