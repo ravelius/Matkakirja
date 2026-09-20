@@ -2036,6 +2036,8 @@ function nimiotasonNimiot() {
  * `tasot[z]`), peitteeseen ja metadataan, joten kolme lukijaa näkevät
  * saman paikan. Koristeet (kompassi, laiva) eivät väistä.
  */
+/** Karkeilla tasoilla (z <= tämä) nimi ilman vapaata paikkaa jää pois. */
+const NIMION_PUDOTUS_Z = 5;
 const NIMION_VAISTO_ASKELIA = [[0, 0], [0, -1], [0, 1], [0.6, -0.8], [-0.6, -0.8], [0.6, 0.8], [-0.6, 0.8], [1.2, 0], [-1.2, 0], [0, -2], [0, 2], [1.2, -1.6], [-1.2, -1.6], [1.2, 1.6], [-1.2, 1.6], [0, -3], [0, 3]];
 let esteMuisti = null;
 function nimiotasonEsteet(mitat) {
@@ -2057,6 +2059,12 @@ function nimiotasonEsteet(mitat) {
     const nostoKorkeus = { 5: 10, 6: 12, 7: 15, 8: 20 }[mitat.z] ?? 14;
     for (const n of nostot.merkit ?? []) {
       if (!Number.isFinite(n.x) || !Number.isFinite(n.y)) continue;
+      // Vain laattaan palavat merkit ovat esteitä: eläväksi jäävät
+      // (merkkiportin takana, kaupungin sisäiset, hahmotelmat) eivät
+      // piirry karkealla tasolla, ja 15/37 maakuntanimeä putosi z5:ltä
+      // niiden laatikoiden takia (21.9.2026). Taso 3 piirtyy vasta z7+.
+      if (!n.poltettava) continue;
+      if ((Number(NOSTOTASOT?.[n.tunnus] ?? n.taso ?? 2) || 2) === 3 && mitat.z < NOSTO_TASO3_ALIN_Z) continue;
       const x = px(n.x); const y = py(n.y);
       const nimi = n.nimioNakyy === false ? '' : String(n.nimio ?? '');
       const lev = nostoKorkeus * 0.55 * nimi.length;
@@ -2064,9 +2072,12 @@ function nimiotasonEsteet(mitat) {
       laatikot.push([x - nostoKorkeus - (vasen ? lev : 0), y - nostoKorkeus, x + nostoKorkeus + (vasen ? 0 : lev), y + nostoKorkeus]);
     }
   }
-  // Joet: jokainen jana kapeana laatikkona (levennys 4 px).
+  // Joet: jokainen jana kapeana laatikkona (levennys 4 px). Karkeilla
+  // tasoilla (z <= NIMION_PUDOTUS_Z) joki ei ole este: viiva on ohut ja
+  // nimi sen päällä lukee hyvin, kun taas 15/37 maakuntanimeä putosi
+  // z5:ltä jokien takia (mitattu 21.9.2026, mm. Normandia ja Provence).
   const joet = [];
-  for (const joki of lautaSisalto.joet ?? []) {
+  for (const joki of (mitat.z <= NIMION_PUDOTUS_Z ? [] : (lautaSisalto.joet ?? []))) {
     const p = joki.pisteet ?? [];
     for (let i = 1; i < p.length; i += 1) {
       joet.push([Math.min(px(p[i - 1][0]), px(p[i][0])) - 4, Math.min(py(p[i - 1][1]), py(p[i][1])) - 4,
@@ -2116,24 +2127,37 @@ function nimiotasonLadonnat(mitat) {
     return arvo(a) - arvo(b);
   });
   let siirrettyja = 0;
+  let pudotettuja = 0;
   for (const nimio of jarjestys) {
     const l = nimiotasonLadonta(nimio, mitat.z, arkkiKaava, mitat.px, mittaa);
     if (!l) continue;
-    const koriste = ['kompassi', 'laiva', 'kuva', 'reitti'].includes(nimio.luokka);
+    /*
+     * KORISTEETKIN VÄISTÄVÄT (21.9.2026, täyden polton kaappaus z5–z6:
+     * Kanaalin laiva ENGLANNIN KANAALI -nimen päällä, kompassiruusu-32
+     * LIONINLAHTI-nimen päällä). Meret ladotaan ensin, koristeet
+     * väistävät niitä samoin askelin kuin maakunnat; reitti ei väistä
+     * (sen laatikko on koko polku). Kun vapaata paikkaa ei löydy,
+     * koriste ja karkean tason (z <= NIMION_PUDOTUS_Z) maakuntanimi
+     * PUDOTETAAN tältä tasolta: päällekkäinen nimi on huonompi kuin
+     * puuttuva, ja seuraavalla tasolla sille on tilaa.
+     */
+    const reitti = nimio.luokka === 'reitti';
+    const koriste = ['kompassi', 'laiva', 'kuva'].includes(nimio.luokka);
     const w = l.laatikko[2] - l.laatikko[0]; const h = l.laatikko[3] - l.laatikko[1];
     let valittu = null;
-    for (const [sx, sy] of (koriste ? [[0, 0]] : NIMION_VAISTO_ASKELIA)) {
-      const askel = l.korkeus * 1.1;
+    for (const [sx, sy] of (reitti ? [[0, 0]] : NIMION_VAISTO_ASKELIA)) {
+      const askel = (koriste ? Math.min(l.korkeus, l.leveys) * 0.6 : l.korkeus) * 1.1;
       const x = l.x + sx * askel * 2; const y = l.y + sy * askel;
       const laatikko = [x - w / 2, y - h / 2, x + w / 2, y + h / 2];
-      if (koriste || laatikkoVapaa(laatikko, esteet, ladotut)) { valittu = { x, y, laatikko }; if (sx || sy) siirrettyja += 1; break; }
+      if (reitti || laatikkoVapaa(laatikko, esteet, ladotut)) { valittu = { x, y, laatikko }; if (sx || sy) siirrettyja += 1; break; }
     }
+    if (!valittu && (koriste || mitat.z <= NIMION_PUDOTUS_Z)) { pudotettuja += 1; continue; }
     valittu ??= { x: l.x, y: l.y, laatikko: l.laatikko };
     const ladonta = { ...l, x: valittu.x, y: valittu.y, laatikko: valittu.laatikko };
     ladotut.push(ladonta.laatikko);
     ulos.push({ nimio, ladonta });
   }
-  if (siirrettyja) console.log(`  nimiötaso z${mitat.z}: ${ulos.length} nimiötä, ${siirrettyja} väisti kaupunkia/jokea/nimiötä`);
+  if (siirrettyja || pudotettuja) console.log(`  nimiötaso z${mitat.z}: ${ulos.length} nimiötä, ${siirrettyja} väisti kaupunkia/jokea/nimiötä, ${pudotettuja} pudotettu (ei vapaata paikkaa)`);
   ladontaMuisti.set(mitat.z, ulos);
   return ulos;
 }
@@ -4285,6 +4309,10 @@ function teeLuettelo() {
   lahteet: [
     'Natural Earth 10m (Kelso & Patterson) — public domain',
     'ETOPO1 Global Relief (NOAA, Amante & Eakins 2009) — public domain',
+    // Tarkka rantaviiva (tools/gshhs-meri.mjs kirjoittaa lahde.json:n
+    // aineistokansioon): lähde ja lisenssi luetteloon sellaisenaan.
+    ...(existsSync(join(dataKansio, 'lahde.json'))
+      ? [`Rantaviiva: ${JSON.parse(readFileSync(join(dataKansio, 'lahde.json'), 'utf8')).lahde}`] : []),
   ],
 };
 }

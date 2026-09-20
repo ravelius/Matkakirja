@@ -793,7 +793,7 @@ shardit () {
       if [ -n "$NIMIOVERSIO" ] && [ "$ILMAN_NIMIOITA" -eq 0 ]; then
         local nimioarg="--nimiotaso --nimioversio $NIMIOVERSIO"
         [ -n "$NIMIOT" ] && nimioarg="$nimioarg --nimiot $NIMIOT"
-        echo "nimio-z4-z8|--tasoja 9 --tasot 4-8 $nimioarg"
+        echo "nimio-$NIMIOVERSIO|--tasoja 9 --tasot 4-8 $nimioarg"
       fi
       ;;
   esac
@@ -1020,10 +1020,13 @@ lopetus () {
 # Merkkiin kirjoitetaan siksi ajon TUNNUS, ja ohitus vaatii, että se on
 # sama; muuten shardi ajetaan uudestaan ja syy sanotaan ääneen.
 ajon_tunnus () {
-  printf '%s/%s/%s/%s/r%s/h%s/p%s/n%s/t%s' \
+  # Nimiöversio EI ole tunnuksessa: nimiöshardin nimi on versiokohtainen
+  # (nimio-<versio>), joten uusi nimiöversio ajaa vain oman shardinsa
+  # eikä mitätöi pohjaa, viivoja, rantaa, nostoja tai pallon sarjaa.
+  printf '%s/%s/%s/%s/r%s/h%s/p%s/n%s' \
     "${VERSIO:-}" "${VIIVAVERSIO:-}" "${NOSTOVERSIO:-}" "${RANTAVERSIO:-}" \
     "${ILMAN_RANTAVIIVAA:-0}" "${HAHMOTELMAT:-0}" \
-    "${PALLOTUNNISTE:-}" "${PALLON_NOSTOT:-}" "${NIMIOVERSIO:-}"
+    "${PALLOTUNNISTE:-}" "${PALLON_NOSTOT:-}"
 }
 
 # Onko shardin valmis-merkki tästä samasta ajosta?
@@ -1232,6 +1235,10 @@ kokoa_luettelo () {
   esac
   local lisa=""
   [ "$PIIRIT" = "ei" ] && lisa="--eipiirit"
+  # KERROSLIPUT MYÖS LUETTELOON (21.9.2026): viivatason laatasto
+  # lasketaan sisällöstä, joten --eijoet on annettava tässäkin — muuten
+  # luettelo lupaa jokilaattoja, joita shardit eivät polttaneet
+  # (mitattu: viivat z8 7 348 / 8 780, eheystarkistus punainen).
   # RANTATASO LUETTELOON: peite lasketaan rantaviiva-aineistosta, joten
   # luettelojobi tarvitsee --data-kansion (sama Natural Earth kuin
   # shardeilla). Ilman --rantaversiota kenttää ei synny lainkaan, ja
@@ -1245,7 +1252,7 @@ kokoa_luettelo () {
     --data "$DATA" \
     $tasoja --tasot "$tasot" --versio "$VERSIO" --nostoversio "$NOSTOVERSIO" \
     --viivaversio "$VIIVAVERSIO" --kaariminuutit "$KORKEUS" \
-    --laatu "$LAATU" --patina "$PATINA" $lisa $YHTEISLIPUT $POHJALIPUT --vain-luettelo \
+    --laatu "$LAATU" --patina "$PATINA" $lisa $YHTEISLIPUT $POHJALIPUT $VIIVALIPUT $RANTALIPUT --vain-luettelo \
     > "$ULOS/lokit/luettelo.log" 2>&1
   echo "· luettelo koottu: $kansio/pyramidi.json"
   kokoa_nimiotaso "$kansio/pyramidi.json"
@@ -1255,7 +1262,7 @@ kokoa_luettelo () {
 # (laatikot tasoittain) syntyvät vasta piirrossa, joten --vain-luettelo
 # ei voi tietää niitä. Kenttä kopioidaan sellaisenaan.
 kokoa_nimiotaso () {
-  local luettelo="$1" shardi="$ULOS/nimio-z4-z8/pyramidi.json"
+  local luettelo="$1" shardi="$ULOS/nimio-$NIMIOVERSIO/pyramidi.json"
   [ -n "$NIMIOVERSIO" ] || return 0
   if [ ! -s "$shardi" ]; then
     echo "VIRHE: nimiöversio $NIMIOVERSIO annettu, mutta $shardi puuttuu" >&2
