@@ -9799,7 +9799,16 @@ export const RAAMATTU = {
           + '3, EGY 2, USA 3 omat nimet), generaattori paivita-hetkisivut korjattu. Mergetty '
           + 'v1973-prepiin. VELKA (ei jonossa): alle 5 erinimista rivia BGR 2, EST 2, ROU 2, '
           + 'FIN 3, HRV 3, LTU 3, LVA 3, POL 3, DNK 4; ei-EU ALB, AND, BLR, MDA, MKD, MNE, SRB, '
-          + 'XKX yha tyhjia. Sonnet 2 pysahtyi - jono tyhja.',
+          + 'XKX yha tyhjia. Sonnet 2 pysahtyi - jono tyhja. TIHEYSPORTTI 300 (Opus 1 '
+          + '4809b5b1) mergetty. GIRONDEN JUURISYY LOYTYI (Opus 1 09.10): toinen viiva on '
+          + 'pohjalaattojen MEREN TAYTON REUNA - rannikon muoto tulee ETOPO 3-kaariminuutin '
+          + 'ruudukosta (4-6 km) + meriMaskin dilataatio 2 ruutua (8-11 km), yhteensa n. '
+          + '15 km = Sonnetin 30 px; suisto kapeampi kuin ruutu -> reuna suorana. Kehan ja '
+          + 'ne_10m-rannan ero on vain 192 m (0,4 px). PAATOS (Fable 09.12): Opus 2 '
+          + 'rasteroi ne_10m_ocean laatan pikselitarkkuudessa meren tayton rajaksi ja '
+          + 'poistaa dilataation rannikolla, polttaa pohjan uuteen versioon viivatason '
+          + 'jalkeen (viimeinen polttoera); tasokartan sadekeha ei tarpeen. DNK/EST '
+          + 'MOYKKY: kaukotasolla kehan janat 1,1 px ja viiva 9,6 px -> Opus 1 korjaa.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
