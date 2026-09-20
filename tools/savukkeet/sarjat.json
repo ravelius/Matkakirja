@@ -46,7 +46,8 @@
     "savuke-astro-pallo.mjs#vartija-b",
     "savuke-ihmisen-kappaleet.mjs",
     "savuke-astro-valokuva.mjs",
-    "savuke-arvonimet.mjs"
+    "savuke-arvonimet.mjs",
+    "savuke-korostus-janne.mjs"
   ],
   "suorituskyky": [
     "savuke-pariisi-lahizoom.mjs#390-suorituskyky",
@@ -156,6 +157,12 @@
       "js/packs/pollon-arvonimet.js",
       "js/fokuskohteet.js",
       "js/nostokuva.js"
+    ],
+    "savuke-korostus-janne.mjs": [
+      "js/pallovektorit.js",
+      "js/maanaariviivat.js",
+      "js/pallolaatat.js",
+      "assets/data/maapolygonit.json"
     ]
   },
   "asetukset": {
@@ -443,6 +450,10 @@
     },
     "savuke-lentonakyma.mjs": {
       "huomautus": "Lentonakyma (omistaja 20.9.2026 klo 14.40): lentolista auki -> ei liftauskaaria, lentokohteet pisteina ja nimina; vastakoe lista kiinni. Berliini, 390 ja 1400 px, ampari Noden kautta (kuten kaupungit-piiloon). ~60 s."
+    },
+    "savuke-korostus-janne.mjs": {
+      "kuvakansio": true,
+      "huomautus": "Gironden/Medocin kaksoisviiva (omistaja 20.9.2026): korostuksen pitka jana painui pallon pinnan alle ja syvyystesti leikkasi sen keskelta pois; vektorijanat jakaa yli 0,1 asteen janat paloiksi. Yksi ruutu 700 x 1000 dpr 2, kamera Gironde; vastakoe korostus piilossa. Kuvakansio: --kuvat <kansio> tai ensimmainen argumentti."
     }
   }
 }
