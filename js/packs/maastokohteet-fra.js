@@ -112,6 +112,7 @@ export const MAASTOKOHTEET_FRA = [
     }],
     nimi: 'Mont Blanc',
     tyyppi: 'vuori',
+    taso: 1,
     kysymykset: [
       'Kuka nousi Mont Blancille ensimmäisenä?',
       'Kummalle maalle huippu oikeastaan kuuluu?',
@@ -366,6 +367,7 @@ export const MAASTOKOHTEET_FRA = [
     }],
     nimi: 'Mont-Saint-Michel',
     tyyppi: 'kulttuuri',
+    taso: 1,
     // MAASTOKOHDE EI SULAUDU AIHEMERKKIIN (omistaja 16.9.2026, ks.
     // js/pallolauta/nostot.js onMaastokohde). Tyyppi on kulttuuri, joten
     // luonnon tyyppitaulu ei tunnista tätä maan laajaksi yksittäiseksi
@@ -424,6 +426,7 @@ export const MAASTOKOHTEET_FRA = [
     }],
     nimi: 'Carcassonnen linnoituskaupunki',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Kuka ennallisti kaupungin 1800-luvulla?',
       'Kuinka pitkä kaksoismuuri on?',
@@ -477,6 +480,7 @@ export const MAASTOKOHTEET_FRA = [
     }],
     nimi: 'Lascaux',
     tyyppi: 'historia',
+    taso: 1,
     kysymykset: [
       'Kuka löysi luolan ja miten?',
       'Miksi luola suljettiin yleisöltä?',
@@ -587,6 +591,7 @@ export const MAASTOKOHTEET_FRA = [
     }],
     nimi: 'Pont du Gard',
     tyyppi: 'tekniikka',
+    taso: 1,
     kysymykset: [
       'Kuinka loivasti akvedukti laskee?',
       'Miksi silta säilyi Rooman jälkeen?',
@@ -772,6 +777,7 @@ export const MAASTOKOHTEET_FRA = [
     }],
     nimi: 'Chambordin linna',
     tyyppi: 'kulttuuri',
+    taso: 1,
     kysymykset: [
       'Mihin Frans I rakennutti Chambordin?',
       'Miksi linnan muurit ja vallihauta ovat koristeita?',
