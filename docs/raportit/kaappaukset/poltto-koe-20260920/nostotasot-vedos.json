@@ -1,0 +1,20 @@
+{
+ "@kuvat": {
+  "vuori": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-vuori.png",
+  "meri": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-meri.png",
+  "joki": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-joki.png",
+  "kulttuuri": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-kulttuuri.png",
+  "historia": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-historia.png",
+  "tekniikka": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-tekniikka.png",
+  "sana": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-kulttuuri.png",
+  "syvennys": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-historia.png",
+  "skandaali": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-historia.png",
+  "nosto": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-kulttuuri.png",
+  "elain": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-saari.png",
+  "ruoka": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-ruoka.png",
+  "kauppa": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-kauppa.png",
+  "merenkulku": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-merenkulku.png",
+  "saari": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-saari.png",
+  "jarvi": "/Users/samireivinen/Matkakirja-opus2/assets/koristeet/nostotyypit/merkki-jarvi.png"
+ }
+}
