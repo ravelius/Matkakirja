@@ -62,7 +62,7 @@ test('lokitiedostojen alkurivi kertoo lähdeosion, ja kohdat ovat ##-otsikoita',
   for (const [tiedosto, osio, maara] of [
     ['paatokset-2026-08-24--09-03.md', 'Fokusmoodi', 125],
     ['paatokset-2026-09-03--09-14.md', 'Viisas Pöllö', 225],
-    ['paatokset-2026-09-13--09-20.md', 'Kaupungit', 100],
+    ['paatokset-2026-09-13--09-20.md', 'Kaupungit', 101],
   ]) {
     const teksti = readFileSync(new URL(tiedosto, LOKIKANSIO), 'utf8');
     assert.match(teksti.split('\n')[0], new RegExp(`osiosta "${osio}"`), `${tiedosto}: alkurivi`);
