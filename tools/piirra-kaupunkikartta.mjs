@@ -588,6 +588,24 @@ const KAUPUNGIT = {
      */
     meri: 'maa',
   },
+  bryssel: {
+    /*
+     * Brysselin ydinkeskusta (20.9.2026, pilotti; omistajan päätös
+     * 19.9.2026: Belgian pelikaupunki Bryssel): Grand-Place ja
+     * vanhakaupunki pentagonin sisällä, itäpuolella Mont des Arts,
+     * Kuninkaanpalatsi ja Place Royale, etelässä Sablon ja
+     * Oikeuspalatsi. 2,4 × 1,9 km: kaikki seitsemän kohdetta
+     * mahtuvat, ja korttelit ovat kapeita ja tiheitä, joten tiukempi
+     * rajaus ei hyödyttäisi. Atomium (5,4 km pohjoiseen) ja
+     * Cinquantenaire (2,5 km itään) jäävät ulos tarkoituksella:
+     * Atomium on jo lehden Rakennukset-sivulla, ja kumpikin veisi
+     * rajauksen puuroksi (kuvasuhde ja katutiheys, ks. yllä).
+     * Senne on katettu 1867–1871 (Anspachin bulevardi), joten
+     * kuvassa ei ole vesialuetta lainkaan.
+     */
+    rajat: { pohjoinen: 50.851, etela: 50.8335, lansi: 4.342, ita: 4.376 },
+    laajennus: 1.6,
+  },
   kobenhavn: {
     // Satamakanava halkoo kuvan pohjois–eteläsuunnassa: vasemmalla
     // vanha kaupunki Tivolista Rundetårniin, oikealla Christianshavn
