@@ -9614,7 +9614,10 @@ export const RAAMATTU = {
           + 'laitteella, TUR Kappadokia OK; lehden avausreitti ja Astronautin kameran '
           + 'reitti (paavalikon varusteruudukko) neuvottu; pulun vastauksessa raaka wiki-'
           + 'linkkiputki ja irrallinen sotakuva -> Opus 1; kartuschan lapinapautus on '
-          + 'PAATOKSET 21:n mukaista (kirjattu havaintona).',
+          + 'PAATOKSET 21:n mukaista (kirjattu havaintona). NAULAUS MERGETTY v1972-prepiin '
+          + '(04.49): savuke-maan-aariviiva 70/70, zoom-nakymassa 140,8 px/aste pudotettuja '
+          + '1174 janaa, peitto 100 %, renkaita 16/16, Gironde OK. V1972 kootaan kun '
+          + 'pallosarja on ohi (CI-tauko).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
