@@ -1216,9 +1216,34 @@ for (const rivi of nostot.tilasto.estot) console.log(`    esto ${rivi}`);
  * luettelon tiivistetauluun, jolloin peli piirtää ne elävinä.
  */
 const ILMAN_HAHMOTELMIA = process.argv.includes('--ilman-hahmotelmia');
+/*
+ * NOSTOT KOLMEEN TASOON (omistajan tilaus 20.9.2026 ilta, vedos):
+ * `--nostotasot <json>` = { <tunnus>: 1|2|3, "@kuvat": { <laji>: <png/svg> } }.
+ * Taso 1 = tärkeimmät: symboli ja nimiö NOSTO_TASO1_KERROIN-kertaisina ja
+ * lajin kuvamerkki (sama kuvarajapinta kuin koristeilla) symbolin päällä;
+ * taso 2 = nykyinen; taso 3 = vain z7+ (peite ja piirto). Sisältökirjuri
+ * tuo kentän `taso` nostoihin; tämä tiedosto on vedoksen väliaikainen
+ * ohitus siihen asti. Ilman tiedostoa käytös on ennallaan (kaikki taso 2).
+ */
+const NOSTOTASOT = valitsin('nostotasot', null) ? JSON.parse(readFileSync(valitsin('nostotasot', null), 'utf8')) : null;
+const NOSTO_TASO1_KERROIN = 1.5;
+const NOSTO_TASO3_ALIN_Z = 7;
+const nostonTaso = (m) => Number(NOSTOTASOT?.[m.tunnus] ?? m.taso ?? 2) || 2;
 const poltettavatMerkit = nostot.merkit
   .filter((m) => m.poltettava && (!NOSTO_MAA || m.iso === NOSTO_MAA))
-  .filter((m) => !ILMAN_HAHMOTELMIA || !String(m.tunnus ?? '').startsWith('hahmotelma-'));
+  .filter((m) => !ILMAN_HAHMOTELMIA || !String(m.tunnus ?? '').startsWith('hahmotelma-'))
+  .map((m) => {
+    const taso = nostonTaso(m);
+    if (taso === 1) {
+      const kuva = NOSTOTASOT?.['@kuvat']?.[m.laji] ?? NOSTOTASOT?.['@kuvat']?.[m.symboli] ?? null;
+      return { ...m, taso, porras: m.porras * NOSTO_TASO1_KERROIN, nimioRajaton: true, ...(kuva ? { kuva } : {}) };
+    }
+    return { ...m, taso };
+  });
+if (NOSTOTASOT) {
+  const n = [1, 2, 3].map((k) => poltettavatMerkit.filter((m) => m.taso === k).length);
+  console.log(`  nostotasot      taso 1: ${n[0]}, taso 2: ${n[1]}, taso 3: ${n[2]} (z${NOSTO_TASO3_ALIN_Z}+)`);
+}
 /** Tämän ajon tunnus→tiiviste-taulu (maakohtaisessa ajossa maan omat). */
 const poltettuLuettelo = NOSTO_MAA
   ? Object.fromEntries(poltettavatMerkit.map((m) => [m.tunnus, m.tiiviste]))
@@ -1612,7 +1637,7 @@ const nostoLaatikot = poltettavatMerkit.map((m) => {
     y2 = Math.max(y2, Math.max(v.y1, v.y2) + vara);
   }
   return {
-    x1, x2, y1, y2,
+    x1, x2, y1, y2, taso: m.taso ?? 2,
   };
 });
 
@@ -1626,6 +1651,7 @@ const nostoLaatikot = poltettavatMerkit.map((m) => {
 function nostotasonPeite(mitat) {
   const joukko = new Set();
   for (const lk of nostoLaatikot) {
+    if (lk.taso === 3 && mitat.z < NOSTO_TASO3_ALIN_Z) continue;
     const px0 = (lk.x1 - arkinBbox.x) * mitat.px - NOSTO_MARGINAALI_PX;
     const px1 = (lk.x2 - arkinBbox.x) * mitat.px + NOSTO_MARGINAALI_PX;
     const py0 = (lk.y1 - arkinBbox.y) * mitat.px - NOSTO_MARGINAALI_PX;
@@ -2001,7 +2027,7 @@ function nimiotasonNimiot() {
  * `tasot[z]`), peitteeseen ja metadataan, joten kolme lukijaa näkevät
  * saman paikan. Koristeet (kompassi, laiva) eivät väistä.
  */
-const NIMION_VAISTO_ASKELIA = [[0, 0], [0, -1], [0, 1], [0.6, -0.8], [-0.6, -0.8], [0.6, 0.8], [-0.6, 0.8], [1.2, 0], [-1.2, 0], [0, -2], [0, 2]];
+const NIMION_VAISTO_ASKELIA = [[0, 0], [0, -1], [0, 1], [0.6, -0.8], [-0.6, -0.8], [0.6, 0.8], [-0.6, 0.8], [1.2, 0], [-1.2, 0], [0, -2], [0, 2], [1.2, -1.6], [-1.2, -1.6], [1.2, 1.6], [-1.2, 1.6], [0, -3], [0, 3]];
 let esteMuisti = null;
 function nimiotasonEsteet(mitat) {
   esteMuisti ??= new Map();
@@ -2077,14 +2103,14 @@ function nimiotasonLadonnat(mitat) {
   const ulos = [];
   // Meret ja koristeet ensin (isot, harvat), sitten maakunnat väistävät niitä.
   const jarjestys = [...nimiotasonNimiot()].sort((a, b) => {
-    const arvo = (n) => (n.luokka === 'meri' ? 0 : (n.luokka === 'kompassi' || n.luokka === 'laiva' || n.luokka === 'kuva' ? 1 : 2));
+    const arvo = (n) => (n.luokka === 'meri' ? 0 : (['kompassi', 'laiva', 'kuva', 'reitti'].includes(n.luokka) ? 1 : 2));
     return arvo(a) - arvo(b);
   });
   let siirrettyja = 0;
   for (const nimio of jarjestys) {
     const l = nimiotasonLadonta(nimio, mitat.z, arkkiKaava, mitat.px, mittaa);
     if (!l) continue;
-    const koriste = nimio.luokka === 'kompassi' || nimio.luokka === 'laiva' || nimio.luokka === 'kuva';
+    const koriste = ['kompassi', 'laiva', 'kuva', 'reitti'].includes(nimio.luokka);
     const w = l.laatikko[2] - l.laatikko[0]; const h = l.laatikko[3] - l.laatikko[1];
     let valittu = null;
     for (const [sx, sy] of (koriste ? [[0, 0]] : NIMION_VAISTO_ASKELIA)) {
@@ -2921,6 +2947,27 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
   const RAJAT = ${RAJAT};
   const JOET_VIIVOIHIN = ${JOET};
   const nostot = await (await fetch('./nostot.json')).json().catch(() => null);
+  const NOSTO_TASO3_ALIN_Z = ${NOSTO_TASO3_ALIN_Z};
+  /*
+   * NOSTOT KOLMEEN TASOON (ks. Node-puoli): taso 3 vain z7+, taso 1 saa
+   * lajin kuvamerkin symbolin päälle (esiladattu kuten koristeet).
+   */
+  const nostokuvat = {};
+  await Promise.all([...new Set((nostot ?? []).filter((m) => m.kuva).map((m) => m.kuva))].map((polku) => new Promise((ok) => {
+    const img = new Image();
+    img.onload = () => { nostokuvat[polku] = img; ok(); };
+    img.onerror = () => ok();
+    img.src = './koristeet/' + polku.split('/').pop();
+  })));
+  const nostotTasolla = (z) => (nostot ?? []).filter((m) => (m.taso ?? 2) !== 3 || z >= NOSTO_TASO3_ALIN_Z);
+  const piirraNostoTasoineen = (ctx, m, porras) => {
+    piirraNostosymPolttoon(ctx, m, porras);
+    const kuva = m.kuva ? nostokuvat[m.kuva] : null;
+    if (kuva) {
+      const k = porras * 2.6;
+      ctx.drawImage(kuva, -k / 2, -k / 2, k, k);
+    }
+  };
   let aineisto = null;
   let sisalto = null;
   let rannikot = null;
@@ -3003,7 +3050,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       piirraNimiotaso(kangas, { ...yhteiset, __z: saumaZ, ladonnat: nimiotaso[String(saumaZ)] ?? [], kuvat: koristekuvat });
     } else {
       piirraMaailma(kangas, aineisto, {
-        ...yhteiset, nostot, piirraNosto: piirraNostosymPolttoon,
+        ...yhteiset, nostot: nostotTasolla(saumaZ), piirraNosto: piirraNostoTasoineen,
       });
     }
     const kctx = kangas.getContext('2d', { willReadFrequently: true });
@@ -3159,7 +3206,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
         piirraNimiotaso(kangas, { ...yhteiset, __z: perus.__z ?? 7, ladonnat: nimiotaso[String(perus.__z ?? 7)] ?? [], kuvat: koristekuvat });
       } else {
         piirraMaailma(kangas, aineisto, {
-          ...yhteiset, nostot, piirraNosto: piirraNostosymPolttoon,
+          ...yhteiset, nostot: nostotTasolla(perus.__z ?? 7), piirraNosto: piirraNostoTasoineen,
         });
       }
       const kctx = kangas.getContext('2d', { willReadFrequently: true });
@@ -3226,7 +3273,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       piirraTasoitustaso(kangas, asetukset);
     } else if (NOSTOTASO) {
       piirraNostotaso(kangas, {
-        ...asetukset, nostot, piirraNosto: piirraNostosymPolttoon,
+        ...asetukset, nostot: nostotTasolla(asetukset.__z), piirraNosto: piirraNostoTasoineen,
       });
     } else if (VIIVATASO) {
       /*
@@ -3251,7 +3298,7 @@ const SIVU = `<!doctype html><meta charset="utf-8"><title>laattapyramidi</title>
       piirraNimiotaso(kangas, { ...asetukset, ladonnat: nimiotaso[String(asetukset.__z)] ?? [], kuvat: koristekuvat });
     } else {
       piirraMaailma(kangas, aineisto, {
-        ...asetukset, sisalto, nostot, piirraNosto: piirraNostosymPolttoon,
+        ...asetukset, sisalto, nostot: nostotTasolla(asetukset.__z), piirraNosto: piirraNostoTasoineen,
       });
     }
     /*
@@ -3307,6 +3354,10 @@ const TYYPIT = {
   '.js': 'text/javascript',
   '.json': 'application/json',
   '.bin': 'application/octet-stream',
+  // Kuvakoristeet ja tyyppimerkit (maailmapiirto.js KUVAKORISTEET).
+  '.png': 'image/png',
+  '.svg': 'image/svg+xml',
+  '.webp': 'image/webp',
 };
 const palvelin = createServer((req, res) => {
   const polku = decodeURIComponent(req.url.split('?')[0]);
@@ -3327,9 +3378,10 @@ const palvelin = createServer((req, res) => {
     // Nimiötason aineisto: nimiölista (ks. NIMIÖTASO).
     '/nimiot.json': join(tyokansio, 'nimiot.json'),
     // Kuvakoristeet (maailmapiirto.js KUVAKORISTEET): tiedostot nimiölistasta.
-    ...Object.fromEntries((NIMIOTASO ? nimiotasonNimiot() : [])
-      .filter((n) => n.luokka === 'kuva' && n.kuva)
-      .map((n) => [`/koristeet/${basename(n.kuva)}`, resolve(n.kuva)])),
+    ...Object.fromEntries([
+      ...(NIMIOTASO ? nimiotasonNimiot() : []).filter((n) => n.luokka === 'kuva' && n.kuva),
+      ...(NOSTOTASO ? poltettavatMerkit : []).filter((m) => m.kuva),
+    ].map((n) => [`/koristeet/${basename(n.kuva)}`, resolve(n.kuva)])),
     // Väritason leikkuri: kohdemaan aluevesirenkaat (ks. vari.json).
     '/vari.json': join(tyokansio, 'vari.json'),
     /*

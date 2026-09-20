@@ -4168,6 +4168,19 @@ export const NIMION_VARIT = Object.freeze({
  * @returns {null|{x, y, korkeus, leveys, kulma, laatikko:[x0,y0,x1,y1]}} kuvapikseleinä arkin origosta
  */
 export function nimiotasonLadonta(nimio, z, kaava, px, mittaa) {
+  // Reittiviiva (esim. Horation reitti 1873): pisteet [lon, lat], teksti
+  // reitin keskikohdan viereen; laatikko koko polun ympäri.
+  if (nimio.luokka === 'reitti') {
+    const pisteet = Array.isArray(nimio.pisteet) ? nimio.pisteet : [];
+    if (pisteet.length < 2 || z < 5) return null;
+    const xs = pisteet.map((p) => kaava.lautaX(p[0]) * px); const ys = pisteet.map((p) => kaava.lautaY(p[1]) * px);
+    const korkeus = { 5: 10, 6: 13, 7: 17, 8: 22 }[z] ?? 13;
+    return {
+      x: xs[0], y: ys[0], korkeus, leveys: 0, kulma: 0, luokka: 'reitti',
+      pisteet: xs.map((x, i) => [x, ys[i]]),
+      laatikko: [Math.min(...xs) - korkeus, Math.min(...ys) - korkeus, Math.max(...xs) + korkeus, Math.max(...ys) + korkeus],
+    };
+  }
   const x = kaava.lautaX(nimio.lon) * px;
   const y = kaava.lautaY(nimio.lat) * px;
   // Kuvakoriste: leveys annettu z7:n ruutupikseleinä, korkeus kuvasta (suhde tai 1:1).
@@ -4377,6 +4390,31 @@ export function piirraNimiotaso(canvas, asetukset) {
     for (const d of siirrot) {
       if (x1 + d < GX || x0 + d > GX + W || y1 < GY || y0 > GY + H) continue;
       const vari = NIMION_VARIT[nimio.luokka === 'maakunta' ? 'maakunta' : 'meri'];
+      if (nimio.luokka === 'reitti') {
+        // Katkoviiva ohuella musteella + pieni teksti keskijanan viereen.
+        ctx.save();
+        ctx.translate(d - GX, -GY);
+        ctx.strokeStyle = 'rgba(70, 48, 29, 0.7)';
+        ctx.lineWidth = Math.max(1, l.korkeus / 9);
+        ctx.setLineDash([l.korkeus * 0.7, l.korkeus * 0.45]);
+        ctx.lineCap = 'round';
+        ctx.beginPath();
+        l.pisteet.forEach(([x, y], i) => (i ? ctx.lineTo(x, y) : ctx.moveTo(x, y)));
+        ctx.stroke();
+        ctx.setLineDash([]);
+        const k = Math.floor(l.pisteet.length / 2);
+        const [ax, ay] = l.pisteet[k - 1]; const [bx, by] = l.pisteet[k];
+        const kulma = Math.atan2(by - ay, bx - ax);
+        ctx.translate((ax + bx) / 2, (ay + by) / 2);
+        ctx.rotate(kulma > Math.PI / 2 || kulma < -Math.PI / 2 ? kulma + Math.PI : kulma);
+        ctx.font = `italic ${l.korkeus}px ${NIMION_FONTTI}`;
+        ctx.textAlign = 'center'; ctx.textBaseline = 'bottom';
+        ctx.fillStyle = 'rgba(70, 48, 29, 0.75)';
+        ctx.fillText(String(nimio.teksti ?? ''), 0, -l.korkeus * 0.35);
+        ctx.restore();
+        piirretty += 1;
+        continue;
+      }
       if (nimio.luokka === 'kuva') {
         const kuva = kuvat?.[nimio.kuva] ?? kuvat?.get?.(nimio.kuva);
         if (kuva) {

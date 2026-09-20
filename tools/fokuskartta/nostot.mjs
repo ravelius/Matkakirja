@@ -403,6 +403,9 @@ function nostoladontaMerkit({
       ankkuriY: r.nippu?.cy ?? r.y,
       symboli: r.symboli ?? null,
       laji: r.laji ?? null,
+      // NOSTON TASO 1|2|3 (Sisältökirjuri 20.9.2026, sisalto-nostotasot-fra):
+      // kulkee merkkiin sellaisenaan; puuttuva = 2 (generaattori päättää).
+      ...((r.kohde?.taso ?? r.taso) ? { taso: Number(r.kohde?.taso ?? r.taso) } : {}),
       nimio: r.nimi ?? '',
       /*
        * NÄKYYKÖ NIMIÖ — VÄISTÖPASSIN PÄÄTÖS SELLAISENAAN. Kenttä oli

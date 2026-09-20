@@ -2508,10 +2508,7 @@ export function pyramidinNimiotaso() {
   const nt = luettelo?.nimiotaso;
   return nt?.versio ? nt : null;
 }
-/** Poltettujen nimiöiden metadata: id → { luokka, teksti, lon, lat, iso, meri, laatikot }. */
-export function pyramidinNimiot() {
-  return luettelo?.nimiotaso?.nimiot ?? null;
-}
+// pyramidinNimiot (metadata Pelikoodarille) on ylempänä, Pelikoodarin erässä.
 
 /**
  * Päivittää viivatason kerroksen.
