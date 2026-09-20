@@ -9971,7 +9971,11 @@ export const RAAMATTU = {
           + 'Opus 1 ENSIN ennen muita: lento laukaisee toisen saapumisen (Amsterdam = '
           + 'liftauskantaman kohde? autoheitto lennon jalkeen? v1969 hyppy/autoheitto vai '
           + 'v1977 kantama?) - juurisyy, korjaus, savuke; jos syy on v1977:ssa, korjaus '
-          + 'julkaistaan heti omana versiona.',
+          + 'julkaistaan heti omana versiona. OMISTAJA 14.50: "tee astronautin kameralle '
+          + 'uusi kuvake, missa on astronautti ja kamera" (varusteruudukossa nyt pelkka '
+          + 'linssi, kaappaus varusteet-astro-kuvake.webp) -> Opus 2 astro-aanen jalkeen: '
+          + 'kuvake muiden varustekuvien tyyliin (pyorea, akvarelli-sepia) kuvageneraattorilla '
+          + 'Macin avaimella; Fable hyvaksyy kuvan ennen julkaisua.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
