@@ -26473,10 +26473,29 @@ svg.rough-annotation { pointer-events: none; }
  * ruudulla, ja js pienentää otsikoiden fonttia, jos kaksi riviä ei
  * muuten mahtuisi.
  */
+/*
+ * SAMA VÄLI VASEMPAAN REUNAAN JA ALAREUNAAN (omistaja 20.9.2026:
+ * "väli vasempaan reunaan on sama kuin alareunaan").
+ *
+ * MITATTU ENSIN: työpöytäselaimessa välit OLIVAT jo samat (390 px:
+ * 14,6 / 14,6; 1400 px: 17,0 / 17,0), koska kumpikin reuna laski saman
+ * peruskaavan. Ero syntyy vasta LAITTEELLA, jossa turva-alueet eivät
+ * ole samat: `safe-area-inset-bottom` on iPhonen kotipainikepalkin
+ * verran suurempi kuin `-left`, ja kartuscha istui siksi liian
+ * vasemmalla ja liian ylhäällä — juuri se, minkä omistaja näki.
+ *
+ * YKSI LUKU MOLEMPIIN, EI KAHTA KAAVAA: väli on suurempi kahdesta
+ * turva-alueesta, ja sama muuttuja menee sekä `left`iin että
+ * `bottom`iin. Silloin ne eivät voi ajautua erilleen millään
+ * laitteella. Alareunan turva-aluetta EI pienennetä — se on laitteen
+ * vaatimus, ei tyylivalinta — joten kortti siirtyy oikealle eikä alas.
+ */
 .maapaneeli-nurkka .pallolauta-maapaneeli {
+  --kartuschan-vali: calc(var(--gap) + 0.4rem + 1px
+    + max(env(safe-area-inset-left, 0px), env(safe-area-inset-bottom, 0px)));
   position: fixed;
-  left: calc(var(--gap) + 0.4rem + 1px + env(safe-area-inset-left, 0px));
-  bottom: calc(var(--gap) + 0.4rem + 1px + env(safe-area-inset-bottom, 0px));
+  left: var(--kartuschan-vali);
+  bottom: var(--kartuschan-vali);
   max-width: calc(100vw - 2 * (var(--gap) + 0.4rem + 1px)
     - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px));
   pointer-events: none;
@@ -26491,6 +26510,14 @@ svg.rough-annotation { pointer-events: none; }
  * nimi + viiva + alarivi alimpana kartan päällä.
  */
 .maapaneeli-kortti {
+  /*
+   * OTSIKON KOKO ON MUUTTUJA, KOSKA KAKSI ASIAA TARVITSEE SEN: otsikko
+   * itse ja radionapin korkeus (nappi keskitetään otsikon riville).
+   * Ilman muuttujaa napin korkeus olisi toisinto, joka jää jälkeen
+   * heti kun otsikon koko muuttuu breakpointissa — mitattu 20.9.2026:
+   * 390 px:n ruudulla keskitysero oli 9,6 px.
+   */
+  --maapaneeli-otsikko: 1.9rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -26566,7 +26593,7 @@ button.maapaneeli-avain:active:not(:disabled) {
 
 .maapaneeli-nimi-suomi {
   display: block;
-  font-size: 1.9rem;
+  font-size: var(--maapaneeli-otsikko);
   line-height: 1.1;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -26814,7 +26841,8 @@ button.maapaneeli-aihe:active:not(:disabled) {
  * yltää Liiku-sanan päälle enempää kuin väistö jaksaa nostaa.
  */
 @media (max-width: 700px) {
-  .maapaneeli-nimi-suomi { font-size: 1.5rem; letter-spacing: 0.18em; }
+  .maapaneeli-kortti { --maapaneeli-otsikko: 1.5rem; }
+  .maapaneeli-nimi-suomi { letter-spacing: 0.18em; }
   .maapaneeli-nimi-oma { font-size: 0.87rem; }
   .maapaneeli-aika { font-size: 0.73rem; }
   .maapaneeli-valikko { --otsikko-perus: 11px; }
@@ -26828,7 +26856,8 @@ button.maapaneeli-aihe:active:not(:disabled) {
   .maapaneeli-alarivi { white-space: normal; }
 }
 @media (max-width: 460px) {
-  .maapaneeli-nimi-suomi { font-size: 1.3rem; letter-spacing: 0.16em; }
+  .maapaneeli-kortti { --maapaneeli-otsikko: 1.3rem; }
+  .maapaneeli-nimi-suomi { letter-spacing: 0.16em; }
   .maapaneeli-nimi-oma { font-size: 0.76rem; }
   .maapaneeli-aika { font-size: 0.64rem; }
   .maapaneeli-otsikko { font-size: 0.66rem; }
@@ -26898,14 +26927,44 @@ button.maapaneeli-aihe:active:not(:disabled) {
  * Kortti on `position: relative` jo valmiiksi vain avattuna, joten valo
  * asemoidaan kortin nurkkaan; pienessä muodossa nappi on `hidden`.
  * --------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------
+ * OTSIKKORIVI: NIMI JA SEN PERÄSSÄ LIPPU TEKSTIN KORKUISENA
+ * (omistaja 20.9.2026).
+ *
+ * Lippu on otsikkonapin sisällä, joten se on `span` eikä `button` (nappi
+ * napin sisällä on virheellistä html:ää); napautus tulee osumatestistä.
+ * Korkeus on sidottu otsikon omaan kirjasinkokoon `em`-yksiköllä, joten
+ * se seuraa otsikkoa kaikilla ruuduilla ilman omaa mittaa.
+ * --------------------------------------------------------------------- */
+.maapaneeli-nimirivi {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.34em;
+  min-width: 0;
+}
+.maapaneeli-lippu {
+  display: inline-block;
+  flex: 0 0 auto;
+  line-height: 0;
+}
+.maapaneeli-lippu[hidden] { display: none; }
+.maapaneeli-lippu.napautettava { cursor: pointer; }
+.maapaneeli-lippukuva {
+  display: block;
+  height: 0.62em;
+  width: auto;
+  border: 1px solid rgba(74, 52, 33, 0.45);
+  box-shadow: 0 1px 2px rgba(58, 40, 25, 0.2);
+}
+
 .maapaneeli-radio {
   display: none;
   position: absolute;
-  top: 0.55rem;
   right: 0.7rem;
   flex-direction: column;
   align-items: center;
-  gap: 0.16rem;
+  justify-content: center;
+  gap: 0.2rem;
   margin: 0;
   padding: 0.1rem 0.15rem;
   background: none;
@@ -26913,6 +26972,27 @@ button.maapaneeli-aihe:active:not(:disabled) {
   cursor: pointer;
   color: rgba(74, 52, 33, 0.75);
   font-family: var(--font-type);
+  /*
+   * PYSTYSUUNNASSA KESKELLÄ OTSIKON KANSSA (omistaja 20.9.2026).
+   *
+   * Nappi venytetään otsikkorivin korkuiseksi ja sen sisältö
+   * keskitetään, jolloin valo asettuu otsikon keskiviivalle ILMAN
+   * mitattua lukua: `top` on kortin oma pehmuste ja `height` otsikon
+   * rivikorkeus (--maapaneeli-otsikko × 1,1, sama muuttuja kuin
+   * otsikolla itsellään). Kun otsikon koko muuttuu breakpointissa, valo
+   * seuraa mukana ilman omaa lukua.
+   */
+  top: 0.7rem;
+  height: calc(var(--maapaneeli-otsikko) * 1.1);
+  /*
+   * MIN-HEIGHT NOLLAAN, muuten se voittaa korkeuden: pelin napeilla on
+   * sormenpään vähimmäiskorkeus (42 px), ja se piti nappia otsikkoa
+   * korkeampana — valo jäi otsikon keskiviivan alapuolelle (mitattu
+   * 20.9.2026: 9,6 px 390 px:n ruudulla). Napautusala ei kärsi: kaluste
+   * on `pointer-events: none` ja napautus tulee osumatestistä, joka
+   * kasvattaa kohteen omaa laatikkoa erikseen.
+   */
+  min-height: 0;
 }
 .maapaneeli-kortti.valikko-auki { position: relative; }
 .maapaneeli-kortti.valikko-auki .maapaneeli-radio:not([hidden]) { display: flex; }
@@ -26922,8 +27002,8 @@ button.maapaneeli-aihe:active:not(:disabled) {
 .maapaneeli-radio .aika { display: none; }
 .maapaneeli-radio-valo {
   display: block;
-  width: 0.46rem;
-  height: 0.46rem;
+  width: 0.66rem;
+  height: 0.66rem;
   border-radius: 50%;
   background: rgba(120, 96, 78, 0.28);
   border: 1px solid rgba(74, 52, 33, 0.45);
@@ -26935,14 +27015,37 @@ button.maapaneeli-aihe:active:not(:disabled) {
   box-shadow: 0 0 4px rgba(216, 52, 42, 0.85);
 }
 .maapaneeli-radio-nimi {
-  font-size: 0.46rem;
+  font-size: 0.56rem;
   letter-spacing: 0.08em;
   text-transform: lowercase;
   line-height: 1;
   opacity: 0.72;
 }
+/*
+ * VILKKU KANAVAN HAUN AJAN (omistaja 20.9.2026): valo sykkii siitä, kun
+ * napautus lähti, siihen kun lähetys alkaa kuulua tai haku epäonnistuu.
+ * Luokan asettaa ja poistaa js/pallolauta/maapaneeli.js (aloitaHaku /
+ * lopetaHaku), joka lukee tilan soittimen audio-elementistä.
+ */
+.maapaneeli-radio.etsii .maapaneeli-radio-valo {
+  background: #d8342a;
+  border-color: rgba(150, 30, 22, 0.85);
+  animation: maapaneeli-radio-vilkku 0.66s steps(1, end) infinite;
+}
+@keyframes maapaneeli-radio-vilkku {
+  0%, 49% { opacity: 1; box-shadow: 0 0 5px rgba(216, 52, 42, 0.9); }
+  50%, 100% { opacity: 0.28; box-shadow: none; }
+}
 @media (prefers-reduced-motion: reduce) {
   .maapaneeli-radio-valo { transition: none; }
+  /*
+   * Vilkku pois, mutta tieto jää: haku näkyy himmeämpänä punaisena,
+   * joten valo ei väitä valmista lähetystä kesken haun.
+   */
+  .maapaneeli-radio.etsii .maapaneeli-radio-valo {
+    animation: none;
+    opacity: 0.6;
+  }
 }
 
 /* 1873 edellä, isommalla (kohta 3). */
