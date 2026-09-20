@@ -11965,6 +11965,16 @@ body.linssi-topografia .fokusvirta-huudahdus {
  */
 body.aikajana-paalla .fact-card,
 body.aikajana-paalla .karttaselite,
+/*
+ * ASTRONAUTIN KAMERA (omistaja 20.9.2026 klo 12.00, kaappaus
+ * docs/raportit/kaappaukset/omistaja-20260920/astro-vakaset-ipad.png):
+ * iPadilla ✕:n alla näkyi kermanvärinen kolmen väkäsen nappi. Se on
+ * karttaselitteiden avaaja (.karttaselite-nappi, title
+ * "Karttaselitteet"), ja se selittää LAUDAN karttamerkit — joita
+ * avaruudessa ei ole yhtäkään. Sama piilotus kuin Keksinnöt-linssissä,
+ * ja samasta syystä. Luokan linssi-satelliitti lisää js/ui.js.
+ */
+body.linssi-satelliitti .karttaselite,
 body.aikajana-paalla .fokus-kartuutsi,
 body.aikajana-paalla .kartta-mittajana,
 body.aikajana-paalla .fokus-viivain {
@@ -26839,26 +26849,8 @@ button.maapaneeli-aihe:active:not(:disabled) {
  * joten alle 700 px:n ruudulla kartuscha on ruudun levyinen marginaalien
  * sisällä.
  * ------------------------------------------------------------------------ */
-.maapaneeli-vihje {
-  display: block;
-  position: relative;
-  width: 2.2em;
-  height: 0.55em;
-  margin-top: 0.12rem;
-  border-top: 1px dotted rgba(74, 52, 33, 0.7);
-}
-.maapaneeli-vihje::after {
-  content: '';
-  position: absolute;
-  left: calc(2.2em + 0.3em);
-  top: -0.42em;
-  width: 0.34em;
-  height: 0.34em;
-  border-right: 1px solid rgba(74, 52, 33, 0.7);
-  border-bottom: 1px solid rgba(74, 52, 33, 0.7);
-  transform: rotate(-135deg);
-}
-.maapaneeli-kortti.valikko-auki .maapaneeli-vihje::after { transform: rotate(45deg); top: -0.62em; }
+/* Napautusvihje (pisteviiva + väkänen) poistui 20.9.2026, ks.
+   js/pallolauta/maapaneeli.js. */
 
 .maapaneeli-kortti.valikko-auki {
   width: 40vw;
@@ -26876,8 +26868,82 @@ button.maapaneeli-aihe:active:not(:disabled) {
   .maapaneeli-kortti.valikko-auki { width: 100%; }
 }
 .maapaneeli-kortti.valikko-auki .maapaneeli-avain { width: 100%; }
-.maapaneeli-kortti.valikko-auki .maapaneeli-alarivi { white-space: normal; }
 .maapaneeli-kortti.valikko-auki .maapaneeli-sisus { width: 100%; margin-top: 0.45rem; }
+
+/* ------------------------------------------------------------------------
+ * ISO MUOTO ON LYHYEMPI (omistaja 20.9.2026).
+ *
+ * Kolme riviä pois AVATUSTA kartuschasta: maan oma nimi ja aikakauden
+ * valtiomuoto ("France · tasavalta v. 1873"), "Valtiomuoto 1873" -lohko
+ * ja nykylukujen "Nyt"-otsikko. Pieni muoto pysyy TÄSMÄLLEEN entisenä,
+ * ja siksi tämä on kokonaan `.valikko-auki`-ehdon takana.
+ *
+ * PIILOTUS EIKÄ POISTO: alarivi on pienen muodon ainoa alarivi, ja
+ * `.maapaneeli-vuosi` täytetään samasta datasta kummassakin muodossa.
+ * DOM pysyy siis samana, ja vartijat näkevät rivien olevan tallella
+ * pienessä muodossa.
+ * --------------------------------------------------------------------- */
+.maapaneeli-kortti.valikko-auki .maapaneeli-alarivi { display: none; }
+.maapaneeli-kortti.valikko-auki .maapaneeli-vuosi { display: none; }
+.maapaneeli-kortti.valikko-auki .maapaneeli-nyt { display: none; }
+
+/* ------------------------------------------------------------------------
+ * RADION MERKKIVALO (omistaja 20.9.2026): pelkkä pieni punainen valo
+ * ison muodon oikeassa yläkulmassa ja sen alla pienellä "radio".
+ *
+ * Valo palaa VAIN soiton aikana. `soi`-luokan asettaa ja poistaa soitin
+ * (js/ui.js kulttuuriAaniNapista / pysaytaKulttuuriAani), joten valo ei
+ * voi jäädä palamaan hiljaiselle napille.
+ *
+ * Kortti on `position: relative` jo valmiiksi vain avattuna, joten valo
+ * asemoidaan kortin nurkkaan; pienessä muodossa nappi on `hidden`.
+ * --------------------------------------------------------------------- */
+.maapaneeli-radio {
+  display: none;
+  position: absolute;
+  top: 0.55rem;
+  right: 0.7rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.16rem;
+  margin: 0;
+  padding: 0.1rem 0.15rem;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  color: rgba(74, 52, 33, 0.75);
+  font-family: var(--font-type);
+}
+.maapaneeli-kortti.valikko-auki { position: relative; }
+.maapaneeli-kortti.valikko-auki .maapaneeli-radio:not([hidden]) { display: flex; }
+/* Soittimen oma kuvake ja aikanäyttö kuuluvat sopimukseen mutta eivät
+   tähän nappiin: valo on ainoa merkki. */
+.maapaneeli-radio .merkki,
+.maapaneeli-radio .aika { display: none; }
+.maapaneeli-radio-valo {
+  display: block;
+  width: 0.46rem;
+  height: 0.46rem;
+  border-radius: 50%;
+  background: rgba(120, 96, 78, 0.28);
+  border: 1px solid rgba(74, 52, 33, 0.45);
+  transition: background 120ms linear, box-shadow 120ms linear;
+}
+.maapaneeli-radio.soi .maapaneeli-radio-valo {
+  background: #d8342a;
+  border-color: rgba(150, 30, 22, 0.85);
+  box-shadow: 0 0 4px rgba(216, 52, 42, 0.85);
+}
+.maapaneeli-radio-nimi {
+  font-size: 0.46rem;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  line-height: 1;
+  opacity: 0.72;
+}
+@media (prefers-reduced-motion: reduce) {
+  .maapaneeli-radio-valo { transition: none; }
+}
 
 /* 1873 edellä, isommalla (kohta 3). */
 .maapaneeli-vuosi {
