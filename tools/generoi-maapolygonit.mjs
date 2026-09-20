@@ -124,6 +124,32 @@ const LAHDE = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector'
  */
 const PAIKALLINEN = new URL('../.nevalimuisti/ne_10m_admin_0_countries.geojson',
   import.meta.url);
+/*
+ * ═══ RANNIKON NAULAUS JO LÄHTEESSÄ (Fablen päätös 20.9.2026) ═══════
+ *
+ * Maan kehä ja rantaviiva tulevat ERI Natural Earth -aineistoista:
+ * kehä `ne_10m_admin_0_countries`ista, rantaviiva `ne_10m_ocean`ista
+ * (laattoihin poltettu ranta, tools/fokuskartta/piirto.js osio 7, sekä
+ * pallon vektorikerros). Ne ovat eri mieltä rannan kulusta — mitattuna
+ * mediaani 107 m, p95 445 m ja SUURIN 3 939 m — ja koska kehä on
+ * paksumpi ja piirtyy päällä, ohut rantaviiva pistää esiin sen vierestä.
+ * Pallolla ero naulataan ajossa (js/pallovektorit.js naulaaKorostus),
+ * mutta linssin tasokartalla kehä on SVG eikä sinne ole rannikkoa
+ * vektoreina — siellä ero jäi näkyviin.
+ *
+ * Siksi naulaus tehdään jo TÄSSÄ: kehän kärki, joka on rantaviivan
+ * tuntumassa, siirretään rantaviivan omalle kärjelle ennen harvennusta.
+ * Silloin molemmat näkymät piirtävät saman rannan samasta geometriasta,
+ * eikä kumpikaan tarvitse ajonaikaista korjausta. Sisämaan rajat eivät
+ * ole rantaviivan tuntumassa eivätkä siis liiku.
+ */
+const MERI_LAHDE = 'https://raw.githubusercontent.com/nvkelso/natural-earth-vector'
+  + '/master/geojson/ne_10m_ocean.geojson';
+const MERI_PAIKALLINEN = new URL('../.nevalimuisti/ne_10m_ocean.geojson',
+  import.meta.url);
+/** Hilan solu ja tuntuma asteina — samat luvut kuin pallon naulauksessa. */
+const NAULAUS_RUUTU = 0.05;
+const NAULAUS_TOLERANSSI = 0.015;
 const KOHDE = new URL('../assets/data/maapolygonit.json', import.meta.url);
 
 const LEVEYS = MAAILMANKARTTA.map.width;
@@ -203,6 +229,71 @@ async function lueLahde() {
   mkdirSync(new URL('.', PAIKALLINEN), { recursive: true });
   writeFileSync(PAIKALLINEN, JSON.stringify(data));
   return data;
+}
+
+/** Meriaineisto välimuistista tai verkosta (ks. RANNIKON NAULAUS). */
+async function lueMeri() {
+  if (existsSync(MERI_PAIKALLINEN)) {
+    console.log(`Meri: ${MERI_PAIKALLINEN.pathname} (välimuisti)`);
+    return JSON.parse(readFileSync(MERI_PAIKALLINEN, 'utf8'));
+  }
+  console.log(`Meri: ${MERI_LAHDE}`);
+  const vastaus = await fetch(MERI_LAHDE);
+  if (!vastaus.ok) throw new Error(`Natural Earth ocean ${vastaus.status}`);
+  const data = await vastaus.json();
+  mkdirSync(new URL('.', MERI_PAIKALLINEN), { recursive: true });
+  writeFileSync(MERI_PAIKALLINEN, JSON.stringify(data));
+  return data;
+}
+
+/** Rantaviivan kärjet hilaan: avain on solu, arvo pisteet [lon, lat]. */
+function rannikkoHila(meri) {
+  const hila = new Map();
+  const lisaa = (p) => {
+    if (!Number.isFinite(p?.[0]) || !Number.isFinite(p[1])) return;
+    const avain = `${Math.round(p[0] / NAULAUS_RUUTU)}|${Math.round(p[1] / NAULAUS_RUUTU)}`;
+    const lista = hila.get(avain);
+    if (lista) lista.push(p); else hila.set(avain, [p]);
+  };
+  const renkaat = (geometry) => {
+    if (geometry.type === 'Polygon') return geometry.coordinates;
+    if (geometry.type === 'MultiPolygon') return geometry.coordinates.flat();
+    return [];
+  };
+  for (const f of meri.features ?? []) {
+    for (const rengas of renkaat(f.geometry ?? {})) for (const p of rengas) lisaa(p);
+  }
+  return hila;
+}
+
+/**
+ * Kehän kärjet rantaviivalle siellä, missä ranta on tuntumassa.
+ * Palauttaa uuden renkaan ja siirrettyjen kärkien määrän.
+ */
+function naulaaRengas(kehä, hila) {
+  let siirretty = 0;
+  const ulos = kehä.map((p) => {
+    const gx = Math.round(p[0] / NAULAUS_RUUTU);
+    const gy = Math.round(p[1] / NAULAUS_RUUTU);
+    // Pituusasteen kutistuma leveyspiirillä (napojen lähellä aste on lyhyt).
+    const kerroin = Math.max(0.05, Math.cos(p[1] * Math.PI / 180));
+    let paras = null;
+    let parasEtaisyys = NAULAUS_TOLERANSSI;
+    for (let dx = -1; dx <= 1; dx += 1) {
+      for (let dy = -1; dy <= 1; dy += 1) {
+        for (const q of hila.get(`${gx + dx}|${gy + dy}`) ?? []) {
+          let dLon = p[0] - q[0];
+          if (dLon > 180) dLon -= 360; else if (dLon < -180) dLon += 360;
+          const d = Math.hypot(dLon * kerroin, p[1] - q[1]);
+          if (d < parasEtaisyys) { parasEtaisyys = d; paras = q; }
+        }
+      }
+    }
+    if (!paras) return p;
+    siirretty += 1;
+    return [paras[0], paras[1]];
+  });
+  return { rengas: ulos, siirretty };
 }
 
 /** ISO3 → GeoJSON-piirre. Ensisijaisesti ISO_A3, sitten hallinnolliset. */
@@ -358,6 +449,10 @@ todennaProjektio(projektio);
 if (vainTarkistus) process.exit(0);
 
 const geojson = await lueLahde();
+const meri = await lueMeri();
+const rantaHila = rannikkoHila(meri);
+console.log(`Rantaviivan kärkiä hilassa: ${[...rantaHila.values()].reduce((a, v) => a + v.length, 0)}`);
+let naulattuja = 0;
 const haku = hakemisto(geojson);
 const pelimaat = Object.keys(MAAILMANKARTTA.map.countryShapes);
 
@@ -371,7 +466,10 @@ for (const iso of pelimaat) {
   const piirre = haku.get(NIMIVASTAAVUUS[iso] ?? iso) ?? haku.get(iso);
   if (!piirre) { puuttuvat.push(iso); continue; }
   const renkaat = [];
-  for (const kehä of ulkokehat(piirre.geometry)) {
+  for (const alkuperainen of ulkokehat(piirre.geometry)) {
+    // Rannikko naulataan ASTEISSA ennen lautakäännöstä (ks. yllä).
+    const { rengas: kehä, siirretty } = naulaaRengas(alkuperainen, rantaHila);
+    naulattuja += siirretty;
     const laudalla = puraRengas(kehä, projektio);
     if (koko(laudalla) < MIN_KOKO) { pudonneet++; continue; }
     const kevyt = yksinkertaista(laudalla, TOLERANSSI);
@@ -402,5 +500,6 @@ writeFileSync(KOHDE, JSON.stringify(ulos));
 const kt = Math.round(readFileSync(KOHDE).length / 1024);
 console.log(`Maita ${Object.keys(maat).length} / ${pelimaat.length}`
   + `, renkaita ${renkaita}, pisteitä ${pisteita}, pudotettuja sirpaleita ${pudonneet}`);
+console.log(`Rannikolle naulattuja kärkiä: ${naulattuja}`);
 if (puuttuvat.length) console.log(`EI LÖYTYNYT: ${puuttuvat.join(' ')}`);
 console.log(`Kirjoitettu ${KOHDE.pathname} — ${kt} kt`);
