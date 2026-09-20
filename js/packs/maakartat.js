@@ -7448,6 +7448,8 @@ export const KAUPUNKIKARTAT = {
    */
   bryssel: {
     polku: 'assets/kartat/bryssel-keskusta.png',
+    // Numeroidut ympyrät kartalla ilman miniatyyrejä (omistaja 20.9.2026).
+    numeroympyrat: true,
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 50.851, etela: 50.8335, lansi: 4.342, ita: 4.376 },
     // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
@@ -7540,6 +7542,8 @@ export const KAUPUNKIKARTAT = {
    */
   ljubljana: {
     polku: 'assets/kartat/ljubljana-keskusta.png',
+    // Numeroidut ympyrät kartalla ilman miniatyyrejä (omistaja 20.9.2026).
+    numeroympyrat: true,
     lahde: '© OpenStreetMap-tekijät (ODbL)',
     rajat: { pohjoinen: 46.056, etela: 46.0455, lansi: 14.493, ita: 14.513 },
     // Laajennus 1,6 samasta keskipisteestä (piirra-kaupunkikartta
