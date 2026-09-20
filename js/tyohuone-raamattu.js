@@ -9987,7 +9987,11 @@ export const RAAMATTU = {
           + 'raidan kiinni koko linssin ajan (myos kytkimen paluun yli); savuke 32/32. '
           + 'KYSYMYS OMISTAJALLE: humina on musiikkikytkimen takana (LISAYS 8) - jos kytkin '
           + 'on pois, humina ei soi; irrotetaanko humina musiikkikytkimesta '
-          + '(aanimaisema, ei kappale)? Mergetty v1973-prepiin.',
+          + '(aanimaisema, ei kappale)? Mergetty v1973-prepiin. OMISTAJA 15.10, VARUSTEET: '
+          + '"merkitse vertailulinssi, maidentiedot, seka vesistolinssi harmaalla ja siirra '
+          + 'omalle rivilleen ja pienenna niiden ikonit. ne ovat viela liian keskeneraisia" '
+          + '-> Opus 2 (varusteruudukko): kolme keskeneraista omalle riville ruudukon '
+          + 'loppuun, harmaasavy, pienempi ikoni; toimivat yha. Julkaistaan v1978.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
