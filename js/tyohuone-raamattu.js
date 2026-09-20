@@ -9751,7 +9751,15 @@ export const RAAMATTU = {
           + '2 VALMIS (Fable 08.24): Grutas hyvaksytty (patsas, rajavyohykenayttely), Maasin '
           + 'Dinant-kuva pudotettu (Belgia); kansio vanhat-eur synkattu karttanostot/'
           + '20260920/, kaikki 2 094 karttanostot-viitetta HEAD 200; mergetty v1973-prepiin '
-          + '(julkaistaan v1974).',
+          + '(julkaistaan v1974). POLTTOVELAT (Opus 2 049fe07c, 08.26): kokoaja kantaa '
+          + 'varitasot ja erat amparista, nostoajo ei kirjoita pohjan kenttaa, valmis-'
+          + 'merkissa ajon tunnus, pallosarjan oletus ilman nostoja; tests/polttovelat. '
+          + 'GIRONDE LAITTEELLA (Opus 1 be4c7fd3, 08.30): tiheysportti 120 oli vaarin '
+          + 'mitoitettu (koko Ranska puhelimella on 117 px/aste) -> portti 30; korostus '
+          + 'harvennettiin eri saannolla kuin rannikko -> sama saanto; saapumisnakymassa '
+          + 'pudotettuja 0 -> 1170. LOYDOS: maalehden kartta on staattinen valokuva; '
+          + 'kaksoisviiva on LINSSIN TASOKARTALLA (rantataso + maatummennus.js admin_0-'
+          + 'keha) -> Opus 1 era 1b sumennuksen jalkeen (sama omistajan kohta A).',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
