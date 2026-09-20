@@ -31,7 +31,12 @@ Pages-julkaisussa — dist/-kansiota EI committoida, historia paisuisi).
 - **js/tyohuone-raamattu.js (RAAMATTU)** — koko pelin idea ja
   kaikki oleelliset linjaukset YHDESSÄ tiiviissä paketissa (omistajan
   linjaus 15.8.2026: uudet oleelliset linjaukset kirjataan VAIN tänne;
-  tekniset toteutusohjeet saavat asua muualla). Vain Fable kirjoittaa;
+  tekniset toteutusohjeet saavat asua muualla). JAKO 20.9.2026: Raamatussa
+  on vain voimassa oleva linjaus per aihe; koko päätöshistoria on
+  sanatarkasti kansiossa docs/raamattu-loki/ (PAATOKSET-, TARKENNUS- ja
+  TILA-otsikot löytyvät sieltä grepillä). Uudet päätökset kirjataan
+  `node tools/raamattu-kirjaa.mjs "OTSIKKO" "teksti"` -työkalulla lokiin;
+  Raamatun linjausta muutetaan vain kun sääntö muuttuu. Vain Fable kirjoittaa;
   ristiriidassa hyväksytty Raamattu-osio voittaa muut dokumentit.
   Raamatun viimeinen osio on TÄYDELLINEN KARTTA kaikkiin muihin
   ohjedokumentteihin — jos dokumenttia ei ole kartalla, se ei ole

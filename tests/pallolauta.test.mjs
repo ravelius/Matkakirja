@@ -1144,6 +1144,7 @@ test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peru
     game: peli,
     matkaSessioKesken: UI.prototype.matkaSessioKesken,
     matkareittienValinta: UI.prototype.matkareittienValinta,
+    tarjotutLennot: UI.prototype.tarjotutLennot,
     ...tila,
   });
   const valinta = (tila) => luoUi(tila).matkareittienValinta();
@@ -1179,11 +1180,32 @@ test('reittien näkyvyys: naapuriviuhka on matkasessio Liikusta perille tai peru
     'viuhka katosi nopanheiton jälkeen');
   assert.equal(heiton.matkaSessio, 'varsova', 'sessio ei saa päättyä heittoon');
 
-  // 4. kohdelista (bussi, laiva, lento) pitää viuhkan vaikka liuku sulkeutui.
+  // 4. kohdelista (bussi, laiva) pitää viuhkan vaikka liuku sulkeutui.
   peli.phase = 'action';
   const lista = luoUi({ liukuAuki: false, travelExpanded: true, travelSuodatin: 'sea', matkaSessio: 'varsova' });
   assert.deepEqual(lista.matkareittienValinta().reittiTunnukset, naapurit,
     'viuhka katosi kohdelistan ajaksi');
+  /*
+   * 4b. LENTONÄKYMÄSSÄ EI LIFTAUSKAARIA (omistaja 20.9.2026 klo 14.40:
+   * *"lentonäkymässä liftausreitit pitää piilottaa ja lentoreittien kohde
+   * kaupungit pitää näkyä"*). Berliinillä on lentokenttä: LENTÄEN-lista
+   * tarjoaa lennot, kaaret piirtyvät niihin ja viuhka jää pois. Kohteet
+   * tulevat samasta apurista (tarjotutLennot), josta pallon
+   * kaupunkirajaus lukee näytettävät merkit.
+   */
+  kaupunkiin('berliini');
+  const berliininLennot = peli.airportDestinations();
+  assert.ok(berliininLennot.length > 0, 'Berliinistä pitää olla lentoja mitattavaksi');
+  const lentonakymaUi = luoUi({ liukuAuki: false, travelExpanded: true, travelSuodatin: 'air', matkaSessio: 'berliini' });
+  const lentonakyma = lentonakymaUi.matkareittienValinta();
+  assert.deepEqual(lentonakyma.reittiTunnukset, [], 'liftauskaaret näkyvät lentonäkymässä');
+  assert.deepEqual(lentonakyma.lennot, berliininLennot, 'lentokaaret puuttuvat lentonäkymästä');
+  assert.deepEqual(lentonakymaUi.tarjotutLennot(), berliininLennot);
+  assert.notEqual(lentonakyma.avain, '');
+  // Ilman lentosuodatinta apuri on tyhjä, eikä katselija tai botti saa lentoja.
+  assert.deepEqual(lista.tarjotutLennot(), []);
+  assert.deepEqual(luoUi({ travelExpanded: true, travelSuodatin: 'air', katselu: true }).tarjotutLennot(), []);
+  kaupunkiin('varsova');
 
   // 5. kesken reittiä: se yksi reitti — sessiolla ja ilman (sivunlataus).
   peli.phase = 'move';

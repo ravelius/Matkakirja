@@ -56,6 +56,7 @@ import { extname, join } from 'node:path';
 
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
+import { suorituskykyVaatija } from './suorituskyky.mjs';
 
 const paketti = await import('playwright')
   .catch(() => import(process.env.PLAYWRIGHT_JS ?? '/opt/node22/lib/node_modules/playwright/index.js'));
@@ -106,6 +107,8 @@ const vaadi = (nimi, ehto, lisa = '') => {
   kaikki += 1;
   if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
 };
+// Aikaväitteet PR-portin ohi (tools/savukkeet/suorituskyky.mjs).
+const vaadiAika = suorituskykyVaatija(vaadi);
 const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
 
 /* Ämpäri Noden kautta (CLAUDE.md: kontin selain ei osaa välitystä). */
@@ -500,7 +503,7 @@ for (const ruutu of RUUDUT) {
     return Math.round((kehyksia / ((performance.now() - alku) / 1000)) * 10) / 10;
   });
   tieto(`${ruutu.nimi} fps panoroinnissa`, fps);
-  vaadi(`${ruutu.nimi}: 7. fps ≥ ${FPS_RAJA} panoroinnissa`, fps >= FPS_RAJA, String(fps));
+  vaadiAika(`${ruutu.nimi}: 7. fps ≥ ${FPS_RAJA} panoroinnissa`, fps >= FPS_RAJA, String(fps));
 
   /* Kaappaukset vain puhelinruudulta: ennen (vanha karttavakio) ja jälkeen. */
   if (ruutu.nimi === '390') {

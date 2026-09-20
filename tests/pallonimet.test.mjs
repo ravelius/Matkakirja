@@ -125,8 +125,11 @@ test('piste vain nimen kanssa: pistekerros lukee nimettyjen joukon; kehittäjän
   assert.match(lauta, /const iso = taulu \? kohteidenNykyinenIso\(ui\) : null;/);
   // Maailmatila, linssi ja avauslento näyttävät kaikki kuten ennen.
   assert.match(lauta, /if \(lento \|\| linssiPaalla\(\) \|\| maailmatilassa\(\) \|\| ui\.maailmanakyma\?\.\(\)\) \{/);
-  // Siirtovaiheessa tarjolla olevat kohteet tulevat joukkoon.
-  assert.match(lauta, /game\.phase === 'move' && !game\.player\?\.isBot && !ui\.katselu/);
+  // Siirtovaiheessa tarjolla olevat kohteet JA lentolistan kohteet tulevat
+  // joukkoon (matkanKohteet; lentokohteet omistaja 20.9.2026 klo 14.40).
+  assert.match(lauta, /const kohdeIdt = \[\.\.\.matkanKohteet\(\)\];/);
+  assert.match(lauta, /if \(game\.phase === 'move'\) \{\n\s+for \(const o of game\.moveOptions\?\.\(\) \?\? \[\]\)/);
+  assert.match(lauta, /for \(const id of ui\.tarjotutLennot\?\.\(\) \?\? \[\]\) joukko\.add\(id\);/);
   /*
    * KAUPUNGIN PISTE PIILOON LIUSKAN AJAKSI (Raamattu, KARTTAUUDISTUKSEN
    * PAATOKSET 34 kohta 16 a, omistajan iPhone-kuva v1939: *"piste nakyy

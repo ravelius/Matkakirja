@@ -170,6 +170,7 @@ import { extname, join } from 'node:path';
 import { Game } from '../../js/game.js';
 import { packById } from '../../js/pack.js';
 import { NOSTOSYM_NIMIO_KOKO } from '../../js/fokusnosto-symbolit.js';
+import { suorituskykyVaatija } from './suorituskyky.mjs';
 import {
   NOSTON_MITTA, NOSTON_NIMIO_KATTO_PX, KAUPUNKIMERKIN_KERROIN, KAUPUNKIMERKIN_NIMIO_PX,
 } from '../../js/pallolauta/nostot.js';
@@ -407,6 +408,8 @@ const vaadi = (nimi, ehto, lisa = '') => {
   kaikki += 1;
   if (ehto) { lapi += 1; console.log(`OK    ${nimi}`); } else console.log(`FAIL  ${nimi} — ${lisa}`);
 };
+// Aikaväitteet PR-portin ohi (tools/savukkeet/suorituskyky.mjs).
+const vaadiAika = suorituskykyVaatija(vaadi);
 const tieto = (nimi, arvo) => console.log(`INFO  ${nimi}: ${arvo}`);
 const p = (v, n = 2) => (Number.isFinite(v) ? v.toFixed(n) : '—');
 
@@ -1179,7 +1182,11 @@ for (const ruutu of RUUDUT) {
       + ` / ruutu ${p(saapuenTila.ruutu.leveys)}, liike `
       + `${saapuenTila.liike === null ? '—' : p(saapuenTila.liike)} ms, `
       + `nimi ennen ${nimiEnnen ? 'näkyy' : 'piilossa'}, auki ${nimiAuki ? 'näkyy' : 'piilossa'}`);
-    vaadi(`8o. ${ruutu.nimi}: kamera liikkuu < ${LIIKKEEN_KATTO_MS} ms napautuksesta (saapumisnäkymä)`,
+    /* 8o kahtia: LIIKE on toiminnallinen, VIIVE suorituskykyä (suorituskyky.mjs). */
+    vaadi(`8o. ${ruutu.nimi}: kamera liikkuu napautuksesta (saapumisnäkymä)`,
+      Number.isFinite(saapuenTila.liike),
+      `${saapuenTila.liike === null ? 'ei liikettä' : `${p(saapuenTila.liike)} ms`}`);
+    vaadiAika(`8o'. ${ruutu.nimi}: kamera liikkuu < ${LIIKKEEN_KATTO_MS} ms napautuksesta (saapumisnäkymä)`,
       Number.isFinite(saapuenTila.liike) && saapuenTila.liike < LIIKKEEN_KATTO_MS,
       `${saapuenTila.liike === null ? 'ei liikettä' : `${p(saapuenTila.liike)} ms`}`);
     const vasemmalla = sRivit.filter((r) => !(r.x0 > (saapuenTila.merkki?.x ?? Infinity)));
@@ -2821,10 +2828,13 @@ if (lohko('liuska')) for (const ruutu of RUUDUT) {
    * (ladonta ja avaus ajon jälkeen).
    */
   const AJON_KATTO_MS = 1400 + 600;
-  vaadi(`8c. ${ruutu.nimi}: kaupunkimerkin napautus ajaa kameran < ${AJON_KATTO_MS} ms ja avaa liuskan`,
-    Boolean(lRivit.length) && Number.isFinite(liuskaTulos?.kesto)
-      && liuskaTulos.kesto < AJON_KATTO_MS,
+  /* 8c kahtia: AVAUS on toiminnallinen, KESTO suorituskykyä (suorituskyky.mjs). */
+  vaadi(`8c. ${ruutu.nimi}: kaupunkimerkin napautus ajaa kameran ja avaa liuskan`,
+    Boolean(lRivit.length) && Number.isFinite(liuskaTulos?.kesto),
     `ajo ${liuskaTulos?.kesto ?? '—'} ms, rivejä ${lRivit.length}`);
+  vaadiAika(`8c'. ${ruutu.nimi}: kaupunkimerkin napautus ajaa kameran < ${AJON_KATTO_MS} ms`,
+    Number.isFinite(liuskaTulos?.kesto) && liuskaTulos.kesto < AJON_KATTO_MS,
+    `ajo ${liuskaTulos?.kesto ?? '—'} ms`);
   const liuskaYli = lRivit.filter((b) => b.x0 < 0 || b.y0 < 0
     || b.x1 > (liuskaTulos?.mitta.ruutu.leveys ?? 0)
     || b.y1 > (liuskaTulos?.mitta.ruutu.korkeus ?? 0)).map((b) => b.nimi);

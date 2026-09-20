@@ -2380,6 +2380,33 @@ export async function avaaPallolauta(ui) {
    * kartta on entisellään, mikä on juuri omistajan ehto *"jos ei olla
    * liikkumassa"*.
    */
+  /**
+   * Matkan tarjotut kohteet: nopanheiton kohdekaupungit (sama sääntö
+   * kuin drawTargets) JA lentolistan kohteet.
+   *
+   * LENTOKOHTEET NÄKYVIIN, KUN LENTO ON TARJOLLA (omistaja 20.9.2026
+   * klo 14.40: *"lentoreittien kohde kaupungit pitää näkyä"*).
+   * Lentolistan kohteet eivät ole nopanheiton kohteita (moveOptions),
+   * joten ilman tätä Berliinistä tarjotut Lontoo ja Rooma jäivät
+   * kaupunkirajauksen taakse: kaari piirtyi, mutta sen pää oli tyhjä.
+   * Sama lähde kuin kaarilla (js/ui.js tarjotutLennot). Joukko on myös
+   * ladonnan etusija (nimet.lado `etusija`): kohteen nimi ja piste
+   * eivät saa pudota nimibudjetista, koska piste näkyy vain nimen
+   * kanssa (pisteNakyy).
+   *
+   * @returns {Set<string>}
+   */
+  const matkanKohteet = () => {
+    const { game } = ui;
+    const joukko = new Set();
+    if (game.player?.isBot || ui.katselu) return joukko;
+    if (game.phase === 'move') {
+      for (const o of game.moveOptions?.() ?? []) if (o.city?.id) joukko.add(o.city.id);
+    }
+    for (const id of ui.tarjotutLennot?.() ?? []) joukko.add(id);
+    return joukko;
+  };
+
   let rajausAvain = null;
   let rajausJoukko = null;
   const pelinKaupunkirajaus = () => {
@@ -2392,9 +2419,7 @@ export async function avaaPallolauta(ui) {
     const iso = taulu ? kohteidenNykyinenIso(ui) : null;
     if (!iso) { rajausAvain = null; return null; }
     const oma = game.cityOf?.()?.id ?? null;
-    const kohdeIdt = game.phase === 'move' && !game.player?.isBot && !ui.katselu
-      ? (game.moveOptions?.() ?? []).map((o) => o.city?.id).filter(Boolean)
-      : [];
+    const kohdeIdt = [...matkanKohteet()];
     // Avain karsii turhan työn: joukko rakennetaan vasta kun maa,
     // oma kaupunki tai kohdejoukko on oikeasti vaihtunut.
     const avain = `${iso}|${oma ?? ''}|${kohdeIdt.join(',')}`;
@@ -4100,6 +4125,8 @@ export async function avaaPallolauta(ui) {
       pinot: merkit.laatikot('peli'),
       katto,
       vain,
+      // Matkan kohteet (noppa, lento) voittavat budjetin (ks. matkanKohteet).
+      etusija: matkanKohteet(),
       kokoKerroin: kaupunginMitat.nimiKerroin,
       /*
        * NIMIKYLTIT KARTTAAN (omistaja 14.9.2026; sääntö ja mitatut

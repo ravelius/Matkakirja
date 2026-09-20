@@ -199,11 +199,30 @@ async function avaaSivu(nakyma, virheet) {
       return;
     }
     laskuri.kutsut += 1;
+    /*
+     * ENSIMMÄINEN KYSYMYS (ehdotuspilleri) SAA LYHYEN JSON-VASTAUKSEN,
+     * TOINEN (vapaa kysymys) PITKÄN STRIIMIN palasina: sillä mitataan,
+     * että vastauksen ALKU pysyy paikallaan ja loput kasvaa piiloon
+     * alle (omistaja 20.9.2026 klo 14.30). Pitkä vastaus ylittää
+     * puhelimen virran (240 px) monin kerroin.
+     */
+    if (laskuri.kutsut < 2) {
+      route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        headers: otsakkeet,
+        body: JSON.stringify({ vastaus: MALLIVASTAUS, jatkot: [] }),
+      });
+      return;
+    }
+    const palat = PITKA_MALLIVASTAUS.match(/.{1,40}/g);
+    const runko = palat.map((t) => `event: pala\ndata: ${JSON.stringify({ teksti: t })}\n\n`).join('')
+      + `event: loppu\ndata: ${JSON.stringify({ vastaus: PITKA_MALLIVASTAUS, jatkot: [] })}\n\n`;
     route.fulfill({
       status: 200,
-      contentType: 'application/json',
+      contentType: 'text/event-stream',
       headers: otsakkeet,
-      body: JSON.stringify({ vastaus: MALLIVASTAUS, jatkot: [] }),
+      body: runko,
     });
   });
   sivu.on('pageerror', (e) => virheet.push(String(e)));
@@ -212,6 +231,10 @@ async function avaaSivu(nakyma, virheet) {
 
 /** Savukkeen oma "mallivastaus": tunnistettava teksti, joka ei voi tulla muualta. */
 const MALLIVASTAUS = 'Savukkeen mallivastaus: tama tuli pulun omaa chattireittia pitkin.';
+/** Pitkä striimattu vastaus vapaaseen kysymykseen (ks. reitti avaaSivussa). */
+const PITKA_MALLIVASTAUS = `${MALLIVASTAUS} ${
+  'Rengas on ilmakehän valohalo, joka syntyy kun auringonvalo taittuu ohuissa pilvissä. '.repeat(14)
+}`.trim();
 
 async function avaaPeli(s) {
   await s.goto(`http://127.0.0.1:${PORTTI}/index.html?lauta=pallo`, { waitUntil: 'load' });
@@ -987,6 +1010,83 @@ async function ajaNakyma(nakymanNimi) {
   vaadi(nimessa('minipulu reagoi vastauksen aikana'),
     vapaa.eleet.includes('reaction'), JSON.stringify(vapaa.eleet.slice(0, 6)));
   await kaappaa('chatti-vastaus');
+
+  /*
+   * ── VASTAUS LUETAAN ALUSTA (omistaja 20.9.2026 klo 14.30) ────────
+   *
+   * *"kun vastaus virtaa, teksti pysyy paikallaan ALUSTA (ei vieritetä
+   * loppuun), ja lisäteksti menee piiloon alle vieritettäväksi."*
+   *
+   * Mitta on virran vierityskohta suhteessa viimeisen vastauskuplan
+   * yläreunaan: ankkuroituna ero on nolla. Pelkkä "scrollTop === 0" ei
+   * kelpaisi, koska virrassa on jo aiempia kuplia — vastauksen ALKU voi
+   * olla kaukana virran alusta.
+   */
+  const luku = await s.evaluate(() => {
+    const virta = document.querySelector('.satelliitti-pulu-virta');
+    const kuplat = [...virta.querySelectorAll('.satelliitti-pulu-vastaus')];
+    const kupla = kuplat.at(-1);
+    return {
+      scrollTop: Math.round(virta.scrollTop),
+      // Kuplan yläreuna virran koordinaateissa, laatikoista mitattuna.
+      kuplanYla: Math.round(
+        kupla.getBoundingClientRect().top - virta.getBoundingClientRect().top + virta.scrollTop,
+      ),
+      pohjaan: Math.round(virta.scrollHeight - virta.clientHeight),
+      korkeus: Math.round(virta.clientHeight),
+      kuplanKorkeus: Math.round(kupla.getBoundingClientRect().height),
+      sisalto: Math.round(virta.scrollHeight),
+      merkkeja: kupla.textContent.length,
+    };
+  });
+  console.log(`    ${nimessa('vastauksen lukukohta')}: ${JSON.stringify(luku)}`);
+  /*
+   * Selain rajaa vierityksen pohjaan: jos kuplan alku on kauempana kuin
+   * virrassa on vieritettävää, oikea kohta on pohja. Tavoite on siis
+   * min(kuplanYla, pohjaan) — ja lyhyellä vastauksella, joka mahtuu
+   * kokonaan näkyviin, molemmat ovat nolla.
+   */
+  const tavoite = Math.min(luku.kuplanYla, luku.pohjaan);
+  vaadi(nimessa('vastaus on ankkuroitu omaan alkuunsa, ei vieritetty loppuun'),
+    Math.abs(luku.scrollTop - tavoite) <= 2, JSON.stringify({ ...luku, tavoite }));
+  /*
+   * PITKÄ VASTAUS EI MAHDU NÄKYVIIN: alku on ylimpänä JA loput on
+   * piilossa virran alla (kupla korkeampi kuin virta, vieritettävää
+   * jäljellä). Tämä on omistajan tilauksen toinen puoli — ilman sitä
+   * "alku ylimpänä" toteutuisi myös silloin, kun koko teksti mahtuu.
+   */
+  vaadi(nimessa('pitkän vastauksen alku on ylimpänä ja loput piilossa alla'),
+    luku.kuplanKorkeus > luku.korkeus && luku.pohjaan > luku.scrollTop + 20
+      && Math.abs(luku.scrollTop - luku.kuplanYla) <= 2,
+    JSON.stringify(luku));
+  /*
+   * VASTAKOE: mitta erottaisi pohjaan vieritetyn tilan. Ilman tätä
+   * vihreä voisi tarkoittaa vain sitä, ettei virrassa ole vieritettävää
+   * — silloin jokainen kohta on yhtä aikaa alku ja loppu.
+   */
+  const vastakoePohja = await s.evaluate(() => {
+    const virta = document.querySelector('.satelliitti-pulu-virta');
+    const ennen = virta.scrollTop;
+    virta.scrollTop = virta.scrollHeight;
+    const pohjalla = Math.round(virta.scrollTop);
+    virta.scrollTop = ennen;
+    return { pohjalla, palautettu: Math.round(virta.scrollTop), ennen: Math.round(ennen) };
+  });
+  console.log(`    ${nimessa('vastakoe: pohjaan vieritys')}: ${JSON.stringify(vastakoePohja)}`);
+  /*
+   * VASTAKOE vain silloin kun virrassa ON vieritettävää: leveällä
+   * ruudulla lyhyt vastaus mahtuu kokonaan, jolloin alku ja loppu ovat
+   * sama kohta eikä ankkurilla ole mitään mitattavaa. Silloin mitataan
+   * se, että tilanne on juuri tämä eikä mittari valehtele vihreää.
+   */
+  if (luku.pohjaan > 0) {
+    vaadi(nimessa('vastakoe: virrassa on vieritettävää, eli ankkuri on aito valinta'),
+      vastakoePohja.pohjalla > vastakoePohja.ennen, JSON.stringify(vastakoePohja));
+  } else {
+    vaadi(nimessa('lyhyt vastaus mahtuu kokonaan näkyviin, eikä vieritystä tarvita'),
+      luku.sisalto <= luku.korkeus + 1 && luku.scrollTop === 0, JSON.stringify(luku));
+  }
+
   await s.evaluate(() => document.querySelector('.satelliitti-pulu-sulku').click());
   await s.waitForTimeout(250);
   const suljettu = await s.evaluate(() => document.querySelector('.satelliitti-pulukortti').hidden);

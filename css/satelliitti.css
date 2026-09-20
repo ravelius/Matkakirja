@@ -962,7 +962,12 @@ button.satelliitti-pulunappi:focus-visible {
  */
 .satelliitti-pulukortti {
   width: min(320px, calc(100vw - 24px));
-  max-height: min(52vh, 420px);
+  /*
+   * KORKEUS 52vh → 62vh (omistaja 20.9.2026 klo 14.30: *"ikkuna
+   * hieman korkeampi"*). Vastaus luetaan nyt alusta, joten korkeus
+   * ratkaisee, montako riviä näkyy ilman vieritystä.
+   */
+  max-height: min(62vh, 500px);
   /*
    * KORTTI ON PYSTYSARAKE, JOTTA KYSYMYSKENTTÄ PYSYY POHJALLA
    * (omistaja 16.9.2026, chatti minipululle). Virta on ainoa joustava
@@ -1064,12 +1069,20 @@ button.satelliitti-pulunappi:focus-visible {
   flex-direction: column;
   gap: 6px;
   margin-top: 8px;
-  max-height: min(34vh, 260px);
+  max-height: min(44vh, 340px);
   overflow-y: auto;
   overscroll-behavior: contain;
 }
 
 .satelliitti-pulu-virta:empty { display: none; }
+
+/*
+ * Tyhjä tila vastauskuplan alla (js/linssit/satelliitti.js
+ * ankkuroiVastaukseen): sen ansiosta vastauksen ALKU voidaan nostaa
+ * ylimmäksi heti, ja kasvava teksti täyttää tilan alta ilman että virta
+ * rullaa. Korkeus annetaan koodista; ei koskaan kutistu flexissä.
+ */
+.satelliitti-pulu-tila { flex: 0 0 auto; }
 
 /* Pelaajan oma kysymys: tumma, oikeaan reunaan tasattu rivi. */
 .satelliitti-pulu-oma {
@@ -1161,7 +1174,7 @@ button.satelliitti-pulunappi:focus-visible {
 
 @media (max-width: 620px), (max-height: 500px) {
   .satelliitti-pulukortti { width: min(280px, calc(100vw - 24px)); font-size: 0.85rem; }
-  .satelliitti-pulu-virta { max-height: min(30vh, 180px); }
+  .satelliitti-pulu-virta { max-height: min(38vh, 240px); }
 }
 
 /*

@@ -890,20 +890,83 @@ export function naulaaKorostus(renkaat, rannikot, asetukset = {}) {
   return { viivat: ulos, pudotettuja, rannikkojanoja, sisamaajanoja };
 }
 
-export function vektorijanat(viivat, sade) {
+/*
+ * ═══════════════════════════════════════════════════════════════════
+ * PITKÄ JANA PAINUU PINNAN ALLE — JAETAAN PALOIKSI (mitattu 20.9.2026)
+ * ═══════════════════════════════════════════════════════════════════
+ *
+ * OMISTAJAN VIKA (Raamattu, Gironde 20.9.2026): Ranskan pelikartalla
+ * *"paksu tumma kehä seuraa suistoa ja toinen viiva kulkee suorana"*.
+ * Kaappauksissa (docs/raportit/kaappaukset/omistaja-20260920/gironde-*)
+ * Médocin Atlantin ranta Pointe de Gravesta Arcachoniin on ILMAN
+ * korostusta ja ilman rantaviivaa — näkyvissä on vain laatan meren
+ * täytön pehmeä reuna, ja se on se "toinen viiva".
+ *
+ * MITATTU JUURISYY (Chromium, Marseille-tallenne, kamera 45,45 N
+ * −0,95 E korkeus 0,055): korostus SISÄLTÄÄ Médocin rannan — sekä
+ * korostuksessa että rannikkosolussa on sama jana −1,199 E 45,121 N →
+ * −1,260 E 44,627 N, 0,50 astetta eli 55 km yhtenä suorana (ne_10m:n
+ * Côte d'Argent on oikeasti suora, ja 0,006 asteen harvennus jättää
+ * siihen vain päät). Jänteen keskikohdalla ruudulla 0 tummaa pikseliä
+ * 24 × 24:stä; kun korostuksen depthTest kytkettiin pois, samassa
+ * kohdassa 206. Lyhyet janat (0,16–0,21 astetta) piirtyivät molemmilla
+ * asetuksilla.
+ *
+ * SYY ON GEOMETRIAA: LineSegments2 piirtää janan SUORANA 3D-avaruudessa,
+ * ja pallon pinnan kahden pisteen välinen jänne painuu pinnan alle
+ * keskeltä R · (1 − cos(θ/2)) — 0,5 asteella 9,5 · 10⁻⁶ · R, kun taas
+ * 0,2 asteella 1,5 · 10⁻⁶ · R. Laattakerros on itsekin pinnan jänteitä
+ * (silmät 0,02–0,25 astetta), ja syvyyssiirto (−12 vs. laattojen −8)
+ * kattaa vain lyhyiden janojen painuman. Pitkä jänne jää laatan alle
+ * ja syvyystesti leikkaa sen keskeltä pois — se ei ole aineiston,
+ * naulauksen eikä harvennuksen vika, vaan piirron.
+ *
+ * KORJAUS: jokainen jana, joka on pidempi kuin VEKTORIT_JANAN_ENIMMAIS-
+ * PITUUS_AST, jaetaan tasavälein paloiksi, joiden päät ovat pinnalla.
+ * 0,1 asteen palan painuma on 3,8 · 10⁻⁷ · R — neljäsosa siitä, mikä
+ * mitattiin piirtyväksi (0,2 astetta). Palat lisätään VAIN pitkiin
+ * janoihin; rosoinen ranta ja raja ovat lähes aina lyhyempiä, joten
+ * janamäärä ei muutu niillä lainkaan. Sama kaava koskee korostusta ja
+ * soluja, koska tämä on niiden ainoa yhteinen pisteiden latoja.
+ *
+ * MIKSI EI NOSTOA PINNASTA: VEKTORIT_KORKEUS 0 on mitattu valinta
+ * (parallaksi 2–4 laitepikseliä, ks. yllä) — palat pitävät viivan
+ * pinnalla ilman nostoa.
+ */
+/** Vektorijanan enimmäispituus asteina pallon pinnalla; pidemmät jaetaan. */
+export const VEKTORIT_JANAN_ENIMMAISPITUUS_AST = 0.1;
+
+/** Moneenko palaan jana a→b jaetaan (vähintään yksi). */
+function janaPaloiksi(a, b, enimmaispituus) {
+  if (!(enimmaispituus > 0)) return 1;
+  return Math.max(1, Math.ceil(asteEtaisyys(a, b) / enimmaispituus));
+}
+
+export function vektorijanat(viivat, sade, enimmaispituus = VEKTORIT_JANAN_ENIMMAISPITUUS_AST) {
   let janoja = 0;
-  for (const v of viivat ?? []) janoja += Math.max(0, v.length - 1);
+  for (const v of viivat ?? []) {
+    for (let k = 1; k < v.length; k += 1) janoja += janaPaloiksi(v[k - 1], v[k], enimmaispituus);
+  }
   const paikat = new Float32Array(janoja * 6);
   let i = 0;
   for (const v of viivat ?? []) {
     if (v.length < 2) continue;
     let p = pallonPiste(v[0][1], v[0][0], sade);
     for (let k = 1; k < v.length; k += 1) {
-      const q = pallonPiste(v[k][1], v[k][0], sade);
-      paikat[i] = p.x; paikat[i + 1] = p.y; paikat[i + 2] = p.z;
-      paikat[i + 3] = q.x; paikat[i + 4] = q.y; paikat[i + 5] = q.z;
-      i += 6;
-      p = q;
+      const paloja = janaPaloiksi(v[k - 1], v[k], enimmaispituus);
+      // Sauman yli kulkeva jana: pituusaste kasvaa lyhyempää tietä.
+      let dLon = v[k][0] - v[k - 1][0];
+      if (dLon > 180) dLon -= 360; else if (dLon < -180) dLon += 360;
+      const dLat = v[k][1] - v[k - 1][1];
+      for (let j = 1; j <= paloja; j += 1) {
+        const q = j === paloja
+          ? pallonPiste(v[k][1], v[k][0], sade)
+          : pallonPiste(v[k - 1][1] + dLat * (j / paloja), v[k - 1][0] + dLon * (j / paloja), sade);
+        paikat[i] = p.x; paikat[i + 1] = p.y; paikat[i + 2] = p.z;
+        paikat[i + 3] = q.x; paikat[i + 4] = q.y; paikat[i + 5] = q.z;
+        i += 6;
+        p = q;
+      }
     }
   }
   return { paikat, janoja };
