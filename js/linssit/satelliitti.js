@@ -942,6 +942,51 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
    * @param {string} teksti kuplan sisältö.
    * @returns {HTMLElement} kupla, jota striimi voi päivittää.
    */
+  /**
+   * Virta siihen kohtaan, jossa vastauskuplan yläreuna on ylimpänä.
+   *
+   * ETÄISYYS MITATAAN LAATIKOISTA, EI offsetTopista: kuplan
+   * offsetParent ei ole virta (kortti on flex-sarake), joten
+   * offsetTop-erotus antoi väärän kohdan kapealla ruudulla.
+   *
+   * TYHJÄ TILA KUPLAN ALLE: selain ei vieritä pohjaa pidemmälle, joten
+   * lyhyt kupla ei mahtuisi ylimmäksi ilman apua — virta jäisi
+   * "ankkuroimatta" ja jokainen tekstipala vierittäisi sitä vähän lisää,
+   * eli juuri se jatkuva rullaus, josta omistaja huomautti (puhelimella
+   * virta on vain 240 px). Siksi virran pohjaan lisätään näkymän
+   * korkuinen tyhjä tila ENNEN ankkurointia: kupla nousee ylimmäksi
+   * kerralla, ja kasvava teksti täyttää tyhjän tilan alta. Kun vastaus
+   * on valmis, tila kutistetaan siihen mitä ankkurin pitäminen vaatii
+   * (`vapautaTila`).
+   *
+   * TILA ON OMA ELEMENTTI, EI padding-bottom: vieritysalueen padding
+   * flex-sarakkeessa on ollut WebKitissä epäluotettava, ja iPad on
+   * pelin päälaite.
+   */
+  const pulunTila = html('div', 'satelliitti-pulu-tila');
+  pulunTila.setAttribute('aria-hidden', 'true');
+  const ankkuroiVastaukseen = (kupla) => {
+    if (!kupla?.isConnected) return;
+    pulunTila.style.height = `${pulunVirta.clientHeight}px`;
+    pulunVirta.appendChild(pulunTila);
+    const ero = kupla.getBoundingClientRect().top - pulunVirta.getBoundingClientRect().top;
+    if (Math.abs(ero) > 1) pulunVirta.scrollTop += ero;
+  };
+  /**
+   * Kutistaa tyhjän tilan kuplan alla pienimpään, jolla kuplan alku
+   * pysyy yhä ylimpänä (selain rajaa scrollTopin pohjaan — jos tilaa
+   * jäisi liian vähän, virta hyppäisi). Kuplaa pidempi vastaus ei
+   * tarvitse tilaa lainkaan.
+   */
+  const vapautaTila = (kupla) => {
+    if (!kupla?.isConnected) { pulunTila.remove(); return; }
+    const nakyva = pulunVirta.clientHeight;
+    const kuplanKorkeus = kupla.getBoundingClientRect().height;
+    const tarve = Math.max(0, Math.ceil(nakyva - kuplanKorkeus));
+    if (tarve > 0) pulunTila.style.height = `${tarve}px`;
+    else pulunTila.remove();
+  };
+
   const lisaaKupla = (laji, teksti) => {
     const kupla = html('div', laji === 'oma' ? 'satelliitti-pulu-oma' : 'satelliitti-pulu-vastaus');
     if (laji !== 'oma') kupla.setAttribute('role', 'status');
@@ -952,8 +997,28 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
      * keskustelua joka kysymyksen kohdalla.
      */
     pulunVirta.appendChild(kupla);
-    pulunVirta.scrollTop = pulunVirta.scrollHeight;
-    pulukortti.scrollTop = pulukortti.scrollHeight;
+    /*
+     * ── VASTAUS LUETAAN ALUSTA (omistaja 20.9.2026 klo 14.30) ──────
+     *
+     * Ennen jokainen pala vieritti virran pohjaan, joten kasvava
+     * vastaus juoksi pelaajan silmien alta pois ja luettavaksi jäi
+     * vain viimeinen rivi. Nyt virta kelataan KERRAN niin, että uuden
+     * kuplan YLÄREUNA on näkyvissä, ja sen jälkeen näkymään ei kosketa:
+     * teksti kasvaa alaspäin piiloon, ja pelaaja vierittää itse kun
+     * ehtii. Sama reunaehto kuin paneelin vastauksella (js/pollo.js:
+     * vastaus ei koskaan rullaa itsestään).
+     *
+     * Oma kysymys kelataan yhä pohjaan: pelaaja kirjoitti sen juuri,
+     * eikä sen alkuun tarvitse palata.
+     */
+    if (laji === 'oma') {
+      // Edellisen vastauksen tyhjä tila pois, jotta pohja on aito pohja.
+      pulunTila.remove();
+      pulunVirta.scrollTop = pulunVirta.scrollHeight;
+      pulukortti.scrollTop = pulukortti.scrollHeight;
+    } else {
+      ankkuroiVastaukseen(kupla);
+    }
     return kupla;
   };
 
@@ -1007,8 +1072,9 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
         onPala: (kertynyt) => {
           if (!kupla.isConnected) return;
           kupla.classList.remove('satelliitti-pulu-odottaa');
+          // Näkymään EI kosketa: alku on ankkuroitu kuplan syntyessä ja
+          // teksti kasvaa alaspäin tyhjään tilaan (ks. ankkuroiVastaukseen).
           kupla.replaceChildren(document.createTextNode(kertynyt));
-          pulunVirta.scrollTop = pulunVirta.scrollHeight;
         },
       });
       if (kupla.isConnected) {
@@ -1029,7 +1095,9 @@ function avaaHavaintokortti({ kohde, valikko, onSuljettu }) {
       kysymysKesken = false;
       pulukulma.classList.remove('satelliitti-pulu-puhuu');
       pulunLaheta.disabled = false;
-      pulunVirta.scrollTop = pulunVirta.scrollHeight;
+      // Valmis vastaus ei hyppää pohjaan: pelaaja voi olla vasta
+      // ensimmäisellä rivillä. Ylimääräinen tyhjä tila kuplan alta pois.
+      vapautaTila(kupla);
     }
   };
   pulunSyote.addEventListener('submit', (e) => { e.preventDefault(); e.stopPropagation(); lahetaKysymys(pulunKentta.value); });
