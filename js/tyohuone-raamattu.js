@@ -9937,7 +9937,13 @@ export const RAAMATTU = {
           + 'ja kartta laajeni ulospain, uudet nakyviin tulleet reitit eivat piirtyneet '
           + 'kartalle" (kuvassa vain Pariisi-Bryssel-Amsterdam-katkoviiva, ei muita '
           + 'reitteja vaikka kaupungit nakyvat) -> Opus 1: reittien piirto ei paivity '
-          + 'nakyman laajetessa heiton jalkeen; korjaus + savuke, v1977.',
+          + 'nakyman laajetessa heiton jalkeen; korjaus + savuke, v1977. TARKENNUS (Opus 1 '
+          + 'mittasi 13.40): ei paivitysvika - reittikerros piirtaa vain oman kaupungin '
+          + 'kaaret (Bryssel 2). OMISTAJAN PAATOS kortilla 13.45: "Reitit heiton kantaman '
+          + 'paahan" + 13.50: "entä jos piirretaan myos muutkin reitit mutta himmeammalla" '
+          + '-> SAANTO: liftatessa piirretaan heiton kantaman kaaret normaalisti ja kaikki '
+          + 'muut laudan kaaret himmeina staattisena kerroksena (kerran per lauta, ei '
+          + 'animaatiota). Opus 1 toteuttaa, v1977.',
         'PISTOKOKEET LAITTEELTA PAATOIMITTAJALLE: NOSTOTYYPIT LINJASSA (omistaja 19.9.2026 '
           + 'klo 20.47 Suomen aikaa, sanatarkasti: "Sonnet voisi toimittaa sinulle '
           + 'pistokkaita pelista Arvioitavaksi jos muissakin kohteissa on puutteita. Voisit '
