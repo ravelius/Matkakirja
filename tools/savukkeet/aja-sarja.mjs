@@ -13,7 +13,9 @@
 // edelleen AINOA TOTUUS (env, kuvakansio, tunnetut punaiset).
 //
 // Ympäristömuuttujat:
-//   SAVUKE_RINNAKKAIN  montako savuketta yhtä aikaa (oletus 4, ks. alla)
+//   SAVUKE_RINNAKKAIN  montako savuketta yhtä aikaa (oletus 4, ks. alla);
+//                      suorituskykyrivit (SAVUKE_SUORITUSKYKY=1) ajetaan
+//                      aina viimeisenä yksin
 //   SAVUKE_AIKAKATTO_MS  per savuke, oletus 600000 (10 min)
 //   CHROMIUM, PLAYWRIGHT_JS  periytyvät lapsille sellaisenaan
 //   SAVUKE_CHROMIUM_LIPUT  (rivikohtainen, sarjat.jsonin env-lohko)
@@ -185,14 +187,32 @@ function vertaa(tulos) {
 }
 
 const valmiit = [];
+/*
+ * SUORITUSKYKYRIVIT AJETAAN VIIMEISENÄ JA YKSIN (Fable 20.9.2026,
+ * omistajan päätös 18.05 jatkona): fps- ja kehysaikamittarit mittaavat
+ * konetta eivätkä koodia, jos rinnalla ajaa viisi muuta Chromiumia.
+ * Sarjan muut rivit ajetaan entisellä rinnakkaisuudella; sen jälkeen
+ * SAVUKE_SUORITUSKYKY=1-rivit (sarjat.json 'suorituskyky') ajetaan
+ * peräkkäin yhdellä työntekijällä. Tunniste on rivin oma env-lippu,
+ * joten sama sääntö pätee myös käsin annetulle tiedostolistalle.
+ */
+const suorituskykyRivi = (rivi) => rivi.env?.SAVUKE_SUORITUSKYKY === '1';
+const vaiheet = [
+  { rivit: matriisi.filter((r) => !suorituskykyRivi(r)), tyontekijoita: rinnakkain },
+  { rivit: matriisi.filter(suorituskykyRivi), tyontekijoita: 1 },
+].filter((v) => v.rivit.length);
+let jono = [];
 let seuraava = 0;
+// Porttinumero juoksee koko sarjan yli, ei vaiheittain: toisen vaiheen
+// rivi ei saa saada samaa porttia kuin ensimmäisen vielä sulkeutuva.
+let porttiIndeksi = 0;
 
 async function tyontekija() {
   for (;;) {
     const indeksi = seuraava++;
-    if (indeksi >= matriisi.length) return;
-    const rivi = matriisi[indeksi];
-    const ajo = await ajaYksi(rivi, indeksi);
+    if (indeksi >= jono.length) return;
+    const rivi = jono[indeksi];
+    const ajo = await ajaYksi(rivi, porttiIndeksi++);
     const { tuloste, tulosJson } = await vertaa(ajo);
     writeFileSync(
       join(tuloskansio, `tulos-${rivi.nimiTunniste}.json`),
@@ -206,7 +226,15 @@ async function tyontekija() {
   }
 }
 
-await Promise.all(Array.from({ length: Math.min(rinnakkain, matriisi.length) }, () => tyontekija()));
+for (const vaihe of vaiheet) {
+  jono = vaihe.rivit;
+  seuraava = 0;
+  if (vaihe.tyontekijoita === 1 && vaiheet.length > 1) {
+    console.log(`\nSuorituskykyrivit (${jono.length}) peräkkäin yhdellä työntekijällä.`);
+  }
+  // eslint-disable-next-line no-await-in-loop
+  await Promise.all(Array.from({ length: Math.min(vaihe.tyontekijoita, jono.length) }, () => tyontekija()));
+}
 
 const kokonaisKesto = Math.round((Date.now() - alkuKaikki) / 1000);
 

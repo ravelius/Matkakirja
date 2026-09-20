@@ -82,9 +82,10 @@ export function rakennaMatriisi(sarja) {
     julkaisu: () => sarjat.julkaisu,
     harva: () => sarjat.harva ?? [],
     suorituskyky: () => sarjat.suorituskyky ?? [],
-    // Hitaimmat ensin: suorituskyvyn pariisi-rivit (~220 s) ja harvat
-    // alkavat heti (valitse-harvat.mjs sarjaPr).
-    taysi: () => [...(sarjat.suorituskyky ?? []), ...(sarjat.harva ?? []), ...sarjat.julkaisu],
+    // Harvat ensin: hitaimmat rivit alkavat heti (valitse-harvat.mjs
+    // sarjaPr). Suorituskykyrivit viimeisenä: aja-sarja.mjs ajaa ne
+    // muiden jälkeen yksin, jotta mittari mittaa koodia eikä kuormaa.
+    taysi: () => [...(sarjat.harva ?? []), ...sarjat.julkaisu, ...(sarjat.suorituskyky ?? [])],
     kaikki: () => kaikkiSavukeTiedostot(),
   };
   const tiedostot = String(sarja ?? '').split(',').map((s) => s.trim()).filter(Boolean)

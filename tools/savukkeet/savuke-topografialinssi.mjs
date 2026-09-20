@@ -2063,7 +2063,8 @@ if (valahdysNaytteet.length > 1) {
     + `paluu alas ${valahdysNaytteet.map((x) => x.suurinPudotus.toFixed(1)).join(' / ')} `
     + `→ mediaani ${v.suurinPudotus.toFixed(1)}`);
 }
-vaadi(`${nimiA}: avauksessa ei ole välähdystä suhteessa linssin lopputilaan`,
+/* Kuormaherkkä kuten aikamittarit (Fable 20.9.2026): suorituskykysarjassa vartio, portissa INFO. */
+vaadiAika(`${nimiA}: avauksessa ei ole välähdystä suhteessa linssin lopputilaan`,
   valahdysLapi(v),
   `kehyksiä ${v.avausKehykset} (kattavuus ${(100 * v.avausKattavuus).toFixed(0)} %), `
   + `maksimi ${v.avausHuippu.toFixed(1)} vs vakiintunut ${v.vakiintunut.toFixed(1)} `

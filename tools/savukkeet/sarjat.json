@@ -19,6 +19,7 @@
     "savuke-kerma-reuna.mjs",
     "savuke-ranskan-nostot-lukossa.mjs",
     "savuke-kaupungit-piiloon.mjs",
+    "savuke-lentonakyma.mjs",
     "savuke-maailmatila-zoomi.mjs",
     "savuke-reittihelmet.mjs",
     "savuke-siirtozoomi.mjs",
@@ -426,7 +427,7 @@
       "env": {
         "SAVUKE_SUORITUSKYKY": "1"
       },
-      "huomautus": "Suorituskykyrivi: 'napautuksesta ensimmaiseen reliefikehykseen alle 400 ms' (Chromium) OK/FAIL-vaitteena. PR-portin rivi vaatii vain, etta kehys tuli ruudulle."
+      "huomautus": "Suorituskykyrivi: 'napautuksesta ensimmaiseen reliefikehykseen alle 400 ms' (Chromium) ja 'avauksessa ei ole valahdysta' (kuormaherkka kirkkausmittari, Fable 20.9.2026) OK/FAIL-vaitteina. PR-portin rivi vaatii vain, etta kehys tuli ruudulle, ja tulostaa molemmat INFO-riveina."
     },
     "savuke-astro-sumu.mjs#suorituskyky": {
       "env": {
@@ -439,6 +440,9 @@
         "SAVUKE_SUORITUSKYKY": "1"
       },
       "huomautus": "Suorituskykyrivi: '7. fps >= 50 panoroinnissa' (390 ja 1400) OK/FAIL-vaitteena. PR-portin rivi tulostaa fps:n INFO-rivina."
+    },
+    "savuke-lentonakyma.mjs": {
+      "huomautus": "Lentonakyma (omistaja 20.9.2026 klo 14.40): lentolista auki -> ei liftauskaaria, lentokohteet pisteina ja nimina; vastakoe lista kiinni. Berliini, 390 ja 1400 px, ampari Noden kautta (kuten kaupungit-piiloon). ~60 s."
     }
   }
 }
